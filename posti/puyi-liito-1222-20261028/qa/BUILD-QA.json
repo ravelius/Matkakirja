@@ -1,0 +1,86 @@
+{
+  "status": "EXPORTED_VERIFY_SAVED_FILE_NEXT",
+  "sourceMain": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-handhold-review-v3/models/puyi.glb",
+  "sourceMainSHA256": "5df8967fa088fade24383ced01b454efc1b0f2a3f1b21d1a09a296a2373de297",
+  "sourceMotion": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-handhold-review-v3/motions/puyi-liikkeet.glb",
+  "sourceMotionSHA256": "a912a763a8c215a006438a2f9cbcceb6dc0707a1a20f606c5bb3f045966990ec",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/glide-wings-review-v1/motions/puyi-liikkeet.glb",
+  "sha256": "9b796f5628de78a1deb46654e9b8f75e556098d40eec53f692d877db8b531870",
+  "bytes": 7507024,
+  "preservedAnimations": [
+    "idle",
+    "run",
+    "vault_low",
+    "run_upstairs",
+    "vault_hand",
+    "jump_down",
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run",
+    "jump_robe",
+    "stairs_robe"
+  ],
+  "clipCount": 14,
+  "clips": [
+    {
+      "clip": "glide_enter",
+      "durationS": 1.0416666269302368,
+      "samples": 126,
+      "maxAngularStep120HzDeg": 1.9466472161400905,
+      "worstBone": "mixamorig:RightHand",
+      "worstTimeS": 0.38333331871032716,
+      "maxReachExcessM": 0.0
+    },
+    {
+      "clip": "glide_loop",
+      "durationS": 2.0416667461395264,
+      "samples": 246,
+      "maxAngularStep120HzDeg": 0.22810702250697124,
+      "worstBone": "cape_6_6",
+      "worstTimeS": 1.800000070065868,
+      "maxReachExcessM": 0.0,
+      "poseRanges": {
+        "LeftArmBelowHorizontalDeg": [
+          35.79370655294327,
+          38.77007947128571
+        ],
+        "LeftElbowFlexDeg": [
+          28.139790631895277,
+          28.13979068980193
+        ],
+        "LeftKneeFlexDeg": [
+          48.7939730380898,
+          48.79397303808985
+        ],
+        "RightArmBelowHorizontalDeg": [
+          35.793709514205155,
+          38.770082167183475
+        ],
+        "RightElbowFlexDeg": [
+          28.15456355288003,
+          28.154563567729884
+        ],
+        "RightKneeFlexDeg": [
+          48.794140768862455,
+          48.794140768862555
+        ]
+      }
+    },
+    {
+      "clip": "glide_exit",
+      "durationS": 1.0416666269302368,
+      "samples": 126,
+      "maxAngularStep120HzDeg": 1.9289605396376792,
+      "worstBone": "mixamorig:RightHand",
+      "worstTimeS": 0.708333306312561,
+      "maxReachExcessM": 0.0
+    }
+  ],
+  "sourceBinaryPrefixByteExact": true,
+  "hierarchyAndRestUnchanged": true,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "elapsedSeconds": 9.339002458029427,
+  "peakRSSMiB": 211.1875,
+  "runtimeVerified": false
+}

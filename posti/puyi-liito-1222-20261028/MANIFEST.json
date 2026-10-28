@@ -1,0 +1,70 @@
+{
+  "createdAt": "2026-10-28T13:42:30.585668+00:00",
+  "order": 1222,
+  "status": "LOCAL_QA_COMPLETE_RECEIVER_PENDING",
+  "sourceMainSHA256": "5df8967fa088fade24383ced01b454efc1b0f2a3f1b21d1a09a296a2373de297",
+  "sourceMotionSHA256": "a912a763a8c215a006438a2f9cbcceb6dc0707a1a20f606c5bb3f045966990ec",
+  "files": [
+    {
+      "path": "CLAUDE-TOIMITUS.md",
+      "bytes": 1892,
+      "sha256": "c1b2116c6827fcd9c6754b65f9a4dc4d1f6fab7e64c59458a735cf8e7aacc0dd"
+    },
+    {
+      "path": "KAYTTO.md",
+      "bytes": 3265,
+      "sha256": "01fa4bcc80e6a8681da95c229bf306b821a87059c4d9a15f9d5ccc6f9e189143"
+    },
+    {
+      "path": "motions/puyi-liikkeet.glb",
+      "bytes": 7507024,
+      "sha256": "9b796f5628de78a1deb46654e9b8f75e556098d40eec53f692d877db8b531870"
+    },
+    {
+      "path": "qa/BUILD-QA.json",
+      "bytes": 2717,
+      "sha256": "d28165d04543c0cf77cdd7bc73b34bc45f05af35f199c7b35c8ce926ecdfa3be"
+    },
+    {
+      "path": "qa/CAPE-FOLD-DETAIL.json",
+      "bytes": 50329,
+      "sha256": "b74a8328080833364810b70dd058bafa01911eb3c0045cf738d65efdae7ec63b"
+    },
+    {
+      "path": "qa/PREVIEW-INDEX.json",
+      "bytes": 1416,
+      "sha256": "aee5a0ff3fabb0822236f45b7746cfe14b51784cb302cdc66db4a49f1be7fb74"
+    },
+    {
+      "path": "qa/ROUNDTRIP-QA.json",
+      "bytes": 37835,
+      "sha256": "34e2008dbd6c4c0cfd083072e85783fa27160884f0edbf3aa3fc7bbbebcd76cb"
+    },
+    {
+      "path": "qa/VISUAL-REVIEW.json",
+      "bytes": 660,
+      "sha256": "860487b8093800a83a2a1b46247ad6ae3b480069ccb99dae61c8a758fc01003f"
+    },
+    {
+      "path": "qa/liito-8-ruutua-sivulta.png",
+      "bytes": 296260,
+      "sha256": "671677cf0707ca21f60c3f73ed50c2e0313a79564457bfa59ab8e42156a730b7"
+    },
+    {
+      "path": "qa/liito-8-ruutua-takaa-ylaviistosta.png",
+      "bytes": 341427,
+      "sha256": "1e4b212445cff0184c6b7a868e92ef5213091dea75226f5e530c56e41e74e7a0"
+    },
+    {
+      "path": "qa/liito-ennen-jalkeen.png",
+      "bytes": 248920,
+      "sha256": "07f1a337a9c36f71472e07d7a4c16d4ded0d0005f84725fa448452cbfdfa468b"
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "sourcePreserved": true,
+  "gameIntegrationVerified": false,
+  "receiverAccepted": false,
+  "ownerAccepted": false
+}

@@ -1,0 +1,18 @@
+{
+  "reviewedAt": "2026-10-28T13:42:30.585668+00:00",
+  "images": [
+    "liito-ennen-jalkeen.png",
+    "liito-8-ruutua-takaa-ylaviistosta.png",
+    "liito-8-ruutua-sivulta.png"
+  ],
+  "reviewedAll": true,
+  "observations": [
+    "T-asento poistunut katsotuista kahdeksasta paikallisesta asennosta.",
+    "Takaa kangas kaartuu käsien ja hartioiden takana; sivulta etunoja ja polvikoukistus näkyvät.",
+    "Alku- ja loppujuoksuasento ennallaan."
+  ],
+  "status": "READY_FOR_RECEIVER_GAME_COMPARISON",
+  "knownLimits": "See KAYTTO.md: local folds and strain, no runtime crossfade/trajectory simulation",
+  "receiverAccepted": false,
+  "ownerAccepted": false
+}

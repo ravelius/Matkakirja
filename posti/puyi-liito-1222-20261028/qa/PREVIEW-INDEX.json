@@ -1,0 +1,57 @@
+{
+  "views": [
+    "liito-ennen-jalkeen.png",
+    "liito-8-ruutua-takaa-ylaviistosta.png",
+    "liito-8-ruutua-sivulta.png"
+  ],
+  "frames": [
+    {
+      "gameReferenceTimeS": 0,
+      "clip": "glide_enter",
+      "clipTimeS": 0
+    },
+    {
+      "gameReferenceTimeS": 0.27,
+      "clip": "glide_enter",
+      "clipTimeS": 0.54
+    },
+    {
+      "gameReferenceTimeS": 0.52,
+      "clip": "glide_enter",
+      "clipTimeS": 1.04
+    },
+    {
+      "gameReferenceTimeS": 0.79,
+      "clip": "glide_loop",
+      "clipTimeS": 0.2691666865348816
+    },
+    {
+      "gameReferenceTimeS": 1.06,
+      "clip": "glide_loop",
+      "clipTimeS": 0.5391666865348816
+    },
+    {
+      "gameReferenceTimeS": 1.38,
+      "clip": "glide_exit",
+      "clipTimeS": 0.0016666269302367809
+    },
+    {
+      "gameReferenceTimeS": 1.65,
+      "clip": "glide_exit",
+      "clipTimeS": 0.5416666269302368
+    },
+    {
+      "gameReferenceTimeS": 1.9,
+      "clip": "glide_exit",
+      "clipTimeS": 1.0416666269302368
+    }
+  ],
+  "actualGameFrames": false,
+  "gameCrossfadeSimulated": false,
+  "referenceDurationS": 1.9,
+  "enterExitSpeed": 2,
+  "rootTrajectoryNotSimulated": true,
+  "note": "In-place clip sequence without game crossfade, camera tracking, descent trajectory, landing collision, or scene lighting. Receiver must compare actual game 8-frame sequence.",
+  "elapsedSeconds": 26.174157292000018,
+  "peakRSSMiB": 619.5625
+}

@@ -1,0 +1,1175 @@
+{
+  "status": "LOCAL_NUMERIC_PASS_VISUAL_PENDING",
+  "motionSHA256": "9b796f5628de78a1deb46654e9b8f75e556098d40eec53f692d877db8b531870",
+  "original11AnimationsAndAccessorsByteExact": true,
+  "hierarchyAndRestUnchanged": true,
+  "mainModelUntouched": true,
+  "maxSavedAuthorVertexErrorM": 5.128482752115163e-05,
+  "joins": [
+    {
+      "join": "loop_seam",
+      "maxVertexDifferenceM": 2.8171622757198136e-08,
+      "maxNodeMatrixDifference": 1.3568176637779317e-07
+    },
+    {
+      "join": "enter_loop",
+      "maxVertexDifferenceM": 2.8171622981837008e-08,
+      "maxNodeMatrixDifference": 1.3568176659983777e-07
+    },
+    {
+      "join": "loop_exit",
+      "maxVertexDifferenceM": 0.0,
+      "maxNodeMatrixDifference": 0.0
+    },
+    {
+      "join": "old_enter_start",
+      "maxVertexDifferenceM": 0.0,
+      "maxNodeMatrixDifference": 0.0
+    },
+    {
+      "join": "old_exit_end",
+      "maxVertexDifferenceM": 0.0,
+      "maxNodeMatrixDifference": 0.0
+    }
+  ],
+  "posePass": true,
+  "clips": [
+    {
+      "clip": "glide_enter",
+      "durationS": 1.0416666269302368,
+      "sampleCount": 98,
+      "maxRotationStepDeg": 2.5016733765579713,
+      "worstTimeS": 0.3865979233967889,
+      "poseRanges": {
+        "LeftArmBelowHorizontalDeg": [
+          35.03872888618297,
+          40.757782836764775
+        ],
+        "LeftElbowFlexDeg": [
+          18.78543113309385,
+          28.139790836347874
+        ],
+        "LeftKneeFlexDeg": [
+          47.29322110334414,
+          97.1344448028213
+        ],
+        "RightArmBelowHorizontalDeg": [
+          36.38742417672917,
+          85.51253786996921
+        ],
+        "RightElbowFlexDeg": [
+          27.374371784637106,
+          58.935561857596305
+        ],
+        "RightKneeFlexDeg": [
+          45.422887219480515,
+          64.45640662593075
+        ]
+      },
+      "strain": [
+        {
+          "t": 0.0,
+          "old": {
+            "minEdgeRatio": 0.8096463068413533,
+            "maxEdgeRatio": 1.1945129582760925,
+            "p99EdgeRatio": 1.103501744620138,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1600866981955458,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8096463068413533,
+            "maxEdgeRatio": 1.1945129582760925,
+            "p99EdgeRatio": 1.103501744620138,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1600866981955458,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.06127450746648452,
+          "old": {
+            "minEdgeRatio": 0.8097208419797627,
+            "maxEdgeRatio": 1.1935550569781732,
+            "p99EdgeRatio": 1.1024648919592135,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16204730824188138,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8103627211019165,
+            "maxEdgeRatio": 1.1940214650596004,
+            "p99EdgeRatio": 1.1025697870905038,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16220735197304376,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.12254901493296903,
+          "old": {
+            "minEdgeRatio": 0.8100915122912754,
+            "maxEdgeRatio": 1.1870405524406966,
+            "p99EdgeRatio": 1.094885220667661,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17577447608252708,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8137805058006706,
+            "maxEdgeRatio": 1.1905424401448443,
+            "p99EdgeRatio": 1.096330222492351,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17332182253972292,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.18382352239945354,
+          "old": {
+            "minEdgeRatio": 0.8030002787755041,
+            "maxEdgeRatio": 1.1729660204605674,
+            "p99EdgeRatio": 1.0820689338512477,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17269949275994717,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8119384682218218,
+            "maxEdgeRatio": 1.1845278690526313,
+            "p99EdgeRatio": 1.0889111432768372,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.14111890938362345,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.24509802986593807,
+          "old": {
+            "minEdgeRatio": 0.7938462401289249,
+            "maxEdgeRatio": 1.1546517241691527,
+            "p99EdgeRatio": 1.0735484427656534,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.15888971188601392,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7871144785248178,
+            "maxEdgeRatio": 1.1816463493432892,
+            "p99EdgeRatio": 1.0968752513805882,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.13127064245646147,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.3063725373324226,
+          "old": {
+            "minEdgeRatio": 0.7681844358609722,
+            "maxEdgeRatio": 1.1339696803665529,
+            "p99EdgeRatio": 1.0786293548048607,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1616558008434916,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7695460588762632,
+            "maxEdgeRatio": 1.18521522461746,
+            "p99EdgeRatio": 1.131004234807185,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.08314939619342063,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.3676470447989071,
+          "old": {
+            "minEdgeRatio": 0.743289087699586,
+            "maxEdgeRatio": 1.13439944617862,
+            "p99EdgeRatio": 1.1040406609264308,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.15728111500988903,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7711979093562592,
+            "maxEdgeRatio": 1.22670873549976,
+            "p99EdgeRatio": 1.1881661669199437,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04661073051435716,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.42892155226539164,
+          "old": {
+            "minEdgeRatio": 0.7243907382782262,
+            "maxEdgeRatio": 1.1579292032084656,
+            "p99EdgeRatio": 1.1376900860308552,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1781677530680343,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7923837067884222,
+            "maxEdgeRatio": 1.2853581152976323,
+            "p99EdgeRatio": 1.2487332464023873,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.02245226013635065,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.49019605973187613,
+          "old": {
+            "minEdgeRatio": 0.7157122829110311,
+            "maxEdgeRatio": 1.202076573842834,
+            "p99EdgeRatio": 1.1783986446820913,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.22557293856219401,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8358728952045004,
+            "maxEdgeRatio": 1.3653021018617266,
+            "p99EdgeRatio": 1.3140891739796974,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04656534155082707,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.5514705671983606,
+          "old": {
+            "minEdgeRatio": 0.7204016751494328,
+            "maxEdgeRatio": 1.2472822352665376,
+            "p99EdgeRatio": 1.2213321491373477,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.22326415122832455,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8453723789761617,
+            "maxEdgeRatio": 1.442282093220663,
+            "p99EdgeRatio": 1.3762748405044805,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.11348638555839273,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.6127450746648452,
+          "old": {
+            "minEdgeRatio": 0.7390541708536668,
+            "maxEdgeRatio": 1.2920932248538723,
+            "p99EdgeRatio": 1.2640042053906393,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.09790748500397366,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8511347890022127,
+            "maxEdgeRatio": 1.510113762467715,
+            "p99EdgeRatio": 1.4287143640414337,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.08911984708181092,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.6740195821313297,
+          "old": {
+            "minEdgeRatio": 0.7575466682989749,
+            "maxEdgeRatio": 1.3350779181854582,
+            "p99EdgeRatio": 1.3088932778900086,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.06918272675651017,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8507082088596312,
+            "maxEdgeRatio": 1.5659163947214079,
+            "p99EdgeRatio": 1.4764297422258832,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1024111723251186,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.7352940895978142,
+          "old": {
+            "minEdgeRatio": 0.774353875448537,
+            "maxEdgeRatio": 1.3747731237571688,
+            "p99EdgeRatio": 1.350789734428201,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.22713724591495646,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.847752236896282,
+            "maxEdgeRatio": 1.6145407567630805,
+            "p99EdgeRatio": 1.5145631002341844,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.12790464151450126,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.7965685970642987,
+          "old": {
+            "minEdgeRatio": 0.7961359448923736,
+            "maxEdgeRatio": 1.410154392033157,
+            "p99EdgeRatio": 1.388872566615083,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.19824377044087396,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.843725113360983,
+            "maxEdgeRatio": 1.6525058154356707,
+            "p99EdgeRatio": 1.5409433659184404,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.09777641561171442,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.8578431045307833,
+          "old": {
+            "minEdgeRatio": 0.8160890824824537,
+            "maxEdgeRatio": 1.4416143681338502,
+            "p99EdgeRatio": 1.420989621202353,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16434569912174116,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8400260074069132,
+            "maxEdgeRatio": 1.6779936337112809,
+            "p99EdgeRatio": 1.5587755600727276,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.05228616114430371,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.9191176119972677,
+          "old": {
+            "minEdgeRatio": 0.8132000191526642,
+            "maxEdgeRatio": 1.4718486944908833,
+            "p99EdgeRatio": 1.4462809267462549,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.15674988512454333,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8375607405302503,
+            "maxEdgeRatio": 1.6923824941328243,
+            "p99EdgeRatio": 1.568217679492659,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03413571240167647,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.9803921194637523,
+          "old": {
+            "minEdgeRatio": 0.8114550629965085,
+            "maxEdgeRatio": 1.4906118759700897,
+            "p99EdgeRatio": 1.46261897298658,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.13564815819135687,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8364701589040066,
+            "maxEdgeRatio": 1.6982005220010516,
+            "p99EdgeRatio": 1.5720042075307437,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03399575914182344,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.0416666269302368,
+          "old": {
+            "minEdgeRatio": 0.8108924127653627,
+            "maxEdgeRatio": 1.4981948763493753,
+            "p99EdgeRatio": 1.4695876640699008,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.12824993922259031,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8362912909013371,
+            "maxEdgeRatio": 1.6991165642877848,
+            "p99EdgeRatio": 1.5728957390331995,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03455467584986618,
+            "degenerateFaces": 0
+          }
+        }
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "durationS": 2.0416667461395264,
+      "sampleCount": 98,
+      "maxRotationStepDeg": 0.5755063603612337,
+      "worstTimeS": 1.810137527505147,
+      "poseRanges": {
+        "LeftArmBelowHorizontalDeg": [
+          35.79398626825421,
+          38.76979940907073
+        ],
+        "LeftElbowFlexDeg": [
+          28.139789780318104,
+          28.139792528204946
+        ],
+        "LeftKneeFlexDeg": [
+          48.793971121392936,
+          48.793971673222266
+        ],
+        "RightArmBelowHorizontalDeg": [
+          35.79398819214604,
+          38.76980166956242
+        ],
+        "RightElbowFlexDeg": [
+          28.15456297421228,
+          28.15456522359347
+        ],
+        "RightKneeFlexDeg": [
+          48.79413895294804,
+          48.79414088955891
+        ]
+      },
+      "strain": [
+        {
+          "t": 0.0,
+          "old": {
+            "minEdgeRatio": 0.8108924300125395,
+            "maxEdgeRatio": 1.4981948326721304,
+            "p99EdgeRatio": 1.4695876512832267,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.12825006005341097,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8362913179102273,
+            "maxEdgeRatio": 1.699116533612899,
+            "p99EdgeRatio": 1.5728957007254518,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03455457337003495,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.12009804389056038,
+          "old": {
+            "minEdgeRatio": 0.8141113868190185,
+            "maxEdgeRatio": 1.4985567381116587,
+            "p99EdgeRatio": 1.4687241947367597,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1740460809171787,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.840604288338323,
+            "maxEdgeRatio": 1.697872910920246,
+            "p99EdgeRatio": 1.573433593009237,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.043805596977304725,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.24019608778112075,
+          "old": {
+            "minEdgeRatio": 0.8135549097080604,
+            "maxEdgeRatio": 1.49586694881704,
+            "p99EdgeRatio": 1.4685092111483495,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.10348055275572357,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8425998674877604,
+            "maxEdgeRatio": 1.6993565182139945,
+            "p99EdgeRatio": 1.573118921151165,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.047354181746628,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.3602941316716811,
+          "old": {
+            "minEdgeRatio": 0.811803289497818,
+            "maxEdgeRatio": 1.4924111498683532,
+            "p99EdgeRatio": 1.4684234740232331,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.20028559011157188,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8417759549393239,
+            "maxEdgeRatio": 1.7023838337414354,
+            "p99EdgeRatio": 1.573539969814379,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.043627092076629403,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.4803921755622415,
+          "old": {
+            "minEdgeRatio": 0.8124490762795566,
+            "maxEdgeRatio": 1.4892425426492646,
+            "p99EdgeRatio": 1.468418744655472,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.40860413892225106,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8389393250288277,
+            "maxEdgeRatio": 1.7053894608154243,
+            "p99EdgeRatio": 1.5743711843829347,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03519524416382232,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.6004902194528019,
+          "old": {
+            "minEdgeRatio": 0.817686053963455,
+            "maxEdgeRatio": 1.4887631800797971,
+            "p99EdgeRatio": 1.4698489758284508,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.3154477534380982,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8351669021801841,
+            "maxEdgeRatio": 1.7071843121797545,
+            "p99EdgeRatio": 1.5763114386725203,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.05762697785416121,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.7205882633433622,
+          "old": {
+            "minEdgeRatio": 0.8103916243860682,
+            "maxEdgeRatio": 1.491677612280894,
+            "p99EdgeRatio": 1.4718612636245363,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17252111367527062,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.831961066240228,
+            "maxEdgeRatio": 1.7068988797265034,
+            "p99EdgeRatio": 1.5749930360559643,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.05876407260461701,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.8406863072339227,
+          "old": {
+            "minEdgeRatio": 0.8041919883046775,
+            "maxEdgeRatio": 1.4906353110776462,
+            "p99EdgeRatio": 1.4732859227039132,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.3163164382191636,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8313562024679096,
+            "maxEdgeRatio": 1.704337196098432,
+            "p99EdgeRatio": 1.5734764827144947,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04634186970490035,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.960784351124483,
+          "old": {
+            "minEdgeRatio": 0.8042048520449956,
+            "maxEdgeRatio": 1.4875360268846243,
+            "p99EdgeRatio": 1.4722700489778031,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.3361212598412039,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8340498731110215,
+            "maxEdgeRatio": 1.7006621732507474,
+            "p99EdgeRatio": 1.5729270248269365,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03365657653975918,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.0808823950150435,
+          "old": {
+            "minEdgeRatio": 0.8126836429654077,
+            "maxEdgeRatio": 1.4894139662583912,
+            "p99EdgeRatio": 1.470595583277445,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.29857260569799093,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8386249426758933,
+            "maxEdgeRatio": 1.69813867482972,
+            "p99EdgeRatio": 1.5731055095396909,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03957980385284152,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.2009804389056038,
+          "old": {
+            "minEdgeRatio": 0.8284604994559172,
+            "maxEdgeRatio": 1.49028067468568,
+            "p99EdgeRatio": 1.468139296862841,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.26053773593480023,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8419657896993951,
+            "maxEdgeRatio": 1.6983200042126871,
+            "p99EdgeRatio": 1.5730945465021415,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.0487614223598251,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.3210784827961641,
+          "old": {
+            "minEdgeRatio": 0.8370606804627433,
+            "maxEdgeRatio": 1.4897889320609239,
+            "p99EdgeRatio": 1.466257060763583,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.4529382132624134,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8425049379588845,
+            "maxEdgeRatio": 1.7007824161616623,
+            "p99EdgeRatio": 1.5733928413075609,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04919612050143814,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.4411765266867245,
+          "old": {
+            "minEdgeRatio": 0.8300411991075342,
+            "maxEdgeRatio": 1.488455778234221,
+            "p99EdgeRatio": 1.464484450860016,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.6268213244686608,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8405436583396877,
+            "maxEdgeRatio": 1.7039723850451707,
+            "p99EdgeRatio": 1.5735125046778957,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.0499666914966787,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.5612745705772848,
+          "old": {
+            "minEdgeRatio": 0.8231609352770879,
+            "maxEdgeRatio": 1.486610829642576,
+            "p99EdgeRatio": 1.4640067355681177,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.4632538052915183,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8370957044026726,
+            "maxEdgeRatio": 1.7065000515148527,
+            "p99EdgeRatio": 1.5756702914814864,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04776941088751384,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.6813726144678454,
+          "old": {
+            "minEdgeRatio": 0.8119834089699766,
+            "maxEdgeRatio": 1.4862962432120899,
+            "p99EdgeRatio": 1.465683301698557,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.2251331665201352,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8333656038270779,
+            "maxEdgeRatio": 1.7073380811496828,
+            "p99EdgeRatio": 1.5760895834482085,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.06571469928968757,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.8014706583584057,
+          "old": {
+            "minEdgeRatio": 0.8024617411190527,
+            "maxEdgeRatio": 1.4876493918366667,
+            "p99EdgeRatio": 1.4670824372149478,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.10862049616113673,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8312262560572858,
+            "maxEdgeRatio": 1.7058677263086506,
+            "p99EdgeRatio": 1.5741537329014101,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.058107170516956845,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.921568702248966,
+          "old": {
+            "minEdgeRatio": 0.8018399022220395,
+            "maxEdgeRatio": 1.4932504392925743,
+            "p99EdgeRatio": 1.4691313822455063,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1018643204640551,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8323057123308747,
+            "maxEdgeRatio": 1.7025067244539478,
+            "p99EdgeRatio": 1.5726592191204576,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04088058776643633,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 2.0416667461395264,
+          "old": {
+            "minEdgeRatio": 0.8108924127653627,
+            "maxEdgeRatio": 1.4981948763493753,
+            "p99EdgeRatio": 1.4695876640699008,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.12824993922259031,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8362912909013304,
+            "maxEdgeRatio": 1.6991165642877843,
+            "p99EdgeRatio": 1.5728957390332086,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03455467584989178,
+            "degenerateFaces": 0
+          }
+        }
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "durationS": 1.0416666269302368,
+      "sampleCount": 98,
+      "maxRotationStepDeg": 2.4803595572676427,
+      "worstTimeS": 0.7087628595607797,
+      "poseRanges": {
+        "LeftArmBelowHorizontalDeg": [
+          34.555931875052984,
+          40.35213821690805
+        ],
+        "LeftElbowFlexDeg": [
+          18.259177231757867,
+          28.13979068320374
+        ],
+        "LeftKneeFlexDeg": [
+          46.70768760336404,
+          97.13444233431035
+        ],
+        "RightArmBelowHorizontalDeg": [
+          35.96306848507691,
+          85.51253847392472
+        ],
+        "RightElbowFlexDeg": [
+          27.122297434965482,
+          58.93555944140724
+        ],
+        "RightKneeFlexDeg": [
+          44.624730410554,
+          64.45640820771106
+        ]
+      },
+      "strain": [
+        {
+          "t": 0.0,
+          "old": {
+            "minEdgeRatio": 0.8108924227811622,
+            "maxEdgeRatio": 1.4981948214178917,
+            "p99EdgeRatio": 1.4695876391623721,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.12825005888491492,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8362913179102273,
+            "maxEdgeRatio": 1.699116533612899,
+            "p99EdgeRatio": 1.5728957007254518,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03455457337003495,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.06127450746648452,
+          "old": {
+            "minEdgeRatio": 0.8109980761075973,
+            "maxEdgeRatio": 1.4966798955346796,
+            "p99EdgeRatio": 1.4680717619552617,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.12966324347775898,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8364710061301142,
+            "maxEdgeRatio": 1.6982074810842331,
+            "p99EdgeRatio": 1.5720047006817124,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03399163466334169,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.12254901493296903,
+          "old": {
+            "minEdgeRatio": 0.811815830595225,
+            "maxEdgeRatio": 1.486252800852212,
+            "p99EdgeRatio": 1.458887714584876,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1402354277038056,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8375785730360654,
+            "maxEdgeRatio": 1.6925002345773412,
+            "p99EdgeRatio": 1.5683582279390211,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03412566673248166,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.18382352239945354,
+          "old": {
+            "minEdgeRatio": 0.814205987096521,
+            "maxEdgeRatio": 1.4629155578240491,
+            "p99EdgeRatio": 1.4386469894541156,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16309844440754281,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8401217369446061,
+            "maxEdgeRatio": 1.6785342554110143,
+            "p99EdgeRatio": 1.5596954918288424,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.052652237689762,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.24509802986593807,
+          "old": {
+            "minEdgeRatio": 0.8120444816508335,
+            "maxEdgeRatio": 1.4311866439144167,
+            "p99EdgeRatio": 1.4118384648638929,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17073335422099062,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8440370682057249,
+            "maxEdgeRatio": 1.6540152963596702,
+            "p99EdgeRatio": 1.5430048770009044,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.09912074986646614,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.3063725373324226,
+          "old": {
+            "minEdgeRatio": 0.7888819901027969,
+            "maxEdgeRatio": 1.3992981848351855,
+            "p99EdgeRatio": 1.3767829672842236,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.21707420836686375,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8484648270524737,
+            "maxEdgeRatio": 1.6177398888533139,
+            "p99EdgeRatio": 1.518349279769019,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1305246537000855,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.3676470447989071,
+          "old": {
+            "minEdgeRatio": 0.7681897721661031,
+            "maxEdgeRatio": 1.3625480471749416,
+            "p99EdgeRatio": 1.3376299884427107,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17361226686016412,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8519040808877779,
+            "maxEdgeRatio": 1.572989643648876,
+            "p99EdgeRatio": 1.4831220170920512,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.09841300760056701,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.42892155226539164,
+          "old": {
+            "minEdgeRatio": 0.7538995778531291,
+            "maxEdgeRatio": 1.3215881899024764,
+            "p99EdgeRatio": 1.293601549796616,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.03857738005500697,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8528193167447229,
+            "maxEdgeRatio": 1.5207913140232592,
+            "p99EdgeRatio": 1.4387055407386984,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.08218933044764565,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.49019605973187613,
+          "old": {
+            "minEdgeRatio": 0.7318780073065305,
+            "maxEdgeRatio": 1.2778851047274227,
+            "p99EdgeRatio": 1.2502075110562219,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1389239448602932,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8473595827955924,
+            "maxEdgeRatio": 1.4568022085410837,
+            "p99EdgeRatio": 1.3876853505711766,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.07485551442233782,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.5514705671983606,
+          "old": {
+            "minEdgeRatio": 0.7173337081750567,
+            "maxEdgeRatio": 1.2328000833572552,
+            "p99EdgeRatio": 1.2072822633333535,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.2498934048473012,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8390233285443378,
+            "maxEdgeRatio": 1.383368704754317,
+            "p99EdgeRatio": 1.3295307212963798,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.0036004286347846143,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.6127450746648452,
+          "old": {
+            "minEdgeRatio": 0.7171519400546447,
+            "maxEdgeRatio": 1.1877578252270053,
+            "p99EdgeRatio": 1.1648620142633903,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.20149553060140205,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7983508753790779,
+            "maxEdgeRatio": 1.3053368028638386,
+            "p99EdgeRatio": 1.2652052105661822,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.04568993258293623,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.6740195821313297,
+          "old": {
+            "minEdgeRatio": 0.729531517910397,
+            "maxEdgeRatio": 1.146209066382226,
+            "p99EdgeRatio": 1.1273479555831838,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.18322630904991463,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7687488392121006,
+            "maxEdgeRatio": 1.2344753758077835,
+            "p99EdgeRatio": 1.2034500858594475,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.0673453028028079,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.7352940895978142,
+          "old": {
+            "minEdgeRatio": 0.7508206066945587,
+            "maxEdgeRatio": 1.1304002666814215,
+            "p99EdgeRatio": 1.0946079987581687,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.15058295314933795,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7614189816978532,
+            "maxEdgeRatio": 1.1888978107821604,
+            "p99EdgeRatio": 1.147345526317886,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.08181599826586383,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.7965685970642987,
+          "old": {
+            "minEdgeRatio": 0.7768042645406404,
+            "maxEdgeRatio": 1.140705520018836,
+            "p99EdgeRatio": 1.0747225787340131,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.15500192732709997,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7730586296629892,
+            "maxEdgeRatio": 1.1692753036318273,
+            "p99EdgeRatio": 1.1006395795354347,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.10931550428652084,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.8578431045307833,
+          "old": {
+            "minEdgeRatio": 0.7966523140499868,
+            "maxEdgeRatio": 1.160776905676946,
+            "p99EdgeRatio": 1.0755924690780638,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16724434479730105,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.7982295543869331,
+            "maxEdgeRatio": 1.1730485193910034,
+            "p99EdgeRatio": 1.0847205518390657,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.11802288818495707,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.9191176119972677,
+          "old": {
+            "minEdgeRatio": 0.8060392109710618,
+            "maxEdgeRatio": 1.1782673792579783,
+            "p99EdgeRatio": 1.0858171735864794,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17643282273867147,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8088238775193555,
+            "maxEdgeRatio": 1.1819462221699788,
+            "p99EdgeRatio": 1.0877034141953434,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.1603644571766796,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 0.9803921194637523,
+          "old": {
+            "minEdgeRatio": 0.8100774528369994,
+            "maxEdgeRatio": 1.1897473168296453,
+            "p99EdgeRatio": 1.097840340868134,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16999235974388105,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8107228918911349,
+            "maxEdgeRatio": 1.1902245934742555,
+            "p99EdgeRatio": 1.0980187087258124,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.17006878965992833,
+            "degenerateFaces": 0
+          }
+        },
+        {
+          "t": 1.0416666269302368,
+          "old": {
+            "minEdgeRatio": 0.8096462262999472,
+            "maxEdgeRatio": 1.1945127014520238,
+            "p99EdgeRatio": 1.1035016123742958,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16008659071505982,
+            "degenerateFaces": 0
+          },
+          "new": {
+            "minEdgeRatio": 0.8096462262999472,
+            "maxEdgeRatio": 1.1945127014520238,
+            "p99EdgeRatio": 1.1035016123742958,
+            "over2xEdges": 0,
+            "minAreaRatio": 0.16008659071505982,
+            "degenerateFaces": 0
+          }
+        }
+      ]
+    }
+  ],
+  "runtimeVerified": false,
+  "limits": [
+    "Local CPU validation; runtime crossfade and actual 8-frame game sequence require receiver comparison.",
+    "Cape strain is compared against rest mesh, not a cloth simulation or watertight collision certificate."
+  ],
+  "localNumericPass": true
+}

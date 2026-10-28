@@ -1,0 +1,1775 @@
+{
+  "summary": {
+    "original": {
+      "maxCountBelow5Percent": 1,
+      "maxPosedAreaBelow5PercentMm2": 0.35671832103102846,
+      "worst": {
+        "clip": "glide_exit",
+        "time": 0.42892155226539164,
+        "variant": "original",
+        "minRatio": 0.03857738005500697,
+        "triangle": 2495,
+        "triangleRestAreaMm2": 9.246826003279345,
+        "trianglePosedAreaMm2": 0.35671832103102846,
+        "countBelow5Percent": 1,
+        "totalAreaOfThosePosedMm2": 0.35671832103102846,
+        "worstCentroid": [
+          -0.16497054000356934,
+          1.161916347207424,
+          -0.026692463286946817
+        ]
+      }
+    },
+    "new": {
+      "maxCountBelow5Percent": 2,
+      "maxPosedAreaBelow5PercentMm2": 10.335736534915348,
+      "worst": {
+        "clip": "glide_exit",
+        "time": 0.5514705671983606,
+        "variant": "new",
+        "minRatio": 0.0036004286347846143,
+        "triangle": 6637,
+        "triangleRestAreaMm2": 105.0886920319571,
+        "trianglePosedAreaMm2": 0.37836433598392005,
+        "countBelow5Percent": 1,
+        "totalAreaOfThosePosedMm2": 0.37836433598392005,
+        "worstCentroid": [
+          0.22205439043172373,
+          1.0516434418630658,
+          -0.1462711211023724
+        ]
+      }
+    }
+  },
+  "samples": [
+    {
+      "clip": "glide_enter",
+      "time": 0.0,
+      "variant": "original",
+      "minRatio": 0.1600866981955458,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 9.576246849674321,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23627211169345194,
+        0.6790653572754253,
+        -0.03002493177880101
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.0,
+      "variant": "new",
+      "minRatio": 0.1600866981955458,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 9.576246849674321,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23627211169345194,
+        0.6790653572754253,
+        -0.03002493177880101
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.06127450746648452,
+      "variant": "original",
+      "minRatio": 0.16204730824188138,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 9.693528834944122,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23614581806659776,
+        0.681016211561836,
+        -0.030139928551531112
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.06127450746648452,
+      "variant": "new",
+      "minRatio": 0.16220735197304376,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 9.703102511543296,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23620680988909903,
+        0.6819780001403942,
+        -0.030349361977972205
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.12254901493296903,
+      "variant": "original",
+      "minRatio": 0.17577447608252708,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 10.514676058733833,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23529647759338776,
+        0.6944697859878679,
+        -0.03097009328829085
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.12254901493296903,
+      "variant": "new",
+      "minRatio": 0.17332182253972292,
+      "triangle": 2236,
+      "triangleRestAreaMm2": 6.626563237711431,
+      "trianglePosedAreaMm2": 1.1485280175348724,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.09962090850430365,
+        0.8208725989516603,
+        0.09674651567796504
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.18382352239945354,
+      "variant": "original",
+      "minRatio": 0.17269949275994717,
+      "triangle": 2236,
+      "triangleRestAreaMm2": 6.626563237711431,
+      "trianglePosedAreaMm2": 1.1444041098944773,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.10100676469944843,
+        0.8341047581956769,
+        0.09564032557407402
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.18382352239945354,
+      "variant": "new",
+      "minRatio": 0.14111890938362345,
+      "triangle": 2236,
+      "triangleRestAreaMm2": 6.626563237711431,
+      "trianglePosedAreaMm2": 0.9351333770674499,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.10268543952425942,
+        0.8537272901941627,
+        0.0959686386086686
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.24509802986593807,
+      "variant": "original",
+      "minRatio": 0.15888971188601392,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 16.69751199943571,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.216980026817612,
+        0.6942025744602439,
+        -0.044970467211637825
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.24509802986593807,
+      "variant": "new",
+      "minRatio": 0.13127064245646147,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 13.795060117944232,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.21874831206068943,
+        0.7329213314242399,
+        -0.05672172910769103
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.3063725373324226,
+      "variant": "original",
+      "minRatio": 0.1616558008434916,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 16.98819667002108,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2149534365774015,
+        0.7485742535532253,
+        -0.05211324920398122
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.3063725373324226,
+      "variant": "new",
+      "minRatio": 0.08314939619342063,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 8.738061289213565,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.21858003908726856,
+        0.8073296571671499,
+        -0.07281554340734965
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.3676470447989071,
+      "variant": "original",
+      "minRatio": 0.15728111500988903,
+      "triangle": 7416,
+      "triangleRestAreaMm2": 152.45634772306232,
+      "trianglePosedAreaMm2": 23.978504360218597,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.24379709551990525,
+        0.855626952757568,
+        -0.044995112534852645
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.3676470447989071,
+      "variant": "new",
+      "minRatio": 0.04661073051435716,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 4.898260704407824,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.898260704407824,
+      "worstCentroid": [
+        0.21931071108700192,
+        0.885699697793186,
+        -0.09315097901375054
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.42892155226539164,
+      "variant": "original",
+      "minRatio": 0.1781677530680343,
+      "triangle": 5615,
+      "triangleRestAreaMm2": 34.1275869433159,
+      "trianglePosedAreaMm2": 6.080435483324579,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2314722500446289,
+        0.9422696534411927,
+        -0.08519468151503758
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.42892155226539164,
+      "variant": "new",
+      "minRatio": 0.02245226013635065,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 2.359478650890341,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 2.359478650890341,
+      "worstCentroid": [
+        0.22065861295953962,
+        0.9603407258029427,
+        -0.11605550128800153
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.49019605973187613,
+      "variant": "original",
+      "minRatio": 0.22557293856219401,
+      "triangle": 5615,
+      "triangleRestAreaMm2": 34.1275869433159,
+      "trianglePosedAreaMm2": 7.698260072840531,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23058180125309982,
+        1.016087907994345,
+        -0.0980820503955731
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.49019605973187613,
+      "variant": "new",
+      "minRatio": 0.04656534155082707,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 4.893490837597761,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.893490837597761,
+      "worstCentroid": [
+        0.22215316604720514,
+        1.0243565158866814,
+        -0.13903392472129855
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.5514705671983606,
+      "variant": "original",
+      "minRatio": 0.22326415122832455,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 2.0644847591781637,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.15529345935944278,
+        1.0708713065190312,
+        -0.014355860208225518
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.5514705671983606,
+      "variant": "new",
+      "minRatio": 0.11348638555839273,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 11.926135821765877,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.22338236361238964,
+        1.0733908231069353,
+        -0.15959935671421946
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.6127450746648452,
+      "variant": "original",
+      "minRatio": 0.09790748500397366,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 0.9053334782504263,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.16123456452415352,
+        1.125578836192924,
+        -0.02141555332330107
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.6127450746648452,
+      "variant": "new",
+      "minRatio": 0.08911984708181092,
+      "triangle": 6021,
+      "triangleRestAreaMm2": 37.25152393830442,
+      "trianglePosedAreaMm2": 3.319850116946109,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.11455212123638736,
+        1.307270880971643,
+        0.16500820212208592
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.6740195821313297,
+      "variant": "original",
+      "minRatio": 0.06918272675651017,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 0.6397206367498681,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.1666375424523304,
+        1.178627520497886,
+        -0.02927700894170075
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.6740195821313297,
+      "variant": "new",
+      "minRatio": 0.1024111723251186,
+      "triangle": 6021,
+      "triangleRestAreaMm2": 37.25152393830442,
+      "trianglePosedAreaMm2": 3.8149722374189747,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.11627042186048532,
+        1.3373843480381529,
+        0.16192037591178593
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.7352940895978142,
+      "variant": "original",
+      "minRatio": 0.22713724591495646,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 2.100298591839675,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.17140573880320195,
+        1.2281510576081855,
+        -0.037521519736745605
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.7352940895978142,
+      "variant": "new",
+      "minRatio": 0.12790464151450126,
+      "triangle": 7818,
+      "triangleRestAreaMm2": 45.26991087160793,
+      "trianglePosedAreaMm2": 5.7902317214264345,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.3456652281637184,
+        1.1441466210746285,
+        -0.33788010549145303
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.7965685970642987,
+      "variant": "original",
+      "minRatio": 0.19824377044087396,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 9.219880022533841,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.32565802700448115,
+        1.39299628365763,
+        -0.3902087937198327
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.7965685970642987,
+      "variant": "new",
+      "minRatio": 0.09777641561171442,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 9.054826182647277,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.1554104344559811,
+        1.3414964739452218,
+        0.06065016068782066
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.8578431045307833,
+      "variant": "original",
+      "minRatio": 0.16434569912174116,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 7.643355575573156,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.33697649959856174,
+        1.4437707342339345,
+        -0.4002508915498549
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.8578431045307833,
+      "variant": "new",
+      "minRatio": 0.05228616114430371,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.842088942998988,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.1560721617263923,
+        1.3439360634974735,
+        0.060378993704905896
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.9191176119972677,
+      "variant": "original",
+      "minRatio": 0.15674988512454333,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 4.739260976955492,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.27954181912167403,
+        1.448438536850497,
+        -0.2944812541042749
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.9191176119972677,
+      "variant": "new",
+      "minRatio": 0.03413571240167647,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.1612218599368007,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 3.1612218599368007,
+      "worstCentroid": [
+        0.15645097363144025,
+        1.3438847478756124,
+        0.06053415514909013
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.9803921194637523,
+      "variant": "original",
+      "minRatio": 0.13564815819135687,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 4.101259928843958,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2835078147726598,
+        1.4705303705014352,
+        -0.29893079803808115
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 0.9803921194637523,
+      "variant": "new",
+      "minRatio": 0.03399575914182344,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.1482611430426926,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 7.536063697673383,
+      "worstCentroid": [
+        0.15660714725159483,
+        1.3434097711794275,
+        0.06069474649310025
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 1.0416666269302368,
+      "variant": "original",
+      "minRatio": 0.12824993922259031,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 3.877578167101108,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2850859166905077,
+        1.479408308498666,
+        -0.3007756086519311
+      ]
+    },
+    {
+      "clip": "glide_enter",
+      "time": 1.0416666269302368,
+      "variant": "new",
+      "minRatio": 0.03455467584986618,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.2000210036414085,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 7.395277750851389,
+      "worstCentroid": [
+        0.1566320566497962,
+        1.343295783681172,
+        0.06072855744756429
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.0,
+      "variant": "original",
+      "minRatio": 0.12825006005341097,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 3.877581820365623,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.28508591832118513,
+        1.4794083080776872,
+        -0.3007756083086772
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.0,
+      "variant": "new",
+      "minRatio": 0.03455457337003495,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.2000115132438194,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 7.395272989356644,
+      "worstCentroid": [
+        0.15663205594604201,
+        1.3432957842301068,
+        0.06072855965025448
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.12009804389056038,
+      "variant": "original",
+      "minRatio": 0.1740460809171787,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 8.094498913534336,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.35080406789342283,
+        1.511066082669471,
+        -0.4168858341714356
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.12009804389056038,
+      "variant": "new",
+      "minRatio": 0.043805596977304725,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.056725376718259,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.056725376718259,
+      "worstCentroid": [
+        0.15489911927335628,
+        1.346833921995805,
+        0.060713493021219866
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.24019608778112075,
+      "variant": "original",
+      "minRatio": 0.10348055275572357,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 4.812652013990059,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.3466345479069126,
+        1.5027046351433908,
+        -0.4162361234969835
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.24019608778112075,
+      "variant": "new",
+      "minRatio": 0.047354181746628,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.385350823658473,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.385350823658473,
+      "worstCentroid": [
+        0.15333427037371672,
+        1.350297895867518,
+        0.0607952121918229
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.3602941316716811,
+      "variant": "original",
+      "minRatio": 0.20028559011157188,
+      "triangle": 7692,
+      "triangleRestAreaMm2": 13.743254280163335,
+      "trianglePosedAreaMm2": 2.7525757935558994,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2733204196543803,
+        1.449550502518963,
+        -0.3148526315342955
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.3602941316716811,
+      "variant": "new",
+      "minRatio": 0.043627092076629403,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.040194490018705,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 10.335736534915348,
+      "worstCentroid": [
+        0.15217118522297793,
+        1.3526101323040354,
+        0.060943215646759676
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.4803921755622415,
+      "variant": "original",
+      "minRatio": 0.40860413892225106,
+      "triangle": 4511,
+      "triangleRestAreaMm2": 60.09097415773725,
+      "trianglePosedAreaMm2": 24.55342075272147,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.171851366506539,
+        1.4738389576104416,
+        -0.1597354570825981
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.4803921755622415,
+      "variant": "new",
+      "minRatio": 0.03519524416382232,
+      "triangle": 7647,
+      "triangleRestAreaMm2": 134.16819358757516,
+      "trianglePosedAreaMm2": 4.722082332333688,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 9.100936438184535,
+      "worstCentroid": [
+        0.2866257332084015,
+        1.1428624081691403,
+        -0.0939264785785436
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.6004902194528019,
+      "variant": "original",
+      "minRatio": 0.3154477534380982,
+      "triangle": 7159,
+      "triangleRestAreaMm2": 94.36109863703828,
+      "trianglePosedAreaMm2": 29.765996577004515,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.3900577653524982,
+        1.5267284565854815,
+        -0.42148247428927205
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.6004902194528019,
+      "variant": "new",
+      "minRatio": 0.05762697785416121,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 5.336688450237867,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.15174097201053058,
+        1.3517182603650275,
+        0.06115817067823087
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.7205882633433622,
+      "variant": "original",
+      "minRatio": 0.17252111367527062,
+      "triangle": 7159,
+      "triangleRestAreaMm2": 94.36109863703828,
+      "trianglePosedAreaMm2": 16.279281824483903,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.3930052866247853,
+        1.5403550093506713,
+        -0.42069719021724533
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.7205882633433622,
+      "variant": "new",
+      "minRatio": 0.05876407260461701,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 5.441991914822473,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.15257398623753948,
+        1.3491469417760313,
+        0.06111900986472892
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.8406863072339227,
+      "variant": "original",
+      "minRatio": 0.3163164382191636,
+      "triangle": 2183,
+      "triangleRestAreaMm2": 23.2888660213527,
+      "trianglePosedAreaMm2": 7.366651150037589,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2511719165711618,
+        1.4616646235718787,
+        -0.33945832400004705
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.8406863072339227,
+      "variant": "new",
+      "minRatio": 0.04634186970490035,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.291603169655226,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.291603169655226,
+      "worstCentroid": [
+        0.15397304510116275,
+        1.346320243956766,
+        0.060982820787291336
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.960784351124483,
+      "variant": "original",
+      "minRatio": 0.3361212598412039,
+      "triangle": 7692,
+      "triangleRestAreaMm2": 13.743254280163335,
+      "trianglePosedAreaMm2": 4.619399942966518,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2795626026307337,
+        1.4942654426249928,
+        -0.31377171604129844
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 0.960784351124483,
+      "variant": "new",
+      "minRatio": 0.03365657653975918,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.1168503014132938,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 3.1168503014132938,
+      "worstCentroid": [
+        0.1557158383939176,
+        1.3440681483535208,
+        0.06080689821719199
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.0808823950150435,
+      "variant": "original",
+      "minRatio": 0.29857260569799093,
+      "triangle": 7159,
+      "triangleRestAreaMm2": 94.36109863703828,
+      "trianglePosedAreaMm2": 28.173639096585656,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.39139844933892887,
+        1.5944117932445956,
+        -0.4134190868226882
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.0808823950150435,
+      "variant": "new",
+      "minRatio": 0.03957980385284152,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.6653853793737876,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 3.6653853793737876,
+      "worstCentroid": [
+        0.15753221677562187,
+        1.342762384134265,
+        0.060669023331947985
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.2009804389056038,
+      "variant": "original",
+      "minRatio": 0.26053773593480023,
+      "triangle": 7159,
+      "triangleRestAreaMm2": 94.36109863703828,
+      "trianglePosedAreaMm2": 24.58462699921432,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.3876177156542031,
+        1.6027016182865435,
+        -0.41112289192874857
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.2009804389056038,
+      "variant": "new",
+      "minRatio": 0.0487614223598251,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.5156718123134825,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.5156718123134825,
+      "worstCentroid": [
+        0.15915965045287653,
+        1.3422217878743414,
+        0.06062805567643168
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.3210784827961641,
+      "variant": "original",
+      "minRatio": 0.4529382132624134,
+      "triangle": 2857,
+      "triangleRestAreaMm2": 81.76594838598359,
+      "trianglePosedAreaMm2": 37.03492256765413,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.24063269711268268,
+        1.6012546634883063,
+        -0.40477741727627636
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.3210784827961641,
+      "variant": "new",
+      "minRatio": 0.04919612050143814,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.5559281061201276,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.5559281061201276,
+      "worstCentroid": [
+        0.1603874658564801,
+        1.3419129962875924,
+        0.060691250576951315
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.4411765266867245,
+      "variant": "original",
+      "minRatio": 0.6268213244686608,
+      "triangle": 622,
+      "triangleRestAreaMm2": 62.40146135424826,
+      "trianglePosedAreaMm2": 39.114566654849845,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.36751650888884674,
+        1.5628555305598948,
+        -0.41473031433055224
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.4411765266867245,
+      "variant": "new",
+      "minRatio": 0.0499666914966787,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.6272887341370215,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.6272887341370215,
+      "worstCentroid": [
+        0.16108276078170616,
+        1.3413487299890872,
+        0.06081130487766543
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.5612745705772848,
+      "variant": "original",
+      "minRatio": 0.4632538052915183,
+      "triangle": 2178,
+      "triangleRestAreaMm2": 435.5834005525399,
+      "trianglePosedAreaMm2": 201.78566782778373,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.25426913121027883,
+        1.4788140894690212,
+        -0.3032015666930961
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.5612745705772848,
+      "variant": "new",
+      "minRatio": 0.04776941088751384,
+      "triangle": 7647,
+      "triangleRestAreaMm2": 134.16819358757516,
+      "trianglePosedAreaMm2": 6.409135567520377,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 6.409135567520377,
+      "worstCentroid": [
+        0.29530898219024243,
+        1.1327728030829176,
+        -0.0945754114836677
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.6813726144678454,
+      "variant": "original",
+      "minRatio": 0.2251331665201352,
+      "triangle": 2178,
+      "triangleRestAreaMm2": 435.5834005525399,
+      "trianglePosedAreaMm2": 98.06427025000171,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2561609407026899,
+        1.4589023559437528,
+        -0.3042564474171643
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.6813726144678454,
+      "variant": "new",
+      "minRatio": 0.06571469928968757,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 6.085671846225516,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.1607120960709254,
+        1.3395916949092481,
+        0.06095629425489224
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.8014706583584057,
+      "variant": "original",
+      "minRatio": 0.10862049616113673,
+      "triangle": 2178,
+      "triangleRestAreaMm2": 435.5834005525399,
+      "trianglePosedAreaMm2": 47.31328508757204,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.25642165157012203,
+        1.4418747126448543,
+        -0.30477167464688126
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.8014706583584057,
+      "variant": "new",
+      "minRatio": 0.058107170516956845,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 5.381157876413846,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.15971468658682,
+        1.3394791143027478,
+        0.060912202084730784
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.921568702248966,
+      "variant": "original",
+      "minRatio": 0.1018643204640551,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 3.079821069953665,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2881472612122277,
+        1.4832321641064536,
+        -0.3007133482920001
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 1.921568702248966,
+      "variant": "new",
+      "minRatio": 0.04088058776643633,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.7858476827328964,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 3.7858476827328964,
+      "worstCentroid": [
+        0.15830324096544882,
+        1.340676378118521,
+        0.06081557312438477
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 2.0416667461395264,
+      "variant": "original",
+      "minRatio": 0.12824993922259031,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 3.877578167101108,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2850859166905077,
+        1.479408308498666,
+        -0.3007756086519311
+      ]
+    },
+    {
+      "clip": "glide_loop",
+      "time": 2.0416667461395264,
+      "variant": "new",
+      "minRatio": 0.03455467584989178,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.2000210036437795,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 7.395277750853804,
+      "worstCentroid": [
+        0.15663205664979601,
+        1.3432957836811725,
+        0.06072855744756419
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.0,
+      "variant": "original",
+      "minRatio": 0.12825005888491492,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 3.8775817850366803,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.28508591738867617,
+        1.479408309415528,
+        -0.3007756021153778
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.0,
+      "variant": "new",
+      "minRatio": 0.03455457337003495,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.2000115132438194,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 7.395272989356644,
+      "worstCentroid": [
+        0.15663205594604201,
+        1.3432957842301068,
+        0.06072855965025448
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.06127450746648452,
+      "variant": "original",
+      "minRatio": 0.12966324347775898,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 3.920308773887608,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2847717957543984,
+        1.477637287866169,
+        -0.30040498280454025
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.06127450746648452,
+      "variant": "new",
+      "minRatio": 0.03399163466334169,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.14787918553778,
+      "countBelow5Percent": 2,
+      "totalAreaOfThosePosedMm2": 7.535427942839784,
+      "worstCentroid": [
+        0.15660721347055906,
+        1.3434203471115989,
+        0.06069235154812885
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.12254901493296903,
+      "variant": "original",
+      "minRatio": 0.1402354277038056,
+      "triangle": 2555,
+      "triangleRestAreaMm2": 30.234541946808967,
+      "trianglePosedAreaMm2": 4.239953921339407,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.28259421920317346,
+        1.46541325552266,
+        -0.29788224629137305
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.12254901493296903,
+      "variant": "new",
+      "minRatio": 0.03412566673248166,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 3.160291555958297,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 3.160291555958297,
+      "worstCentroid": [
+        0.1564523157245822,
+        1.344064253345996,
+        0.06049370436839537
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.18382352239945354,
+      "variant": "original",
+      "minRatio": 0.16309844440754281,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 7.5853485128701275,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.3430869163879011,
+        1.4717871571821828,
+        -0.40623545109797804
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.18382352239945354,
+      "variant": "new",
+      "minRatio": 0.052652237689762,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 4.875990364603889,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.15607888744435727,
+        1.3447504201039318,
+        0.06019374368384608
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.24509802986593807,
+      "variant": "original",
+      "minRatio": 0.17073335422099062,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 7.9404313097030785,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.3337101846458423,
+        1.4289686530412204,
+        -0.397217255388779
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.24509802986593807,
+      "variant": "new",
+      "minRatio": 0.09912074986646614,
+      "triangle": 6103,
+      "triangleRestAreaMm2": 92.60746700518683,
+      "trianglePosedAreaMm2": 9.17932157278814,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.15543131483636838,
+        1.3437220018431688,
+        0.060137665519637874
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.3063725373324226,
+      "variant": "original",
+      "minRatio": 0.21707420836686375,
+      "triangle": 1188,
+      "triangleRestAreaMm2": 46.50779190705345,
+      "trianglePosedAreaMm2": 10.095642111114461,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.32138868830998885,
+        1.3742224876907254,
+        -0.3867528136082872
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.3063725373324226,
+      "variant": "new",
+      "minRatio": 0.1305246537000855,
+      "triangle": 7818,
+      "triangleRestAreaMm2": 45.26991087160793,
+      "trianglePosedAreaMm2": 5.90883943955036,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.3456943352718406,
+        1.1508254453632654,
+        -0.33946795576815775
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.3676470447989071,
+      "variant": "original",
+      "minRatio": 0.17361226686016412,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 1.6053624236908386,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.16995791538682095,
+        1.2128422864060695,
+        -0.03487937298683271
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.3676470447989071,
+      "variant": "new",
+      "minRatio": 0.09841300760056701,
+      "triangle": 6021,
+      "triangleRestAreaMm2": 37.25152393830442,
+      "trianglePosedAreaMm2": 3.6660345084730572,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.11664378271421276,
+        1.3442890707353987,
+        0.16031263514619143
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.42892155226539164,
+      "variant": "original",
+      "minRatio": 0.03857738005500697,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 0.35671832103102846,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 0.35671832103102846,
+      "worstCentroid": [
+        -0.16497054000356934,
+        1.161916347207424,
+        -0.026692463286946817
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.42892155226539164,
+      "variant": "new",
+      "minRatio": 0.08218933044764565,
+      "triangle": 6021,
+      "triangleRestAreaMm2": 37.25152393830442,
+      "trianglePosedAreaMm2": 3.0616778106436846,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.11510712567410415,
+        1.317672200797827,
+        0.16262779087042298
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.49019605973187613,
+      "variant": "original",
+      "minRatio": 0.1389239448602932,
+      "triangle": 2495,
+      "triangleRestAreaMm2": 9.246826003279345,
+      "trianglePosedAreaMm2": 1.2846055458123051,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.15938720718737245,
+        1.1081698661841426,
+        -0.019053717579497424
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.49019605973187613,
+      "variant": "new",
+      "minRatio": 0.07485551442233782,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 7.866468102022782,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.22332062182139864,
+        1.0950276651414221,
+        -0.16577384617745358
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.5514705671983606,
+      "variant": "original",
+      "minRatio": 0.2498934048473012,
+      "triangle": 1070,
+      "triangleRestAreaMm2": 40.753029854208464,
+      "trianglePosedAreaMm2": 10.183913388111867,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.2722486101904626,
+        1.053450225639887,
+        -0.33959046856483227
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.5514705671983606,
+      "variant": "new",
+      "minRatio": 0.0036004286347846143,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 0.37836433598392005,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 0.37836433598392005,
+      "worstCentroid": [
+        0.22205439043172373,
+        1.0516434418630658,
+        -0.1462711211023724
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.6127450746648452,
+      "variant": "original",
+      "minRatio": 0.20149553060140205,
+      "triangle": 5615,
+      "triangleRestAreaMm2": 34.1275869433159,
+      "trianglePosedAreaMm2": 6.8765562392889175,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23077678085964748,
+        0.992205663001324,
+        -0.09366442391700987
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.6127450746648452,
+      "variant": "new",
+      "minRatio": 0.04568993258293623,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 4.801495254169067,
+      "countBelow5Percent": 1,
+      "totalAreaOfThosePosedMm2": 4.801495254169067,
+      "worstCentroid": [
+        0.22042398942043964,
+        0.9922627919044794,
+        -0.1236502826996108
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.6740195821313297,
+      "variant": "original",
+      "minRatio": 0.18322630904991463,
+      "triangle": 5615,
+      "triangleRestAreaMm2": 34.1275869433159,
+      "trianglePosedAreaMm2": 6.25307179240383,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23192776114784408,
+        0.9192701505403652,
+        -0.08163658977934894
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.6740195821313297,
+      "variant": "new",
+      "minRatio": 0.0673453028028079,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 7.077229786043175,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2188160757431258,
+        0.9204498737511618,
+        -0.10030275157764407
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.7352940895978142,
+      "variant": "original",
+      "minRatio": 0.15058295314933795,
+      "triangle": 7416,
+      "triangleRestAreaMm2": 152.45634772306232,
+      "trianglePosedAreaMm2": 22.95732706650107,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.24410783219019894,
+        0.8350988234009217,
+        -0.04186434337381287
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.7352940895978142,
+      "variant": "new",
+      "minRatio": 0.08181599826586383,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 8.5979362450485,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.21774564593520843,
+        0.8423461132120643,
+        -0.07884209604830335
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.7965685970642987,
+      "variant": "original",
+      "minRatio": 0.15500192732709997,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 16.288949805237404,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.21558296863435508,
+        0.7299571003344504,
+        -0.04951864952947508
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.7965685970642987,
+      "variant": "new",
+      "minRatio": 0.10931550428652084,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 11.487823364284274,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.21761245328945514,
+        0.7653345636491666,
+        -0.0612618435000318
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.8578431045307833,
+      "variant": "original",
+      "minRatio": 0.16724434479730105,
+      "triangle": 6637,
+      "triangleRestAreaMm2": 105.0886920319571,
+      "trianglePosedAreaMm2": 17.575489444490017,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.21763027761177098,
+        0.6794581052733019,
+        -0.04326043824465987
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.8578431045307833,
+      "variant": "new",
+      "minRatio": 0.11802288818495707,
+      "triangle": 2236,
+      "triangleRestAreaMm2": 6.626563237711431,
+      "trianglePosedAreaMm2": 0.7820861320549634,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.10434496886469062,
+        0.8713343747302823,
+        0.09496609447581546
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.9191176119972677,
+      "variant": "original",
+      "minRatio": 0.17643282273867147,
+      "triangle": 2236,
+      "triangleRestAreaMm2": 6.626563237711431,
+      "trianglePosedAreaMm2": 1.1691432570857379,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.10025394277300241,
+        0.8264577813996062,
+        0.09603661027563132
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.9191176119972677,
+      "variant": "new",
+      "minRatio": 0.1603644571766796,
+      "triangle": 2236,
+      "triangleRestAreaMm2": 6.626563237711431,
+      "trianglePosedAreaMm2": 1.062665216562534,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        -0.10082253977455573,
+        0.832982282540713,
+        0.09614580566957513
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.9803921194637523,
+      "variant": "original",
+      "minRatio": 0.16999235974388105,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 10.16879489561075,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.23564729575848198,
+        0.6888404680087566,
+        -0.03061480993901886
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 0.9803921194637523,
+      "variant": "new",
+      "minRatio": 0.17006878965992833,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 10.173366866617826,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2357105059677489,
+        0.6897864804428339,
+        -0.030825530784012335
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 1.0416666269302368,
+      "variant": "original",
+      "minRatio": 0.16008659071505982,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 9.576240420285266,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2362720933177979,
+        0.6790653410674045,
+        -0.030024949589914793
+      ]
+    },
+    {
+      "clip": "glide_exit",
+      "time": 1.0416666269302368,
+      "variant": "new",
+      "minRatio": 0.16008659071505982,
+      "triangle": 7546,
+      "triangleRestAreaMm2": 59.81912899457107,
+      "trianglePosedAreaMm2": 9.576240420285266,
+      "countBelow5Percent": 0,
+      "totalAreaOfThosePosedMm2": 0.0,
+      "worstCentroid": [
+        0.2362720933177979,
+        0.6790653410674045,
+        -0.030024949589914793
+      ]
+    }
+  ],
+  "note": "Small local folds remain; this is not a cloth collision certificate."
+}
