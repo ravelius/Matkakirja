@@ -494,3 +494,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Jäljellä valo-/varjopuolen ero (R-suhde peli 1,56, havainne 2,23). Valo tauolla: jos KK haluaa varjopuolet oranssinruskeammiksi, LR syventää kourujen varjoa
   albedossa; kokeilu QA:lla `valo savy palatsikatto r g b`.
 - Seuraavat parit (kohta 3, friisi räystään alla) aina REF ac8b06780:llä. Kohta 1 (räystäs + päätetiilet + 01:n siniset ruudut, PK) yhä auki.
+
+## LISÄYS 36 klo 13.54 (28.10.): 01:n siniset ruudut korjattu, päätetiilet avoimiin huoneisiin (järjestyksen kohta 1, osa)
+- SELVITYS (värikokeet havainne-editori-20261028-131949 ja -134157): sini-violetit ruudut = avointen huoneiden (juhlasali, puutarha, tyohuone, varasto)
+  räystäsvyö "Katto raystas" (0,925 m palat, tasainen sinivihreä → pelin räystästunnistus sävytti paloittain); yläpuolinen 1069-nauha V4_paattotiili.
+  Hallien V4_teal/V4_palkkivyo/V4_konsoli EIVÄT ole lähde. Normaalien käännös ei auttanut.
+- KORJAUS: K/tyokalut/paatetiilet.py (avoimet): 1069-nauha tummaksi varjoksi, 3D-päätetiilet (kiekko R 0,085, väli 0,25, ulkonema 0,04, materiaali
+  V4_palatsi_katto-kopio → VS:n _PalatsiKatto-sävy), räystäsvyö → V4_palkkivyo → palatsi_pinnat friisi v02, alapinnan ruoteet × 0,45.
+  avoimet-v60k, juuri-v95m. Jatko keskeytyksestä: `zsh K/tyokalut/aja_v95_pari.zsh [01 05 02]` (~4 min, REF oletus ac8b06780).
+- PARI lokit/havainne-editori-20261028-135114 (01/05/02) + 01/kk-raystas-ennen-jalkeen-2x.png → KK.
+- AUKI: taustapalojen (lähimmät kujakatot) päätetiilet (leivottuja: uusi primitiivi ilman UV1:tä omaan ryhmäänsä, pohjaväri 0,999 – tarkista),
+  räystään ulkonema ja friisivyön korkeus/kirkkaus (kohta 3). PK: harjakoristeet ovat jo 3D (koristeet.json), päätetiilistä ei Codex-tilausta.
