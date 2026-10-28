@@ -440,3 +440,16 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (j4h + j4g) + 2×-rajaukset + vastakoe-esineet rekvisiitta-brass_pot_01 ja -wooden_crate_01 (VS) → PT → KK.
 - kavely-j4 palautettu 044256-tilaan (glb + astcm; tasoituskoe sivussa esine-arkun-hopeasisalto-tasoitettu-koe.glb, ajo -045352, ei arvioitu).
 - Ei taustaajoja käynnissä. Kujakivet: Codexin v4 (f0766ed58) ei vielä postissa → LISÄYS 28.
+
+## LISÄYS 31 klo 08.3x (28.10.): kujakivet v4 pelissä, VS:n sävy kesken; LUOVUTUS (konteksti 30 %)
+- Codexin v4 (3a6fae6f4, vain v01, SHA 39/39) → K/kujakivi-pinnat-v4. aja_ketju_v86.zsh: PINNAT-muuttuja; ajo
+  `SK=0.625 PINNAT=$K/kujakivi-pinnat-v4 VV_SOKKELI=v01 VV_PILARI=v01 VV_LATTIA=v01 zsh K/tyokalut/aja_ketju_v86.zsh v01` (~1 min).
+- kujakivi_pinnat.py (vanha: kujakivi_pinnat-v86.py.bak): SK = sokkelikuvan mittakaava (PT 08.2x: näkyvä kivijalka ~0,75 m → 0,625 = kerta 9,4 cm, ~8 kertaa kuten havainne);
+  reunakiven päätypinnoille oma UV (kujan 01 ruskea juova pois).
+- Parit (aja_v86_pari.zsh 02 05 01): 081218 (v4, REF 67afc1220), 081743 (SK + päädyt), 082215 (VS d425c5378: kivijalka vaalea lämmin harmaa, vaihtelu puoleen).
+  Lähikuvat kunkin kansion kk-lahikuva-kivijalka/-lattia.png + 02/kk-v3-v4-, kk-v4a-v4b-, kk-v4b-v4d-havainne.png.
+- AVOIN: d425c5378 toi lattiaan ja reunakiven kylkeen vaaleat vaakaviirut (081743:ssa ei) → VS:lle 08.3x, odottaa korjattua REF:iä. Sitten
+  `REF=<VS> zsh K/tyokalut/aja_v86_pari.zsh 02 05 01` → lähikuvat → PT → KK (kokonaispari ennen omistajaa). Lattia yhä tummempi ja ruskeampi kuin havainne,
+  laatat isommat/litteämmät; 01:n reunakiven päädyt hieman kellertävät.
+- J4: odottaa Codexin J4-v3:a (LISÄYS 30; KK:n mukaan tulossa c5108dc70).
+- Ei taustaajoja käynnissä.
