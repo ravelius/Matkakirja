@@ -464,3 +464,20 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   `SK=0.82 LKU=1.25 LKV=1.0 PINNAT=K/../kujakivi-pinnat-v4d VV_SOKKELI=v01 VV_PILARI=v01 VV_LATTIA=v01 zsh K/aja_ketju_v86.zsh v01`
   `REF=003221b36 zsh K/aja_v86_pari.zsh 02 05 01` (lähikuvat: samat rajaukset kuin 082215; v5:llä venytys pois → LKU = LKV).
 - J4: odottaa yhä Codexin J4-v3:a (LISÄYS 30). Ei taustaajoja käynnissä.
+
+## LISÄYS 33 klo 13.0x (28.10.): palatsipinnat vaiheet 1–2 (katot, friisit) pelissä; LUOVUTUS (konteksti 30 %)
+- PT 12.3x: Codexin palatsipinnat-v1 (postilaatikko 57e58354f, SHA 122/122) → K/palatsipinnat-v1. Järjestys katot → friisit → seinä (omistaja 21.54).
+- Työkalut (T = K/tyokalut): palatsi_pinnat.py (VAIHEET=katto,friisi[,rappaus]; materiaalit V4_palatsi_katto/-friisi/-kultalista, metrinen UV0, UV1 säilyy),
+  palatsi_varjostus.py (normaalikartan varjostus albedoon: Codexin kattoalbedo on tasainen, tiilet vain normaalissa → kattotiili-v01b/-v01c),
+  aja_ketju_v87.zsh (yksikerros-v86 → v87, muurikate pari-v87, avoimet-v59k, hallit rakennukset-v87p) ja aja_v87_pari.zsh (juuri-v94m).
+  Jatko keskeytyksestä: `VAIHEET=katto,friisi VV_FRIISI=v02 KATTO_M=1.6 VV_KATTO=v01c zsh T/aja_ketju_v87.zsh` →
+  `REF=003221b36 zsh T/aja_v87_pari.zsh 02 05 01` (~4 min). Viimeisin pari lokit/havainne-editori-20261028-125559 (KK:lla, 2× 01/05 kk-katto-friisi-2x.png).
+- Mitat: katto 1 × 1 m kuva → KATTO_M 1,6 (tiilirivi ~0,4 m); friisi 4,13 × 1,03 → pelin palkkivyöt 0,45 m: v = kaista koko korkeudelta, u kuvasuhteen mukaan
+  (toisto 1,80 m), hallien > 1,2 m sulautuneet kaistat ennallaan (FRIISI_MAX); kultalista vain ≤ 0,10 m nauhat.
+- VS 12.5x: V4_palatsi_* piirtyy tavallisella reitillä (albedo + normaali); metallicRoughness-kuvaa EI lueta (kultalista matta), alalika-maskia ei lueta → leivo
+  albedoon. Sävy (sitruuna vs. havainteen oranssinkulta) VS:llä.
+- KK 12.5x katot: 1) rivit näkyviin (tehty v01c), 2) sävy VS, 3) 01:n oikean katon siniset/turkoosit ruudut + punavihreä vinoraita: EI palkkivyö (friisi ei
+  muuttanut) → todennäköisesti C1-räystäsosa (kielletty-c1-v3 → c1-v4) tai hallin V4_teal; SELVITÄ. 4) Räystäs: pyöreät päätetiilet ja harjan koristeet,
+  mittarin räystäslinja 0,33 vs. havainne 0,18 → geometriaerä (olemassa olevat mallit tai PK tilaa Codexilta), ennen friisien lukitsemista.
+- SEURAAVA: KK:n vastaus pariin 125559 → (3)+(4) → vaihe 3 rappaus (V4_red, rappaus-vNN 4 × 4 m, alalika leivottuna albedoon 1,20–1,70 m).
+- Kujakivet: odottaa Codexin v5:tä (LISÄYS 32). J4: odottaa J4-v3:a. Ei taustaajoja käynnissä.
