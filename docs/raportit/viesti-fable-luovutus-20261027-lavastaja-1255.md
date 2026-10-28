@@ -487,3 +487,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (havainteessa kapea, tummempi sinivihreä, räystään varjossa).
 - JÄRJESTYS: 1) räystäs + pyöreät päätetiilet + 01:n siniset ruudut (geometriaerä PK:n kanssa), 2) VS:n sävy, 3) friisivyön korkeus ja kirkkaus uudelleen
   räystään alla → pari 01/02/05 + 2× KK:lle. Rappaus vasta tämän jälkeen.
+
+## LISÄYS 35 klo 13.07 (28.10.): VS:n palatsikattojen sävy valmis (järjestyksen kohta 2)
+- REF ac8b06780 (seinat-211, natiivi-backup); METAL 395/0 ja PIPELINE 392/0 ajettu 41c4e55b3:lle, ac8b06780 muuttaa vain C#-dataa.
+- V4_palatsi_katto: oma kerroin _PalatsiKatto 0,53/0,40/1,0. VS:n pari 130055 (juuri-v94m): sävy 34–36° (havainne 31–32°, ennen 40–42°), 01:n kirkkaus = havainne.
+- Jäljellä valo-/varjopuolen ero (R-suhde peli 1,56, havainne 2,23). Valo tauolla: jos KK haluaa varjopuolet oranssinruskeammiksi, LR syventää kourujen varjoa
+  albedossa; kokeilu QA:lla `valo savy palatsikatto r g b`.
+- Seuraavat parit (kohta 3, friisi räystään alla) aina REF ac8b06780:llä. Kohta 1 (räystäs + päätetiilet + 01:n siniset ruudut, PK) yhä auki.
