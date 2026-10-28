@@ -3088,3 +3088,7 @@ Kortti "Kelpaavatko nähtävyysnostot Pariisin lähikartalla?" (NUI:n pari K1/K2
 ## STRIIMIKARTTA: NÄHTÄVYYSPIIRROKSET ISOMMIKSI JA RAKENNUSTEN KEVENNYS (omistaja 28.10. klo 14.23, KK:n välitys) (28.10.2026 klo 14.23)
 
 1) Kortti "Suurennetaanko nähtävyyksien piirroksia vähän?" (NUI:n pari P1/P2, c7cd7a1e0), sanatarkasti: "kyllä ja saako kontrastia lisättyä helposti niihin?" → NUI: piirrokset isommiksi ja kontrastia lisää. 2) Omistajan kysymys, sanatarkasti: "mietin myös että pitäisikö kartalla näkyviä striimi rakennuksia keventää. ja ovatko kaikki rakennukset samaa dataa vai voiko rakennuksia helposti erotella ja sävyttää hieman eri tavalla?" → KS: kevennys (KK:n suositus) ja selvitys rakennusten lajitiedosta; kuvasarja nyt | kevennetty | kevennetty + sävytys, NUI:n piirrokset mukana → PT tarkistaa → KK → omistaja päättää kuvista. 3) KK nollautui omistajan kortilla 14.23 "Kyllä (suositus)".
+
+## R2-POISTO LAAJENNETTU OLAVINLINNAN VANHOIHIN DIORAAMOIHIN (omistaja 28.10. klo 15.33) (28.10.2026 klo 15.38)
+
+Omistajan kortti KK:ssa 15.33: 'Poistetaanko myös Olavinlinnan vanhat dioraamat?' → 'Kyllä (suositus)'. Laajentaa R2:n yhteisen pysyvän poiston (julkaisija-tyokalut/poista-r2-yhteinen-20261028.zsh, 219 kansiota). Komento omistajalla ajettavana; Tehty → JU tarkistaa.
