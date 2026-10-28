@@ -15638,7 +15638,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   PRT: {
     Aveiro: {
       lyhyt: 'Aveiroa kutsutaan Portugalin Venetsiaksi: moliceiro-veneet keräsivät ennen kanavilla levää, nyt ne kuljettavat matkailijoita.',
-      pitka: `Aveiro on nykyään turisteille tuttu kaupunki, jossa kirkkaanväriset moliceiro-veneet kuljettavat matkailijoita kanavilla ja Art Nouveau -julkisivut kilpailevat huomiosta kaupungin keskustassa. 1800-luvulla samat veneet olivat arkisia työkaluja: niillä kerättiin ria-lahden pohjasta moliço-levää, jota levitettiin lannoitteeksi hiekkaisille pelloille, ja lahden rannoilla kohosi suolakekoja niin korkeina, että yksi kanava sai nimensä pyramideista. Isoisän matkatessa alueella 1873 veneet olivat siis yhä työveneitä, ei koristeltuja huviretkiveneitä – matkailijaa niissä ei olisi nähnyt, vain levänkerääjän ja suolantekijän. Vasta kun kemialliset lannoitteet syrjäyttivät moliçon 1900-luvulla, veneet vaihtoivat rahdin matkailijoihin.`,
+      pitka: `Aveiron piirikunta on Portugalin länsirannikolla, ja siellä asuu noin 700 000 ihmistä. Piirikunnan keskus Aveiro on kaupunki, jossa on kanavia ja jota kutsutaan Portugalin Venetsiaksi. Kuningas José I teki Aveirosta kaupungin vuonna 1759. Kanavilla kulkevia moliceiro-veneitä käytettiin ennen moliço-levän keräämiseen lannoitteeksi. Nykyään niillä kuljetetaan turisteja. Aveirossa tehdään ovos moles -nimistä munapohjaista makeista, jonka nimi on EU:ssa suojattu. Aveiron yliopisto on perustettu vuonna 1973. Ílhavon kunnassa tehdään Vista Alegre -keramiikkaa. Piirikunnan väkirikkain kunta on Santa Maria da Feira, jossa asuu noin 140 000 ihmistä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-aveiro-75984d28.jpg",
@@ -15661,7 +15661,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Azores: {
       lyhyt: 'Azorien Pico-saaren tulivuori kohoaa keskellä Atlanttia 2 351 metriin – se on koko Portugalin korkein vuori.',
-      pitka: `Azorien Pico-saaren tulivuori on Portugalin korkein kohta, 2 351 metriä keskellä Atlanttia, ja sen mustan laavan täyttämät currais-viinitarhat ovat nykyään Unescon maailmanperintökohde. 1800-luvun puolivälissä sama rinne tuotti vuosittain jopa 15 000 tynnyriä vahvaa Verdelho-viiniä, jota Venäjän aatelisto arvosti pöydässään – mutta juuri isoisän matkan aikaan, vuosina 1872–1874, viiniä tuhoava fylloksera-kirva levisi saarelle ja tuho oli täydellinen: tuotanto romahti muutamaan sataan tynnyriin ja moni viljelijä lähti siirtolaiseksi. Isoisä olisi siis nähnyt Picon viinimäet juuri siinä hetkessä, kun vuosisatoja vanha vienti alkoi hävitä silmien edessä, ei enää kukoistuksessaan.`,
+      pitka: `Azorit on yhdeksän saaren saariryhmä keskellä Atlanttia, ja se ulottuu yli 600 kilometrin matkalle. Azorit on Portugalin autonominen alue, ja siellä asuu noin 240 000 ihmistä. Saaret ovat tulivuoriperäisiä. Pico-saarella kohoaa 2 351 metriä korkea Pico-vuori, joka on Portugalin korkein kohta. Suurin saari on São Miguel, ja alueen suurin kaupunki Ponta Delgada on sillä. São Miguelilla on myös teeplantaasi ja teetehdas, ja kasvihuoneissa viljellään ananaksia. Maidontuotanto on Azoreilla tärkeä maatalouden ala. Terceiran saarella on Lajesin ilmatukikohta, jota Yhdysvallat on käyttänyt Naton puitteissa vuodesta 1951. Azorit sai oman parlamentin vuonna 1976.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-azores-ca9783ec.jpg",
@@ -15683,7 +15683,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Beja: {
       lyhyt: 'Mértolan pääkirkko oli alun perin moskeija, ja kun kaupunki valloitettiin 1238, rakennus muutettiin kirkoksi muotoaan hävittämättä.',
-      pitka: `Mértolan pääkirkko on nykyään suosittu pysähdyspaikka Alentejon matkailijoille: harvinainen rakennus, jossa moskeijan mihrab-seinäkomero osoittaa yhä Mekkaan kirkon alttarin vierellä. Rakennus nousi moskeijaksi 1100-luvulla, ja kun kuningas Sancho II valtasi kaupungin 1238, se muutettiin kirkoksi muotoaan juuri koskematta – ainutlaatuinen ratkaisu, joka säästyi sekä Reconquistan että vastauskonpuhdistuksen tuholta. Isoisän saapuessa 1873 rakennus oli seisonut kirkkona jo 635 vuotta, ja hän näki täsmälleen saman mihrabin kuin nykyinen matkailija – Mértolassa aika on tässä mielessä pysähtynyt isoisän ajoista tähän päivään.`,
+      pitka: `Bejan piirikunta on Alentejon alueella Portugalin eteläosassa Espanjan rajalla. Se on pinta-alaltaan maan suurin piirikunta, mutta asukkaita on vain noin 140 000. Piirikunnassa on 14 kuntaa. Seudulla tuotetaan vehnää, viiniä ja oliiveja. Piirikunnan keskus Beja on kukkulalla, ja sen linnan päätorni on 40 metriä korkea. Tornin huipulle johtaa 197 askelmaa. Julius Caesar antoi kaupungille nimen Pax Julia vuonna 48 eaa. Mértolan kunta on Guadiana-joen rannalla, ja siellä asuu vain noin 6 200 ihmistä. Kunnan pääkirkko oli alun perin 1100- tai 1200-luvulla rakennettu moskeija. Mértolan museossa on islamilaisen taiteen kokoelma.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-beja-76d2e8cc.jpg",
@@ -15706,7 +15706,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Braga: {
       lyhyt: 'Bom Jesus do Monten pyhäkölle nousee vuodesta 1882 köysirata, jota liikuttaa yhä vesipaino – maailman vanhin laatuaan.',
-      pitka: `Bom Jesus do Monten pyhäkölle kipuaa nykyään vesipainoinen köysirata, joka on toiminut katkeamatta vuodesta 1882 – maailman vanhin laatuaan, sillä täysi vaunu vetää tyhjän ylös pelkällä painovoimalla, ei sähköllä. Isoisän vieraillessa Bragassa 1873 köysirataa ei ollut vielä rakennettu: hän olisi joutunut kiipeämään pyhäkön kuuluisan siksak-portaikon jalan, samaa reittiä, jota barokkiaikaiset pyhiinvaeltajat olivat kulkeneet vuosikymmenten ajan ennen häntä. Vasta yhdeksän vuotta isoisän matkan jälkeen sveitsiläinen insinööri Niklaus Riggenbach rakensi radan, joka yhä tänään kuljettaa matkailijoita samaa 274 metrin nousua.`,
+      pitka: `Braga on Portugalin luoteisosassa, ja piirikunnassa asuu noin 850 000 ihmistä. Piirikunnan keskus Braga on noin 190 000 asukkaan kaupunki. Piirikunnassa on 14 kuntaa. Bragan lähellä on Bom Jesus do Monte -pyhäkkö, joka on Unescon maailmanperintökohde vuodesta 2019. Bragassa toimii Minhon yliopisto. Guimarãesin kaupungissa käytiin 24. kesäkuuta 1128 taistelu, jonka voitti Afonso Henriques, myöhemmin Portugalin ensimmäinen kuningas. Guimarãesin linna toimi aikoinaan Afonso Henriquesin asuinpaikkana. Guimarãesin vanha keskusta on Unescon maailmanperintökohde vuodesta 2001, ja kaupunki oli Euroopan kulttuuripääkaupunki vuonna 2012. Piirikunnan korkein kohta on Serra do Gerês -vuoristo, 1 545 metriä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-braga-v-fe81f10e.jpg',
@@ -15729,7 +15729,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bragança': {
       lyhyt: 'Miranda do Douron seudulla puhutaan omaa mirandeesin kieltä, joka tunnustettiin virallisesti 1999 – puhujia on noin 3 500.',
-      pitka: `Miranda do Douron seudulla puhutaan nykyään virallisesti tunnustettua mirandeesin kieltä, jolla on oma kielilaki vuodelta 1999 ja vielä noin 3 500 puhujaa – pieni, sitkeä kieliyhteisö Portugalin ja Espanjan rajaseudulla. Isoisän kulkiessa alueen kylissä 1873 samaa kieltä puhuttiin jo, mutta se oli vain talonpoikien murre vailla mitään virallista asemaa – kukaan sivistynyt lissabonilainen ei olisi tunnustanut sitä omaksi kielekseen, vaan pitänyt sitä rappeutuneena portugalin muotona. Tunnustus antoi kielelle arvon vasta 126 vuotta myöhemmin, kauan isoisän ajan jälkeen.`,
+      pitka: `Bragança on Portugalin koillisosassa Espanjan rajalla, ja piirikunnassa asuu noin 120 000 ihmistä. Piirikunnassa on 12 kuntaa. Alue on vuoristoista, ja Montesinhon luonnonpuisto on perustettu vuonna 1979. Piirikunnan keskus Bragança on noin 35 000 asukkaan kaupunki. Braganzan kuningassuku sai nimensä tästä kaupungista, ja suvun jäsenet olivat Portugalin kuninkaita vuosina 1640–1910. Kaupungissa on 1100-luvulta peräisin oleva romaaninen Domus Municipalis -rakennus, jota kutsutaan Portugalin vanhimmaksi kaupungintaloksi. Miranda do Douron seudulla puhutaan mirandês-kieltä, jonka Portugalin parlamentti on tunnustanut viralliseksi. Maatalous on pienimuotoista, ja viljelykasveja ovat ruis ja vehnä. Paikallisia tuotteita ovat mirandês-naudanliha ja juustot.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-braganca-8aa78b67.jpg",
@@ -15752,7 +15752,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Castelo Branco': {
       lyhyt: 'Monsanton kylän talot on muurattu jättimäisten graniittilohkareiden väliin, ja 1938 se valittiin Portugalin portugalilaisimmaksi kyläksi.',
-      pitka: `Monsanton kylä kyyristyy nykyään jättimäisten graniittilohkareiden lomaan täsmälleen niin kuin ennenkin, ja 1938 kylä voitti kilpailun Portugalin portugalilaisimmasta kylästä – tittelin, jota ei ole sen jälkeen jaettu kenellekään muulle. Kivitalot olivat isoisän aikaan 1873 samat: ensimmäiset asukkaat olivat sovittaneet pienet mökkinsä lohkareiden väliin ja alle vuosisatoja aiemmin, koska kiviä ei yksinkertaisesti jaksettu siirtää. Ero on siinä, että isoisän aikaan kylä oli vain syrjäinen, unohdettu vuorikylä ilman mainetta – kukaan ei matkustanut sinne ihailemaan sitä, ja tittelin tuoma huomio saapui vasta 65 vuotta myöhemmin, Estado Novon aikana.`,
+      pitka: `Castelo Brancon piirikunta on Keski-Portugalissa Espanjan rajalla, ja siellä asuu alle 200 000 ihmistä. Piirikunnassa on 11 kuntaa. Piirikunnan keskus Castelo Branco on noin 34 000 asukkaan kaupunki. Vuoden 1182 asiakirjassa aatelismies lahjoitti maata temppeliherroille, jotka rakensivat myöhemmin kaupungin muurit ja linnan. Kaupungissa on barokkityylinen Jardim do Paço Episcopal -puutarha. Covilhã on kaupunki Serra da Estrela -vuoriston juurella, ja sitä on kutsuttu Portugalin Manchesteriksi villa- ja tekstiiliteollisuuden vuoksi. Kuninkaallinen tekstiilitehdas perustettiin Covilhãssa vuonna 1763. Covilhã sai kaupunkioikeudet vuonna 1870. Beiran sisämaan yliopisto on perustettu vuonna 1979.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-castelo-branco-a18d2fb8.jpg",
@@ -15775,7 +15775,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Coimbra: {
       lyhyt: 'Coimbran yliopiston barokkikirjastossa Biblioteca Joaninassa asuu lepakoita, jotka syövät öisin kirjoja uhkaavat hyönteiset.',
-      pitka: `Coimbran yliopiston barokkikirjasto Biblioteca Joanina on nykyään ihailtu nähtävyys, jonka hämärissä hyllyissä asustaa lepakkoyhdyskunta – öisin ne saalistavat kirjoja syöviä hyönteisiä, ja illalla pöydät peitetään nahalla lepakon jätösten varalta. Kirjasto rakennettiin vuosina 1717–1728 kuningas João V:n tilauksesta, ja lepakot ovat asuneet siellä arviolta 250 vuotta, joten isoisän vieraillessa 1873 sekä rakennus että sen siivekkäät vartijat olivat jo paikoillaan – hän olisi kävellyt saman kultareunaisen kirjahyllyn ohi kuin nykyinen matkailija, tietämättä että katossa lepäsi lepakoita. Muuten mikään ei ole muuttunut: kokoelma ja rakennus näyttävät isoisän ajoista tähän päivään suunnilleen samalta.`,
+      pitka: `Coimbran piirikunta on Keski-Portugalissa, ja siellä asuu noin 410 000 ihmistä. Piirikunnassa on 17 kuntaa. Piirikunnan keskus Coimbra on Mondego-joen varrella, ja kaupungissa asuu noin 140 000 ihmistä. Coimbra oli keskiajalla Portugalin pääkaupunki. Santa Cruzin luostari perustettiin siellä vuonna 1131, ja luostarissa on haudattuna Portugalin ensimmäinen kuningas Afonso Henriques. Luostarin julkisivu on manuelilaista myöhäisgotiikkaa, Portugalin omaa tyylisuuntaa. Coimbran yliopisto perustettiin vuonna 1290 Lissabonissa, ja se siirrettiin lopullisesti Coimbraan vuonna 1537. Coimbran yliopiston Biblioteca Joanina on 1700-luvulla rakennettu barokkikirjasto. Coimbran yliopisto ja sen ympäristö otettiin Unescon maailmanperintöluetteloon vuonna 2013.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-coimbra-857658d2.jpg",
@@ -15798,7 +15798,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Évora': {
       lyhyt: 'Évoran Luukappelin seinät on vuorattu noin 5 000 vainajan luilla, ja oven yllä lukee: me luut täällä odotamme teidän luitanne.',
-      pitka: `Évora on Alentejon yliopistokaupunki, jonka kivetyillä kujilla tuoksuu paahdettu korkki ja jonka Pyhän Fransiskuksen kirkon kupeesta löytyy yksi Euroopan makaabereimmista nähtävyyksistä, Luukappeli (Capela dos Ossos). Sen seinät on vuorattu noin 5 000 vainajan luilla, ja sisäänkäynnin yläpuolella lukee muistutus: me luut täällä odotamme teidän luitanne. Kappelin rakensivat 1500-luvulla fransiskaanimunkit, koska kaupungin viiden hautausmaan luille oli loppumassa tila, ja luiden järjestäminen oli aikansa hartaustapa, ei kauhuviihdettä. Isoisän aikaan 1873 kappeli oli jo kolmisataa vuotta vanha nähtävyys – hän katsoi täsmälleen samaa luusommitelmaa jonka sinäkin näet, ei kiveäkään ole siirretty sen jälkeen.`,
+      pitka: `Évoran piirikunta on harvaan asuttu alue Alentejon alueella Etelä-Portugalissa Espanjan rajalla. Siellä asuu noin 150 000 ihmistä. Keskus on Évoran kaupunki, jonka vanhakaupunki on Unescon maailmanperintökohde vuodesta 1986. Kaupungissa on roomalaisaikainen temppeli, joka on omistettu keisari Augustuksen palvonnalle. Sen korinttilaiset pylväät ovat 7,68 metriä korkeat. Pyhän Fransiskuksen kirkossa on luukappeli Capela dos Ossos, jonka seinät on peitetty ihmisluilla. Évoran yliopiston perustivat jesuiitat vuonna 1559. Kaupungin lähellä on Almendresin megaliittikehä eli kivikehä sekä alueen suurin dolmeni eli kivikammio, Anta Grande do Zambujeiro. Évora on valittu vuoden 2027 Euroopan kulttuuripääkaupungiksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-evora-a18cacd9.jpg",
@@ -15821,7 +15821,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Faro: {
       lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
-      pitka: `Cabo de São Vicente Algarven lounaiskärjessä on Manner-Euroopan lounaisin piste, ja nykyään sen majakan valo kantaa merelle 60 kilometrin päähän – niemellä istuu iltaisin rivi kalastajia ja auringonlaskun katsojia paikassa jota kutsutaan ”maailman loppuna”. Majakka nousi vuonna 1846 keskiaikaisen fransiskaanikonventin raunioille sen jälkeen, kun Portugali lakkautti uskonnolliset veljeskunnat ja otti niiden omaisuuden haltuunsa. Isoisän aikaan 1873 majakka oli siis jo parikymmentä vuotta vanha ja isoisä olisi nähnyt saman kivitornin kuin sinäkin – vaikka sen valo paloi hänen aikanaan yhä öljylampulla, ei sähköllä.`,
+      pitka: `Faron piirikunta on Portugalin eteläisin piirikunta, ja se kattaa koko Algarven alueen. Siellä asuu noin 470 000 ihmistä. Keskus on Faron kaupunki, jonka lentokenttä palvelee Algarven matkailijoita. Algarven rannikolla on Ria Formosan luonnonpuisto, rannikkolaguuni, joka on yli 170 neliökilometrin kokoinen ja tärkeä lintujen pysähdyspaikka. Vila do Bispon kunnassa on Cabo de São Vicenten niemi, Manner-Euroopan lounaisin kärki. Niemen majakan valo näkyy 60 kilometrin päähän. Faron kaupungissa on 1700-luvun karmeliittakirkkoon kuuluva luukappeli Capela dos Ossos. Alueen korkein kohta on Monchiquen vuoristossa, 902 metrissä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-faro-78a2f0a2.jpg",
@@ -15844,7 +15844,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Guarda: {
       lyhyt: 'Guarda on 1 056 metrissä Portugalin korkeimmalla sijaitseva kaupunki, ja sitä kutsutaan viiden F:n kaupungiksi – yksi niistä on fria, kylmä.',
-      pitka: `Guarda on Portugalin korkein kaupunki, 1 056 metrissä Serra da Estrelan kainalossa, ja paikalliset kutsuvat sitä viiden F:n kaupungiksi – forte, farta, fria, fiel, formosa: vahva, runsas, kylmä, uskollinen, kaunis. Talvella lunta kertyy kaduille enemmän kuin missään muualla maassa, ja harmaat graniittitalot on rakennettu kestämään se. Kaupungin katedraali, Sé da Guarda, nousee keskiajan rajakaupungin ytimessä kuin linnoitus – sen rakentaminen kesti 1300-luvun lopulta 1500-luvun puoliväliin. Isoisän aikaan 1873 katedraali oli ollut valmiina jo kolmisataa vuotta, ja Guarda oli tuolloinkin täsmälleen se kylmä, kivinen raja-vartiokaupunki jonka sinäkin näet.`,
+      pitka: `Guardan piirikunta on vuoristoinen alue Itä-Portugalissa Espanjan rajalla, ja siellä asuu noin 140 000 ihmistä. Keskus Guarda on Manner-Portugalin korkeimmalla sijaitseva kaupunki, 1 056 metrin korkeudessa. Piirikunnassa on osa Serra da Estrelaa, Manner-Portugalin korkeinta vuoristoa. Vuoriston korkein kohta Torre on 1 993 metriä. Vila Nova de Foz Côan kunnassa on Côa-laakson kalliopiirroksia. Vanhimmat niistä ovat noin 22 000 vuotta vanhoja, ja alue on Unescon maailmanperintökohde vuodesta 1998.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-guarda-v-1c7c963d.jpg',
@@ -15867,7 +15867,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Leiria: {
       lyhyt: 'Nazarén edustalla kulkee noin 5 000 metriä syvä merenalainen kanjoni, joka nostaa Praia do Norten jättiaallot – niillä on surffattu maailmanennätyksiä.',
-      pitka: `Nazarén rannassa Leirian maakunnassa kokoontuu talvisin maailman parhaita isoaaltosurffareita, sillä Praia do Norten edustalla avautuva lähes 5 000 metriä syvä merenalainen kanjoni puskee syys–maaliskuussa paikalle jättiaaltoja, joilla on rikottu maailmanennätyksiä vuodesta 2011 lähtien. Ranta ja sen yllä kohoava kalliokylä Sítio ovat kuuluneet yhteen aina, mutta jyrkkä nousu niiden välillä piti pitkään kulkea jalan tai aasin selässä. Vasta vuonna 1889 valmistui köysirata, joka vieläkin kuljettaa matkailijoita kalliolle – isoisän vieraillessa 1873 sitä ei ollut, nousu piti tehdä samalla tavalla kuin kalastajat olivat tehneet vuosisatoja.`,
+      pitka: `Leirian piirikunta on Portugalin länsirannikolla Atlantin rannalla, ja siellä asuu noin 460 000 ihmistä. Keskus on Leiria, jonka linnan päätornin kunnosti kuningas Dinis 1300-luvun alussa. Rannikolla kasvaa Leirian mäntymetsä, jonka puuta tarvittiin 1400- ja 1500-lukujen merimatkojen laivoihin. Batalhan luostari rakennettiin vuosina 1386–1517 kiitokseksi Portugalin ja Kastilian välisen Aljubarrotan taistelun voitosta, ja se on Unescon maailmanperintökohde vuodesta 1983. Nazarén kalastajakaupungin Praia do Norte -rannalla saksalainen surffaaja Sebastian Steudtner ratsasti 26,2 metrin aallolla (mitattu 2020). Óbidosin keskiaikaisessa linnakaupungissa on useita kirjakauppoja, ja siellä pidetään maaliskuussa suklaafestivaali.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-leiria-b71d8866.jpg",
@@ -15890,7 +15890,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Lisboa: {
       lyhyt: 'Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta.',
-      pitka: `Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta kalliolta – matkailijat hakevat siellä yhä paperisen sertifikaatin todisteeksi käynnistä maailman äärellä. Majakka oli rakennettu jo vuonna 1772, mutta sen valo kulki isoisän aikaan yhä öljyllä: lupa sähkövalaistukseen myönnettiin vasta 1883 ja se otettiin käyttöön 1897, vuosikymmeniä isoisän matkan jälkeen. Muutaman kilometrin päässä metsäisellä vuorenhuipulla kohoaa satumainen, kirkkaan värinen Pena-palatsi, jonka kuningas Ferdinand II rakennutti vuosina 1842–1854. Isoisän saapuessa 1873 palatsi oli siis vain parikymmentä vuotta vanha ja tuoreen uusi nähtävyys – ei se vuosisatoja paikallaan seisonut linna jonka nykymatkailija mielessään näkee.`,
+      pitka: `Lissabonin piirikunta on Portugalin asukasluvultaan suurin piirikunta Atlantin rannikolla, ja siellä asuu noin 2,3 miljoonaa ihmistä. Keskus on Portugalin pääkaupunki Lissabon Tejo-joen suulla. Kaupunki tuhoutui 1. marraskuuta 1755 maanjäristyksessä, jossa kuoli arviolta 30 000–40 000 ihmistä. Sintran kunnassa on Pena-palatsi, ja Sintran kulttuurimaisema on Unescon maailmanperintökohde vuodesta 1995. Lissabonin itäosa rakennettiin uusiksi Expo 98 -maailmannäyttelyä varten, joka juhlisti Vasco da Gaman Intian-matkan 500-vuotispäivää. Cabo da Roca on Manner-Euroopan läntisin kohta, 140 metrin korkeudessa. Sen majakka on toiminut vuodesta 1772.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-lisboa-0e077884.jpg",
@@ -15913,7 +15913,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Madeira: {
       lyhyt: 'Madeiran vuorenrinteillä kiemurtelee yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja.',
-      pitka: `Madeiran vuorenrinteillä kiemurtelee nykyään yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja saaren vuoristoisessa sisäosassa laaksosta laaksoon. Kanavat syntyivät alkujaan yksityisten tilan- ja lähteenomistajien voimin, mutta 1800-luvulla viinintuotannon kriisi ajoi valtion rahoittamaan uusia, aiempaa suurempia levadoja. Isoisän aikaan 1873 saarella oltiin juuri tämän valtion rahoittaman rakennusbuumin keskellä – esimerkiksi Rabaçalin levadan 1855 valmistunut Furado Velho -tunneli oli silloin vain parikymmentä vuotta vanha, arkinen ihme jota isoisä olisi voinut nähdä yhä rakenteilla naapurilaaksoissa.`,
+      pitka: `Madeira on Atlantilla sijaitseva saariryhmä ja Portugalin autonominen alue, ja siellä asuu noin 250 000 ihmistä. Saaret ovat noin tuhannen kilometrin päässä Lissabonista. Pääsaari on noin 57 kilometriä pitkä ja 22 kilometriä leveä. Pääkaupunki Funchal on sen eteläosassa. Pääsaaren korkein huippu Pico Ruivo on 1 862 metriä. Saarella on yli 2 000 kilometriä levadoja eli kastelukanavia, joiden varrella kulkee kävelyreittejä. Laurisilva-laakerimetsä on Unescon maailmanperintökohde vuodesta 1999. Saarilla valmistetaan madeiraviiniä, joka on väkevöityä viiniä. Alue on ollut itsehallinnollinen vuodesta 1976.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-madeira-va-63d2822b.jpg',
@@ -15936,7 +15936,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Portalegre: {
       lyhyt: 'Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on Unescon maailmanperintöä.',
-      pitka: `Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on nykyään Unescon maailmanperintöä – muurien sisällä eletään yhä tavallista alentejolaista arkea, ei museossa. Kaupungin vedet kulkevat 1500-luvulla alkunsa saaneessa ja 1622 valmistuneessa Amoreira-vesijohdossa, joka kantaa vettä yli seitsemän kilometrin päästä nelikerroksisten kaariholvien läpi. Linnoitukset itse muotoutuivat nykyiseen laajuuteensa vasta 1600–1800-luvuilla hollantilaisen insinöörin Cosmanderin suunnitelmien mukaan. Isoisän aikaan 1873 Elvas oli siis edelleen toimiva raja-varuskunta, ei rauhoitettu nähtävyys – sen viimeisimmätkin linnoituslaajennukset olivat vain vuosikymmenten takaa.`,
+      pitka: `Portalegren piirikunta on Itä-Portugalissa Alentejon alueella Espanjan rajalla. Siellä asuu noin 100 000 ihmistä, ja se on Portugalin vähiten asukkaita käsittävä piirikunta. Keskus on Portalegren kaupunki, jonka kunnassa on osa Serra de São Mamede -luonnonpuistoa. Portalegren hiippakunta perustettiin vuonna 1549 ja kaupunki sai kaupunkioikeudet vuonna 1550. Elvasin rajakaupungin linnoitukset ovat Unescon maailmanperintökohde vuodesta 2012. Niiden kuivien vallihautojen järjestelmä on maailman suurin. Elvasin Amoreira-vesijohto valmistui vuonna 1622. Marvãon linnakylä seisoo Serra de São Mamedessa kvartsiittikalliolla Espanjan rajalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-portalegre-37bc83c4.jpg",
@@ -15959,7 +15959,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Porto: {
       lyhyt: 'Douron etelärannalla Vila Nova de Gaian kellareissa kypsyy portviini, ja kellareista on tullut Porton seudun suuri nähtävyys.',
-      pitka: `Porto on nykyään yli 200 000 asukkaan kaupunki, jonka graniittiset kujat ja Riberian UNESCO-listattu vanhakaupunki houkuttelevat miljoonia matkailijoita Douron rannoille – joella kuhisee risteilyveneitä ja illalla baarien valot heijastuvat veteen. Jokea reunustaa nykyään kaksi rautaista siltaa, Ponte de Dom Luís I ja rautatiesilta Ponte Maria Pia, joiden suunnittelijoina olivat Gustave Eiffelin oppilas Théophile Seyrig ja Eiffel itse. Isoisän aikaan 1873 kumpaakaan ei ollut vielä olemassa: Maria Pia valmistui 1877 ja Dom Luís I vasta 1886, joten hän olisi ylittänyt joen veneellä tai kapealla riippusillalla, ei rautaisella kaarella korkealla kaupungin yllä. Douro oli silti jo täynnä viinilaivoja matkalla Vila Nova de Gaian kellareihin – se osa maisemasta ei ole muuttunut.`,
+      pitka: `Porton piirikunta on Portugalin luoteisrannikolla, ja siellä asuu noin 1,8 miljoonaa ihmistä. Piirikuntaan kuuluu 18 kuntaa. Keskus Porto on Douro-joen pohjoisrannalla, ja sen vanha keskusta on Unescon maailmanperintökohde vuodesta 1996. Joen etelärannalla Vila Nova de Gaiassa on portviinin kellareita, joissa viiniä säilytetään ja kypsytetään. Porton ja Gaian välillä on rautainen Dom Luís I -silta, joka vihittiin käyttöön 31. lokakuuta 1886. Sillan ylätasolla kulkevat jalankulkijat ja metron D-linja. Kaupungissa on myös 76 metriä korkea Torre dos Clérigos -kellotorni. Piirikunnan satama Leixões on Matosinhosin kunnassa. Porto oli Euroopan kulttuuripääkaupunki vuonna 2001.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-porto-703bc049.jpg",
@@ -15982,7 +15982,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Santarém': {
       lyhyt: 'Tomarin Festa dos Tabuleirosissa tytöt kantavat päänsä päällä 30 leivästä pinottuja kukkatarjottimia – juhla pidetään joka neljäs vuosi.',
-      pitka: `Santarémin maakunta tunnetaan nykyään ennen kaikkea Fátiman pyhiinvaelluspaikasta, jonne saapuu vuosittain miljoonia matkailijoita ja uskovia ympäri maailman suuren basilikan eteen. Vuonna 1873 Fátima ei ollut mitään erityistä – vain tavallinen paimenkylä Keski-Portugalin kukkuloilla, sillä kolmen lapsen kertomat Neitsyt Marian ilmestykset tapahtuivat vasta 1917, kymmeniä vuosia isoisän matkan jälkeen. Samaan aikaan Tomarin Tabuleiros-juhlassa tytöt ovat kantaneet päänsä päällä leipätarjottimia jo satojen vuosien ajan – perinne juontaa keskiajan Pyhän Hengen veljeskuntiin, joten isoisä olisi hyvin voinut nähdä samankaltaisen kulkueen. Tejo-joen keskellä kohoava Almourolin linna, ristiretkeläisten temppeliherrojen linnoitus, oli jo silloin vuosisatoja vanha muistomerkki, ei tuore rakennus.`,
+      pitka: `Santarémin piirikunta on Tejo-joen laaksoa ja maaseutua Keski-Portugalissa, ja siellä asuu noin 420 000 ihmistä. Piirikuntaan kuuluu 21 kuntaa. Keskus Santarém on Tejon oikealla rannalla tasanteella. Kuningas Afonso Henriques valtasi Santarémin maureilta vuonna 1147. Siellä on pidetty vuodesta 1954 kansallista maatalousnäyttelyä. Tomarin kaupungissa on Cristuksen luostari, jonka temppeliherrat perustivat linnoitukseksi, ja se on Unescon maailmanperintökohde vuodesta 1983. Ourémin kuntaan kuuluvassa Fátimassa Neitsyt Marian kerrotaan ilmestyneen kolmelle lapselle vuonna 1917. Fátimassa käy vuosittain miljoonia pyhiinvaeltajia. Piirikunnan alueelta on löytynyt myös noin 400 000 vuotta vanha Aroeira 3 -kallo.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-santarem-v-32f80226.jpg',
@@ -16005,7 +16005,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Setúbal': {
       lyhyt: 'Setúbalin Sadojoessa elää delfiiniyhdyskunta, ja kaupungin kupeessa kohoavat Arrábidan luonnonpuiston kukkulat.',
-      pitka: `Setúbal on nykyään elävä satamakaupunki, jonka rannalta pääsee lautalla parissakymmenessä minuutissa Tróian niemelle valkoisille hiekkarannoille ja loma-asuntoalueille. Niemen kärjessä nousevat esiin antiikin Cetóbrigan rauniot, jossa roomalaiset valmistivat garumia, voimakkaasti maustettua kalakastiketta, jota vietiin ympäri valtakuntaa – paikka oli jo isoisän aikaan vuosituhannen vanha jäänne. Vuonna 1873 Setúbal oli myös nuoren teollisuuden kaupunki: ensimmäiset sardiinisäilyketehtaat oli perustettu 1850-luvulla, ja isoisä olisi saattanut nähdä juuri näitä savuavia tehtaita ja tynnyreitä satamassa, sillä Setúbalista kehittyi vuosisadan loppuun mennessä Portugalin säilyketeollisuuden sydän. Tänään Sadojoen suistossa asuu myös Euroopan harvinaisimpia pysyviä delfiiniyhdyskuntia, ja niiden tarkkailu veneestä on suosituimpia retkiä alueella.`,
+      pitka: `Setúbalin piirikunta on Portugalin lounaisosassa Lissabonin eteläpuolella, ja siellä asuu noin 880 000 ihmistä. Piirikunta perustettiin vuonna 1926 irrottamalla se Lissabonin piirikunnasta. Keskus Setúbal on Sado-joen suiston pohjoisrannalla, ja suistossa elää delfiinikanta. Setúbalin muskattiviini sai mainetta 1800-luvulla. Arrábidan vuoristossa on luonnonpuisto, joka perustettiin vuonna 1976, ja vuoriston korkein kohta on 501 metriä. Runoilija Manuel Maria Barbosa du Bocage syntyi Setúbalissa vuonna 1765. Sinesin kaupungissa on syvänmeren satama ja linna, jonka rakentaminen alkoi vuonna 1362 merirosvojen torjumiseksi. Kesäisin Sinesissä pidetään Músicas do Mundo -festivaali.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-setubal-29aab504.jpg",
@@ -16028,7 +16028,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Viana do Castelo': {
       lyhyt: 'Viana do Castelon satamassa on sairaalalaiva Gil Eannes, joka saattoi turskanpyytäjiä Newfoundlandiin 1955–1973 – nyt se on museo.',
-      pitka: `Viana do Castelon yllä kohoava Santa Luzian basilika on nykyään kaupungin maamerkki, jonka portaille kiipeää vuosittain tuhansia matkailijoita nauttimaan näköalasta Lima-joelle ja Atlantille. Isoisän aikaan 1873 basilikaa ei ollut olemassa lainkaan – sen rakentaminen alkoi vasta 1904 ja sisätilat valmistuivat vuonna 1959, joten mäellä seisoi vielä pelkkä pieni kappeli. Alakaupungin Praça da República sen sijaan oli isoisän aikaan jo vuosisatoja vanha – 1500-luvulla rakennettu Misericórdian talo ja Chafariz-suihkulähde seisoivat paikallaan silloinkin. Juhlapäivinä kaduilla näkyy edelleen paikallisia Vianan perinnepuvussa ja kultaisin filigraanikoruin, perinne joka vakiintui juuri 1800-luvulla – isoisä olisi voinut nähdä samanlaisen kulkueen torilla.`,
+      pitka: `Viana do Castelon piirikunta on Portugalin luoteiskulmassa Espanjan Galician rajalla, ja siellä asuu noin 230 000 ihmistä. Piirikuntaan kuuluu 10 kuntaa. Keskus Viana do Castelo on Lima-joen suulla. Siellä on vuonna 1944 perustettu telakka ja Eiffel-tornin rakentajan Gustave Eiffelin suunnittelema rautatiesilta vuodelta 1878. Piirikuntaan kuuluvaa Ponte de Limaa pidetään Portugalin vanhimpana kaupunkina, sillä se sai ensimmäiset kaupunkioikeutensa vuonna 1125. Monçãon kaupunki on Minho-joen rannalla, ja joki muodostaa rajan Espanjaan. Rannikon edustalla toimii vuodesta 2020 WindFloat Atlantic -tuulipuisto, jossa on kolme kelluvaa voimalaa. Peneda-Gerêsin kansallispuisto on perustettu vuonna 1971, ja se on Portugalin ainoa kansallispuisto.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-viana-do-castelo-bf4fa39c.jpg",
@@ -16051,7 +16051,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vila Real': {
       lyhyt: 'Vila Realin barokkipalatsi Mateus on antanut nimensä Mateus-roseeviinille, ja sen suunnitteli 1700-luvulla Nicolau Nasoni.',
-      pitka: `Vila Realin maakunta on Douro-joen viinialueiden sydän, ja sen kaupunki Peso da Régua toimii nykyään risteilylaivojen ja viinimatkailijoiden porttina Alto Douron UNESCO-maailmanperintöalueelle. Vuonna 1873 alueen viinitarhoja koetteli jo etenevä phylloxera-kirvakriisi, joka levisi Douroon 1871 alkaen ja tuhosi vanhat viiniköynnökset – nykyiset, tarkasti muotoillut terassit istutettiin vasta kriisin jälkeen 1880-luvulla ja sen jälkeen, niin että isoisän näkemä maisema oli rosoisempi ja osin kuihtunut. Rautatie, joka nykyään kuljettaa matkailijoita jokilaaksoa pitkin, ei ollut vielä valmis: raiteet ulottuivat Régualle asti vasta 1879, kuusi vuotta isoisän matkan jälkeen, joten hän olisi noussut jokilaivaan tai matkustanut hevosella. Mateus-palatsin barokkijulkisivu ja Nicolau Nasonin suunnittelemat puutarhat seisoivat kuitenkin jo paikallaan 1700-luvulta asti, ja niiden näkymä on tuskin muuttunut.`,
+      pitka: `Vila Realin piirikunta on Pohjois-Portugalin vuoristoista Trás-os-Montesin aluetta, ja siellä asuu alle 190 000 ihmistä. Piirikuntaan kuuluu 14 kuntaa. Marãon, Gerêsin ja Cabreiran vuoret eristivät alueen pitkään rannikosta. Piirikunnan eteläosassa Douro-joen lähellä kasvatetaan viinirypäleitä. Keskus Vila Real on tasanteella noin 450 metrin korkeudessa. Kaupungissa on Trás-os-Montesin ja Alto Douron yliopisto, joka perustettiin vuonna 1986. Mateusin palatsi rakennettiin vuosina 1739–1743, ja se antoi nimensä Mateus-roseeviinille. Chavesin kaupungissa on Tâmega-joen ylittävä roomalaisaikainen silta ja kuumia lähteitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-vila-real-25418d86.jpg",
@@ -16074,7 +16074,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Viseu: {
       lyhyt: 'Lamegossa kiivetään 686 porrasta Nossa Senhora dos Remédiosin barokkikirkolle, ja tarun mukaan Portugalin ensimmäiset säätykokoukset pidettiin täällä 1143.',
-      pitka: `Viseun maakunnan pääkaupunki Viseu on nykyään tunnettu renessanssimaalari Grão Vascon nimikkomuseosta ja keskiaikaisesta katedraalista, jotka houkuttelevat kulttuurimatkailijoita Dão-viinialueen keskuksesta. Lamegossa kohoava barokkiportaikko Nossa Senhora dos Remédiosin pyhäkölle näyttää nykyään valmiilta yhtenäiseltä teokselta, jota kiivetään yhä juhlapäivinä. Isoisän aikaan 1873 se oli kuitenkin vielä työmaa: rakentaminen alkoi 1750-luvulla, mutta pyhäkön rakennus valmistui vasta 1905 ja portaikkoa laajennettiin vuosikymmeniä lisää, niin että hän olisi nähnyt keskeneräisen, telineiden ympäröimän rinteen. Legenda Portugalin ensimmäisistä säätykokouksista Lamegossa vuonna 1143 oli isoisän aikaan yhtä vanha tarina kuin nykyään – historioitsijat kyseenalaistavat sen yhä, mutta paikalliset kertovat sitä samalla ylpeydellä.`,
+      pitka: `Viseun piirikunta on Portugalin sisämaassa, ja siellä asuu noin 350 000 ihmistä. Piirikuntaan kuuluu 24 kuntaa. Keskus Viseu on tunnettu Grão Vasco -museostaan, joka on nimetty renessanssimaalarin mukaan, ja Dão-viinistä. Dãon viinialue sijaitsee Serra da Estrelan, Caramulon ja Naven vuorten suojassa, ja se tunnustettiin rajatuksi viinialueeksi jo vuonna 1908. Viseun kaupungissa on patsas Lusitanian heimojen johtajasta Viriatuksesta, joka taisteli Rooman valtaa vastaan vuosina 147–139 eaa. Lamegon kaupungissa 686-askelmainen portaikko johtaa vuonna 1750 rakennetulle Remédiosin Neitsyt Marian pyhäkölle.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-viseu-vb-baf70364.jpg',
