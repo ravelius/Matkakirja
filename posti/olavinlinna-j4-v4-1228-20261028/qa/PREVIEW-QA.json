@@ -1,0 +1,21 @@
+{
+  "views": {
+    "referenceDirection": {
+      "yawDeg": 0,
+      "pitchDeg": 28,
+      "size": 600,
+      "exactReferenceLensKnown": false
+    },
+    "readability": {
+      "yawDeg": 18,
+      "pitchDeg": 65,
+      "size": 325,
+      "modelWidthAboutPx": 275
+    }
+  },
+  "render": "Actual saved GLB, fixed analytic environment; lower row linear exposure0.12 stress proxy, not game night lighting",
+  "newCalls": 0,
+  "elapsedSeconds": 18.740714916959405,
+  "peakRSSMiB": 222.015625,
+  "viewed": true
+}

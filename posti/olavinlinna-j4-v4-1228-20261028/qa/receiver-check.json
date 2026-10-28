@@ -1,0 +1,180 @@
+[
+ {
+  "kansio": "output/olavinlinna-aarre-10171021-20261027/review-v4-j4",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "arkun-hopeasisalto-j4-v4.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "arkun-hopeasisalto-j4-v4.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 38884,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 png",
+      "2048×2048 png"
+     ],
+     "rajat": {
+      "min": [
+       -0.238,
+       0,
+       -0.2
+      ],
+      "max": [
+       0.238,
+       0.223,
+       0.2
+      ],
+      "koko": [
+       0.476,
+       0.223,
+       0.4
+      ]
+     }
+    },
+    "polku": "models/arkun-hopeasisalto-j4-v4.glb"
+   },
+   {
+    "nimi": "material-v3-v4-reference.png",
+    "polku": "qa/material-v3-v4-reference.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1800,
+     "h": 640
+    }
+   },
+   {
+    "nimi": "readability-275px.png",
+    "polku": "qa/readability-275px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 650,
+     "h": 730
+    }
+   },
+   {
+    "nimi": "readability-mip512-275px.png",
+    "polku": "qa/readability-mip512-275px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 650,
+     "h": 730
+    }
+   },
+   {
+    "nimi": "v4-reference-angle.png",
+    "polku": "qa/v4-reference-angle.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 600,
+     "h": 600
+    }
+   },
+   {
+    "nimi": "1021-arkun-sisalto-kolmeneljannesta.png",
+    "polku": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1254,
+     "h": 1254
+    }
+   },
+   {
+    "nimi": "peli-v2-v3-2x.png",
+    "polku": "sources/peli-v2-v3-2x.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1212,
+     "h": 540
+    }
+   },
+   {
+    "nimi": "peli-v3-koko-kuva.png",
+    "polku": "sources/peli-v3-koko-kuva.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2752,
+     "h": 2064
+    }
+   },
+   {
+    "nimi": "peli-v3-vs-pelin-vahvistus-2x.png",
+    "polku": "sources/peli-v3-vs-pelin-vahvistus-2x.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1212,
+     "h": 540
+    }
+   },
+   {
+    "nimi": "albedo.png",
+    "polku": "textures/albedo.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallicRoughness.png",
+    "polku": "textures/metallicRoughness.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal-opengl.png",
+    "polku": "textures/normal-opengl.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: arkun-hopeasisalto-j4-v4.glb ei liikettä"
+  ]
+ }
+]

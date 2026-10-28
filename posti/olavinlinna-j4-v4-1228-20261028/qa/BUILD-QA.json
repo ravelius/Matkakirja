@@ -1,0 +1,27 @@
+{
+  "status": "LOCAL_CANDIDATE_SELECTED_FOR_DELIVERY",
+  "task": 1228,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/review-v3-j4/models/arkun-hopeasisalto-j4-v3.glb",
+  "sourceSHA256": "350cfb6b8365e0ff69789db623f94bc4d563e513a5772b0fef499b6f91b25b57",
+  "sha256": "13cb3cc325ffed2b53734be759dad752758fafba14438980b4c2baa99141ff3e",
+  "changed": "Only three image payloads; all other buffer views copied byte-exact",
+  "coinStampPatches": 105,
+  "facesByRegion": {
+    "coin": 4728,
+    "plate": 1955,
+    "bowl": 1853,
+    "pitcher": 1606
+  },
+  "cavityDarkening": 0.35,
+  "roughnessRidgeTarget": 0.17,
+  "roughnessGrooveTarget": 0.45,
+  "mapsPx": [
+    2048,
+    2048
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0,
+  "elapsedSeconds": 7.101605709060095,
+  "peakRSSMiB": 444.09375
+}

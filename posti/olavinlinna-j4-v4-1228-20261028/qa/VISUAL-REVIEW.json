@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-28T17:12:29.229991+00:00",
+  "candidate": "candidate03",
+  "status": "READY_FOR_RECEIVER_GAME_COMPARISON",
+  "viewed": [
+    "material-v3-v4-reference.png",
+    "readability-275px.png",
+    "readability-mip512-275px.png"
+  ],
+  "findings": [
+    "Coin cross stamps and dish engraving contours read more clearly than v3 in the same local shader and camera.",
+    "512px map reduction softens the thin details, but principal contours and several coin crosses remain visible at275px model width.",
+    "No stochastic grain added; smooth vessel areas and dark pitcher mouth retained.",
+    "Candidate02 rejected for overly broad lines; candidate03 uses thinner paired contours and continuous pitcher band."
+  ],
+  "limits": [
+    "Reference image camera lens is unknown: matching front three-quarter direction, not pixel-identical projection.",
+    "Exposure0.12 and fixed512-map tests are diagnostic proxies, not real game night light or ASTC compression.",
+    "Engraving is simplified geometry-bound ornament, not a claim of exact historical coin design or a photographic match.",
+    "105 selected outer coin patches retain marks; partially hidden and unselected coins are not restamped."
+  ],
+  "receiverGameVerified": false,
+  "ownerAccepted": false
+}

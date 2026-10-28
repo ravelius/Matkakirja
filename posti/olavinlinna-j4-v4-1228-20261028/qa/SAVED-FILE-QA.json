@@ -1,0 +1,61 @@
+{
+  "status": "TECHNICAL_PASS",
+  "task": 1228,
+  "sourceSHA256": "350cfb6b8365e0ff69789db623f94bc4d563e513a5772b0fef499b6f91b25b57",
+  "modelSHA256": "13cb3cc325ffed2b53734be759dad752758fafba14438980b4c2baa99141ff3e",
+  "bytes": 3871136,
+  "allAccessorArraysExact": true,
+  "nonImageBufferViewsByteExact": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "allJSONExceptBufferLayoutExact": true,
+  "geometryUVNormalsIndicesNodesMaterialsExact": true,
+  "triangles": 38884,
+  "vertices": 26238,
+  "dimensionsM": [
+    0.4760429561138153,
+    0.22339381277561188,
+    0.4000000059604645
+  ],
+  "static": true,
+  "deepGroovePixelCount": 15976,
+  "polishedRidgePixelCount": 60478,
+  "deepCavityMeanDarkening": 0.3437764024891964,
+  "deepGrooveMeanRoughness": 0.43698832562569345,
+  "ridgeMeanRoughness": 0.17833054184668673,
+  "normalMaxLengthError": 0.004863262176513672,
+  "pitcherDarkCavityPreserved": true,
+  "maps": [
+    {
+      "name": "normal-opengl.png",
+      "sha256": "621da2840c4271177eea12ca04d8883824776bb9c16dc6ee6ea1151f3ea8bdf0",
+      "px": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "albedo.png",
+      "sha256": "64718489a570dee1f115e509c90ed4b7846e29be5892a433b3cc911e3e600ab5",
+      "px": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "metallicRoughness.png",
+      "sha256": "27d73ef5714b014294738148f239c28c38dd2eacf6a014dfc1691dcb89279490",
+      "px": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "receiverGameVerified": false,
+  "ownerAccepted": false,
+  "newTripoCalls": 0,
+  "credits": 0
+}

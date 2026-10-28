@@ -1,0 +1,136 @@
+{
+  "version": "J4-v4",
+  "task": 1228,
+  "createdAt": "2026-10-28T17:12:29.229991+00:00",
+  "files": [
+    {
+      "path": "CLAUDE-TOIMITUS.md",
+      "sha256": "bab707479689b373c41124959d6ebb745630dc478ebd0e49f8039369feed225f",
+      "bytes": 1844
+    },
+    {
+      "path": "KAYTTO-JA-QA.md",
+      "sha256": "fcf46e6222bc46f8b7da492ea251ba78ce4f4bebab8f01f232edad9dfa2cfc0a",
+      "bytes": 3355
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "49d612881bca4118ec744f0cc9b1edc43ea9aeee39156e95b9aaa30e9f074453",
+      "bytes": 924
+    },
+    {
+      "path": "models/arkun-hopeasisalto-j4-v4.glb",
+      "sha256": "13cb3cc325ffed2b53734be759dad752758fafba14438980b4c2baa99141ff3e",
+      "bytes": 3871136,
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "triangles": 38884,
+      "dimensionsM": [
+        0.4760429561138153,
+        0.22339381277561188,
+        0.4000000059604645
+      ]
+    },
+    {
+      "path": "qa/BUILD-QA.json",
+      "sha256": "78f3a11a896f59914802b928a1d914013dd25d70df760e6ffb559daaacfbaf38",
+      "bytes": 871
+    },
+    {
+      "path": "qa/MIP-PROBE-QA.json",
+      "sha256": "3a42cb5cb8acc1ec3b6f5966f32e72ea3a6af10e9633023db642ae4b6208cebc",
+      "bytes": 277
+    },
+    {
+      "path": "qa/PREVIEW-QA.json",
+      "sha256": "465a74b1d14b2642ad280a1fe21979b99959594d8d0d08e544399f9fbbbb1851",
+      "bytes": 506
+    },
+    {
+      "path": "qa/SAVED-FILE-QA.json",
+      "sha256": "611b56ed8616a925a828900b774db33d18cb04003ea38fda2b8cbb759a3f1d47",
+      "bytes": 1548
+    },
+    {
+      "path": "qa/VISUAL-REVIEW.json",
+      "sha256": "20a3da8ecb0d9db7fa673aa0d91c2bc337a02f2a301b2e9ac0abc2df96059583",
+      "bytes": 1273
+    },
+    {
+      "path": "qa/material-v3-v4-reference.png",
+      "sha256": "e3a0792a26b95e833f10e99dce7c110d8e4633a2855176eb711cdabe0d1c1935",
+      "bytes": 820426
+    },
+    {
+      "path": "qa/readability-275px.png",
+      "sha256": "1110db1f3fd2152fd40fac2a00e243c823fb054664c84da336aa1dd3f6e281e5",
+      "bytes": 215430
+    },
+    {
+      "path": "qa/readability-mip512-275px.png",
+      "sha256": "8240f8a9ed32fd44c3b975282a331bada307be4cc32f56dd94e4c2c3ff708231",
+      "bytes": 198132
+    },
+    {
+      "path": "qa/receiver-check.json",
+      "sha256": "85f786b770584f62b3c48cdc25f544196c3a09319230f2fd4321889908b9accf",
+      "bytes": 3398
+    },
+    {
+      "path": "qa/v4-reference-angle.png",
+      "sha256": "f69fb8246a3d0b6733cff0b424c1ca73e871ae8e9f6affe2594bbda97c3b9aeb",
+      "bytes": 111810
+    },
+    {
+      "path": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+      "sha256": "c4c95f80218c5f52d41d4b6f5f17c647052f94e58fd526b42c774538be9c56ba",
+      "bytes": 2518897
+    },
+    {
+      "path": "sources/lavastaja-codex-j4-v4-kaiverrus-20261028.md",
+      "sha256": "3c36b21a948170354cdea984bc00316ca55478fcac96f2a51d987051e259de63",
+      "bytes": 1602
+    },
+    {
+      "path": "sources/peli-v2-v3-2x.png",
+      "sha256": "9a4d18f6152a700d5b78a91295144aa056fce18173b8d3636dac8e63ad4ae188",
+      "bytes": 542384
+    },
+    {
+      "path": "sources/peli-v3-koko-kuva.png",
+      "sha256": "a9263a95b5bc42e7538882409f07791de8723064426e78d9c193428c3d1a239f",
+      "bytes": 5874462
+    },
+    {
+      "path": "sources/peli-v3-vs-pelin-vahvistus-2x.png",
+      "sha256": "6551790f8780b0afea4e09013883f614370b0ff6ee1b3bb360db033337eb4751",
+      "bytes": 572758
+    },
+    {
+      "path": "textures/albedo.png",
+      "sha256": "64718489a570dee1f115e509c90ed4b7846e29be5892a433b3cc911e3e600ab5",
+      "bytes": 821965
+    },
+    {
+      "path": "textures/metallicRoughness.png",
+      "sha256": "27d73ef5714b014294738148f239c28c38dd2eacf6a014dfc1691dcb89279490",
+      "bytes": 900764
+    },
+    {
+      "path": "textures/normal-opengl.png",
+      "sha256": "621da2840c4271177eea12ca04d8883824776bb9c16dc6ee6ea1151f3ea8bdf0",
+      "bytes": 1073460
+    },
+    {
+      "path": "tools/codex-3d-tarkistus.mjs",
+      "sha256": "5de9ed58f784bdbf9094823b25e6473dddfc9ff72d4d38085974c5cbcdba39c6",
+      "bytes": 24533
+    }
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0,
+  "receiverAccepted": false,
+  "runtimeVerified": false,
+  "ownerAccepted": false
+}
