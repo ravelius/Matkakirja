@@ -9584,9 +9584,8 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Podunavski        — Smederevo Fortress (Đurađ Branković, 1400-luku)
    *   Severno-Backi     — Subotica City Hall (jugend), Palić
    *   Pomoravski        — Manasija (Despotovac, Stefan Lazarević,
-   *                       1407–1418, linnoitusmuurit). HUOM datavirhe:
-   *                       maakunnat-nimet.js antaa nimiFi "Rasina", vaikka
-   *                       tunnus on Pomoravski (Pomoravlje).
+   *                       1407–1418, linnoitusmuurit). Rasinski (Rasina,
+   *                       Kruševac) on oma alueensa 28.10.2026 alkaen.
    *   Raški             — Studenica (Kraljevo, perustettu 1190, Unesco 1986)
    *   Južno-Banatski    — Deliblato Sands ("the largest sandy terrain in
    *                       Europe", "European Sahara", Kovin)
@@ -9989,6 +9988,10 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
         lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
       pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pomoravski-26dc66d8.jpg",
+    },
+    'Rasinski': {
+      lyhyt: 'Kruševacin Lazarica-kirkko rakennettiin vuosina 1375–1378 ruhtinas Lazarin pääkaupunkiin Länsi-Moravan laaksoon.',
+      pitka: `Rasinan piiri on Keski-Serbiassa Länsi-Moravan laaksossa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 207 000 ihmistä. Piirin keskus on Kruševacin kaupunki, jonka ruhtinas Lazar perusti vuonna 1371 pääkaupungikseen. Kruševacin Lazarica-kirkko rakennettiin vuosina 1375–1378. Kaupungin keskellä on Kosovon sankarien muistomerkki vuodelta 1904. Trstenik on Länsi-Moravan rannalla oleva noin 13 500 asukkaan kaupunki, ja sen lähellä on Ljubostinjan luostari, jonka ruhtinaatar Milica rakennutti vuosina 1388–1405. Aleksandrovacin seudulla viljellään viiniä, ja Župska berba -viinijuhla pidetään syyskuussa. Ribarska Banja on Kruševacin lähellä oleva pieni kylpyläkylä.`,
     },
     'Raški': {
       lyhyt: 'Kraljevon lähellä oleva Studenican luostari perustettiin 1100-luvun lopulla, ja sen marmorikirkko on Unescon maailmanperintöä.',
