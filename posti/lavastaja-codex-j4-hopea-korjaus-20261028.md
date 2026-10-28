@@ -21,8 +21,9 @@ Nykyinen MR-kartan B (metalli) vaihtelee 0,57–0,95 → osa pinnasta on puoliks
 kiillotetulla pinnalla, painaumissa ja leimojen pohjissa karheampi (~0,5). Pelissä karheus kertoo kiiltopisteen koon.
 
 ## 4. Kannun suuaukko
-Pelissä kannun suu näkyy vaaleana täytenä kiekkona. Tarkista, onko aukko umpinainen (kansi/täyte): toive on avoin, sisältä tumma aukko
-(sisäseinä vähintään ~3 cm syvyyteen; pohja saa olla umpinainen).
+Pelissä kannun suu näkyy vaaleana täytenä kiekkona. Mittaus glb:stä: suun sisällä on tasainen ylöspäin osoittava kiekko (4 kolmiota, Ø ~5 cm)
+noin 5 cm suun reunan alapuolella, eikä sen alla ole mitään; kiekko saa valoa ja näkyy hopeana. Toive: sisäseinä jatkuu syvemmälle (kannun
+puoliväliin tai pohjaan) ja sisäpinta on tumma (albedo ~0,15–0,25, karheus ~0,7), jolloin aukko lukeutuu tummaksi.
 
 Muut ennallaan: mitat, origo, skaala, kolmiomäärä noin nykyinen (yksi mesh, yksi materiaali), tekstuurit 2048², glb + erilliset PNG:t
 (albedo, normal-opengl, metallicRoughness), SHA256SUMS ja vertailuarkki (four-views) sinun kuvasi rinnalla. Nimi J4-v3. Kokoan sen peliin
