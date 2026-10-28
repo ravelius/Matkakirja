@@ -3108,3 +3108,7 @@ KK:n välitys, sanatarkasti: "lähden jo kotiin, niin julkaise test flight, kun 
 ## JUNA 213 ILMAN TARKISTUSAJOA (omistaja 28.10. klo 16.20) (28.10.2026 klo 16.20)
 
 Kortti KK:ssa 'Ajetaanko tarkistusajo ennen julkaisua?' (9.11 päiväjuna): "Ei". Juna 213 lähtee TestFlightiin ilman iPad-muistiajoa (muistiajo-213 OHITETTU); automaattiset käännöstarkistukset ajetaan silti; heti kun karttamuutokset on hyväksytty ja runko vihreä.
+
+## LOUVREN JA BIG BENIN VÄISTÖ HYVÄKSYTTY (omistaja 28.10. klo 16.22) (28.10.2026 klo 16.23)
+
+Kortti KK:ssa 'Kelpaako Louvren ja Big Benin uusi väistö?' (KS:n kuva limittain-4 16.03; Big Ben ja pyramidi hieman limittäin nappulan kanssa; sivuvaikutukset Lontoon pallo alas oikealle ja salama pyramidin alle kerrottu): "Kelpaa (suositus)". KS 5c7384369 → NS → juna 213. TF 213 odottaa enää merkittävyysporrastusta.
