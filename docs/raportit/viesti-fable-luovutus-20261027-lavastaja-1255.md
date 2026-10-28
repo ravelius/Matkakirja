@@ -603,3 +603,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   3) kulhon kaarinauha ei näy. → Codex-tilaus J4-v5 posti 221f04d6d (AO R-kanavaan, leima + reunarengas jokaiselle kolikolle, välit kiinni / tumma
   alusta, kulhon nauha). Kun tulee: sama ketju (v4/peli-malli) → pari v4 | v5 | 1021 → PT → KK. Ei omistajalle ennen KK:n OK:ta.
 - Katto-parit terävinä: pelikamera havainne-editori-20261028-210105, havainteen kamera …-210656 → PT → KK (korvaavat 195528/195925). Odottaa KK:ta.
+
+## LISÄYS 45 klo 21.2x (28.10.): KK 21.2x: 01 seinät havainteen korkeuteen + kapea räystäs, 02 tiiliräystäs + hillitty nauha → juuri-v104m
+- 01 K/tyokalut/avoimet_korkea.py (avoimet-v66k → v67k): seinien, julkisivujen, puupaneelien, pilarien ja palkistojen juurisolmut y × SK 1,48
+  (ovi 1,83 → 2,71 ≈ 2 × keisari 1,35; ikkunat 1,61–2,95; seinä 3,52; nauha 3,26–3,52); lattiat/kalusteet ennallaan. Katto: alapinta seinälinjalla
+  = seinän yläreuna, lape × LOIVA 0,75, ulkonema 1,75 → ULK 0,8 (vyöhykkeen puristus + nosto kaltevuudella), harjakoristeet samalla kuvauksella.
+- 02 kuja_kate.py ympäristömuuttujat NAUHA_MAT/LAPE_MAT/NOUSU/OTSA (oletukset = v93): v94 = VYO 0,30 V4_palkkivyo, RAYS 0,75, V4_palatsi_katto
+  -lape (u 0,625/m, v 0,6/m), NOUSU 0,55, OTSA 0,14 → muurikate pari-v94. Auki: vasemman lähimmät isot kirkkaat friisipalat = pilarien hatut taustassa.
+- 05: ovet ovat 3D-lehtiä (ovi_V/ovi_O), peli avaa 90° (PorttiOviKulma); havainteessa ~65° → Pelikoodarin koodi, PT:lle ehdotettu.
+- Ketju `zsh K/tyokalut/aja_v104_pari.zsh` (REF 46c0add3c, ~3 min/ajo); havainteen kamera TESTIKAMERA_0x="4 6.5 16 45".
+  Parit: pelikamera havainne-editori-20261028-211708, havainteen kamera …-211930 → PT → KK. Omistajalle vasta, kun 01 näyttää havainteelta.
