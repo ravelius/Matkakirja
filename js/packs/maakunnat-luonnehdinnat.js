@@ -8616,6 +8616,10 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       },
       pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
     },
+    'Požeško-Slavonska': {
+      lyhyt: 'Požegan keskusaukiolla on Pyhän Hengen kirkko, fransiskaaniluostari ja ruttopylväs, ja kaupunki on Kultaisen laakson keskus.',
+      pitka: `Požega-Slavonian piirikunta on Itä-Kroatiassa Slavonian länsiosassa, ja siellä asuu noin 64 000 ihmistä (väestönlaskenta 2021). Piirikunnan pinta-ala on noin 1 800 neliökilometriä. Keskus Požega on laaksossa, jota ympäröivät Požeška gora, Papuk ja Dilj -vuoret. Roomalaisaikana laaksoa kutsuttiin nimellä Vallis Aurea, kultainen laakso. Požega siirtyi Habsburgien hallintaan vuonna 1691 ottomaanien vallan jälkeen. Kaupungin keskusaukiolla on Pyhän Hengen kirkko, fransiskaaniluostari ja ruttopylväs. Kutjevo on viinikaupunki, jossa valmistetaan muun muassa graševina-valkoviiniä. Lipik on kylpyläkaupunki, jossa on kivennäislähteitä. Pakracin ja Pleternican kaupungit kuuluvat myös piirikuntaan.`,
+    },
     'Dubrovacko-Neretvanska': {
       lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
       pitka: `Dubrovnik-Neretva on Kroatian eteläisin piirikunta, ja siellä asuu noin 120 000 ihmistä (väestönlaskenta 2021). Piirikuntaan kuuluvat Adrianmeren rannikko, Pelješacin niemimaa ja saaria, kuten Korčula ja Mljet. Bosnia ja Hertsegovinan rannikkokaista Neum katkaisee Kroatian rannikon, mutta Pelješacin silta yhdistää piirikunnan eteläosan muuhun Kroatiaan. Silta on 2 404 metriä pitkä, ja se avattiin vuonna 2022. Keskus Dubrovnik on kaupunki, jonka vanhankaupungin muurit ovat 1 940 metriä pitkät. Vanhakaupunki on Unescon maailmanperintökohde. Ston-kaupungin keskiaikaiset muurit suojasivat suola-altaita. Mljetin saarella on kansallispuisto, joka perustettiin vuonna 1960.`,
