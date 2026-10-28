@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-235149/02/havainne.png",
+    "copy": "output/juoksupeli-kujakivet-11911194-20261027/stone-surfaces-v4/references/havainne.png",
+    "sha256": "ade56ecc3ccdf05a4ac50494b3cfad38a300552397d6812c8f511c42b0bfd8a2"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-235149/02/peli.png",
+    "copy": "output/juoksupeli-kujakivet-11911194-20261027/stone-surfaces-v4/references/peli.png",
+    "sha256": "0939ff2987db411a3d37fd49730fc3ca79e6341681e31bf61c0bb36a7f8a2cb4"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-235149/02/kk-lahikuva-kivijalka-lattia.png",
+    "copy": "output/juoksupeli-kujakivet-11911194-20261027/stone-surfaces-v4/references/kk-lahikuva-kivijalka-lattia.png",
+    "sha256": "0b52bd69ebe01d6a0969af011902126e0fb94cbb7e233782e0e31d2e0ed7a219"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-235149/02/mittari.txt",
+    "copy": "output/juoksupeli-kujakivet-11911194-20261027/stone-surfaces-v4/references/mittari.txt",
+    "sha256": "ba83ecb0e3c357ae52c75582e754b0efb4da14150a7755379d6a8add6c24a417"
+  }
+]

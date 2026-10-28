@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "maps": 24,
+  "wallCourses": 8,
+  "rowHeightM": 0.15,
+  "curbByteExact": true,
+  "crossFaceAndRepeat": {
+    "variant": 1,
+    "pillarCornerAlbedoHeightRoughnessMaxDelta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "wallTopJointCentersM": [
+      0.0,
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0,
+      1.3333333333333333,
+      1.6666666666666665
+    ],
+    "periodicLimits": [
+      {
+        "name": "sokkeli",
+        "axis": 0,
+        "albedoMaximumDelta": 3.397110431346828e-05,
+        "heightMaximumDeltaM": 5.899300992802045e-09
+      },
+      {
+        "name": "sokkelin-ylapinta",
+        "axis": 0,
+        "albedoMaximumDelta": 0.0,
+        "heightMaximumDeltaM": 0.0
+      },
+      {
+        "name": "lattialaatat",
+        "axis": 0,
+        "albedoMaximumDelta": 2.989216413107343e-05,
+        "heightMaximumDeltaM": 2.859078225111292e-09
+      },
+      {
+        "name": "lattialaatat",
+        "axis": 1,
+        "albedoMaximumDelta": 0.0,
+        "heightMaximumDeltaM": 0.0
+      }
+    ]
+  },
+  "files": [
+    "pinnat/reunakivi-v01/reunakivi-v01-albedo.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-normal-opengl.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-roughness.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-height.png",
+    "pinnat/sokkeli-v01/sokkeli-v01-albedo.png",
+    "pinnat/sokkeli-v01/sokkeli-v01-normal-opengl.png",
+    "pinnat/sokkeli-v01/sokkeli-v01-roughness.png",
+    "pinnat/sokkeli-v01/sokkeli-v01-height.png",
+    "pinnat/sokkelin-ylapinta-v01/sokkelin-ylapinta-v01-albedo.png",
+    "pinnat/sokkelin-ylapinta-v01/sokkelin-ylapinta-v01-normal-opengl.png",
+    "pinnat/sokkelin-ylapinta-v01/sokkelin-ylapinta-v01-roughness.png",
+    "pinnat/sokkelin-ylapinta-v01/sokkelin-ylapinta-v01-height.png",
+    "pinnat/pilarin-etu-v01/pilarin-etu-v01-albedo.png",
+    "pinnat/pilarin-etu-v01/pilarin-etu-v01-normal-opengl.png",
+    "pinnat/pilarin-etu-v01/pilarin-etu-v01-roughness.png",
+    "pinnat/pilarin-etu-v01/pilarin-etu-v01-height.png",
+    "pinnat/pilarin-sivu-v01/pilarin-sivu-v01-albedo.png",
+    "pinnat/pilarin-sivu-v01/pilarin-sivu-v01-normal-opengl.png",
+    "pinnat/pilarin-sivu-v01/pilarin-sivu-v01-roughness.png",
+    "pinnat/pilarin-sivu-v01/pilarin-sivu-v01-height.png",
+    "pinnat/lattialaatat-v01/lattialaatat-v01-albedo.png",
+    "pinnat/lattialaatat-v01/lattialaatat-v01-normal-opengl.png",
+    "pinnat/lattialaatat-v01/lattialaatat-v01-roughness.png",
+    "pinnat/lattialaatat-v01/lattialaatat-v01-height.png"
+  ]
+}

@@ -1,0 +1,18 @@
+mittari                              havainne          oma      ero
+keisari yläreuna                         0.64         0.69    +0.05
+keisari alareuna                         0.84         0.81    -0.03
+keisari korkeus                          0.20         0.12    -0.08
+keisari keskikohta x                     0.50         0.52    +0.02
+horisontti (taivaan alaraja)             0.08         0.10    +0.02
+räystäs vasen                            0.00         0.16    +0.16
+räystäs oikea                            0.00         0.19    +0.19
+katon yläpinta osuus                     0.97         0.91    -0.06
+kattojen väli yläreunassa                0.90         0.70    -0.20
+lattia mediaani                        168.33       199.87   +31.54
+mustat (<25) %                           0.04         0.23    +0.19
+kylläisyys keskim.                       0.30         0.40    +0.10
+kylläisyys p90                           0.60         0.76    +0.16
+varjo-osuus lattiasta %                  3.72        24.19   +20.46
+punainen kylläisyys                      0.57         0.73    +0.16
+punainen kirkkaus                        0.69         0.71    +0.02
+kirkkaus p5/p50/p95              92 / 146 / 186 66 / 124 / 221
