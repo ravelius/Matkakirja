@@ -1,0 +1,21 @@
+{
+  "reviewedAt": "2026-10-28T12:48:32.093445+00:00",
+  "status": "PASS_FOR_RECEIVER_GAME_COMPARISON",
+  "inspected": [
+    "sources/marble-native.png",
+    "esikatselu/kivipinnat-v5-vertailu.png",
+    "pinnat/lattialaatat-v02/lattialaatat-v02-albedo.png",
+    "pinnat/sokkeli-v02/sokkeli-v02-albedo.png"
+  ],
+  "observations": [
+    "Valokuvamainen kiven mineraalirakenne; ei venytettyä puumaista juovaa.",
+    "Lattiassa leveät poikittaiset laatat, vaihteleva limitys.",
+    "Kivijalassa kahdeksan kerrosta, pitkät eri pituiset kivet.",
+    "Reunakivi tavutarkasti ennallaan."
+  ],
+  "limitations": [
+    "Materiaaliesikatselu ei ole pelikuva. Lopullinen valotus, varjostin ja KK:n hyväksyntä tarkistetaan vastaanottajan pelissä.",
+    "Normaalikartta ei muuta geometrian siluettia."
+  ],
+  "ownerAccepted": false
+}
