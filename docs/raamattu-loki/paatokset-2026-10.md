@@ -3116,3 +3116,7 @@ Kortti KK:ssa 'Kelpaako Louvren ja Big Benin uusi väistö?' (KS:n kuva limittai
 ## STRIIMIKARTAN KOHTEIDEN NIMET VASTA JUURI ENNEN STRIIMIKARTTAA (omistaja 28.10. klo 18.15) (28.10.2026 klo 18.16)
 
 Kortti KK:ssa 'Kelpaako kohteiden porrastus?' (KS:n pari 3), sanatarkasti: "Nimet saavat tulla näkyviin vasta vähän ennen kun siirrytään striimikarttaan." Toteutus: laajoissa näkymissä (Eurooppa, maa) ei kohteiden nimiä; nimet alkavat näkyä juuri ennen siirtymää striimikarttaan. KS uusi pari → KK → omistaja. TF 213 odottaa tätä.
+
+## SUURTEN KAUPUNKIEN NIMET ENSIN, KOHTEIDEN NIMET VASTA STRIIMIKARTASSA (omistaja 28.10. klo 18.42–18.43) (28.10.2026 klo 18.43)
+
+KK:n kortti, pari 4, sanatarkasti 18.42: "Suurten kaupunkien nimet ensin. Yksittäisten kohteiden nimiä ei voi tulla kuin vasta lähempänä." + 18.43 "Kyllä (suositus)": suurimpien kaupunkien nimet näkyvät jo Ranskan näkymässä, yksittäisten kohteiden nimet vasta striimikartassa. KS pari 5 → KK → omistaja; TF 213 odottaa sitä. Löydös (ei porrastuksen syy): Pariisia lähestyttäessä tasolla 9 taustassa ruutusaumoja (todistus-merkittavat-jalkeen-20261028-1824 M2b) → KS selvittää erikseen.
