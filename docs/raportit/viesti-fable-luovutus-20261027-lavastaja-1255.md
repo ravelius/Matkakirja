@@ -555,3 +555,18 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   onko iso katto juhlasalin oma (sisempänä/korkeammalla kuin friisi) vai takana olevan hallin (rakennukset-v54 / taustapalat). Mittaustyökalu:
   K/tyokalut/yrange.py <glb> [ymin] (y-välit solmu+materiaali); seuraava askel: sama x/z-bboxeilla ja katon alareunan etäisyys friisin ulkopinnasta.
 - J4: Codex-tilaus J4-v4 991b58c76 odottaa toimitusta (ks. lisäys 39). Ei taustaajoja käynnissä.
+
+## LISÄYS 42 klo 20.0x (28.10.): KK 19.48 -vastaus: 01 ohut nauha, 02/05 kujamuurien kate + friisi, havainnekamera; J4-v4 vastaanotettu
+- 01 K/tyokalut/avoimet_nauha.py (avoimet-v65k → v66k): julkisivun friisi puristettu ohueksi nauhaksi 2,20–2,38, pilarien palkinpäät
+  (V4_konsoli) pois, seinät ja talopilarit leikattu 2,38:aan, katto −0,47 (yhteensä −0,92: räystäs 2,21, alapinta seinälinjalla 2,39).
+  Katkeava friisi = end_door0- ja side_door-1-julkisivut olivat seinän SISÄpinnalla (kaikissa 4 huoneessa) → peilattu ulos omana verkkonaan.
+- 02/05 K/tyokalut/kuja_kate.py: kujan (x ≈ −246, z 292–396) 4,5 m:n muureille muurikatteen profiili (friisi 4,05–4,50 suoraan harjan alle,
+  V4_gold-räystäs 0,45 m kujan yllä, harjapalkki); seinät luodattu taustasta 0,5 m:n välein, 7 jaksoa → muurikate pari-v93. Korkeus ennallaan.
+- Ketju: `zsh K/tyokalut/aja_v103_pari.zsh` (juuri-v103m = v102m + avoimet-v66k + muurikate pari-v93).
+- HAVAINNEKAMERA: editori-lr.sh hyväksyy nyt TESTIKAMERA_<kohta>="K T A F" (pelin QA-testikamera). Havainteen kamera arvioitu kuvasta
+  (keisarin pää/jalat + katoamispiste): 4 m, 6,5 m taakse, 16° alas, 45°. Arvio, ei mitattu; havaintokuva näyttää matalammalta → tarkennettava.
+- PARIT: pelikamera lokit/havainne-editori-20261028-195528, havainteen kamera …-195925; kummassakin <kohta>/kk-oikea-ylakulma-2x.png.
+- HAVAINTO: korkealta 01:n räystäät (ulkonema 1,67 m, nyt 2,2 m:ssä) peittävät seinät enemmän kuin havainteessa → ehdotus KK:lle:
+  ulkonema ~0,8 m:iin. 05:n portin sivumuurien friisi + räystäs ovat portin mallissa (rakennukset), eivät muuttuneet.
+- J4-v4 #1228 vastaanotettu: GLB SHA 13cb3cc3…41ff3e täsmää, posti SHA256SUMS 22/22 → olavinlinna-j4/v4/ (models + posti). Kuittaus Codexille
+  b80de59a5. SEURAAVA: v3:n ketju (j4_arkkuun 0,97 → j4_siivous → astc-mip vari/normaali 4 + j4_orm R255 + astc6) → kavely-j4 → pari v3 | v4 | 1021 → KK.
