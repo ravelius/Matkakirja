@@ -3019,3 +3019,7 @@ Omistaja (KK) sanatarkasti: 'kohdekaupungit saavat näkyä, muut pois. tarkoitin
 ## Suurennuslasi: Nimet kahtia, Luonto selvitetään, Kartta-osio auki striimitasolla, valikoille pohjavärit (omistaja 28.10. 09.29) (28.10.2026 klo 09.29)
 
 Omistaja (KK) sanatarkasti: 1) 'suurennuslasissa kartta kohdassa on kohta nimet, mutta se vaikuttaa vain osaan nimistä. voisiko jaotella kaupunkien tms nimet erikseen vesien, vuorien, yms. nimistä. lisäksi kohta luonto on outo, mihin se vaikuttaa?' 2) 'suurennuslasia painamalla kartta valikko voisi aktivoitua automaattisesti jos ollaan striimikartan zoomtasolla. linssit, pelit ja kartta valikot voisi myös kevyesti värikoodata pohjaväriltään, jotta otsikkojen alla näkyisi jo eri pohjavärit.' NUI vetää, KS nimiryhmät; värit olemassa olevista tyylimäärittelyistä (UI-POHJAT).
+
+## Valikoiden pohjavärit; KK:n kortit vasta Remote Controlin kanssa (omistaja 28.10. 09.45) (28.10.2026 klo 09.46)
+
+Omistaja (KK): NUI:n valikoiden pohjavärit hyväksytty: Linssit vaalea violetti, Pelit vaalea kulta, Kartta vaalea merensininen; hyvin kevyt sävy välilehdessä ja pohjassa. Toinen päätös 09.45: KK ei esitä korttia ennen kuin sen oma Remote Control on päällä (muuten omistaja ei voi vastata etänä). Postivahti kytkee RC:n nollauksessa; KK tarkistaa ennen ensimmäistä korttia.
