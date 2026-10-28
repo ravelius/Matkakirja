@@ -8,15 +8,15 @@ Ala-Itävalta on osavaltio Tšekin ja Slovakian rajalla, ja siellä asuu noin 1,
 
 ## Steiermark
 
-Steiermark on vuoristoinen osavaltio, ja siellä asuu noin 1,3 miljoonaa ihmistä. Se on pinta-alaltaan Itävallan toiseksi suurin osavaltio, ja metsää on noin 60 prosenttia maa-alasta. Siksi sitä kutsutaan Itävallan vihreäksi sydämeksi. Pääkaupunki Graz on Mur-joen rannalla. Grazin vanha keskusta on Unescon maailmanperintökohde, ja Grazin yliopisto on perustettu vuonna 1585. Kaupungin Schlossberg-kukkulalla on kellotorni, joka on Grazin tunnus. Red Bull Ring -radalla ajettiin vuonna 2020 Itävallan Grand Prix ja sen jälkeen Steiermarkin Grand Prix. Admontin luostarin kirjasto on osavaltion nähtävyys.
+Steiermark on vuoristoinen osavaltio Kaakkois-Itävallassa, ja siellä asuu noin 1,3 miljoonaa ihmistä. Se on pinta-alaltaan Itävallan toiseksi suurin osavaltio, ja metsää on noin 60 prosenttia maa-alasta. Siksi sitä kutsutaan Itävallan vihreäksi sydämeksi. Pääkaupunki Graz on Mur-joen rannalla. Grazin vanha keskusta on Unescon maailmanperintökohde, ja Grazin yliopisto on perustettu vuonna 1585. Kaupungin Schlossberg-kukkulalla on kellotorni, joka on Grazin tunnus. Red Bull Ring -radalla ajettiin vuonna 2020 Itävallan Grand Prix ja sen jälkeen Steiermarkin Grand Prix. Admontin luostarin kirjasto on osavaltion nähtävyys.
 
 ## Tirol
 
-Tirol on Alppien osavaltio, ja siellä asuu noin 780 000 ihmistä. Pääkaupunki Innsbruck on Inn-joen rannalla, ja nimi tarkoittaa Inn-joen siltaa. Kaupunki järjesti talviolympialaiset vuosina 1964 ja 1976, ja Innsbruckin yliopisto on perustettu vuonna 1669. Kitzbühel, Ischgl ja St. Anton ovat tunnettuja hiihtokeskuksia. Matkailu on tärkeä elinkeino, ja matkailukaudella 2024–2025 osavaltiossa vieraili 12,4 miljoonaa matkailijaa. Itä-Tirol on osavaltion eteläinen osa, jolla ei ole maayhteyttä Pohjois-Tiroliin: välissä ovat Salzburgin osavaltion kaistale ja Italian Etelä-Tirol. Itä-Tirolin keskus on Lienz.
+Tirol on Alppien osavaltio Länsi-Itävallassa, ja siellä asuu noin 780 000 ihmistä. Pääkaupunki Innsbruck on Inn-joen rannalla, ja nimi tarkoittaa Inn-joen siltaa. Kaupunki järjesti talviolympialaiset vuosina 1964 ja 1976, ja Innsbruckin yliopisto on perustettu vuonna 1669. Kitzbühel, Ischgl ja St. Anton ovat tunnettuja hiihtokeskuksia. Matkailu on tärkeä elinkeino, ja matkailukaudella 2023–2024 osavaltiossa vieraili yli 12 miljoonaa matkailijaa. Itä-Tirol on osavaltion eteläinen osa, jolla ei ole maayhteyttä Pohjois-Tiroliin: välissä ovat Salzburgin osavaltion kaistale ja Italian Etelä-Tirol. Itä-Tirolin keskus on Lienz.
 
 ## Oberösterreich
 
-Ylä-Itävalta on Itävallan merkittävä teollisuusalue, ja siellä asuu noin 1,5 miljoonaa ihmistä. Pääkaupunki Linz on Tonavan rannalla ja asukasluvultaan Itävallan kolmanneksi suurin kaupunki. Linz oli Euroopan kulttuuripääkaupunki vuonna 2009, ja siellä pidetään syyskuun alussa Ars Electronica -festivaali. Salzkammergutin järvialueella on Hallstattin kylä Hallstätter See -järven rannalla. Hallstattin suolakaivosta on käytetty jo pronssikaudelta alkaen, ja kylä antoi nimensä rautakauden Hallstattin kulttuurille. Hallstatt-Dachsteinin ja Salzkammergutin kulttuurimaisema on Unescon maailmanperintökohde vuodesta 1997.
+Ylä-Itävalta on teollisuuden osavaltio Pohjois-Itävallassa, ja siellä asuu noin 1,5 miljoonaa ihmistä. Ylä-Itävallalla on rajaa lännessä Saksan ja pohjoisessa Tšekin kanssa. Pääkaupunki Linz on Tonavan rannalla ja asukasluvultaan Itävallan kolmanneksi suurin kaupunki. Linz oli Euroopan kulttuuripääkaupunki vuonna 2009, ja siellä pidetään syyskuun alussa Ars Electronica -festivaali. Salzkammergutin järvialueella on Hallstattin kylä Hallstätter See -järven rannalla. Hallstattin suolakaivosta on käytetty jo pronssikaudelta alkaen, ja kylä antoi nimensä rautakauden Hallstattin kulttuurille. Hallstatt-Dachsteinin ja Salzkammergutin kulttuurimaisema on Unescon maailmanperintökohde vuodesta 1997.
 
 ## Kärnten
 
@@ -24,7 +24,7 @@ Kärnten on vuorten ja järvien osavaltio Itävallan eteläosassa, ja siellä as
 
 ## Salzburg
 
-Salzburg on osavaltio, jossa asuu noin 570 000 ihmistä. Nimi tarkoittaa suolalinnaa, koska suolaa kuljetettiin proomuilla Salzach-jokea pitkin. Pääkaupunki on samanniminen Salzburg, joka on säveltäjä Wolfgang Amadeus Mozartin syntymäkaupunki. Mozart syntyi vuonna 1756 Getreidegasse-kadun varrella olevassa talossa. Kaupungin vanha keskusta on Unescon maailmanperintökohde, ja Hohensalzburgin linnoituksen rakentaminen aloitettiin vuonna 1077. Salzburgin festivaali on pidetty kesäisin vuodesta 1920, ja Hugo von Hofmannsthalin Jedermann-näytelmää esitetään tuomiokirkon aukiolla joka vuosi. Osavaltiossa on Hohe Tauern -vuoristo, ja Osavaltion järviä on muun muassa Wolfgangsee.
+Salzburg on osavaltio Länsi-Itävallassa, jossa asuu noin 570 000 ihmistä. Nimi tarkoittaa suolalinnaa, koska suolaa kuljetettiin proomuilla Salzach-jokea pitkin. Pääkaupunki on samanniminen Salzburg, joka on säveltäjä Wolfgang Amadeus Mozartin syntymäkaupunki. Osavaltio sijaitsee Salzach-joen ympärillä ja on jaettu viiteen piiriin. Lännessä se ulottuu kapeana kaistana Italian rajalle ja jakaa Tirolin kahteen osaan. Salzburgin kaupungin vanha keskusta on Unescon maailmanperintökohde. Salzburgin festivaali on pidetty kesäisin vuodesta 1920, ja Hugo von Hofmannsthalin Jedermann-näytelmää esitetään tuomiokirkon aukiolla joka vuosi. Osavaltion eteläosassa on Hohe Tauern -vuoristo, ja osavaltion järviin kuuluu muun muassa Wolfgangsee.
 
 ## Burgenland
 
