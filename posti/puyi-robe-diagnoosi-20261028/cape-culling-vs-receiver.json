@@ -1,0 +1,22 @@
+{
+  "mainSHA256": "3e8e0724dc4ddee52875bedfeb552dbe3908c7b4975e15a6fffd5f8104c1e634",
+  "time": 0.45,
+  "morphWeight": 0,
+  "sourceMaterialDoubleSided": true,
+  "geometryAndAnimationUnmodified": true,
+  "observations": [
+    {
+      "yaw": -90,
+      "pitch": 10,
+      "allTriangles": 39999,
+      "frontFacingTriangles": 20662
+    },
+    {
+      "yaw": 180,
+      "pitch": 28,
+      "allTriangles": 39999,
+      "frontFacingTriangles": 19770
+    }
+  ],
+  "runtimeCause": "NOT_YET_PROVEN"
+}

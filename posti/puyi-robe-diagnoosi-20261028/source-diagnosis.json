@@ -1,0 +1,583 @@
+{
+  "files": [
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/hahmot-v11-koe/puyi.glb",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/receiver-robe-diagnosis-20261028/sources/puyi.glb",
+      "sha256": "3e8e0724dc4ddee52875bedfeb552dbe3908c7b4975e15a6fffd5f8104c1e634"
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/hahmot-v11-koe/puyi-perus.glb",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/receiver-robe-diagnosis-20261028/sources/puyi-perus.glb",
+      "sha256": "93448f09d4142620b93e4130ce3726e2d7c5140749251e5dd281ce2602454f21"
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/hahmot-v11-koe/puyi-liikkeet.glb",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/receiver-robe-diagnosis-20261028/sources/puyi-liikkeet.glb",
+      "sha256": "636dd50cbbe504dea80407c4d2dddc76126b9e09cf32449566fd1a2a0a5064b5"
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/hahmot-v11-koe/puyi-perus-liikkeet.glb",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/receiver-robe-diagnosis-20261028/sources/puyi-perus-liikkeet.glb",
+      "sha256": "3e673c37995a25330e01d13944200d05ceae708c4531a84a698c794edae6e22d"
+    }
+  ],
+  "comparisonToReviewedFullModel": [
+    {
+      "variant": "perus",
+      "attributes": {
+        "POSITION": {
+          "shape": [
+            49898,
+            3
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "NORMAL": {
+          "shape": [
+            49898,
+            3
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "TEXCOORD_0": {
+          "shape": [
+            49898,
+            2
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "JOINTS_0": {
+          "shape": [
+            49898,
+            4
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "WEIGHTS_0": {
+          "shape": [
+            49898,
+            4
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "TEXCOORD_1": {
+          "shape": [
+            49898,
+            2
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        }
+      },
+      "materials": [
+        {
+          "doubleSided": true,
+          "name": "tripo_mat_02205cd6-2369-49a2-a5ae-8f27e92cdd37",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1,
+              "texCoord": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "poses": [
+        {
+          "clip": "jump_robe",
+          "time": 0.3,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "tripo_node_02205cd6-2369-49a2-a5ae-8f27e92cdd37"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_3"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_2"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_1"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_back_3"
+            ]
+          ],
+          "leftHand": [
+            0.11786124459408667,
+            0.6936770058136636,
+            0.005524214569010017
+          ],
+          "rightHand": [
+            -0.16358750710428469,
+            0.8096874120124609,
+            0.4105415411723373
+          ],
+          "hips": [
+            0.0026367083395345825,
+            0.6110616806871051,
+            0.013183200731873512
+          ]
+        },
+        {
+          "clip": "jump_robe",
+          "time": 0.45,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "tripo_node_02205cd6-2369-49a2-a5ae-8f27e92cdd37"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_3"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_2"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_1"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_back_3"
+            ]
+          ],
+          "leftHand": [
+            0.12449190412211723,
+            0.7192175351532875,
+            0.008481756609841696
+          ],
+          "rightHand": [
+            -0.16893054734369542,
+            0.7998551300604481,
+            0.4495707855467097
+          ],
+          "hips": [
+            0.0026366968835609406,
+            0.6267642502016856,
+            0.013183240045357536
+          ]
+        },
+        {
+          "clip": "jump_robe",
+          "time": 0.62,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "tripo_node_02205cd6-2369-49a2-a5ae-8f27e92cdd37"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_3"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_2"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_1"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_back_3"
+            ]
+          ],
+          "leftHand": [
+            0.11861721601268485,
+            0.6801721232448241,
+            0.021340243650371658
+          ],
+          "rightHand": [
+            -0.1796130722881576,
+            0.7691849861806568,
+            0.40762457859167217
+          ],
+          "hips": [
+            0.0026367102254901548,
+            0.602742164475292,
+            0.013183232299808723
+          ]
+        },
+        {
+          "clip": "jump_robe",
+          "time": 0.69,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "tripo_node_02205cd6-2369-49a2-a5ae-8f27e92cdd37"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_3"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_2"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_1"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_back_3"
+            ]
+          ],
+          "leftHand": [
+            0.1272027691961543,
+            0.6525412376750599,
+            0.16207439228805517
+          ],
+          "rightHand": [
+            -0.15292828397309066,
+            0.6258775450993072,
+            0.36819307113444844
+          ],
+          "hips": [
+            0.002636677316377775,
+            0.6077883820974755,
+            0.013183244736778565
+          ]
+        },
+        {
+          "clip": "stairs_robe",
+          "time": 0.2,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "tripo_node_02205cd6-2369-49a2-a5ae-8f27e92cdd37"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_3"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_2"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_front_1"
+            ],
+            [
+              0.0,
+              "robe_RightUpLeg_back_3"
+            ]
+          ],
+          "leftHand": [
+            0.11896319510686089,
+            0.6332965387351535,
+            -0.1662673473199398
+          ],
+          "rightHand": [
+            -0.24500796095353908,
+            0.6417646939093391,
+            -0.41976721151978
+          ],
+          "hips": [
+            0.002636699486524053,
+            0.5720921339770059,
+            -0.2713067840417225
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "viitta",
+      "attributes": {
+        "POSITION": {
+          "shape": [
+            26798,
+            3
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "NORMAL": {
+          "shape": [
+            26798,
+            3
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "TEXCOORD_0": {
+          "shape": [
+            26798,
+            2
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "JOINTS_0": {
+          "shape": [
+            26798,
+            4
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        },
+        "WEIGHTS_0": {
+          "shape": [
+            26798,
+            4
+          ],
+          "maxAbsDiff": 0.0,
+          "changedRows": 0
+        }
+      },
+      "materials": [
+        {
+          "doubleSided": true,
+          "name": "tripo_mat_4dec6b72-eb53-43db-b266-5f45df3aa0e0",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "poses": [
+        {
+          "clip": "jump_robe",
+          "time": 0.3,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "mixamorig:Spine2"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine1"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine"
+            ],
+            [
+              0.0,
+              "mixamorig:RightUpLeg"
+            ],
+            [
+              0.0,
+              "mixamorig:RightToe_End"
+            ]
+          ],
+          "leftHand": [
+            0.152002400798482,
+            0.6441971029561587,
+            0.1094505122708661
+          ],
+          "rightHand": [
+            -0.14438038924950797,
+            0.8091692539155142,
+            0.5426968713318489
+          ],
+          "hips": [
+            0.0026367653626948595,
+            0.5958379282873096,
+            0.11337559977548306
+          ]
+        },
+        {
+          "clip": "jump_robe",
+          "time": 0.45,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "mixamorig:Spine2"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine1"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine"
+            ],
+            [
+              0.0,
+              "mixamorig:RightUpLeg"
+            ],
+            [
+              0.0,
+              "mixamorig:RightToe_End"
+            ]
+          ],
+          "leftHand": [
+            0.1571474872758446,
+            0.6556761201089507,
+            0.12549043300820006
+          ],
+          "rightHand": [
+            -0.16925564159550985,
+            0.7798026401612028,
+            0.5714140578603936
+          ],
+          "hips": [
+            0.0026367653626948595,
+            0.5988876485042738,
+            0.11337559656240614
+          ]
+        },
+        {
+          "clip": "jump_robe",
+          "time": 0.62,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "mixamorig:Spine2"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine1"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine"
+            ],
+            [
+              0.0,
+              "mixamorig:RightUpLeg"
+            ],
+            [
+              0.0,
+              "mixamorig:RightToe_End"
+            ]
+          ],
+          "leftHand": [
+            0.15370524912575648,
+            0.6437776096176328,
+            0.11651727018431154
+          ],
+          "rightHand": [
+            -0.15889605112838806,
+            0.8007842734352679,
+            0.5410976429472065
+          ],
+          "hips": [
+            0.0026367653626948595,
+            0.5991271644944867,
+            0.11337560415267944
+          ]
+        },
+        {
+          "clip": "jump_robe",
+          "time": 0.69,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "mixamorig:Spine2"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine1"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine"
+            ],
+            [
+              0.0,
+              "mixamorig:RightUpLeg"
+            ],
+            [
+              0.0,
+              "mixamorig:RightToe_End"
+            ]
+          ],
+          "leftHand": [
+            0.1745891633154778,
+            0.5498477236566601,
+            0.2388206871057107
+          ],
+          "rightHand": [
+            -0.1624749171456888,
+            0.5734962685541093,
+            0.47626291142884486
+          ],
+          "hips": [
+            0.0026367653626948595,
+            0.5828986185072829,
+            0.11337560415267944
+          ]
+        },
+        {
+          "clip": "stairs_robe",
+          "time": 0.2,
+          "maxVertexDiff": 0.0,
+          "nodeDiffTop": [
+            [
+              0.0,
+              "mixamorig:Spine2"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine1"
+            ],
+            [
+              0.0,
+              "mixamorig:Spine"
+            ],
+            [
+              0.0,
+              "mixamorig:RightUpLeg"
+            ],
+            [
+              0.0,
+              "mixamorig:RightToe_End"
+            ]
+          ],
+          "leftHand": [
+            0.19493929052530226,
+            0.6258125257524019,
+            -0.13117952675102051
+          ],
+          "rightHand": [
+            -0.20589362071300618,
+            0.5727929995729563,
+            -0.2733393769778975
+          ],
+          "hips": [
+            0.0026367653626948595,
+            0.6019231982674,
+            -0.17420381357306347
+          ]
+        }
+      ]
+    }
+  ]
+}
