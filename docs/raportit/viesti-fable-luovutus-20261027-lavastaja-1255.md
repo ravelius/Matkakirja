@@ -632,3 +632,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - J4-v5: Codex aloitti (posti 6fd2e5bfd, 21.08, arvio 30–60 min). Kun toimitus tulee: v4/peli-ketju (j4_arkkuun → j4_siivous → astc-mip 4 →
   j4_orm (HUOM: v5:ssä R = AO, j4_orm.py asettaa R = 255 → muuta säilyttämään R) + astc6) → kavely-j4 → j4_pari.py (v4 205424 | v5 | 1021) → KK.
 - Proto-haarat (wt/proto-lavastaja-havainne): lavastaja/kerroin-2855d8478, -8885a9f54, -60a42b4f0 (907f7b752), -porttiovi65 (2f58aa5bc).
+
+## LISÄYS 47 klo 22.0x (28.10.): KK 21.5x v105-vastaus (01 katto + tiilirivit OK) → SEURAAVAT TEHTÄVÄT kujaan 01 tässä järjestyksessä
+1) koristevyö havainteen sävyyn: tummempi, himmeämpi sinivihreä, kuviointi pienemmäksi kultaisiksi koukeroiksi (nyt kirkas turkoosi, isot
+   sinikeltaiset kukat vievät katseen seinältä); 2) kannakkeet (V4_konsoli) sinivihreä-kultaisiksi kuten havainteessa (nyt ruskeat palikat);
+3) räystään päätetiilet isommiksi pyöreiksi kiekoiksi tippatiilineen (havainteen lähiräystäs; nyt pienet litteät kaaret);
+4) muodon loput ennen valoa: kiviportaat ovien eteen ja ristikko ikkunoihin.
+→ pari KK:lle kun 1–3 valmiit (havainteen kamera + pelikamera, terävyys tarkistettu: unity.log "pistekerroin 1"). Ovet 65° hyväksytty seuraavaan
+  junaan (PK 21a8962da), ei toimia. Porttiparin uusinta: havainne-editori-20261028-215135/215403 (oikea kuja, tausta-v62 linkitetty).
+- J4-v5 (Codex 6c2cc9edd, GLB SHA 58547e56…ba69 täsmää, posti 20/22 + GLB ja CLAUDE-TOIMITUS.md eivät postissa) → olavinlinna-j4/v5/{models,posti,peli};
+  j4_orm.py AO=1 säilyttää R:n (R ka 160,6); kavely-j4 = v5. Esikatselu ajossa (scratchpad j4v5.log) → pari j4_pari.py:llä v4 205424 | v5 | 1021 → PT.
