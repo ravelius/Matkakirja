@@ -3007,3 +3007,7 @@ Omistaja (KK) sanatarkasti: 'aja ison ipadin simulaattorit mielellään aina vaa
 ## Juoksupeli: dronekamera pehmeämmäksi (omistaja 28.10. 09.05) (28.10.2026 klo 09.06)
 
 Omistaja (KK) sanatarkasti: 'dronekamera heiluu liikaa ylös alas kun se seuraa pelaajaa. pitäisi olla vain pientä liikettä jokaiseen akselin suuntaan ja mahdollisimman pehmeästi, jotta vain tulee se elävän dronekameran tunnelma. eli ylös-alas-vasen-oikea-eteen-taakse ja vaakakierrot ja kaikki akselit pitää liikkua kokoajan ja yhtäaikaa mutta pehmeästi, käännöksissä sitten isompi liike mutta pehmeästi'. PK, seuraavaan vaakavideoon (KK johtaa juoksupeliä).
+
+## Kartta: poltettuja nimiä ei suoristeta; nimet pienemmiksi pallotasolla (omistaja 28.10. 09.16/09.17) (28.10.2026 klo 09.17)
+
+Omistaja (KK) 09.16 sanatarkasti: 'poltettuja nimiä ei tarvitse suoristaa, ainoastaan nämä striiminimet, joita ole poltettu, mutta onko valtamerien nimiä poltettu?' → valtamerinimet ovat poltettuja; uudelleenpoltto peruttu. Nimien koko: 'Kelpaa (Suositus)'. 09.17: 'tässä näkymässä nimet liian isolla, muut ok. pidä oletuksena harmaan kipit poissa näkyvistä.' KS: nimet pienemmiksi kaukaisella pallotasolla; 'harmaan kipit' KK varmistaa omistajalta.
