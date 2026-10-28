@@ -12,7 +12,7 @@ Brysselin pääkaupunkialue on Belgian kolmas alue Flanderin ja Vallonian rinnal
 
 ## Flemish Brabant
 
-Flaamilainen Brabant on provinssi Flanderissa, ja se ympäröi Brysselin pääkaupunkialuetta. Siellä asuu noin 1,2 miljoonaa ihmistä. Provinssi syntyi vuonna 1995, kun entinen Brabantin provinssi jaettiin kolmeen osaan. Pääkaupunki Leuven on yliopistokaupunki: vanha Leuvenin yliopisto perustettiin vuonna 1425, ja sen jatkajayliopistossa KU Leuvenissa opiskelee yli 50 000 ihmistä. Leuvenissa asuu noin 100 000 ihmistä. Leuvenin kaupungintalo rakennettiin vuosina 1439–1463, ja siinä on 236 patsasta. Leuvenissa on myös AB InBev -panimoyhtiön pääkonttori. Muita kaupunkeja ovat Tienen, Zoutleeuw, Halle ja Vilvoorde. Brysselin lentokenttä sijaitsee Zaventemissa tässä provinssissa.
+Flaamilainen Brabant on provinssi Flanderissa, ja se ympäröi Brysselin pääkaupunkialuetta. Siellä asuu noin 1,2 miljoonaa ihmistä. Provinssi syntyi vuonna 1995, kun entinen Brabantin provinssi jaettiin kolmeen osaan. Pääkaupunki Leuven on yliopistokaupunki: vanha Leuvenin yliopisto perustettiin vuonna 1425, ja nykyisessä KU Leuvenissa opiskelee yli 50 000 ihmistä. Leuvenissa asuu noin 100 000 ihmistä. Leuvenin kaupungintalo rakennettiin vuosina 1439–1469, ja siinä on 236 patsasta. Leuvenissa on myös AB InBev -panimoyhtiön pääkonttori. Muita kaupunkeja ovat Tienen, Zoutleeuw, Halle ja Vilvoorde. Brysselin lentokenttä sijaitsee Zaventemissa tässä provinssissa.
 
 ## Hainaut
 
