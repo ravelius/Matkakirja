@@ -651,3 +651,9 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Parit (pistekerroin 1): havainteen kamera havainne-editori-20261028-222711, pelikamera -222457 → KK 22.3x. Hylätyt: v106 (kiekot isot,
   lautasina; tasainen sinivihreä sävyttyi pelissä sini-violetiksi → teksturoitu friisi käyttöön), v107 (vain porrastesti).
 - AUKI: ikkunaristikko (V4_ristikko on jo pelissä; kysytty KK:lta mitä muutetaan); valo vasta muodon jälkeen (omistaja 27.10. 10.56).
+
+## LISÄYS 49 klo 22.4x (28.10.): kuja 01 v109 — KK 22.4x (vyö tummaksi, putket erottumaan, ikkunat ruudukoksi), pari KK:lle
+- aja_v109_pari.zsh: avoimet-v72k = vyö FV 0,55 FS 3 → avoimet_raystas_v2.py (LIPPA 0,5, KULTA 0,6, putket RP 0,07 nostettu RP/2; tumma
+  V4_paattotiili_varjo-nauha poistettu, se peitti putket) → portaat → avoimet_ikkunaristikko.py (UUSI: V4_ristikko-kuva → 6 × 8 rimat +
+  sisäkehys V4_ikkunakehys). juuri-v109m. Parit 223834 (havainne) / 223629 (peli) KK:lle 22.4x.
+- KK:n seuraava: 01:n muoto lukkoon → valo (VS aurinko + leivonta). Huom: ohut vaalea rako kiekkojen ja vyön välissä.
