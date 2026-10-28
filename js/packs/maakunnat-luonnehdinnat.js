@@ -915,7 +915,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ITA: {
     "Piemonte": {
       lyhyt: "Nykyään tunnetaan Barolon ja Barbarescon viinimäistä sekä Bra-kaupungista, josta koko Slow Food -liike sai alkunsa 1980-luvulla.",
-      pitka: "Torino ei ole enää Italian pääkaupunki, mutta kaupunki ei ole koskaan lakannut rakentamasta itseään uudelleen: entiset tehdasalueet ovat nyt gallerioita, ja alppimaisema ympäröi katuja joka suunnasta. Keskustassa kohosi vuosikymmenten ajan keskeneräisenä Mole Antonelliana – aiottu synagoga, jonka torni venyi vuosi vuodelta korkeammaksi kuin kukaan oli alun perin suunnitellut, ja rakennustyöt jatkuivat aina vuoteen 1889 asti. Nykyään sama torni on kaupungin tunnusmerkki ja elokuvamuseo, ja sen huipulta näkee koko Alppien kaaren. Piemontelaisilla on säilynyt sama itsepäinen tarkkuus, jolla Cavour aikoinaan rakensi yhtenäistä Italiaa.",
+      pitka: `Piemonte on Luoteis-Italian alue, jota Alpit ympäröivät kolmelta puolelta. Asukkaita on noin 4,3 miljoonaa, ja pinta-alaltaan alue on Italian toiseksi suurin. Aluekeskus Torino oli Italian ensimmäinen pääkaupunki vuosina 1861–1865. Po-joki saa alkunsa Monviso-vuoren kupeesta. Brassa on Slow Food -liikkeen päämaja, ja liikkeen aloitti paikallinen Carlo Petrini. Alba on tunnettu valkoisista tryffeleistään. Vermutti on keksitty Piemontessa. Langhen ja Monferraton viinitarhamaisema, jossa tehdään Barolo- ja Barbaresco-viinejä, on Unescon maailmanperintökohde vuodesta 2014. Savoijin hallitsijasuvun kuninkaalliset residenssit kuuluvat Unescon maailmanperintöön vuodesta 1997. Torinossa pidettiin talviolympialaiset vuonna 2006.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-piemonte-fa3b365d.jpg',
@@ -945,7 +945,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Lombardia": {
       lyhyt: "Milano on Italian muoti- ja pörssikeskus, mutta koko Po-tasanko tahkoaa maan vilkkainta teollisuutta.",
-      pitka: "Milanon tuomiokirkko on ollut rakennustyömaa jo yli 600 vuotta: Napoleonin aikanaan tilaama julkisivu valmistui jo 1800-luvun alussa, mutta tornit ja huiput nousivat vielä hitaasti vuosikymmenten ajan, ja viimeiset yksityiskohdat valmistuivat vasta 1960-luvulla. Como-järven rannoilla kehrätään yhä silkkiä, perinne joka teki Lombardiasta 1800-luvulla Euroopan silkkiteollisuuden sydämen. Po-joen tasangolla kasvatetaan nykyään valtaosa Italian riisistä, ja moni tuttu risotto lähtee liikkeelle juuri näiltä pelloilta. Lombardialaisilla on maine sitkeästä työn kunnioituksesta, joka näkyy yhtä lailla tehtaissa kuin viljelysmailla.",
+      pitka: `Lombardia on Pohjois-Italian alue, jossa asuu noin 10 miljoonaa ihmistä. Se on asukasluvultaan Italian suurin alue. Aluekeskus Milano on maan talouden keskus. Milanon tuomiokirkon rakentaminen alkoi vuonna 1386, ja viimeinen portti vihittiin käyttöön vasta 1965. Gardajärvi, Italian suurin järvi, ulottuu osin Lombardiaan. Cremonassa Po-joen varrella on valmistettu viuluja 1500-luvulta lähtien, ja Unesco on nimennyt perinteisen viulunteon aineettomaksi kulttuuriperinnöksi vuonna 2012. Mantovassa hallitsi renessanssiaikana Gonzagan suku, ja Mantovan lähellä syntyi runoilija Vergilius. Camonican laakson kalliopiirrokset ovat syntyneet noin 8 000 vuoden aikana. Laakso oli Italian ensimmäinen Unescon maailmanperintökohde vuonna 1979.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-maakunta2-lombardia-v-ba341eda.jpg',
@@ -975,7 +975,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Sicily": {
       lyhyt: "Etna kohoaa savuten saaren yllä, ja sen tulinen tuhka pitää rinteiden appelsiiniviljelmät poikkeuksellisen antoisina.",
-      pitka: "Sisilia liittyi Italian kuningaskuntaan vasta 1860, ja kun isoisä kulki saarella, haava oli yhä tuore: kuusi vuotta aiemmin Palermossa oli puhjennut viikon mittainen kapina uutta hallintoa vastaan, sillä moni sisilialainen koki Roomasta johdetun Italian yhtä vieraaksi kuin aiemman kuningaskunnan. Nykyään saarella eletään toisin: Agrigenton kreikkalaistemppelit ja Taorminan antiikin teatteri, jonka näyttämön takaa Etna kohoaa kuin kulissi, vetävät miljoonia matkailijoita vuosittain. Etnan juurella asuvat ihmiset ovat tottuneet elämään tulivuoren armoilla – kylät on rakennettu uudelleen useaan kertaan laavavirtojen jäljiltä, mutta kukaan ei haluaisi muuttaa pois. Saaren oma kieli ja ruokakulttuuri, arabivaikutteinen kuskus mukaan lukien, muistuttavat siitä, että Sisilia on aina katsonut yhtä paljon merelle kuin manner-Italiaan.",
+      pitka: `Sisilia on Välimeren suurin saari ja Italian alue, jolla on erityinen itsehallinto. Asukkaita on noin 4,8 miljoonaa. Aluekeskus Palermo on saaren suurin kaupunki. Etna-tulivuori on noin 3 400 metriä korkea, ja se on Unescon maailmanperintökohde vuodesta 2013. Agrigenton Temppelien laaksossa on seitsemän doorilaista temppeliä, jotka ovat enimmäkseen 400-luvulta eaa. Concordian temppeli muutettiin kirkoksi 500-luvulla. Monrealen ja Cefalùn tuomiokirkoissa sekä Palermon kuninkaallisessa kappelissa on normannikauden mosaiikkeja. Syrakusa oli saaren tärkein kreikkalainen siirtokunta. Taorminassa on antiikin teatteri, josta näkyy Etna. Sisilia liitettiin yhtenäiseen Italiaan vuonna 1861.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-sicily-3ba0eb8b.jpg',
@@ -1005,7 +1005,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Toscana": {
       lyhyt: "Chianti-mäkien viinitilat ja agriturismot elävät nyt yhtä paljon matkailijoista kuin rypäleistä.",
-      pitka: "Firenze oli Italian pääkaupunki vuosina 1865–1871 – vain pari vuotta ennen isoisän matkaa se luovutti asemansa Roomalle, ja kaupunki oli juuri ehtinyt purkaa keskiaikaisia muurejaan ja rakentaa leveitä bulevardeja hallitusväen tarpeisiin. Jäljet siitä lyhyestä pääkaupunkikaudesta näkyvät yhä katukuvassa, vaikka Firenze tunnetaan nykyään ennen kaikkea renessanssin taideaarteistaan. Uffizin galleriaan jonotetaan tunteja, ja Ponte Vecchion kultasepänliikkeet ovat pysyneet samalla paikalla vuosisatoja. Toscanan maaseudulla elämäntahti on toinen: kylät elävät käsityöläisistä ja viininviljelystä, joka ulottuu kauas Chiantin ulkopuolelle aina Val d'Orcian aaltoileville savikummuille asti.",
+      pitka: `Toscana on Keski-Italian alue, jossa asuu noin 3,7 miljoonaa ihmistä. Aluekeskus on Firenze. Firenzeä hallitsi 1400-luvulta 1700-luvulle Medici-suku, ja renessanssi kukoisti siellä. Firenzen Uffizi-museossa on Botticellin maalaus Venuksen syntymä. Pisan kaltevan tornin rakentaminen alkoi vuonna 1173 ja päättyi 1372. Torni alkoi kallistua jo rakentamisen aikana, koska maaperä oli pehmeää. Sienan Piazza del Campo -aukiolla ajetaan Palio-hevoskilpailu kahdesti vuodessa, 2. heinäkuuta ja 16. elokuuta. Kolmen kierroksen kisa kestää yleensä noin 90 sekuntia. Toscanassa on useita Unescon maailmanperintökohteita, muun muassa Firenzen ja Sienan vanhat keskustat. Chianti on alueen tunnetuimpia viinejä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-toscana-04262477.jpg',
@@ -1035,7 +1035,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Emilia-Romagna": {
       lyhyt: "Parman kinkku ja Modenan balsamico kypsyvät täällä edelleen, mutta Maranellon tehtaalta lähtee nykyään myös Ferrari.",
-      pitka: "Bolognan yliopisto on maailman vanhin: opetusta on annettu keskeytyksettä vuodesta 1088, ja kaupunkia kutsutaan yhä ’oppineeksi Bolognaksi’ punaisen ja lihavan rinnalla. Via Emilian varrella Maranellon lisäksi myös Sant'Agata Bolognesen Lamborghini-tehdas ja Modenan Pagani-verstas tekevät kaistaleesta koko maailman tiiviimmän moottoriurheilun keskittymän – paikalliset kutsuvat sitä yksinkertaisesti Motor Valleyksi. Ruoka ja moottorit eivät ole sattumaa vaan saman tarkkuuden kahta puolta: sama pikkutarkkuus, jolla parmesaania kypsytetään vuosia, näkyy myös koneenosien viimeistelyssä. Emilia-Romagnalaiset ovat ylpeitä sekä pöydästään että konepajoistaan, eivätkä pidä kumpaakaan toistaan tärkeämpänä.",
+      pitka: `Emilia-Romagna on Pohjois-Italian alue, jossa asuu noin 4,5 miljoonaa ihmistä. Aluekeskus Bologna on vuonna 1088 perustetun yliopiston kotikaupunki. Sitä pidetään maailman vanhimpana yhtäjaksoisesti toimineena yliopistona. Bolognan ruokia ovat tortellini ja lasagne. Parmigiano reggiano -juustoa valmistetaan Parman, Reggio Emilian ja Modenan alueilla, ja sen on kypsyttävä vähintään 12 kuukautta. Modenassa tehdään perinteistä balsamietikkaa. Ravennan varhaiskristilliset rakennukset ovat Unescon maailmanperintökohde vuodesta 1996, ja kaupunkia sanotaan mosaiikkien pääkaupungiksi. Alueella valmistetaan autoja, esimerkiksi Ferrareita ja Lamborghineja. Po-joki muodostaa alueen pohjoisrajan. Rimini on tunnettu rantakaupunki.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-emilia-romagna-9bb992c7.jpg',
@@ -1065,7 +1065,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Sardegna": {
       lyhyt: "Ogliastran vuoristokylät ovat yksi maailman harvoista sinisistä vyöhykkeistä, joissa ihmiset elävät poikkeuksellisen pitkään.",
-      pitka: "Sardiniaa hallitsevat maisemassa yli kolmetuhatta nuraghea, ainutlaatuisia pronssikautisia kivitorneja, joita ei löydy mistään muualta maailmasta – parhaiten säilynyt kokonaisuus on Baruminissa, UNESCON maailmanperintökohteessa. Saaren lounaisosassa, Iglesiasin seudulla, oli 1800-luvun jälkipuoliskolla käynnissä toisenlainen mullistus: kasvanut sinkin ja lyijyn kysyntä Euroopassa käynnisti kaivosbuumin, joka toi tuhansia työläisiä aiemmin syrjäisille vuorille. Nykyään vanhat kaivosalueet on muutettu geologis-historialliseksi puistoksi, jossa kävellään samoja tunneleita kuin 1800-luvun kaivosmiehet. Saarella puhutaan yhä omaa sardin kieltä, joka eroaa mantereen italiasta niin paljon, että moni pitää sitä pikemminkin latinan omana sisarkielenä kuin murteena.",
+      pitka: `Sardinia on Välimeren toiseksi suurin saari ja Italian alue. Siellä asuu noin 1,6 miljoonaa ihmistä. Aluekeskus Cagliari on saaren suurin kaupunki. Saarella on säilynyt noin 7 000 nuraghea, pyöreää kivitornilinnaketta. Barumini-kylän Su Nuraxi -kohde on rakennettu 1600-luvulta eaa., ja se on Unescon maailmanperintökohde vuodesta 1997. Sardinian kieli on italiasta erillinen kieli, jota puhutaan saarella. Luoteisessa Alghero-kaupungissa puhutaan katalaanin murretta. Saarella on kolme kansallispuistoa, esimerkiksi La Maddalenan saaristo. Casu marzu on lampaanmaidosta tehty juusto, jossa on kärpäsentoukkia. Saaren korkein kohta, Punta La Marmora Gennargentun vuoristossa, on 1 834 metriä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-sardegna-1afc0031.jpg',
@@ -1095,7 +1095,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Veneto": {
       lyhyt: "Venetsia kelluu turistivirrassa, mutta maaseudulla mäet täyttyvät nykyään prosecco-viinitarhoista.",
-      pitka: "Veneto oli itävaltalaista aluetta vielä 1866, jolloin se liitettiin osaksi uutta Italian kuningaskuntaa kansanäänestyksellä; isoisän saapuessa alueelle siirtymästä oli kulunut vasta muutama vuosi. Yksi jäänne siitä ajasta elää yhä joka baaripöydässä: tapa lisätä paikalliseen viiniin roiske soodavettä syntyi 1800-luvulla, kun alueella liikkuneet itävaltalaiset upseerit pitivät venetolaisia viinejä liian raskaina – tästä kehittyi vuosikymmenten saatossa nykyinen spritz. Verona vetää nykyään rakastavaisia Julian parvekkeelle Shakespearen näytelmän innoittamana, vaikka tarina on täysin kuvitteellinen. Padovan ja Vicenzan ympäristössä seisoo yhä satoja Palladion suunnittelemia huviloita, jotka ovat innoittaneet arkkitehtuuria ympäri maailmaa aina Yhdysvaltain Valkoiseen taloon asti.",
+      pitka: `Veneto on Koillis-Italian alue, jossa asuu noin 4,9 miljoonaa ihmistä. Aluekeskus Venetsia on rakennettu laguunin saarille, ja sen vanhassa keskustassa asuu lähes 50 000 ihmistä. Venetsia ja sen laguuni ovat Unescon maailmanperintökohde vuodesta 1987. Veronassa on roomalaisajalta peräisin oleva Arena-amfiteatteri, jossa on järjestetty oopperafestivaali vuodesta 1913. Padovan yliopisto perustettiin vuonna 1222. Dolomiittien vuoristo ulottuu osin Venetoon, ja se on Unescon maailmanperintökohde vuodesta 2009. Gardajärven itäranta kuuluu Venetoon, ja Veneton Adrianmeren rannikko on noin 200 kilometriä pitkä. Alueen viineihin kuuluvat valkoviinit Prosecco ja Soave.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-veneto-552f7b59.jpg',
@@ -1125,7 +1125,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Apulia": {
       lyhyt: "Alberobellon kartiokattoiset trullit ja loputtomat oliivitarhat tekevät Apuliasta Italian nousevan matkailuosavaltion.",
-      pitka: "Etelämpänä Salenton niemimaalla kaupunkeja hallitsee toisenlainen tyyli kuin Alberobellon trullit: Leccen kellertävä hiekkakivi on veistetty niin runsaaksi barokiksi, että kaupunkia kutsutaan Etelän Firenzeksi. Salento on ainoa paikka Italiassa, jossa seisoo yhden niemimaan kärjellä ja näkee sekä Adrianmeren että Joonianmeren saman päivän aikana. Alueen kansanperinteeseen kuuluu pizzica, alun perin tarantellan puremaa vastaan tanssittu kiihkeä tanssi, joka elää nykyään kesäisin festivaaleilla ympäri Salentoa. Apulialaiset elävät edelleen läheisessä suhteessa mereen ja maahan – kalastajakylät ja loputtomat oliivilehdot vuorottelevat rannikolla kilometri kilometriltä.",
+      pitka: `Apulia on Italian kaakkoisosan alue, ja siellä asuu noin 3,9 miljoonaa ihmistä. Alueen keskus on Bari. Pohjoisessa Adrianmerelle työntyy Gargano-niemeke, ja Salento muodostaa Italian saappaan kannan. Alberobellon kaupungissa on trulloiksi kutsuttuja pyöreitä taloja, joissa on kartiomainen kivikatto. Ne on rakennettu kalkkikivestä ilman laastia. Andrian lähellä on kahdeksankulmainen Castel del Monte -linna. Keisari Fredrik II rakennutti sen vuosina 1240–1250. Apulia tuottaa noin 40 prosenttia Italian oliiviöljystä. Alueen tunnettu pastamuoto on korvan muotoinen orecchiette.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-apulia-b7b3d4c4.jpg',
@@ -1155,7 +1155,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Lazio": {
       lyhyt: "Rooma on Italian pääkaupunki ja hallinnon sydän, ja Vatikaani vetää keskustaan miljoonia kävijöitä vuosittain.",
-      pitka: "Kun isoisä saapui Roomaan, kaupunki oli ollut Italian pääkaupunki vasta pari vuotta: se liitettiin kuningaskuntaan 1870, kun Porta Pian muurinsärkijät avasivat tien paavin valtion viimeiseen linnakkeeseen, ja pääkaupunki siirtyi Firenzestä Roomaan 1871. Vatikaani jäi silti paavin omaksi alueeksi, eikä paavi tunnustanut uutta Italian valtiota vuosikymmeniin. Rooman ulkopuolella Lazion maaseutu, Tuscia, kätkee muun muassa Bolsena-järven ja hiljaisia kyliä, jotka elävät viinistä ja hasselpähkinöistä kaukana turistivirroista. Nykyään suurin osa Lazion asukkaista asuu pääkaupunkiseudulla, mutta maaseudun rauhallisempi tahti on säilynyt lähes koskemattomana.",
+      pitka: `Lazio on Keski-Italian alue Tyrrhenanmeren rannalla, ja siellä asuu noin 5,7 miljoonaa ihmistä. Alueen keskus on Rooma, joka on myös koko Italian pääkaupunki. Alue jakautuu Rooman suurkaupunkiin ja neljään provinssiin: Latinaan, Frosinoneen, Viterboon ja Rietiin. Romassa on Colosseum, joka on Unescon maailmanperintökohde. Tivolin kaupungissa on Villa d'Este, joka on myös Unescon maailmanperintökohde. Ostia Antica oli muinaisen Rooman satama Tiberjoen suulla. Bolsenan, Vicon ja Braccianon järvet ovat tulivuorten kraatereissa. Alueen tunnettuja pastaruokia ovat carbonara ja amatriciana. Niissä käytetään guancialeksi kutsuttua porsaan poskilihaa ja pecorino romano -juustoa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-lazio-66d9ffe3.jpg',
@@ -1185,7 +1185,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Trentino-Alto Adige": {
       lyhyt: "Alueella puhutaan saksaa ja italiaa rinnakkain, ja laaja itsehallinto pitää Dolomiittien hiihtokeskukset kukoistavina.",
-      pitka: "Kun isoisä kulki näillä main, koko alue kuului vielä Itävalta-Unkariin, ei Italiaan – raja kulki tuolloin aivan toisin, ja Trentino sekä Etelä-Tiroli liitettiin Italiaan vasta ensimmäisen maailmansodan jälkeen, Saint-Germainin rauhansopimuksella 1919. Se selittää, miksi saksa on täällä yhä arkikieli eikä vain matkailujuttu. Vuonna 1991 jäätiköltä löytyi Ötzi, yli 5300 vuotta vanha muumioitunut mies, joka oli maannut jäässä juuri nykyisen Italian ja Itävallan rajan tuntumassa – hänet on nähtävissä Bolzanon arkeologisessa museossa. Dolomiittien hammastetut huiput ovat UNESCOn maailmanperintökohde, ja alueen erillinen historia näkyy yhä kylissä, joiden nimet vaihtuvat saksasta italiaksi kunnasta toiseen.",
+      pitka: `Trentino-Etelä-Tirol on Pohjois-Italian vuoristoalue Itävallan ja Sveitsin rajalla, ja siellä asuu noin 1,1 miljoonaa ihmistä. Alue koostuu kahdesta itsehallintoprovinssista, Trentosta ja Bolzanosta. Alueen keskus on Trento. Joillakin seuduilla puhutaan vähemmistökieliä ladinia, mòchenoa ja cimbria. Etelä-Tirolissa eli Bolzanon provinssissa enemmistö puhuu äidinkielenään saksaa. Alue siirtyi Itävallalta Italialle vuonna 1919 Saint-Germain-en-Layen sopimuksella. Suuri osa Dolomiiteista on alueella, ja ne ovat Unescon maailmanperintökohde vuodesta 2009. Dolomiittien korkein huippu Marmolada on 3 343 metriä korkea. Paikallisia ruokia ovat speck eli savustettu kinkku ja canederli-nyytit, jotka tehdään leivästä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-trentino-alto-adige-df1b68e1.jpg',
@@ -1215,7 +1215,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Calabria": {
       lyhyt: "Reggio Calabrian ympärillä kasvatetaan lähes koko maailman bergamottia, jota käytetään muun muassa Earl Grey -teessä.",
-      pitka: "Vuoret peittävät lähes koko Kalabrian: Pollino, Sila ja Aspromonte kohoavat suoraan kahden meren, Joonianmeren ja Tyrrhenanmeren, väliin. Vuoristokylissä kuulee yhä kreikkaa ja albaniaa – Bovesian grecanicit ja arbëreshe-yhteisöt periytyvät vuosisatojen takaisista pakolaisista Bysantista ja Balkanilta. Reggio Calabrian ympäristön kapealla rannikkokaistaleella kasvatetaan lähes koko maailman bergamotti, sitrushedelmä, jonka tuoksuöljyä käytetään sekä Earl Grey -teessä että hienoimmissa hajuvesissä. Silkkiäistoukkien kasvatus ja mulperipuut olivat pitkään monelle vuoristoperheelle tärkein elinkeino, aivan kuten Bysantin ajoista lähtien.",
+      pitka: `Calabria on Italian saappaan kärki, ja siellä asuu noin 1,8 miljoonaa ihmistä. Alueen keskus on Catanzaro, ja suurin kaupunki on Reggio Calabria. Messinan salmi on kapeimmillaan 3,2 kilometriä leveä, ja sen toisella puolella on Sisilia. Reggio Calabrian museossa ovat Riacen pronssiveistokset. Ne ovat kreikkalaisia ja noin vuosilta 460–430 eaa. Aspromonten vuoristo on Italian niemimaan eteläkärjessä. Sila on noin 1 200 metrin korkeudessa oleva ylänkö. Etelärannikolla kasvatetaan bergamottia, sitrushedelmää, jonka maailmantuotannosta noin 90 prosenttia tulee Calabriasta. Spilingan kylä on tunnettu 'nduja-nimisestä mausteisesta lihatahnasta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-calabria-86f93811.jpg',
@@ -1245,7 +1245,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Campania": {
       lyhyt: "Napolista alkanut pizza elää vilkkaana katukeittiöissä ja pizzerioissa savuavan Vesuviuksen juurella.",
-      pitka: "Rooman aikaan Campania felix tarkoitti hedelmällistä maata, ja se pitää yhä paikkansa: alue on Italian ykkönen tomaatin- ja pähkinäntuotannossa, ja rannikolla kimaltavat Capri, Ischia ja Procida. Napoli oli vuonna 1873 jo rautatiekaupunki – ensimmäinen rautatie koko Italian niemimaalla avattiin sinne jo 1839, joten isoisän aikalainen matkustaja pääsi kaupunkiin junalla, ei enää pelkällä laivalla tai kärryillä. Napolin seutu oli tuolloin vasta vähän aikaa liittynyt uuteen kuningaskuntaan Bourbonien Kahden Sisilian kukistuttua 1861. Kreikkalaisten, roomalaisten, espanjalaisten ja ranskalaisten kerrostumat näkyvät yhä kaupunkikuvassa ja tekevät Campaniasta yhden Italian kirjavimmista risteysasemista.",
+      pitka: `Campania on Etelä-Italian alue Tyrrhenanmeren rannalla, ja siellä asuu noin 5,6 miljoonaa ihmistä. Se on Italian kolmanneksi asukasluvultaan suurin alue. Alueen keskus on Napoli, joka syntyi pienenä kreikkalaisena satamana. Vesuvius-tulivuori on 1 281 metriä korkea. Sen purkaus vuonna 79 jKr. hautasi alleen Pompeijin ja Herculaneumin kaupungit. Alueeseen kuuluvat myös Capri, Ischia ja Procida. Amalfin rannikko on Unescon maailmanperintökohde. Paestumissa on hyvin säilyneitä kreikkalaisia temppeleitä. Alueen tuotteita ovat puhvelinmaidosta tehty mozzarella ja San Marzano -tomaatti.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-maakunta2-campania-v-0fea2945.jpg',
@@ -1275,7 +1275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Abruzzo": {
       lyhyt: "Abruzzon kansallispuisto suojelee nykyään Euroopan harvinaisinta karhua, Marsican ruskeakarhua, sukupuutolta.",
-      pitka: "Abruzzon maisema vaihtuu nopeasti: Gran Sasson 2912-metriset huiput kohoavat sisämaassa, ja rannikolla on sekä hiekka- että kivikkorantoja Adrianmerta vasten. Alueen tunnuslause ’forte e gentile’, vahva ja lempeä, kuvaa hyvin keskiaikaisissa kukkulakylissä eläviä ihmisiä. Noin kolmannes Abruzzon pinta-alasta on suojeltua luontoa, ja Apenniinien rinteillä elää vielä muutama kymmenen marsikankarhua, alalajia jota ei tavata missään muualla maailmassa. Karhujen ja kylien rinnakkaiselo näkyy arjessa yhä: paimenet ja karhut ovat jakaneet samat vuoristopolut sukupolvien ajan.",
+      pitka: `Abruzzo on Keski-Italian vuoristoinen alue Adrianmeren rannalla, ja siellä asuu noin 1,3 miljoonaa ihmistä. Alueen keskus on L'Aquila. Lähes kaksi kolmasosaa alueesta on vuoristoa, ja Apenniinit kulkevat sen läpi. Gran Sasson vuori on yli 2 900 metriä korkea. Noin kolmannes alueesta kuuluu kansallis- tai aluepuistoihin. Niissä elää muun muassa ruskeakarhu, susi ja gemssi. Chietin museossa on Capestranon soturi, muinaisitalialainen hautapatsas noin vuosilta 600–550 eaa. Gran Sasson vuoren alla on maanalainen hiukkasfysiikan tutkimuslaboratorio. Pescara on alueen taloudellinen keskus. L'Aquilan ympärillä on pieniä keskiaikaisia kaupunkeja ja linnoja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-abruzzo-2fa822e5.jpg',
@@ -1305,7 +1305,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Basilicata": {
       lyhyt: "Matera muutti luolakaupunkinsa hotelleiksi ja gallerioiksi, ja siitä tuli 2019 Euroopan kulttuuripääkaupunki.",
-      pitka: "Basilicata on Italian saappaan kaarre – vuoret peittävät lähes puolet alueesta, ja maaperä on niin altista sortumille, että kylät on usein rakennettu jyrkkien rinteiden suojaan. Asukkaita kutsutaan lukanialaisiksi, ja perinteinen arpa viggianese -harppu soi yhä paikallisissa juhlissa. Vielä 1870-luvun alussa alue oli toipumassa verisestä jälkiselkkauksesta: vuoden 1861 jälkeen Basilicatassa käytiin todellista sissisotaa, kun Carmine Croccon johtamat rosvojoukot vastustivat asein uutta Italian valtiota ja kirkko sekä syrjäytetyt Bourbonit lietsoivat talonpoikien vastarintaa. Materan luolakaupunki oli vuonna 1873 vielä tavallinen, köyhä asuinalue – ei matkailunähtävyys, joksi siitä tuli vasta vuosikymmeniä myöhemmin.",
+      pitka: `Basilicata on Etelä-Italian vuoristoinen alue, ja siellä asuu noin 530 000 ihmistä. Alueen keskus on Potenza. Noin 47 prosenttia alueesta on vuoristoa. Pohjoisessa on Monte Vulture, sammunut tulivuori. Alueella on öljykenttiä, joiden tuotanto alkoi 1990-luvulla. Alueella on sekä Tyrrhenanmeren että Joonianmeren rannikko. Maratea on Tyrrhenanmeren puolen tärkein lomakaupunki. Matera on kaupunki, jonka vanhassa osassa, jota kutsutaan nimellä Sassi, on kallioon louhittuja asuntoja ja kirkkoja. Sassi on Unescon maailmanperintökohde vuodesta 1993. Matera oli Euroopan kulttuuripääkaupunki vuonna 2019. Perinteinen ruoka on köyhien keittiötä, jossa käytetään sianlihaa, lampaanlihaa ja palkokasveja. Alueella tehdään myös Aglianico del Vulture -viiniä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-maakunta2-basilicata-v-e0ebc956.jpg',
@@ -1335,7 +1335,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Marche": {
       lyhyt: "Adrianmeren rannikkokaupungit valmistavat kenkiä ja huonekaluja, jotka päätyvät kauppoihin ympäri Eurooppaa.",
-      pitka: "Marchen kukkulat kohoavat rannikolta sisämaahan, ja seudulta ovat kotoisin niin Raffael Urbinosta, säveltäjä Gioachino Rossini kuin kasvatusajattelija Maria Montessorikin. Ancona, Pesaro ja Urbino olivat keskiajalla ja renessanssissa vilkkaita kauppa- ja taidekeskuksia, ja tuo perintö näkyy yhä kaupunkien kaduilla. Fabrianon kaupunki on valmistanut vesileimattua paperia 1200-luvulta lähtien, ja sen paperitehtaat toimittavat yhä arvopapereihin ja seteleihinkin käytettyä paperia ympäri maailman. Ascoli Picenon täytetyt oliivit, olive all'ascolana, ovat puolestaan Marchen tunnetuin ruokaperinne, ja niitä paistetaan yhä samalla reseptillä toreilla ja ravintoloissa.",
+      pitka: `Marche on Keski-Italian alue Adrianmeren rannalla, ja siellä asuu noin 1,5 miljoonaa ihmistä. Alueen pääkaupunki ja suurin kaupunki on Ancona, joka on tärkeä satamakaupunki. Suurin osa alueesta on vuoristoa tai kukkulamaata, ja rantaviivaa on 173 kilometriä. Korkein huippu Monte Vettore on 2 476 metriä. Urbinon kaupungissa syntyi taidemaalari Raffaello. Urbinon historiallinen keskusta on Unescon maailmanperintökohde vuodesta 1998. Castelfidardon kaupunki tunnetaan harmonikkojen valmistuksesta. Genga-kunnassa ovat Frasassin luolat, joiden suurin sali on noin 180 metriä pitkä ja lähes 200 metriä korkea. Vuoden 2016 maanjäristykset ja syyskuun 2022 tulva koettelivat aluetta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-marche-ef9801c7.jpg',
@@ -1365,7 +1365,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Umbria": {
       lyhyt: "Assisin pyhiinvaeltajavirta jatkuu yhä, ja vihreäksi sydämeksi kutsuttu Umbria on Keski-Italian ainoa maakunta ilman merenrantaa.",
-      pitka: "Umbrian vihreitä laaksoja halkoo Tiber-joki aina Trasimeno-järveltä Marmore-putouksille asti, ja siksi seutua kutsutaan Italian vihreäksi sydämeksi. Perugia, Orvieto, Spoleto ja Gubbio ovat säilyttäneet keskiaikaisen ilmeensä lähes koskemattomana kukkuloillaan. Gubbion kukkuloilta löydettiin 1400-luvulla seitsemän pronssitaulua, Eugubine-taulut, joihin on kaiverrettu pisin säilynyt teksti muinaisella umbrialla – ne ovat yhä kaupungin museon pääaarre. Norcian kaupunki puolestaan on antanut koko Italian kielelle sanan norcino, sianlihan käsittelyn mestari, sillä seudun makkarat ja tryffelit tunnetaan koko maassa.",
+      pitka: `Umbria on Keski-Italian sisämaa-alue, jolla ei ole rannikkoa eikä yhteistä rajaa toisen valtion kanssa. Alueella asuu noin 850 000 ihmistä, ja pääkaupunki on Perugia. Tiber virtaa alueen läpi. Assisin kaupunkiin liittyy pyhimys Franciscus Assisilainen, ja kaupunki on Unescon maailmanperintökohde. Gubbion kaupungissa järjestetään joka vuosi 15. toukokuuta Ceri-kisa, jossa joukkueet kantavat suuria puurakennelmia vuorelle. Perinteen sanotaan alkaneen vuonna 1160. Spoletossa pidetään kesällä Festival dei Due Mondi -taidefestivaali. Perugiassa järjestetään heinäkuussa Umbria Jazz -festivaali, joka alkoi vuonna 1973. Valnerinan laaksossa kasvaa mustia tryffeleitä, jotka ovat alueen tunnettu tuote.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-umbria-6884a111.jpg',
@@ -1395,7 +1395,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Friuli-Venezia Giulia": {
       lyhyt: "Triesten satama toimii Euroopan suurimpana kahvin tuontiväylänä, vaikka alue ei kasvata papua grammaakaan.",
-      pitka: "Alppien ja Adrianmeren välissä kuullaan yhä neljää kieltä: friulia, venetoa, sloveenia ja saksaa, ja jokainen kertoo omaa versiotaan seudun historiasta. Vuonna 1873 alue oli vielä kahtia jaettu: Udinen seutu Friulissa oli liittynyt Italiaan vasta 1866, mutta Triest ja Gorizia kuuluivat yhä Itävalta-Unkarin keisarikuntaan eivätkä liittyneet Italiaan ennen vuotta 1918. Matkustaessaan Udinesta Triestiin isoisä olisi siis joutunut ylittämään oikean valtakunnanrajan, vaikka nykykartalla molemmat ovat samaa Italiaa. Triest oli tuolloin Habsburgien tärkein satama, ja sen kautta virtasi Keski-Eurooppaan enemmän tavaraa kuin mistään muualta.",
+      pitka: `Friuli-Venezia Giulia on Koillis-Italian alue, jonka pohjoisrajalla on Itävalta ja itärajalla Slovenia. Alueella asuu noin 1,2 miljoonaa ihmistä. Pääkaupunki Trieste on Adrianmeren Triesten lahden rannalla. Alueen tunnustettuja kieliä ovat italian lisäksi friuli, sloveeni ja saksa. Pohjoisessa on vuoristoa, ja alueen korkein huippu on Monte Coglians, 2 780 metriä. Cividale del Friulin kaupunki oli roomalaisaikaan nimeltään Forum Iulii, josta Friulin nimi tulee. Aquileian kaupunki perustettiin vuonna 181 eaa. San Danielen seutu tunnetaan kinkustaan. Triesten Miramaren linnan rakennutti arkkiherttua Maximilian, josta tuli myöhemmin Meksikon keisari.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-maakunta2-friuli-venezia-giulia-v-8a67e4eb.jpg',
@@ -1425,7 +1425,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Liguria": {
       lyhyt: "Cinque Termen kylät ripustautuvat kallioihin turistien iloksi, ja Genovan satamasta lähtee pesto maailmalle.",
-      pitka: "Liguria on kapea rantakaistale vuorten ja meren välissä, ja koko alueen elämä on aina kietoutunut merenkulkuun. Genova oli 1870-luvun alussa vielä tuoreessa muistissa Italian yhdistymisen näyttämönä: Giuseppe Garibaldi lähti Tuhannen retkelleen Quarton kalliolta Genovan liepeiltä toukokuussa 1860, ja ligurialaiset Giuseppe Mazzini ja Goffredo Mameli olivat molemmat keskeisiä kansallisen herätyksen hahmoja. Satama oli tuohon aikaan jo kasvamassa Pohjois-Italian teollistumisen tärkeimmäksi tuontiväyläksi, ja juuri sellaisena isoisä sen matkallaan näki. Rannikon kalastajakylät elivät samaan aikaan yhä vaatimattomasti merestä, kaukana siitä turistikohteesta, joksi Cinque Terre myöhemmin muuttui.",
+      pitka: `Liguria on Luoteis-Italian kapea alue Ligurianmeren rannalla. Asukkaita on noin 1,5 miljoonaa, ja pääkaupunki on Genova. Rannikko kaartuu Ventimigliasta La Speziaan, ja sitä on noin 350 kilometriä. Alueen korkein kohta on Monte Saccarello, 2 201 metriä. Genovan satama on Italian vilkkain. Genovassa syntyi noin vuonna 1451 tutkimusmatkailija Kristoffer Kolumbus. Genovan Rolli-palatsien järjestelmä on Unescon maailmanperintökohde vuodesta 2006. Cinque Terren viisi kylää on myös maailmanperintökohde, vuodesta 1997. Kylien rinteet on muotoiltu terasseiksi, joilla kasvatetaan viiniä ja oliiveja. Basilikakastike pesto on kotoisin Liguriasta. Sanremon kaupungissa on järjestetty musiikkifestivaali vuodesta 1951.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-liguria-b0b61da0.jpg',
@@ -1455,7 +1455,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Molise": {
       lyhyt: "Toiseksi pienin maakunta tyhjenee hitaasti nuorista, mutta se on ylpeä ’Molisea ei ole olemassa’ -vitsistään.",
-      pitka: "Molise on vuoristoista seutua, jossa 55 prosenttia maasta on vuorten peitossa ja rannikkoa on vain reilut 30 kilometriä. Agnonen kaupungissa jouluaattona kuljetettava tulisoihtukulkue, 'Ndocciata, juontaa esikristillisiin perinteisiin, ja seudulla asuu yhä pieni kroaatteja puhuva vähemmistö, jonka juuret ovat 1400-luvun pakolaisissa Balkanilta. Samassa Agnonessa toimii Marinellin kellovalimo, joka on valanut kirkonkelloja jo yli tuhat vuotta ja jolle paavi on myöntänyt oikeuden käyttää Vatikaanin vaakunaa. Paimentolaisuus – lampaiden vuotuinen siirto vuorilta rannikon laitumille ja takaisin – oli pitkään köyhien vuoristokylien tärkein elinkeino, ja samoja polkuja käytetään monin paikoin yhä nykyään.",
+      pitka: `Molise on Etelä-Italian vuoristoinen alue, jossa asuu noin 290 000 ihmistä. Pinta-alaltaan se on Italian toiseksi pienin alue Aostanlaakson jälkeen. Molise erotettiin Abruzzosta omaksi alueekseen vuonna 1963. Pääkaupunki on Campobasso. Adrianmeren hiekkarantaa on vain 35 kilometriä, ja noin 55 prosenttia maasta on vuoristoa. Termoli on rannikon kaupunki, jossa on keskiaikainen linna ja elokuussa kalafestivaali. Isernian La Pineta -kaivauspaikalla on jälkiä ihmisistä jopa 700 000 vuoden takaa. Pietrabbondanten kylän arkeologisella alueella on teatteri ja temppeli. Alueella on kroatiankielinen vähemmistö, jonka puhuma kroatian murre on säilynyt vuosisatoja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-molise-779637a1.jpg',
@@ -1485,7 +1485,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Valle d'Aosta": {
       lyhyt: "Kaksikielinen ranskaa ja italiaa puhuva vuoristoalue elää nykyään Mont Blancin hiihtomatkailusta ja laajasta itsehallinnostaan.",
-      pitka: "Mont Blanc kohoaa Valle d'Aostan rajalla Euroopan unionin korkeimpana huippuna, ja laakson pohjalla asuu kaksikielinen väestö, joka puhuu italian ja ranskan lisäksi omaa frankoprovensaalista murrettaan. Alppikiipeily oli vuonna 1873 aivan uutta intoa täynnä: vain kahdeksan vuotta aiemmin englantilainen Edward Whymper oli tehnyt ensimmäisen nousun Matterhornille, joka kohoaa laakson länsirajalla – juuri sellaisiin huippuihin viktoriaanisen ajan seikkailijat, isoisä mukaan lukien, alkoivat suunnata. Valle d'Aosta oli liittynyt Sardinian kuningaskuntaan jo kauan ennen varsinaista Italian yhdistymistä, joten se oli tuolloin yksi valtakunnan vanhimmista osista. Vuoristokylät elivät siihen aikaan karjanhoidosta ja kausittaisesta muuttoliikkeestä laaksoon ja pois, aivan toisenlaista elämää kuin nykypäivän matkailuvilske.",
+      pitka: `Aostanlaakso on Italian luoteiskulmassa Alpeilla sijaitseva alue, joka rajoittuu Ranskaan ja Sveitsiin. Se on pinta-alaltaan, asukasluvultaan ja asukastiheydeltään Italian pienin alue, ja siellä asuu noin 120 000 ihmistä. Pääkaupunki Aosta perustettiin roomalaisten siirtokuntana vuonna 25 eaa. Aostan roomalaisessa teatterissa oli tilaa jopa 4 000 katsojalle. Mont Blanc on Ranskan rajalla, ja sen huippu on noin 4 800 metrin korkeudessa. Ranska ja italia ovat virallisia kieliä, ja myös arpitaani eli frankoprovensaali on tunnustettu. Fontina on alueella valmistettava juusto. Fénisin linna on 1200-luvulta. Alueella on ollut itsehallinnollinen erityisasema vuodesta 1948.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-valle-d-aosta-51fe910f.jpg',
