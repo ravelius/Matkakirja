@@ -506,6 +506,6 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - AUKI: taustapalojen (lähimmät kujakatot) päätetiilet (leivottuja: uusi primitiivi ilman UV1:tä omaan ryhmäänsä, pohjaväri 0,999 – tarkista),
   räystään ulkonema ja friisivyön korkeus/kirkkaus (kohta 3). PK: harjakoristeet ovat jo 3D (koristeet.json), päätetiilistä ei Codex-tilausta.
 - 14.0x: taustapalojen kokeilu v96 (aja_v96_pari.zsh, yksikerros-v88, NS=8 SIVUT=0 YMAX=5 NAUHA=0, +10–15 % kolmioita/pala; pari 135604): EI näkyvää
-  muutosta 01:ssä → EI käyttöön. Kujan 01 lähimmät katot ovat KUJAPALOJA (kk-tausta-kuja-0-3/1-3, aukio-1-1), joissa ei ole V4_palatsi_katto- eikä
-  V4_paattotiili-materiaalia (paatetiilet.py: OHI). SEURAAVA: kujapalojen räystäsreuna c1_raystaat2.py:n särmähaulla (kaltevan kattopinnan alin särmä)
-  → paatetiilet-kiekot sille; selvitä samalla, miksi kujapalojen katot eivät saaneet palatsi_pinnat-kattoa (oma atlas, kuja_pala).
+  muutosta 01:ssä → EI käyttöön. Sonnet (14.1x): kujan 01 MOLEMMAT lähimmät rakennukset ovat avoimia huoneita (peli peilaa x:n; vasen = juhlasali-kaista4,
+  oikea = juhlasali), joten ne saivat päätetiilet jo v95m:ssä; taustapalat on tyhjennetty niiden kohdalta (korvaa_kk). Kohta 1 avoimille VALMIS.
+  SEURAAVA: kohta 3 (räystään ulkonema + friisivyön korkeus ja kirkkaus räystään alla) KK:n palautteen jälkeen.
