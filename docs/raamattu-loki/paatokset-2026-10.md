@@ -2975,3 +2975,7 @@ Omistaja kysyi: "Mitä muuta kannattaisi tilata 2d pintana?" KK:n kortti "Tilata
 ## OPPI: KUVAPARI TARKISTETAAN KOKONAAN OMISTAJAN SANOJA VASTEN (KK 27.10.2026 klo 22.00) (27.10.2026 klo 22.02)
 
 KK hyväksyi reunakiviparin 195504 klo 19.59, ja myös PT katsoi sen, mutta kumpikaan ei huomannut muurin yläreunan tasaista tekstuuritonta kaistaa eikä pilarien beigejä kulmakiviä (ristiriidassa omistajan 16.03-sanojen kanssa); omistaja löysi ne klo 20.06. Jatkossa KK ja PT vertaavat koko kuvaa omistajan aiempiin sanoihin, eivät vain kysyttyä kohtaa.
+
+## Maailmanperintö: pienet violetit pisteet (omistaja 28.10. 07.33) (28.10.2026 klo 07.33)
+
+Omistaja (KK:n kortti) sanatarkasti: 'Hehku liian iso. Voi olla violetilla pieniä pisteitä jotka hehkuvat kevyesti'. Nimet ennallaan. Järvirannat ja lähizoom: Kelpaa, junassa 213. Parkour: hyvä suunta, jatka. Huohotusten poisto: Ei nyt. Iso hehku ei lähde junassa 213; KS korjaa, pari KK:lle.
