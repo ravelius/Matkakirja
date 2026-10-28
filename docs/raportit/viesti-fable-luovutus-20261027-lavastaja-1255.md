@@ -525,3 +525,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - KÄYNNISSÄ (16.13): `zsh K/tyokalut/aja_v101_pari.zsh` (~40 min; jatko keskeytyksestä: aja uudelleen): aja_ketju_v85r.zsh (= v85, REUNA_H 0,25, URA_L 0,012,
   URA_VIISTE 1) → yksikerros-v85r → v5-pinnat suoraan (SK 1, LKU 1, LKV 1,8) + palatsipinnat (katto+friisi) + alusta → yksikerros-v93, juuri-v101m, pari REF 65b736b1b.
   Sitten lähikuvat (lahi.py 091657:n rajauksin) + 05:n reunakivirajaus → KK.
+- 16.5x: KK 16.3x tarkennus (kampa = liian tiheät saumat) → REUNA_JAKSO 0,7 → 1,4, HAJ 0,4, urat ohuina ennallaan (URA_L 0,006, URA_VIISTE 0), REUNA_H 0,25;
+  kujakivi_pinnat.py raja(k) nyt REUNA_JAKSO/REUNA_HAJ-muuttujista (varmuuskopio .ennen-jakso). v101 valmis 16.46 (ei virheitä). VS REF 8885a9f54 (kivijalka sävy kivittäin,
+  lattia lämpimämpi, reunakiven etupinta vaalea, ReunusRaja 1,4/0,4). Pari havainne-editori-20261028-164951 + lähikuvat + 05/kk-reunakivi-ennen-jalkeen-2x.png → KK 16.5x.
+  Lähikuvatyökalu nyt K/tyokalut/lahi.py (python3 lahi.py <vanha-pari 091657> <uusi-pari>). SEURAAVA: KK:n vastaus, sitten kohta 3 (räystäs + friisivyö).
