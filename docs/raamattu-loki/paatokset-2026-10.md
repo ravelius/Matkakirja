@@ -3043,3 +3043,7 @@ Omistaja (KK, KS:n kohdemerkkipari) sanatarkasti: 'big ben yms. ei ole oikealla 
 ## Suurennuslasi: väri vain otsikkoriville, Kartta valmiiksi valittuna (omistaja 28.10. 10.23) (28.10.2026 klo 10.24)
 
 Omistaja (KK, NUI:n parit) sanatarkasti: 'värit ok, mutta jätä väri pelkästään otsikkorivin taakse' + 'karttavalikko on valmiiksi valittuna lähizoomilla kun pelaaja painaa suurennuslasia, mutta se ei aukea suoraan automaattisesti vaan vaatii pelaajan klikkausta suurennuslasista'. NUI; koskee myös web PR 5420:tä.
+
+## Kartta: perintönimet kelpaa; sama zoom-katto kaikille kartan elementeille (omistaja 28.10. 10.27) (28.10.2026 klo 10.28)
+
+Omistaja (KK, KS:n perintönimipari) sanatarkasti: 'kelpaa. mutta tee kaikille kartan elementeille sama zoom katto kuin louvre yms. eli kuumailmapallot, kohdekaupunkien pisteet, pelaajan nappi yms.' Perintönimierä runkoon; kohdemerkkierä (10.18 + 10.27) KS:lle yhteen pariin; pieni iPad odottaa sen hyväksyntää.
