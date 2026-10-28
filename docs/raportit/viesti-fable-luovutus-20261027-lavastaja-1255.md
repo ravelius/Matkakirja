@@ -642,3 +642,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   junaan (PK 21a8962da), ei toimia. Porttiparin uusinta: havainne-editori-20261028-215135/215403 (oikea kuja, tausta-v62 linkitetty).
 - J4-v5 (Codex 6c2cc9edd, GLB SHA 58547e56…ba69 täsmää, posti 20/22 + GLB ja CLAUDE-TOIMITUS.md eivät postissa) → olavinlinna-j4/v5/{models,posti,peli};
   j4_orm.py AO=1 säilyttää R:n (R ka 160,6); kavely-j4 = v5. Esikatselu ajossa (scratchpad j4v5.log) → pari j4_pari.py:llä v4 205424 | v5 | 1021 → PT.
+
+## LISÄYS 48 klo 22.3x (28.10.): kuja 01 v108 — KK:n 47/1–2 + 22.2x-korjaukset ja portaat, pari KK:lle (odottaa vastausta)
+- Ketju tyokalut/aja_v108_pari.zsh (kielletty-rakennukset): avoimet-v68k → v71k = avoimet_raystas_havainne.py VAIHEET=1 (vyö: friisi-v01 × 0,8,
+  UV × 2, wrapT repeat) → avoimet_raystas_v2.py (UUSI: lähin räystäsrivi putkitiilinä 'Katto lasitiili' -lipan yli, pystykiekko jokaisen
+  kansitiilirivin päähän u ≡ 0,205 mod 0,25 Codexin kattokuvan mukaan, tippatiilet väleissä; kannakkeet 40/70/75 %, friisipinta + kultainen
+  riippu) → avoimet_ovi_portaat.py (UUSI: alempi askelma + poskikivet ovien eteen, V4_kivireunus). Apuri avoimet_glb.py. juuri-v108m.
+- Parit (pistekerroin 1): havainteen kamera havainne-editori-20261028-222711, pelikamera -222457 → KK 22.3x. Hylätyt: v106 (kiekot isot,
+  lautasina; tasainen sinivihreä sävyttyi pelissä sini-violetiksi → teksturoitu friisi käyttöön), v107 (vain porrastesti).
+- AUKI: ikkunaristikko (V4_ristikko on jo pelissä; kysytty KK:lta mitä muutetaan); valo vasta muodon jälkeen (omistaja 27.10. 10.56).
