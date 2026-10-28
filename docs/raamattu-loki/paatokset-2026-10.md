@@ -3051,3 +3051,7 @@ Omistaja (KK, KS:n perintönimipari) sanatarkasti: 'kelpaa. mutta tee kaikille k
 ## Suurennuslasi ja välilehtivärit hyväksytty; puistojen nimet Vedet ja vuoret -kytkimeen (omistaja 28.10. 10.37) (28.10.2026 klo 10.37)
 
 Omistaja (KK:n kortti, NUI:n parit): välilehtien värit vain välilehdissä 'Kelpaa'; suurennuslasi (aukeaa vain napautuksesta, lähikartalla Kartta valmiiksi) 'Kelpaa'; puistojen ja metsien nimet Vedet ja vuoret -kytkimeen 'Kyllä' (kaksi nimikytkintä poistavat kaikki nimet; Puistot ja metsät vain alueet). Värit + lasi runkoon; nimijaon uusinta KK:lle.
+
+## Kartta: kohdemerkkierä hyväksytty, Louvre väistää pelaajan nappia (omistaja 28.10. 11.51) (28.10.2026 klo 11.52)
+
+Omistaja (KK, KS:n pari) sanatarkasti: 'jos pelaaja on kohdekaupungissa jossa samassa sijainnissa myös Louvre tms. niin siirrä silloin louvre vähän sivuun, jotta ei mene nappulan kanssa päällekkäin. muuten ok'. Vähimmäiskoko: 'Ei, kelpaa näin' (nappi ja pisteet saavat pienentyä pallolla kartan mukana). Kohdemerkkierä junaan 213; NS:lle lupa pienen iPadin käännökseen; väistö KS:n seuraava pieni erä.
