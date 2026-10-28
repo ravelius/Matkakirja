@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (213)",
+   "paiva": "2026-10-28",
+   "teksti": "Lähikartta latautuu selvästi nopeammin, ja kohdekaupungin tarkka kartta on valmiina perillä. Kartta on kevyempi, nähtävyydet näkyvät piirroskuvina ja nimet liukuvat vierittäessä. Maailmanperintökohteet ovat pieniä violetteja kipinöitä, ja merkit pysyvät paikoillaan."
+  },
+  {
    "versio": "1.1 (212)",
    "paiva": "2026-10-27",
    "teksti": "Kartta näyttää nyt koko maapallon, ja maailmanperintökohteilla on omat merkit sekä tietokortit valokuvineen ja havainnekuvineen. Kartalla on uusi Kartta-välilehti, ja nostojen alla tausta sumenee. Juoksupelin kivipinnat kiiltävät, reunakivet uusittiin ja huohotus poistui."
