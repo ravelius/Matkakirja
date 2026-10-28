@@ -3076,3 +3076,7 @@ jutun; sijainnit SK:lta Wikidatasta; NUI vetää.
 ## KARTTA: KOHDEMAAN RAJA JA KOHDEMERKIN VÄISTÖ (omistaja 28.10. klo 12.35, KK:n välitys) (28.10.2026 klo 12.35)
 
 Kohdemaan rajan ohennus (KS:n parit 2b636c158): omistaja "Kelpaa (suositus)" → KS vie NS:lle. Kohdemerkin väistö, sanatarkasti: "ei voi siirtyä meren päälle" (Ranskan näkymässä Big Ben siirtyi rannikolle meren päälle) ja "louvren yms. siirtomatka voi olla myös pienempi, niin että se on hyvin lähellä nappulaa" → KS korjaa: siirto aina maalle, ei kuvakortin alle, pienenä ja vain sen verran, ettei merkki ole nappulan alla; uusi pari KK:lle ennen NS:ää.
+
+## KARTTA: KOHDEMERKIN VÄISTÖ LIMITTÄIN (omistaja 28.10. klo 12.36, KK:n välitys; korvaa 12.35:n meriehdon) (28.10.2026 klo 12.36)
+
+Sanatarkasti: "silloin ei haittaa vaikka menisikin vähän meren päälle, koska tajuaa että on todennäköisesti nappulan kanssa samassa kohtaa. ne voisivat itseasiassa olla ihan vähän limittäin, niin se olisi selkeämpi mieltää" → KS: pieni siirto, merkki ja pelaajan nappula vähän limittäin, ei kuvakortin alle; pari KK:lle ennen NS:ää.
