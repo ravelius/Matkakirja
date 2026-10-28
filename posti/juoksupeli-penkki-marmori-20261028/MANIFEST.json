@@ -1,0 +1,178 @@
+{
+  "createdAt": "2026-10-28T05:58:14.252653+00:00",
+  "sourceSHA256": "7938672f3ad67a3c7bc89affb2dd4e01f0a858720a7509d5ca773021d0aa6dc1",
+  "materials": [
+    {
+      "variant": 1,
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "textures/v01/marmori-v01-albedo.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "f60b54c0ed8266058e7daa26fc1f0b77f43ef74c1fe81dcc8f9c669667adb150",
+          "colorSpace": "sRGB"
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "textures/v01/marmori-v01-normal-opengl.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "fdde1d0f0468c83963fb7d208b2588accf7e85c971593086a24f5940f9d97394",
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "roughness",
+          "path": "textures/v01/marmori-v01-roughness.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "28bd9c5387090a36f904bb072f23445dad505b051892f36c820e1dc3a2969ed1",
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "metallicRoughness",
+          "path": "textures/v01/marmori-v01-metallicRoughness.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "2dc1a0887289ceb12a1408512c6ba12da93668e853f6529e551ca1783403e966",
+          "colorSpace": "linear"
+        }
+      ],
+      "periodicAlbedoError": 0.0
+    },
+    {
+      "variant": 2,
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "textures/v02/marmori-v02-albedo.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "f141875fbdd81ba96bdd0feca129d129122a57647b45a416617d13a6b4f99fc0",
+          "colorSpace": "sRGB"
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "textures/v02/marmori-v02-normal-opengl.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "fdde1d0f0468c83963fb7d208b2588accf7e85c971593086a24f5940f9d97394",
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "roughness",
+          "path": "textures/v02/marmori-v02-roughness.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "28bd9c5387090a36f904bb072f23445dad505b051892f36c820e1dc3a2969ed1",
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "metallicRoughness",
+          "path": "textures/v02/marmori-v02-metallicRoughness.png",
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "dimensionsM": [
+            2,
+            2
+          ],
+          "sha256": "2dc1a0887289ceb12a1408512c6ba12da93668e853f6529e551ca1783403e966",
+          "colorSpace": "linear"
+        }
+      ],
+      "periodicAlbedoError": 0.0
+    }
+  ],
+  "models": [
+    {
+      "variant": 1,
+      "path": "models/v01/hyppy-penkki.glb",
+      "sha256": "6f3200e049f1d6e11b4d77adff6efe40958ade1d6663690e7be234990d574474",
+      "bytes": 733388,
+      "geometryExact": true,
+      "otherMaterialsExact": true,
+      "dimensionsM": [
+        3.4,
+        0.54,
+        0.706
+      ],
+      "triangles": 244,
+      "uvDensityPxPerM": 512,
+      "uvAreaRatioMinMax": [
+        1.0,
+        1.0000001192092896
+      ]
+    },
+    {
+      "variant": 2,
+      "path": "models/v02/hyppy-penkki.glb",
+      "sha256": "799e79d25999bb83c2b3770c5d89b413e66048e7af9fc2160a06545d46cd3955",
+      "bytes": 758496,
+      "geometryExact": true,
+      "otherMaterialsExact": true,
+      "dimensionsM": [
+        3.4,
+        0.54,
+        0.706
+      ],
+      "triangles": 244,
+      "uvDensityPxPerM": 512,
+      "uvAreaRatioMinMax": [
+        1.0,
+        1.0000001192092896
+      ]
+    }
+  ],
+  "imagegenCalls": 2,
+  "tripoCalls": 0,
+  "credits": 0,
+  "qa": "PASS_GEOMETRY_MATERIAL_READBACK_UV_METRIC",
+  "gameIntegrated": false,
+  "ownerAccepted": false,
+  "visualReview": "PASS_AFTER_REPEAT_SAMPLER_CORRECTION; v01 recommended, v02 alternative; no runtime acceptance",
+  "imagegenMoneyCost": "NOT_REPORTED"
+}
