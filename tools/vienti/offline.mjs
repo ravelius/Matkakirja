@@ -36,6 +36,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
+import { avainOsoitteesta, luettelonEtuliitteet, luettelonIka } from './ampariluettelo.mjs';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 const KOOT_TIEDOSTO = join(TAMA, 'offline-koot.json');
@@ -796,7 +797,28 @@ function kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut, alueidenManner = 
 
 /* ------------------------------------------------- kokojen päivitys (verkko) */
 
+/*
+ * Ämpäriluettelo (Julkaisija 28.10.2026, R2-kulut): --paivita-koot ja --paivita-kerrokset lukevat laattasarjojen
+ * koot paikallisesta luettelosta (tools/vienti/ampariluettelo.mjs) HEAD-pyyntöjen sijaan; luettelon etuliitteessä
+ * puuttuva avain = puuttuu (0), kuten HEAD:n 404. --head tai AMPARI_LUETTELO=pois: HEAD-pyynnöt kuten ennen.
+ * Rakenna luettelo uudelleen (rakenna-luettelo.zsh), jos sarjoja on viety luettelon rakentamisen jälkeen muuten
+ * kuin vie-paketti.sh:lla.
+ */
+let TUNNETUT = null; let TUNNETUT_ETU = [];
+export async function kaytaLuetteloa(osoitepohjat) {
+  TUNNETUT_ETU = osoitepohjat.map((u) => avainOsoitteesta(u.split('{')[0])).filter(Boolean);
+  TUNNETUT = await luettelonEtuliitteet(TUNNETUT_ETU);
+  return TUNNETUT;
+}
+function luettelosta(osoite) {
+  const a = TUNNETUT && avainOsoitteesta(osoite);
+  if (!a || !TUNNETUT_ETU.some((e) => a.startsWith(e))) return undefined;
+  return TUNNETUT.get(a) ?? 0;
+}
+
 async function koko(osoite) {
+  const l = luettelosta(osoite);
+  if (l !== undefined) return l > 0 ? l : null;
   try {
     const r = await fetch(osoite, { method: 'HEAD', redirect: 'follow' });
     const n = Number(r.headers.get('content-length'));
@@ -902,10 +924,10 @@ async function maastoMaista(vienti, available, n = 64) {
 
 /** HEAD-koko (0 = puuttuu: läpinäkyvä kerma, meri). Oma yhteysallas: kymmeniätuhansia pyyntöjä. */
 const hakuAllas = new https.Agent({ keepAlive: true, maxSockets: 32 });
-const headKoko = (u) => new Promise((ok) => {
+const headKoko = (u) => (luettelosta(u) !== undefined ? Promise.resolve(luettelosta(u)) : new Promise((ok) => {
   const r = https.request(u, { method: 'HEAD', agent: hakuAllas }, (v) => { v.resume(); ok(v.statusCode === 200 ? Number(v.headers['content-length']) || 0 : 0); });
   r.on('error', () => ok(null)); r.setTimeout(20000, () => r.destroy()); r.end();
-});
+}));
 async function mittaaKaikki(osoitteet) {
   let i = 0; let tavut = 0; let levy = 0; let virheet = 0;
   await Promise.all(Array.from({ length: 32 }, async () => {
@@ -956,6 +978,12 @@ async function paivitaKerrokset(vienti) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--vienti');
   const vienti = resolve(i > 0 ? process.argv[i + 1] : join(TAMA, '../../dist/vienti'));
+  if (!process.argv.includes('--head') && /--paivita-(koot|kerrokset)/.test(process.argv.join(' '))) {
+    const pohjat = [OFFLINE_LAHTEET.rasteri.url, ...Object.values(OFFLINE_KERROKSET).map((k) => k.url)];
+    const t = await kaytaLuetteloa(pohjat);
+    console.error(t ? `ämpäriluettelo: ${t.size} avainta (${TUNNETUT_ETU.length} sarjaa, luettelo ${luettelonIka().toFixed(0)} h vanha); ei HEAD-pyyntöjä niille`
+      : 'ämpäriluettelo puuttuu: koot HEAD-pyynnöin');
+  }
   if (process.argv.includes('--paivita-koot')) {
     const t = await paivitaKoot(vienti);
     console.log(`offline-koot.json: rasteri ${JSON.stringify(t.rasteri.keskitavut)}, maasto z0–${t.maasto.available.length - 1}, media ${Object.keys(t.media).length} lajia`);

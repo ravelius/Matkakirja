@@ -157,7 +157,17 @@ jobs:
           # ajo löytää ne (--varmista tarkistaa julkisesta osoitteesta).
           ( while sleep 60; do vie_pienet || true; done ) &
           VIEJA=$!
-          node tools/vienti/mediakuvat.mjs --paivita --varmista --ulos dist/pienet --aikaraja 1500
+          # R2-kulut (Julkaisija 28.10.2026, omistajan päätös): koot ja olemassaolo ListObjectsV2-listauksesta
+          # (1 pyyntö / 1000 avainta) HEAD-pyyntöjen sijaan (ennen ~17 000 HEAD:ia / ajo). Epäonnistunut
+          # listaus = tyhjä luettelo → mediakuvat.mjs tarkistaa HEAD:lla kuten ennen.
+          : > dist/ampari-mediakuvat.tsv
+          for etu in pieni/ $MEDIAKUVA_ETULIITTEET; do
+            aws s3api list-objects-v2 --bucket "$AMPARI" --prefix "$etu" --endpoint-url "$PAATE" \
+              --query 'Contents[].[Key,Size,ETag]' --output text >> dist/ampari-mediakuvat.tsv || true
+          done
+          echo "Ämpärilistaus: $(wc -l < dist/ampari-mediakuvat.tsv) avainta"
+          node tools/vienti/mediakuvat.mjs --paivita --varmista --ulos dist/pienet --aikaraja 1500 \
+            --luettelo dist/ampari-mediakuvat.tsv
           kill $VIEJA 2>/dev/null || true
           vie_pienet
 
@@ -223,8 +233,13 @@ jobs:
             fi
           done
           echo "Paketti v$N luettavissa: $JULKINEN/sisalto/1/v$N/"
-          # Ämpäritarkistus (Fable 24.9.2026): jokainen tiedosto HEAD:lla, koko sama kuin paikallisesti.
-          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/1/v$N/" --kansio "dist/sisalto/v$N"
+          # Ämpäritarkistus (Fable 24.9.2026): jokainen tiedosto ämpärissä, koko sama kuin paikallisesti.
+          # 28.10.2026 (R2-kulut): olemassaolo ja koko versiokansion listauksesta, HEAD vain otokselle ja
+          # listauksesta puuttuville (ennen ~930 HEAD:ia / paketti).
+          aws s3api list-objects-v2 --bucket "$AMPARI" --prefix "sisalto/1/v$N/" --endpoint-url "$PAATE" \
+            --query 'Contents[].[Key,Size,ETag]' --output text > "dist/ampari-v$N.tsv" || : > "dist/ampari-v$N.tsv"
+          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/1/v$N/" --kansio "dist/sisalto/v$N" \
+            --luettelo "dist/ampari-v$N.tsv"
 
       # Osoitin VIIMEISENÄ: sovellus ei koskaan näe osoitinta pakettiin,
       # jota ei vielä ole kokonaan ämpärissä.
@@ -276,7 +291,10 @@ jobs:
           aws s3 sync "dist/sisalto2/v$N" "s3://$AMPARI/sisalto/2/v$N/" --endpoint-url "$PAATE" \
             --content-type application/json --cache-control 'public, max-age=31536000, immutable' \
             --no-progress --only-show-errors
-          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/2/v$N/" --kansio "dist/sisalto2/v$N"
+          aws s3api list-objects-v2 --bucket "$AMPARI" --prefix "sisalto/2/v$N/" --endpoint-url "$PAATE" \
+            --query 'Contents[].[Key,Size,ETag]' --output text > "dist/ampari2-v$N.tsv" || : > "dist/ampari2-v$N.tsv"
+          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/2/v$N/" --kansio "dist/sisalto2/v$N" \
+            --luettelo "dist/ampari2-v$N.tsv"
           if ! aws s3 cp "s3://$AMPARI/sisalto/2/uusin.json" nykyinen-osoitin2.json --endpoint-url "$PAATE" >/dev/null 2>&1; then
             rm -f nykyinen-osoitin2.json
           fi

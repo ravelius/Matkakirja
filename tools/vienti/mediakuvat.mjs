@@ -3,7 +3,8 @@
  * MEDIAKUVAT (skeema 1.52, Siirtoseppä 27.9.2026; Fablen päätös: pienennetyt, katto 100 Mt maata kohden).
  *
  *   node tools/vienti/vie-sisalto.mjs            # kirjoittaa dist/mediakuvat-ehdokkaat.json
- *   node tools/vienti/mediakuvat.mjs --paivita [--ulos dist/pienet] [--varmista] [--rinnakkain 16] [--aikaraja s]
+ *   node tools/vienti/mediakuvat.mjs --paivita [--ulos dist/pienet] [--varmista] [--rinnakkain 16] [--aikaraja s] [--luettelo tsv]
+ *   (--luettelo: ämpäriluettelo, tools/vienti/ampariluettelo.mjs; siinä olevia ei HEAD-pyydetä, 28.10.2026)
  *
  * Mittaa offline.json:n maat.*.mediaKuvat-ehdokkaat maittain järjestyksessä (tools/vienti/offline.mjs MEDIAKUVAT),
  * kunnes maan katto täyttyy: alkuperäisen koko HEAD-pyynnöllä (curl; Cloudflare torjuu Pythonin urllibin), ja kuva,
@@ -23,6 +24,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { MEDIAKUVAT, ampariAvain, pieniAvain } from './offline.mjs';
+import { luettelonKoot, luettelonPolku } from './ampariluettelo.mjs';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 const JUURI = resolve(TAMA, '../..');
@@ -111,7 +113,23 @@ async function pienenna(avaimet, ulos, rinnakkain) {
   return tulos;
 }
 
-export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 16, tiedosto = TIEDOSTO, aikaraja = Infinity }) {
+export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 16, tiedosto = TIEDOSTO, aikaraja = Infinity,
+  luettelo = luettelonPolku() }) {
+  // Julkaisija 28.10.2026 (R2-kulut): koot ensin ämpäriluettelosta (Macilla koko ämpäri, CI:ssä työnkulun
+  // listaamat etuliitteet, ks. vie-sisalto.yml); HEAD vain luettelosta puuttuville. Ennen ~17 000 HEAD:ia / ajo.
+  const kaikki = new Set();
+  for (const lista of Object.values(ehdokkaat)) {
+    for (const [url] of lista) {
+      const a = ampariAvain(url); kaikki.add(a);
+      const p = pieniAvain(a); kaikki.add(p); kaikki.add(p.replace(/\.jpg$/, '.png'));
+    }
+  }
+  const tunnetut = luettelo ? await luettelonKoot(kaikki, { polku: luettelo }) : null;
+  let luettelosta = 0;
+  const kysy = async (avain) => {
+    if (tunnetut?.has(avain)) { luettelosta++; return [200, tunnetut.get(avain)]; }
+    return paa(OMA + encodeURI(avain));
+  };
   const loppu = Date.now() + aikaraja * 1000;
   const data = lue(tiedosto);
   const t = data.tiedostot;
@@ -129,7 +147,7 @@ export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 
         else if (koko(avain) != null && summa + koko(avain) <= katto) summa += koko(avain);
       }
       if (!era.length) continue;
-      const paat = await pool(era, rinnakkain, (avain) => paa(OMA + encodeURI(avain)));
+      const paat = await pool(era, rinnakkain, kysy);
       const pienennettavat = era.filter((a, k) => paat[k][0] === 200 && KUVA.test(a) && paat[k][1] > kynnysTavut);
       const pienet = await pienenna(pienennettavat, ulos, rinnakkain);
       era.forEach((avain, k) => {
@@ -158,7 +176,7 @@ export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 
     const paikalla = (a) => existsSync(join(ulos, pieniAvain(a).replace(/\.jpg$/, `.${t[a][2] ?? 'jpg'}`)));
     const tarkistettavat = pienella.filter((a) => !paikalla(a));
     const paat = await pool(tarkistettavat, rinnakkain * 2,
-      (a) => paa(OMA + encodeURI(pieniAvain(a).replace(/\.jpg$/, `.${t[a][2] ?? 'jpg'}`))));
+      (a) => kysy(pieniAvain(a).replace(/\.jpg$/, `.${t[a][2] ?? 'jpg'}`)));
     // Vanhentunut pieni (Siirtoseppä 28.9.2026, E2E-offline): 1.52:n pienet (1280 px, JPEG 80) jäivät ämpäriin, kun
     // 1.54 vaihtoi asetukseksi 1024/75, koska tarkistus katsoi vain olemassaolon. Tanskan offline-media oli levyllä
     // 45 Mt arvion 34 Mt sijaan. Ämpärin pieni, joka on yli VANHENTUNUT × kirjattu koko, tehdään uudelleen samaan
@@ -190,7 +208,8 @@ export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 
     tiedostot: jarjestetty,
   }, null, 0).replace(/\],"/g, '],\n"')}\n`);
   console.log(`mediakuvat: ${Object.keys(t).length} riviä, mitattu nyt ${mitattu}, pienennetty ${pienennetty}`
-    + (varmista ? `, pienet ämpärissä ${varmistettu}, tehty vietäväksi ${tehty}` : ''));
+    + (varmista ? `, pienet ämpärissä ${varmistettu}, tehty vietäväksi ${tehty}` : '')
+    + `, luettelosta ${luettelosta}${tunnetut ? '' : ' (ei luetteloa)'}`);
   return { mitattu, pienennetty, tehty };
 }
 
@@ -203,5 +222,5 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const ehdokkaat = JSON.parse(readFileSync(resolve(arvo('--ehdokkaat', join(JUURI, 'dist/mediakuvat-ehdokkaat.json'))), 'utf8'));
   await paivita({ ehdokkaat, ulos: resolve(arvo('--ulos', join(JUURI, 'dist/pienet'))),
     varmista: process.argv.includes('--varmista'), rinnakkain: Number(arvo('--rinnakkain', 16)),
-    aikaraja: Number(arvo('--aikaraja', Infinity)) });
+    aikaraja: Number(arvo('--aikaraja', Infinity)), luettelo: arvo('--luettelo', luettelonPolku()) });
 }

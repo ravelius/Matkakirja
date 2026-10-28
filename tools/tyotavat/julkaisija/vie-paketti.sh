@@ -12,7 +12,9 @@
 #   2) SHA256SUMS on olemassa, jokainen rivi täsmää, polut ovat suhteellisia (ei / alussa, ei ..)
 #      ja kansiossa ei ole SHA256SUMS:sta puuttuvia tiedostoja (paitsi SHA256SUMS, LAHTEET.md, MANIFEST.md)
 #   3) LAHTEET.md tai MANIFEST.md on olemassa ja mainitsee lisenssin (PD/CC0/CC BY/MIT/oma/lisenssi)
-#   4) tunnettu content-type jokaiselle tiedostolle; olemassa olevaa objektia EI ylikirjoiteta
+#   4) tunnettu content-type jokaiselle tiedostolle; olemassa olevaa objektia EI ylikirjoiteta:
+#      ensin ämpäriluettelosta (amparin-luettelo.tsv + .lisays.tsv, ei pyyntöjä), luettelosta puuttuva viedään
+#      ehdollisena (put-object --if-none-match '*': R2 hylkää 412:lla, jos avain on jo; ei HEAD-pyyntöjä, 28.10.2026)
 #   5) julkinen URL (?t=) → 200 + access-control-allow-origin + SHA täsmää; tulos lokiin
 #   4b) omat-mallit-vienti-*: LS2:n portti omat_mallit_ktx2.py --portti läpäistävä (PT 10.10.2026)
 #   4c) mp3/wav-paketit: Pelikoodarin aaniportti.py läpäistävä (PT 10.10.2026)
@@ -20,6 +22,9 @@
 set -euo pipefail
 
 LOKI=/Users/Shared/Claude/julkaisija-tyokalut/vie-paketti.log
+# Ämpäriluettelo (Julkaisija 28.10.2026, omistajan päätös klo 12.28: R2-kulut alas): rakenna-luettelo.zsh rakentaa
+# ListObjectsV2:lla; tämä skripti lisää viemänsä avaimet .lisays.tsv:hen. Ennen jokainen tiedosto = 1 HeadObject.
+LUETTELO=${AMPARI_LUETTELO:-/Users/Shared/Claude/julkaisija-tyokalut/amparin-luettelo.tsv}; LISAYS=${LUETTELO%.tsv}.lisays.tsv
 JUURI=/Users/Shared/Claude/proto-3d/_valmiit
 JULKINEN=https://media.matkakirja.app
 KUIVA=0; K=""; OSA=0; OSIA=1
@@ -105,6 +110,25 @@ fi
 
 N=$(grep -c . "$R/SHA256SUMS")
 echo "== $NIMI: $N tiedostoa, lähteet ${LAHDE:t}, tarkistukset ok"
+
+# 4d) Jo ämpärissä olevat luettelosta (paikallinen, ei pyyntöjä). Luettelo on järjestetty (LC_ALL=C) → comm;
+#     lisäystiedostot ovat pieniä ja järjestämättömiä → sort. Puuttuva luettelo ei estä vientiä (ehdollinen PUT suojaa).
+OLEMASSA=$(mktemp -t vie-paketti-olemassa)
+typeset -A ONJO
+if [ -f "$LUETTELO" ]; then
+  awk 'NF {print $2}' "$R/SHA256SUMS" | LC_ALL=C sort -u > "$OLEMASSA.paketti"
+  { cut -f1 "$LUETTELO" | LC_ALL=C comm -12 - "$OLEMASSA.paketti"
+    for f in "$LISAYS" "$LISAYS.vanha"; do
+      if [ -f "$f" ]; then cut -f1 "$f" | LC_ALL=C sort -u | LC_ALL=C comm -12 - "$OLEMASSA.paketti"; fi
+    done; } | LC_ALL=C sort -u > "$OLEMASSA" || true
+  rm -f "$OLEMASSA.paketti"
+  while IFS= read -r k; do ONJO[$k]=1; done < "$OLEMASSA"
+  LUETTELO_IKA=$(( ($(date +%s) - $(stat -f %m "$LUETTELO")) / 3600 ))
+  echo "luettelo: oli jo ${#ONJO} / $N (luettelo ${LUETTELO_IKA} h vanha + lisäykset), vietäviä $(( N - ${#ONJO} ))"
+else
+  echo "luettelo: puuttuu ($LUETTELO) – kaikki viedään ehdollisena (412 = oli jo)"
+fi
+rm -f "$OLEMASSA"
 if [ "$KUIVA" = 1 ]; then echo "(kuiva-ajo: ei latausta)"; exit 0; fi
 
 source ~/.zshrc >/dev/null 2>&1 || true
@@ -123,13 +147,9 @@ while read -r h p; do
   # --osa=I/N (Julkaisija 7.10.2026): rinnakkainen vienti, tämä prosessi käsittelee rivit joilla rivi % N == I.
   [ $((rivi % OSIA)) -eq "$OSA" ] || continue
   ct=$(tyyppi "$p")
-  # Tarkka avain (s3 ls on etuliitehaku: a/b.jpg näyttäisi olevan olemassa, jos a/b.jpg.bak on).
-  # Muu virhe kuin 404 (verkko, oikeudet) → lopetus, ettei olemassa olevaa ylikirjoiteta vahingossa.
-  vaihe=head-object
-  if hv=$(aws s3api head-object --bucket "$AMPARI" --key "$p" --endpoint-url "$PAATE" 2>&1 >/dev/null); then
-    echo "= $p (on jo, ei ylikirjoiteta)"; oli=$((oli + 1)); continue
-  fi
-  case "$hv" in *404*|*"Not Found"*|*NoSuchKey*) ;; *) echo "KESKEYTETTY: head-object $p: $hv" >&2; exit 8 ;; esac
+  # 28.10.2026: luettelossa oleva tarkka avain → ei pyyntöä (ennen head-object jokaiselle tiedostolle).
+  vaihe=luettelo
+  if [ -n "${ONJO[$p]:-}" ]; then echo "= $p (on jo luettelossa, ei ylikirjoiteta)"; oli=$((oli + 1)); continue; fi
   # Osoittimet (uusin*.json) vaihtuvat myöhemmin käsin → lyhyt välimuisti (9.10.2026: uusin-2.json sai immutable-otsakkeen)
   cc='public, max-age=31536000, immutable'; case "${p:t}" in uusin*.json) cc='public, max-age=60' ;; esac
   # .terrain (KS 12.10.): tavut ovat gzipiä → Content-Encoding: gzip, muuten Cesium saa pakatut tavut (litteät laatat).
@@ -142,11 +162,26 @@ while read -r h p; do
   esac
   # 12.10.2026 (KS pilotti-3: kolme osaa kuoli paluuarvoon 139 = segfault kuormassa) → aws-kutsu enintään 3 yritystä;
   # && / || -listassa epäonnistuminen ei laukaise set -e:tä. Kolmen epäonnistumisen jälkeen virhe lasketaan alla (sha ei täsmää).
-  vaihe=aws-cp; ok=0
+  # 28.10.2026: ehdollinen PUT (--if-none-match '*'): R2 tarkistaa olemassaolon atomisesti ja vastaa 412
+  # (PreconditionFailed), jos avain on jo → ei ylikirjoitusta, ei HEAD:ia. 412 ensimmäisellä yrityksellä = oli jo;
+  # 412 uusinnassa = edellinen yritys ehti perille (tarkistetaan julkisesta osoitteesta kuten muutkin).
+  # Muu virhe kuin 412 kolmesti → virhe lasketaan alla (sha ei täsmää), kuten ennen.
+  vaihe=put-object; ok=0; onjo=0; etag=-
   for y in 1 2 3; do
-    aws s3 cp "$R/$p" "s3://$AMPARI/$p" --endpoint-url "$PAATE" --no-progress --only-show-errors \
-      --content-type "$ct" --cache-control "$cc" "${ce[@]}" && { ok=1; break; } || { echo "uusinta $y: aws cp $p" >&2; sleep 5; }
+    if pv=$(aws s3api put-object --bucket "$AMPARI" --key "$p" --body "$R/$p" --if-none-match '*' --endpoint-url "$PAATE" \
+        --content-type "$ct" --cache-control "$cc" "${ce[@]}" --query ETag --output text 2>&1); then
+      ok=1; etag=${pv//\"/}; break
+    fi
+    case "$pv" in
+      *PreconditionFailed*|*"(412)"*) [ "$y" = 1 ] && onjo=1; ok=1; break ;;
+      *) echo "uusinta $y: put-object $p: ${pv:0:200}" >&2; sleep 5 ;;
+    esac
   done
+  if [ "$onjo" = 1 ]; then
+    echo "= $p (on jo ämpärissä, 412, ei ylikirjoitettu)"; oli=$((oli + 1))
+    printf '%s\t%s\t-\n' "$p" "$(stat -f %z "$R/$p")" >> "$LISAYS"
+    continue
+  fi
   vaihe=curl
   # || true: curl-aikakatkaisu ei saa tappaa osaa hiljaa (set -e + pipefail) – epäonnistuminen lasketaan virheeksi alla.
   : > "$TMP"
@@ -156,6 +191,7 @@ while read -r h p; do
   sha=$(shasum -a 256 "$TMP" | cut -d' ' -f1)
   if [ "$koodi" = 200 ] && [ -n "$cors" ] && [ "$sha" = "$odotus" ]; then
     echo "+ $p"; viety=$((viety + 1))
+    printf '%s\t%s\t%s\n' "$p" "$(stat -f %z "$R/$p")" "$etag" >> "$LISAYS"
   else
     echo "! $p → $koodi, CORS '${cors:-puuttuu}', sha ${sha:0:12}/${odotus:0:12}" >&2; virhe=$((virhe + 1))
   fi
