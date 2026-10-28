@@ -535,3 +535,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Kokoaminen sellaisenaan (ei j4_hopea.py:tä): j4_arkkuun.py (0,97) → j4_siivous.py → astc-mip.swift vari/normaali 4 → kavely-j4/ (vanhat talteen kavely-ennen-v3/).
   Ajo: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 2855d8478 olavinlinna-j4/sk-komero-j4-lahi.txt ipad --batch (~7 min) → esikatselu-20261028-170508.
 - Pari KK:lle: kk-pari-v2-v3-j4h-2x.png (+ j4h/j4g/j4i). Halo ja läikät pois, kannun suu syvä; lautasen kaiverrus himmeämpi, kiilto litteämpi. Odottaa KK:ta.
+- 17.3x Codex kysyi MR-kartasta (PT välitti): peli lukee täyden kartan vain <glb>-orm-6x6.astcm:stä (SeikkailuEsineet.cs ~745, R AO / G karheus / B metalli),
+  muuten keskiarvon. olavinlinna-j4/j4_orm.py (R = 255) + proto-3d/tyokalut/astc6.py → kavely-j4/esine-arkun-hopeasisalto-orm-6x6.astcm. Vastaus Codexille 0c521ec46.
+  VIENNISSÄ: orm-6x6.astcm mukaan paketin manifestiin (AstcSaatavilla vaatii manifestin muualla kuin file://).
+  Uusi pari esikatselu-20261028-180956 (kk-pari-v2-v3-*.png) → KK 18.1x (korvaa 170508:n). Ero pieni.
