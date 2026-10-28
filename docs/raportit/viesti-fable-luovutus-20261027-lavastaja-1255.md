@@ -553,5 +553,5 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (= friisi V4_palkkivyo/V4_palatsi_friisi) y 2,98–3,52, päätetiilet 3,08–3,62, katto (Katto lasitiili / V4_palatsi_katto / alapinta) y 3,11–7,51, harjakoristeet
   3,70–8,86. Pelikuvassa friisinauhan yllä näkyy keltainen kalteva pinta, sitten punaista seinää ja vasta ylempänä iso katto teal-nauhoineen → selvitä x/z-paikoista,
   onko iso katto juhlasalin oma (sisempänä/korkeammalla kuin friisi) vai takana olevan hallin (rakennukset-v54 / taustapalat). Mittaustyökalu:
-  scratchpad yrange.py (y-välit solmu+materiaali); seuraava askel: sama x/z-bboxeilla ja katon alareunan etäisyys friisin ulkopinnasta.
+  K/tyokalut/yrange.py <glb> [ymin] (y-välit solmu+materiaali); seuraava askel: sama x/z-bboxeilla ja katon alareunan etäisyys friisin ulkopinnasta.
 - J4: Codex-tilaus J4-v4 991b58c76 odottaa toimitusta (ks. lisäys 39). Ei taustaajoja käynnissä.
