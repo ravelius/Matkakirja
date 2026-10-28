@@ -543,3 +543,15 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   j4_orm.py KG=0.6; esikatselu-20261028-184846) → läikät ja kohina, kaiverrus ei lukeudu → kavely-j4 palautettu v3-karttoihin (v3/*.astcm).
   Codex-tilaus J4-v4 postissa 991b58c76 (cavity albedoon, kiiltävät harjat, selkeämpi relief). Kun tulee: sama ketju kuin v3 (j4_arkkuun → j4_siivous →
   astc-mip vari/normaali + j4_orm + astc6) → kavely-j4 → esikatselu → pari v3 | v4 | 1021-kuva → KK.
+
+## LISÄYS 40 klo 18.58 (28.10.): OMISTAJA hyväksyi kivet; SEURAAVA = katot alas ja kiinni (LUOVUTUS, aloita tästä)
+- KK välitti OMISTAJAN PÄÄTÖKSEN klo 18.57 (pari 164951), sanatarkasti: "Kivet Ok mutta katot näyttävät olevan irti ja liian korkealla".
+  → kujakivet v5 (reunakivi, kivijalka, lattia) HYVÄKSYTTY sellaisenaan: mallit juuri-v101m (yksikerros-v93, avoimet-v64k, muurikate pari-v92), VS REF 8885a9f54.
+- TEHTÄVÄ NYT (KK): kujien 01/02/05 katot alas ja kiinni: räystäs lepää suoraan friisin ja seinän päällä kuten havainteessa (nyt friisin ja katon välissä rako,
+  katto korkealla; ks. 164951/01/vierekkain.png). Vasta sitten valo (VS aurinko + LR:n leivonta). Pari havainne | peli (01, 02, 05) → KK.
+- Alkuhavainto (18.5x, ei vielä varmistettu): 01:n oikealla lähin rakennus = avoimet juhlasali (peli peilaa x:n). juhlasali.glb (avoimet-v64k): katto_raystas
+  (= friisi V4_palkkivyo/V4_palatsi_friisi) y 2,98–3,52, päätetiilet 3,08–3,62, katto (Katto lasitiili / V4_palatsi_katto / alapinta) y 3,11–7,51, harjakoristeet
+  3,70–8,86. Pelikuvassa friisinauhan yllä näkyy keltainen kalteva pinta, sitten punaista seinää ja vasta ylempänä iso katto teal-nauhoineen → selvitä x/z-paikoista,
+  onko iso katto juhlasalin oma (sisempänä/korkeammalla kuin friisi) vai takana olevan hallin (rakennukset-v54 / taustapalat). Mittaustyökalu:
+  scratchpad yrange.py (y-välit solmu+materiaali); seuraava askel: sama x/z-bboxeilla ja katon alareunan etäisyys friisin ulkopinnasta.
+- J4: Codex-tilaus J4-v4 991b58c76 odottaa toimitusta (ks. lisäys 39). Ei taustaajoja käynnissä.
