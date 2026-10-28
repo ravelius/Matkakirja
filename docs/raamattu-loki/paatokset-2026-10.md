@@ -3039,3 +3039,7 @@ Omistaja ajoi poiston itse; KK todensi: ämpärissä 0 huohotus-mp3:ta, julkiset
 ## Kartta: kohdemerkit oikeille paikoille, pelaajan nappi samaan zoom-sääntöön (omistaja 28.10. 10.18) (28.10.2026 klo 10.19)
 
 Omistaja (KK, KS:n kohdemerkkipari) sanatarkasti: 'big ben yms. ei ole oikealla kohdalla kartalla. pelaajan nappi on aivan liian iso kun koko maapallo näkyy. sovella siihen samaa zoom sääntöä kuin louvreen yms.' Tavoite: kohdemerkit oikeilla paikoillaan kaikilla tasoilla; pelaajan nappi lukittu karttaan Ranskan korkeudesta ulospäin kuten kohdemerkit. KS; pari KK:lle; pieni iPad odottaa.
+
+## Suurennuslasi: väri vain otsikkoriville, Kartta valmiiksi valittuna (omistaja 28.10. 10.23) (28.10.2026 klo 10.24)
+
+Omistaja (KK, NUI:n parit) sanatarkasti: 'värit ok, mutta jätä väri pelkästään otsikkorivin taakse' + 'karttavalikko on valmiiksi valittuna lähizoomilla kun pelaaja painaa suurennuslasia, mutta se ei aukea suoraan automaattisesti vaan vaatii pelaajan klikkausta suurennuslasista'. NUI; koskee myös web PR 5420:tä.
