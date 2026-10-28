@@ -585,6 +585,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - J4-v4 #1228 vastaanotettu: GLB SHA 13cb3cc3…41ff3e täsmää, posti SHA256SUMS 22/22 → olavinlinna-j4/v4/ (models + posti). Kuittaus Codexille
   b80de59a5. SEURAAVA: v3:n ketju (j4_arkkuun 0,97 → j4_siivous → astc-mip vari/normaali 4 + j4_orm R255 + astc6) → kavely-j4 → pari v3 | v4 | 1021 → KK.
 
+<<<<<<< HEAD
 ## LISÄYS 43 klo 20.4x (28.10.): J4-v4 pelikuntoon, pari seis (linja 2 sumea), katot-42-haara tarpeeton
 - J4-v4 ketju ajettu: j4_arkkuun (0,97) → j4_siivous → astc-mip vari/normaali 4 → j4_orm + astc6 → olavinlinna-j4/v4/peli/ (glb 3732820f…, sha1).
   kavely-j4 palautettu v3:een (tunnettu tila, = v3/*); v4 kopioidaan kavely-j4:ään ennen paria.
@@ -594,3 +595,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   j4i (kannu) kelvoton (alkuvalikko peittää) → pois parista.
 - lavastaja/katot-42: ei mainista puuttuvaa (vain luovutuksen vanhempi versio ilman lisäystä 41) → ei tarvita.
 - Katto-parit 195528/195925 odottavat edelleen KK:ta.
+=======
+## LISÄYS 44 klo 21.1x (28.10.): linja 2 korjattu (pistekerroin 1), J4-v4-pari → KK hylkäsi kohdat 1–3 → J4-v5 Codexille; katto-parit uusittu
+- Sumeuden syy (VS/PT): Macista irtosi näyttö 19.07 → editorin pistekerroin 2 → 3D puolella resoluutiolla. NUI:n korjaus b48ecd7f8 poimittu:
+  proto-haarat lavastaja/kerroin-2855d8478 (e367204e2, J4) ja lavastaja/kerroin-8885a9f54 (46c0add3c, katot); työpuu wt/proto-lavastaja-kerroin.
+  editori-lr.sh: T=${HAVAINNE_PUU:-wt/proto-lavastaja-kerroin}; aja_v103_pari.zsh REF oletus 46c0add3c. Kuvan unity.log: "pistekerroin 1".
+- J4-v4-pari esikatselu-20261028-205424 (kavely-j4 = v4). KK 21.0x: kannu OK; 1) kolikot vaaleat/litteät, 2) välit vaaleat (arkun pohja näkyy),
+  3) kulhon kaarinauha ei näy. → Codex-tilaus J4-v5 posti 221f04d6d (AO R-kanavaan, leima + reunarengas jokaiselle kolikolle, välit kiinni / tumma
+  alusta, kulhon nauha). Kun tulee: sama ketju (v4/peli-malli) → pari v4 | v5 | 1021 → PT → KK. Ei omistajalle ennen KK:n OK:ta.
+- Katto-parit terävinä: pelikamera havainne-editori-20261028-210105, havainteen kamera …-210656 → PT → KK (korvaavat 195528/195925). Odottaa KK:ta.
+>>>>>>> 763e932ce (Lavastaja: luovutus lisäys 44 (pistekerroin 1, J4-v5 Codexille, katto-parit uusittu))
