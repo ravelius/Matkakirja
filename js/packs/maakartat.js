@@ -4834,7 +4834,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Uspenskin katedraali', lat: 60.1683, lon: 24.96, wiki: 'Uspenskin katedraali' },
       { nimi: 'Johanneksenkirkko', lat: 60.1618, lon: 24.9447, wiki: 'Johanneksenkirkko (Helsinki)' },
       // Kainalossa oikeassa alanurkassa.
-      { nimi: 'Suomenlinna', lat: 60.1472, lon: 24.9864, wiki: 'Suomenlinna' },
+      { nimi: 'Suomenlinna', lat: 60.14361, lon: 24.98444, wiki: 'Suomenlinna' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -5079,7 +5079,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-amsterdam-haikarat',
       },
       { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
-      { nimi: 'Artis-eläintarha', tyyppi: 'luonto', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
+      { nimi: 'Artis-eläintarha', tyyppi: 'luonto', lat: 52.36611, lon: 4.91667, wiki: 'Artis (eläintarha)' },
       { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -5174,7 +5174,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Dublinin linna', lat: 53.3427, lon: -6.2669 },
       { nimi: 'Ha’penny-silta', lat: 53.3463, lon: -6.2631 },
       { nimi: 'Spire', lat: 53.3498, lon: -6.2603, wiki: 'Spire of Dublin' },
-      { nimi: 'Trinity College', lat: 53.3437, lon: -6.2545, wiki: 'Trinity College (Dublin)' },
+      { nimi: 'Trinity College', lat: 53.3444, lon: -6.2577, wiki: 'Trinity College (Dublin)' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -5682,7 +5682,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hofburg', lat: 48.2064, lon: 16.3657, wiki: 'Hofburg' },
       { nimi: 'Valtionooppera', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
       { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
-      { nimi: 'Belvedere', lat: 48.1915, lon: 16.3809, wiki: 'Belvedere' },
+      { nimi: 'Belvedere', lat: 48.1934, lon: 16.38052, wiki: 'Belvedere' },
       { nimi: 'Jättiratas', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
@@ -6537,7 +6537,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'La Fenicen oopperatalo', lat: 45.4336, lon: 12.3336, wiki: 'La Fenice' },
       { nimi: 'Rialton silta', lat: 45.438, lon: 12.3359, wiki: 'Rialton silta' },
       { nimi: 'Pyhän Markuksen tori', tyyppi: 'aukio', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
-      { nimi: 'San Giorgio Maggiore', lat: 45.4294, lon: 12.3433, wiki: 'San Giorgio Maggiore' },
+      { nimi: 'San Giorgio Maggiore', lat: 45.42775, lon: 12.34417, wiki: 'San Giorgio Maggiore' },
       // Portin edusta eikä altaan reuna: entinen piste osui
       // telakka-altaaseen (vesitarkistin 9.8.2026).
       { nimi: 'Arsenaali', lat: 45.4344, lon: 12.3506, wiki: 'Arsenale' },
@@ -7650,7 +7650,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Kuninkaanlinna', lat: 59.9169, lon: 10.7275 },
       { nimi: 'Karl Johans gate', lat: 59.9139, lon: 10.74, wiki: 'Karl Johans gate' },
-      { nimi: 'Oslon tuomiokirkko', lat: 59.9128, lon: 10.7442, wiki: 'Oslon tuomiokirkko' },
+      { nimi: 'Oslon tuomiokirkko', lat: 59.91232, lon: 10.74696, wiki: 'Oslon tuomiokirkko' },
       { nimi: 'Kaupungintalo', lat: 59.912, lon: 10.7335, wiki: 'Oslon kaupungintalo' },
       { nimi: 'Akershusin linnoitus', lat: 59.9075, lon: 10.7365, wiki: 'Akershusin linnoitus' },
       { nimi: 'Oopperatalo', lat: 59.9075, lon: 10.7522, wiki: 'Oslon oopperatalo' },
@@ -7763,7 +7763,7 @@ export const KAUPUNKIKARTAT = {
       + 'venesilta. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       { nimi: 'Katedraali ja Giralda', lat: 37.3862, lon: -5.9924, wiki: 'Sevillan katedraali' },
-      { nimi: 'Alcázar', lat: 37.385, lon: -5.9924, wiki: 'Sevillan Alcázar' },
+      { nimi: 'Alcázar', lat: 37.38443, lon: -5.99119, wiki: 'Sevillan Alcázar' },
       { nimi: 'Torre del Oro', lat: 37.3824, lon: -5.9965, wiki: 'Torre del Oro' },
       { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983, wiki: 'Maestranza (Seville)' },
       { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023, wiki: 'Puente de Isabel II' },
@@ -7970,13 +7970,13 @@ export const KAUPUNKIKARTAT = {
       // kymmenen metriä sisämaahan, jottei numeroympyrä istu vedessä.
       { nimi: 'Näsinneula', lat: 61.5052, lon: 23.7422, wiki: 'Näsinneula' },
       { nimi: 'Finlaysonin tehdasalue', lat: 61.4996, lon: 23.753, wiki: 'Finlaysonin tehdasalue' },
-      { nimi: 'Museokeskus Vapriikki', lat: 61.5022, lon: 23.7657, wiki: 'Museokeskus Vapriikki' },
+      { nimi: 'Museokeskus Vapriikki', lat: 61.50301, lon: 23.76036, wiki: 'Museokeskus Vapriikki' },
       {
         nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta',
         nosto: 'syvennys-tampere-koski',
       },
-      { nimi: 'Tampereen tuomiokirkko', lat: 61.4966, lon: 23.7744, wiki: 'Tampereen tuomiokirkko' },
-      { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
+      { nimi: 'Tampereen tuomiokirkko', lat: 61.5025, lon: 23.76972, wiki: 'Tampereen tuomiokirkko' },
+      { nimi: 'Pyynikin näkötorni', lat: 61.49633, lon: 23.732, wiki: 'Pyynikin näkötorni' },
       // Kuninkaankatu 4, Finlaysonin tehdasalueen pohjoisreunassa
       // (OSM: tourism=attraction).
       { nimi: 'Tallipiha', lat: 61.5034, lon: 23.7546, wiki: 'Tallipiha' },
@@ -9038,9 +9038,9 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Polaarimuseo', lat: 69.6543, lon: 18.9631 },
       { nimi: 'Tromssan silta', lat: 69.6516, lon: 18.9742 },
-      { nimi: 'Tromssan tuomiokirkko', lat: 69.6497, lon: 18.956, wiki: 'Tromssan tuomiokirkko' },
-      { nimi: 'Jäämerenkatedraali', lat: 69.6489, lon: 18.9976, wiki: 'Jäämerenkatedraali' },
-      { nimi: 'Polaria', lat: 69.6455, lon: 18.9515, wiki: 'Polaria (akvaario)' },
+      { nimi: 'Tromssan tuomiokirkko', lat: 69.64877, lon: 18.95682, wiki: 'Tromssan tuomiokirkko' },
+      { nimi: 'Jäämerenkatedraali', lat: 69.64807, lon: 18.9874, wiki: 'Jäämerenkatedraali' },
+      { nimi: 'Polaria', lat: 69.64369, lon: 18.94987, wiki: 'Polaria (akvaario)' },
     ],
   },
   dubai: {
@@ -18551,7 +18551,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Quattro Canti', tyyppi: 'aukio', lat: 38.11556, lon: 13.36139, wiki: 'Quattro Canti' },
       { nimi: 'Palermon katedraali', lat: 38.11417, lon: 13.35611, wiki: 'Palermo Cathedral' },
       { nimi: 'Normannien palatsi', lat: 38.11083, lon: 13.35306, wiki: 'Palazzo dei Normanni' },
-      { nimi: 'Piazza Marina', tyyppi: 'aukio', lat: 38.1176, lon: 13.3708, wiki: 'Piazza Marina' },
+      { nimi: 'Piazza Marina', tyyppi: 'aukio', lat: 38.11722, lon: 13.36833, wiki: 'Piazza Marina' },
     ],
   },
   lappi: {
@@ -19108,8 +19108,8 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Kansallinen kristillinen keskus',
         wiki: 'National Christian Centre',
-        lat: 9.0484,
-        lon: 7.49488,
+        lat: 9.05139,
+        lon: 7.49472,
       },
     ],
   },
@@ -19203,8 +19203,8 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Lomén suuri tori',
         tyyppi: 'aukio',
         wiki: 'Lomé Grand Market',
-        lat: 6.12603,
-        lon: 1.2273,
+        lat: 6.12561,
+        lon: 1.22542,
       },
     ],
   },
