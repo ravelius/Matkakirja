@@ -3200,3 +3200,7 @@ Kortti 'Kelpaako karttasaumojen korjaus?' → 'Kelpaa (suositus)' (selite: 'Korj
 ## LEVY-1029: IPAD-ASENNUSVÄLIMUISTI TYHJENNETÄÄN (omistaja 29.10.2026 klo 17.14) (29.10.2026 klo 17.14)
 
 Kortti 'Saako iPad-asennusten 50 Gt:n välimuistin tyhjentää Macilta?' → 'Kyllä (suositus)' (selite: 'Vapauttaa 50 Gt; seuraava iPad-asennus kestää hieman kauemmin.'). NS poistaa vain AppInstallationBinaryDeltas-kansion (CoreDeviceService Caches).
+
+## OMISTAJA PYYSI JULKAISUA: JUNA 214 (omistaja 29.10.2026 klo 17.20) (29.10.2026 klo 17.21)
+
+Omistaja KK:lle: "Lähden kotiin, niin julkaise TestFlightissa ilman testejä sitten kun valmistuu". KK:n tulkinta omistajalle kerrottuna: juna 214 TF:ään kokonaisena heti kun Työn alla -osat valmiit (kujat 02+05 omistajan kortin jälkeen, Alppien sauma, karttasaumat ilman pienen iPadin mittausta); ei laite-/simukierrosta; automaattiset käännöstestit kuten aina. PT: JU aloittaa maaston z10–12 kopiot heti.
