@@ -1273,3 +1273,24 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   Jos sessio nollautui ennen tulosta: tarkista uusin havainne-editori-*-kansio (esikatselu.txt: REF 41a2eac22) tai aja uudelleen
   `zsh <scratchpad>/pari_v78.zsh` (sisältö lisäyksessä 92). Kuvat → PT + KS (local_ddd980b0-2760-4c5d-a0c8-d65ad1ecb757).
 - SEURAAVAKSI: (1) pari → PT + KS; (2) PT:n kuittaus v75; (3) siipihallien C1 (avoin ketju); (4) erolista: T-risteys, sivuhallit, 04, 07.
+
+## LISÄYS 94 klo 22.3x (29.10.): SIIPIHALLIEN C1 (v76 ÄMPÄRIIN), TAKASEINÄT 1070/1071, NIMITAULU (vie-k5), PARI v79 — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- SIIPIHALLIEN C1: c1_raystaat2.py v6, lippu AVOIN=1 (ilman lippua tavulleen ennallaan, tarkistettu c1-v5:tä vasten). Siiven räystäs = kaksi ristikkäistä
+  U-ketjua (mallissa päädyissä kaksi räystäsviivaa 0,9 m:n välein; huippu = nostettu nurkka) → rengas = A kokonaan + B huipusta A:n alkua lähimpään
+  pisteeseen; sisäketjujen keskusta AVOIN-tilassa rakennuskohtainen (_rak). Tulos: portti 1126 palaa, 48 nurkkaparia. Kuvat K/c1-v6/kuvat/siipi-koonti.png.
+- PAKETTI v76 (PT KUITTASI ämpäriin 22.2x, JU:lle SHA caab69f6…): _valmiit/juoksupeli-kk-lavastaja-v76-vienti-20261029 (paketti_v76.py; aja_v151_siipi_c1.zsh):
+  kielletty-rakennukset-v61 (= rakennukset-v137), -c1-v6, -c2-v10 (MuurikateC2Kansio). PK:lle ilmoitettu.
+- PT 22.2x: siipien pylväikön takaseinä ruskea → havainne-06:n punaiset ristikko-ovet ja -ikkunat. K/tyokalut/portti_takaseinat.py: V4_woodin metriset
+  jänteet (siivet 2 × 11 à 5 × 4,7 m, päälinnan etuseinä 5, paviljongit 4) omiin primitiiveihin: keskeltä vuorotellen OVI (V4_wood ← 1070, u-toisto kuten
+  hallit_pinnat) ja IKKUNA (V4_ristikko ← 1071, 0,9 m kuten avoimet_pinnat); muut V4_wood-kolmiot karmivakioon. Kuvat K/takaseinat-v152/v1-koonti.png.
+- KS 22.3x: nimitaulu vie-k5:ssä (V4_nimitaulu, UV 0–1); KS:n kk_juoksu/vie/kk_wumen-muutokset kopioitu K/tyokalut/:iin (vanhat *.ennen-nimitaulu).
+  nimitaulu_kuva.py upottaa 1270:n (clamp). aja_v153_nimitaulu.zsh → K/rakennukset-v139/kielletty-rakennukset-v63 (= v137 + portti vie-k5:stä
+  C1 + takaseinät + nimitaulu; rakennukset.json a- = vie-k5) + c1-v7 (sijoitukset tavulleen c1-v6).
+- VS 22.2x: V4_paaharja = 1268 (pääharjan nauha, U toisto, V 0–1), V4_keskiovi = 1269 (→ NUI välitetty), V4_nimitaulu = 1270 (→ KS, tehty). Pääharja LR:n
+  palatsi_pinnat-ketjuun: AVOIN (seuraava iso työ). PK: Codexin A2 #1250–1252 tullut (3/12), harjarivit vasta kun 12.
+- PARI v79 (scratchpad pari_v79.zsh: H/juuri-pk7-v79 = v78 + kielletty-rakennukset-v53 → rakennukset-v139, kielletty-c1-v3 → c1-v6; 06 ensin, sitten 03 03b)
+  odottaa editorijonoa. Jos nollautui: uusin havainne-editori-*/06 (esikatselu REF 41a2eac22) tai aja uudelleen (sisältö: kuten pari_v78 lisäyksessä 92,
+  MALLIT juuri-pk7-v79, kohdat 06 ja 03 03b). 06-kuva PT:lle + KS:lle (havainne-06:n kulma = editorin kohta 06).
+- SEURAAVAKSI: (1) pari 06 → PT + KS; (2) PAKETTI v77 = v76 + kielletty-rakennukset-v63 (rakennukset-v139) + c1-v7 + c2: a3a5_portti.py uudesta lod0:sta
+  (kuten aja_v151_siipi_c1.zsh:n C2-osa) → PT:n kuittaus; (3) V4_paaharja 1268; (4) erolista: T-risteys, sivuhallit, 04, 07.
