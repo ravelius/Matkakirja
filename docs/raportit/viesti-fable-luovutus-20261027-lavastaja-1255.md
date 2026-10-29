@@ -1037,3 +1037,25 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (t-portti-120 5 kolm., m15/m216 16 kolm. LOD0–1; 424 ei askelia).
 - v67 rakennettu uudelleen samaan polkuun (paketti_v67.py): + kielletty-rakennukset-v51 (= v127, korvaa v50); SHA OK c6402a2f…. PK:lta pyydetty
   drone 110 s v67:llä → PT. Ei ämpäriin/junaan ennen omistajan korttia.
+
+## LISÄYS 83 klo 15.4x (29.10.): LUOVUTUS (konteksti 35 %) — KIVIJALAN PYSTYJUOVAT KORJATTU UV:LLA (v137m), TUNNELIN KATKOVIIVA AUKI → v68 — ALOITA TÄSTÄ
+1. KIVIJALAN PYSTYJUOVAT (PT 15.4x): kaksi syytä, molemmat korjattu.
+   - UV (LR): sokkelin ja pilarien wrapT CLAMP, mutta kivijalka sokkeli_korkea.py:n jälkeen > 1,20 m (taustassa v 0…2,09) → alin pikselirivi
+     venyi pystyjuoviksi; muurikatteen sokkeli/pilari v 0…1 koko 1,8 m:lle (kerros 22,5 cm). Korjaus kujakivi_skaalaa.py TOISTO_T=1 + PILV_K
+     (pilarit) + muurikatteeseen v × 1,5 → K/tyokalut/aja_v137_pari.zsh: yksikerros-v111, muurikate-v19/pari-v137, juuri-v137m (+ rakennukset-v127).
+     UV-suunta tarkistettu oikeaksi (u 0,5/m seinän suuntaan, v 0,833/m). Pari ilman pilarikorjausta: lokit/havainne-editori-20261029-152930 (juovat poissa).
+     Pilarikorjauksen kanssa: -153540 (sovitettu) + pelikamera (ajossa 15.39).
+   - Varjostin (VS 633d70948 seinat-211, natiivi-backup): sokkeli-v03 lisätty KiviJakoon. Ajo jonossa: REF=633d70948 J=v137m KOHDAT="02 05"
+     (taustatehtävä; tulos uusimmat lokit/havainne-editori-20261029-15xx). → TARKISTA kuvat, lähetä polku VS:lle (local_3b36fe96…) ja PT:lle.
+2. TUNNELIN SUUN KATKOVIIVA (PT 15.4x: korjaa v68:aan, tarkista pelikameralla, SHA + pari PT:lle, vienti PK:lle): EI korjautunut v67:n
+   tportti_askel.py:llä (PK drone v67b 111,5 s: proto-3d/_tyo/pelikoodari/parkour-20261027/tarkistus-drone214v67b/zoom-katkoviiva.png,
+   kaista ~0,3 m levyinen, laattakuvio pilkkoutunut = todennäköisesti kaksi päällekkäistä laattapintaa eri UV:lla tai ohut pinta).
+   Poissuljettu: t-porttimallien (120/424/m15/m216 LOD0) sisäiset päällekkäiset vaakapinnat (0); taustan lattia porttien 120/m15/m216 suilla y = 0
+   (askelmat 0,15/0,30 paikallisesti, rakennukset.json lattia_y 120: 0,3, m15/m216: 2,5, 424: 0). Drone-lokissa ei sijaintia (polku.tsv tyhjä) →
+   PK:lta pyydetty x/z. SEURAAVAKSI: selvitä portti (arkki-v67b-100-150.png, video lokit/todistus-drone214v67b-9bbf39e25-20261029-1532/drone214v67.mp4,
+   käännä 90° vastapäivään), sitten taustan + rakennuksen + avoimien lattiat maailmakoordinaateissa samassa kohdassa (lattia_y-siirto huomioiden)
+   → päällekkäinen poistetaan/lasketaan (vrt. lattia_paallekkain_pois.py). Rakennuksen V4_lattia UV = x/8 paikallisesti, taustan oma → eri kuvio.
+3. v67 (_valmiit/juoksupeli-kk-lavastaja-v67-vienti-20261029, SHA c6402a2f…) sisältää yhä yksikerros-v110 + pari-v136 (JUOVAT). v68 =
+   paketti_v67.py kopioksi paketti_v68.py: tausta-v68 = yksikerros-v111 (tai uudempi katkoviivakorjauksella), muurikate-v23 = pari-v137,
+   rakennukset-v51/v52 → SHA → PT + PK (drone). Ei ämpäriin ennen omistajan korttia.
+4. Luovutus-PR 5598 (haara lavastaja/luovutus-75) auki, lisäykset 76–83.
