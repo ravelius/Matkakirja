@@ -187,3 +187,16 @@ test('admin-0: isot kenttänimet luetaan, yksi alue per maa, nimi NAME-kentäst�
   assert.equal(maa.alueet[0].renkaat.length, 2);
   assert.ok(Math.abs(maa.alueet[0].ala - 2) < 1e-9);
 });
+
+test('NE:n nimivirheet: Požega-Slavonia ja Rasina omiksi alueikseen wikidata-tunnuksen mukaan (28.10.2026)', async () => {
+  const { korjaaNeAdmin1 } = await import('../tools/ne-korjaukset.mjs');
+  const piirre = (name, wikidataid, iso) => ({ properties: { adm0_a3: iso, name, wikidataid, iso_3166_2: `${iso}-?` } });
+  const ne = { features: [
+    piirre('Brodsko-Posavska', 'Q58129', 'HRV'), piirre('Brodsko-Posavska', 'Q58111', 'HRV'),
+    piirre('Pomoravski', 'Q1043446', 'SRB'), piirre('Pomoravski', null, 'SRB'),
+  ] };
+  assert.equal(korjaaNeAdmin1(ne), 2);
+  assert.deepEqual(ne.features.map((f) => f.properties.name), ['Brodsko-Posavska', 'Požeško-Slavonska', 'Rasinski', 'Pomoravski']);
+  assert.equal(ne.features[1].properties.iso_3166_2, 'HR-11');
+  assert.equal(korjaaNeAdmin1(ne), 0, 'toinen ajo ei muuta mitään');
+});
