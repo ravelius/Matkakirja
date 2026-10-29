@@ -767,3 +767,21 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   yksikerros-v101/kuja05-muurilinjat.json (pohja.json-kehys). Apuvälineet: kuja40_mittaa.py, alue_seinat.py, vyo_materiaalit.py.
 - SEURAAVA: KK:n palaute 05-pariin (lähipuu näkyy muurin yli: kielletty-lahipuut-v6, poista tarvittaessa; 05:lle testikamera kuten 02);
   KS:n pohja v101-linjoista → PK rata (≥ 2,4 m, suositus ≥ 3) → vienti. Kuja 02: odota omistajan korttia (suositus leveys ennallaan).
+
+## LISÄYS 59 klo 07.30 (29.10.): KUJAN 05 JATKO v119 + VIENTIPAKETTI v63 — LUOVUTUS, ALOITA TÄSTÄ
+- v118 hylätty: uusi itämuuri peitti puolet pohjoisen t-portti-424:n aukosta (malli: jambit x −251,4 / −247,0, t-portti-424 paikka
+  (−249,15; 425,25)). muuri_jatko05.py v3 (v1/v2 .v1/.v2): jatko aukosta aukkoon, LEVEYS 4,5 vakio, kallistus ~4,5° (leikkaus: x-siirto
+  z:n mukaan): länsi (−253,98; 403,4) → (−252,35; 424,3) + aukko kuja-29:lle keski (−253,43; 410,4) 4 m; itä (−248,68; 403,4) →
+  (−247,05; 424,3) vanhaan itämuuriin. aja_v119_pari.zsh → yksikerros-v102, muurikate pari-v119, juuri-v119m. Parit -072341/05 ja
+  05j-peli.png (editori-lr.sh: uusi kohta 05j "-251.0 407 -1.0"; vertailu kaatuu 05j:lle, koska havainnekuvaa ei ole → kuva esikatselu-kansiosta).
+- KS: pk6 (bf2dbd78) = malli ±0,01 (LR tarkisti kuja40_mittaa.py:llä; vanhat muurit +2,30 / −3,80), pk7 (e8a5b232) = v102:n linjat +
+  way/42509088 t-porttiaukko (−249,2; 425,19) 4,4 m. PK: pk6-ratatarkistus OK (haara pelikoodari/pk6-214 7e9c8473c), pk7:n tarkistus odottaa.
+- VIENTIPAKETTI: /Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-kk-lavastaja-v63-vienti-20261029 (SHA256SUMS-tiedoston SHA 6e94cd84…,
+  298 tiedostoa, LAHTEET.md): kielletty-tausta-v63 (= yksikerros-v102), kielletty-muurikate-v20/kk-muurikate-v20-pohja.glb (= pari-v119),
+  kielletty-rakennukset-v49 (= rakennukset-v116), avoimet-v51 (= avoimet-v74k, kuja 01 v112). Pelin nykyiset (pk6-214): tausta-v62,
+  muurikate-v19/kk-muurikate-v19-pohja.glb, rakennukset-v48, avoimet-v50. Versiot PK:lle ilmoitettu; JU:n ämpärivienti PT:n luvalla (kysytty).
+- JUMI (PT:lle kysytty): t-portti-424:n aukko on taustassa UMPINAINEN (muuri + kivijalka z 424,4–426,5, x −253…−246,4) myös pelin v62:ssa,
+  mutta pk7:n rata kulkee siitä kuja-39:ään → jos PT/PK vahvistaa, leikkaa aukko (x −251,4…−247,0, alle aukon yläreunan) taustaan ja
+  uusi paketti (v64). Tarkistus: scratchpad-skripti aukko.py ei tallessa → tee uudelleen alue_seinat.py:n pohjalta (este y 0,5–2,0).
+- Auki: kuja-29:n aukon pielien kansi vaalea (UV lähimmästä kärjestä ei osu) → kopioi pieliin muurin pinnan UV tai V4_red-materiaali;
+  KK:n palaute 05-pariin; omistajan kortti kuja 02 (suositus leveys ennallaan). VIESTIRAJA täynnä → varakanava send_message.
