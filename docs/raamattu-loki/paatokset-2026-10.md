@@ -3196,3 +3196,7 @@ Kortti 'Sävytetäänkö julkiset rakennukset ja asemat näin?' → 'Kyllä (suo
 ## KARTTASAUMAT KELPAA (omistaja 29.10.2026 klo 17.13) (29.10.2026 klo 17.14)
 
 Kortti 'Kelpaako karttasaumojen korjaus?' → 'Kelpaa (suositus)' (selite: 'Korjaus menee junaan, kun mittaus pienellä iPadilla on tehty'). KS 5767441da (siirtyma-sse-214) junaan vasta pienen iPadin mittauksen jälkeen seuraavalla studiokäynnillä. Striimikartasta jäljellä merkittävyys, sitten pieni iPad (päätös 13.22).
+
+## LEVY-1029: IPAD-ASENNUSVÄLIMUISTI TYHJENNETÄÄN (omistaja 29.10.2026 klo 17.14) (29.10.2026 klo 17.14)
+
+Kortti 'Saako iPad-asennusten 50 Gt:n välimuistin tyhjentää Macilta?' → 'Kyllä (suositus)' (selite: 'Vapauttaa 50 Gt; seuraava iPad-asennus kestää hieman kauemmin.'). NS poistaa vain AppInstallationBinaryDeltas-kansion (CoreDeviceService Caches).
