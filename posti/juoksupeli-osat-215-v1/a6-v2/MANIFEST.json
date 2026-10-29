@@ -1,0 +1,189 @@
+{
+  "createdAt": "2026-10-29T22:04:29.499161+00:00",
+  "order": "#1267 PT correction59f52815",
+  "version": "a6-v2",
+  "status": "TECHNICAL_READY_RECEIVER_PENDING",
+  "assets": [
+    {
+      "name": "side-pavilion",
+      "path": "3d/side-pavilion.glb",
+      "sha256": "9e8f27b33093649bef464d075d918b6a1bd4e534d83c6b77b404c9a548015e03",
+      "bytes": 9778432,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1267-side-pavilion-attempt1.glb",
+      "sourceSHA256": "6951ef8ca04db3d2ce0cfbc0e5026c0d6419c39f39173c23a218cd60735f719d",
+      "triangles": 66347,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        65.22279357910156,
+        27.0,
+        31.679176330566406
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 69.87055969238281,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/side-pavilion/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "8cb12c315c6c85596e4e5ae9233c10a95fabe4750610d9bb84c245ef7ee295c0",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/side-pavilion/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "24b980205770812a37f4cda967f7c351b2efebb21939f7ec196b76e6dd29b6b4",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/side-pavilion/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "880b913f6d381ce1f9bba3f5659261950b72c71c360c94eaa3d8a3a2e826eb13",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS_WITH_BACKFACE_CULLING",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "yawAppliedDegrees": 0.0,
+      "orientationQA": "PASS_EAVE_FRONT_PLUS_Z",
+      "peakRSSMiB": 467.8125,
+      "elapsedSeconds": 11.272039665956981,
+      "vertices": 64340,
+      "baseFootprintM": [
+        62.70000076293945,
+        28.399999618530273
+      ],
+      "heightM": 27,
+      "scaleAppliedXYZ": [
+        0.7623346102646039,
+        1.000000070642547,
+        0.9178603415021238
+      ],
+      "visualReviewAt": "2026-10-29T22:04:29.431716+00:00",
+      "bayCountMain": 9,
+      "bayCountUpper": 7,
+      "frontColumnsVisual": 10,
+      "mapsBytesPreserved": true,
+      "UVAtCutsInterpolated": true,
+      "normalsRecomputedAtTransitions": true,
+      "tangents": "Importer derives tangents from UV; removed stale source tangents",
+      "finiteAttributes": true,
+      "indexBoundsValid": true,
+      "normalsUnit": true,
+      "rootIdentity": true,
+      "watertightCertified": false,
+      "knownLimitations": [
+        "Historically informed exterior game model, not a measured museum replica. Lower9 and upper7 bay count follow PT decision.",
+        "Base62.7x28.4m, height27m follow game order; roof overhang gives larger overall bounding box. No traversable interior or approach stair.",
+        "Original seven-bay source supplies upper storey and narrower roof. Lower facade below9m is triangle-position identical to previous nine-bay delivery. Storey interface rebuilt at13m; lower roof end closure uses repeated original gold atlas patch, short-side internal panels use original red atlas sample. Original texture files unchanged.",
+        "Lower-roof closure detail is simpler than original sculpted tile geometry; evaluate at intended game distance. Static preview uses backface culling and basecolor only. PBR lighting and runtime seams require receiver same-camera game check; not a watertight certification."
+      ],
+      "upperColumnsVisual": 8,
+      "sourceMapsPreserved": true,
+      "lowerFacadeFacesBelow9mPreserved": 15917,
+      "shortSideGapsClosed": true,
+      "receiverTechnicalAccepted": false,
+      "PTFinalAccepted": false,
+      "sourceCorrectionOrder": "59f5281510f31d92f4b0a317d4a7f9e75f79c3b8",
+      "sourceCorrectionAck": "e4866960338ebf91adc79b8344c8f265d835886f",
+      "previousVersionSHA256": "345ee2b2475974ef4d64b2df1455854a5faee277ba308f8802978001ef2a10ee",
+      "newTripoCalls": 0,
+      "newImageCalls": 0,
+      "credits": 0,
+      "task": 1267,
+      "jobId": "ab1b8ec4-9d33-4e02-8c72-01e156c0b3ff",
+      "attempt": 1
+    }
+  ],
+  "liike": "ei liikettä",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "files": [
+    {
+      "path": "3d/side-pavilion.glb",
+      "bytes": 9778432,
+      "sha256": "9e8f27b33093649bef464d075d918b6a1bd4e534d83c6b77b404c9a548015e03",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "KAYTTO.md",
+      "bytes": 1177,
+      "sha256": "a2ae89803ef0e3daa467a82001ee85eb2c46ed148b04a0a1f0672e9a7a3ba2e3"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 743,
+      "sha256": "3879d0f77679a0ad4ace62cdf5b0d4111c229bfc479f35372f1c3f8fc1c524aa"
+    },
+    {
+      "path": "esikatselu/side-pavilion-front-count.png",
+      "bytes": 1075460,
+      "sha256": "5eb1c433fa0b1b89ba5f072a352d96f13f7f579102b6b9d9ef97659127b645d6"
+    },
+    {
+      "path": "esikatselu/side-pavilion-nelja-suuntaa.png",
+      "bytes": 678108,
+      "sha256": "5c52aa7aef43407633b0662138a06cb1e5d02a04068b1d12ec747ddfab5c50fc"
+    },
+    {
+      "path": "esikatselu/side-pavilion-side-cull.png",
+      "bytes": 582267,
+      "sha256": "c63511fc0c3953f8054acb3319592e8d643ea774b31ffe95435217df101136c1"
+    },
+    {
+      "path": "qa/import-gate.json",
+      "bytes": 2340,
+      "sha256": "d648e2d1aaeaec4ada284c45b4fe03c447d4cefbf3d784a3e971f14758ab2b64"
+    },
+    {
+      "path": "qa/local-assembly.json",
+      "bytes": 720,
+      "sha256": "0d60c2169cd5e26de352ab797a633044b689eb4529f104d010e7c8885e7ad659"
+    },
+    {
+      "path": "qa/side-pavilion-technical.json",
+      "bytes": 3928,
+      "sha256": "b9bf8abb02f7385503bad4071d003a1d7da92f3dfdcce8b8e17b275810bc9659"
+    },
+    {
+      "path": "tekstuurit/side-pavilion/basecolor.jpg",
+      "bytes": 1455128,
+      "sha256": "24b980205770812a37f4cda967f7c351b2efebb21939f7ec196b76e6dd29b6b4"
+    },
+    {
+      "path": "tekstuurit/side-pavilion/metallic-roughness.jpg",
+      "bytes": 822915,
+      "sha256": "880b913f6d381ce1f9bba3f5659261950b72c71c360c94eaa3d8a3a2e826eb13"
+    },
+    {
+      "path": "tekstuurit/side-pavilion/normal.png",
+      "bytes": 1880205,
+      "sha256": "8cb12c315c6c85596e4e5ae9233c10a95fabe4750610d9bb84c245ef7ee295c0"
+    }
+  ]
+}

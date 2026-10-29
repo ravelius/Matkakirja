@@ -1,0 +1,111 @@
+{
+  "name": "side-pavilion",
+  "path": "3d/side-pavilion.glb",
+  "sha256": "9e8f27b33093649bef464d075d918b6a1bd4e534d83c6b77b404c9a548015e03",
+  "bytes": 9778432,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1267-side-pavilion-attempt1.glb",
+  "sourceSHA256": "6951ef8ca04db3d2ce0cfbc0e5026c0d6419c39f39173c23a218cd60735f719d",
+  "triangles": 66347,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    65.22279357910156,
+    27.0,
+    31.679176330566406
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 69.87055969238281,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/side-pavilion/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "8cb12c315c6c85596e4e5ae9233c10a95fabe4750610d9bb84c245ef7ee295c0",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/side-pavilion/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "24b980205770812a37f4cda967f7c351b2efebb21939f7ec196b76e6dd29b6b4",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/side-pavilion/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "880b913f6d381ce1f9bba3f5659261950b72c71c360c94eaa3d8a3a2e826eb13",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS_WITH_BACKFACE_CULLING",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "yawAppliedDegrees": 0.0,
+  "orientationQA": "PASS_EAVE_FRONT_PLUS_Z",
+  "peakRSSMiB": 467.8125,
+  "elapsedSeconds": 11.272039665956981,
+  "vertices": 64340,
+  "baseFootprintM": [
+    62.70000076293945,
+    28.399999618530273
+  ],
+  "heightM": 27,
+  "scaleAppliedXYZ": [
+    0.7623346102646039,
+    1.000000070642547,
+    0.9178603415021238
+  ],
+  "visualReviewAt": "2026-10-29T22:04:29.431716+00:00",
+  "bayCountMain": 9,
+  "bayCountUpper": 7,
+  "frontColumnsVisual": 10,
+  "mapsBytesPreserved": true,
+  "UVAtCutsInterpolated": true,
+  "normalsRecomputedAtTransitions": true,
+  "tangents": "Importer derives tangents from UV; removed stale source tangents",
+  "finiteAttributes": true,
+  "indexBoundsValid": true,
+  "normalsUnit": true,
+  "rootIdentity": true,
+  "watertightCertified": false,
+  "knownLimitations": [
+    "Historically informed exterior game model, not a measured museum replica. Lower9 and upper7 bay count follow PT decision.",
+    "Base62.7x28.4m, height27m follow game order; roof overhang gives larger overall bounding box. No traversable interior or approach stair.",
+    "Original seven-bay source supplies upper storey and narrower roof. Lower facade below9m is triangle-position identical to previous nine-bay delivery. Storey interface rebuilt at13m; lower roof end closure uses repeated original gold atlas patch, short-side internal panels use original red atlas sample. Original texture files unchanged.",
+    "Lower-roof closure detail is simpler than original sculpted tile geometry; evaluate at intended game distance. Static preview uses backface culling and basecolor only. PBR lighting and runtime seams require receiver same-camera game check; not a watertight certification."
+  ],
+  "upperColumnsVisual": 8,
+  "sourceMapsPreserved": true,
+  "lowerFacadeFacesBelow9mPreserved": 15917,
+  "shortSideGapsClosed": true,
+  "receiverTechnicalAccepted": false,
+  "PTFinalAccepted": false,
+  "sourceCorrectionOrder": "59f5281510f31d92f4b0a317d4a7f9e75f79c3b8",
+  "sourceCorrectionAck": "e4866960338ebf91adc79b8344c8f265d835886f",
+  "previousVersionSHA256": "345ee2b2475974ef4d64b2df1455854a5faee277ba308f8802978001ef2a10ee",
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0
+}

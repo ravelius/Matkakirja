@@ -1,0 +1,33 @@
+{
+  "status": "WORK_VISUAL_QA_PENDING",
+  "sha256": "9e8f27b33093649bef464d075d918b6a1bd4e534d83c6b77b404c9a548015e03",
+  "bytes": 9778432,
+  "triangles": 66347,
+  "lowerTrianglesAfterCut": 32981,
+  "upperSourceTrianglesAfterCut": 22432,
+  "capsTriangles": 10934,
+  "lowerBays": 9,
+  "upperBays": 7,
+  "baseFootprintM": [
+    62.70000076293945,
+    28.399999618530273
+  ],
+  "dimensionsXYZM": [
+    65.22279357910156,
+    27.0,
+    31.679176330566406
+  ],
+  "sourceMapsPreserved": true,
+  "cutHeightM": 13.0,
+  "goldAtlasPatchPixels": [
+    633,
+    913,
+    40,
+    40
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "backfaceCullingPreview": true,
+  "elapsedSeconds": 11.272039665956981,
+  "peakRSSMiB": 467.8125
+}
