@@ -3176,3 +3176,7 @@ Pyyntö 08.21: juoksun loppuun yhteenveto rikotuista esineistä: Codexin syväty
 ## RIKOTTUJEN YHTEENVEDON NÄKYMÄ KELPAA (omistaja 29.10. klo 09.59) (29.10.2026 klo 09.59)
 
 Kortti KK:ssa: 'Kelpaako rikottujen esineiden yhteenvedon näkymä?' → 'Kelpaa (suositus)' ('Näkymä menee junaan, kun viisi uutta muistokuvaa ovat valmiit.'). Kuvat NUI ipad2-R1 + R3 (1020689b8). Viisi muistokuvaa (posliinimaljakko, lakkarasia, jadeastia, kello, kääretaulu) esittivät eri esinettä kuin pelimalli → Codex tekee uudet (PK:n tilaus b340dd473), KK tarkistaa, omistaja valitsee; merge junaan 214 vasta niiden jälkeen.
+
+## RIKOTTUJEN VIISI MUISTOKUVAA KELPAAVAT (omistaja 29.10. klo 11.52) (29.10.2026 klo 11.52)
+
+Kortti KK:ssa: 'Kelpaavatko viisi uutta muistokuvaa?' → 'Kelpaavat (suositus)' ('Kuvat peliin ja rikottujen yhteenveto junaan 214.'). Posliinimaljakko, lakkarasia, kääretaulu (Codex 767a18e17) sekä jadeastia ja kello (uusinta b64038412, ei marmorijalustan toistoa). PK vie kuvat haaraan rikotut-214, NUI tekee merge-pyynnön NS:lle junaan 214.
