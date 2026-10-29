@@ -973,3 +973,20 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   file:///Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kk-pohja-pk7/kk-pohja-v1d-pk7/pohja.json" REF=9c0477cb6 J=v134p KOHDAT="02 05"
   zsh K/tyokalut/aja_v132_pari.zsh. Parit 02 + 05: lokit/havainne-editori-20261029-143933 (sovitettu), -144114 (pelikamera) → PT 14.4x.
   Havainto: lattia ja kivijalka näkyvät pelissä selvästi havainnetta vaaleampina (marmorimainen valkoinen) — PK:n varjostin/valo.
+
+## LISÄYS 77 klo 14.5x (29.10.): UUSI TEHTÄVÄ PT:LTÄ — KUJAKIVIEN LAATTA- JA KIVIJALKAJAKO UV:LLA (LUOVUTUS, ALOITA TÄSTÄ)
+- Tila: muoto OK (PT 14.4x: 05 matala siipi + friisi, 02 reunakivet + katto). 05:n mittari selitetty PT:lle (keisari 0,20 = pelikamera;
+  sovitettu 0,15; räystäs-mittari mittaa lähimuurin tiiliä, friisin alareuna 0,18–0,19 vs 0,17).
+- PT 14.5x: valkoinen lattia = VS:n _KujaKivi (seinat-211) puuttuu PK:n REFistä 9c0477cb6. Kujien kivikoko tulee LR:n UV-mitoista
+  (kujakivi_pinnat.py: LKU/LKV lattia, SK sokkeli), ei PK:n k22:sta. Omistajan sanat (11.02/11.04, lisäykset 70–71): "lattialaatat noin
+  1,5–2 kertaa nykyistä pidemmät ja eripituiset"; "kivijalan kivet matalina pitkinä kerroksina, kivijalan kokonaiskorkeus ennallaan"
+  (KK: kivi ~0,4 × korkeus, ~2,2 × pituus).
+- TEE: kujakivet UV:lla REF-linjalla 46c0add3c (VS:n kujakivet mukana; EI 9c0477cb6). Nykyiset arvot (aja_v101_pari.zsh, säilyneet v93 → v108):
+  SK=1.0 LKU=1.0 LKV=1.8, pinnat K/../kujakivi-pinnat-v5 (VV_SOKKELI/PILARI/LATTIA=v02), lattia UV0 = PCA-tasoprojektio / 2,0 m.
+  Kokeile lattiaan pidempi kivi (LKV/LKU) ja sokkeliin matala pitkä kerta (u- ja v-skaala erikseen; kokonaiskorkeus ennallaan). Aja
+  kujakivi_pinnat.py yksikerros-v108:n KOPIOON (→ v109; tarkista, että skripti tunnistaa jo muunnetut V4_kujakivi_*-materiaalit, tai lähde v107:stä ennen
+  pinnat-vaihetta). Eripituisuus ei onnistu pelkällä UV-skaalalla → jos tarvitaan, tilaa Codexin kuvat-sessiolta kujakivitekstuurin uusinta
+  (pysyvä lupa; ks. osoitekirja) ja kerro PT:lle.
+- Parit: juuri-v135m (= v134m + uusi tausta), `REF=46c0add3c J=v135m KOHDAT="02 05" zsh K/tyokalut/aja_v132_pari.zsh` → PT.
+  seinat-211 + v66 menevät junaan 214 yhdessä (omistaja hyväksyi kujakivet 28.10. 18.57).
+- v66-paketti (paketti_v66.py) yhä tekemättä: R = rakennukset-v126, tausta = uusin (v108 tai v109), muurikate pari-v134 (v21, uusi pakettiin).
