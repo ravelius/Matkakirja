@@ -897,3 +897,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - TEE v66:n jälkeen (älä sotke v66:n porttikorjauksiin): lattian laattajako + reunakiven muoto. Jos laattapinta vaatii uuden eripituisen
   laattasarjan, kerro PK:lle (Codex-tilaus; KK:n 28.10. v4d-hyväksyntä ei koskenut tätä). Pari kuja 02 → KK → omistaja, sitten muut kujat.
 - Viikkokäyttö 97 % (tauko 2.11. klo 03 asti): ei agentteja eikä raskaita ajoja ennen nollausta.
+
+## LISÄYS 71 klo 11.08 (29.10., PT): OMISTAJA 11.04 — MYÖS KIVIJALAN KIVET MATALIKSI (jatko lisäykseen 70)
+- Sanatarkasti: "myös kivet seinällä ovat nyt liian korkeita."
+- KK (docs/raportit/kaappaukset/omistaja-20261029/kivijalka-vertailu-kk-1106.png, vasen havainne, kuja 02 oikea muuri): pelissä kivet
+  pystymallisia (korkeus ~1,4 × leveys); havainteessa kivi ~0,4 × pelin kiven korkeus ja ~2,2 × pituus (~3–4 × korkeuttaan pidempi),
+  matalina pitkinä kerroksina limittäin. Kivijalan kokonaiskorkeus pysyy (täsmää havainteeseen). Kaikki kujat ja aukiot.
+- Samaan pariin 02 lattian ja reunakiven kanssa → KK → omistaja. Kivisarjan uusinta Codexilla PK:n kautta, jos tarvitaan.
