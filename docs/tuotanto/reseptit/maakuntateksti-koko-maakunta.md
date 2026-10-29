@@ -37,6 +37,13 @@ Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti
 - Tuore lukija huomaa hyvin viittaukset (sen/siellä/se), selittämättömät sanat (despotaatti, bulla, sotilasraja) ja translitterointien epäjohdonmukaisuuden (š/tš, j/y, ă); korjaa nämä, mutta kaikkia vierasnimien eroja ei kannata yhtenäistää.
 - Työtapa toimii: pääsession skriptit tiedostoihin (yhdista.mjs, korjaa*.mjs lista [vanha, uusi] -korvauksista, jotka kaatuvat, jos vanhaa tekstiä ei löydy), agentit kirjoittavat JSON:in, `maakuntateksti-aseta.mjs` + testi, raportti docs/raportit/, PR per maa.
 
+## Opitut asiat 28.10. ilta (KK:n tarkistus 23 PR:ää, Puola, Kreikka)
+- KK:n mittari: ensilauseessa sijainti maassa; enintään puolet virkkeistä keskuskaupungista; ei yliopisto- tai kaupunkikeskeistä tekstiä. Agenttiohjeeseen kopioidaan nämä säännöt (Kreikan ohje: lisäsäännöt).
+- Yleisimmät virheet: korkeusluvut ja vuodet muistista (Monte Coglians, Pilsko, Łysica), vanhentuneet luvut (Neuchâtel, Sevastopol), "suurin/ainoa/vanhin" ilman lähdettä, sama tapahtuma väärässä paikassa (Orašac/Topola, Plaiul Fagului). Poista luku, jos se on ristiriitainen lähteissä.
+- Kun korvaus poistaa virkkeen lopun, tarkista piste (Świętokrzyskie jäi ilman pistettä); aja korjaukset skriptillä ja lue tulos.
+- Tuore lukija keksii joskus tekstiin kuulumatonta sisältöä; hylkää huomautus, jota ei löydy tekstistä.
+- Pakin työkalu maakuntateksti-aseta.mjs odottaa muodon { avain: teksti } (ei { pitka, lahteet }); vanhat haarat voivat puuttua työkalusta.
+
 ## Agenttiohje (kopioi tiedostoon; vaihda <oma worktree> ja MAATUNNUS)
 
 # Ohje: maakuntatekstin (pitka) kirjoitus koko maakunnasta
@@ -63,3 +70,8 @@ JSON-tiedosto, objekti { "<englanninkielinen avain täsmälleen kuten pakissa>":
 
 ## Norjan lisäohje
 Pakin avaimet ovat Norjan ENTISIÄ (ennen 2020) lääniä (fylke) sekä Svalbard ja Bouvet Island; fi-Wikipedia kutsuu niitä lääneiksi (esim. "Akershusin lääni"). Kirjoita teksti alueesta, ja jos entinen lääni on nykyään osa yhdistettyä tai uudelleen jaettua läänä (Hordaland ja Sogn og Fjordane = Vestland; Nord- ja Sør-Trøndelag = Trøndelag; Hedmark ja Oppland = Innlandet; Aust- ja Vest-Agder = Agder; Telemark/Vestfold, Troms/Finnmark, Akershus/Buskerud/Østfold: tarkista tämän hetken tilanne lähteestä), mainitse se yhdellä lyhyellä virkkeellä. Asukasluku: tuorein lähteestä löytyvä luku alueelle (entisen läänin alue tai sen kunnat; ilmoita vuosi ja lähde epavarma-kentässä). Bouvet Island ja Svalbard ovat erityisalueita: kerro millainen paikka on (asumaton saari / arktinen saaristo), ei lääni-sanaa Bouvetista. Norjalaiset nimet fi-Wikipedian muodossa (Oslo, Bergen, Trondheim, Huippuvuoret, Lofootit jne.).
+
+## Avoimet
+- Kroatia: Požega-Slavonia (Požeško-slavonska) puuttuu kartan alueaineistosta ja pakeista (maakunnat-nimet.js HRV, 20 avainta). Karttaseppä lisää avaimen (PT:n järjestys: porrastuksen ja TF 213:n jälkeen); sen jälkeen SK lisää tekstin samalla avaimella (`maakuntateksti-aseta.mjs HRV`; pakin lyhyt-kenttä tarvitaan myös). Tekstiehdotus (85 sanaa, en-Wikipedia, tarkista ennen asetusta):
+
+> Požega-Slavonia on piirikunta Slavonian länsiosassa, ja siellä asuu noin 64 000 ihmistä (väestönlaskenta 2021). Piirikunnan pinta-ala on noin 1 800 neliökilometriä. Keskus Požega on laaksossa, jota ympäröivät Požeška gora, Papuk ja Dilj -vuoret. Roomalaisaikana laaksoa kutsuttiin nimellä Vallis Aurea, kultainen laakso. Požega siirtyi Habsburgien hallintaan vuonna 1691 ottomaanien vallan jälkeen. Kaupungin keskusaukiolla on Pyhän Hengen kirkko, fransiskaaniluostari ja ruttopylväs. Kutjevon kaupunki tunnetaan viineistään, ja siellä valmistetaan muun muassa graševina-valkoviiniä. Lipik on kylpyläkaupunki, joka tunnetaan kivennäisvedestä ja lipizzanhevosten talleista. Pakracin ja Pleternican kaupungit kuuluvat myös piirikuntaan.
