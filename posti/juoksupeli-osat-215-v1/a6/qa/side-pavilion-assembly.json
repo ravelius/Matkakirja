@@ -1,0 +1,116 @@
+{
+  "status": "TECHNICAL_REVIEW_CANDIDATE_NOT_GAME_ACCEPTED",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/delivery/3d/side-pavilion-baseline.glb",
+  "sourceSHA256": "5adb5fbff22edde90d4bca84fd12b3f6a096d2c6a99c6cd4452a49b0dbf6962c",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/work/a6-ninebay-v4/side-pavilion.glb",
+  "sha256": "345ee2b2475974ef4d64b2df1455854a5faee277ba308f8802978001ef2a10ee",
+  "bytes": 9610984,
+  "triangles": 60812,
+  "vertices": 45673,
+  "dimensionsXYZM": [
+    65.22279357910156,
+    27.0,
+    31.679176330566406
+  ],
+  "baseFootprintM": [
+    62.7,
+    28.4
+  ],
+  "heightM": 27,
+  "repeatRegions": [
+    {
+      "name": "left_end",
+      "sourceXRange": [
+        -1000000000.0,
+        -21.3
+      ],
+      "translationX": -8.600000000000001,
+      "triangles": 10804
+    },
+    {
+      "name": "insert_left",
+      "sourceXRange": [
+        -21.3,
+        -12.7
+      ],
+      "translationX": -8.600000000000001,
+      "triangles": 5359
+    },
+    {
+      "name": "original_middle",
+      "sourceXRange": [
+        -21.3,
+        21.3
+      ],
+      "translationX": 0,
+      "triangles": 23414
+    },
+    {
+      "name": "insert_right",
+      "sourceXRange": [
+        12.7,
+        21.3
+      ],
+      "translationX": 8.600000000000001,
+      "triangles": 5070
+    },
+    {
+      "name": "right_end",
+      "sourceXRange": [
+        21.3,
+        1000000000.0
+      ],
+      "translationX": 8.600000000000001,
+      "triangles": 11297
+    }
+  ],
+  "fitXYZ": [
+    0.7623346102646039,
+    1.000000070642547,
+    0.9178603415021238
+  ],
+  "mapsBytesPreserved": true,
+  "transitionNormalsRecomputed": true,
+  "tangents": "Omitted after deformation; importer derives from preserved UVs",
+  "expectedFrontColumnsBefore": [
+    -30.5,
+    -21.3,
+    -12.7,
+    -4.5,
+    4.5,
+    12.7,
+    21.3,
+    30.7
+  ],
+  "expectedFrontColumnsAfterM": [
+    -29.807283261346015,
+    -22.79380484691166,
+    -16.237727198636065,
+    -9.681649550360468,
+    -3.430505746190718,
+    3.430505746190718,
+    9.681649550360468,
+    16.237727198636065,
+    22.79380484691166,
+    29.95975018339893
+  ],
+  "boundaryJoining": "Conformed joins plus internal source-textured section caps. Exterior-only static building; not certified watertight.",
+  "elapsedSeconds": 13.360199625021778,
+  "peakRSSMiB": 188.703125,
+  "internalJointCaps": [
+    {
+      "xM": -16.237727198636065,
+      "sourceBoundarySegments": 657,
+      "levels": 614,
+      "capTrianglesTwoSided": 2450,
+      "method": "Horizontal strip caps span the union of front/back source section envelopes at every source boundary height. Interior-only joint, no traversable interior provided."
+    },
+    {
+      "xM": 16.237727198636065,
+      "sourceBoundarySegments": 633,
+      "levels": 609,
+      "capTrianglesTwoSided": 2430,
+      "method": "Horizontal strip caps span the union of front/back source section envelopes at every source boundary height. Interior-only joint, no traversable interior provided."
+    }
+  ]
+}

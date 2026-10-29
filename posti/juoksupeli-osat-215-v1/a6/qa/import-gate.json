@@ -1,0 +1,108 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/partial-a6-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "side-pavilion.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "side-pavilion.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 60812,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -32.597,
+       0,
+       -15.827
+      ],
+      "max": [
+       32.626,
+       27,
+       15.852
+      ],
+      "koko": [
+       65.223,
+       27,
+       31.679
+      ]
+     }
+    },
+    "polku": "3d/side-pavilion.glb"
+   },
+   {
+    "nimi": "side-pavilion-front-count.png",
+    "polku": "esikatselu/side-pavilion-front-count.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1536,
+     "h": 720
+    }
+   },
+   {
+    "nimi": "side-pavilion-nelja-suuntaa.png",
+    "polku": "esikatselu/side-pavilion-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 900
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/side-pavilion/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/side-pavilion/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/side-pavilion/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: side-pavilion.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]
