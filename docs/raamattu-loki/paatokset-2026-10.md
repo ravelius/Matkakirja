@@ -3222,3 +3222,7 @@ kivijalka, reunakivi, muurikate + vihreä vyö, sisä-/ulkokulma, portin pääty
 automaattinen sallittujen pintojen tarkistus (saa kulkea junassa, 9.1); 5) jokainen pariajo kuvaa kaikki 8 havainnekohtaa. Rajat: mitat ennallaan (20.10. 07.30), ei ACA Builderia, ei ostoja, ei
 tekoälymalleja osiin. Aukion erolista 1–5 rinnakkain. Spesi scratchpad/keskustelukanava/osasarja-juoksupeli-20261029.md; LR kirjaa tekotavan B 3d-ja-kuvat.md:hen. Raamatun linjaukseksi vasta OMISTAJAN
 PÄÄTÖS -rivillä.
+
+## JUOKSUPELI: OSASARJA OMISTAJAN HYVÄKSYMÄ; HALLI JA PORTTI 06 RINNAKKAIN (29.10.2026 klo 21.11)
+
+Omistaja 29.10.2026 klo 21.07 KK:n osasarjaselityksen jälkeen, sanatarkasti: "Hyvä. Keksitkö vielä muita tapoja tämän lisäksi" → yhteinen osasarja (loki 20.51) on omistajan hyväksymä tekotapa. KK:n lisäsuositus (operatiivinen): ainutlaatuiset rakennukset rinnakkain osasarjan kanssa. PT 21.1x: Taihedianin halli (erolista 1, 2, 5) → Natiivi-UI, Meridiaaniportti 06 → Karttaseppä (uusien sessioiden luonti estyi: Remote Control -tilassa start_session vaatii työpöytäsovelluksessa kirjoitetun viestin; levossa olevat Opus-roolit käytettiin). LR jatkaa osasarjaa ja aukion muureja; PK lähettää tänä iltana yhden Codex-tilauksen kaikista ainutlaatuisista osista (harjakoristeet ja harjaeläimet, kannatinryhmät, ristikko-ovet, palkkimaalaus, kaidepylväät, sivupaviljongit) havainnekuvien rajauksin. Tavoite: aukion, hallin ja portin parit lähes yhtä aikaa.
