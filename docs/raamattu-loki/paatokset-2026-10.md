@@ -3172,3 +3172,7 @@ Kortti KK:ssa: 'Onko dronekameran liike nyt sopiva?' → 'Sopiva (suositus)' ('P
 ## JUOKSUPELIN LOPPUYHTEENVETO RIKOTUISTA ESINEISTÄ (omistaja 29.10. klo 08.21–08.55) (29.10.2026 klo 08.55)
 
 Pyyntö 08.21: juoksun loppuun yhteenveto rikotuista esineistä: Codexin syvätyt esinekuvat, nimi + (kpl), napautus avaa ikkunan, jossa esineen muistokuva (muistokupla) ja lyhyt historia kiinalaisesta kulttuurista. 08.23 kortti: 'Ei, vain rikotut' (ei rikkomattomia siluetteina). 08.55 kortti: 14 historiatekstiä 'Kelpaavat (suositus)' KK:n neljällä kielikorjauksella ja PT:n kellon vuosikorjauksella (1600-luvun alussa). PT: yhteenveto aukeaa itsestään ennen loppukorttia ja vain, jos jotain rikottiin; Kokoelma-nappi ennallaan. Pohjat: galleria-lasi + mk-nosto (NUI), logiikka JuoksuTulos.RikotutEsineet (PK).
+
+## RIKOTTUJEN YHTEENVEDON NÄKYMÄ KELPAA (omistaja 29.10. klo 09.59) (29.10.2026 klo 09.59)
+
+Kortti KK:ssa: 'Kelpaako rikottujen esineiden yhteenvedon näkymä?' → 'Kelpaa (suositus)' ('Näkymä menee junaan, kun viisi uutta muistokuvaa ovat valmiit.'). Kuvat NUI ipad2-R1 + R3 (1020689b8). Viisi muistokuvaa (posliinimaljakko, lakkarasia, jadeastia, kello, kääretaulu) esittivät eri esinettä kuin pelimalli → Codex tekee uudet (PK:n tilaus b340dd473), KK tarkistaa, omistaja valitsee; merge junaan 214 vasta niiden jälkeen.
