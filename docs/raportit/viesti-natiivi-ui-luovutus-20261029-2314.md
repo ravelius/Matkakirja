@@ -31,3 +31,11 @@ Junaan: SHA PT:lle ja NS:lle osasarja-215:n kanssa, kun portaat ratkaistu (tai i
   proto-3d/lokit/esikatselu-<aika>/unity.log. Uusinta: H/ajo-debug.log:n komento (REF=7893e868c, kohta 03, ESIKOM kuten ajo-pari-6.zsh).
   Epäilyt: jalusta onkin LOD2 / paketti LOD1:n alla häivytetty tai piilossa / LOD1-olio vaihdettu latauksen jälkeen.
 - Valmis = näkyvyysvika korjattu, pari 6 uudelleen (ennen 3bdf0ba90 + v2, nyt korjaus + v3) → PT; debug-haara pois.
+
+## LISÄYS 23.2x: debug-tulos (ajo valmis, lokit/esikatselu-20261029-230738)
+Jalusta on LOD1 (lodNyt 1), isa ja kaiteet activeInHierarchy True, mutta renderöijä isVisible False. Paketin bounds maailmassa
+Center (2.90, 4.6, −426.7), Extents (74, 4.6, 134) → z −560…−293, kun kamera 03:ssa on (2.6, 5.2, −194.8) ja katsoo pohjoiseen (+z).
+Paketti on siis ~450 m etelässä kameran takana: kokoajan/rakennan kehys tai siirtymä on väärin LOD1-paketissa (C2-korvaus näkyy oikein,
+koska sen verkot ovat mallin omassa kehyksessä origossa ja paikka tulee instanssimatriisista). Seuraava askel: vertaa palatsiJuuren alle
+rakennetun paketin paikkoja C2-palojen maailmapaikkoihin (palatsiJuuri.TransformPoint(S·p)) ja korjaa (todennäköisesti glTF→Unity
+-z-käännös tai palatsiJuuren siirtymä puuttuu/tuplana). Tarkista samalla PK:n LataaOsasarja (sama polku), näkyykö se oikeassa paikassa.
