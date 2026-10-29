@@ -46,3 +46,10 @@ Tilauksen polku PT:lle yhdellä rivillä."
 
 ## Jatko keskeytyksestä
 - Taustaajoja ei ole. Worktree proto-pelikoodari-pk7-214 haaralla pelikoodari/osasarja-215 (puhdas, 527beacc0).
+
+## Lisäys 21.2x (saapuneet osalistat; juuri ja ajo-ohje annettu molemmille)
+- NUI (Taihedianin halli): proto-3d/_tyo/natiivi-ui/halli-215/rajaukset/tilaus-taihedian.md + n-*.png. NUI:n KORJAUS: tilataan vain
+  1 chiwen, 2 Taihedianin 10+1 harjaeläinriviä, 5 harjan pinta, 8 kultainen keskiovi; 3 kullankeltainen lasitiili vain, jos VS:llä ei ole.
+  Kohdat 4, 6, 7 ovat jo juoksupinnat-v1:ssä (1067–1070).
+- KS (Meridiaaniportti 06): proto-3d/_tyo/karttaseppa/portti06-215/codex-osat/OSAT.md (11 osaa, rajaukset havainne-06.png:n pikseleinä).
+- Molemmille vastattu: juuri juuri-pk7-v72, REF 527beacc0. Kaikki osalistat ovat siis koossa, joten tilaus lähtee heti.
