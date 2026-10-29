@@ -1163,3 +1163,42 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   V4_red + kivijalka + reunakivi + muurikate/C3 niiden päällä) POIS v73:ssa; käytävä päättyy todelliseen kohtaan (alusta −200, portaat −188).
   ENNEN POISTOA: varmista PK:lta, ettei juoksurata/törmäykset (f-taihemen-tormays.glb)/botti nojaa niihin; jos nojaa, PK korjaa samassa erässä.
   Poisto kaikista: rakennukset lod0/lod1/lod2 + tormays, c2:n kaiteeton LOD0, muurikatteen/C3:n palat muurien päällä (tarkista tunnistekuvalla).
+
+## LISÄYS 90 klo 21.2x (29.10.): TAIHEMENIN MUURIT POIS (v132), LOD1-KORISTEET (v133), LOD1/2-PINNAT (v134), PIKKUTIILI (v148 ajossa) — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- PK 21.2x: pohjoismuurit EIVÄT nojaa reittiin/bottiin/avauslentoon; törmäys esto.bin:stä → PK leipoo eston v73:lla samassa erässä.
+- rakennukset-v132/kielletty-rakennukset-v56 + c2-v7/kielletty-c2-v6 (K/tyokalut/aja_v145_taihemen.zsh, konsoli_pois.py nyt ohittaa tyhjät
+  primitiivit): f-taihemen paikalliset x −9,6…−6,8 / 4,6…7,4, z 20,9…42,2 kaikki muurin pinnat pois lod0/1/2 + törmäys + C2:n kaiteeton LOD0;
+  V4_marmori (portaiden pää) ja C2-pylväs (12,07; −194,53) jäävät. Muurikatteessa/taustassa ei muurien paloja. Kuvat K/taihemen-v145/.
+- Erolista 1 (KATTO): pelin 03-kamera on 150–450 m:n päässä → LOD1 (PK:n rajat Lod1 150, Lod2 450). LOD1:stä puuttuivat chiwen ja harjaeläimet.
+  UUSI K/tyokalut/kopioi_koristeet.py (LOD0:n katto-solmun V4_chiwen/V4_harjaelain → LOD1) + tausta_koristekortti.py → siluettikortit;
+  ketju aja_v146_koristeet.zsh → rakennukset-v133/kielletty-rakennukset-v57 (16 mallia; t-portit pois, niissä jo kortit). LOD0:n alakatto on JO
+  kovera ja nurkat nousevat ~1 m (räystäs y 18,82 → 19,81, ulos 2,2 m) → muotoa ei muutettu. Väri = VS (41a2eac22 kullankeltainen).
+  JAKO (PT 21.3x): NUI tekee g-taihedianin LOD1-katon muodon, julkisivun LOD1-UV:t ja kaiteet osasarjan osista; LOD1-tiedoston vuoro annettu
+  NUI:lle (älä kirjoita g-taihedian-lod1/2:een ennen kuin NUI palauttaa polun).
+- VS 21.3x: hallit_pinnat.py myös LOD1/2:een → rakennukset-v134/kielletty-rakennukset-v58 (aja_v147_lod12.zsh; palkkivyö kaikkiin, ovia LOD1/2:ssa
+  vain o:ssa). Taustan 20 palaa EI (V4_wood kaukona usein umpiseinää) – VS:lle kerrottu, odottaa vastausta.
+- Erolista 3 (Tirenge/Hongyige): taustassa (2-1 / 1-1) jo kaksikerroksiset LOD0:ssa ja LOD1:ssä todellisilla paikoilla (103,9; −105,8 /
+  −99,4; −114,0); 03-kamerasta ~49° sivulla eli kuva-alan ulkopuolella; kuvan reunojen matalat rakennukset ovat sivukäytäviä. Kuvat K/tirenge/.
+- Erolista 4 (porttirakennus etualalla) = juuri poistetut tekaistut porttimuurit (03:n molemmat reunat, 03b oikea) → ratkeaa PT:n poistopäätöksellä.
+- Erolista 5 (kaiteet): F/G:n C2-palat piirtyvät vain rakennuksen LOD0:n kanssa (< 150 m) → 03:sta Taihedian on LOD1 ja kaide litteä.
+  Ratkaisu PK/PT: C2-LOD1-palat myös LOD1-etäisyydelle (G 4 598 palaa) tai NUI:n osasarjakaide. EI vielä kerrottu PT:lle → kerro.
+- PIKKUTIILI (PT 21.2x, PK:n palatsipinnat.py): K/tyokalut/aja_v148_pikkutiili.zsh (portti_kivijalka.py VANHA=V4_stone/V4_sokkeli/V4_sokkeli_kansi,
+  ei KORKEUS/YMIN, lod1/2 PIENENNA=256) → rakennukset-v135/kielletty-rakennukset-v59, yksikerros-v116/kielletty-tausta-v58,
+  muurikate-v22/kielletty-muurikate-v26 (kk-muurikate-v26-pohja.glb), c2-v8/kielletty-c2-v7, juuri H/juuri-pk7-v77 (vanhoilla nimillä).
+  AJOSSA luovutushetkellä (loki /private/tmp/claude-502/lr/v148.log; valmis = "VALMIS v148m"). Tarkista: python3 -I tyokalut/havainne/palatsipinnat.py
+  (natiivirepo, PK) juurelle juuri-pk7-v77 → 0 kiellettyä. AVOIMET (kuja 01, omistajan lukitsema; juhlasali/puutarha/tyohuone/varasto
+  V4_sokkeli + _kansi ~900 kolm.) EI muutettu → kysy PT:ltä. V4_jalkakivi ei vielä laskettu. Huom. palatsi-pinnat.json: V4_stone-jalustan
+  korvaaja voi olla V4_marmori; nyt kaikki → kujakivi (a-meridiaaniportti 208, m-puutarha 910 kolm.) → tarkista kuvalla.
+- PARI: H/juuri-pk7-v75 REF=41a2eac22 MALLIT=file://…/juuri-pk7-v75/ → lokit/havainne-editori-20261029-211347: 03-kuva EI KELPAA (kamera
+  kujassa, ei aukiolla; tieto.txt:ssä ei paketit-riviä) → selvitä (MALLIT-polku / 03:n sijoitus) ja aja uudelleen v77:llä. Juoksun aikana
+  odota muiden editoriajot (pgrep -f Esikatselu.Aja).
+- v73-PAKETTI: K/tyokalut/paketti_v73.py valmiina mutta osoittaa v132/c2-v7:ään → päivitä v135 / c2-v8 / tausta-v58 (nimellä kielletty-tausta-v73)
+  / muurikate-v26 + PK:lle uudet kansionimet; EI ämpäriin ennen PT:n kuittausta.
+- OSASARJA v1 (omistaja hyväksyi 21.07; PK:n muoto natiivirepo f88ee94e7 tyokalut/osasarja/MUOTO.md + esimerkki-ladonta.json): EI ALOITETTU.
+  Mitat kujien v71:stä (kuja 02 länsimuuri): kivijalka 0–1,8 (V4_kujakivi_sokkeli, ulkonee ~0,08–0,24), V4_red 1,86–3,84, friisi
+  V4_palatsi_friisi 3,90–4,12, räystäänalus V4_raystas_alus_puu 3,84–4,35, V4_konsoli 4,30–4,52, C3 1057 (2,06 × 0,514 × 1,8; K/codex-mallit-v2)
+  4,53–5,05. Esimerkki: yksi aukion 03 muuri (seina-2m, kulma-ulko, kulma-sisa, paaty + profiilit kivijalka ja reunakivi 0,25 × 0,32) →
+  K/osasarja-v1/kielletty-osasarja-v1/osat.glb + ladonta.json → PK:lle; polku ja nimet myös NUI:lle ja Karttasepälle (PT 21.1x).
+- SEURAAVAKSI: (1) v148 valmis + palatsipinnat-tarkistus; (2) pari v77 (03/03b); (3) PT:lle 3 riviä (muurit pois, LOD1-koristeet, kohdat 3–5,
+  pikkutiili, avoimet-kysymys); (4) paketti v73; (5) osasarja v1.
