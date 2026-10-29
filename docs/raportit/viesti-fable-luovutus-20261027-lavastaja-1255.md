@@ -1259,3 +1259,17 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - PARI: scratchpad pari_v78.zsh (REF=41a2eac22 MALLIT=H/juuri-pk7-v78 PELIKAMERA=1: 03 03b, sitten 06) jonossa; tulos proto-3d/lokit/havainne-editori-<aika>/.
   Odotussilmukka ajetaan TIEDOSTOSTA (zsh pari.zsh): komentorivillä oleva "Esikatselu.Aja" saa pgrepin odottamaan itseään.
 - SEURAAVAKSI: (1) parit 03/03b/06 → PT + KS; (2) PT:n kuittaus v74; (3) siipihallien C1 (avoin ketju); (4) erolista: T-risteys, sivuhallit, 04, 07.
+
+## LISÄYS 93 klo 22.1x (29.10.): PT:N v74-PALAUTE KORJATTU → PAKETTI v75 — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- PT 22.1x (v74 EI ämpäriin): 1) kaide läpikuultava/ilman paneelia, 2) c1-kuvassa vanhat pylväät, 3) baodingin jalusta tasavärinen laatikko.
+- KORJATTU a3a5_portti.py v2 → K/a3a5-v2/: 1062-paneelit pylväsväleihin (493; naapuri 1,0–1,8 m, lähin per suunta, pylvään pinnasta pintaan, sx = väli/1,5),
+  vanhan kaiteen vaakaosat pois (32 saarta), harjapää (V4_gold ≤ 1 m huipusta) → V4_palatsi_katto laatikko-UV 1,6 m. Pylvään tunnistus pienimmällä
+  rajauslaatikolla (pisin vaakasärmä = kolmion lävistäjä → 0 osumaa). Kuvat a3a5-v2/v2-{kaide,huippu,yleis}.png (esikatselu: scratchpad a3a5_kuva.py).
+  2) = c1-v5-kuva on lähdemallista ilman sijoituksia (selitetty PT:lle).
+- c2-v10/kielletty-c2-v9 = c2-v9 + v2-tulokset. PAKETTI v75 (paketti_v75.py): _valmiit/juoksupeli-kk-lavastaja-v75-vienti-20261029, 362 tiedostoa, SHA OK
+  (8fb4dc3d), MuurikateC2Kansio "kielletty-c2-v9/". PT:lle ja PK:lle ilmoitettu 22.1x; v74 vanhentunut. EI ämpäriin ennen PT:n kuittausta.
+  Pelissä A3/A5/1062 näkyvät vasta PK:n a3a5-sijoitukset-luvulla → PT:n "kaide samasta kulmasta" -kuva PK:n pariajosta.
+- PARI 03/03b/06 (juuri-pk7-v78; rakennukset-v136 + c1-v5, EI A3/A5): pari_v78.zsh taustalla odottaa editorijonoa (PK ja NUI ajoivat 22.0x).
+  Jos sessio nollautui ennen tulosta: tarkista uusin havainne-editori-*-kansio (esikatselu.txt: REF 41a2eac22) tai aja uudelleen
+  `zsh <scratchpad>/pari_v78.zsh` (sisältö lisäyksessä 92). Kuvat → PT + KS (local_ddd980b0-2760-4c5d-a0c8-d65ad1ecb757).
+- SEURAAVAKSI: (1) pari → PT + KS; (2) PT:n kuittaus v75; (3) siipihallien C1 (avoin ketju); (4) erolista: T-risteys, sivuhallit, 04, 07.
