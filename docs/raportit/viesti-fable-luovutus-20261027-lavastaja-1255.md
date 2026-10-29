@@ -1120,3 +1120,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   kannatinpala (havainne-peli x≈1720–1810, y≈145–185; todennäköisesti taustan tai muurikatteen V4_konsoli); (3) EROLISTA (lisäys 81).
 - Työkalut tältä erää (K/tyokalut): kuja_friisi_jatko.py, portti_kivijalka.py (VANHA, YMIN, KORKEUS, PIENENNA), paketti_v69.py, paketti_v70.py.
   Uusimmat: yksikerros-v113, muurikate-v20/pari-v138, rakennukset-v129, H/juuri-v141m; paria varten editori-lr.sh 02 05 PELIKAMERA=1 REF=de0aeca40.
+
+## LISÄYS 88 klo 18.5x (29.10.): v71 = 02:n KANNATINPALA POIS → PT + PK — ALOITA TÄSTÄ
+- Syy (Blender-tunnusvärikuva pelin 02-kamerasta, scratchpad tunnisteet.py; pelikuva on peilattu, oikea = itä): kujan 02 LÄNSImuurin mutkassa
+  (z ≈ 321–323, muuri x −248,4 → −249,3) taustan (0-3 lod0) ja muurikatteen V4_konsoli-rivit kulkevat mutkan poikki ja näkyvät räystäänalusen raosta.
+- UUSI K/tyokalut/konsoli_pois.py (BOX "x0 x1 z0 z1 y0 y1", MAT): kolmiot pois; BOX "-250.2 -248.3 320.6 323.2 4.2 4.8" → tausta 48, muurikate 40.
+  yksikerros-v114, muurikate-v21/pari-v139, H/juuri-v142m (K/tyokalut/aja_v142_pari.zsh). Pari REF de0aeca40: lokit/havainne-editori-20261029-184302
+  (02/zoom-kannatin-ennen-jalkeen.png: vasen PK:n -183139, oikea v142m; pala poissa, C3-räystäs yhtenäinen).
+- v71 = K/tyokalut/paketti_v71.py: _valmiit/juoksupeli-kk-lavastaja-v71-vienti-20261029 = v70 + tausta-v71 + muurikate-v25; 298 tiedostoa,
+  ei-pelitiedostot poistetaan nyt ennen SHA256SUMS:ia; SHA256SUMS OK (tiiviste 6161f49c…). Seuraavaan junaan; EI ämpäriin ennen PT:n kuittausta.
+- SEURAAVAKSI: PT:n kuittaus v71 → JU; EROLISTA (lisäys 81: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
