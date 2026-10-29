@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-29T06:42:44.318048+00:00",
+  "taskNumbers": [
+    1234,
+    1235,
+    1236
+  ],
+  "productionComplete": true,
+  "producerApprovedForDelivery": true,
+  "A": {
+    "count": 14,
+    "technical": "qa/A-technical.json",
+    "visualPassed": true,
+    "sourceModelsUnmodified": true,
+    "renderer": "Blender 5.2.1 Cycles Metal",
+    "newGenerations": 0
+  },
+  "B": {
+    "count": 2,
+    "qa": "qa/B/QA.json",
+    "visualPassed": true,
+    "newGenerations": 4,
+    "selectedWholeNewImages": 2,
+    "runtimeMaskDiagnostic": "qa/B/final-review-sheet.png"
+  },
+  "gameRuntimeIntegration": "not performed by this production task",
+  "PKReceipt": "pending",
+  "KKOrOwnerApproval": "pending",
+  "publication": "not performed"
+}

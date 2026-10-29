@@ -1,0 +1,849 @@
+[
+  {
+    "id": "posliinimaljakko",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet-v1-vienti-20261019/juoksupeli/maailma-v4/aarteet/posliinimaljakko-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/posliinimaljakko.glb",
+    "sha256": "f5a34335eb32259c742ddc26164fa2f18bc4dfbfbeffeffde7ede4fde98b1cc5",
+    "bytes": 267444,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "cobalt-floral-glaze",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.2,
+          "metallicFactor": 0,
+          "baseColorTexture": {
+            "index": 0
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "ivory-porcelain-interior",
+        "pbr": {
+          "baseColorFactor": [
+            0.88,
+            0.86,
+            0.78,
+            1
+          ],
+          "roughnessFactor": 0.23,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "unglazed-white-fracture",
+        "pbr": {
+          "baseColorFactor": [
+            0.8,
+            0.78,
+            0.69,
+            1
+          ],
+          "roughnessFactor": 0.83,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "cloisonne",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet-v1-vienti-20261019/juoksupeli/maailma-v4/aarteet/cloisonne-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/cloisonne.glb",
+    "sha256": "351e36505eb3d605b7510b4be2e656da6a3dd1ca1b7f2a80b5a18f03cbb8f747",
+    "bytes": 176028,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "turquoise-enamel-and-gold-wire",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.24,
+          "metallicFactor": 0.18,
+          "baseColorTexture": {
+            "index": 0
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "brass-rim",
+        "pbr": {
+          "baseColorFactor": [
+            0.6,
+            0.34,
+            0.085,
+            1
+          ],
+          "roughnessFactor": 0.28,
+          "metallicFactor": 0.78
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "exposed-copper-core",
+        "pbr": {
+          "baseColorFactor": [
+            0.35,
+            0.14,
+            0.048,
+            1
+          ],
+          "roughnessFactor": 0.6,
+          "metallicFactor": 0.6
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "lakkarasia",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet-v1-vienti-20261019/juoksupeli/maailma-v4/aarteet/lakkarasia-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/lakkarasia.glb",
+    "sha256": "81b8789aef45aca5899e37319de4684cf91e374259971a66c094dcc1f5aa1e53",
+    "bytes": 228612,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "carved-cinnabar-lacquer",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.35,
+          "metallicFactor": 0,
+          "baseColorTexture": {
+            "index": 0
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "dark-red-inner-lacquer",
+        "pbr": {
+          "baseColorFactor": [
+            0.12,
+            0.009,
+            0.008,
+            1
+          ],
+          "roughnessFactor": 0.4,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "exposed-wood-core",
+        "pbr": {
+          "baseColorFactor": [
+            0.2,
+            0.069,
+            0.02,
+            1
+          ],
+          "roughnessFactor": 0.9,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "raised-red-carving",
+        "pbr": {
+          "baseColorFactor": [
+            0.29,
+            0.012,
+            0.01,
+            1
+          ],
+          "roughnessFactor": 0.38,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "cinnabar-petal-ridges",
+        "pbr": {
+          "baseColorFactor": [
+            0.4,
+            0.022,
+            0.015,
+            1
+          ],
+          "roughnessFactor": 0.38,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "jadeastia",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet-v1-vienti-20261019/juoksupeli/maailma-v4/aarteet/jadeastia-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/jadeastia.glb",
+    "sha256": "7bd79d716a7d0fa1b1e3e670e0f2581fa8f23b386a2e6218ac52e52457f35e53",
+    "bytes": 305928,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "cloudy-green-jade",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.18,
+          "metallicFactor": 0,
+          "baseColorTexture": {
+            "index": 0
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "jade-interior",
+        "pbr": {
+          "baseColorFactor": [
+            0.25,
+            0.48,
+            0.3,
+            1
+          ],
+          "roughnessFactor": 0.22,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "jade-fracture",
+        "pbr": {
+          "baseColorFactor": [
+            0.28,
+            0.45,
+            0.31,
+            1
+          ],
+          "roughnessFactor": 0.68,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "jade-relief",
+        "pbr": {
+          "baseColorFactor": [
+            0.14,
+            0.32,
+            0.19,
+            1
+          ],
+          "roughnessFactor": 0.25,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "kello",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet-v1-vienti-20261019/juoksupeli/maailma-v4/aarteet/kello-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/kello.glb",
+    "sha256": "9acee11f07b112ecac1a638e801e8795a5b210d19567fe01477fc2c76d41c1bf",
+    "bytes": 174864,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "gilt-bronze",
+        "pbr": {
+          "baseColorFactor": [
+            0.7,
+            0.39,
+            0.075,
+            1
+          ],
+          "roughnessFactor": 0.26,
+          "metallicFactor": 0.82
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "blue-enamel-inlay",
+        "pbr": {
+          "baseColorFactor": [
+            0.016,
+            0.08,
+            0.12,
+            1
+          ],
+          "roughnessFactor": 0.25,
+          "metallicFactor": 0.25
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "painted-enamel-dial",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.24,
+          "metallicFactor": 0,
+          "baseColorTexture": {
+            "index": 0
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "bronze-back",
+        "pbr": {
+          "baseColorFactor": [
+            0.18,
+            0.1,
+            0.038,
+            1
+          ],
+          "roughnessFactor": 0.46,
+          "metallicFactor": 0.72
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "sinivalkoinen-maljakko",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/sinivalkoinen-maljakko-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/sinivalkoinen-maljakko.glb",
+    "sha256": "9f50aab8c708435563ccde5fa523bfd98d9249a46b7b45b63d15903088a8d58a",
+    "bytes": 754340,
+    "meshCount": 2,
+    "materials": [
+      {
+        "name": "tripo_mat_960471f9-9c10-4a34-ac84-54230c810e74",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_ab0c2f0b-f5db-48dd-9344-4c7401c51f14",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "keltainen-maljakko",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/keltainen-maljakko-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/keltainen-maljakko.glb",
+    "sha256": "74040e7ba56e1cbeea58f993ebf85fd41810bf1e73f703c5f3506e7494f563a3",
+    "bytes": 724676,
+    "meshCount": 2,
+    "materials": [
+      {
+        "name": "tripo_mat_960471f9-9c10-4a34-ac84-54230c810e74",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            0.7200000286102295,
+            0.09000000357627869,
+            1
+          ],
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_819bf552-855b-4e62-9557-a673f3fb294b",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "turkoosi-ruukku",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/turkoosi-ruukku-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/turkoosi-ruukku.glb",
+    "sha256": "43880b3150cda75f3186d1ac92e21d4ca2b996f3623a095d7080ff2e4f233258",
+    "bytes": 1089220,
+    "meshCount": 3,
+    "materials": [
+      {
+        "name": "tripo_mat_960471f9-9c10-4a34-ac84-54230c810e74",
+        "pbr": {
+          "baseColorFactor": [
+            0.012000000104308128,
+            0.47999998927116394,
+            0.949999988079071,
+            1
+          ],
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_5c3e6cdd-fe30-4185-9d62-ce5bda4cbbb0",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_841bcef8-53aa-4491-84df-49c6b4f4c5e9",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 7
+          },
+          "metallicRoughnessTexture": {
+            "index": 8
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "teeastiat",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/teeastiat-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/teeastiat.glb",
+    "sha256": "01c6f2ef22689f8b6e6b3a438cff16019c92dd623b2bfdd9d8b3c1bebe5c5d83",
+    "bytes": 1483312,
+    "meshCount": 5,
+    "materials": [
+      {
+        "name": "tripo_mat_0a11d1b6-483a-4963-b713-b2abe0a9e962",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_095227bf-21aa-4128-bc4c-7971b96ef880",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_1accdf51-a001-4f45-b1d7-a47c688b7e98",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 7
+          },
+          "metallicRoughnessTexture": {
+            "index": 8
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_1accdf51-a001-4f45-b1d7-a47c688b7e98.001",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 10
+          },
+          "metallicRoughnessTexture": {
+            "index": 11
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_6fe097d9-ce4f-4ed5-bac2-154035a2094f",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 13
+          },
+          "metallicRoughnessTexture": {
+            "index": 14
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "rubiinilasit",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/rubiinilasit-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/rubiinilasit.glb",
+    "sha256": "d15a41345bb7b8db18cdb6b76baff7b1f4f2a00c2a92a48c3bfda36220912323",
+    "bytes": 1126248,
+    "meshCount": 4,
+    "materials": [
+      {
+        "name": "tripo_mat_464438f7-c398-40d5-a28f-3ac00a974e69",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_c61c1ab7-0145-48e1-a84d-dde1785778e2",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_63dfce1b-ab92-4a75-b825-d6146f4e3ad0",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 7
+          },
+          "metallicRoughnessTexture": {
+            "index": 8
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "tripo_mat_6fe097d9-ce4f-4ed5-bac2-154035a2094f",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 10
+          },
+          "metallicRoughnessTexture": {
+            "index": 11
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "bambusermi",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/bambusermi-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/bambusermi.glb",
+    "sha256": "ba7236959ccbdec8c40b65c49f5ae2e104aeddcafb38b0ffc919b767b2212548",
+    "bytes": 565660,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "Material",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "maisemasermi",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/maisemasermi-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/maisemasermi.glb",
+    "sha256": "5c8fd688b63593c297ca724fe890068ce9e11709aaf05101004ba8bee3142e79",
+    "bytes": 2088192,
+    "meshCount": 1,
+    "materials": [
+      {
+        "name": "tripo_mat_89a765e6-8ddd-4526-8877-2339be322e35",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "landscape-leaf-2",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "landscape-leaf-3",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 7
+          },
+          "metallicRoughnessTexture": {
+            "index": 8
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "landscape-leaf-4",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 10
+          },
+          "metallicRoughnessTexture": {
+            "index": 11
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "landscape-leaf-5",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 13
+          },
+          "metallicRoughnessTexture": {
+            "index": 14
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "landscape-leaf-6",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 16
+          },
+          "metallicRoughnessTexture": {
+            "index": 17
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "lautaspoyta",
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-aarteet799-v4-vienti-20261025/juoksupeli/maailma-v4/aarteet799-v4/lautaspoyta-ehja.glb",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/lautaspoyta.glb",
+    "sha256": "af459913b5c7ddc63db4590d25302aa338a958ca755508bcfaa8e079487470ad",
+    "bytes": 1498556,
+    "meshCount": 16,
+    "materials": [
+      {
+        "name": "lautanen-pbr",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "poyta-pbr",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicRoughnessTexture": {
+            "index": 5
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": []
+  },
+  {
+    "id": "kaaretaulu",
+    "source": "r2://matkakirja/juoksupeli/maailma-v4/esteet/kaaro-v2/kaaretaulu.glb",
+    "sourceCodeEvidence": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Scripts/Juoksupeli/JuoksuV4Maailma.cs:2185",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/kaaretaulu.glb",
+    "sha256": "d6d6fc1089616305047be36210a59249bc98501953189e3462dcc0fb339e8b56",
+    "bytes": 6682000,
+    "meshCount": 3,
+    "materials": [
+      {
+        "name": "wood_original_pbr",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "paper-front",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 3
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.95
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "paper-back",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.95
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      },
+      {
+        "name": "paper_fiber_edge",
+        "pbr": {
+          "baseColorFactor": [
+            0.7372047873606051,
+            0.5668097348966382,
+            0.348864834082879,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 1
+        },
+        "alphaMode": "OPAQUE",
+        "extensions": null
+      }
+    ],
+    "externalImages": [],
+    "retrieval": "Existing authenticated Wrangler R2 remote GET, exit 0",
+    "readbackAt": "2026-10-29T06:39:31.437552+00:00",
+    "matchesPreviousApprovedIntact": true,
+    "orderUrlDifferentPath": "esteet-v2/kaaro-v2; actual current game uses esteet/kaaro-v2"
+  }
+]

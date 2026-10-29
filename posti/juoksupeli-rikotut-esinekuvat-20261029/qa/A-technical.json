@@ -1,0 +1,679 @@
+{
+  "checkedAt": "2026-10-29T06:42:15.904181+00:00",
+  "count": 14,
+  "technicalPass": true,
+  "visualReviewPending": false,
+  "assets": [
+    {
+      "id": "posliinimaljakko",
+      "file": "A/posliinimaljakko.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        289,
+        101,
+        735,
+        923
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "06c97a7580e1b1bd592eb22d755304e173e366c4a78bc5b87e56318658a01bdf",
+      "bytes": 598287,
+      "renderEvidence": {
+        "id": "posliinimaljakko",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/posliinimaljakko.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 6150,
+          "polygons": 8780,
+          "source_sha256": "f5a34335eb32259c742ddc26164fa2f18bc4dfbfbeffeffde7ede4fde98b1cc5"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 0.8556090593338013,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 14.86,
+        "outputSha256": "06c97a7580e1b1bd592eb22d755304e173e366c4a78bc5b87e56318658a01bdf"
+      }
+    },
+    {
+      "id": "cloisonne",
+      "file": "A/cloisonne.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        101,
+        329,
+        923,
+        695
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "7942fb1c91b3bda0d8d678e03e1df61ddbe092f7d9a7c8b9cec2a73c9df00429",
+      "bytes": 528451,
+      "renderEvidence": {
+        "id": "cloisonne",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/cloisonne.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 4112,
+          "polygons": 4784,
+          "source_sha256": "351e36505eb3d605b7510b4be2e656da6a3dd1ca1b7f2a80b5a18f03cbb8f747"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 0.679838240146637,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 14.45,
+        "outputSha256": "7942fb1c91b3bda0d8d678e03e1df61ddbe092f7d9a7c8b9cec2a73c9df00429"
+      }
+    },
+    {
+      "id": "lakkarasia",
+      "file": "A/lakkarasia.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        101,
+        214,
+        923,
+        810
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "b598f84c668717ac2b6122225704e9fa4e0f023c20611a460881b479303076ec",
+      "bytes": 729055,
+      "renderEvidence": {
+        "id": "lakkarasia",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/lakkarasia.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 5279,
+          "polygons": 6720,
+          "source_sha256": "81b8789aef45aca5899e37319de4684cf91e374259971a66c094dcc1f5aa1e53"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 0.5043871402740479,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 18.86,
+        "outputSha256": "b598f84c668717ac2b6122225704e9fa4e0f023c20611a460881b479303076ec"
+      }
+    },
+    {
+      "id": "jadeastia",
+      "file": "A/jadeastia.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        101,
+        219,
+        923,
+        805
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "452698137c43d993293359125bd6ee585bba7191f31a21e81a54ebf8a8843506",
+      "bytes": 597780,
+      "renderEvidence": {
+        "id": "jadeastia",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/jadeastia.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 4990,
+          "polygons": 6864,
+          "source_sha256": "7bd79d716a7d0fa1b1e3e670e0f2581fa8f23b386a2e6218ac52e52457f35e53"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 0.5693563222885132,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 23.6,
+        "outputSha256": "452698137c43d993293359125bd6ee585bba7191f31a21e81a54ebf8a8843506"
+      }
+    },
+    {
+      "id": "kello",
+      "file": "A/kello.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        285,
+        101,
+        739,
+        923
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "5869d4f4c45e5852317fb91915a6aba3bb422923bb422f5ffa70abb8c1a814d5",
+      "bytes": 672387,
+      "renderEvidence": {
+        "id": "kello",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/kello.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 3320,
+          "polygons": 5168,
+          "source_sha256": "9acee11f07b112ecac1a638e801e8795a5b210d19567fe01477fc2c76d41c1bf"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 1.0967203378677368,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 15.57,
+        "outputSha256": "5869d4f4c45e5852317fb91915a6aba3bb422923bb422f5ffa70abb8c1a814d5"
+      }
+    },
+    {
+      "id": "sinivalkoinen-maljakko",
+      "file": "A/sinivalkoinen-maljakko.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        277,
+        101,
+        746,
+        923
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "a6a506d8f553c52d42e69983543d01a53288d020a37ae14f1439f5244fee97ec",
+      "bytes": 715830,
+      "renderEvidence": {
+        "id": "sinivalkoinen-maljakko",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/sinivalkoinen-maljakko.glb",
+        "geometry": {
+          "objects": 2,
+          "vertices": 7800,
+          "polygons": 11668,
+          "source_sha256": "9f50aab8c708435563ccde5fa523bfd98d9249a46b7b45b63d15903088a8d58a"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 1.2700194120407104,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 17.65,
+        "outputSha256": "a6a506d8f553c52d42e69983543d01a53288d020a37ae14f1439f5244fee97ec"
+      }
+    },
+    {
+      "id": "keltainen-maljakko",
+      "file": "A/keltainen-maljakko.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        266,
+        101,
+        757,
+        923
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "b9cad143c72f40e85c489b77588ec23faf655a7e639572922b59b33247423eed",
+      "bytes": 778975,
+      "renderEvidence": {
+        "id": "keltainen-maljakko",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/keltainen-maljakko.glb",
+        "geometry": {
+          "objects": 2,
+          "vertices": 7435,
+          "polygons": 11366,
+          "source_sha256": "74040e7ba56e1cbeea58f993ebf85fd41810bf1e73f703c5f3506e7494f563a3"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 1.2122327089309692,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 19.21,
+        "outputSha256": "b9cad143c72f40e85c489b77588ec23faf655a7e639572922b59b33247423eed"
+      }
+    },
+    {
+      "id": "turkoosi-ruukku",
+      "file": "A/turkoosi-ruukku.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        262,
+        101,
+        761,
+        923
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "74c9e762f2b106ae22d1830b10a8acb81339e7b85c36baea98a7e36cd3e792a2",
+      "bytes": 951509,
+      "renderEvidence": {
+        "id": "turkoosi-ruukku",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/turkoosi-ruukku.glb",
+        "geometry": {
+          "objects": 3,
+          "vertices": 10663,
+          "polygons": 15150,
+          "source_sha256": "43880b3150cda75f3186d1ac92e21d4ca2b996f3623a095d7080ff2e4f233258"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 1.232353687286377,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 21.42,
+        "outputSha256": "74c9e762f2b106ae22d1830b10a8acb81339e7b85c36baea98a7e36cd3e792a2"
+      }
+    },
+    {
+      "id": "teeastiat",
+      "file": "A/teeastiat.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        269,
+        102,
+        755,
+        923
+      ],
+      "maxOccupancy": 0.8017578125,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "897983798f43fed19798743fcb2ea79326b8766e449b0c72b2141313019d5ad0",
+      "bytes": 695436,
+      "renderEvidence": {
+        "id": "teeastiat",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/teeastiat.glb",
+        "geometry": {
+          "objects": 5,
+          "vertices": 16318,
+          "polygons": 23409,
+          "source_sha256": "01c6f2ef22689f8b6e6b3a438cff16019c92dd623b2bfdd9d8b3c1bebe5c5d83"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 1.3703927993774414,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 18.38,
+        "outputSha256": "897983798f43fed19798743fcb2ea79326b8766e449b0c72b2141313019d5ad0"
+      }
+    },
+    {
+      "id": "rubiinilasit",
+      "file": "A/rubiinilasit.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        264,
+        102,
+        760,
+        923
+      ],
+      "maxOccupancy": 0.8017578125,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "77f310761f95d7d31231e0ab185b0bc3211c522a2d17c2586cf2e2d759e1a5ee",
+      "bytes": 713590,
+      "renderEvidence": {
+        "id": "rubiinilasit",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/rubiinilasit.glb",
+        "geometry": {
+          "objects": 4,
+          "vertices": 13281,
+          "polygons": 19128,
+          "source_sha256": "d15a41345bb7b8db18cdb6b76baff7b1f4f2a00c2a92a48c3bfda36220912323"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 1.3465362787246704,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 18.12,
+        "outputSha256": "77f310761f95d7d31231e0ab185b0bc3211c522a2d17c2586cf2e2d759e1a5ee"
+      }
+    },
+    {
+      "id": "bambusermi",
+      "file": "A/bambusermi.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        210,
+        102,
+        814,
+        922
+      ],
+      "maxOccupancy": 0.80078125,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "14c4eff2f0b069f1602499ddc89c137f225b33fa4e86db99158c7f830bd688e2",
+      "bytes": 797490,
+      "renderEvidence": {
+        "id": "bambusermi",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/bambusermi.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 9888,
+          "polygons": 12534,
+          "source_sha256": "ba7236959ccbdec8c40b65c49f5ae2e104aeddcafb38b0ffc919b767b2212548"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 2.213625192642212,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 15.14,
+        "outputSha256": "14c4eff2f0b069f1602499ddc89c137f225b33fa4e86db99158c7f830bd688e2"
+      }
+    },
+    {
+      "id": "maisemasermi",
+      "file": "A/maisemasermi.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        101,
+        212,
+        923,
+        812
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "e00be093ca693723ce88211cd16daf537cc7e741b69a6988bb2f08d62246b64f",
+      "bytes": 907778,
+      "renderEvidence": {
+        "id": "maisemasermi",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/maisemasermi.glb",
+        "geometry": {
+          "objects": 1,
+          "vertices": 32686,
+          "polygons": 34788,
+          "source_sha256": "5c8fd688b63593c297ca724fe890068ce9e11709aaf05101004ba8bee3142e79"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 3.7062580585479736,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 18.97,
+        "outputSha256": "e00be093ca693723ce88211cd16daf537cc7e741b69a6988bb2f08d62246b64f"
+      }
+    },
+    {
+      "id": "lautaspoyta",
+      "file": "A/lautaspoyta.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        101,
+        205,
+        922,
+        819
+      ],
+      "maxOccupancy": 0.8017578125,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "fa3713bda7588fefc319cdc19b47e5f1e7fd91d0b2b10422140491ff080b89d1",
+      "bytes": 601407,
+      "renderEvidence": {
+        "id": "lautaspoyta",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/lautaspoyta.glb",
+        "geometry": {
+          "objects": 16,
+          "vertices": 24647,
+          "polygons": 31675,
+          "source_sha256": "af459913b5c7ddc63db4590d25302aa338a958ca755508bcfaa8e079487470ad"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 2.115204334259033,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 15.69,
+        "outputSha256": "fa3713bda7588fefc319cdc19b47e5f1e7fd91d0b2b10422140491ff080b89d1"
+      }
+    },
+    {
+      "id": "kaaretaulu",
+      "file": "A/kaaretaulu.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBBox": [
+        101,
+        194,
+        923,
+        830
+      ],
+      "maxOccupancy": 0.802734375,
+      "transparentCorners": true,
+      "centerWithin4px": true,
+      "sourceByteIdentity": true,
+      "sha256": "158f3211159497fa6e4a75c2e780e91f186c15e31fb2df247e652c6c61e6c39f",
+      "bytes": 671591,
+      "renderEvidence": {
+        "id": "kaaretaulu",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-esinekuvat-20261029/sources/models/kaaretaulu.glb",
+        "geometry": {
+          "objects": 3,
+          "vertices": 10407,
+          "polygons": 14342,
+          "source_sha256": "d6d6fc1089616305047be36210a59249bc98501953189e3462dcc0fb339e8b56"
+        },
+        "sourceUnmodified": true,
+        "camera": {
+          "yaw_deg": 35,
+          "elevation_deg": 20,
+          "projection": "ORTHO",
+          "ortho_scale": 2.770599126815796,
+          "projected_occupancy": 0.8
+        },
+        "renderer": "Blender Cycles Metal",
+        "samples": 96,
+        "lighting": "Upper-left 650 times size squared W, weak fill 120 times size squared W; large area lights",
+        "colorManagement": "AgX Medium High Contrast",
+        "filmTransparent": true,
+        "floor": false,
+        "renderSeconds": 17.85,
+        "outputSha256": "158f3211159497fa6e4a75c2e780e91f186c15e31fb2df247e652c6c61e6c39f"
+      }
+    }
+  ],
+  "visualReview": {
+    "passed": true,
+    "reviewedAt": "2026-10-29T06:42:44.318048+00:00",
+    "all14GrayAndDarkCompositesViewed": true,
+    "individualFullSizeAlsoViewed": [
+      "posliinimaljakko",
+      "cloisonne",
+      "maisemasermi",
+      "lakkarasia",
+      "kello"
+    ],
+    "findings": "All 14 complete within frame, consistent front three-quarter view; no white fringe on gray/dark composites. Original mesh faceting and material patterns deliberately preserved."
+  }
+}

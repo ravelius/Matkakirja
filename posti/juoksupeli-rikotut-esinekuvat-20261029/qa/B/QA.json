@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-29T06:40:43.505099+00:00",
+  "producerQAPassed": true,
+  "assets": [
+    {
+      "id": "cloisonne",
+      "taskNumber": 1235,
+      "selectedAttempt": 2,
+      "fullNativeViewed": true,
+      "finalJPGViewed": true,
+      "small160pxViewed": true,
+      "lightAndDarkMaskViewed": true,
+      "photoSurfacePassed": true,
+      "compositionPassed": true,
+      "observations": "Natural camera-like workshop surfaces and unpatterned scalp. One focused smiling craftsman works a fine heated metal point and pincers at blue cloisonne cells. Whole shallow dish, both working hands and face remain clearly visible within the current 0.45-feather mask. Dish is modest relative to the adult hands, no oversized prop. Quiet outer workshop/foreground margins are intentionally allowed to disappear. No oval/frame/text overlays in JPG. First attempt preserved but not selected because its right dish rim faded excessively."
+    },
+    {
+      "id": "kaaretaulu",
+      "taskNumber": 1236,
+      "selectedAttempt": 2,
+      "fullNativeViewed": true,
+      "finalJPGViewed": true,
+      "small160pxViewed": true,
+      "lightAndDarkMaskViewed": true,
+      "photoSurfacePassed": true,
+      "compositionPassed": true,
+      "observations": "Complete vertical flexible hanging scroll with suspension, ivory mounting and dark bottom roller, physical brush calligraphy and adult scholar beside it. Different standing composition from seated workshop. Plain face/skin, ordinary fabric, light natural room. Full scroll silhouette, face and brush hand remain readable under broad current 0.45 mask. Uses base text fallback, without the unrelated Puyi/teacher version stories. Physical classical characters are in-scene ink, not overlay captions. First attempt preserved but not selected because scroll top was lost in mask."
+    }
+  ],
+  "formatChecks": {
+    "count": 2,
+    "exactDimensions": [
+      768,
+      1024
+    ],
+    "aspectRatio": "3:4",
+    "mode": "RGB",
+    "encoding": "JPEG",
+    "opaque": true,
+    "paintedOval": false,
+    "nativePreserved": true,
+    "resize": "Uniform Lanczos resize, no crop or retouch",
+    "JPEGQuality": 95,
+    "JPEGSubsampling": 0
+  },
+  "maskChecks": {
+    "source": "Copied current JuoksuMuistokupla.cs and MuistokuplaSoikio.shader in sources/B. axes=.5,.5; innerRadius=.45; outerRadius=1; alpha=1-smoothstep(.45,1,r). Static fully-visible still state only.",
+    "previewBlackLift": 0.06,
+    "temporalNoiseAndWave": false,
+    "sourceCodeVerified": true,
+    "inGameRunVerified": false,
+    "diagnosticOnly": true,
+    "legacy078MaskNotUsed": true
+  },
+  "provenance": {
+    "actualGenerationCalls": 4,
+    "completedGenerationCalls": 4,
+    "pendingGenerationCalls": 0,
+    "selectedImages": 2,
+    "unselectedPreservedImages": 2,
+    "existingReused": 0,
+    "tool": "image_gen.imagegen",
+    "eachAttemptWholeNewImage": true,
+    "sourceTextSnapshot": "sources/B/tekstit-fi-source.json",
+    "promptFiles": [
+      "sources/B/cloisonne-prompt.txt",
+      "sources/B/cloisonne-prompt-attempt2.txt",
+      "sources/B/kaaretaulu-prompt.txt",
+      "sources/B/kaaretaulu-prompt-attempt2.txt"
+    ]
+  },
+  "separateGates": {
+    "parentReview": "PASS: full delivered JPGs and current-mask composite personally viewed",
+    "PKReceipt": "not sent by this agent",
+    "KKOrOwnerApproval": "pending",
+    "R2": "not sent by this agent",
+    "gameRuntimeIntegration": "not verified",
+    "publication": "not performed"
+  },
+  "parentReviewAt": "2026-10-29T06:41:27.567789+00:00"
+}
