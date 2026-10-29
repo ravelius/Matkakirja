@@ -1229,3 +1229,6 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - VS 21.3x: taustaan ei ovia; palkkivyö 1067 taustaan vain, jos ei sini-violetti. VS ajaa parin juuri-pk7-v76:lla.
 - SEURAAVAKSI: (1) PK:n valovastaus → v136 portti 06; (2) pari 03 v77 → PT; (3) erolista (lisäys 81): T-risteys, aukion sivuhallit, 04, 07,
   C1 Taihedian-korjaukset; NUI palauttaa g-taihedian-lod1-polun (älä kirjoita siihen ennen).
+- 21.4x KS: portin glb:t valmiit (vie-k4, paikka/mitat/huippu ennallaan, vain katot ja räystäät). PT: KS:n parametrit palautetaan LR:n
+  kk_wumen.py:hyn samassa paketissa (KS:n kopio …/portti06-215/K/tyokalut/kk_wumen.py rivit 32–40 KS06-lohko, oletukset …/portti06-215/
+  k4-parametrit.json; KS kirjoittaa ne lohkon oletuksiksi) → kopioi lohko K/tyokalut/kk_wumen.py:hyn v136:n yhteydessä (diff ensin).
