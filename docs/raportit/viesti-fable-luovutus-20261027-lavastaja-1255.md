@@ -730,3 +730,9 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - KUJA 05 PYSYY NYKYISELLÄ LEVEYDELLÄ (omistaja 06.41). 05:n jatko pk4:n mukaan (lisäys 54, SEURAAVA) on yhä kesken ja tehdään samassa
   erässä; molempiin sama KS-pohja, joten pyydä KS:ltä kujan 02 kavennus pk4:n päälle (yksi pohja.json, ei kahta rinnakkaista).
 - Järjestys: 1) KS pohja (pk4 + 02 kapea) 2) Lavastaja 05:n uusi muurijakso + 02:n muurit 3) parit 02 ja 05 → KK 4) PK rata.
+
+## LISÄYS 56 (29.10.): PK:n RATAEHTO KUJIEN 02 JA 05 LEVEYDELLE — sitoo lisäyksen 55 kavennusta
+- PK 29.10. (viesti LR:lle ja KS:lle): vapaa leveys muurista muuriin ≥ 2,4 m, muuten rata katkeaa (JuoksuPalatsiVerkko ei näe kujaa).
+  Kaksi kaistaa tulee yli 1,5 m leveälle osalle; suositus ≥ 3 m. Tarkista kuja 02:n kavennuksen (≈ 0,77 × nykyinen) jälkeen, että vapaa
+  leveys pysyy ≥ 3 m (vähintään 2,4 m); jos havainteen leveys alittaa sen, kysy KK:lta ennen kuin kavennat rajan alle.
+- Kun pohja (KS) ja muurit (LR) ovat valmiit, ilmoita PK:lle (Pelikoodari): PK tekee ratatarkistuksen ja parin KK:lle.
