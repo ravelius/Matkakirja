@@ -925,3 +925,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - juuri-v133m = v130m + rakennukset-v125 + tausta v107; ajo: J=v133m KOHDAT="02 05" zsh K/tyokalut/aja_v132_pari.zsh.
 - SEURAAVAKSI: 05-parin tarkistus (siivet, myös LOD1/2 ok?) → KK → paketti_v66.py: vaihda R rakennukset-v125:ksi ja tausta
   yksikerros-v107:ksi + LAHTEET (nyt osoittaa v124:ään ja v106:een) → aja → PK (läpikulku 05, reunukset kavensivat kujaa ~0,5 m/puoli) → PT.
+
+## LISÄYS 73 klo 13.5x (29.10.; PT kirjasi KK:n viestistä): KUJA 05 = MATALA SIIPI + LÄHIMUURIT SAMAAN RÄYSTÄSLINJAAN
+- KK: v125:n korkeat siivet (W=3.9, -134428/05) EIVÄT täytä palautetta: räystäs ja friisi jäävät kuvan yläreunan yli (havainteessa
+  friisin alareuna 0,17 kuvan korkeudesta). VALITAAN MATALA siipi (W=2.75, -133647/05: friisi 0,17, oikein).
+- Samalla kujan 05 lähimuurit (kuvan reunoilla siipien takana nousevat punaiset seinät) LASKETAAN samaan räystäslinjaan siipien kanssa,
+  niin että friisi jatkuu yhtenäisenä kuten havainteessa. Muurien korkeus ei tule datasta (LR 13.3x) → noudatetaan ulkoasua, ei
+  selitystä omistajalle. Länsipuolen rakennukset saavat jäädä taakse omine kattoineen.
+- 01 (lukittu) ja 02 ennallaan. 02:n uudet reunakivet ja katto OK (KK) → pari 02 odottaa PK:n laattoja ja kivijalan kiviä.
+- Järjestys: 05 matala siipi + muurit → pari 05 → KK → paketti_v66.py (lisäyksen 72 SEURAAVAKSI-kohta, R = uusi rakennukset-versio).
