@@ -796,3 +796,6 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   muuten 05:n jatko katoaa: muuta aja_v117_pari.zsh:n polut → aja_v120_pari.zsh). 3) parit KK:lle, --muurit-linjat KS:lle (pk8),
   PK:lle. 4) uusi vientipaketti (tausta-v64, muurikate-v21; rakennukset-v49/avoimet-v51 ennallaan) samaan junaan pk8:n kanssa.
 - JUMI yhä PT:llä: t-portti-424 umpinainen (lisäys 59). Viestiraja täynnä → mcp__ccd_session_mgmt__send_message.
+- PT:N PÄÄTÖS 29.10. (JUMI ratkaistu): t-portti-424 → KYLLÄ, leikkaa aukko taustaan x −251,4…−247,0, alle aukon yläreunan
+  (malli + way/42509088 = totuus); tarkista aukko_este.py:llä. Tee samaan v64-pakettiin kuja 02 -levennyksen kanssa (TEE-kohta 4).
+  v63:a EI viedä ämpäriin erikseen (v64 korvaa, yksi juna). PK tarkistaa pk7/pk8:n radan kuja-39:ään vasta v64:llä (ilmoitettu).
