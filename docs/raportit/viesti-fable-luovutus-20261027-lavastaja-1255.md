@@ -1372,7 +1372,7 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - PARIT taustalla: scratchpad pari_v81.zsh (07, juuri-pk7-v81) ja pari_v83_03.zsh (03 03b, H/juuri-pk7-v83 = v81 + rakennukset-v145 + c1-v8 + c2-v15).
   Valmiit vierekkäiskuvat → KK + PT. Codex-osat (A2 12/12, A4, A1) PK:n kansiossa proto-3d/_tyo/pelikoodari/codex-osat-215/ → harjarivit PT:n luvalla.
 
-## LISÄYS 102 klo 00.0x (30.10.): LUOVUTUS (konteksti 30 %) — v84 = PT:N 07-LINJAUKSET, ALOITA TÄSTÄ
+## LISÄYS 102 klo 23.58 (29.10.): LUOVUTUS (konteksti 30 %) — v84 = PT:N 07-LINJAUKSET, ALOITA TÄSTÄ
 K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40. Viimeisin paketti v83 (6840ade5, PT kuittasi, JU vie).
 - 07-PARI v81 (lokit/havainne-editori-20261029-234039/07): PT: kerrostalojen poisto OK. PT:N LINJAUKSET v84:ään:
   1) Meridiaaniportin eteen EI vallihautaa eikä siltoja (todellinen paikka = Duanmenin piha); pihan pinta kiveksi/puistoksi, ei harmaita pihakaistoja.
