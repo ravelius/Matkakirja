@@ -1236,3 +1236,6 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   C3_/C2_-nimet sallituissa; osasarja juuri-pk7-v73:ssa. Pintatarkistus v73 0 vikaa, mutta VANHAT PINNAT (LR:n, ennen 'vika'-tilaa):
   ulkorengas-v5 (V4_stone, 24 lod2), kulmatorni-v1b (V4_stone, 1), muurikate-v18:n C3-vanha kate kk_muurikate_vanha_* (V4_sokkeli/_kansi, 2)
   → portti_kivijalka.py VANHA=… (lod2 PIENENNA=256) näille + uudet versiot PK:lle. Avoimet-v51 (8) lukittu, ei.
+- 21.4x PK VASTASI (ESTE POISTUI): aja rakennukset-v136 ILMAN leivontaa; älä lisää UV1:tä eikä valo-kuvaa (peli: vertailuvalo, valo_rgbm ei
+  lueta; JuoksuV4Maailma.cs:536). TÄRKEÄ: ÄLÄ aja lisaa_valo.py:tä uudelle portille (aja_c1_vanha_v54.zsh tekee sen) – valo_rgbm ilman UV1:tä
+  = atlasta luetaan kohdasta (−1, −1). Tarkista lopuksi, ettei a-meridiaaniportti-lod*.glb:ssä ole valo_rgbm-kuvaa.
