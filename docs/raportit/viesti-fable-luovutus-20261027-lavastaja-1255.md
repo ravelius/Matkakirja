@@ -856,3 +856,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Jos KK hylkää: v65 ennallaan, PK:n pari ratkaisee.
 - Työkalut tällä erää: editori-lr.sh (PAIKKA_<k>, PELIKAMERA=1, 05-oletuskamera), portti_teal_puuksi.py, portti_kapea.py, portti_ovet_kaanto.py
   (hylätty), lattia_paallekkain_pois.py; ajot aja_v121…v126_pari.zsh. KK:lle vastattu 02:n puusta (itäpihan puuryhmä, poisto vain pyynnöstä).
+
+## LISÄYS 67 klo 10.0x (29.10.): KUJA 05:N LATTIAVÄLKE KOKONAAN (v106) → v66 VALMIINA, ODOTTAA KK:N 05-OK:TA — ALOITA TÄSTÄ
+- PK pk7v65 (283/283): harmaa laikku p-kujaportin kohdalla. Syyt: (1) kujapalan V4_kujakivi_lattia jatkui portin (z 400,03) ohi z 406:een
+  ilman marmoria alla; (2) emopalan 0-3 LOD1/2-lattia (iso kolmiointi, kärjet jaettu reunakiven yläpinnan y 0,15 kanssa) jäi kujakiven tasoon
+  tai yli, kun peli näyttää emopalasta LOD1:n ja kujapalasta LOD0:n (v104:ssä 162 pistettä < 1 cm).
+- UUDET työkalut (K/tyokalut): kujakivi_rajaa.py (kujakivi leikataan z = ZMAX, yli menevä osa V4_lattia-marmoriksi UV x/8, 1 − z/8);
+  lattia_paallekkain_pois.py KOKO=1 (peite kaikista LODeista, kolmio kokonaan alas; järjestys kujapala 0 > 1-3 −0,015 > 0-3/0-4 −0,03).
+- yksikerros-v103 → v105a (rajaa) → v106 (KOKO=1 VARA=0.1 LASKU=0.03 ALUSTA=-0.07). Kerrosskannaus x −262…−240, z 380…432, kaikki
+  LOD-yhdistelmät: 0 pistettä < 1 cm. juuri-v128m, aja_v128_pari.zsh; kuvat havainne-editori-20261029-095444/06 ja -095711/06 (pelikamera).
+- v66 = v65 + kielletty-rakennukset-v50 (= rakennukset-v119) + kielletty-tausta-v66 (= v106): K/tyokalut/paketti_v66.py valmis, EI AJETTU
+  ennen KK:n 05-portin OK:ta (kysytty PT:ltä). v65 jää paikalleen, kunnes PK vaihtaa (PK: ilmoita ennen viennin poistoa).
