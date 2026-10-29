@@ -40,3 +40,12 @@ Lokien kameratiivistys: `python3 -I /Users/Shared/Claude/proto-3d/_tyo/pelikooda
 - SendMessage-raja täynnä → viestit varakanavalla mcp__ccd_session_mgmt__send_message.
 - Peli-testit: `bash Peli-testit/kaanna.sh` (ei zsh: sanojen jako). Postilaatikkoon ilman worktreetä: scratchpadin posti-commit-malli
   (GIT_INDEX_FILE + commit-tree; zsh:ssä `${C}:refs`, ei `$C:refs`).
+
+## LISÄYS (PK 29.10. ~10.30): drone l ajettu, mittarin syy löytyi → drone m 284cfe49e (ei simua ennen viikkorajan nollausta)
+- l (lokit/todistus-drone214l-9636c167c-20261029-1010): nostot OK (t-portti-120 ≤ 3,3 m/s, 2. portti ≤ 2,8 m/s), "ladattu 283, puuttuu 0",
+  MUTTA mittari KATOSI yhä 46 samoissa kohdissa kuin k. Syy EI ollut ennakko: Puyi on hallin/portin sisällä, ja katon osa palaa
+  (Linjalla päättyy → Haivytetty pois) häivytyksellä 0,2 s; ensimmäiset 0,1 s Peitto < 0,5 → mittari laski. KestoS 0:lla paluu oli heti 1.
+- m 284cfe49e (drone-214, peilissä): mittari ohittaa katon, jonka Haivytetty = false (palaamassa). unity 0. EnnakkoRaja 1,5 m (l) jää.
+- Seuraavaksi (viikkorajan nollauksen jälkeen): käännä + aja m (kopioi kaanna|aja-drone214l-9636c167c.zsh ja simu-drone214l.txt
+  → 284cfe49e/drone214m), tarkista KATOSI 0 ja nostot kuten l, sitten video Sonnetille (katto häipyy t-portti-120:llä, videoaika ≈ t + 44 s)
+  → PT → KK → juna 214 omana eränä.
