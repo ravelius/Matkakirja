@@ -819,3 +819,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - VIENTIPAKETTI _valmiit/juoksupeli-kk-lavastaja-v64-vienti-20261029 (SHA256SUMS sha256 1bfef18a7714d938…, -c OK): tausta-v64 =
   yksikerros-v103, muurikate-v20-pohja = pari-v119, rakennukset-v49, avoimet-v51. PK:lle versiot (jonossa), KS:lle: pk8:aa ei tarvita.
 - SEURAAVAKSI: PT kuittaa nipun → JU vie. v104/v121m ovat vain koe (ei vientiin).
+
+## LISÄYS 63 klo 08.0x (29.10.): 05-PARI SOVITETULLA KAMERALLA, v64 ENNALLAAN — LUOVUTUS, ALOITA TÄSTÄ
+- 05-pari TESTIKAMERA_05="3.3 6.88 10 45" (sama kuin 02) v120m:llä: havainne-editori-20261029-075824/05 (keisari samankokoinen). Parit
+  02 (-073622) ja 05 (-075824) KK:lla.
+- KK/PT: havainteen kaukoportti t-portin takana → pohja.json: kuja-39 jatkuu t-portista vain z 425→436,7 ja kääntyy länteen, muuri 210:n
+  kulma z 445,6; ei porttia eikä suoraa jatkoa → PT 08.0x: v64 ENNALLAAN (havainne = ulkoasu, mitat oikeat).
+- Nippu JU:lle vasta PK:n reittiverkkokorjauksen (kuja 40b) jälkeen; PT kuittaa.
