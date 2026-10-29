@@ -3124,3 +3124,51 @@ KK:n kortti, pari 4, sanatarkasti 18.42: "Suurten kaupunkien nimet ensin. Yksitt
 ## LIITO OK, VARTIJA LÄHEMMÄKSI; KIVET OK, KATOT IRTI JA LIIAN KORKEALLA (omistaja 28.10. klo 18.57) (28.10.2026 klo 18.58)
 
 KK:n kortit, sanatarkasti. Liito #1222: "Liito Ok. Vartijan pitää vain olla lähempänä jotta puyi onnistuu lentämään vartijan yli" → PK: vartija lähemmäksi, liito junaan. Kujakivet v5: "Kivet Ok mutta katot näyttävät olevan irti ja liian korkealla" → LR korjaa katot ensin, sitten valo VS+LR. J4-v3 KK palautti LR:lle (kaiverrukset ja leimat eivät näy Codexin kuvan tavoin).
+
+## STRIIMIKARTAN KAUPUNKIEN NIMET PIENEMMIKSI (omistaja 28.10. klo 21.03) (28.10.2026 klo 21.03)
+
+KK:n välitys, sanatarkasti: "Nimet ovat aivan liian isolla". Tavoite (KK): porrastuksen kaupunkien nimet selvästi pienemmiksi ja hillityiksi (kokoluokka kuten vanha LONTOO); kartta ei saa näyttää täyteen kirjoitetulta. KS pari 8 (Lontoon pallokorjauksen kanssa) → KK → omistaja; TF 213 odottaa sitä.
+
+## OMISTAJAN PAATOS: PORRASTUS KELPAA, TF 213 LAHTEE (28.10. klo 21.40) (28.10.2026 klo 21.41)
+
+Kortti KK:ssa: "Kelpaako porrastus nyt?" → "Kelpaa (suositus)" (selite "Testiversio 213 lähtee heti."). Kuva docs/raportit/kaappaukset/omistaja-20261028/porrastus-viisi-nakymaa-ennen-jalkeen-2140.jpg = KS:n pari 9, merkittavat-213 f5ea99f7f + 752794a22. Seuraavaksi KS → NS kokoaa rungon → JU tf-kaynnista.sh 213 + pieni iPad. Vartija näytetty omistajalle tiedoksi.
+
+## OMISTAJAN PAATOS: KESKITYSLEIRIT POIS KARTAN NAHTAVYYKSISTA (28.10. klo 21.56) (28.10.2026 klo 21.56)
+
+Kortti KK:ssa: "Poistetaanko keskitysleirit kartan nähtävyyksistä?" → "Poistetaan (suositus)" (selite: "Leirit pois nähtävyyksistä. Muistopaikat voi tuoda myöhemmin omana aiheenaan."). Koskee kaikkia keskitys- ja tuhoamisleirejä (mm. Drancy, Majdanek, Ravensbrück, Chełmno, Auschwitz-Birkenau, Dachau, Mauthausen, Treblinka). Tausta: KK huomasi saumaparissa nimen "Drancy concentration camp" nähtävyyksien joukossa; samalla todettiin, että 2 988/5 231 merkittävällä kohteella ei ole suomenkielistä nimeä (näkyivät englanniksi tasoilla 11–14). PT: ne jäävät piirroksina ilman nimilappua (tai pois datasta, jos ei onnistu turvallisesti), vain suomeksi -linjauksen mukaan. Molemmat KS:n commiteina uuteen TF 213 -runkoon; ensimmäinen 213-ajo (runko a7b9b71d4) peruttu ennen IPA:ta.
+
+## OPPI (periaate 10): KK LUPASI VALON KUJAAN 01 ENNEN KAIKKIEN MUOTOJEN VALMISTUMISTA (28.10. klo 22.41) (28.10.2026 klo 22.42)
+
+KK lupasi omistajalle 22.41 valon (VS:n aurinko + LR:n leivonta) kujaan 01 heti sen muodon hyväksynnän jälkeen. Ristiriidassa omistajan päätöksen 27.10. klo 10.56 kanssa (ensin KAIKKI rakennukset ja elementit havainnekuvien mukaisiksi, valo mietitään uudelleen vasta sen jälkeen). Rikottu periaate 6 (tarkista ennen kuin lupaat). Syy: KK:n aloitus.md:n kohdassa ENSIN 4a luki "SITTEN VALO" ilman päätöksen ehtoa. PT pysäytti 22.4x; KK oikaisi LR:lle ja omistajalle ja korjasi aloitus.md:n (ENSIN 4a, TEKOTAPA). Linja: valo vasta kun kaikki kujat ovat muodoltaan hyväksyttyjä ja omistaja antaa kortilla luvan ("Aloitetaanko valo?"); VS levossa siihen asti.
+
+## OMISTAJAN VASTAUS: KUJAN 01 MUOTO, LIIKAA VIHREÄÄ (29.10. klo 06.09) (29.10.2026 klo 06.09)
+
+Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Liikaa vihreä" (pari LR v110e). KK:n tulkinta LR:lle: sinivihreä vyö kapeammaksi, vihreä vain palkkeihin ja kannakkeisiin, välit punaisiksi tai tummiksi havainnekuvan mukaan; uusi pari omistajalle. Valo edelleen vasta kaikkien kujien muotojen jälkeen omistajan kortilla (27.10. klo 10.56).
+
+## OMISTAJAN PAATOS: KARTAN NIMIEN UUDET KOOT KELPAAVAT (29.10. klo 06.12) (29.10.2026 klo 06.12)
+
+Kortti KK:ssa: "Kelpaavatko kartan nimien uudet koot?" → "Kelpaa (suositus)" (kuva nimet-jatko2-koot.jpg, KS aa48b61f7). Striimikartan nimet: pääkaupungit 16 pt, suurkaupungit 13 pt, kunnat 10–12 pt (ennen 26/21,5/19,5); pääkaupunki suurin nimi. Vain suomeksi (PT:n linja 29.10. 00.3x: suomen kielen käytäntö kuten fi-Wikipedia, alkuperäiset erisnimet jäävät, vakiintunut suomenkielinen muoto voittaa, esim. Seine ja Marne ilman artikkelia; ilman suomenkielistä lähdettä pois). Bourgogne-Franche-Comté yhtenä nimenä; Budapest, Kiova, Lissabon ja Bryssel lisätty. Nähtävyyspiirrosten nimet (NUI 616d4b6e0): kuntanimitasolla 12 pt, katutasolla entinen koko; piirrokset ja niiden nimet kiinteinä esteinä, karttanimet väistävät (KS d25b6f69f). Kaikki junassa 214 (runko 72952b7fe).
+
+## OMISTAJAN PAATOS: KUJAN 01 MUOTO KELPAA, LUKITTU (29.10. klo 06.20) (29.10.2026 klo 06.20)
+
+Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Kelpaa (suositus)" (LR v112: lokit/havainne-editori-20261029-061212 pelikamera, -061008 havainteen kamera; vihreä vain kapeassa palkissa ja kannakkeissa, korjaus omistajan 06.09 "Liikaa vihreä" -vastaukseen). Kujan 01 muoto lukittu → seuraavaan junaan LR:n mukana. LR jatkaa kujiin 02/05. Valo edelleen vasta, kun kaikkien kujien muodot on hyväksytty ja omistaja antaa kortilla luvan (27.10. klo 10.56).
+
+## OMISTAJAN PAATOS: KUJA 02 KAVENNETAAN HAVAINNEKUVAN LEVYISEKSI (29.10. klo 06.41) (29.10.2026 klo 06.41)
+
+Kortti KK:ssa: "Kavennetaanko kuja 02 havainnekuvan levyiseksi?" → "Kavennetaan (suositus)" (selite: "Korkeat muurit ympäröivät juoksijaa kuten havainnekuvassa."; kuva lokit/havainne-editori-20261029-063350/02/vierekkain.png). Päättää 25.10. klo 11.32 levennysasian (loki 2579, 2611: kysymys oli jäänyt kysymättä mittausvirheen korjauksen jälkeen): kuja 05 on jo havainnekuvan levyinen (pk4 ~4,5 m), kuja 02 kavennetaan havainnekuvan levyiseksi. Työnjako: KS pohja, LR muurit, PK rata.
+
+## OPPI JA KORJAUS: KUJAN 02 KORTTI 06.41 PERUSTUI VÄÄRIN PÄIN OLEVIIN LUKUIHIN (29.10. klo 07.0x) (29.10.2026 klo 07.00)
+
+Omistajan 06.41 päätös "kuja 02 kavennetaan" tehtiin kortilla, jossa luki "0,70 vs havainne 0,54". LR ajoi mittarin uudelleen: editori-lr:n mittari.txt:n sarakkeet olivat käänteiset, oikeat luvut havainne 0,70 ja peli 0,54 eli pelin kuja on jo havainnekuvaa kapeampi; kavennuskoe −1,5 m (juuri-v117m) vei 0,47:ään eli kauemmas havainnekuvasta. Kavennus pysäytetty (LR, KS, PK). PT pyysi KK:lta uuden kortin oikeilla luvuilla, suositus: levennetään havainnekuvan levyiseksi (kuten 25.10. klo 11.32). Oppi: mittari.txt:n sarakejärjestys korjataan editori-lr:ssä; kortin luvut tarkistetaan uudella ajolla ennen kuin ne viedään omistajalle.
+
+## OMISTAJAN PAATOS: KUJA 02 HAVAINNEKUVAN LEVYISEKSI, RAKENNUKSET ENNALLAAN (29.10. klo 07.26) (29.10.2026 klo 07.27)
+
+Kortti KK:ssa: "Korjaus: kuja 02 on pelissä jo havainnekuvaa kapeampi. Levennetäänkö se havainnekuvan levyiseksi?" → "Levennetään (suositus)" (selite: "Kuja havainnekuvan levyiseksi, rakennukset ennallaan."; kuva lokit/havainne-editori-20261029-065520/02/vierekkain.png). Kumoaa 06.41:n kavennuksen. Kortti lähti ennen PT:n tarkennusta: kattojen väli riippuu kamerasta (sovitettu kamera 0,84, testikamera 0,54, havainne 0,70), joten mittarina käytetään kujan leveyttä hahmon jalkojen kohdalta reunakivestä reunakiveen havainteen sovitetulla kameralla (havainne 4,5 | peli ≥ 4,3 hahmoa). PT: tavoite toteutetaan levittämällä jäljellä oleva ero (~0–5 %), rakennukset ennallaan; omistajalle kerrotaan yhdellä rivillä, ei uutta korttia. Työnjako: LR muurit, KS pohja (pk8 = pk7 + kuja 02), PK rata, parit KK:lle sovitetulla kameralla (-070615).
+
+## DRONEKAMERAN LIIKE SOPIVA (omistaja 29.10. klo 07.57) (29.10.2026 klo 07.57)
+
+Kortti KK:ssa: 'Onko dronekameran liike nyt sopiva?' → 'Sopiva (suositus)' ('Pidetään tällaisena, alku ja loppu korjataan.'). Pohja: PK drone-214 ea52d4a50, KK:n välivideo 2,5–64 s. PK korjaa alun (205 °/s kääntö, ylhäältä laskeutuminen) ja lopun (muurin/portin nosto 3–8,6 m, 16 m/s; Raamattu 2.177 voimassa: drone nousee porttien yli, nosto hidas ja ennakoiva). KK tarkistaa koko videon; junaan 214 omana eränään vain puhtaana. Kuja 02 (PT 29.10.): uusi mittaus peli 4,71 | havainne 4,49 hahmon korkeutta = +4,9 %, omistajan 07.26 tavoitteen (+0–5 %) sisällä → ei muutosta.
+
+## JUOKSUPELIN LOPPUYHTEENVETO RIKOTUISTA ESINEISTÄ (omistaja 29.10. klo 08.21–08.55) (29.10.2026 klo 08.55)
+
+Pyyntö 08.21: juoksun loppuun yhteenveto rikotuista esineistä: Codexin syvätyt esinekuvat, nimi + (kpl), napautus avaa ikkunan, jossa esineen muistokuva (muistokupla) ja lyhyt historia kiinalaisesta kulttuurista. 08.23 kortti: 'Ei, vain rikotut' (ei rikkomattomia siluetteina). 08.55 kortti: 14 historiatekstiä 'Kelpaavat (suositus)' KK:n neljällä kielikorjauksella ja PT:n kellon vuosikorjauksella (1600-luvun alussa). PT: yhteenveto aukeaa itsestään ennen loppukorttia ja vain, jos jotain rikottiin; Kokoelma-nappi ennallaan. Pohjat: galleria-lasi + mk-nosto (NUI), logiikka JuoksuTulos.RikotutEsineet (PK).

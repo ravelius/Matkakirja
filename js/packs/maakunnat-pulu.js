@@ -1981,6 +1981,10 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä Horreum Margi tarkoittaa ja mikä sen tehtävä oli?", a: "Nimi tarkoittaa Margi-joen (nykyisen Velika Moravan) viljavarastoa; paikka oli roomalainen varuskuntakaupunki, aseiden valmistuskeskus ja koko alueen viljan säilytyspaikka." },
       { q: "Miksi paikka oli strategisesti tärkeä?", a: "Se sijaitsi Via Militariksella, Rooman ja Konstantinopolin välisellä pääväylällä, ja toimi hetken jopa Ylä-Mesian provinssin pääkaupunkina sekä seitsemännen legioonan tukikohtana." },
     ],
+    Rasinski: [
+      { q: "Kuka perusti Kruševacin, ja mitä kaupungissa on säilynyt hänen ajaltaan?", a: "Ruhtinas Lazar Hrebeljanović perusti Kruševacin vuonna 1371 linnoitetuksi kaupungiksi ja piti sitä asuinpaikkanaan. Hänen rakennuttamansa Lazarica-kirkko valmistui vuosina 1375–1378 Moravan arkkitehtuurityyliin. Lazar kuoli Kosovon taistelussa vuonna 1389." },
+      { q: "Mikä on Župska berba?", a: "Župska berba on Aleksandrovacin kaupungin viininkorjuujuhla, joka pidetään vuosittain 22.–25. syyskuuta. Aleksandrovac kuuluu Rasinan piiriin, ja kaupungissa asuu noin 5 600 ihmistä (2022)." },
+    ],
     'Raški': [
       { q: "Miksi Pešterin ylänkö tunnetaan Sandžakin Siperiana?", a: "Yli tuhannen metrin korkeudessa sijaitseva tasanko kokee poikkeuksellisen ankaria talvia, ja lämpötilat voivat pudota rajusti — nimitys kuvaa juuri tätä äärimmäistä ilmastoa." },
       { q: "Mikä tekee Sjenican juustosta erikoisen?", a: "Se on perinteinen lampaanmaidosta suolavedessä kypsytetty juusto, jota valmistetaan yhä paimentolaisperinteen mukaisesti — ehdolla Unescon aineettoman kulttuuriperinnön listalle." },
