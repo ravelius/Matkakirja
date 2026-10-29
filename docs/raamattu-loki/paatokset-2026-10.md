@@ -3148,3 +3148,7 @@ Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Liikaa vihreä" (pari LR v110
 ## OMISTAJAN PAATOS: KARTAN NIMIEN UUDET KOOT KELPAAVAT (29.10. klo 06.12) (29.10.2026 klo 06.12)
 
 Kortti KK:ssa: "Kelpaavatko kartan nimien uudet koot?" → "Kelpaa (suositus)" (kuva nimet-jatko2-koot.jpg, KS aa48b61f7). Striimikartan nimet: pääkaupungit 16 pt, suurkaupungit 13 pt, kunnat 10–12 pt (ennen 26/21,5/19,5); pääkaupunki suurin nimi. Vain suomeksi (PT:n linja 29.10. 00.3x: suomen kielen käytäntö kuten fi-Wikipedia, alkuperäiset erisnimet jäävät, vakiintunut suomenkielinen muoto voittaa, esim. Seine ja Marne ilman artikkelia; ilman suomenkielistä lähdettä pois). Bourgogne-Franche-Comté yhtenä nimenä; Budapest, Kiova, Lissabon ja Bryssel lisätty. Nähtävyyspiirrosten nimet (NUI 616d4b6e0): kuntanimitasolla 12 pt, katutasolla entinen koko; piirrokset ja niiden nimet kiinteinä esteinä, karttanimet väistävät (KS d25b6f69f). Kaikki junassa 214 (runko 72952b7fe).
+
+## OMISTAJAN PAATOS: KUJAN 01 MUOTO KELPAA, LUKITTU (29.10. klo 06.20) (29.10.2026 klo 06.20)
+
+Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Kelpaa (suositus)" (LR v112: lokit/havainne-editori-20261029-061212 pelikamera, -061008 havainteen kamera; vihreä vain kapeassa palkissa ja kannakkeissa, korjaus omistajan 06.09 "Liikaa vihreä" -vastaukseen). Kujan 01 muoto lukittu → seuraavaan junaan LR:n mukana. LR jatkaa kujiin 02/05. Valo edelleen vasta, kun kaikkien kujien muodot on hyväksytty ja omistaja antaa kortilla luvan (27.10. klo 10.56).
