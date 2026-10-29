@@ -1063,3 +1063,6 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   −383,4…−368,3), juoksu +z; video ≈ t + 21,7 s → viiva 111,5 s ≈ t 89,8, Puyi ≈ (82,3; −364), viiva 4–8 m edessä: PELIN z ≈ −360…−356,
   x ≈ 80–84 (pelin kehys; muunna pohja-/glTF-kehykseen ennen hakua). Reitin 2. portti (1. = t-portti-120 U-käännöksen jälkeen). Huom.
   rakennukset.json: a-meridiaaniportti paikka_pohja (13,2; −380,9) → tarkista myös Meridiaaniportin holvitunnelit, ei vain t-portit.
+- 15.4x: parit valmiit. Pilarikorjaus REF 46c0add3c: -153540 (sovitettu), -153759 (pelikamera). VS:n 633d70948 + v137m: -154037 (sovitettu),
+  -154302 (pelikamera): kivijalassa EI pystyjuovia, pilarit kiveä, kerrokset + pitkät kivet näkyvät → lähetetty VS:lle ja PT:lle.
+  VS 15.4x: seuraava REF de0aeca40 (= 633d70948 + lattialaatat-v03 sävy kivittäin) → käytä seuraavissa pareissa ja v68:n tarkistuksessa.
