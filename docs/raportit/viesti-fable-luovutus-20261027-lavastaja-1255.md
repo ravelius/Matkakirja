@@ -845,3 +845,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - 05-portti: rakennukset-v119 = v118 + portti_havainne.py AUKKO=4.55 AUKKO2=3.5 FRIISI=5.2 LASKU=0 (aukko 5,14 × 3,5 m). Ovilehtien kääntö
   (portti_ovet_kaanto.py, v120) HYLÄTTY: KK halusi leveät nastapinnat → rakennukset-v120 = v119. Parit -083428 (sovitettu) ja -083705 (pelikamera)
   KK:lla → KK:n OK:lla v66 = v65 + rakennukset-v50 (= rakennukset-v119) → PK läpikulku + pari → PT.
+
+## LISÄYS 66 klo 09.1x (29.10.): LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- TILA: v65 _valmiit/juoksupeli-kk-lavastaja-v65-vienti-20261029 (PT tarkisti, SHA256SUMS f44c5207…); v64- ja v63-kansiot poistettu (PT).
+  PK otti v65:n (pelikoodari/pk7-214 20c32559f), pari pk7v65 JU:n jonossa → PK ilmoittaa tuloksen.
+- ODOTTAA KK:TA: 05-portti rakennukset-v119 (aukko 5,14 × 3,5 m, friisi hillitty; parit -083428 / -083705). PT: jos KK hyväksyy ennen
+  kuin PK:n v65-pari on puhdas → tee suoraan v66 (= v65 + kielletty-rakennukset-v50 = rakennukset-v119/kielletty-rakennukset-v54) ja v65
+  jää ämpäristä pois (yksi juna). Tee kuten v65.py (scratchpad-malli: cp -c -R edellinen paketti, vaihda kansio, SHA256SUMS, LAHTEET) →
+  PK (törmäys muuttui: aukko 5,14 m, läpikulku todennettava) → PT.
+- Jos KK hylkää: v65 ennallaan, PK:n pari ratkaisee.
+- Työkalut tällä erää: editori-lr.sh (PAIKKA_<k>, PELIKAMERA=1, 05-oletuskamera), portti_teal_puuksi.py, portti_kapea.py, portti_ovet_kaanto.py
+  (hylätty), lattia_paallekkain_pois.py; ajot aja_v121…v126_pari.zsh. KK:lle vastattu 02:n puusta (itäpihan puuryhmä, poisto vain pyynnöstä).

@@ -27,7 +27,7 @@ const ODOTETUT_MAARAT = {
   BGR: 28,
   HRV: 20,
   MNE: 21,
-  SRB: 24,
+  SRB: 25,
   BIH: 18,
   MKD: 8,
   ALB: 12,
