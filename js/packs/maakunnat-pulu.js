@@ -1393,6 +1393,10 @@ export const MAAKUNTIEN_PULU = {
       { q: "Ketä kutsutaan Kroatian Andersenin, ja mitä hänellä on tekemistä Slavonski Brodin kanssa?", a: "Kirjailija Ivana Brlić-Mažuranić muutti aviomiehensä myötä Slavonski Brodiin ja kirjoitti täällä suosituimmat satunsa; häntä kutsutaan Kroatian Andersenin vertaansa vailla olevan sadunkerronnan takia." },
       { q: "Mikä tekee slavonialaisesta kulen-makkarasta erityisen?", a: "Slavonski kulen on paprikalla maustettu kuivamakkara, jota on valmistettu samalla perinteellä yli 200 vuotta; EU myönsi sille suojatun maantieteellisen merkinnän vuonna 2017." },
     ],
+    "Požeško-Slavonska": [
+      { q: "Mitä tarkoittaa Požegan laakson latinankielinen nimi Vallis Aurea?", a: "Vallis Aurea tarkoittaa kultaista laaksoa. Nimi viittaa Požegan laakson hedelmällisyyteen: laaksoa ympäröivät Požeška gora, Papuk ja Dilj -vuoret, ja se on ollut tärkeä alue jo antiikin ajoista." },
+      { q: "Mitä Požegassa muistetaan 12. maaliskuuta?", a: "Požega vapautettiin ottomaaneilta 12. maaliskuuta 1688 kaupunkilaisten ja fransiskaanimunkki Luka Ibrišimovićin johdolla. Päivää vietetään edelleen kaupungin päivänä, ja keskusaukiolla esitellään silloin vanhoja tykkejä ja mortteleita." },
+    ],
     "Dubrovacko-Neretvanska": [
       { q: "Mikä tekee Stonin suolapadoista niin erikoisia?", a: "Stonin suolapadot ovat Euroopan vanhimmat yhä toimivat suolalammikot; niiden yli 5 kilometrin pituiset suojamuurit rakennettiin 1300–1400-luvuilla ja lasketaan maailman pisimpien linnoitusmuurien joukkoon." },
       { q: "Miksi Dubrovnikin vanhakaupunki näyttää monelle tutulta televisiosta?", a: "Dubrovnikin muurien ympäröimä vanhakaupunki toimi kuvauspaikkana Game of Thrones -sarjan kuvitteelliselle King's Landingin kaupungille, ja se houkuttelee edelleen sarjan faneja kiertokäynneille." },
