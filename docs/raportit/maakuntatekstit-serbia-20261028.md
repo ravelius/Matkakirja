@@ -97,3 +97,7 @@ Zaječarin piiri on Itä-Serbiassa lähellä Bulgarian rajaa, ja siellä asuu vu
 ## Zlatiborski
 
 Zlatiborin piiri on vuoristoinen piiri Länsi-Serbiassa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 250 000 ihmistä. Piirin keskus Užice on Đetinja-joen rannalla, ja vuonna 1941 se oli partisaanien hallitseman lyhytikäisen alueen pääkaupunki. Zlatibor-vuoristo on suosittu matkailualue, jonka korkein huippu Tornik on 1 496 metriä. Zlatiborin kylästä Tornikin huipulle vie vuonna 2021 avattu 8,95 kilometrin gondolihissi. Taran kansallispuisto perustettiin vuonna 1981, ja Drina-joki on kaivanut sinne syvän rotkon. Mokra Goran kylässä kulkee Šargan Eight -museorautatie. Kylässä on myös elokuvaohjaaja Emir Kusturican rakennuttama Drvengrad eli Puukylä. Uvac-joen jyrkät mutkat kuuluvat luonnonsuojelualueeseen.
+
+## Rasinski (uusi alue 28.10.2026, KS PR 5505)
+
+Rasinan piiri on Keski-Serbiassa Länsi-Moravan laaksossa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 207 000 ihmistä. Piirin keskus on Kruševacin kaupunki, jonka ruhtinas Lazar perusti vuonna 1371 pääkaupungikseen. Kruševacin Lazarica-kirkko rakennettiin vuosina 1375–1378. Kaupungin keskellä on Kosovon sankarien muistomerkki vuodelta 1904. Trstenik on Länsi-Moravan rannalla oleva noin 13 500 asukkaan kaupunki, ja sen lähellä on Ljubostinjan luostari, jonka ruhtinaatar Milica rakennutti vuosina 1388–1405. Aleksandrovacin seudulla viljellään viiniä, ja Župska berba -viinijuhla pidetään syyskuussa. Ribarska Banja on Kruševacin lähellä oleva pieni kylpyläkylä.
