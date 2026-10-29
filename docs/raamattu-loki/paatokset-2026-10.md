@@ -2659,3 +2659,528 @@ PT kertoi KK:lle klo 15.3x, että iPad Pro 11:een asennetussa junan 211 rungossa
 ## ELÄVÄN KARTAN PALAUTE iPAD PRO 11:LTÄ (omistaja 26.10.2026 klo 15.32) (26.10.2026 klo 15.33)
 
 Pyyntö sanatarkasti: "rautatiet näkyvät liian voimakkaasti ja ilmeisesti useampi päällekkäin oleva linja sotkevat linjat mössöksi. pelaajan nappula ja kohdekaupungin piste liikkuvat kartan päällä lähemmilla zoom tasoilla, pitäisi pysyä lukittuna paikallaan. 3d kohteet pitää olla kokoonsa sidottuja mutta kadota pehmeästi näkyvistä kokonaan kun zoomataan sisään ja ne suurenisivat liikaa. niiden paikalle saa silloin ilmestyä paljon pienempi sama kohde mutta sekin kokoon sidottuna. se että jonkin kohteen koko muuttuu zoomattaessa näyttää feikiltä. panorointi tökkii jokin verran lähemmillä zoom tasoilla. kaupunkien nimet saisi tulla näkyviin jo aiemmin (suuremmat kaupungit). pienemmät voi kuten nytkin." Raamattu 4.41 täydennetty (KOKO SIDOTTU KARTTAAN; korvaa 19.27:n "sama koko ruudulla" zoomauksen osalta, uusin sana voittaa). Toteutus Karttaseppä; pelikuvat ja video PT:n 1:1-tarkistuksen kautta KK:lle; asennus iPad Pro 11:een.
+
+## TILINVAIHTO 26.10.2026 klo 16.3x (26.10.2026 klo 16.32)
+
+Tilinvaihto tilille sami.reivinen@vvi.fi (org ddaee6a2). PT local_8d8ebf72, KK local_d5f31591, 10 roolia uusina sessioina (id:t osoitekirjassa); levossa olevat roolit tämän tilin vanhoihin sessioihin. Taulu R6VQFTUNq629zSzah719Uy. Kotikansiot mainiin (posti oma haara, siirtoseppä ohitettu). Ohjeiden koe 10/10, tilinvaihto-valmis.mjs 0. OPPI: paivita-kotikansiot.sh --ohita ottaa pilkkulistan (--ohita a,b), toistettu lippu ohittaa vain viimeisen.
+
+## KOMENTORIVIN KIRJAUTUMINEN POIS TILINVAIHDOSTA (omistaja 26.10.2026 klo 16.41) (26.10.2026 klo 16.41)
+
+Omistaja KK:ssa sanatarkasti: "Poistetaan tuo kommentorivikirjautuminen tilinvaihdon alusta. Se ei ole tarpeellista." Toteutus: tilinvaihto.md 0.1, VOIMASSA OLEVA ARVO -rivi Komentorivin tili ja siirtopromptin auth-maininnat poistettu, Raamattu 12.23 kohta 1 korjattu. Mikään työkalu ei käytä komentorivin tiliä (grep tools, hooks, julkaisija-tyokalut).
+
+## IPAD PRO 11 -ASENNUS PERUTTU, SEURAAVA ON TF (omistaja 26.10.2026 klo 16.43) (26.10.2026 klo 16.43)
+
+Omistaja KK:ssa sanatarkasti: "Palaan vasta huomenna takaisin töihin, joten ei tarvitse tehdä loppuun sita pelin siirtoa iPadille nyt. Tehdään uusi test flight, sitten kun Tarpeeksi asioita on valmistunut." Toteutus: 14.32-ketju (KS→NS→LT→asennus) lopetettu; KS:n 3D-sarjan korjaus junaan 211 tavalliseen tapaan; PT kertoo KK:lle, kun juna 211 on TF-kypsä, KK kysyy kortilla. Omistaja poissa huomiseen: yö oletuksilla.
+
+## TEHOSTUS: CODEX AINA TÖISSÄ JA AIEMMAT PÄÄTÖKSET TILAUKSEEN (omistaja 26.10. 18.1x) (26.10.2026 klo 18.50)
+
+Omistaja KK:ssa: "Voiko työtä tehostaa?" KK:n vastaus toteutettu: (1) Codexilla 2–3 hyväksyttyä tilausta jonossa (seuraavaksi loput muistokuplien kuvat v4-tyylillä, peliin kytkentä juoksupelin jälkeen), postilaatikon 60 min hiljaisuushälytys PT:lle (Postivahti), vanha jäämä codex-tripo-lautaspoyta950 kuitattu. (2) Jokaiseen tilaukseen omistajan aiemmat päätökset aiheesta (loki-hae), tekijä tarkistaa ne ennen luovutusta; tuotannonohjaus.md luku 4. Syy: latauskuvassa Puyilla lenkkarit, jotka omistaja hylkäsi jo 23.10.
+
+## LATAUSKUVA VAAKANA HYVÄKSYTTY (omistaja 26.10.2026 klo 21.05) (26.10.2026 klo 21.12)
+
+Kortti KK:ssa: "Kelpaako latauskuva vaakana näin?" → "Kelpaa (Suositus)". Kuvat proto-3d/_tyo/pelikoodari/latauskuva-211/kuvat-kengat-20261026/ vaaka iPhone/iPad/Mac (Qing-saappaat, leima 12° vinossa, keisari kokonaan, palkki näkyy; juna 211 runko 8ff161997). Pysty näytetään erikseen Codexin pohjakorjauksen jälkeen.
+
+## OLAVINLINNA CODEXILLE JA PYLVÄÄT/SEINÄT HAVAINNETTA VASTEN (omistaja 26.10.2026 klo 21.08–21.09) (26.10.2026 klo 21.12)
+
+21.09 (KK:ssa, sanatarkasti): "Jos kodeksilla ei ole hommia, niin sille voi antaa Olavin linnasta uusia tehtäviä niin paljon kuin mahdollista." → Olavinlinnan tauko purkautuu Codexin osalta (kuvat ja Tripo pysyvällä luvalla), juoksupeli ensin, Olavinlinna täytteenä; Natiiviseppä kartoittaa ja tilaa. 21.08: "miltä pylväät ja rakennusten seinät näyttävät verrattuna havainnekuviin" → Natiivi-UI havainne|peli-parit. 21.02: "pitää saada jo tänään valmista" → aikataulu KK:lle. 21.06 valaistuksen perussyy: leivottu valo = kuva muodosta → muoto lukkoon alueittain, leivonta kerran, tarkista_leivonta.py 0 ennen paria (PR 5255).
+
+## KK JOHTAA JUOKSUPELIN KEHITYSTÄ (omistaja 26.10.2026 klo 21.11) (26.10.2026 klo 21.14)
+
+KK:ssa, sanatarkasti: "Ota sinä ohjat juoksupelin kehittämisessä. Se on ollut liian kauan hakoteillä. Pitää saada nopeammin tuloksia aikaan." Toteutus: Keskustelukanava johtaa juoksupelin työtä suoraan (järjestys, tekotavat omistajan päätösten sisällä, hyväksyntä omistajan sanoja vasten); Pelikoodari, Valoseppä, Lavastaja, Natiivi-UI ja juoksupelin Codex-tilaukset raportoivat juoksupelistä KK:lle ≤ 3 riviä. PT jatkaa junat, merget, kartan, Raamatun ja muut roolit; juoksupelin junavienti NS:n kautta ennallaan. Roolit ilmoitettu 21.1x.
+## 7.32 TARKENNUS: KESKENERÄISET PELIKUVAT EDISTYMISEN MUKAAN (omistaja 26.10.2026 klo 21.17) (26.10.2026 klo 21.18)
+
+Omistaja KK:ssa sanatarkasti: "Laita minulle kuvia kun etenee jos pystyn auttamaan myös ratkaisujen keksimisessä." Tulkinta (KK, PT kirjaa): juoksupelin ja muiden käynnissä olevien töiden keskeneräisetkin pelistä otetut kuvat lähetetään omistajalle edistymisen mukaan, merkittyinä keskeneräisiksi; korjaamattomat viat kerrotaan rehellisesti kuvien ulkopuolella, ja omistaja voi ehdottaa ratkaisuja. 7.32 muuten ennallaan (vain pelaajan näkymä, ei tekstiä kuvan päällä). Kanava: tekijä → PT → KK.
+
+## JUOKSUPELI: PYSTYLATAUSKUVA HYVÄKSYTTY JA KAMERA LÄHEMMÄS KEISARIA (omistaja 26.10.2026 klo 21.49) (26.10.2026 klo 21.49)
+
+Omistajan kortit KK:ssa: "Kelpaako latauskuva pystynä näin?" → "Kelpaa (Suositus)" (Codexin huopapohjainen pystykuva 150e189c5, junassa 211). "Viedäänkö pelin kamera näin lähelle keisaria?" → "Kyllä, näin lähelle (Suositus)": mallina Codexin lähikamerakuvat 01 lähtökuja ja 02 punamuurikuja (30617f4a3), joissa keisari on noin 35 % kuvan korkeudesta (pelissä nyt 20–24 %). Pelikoodari tekee kameran; Codex korjaa kuvien 01 ja 02 valkoiset kengänpohjat tummiksi ja tekee hylätyt 03–06 uudelleen (PK tilaa).
+
+## KARTAN TIETOKORTIT: FAKTAT HETI, PULUN TEKSTI STRIIMATAAN (omistaja 26.10.2026 klo 22.13) (26.10.2026 klo 22.14)
+
+Omistajan pyyntö klo 22.0x (KK, sanatarkasti): "Saako jostain dataa mitä voisi näyttää kun pelaaja klikkaa kartan syvistä osista paljastuvia nimiä ja kohteita? Ja lisäksi pulun workerillä voisi tuoda
+lisää tietoa kohteesta (muutamia lauseita) ja sen alla olisi lue lisää nappi jolla worker loisi lisää tietoa ja kaikki tallentuisi tulevaa käyttöä varten. Mitä olet mieltä? Ja mitä data lähteitä
+voitaisiin käyttää tiedon striimaamiseen ja pystyisikö sitä tietoa siistimään esiasetetulla kaavalla peliin paremmin sopivaksi. Esim. asukasluku näytettäisiin suomennettuna teksti pohjana yms. Mitä
+olet mieltä?" Kortti "Tehdäänkö kartan tietokortit näin?" (KK suositteli faktoja heti ja Pulun tekstejä valmiiksi erissä), omistaja omin sanoin klo 22.13: "Faktat heti, pulun teksti striimataan.
+Kohteita liikaa. Mietitään myöhemmin generoimista etukäteen." Raamattuun uusi kohta 2.203 sekä poikkeusviitteet kohtiin 2.31 (peruspeli ilman API-krediittejä) ja 2.76 (ennakkosisältö Opus-agenteilla).
+Tekijät: Karttaseppä (kartan napautus ja kortti) ja Sisältökirjuri (suomenkielinen kaava ja faktalähteet); workerin osuus PT:n jaolla.
+
+## JUNA 211 JULKAISTAAN, KUN KARTAN TIETOKORTTI ON VALMIS; VEDOS ENSIN (omistaja 26.10.2026 klo 22.14) (26.10.2026 klo 22.16)
+
+Omistaja KK:ssa sanatarkasti: "Junan voi julkaista kun tietokortti valmis. Näytä vedos ensin". Tulkinta (KK, PT kirjaa): juna 211 lukitaan ja viedään TestFlightiin, kun kartan tietokortti (Raamattu 2.203) on valmis. Ennen toteutusta omistajalle näytetään KK:n kautta vedos: oikea syvän kartan paikka, Wikidatan faktat kaavalla, Pulun striimattu teksti ja Lue lisää. Juoksupelin ja muut valmistuvat työt latautuvat junaan siihen asti.
+
+## JUNA 211: EI TESTEJÄ JULKAISUSSA (omistaja 26.10.2026 klo 22.17) (26.10.2026 klo 22.18)
+
+Omistaja KK:ssa sanatarkasti heti 22.14:n päätöksen jälkeen: "Älä aja testejä julkaisussa." Tulkinta (KK, PT kirjaa): junan 211 julkaisussa ei ajeta tarkistusajoa, laitekierrosta, simulaattoria eikä iPad-ajoja, vaikka juna lähtisi yöllä (vastaus 9.11:n kysymykseen: Ei). Käännöksen automaattiset tarkistukset jäävät 9.11:n mukaisesti. Ilmoitettu Julkaisijalle ja Laitetestaajalle.
+
+## JUOKSUPELIN ESIKATSELUAJOT LINJALLE 2 (omistaja 26.10.2026 klo 22.39) (26.10.2026 klo 22.40)
+
+Kortti KK:ssa: "Saavatko juoksupelin esikatseluajot oman linjan?" → "Kyllä (Suositus)". Syy: kaikki Unity-ajot (esikatselu.sh, proto-kaanna.sh, botti) jonottivat yhteistä linjan 1 lukkoa, ja 22.35 kaikki sessiot odottivat. Lupa jaetun käännösinfran muutokseen (Raamattu 10.5): Natiiviseppä siirtää esikatselu.sh:n linjalle 2 (oma APFS-klooni Matkakirja-proto-esikatselu-2, oma lukko); JU:n käännökset linjalla 1, juna aina ensin.
+
+## LÄHIKAMERAN MALLIKUVAT HYVÄKSYTTY (omistaja 26.10.2026 klo 22.45) (26.10.2026 klo 22.47)
+
+Kortti KK:ssa: "Kelpaavatko nämä kuusi lähikuvaa pelin kameran malliksi?" → "Kelpaavat (Suositus)". Codexin lähikamerasarja kierros 2 (5076eb6ca, posti/juoksupeli-havainnekuvat-lahi-20261024/kierros2-20261026/) on juoksupelin lähikameran malli kohtiin 01–06; KK tarkisti ennen omistajaa (harmaat huopapohjat kuten 150e189c5, asu sama, ei irtoviivoja, keisari 35–40 %). Välitetty Pelikoodarille.
+
+## YÖN VALTUUTUS KESKUSTELUKANAVALLE (omistaja 26.10.2026 klo 22.47) (26.10.2026 klo 22.47)
+
+Omistaja KK:n ikkunassa sanatarkasti: "Menen nukkumaan. Saat hyväksyä puolestani kaikki päätökset". Omistajan seuraavaan viestiin asti KK päättää omistajan puolesta kaikki hänelle kuuluvat kysymykset ja kuvien hyväksynnät hänen aiempia sanojaan vasten, kirjauksella "KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA klo …". Koskee myös kartan tietokortin vedosta (22.14): hyväksytyn vedoksen jälkeen juna 211 saa lähteä, ilman testejä (22.17). Ei koske ostoja eikä lupa-asetuksia, avaimia, tunnuksia tai CLAUDE.md-tiedostoja (vain omistajan omalla viestillä). Roolit lähettävät KYSYMYS-rivit KK:lle heti, ei yöoletusta omistajalle kuuluvissa asioissa. Aamulla KK kokoaa omistajalle listan yön päätöksistä.
+
+## JUOKSUPELI: KEISARIN TUMMAT HUOPAPOHJAT JA LÄHIKAMERAN PARIT 2 (KK omistajan valtuutuksella) (26.10.2026 klo 23.16)
+
+KK:n päätös omistajan valtuutuksella klo 23.16 (sanatarkasti): pelin 3D-keisarilla on valkoiset kumipohjat, jotka näkyvät joka askeleella lähikamerassa. Omistaja hylkäsi valkopohjaiset lenkkarit 23.10. ja 26.10. (latauskuvan tummat huopapohjat 150e189c5, Codexin lähikuvien palautus 21.36). Pohjat tehdään tummaksi huovaksi (PK valitsee nopeimman tavan: VS:n materiaali tai Codexin tekstuuri), ja lähikamera menee junaan vasta tummien pohjien kanssa; muu juna 211 ei odota tätä. Lähikameran parit 2 (8b572bf07): geometria oikea kohdissa 01–03 ja 06, jalkojen tila korjauksessa, 05 korjauksessa, 04 salin sisustus LR:lle (alue 3).
+
+## JUOKSUPELI: LÄHIKAMERA VAIN ULKOKOHTIIN, SALEISSA YLÄKAMERA (KK omistajan valtuutuksella) (26.10.2026 klo 23.34)
+
+KK:n päätös omistajan valtuutuksella klo 23.3x (sanatarkasti): juoksupelin lähikamera menee junaan vain ulkokohtiin (kujat, aukio, portit) yhdessä Codexin tummien pohjien kanssa, kun KK on tarkistanut parit 3. Saleissa pysyy toistaiseksi nykyinen yläkamera, koska sisäkamera piilotti keisarin (221 piiloruutua). Salin sisäkamera ja haalennus (PK + VS) tehdään omana eränään LR:n salin sisustuksen kanssa (alue 3).
+
+## KOHDEKORTTIPOHJA: TIETOKORTTI POHJALLA SELLAISENAAN, PUUTTEET NUI:N POHJATYÖKSI (KK omistajan valtuutuksella) (26.10.2026 klo 23.53)
+
+KK:n päätös omistajan valtuutuksella klo 23.53 (sanatarkasti): hyväksytty. Tietokortti menee junaan 211 nykyisellä kohdekorttipohjalla. NUI tekee puuttuvat a) vierityksen vihjeen laajennettuun korttiin, c) ☰-napin selkeän merkityksen ja d) "Näytä vähemmän" -napin "Lue lisää" -napin jälkeen omana pohjatyönään junan 211 jälkeen olemassa olevilla UI-pohjilla. Toteutustapa tulee kuvina KK:lle ennen mergeä, koska omistaja ei ole aiemmin päättänyt näistä (lokissa ei osumia).
+
+## KOHDEKORTTIPOHJA: NUI:N A/C/D HYVÄKSYTTY (KK omistajan valtuutuksella) (27.10.2026 klo 00.05)
+
+KK:n päätös omistajan valtuutuksella klo 00.1x (sanatarkasti): NUI:n kohdekorttipohjan a/c/d (1ceb1ddff, kuvat proto-3d/_tyo/natiivi-ui/kohdekortti/kuvat-1ceb1ddff/) hyväksytty, merge junan 211 jälkeen. Lisäksi KK tietokortin vedokseen: Pulun ohjeeseen 'älä toista samaa faktaa' (Etonin tekstissä hallintopiiri ja vastakkainen ranta kahdesti); KK tarkistaa vedoksesta.
+
+## JUOKSUPELI: KEISARIN HUOPAPOHJAT VALOSEPÄLLE (KK omistajan valtuutuksella) (27.10.2026 klo 00.22)
+
+KK:n päätös omistajan valtuutuksella klo 00.22 (sanatarkasti): kyllä. VS tekee keisarin tummat huopapohjat materiaalilla tai varjostimella tekstuuria muokkaamatta, koska pohjat ovat basecolor-tekstuurissa ja mallissa on yksi materiaali. Lähikamera caca66ee0 menee junaan tämän kanssa KK:n 2× tarkistuksen jälkeen. Codexin tilaus 0de4bf318 jää pysyväksi korjaukseksi. Codexin herätys on aamulistalla. (Tausta: Codex hiljaa klo 22.48 alkaen; PT ehdotti siirtoa VS:lle.)
+
+## JUOKSUPELI: LÄHIKAMERA JA TUMMAT POHJAT JUNAAN 211 (KK omistajan valtuutuksella) (27.10.2026 klo 00.33)
+
+KK:n päätös omistajan valtuutuksella klo 00.32 (sanatarkasti): juoksupelin lähikamera ja tummat pohjat (haara 8b961cc46 = caca66ee0 + VS 533efb219; 2× todiste proto-3d/_tyo/pelikoodari/kuvakulma-211/huopapohjat-todiste-20261027/) hyväksytty junaan 211. PK vie NS:lle. Pohjan sävy nostetaan tummanharmaaksi huovaksi (150e189c5), jos se ehtii ennen lukitusta, muuten seuraavassa junassa. Avoimet erät: 05-portti, salin sisäkamera, halli-20 ja halli-24.
+
+## KARTAN TIETOKORTTI JUNAAN 211, JUNA LÄHTEE ILMAN TESTEJÄ (KK omistajan valtuutuksella) (27.10.2026 klo 02.12)
+
+KK:n päätös omistajan valtuutuksella klo 02.12 (sanatarkasti): karttojen tietokortti (d7a25ce12; todiste proto-3d/lokit/todistus-tietokortti-3paikkaa-20261027-0204/kuvat/) hyväksytty junaan 211, ja juna 211 saa lähteä ilman testejä (omistaja 22.14 ja 22.17). Tarkistettu omistajan sanoja vasten: faktat ja kuva näkyvät heti, Pulun teksti striimataan, Lue lisää ja lähderivi toimivat kolmessa paikassa. Palvelimella ennen aamua (KS/SK, ei vaadi julkaisua): 1) Windsor (~32 000 as.) on laji "Kaupunki", ei "Pikkukaupunki", ja asukasluvusta puuttuu vuosi. 2) Pulun virkkeet vain lähdetekstin pohjalta: Windsorissa "saksit perustivat sinne linnoituksen" on väärin, sillä linnan rakennutti Vilhelm Valloittaja noin vuonna 1070. 3) Toistotarkistus läpäisyyn.
+
+## LEIVONNAN PUHDAS LAAJENEE: PALOJEN VÄLISET PÄÄLLEKKÄISET PINNAT JA VALO AURINGONSÄDETTÄ VASTEN (KK, periaate 10) (27.10.2026 klo 02.45)
+
+KK klo 02.45 (sanatarkasti): leivonnan PUHDAS laajenee. VS:n tarkistin hakee nyt myös palojen väliset päällekkäiset pinnat ja vertaa leivottua valoa auringonsäteeseen. Syy: kujan 02 iso vaalea läikkä oli naapuripalan 1-3 lattia palan 0-3 lattian tasossa, eikä vanha tarkistus nähnyt sitä (VS selitti sen ensin auringoksi). Kuja saa oman taustapalan omalla 1024-atlaksella (KK 02.40); LR leipoo kerran, kun 1-3:n lattia on poistettu.
+
+## KARTAN TIETOKORTTI (2.203 TARKENNUS): PULU EI TOISTA YLÄRIVIN FAKTOJA (KK omistajan valtuutuksella) (27.10.2026 klo 04.10)
+
+KK:n päätös omistajan valtuutuksella klo 04.09 (sanatarkasti): Pulun tietokorttiteksti ei toista kortin ylärivin faktoja (laji, asukasluku, alue), vaan kertoo lähteestä jotain muuta. KS korjaa ohjeen ja toistotarkistuksen ja tekee toistavat tallennetut tekstit uudelleen. Windsor korjattu: Vilhelm Valloittaja, noin 32 000 asukasta.
+
+## TARKENNUS 27.10. KLO 02.45 KIRJAUKSEEN: KUJAN 02 LÄIKKÄ OLI REIKÄ LATTIASSA (KK) (27.10.2026 klo 04.10)
+
+KK klo 04.09 (sanatarkasti): tarkennus 02.45-riviin: kujan 02 läikkä oli reikä palan lattiassa (pelin täytelattia näkyi läpi), ei päällekkäinen lattia. v64 paikkasi sen. Kuunportti pois puutarhoista (KK 03.39).
+
+## JUOKSUPELIN ALKU JA OPETUS (omistaja 27.10. klo 08.26 ja 08.27, KK:n välitys) (27.10.2026 klo 08.28)
+
+OMISTAJAN PYYNTÖ klo 08.26 (sanatarkasti): "Juoksupeli saisi alkaa samalta kujalta kuin nytkin, mutta aivan kujan perältä niin, että keisari työntää takimmaisen rakennuksen oven auki ja livahtaa siitä
+ulos ja sen jälkeen huikkaa ottakaa kiinni, jos saatte. Aiemmissa versioissa kamera on pysynyt turhan kauan. Keisarin kasvojen etupuolella se voisi kiertää nopeammin keisarin taakse ja sen jälkeen
+lähteä heti numerolaskenta käyntiin, niin että pelaaja pääsisi jo ensimmäisellä suoralla ohjaamaan keisaria. Ja kun tulee ensimmäinen T-risteys, niin siinä tulisi ruudulle ohje. Vaipata oikealla
+peukalolla vasemmalle tai oikealle, tai ehkä mieluummin vain oikealle, niin pelaaja oppii ensimmäisen ohjausliikkeen saman tien. Sen jälkeen voisi tulla ensimmäinen este, jonka yli pitää hypätä, ja
+siihen tulisi kanssa ohje. Sitten tulisi käännös. Vasemmalle ja siihen tulisi ohje ja niin poispäin, että kaikki ohjain napit tulisi opetettua pelaajalle heti alussa, paitsi omenan heitto. Se voisi
+tulla vasta vähän myöhemmin, mutta kun ensimmäinen omena tulee reitillä, niin siltä kanssa tulisi näkyvä ohje ja miten sitä sitten käytetään. Pitää olla myös väistämisjuttu, missä pelaajan linjalle
+tulee jokin arvokas esine, ja kun pelaaja on saanut sen väistettyä, niin pitää keksiä uusi tai generoida uusi ääni, joka sanoo huh, se oli lähellä. Sen lisäksi voisi generoida muutamia muitakin
+väistörepliikkejä. Periaatteessa pelkkä huh ja joku muu vastaava, mahdollisimman lyhyt. Varmasti kaikkein paras." OMISTAJAN PYYNTÖ klo 08.27 (sanatarkasti): "Kun keisari pinkaisee alkukohtauksessa
+ovesta ulos, niin hänen perään voisi heti kurkistaa ensimmäinen eunukki, joka huutaa hänen majesteetti. Näin myös kiinniottajien kasvot tulevat heti tutuksi pelaajalle." TAVOITE (KK): pelaaja ohjaa
+keisaria muutaman sekunnin päästä alusta; alkukohtaus = ovesta karkuun, huuto, perään kurkistava eunukki; jokainen ohjausliike opitaan juuri tarvittaessa (ensin oikealle pyyhkäisy), omenan heitto
+vasta ensimmäisen omenan kohdalla; väistörepliikit (huh) generoidaan vasta omistajan ääniluvalla. TYÖNJAKO: KK johtaa (PK + LR + NUI ohjeiden pohja + Äänittäjä luvan jälkeen); juna 212 tai seuraava,
+kun valmis.
+
+## JUOKSUPELIN ÄÄNILUVAT JA KOLME TASOA (omistaja 27.10. klo 08.29 ja 08.30, KK:n välitys) (27.10.2026 klo 08.30)
+
+OMISTAJAN PÄÄTÖS klo 08.29 (kortti KK:ssa, sanatarkasti): "Saako keisarin viisi repliikkiä generoida (10 ottoa, 122 merkkiä)?" → "Kyllä (Suositus)" (Ottakaa kiinni, jos saatte! / Huh! / Huh, läheltä
+piti! / Hui! / Melkein!); "Mikä eunukin huuto valitaan?" → "Huuto 1 (Suositus)" = "Teidän majesteettinne!"; "Saako Äänittäjä tehdä eunukille kolme äänikoetta (enintään 66 merkkiä)?" → "Kyllä
+(Suositus)"; "Hidastuuko peli ensimmäisten ohjeiden kohdalla, kunnes pelaaja tekee liikkeen?" → "Kyllä (Suositus)". OMISTAJAN PYYNTÖ klo 08.30 (sanatarkasti): "Pelin voisi vielä lisäksi jaotella
+muutamaan lisätasoon niin, että ensimmäinen taso olisi juoksupelkillä ulkokujilla. Toinen taso olisi, että pelaaja pääsee myös huoneiden sisälle. Ja kolmas taso olisi se, kun pelaaja voi hypätä
+katoille ja niiltä alas sekä katolta toiselle viitan avulla. Eli pelissä olisi yhteensä kolme eri kenttää tai tasoa. Ja ensimmäinen taso olisi enemmän opetuksellinen pelin ohjaimista ja vähän
+lyhyempi, mutta toinen taso, missä on myös huoneet mukana, niin olisi selvästi jo pidempi. Ja viimeinen taso olisi yhtä pitkä, mutta siinä pystyisi sitten tekemään vielä enemmän juttuja." KK:N
+TAVOITE: taso 1 = alkukohtaus, opetus, ulkokujat + aukio (alueet 1–2); taso 2 = huoneet ja salit (alue 3, salin sisäkamera); taso 3 = katot ja viitta (uusi liike, Codexin animaatiot). Muuttaa 18.10.
+linjaa, jossa ensimmäinen rata kulki huoneiden kautta. Tuotanto tasoittain, ei osittaista julkaisua. RAAMATTU 2.177: lisätty KOLME TASOA sekä ALKU JA OPETUS (08.26–08.29).
+## JUOKSUPELIN KIINNIOTTO, RIMPUILU JA KEISARIN KÄDET (omistaja 27.10. klo 08.35, KK:n välitys) (27.10.2026 klo 08.39)
+
+OMISTAJAN PYYNTÖ klo 08.35 (sanatarkasti): "onko Codex toimittanut jo kaikki juoksupelin uudet hahmojen liikkeet. Voisi tilata vielä lisäksi kiinni ottamisen ja rimpuilun eri liikesarjat. Tällä hetkellä se on todella oudon näköinen, kun siitä puuttuu liikkeitä. Lisäksi keisari voisi käyttää käsiään apuna, kun se menee oviaukoista. Toisella kädellä voi ottaa tukea sekä voisi miettiä, miten muuten käsiä voisi käyttää, koska sekin elävöittäisi peliä." KK:N TAVOITE: kiinnijääminen näyttää uskottavalta ja vaihtelevalta (vartija tarttuu, keisari rimpuilee ja lannistuu, sama ei toistu), ja keisarin kädet tekevät aina jotain järkevää (tarttuvat, tukevat, nostavat kaapua, pitävät tasapainoa) eivätkä roiku. TILA: Codexin viimeiset liikkeet 19.10. (9 perusliikettä + viitta); kiinniotto ja rimpuilu puuttuvat. TYÖNJAKO: PK tilaa kiinnioton ja rimpuilun liikesarjat Codexilta samaan postiin eunukin kanssa; käsien lisäliikkeet omistajan kortilla (KK).
+
+## KEISARIN KÄSIEN LIIKKEET CODEX-TILAUKSEEN (omistaja 27.10. klo 08.39, KK:n välitys; jatkoa 08.35-pyyntöön) (27.10.2026 klo 08.39)
+
+OMISTAJAN PÄÄTÖS klo 08.39 (kortti KK:ssa, sanatarkasti): "Lisätäänkö samaan Codex-tilaukseen myös nämä neljä käsien liikettä?" → "Kyllä, kaikki neljä (Suositus)" (kaavun nosto hypyissä ja portailla, kämmen esteen päällä matalan esteen yli, alastulo käsillä, pilkallinen kädenheilautus alun huudossa). TYÖNJAKO: PK tilaa samaan Codex-postiin kiinnioton, rimpuilun, oviaukon tuen ja eunukin kanssa.
+
+## CODEXIN SUORA LIIKETILAUS JA KAKSI CODEX-SESSIOTA (omistaja 27.10. klo 08.40 ja 08.41, KK:n välitys) (27.10.2026 klo 08.42)
+
+OMISTAJAN TIEDOTE klo 08.40 (sanatarkasti): "tilasin vahingossa liikkeitä myös suoraan kodeksilta. Se viestii sinulle, mitä kaikkea se on nyt tekemässä, ja ottaa myös lisätilaukset sinulta vastaan. Kaikki ne pitäisi olla hyödyllisiä liikkeitä." TOIMET: KK pysäytti PK:n oman tilauksen; KK kokoaa Codexille lisätilauksen vain puuttuvista Codexin viestin jälkeen. UUSI TYÖTAPA klo 08.41 (sanatarkasti): "Codexilta voi siis tilata 2D-kuvia sekä Tripo 3D-malleja yhtä aikaa, koska siellä on kaksi eri sessiota, jotka tekevät kahta eri asiaa." RAAMATTU 7.15: lisätty KAKSI CODEX-SESSIOTA.
+## JUOKSUPELIN ÄÄNET UUSIKSI: KARAKTÄÄRI JA ENERGIA (omistaja 27.10. klo 08.50, KK:n välitys) (27.10.2026 klo 08.52)
+
+OMISTAJAN PYYNTÖ klo 08.50 (sanatarkasti, kuunneltuaan keisarin repliikit ja eunukin äänikokeet): "Kuummallekin eunukille, siis myös niihin vanhoihin ääniin, täytyy etsiä kokonaan uudet äänet. Kokeile etsiä elokuvahahmojen tai vastaavasta kategoriasta. Näitä nykyisiä on aivan liian jämptejä, peruslukija-ääniä. Saisi olla paljon karaktääriä ja ikää äänessä. Keisarin kaikki repliikit olivat liian levollisia. Pitää olla paljon enemmän energiaa ja säikähdystä mukana äänessä." TOIMET (KK): 08.29 erän otot hylätty kaikki. Äänittäjä hakee hahmoäänikirjastosta (elokuva- ja animaatiohahmot) eunukeille vanhoja, karaktäärisiä ääniä ja keisarille energisiä; koeotot tunneohjeilla vasta omistajan uudella luvalla (kortti KK:ssa).
+
+## JUOKSUPELIN 8 KOEOTTOA JA ÄÄNET OMISTAJALLE VIDEONA (omistaja 27.10. klo 08.43 ja 09.08, KK:n välitys) (27.10.2026 klo 09.08)
+
+OMISTAJAN PÄÄTÖS klo 09.08 (kortti KK:ssa, sanatarkasti): "Saako Äänittäjä tehdä nämä 8 koeottoa (492 merkkiä)?" → "Kyllä (Suositus)". Tekstit: eunukki ×4 uutta hahmoääntä "[panicked] [shouting] Teidän majesteettinne!" (44 mrk); keisari ×4 (3 uutta + nykyinen Kavya vertailuksi) "[mischievous] Ottakaa kiinni, jos saatte! [gasps] [panicked] Huh, läheltä piti!" (79 mrk). Välitetty Äänittäjälle. UUSI TYÖTAPA (omistaja klo 08.43, KK:n välitys): äänet omistajalle aina videona, koska mp3 ei toistu puhelimessa. RAAMATTU: lisätty 5.28 ÄÄNET OMISTAJALLE AINA VIDEONA.
+
+## EUNUKKIEN 3D-MALLIT JA PYYHKÄISYOSOITIN (omistaja 27.10. klo 10.05, KK:n välitys) (27.10.2026 klo 10.05)
+
+OMISTAJAN PÄÄTÖKSET klo 10.05 (kortti KK:ssa, sanatarkasti): "Tehdäänkö kolmesta eunukista 3D-mallit?" → "Kyllä, 2:lle eri väri (Suositus)"; "Käytetäänkö tätä pyyhkäisyosoitinta opetuksessa?" → "Kyllä (Suositus)" (PK:n luonnos: punainen kohta, vaalea jälki ja nuoli; UI-POHJAT: osoitin on tästä lähtien juoksupelin opetuksen pohja). Välitetty PK:lle. OMISTAJAN TOIMI: Codex-sovelluksen uudelleenkäynnistys tai päivitys (browser-service puuttuu, joten Tripo on seis); KK antoi valmiin tekstin Codexille. KK:N KORJAUS: 08.4x ääniotot kysyttiin kortilla vastoin 7.27:ää (omistaja: "Lue ohje äänien lupakyselystä"); korjattu KK:n aloitukseen.
+
+## ÄÄNILUPA VAIN YLI 3 %:N AJOIHIN, MYÖS UUSILLA ÄÄNILLÄ (omistaja 27.10. klo 10.06, KK:n välitys) (27.10.2026 klo 10.07)
+
+OMISTAJAN PÄÄTÖS klo 10.06 (sanatarkasti, viesti KK:lle): "Ohjeissa pitäisi siis olla, että äänien generoinnista ei tarvitse erikseen pyytää lupaa, ellei se käytä yli 3% koko kuukausikiintiöstä." RAAMATTU: 5.1 (otsikko ja 3 %:N RAJA: raja koskee myös uusia henkilöitä, ääniä, koeottoja ja uusintoja; kumoaa "uusi henkilö tai uusi ääni vaatii aina luvan"), 5.2 (määrä- ja ottoluvat vain rajan ylittävään kulutukseen) ja 7.27 ÄÄNISTÄ EI KORTTEJA (lupakortti vain yli 3 %:n ajoihin; rajan alla kulutus KK:lle jälkikäteen yhdellä rivillä). KK:n tiedoksi: Olavinlinnan 1017 v2 ja vaakunahuomio viety omistajalle.
+
+## OVIKOHTAUKSEN KAMERA KADUN SUUNTAISESTI (omistaja 27.10. klo 10.25, KK:n välitys) (27.10.2026 klo 10.25)
+
+OMISTAJAN PÄÄTÖS klo 10.25 (sanatarkasti): "Ja kamera ei saa olla kohti sisätilaa, vaan keisari näkyy vasta, kun hän on tullut ulos ja kiertänyt oven takaa kujalle. Eli kameran suunta pitää olla 90 astetta eri suunnasta kuin viimeisin kuva. Eli kamera kuvaa kadun myötäisesti." → PK:lle (ovikohtaus; KK:n korjauslista: ei rakoa ovien väliin, opetusteksti luonnoksen kokoiseksi). CODEX: omistaja käynnistää Codexin uudelleen ja antaa tekstin noin klo 10.40 studiolla (tilaukset dded84cde ja f7ec4b56b). RAAMATTU 2.177 ALKU JA OPETUS täydennetty.
+## JUOKSUPELIN ÄÄNIVALINNAT JA TASO 2 (omistaja 27.10. klo 10.16 ja 10.17, KK:n välitys) (27.10.2026 klo 10.17)
+
+OMISTAJAN PÄÄTÖS klo 10.16 (sanatarkasti): "Käytä eunukista ensimmäistä ja neljättä ääntä. Ja keisarista ei pitänyt etsiä uusia ääniä, muuttaa vain promptin tunnetageja." → Äänittäjälle lopulliset: eunukit Georg ja Sergio, keisari Kavya uusin tunnetagein. OMISTAJAN PÄÄTÖS klo 10.17 (sanatarkasti): "Varmistan vielä, että toisella tasolla on siis sekä ulkokujat että sisätilat. Eli ei pelkkiä sisätiloja." → PK:lle (suunnitelman taso 2 = koko kujaverkko + huoneet, vastaa). OPPI (KK:n virhe, periaate 1): KK:n 09.08-kortti toi keisarille uudet äänet, vaikka omistaja pyysi 08.50 vain energiaa ja säikähdystä; kortti ei saa laajentaa omistajan sanoja. RAAMATTU: 2.177 KOLME TASOA (taso 2 = ulkokujat + sisätilat) ja 7.27 KORTTI EI LAAJENNA OMISTAJAN SANOJA.
+## JUOKSUPELIN OVIKOHTAUS (omistaja 27.10. klo 10.10, KK:n välitys) (27.10.2026 klo 10.11)
+
+OMISTAJAN PYYNTÖ klo 10.10 (sanatarkasti, tason 1 ovikuvista): "Keisarin pitää itse työntää ovi auki ja samalla juosta ulos, ja kameran ei tarvitse näyttää huonetta. Kamera voi olla siis käytävällä. Lähinnä siinä on se idea, että keisari näyttää pakenevan huoneen sisältä kujalle, missä kamera tulee häntä vastaan." TOIMET (KK): välitetty PK:lle (ovet kiinni, kunnes keisarin kädet osuvat; kamera kujalla häntä vastaan; Codexille täydennys: oven työntö juostessa). RAAMATTU 2.177 ALKU JA OPETUS täydennetty.
+
+## KARTTA: VAIN 2D-MERKIT, KOKO MAAPALLO SELATTAVISSA, NOSTON SULKEMINEN (omistaja 27.10. klo 11.25, KK:n välitys) (27.10.2026 klo 11.27)
+
+OMISTAJAN PÄÄTÖS klo 11.25 (sanatarkasti, karttapalaute): "poista kolmiulotteiset karttamerkit käytöstä. käytä pelkkiä 2d merkkejä. louvre yms kohteet ovat myös 2d, näistä pitää kuitenkin korjata
+varjo niin että se piirtyy vain pienesti kohteen alle sen ääriviivoja pitkin (vain ne osat jotka koskettavat maata). poista siis nykyinen ympyrä-soikio varjo. näytä minulle vielä kaikki nykyiset
+louvren kaltaiset 2d merkit, niin annan niistä vielä palautetta. ne ainakin pitää näkyä pienempänä kartalla, kaikki keskimäärin hiukan louvrea pienempänä (nyt osa näyttää louvrea paljon isommilta).
+pelaajan voi antaa selata aina koko maapalloa, mutta pidetään huntu edelleen päällä. nostoissa jos on auto päällä mut pin pois, niin noston pitää sulkeutua silloin kokonaan suljettaessa. vain jos pin
+on päällä, nosto jää yläreunaan pienennettynä. eli auto tila ei vaikuta siihen jääkö nosto näkyviin vai ei." KK:N TAVOITE: kartalla vain 2D-merkit, keskimäärin hieman Louvrea pienempiä, ja ohut varjo
+vain maakosketuksessa; koko maapallo selattavissa hunnun alla; suljettu nosto katoaa kokonaan, ellei pin ole päällä. ENSIN: Karttaseppä tekee kaikista Louvren kaltaisista 2D-merkeistä kontaktiarkin
+KK:lle omistajalle näytettäväksi. RAAMATTU: 2.167 VAIN 2D-MERKIT ja 4.12 SULKEMINEN.
+## EI KONEELLISTA LITTEROINTIA: KAIKKI OTOT OMISTAJALLE (omistaja 27.10. klo 10.29, KK:n välitys) (27.10.2026 klo 10.30)
+
+OMISTAJAN PÄÄTÖS klo 10.29 (sanatarkasti): "Älä luota koneelliseen äänen litterointiin, vaan anna minulle näytteet kuunneltaviksi." → kaikki otot omistajalle kuunneltaviksi, eikä mitään hylätä pelkän Gemini-litteroinnin perusteella. KK: Äänittäjän 4 uusintaa pysäytetty, alkuperäiset tallessa ja kaikki 14 omistajalla videona. RAAMATTU 7.27 ÄÄNISTÄ EI KORTTEJA: lisätty KAIKKI OTOT OMISTAJALLE.
+
+## VALO POIS ENSIN: MUODOT HAVAINNEKUVIEN MUKAISIKSI TASAISESSA VALOSSA (omistaja 27.10. klo 10.56, KK:n välitys) (27.10.2026 klo 10.58)
+
+OMISTAJAN PÄÄTÖS klo 10.56 (sanatarkasti): "Ehdotan, että ennen kuin korjataan valoa, niin otetaan valo kokonaan pois ja korjataan ensin kaikki Rakennukset ja muut elementit samanlaisiksi kuin havainnekuvissa. Aletaan sen jälkeen miettiä valoa uudestaan. Esimerkiksi oheisessa kuvaparissa on todella paljon eroa itse 3D-rakennuksissa." (kuva docs/raportit/kaappaukset/omistaja-20261027/aukio03-pari-rakennukset-eroavat.webp). KK OHJAA: valon leivonta ja aurinkotyö seis, vertailut tasaisessa valossa ilman varjoja, LR rakennukset ja elementit, VS materiaalit, NUI parit, alueet entisessä järjestyksessä; valo mietitään uudelleen vasta sen jälkeen. TEKOTAPA: docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 11.4 (Valo pois ensin).
+
+## LOITONNUS KOKO MAAPALLOON (omistaja 27.10. klo 12.27, KK:n kortti) (27.10.2026 klo 12.27)
+
+Kysymys: "Saako pelaaja loitontaa koko maapallon näkyviin?" Vastaus: "Kyllä (Suositus)" (selite: "Koko maapallo näkyy loitonnettaessa. Huntu peittää paikat, joissa pelaaja ei ole käynyt."). Raamattu 2.15 ja 2.136 päivitetty: rajaus "saapumisnäkymä uloin sallittu" poistuu; pelaaja voi loitontaa koko maapallon ja selata sitä vapaasti hunnun alla. Toteutus KS, juna 212.
+
+## KARTAN 2D-MERKIT, LIPPU, NIPISTYS JA KUUMAILMAPALLOKYTKIN (omistaja 27.10. klo 12.43, KK:n välitys) (27.10.2026 klo 12.44)
+
+OMISTAJAN PÄÄTÖS JA PYYNNÖT klo 12.43 (sanatarkasti): "Grimetonin, Matterhornin, Hagia Sofian ja Edinburgin linnan voi ottaa kokonaan pois, koska niissä ei ole mitään pelillistä juttua eikä niiden
+linssit ole myöskään mitenkään erityisiä. Rijksmuseumista pitää ottaa sivuilla olevat kulkukäytävät pois.  Lisätään kohteita sitten kun uusia pelillisiä tai kohdelinssejä valmistuu. Pekingiin täytyy
+tehdä kielletynkaupungin 2d kuva, koska siellä on juoksupeli sekä tuleva historiaesittely olavinlinnan tyyliin. Laita kehittäjätilaan nappi, millä saa harmaat kuumailmapallot kokonaan pois näkyvistä.
+Kohdemaan lippu pitää näkyä myös kauemmilla zoom-tasoilla. Lipun koko ei tosin tarvitse kasvaa, mutta sitä ei saa hävittää pois näkyvistä. Nipistyszoomaus ainakin iPadilla liikuttaa karttaa
+epäkeskosti, kun kartan pitäisi zoomautua nipistyspisteen keskelle sisään tai ulos." Raamattu 2.167 päivitetty (merkkien valinta, lippu, nipistys). Toteutus KS junaan 212: 1) Grimeton, Matterhorn,
+Hagia Sofia, Edinburgh pois kartalta (linssit ennallaan) 2) Rijksmuseum ilman sivukäytäviä 3) Kielletyn kaupungin 2D-merkki samaan sarjaan 4) kehittäjätilaan kytkin harmaiden kuumailmapallojen
+piilotukseen 5) lippu kaikilla loitonnustasoilla 6) nipistys sormien välisen pisteen ympäri. Liikkuvat 3D-pienoismallit lähtevät 3D-merkkien mukana.
+
+## JUOKSUPELIN ÄÄNIOTOT HYVÄKSYTTY (omistaja 27.10. klo 12.47, KK:n välitys) (27.10.2026 klo 12.49)
+
+OMISTAJAN PÄÄTÖS klo 12.47 (sanatarkasti): "Eunukeista kummaltakin Otto B. oli parempi. keisarilta hyväksyn: 2 otto 2, 3 otto 1, 5 otto 1, 7 otto 1, 9 otto 1 12 lisäotto parempi (voi korvata aiemman)". Numerot ovat videoiden ruutunumeroita. KK:n tulkinta: eunukit Georg B ja Sergio B; keisari "Ottakaa kiinni" otto 2, "Huh!" otto 1, "Huh, läheltä piti!" lisäotto 12 (korvaa oton 1), "Hui!" otto 1, "Melkein!" otto 1. KK välitti Äänittäjälle tiedostopolkujen kanssa; Pelikoodari kytkee otot juoksupeliin (juna 212).
+
+## KARTAN TIETOKORTIT: MUOTOILU, VÄLIOTSIKOT, ENSIN 1. KAPPALE, PULUN KYSYMYKSET, TYYPPIKUVAKKEET (omistaja 27.10. klo 13.23, KK:n välitys) (27.10.2026 klo 13.23)
+
+OMISTAJAN PYYNTÖ klo 13.23 (sanatarkasti): "Uusissa dynaamisissa nostoissa lähimmiltä karttatasoilta tarvitsee tehdä korjauksia. Faktatiedot näkyvät nyt liian harmaalla. Miten ne saisi paremmin
+muotoiltua? Ja Workerin tekemä teksti tarvitsee väliotsikot. Ja ensimmäinen kappale saisi olla lyhyempi. Kannattaisiko generoida ensiksi vain se ensimmäinen kappale tuoda se näkyviin ja sitten
+taustalla generoida lisäteksti sen jälkeen kun noston ensimmäinen osa on valmiina. Ja lue lisää jutun perään saisi generoida kaksi valmista kysymystä pululle. Mutta vastauksia ei tarvitse generoida
+etukäteen. lähde ja kuvan kreditit saa olla pienemmällä ja harmaalla. saisiko tekstin generoinnin ajaksi tehtyä pienen animoidun latauskuvakkeen. Otsikon päälle voisi tehdä samanlaisen kuvakkeen ja
+tyyppitekstin (historia, jne). kohteiden mukaan, jos vain mahdollista. Kohdetyypit voisi siis tehdä etukäteen ja worker tai muu automaatti voisi tehdä kohdistuksen." KK:n tavoite: 1) faktat erottuvat
+(KK ehdottaa tummaa alaotsikkoriviä, kortti tulossa) 2) väliotsikot, 1. kappale 2–3 virkettä 3) ensin 1. kappale näkyviin, loppu heti taustalla (kortti tulossa) 4) Lue lisää -tekstin perään kaksi
+valmista kysymystä Pululle, vastaus vasta napautuksesta 5) lähde ja kuvakrediitit pienellä harmaalla 6) pieni animoitu latauskuvake generoinnin ajaksi 7) otsikon yläpuolelle kohdetyypin kuvake +
+tyyppiteksti; kiinteä tyyppijoukko etukäteen, kuvakkeet Codexilta, worker kohdistaa. Jako: KS worker ja resepti (2, 3, 4, 7 kohdistus), NUI kortin pohja (1, 5, 6, 7 näkymä) olemassa olevilla
+UI-pohjilla; puuttuva pohja kuvina KK:lle.
+
+## KARTTA: LIPPU EI KASVA, KUUMAILMAPALLOT PYSTYYN, NOSTON SUMENNUS KAIKKEEN (omistaja 27.10. klo 13.25, KK:n välitys) (27.10.2026 klo 13.36)
+
+OMISTAJAN PYYNTÖ klo 13.25 (sanatarkasti): "kohdemaan lippu ei saa kasvaa kokoa kun karttaa zoomaa ulos, nyt näyttää että britannian lippu on ihan valtavan kokoinen. saako kuumailmapallot suoraan, nyt osa palloista on ihan vinossa. jos se on väistöliike, niin mielummin siirretään koko palloa kuin pidetään se sivussa. kun nosto aukeaa, niin osa uudet striimipaikannimet sekä ainakin kehittäjän mv kipit eivät sumene" KK:n tavoite: 1) lippu ei kasva loitonnettaessa (enintään saapumisnäkymän koko, koko pallon näkymässä pieni mutta näkyvä) 2) kuumailmapallot aina pystyssä, väistö siirtää koko palloa 3) noston takana koko kartta sumenee, myös striimatut paikannimet ja kehittäjätilan sirut. 13.23-kortti jäi vastaamatta: KK:n suositukset (faktojen tumma alaotsikkorivi, lopputekstin taustagenerointi) oletuksena. Toteutus: KS 1–2, NUI 3.
+
+## TIETOKORTIN LATAUSMERKKI: PELKÄT PISTEET (omistaja 27.10. klo 13.38, KK:n kortti) (27.10.2026 klo 13.39)
+
+Kysymys: "Mikä tulee tekstin latausmerkiksi?" Vastaus: "b: Pelkät pisteet" (selite: "Kolme aaltoilevaa pistettä ilman tekstiä."). NUI:n vedos 82240e7ff näytetty omistajalle; faktarivit tummennetaan alaotsikon sävyyn. Toteutus NUI, juna 212. KK nollautui omistajan luvalla (kortti 13.38 "Kyllä").
+
+## JUOKSUPELI: KIVETYKSEN KIILTO JA UNITY 7 -VALMIUS (omistaja 27.10. klo 13.48, KK:n ohjaus) (27.10.2026 klo 13.52)
+
+OMISTAJAN PYYNTÖ klo 13.48 (sanatarkasti): "miten paljon juoksupelin grafiikka tulee parantumaan tulevan unity 7 päivityksen myötä? siihen kai ainakin voi silloin laittaa loputtomasti polygoneja kuten unrealissa, mutta mitä muuta? saako maakiviin tehtyä kiiltoa kuten nyt muutamissa havainne kuvissa yms? tämän voisi ottaa jo nyt huomioon pelin teossa varmaan jollain tavalla." KK ohjasi Valosepälle (juoksupeli KK:n johdossa): kivetyksen kiilto havainnekuvien mukaan osana pintatyötä (kujat ensin, juhlasali 04 URP:n ruutuheijastuksilla vuorollaan), pinnat tehdään Unity 7 -valmiiksi.
+
+## TIETOKORTIN TEKSTI ON ASIATEKSTIÄ, EI PULUN PUHETTA (omistaja 27.10. klo 13.52, KK:n välitys) (27.10.2026 klo 13.54)
+
+OMISTAJAN TARKENNUS klo 13.52 (sanatarkasti): "stiirinostoihin vielä se tiedoksi, että vaikka teksti tehdään pulun workerillä, niin teksti ei ole pulun koska on puhtaasti asiatekstiä. vasta kun pululta kysytään lisää nostosta pulun kysymysten kautta, vasta silloin tekstistä tulee pulun tekstiä. pieni ero, mutta ajattelin tarkentaa varmuuden vuoksi." Raamattu 2.203 päivitetty: striimattu teksti neutraalia asiatekstiä, Pulun tyyli vasta Pulun kysymysten vastauksissa. KS (worker, resepti) ja NUI (tietokortti) toteuttavat.
+
+## KARTAN KERROKSET SUURENNUSLASIN KARTTA-VÄLILEHDELLE, VAIN NYKYAIKAISET (omistaja 27.10. klo 14.00, KK:n kortti) (27.10.2026 klo 14.02)
+
+Kysymys: "Tehdäänkö kartan kerroksille päälle/pois-valinnat ratasvalikkoon?" Vastaus omin sanoin (sanatarkasti): "Pidetään kartalla vain nykyaikaiset asiat. Nuo museot, linnat, nähtävyydet ja
+kansallispuistot ainakin ovat hyviä. Sekä onko saatavilla myös kadunnimiä ja mahdollisesti muita lisätietoja? Anna vielä lista, miten jaottelisit nämä. Ja lähdit Zoomissa. Kartalle voisi
+automaattisesti ilmestyä hammasratasvalikko suurennuslasin alle, mitä klikkaamalla nämä valinnat tulisivat näkyville. Ja tosiaan riittää, että muutokset näkyvät vain niissä lähimmissä zoomaustasoissa,
+ja hammasratasvalikko voi automaattisesti feidata pois näkyvistä, kun pelaajat zoomaavat ulospäin. Tai itse asiassa sen voisi periaatteessa kyllä pitää päällä koko ajan, koska taas laajempiin näkymiin
+voitaisiin mahdollisesti tuoda muuta informaatiota näkyville. Pitää vain miettiä, mitä se voisi olla. Itse asiassa tuodaan nämä toiminnot suoraan suurennuslasin alle ja tehdään siihen kolmas välilehti
+nimeltä kartta. Ja zoomitason ollessa kauempana eri valittavat osat ovat harmaana. Ja sitten kun zoomi menee tarpeeksi lähelle, niin valittavat osat tulevatkin. näkyviin. Ja mahdollisesti jotkut osat,
+jotka toimivat vain kauemmassa zoomissa, poistuisivat sitten näkyvistä." Toinen kysymys (lisäkerros ensin): "ks ed." KK: vuoden 1873 reitit eivät tule; data OpenFreeMap (OpenMapTiles). Raamattu 2.73
+päivitetty poikkeuksella. KK lähettää omistajalle jaottelulistan; vahvistettu jaottelu → KS (kerrokset) + NUI (Kartta-välilehti).
+
+## KARTTA-VÄLILEHDEN JAOTTELU JA MAAILMANPERINTÖ (omistaja 27.10. klo 14.04, KK:n kortti) (27.10.2026 klo 14.04)
+
+1) "Käykö tämä viiden ryhmän jaottelu Kartta-välilehdelle?" → "Kyllä (Suositus)" (selite: "Liikenne, nimet, kohteet, luonto sekä rakennukset ja rajat."). 2) "Mitä kauempaan näkymään tuodaan ensin?" → "Maailmanperintö (Suositus)" (selite: "Unescon maailmanperintökohteet merkkeinä koko maapallolla."). Jaottelu: 1. Liikenne: rautatiet, metro ja raitiotiet, tiet, lauttareitit ja lentokentät 2. Nimet: kadunnimet, kaupunginosat sekä joet ja järvet 3. Kohteet: museot, linnat ja nähtävyydet 4. Luonto: kansallispuistot, metsät ja puistot sekä vuorenhuiput korkeuksineen 5. Rakennukset ja rajat. Kaukonäkymään maailmanperintökohteet (data esim. Wikidata CC0). Raamattu 2.73 päivitetty. Toteutus KS (kerrokset, data) + NUI (Kartta-välilehti), juna 212.
+
+## UNESCO-KOE: 3 KOHDETTA JOKAISESTA MAANOSASTA (omistaja 27.10. klo 14.15, KK:n kortti) (27.10.2026 klo 14.16)
+
+Omistajan pyyntö 14.05 (sanatarkasti): "Tuo olikin hyvä idea, tuo Unesco. Niihin voisi kaikkiin tehdä tekstit ja kuvat sekä pyytää myös havainnekuvat ja valmiit kysymykset pululle. miten monta niitä on maailmassa?" (kohteita 1 273, 173 maata). Kortti "Aloitetaanko Unesco-kohteiden tekstit, kuvat ja kysymykset Euroopasta?" → vastaus omin sanoin (sanatarkasti): "tehdään kokeeksi 3kpl jokaisesta maanosasta (tärkeimmät) ja laajennetaan sen jälkeen kun olen nähnyt ne ensin pelissä". Koe: 3 tärkeintä kohdetta Euroopasta, Aasiasta, Afrikasta, Pohjois-Amerikasta, Etelä-Amerikasta ja Oseaniasta (18): merkki kartalle, neutraali asiateksti (13.52), Commonsin kuva, havainnekuva Codexilta, 2 valmista Pulun kysymystä. Omistajan päätös muista maanosista tämän kokeen osalta (Raamattu 1.12 päivitetty). Toteutus KS (kohteiden valinta, merkit, tekstit), Codex (havainnekuvat 18 × 1 otto).
+
+## UNESCO-KOE: 18 KOHTEEN LISTA HYVÄKSYTTY (omistaja 27.10. klo 14.34) (27.10.2026 klo 14.34)
+
+Omistajan kortti KK:ssa: "Käykö tämä 18 kohteen lista Unesco-kokeeseen?" → "Kyllä (Suositus)". Lista = Karttasepän ehdotus sellaisenaan, 3 kohdetta per maanosa (Raamattu 1.12): Eurooppa: Akropolis, Colosseum, Stonehenge. Aasia: Kiinan muuri, Taj Mahal, Angkor Wat. Afrikka: Gizan pyramidit, Victorian putoukset, Serengeti. Pohjois-Amerikka: Grand Canyon, Yellowstone, Chichén Itzá. Etelä-Amerikka: Machu Picchu, Galápagos, Iguaçu. Oseania: Iso valliriutta, Sydneyn oopperatalo, Uluru. Karttaseppä tilaa Codexilta 18 havainnekuvaa (1 otto per kohde, pysyvä lupa). Laajennus vasta kun omistaja on nähnyt kokeen pelissä.
+
+## KARTAN TIETOKORTTI: VAIN ENSIMMÄINEN KAPPALE, VÄLIOTSIKOILLE TILAA (omistaja 27.10. klo 14.39) (27.10.2026 klo 14.40)
+
+Omistajan kortti KK:ssa ("Onko kartan tietokortti nyt toivomasi kaltainen?", NUI:n kooste eabaaa896), sanatarkasti: "toinen kappale joka alkaa "Nimi tulee" voi ottaa pois. Eli näkyviin tulisi vain ensimmäinen kappale tekstiä. onko helppo toteuttaa. lisäksi väliotsikon yläpuolelle vähän enemmän tilaa. muuten hyvä". Toteutus: Karttaseppä tekee johdannon yhdeksi kappaleeksi (nimen alkuperää ei erillisenä kappaleena), Natiivi-UI näyttää vain ensimmäisen kappaleen ja lisää väliotsikoiden yläpuolelle tilaa. Muuten kortti hyväksytty.
+
+## KARTAN TIETOKORTIN ULKOASU HYVÄKSYTTY (omistaja 27.10. klo 15.21) (27.10.2026 klo 15.22)
+
+Omistajan kortti KK:ssa, sanatarkasti: 'Hyväksytkö tietokortin ulkoasun nyt?' → 'Kyllä (Suositus)' (selite: 'Ulkoasu on valmis. Pulun kysymykset ja lippu korjataan erikseen.'). Kuva scratchpad/keskustelukanava/kuvat-20261027/tietokortti-eton-B1-B5-v2.png (NUI 60cfa418d + KS t4). Kortti tällaisena junaan 212. Erilliset korjaukset ilman uutta omistajakierrosta: Karttaseppä korjaa Pulun kysymykset (ei kysymyksiä, joihin teksti jo vastaa), Natiivi-UI sumentaa noston takana jäävät terävät osat (3D-lippu ja päiväkirjakortti, linja 13.25 'noston sumennus kaikkeen', PT 15.2x).
+
+## JUOKSUPELIN RIMPUILU: HEHKU, YLÄKULMA JA REPLIIKIT (omistaja 27.10. klo 15.41) (27.10.2026 klo 15.42)
+
+PT:n kysymys kortilla KK:ssa: 'Lisätäänkö napautuskohtien hehkun keskelle ohut rengas?' → omistaja sanatarkasti: 'lisää hehku. rimpuilu pitää kuvata samasta yläkulmasta kuin juoksu. vaihda hengitys ääni eunukin ääneen: sainpas sinut! sekä keisarin: päästä irti! (pieni tauko) käsken sinua! päästä irti!' KK:n tulkinta: 1) ei rengasta; napautuskohtien hehku voimakkaammaksi, yhä pehmeäreunainen ja sykkivä (Natiivi-UI); 2) kiinniotto ja rimpuilu kuvataan juoksukameran yläkulmasta, ei sivukameraa (Pelikoodari); 3) hengitysääni pois, tilalle eunukki 'Sainpas sinut!' ja keisari 'Päästä irti! (pieni tauko) Käsken sinua! Päästä irti!' 12.47 hyväksytyillä äänillä, repliikit sanatarkasti, otot omistajalle videona (Äänittäjä). Lisäksi KK:n korjaukset Pelikoodarille: rimpuilun isommat liikkeet Codexilta, eunukin äkillinen ilmestyminen, lukukelvoton 'Kiinni! Napauta nopeasti' -ohje.
+
+## JUOKSUPELI: VIHREIDEN BOORDIEN VÄREILY JA KIVIREUNUS SEINÄN KIVESTÄ (omistaja 27.10. klo 15.43) (27.10.2026 klo 15.44)
+
+OMISTAJAN PYYNTÖ klo 15.43 (sanatarkasti, 2 kuvaa juoksupelistä): 'oletteko huomanneet että nuo vihreät boordit väreilevät ja että kivireunuksista puuttuu pystykiven palan kuvat ja että reunuskivetys pitäisi olla samaa kiveä kuin seinän kivetys (kuten havainnekuvissa)'. Kuvat docs/raportit/kaappaukset/omistaja-20261027/boordit-reunakivi-1543-1.webp ja -2.webp. KK:n tavoite: vihreät friisit pysyvät juostessa tasaisina ilman väreilyä; kivireunus on havainnekuvien tapaan samaa harmaata kiveä kuin seinän kivijalka, myös pystysivuiltaan; kaikki kujat ja aukiot. Työnjako: Valoseppä väreily ja kiven pinta, Lavastaja reunuksen pystysivut; uusi kuvapari KK:lle. OPPI (periaate 1): erolistassa reunakivi oli vain muotona ('vaalea korotettu kaista') ja väreily puuttui; erolista vertaa myös materiaalia ja liikkeessä näkyvää laatua (väreily), ei vain muotoa.
+
+## JUOKSUPELI: REUNAKIVI PITKINÄ YKSITTÄISINÄ KIVINÄ, KAIKKI KIVET SAMAA SÄVYMAAILMAA (omistaja 27.10. klo 16.03) (27.10.2026 klo 16.03)
+
+Kortti KK:ssa ('Onko reunakivi nyt havainnekuvan mukainen?', kuva scratchpad/keskustelukanava/kuvat-20261027/havainnepari-02-reunakivi-1558.png = VS seinat-211 31601c9e7 + juuri-v77m), omistaja sanatarkasti: 'ei ole, pitäisi olla havannekuvan tyylisiä pitkiä yksittäisiä kiviä ja kaikkien kivien tulisi olla samaa sävymaailmaa, nyt kaikki kolme erivärisiä kiviä'. KK:n tavoite: reunus havainnekuvan tapaan pitkinä yksittäisinä kivinä (ei pieninä lohkoina); lattia, kivijalka ja reunus samaa harmaata sävymaailmaa kuin havainteessa (nyt beige lattia, vaalea kivijalka ja harmaa reunus); kaikki kujat ja aukiot. Työnjako: Lavastaja muoto ja kivijako, Valoseppä sävyt. OPPI (periaate 1): erolistan vertailuun myös kivijako (kiven koko ja muoto) ja eri pintojen keskinäinen sävy, ei vain yksittäisen pinnan väri.
+
+## JUOKSUPELI: KIINNIOTON KAMERA ENNALLAAN, KEISARILLE ISOMMAT KÄSIEN RIMPUILUT (omistaja 27.10. klo 16.05) (27.10.2026 klo 16.06)
+
+Kortti KK:ssa (PK:n video a210bfa50 yläkulmasta): 'Nouseeko kamera kiinnioton ajaksi korkeammalle, jotta keisari näkyy eunukin yli?' → omistaja sanatarkasti: 'ei mutta keisari saisi rimpuilla käsillä enemmän'. Toteutus: kamera pysyy juoksun yläkulmassa (15.41); Pelikoodari tilaa Codexin rimpuilu v2:een isot käsien liikkeet, jotka näkyvät eunukin yli.
+
+## LUE LISÄÄ: TOISTOTARKISTUS VÄLJENNETTY (KK 27.10. klo 17.24) (27.10.2026 klo 17.24)
+
+KK väljensi Lue lisää -toistotarkistusta omistajan valtuutuksella (klo 00.05 ja 04.10 tehty sääntö). Sama pitkä sana ja johdannon vuosiluku saavat nyt esiintyä kerran, mutta saman faktan toisto hylätään edelleen. Syy: aiemmin kaikki tekstiyritykset hylättiin; tavoite on, että teksti näkyy noin 6 sekunnissa. Toteutus: Karttaseppä PR 5368, worker t7.
+
+## OPPI: KORTIN KAKSI KUVAA ERI KUVIKSI (KK 27.10. klo 17.3x, 9.5) (27.10.2026 klo 17.30)
+
+KK palautti Akropolis-koosteen ennen omistajaa. 1) Commons-kuva (Wikidata P18) ja havainnekuva olivat lähes samat, koska Codex käytti samaa kuvaa mallina. 2) Perustettu-rivi oli väärin: P571 on -0500 vuosisadan tarkkuudella, eli oikein on 400-luvulla eaa. 3) Korkeus noin 90 metriä ilman lähdettä. 4) Koosteesta puuttuivat Lue lisää ja Pulun kysymykset. OPPI: omistaja pyysi kuvat ja havainnekuvat, joten kortissa on kaksi eri kuvaa. Kuva tarkistetaan tätä sanamuotoa vasten, ja havainnekuvan malliksi annetaan eri kuva kuin kortin P18. Vuosisatatarkkuuden P571 muunnetaan oikein (-0500 = 400-luku eaa.). Kooste näyttää koko kortin, myös Lue lisää ja Pulun kysymykset. PT:n tarkistus ohitti kohdat 1 ja 4. KS korjaa kaikki 18 kohdetta ja lähettää uuden koosteen KK:lle ja PT:lle.
+
+## KIINNIOTTO: EUNUKIN SELKÄ KAMERAAN, KEISARIA EI KÄÄNNETÄ (OMISTAJA 27.10. klo 18.12) (27.10.2026 klo 18.12)
+
+OMISTAJAN PÄÄTÖS 18.12 (kortti KK:ssa v4-videon jälkeen, sanatarkasti): kysymys Onko kiinniotto nyt oikean suuntainen? → Ei tehdä kääntää. Parempi että keisaria ei näy koska kiinniotto ei näytä aidolta. Mutta enukin selkä peittää hyvin huonot liikkeet. Kumoaa 17.48-päätöksen (keisari kasvot kameraan). Toteutus: Pelikoodari palaa v3:n otteeseen (dbf343a16); eunukin selkä kameraan peittää keisarin myös toisessa kiinniotossa ja Uuvuit-ruudulla. Ohjeteksti korjataan, ja eunukin kasvot tulevat Codexilta. Kamera ennallaan.
+
+## JUOKSUPELI: HENGITYSÄÄNI POIS KOKONAAN (OMISTAJA 27.10. klo 18.37) (27.10.2026 klo 18.38)
+
+OMISTAJAN PÄÄTÖS 18.37 (sanatarkasti, rimpuiluvideo v5:n jälkeen): Ota se hengitys äänitehoste pois kokonaan. Nyt kuului ainakin siinä ihan lopussa. Toteutus: Pelikoodari poistaa hengitysäänitehosteen juoksupelin kaikista kohdista. Repliikit 4 ja 9 (Sainpas sinut! / Päästä irti!) jäävät ennalleen.
+
+## EI HENGITYSTÄ NUOREN KEISARIN ÄÄNISSÄ + JUNA 212 JULKAISUUN (OMISTAJA 27.10. klo 18.51 ja 18.52) (27.10.2026 klo 18.54)
+
+OMISTAJAN PÄÄTÖS 18.51 (sanatarkasti): Hengitys ei sovi nuorelle keisarille. Se pitää ottaa kokonaan pois kaikkialta, kuulostaa aikuisen miehen huohotukselta eikä sovi ollenkaan peliin. Pysyvä linjaus Raamattuun 5.29. Toteutus: PK 46b3f424c (huohotus-1…4 pois); PK tarkistaa muut hahmoäänet ja poistaa huohotus-tiedostot; Äänittäjä poistaa hengästymisen keisarin äänityylistä (juoksupeli.aanityyli.kuvaus) ja tarkistaa nykyiset otot. Ei koske ISS:n kypärähengitystä. OMISTAJAN PÄÄTÖS 18.52 (sanatarkasti): Julkaise juna jotta näen uudet kartta jutut. Ei testejä. Juna 212 lukkoon ja TF:ään ilman tarkistusajoa (9.11); ehto: ei huohotusta junassa (PK 46b3f424c mukaan, jos juoksupeli on rungossa).
+
+## OPPI: OMISTAJALLE VAIN SUOMEKSI (OMISTAJA 27.10. klo 19.23) (27.10.2026 klo 19.23)
+
+KK kirjoitti omistajalle englanniksi klo 18.53–19.12. Omistaja huomautti 19.23 (sanatarkasti): Käytä suomea. Rikottu periaate 5 (suomeksi). Myös PT:n ikkunan vastaukset olivat tänään englanniksi. Korjaus: kaikki omistajalle näkyvä teksti, myös PT:n ja roolien omien ikkunoiden vastaukset, kirjoitetaan suomeksi.
+
+## KIINNIOTTO VALMIS JUNAAN 213 (OMISTAJA 27.10. klo 19.52) (27.10.2026 klo 19.52)
+
+OMISTAJAN PÄÄTÖS 19.52 (kortti KK:ssa, sanatarkasti): Onko kiinniotto nyt valmis? → Kyllä (Suositus); selite: Kiinniotto viedään tällaisenaan seuraavaan junaan. Video PK v7 7ac355ba4 (Codexin takapinnat, hengitys pois, keisari-2 pois, repliikit 4 ja 9; KK tarkisti ruuduittain). Avoin: keisarin Huh-otto (KK suosittaa ottoa 2, odottaa omistajaa).
+
+## KUJIEN KIVET 2D-PINTANA (omistaja 27.10.2026 klo 21.51) (27.10.2026 klo 21.52)
+
+Omistaja kysyi 21.2x: "Miksei codexia voi vain pyytää tekemään identtiset palat kuin mitä havainnekuvassa on kivissä?" ja 21.5x: "Tehdäänkö kivet 2d pintana vai tripo 3d:nä?". KK:n kortti "Tehdäänkö kivet 2D-pintana?" → "2D-pinta (Suositus)" (selite: "Codex maalaa pinnat, ja Lavastaja asettaa ne yksinkertaisten kivimuotojen päälle"). Toteutus: juoksupelin kujien kivet (reunakivi, sokkeli ylimpine kivineen ja pilarien kulmakivineen, lattialaatat) Codexin havainnekuvan mukaisina pintakuvina useana muunnelmana; ei Tripoa kiviin; Lavastaja tekee muodot ja kokoaa; Valoseppä ei säädä kivimateriaalia tällä välin. PK:n tilaus ee02c438f. Pari KK:lle → omistajalle ennen junaa.
+
+## KATOT, FRIISIT JA RAPPAUS 2D-PINTOINA (omistaja 27.10.2026 klo 21.54) (27.10.2026 klo 22.02)
+
+Omistaja kysyi: "Mitä muuta kannattaisi tilata 2d pintana?" KK:n kortti "Tilataanko katot, friisit ja seinän rappaus Codexilta 2D-pintoina?" → "Kyllä (Suositus)" (selite: "Järjestys: katot, friisit, seinä; kivet ensin"). PK tilaa Codexilta kivitilauksen jatkoksi, LR asettaa pinnat. Ikkunaristikot, nastoitetut ovet ja kaiteet pysyvät 3D-kappaleina.
+
+## OPPI: KUVAPARI TARKISTETAAN KOKONAAN OMISTAJAN SANOJA VASTEN (KK 27.10.2026 klo 22.00) (27.10.2026 klo 22.02)
+
+KK hyväksyi reunakiviparin 195504 klo 19.59, ja myös PT katsoi sen, mutta kumpikaan ei huomannut muurin yläreunan tasaista tekstuuritonta kaistaa eikä pilarien beigejä kulmakiviä (ristiriidassa omistajan 16.03-sanojen kanssa); omistaja löysi ne klo 20.06. Jatkossa KK ja PT vertaavat koko kuvaa omistajan aiempiin sanoihin, eivät vain kysyttyä kohtaa.
+
+## Maailmanperintö: pienet violetit pisteet (omistaja 28.10. 07.33) (28.10.2026 klo 07.33)
+
+Omistaja (KK:n kortti) sanatarkasti: 'Hehku liian iso. Voi olla violetilla pieniä pisteitä jotka hehkuvat kevyesti'. Nimet ennallaan. Järvirannat ja lähizoom: Kelpaa, junassa 213. Parkour: hyvä suunta, jatka. Huohotusten poisto: Ei nyt. Iso hehku ei lähde junassa 213; KS korjaa, pari KK:lle.
+
+## Maailmanperintö: violetit pisteet hylätty, liian isot (omistaja 28.10. 08.10) (28.10.2026 klo 08.11)
+
+Omistaja (KK:n kortti) sanatarkasti: 'pisteet ja hehku aivan liian isoja'. Tavoite: piste enintään kaupunkipisteen kokoinen, hehku vain ohut himmeä kehä; uusi pari KK:lle; violetti versio (d8728903d) ei junaan 213. OPPI (KK:n virhe, periaate 1): kun omistaja sanoo 'liian iso' ja 'pieni', puolitus ei riitä; koko verrataan kartan pienimpiin merkkeihin ennen omistajaa.
+
+## Kartta: kohdemerkit puoleen kauempaa, Louvre kapeammaksi (omistaja 28.10. 08.13) (28.10.2026 klo 08.13)
+
+Omistaja (KK) sanatarkasti: 'Louvre ja muut vastaavat kohteet ovat myös liian isoja kauemmilla zoom-tasoilla. Ne voi pienentää puoleen ja Louvrea pitää pienentää suhteessa muihin pienemmäksi. Se näyttää nyt liian leveältä verrattuna muihin vastaaviin kohteisiin.' Lähizoom ennallaan. KS tekee; pari KK:lle ennen junaa.
+
+## Kartta: kohdemerkit lukittuina karttaan Ranskan kokoisesta näkymästä ulospäin (omistaja 28.10. 08.15/08.17) (28.10.2026 klo 08.17)
+
+Omistaja (KK) sanatarkasti 08.15: 'olisi hyvä määritellä joku zoom-taso, minkä jälkeen ulos zoomatessa Louvre ja muut vastaavat kohteet eivät enää suurenisi suhteessa karttapalloon. Minusta sopiva koko tai sopiva zoom-etäisyys olisi noin se kokoluokka, kun Ranskan kartta näkyy näytöllä kokonaisena. Eli kun siitä aletaan zoomaamaan ulospäin, kaikki pysyy kartan kanssa lukittuna.' Päätös 08.17: 'Lukitus riittää (Suositus)' = korvaa 08.13:n puolituksen. Louvre kapeammaksi muihin nähden (08.13) pysyy. KS tekee; pari KK:lle.
+
+## Maailmanperintö kipinöinä junaan 213 (omistaja 28.10. 08.38) (28.10.2026 klo 08.38)
+
+Omistaja (KK:n kortti 'Kelpaako kipinän koko ja hehku?', KS a884e7824): 'Kelpaa (Suositus)'. Junaan 213, kun KS on lyhentänyt nimen välin pisteestä (KK:n päätös) ja KK on tarkistanut 2×-parin.
+
+## Kartta: tekstit pienemmiksi ja aina vaakasuoraan (omistaja 28.10. 08.39) (28.10.2026 klo 08.40)
+
+Omistaja (KK) sanatarkasti: 'teksti liian iso. tarkista myös että kaikki tekstit ovat aina vaakasuorassa vaikka maapallo olisi kääntyneenä pois pohjois-eteläsuunnasta'. Tavoite: maailmanperintönimet muiden paikannimien kokoluokkaan, kaikki kartan tekstit aina vaakasuorassa. KS (sama erä kuin nimen väli); kipinät junaan 213 vasta tämän parin jälkeen.
+
+## Iso iPad ja simut vaaka-asentoon (omistaja 28.10. 08.59) (28.10.2026 klo 09.00)
+
+Omistaja (KK) sanatarkasti: 'aja ison ipadin simulaattorit mielellään aina vaaka asennossa, niin minun on helpompi seurata niitä koska ipad on omassa telineessä aina vaaka asennossa minulla. mutta mikäli tarpeen niin voit tottakai myös käyttää pystymuotoa mutta muuten mielellään aina vaaka muodossa'. Raamattu 9.11 ISO IPAD VAPAASTI: VAAKA-ASENTO.
+
+## Juoksupeli: dronekamera pehmeämmäksi (omistaja 28.10. 09.05) (28.10.2026 klo 09.06)
+
+Omistaja (KK) sanatarkasti: 'dronekamera heiluu liikaa ylös alas kun se seuraa pelaajaa. pitäisi olla vain pientä liikettä jokaiseen akselin suuntaan ja mahdollisimman pehmeästi, jotta vain tulee se elävän dronekameran tunnelma. eli ylös-alas-vasen-oikea-eteen-taakse ja vaakakierrot ja kaikki akselit pitää liikkua kokoajan ja yhtäaikaa mutta pehmeästi, käännöksissä sitten isompi liike mutta pehmeästi'. PK, seuraavaan vaakavideoon (KK johtaa juoksupeliä).
+
+## Kartta: poltettuja nimiä ei suoristeta; nimet pienemmiksi pallotasolla (omistaja 28.10. 09.16/09.17) (28.10.2026 klo 09.17)
+
+Omistaja (KK) 09.16 sanatarkasti: 'poltettuja nimiä ei tarvitse suoristaa, ainoastaan nämä striiminimet, joita ole poltettu, mutta onko valtamerien nimiä poltettu?' → valtamerinimet ovat poltettuja; uudelleenpoltto peruttu. Nimien koko: 'Kelpaa (Suositus)'. 09.17: 'tässä näkymässä nimet liian isolla, muut ok. pidä oletuksena harmaan kipit poissa näkyvistä.' KS: nimet pienemmiksi kaukaisella pallotasolla; 'harmaan kipit' KK varmistaa omistajalta.
+
+## Kartta: harmaat kuumailmapallot pois, vain kohdekaupungit (omistaja 28.10. 09.18) (28.10.2026 klo 09.19)
+
+Omistaja (KK) sanatarkasti: 'kohdekaupungit saavat näkyä, muut pois. tarkoitin kipillä harmaita kuumailmapalloja'. KS: harmaat kuumailmapallot oletuksena pois, kaupunkipisteistä vain kohdekaupungit; samaan erään nimien kanssa ennen pienen iPadin asennusta.
+
+## Suurennuslasi: Nimet kahtia, Luonto selvitetään, Kartta-osio auki striimitasolla, valikoille pohjavärit (omistaja 28.10. 09.29) (28.10.2026 klo 09.29)
+
+Omistaja (KK) sanatarkasti: 1) 'suurennuslasissa kartta kohdassa on kohta nimet, mutta se vaikuttaa vain osaan nimistä. voisiko jaotella kaupunkien tms nimet erikseen vesien, vuorien, yms. nimistä. lisäksi kohta luonto on outo, mihin se vaikuttaa?' 2) 'suurennuslasia painamalla kartta valikko voisi aktivoitua automaattisesti jos ollaan striimikartan zoomtasolla. linssit, pelit ja kartta valikot voisi myös kevyesti värikoodata pohjaväriltään, jotta otsikkojen alla näkyisi jo eri pohjavärit.' NUI vetää, KS nimiryhmät; värit olemassa olevista tyylimäärittelyistä (UI-POHJAT).
+
+## Valikoiden pohjavärit; KK:n kortit vasta Remote Controlin kanssa (omistaja 28.10. 09.45) (28.10.2026 klo 09.46)
+
+Omistaja (KK): NUI:n valikoiden pohjavärit hyväksytty: Linssit vaalea violetti, Pelit vaalea kulta, Kartta vaalea merensininen; hyvin kevyt sävy välilehdessä ja pohjassa. Toinen päätös 09.45: KK ei esitä korttia ennen kuin sen oma Remote Control on päällä (muuten omistaja ei voi vastata etänä). Postivahti kytkee RC:n nollauksessa; KK tarkistaa ennen ensimmäistä korttia.
+
+## Huohotukset: omistaja ajaa poiston itse (28.10. 09.4x–09.5x) (28.10.2026 klo 09.51)
+
+Omistaja (KK) sanatarkasti: 'anna koodi jolla poistan hengitysäänet' / 'sinulla oli tuo komento jo aiemmin minulle' / 'mutta jos ei heti löydy niin ei niitä tarvitse poistaa' (kumoaa 07.33 'Ei nyt'). KK antoi komennon: ämpärin 7 huohotus-mp3:ta (juoksupeli/aanet-v1/takaa-ajaja/huohotus-1…3, aanet-v2/hahmo/huohotus-1…4); kuiva-ajo osui täsmälleen niihin. Omistaja ajaa itse.
+
+## Striimikartta: nimet liukuvat vierityksessä, iso pala puretaan kerran (omistaja 28.10. 09.54) (28.10.2026 klo 09.54)
+
+Omistaja (KK:n kortti, NS:n iPad-mittauksen jälkeen): 1) 'Vierityksen aikana nimet liukuvat kartan mukana ja asettuvat uudelleen, kun liike pysähtyy' → Kyllä (KS). 2) 'Iso karttapala puretaan kerran ja jaetaan kaikille sen osille (uusi paikka 10 s → n. 4–5 s)' → Kyllä (PT: NS). Tavoite: lähikartan vieritys ilman nykäyksiä; uusi paikka tarkentuu noin puolet nopeammin, sama kaikilla verkoilla. Mittaus ennen|jälkeen KK:lle ennen junaa.
+
+## Huohotukset poistettu ämpäristä (omistaja 28.10. 09.5x) (28.10.2026 klo 09.55)
+
+Omistaja ajoi poiston itse; KK todensi: ämpärissä 0 huohotus-mp3:ta, julkiset URLit 404 × 7. Ei muita toimia.
+
+## Kartta: kohdemerkit oikeille paikoille, pelaajan nappi samaan zoom-sääntöön (omistaja 28.10. 10.18) (28.10.2026 klo 10.19)
+
+Omistaja (KK, KS:n kohdemerkkipari) sanatarkasti: 'big ben yms. ei ole oikealla kohdalla kartalla. pelaajan nappi on aivan liian iso kun koko maapallo näkyy. sovella siihen samaa zoom sääntöä kuin louvreen yms.' Tavoite: kohdemerkit oikeilla paikoillaan kaikilla tasoilla; pelaajan nappi lukittu karttaan Ranskan korkeudesta ulospäin kuten kohdemerkit. KS; pari KK:lle; pieni iPad odottaa.
+
+## Suurennuslasi: väri vain otsikkoriville, Kartta valmiiksi valittuna (omistaja 28.10. 10.23) (28.10.2026 klo 10.24)
+
+Omistaja (KK, NUI:n parit) sanatarkasti: 'värit ok, mutta jätä väri pelkästään otsikkorivin taakse' + 'karttavalikko on valmiiksi valittuna lähizoomilla kun pelaaja painaa suurennuslasia, mutta se ei aukea suoraan automaattisesti vaan vaatii pelaajan klikkausta suurennuslasista'. NUI; koskee myös web PR 5420:tä.
+
+## Kartta: perintönimet kelpaa; sama zoom-katto kaikille kartan elementeille (omistaja 28.10. 10.27) (28.10.2026 klo 10.28)
+
+Omistaja (KK, KS:n perintönimipari) sanatarkasti: 'kelpaa. mutta tee kaikille kartan elementeille sama zoom katto kuin louvre yms. eli kuumailmapallot, kohdekaupunkien pisteet, pelaajan nappi yms.' Perintönimierä runkoon; kohdemerkkierä (10.18 + 10.27) KS:lle yhteen pariin; pieni iPad odottaa sen hyväksyntää.
+
+## Suurennuslasi ja välilehtivärit hyväksytty; puistojen nimet Vedet ja vuoret -kytkimeen (omistaja 28.10. 10.37) (28.10.2026 klo 10.37)
+
+Omistaja (KK:n kortti, NUI:n parit): välilehtien värit vain välilehdissä 'Kelpaa'; suurennuslasi (aukeaa vain napautuksesta, lähikartalla Kartta valmiiksi) 'Kelpaa'; puistojen ja metsien nimet Vedet ja vuoret -kytkimeen 'Kyllä' (kaksi nimikytkintä poistavat kaikki nimet; Puistot ja metsät vain alueet). Värit + lasi runkoon; nimijaon uusinta KK:lle.
+
+## Kartta: kohdemerkkierä hyväksytty, Louvre väistää pelaajan nappia (omistaja 28.10. 11.51) (28.10.2026 klo 11.52)
+
+Omistaja (KK, KS:n pari) sanatarkasti: 'jos pelaaja on kohdekaupungissa jossa samassa sijainnissa myös Louvre tms. niin siirrä silloin louvre vähän sivuun, jotta ei mene nappulan kanssa päällekkäin. muuten ok'. Vähimmäiskoko: 'Ei, kelpaa näin' (nappi ja pisteet saavat pienentyä pallolla kartan mukana). Kohdemerkkierä junaan 213; NS:lle lupa pienen iPadin käännökseen; väistö KS:n seuraava pieni erä.
+
+## Kartta: kohdemaan raja ohuemmaksi ulos zoomatessa (omistaja 28.10. 11.52) (28.10.2026 klo 11.53)
+
+Omistaja (KK) sanatarkasti: 'ohenna kohdemaan rajausta kun zoomataan ulos. nyt uloimmilla zoomtasoilla kohdemaan raja on liian paksu. se voisi noudattaa samaa zoom sääntöä kuin muutkin merkit'. KS, samaan erään Louvren väistön kanssa. KK:n päätökset: PK glide_enter/exit nyt (ei Codexia T-asentoon); NS adcb187d2 junaan 213 (lataus 8,3 → 7,8 s); valmiiksipiirto lennon aikana pienen iPadin jälkeen.
+
+## Striimikartta: kohteet porrastetaan merkittävyyden mukaan (omistaja 28.10. 12.16/12.21) (28.10.2026 klo 12.21)
+
+Omistaja (KK) 12.16 sanatarkasti: 'saisiko striimikarttaan jotenkin merkittävimmät kohteet näkymään jo heti laajemmassa näkymässä ja vähemmän merkittävät vasta kaikkein lähimmillä zoom asteilla? mitä mahdollisuuksia meillä on?' Päätös 12.21 (kortti): 'Kyllä (suositus)' – 'Kuuluisimmat näkyvät kaukaa, pienemmät tulevat esiin lähestyttäessä.' Toteutus: merkittävyys Wikidata sitelinks -määrästä (CC0) + tilasääntö (nimet eivät päällekkäin, merkittävin voittaa), pehmeä esiintulo, nykyiset merkit ja nimet (UI-POHJAT). Ei ryhmämerkkejä eikä tarinan paikkoja ensin. KS Louvren väistön jälkeen; pari Eurooppa/Ranska/Pariisi KK:lle.
+
+## Cloudflaren säästöpaketti ja nähtävyysnostot striimikartalle (omistaja 28.10. 12.28) (28.10.2026 klo 12.30)
+
+1) Omistaja (KK) n. 12.22 sanatarkasti: 'mikä kaikki kuluttaa tätä? aika kallis kuukausikulu jo tähän mennessä. miten voitaisiin pienentää? vielä ei ole kuin muutama pelaaja.' (Cloudflare 51,86 $
+2.10.–28.10., kaikki R2:ta: säilytys ~13 $, A ~23 $ PutObject, B ~15 $ HeadObject; omista työkaluista, ei pelaajista). Päätös 12.28: 'Kyllä (suositus)' – 'Kirjanpito omalle koneelle, vain muuttuneet
+palat varastoon ja käyttämättömät karttaversiot pois.' JU: a) paikallinen luettelo HEAD:ien sijaan, c) käyttämättömät karttaversiot pois PT:n tarkistaman listan jälkeen; KS: b) poltto vie vain
+muuttuneet palat. Pelaajien lataukset ennallaan. Tavoite ~10–15 $/kk. 2) Omistaja n. 12.24: 'pystyykö striimikartalle tuomaan kohdekaupunkeihin tehtyjä nähtävyysnostoja?' Päätös 12.28: 'Kyllä
+(suositus)' – 'Näkyvät oikeilla paikoillaan, kun lähestyt kaupunkia. Napautus avaa jutun.' Vasta kaupungin lähikartalla (2.9. linja maan tasolla pätee), nykyiset nostomerkit, napautus avaa saman
+jutun; sijainnit SK:lta Wikidatasta; NUI vetää.
+
+## KARTTA: KOHDEMAAN RAJA JA KOHDEMERKIN VÄISTÖ (omistaja 28.10. klo 12.35, KK:n välitys) (28.10.2026 klo 12.35)
+
+Kohdemaan rajan ohennus (KS:n parit 2b636c158): omistaja "Kelpaa (suositus)" → KS vie NS:lle. Kohdemerkin väistö, sanatarkasti: "ei voi siirtyä meren päälle" (Ranskan näkymässä Big Ben siirtyi rannikolle meren päälle) ja "louvren yms. siirtomatka voi olla myös pienempi, niin että se on hyvin lähellä nappulaa" → KS korjaa: siirto aina maalle, ei kuvakortin alle, pienenä ja vain sen verran, ettei merkki ole nappulan alla; uusi pari KK:lle ennen NS:ää.
+
+## KARTTA: KOHDEMERKIN VÄISTÖ LIMITTÄIN (omistaja 28.10. klo 12.36, KK:n välitys; korvaa 12.35:n meriehdon) (28.10.2026 klo 12.36)
+
+Sanatarkasti: "silloin ei haittaa vaikka menisikin vähän meren päälle, koska tajuaa että on todennäköisesti nappulan kanssa samassa kohtaa. ne voisivat itseasiassa olla ihan vähän limittäin, niin se olisi selkeämpi mieltää" → KS: pieni siirto, merkki ja pelaajan nappula vähän limittäin, ei kuvakortin alle; pari KK:lle ennen NS:ää.
+
+## STRIIMIKARTTA: NÄHTÄVYYSNOSTOIHIN KOHDEKARTAN VALMIIT KUVAKKEET (omistaja 28.10. klo 14.04, KK:n välitys) (28.10.2026 klo 14.04)
+
+Kortti "Kelpaavatko nähtävyysnostot Pariisin lähikartalla?" (NUI:n pari K1/K2, f6ca2648b), sanatarkasti: "saatko siirrettyä ne kuvakkeet kartalle, jotka on jo luotu nähtävyyksille ja jotka näkyvät kohdekaupungin omalla nähtävyydet kartalla" → NUI: harmaiden pisteiden tilalle kohdekartan valmiit miniatyyrikuvakkeet (ilman miniatyyrejä olevat kaupungit pitävät pisteet); Louvressa kuvake ja pyramidimalli eivät kasaudu; uusi pari PT:n tarkistamana KK:lle. Nostot eivät vielä junaan. OPPI (periaate 8): olemassa oleva kohdekartan kuvake on pohja, jota omistaja odottaa; PT:n tarkistuksessa verrataan, onko samalle asialle jo valmis kuva pelissä.
+
+## STRIIMIKARTTA: NÄHTÄVYYSPIIRROKSET ISOMMIKSI JA RAKENNUSTEN KEVENNYS (omistaja 28.10. klo 14.23, KK:n välitys) (28.10.2026 klo 14.23)
+
+1) Kortti "Suurennetaanko nähtävyyksien piirroksia vähän?" (NUI:n pari P1/P2, c7cd7a1e0), sanatarkasti: "kyllä ja saako kontrastia lisättyä helposti niihin?" → NUI: piirrokset isommiksi ja kontrastia lisää. 2) Omistajan kysymys, sanatarkasti: "mietin myös että pitäisikö kartalla näkyviä striimi rakennuksia keventää. ja ovatko kaikki rakennukset samaa dataa vai voiko rakennuksia helposti erotella ja sävyttää hieman eri tavalla?" → KS: kevennys (KK:n suositus) ja selvitys rakennusten lajitiedosta; kuvasarja nyt | kevennetty | kevennetty + sävytys, NUI:n piirrokset mukana → PT tarkistaa → KK → omistaja päättää kuvista. 3) KK nollautui omistajan kortilla 14.23 "Kyllä (suositus)".
+
+## R2-POISTO LAAJENNETTU OLAVINLINNAN VANHOIHIN DIORAAMOIHIN (omistaja 28.10. klo 15.33) (28.10.2026 klo 15.38)
+
+Omistajan kortti KK:ssa 15.33: 'Poistetaanko myös Olavinlinnan vanhat dioraamat?' → 'Kyllä (suositus)'. Laajentaa R2:n yhteisen pysyvän poiston (julkaisija-tyokalut/poista-r2-yhteinen-20261028.zsh, 219 kansiota). Komento omistajalla ajettavana; Tehty → JU tarkistaa.
+
+## RAKENNUSTEN KEVENNYS PUOLIVÄLIIN, KATUVIIVAT KEVYEMMIKSI, PIIRROSTEN KONTRASTI MALTILLISEMMAKSI (omistaja 28.10. klo 15.41) (28.10.2026 klo 15.42)
+
+Kortit KK:ssa 'Kevennetäänkö kartan rakennukset?' ja 'Kelpaavatko isommat ja selkeämmät piirrokset?', sanatarkasti: "kevennys hieman liian vahva. Lisäksi katujen viivat pitää keventää myös. ja silloin nähtävyyksiin ei tarvitse lisätä niin paljoa kontrasti kuin nyt esikatselussa" + piirroksista "ks. ed". Toteutus: KS rakennusten peitto nykyisen ja kevennetyn puoliväliin ja katuviivat kevyemmiksi; NUI piirrosten kontrasti maltillisemmaksi, koko ×1,25 säilyy. Uusi yhteispari KS+NUI → PT → KK.
+
+## KARTAN UUSI KEVEYS HYVÄKSYTTY RUNKOON (omistaja 28.10. klo 16.12) (28.10.2026 klo 16.12)
+
+Kortti KK:ssa 'Kelpaako kartan uusi keveys?' (pt-tarkistus-2 nyt | uusi + lähikuva 2×): "Kelpaa (suositus)". Runkoon (juna 213): KS:n rakennukset 110/255 + katujen reunaviiva 150/255 (käännös 3e42df900, rakennukset-213 d0c294363) ja NUI:n piirrokset cc578c208 (×1,25, maltillinen kontrasti). Sävytys lajin mukaan myöhemmin omana parinaan tämän päälle.
+
+## JUNA 213 TESTFLIGHTIIN KUN KARTTAMUUTOKSET VALMIIT (omistaja 28.10. klo 16.16) (28.10.2026 klo 16.17)
+
+KK:n välitys, sanatarkasti: "lähden jo kotiin, niin julkaise test flight, kun karttajutut ovat valmiina, niin näin ne sitten kotona." Toteutus: juna 213 TestFlightiin heti, kun neljä karttamuutosta ovat omistajan hyväksymiä ja vihreässä rungossa: raja (OK 12.35), väistö limittäin, merkittävyysporrastus, nähtävyysnostot + keveys (OK 16.12). Väistö- ja porrastusparit omistajalle puhelimeen kortilla heti valmiina. Julkaisun jälkeen yksi rivi omistajalle KK:n kautta.
+
+## JUNA 213 ILMAN TARKISTUSAJOA (omistaja 28.10. klo 16.20) (28.10.2026 klo 16.20)
+
+Kortti KK:ssa 'Ajetaanko tarkistusajo ennen julkaisua?' (9.11 päiväjuna): "Ei". Juna 213 lähtee TestFlightiin ilman iPad-muistiajoa (muistiajo-213 OHITETTU); automaattiset käännöstarkistukset ajetaan silti; heti kun karttamuutokset on hyväksytty ja runko vihreä.
+
+## LOUVREN JA BIG BENIN VÄISTÖ HYVÄKSYTTY (omistaja 28.10. klo 16.22) (28.10.2026 klo 16.23)
+
+Kortti KK:ssa 'Kelpaako Louvren ja Big Benin uusi väistö?' (KS:n kuva limittain-4 16.03; Big Ben ja pyramidi hieman limittäin nappulan kanssa; sivuvaikutukset Lontoon pallo alas oikealle ja salama pyramidin alle kerrottu): "Kelpaa (suositus)". KS 5c7384369 → NS → juna 213. TF 213 odottaa enää merkittävyysporrastusta.
+
+## STRIIMIKARTAN KOHTEIDEN NIMET VASTA JUURI ENNEN STRIIMIKARTTAA (omistaja 28.10. klo 18.15) (28.10.2026 klo 18.16)
+
+Kortti KK:ssa 'Kelpaako kohteiden porrastus?' (KS:n pari 3), sanatarkasti: "Nimet saavat tulla näkyviin vasta vähän ennen kun siirrytään striimikarttaan." Toteutus: laajoissa näkymissä (Eurooppa, maa) ei kohteiden nimiä; nimet alkavat näkyä juuri ennen siirtymää striimikarttaan. KS uusi pari → KK → omistaja. TF 213 odottaa tätä.
+
+## SUURTEN KAUPUNKIEN NIMET ENSIN, KOHTEIDEN NIMET VASTA STRIIMIKARTASSA (omistaja 28.10. klo 18.42–18.43) (28.10.2026 klo 18.43)
+
+KK:n kortti, pari 4, sanatarkasti 18.42: "Suurten kaupunkien nimet ensin. Yksittäisten kohteiden nimiä ei voi tulla kuin vasta lähempänä." + 18.43 "Kyllä (suositus)": suurimpien kaupunkien nimet näkyvät jo Ranskan näkymässä, yksittäisten kohteiden nimet vasta striimikartassa. KS pari 5 → KK → omistaja; TF 213 odottaa sitä. Löydös (ei porrastuksen syy): Pariisia lähestyttäessä tasolla 9 taustassa ruutusaumoja (todistus-merkittavat-jalkeen-20261028-1824 M2b) → KS selvittää erikseen.
+
+## LIITO OK, VARTIJA LÄHEMMÄKSI; KIVET OK, KATOT IRTI JA LIIAN KORKEALLA (omistaja 28.10. klo 18.57) (28.10.2026 klo 18.58)
+
+KK:n kortit, sanatarkasti. Liito #1222: "Liito Ok. Vartijan pitää vain olla lähempänä jotta puyi onnistuu lentämään vartijan yli" → PK: vartija lähemmäksi, liito junaan. Kujakivet v5: "Kivet Ok mutta katot näyttävät olevan irti ja liian korkealla" → LR korjaa katot ensin, sitten valo VS+LR. J4-v3 KK palautti LR:lle (kaiverrukset ja leimat eivät näy Codexin kuvan tavoin).
+
+## STRIIMIKARTAN KAUPUNKIEN NIMET PIENEMMIKSI (omistaja 28.10. klo 21.03) (28.10.2026 klo 21.03)
+
+KK:n välitys, sanatarkasti: "Nimet ovat aivan liian isolla". Tavoite (KK): porrastuksen kaupunkien nimet selvästi pienemmiksi ja hillityiksi (kokoluokka kuten vanha LONTOO); kartta ei saa näyttää täyteen kirjoitetulta. KS pari 8 (Lontoon pallokorjauksen kanssa) → KK → omistaja; TF 213 odottaa sitä.
+
+## OMISTAJAN PAATOS: PORRASTUS KELPAA, TF 213 LAHTEE (28.10. klo 21.40) (28.10.2026 klo 21.41)
+
+Kortti KK:ssa: "Kelpaako porrastus nyt?" → "Kelpaa (suositus)" (selite "Testiversio 213 lähtee heti."). Kuva docs/raportit/kaappaukset/omistaja-20261028/porrastus-viisi-nakymaa-ennen-jalkeen-2140.jpg = KS:n pari 9, merkittavat-213 f5ea99f7f + 752794a22. Seuraavaksi KS → NS kokoaa rungon → JU tf-kaynnista.sh 213 + pieni iPad. Vartija näytetty omistajalle tiedoksi.
+
+## OMISTAJAN PAATOS: KESKITYSLEIRIT POIS KARTAN NAHTAVYYKSISTA (28.10. klo 21.56) (28.10.2026 klo 21.56)
+
+Kortti KK:ssa: "Poistetaanko keskitysleirit kartan nähtävyyksistä?" → "Poistetaan (suositus)" (selite: "Leirit pois nähtävyyksistä. Muistopaikat voi tuoda myöhemmin omana aiheenaan."). Koskee kaikkia keskitys- ja tuhoamisleirejä (mm. Drancy, Majdanek, Ravensbrück, Chełmno, Auschwitz-Birkenau, Dachau, Mauthausen, Treblinka). Tausta: KK huomasi saumaparissa nimen "Drancy concentration camp" nähtävyyksien joukossa; samalla todettiin, että 2 988/5 231 merkittävällä kohteella ei ole suomenkielistä nimeä (näkyivät englanniksi tasoilla 11–14). PT: ne jäävät piirroksina ilman nimilappua (tai pois datasta, jos ei onnistu turvallisesti), vain suomeksi -linjauksen mukaan. Molemmat KS:n commiteina uuteen TF 213 -runkoon; ensimmäinen 213-ajo (runko a7b9b71d4) peruttu ennen IPA:ta.
+
+## OPPI (periaate 10): KK LUPASI VALON KUJAAN 01 ENNEN KAIKKIEN MUOTOJEN VALMISTUMISTA (28.10. klo 22.41) (28.10.2026 klo 22.42)
+
+KK lupasi omistajalle 22.41 valon (VS:n aurinko + LR:n leivonta) kujaan 01 heti sen muodon hyväksynnän jälkeen. Ristiriidassa omistajan päätöksen 27.10. klo 10.56 kanssa (ensin KAIKKI rakennukset ja elementit havainnekuvien mukaisiksi, valo mietitään uudelleen vasta sen jälkeen). Rikottu periaate 6 (tarkista ennen kuin lupaat). Syy: KK:n aloitus.md:n kohdassa ENSIN 4a luki "SITTEN VALO" ilman päätöksen ehtoa. PT pysäytti 22.4x; KK oikaisi LR:lle ja omistajalle ja korjasi aloitus.md:n (ENSIN 4a, TEKOTAPA). Linja: valo vasta kun kaikki kujat ovat muodoltaan hyväksyttyjä ja omistaja antaa kortilla luvan ("Aloitetaanko valo?"); VS levossa siihen asti.
+
+## OMISTAJAN VASTAUS: KUJAN 01 MUOTO, LIIKAA VIHREÄÄ (29.10. klo 06.09) (29.10.2026 klo 06.09)
+
+Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Liikaa vihreä" (pari LR v110e). KK:n tulkinta LR:lle: sinivihreä vyö kapeammaksi, vihreä vain palkkeihin ja kannakkeisiin, välit punaisiksi tai tummiksi havainnekuvan mukaan; uusi pari omistajalle. Valo edelleen vasta kaikkien kujien muotojen jälkeen omistajan kortilla (27.10. klo 10.56).
+
+## OMISTAJAN PAATOS: KARTAN NIMIEN UUDET KOOT KELPAAVAT (29.10. klo 06.12) (29.10.2026 klo 06.12)
+
+Kortti KK:ssa: "Kelpaavatko kartan nimien uudet koot?" → "Kelpaa (suositus)" (kuva nimet-jatko2-koot.jpg, KS aa48b61f7). Striimikartan nimet: pääkaupungit 16 pt, suurkaupungit 13 pt, kunnat 10–12 pt (ennen 26/21,5/19,5); pääkaupunki suurin nimi. Vain suomeksi (PT:n linja 29.10. 00.3x: suomen kielen käytäntö kuten fi-Wikipedia, alkuperäiset erisnimet jäävät, vakiintunut suomenkielinen muoto voittaa, esim. Seine ja Marne ilman artikkelia; ilman suomenkielistä lähdettä pois). Bourgogne-Franche-Comté yhtenä nimenä; Budapest, Kiova, Lissabon ja Bryssel lisätty. Nähtävyyspiirrosten nimet (NUI 616d4b6e0): kuntanimitasolla 12 pt, katutasolla entinen koko; piirrokset ja niiden nimet kiinteinä esteinä, karttanimet väistävät (KS d25b6f69f). Kaikki junassa 214 (runko 72952b7fe).
+
+## OMISTAJAN PAATOS: KUJAN 01 MUOTO KELPAA, LUKITTU (29.10. klo 06.20) (29.10.2026 klo 06.20)
+
+Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Kelpaa (suositus)" (LR v112: lokit/havainne-editori-20261029-061212 pelikamera, -061008 havainteen kamera; vihreä vain kapeassa palkissa ja kannakkeissa, korjaus omistajan 06.09 "Liikaa vihreä" -vastaukseen). Kujan 01 muoto lukittu → seuraavaan junaan LR:n mukana. LR jatkaa kujiin 02/05. Valo edelleen vasta, kun kaikkien kujien muodot on hyväksytty ja omistaja antaa kortilla luvan (27.10. klo 10.56).
+
+## OMISTAJAN PAATOS: KUJA 02 KAVENNETAAN HAVAINNEKUVAN LEVYISEKSI (29.10. klo 06.41) (29.10.2026 klo 06.41)
+
+Kortti KK:ssa: "Kavennetaanko kuja 02 havainnekuvan levyiseksi?" → "Kavennetaan (suositus)" (selite: "Korkeat muurit ympäröivät juoksijaa kuten havainnekuvassa."; kuva lokit/havainne-editori-20261029-063350/02/vierekkain.png). Päättää 25.10. klo 11.32 levennysasian (loki 2579, 2611: kysymys oli jäänyt kysymättä mittausvirheen korjauksen jälkeen): kuja 05 on jo havainnekuvan levyinen (pk4 ~4,5 m), kuja 02 kavennetaan havainnekuvan levyiseksi. Työnjako: KS pohja, LR muurit, PK rata.
+
+## OPPI JA KORJAUS: KUJAN 02 KORTTI 06.41 PERUSTUI VÄÄRIN PÄIN OLEVIIN LUKUIHIN (29.10. klo 07.0x) (29.10.2026 klo 07.00)
+
+Omistajan 06.41 päätös "kuja 02 kavennetaan" tehtiin kortilla, jossa luki "0,70 vs havainne 0,54". LR ajoi mittarin uudelleen: editori-lr:n mittari.txt:n sarakkeet olivat käänteiset, oikeat luvut havainne 0,70 ja peli 0,54 eli pelin kuja on jo havainnekuvaa kapeampi; kavennuskoe −1,5 m (juuri-v117m) vei 0,47:ään eli kauemmas havainnekuvasta. Kavennus pysäytetty (LR, KS, PK). PT pyysi KK:lta uuden kortin oikeilla luvuilla, suositus: levennetään havainnekuvan levyiseksi (kuten 25.10. klo 11.32). Oppi: mittari.txt:n sarakejärjestys korjataan editori-lr:ssä; kortin luvut tarkistetaan uudella ajolla ennen kuin ne viedään omistajalle.
+
+## OMISTAJAN PAATOS: KUJA 02 HAVAINNEKUVAN LEVYISEKSI, RAKENNUKSET ENNALLAAN (29.10. klo 07.26) (29.10.2026 klo 07.27)
+
+Kortti KK:ssa: "Korjaus: kuja 02 on pelissä jo havainnekuvaa kapeampi. Levennetäänkö se havainnekuvan levyiseksi?" → "Levennetään (suositus)" (selite: "Kuja havainnekuvan levyiseksi, rakennukset ennallaan."; kuva lokit/havainne-editori-20261029-065520/02/vierekkain.png). Kumoaa 06.41:n kavennuksen. Kortti lähti ennen PT:n tarkennusta: kattojen väli riippuu kamerasta (sovitettu kamera 0,84, testikamera 0,54, havainne 0,70), joten mittarina käytetään kujan leveyttä hahmon jalkojen kohdalta reunakivestä reunakiveen havainteen sovitetulla kameralla (havainne 4,5 | peli ≥ 4,3 hahmoa). PT: tavoite toteutetaan levittämällä jäljellä oleva ero (~0–5 %), rakennukset ennallaan; omistajalle kerrotaan yhdellä rivillä, ei uutta korttia. Työnjako: LR muurit, KS pohja (pk8 = pk7 + kuja 02), PK rata, parit KK:lle sovitetulla kameralla (-070615).
+
+## DRONEKAMERAN LIIKE SOPIVA (omistaja 29.10. klo 07.57) (29.10.2026 klo 07.57)
+
+Kortti KK:ssa: 'Onko dronekameran liike nyt sopiva?' → 'Sopiva (suositus)' ('Pidetään tällaisena, alku ja loppu korjataan.'). Pohja: PK drone-214 ea52d4a50, KK:n välivideo 2,5–64 s. PK korjaa alun (205 °/s kääntö, ylhäältä laskeutuminen) ja lopun (muurin/portin nosto 3–8,6 m, 16 m/s; Raamattu 2.177 voimassa: drone nousee porttien yli, nosto hidas ja ennakoiva). KK tarkistaa koko videon; junaan 214 omana eränään vain puhtaana. Kuja 02 (PT 29.10.): uusi mittaus peli 4,71 | havainne 4,49 hahmon korkeutta = +4,9 %, omistajan 07.26 tavoitteen (+0–5 %) sisällä → ei muutosta.
+
+## JUOKSUPELIN LOPPUYHTEENVETO RIKOTUISTA ESINEISTÄ (omistaja 29.10. klo 08.21–08.55) (29.10.2026 klo 08.55)
+
+Pyyntö 08.21: juoksun loppuun yhteenveto rikotuista esineistä: Codexin syvätyt esinekuvat, nimi + (kpl), napautus avaa ikkunan, jossa esineen muistokuva (muistokupla) ja lyhyt historia kiinalaisesta kulttuurista. 08.23 kortti: 'Ei, vain rikotut' (ei rikkomattomia siluetteina). 08.55 kortti: 14 historiatekstiä 'Kelpaavat (suositus)' KK:n neljällä kielikorjauksella ja PT:n kellon vuosikorjauksella (1600-luvun alussa). PT: yhteenveto aukeaa itsestään ennen loppukorttia ja vain, jos jotain rikottiin; Kokoelma-nappi ennallaan. Pohjat: galleria-lasi + mk-nosto (NUI), logiikka JuoksuTulos.RikotutEsineet (PK).
+
+## RIKOTTUJEN YHTEENVEDON NÄKYMÄ KELPAA (omistaja 29.10. klo 09.59) (29.10.2026 klo 09.59)
+
+Kortti KK:ssa: 'Kelpaako rikottujen esineiden yhteenvedon näkymä?' → 'Kelpaa (suositus)' ('Näkymä menee junaan, kun viisi uutta muistokuvaa ovat valmiit.'). Kuvat NUI ipad2-R1 + R3 (1020689b8). Viisi muistokuvaa (posliinimaljakko, lakkarasia, jadeastia, kello, kääretaulu) esittivät eri esinettä kuin pelimalli → Codex tekee uudet (PK:n tilaus b340dd473), KK tarkistaa, omistaja valitsee; merge junaan 214 vasta niiden jälkeen.
+
+## RIKOTTUJEN VIISI MUISTOKUVAA KELPAAVAT (omistaja 29.10. klo 11.52) (29.10.2026 klo 11.52)
+
+Kortti KK:ssa: 'Kelpaavatko viisi uutta muistokuvaa?' → 'Kelpaavat (suositus)' ('Kuvat peliin ja rikottujen yhteenveto junaan 214.'). Posliinimaljakko, lakkarasia, kääretaulu (Codex 767a18e17) sekä jadeastia ja kello (uusinta b64038412, ei marmorijalustan toistoa). PK vie kuvat haaraan rikotut-214, NUI tekee merge-pyynnön NS:lle junaan 214.
+
+## TILINVAIHTO PYYDETTY (omistaja 29.10. klo 12.53) (29.10.2026 klo 12.56)
+
+Omistaja KK:ssa: 'tee siirtoprompti toiselle tilille'. Vanha tili sami.reivinen@vvi.fi (org ddaee6a2), viikko 97 %, nollautuu 2.11. klo 03. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20261029.md (PT 12.55); uusi tili omistajan valitsema, rivi osoitteet.md:hen uuden PT:n toimesta.

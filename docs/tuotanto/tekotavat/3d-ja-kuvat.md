@@ -31,6 +31,7 @@ Postiin `posti/<rooli>-codex-<aihe>-<pvm>.md` (muoto: `codex-3d-toimitus.md` luk
 - referenssit: hahmo edestä, sivulta ja takaa, kädet irti, tasainen valo, harmaa tausta; ei oikeiden ihmisten valokuvia;
 - **ei Googlen laattoja sisältäviä pelikuvia** pohjaksi tai referenssiksi; käytä omia renderejä, LiDAR-massaa, OSM:ää;
 - ei suojattuja teoksia (tekijän kuolemasta alle 70 v, Espanja 80 v).
+- **lattiat ja maa yhtenä kerroksena:** ei päällekkäisiä pintoja eikä saman alueen kahta kolmiointia (myös 0–5 cm:n välein), ei alaspäin käännettyjä lattioita (KK 26.10.2026 21.3x: tausta-v57:n Codex-pohjan päällekkäiset lattiat varjostivat toisensa leivonnassa mustiksi); vastaanotossa `python3 tyokalut/tarkista_leivonta.py` → PUHDAS.
 
 Sovitustiedot (mitat, toleranssit, liitospinnat) kirjoitetaan tilaukseen numeroina, esim. Niken keula: yläpinta Niken
 alapinnan tasolle, jalusta 2,2 × 2,4 × 3,2 m.
@@ -167,6 +168,13 @@ Kolmioita vain siluettiin vaikuttaviin osiin (reunukset, portaat, pylväät, rä
 
 **4. Valmiiksi laskettu valo.** Kun aurinko on kiinteä, staattisten osien varjot ja nurkkavarjostus leivotaan valokarttaan;
 reaaliaikainen varjo vain hahmoille ja liikkuville osille. Lehvästön varjo kuviona.
+*Järjestys (PT 26.10.2026 omistajan kysymyksen 21.06 jälkeen: "Onko valaisussa joku perustavanlaatuinen ongelma?"):* leivottu
+valo on kuva muodosta, joten (1) muoto lukitaan alue kerrallaan (kujat, hallit, jalustat, lattiat) → (2) leivotaan kerran
+lopuksi samoilla varjostajilla, jotka peli lataa → (3) tarkistus 0 ennen paria: `python3 tyokalut/tarkista_leivonta.py
+<vientikansio>` (proto-repo; tuplalattiat, joilla on eri valo = z-taistelu, ja eri tasojen kasvot samoilla tekseleillä) ja
+Lavastajan omat ajot (tuplat, UV1-päällekkäisyys, haamuvarjot, UV0-saumat); tulosrivi liitetään pariin. Muodon muutos leivonnan
+jälkeen = uusi leivonta, muuten poistetun geometrian varjo jää lattiaan (26.10.: aukion kiilat, 06:n vinovyö, tuplalattiat).
+*Juoksupeli: valo pois ensin (SITOVA juoksupelille, omistaja 27.10.2026 klo 10.56: "Ehdotan, että ennen kuin korjataan valoa, niin otetaan valo kokonaan pois ja korjataan ensin kaikki Rakennukset ja muut elementit samanlaisiksi kuin havainnekuvissa. Aletaan sen jälkeen miettiä valoa uudestaan."):* juoksupelin valon leivonta ja aurinkotyö pysähtyvät; rakennukset ja muut elementit sovitetaan havainnekuviin tasaisessa valossa ilman varjoja (Lavastaja muodot, Valoseppä materiaalit, Natiivi-UI kuvaparit) alueittain entisessä järjestyksessä. Valo suunnitellaan uudelleen vasta, kun muodot vastaavat havainnekuvia. Koskee vain juoksupeliä; muihin peleihin vain omistajan erillisellä päätöksellä (aukion 03 pari docs/raportit/kaappaukset/omistaja-20261027/aukio03-pari-rakennukset-eroavat.webp).
 
 **5. Yksityiskohdat vain lähellä.** Kuviot ja instanssit vain lähimmässä tasossa (LOD0, noin 150 m) ja häivytetään etäisyyden mukaan;
 kaukaiset tasot pysyvät kevyinä. Budjetit kohdan 3 mukaan, ruutuaika alle 20 ms (NS mittaa).

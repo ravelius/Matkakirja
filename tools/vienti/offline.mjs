@@ -36,6 +36,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
+import { avainOsoitteesta, luettelonEtuliitteet, luettelonIka } from './ampariluettelo.mjs';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 const KOOT_TIEDOSTO = join(TAMA, 'offline-koot.json');
@@ -213,18 +214,6 @@ function bbox(renkaat) {
   return { w, s, e, n };
 }
 
-/** Parillisuussääntö kaikkien renkaiden yli (saaret ja reiät). */
-function sisalla(renkaat, lon, lat) {
-  let sis = false;
-  for (const r of renkaat) {
-    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
-      const [xi, yi] = r[i]; const [xj, yj] = r[j];
-      if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) sis = !sis;
-    }
-  }
-  return sis;
-}
-
 function janaLeikkaa(ax, ay, bx, by, { w, s, e, n }) {
   // Liang–Barsky: leikkaako jana suorakaiteen.
   let t0 = 0; let t1 = 1;
@@ -237,15 +226,38 @@ function janaLeikkaa(ax, ay, bx, by, { w, s, e, n }) {
   return true;
 }
 
-/** Leikkaako laatta (asteina) maan muotoa. */
-function laattaLeikkaa(renkaat, laatta) {
-  if (sisalla(renkaat, (laatta.w + laatta.e) / 2, (laatta.s + laatta.n) / 2)) return true;
+/**
+ * Leikkaako laatta (asteina) maan muotoa: keskipiste muodon sisällä tai jokin reuna leikkaa laattaa.
+ * Nopeutus (CI-jumi 28.10.2026: skeema 1.33 -testi ~140 s, kuormassa yli 20 min aikarajan): reunat esisuodatetaan
+ * sarakkeittain (pituusväli, pieni vara: suodatus vain pudottaa reunoja, jotka eivät voi leikata) ja rivin keskiviivan
+ * ylittäviin (parillisuussääntö: vain rivin keskiviivan ylittävät reunat voivat vaihtaa puolta; saaret ja reiät). Tulos on sama kuin jokaisen reunan läpikäynnillä.
+ */
+function laattaLeikkaaja(renkaat) {
+  const reunat = [];
   for (const r of renkaat) {
-    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
-      if (janaLeikkaa(r[j][0], r[j][1], r[i][0], r[i][1], laatta)) return true;
-    }
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) reunat.push([r[j][0], r[j][1], r[i][0], r[i][1]]);
   }
-  return false;
+  const VARA = 1e-9;
+  const sarakkeet = new Map(); const rivit = new Map();
+  return (laatta) => {
+    const lon = (laatta.w + laatta.e) / 2; const lat = (laatta.s + laatta.n) / 2;
+    let rivi = rivit.get(lat);
+    if (!rivi) { rivi = reunat.filter(([, yj, , yi]) => (yi > lat) !== (yj > lat)); rivit.set(lat, rivi); }
+    let sis = false;
+    for (const [xj, yj, xi, yi] of rivi) if (lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) sis = !sis;
+    if (sis) return true;
+    const avain = `${laatta.w}|${laatta.e}`;
+    let sarake = sarakkeet.get(avain);
+    if (!sarake) {
+      sarake = reunat.filter(([xj, , xi]) => Math.max(xj, xi) >= laatta.w - VARA && Math.min(xj, xi) <= laatta.e + VARA);
+      sarakkeet.set(avain, sarake);
+    }
+    for (const [xj, yj, xi, yi] of sarake) {
+      if (Math.max(yj, yi) < laatta.s - VARA || Math.min(yj, yi) > laatta.n + VARA) continue;
+      if (janaLeikkaa(xj, yj, xi, yi, laatta)) return true;
+    }
+    return false;
+  };
 }
 
 /* ---------------------------------------------------------- laattakaaviot */
@@ -262,11 +274,11 @@ const rajaa = (v, z) => Math.max(0, Math.min(2 ** z - 1, v));
 function rasteriLaatat(renkaat, b, z) {
   const x0 = rajaa(xyzX(b.w, z), z); const x1 = rajaa(xyzX(b.e, z), z);
   const y0 = rajaa(xyzY(b.n, z), z); const y1 = rajaa(xyzY(b.s, z), z);
-  let laattoja = 0;
+  let laattoja = 0; const leikkaa = laattaLeikkaaja(renkaat);
   for (let x = x0; x <= x1; x++) {
     for (let y = y0; y <= y1; y++) {
       const laatta = { w: (x / 2 ** z) * 360 - 180, e: ((x + 1) / 2 ** z) * 360 - 180, n: xyzLat(y, z), s: xyzLat(y + 1, z) };
-      if (laattaLeikkaa(renkaat, laatta)) laattoja++;
+      if (leikkaa(laatta)) laattoja++;
     }
   }
   return { vali: [x0, y0, x1, y1], laattoja };
@@ -408,12 +420,12 @@ function maastoLaatat(renkaat, b, z, saatavilla) {
   const x0 = Math.floor((b.w + 180) / leveys); const x1 = Math.min(2 ** (z + 1) - 1, Math.floor((b.e + 180) / leveys));
   const y0 = Math.floor((b.s + 90) / leveys); const y1 = Math.min(2 ** z - 1, Math.floor((b.n + 90) / leveys));
   const onSaatavilla = (x, y) => saatavilla.some((a) => x >= a.startX && x <= a.endX && y >= a.startY && y <= a.endY);
-  let laattoja = 0; let [ax0, ay0, ax1, ay1] = [Infinity, Infinity, -1, -1];
+  let laattoja = 0; let [ax0, ay0, ax1, ay1] = [Infinity, Infinity, -1, -1]; const leikkaa = laattaLeikkaaja(renkaat);
   for (let x = x0; x <= x1; x++) {
     for (let y = y0; y <= y1; y++) {
       if (!onSaatavilla(x, y)) continue;
       const laatta = { w: x * leveys - 180, e: (x + 1) * leveys - 180, s: y * leveys - 90, n: (y + 1) * leveys - 90 };
-      if (!laattaLeikkaa(renkaat, laatta)) continue;
+      if (!leikkaa(laatta)) continue;
       laattoja++;
       ax0 = Math.min(ax0, x); ay0 = Math.min(ay0, y); ax1 = Math.max(ax1, x); ay1 = Math.max(ay1, y);
     }
@@ -796,7 +808,28 @@ function kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut, alueidenManner = 
 
 /* ------------------------------------------------- kokojen päivitys (verkko) */
 
+/*
+ * Ämpäriluettelo (Julkaisija 28.10.2026, R2-kulut): --paivita-koot ja --paivita-kerrokset lukevat laattasarjojen
+ * koot paikallisesta luettelosta (tools/vienti/ampariluettelo.mjs) HEAD-pyyntöjen sijaan; luettelon etuliitteessä
+ * puuttuva avain = puuttuu (0), kuten HEAD:n 404. --head tai AMPARI_LUETTELO=pois: HEAD-pyynnöt kuten ennen.
+ * Rakenna luettelo uudelleen (rakenna-luettelo.zsh), jos sarjoja on viety luettelon rakentamisen jälkeen muuten
+ * kuin vie-paketti.sh:lla.
+ */
+let TUNNETUT = null; let TUNNETUT_ETU = [];
+export async function kaytaLuetteloa(osoitepohjat) {
+  TUNNETUT_ETU = osoitepohjat.map((u) => avainOsoitteesta(u.split('{')[0])).filter(Boolean);
+  TUNNETUT = await luettelonEtuliitteet(TUNNETUT_ETU);
+  return TUNNETUT;
+}
+function luettelosta(osoite) {
+  const a = TUNNETUT && avainOsoitteesta(osoite);
+  if (!a || !TUNNETUT_ETU.some((e) => a.startsWith(e))) return undefined;
+  return TUNNETUT.get(a) ?? 0;
+}
+
 async function koko(osoite) {
+  const l = luettelosta(osoite);
+  if (l !== undefined) return l > 0 ? l : null;
   try {
     const r = await fetch(osoite, { method: 'HEAD', redirect: 'follow' });
     const n = Number(r.headers.get('content-length'));
@@ -902,10 +935,10 @@ async function maastoMaista(vienti, available, n = 64) {
 
 /** HEAD-koko (0 = puuttuu: läpinäkyvä kerma, meri). Oma yhteysallas: kymmeniätuhansia pyyntöjä. */
 const hakuAllas = new https.Agent({ keepAlive: true, maxSockets: 32 });
-const headKoko = (u) => new Promise((ok) => {
+const headKoko = (u) => (luettelosta(u) !== undefined ? Promise.resolve(luettelosta(u)) : new Promise((ok) => {
   const r = https.request(u, { method: 'HEAD', agent: hakuAllas }, (v) => { v.resume(); ok(v.statusCode === 200 ? Number(v.headers['content-length']) || 0 : 0); });
   r.on('error', () => ok(null)); r.setTimeout(20000, () => r.destroy()); r.end();
-});
+}));
 async function mittaaKaikki(osoitteet) {
   let i = 0; let tavut = 0; let levy = 0; let virheet = 0;
   await Promise.all(Array.from({ length: 32 }, async () => {
@@ -956,6 +989,12 @@ async function paivitaKerrokset(vienti) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--vienti');
   const vienti = resolve(i > 0 ? process.argv[i + 1] : join(TAMA, '../../dist/vienti'));
+  if (!process.argv.includes('--head') && /--paivita-(koot|kerrokset)/.test(process.argv.join(' '))) {
+    const pohjat = [OFFLINE_LAHTEET.rasteri.url, ...Object.values(OFFLINE_KERROKSET).map((k) => k.url)];
+    const t = await kaytaLuetteloa(pohjat);
+    console.error(t ? `ämpäriluettelo: ${t.size} avainta (${TUNNETUT_ETU.length} sarjaa, luettelo ${luettelonIka().toFixed(0)} h vanha); ei HEAD-pyyntöjä niille`
+      : 'ämpäriluettelo puuttuu: koot HEAD-pyynnöin');
+  }
   if (process.argv.includes('--paivita-koot')) {
     const t = await paivitaKoot(vienti);
     console.log(`offline-koot.json: rasteri ${JSON.stringify(t.rasteri.keskitavut)}, maasto z0–${t.maasto.available.length - 1}, media ${Object.keys(t.media).length} lajia`);

@@ -1393,6 +1393,10 @@ export const MAAKUNTIEN_PULU = {
       { q: "Ketä kutsutaan Kroatian Andersenin, ja mitä hänellä on tekemistä Slavonski Brodin kanssa?", a: "Kirjailija Ivana Brlić-Mažuranić muutti aviomiehensä myötä Slavonski Brodiin ja kirjoitti täällä suosituimmat satunsa; häntä kutsutaan Kroatian Andersenin vertaansa vailla olevan sadunkerronnan takia." },
       { q: "Mikä tekee slavonialaisesta kulen-makkarasta erityisen?", a: "Slavonski kulen on paprikalla maustettu kuivamakkara, jota on valmistettu samalla perinteellä yli 200 vuotta; EU myönsi sille suojatun maantieteellisen merkinnän vuonna 2017." },
     ],
+    "Požeško-Slavonska": [
+      { q: "Mitä tarkoittaa Požegan laakson latinankielinen nimi Vallis Aurea?", a: "Vallis Aurea tarkoittaa kultaista laaksoa. Nimi viittaa Požegan laakson hedelmällisyyteen: laaksoa ympäröivät Požeška gora, Papuk ja Dilj -vuoret, ja se on ollut tärkeä alue jo antiikin ajoista." },
+      { q: "Mitä Požegassa muistetaan 12. maaliskuuta?", a: "Požega vapautettiin ottomaaneilta 12. maaliskuuta 1688 kaupunkilaisten ja fransiskaanimunkki Luka Ibrišimovićin johdolla. Päivää vietetään edelleen kaupungin päivänä, ja keskusaukiolla esitellään silloin vanhoja tykkejä ja mortteleita." },
+    ],
     "Dubrovacko-Neretvanska": [
       { q: "Mikä tekee Stonin suolapadoista niin erikoisia?", a: "Stonin suolapadot ovat Euroopan vanhimmat yhä toimivat suolalammikot; niiden yli 5 kilometrin pituiset suojamuurit rakennettiin 1300–1400-luvuilla ja lasketaan maailman pisimpien linnoitusmuurien joukkoon." },
       { q: "Miksi Dubrovnikin vanhakaupunki näyttää monelle tutulta televisiosta?", a: "Dubrovnikin muurien ympäröimä vanhakaupunki toimi kuvauspaikkana Game of Thrones -sarjan kuvitteelliselle King's Landingin kaupungille, ja se houkuttelee edelleen sarjan faneja kiertokäynneille." },
@@ -1976,6 +1980,10 @@ export const MAAKUNTIEN_PULU = {
     Pomoravski: [
       { q: "Mitä Horreum Margi tarkoittaa ja mikä sen tehtävä oli?", a: "Nimi tarkoittaa Margi-joen (nykyisen Velika Moravan) viljavarastoa; paikka oli roomalainen varuskuntakaupunki, aseiden valmistuskeskus ja koko alueen viljan säilytyspaikka." },
       { q: "Miksi paikka oli strategisesti tärkeä?", a: "Se sijaitsi Via Militariksella, Rooman ja Konstantinopolin välisellä pääväylällä, ja toimi hetken jopa Ylä-Mesian provinssin pääkaupunkina sekä seitsemännen legioonan tukikohtana." },
+    ],
+    Rasinski: [
+      { q: "Kuka perusti Kruševacin, ja mitä kaupungissa on säilynyt hänen ajaltaan?", a: "Ruhtinas Lazar Hrebeljanović perusti Kruševacin vuonna 1371 linnoitetuksi kaupungiksi ja piti sitä asuinpaikkanaan. Hänen rakennuttamansa Lazarica-kirkko valmistui vuosina 1375–1378 Moravan arkkitehtuurityyliin. Lazar kuoli Kosovon taistelussa vuonna 1389." },
+      { q: "Mikä on Župska berba?", a: "Župska berba on Aleksandrovacin kaupungin viininkorjuujuhla, joka pidetään vuosittain 22.–25. syyskuuta. Aleksandrovac kuuluu Rasinan piiriin, ja kaupungissa asuu noin 5 600 ihmistä (2022)." },
     ],
     'Raški': [
       { q: "Miksi Pešterin ylänkö tunnetaan Sandžakin Siperiana?", a: "Yli tuhannen metrin korkeudessa sijaitseva tasanko kokee poikkeuksellisen ankaria talvia, ja lämpötilat voivat pudota rajusti — nimitys kuvaa juuri tätä äärimmäistä ilmastoa." },

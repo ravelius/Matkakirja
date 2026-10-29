@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2618, teksti: 'Požega-Slavonia ja Rasina omiksi maakunnikseen' },
   { v: 2617, teksti: 'Isoisän luennat uusittu vanhemmalla äänimallilla' },
   { v: 2616, teksti: 'ISS-kamera: 10 uutta eurooppalaista kohdetta (#3986)' },
   { v: 2615, teksti: 'Olavinlinna: esittelyn avainsanat (#3974)' },

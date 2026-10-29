@@ -341,7 +341,11 @@
     "valkoinen-92": "rgba(255, 255, 255, 0.92)",
     "valkoinen-16": "rgba(255, 255, 255, 0.16)",
     "musta-80": "rgba(0, 0, 0, 0.8)",
-    "valkoinen-08": "rgba(255, 255, 255, 0.08)"
+    "valkoinen-08": "rgba(255, 255, 255, 0.08)",
+    "erikois-linssi-hehku-30": "rgba(181, 123, 255, 0.3)",
+    "erikois-linssi-hehku-40": "rgba(181, 123, 255, 0.4)",
+    "videopeli-korostus-32": "rgba(127, 196, 255, 0.32)",
+    "videopeli-korostus-44": "rgba(127, 196, 255, 0.44)"
   },
   "erikois": {
     "_selite": "Vain natiivi (--tk-erikois-*, Tyylikirja.Erikois). Tarkoitukselliset erikoisvärit nykyarvosta ilman ulkoasun muutosta (Päätoimittaja 8.10.2026): astro = astronautti, ISS ja minipulu; tila = oikein, väärin, valmis, varoitus ja tilastot; opas = oppaan linkit ja nauhat; radio; leima = sähkeen, paljastuksen ja kartan leimat; aikajana; elama = elämäpalkki; ihme = ihmenauha ja ihmetähti; kartuscha = kartussin radiovalo; linssi-hehku = linssikaupunkien hohtava violetti piste kartalla hunnun päällä (Topografia, Maailmanradio, Keksinnöt, Ihmisen matka, Taidemuseo; omistaja 11.10.2026, juna 182, Linssiseppä); saa = sää ja lämpövyöt; muu = yksittäiset (lisenssivaroitus, liukusäätimen ura, kytkin, visan tulos). Numero = vaaleusjärjestys perheen sisällä, -aNN = alfa × 100. astro-valkoinen = astro-pintojen sinertävä valkoinen; aktiivinen-oranssi = lukijan ja kaiuttimen aktiivinen tila (pohjavahti 7). radiopaletti = radion kotelo, asteikko ja lasi; isskytkin = ISS-kytkinpöydän metalli, valot ja LCD (pohjavahti 11, Päätoimittaja 8.10.2026). Pohjavahti 6 (Natiivi-UI 12.10.2026, PT): UI-C#:n värivakiot nykyarvosta (lehti, graafi, aikajana, iss, maakayra, radio, maakunta, noppa, pieniliike, pulma, matkakirjakortti, pergamentti, aloitus, maakunnat, kohdekartta). Pohjavahti 12 (Natiivi-UI 13.10.2026, PT): UI-C#:n heksavärit nykyarvosta (ylapalkki, kulta, ilmoitus, pergamentti, kortti-nimivarjo, dialogi-kulta, kysymys, laatta, selite-oletus, radio-puu/-paperi/-lasi/-nuppi, paljastus-viiva; sym-* = webin --sym-*-aihevärit samoilla nimillä).",
@@ -728,6 +732,18 @@
       ],
       "sijainti": "turva-alueen sisällä; linssin ylärivi ja alanauha rajaavat (rullat ylärivin alle ja nauhan yläpuolelle, KehysKaaro.AsetaRajat; simu 17.10. 11.28: rullat jäivät niiden alle); rullat 3 pt paperia leveämmät; ei kosketuksia, linssin paneelit kehyksen päällä",
       "liike": "avaus kuin kääritty kartta: rullat keskeltä reunoille liike.liikkeet kortti-avaus (220 ms), sulku takaisin kortti-sulku (200 ms); alle liike.maksimi"
+    },
+    "OHJAINOPETUS": {
+      "_selite": "Pelin kosketusohjauksen opetus 3D-näkymän päällä (omistaja 21.10.2026 08.58 peukalokohdat; OMISTAJAN PÄÄTÖS 27.10.2026 klo 10.05 KK:n kortilla pyyhkäisyosoitin luonnoksen mukaan; PT 27.10. 10.3x: pohjaksi, NUI ja PK). Ensimmäinen käyttäjä juoksupelin taso 1 (JuoksuOpetus); muut pelit, joissa ohjataan peukaloilla, samalla pohjalla. Vain natiivi: UI/Pelit/Peukalokohta.cs, UI/Pelit/PyyhkaisyOsoitin.cs, tyylit Pohjat/ohjainopetus.uss.",
+      "teemat": ["tumma"],
+      "koostuu": [
+        "PEUKALOKOHTA: peukalon keskikohta pehmeänä hehkupisteenä ilman reunaa (Kuviot.Hehkupiste); normaali = lämpimän ruskea pieni peitto (kuulto.accent-dark-14), ohjeen kohta = punainen (tila.virhe) syke 0,6 s välein",
+        "PYYHKÄISYOSOITIN: ohjeen peukalokohdasta eleen suuntaan (oikea, vasen, ylös = hyppy, alas = liuku) liukuva jälki: kolme pienenevää vaaleaa hehkupistettä (kuulto-valkoinen-92) ja kulmanuoli pyöreäpäisistä viivoista, alla tumma pehmeä varjo (kuulto-musta-50/-25), joka näkyy vaalealla kiveyksellä; napautuksessa (kaista, heitto) ei jälkeä, pelkkä syke",
+        "OHJETEKSTI: kertojan kaista (.mk-aikajana-kertomus--ohje) luonnoksen koossa: tumma kuultopohja (kuulto-musta-72), kulma 6 pt, ei reunaviivaa, teksti 32 pt fonttipoikkeuksena (KK 27.10. 10.2x: luonnoksen koko, rivi noin 60 % ruudun leveydestä; arkin 26 pt jäi pieneksi) ohuella tummalla ääriviivalla, leveys enintään 1100 pt; yksi lyhyt käsky kerrallaan muodossa ele: seuraus (\"Pyyhkäise oikealla peukalolla oikealle: käänny oikealle\")"
+      ],
+      "sijainti": "peukalokohdat ja osoitin pelin peukaloiden kohdalla (oikea peukalo = eleet), ohjeteksti keisarin alapuolella kertojan kaistan paikalla; kosketukset menevät läpi (PickingMode.Ignore)",
+      "liike": "osoittimen jälki liukuu 14 pt ulos ja häipyy 0,45 s:n tahdissa (ympäristöanimaatio), esiin ja pois häivyttäen 0,2 s; peukalokohta esiin 0,25 s; alle liike.maksimi UI-siirtymissä",
+      "nakyvyys": "vain opetuksen ohjeen aikana; ohje kerrallaan, kunnes pelaaja tekee liikkeen"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)", "LAITEPÖYTÄ/sauva": "sauvan rengas ja nuppi pyöreinä: laitteen fyysinen osa, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja hyväksyi luonnoksen 4 17.10.2026 klo 17.06)" }
   }

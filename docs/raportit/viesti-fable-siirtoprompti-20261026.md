@@ -1,7 +1,7 @@
 # Siirtoprompti tilinvaihtoon (PÄÄTOIMITTAJA 26.10.2026 klo 16.1x; omistaja 16.05: "tee siirtoprompti toiselle tilille. osaako uusi tili nyt paremmin aloittaa ja lukea ohjeet heti aluksi?")
 
 Vanha tili: vvi@vvi.fi (koodaustili), viikko 96 %, nollautuu to 30.10. klo 07; sen taulu Qo5w6Wk4JSYRwYbyf2fJrm.
-UUSI TILI: omistajan valitsema. Uusi PT tarkistaa `claude auth status` (komentorivi samalle tilille kuin sovellus) ja katsoo
+UUSI TILI: omistajan valitsema. Uusi PT katsoo
 tilin rivin ja taulun scratchpad/asemataulu/osoitteet.md:stä (Artifact list: jos tilillä on jo taulu, read + publish samaan osoitteeseen).
 Käytännön lista: docs/tilinvaihto.md kohdat 0.0–8 (UUSI kohta 1.5 kotikansiot ja kohdan 8 OHJEIDEN KOE); VOIMASSA OLEVA ARVO voittaa.
 
@@ -30,7 +30,7 @@ Käytännön lista: docs/tilinvaihto.md kohdat 0.0–8 (UUSI kohta 1.5 kotikansi
 > Checkout /Users/Shared/Claude/Matkakirja-fable. Aja git fetch origin. ENNEN MUUTA lue: tuotannonohjauksen osio 0
 > (git show origin/main:docs/tuotanto/tuotannonohjaus.md), oma rivisi `node tools/raamattu-luku.mjs 7.47`, tämä tiedosto
 > (git show origin/main:docs/raportit/viesti-fable-siirtoprompti-20261026.md) KOKONAAN, PT:n uusin luovutus KOKONAAN (git log,
-> viesti-fable-luovutus-*) ja docs/tilinvaihto.md (kohdat 0.0–8 ja VOIMASSA OLEVA ARVO). Sitten `claude auth status` ja
+> viesti-fable-luovutus-*) ja docs/tilinvaihto.md (kohdat 0.0–8 ja VOIMASSA OLEVA ARVO). Sitten
 > set_remote_control self true. HETI sen jälkeen luo KESKUSTELUKANAVA (Opus, max, kansio Matkakirja-fable, start_session, irrotettuna)
 > aloitusviestillä "Olet KESKUSTELUKANAVA (Opus, max). Lue ensin `node tools/raamattu-luku.mjs 7.47` (oma rivisi) ja
 > /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aloitus.md ja toimi sen TILINVAIHTO-kohdan mukaan."
