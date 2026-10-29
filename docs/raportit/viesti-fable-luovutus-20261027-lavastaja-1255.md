@@ -1203,3 +1203,4 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - SEURAAVAKSI: (1) v148 valmis + palatsipinnat-tarkistus; (2) pari v77 (03/03b); (3) PT:lle 3 riviä (muurit pois, LOD1-koristeet, kohdat 3–5,
   pikkutiili, avoimet-kysymys); (4) paketti v73; (5) osasarja v1.
 - 21.2x: v148 VALMIS ("VALMIS v148m"); oma laskenta (V4_stone/V4_sokkeli/_kansi) = 0 rakennukset-v135, tausta-v58, muurikate-v26, c2-v7. Avoimet ja V4_jalkakivi tarkistamatta. PT:lle ilmoitettu 21.2x.
+- PT 21.3x KUITTASI v148 + Taihemenin muurien poiston (kuvat taihemen-v145, tirenge katsottu). AVOIMET (kuja 01) EI muuteta nyt (omistajan hyväksymät 18.22, juna 214); osasarja korvaa ne myöhemmin pariajolla todennettuna. Kohdat 3 ja 4 ok selityksin; kohta 5 (kaiteet LOD0 < 150 m) → NUI.
