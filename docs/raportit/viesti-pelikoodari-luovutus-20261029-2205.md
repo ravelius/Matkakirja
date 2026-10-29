@@ -4,6 +4,12 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
 Natiivirepon haara pelikoodari/osasarja-215 (worktree /Users/Shared/Claude/wt/proto-pelikoodari-pk7-214, puhdas, pää 5c924489e),
 peili natiivi-backup peili/proto/pelikoodari/osasarja-215. Taustaajoja ei ole.
 
+## ENSIMMÄISENÄ (PT 22.0x, koonti katsottu)
+1. Kohdan 04 kamera: v73-ajossa kamera katsoo salissa suoraan lattiaan. Selvitä, onko syy havainne-editorin asennossa
+   (tyokalut/havainne/editori.sh PAIKKA[04], QA valo sijoita) vai pelin kamerassa (rakennukset-v59: katto tai törmäys?), ja korjaa se.
+   Sali 04 on omistajan järjestyksessä seuraavana aukion jälkeen. Vertailukohta: havainne-editori-20261029-203346/04.
+2. Osasarjan latauksen todennus: ajo.log:ssa ei ole "palatsi v2: osasarja …" -riviä (ks. Avoinna 1).
+
 ## Tehty tänä iltana (21.2x–22.0x)
 - CODEX-YHTEISTILAUS lähti 21.2x: posti/pelikoodari-codex-juoksupeli-osat-215-20261029.md (084f144e8; NUI:n halli + KS:n portti 06 liitteinä).
   A1 chiwen, A2 harjaeläimet 10+1 erillisinä, A3 baoding, A4 kannatinryhmät, A5 kaidepylväs, A6 sivupaviljonki; B1 harjanauha, B2 kultainen
