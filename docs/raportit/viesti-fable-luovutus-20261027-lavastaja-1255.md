@@ -1344,3 +1344,11 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   aja_v159_harja_lod2.zsh → K/rakennukset-v143/kielletty-rakennukset-v67 (= v142 + g-taihedian-lod2 harja: 8 kylki- + 2 kansikolmiota).
 - H/juuri-pk7-v81 = v80, kielletty-rakennukset-v53 → v143. VS:lle ilmoitettu (saumatarkistus v81-juurella).
 - PAKETTI v81 (lisäys 97): käytä kielletty-rakennukset-v67:ää (v143) v66:n sijaan.
+
+## LISÄYS 99 klo 23.0x (29.10.): PAKETTI v81 VALMIS (PT:N KUITTAUS), PARIT v81 AJOSSA — ALOITA TÄSTÄ
+- K/tyokalut/paketti_v81.py → _valmiit/juoksupeli-kk-lavastaja-v81-vienti-20261029 (358 tied., SHA256SUMS 00386116) = v80 + kielletty-ulkorengas-v7
+  + kielletty-rakennukset-v67 (v143) + kielletty-halli-kaiteet-v2 (NUI:n halli-kaiteet-v2 + johde_savy.py: V4_marmorikaide baseColorFactor
+  0,78/0,72/0,61; kuvat-pari5: nauha ~247/244/239 vs terassi ~222/210/192). Pelissä kaiteet = OsasarjaKaiteetKansio (oletus tyhjä → PK asettaa).
+  PT:lle ilmoitettu; kysytty, vaihdetaanko NUI:n halli-kaiteet-v3:een (+ porrasjohteet, NUI:n pari 6). EI ämpäriin ennen kuittausta.
+- PARIT: scratchpad pari_v81.zsh (juuri-pk7-v81, REF 41a2eac22, PELIKAMERA=1): 06 → 07 → 03 03b editorijonossa (vanhat pari_v79/v80_07 kuolivat).
+  Kaiteet eivät ole pariajossa (vaatii REF b49275c00 + ESIKOM osasarja-kaiteet, ks. NUI:n ajo-pari-6.zsh). Tulokset → 06 PT+KS, 07 PT, 03/03b VS.
