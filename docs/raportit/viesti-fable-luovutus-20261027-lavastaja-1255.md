@@ -990,3 +990,15 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Parit: juuri-v135m (= v134m + uusi tausta), `REF=46c0add3c J=v135m KOHDAT="02 05" zsh K/tyokalut/aja_v132_pari.zsh` → PT.
   seinat-211 + v66 menevät junaan 214 yhdessä (omistaja hyväksyi kujakivet 28.10. 18.57).
 - v66-paketti (paketti_v66.py) yhä tekemättä: R = rakennukset-v126, tausta = uusin (v108 tai v109), muurikate pari-v134 (v21, uusi pakettiin).
+
+## LISÄYS 78 klo 15.0x (29.10.): LISÄYS 77 TEHTY UV:LLA (juuri-v135m) + CODEX-TILAUS v6 ERIPITUISISTA KIVISTÄ — ALOITA TÄSTÄ
+- PT 14.5x korjaus: mittari on omistajan sana ("isompia ja erikokoisia kuin havainnekuvissa"; "kivet seinällä liian korkeita"), koko mitataan
+  havainteesta 02/05, ei kertoimella.
+- UUSI K/tyokalut/kujakivi_skaalaa.py: skaalaa jo muunnettujen V4_kujakivi_lattia/_sokkeli/_sokkeli_yla UV0:n (LKU_K, LKV_K, SKU_K, SKV_K;
+  sokkelin wrapT → REPEAT). Ketju K/tyokalut/aja_v135_pari.zsh: yksikerros-v108 → v109, muurikate-v19/pari-v134 → pari-v135, juuri-v135m, parit.
+- Mitattu pareista -145253 (02) ja -140559 (05) samalla kameralla: lattia rivit ~0,65 m, laatat ~1,0 m poikki (yhteensä LKU 1,5, LKV 1,95);
+  kivijalka ~7 kertaa (0,14 m), kivet ~1,1–1,3 m (SK u 2,4, v 0,93). Parit v135: lokit/havainne-editori-20261029-145807 (sovitettu),
+  -150021 (pelikamera). Koko lähellä havainnetta; laatat/kivet yhä samanmittaisia (v02-kuva 0,65–0,70 / 0,45–0,55 m).
+- Codex-tilaus claude/postilaatikko cac6ea6ab: stone-surfaces-v6 (lattialaatat-v03 rivit 0,6–0,7 m, laatat 0,6–1,4 m; sokkeli-v03
+  8–9 kertaa, kivet 0,7–1,4 m), UV 1:1. Tultua: kujakivi_pinnat.py VV_LATTIA=v03 VV_SOKKELI=v03 SK=1 LKU=1 LKV=1 → uusi tausta + parit.
+- PT:ltä kysytty 15.0x: v66-paketti nyt v109:llä vai v6-kuvien jälkeen. v66: R = rakennukset-v126, tausta v109 (tai uusin), muurikate pari-v135.
