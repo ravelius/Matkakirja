@@ -969,3 +969,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   zsh K/tyokalut/aja_v132_pari.zsh.
 - JUMI (PK:lle 14.4x): 9c0477cb6:llä esikatselun kamera osuu väärään paikkaan (kohta 05 → (-144,0; 3,4; -233,7), 46c0add3c:llä
   (239,7; 2,4; -786,0)) → parit -141358, -142519 (ja -141931, -143323) käyttökelvottomia. Odota PK:n korjausta tai kohtakehystä, aja uudelleen → PT.
+- JUMI RATKAISTU (PK 14.4x): juna-214 hakee pohjan pk7 ämpäristä (404 → loputon sokkelo). Ajo: ESIKOM="ui juoksupeli palatsi url
+  file:///Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kk-pohja-pk7/kk-pohja-v1d-pk7/pohja.json" REF=9c0477cb6 J=v134p KOHDAT="02 05"
+  zsh K/tyokalut/aja_v132_pari.zsh. Parit 02 + 05: lokit/havainne-editori-20261029-143933 (sovitettu), -144114 (pelikamera) → PT 14.4x.
+  Havainto: lattia ja kivijalka näkyvät pelissä selvästi havainnetta vaaleampina (marmorimainen valkoinen) — PK:n varjostin/valo.
