@@ -17,6 +17,12 @@
  * z15 12 m) ei peitä rakoa: pelissä näkyy porras. Tasan näytteillä tasojen välinen rako on
  * enintään noin virheraja (mitattu ≤ 7 m). RTIN harventaa tasaisen maan entiseen tapaan.
  *
+ * VIRHEKERROIN 0,25 TASOILLE 0–9 (Karttaseppä 29.10.2026, Alppien sauma Torinon yllä, sarja 2026-10-29-maailma):
+ * oletus 0,5 antaa z7:lle noin 301 m:n virherajan, jolloin 200–400 m:n kukkulat jäävät laatan kolmiohierarkian
+ * mukaan joko näkyviin tai litteiksi (Monferrato: 7/133/95 litteä, 7/134/95 kohokuvioinen → pystysauma natiivin
+ * valossa). Tasot 0–9 ajetaan siksi `--virhekerroin 0.25` (Alppien data +33…58 %, ruutuaika ennallaan),
+ * tasot 10–12 oletuksella. Raportti: proto-3d/_tyo/karttaseppa/maastosauma-214/pt/RAPORTTI.md.
+ *
  * VUORISTOKERROS (Karttaseppä 12.10.2026, PT erä 184): `--mapterhorn` lukee
  * Mapterhornin laserkeilatun maanpinnan raakalaatoista (mapterhorn.mjs) ja
  * käyttää Copernicusta varalla. `--vanhempi ../2026-09-24-maailma/` kirjoittaa
