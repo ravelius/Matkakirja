@@ -1,0 +1,248 @@
+{
+  "checkedAt": "2026-10-29T08:54:33.127662+00:00",
+  "tasks": [
+    1243,
+    1244
+  ],
+  "productionComplete": true,
+  "QA": "PASS-for-review-candidates",
+  "parentViewedAllReferenceComparisons": true,
+  "newScenes": {
+    "jadeastia": "High oblique view, low wooden table, lattice-window light and elderly scholar hands",
+    "kello": "Side-angle scene of elderly court clock keeper winding mechanism with key at carved wooden table"
+  },
+  "noMarblePedestal": true,
+  "photographicSurfaceAndCompositionPassed": true,
+  "technical": {
+    "checkedAt": "2026-10-29T08:54:13.299236+00:00",
+    "count": 2,
+    "pass": true,
+    "maskDiagnostic": "Current source-code static fully-visible 0.45/1.0 smoothstep; not runtime test",
+    "assets": [
+      {
+        "id": "jadeastia",
+        "file": "jadeastia.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "761383c7ddf7f8d4011f7590ca745c3cf3189bd0b90aed3d9cb440a9e7fa0d80",
+        "bytes": 333995,
+        "referenceSHA256": "452698137c43d993293359125bd6ee585bba7191f31a21e81a54ebf8a8843506"
+      },
+      {
+        "id": "kello",
+        "file": "kello.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "1509981a40cdcdd1a743bce4706d3205678815aa4c11b4f97f5d9506361a88c9",
+        "bytes": 373045,
+        "referenceSHA256": "5869d4f4c45e5852317fb91915a6aba3bb422923bb422f5ffa70abb8c1a814d5"
+      }
+    ]
+  },
+  "actualGenerationCalls": 4,
+  "completedGenerationCalls": 4,
+  "pendingGenerationCalls": 0,
+  "selectedWholeNewImages": 2,
+  "generationTool": "image_gen.imagegen built-in",
+  "preservedPreviousThree": [
+    {
+      "id": "posliinimaljakko",
+      "sourceCommit": "767a18e17c497788c1ba9e4e0160a844e90aae68",
+      "sha256": "89d52fd86ecc30f39c82781aeccb7fe3817cbdd91335142e81a00f8f8350b6a0",
+      "bytesUnchanged": true
+    },
+    {
+      "id": "lakkarasia",
+      "sourceCommit": "767a18e17c497788c1ba9e4e0160a844e90aae68",
+      "sha256": "24f1ca5fd70802cc148835bf7f220991104df6e5370956c0150078c449b22302",
+      "bytesUnchanged": true
+    },
+    {
+      "id": "kaaretaulu",
+      "sourceCommit": "767a18e17c497788c1ba9e4e0160a844e90aae68",
+      "sha256": "355edb18b7c8ce6e41341143580b4dc7262d089c9fe461a50d290c8aa6e7f30a",
+      "bytesUnchanged": true
+    }
+  ],
+  "referenceIdentity": "Visual correspondence to same-id game A render; generated photograph, not deterministic mesh render",
+  "ownerSelection": "pending",
+  "KKReview": "pending",
+  "PKReceipt": "pending",
+  "gameIntegration": "not performed; requires owner selection",
+  "publication": "not performed",
+  "agents": [
+    {
+      "id": "jadeastia",
+      "attempt": 1,
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a186ae-4251-74c3-81d8-e378a9d4a9eb/exec-bb625929-cb5c-4d13-a32a-14b8aed741ff.png",
+      "nativePreserved": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/native/jadeastia-attempt1.png",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "nativeSHA256": "3dda8ec4c73063cf16d62e0ab0a2cf2c284899b4559a394c6ef436acd185b445",
+      "candidateJPG": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/work/jadeastia-attempt1.jpg",
+      "candidateSHA256": "761383c7ddf7f8d4011f7590ca745c3cf3189bd0b90aed3d9cb440a9e7fa0d80",
+      "candidateSize": [
+        768,
+        1024
+      ],
+      "candidateMode": "RGB",
+      "format": "JPEG",
+      "quality": 95,
+      "subsampling": 0,
+      "technicalResizeOnly": true,
+      "noBakedOval": true,
+      "QAProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/qa/jadeastia-attempt1-review.png",
+      "maskInnerRadius": 0.45,
+      "maskOuterRadius": 1,
+      "maskIsStaticCodeDiagnosticNotInGameProof": true,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/sources/A/jadeastia.png",
+      "referenceSHA256": "452698137c43d993293359125bd6ee585bba7191f31a21e81a54ebf8a8843506",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/prompts/jadeastia-attempt1.txt",
+      "preparedAt": "2026-10-29T08:49:03.945105+00:00",
+      "visualQAPending": false,
+      "taskNumber": 1243,
+      "selected": true,
+      "selectedAttempt": 1,
+      "actualGenerationCalls": 1,
+      "completedGenerationCalls": 1,
+      "pendingGenerationCalls": 0,
+      "mode": "built-in image_gen.imagegen",
+      "deliveryFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/delivery/jadeastia.jpg",
+      "deliverySHA256": "761383c7ddf7f8d4011f7590ca745c3cf3189bd0b90aed3d9cb440a9e7fa0d80",
+      "deliveryBytes": 333995,
+      "checkedAt": "2026-10-29T08:49:38.050476+00:00",
+      "visualQA": {
+        "fullNativeViewed": true,
+        "finalJPGViewed": true,
+        "AComparisonViewed": true,
+        "currentMaskLightAndDarkViewed": true,
+        "newCompositionPass": true,
+        "referenceIdentityVisualPass": true,
+        "photographicSurfacePass": true,
+        "handsNatural": true,
+        "oldCompositionNotRepeated": true,
+        "details": "Clearly elevated top-oblique view into the same open pale mint-green jade bowl on a low warm wooden table. Both plain ring handles, thick rim, rounded body, lower step and short circular foot match A visually under the changed camera. Smooth polished jade has continuous natural highlights with cloudy inclusions, no polygon patches. Elderly hands and grey-brown robe cuffs establish plausible scale and an everyday scholar study context beside lattice-window light. No marble pedestal, grand hall or centered display setup. Whole object and both handles remain visible through .45-mask; the second hand is partially cropped at the original right frame edge and fades toward the mask edge as a natural secondary context detail, while the upper hand remains clear. No face, logo, watermark, caption, baked oval or added frame."
+      },
+      "secondaryReference": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/delivery/jadeastia.jpg",
+        "role": "Previously KK-accepted jade material only; new background, camera and scene"
+      },
+      "gates": {
+        "parentReview": "pending",
+        "KKReview": "pending",
+        "ownerSelection": "pending",
+        "mailboxDelivery": "not performed by child",
+        "gameIntegration": "not performed"
+      },
+      "parentVisualReview": "PASS: selected full JPG and A comparison viewed"
+    },
+    {
+      "taskNumber": 1244,
+      "id": "kello",
+      "checkedAt": "2026-10-29T08:53:50.094708+00:00",
+      "status": "producer-QA-PASS-pending-parent-and-owner",
+      "selectedAttempt": 3,
+      "actualGenerationCalls": 3,
+      "completedGenerationCalls": 3,
+      "pendingGenerationCalls": 0,
+      "tool": "image_gen.imagegen built-in",
+      "wholeNewImageEachTime": true,
+      "unselectedNativeImagesPreserved": 2,
+      "delivery": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/delivery/kello.jpg",
+      "deliverySHA256": "1509981a40cdcdd1a743bce4706d3205678815aa4c11b4f97f5d9506361a88c9",
+      "bytes": 373045,
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/native/kello-attempt3.png",
+      "nativeSHA256": "97508959953268de9e8f2fa31ad1c1be7c124e55302c11de48582bcc2bc5497a",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "mode": "RGB",
+      "encoding": "JPEG",
+      "conversion": "Uniform Lanczos resizing from1086x1448, JPEG95/subsampling0; no crop/retouch/compositing",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/prompts/kello-attempt3.txt",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/sources/A/kello.png",
+      "referenceSHA256": "5869d4f4c45e5852317fb91915a6aba3bb422923bb422f5ffa70abb8c1a814d5",
+      "objectChecks": {
+        "deepBlueRectangularBody": true,
+        "roundIvoryRomanDial": true,
+        "correctIVAtFourNotIX": true,
+        "twoGoldColumns": true,
+        "twoOpenCrownRingsAndSameFinialStructure": true,
+        "steppedGoldBlueBaseAndFeet": true,
+        "noRococoRedesign": true
+      },
+      "actionChecks": {
+        "elderlyKeeperFaceShown": true,
+        "fingersAtAttachedButterflyWindingKey": true,
+        "windingArborOnClockRearSide": true,
+        "otherHandSteadiesBase": true,
+        "carvedWoodWorktable": true,
+        "noMarbleOrDisplayPedestal": true,
+        "pronouncedSideViewWithClockBodyDepth": true,
+        "differentFromPriorCenteredProductPhoto": true
+      },
+      "surfaceChecks": {
+        "photographicSkinWoodGoldEnamel": true,
+        "paleWindowLightAndGentleBacklight": true,
+        "softBackgroundDepthOfField": true,
+        "sensibleClockHandScale": true
+      },
+      "maskDiagnostic": {
+        "axes": [
+          0.5,
+          0.5
+        ],
+        "smoothstep": [
+          0.45,
+          1
+        ],
+        "bakedInFinal": false,
+        "clockHandsFaceRemainReadable": true,
+        "staticOfflineOnly": true,
+        "comparison": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-2-20261029/qa/kello-comparison.png"
+      },
+      "viewsInspected": [
+        "full native photograph",
+        "final JPG and reference side by side",
+        "light and dark static .45 mask",
+        "magnified face/key detail"
+      ],
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "disposition": "preserved-not-selected",
+          "reason": "clock left edge too washed by .45 mask; good object/action otherwise"
+        },
+        {
+          "attempt": 2,
+          "disposition": "preserved-not-selected",
+          "reason": "four-o-clock Roman numeral generated IX instead of IV; confirmed in enlarged dial"
+        },
+        {
+          "attempt": 3,
+          "disposition": "selected",
+          "reason": "correct reference structure, correct twelve Roman hour positions, wooden-table winding action, and improved mask-safe framing"
+        }
+      ],
+      "limitations": "Generated photo object correspondence is visual, not pixel/mesh equality. Still photograph shows a winding pose; no animated operation test. Mask simulation is offline, not actual game runtime.",
+      "parentReview": "pending",
+      "KKReview": "pending",
+      "ownerSelection": "pending",
+      "externalDelivery": false,
+      "gameIntegrated": false,
+      "published": false,
+      "parentVisualReview": "PASS: selected full JPG and A comparison viewed"
+    }
+  ]
+}
