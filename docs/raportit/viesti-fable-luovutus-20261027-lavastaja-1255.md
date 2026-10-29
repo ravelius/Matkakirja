@@ -810,3 +810,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   Keskeneräinen paketti (vain aukko): K/paketti-v64-kesken (ei _valmiit-kansiossa). Tee lopullinen _valmiit/juoksupeli-kk-lavastaja-v64-
   vienti-<pvm> kun kuja 02 valmis; versiot PK:lle (haara pelikoodari/pk7-214, hän leipoo palatsi-esto-v13), PT kuittaa koko nipun ennen JU:ta.
 - KS odottaa kuja 02:n muurilinjoja (pk8 = pk7 + 02; KS:n oma +2 m pk8 peruttu). KK:lle kerrottu: mittari = leveys hahmon kohdalta, ei 0,70.
+
+## LISÄYS 62 klo 07.43 (29.10.): v64 VALMIS PT:N KUITTAUKSEEN — KUJA 02 ENNALLAAN — LUOVUTUS, ALOITA TÄSTÄ
+- Kuja 02 mitattu TESTIKAMERA 02:lla (juuri-v120m, havainne-editori-20261029-073622/02): hahmon jalkojen kohdalta reunakivestä
+  reunakiveen havainne 4,49 | peli 4,71 hahmon korkeutta = peli jo +4,9 % leveämpi. Koe SIIRTO=−0,3 (yksikerros-v104, juuri-v121m,
+  aja_v121_pari.zsh, -074024/02) antoi 4,77 = mittausvirheen (±0,1) sisällä. PT 07.4x: tavoite (+0–5 %) täyttyy, kuja 02 ENNALLAAN.
+- t-portti-424: kuva 05j (esikatselu-20261029-073622/havainne-05j.png) tarkistettu: pielet ja lattia ehjät, ei reikiä.
+- VIENTIPAKETTI _valmiit/juoksupeli-kk-lavastaja-v64-vienti-20261029 (SHA256SUMS sha256 1bfef18a7714d938…, -c OK): tausta-v64 =
+  yksikerros-v103, muurikate-v20-pohja = pari-v119, rakennukset-v49, avoimet-v51. PK:lle versiot (jonossa), KS:lle: pk8:aa ei tarvita.
+- SEURAAVAKSI: PT kuittaa nipun → JU vie. v104/v121m ovat vain koe (ei vientiin).
