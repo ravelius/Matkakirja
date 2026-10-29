@@ -22,7 +22,7 @@ Päivitetty: 26.10.2026 klo 16.3x (Päätoimittaja local_cf5b4eca): TILINVAIHTO 
 | Projektiseppä (ent. Siirtoseppä) | local_c264506b-dd61-4617-839f-23daf6d0bd5a | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | yksi projekti alusta loppuun: nyt Olavinlinna (logiikka, botti, Tripo-pilotin kokoaminen) |
 | Työkaluseppä | local_78dcb005-50d8-4361-adff-42534a2df3a1 | /Users/Shared/Claude/Matkakirja-tyokaluseppa | Opus, high | tuotantoputken tarkistukset: Codex-tuontitarkistus, kameratesti, nykäysvahti, botin putki |
 | Sisältökirjuri | local_6daf85ea-7311-4d73-a8b7-466cec71636d | /Users/Shared/Claude/Matkakirja-sisaltokirjuri | Sonnet 5.5, high | tekstit, esittelyt, kerronta |
-| Äänittäjä | local_f8fe7e20-fba8-433d-ba8e-184a325037ef | /Users/Shared/Claude/Matkakirja-aanittaja | Sonnet 5.5, high | musiikki ja äänet (auto-tila) |
+| Äänittäjä | local_f8fe7e20-4700-42e5-91a0-f1227310dc0f | /Users/Shared/Claude/Matkakirja-aanittaja | Sonnet 5.5, high | musiikki ja äänet (auto-tila) |
 | Laitetestaaja | local_ede7e965-02ff-40a0-a77d-44f3218ca146 | /Users/Shared/Claude/Matkakirja-laitetestaaja | Sonnet 5.5, high | laitetestit |
 | Postivahti | local_d8d003f6-1ae3-4a1b-854a-e0c018ed19f5 | /Users/Shared/Claude/Matkakirja-posti | Sonnet 5.5, medium | mittarit, hälytykset, roolien nollaukset |
 | Asemataulu | local_b4d61878-aa57-40fd-b21c-cc3af1add387 | /Users/Shared/Claude/Matkakirja-asemataulu | Sonnet 5.5, low | Asemataulun vienti (auto-tila) |

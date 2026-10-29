@@ -7,26 +7,28 @@
    "otsikko": "Juoksupelin lattialaatat, reunakivet ja muurin kivet havainnekuvien mukaisiksi",
    "teksti": "Pyysit 11.02: \"lattialaatoista pitää tehdä samalla tavalla isompia ja erikokoisia kuin havainnekuvissa. reunakivet pitää olla matalampia, leveämpiä ja pidempia, kuten havainnekuvissa.\"\n\nJatkoit 11.04: \"myös kivet seinällä ovat nyt liian korkeita.\"",
    "tila": "työn alla",
-   "tilanne": "29.10. 11.05: Kirjattu Lavastajalle (kaikki kujat ja aukiot): laatat noin puolitoista–kaksi kertaa nykyistä pidempiä ja eripituisia, reunakivi puolet matalampi, leveämpi ja pitkäkivisempi; muurin kivijalan kivet matalina pitkinä kerroksina (kivijalan korkeus ennallaan). Ensin kujan 02 kuvapari sinulle. Alkaa, kun viikkokäyttö nollautuu (2.11.).",
-   "ts": 1793264722582
+   "tilanne": "29.10. 13.2x: Alkaa nyt uudella tilillä (viikkoraja ei enää estä): Lavastaja tekee ensin kujien 02 ja 05 korjaukset (v66), sitten laatat, reunakivet ja kivijalan kivet.\n\nAiempi: 29.10. 11.05: Kirjattu Lavastajalle (kaikki kujat ja aukiot): laatat noin puolitoista–kaksi kertaa nykyistä pidempiä ja eripituisia, reunakivi puolet matalampi, leveämpi ja pitkäkivisempi; muurin kivijalan kivet matalina pitkinä kerroksina (kivijalan korkeus ennallaan). Ensin kujan 02 kuvapari sinulle. Alkaa, kun viikkokäyttö nollautuu (2.11.).",
+   "ts": 1793272610483
   },
   {
-   "edistys": 0,
+   "edistys": 5,
    "lisa": "Pelikoodari + Natiivi-UI, Codex, Sisältökirjuri",
    "otsikko": "Juoksupelin loppuun yhteenveto rikotuista esineistä",
    "teksti": "Pyysit 08.21: \"Tee rikotuista esineistä pelin loppuun yhteenveto. Yhteenvedossa saisi olla kodeksilta tilatut uudet kuvat pelkistä esineistä, jotta ne toimivat pienemmässä koossa ja ne saisi olla syvättyjä. Jokaisen rikotun esineen alla pitää olla esineen nimi ja perässä suluissa montako kappaletta pelaaja oli niitä rikkonut. Pelaaja voi klikata mitä tahansa esinettä, mistä aukeaa uusi pop-up-ikkuna. Minkä takana on esineen muistokuva sekä tietoa esineen historiasta.\"",
-   "tila": "työn alla",
-   "tilanne": "29.10. 11.52: Hyväksyit näkymän (09.59), tekstit (08.55) ja viisi uutta muistokuvaa (11.52). Junassa 214: yhteenveto, kun Natiiviseppä on yhdistänyt sen.\n\nAiempi: 29.10. 08.2x: Aloitetaan. Pohjana olemassa olevat ruudukko- ja nostoikkunat; muistokuvina käytetään esineiden muistokuplia (niiden teko jatkuu tämän myötä). Codex tekee syvätyt esinekuvat, Sisältökirjuri lyhyet historiatekstit. Tekstit näet listana ennen junaa. Kysytään vielä: näytetäänkö rikkomattomat esineet harmaina siluetteina.",
-   "ts": 1793267599731
+   "tila": "valmis",
+   "tilanne": "29.10. 13.2x: Valmis junassa 214: yhteenveto, nimet, määrät, historiatekstit ja viisi uutta muistokuvaa.\n\nAiempi: 29.10. 11.52: Hyväksyit näkymän (09.59), tekstit (08.55) ja viisi uutta muistokuvaa (11.52). Junassa 214: yhteenveto, kun Natiiviseppä on yhdistänyt sen.\n\nAiempi: 29.10. 08.2x: Aloitetaan. Pohjana olemassa olevat ruudukko- ja nostoikkunat; muistokuvina käytetään esineiden muistokuplia (niiden teko jatkuu tämän myötä). Codex tekee syvätyt esinekuvat, Sisältökirjuri lyhyet historiatekstit. Tekstit näet listana ennen junaa. Kysytään vielä: näytetäänkö rikkomattomat esineet harmaina siluetteina.",
+   "ts": 1793272610483,
+   "valmistui": "29.10."
   },
   {
-   "edistys": 3,
+   "edistys": 5,
    "lisa": "Karttaseppä + Natiivi-UI",
    "otsikko": "Striimikartan nimet ja nähtävyyskuvat pysyvät näkyvissä",
    "teksti": "Kerroit 22.46: \"Striimi kartassa nimet häviävät vaikka karttaa vain panoroi. Yleensä keskellä ruutua ne häviävät vaikka näkyisivät reunoilla. Myös kohteet kuten burgundi ja vastaavat Ranskassa näkyvät kauempaa mutta häviävät lähellä. Nähtävyydet joista piirretyt kuvat häipyvät kartalta välillä tai niitä ei voi klikata. Ja jos llikkautuvat auki niin kartta häviää mustaksi noston taustalta\"",
-   "tila": "työn alla",
-   "tilanne": "28.10. 23.55: Junassa 214: kaikki neljä korjattu, ja nimet pienemmiksi Pariisi suurimpana. Jatkoksi Natiivi-UI:lla: nähtävyyspiirrosten nimet samaan kokoon.",
-   "ts": 1793224524000
+   "tila": "valmis",
+   "tilanne": "29.10. 13.2x: Valmis junassa 214: nimet pysyvät, Pariisi suurimpana, nähtävyyspiirrosten nimet pienet kaupunkitasolla.\n\nAiempi: 28.10. 23.55: Junassa 214: kaikki neljä korjattu, ja nimet pienemmiksi Pariisi suurimpana. Jatkoksi Natiivi-UI:lla: nähtävyyspiirrosten nimet samaan kokoon.",
+   "ts": 1793272610483,
+   "valmistui": "29.10."
   },
   {
    "edistys": 0,
@@ -34,8 +36,8 @@
    "otsikko": "Striimikartan rakennukset kevyemmiksi ja ehkä eri sävyin",
    "teksti": "Kysyit 14.23: \"mietin myös että pitäisikö kartalla näkyviä striimi rakennuksia keventää. ja ovatko kaikki rakennukset samaa dataa vai voiko rakennuksia helposti erotella ja sävyttää hieman eri tavalla?\"",
    "tila": "työn alla",
-   "tilanne": "28.10. 16.2x: Hyväksyit 16.12 uuden keveyden (rakennukset puolivälissä, katujen viivat kevyemmät) → junaan 213. Rakennusten sävytys lajin mukaan tulee myöhemmin omana kuvaparinaan.\n\nAiempi: 28.10. 14.25: Karttaseppä selvittää, mitä tietoa rakennuksista on, ja tekee kolme kuvaa samasta paikasta: nykyinen, kevyempi ja kevyempi eri sävyin, nähtävyyspiirrokset mukana. Valitset kuvista.",
-   "ts": 1793197288498
+   "tilanne": "29.10. 13.2x: Keveys TestFlightissa 213 (testaajilla 28.10. 22.16). Rakennusten sävytys lajin mukaan on Karttasepän seuraava työ; kuvapari sinulle ennen junaa.\n\nAiempi: 28.10. 16.2x: Hyväksyit 16.12 uuden keveyden (rakennukset puolivälissä, katujen viivat kevyemmät) → junaan 213. Rakennusten sävytys lajin mukaan tulee myöhemmin omana kuvaparinaan.\n\nAiempi: 28.10. 14.25: Karttaseppä selvittää, mitä tietoa rakennuksista on, ja tekee kolme kuvaa samasta paikasta: nykyinen, kevyempi ja kevyempi eri sävyin, nähtävyyspiirrokset mukana. Valitset kuvista.",
+   "ts": 1793272610483
   },
   {
    "edistys": 1,
@@ -43,17 +45,18 @@
    "otsikko": "Uusi versio pienelle iPadille karttamuutosten jälkeen",
    "teksti": "Pyysit 12.56: \"kun karttamuutokset ovat valmiita niin päivitä uusi versio pienelle ipadille\"; tarkensit 13.01: \"julkaise ipad vasta kun nuo kaikki ovat valmiita\".",
    "tila": "työn alla",
-   "tilanne": "28.10. 22.03: Junassa 213: pienen iPadin versio käännetään samasta TestFlight-rungosta (nimikorjaus ja leirien poisto mukana).",
-   "ts": 1793218648000
+   "tilanne": "29.10. 13.22: Päätit, että pieni iPad saa uuden version vasta, kun striimikartan kesken olevat työt (rakennusten sävytys, karttasaumat ja merkittävyys) ovat valmiit.\n\nAiempi: 29.10. 13.2x: TestFlight 213 testaajilla 28.10. 22.16; karttasaumojen korjaus odottaa pienen iPadin mittausta seuraavalla studiokäynnilläsi.\n\nAiempi: 28.10. 22.03: Junassa 213: pienen iPadin versio käännetään samasta TestFlight-rungosta (nimikorjaus ja leirien poisto mukana).",
+   "ts": 1793272941164
   },
   {
-   "edistys": 3,
+   "edistys": 5,
    "lisa": "Natiivi-UI + Sisältökirjuri",
    "otsikko": "Kohdekaupunkien nähtävyysnostot striimikartalle",
    "teksti": "Kysyit 12.24: \"pystyykö striimikartalle tuomaan kohdekaupunkeihin tehtyjä nähtävyysnostoja?\"; valitsit 12.28 \"Kyllä (suositus)\". Tarkensit 14.04: \"saatko siirrettyä ne kuvakkeet kartalle, jotka on jo luotu nähtävyyksille ja jotka näkyvät kohdekaupungin omalla nähtävyydet kartalla\". 14.23: \"kyllä ja saako kontrastia lisättyä helposti niihin?\"",
-   "tila": "työn alla",
-   "tilanne": "28.10. 16.2x: Hyväksyit 16.12 piirrokset (isommat, maltillisempi kontrasti) → junaan 213.\n\nAiempi: 28.10. 14.25: Kohdekartan piirrokset ovat nyt kartalla oikeilla paikoillaan. Natiivi-UI tekee niistä vähän isommat ja selvemmät (lisää kontrastia); uusi kuva sinulle, sitten junaan.",
-   "ts": 1793197288498
+   "tila": "valmis",
+   "tilanne": "29.10. 13.2x: Valmis TestFlightissa 213 (testaajilla 28.10. 22.16).\n\nAiempi: 28.10. 16.2x: Hyväksyit 16.12 piirrokset (isommat, maltillisempi kontrasti) → junaan 213.\n\nAiempi: 28.10. 14.25: Kohdekartan piirrokset ovat nyt kartalla oikeilla paikoillaan. Natiivi-UI tekee niistä vähän isommat ja selvemmät (lisää kontrastia); uusi kuva sinulle, sitten junaan.",
+   "ts": 1793272610483,
+   "valmistui": "29.10."
   },
   {
    "edistys": 1,
@@ -61,8 +64,8 @@
    "otsikko": "Cloudflaren kulut pienemmiksi",
    "teksti": "Kysyit 12.22: \"mikä kaikki kuluttaa tätä? aika kallis kuukausikulu jo tähän mennessä. miten voitaisiin pienentää?\"; valitsit 12.28 säästöpaketin.",
    "tila": "työn alla",
-   "tilanne": "28.10. 12.4x: Kulut tulevat omista työkaluistamme, eivät pelaajista. Julkaisija tekee kirjanpidon omalle koneelle ja poistaa karttaversiot, joita mikään pelin versio ei käytä (Päätoimittaja tarkistaa listan ennen poistoa); Karttaseppä vie polton jälkeen vain muuttuneet palat. Tavoite noin 10–15 $ kuussa. Pelaajien lataukset eivät muutu.",
-   "ts": 1793183411383
+   "tilanne": "29.10. 13.2x: Ei muutosta tilinvaihdon jälkeen; Julkaisija jatkaa kirjanpitoa, kun merget ja viennit ovat tehty.\n\nAiempi: 28.10. 12.4x: Kulut tulevat omista työkaluistamme, eivät pelaajista. Julkaisija tekee kirjanpidon omalle koneelle ja poistaa karttaversiot, joita mikään pelin versio ei käytä (Päätoimittaja tarkistaa listan ennen poistoa); Karttaseppä vie polton jälkeen vain muuttuneet palat. Tavoite noin 10–15 $ kuussa. Pelaajien lataukset eivät muutu.",
+   "ts": 1793272610483
   },
   {
    "edistys": 1,
@@ -70,8 +73,8 @@
    "otsikko": "Striimikartan kohteet merkittävyyden mukaan",
    "teksti": "Kysyit 12.16: \"saisiko striimikarttaan jotenkin merkittävimmät kohteet näkymään jo heti laajemmassa näkymässä ja vähemmän merkittävät vasta kaikkein lähimmillä zoom asteilla?\"; valitsit 12.21 \"Kyllä (suositus)\".",
    "tila": "työn alla",
-   "tilanne": "28.10. 12.2x: Euroopan tasolla vain kuuluisimmat (Eiffel-torni, Colosseum, Akropolis), Ranskaa lähestyttäessä sen tunnetuimmat linnat ja museot, Pariisin kaduilla pienetkin nähtävyydet; nimet eivät koskaan päällekkäin. Karttaseppä aloittaa Louvren väistön jälkeen; näet kuvat Euroopasta, Ranskasta ja Pariisista ennen ja jälkeen.",
-   "ts": 1793182911770
+   "tilanne": "29.10. 13.2x: Ei vielä aloitettu; Karttasepällä jonossa saumaparin ja rakennusten sävytyksen jälkeen.\n\nAiempi: 28.10. 12.2x: Euroopan tasolla vain kuuluisimmat (Eiffel-torni, Colosseum, Akropolis), Ranskaa lähestyttäessä sen tunnetuimmat linnat ja museot, Pariisin kaduilla pienetkin nähtävyydet; nimet eivät koskaan päällekkäin. Karttaseppä aloittaa Louvren väistön jälkeen; näet kuvat Euroopasta, Ranskasta ja Pariisista ennen ja jälkeen.",
+   "ts": 1793272610483
   },
   {
    "edistys": 5,
@@ -84,22 +87,24 @@
    "valmistui": "28.10."
   },
   {
-   "edistys": 4,
+   "edistys": 5,
    "lisa": "Natiiviseppä + Karttaseppä",
    "otsikko": "Kartan vieritys sulavaksi ja lataus nopeammaksi",
    "teksti": "Kysyit 08.20 ja 09.19 vierityksestä ja latauksesta; päätit 09.54: nimet liukuvat vierityksen ajan, iso karttapala puretaan kerran (uusi paikka 10 s → noin 4–5 s).",
-   "tila": "työn alla",
-   "tilanne": "28.10. 13.1x: Kohdekaupungin tarkka kartta piirretään nyt valmiiksi lennon aikana: valmis 9,3 s → 5,5 s, muisti ennallaan (iso iPad, 8 kaupunkia) → junaan 213. Nimien liukuminen vierityksessä on jo junassa.",
-   "ts": 1793185832133
+   "tila": "valmis",
+   "tilanne": "29.10. 13.2x: Valmis TestFlightissa 213 (testaajilla 28.10. 22.16).\n\nAiempi: 28.10. 13.1x: Kohdekaupungin tarkka kartta piirretään nyt valmiiksi lennon aikana: valmis 9,3 s → 5,5 s, muisti ennallaan (iso iPad, 8 kaupunkia) → junaan 213. Nimien liukuminen vierityksessä on jo junassa.",
+   "ts": 1793272610483,
+   "valmistui": "29.10."
   },
   {
-   "edistys": 4,
+   "edistys": 5,
    "lisa": "Natiivi-UI + Karttaseppä",
    "otsikko": "Suurennuslasi: Kartta-kytkimet ja valikoiden värit",
    "teksti": "Sanoit 09.29: nimet erikseen kaupungeille ja vesille/vuorille, mihin Luonto vaikuttaa, Kartta-valikko striimikartalla, valikoille värit. 09.45 värit hyväksytty; 10.23 väri vain otsikkoriville ja Kartta valmiiksi valittuna.",
-   "tila": "työn alla",
-   "tilanne": "29.10. 11.1x: Valtaosa on TestFlightissa 213. Jäljellä puistojen ja metsien nimet Vedet ja vuoret -kytkimeen (Natiivi-UI); jatkuu viikkokäytön nollauksen jälkeen (2.11.).\n\nAiempi: 28.10. 10.4x: Hyväksyit 10.37 välilehtien värit ja suurennuslasin toiminnan → junaan 213. Puistojen ja metsien nimet siirretään Vedet ja vuoret -kytkimeen; uusi kuva Keskustelukanavalle.\n\nAiempi: 28.10. 10.2x: Värit vain otsikkoriville tehty pelissä ja verkkoversiossa; nimikytkinten kuvat uusitaan Keskustelukanavalle.",
-   "ts": 1793264738391
+   "tila": "valmis",
+   "tilanne": "29.10. 13.2x: Valmis: puistojen ja metsien nimet Vedet ja vuoret -kytkimeen tehty, junassa 214.\n\nAiempi: 29.10. 11.1x: Valtaosa on TestFlightissa 213. Jäljellä puistojen ja metsien nimet Vedet ja vuoret -kytkimeen (Natiivi-UI); jatkuu viikkokäytön nollauksen jälkeen (2.11.).\n\nAiempi: 28.10. 10.4x: Hyväksyit 10.37 välilehtien värit ja suurennuslasin toiminnan → junaan 213. Puistojen ja metsien nimet siirretään Vedet ja vuoret -kytkimeen; uusi kuva Keskustelukanavalle.\n\nAiempi: 28.10. 10.2x: Värit vain otsikkoriville tehty pelissä ja verkkoversiossa; nimikytkinten kuvat uusitaan Keskustelukanavalle.",
+   "ts": 1793272610483,
+   "valmistui": "29.10."
   },
   {
    "edistys": 5,
@@ -112,23 +117,14 @@
    "valmistui": "28.10."
   },
   {
-   "edistys": 4,
+   "edistys": 5,
    "lisa": "Karttaseppä",
    "otsikko": "Kartan elementit lukittuina karttaan (merkit, pallot, kaupunkipisteet, pelaajan nappi)",
    "teksti": "Sanoit 08.13–08.17: merkit eivät saa kasvaa palloon nähden Ranskan kokoisesta näkymästä ulospäin; Louvre liian leveä. 10.18: \"big ben yms. ei ole oikealla kohdalla kartalla. pelaajan nappi on aivan liian iso kun koko maapallo näkyy.\" 10.27: \"tee kaikille kartan elementeille sama zoom katto kuin louvre yms. eli kuumailmapallot, kohdekaupunkien pisteet, pelaajan nappi yms.\"",
-   "tila": "työn alla",
-   "tilanne": "28.10. 16.2x: Hyväksyit 16.22 Louvren ja Big Benin väistön (vähän limittäin nappulan kanssa) → junaan 213.\n\nAiempi: 28.10. 12.0x: Lisäksi pyysit 11.52 kohdemaan rajan ohuemmaksi ulos zoomatessa samalla säännöllä; tulee samaan erään Louvren väistön kanssa.\n\nAiempi: 28.10. 11.5x: Hyväksyit 11.51 (\"muuten ok\") → junaan 213 ja pienelle iPadille. Lisäksi Louvre ym. siirtyy vähän sivuun, kun pelaajan nappi on samassa kohdassa (seuraava pieni erä).\n\nAiempi: 28.10. 10.3x: Sama zoom-katto kaikille kartan elementeille; merkkien paikat korjataan samaan erään. Yksi pari Keskustelukanavalle, sitten pienelle iPadille.\n\nAiempi: 28.10. 10.2x: Lukitus tehty; korjataan merkkien paikat (Big Ben ym.) ja pelaajan nappi samaan sääntöön. Uusi pari Keskustelukanavalle, sitten pienelle iPadille.",
-   "ts": 1793197400699
-  },
-  {
-   "edistys": 5,
-   "lisa": "Karttaseppä + Natiivi-UI",
-   "otsikko": "Kartta: koko maapallo, lippu, kuumailmapallot ja sumennus",
-   "teksti": "Pyysit 27.10. klo 12.27, 12.43 ja 13.25",
    "tila": "valmis",
-   "tilanne": "27.10. 19.12: Valmis ja TestFlightissa (TF 212): lippu ei kasva, kuumailmapallot pystyssä, koko pallolla musta avaruus ja noston takana kaikki sumenee.\n\nAiempi: 27.10. 13.4x: Junassa 212: koko maapallo loitonnettavissa hunnun alla (12.27), merkkien karsinta, Kielletyn kaupungin merkki, Rijksmuseum ilman käytäviä, nipistyszoomaus ja kehittäjätilan pallokytkin (12.43). Työn alla: lippu ei kasva loitonnettaessa, kuumailmapallot pystyyn, noston takana kaikki sumenee (13.25) ja koko pallon tausta mustaksi avaruudeksi.",
-   "ts": 1793123470370,
-   "valmistui": "27.10."
+   "tilanne": "29.10. 13.2x: Valmis TestFlightissa 213 (testaajilla 28.10. 22.16).\n\nAiempi: 28.10. 16.2x: Hyväksyit 16.22 Louvren ja Big Benin väistön (vähän limittäin nappulan kanssa) → junaan 213.\n\nAiempi: 28.10. 12.0x: Lisäksi pyysit 11.52 kohdemaan rajan ohuemmaksi ulos zoomatessa samalla säännöllä; tulee samaan erään Louvren väistön kanssa.\n\nAiempi: 28.10. 11.5x: Hyväksyit 11.51 (\"muuten ok\") → junaan 213 ja pienelle iPadille. Lisäksi Louvre ym. siirtyy vähän sivuun, kun pelaajan nappi on samassa kohdassa (seuraava pieni erä).\n\nAiempi: 28.10. 10.3x: Sama zoom-katto kaikille kartan elementeille; merkkien paikat korjataan samaan erään. Yksi pari Keskustelukanavalle, sitten pienelle iPadille.\n\nAiempi: 28.10. 10.2x: Lukitus tehty; korjataan merkkien paikat (Big Ben ym.) ja pelaajan nappi samaan sääntöön. Uusi pari Keskustelukanavalle, sitten pienelle iPadille.",
+   "ts": 1793272610483,
+   "valmistui": "29.10."
   },
   {
    "edistys": 0,
@@ -150,26 +146,6 @@
    "valmistui": "28.10."
   },
   {
-   "edistys": 5,
-   "lisa": "Sisältökirjuri",
-   "otsikko": "Kainuun maakuntateksti koko maakunnasta",
-   "teksti": "Sanoit 27.10. klo 22.26: \"Tässä outoa tekstiä Kainuun maakunnasta\"; päätit 22.36: \"Kyllä\" (\"Ensin maakunta, Hiljainen kansa yksityiskohtana\")",
-   "tila": "valmis",
-   "tilanne": "27.10. 23.4x: Valmis ja junassa 213: Kainuu ja kaikki muut 17 Suomen maakuntaa kertovat nyt ensin koko maakunnasta, faktat tarkistettuina. Muiden maiden tekstit korjataan maa kerrallaan, ensin Ruotsi.\n\nAiempi: 27.10. 23.0x: Kainuu ja kaikki muut 17 Suomen maakuntaa on kirjoitettu uudelleen kertomaan ensin koko maakunnasta, faktat tarkistettuina. Keskustelukanava lukee ne ennen junaa. Muiden maiden tekstit korjataan myöhemmin maa kerrallaan.\n\nAiempi: 27.10. 22.3x: Kainuun kortti kirjoitetaan uudelleen kertomaan ensin, millainen maakunta Kainuu on: maisema, ihmiset ja mistä se tunnetaan. Hiljainen kansa jää yhdeksi yksityiskohdaksi. Muut maakuntatekstit tarkistetaan samasta viasta, ja kuvatekstin kahdesti näkyvä lisenssi korjataan.",
-   "ts": 1793136920631,
-   "valmistui": "27.10."
-  },
-  {
-   "edistys": 5,
-   "lisa": "Karttaseppä",
-   "otsikko": "Kartan lähikuva: järvien rannat teräviksi ja zoomaus lähemmäs",
-   "teksti": "Pyysit 27.10. klo 22.24: \"Saako epätarkkaa järven rajaa häivytettyä lähikuvasta? Ja voisiko pystyä zoomata vielä lähemmäs?\"",
-   "tila": "valmis",
-   "tilanne": "28.10. 04.0x: Valmis ja junassa 213.\n\nAiempi: 28.10. 01.0x: Valmis junaan 213: lähikartalla sumea rantaviiva ja tumma rinnevarjo häipyvät, vesi on yhtä sävyä, ja lähin zoomaus vie noin 1,5 kilometrin päähän nimet kunnossa. Näet kuvat aamulla.\n\nAiempi: 27.10. 23.1x: Sumea karkea rantaviiva häipyy nyt lähikuvassa. Myös karkea tumma rinnevarjo häivytetään siellä, missä tarkka maasto näkyy. Lähin zoomaus on vielä selvityksessä: nimet eivät vielä asetu koko ruudulle.\n\nAiempi: 27.10. 22.2x: Lähikuvassa järvien rannat näkyvät vain terävinä: sumea karkea rantaviiva häipyy pehmeästi pois, kun tarkka ranta tulee näkyviin. Lähin zoomaus viedään niin lähelle, että kaupunginosan kadut, rannat ja nimet erottuvat puhelimella selvästi.",
-   "ts": 1793152429097,
-   "valmistui": "28.10."
-  },
-  {
    "edistys": 2,
    "lisa": "Pelikoodari + Codex + Lavastaja",
    "otsikko": "Kujien kivet Codexilta havainnekuvan mukaisina",
@@ -188,23 +164,13 @@
    "ts": 1793259908431
   },
   {
-   "edistys": 5,
-   "lisa": "Valoseppä + Lavastaja",
-   "otsikko": "Kivimuurin yläreunaan sama kivipinta",
-   "teksti": "Pyysit 27.10. klo 20.06: \"Kivimuurin yläreunasta puuttuu tekstuuri\"",
-   "tila": "valmis",
-   "tilanne": "27.10. 22.23: Hyväksyit: muurin yläreuna on nyt samaa harmaata kiveä kuin muu muuri, ja pilarien kulmakivet ovat harmaat. Menee junaan 213. Kivien koko ja hakkuujäljet tulevat Codexin pinnoilla.\n\nAiempi: 27.10. 20.1x: Juoksupelin kujien harmaan kivimuurin yläreuna tehdään samasta harmaasta kivipinnasta kuin muu muuri, kuten havainnekuvassa. Samalla pilarien kohdan beiget kulmakivet muutetaan harmaiksi sanojesi (16.03) mukaan. Valoseppä tekee pinnan ja Lavastaja muodon.",
-   "ts": 1793132599411,
-   "valmistui": "27.10."
-  },
-  {
    "edistys": 3,
    "lisa": "Pelikoodari",
    "otsikko": "Juoksupeli: dronen kallistus ja juoksijan liikkeet",
    "teksti": "Pyysit 26.10. 11.57: drone kallistuu käännöksissä kuin FPV-drone, juoksija nojaa käännöksiin ja radanvaihtoihin, askeleessa vaihtelua ja harvoin pieni kompurointi.",
    "tila": "työn alla",
-   "tilanne": "29.10. 12.0x: Hyväksyit dronekameran liikkeen 07.57; alku korjattu (kääntö enintään noin 90 °/s) ja porttien nousut tasaisiksi. Viimeisin versio odottaa tarkistusajoa viikkokäytön nollauksen jälkeen (2.11.), sitten koko video Keskustelukanavalle.\n\nAiempi: 28.10. 12.0x: Drone heiluu enää noin 5 cm, pylväs ja penkin valo korjattu. Liidon kädet suorina korjataan pelin omilla aloitus- ja lopetusliikkeillä.\n\nAiempi: 28.10. 10.1x: Pyysit 09.05 pehmeämmän dronekameran. Tehty: suorilla pystyheilahdus 35–49 cm → noin 8 cm, kaikki akselit pienesti, käännöksissä isompi. Maalin T-asento korjattu; ennen videota korjataan vielä pylväs ja penkin valo.\n\nAiempi: 27.10. 13.4x: Korjaus on junassa 211; video pelistä tulee juoksupelin seuraavan koeversion yhteydessä.\n\nAiempi: 26.10. 14.4x: Junassa 211: kallistus, nojaus, vilkaisut, kompurointi, säpsähdys, väsymys ja omena sekä reaktio rikkomiseen toimivat pelissä. Video sinulle äänen kanssa, kun kujien harmaat pinnat on korjattu.",
-   "ts": 1793267632399
+   "tilanne": "29.10. 13.24: Keskustelukanava katsoi videon: juoksu puhdas, mutta lähtölaskennassa kamera katsoo hetken tyhjää seinää ja kääntyy nopeasti, ja yksi nousu on liian jyrkkä. Pelikoodari korjaa, sitten uusi video.\n\nAiempi: 29.10. 13.12: Korjattu dronevideo ajettu läpi ilman virheitä; seuraavaksi tarkistus ja sitten Keskustelukanavalle.\n\nAiempi: 29.10. 12.0x: Hyväksyit dronekameran liikkeen 07.57; alku korjattu (kääntö enintään noin 90 °/s) ja porttien nousut tasaisiksi. Viimeisin versio odottaa tarkistusajoa viikkokäytön nollauksen jälkeen (2.11.), sitten koko video Keskustelukanavalle.\n\nAiempi: 28.10. 12.0x: Drone heiluu enää noin 5 cm, pylväs ja penkin valo korjattu. Liidon kädet suorina korjataan pelin omilla aloitus- ja lopetusliikkeillä.\n\nAiempi: 28.10. 10.1x: Pyysit 09.05 pehmeämmän dronekameran. Tehty: suorilla pystyheilahdus 35–49 cm → noin 8 cm, kaikki akselit pienesti, käännöksissä isompi. Maalin T-asento korjattu; ennen videota korjataan vielä pylväs ja penkin valo.\n\nAiempi: 27.10. 13.4x: Korjaus on junassa 211; video pelistä tulee juoksupelin seuraavan koeversion yhteydessä.\n\nAiempi: 26.10. 14.4x: Junassa 211: kallistus, nojaus, vilkaisut, kompurointi, säpsähdys, väsymys ja omena sekä reaktio rikkomiseen toimivat pelissä. Video sinulle äänen kanssa, kun kujien harmaat pinnat on korjattu.",
+   "ts": 1793273072772
   },
   {
    "edistys": 5,
@@ -249,8 +215,8 @@
    "otsikko": "Säännöt vain Raamattuun",
    "teksti": "Päätit 22.11: jokainen sääntö kirjoitetaan kokonaan vain Raamattuun; muistissa, aloitusviesteissä ja muistutuksissa enintään yksi lyhyt viittausrivi. CLAUDE.md-tiedostot karsii Keskustelukanava. Päätit 22.24: lisäksi jokainen rooli lukee aloittaessaan Raamatusta vain oman lukulistansa, ja roolien kansiot pidetään ajan tasalla.",
    "tila": "pidossa",
-   "tilanne": "24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 23.10.: jatkuu uudella tilillä, kun juna 210 on liikkeellä.\n\nAiempi: Muistin ja aloitusviestien säännöt siirretty Raamattuun (20.10.). Lukulistojen ja kansioiden työkalut kesken; jatkuu pe aamuna toisella tilillä (viikkoraja).",
-   "ts": 1792874527701
+   "tilanne": "29.10. 13.2x: Odottaa, että ehdit; ei kiirettä.\n\nAiempi: 24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 23.10.: jatkuu uudella tilillä, kun juna 210 on liikkeellä.\n\nAiempi: Muistin ja aloitusviestien säännöt siirretty Raamattuun (20.10.). Lukulistojen ja kansioiden työkalut kesken; jatkuu pe aamuna toisella tilillä (viikkoraja).",
+   "ts": 1793272610483
   },
   {
    "edistys": 4,
@@ -258,8 +224,8 @@
    "otsikko": "Selkeät työtavat: tuotantopohjat sitoviksi",
    "teksti": "Päätit 22.38: jokaiselle työtyypille (esim. uusi peli, taidemuseon maa, uusi linssi) yksi valmis pohja, jota kaikki käyttävät. Seitsemän luonnosta viimeistellään, vanhat ohjeet yhdistetään, lautapeleille tehdään pohja.\n\nYhdistetty tähän: Tuotantoputkien työtapojen läpikäynti.",
    "tila": "pidossa",
-   "tilanne": "24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 23.10. 12.0x: kaikki neljä osaa ovat nyt valmiina: suunta (taide, ääni, kerronta, kamera), tekotavat kaikille aloille ja reseptit kaikille tuotetyypeille sekä tuotannonohjaus. Kameran suunta odottaa vielä, että palaat kameratyyleihin.",
-   "ts": 1792874527701
+   "tilanne": "29.10. 13.2x: Odottaa, että ehdit; ei kiirettä.\n\nAiempi: 24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 23.10. 12.0x: kaikki neljä osaa ovat nyt valmiina: suunta (taide, ääni, kerronta, kamera), tekotavat kaikille aloille ja reseptit kaikille tuotetyypeille sekä tuotannonohjaus. Kameran suunta odottaa vielä, että palaat kameratyyleihin.",
+   "ts": 1793272610483
   },
   {
    "edistys": 4,
@@ -267,8 +233,8 @@
    "otsikko": "Juoksupeli täysin valmiiksi",
    "teksti": "Päätit 22.37: tärkeintä on saada juoksupeli täysin valmiiksi mahdollisimman pian; videot siirtyvät päivälle. Valmis = 1) grafiikka (leveä näkymä, taivas, usva, horisontti), 2) laajempi juostava alue, 3) joka juoksu erilainen ja loputon, 4) Puyin liikkeet, 5) kokoelmat, nimetyt paikat ja pääportti maalina (päätit 10.13), 6) musiikki ja liu'un ääni, 7) Pelit-valikossa.",
    "tila": "työn alla",
-   "tilanne": "29.10. 09.45: Junassa 214: kuja 05 jatkuu portille ja pohjoinen portti on auki (rata tarkistettu). Seuraavaksi kujan 05 portin ovet (aukeavat kameraa kohti, liian leveät) ja viimeinen lattian välkekohta. Dronekameran alku ja loppu korjauksessa.\n\nAiempi: 29.10. 08.09: Kuja 05:n pohjoinen portti on auki ja juoksureitti tarkistettu; uusi lavastus viedään ämpäriin, ja Junassa 214: kujat 05 ja t-portti, kun kuvapari on puhdas. Kuja 02 on jo havainnekuvan levyinen (ero alle 5 %), ei muutosta. Dronekamera hyväksytty 07.57: alku ja loppu korjataan.\n\nAiempi: 28.10. 14.1x: Tänään työn alla: palatsin katot ja friisit Codexin pintoina pelissä, räystäiden päätetiilet (Lavastaja); kujien kivet odottavat Codexin seuraavaa versiota; drone heiluu enää noin 5 cm; liidon asento korjataan Codexin uudella liukuliikkeellä (Pelikoodari); valo mietitään uudelleen vasta, kun rakennukset vastaavat havainnekuvia (päätit 27.10.).",
-   "ts": 1793259865731
+   "tilanne": "29.10. 13.2x: Kujan 05 portti auki ja ovet aukeavat 65° (junassa 214). Seuraavaksi kujien 02 ja 05 korjaukset (Lavastaja) ja dronevideo Keskustelukanavalle.\n\nAiempi: 29.10. 09.45: Junassa 214: kuja 05 jatkuu portille ja pohjoinen portti on auki (rata tarkistettu). Seuraavaksi kujan 05 portin ovet (aukeavat kameraa kohti, liian leveät) ja viimeinen lattian välkekohta. Dronekameran alku ja loppu korjauksessa.\n\nAiempi: 29.10. 08.09: Kuja 05:n pohjoinen portti on auki ja juoksureitti tarkistettu; uusi lavastus viedään ämpäriin, ja Junassa 214: kujat 05 ja t-portti, kun kuvapari on puhdas. Kuja 02 on jo havainnekuvan levyinen (ero alle 5 %), ei muutosta. Dronekamera hyväksytty 07.57: alku ja loppu korjataan.\n\nAiempi: 28.10. 14.1x: Tänään työn alla: palatsin katot ja friisit Codexin pintoina pelissä, räystäiden päätetiilet (Lavastaja); kujien kivet odottavat Codexin seuraavaa versiota; drone heiluu enää noin 5 cm; liidon asento korjataan Codexin uudella liukuliikkeellä (Pelikoodari); valo mietitään uudelleen vasta, kun rakennukset vastaavat havainnekuvia (päätit 27.10.).",
+   "ts": 1793272610483
   },
   {
    "edistys": 4,
@@ -287,16 +253,6 @@
    "tila": "pidossa",
    "tilanne": "29.10. 09.5x: Ei muutoksia 27.10. jälkeen; jatkuu, kun kujat ja dronekamera ovat valmiit.\n\nAiempi: 27.10. 18.51: Päätit, ettei nuoren keisarin äänissä kuulu hengitystä, huohotusta eikä hengästymistä missään (kirjattu pysyväksi säännöksi). Huohotus on poistettu pelistä; Pelikoodari tarkisti muut hahmoäänet (ei ihmisääniä) ja poisti keisarin ”Huh!”-väistörepliikin henkäyksen takia; junan 212 rungossa ei ole väistörepliikkejä. Äänityylistä ”hengästynyt” pois.\n\nAiempi: 27.10. 18.37: Päätit: \"Ota se hengitys äänitehoste pois kokonaan.\" Pelikoodari poistaa hengitysäänen juoksupelin kaikista kohdista; repliikit 4 ja 9 jäävät.\n\nAiempi: 27.10. 17.3x: Äänittäjä vei valitsemasi otot 4 ja 9; ääniportti meni läpi. Pelikoodari kytkee ne peliin.\n\nAiempi: 27.10. 17.25: Valitsit rimpuilun repliikit: otto 4 (eunukki Sergio: \"Sainpas sinut!\") ja otto 9 (keisari: \"Päästä irti! … Käsken sinua! Päästä irti!\"). Äänittäjä vie, Pelikoodari kytkee peliin.\n\nAiempi: 27.10. 12.47: Valitsit otot: eunukeille Georg B ja Sergio B, keisarille viisi ottoa (Ottakaa kiinni, Huh!, Huh läheltä piti, Hui!, Melkein!). Pelikoodari kytkee ne peliin.\n\nAiempi: 27.10. 11.0x: Kaikki 14 ottoa ovat sinulla videona kuunneltaviksi. Eunukeille Georg ja Sergio, keisarille Kavya uusin tunnetagein.",
    "ts": 1793259908431
-  },
-  {
-   "edistys": 5,
-   "lisa": "Codex + Pelikoodari",
-   "otsikko": "Juoksupelin eunukit, kiinniotto, rimpuilu ja keisarin kädet",
-   "teksti": "Pyysit 27.10. 08.35 ja päätit 08.39 ja 10.05: kolme eunukkia 3D-malleiksi (kahdelle eri väri), kiinnioton ja rimpuilun liikesarjat sekä keisarin käsien liikkeet (oviaukon tuki, kaavun nosto, kämmen esteellä, alastulo käsillä, kädenheilautus).",
-   "tila": "valmis",
-   "tilanne": "27.10. 19.52: Hyväksyit kiinnioton (\"Kyllä\"): se viedään tällaisenaan junaan 213 (eunukin selkä peittää keisarin, hengitys pois, repliikit 4 ja 9).\n\nAiempi: 27.10. 18.12: Katsoit v4-videon ja päätit, ettei keisaria käännetä: \"Parempi että keisaria ei näy koska kiinniotto ei näytä aidolta. Mutta enukin selkä peittää hyvin huonot liikkeet.\" Kiinniotossa palataan eunukin selkään kameraa kohti, myös toisessa kiinniotossa ja Uuvuit-ruudulla. Pelikoodari korjaa myös ohjetekstin, ja eunukin kasvot tulevat Codexilta.\n\nAiempi: 27.10. 17.48: Päätit kääntää keisarin kiinniotossa kasvot kameraan päin: eunukki pitelee keisaria takaa, ja käsien rimpuilu näkyy isona. Kamera pysyy ennallaan. Pelikoodari toteuttaa ja korjaa samalla ohjetekstin, keisarin puuttumisen toisesta kiinniotosta ja Uuvuit-ruudusta sekä eunukin kasvot (Codex).\n\nAiempi: 27.10. 15.0x: Sivukiinniotot ja rimpuilu ovat pelissä; muurikatteet eivät hidasta peliä iPadilla (mitattu). Rimpuiluvideo tulossa Keskustelukanavalle; Codexilta raskas alastulo keisarille.\n\nAiempi: 27.10. 13.4x: Eunukkien 3D-mallit ja liikkeet ovat pelissä. Takaa kiinniotto ja eunukin kurkistus on hyväksytty Codexille, kuvat Keskustelukanavalla. Kiinniotossa kamera kääntyy sivulle koko otteen ajaksi. Rimpuilu ja keisarin kädet jatkuvat.\n\nAiempi: 27.10. 11.0x: Eunukkien kuvaviitteet on tehty. 3D-mallit ja liikkeet odottavat Codexin uudelleenkäynnistystä.",
-   "ts": 1793123562485,
-   "valmistui": "27.10."
   },
   {
    "edistys": 1,
@@ -429,8 +385,8 @@
    "otsikko": "Pulu v3:n ulkoasu omistajalle",
    "teksti": "Lavastajan kuva omistajalle ja kortti; sen jälkeen Codexin linturigi.",
    "tila": "pidossa",
-   "tilanne": "24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 21.10.",
-   "ts": 1792874527701
+   "tilanne": "29.10. 13.2x: Odottaa, että ehdit; ei kiirettä.\n\nAiempi: 24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 21.10.",
+   "ts": 1793272610483
   },
   {
    "edistys": 1,
@@ -438,8 +394,8 @@
    "otsikko": "Pohjien läpikäynnit omistajan kanssa",
    "teksti": "Tuotantopohjat käydään omistajan kanssa läpi yksi kerrallaan; lisäksi lautapelien uusi pohja.",
    "tila": "pidossa",
-   "tilanne": "24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 23.10.: puuttuvat osat jaettu rooleille (ks. Selkeät työtavat).\n\nAiempi: Korvautunut studiojaolla (päätit 18.02): A suunta, B tekotavat, C reseptit ja D ohjaus mainissa; omistajan päätökset 19.43–19.45 kirjattu. Puuttuvat osat jaetaan pe aamuna toisella tilillä.",
-   "ts": 1792874527701
+   "tilanne": "29.10. 13.2x: Odottaa, että ehdit; ei kiirettä.\n\nAiempi: 24.10. 23.5x: Odottaa omistajan aikaa (matkalla ma 26.10. asti).\n\nAiempi: 23.10.: puuttuvat osat jaettu rooleille (ks. Selkeät työtavat).\n\nAiempi: Korvautunut studiojaolla (päätit 18.02): A suunta, B tekotavat, C reseptit ja D ohjaus mainissa; omistajan päätökset 19.43–19.45 kirjattu. Puuttuvat osat jaetaan pe aamuna toisella tilillä.",
+   "ts": 1793272610483
   },
   {
    "edistys": 0,
@@ -510,8 +466,8 @@
    "otsikko": "Rakettivideo pelistä (meri ja valas)",
    "teksti": "Pyysit 19.10. 17.26 ja 21.10. 00.52: raketin laukaisu ja valaan hyppy yhtenä videona pelin omasta kohtauksesta, savu täysillä; korvaa meri- ja valasrivit.",
    "tila": "pidossa",
-   "tilanne": "25.10. 14.2x: Odottaa juoksupelin junaa 211 (Valoseppä ja Mac ovat sen käytössä); korjaukset horisontin viivaan ja vihreään raitaan tehdään sen jälkeen.\n\nAiempi: 24.10. 15.1x: Lyhyt pystyvideo valmis, mutta palautettu korjattavaksi: horisontissa viiva, vihreä hehku suorana raitana ja Maa aseman alla ilman valoja. Video sinulle, kun ne on korjattu.\n\nAiempi: 23.10. 20.15: Pyysit raketille yhtä hienon taivaan kuin Codexin kuvissa: yönsininen, tähdet ja hämärän kajo pilvissä. Codex maalaa taivaan, Valoseppä kytkee sen peliin ja videoon. Jo tehty: tumma horisontti ja valopylväs vedessä; pilvi oranssimmaksi työn alla. Seuraava näyte Codexin kuvien rinnalla.\n\nAiempi: 23.10. 15.5x: Näit videon hämärässä ja vertailun peliin ja NASAn kuviin; päätit jatkaa videota. Seuraavaksi iso, liekin valaisema savupilvi, vesiheijastukset ja laajempi kuva, jossa alusta, valas ja raketti näkyvät yhdessä. Näet uuden näytteen samoilla vertailuilla.",
-   "ts": 1792843932797
+   "tilanne": "29.10. 13.2x: Valoseppä levossa; jatkuu, kun rakennukset ovat valmiit ja Valoseppä palaa.\n\nAiempi: 25.10. 14.2x: Odottaa juoksupelin junaa 211 (Valoseppä ja Mac ovat sen käytössä); korjaukset horisontin viivaan ja vihreään raitaan tehdään sen jälkeen.\n\nAiempi: 24.10. 15.1x: Lyhyt pystyvideo valmis, mutta palautettu korjattavaksi: horisontissa viiva, vihreä hehku suorana raitana ja Maa aseman alla ilman valoja. Video sinulle, kun ne on korjattu.\n\nAiempi: 23.10. 20.15: Pyysit raketille yhtä hienon taivaan kuin Codexin kuvissa: yönsininen, tähdet ja hämärän kajo pilvissä. Codex maalaa taivaan, Valoseppä kytkee sen peliin ja videoon. Jo tehty: tumma horisontti ja valopylväs vedessä; pilvi oranssimmaksi työn alla. Seuraava näyte Codexin kuvien rinnalla.\n\nAiempi: 23.10. 15.5x: Näit videon hämärässä ja vertailun peliin ja NASAn kuviin; päätit jatkaa videota. Seuraavaksi iso, liekin valaisema savupilvi, vesiheijastukset ja laajempi kuva, jossa alusta, valas ja raketti näkyvät yhdessä. Näet uuden näytteen samoilla vertailuilla.",
+   "ts": 1793272610483
   },
   {
    "edistys": 2,
@@ -521,18 +477,8 @@
    "tila": "pidossa",
    "tilanne": "29.10. 09.5x: Valo mietitään vasta, kun rakennukset vastaavat havainnekuvia (päätit 27.10.); nyt työn alla kujat 02 ja 05.\n\nAiempi: 27.10. 17.1x: Taivaan porrastus korjattu (Valoseppä); laitetesti tulossa väreilymittauksen yhteydessä. Meridiaaniportin kultakaton tummat läikät johtuivat valokartan pilkkoutumisesta: katon pohjajako on korjattu, uusi valon leivonta odottaa päätöstäsi 10.56 (valo vasta rakennusten jälkeen).\n\nAiempi: 27.10. 13.48: Kysyit Unity 7:stä ja kivien kiillosta: Valoseppä tekee kivetykseen kiillon havainnekuvien mukaan osana pintatyötä (kujat ensin, juhlasali 04 vuorollaan), ja pinnat tehdään valmiiksi Unity 7:ää varten.\n\n27.10. 13.4x: Muodot havainnekuvan mukaan, valo pois. Codexin räystäät, muurikate, friisit, marmorikaiteet ja kulmapalat on sovitettu kujiin; muurikate ja kaiteet piirretään kevyesti monistettuina (mittaus iPadilla tulossa). Taihedianin jalusta näkyy nyt tarkkana. Kuvaparit vertailuvalossa Keskustelukanavalla.\n\nAiempi: 27.10. 11.0x: Päätit 10.56: valo otetaan kokonaan pois, ja ensin kaikki rakennukset ja muut osat tehdään havainnekuvien mukaisiksi. Valoa mietitään uudelleen vasta sen jälkeen. Valon laskenta ja aurinkotyö on pysäytetty, ja vertailukuvat otetaan tasaisessa valossa ilman varjoja. Lavastaja tekee erolistan ja korjaa rakennukset, Valoseppä pinnat ja Codex korjausosat; Natiivi-UI ottaa kuvaparit alue kerrallaan (kujat, aukio, sali, kohdat 06–07).",
    "ts": 1793259908431
-  },
-  {
-   "edistys": 5,
-   "lisa": "Valoseppä + Lavastaja",
-   "otsikko": "Juoksupelin vihreät boordit ja kivireunukset",
-   "teksti": "Pyysit 27.10. klo 15.43",
-   "tila": "valmis",
-   "tilanne": "27.10. 20.05: Hyväksyit reunakivet: muoto ja väri ovat valmiit. Ne menevät junaan 213, ja Valoseppä viimeistelee vielä pinnan rosoisuuden.\n\nAiempi: 27.10. 19.0x: Reunakiven muoto on hyväksytty sanojesi (16.03) mukaan: pitkät yksittäiset kivet, sama harmaa. Lavastaja korjaa vielä saumojen pienet valkoiset lovet, ja Valoseppä tekee pinnasta rosoisemman. Sitten näet parin.\n\nAiempi: 27.10. 17.5x: Keskustelukanava palautti reunakiviparin: reunus näyttää sileältä beigeltä nauhalta, ei yksittäisiltä kiviltä (viisteet, kivipinta ja saumat puuttuvat), ja se on liian leveä ja korkea. Lisäksi kujalla 01 on irrallinen penkki. Lavastaja ja Valoseppä korjaavat, ja uusi pari tulee.\n\nAiempi: 27.10. 17.4x: Kujien reunakivi näkyy nyt pelissä harmaina pitkinä kivinä, ja sinapinkeltainen sävyvika on korjattu; vertailuparit KK:lla. Jäljellä: reunakivinauha on hieman leveämpi ja vaaleampi kuin havainnekuvassa (Lavastaja). Menossa junaan 212.\n\nAiempi: 27.10. 17.1x: Kujien reunakivi ei vielä näy vertailupareissa; syy on pelin omassa kujageometriassa, ei mallissa. Valoseppä ja Pelikoodari selvittävät.\n\nAiempi: 27.10. 16.03: Vastasit, ettei reunakivi vielä ole havainnekuvan mukainen: reunus tehdään pitkinä yksittäisinä kivinä, ja lattia, kivijalka ja reunus samaa harmaata sävyä kuin havainnekuvassa. Boordien väreily on korjattu.\n\nAiempi: 27.10. 15.43: Vihreät friisit pysyvät juostessa tasaisina ilman väreilyä, ja kivireunus tehdään havainnekuvien tapaan samasta harmaasta kivestä kuin seinän kivijalka, myös pystysivuiltaan. Kaikki kujat ja aukiot. Uusi kuvapari tulee sinulle.",
-   "ts": 1793124374035,
-   "valmistui": "27.10."
   }
  ],
- "ts": "2026-10-29T11:53:52+02:00",
+ "ts": 1793273072772,
  "vahti": "kunnossa"
 }
