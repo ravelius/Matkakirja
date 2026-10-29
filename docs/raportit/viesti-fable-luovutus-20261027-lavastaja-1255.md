@@ -1158,3 +1158,8 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   pohja.json-kehyksessä). PK lähettää esimerkin (yksi aukion muuri) → sovittu muoto 1 rivillä PT:lle → ensimmäinen osaerä + B-kirjaus
   (docs/tuotanto/tekotavat/3d-ja-kuvat.md "Juoksupelin osasarja": osat, ruudukko, Splines-ladonta, jaettu pintasarja, pintatarkistus) SAMASSA PR:ssä.
 - SEURAAVAKSI: (1) PT:n kuittaus v72 / VS:n pari v73; (2) PK:n osasarjaesimerkki → osasarja v1; (3) erolistan 1, 3, 4, 5 rinnakkain.
+- PT KUITTASI v72 (21.1x): junaan 215; JU vie TF 214:n jälkeen.
+- PT:N TAIHEMEN-PÄÄTÖS (21.1x, omistaja 20.10. 07.30): tekaistut pohjoiset porttimuurit (f-taihemen paikalliset z 21…41,7 = maailma −195…−174,5;
+  V4_red + kivijalka + reunakivi + muurikate/C3 niiden päällä) POIS v73:ssa; käytävä päättyy todelliseen kohtaan (alusta −200, portaat −188).
+  ENNEN POISTOA: varmista PK:lta, ettei juoksurata/törmäykset (f-taihemen-tormays.glb)/botti nojaa niihin; jos nojaa, PK korjaa samassa erässä.
+  Poisto kaikista: rakennukset lod0/lod1/lod2 + tormays, c2:n kaiteeton LOD0, muurikatteen/C3:n palat muurien päällä (tarkista tunnistekuvalla).
