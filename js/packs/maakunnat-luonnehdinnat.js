@@ -9065,7 +9065,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MNE: {
     Andrijevica: {
       lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
-      pitka: "Andrijevica sijaitsee 740 metrin korkeudessa Limin ja Zlorečican yhtymäkohdassa, ja koko kunnassa asuu vain noin 4 000 ihmistä. Kaupunki on Komovin vuoriston epävirallinen retkeilytukikohta: korkeimman huipun lisäksi lähellä kohoavat Ljevorijecki Kom ja Vasojevićki Kom, joista jälkimmäiselle nousee kokonaisessa päiväretkessä. Kolašinin suuntaan johtaa 1 568 metrin korkeudessa kulkeva Trešnjevikin solatie, jota pidetään yhtenä Montenegron näyttävimmistä vuoristoteistä. Sekä Beraneen että Kolašiniin on noin 30 kilometriä, joten kaupunki on solmukohta Komovin, Bjelasican ja Prokletijen vuorimaisemien välissä.",
+      pitka: `Andrijevica on kunta Montenegron pohjoisosassa, ja kunnassa asuu noin 3 900 ihmistä. Kunnan keskus Andrijevica sijaitsee Lim-joen laaksossa 740 metrin korkeudessa. Kuntaa ympäröivät Komovin, Bjelasican ja Prokletijen vuoristot. Komovin korkeimmat huiput ovat yli 2 400 metriä korkeita, ja vuoristo on kunnan tärkein matkailukohde. Alue liitettiin Montenegroon 1800-luvulla Vasojević-heimon päällikön Miljan Vukovin johdolla. Kunnasta on tieyhteydet Beraneen ja Kolašiniin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
@@ -9088,7 +9088,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bar: {
       lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
-      pitka: "Bar on Montenegron tärkein satamakaupunki, jonka satamasta lähtee yön yli kulkeva lautta Italian Bariin. Satama ja Belgradiin johtava 435 kilometrin rata, joka avattiin 1976, tekivät kaupungista maan portin merelle. Koko kunnassa asuu noin 46 000 ihmistä. Sutomoren pitkä hiekkaranta houkuttaa kotimaisia lomailijoita, ja Skadarjärven Virpazarin kylään on noin puoli tuntia ajomatkaa. Kaupungin takana Rumija-vuori kohoaa jyrkästi rannikon yläpuolelle, ja Topolicassa kuningas Nikolan kesäpalatsi toimii nykyään Barin kotiseutumuseona.",
+      pitka: `Bar on kunta Montenegron etelärannikolla, ja kunnassa asuu noin 46 000 ihmistä. Kunnan itäosassa on Skadarjärvi, joka on pinta-alaltaan Balkanin niemimaan suurin järvi. Montenegro ja Albania jakavat järven, ja Montenegron puoli on ollut kansallispuisto vuodesta 1983. Järvellä on 270 lintulajia, esimerkiksi pelikaaneja. Barin satamasta kulkee lautta Italian Bariin. Belgradin ja Barin välinen rautatie avattiin vuonna 1976. Noin kolmen kilometrin päässä rannikosta on Stari Bar eli Vanha Bar, kukkulalla sijaitseva kaupunki. Vuoden 1979 maanjäristys vaurioitti Stari Baria pahoin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
@@ -9111,7 +9111,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Berane: {
       lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
-      pitka: "Berane on Limin varren kaupunki, jossa asuu noin 9 500–10 000 ihmistä; koko kunnassa asukkaita on noin 25 000. Keskustassa toimii Polimski-museo, jonka kokoelmiin kuuluu useita tuhansia esineitä arkeologiasta, etnografiasta ja aseista. Seudun arkeologia yltää kauas: Ylä-Polimlen mesoliittisia asuinpaikkoja on ajoitettu vuosiin 9 000–6 000 eaa. Perhokalastajat tuntevat Limin, ja etelässä kohoaa Bjelasican vuoristo. Museo perustettiin 1950-luvulla, ja kaupungin lukio on toiminut jo vuodesta 1913.",
+      pitka: `Berane on kunta Montenegron koillisosassa Lim-joen laaksossa, ja kunnassa asuu noin 25 000 ihmistä. Kunnan keskus Berane perustettiin virallisesti vuonna 1862, ja kaupunki juhli 150-vuotisjuhliaan vuonna 2012. Vuosina 1949–1992 kaupungin nimi oli Ivangrad kansansankari Ivan Milutinovićin mukaan. Kunnan länsipuolella kohoaa Bjelasican vuoristo, jolla on Pešića-järvi. Pohjoisessa on Tivranin rotko. Kunnassa on keskiaikainen Đurđevi Stupovi -luostari. Laaksosta on päätieyhteydet Etelä-Serbiaan sekä Bosnia ja Hertsegovinan kaakkoisosaan. Kunnan itäosasta muodostettiin vuonna 2013 uusi Petnjican kunta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
@@ -9134,7 +9134,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bijelo Polje': {
       lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
-      pitka: "Bijelo Polje, suomeksi Valkoinen kenttä, on Limin varren kaupunki, jonka kunnassa on yli 130 asutusta ja 38 662 asukasta (2023). Kaupungin vanhin maamerkki on Pyhien Pietarin ja Paavalin kirkko, jonka ruhtinas Miroslav Hum rakennutti sisäänkäynnin kirjoituksen mukaan vuonna 1196. Kirkko liittyy Miroslavin evankeliumiin, vanhimpaan säilyneeseen serbialaiseen kyrilliseen käsikirjoitukseen, joka tehtiin 1100-luvun lopulla ja kuuluu UNESCOn Muisti maailmasta -rekisteriin. Alkuteos säilytetään Belgradissa. Heinäkuisin kaupungissa pidetään White Field Jazz Festival, ja Lim on tunnettu taimenestaan ja harjuksestaan.",
+      pitka: `Bijelo Polje on kunta Montenegron pohjoisosassa Lim-joen laaksossa, ja kunnassa asuu noin 39 000 ihmistä. Kunnan keskus Bijelo Polje on pohjoisen Montenegron hallinnon ja kulttuurin keskus. Etelässä kohoaa Bjelasican vuoristo, jonka korkein huippu on yli 2 100 metriä. Kaupungin kautta kulkee Belgradin ja Barin välinen rautatie, ja kaupunki on viimeinen asema Montenegrossa Belgradiin matkustaville junille. Vuonna 1252 Humin alueen piispanistuin siirrettiin Bijelo Polien Pietarin kirkkoon. Kaupungissa syntyivät kirjailijat Ćamil Sijarić ja Miodrag Bulatović.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
@@ -9157,7 +9157,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Budva: {
       lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
-      pitka: "Budvan pieni vanhakaupunki kalkkikiviniemellä on ollut asuttu yhtäjaksoisesti noin 2 500 vuotta, ja sen juuret ulottuvat kreikkalais-illyrialaiseen asutukseen 400-luvulla eaa. Vuoden 1979 maanjäristys vaurioitti kaupunkia pahoin, ja jälleenrakennus kesti vuoteen 1987. Muurien sisällä on neljä kirkkoa, muun muassa vuodelta 840 peräisin oleva Santa Maria in Punta, ja Citadelan ulkoteatteri toimii kesän Grad Teatar -festivaalin näyttämönä. Kaupungin ulkopuolella Slovenska plaža on noin 1,6 kilometriä pitkä, ja kunnassa asuu noin 26 700 ihmistä, joista noin 17 500 kaupungissa.",
+      pitka: `Budva on kunta Montenegron Adrianmeren rannikolla, ja kunnassa asuu noin 27 000 ihmistä. Budvan Rivieraksi kutsuttu rannikkojakso on 35 kilometriä pitkä. Budvan vanhakaupunki on muurien ympäröimä, ja suurin osa muureista ja rakennuksista on peräisin Venetsian vallan ajalta (1420–1797). Budva on yksi Adrianmeren rannikon vanhimmista asutuskeskuksista. Vuoden 1979 maanjäristys vaurioitti vanhaakaupunkia pahoin. Sveti Stefan on pieni saari kuuden kilometrin päässä Budvasta, ja kapea hiekkakannas yhdistää sen mantereeseen. Matkailu on kunnan tärkein elinkeino.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
@@ -9180,7 +9180,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cetinje: {
       lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
-      pitka: "Cetinje perustettiin vuonna 1482, kun Ivan Crnojević siirsi valtansa Lovćenin juurelle helpommin puolustettavaan paikkaan. Kaupunki sijaitsee noin 650 metrin korkeudessa, ja kunnassa asuu noin 14 500 ihmistä. Täällä painettiin Crnojevićin kirjapainossa 1494 Oktoih, ensimmäinen eteläslaavien kyrillisin kirjaimin painettu kirja. Cetinjeen rakennettiin aikanaan suurvaltojen lähetystöjä, ja venäläinen, 1903 valmistunut lähetystörakennus kuuluu nykyään Taidekorkeakoululle. UNESCO otti Cetinjen mukaan Luovien kaupunkien verkostoon vuonna 2023 muotoilukaupunkina.",
+      pitka: `Cetinje on kunta Montenegron eteläosassa Lovćen-vuoren juurella, ja kunnassa asuu noin 14 000 ihmistä. Kunnan keskuksen Cetinjen kaupungin perusti Ivan Crnojević vuonna 1482. Cetinje oli Montenegron pääkaupunki toiseen maailmansotaan asti, ja sitä sanotaan vanhaksi kuninkaalliseksi pääkaupungiksi. Ruhtinas-piispa ja runoilija Petar II Petrović-Njegoš rakennutti Biljarda-palatsin vuonna 1838, ja nykyään se on museo. Kaupungissa toimii Montenegron kansallismuseo. Lovćenin Jezerski vrh -huipulla on Njegošin mausoleumi. Kunnan alueella on myös osa Skadarjärven kansallispuistoa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
@@ -9203,7 +9203,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Danilovgrad: {
       lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
-      pitka: "Danilovgrad levittäytyy Zeta-joen hedelmällisellä Bjelopavlićin tasangolla noin 25 kilometrin päässä Podgoricasta, päätien varrella Nikšićin ja pääkaupungin välissä. Kaupunki perustettiin vuonna 1870 suunnitelmakaupungiksi ja nimettiin ruhtinas Danilon mukaan. Kunnassa on 103 asutusta, ala noin 501 neliökilometriä ja 18 617 asukasta (2023). Spužin kukkulalla kohoaa ottomaanien vuonna 1704 valmistama linnoitus, joka valvoi keskisen Montenegron kulkuteitä. Ždrebaonikin luostari ja Glava Zeten lähteet ovat tasangon reunoilla, ja tasangon lämmin, kostea subtrooppinen ilmasto tekee kesistä kuumia.",
+      pitka: `Danilovgrad on kunta Montenegron keskiosassa Zeta-joen laaksossa, Bjelopavlićin tasangolla, ja kunnassa asuu noin 19 000 ihmistä. Kunta sijaitsee Podgoricasta länteen Nikšićiin johtavan tien varrella. Kunnan keskus Danilovgrad on nimetty ruhtinas Danilon mukaan. Ruhtinas Nikola I aloitti kaupungin rakentamisen vuonna 1870, ja tarkoitus oli tehdä siitä Montenegron pääkaupunki. Kun Nikšić ja Podgorica liitettiin Montenegroon 1870-luvun lopulla, Danilovgradin merkitys väheni. Kunnan tärkein nähtävyys on Ostrogin luostari, ortodoksinen pyhiinvaelluspaikka lähes pystysuoran kallion seinämällä. Vasilije Ostrogilainen perusti sen 1600-luvulla, ja hänen pyhäinjäännöksensä ovat luostarin luolakirkossa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-danilovgrad-v-64ddd605.jpg',
@@ -9226,7 +9226,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Herceg Novi': {
       lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
-      pitka: "Herceg Novi on rakentunut portaikoiksi: vanhakaupunki laskeutuu rinnettä pitkin Kotorinlahden länsiportilta merelle, ja rantaa myötäilevä Pet Danican kävelyreitti yhdistää Škverin sataman ja Forte Maren. Linnake perustettiin kaupungin ytimeksi vuonna 1382 Bosnian kuningas Tvrtko I:n aikana. Sittemmin kaupunkia ovat hallinneet espanjalaiset (1538–1539), osmanit noin kaksisataa vuotta, venetsialaiset ja itävaltalaiset, ja jokainen on jättänyt jälkensä muureihin. Lähellä olevan Savinan luostarin suuri kirkko rakennettiin vuosina 1777–1799, ja sen ikonostaasin maalasi vuonna 1795 Simeon Lazović. Aurinkoisia päiviä on noin 200 vuodessa, joten rantakävelyllä viihtyy lähes ympäri vuoden.",
+      pitka: `Herceg Novi on kunta Montenegron rannikolla, lähellä Kroatian rajaa. Kunnassa asuu noin 31 000 ihmistä. Kaupunki on Kotorinlahden läntisellä sisäänkäynnillä Orjen-vuoren juurella. Bosnian kuningas Tvrtko I perusti sen linnakkeeksi vuonna 1382 ja nimesi sen Pyhän Tapanin mukaan. Nimeksi vakiintui kuitenkin Novi eli uusi; Herceg tarkoittaa herttuaa. Osmanit valtasivat kaupungin 1400-luvun lopulla ja hallitsivat sitä noin 200 vuotta. Kaupungin linnoituksia ovat Forte Mare ja Kanli Kula. Kaupungin lähellä sijaitsevassa Igalossa on parantavaa merimutaa, jota käytetään hoitoihin. Herceg Novissa vietetään mimosajuhlaa, ja kaupunki on suosittu matkailukohde.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-herceg-novi-v-e2b99208.jpg',
@@ -9249,7 +9249,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kolašin': {
       lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
-      pitka: "Kolašin on Morača-joen kaupunki noin 950 metrin korkeudessa Bjelasican ja Sinjajevinan vuorten juurella. Kaupungissa asuu vajaat 2 500 ihmistä ja koko kunnassa noin 10 000. Belgrad–Bar-rautatie pysähtyy täällä, ja Podgorican lentokenttä on noin 80 kilometrin päässä. Ympäristössä on Kolašin 1450 -hiihtokeskus Bjelasican rinteillä. Morača-kanjonin läpi noin puolen tunnin ajomatkan päässä etelässä on Morača-luostari, jonka Stefan Vukanović perusti vuonna 1252. Se on yksi Montenegron tunnetuimmista keskiaikaisista kohteista, ja siinä yhdistyy romaaninen ja raškalainen rakennustyyli.",
+      pitka: `Kolašin on kunta Montenegron pohjoisosassa, ja kunnassa asuu noin 6 700 ihmistä. Kunnan keskus Kolašin on 954 metrin korkeudessa Bjelasica- ja Sinjajevina-vuorten juurella, ja se perustettiin 1600-luvulla. Lähellä on Biogradska Gora -kansallispuisto, joka perustettiin vuonna 1952. Puistossa on 16 neliökilometrin aarniometsä, jossa on yli 500 vuotta vanhoja puita. Puiston suurin jäätikköjärvi on Biogradsko-järvi. Talvisin Bjelasican rinteillä hiihdetään, ja Morača-joki saa alkunsa kunnan alueelta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
@@ -9272,7 +9272,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kotor: {
       lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
-      pitka: "Kotor on kätkeytynyt Kotorinlahden syvimpään sopukkaan, ja sen vanhakaupunki on kuulunut UNESCOn maailmanperintöön vuodesta 1979. Nykyinen ilme on peräisin venetsialaisilta, jotka hallitsivat kaupunkia vuosina 1420–1797 ja kutsuivat sitä nimellä Cattaro. Pyhän Tryphonin katedraali on vuodelta 1166. Kaupungin yllä nousevat muurit ovat noin 4,5 kilometriä pitkät, ja Pyhän Johanneksen linnoitukselle vie noin 1 350 askelmaa. Vuonna 2017 Kotorin puolustusrakennelmat liitettiin myös Venetsian 1500–1600-lukujen puolustusrakennelmien maailmanperintökokonaisuuteen. Kunnassa asuu noin 22 000 ihmistä, ja risteilylaivojen suosiman kaupungin kapeat kujat täyttyvät kesäisin vierailijoista.",
+      pitka: `Kotor on kunta Montenegron rannikolla, Kotorinlahden sisimmässä osassa. Lahti työntyy syvälle maahan, ja sitä ympäröivät Orjen- ja Lovćen-vuorten kalkkikivijyrkänteet. Kunnassa asuu noin 23 000 ihmistä. Kotorin vanhakaupunki on Unescon maailmanperintökohde, ja se otettiin listalle vuonna 1979. Kunnan keskusta Kotoria ympäröi 4,5 kilometriä pitkä muuri, joka nousee vuoren rinteelle kaupungin yläpuolelle. Vanhassakaupungissa on katolinen Pyhän Tryfonin katedraali vuodelta 1166. Pyhä Tryfon on kaupungin suojeluspyhimys. Kotor kuului Venetsian valtaan vuosina 1420–1797. Kaupungissa on paljon kissoja, joista on tullut sen symboli, ja 2000-luvulta lähtien siellä on käynyt yhä enemmän risteilymatkustajia.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-kotor-v-ad63809c.jpg',
@@ -9295,7 +9295,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mojkovac: {
       lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
-      pitka: "Mojkovac on Tara-joen itärannalla sijaitseva pieni kaupunki, jossa on runsaat 2 500 asukasta, ja koko kunnassa noin 6 800. Kaupunki on tunnettu Mojkovacin taistelusta 6.–7. tammikuuta 1916: noin 6 500 montenegrolaissotilasta piti asemansa selvästi suurempaa Itävalta-Unkarin joukkoa vastaan suojatakseen Serbian armeijan perääntymistä Albanian halki Korfulle. Kunnan alueella sijaitsee Brskovo, keskiajan kaivos- ja kauppapaikka, joka mainitaan ensi kertaa 1200-luvun alun kauppakirjassa. Kaivostoimintaa Brskovossa jatkettiin uudelleen 1900-luvulla, ja kaupungissa on asema Belgrad–Bar-radalla.",
+      pitka: `Mojkovac on kunta Montenegron pohjoisosassa, Tara-joen varrella Bjelasica- ja Sinjajevina-vuorten välissä. Kunnassa asuu noin 6 700 ihmistä. Kunnan keskus Mojkovac tunnetaan Mojkovacin taistelusta, jossa Montenegron armeija voitti Itävalta-Unkarin joukot tammikuussa 1916. Taistelun tarkoitus oli viivyttää vihollista, jotta Serbian armeija ehti vetäytyä Albanian vuorten yli. Kaupunki on 853 metrin korkeudessa, ja Belgradin ja Barin välinen rautatie kulkee kaupungin kautta. Lähellä on Brskovon vanha kaivoskylä. Sinjajevinan vuoristo on pitkään ollut tärkeä karjan laidunalue.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
@@ -9318,7 +9318,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Nikšic': {
       lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
-      pitka: "Nikšić on Montenegron toiseksi suurin kaupunki, ja sen kaupunkialueella asuu noin 66 700 ihmistä (2023). Se levittäytyy noin 640 metrin korkeudessa karstiselle Nikšićin kentälle Trebjesa-kukkulan juurelle. Alueen historia on kerroksellinen: roomalaisaikana paikalla oli Anagastum-linnoitus, keskiajalla slaavien Onogošt, ja nykyinen nimi vakiintui 1400-luvun puolivälissä. Bedemin linnoitus sai nykyisen muotonsa osmanien aikana 1700-luvulla, ja Berliinin sopimus vuonna 1878 vahvisti kaupungin kuulumisen Montenegrolle. Jugoslavian aikana Nikšićistä kasvoi teollisuuskaupunki, jossa oli terästehtaita ja bauksiittikaivoksia. Kaupungin lähellä ovat vesivoimatuotantoa varten rakennetut tekojärvet Krupac, Slano ja Vrtac.",
+      pitka: `Nikšić on kunta Montenegron länsiosassa lähellä Bosnia ja Hertsegovinan rajaa. Kunnassa asuu noin 66 000 ihmistä, ja Nikšić on Podgorican jälkeen maan toiseksi suurin kaupunki. Se sijaitsee Nikšićin kenttä -nimisellä tasangolla Trebjesa-kukkulan juurella. Nikšić on yksi Montenegron suurista teollisuuskaupungeista, ja siellä toimii esimerkiksi Trebjesa-olutpanimo. Kaupungin lähellä on kolme tekojärveä: Krupac, Slano ja Vrtac. Ne syntyivät vuonna 1960 valmistuneen Perućican vesivoimalaitoksen yhteydessä. Montenegro sai kaupungin haltuunsa vuonna 1877, ja kroatialainen arkkitehti Josip Slade suunnitteli kaupungin asemakaavan vuonna 1883.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
@@ -9341,7 +9341,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Plav: {
       lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
-      pitka: "Plav on noin 3 700 asukkaan kaupunki Lim-joen alkulähteillä lähes kilometrin korkeudessa. Järvi on pinta-alaltaan noin kaksi neliökilometriä ja enimmillään yhdeksän metriä syvä, ja sieltä Lim lähtee virtaamaan. Paikka mainitaan ensi kertaa vuonna 1330 Dečanin luostarin asiakirjoissa nimellä Hotina Gora, ja osmanien väestölaskennassa 1582–1583 Plaviin kuului 18 kylää. Alue liitettiin Montenegroon ensimmäisen Balkanin sodan jälkeen 1912. Seutu on suosittu patikointi- ja kalastuskohde, ja järvestä sekä vuoristopuroista pyydetään taimenta.",
+      pitka: `Plav on kunta Montenegron koillisosassa Prokletije-vuoriston juurella. Prokletije tarkoittaa kirottuja vuoria. Kunnassa asuu noin 9 100 ihmistä, ja suurin väestöryhmä ovat bosniakit eli bosnianmuslimit. Lim-joki saa alkunsa Plavin kaupungin lähellä olevasta Plavjärvestä, joka on jäätikköjärvi ja pinta-alaltaan noin kaksi neliökilometriä. Plavin kaupungissa asui vuoden 2011 väestönlaskennassa noin 3 700 ihmistä. Alueella on myös Visitor-vuorijärvi, jolla on kelluva saari, sekä karstilähteitä, kuten Oko Skakavica. Alue liitettiin Montenegroon vasta ensimmäisen Balkanin sodan jälkeen vuonna 1912.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
@@ -9364,7 +9364,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pljevlja: {
       lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
-      pitka: "Pljevlja on noin 770 metrin korkeudessa Ćehotina-joen varrella, ja sen kunta on pinta-alaltaan 1 346 neliökilometriä Montenegron toiseksi suurin. Kunnassa asuu noin 24 000 ihmistä (2023), kaupungissa noin 16 000. Täällä on maan ainoa hiilivoimala, ja Montenegron hiili louhitaan Pljevljan kaivoksesta. Kominin kaupunginosassa sijaitsevat roomalaisen Municipium S:n jäänteet, joista löytyneitä esineitä on nähtävillä kotiseutumuseossa. Kaupunki joutui osmanien haltuun vuonna 1465 ja vapautui 26. lokakuuta 1912. Pyhän Kolminaisuuden luostarin kirkko ja sen esikirkko freskattiin vuosina 1592–1595. Talvet ovat kylmiä, ja lunta on kuukausikaupalla.",
+      pitka: `Pljevlja on kunta Montenegron pohjoisosassa, noin 770 metrin korkeudessa Ćehotina-joen varrella. Kunnassa asuu noin 24 000 ihmistä, ja sen pinta-ala on 1 346 neliökilometriä. Pljevljan kaupungin lähellä on hiilikaivos, ja Montenegron ainoa hiilivoimala on myös Pljevljan lähellä. Pljevljassa on Husein-pašan moskeija, joka on rakennettu vuonna 1569. Osmanit vetäytyivät kaupungista lokakuussa 1912. Kunta rajoittuu Serbiaan sekä Bosnia ja Hertsegovinaan. Kunnassa valmistetaan pljevaljski sir -nimistä juustoa, jota pidetään Montenegron tunnetuimpana perinnejuustona.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-pljevlja-v-2c16d2d3.jpg',
@@ -9387,7 +9387,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Plužine': {
       lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
-      pitka: "Plužinen kunta on pinta-alaltaan suuri, noin 850 neliökilometriä, mutta asukkaita on siellä vain muutamia neliökilometrillä. Paikka tunnetaan jo 1300-luvulta, ja Montenegroon se liitettiin vasta Berliinin kongressin jälkeen 1878. Alueen ylle kohoaa Mratinjen holvipato: 220 metriä korkea betonirakennelma valmistui 1975 ja on yksi Euroopan korkeimmista padoista. Sen luoma Pivanjärvi täyttää kanjonin, jonka rinteitä pitkin tie kulkee lukuisten tunneleiden läpi. Plužine on tienristeys, joka yhdistää Nikšićin ja Podgorican Bosnia-Hertsegovinan suuntaan, ja Durmitorin kansallispuisto on lähellä.",
+      pitka: `Plužine on kunta Montenegron luoteisosassa, Bosnia ja Hertsegovinan rajan lähellä. Kunnassa asuu noin 2 200 ihmistä 854 neliökilometrin alueella, joten väkeä on hyvin harvassa. Kuntakeskus on Plužinen kaupunki, ja serbit olivat vuonna 2011 suurin väestöryhmä. Alue tunnetaan Piva-joen mukaan nimellä Piva. Joelle rakennettiin 1970-luvulla Mratinjen pato, joka on 220 metriä korkea. Padon taakse syntyi Pivan tekojärvi, ja kunnan keskusta siirrettiin pois tulvan alta vuonna 1975. Pivan luostari on rakennettu 1500-luvulla. Luostari purettiin ja koottiin uudelleen kivi kiveltä uuteen paikkaan, ja luostarin seinämaalaukset siirrettiin mukana.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-pluzine-v-fd47f285.jpg',
@@ -9410,7 +9410,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Podgorica: {
       lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
-      pitka: "Podgoricassa asuu noin 172 000 ihmistä, ja itsenäisen Montenegron pääkaupunkina se on toiminut vuodesta 2006. Morača-joen yli kaartuu heinäkuussa 2005 avattu Millennium-silta. Toinen maamerkki on Kristuksen ylösnousemuksen katedraali, joka vihittiin käyttöön 2013 ja näkyy kauas yli kaupungin. Ottomaanien ajan Stara Varošia edustaa 1600-luvun kellotorni, yksi harvoista rakennuksista, jotka selvisivät toisen maailmansodan pommituksista. Kesäisin kaupunki on maan kuumimpia paikkoja: Montenegron lämpöennätys 44,8 astetta mitattiin täällä elokuussa 2007.",
+      pitka: `Podgorica on Montenegron pääkaupunki maan keskiosassa, ja kunnassa asuu noin 180 000 ihmistä. Koko Montenegrossa asukkaita oli vuoden 2023 väestönlaskennan mukaan noin 620 000. Kaupunki on Morača- ja Ribnica-jokien yhtymäkohdassa, noin 15 kilometrin päässä Skadarjärvestä. Vuoteen 1992 asti kaupungin nimi oli Titograd, Jugoslavian johtajan Josip Broz Titon mukaan. Montenegron yliopisto perustettiin Podgoricassa vuonna 1974. Kaupungissa on osmanien ajalta peräisin oleva kellotorni. Podgorica liitettiin Montenegroon vuonna 1878. Kaupungin lentoasema on yhdeksän kilometrin päässä kaupungista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
@@ -9433,7 +9433,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Rožaje': {
       lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
-      pitka: "Rožajen kaupungissa asuu noin 13 600 ihmistä ja koko kunnassa noin 27 600, ja se on Montenegron bosniakkien kulttuurinen keskus. Kaupungin suurin moskeija, Sulttaani Murad II:n moskeija, uudistettiin perusteellisesti 2008. Pääaukiolta on parin minuutin kävely Ganićin torniin, joka rakennettiin 1797 kula-tyylisenä asuintornina ja toimii nykyään kotiseutumuseona: siellä esitellään pukuja, käsitöitä ja arjen esineitä. Rajaseudulla kohoaa Hajlan vuoristo, ja lähellä kaupunkia toimii hiihtokeskus.",
+      pitka: `Rožaje on kunta Montenegron koillisosassa. Kunnassa asuu noin 23 000 ihmistä, ja valtaosa on bosniakkeja, joita pidetään omana kansanryhmänään ja jotka ovat pääosin muslimeja. Rožajea kutsutaan Montenegron bosniakkiyhteisön keskukseksi. Ibar-joki saa alkunsa Rožajen kaupungin kohdalta ja halkoo kaupungin kahtia. Päätie yhdistää kunnan Kosovoon ja Serbiaan. Kunnan korkein vuori on Hajla, jonka huippu on 2 403 metrin korkeudessa. Kaupungissa on Ganićin torni, joka on nykyään museona.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-rozaje-v-68cdf3f4.jpg',
@@ -9456,7 +9456,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šavnik': {
       lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
-      pitka: "Šavnikin kunta kattaa noin 550 neliökilometriä ja 27 asutusta, mutta koko kunnassa asuu alle 1 600 ihmistä eli vain noin viisi neliökilometrillä. Jugoslavian aikaisen teollistumisen ohittama seutu on jäänyt hiljaiseksi: ihmiset kävelevät jokien rannoilla tai kalastavat Bukovicassa ja Bijela-joessa. Žabljakiin on noin 15 kilometriä ja Nikšiciin noin 45. Ympäristö on suojeltu Dragišnican ja Komarnican luonnonpuistona, joka kattaa kanjoneita ja vuoristoa.",
+      pitka: `Šavnik on kunta Montenegron pohjoisosassa, Drobnjaci-nimisellä seudulla. Se on asukasluvultaan maan pienin kunta: vuoden 2023 väestönlaskennassa asukkaita oli noin 1 600, vaikka pinta-alaa on 553 neliökilometriä. Kuntakeskus Šavnik on pieni kaupunki, jossa asuu 364 ihmistä. Se sijaitsee noin 840 metrin korkeudessa kolmen joen, Bukovican, Bijelan ja Šavnikin, yhtymäkohdassa. Žabljakiin on matkaa 15 kilometriä ja Nikšićiin 45 kilometriä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
@@ -9479,7 +9479,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tivat: {
       lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
-      pitka: "Tivatissa asuu noin 10 700 ihmistä, mutta lentokenttä käsittelee moninkertaisen määrän: 2019 se palveli noin 1,37 miljoonaa matkustajaa. Kaupunki on rakentunut Vrmac-harjun ja lahden väliin, ja sen edustalla on kolme pientä saarta. Yksi niistä on Gospa od Milosti, noin 160 metriä pitkä ja 60 metriä leveä saari, jolla on Neitsyt Marian kappeli. Rannalla seisoo Buća-Lukovićin kartano, jonka linnoitettu torni on vuodelta 1548 ja jonka museo perustettiin 2017.",
+      pitka: `Tivat on pieni kunta Montenegron rannikolla, Kotorinlahden keskiosassa. Se on pinta-alaltaan maan pienin kunta, 46 neliökilometriä, ja kunnassa asuu noin 16 000 ihmistä. Tivat on Kotorinlahden alueen nuorin kaupunki, ja sen kasvu alkoi 1800-luvun lopulla, kun Itävalta-Unkari rakensi sinne merivoimien arsenaalin vuonna 1889. Venetsia hallitsi aluetta vuosina 1420–1797. Entisen arsenaalin paikalla on nykyään Porto Montenegro, huviveneiden satama.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-maakunta2-tivat-v-9b42b4b0.jpg',
@@ -9502,7 +9502,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ulcinj: {
       lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
-      pitka: "Ulcinj perustettiin viidennellä vuosisadalla eaa., joten se on yksi Adrianmeren rannikon vanhimmista asutuksista; roomalaiset valtasivat sen 163 eaa. Osmanien valtakunta hallitsi kaupunkia yli kolmesataa vuotta, kunnes se liitettiin Montenegroon 1880 suurvaltojen painostuksen jälkeen. Kaupungin lähellä levittäytyy Ulcinjin suola-allas, noin 1 500 hehtaarin kosteikko, jossa on havaittu noin 250 lintulajia; alue julistettiin luonnonpuistoksi 2019. Sen matalissa altaissa ruokailevat flamingot, pitkäjalat ja harvinaiset kähäräpelikaanit, ja Adrianmeren lintureitillä se on tärkeä levähdyspaikka.",
+      pitka: `Ulcinj on kunta Montenegron eteläisimmässä osassa Adrianmeren rannalla, Albanian rajan vieressä. Kunnassa asuu noin 21 000 ihmistä, ja noin kolme neljästä on albaaneja. Ulcinjin kaupunki on yli 2 000 vuotta vanha, ja sen linnoitettu vanhakaupunki on säilynyt keskiajalta. Kunnan alueella on Velika plaža, noin 12 kilometriä pitkä ranta, joka on Montenegron rannikon pisin. Ada Bojana on saari, jossa harrastetaan leijalautailua. Kaupungin eteläpuolella on suola-alue, jolla käy paljon lintuharrastajia. Osmanit valloittivat kaupungin vuonna 1571. Huhtikuussa 1979 maanjäristys vaurioitti kaupunkia pahoin, ja se rakennettiin nopeasti uudelleen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
@@ -9525,7 +9525,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Žabljak': {
       lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
-      pitka: "Žabljakissa asuu vain noin 1 700 ihmistä, ja kaupunki perustettiin 1871. Se on kasvanut Durmitorin kansallispuiston portiksi. Puisto perustettiin 1952 ja otettiin Unescon maailmanperintöluetteloon 1980; sen pinta-ala on noin 32 000 hehtaaria. Vuoristossa kohoaa Bobotov Kuk, 2 523 metriä korkea huippu, ja lunta on rinteillä noin 120 päivänä vuodessa. Kesällä kävijöitä tuovat vaellus, pyöräily ja koskenlasku, talvella laskettelu. Durmitorin vuoristossa on kymmeniä yli 2 000 metrin huippuja, ja kaupungin keskustasta pääsee kävellen Mustajärven rannalle.",
+      pitka: `Žabljak on kunta Montenegron pohjoisosassa, Durmitor-vuoristossa. Kunnassa asuu noin 2 900 ihmistä. Kuntakeskus on 1 456 metrin korkeudessa, ja sitä pidetään Balkanin korkeimmalla sijaitsevana kaupunkina. Durmitorin kansallispuisto on Unescon maailmanperintökohde. Puistossa on 18 jäätikköjärveä, joista suurin ja Žabljakia lähin on Crno jezero eli Musta järvi. Tara-joen kanjoni on noin 1 300 metriä syvä, ja joella lasketaan koskea. Talvisin Durmitorin rinteillä hiihdetään ja lasketaan lumilautaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
