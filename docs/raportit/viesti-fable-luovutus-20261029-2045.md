@@ -32,3 +32,13 @@ Edellinen: viesti-fable-luovutus-20261029-1748.md (tämä voittaa).
 - Monitorit: odottajavahti + codex-posti-vahti (uusi PT käynnistää uudelleen, 30 min, re-arm).
 - Viestiraja täyttyi 18.1x → käytä mcp__ccd_session_mgmt__send_message session-id:llä.
 - Levossa oikeutetusti: NUI, SK; NS odottaa maastoa.
+
+## LISÄYS 21.2x (konteksti 29 %)
+- OSASARJA käynnissä (KK:n operatiivinen päätös, EI Raamattuun; loki PR 5614; työlistan rivi "Juoksupelin yhteinen osasarja").
+  PK:n suunnitelma hyväksytty (8 kohdan pariajo + pintatarkistus tänään; Splines-ladonta 1–2 pv; QA `palatsi osasarja 0|1`).
+  LR:n suunnitelma hyväksytty (12 osaa, 0,1 m ruudukko, 2 m moduuli, metrinen UV); MUOTO = PK:n osat.glb + ladonta.json.
+- LR v72 kuitattu junaan 215 (aukion kivijalka + reunakivi, poikittainen reuna pois; JU vie TF 214:n jälkeen; PK päivittää).
+- TAIHEMEN-PÄÄTÖS (PT): tekaistut pohjoiset porttimuurit z −195…−174,5 pois LR v73:ssa (mitat oikeat 20.10. 07.30);
+  PK tarkistaa radan/törmäykset/botin ensin. LR nollattiin 21.2x → päätös lähetetty uudelle LR:lle.
+- VS: aukion pinnat (erolista 1, 2, 7) + jaettu pintasarja; pelikuvan lämmin sävy (F:n valokartta) VS:lle.
+- Juna 214: yhä vain maastokopio (JU, arvio ~21.00) → NS lukitus → TF.
