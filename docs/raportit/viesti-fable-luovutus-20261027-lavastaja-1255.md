@@ -1131,3 +1131,30 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   ei-pelitiedostot poistetaan nyt ennen SHA256SUMS:ia; SHA256SUMS OK (tiiviste 6161f49c…). Seuraavaan junaan; EI ämpäriin ennen PT:n kuittausta.
 - PT KUITTASI v71 (18.5x): junaan 215 (214 lukitaan v70:llä); JU vie ämpäriin TF 214:n jälkeen.
 - SEURAAVAKSI: EROLISTA (lisäys 81: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
+
+## LISÄYS 89 klo 20.59 (29.10.): v72 AUKIO 03 + v73-pinnat VS:lle + OSASARJA (LUOVUTUS, konteksti 31 %)
+- Tehtävät PT:ltä: 20.5x aukio 03 (kivijalka + reunakivet), 21.0x KK:n erolista /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/
+  erolista-aukio-03-03b-20261029.md (LR: 1 hallin katto kovera + nurkat ylös + harjakoristeet/-eläimet, 3 Tirenge/Hongyige kaksikerroksisiksi
+  todellisilla paikoilla, 4 porttirakennuksen päätyihin lasitiilikatto + kannatinvyö, 5 terassikaiteet erillisiksi pylväiksi/johteiksi; mitat oikeat;
+  Codex-osat pysyvällä luvalla, hae ensin vanhat: K/codex-mallit-v2, K/c1-v*, K/c2-v*), 21.3x OSASARJA (spesi …/keskustelukanava/osasarja-juoksupeli-20261029.md).
+- AUKIO 03 = Taihemenin (f-taihemen, paikka_pohja 7,337 / −216,159, rakennukset.json) pohjoiset porttimuurit (paikalliset x −9,2…−7,2 ja 5,0…7,0,
+  z 21…41,7 = maailma −195…−174,5). Kivijalka oli V4_stone (ei V4_sokkeli). Rakennusmallit ovat PAIKALLISESSA kehyksessä (tunnistekuva:
+  scratchpad-työkalu tunnisteet2.py tiedosto@x,z). PELI PIIRTÄÄ F:n LOD0:n C2-paketin f-taihemen-lod0-kaiteeton.glb:stä (unity.log "LOD0 kaiteeton")
+  → muutokset myös sinne. Kaukana LOD1.
+- UUSI K/tyokalut/aukio_reunakivi.py (kujan reunakiven profiili 0,25 × 0,32, viiste 0,02, V4_kujakivi_reuna, kivet 0,7 ± 0,1, UV kuten kujissa,
+  kiertosuunta normaalin mukaan) + portti_kivijalka.py KORKEUS=1.8. Ketju K/tyokalut/aja_v143_pari.zsh: rakennukset-v130/kielletty-rakennukset-v54
+  (lod0+lod1), yksikerros-v115 (taustan 2-1 poikittainen kivireuna z −192,6 pois: konsoli_pois.py MAT=V4_kivireunus/V4_marmori), c2-v5/kielletty-c2-v4.
+- v72 = K/tyokalut/paketti_v72.py: _valmiit/juoksupeli-kk-lavastaja-v72-vienti-20261029 = v71 + rakennukset-v54 + tausta-v72 + kielletty-c2-v4;
+  314 tiedostoa, SHA256SUMS OK (tiiviste d3af58a6…). Pari havainne-editori-20261029-205230 (03/03b, juuri H/juuri-pk7-v72 = PK:n juuri-pk7-v71
+  + linkit). Kivijalka/reunakivi näkyvät lämpiminä (valokartta) → VS. PT:lle ja PK:lle ilmoitettu; EI ämpäriin ennen PT:n kuittausta.
+  PK: koodiin tausta-v72, rakennukset-v54, MuurikateC2Kansio "kielletty-c2-v4/".
+- TARKISTUS PT:lle: porttimuurit z −195…−174,5 eivät ole OSM:ssä (Taihemenin alusta päättyy z −200, portaat −188) → PT:n päätös, ei muutettu.
+- v73-POHJA (VS 21.3x, erolista 2): K/tyokalut/hallit_pinnat.py (V4_wood ← Codex 1070 ristikko-pariovi, u-toisto max(1, round(w/(h·0,37))),
+  kapeat < 0,6 m vakio-UV kehykseen; V4_palkkivyo ← 1067 u/(4·vmax)); ketju aja_v144_pari.zsh → rakennukset-v131/kielletty-rakennukset-v55
+  (a–d, f, g-*, l, m, n, o, u; ei p-, t-) + c2-v6/kielletty-c2-v5, juuri H/juuri-pk7-v73. VS ajaa parin; paketti v73 vasta VS:n/PT:n jälkeen
+  (paketti_v72.py mallina: rakennukset-v55, c2-v5).
+- OSASARJA: PT hyväksyi suunnitelman (12 osaa, 0,1 m ruudukko / 2 m moduuli, origo alareunan keskellä seinälinjalla, +Z pituus, +X kadulle,
+  metrinen UV kujakivien tiheydellä; lähde kujien v71). MUOTO = PK:n: kielletty-osasarja-vN/ osat.glb (nimetyt osat) + ladonta.json (polut
+  pohja.json-kehyksessä). PK lähettää esimerkin (yksi aukion muuri) → sovittu muoto 1 rivillä PT:lle → ensimmäinen osaerä + B-kirjaus
+  (docs/tuotanto/tekotavat/3d-ja-kuvat.md "Juoksupelin osasarja": osat, ruudukko, Splines-ladonta, jaettu pintasarja, pintatarkistus) SAMASSA PR:ssä.
+- SEURAAVAKSI: (1) PT:n kuittaus v72 / VS:n pari v73; (2) PK:n osasarjaesimerkki → osasarja v1; (3) erolistan 1, 3, 4, 5 rinnakkain.
