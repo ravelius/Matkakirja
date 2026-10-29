@@ -904,3 +904,33 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   pystymallisia (korkeus ~1,4 × leveys); havainteessa kivi ~0,4 × pelin kiven korkeus ja ~2,2 × pituus (~3–4 × korkeuttaan pidempi),
   matalina pitkinä kerroksina limittäin. Kivijalan kokonaiskorkeus pysyy (täsmää havainteeseen). Kaikki kujat ja aukiot.
 - Samaan pariin 02 lattian ja reunakiven kanssa → KK → omistaja. Kivisarjan uusinta Codexilla PK:n kautta, jos tarvitaan.
+
+## LISÄYS 72 klo 13.4x (29.10.): LISÄYS 69 TEHTY (rakennukset-v124/v125), 05:N SIIVET, REUNUSKIVET (v107) — LUOVUTUS, ALOITA TÄSTÄ
+- Python: /opt/homebrew/bin/python3 ILMAN -I:tä (numpy on käyttäjän site-packagesissa; -I estää sen). K on symlinkki T7:lle.
+- rakennukset-v124 (K/tyokalut/rakenna_v124.zsh, v119:stä, toistaa v123:n tavulleen kun SX02=0.83 AUKKO2=3.5 H05=3.45):
+  02: lehdet + katto SX 0,47 (~1,2 × portin seinä, KK OK) + UUSI portti_chiwen.py (harjakoristeet harjan päihin); 05: aukko 3,5 → 4,1 m
+  (portti_havainne.py toinen kierros AUKKO=3.5 AUKKO2=4.1) + lehdet H 4,05; t-portit v123:sta. KK kuittasi 02 + 05-aukon.
+- 05:n "sivumuurit" = portin oma runko (12,4 m × 5,9 m; ei dataa: havaintoportti, pohja.json muurit oletus 4,0 m). KK 13.2x: tee ennen
+  v66:ta. UUSI portti_siivet.py (rakenna_v125.zsh: v124 + siivet + katto_kapea SX 0,645 SZ 1): runko leikataan x = ±3,54 (torni jää),
+  sivuista y ≤ W; siipiin friisi, räystään alus, kultareuna, tiilirinteet, harja (UV sovitettu portin friisistä ja katosta).
+  W=2,75 (havainteen mittari 0,17) jätti kujan 05 omat muurit (räystäs 3,84–5,15 m, länsipuolella rakennuksia) siipien yläpuolelle →
+  NYT W=3.9 FH=0.4 RH=0.75 (siipien räystäs samaan linjaan kujan muurien kanssa = KK:n "räystään alareuna kamanan korkeudella").
+  Pari 05 W=3.9: -134428/05 (sovitettu), -134650/05 (pelikamera; friisi juuri yläreunassa, muurien kanssa samassa linjassa) → KK:lla
+  parien 02 (-133647/02, -134120/02) kanssa 13.5x. W=2.75-parit: -133647/05, -134120/05 (siivet irti muureista).
+- PT 13.5x (KK, dronevideo 129–132 s): portin yläpinta tasainen harmaa taso, josta pystyy punaisia pilareita (näkyy katon häivytyksessä,
+  näyttää rikkinäiseltä). Selvitä mikä portti (videon kohta) → kansi katon alle (esim. V4_red/V4_raystas_alus_puu) ennen v66:ta.
+- Lisäys 70 (reunuskivet, LR:n osuus): UUSI reunakivi_matala.py → yksikerros-v107 (= v106 + 960 kujan reunakiveä × 0,5 korkeus,
+  892 × 2,25 leveys ulospäin muurista; 68 ilman sokkelia vain matalaksi). Pari 02 -133647 näyttää matalan leveän reunuksen.
+- Lisäykset 70–71, varjostin (laattakoko, kivijalan lohkot, ReunusRaja ~1,4 m) = PK (PK:n luovutus PR 5589); pari 02 yhdessä PK:n kanssa.
+- juuri-v133m = v130m + rakennukset-v125 + tausta v107; ajo: J=v133m KOHDAT="02 05" zsh K/tyokalut/aja_v132_pari.zsh.
+- SEURAAVAKSI: 05-parin tarkistus (siivet, myös LOD1/2 ok?) → KK → paketti_v66.py: vaihda R rakennukset-v125:ksi ja tausta
+  yksikerros-v107:ksi + LAHTEET (nyt osoittaa v124:ään ja v106:een) → aja → PK (läpikulku 05, reunukset kavensivat kujaa ~0,5 m/puoli) → PT.
+
+## LISÄYS 73 klo 13.5x (29.10.; PT kirjasi KK:n viestistä): KUJA 05 = MATALA SIIPI + LÄHIMUURIT SAMAAN RÄYSTÄSLINJAAN
+- KK: v125:n korkeat siivet (W=3.9, -134428/05) EIVÄT täytä palautetta: räystäs ja friisi jäävät kuvan yläreunan yli (havainteessa
+  friisin alareuna 0,17 kuvan korkeudesta). VALITAAN MATALA siipi (W=2.75, -133647/05: friisi 0,17, oikein).
+- Samalla kujan 05 lähimuurit (kuvan reunoilla siipien takana nousevat punaiset seinät) LASKETAAN samaan räystäslinjaan siipien kanssa,
+  niin että friisi jatkuu yhtenäisenä kuten havainteessa. Muurien korkeus ei tule datasta (LR 13.3x) → noudatetaan ulkoasua, ei
+  selitystä omistajalle. Länsipuolen rakennukset saavat jäädä taakse omine kattoineen.
+- 01 (lukittu) ja 02 ennallaan. 02:n uudet reunakivet ja katto OK (KK) → pari 02 odottaa PK:n laattoja ja kivijalan kiviä.
+- Järjestys: 05 matala siipi + muurit → pari 05 → KK → paketti_v66.py (lisäyksen 72 SEURAAVAKSI-kohta, R = uusi rakennukset-versio).
