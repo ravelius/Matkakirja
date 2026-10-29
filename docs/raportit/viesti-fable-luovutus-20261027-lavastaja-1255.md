@@ -1463,3 +1463,27 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - v88 (4f671194) = v86 + kaiteet-v3 kaide-pylvas → V4_marmorikaide_pylvas; EI c2-v18:aa (PT luki ensin vanhan v88:n; vastattu). NUI ottaa 06-zoomin.
 - SEURAAVAKSI: PT:n kuittaus 03-pariin / PK:n vyökorjaus → paketti (v88:n päälle): k7 (v147) + siipikatto (v148) + A6 (v167, PK:n pari) PT:n ohjeen mukaan;
   REF 362182ba5 -juuret v89/v90-mallilla (pelin odottamat v83-kansionimet). Jono: T-risteys, sivuhallit, 04; Codex A2/A4/A1.
+
+## LISÄYS 108 klo 01.37 (30.10.): PT:N TÄYDENNYS + SIVUHALLIT v171 (中右门/中左门) — LUOVUTUS (konteksti 32 %), ALOITA TÄSTÄ
+- PT 01.1x (voittaa LISÄYKSEN 107): A6 (v167) EI pakettiin ennen Codexin 7-välistä yläkerrosta (posti 23.54, e48669603); vyön tummansininen = VS:n
+  shader (korjattu linssiseppa2/vyo-215 a67a2ba20); v88 odottaa NUI:n 06-zoomia + KK:ta → ei rakenneta v88:n päälle ennen kuittausta. 03-pari 010632
+  kuitattu kannattimien osalta; lopullinen 03-pari REF 362182ba5 + a67a2ba20 → PT → KK; paketti (k7 v147 + siipikatto v148) vasta kuittauksen jälkeen.
+- PT 01.3x: "siipimuurien V4_palkkivyo-UV osuu 1067-kuvan tummansiniseen reunaan, korjaa v 0–1" → TARKISTETTU: f-taihemen-siipikatot-lod0 V4_palkkivyo
+  UV on jo v 0–1 (ala 1, ylä 0), u = pituus/(0,45·4), kuva 1067-palkkimaalaus 2048×512 → vastattu PT:lle, että vika on pelin puolella (VS:n
+  UV-käsittely, ehkä metrinen v/vmax). Odota PT:n vastaus ennen lopullista 03-paria.
+- SIVUHALLIT (PT 01.2x "tee odotellessa havainteen 03/03b mukaan: mittasuhteet, katot, pylväsrivit; paikat oikeat; pari 03b → PT; sitten Codex A2/A4/A1"):
+  03b:n sivuilla näkyvät kulmaportit 中右门 (t-portti-m15, x −80,6 z −14,8) ja 中左门 (taustassa, Codexin 32 m möhkäle). UUSI K/tyokalut/
+  sivuhalli_taihemenista.py: Taihemenin valmis 重檐歇山-halli (pinnat, friisit, chiwen, harjaeläimet, UV1-valo) akselikehykseen (−2,03°), 2 jännettä/puoli
+  pois pylväiden keskitasoissa x ±8,246…±18,844 (9 → 5 jännettä), skaalaus m15:n seinälinjoihin (x 0,904, y 0,849, z 0,729; lattia 2,5), kierto takaisin;
+  'peili' = peilaus akselikehyksessä. Apuvälineet: peilaa_akselilla.py, poista_osat.py, glb_tiivista.py, glb_info.py, alue_laske.py, aukio_kuvat.py
+  (Blender-esikatselu; Blenderissä katot näyttävät leijuvilta myös alkuperäisessä Taihemenissa = renderöintiero, ei vika).
+  Ketju K/tyokalut/aja_v171_sivuhallit.zsh → K/sivuhallit-v171/kielletty-rakennukset-v76 (= rakennukset-v148 + h-zhongyoumen, h-zhongzuomen (78,4; −9,7 =
+  OSM-keskikohta), t-portti-zhongzuomen (m15:n runko peilattuna, reitit/lapikulku peilattu); m15 ilman kattoa ja V4_red-seiniä, törmäys ennallaan)
+  + kielletty-tausta-v76 (= duanmen-v163 tausta-v74 − 中左门-alue, alueet.json; 左翼门 x ≥ 100,4 säilyy). Juuri H/juuri-pk7-v91 (= v90 + nämä v69/v73-nimillä).
+  Esikatselut K/sivuhallit/v1-*.png (03b, lahi-lansi, lahi-ita). PARI 03/03b AJOSSA 01.3x (REF 362182ba5, LISA="ui juoksupeli valo kuvabias 0"), loki
+  scratchpad pari-v171.log → uusin proto-3d/lokit/havainne-editori-20261030-01xx…/03b → TARKISTA ja PT:lle (kuva + polku, ≤ 3 riviä).
+  Huom: h-zhong*-lod0 7,0 MB, lod1 4,2, lod2 2,5 (Taihemenin kuvat mukana) → mainitse PT:lle; törmäys vain sisälaatikko y 7–12 (PK tarkistaa).
+  Seuraavat sivuhallit: pitkät sivukäytävät 院墙5/院墙8 (x ±100, z −209…−145) ja 侧墙5 (läns) / peilaus itään (侧墙6 poistui 中左门:n mukana).
+- LÖYDÖS (PT:lle ilmoitettu): Hongyigen (弘义阁, x −117…−93, z −146…−82) katto puuttuu taustasta yksikerros-ketjusta v57 lähtien (vaaka_yksi_kerros.py)
+  → valkoinen laatikko; A6 korvaa.
+- SEURAAVAKSI: (1) pari v171 → PT; (2) PT:n vastaus vyön UV:sta → lopullinen 03-pari; (3) Codex A2/A4/A1 (PK:n kansio proto-3d/_tyo/pelikoodari/codex-osat-215/).
