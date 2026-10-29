@@ -1,0 +1,76 @@
+{
+  "name": "lion",
+  "path": "3d/lion.glb",
+  "sha256": "46ae9cfa47359f449cb9fe9a2ac4fe895382d247c4803c2cdfa59a38bfa70cc5",
+  "bytes": 3860196,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1253-lion-attempt1.glb",
+  "sourceSHA256": "3d1c6681dc20e84021804812eb696f6e0963a532ca9ce82292292e7db3e9c178",
+  "triangles": 4800,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.2320229271109575,
+    0.4999999701976776,
+    0.4278243149045531
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5111374258995056,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/lion/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "bb7a41a5d38c7045765b6b5350aa273bdfd967c8b542d0fd7c680f9d1eea873a",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/lion/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "2356286903f26fc8d9b78583c77e080daf8c04e69d09351cdcd181d652b84237",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/lion/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "267fc05b7aaaf08fda14141c0149b2685876bd05d676d94f291f1fc75c7dbf50",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -63.5,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 132.546875,
+  "elapsedSeconds": 1.2262791669927537,
+  "visualReviewAt": "2026-10-29T20:23:16.283647+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not a measured museum replica.",
+    "Fine details soften at5000triangle target; PBR lighting and rooftop placement await receiver game pair."
+  ]
+}

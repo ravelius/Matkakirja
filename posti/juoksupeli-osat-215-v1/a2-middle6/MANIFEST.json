@@ -1,0 +1,748 @@
+{
+  "createdAt": "2026-10-29T20:35:24.244717+00:00",
+  "order": "A2 middle six / #1253–1258",
+  "status": "TECHNICAL_READY_RECEIVER_PENDING",
+  "assets": [
+    {
+      "name": "lion",
+      "path": "3d/lion.glb",
+      "sha256": "46ae9cfa47359f449cb9fe9a2ac4fe895382d247c4803c2cdfa59a38bfa70cc5",
+      "bytes": 3860196,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1253-lion-attempt1.glb",
+      "sourceSHA256": "3d1c6681dc20e84021804812eb696f6e0963a532ca9ce82292292e7db3e9c178",
+      "triangles": 4800,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.2320229271109575,
+        0.4999999701976776,
+        0.4278243149045531
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5111374258995056,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/lion/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "bb7a41a5d38c7045765b6b5350aa273bdfd967c8b542d0fd7c680f9d1eea873a",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/lion/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "2356286903f26fc8d9b78583c77e080daf8c04e69d09351cdcd181d652b84237",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/lion/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "267fc05b7aaaf08fda14141c0149b2685876bd05d676d94f291f1fc75c7dbf50",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -63.5,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 132.546875,
+      "elapsedSeconds": 1.2262791669927537,
+      "visualReviewAt": "2026-10-29T20:23:16.283647+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not a measured museum replica.",
+        "Fine details soften at5000triangle target; PBR lighting and rooftop placement await receiver game pair."
+      ],
+      "task": 1253,
+      "jobId": "6e8945ed-d1da-41c9-8f26-298de18707e3",
+      "url": "https://studio.tripo3d.ai/workspace/generate/6e8945ed-d1da-41c9-8f26-298de18707e3",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/lion-reference01.png",
+      "referenceSHA256": "de1f155a49e9a6a9a28c1a57132dfa01bcac6cf2a045d173f409e69ccb5040e1"
+    },
+    {
+      "name": "heavenly-horse",
+      "path": "3d/heavenly-horse.glb",
+      "sha256": "52e1e96bdd9621769d6340f946d4f5423478d97a5726560d955fe2b96bb4588f",
+      "bytes": 4183216,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1254-heavenly-horse-attempt1.glb",
+      "sourceSHA256": "7668ebf06839f346a7142c674687b709156e7580996ba086c52a410aeebec6f5",
+      "triangles": 4788,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.18148545175790787,
+        0.5,
+        0.44202500581741333
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5071346759796143,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/heavenly-horse/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "f07ba4266f72b0fa5b352129381da2aba570044b6c505d6d4f9cae8f6a1c4d8d",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/heavenly-horse/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "16761888f2d8f3e5055da49f7d39b1cb6e7f3b6ef0c33a3cf271ff3d44c97be0",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/heavenly-horse/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "e0f823efdf1956d27227985017514fee06ef5c5874d15fac83c46115d397f3cc",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 137.0,
+      "elapsedSeconds": 1.3730160830309615,
+      "visualReviewAt": "2026-10-29T20:23:16.283647+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not a measured museum replica.",
+        "Fine details soften at5000triangle target; PBR lighting and rooftop placement await receiver game pair."
+      ],
+      "task": 1254,
+      "jobId": "2795e699-431f-46fe-801d-34be4d99b485",
+      "url": "https://studio.tripo3d.ai/workspace/generate/2795e699-431f-46fe-801d-34be4d99b485",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/heavenly-horse-reference01.png",
+      "referenceSHA256": "499a25825b6d1e674d094414b5310d6c07c3e6fcce9989ca45ca0b5cc6306e54"
+    },
+    {
+      "name": "sea-horse",
+      "path": "3d/sea-horse.glb",
+      "sha256": "402e11d849228ca5a1f32428592a4570ba083832601880369cc73a3118691ebf",
+      "bytes": 4253524,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1255-sea-horse-attempt1.glb",
+      "sourceSHA256": "aa86a3869947d7d6271372c53a4f3657c308ac9b856bf4fe66c42a5ab0c845d6",
+      "triangles": 4910,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.19559282809495926,
+        0.5,
+        0.4543296545743942
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5085040330886841,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/sea-horse/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "bdbb2428bb0e8cb1dca4b0c6f63265abfdbd4619f5a889607ce000cd11c29b66",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/sea-horse/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "aa1399745ad459946394c4854769b865224d0622af7ba18d0b5db791b8aa62b7",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/sea-horse/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "0ab7af0881a1b7d9f895a6e5a8005a205eede2107fe920ad1b9f9a8d7726a1bd",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 135.3125,
+      "elapsedSeconds": 1.1945205830270424,
+      "visualReviewAt": "2026-10-29T20:23:16.283647+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not a measured museum replica.",
+        "Fine details soften at5000triangle target; PBR lighting and rooftop placement await receiver game pair."
+      ],
+      "task": 1255,
+      "jobId": "b0554101-672f-4f9b-b101-24cac0a1eae6",
+      "url": "https://studio.tripo3d.ai/workspace/generate/b0554101-672f-4f9b-b101-24cac0a1eae6",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/sea-horse-reference01.png",
+      "referenceSHA256": "cb42cb98210a9874a42db504ca119b52a7777da2dee460dccb18c06949cb1cdd"
+    },
+    {
+      "name": "suanni",
+      "path": "3d/suanni.glb",
+      "sha256": "d9ae6097fcec472c5a564cd6d873159299ba8c62517fa5078fe0201ae470e846",
+      "bytes": 3586920,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1256-suanni-attempt1.glb",
+      "sourceSHA256": "9b74c918304b5c1f335f808a1847b969a99e1346b3f401a86d73d37c2c427d61",
+      "triangles": 4916,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.22608454525470734,
+        0.5,
+        0.4563235640525818
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5098649263381958,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/suanni/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "c05bb1b857c5bc4fbd1e8b81d7666886f006a463725a4db6d061eb337ab2ded4",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/suanni/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "5bfd825290375e5003f2806f5b8b3525477e0ea20ce78564918accbc5f351ed4",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/suanni/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "1113676a77bec7da047fea4fab58e68f07108276b6ffc41388d220c52522a0bd",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 131.0625,
+      "elapsedSeconds": 1.2829737920546904,
+      "visualReviewAt": "2026-10-29T20:33:25.307918+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Fine mane strands soften at 5000 triangles; PBR lighting and roof placement await game pair."
+      ],
+      "task": 1256,
+      "jobId": "1f786831-cfb9-4db3-86eb-6e9796b2b82f",
+      "url": "https://studio.tripo3d.ai/workspace/generate/1f786831-cfb9-4db3-86eb-6e9796b2b82f",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/suanni-reference01.png",
+      "referenceSHA256": "3da19a82034a8defa5eaa0d4905e90bdd90622e832e7ce37c5f6d41901eb398a"
+    },
+    {
+      "name": "yayu",
+      "path": "3d/yayu.glb",
+      "sha256": "d2403ba75b5d3184e67571c17efd56d355336ed8dd12c4d7fc391414fc8b0a86",
+      "bytes": 3637996,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1257-yayu-attempt1.glb",
+      "sourceSHA256": "878b0f36a7a6d5bfbfc2d6cc37f21e040b8a903b6f0e0b5b7a98d831312dbae7",
+      "triangles": 4883,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.2230028510093689,
+        0.4999999701976776,
+        0.44519655406475067
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.509880781173706,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/yayu/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "787b3ad8fd1f96fa6ae969ea96e97b5a3f0a0c5a49a324568be5568233645335",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/yayu/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "15071774c4f8c274ac132aae8655f88edcc1169cbecb464ba38350ac0a7ca315",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/yayu/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "1aa111b626dbf8e04b8f746fc3feac45b1a23ced9299d41670d753598fdb9b9a",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 131.15625,
+      "elapsedSeconds": 1.161969583015889,
+      "visualReviewAt": "2026-10-29T20:34:27.151117+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Scales and two-lobed fish tail retained; PBR lighting and roof placement await game pair."
+      ],
+      "task": 1257,
+      "jobId": "74226643-cf8c-4486-ab2f-add91c71f033",
+      "url": "https://studio.tripo3d.ai/workspace/generate/74226643-cf8c-4486-ab2f-add91c71f033",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/yayu-reference01.png",
+      "referenceSHA256": "273f989bf557c1d4281070b6760b326225e954108636bc78bf8d187c39e829b3"
+    },
+    {
+      "name": "xiezhi",
+      "path": "3d/xiezhi.glb",
+      "sha256": "08f9d6555a272d2272dd32423b850cd1fafd191de80db57bfb62c5c08e35dffb",
+      "bytes": 3986392,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1258-xiezhi-attempt1.glb",
+      "sourceSHA256": "346077bec3b14ed2353265c2b9ecfca080c856e7f8fc95f11eebfbda1a3449b8",
+      "triangles": 4898,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.20345227420330048,
+        0.5,
+        0.41335226595401764
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5091044902801514,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/xiezhi/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "ab25cd7e83dc17ce62092e3012480617d174f8021378c1e6a65ad07ba40d57f4",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/xiezhi/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "34eeaab12c46b6b299f85476547fcd60462cc73a831a33cba6993b52c5ea277f",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/xiezhi/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "5211c15357cb7f7e5953e437a48194d7277714ba92bac1257ee31844af0fc357",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 136.703125,
+      "elapsedSeconds": 1.1371062499238178,
+      "visualReviewAt": "2026-10-29T20:35:24.011970+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Single horn and goat-like face retained; paws are sculptural rather than anatomically exact hooves. Judge at rooftop game distance.",
+        "PBR lighting and roof placement await game pair."
+      ],
+      "task": 1258,
+      "jobId": "9c362220-6335-4708-b720-b6ad4dea1b04",
+      "url": "https://studio.tripo3d.ai/workspace/generate/9c362220-6335-4708-b720-b6ad4dea1b04",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/xiezhi-reference01.png",
+      "referenceSHA256": "254e44d29d72f486a1b8963ac7e36dee585df9ad43e25604a5d370e7063faa4d"
+    }
+  ],
+  "liike": "ei liikettä",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "files": [
+    {
+      "path": "3d/heavenly-horse.glb",
+      "sha256": "52e1e96bdd9621769d6340f946d4f5423478d97a5726560d955fe2b96bb4588f",
+      "bytes": 4183216,
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/lion.glb",
+      "sha256": "46ae9cfa47359f449cb9fe9a2ac4fe895382d247c4803c2cdfa59a38bfa70cc5",
+      "bytes": 3860196,
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/sea-horse.glb",
+      "sha256": "402e11d849228ca5a1f32428592a4570ba083832601880369cc73a3118691ebf",
+      "bytes": 4253524,
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/suanni.glb",
+      "sha256": "d9ae6097fcec472c5a564cd6d873159299ba8c62517fa5078fe0201ae470e846",
+      "bytes": 3586920,
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/xiezhi.glb",
+      "sha256": "08f9d6555a272d2272dd32423b850cd1fafd191de80db57bfb62c5c08e35dffb",
+      "bytes": 3986392,
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/yayu.glb",
+      "sha256": "d2403ba75b5d3184e67571c17efd56d355336ed8dd12c4d7fc391414fc8b0a86",
+      "bytes": 3637996,
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "KAYTTO.md",
+      "sha256": "c3330ba8e3124ab56ae0aa28b542e6967218875e3e86703eed33ea11a07ec4ca",
+      "bytes": 819
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "f93506c7054e1184a8c2abb75d5cddb54fd34bd8f1af56f6d1ac03e661f39066",
+      "bytes": 1569
+    },
+    {
+      "path": "esikatselu/heavenly-horse-nelja-suuntaa.png",
+      "sha256": "7aca93a87aa043ec9d299d46c0ca9d5baef1749eb222b8c5154aac7b268a8d16",
+      "bytes": 327182
+    },
+    {
+      "path": "esikatselu/lion-nelja-suuntaa.png",
+      "sha256": "a5821a857c6cbfe2811d8bd558747062247b0ece43e292fc0dad8e612ceab778",
+      "bytes": 388687
+    },
+    {
+      "path": "esikatselu/sea-horse-nelja-suuntaa.png",
+      "sha256": "a56158b37f7f365f8373a254ead32223cee01a832319f52b7d0e381ff721bb0c",
+      "bytes": 340509
+    },
+    {
+      "path": "esikatselu/suanni-nelja-suuntaa.png",
+      "sha256": "0da8c0598dc21bcac5022d535d8739d6eec27b1f4692fac4e57fe1eedb307d7f",
+      "bytes": 382535
+    },
+    {
+      "path": "esikatselu/xiezhi-nelja-suuntaa.png",
+      "sha256": "6e6108d29320462e01a0a24d15fb706f7acf69d0527009e6941dd3792786c66c",
+      "bytes": 330511
+    },
+    {
+      "path": "esikatselu/yayu-nelja-suuntaa.png",
+      "sha256": "fe85b30ad524caf993d3861704e5b4313f17e87c97ce40925d064ed7ce7675f3",
+      "bytes": 356882
+    },
+    {
+      "path": "prompts/heavenly-horse-reference01.txt",
+      "sha256": "4433d7a44cd382dd0638668ad2ef657439c1e21508cc3c7a49b25b882ec19b09",
+      "bytes": 1692
+    },
+    {
+      "path": "prompts/lion-reference01.txt",
+      "sha256": "92e110bd7f75071600b53cd4ab831d6c5c087f5225c9a1d2aa4eadd3d6632914",
+      "bytes": 1577
+    },
+    {
+      "path": "prompts/sea-horse-reference01.txt",
+      "sha256": "fde665ff8ff748354e8c943b4a743fe911db1ec1fcd6a01826449ffabd005a7e",
+      "bytes": 1741
+    },
+    {
+      "path": "prompts/suanni-reference01.txt",
+      "sha256": "562cfb463aac83cbfc5601a0906c550b9efa1d8b347f1a2ff9ff122723b53012",
+      "bytes": 1484
+    },
+    {
+      "path": "prompts/xiezhi-reference01.txt",
+      "sha256": "70de65c29fe9fc5e218b1ac9ea71133c6757294985dde9e0289412838628602c",
+      "bytes": 1549
+    },
+    {
+      "path": "prompts/yayu-reference01.txt",
+      "sha256": "bf06cf937d31ad7dcd7ff1b10711988000960edbf3f5df327d7903fccaeb820c",
+      "bytes": 1548
+    },
+    {
+      "path": "qa/heavenly-horse-technical.json",
+      "sha256": "16b9ee8e2d27f4af92d6a4c1fe4e1706b86727171d0647d343307a5a1fcf9ef4",
+      "bytes": 2180
+    },
+    {
+      "path": "qa/import-gate.json",
+      "sha256": "e4b39baf252158a1d9a3858abf8cedfe469cfbb45adf48ef4fcffd73d53e64b5",
+      "bytes": 9621
+    },
+    {
+      "path": "qa/lion-technical.json",
+      "sha256": "7b788866f0c1e24763e691794993b97608c23ce157ccf62f2367d26f8c86d2b2",
+      "bytes": 2138
+    },
+    {
+      "path": "qa/sea-horse-technical.json",
+      "sha256": "ba20a0be6b168cd4856ba57f27032aa4f00cae519963fd3885100f6896b6a39a",
+      "bytes": 2152
+    },
+    {
+      "path": "qa/suanni-technical.json",
+      "sha256": "5247ea373362614ac3b3d93f558ccc0b85f83626adaca9134513bee9311d05cc",
+      "bytes": 2121
+    },
+    {
+      "path": "qa/xiezhi-technical.json",
+      "sha256": "8948fcdd2532a08f3868eb0b34fe66dfdf5d823c061468ee3bfb6c568ef15dd5",
+      "bytes": 2219
+    },
+    {
+      "path": "qa/yayu-technical.json",
+      "sha256": "e12271c436daf5de3a32f0aca4821846d720c737547b67987c6059fae4e31995",
+      "bytes": 2120
+    },
+    {
+      "path": "tekstuurit/heavenly-horse/basecolor.jpg",
+      "sha256": "16761888f2d8f3e5055da49f7d39b1cb6e7f3b6ef0c33a3cf271ff3d44c97be0",
+      "bytes": 805923
+    },
+    {
+      "path": "tekstuurit/heavenly-horse/metallic-roughness.jpg",
+      "sha256": "e0f823efdf1956d27227985017514fee06ef5c5874d15fac83c46115d397f3cc",
+      "bytes": 143618
+    },
+    {
+      "path": "tekstuurit/heavenly-horse/normal.png",
+      "sha256": "f07ba4266f72b0fa5b352129381da2aba570044b6c505d6d4f9cae8f6a1c4d8d",
+      "bytes": 3095752
+    },
+    {
+      "path": "tekstuurit/lion/basecolor.jpg",
+      "sha256": "2356286903f26fc8d9b78583c77e080daf8c04e69d09351cdcd181d652b84237",
+      "bytes": 786301
+    },
+    {
+      "path": "tekstuurit/lion/metallic-roughness.jpg",
+      "sha256": "267fc05b7aaaf08fda14141c0149b2685876bd05d676d94f291f1fc75c7dbf50",
+      "bytes": 99998
+    },
+    {
+      "path": "tekstuurit/lion/normal.png",
+      "sha256": "bb7a41a5d38c7045765b6b5350aa273bdfd967c8b542d0fd7c680f9d1eea873a",
+      "bytes": 2837515
+    },
+    {
+      "path": "tekstuurit/sea-horse/basecolor.jpg",
+      "sha256": "aa1399745ad459946394c4854769b865224d0622af7ba18d0b5db791b8aa62b7",
+      "bytes": 827005
+    },
+    {
+      "path": "tekstuurit/sea-horse/metallic-roughness.jpg",
+      "sha256": "0ab7af0881a1b7d9f895a6e5a8005a205eede2107fe920ad1b9f9a8d7726a1bd",
+      "bytes": 143417
+    },
+    {
+      "path": "tekstuurit/sea-horse/normal.png",
+      "sha256": "bdbb2428bb0e8cb1dca4b0c6f63265abfdbd4619f5a889607ce000cd11c29b66",
+      "bytes": 3138283
+    },
+    {
+      "path": "tekstuurit/suanni/basecolor.jpg",
+      "sha256": "5bfd825290375e5003f2806f5b8b3525477e0ea20ce78564918accbc5f351ed4",
+      "bytes": 732546
+    },
+    {
+      "path": "tekstuurit/suanni/metallic-roughness.jpg",
+      "sha256": "1113676a77bec7da047fea4fab58e68f07108276b6ffc41388d220c52522a0bd",
+      "bytes": 237928
+    },
+    {
+      "path": "tekstuurit/suanni/normal.png",
+      "sha256": "c05bb1b857c5bc4fbd1e8b81d7666886f006a463725a4db6d061eb337ab2ded4",
+      "bytes": 2474930
+    },
+    {
+      "path": "tekstuurit/xiezhi/basecolor.jpg",
+      "sha256": "34eeaab12c46b6b299f85476547fcd60462cc73a831a33cba6993b52c5ea277f",
+      "bytes": 679066
+    },
+    {
+      "path": "tekstuurit/xiezhi/metallic-roughness.jpg",
+      "sha256": "5211c15357cb7f7e5953e437a48194d7277714ba92bac1257ee31844af0fc357",
+      "bytes": 635402
+    },
+    {
+      "path": "tekstuurit/xiezhi/normal.png",
+      "sha256": "ab25cd7e83dc17ce62092e3012480617d174f8021378c1e6a65ad07ba40d57f4",
+      "bytes": 2532434
+    },
+    {
+      "path": "tekstuurit/yayu/basecolor.jpg",
+      "sha256": "15071774c4f8c274ac132aae8655f88edcc1169cbecb464ba38350ac0a7ca315",
+      "bytes": 706676
+    },
+    {
+      "path": "tekstuurit/yayu/metallic-roughness.jpg",
+      "sha256": "1aa111b626dbf8e04b8f746fc3feac45b1a23ced9299d41670d753598fdb9b9a",
+      "bytes": 379828
+    },
+    {
+      "path": "tekstuurit/yayu/normal.png",
+      "sha256": "787b3ad8fd1f96fa6ae969ea96e97b5a3f0a0c5a49a324568be5568233645335",
+      "bytes": 2404245
+    }
+  ]
+}

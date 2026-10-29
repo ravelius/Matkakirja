@@ -1,0 +1,76 @@
+{
+  "name": "yayu",
+  "path": "3d/yayu.glb",
+  "sha256": "d2403ba75b5d3184e67571c17efd56d355336ed8dd12c4d7fc391414fc8b0a86",
+  "bytes": 3637996,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1257-yayu-attempt1.glb",
+  "sourceSHA256": "878b0f36a7a6d5bfbfc2d6cc37f21e040b8a903b6f0e0b5b7a98d831312dbae7",
+  "triangles": 4883,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.2230028510093689,
+    0.4999999701976776,
+    0.44519655406475067
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.509880781173706,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/yayu/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "787b3ad8fd1f96fa6ae969ea96e97b5a3f0a0c5a49a324568be5568233645335",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/yayu/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "15071774c4f8c274ac132aae8655f88edcc1169cbecb464ba38350ac0a7ca315",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/yayu/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1aa111b626dbf8e04b8f746fc3feac45b1a23ced9299d41670d753598fdb9b9a",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 131.15625,
+  "elapsedSeconds": 1.161969583015889,
+  "visualReviewAt": "2026-10-29T20:34:27.151117+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Scales and two-lobed fish tail retained; PBR lighting and roof placement await game pair."
+  ]
+}

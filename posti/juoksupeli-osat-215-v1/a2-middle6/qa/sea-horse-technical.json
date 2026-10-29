@@ -1,0 +1,76 @@
+{
+  "name": "sea-horse",
+  "path": "3d/sea-horse.glb",
+  "sha256": "402e11d849228ca5a1f32428592a4570ba083832601880369cc73a3118691ebf",
+  "bytes": 4253524,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1255-sea-horse-attempt1.glb",
+  "sourceSHA256": "aa86a3869947d7d6271372c53a4f3657c308ac9b856bf4fe66c42a5ab0c845d6",
+  "triangles": 4910,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.19559282809495926,
+    0.5,
+    0.4543296545743942
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5085040330886841,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/sea-horse/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "bdbb2428bb0e8cb1dca4b0c6f63265abfdbd4619f5a889607ce000cd11c29b66",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/sea-horse/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "aa1399745ad459946394c4854769b865224d0622af7ba18d0b5db791b8aa62b7",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/sea-horse/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0ab7af0881a1b7d9f895a6e5a8005a205eede2107fe920ad1b9f9a8d7726a1bd",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 135.3125,
+  "elapsedSeconds": 1.1945205830270424,
+  "visualReviewAt": "2026-10-29T20:23:16.283647+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not a measured museum replica.",
+    "Fine details soften at5000triangle target; PBR lighting and rooftop placement await receiver game pair."
+  ]
+}

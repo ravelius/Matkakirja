@@ -1,0 +1,76 @@
+{
+  "name": "heavenly-horse",
+  "path": "3d/heavenly-horse.glb",
+  "sha256": "52e1e96bdd9621769d6340f946d4f5423478d97a5726560d955fe2b96bb4588f",
+  "bytes": 4183216,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1254-heavenly-horse-attempt1.glb",
+  "sourceSHA256": "7668ebf06839f346a7142c674687b709156e7580996ba086c52a410aeebec6f5",
+  "triangles": 4788,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.18148545175790787,
+    0.5,
+    0.44202500581741333
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5071346759796143,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/heavenly-horse/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "f07ba4266f72b0fa5b352129381da2aba570044b6c505d6d4f9cae8f6a1c4d8d",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/heavenly-horse/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "16761888f2d8f3e5055da49f7d39b1cb6e7f3b6ef0c33a3cf271ff3d44c97be0",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/heavenly-horse/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "e0f823efdf1956d27227985017514fee06ef5c5874d15fac83c46115d397f3cc",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 137.0,
+  "elapsedSeconds": 1.3730160830309615,
+  "visualReviewAt": "2026-10-29T20:23:16.283647+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not a measured museum replica.",
+    "Fine details soften at5000triangle target; PBR lighting and rooftop placement await receiver game pair."
+  ]
+}

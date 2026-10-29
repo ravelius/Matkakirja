@@ -1,0 +1,77 @@
+{
+  "name": "xiezhi",
+  "path": "3d/xiezhi.glb",
+  "sha256": "08f9d6555a272d2272dd32423b850cd1fafd191de80db57bfb62c5c08e35dffb",
+  "bytes": 3986392,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1258-xiezhi-attempt1.glb",
+  "sourceSHA256": "346077bec3b14ed2353265c2b9ecfca080c856e7f8fc95f11eebfbda1a3449b8",
+  "triangles": 4898,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.20345227420330048,
+    0.5,
+    0.41335226595401764
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5091044902801514,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/xiezhi/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "ab25cd7e83dc17ce62092e3012480617d174f8021378c1e6a65ad07ba40d57f4",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/xiezhi/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "34eeaab12c46b6b299f85476547fcd60462cc73a831a33cba6993b52c5ea277f",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/xiezhi/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5211c15357cb7f7e5953e437a48194d7277714ba92bac1257ee31844af0fc357",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 136.703125,
+  "elapsedSeconds": 1.1371062499238178,
+  "visualReviewAt": "2026-10-29T20:35:24.011970+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Single horn and goat-like face retained; paws are sculptural rather than anatomically exact hooves. Judge at rooftop game distance.",
+    "PBR lighting and roof placement await game pair."
+  ]
+}

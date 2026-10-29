@@ -1,0 +1,76 @@
+{
+  "name": "suanni",
+  "path": "3d/suanni.glb",
+  "sha256": "d9ae6097fcec472c5a564cd6d873159299ba8c62517fa5078fe0201ae470e846",
+  "bytes": 3586920,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1256-suanni-attempt1.glb",
+  "sourceSHA256": "9b74c918304b5c1f335f808a1847b969a99e1346b3f401a86d73d37c2c427d61",
+  "triangles": 4916,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.22608454525470734,
+    0.5,
+    0.4563235640525818
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5098649263381958,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/suanni/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "c05bb1b857c5bc4fbd1e8b81d7666886f006a463725a4db6d061eb337ab2ded4",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/suanni/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5bfd825290375e5003f2806f5b8b3525477e0ea20ce78564918accbc5f351ed4",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/suanni/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1113676a77bec7da047fea4fab58e68f07108276b6ffc41388d220c52522a0bd",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 131.0625,
+  "elapsedSeconds": 1.2829737920546904,
+  "visualReviewAt": "2026-10-29T20:33:25.307918+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Fine mane strands soften at 5000 triangles; PBR lighting and roof placement await game pair."
+  ]
+}
