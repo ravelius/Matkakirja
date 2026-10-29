@@ -1096,3 +1096,17 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - v69 = K/tyokalut/paketti_v69.py: _valmiit/juoksupeli-kk-lavastaja-v69-vienti-20261029 = v68 + tausta-v69 (yksikerros-v112) + rakennukset-v53 (v129);
   299 tiedostoa, SHA256SUMS OK (d609a102…). PT:lle ja PK:lle (05-pari) ilmoitettu. EI ämpäriin/junaan ennen omistajan korttia.
 - SEURAAVAKSI: PK:n 05-pari v69 → PT; avoimet työt lisäyksen 81 alta (EROLISTA: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
+
+## LISÄYS 86 klo 18.3x (29.10.): v70 = KAIKKI MUURIEN V4_sokkeli → KUJAN ISOT KIVET (juna 214:n este) → PT + PK
+- PT kuittasi v69 (18.1x). PT 18.2x (KK 18.21): 05:ssä 1) oikean seinän kivijalan harmaa pikkutiiliyläreuna, 2) portin takaisen kujan päätyseinä
+  ja kulma, 3) vino harmaa levy; etsi kaikki jäljellä olevat V4_sokkeli-pinnat.
+- portti_kivijalka.py laajennettu: VANHA (oletus V4_stone), YMIN (vain kolmiot, joiden yläreuna ≥ YMIN; muut jäävät), PIENENNA (kuvat lod1/2:lle),
+  materiaalit kopioidaan vain jos muutettavaa on. Pinnan valinta: kuvan oikea/vasen on pohjakehykseen nähden peilattu (oikea = itä).
+- yksikerros-v113 = v112 + lod0 VANHA=V4_sokkeli YMIN=1.7 (~1 500 pysty + 535 vaaka; hallien 1,2 m jalustat ennallaan) + lod1/2 V4_sokkeli ja
+  V4_sokkeli_kansi kokonaan (PIENENNA=256): 05:n päätyseinä oli lod1 (~42 m). muurikate-v20/pari-v138 = pari-v137 + YMIN=1.7 (18 kolmiota).
+  3) vino levy = vanhan itämuurin (x ≈ −247, z 424,7–425,9) 14° vino V4_sokkeli-päätypinta (muuri_jatko05:n jäänne), nyt samaa kiveä.
+- Parit H/juuri-v141m: lokit/havainne-editori-20261029-180933 (v140m) vs -182804 (v141m), 02 ennallaan.
+- v70 = K/tyokalut/paketti_v70.py: _valmiit/juoksupeli-kk-lavastaja-v70-vienti-20261029 = v69 + tausta-v70 (yksikerros-v113) + muurikate-v24
+  (pari-v138); 299 tiedostoa, SHA256SUMS OK (677bca43…), koko ~1,0 Gt (+~30 Mt). PT:lle ja PK:lle ilmoitettu. EI ämpäriin ennen omistajan korttia.
+- SEURAAVAAN JUNAAN (PT, ei este): 02:n vasemman seinän räystään alta pistää sinivihreä kannatinpala (havainne-peli x≈1720–1810, y≈145–185).
+- SEURAAVAKSI: PK:n sovitettu 05-pari v70 → PT/KK; sitten 02:n kannatinpala; EROLISTA (lisäys 81).
