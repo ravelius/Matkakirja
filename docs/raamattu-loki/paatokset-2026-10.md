@@ -3152,3 +3152,7 @@ Kortti KK:ssa: "Kelpaavatko kartan nimien uudet koot?" → "Kelpaa (suositus)" (
 ## OMISTAJAN PAATOS: KUJAN 01 MUOTO KELPAA, LUKITTU (29.10. klo 06.20) (29.10.2026 klo 06.20)
 
 Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Kelpaa (suositus)" (LR v112: lokit/havainne-editori-20261029-061212 pelikamera, -061008 havainteen kamera; vihreä vain kapeassa palkissa ja kannakkeissa, korjaus omistajan 06.09 "Liikaa vihreä" -vastaukseen). Kujan 01 muoto lukittu → seuraavaan junaan LR:n mukana. LR jatkaa kujiin 02/05. Valo edelleen vasta, kun kaikkien kujien muodot on hyväksytty ja omistaja antaa kortilla luvan (27.10. klo 10.56).
+
+## OMISTAJAN PAATOS: KUJA 02 KAVENNETAAN HAVAINNEKUVAN LEVYISEKSI (29.10. klo 06.41) (29.10.2026 klo 06.41)
+
+Kortti KK:ssa: "Kavennetaanko kuja 02 havainnekuvan levyiseksi?" → "Kavennetaan (suositus)" (selite: "Korkeat muurit ympäröivät juoksijaa kuten havainnekuvassa."; kuva lokit/havainne-editori-20261029-063350/02/vierekkain.png). Päättää 25.10. klo 11.32 levennysasian (loki 2579, 2611: kysymys oli jäänyt kysymättä mittausvirheen korjauksen jälkeen): kuja 05 on jo havainnekuvan levyinen (pk4 ~4,5 m), kuja 02 kavennetaan havainnekuvan levyiseksi. Työnjako: KS pohja, LR muurit, PK rata.
