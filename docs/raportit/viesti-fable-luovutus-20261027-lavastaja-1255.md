@@ -750,3 +750,20 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - SEURAAVA: odota omistajan uutta päätöstä (PT → KK kortti oikeilla luvuilla). Jos leveys pidetään: muurilinjat nykyisestä mallista
   (kuja02_kavennus.py SIIRTO=0 --muurit, tai mittaa.py) KS:lle → pohja → PK rata (≥ 2,4 m, suositus ≥ 3) → parit KK:lle; sitten 05:n jatko.
   Mittausskripti: K/tyokalut/kuja40_mittaa.py <tausta-kansio> <pohja.json> [<pohja2.json>] (python3 ilman -I: numpy).
+
+## LISÄYS 58 klo 07.15 (29.10.): MITTARIN SARAKEVAHTI, KUJA 02 = KAMERAERO, KUJA 05:n JATKO MALLISSA (v118m) — LUOVUTUS, ALOITA TÄSTÄ
+- H/vertailu-lr.sh: mittari havainne ensin + SARAKEVAHTI (mittaa havainnekuvan itseään vastaan; väärä järjestys → "SARAKEVAHTI VIRHE",
+  exit 3; testattu 0,70 = 0,70 / 0,47 ≠ 0,70). proto-3d/_tyo ei ole git-repo → ei SHA:ta.
+- Kuja 02 (PT 07.1x: leveys ennallaan -suositus KK:n korttiin): hahmon kohdalta reunakivestä reunakiveen hahmon korkeuksina havainne 4,5 |
+  peli ≥ 4,3 → sama leveys. Kattojen väli riippuu kamerasta: testikamera 16° → 0,54, havainteen pakopisteeseen sovitettu (3,3 m, 6,88 m,
+  10°, 45°) → 0,84; havainne 0,70. editori-lr.sh: TESTIKAMERA 02 = "3.3 6.88 10 45" oletuksena, 02:n paikka kujan keskelle x −245,44
+  (oli −246,4, keisari 1 m keskeltä länteen). Pari -070615/02. Muurin korkeutta/räystäitä EI muutettu (ei mittaria, joka sitä vaatisi).
+- Kuja 05 (KK:n 0,60 vs 0,36): ero tulee porttirakennuksen katosta pelikuvan yläreunassa; leveys hahmon kohdalla lähes sama.
+- Kuja 05:n JATKO: UUSI K/tyokalut/muuri_jatko05.py (v1 mallin linjassa = .v1, hylätty: havainteessa portin takana portin levyinen kuja;
+  pk4-linja olisi peittänyt portin aukkoa 0,8 m). Portti p-kujaportti (−251,33; 400,03), aukko 3,4 m x −253,0…−249,6. Jatko z 403,4–424,3,
+  LEVEYS 4,5 (vapaa 4,5–4,75) aukon keskelle: länsimuuri (kloonattu 05:n länsimuurista z 385–401) + aukko kuja-29:lle z 408,4–412,4
+  (pielissä kansi), UUSI itämuuri (kloonattu itämuurista z 361–382). Ketju aja_v118_pari.zsh → yksikerros-v101, muurikate pari-v118,
+  juuri-v118m (02 ennallaan; v117 = hylätty 02-kavennus). Pari -070823/05 ja /05p KK:lla. Muurilinjat KS:lle:
+  yksikerros-v101/kuja05-muurilinjat.json (pohja.json-kehys). Apuvälineet: kuja40_mittaa.py, alue_seinat.py, vyo_materiaalit.py.
+- SEURAAVA: KK:n palaute 05-pariin (lähipuu näkyy muurin yli: kielletty-lahipuut-v6, poista tarvittaessa; 05:lle testikamera kuten 02);
+  KS:n pohja v101-linjoista → PK rata (≥ 2,4 m, suositus ≥ 3) → vienti. Kuja 02: odota omistajan korttia (suositus leveys ennallaan).
