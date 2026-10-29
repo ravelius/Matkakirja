@@ -119,7 +119,7 @@ export const MAASTOKOHTEET_UKR = [
     nimi: 'Mustameri',
     tyyppi: 'meri',
     kysymykset: [
-      'Miksi Mustameren syvyys on hapeton?',
+      'Miksi Mustanmeren syvyys on hapeton?',
       'Mistä meri sai nimensä?',
     ],
     korostukset: ['valuma-alue|valuma-alue'],
@@ -135,7 +135,7 @@ export const MAASTOKOHTEET_UKR = [
       + 'maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
     lahde: 'en-Wikipedia "Black Sea", johdanto-osa (tarkistettu 29.8.2026).',
     visa: {
-      kysymys: 'Mitkä kolme jokea ovat syynä siihen, että Mustameren valuma-alue ulottuu 24 maahan?',
+      kysymys: 'Mitkä kolme jokea ovat syynä siihen, että Mustanmeren valuma-alue ulottuu 24 maahan?',
       vaihtoehdot: [
         'Reini, Rhône ja Po',
         'Tonava, Dnepr ja Dnestr',
