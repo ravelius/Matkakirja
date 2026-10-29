@@ -3,7 +3,7 @@
 Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti kertoo koko maakunnasta (ensin millainen maakunta on nyt; Hiljainen kansa tms. enintään yksityiskohtana). KK:n kuittaama malli: Suomi (PR 5391, mergattu). Odottavat PR:t: Ruotsi 5449, Norja 5452, Tanska 5454, Viro 5455; kohdemaat 28.10.: Ranska 5458, Britannia 5460, Alankomaat 5461, Italia 5462, Saksa 5463, Espanja 5464, Portugali 5465, Belgia 5466, Itävalta 5467. PT:n järjestys (28.10.): 1) matkan kohdemaat (laudan pysäkkien maat: Ranska, Britannia, Alankomaat, Italia, Saksa jne.), 2) muut Euroopan maat suurimmasta pienimpään; muut maanosat EIVÄT ennen omistajan päätöstä (19.10.). Maa per PR; KK kuittaa useamman kerralla.
 
 ## Työtapa (maa kerrallaan)
-1. Worktree: `tools/uusi-worktree.sh sisaltokirjuri maakunnat-<maa>`. Avaimet: `import { MAAKUNTIEN_LUONNEHDINNAT as M } from './js/packs/maakunnat-luonnehdinnat.js'` ja `Object.keys(M.<ISO3>)`.
+1. Worktree (levy 28.10.: YKSI worktree riittää, ~1,4 Gt kukin): `tools/uusi-worktree.sh sisaltokirjuri maakunnat` kerran, ja uusi haara per maa samassa: `git fetch origin main && git switch -c sisaltokirjuri-maakunnat-<maa> origin/main` (edellinen maa mergattu tai pushattu ensin). Älä luo worktreetä per maa; poista mergattujen maiden vanhat worktreet `tools/uusi-worktree.sh --poista <nimi>` + `git branch -D`. Rinnakkaiset agentit saavat kirjoittaa vain scratchpadiin. Avaimet: `import { MAAKUNTIEN_LUONNEHDINNAT as M } from './js/packs/maakunnat-luonnehdinnat.js'` ja `Object.keys(M.<ISO3>)`.
 2. Kirjoita alla oleva agenttiohje tiedostoon ja aja 2–3 Sonnet-agenttia rinnakkain (7–8 aluetta per agentti); tulos JSON { avain: {pitka, lahteet, epavarma} }.
 3. Lue tekstit itse (faktat, kömpelyys). Aja yksi tuore lukija (Sonnet, ei verkkoa, lukee vain tekstitiedoston) ja korjaa huomautukset. Älä usko lukijaa sokkona: se arvaa faktoja, joten tarkista sen epäilyttävät väitteet lähteestä.
 4. Aseta: `node tools/sisalto/maakuntateksti-aseta.mjs <ISO3> tekstit.json`; `node --test tests/maakunnat-luonnehdinnat.test.mjs` (0 fail).
@@ -37,6 +37,13 @@ Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti
 - Tuore lukija huomaa hyvin viittaukset (sen/siellä/se), selittämättömät sanat (despotaatti, bulla, sotilasraja) ja translitterointien epäjohdonmukaisuuden (š/tš, j/y, ă); korjaa nämä, mutta kaikkia vierasnimien eroja ei kannata yhtenäistää.
 - Työtapa toimii: pääsession skriptit tiedostoihin (yhdista.mjs, korjaa*.mjs lista [vanha, uusi] -korvauksista, jotka kaatuvat, jos vanhaa tekstiä ei löydy), agentit kirjoittavat JSON:in, `maakuntateksti-aseta.mjs` + testi, raportti docs/raportit/, PR per maa.
 
+## Opitut asiat 28.10. ilta (KK:n tarkistus 23 PR:ää, Puola, Kreikka)
+- KK:n mittari: ensilauseessa sijainti maassa; enintään puolet virkkeistä keskuskaupungista; ei yliopisto- tai kaupunkikeskeistä tekstiä. Agenttiohjeeseen kopioidaan nämä säännöt (Kreikan ohje: lisäsäännöt).
+- Yleisimmät virheet: korkeusluvut ja vuodet muistista (Monte Coglians, Pilsko, Łysica), vanhentuneet luvut (Neuchâtel, Sevastopol), "suurin/ainoa/vanhin" ilman lähdettä, sama tapahtuma väärässä paikassa (Orašac/Topola, Plaiul Fagului). Poista luku, jos se on ristiriitainen lähteissä.
+- Kun korvaus poistaa virkkeen lopun, tarkista piste (Świętokrzyskie jäi ilman pistettä); aja korjaukset skriptillä ja lue tulos.
+- Tuore lukija keksii joskus tekstiin kuulumatonta sisältöä; hylkää huomautus, jota ei löydy tekstistä.
+- Pakin työkalu maakuntateksti-aseta.mjs odottaa muodon { avain: teksti } (ei { pitka, lahteet }); vanhat haarat voivat puuttua työkalusta.
+
 ## Agenttiohje (kopioi tiedostoon; vaihda <oma worktree> ja MAATUNNUS)
 
 # Ohje: maakuntatekstin (pitka) kirjoitus koko maakunnasta
@@ -63,3 +70,8 @@ JSON-tiedosto, objekti { "<englanninkielinen avain täsmälleen kuten pakissa>":
 
 ## Norjan lisäohje
 Pakin avaimet ovat Norjan ENTISIÄ (ennen 2020) lääniä (fylke) sekä Svalbard ja Bouvet Island; fi-Wikipedia kutsuu niitä lääneiksi (esim. "Akershusin lääni"). Kirjoita teksti alueesta, ja jos entinen lääni on nykyään osa yhdistettyä tai uudelleen jaettua läänä (Hordaland ja Sogn og Fjordane = Vestland; Nord- ja Sør-Trøndelag = Trøndelag; Hedmark ja Oppland = Innlandet; Aust- ja Vest-Agder = Agder; Telemark/Vestfold, Troms/Finnmark, Akershus/Buskerud/Østfold: tarkista tämän hetken tilanne lähteestä), mainitse se yhdellä lyhyellä virkkeellä. Asukasluku: tuorein lähteestä löytyvä luku alueelle (entisen läänin alue tai sen kunnat; ilmoita vuosi ja lähde epavarma-kentässä). Bouvet Island ja Svalbard ovat erityisalueita: kerro millainen paikka on (asumaton saari / arktinen saaristo), ei lääni-sanaa Bouvetista. Norjalaiset nimet fi-Wikipedian muodossa (Oslo, Bergen, Trondheim, Huippuvuoret, Lofootit jne.).
+
+## Avoimet
+- Kroatia: Požega-Slavonia (Požeško-slavonska) puuttuu kartan alueaineistosta ja pakeista (maakunnat-nimet.js HRV, 20 avainta). Karttaseppä lisää avaimen (PT:n järjestys: porrastuksen ja TF 213:n jälkeen); sen jälkeen SK lisää tekstin samalla avaimella (`maakuntateksti-aseta.mjs HRV`; pakin lyhyt-kenttä tarvitaan myös). Tekstiehdotus (85 sanaa, en-Wikipedia, tarkista ennen asetusta):
+
+> Požega-Slavonia on piirikunta Slavonian länsiosassa, ja siellä asuu noin 64 000 ihmistä (väestönlaskenta 2021). Piirikunnan pinta-ala on noin 1 800 neliökilometriä. Keskus Požega on laaksossa, jota ympäröivät Požeška gora, Papuk ja Dilj -vuoret. Roomalaisaikana laaksoa kutsuttiin nimellä Vallis Aurea, kultainen laakso. Požega siirtyi Habsburgien hallintaan vuonna 1691 ottomaanien vallan jälkeen. Kaupungin keskusaukiolla on Pyhän Hengen kirkko, fransiskaaniluostari ja ruttopylväs. Kutjevon kaupunki tunnetaan viineistään, ja siellä valmistetaan muun muassa graševina-valkoviiniä. Lipik on kylpyläkaupunki, joka tunnetaan kivennäisvedestä ja lipizzanhevosten talleista. Pakracin ja Pleternican kaupungit kuuluvat myös piirikuntaan.

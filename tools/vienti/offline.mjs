@@ -214,18 +214,6 @@ function bbox(renkaat) {
   return { w, s, e, n };
 }
 
-/** Parillisuussääntö kaikkien renkaiden yli (saaret ja reiät). */
-function sisalla(renkaat, lon, lat) {
-  let sis = false;
-  for (const r of renkaat) {
-    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
-      const [xi, yi] = r[i]; const [xj, yj] = r[j];
-      if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) sis = !sis;
-    }
-  }
-  return sis;
-}
-
 function janaLeikkaa(ax, ay, bx, by, { w, s, e, n }) {
   // Liang–Barsky: leikkaako jana suorakaiteen.
   let t0 = 0; let t1 = 1;
@@ -238,15 +226,38 @@ function janaLeikkaa(ax, ay, bx, by, { w, s, e, n }) {
   return true;
 }
 
-/** Leikkaako laatta (asteina) maan muotoa. */
-function laattaLeikkaa(renkaat, laatta) {
-  if (sisalla(renkaat, (laatta.w + laatta.e) / 2, (laatta.s + laatta.n) / 2)) return true;
+/**
+ * Leikkaako laatta (asteina) maan muotoa: keskipiste muodon sisällä tai jokin reuna leikkaa laattaa.
+ * Nopeutus (CI-jumi 28.10.2026: skeema 1.33 -testi ~140 s, kuormassa yli 20 min aikarajan): reunat esisuodatetaan
+ * sarakkeittain (pituusväli, pieni vara: suodatus vain pudottaa reunoja, jotka eivät voi leikata) ja rivin keskiviivan
+ * ylittäviin (parillisuussääntö: vain rivin keskiviivan ylittävät reunat voivat vaihtaa puolta; saaret ja reiät). Tulos on sama kuin jokaisen reunan läpikäynnillä.
+ */
+function laattaLeikkaaja(renkaat) {
+  const reunat = [];
   for (const r of renkaat) {
-    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
-      if (janaLeikkaa(r[j][0], r[j][1], r[i][0], r[i][1], laatta)) return true;
-    }
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) reunat.push([r[j][0], r[j][1], r[i][0], r[i][1]]);
   }
-  return false;
+  const VARA = 1e-9;
+  const sarakkeet = new Map(); const rivit = new Map();
+  return (laatta) => {
+    const lon = (laatta.w + laatta.e) / 2; const lat = (laatta.s + laatta.n) / 2;
+    let rivi = rivit.get(lat);
+    if (!rivi) { rivi = reunat.filter(([, yj, , yi]) => (yi > lat) !== (yj > lat)); rivit.set(lat, rivi); }
+    let sis = false;
+    for (const [xj, yj, xi, yi] of rivi) if (lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) sis = !sis;
+    if (sis) return true;
+    const avain = `${laatta.w}|${laatta.e}`;
+    let sarake = sarakkeet.get(avain);
+    if (!sarake) {
+      sarake = reunat.filter(([xj, , xi]) => Math.max(xj, xi) >= laatta.w - VARA && Math.min(xj, xi) <= laatta.e + VARA);
+      sarakkeet.set(avain, sarake);
+    }
+    for (const [xj, yj, xi, yi] of sarake) {
+      if (Math.max(yj, yi) < laatta.s - VARA || Math.min(yj, yi) > laatta.n + VARA) continue;
+      if (janaLeikkaa(xj, yj, xi, yi, laatta)) return true;
+    }
+    return false;
+  };
 }
 
 /* ---------------------------------------------------------- laattakaaviot */
@@ -263,11 +274,11 @@ const rajaa = (v, z) => Math.max(0, Math.min(2 ** z - 1, v));
 function rasteriLaatat(renkaat, b, z) {
   const x0 = rajaa(xyzX(b.w, z), z); const x1 = rajaa(xyzX(b.e, z), z);
   const y0 = rajaa(xyzY(b.n, z), z); const y1 = rajaa(xyzY(b.s, z), z);
-  let laattoja = 0;
+  let laattoja = 0; const leikkaa = laattaLeikkaaja(renkaat);
   for (let x = x0; x <= x1; x++) {
     for (let y = y0; y <= y1; y++) {
       const laatta = { w: (x / 2 ** z) * 360 - 180, e: ((x + 1) / 2 ** z) * 360 - 180, n: xyzLat(y, z), s: xyzLat(y + 1, z) };
-      if (laattaLeikkaa(renkaat, laatta)) laattoja++;
+      if (leikkaa(laatta)) laattoja++;
     }
   }
   return { vali: [x0, y0, x1, y1], laattoja };
@@ -409,12 +420,12 @@ function maastoLaatat(renkaat, b, z, saatavilla) {
   const x0 = Math.floor((b.w + 180) / leveys); const x1 = Math.min(2 ** (z + 1) - 1, Math.floor((b.e + 180) / leveys));
   const y0 = Math.floor((b.s + 90) / leveys); const y1 = Math.min(2 ** z - 1, Math.floor((b.n + 90) / leveys));
   const onSaatavilla = (x, y) => saatavilla.some((a) => x >= a.startX && x <= a.endX && y >= a.startY && y <= a.endY);
-  let laattoja = 0; let [ax0, ay0, ax1, ay1] = [Infinity, Infinity, -1, -1];
+  let laattoja = 0; let [ax0, ay0, ax1, ay1] = [Infinity, Infinity, -1, -1]; const leikkaa = laattaLeikkaaja(renkaat);
   for (let x = x0; x <= x1; x++) {
     for (let y = y0; y <= y1; y++) {
       if (!onSaatavilla(x, y)) continue;
       const laatta = { w: x * leveys - 180, e: (x + 1) * leveys - 180, s: y * leveys - 90, n: (y + 1) * leveys - 90 };
-      if (!laattaLeikkaa(renkaat, laatta)) continue;
+      if (!leikkaa(laatta)) continue;
       laattoja++;
       ax0 = Math.min(ax0, x); ay0 = Math.min(ay0, y); ax1 = Math.max(ax1, x); ay1 = Math.max(ay1, y);
     }
