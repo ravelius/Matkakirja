@@ -1403,3 +1403,18 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   rakennukset.json:iin (kuten v-ulkomuuri, ei leivontaa) tai C1-räystäinä (c1-sijoitukset). Pari 03 KK:lle + PT:lle.
   (2) Codex A6 v2 sivupaviljonki (e6e88e541; T7 …/output/juoksupeli-osat-215-20261029/partial-a6-v2, SHA OK): Tirenge (+Z länteen) ja Hongyige
   (peilattuna, +Z itään; tarkista winding) omaan pakettiin → PK:n samankameran pari. V1 ei peliin.
+
+## LISÄYS 104 klo 00.3x (30.10.): 03 KOHTA 4 TEHTY (v166, PARI AJOSSA), A6 v2 SIJOITETTU (v167 → PK:N PARI) — LUOVUTUS (konteksti 35 %), ALOITA TÄSTÄ
+- 03 kohta 4: tyokalut/taihemen_siipikatto.py (oma malli f-taihemen-siipikatot: palkkivyö 1067-kuvalla 3,70–4,15, kannattimet V4_teal/V4_gold 0,8 m välein,
+  keltainen tiiliaumakatto V4_palatsi_katto (UV 0,625/m), räystäs 4,50, harja 5,70) + tyokalut/taihemen_reunakivi.py (V4_kujakivi_reuna → V4_marmori
+  f-taihemen lod0/1 + c2:n kaiteeton LOD0), ketju aja_v166_siipikatto.zsh → rakennukset-v148/kielletty-rakennukset-v72 + c2-v17/kielletty-c2-v16.
+  Vanha V4_gold-muurikate jäi katon alle (piilossa). Esikatselu scratchpad (Blender) ok. Juuri H/juuri-pk7-v86 (= v85 + v148 + c2-v17).
+  PARI 03/03b: scratchpad pari_v86_03.zsh taustalla → tulos lokit/havainne-editori-<aika>/03 → PT (PT välittää KK:lle). Jos kuoli: cd H;
+  REF=41a2eac22 MALLIT=file://H/juuri-pk7-v86/ PELIKAMERA=1 zsh ./editori-lr.sh 03 03b.
+- A6 v2: tyokalut/a6_sijoitus.py (Tirenge −91,97°, Hongyige peilattu 88,02°, paikat pohja.json:n päärakennussuorakaiteesta, materiaali V4_sivupaviljonki,
+  LOD0–2 sama verkko, törmäys 9 m laatikko; apuri ulkomuuri_laatikko.py) + tyokalut/tausta_poista_alue.py (taustan vanhat paviljongit pois, maa jää),
+  ketju aja_v167_a6.zsh → a6-v167/kielletty-rakennukset-v73 (= v148 + h-tirenge/h-hongyige) + a6-v167/kielletty-tausta-v75 (= tausta-v74 − paviljongit).
+  Juuri H/juuri-pk7-v87 → PK:lle pyydetty samankameran pari + V4_sivupaviljonki pintalistaan.
+- PAKETIT: v84 PT:llä (9effe35e). Seuraava paketti (v85) vasta kuittausten jälkeen: k7 (KS:n 06-pari, v147), siipikatto (03-pari, v148), A6 (PK:n pari, v167;
+  PT: "omaan pakettiin" → tee A6 erilliseksi versioksi siipikaton/k7:n jälkeen tai niiden kanssa PT:n ohjeen mukaan). paketti_v84.py mallina.
+- Jono muuten: erolista T-risteys, sivuhallit, 04; Codex-osat A2/A4/A1 (PK:n kansio) PT:n luvalla; kaiteet-v3 (NUI pari 6).
