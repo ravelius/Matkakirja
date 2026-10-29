@@ -1438,7 +1438,7 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   kuvan V4_jalusta_lohkokivelle) → v85:ssä nimetön kopio pois: V4_jalusta_lohkokivi osoittamaan olemassa olevaan sokkeli-v03-albedo-tekstuuriin, ylim. image
   + bufferView pois (koskee myös c2:n f-taihemen-lod0-kaiteeton.glb:tä, tarkista).
 
-## LISÄYS 106 klo 01.2x (30.10.): v85–v88 VALMIIT, 03 KOHTA 4 -PARI PT:LLÄ — ALOITA TÄSTÄ
+## LISÄYS 106 klo 01.02 (30.10.): v85–v88 VALMIIT, 03 KOHTA 4 -PARI PT:LLÄ — ALOITA TÄSTÄ
 K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40. REF NYT 362182ba5 (PT 00.4x; juna 215 -runko = d0d7677dd + VS:n lohkokivi).
 - REF 362182ba5 lukee paketin v83 kansionimet (kielletty-tausta-v73, -rakennukset-v69, -ulkorengas-v7, -c2-v14, -c1-v8, -lahipuut-v6, palatsi-esto-v18):
   juuri tehdään näillä nimillä osoittamaan uusiin (malli H/juuri-pk7-v89 → paketti v85; H/juuri-pk7-v90 = v89 + rakennukset-v148 + c2-v17/kielletty-c2-v16 + c1-v9).
