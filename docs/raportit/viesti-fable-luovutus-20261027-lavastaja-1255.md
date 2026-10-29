@@ -1121,7 +1121,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Työkalut tältä erää (K/tyokalut): kuja_friisi_jatko.py, portti_kivijalka.py (VANHA, YMIN, KORKEUS, PIENENNA), paketti_v69.py, paketti_v70.py.
   Uusimmat: yksikerros-v113, muurikate-v20/pari-v138, rakennukset-v129, H/juuri-v141m; paria varten editori-lr.sh 02 05 PELIKAMERA=1 REF=de0aeca40.
 
-## LISÄYS 88 klo 18.5x (29.10.): v71 = 02:n KANNATINPALA POIS → PT + PK — ALOITA TÄSTÄ
+## LISÄYS 88 klo 18.46 (29.10.): v71 = 02:n KANNATINPALA POIS → PT + PK — ALOITA TÄSTÄ
 - Syy (Blender-tunnusvärikuva pelin 02-kamerasta, scratchpad tunnisteet.py; pelikuva on peilattu, oikea = itä): kujan 02 LÄNSImuurin mutkassa
   (z ≈ 321–323, muuri x −248,4 → −249,3) taustan (0-3 lod0) ja muurikatteen V4_konsoli-rivit kulkevat mutkan poikki ja näkyvät räystäänalusen raosta.
 - UUSI K/tyokalut/konsoli_pois.py (BOX "x0 x1 z0 z1 y0 y1", MAT): kolmiot pois; BOX "-250.2 -248.3 320.6 323.2 4.2 4.8" → tausta 48, muurikate 40.
