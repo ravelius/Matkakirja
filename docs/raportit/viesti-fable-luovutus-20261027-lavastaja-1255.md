@@ -1437,3 +1437,19 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - PT 00.4x (VS:n huomio): f-taihemen-lod0/-lod1:ssä sokkeli-v03-kuva kahdesti (toinen nimetön; muurit_takaisin.py:n mat_b kopioi V4_kujakivi_sokkeli-
   kuvan V4_jalusta_lohkokivelle) → v85:ssä nimetön kopio pois: V4_jalusta_lohkokivi osoittamaan olemassa olevaan sokkeli-v03-albedo-tekstuuriin, ylim. image
   + bufferView pois (koskee myös c2:n f-taihemen-lod0-kaiteeton.glb:tä, tarkista).
+
+## LISÄYS 106 klo 01.2x (30.10.): v85–v88 VALMIIT, 03 KOHTA 4 -PARI PT:LLÄ — ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40. REF NYT 362182ba5 (PT 00.4x; juna 215 -runko = d0d7677dd + VS:n lohkokivi).
+- REF 362182ba5 lukee paketin v83 kansionimet (kielletty-tausta-v73, -rakennukset-v69, -ulkorengas-v7, -c2-v14, -c1-v8, -lahipuut-v6, palatsi-esto-v18):
+  juuri tehdään näillä nimillä osoittamaan uusiin (malli H/juuri-pk7-v89 → paketti v85; H/juuri-pk7-v90 = v89 + rakennukset-v148 + c2-v17/kielletty-c2-v16 + c1-v9).
+  Vanhat juuret (v53-/c2-v2-nimet) näyttävät 362182ba5:llä tyhjää maailmaa.
+- v85 (af84b96e) = v84 + kielletty-ulkorengas-v9 (puistot-v168, tyokalut/duanmen_puistot.py + aja_v168_puistot.zsh: Duanmenin molemmin puolin laatikot pois,
+  ruskea maa nurmeksi/kiveksi, 1 158 puuta) + kielletty-rakennukset-v74 / kielletty-c2-v17 (tuplakuva-v169, tyokalut/tuplakuva_pois.py + aja_v169: f-taihemenin
+  nimetön tuplasokkelikuva pois; viittaamattomat kuvat kuten valo_rgbm jäävät, peli lukee nimellä). Pari 07: lokit/havainne-editori-20261030-004241 → PT.
+- v86 (1c21f84c) = v85 + kielletty-halli-kaiteet-v3 (halli-kaiteet-v3m, tyokalut/johde_marmori.py: johteen 1062-kuva valkoiseksi marmoriksi). KK hyväksyi 01.0x.
+- v87 (a2a5e849, c2-v18 = 1061-pylväät valkoisiksi) HYLÄTTY (PT: koko palatsin muutos, peli lukee c2-v7:ää) — EI ämpäriin.
+- v88 (4f671194) = v86 + kaiteet-v3:n kaide-pylvas → V4_marmorikaide_pylvas (halli-kaiteet-v3p, tyokalut/pylvas_marmori.py; peli korvaa V4_marmorin kermalla).
+  NUI ottaa 06-zoomin. Ensimmäinen v88 (v87:n päällä) siirretty K/hylatty-v88a-c2v18. v86/v87 eivät ämpäriin.
+- 03 kohta 4: aja_v166_siipikatto.zsh ajaa nyt myös tuplakuva_pois.py:n; pari 03/03b juuri-pk7-v90: lokit/havainne-editori-20261030-004912 → PT.
+- SEURAAVAKSI: PT:n kuittaukset (v85, v88, 03-pari) → paketti k7 (v147) + siipikatto (v148) + A6 (v167, PK:n pari) PT:n ohjeen mukaan (paketti_v88.py mallina,
+  kansiot v74:n päälle uusin numeroin: rakennukset-v75+, c2-v18 on varattu hylätylle → käytä c2-v19). Jono: T-risteys, sivuhallit, 04; Codex A2/A4/A1.
