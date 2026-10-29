@@ -1028,3 +1028,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (= pari-v136, korvaa v21) ; rakennukset-v50, avoimet-v51 ennallaan; 299 tiedostoa, SHA OK (3f913976…). PK:lle ja PT:lle ilmoitettu.
   EI ämpäriin eikä junaan ennen omistajan korttia (PT).
 - SEURAAVAKSI: odota PT:n/VS:n viestejä; avoimet työt lisäyksen 77 alta ja EROLISTA (T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
+
+## LISÄYS 82 klo 15.4x (29.10.): v67:ään t-porttien askelten nousupinnat kiveksi (rakennukset-v127) — ALOITA TÄSTÄ
+- PT 15.4x: PK:n drone v66 110 s: harmaa katkoviiva tunnelin suulla (proto-3d/_tyo/pelikoodari/parkour-20261027/tarkistus-drone214v66/
+  pari-terassi-n129-vs-v66.png, alarivin 4. ruutu; myös arkki-v66-104-112.png 7. ruutu).
+- Syy: tportti_lattia.py teki askelmat (vaaka) V4_lattiaksi, mutta 0,15 m nousupinnat (z ±11,4–11,8 / ±15–16) jäivät V4_marmoriksi.
+  UUSI K/tyokalut/tportti_askel.py (|n.y| < 0,3, −0,1 ≤ y ≤ 0,85 → V4_lattia, UV (seinän suunta, y)/8): rakennukset-v127 = v126 + tämä
+  (t-portti-120 5 kolm., m15/m216 16 kolm. LOD0–1; 424 ei askelia).
+- v67 rakennettu uudelleen samaan polkuun (paketti_v67.py): + kielletty-rakennukset-v51 (= v127, korvaa v50); SHA OK c6402a2f…. PK:lta pyydetty
+  drone 110 s v67:llä → PT. Ei ämpäriin/junaan ennen omistajan korttia.
