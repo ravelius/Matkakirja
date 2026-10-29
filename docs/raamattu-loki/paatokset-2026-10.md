@@ -3204,3 +3204,7 @@ Kortti 'Saako iPad-asennusten 50 Gt:n välimuistin tyhjentää Macilta?' → 'Ky
 ## OMISTAJA PYYSI JULKAISUA: JUNA 214 (omistaja 29.10.2026 klo 17.20) (29.10.2026 klo 17.21)
 
 Omistaja KK:lle: "Lähden kotiin, niin julkaise TestFlightissa ilman testejä sitten kun valmistuu". KK:n tulkinta omistajalle kerrottuna: juna 214 TF:ään kokonaisena heti kun Työn alla -osat valmiit (kujat 02+05 omistajan kortin jälkeen, Alppien sauma, karttasaumat ilman pienen iPadin mittausta); ei laite-/simukierrosta; automaattiset käännöstestit kuten aina. PT: JU aloittaa maaston z10–12 kopiot heti.
+
+## OPPI: OMISTAJAN KUVAPARI AINA SOVITETTUNA (PT 29.10.2026 klo 17.30) (29.10.2026 klo 17.30)
+
+PT lähetti KK:lle kujakortin parin 172625, jossa keisari oli pelissä 1,4–1,6× havainnekuvaa suurempi (kamera lähempänä → laatat näyttävät isommilta), ja jätti 05:n vanhat kivet erilliseksi kysymykseksi. KK palautti: rikottu periaatteet 1 (sanat mitattavissa) ja 9 (ei väliaikaisia poikkeamia). Jo voimassa 7.20 (havainnemittari) ja B kohta 11: PT avaa mittari.txt:n ja tarkistaa keisarin koon, kynnyksen ja pakopisteen ennen kuin pari menee KK:lle; omistajan sanat koskevat kaikkia sen kattamia kohteita, ei vain kuvattua.
