@@ -1336,3 +1336,11 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   Pohja paketti_v79.py (nimeä paketti_v81.py, A = v80-kansio, .md-suodatus mukana). Ulkorengas-v7 ensin (pari 07 PT:lle), sitten kaikki samaan v81:een.
 - PARIT taustalla (scratchpad pari_v79.zsh, pari_v80_07.zsh; prosessit voivat kuolla nollauksessa): tarkista uusin havainne-editori-*/06 ja */07,
   aja puuttuvat uudelleen (lisäys 96). 06 → PT + KS, 07 → PT.
+
+## LISÄYS 98 klo 22.58 (29.10.): VS:N PYYNTÖ — PÄÄHARJA MYÖS g-taihedian LOD2:EEN (rakennukset-v143), JUURI juuri-pk7-v81
+- VS 22.5x: v78:ssa (rakennukset-v64) V4_paaharja vain g-taihedian-lod0:ssa; 03/03b piirtää hallin LOD1:nä → harja tasainen keltainen.
+  LOD1:ssä harja on jo v142:ssa (NUI:n halli-215/v3). LOD2:ssa ei ollut harjaa lainkaan (katto päättyy 33,35:een).
+- UUSI K/tyokalut/harja_lod2.py (LOD1:n katto-meshin V4_paaharja-primitiivi + kultakansi → LOD2:n katto-mesh, tekstuuri mukana) +
+  aja_v159_harja_lod2.zsh → K/rakennukset-v143/kielletty-rakennukset-v67 (= v142 + g-taihedian-lod2 harja: 8 kylki- + 2 kansikolmiota).
+- H/juuri-pk7-v81 = v80, kielletty-rakennukset-v53 → v143. VS:lle ilmoitettu (saumatarkistus v81-juurella).
+- PAKETTI v81 (lisäys 97): käytä kielletty-rakennukset-v67:ää (v143) v66:n sijaan.
