@@ -5633,7 +5633,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   LTU: {
     Alytaus: {
       lyhyt: 'Druskininkain lähellä Grūtasin puistoon on koottu kaadettuja neuvostopatsaita, ja puiston perustaja sai 2001 Ig Nobelin rauhanpalkinnon.',
-      pitka: `Alytusin ympärillä leviää Dzūkijan mäntymetsien meri: lähistöllä kasvaa Dainavan metsä, Liettuan suurin yhtenäinen ikimetsä, ja koko seutu tuoksuu pihkalta ja sienimetsältä. Hiekkainen maaperä on aina ollut karua viljelijälle, joten paikalliset ovat vuosisatoja täydentäneet satoaan metsän antimilla – vanha sanonta väittää, ettei dzūkkitytöllä olisi vaatteita ilman sieniä ja marjoja. Kaupungin halki virtaa Nemunas-joki, jonka yllä kohoaa Valkoisen ruusun silta, Liettuan korkein kävely- ja pyöräilysilta, 38 metriä korkealla ilmassa. Silta avattiin vasta 2016, joten se on aivan uusi lisä maisemaan, joka on muuten pysynyt mäntyjen ja hiekan hallitsemana ties kuinka kauan.`,
+      pitka: `Alytusin lääni on Liettuan eteläosassa. Läänissä asuu noin 138 000 ihmistä (väestönlaskenta 2021). Läänin alue kuuluu Dzūkijan alueeseen, jossa hiekkainen maaperä sopii huonosti viljelyyn. Siksi alueella on paljon mäntymetsiä, ja sieniä ja marjoja on kerätty ruoaksi. Dzūkijan kansallispuisto on Varėnan seudulla, ja sen alueella on Zervynosin kylä. Druskininkai on Nemunas-joen rannalla oleva kylpyläkaupunki lähellä Valko-Venäjän ja Puolan rajaa. Tsaari Nikolai I hyväksyi Druskininkain kehittämisen kylpylänä vuonna 1837. Druskininkaissa on säveltäjä ja taidemaalari M. K. Čiurlionisin muistomuseo. Läänin keskus Alytus on myös Nemunasin rannalla.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-alytaus-989f23a6.jpg',
@@ -5656,7 +5656,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kauno: {
       lyhyt: 'Kaunas oli sotien välillä Liettuan väliaikainen pääkaupunki, ja sen modernistinen arkkitehtuuri pääsi Unescon listalle 2023.',
-      pitka: `Kaunas kohoaa kahden joen kärjessä, siinä missä Nemunas ja Neris yhtyvät – paikka oli niin strateginen, että tänne nousi jo 1300-luvulla goottilainen Kaunasin linna, yksi Liettuan vanhimmista tiililinnoista ja ainoa, jossa on kaksinkertainen puolustusmuuri. Linnasta on nykyisin pystyssä enää noin kolmasosa, mutta rauniot ja niitä ympäröivä puisto ovat suosittu kohtaamispaikka jokirannassa. Kaupungin toisella laidalla seisoo 1900-luvun alussa valmistunut Yhdeksäs linnake, joka toimi vuodesta 1924 vankilana ja josta tuli natsimiehityksen aikana yksi Euroopan synkimmistä paikoista – siellä surmattiin 45 000–50 000 juutalaista, suurin osa Kaunasin geton asukkaita. Nykyään paikka on museo ja muistomerkki, joka pysäyttää kävijän hiljaisuudellaan, aivan toisenlainen puoli samasta kaupungista, joka 1920-luvulla puki ylleen kevyen modernistisen kasvonsa.`,
+      pitka: `Kaunasin lääni on Liettuan keskiosassa, ja siellä asuu noin 570 000 ihmistä (väestönlaskenta 2021). Läänin keskus Kaunas on Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli maailmansotien välillä Liettuan väliaikainen pääkaupunki, ja sen modernistinen rakennustaide on Unescon maailmanperintökohde. Kėdainiain kaupunki on Nevėžis-joen rannalla, ja se tunnetaan kurkkufestivaalistaan. Rumšiškėsin kauppalassa Kaunasin tekojärven rannalla on ulkoilmamuseo, johon on koottu vanhoja talonpoikaistiloja Liettuan eri alueilta. Tekojärvi syntyi, kun Nemunas padottiin vuosina 1959–1960. Birštonas on Nemunas-joen rannalla oleva kylpyläkaupunki, jossa hoidetaan mineraalivedellä. Šiluvan kauppala on katolinen pyhiinvaelluspaikka.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ltu-maakunta2-kauno-v-ded01ea1.jpg',
@@ -5679,7 +5679,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Klaipedos: {
       lyhyt: 'Kapea, 98 kilometrin Kuurinkynnäs erottaa Kuurin lahden Itämerestä, ja sen vaeltavat dyynit hautasivat aikanaan alleen kokonaisia kyliä.',
-      pitka: `Klaipėda syntyi kauppasatamana Meripihkatien varrella jo keskiajalla, ja sen historia on yhtä kerroksellinen kuin sen hallitsijoiden luettelo: kaupunkia ovat vuorotellen hallinneet Saksalainen ritarikunta, Preussi ja Saksan keisarikunta, kunnes se liitettiin Liettuaan vasta vuonna 1923. Satama on jäätön ympäri vuoden, ja se on vuosisatoja ollut koko Liettuan tärkein yhteys merelle – sen kautta on kulkenut kaikki meripihkasta puutavaraan. Kaupungin saksalaisaikainen nimi Memel elää yhä monissa vanhoissa kortteleissa, vaikka valtapiirit ovat vaihtuneet moneen kertaan viimeisen sadan vuoden aikana. Nykyisin Liettuan kolmanneksi suurin kaupunki tuntuu satamakaupungilta joka kolkassa: nosturit, laivat ja suolainen tuuli kuuluvat arkeen aivan yhtä lailla kuin Kuurinkynnäänkin hiekkadyynit.`,
+      pitka: `Klaipėdan lääni on Liettuan länsiosassa Itämeren rannikolla. Läänissä asuu noin 320 000 ihmistä (väestönlaskenta 2021). Läänin keskus Klaipėda on satamakaupunki, jonka saksalainen nimi on Memel. Kuurin kynnäs on 98 kilometriä pitkä hiekkadyynien niemi, joka erottaa Kuurinhaffin Itämerestä. Se on Unescon maailmanperintökohde, ja Liettuan puolella ovat Nidan ja Juodkrantėn kylät. Nidassa on Nobel-kirjailija Thomas Mannin entinen kesäasunto. Juodkrantėssa kaivettiin 1800-luvulla meripihkaa. Klaipėdan seutu oli aiemmin osa Preussia, ja liettualaiset valtasivat sen vuonna 1923. Palangan lomakaupungin rannat ovat hiekkaisia, ja Tyskevitsin palatsissa toimii meripihkamuseo.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-klaipedos-e3a3f789.jpg',
@@ -5702,7 +5702,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Marijampoles: {
       lyhyt: 'Marijampolė on kaupan ja kevyen teollisuuden keskus, ja siellä toimii yksi Euroopan suurimmista käytettyjen autojen toreista.',
-      pitka: `Marijampolė sijaitsee Sūduvan eli Suvalkijan sydämessä, ja jos Aukštaitija tunnetaan järvistään ja Žemaitija metsistään, tämä alue tunnetaan pelloistaan: jääkauden jättämä savimaa on yksi Pohjois-Euroopan hedelmällisimmistä, ja seutu on ollut viljan aittaa sukupolvien ajan. Täkäläiset talonpojat vapautuivat maaorjuudesta muuta Liettuaa aiemmin, ja hyvä maaperä sekä ahkeruus tekivät 1800–1900-lukujen vaihteessa sūduvalaisista maan varakkainta maalaisväestöä. Nykyisin sama yritteliäisyys näkyy toisenlaisessa muodossa kaupungin laidalla, missä yksi Euroopan suurimmista käytettyjen autojen kaupoista vetää ostajia ympäri Itä-Eurooppaa. Pellot jatkuvat silmänkantamattomiin joka suuntaan, ja kesäisin maisema muuttuu keltaisen rapsin ja vihreän vehnän täplittämäksi tilkkutäkiksi.`,
+      pitka: `Marijampolėn lääni on Liettuan lounaisosassa, ja se rajoittuu Puolaan ja Venäjän Kaliningradin alueeseen. Läänissä asuu noin 138 000 ihmistä (väestönlaskenta 2021). Alue vastaa historiallista Sudovian eli Suvalkijan seutua, joka on yksi Liettuan viidestä perinteisestä alueesta. Tsaarin vallan aikana liettuankielisiä kirjoja ei saanut painaa latinalaisin kirjaimin. Kirjoja salakuljetettiin Sudovian kautta. Liettuan kansallislaulun sanat ja sävelen kirjoittanut Vincas Kudirka syntyi Paežeriain kylässä Vilkaviškisin seudulla. Vištytis-järvi on Liettuan ja Kaliningradin alueen rajalla. Läänin keskusta Marijampolėa halkoo Šešupė-joki.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-marijampoles-bdeea32c.jpg',
@@ -5725,7 +5725,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Panevezio: {
       lyhyt: 'Biržain seudulla on noin 9 000 vajoamakuoppaa, jotka syntyvät kun pohjavesi liuottaa kipsiä maan alta – uusia ilmestyy joka vuosi.',
-      pitka: `Panevėžys on tunnettu teatterikaupunkina, ja sen sydämenä sykkii Juozas Miltinis -draamateatteri, jonka maine kantautui aikanaan yli koko Neuvostoliiton. Ohjaaja Miltinis johti teatteria vuodesta 1940 lähtien – välillä ideologisista syistä erotettuna – ja loi siitä niin omaperäisen näyttämötaiteen keskuksen, että katsojat matkustivat sinne kaukaakin pelkän ohjelmiston vuoksi. Kaupunki itse lepää Nevėžis-joen rannalla laakeassa maakunnassa, jonka pellot ja mäntymetsät vaihtelevat rauhallisesti toisikseen. Teatterin rakennus seisoo yhä keskustassa, ja sen katsomo täyttyy edelleen, vaikka Miltinis itse kuoli jo 1994 – teatteri nimettiin hänen mukaansa kunnianosoituksena pian sen jälkeen.`,
+      pitka: `Panevėžysin lääni on Liettuan koillisosassa, ja se rajoittuu Latviaan. Läänissä asuu noin 216 000 ihmistä (väestönlaskenta 2021). Läänin keskus Panevėžys on saanut nimensä Nevėžis-joesta. Pohjoisessa Biržain kaupungissa on 1500-luvun lopulla rakennettu linna, jonka vieressä on tekojärvi Širvėna. Radziwiłł-ylimyssuku perusti Biržaihin protestanttisen kirkon ja koulun. Biržain seutu tunnetaan myös perinteisistä oluista. Biržain alueellisessa puistossa on karstimaisemaa, jossa on tuhansia painanteita. Rokiškisin kartanossa toimii alueellinen museo, ja kaupunki tunnetaan juustostaan. Pasvalys on Svalia-joen rannalla lähellä Latvian rajaa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ltu-maakunta2-panevezio-v-b-95023c14.jpg',
@@ -5748,7 +5748,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šiauliai': {
       lyhyt: 'Šiauliain pohjoispuolella Ristien mäellä seisoo arviolta 100 000 ristiä, joita pyhiinvaeltajat ovat tuoneet sinne 1800-luvulta asti.',
-      pitka: `Šiauliain nimi juontuu muinaisesta aurinkojumalatar Saulėsta, ja kaupungin syntyhetkeksi lasketaan usein vuoden 1236 Saulen taistelu, jossa liettualaiset ja liiviläiset kukistivat Miekkaveljien ritarikunnan. Keskiajan jälkeen kaupunki koki toistuvia sotia ja ruttoepidemioita, kunnes 1700-luvun lopulla kreivi Antoni Tyzenhaus suunnitteli sen uudelleen säännölliseksi, klassistiseksi kaupungiksi – sama ruutukaava näkyy keskustassa yhä. Vuoden 1872 suurpalon jälkeen Šiauliaihin nousi tehtaita, jotka valmistivat kaikkea silkistä suklaaseen, ja vuoteen 1897 mennessä kaupunki oli jo Liettuan toiseksi suurin Kaunasin jälkeen. ’Auringon kaupunki’ on nykyään Liettuan neljänneksi suurin, ja sen ruutukaavainen keskusta sekä tiiliset tehdasrakennukset kertovat yhä siitä, miten paljon kaupunki nousi tuhkasta juuri isoisän oman ajan kynnyksellä 1870-luvulla.`,
+      pitka: `Šiauliain lääni sijaitsee Liettuan pohjoisosassa Latvian rajalla, ja siellä asuu noin 262 000 ihmistä (väestönlaskenta 2021). Läänin keskus on Šiauliain kaupunki. Kaupungista noin 12 kilometriä pohjoiseen on Ristikukkula, jolle pyhiinvaeltajat ovat pystyttäneet suuren määrän ristejä. Paavi Johannes Paavali II vieraili Ristikukkulalla vuonna 1993. Tytuvėnain kaupungissa on 1600-luvulla rakennettu luostari. Pakruojisin kaupungin lähellä on 1800-luvulla rakennettu kartano, jossa toimii nykyisin hotelli ja ravintola. Žagarėn kaupunki on lähellä Latvian rajaa, ja sen ympärillä on aluepuisto.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ltu-maakunta2-siauliai-v-7267b196.jpg',
@@ -5771,7 +5771,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Taurages: {
       lyhyt: 'Tauragėssa preussilainen kenraali Yorck julisti 1812 joukkonsa puolueettomiksi, mikä mursi Preussin ja Napoleonin liiton.',
-      pitka: `Tauragės-maakunnan läpi virtaa Nemunas-joki, ja sen oikealla rannalla Jurbarkassa kohoaa Panemunės linna – 1600-luvun alussa rakennettu renessanssilinnoitus, jonka Eperyaszin aatelissuku rakennutti vuosina 1604–1610 kauppareitin suojaksi. Linna vaihtoi omistajaa vuosisatojen varrella ja siirtyi lopulta 1980-luvulla Vilnan taideakatemialle, joka avasi sinne museon ja näyttelytiloja. Samalla seudulla solmittiin vuonna 1812 niin kutsuttu Tauroggenin sopimus, ja se tunnetaan historiankirjoissa käännekohtana, josta alkoi koko Preussin vapaussota Napoleonia vastaan. Nykyisin rauhallinen raja- ja maatalousmaakunta muistuttaa vanhoilla linnoillaan ja hiljaisilla kylillään siitä, että Nemunas on vuosisatojen ajan ollut sekä kauppareitti että valtakuntien raja.`,
+      pitka: `Tauragėn lääni on Länsi-Liettuassa, ja siellä asuu noin 93 000 ihmistä (väestönlaskenta 2021). Se on Liettuan kymmenestä läänistä asukasluvultaan pienin. Läänin keskuksessa Tauragėssa allekirjoitettiin 30. joulukuuta 1812 Tauroggenin sopimus, Preussin ja Venäjän armeijoiden välinen aselepo. Tauroggen on kaupungin saksankielinen nimi. Pagėgiain kunnassa Nemunas-joen rannalla on Rambynasin kukkula, jota pidettiin pyhänä. Joen toisella puolella on Venäjän Kaliningradin alue. Raudonėn paikkakunnalla on uusgoottilainen linna, ja sen tornista näkee Nemunas-joen laaksoon.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-taurages-b17b2e91.jpg',
@@ -5794,7 +5794,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Telšiai': {
       lyhyt: 'Plateliaijärven lähellä metsässä piilee Neuvostoliiton ensimmäinen maanalainen ydinohjustukikohta – nyt kylmän sodan museo, jonka siiloon pääsee.',
-      pitka: `Telšiai on Žemaitijan eli Samogitian pääkaupunki, ja se lepää kauniisti Mastis-järven rannalla – kaupungin nimikin juontuu vanhasta sanasta telkšoti, joka tarkoittaa veden alle jäämistä tai lammikoitumista. Seudun ihmiset puhuvat žemaičių murretta, joka eroaa yleiskielestä niin paljon, että moni muualta tuleva liettualainen tuskin ymmärtää sitä – murre ja oma identiteetti ovat säilyneet täällä poikkeuksellisen elinvoimaisina. Kaupunki on toiminut katolisen hiippakuntansa keskuksena vuodesta 1926, ja mäellä kohoava tuomiokirkko hallitsee yhä näkymää järven yli. Monelle liettualaiselle Telšiai on Žemaitijan henkinen pääkaupunki siinä missä se on virallinenkin maakuntakeskus.`,
+      pitka: `Telšiain lääni sijaitsee Länsi-Liettuassa Latvian rajalla, ja siellä asuu noin 133 000 ihmistä (väestönlaskenta 2021). Läänin keskus Telšiai on rakennettu seitsemälle mäelle Mastis-järven rannalle. Mažeikiain kaupungissa on öljynjalostamo, joka avattiin vuonna 1980. Plungėn kaupungissa on vuonna 1879 valmistunut kartano, jonka rakennutti Ogiński-aatelissuku ja jossa toimii nykyisin taidemuseo. Kartanon puisto on Babrungas-joen rannalla. Plateliain järven ympärillä on kansallispuisto, jonka kukkulat jääkausi muovasi. Plokštinėn metsässä on entinen neuvostoliittolainen ohjustukikohta, jossa toimii kylmän sodan museo.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ltu-maakunta2-telsiai-v-9d52b1b6.jpg',
@@ -5817,7 +5817,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Utenos: {
       lyhyt: 'Utenan seudulla on yli tuhat järveä, ja Aukštaitijan kansallispuistossa lepää Liettuan syvin järvi Tauragnas, 60,5 metriä syvä.',
-      pitka: `Utenan seutu kuuluu Aukštaitijaan, Liettuan järvirikkaimpaan maisemaan, ja samaa pimeää ja kirkasta taivasta hyödyntää myös Molėtain tähtitieteellinen observatorio, joka on toiminut Vilnan yliopiston tutkimusasemana vuodesta 1969. Sen suurin kaukoputki on halkaisijaltaan 1,65 metriä, ja observatorio ottaa vastaan myös yleisöä tähtitornin kierroksilla. Paikka on valittu juuri tälle Kaldiniai-kukkulalle Molėtain lähelle, koska kaupunkien valosaaste ei täällä häiritse tähtien tarkkailua. Päivällä maisema on täynnä kimaltavia vesiä, mutta pimeän tultua sama taivas avautuu tutkijoille yhtä laajana kuin järvet maassa.`,
+      pitka: `Utenan lääni sijaitsee Koillis-Liettuassa Latvian rajalla. Siellä asuu noin 128 000 ihmistä (väestönlaskenta 2021). Läänissä on noin tuhat järveä. Aukštaitijan kansallispuisto perustettiin vuonna 1974, ja se on Liettuan vanhin kansallispuisto. Zarasain kaupunkia ympäröivät järvet ja joet. Anykščiain kaupungin läpi virtaa Šventoji-joki, ja kaupungissa on asema kapearaiteisella rautatiellä. Visaginasin kaupunki rakennettiin vuonna 1975 Ignalinan ydinvoimalan työntekijöille. Voimala oli toiminnassa vuosina 1983–2009, ja se oli maan ainoa ydinvoimala.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-utenos-9d591a62.jpg',
@@ -5840,7 +5840,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vilniaus: {
       lyhyt: 'Vilnan Užupis julistautui 1. huhtikuuta 1997 omaksi tasavallakseen, ja sen lipun kämmen vaihtaa väriä vuodenajan mukaan.',
-      pitka: `Noin 28 kilometrin päässä Vilnasta, Galvė-järven saarella, kohoaa Trakain linna – yksi harvoista saarilinnoista koko Euroopassa. Sen rakentaminen alkoi 1300-luvulla suurruhtinas Kęstutiksen aikana, ja hänen poikansa Vytautas Suuri viimeisteli sen punaisesta goottilaisesta tiilestä 1400-luvun alussa; Vytautas myös kuoli tässä samassa linnassa vuonna 1430. Trakaihin toi vuonna 1392 Vytautas myös toisenlaisen aarteen: joukon karaiimeja Krimiltä, ja heidän jälkeläisensä asuvat kaupungissa yhä, puhuvat omaa turkkilaista kieltään ja pitävät Trakaita koko maailman karaiimiyhteisön keskuksena. Vilnan maakunta kätkee siis pääkaupungin lisäksi keskiaikaisen saarilinnan ja yli 600 vuotta säilyneen ainutlaatuisen vähemmistökulttuurin – aivan eri tarinan kuin Užupiksen huhtikuun pila.`,
+      pitka: `Vilnan lääni sijaitsee Itä-Liettuassa, ja se on pinta-alaltaan Liettuan suurin lääni. Siellä asuu noin 810 000 ihmistä (väestönlaskenta 2021), ja läänin keskus on pääkaupunki Vilna. Noin viidennes asukkaista on puolalaisia. Trakain saarilinna on Galvė-järven saarella, ja sen rakentaminen alkoi 1300-luvulla. Trakain alueella asuu myös karaiimeja, pieni turkkilaista kieltä puhuva vähemmistö, joka tuli sinne 1300-luvun lopulla. Kernavėn arkeologinen alue Neris-joen rannalla on Unescon maailmanperintökohde vuodesta 2004. Kernavėn muinaisia linnavuoria on tutkittu 1800-luvulta lähtien.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-vilniaus-c621c586.jpg',
