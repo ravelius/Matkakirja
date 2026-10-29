@@ -1371,3 +1371,15 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   (pohja.json median URL:sta puuttuu → loputon sokkelo; 07-ajo -233152 oli tyhjä).
 - PARIT taustalla: scratchpad pari_v81.zsh (07, juuri-pk7-v81) ja pari_v83_03.zsh (03 03b, H/juuri-pk7-v83 = v81 + rakennukset-v145 + c1-v8 + c2-v15).
   Valmiit vierekkäiskuvat → KK + PT. Codex-osat (A2 12/12, A4, A1) PK:n kansiossa proto-3d/_tyo/pelikoodari/codex-osat-215/ → harjarivit PT:n luvalla.
+
+## LISÄYS 102 klo 00.0x (30.10.): LUOVUTUS (konteksti 30 %) — v84 = PT:N 07-LINJAUKSET, ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40. Viimeisin paketti v83 (6840ade5, PT kuittasi, JU vie).
+- 07-PARI v81 (lokit/havainne-editori-20261029-234039/07): PT: kerrostalojen poisto OK. PT:N LINJAUKSET v84:ään:
+  1) Meridiaaniportin eteen EI vallihautaa eikä siltoja (todellinen paikka = Duanmenin piha); pihan pinta kiveksi/puistoksi, ei harmaita pihakaistoja.
+  2) TÄRKEIN: palatsin ulkomuuri todelliseen korkeuteen (~10 m) ja paksuuteen punaisena + kulmatornit näkyviin (kielletty-kulmatorni-v1c, muurikate/tausta?).
+  3) Sisäpihoille puita havainteen tiheyteen siellä, missä todellisuudessa on puita.
+  Vesi on VS:n 3dc45d778:ssa (ei LR:n työ). v84 → pari 07 PT:lle (PT välittää KK:lle; roolit eivät viesti KK:lle, osoitekirja).
+- PARI 03/03b v83 (scratchpad pari_v83_03.zsh, juuri H/juuri-pk7-v83, muurit takaisin) oli luovutushetkellä editorijonossa: tarkista uusin
+  lokit/havainne-editori-*/03 (paketit-rivillä juuri-pk7-v83) → PT:lle; jos puuttuu, aja: cd H; REF=41a2eac22 MALLIT=file://H/juuri-pk7-v83/ PELIKAMERA=1 zsh ./editori-lr.sh 03 03b.
+- Avoimet: Codex-osat A2 12/12, A4, A1 (proto-3d/_tyo/pelikoodari/codex-osat-215/) → harjarivit PT:n luvalla; kaiteet-v3 (NUI pari 6) seuraavaan pakettiin
+  PT:n kuittauksella + johde_savy.py; V4_paaharja-sävy ja V4_jalusta_lohkokivi-pinta = VS.
