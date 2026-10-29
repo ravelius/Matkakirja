@@ -887,3 +887,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
      lähimuurit (muurikate-pohja, kuja 05) havainteen räystäskorkeuteen; jos tulee, kerro KK:lle. Samalla aukko + ovilehdet korkeammiksi:
      aukko 0,36 → 0,42 kuvan korkeudesta (~× 1,17: portti_havainne.py AUKKO2 3,5 → ~4,1 ja portti_lehdet.py H 3,45 → ~4,05).
   Sitten parit 02 + 05 (sovitettu + pelikamera) → KK → OK:lla paketti_v66.py (päivitä R ja LAHTEET).
+
+## LISÄYS 70 klo 11.05 (29.10., PT): OMISTAJA 11.02 — LATTIALAATAT JA REUNAKIVET HAVAINNEKUVIEN MUKAISIKSI (kaikki kujat ja aukiot)
+- Sanatarkasti: "lattialaatoista pitää tehdä samalla tavalla isompia ja erikokoisia kuin havainnekuvissa. reunakivet pitää olla matalampia,
+  leveämpiä ja pidempia, kuten havainnekuvissa." Kuva: docs/raportit/kaappaukset/omistaja-20261029/lattialaatat-reunakivet-1102.webp (kuja 02, v123 -101640).
+- KK:n mittaus sovitetulla kameralla (docs/raportit/kaappaukset/omistaja-20261029/lattia-reunakivi-vertailu-kk-1102.png, ylhäällä havainne):
+  laatta keisarin kohdalla ~1,5–2 × pelin pituus ja ~1,4 × syvyys, pituudet vaihtelevat ~1:2, limittäin. Reunakivi: ~½ pelin korkeudesta,
+  ~2–2,5 × leveämpi päältä, kivet ~2 × pidempiä; sama harmaa kivi kuin kivijalka (omistaja 27.10. 15.43).
+- TEE v66:n jälkeen (älä sotke v66:n porttikorjauksiin): lattian laattajako + reunakiven muoto. Jos laattapinta vaatii uuden eripituisen
+  laattasarjan, kerro PK:lle (Codex-tilaus; KK:n 28.10. v4d-hyväksyntä ei koskenut tätä). Pari kuja 02 → KK → omistaja, sitten muut kujat.
+- Viikkokäyttö 97 % (tauko 2.11. klo 03 asti): ei agentteja eikä raskaita ajoja ennen nollausta.
