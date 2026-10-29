@@ -1,0 +1,439 @@
+{
+  "generatedAt": "2026-10-29T13:15:42.788921+00:00",
+  "sourceCommit": "cac6ea6abb75b8905fd87d95b73bbf03ccecfc50",
+  "pipeline": "v5 immutable ImageGen stone source + revised metric joint layout; unchanged 0.83 source units/metre in both axes; no light or AO in albedo",
+  "sourceAddressing": {
+    "mode": "translated periodic wrap with smooth edge crossfade, no reflection",
+    "sourceUnitsPerMetreUV": [
+      0.83,
+      0.83
+    ],
+    "periodSourceUnits": 0.9,
+    "overlapSourceUnits": 0.1
+  },
+  "nativeSourcePx": [
+    1254,
+    1254
+  ],
+  "nativeSourceSha256": "2d12417ea65980b4bb00f3c26857e216acb2c370ca23d1ac87267c7c486c11fa",
+  "nativeSourceByteExactV5": true,
+  "newImageCalls": 0,
+  "tripoCalls": 0,
+  "materials": [
+    {
+      "name": "sokkeli",
+      "variant": 3,
+      "dimensionsM": [
+        2,
+        1.2
+      ],
+      "repeatXY": [
+        true,
+        false
+      ],
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/sokkeli-v03/sokkeli-v03-albedo.png",
+          "sha256": "6dd39b914c570d674de241ff1bb870df70d34ac42368f739163531e73151ccaa",
+          "bytes": 1117109,
+          "sizePx": [
+            1024,
+            614
+          ],
+          "colorSpace": "sRGB",
+          "bitDepth": 8
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/sokkeli-v03/sokkeli-v03-normal-opengl.png",
+          "sha256": "9be74b133d32db15e2c450c06f03b3b7cc8e0e691e96dafd630ceb11e8ff64ce",
+          "bytes": 70411,
+          "sizePx": [
+            1024,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/sokkeli-v03/sokkeli-v03-roughness.png",
+          "sha256": "f34badf2c1e73aa2f4edad84769d86d6246af541b114e74dbf8cd2bde6134824",
+          "bytes": 13337,
+          "sizePx": [
+            1024,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/sokkeli-v03/sokkeli-v03-height.png",
+          "sha256": "d6d21f8643472aacd278c8af507c52d0d6dd5e1a633aaff527630e425ff9cc35",
+          "bytes": 595075,
+          "sizePx": [
+            1024,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 16
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.006,
+        "rangeM": 0.007
+      },
+      "normalSpace": "tangent OpenGL +Y; PNG row down",
+      "seams": "SEAMS.json#sokkeli"
+    },
+    {
+      "name": "sokkelin-ylapinta",
+      "variant": 3,
+      "dimensionsM": [
+        2,
+        0.1
+      ],
+      "repeatXY": [
+        true,
+        false
+      ],
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-albedo.png",
+          "sha256": "89b3d6f3e41beab75dae5fd06a9a678e8e01671e36641bedb576886b913799f5",
+          "bytes": 94077,
+          "sizePx": [
+            1024,
+            51
+          ],
+          "colorSpace": "sRGB",
+          "bitDepth": 8
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-normal-opengl.png",
+          "sha256": "55e01eafaca6172c71bc9d05551a572a52e569d0d675ad8464b03fd0ba206575",
+          "bytes": 4861,
+          "sizePx": [
+            1024,
+            51
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-roughness.png",
+          "sha256": "88898d31fdf67ddfef0f82dc8c805b18b40e470c9ff878385860f2359b421574",
+          "bytes": 1128,
+          "sizePx": [
+            1024,
+            51
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-height.png",
+          "sha256": "7ad8656bba8029c87a92705e506f85c010c02d8976b90c89af43d320c1e360ed",
+          "bytes": 47152,
+          "sizePx": [
+            1024,
+            51
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 16
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.006,
+        "rangeM": 0.007
+      },
+      "normalSpace": "tangent OpenGL +Y; PNG row down",
+      "seams": "SEAMS.json#sokkelin-ylapinta"
+    },
+    {
+      "name": "lattialaatat",
+      "variant": 3,
+      "dimensionsM": [
+        2,
+        2
+      ],
+      "repeatXY": [
+        true,
+        true
+      ],
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/lattialaatat-v03/lattialaatat-v03-albedo.png",
+          "sha256": "f6b3982d724c90e27e802700caadc795e970c2718b5667c831efc801d1325594",
+          "bytes": 1884805,
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "colorSpace": "sRGB",
+          "bitDepth": 8
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/lattialaatat-v03/lattialaatat-v03-normal-opengl.png",
+          "sha256": "f14769a38e8489e947c045411fe0264c075c58c3b739c8aff9030cab36a9926a",
+          "bytes": 107179,
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/lattialaatat-v03/lattialaatat-v03-roughness.png",
+          "sha256": "65029d957dafb1d62183b26f3d3b6675d73c1f3b0255e517e199705731e58159",
+          "bytes": 21218,
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/lattialaatat-v03/lattialaatat-v03-height.png",
+          "sha256": "45f75d9d0181040286e3d6cc6ccb05bd7f6bc186d22fc52856bec931e3eae677",
+          "bytes": 985681,
+          "sizePx": [
+            1024,
+            1024
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 16
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.006,
+        "rangeM": 0.007
+      },
+      "normalSpace": "tangent OpenGL +Y; PNG row down",
+      "seams": "SEAMS.json#lattialaatat"
+    },
+    {
+      "name": "pilarin-etu",
+      "variant": 2,
+      "dimensionsM": [
+        0.6,
+        1.2
+      ],
+      "repeatXY": [
+        false,
+        false
+      ],
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/pilarin-etu-v02/pilarin-etu-v02-albedo.png",
+          "sha256": "8be545d4099ab26f60d2c8e70d7366a22a88b353d34d2fd0f8644834d5ffd0b3",
+          "bytes": 330076,
+          "sizePx": [
+            307,
+            614
+          ],
+          "colorSpace": "sRGB",
+          "bitDepth": 8
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/pilarin-etu-v02/pilarin-etu-v02-normal-opengl.png",
+          "sha256": "1404a602546b7a7eee05e27e9b78a6c98ab7fc0d5d01f343de024d7b8f25be1a",
+          "bytes": 26581,
+          "sizePx": [
+            307,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/pilarin-etu-v02/pilarin-etu-v02-roughness.png",
+          "sha256": "d96f8a06f3571049223978a9c9e906cf206c115763fe8e3f81d50c1d21ac2c6e",
+          "bytes": 7071,
+          "sizePx": [
+            307,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/pilarin-etu-v02/pilarin-etu-v02-height.png",
+          "sha256": "a3422cdf2d9b214565ef89924833e22791ea0f5b43e37bc0d53c9f5492312d3c",
+          "bytes": 188563,
+          "sizePx": [
+            307,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 16
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.006,
+        "rangeM": 0.007
+      },
+      "normalSpace": "tangent OpenGL +Y; PNG row down",
+      "seams": "SEAMS.json#pilarin-etu",
+      "unchangedFromV5": true
+    },
+    {
+      "name": "pilarin-sivu",
+      "variant": 2,
+      "dimensionsM": [
+        0.4,
+        1.2
+      ],
+      "repeatXY": [
+        false,
+        false
+      ],
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-albedo.png",
+          "sha256": "21992e54de40b734d5375be4bb60ba348e8f7a0e858bda514a3599d8ea0d7317",
+          "bytes": 220238,
+          "sizePx": [
+            205,
+            614
+          ],
+          "colorSpace": "sRGB",
+          "bitDepth": 8
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-normal-opengl.png",
+          "sha256": "0bc96c09eb0b8f2093c4de7dc37e59d2419fc9520a02c77ef3ffbb37b1de63a6",
+          "bytes": 19595,
+          "sizePx": [
+            205,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-roughness.png",
+          "sha256": "5c8bbce73702a3226d01d037693bfe705146f2ad7eea732329748b6a014ccdb8",
+          "bytes": 5830,
+          "sizePx": [
+            205,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-height.png",
+          "sha256": "71c886d341a2d312b74247ad690105660332d6d54597285a21ae0388aa9aeecb",
+          "bytes": 125324,
+          "sizePx": [
+            205,
+            614
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 16
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.006,
+        "rangeM": 0.007
+      },
+      "normalSpace": "tangent OpenGL +Y; PNG row down",
+      "seams": "SEAMS.json#pilarin-sivu",
+      "unchangedFromV5": true
+    },
+    {
+      "name": "reunakivi",
+      "variant": 1,
+      "dimensionsM": [
+        0.7,
+        0.52
+      ],
+      "repeatXY": [
+        false,
+        false
+      ],
+      "maps": [
+        {
+          "path": "pinnat/reunakivi-v01/reunakivi-v01-albedo.png",
+          "sha256": "fedc9e77dc3b3babe5b40a5ce34b0355e07156a5cbd3cd171a2c2f1477825493",
+          "bytes": 176819,
+          "kind": "albedo",
+          "sizePx": [
+            360,
+            266
+          ],
+          "colorSpace": "sRGB",
+          "bitDepth": 8
+        },
+        {
+          "path": "pinnat/reunakivi-v01/reunakivi-v01-normal-opengl.png",
+          "sha256": "8e9d3ae2c3ddec92f8fb8231c517f41bc6d415bb63c500495a27e2994aef327e",
+          "bytes": 39525,
+          "kind": "normal-opengl",
+          "sizePx": [
+            360,
+            266
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "path": "pinnat/reunakivi-v01/reunakivi-v01-roughness.png",
+          "sha256": "ffd23d59d207a41efca51e2d1967cca3465c168b135f544903d8ce87a1a795c2",
+          "bytes": 3095,
+          "kind": "roughness",
+          "sizePx": [
+            360,
+            266
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 8
+        },
+        {
+          "path": "pinnat/reunakivi-v01/reunakivi-v01-height.png",
+          "sha256": "ddc2945a1494e00cbd34dd2a2e32824d83507c8640cda9e7d2376aab094c7b4d",
+          "bytes": 129000,
+          "kind": "height",
+          "sizePx": [
+            360,
+            266
+          ],
+          "colorSpace": "linear",
+          "bitDepth": 16
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.006,
+        "rangeM": 0.007
+      },
+      "normalSpace": "tangent OpenGL +Y; PNG row down",
+      "unchangedFromV3": true,
+      "unchangedFromV4": true,
+      "unchangedFromV5": true
+    }
+  ],
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "ownerAccepted": false
+}

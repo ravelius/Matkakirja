@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "reviewedAt": "2026-10-29T13:16:25.775043+00:00",
+  "reviewers": [
+    "root",
+    "stones_v6_review"
+  ],
+  "reviewedFiles": [
+    "references/02-peli-v135-havainne.jpg",
+    "references/05-peli-v135-havainne.jpg",
+    "esikatselu/kivipinnat-v6-vertailu.png",
+    "esikatselu/lattialaatat-toisto-albedo.png",
+    "esikatselu/sokkeli-toisto-albedo.png"
+  ],
+  "findings": [
+    "Three transverse floor courses with .62/.68/.70 metre depths; stone lengths .60–1.40m.",
+    "Eight low .15m foundation courses with .70–1.30m stones.",
+    "Staggered joints; minimum adjacent joint separation .18m floor, .15m foundation.",
+    "Foundation top joints align with top image row.",
+    "Initial mirror-addressing candidate rejected for conspicuous symmetrical vein pattern. Replaced by translated periodic source addressing with smooth overlap; native source bytes unchanged.",
+    "Corrected albedos and repeated views have no mirror-V pattern or extra repeat-boundary seam.",
+    "Independent PNG readback checked24 maps,12 unchanged pillar/curb SHA256s and preserved pillar metadata.",
+    "All visible preview labels identify technical material previews separately from source game/target images."
+  ],
+  "limitations": [
+    "Lavastaja same-camera02/05 game/lighting check pending.",
+    "Receiver acknowledgement, KK/owner acceptance and publication are separate; not claimed."
+  ],
+  "newImageGenerationCalls": 0
+}

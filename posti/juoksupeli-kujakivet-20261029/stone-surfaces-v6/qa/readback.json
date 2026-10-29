@@ -1,0 +1,280 @@
+{
+  "status": "PASS",
+  "maps": 24,
+  "newMaps": 12,
+  "unchangedMaps": 12,
+  "allPillarAndCurbMapsByteExactV5": true,
+  "unchangedPillarSeamMetadata": true,
+  "floorRows": 3,
+  "floorWidthsM": [
+    0.6,
+    1.4
+  ],
+  "floorDepthsM": [
+    0.62,
+    0.68,
+    0.7
+  ],
+  "wallCourses": 8,
+  "wallRowHeightM": 0.15,
+  "wallWidthsM": [
+    0.7,
+    1.3
+  ],
+  "jointWidthM": [
+    0.0054,
+    0.0076
+  ],
+  "stagger": {
+    "lattialaatat": {
+      "minAdjacentJointOffsetM": 0.17999999999999994,
+      "pairsM": [
+        0.27,
+        0.17999999999999994,
+        0.35
+      ]
+    },
+    "sokkeli": {
+      "minAdjacentJointOffsetM": 0.1499999999999998,
+      "pairsM": [
+        0.2999999999999998,
+        0.1499999999999998,
+        0.27,
+        0.35000000000000003,
+        0.31999999999999995,
+        0.35000000000000003,
+        0.28
+      ]
+    }
+  },
+  "wallTopJointAlignment": true,
+  "seamJsonMatchesActualMortar": true,
+  "rasterMortarReadback": [
+    {
+      "material": "sokkeli",
+      "row": 0,
+      "u": 0.0,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 0,
+      "u": 0.375,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 1,
+      "u": 0.175,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 1,
+      "u": 0.5249999999999999,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 2,
+      "u": 0.05,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 2,
+      "u": 0.45,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 3,
+      "u": 0.275,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 3,
+      "u": 0.915,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 4,
+      "u": 0.1,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 4,
+      "u": 0.485,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 5,
+      "u": 0.325,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 5,
+      "u": 0.8999999999999999,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 6,
+      "u": 0.15,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 6,
+      "u": 0.515,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 7,
+      "u": 0.375,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkeli",
+      "row": 7,
+      "u": 0.985,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkelin-ylapinta",
+      "row": 0,
+      "u": 0.0,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "sokkelin-ylapinta",
+      "row": 0,
+      "u": 0.375,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "lattialaatat",
+      "row": 0,
+      "u": 0.0,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "lattialaatat",
+      "row": 0,
+      "u": 0.3,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "lattialaatat",
+      "row": 1,
+      "u": 0.135,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "lattialaatat",
+      "row": 1,
+      "u": 0.735,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "lattialaatat",
+      "row": 2,
+      "u": 0.475,
+      "heightM": -0.005699961852445258
+    },
+    {
+      "material": "lattialaatat",
+      "row": 2,
+      "u": 0.825,
+      "heightM": -0.005699961852445258
+    }
+  ],
+  "periodicLimits": [
+    {
+      "material": "sokkeli",
+      "axis": 0,
+      "albedoHeightRoughnessMaxDifference": [
+        2.7178403916305882e-06,
+        1.631334987846739e-10,
+        1.5833321764802122e-08
+      ],
+      "normalMaxDifference": 2.7500458099107006e-08
+    },
+    {
+      "material": "sokkelin-ylapinta",
+      "axis": 0,
+      "albedoHeightRoughnessMaxDifference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalMaxDifference": 0.0
+    },
+    {
+      "material": "lattialaatat",
+      "axis": 0,
+      "albedoHeightRoughnessMaxDifference": [
+        2.726404954911388e-06,
+        1.622425737992324e-10,
+        1.583358988366257e-08
+      ],
+      "normalMaxDifference": 2.755064258398417e-08
+    },
+    {
+      "material": "lattialaatat",
+      "axis": 1,
+      "albedoHeightRoughnessMaxDifference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalMaxDifference": 0.0
+    }
+  ],
+  "files": [
+    "pinnat/sokkeli-v03/sokkeli-v03-albedo.png",
+    "pinnat/sokkeli-v03/sokkeli-v03-normal-opengl.png",
+    "pinnat/sokkeli-v03/sokkeli-v03-roughness.png",
+    "pinnat/sokkeli-v03/sokkeli-v03-height.png",
+    "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-albedo.png",
+    "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-normal-opengl.png",
+    "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-roughness.png",
+    "pinnat/sokkelin-ylapinta-v03/sokkelin-ylapinta-v03-height.png",
+    "pinnat/lattialaatat-v03/lattialaatat-v03-albedo.png",
+    "pinnat/lattialaatat-v03/lattialaatat-v03-normal-opengl.png",
+    "pinnat/lattialaatat-v03/lattialaatat-v03-roughness.png",
+    "pinnat/lattialaatat-v03/lattialaatat-v03-height.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-albedo.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-normal-opengl.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-roughness.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-height.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-albedo.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-normal-opengl.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-roughness.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-height.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-albedo.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-normal-opengl.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-roughness.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-height.png"
+  ],
+  "unchangedFiles": [
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-albedo.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-normal-opengl.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-roughness.png",
+    "pinnat/pilarin-etu-v02/pilarin-etu-v02-height.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-albedo.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-normal-opengl.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-roughness.png",
+    "pinnat/pilarin-sivu-v02/pilarin-sivu-v02-height.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-albedo.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-normal-opengl.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-roughness.png",
+    "pinnat/reunakivi-v01/reunakivi-v01-height.png"
+  ]
+}

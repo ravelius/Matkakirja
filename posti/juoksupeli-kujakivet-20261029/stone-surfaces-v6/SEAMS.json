@@ -1,0 +1,804 @@
+{
+  "schemaVersion": 1,
+  "coordinates": "u=PNG left to right; vBoundsPngDown=PNG top to bottom; glTF v=1-PNG v. Values are seam centre lines, not stone edges. Texture edge listed in uClippedBounds is not automatically a physical joint.",
+  "jointWidthM": [
+    0.0054,
+    0.0076
+  ],
+  "normalBevelWidthM": {
+    "lattialaatat": 0.018,
+    "wall": 0.01
+  },
+  "lattialaatatLongAxis": "U = across alley; V = along alley; three rows / 2m. Use equal metric UV scale; never stretch either axis.",
+  "materials": {
+    "sokkeli": [
+      {
+        "row": 0,
+        "vBoundsPngDown": [
+          0.0,
+          0.125
+        ],
+        "vBoundsGltfUp": [
+          0.875,
+          1.0
+        ],
+        "uJointCenters": [
+          0.0,
+          0.375
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.375,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.75,
+          1.25
+        ],
+        "periodicOffsetM": 0.0,
+        "faceStartM": 0
+      },
+      {
+        "row": 1,
+        "vBoundsPngDown": [
+          0.125,
+          0.25
+        ],
+        "vBoundsGltfUp": [
+          0.75,
+          0.875
+        ],
+        "uJointCenters": [
+          0.175,
+          0.5249999999999999
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.175,
+          0.5249999999999999,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.7,
+          1.3
+        ],
+        "periodicOffsetM": 0.35,
+        "faceStartM": 0
+      },
+      {
+        "row": 2,
+        "vBoundsPngDown": [
+          0.25,
+          0.375
+        ],
+        "vBoundsGltfUp": [
+          0.625,
+          0.75
+        ],
+        "uJointCenters": [
+          0.05,
+          0.45
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.05,
+          0.45,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.8,
+          1.2
+        ],
+        "periodicOffsetM": 0.1,
+        "faceStartM": 0
+      },
+      {
+        "row": 3,
+        "vBoundsPngDown": [
+          0.375,
+          0.5
+        ],
+        "vBoundsGltfUp": [
+          0.5,
+          0.625
+        ],
+        "uJointCenters": [
+          0.275,
+          0.915
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.275,
+          0.915,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          1.28,
+          0.72
+        ],
+        "periodicOffsetM": 0.55,
+        "faceStartM": 0
+      },
+      {
+        "row": 4,
+        "vBoundsPngDown": [
+          0.5,
+          0.625
+        ],
+        "vBoundsGltfUp": [
+          0.375,
+          0.5
+        ],
+        "uJointCenters": [
+          0.1,
+          0.485
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.1,
+          0.485,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.77,
+          1.23
+        ],
+        "periodicOffsetM": 0.2,
+        "faceStartM": 0
+      },
+      {
+        "row": 5,
+        "vBoundsPngDown": [
+          0.625,
+          0.75
+        ],
+        "vBoundsGltfUp": [
+          0.25,
+          0.375
+        ],
+        "uJointCenters": [
+          0.325,
+          0.8999999999999999
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.325,
+          0.8999999999999999,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          1.15,
+          0.85
+        ],
+        "periodicOffsetM": 0.65,
+        "faceStartM": 0
+      },
+      {
+        "row": 6,
+        "vBoundsPngDown": [
+          0.75,
+          0.8750000000000001
+        ],
+        "vBoundsGltfUp": [
+          0.12499999999999989,
+          0.25
+        ],
+        "uJointCenters": [
+          0.15,
+          0.515
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.15,
+          0.515,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.73,
+          1.27
+        ],
+        "periodicOffsetM": 0.3,
+        "faceStartM": 0
+      },
+      {
+        "row": 7,
+        "vBoundsPngDown": [
+          0.8750000000000001,
+          1.0
+        ],
+        "vBoundsGltfUp": [
+          0.0,
+          0.12499999999999989
+        ],
+        "uJointCenters": [
+          0.375,
+          0.985
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.375,
+          0.985,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          1.22,
+          0.78
+        ],
+        "periodicOffsetM": 0.75,
+        "faceStartM": 0
+      }
+    ],
+    "sokkelin-ylapinta": [
+      {
+        "row": 0,
+        "vBoundsPngDown": [
+          0,
+          1
+        ],
+        "vBoundsGltfUp": [
+          0,
+          1
+        ],
+        "uJointCenters": [
+          0.0,
+          0.375
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.375,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.75,
+          1.25
+        ],
+        "periodicOffsetM": 0.0,
+        "faceStartM": 0
+      }
+    ],
+    "lattialaatat": [
+      {
+        "row": 0,
+        "vBoundsPngDown": [
+          0.0,
+          0.31
+        ],
+        "vBoundsGltfUp": [
+          0.69,
+          1.0
+        ],
+        "uJointCenters": [
+          0.0,
+          0.3
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.3,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.6,
+          1.4
+        ],
+        "periodicOffsetM": 0,
+        "faceStartM": 0
+      },
+      {
+        "row": 1,
+        "vBoundsPngDown": [
+          0.31,
+          0.65
+        ],
+        "vBoundsGltfUp": [
+          0.35,
+          0.69
+        ],
+        "uJointCenters": [
+          0.135,
+          0.735
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.135,
+          0.735,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          1.2,
+          0.8
+        ],
+        "periodicOffsetM": 0.27,
+        "faceStartM": 0
+      },
+      {
+        "row": 2,
+        "vBoundsPngDown": [
+          0.65,
+          1.0
+        ],
+        "vBoundsGltfUp": [
+          0.0,
+          0.35
+        ],
+        "uJointCenters": [
+          0.475,
+          0.825
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.475,
+          0.825,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.7,
+          1.3
+        ],
+        "periodicOffsetM": 0.95,
+        "faceStartM": 0
+      }
+    ],
+    "pilarin-etu": [
+      {
+        "row": 0,
+        "vBoundsPngDown": [
+          0.0,
+          0.125
+        ],
+        "vBoundsGltfUp": [
+          0.875,
+          1.0
+        ],
+        "uJointCenters": [
+          0.0,
+          0.7666666666666667
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.7666666666666667,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.46,
+          0.54,
+          0.47,
+          0.53
+        ],
+        "periodicOffsetM": 0.0,
+        "faceStartM": 0
+      },
+      {
+        "row": 1,
+        "vBoundsPngDown": [
+          0.125,
+          0.25
+        ],
+        "vBoundsGltfUp": [
+          0.75,
+          0.875
+        ],
+        "uJointCenters": [
+          0.4
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.4,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.55,
+          0.48,
+          0.52,
+          0.45
+        ],
+        "periodicOffsetM": 0.24,
+        "faceStartM": 0
+      },
+      {
+        "row": 2,
+        "vBoundsPngDown": [
+          0.25,
+          0.375
+        ],
+        "vBoundsGltfUp": [
+          0.625,
+          0.75
+        ],
+        "uJointCenters": [
+          0.16666666666666669,
+          0.9833333333333333
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.16666666666666669,
+          0.9833333333333333,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.49,
+          0.46,
+          0.55,
+          0.5
+        ],
+        "periodicOffsetM": 0.1,
+        "faceStartM": 0
+      },
+      {
+        "row": 3,
+        "vBoundsPngDown": [
+          0.375,
+          0.5
+        ],
+        "vBoundsGltfUp": [
+          0.5,
+          0.625
+        ],
+        "uJointCenters": [
+          0.6
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.6,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.52,
+          0.55,
+          0.45,
+          0.48
+        ],
+        "periodicOffsetM": 0.36,
+        "faceStartM": 0
+      },
+      {
+        "row": 4,
+        "vBoundsPngDown": [
+          0.5,
+          0.625
+        ],
+        "vBoundsGltfUp": [
+          0.375,
+          0.5
+        ],
+        "uJointCenters": [
+          0.3
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.3,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.47,
+          0.53,
+          0.54,
+          0.46
+        ],
+        "periodicOffsetM": 0.18,
+        "faceStartM": 0
+      },
+      {
+        "row": 5,
+        "vBoundsPngDown": [
+          0.625,
+          0.75
+        ],
+        "vBoundsGltfUp": [
+          0.25,
+          0.375
+        ],
+        "uJointCenters": [
+          0.6666666666666667
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.6666666666666667,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.54,
+          0.45,
+          0.5,
+          0.51
+        ],
+        "periodicOffsetM": 0.4,
+        "faceStartM": 0
+      },
+      {
+        "row": 6,
+        "vBoundsPngDown": [
+          0.75,
+          0.8750000000000001
+        ],
+        "vBoundsGltfUp": [
+          0.12499999999999989,
+          0.25
+        ],
+        "uJointCenters": [
+          0.11666666666666668,
+          0.9500000000000002
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.11666666666666668,
+          0.9500000000000002,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.5,
+          0.55,
+          0.46,
+          0.49
+        ],
+        "periodicOffsetM": 0.07,
+        "faceStartM": 0
+      },
+      {
+        "row": 7,
+        "vBoundsPngDown": [
+          0.8750000000000001,
+          1.0
+        ],
+        "vBoundsGltfUp": [
+          0.0,
+          0.12499999999999989
+        ],
+        "uJointCenters": [
+          0.48333333333333334
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.48333333333333334,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.45,
+          0.51,
+          0.54,
+          0.5
+        ],
+        "periodicOffsetM": 0.29,
+        "faceStartM": 0
+      }
+    ],
+    "pilarin-sivu": [
+      {
+        "row": 0,
+        "vBoundsPngDown": [
+          0.0,
+          0.125
+        ],
+        "vBoundsGltfUp": [
+          0.875,
+          1.0
+        ],
+        "uJointCenters": [
+          1.0
+        ],
+        "uClippedBounds": [
+          0.0,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.46,
+          0.54,
+          0.47,
+          0.53
+        ],
+        "periodicOffsetM": 0.0,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 1,
+        "vBoundsPngDown": [
+          0.125,
+          0.25
+        ],
+        "vBoundsGltfUp": [
+          0.75,
+          0.875
+        ],
+        "uJointCenters": [
+          0.47500000000000014
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.47500000000000014,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.55,
+          0.48,
+          0.52,
+          0.45
+        ],
+        "periodicOffsetM": 0.24,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 2,
+        "vBoundsPngDown": [
+          0.25,
+          0.375
+        ],
+        "vBoundsGltfUp": [
+          0.625,
+          0.75
+        ],
+        "uJointCenters": [],
+        "uClippedBounds": [
+          0.0,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.49,
+          0.46,
+          0.55,
+          0.5
+        ],
+        "periodicOffsetM": 0.1,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 3,
+        "vBoundsPngDown": [
+          0.375,
+          0.5
+        ],
+        "vBoundsGltfUp": [
+          0.5,
+          0.625
+        ],
+        "uJointCenters": [
+          0.7000000000000001
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.7000000000000001,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.52,
+          0.55,
+          0.45,
+          0.48
+        ],
+        "periodicOffsetM": 0.36,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 4,
+        "vBoundsPngDown": [
+          0.5,
+          0.625
+        ],
+        "vBoundsGltfUp": [
+          0.375,
+          0.5
+        ],
+        "uJointCenters": [
+          0.12499999999999983
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.12499999999999983,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.47,
+          0.53,
+          0.54,
+          0.46
+        ],
+        "periodicOffsetM": 0.18,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 5,
+        "vBoundsPngDown": [
+          0.625,
+          0.75
+        ],
+        "vBoundsGltfUp": [
+          0.25,
+          0.375
+        ],
+        "uJointCenters": [
+          0.8500000000000002
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.8500000000000002,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.54,
+          0.45,
+          0.5,
+          0.51
+        ],
+        "periodicOffsetM": 0.4,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 6,
+        "vBoundsPngDown": [
+          0.75,
+          0.8750000000000001
+        ],
+        "vBoundsGltfUp": [
+          0.12499999999999989,
+          0.25
+        ],
+        "uJointCenters": [],
+        "uClippedBounds": [
+          0.0,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.5,
+          0.55,
+          0.46,
+          0.49
+        ],
+        "periodicOffsetM": 0.07,
+        "faceStartM": 0.6
+      },
+      {
+        "row": 7,
+        "vBoundsPngDown": [
+          0.8750000000000001,
+          1.0
+        ],
+        "vBoundsGltfUp": [
+          0.0,
+          0.12499999999999989
+        ],
+        "uJointCenters": [
+          0.35000000000000003
+        ],
+        "uClippedBounds": [
+          0.0,
+          0.35000000000000003,
+          1.0
+        ],
+        "periodM": 2,
+        "periodicLengthsM": [
+          0.45,
+          0.51,
+          0.54,
+          0.5
+        ],
+        "periodicOffsetM": 0.29,
+        "faceStartM": 0.6
+      }
+    ]
+  }
+}
