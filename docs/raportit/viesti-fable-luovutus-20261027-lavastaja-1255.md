@@ -1418,3 +1418,15 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - PAKETIT: v84 PT:llä (9effe35e). Seuraava paketti (v85) vasta kuittausten jälkeen: k7 (KS:n 06-pari, v147), siipikatto (03-pari, v148), A6 (PK:n pari, v167;
   PT: "omaan pakettiin" → tee A6 erilliseksi versioksi siipikaton/k7:n jälkeen tai niiden kanssa PT:n ohjeen mukaan). paketti_v84.py mallina.
 - Jono muuten: erolista T-risteys, sivuhallit, 04; Codex-osat A2/A4/A1 (PK:n kansio) PT:n luvalla; kaiteet-v3 (NUI pari 6).
+
+## LISÄYS 105 klo 00.3x (30.10.): PT:N KORJAUKSET ENNEN 03 KOHTAA 4 — LUOVUTUS, ALOITA TÄSTÄ (sitova järjestys)
+- v84 / pari 07 HYVÄKSYTTY (KK omistajan puolesta 00.23) → JU voi viedä v84:n (PT ilmoittaa).
+- 1) PARIT JATKOSSA REF=d0d7677dd (juna 215, VS:n pinnat 3dc45d778 mukana), EI 41a2eac22 (vesi näkyi tummanvihreänä). Myös scratchpadin pari_v86_03.zsh
+  (41a2eac22) on vanhentunut: aja 03/03b uudelleen: cd H; REF=d0d7677dd MALLIT=file://H/juuri-pk7-v86/ PELIKAMERA=1 zsh ./editori-lr.sh 03 03b.
+- 2) ENNEN 03 KOHTAA 4: v85 = Duanmenin piha ja sen molemmin puolin (Zhongshanin puisto länsi, Taimiao itä; ulkorengas-v8:n laatat kk-ulkorengas-2/3-*,
+  x ≈ −300…+300, z ≈ −480…−900): valkoiset kattomattomat laatikot ja ruskea maa → periaate 9: poista laatikot (tai oikeiksi rakennuksiksi katoin),
+  puistoalueille puustoa kuten havainteessa (rengas_puistoksi.py / rengas_puurivi.py mallina; ruskea maa = V4_kujakivi_sokkeli_yla/V4_harmaa → nurmi/kivi).
+  Pohja: duanmen-v163/kielletty-ulkorengas-v8 (+ tausta-v74 jos laatikoita taustassa; tarkista alue_mat-tyyppisellä analyysillä: valkoinen = V4_lattia/V4_marmori
+  pystypinnat ilman V4_gold-kattoa). Tee paketti v85 (paketti_v84.py mallina) = v84 + korjattu ulkorengas(/tausta), juuri H/juuri-pk7-v84 + uusi ulkorengas,
+  pari 07 REF=d0d7677dd → PT:lle (kuva + sha, ≤ 3 riviä).
+- 3) Sitten 03 kohta 4 (v166 valmis, pari uudella REF:llä), A6 (v167, PK:n pari), k7 (v165, KS) kuten LISÄYS 104.
