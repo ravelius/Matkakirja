@@ -3156,3 +3156,7 @@ Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Kelpaa (suositus)" (LR v112: 
 ## OMISTAJAN PAATOS: KUJA 02 KAVENNETAAN HAVAINNEKUVAN LEVYISEKSI (29.10. klo 06.41) (29.10.2026 klo 06.41)
 
 Kortti KK:ssa: "Kavennetaanko kuja 02 havainnekuvan levyiseksi?" → "Kavennetaan (suositus)" (selite: "Korkeat muurit ympäröivät juoksijaa kuten havainnekuvassa."; kuva lokit/havainne-editori-20261029-063350/02/vierekkain.png). Päättää 25.10. klo 11.32 levennysasian (loki 2579, 2611: kysymys oli jäänyt kysymättä mittausvirheen korjauksen jälkeen): kuja 05 on jo havainnekuvan levyinen (pk4 ~4,5 m), kuja 02 kavennetaan havainnekuvan levyiseksi. Työnjako: KS pohja, LR muurit, PK rata.
+
+## OPPI JA KORJAUS: KUJAN 02 KORTTI 06.41 PERUSTUI VÄÄRIN PÄIN OLEVIIN LUKUIHIN (29.10. klo 07.0x) (29.10.2026 klo 07.00)
+
+Omistajan 06.41 päätös "kuja 02 kavennetaan" tehtiin kortilla, jossa luki "0,70 vs havainne 0,54". LR ajoi mittarin uudelleen: editori-lr:n mittari.txt:n sarakkeet olivat käänteiset, oikeat luvut havainne 0,70 ja peli 0,54 eli pelin kuja on jo havainnekuvaa kapeampi; kavennuskoe −1,5 m (juuri-v117m) vei 0,47:ään eli kauemmas havainnekuvasta. Kavennus pysäytetty (LR, KS, PK). PT pyysi KK:lta uuden kortin oikeilla luvuilla, suositus: levennetään havainnekuvan levyiseksi (kuten 25.10. klo 11.32). Oppi: mittari.txt:n sarakejärjestys korjataan editori-lr:ssä; kortin luvut tarkistetaan uudella ajolla ennen kuin ne viedään omistajalle.
