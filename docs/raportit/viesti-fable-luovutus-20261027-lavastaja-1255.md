@@ -877,3 +877,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (vaakasuora V4_marmori → V4_lattia; PK: peli teksturoi nimen mukaan, marmori näkyi dronesta harmaana).
 - rakennukset-v123 = v119 + nämä; juuri-v130m, aja_v130_pari.zsh; parit -101640 (sovitettu) / -101857 (pelikamera) KK:lla.
 - paketti_v66.py (v65 + rakennukset-v123 + tausta v106) valmis → aja KK:n OK:lla → PK + PT.
+
+## LISÄYS 69 klo 10.3x (29.10.): KK:N v123-PALAUTE (seuraavalle; PT: viikkoraja 97 %) — ALOITA TÄSTÄ
+- KK: ovilehtien väri ja kupunastat (1/16) HYVÄT. Ennen omistajaa vielä:
+  1) 02:n portin katto yhä ~2,1 × portin seinän levyinen (havainne ~1,2 ×): aja portti_katto_kapea.py rakennukset-v119:n kopioon SX ≈ 0,83 × 0,57 ≈ 0,47
+     (kaarevat räystäät ja harjaeläimet säilyvät), muut vaiheet kuten lisäys 68.
+  2) 05: havainteessa sivumuurien keltaiset räystäät ja friisi näkyvät yläkulmissa (räystään alareuna 0,17 kuvan korkeudesta, ~kamanan
+     korkeudella); pelissä muurit jatkuvat yläreunan yli. Selvitä, tuleeko 05:n lähimuurien korkeus datasta (pohja/OSM) → jos ei, laske portin
+     lähimuurit (muurikate-pohja, kuja 05) havainteen räystäskorkeuteen; jos tulee, kerro KK:lle. Samalla aukko + ovilehdet korkeammiksi:
+     aukko 0,36 → 0,42 kuvan korkeudesta (~× 1,17: portti_havainne.py AUKKO2 3,5 → ~4,1 ja portti_lehdet.py H 3,45 → ~4,05).
+  Sitten parit 02 + 05 (sovitettu + pelikamera) → KK → OK:lla paketti_v66.py (päivitä R ja LAHTEET).
