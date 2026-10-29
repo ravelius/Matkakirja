@@ -29,3 +29,8 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
 
 ## Jatko keskeytyksestä
 - Taustaajoja ei ole. L1 ja simu kuitattu JU:lle vapaiksi. Proto-worktree wt/proto-pelikoodari-kaapu-213 on haaralla drone-214 (puhdas).
+
+## LISÄYS 07.4x (PT)
+- Kuja 02 jää ennalleen (peli jo +4,9 %, tavoitteen sisällä), joten pk8:aa EI tule. pk7-214 odottaa vain LR:n v64:ää (= yksikerros-v103 t-porttiaukolla).
+  Kun v64 tulee: esto v13 v64:n taustasta, ratatarkistus kuja-39:ään pk7:llä, kansiovakiot pk7-214:ään, simu ja pari KK:lle. PalatsiTiedosto pysyy pk7:nä.
+- JU ajaa itse dronen c (L1) sekä simut a (pari pk2 | pk7) ja b (drone c). Tulokset ovat kansioissa lokit/todistus-pk7b-* ja todistus-drone214c-*.
