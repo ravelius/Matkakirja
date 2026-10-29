@@ -7687,7 +7687,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MLT: {
     'Southern Harbour': {
       lyhyt: 'Vallettan Upper Barrakka -puutarhan alla Saluting Battery laukaisee tykin joka päivä keskipäivällä Suuren sataman yli.',
-      pitka: "Suuren sataman ympärillä sykkii Maltan historiallinen ydin. Vallettan peruskivi muurattiin 28. maaliskuuta 1566, pian Suuren piirityksen jälkeen, ja kaupungin nimi tulee suurmestari Jean de Valettesta; koko kaupunki on ollut Unescon maailmanperintökohde vuodesta 1980. Vuonna 2012 avattu 58-metrinen Barrakka-hissi nostaa kävijät satamasta ylös kaupungin keskustaan, ja vuonna 2018 Valletta oli Euroopan kulttuuripääkaupunki. Paolan katujen alta löytyy vielä vanhempaa: vuonna 1902 vahingossa löydetty Ħal Saflieni -hypogeum on kolmikerroksinen esihistoriallinen hautakammio, jota käytettiin noin 3600 eaa. alkaen.",
+      pitka: `Etelä-satama on Maltan pääsaaren itäosan tilastoalue Suuren sataman ympärillä. Pääkaupunki Valletta on nimetty suurmestari Jean de Valetten mukaan, ja se on Unescon maailmanperintökohde. Vallettan Pyhän Johanneksen konkatedraalissa on Caravaggion maalaus. Birgun linnoitettu kaupunki Suuren sataman eteläpuolella oli Pyhän Johanneksen ritarikunnan tukikohta 1530–1571. Birgussa torjuttiin ottomaanien piiritys vuonna 1565. Paolassa on Ħal Saflieni -hypogeum, kolmikerroksinen esihistoriallinen hautakammio, joka löytyi vahingossa vuonna 1902. Tarxienin temppeleissä on kiveen veistettyjä eläinreliefejä. Luqassa on Maltan kansainvälinen lentokenttä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-southern-harbour-e9f048ea.jpg",
@@ -7710,7 +7710,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Northern Harbour': {
       lyhyt: 'Maltalla kulki 1883–1931 rautatie Vallettasta Mdinaan, ja sen Birkirkaran asemarakennus on nyt rautatiemuseo.',
-      pitka: "Suuren sataman pohjoispuolella Sliemasta St Julian'siin ja Msidaan ulottuu Maltan tiheimmin asuttu ja vilkkain kaupunkiseutu. Sliemasta pääsee lautalla Vallettaan Marsamxettin sataman yli, ja rantakatu täyttyy iltaisin kävelijöistä. Gżiran edustalla Manoelin saarella seisoo Fort Manoel, tähtilinnake, jonka rakennuttaminen aloitettiin 1723 ja joka valmistui 1733. St Julian'sin pienessä Spinolan lahdessa veneet keinuvat värikkäiden talojen edessä, ja aivan vieressä Paceville on saaren yöelämän keskus. Msidan kampuksella toimii Maltan yliopisto.",
+      pitka: `Pohjois-satama on Maltan pääsaaren koillisosan tilastoalue Vallettan vastarannalla. Sliemasta pääsee lautalla Vallettaan, ja kaupungin rantakatu on kävelijöiden suosima. Sliemassa Tigné Point -niemi on rakennettu uudelleen nykyaikaiseksi alueeksi 2000-luvun alussa. Gżiran kaupungin Manoelin saarella on Fort Manoel, tähtilinnake, joka rakennettiin 1723–1733. Birkirkaran vanhassa asemarakennuksessa on rautatiemuseo. Maltan rautatie kulki Vallettasta Mdinaan 1883–1931. Suurmestari Alof de Wignacourtin mukaan nimetyn vesijohdon kaaret kulkevat Santa Veneran ja Birkirkaran halki. Vesijohto vihittiin käyttöön vuonna 1615 tuomaan vettä Vallettaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-harbour-1864cedc.jpg",
@@ -7733,7 +7733,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'South Eastern': {
       lyhyt: 'Marsaxlokkin satamassa keinuvat kirjavat luzzu-kalastusveneet, joiden keulaan on maalattu suojeleva silmä.',
-      pitka: "Saaren kaakkoisosassa muinaisuus ja moderni maailmankauppa ovat naapureita. Birżebbuġan Għar Dalamin luolasta on löytynyt jääkauden eläinten luita sekä merkkejä noin 7 400 vuotta sitten alkaneesta ihmisasutuksesta, ja kaupungin satama-alueella toimii vuonna 1988 perustettu Malta Freeport, Välimeren ensimmäinen konttien jälleenlaivauskeskus. Qrendin lähellä kallioiden reunalla seisovat Ħaġar Qimin ja Mnajdran temppelit, jotka rakennettiin noin 3600–3200 eaa. Marsaxlokkin satamassa pidetään sunnuntaisin kalatori, ja Delimaran niemen kärjessä on kallioon muodostunut St Peter's Pool -uimapaikka.",
+      pitka: `Kaakkoinen on Maltan pääsaaren eteläosan tilastoalue. Marsaxlokkin kalastajakylän satamassa on värikkäitä luzzu-kalastusveneitä, joiden keulaan on maalattu silmä suojaksi pahalta. Sunnuntaisin kalastajat myyvät saaliin suoraan rantakadulla. Kylän koillispuolella kukkulalla on Tas-Silġin pyhäkkö, jota käytettiin kivikaudelta 300-luvulle jKr. Birżebbuġan laitamilla on Għar Dalam -luola, josta on löytynyt kääpiönorsun ja virtahevon luita. Qrendissä on Ħaġar Qimin megaliittitemppeli, joka kuuluu Unescon maailmanperintökohteisiin. Temppelin julkisivussa on kivi, joka painaa 57 tonnia. Marsaxlokkin lahdella on myös Maltan vapaasatama, joka aloitti toimintansa vuonna 1988.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-south-eastern-32366c7b.jpg",
@@ -7756,7 +7756,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Western: {
       lyhyt: 'Muurien ympäröimää Mdinaa kutsutaan Hiljaiseksi kaupungiksi, sillä sen kapeille kujille saavat ajaa vain asukkaiden autot.',
-      pitka: "Maltan länsiosassa kohoaa saaren korkein maasto. Dingli Cliffsin jyrkänteillä sijaitseva Ta' Dmejrek on Maltan korkein kohta, 253 metriä merenpinnan yläpuolella. Mdinan kukkulalla on kaupunkia ollut foinikialaisista lähtien, ja kaupunki toimi saaren pääkaupunkina aina siihen asti, kun ritarikunta saapui 1530. Naapurikaupungin Rabatin alta löytyvät St Paulin katakombit, roomalaisia hautakammioita, jotka olivat käytössä 300-luvulle jKr. asti ja joiden pinta-ala on noin 2 000 neliömetriä. Ne ovat Maltan varhaisin ja laajin todiste kristinuskon leviämisestä.",
+      pitka: `Läntinen on Maltan pääsaaren länsiosan tilastoalue. Mdina on muurien ympäröimä entinen pääkaupunki, jota kutsutaan hiljaiseksi kaupungiksi. Mdinassa autoilla ajo on sallittu vain rajatulle joukolle. Mdinan Pyhän Paavalin katedraali rakennettiin barokkityylisenä uudelleen vuosina 1697–1703. Viereisessä Rabatissa ovat Pyhän Paavalin katakombit. Dinglin kylän laidalla ovat Dingli Cliffsin jyrkänteet, joilta näkee Filfla-saarelle. Buskettin puutarhat ovat harvinainen metsäalue, jossa kasvaa tammea, johanneksenleipäpuuta ja oliivia. Pyhän Johanneksen ritarikunta käytti aluetta metsästysmaana. Puutarhojen yläpuolella kukkulalla on vuonna 1588 rakennettu Verdalan palatsi, joka on nykyisin presidentin kesäasunto.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mlt-maakunta2-western-v-047e28e0.jpg',
@@ -7779,7 +7779,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Northern: {
       lyhyt: 'Mostan kirkon kupolin läpi putosi huhtikuussa 1942 saksalainen pommi, joka ei räjähtänyt – sen kopio on esillä kirkossa.',
-      pitka: "Maltan pohjoisosassa historia ja rantaelämä kulkevat rinnakkain. Mostan Rotundan kupolin sisähalkaisija on 39,6 metriä, ja sitä on pitkään pidetty maailman kolmanneksi suurimpana tukemattomana kupolina; kirkko on mallinnettu Rooman Pantheonin mukaan. Mellieħassa ritarikunnan rakennuttama Punainen torni valmistui 1649, ja kallioon louhittu ilmasuojatunneli muistuttaa sota-ajasta. Kaupungin liepeillä Għadiran luonnonsuojelualue on vain seitsemän hehtaarin kokoinen suolakosteikko, jolla käy muuttolintuja. Ċirkewwan satamasta lähtee lautta Gozolle, ja matka Mġarrin satamaan kestää noin 25 minuuttia.",
+      pitka: `Pohjoinen on Maltan pääsaaren pohjoisosan tilastoalue. Mostan Rotunda on neoklassinen kirkko, jonka malli on Rooman Pantheon. Toisen maailmansodan aikana saksalainen pommi lävisti kupolin messun aikana mutta ei räjähtänyt. Mellieħan Anchor Bay -lahdella on Popeye Village, joka rakennettiin elokuvakulissiksi Popeye-elokuvaa varten ja on nyt vapaa-ajan kylä. Mellieħan lahdella Għadiran luonnonsuojelualue on entisillä suola-altailla. Ċirkewwan satamasta lähtee lautta Gozolle. St. Paul's Bayn kaupungin nimi viittaa apostoli Paavalin haaksirikkoon. St. Paul's Bayssä on myös vuonna 1610 rakennettu Wignacourtin vartiotorni.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mlt-maakunta2-northern-vc-aafcb052.jpg',
@@ -7802,7 +7802,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Gozo and Comino': {
       lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
-      pitka: "Gozolla asuu noin 39 000 ihmistä (2021). Rabatin eli Victorian keskustan yllä kohoaa Cittadella, jonka linnoituksen ritarit uudistivat noin 1599–1622 ja jonka barokkikatedraali rakennettiin 1697–1711. Għarbin peltojen keskellä seisova Ta' Pinun basilika on kansallinen pyhiinvaelluskohde: Karmni Grima kertoi kuulleensa kappelin luona äänen kesäkuussa 1883, ja nykyinen kirkko vihittiin 1932. Xwejnin suola-altaat pohjoisrannikolla ovat noin 350 vuotta vanhat. Comino, Gozon ja Maltan välinen pieni saari, on saanut nimensä kuminasta, ja siellä asuu vakituisesti vain muutama ihminen; sen Pyhän Marian torni valmistui 1618.",
+      pitka: `Gozo ja Comino ovat saaria Maltan pääsaaren luoteispuolella. Gozolle pääsee lautalla Maltan pääsaaren Ċirkewwasta. Xagħran kylässä ovat Ġgantijan megaliittitemppelit, jotka kuuluvat Unescon maailmanperintökohteisiin. Eteläinen temppeli on rakennettu noin vuonna 3600 eaa. Dwejran lahdella San Lawrenzin lähellä romahti maaliskuussa 2017 Azure Window, luonnon muovaama kalkkikivikaari. Joidenkin perimätietojen mukaan Gozo on Ogygia-saari, jolla nymfi Kalypso piti Odysseusta vankinaan. Xlendi ja Marsalforn ovat suosittuja rantakohteita. Gozon pääkaupunki Victoria on saaren keskellä, ja Għarbin lähellä on Ta' Pinun pyhäkkö. Comino on pieni, lähes asumaton luonnonsuojelusaari. Sen Blue Lagoon -lahti on suosittu uimapaikka.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-gozo-and-comino-37224a77.jpg",
