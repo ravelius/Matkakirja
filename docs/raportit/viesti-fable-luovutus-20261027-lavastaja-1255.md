@@ -1066,3 +1066,18 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - 15.4x: parit valmiit. Pilarikorjaus REF 46c0add3c: -153540 (sovitettu), -153759 (pelikamera). VS:n 633d70948 + v137m: -154037 (sovitettu),
   -154302 (pelikamera): kivijalassa EI pystyjuovia, pilarit kiveä, kerrokset + pitkät kivet näkyvät → lähetetty VS:lle ja PT:lle.
   VS 15.4x: seuraava REF de0aeca40 (= 633d70948 + lattialaatat-v03 sävy kivittäin) → käytä seuraavissa pareissa ja v68:n tarkistuksessa.
+
+## LISÄYS 84 klo 16.26 (29.10.): TUNNELIN SUUN KATKOVIIVA KORJATTU (rakennukset-v128, juuri-v138m) → v68 VIETY — ALOITA TÄSTÄ
+- Paikka: drone v67b:n 2. portti = t-portti-m15 (puomiloki "t-portti-m15 S-N"); drone ajaa sokkelomaailmassa omilla koordinaateillaan (pelin z ≈ −pohja z − 390),
+  V4-maailmassa malli on rakennukset.json:n paikassa (−80,55; −14,75). Editorin "06 x z suunta" = V4/pohja-kehys, suunta asteina (0 = pohjoinen).
+- TODELLINEN SYY: terassikannen (V4_lattia y 2,5; 120: y 0,3) kiilarako ylimmän askelman reunassa molemmilla suilla (m15 pohj. z 10,64–10,83,
+  leveys 0 → 0,19 m, puuttuva kolmio Codexin mallissa) → raosta näkyi 2,5 m alempi katulattia eri kuviolla. Sama vika t-porteissa 120/m15/m216 (LOD0–2).
+- UUSI K/tyokalut/kansi_raot_umpeen.py (näytteistys 0,02 m, rako = peittämätön kansien välissä ≤ RAKO; paikka = suorakaide miinus kolmiot, UV0 x/8, 1 − z/8,
+  muut attribuutit lähimmästä kansikolmiosta, kierto normaalin mukaan) + UUSI lattia_limitys_pois.py (limittäiset samantasoiset kansikolmiot pois; ei ollut
+  syy, mutta poistaa z-taistelun) + tportti_askel.py YMAX=2,55 (kaikki nousupinnat kiveksi, ei vain alimmat 5). Pieniä 2–4 cm rakoja jää askelmien
+  sivupäihin (kaiteen alla). Tarkistus: lattiakolmiot 0 nurin, attribuutit ehjät.
+- rakennukset-v128 = v127 + yllä; H/juuri-v138m = v137m + v128. Pelikamera REF de0aeca40, editori 06 −80 −5 0: lokit/havainne-editori-20261029-160432 (v137m,
+  katkoviiva näkyy) vs -162116 (v138m, poissa); pari-katkoviiva-v137m-vs-v138m.png + zoom-katkoviiva-ennen-jalkeen.png -162116-kansiossa.
+- v68 = K/tyokalut/paketti_v68.py: _valmiit/juoksupeli-kk-lavastaja-v68-vienti-20261029 = v67 + tausta-v68 (yksikerros-v111) + muurikate-v23 (pari-v137)
+  + rakennukset-v52 (v128); 299 tiedostoa, SHA256SUMS OK (4fc4da42…). EI ämpäriin/junaan ennen omistajan korttia. PT:lle ja PK:lle (drone v68) ilmoitettu.
+- SEURAAVAKSI: PK:n drone v68 → PT; avoimet työt lisäyksen 81 alta (EROLISTA: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
