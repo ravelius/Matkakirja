@@ -1,0 +1,1130 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Shakki, Wien 1873 (PT/omistaja 12.10.). Faktat 2 lähteestä ja itsenäinen Sonnet-tarkistus (korjaukset tehty). Turnauksen alku: 21.7.1873 (EI 21.6.). Tehtävien asemat verifioitu kahdella itsenäisellä moottorilla.",
+  "turnaus": {
+    "meta": {
+      "tekija": "Sisältökirjuri (osatehtävä A)",
+      "paivays": "2026-10-12",
+      "tehtava": "Wienin shakkiturnaus 1873, maailmannäyttely, wieniläiset kahvilat, Steinitz, Staunton-nappulat, Lontoo 1851",
+      "varmuusasteikko": "korkea = kaksi itsenäistä lähdettä täsmää; keskitaso = kaksi lähdettä mutta jokin yksityiskohta eroaa tai lähteet eivät ole täysin itsenäisiä; yksi_lahde = vain yksi lähde, ei pelitekstiin"
+    },
+    "kortit": [
+      {
+        "nro": 1,
+        "teksti": "Wienin maailmannäyttely avattiin Praterissa 1.5.1873. Sen keskuksena oli Rotunda, jättimäinen kupolirakennus.",
+        "kuva": {
+          "tiedosto": "Eingangstor Weltausstellung 1873.jpg",
+          "tekija": "Michael Frankenstein / Wiener Photographen-Association",
+          "lisenssi": "Public domain (valokuva 1873, tekijä kuollut 1918)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eingangstor_Weltausstellung_1873.jpg",
+          "leveys": 2109,
+          "kuvaus": "Näyttelyn pääportti ja sen takana Rotunda. Katsottu esikatselusta, ei vesileimaa."
+        }
+      },
+      {
+        "nro": 2,
+        "teksti": "Shakkiturnaus pelattiin heinä–elokuussa 1873 maailmannäyttelyn rinnalla Wienin shakkiseuran tiloissa, ei näyttelyalueella.",
+        "kuva": {
+          "tiedosto": "Rotunde Weltausstellung 1873.jpg",
+          "tekija": "Wiener Photographen-Association, 1873",
+          "lisenssi": "Public domain",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rotunde_Weltausstellung_1873.jpg",
+          "leveys": 1404,
+          "kuvaus": "Rotunda rakenteilla (harjannostajaiset). Kuvaa ei ole shakkitilasta; vapaata kuvaa Schachgesellschaftin tiloista ei löytynyt.",
+          "huom": "Kuvateksti: Rotunda rakenteilla (ei shakkitila)."
+        }
+      },
+      {
+        "nro": 3,
+        "teksti": "Jokainen kahdestatoista pelaajasta kohtasi jokaisen toisen lyhyessä ottelussa: enintään kolme peliä, kaksi voittoa riitti.",
+        "kuva": {
+          "tiedosto": "Jean Henri Marlet Das berühmte Schachspiel zwischen Howard Staunton und Pierre Charles Fourrier Saint-Amant 1843.jpg",
+          "tekija": "Jean-Henri Marlet (1771–1847)",
+          "lisenssi": "Public domain (maalaus n. 1843–45)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jean_Henri_Marlet_Das_ber%C3%BChmte_Schachspiel_zwischen_Howard_Staunton_und_Pierre_Charles_Fourrier_Saint-Amant_1843.jpg",
+          "leveys": 5059,
+          "kuvaus": "Aikalaismaalaus Staunton–Saint-Amant-ottelun (1843) yleisöstä. Havainnollistaa ottelu- ja katsojakulttuuria, ei Wienin 1873 turnausta; kuvatekstissä se pitää sanoa.",
+          "huom": "Aikalaiskuva Staunton–Saint-Amant 1843; ei Wienin 1873 turnauksesta (kuvatekstissä sanottava)."
+        }
+      },
+      {
+        "nro": 4,
+        "teksti": "Steinitz ja Blackburne päättivät kisan tasan 10 ottelupisteeseen. Steinitz voitti uusintaottelun 2–0 ja turnauksen.",
+        "kuva": {
+          "tiedosto": "Steinitz, Wilhelm 1883 - DPLA - 71346d3993a39f8e3e36b7ba3efd93ee.jpg",
+          "tekija": "Lilienthal (New Orleans)",
+          "lisenssi": "Public domain (valokuva 1883)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Steinitz,_Wilhelm_1883_-_DPLA_-_71346d3993a39f8e3e36b7ba3efd93ee.jpg",
+          "leveys": 2426,
+          "kuvaus": "Steinitz 1883, käsin kirjoitettu päiväys kuvan alareunassa. 1873 aikaista kuvaa ei löytynyt tarkistetusta joukosta.",
+          "huom": "Rajaa alareunan käsinkirjoitus pois tai käytä \"Steinitz, William-4 (cropped)\" -kuvaa."
+        }
+      },
+      {
+        "nro": 5,
+        "teksti": "Wilhelm Steinitz syntyi Prahassa 1836, opiskeli Wienissä ja muutti 1862 Lontooseen. Wienin voitto 1873 vahvisti hänen asemansa yhtenä maailman parhaista.",
+        "kuva": {
+          "tiedosto": "Steinitz, Wilhelm (\"William\") -3 - DPLA - 991bf720fa94733512fe781c2dfd08b1.jpg",
+          "tekija": "tuntematon (Beilage zum Deutschen Wochenschach 1892)",
+          "lisenssi": "Public domain (painettu 1892)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Steinitz,_Wilhelm_(%22William%22)_-3_-_DPLA_-_991bf720fa94733512fe781c2dfd08b1.jpg",
+          "leveys": 3608,
+          "kuvaus": "Painettu muotokuva 1892; käsinkirjoitus alareunassa (lahjoitusmerkintä 1913). Ei logoa.",
+          "huom": "Rajaa alareunan käsinkirjoitus pois tai käytä \"Steinitz, William-4 (cropped)\" -kuvaa."
+        }
+      },
+      {
+        "nro": 6,
+        "teksti": "Café Landtmann avattiin vasta 1.10.1873, reilu kuukausi turnauksen päättymisen jälkeen. Kisan aikaan sitä ei vielä ollut.",
+        "kuva": null
+      },
+      {
+        "nro": 7,
+        "teksti": "Café Central avattiin vasta 1876, joten sitä ei vielä ollut 1873. Shakkikahvilana siitä tuli tunnettu vasta myöhemmin.",
+        "kuva": null
+      },
+      {
+        "nro": 8,
+        "teksti": "Wieniläinen kahvila oli kaupungin olohuone: marmoripöytiä, Thonet-tuoleja ja lehtitelineitä. Siellä sai istua tuntikausia.",
+        "kuva": {
+          "tiedosto": "Cafe-Griensteidl-1896.jpg",
+          "tekija": "Reinhold Völkel",
+          "lisenssi": "Public domain (akvarelli 1896; tekijä kuollut 1920)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cafe-Griensteidl-1896.jpg",
+          "leveys": 1490,
+          "kuvaus": "Café Griensteidlin sali 1896: kaarikatto, marmoripöydät, vääntöpuutuolit, lehdenlukijat. Kuva on 23 vuotta myöhemmältä; pitää merkitä 'n. 1896'."
+        }
+      },
+      {
+        "nro": 9,
+        "teksti": "Staunton-nappulamallin rekisteröi Lontoossa 1.3.1849 Nathaniel Cooke. Nimi tulee shakkimestari Howard Stauntonista, joka suositteli sitä.",
+        "kuva": {
+          "tiedosto": "Chess game Staunton No. 6.jpg",
+          "tekija": "Wilfredor",
+          "lisenssi": "CC0 1.0",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6.jpg",
+          "leveys": 7743,
+          "kuvaus": "Nykyaikainen Staunton-tyyppinen sarja laudalla (House of Chess). Kuvassa moderni valmiste, ei 1849 alkuperäinen; kuvatekstissä 'Staunton-mallinen sarja'."
+        }
+      },
+      {
+        "nro": 10,
+        "teksti": "Ensimmäinen kansainvälinen shakkiturnaus pelattiin Lontoossa 1851 maailmannäyttelyn aikaan. Voittaja oli Adolf Anderssen.",
+        "kuva": {
+          "tiedosto": "Great Exhibition, Transept looking west, HF Talbot, 1851.jpg",
+          "tekija": "William Henry Fox Talbot",
+          "lisenssi": "Public domain (kalotyyppi 1851)",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Exhibition,_Transept_looking_west,_HF_Talbot,_1851.jpg",
+          "leveys": 3307,
+          "kuvaus": "Suuren maailmannäyttelyn Crystal Palace 1851, sisäkuva. Ei turnauksen paikka (pelipaikka ristiriitainen), vain näyttelyn tunnelma."
+        }
+      }
+    ],
+    "kahvilat": [
+      {
+        "nimi": "Café Griensteidl",
+        "osoite": "Michaelerplatz 2 (Innere Stadt)",
+        "perustettu": "1847 (Austria-Forum: 1846)",
+        "suljettu": "1897 (talo purettu tammikuussa 1897)",
+        "olemassa1873": true,
+        "shakkiyhteys": "Ei dokumentoitua; kirjailijakahvila, Jung-Wien 1890-luvulla.",
+        "kayttoPelissa": "Sallittu 1873-kohtauksessa kahvilana; ei shakkikahvilana. Interiöörikuva akvarellina 1896.",
+        "lahteet": [
+          "https://en.wikipedia.org/wiki/Caf%C3%A9_Griensteidl",
+          "https://www.geschichtewiki.wien.gv.at/Kaffeeh%C3%A4user"
+        ]
+      },
+      {
+        "nimi": "Kahvila Himmelpfortgasse 6:ssa (myöhemmin Café Frauenhuber)",
+        "osoite": "Himmelpfortgasse 6 (Innere Stadt)",
+        "perustettu": "1824 (Alois Hänisch avasi kahvilan 1824; Wien Geschichte Wiki merkitsee 1824 muutoksi Himmelpfortgasselle)",
+        "olemassa1873": true,
+        "shakkiyhteys": "Shakkia ja whistiä pelattiin paljon; vakiovieraina eläkkeellä olevia upseereita ja virkamiehiä; hiljainen kahvila.",
+        "kayttoPelissa": "Älä käytä nimeä 'Frauenhuber' 1873-kohtauksessa: nimi tuli 1891 (secretvienna) tai 1900-luvulla (Wien Geschichte Wiki). 1800-luvulla Café Hänisch, sitten Café Herzog. Sano 'Himmelpfortgassen kahvila'.",
+        "lahteet": [
+          "https://www.geschichtewiki.wien.gv.at/Caf%C3%A9_Frauenhuber",
+          "https://secretvienna.org/?p=3823"
+        ]
+      },
+      {
+        "nimi": "Café Landtmann",
+        "osoite": "Ringstraße (nyk. Universitätsring 4)",
+        "perustettu": "1.10.1873 (Franz Landtmann)",
+        "olemassa1873": "vasta 1.10.1873 – EI turnauksen aikana (21.7.–29.8.)",
+        "shakkiyhteys": "Ei.",
+        "kayttoPelissa": "Ei saa esiintyä kesä–elokuun 1873 kohtauksessa. Sallittu vasta lokakuusta 1873 (pelin kartta elää nykyajassa, joten nykyajan Landtmann on OK nykyaikaisessa kerroksessa).",
+        "lahteet": [
+          "https://en.wikipedia.org/wiki/Caf%C3%A9_Landtmann",
+          "https://www.landtmann.at/en/the-landtmann/the-landtmann-story.html"
+        ]
+      },
+      {
+        "nimi": "Café Central",
+        "osoite": "Herrengasse 14, Palais Ferstel",
+        "perustettu": "1876",
+        "olemassa1873": false,
+        "shakkiyhteys": "Myöhemmin 'Schachhochschule' (shakkipelaajat 1. kerroksessa; Trotski 1907–1914). Ei 1873.",
+        "kayttoPelissa": "EI vuoden 1873 kohtauksessa.",
+        "lahteet": [
+          "https://en.wikipedia.org/wiki/Caf%C3%A9_Central",
+          "https://www.geschichtewiki.wien.gv.at/Kaffeeh%C3%A4user"
+        ]
+      },
+      {
+        "nimi": "Café Schwarzenberg (1873: Café Hochleitner)",
+        "osoite": "Kärntner Ring 17",
+        "perustettu": "1861 (Wien Geschichte Wiki, Wikipedia; Lobmeyr: 1863)",
+        "olemassa1873": true,
+        "shakkiyhteys": "Ei dokumentoitua; Ringstraßen vanhin kahvila.",
+        "kayttoPelissa": "Sallittu 1873 'Ringstraßen kahvilana' ilman shakkiväitettä; nimi 'Schwarzenberg' vasta 1902, 1873 se oli Hochleitner.",
+        "lahteet": [
+          "https://en.wikipedia.org/wiki/Caf%C3%A9_Schwarzenberg",
+          "https://www.geschichtewiki.wien.gv.at/Kaffeeh%C3%A4user"
+        ]
+      },
+      {
+        "nimi": "Café Français",
+        "osoite": "ei varmistettu",
+        "perustettu": "1830 (Wien Geschichte Wiki)",
+        "olemassa1873": true,
+        "shakkiyhteys": "Wien Geschichte Wiki: 1860–1870-lukujen wieniläisen shakkielämän keskus. Naiset pääsivät siellä ensi kertaa wieniläiseen kahvilaan 1856 (yksi lähde).",
+        "kayttoPelissa": "Paras 1873-aikainen todennettu shakkikahvila; älä sijoita osoitetta.",
+        "lahteet": [
+          "https://www.geschichtewiki.wien.gv.at/Schach",
+          "https://www.geschichtewiki.wien.gv.at/Kaffeeh%C3%A4user"
+        ]
+      },
+      {
+        "nimi": "Café Weghuber / Café Maendel",
+        "osoite": "ei varmistettu",
+        "perustettu": "Weghuber 1806–1865 (Wien Geschichte Wiki -lista), Maendel ei listassa",
+        "olemassa1873": "Weghuber luultavasti EI (suljettu 1865 listan mukaan); Maendel ei varmistettu",
+        "shakkiyhteys": "Mainitaan 1860–1870-lukujen shakkikeskuksina yhdessä lähteessä.",
+        "kayttoPelissa": "Älä käytä.",
+        "lahteet": [
+          "https://www.geschichtewiki.wien.gv.at/Schach",
+          "https://www.geschichtewiki.wien.gv.at/Kaffeeh%C3%A4user"
+        ]
+      },
+      {
+        "nimi": "Silberne Kaffeehaus (Café Neuner)",
+        "perustettu": "1808, suljettu 1855",
+        "olemassa1873": false,
+        "shakkiyhteys": "Biedermeier-ajan johtava shakkikahvila, vakituinen shakkipiiri 1820–1853; Grillparzer vakiovieraana.",
+        "kayttoPelissa": "Ei 1873. Voi mainita historiana.",
+        "lahteet": [
+          "https://www.geschichtewiki.wien.gv.at/Silbernes_Kaffeehaus",
+          "https://www.geschichtewiki.wien.gv.at/Schach"
+        ]
+      },
+      {
+        "nimi": "Sisustus 1870-luvulla (yleiskuva)",
+        "kuvaus": "Marmoripintaiset pienet pöydät, Thonet-vääntöpuutuolit (No. 14, suunniteltu n. 1859), lehtipöydät ja puiset lehtitelineet, peilit, vaateripustimet; shakki-, biljardi- ja korttipelit. Lasillinen vettä kahvin kanssa on nykyinen traditio, 1873-ajoitusta ei varmistettu.",
+        "lahteet": [
+          "https://en.wikipedia.org/wiki/Viennese_coffee_house_culture",
+          "https://collections.vam.ac.uk/item/O1240872"
+        ]
+      }
+    ]
+  },
+  "historia": {
+    "muoto": "aikajana, 10 solmua, napautus avaa kortin (otsikko, vuosi, teksti, 1–2 kuvaa); lyhyt luenta osion avaukseksi",
+    "vaiheet": [
+      {
+        "nro": 1,
+        "otsikko": "Chaturanga: shakin esi-isä Intiassa",
+        "aikakausi": "noin 600-luku, Intia",
+        "teksti": "Intiassa pelattiin noin 600-luvulla chaturanga-lautapeliä, jota pidetään shakin esi-isänä. Pelin tarkkaa ikää ei tiedetä.",
+        "faktat": [
+          {
+            "vaite": "Chaturanga tunnetaan Intiasta noin 600-luvulta; varhaisin selvä maininta on Gupta-valtakunnan ajalta (500-luku) ja nimi esiintyy Banabhattan Harshacharitassa (n. 625).",
+            "lahde1": "https://en.wikipedia.org/wiki/Chaturanga",
+            "lahde2": "https://www.britannica.com/topic/chaturanga"
+          },
+          {
+            "vaite": "Useimmat historioitsijat pitävät chaturangaa shakin yhteisenä esi-isänä; pelin tarkka ikä on kiistanalainen.",
+            "lahde1": "https://en.wikipedia.org/wiki/Chaturanga",
+            "lahde2": "https://en.wikipedia.org/wiki/History_of_chess"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "De partij chaturanga, RP-T-1993-306.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:De_partij_chaturanga,_RP-T-1993-306.jpg",
+            "kuvaus": "Intialainen pienoiskuva noin 1805–1815: kaksi naista pelaa chaturangaa (Rijksmuseum)",
+            "lisenssi": "CC0",
+            "leveys": 2894,
+            "korkeus": 4232,
+            "huomio": "Kuva on paljon myöhäisempi kuin peli; kuvatekstissä sanottava. Vaihtoehto: Chaturanga Starting Position on an Ashtapada.png (CC BY 4.0, 1412x1400, nykypiirros, ei suositella historiakuvaksi)."
+          }
+        ]
+      },
+      {
+        "nro": 2,
+        "otsikko": "Shatranj: Persiasta arabien käsiin",
+        "aikakausi": "noin 600–900-luvut, Persia ja arabimaailma",
+        "teksti": "Persiassa peli tunnettiin nimellä chatrang, arabien aikana nimellä shatranj. Kuningatar oli vielä heikko neuvonantaja, joka liikkui yhden ruudun viistoon.",
+        "faktat": [
+          {
+            "vaite": "Persiassa Sasanidien aikana peli tunnettiin nimellä chatrang; arabien valloituksen jälkeen siitä tuli shatranj.",
+            "lahde1": "https://en.wikipedia.org/wiki/History_of_chess",
+            "lahde2": "https://en.wikipedia.org/wiki/Shatranj"
+          },
+          {
+            "vaite": "Shatranjissa kuningattaren edeltäjä (ferz, neuvonantaja) liikkui vain yhden ruudun viistoon; lähetin edeltäjä (norsu) hyppäsi tasan kaksi ruutua viistoon.",
+            "lahde1": "https://en.wikipedia.org/wiki/Shatranj",
+            "lahde2": "https://www.britannica.com/topic/shatranj"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Chess Set MET DP170393.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Chess_Set_MET_DP170393.jpg",
+            "kuvaus": "Lähes täydellinen shakkisarja, 1100-luku, Nishapur (Iran), abstraktit nappulat (Metropolitan Museum)",
+            "lisenssi": "CC0",
+            "leveys": 3905,
+            "korkeus": 2972,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "\"Buzurgmihr Masters the Game of Chess\", Folio from a Shahnama (Book of Kings) MET DP159356.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:\"Buzurgmihr_Masters_the_Game_of_Chess\",_Folio_from_a_Shahnama_(Book_of_Kings)_MET_DP159356.jpg",
+            "kuvaus": "Shahnama-käsikirjoituksen sivu, n. 1300–1330: viisas Buzurgmihr ja shakki (tarina on legenda)",
+            "lisenssi": "CC0",
+            "leveys": 3076,
+            "korkeus": 3641,
+            "huomio": "Kuvatekstissä mainittava, että aihe on taru."
+          }
+        ]
+      },
+      {
+        "nro": 3,
+        "otsikko": "Espanjan ja Sisilian kautta Eurooppaan",
+        "aikakausi": "viimeistään 900-luku",
+        "teksti": "Muslimit veivät shakin Pohjois-Afrikkaan, Sisiliaan ja Iberian niemimaalle viimeistään 900-luvulla, ja sieltä se levisi kristittyyn Eurooppaan.",
+        "faktat": [
+          {
+            "vaite": "Muslimit toivat shakin Pohjois-Afrikkaan, Sisiliaan ja Iberiaan viimeistään 900-luvulla.",
+            "lahde1": "https://en.wikipedia.org/wiki/History_of_chess",
+            "lahde2": "https://www.britannica.com/topic/chess"
+          },
+          {
+            "vaite": "Shakki levisi Eurooppaan Espanjan (al-Andalus) ja Sisilian kautta.",
+            "lahde1": "https://en.wikipedia.org/wiki/Shatranj",
+            "lahde2": "https://en.wikipedia.org/wiki/History_of_chess"
+          }
+        ],
+        "kuvat": []
+      },
+      {
+        "nro": 4,
+        "otsikko": "Kuningas Alfonso X:n pelikirja",
+        "aikakausi": "1283, Kastilia",
+        "teksti": "Kastilian kuningas Alfonso X:n teettämä Libro de los juegos valmistui 1283. Se esittelee shakkia, noppaa ja lautapelejä noin 150 pienoiskuvalla.",
+        "faktat": [
+          {
+            "vaite": "Alfonso X teetti Libro de los juegos -kirjan, joka valmistui 1283; siinä on noin 150 pienoiskuvaa ja osiot shakista, nopasta ja lautapeleistä.",
+            "lahde1": "https://en.wikipedia.org/wiki/Libro_de_los_juegos",
+            "lahde2": "https://thinking3d.ac.uk/LibrodelosJuegos"
+          },
+          {
+            "vaite": "Kirja perustuu arabialaisiin teksteihin (kastilialainen käännös/yhteenveto).",
+            "lahde1": "https://en.wikipedia.org/wiki/Libro_de_los_juegos",
+            "lahde2": "https://thinking3d.ac.uk/LibrodelosJuegos"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Moorish women playing chess, European woman playing lute.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Moorish_women_playing_chess,_European_woman_playing_lute.jpg",
+            "kuvaus": "Alfonso X:n kirjan pienoiskuva: maurilaiset naiset pelaavat shakkia",
+            "lisenssi": "PD",
+            "leveys": 1678,
+            "korkeus": 1124,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "KnightsTemplarPlayingChess1283.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:KnightsTemplarPlayingChess1283.jpg",
+            "kuvaus": "Alfonso X:n kirjan pienoiskuva shakinpelaajista (tiedostonimen 'Templar' on lataajan tulkinta)",
+            "lisenssi": "PD",
+            "leveys": 1576,
+            "korkeus": 932,
+            "huomio": "Kuvateksti ilman temppeliherrasta."
+          }
+        ]
+      },
+      {
+        "nro": 5,
+        "otsikko": "Espanja: kuningatar saa voimansa",
+        "aikakausi": "1400-luvun loppu, Espanja",
+        "teksti": "Espanjassa, luultavasti Valenciassa, kuningattaren ja lähetin voima kasvoi 1400-luvun lopulla. Scachs d'amor -runo ja Lucenan kirja (noin 1497) kuvaavat sen.",
+        "faktat": [
+          {
+            "vaite": "Nykyiset kuningattaren ja lähetin siirrot syntyivät Valenciassa vuosien 1475 ja 1500 välillä.",
+            "lahde1": "https://en.wikipedia.org/wiki/History_of_chess",
+            "lahde2": "https://www.chessgames.com/perl/chesscollection?cid=1018002"
+          },
+          {
+            "vaite": "Katalaaninkielinen runo Scachs d'amor kirjoitettiin Valenciassa noin 1475 ja on varhaisin tunnettu peli nykysäännöin.",
+            "lahde1": "https://en.wikipedia.org/wiki/Scachs_d%27amor",
+            "lahde2": "https://en.wikipedia.org/wiki/History_of_chess"
+          },
+          {
+            "vaite": "Luis Ramírez de Lucenan Repetición de amores y arte de ajedrez (Salamanca, noin 1497) on vanhin säilynyt painettu shakkikirja.",
+            "lahde1": "https://en.wikipedia.org/wiki/Luis_Ram%C3%ADrez_de_Lucena",
+            "lahde2": "https://en.chessbase.com/post/auction-sotheby-2026"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Luis Ramirez de Lucena, arte de ajedrez.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Luis_Ramirez_de_Lucena,_arte_de_ajedrez.jpg",
+            "kuvaus": "Lucenan Repetición de amores y arte de ajedrez -teoksen shakkikaavio, Salamanca (Biblioteca Virtual del Patrimonio Bibliográfico)",
+            "lisenssi": "PD",
+            "leveys": 1925,
+            "korkeus": 2679,
+            "huomio": "Commonsissa ajoitus noin 1496; sanotaan 'noin 1497'."
+          }
+        ]
+      },
+      {
+        "nro": 6,
+        "otsikko": "Café de la Régence ja Philidor",
+        "aikakausi": "1700–1800-luvut, Pariisi",
+        "teksti": "1700-luvulla pariisilainen Café de la Régence oli Euroopan shakkikeskus. Philidorin kirja 1749 opetti, että sotilaat ovat shakin sielu.",
+        "faktat": [
+          {
+            "vaite": "Café de la Régence oli tärkeä eurooppalainen shakkikeskus 1700- ja 1800-luvuilla.",
+            "lahde1": "https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_R%C3%A9gence",
+            "lahde2": "https://en.chessbase.com/post/philidor-at-300-chess-master-musician-and-pioneer"
+          },
+          {
+            "vaite": "François-André Danican Philidor julkaisi L'Analyse des échecs -kirjan Lontoossa 1749; hänen tunnettu periaatteensa: sotilaat ovat shakin sielu.",
+            "lahde1": "https://en.chessbase.com/post/philidor-at-300-chess-master-musician-and-pioneer",
+            "lahde2": "https://en.wikipedia.org/wiki/History_of_chess"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "1 LIllustration1873.02.22-Cropped.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:1_LIllustration1873.02.22-Cropped.jpg",
+            "kuvaus": "L'Illustration 22.2.1873: kohtaus Café de la Régencessa (kahvila toimi siis Wien-vuonna 1873)",
+            "lisenssi": "PD",
+            "leveys": 3566,
+            "korkeus": 2530,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "L'Illustration 24 janvier 1851.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:L'Illustration_24_janvier_1851.jpg",
+            "kuvaus": "Café de la Régence, Jules Noel, L'Illustration 24.1.1851",
+            "lisenssi": "PD",
+            "leveys": 1271,
+            "korkeus": 755,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "Portrait of André Danican Philidor MET DP828972.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_André_Danican_Philidor_MET_DP828972.jpg",
+            "kuvaus": "Philidorin muotokuva, vedos 1772 (Metropolitan Museum)",
+            "lisenssi": "CC0",
+            "leveys": 2655,
+            "korkeus": 3755,
+            "huomio": ""
+          }
+        ]
+      },
+      {
+        "nro": 7,
+        "otsikko": "Staunton-nappulat 1849",
+        "aikakausi": "1849, Lontoo",
+        "teksti": "Nathaniel Cooke rekisteröi nappulamallin 1.3.1849; Jaques valmisti sen. Malli nimettiin shakkimestari Howard Stauntonin mukaan.",
+        "faktat": [
+          {
+            "vaite": "Nathaniel Cooke rekisteröi mallin Lontoossa 1.3.1849; John Jaques valmisti sarjat, joiden myynti alkoi syyskuussa 1849.",
+            "lahde1": "https://en.wikipedia.org/wiki/Staunton_chess_set",
+            "lahde2": "https://www.jaqueslondon.co.uk/blogs/posts/staunton-chess-set-history-1849"
+          },
+          {
+            "vaite": "Malli nimettiin Howard Stauntonin mukaan, joka suositteli sitä; Staunton ei suunnitellut sitä itse.",
+            "lahde1": "https://en.wikipedia.org/wiki/Staunton_chess_set",
+            "lahde2": "https://www.jaqueslondon.co.uk/blogs/posts/staunton-chess-set-history-1849"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Chess game Staunton No. 6.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6.jpg",
+            "kuvaus": "Staunton-mallinen nappulasarja (nykyvalmiste, ei alkuperäinen 1849)",
+            "lisenssi": "CC0",
+            "leveys": 7743,
+            "korkeus": 4762,
+            "huomio": "Sopivaa 1849-kuvaa (PD/CC BY) ei löytynyt; kuvatekstissä 'Staunton-malli'. Vaihtoehto: havainnekuva_tarve."
+          },
+          {
+            "tiedosto": "Staunton, Howard \"-2\" - DPLA - 89ef1cc95f32325e5bc23828020ca32c.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Staunton,_Howard_\"-2\"_-_DPLA_-_89ef1cc95f32325e5bc23828020ca32c.jpg",
+            "kuvaus": "Howard Staunton, piirros/muotokuva (DPLA, Cleveland Public Library)",
+            "lisenssi": "PD",
+            "leveys": 2329,
+            "korkeus": 2923,
+            "huomio": ""
+          }
+        ]
+      },
+      {
+        "nro": 8,
+        "otsikko": "Lontoo 1851: kansainvälinen turnaus",
+        "aikakausi": "1851, Lontoo",
+        "teksti": "Staunton järjesti 1851 maailmannäyttelyn rinnalle ensimmäisen kansainvälisen shakkiturnauksen. Sen voitti saksalainen Adolf Anderssen.",
+        "faktat": [
+          {
+            "vaite": "Lontoon turnaus alkoi 26.5.1851 maailmannäyttelyn yhteydessä; Staunton järjesti sen ja se oli ensimmäinen kansainvälinen shakkiturnaus.",
+            "lahde1": "https://en.wikipedia.org/wiki/London_1851_chess_tournament",
+            "lahde2": "https://www.chess.com/article/view/london-1851-the-first-international-chess-tournament"
+          },
+          {
+            "vaite": "Adolf Anderssen voitti turnauksen (cup-muoto); Staunton sijoittui neljänneksi.",
+            "lahde1": "https://en.wikipedia.org/wiki/London_1851_chess_tournament",
+            "lahde2": "https://www.chess.com/article/view/london-1851-the-first-international-chess-tournament"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Anderssen, Adolf \"-5\" - DPLA - 9ca464339f18b3d8be87fccc68c3ee73 (cropped).jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Anderssen,_Adolf_\"-5\"_-_DPLA_-_9ca464339f18b3d8be87fccc68c3ee73_(cropped).jpg",
+            "kuvaus": "Adolf Anderssen, muotokuva (DPLA, Cleveland Public Library)",
+            "lisenssi": "PD",
+            "leveys": 3281,
+            "korkeus": 3570,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "Eugène Louis Lami - Opening of the Great Exhibition, 1 May 1851 - Google Art Project.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Eugène_Louis_Lami_-_Opening_of_the_Great_Exhibition,_1_May_1851_-_Google_Art_Project.jpg",
+            "kuvaus": "Eugène Lami: maailmannäyttelyn avajaiset 1.5.1851",
+            "lisenssi": "PD",
+            "leveys": 3655,
+            "korkeus": 4639,
+            "huomio": ""
+          }
+        ]
+      },
+      {
+        "nro": 9,
+        "otsikko": "Wien 1873: Steinitz voittaa",
+        "aikakausi": "21.7.–29.8.1873, Wien",
+        "teksti": "Wienin maailmannäyttelyn rinnalla pelattiin kesällä 1873 kahdentoista pelaajan turnaus. Wilhelm Steinitz voitti ratkaisuottelussa Blackburnen 2–0.",
+        "faktat": [
+          {
+            "vaite": "Wienin turnaus pelattiin 21.6.–29.8.1873 maailmannäyttelyn sivutapahtumana Wienin shakkiseuran tiloissa; osallistujia oli 12.",
+            "lahde1": "https://en.wikipedia.org/wiki/Vienna_1873_chess_tournament",
+            "lahde2": "https://en.chessbase.com/post/vienna-chess-tournament-1873"
+          },
+          {
+            "vaite": "Steinitz voitti turnauksen voittamalla ratkaisuottelun Blackburnea vastaan 2–0.",
+            "lahde1": "https://en.wikipedia.org/wiki/Vienna_1873_chess_tournament",
+            "lahde2": "https://en.chessbase.com/post/vienna-chess-tournament-1873"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Rotunde Weltausstellung 1873.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Rotunde_Weltausstellung_1873.jpg",
+            "kuvaus": "Wienin maailmannäyttelyn Rotunda 1873 (Wiener Photographen-Association)",
+            "lisenssi": "PD",
+            "leveys": 1404,
+            "korkeus": 1098,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "Steinitz, William-4 - DPLA - 9eeab9ac335135c24b69ab7e36fc5354 (cropped).jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Steinitz,_William-4_-_DPLA_-_9eeab9ac335135c24b69ab7e36fc5354_(cropped).jpg",
+            "kuvaus": "Wilhelm Steinitz, muotokuva (DPLA, Cleveland Public Library)",
+            "lisenssi": "PD",
+            "leveys": 2151,
+            "korkeus": 2590,
+            "huomio": ""
+          },
+          {
+            "tiedosto": "Eingangstor Weltausstellung 1873.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Eingangstor_Weltausstellung_1873.jpg",
+            "kuvaus": "Maailmannäyttelyn pääportti 1873",
+            "lisenssi": "PD",
+            "leveys": 2109,
+            "korkeus": 1559,
+            "huomio": ""
+          }
+        ]
+      },
+      {
+        "nro": 10,
+        "otsikko": "Ensimmäinen virallinen maailmanmestari",
+        "aikakausi": "1886, USA",
+        "teksti": "Steinitz voitti Zukertortin 1886 (10 voittoa, 5 tappiota, 5 tasapeliä) New Yorkissa, St. Louisissa ja New Orleansissa.",
+        "faktat": [
+          {
+            "vaite": "Steinitz–Zukertort-ottelu 11.1.–29.3.1886 (New York, St. Louis, New Orleans); Steinitz voitti 10–5 (5 tasapeliä).",
+            "lahde1": "https://en.wikipedia.org/wiki/World_Chess_Championship_1886",
+            "lahde2": "https://www.chess.com/article/view/steinitz-the-official-world-chess-champion"
+          },
+          {
+            "vaite": "Useimmat historioitsijat pitävät sitä ensimmäisenä virallisena maailmanmestaruusottelun.",
+            "lahde1": "https://en.wikipedia.org/wiki/World_Chess_Championship_1886",
+            "lahde2": "https://en.wikipedia.org/wiki/History_of_chess"
+          }
+        ],
+        "kuvat": [
+          {
+            "tiedosto": "Zukertort, J. H. and Steinitz, Wilhelm - DPLA - 4eefe7ed93b16225c292f96f55621477.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Zukertort,_J._H._and_Steinitz,_Wilhelm_-_DPLA_-_4eefe7ed93b16225c292f96f55621477.jpg",
+            "kuvaus": "Zukertort ja Steinitz, valokuva (A. Sternitzky, Braunschweig; DPLA)",
+            "lisenssi": "PD",
+            "leveys": 2630,
+            "korkeus": 3988,
+            "huomio": "Kuvaa ei ole varmistettu ottelun ajalta; sanotaan 'Zukertort ja Steinitz'."
+          },
+          {
+            "tiedosto": "The Sixteen Leading Chess Players of the World, 1886 - DPLA - e47a1e9b9936431720d38554fc2d9a2f.jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:The_Sixteen_Leading_Chess_Players_of_the_World,_1886_-_DPLA_-_e47a1e9b9936431720d38554fc2d9a2f.jpg",
+            "kuvaus": "'Maailman kuusitoista parasta shakinpelaajaa', 17.7.1886",
+            "lisenssi": "PD",
+            "leveys": 3301,
+            "korkeus": 2409,
+            "huomio": ""
+          }
+        ]
+      }
+    ],
+    "luenta": {
+      "teksti": "Shakki on lähtöisin Intiasta, jossa noin 600-luvulla pelattiin sen esi-isää, chaturanga-nimistä lautapeliä. Persian ja arabimaiden kautta peli saapui viimeistään 900-luvulla Espanjaan ja Sisiliaan ja levisi sieltä vähitellen koko Eurooppaan. Vasta 1400-luvun lopulla Espanjassa, luultavasti Valenciassa, kuningattaresta ja lähetistä tuli nykyisen kaltaiset voimakkaat nappulat, ja peli muuttui paljon vauhdikkaammaksi. Pariisin Café de la Régence keräsi 1700-luvulla vilkkaan pelaajajoukon ympäri Eurooppaa, ja vuonna 1851 Lontoossa pelattiin ensimmäinen kansainvälinen turnaus. Wienin maailmannäyttelyn turnauksen voitti 1873 Wilhelm Steinitz, ja vuonna 1886 hänestä tuli ensimmäinen virallisesti tunnustettu maailmanmestari.",
+      "sanoja": 83
+    }
+  },
+  "opas": {
+    "ui_fi": {
+      "ui.pelit.opas.shakki.alku": "Valkoinen aloittaa. Napauta omaa nappulaasi, niin näet korostettuina ruudut, joihin se voi siirtyä.",
+      "ui.pelit.opas.shakki.sotilas": "Sotilas etenee yhden ruudun, ensimmäisellä kerralla jopa kaksi. Se lyö vinosti eteen.",
+      "ui.pelit.opas.shakki.torni": "Torni liikkuu vaaka- ja pystysuoraan niin pitkälle kuin tie on auki.",
+      "ui.pelit.opas.shakki.lahetti": "Lähetti liikkuu vinoon ja pysyy koko pelin saman väristen ruutujen puolella.",
+      "ui.pelit.opas.shakki.ratsu": "Ratsu hyppää L-kirjaimen muotoon ja pääsee muiden nappuloiden yli.",
+      "ui.pelit.opas.shakki.kuningatar": "Kuningatar liikkuu kuin torni ja lähetti yhdessä. Se on laudan vahvin nappula.",
+      "ui.pelit.opas.shakki.kuningas": "Kuningas siirtyy yhden ruudun mihin tahansa, mutta ei ruutuun, jota vastustaja uhkaa.",
+      "ui.pelit.opas.shakki.lyonti": "Lyöt vastustajan nappulan siirtymällä sen ruutuun. Korostettu ruutu näyttää lyöntimahdollisuuden.",
+      "ui.pelit.opas.shakki.uhattu": "Nappulasi on uhattuna: siirrä se pois, suojaa se tai lyö uhkaaja.",
+      "ui.pelit.opas.shakki.shakki": "Shakki! Kuninkaasi on uhattuna. Pakene, estä uhka tai lyö uhkaaja.",
+      "ui.pelit.opas.shakki.matti": "Matti: kuningas on uhattuna eikä pääse pakoon. Peli päättyy.",
+      "ui.pelit.opas.shakki.linnoitus": "Linnoitus: kuningas hyppää kaksi ruutua kohti tornia ja torni sen yli, jos kumpikaan ei ole liikkunut ja väli on vapaa.",
+      "ui.pelit.opas.shakki.ohestalyonti": "Ohestalyönti: lyö viereen kaksi ruutua hypännyt sotilas ikään kuin se olisi edennyt vain yhden, heti seuraavalla siirrolla.",
+      "ui.pelit.opas.shakki.korotus": "Sotilas pääsi laudan toiseen päähän! Valitse sille uusi nappula, yleensä kuningatar.",
+      "ui.pelit.opas.shakki.patti": "Patti: ei laillisia siirtoja, mutta kuningas ei ole shakissa. Peli päättyy tasan.",
+      "ui.pelit.opas.kuva.shakki.matti": "Matti: kuningas ei pääse pakoon.",
+      "ui.pelit.opas.kuva.shakki.linnoitus": "Linnoitus: kuningas ja torni vaihtavat paikkaa.",
+      "ui.pelit.opas.kuva.shakki.ohestalyonti": "Ohestalyönti: sotilas lyö ohi kulkevan sotilaan.",
+      "ui.pelit.opas.kuva.shakki.korotus": "Korotus: sotilaasta tulee kuningatar.",
+      "ui.pelit.opas.kuva.shakki.patti": "Patti: ei siirtoja, ei shakkia, tasapeli.",
+      "ui.shakki.juliste": "SHAKKI",
+      "ui.shakki.valinta-otsikko": "Pelataanko shakkia?",
+      "ui.shakki.valinta-selite": "Kuusitoista nappulaa kummallakin. Aseta vastustajan kuningas mattiin: uhattu eikä pääse pakoon. Pelaat Staunton-nappuloilla Wienin kahvilassa vuonna 1873.",
+      "ui.shakki.saannot-otsikko": "Shakin säännöt",
+      "ui.shakki.saannot-teksti": "Tavoite on asettaa vastustajan kuningas mattiin: se on uhattuna eikä pääse pakoon. Jokainen nappula liikkuu omalla tavallaan; lyöt siirtymällä vastustajan nappulan ruutuun. Erikoissäännöt ovat linnoitus, ohestalyönti ja sotilaan korotus. Peli päättyy tasan pattiin, kolmoistoistoon, 50 siirron sääntöön tai kun kumpikaan ei enää voi matittaa.",
+      "ui.shakki.saannot-kapiteeli": "Shakki · Staunton-nappulat · Wien 1873"
+    },
+    "saantokuvat": [
+      {
+        "avain": "shakki.matti",
+        "fen": "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1",
+        "korostus": [
+          "a8"
+        ],
+        "kuvaus": "Ra8#: kuningas ei pääse pakoon omien sotilaidensa takia."
+      },
+      {
+        "avain": "shakki.linnoitus",
+        "fen": "r3k2r/pppppppp/8/8/8/8/PPPPPPPP/R3K2R w KQkq - 0 1",
+        "korostus": [
+          "e1",
+          "g1",
+          "h1",
+          "f1"
+        ],
+        "kuvaus": "Lyhyt linnoitus: kuningas g1, torni f1."
+      },
+      {
+        "avain": "shakki.ohestalyonti",
+        "fen": "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+        "korostus": [
+          "e5",
+          "d6"
+        ],
+        "kuvaus": "exd6 ohestalyönnillä, kun musta juuri hyppäsi d7–d5."
+      },
+      {
+        "avain": "shakki.korotus",
+        "fen": "8/P7/8/8/8/8/8/k6K w - - 0 1",
+        "korostus": [
+          "a7",
+          "a8"
+        ],
+        "kuvaus": "a8=Q: sotilas korotetaan kuningattareksi."
+      },
+      {
+        "avain": "shakki.patti",
+        "fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1",
+        "korostus": [
+          "h8"
+        ],
+        "kuvaus": "Mustalla ei ole laillista siirtoa, mutta kuningas ei ole shakissa: patti."
+      }
+    ]
+  },
+  "tasot": [
+    {
+      "taso": 1,
+      "nimi": "Kahvilan vieras",
+      "hahmo": "Herr Pokorny, kahvilan vakiovieras",
+      "paikka": "kahvila",
+      "tekoaly": "syvyys 1–2, 20 % satunnaisia siirtoja",
+      "replikat": [
+        "Ach, ei sillä niin kiire ole. Pelataan, ja kahvi jäähtyy.",
+        "Hm, tuo oli kyllä taitava siirto.",
+        "Voititte! Tämän kerran. Kahvini maksan minä."
+      ]
+    },
+    {
+      "taso": 2,
+      "nimi": "Seuran jäsen",
+      "hahmo": "Rouva Hartmann, Wienin shakkiseuran rahastonhoitaja",
+      "paikka": "kahvila",
+      "tekoaly": "syvyys 3, 10 % kohinaa",
+      "replikat": [
+        "Tiedän säännöt ulkoa, mutta pelaan silti harvoin sujuvasti.",
+        "Kuningattaren menetys sattuu aina, vai mitä?",
+        "Hyvin pelattu. Seuramme tarvitsisi tällaista nuorta väkeä."
+      ]
+    },
+    {
+      "taso": 3,
+      "nimi": "Turnauspelaaja",
+      "hahmo": "Tohtori Lindner, turnausten katsoja",
+      "paikka": "shakkiseuran sali",
+      "tekoaly": "syvyys 4–5",
+      "replikat": [
+        "Maailmannäyttelyn kisan jälkeen puhuttiin avauksista. Näytetäänpä omamme.",
+        "Hm. Tämä asema muistuttaa erästä peliä.",
+        "Siinä oli todella hieno päätös."
+      ]
+    },
+    {
+      "taso": 4,
+      "nimi": "Seuran mestari",
+      "hahmo": "Herr Weiss, seuran vanhin mestari",
+      "paikka": "shakkiseuran sali",
+      "tekoaly": "syvyys 5–6 tai 300–800 ms aikaraja, ei pääsäikeessä",
+      "replikat": [
+        "Kukaan ei voita minua helposti. Aloittakaa.",
+        "Älyllistä. Mutta kello käy.",
+        "Vuosiin ei kukaan ole voittanut. Onnittelut, nuori vieras."
+      ]
+    }
+  ],
+  "william_aanet": [
+    {
+      "avain": "aloitus",
+      "teksti": "Tervetuloa Wieniin, kesään 1873. Kaupungissa on maailmannäyttely, ja sen rinnalla pelataan suuri shakkiturnaus. Isoisäsi kävi Wienin maailmannäyttelyssä, ja nyt sinä istut kahvilan pöytään. Aloitetaan rauhallisesti: pelaat valkoisilla, ja minä neuvon, kun tarvitset."
+    },
+    {
+      "avain": "ensimmainen-siirto",
+      "teksti": "Hyvä alku. Kun napautat nappulaa, näet, mihin se voi siirtyä."
+    },
+    {
+      "avain": "ensimmainen-lyonti",
+      "teksti": "Lyönti on aina vapaaehtoinen. Mieti ensin, suojaako vastustaja nappulaansa."
+    },
+    {
+      "avain": "shakki",
+      "teksti": "Shakki! Kuningas on uhattuna, ja se pitää pelastaa heti."
+    },
+    {
+      "avain": "voitto",
+      "teksti": "Matti! Voitit pelin. Wienin kahviloissa tällaisesta olisi puhuttu vielä seuraavana päivänä."
+    },
+    {
+      "avain": "tappio",
+      "teksti": "Ei se mitään. Mestaritkin hävisivät ennen kuin voittivat. Pelataanko uudestaan?"
+    },
+    {
+      "avain": "tasapeli",
+      "teksti": "Tasapeli. Kumpikaan ei saanut peliä ratkaistua."
+    },
+    {
+      "avain": "historia-luenta",
+      "teksti": "Shakki on lähtöisin Intiasta, jossa noin 600-luvulla pelattiin sen esi-isää, chaturanga-nimistä lautapeliä. Persian ja arabimaiden kautta peli saapui viimeistään 900-luvulla Espanjaan ja Sisiliaan ja levisi sieltä vähitellen koko Eurooppaan. Vasta 1400-luvun lopulla Espanjassa, luultavasti Valenciassa, kuningattaresta ja lähetistä tuli nykyisen kaltaiset voimakkaat nappulat, ja peli muuttui paljon vauhdikkaammaksi. Pariisin Café de la Régence keräsi 1700-luvulla vilkkaan pelaajajoukon ympäri Eurooppaa, ja vuonna 1851 Lontoossa pelattiin ensimmäinen kansainvälinen turnaus. Wienin maailmannäyttelyn turnauksen voitti 1873 Wilhelm Steinitz, ja vuonna 1886 hänestä tuli ensimmäinen virallisesti tunnustettu maailmanmestari."
+    }
+  ],
+  "kahvila": {
+    "suositus": "Ei oikeaa kahvilaa nimeltä: kuvitteellinen wieniläinen kahvila vuodelta 1873. Café Central (1876) ja Café Landtmann (1.10.1873) eivät olleet olemassa turnauksen aikana. Dokumentoitu 1860–1870-luvun shakkikahvila oli Café Français (Wien Geschichte Wiki), mutta sen sisustuksesta ei ole vapaata kuvaa, joten sitä ei kopioida.",
+    "taso_1_2": [
+      "pyöreä marmoripintainen kahvilapöytä, jonka päällä laudan ja Staunton-nappuloiden alla ohut pöytäliina tai puulauta",
+      "Thonet-vääntöpuutuoli (No. 14, n. 1859, malli vapaa), toinen tuoli vastapäätä tyhjänä",
+      "puinen lehtiteline ja sanomalehti, peili kullatuin kehyksin, vaateripustin",
+      "tarjottimella vesilasi ja pieni kahvikuppi (melange), kaasulamppu seinällä, ikkuna Ringille",
+      "kamera: ensimmäinen persoona (ei näkyvää hahmoa, kuten muissa peleissä), vastustajan siirrot nappulan liukuna lautaa pitkin"
+    ],
+    "taso_3_4": [
+      "Wienin shakkiseuran pelisali: pitkät pöydät vihreällä huovalla, useita pelejä käynnissä taustalla (liikkumatta), seinällä turnaustaulukko (ei luettavaa tekstiä), pieni katsojajoukko selin",
+      "kellopeli: ei shakkikelloja 1873 (otettiin käyttöön 1883 Lontoossa); aikaraja vain pelaajan omana tilannekuvana tasolla 4"
+    ],
+    "nappulat": "Staunton-malli (rekisteröity 1.3.1849; nappulat valkoinen puu / mustaksi petsattu), painotettu jalka. Vapaat lähteet: Poly Haven chess_set (CC0, marmori; Pelikoodarin kartoitus #4503) tai kevyt Nailfighter (CC0, 163–338 kolmiota per nappula) tai oma Blender-malli. Vaaditaan: ei elävien suunnittelijoiden aineistoa, ei GPL.",
+    "aanet": "kahvilan taustahumina ja astiat (CC0, Freesound-suodatus), nappuloiden siirto/lyönti/shakki/matti (CC0), William-äänet alla"
+  },
+  "tehtavat": [
+    {
+      "id": "shakki-1873-legal-matti",
+      "nimi": "Légalin matti",
+      "lahde": "Légal de Kermeur – Saint Brie, Pariisi, 1700-luku (usein 1750, uudemman tutkimuksen mukaan ehkä 1787); pelin vanhin julkaisu George Walker, A Selection of Games at Chess, 1835. https://en.wikipedia.org/wiki/Legal_Trap",
+      "lahde_url": [
+        "https://en.wikipedia.org/wiki/Legal_Trap",
+        "https://m.gameknot.com/annotation.pl/legall-saint-brie-paris-1750?gm=34203",
+        "https://www.sjakknyheter.no/?p=58201"
+      ],
+      "pelaajat": "Légal de Kermeur (valkea) vastaan Saint Brie (musta)",
+      "asema_kuvaus": "Asema mustan 5. siirron (5...Bxd1) jälkeen: musta otti valkean kuningattaren.",
+      "fen": "rn1qkbnr/ppp2p1p/3p2p1/4N3/2B1P3/2N5/PPPP1PPP/R1BbK2R w KQkq - 0 6",
+      "vuorossa": "valkea",
+      "tavoite": "Matti kahdessa siirrossa",
+      "ratkaisu": {
+        "san": [
+          "Bxf7+",
+          "Ke7",
+          "Nd5#"
+        ],
+        "uci": [
+          "c4f7",
+          "e8e7",
+          "c3d5"
+        ],
+        "matti_siirtoa": 2
+      },
+      "voittavat_ensimmaiset_siirrot": [
+        "Bxf7+"
+      ],
+      "vastaukset_ensimmaiseen_siirtoon": [
+        {
+          "musta": "Ke7",
+          "valkea_matittaa": [
+            "Nd5#"
+          ]
+        }
+      ],
+      "vihje1": "Kuningatar on mennyt, mutta kevyet nappulasi riittävät. Aloita shakilla, joka pakottaa mustan kuninkaan liikkeelle.",
+      "vihje2": "Lähetti shakittaa ruudussa f7. Kun kuningas väistää, ratsu löytää keskeltä ruudun, josta mustalla ei ole pakoa.",
+      "tiesitko": "Kuningatar uhrataan ja kolme kevyttä nappulaa mattaa. Kuvio on nimetty ranskalaisen Légalin mukaan, ja peli on 1700-luvulta.",
+      "vaikeus": 1,
+      "kuuluisa_turnaussiirto": false,
+      "sovelluksen_huomio": "Siirtojärjestys 1.e4 e5 2.Bc4 d6 3.Nf3 Nc6 4.Nc3 Bg4 5.Nxe5 Bxd1 on yleisimmin julkaistu; ajoitus 1750 tai mahdollisesti 1787, kortti sanoo vain \"1700-luvulta\"."
+    },
+    {
+      "id": "shakki-1873-oopperapeli",
+      "nimi": "Oopperapelin loppu",
+      "lahde": "Paul Morphy vastaan Brunswickin herttua Karl II ja kreivi Isouard, Pariisin ooppera, 1858; Philip Sergeant, Morphy's Games of Chess, 1957 (pelit) – siirrot ovat faktoja. https://en.wikipedia.org/wiki/Opera_Game",
+      "lahde_url": [
+        "https://en.wikipedia.org/wiki/Opera_Game",
+        "https://stmoroky.com/games/chess/morphy.htm",
+        "https://en.chessbase.com/newsroom/post/50-games-paul-morphy-simple-powerful-strong"
+      ],
+      "pelaajat": "Paul Morphy (valkea) vastaan Brunswickin herttua Karl II ja kreivi Isouard (musta, neuvottelupeli)",
+      "asema_kuvaus": "Asema mustan 15. siirron (15...Nxd7) jälkeen.",
+      "fen": "4kb1r/p2n1ppp/4q3/4p1B1/4P3/1Q6/PPP2PPP/2KR4 w k - 0 16",
+      "vuorossa": "valkea",
+      "tavoite": "Matti kahdessa siirrossa",
+      "ratkaisu": {
+        "san": [
+          "Qb8+",
+          "Nxb8",
+          "Rd8#"
+        ],
+        "uci": [
+          "b3b8",
+          "d7b8",
+          "d1d8"
+        ],
+        "matti_siirtoa": 2
+      },
+      "voittavat_ensimmaiset_siirrot": [
+        "Qb8+"
+      ],
+      "vastaukset_ensimmaiseen_siirtoon": [
+        {
+          "musta": "Nxb8",
+          "valkea_matittaa": [
+            "Rd8#"
+          ]
+        }
+      ],
+      "vihje1": "Torni d1 tuijottaa d-linjaa, mutta mustan ratsu on tiellä. Kuningatar voi kutsua sen pois.",
+      "vihje2": "Kuningatar shakilla ruutuun b8. Mitä musta voi tehdä? Katso sitten, mikä d-linjalla on muuttunut.",
+      "tiesitko": "Morphy pelasi tämän Pariisin oopperassa syksyllä 1858 herttuan aitiossa. Vastassa oli kaksi aatelista, jotka neuvottelivat siirroista.",
+      "vaikeus": 2,
+      "kuuluisa_turnaussiirto": false,
+      "sovelluksen_huomio": "Lähteet eroavat oopperasta (Norma/Barbiere) ja salista; teksti sanoo vain \"Pariisin oopperassa syksyllä 1858\"."
+    },
+    {
+      "id": "shakki-1873-kaarle-xii",
+      "nimi": "Kaarle XII:n ongelma",
+      "lahde": "Sam Loyd, Charles XII at Bender, 1859, Chess Monthly -lehden toimittajan tarinaan; asema Wikipedia, Sam Loyd; ratkaisu ChessBase ja The Spectator 20.12.1969. https://en.wikipedia.org/wiki/Sam_Loyd",
+      "lahde_url": [
+        "https://en.wikipedia.org/wiki/Sam_Loyd",
+        "https://en.chessbase.com/newsroom/post/puzzle-artist-sam-loyd-january-30-1841-to-april-10-1911?page=0",
+        "https://archive.spectator.co.uk/article/20th-december-1969/27/chess-470"
+      ],
+      "pelaajat": "Sävelletty tehtävä (Sam Loyd)",
+      "asema_kuvaus": "Loydin sävellys: valkea kuningas f5, torni g7, ratsu e1, sotilaat g2 ja h2; musta kuningas h5, lähetti f2, sotilaat g3 ja h6.",
+      "fen": "8/6R1/7p/5K1k/8/6p1/5bPP/4N3 w - - 0 1",
+      "vuorossa": "valkea",
+      "tavoite": "Matti kolmessa siirrossa",
+      "ratkaisu": {
+        "san": [
+          "Rxg3",
+          "Bxg3",
+          "Nf3",
+          "Bxh2",
+          "g4#"
+        ],
+        "uci": [
+          "g7g3",
+          "f2g3",
+          "e1f3",
+          "g3h2",
+          "g2g4"
+        ],
+        "matti_siirtoa": 3
+      },
+      "voittavat_ensimmaiset_siirrot": [
+        "Rxg3"
+      ],
+      "vastaukset_ensimmaiseen_siirtoon": [
+        {
+          "musta": "Bxg3",
+          "valkea_matittaa": [
+            "Nf3"
+          ]
+        },
+        {
+          "musta": "Bg1",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        },
+        {
+          "musta": "Be3",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        },
+        {
+          "musta": "Bd4",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        },
+        {
+          "musta": "Bc5",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        },
+        {
+          "musta": "Bb6",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        },
+        {
+          "musta": "Ba7",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        },
+        {
+          "musta": "Bxe1",
+          "valkea_matittaa": [
+            "Rh3+"
+          ]
+        },
+        {
+          "musta": "Kh4",
+          "valkea_matittaa": [
+            "Rh3#"
+          ]
+        }
+      ],
+      "vihje1": "Älä etsi shakkeja heti. Hiljainen siirto voi pakottaa mustan tilanteeseen, jossa jokainen siirto on huono.",
+      "vihje2": "Jos musta ottaa tornin, ratsu hyppää f3:een.",
+      "tiesitko": "Loyd sävelsi tehtävän 1859 keksittyyn tarinaan: Ruotsin Kaarle XII laski mattia Benderin piirityksessä, kun luoti osui nappulaan.",
+      "vaikeus": 3,
+      "kuuluisa_turnaussiirto": false,
+      "sovelluksen_huomio": "Eri mustan vastaukset: Bxg3 (ratsu f3, sitten g4#), Bxe1 (Rh3+ Bh4 g4#) ja kahdeksan muuta vastausta mattaa heti Rh3#. Pelin pitää hyväksyä kaikki valkean mattisiirrot kullekin mustan vastaukselle."
+    },
+    {
+      "id": "shakki-1873-wien-blackburne",
+      "nimi": "Wien 1873: Blackburnen matti",
+      "lahde": "J. H. Blackburne – A. Anderssen, Wienin kansainvälinen turnaus 1873 (pelitiedosto pgnmentor.com; tehtävänä sparkchess.com). Standardilähde: Lehner & Schwede, Der Erste Wiener Internationale Schachkongreß im Jahre 1873, Leipzig 1874. https://www.pgnmentor.com/events/Vienna1873.pgn",
+      "lahde_url": [
+        "https://www.pgnmentor.com/events/Vienna1873.pgn",
+        "https://sparkchess.com/chess-puzzles/joseph-blackburne-vs-adolf-anderssen.html",
+        "https://en.wikipedia.org/wiki/Vienna_1873_chess_tournament"
+      ],
+      "pelaajat": "Joseph Henry Blackburne (valkea) vastaan Adolf Anderssen (musta)",
+      "asema_kuvaus": "Asema mustan 38. siirron (38...Nf6) jälkeen; pelissä valkea jatkoi 39.Ba4+, mutta Qc8+ mattaa nopeammin.",
+      "fen": "Q4R2/3kr3/1q3n1p/2p1p1p1/1p1bP1P1/1B1P3P/2PBK3/8 w - - 11 39",
+      "vuorossa": "valkea",
+      "tavoite": "Matti kolmessa siirrossa",
+      "ratkaisu": {
+        "san": [
+          "Qc8+",
+          "Kd6",
+          "Rxf6+",
+          "Re6",
+          "Rxe6#"
+        ],
+        "uci": [
+          "a8c8",
+          "d7d6",
+          "f8f6",
+          "e7e6",
+          "f6e6"
+        ],
+        "matti_siirtoa": 3
+      },
+      "voittavat_ensimmaiset_siirrot": [
+        "Qc8+"
+      ],
+      "vastaukset_ensimmaiseen_siirtoon": [
+        {
+          "musta": "Kd6",
+          "valkea_matittaa": [
+            "Rxf6+"
+          ]
+        }
+      ],
+      "vihje1": "Valkean kuningatar ja torni ovat mustan kuninkaan lähellä. Etsi shakki, jossa kuninkaalla on vain yksi väistöruutu.",
+      "vihje2": "Kun kuningas on väistänyt, mustan ratsu f6 on heikko kohta. Torni f8 voi ottaa sen shakilla.",
+      "tiesitko": "Wienin 1873 turnaus oli maailmannäyttelyn oheistapahtuma. Steinitz voitti sen uusintaottelussa Blackburnea vastaan 2–0.",
+      "vaikeus": 3,
+      "kuuluisa_turnaussiirto": false,
+      "sovelluksen_huomio": "Oikea Wien 1873 -turnauspeli (kierros 2), pelitiedosto pgnmentor.com; pelissä jatkui 39.Ba4+, mutta Qc8+ mattaa nopeammin. Ei \"kuuluisa siirto\" -merkintää (kahta itsenäistä lähdettä ei löytynyt), joten kuuluisa siirto on Lontoon 1851 Kuolematon peli."
+    },
+    {
+      "id": "shakki-1873-kuolematon-peli",
+      "nimi": "Kuolematon peli: loppuisku",
+      "lahde": "Adolf Anderssen – Lionel Kieseritzky, Lontoo, 21.6.1851, vapaa peli Lontoon ensimmäisen kansainvälisen turnauksen tauolla (ei turnauspeli); julkaisi La Régence, heinäkuu 1851. https://en.wikipedia.org/wiki/Immortal_Game",
+      "lahde_url": [
+        "https://en.wikipedia.org/wiki/Immortal_Game",
+        "https://en.wikipedia.org/wiki/London_1851_chess_tournament",
+        "https://jaced.com/2005/06/10/the-immortal-game/",
+        "https://www.jaqueslondon.co.uk/blogs/posts/immortal-game-1851-history"
+      ],
+      "pelaajat": "Adolf Anderssen (valkea) vastaan Lionel Kieseritzky (musta)",
+      "asema_kuvaus": "Asema mustan 20. siirron (20...Na6) jälkeen. Valkea on antanut kaksi tornia ja kuningattaren vastaan, mutta mustan kuningas on avoin.",
+      "fen": "r1b1k1nr/p2p1ppp/n2B4/1p1NPN1P/6P1/3P1Q2/P1P1K3/q5b1 w kq - 2 21",
+      "vuorossa": "valkea",
+      "tavoite": "Matti kolmessa siirrossa",
+      "ratkaisu": {
+        "san": [
+          "Nxg7+",
+          "Kd8",
+          "Qf6+",
+          "Nxf6",
+          "Be7#"
+        ],
+        "uci": [
+          "f5g7",
+          "e8d8",
+          "f3f6",
+          "g8f6",
+          "d6e7"
+        ],
+        "matti_siirtoa": 3
+      },
+      "voittavat_ensimmaiset_siirrot": [
+        "Nxg7+"
+      ],
+      "vastaukset_ensimmaiseen_siirtoon": [
+        {
+          "musta": "Kd8",
+          "valkea_matittaa": [
+            "Qf6+"
+          ]
+        }
+      ],
+      "vihje1": "Valkealla on vain kevyet nappulat ja kuningatar, mutta musta kuningas on e8:ssa ilman suojaa. Aloita shakilla.",
+      "vihje2": "Ratsu ottaa sotilaan g7 shakilla. Kun kuningas on d8:ssa, kuningatar uhrataan, ja lähetti hoitaa lopun.",
+      "tiesitko": "Anderssen pelasi tämän Lontoon 1851 turnauksen tauolla, ja Ernst Falkbeer antoi sille nimen Kuolematon peli vuonna 1855.",
+      "vaikeus": 3,
+      "kuuluisa_turnaussiirto": true,
+      "sovelluksen_huomio": "Toisella siirrolla (1.Nxg7+ Kd8 2.Qf6+) mustalla on kaksi vastausta: Nxf6 (3.Be7#) ja Ne7 (3.Bxe7# tai 3.Qxe7#); peli hyväksyy kummankin."
+    },
+    {
+      "id": "shakki-1873-evergreen",
+      "nimi": "Ikivihreä peli",
+      "lahde": "Adolf Anderssen – Jean Dufresne, 1852 (yleensä Berliini); Deutsche Schachzeitung, syyskuu ja lokakuu 1852. https://en.wikipedia.org/wiki/Evergreen_Game",
+      "lahde_url": [
+        "https://en.wikipedia.org/wiki/Evergreen_Game",
+        "https://dailychessmusings.com/2018/06/22/my-favorite-chess-games-the-evergreen-game/"
+      ],
+      "pelaajat": "Adolf Anderssen (valkea) vastaan Jean Dufresne (musta)",
+      "asema_kuvaus": "Asema mustan 20. siirron (20...Nxe7) jälkeen: musta otti valkean tornin ja johtaa materiaalissa.",
+      "fen": "1r2k1r1/pbppnp1p/1b3P2/8/Q7/B1PB1q2/P4PPP/3R2K1 w - - 0 21",
+      "vuorossa": "valkea",
+      "tavoite": "Matti neljässä siirrossa",
+      "ratkaisu": {
+        "san": [
+          "Qxd7+",
+          "Kxd7",
+          "Bf5+",
+          "Ke8",
+          "Bd7+",
+          "Kf8",
+          "Bxe7#"
+        ],
+        "uci": [
+          "a4d7",
+          "e8d7",
+          "d3f5",
+          "d7e8",
+          "f5d7",
+          "e8f8",
+          "a3e7"
+        ],
+        "matti_siirtoa": 4
+      },
+      "voittavat_ensimmaiset_siirrot": [
+        "Qxd7+"
+      ],
+      "vastaukset_ensimmaiseen_siirtoon": [
+        {
+          "musta": "Kf8",
+          "valkea_matittaa": [
+            "Bxe7#",
+            "Qxe7#"
+          ]
+        },
+        {
+          "musta": "Kxd7",
+          "valkea_matittaa": [
+            "Bf5+"
+          ]
+        }
+      ],
+      "vihje1": "Musta johtaa materiaalissa, mutta hänen kuninkaansa on avoin. Uhraa jotain, joka vetää kuninkaan ruutuun d7.",
+      "vihje2": "Kuningatar menee d7:ään shakilla. Kun kuningas on ottanut, lähetin shakit ajavat sen kohti e8:aa ja f8:aa.",
+      "tiesitko": "Peli sai nimekseen Evergreen eli ikivihreä. Anderssen uhraa tornin ja kuningattaren ja mattaa lopuksi lähetillä.",
+      "vaikeus": 4,
+      "kuuluisa_turnaussiirto": false,
+      "sovelluksen_huomio": "Mustan vaihtoehdot: 20.Qxd7+ Kxd7 21.Bf5+ Ke8 (pääjuoksu) tai Kc6 (22.Bd7#); 22.Bd7+ jälkeen Kf8 (Bxe7#) tai Kd8 (Bxe7# tai fxe7#); 20...Kf8 mattaa heti (Bxe7# tai Qxe7#). Peli hyväksyy kaikki."
+    }
+  ]
+}
