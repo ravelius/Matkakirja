@@ -1352,3 +1352,13 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   PT:lle ilmoitettu; kysytty, vaihdetaanko NUI:n halli-kaiteet-v3:een (+ porrasjohteet, NUI:n pari 6). EI ämpäriin ennen kuittausta.
 - PARIT: scratchpad pari_v81.zsh (juuri-pk7-v81, REF 41a2eac22, PELIKAMERA=1): 06 → 07 → 03 03b editorijonossa (vanhat pari_v79/v80_07 kuolivat).
   Kaiteet eivät ole pariajossa (vaatii REF b49275c00 + ESIKOM osasarja-kaiteet, ks. NUI:n ajo-pari-6.zsh). Tulokset → 06 PT+KS, 07 PT, 03/03b VS.
+
+## LISÄYS 100 klo 23.3x (29.10.): v81 KUITATTU, PAKETTI v82 (vie-k6 + V4_jalusta_lohkokivi), 07-PARI AJOSSA — ALOITA TÄSTÄ
+- PT kuittasi v81 (00386116) → JU. Kaiteet-v3 vasta, kun PT kuittaa NUI:n parin 6 (sama johde_savy.py siihen). Kaidekansion kytkentä = NUI:n haara (PK).
+- 06-palaute (KS:n pari -231732): 1) pääharja sitruuna = VS:n pintasarja (glb-tekstuuri jo kattotiilen sävy) → PT välitti VS:lle; 2) U-jalustan
+  kivijalka 0–3 m oli jo mallissa (V4_kujakivi_sokkeli, piirtyy vaaleana) → PT 23.1x: oma nimi V4_jalusta_lohkokivi (VS tekee harmaan pinnan, PK sallii nimen).
+- UUSI tyokalut/jalusta_lohkokivi.py + aja_v160_k6.zsh: KS:n vie-k6 (kulmapaviljongin kerrosväli) v153-ketjulla + paaharja + jalusta → rakennukset-v144/
+  kielletty-rakennukset-v68, c1-v8 (sijoitukset muuttuivat), a3a5-v5, c2-v14/kielletty-c2-v13.
+- PAKETTI v82 (paketti_v82.py) = v81 + rakennukset-v68 + c1-v8 + c2-v13: 358 tied., SHA256SUMS 9734c828 → PT:lle ja KS:lle. EI ämpäriin ennen kuittausta.
+- 07-PARI (PT: vain 07, 06 ajaa PK): scratchpad pari_v81.zsh (juuri-pk7-v81, REF 41a2eac22) editorin jonossa; editori-lr.sh ajetaan zsh:lla (ei suoritusoikeutta),
+  ÄLÄ odota pgrep-silmukalla (muiden ajot vuorottelevat → nälkiintyy). Valmis kuva → KK + PT (tasainen vertailuvalo).
