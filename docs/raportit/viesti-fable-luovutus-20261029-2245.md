@@ -30,3 +30,9 @@ Edellinen: viesti-fable-luovutus-20261029-2136.md. Tämä voittaa. Keskustelu:
 - Levy 117 Gi, kasvu ~7 Gi/h (pariajojen juurikopiot, Unity Library); Postivahti siirtää T7:lle < 100 Gi.
 - Monitorit odottajavahti + codex-posti-vahti käynnissä (uusittu 22.3x) → uusi PT käynnistää uudelleen.
 - ODOTTAA OMISTAJAA: ei mitään.
+
+## Lisäys 22.5x
+- LR v77 (_valmiit/juoksupeli-kk-lavastaja-v77-vienti-20261029, SHA256SUMS 4cf00b65: portin nimitaulu 1270, siipien
+  takaseinät 1070/1071) EI vielä ämpäriin: kuittaa vasta, kun 06-pari havainne-06 vasten on katsottu täysikokoisena.
+- Pieni iPad: suora asennus epäonnistui (lukittu) → saa TF 214:n TestFlightista, ei omistajan toimea.
+- JU nollautuu (PR 5626); PR 5627 merge pyydetty Postivahdin kautta uudelle JU:lle.
