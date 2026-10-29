@@ -915,7 +915,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   sivuista y ≤ W; siipiin friisi, räystään alus, kultareuna, tiilirinteet, harja (UV sovitettu portin friisistä ja katosta).
   W=2,75 (havainteen mittari 0,17) jätti kujan 05 omat muurit (räystäs 3,84–5,15 m, länsipuolella rakennuksia) siipien yläpuolelle →
   NYT W=3.9 FH=0.4 RH=0.75 (siipien räystäs samaan linjaan kujan muurien kanssa = KK:n "räystään alareuna kamanan korkeudella").
-  Pari 05 (juuri-v133m) ajossa: lokit/havainne-editori-<13.4x>/05 → tarkista, KK:lle parit 02 (-133647/02, pelikamera -134120/02) + 05.
+  Pari 05 W=3.9: -134428/05 (sovitettu), -134650/05 (pelikamera; friisi juuri yläreunassa, muurien kanssa samassa linjassa) → KK:lla
+  parien 02 (-133647/02, -134120/02) kanssa 13.5x. W=2.75-parit: -133647/05, -134120/05 (siivet irti muureista).
+- PT 13.5x (KK, dronevideo 129–132 s): portin yläpinta tasainen harmaa taso, josta pystyy punaisia pilareita (näkyy katon häivytyksessä,
+  näyttää rikkinäiseltä). Selvitä mikä portti (videon kohta) → kansi katon alle (esim. V4_red/V4_raystas_alus_puu) ennen v66:ta.
 - Lisäys 70 (reunuskivet, LR:n osuus): UUSI reunakivi_matala.py → yksikerros-v107 (= v106 + 960 kujan reunakiveä × 0,5 korkeus,
   892 × 2,25 leveys ulospäin muurista; 68 ilman sokkelia vain matalaksi). Pari 02 -133647 näyttää matalan leveän reunuksen.
 - Lisäykset 70–71, varjostin (laattakoko, kivijalan lohkot, ReunusRaja ~1,4 m) = PK (PK:n luovutus PR 5589); pari 02 yhdessä PK:n kanssa.
