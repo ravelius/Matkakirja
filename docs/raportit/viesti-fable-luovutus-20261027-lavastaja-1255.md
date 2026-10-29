@@ -673,21 +673,30 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   nauha ilman kiekkoja (lähde ei muurikate? tutki skannerilla scratchpad friisihaku.py -mallilla: ikkuna x/z kujan 05 kohdalle, kaikki
   pelin lataamat paketit: muurikate-v16, rakennukset-v48, tausta-v57). Havainteen kamera kujille 02/05 puuttuu (TESTIKAMERA_02/_05).
 
-## LISÄYS 51 klo 23.3x (28.10.): kuja 01 räystään rako KORJATTU (v110e), pari KK:lle; 02/05 havainteen kameralla ajossa
-- Värikoe (UUSI tyokalut/varikoodi_raystas.py + aja_v110_koe.zsh, juuri-v110k; materiaalit emissiovärein, doubleSided ennallaan): 1) v110:n
-  alalaatta oli koko lappeen kokoinen ('Katto lasitiili' ulottuu harjaan asti) ja päätysivujen laatta y 3,72 leikkasi pitkien sivujen räystäät
-  (231251) → avoimet_raystas_v2.py: alalaatta RIVI-levyisinä paloina paikallisella reunalla (d ∈ [dmx − ALA 1,0, dmx − 0,02], y = yo − 0,04).
-  2) vaalea rako = lippa ('Katto lasitiili') kiekkojen välissä (231836). Peli EI huomioi lipan baseColorFactoria (LIPPA 0,15 ei näkynyt 232122)
-  → lipalle oma materiaali V4_raystas_lippa_varjo (0,09 0,05 0,02). Vanha skripti: avoimet_raystas_v2-v110.py.bak.
-- aja_v110_pari.zsh (LIPPA 0,15 oletus, vaikutukseton): parit havainteen kamera havainne-editori-20261028-232618, pelikamera -233124 → KK 23.3x.
-- 02/05: aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" ajossa (havainteen kamera puuttui). Auki yhä: pelikameran muurit korkeammat kuin
-  havainteessa (harja kuvan yläpuolella), 05:n vasemman yläkulman kirkas nauha (lähde selvitettävä; värikoe varikoodi_raystas.py-mallilla).
+## LISÄYS 53 klo 06.3x (29.10.): KUJA 01 LUKITTU (omistaja 06.20, v112); 02/05 v115 parit KK:lla — LUOVUTUS, ALOITA TÄSTÄ
+- Omistaja 06.09 v110e:hen "Liikaa vihreä" → aja_v112_pari.zsh (avoimet-v74k, juuri-v112m): UUSI avoimet_vyo_kapea.py (julkisivun vyöfriisi +
+  palatsi_kultalista puristettu alaosaansa KAPEA_VYO 0,5, palkkivyö ja katto_raystas → oma materiaali V4_raystas_alus_puu). Parit 061008 (havainne)
+  / 061212 (peli). OMISTAJA 06.20: "Kelpaa" → kuja 01 LUKITTU muodoltaan. Valo vasta, kun kaikki rakennukset hyväksytty.
+- 02/05 (KK 06.1x: vihreä hillityksi, kivijalka korkeammaksi, portit): UUSI muuri_vyo_kapea.py (friisi ryhmittäin xz 1 cm → alaosaan × 0,5,
+  palkkivyö + kultalistat → V4_raystas_alus_puu) muurikatteeseen, taustapaloihin 0-3/1-3 lod0 (pilarihatut ja keltaiset tolpat olivat taustassa,
+  värikoe varikoodi_materiaali.py 061808) ja porttien p-kujaportti{,-2,-3}-lod{0,1}:een (rakennukset-v115 = v87p:n klooni). UUSI sokkeli_korkea.py
+  (KUJA-alueella sokkelin yläreuna + seinän alareuna y 1,1–1,36 → +0,6 m; reunakivet säilyvät). Ketju aja_v115_pari.zsh → juuri-v115m.
+  Parit: havainne-editori-20261029-062648 (havainne) / -062901 (peli) → KK 06.3x.
+- PK 06.3x: rata ei sido muotoa (JuoksuPalatsiVerkko pohja.json:n avoimista tiloista). 02:n päähän porttirakennus käy (läpikulku auki); 05:n taakse
+  kuja käy, kun KS muuttaa pohja.json:n → PK tarkistaa radan. Kysytty KK:lta, tehdäänkö. Auki: pelikameralla muurin harja kuvan yläpuolella.
 
-## LISÄYS 52 klo 23.4x (28.10.): 02/05 pari havainteen kameralla KK:lle; pakettivärikoe → muurit tausta-v57:ssä, harjat muurikate-v16:ssa
-- aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" → havainne-editori-20261028-233608 (harja kuvassa, kiekot näkyvät 02:n muurilla) → KK 23.4x.
-- UUSI tyokalut/varikoodi_paketti.py + aja_v111_koe.zsh (juuri-v111k, koe-v111/): paketti kerrallaan tasavärillä. Tulos 234526: lattia + muurit =
-  kielletty-tausta-v57 (yksikerros-v95), muurin harjat + pilasterit = kielletty-muurikate-v16, portit = kielletty-rakennukset-v48. Ladatut paketit
-  unity.logista: ulkorengas-v5, tausta-v57, rakennukset-v48, lahipuut-v6, kulmatorni-v1b (+ muurikate).
-- OPPI: peli KORVAA tunnetut materiaalinimet omillaan → baseColorFactor-muutokset tunnetuille nimille eivät näy (koe ilman nimenvaihtoa 234252
-  ei muuttunut lainkaan). Sävymuutos = oma materiaalinimi (kuten V4_raystas_lippa_varjo). Tarkista tämä myös aiemmista FV/LIPPA/KULTA-säädöistä.
-- Auki: pelikameralla (ilman TESTIKAMERAa) muurit yhä korkeammat kuin havainteessa; 02:n vasemmat pilasterihatut kirkkaat (muurikate-v16).
+## LISÄYS 54 klo 06.4x (29.10.): 02:n portti v116 KK:lla; 05:n jatko pk4:n mukaan KESKEN — LUOVUTUS, ALOITA TÄSTÄ
+- KK 06.3x: v115 kivijalka + harja OK. 02:n pää: nykyinen porttirakennus p-kujaportti-2 muokataan havainteen mukaan (KK 06.4x, ei uutta rakennusta):
+  UUSI portti_havainne.py (paloittain lineaarinen y: aukko 3,15 → 3,7, ovien yllä punainen nauha puristuu, friisi + katto −0,35; V4_teal → tumma puu)
+  → aja_v116_pari.zsh (rakennukset-v116, juuri-v116m). Parit: havainne-editori-20261029-063350 (havainne) / -063606 (peli) → KK 06.4x.
+- 05:n jatko (KK 06.3x/06.4x: pk4 pk2:n päälle, ~4,5 m, aukko kuja-29:lle; pk3:n 12 m EI, se perustui mittausvirheeseen): KS:n VALMIS
+  proto-3d/_tyo/karttaseppa/kk-pohja-pk4/kk-pohja-v1d-pk4/pohja.json (+ SHA256SUMS, pohja_pk4.py). Muutokset: way/42509056 (kuja-40 länsimuuri)
+  (−248,03; 290,37) → (−252,61; 403,38) → (−253,52; 425,15); entinen länsihaara omaksi muuriksi way/42509056-aukio (−252,61; 403,38) →
+  (−268,56; 402,89) → (−333,11; 399,69) → (−329,01; 287,54); porttiaukko kuja-29:lle keski (−252,90; 410,20) leveys 4,0; paksuus 0,8, korkeus 4,0.
+  PK vaihtaa JuoksuV4Maailma.PalatsiTiedosto → pk4 ja esto-leivonnan, ja tarkistaa radan.
+- SEURAAVA (Lavastaja): uusi muurijakso (−252,61; 403,38) → (−253,52; 425,15) aukkoineen muurirungoksi (V4_red + V4_sokkeli kivijalka 1,8 m kuten
+  sokkeli_korkea, paksuus 0,8, korkeus 4,0) taustaan yksikerros-v99/kk-tausta-?-3-lod0 (tarkista mihin palaan z 403–425 osuu) tai omaksi glb:ksi;
+  aukion puu = kielletty-lahipuut-v6 (poista/siirrä se puu); sitten muurikate: kk_muurikate.py hakee muurit TAUSTASTA säteellä (osuma 3–6,5 m),
+  joten runko ensin → uusi kate jaksolle (tai kopioi kujan 05 katejakso muuri_raystas + muuri_vyo_kapea -käsittelyineen). Parit 05 molemmilla
+  kameroilla → KK, PK:lle tieto radan tarkistukseen.
+- OPPI: pelikameran kuvat vaihtelevat ajoittain (hahmon kohta) → vertailu aina TESTIKAMERAlla; peli korvaa tunnetut materiaalinimet (lisäys 52).
