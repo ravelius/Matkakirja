@@ -129,7 +129,6 @@
     "marmaranmeri z8 9 km",
     "tyrrhenanmeri z4 49 km",
     "adrianmeri z5 33 km",
-    "ligurianmeri z4 278 km",
     "irlanninmeri z6 15 km",
     "irlanninmeri z7 11 km",
     "lioninlahti z4 200 km",
@@ -182,7 +181,8 @@
     "juutinrauma z8",
     "kattegat z4",
     "kattegat z5",
-    "messinansalmi z8"
+    "messinansalmi z8",
+    "ligurianmeri z4"
    ]
   }
  },
@@ -908,27 +908,18 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 6.0307,
-     "lat": 41.41486,
-     "korkeus_px": 14,
-     "korkeus_m": 42825,
-     "leveys_m": 434312
-    },
     "5": {
      "lon": 8.7,
      "lat": 43.12839,
