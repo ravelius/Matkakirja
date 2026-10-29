@@ -3140,3 +3140,7 @@ Kortti KK:ssa: "Poistetaanko keskitysleirit kartan nähtävyyksistä?" → "Pois
 ## OPPI (periaate 10): KK LUPASI VALON KUJAAN 01 ENNEN KAIKKIEN MUOTOJEN VALMISTUMISTA (28.10. klo 22.41) (28.10.2026 klo 22.42)
 
 KK lupasi omistajalle 22.41 valon (VS:n aurinko + LR:n leivonta) kujaan 01 heti sen muodon hyväksynnän jälkeen. Ristiriidassa omistajan päätöksen 27.10. klo 10.56 kanssa (ensin KAIKKI rakennukset ja elementit havainnekuvien mukaisiksi, valo mietitään uudelleen vasta sen jälkeen). Rikottu periaate 6 (tarkista ennen kuin lupaat). Syy: KK:n aloitus.md:n kohdassa ENSIN 4a luki "SITTEN VALO" ilman päätöksen ehtoa. PT pysäytti 22.4x; KK oikaisi LR:lle ja omistajalle ja korjasi aloitus.md:n (ENSIN 4a, TEKOTAPA). Linja: valo vasta kun kaikki kujat ovat muodoltaan hyväksyttyjä ja omistaja antaa kortilla luvan ("Aloitetaanko valo?"); VS levossa siihen asti.
+
+## OMISTAJAN VASTAUS: KUJAN 01 MUOTO, LIIKAA VIHREÄÄ (29.10. klo 06.09) (29.10.2026 klo 06.09)
+
+Kortti KK:ssa: "Kelpaako kujan 01 muoto nyt?" → "Liikaa vihreä" (pari LR v110e). KK:n tulkinta LR:lle: sinivihreä vyö kapeammaksi, vihreä vain palkkeihin ja kannakkeisiin, välit punaisiksi tai tummiksi havainnekuvan mukaan; uusi pari omistajalle. Valo edelleen vasta kaikkien kujien muotojen jälkeen omistajan kortilla (27.10. klo 10.56).
