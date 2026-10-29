@@ -10839,7 +10839,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ALB: {
     Berat: {
       lyhyt: 'Beratia kutsutaan tuhannen ikkunan kaupungiksi, sillä sen valkoiset talot nousevat rinnettä ikkunarivi ikkunarivin yllä.',
-      pitka: "Berat ei ole pelkkä museo: linnoituksen muurien sisällä, 214 metrin korkeudessa Osum-joen yllä, asutaan yhä, ja kivikujien varrella on koteja, kahviloita ja parikymmentä kirkkoa. Neitsyt Marian kuolonuneen entisessä katedraalissa toimii Onufrin ikonimuseo, jossa on esillä 173 esinettä 1300-luvulta 1900-luvun alkuun. Onufri oli 1500-luvun maalari, joka tunnetaan omasta hehkuvasta punaisestaan. Linnasta laskeudutaan Mangalemin talojen kautta joelle ja 129 metriä pitkälle Gorican kivisillalle: sen seitsemän kaarta yhdistävät Mangalemin perinteisesti kristittyjen perheiden Goricaan, ja puusilta tässä oli jo 1780. Berat liitettiin Unescon maailmanperintökohteeseen Gjirokastërin rinnalle 2008. Keväällä sulamisvedet täyttävät Osumin 26 kilometrin kanjonin, jossa lasketaan koskia.",
+      pitka: `Beratin maakunta on Etelä-Albaniassa. Se on sisämaata, eikä sillä ole merenrantaa eikä rajaa toiseen maahan. Asukkaita on noin 140 000. Maakunnan pohjoisosassa on alankoa, muun muassa Myzeqen alanko. Eteläosassa kohoaa Tomorr-vuori, joka on noin 2 400 metriä korkea. Sitä pidetään pyhänä, ja kristityt ja bektashi-veljeskuntaan kuuluvat muslimit vaeltavat sinne elokuussa. Maakunnan keskus Berat on Osum-joen varrella. Kaupungin vanhoissa taloissa on isot ikkunat, ja kaupunkia sanotaan tuhannen ikkunan kaupungiksi. Beratin vanha kaupunki on Unescon maailmanperintökohde. Osum- ja Devoll-joki yhtyvät Kuçovën kaupungin lähellä Seman-joeksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-berat-3641295d.jpg",
@@ -10862,7 +10862,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dibër': {
       lyhyt: 'Dibërin itärajalla kohoaa 2 764 metrin Korab, joka on sekä Albanian että Pohjois-Makedonian korkein vuori.',
-      pitka: "Dibërin maakunta on Albanian koillisnurkan vuoristoa: korkeusero on 380 metristä 2 700 metriin, ja noin 107 000 asukasta jakaa lähes 2 600 neliökilometrin alueen. Maakuntakeskus Peshkopi, 651 metrin korkeudessa Mustan Drinin varrella, on alle 15 000 asukkaan kaupunki, jonka laidalla kohoaa höyryä rikkilähteistä: vesi purkautuu maasta 35–43,5-asteisena. Ensimmäinen kylpylä rakennettiin 1964, ja nykyinen 50 kylpyhuoneen rakennus avattiin 1990. Maakunnan länsiosassa Lurë–Dejën kansallispuisto, 20 242 hehtaaria, kätkee kaksitoista jääkauden jälkeen syntynyttä järveä, pyökki-, kuusi- ja mäntymetsiä sekä karhuja, ilveksiä ja susia. Korabille nousevat lähtevät usein Radomiran kylästä, johon pääsee autolla ilman rajoituksia.",
+      pitka: `Dibërin maakunta on Koillis-Albaniassa Pohjois-Makedonian rajalla. Maakunnassa asuu noin 110 000 ihmistä ja kuntia on neljä. Suuri osa maakunnasta on vuoristoa. Maakunnan keskus on Peshkopi. Sen lähellä on rikkipitoisia kuumia lähteitä, joissa käy kylpijöitä. Pohjois-Makedonian rajalla kohoaa Korab-vuori. Se on 2 764 metriä korkea ja Albanian korkein huippu. Bulqizën kunnassa louhitaan kromimalmia, ja kaivostoiminta on tärkeä osa paikallista taloutta. Perinteisiä elinkeinoja ovat olleet maanviljely ja lampaiden laiduntaminen. Vuosina 1912–1913 suurvaltojen Lontoon konferenssi jakoi Dibërin alueen, jolloin länsiosa jäi Albanialle ja itäosa nykyisen Pohjois-Makedonian puolelle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-diber-273ba90e.jpg",
@@ -10885,7 +10885,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Durrës': {
       lyhyt: 'Durrësin keskustasta löydettiin 1966 talojen alta roomalainen amfiteatteri, Balkanin niemimaan suurin.',
-      pitka: "Durrës on Albanian vilkkain rantakaupunki ja yksi Adrianmeren suurimmista satamista, josta kulkee yli 1,5 miljoonaa matkustajaa vuodessa. Korinttolaiset ja korfulaiset siirtolaiset perustivat kaupungin 627 eaa., ja roomalaisille se oli Via Egnatian länsipää. Aivan rannan tuntumassa on maan suurin arkeologinen museo, perustettu 1951, jossa on 3 204 esinettä muinaisesta Dyrrhachiumista. Vanhan kaupungin bysanttilaisista muureista, 400–500-luvulta, on jäljellä noin kolmannes, ja niiden kulmassa on 1400-luvun venetsialaistorni, halkaisijaltaan 16 metriä. Se restauroitiin 2022–2023 Albanian ensimmäiseksi perintökeskukseksi, jossa on VR-laseja, äänioppaita ja kupoliprojektio. Satamasta pääsee yölaivalla Italian Bariin: matka kestää 8,5–10 tuntia.",
+      pitka: `Durrësin maakunta on Keski-Albaniassa Adrianmeren rannalla. Se on Albanian pienin maakunta, ja asukkaita on noin 230 000. Maakunnan keskus Durrës perustettiin 600-luvulla eaa. kreikkalaisena siirtokuntana nimeltä Epidamnos. Kaupungin satama on Albanian pääsatama, ja sieltä kulkee lauttoja Italian Bariin. Krujën kaupunki on Krujë-vuoren juurella noin 600 metrin korkeudessa. Albanian kansallissankari Skanderbeg valtasi sen takaisin osmaneilta vuonna 1443 ja puolusti sitä heitä vastaan kuolemaansa asti vuonna 1468. Krujën linnan lähellä on hänelle omistettu museo, joka perustettiin vuonna 1982.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-durres-218d275a.jpg",
@@ -10908,7 +10908,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Elbasan: {
       lyhyt: 'Elbasanissa juhlitaan 14. maaliskuuta Kesän päivää, ja silloin kaupungissa leivotaan ballokume-keksejä.',
-      pitka: "Elbasanin keskustaa hallitsee linna, jonka sulttaani Mehmed II rakennutti 1466 Scampan roomalaisen ja bysanttilaisen linnoituksen paikalle. Muurissa oli 26 yhdeksän metrin tornia, syvä vallihauta ja kolme porttia, ja Via Egnatia kulki linnan läpi. Linnan tuntumassa seisoo Naziresha-moskeija vuodelta 1599, ja Pyhän Marian ortodoksikirkko on vuodelta 1830. Kaupungissa on Aleksandër Xhuvanin yliopisto, ja Elbasanissa toimi Albanian ensimmäinen opettajakoulu. 1970-luvulla kiinalaisten avulla rakennettu valtava terästehdas, Puolueen teräs, työllisti kerran noin 10 000 ihmistä. Nyt vain kymmenesosa tekee töitä yksityistetyissä tehtaissa, joista Kurumin terästehdas on toiminut 1998 lähtien, ja alue kantaa raskasta saastumisen perintöä. Kaupunkilaisia on noin 115 000.",
+      pitka: `Elbasanin maakunta on Keski-Albaniassa, ja siellä asuu noin 230 000 ihmistä. Maakunnan keskus Elbasan on Shkumbin-joen pohjoispuolella. Elbasanin paikalla oli roomalaisen Via Egnatia -tien varrella kauppa-asema, ja sulttaani Mehmed Valloittaja rakennutti kaupunkiin linnoituksen vuonna 1466. Elbasaniin rakennettiin kiinalaisten avulla suuri terästehdas 1970-luvulla. Maakunnan itäosassa Pohjois-Makedonian rajalla on Shebenikin ja Jabllanicën kansallispuisto, joka perustettiin vuonna 2008. Sen vuorilla elää erittäin uhanalainen ilveksen alalaji, balkaninilves, sekä ruskeakarhuja ja susia. Puistossa on jäätikköjärviä, ja sen pinta-ala on noin 345 neliökilometriä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-maakunta2-elbasan-v3-74480042.jpg',
@@ -10931,7 +10931,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Fier: {
       lyhyt: 'Fierin lähellä on muinainen Apollonia, kreikkalaisten perustama kaupunki, jossa nuori Octavianus – tuleva keisari Augustus – opiskeli.',
-      pitka: "Fierin maakunnassa asuu 240 377 ihmistä, ja se on Albanian kolmanneksi asutuin. Menneisyys näkyy joka kukkulalla. Byllisin kukkulakaupungin 2,25 kilometrin muuri rakennettiin noin 350 eaa., ja sen teatteriin mahtui 7 500 katsojaa. Apollonia oli huippuaikoinaan noin 60 000 asukkaan kaupunki; ranskalaiset kaivoivat sitä 1924–1938 ja kuudennen vuosisadan temppeli löydettiin vasta 2006. Ardenican luostari on vuodelta 1282, ja sen kirkon seinillä ovat Zografi-veljesten 1740-luvun freskot. Luostari suljettiin 1969 ja avattiin uudelleen 1992. Divjakë–Karavastan kansallispuisto kattaa 22 230 hehtaaria, ja Ramsar-kosteikko on ollut suojeltuna 1994. Fierin itäpuolella Patos-Marinza on Euroopan suurin maalla sijaitseva öljykenttä.",
+      pitka: `Fierin maakunta on Etelä-Albaniassa Adrianmeren rannalla. Maakunnassa asuu noin 240 000 ihmistä, ja kuntia on kuusi. Suuri osa alueesta on Myzeqen alankoa, joka on perinteisesti ollut maatalousseutua. Kommunismin aikana maatalous ja raskas teollisuus olivat maakunnan talouden perusta. Fierin ja Patosin kaupungit ovat Albanian öljy-, bitumi- ja kemianteollisuuden keskuksia. Pojanin kylän lähellä on Apollonian muinaiskaupungin rauniot. Korintin ja Korfun kreikkalaiset siirtolaiset perustivat Apollonian noin vuonna 600 eaa., ja nykyään raunioalue on arkeologinen puisto. Maakunnassa on myös Karavastan laguuni, jonka rannoilla pesii kiharapelikaaneja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-maakunta2-fier-v2-dbdd70fe.jpg',
@@ -10954,7 +10954,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Gjirokastër': {
       lyhyt: 'Gjirokastërin kivitalojen katot on ladottu harmaista liuskekivistä, ja kaupungissa syntyi kirjailija Ismail Kadare.',
-      pitka: "Gjirokastërin linnoitus kohoaa 336 metrin korkeuteen, ja sen alkuperä on 1100-luvulla. Sisällä on sotamuseo, kellotorni, kaksi tekkeä, vesisäiliö sekä amfiteatteri, jossa kansallinen folklorefestivaali on pidetty viiden vuoden välein vuodesta 1968. Alapuolella vanha basaari on 1600-luvulta ja basaarin moskeija vuodelta 1757. Kaupunki on tunnettu tornitaloistaan: Zekate-talo on rakennettu 1811–1812, ja sen kaksi tornia kehystävät keskikaarta. Kaupungin alla on 1970-luvun alussa louhittu kylmän sodan tunneli, noin 800 metriä pitkä ja 59 huonetta, ja se avattiin vierailijoille 2014. Gjirokastër kuuluu Unescon maailmanperintöön vuodesta 2005, ja kunnassa on noin 23 300 asukasta.",
+      pitka: `Gjirokastërin maakunta on Etelä-Albaniassa Kreikan rajan lähellä, ja siinä on seitsemän kuntaa. Maakunnassa asuu noin 60 000 ihmistä, eli vähemmän kuin missään muussa Albanian 12 maakunnasta. Alueella on myös kreikkalaisvähemmistö. Maakunnan keskus Gjirokastër on kaupungin linnoituksen juurella, ja kaupunkia sanotaan kivikaupungiksi, koska monen vanhan talon katto on päällystetty litteillä kivilaatoilla. Linnoituksessa on sotamuseo. Kaupungin basaari rakennettiin alun perin 1600-luvulla. Vanhassa kaupungissa on paljon osmanien ajan taloja, jotka on suojeltu kulttuurimuistomerkkeinä. Gjirokastër ja Berat muodostavat yhdessä Unescon maailmanperintökohteen. Kaupungissa syntyivät kirjailija Ismail Kadare ja kommunistijohtaja Enver Hoxha.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-gjirokaster-b919118d.jpg",
@@ -10977,7 +10977,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Korçë': {
       lyhyt: 'Korçëssa avattiin 1887 ensimmäinen albaniankielinen koulu, ja nykyään kaupungin nimi tunnetaan koko maassa Birra Korça -oluesta.',
-      pitka: "Korçë on korkealla, noin 850 metrin korkeudessa Moravan vuorten kupeessa, ja sen 60 000 asukkaan tahti tuntuu hitaammalta kuin muualla Albaniassa. Iltaisin ihmiset kävelevät Shën Gjergji -bulevardia pitkin kahviloihin, ja Vanhan basaarin kivikadut on viime vuosina korjattu kortteli kortteliksi kauppojen ja majataloiden käyttöön. Kaupungin sydän on museo: Keskiaikaisen taiteen kansallismuseossa on yli 7 000 esinettä, enimmäkseen ikoneja, ja seinillä ovat muun muassa Onufrin ja David Selenican työt. Museo avattiin 1980 ja sen rakennus uudistettiin 2016. Elokuussa kaupunki täyttyy Festa e Birrës -oluttapahtumasta, jota järjestäjät sanovat alueen suurimmaksi.",
+      pitka: `Korçën maakunta on Kaakkois-Albaniassa Pohjois-Makedonian ja Kreikan rajalla. Maakunnassa asuu noin 170 000 ihmistä, ja pinta-alaltaan se on Albanian maakuntaen suurin. Maakunnan keskus Korçën kaupunki on yli 800 metrin korkeudessa tasangon reunalla. Siellä on vanha basaari ja useita museoita. Mirahorin moskeija rakennettiin vuosina 1484–1495. Kaupungissa valmistetaan Birra Korça -olutta. Maakunnassa Pogradecin kaupunki on Ohridinjärven rannalla. Järvi on Albanian ja Pohjois-Makedonian yhteinen, ja se on Unescon maailmanperintökohde. Maakunnassa on kuusi kuntaa. Maakunnassa on myös Prespan kansallispuisto.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-korce-39cfa8f7.jpg",
@@ -11000,7 +11000,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kukës': {
       lyhyt: 'Kukësin vanha kaupunki jäi 1976 Fierzan tekojärven alle, ja uusi Kukës rakennettiin järven yläpuoliselle tasanteelle.',
-      pitka: "Kukësissa, noin 15 600 asukkaan kaupungissa, huomaa heti, että vuoret ja vesi ovat lähellä: idässä kohoaa Gjallica, 2 468 metriä, ja edessä levittäytyy Fierzan tekojärvi, jonka pinta-ala on noin 72,5 neliökilometriä ja syvyys enimmillään 128 metriä. Järven sulkee Drin-joella 167-metrinen kivitäyttöpato, jonka ensimmäinen voimalayksikkö käynnistyi 1978. Se tuottaa noin kolmanneksen koko Drinin voimalaitosketjun sähköstä. Kaupungin läpi kulkee A1-tie Kosovoon, ja Kukësin maakuntaan kuuluu myös Valbonan laakso ja sen vaellusreitit Albanian Alpeilla.",
+      pitka: `Kukësin maakunta on Koillis-Albaniassa Kosovon ja Montenegron rajalla. Maakunnassa asuu noin 62 000 ihmistä, ja asukastiheys on noin 26 asukasta neliökilometrillä. Väkiluku oli suurimmillaan vuonna 1989, jolloin maakunnassa asui noin 146 000 ihmistä. Maakunnan luoteisosassa kohoavat Albanian Alpit. Maakunnan halki virtaa Drin-joki, jonka padottu osa on Fierzan tekojärvi. Valbonën laakson kansallispuisto perustettiin vuonna 1996. Maakunnan keskukseen Kukësiin avattiin kansainvälinen lentokenttä vuonna 2021.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-kukes-5eec596f.jpg",
@@ -11023,7 +11023,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Lezhë': {
       lyhyt: 'Lezhën Pyhän Nikolauksen kirkon raunioissa on Skanderbegin muistomerkki, sillä kansallissankari haudattiin sinne 1468.',
-      pitka: "Lezhë on noin 15 000 asukkaan pikkukaupunki Drinin tasangolla, mutta sen historia on paksu. Kaupungin yllä 172 metrin kukkulalla seisoo linna, ja alhaalla, muistomerkin kohdalla, kokoontuivat 2. maaliskuuta 1444 Albanian ruhtinaat Lezhën liittoon. Pyhän Nikolauksen kirkon rauniot muutettiin muistomerkiksi 1981. Muutaman kilometrin päässä Shëngjinin satamakylä tarjoaa hiekkarannat ja kalaravintolat. Drinin suistossa Kunë-Vainin suojelualue on 44 neliökilometrin kokoinen ja siellä on laskettu 196 lintulajia. Alue sai suojelun jo 1940 metsästysreservaattina, ensimmäisenä Albaniassa.",
+      pitka: `Lezhën maakunta on Pohjois-Albaniassa lähellä Adrianmerta. Maakunnassa asuu noin 99 000 ihmistä. Maakunnan keskus Lezhë on yksi Albanian vanhimmista jatkuvasti asutuista kaupungeista. Antiikissa sitä kutsuttiin nimellä Lissos, ja sen muurit ovat 300-luvun lopulta eaa. Lezhën linna on 172 metriä korkealla kukkulalla. Vuonna 1444 albaanien aatelisto kokoontui kaupunkiin sopimaan puolustautumisesta osmaneja vastaan. Albanian kansallissankari Skanderbeg haudattiin kaupungin Pyhän Nikolaoksen katedraaliin. Maakunnan rannikolla on Shëngjinin satama.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-lezhe-624ea869.jpg",
@@ -11046,7 +11046,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Shkodër': {
       lyhyt: 'Shkodërjärvi on Balkanin suurin järvi, ja sen rannalla kohoaa Rozafan linna, jonka muuriin tarun mukaan muurattiin nuori äiti.',
-      pitka: "Shkodërin vanhassa keskustassa kannattaa kävellä hitaasti, sillä pienet kadut ja vanhat talot kertovat kaupungin taiteilijoista ja kauppiaista. Kolë Idromeno (1860–1939) oli maalari, arkkitehti ja valokuvaaja, ja hänen käsialaansa on kymmeniä kaupungin rakennuksia sekä Albanian ensimmäisiä elokuvaesityksiä. Marubin kansallinen valokuvamuseo hoitaa Pietro Marubin 1856 perustaman studion arkistoa, satojatuhansia lasi- ja filminegatiiveja Albanian 1800-luvun lopulta 1900-luvun puoliväliin. Museo avattiin nykyisessä muodossaan 9. toukokuuta 2016, ja se oli ehdolla Euroopan vuoden museoksi 2017. Kaupungin ulkopuolella Ura e Mesit -silta ylittää Kirin 13 kivikaarella ja yli sadan metrin matkalla, valmistuneena 1770.",
+      pitka: `Shkodërin maakunta on Luoteis-Albaniassa Montenegron rajalla. Maakunnassa asuu noin 150 000 ihmistä, mutta vuonna 1989 asukkaita oli noin 290 000. Maakunnassa on viisi kuntaa. Maakunnan keskus Shkodër on yksi Albanian vanhimmista kaupungeista. Se perustettiin ennen ajanlaskun alkua, ja se on Albanian roomalaiskatolisen kirkon keskus. Kaupungin Rozafan linna on kukkulalla. Marubin valokuvamuseo säilyttää albanialaisia valokuvia 1800-luvulta lähtien. Shkodër on Skadarjärven rannalla, ja järvi on Albanian ja Montenegron yhteinen. Maakunnan pohjoisosassa kohoavat Albanian Alpit. Alpeilla on myös Thethin kansallispuisto, joka perustettiin vuonna 2022.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-maakunta2-shkoder-v2-623ce2e7.jpg',
@@ -11069,7 +11069,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Tiranë': {
       lyhyt: "Tiranan Bunk'Art on museo Enver Hoxhan viisikerroksisessa maanalaisessa bunkkerissa, jossa on 106 huonetta.",
-      pitka: "Tirana on yllättävän nuori pääkaupunki: Sulejman Pasha Bargjini perusti sen 1614 vanhan moskeijan ympärille, ja Albanian pääkaupungiksi se tuli väliaikaisesti 1920 ja pysyvästi 1925. Kaupungin keskus on Skanderbegin aukio, joka uudistettiin 2016–2017 belgialaisen 51N4E-toimiston suunnitelmalla noin 40 000 neliömetrin kävelyalueeksi ja palkittiin 2018 Euroopan julkisen kaupunkitilan palkinnolla. Aukion reunalla seisovat 35-metrinen Kellotorni ja Et'hem Bey -moskeija, joka valmistui 1821. Kaupungin vieressä on Suuri puisto tekojärvineen, joka tehtiin 1955, ja idässä kohoaa Dajtin kansallispuisto.",
+      pitka: `Tiranan maakunta on Keski-Albaniassa Adrianmeren rannikon tuntumassa. Maakunnassa asuu noin 760 000 ihmistä, eli noin 32 prosenttia koko maan asukkaista. Maakunnan keskus on Albanian pääkaupunki Tirana. Maakunnassa on viisi kuntaa. Tiranan perusti vuonna 1614 osmanien aikana Sulejman Pasha, ja pääkaupungiksi Tirana julistettiin vuonna 1920. Kaupungin keskus on Skanderbegin aukio, jonka vieressä on Albanian keskuspankki. Tiranan itäpuolella kohoaa Dajti-vuori, jossa on kansallispuisto. Maakunnan länsiosa on Adrianmeren rannikkotasankoa. Pääkaupungin lähellä Rinasissa on Äiti Teresan kansainvälinen lentokenttä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-maakunta2-tirane-vb-703df322.jpg',
@@ -11092,7 +11092,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vlorë': {
       lyhyt: 'Vlorëssa julistettiin Albanian itsenäisyys 28. marraskuuta 1912, ja Lipun aukiolla seisoo itsenäisyyden muistomerkki.',
-      pitka: "Vlorë on Albanian kolmanneksi suurin kaupunki, noin 84 000 asukasta, ja sen edustalla Adrianmeri kohtaa Joonianmeren. Kaupungin pohjoispuolella Narta-laguuni on 41,8 neliökilometrin kokoinen suolaisen veden allas, jossa oli 2020 noin 3 000 flamingoa. Laguunin keskellä on Zvërnecin saari, jonne pääsee puisella kävelysillalla ja jossa seisoo 1200-luvun bysanttilainen luostari. Lounaassa Karaburun-Sazanin meripuisto kattaa reilut 124 neliökilometriä ja on ollut suojeltu vuodesta 2010. Sisämaassa Kaninën linna kohoaa noin 380 metrin korkeuteen ja antaa näköalan lahdelle.",
+      pitka: `Vlorën maakunta on Etelä-Albaniassa Adrianmeren ja Joonianmeren rannalla. Maakunnassa asuu noin 150 000 ihmistä, ja maakunnan keskus on Vlorën kaupunki. Maakunnan keskuksessa julistettiin Albanian itsenäisyys 28. marraskuuta 1912. Vuoria on aivan rannikon tuntumassa, ja rannikkoa kutsutaan Albanian rivieraksi. Maakunnan korkein kohta on Çikë-vuori, joka on 2 044 metriä korkea. Karaburunin niemimaa on luoteessa, ja siellä on suojeltu merialue. Maakunnan eteläosassa Sarandën kaupunki on suosittu matkailukohde. Sen lähellä on Butrintin muinainen kaupunki, joka on ollut Unescon maailmanperintökohde vuodesta 1992.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-maakunta2-vlore-vb-1fb6a1c7.jpg',
