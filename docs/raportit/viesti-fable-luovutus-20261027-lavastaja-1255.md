@@ -1010,3 +1010,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   avoimet-v51; 299 tiedostoa, SHA256SUMS OK (4398edaa…). PK:lle ilmoitettu (drone: t-portin terassi kivilaattana). Junaan 214 vasta kortin jälkeen.
 - SEURAAVAKSI: Codexin stone-surfaces-v6 (cac6ea6ab) → T7/postista K:hon, SHA → kujakivi_pinnat.py v03-kuvilla (UV 1:1; kivijalka mataliksi
   kerroksiksi PT:n mukaan) uuteen taustaan + muurikatteeseen → parit 02/05 → PT → kortti omistajalle → v67.
+
+## LISÄYS 80 klo 15.2x (29.10.): KUJAKIVET v6 PELISSÄ (juuri-v136m), PARIT PT:LLÄ — ALOITA TÄSTÄ
+- Codex stone-surfaces-v6 (b87e361c2; PT hyväksyi fb05f9217) → K/kujakivi-pinnat-v6 (SHA OK). lattialaatat-v03 (3 riviä/2 m, laatat 0,60–1,40 m),
+  sokkeli-v03 (8 × 0,15 m, kivet 0,70–1,30 m), sokkelin-ylapinta-v03; pilarit/reunakivi ennallaan.
+- kujakivi_skaalaa.py sai KUVAT=<pinnat> UUSI=v03 (vaihtaa upotetut kuvat nimen mukaan). K/tyokalut/aja_v136_pari.zsh: yksikerros-v108 → v110,
+  muurikate pari-v134 → pari-v136, UV 1:1 (lattia LKV_K 0,5556, sokkeli jo 1:1), juuri-v136m, parit (EI_PARIA=1 = vain rakennus).
+- Parit REF 46c0add3c: lokit/havainne-editori-20261029-152020 (sovitettu), -152247 (pelikamera) → PT 15.2x. Kivijalassa pystyjuovat ~0,3 m
+  välein (myös v02:ssa) = valo/varjostin → ilmoitettu PT:lle (VS/PK).
+- SEURAAVAKSI: PT:n kuittaus → v67 = v66 + tausta-v67 (yksikerros-v110) + muurikate-v22 (pari-v136) (kopioi paketti_v66.py → paketti_v67.py) → PK.
+  Junaan 214 vasta omistajan kortin jälkeen (seinat-211 + kujakivet v6).
