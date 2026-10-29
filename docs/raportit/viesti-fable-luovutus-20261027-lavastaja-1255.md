@@ -782,6 +782,6 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   muurikate-v19/kk-muurikate-v19-pohja.glb, rakennukset-v48, avoimet-v50. Versiot PK:lle ilmoitettu; JU:n ämpärivienti PT:n luvalla (kysytty).
 - JUMI (PT:lle kysytty): t-portti-424:n aukko on taustassa UMPINAINEN (muuri + kivijalka z 424,4–426,5, x −253…−246,4) myös pelin v62:ssa,
   mutta pk7:n rata kulkee siitä kuja-39:ään → jos PT/PK vahvistaa, leikkaa aukko (x −251,4…−247,0, alle aukon yläreunan) taustaan ja
-  uusi paketti (v64). Tarkistus: scratchpad-skripti aukko.py ei tallessa → tee uudelleen alue_seinat.py:n pohjalta (este y 0,5–2,0).
+  uusi paketti (v64). Tarkistus: K/tyokalut/aukko_este.py <tausta> <z0> <z1> (tulostaa esteet y < 2,5 alueella x −253…−245,5).
 - Auki: kuja-29:n aukon pielien kansi vaalea (UV lähimmästä kärjestä ei osu) → kopioi pieliin muurin pinnan UV tai V4_red-materiaali;
   KK:n palaute 05-pariin; omistajan kortti kuja 02 (suositus leveys ennallaan). VIESTIRAJA täynnä → varakanava send_message.
