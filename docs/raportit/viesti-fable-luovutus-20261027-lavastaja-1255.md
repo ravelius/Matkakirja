@@ -1453,3 +1453,13 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - 03 kohta 4: aja_v166_siipikatto.zsh ajaa nyt myös tuplakuva_pois.py:n; pari 03/03b juuri-pk7-v90: lokit/havainne-editori-20261030-004912 → PT.
 - SEURAAVAKSI: PT:n kuittaukset (v85, v88, 03-pari) → paketti k7 (v147) + siipikatto (v148) + A6 (v167, PK:n pari) PT:n ohjeen mukaan (paketti_v88.py mallina,
   kansiot v74:n päälle uusin numeroin: rakennukset-v75+, c2-v18 on varattu hylätylle → käytä c2-v19). Jono: T-risteys, sivuhallit, 04; Codex A2/A4/A1.
+
+## LISÄYS 107 klo 01.10 (30.10.): 03-KANNATINVYÖ KORJATTU MALLISSA, VYÖN SININEN = PELIN PUOLI (PK) — LUOVUTUS, ALOITA TÄSTÄ
+- PT 01.0x: 03-parin (004912) vyö karkea. Korjattu tyokalut/taihemen_siipikatto.py: kannattimet 0,30 m välein kapeat V4_teal-konsolit + kultareuna,
+  kulta = V4_konsoli_kulta (PK: rakennusten V4_gold = pelissä kattotiilipinta 14; V4_goldia vain kattoon; puuttuva materiaali luodaan tasavärinä).
+  aja_v166_siipikatto.zsh ajettu uudelleen (+ tuplakuva_pois) → rakennukset-v148/kielletty-rakennukset-v72, c2-v17/kielletty-c2-v16 (H/juuri-pk7-v90 osoittaa näihin).
+- Pari 03 (REF 362182ba5, LISA="ui juoksupeli valo kuvabias 0"): lokit/havainne-editori-20261030-010632/03 → PT. Vyö (V4_palkkivyo, 1067, UV oikein,
+  friisin edessä 6 cm) piirtyy yhä tasaisen tummansinisenä myös kuvabias 0:lla → epäily pelin _PalatsiKatto 2 / _JuoksuPalatsiVyoSavy; PK:lle välitetty.
+- v88 (4f671194) = v86 + kaiteet-v3 kaide-pylvas → V4_marmorikaide_pylvas; EI c2-v18:aa (PT luki ensin vanhan v88:n; vastattu). NUI ottaa 06-zoomin.
+- SEURAAVAKSI: PT:n kuittaus 03-pariin / PK:n vyökorjaus → paketti (v88:n päälle): k7 (v147) + siipikatto (v148) + A6 (v167, PK:n pari) PT:n ohjeen mukaan;
+  REF 362182ba5 -juuret v89/v90-mallilla (pelin odottamat v83-kansionimet). Jono: T-risteys, sivuhallit, 04; Codex A2/A4/A1.
