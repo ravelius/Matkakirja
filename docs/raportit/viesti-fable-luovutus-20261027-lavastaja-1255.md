@@ -785,3 +785,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   uusi paketti (v64). Tarkistus: K/tyokalut/aukko_este.py <tausta> <z0> <z1> (tulostaa esteet y < 2,5 alueella x −253…−245,5).
 - Auki: kuja-29:n aukon pielien kansi vaalea (UV lähimmästä kärjestä ei osu) → kopioi pieliin muurin pinnan UV tai V4_red-materiaali;
   KK:n palaute 05-pariin; omistajan kortti kuja 02 (suositus leveys ennallaan). VIESTIRAJA täynnä → varakanava send_message.
+
+## LISÄYS 60 klo 07.35 (29.10.): OMISTAJA 07.26 — KUJA 02 HAVAINNEKUVAN LEVYISEKSI, RAKENNUKSET ENNALLAAN — LUOVUTUS, ALOITA TÄSTÄ
+- Loki paatokset-2026-10.md:3164. PT: jäljellä oleva ero ~0–5 % (havainne 4,5 | peli ≥ 4,3 hahmon korkeutta reunakivestä reunakiveen,
+  hahmon jalkojen kohdalla), mittarina kujan leveys sovitetulla kameralla (editori-lr.sh: TESTIKAMERA 02 "3.3 6.88 10 45" ja paikka
+  x −245,44 ovat nyt oletuksena), EI kattojen väli. Työnjako: LR muurit → KS pk8 (= pk7 + kuja 02) → PK rata → parit KK:lle.
+- TEE: 1) aja 02 uudella oletuspaikalla juuri-v119m:llä ja mittaa leveys hahmon korkeuksina (havainne | peli) molemmista reunakivistä
+  (pelin oikea reunakivi oli -065520:ssä kuvan ulkopuolella). 2) levennä itämuuria kuja02_kavennus.py:llä POSITIIVISELLA SIIRROLLA
+  (esim. SIIRTO=0.3 → +0,3 m itään z 315–340, liukumat 311–315/340–344; pohjana yksikerros-v102 ja muurikate pari-v119, EI v99/v116,
+  muuten 05:n jatko katoaa: muuta aja_v117_pari.zsh:n polut → aja_v120_pari.zsh). 3) parit KK:lle, --muurit-linjat KS:lle (pk8),
+  PK:lle. 4) uusi vientipaketti (tausta-v64, muurikate-v21; rakennukset-v49/avoimet-v51 ennallaan) samaan junaan pk8:n kanssa.
+- JUMI yhä PT:llä: t-portti-424 umpinainen (lisäys 59). Viestiraja täynnä → mcp__ccd_session_mgmt__send_message.
