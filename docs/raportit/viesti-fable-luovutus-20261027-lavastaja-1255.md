@@ -1059,3 +1059,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
    paketti_v67.py kopioksi paketti_v68.py: tausta-v68 = yksikerros-v111 (tai uudempi katkoviivakorjauksella), muurikate-v23 = pari-v137,
    rakennukset-v51/v52 → SHA → PT + PK (drone). Ei ämpäriin ennen omistajan korttia.
 4. Luovutus-PR 5598 (haara lavastaja/luovutus-75) auki, lisäykset 76–83.
+- PK 15.4x (katkoviivan sijainti, lisäys 83 kohta 2): konsoli-stdout.log "Puyi (x, z)" -rivit: tunneli pelin t 87,2–89,2, Puyi (81,6…82,2;
+  −383,4…−368,3), juoksu +z; video ≈ t + 21,7 s → viiva 111,5 s ≈ t 89,8, Puyi ≈ (82,3; −364), viiva 4–8 m edessä: PELIN z ≈ −360…−356,
+  x ≈ 80–84 (pelin kehys; muunna pohja-/glTF-kehykseen ennen hakua). Reitin 2. portti (1. = t-portti-120 U-käännöksen jälkeen). Huom.
+  rakennukset.json: a-meridiaaniportti paikka_pohja (13,2; −380,9) → tarkista myös Meridiaaniportin holvitunnelit, ei vain t-portit.
