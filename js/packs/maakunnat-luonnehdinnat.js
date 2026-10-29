@@ -7602,7 +7602,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   LUX: {
     Diekirch: {
       lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
-      pitka: "Diekirch on Sauer-joen varrella oleva noin 7 300 asukkaan pikkukaupunki, joka on pohjoisten Ardennien arkinen keskus. Sen museossa on esillä roomalaisen huvilan mosaiikkia: huvila hylättiin 400-luvun alussa. Vanhan panimon tiloissa toimii kansallinen sotahistoriamuseo, jossa Ardennien taistelun tapahtumat on rakennettu eläväkokoisiksi dioraamoiksi. Naapurikaupungissa Ettelbruckissa on kenraali Pattonin muistomuseo, ja siellä laulettiin ensimmäisen kerran julkisesti kansallislaulu Ons Heemecht vuonna 1864. Pohjoisempana Clervaux'n kylässä on linna ja luostari, ja joulukuussa 1944 kylän ympärillä käytiin ankaria taisteluja.",
+      pitka: `Diekirchin entinen piiri on Luxemburgin pohjoisosassa. Piirit lakkautettiin hallintoyksikköinä lokakuussa 2015. Alueella asui vuonna 2014 noin 84 000 ihmistä. Pohjoisosa on kukkulaista ja metsäistä Ardennien aluetta. Sauer-joki virtaa Ettelbruckin ja Diekirchin kaupunkien kautta Saksan rajalle. Ettelbruckissa on Patton-aukio, koska kenraali George S. Pattonin johtamat yhdysvaltalaisjoukot vapauttivat kaupungin joulupäivänä 1944. Clervaux'n linnassa on esillä valokuvaaja Edward Steichenin kokoama The Family of Man -valokuvanäyttely. Viandenin kaupungin linnassa asui kirjailija Victor Hugo kolme kuukautta vuonna 1871.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
@@ -7625,7 +7625,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grevenmacher: {
       lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
-      pitka: "Grevenmacher on noin 5 300 asukkaan kaupunki Moselin vasemmalla rannalla, ja sen ympärillä rinteet on istutettu viiniköynnöksellä. Luxemburgin viinialue ulottuu joen varrella noin 40 kilometrin matkalle Schengenistä Wasserbilligiin, ja Grevenmacherissa on Vinsmoselle-osuuskunnan tuotantolaitos sekä Bernard-Massardin kuohuviinikellarit. Etelämpänä Remich on pinta-alaltaan maan pienin kunta. Alueen pohjoisosassa Echternachissa on luostari, jonka Willibrord perusti 698 maalahjoituksen turvin. Luostarikirkko sai paavilta basilikan arvon 1939, ja Willibrordin hauta on sen alla.",
+      pitka: `Grevenmacherin entinen piiri on Luxemburgin itäosassa. Piirit lakkautettiin hallintoyksikköinä lokakuussa 2015. Alueella asui vuonna 2014 noin 65 000 ihmistä. Piiri rajoittuu idässä Saksaan, ja Mosel-joen rinteillä viljellään viiniköynnöstä. Schengenin kylässä Moselin rannalla allekirjoitettiin 14. kesäkuuta 1985 Schengenin sopimus, joka alkoi purkaa rajatarkastuksia Euroopassa. Echternachin kaupungissa on munkki Willibrordin vuonna 698 perustama luostari. Echternachin seudulla on metsäinen kallioalue Müllerthal, jota kutsutaan lempinimellä Luxemburgin Pikku-Sveitsi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
@@ -7648,7 +7648,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Luxembourg: {
       lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
-      pitka: "Luxemburgin kaupungissa asuu noin 138 000 ihmistä, ja noin 70 prosenttia heistä on ulkomaalaisia, joten kadulla kuulee harvoin vain yhtä kieltä. Alzette ja Pétrusse ovat kaivaneet kallioon syvät rotkot, joita ylittävät sillat. Pont Adolphe valmistui 1903, ja sen 84,65 metrin kaari oli sen aikaan maailman suurin kivikaari. Vanhakaupunki ja linnoitukset ovat Unescon maailmanperintökohde vuodesta 1994, ja Bock-kallion alla kulkee noin 17 kilometriä kasemattikäytäviä, joiden rakentaminen alkoi espanjalaisten aikana 1644. Kirchbergin tasangolla Philharmonie avattiin 2005 ja Mudam 2006 entisen Fort Thüngenin paikalle I. M. Pein suunnittelemana. Kaupunki oli Euroopan kulttuuripääkaupunki 1995 ja 2007.",
+      pitka: `Luxemburgin entinen piiri on maan keski- ja eteläosassa. Piirit lakkautettiin hallintoyksikköinä lokakuussa 2015. Alueella asui vuonna 2014 noin 401 000 ihmistä, enemmän kuin kahdessa muussa piirissä yhteensä. Luxemburgin kaupungin vanhat kaupunginosat ja linnoitukset ovat Unescon maailmanperintökohde. Luxemburgin kaupungin Kirchbergin kaupunginosassa on useita Euroopan unionin laitoksia, esimerkiksi unionin tuomioistuin. Esch-sur-Alzetten kaupungissa rautamalmin löytyminen 1850-luvulla käynnisti terästeollisuuden, ja kaupunki oli Euroopan kulttuuripääkaupunki 2022. Merschin kaupungissa kolmen joen yhtymäkohdassa toimii Kansallinen kirjallisuuskeskus, maan kirjallisuusarkisto.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
