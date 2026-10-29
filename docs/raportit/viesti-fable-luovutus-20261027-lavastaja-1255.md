@@ -1324,3 +1324,15 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   puuttuvat ajetaan uudelleen samoilla arvoilla. 06 → PT + KS (nimitaulu + takaseinät); 07 → PT (tasainen vertailuvalo).
 - SEURAAVAKSI: (1) parit → PT; (2) PT:n kuittaus ulkorengas-v7 → paketti v81 (= v80 + kielletty-ulkorengas-v7); (3) loput 07:stä (muuri/kulmatornit
   tarkistus) ja 06 (portin etupiha) pariajon perusteella.
+
+## LISÄYS 97 klo 22.5x (29.10.): LUOVUTUS (konteksti 35 %) — PAKETTI v81 SEURAAVAKSI, ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- NUI:n g-taihedian LOD1/2 (halli-215/v3; PT kuittasi halli 215:n) → aja_v158_nui_lod12.zsh → K/rakennukset-v142/kielletty-rakennukset-v66
+  (= v141 + ne). H/juuri-pk7-v80:n kielletty-rakennukset-v53 osoittaa nyt v142:een (pari 07 käyttää sitä).
+- PT 22.5x: PAKETTI v81 = v80 + kielletty-ulkorengas-v7 (ulkorengas-v7, aja_v157) + kielletty-rakennukset-v66 (v142) + NUI:n kaiteet
+  /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/halli-215/halli-kaiteet-v2/ (osat.glb, ladonta.json; kysy NUI:lta/PK:lta kansionimi pelissä,
+  esim. kielletty-halli-kaiteet-v2) + KORJAUS: kaiteen johde näkyy kirkkaan valkoisena nauhana 03/03b:ssä (PT:n kuvat-pari5) → johteen sävy samaksi
+  marmoriksi kuin pylväät (vertaa johteen ja pylvään materiaalien baseColor/kuva osat.glb:ssä; johde_kortti.py teki osasarjan kortin 1062:sta).
+  Pohja paketti_v79.py (nimeä paketti_v81.py, A = v80-kansio, .md-suodatus mukana). Ulkorengas-v7 ensin (pari 07 PT:lle), sitten kaikki samaan v81:een.
+- PARIT taustalla (scratchpad pari_v79.zsh, pari_v80_07.zsh; prosessit voivat kuolla nollauksessa): tarkista uusin havainne-editori-*/06 ja */07,
+  aja puuttuvat uudelleen (lisäys 96). 06 → PT + KS, 07 → PT.
