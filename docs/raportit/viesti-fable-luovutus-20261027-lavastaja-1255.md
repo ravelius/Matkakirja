@@ -952,3 +952,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   pohjoispuolella (z 403–424) ja muurit etelään z < 366 ennallaan (liukuma 366–372 näkyy loivana laskuna).
 - SEURAAVAKSI: KK → paketti_v66.py: R = rakennukset-v126, tausta yksikerros-v108, JA UUSI muurikate (pari-v134; v66 ei aiemmin
   päivittänyt muurikatetta → lisää kielletty-muurikate-v21 pakettiin + LAHTEET) → aja → PK (läpikulku 05) → PT.
+
+## LISÄYS 75 klo 14.2x (29.10.): DRONEVIDEON 129–132 s "HARMAA TASO + PUNAISET PILARIT" = T-PORTIN TUNNELIN TERASSI (jo korjattu v123:ssa)
+- Video: lokit/todistus-drone214n-8289a55fe-20261029-1334/drone214n.mp4 (pelin rakennukset-v48 = rakennukset-v116). 127–132 s hahmo juoksee
+  t-portin tunnelin läpi; katon häivytys paljastaa tunnelin päällä olevan terassin (t-portti-m15/m216: vaakasuora runko-pinta y 2,5,
+  ~520 m², josta nousevat paviljongin punaiset pilarit). Pinta oli V4_marmori → peli näytti tasaisen harmaana.
+- Korjaus on jo tehty: tportti_lattia.py (lisäys 68, rakennukset-v123+) muutti terassin V4_lattiaksi (kivilaatta); mukana rakennukset-v126:ssa
+  → v66. Ei uutta kantta. Tarkistus: PK:n seuraava drone v66:lla samasta kohdasta (terassin pitää näkyä kivilaattana).
