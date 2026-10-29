@@ -57,3 +57,14 @@ test('valtamerten kopio on sama kuin generaattorin MERET', () => {
     assert.ok(src.includes(`{ nimi: '${m.nimi}', lon: ${m.lon}, lat: ${m.lat}, koko: ${m.koko} }`), m.nimi);
   }
 });
+
+test('merinimen siirto veden päälle enintään SIIRTO_ENINTAAN_M (LIGURIANMERI z4 278 km, PT 29.10.2026)', async () => {
+  const { SIIRTO_ENINTAAN_M } = await import('../tools/vie-aluenimet.mjs');
+  const a = JSON.parse(readFileSync(new URL('../assets/data/aluenimet-natiivi.json', import.meta.url), 'utf8'));
+  for (const s of a.lukumaarat.meret_vedelle.siirretty) {
+    const km = Number(/ (\d+) km/.exec(s)[1]);
+    assert.ok(km * 1000 <= SIIRTO_ENINTAAN_M, `${s} yli rajan`);
+  }
+  const lig = a.nimet.find((n) => n.id === 'ligurianmeri');
+  assert.ok(!lig.paikat['4'] && !lig.tasot.includes(4) && !lig.pallotasot.includes(5), 'Ligurianmeri pois z4:ltä');
+});

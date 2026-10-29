@@ -166,7 +166,9 @@ export function aluenimet(pyramidi, { muste = new Map(), versio } = {}) {
  * maapolygoneja vastaan tasoittain; jos se osuu maahan, nimi siirretään
  * lähimpään kohtaan, jossa laatikko on veden päällä (enintään 5 %
  * näytteistä maalla — pienet saaret sallitaan). Haku ulottuu enintään
- * 0,75 nimen leveyden päähän (salmilla 0,35), jotta nimi pysyy omalla
+ * 0,75 nimen leveyden päähän (salmilla 0,35) ja kuitenkin enintään 250 km
+ * (PT 29.10.2026: LIGURIANMERI z4 siirtyi 278 km Sardinian länsipuolelle;
+ * Egeanmeren 217 km ja Lioninlahden 200 km jäivät omalle merelleen), jotta nimi pysyy omalla
  * merellään, eikä uusi paikka saa osua saman tason muihin nimiin. Jos
  * paikkaa ei löydy, salmen nimeä pienennetään (0,8 → 0,65 → 0,5 kertaa
  * webin koko; korkeus_m ja leveys_m kertovat piirtokoon), ja jos sekään
@@ -182,6 +184,8 @@ const LAATIKKO_ALAS = 1.75;
 const NAYTTEET = [13, 5];
 const MAATA_ENINTAAN = 0.05;
 const HAKU_LEVEYKSINA = 0.75;
+/** Siirto enintään (m): pidempi siirto vie nimen toiselle merelle, joten nimi jää pois tasolta. */
+export const SIIRTO_ENINTAAN_M = 250000;
 /** Salmi tai kanaali nimeää kapean kohdan: sen nimi saa siirtyä vain vähän. */
 const SALMEN_HAKU = 0.35;
 const onSalmi = (n) => /salmi|kanaali|rauma|dardanellit/u.test(n.id);
@@ -256,7 +260,7 @@ export function meretVedenPaalle(nimet, maa) {
     for (const [z, p] of Object.entries(n.paikat)) {
       if (maaOsuus(maa, p) <= MAATA_ENINTAAN) continue; // eslint-disable-line no-continue
       const muut = muutTasolla(n, z);
-      const haku = (onSalmi(n) ? SALMEN_HAKU : HAKU_LEVEYKSINA) * p.leveys_m;
+      const haku = Math.min((onSalmi(n) ? SALMEN_HAKU : HAKU_LEVEYKSINA) * p.leveys_m, SIIRTO_ENINTAAN_M);
       const mLon = 1 / (R * RAD * Math.cos(p.lat * RAD));
       const mLat = 1 / (R * RAD);
       let paras = null;
