@@ -799,3 +799,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - PT:N PÄÄTÖS 29.10. (JUMI ratkaistu): t-portti-424 → KYLLÄ, leikkaa aukko taustaan x −251,4…−247,0, alle aukon yläreunan
   (malli + way/42509088 = totuus); tarkista aukko_este.py:llä. Tee samaan v64-pakettiin kuja 02 -levennyksen kanssa (TEE-kohta 4).
   v63:a EI viedä ämpäriin erikseen (v64 korvaa, yksi juna). PK tarkistaa pk7/pk8:n radan kuja-39:ään vasta v64:llä (ilmoitettu).
+
+## LISÄYS 61 klo 07.55 (29.10.): t-portti-424:n AUKKO TEHTY (yksikerros-v103) — LUOVUTUS, ALOITA TÄSTÄ (+ lisäyksen 60 kuja 02)
+- PK/PT 07.4x: aukko tarvitaan (reittiverkko x −251…−249,5 z 421 → 427,5 kuja-39:ään; myös nykyinen esto v12 läpäisee). UUSI
+  K/tyokalut/avaa_tportti.py: poistaa pielien välistä ei-lattiakolmiot laatikossa x −251,48…−246,98, z 423,9–426,7, y ≤ 3,35, paitsi
+  ±x-normaaliset pielipinnat → yksikerros-v103 (aukko_este.py: vapaa x −251,2…−247,8 = 3,4 m; reunoilla pielet ja uuden itämuurin pää).
+  aja_v120_pari.zsh → juuri-v120m, kuva 05j ajettu taustalla (lokit/esikatselu-20261029-07xx*/havainne-05j.png) — TARKISTA kuva (ei
+  katsottu ennen nollausta): pielet ehjät, ei reikiä seinän sisään, muurikate (pari-v119) aukon yllä ok.
+- PT 07.5x: v63 EI ämpäriin; lopullinen v64 = v103 + lisäyksen 60 kuja 02 -levennys (pohjaksi yksikerros-v103 ja muurikate pari-v119).
+  Keskeneräinen paketti (vain aukko): K/paketti-v64-kesken (ei _valmiit-kansiossa). Tee lopullinen _valmiit/juoksupeli-kk-lavastaja-v64-
+  vienti-<pvm> kun kuja 02 valmis; versiot PK:lle (haara pelikoodari/pk7-214, hän leipoo palatsi-esto-v13), PT kuittaa koko nipun ennen JU:ta.
+- KS odottaa kuja 02:n muurilinjoja (pk8 = pk7 + 02; KS:n oma +2 m pk8 peruttu). KK:lle kerrottu: mittari = leveys hahmon kohdalta, ei 0,70.
