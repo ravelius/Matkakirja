@@ -44,6 +44,12 @@ Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti
 - Tuore lukija keksii joskus tekstiin kuulumatonta sisältöä; hylkää huomautus, jota ei löydy tekstistä.
 - Pakin työkalu maakuntateksti-aseta.mjs odottaa muodon { avain: teksti } (ei { pitka, lahteet }); vanhat haarat voivat puuttua työkalusta.
 
+## Opitut asiat 29.10. (Bosnia ja Hertsegovina)
+- Aluetyypit pakin avainten mukaan: kantoni (10), alue (Republika Srpskan 7), Brčkon piiri; entiteetti yhdellä neutraalilla virkkeellä. Asukasluvut väestönlaskenta 2013 (kantonit, Brčko); RS:n alueilta pois, koska alueiden kuntajakoa ja alueluvut puuttuvat lähteistä.
+- Agentit olettavat kuntien kuulumisen alueisiin: väitä kuuluvuus vain, jos lähde sanoo sen. RS:n seitsemän alueen (Banja Luka, Bijeljina, Doboj, Foča, Sarajevo-Romanija, Trebinje, Vlasenica) jaosta ei löytynyt lähdettä; en-Wikipedian taulukko käyttää neljää aluetta eikä RZS:n 2022-arvio (rzs.rs.ba) anna kunnittaisia lukuja PDF:ssä (vain Excel-liite).
+- Samasta maasta voi tulla eri asukasluku en- ja fi-Wikipediasta (Una-Sana 273 261 vs 299 343): käytä lukua, joka täsmää kuntien summaan, ja kirjaa epävarmuus raporttiin.
+- Muistinvaraiset vuosiluvut, rakennusten käyttötarkoitukset ja festivaaliajat pois (Ljubija 1916, Beledija-tyyppiset yksityiskohdat vain jos lähde nimeää vuoden).
+
 ## Agenttiohje (kopioi tiedostoon; vaihda <oma worktree> ja MAATUNNUS)
 
 # Ohje: maakuntatekstin (pitka) kirjoitus koko maakunnasta
