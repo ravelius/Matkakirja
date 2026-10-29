@@ -43,3 +43,13 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
   itämuuri ks-pk7/kuja05-ita (−248,68; 403,4) → (−247,05; 424,3), paksuus 0,8. Rasteri (rasteri-kuja40b.txt, sama v12:lla ja v13:lla):
   z 405: itäreunan este x −246,5…−246 (ei −248,6:ssa), z 410: −247,5…−247 → uusi itämuuri puuttuu rasterista tai on siirtynyt itään.
   Selvitä JuoksuPalatsiVerkko: pohjan muurien rasterointi (miksi ks-pk7-muuri ei estä), korjaa → testi → tarkistus uudelleen → PT:lle OK.
+
+## LISÄYS 07.55: JU:n ajot valmiit (L1 ja simu vapaat)
+- DRONE c (lokit/todistus-drone214c-b40395e25-20261029-0746): KORJAUS EI TEHONNUT porttiin, sillä t 74,9–77,0 nopeus on yhä 12,6–15,9 m/s
+  (nostot 5,2–7,9 m). Todennäköinen syy: portin alla nosto tulee räystäshaarasta (JuoksuV4Maailma: `if (!float.IsNegativeInfinity(raystas)
+  && !tunnelissa && !avoinSali) kohde.y = Max(kohde.y, raystas + YhtKattoVara)`), ei KameraVaatii-haarasta, jota b40395e25 pehmensi →
+  sama ennakko ja enintään 2,5 m/s myös räystäsnostolle (SisakatonRaystas reitillä edessä). Suorat: mediaani 7 cm (b: 3 cm). Alku
+  (avaus päällä): kamerarata-rivejä ei t < 7 s → katso video. EI KK:lle ennen korjausta.
+- PARI pk2|pk7 (todistus-pk7b-7e9c8473c-20261029-0737): kamerarata-rivejä 0 → `ui juoksupeli kamerarata 1` + `oleta-uusi … kamerarata t`
+  ei toimi QA-lähdössä taso 0:lla → käytä odotusehtona esim. `oleta-uusi 120 juoksupeli avaus: OhjausPelaajalle` (vertailu.sh-mallin
+  mukaan) ja tarkista videot Sonnetilla ennen KK:ta.
