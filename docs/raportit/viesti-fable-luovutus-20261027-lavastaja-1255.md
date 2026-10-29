@@ -1081,3 +1081,18 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - v68 = K/tyokalut/paketti_v68.py: _valmiit/juoksupeli-kk-lavastaja-v68-vienti-20261029 = v67 + tausta-v68 (yksikerros-v111) + muurikate-v23 (pari-v137)
   + rakennukset-v52 (v128); 299 tiedostoa, SHA256SUMS OK (4fc4da42…). EI ämpäriin/junaan ennen omistajan korttia. PT:lle ja PK:lle (drone v68) ilmoitettu.
 - SEURAAVAKSI: PK:n drone v68 → PT; avoimet työt lisäyksen 81 alta (EROLISTA: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
+
+## LISÄYS 85 klo 18.1x (29.10.): v69 = 02:n FRIISI YHTENÄISEKSI + 05:n PORTIN PIELTEN KIVIJALKA → PT + PK
+- PK:n drone v68 OK (katkoviiva poissa), PT kuittasi v138m.
+- PT 18.0x: 02:n vasemman seinän vihreä vyö irrallisina paloina. Syy: muurikatteen friisi (V4_palatsi_friisi y 3,90–4,12) vain muurikatteen
+  2–3 m pätkissä; välissä taustan V4_red-kujaseinä ilman friisiä (vanha vika, näkyi jo junan 214 rungolla). UUSI K/tyokalut/kuja_friisi_jatko.py:
+  taustan lod0-pystykolmiot muurikatteen friisilinjassa (n·n > 0,995, taso ±0,25 m, linjaa pitkin ≤ 20 m) → friisikaista 1,5 cm seinän eteen,
+  muurikatteen jo peittämä s-väli pois, UV0 lähimmän friisipinnan sovituksesta, UV1 barysentrisesti. yksikerros-v112 = v111 + tämä (~4 400 kolmiota;
+  kuja-0-3/1-3 ja aukio-1-1 ilman friisimateriaalia ohitettu, lod1/2 ennallaan).
+- PT 18.2x (KK): 05:n portin pielten kivijalka samoiksi isoiksi kiviksi kuin seinässä. Pinta oli p-kujaportin V4_stone (0–1,2 m), EI V4_sokkeli.
+  UUSI K/tyokalut/portti_kivijalka.py KORKEUS=1.8: V4_stone → V4_kujakivi_sokkeli (pysty, u 0,5·s, v 1−0,57·y) / _yla (vaaka), materiaalit ja kuvat
+  taustan ruudusta, yläpinta 1,2 → 1,8 m (4 kivikertaa kuten muurissa); lod0+lod1. rakennukset-v129 = v128 + tämä.
+- Parit (pelikamera REF de0aeca40): v138m -180507, v139m (friisi) -180714, v140m (friisi + kivijalka) -180933; H/juuri-v139m, juuri-v140m.
+- v69 = K/tyokalut/paketti_v69.py: _valmiit/juoksupeli-kk-lavastaja-v69-vienti-20261029 = v68 + tausta-v69 (yksikerros-v112) + rakennukset-v53 (v129);
+  299 tiedostoa, SHA256SUMS OK (d609a102…). PT:lle ja PK:lle (05-pari) ilmoitettu. EI ämpäriin/junaan ennen omistajan korttia.
+- SEURAAVAKSI: PK:n 05-pari v69 → PT; avoimet työt lisäyksen 81 alta (EROLISTA: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
