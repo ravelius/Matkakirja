@@ -10631,7 +10631,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MKD: {
     Eastern: {
       lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
-      pitka: "Berovon tekojärvi lepää 990 metrin korkeudessa metsäisten rinteiden keskellä. Se on 75 hehtaarin kokoinen ja 2,5 kilometriä pitkä, ja paikalliset uivat, soutavat ja kalastavat siinä kesäisin. Štipin kaupunki kohoaa Isar-kukkulan linnoituksen juurella, ja kivinen Bezisten, entinen katettu basaari, toimii nykyään taidegalleriana. Štip on maan tekstiili- ja muotiteollisuuden keskus, ja kaupungissa järjestetään Kulttuurikesä-tapahtumasarjaa vuodesta 1987.",
+      pitka: `Itäinen alue on Pohjois-Makedonian itäosassa Bulgarian rajalla. Alueella on yksitoista kuntaa, ja asukkaita on noin 150 000. Väkiluku on laskenut vuodesta 2002. Suurin kaupunki Štip on maan tekstiilituotannon keskus. Štipissä Isar-kukkulalla on vanhan linnan rauniot. Štipissä on myös Goce Delčevin yliopisto. Kočanin kaupungissa asuu noin 25 000 ihmistä. Kočanin lähistön laaksossa viljellään riisiä. Berovon kaupungin lähellä on Berovon tekojärvi, jonka ympärillä on havu- ja lehtimetsää. Järvellä uidaan, kalastetaan ja soudetaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
@@ -10654,7 +10654,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Southeastern: {
       lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
-      pitka: "Dojranjärvi on pieni ja matala: pinta-alaa 43,1 neliökilometriä, pituutta noin 9 kilometriä ja syvyyttä enimmillään kymmenen metriä. Rannat jaetaan Kreikan kanssa, ja Pohjois-Makedonian osuus on 27,3 neliökilometriä. Ruovikot ovat tärkeä lintualue, jolla pesivät esimerkiksi kiharapelikaanit. Belasican vuoren rinteellä Novo Selon Smolare-vesiputous putoaa 39,5 metriä satavuotiaiden pyökkien keskellä, ja sinne pääsee noin 300 kiviportaan kautta. Valandovon lähellä Marvincin Isar-kukkulalla on kaivettu esiin yli 200 hautaa pronssikaudelta myöhäisantiikkiin, ja Strumican liepeillä Banskossa seisovat 300–400-luvun roomalaiskylpylän kivimuurit.",
+      pitka: `Kaakkoinen alue on Pohjois-Makedonian kaakkoiskulmassa Kreikan ja Bulgarian rajalla. Alueella on kymmenen kuntaa, ja asukkaita on noin 150 000. Strumican kaupunki sijaitsee Strumican tasangolla noin 15 kilometrin päässä Kreikan rajasta. Gevgelijan kaupunki Vardar-joen rannalla on maan päärajanylityspaikka Kreikkaan. Gevgelijassa asuu noin 15 000 ihmistä. Kasinojensa vuoksi Gevgelijaa kutsutaan Balkanin Las Vegasiksi. Dojranjärvi on noin 43 neliökilometrin järvi, jonka jakavat Pohjois-Makedonia ja Kreikka. Järven syvyys on enimmillään vain kymmenen metriä. Radovišin kaupungin lähellä on Bučimin kuparikaivos.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
@@ -10677,7 +10677,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Northeastern: {
       lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
-      pitka: "Kumanovo on maan toiseksi suurin kaupunki, vuoden 2021 väestölaskennan mukaan 75 051 asukasta. Noin 30 kilometrin päässä koilliseen, Tatićev Kamenin harjanteella 1 010–1 030 metrin korkeudessa, on Kokino. Arkeologi Jovica Stankovski löysi paikan vuonna 2001, ja sen vanhimmat löydöt ovat 1800-luvulta eaa. Kivi-istuimet ja merkkikivet on tulkittu muinaiseksi observatorioksi, joka seurasi Auringon ja Kuun paikkoja horisontissa, mutta tulkinta on tutkijoiden kesken kiistanalainen. Kratovon lähellä Kriva-joen laaksossa puolestaan kohoaa kivipilareiden metsä, ja Osogovon vuorilla Kriva Palankan lähellä on luostari lähellä Bulgarian rajaa.",
+      pitka: `Koillinen alue on Pohjois-Makedonian koillisosassa Serbian, Kosovon ja Bulgarian rajojen tuntumassa. Alueella on kuusi kuntaa, ja asukkaita on noin 150 000. Kumanovo on maan toiseksi suurin kaupunki asukasluvulla mitattuna, ja asukkaita on noin 75 000. Kumanovon taistelu käytiin vuonna 1912 ensimmäisessä Balkanin sodassa. Staro Nagoričanenin kunnassa on Kokinon pronssikautinen kohde noin tuhannen metrin korkeudessa merenpinnasta. Kohdetta on pidetty muinaisena observatoriona, mutta tulkinta on kiistanalainen. Kratovon kaupunki on sammuneen tulivuoren kraatterissa, ja asukkaita on noin 5 800. Kratovossa on säilyneitä keskiaikaisia kivitorneja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
@@ -10700,7 +10700,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Southwestern: {
       lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
-      pitka: "Ohridinjärvi on 36 kilometriä pitkä, 358 neliökilometrin kokoinen ja enimmillään 288 metriä syvä. Noin puolet sen vedestä tihkuu itärannan maanalaisista lähteistä, ja yli viidennes tulee Prespanjärveltä, joka on 150 metriä ylempänä. Alue on kuulunut Unescon maailmanperintöluetteloon vuodesta 1979. Peštanin rannalla Luiden lahdella (Bay of Bones) on rakennettu kopio pronssikauden paalukylästä, jonka arkeologit ajoittavat vuosiin 1200–700 eaa.; jälleenrakennus tehtiin 2007–2008. Strugassa Drim-joen sillalla päättyy joka vuosi Strugan runousillat, jotka alkoivat 1961 ja joiden Kultaisen seppeleen ovat saaneet muun muassa Pablo Neruda (1972) ja Tomas Tranströmer (2003).",
+      pitka: `Lounainen alue on Pohjois-Makedonian lounaisosassa Albanian rajalla. Alueella on yhdeksän kuntaa, ja asukkaita on noin 180 000. Alueella on Ohridinjärvi, jonka Pohjois-Makedonia jakaa Albanian kanssa. Järven pinta-ala on 358 neliökilometriä. Järvi on Balkanin syvin, suurimmillaan 288 metriä, ja siinä elää yli 200 lajia, joita ei tavata muualla. Ohridin kaupunki ja järvi muodostavat Unescon maailmanperintökohteen. Ohridissa asuu noin 39 000 ihmistä. Ohridissa Klemens Ohridilainen perusti kirjallisuuskoulun vuonna 886. Strugan kaupungissa Musta Drin -joki lähtee Ohridinjärvestä, ja kaupungissa pidetään joka elokuu kansainvälinen runofestivaali Strugan runoillat.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
@@ -10723,7 +10723,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pelagonia: {
       lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
-      pitka: "Bitola, jossa on vuoden 2021 väestölaskennan mukaan 69 287 asukasta, tunnettiin osmanien aikana konsulien kaupunkina, ja yhä kaupungissa on konsulaatteja. Pitkän Širok Sokakin kävelykadun kahvilat täyttyvät iltaisin. Kaupungin takana kohoaa Pelisterin kansallispuisto, joka oli Jugoslavian ensimmäinen, perustettu 30.11.1948; sen pinta-ala on 171,5 neliökilometriä ja huippu 2 601 metriä. Puiston rinteillä kasvaa molika-mäntyä, jonka metsät ulottuvat 1 200–1 600 metrin korkeuteen. Prilepissä Markovi Kulin linnoituksen rauniot ovat 120–180-metrisellä kukkulalla, ja sen muurit rakennettiin 1200–1300-luvuilla.",
+      pitka: `Pelagonian alue on Pohjois-Makedonian eteläosassa Kreikan rajalla, ja alueella asuu noin 210 000 ihmistä. Alue on nimetty Pelagonian tasangon mukaan. Suurin kaupunki on Bitola Baba-vuoren juurella, ja kaupungissa on Saat Kula -kellotorni. Bitolan lähellä ovat antiikin Herakleia Lynkestiksen rauniot. Kaupungin perusti 300-luvulla eaa. antiikin Makedonian kuningas Filippos II. Bitolan kunnassa on Pelisterin kansallispuisto, joka perustettiin vuonna 1948. Puistossa kasvaa makedonianmänty. Prilepin kaupunki on tupakkateollisuuden keskus. Prilepin lähellä on Sivecin marmorilouhoksia, ja valkoista marmoria viedään ulkomaille. Alueelta viedään myös viljaa ja auringonkukansiemeniä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
@@ -10746,7 +10746,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Polog: {
       lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
-      pitka: "Vardar-joki alkaa Gostivarin lähellä Vrutokin lähteestä 683 metrin korkeudesta ja virtaa Egeanmereen asti 388 kilometrin matkan. Tetovossa Šarena-moskeija on rakennettu 1438 kahden sisaruksen lahjoituksena ja saanut nykyisen kirjavan ilmeensä 1833, kun Abdurrahman-pasha laajensi sen; seiniä koristavat kukkakuviot ja maisemat. Kaupungin yläpuolella Šar-vuorilla on Popova Šapkan hiihtokeskus. Mavrovon kansallispuisto perustettiin 1949 ja on maan suurin; puiston Korab-vuori, 2 764 metriä, on Pohjois-Makedonian korkein huippu. Radikan rotko on yli 25 kilometriä pitkä ja sen jyrkänteet ovat yli 300 metriä korkeita.",
+      pitka: `Pologin alue on Pohjois-Makedonian luoteisosassa Albanian ja Kosovon rajalla, ja alueella asuu noin 250 000 ihmistä. Asukkaista noin 69 prosenttia on albaaneja. Väkiluku on laskenut vuodesta 2002. Suurin kaupunki Tetovo on Šarvuorten juurella, ja sen vanhassakaupungissa on Maalattu moskeija. Tetovossa on kaksi yliopistoa, ja lähellä on Popova Šapkan hiihtokeskus. Gostivarin kaupungin lähellä Vrutokin kylässä saa alkunsa Vardar-joki, joka virtaa Skopjen kautta Egeanmerelle. Joen pituus on 388 kilometriä. Gostivarin lounaispuolella on Mavrovon kansallispuisto, joka perustettiin vuonna 1949.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
@@ -10769,7 +10769,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Skopje: {
       lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
-      pitka: "Skopje syntyi uudelleen 26. heinäkuuta 1963 kello 5.17 tapahtuneen maanjäristyksen jälkeen: noin tuhat ihmistä kuoli, ja 75–80 prosenttia kaupungista tuhoutui. Vanhan rautatieaseman kello pysähtyi silloin, ja asemasta tuli kaupunginmuseo ja muistomerkki. Japanilainen Kenzo Tange voitti 60 prosenttia kansainvälisen kilpailun palkinnosta ja laati vuonna 1965 keskustan yleissuunnitelman. Kaupungin nykytaiteen museo perustettiin helmikuussa 1964 lahjoitusten varaan, ja sen puolalaisten suunnittelema talo avattiin 1970. Vanhan basaarin kupeessa kulkee Vardarin yli kivisilta, joka on 214 metriä pitkä ja 12 kaarta; sen rakennutti Mehmed II 1451–1469. Lähellä on Daut-pashan hamam, jonka 13 kupolin alla on vuodesta 1948 toiminut taidegalleria.",
+      pitka: `Skopjen alue on Pohjois-Makedonian pohjoisosassa, ja asukkaita on noin 610 000 eli noin kolmannes koko maan väestöstä. Alueen keskus on maan pääkaupunki Skopje, jossa on noin 530 000 asukasta. Kaupunki on Vardar-joen varrella. Heinäkuussa 1963 voimakas maanjäristys tuhosi suurimman osan kaupungista ja tappoi noin tuhat ihmistä. Kaupungissa on silti säilynyt vanhoja rakennuksia. Kalen linnoitus on peräisin 500-luvulta, Kivisilta 1400-luvulta ja Vanha basaari ottomaanien ajalta. Alueella on seitsemäntoista kuntaa, joista kymmenen muodostaa Skopjen kaupungin. Skopjen kaupungin länsipuolella on Matkan kanjoni, jossa on 1300-luvulla rakennettu luostari ja tekojärvi.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-maakunta2-skopje-e46fcbe7.jpg',
@@ -10792,7 +10792,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vardar: {
       lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
-      pitka: "Tikveš on Pohjois-Makedonian suurin viinialue, ja sen viinitarhat, noin 11 000 hehtaaria, ulottuvat Kavadarcin ja Negotinon ympäristössä 110 metristä 800 metrin korkeuteen. Rypäleistä tunnetuin on tumma Vranec. Demir Kapijan rotkossa, jonka nimi tarkoittaa turkiksi Rautaporttia, Vardar puskee kalkkikivikallioiden läpi; antiikissa paikka tunnettiin nimellä Stenae, ja siellä on noin 3 000 vuotta vanhoja paionialaisia linnoituksia. Velesissä, jossa asuu vuoden 2021 väestölaskennassa 40 664 ihmistä, Vardar halkoo kaupunkia, ja sieltä on kotoisin runoilija Kočo Racin.",
+      pitka: `Vardarin alue on Pohjois-Makedonian keskiosassa Kreikan rajalla. Alueella asuu noin 140 000 ihmistä, eli vähiten kaikista maan kahdeksasta alueesta. Alue on saanut nimensä Vardar-joesta, joka halkoo sitä. Veles on joen varrella ja alueen suurin kaupunki, jossa on noin 41 000 asukasta. Alueella on yhdeksän kuntaa. Kavadarcin ja Negotinon kaupunkien ympärillä on Tikvešin viinialue, jossa kasvatetaan esimerkiksi vranec-rypälettä. Gradskon kylän lähellä ovat antiikin Stobin kaupungin rauniot. Ne ovat paikassa, jossa Crna-joki yhtyy Vardar-jokeen. Rooman valtakunnan aikana Stobi oli Macedonia Salutaris -provinssin pääkaupunki.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
