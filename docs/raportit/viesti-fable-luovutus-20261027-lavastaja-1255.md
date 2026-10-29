@@ -1110,3 +1110,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (pari-v138); 299 tiedostoa, SHA256SUMS OK (677bca43…), koko ~1,0 Gt (+~30 Mt). PT:lle ja PK:lle ilmoitettu. EI ämpäriin ennen omistajan korttia.
 - SEURAAVAAN JUNAAN (PT, ei este): 02:n vasemman seinän räystään alta pistää sinivihreä kannatinpala (havainne-peli x≈1720–1810, y≈145–185).
 - SEURAAVAKSI: PK:n sovitettu 05-pari v70 → PT/KK; sitten 02:n kannatinpala; EROLISTA (lisäys 81).
+
+## LISÄYS 87 klo 18.3x (29.10.): LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- PT kuittasi v70 (05 ei pikkutiiltä, päätyseinä ja vino pinta isoa kiveä); JU vie ämpäriin.
+- JU hylkäsi v70:n ensin: kielletty-rakennukset-v53/p-kujaportti-3-lod0.glb.tuplavahennys (vanha varmuuskopio, periytyy K/rakennukset-v12x-kansioista).
+  Poistettu paketista + SHA256SUMS:sta → 298 tiedostoa, tiiviste a64166c9…; JU:lle lähetetty. SEURAAVAA PAKETTIA VARTEN: poista
+  *.tuplavahennys (ja muut ei-pelitiedostot) uudesta paketista ennen SHA256SUMS:ia (paketti_v70.py ei sitä vielä tee).
+- Kesken / seuraavaksi: (1) JU:n vienti v70 (odota kuittaus); (2) seuraava juna: 02:n vasemman seinän räystään alta pistävä sinivihreä
+  kannatinpala (havainne-peli x≈1720–1810, y≈145–185; todennäköisesti taustan tai muurikatteen V4_konsoli); (3) EROLISTA (lisäys 81).
+- Työkalut tältä erää (K/tyokalut): kuja_friisi_jatko.py, portti_kivijalka.py (VANHA, YMIN, KORKEUS, PIENENNA), paketti_v69.py, paketti_v70.py.
+  Uusimmat: yksikerros-v113, muurikate-v20/pari-v138, rakennukset-v129, H/juuri-v141m; paria varten editori-lr.sh 02 05 PELIKAMERA=1 REF=de0aeca40.
