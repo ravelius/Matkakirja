@@ -4,7 +4,7 @@ Edellinen luovutus -20261029-2230 (733a92a2e). Muisti: pelikoodari-tila-20261018
 Natiivirepon haara pelikoodari/salikamera-215 (worktree /Users/Shared/Claude/wt/proto-pelikoodari-pk7-214, puhdas, pää b20ecd450;
 peili natiivi-backup peili/proto/pelikoodari/salikamera-215). Tällä vuorolla b7ef7f924:n päälle:
 617655e48 salikartta ilman katto-/palkistokappaleita, 3ed913184 kameratesti, 69b7233f4 A3/A5-pintasallinta, 72547c31d katon lapset kattoon,
-1047596ee + b20ecd450 pintalista (V4_paaharja, V4_keskiovi, V4_nimitaulu, V4_jalusta_lohkokivi; PT 23.3x).
+1047596ee + b20ecd450 pintalista (V4_paaharja, V4_keskiovi, V4_nimitaulu, V4_jalusta_lohkokivi; PT 23.3x) = PT:n kohta 1 TEHTY.
 
 ## ENSIMMÄISENÄ: SALIN SISÄKAMERA, PT:n palaute 04-pariin (PT 23.4x, "ei vielä KK:lle")
 Tila: kulma 72° → 41° (= peruskulma), salikartta puhdas (loki "salissa 0.0", "salikartta … 42 katto-/palkistokappaletta pois").
@@ -20,7 +20,8 @@ PT:n kaksi korjausta, sitten uusi 04-pari PT:lle:
    ~1531 (avoinSali), JuoksuSokkeloMaailma.Palatsi.cs LisaaAvoimenKatto/LisaaPalatsinKatto, KattoHaivytys.
 2. Keisari 0,21 → ~0,12: kamera kauemmas/ylemmäs keisarin taakse (nyt PeliEtäisyys 3,7 m, korkeus 2,4 m), käytävä päätyoveen ja
    kaksi pylväsriviä kuvaan; pysyttävä katon alapinnan (juhlasali ~5,1 m) ja palkiston (4,3 m, x ±2,7) alla keskikäytävällä.
-Piiloruudut mitattu: botti juhlasalin läpi (skenaario _tyo/pelikoodari/kuja05-pk6-20261029/sk-salibotti-1.txt ja -0.txt, ajaja
+Valmis pari (PT 29.10. 23.5x) → KK:lle ja PT:lle.
+Piiloruudut mitattu (PT: "0 hyvä"): botti juhlasalin läpi (skenaario _tyo/pelikoodari/kuja05-pk6-20261029/sk-salibotti-1.txt ja -0.txt, ajaja
 aja-salibotti.zsh): sisäkamera päällä piilossa 0, kattoja sisällä 0 (kulma 41–45°); pois 0/0 (72°). Lokit esikatselu-20261029-233122/-235203.
 Toista mittaus korjausten jälkeen; oletus päälle vasta kun PT on kuitannut parin.
 
@@ -29,9 +30,9 @@ Toista mittaus korjausten jälkeen; oletus päälle vasta kun PT on kuitannut pa
 - v81-juuri valmis: _tyo/pelikoodari/kuja05-pk6-20261029/juuri-pk7-v81 (SHA OK). Haaran osoittimet yhä v76 (rakennukset-v61, ulkorengas-v6,
   c1-v6, c2-v10) → vaihda v81:een (rakennukset-v67, ulkorengas-v7, c1-v7, c2-v12), kun sisäkamera on kuitattu. Kaidekansio
   (OsasarjaKaiteetKansio = kielletty-halli-kaiteet-v2/) on NUI:n haarassa natiivi-ui/halli-215, ei tässä.
-- PT 23.4x: LR palauttaa v83:ssa f-taihemenin reunamuurit (03/03b) törmäyksineen → leivo esto uudelleen, kun v83 on ämpärissä.
+- ESTO UUDELLEEN (PT 23.4x ja 23.5x): LR:n v83 (f-taihemenin reunamuurit 03/03b törmäyksineen) on NYT ämpärissä → leivo esto v83:sta.
 - Codex-portti tehty 23.5x: a2-middle6-v1, a2-last3-v1 (A2 12/12), a4-v1 (A4 kannatinryhmät), a1-v1 (chiwen kahvalla) →
-  _tyo/pelikoodari/codex-osat-215/ (zip-SHA = T7, SHA256SUMS 0 vikaa, codex-3d-tarkistus KAIKKI OK); LR:lle ilmoitettu (jonossa).
+  _tyo/pelikoodari/codex-osat-215/ (zip-SHA = T7, SHA256SUMS 0 vikaa, codex-3d-tarkistus KAIKKI OK); LR:lle ilmoitettu (jonossa). A6 odottaa Codexin 7-välistä versiota (PT: 9-välistä ei peliin).
 - 22.28:n taustan 04+06-ajo ei koskaan valmistunut (jäi jonoon, prosessi katosi nollauksessa) → ajettiin uudelleen 22.47.
 
 ## Avoinna (ennallaan edellisestä)
