@@ -959,3 +959,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   ~520 m², josta nousevat paviljongin punaiset pilarit). Pinta oli V4_marmori → peli näytti tasaisen harmaana.
 - Korjaus on jo tehty: tportti_lattia.py (lisäys 68, rakennukset-v123+) muutti terassin V4_lattiaksi (kivilaatta); mukana rakennukset-v126:ssa
   → v66. Ei uutta kantta. Tarkistus: PK:n seuraava drone v66:lla samasta kohdasta (terassin pitää näkyä kivilaattana).
+
+## LISÄYS 76 klo 14.4x (29.10.): KK OK 05 (v126), PARIT 02 + 05 PK:N kivikoko-214:LLÄ — JUMI: KAMERA VÄÄRÄSSÄ PAIKASSA
+- KK 14.1x: kuja 05 v126 KELPAA muodon osalta (friisi 0,19 ≈ 0,17, yhtenäinen). Portin läpi näkyvä kapea käytävä ei ole palautetta (v64-linjaus).
+- PK: REF pelikoodari/kivikoko-214 = 9c0477cb6 (vihreä; laatat 0,6 m rivit 0,67–1,33 m, kivijalka 7,6 cm × 0,26–0,38 m, ReunusRaja 1,4/0,4).
+  Reunakiven geometria on jo 1,4/0,4 (aja_ketju_v85r.zsh 28.10. → v93 … v108), uutta taustaa ei tarvita (kerrottu PK:lle).
+- juna-214 lataa eri nimet: tausta-v65, rakennukset-v49, muurikate-v20/kk-muurikate-v20-pohja.glb → UUSI juuri-v134p = v134m + nämä nimet
+  (v65 → yksikerros-v108, v49 → rakennukset-v126, v20 → muurikate-v19/pari-v134-v20-nimella). Ajo: REF=9c0477cb6 J=v134p KOHDAT="02 05"
+  zsh K/tyokalut/aja_v132_pari.zsh.
+- JUMI (PK:lle 14.4x): 9c0477cb6:llä esikatselun kamera osuu väärään paikkaan (kohta 05 → (-144,0; 3,4; -233,7), 46c0add3c:llä
+  (239,7; 2,4; -786,0)) → parit -141358, -142519 (ja -141931, -143323) käyttökelvottomia. Odota PK:n korjausta tai kohtakehystä, aja uudelleen → PT.
