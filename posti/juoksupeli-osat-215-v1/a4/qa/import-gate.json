@@ -1,0 +1,266 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/partial-a4-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "dougong-column.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "dougong-column.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4332,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.589,
+       0,
+       -0.51
+      ],
+      "max": [
+       0.611,
+       0.8,
+       0.312
+      ],
+      "koko": [
+       1.2,
+       0.8,
+       0.823
+      ]
+     }
+    },
+    "polku": "3d/dougong-column.glb"
+   },
+   {
+    "nimi": "dougong-corner.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "dougong-corner.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4524,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.829,
+       0,
+       -0.828
+      ],
+      "max": [
+       0.77,
+       0.8,
+       0.344
+      ],
+      "koko": [
+       1.599,
+       0.8,
+       1.172
+      ]
+     }
+    },
+    "polku": "3d/dougong-corner.glb"
+   },
+   {
+    "nimi": "dougong-intercolumn.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "dougong-intercolumn.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4459,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.569,
+       0,
+       -0.265
+      ],
+      "max": [
+       0.626,
+       0.8,
+       0.204
+      ],
+      "koko": [
+       1.195,
+       0.8,
+       0.469
+      ]
+     }
+    },
+    "polku": "3d/dougong-intercolumn.glb"
+   },
+   {
+    "nimi": "dougong-column-nelja-suuntaa.png",
+    "polku": "esikatselu/dougong-column-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "dougong-corner-nelja-suuntaa.png",
+    "polku": "esikatselu/dougong-corner-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "dougong-intercolumn-nelja-suuntaa.png",
+    "polku": "esikatselu/dougong-intercolumn-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/dougong-column/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/dougong-column/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/dougong-column/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/dougong-corner/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/dougong-corner/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/dougong-corner/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/dougong-intercolumn/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/dougong-intercolumn/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/dougong-intercolumn/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: dougong-column.glb ei liikettä, dougong-corner.glb ei liikettä, dougong-intercolumn.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]

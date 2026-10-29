@@ -1,0 +1,78 @@
+{
+  "name": "dougong-column",
+  "path": "3d/dougong-column.glb",
+  "sha256": "29224147f379f64a49d0bbd6d6b4513a1d5f5a60bcc694747dbfb3494bf8dc39",
+  "bytes": 3847056,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1264-dougong-column-attempt1.glb",
+  "sourceSHA256": "5f9cadc9f766c6d2c2514b7eef4aa9f8425a6fee28c82d45bc508fb2cd62531e",
+  "triangles": 4332,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    1.2,
+    0.800000011920929,
+    0.8225502967834473
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 1.3337947130203247,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/dougong-column/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "e0775540ba1c915f9b04662057a78c0d0478aaf1201161ba03ec234834340f37",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/dougong-column/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5df56ad0f9864a9f1c80f03e97c4540a2ed51eade5f540bab07096826d83797b",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/dougong-column/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "4d1d8a74ba5200246cc15b55a4bb7e0836805168976f0ec067cf72ee98a342f1",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsInverseTransposeVerified": true,
+  "widthFitFactor": 0.9190123050129905,
+  "yawAppliedDegrees": 0.0,
+  "orientationQA": "PASS_EAVE_FRONT_PLUS_Z",
+  "peakRSSMiB": 135.875,
+  "elapsedSeconds": 1.1802214580820873,
+  "visualReviewAt": "2026-10-29T21:09:37.793276+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Pylväsryhmän leveä tuki ja syvempi runko näkyvät ehjinä. Korkeus0.8m, leveys1.2m: yhtenäisen skaalan jälkeen X-leveyskerroin0.9190, normaalit käänteistransponoidulla matriisilla tarkistettu. Sisäisten rakoliitosten museoeksaktiutta ei väitetä.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ]
+}

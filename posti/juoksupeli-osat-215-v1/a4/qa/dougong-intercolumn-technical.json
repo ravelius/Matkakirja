@@ -1,0 +1,77 @@
+{
+  "name": "dougong-intercolumn",
+  "path": "3d/dougong-intercolumn.glb",
+  "sha256": "71a96d2e30150946603e9167c03d20ca8abe6716631575a2a2326bff412182c5",
+  "bytes": 3401320,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1263-dougong-intercolumn-attempt1.glb",
+  "sourceSHA256": "ddc5e2ada2d4815a30c9840e72b08fd57940087ade5de64318f4bd89ebbfd552",
+  "triangles": 4459,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    1.1951809525489807,
+    0.800000011920929,
+    0.4686794728040695
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 1.2194446325302124,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/dougong-intercolumn/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "76fa79253c67bd2f3dc76f0cfff92014eb73268d468b52178fac503da25d06ed",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/dougong-intercolumn/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "647fa4c4ecae41219f0fdde89e4b62134576c2f3c7cec9b6320a64f00e4e5a3e",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/dougong-intercolumn/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "dddbd392502b34b8bac62d995a8415d57659e955018537dcc0231ceb1eaf7df6",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": 0.0,
+  "orientationQA": "PASS_EAVE_FRONT_PLUS_Z",
+  "peakRSSMiB": 126.671875,
+  "elapsedSeconds": 0.9776292500318959,
+  "visualReviewAt": "2026-10-29T21:05:53.542312+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Maalattu puu, avoimet välit ja ehjät tukivarret näkyvät neljässä suunnassa. Kompakti pelitulkinta, ei mitattu historiallinen liitos. Skaala0.8m korkea pitää leveyden1.195m tilaussisällä. Räystään sovitus ja valaistus peliparissa.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ]
+}

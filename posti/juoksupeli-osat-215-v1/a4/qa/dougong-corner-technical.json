@@ -1,0 +1,78 @@
+{
+  "name": "dougong-corner",
+  "path": "3d/dougong-corner.glb",
+  "sha256": "e464feff7cabdfaacac3a41b0d1a22539d8bef4867ef6c07e71318d950d6e6a7",
+  "bytes": 3654492,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1265-dougong-corner-attempt1.glb",
+  "sourceSHA256": "ea65a5a92e0b3e652f5c8b23d65c46359fe94459523445e274372820c3b02e0c",
+  "triangles": 4524,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    1.5987017717113612,
+    0.800000011920929,
+    1.172137943351696
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 1.3532806634902954,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/dougong-corner/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "2c7a6c06877a276b8ddcb0c393726d5743053639dec34b2177373beed7eec3e5",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/dougong-corner/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "ecbddaef12f5aef200e70d20a4fa3066a6039fd863dac6064226175ee2a40a2a",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/dougong-corner/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "aa7556fa5da9f75c18ac545c41c373e66a63b666e8359368462dc947ba4b3b82",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": 45.0,
+  "orientationQA": "PASS_EXTERNAL_CORNER_BISECTOR_PLUS_Z",
+  "peakRSSMiB": 127.546875,
+  "elapsedSeconds": 1.0470599590335041,
+  "visualReviewAt": "2026-10-29T21:12:11.491288+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Kulman kaksi ulkopintaa ja vinottainen nokka näkyvät +Z-suunnasta. Korkeus0.8m. Kulman diagonaalinen kokonaisleveys1.599m; seinäsuuntaiset ulottuvuudet noin1.32x1.18m. Yläpuoliset palkit sovitettava lavastuksessa; kulma on suoraa1.2m moduulia leveämpi. Ei näkyviä irtopaloja, liitosrekonstruktion tarkkuutta ei väitetä.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ],
+  "cornerEnvelopeNote": "Overall span1.599m after diagonal orientation; wall-axis extents1.32x1.18m atheight0.8m. Larger than straight module; receiver must fit eave spacing."
+}

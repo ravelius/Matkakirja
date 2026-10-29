@@ -1,0 +1,392 @@
+{
+  "createdAt": "2026-10-29T21:13:17.498757+00:00",
+  "order": "A4:n kolme räystäskannatinta #1263–1265",
+  "status": "TECHNICAL_READY_RECEIVER_PENDING",
+  "assets": [
+    {
+      "name": "dougong-intercolumn",
+      "path": "3d/dougong-intercolumn.glb",
+      "sha256": "71a96d2e30150946603e9167c03d20ca8abe6716631575a2a2326bff412182c5",
+      "bytes": 3401320,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1263-dougong-intercolumn-attempt1.glb",
+      "sourceSHA256": "ddc5e2ada2d4815a30c9840e72b08fd57940087ade5de64318f4bd89ebbfd552",
+      "triangles": 4459,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        1.1951809525489807,
+        0.800000011920929,
+        0.4686794728040695
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 1.2194446325302124,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/dougong-intercolumn/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "76fa79253c67bd2f3dc76f0cfff92014eb73268d468b52178fac503da25d06ed",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/dougong-intercolumn/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "647fa4c4ecae41219f0fdde89e4b62134576c2f3c7cec9b6320a64f00e4e5a3e",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/dougong-intercolumn/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "dddbd392502b34b8bac62d995a8415d57659e955018537dcc0231ceb1eaf7df6",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": 0.0,
+      "orientationQA": "PASS_EAVE_FRONT_PLUS_Z",
+      "peakRSSMiB": 126.671875,
+      "elapsedSeconds": 0.9776292500318959,
+      "visualReviewAt": "2026-10-29T21:05:53.542312+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Maalattu puu, avoimet välit ja ehjät tukivarret näkyvät neljässä suunnassa. Kompakti pelitulkinta, ei mitattu historiallinen liitos. Skaala0.8m korkea pitää leveyden1.195m tilaussisällä. Räystään sovitus ja valaistus peliparissa.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "task": 1263,
+      "jobId": "71c4a25b-5cd1-4f15-81ad-a2cc284ec7a5",
+      "url": "https://studio.tripo3d.ai/workspace/generate/71c4a25b-5cd1-4f15-81ad-a2cc284ec7a5",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/dougong-intercolumn-reference01.png",
+      "referenceSHA256": "ec024318d81314adde33b9ec233f3dfc581eb3b405cc1047bece3034d61045d3"
+    },
+    {
+      "name": "dougong-column",
+      "path": "3d/dougong-column.glb",
+      "sha256": "29224147f379f64a49d0bbd6d6b4513a1d5f5a60bcc694747dbfb3494bf8dc39",
+      "bytes": 3847056,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1264-dougong-column-attempt1.glb",
+      "sourceSHA256": "5f9cadc9f766c6d2c2514b7eef4aa9f8425a6fee28c82d45bc508fb2cd62531e",
+      "triangles": 4332,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        1.2,
+        0.800000011920929,
+        0.8225502967834473
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 1.3337947130203247,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/dougong-column/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "e0775540ba1c915f9b04662057a78c0d0478aaf1201161ba03ec234834340f37",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/dougong-column/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "5df56ad0f9864a9f1c80f03e97c4540a2ed51eade5f540bab07096826d83797b",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/dougong-column/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "4d1d8a74ba5200246cc15b55a4bb7e0836805168976f0ec067cf72ee98a342f1",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsInverseTransposeVerified": true,
+      "widthFitFactor": 0.9190123050129905,
+      "yawAppliedDegrees": 0.0,
+      "orientationQA": "PASS_EAVE_FRONT_PLUS_Z",
+      "peakRSSMiB": 135.875,
+      "elapsedSeconds": 1.1802214580820873,
+      "visualReviewAt": "2026-10-29T21:09:37.793276+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Pylväsryhmän leveä tuki ja syvempi runko näkyvät ehjinä. Korkeus0.8m, leveys1.2m: yhtenäisen skaalan jälkeen X-leveyskerroin0.9190, normaalit käänteistransponoidulla matriisilla tarkistettu. Sisäisten rakoliitosten museoeksaktiutta ei väitetä.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "task": 1264,
+      "jobId": "ec62e0cf-7a7d-48cc-9e09-2b8b3910fc35",
+      "url": "https://studio.tripo3d.ai/workspace/generate/ec62e0cf-7a7d-48cc-9e09-2b8b3910fc35",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/dougong-column-reference01.png",
+      "referenceSHA256": "7c869412c1cb306fc2e74298150e945c5b41821f5860d4a1b335ba96cfdeba3c"
+    },
+    {
+      "name": "dougong-corner",
+      "path": "3d/dougong-corner.glb",
+      "sha256": "e464feff7cabdfaacac3a41b0d1a22539d8bef4867ef6c07e71318d950d6e6a7",
+      "bytes": 3654492,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1265-dougong-corner-attempt1.glb",
+      "sourceSHA256": "ea65a5a92e0b3e652f5c8b23d65c46359fe94459523445e274372820c3b02e0c",
+      "triangles": 4524,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        1.5987017717113612,
+        0.800000011920929,
+        1.172137943351696
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 1.3532806634902954,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/dougong-corner/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "2c7a6c06877a276b8ddcb0c393726d5743053639dec34b2177373beed7eec3e5",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/dougong-corner/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "ecbddaef12f5aef200e70d20a4fa3066a6039fd863dac6064226175ee2a40a2a",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/dougong-corner/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "aa7556fa5da9f75c18ac545c41c373e66a63b666e8359368462dc947ba4b3b82",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": 45.0,
+      "orientationQA": "PASS_EXTERNAL_CORNER_BISECTOR_PLUS_Z",
+      "peakRSSMiB": 127.546875,
+      "elapsedSeconds": 1.0470599590335041,
+      "visualReviewAt": "2026-10-29T21:12:11.491288+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Kulman kaksi ulkopintaa ja vinottainen nokka näkyvät +Z-suunnasta. Korkeus0.8m. Kulman diagonaalinen kokonaisleveys1.599m; seinäsuuntaiset ulottuvuudet noin1.32x1.18m. Yläpuoliset palkit sovitettava lavastuksessa; kulma on suoraa1.2m moduulia leveämpi. Ei näkyviä irtopaloja, liitosrekonstruktion tarkkuutta ei väitetä.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "cornerEnvelopeNote": "Overall span1.599m after diagonal orientation; wall-axis extents1.32x1.18m atheight0.8m. Larger than straight module; receiver must fit eave spacing.",
+      "task": 1265,
+      "jobId": "3ff5e5c7-460d-4d63-849e-5b93de47ab37",
+      "url": "https://studio.tripo3d.ai/workspace/generate/3ff5e5c7-460d-4d63-849e-5b93de47ab37",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/dougong-corner-reference01.png",
+      "referenceSHA256": "6218d9a7ff9b15b36f4782246ccb8a6f00b8fa771c1ff2893c27700e5b9675ac"
+    }
+  ],
+  "liike": "ei liikettä",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "files": [
+    {
+      "path": "3d/dougong-column.glb",
+      "bytes": 3847056,
+      "sha256": "29224147f379f64a49d0bbd6d6b4513a1d5f5a60bcc694747dbfb3494bf8dc39",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/dougong-corner.glb",
+      "bytes": 3654492,
+      "sha256": "e464feff7cabdfaacac3a41b0d1a22539d8bef4867ef6c07e71318d950d6e6a7",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/dougong-intercolumn.glb",
+      "bytes": 3401320,
+      "sha256": "71a96d2e30150946603e9167c03d20ca8abe6716631575a2a2326bff412182c5",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "KAYTTO.md",
+      "bytes": 1107,
+      "sha256": "ee0f2aa881e9ad0fd18aaec4ba90a47a06cd95249a9e9575bee473d095746781"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 1042,
+      "sha256": "e7b0e0fcbe294c03442abc85c0b7ab15384969f2c0b58fdef4aa05b93547bd89"
+    },
+    {
+      "path": "esikatselu/dougong-column-nelja-suuntaa.png",
+      "bytes": 469748,
+      "sha256": "1401920177f7a59b80a12335c10fdfb69ba777a9da64b417113b120f55e4330c"
+    },
+    {
+      "path": "esikatselu/dougong-corner-nelja-suuntaa.png",
+      "bytes": 415353,
+      "sha256": "5109f98790b6241129ddec44c5a9dbd27299c6f6970bb9be3c3571ddd9f54c9e"
+    },
+    {
+      "path": "esikatselu/dougong-intercolumn-nelja-suuntaa.png",
+      "bytes": 431783,
+      "sha256": "0c3b1127d40f3acb2438d6bbb7079ced91784fdf519eeb2cbbb8cffc9d586e22"
+    },
+    {
+      "path": "prompts/dougong-column-reference01.txt",
+      "bytes": 2235,
+      "sha256": "67bff5e44a06a6f40acad52f53dac51c2f8b9a70cec094c995b94c83a8521ba1"
+    },
+    {
+      "path": "prompts/dougong-corner-reference01.txt",
+      "bytes": 2378,
+      "sha256": "03f4a74b41ff62b5d98dec5b5977db47c867aeb3aa311f50232c1ac6c9cfb0b5"
+    },
+    {
+      "path": "prompts/dougong-intercolumn-reference01.txt",
+      "bytes": 2251,
+      "sha256": "36a2e66535533bc211e2f670b3642f2d564af2254d1f3276dda838a93b587141"
+    },
+    {
+      "path": "qa/dougong-column-technical.json",
+      "bytes": 2460,
+      "sha256": "a37fcafec397ca0a18d320c0412706cc44b8ed0ae3d5740d89239e9f0b53153f"
+    },
+    {
+      "path": "qa/dougong-corner-technical.json",
+      "bytes": 2695,
+      "sha256": "4285b7f909a06acdb7fd152e7263b78e157736eb1ed6592131a1d5d2ffc6f146"
+    },
+    {
+      "path": "qa/dougong-intercolumn-technical.json",
+      "bytes": 2448,
+      "sha256": "419b6ffbd9ca0aef02526e94cd23315ce1bc8a495a53ab2f19665d8007b4f986"
+    },
+    {
+      "path": "qa/import-gate.json",
+      "bytes": 5147,
+      "sha256": "b5ff3d53bf74f16a21917233a7b0f8f610bfe6e47551fd8ad66a199681537e33"
+    },
+    {
+      "path": "tekstuurit/dougong-column/basecolor.jpg",
+      "bytes": 1099977,
+      "sha256": "5df56ad0f9864a9f1c80f03e97c4540a2ed51eade5f540bab07096826d83797b"
+    },
+    {
+      "path": "tekstuurit/dougong-column/metallic-roughness.jpg",
+      "bytes": 415491,
+      "sha256": "4d1d8a74ba5200246cc15b55a4bb7e0836805168976f0ec067cf72ee98a342f1"
+    },
+    {
+      "path": "tekstuurit/dougong-column/normal.png",
+      "bytes": 2187054,
+      "sha256": "e0775540ba1c915f9b04662057a78c0d0478aaf1201161ba03ec234834340f37"
+    },
+    {
+      "path": "tekstuurit/dougong-corner/basecolor.jpg",
+      "bytes": 1091793,
+      "sha256": "ecbddaef12f5aef200e70d20a4fa3066a6039fd863dac6064226175ee2a40a2a"
+    },
+    {
+      "path": "tekstuurit/dougong-corner/metallic-roughness.jpg",
+      "bytes": 401589,
+      "sha256": "aa7556fa5da9f75c18ac545c41c373e66a63b666e8359368462dc947ba4b3b82"
+    },
+    {
+      "path": "tekstuurit/dougong-corner/normal.png",
+      "bytes": 2004949,
+      "sha256": "2c7a6c06877a276b8ddcb0c393726d5743053639dec34b2177373beed7eec3e5"
+    },
+    {
+      "path": "tekstuurit/dougong-intercolumn/basecolor.jpg",
+      "bytes": 1020986,
+      "sha256": "647fa4c4ecae41219f0fdde89e4b62134576c2f3c7cec9b6320a64f00e4e5a3e"
+    },
+    {
+      "path": "tekstuurit/dougong-intercolumn/metallic-roughness.jpg",
+      "bytes": 421284,
+      "sha256": "dddbd392502b34b8bac62d995a8415d57659e955018537dcc0231ceb1eaf7df6"
+    },
+    {
+      "path": "tekstuurit/dougong-intercolumn/normal.png",
+      "bytes": 1815395,
+      "sha256": "76fa79253c67bd2f3dc76f0cfff92014eb73268d468b52178fac503da25d06ed"
+    }
+  ]
+}
