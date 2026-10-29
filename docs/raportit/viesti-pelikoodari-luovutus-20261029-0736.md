@@ -34,3 +34,12 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
 - Kuja 02 jää ennalleen (peli jo +4,9 %, tavoitteen sisällä), joten pk8:aa EI tule. pk7-214 odottaa vain LR:n v64:ää (= yksikerros-v103 t-porttiaukolla).
   Kun v64 tulee: esto v13 v64:n taustasta, ratatarkistus kuja-39:ään pk7:llä, kansiovakiot pk7-214:ään, simu ja pari KK:lle. PalatsiTiedosto pysyy pk7:nä.
 - JU ajaa itse dronen c (L1) sekä simut a (pari pk2 | pk7) ja b (drone c). Tulokset ovat kansioissa lokit/todistus-pk7b-* ja todistus-drone214c-*.
+
+## LISÄYS 07.5x: v64-ratatarkistus = VIKA (seuraava PK jatkaa tästä)
+- LR v64 (_valmiit/juoksupeli-kk-lavastaja-v64-vienti-20261029, 1bfef18a OK) + pk7 + ESTO v13 leivottu: _tyo/pelikoodari/kuja05-pk6-20261029/
+  palatsi-esto-v13/esto.bin (23 laattaa, 51 törmäysmallia, 141 451 ruutua; u-jingshan-törmäysmalli ilman meshiä ohitettu → pk7-214 0fa9bc499).
+- Tulos tulos-pk7-v64.txt (juuri-v64/ = symlinkit testin odottamilla nimillä → v49/v64/esto v13): botti portilta kujan 05 läpi ilman
+  kompastuksia/kiinniottoa, MUTTA pääkaista kulkee kujalla 40b itämuurin päällä: (−248,2; 390,5) → (−248,7; 405,7) → (−249,3; 421,0),
+  itämuuri ks-pk7/kuja05-ita (−248,68; 403,4) → (−247,05; 424,3), paksuus 0,8. Rasteri (rasteri-kuja40b.txt, sama v12:lla ja v13:lla):
+  z 405: itäreunan este x −246,5…−246 (ei −248,6:ssa), z 410: −247,5…−247 → uusi itämuuri puuttuu rasterista tai on siirtynyt itään.
+  Selvitä JuoksuPalatsiVerkko: pohjan muurien rasterointi (miksi ks-pk7-muuri ei estä), korjaa → testi → tarkistus uudelleen → PT:lle OK.
