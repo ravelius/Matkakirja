@@ -3180,3 +3180,7 @@ Kortti KK:ssa: 'Kelpaako rikottujen esineiden yhteenvedon näkymä?' → 'Kelpaa
 ## RIKOTTUJEN VIISI MUISTOKUVAA KELPAAVAT (omistaja 29.10. klo 11.52) (29.10.2026 klo 11.52)
 
 Kortti KK:ssa: 'Kelpaavatko viisi uutta muistokuvaa?' → 'Kelpaavat (suositus)' ('Kuvat peliin ja rikottujen yhteenveto junaan 214.'). Posliinimaljakko, lakkarasia, kääretaulu (Codex 767a18e17) sekä jadeastia ja kello (uusinta b64038412, ei marmorijalustan toistoa). PK vie kuvat haaraan rikotut-214, NUI tekee merge-pyynnön NS:lle junaan 214.
+
+## TILINVAIHTO PYYDETTY (omistaja 29.10. klo 12.53) (29.10.2026 klo 12.56)
+
+Omistaja KK:ssa: 'tee siirtoprompti toiselle tilille'. Vanha tili sami.reivinen@vvi.fi (org ddaee6a2), viikko 97 %, nollautuu 2.11. klo 03. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20261029.md (PT 12.55); uusi tili omistajan valitsema, rivi osoitteet.md:hen uuden PT:n toimesta.
