@@ -3212,3 +3212,13 @@ PT lähetti KK:lle kujakortin parin 172625, jossa keisari oli pelissä 1,4–1,6
 ## JUNA 214: KUJAT KELPAA (29.10.2026 klo 18.23)
 
 OMISTAJAN PÄÄTÖS klo 18.22 (kortti KK:ssa, sanatarkasti): "Kelpaavatko kujat 02 ja 05 junaan 214?" → "Kelpaa (suositus)" (selite: "Juna 214 lähtee TestFlightiin, kun vanhat harmaat tiilet on vaihdettu."). Parit havainne-editori-20261029-181331 (LR v69, PK pk7v66-214 c22908502). Ennen TF:ää LR v70: 05:n oikean seinän kivijalan yläreuna ja portin takana näkyvän seinän kivijalka isoiksi kiviksi, vino harmaa levy korjataan; PT tarkistaa parin → NS kokoaa → JU TF. Seuraavaan junaan: 02:n räystään alta pistävä kannatinpala. OPPI (periaate 2): PT ohitti 175511:n portin pielten pikkutiilen ja vasta 181331:ssä huomasi osan jäänteistä; tarkista koko kuvan kaikki kivipinnat, myös kauempana portin takana.
+
+## JUOKSUPELI: YHTEINEN OSASARJA (TEKOTAPA) (29.10.2026 klo 20.51)
+
+KK 29.10. klo 21.3x (juoksupelin ohjat) omistajan kysymysten pohjalta, sanatarkasti 20.2x: "Onko juoksupelin rakennustapa järkevä?" ja "Löytyisikö jostain apua tai valmista toteutustapaa millä
+rakentaminen olisi nopeampaa?" (tavoite 26.10. 21.11 "Pitää saada nopeammin tuloksia aikaan."). PT käynnisti operatiivisena tekotapana: 1) LR noin 12 yhteistä prefabia kiinteällä ruudukolla (seinä,
+kivijalka, reunakivi, muurikate + vihreä vyö, sisä-/ulkokulma, portin pääty, laatta-alue, kaiteen pylväs + johde, porrasreunakivi), lähtökohta kujien hyväksytyt osat; 2) PK Unity Splines -ladonta
+(com.unity.splines 2.9.x, Unity Companion License, ei osto; SplineInstantiate + SplineExtrude, staattinen niputus); 3) VS yksi jaettu Codex-pintamateriaali per pintalaji (2D-pinta 27.10. 21.51); 4)
+automaattinen sallittujen pintojen tarkistus (saa kulkea junassa, 9.1); 5) jokainen pariajo kuvaa kaikki 8 havainnekohtaa. Rajat: mitat ennallaan (20.10. 07.30), ei ACA Builderia, ei ostoja, ei
+tekoälymalleja osiin. Aukion erolista 1–5 rinnakkain. Spesi scratchpad/keskustelukanava/osasarja-juoksupeli-20261029.md; LR kirjaa tekotavan B 3d-ja-kuvat.md:hen. Raamatun linjaukseksi vasta OMISTAJAN
+PÄÄTÖS -rivillä.
