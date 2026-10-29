@@ -1434,3 +1434,6 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   685 tiedostoa, SHA256SUMS 72bb9983 (PT:lle ja JU:lle ilmoitettu). Symlinkin kautta oli ylikirjoittunut _valmiit/juoksupeli-kielletty-lahipuut-v6-vienti-20261025
   puut.json + SHA256SUMS → palautettu tavulleen (f0ffb6e2, viennin SHA256SUMS OK). OPPI: tarkista `find -type l` ennen kuin kirjoitat kopioituun kansioon
   (cp -c -R kopioi symlinkin linkkinä); paketeissa find $B -type l tyhjä ennen PT:lle lähetystä.
+- PT 00.4x (VS:n huomio): f-taihemen-lod0/-lod1:ssä sokkeli-v03-kuva kahdesti (toinen nimetön; muurit_takaisin.py:n mat_b kopioi V4_kujakivi_sokkeli-
+  kuvan V4_jalusta_lohkokivelle) → v85:ssä nimetön kopio pois: V4_jalusta_lohkokivi osoittamaan olemassa olevaan sokkeli-v03-albedo-tekstuuriin, ylim. image
+  + bufferView pois (koskee myös c2:n f-taihemen-lod0-kaiteeton.glb:tä, tarkista).
