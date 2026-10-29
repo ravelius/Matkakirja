@@ -1430,3 +1430,7 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   pystypinnat ilman V4_gold-kattoa). Tee paketti v85 (paketti_v84.py mallina) = v84 + korjattu ulkorengas(/tausta), juuri H/juuri-pk7-v84 + uusi ulkorengas,
   pari 07 REF=d0d7677dd → PT:lle (kuva + sha, ≤ 3 riviä).
 - 3) Sitten 03 kohta 4 (v166 valmis, pari uudella REF:llä), A6 (v167, PK:n pari), k7 (v165, KS) kuten LISÄYS 104.
+- 00.3x JU hylkäsi v84:n (lahipuut-v7 oli symlinkki v6-vientiin) → puut-v164/kielletty-lahipuut-v7 oikeiksi tiedostoiksi, paketti v84 rakennettu uudelleen:
+  685 tiedostoa, SHA256SUMS 72bb9983 (PT:lle ja JU:lle ilmoitettu). Symlinkin kautta oli ylikirjoittunut _valmiit/juoksupeli-kielletty-lahipuut-v6-vienti-20261025
+  puut.json + SHA256SUMS → palautettu tavulleen (f0ffb6e2, viennin SHA256SUMS OK). OPPI: tarkista `find -type l` ennen kuin kirjoitat kopioituun kansioon
+  (cp -c -R kopioi symlinkin linkkinä); paketeissa find $B -type l tyhjä ennen PT:lle lähetystä.
