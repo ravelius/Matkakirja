@@ -1239,3 +1239,23 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - 21.4x PK VASTASI (ESTE POISTUI): aja rakennukset-v136 ILMAN leivontaa; älä lisää UV1:tä eikä valo-kuvaa (peli: vertailuvalo, valo_rgbm ei
   lueta; JuoksuV4Maailma.cs:536). TÄRKEÄ: ÄLÄ aja lisaa_valo.py:tä uudelle portille (aja_c1_vanha_v54.zsh tekee sen) – valo_rgbm ilman UV1:tä
   = atlasta luetaan kohdasta (−1, −1). Tarkista lopuksi, ettei a-meridiaaniportti-lod*.glb:ssä ole valo_rgbm-kuvaa.
+
+## LISÄYS 92 klo 22.0x (29.10.): PORTTI 06 = rakennukset-v136, A3/A5 PORTTIIN, JÄÄNTEET, PAKETTI v74 — ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- PORTTI 06: K/tyokalut/aja_v149_portti06.zsh (LAHDE = KS:n vie-k4) = c1_raystaat2.py (INSET 0.15 NALAS 0.35, UUSI DZPARI=1.0) → c1_vanha_leikkaus.py
+  → palatsi_pinnat.py (VAIHEET=katto,friisi VV_FRIISI=v02 KATTO_M=1.6 VV_KATTO=v01c = v87p) → hallit_pinnat lod0 → kopioi_koristeet + tausta_koristekortti
+  → hallit_pinnat lod1/2 → portti_kivijalka ×3 (v148). EI lisaa_valo/UV1 (tarkistettu: ei valo_rgbm). REGRESSIO: KOE=1 LAHDE=rakennukset-v52 → geometria,
+  UV ja materiaalit = v135 (lod0/1/2 SAMA). Tulos K/portti06-v149 → rakennukset-v136/kielletty-rakennukset-v60 (rakennukset.json a- KS:n arvoilla).
+  kk_wumen.py ← KS:n KS06-lohko (vanha talteen portti06-v149/kk_wumen.py.ennen-ks06).
+- C1 (c1-v5, kielletty-c1-v5, juuressa nimellä kielletty-c1-v3): uusien kulmien nousu → nurkan ketjupäiden ero 0,82 m > 0,8 → c1_raystaat2.py:hyn DZPARI
+  (oletus 0,8 = ennallaan). Löytyy päälinna 2 + paviljongit 8 rengasta (756 × 1055, 40 paria). SIIPIHALLIT ILMAN C1:TÄ: niiden räystäs on avoin ketju
+  (paviljongit peittävät päädyt) → vaatii avoimen ketjun tuen; vanha reuna siivissä ehjä (leikkaus vain C1:n alta). Kuvat c1-v5/*.png. AVOIN.
+- A3/A5 (PT 21.5x): K/tyokalut/a3a5_portti.py → K/a3a5-v1/: A5 ×499 vanhojen pylväs+nuppi-parien tilalle (väli 1,47), A3 ×4 paviljonkien huipuille (z 30,86,
+  KS:n kultaisen harjapään päälle); A5:n aukko vain z 0,89–0,95 → vanhat vaakajohteet jäävät (ei osasarjan johdetta). Kuvat a3a5-v1/v1-*.png.
+  Paketti c2-v9/kielletty-c2-v8 = c2-v7 + a3/a5 glb + a3a5-sijoitukset.json + a-meridiaaniportti-lod0-kaiteeton.glb.
+- JÄÄNTEET (PK 21.4x): aja_v150_jaanteet.zsh → K/jaanteet-v150/kielletty-ulkorengas-v6, -kulmatorni-v1c, -muurikate-v27 (0 V4_stone/sokkeli, paitsi törmäys).
+- PAKETTI v74: paketti_v74.py → _valmiit/juoksupeli-kk-lavastaja-v74-vienti-20261029 (362 tiedostoa, SHA OK, SHA256SUMS ab066ec5). PK:lle ja PT:lle ilmoitettu 22.0x;
+  EI ämpäriin ennen PT:n kuittausta.
+- PARI: scratchpad pari_v78.zsh (REF=41a2eac22 MALLIT=H/juuri-pk7-v78 PELIKAMERA=1: 03 03b, sitten 06) jonossa; tulos proto-3d/lokit/havainne-editori-<aika>/.
+  Odotussilmukka ajetaan TIEDOSTOSTA (zsh pari.zsh): komentorivillä oleva "Esikatselu.Aja" saa pgrepin odottamaan itseään.
+- SEURAAVAKSI: (1) parit 03/03b/06 → PT + KS; (2) PT:n kuittaus v74; (3) siipihallien C1 (avoin ketju); (4) erolista: T-risteys, sivuhallit, 04, 07.
