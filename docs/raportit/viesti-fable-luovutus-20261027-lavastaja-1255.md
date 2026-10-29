@@ -1383,3 +1383,23 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   lokit/havainne-editori-*/03 (paketit-rivillä juuri-pk7-v83) → PT:lle; jos puuttuu, aja: cd H; REF=41a2eac22 MALLIT=file://H/juuri-pk7-v83/ PELIKAMERA=1 zsh ./editori-lr.sh 03 03b.
 - Avoimet: Codex-osat A2 12/12, A4, A1 (proto-3d/_tyo/pelikoodari/codex-osat-215/) → harjarivit PT:n luvalla; kaiteet-v3 (NUI pari 6) seuraavaan pakettiin
   PT:n kuittauksella + johde_savy.py; V4_paaharja-sävy ja V4_jalusta_lohkokivi-pinta = VS.
+
+## LISÄYS 103 klo 00.2x (30.10.): v84 VALMIS (PT:LLE), v165 = KS:n vie-k7, 03 KOHTA 4 JA A6 v2 JONOSSA — ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- Pari 03/03b v83 (havainne-editori-20261030-000236) → PT; KK HYVÄKSYI 00.05.
+- PAKETTI v84 (tyokalut/paketti_v84.py, SHA256SUMS 9effe35e) PT:lle, EI ämpäriin ennen kuittausta:
+  1) tyokalut/ulkomuuri.py + aja_v162_ulkomuuri.zsh → rakennukset-v146/kielletty-rakennukset-v70: 80 mallia v-ulkomuuri-NNN (pohja.json ulkomuuri.sivut
+     + Itäportin–kaakkoistornin pätkä, ≤ 40 m pätkät, kivijalka −2…1,2, V4_red, kansi 9,0, sakarat 10,0, tornijalustat). Taustan muuri oli 9,14 m ja
+     eteläsivut puuttuivat kokonaan. Vallihauta muurin edessä jää (PT hyväksyi), etuhauta/sillat ei.
+  2) tyokalut/piha_kiveksi.py + aja_v163_duanmen.zsh → duanmen-v163/kielletty-tausta-v74 + kielletty-ulkorengas-v8 (Duanmenin pihan maa → V4_lattia).
+  3) tyokalut/puut_tihenna.py → puut-v164/kielletty-lahipuut-v7 (PT:n linja A: saavuttamattomat pihat + saavutettavien reunat 0,8–1,5 m; maskitarkistus
+     peking/puut-maski-v46.npz, ettei puu nouse katosta).
+  Pari 07 (+06): lokit/havainne-editori-20261030-001034, juuri H/juuri-pk7-v84.
+- KS:n vie-k7 (etelän aukot korkeiksi): tyokalut/aja_v165_k7.zsh → rakennukset-v147/kielletty-rakennukset-v71 (= v146 + k7), c1-v9, c2-v16/kielletty-c2-v15,
+  a3a5-v6 (sijoitukset muuttuivat hieman). Juuri H/juuri-pk7-v85; KS ajaa 06-parin. Paketti v85 vasta PT:n/KS:n kuittauksen jälkeen.
+- SEURAAVAKSI (PT 00.1x): (1) 03 erolista kohta 4: Taihemenin porttimuurien (f-taihemen BOXIT muurit_takaisin.py:ssä, x −9,6…−6,8 ja 4,6…7,4,
+  z 20,9…42,2, korkeus 4,0; nyt V4_gold-kate 4,0–4,48 + V4_teal + friisi 3,6–4,0) päälle porttirakennuksen keltainen tiilikatto (V4_palatsi_katto) +
+  kannatinvyö; juuren reunakivi V4_kujakivi_reuna (0–0,25, ruskea) → V4_marmori. LOD0 on valoleivottu (TEXCOORD_1) → uudet osat joko omana mallina
+  rakennukset.json:iin (kuten v-ulkomuuri, ei leivontaa) tai C1-räystäinä (c1-sijoitukset). Pari 03 KK:lle + PT:lle.
+  (2) Codex A6 v2 sivupaviljonki (e6e88e541; T7 …/output/juoksupeli-osat-215-20261029/partial-a6-v2, SHA OK): Tirenge (+Z länteen) ja Hongyige
+  (peilattuna, +Z itään; tarkista winding) omaan pakettiin → PK:n samankameran pari. V1 ei peliin.
