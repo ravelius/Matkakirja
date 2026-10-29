@@ -12779,7 +12779,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BLR: {
     Brest: {
       lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
-      pitka: "Brest on Valko-Venäjän länsiportti: Bug-joen rannalla, aivan Puolan rajalla, noin 340 000 asukkaan kaupungissa junien telit vaihdetaan, koska raideleveys muuttuu 1520 millistä Euroopan 1435 milliin. Brestin linnoitus, jonka rakentaminen alkoi 1830-luvulla, on nykyään muistomerkkialue, jossa muistetaan vuoden 1941 puolustustaisteluja; sen Rohkeus-veistos on 33,5 metriä korkea. Samassa linnoituksessa allekirjoitettiin myös vuoden 1918 Brest-Litovskin rauhansopimus. Kaupungin vanhempi kerros on maan alla: Berestje-museon suojakatoksen alla on 1200-luvun puukaupungin hirsitaloja, jotka kaivettiin esiin vuosina 1968–1981. Museo avattiin 1982.",
+      pitka: `Brestin alue on Valko-Venäjän lounaisosassa, ja se rajoittuu lännessä Puolaan ja etelässä Ukrainaan. Alueen länsiosa kuuluu Belavežskaja Puštšan metsään, jonka Valko-Venäjä jakaa Puolan kanssa. Metsässä elää visenttejä. Brestin kaupungissa Bug-joen rannalla on 1800-luvulla rakennettu Brestin linnoitus, ja sen muistomerkkialue kertoo saksalaisten hyökkäyksestä kesäkuussa 1941. Pinskin kaupungissa Pripjat- ja Pina-jokien yhtymäkohdassa on jesuiittakollegio, joka rakennettiin vuosina 1635–1648. Pinsk kuuluu Polesjen suo- ja metsäseutuun.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-maakunta2-brest-v-63a4017c.jpg',
@@ -12802,7 +12802,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Gomel: {
       lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
-      pitka: "Gomelin alue on Valko-Venäjän eteläisin ja yksi suurimmista, noin 40 400 neliökilometriä, ja sen keskus Gomel on maan toiseksi suurin kaupunki, noin 500 000 asukasta. Etelässä avautuu Polesjen metsä- ja suoseutu. Polesjen radioekologinen luonnonsuojelualue perustettiin 18. heinäkuuta 1988, ja se kattaa yli 2 000 neliökilometriä, jolla liikkuvat visentit, hirvet, ruskeakarhut ja Przewalskin hevoset. Vetkan museossa Gomelin liepeillä on yli 10 000 esinettä: vanhauskoisten ikoneita, 1500-luvulta 1800-luvulle ulottuvia käsinkirjoitettuja ja painettuja kirjoja sekä alueen kansanomaisia tekstiilejä. Pripjatin rannalla Mazyrin ensimmäinen maininta on vuodelta 1155.",
+      pitka: `Homelin alue on Valko-Venäjän kaakkoisosassa, ja se rajoittuu etelässä Ukrainaan ja idässä Venäjään. Alue kuuluu soiseen ja metsäiseen Polesjen seutuun. Dnepr, Berezina ja Pripjat ovat sen tärkeitä jokireittejä. Pripjat-joen tulvamailla on Pripjatin kansallispuisto, jossa on laajoja soita. Tšernobylin ydinvoimalaonnettomuus vuonna 1986 vahingoitti suurta osaa alueesta. Homelin kaupungissa Sož-joen rannalla on Rumjantsev–Paskevitš-palatsi, jonka ympärillä on englantilainen puisto. Mazyrissa on öljynjalostamo.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-maakunta2-gomel-v-6b2d8ee4.jpg',
@@ -12825,7 +12825,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grodno: {
       lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
-      pitka: "Grodno makaa Njemen-joen korkealla rannalla vain noin 15 kilometrin päässä Puolan rajasta, ja sen noin 360 000 asukasta asuvat kaupungissa, jonka historiallisten rakennusten kokonaisuutta pidetään maan laajimpana. Kaupunki mainitaan ensimmäisen kerran 1127, ja kuningas Stefan Báthory asui täällä 1580-luvulla ja kuoli 1586. Vanha ja Uusi linna seisovat vierekkäin joen töyräällä; Uusi linna valmistui 1789 ja toimii nykyään historia- ja arkeologiamuseona. Alueen asukkaista noin neljännes on puolalaisia, ja se näkyy katolisissa kirkoissa ja juhlissa. Lidan linna rakennettiin Gediminasin käskystä 1300-luvun alussa kivistä ja tiilestä, ja siellä järjestetään joka vuosi keskiaikainen turnaus.",
+      pitka: `Hrodnan alue on Valko-Venäjän länsiosassa, ja se rajoittuu Puolaan ja Liettuaan. Alueen läpi virtaa Niemen-joki. Alueella asuu paljon puolalaisia, ja aluekeskus Hrodna on tärkeä roomalaiskatolinen keskus. Hrodnan kaupunki on vain noin 15 kilometrin päässä Puolan rajasta. Mirin pikkukaupungissa on Mirin linna, jonka rakentaminen alkoi 1500-luvun alussa, ja Radziwiłłin ruhtinassuku omisti sen vuodesta 1568. Linna kuuluu Unescon maailmanperintökohteisiin vuodesta 2000. Lidan kaupungissa on 1300-luvun alussa rakennettu linna, jossa järjestetään keskiaikatapahtumia. Alueeseen kuuluu myös osa Belavežskaja Puštšan metsää.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
@@ -12848,7 +12848,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mogilev: {
       lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
-      pitka: "Mogilev on Dneprin rannalla noin 350 000 asukkaan kaupunki, maan kolmanneksi suurin, ja sen ensimmäinen maininta on vuodelta 1267. Kaupungin tunnettuihin rakennuksiin kuuluu katolinen konkatedraali, joka on omistettu Neitsyt Marian taivaaseenastumiselle ja pyhälle Stanislaukselle. Alueen pinta-ala on noin 29 100 neliökilometriä, noin 14 prosenttia maasta, ja sen läpi virtaavat Dnepr, Berezina, Sož, Drut ja Pronja. Alueen toiseksi suurin kaupunki Babruisk, noin 210 000 asukasta, sijaitsee Berezinan rannalla. Maisema on tasaista: korkeuserot ovat vain noin 126–239 metriä merenpinnasta.",
+      pitka: `Mahiljoun alue on Valko-Venäjän itäosassa, ja sen itäpuolella on Venäjä. Alueen läpi virtaa Dnepr, ja sen sivujoet Berezina ja Sož ovat tavaralaivareittejä. Mahiljoun kaupunki on Dneprin satama ja metallurgian keskus. Mahiljoussa on Pyhän Stanislauksen katedraali, joka rakennettiin 1738–1752 barokkityyliin, sekä Pyhän Nikolauksen luostarin katedraali vuodelta 1668. Babruiskin kaupungissa Berezina-joen rannalla on linnoitus, jonka rakentaminen alkoi vuonna 1810. Linnoitus vastusti Napoleonin joukkoja neljä kuukautta vuonna 1812. Tšernobylin onnettomuuden laskeumaa tuli erityisesti alueen itäosiin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
@@ -12871,7 +12871,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Minsk: {
       lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
-      pitka: "Minskin alue on Valko-Venäjän ainoa, joka ei rajoitu mihinkään ulkomaahan: noin 39 900 neliökilometriä, lähes viidennes maasta ja noin 1,46 miljoonaa asukasta. Maan suurin järvi, Narač, on 79,6 neliökilometriä ja enimmillään noin 25 metriä syvä; sen ympärille perustettiin 1999 Narač-kansallispuisto, jonka alueella on 43 järveä. Alueella on myös Svir, Mjadel, Sjaljava ja Mjastro, jotka luetaan suurimpiin järviin. Zaslauljen historiallinen museoalue kokoaa satojen vuosien kerrostumat, kuten 1500-luvun lopulla rakennetun kirkon.",
+      pitka: `Minskin alue on keskellä Valko-Venäjää. Pääkaupunki Minsk on erillinen hallintoyksikkö eikä kuulu alueeseen. Alueen luoteisosassa on Naratš-järvi, joka on Valko-Venäjän suurin luonnonjärvi. Järven rannalla on loma- ja kylpyläkeskus, ja mäntymetsät ympäröivät sitä. Njasvižin kaupungissa on Radziwiłłien ruhtinassuvun linna, jonka rakentaminen alkoi vuonna 1582. Linna on Unescon maailmanperintökohde vuodesta 2005. Alueella on myös hiihtokeskuksia ja terveyskylpylöitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
@@ -12894,7 +12894,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'City of Minsk': {
       lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
-      pitka: "Minsk mainitaan ensimmäisen kerran 1067, ja nykyään siellä asuu lähes kaksi miljoonaa ihmistä. Svislatš-joki virtaa kaupungin halki luoteesta kaakkoon, ja sen rannalla Troitskoje-esikaupunki on säilyttänyt vanhan kaupunginosan tunnelman aivan keskustan vieressä. Kaupungin pääkatu, Itsenäisyyden prospekti, on noin 15 kilometriä pitkä. Njamiha-katu, 1,8 kilometriä, on nimetty samannimisen joen mukaan. Kansallinen ooppera- ja balettiteatteri, jonka nykyinen talo valmistui 1939, on osa suurkaupungin kulttuurielämää.",
+      pitka: `Minsk on Valko-Venäjän pääkaupunki maan keskiosassa. Kaupunki on hallinnollisesti erillinen yksikkö eikä kuulu ympäröivään Minskin alueeseen. Minsk mainitaan ensimmäisen kerran vuonna 1067. Toisen maailmansodan jälkeen se jouduttiin rakentamaan lähes kokonaan uudelleen, ja vanhan keskustan tilalle tuli 1940- ja 1950-luvuilla stalinistista arkkitehtuuria. Metro avattiin vuonna 1984. Kansalliskirjasto avattiin kesäkuussa 2006, ja sen katolle pääsee hissillä näköalatasanteelle. Minsk-Arenalla pelattiin vuoden 2014 jääkiekon maailmanmestaruuskisat. Minskissä valmistetaan raskaita ajoneuvoja ja traktoreita.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-maakunta2-city-of-minsk-v-2bca94cc.jpg',
@@ -12917,7 +12917,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vitebsk: {
       lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
-      pitka: "Vitebsk sijaitsee kohdassa, jossa Vitba laskee Väinäjokeen, ja noin 359 000 asukkaallaan se on maan neljänneksi suurin kaupunki. Virallinen perustamisvuosi on 974, mutta kirjallinen maininta on vuodelta 1021. Kaupunki oli avantgarden keskus: Marc Chagall johti täällä taidekoulua, ja Kazimir Malevitš saapui marraskuussa 1919 ja synnytti UNOVIS-ryhmän. Nykyään kaupungissa järjestetään vuodesta 1992 Slaavilainen basaari -musiikkifestivaali. Alue kattaa noin 40 000 neliökilometriä ja on maan harvimmin asuttu, 27 asukasta neliökilometrillä. Asveja-järvi on maan toiseksi suurin, 52,8 neliökilometriä, ja Braslaun järvien kansallispuistossa on 74 järveä.",
+      pitka: `Vitsebskin alue on Valko-Venäjän pohjoisosassa, ja se rajoittuu Liettuaan, Latviaan ja Venäjään. Alueella on paljon järviä, ja Braslavin järvien kansallispuisto perustettiin vuonna 1995. Polatskin kaupunki on Väinäjoen rannalla, ja se mainitaan kronikassa jo vuonna 862. Polatskissa on Pyhän Sofian katedraali, jonka rakentaminen alkoi 1044; nykyinen rakennus on 1700-luvun barokkia. Navapolatskin kaupungissa on Naftanin öljynjalostamo. Vitsebskin kaupungissa syntyi taidemaalari Marc Chagall (1887–1985), ja siellä pidetään vuodesta 1992 slaavilainen musiikkifestivaali Slavianski Bazaar.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
