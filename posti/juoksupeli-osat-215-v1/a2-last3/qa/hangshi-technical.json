@@ -1,0 +1,77 @@
+{
+  "name": "hangshi",
+  "path": "3d/hangshi.glb",
+  "sha256": "a29bb43eb613184a58e76d32746bd9186088544147cfce10a276e2b5fd7f2bb5",
+  "bytes": 4037724,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1260-hangshi-attempt1.glb",
+  "sourceSHA256": "017e1aa09ec98d7c20928b3aaa9ee0c0346fbbbbf41b19bcca3a28b3d30fb6c8",
+  "triangles": 4966,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.23928052932024002,
+    0.5,
+    0.3239171802997589
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5094369053840637,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/hangshi/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "8849575efac1b25cbb61e610cb8eec256732a92827406b52f121d9adc1b24b09",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/hangshi/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0c48af113ef218a3694d20f205c24425bac90ebe80a6e7f6b6b649c851a032d5",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/hangshi/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "b12bf52581dda780eb7eccf7c8e32e97072c0b68557bbc921a0b13922656cf10",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": 0.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 136.296875,
+  "elapsedSeconds": 1.1909676669165492,
+  "visualReviewAt": "2026-10-29T20:51:00.399966+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Monkey face, both wings and single vajra visible and connected. Fine feathers and fingers soften at5000triangles. Raw model already faced+Z; no Y rotation in delivery.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ]
+}

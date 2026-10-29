@@ -1,0 +1,266 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/partial-a2-last3-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "chuishou.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "chuishou.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4786,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.146,
+       0,
+       -0.284
+      ],
+      "max": [
+       0.146,
+       0.5,
+       0.337
+      ],
+      "koko": [
+       0.292,
+       0.5,
+       0.621
+      ]
+     }
+    },
+    "polku": "3d/chuishou.glb"
+   },
+   {
+    "nimi": "douniu.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "douniu.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4896,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.114,
+       0,
+       -0.289
+      ],
+      "max": [
+       0.113,
+       0.5,
+       0.208
+      ],
+      "koko": [
+       0.227,
+       0.5,
+       0.497
+      ]
+     }
+    },
+    "polku": "3d/douniu.glb"
+   },
+   {
+    "nimi": "hangshi.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "hangshi.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4966,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.113,
+       0,
+       -0.181
+      ],
+      "max": [
+       0.126,
+       0.5,
+       0.142
+      ],
+      "koko": [
+       0.239,
+       0.5,
+       0.324
+      ]
+     }
+    },
+    "polku": "3d/hangshi.glb"
+   },
+   {
+    "nimi": "chuishou-nelja-suuntaa.png",
+    "polku": "esikatselu/chuishou-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "douniu-nelja-suuntaa.png",
+    "polku": "esikatselu/douniu-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "hangshi-nelja-suuntaa.png",
+    "polku": "esikatselu/hangshi-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/chuishou/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/chuishou/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/chuishou/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/douniu/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/douniu/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/douniu/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/hangshi/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/hangshi/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/hangshi/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: chuishou.glb ei liikettä, douniu.glb ei liikettä, hangshi.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]

@@ -1,0 +1,77 @@
+{
+  "name": "chuishou",
+  "path": "3d/chuishou.glb",
+  "sha256": "21a48e12bc992d7e92bde1e96c9086da2a4e4b54293ec9af6ad434373632066d",
+  "bytes": 3779824,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1261-chuishou-attempt1.glb",
+  "sourceSHA256": "e2e5fa65d11a2f51538d1c5b41da45f1b8370f7f95659fa4b1db69d7d9d70eb7",
+  "triangles": 4786,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.29169242084026337,
+    0.4999999701976776,
+    0.620609849691391
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.6323426961898804,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/chuishou/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "e6cc3e2166b03d7103d1c6cad984700e7df2dd4d8aba3df05a2de159d59eb807",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/chuishou/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "5e241a1d8a7e448874b31aa773b21aa222ff33dd3e145521bd6cf09bf302e3cc",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/chuishou/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "de5093b5112d3ae01be97e95f53b07d6b2240fe2e582c5ddac6ff81ac3d04d8d",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 135.125,
+  "elapsedSeconds": 3.520052499952726,
+  "visualReviewAt": "2026-10-29T20:55:10.710294+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Lohikäärmepää, avosuu ja takana suljettu kattokiinnike näkyvät neljässä suunnassa. Ei näkyviä irtoavia osia. Pienet hammas- ja harjayksityiskohdat pehmenevät 5000 kolmion budjetissa; katon pelietäisyyden arvio vastaanottajalla.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ]
+}

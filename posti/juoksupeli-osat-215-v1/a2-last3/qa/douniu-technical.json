@@ -1,0 +1,77 @@
+{
+  "name": "douniu",
+  "path": "3d/douniu.glb",
+  "sha256": "ff9eb60f2d5a9524623f8684179a74c44994d7a4234b837c9ffb6c31abae42eb",
+  "bytes": 3757620,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1259-douniu-attempt1.glb",
+  "sourceSHA256": "395301bce8f38631d7887ce0619288b9725aa0ee22b739434ea0fdad11e18e23",
+  "triangles": 4896,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.22666668891906738,
+    0.5,
+    0.4974980503320694
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5188915133476257,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/douniu/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "db48f83f468730dad5e75b65cd9f2138389b3742e98430fcc85be4f0b29d1ae6",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/douniu/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1c39e5fc44a92683317cdf28708b9e1bf4b611115e94d46e90d7162fde6b12bf",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/douniu/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "c6117a83ef717e8ef56413451cc25b046a644d5f3586668d8b8e289ec59fe439",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 132.875,
+  "elapsedSeconds": 1.258152374997735,
+  "visualReviewAt": "2026-10-29T20:49:26.618691+00:00",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "Broad bovine muzzle and scaled body retained. Short dorsal flame ornaments are pointed at this triangle budget; judge silhouette from roof camera.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ]
+}

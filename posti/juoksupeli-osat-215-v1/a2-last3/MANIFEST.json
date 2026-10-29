@@ -1,0 +1,390 @@
+{
+  "createdAt": "2026-10-29T20:55:10.773529+00:00",
+  "order": "A2:n kolme viimeistä osaa #1259–1261",
+  "status": "TECHNICAL_READY_RECEIVER_PENDING",
+  "assets": [
+    {
+      "name": "douniu",
+      "path": "3d/douniu.glb",
+      "sha256": "ff9eb60f2d5a9524623f8684179a74c44994d7a4234b837c9ffb6c31abae42eb",
+      "bytes": 3757620,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1259-douniu-attempt1.glb",
+      "sourceSHA256": "395301bce8f38631d7887ce0619288b9725aa0ee22b739434ea0fdad11e18e23",
+      "triangles": 4896,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.22666668891906738,
+        0.5,
+        0.4974980503320694
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5188915133476257,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/douniu/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "db48f83f468730dad5e75b65cd9f2138389b3742e98430fcc85be4f0b29d1ae6",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/douniu/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "1c39e5fc44a92683317cdf28708b9e1bf4b611115e94d46e90d7162fde6b12bf",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/douniu/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "c6117a83ef717e8ef56413451cc25b046a644d5f3586668d8b8e289ec59fe439",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 132.875,
+      "elapsedSeconds": 1.258152374997735,
+      "visualReviewAt": "2026-10-29T20:49:26.618691+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Broad bovine muzzle and scaled body retained. Short dorsal flame ornaments are pointed at this triangle budget; judge silhouette from roof camera.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "task": 1259,
+      "jobId": "45a41cee-d93e-4fc5-a24d-33768df8d26b",
+      "url": "https://studio.tripo3d.ai/workspace/generate/45a41cee-d93e-4fc5-a24d-33768df8d26b",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/douniu-reference01.png",
+      "referenceSHA256": "97d80f34ef6e5acdafe296f752ed948c0c273885cefda765a19d9daba562a464"
+    },
+    {
+      "name": "hangshi",
+      "path": "3d/hangshi.glb",
+      "sha256": "a29bb43eb613184a58e76d32746bd9186088544147cfce10a276e2b5fd7f2bb5",
+      "bytes": 4037724,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1260-hangshi-attempt1.glb",
+      "sourceSHA256": "017e1aa09ec98d7c20928b3aaa9ee0c0346fbbbbf41b19bcca3a28b3d30fb6c8",
+      "triangles": 4966,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.23928052932024002,
+        0.5,
+        0.3239171802997589
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.5094369053840637,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/hangshi/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "8849575efac1b25cbb61e610cb8eec256732a92827406b52f121d9adc1b24b09",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/hangshi/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "0c48af113ef218a3694d20f205c24425bac90ebe80a6e7f6b6b649c851a032d5",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/hangshi/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "b12bf52581dda780eb7eccf7c8e32e97072c0b68557bbc921a0b13922656cf10",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": 0.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 136.296875,
+      "elapsedSeconds": 1.1909676669165492,
+      "visualReviewAt": "2026-10-29T20:51:00.399966+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Monkey face, both wings and single vajra visible and connected. Fine feathers and fingers soften at5000triangles. Raw model already faced+Z; no Y rotation in delivery.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "task": 1260,
+      "jobId": "6be15d07-c053-4507-b7a6-a0e9c390058c",
+      "url": "https://studio.tripo3d.ai/workspace/generate/6be15d07-c053-4507-b7a6-a0e9c390058c",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/hangshi-reference01.png",
+      "referenceSHA256": "4f95963102e32c11b994d8fd93f169d3c3162ddc19a192fe530135aae1c755b4"
+    },
+    {
+      "name": "chuishou",
+      "path": "3d/chuishou.glb",
+      "sha256": "21a48e12bc992d7e92bde1e96c9086da2a4e4b54293ec9af6ad434373632066d",
+      "bytes": 3779824,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1261-chuishou-attempt1.glb",
+      "sourceSHA256": "e2e5fa65d11a2f51538d1c5b41da45f1b8370f7f95659fa4b1db69d7d9d70eb7",
+      "triangles": 4786,
+      "materials": 1,
+      "primitives": 1,
+      "dimensionsXYZM": [
+        0.29169242084026337,
+        0.4999999701976776,
+        0.620609849691391
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 0.6323426961898804,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/chuishou/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "e6cc3e2166b03d7103d1c6cad984700e7df2dd4d8aba3df05a2de159d59eb807",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/chuishou/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "5e241a1d8a7e448874b31aa773b21aa222ff33dd3e145521bd6cf09bf302e3cc",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/chuishou/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "de5093b5112d3ae01be97e95f53b07d6b2240fe2e582c5ddac6ff81ac3d04d8d",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "topologyUVPreserved": true,
+      "normalsRigidlyTransformed": true,
+      "yawAppliedDegrees": -90.0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "peakRSSMiB": 135.125,
+      "elapsedSeconds": 3.520052499952726,
+      "visualReviewAt": "2026-10-29T20:55:10.710294+00:00",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "Lohikäärmepää, avosuu ja takana suljettu kattokiinnike näkyvät neljässä suunnassa. Ei näkyviä irtoavia osia. Pienet hammas- ja harjayksityiskohdat pehmenevät 5000 kolmion budjetissa; katon pelietäisyyden arvio vastaanottajalla.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "task": 1261,
+      "jobId": "deb456ab-8d50-45e4-a421-04c2d21cdebb",
+      "url": "https://studio.tripo3d.ai/workspace/generate/deb456ab-8d50-45e4-a421-04c2d21cdebb",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/chuishou-reference01.png",
+      "referenceSHA256": "9f5abde8dec3d213c9cc6912d9d0cd982ff916e10e74256a5571c0e714e0c899"
+    }
+  ],
+  "liike": "ei liikettä",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "files": [
+    {
+      "path": "3d/chuishou.glb",
+      "bytes": 3779824,
+      "sha256": "21a48e12bc992d7e92bde1e96c9086da2a4e4b54293ec9af6ad434373632066d",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/douniu.glb",
+      "bytes": 3757620,
+      "sha256": "ff9eb60f2d5a9524623f8684179a74c44994d7a4234b837c9ffb6c31abae42eb",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "3d/hangshi.glb",
+      "bytes": 4037724,
+      "sha256": "a29bb43eb613184a58e76d32746bd9186088544147cfce10a276e2b5fd7f2bb5",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "KAYTTO.md",
+      "bytes": 833,
+      "sha256": "c1e8e9242f3caa5036cee37f84051ad0750007dd111a8cd3d5fbae9d3e265145"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 1401,
+      "sha256": "6f1d40e591abe70da17a335a5916a3ebef6e9fd2bb1a47e6e952c2a8b85f031e"
+    },
+    {
+      "path": "esikatselu/chuishou-nelja-suuntaa.png",
+      "bytes": 363366,
+      "sha256": "c6a0820639525d4cdb4a4c47000736d6fe0dc0500ecb4d20b6bbb1ba9f2f75d5"
+    },
+    {
+      "path": "esikatselu/douniu-nelja-suuntaa.png",
+      "bytes": 366137,
+      "sha256": "16ef7a7aae87550d77c53ca9aba525b1b06a35c9b000e1f3e26230af447eeb10"
+    },
+    {
+      "path": "esikatselu/hangshi-nelja-suuntaa.png",
+      "bytes": 360414,
+      "sha256": "c31fc74bf650c516346c67643cc550a3443bcdde8ad3995b5c2568ce78231ab0"
+    },
+    {
+      "path": "prompts/chuishou-reference01.txt",
+      "bytes": 1810,
+      "sha256": "2d76e531da6341d57cf2527a47de55d8ee09cdb8f1697fef0eedb8571eb10bf1"
+    },
+    {
+      "path": "prompts/douniu-reference01.txt",
+      "bytes": 1701,
+      "sha256": "7674b544cb8383651bf6ddef5b946137ad38dd9fa0f34ffae2ef1b30e8cd764a"
+    },
+    {
+      "path": "prompts/hangshi-reference01.txt",
+      "bytes": 1752,
+      "sha256": "106dbf5f5b81c48da23af4b00d90d08c9a42601d30e7ec8977d121720dc8ab2d"
+    },
+    {
+      "path": "qa/chuishou-technical.json",
+      "bytes": 2378,
+      "sha256": "de1ab5059055729e75cc631eb3a1ac4bcc98abc96dd1fb2e38f619ebd9f629bb"
+    },
+    {
+      "path": "qa/douniu-technical.json",
+      "bytes": 2259,
+      "sha256": "3ba82748f6db11b80035b80aa83202444a808940a3d27d2e411e2e673ab9709e"
+    },
+    {
+      "path": "qa/hangshi-technical.json",
+      "bytes": 2288,
+      "sha256": "0a775f96897d638f3c13f77cf93495c0bb4f006039ad47e2f5d5fadb68a421c3"
+    },
+    {
+      "path": "qa/import-gate.json",
+      "bytes": 4923,
+      "sha256": "9efe08ddaa5a64e14bdf6305ac859fd7194cbefdea328f50f92fa0df7e0a2fc3"
+    },
+    {
+      "path": "tekstuurit/chuishou/basecolor.jpg",
+      "bytes": 664512,
+      "sha256": "5e241a1d8a7e448874b31aa773b21aa222ff33dd3e145521bd6cf09bf302e3cc"
+    },
+    {
+      "path": "tekstuurit/chuishou/metallic-roughness.jpg",
+      "bytes": 361245,
+      "sha256": "de5093b5112d3ae01be97e95f53b07d6b2240fe2e582c5ddac6ff81ac3d04d8d"
+    },
+    {
+      "path": "tekstuurit/chuishou/normal.png",
+      "bytes": 2615007,
+      "sha256": "e6cc3e2166b03d7103d1c6cad984700e7df2dd4d8aba3df05a2de159d59eb807"
+    },
+    {
+      "path": "tekstuurit/douniu/basecolor.jpg",
+      "bytes": 742867,
+      "sha256": "1c39e5fc44a92683317cdf28708b9e1bf4b611115e94d46e90d7162fde6b12bf"
+    },
+    {
+      "path": "tekstuurit/douniu/metallic-roughness.jpg",
+      "bytes": 409607,
+      "sha256": "c6117a83ef717e8ef56413451cc25b046a644d5f3586668d8b8e289ec59fe439"
+    },
+    {
+      "path": "tekstuurit/douniu/normal.png",
+      "bytes": 2458757,
+      "sha256": "db48f83f468730dad5e75b65cd9f2138389b3742e98430fcc85be4f0b29d1ae6"
+    },
+    {
+      "path": "tekstuurit/hangshi/basecolor.jpg",
+      "bytes": 767475,
+      "sha256": "0c48af113ef218a3694d20f205c24425bac90ebe80a6e7f6b6b649c851a032d5"
+    },
+    {
+      "path": "tekstuurit/hangshi/metallic-roughness.jpg",
+      "bytes": 414079,
+      "sha256": "b12bf52581dda780eb7eccf7c8e32e97072c0b68557bbc921a0b13922656cf10"
+    },
+    {
+      "path": "tekstuurit/hangshi/normal.png",
+      "bytes": 2704051,
+      "sha256": "8849575efac1b25cbb61e610cb8eec256732a92827406b52f121d9adc1b24b09"
+    }
+  ]
+}
