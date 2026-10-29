@@ -826,3 +826,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - KK/PT: havainteen kaukoportti t-portin takana → pohja.json: kuja-39 jatkuu t-portista vain z 425→436,7 ja kääntyy länteen, muuri 210:n
   kulma z 445,6; ei porttia eikä suoraa jatkoa → PT 08.0x: v64 ENNALLAAN (havainne = ulkoasu, mitat oikeat).
 - Nippu JU:lle vasta PK:n reittiverkkokorjauksen (kuja 40b) jälkeen; PT kuittaa.
+
+## LISÄYS 64 klo 08.3x (29.10.): KK:N 05-SOVITUS + PORTTI KAPEAMMAKSI (EI VIELÄ PAKETISSA) — LUOVUTUS, ALOITA TÄSTÄ
+- editori-lr.sh: PAIKKA_<k>="x z suunta°" ja PELIKAMERA=1 (pelin oma kamera); 05 oletus: paikka −251,6 393 −3, TESTIKAMERA 05 "3.0 5.3 16 45"
+  (kynnys y 0,47 vs havainne 0,45, KK). 02: puu oikealla = itäpihan puuryhmä (lahipuut-v6), poisto vain pyynnöstä.
+- 05:n portti p-kujaportti (PT:n 24.10. havaintoportti, ei OSM): rakennukset-v117 = teal → tumma puu (portti_teal_puuksi.py, KK: friisi
+  hillitään), rakennukset-v118 = aukko 6,68 → 5,14 m + ovilehdet × 0,77 + törmäys (portti_kapea.py K=0.77). juuri-v122m (v117), v123m (v118),
+  aja_v122_pari.zsh / aja_v123_pari.zsh. Parit KK:lla: -081457/-081719 (02), -082716/-082929 (05).
+- AUKI: KK:lle kysytty aukon/lehtien korkeus 4,55 → ~3,5 m (yhä ~1,3× havainnetta). Kun valmis: uusi paketti v65 (rakennukset-v50 =
+  rakennukset-v118+, tausta-v64, muurikate-v20, avoimet-v51) → PK (törmäys muuttui: aukko 5,14 m, reitti 2,4 m mahtuu) → PT kuittaa.
