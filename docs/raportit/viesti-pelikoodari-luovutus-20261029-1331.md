@@ -38,6 +38,12 @@ Lokien kameratiivistys: `python3 -I /Users/Shared/Claude/proto-3d/_tyo/pelikooda
   → uusi video PT:lle (PT pyysi: "uusi video minulle"). Junaan 214 omana eränä vasta omistajan OK:n jälkeen.
 - LR v66 (ei vielä _valmiit): sitten juuri-pk7-v66, TaustaKansio/RakennusKansio pk7-214:ään juna-214:n päälle, pari → PT → KK → JU.
 
+- UUSI (LR 13.3x, omistaja 11.02/11.04, LR-luovutuksen lisäykset 70–71): JuoksuLattia.shaderin kuviot PK:n haaraan (PK on
+  varjostimen ainoa kirjoittaja; LR tekee reunuskiven korkeuden ja leveyden geometriaan). KK:n mittaus: laji 2 PIHA rivi 1,2 → ~1,7 m,
+  laatat 1,4–2,6 → ~2,4–4,6 m (vaihtelu 1:2, limittäin); kivijalan lohko rivi 0,38 m → ~0,4× korkeus (k21 vastaavasti) ja ~2,2× pituus;
+  ReunusRaja 0,7 → ~1,4 m. Kuvat docs/raportit/kaappaukset/omistaja-20261029/ (lattia-reunakivi-vertailu-kk-1102.png,
+  kivijalka-vertailu-kk-1106.png). Haara juna-214:n päälle; pari kuja 02 yhdessä LR:n geometrian kanssa → PT → KK → omistaja.
+
 ## Jatko keskeytyksestä
 - Taustaajoja ei ole (JU ajaa drone n:n). Worktree wt/proto-pelikoodari-kaapu-213 (drone-214 8289a55fe) puhdas.
 - Keskustelukanavan uusi id local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe (omistaja 13.11).
