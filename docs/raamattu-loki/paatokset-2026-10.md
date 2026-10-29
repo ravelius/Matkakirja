@@ -3208,3 +3208,7 @@ Omistaja KK:lle: "Lähden kotiin, niin julkaise TestFlightissa ilman testejä si
 ## OPPI: OMISTAJAN KUVAPARI AINA SOVITETTUNA (PT 29.10.2026 klo 17.30) (29.10.2026 klo 17.30)
 
 PT lähetti KK:lle kujakortin parin 172625, jossa keisari oli pelissä 1,4–1,6× havainnekuvaa suurempi (kamera lähempänä → laatat näyttävät isommilta), ja jätti 05:n vanhat kivet erilliseksi kysymykseksi. KK palautti: rikottu periaatteet 1 (sanat mitattavissa) ja 9 (ei väliaikaisia poikkeamia). Jo voimassa 7.20 (havainnemittari) ja B kohta 11: PT avaa mittari.txt:n ja tarkistaa keisarin koon, kynnyksen ja pakopisteen ennen kuin pari menee KK:lle; omistajan sanat koskevat kaikkia sen kattamia kohteita, ei vain kuvattua.
+
+## JUNA 214: KUJAT KELPAA (29.10.2026 klo 18.23)
+
+OMISTAJAN PÄÄTÖS klo 18.22 (kortti KK:ssa, sanatarkasti): "Kelpaavatko kujat 02 ja 05 junaan 214?" → "Kelpaa (suositus)" (selite: "Juna 214 lähtee TestFlightiin, kun vanhat harmaat tiilet on vaihdettu."). Parit havainne-editori-20261029-181331 (LR v69, PK pk7v66-214 c22908502). Ennen TF:ää LR v70: 05:n oikean seinän kivijalan yläreuna ja portin takana näkyvän seinän kivijalka isoiksi kiviksi, vino harmaa levy korjataan; PT tarkistaa parin → NS kokoaa → JU TF. Seuraavaan junaan: 02:n räystään alta pistävä kannatinpala. OPPI (periaate 2): PT ohitti 175511:n portin pielten pikkutiilen ja vasta 181331:ssä huomasi osan jäänteistä; tarkista koko kuvan kaikki kivipinnat, myös kauempana portin takana.
