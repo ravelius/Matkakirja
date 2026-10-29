@@ -1204,3 +1204,28 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   pikkutiili, avoimet-kysymys); (4) paketti v73; (5) osasarja v1.
 - 21.2x: v148 VALMIS ("VALMIS v148m"); oma laskenta (V4_stone/V4_sokkeli/_kansi) = 0 rakennukset-v135, tausta-v58, muurikate-v26, c2-v7. Avoimet ja V4_jalkakivi tarkistamatta. PT:lle ilmoitettu 21.2x.
 - PT 21.3x KUITTASI v148 + Taihemenin muurien poiston (kuvat taihemen-v145, tirenge katsottu). AVOIMET (kuja 01) EI muuteta nyt (omistajan hyväksymät 18.22, juna 214); osasarja korvaa ne myöhemmin pariajolla todennettuna. Kohdat 3 ja 4 ok selityksin; kohta 5 (kaiteet LOD0 < 150 m) → NUI.
+
+## LISÄYS 91 klo 21.4x (29.10.): OSASARJA v1 + LOD2, PAKETTI v73, PORTTI 06 ODOTTAA PK:N VASTAUSTA (LUOVUTUS, konteksti 30 %) — ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- OSASARJA v1 (PT kuittasi, PK kuittasi 03d1603fa, PR 5619 B-kirjaus mergetty): K/osasarja-v1/kielletty-osasarja-v1/ osat.glb, osat-lod1.glb,
+  osat-lod2.glb (vain kaide-pylvas 10 kolm. V4_marmori + kaide-johde-1.5m kortti V4_marmorikaide MASK, NUI:n pyyntö), ladonta.json ("osat"-taulu:
+  pituus/vahennys; profiilit kivijalka, -kansi, reunakivi + -taka), LAHTEET.md, SHA256SUMS. Tekijä K/tyokalut/osasarja_v1.py, ladontakoe
+  osasarja_koe.py (koekuvat K/osasarja-v1/koe-*.png), johde_kortti.py (1062:n etukuva). Muuri 0,72; kulmat 90° (sama pilari, vähennys 0,72/0),
+  päädyt paaty-alku/-loppu 0,88. Codex-pinnat PT 21.5x: C3_muurikate, C2_marmorikaide_pylvas, C2_marmorikaide_johde, C2_vesisylkija
+  (VS materiaalit pintasarja.json:iin, PK sallittuihin; viestit lähetetty). PK latoo (juuri-pk7-v72, 8 kohdan pari → PT); koe-* rajataan pois.
+- PT:n päätökset 21.5x: kaiteet LOD1-etäisyydelle = NUI:n osasarjakaide (ei C2-LOD1-paloja); tripo_mat_* vain Codexin A-osien omissa glb:issä.
+- PAKETTI v73 (PT KUITTASI): _valmiit/juoksupeli-kk-lavastaja-v73-vienti-20261029 (paketti_v73.py): rakennukset-v59 (= v135), c2-v7 (= c2-v8),
+  tausta-v73 (= yksikerros-v116), muurikate-v26; 314 tiedostoa, SHA OK; kielletyt vain avoimissa (kuja 01, PT: ei muuteta). PK:lle ja VS:lle ilmoitettu.
+- PARI 03/03b v77: taustalla odottaa NUI:n editoriajoa (scratchpad-skripti pari_v77.zsh: REF=41a2eac22 MALLIT=…/juuri-pk7-v77/ PELIKAMERA=1
+  editori-lr.sh 03 03b) → tulos proto-3d/lokit/havainne-editori-<aika>/03. Vanha 211347-kuva ei ollut kameravika: keisari tekaistujen
+  pohjoismuurien välissä (poistettu v132:ssa). Katso uusin havainne-editori-*-kansio; jos ei ole, aja uudelleen samoilla arvoilla (pgrep ensin).
+- PORTTI 06 (KS, juna 215): KS muotoili a-meridiaaniportin (/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/portti06-215/vie-k4/ lod0–2 + tormays
+  + rakennukset.json). LR LUPASI ajaa rakennukset-v136 = v135 + uusi portti, muut ennallaan; EI omia muotomuutoksia porttiin. Vaiheet
+  (a-:n hash muuttui v54, v87p, v131, v133, v134, v135): 1) c1_raystaat2.py uudesta katosta → uusi c1-v5/a-meridiaaniportti.json +
+  c1_vanha_leikkaus.py (aja_c1_vanha_v54.zsh mallina) + c1_sijoitukset.py → uusi kielletty-c1-paketti; 2) palatsi_pinnat.py VAIHEET=katto
+  (aja_ketju_v87.zsh); 3) hallit_pinnat.py lod0/1/2; 4) kopioi_koristeet.py + tausta_koristekortti.py; 5) portti_kivijalka.py ×3 (v148); pintatarkistus.
+  ESTE: vie-k4:ssä ei TEXCOORD_1/2 eikä valo_rgbm (leivonta seis, omistaja 27.10. 10.56) → kysytty PK:lta 21.4x, miten varjostin toimii ilman
+  (neutraali / UV1 = UV0 + neutraali kuva?). Aloita PK:n vastauksella; kuvat + pari 06 → KS ja PT.
+- VS 21.3x: taustaan ei ovia; palkkivyö 1067 taustaan vain, jos ei sini-violetti. VS ajaa parin juuri-pk7-v76:lla.
+- SEURAAVAKSI: (1) PK:n valovastaus → v136 portti 06; (2) pari 03 v77 → PT; (3) erolista (lisäys 81): T-risteys, aukion sivuhallit, 04, 07,
+  C1 Taihedian-korjaukset; NUI palauttaa g-taihedian-lod1-polun (älä kirjoita siihen ennen).
