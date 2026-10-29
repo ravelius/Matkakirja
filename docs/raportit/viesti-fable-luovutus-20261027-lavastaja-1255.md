@@ -1362,3 +1362,12 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - PAKETTI v82 (paketti_v82.py) = v81 + rakennukset-v68 + c1-v8 + c2-v13: 358 tied., SHA256SUMS 9734c828 → PT:lle ja KS:lle. EI ämpäriin ennen kuittausta.
 - 07-PARI (PT: vain 07, 06 ajaa PK): scratchpad pari_v81.zsh (juuri-pk7-v81, REF 41a2eac22) editorin jonossa; editori-lr.sh ajetaan zsh:lla (ei suoritusoikeutta),
   ÄLÄ odota pgrep-silmukalla (muiden ajot vuorottelevat → nälkiintyy). Valmis kuva → KK + PT (tasainen vertailuvalo).
+
+## LISÄYS 101 klo 23.5x (29.10.): v82 JA v83 KUITATTU (JU vie), TAIHEMENIN MUURIT TAKAISIN, PARIT 07 + 03/03b AJOSSA — ALOITA TÄSTÄ
+- PT kuittasi v82 (9734c828) ja v83 (6840ade5). v83 = v82 + Taihemenin porttimuurit takaisin (PT 23.5x kumosi 21.3x-kuittauksen: 03/03b-havainteen
+  reunaseinät = portin omat sivut): UUSI tyokalut/muurit_takaisin.py + aja_v161_muurit.zsh → rakennukset-v145/kielletty-rakennukset-v69, c2-v15/kielletty-c2-v14
+  (kivijalka V4_jalusta_lohkokivi). PK leipoo eston.
+- editori-lr.sh KORJATTU: MALLIT-ajoon lisätään "palatsi url ${MALLIT}kk-pohja-v1d-pk7/pohja.json" (POHJA=/POHJA_OFF=1), muuten palatsi ei lataudu
+  (pohja.json median URL:sta puuttuu → loputon sokkelo; 07-ajo -233152 oli tyhjä).
+- PARIT taustalla: scratchpad pari_v81.zsh (07, juuri-pk7-v81) ja pari_v83_03.zsh (03 03b, H/juuri-pk7-v83 = v81 + rakennukset-v145 + c1-v8 + c2-v15).
+  Valmiit vierekkäiskuvat → KK + PT. Codex-osat (A2 12/12, A4, A1) PK:n kansiossa proto-3d/_tyo/pelikoodari/codex-osat-215/ → harjarivit PT:n luvalla.
