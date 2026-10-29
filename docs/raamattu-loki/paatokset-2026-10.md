@@ -3188,3 +3188,7 @@ Omistaja KK:ssa: 'tee siirtoprompti toiselle tilille'. Vanha tili sami.reivinen@
 ## TILINVAIHTO 29.10.2026 klo 13.xx (29.10.2026 klo 13.06)
 
 Tilinvaihto tilille org f04011ee (päätili). PT local_cf5b4eca, KK local_231e4bad; 9 roolia uusina sessioina (Postivahti, Asemataulu, Julkaisija, Natiiviseppä, Pelikoodari, Lavastaja, Karttaseppä, Natiivi-UI, Sisältökirjuri); levossa olevat tämän tilin vanhoihin sessioihin (Linssiseppä, Valoseppä, Projektiseppä, Äänittäjä, Laitetestaaja); Työkaluseppä ilman tämän tilin sessiota (luodaan tarvittaessa). Taulu Rq5ajPU4SraE2XKd7BYAix (v84, tietokanta täytetty). Kotikansiot mainiin, ohitettu Matkakirja-posti (Postivahti mergeää itse), -aanittaja, -laitetestaaja, -siirtoseppa (levossa, JÄLJESSÄ). Ohjeiden koe 10/10 läpi.
+
+## STRIIMIKARTAN SÄVYTYS (omistaja 29.10. 14.03) (29.10.2026 klo 14.03)
+
+Kortti 'Sävytetäänkö julkiset rakennukset ja asemat näin?' → 'Kyllä (suositus)'. Julkiset rakennukset kullanruskeina, liikerakennukset ja asemat liuskeenharmaina tiilen kirkkaudella, vain katutasolla (KS savytys-214 704fa8629, pari savytys-214/pt/ käännös 4fdecb927) → junaan 214. Pieni iPad saa uuden version vasta, kun saumat ja merkittävyys ovat valmiit (omistaja 13.22).
