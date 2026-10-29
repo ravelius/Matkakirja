@@ -1294,3 +1294,18 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
   MALLIT juuri-pk7-v79, kohdat 06 ja 03 03b). 06-kuva PT:lle + KS:lle (havainne-06:n kulma = editorin kohta 06).
 - SEURAAVAKSI: (1) pari 06 → PT + KS; (2) PAKETTI v77 = v76 + kielletty-rakennukset-v63 (rakennukset-v139) + c1-v7 + c2: a3a5_portti.py uudesta lod0:sta
   (kuten aja_v151_siipi_c1.zsh:n C2-osa) → PT:n kuittaus; (3) V4_paaharja 1268; (4) erolista: T-risteys, sivuhallit, 04, 07.
+
+## LISÄYS 95 klo 22.4x (29.10.): PAKETIT v77 JA v78 (PÄÄHARJA 1268), PARI v79 AJOSSA — ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40.
+- PARI v79 kuoli nollauksessa → ajettu uudelleen (scratchpad pari_v79.zsh, sama sisältö: 06 ensin, sitten 03 03b; odottaa editorijonoa).
+  Tulos uusimmassa proto-3d/lokit/havainne-editori-*/06 (esikatselu REF 41a2eac22, paketit-rivillä juuri-pk7-v79). 06-kuva → PT + KS.
+- C2 uudesta portin lod0:sta: tyokalut/aja_v154_c2.zsh → a3a5-v4 + c2-v12/kielletty-c2-v11 (sijoitukset = v3, vain lähdepolku).
+- PAKETTI v77 (paketti_v77.py) = v76 + kielletty-rakennukset-v63 (= rakennukset-v139) + c1-v7 + c2-v11: 357 tiedostoa, SHA OK. KORVATTU v78:lla.
+- PÄÄHARJA 1268 (VS 22.2x, pintasarja V4_paaharja: U toisto, V clamp, PintaKiinni 1): UUSI tyokalut/paaharja.py – pääharja = V4_gold-laatikko
+  (10 kolm.: 4 pystykylkeä + kansi, korkeus 0,8–3 m, pituus ≥ 4 m); kyljet → V4_paaharja, v = yläreunasta 0–1, u = vaakamatka / (4 · korkeus); kansi jää.
+  aja_v155_paaharja.zsh → rakennukset-v140/kielletty-rakennukset-v64 (a, b, c, d, f, g-baohedian, l (2 harjaa), u lod0/1; g-taihedian vain lod0,
+  LOD1 NUI:lla – NUI:lle työkalu kerrottu) + c2-v13/kielletty-c2-v12 (a-/f-kaiteettomat LOD0). lod2:ssa ei laatikoita. Koekuva K/paaharja-koe/g-taihedian-harja.png.
+  Ei mukana (harja ei laatikko): g-zhonghedian (pyramidi), m, n, o, t-katokset, tausta → PT:ltä kysytty, halutaanko.
+- PAKETTI v78 (paketti_v78.py) = v77 + rakennukset-v64 + c2-v12 (MuurikateC2Kansio "kielletty-c2-v12/"): 357 tiedostoa, SHA OK, SHA256SUMS 7aec46c5.
+  PT:lle, PK:lle, NUI:lle ja VS:lle ilmoitettu 22.4x. EI ämpäriin ennen PT:n kuittausta.
+- SEURAAVAKSI: (1) pari 06 → PT + KS; (2) PT:n kuittaus v78 (+ vastaus muiden harjojen kysymykseen); (3) erolista: T-risteys, sivuhallit, 04, 07.
