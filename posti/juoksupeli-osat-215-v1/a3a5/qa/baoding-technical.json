@@ -1,0 +1,73 @@
+{
+  "name": "baoding",
+  "path": "3d/baoding.glb",
+  "sha256": "e1731030bd3312c4223fee669d19e8221cadbef1245ea0243e736702470b362a",
+  "bytes": 3861308,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1262-baoding-attempt1.glb",
+  "sourceSHA256": "356f015fe580da0ab62fc67b63a901e4b03657a78606d76424810d607324bce2",
+  "triangles": 4485,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.6373723149299622,
+    1.75,
+    0.6365272402763367
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 1.7865287065505981,
+  "metallicFactor": 1.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/baoding/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "0d2fb491a8a3b15bb3d2b4abfa35d09cdc16ad4890d46b51178b72cd0df71a60",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/baoding/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "bdd71ac635880d5f5223e289bc45b21f16b4b68fc445cf54dcdf5079627bb40a",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/baoding/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "ed6f1cb5ed19038b6235d5a5603ce7d9f886377c4447aff793fde24b402f295a",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "topologyUVNormalsPreserved": true,
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "peakRSSMiB": 131.171875,
+  "elapsedSeconds": 0.9355455830227584,
+  "visualReviewAt": "2026-10-29T19:44:41.071259+00:00",
+  "knownLimitations": [
+    "Unlit four-view review; PBR lighting and assembled placement still require receiver game check.",
+    "Not certified watertight: coordinate-weld diagnostic found 2 boundary edges and 1 nonmanifold edge; no visible gap at the preview resolution."
+  ]
+}

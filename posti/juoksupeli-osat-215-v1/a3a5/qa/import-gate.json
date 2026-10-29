@@ -1,0 +1,181 @@
+[
+ {
+  "kansio": "output/juoksupeli-osat-215-20261029/partial-a3a5-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "baoding.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "baoding.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4485,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.32,
+       0,
+       -0.32
+      ],
+      "max": [
+       0.318,
+       1.75,
+       0.317
+      ],
+      "koko": [
+       0.637,
+       1.75,
+       0.637
+      ]
+     }
+    },
+    "polku": "3d/baoding.glb"
+   },
+   {
+    "nimi": "marble-railing-post.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "marble-railing-post.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 3247,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.098,
+       0,
+       -0.092
+      ],
+      "max": [
+       0.092,
+       1.4,
+       0.092
+      ],
+      "koko": [
+       0.19,
+       1.4,
+       0.183
+      ]
+     }
+    },
+    "polku": "3d/marble-railing-post.glb"
+   },
+   {
+    "nimi": "baoding-nelja-suuntaa.png",
+    "polku": "esikatselu/baoding-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "marble-railing-post-nelja-suuntaa.png",
+    "polku": "esikatselu/marble-railing-post-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/baoding/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/baoding/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/baoding/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/marble-railing-post/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/marble-railing-post/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/marble-railing-post/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: baoding.glb ei liikettä, marble-railing-post.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]

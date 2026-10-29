@@ -1,0 +1,74 @@
+{
+  "name": "marble-railing-post",
+  "path": "3d/marble-railing-post.glb",
+  "sha256": "f1691aa38aa1192c7a643288f0cfd9db21aa589e4248245a6b6eb1fa3d10e094",
+  "bytes": 2664852,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1266-marble-railing-post-attempt1.glb",
+  "sourceSHA256": "c53abe00253e580adae63906a94ee41976cf3ca0ebca143f48b7c565d8b2e5fd",
+  "triangles": 3247,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.19027753174304962,
+    1.399999976158142,
+    0.18318867683410645
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 1.4272664785385132,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/marble-railing-post/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1f69b9b47b07f601e89786fc9416b77ff201cc9dbd7213294d04f46a6e9a6843",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/marble-railing-post/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "efee82bc0ec56cd17c49a456b290e7a5e44346e4a16f132fda3ae9cab1b7838d",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/marble-railing-post/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "11280219a758c75a6335028273f0ddf925db22a761ca3c4439be609450869fdd",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "topologyUVNormalsPreserved": true,
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_WITH_NOTES",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "peakRSSMiB": 121.5625,
+  "elapsedSeconds": 0.6298669170355424,
+  "visualReviewAt": "2026-10-29T19:44:41.071259+00:00",
+  "knownLimitations": [
+    "Unlit four-view review; PBR lighting and assembled placement still require receiver game check.",
+    "Not certified watertight: coordinate-weld diagnostic found 2 boundary edges and 1 nonmanifold edge; no visible gap at the preview resolution.",
+    "Rail connection mortises pass through the shaft in both directions. Connect rails or cap unused sides during assembly; not a closed solid post at that elevation."
+  ]
+}
