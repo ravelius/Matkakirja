@@ -934,3 +934,21 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   selitystä omistajalle. Länsipuolen rakennukset saavat jäädä taakse omine kattoineen.
 - 01 (lukittu) ja 02 ennallaan. 02:n uudet reunakivet ja katto OK (KK) → pari 02 odottaa PK:n laattoja ja kivijalan kiviä.
 - Järjestys: 05 matala siipi + muurit → pari 05 → KK → paketti_v66.py (lisäyksen 72 SEURAAVAKSI-kohta, R = uusi rakennukset-versio).
+
+## LISÄYS 74 klo 14.09 (29.10.): LISÄYS 73 TEHTY — 05 MATALA SIIPI + LÄHIMUURIT SIIPIEN RÄYSTÄSLINJAAN + YHTENÄINEN FRIISI (juuri-v134m)
+- rakennukset-v126 = rakenna_v125.zsh V=126 W=2.75 FH=0.55 RH=0.75 (siiven friisi 2,75–3,30, räystäs 3,30; muuten = v125).
+- UUSI K/tyokalut/muuri_laske05.py: kujan 05 muurinauhan kärjet (keskilinjasta ≤ 1,4 m; itä x = −245,03 − (z − 354,6)·0,02907, länsi
+  polyline 362 → 401,8; y 1,9…5,2) paloittain: runko 1,9–3,90 → 1,9–2,75, friisivyö 3,90–4,12 → 2,75–3,30, kate −0,82 (harja 5,15 → 4,33).
+  Liukuma etelässä z 366–372 (ZS0/ZS1), pohjoisraja z 401,8 (siiven sisällä). Rakennukset (länsi z 365–375, itä x −244,4 z 386–390,
+  t-rakennus z 402,3) jäävät nauhan ulkopuolelle.
+  - PEITE=1 (tausta): taustan V4_red oli samassa tasossa kuin friisi (y 3,3–4,5) → V4_red ≤ 2,745, räystään alus ≥ 3,30.
+  - FRIISI=1 (muurikate): muureissa ei ollut kujan puolella friisiä (vain z 389–393) → uusi V4_palatsi_friisi-nauha 2,75–3,30 molempien
+    muurien kujanpuoleisille pinnoille z 372 → 398,28 (24 paneelia, UV muurikatteen friisin mukaan).
+- Ketju: yksikerros-v108 (= v107 + PEITE=1 muuri_laske05; vain kk-tausta-0-3-lod0/1/2 muuttuivat), muurikate-v19/pari-v134-v16-nimella
+  (= pari-v119 + FRIISI=1), juuri-v134m (= v133m + nämä + rakennukset-v126). Ajo: J=v134m KOHDAT="05" zsh K/tyokalut/aja_v132_pari.zsh.
+- Parit 05: lokit/havainne-editori-20261029-140559 (sovitettu) ja -140748 (pelikamera). Friisi jatkuu siivestä muureihin molemmin puolin,
+  räystäs samassa linjassa; mittari räystäs 0,11–0,12 (havainne 0,17; siiven friisi 0,17 kuten KK:n valitsemassa -133647:ssä).
+- Huomiot KK:lle/PT:lle: muurin friisin kuva (muurikatteen friisi-v01) on hieman eri kuin siiven (friisi-v02); kujan 05 jatko portin
+  pohjoispuolella (z 403–424) ja muurit etelään z < 366 ennallaan (liukuma 366–372 näkyy loivana laskuna).
+- SEURAAVAKSI: KK → paketti_v66.py: R = rakennukset-v126, tausta yksikerros-v108, JA UUSI muurikate (pari-v134; v66 ei aiemmin
+  päivittänyt muurikatetta → lisää kielletty-muurikate-v21 pakettiin + LAHTEET) → aja → PK (läpikulku 05) → PT.
