@@ -43,3 +43,6 @@ nurkat eivät nouse), ovilla ei ollut UV:ta (ristikko-ovi ei voinut näkyä), ja
 3. Valmis → g-taihedian-polku LR:lle pakettiin, proto-haaran SHA PT:lle ja NS:lle junaan 215 (osasarja-215:n kanssa),
    halli-kaiteet-v1 ämpäriin JU:n kautta (pakettina).
 4. Avoin: portaiden kaiteet (kokoajan kallistus, PK:n koodi), Taihedianin kullankeltainen kate on VS:n.
+
+## Lisäys 21.4x (PK)
+PK: tee kaiteiden lataus ja näkyvyys itse, pidä LOD1-kaiteet omana pakettinaan. Pohjaksi osasarja-215 **d3585024e** (kokoaja lukee osat-taulun ja ohittaa koe-*-polut) → merge natiivi-ui/halli-215:een ennen paria. Kokoa niputtaa staattisesti pinnoittain (3138 polkua = isot niput, kevyet osat-lod2 pitävät ne pieninä). Testit: Peli-testit JuoksuOsasarjaTestit, MK_OSASARJA=<kansio> oikealle paketille.
