@@ -3168,3 +3168,7 @@ Kortti KK:ssa: "Korjaus: kuja 02 on pelissä jo havainnekuvaa kapeampi. Levennet
 ## DRONEKAMERAN LIIKE SOPIVA (omistaja 29.10. klo 07.57) (29.10.2026 klo 07.57)
 
 Kortti KK:ssa: 'Onko dronekameran liike nyt sopiva?' → 'Sopiva (suositus)' ('Pidetään tällaisena, alku ja loppu korjataan.'). Pohja: PK drone-214 ea52d4a50, KK:n välivideo 2,5–64 s. PK korjaa alun (205 °/s kääntö, ylhäältä laskeutuminen) ja lopun (muurin/portin nosto 3–8,6 m, 16 m/s; Raamattu 2.177 voimassa: drone nousee porttien yli, nosto hidas ja ennakoiva). KK tarkistaa koko videon; junaan 214 omana eränään vain puhtaana. Kuja 02 (PT 29.10.): uusi mittaus peli 4,71 | havainne 4,49 hahmon korkeutta = +4,9 %, omistajan 07.26 tavoitteen (+0–5 %) sisällä → ei muutosta.
+
+## JUOKSUPELIN LOPPUYHTEENVETO RIKOTUISTA ESINEISTÄ (omistaja 29.10. klo 08.21–08.55) (29.10.2026 klo 08.55)
+
+Pyyntö 08.21: juoksun loppuun yhteenveto rikotuista esineistä: Codexin syvätyt esinekuvat, nimi + (kpl), napautus avaa ikkunan, jossa esineen muistokuva (muistokupla) ja lyhyt historia kiinalaisesta kulttuurista. 08.23 kortti: 'Ei, vain rikotut' (ei rikkomattomia siluetteina). 08.55 kortti: 14 historiatekstiä 'Kelpaavat (suositus)' KK:n neljällä kielikorjauksella ja PT:n kellon vuosikorjauksella (1600-luvun alussa). PT: yhteenveto aukeaa itsestään ennen loppukorttia ja vain, jos jotain rikottiin; Kokoelma-nappi ennallaan. Pohjat: galleria-lasi + mk-nosto (NUI), logiikka JuoksuTulos.RikotutEsineet (PK).
