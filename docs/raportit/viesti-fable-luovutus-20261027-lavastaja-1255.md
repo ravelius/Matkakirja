@@ -1232,3 +1232,7 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - 21.4x KS: portin glb:t valmiit (vie-k4, paikka/mitat/huippu ennallaan, vain katot ja räystäät). PT: KS:n parametrit palautetaan LR:n
   kk_wumen.py:hyn samassa paketissa (KS:n kopio …/portti06-215/K/tyokalut/kk_wumen.py rivit 32–40 KS06-lohko, oletukset …/portti06-215/
   k4-parametrit.json; KS kirjoittaa ne lohkon oletuksiksi) → kopioi lohko K/tyokalut/kk_wumen.py:hyn v136:n yhteydessä (diff ensin).
+- 21.4x PK: v73 koodissa (osasarja-215 5c924489e), esto leivottu uudelleen → palatsi-esto-v16 (_tyo/pelikoodari/kuja05-pk6-20261029/).
+  C3_/C2_-nimet sallituissa; osasarja juuri-pk7-v73:ssa. Pintatarkistus v73 0 vikaa, mutta VANHAT PINNAT (LR:n, ennen 'vika'-tilaa):
+  ulkorengas-v5 (V4_stone, 24 lod2), kulmatorni-v1b (V4_stone, 1), muurikate-v18:n C3-vanha kate kk_muurikate_vanha_* (V4_sokkeli/_kansi, 2)
+  → portti_kivijalka.py VANHA=… (lod2 PIENENNA=256) näille + uudet versiot PK:lle. Avoimet-v51 (8) lukittu, ei.
