@@ -1,0 +1,203 @@
+{
+  "createdAt": "2026-10-29T21:27:36.274970+00:00",
+  "order": "Palatsiosat215 A1: chiwenin näkyvä miekan kahva #1249",
+  "status": "TECHNICAL_READY_RECEIVER_PENDING",
+  "assets": [
+    {
+      "name": "chiwen",
+      "path": "3d/chiwen.glb",
+      "sha256": "6953b83f84f07182ed6be0ac7da70f24f3032f66ff70837f5523058b2a125cbd",
+      "bytes": 7085552,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/sources/chiwen-normalized-before-hilt.glb",
+      "sourceSHA256": "9892505d61dcdd0e66dcead853d4ca08c25c5102ea2a40bcb382a1e659f5621c",
+      "triangles": 3918,
+      "materials": 2,
+      "primitives": 2,
+      "dimensionsXYZM": [
+        1.1205265522003174,
+        3.4000000953674316,
+        3.564342975616455
+      ],
+      "pivot": "base center",
+      "up": "+Y",
+      "forward": "+Z",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "scaleApplied": 2.4285714626312256,
+      "metallicFactor": 0.0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/chiwen/normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1528fd2bc9c7c83b9dd65ec4383ed7909ae6bcb414add7398182a44270404891",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/chiwen/basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "2860543a95861d9806a8b4eda29a4bc682b7be7cc0bd73dc512e4cb7b0cf60e9",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/chiwen/metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1a880db542c86ed1a03ac9f6f70fcd29c275ec4284557565b304e8dd18bbf7a2",
+          "bytesPreserved": true
+        },
+        {
+          "role": "normal",
+          "path": "tekstuurit/chiwen-hilt/normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "35ada415a00632cd1b6e0677e65015504933a026999f551a8f666baddaf381f1",
+          "bytesPreserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/chiwen-hilt/basecolor.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "89f41f86c11a83313d14cc26e8284df1a5e765802bdc405bca7a2349dff74fa6",
+          "bytesPreserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/chiwen-hilt/metallic-roughness.jpg",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "b1c37b54a81521c153e0eeadd14adf08a4a7b2c472e27868af469ea9ac2ade10",
+          "bytesPreserved": true
+        }
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "topologyUVNormalsPreserved": true,
+      "skins": 0,
+      "animations": 0,
+      "visualQA": "PASS_STATIC_FOUR_VIEWS",
+      "receiverAccepted": false,
+      "gameIntegrated": false,
+      "peakRSSMiB": 69.9375,
+      "elapsedSeconds": 0.6122980830259621,
+      "bodyBinaryBytesPreserved": true,
+      "attachmentSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/delivery/3d/chiwen-hilt.glb",
+      "attachmentTransform": {
+        "heightM": 1.35,
+        "translationM": [
+          0.0,
+          1.6,
+          0.38
+        ],
+        "yawDegrees": 90
+      },
+      "yawAppliedDegrees": 0,
+      "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+      "knownLimitations": [
+        "Historically informed game interpretation, not measured museum replica.",
+        "New hilt generated once in Tripo and mounted as separate intersecting ceramic mesh; original body binary, UV and maps remain byte-identical. Existing height3.4m preserved. Hilt visible side and elevated views.",
+        "PBR lighting and roof placement await game pair; not a watertight certificate."
+      ],
+      "visualReviewAt": "2026-10-29T21:27:35.906449+00:00",
+      "task": 1249,
+      "jobId": "dcff2890-b71c-4d02-a516-3ccb097ad609",
+      "url": "https://studio.tripo3d.ai/workspace/generate/dcff2890-b71c-4d02-a516-3ccb097ad609",
+      "credits": 45,
+      "attempt": 1,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/references/chiwen-reference01.png",
+      "referenceSHA256": "4aae6e414e9f039a01780817d149aeba696b0e40ee0071d761ddcd7f191afd1d"
+    }
+  ],
+  "liike": "ei liikettä",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "files": [
+    {
+      "path": "3d/chiwen.glb",
+      "bytes": 7085552,
+      "sha256": "6953b83f84f07182ed6be0ac7da70f24f3032f66ff70837f5523058b2a125cbd",
+      "liike": "ei liikettä",
+      "tyyppi": "esine"
+    },
+    {
+      "path": "KAYTTO.md",
+      "bytes": 435,
+      "sha256": "68bedd5c65fa754cfed79ee0ae6b7f6a7dac5f364e9f103f02592ad6ebe48c6c"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 346,
+      "sha256": "6962dd2d52dee040946b49532e8e24848cd546028717ec301d1d5ffa1d5a00fd"
+    },
+    {
+      "path": "esikatselu/chiwen-nelja-suuntaa.png",
+      "bytes": 311437,
+      "sha256": "0d8c45e51692b74d531bc5c4d838849cf9c1276c665b9040a949f5ba0454c2e9"
+    },
+    {
+      "path": "prompts/chiwen-reference01.txt",
+      "bytes": 1270,
+      "sha256": "ccd408886a5fe2daf9619939e3f08e798c0aabb8cf26ff3ac8fc30fe9feacd8d"
+    },
+    {
+      "path": "qa/chiwen-technical.json",
+      "bytes": 3421,
+      "sha256": "2596b5cc9d2a9da0914b6e59186d2938515048ab480edc6480c5f1334d8f5fda"
+    },
+    {
+      "path": "qa/import-gate.json",
+      "bytes": 2565,
+      "sha256": "c432c34c0cdbc43faed3043ba27404ff20260b739a506a83c4c6de0e76e4ec8a"
+    },
+    {
+      "path": "tekstuurit/chiwen/basecolor.png",
+      "bytes": 1174533,
+      "sha256": "2860543a95861d9806a8b4eda29a4bc682b7be7cc0bd73dc512e4cb7b0cf60e9"
+    },
+    {
+      "path": "tekstuurit/chiwen/metallic-roughness.png",
+      "bytes": 299861,
+      "sha256": "1a880db542c86ed1a03ac9f6f70fcd29c275ec4284557565b304e8dd18bbf7a2"
+    },
+    {
+      "path": "tekstuurit/chiwen/normal.png",
+      "bytes": 1236084,
+      "sha256": "1528fd2bc9c7c83b9dd65ec4383ed7909ae6bcb414add7398182a44270404891"
+    },
+    {
+      "path": "tekstuurit/chiwen-hilt/basecolor.jpg",
+      "bytes": 483677,
+      "sha256": "89f41f86c11a83313d14cc26e8284df1a5e765802bdc405bca7a2349dff74fa6"
+    },
+    {
+      "path": "tekstuurit/chiwen-hilt/metallic-roughness.jpg",
+      "bytes": 254955,
+      "sha256": "b1c37b54a81521c153e0eeadd14adf08a4a7b2c472e27868af469ea9ac2ade10"
+    },
+    {
+      "path": "tekstuurit/chiwen-hilt/normal.png",
+      "bytes": 2892800,
+      "sha256": "35ada415a00632cd1b6e0677e65015504933a026999f551a8f666baddaf381f1"
+    }
+  ]
+}

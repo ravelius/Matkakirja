@@ -1,0 +1,117 @@
+{
+  "name": "chiwen",
+  "path": "3d/chiwen.glb",
+  "sha256": "6953b83f84f07182ed6be0ac7da70f24f3032f66ff70837f5523058b2a125cbd",
+  "bytes": 7085552,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/sources/chiwen-normalized-before-hilt.glb",
+  "sourceSHA256": "9892505d61dcdd0e66dcead853d4ca08c25c5102ea2a40bcb382a1e659f5621c",
+  "triangles": 3918,
+  "materials": 2,
+  "primitives": 2,
+  "dimensionsXYZM": [
+    1.1205265522003174,
+    3.4000000953674316,
+    3.564342975616455
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 2.4285714626312256,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/chiwen/normal.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "1528fd2bc9c7c83b9dd65ec4383ed7909ae6bcb414add7398182a44270404891",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/chiwen/basecolor.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "2860543a95861d9806a8b4eda29a4bc682b7be7cc0bd73dc512e4cb7b0cf60e9",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/chiwen/metallic-roughness.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "1a880db542c86ed1a03ac9f6f70fcd29c275ec4284557565b304e8dd18bbf7a2",
+      "bytesPreserved": true
+    },
+    {
+      "role": "normal",
+      "path": "tekstuurit/chiwen-hilt/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "35ada415a00632cd1b6e0677e65015504933a026999f551a8f666baddaf381f1",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/chiwen-hilt/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "89f41f86c11a83313d14cc26e8284df1a5e765802bdc405bca7a2349dff74fa6",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/chiwen-hilt/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "b1c37b54a81521c153e0eeadd14adf08a4a7b2c472e27868af469ea9ac2ade10",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "topologyUVNormalsPreserved": true,
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "peakRSSMiB": 69.9375,
+  "elapsedSeconds": 0.6122980830259621,
+  "bodyBinaryBytesPreserved": true,
+  "attachmentSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/delivery/3d/chiwen-hilt.glb",
+  "attachmentTransform": {
+    "heightM": 1.35,
+    "translationM": [
+      0.0,
+      1.6,
+      0.38
+    ],
+    "yawDegrees": 90
+  },
+  "yawAppliedDegrees": 0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "knownLimitations": [
+    "Historically informed game interpretation, not measured museum replica.",
+    "New hilt generated once in Tripo and mounted as separate intersecting ceramic mesh; original body binary, UV and maps remain byte-identical. Existing height3.4m preserved. Hilt visible side and elevated views.",
+    "PBR lighting and roof placement await game pair; not a watertight certificate."
+  ],
+  "visualReviewAt": "2026-10-29T21:27:35.906449+00:00"
+}

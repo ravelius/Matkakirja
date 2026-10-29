@@ -1,0 +1,135 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/partial-a1-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "chiwen.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "chiwen.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 3918,
+     "piirrot": 2,
+     "materiaalit": 2,
+     "solmut": 2,
+     "kuvat": [
+      "1024×1024 png",
+      "1024×1024 png",
+      "1024×1024 png",
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.559,
+       0,
+       -1.576
+      ],
+      "max": [
+       0.562,
+       3.4,
+       1.989
+      ],
+      "koko": [
+       1.121,
+       3.4,
+       3.564
+      ]
+     }
+    },
+    "polku": "3d/chiwen.glb"
+   },
+   {
+    "nimi": "chiwen-nelja-suuntaa.png",
+    "polku": "esikatselu/chiwen-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "basecolor.png",
+    "polku": "tekstuurit/chiwen/basecolor.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1024
+    }
+   },
+   {
+    "nimi": "metallic-roughness.png",
+    "polku": "tekstuurit/chiwen/metallic-roughness.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1024
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/chiwen/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1024
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/chiwen-hilt/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/chiwen-hilt/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/chiwen-hilt/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: chiwen.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]
