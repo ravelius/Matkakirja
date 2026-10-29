@@ -719,3 +719,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   joten runko ensin → uusi kate jaksolle (tai kopioi kujan 05 katejakso muuri_raystas + muuri_vyo_kapea -käsittelyineen). Parit 05 molemmilla
   kameroilla → KK, PK:lle tieto radan tarkistukseen.
 - OPPI: pelikameran kuvat vaihtelevat ajoittain (hahmon kohta) → vertailu aina TESTIKAMERAlla; peli korvaa tunnetut materiaalinimet (lisäys 52).
+
+## LISÄYS 55 klo 06.42 (29.10.): OMISTAJA 06.41 — KUJA 02 KAVENNETAAN HAVAINTEEN LEVYISEKSI — LUOVUTUS, ALOITA TÄSTÄ
+- Omistajan kortti 06.41 (KK:n välitys, sanatarkasti): "Kavennetaanko kuja 02 havainnekuvan levyiseksi?" → "Kavennetaan (suositus)"
+  (selite: "Korkeat muurit ympäröivät juoksijaa kuten havainnekuvassa."). Kuva havainne-editori-20261029-063350 / 02; mittari: kattojen väli
+  yläreunassa peli 0,70 vs havainne 0,54 kuvan leveydestä → kavennus noin 0,54/0,70 ≈ 0,77 nykyisestä (tarkista TESTIKAMERAlla).
+- Työnjako: KS kaventaa pohjan (pohja.json kujan 02 muurit sisään) → Lavastaja siirtää/rakentaa muurit (runko taustassa → kk_muurikate.py
+  hakee katteen uudelleen, muuri_raystas + muuri_vyo_kapea + sokkeli_korkea uudelleen) ja sovittaa 02:n pään portin v116 (portti_havainne.py)
+  kapeampaan aukkoon → PK tarkistaa radan ja esto-leivonnan. Parit 02 (havainne / peli, TESTIKAMERA) → KK.
+- KUJA 05 PYSYY NYKYISELLÄ LEVEYDELLÄ (omistaja 06.41). 05:n jatko pk4:n mukaan (lisäys 54, SEURAAVA) on yhä kesken ja tehdään samassa
+  erässä; molempiin sama KS-pohja, joten pyydä KS:ltä kujan 02 kavennus pk4:n päälle (yksi pohja.json, ei kahta rinnakkaista).
+- Järjestys: 1) KS pohja (pk4 + 02 kapea) 2) Lavastaja 05:n uusi muurijakso + 02:n muurit 3) parit 02 ja 05 → KK 4) PK rata.
