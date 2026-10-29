@@ -42,3 +42,11 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
 ## Jatko keskeytyksestä
 - Taustaajoja ei ole. Worktreet: wt/proto-pelikoodari-kaapu-213 (drone-214, puhdas), wt/proto-pelikoodari-rikotut-214 (puhdas),
   wt/proto-pelikoodari-pk7-214 (puhdas).
+
+## LISÄYS 09.05
+- rikotut-214 16e04df4b: UI-tekstit ovat NUI:n ui.fi.json:issa (ui.juoksupeli.rikotut.otsikko, .nimi-kpl), joten juoksupeli.rikotut.*
+  poistettiin. JuoksuEsine.HistoriaTaiTeksti on lisätty. Peli 761/761, unity 0. NUI:n näkymä on haarassa natiivi-ui/rikotut-214 (c2cb0af2c,
+  yhteenveto aukeaa ennen loppukorttia); NUI:ta pyydetty rebasettamaan 16e04df4b:n päälle.
+- PT 09.0x: lattian z-fighting LR:lle (v64 → v65). Koordinaatit on lähetetty LR:lle: p-kujaportti S-N, s 23,7–31, pelin kehyksessä
+  (239,6; −804,5). Nippu junaan vasta v65:n ja pidemmän parin jälkeen. Drone g OK JU:lle (PT).
+- Viestiraja täynnä → muut viestit varakanavalla mcp__ccd_session_mgmt__send_message.
