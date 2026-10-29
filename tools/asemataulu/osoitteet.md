@@ -5,10 +5,11 @@ organization … invited editors"). Siksi jokaisella tilillä on oma kopio samas
 
 | Tili | Osoite | Huom |
 |---|---|---|
-| Päätili (pysähtyi 22.10. viikkorajaan; ei käytössä): oli käytössä 20.10. klo 18.1x alkaen (tilinvaihto PT local_cf5b4eca; viikkoraja tällä viikolla 85 %, omistaja 20.10. 18.20; viikko nollautuu 26.10. klo 09.59). Aiemmin käytössä 18.10. 01.0x – 19.10. 04.00 | https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix | alkuperäinen 10.10.; julkaistu uudelleen 18.10. 01.1x (PT local_cf5b4eca), tietokanta täytetty |
+| Päätili (org f04011ee; KÄYTÖSSÄ 29.10.2026 klo 13.xx alkaen (tilinvaihto PT local_cf5b4eca, org f04011ee)). Aiemmin käytössä 20.10. klo 18.1x – 22.10. (pysähtyi viikkorajaan) ja 18.10. 01.0x – 19.10. 04.00 | https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix | alkuperäinen 10.10.; julkaistu uudelleen 18.10. 01.1x (PT local_cf5b4eca), tietokanta täytetty |
 | R6VQ-taulu: käytössä 19.10. klo 07.0x – 20.10. 18.1x tilillä sami.reivinen@vvi.fi (KK:n faktakorjaus 20.10. 17.54: ~/.claude.json org ddaee6a2; aiempi merkintä gmail oli virhe), viikko 95 %, nollautuu 26.10. aamuyöllä. SEURAAVA: päätili (omistaja 20.10. 17.54) | https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy | julkaistu 12.10. 19.39; uusin sivu ja tietokanta 19.10. 07.1x (PT local_8d8ebf72) |
 | sami.reivinen@vvi.fi (koodaus, raja 99 %, viikko nollautuu ti 20.10. klo 01.59) | https://claude.ai/artifact/EekZDPMuAcsjT3awvn4jPb | julkaistu 13.10. 21.5x (PT local_593b89a1) |
-| vvi@vvi.fi (koodaus, raja 99 %, viikko nollautuu pe klo 08.00; KÄYTÖSSÄ 23.10. klo 11.4x alkaen (tilinvaihto PT local_5df52e10)) | https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm | julkaistu 15.10. 12.2x (PT local_5df52e10) |
+| vvi@vvi.fi (koodaus, raja 99 %, viikko nollautuu pe klo 08.00; ei enää käytössä 26.10. klo 16.3x) | https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm | julkaistu 15.10. 12.2x (PT local_5df52e10) |
+| sami.reivinen@vvi.fi (org ddaee6a2; ei käytössä 29.10. alkaen; oli käytössä 26.10.2026 klo 16.3x – 29.10. (tilinvaihto PT local_8d8ebf72)) | https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy | julkaistu uusimmalla sivulla ja täytetty 26.10. klo 16.3x (tilinvaihto PT local_8d8ebf72) |
 
 ## Tilinvaihdossa (uusi PT)
 1. Artifact list: onko tällä tilillä jo oma Asemataulu? Jos on, read + publish samaan osoitteeseen; jos ei, publish uutena

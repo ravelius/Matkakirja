@@ -1,7 +1,7 @@
 # Lavastaja (ent. Linnanrakentaja) – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
 Rooli: LAVASTAJA (Opus, medium; ent. Linnanrakentaja, omistaja 19.10.2026 klo 08.48): kokoaa Codexin mallit kohtauksiksi (paikat, mittakaava, valo); Louvre loppuun, sitten linnan uudet huoneet; museon kehysten pinnat. Ei tee malleja itse (Codex tekee kaiken grafiikan). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
-(14.10.: local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e). Checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja, haara `linnanrakentaja-tyo-20260929`.
+(14.10.: local_beb68834-6c4f-4839-ac75-7876b45052c3). Checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja, haara `linnanrakentaja-tyo-20260929`.
 Roolin oma aloitusviesti (säännöt, historia) ja luovutukset ovat haarassa: `docs/raportit/viesti-linnanrakentaja-aloitus.md` ja `-luovutus-<pvm>.md`.
 OLAVINLINNA TAUOLLA, PEKING CODEXILLA (omistaja 13.10.). Lähettäjä: Postivahti (NOLLAUS.md) tai Päätoimittaja – täytä <…>.
 

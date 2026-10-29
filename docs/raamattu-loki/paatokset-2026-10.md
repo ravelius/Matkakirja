@@ -3184,3 +3184,7 @@ Kortti KK:ssa: 'Kelpaavatko viisi uutta muistokuvaa?' → 'Kelpaavat (suositus)'
 ## TILINVAIHTO PYYDETTY (omistaja 29.10. klo 12.53) (29.10.2026 klo 12.56)
 
 Omistaja KK:ssa: 'tee siirtoprompti toiselle tilille'. Vanha tili sami.reivinen@vvi.fi (org ddaee6a2), viikko 97 %, nollautuu 2.11. klo 03. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20261029.md (PT 12.55); uusi tili omistajan valitsema, rivi osoitteet.md:hen uuden PT:n toimesta.
+
+## TILINVAIHTO 29.10.2026 klo 13.xx (29.10.2026 klo 13.06)
+
+Tilinvaihto tilille org f04011ee (päätili). PT local_cf5b4eca, KK local_231e4bad; 9 roolia uusina sessioina (Postivahti, Asemataulu, Julkaisija, Natiiviseppä, Pelikoodari, Lavastaja, Karttaseppä, Natiivi-UI, Sisältökirjuri); levossa olevat tämän tilin vanhoihin sessioihin (Linssiseppä, Valoseppä, Projektiseppä, Äänittäjä, Laitetestaaja); Työkaluseppä ilman tämän tilin sessiota (luodaan tarvittaessa). Taulu Rq5ajPU4SraE2XKd7BYAix (v84, tietokanta täytetty). Kotikansiot mainiin, ohitettu Matkakirja-posti (Postivahti mergeää itse), -aanittaja, -laitetestaaja, -siirtoseppa (levossa, JÄLJESSÄ). Ohjeiden koe 10/10 läpi.
