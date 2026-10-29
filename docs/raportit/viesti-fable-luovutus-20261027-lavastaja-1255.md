@@ -736,3 +736,17 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   Kaksi kaistaa tulee yli 1,5 m leveälle osalle; suositus ≥ 3 m. Tarkista kuja 02:n kavennuksen (≈ 0,77 × nykyinen) jälkeen, että vapaa
   leveys pysyy ≥ 3 m (vähintään 2,4 m); jos havainteen leveys alittaa sen, kysy KK:lta ennen kuin kavennat rajan alle.
 - Kun pohja (KS) ja muurit (LR) ovat valmiit, ilmoita PK:lle (Pelikoodari): PK tekee ratatarkistuksen ja parin KK:lle.
+
+## LISÄYS 57 klo 07.00 (29.10.): KUJA 02:n KAVENNUS SEIS — MITTARIN SARAKKEET OLIVAT KÄÄNTEISET (JUMI PT:lle)
+- H/vertailu-lr.sh (editori-lr.sh:n vertailu) antoi mittarille peli.png:n ensin → mittari.txt:n "havainne"-sarake = peli. Kortin 06.41
+  "0,70 vs havainne 0,54" oli väärin päin: havainne 0,70, peli 0,54 → pelin kattojen väli on jo KAPEAMPI. Korjattu (havainne ensin, 07.00).
+  Aiempien parien mittari.txt:t (editori-lr-ajot) ovat samaa käänteistä järjestystä: lue ne sarakkeet vaihdettuina.
+- Malli ≠ pohja (mittaa.py, V4_red-kasvot, yksikerros-v99): 02 z 316–340 vapaa 6,7–6,9 m (25.10. levennys, itämuuri pohjasta +2,30 m),
+  pohja pk4 4,4–4,6, KS:n pk5 3,4–3,6; 05 z 384–400 malli 8,9–9,1 m (länsimuuri x −255,2…−255,9), pohja 5,1–5,3.
+  PT 06.5x: yksi totuus = malli; KS piirtää pohjan LR:n muurilinjoista (myös 05:n jatko mallin kulmasta x ≈ −256); pk4/pk5 vedetty pois.
+- Koe: UUSI K/tyokalut/kuja02_kavennus.py (kuja40_levennys.py:n pohjalta, SIIRTO env, --muurit linjat KS:lle) + aja_v117_pari.zsh
+  → yksikerros-v100, muurikate pari-v117, juuri-v117m. SIIRTO −1,5: vapaa 5,2–5,4 m, mutta peli 0,54 → 0,47 (testikamera
+  TESTIKAMERA_02="4 6.5 16 45": parit havainne-editori-20261029-065520 ennen / -065711 jälkeen). EI viedä eteenpäin.
+- SEURAAVA: odota omistajan uutta päätöstä (PT → KK kortti oikeilla luvuilla). Jos leveys pidetään: muurilinjat nykyisestä mallista
+  (kuja02_kavennus.py SIIRTO=0 --muurit, tai mittaa.py) KS:lle → pohja → PK rata (≥ 2,4 m, suositus ≥ 3) → parit KK:lle; sitten 05:n jatko.
+  Mittausskripti: K/tyokalut/kuja40_mittaa.py <tausta-kansio> <pohja.json> [<pohja2.json>] (python3 ilman -I: numpy).
