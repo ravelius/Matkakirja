@@ -20,8 +20,9 @@ METAL 442/0, PIPELINE 434/0 (c3624d8bb; 3dc45d778 muuttaa vain C#:a). Ei omia ta
 
 ## Kesken / seuraava askel
 1. PT 23.4x: UUSI pinta **V4_jalusta_lohkokivi** (havainteen harmaa isokokoinen lohkokivi muurien alla 0–3 m), LR jakaa sen v82:ssa.
-   Kuvan lähde kysytty PT:ltä (Codex-tilaus vai sokkeli-v03 isommaksi). Pintasarjaan + varjostin, pari KK:lle + PT:lle.
-2. PT:n kuittaus 6214faffa…3dc45d778 (vesi + pääharja) junaan 215.
+   PT 23.5x PÄÄTÖS: olemassa oleva sokkeli-v03 isommaksi (lohkot ~1,0–1,5 m, harmaa, havainteen 06 mukaan), EI Codex-tilausta;
+   LR:n v82 on ämpärissä (23.36). Pintasarjaan + varjostin (KiviJako/sävy kivittäin), pari 06 KK:lle + PT:lle.
+2. PT KUITTASI 3dc45d778 (vesi + pääharja) junaan 215 (23.5x).
 3. B1–B3: V4_keskiovi ja V4_nimitaulu odottavat geometriaa (LR/NUI/KS); hallin ovet (Taihedian lod1/2 V4_wood) NUI:llä (PT käski).
 4. LUOVUTUKSEEN (PT 22.3x, EI NYT): 03b:ssä varjot puuttuvat kokonaan, aukion kaukolattia vaalenee valkoiseksi, kamera eri paikassa
    kuin havainteessa (sivumuurit puuttuvat); 07:n usva vaalentaa koko näkymän → valo omistajan järjestyksessä myöhemmin korttina.
