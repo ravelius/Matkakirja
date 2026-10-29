@@ -81,14 +81,14 @@ export function vertaa(uudet, perusTiivisteet, perusNimi, sarakkeita, kynnys = 0
     tilasto[taso] = { laattoja: lista.length, muuttuneita: eri.length };
     if (osuus > kynnys) {
       muuttuneet[taso] = null;
-      vietavat.push(...lista.map(([, l]) => l));
+      for (const [, l] of lista) vietavat.push(l);   // ei levitystä: 260 000 laattaa ylitti pinon (tasankopoltto 28.10.)
       tilasto[taso].koko = true;
     } else {
       // Kartta kattaa suurimman muuttuneen indeksin; puuttuvat tavut = muuttumaton (js/deltasarja.js).
       const s = sarakkeita(taso);
       const indeksit = eri.map(([, l]) => l.rivi * s + l.sarake);
-      muuttuneet[taso] = kartta(indeksit.length ? Math.max(...indeksit) + 1 : 0, indeksit);
-      vietavat.push(...eri.map(([, l]) => l));
+      muuttuneet[taso] = kartta(indeksit.length ? indeksit.reduce((m, i) => (i > m ? i : m), 0) + 1 : 0, indeksit);
+      for (const [, l] of eri) vietavat.push(l);
     }
   }
   return { delta: { perus: perusNimi, muuttuneet }, vietavat, tilasto };
