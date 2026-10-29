@@ -1020,3 +1020,11 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   välein (myös v02:ssa) = valo/varjostin → ilmoitettu PT:lle (VS/PK).
 - SEURAAVAKSI: PT:n kuittaus → v67 = v66 + tausta-v67 (yksikerros-v110) + muurikate-v22 (pari-v136) (kopioi paketti_v66.py → paketti_v67.py) → PK.
   Junaan 214 vasta omistajan kortin jälkeen (seinat-211 + kujakivet v6).
+
+## LISÄYS 81 klo 15.3x (29.10.): v67 VIETY (kujakivet v6) — ALOITA TÄSTÄ
+- PK 15.2x: v66 drone OK (t-portin terassi kivilaattana; pari _tyo/pelikoodari/parkour-20261027/tarkistus-drone214v66/).
+- PT 15.3x: lattia ok; kivijalan pystyjuovat → Valoseppä (seinat-211 _KujaKivi), ajaa parit uudelleen aja_v136_pari.zsh:llä.
+- v67 = K/tyokalut/paketti_v67.py: _valmiit/juoksupeli-kk-lavastaja-v67-vienti-20261029 = v66 + tausta-v67 (= yksikerros-v110) + muurikate-v22
+  (= pari-v136, korvaa v21) ; rakennukset-v50, avoimet-v51 ennallaan; 299 tiedostoa, SHA OK (3f913976…). PK:lle ja PT:lle ilmoitettu.
+  EI ämpäriin eikä junaan ennen omistajan korttia (PT).
+- SEURAAVAKSI: odota PT:n/VS:n viestejä; avoimet työt lisäyksen 77 alta ja EROLISTA (T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
