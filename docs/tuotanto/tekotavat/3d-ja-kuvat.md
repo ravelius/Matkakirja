@@ -202,7 +202,7 @@ jokaiseen kujaan erikseen.
   `vesisylkija`). Lähde: kujissa hyväksytyt mitat (v1: kujan 02 länsimuuri). Tekijä `tyokalut/osasarja_v1.py` Lavastajan työkansiossa.
 - **Ruudukko ja kehys**: 2 m:n moduuli (1 m täyttöön), pivot pohja-keski, x toistosuunta, y ylös, +z ulos (z = 0 seinän
   ulkopinta). Peli venyttää välin osia tasan (sx), enintään ±15 %.
-- **Ladonta** (Pelikoodari, Unityn Splines): `ladonta.json` – polku seinän ulkopinnan juurta pitkin, ulos = oikealle
+- **Ladonta** (Pelikoodari, puhdas koodi `JuoksuOsasarja` + `Kokoaja`, ei ajonaikaisia Splines-komponentteja; Splines vain kaariin): `ladonta.json` – polku seinän ulkopinnan juurta pitkin, ulos = oikealle
   kulkusuunnasta; vasen käännös ulkokulma, oikea sisäkulma; kulma- ja päätyosien vähennys `osat`-taulussa. Kivijalka, kivijalan
   kansi ja reunakivi pursotetaan profiileina koko polun pituudelta (jiiri kulmissa). Lavastajan `osasarja_koe.py` latoo samoilla
   säännöillä tarkistuskuviin ennen pelikoodia.
