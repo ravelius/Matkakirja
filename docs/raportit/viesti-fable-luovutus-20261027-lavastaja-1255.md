@@ -1309,3 +1309,18 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - PAKETTI v78 (paketti_v78.py) = v77 + rakennukset-v64 + c2-v12 (MuurikateC2Kansio "kielletty-c2-v12/"): 357 tiedostoa, SHA OK, SHA256SUMS 7aec46c5.
   PT:lle, PK:lle, NUI:lle ja VS:lle ilmoitettu 22.4x. EI ämpäriin ennen PT:n kuittausta.
 - SEURAAVAKSI: (1) pari 06 → PT + KS; (2) PT:n kuittaus v78 (+ vastaus muiden harjojen kysymykseen); (3) erolista: T-risteys, sivuhallit, 04, 07.
+
+## LISÄYS 96 klo 22.5x (29.10.): v78/v80 KUITATTU, OVET, ULKORENGAS-v7 (KERROSTALOT → PUUT), PARIT 06 JA 07 JONOSSA — ALOITA TÄSTÄ
+- PT KUITTASI v78 (22.42) → JU hylkäsi (alikansion A3A5-LAHTEET.md) → K/tyokalut/paketti_md_juureen.py siirsi .md:n juuren LAHTEET.md:hen;
+  pakettiskripteihin .md-suodatus. v79 (= v78 + Taihedianin ovet, aja_v156_ovet.zsh: NUI:n ovet_uv.py g-taihedian-lod0:aan → rakennukset-v141/
+  kielletty-rakennukset-v65) nimetty v80:ksi korjauksen kanssa: _valmiit/juoksupeli-kk-lavastaja-v80-vienti-20261029, SHA256SUMS 29901808.
+  PT KUITTASI v80 JU:lle vientiin. NUI ajoi pääharjan g-taihedianin LOD1:een itse.
+- EROLISTA (PT 22.5x): T-risteys ja 04 OHI (kuja 01 lukittu 18.22). 07: UUSI K/tyokalut/rengas_puistoksi.py (kerrostalot = ruudut 4 m, joiden
+  V4_harmaa/V4_teal yli 8 m; julkisivut helma_*-solmuissa; laajennus 2 ruutua + leijuvat kultakatot 4 ruudun säteellä; SUOJA: V4_red yli 9 m ja
+  punainen ala ≥ harmaa/teal 3 × 3 ruudussa → Tiananmen/Duanmen säilyvät) + rengas_puurivi.py (vallihaudan eteläranta z −499/−507, portti auki).
+  Ketju aja_v157_ulkorengas.zsh → K/ulkorengas-v7/kielletty-ulkorengas-v7. Koekuvat K/rengas-koe/ (v7-koe.png, etu-pari.png, 41-pari.png).
+- PARIT: scratchpad pari_v79.zsh (06, 03, 03b; juuri-pk7-v79) ja pari_v80_07.zsh (07; H/juuri-pk7-v80 = v79 + ulkorengas-v7 nimellä
+  kielletty-ulkorengas-v5 + rakennukset-v141 + c1-v7 + c2-v13) taustalla editorijonossa. Nollauksen jälkeen: uusin havainne-editori-*/06 ja */07;
+  puuttuvat ajetaan uudelleen samoilla arvoilla. 06 → PT + KS (nimitaulu + takaseinät); 07 → PT (tasainen vertailuvalo).
+- SEURAAVAKSI: (1) parit → PT; (2) PT:n kuittaus ulkorengas-v7 → paketti v81 (= v80 + kielletty-ulkorengas-v7); (3) loput 07:stä (muuri/kulmatornit
+  tarkistus) ja 06 (portin etupiha) pariajon perusteella.
