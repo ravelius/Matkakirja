@@ -1002,3 +1002,11 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Codex-tilaus claude/postilaatikko cac6ea6ab: stone-surfaces-v6 (lattialaatat-v03 rivit 0,6–0,7 m, laatat 0,6–1,4 m; sokkeli-v03
   8–9 kertaa, kivet 0,7–1,4 m), UV 1:1. Tultua: kujakivi_pinnat.py VV_LATTIA=v03 VV_SOKKELI=v03 SK=1 LKU=1 LKV=1 → uusi tausta + parit.
 - PT:ltä kysytty 15.0x: v66-paketti nyt v109:llä vai v6-kuvien jälkeen. v66: R = rakennukset-v126, tausta v109 (tai uusin), muurikate pari-v135.
+
+## LISÄYS 79 klo 15.1x (29.10.): v66 VIETY _valmiit/juoksupeli-kk-lavastaja-v66-vienti-20261029 — ALOITA TÄSTÄ
+- PT 15.1x: v109-koot ok (harmaa kivi, koot lähellä havainnetta); puuttuu "erikokoisia" + kivijalan matalat kerrokset (02:ssa vielä isoja kiviä)
+  → v6-kuvat; omistajan kortti vasta v6:n parien jälkeen. v66 tehty nyt: K/tyokalut/paketti_v66.py (vanha luonnos paketti_v66-luonnos.py.bak):
+  tausta-v66 = yksikerros-v109, rakennukset-v50 = rakennukset-v126, muurikate-v21/kk-muurikate-v21-pohja.glb = muurikate-v19/pari-v135 (korvaa v20),
+  avoimet-v51; 299 tiedostoa, SHA256SUMS OK (4398edaa…). PK:lle ilmoitettu (drone: t-portin terassi kivilaattana). Junaan 214 vasta kortin jälkeen.
+- SEURAAVAKSI: Codexin stone-surfaces-v6 (cac6ea6ab) → T7/postista K:hon, SHA → kujakivi_pinnat.py v03-kuvilla (UV 1:1; kivijalka mataliksi
+  kerroksiksi PT:n mukaan) uuteen taustaan + muurikatteeseen → parit 02/05 → PT → kortti omistajalle → v67.
