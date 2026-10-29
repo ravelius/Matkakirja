@@ -1,0 +1,201 @@
+{
+  "verifiedAt": "2026-10-29T19:30:57.535878+00:00",
+  "all27SourceFilesGitBlobVerified": true,
+  "files": [
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029.md",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "0037d8bd8237c0584e1e2f53f9e1f81ff6642fe2",
+      "sha256": "e47d7605eabca352a1979e80b04fe23456c4d1d5125d20c7f0cd5390ede0ca1c",
+      "bytes": 7161
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/1-chiwen.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "8170245838a22c5dd716fe6ad5c0a96658cffd58",
+      "sha256": "d6062b41603692df1e5b44c4ce9bfd8fa475a8f161556c6baebec9120967f992",
+      "bytes": 37641
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/2-harjaelaimet-yla.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "dc567ffb62b0f043793e0f7fe461c1bb1c46e7c5",
+      "sha256": "f08230eed2691946d9435705c91c4b2bcfb948278046ee4cc8dc510967ea1c27",
+      "bytes": 31420
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/3-harjaelaimet-ala.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "e58aaad73e19f41dacf492086b5cc82bf26c8eb2",
+      "sha256": "70ecbff6b64bbedba1f292fec1a04db54bad813c9d8c423f3d2827500f2852e7",
+      "bytes": 31373
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/4-lasitiilikate.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "61d4576bff001f9556207f486d291dd3b7d249f7",
+      "sha256": "6e0350f1a5362b23af33dc526846b7d0efe8c54084f0329de4e62154fcbf4932",
+      "bytes": 182465
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/5-raystas-paatytiilet.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "a78daa3238b0606b20ff109460f4539f565245df",
+      "sha256": "2551fc9b1310b775c310d4e4f38ad398de7864c7b58454887f979f4f9535604e",
+      "bytes": 98933
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/6-palkkimaalaus-ala.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "f5be8e93733285777347dded72d5318ecc8bb714",
+      "sha256": "1859a310102ee6f47158ceda2e76488a08e8b90f1f80ee1bc200745d7b475618",
+      "bytes": 338448
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/7-palkkimaalaus-yla.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "51e8e916818d5e627b4d6e32385df0dfdd4315db",
+      "sha256": "97055cc19af19a23bf0aecb0c2622b45c37fc4b74f8500491e411591c9d24816",
+      "bytes": 133746
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/8-ristikko-ovi.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "b9af7c55344352195bc7525d0a22a1054f8b597d",
+      "sha256": "8aed7a9d80e82ceeb7fee7366aebca28be24531c4653ce29c33dc4425efd9670",
+      "bytes": 23987
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/9-keskiovi-kulta.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "7744ddd4954beb30a23122d3a2c55a228e2dc66f",
+      "sha256": "dd13c40a37c095246a53dabfefc199ac78e6f074585dc2eeb6b2511513defb06",
+      "bytes": 26695
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/k-julkisivu.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "46721b9d469d2667cce7139da70ad5a954f4bec6",
+      "sha256": "ebe7d7f61aa974664ffb1557b42cd7dcfff52f9d1808b5f38ed663d5cf177393",
+      "bytes": 584702
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/k-katto-oikea.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "7b36e40e92dd522624b39f92b93f2de945eaffc0",
+      "sha256": "5d5200f863a5ecad2d10ae091f3cb703ec080bc49499b2336949e5807e0ea836",
+      "bytes": 481460
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/k-katto-vasen.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "0490fa75a88de62639cf969acf9281baa43b53b3",
+      "sha256": "76b8bfd565d7c15105e00676184e0dcb32efdd4cc6685344d031b95918781bb9",
+      "bytes": 458493
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/halli-03/tilaus-taihedian.md",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "f3b7ffef9ea4175405e6aa533fd12b56e0dfb352",
+      "sha256": "964f2d7c5a902b45d4610c302f1a0b908aacb8e931923628a4b9aa7244e74f04",
+      "bytes": 3564
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/1-harjakoristeet-paalinna.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "1579ebd60110cd55195677c4032c5e3014b18799",
+      "sha256": "c3c6ff881bd74aa06a2b3c45f3ba81a6d8daf234dd9e7810a5bf5da76809914e",
+      "bytes": 69979
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/10-kaidepylvaat-siipi.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "0f858afca1542a29a00d79c65f4235027b0f0613",
+      "sha256": "82dd1e00b09cc762ec9e8174f48207b116d133c114c06fbbf9ef8585e72719b4",
+      "bytes": 139151
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/11-harjakoriste-siipi.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "98b66d8ef09c49eae34b901309dc2f3791e03655",
+      "sha256": "42a9ad371e5201172e345d8e083746ffcaf61a06ce7e70d264b07ac0f0ccf9dd",
+      "bytes": 33703
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/2-baoding-paviljongit.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "e95f814a82c51e3609695a5f0f91e56d2a9decb0",
+      "sha256": "165cb482e1bcc9e2d164f59294fae1c72bd745b0e16f94993b1dcd181323c293",
+      "bytes": 12645
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/3-harjaelaimet-kulmat.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "45a3a2fa7a57d9955c7a1b140a0a2acbf47f5238",
+      "sha256": "eced4be6c32d5472255f052bc6732496070735d31e242a042823be20f7fd1516",
+      "bytes": 70701
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/4-kannatinryhmat-ja-palkkimaalaus-paalinna.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "441c41c160d1982b600c427e12cd4388a8889e64",
+      "sha256": "2209d304c50794abf7680bf3fb9b4fb9ca342bd779c1eed6d6a4cddae20aca38",
+      "bytes": 328650
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/5-kannatin-palkki-paviljonki.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "427e2fdbc60f4f0e77f3537f15ee8bb055d49df7",
+      "sha256": "13f786fb2b4681dfeb273e78f6f14e6e4dd367120128ba7455e9e1c7822609ac",
+      "bytes": 239761
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/6-kannatin-palkki-siipi.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "45bfd394194087a03a4190f5a708e0ed4acc29d8",
+      "sha256": "d66ac6234e903dd79db78cb0240b4965cb4d958cb2f2db81d2e78f909bfb64e2",
+      "bytes": 259102
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/7-nimitaulu.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "6ebe9bea6a3457fd23e7571d0ec73520a666de37",
+      "sha256": "781d20592d3f8d8b4514bea308d043c8223158e5f4e18758c91e62e5f7c1ce1e",
+      "bytes": 12416
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/8-ristikko-ovet-paalinna.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "6b687d4b74abe5373f25570f095debef242a996c",
+      "sha256": "020e8cd0e90471ae9303a6cc715e1797814b5ecaa2e809b4fac788365023873c",
+      "bytes": 116877
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/9-kaidepylvaat-terassi.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "704dc3faa74f37d0e0d45fbf194e875a0e7a03d9",
+      "sha256": "6e059c105c17d79a76ee9c6091711febacf99f3e8bec6bb769b5221ddf30e369",
+      "bytes": 155958
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/OSAT.md",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "b09f23d5d4dea6f0f7689e1b1bd9cca06c7d71f6",
+      "sha256": "a1556b15bbbdf0bf0d4b6fe44b856e9c7ffd4c3c1e921837326c71fac62f9777",
+      "bytes": 2440
+    },
+    {
+      "path": "posti/pelikoodari-codex-juoksupeli-osat-215-20261029/portti-06/havainne-06.png",
+      "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+      "blob": "b737a3ab5866552cbe483d70ecf929aaae94fea7",
+      "sha256": "bdd230c4fd8be143ef72536143dd76f45bf87360e99d93278e143ce0fd398576",
+      "bytes": 2406240
+    }
+  ],
+  "gate": {
+    "repositoryPath": "tools/codex-3d-tarkistus.mjs",
+    "ref": "main",
+    "blob": "2b28efd82c09c0df66761e884885ff4a27e6ec03",
+    "sha256": "5de9ed58f784bdbf9094823b25e6473dddfc9ff72d4d38085974c5cbcdba39c6"
+  }
+}

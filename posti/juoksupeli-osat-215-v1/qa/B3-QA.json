@@ -1,0 +1,68 @@
+{
+  "taskNumber": 1270,
+  "asset": "B3 Meridiaaniportin nimitaulu",
+  "status": "PASS-candidate-awaiting-root-QA",
+  "createdAt": "2026-10-29T19:34:42.086743+00:00",
+  "mode": "built-in image_gen",
+  "generationCalls": 2,
+  "wholeImageGeneration": true,
+  "nativeImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-b3/native/attempt-02.png",
+  "nativeSizePx": [
+    1254,
+    1254
+  ],
+  "nativeSHA256": "c004cc4bd3fa570390395f96b0692539a7ab35fd19430e7a8ac7da1ae06bacfb",
+  "finalImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-b3/final/1270-meridiaaniportin-nimitaulu-v2.png",
+  "finalSizePx": [
+    1024,
+    1024
+  ],
+  "finalSHA256": "319cd2ecb0990da65b865c31b3bf4617d8e28448626f4da3be7e1c7c28d58932",
+  "postprocessing": "Uniform whole-image downscale1254x1254→1024x1024; opaqueRGB PNG encoding. No anisotropic scaling, local repainting, crop or text overlay.",
+  "glyphs": [
+    "午",
+    "門"
+  ],
+  "glyphCodepoints": [
+    "U+5348",
+    "U+9580"
+  ],
+  "readingDirection": "vertical top to bottom",
+  "glyphVerification": "Direct visual comparison to Palace Museum photograph and independent BrokenSphere photograph; traditional 門 with unhooked right descending stroke.",
+  "layout": "Blue field with gold rectangular frame per commission; real photographed plaque has red body/frame with gold outlines, not replicated because commission art direction requests blue/gold.",
+  "checks": {
+    "exactTwoGlyphs": true,
+    "noInventedSmallText": true,
+    "flatFrontalNoPerspective": true,
+    "noDirectionalCastShadow": true,
+    "noPaintedSpecular": true,
+    "opaquePNG": true,
+    "maxDimensionUnder2048": true,
+    "powerOfTwoDimensions": true
+  },
+  "limitations": [
+    "No physical dimensions invented; recipient to map to existing sign geometry.",
+    "Receiver/owner acceptance and runtime integration not performed by this worker."
+  ],
+  "references": [
+    {
+      "title": "Palace Museum official Wumen building entry",
+      "url": "https://www.dpm.org.cn/explore/building/236454.html",
+      "imageURL": "https://img.dpm.org.cn/Uploads/Picture/2020/07/03/s5efefcfb75914.jpg",
+      "role": "Primary photo evidence of actual text and vertical arrangement; glyph reference."
+    },
+    {
+      "title": "BrokenSphere - Meridian Gate plaque",
+      "url": "https://commons.wikimedia.org/wiki/File:Meridian_Gate_plaque.JPG",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/31/Meridian_Gate_plaque.JPG",
+      "role": "Independent photographic verification only; not an imagegen input."
+    }
+  ],
+  "selectedAttempt": 2,
+  "rejectedCandidates": [
+    {
+      "attempt": 1,
+      "reason": "Initial1:2 aspect too tall for nearlysquare gameplaque; preserved and replaced by whole new squaregeneration."
+    }
+  ]
+}

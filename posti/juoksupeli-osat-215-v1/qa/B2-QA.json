@@ -1,0 +1,45 @@
+{
+  "task": 1269,
+  "part": "B2",
+  "status": "PASS-for-delivery",
+  "checkedAt": "2026-10-29T19:32:34.768024+00:00",
+  "imagegenMode": "built-in",
+  "generationCalls": 2,
+  "selectedAttempt": 2,
+  "nativeFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-b2/attempts/native-02.png",
+  "nativeSizePx": [
+    887,
+    1774
+  ],
+  "nativeSHA256": "88051f5101d57622002a28ce13f53181cdf2bcceafe2f478f1642ff4b77fda4b",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-b2/delivery/1269-keskiovi-kulta.png",
+  "sizePx": [
+    512,
+    1024
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "sha256": "0fd0ecb80eab75ac337856f43eb5c355900e4e63b82170990ef3574f135412e1",
+  "bytes": 816425,
+  "exportMethod": "Full-frame Lanczos downscale and RGB PNG export only. No cropping, painting, compositing or partial edit.",
+  "layoutChecks": {
+    "twoEqualClosedDoorLeaves": true,
+    "centerSeam": true,
+    "upperLatticeFractionApprox": 0.6,
+    "ringPullHeightFractionApprox": 0.615,
+    "lowerPanelFractionApprox": 0.32,
+    "noWallOrPerspective": true,
+    "opaqueDarkBacking": true,
+    "goldLatticeAndPanelOrnament": true,
+    "old1070ByteUnchanged": true
+  },
+  "visualNotes": [
+    "Candidate1 rejected for pronounced baked AO in lattice cells.",
+    "Candidate2 has flat dark brown-red lattice cells, restrained gold pigment, red lacquer structural frame, detailed flat gold floral panels.",
+    "No scene lighting, directional cast shadows or illumination gradient; fine colored edge lines and ring-pull shape modeling remain, so this is generated pigment texture rather than a measured material scan."
+  ],
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "rootVisualReview": "PASS",
+  "rootReviewedAt": "2026-10-29T19:33:29.758104+00:00"
+}

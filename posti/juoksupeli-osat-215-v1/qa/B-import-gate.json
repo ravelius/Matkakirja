@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-29T19:39:18.306066+00:00",
+  "command": [
+    "node",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-tools/codex-3d-tarkistus.mjs",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-delivery-v1",
+    "--json"
+  ],
+  "exitCode": 0,
+  "checkerSHA256": "5de9ed58f784bdbf9094823b25e6473dddfc9ff72d4d38085974c5cbcdba39c6",
+  "stdout": [
+    {
+      "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/kuvat-delivery-v1",
+      "virheet": [],
+      "tiedostot": [
+        {
+          "nimi": "B-pinnat-vertailu.png",
+          "polku": "esikatselu/B-pinnat-vertailu.png",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "tyyppi": "kuva",
+            "muoto": "png",
+            "w": 1680,
+            "h": 1240
+          }
+        },
+        {
+          "nimi": "B1-toisto-2x.png",
+          "polku": "esikatselu/B1-toisto-2x.png",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "tyyppi": "kuva",
+            "muoto": "png",
+            "w": 4096,
+            "h": 512
+          }
+        },
+        {
+          "nimi": "1268-paaharja-keltainen.png",
+          "polku": "pinnat/1268-paaharja-keltainen.png",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "tyyppi": "kuva",
+            "muoto": "png",
+            "w": 2048,
+            "h": 512
+          }
+        },
+        {
+          "nimi": "1269-keskiovi-kulta.png",
+          "polku": "pinnat/1269-keskiovi-kulta.png",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "tyyppi": "kuva",
+            "muoto": "png",
+            "w": 512,
+            "h": 1024
+          }
+        },
+        {
+          "nimi": "1270-meridiaaniportin-nimitaulu.png",
+          "polku": "pinnat/1270-meridiaaniportin-nimitaulu.png",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "tyyppi": "kuva",
+            "muoto": "png",
+            "w": 1024,
+            "h": 1024
+          }
+        }
+      ]
+    }
+  ],
+  "stderr": "",
+  "scope": "B1-B3 images; no 3D models in this delivery"
+}

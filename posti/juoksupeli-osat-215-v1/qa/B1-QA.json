@@ -1,0 +1,45 @@
+{
+  "task": 1268,
+  "status": "PASS-root-reviewed-for-delivery",
+  "reviewedAt": "2026-10-29T19:33:03.693360+00:00",
+  "mode": "built-in image_gen",
+  "totalGenerationCalls": 3,
+  "selectedAttempt": 3,
+  "nativeSize": [
+    2172,
+    724
+  ],
+  "cropBox": [
+    76,
+    110,
+    2090,
+    614
+  ],
+  "exportSize": [
+    2048,
+    512
+  ],
+  "format": "PNG RGB opaque",
+  "sha256": "50c1577af57cce06b1ace501f03c85d5d40427e668fe6b6cd51bd97b99f7b9e3",
+  "bytes": 1440267,
+  "derivation": "Crop to matching motif positions and plain top/bottom margins; one Lanczos resize. No painting, image seam blend, clones, filters or retouching.",
+  "repeatAxis": "U",
+  "repeatEdgeMAE8bit": 6.544270833333333,
+  "repeatEdgeMax8bit": 72.0,
+  "eightColumnProfileMAE8bit": 6.394449869791667,
+  "flatColor": "Cloud design has flat pigment fill without directional bevel lighting, cast shadows or AO. Fine ceramic pigment texture retained.",
+  "referenceScope": "Ridge band only; no chiwen, roof tiles or environment.",
+  "pending": [
+    "PK receipt, PT approval and game integration review remain separate."
+  ],
+  "rejections": {
+    "1": "Baked relief shadows and lit rails.",
+    "2": "Mild relief shadows remain, multi-border crop less suitable."
+  },
+  "repeatBoundary": "Visual continuity checked in 2x repeat; edges are not pixel-identical. Rails aligned and cloud strokes continue; small pigment variation remains.",
+  "rootReview": {
+    "decision": "PASS for delivery with documented pigment edge variation; no claim of pixel-identical seam",
+    "reviewed": "final and2x repeat",
+    "at": "2026-10-29T19:34:57.466820+00:00"
+  }
+}

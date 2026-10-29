@@ -1,0 +1,90 @@
+{
+  "scope": "B1-B3 only; A1-A6 separate Tripo production",
+  "sourceCommit": "084f144e819e2a39b546911df1674d2d6a80cf28",
+  "createdAt": "2026-10-29T19:37:01.825629+00:00",
+  "mode": "built-in image_gen",
+  "wholeImageCalls": 7,
+  "pendingGenerationCalls": 0,
+  "assets": [
+    {
+      "part": "B1",
+      "task": 1268,
+      "path": "pinnat/1268-paaharja-keltainen.png",
+      "sha256": "50c1577af57cce06b1ace501f03c85d5d40427e668fe6b6cd51bd97b99f7b9e3",
+      "bytes": 1440267,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "colorSpace": "sRGB",
+      "type": "2D albedo",
+      "sharedMaterialId": "osat215_b1",
+      "wrap": "U repeat; V clamp",
+      "generationCalls": 3,
+      "selectedAttempt": 3,
+      "rootVisualQA": "PASS-for-receiver-review"
+    },
+    {
+      "part": "B2",
+      "task": 1269,
+      "path": "pinnat/1269-keskiovi-kulta.png",
+      "sha256": "0fd0ecb80eab75ac337856f43eb5c355900e4e63b82170990ef3574f135412e1",
+      "bytes": 816425,
+      "sizePx": [
+        512,
+        1024
+      ],
+      "colorSpace": "sRGB",
+      "type": "2D albedo",
+      "sharedMaterialId": "osat215_b2",
+      "wrap": "Clamp UV; same mapping as1070",
+      "generationCalls": 2,
+      "selectedAttempt": 2,
+      "rootVisualQA": "PASS-for-receiver-review"
+    },
+    {
+      "part": "B3",
+      "task": 1270,
+      "path": "pinnat/1270-meridiaaniportin-nimitaulu.png",
+      "sha256": "319cd2ecb0990da65b865c31b3bf4617d8e28448626f4da3be7e1c7c28d58932",
+      "bytes": 1540362,
+      "sizePx": [
+        1024,
+        1024
+      ],
+      "colorSpace": "sRGB",
+      "type": "2D albedo",
+      "sharedMaterialId": "osat215_b3",
+      "wrap": "Clamp UV",
+      "generationCalls": 2,
+      "selectedAttempt": 2,
+      "rootVisualQA": "PASS-for-receiver-review"
+    }
+  ],
+  "files": [
+    {
+      "path": "pinnat/1268-paaharja-keltainen.png",
+      "sha256": "50c1577af57cce06b1ace501f03c85d5d40427e668fe6b6cd51bd97b99f7b9e3"
+    },
+    {
+      "path": "pinnat/1269-keskiovi-kulta.png",
+      "sha256": "0fd0ecb80eab75ac337856f43eb5c355900e4e63b82170990ef3574f135412e1"
+    },
+    {
+      "path": "pinnat/1270-meridiaaniportin-nimitaulu.png",
+      "sha256": "319cd2ecb0990da65b865c31b3bf4617d8e28448626f4da3be7e1c7c28d58932"
+    }
+  ],
+  "old1070Unchanged": true,
+  "newTripoCalls": 0,
+  "receiverAccepted": false,
+  "PTAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "limitations": [
+    "B1 horizontal repeat visually continuous with mean edge pigment difference6.54/255; not pixel-identical.",
+    "B2 generated albedo contains fine outlined edges and handleform tone, no environment lighting.",
+    "B3 rectangulargoldframe follows commission instead of exactreddecoratedrealframe; glyphs verified againstphoto.",
+    "Actual game lighting, mapping and reference-pair evaluation pending PK/PT."
+  ]
+}
