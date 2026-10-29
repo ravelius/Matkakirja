@@ -26,6 +26,7 @@ import {
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana, kohteetLahella, etaisyys,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
+import { OPAS_KYSY } from './opas-kysy.js';
 import {
   KYSYMYKSET_KEHOTE, kysymystenViesti, poimiKysymykset, kysymysAvain, KESKUSTELU_KEHOTE, keskustelunViesti, jasennaKeskustelu,
   siivoaKeskustelu, LIIKU_KEHOTE, jasennaLiiku, liikuAvain, KESKUSTELU_TTL_S, ULKONA_KM, etaisyysKm,
@@ -3220,7 +3221,8 @@ async function oppaanKysymykset(env, { paikka, nimi, kaupunki }) {
  * GET /opas/kysymykset?paikka&nimi&kaupunki → { paikka, kysymykset }. Valmiin esittelyn kohteella (omistaja 7.10. klo 10.3x,
  * "Yksi esitys + Kerro lisää"): esittelyn 5 valmista kysymystä (jos on) ja Kysy-valikon ensimmäinen rivi "Kerro lisää" =
  * kohteen pitkä pysähdysteksti ja sen ääni LITTEINÄ kenttinä (kerro_lisaa_teksti, _aani, _aani_pcm, _aani_taajuus,
- * _kesto_s; vanhat natiivit ohittavat ne, ks. #4107).
+ * _kesto_s; vanhat natiivit ohittavat ne, ks. #4107). KYSY-LISTAT (omistaja 19.10.2026 klo 11.40, PT): Sisältökirjurin 8 kysymystä
+ * kohteelle (opas-kysy.js, kohteen Q-id) ensin, sitten esittelyn 5 ja viimeisenä malli; natiivi näyttää enintään 8 (Linssiseppä).
  */
 async function hoidaOppaanKysymykset(pyynto, env, kors, ctx) {
   if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
@@ -3235,7 +3237,8 @@ async function hoidaOppaanKysymykset(pyynto, env, kors, ctx) {
   if (!paikka || !nimi) return vastaa({ virhe: 'kysely', viesti: 'Paikka ja nimi tarvitaan.' }, { status: 400, ...kors });
   const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
   const valmis = kaupunki ? valmisKohde(await oppaanEsittely(env, kaupunki), paikka) : null;
-  const omat = Array.isArray(valmis?.kysymykset) && valmis.kysymykset.length ? valmis.kysymykset.slice(0, 5) : null;
+  const sk = Array.isArray(OPAS_KYSY[paikka]) && OPAS_KYSY[paikka].length ? OPAS_KYSY[paikka].slice(0, 8) : null;
+  const omat = sk ?? (Array.isArray(valmis?.kysymykset) && valmis.kysymykset.length ? valmis.kysymykset.slice(0, 5) : null);
   const kysymykset = omat ?? await oppaanKysymykset(env, { paikka, nimi, kaupunki });
   if (!valmis) return vastaa({ paikka, kysymykset }, kors);
   const aani = await oppaanValmisAani(pyynto, env, valmis.puhe_teksti || valmis.teksti).catch(() => null);
