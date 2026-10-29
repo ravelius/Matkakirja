@@ -856,3 +856,34 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Jos KK hylkää: v65 ennallaan, PK:n pari ratkaisee.
 - Työkalut tällä erää: editori-lr.sh (PAIKKA_<k>, PELIKAMERA=1, 05-oletuskamera), portti_teal_puuksi.py, portti_kapea.py, portti_ovet_kaanto.py
   (hylätty), lattia_paallekkain_pois.py; ajot aja_v121…v126_pari.zsh. KK:lle vastattu 02:n puusta (itäpihan puuryhmä, poisto vain pyynnöstä).
+
+## LISÄYS 67 klo 10.0x (29.10.): KUJA 05:N LATTIAVÄLKE KOKONAAN (v106) → v66 VALMIINA, ODOTTAA KK:N 05-OK:TA — ALOITA TÄSTÄ
+- PK pk7v65 (283/283): harmaa laikku p-kujaportin kohdalla. Syyt: (1) kujapalan V4_kujakivi_lattia jatkui portin (z 400,03) ohi z 406:een
+  ilman marmoria alla; (2) emopalan 0-3 LOD1/2-lattia (iso kolmiointi, kärjet jaettu reunakiven yläpinnan y 0,15 kanssa) jäi kujakiven tasoon
+  tai yli, kun peli näyttää emopalasta LOD1:n ja kujapalasta LOD0:n (v104:ssä 162 pistettä < 1 cm).
+- UUDET työkalut (K/tyokalut): kujakivi_rajaa.py (kujakivi leikataan z = ZMAX, yli menevä osa V4_lattia-marmoriksi UV x/8, 1 − z/8);
+  lattia_paallekkain_pois.py KOKO=1 (peite kaikista LODeista, kolmio kokonaan alas; järjestys kujapala 0 > 1-3 −0,015 > 0-3/0-4 −0,03).
+- yksikerros-v103 → v105a (rajaa) → v106 (KOKO=1 VARA=0.1 LASKU=0.03 ALUSTA=-0.07). Kerrosskannaus x −262…−240, z 380…432, kaikki
+  LOD-yhdistelmät: 0 pistettä < 1 cm. juuri-v128m, aja_v128_pari.zsh; kuvat havainne-editori-20261029-095444/06 ja -095711/06 (pelikamera).
+- v66 = v65 + kielletty-rakennukset-v50 (= rakennukset-v119) + kielletty-tausta-v66 (= v106): K/tyokalut/paketti_v66.py valmis, EI AJETTU
+  ennen KK:n 05-portin OK:ta (kysytty PT:ltä). v65 jää paikalleen, kunnes PK vaihtaa (PK: ilmoita ennen viennin poistoa).
+
+## LISÄYS 68 klo 10.2x (29.10.): PORTIT 02/05 + T-PORTTIEN LATTIA (rakennukset-v123) → KK; v66 AJETAAN KK:N OK:LLA — ALOITA TÄSTÄ
+- KK hylkäsi 05-portin v119 (lehdet kameraa kohti, 2× leveät, kirkkaanpunaiset) → K/tyokalut/portti_lehdet.py: vanhat lehdet (V4_portin_ovi +
+  V4_wood y > 0,4) pois, uudet: sarana pielessä z HZ, kääntö KULMA° sisään poispäin kamerasta, leveys = puoli aukkoa, V4_ovilehti_viini +
+  V4_nasta_kulta-kuvut (NASTA=16). Lehdet ovat staattista geometriaa (vain p-kujaportti-3:lla PK:n ovisolmut). 05: A=2.57 HZ=-0.85 KULMA=70 9×5;
+  02: A=1.64 HZ=-0.9 KULMA=75 9×4 (reitti 2,4 m mahtuu). Törmäys ennallaan.
+- 02:n katto: portti_katto_kapea.py (SX 0,83 SZ 0,8 NOSTO 0,5; koristeet kappaleina, scipy). t-portit 120/m15/m216: tportti_lattia.py
+  (vaakasuora V4_marmori → V4_lattia; PK: peli teksturoi nimen mukaan, marmori näkyi dronesta harmaana).
+- rakennukset-v123 = v119 + nämä; juuri-v130m, aja_v130_pari.zsh; parit -101640 (sovitettu) / -101857 (pelikamera) KK:lla.
+- paketti_v66.py (v65 + rakennukset-v123 + tausta v106) valmis → aja KK:n OK:lla → PK + PT.
+
+## LISÄYS 69 klo 10.3x (29.10.): KK:N v123-PALAUTE (seuraavalle; PT: viikkoraja 97 %) — ALOITA TÄSTÄ
+- KK: ovilehtien väri ja kupunastat (1/16) HYVÄT. Ennen omistajaa vielä:
+  1) 02:n portin katto yhä ~2,1 × portin seinän levyinen (havainne ~1,2 ×): aja portti_katto_kapea.py rakennukset-v119:n kopioon SX ≈ 0,83 × 0,57 ≈ 0,47
+     (kaarevat räystäät ja harjaeläimet säilyvät), muut vaiheet kuten lisäys 68.
+  2) 05: havainteessa sivumuurien keltaiset räystäät ja friisi näkyvät yläkulmissa (räystään alareuna 0,17 kuvan korkeudesta, ~kamanan
+     korkeudella); pelissä muurit jatkuvat yläreunan yli. Selvitä, tuleeko 05:n lähimuurien korkeus datasta (pohja/OSM) → jos ei, laske portin
+     lähimuurit (muurikate-pohja, kuja 05) havainteen räystäskorkeuteen; jos tulee, kerro KK:lle. Samalla aukko + ovilehdet korkeammiksi:
+     aukko 0,36 → 0,42 kuvan korkeudesta (~× 1,17: portti_havainne.py AUKKO2 3,5 → ~4,1 ja portti_lehdet.py H 3,45 → ~4,05).
+  Sitten parit 02 + 05 (sovitettu + pelikamera) → KK → OK:lla paketti_v66.py (päivitä R ja LAHTEET).
