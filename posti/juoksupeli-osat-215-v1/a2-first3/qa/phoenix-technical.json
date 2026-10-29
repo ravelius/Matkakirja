@@ -1,0 +1,77 @@
+{
+  "name": "phoenix",
+  "path": "3d/phoenix.glb",
+  "sha256": "371273fb8d397db1819b97cd64ac8e42e4b4c2fe359ee245370a088b9a8269db",
+  "bytes": 4930588,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1252-phoenix-attempt1.glb",
+  "sourceSHA256": "e21fc9a7ee569fbad313955c8e75581abead84b4b7b12bb879e0ea8a0b83a1bc",
+  "triangles": 4890,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.20406129211187363,
+    0.5,
+    0.4100097268819809
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5110577344894409,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/phoenix/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "683abb42db5fe5dcf6a7466694c97c2f306eb1fc528a59577e8c797756aef3a0",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/phoenix/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "c4e336eee42d5580d489b6c54c18b1a6f2abd5caf4f001ab6ac3aae55e414387",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/phoenix/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "629ffb6b59dd1f188abe67624d47eadada268cb33bed97a9b7d20e0ab416e252",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 140.71875,
+  "elapsedSeconds": 1.1390259999316186,
+  "visualReviewAt": "2026-10-29T20:01:30.241751+00:00",
+  "knownLimitations": [
+    "Game-scale ceramic sculpture interpretation, not a measured historical reconstruction.",
+    "Fine sculpted features soften at this triangle budget; assess from final rooftop camera.",
+    "PBR lighting, row spacing and roof placement require receiver review."
+  ]
+}

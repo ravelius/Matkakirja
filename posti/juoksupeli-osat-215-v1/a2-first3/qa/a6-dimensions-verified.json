@@ -1,0 +1,171 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/sources/pohja-osm-pk7.json",
+  "sourceSHA256": "e8a5b2327aa72578d9cb98d2e130143791a73796f23066dda25daac9cf4869d2",
+  "receiverMessage": "5a46ddeb2cf2d3e010d8f171ca2646f7bcac0acf",
+  "buildings": [
+    {
+      "osm": "way/638590122",
+      "raw": {
+        "osm": "way/638590122",
+        "nimi_zh": "体仁阁",
+        "nimi_en": "Belvedere of Embodying Benevolence",
+        "tyyppi": "yes",
+        "korkeus_m": 27.0,
+        "ovi": "S",
+        "pohja": [
+          [
+            82.53,
+            -109.46
+          ],
+          [
+            82.3,
+            -102.86
+          ],
+          [
+            96.78,
+            -102.36
+          ],
+          [
+            95.82,
+            -74.68
+          ],
+          [
+            124.23,
+            -73.71
+          ],
+          [
+            126.4,
+            -136.36
+          ],
+          [
+            97.98,
+            -137.34
+          ],
+          [
+            97.01,
+            -108.97
+          ]
+        ]
+      },
+      "rectangleCornersXZ": [
+        [
+          95.82,
+          -74.68
+        ],
+        [
+          124.23,
+          -73.71
+        ],
+        [
+          126.4,
+          -136.36
+        ],
+        [
+          97.98,
+          -137.34
+        ]
+      ],
+      "rectangleEdgesM": [
+        28.426554486958153,
+        62.687569740738894,
+        28.436891531951943,
+        62.697218439098236
+      ],
+      "centerXZ": [
+        111.1075,
+        -105.52250000000001
+      ],
+      "facadeWorld": "-X",
+      "deliveryModelFacade": "+Z",
+      "mainFacadeBays": 9,
+      "heightMForGame": 27,
+      "museumHeightApproxM": 25,
+      "heightConflictRecorded": true,
+      "projectionExcluded": true,
+      "placementOwner": "Lavastaja",
+      "oviSFieldNotUsed": "Receiver explicitly overrides facade orientation"
+    },
+    {
+      "osm": "way/638590123",
+      "raw": {
+        "osm": "way/638590123",
+        "nimi_zh": "弘义阁",
+        "nimi_en": "Belvedere of Spreading Righteousness",
+        "tyyppi": "yes",
+        "korkeus_m": 27.0,
+        "ovi": "S",
+        "pohja": [
+          [
+            -117.32,
+            -145.99
+          ],
+          [
+            -119.49,
+            -83.34
+          ],
+          [
+            -92.5,
+            -82.41
+          ],
+          [
+            -91.53,
+            -110.12
+          ],
+          [
+            -80.51,
+            -109.75
+          ],
+          [
+            -80.29,
+            -115.92
+          ],
+          [
+            -91.32,
+            -116.3
+          ],
+          [
+            -90.33,
+            -145.06
+          ]
+        ]
+      },
+      "rectangleCornersXZ": [
+        [
+          -117.32,
+          -145.99
+        ],
+        [
+          -119.49,
+          -83.34
+        ],
+        [
+          -92.5,
+          -82.41
+        ],
+        [
+          -90.33,
+          -145.06
+        ]
+      ],
+      "rectangleEdgesM": [
+        62.68756974073888,
+        27.006017847879754,
+        62.68756974073888,
+        27.006017847879754
+      ],
+      "centerXZ": [
+        -104.91,
+        -114.2
+      ],
+      "facadeWorld": "+X",
+      "deliveryModelFacade": "+Z",
+      "mainFacadeBays": 9,
+      "heightMForGame": 27,
+      "museumHeightApproxM": 25,
+      "heightConflictRecorded": true,
+      "projectionExcluded": true,
+      "placementOwner": "Lavastaja",
+      "oviSFieldNotUsed": "Receiver explicitly overrides facade orientation"
+    }
+  ]
+}

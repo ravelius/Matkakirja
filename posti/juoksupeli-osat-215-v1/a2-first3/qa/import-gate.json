@@ -1,0 +1,266 @@
+[
+ {
+  "kansio": "output/juoksupeli-osat-215-20261029/partial-a2-first3-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "dragon.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "dragon.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4796,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.098,
+       0,
+       -0.3
+      ],
+      "max": [
+       0.098,
+       0.5,
+       0.182
+      ],
+      "koko": [
+       0.197,
+       0.5,
+       0.481
+      ]
+     }
+    },
+    "polku": "3d/dragon.glb"
+   },
+   {
+    "nimi": "immortal-phoenix.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "immortal-phoenix.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4890,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.107,
+       0,
+       -0.292
+      ],
+      "max": [
+       0.103,
+       0.5,
+       0.156
+      ],
+      "koko": [
+       0.21,
+       0.5,
+       0.448
+      ]
+     }
+    },
+    "polku": "3d/immortal-phoenix.glb"
+   },
+   {
+    "nimi": "phoenix.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "phoenix.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4890,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.102,
+       0,
+       -0.261
+      ],
+      "max": [
+       0.102,
+       0.5,
+       0.149
+      ],
+      "koko": [
+       0.204,
+       0.5,
+       0.41
+      ]
+     }
+    },
+    "polku": "3d/phoenix.glb"
+   },
+   {
+    "nimi": "dragon-nelja-suuntaa.png",
+    "polku": "esikatselu/dragon-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "immortal-phoenix-nelja-suuntaa.png",
+    "polku": "esikatselu/immortal-phoenix-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "phoenix-nelja-suuntaa.png",
+    "polku": "esikatselu/phoenix-nelja-suuntaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 768,
+     "h": 840
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/dragon/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/dragon/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/dragon/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/immortal-phoenix/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/immortal-phoenix/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/immortal-phoenix/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "basecolor.jpg",
+    "polku": "tekstuurit/phoenix/basecolor.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallic-roughness.jpg",
+    "polku": "tekstuurit/phoenix/metallic-roughness.jpg",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "jpg",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal.png",
+    "polku": "tekstuurit/phoenix/normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: dragon.glb ei liikettä, immortal-phoenix.glb ei liikettä, phoenix.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]

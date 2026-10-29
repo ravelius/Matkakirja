@@ -1,0 +1,77 @@
+{
+  "name": "immortal-phoenix",
+  "path": "3d/immortal-phoenix.glb",
+  "sha256": "573cb3191710ab2a4802d07b9ee5ac4ecd2d39c6a9585a8fdf399c1d60a32fe4",
+  "bytes": 5096072,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osat-215-20261029/raw/pt1250-immortal-phoenix-attempt1.glb",
+  "sourceSHA256": "2de0a5c732856ebe1f820f21903783f0d4e484f6e3fa1650f4d6b3a7030ecfab",
+  "triangles": 4890,
+  "materials": 1,
+  "primitives": 1,
+  "dimensionsXYZM": [
+    0.20976852625608444,
+    0.5,
+    0.44792747497558594
+  ],
+  "pivot": "base center",
+  "up": "+Y",
+  "forward": "+Z",
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "scaleApplied": 0.5125606060028076,
+  "metallicFactor": 0.0,
+  "maps": [
+    {
+      "role": "normal",
+      "path": "tekstuurit/immortal-phoenix/normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "cfeced2fa2949840c41c982ee8ab4d500262a0e155e83ecaf2f6f88e788b1d5b",
+      "bytesPreserved": true
+    },
+    {
+      "role": "basecolor",
+      "path": "tekstuurit/immortal-phoenix/basecolor.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "1ad1b9138a2fa795417883348613f22f3bd5509adfe71e0c4aaa87c701bbedc5",
+      "bytesPreserved": true
+    },
+    {
+      "role": "metallic-roughness",
+      "path": "tekstuurit/immortal-phoenix/metallic-roughness.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "4af3629b8df3efba2bd3891b68ebf03f2f6049aa290266f763a80df08d233f6a",
+      "bytesPreserved": true
+    }
+  ],
+  "liike": "ei liikettä",
+  "tyyppi": "esine",
+  "skins": 0,
+  "animations": 0,
+  "visualQA": "PASS_STATIC_FOUR_VIEWS",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "topologyUVPreserved": true,
+  "normalsRigidlyTransformed": true,
+  "yawAppliedDegrees": -90.0,
+  "orientationQA": "PASS_HEAD_FACES_PLUS_Z",
+  "peakRSSMiB": 139.65625,
+  "elapsedSeconds": 1.0989331249147654,
+  "knownLimitations": [
+    "Game-scale ceramic sculpture interpretation, not a measured historical reconstruction.",
+    "Fine sculpted features soften at this triangle budget; assess from final rooftop camera.",
+    "PBR lighting, row spacing and roof placement require receiver review."
+  ],
+  "visualReviewAt": "2026-10-29T20:01:30.241751+00:00"
+}
