@@ -1129,4 +1129,5 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (02/zoom-kannatin-ennen-jalkeen.png: vasen PK:n -183139, oikea v142m; pala poissa, C3-räystäs yhtenäinen).
 - v71 = K/tyokalut/paketti_v71.py: _valmiit/juoksupeli-kk-lavastaja-v71-vienti-20261029 = v70 + tausta-v71 + muurikate-v25; 298 tiedostoa,
   ei-pelitiedostot poistetaan nyt ennen SHA256SUMS:ia; SHA256SUMS OK (tiiviste 6161f49c…). Seuraavaan junaan; EI ämpäriin ennen PT:n kuittausta.
-- SEURAAVAKSI: PT:n kuittaus v71 → JU; EROLISTA (lisäys 81: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
+- PT KUITTASI v71 (18.5x): junaan 215 (214 lukitaan v70:llä); JU vie ämpäriin TF 214:n jälkeen.
+- SEURAAVAKSI: EROLISTA (lisäys 81: T-risteys, aukion sivuhallit, 04, 06, 07, C1 Taihedian-korjaukset).
