@@ -673,6 +673,25 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   nauha ilman kiekkoja (lähde ei muurikate? tutki skannerilla scratchpad friisihaku.py -mallilla: ikkuna x/z kujan 05 kohdalle, kaikki
   pelin lataamat paketit: muurikate-v16, rakennukset-v48, tausta-v57). Havainteen kamera kujille 02/05 puuttuu (TESTIKAMERA_02/_05).
 
+## LISÄYS 51 klo 23.3x (28.10.): kuja 01 räystään rako KORJATTU (v110e), pari KK:lle; 02/05 havainteen kameralla ajossa
+- Värikoe (UUSI tyokalut/varikoodi_raystas.py + aja_v110_koe.zsh, juuri-v110k; materiaalit emissiovärein, doubleSided ennallaan): 1) v110:n
+  alalaatta oli koko lappeen kokoinen ('Katto lasitiili' ulottuu harjaan asti) ja päätysivujen laatta y 3,72 leikkasi pitkien sivujen räystäät
+  (231251) → avoimet_raystas_v2.py: alalaatta RIVI-levyisinä paloina paikallisella reunalla (d ∈ [dmx − ALA 1,0, dmx − 0,02], y = yo − 0,04).
+  2) vaalea rako = lippa ('Katto lasitiili') kiekkojen välissä (231836). Peli EI huomioi lipan baseColorFactoria (LIPPA 0,15 ei näkynyt 232122)
+  → lipalle oma materiaali V4_raystas_lippa_varjo (0,09 0,05 0,02). Vanha skripti: avoimet_raystas_v2-v110.py.bak.
+- aja_v110_pari.zsh (LIPPA 0,15 oletus, vaikutukseton): parit havainteen kamera havainne-editori-20261028-232618, pelikamera -233124 → KK 23.3x.
+- 02/05: aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" ajossa (havainteen kamera puuttui). Auki yhä: pelikameran muurit korkeammat kuin
+  havainteessa (harja kuvan yläpuolella), 05:n vasemman yläkulman kirkas nauha (lähde selvitettävä; värikoe varikoodi_raystas.py-mallilla).
+
+## LISÄYS 52 klo 23.4x (28.10.): 02/05 pari havainteen kameralla KK:lle; pakettivärikoe → muurit tausta-v57:ssä, harjat muurikate-v16:ssa
+- aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" → havainne-editori-20261028-233608 (harja kuvassa, kiekot näkyvät 02:n muurilla) → KK 23.4x.
+- UUSI tyokalut/varikoodi_paketti.py + aja_v111_koe.zsh (juuri-v111k, koe-v111/): paketti kerrallaan tasavärillä. Tulos 234526: lattia + muurit =
+  kielletty-tausta-v57 (yksikerros-v95), muurin harjat + pilasterit = kielletty-muurikate-v16, portit = kielletty-rakennukset-v48. Ladatut paketit
+  unity.logista: ulkorengas-v5, tausta-v57, rakennukset-v48, lahipuut-v6, kulmatorni-v1b (+ muurikate).
+- OPPI: peli KORVAA tunnetut materiaalinimet omillaan → baseColorFactor-muutokset tunnetuille nimille eivät näy (koe ilman nimenvaihtoa 234252
+  ei muuttunut lainkaan). Sävymuutos = oma materiaalinimi (kuten V4_raystas_lippa_varjo). Tarkista tämä myös aiemmista FV/LIPPA/KULTA-säädöistä.
+- Auki: pelikameralla (ilman TESTIKAMERAa) muurit yhä korkeammat kuin havainteessa; 02:n vasemmat pilasterihatut kirkkaat (muurikate-v16).
+
 ## LISÄYS 53 klo 06.3x (29.10.): KUJA 01 LUKITTU (omistaja 06.20, v112); 02/05 v115 parit KK:lla — LUOVUTUS, ALOITA TÄSTÄ
 - Omistaja 06.09 v110e:hen "Liikaa vihreä" → aja_v112_pari.zsh (avoimet-v74k, juuri-v112m): UUSI avoimet_vyo_kapea.py (julkisivun vyöfriisi +
   palatsi_kultalista puristettu alaosaansa KAPEA_VYO 0,5, palkkivyö ja katto_raystas → oma materiaali V4_raystas_alus_puu). Parit 061008 (havainne)
