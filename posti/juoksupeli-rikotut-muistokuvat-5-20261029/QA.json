@@ -1,0 +1,363 @@
+{
+  "checkedAt": "2026-10-29T08:09:23.384994+00:00",
+  "tasks": [
+    1237,
+    1238,
+    1239,
+    1240,
+    1241
+  ],
+  "productionComplete": true,
+  "QA": "PASS-for-review-candidates",
+  "parentViewedAllReferenceComparisons": true,
+  "photographicSurfaceAndCompositionPassed": true,
+  "technical": {
+    "checkedAt": "2026-10-29T08:08:40.934182+00:00",
+    "count": 5,
+    "pass": true,
+    "maskDiagnostic": "Current source-code static fully-visible 0.45/1.0 smoothstep; not runtime test",
+    "assets": [
+      {
+        "id": "posliinimaljakko",
+        "file": "posliinimaljakko.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "89d52fd86ecc30f39c82781aeccb7fe3817cbdd91335142e81a00f8f8350b6a0",
+        "bytes": 267914,
+        "referenceSHA256": "06c97a7580e1b1bd592eb22d755304e173e366c4a78bc5b87e56318658a01bdf"
+      },
+      {
+        "id": "lakkarasia",
+        "file": "lakkarasia.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "24f1ca5fd70802cc148835bf7f220991104df6e5370956c0150078c449b22302",
+        "bytes": 373367,
+        "referenceSHA256": "b598f84c668717ac2b6122225704e9fa4e0f023c20611a460881b479303076ec"
+      },
+      {
+        "id": "jadeastia",
+        "file": "jadeastia.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "c4f39ce2e97b09b83ea43f08bddf1e9098ff02f9cf9e395ec6c56586d5f3ca07",
+        "bytes": 203475,
+        "referenceSHA256": "452698137c43d993293359125bd6ee585bba7191f31a21e81a54ebf8a8843506"
+      },
+      {
+        "id": "kello",
+        "file": "kello.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "21b0bef363bb9c34b64afdec8c9672d1974b25dc6d738287dd81a3e206de1f70",
+        "bytes": 296779,
+        "referenceSHA256": "5869d4f4c45e5852317fb91915a6aba3bb422923bb422f5ffa70abb8c1a814d5"
+      },
+      {
+        "id": "kaaretaulu",
+        "file": "kaaretaulu.jpg",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "mode": "RGB",
+        "encoding": "JPEG",
+        "sha256": "355edb18b7c8ce6e41341143580b4dc7262d089c9fe461a50d290c8aa6e7f30a",
+        "bytes": 257949,
+        "referenceSHA256": "158f3211159497fa6e4a75c2e780e91f186c15e31fb2df247e652c6c61e6c39f"
+      }
+    ]
+  },
+  "actualGenerationCalls": 9,
+  "completedGenerationCalls": 9,
+  "pendingGenerationCalls": 0,
+  "selectedWholeNewImages": 5,
+  "nonselectedWholeImagesPreserved": 4,
+  "generationTool": "image_gen.imagegen built-in",
+  "referenceIdentity": "Visual correspondence checked against exact same-id game A renders. Generated photographs are not deterministic mesh renders.",
+  "currentMaskDiagnostic": "Static .45/1.0 smoothstep only, not runtime test; no mask baked into delivered JPGs",
+  "ownerSelection": "pending",
+  "KKReview": "pending",
+  "PKReceipt": "pending",
+  "gameIntegration": "not performed; requires owner selection",
+  "publication": "not performed",
+  "agents": [
+    {
+      "id": "posliinimaljakko",
+      "attempt": 1,
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a186ae-4251-74c3-81d8-e378a9d4a9eb/exec-34ebcf93-848a-443c-ba17-4b6f51bc9691.png",
+      "nativePreserved": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/native/posliinimaljakko-attempt1.png",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "nativeSHA256": "b61bca66e623dd4c0bac02fdc60a1864b7862a1b2cfe94d58e3899795b9705f9",
+      "candidateJPG": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/work/posliinimaljakko-attempt1.jpg",
+      "candidateSHA256": "89d52fd86ecc30f39c82781aeccb7fe3817cbdd91335142e81a00f8f8350b6a0",
+      "candidateSize": [
+        768,
+        1024
+      ],
+      "candidateMode": "RGB",
+      "format": "JPEG",
+      "quality": 95,
+      "subsampling": 0,
+      "technicalResizeOnly": true,
+      "noBakedOval": true,
+      "QAProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/qa/posliinimaljakko-attempt1-review.png",
+      "maskInnerRadius": 0.45,
+      "maskOuterRadius": 1,
+      "maskIsStaticCodeDiagnosticNotInGameProof": true,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/sources/A/posliinimaljakko.png",
+      "referenceSHA256": "06c97a7580e1b1bd592eb22d755304e173e366c4a78bc5b87e56318658a01bdf",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/prompts/posliinimaljakko-attempt1.txt",
+      "preparedAt": "2026-10-29T08:04:41.229542+00:00",
+      "visualQAPending": false,
+      "selected": true,
+      "visualQA": {
+        "fullNativeViewed": true,
+        "comparisonAndCurrentMaskViewed": true,
+        "referenceIdentityVisualPass": true,
+        "photographicSurfacePass": true,
+        "readableUnderCurrentMask": true,
+        "details": "Same white vase silhouette with flared rim, slim neck, rounded lower body and white foot. Fine light-blue double bands, scallop borders and sparse floral-vine motifs retain the reference arrangement. Natural porcelain highlights and window reflections, believable pale palace stone plinth. Complete object remains visible in .45-mask diagnostic. No text/frame/painted oval. Camera perspective differs slightly as requested, not pixel-identical projection."
+      },
+      "gates": {
+        "parentReview": "pending",
+        "ownerSelection": "pending",
+        "mailboxDelivery": "not performed by child",
+        "gameIntegration": "not performed"
+      },
+      "approvedForParentReviewAt": "2026-10-29T08:05:57.075230+00:00",
+      "deliveryFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/delivery/posliinimaljakko.jpg",
+      "deliverySHA256": "89d52fd86ecc30f39c82781aeccb7fe3817cbdd91335142e81a00f8f8350b6a0",
+      "generationCalls": 1,
+      "mode": "built-in image_gen.imagegen"
+    },
+    {
+      "id": "lakkarasia",
+      "taskNumber": 1238,
+      "checkedAt": "2026-10-29T08:06:53.592585+00:00",
+      "producerQAPassed": true,
+      "selectedAttempt": 2,
+      "actualGenerationCalls": 2,
+      "completedGenerationCalls": 2,
+      "pendingGenerationCalls": 0,
+      "generationTool": "image_gen.imagegen (built-in)",
+      "nativeSourcesPreserved": [
+        "output/juoksupeli-rikotut-muistokuvat-5-20261029/native/lakkarasia-attempt1.png",
+        "output/juoksupeli-rikotut-muistokuvat-5-20261029/native/lakkarasia-attempt2.png"
+      ],
+      "reference": "output/juoksupeli-rikotut-muistokuvat-5-20261029/sources/A/lakkarasia.png",
+      "prompt": "output/juoksupeli-rikotut-muistokuvat-5-20261029/prompts/lakkarasia-attempt2.txt",
+      "delivery": "output/juoksupeli-rikotut-muistokuvat-5-20261029/delivery/lakkarasia.jpg",
+      "width": 768,
+      "height": 1024,
+      "mode": "RGB",
+      "format": "JPEG",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "resize": "Uniform Lanczos resize; no crop, retouch, or baked mask",
+      "objectChecks": {
+        "roundCylindricalBox": true,
+        "scarletRed": true,
+        "closedRoundedLid": true,
+        "eightBroadRaisedRedPetalsWithCentralDisc": true,
+        "sparseGoldCopperLeafSprigSideBands": true,
+        "noBlackOrRectangularChest": true,
+        "handsRelativeScalePlausible": true
+      },
+      "sceneChecks": {
+        "elderlySmilingManchuWoman": true,
+        "brightPalaceCourtyardColonnade": true,
+        "softDepthOfFieldAndBacklight": true,
+        "naturalSkinAndFabricSurface": true,
+        "faceHandsBoxPersonallyViewed": true,
+        "subjectCenteredForMask": true,
+        "noTextOrFrameOrOval": true
+      },
+      "maskCheck": {
+        "innerRadius": 0.45,
+        "outerRadius": 1,
+        "axes": [
+          0.5,
+          0.5
+        ],
+        "staticDiagnosticOnly": true,
+        "inGameRunVerified": false,
+        "lightDarkAnd160pxViewed": true
+      },
+      "qaNotes": "Second whole-image take chosen for centered box and safer side margins. Round red box, red 8-petal relief and sparse warm-gold sprig bands match the supplied A design. Real lacquer reflections and photographic microtexture differ from the rendered reference; no design-level discrepancy found. First take preserved, not selected because box sat lower and rightward. Final current-mask light and dark composites and 160 px diagnostic personally inspected: whole lid, body and hands remain legible; no blocking loss at edges.",
+      "separateGates": {
+        "parentReview": "pending",
+        "KKReview": "pending",
+        "ownerSelection": "pending",
+        "PKDelivery": "not performed by child agent",
+        "gameIntegration": "requires owner selection"
+      },
+      "sha256": "24f1ca5fd70802cc148835bf7f220991104df6e5370956c0150078c449b22302",
+      "bytes": 373367
+    },
+    {
+      "id": "jadeastia",
+      "attempt": 3,
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a186ae-4251-74c3-81d8-e378a9d4a9eb/exec-cd2a56f4-91cf-4847-974a-077dfa6119dd.png",
+      "nativePreserved": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/native/jadeastia-attempt3.png",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "nativeSHA256": "5e87665451a76bb1c40e116feefbd2f3a6d26bfce4c3c62ac15a5cc119138be7",
+      "candidateJPG": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/work/jadeastia-attempt3.jpg",
+      "candidateSHA256": "c4f39ce2e97b09b83ea43f08bddf1e9098ff02f9cf9e395ec6c56586d5f3ca07",
+      "candidateSize": [
+        768,
+        1024
+      ],
+      "candidateMode": "RGB",
+      "format": "JPEG",
+      "quality": 95,
+      "subsampling": 0,
+      "technicalResizeOnly": true,
+      "noBakedOval": true,
+      "QAProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/qa/jadeastia-attempt3-review.png",
+      "maskInnerRadius": 0.45,
+      "maskOuterRadius": 1,
+      "maskIsStaticCodeDiagnosticNotInGameProof": true,
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/sources/A/jadeastia.png",
+      "referenceSHA256": "452698137c43d993293359125bd6ee585bba7191f31a21e81a54ebf8a8843506",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/prompts/jadeastia-attempt3.txt",
+      "preparedAt": "2026-10-29T08:07:57.531748+00:00",
+      "visualQAPending": false,
+      "selected": true,
+      "visualQA": {
+        "fullNativeViewed": true,
+        "comparisonAndCurrentMaskViewed": true,
+        "referenceIdentityVisualPass": true,
+        "photographicSurfacePass": true,
+        "readableUnderCurrentMask": true,
+        "details": "Same open pale-green squat bowl, thick round lip, broad rounded body with lower concentric step and short circular foot; two simple hanging ring handles and rounded lugs visible. The natural jade color and physical translucency match the reference material intent. Whole-new attempt 3 removes the strong polygon-patch display artifacts of earlier attempts, showing smooth continuous reflections and irregular natural cloudiness. Both ring silhouettes and full foot remain legible in current .45-mask diagnostic. No lid, smoke, dragons, extra legs, text, signature or painted oval."
+      },
+      "gates": {
+        "parentReview": "pending",
+        "ownerSelection": "pending",
+        "mailboxDelivery": "not performed by child",
+        "gameIntegration": "not performed"
+      },
+      "approvedForParentReviewAt": "2026-10-29T08:08:22.515449+00:00",
+      "deliveryFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/delivery/jadeastia.jpg",
+      "deliverySHA256": "c4f39ce2e97b09b83ea43f08bddf1e9098ff02f9cf9e395ec6c56586d5f3ca07",
+      "generationCalls": 3,
+      "mode": "built-in image_gen.imagegen"
+    },
+    {
+      "id": "kello",
+      "taskNumber": 1240,
+      "selectedAttempt": 1,
+      "calls": 1,
+      "objectMatch": [
+        "Deep blue/teal rectangular slab",
+        "Two gold cylindrical side columns",
+        "Ivory Roman dial and matching hands",
+        "Two open rings, central long oval and small apex finial, two inner oval tips and side spherical finials",
+        "Rectangular stepped gold and blue base, visible small feet"
+      ],
+      "observations": "Whole clock naturally photographed on pale palace pedestal. Reference construction and all defining ornament counts retained; realistic gold reflections, enamel wear and soft backlight. No rococo replacement or added figurines. All defining parts visible through static .45 mask, with only gentle foot/apex feathering.",
+      "checkedAt": "2026-10-29T08:07:08.753698+00:00",
+      "QA": "PASS-producer-review",
+      "sourceReference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/sources/A/kello.png",
+      "sourceReferenceSha256": "5869d4f4c45e5852317fb91915a6aba3bb422923bb422f5ffa70abb8c1a814d5",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/native/kello-attempt1.png",
+      "nativeSha256": "465cb24b45123903d4903ac8796b727acbc63fbd1094b06f4716d635b7b23563",
+      "delivery": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/delivery/kello.jpg",
+      "deliverySha256": "21b0bef363bb9c34b64afdec8c9672d1974b25dc6d738287dd81a3e206de1f70",
+      "bytes": 296779,
+      "dimensions": [
+        768,
+        1024
+      ],
+      "encoding": "JPEG",
+      "mode": "RGB",
+      "tool": "image_gen.imagegen built-in",
+      "wholeNewImagesOnly": true,
+      "cropOrRetouch": false,
+      "conversion": "Uniform 3:4 Lanczos resize and JPEG quality95, chroma subsampling0",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/prompts/kello-attempt1.txt",
+      "fullNativeViewed": true,
+      "finalJPEGAndMaskComparisonViewed": true,
+      "comparison": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/qa/kello-comparison.png",
+      "mask": "Offline diagnostic of axes .5/.5, smoothstep(.45,1,r); no mask painted into JPG. No runtime animation/noise test.",
+      "limitations": "Object correspondence visually judged against exact A reference; generated photograph is not a deterministic mesh render. Actual in-game integration/acceptance not claimed.",
+      "ownerSelection": "pending",
+      "KKReview": "pending",
+      "externalDelivery": "not performed by child",
+      "gameIntegration": "must wait owner selection",
+      "parentVisualReview": "PASS: parent viewed reference comparisons and current masks",
+      "parentReviewAt": "2026-10-29T08:07:35.051785+00:00"
+    },
+    {
+      "id": "kaaretaulu",
+      "taskNumber": 1241,
+      "selectedAttempt": 2,
+      "calls": 2,
+      "objectMatch": [
+        "Wide horizontal hanging panel between exactly two floor supports",
+        "Reddish brown posts with matching turned finials and feet",
+        "Pale wrapped side cylinders",
+        "Cream paper with narrow ochre brocade border",
+        "Gently sagging upper/lower edge",
+        "Same central two-column brush inscription arrangement"
+      ],
+      "observations": "Whole low wide floor-standing scroll in bright palace. Both posts and both feet fit the static .45 oval. Different floor-level setting from clock pedestal. First whole-image attempt preserved but not selected because right foot faded too far at mask edge. Second attempt fits more comfortably; no portrait wall-hanging substitute.",
+      "checkedAt": "2026-10-29T08:07:08.753698+00:00",
+      "QA": "PASS-producer-review",
+      "sourceReference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/sources/A/kaaretaulu.png",
+      "sourceReferenceSha256": "158f3211159497fa6e4a75c2e780e91f186c15e31fb2df247e652c6c61e6c39f",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/native/kaaretaulu-attempt2.png",
+      "nativeSha256": "caf4fe33ec6ddb38eb0bde5bf3abd054629918e077916d48231e909fd3bb6cd9",
+      "delivery": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/delivery/kaaretaulu.jpg",
+      "deliverySha256": "355edb18b7c8ce6e41341143580b4dc7262d089c9fe461a50d290c8aa6e7f30a",
+      "bytes": 257949,
+      "dimensions": [
+        768,
+        1024
+      ],
+      "encoding": "JPEG",
+      "mode": "RGB",
+      "tool": "image_gen.imagegen built-in",
+      "wholeNewImagesOnly": true,
+      "cropOrRetouch": false,
+      "conversion": "Uniform 3:4 Lanczos resize and JPEG quality95, chroma subsampling0",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/prompts/kaaretaulu-attempt2.txt",
+      "fullNativeViewed": true,
+      "finalJPEGAndMaskComparisonViewed": true,
+      "comparison": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rikotut-muistokuvat-5-20261029/qa/kaaretaulu-comparison.png",
+      "mask": "Offline diagnostic of axes .5/.5, smoothstep(.45,1,r); no mask painted into JPG. No runtime animation/noise test.",
+      "limitations": "Object correspondence visually judged against exact A reference; generated photograph is not a deterministic mesh render. Actual in-game integration/acceptance not claimed.",
+      "ownerSelection": "pending",
+      "KKReview": "pending",
+      "externalDelivery": "not performed by child",
+      "gameIntegration": "must wait owner selection",
+      "parentVisualReview": "PASS: parent viewed reference comparisons and current masks",
+      "parentReviewAt": "2026-10-29T08:07:35.051785+00:00"
+    }
+  ]
+}
