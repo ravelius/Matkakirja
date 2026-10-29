@@ -867,3 +867,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   LOD-yhdistelmät: 0 pistettä < 1 cm. juuri-v128m, aja_v128_pari.zsh; kuvat havainne-editori-20261029-095444/06 ja -095711/06 (pelikamera).
 - v66 = v65 + kielletty-rakennukset-v50 (= rakennukset-v119) + kielletty-tausta-v66 (= v106): K/tyokalut/paketti_v66.py valmis, EI AJETTU
   ennen KK:n 05-portin OK:ta (kysytty PT:ltä). v65 jää paikalleen, kunnes PK vaihtaa (PK: ilmoita ennen viennin poistoa).
+
+## LISÄYS 68 klo 10.2x (29.10.): PORTIT 02/05 + T-PORTTIEN LATTIA (rakennukset-v123) → KK; v66 AJETAAN KK:N OK:LLA — ALOITA TÄSTÄ
+- KK hylkäsi 05-portin v119 (lehdet kameraa kohti, 2× leveät, kirkkaanpunaiset) → K/tyokalut/portti_lehdet.py: vanhat lehdet (V4_portin_ovi +
+  V4_wood y > 0,4) pois, uudet: sarana pielessä z HZ, kääntö KULMA° sisään poispäin kamerasta, leveys = puoli aukkoa, V4_ovilehti_viini +
+  V4_nasta_kulta-kuvut (NASTA=16). Lehdet ovat staattista geometriaa (vain p-kujaportti-3:lla PK:n ovisolmut). 05: A=2.57 HZ=-0.85 KULMA=70 9×5;
+  02: A=1.64 HZ=-0.9 KULMA=75 9×4 (reitti 2,4 m mahtuu). Törmäys ennallaan.
+- 02:n katto: portti_katto_kapea.py (SX 0,83 SZ 0,8 NOSTO 0,5; koristeet kappaleina, scipy). t-portit 120/m15/m216: tportti_lattia.py
+  (vaakasuora V4_marmori → V4_lattia; PK: peli teksturoi nimen mukaan, marmori näkyi dronesta harmaana).
+- rakennukset-v123 = v119 + nämä; juuri-v130m, aja_v130_pari.zsh; parit -101640 (sovitettu) / -101857 (pelikamera) KK:lla.
+- paketti_v66.py (v65 + rakennukset-v123 + tausta v106) valmis → aja KK:n OK:lla → PK + PT.
