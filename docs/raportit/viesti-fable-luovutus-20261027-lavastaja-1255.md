@@ -2051,3 +2051,16 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   Paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v4-vienti-20261030 (vain kielletty-osasarja-v4), SHA256SUMS 9c781f204aa2, kopio PK:lle.
   Kooste proto-3d/lokit/kooste-osasarja-v4-20261030/LUE.md. ODOTTAA PT:n kuittausta.
 - Avoin (PT): LOD1/LOD2-vaihtorajan sävy pelikuvasta, kun PK:n pari tulee. Ei taustaajoja käynnissä.
+
+## LISÄYS 149 (30.10. 19.35): LEIVONTAKETJU (valosuunnitelma vaihe 4) VALMISTELTU – VS:n/PK:n vastaus ja PK:n v4-parin hyväksyntä odottavat
+- PT:n ohje: valmistele Blender-leivontaketju VS:n kanssa; varsinainen leivonta vasta, kun PK:n osasarja-v4-pari on hyväksytty.
+- Rajapintaluonnos /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/SOPIMUS.md (lähetetty VS:lle ja PK:lle 19.2x; ei vielä
+  vastausta; VS teki sen jälkeen luovutuksen 59754848f, joten uusi VS lukee sen sieltä). Pohja VS d420087dc (_LeivottuST, _LeivottuKarki,
+  tyylikirja/leivonta-aurinko.json 169,97°/30°; kopio leivonta-216/leivonta-aurinko-d420087dc.json).
+- Työkalut K/tyokalut: leivonta_lado.py (pelin Lado/Ladot-järjestys, v4: 3194 sijoitusta, 86 ruutua = pelin luku), leivonta_uv1.py
+  (UV1: xatlas + tasoprojektio tiilikatolle/konsoleille/C2:lle, 16 px/m; --lod1 siirto), leivonta_atlas.py (ruutujen 1024²-atlakset,
+  ST pelin UV1-kehyksessä v ylös → valo.json), leivo_osasarja.py (Blender ruuduittain, varjostajat, aukkotulpat, KUVA=1 tarkistuskuvat),
+  leivonta_karki.py (kaukonippujen RGBM-kärkivärit karki.bin), aja_leivonta_osasarja.zsh (koko ketju). venv: _tyo/linnanrakentaja/venv-leivonta (xatlas).
+- Koeajo leivonta-216/koe/osasarja (v4:n kopio): ruudut -5,-4 / -5,-1 / -3,-5 leivottu 32 näytteellä, tarkistuskuvat valo/tarkistus-*.png.
+- AUKI: pursotukset (PK: valmis glb vai kaava), taustan + rakennusten uusintaleivonta osasarja varjostajana, valon voimakkuudet VS:ltä.
+- Ei taustaajoja käynnissä.
