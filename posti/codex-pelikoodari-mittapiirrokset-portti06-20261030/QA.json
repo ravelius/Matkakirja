@@ -1,0 +1,3319 @@
+{
+  "schema": "meridian-gate-measured-drawings-qa-v1",
+  "tasks": [
+    1299,
+    1300
+  ],
+  "packagedAt": "2026-10-30T07:46:36.442235+00:00",
+  "sourceCommit": "77f0c59566fe9f13d357d8e90604a763a8ff906b",
+  "mode": "Deterministic vector SVG authoring and sharp/librsvg PNG export; no image generation or 3D production",
+  "sourceReadback": {
+    "checkedAt": "2026-10-30T07:28:59.170427+00:00",
+    "files": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030.md",
+        "blob": "06c5772ce4ef61911210a1437d5a8972144822ae",
+        "sha256": "278e17b303328ade8854554897a1dc282064e3415e2959518236a1b06b1cb627",
+        "bytes": 3352
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/SHA256SUMS",
+        "blob": "ec034b155bafa3caf12b420e1fdff5864304ac2a",
+        "sha256": "6e1c5ec82bb0ba44be88c4a1ebd3e86c4940b550b9684a92915982c5e760bbea",
+        "bytes": 831
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/havainne-06-meridiaaniportti.png",
+        "blob": "ec3a2fb7718f6602a76ba4431f9eb25e427f1ec1",
+        "sha256": "1f2546c7621fd02385c8b5f4ac9c9e6c12fd5e54c61d9beb7fe4d657f30281cd",
+        "bytes": 2520057
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/muotomalli-sokkelopiirros-20261020.png",
+        "blob": "6974ce23c1bd3af633484ea50c3c64c14f42e3bd",
+        "sha256": "196e92da2e2cbbcf9ed825e6d7d3069f21a1eb261249eb00e28d31d2fe081f42",
+        "bytes": 183482
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/portti06-julkisivu-etela.json",
+        "blob": "ce26696d4084e73cd2176d4a5e253f3f04b414b1",
+        "sha256": "45af0f75d0d78916f4b7791df568128aaf6ada3a09481ab356d41e185c4b54bc",
+        "bytes": 404
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/portti06-julkisivu-etela.png",
+        "blob": "dbc4883fe3f05f463bac500b1d18a60b02a7aa94",
+        "sha256": "771e963b40dc3beb526bc86b03a84f42d1a8d19cb709afd4fdb11aef337e465c",
+        "bytes": 160264
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/portti06-mitat.json",
+        "blob": "ffed19c96e4c3a8ee4abd8f1af9791f1cba1f856",
+        "sha256": "cc336e681ad1dce9127fa577bcf378d59bf3d310f1538b311cd48037b66b456b",
+        "bytes": 7535
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/portti06-pohja.json",
+        "blob": "68678fd4e7c66b05adc0fa7c3928851a3ac5efb0",
+        "sha256": "5111279a77704a8f1f265ed61062ab727d013b0a346201559170e6b0109645fc",
+        "bytes": 405
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/portti06-pohja.png",
+        "blob": "05f3d2fc6599f16fb1f97e4f86b625ac69544b02",
+        "sha256": "f91acff59ddf160e73503609ee4f0383695d5c18010f3330d68e4814758cc30a",
+        "bytes": 179989
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/reitti-pohjakartta.json",
+        "blob": "4ac239461d293f3d71cf45037bb378f71e8089cd",
+        "sha256": "dcda6685fdfca74a80b5dd2893473d966ac0a036c46320f534abb158d49906b4",
+        "bytes": 395
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/reitti-pohjakartta.png",
+        "blob": "b958dd4f7ae5afe64b11c77c538fdda6b743b7c2",
+        "sha256": "e533354b2c06b7abb0d342101c62466d2b3839e3a789897a2050e8a81b6bb3c1",
+        "bytes": 188842
+      }
+    ],
+    "SHA256SUMSEntriesVerified": 9
+  },
+  "localChecks": {
+    "checkedAt": "2026-10-30T07:45:34.495565+00:00",
+    "result": "PASS",
+    "drawings": [
+      {
+        "stem": "portti06-pohja-codex",
+        "canvas": [
+          1830,
+          1570
+        ],
+        "pxPerM": 8,
+        "margin": [
+          70,
+          120
+        ],
+        "grid": {
+          "x": [
+            -105,
+            105
+          ],
+          "a": [
+            -492,
+            -352
+          ],
+          "oneMetreLinesVerified": 352
+        },
+        "pureVector": true,
+        "resolvedClipReferences": true,
+        "planPrimitivesWorldToPixelVerified": 22,
+        "svgPNGAndRepeatedRenderPixelsIdentical": true,
+        "SVG_SHA256": "d85a4644aaace29e75cb19a128e8a3d50735d4a43dddc17c33335e85450894a4",
+        "PNG_SHA256": "cc985072863edc9862309c79cd8705b0cfdf9d251af3841185ee2effe4cf5361"
+      },
+      {
+        "stem": "portti06-julkisivu-etela-codex",
+        "canvas": [
+          2680,
+          960
+        ],
+        "pxPerM": 12,
+        "margin": [
+          80,
+          120
+        ],
+        "grid": {
+          "x": [
+            -105,
+            105
+          ],
+          "a": [
+            -3,
+            42
+          ],
+          "oneMetreLinesVerified": 257
+        },
+        "pureVector": true,
+        "resolvedClipReferences": true,
+        "planPrimitivesWorldToPixelVerified": 0,
+        "svgPNGAndRepeatedRenderPixelsIdentical": true,
+        "SVG_SHA256": "a7260bf638489f0d6ec6e1843bec37b10db334f5f0e21d60616ec573572d9580",
+        "PNG_SHA256": "5a42f698fff92033f344db558dc88320d0f6320b0a2e559f99f39f9ae8f04d99"
+      }
+    ],
+    "scope": "Local coordinate, vector, grid, render and file checks. Source dimension conflicts remain documented; no PK game comparison or owner approval claimed."
+  },
+  "independentAudit": {
+    "schema": "portti06-independent-measurement-audit-v1",
+    "created_at": "2026-10-30T07:33:06.148750+00:00",
+    "status": "COMPLETE_PASS_WITH_DISCLOSED_SOURCE_DISCREPANCIES",
+    "scope": "Independent source audit only; no external factual verification, no changes to source values.",
+    "read_full_order": true,
+    "read_all_source_json_files": [
+      "portti06-pohja.json",
+      "portti06-julkisivu-etela.json",
+      "portti06-mitat.json",
+      "reitti-pohjakartta.json"
+    ],
+    "viewed_source_pngs": [
+      "portti06-pohja.png",
+      "portti06-julkisivu-etela.png"
+    ],
+    "source_hashes": {
+      "havainne-06-meridiaaniportti.png": "1f2546c7621fd02385c8b5f4ac9c9e6c12fd5e54c61d9beb7fe4d657f30281cd",
+      "muotomalli-sokkelopiirros-20261020.png": "196e92da2e2cbbcf9ed825e6d7d3069f21a1eb261249eb00e28d31d2fe081f42",
+      "portti06-julkisivu-etela.json": "45af0f75d0d78916f4b7791df568128aaf6ada3a09481ab356d41e185c4b54bc",
+      "portti06-julkisivu-etela.png": "771e963b40dc3beb526bc86b03a84f42d1a8d19cb709afd4fdb11aef337e465c",
+      "portti06-mitat.json": "cc336e681ad1dce9127fa577bcf378d59bf3d310f1538b311cd48037b66b456b",
+      "portti06-pohja.json": "5111279a77704a8f1f265ed61062ab727d013b0a346201559170e6b0109645fc",
+      "portti06-pohja.png": "f91acff59ddf160e73503609ee4f0383695d5c18010f3330d68e4814758cc30a",
+      "reitti-pohjakartta.json": "dcda6685fdfca74a80b5dd2893473d966ac0a036c46320f534abb158d49906b4",
+      "reitti-pohjakartta.png": "e533354b2c06b7abb0d342101c62466d2b3839e3a789897a2050e8a81b6bb3c1"
+    },
+    "frames": [
+      {
+        "name": "portti06-pohja",
+        "png_size": [
+          1830,
+          1570
+        ],
+        "json_size": [
+          1830,
+          1570
+        ],
+        "size_match": true,
+        "px_per_m": 8,
+        "x_bounds": [
+          -105,
+          105
+        ],
+        "a_bounds": [
+          -492,
+          -352
+        ],
+        "margins_left_top": [
+          70,
+          120
+        ],
+        "grid_pixel_bounds": [
+          70,
+          120,
+          1750,
+          1240
+        ],
+        "mapping": {
+          "u_intercept": 910,
+          "u_x_factor": 8,
+          "v_intercept": -2696,
+          "v_a_factor": -8
+        },
+        "scale_bar_20m_px": 160
+      },
+      {
+        "name": "portti06-julkisivu-etela",
+        "png_size": [
+          2680,
+          960
+        ],
+        "json_size": [
+          2680,
+          960
+        ],
+        "size_match": true,
+        "px_per_m": 12,
+        "x_bounds": [
+          -105,
+          105
+        ],
+        "a_bounds": [
+          -3,
+          42
+        ],
+        "margins_left_top": [
+          80,
+          120
+        ],
+        "grid_pixel_bounds": [
+          80,
+          120,
+          2600,
+          660
+        ],
+        "mapping": {
+          "u_intercept": 1340,
+          "u_x_factor": 12,
+          "v_intercept": 624,
+          "v_a_factor": -12
+        },
+        "scale_bar_20m_px": 240
+      }
+    ],
+    "source_mask_metrics": {
+      "method": "Exact RGB color-mask pixel extrema; inclusive pixel endpoints; crop regions exclude unrelated labels where possible. Raster pixel extents do not define new authoritative physical dimensions.",
+      "gold_rgb": [
+        [
+          206,
+          160,
+          52
+        ],
+        [
+          150,
+          110,
+          30
+        ]
+      ],
+      "main_upper_with_ridge_ornaments": [
+        953,
+        168,
+        1726,
+        297
+      ],
+      "main_lower": [
+        929,
+        332,
+        1750,
+        375
+      ],
+      "pavilion_left_upper": [
+        626,
+        234,
+        818,
+        312
+      ],
+      "pavilion_right_upper": [
+        1862,
+        234,
+        2054,
+        312
+      ],
+      "pavilion_left_lower": [
+        639,
+        363,
+        804,
+        387
+      ],
+      "plan_main_eave_outline": [
+        648,
+        218,
+        1171,
+        461
+      ]
+    },
+    "conflicts_and_open_items": [
+      {
+        "id": "C01",
+        "kind": "source_internal_silhouette_vs_nominal",
+        "part": "Päälinnan räystäät",
+        "json_value_m": [
+          65.4,
+          30.3
+        ],
+        "raster_evidence": "Pohjan räystäsraja x=648..1171 px, v=218..461 px vastaa nimellistä 65,4 × 30,3 m. Julkisivun alakaton uloin rajaus x=929..1750 px ja yläkaton x=953..1726 px. Nämä ovat noin 68,4 m ja 64,4 m leveät, eivät sama 65,4 m.",
+        "required_handling": "Säilytä kummankin mittapohjan oma siluetti. Pidä JSON:n 65,4 × 30,3 m ennallaan nimellisarvona ja kirjaa ero. Älä muuta mittoja tai kutsu rasterista tulkittuja leveyksiä uusiksi lähdemitoiksi."
+      },
+      {
+        "id": "C02",
+        "kind": "source_internal_silhouette_vs_nominal",
+        "part": "Kulmapaviljonkien kattoreuna",
+        "json_value_m": 13.8,
+        "raster_evidence": "Pohjassa 13,8 × 13,8 m neliöt. Julkisivun vasemman yläkaton uloke x=626..818 px, oikean x=1862..2054 px, noin 16 m kokonaisleveys; varsinaisen kattokolmion alaosa ja alakatto ovat noin 13,8 m. Pohjan selite kutsuu saman neliön seinälinjaksi.",
+        "required_handling": "Säilytä PNG:n 16 m visuaalinen uloke ja JSON:n 13,8 m nimellisarvo; älä tulkitse molempia samaksi mittalajiksi varmistamatta.",
+        "clarification": "The roughly16m combined silhouette is separated into a13.8m pavilion triangle and visible gallery eave; it is not a new nominal pavilion width."
+      },
+      {
+        "id": "C03",
+        "kind": "nonzero_overhang_not_error_to_fix",
+        "part": "Eteläiset kulmapaviljongit",
+        "json_values_m": {
+          "center_z": -466.9,
+          "half_roof": 6.9,
+          "pavilion_south": -473.8,
+          "base_south": -473.2,
+          "overhang": 0.6
+        },
+        "raster_evidence": "Paviljonkien eteläpuolen punainen reunaviiva ulottuu v=1094 px; jalustan nimellinen eteläraja v=1089,6 px.",
+        "required_handling": "Säilytä 0,6 m eteläulottuma; älä siirrä tai leikkaa paviljonkia jalustan sisään."
+      },
+      {
+        "id": "C04",
+        "kind": "png_only_unlisted_dimension",
+        "part": "Ulkoiset sivumuurit",
+        "json_values_m": {
+          "x_ends": [
+            -92.9,
+            97.6
+          ],
+          "z_bounds": [
+            -392.2,
+            -376.3
+          ],
+          "height": null
+        },
+        "raster_evidence": "Julkisivun ulkomuurin yläreuna v=504 px eli y=10 m; ulommat reunat u=225..2511 px vastaavat x=-92,9..97,6 m.",
+        "required_handling": "Säilytä PNG:n korkeus. Merkitse 10 m mittapohjan rasterista luettavaksi, koska erillistä korkeuslukua tai lähdettä ei ole JSON:ssa. Älä muuta pääjalustan 12 m korkeutta."
+      },
+      {
+        "id": "C05",
+        "kind": "source_conflict_already_resolved_by_order",
+        "part": "Jalustan korkeus",
+        "json_values_m": {
+          "active_museum": 12.0,
+          "other_source": 12.9
+        },
+        "required_handling": "Tilaus asettaa Palatsimuseon 12,00 m voimassa olevaksi. Säilytä se; 12,9 m vain huomiona."
+      },
+      {
+        "id": "C06",
+        "kind": "source_difference_already_disclosed",
+        "part": "Jalustan kokonaisulottuma ja leveys",
+        "json_values_m": {
+          "active_ns": 107.2,
+          "article_ns": 114.9,
+          "difference_ns": 7.7,
+          "active_ew": 126.9,
+          "osm_ew": 125.6,
+          "active_wing_width": 24.2,
+          "osm_east_wing": 24.31,
+          "osm_west_wing": 21.59
+        },
+        "required_handling": "Säilytä tilauksen symmetrisoitu 126,9 m jalusta, 24,2 m siivet ja z=-366..-473,2. Katkoviivainen OSM-raja on erillinen vertailu, ei käytettävä muodon korvaaja."
+      },
+      {
+        "id": "C07",
+        "kind": "estimate_scope",
+        "part": "A-arviot ja avoimet osat",
+        "raster_evidence": "13 mittariviä on suoraan lähteellä A. Lisäksi päälinnan keskipiste z=-379,5 on merkitty A:ksi syvyysrivin huomautuksessa, vaikka syvyys 25 m on lähteellä [1]. Kello- ja rumpupaviljongit: vain 3 jännettä tiedossa; koko ja paikka puuttuvat. 掖门-paikka ja koko ovat null.",
+        "required_handling": "Säilytä A-tunnisteet ja null-tiedot. Kello- ja rumpupaviljongeille vain katkoviivainen paikka avoin -merkintä, josta ei synny mitoitettua sijaintiväitettä. Ei arvattuja aukkoja."
+      }
+    ],
+    "expected_geometry": {
+      "plan": {
+        "base_u_polygon_m": [
+          [
+            -63.45,
+            -366
+          ],
+          [
+            63.45,
+            -366
+          ],
+          [
+            63.45,
+            -473.2
+          ],
+          [
+            39.25,
+            -473.2
+          ],
+          [
+            39.25,
+            -393
+          ],
+          [
+            -39.25,
+            -393
+          ],
+          [
+            -39.25,
+            -473.2
+          ],
+          [
+            -63.45,
+            -473.2
+          ]
+        ],
+        "hall_wall_rectangle_m": [
+          -30.025,
+          -392,
+          30.025,
+          -367
+        ],
+        "hall_eave_rectangle_m": [
+          -32.7,
+          -394.65,
+          32.7,
+          -364.35
+        ],
+        "gallery_x_centers_m": [
+          -51.5,
+          51.5
+        ],
+        "gallery_roof_width_m": 16,
+        "gallery_z_bounds_m": [
+          -452.5,
+          -394.8
+        ],
+        "pavilion_centers_x_m": [
+          -51.5,
+          51.5
+        ],
+        "pavilion_centers_z_m": [
+          -380.3,
+          -466.9
+        ],
+        "pavilion_square_nominal_m": 13.8
+      },
+      "elevation": {
+        "base_x_m": [
+          -63.45,
+          63.45
+        ],
+        "base_y_m": [
+          0,
+          12
+        ],
+        "stone_y_m": [
+          0,
+          3
+        ],
+        "balustrade_y_m": [
+          12,
+          13
+        ],
+        "hall_wall_x_m": [
+          -30.025,
+          30.025
+        ],
+        "hall_layers_y_m": {
+          "columns": [
+            13,
+            18.3
+          ],
+          "lower_beam": [
+            18.3,
+            20.7
+          ],
+          "lower_roof": [
+            20.7,
+            24.4
+          ],
+          "upper_beam": [
+            24.4,
+            27.2
+          ],
+          "upper_roof": [
+            27.2,
+            36.3
+          ],
+          "ridge_top": 37.95
+        },
+        "pavilion_peak_y_m": 32.5,
+        "opening_rectangles_m": [
+          [
+            -23.7,
+            0,
+            -19,
+            6.9
+          ],
+          [
+            -2.8,
+            0,
+            2.8,
+            7.5
+          ],
+          [
+            19,
+            0,
+            23.7,
+            6.9
+          ]
+        ]
+      },
+      "general": [
+        "Coordinates are already rotated to palace axis; do not rotate them again.",
+        "North is +z and upward in plan. South elevation looks north along the palace axis.",
+        "1 m thin grid and 10 m heavier grid, without changing frame.",
+        "All decorative strokes stay inside measured silhouette clips.",
+        "No painted freeform geometry. No dimensions changed.",
+        "SVG and PNG output sizes must equal source sizes."
+      ]
+    },
+    "a_estimates": [
+      {
+        "osa": "jalusta",
+        "mitta": "harmaa kivisokkeli y",
+        "arvo_m": [
+          0.0,
+          3.0
+        ],
+        "lahde": "A",
+        "huom": "havainne 06 ja peli; suhde havainteessa noin 1/4 jalustan korkeudesta"
+      },
+      {
+        "osa": "päälinna",
+        "mitta": "pylväskerros y",
+        "arvo_m": [
+          13.0,
+          18.3
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "päälinna",
+        "mitta": "alaräystään palkkivyö y",
+        "arvo_m": [
+          18.3,
+          20.7
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "päälinna",
+        "mitta": "alakatto y",
+        "arvo_m": [
+          20.7,
+          24.4
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "päälinna",
+        "mitta": "yläräystään palkkivyö y",
+        "arvo_m": [
+          24.4,
+          27.2
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "päälinna",
+        "mitta": "yläkatto harjaan y",
+        "arvo_m": [
+          27.2,
+          36.3
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "päälinna",
+        "mitta": "räystäs ulottuu x / z",
+        "arvo_m": [
+          65.4,
+          30.3
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "jalustan kaide",
+        "mitta": "marmorikaide y",
+        "arvo_m": [
+          12.0,
+          13.0
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "keskiaukko",
+        "mitta": "leveys × korkeus",
+        "arvo_m": [
+          5.6,
+          7.5
+        ],
+        "x_m": [
+          -2.8,
+          2.8
+        ],
+        "lahde": "A",
+        "huom": "pohja.json: keskiaukko noin 5 m (A)"
+      },
+      {
+        "osa": "sivuaukot",
+        "mitta": "leveys × korkeus",
+        "arvo_m": [
+          4.7,
+          6.9
+        ],
+        "x_m": [
+          [
+            -23.7,
+            -19.0
+          ],
+          [
+            19.0,
+            23.7
+          ]
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "掖门 siipien sisäkulmissa",
+        "mitta": "paikka ja koko",
+        "arvo": null,
+        "lahde": "A",
+        "huom": "ei pelissä; ei mittalähdettä"
+      },
+      {
+        "osa": "siipigalleriat",
+        "mitta": "katon leveys × pituus, harja y",
+        "arvo_m": [
+          16.0,
+          57.7,
+          27.7
+        ],
+        "z_m": [
+          -452.5,
+          -394.8
+        ],
+        "lahde": "A"
+      },
+      {
+        "osa": "kulmapaviljongit",
+        "mitta": "katon koko, huippu y",
+        "arvo_m": [
+          13.8,
+          32.5
+        ],
+        "x_keski_m": [
+          -51.5,
+          51.5
+        ],
+        "z_keski_m": [
+          -380.3,
+          -466.9
+        ],
+        "lahde": "A"
+      }
+    ],
+    "final_svg_checks": {
+      "status": "PASS_WITH_DISCLOSED_SOURCE_DISCREPANCIES",
+      "checked_files": [
+        "portti06-pohja-codex.svg",
+        "portti06-pohja-codex.png",
+        "portti06-julkisivu-etela-codex.svg",
+        "portti06-julkisivu-etela-codex.png"
+      ],
+      "nonoverlap_labels": "PASS_BOTH_DRAWINGS",
+      "source_values_changed": false,
+      "plan": {
+        "status": "PASS",
+        "svg_sha256": "d85a4644aaace29e75cb19a128e8a3d50735d4a43dddc17c33335e85450894a4",
+        "png_sha256": "cc985072863edc9862309c79cd8705b0cfdf9d251af3841185ee2effe4cf5361",
+        "checks": [
+          {
+            "check": "SVG width",
+            "pass": true,
+            "actual": "1830",
+            "expected": "1830"
+          },
+          {
+            "check": "SVG height",
+            "pass": true,
+            "actual": "1570",
+            "expected": "1570"
+          },
+          {
+            "check": "SVG viewBox",
+            "pass": true,
+            "actual": "0 0 1830 1570",
+            "expected": "0 0 1830 1570"
+          },
+          {
+            "check": "PNG size",
+            "pass": true,
+            "actual": [
+              1830,
+              1570
+            ],
+            "expected": [
+              1830,
+              1570
+            ]
+          },
+          {
+            "check": "embedded raster count",
+            "pass": true,
+            "actual": 0,
+            "expected": 0
+          },
+          {
+            "check": "foundation all eight mapped vertices",
+            "pass": true,
+            "actual": [
+              402.4,
+              232.0,
+              1417.6,
+              232.0,
+              1417.6,
+              1089.6,
+              1224.0,
+              1089.6,
+              1224.0,
+              448.0,
+              596.0,
+              448.0,
+              596.0,
+              1089.6,
+              402.4,
+              1089.6
+            ],
+            "expected": [
+              402.4,
+              232,
+              1417.6,
+              232,
+              1417.6,
+              1089.6,
+              1224.0,
+              1089.6,
+              1224.0,
+              448,
+              596.0,
+              448,
+              596.0,
+              1089.6,
+              402.4,
+              1089.6
+            ]
+          },
+          {
+            "check": "main-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              648.4,
+              218.8,
+              523.2,
+              242.4
+            ],
+            "expected": [
+              648.4,
+              218.80000000000018,
+              523.2,
+              242.39999999999964
+            ]
+          },
+          {
+            "check": "main-hall-footprint mapped SVG rect",
+            "pass": true,
+            "actual": [
+              669.8,
+              240.0,
+              480.4,
+              200.0
+            ],
+            "expected": [
+              669.8,
+              240,
+              480.4,
+              200
+            ]
+          },
+          {
+            "check": "sidewall-west mapped SVG rect",
+            "pass": true,
+            "actual": [
+              166.8,
+              314.4,
+              235.6,
+              127.2
+            ],
+            "expected": [
+              166.79999999999995,
+              314.4000000000001,
+              235.60000000000002,
+              127.19999999999982
+            ]
+          },
+          {
+            "check": "sidewall-east mapped SVG rect",
+            "pass": true,
+            "actual": [
+              1417.6,
+              314.4,
+              273.2,
+              127.2
+            ],
+            "expected": [
+              1417.6,
+              314.4000000000001,
+              273.19999999999993,
+              127.19999999999982
+            ]
+          },
+          {
+            "check": "gallery-west-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              434.0,
+              462.4,
+              128.0,
+              461.6
+            ],
+            "expected": [
+              434.0,
+              462.4000000000001,
+              128.0,
+              461.5999999999999
+            ]
+          },
+          {
+            "check": "pavilion-west-north-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              442.8,
+              291.2,
+              110.4,
+              110.4
+            ],
+            "expected": [
+              442.8,
+              291.2000000000003,
+              110.39999999999998,
+              110.39999999999964
+            ]
+          },
+          {
+            "check": "pavilion-west-south-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              442.8,
+              984.0,
+              110.4,
+              110.4
+            ],
+            "expected": [
+              442.8,
+              984.0,
+              110.39999999999998,
+              110.39999999999964
+            ]
+          },
+          {
+            "check": "gallery-east-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              1258.0,
+              462.4,
+              128.0,
+              461.6
+            ],
+            "expected": [
+              1258.0,
+              462.4000000000001,
+              128.0,
+              461.5999999999999
+            ]
+          },
+          {
+            "check": "pavilion-east-north-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              1266.8,
+              291.2,
+              110.4,
+              110.4
+            ],
+            "expected": [
+              1266.8,
+              291.2000000000003,
+              110.39999999999998,
+              110.39999999999964
+            ]
+          },
+          {
+            "check": "pavilion-east-south-roof mapped SVG rect",
+            "pass": true,
+            "actual": [
+              1266.8,
+              984.0,
+              110.4,
+              110.4
+            ],
+            "expected": [
+              1266.8,
+              984.0,
+              110.39999999999998,
+              110.39999999999964
+            ]
+          },
+          {
+            "check": "1m grid verticals",
+            "pass": true,
+            "actual": [
+              70.0,
+              78.0,
+              86.0,
+              94.0,
+              102.0,
+              110.0,
+              118.0,
+              126.0,
+              134.0,
+              142.0,
+              150.0,
+              158.0,
+              166.0,
+              174.0,
+              182.0,
+              190.0,
+              198.0,
+              206.0,
+              214.0,
+              222.0,
+              230.0,
+              238.0,
+              246.0,
+              254.0,
+              262.0,
+              270.0,
+              278.0,
+              286.0,
+              294.0,
+              302.0,
+              310.0,
+              318.0,
+              326.0,
+              334.0,
+              342.0,
+              350.0,
+              358.0,
+              366.0,
+              374.0,
+              382.0,
+              390.0,
+              398.0,
+              406.0,
+              414.0,
+              422.0,
+              430.0,
+              438.0,
+              446.0,
+              454.0,
+              462.0,
+              470.0,
+              478.0,
+              486.0,
+              494.0,
+              502.0,
+              510.0,
+              518.0,
+              526.0,
+              534.0,
+              542.0,
+              550.0,
+              558.0,
+              566.0,
+              574.0,
+              582.0,
+              590.0,
+              598.0,
+              606.0,
+              614.0,
+              622.0,
+              630.0,
+              638.0,
+              646.0,
+              654.0,
+              662.0,
+              670.0,
+              678.0,
+              686.0,
+              694.0,
+              702.0,
+              710.0,
+              718.0,
+              726.0,
+              734.0,
+              742.0,
+              750.0,
+              758.0,
+              766.0,
+              774.0,
+              782.0,
+              790.0,
+              798.0,
+              806.0,
+              814.0,
+              822.0,
+              830.0,
+              838.0,
+              846.0,
+              854.0,
+              862.0,
+              870.0,
+              878.0,
+              886.0,
+              894.0,
+              902.0,
+              910.0,
+              918.0,
+              926.0,
+              934.0,
+              942.0,
+              950.0,
+              958.0,
+              966.0,
+              974.0,
+              982.0,
+              990.0,
+              998.0,
+              1006.0,
+              1014.0,
+              1022.0,
+              1030.0,
+              1038.0,
+              1046.0,
+              1054.0,
+              1062.0,
+              1070.0,
+              1078.0,
+              1086.0,
+              1094.0,
+              1102.0,
+              1110.0,
+              1118.0,
+              1126.0,
+              1134.0,
+              1142.0,
+              1150.0,
+              1158.0,
+              1166.0,
+              1174.0,
+              1182.0,
+              1190.0,
+              1198.0,
+              1206.0,
+              1214.0,
+              1222.0,
+              1230.0,
+              1238.0,
+              1246.0,
+              1254.0,
+              1262.0,
+              1270.0,
+              1278.0,
+              1286.0,
+              1294.0,
+              1302.0,
+              1310.0,
+              1318.0,
+              1326.0,
+              1334.0,
+              1342.0,
+              1350.0,
+              1358.0,
+              1366.0,
+              1374.0,
+              1382.0,
+              1390.0,
+              1398.0,
+              1406.0,
+              1414.0,
+              1422.0,
+              1430.0,
+              1438.0,
+              1446.0,
+              1454.0,
+              1462.0,
+              1470.0,
+              1478.0,
+              1486.0,
+              1494.0,
+              1502.0,
+              1510.0,
+              1518.0,
+              1526.0,
+              1534.0,
+              1542.0,
+              1550.0,
+              1558.0,
+              1566.0,
+              1574.0,
+              1582.0,
+              1590.0,
+              1598.0,
+              1606.0,
+              1614.0,
+              1622.0,
+              1630.0,
+              1638.0,
+              1646.0,
+              1654.0,
+              1662.0,
+              1670.0,
+              1678.0,
+              1686.0,
+              1694.0,
+              1702.0,
+              1710.0,
+              1718.0,
+              1726.0,
+              1734.0,
+              1742.0,
+              1750.0
+            ],
+            "expected": [
+              70,
+              78,
+              86,
+              94,
+              102,
+              110,
+              118,
+              126,
+              134,
+              142,
+              150,
+              158,
+              166,
+              174,
+              182,
+              190,
+              198,
+              206,
+              214,
+              222,
+              230,
+              238,
+              246,
+              254,
+              262,
+              270,
+              278,
+              286,
+              294,
+              302,
+              310,
+              318,
+              326,
+              334,
+              342,
+              350,
+              358,
+              366,
+              374,
+              382,
+              390,
+              398,
+              406,
+              414,
+              422,
+              430,
+              438,
+              446,
+              454,
+              462,
+              470,
+              478,
+              486,
+              494,
+              502,
+              510,
+              518,
+              526,
+              534,
+              542,
+              550,
+              558,
+              566,
+              574,
+              582,
+              590,
+              598,
+              606,
+              614,
+              622,
+              630,
+              638,
+              646,
+              654,
+              662,
+              670,
+              678,
+              686,
+              694,
+              702,
+              710,
+              718,
+              726,
+              734,
+              742,
+              750,
+              758,
+              766,
+              774,
+              782,
+              790,
+              798,
+              806,
+              814,
+              822,
+              830,
+              838,
+              846,
+              854,
+              862,
+              870,
+              878,
+              886,
+              894,
+              902,
+              910,
+              918,
+              926,
+              934,
+              942,
+              950,
+              958,
+              966,
+              974,
+              982,
+              990,
+              998,
+              1006,
+              1014,
+              1022,
+              1030,
+              1038,
+              1046,
+              1054,
+              1062,
+              1070,
+              1078,
+              1086,
+              1094,
+              1102,
+              1110,
+              1118,
+              1126,
+              1134,
+              1142,
+              1150,
+              1158,
+              1166,
+              1174,
+              1182,
+              1190,
+              1198,
+              1206,
+              1214,
+              1222,
+              1230,
+              1238,
+              1246,
+              1254,
+              1262,
+              1270,
+              1278,
+              1286,
+              1294,
+              1302,
+              1310,
+              1318,
+              1326,
+              1334,
+              1342,
+              1350,
+              1358,
+              1366,
+              1374,
+              1382,
+              1390,
+              1398,
+              1406,
+              1414,
+              1422,
+              1430,
+              1438,
+              1446,
+              1454,
+              1462,
+              1470,
+              1478,
+              1486,
+              1494,
+              1502,
+              1510,
+              1518,
+              1526,
+              1534,
+              1542,
+              1550,
+              1558,
+              1566,
+              1574,
+              1582,
+              1590,
+              1598,
+              1606,
+              1614,
+              1622,
+              1630,
+              1638,
+              1646,
+              1654,
+              1662,
+              1670,
+              1678,
+              1686,
+              1694,
+              1702,
+              1710,
+              1718,
+              1726,
+              1734,
+              1742,
+              1750
+            ]
+          },
+          {
+            "check": "1m grid horizontals",
+            "pass": true,
+            "actual": [
+              120.0,
+              128.0,
+              136.0,
+              144.0,
+              152.0,
+              160.0,
+              168.0,
+              176.0,
+              184.0,
+              192.0,
+              200.0,
+              208.0,
+              216.0,
+              224.0,
+              232.0,
+              240.0,
+              248.0,
+              256.0,
+              264.0,
+              272.0,
+              280.0,
+              288.0,
+              296.0,
+              304.0,
+              312.0,
+              320.0,
+              328.0,
+              336.0,
+              344.0,
+              352.0,
+              360.0,
+              368.0,
+              376.0,
+              384.0,
+              392.0,
+              400.0,
+              408.0,
+              416.0,
+              424.0,
+              432.0,
+              440.0,
+              448.0,
+              456.0,
+              464.0,
+              472.0,
+              480.0,
+              488.0,
+              496.0,
+              504.0,
+              512.0,
+              520.0,
+              528.0,
+              536.0,
+              544.0,
+              552.0,
+              560.0,
+              568.0,
+              576.0,
+              584.0,
+              592.0,
+              600.0,
+              608.0,
+              616.0,
+              624.0,
+              632.0,
+              640.0,
+              648.0,
+              656.0,
+              664.0,
+              672.0,
+              680.0,
+              688.0,
+              696.0,
+              704.0,
+              712.0,
+              720.0,
+              728.0,
+              736.0,
+              744.0,
+              752.0,
+              760.0,
+              768.0,
+              776.0,
+              784.0,
+              792.0,
+              800.0,
+              808.0,
+              816.0,
+              824.0,
+              832.0,
+              840.0,
+              848.0,
+              856.0,
+              864.0,
+              872.0,
+              880.0,
+              888.0,
+              896.0,
+              904.0,
+              912.0,
+              920.0,
+              928.0,
+              936.0,
+              944.0,
+              952.0,
+              960.0,
+              968.0,
+              976.0,
+              984.0,
+              992.0,
+              1000.0,
+              1008.0,
+              1016.0,
+              1024.0,
+              1032.0,
+              1040.0,
+              1048.0,
+              1056.0,
+              1064.0,
+              1072.0,
+              1080.0,
+              1088.0,
+              1096.0,
+              1104.0,
+              1112.0,
+              1120.0,
+              1128.0,
+              1136.0,
+              1144.0,
+              1152.0,
+              1160.0,
+              1168.0,
+              1176.0,
+              1184.0,
+              1192.0,
+              1200.0,
+              1208.0,
+              1216.0,
+              1224.0,
+              1232.0,
+              1240.0
+            ],
+            "expected": [
+              120,
+              128,
+              136,
+              144,
+              152,
+              160,
+              168,
+              176,
+              184,
+              192,
+              200,
+              208,
+              216,
+              224,
+              232,
+              240,
+              248,
+              256,
+              264,
+              272,
+              280,
+              288,
+              296,
+              304,
+              312,
+              320,
+              328,
+              336,
+              344,
+              352,
+              360,
+              368,
+              376,
+              384,
+              392,
+              400,
+              408,
+              416,
+              424,
+              432,
+              440,
+              448,
+              456,
+              464,
+              472,
+              480,
+              488,
+              496,
+              504,
+              512,
+              520,
+              528,
+              536,
+              544,
+              552,
+              560,
+              568,
+              576,
+              584,
+              592,
+              600,
+              608,
+              616,
+              624,
+              632,
+              640,
+              648,
+              656,
+              664,
+              672,
+              680,
+              688,
+              696,
+              704,
+              712,
+              720,
+              728,
+              736,
+              744,
+              752,
+              760,
+              768,
+              776,
+              784,
+              792,
+              800,
+              808,
+              816,
+              824,
+              832,
+              840,
+              848,
+              856,
+              864,
+              872,
+              880,
+              888,
+              896,
+              904,
+              912,
+              920,
+              928,
+              936,
+              944,
+              952,
+              960,
+              968,
+              976,
+              984,
+              992,
+              1000,
+              1008,
+              1016,
+              1024,
+              1032,
+              1040,
+              1048,
+              1056,
+              1064,
+              1072,
+              1080,
+              1088,
+              1096,
+              1104,
+              1112,
+              1120,
+              1128,
+              1136,
+              1144,
+              1152,
+              1160,
+              1168,
+              1176,
+              1184,
+              1192,
+              1200,
+              1208,
+              1216,
+              1224,
+              1232,
+              1240
+            ]
+          },
+          {
+            "check": "visible frame endpoint labels",
+            "pass": true,
+            "actual": true,
+            "expected": true
+          }
+        ],
+        "text_bbox_method": "Arial/Arial Bold PIL font metrics with actual SVG group transform matrices; halo stroke included. Supplemented by final PNG visual inspection.",
+        "text_count": 94,
+        "text_pair_bbox_overlaps": [],
+        "visual_png_checked": true,
+        "visual_result": "Grid endpoints visible; dimension labels 25m and27m rotated and clear of roofs; no clipped text or label-label overlap observed.",
+        "limitations": [
+          "OSM dashed reference polygon is intentionally labelled raster trace with ±2px / ±0.25m tolerance; it is not authoritative foundation geometry.",
+          "Internal tile and railing subdivisions are decorative, not independently source-measured."
+        ]
+      },
+      "elevation": {
+        "status": "PASS",
+        "svg_sha256": "a7260bf638489f0d6ec6e1843bec37b10db334f5f0e21d60616ec573572d9580",
+        "png_sha256": "5a42f698fff92033f344db558dc88320d0f6320b0a2e559f99f39f9ae8f04d99",
+        "frame_exact": true,
+        "png_size": [
+          2680,
+          960
+        ],
+        "px_per_m": 12,
+        "mapping": "u=1340+12x; v=624-12y",
+        "exact_rectangle_checks": [
+          "external-walls",
+          "external-stone-plinth",
+          "foundation",
+          "foundation-stone",
+          "balustrade",
+          "door-opening-west",
+          "door-opening-center",
+          "door-opening-east"
+        ],
+        "grid_lines_checked": {
+          "vertical": 211,
+          "horizontal": 46,
+          "all_1m_exact": true,
+          "endpoint_labels_visible": true
+        },
+        "structure_count": 31,
+        "matching_clip_envelopes": 31,
+        "clipped_ornament_groups": 37,
+        "embedded_raster_images": 0,
+        "roof_source_comparison": [
+          {
+            "feature": "mainhall-lower-roof",
+            "rows_checked": 44,
+            "runs_checked": 44,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "mainhall-upper-roof",
+            "rows_checked": 109,
+            "runs_checked": 109,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "mainhall-ridge-ornaments",
+            "rows_checked": 21,
+            "runs_checked": 34,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "pavilion-west-upper-roof",
+            "rows_checked": 71,
+            "runs_checked": 71,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "pavilion-west-lower-roof",
+            "rows_checked": 25,
+            "runs_checked": 25,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "pavilion-west-gallery-visible-eave",
+            "rows_checked": 8,
+            "runs_checked": 16,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "pavilion-east-upper-roof",
+            "rows_checked": 71,
+            "runs_checked": 71,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "pavilion-east-lower-roof",
+            "rows_checked": 22,
+            "runs_checked": 22,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          },
+          {
+            "feature": "pavilion-east-gallery-visible-eave",
+            "rows_checked": 8,
+            "runs_checked": 16,
+            "max_endpoint_delta_px": 0,
+            "nonzero_rows": []
+          }
+        ],
+        "roof_comparison_summary": {
+          "rows_checked": 379,
+          "runs_checked": 408,
+          "max_endpoint_delta_px": 0,
+          "right_lower_occluded_rows": [
+            385,
+            386,
+            387
+          ],
+          "occluded_rows_handling": "Exact1236px translation of unoccluded left counterpart; original right contour under3label-covered rows is unobservable.",
+          "final_eave_correction": "Right gallery eave traced directly from its own source region. All8rows /16runs exact; no residual endpoint differences."
+        },
+        "text_bbox_method": "PIL Arial/Arial Bold actual size and actual SVG text rotations; no group transforms. Supplemented by final PNG visual inspection.",
+        "text_count": 73,
+        "text_pair_bbox_overlaps": [],
+        "visual_png_checked": true,
+        "visual_result": "All texts readable and unclipped; frame endpoint values visible; three rectangular openings; all visible source roof silhouettes exact at tested raster row endpoints.",
+        "source_hashes_unchanged": true,
+        "limitations": [
+          "Original raster quantization is preserved; this is not a new building survey.",
+          "Nominal37.95m top retained; source top pixel v168=38.0m is0.6px from nominal.",
+          "Three right lower roof rows occluded by original label use translated left counterpart."
+        ],
+        "final_revision_check": {
+          "changed_feature": "pavilion-east-gallery-visible-eave",
+          "source_rows_checked": 8,
+          "source_runs_checked": 16,
+          "endpoint_difference_px": 0,
+          "fonts_and_labels_unchanged": "Producer confirmed only right eave shape changed; prior73text font and visual audit applies.",
+          "png_changed_pixels_reported_by_producer": [
+            [
+              1878,
+              308
+            ],
+            [
+              2038,
+              308
+            ]
+          ]
+        }
+      }
+    },
+    "completed_at": "2026-10-30T07:45:51.963703+00:00"
+  },
+  "planGeometry": {
+    "title": "Meridiaaniportti / pohjapiirros",
+    "frame": {
+      "width_px": 1830,
+      "height_px": 1570,
+      "px_per_m": 8,
+      "x0": -105,
+      "x1": 105,
+      "z0": -492,
+      "z1": -352,
+      "origin_px": [
+        70,
+        120
+      ],
+      "formula": [
+        "X=70+(x+105)*8",
+        "Y=120+(-352-z)*8"
+      ],
+      "rotation_applied_in_this_drawing_deg": 0,
+      "source_already_rotated_deg": 2.03
+    },
+    "objects": [
+      {
+        "id": "foundation",
+        "kind": "polygon",
+        "world_xz": [
+          [
+            -63.45,
+            -366
+          ],
+          [
+            63.45,
+            -366
+          ],
+          [
+            63.45,
+            -473.2
+          ],
+          [
+            39.25,
+            -473.2
+          ],
+          [
+            39.25,
+            -393
+          ],
+          [
+            -39.25,
+            -393
+          ],
+          [
+            -39.25,
+            -473.2
+          ],
+          [
+            -63.45,
+            -473.2
+          ]
+        ],
+        "source": "3,4",
+        "role": "measured"
+      },
+      {
+        "id": "sidewall-west",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            -92.9,
+            -376.3
+          ],
+          [
+            -63.45,
+            -376.3
+          ],
+          [
+            -63.45,
+            -392.2
+          ],
+          [
+            -92.9,
+            -392.2
+          ]
+        ],
+        "source": "4",
+        "role": "measured",
+        "bounds": {
+          "x0": -92.9,
+          "x1": -63.45,
+          "z0": -392.2,
+          "z1": -376.3
+        }
+      },
+      {
+        "id": "sidewall-east",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            63.45,
+            -376.3
+          ],
+          [
+            97.6,
+            -376.3
+          ],
+          [
+            97.6,
+            -392.2
+          ],
+          [
+            63.45,
+            -392.2
+          ]
+        ],
+        "source": "4",
+        "role": "measured",
+        "bounds": {
+          "x0": 63.45,
+          "x1": 97.6,
+          "z0": -392.2,
+          "z1": -376.3
+        }
+      },
+      {
+        "id": "main-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            -32.7,
+            -364.35
+          ],
+          [
+            32.7,
+            -364.35
+          ],
+          [
+            32.7,
+            -394.65
+          ],
+          [
+            -32.7,
+            -394.65
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": -32.7,
+          "x1": 32.7,
+          "z0": -394.65,
+          "z1": -364.35
+        }
+      },
+      {
+        "id": "main-hall-footprint",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            -30.025,
+            -367
+          ],
+          [
+            30.025,
+            -367
+          ],
+          [
+            30.025,
+            -392
+          ],
+          [
+            -30.025,
+            -392
+          ]
+        ],
+        "source": "1; centre-z A",
+        "role": "measured",
+        "bounds": {
+          "x0": -30.025,
+          "x1": 30.025,
+          "z0": -392,
+          "z1": -367
+        }
+      },
+      {
+        "id": "gallery-west-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            -59.5,
+            -394.8
+          ],
+          [
+            -43.5,
+            -394.8
+          ],
+          [
+            -43.5,
+            -452.5
+          ],
+          [
+            -59.5,
+            -452.5
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": -59.5,
+          "x1": -43.5,
+          "z0": -452.5,
+          "z1": -394.8
+        }
+      },
+      {
+        "id": "pavilion-west-north-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            -58.4,
+            -373.40000000000003
+          ],
+          [
+            -44.6,
+            -373.40000000000003
+          ],
+          [
+            -44.6,
+            -387.2
+          ],
+          [
+            -58.4,
+            -387.2
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": -58.4,
+          "x1": -44.6,
+          "z0": -387.2,
+          "z1": -373.40000000000003
+        }
+      },
+      {
+        "id": "pavilion-west-south-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            -58.4,
+            -460.0
+          ],
+          [
+            -44.6,
+            -460.0
+          ],
+          [
+            -44.6,
+            -473.79999999999995
+          ],
+          [
+            -58.4,
+            -473.79999999999995
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": -58.4,
+          "x1": -44.6,
+          "z0": -473.79999999999995,
+          "z1": -460.0
+        }
+      },
+      {
+        "id": "gallery-east-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            43.5,
+            -394.8
+          ],
+          [
+            59.5,
+            -394.8
+          ],
+          [
+            59.5,
+            -452.5
+          ],
+          [
+            43.5,
+            -452.5
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": 43.5,
+          "x1": 59.5,
+          "z0": -452.5,
+          "z1": -394.8
+        }
+      },
+      {
+        "id": "pavilion-east-north-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            44.6,
+            -373.40000000000003
+          ],
+          [
+            58.4,
+            -373.40000000000003
+          ],
+          [
+            58.4,
+            -387.2
+          ],
+          [
+            44.6,
+            -387.2
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": 44.6,
+          "x1": 58.4,
+          "z0": -387.2,
+          "z1": -373.40000000000003
+        }
+      },
+      {
+        "id": "pavilion-east-south-roof",
+        "kind": "rectangle",
+        "world_xz": [
+          [
+            44.6,
+            -460.0
+          ],
+          [
+            58.4,
+            -460.0
+          ],
+          [
+            58.4,
+            -473.79999999999995
+          ],
+          [
+            44.6,
+            -473.79999999999995
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "bounds": {
+          "x0": 44.6,
+          "x1": 58.4,
+          "z0": -473.79999999999995,
+          "z1": -460.0
+        }
+      },
+      {
+        "id": "portal-1",
+        "kind": "width-marker",
+        "world_xz": [
+          [
+            -23.7,
+            -393
+          ],
+          [
+            -19,
+            -393
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "width_m": 4.699999999999999,
+        "internal_tunnel": "unspecified"
+      },
+      {
+        "id": "portal-2",
+        "kind": "width-marker",
+        "world_xz": [
+          [
+            -2.8,
+            -393
+          ],
+          [
+            2.8,
+            -393
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "width_m": 5.6,
+        "internal_tunnel": "unspecified"
+      },
+      {
+        "id": "portal-3",
+        "kind": "width-marker",
+        "world_xz": [
+          [
+            19,
+            -393
+          ],
+          [
+            23.7,
+            -393
+          ]
+        ],
+        "source": "A",
+        "role": "measured",
+        "width_m": 4.699999999999999,
+        "internal_tunnel": "unspecified"
+      },
+      {
+        "id": "osm-raster-reference",
+        "kind": "polygon",
+        "world_xz": [
+          [
+            -69.25,
+            -365.375
+          ],
+          [
+            69.875,
+            -366.75
+          ],
+          [
+            69.875,
+            -376.125
+          ],
+          [
+            97.625,
+            -376.375
+          ],
+          [
+            97.5,
+            -389.875
+          ],
+          [
+            63.5,
+            -390.125
+          ],
+          [
+            63.125,
+            -473.625
+          ],
+          [
+            39.125,
+            -473.375
+          ],
+          [
+            39.75,
+            -393.25
+          ],
+          [
+            -40.5,
+            -392.625
+          ],
+          [
+            -41.0,
+            -472.875
+          ],
+          [
+            -62.125,
+            -472.625
+          ],
+          [
+            -61.5,
+            -391.75
+          ],
+          [
+            -92.875,
+            -392.0
+          ],
+          [
+            -93.0,
+            -378.625
+          ],
+          [
+            -69.625,
+            -378.625
+          ]
+        ],
+        "source": "4; original PNG raster trace",
+        "role": "reference",
+        "coordinate_tolerance_m": 0.25
+      }
+    ],
+    "decorative_geometry": "Every roof detail is clipped to its measured roof envelope; internal roof/tile/balustrade subdivisions are schematic.",
+    "pavilion_placeholders": "Legend only; no coordinates assigned",
+    "source_sha256": {
+      "portti06-julkisivu-etela.json": "45af0f75d0d78916f4b7791df568128aaf6ada3a09481ab356d41e185c4b54bc",
+      "portti06-mitat.json": "cc336e681ad1dce9127fa577bcf378d59bf3d310f1538b311cd48037b66b456b",
+      "reitti-pohjakartta.json": "dcda6685fdfca74a80b5dd2893473d966ac0a036c46320f534abb158d49906b4",
+      "portti06-pohja.json": "5111279a77704a8f1f265ed61062ab727d013b0a346201559170e6b0109645fc"
+    },
+    "validation": {
+      "canvas_exact": true,
+      "source_frame_exact": true,
+      "svg_pure_vector": true,
+      "roof_clip_count": 7,
+      "all_clip_count": 10,
+      "source_south_overhang_m": 0.6,
+      "osm_raster_reference_tolerance_m": 0.25,
+      "renderer": "sharp / librsvg, PNG, fixed options",
+      "svg_sha256": "d85a4644aaace29e75cb19a128e8a3d50735d4a43dddc17c33335e85450894a4",
+      "png_sha256": "cc985072863edc9862309c79cd8705b0cfdf9d251af3841185ee2effe4cf5361",
+      "deterministic_repeat_identical": true
+    }
+  },
+  "elevationGeometry": {
+    "frame": {
+      "kuva": "portti06-julkisivu-etela.png",
+      "kuvaus": "Portti 06 etelän julkisivu, akselikehys x/y",
+      "px_per_m": 12,
+      "x0": -105,
+      "x1": 105,
+      "a0": -3,
+      "a1": 42,
+      "marginaali_vasen_ylä": [
+        80,
+        120
+      ],
+      "koko": [
+        2680,
+        960
+      ],
+      "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+    },
+    "mapping": {
+      "X": "80+(x+105)*12",
+      "Y": "120+(42-y)*12",
+      "additional_rotation_deg": 0
+    },
+    "source_png": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0726/pelikoodari-codex-mittapiirrokset-portti06-20261030/portti06-julkisivu-etela.png",
+    "source_png_sha256": "771e963b40dc3beb526bc86b03a84f42d1a8d19cb709afd4fdb11aef337e465c",
+    "features": [
+      {
+        "id": "external-walls",
+        "type": "rect",
+        "bbox_px": [
+          225.19999999999993,
+          504,
+          2286.0,
+          120
+        ],
+        "world_bbox_m": {
+          "x_min": -92.9,
+          "x_max": 97.6,
+          "y_min": 0.0,
+          "y_max": 10.0
+        },
+        "source": "JSON x + PNG y",
+        "trace_uncertainty_px": 1,
+        "note": "x endpoints from [4]; top 10 m traced from PNG, not surveyed.",
+        "nominal": {
+          "x_m": [
+            -92.9,
+            97.6
+          ],
+          "y_m": [
+            0,
+            10
+          ],
+          "y_source": "raster [A]"
+        }
+      },
+      {
+        "id": "external-stone-plinth",
+        "type": "rect",
+        "bbox_px": [
+          225.19999999999993,
+          588,
+          2286.0,
+          36
+        ],
+        "world_bbox_m": {
+          "x_min": -92.9,
+          "x_max": 97.6,
+          "y_min": 0.0,
+          "y_max": 3.0
+        },
+        "source": "JSON [A]",
+        "trace_uncertainty_px": null,
+        "note": "Stone height 0–3 m [A].",
+        "nominal": {
+          "y_m": [
+            0,
+            3
+          ]
+        }
+      },
+      {
+        "id": "foundation",
+        "type": "rect",
+        "bbox_px": [
+          578.5999999999999,
+          480,
+          1522.8000000000002,
+          144
+        ],
+        "world_bbox_m": {
+          "x_min": -63.45,
+          "x_max": 63.45,
+          "y_min": 0.0,
+          "y_max": 12.0
+        },
+        "source": "JSON [1][3]",
+        "trace_uncertainty_px": null,
+        "note": "126.9 m [3], 12.00 m [1].",
+        "nominal": {
+          "x_m": [
+            -63.45,
+            63.45
+          ],
+          "y_m": [
+            0,
+            12
+          ]
+        }
+      },
+      {
+        "id": "foundation-stone",
+        "type": "rect",
+        "bbox_px": [
+          578.5999999999999,
+          588,
+          1522.8000000000002,
+          36
+        ],
+        "world_bbox_m": {
+          "x_min": -63.45,
+          "x_max": 63.45,
+          "y_min": 0.0,
+          "y_max": 3.0
+        },
+        "source": "JSON [A]",
+        "trace_uncertainty_px": null,
+        "note": "0–3 m [A].",
+        "nominal": {
+          "x_m": [
+            -63.45,
+            63.45
+          ],
+          "y_m": [
+            0,
+            3
+          ]
+        }
+      },
+      {
+        "id": "door-frame-west",
+        "type": "rect",
+        "bbox_px": [
+          1048.6,
+          534.2,
+          70.39999999999999,
+          89.80000000000001
+        ],
+        "world_bbox_m": {
+          "x_min": -24.283333,
+          "x_max": -18.416667,
+          "y_min": -0.0,
+          "y_max": 7.483333
+        },
+        "source": "PNG frame + JSON opening",
+        "trace_uncertainty_px": 1,
+        "note": "Decorative frame traced from source; nominal opening preserved.",
+        "nominal": {
+          "opening_x_m": [
+            -23.7,
+            -19
+          ],
+          "opening_height_m": 6.9
+        }
+      },
+      {
+        "id": "door-opening-west",
+        "type": "rect",
+        "bbox_px": [
+          1055.6,
+          541.2,
+          56.39999999999999,
+          82.80000000000001
+        ],
+        "world_bbox_m": {
+          "x_min": -23.7,
+          "x_max": -19.0,
+          "y_min": -0.0,
+          "y_max": 6.9
+        },
+        "source": "JSON [A]",
+        "trace_uncertainty_px": null,
+        "note": "Rectangular south opening [1], dimensions [A].",
+        "nominal": {
+          "x_m": [
+            -23.7,
+            -19
+          ],
+          "y_m": [
+            0,
+            6.9
+          ]
+        }
+      },
+      {
+        "id": "door-frame-center",
+        "type": "rect",
+        "bbox_px": [
+          1299.4,
+          527.0,
+          81.19999999999999,
+          97.0
+        ],
+        "world_bbox_m": {
+          "x_min": -3.383333,
+          "x_max": 3.383333,
+          "y_min": 0.0,
+          "y_max": 8.083333
+        },
+        "source": "PNG frame + JSON opening",
+        "trace_uncertainty_px": 1,
+        "note": "Decorative frame traced from source; nominal opening preserved.",
+        "nominal": {
+          "opening_x_m": [
+            -2.8,
+            2.8
+          ],
+          "opening_height_m": 7.5
+        }
+      },
+      {
+        "id": "door-opening-center",
+        "type": "rect",
+        "bbox_px": [
+          1306.4,
+          534.0,
+          67.19999999999999,
+          90.0
+        ],
+        "world_bbox_m": {
+          "x_min": -2.8,
+          "x_max": 2.8,
+          "y_min": 0.0,
+          "y_max": 7.5
+        },
+        "source": "JSON [A]",
+        "trace_uncertainty_px": null,
+        "note": "Rectangular south opening [1], dimensions [A].",
+        "nominal": {
+          "x_m": [
+            -2.8,
+            2.8
+          ],
+          "y_m": [
+            0,
+            7.5
+          ]
+        }
+      },
+      {
+        "id": "door-frame-east",
+        "type": "rect",
+        "bbox_px": [
+          1561,
+          534.2,
+          70.39999999999999,
+          89.80000000000001
+        ],
+        "world_bbox_m": {
+          "x_min": 18.416667,
+          "x_max": 24.283333,
+          "y_min": -0.0,
+          "y_max": 7.483333
+        },
+        "source": "PNG frame + JSON opening",
+        "trace_uncertainty_px": 1,
+        "note": "Decorative frame traced from source; nominal opening preserved.",
+        "nominal": {
+          "opening_x_m": [
+            19,
+            23.7
+          ],
+          "opening_height_m": 6.9
+        }
+      },
+      {
+        "id": "door-opening-east",
+        "type": "rect",
+        "bbox_px": [
+          1568,
+          541.2,
+          56.39999999999999,
+          82.80000000000001
+        ],
+        "world_bbox_m": {
+          "x_min": 19.0,
+          "x_max": 23.7,
+          "y_min": -0.0,
+          "y_max": 6.9
+        },
+        "source": "JSON [A]",
+        "trace_uncertainty_px": null,
+        "note": "Rectangular south opening [1], dimensions [A].",
+        "nominal": {
+          "x_m": [
+            19,
+            23.7
+          ],
+          "y_m": [
+            0,
+            6.9
+          ]
+        }
+      },
+      {
+        "id": "balustrade",
+        "type": "rect",
+        "bbox_px": [
+          578.5999999999999,
+          468,
+          1522.8000000000002,
+          12
+        ],
+        "world_bbox_m": {
+          "x_min": -63.45,
+          "x_max": 63.45,
+          "y_min": 12.0,
+          "y_max": 13.0
+        },
+        "source": "JSON [A]",
+        "trace_uncertainty_px": null,
+        "note": "12–13 m [A].",
+        "nominal": {
+          "x_m": [
+            -63.45,
+            63.45
+          ],
+          "y_m": [
+            12,
+            13
+          ]
+        }
+      },
+      {
+        "id": "pavilion-west-gallery-visible-eave",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          626,
+          305,
+          193,
+          8
+        ],
+        "world_bbox_m": {
+          "x_min": -59.5,
+          "x_max": -43.416667,
+          "y_min": 25.916667,
+          "y_max": 26.583333
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Only the visible gallery eave, traced directly from its own side of the PNG. No invented gallery wall.",
+        "nominal": {
+          "gallery_ridge_y_m": 27.7,
+          "gallery_width_m": 16,
+          "source": "[A]"
+        },
+        "painted_source_rows": 8,
+        "path": "M656,305H664V306H656Z M780,305H789V306H780Z M652,306H664V307H652Z M780,306H793V307H780Z M647,307H664V308H647Z M780,307H798V308H780Z M643,308H664V309H643Z M780,308H803V309H780Z M638,309H664V310H638Z M780,309H807V310H780Z M633,310H664V311H633Z M780,310H812V311H780Z M629,311H664V312H629Z M780,311H816V312H780Z M626,312H664V313H626Z M780,312H819V313H780Z"
+      },
+      {
+        "id": "pavilion-west-lower-body",
+        "type": "rect",
+        "bbox_px": [
+          662,
+          406,
+          121,
+          63
+        ],
+        "world_bbox_m": {
+          "x_min": -56.5,
+          "x_max": -46.416667,
+          "y_min": 12.916667,
+          "y_max": 18.166667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Rectangle inferred from unobscured source rows; label occlusion ignored.",
+        "nominal": {
+          "center_x_m": -51.5,
+          "source": "[A]"
+        }
+      },
+      {
+        "id": "pavilion-west-lower-beam",
+        "type": "rect",
+        "bbox_px": [
+          657,
+          388,
+          130,
+          18
+        ],
+        "world_bbox_m": {
+          "x_min": -56.916667,
+          "x_max": -46.083333,
+          "y_min": 18.166667,
+          "y_max": 19.666667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster-painted rectangular beam envelope.",
+        "nominal": null
+      },
+      {
+        "id": "pavilion-west-lower-roof",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          639,
+          363,
+          166,
+          25
+        ],
+        "world_bbox_m": {
+          "x_min": -58.416667,
+          "x_max": -44.583333,
+          "y_min": 19.666667,
+          "y_max": 21.75
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Source polygon traced, not a newly inferred roof slope.",
+        "nominal": null,
+        "painted_source_rows": 25,
+        "path": "M667,363H778V364H667Z M666,364H779V365H666Z M665,365H780V366H665Z M663,366H781V367H663Z M662,367H783V368H662Z M661,368H784V369H661Z M660,369H785V370H660Z M659,370H786V371H659Z M658,371H787V372H658Z M656,372H788V373H656Z M655,373H789V374H655Z M654,374H790V375H654Z M653,375H792V376H653Z M652,376H793V377H652Z M651,377H794V378H651Z M649,378H795V379H649Z M648,379H796V380H648Z M647,380H797V381H647Z M646,381H798V382H646Z M645,382H799V383H645Z M644,383H801V384H644Z M642,384H802V385H642Z M641,385H803V386H641Z M640,386H804V387H640Z M639,387H805V388H639Z"
+      },
+      {
+        "id": "pavilion-west-upper-body",
+        "type": "rect",
+        "bbox_px": [
+          668,
+          322,
+          109,
+          41
+        ],
+        "world_bbox_m": {
+          "x_min": -56.0,
+          "x_max": -46.916667,
+          "y_min": 21.75,
+          "y_max": 25.166667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster-painted rectangular upper wall envelope.",
+        "nominal": null
+      },
+      {
+        "id": "pavilion-west-upper-beam",
+        "type": "rect",
+        "bbox_px": [
+          664,
+          305,
+          116,
+          17
+        ],
+        "world_bbox_m": {
+          "x_min": -56.333333,
+          "x_max": -46.666667,
+          "y_min": 25.166667,
+          "y_max": 26.583333
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster-painted rectangular upper beam envelope.",
+        "nominal": null
+      },
+      {
+        "id": "pavilion-west-upper-roof",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          639,
+          234,
+          166,
+          71
+        ],
+        "world_bbox_m": {
+          "x_min": -58.416667,
+          "x_max": -44.583333,
+          "y_min": 26.583333,
+          "y_max": 32.5
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Double tent roof [1]. Apex y=32.5 m [A]; painted triangle traced.",
+        "nominal": {
+          "center_x_m": -51.5,
+          "top_y_m": 32.5,
+          "roof_width_m": 13.8,
+          "source": "[A]"
+        },
+        "painted_source_rows": 71,
+        "path": "M722,234H723V235H722Z M721,235H724V236H721Z M720,236H725V237H720Z M718,237H727V238H718Z M717,238H728V239H717Z M716,239H729V240H716Z M715,240H730V241H715Z M714,241H731V242H714Z M713,242H732V243H713Z M711,243H734V244H711Z M710,244H735V245H710Z M709,245H736V246H709Z M708,246H737V247H708Z M707,247H738V248H707Z M705,248H739V249H705Z M704,249H741V250H704Z M703,250H742V251H703Z M702,251H743V252H702Z M701,252H744V253H701Z M699,253H745V254H699Z M698,254H746V255H698Z M697,255H748V256H697Z M696,256H749V257H696Z M695,257H750V258H695Z M694,258H751V259H694Z M692,259H752V260H692Z M691,260H753V261H691Z M690,261H755V262H690Z M689,262H756V263H689Z M688,263H757V264H688Z M686,264H758V265H686Z M685,265H759V266H685Z M684,266H760V267H684Z M683,267H762V268H683Z M682,268H763V269H682Z M681,269H764V270H681Z M679,270H765V271H679Z M678,271H766V272H678Z M677,272H768V273H677Z M676,273H769V274H676Z M675,274H770V275H675Z M673,275H771V276H673Z M672,276H772V277H672Z M671,277H773V278H671Z M670,278H775V279H670Z M669,279H776V280H669Z M667,280H777V281H667Z M666,281H778V282H666Z M665,282H779V283H665Z M664,283H780V284H664Z M663,284H782V285H663Z M662,285H783V286H662Z M660,286H784V287H660Z M659,287H785V288H659Z M658,288H786V289H658Z M657,289H787V290H657Z M656,290H789V291H656Z M654,291H790V292H654Z M653,292H791V293H653Z M652,293H792V294H652Z M651,294H793V295H651Z M650,295H794V296H650Z M648,296H796V297H648Z M647,297H797V298H647Z M646,298H798V299H646Z M645,299H799V300H645Z M644,300H800V301H644Z M643,301H801V302H643Z M641,302H803V303H641Z M640,303H804V304H640Z M639,304H805V305H639Z"
+      },
+      {
+        "id": "pavilion-east-gallery-visible-eave",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          1862,
+          305,
+          193,
+          8
+        ],
+        "world_bbox_m": {
+          "x_min": 43.5,
+          "x_max": 59.583333,
+          "y_min": 25.916667,
+          "y_max": 26.583333
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Only the visible gallery eave, traced directly from its own side of the PNG. No invented gallery wall.",
+        "nominal": {
+          "gallery_ridge_y_m": 27.7,
+          "gallery_width_m": 16,
+          "source": "[A]"
+        },
+        "painted_source_rows": 8,
+        "path": "M1892,305H1900V306H1892Z M2016,305H2025V306H2016Z M1888,306H1900V307H1888Z M2016,306H2029V307H2016Z M1883,307H1900V308H1883Z M2016,307H2034V308H2016Z M1878,308H1900V309H1878Z M2016,308H2038V309H2016Z M1874,309H1900V310H1874Z M2016,309H2043V310H2016Z M1869,310H1900V311H1869Z M2016,310H2048V311H2016Z M1865,311H1900V312H1865Z M2016,311H2052V312H2016Z M1862,312H1900V313H1862Z M2016,312H2055V313H2016Z"
+      },
+      {
+        "id": "pavilion-east-lower-body",
+        "type": "rect",
+        "bbox_px": [
+          1898,
+          406,
+          121,
+          63
+        ],
+        "world_bbox_m": {
+          "x_min": 46.5,
+          "x_max": 56.583333,
+          "y_min": 12.916667,
+          "y_max": 18.166667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Rectangle inferred from unobscured source rows; label occlusion ignored.",
+        "nominal": {
+          "center_x_m": 51.5,
+          "source": "[A]"
+        }
+      },
+      {
+        "id": "pavilion-east-lower-beam",
+        "type": "rect",
+        "bbox_px": [
+          1893,
+          388,
+          130,
+          18
+        ],
+        "world_bbox_m": {
+          "x_min": 46.083333,
+          "x_max": 56.916667,
+          "y_min": 18.166667,
+          "y_max": 19.666667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster-painted rectangular beam envelope.",
+        "nominal": null
+      },
+      {
+        "id": "pavilion-east-lower-roof",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          1875,
+          363,
+          166,
+          25
+        ],
+        "world_bbox_m": {
+          "x_min": 44.583333,
+          "x_max": 58.416667,
+          "y_min": 19.666667,
+          "y_max": 21.75
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Source polygon traced, not a newly inferred roof slope.",
+        "nominal": null,
+        "painted_source_rows": 25,
+        "path": "M1903,363H2014V364H1903Z M1902,364H2015V365H1902Z M1901,365H2016V366H1901Z M1899,366H2017V367H1899Z M1898,367H2019V368H1898Z M1897,368H2020V369H1897Z M1896,369H2021V370H1896Z M1895,370H2022V371H1895Z M1894,371H2023V372H1894Z M1892,372H2024V373H1892Z M1891,373H2025V374H1891Z M1890,374H2026V375H1890Z M1889,375H2028V376H1889Z M1888,376H2029V377H1888Z M1887,377H2030V378H1887Z M1885,378H2031V379H1885Z M1884,379H2032V380H1884Z M1883,380H2033V381H1883Z M1882,381H2034V382H1882Z M1881,382H2035V383H1881Z M1880,383H2037V384H1880Z M1878,384H2038V385H1878Z M1877,385H2039V386H1877Z M1876,386H2040V387H1876Z M1875,387H2041V388H1875Z"
+      },
+      {
+        "id": "pavilion-east-upper-body",
+        "type": "rect",
+        "bbox_px": [
+          1904,
+          322,
+          109,
+          41
+        ],
+        "world_bbox_m": {
+          "x_min": 47.0,
+          "x_max": 56.083333,
+          "y_min": 21.75,
+          "y_max": 25.166667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster-painted rectangular upper wall envelope.",
+        "nominal": null
+      },
+      {
+        "id": "pavilion-east-upper-beam",
+        "type": "rect",
+        "bbox_px": [
+          1900,
+          305,
+          116,
+          17
+        ],
+        "world_bbox_m": {
+          "x_min": 46.666667,
+          "x_max": 56.333333,
+          "y_min": 25.166667,
+          "y_max": 26.583333
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster-painted rectangular upper beam envelope.",
+        "nominal": null
+      },
+      {
+        "id": "pavilion-east-upper-roof",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          1875,
+          234,
+          166,
+          71
+        ],
+        "world_bbox_m": {
+          "x_min": 44.583333,
+          "x_max": 58.416667,
+          "y_min": 26.583333,
+          "y_max": 32.5
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Double tent roof [1]. Apex y=32.5 m [A]; painted triangle traced.",
+        "nominal": {
+          "center_x_m": 51.5,
+          "top_y_m": 32.5,
+          "roof_width_m": 13.8,
+          "source": "[A]"
+        },
+        "painted_source_rows": 71,
+        "path": "M1958,234H1959V235H1958Z M1957,235H1960V236H1957Z M1956,236H1961V237H1956Z M1954,237H1963V238H1954Z M1953,238H1964V239H1953Z M1952,239H1965V240H1952Z M1951,240H1966V241H1951Z M1950,241H1967V242H1950Z M1949,242H1968V243H1949Z M1947,243H1970V244H1947Z M1946,244H1971V245H1946Z M1945,245H1972V246H1945Z M1944,246H1973V247H1944Z M1943,247H1974V248H1943Z M1941,248H1975V249H1941Z M1940,249H1977V250H1940Z M1939,250H1978V251H1939Z M1938,251H1979V252H1938Z M1937,252H1980V253H1937Z M1935,253H1981V254H1935Z M1934,254H1982V255H1934Z M1933,255H1984V256H1933Z M1932,256H1985V257H1932Z M1931,257H1986V258H1931Z M1930,258H1987V259H1930Z M1928,259H1988V260H1928Z M1927,260H1989V261H1927Z M1926,261H1991V262H1926Z M1925,262H1992V263H1925Z M1924,263H1993V264H1924Z M1922,264H1994V265H1922Z M1921,265H1995V266H1921Z M1920,266H1996V267H1920Z M1919,267H1998V268H1919Z M1918,268H1999V269H1918Z M1917,269H2000V270H1917Z M1915,270H2001V271H1915Z M1914,271H2002V272H1914Z M1913,272H2004V273H1913Z M1912,273H2005V274H1912Z M1911,274H2006V275H1911Z M1909,275H2007V276H1909Z M1908,276H2008V277H1908Z M1907,277H2009V278H1907Z M1906,278H2011V279H1906Z M1905,279H2012V280H1905Z M1903,280H2013V281H1903Z M1902,281H2014V282H1902Z M1901,282H2015V283H1901Z M1900,283H2016V284H1900Z M1899,284H2018V285H1899Z M1898,285H2019V286H1898Z M1896,286H2020V287H1896Z M1895,287H2021V288H1895Z M1894,288H2022V289H1894Z M1893,289H2023V290H1893Z M1892,290H2025V291H1892Z M1890,291H2026V292H1890Z M1889,292H2027V293H1889Z M1888,293H2028V294H1888Z M1887,294H2029V295H1887Z M1886,295H2030V296H1886Z M1884,296H2032V297H1884Z M1883,297H2033V298H1883Z M1882,298H2034V299H1882Z M1881,299H2035V300H1881Z M1880,300H2036V301H1880Z M1879,301H2037V302H1879Z M1877,302H2039V303H1877Z M1876,303H2040V304H1876Z M1875,304H2041V305H1875Z"
+      },
+      {
+        "id": "mainhall-body",
+        "type": "rect",
+        "bbox_px": [
+          975,
+          405,
+          730,
+          64
+        ],
+        "world_bbox_m": {
+          "x_min": -30.416667,
+          "x_max": 30.416667,
+          "y_min": 12.916667,
+          "y_max": 18.25
+        },
+        "source": "PNG envelope + JSON centerlines",
+        "trace_uncertainty_px": 1,
+        "note": "10 column centerlines form exactly 9 spans; painted thickness clipped to source envelope.",
+        "nominal": {
+          "centerline_x_m": [
+            -30.025,
+            30.025
+          ],
+          "column_y_m": [
+            13,
+            18.3
+          ],
+          "spans": 9
+        }
+      },
+      {
+        "id": "mainhall-lower-beam",
+        "type": "rect",
+        "bbox_px": [
+          973,
+          376,
+          734,
+          29
+        ],
+        "world_bbox_m": {
+          "x_min": -30.583333,
+          "x_max": 30.583333,
+          "y_min": 18.25,
+          "y_max": 20.666667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster width; y=18.3–20.7 m [A], raster edge quantization.",
+        "nominal": {
+          "y_m": [
+            18.3,
+            20.7
+          ],
+          "source": "[A]"
+        }
+      },
+      {
+        "id": "mainhall-lower-roof",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          929,
+          332,
+          822,
+          44
+        ],
+        "world_bbox_m": {
+          "x_min": -34.25,
+          "x_max": 34.25,
+          "y_min": 20.666667,
+          "y_max": 24.333333
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "PNG is wider than nominal 65.4 m JSON roof width. This exact painted outline is retained.",
+        "nominal": {
+          "eave_width_m": 65.4,
+          "y_m": [
+            20.7,
+            24.4
+          ],
+          "source": "[A]"
+        },
+        "painted_source_rows": 44,
+        "path": "M1013,332H1667V333H1013Z M1011,333H1669V334H1011Z M1009,334H1671V335H1009Z M1007,335H1673V336H1007Z M1005,336H1675V337H1005Z M1003,337H1677V338H1003Z M1001,338H1679V339H1001Z M999,339H1681V340H999Z M997,340H1683V341H997Z M995,341H1685V342H995Z M994,342H1686V343H994Z M992,343H1688V344H992Z M990,344H1690V345H990Z M988,345H1692V346H988Z M986,346H1694V347H986Z M984,347H1696V348H984Z M982,348H1698V349H982Z M980,349H1700V350H980Z M978,350H1702V351H978Z M976,351H1704V352H976Z M974,352H1706V353H974Z M972,353H1708V354H972Z M970,354H1710V355H970Z M968,355H1712V356H968Z M966,356H1714V357H966Z M964,357H1716V358H964Z M962,358H1718V359H962Z M960,359H1720V360H960Z M958,360H1722V361H958Z M956,361H1724V362H956Z M954,362H1726V363H954Z M952,363H1728V364H952Z M951,364H1729V365H951Z M949,365H1731V366H949Z M947,366H1733V367H947Z M945,367H1735V368H945Z M943,368H1737V369H943Z M941,369H1739V370H941Z M939,370H1741V371H939Z M937,371H1743V372H937Z M935,372H1745V373H935Z M933,373H1747V374H933Z M931,374H1749V375H931Z M929,375H1751V376H929Z"
+      },
+      {
+        "id": "mainhall-upper-beam",
+        "type": "rect",
+        "bbox_px": [
+          1015,
+          298,
+          650,
+          34
+        ],
+        "world_bbox_m": {
+          "x_min": -27.083333,
+          "x_max": 27.083333,
+          "y_min": 24.333333,
+          "y_max": 27.166667
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "note": "Raster width; y=24.4–27.2 m [A], raster edge quantization.",
+        "nominal": {
+          "y_m": [
+            24.4,
+            27.2
+          ],
+          "source": "[A]"
+        }
+      },
+      {
+        "id": "mainhall-upper-roof",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          953,
+          189,
+          774,
+          109
+        ],
+        "world_bbox_m": {
+          "x_min": -32.25,
+          "x_max": 32.25,
+          "y_min": 27.166667,
+          "y_max": 36.25
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Upper hip roof exact PNG painted silhouette; no invented curvature.",
+        "nominal": {
+          "y_m": [
+            27.2,
+            36.3
+          ],
+          "source": "[A]"
+        },
+        "painted_source_rows": 109,
+        "path": "M1134,189H1547V190H1134Z M1133,190H1548V191H1133Z M1131,191H1550V192H1131Z M1129,192H1552V193H1129Z M1128,193H1553V194H1128Z M1126,194H1555V195H1126Z M1124,195H1557V196H1124Z M1123,196H1558V197H1123Z M1121,197H1560V198H1121Z M1119,198H1562V199H1119Z M1118,199H1563V200H1118Z M1116,200H1565V201H1116Z M1114,201H1567V202H1114Z M1112,202H1568V203H1112Z M1111,203H1570V204H1111Z M1109,204H1572V205H1109Z M1107,205H1573V206H1107Z M1106,206H1575V207H1106Z M1104,207H1577V208H1104Z M1102,208H1578V209H1102Z M1101,209H1580V210H1101Z M1099,210H1582V211H1099Z M1097,211H1583V212H1097Z M1096,212H1585V213H1096Z M1094,213H1587V214H1094Z M1092,214H1588V215H1092Z M1091,215H1590V216H1091Z M1089,216H1592V217H1089Z M1087,217H1593V218H1087Z M1086,218H1595V219H1086Z M1084,219H1597V220H1084Z M1082,220H1598V221H1082Z M1081,221H1600V222H1081Z M1079,222H1602V223H1079Z M1077,223H1603V224H1077Z M1076,224H1605V225H1076Z M1074,225H1607V226H1074Z M1072,226H1608V227H1072Z M1071,227H1610V228H1071Z M1069,228H1612V229H1069Z M1067,229H1613V230H1067Z M1065,230H1615V231H1065Z M1064,231H1617V232H1064Z M1062,232H1618V233H1062Z M1060,233H1620V234H1060Z M1059,234H1622V235H1059Z M1057,235H1623V236H1057Z M1055,236H1625V237H1055Z M1054,237H1627V238H1054Z M1052,238H1628V239H1052Z M1050,239H1630V240H1050Z M1049,240H1632V241H1049Z M1047,241H1633V242H1047Z M1045,242H1635V243H1045Z M1044,243H1637V244H1044Z M1042,244H1639V245H1042Z M1040,245H1640V246H1040Z M1039,246H1642V247H1039Z M1037,247H1644V248H1037Z M1035,248H1645V249H1035Z M1034,249H1647V250H1034Z M1032,250H1649V251H1032Z M1030,251H1650V252H1030Z M1029,252H1652V253H1029Z M1027,253H1654V254H1027Z M1025,254H1655V255H1025Z M1024,255H1657V256H1024Z M1022,256H1659V257H1022Z M1020,257H1660V258H1020Z M1018,258H1662V259H1018Z M1017,259H1664V260H1017Z M1015,260H1665V261H1015Z M1013,261H1667V262H1013Z M1012,262H1669V263H1012Z M1010,263H1670V264H1010Z M1008,264H1672V265H1008Z M1007,265H1674V266H1007Z M1005,266H1675V267H1005Z M1003,267H1677V268H1003Z M1002,268H1679V269H1002Z M1000,269H1680V270H1000Z M998,270H1682V271H998Z M997,271H1684V272H997Z M995,272H1685V273H995Z M993,273H1687V274H993Z M992,274H1689V275H992Z M990,275H1690V276H990Z M988,276H1692V277H988Z M987,277H1694V278H987Z M985,278H1695V279H985Z M983,279H1697V280H983Z M982,280H1699V281H982Z M980,281H1700V282H980Z M978,282H1702V283H978Z M977,283H1704V284H977Z M975,284H1705V285H975Z M973,285H1707V286H973Z M971,286H1709V287H971Z M970,287H1710V288H970Z M968,288H1712V289H968Z M966,289H1714V290H966Z M965,290H1715V291H965Z M963,291H1717V292H963Z M961,292H1719V293H961Z M960,293H1720V294H960Z M958,294H1722V295H958Z M956,295H1724V296H956Z M955,296H1725V297H955Z M953,297H1727V298H953Z"
+      },
+      {
+        "id": "mainhall-ridge-ornaments",
+        "type": "source-scanline-path",
+        "bbox_px": [
+          1121,
+          168,
+          438,
+          21
+        ],
+        "world_bbox_m": {
+          "x_min": -18.25,
+          "x_max": 18.25,
+          "y_min": 36.25,
+          "y_max": 38.0
+        },
+        "source": "PK PNG raster trace",
+        "trace_uncertainty_px": 1,
+        "trace_uncertainty_m": 0.08333333333333333,
+        "note": "Source ridge and two end ornaments. Top nominal 37.95 m [2]; raster top=168 px.",
+        "nominal": {
+          "top_y_m": 37.95,
+          "source": "[2]"
+        },
+        "painted_source_rows": 21,
+        "path": "M1128,168H1139V169H1128Z M1541,168H1552V169H1541Z M1128,169H1139V170H1128Z M1541,169H1552V170H1541Z M1127,170H1139V171H1127Z M1541,170H1553V171H1541Z M1127,171H1139V172H1127Z M1541,171H1553V172H1541Z M1127,172H1139V173H1127Z M1542,172H1553V173H1542Z M1126,173H1138V174H1126Z M1542,173H1554V174H1542Z M1126,174H1138V175H1126Z M1542,174H1554V175H1542Z M1126,175H1138V176H1126Z M1542,175H1554V176H1542Z M1125,176H1138V177H1125Z M1542,176H1555V177H1542Z M1125,177H1138V178H1125Z M1542,177H1555V178H1542Z M1125,178H1138V179H1125Z M1543,178H1555V179H1543Z M1124,179H1138V180H1124Z M1543,179H1556V180H1543Z M1124,180H1138V181H1124Z M1543,180H1556V181H1543Z M1123,181H1557V182H1123Z M1123,182H1557V183H1123Z M1123,183H1557V184H1123Z M1122,184H1558V185H1122Z M1122,185H1558V186H1122Z M1122,186H1558V187H1122Z M1121,187H1559V188H1121Z M1121,188H1559V189H1121Z"
+      }
+    ],
+    "mainhall_columns": {
+      "count": 10,
+      "spans": 9,
+      "x_m": [
+        -30.025,
+        -23.352777777777778,
+        -16.680555555555557,
+        -10.008333333333333,
+        -3.336111111111112,
+        3.3361111111111157,
+        10.008333333333333,
+        16.68055555555555,
+        23.352777777777774,
+        30.02499999999999
+      ],
+      "x_px": [
+        979.6999999999999,
+        1059.7666666666667,
+        1139.8333333333333,
+        1219.9,
+        1299.9666666666667,
+        1380.0333333333333,
+        1460.1,
+        1540.1666666666665,
+        1620.2333333333331,
+        1700.2999999999997
+      ],
+      "span_m": 6.672222222222222,
+      "source": "[1], equal spacing is drawing convention"
+    },
+    "doors": [
+      {
+        "id": "door-opening-west",
+        "width_m": 4.699999999999999,
+        "height_m": 6.9,
+        "rectangular": true
+      },
+      {
+        "id": "door-opening-center",
+        "width_m": 5.6,
+        "height_m": 7.5,
+        "rectangular": true
+      },
+      {
+        "id": "door-opening-east",
+        "width_m": 4.699999999999999,
+        "height_m": 6.9,
+        "rectangular": true
+      }
+    ],
+    "scale_bar": {
+      "world_m": 20,
+      "px": 240,
+      "start_px": [
+        80,
+        773
+      ],
+      "end_px": [
+        320,
+        773
+      ]
+    },
+    "unresolved_bell_drum": {
+      "location_m": null,
+      "size_m": null,
+      "bays": 3,
+      "source": "[1]",
+      "schematic_only": true,
+      "caption": "paikka avoin"
+    },
+    "trace_method": "Original non-antialiased PNG palette; exact closed scanline rectangles for visible roof pixels, internal text gaps filled only within each roof row outer bounds. Both visible gallery eaves are traced directly from their own source PNG regions. Other right pavilion parts are a 1236 px copy of the unoccluded left counterpart; both centers are supplied by JSON.",
+    "trace_uncertainty": {
+      "px": 1,
+      "m": 0.08333333333333333,
+      "meaning": "Raster-to-world rounding uncertainty, not a new measured source."
+    },
+    "discrepancies": [
+      {
+        "part": "mainhall-lower-roof",
+        "json_width_m": 65.4,
+        "painted_bbox_px": [
+          929,
+          332,
+          1751,
+          376
+        ],
+        "painted_width_m_approx": 68.5,
+        "centerline_polygon_width_m_approx": 68.4,
+        "policy": "Preserve exact PK PNG painted silhouette; nominal JSON unchanged in metadata."
+      },
+      {
+        "part": "mainhall-upper-roof",
+        "json_width_m": 65.4,
+        "painted_bbox_px": [
+          953,
+          189,
+          1727,
+          298
+        ],
+        "painted_width_m_approx": 64.5,
+        "centerline_polygon_width_m_approx": 64.4,
+        "policy": "Preserve source silhouette."
+      },
+      {
+        "part": "pavilion-visible-gallery-eave",
+        "nominal_pavilion_roof_width_m": 13.8,
+        "painted_width_m_approx": 16.083333333333332,
+        "policy": "Retain separately visible gallery flare; do not relabel as pavilion 13.8 m roof."
+      },
+      {
+        "part": "foundation-height",
+        "active_source": "[1] 12.00 m",
+        "conflicting_source": "[3] 12.9 m",
+        "policy": "Keep ordered 12.00 m."
+      }
+    ],
+    "svg_checks": {
+      "width": 2680,
+      "height": 960,
+      "embedded_raster_images": 0,
+      "all_ornaments_clipped": true,
+      "additional_rotation": false,
+      "source_havainne_used_for": "Palette and internal decoration only; no shape reconstruction."
+    },
+    "render": {
+      "tool": "sharp",
+      "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/portti06-mittapiirrokset-20261030/delivery/portti06-julkisivu-etela-codex.svg",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/portti06-mittapiirrokset-20261030/delivery/portti06-julkisivu-etela-codex.png",
+      "size_px": [
+        2680,
+        960
+      ],
+      "png_sha256": "5a42f698fff92033f344db558dc88320d0f6320b0a2e559f99f39f9ae8f04d99",
+      "svg_sha256": "a7260bf638489f0d6ec6e1843bec37b10db334f5f0e21d60616ec573572d9580",
+      "svg_xml_parse": "PASS",
+      "unique_ids": "PASS",
+      "no_embedded_images": "PASS",
+      "ornament_groups_clipped": 37,
+      "deterministic_repeat_hash_match": true
+    },
+    "visual_qa": {
+      "status": "PASS",
+      "inspected": "Final PNG; only the right visible gallery eave differs from previously inspected approved layout",
+      "previous_layout_check": "All labels readable, glyphs vertical, no overlap, no stone seams through openings",
+      "last_correction": {
+        "feature": "pavilion-east-gallery-visible-eave",
+        "method": "Trace own right source region directly",
+        "png_changed_pixels": [
+          [
+            1878,
+            308
+          ],
+          [
+            2038,
+            308
+          ]
+        ],
+        "png_diff_bbox": [
+          1878,
+          308,
+          2039,
+          309
+        ],
+        "other_geometry_unchanged": true
+      }
+    }
+  },
+  "limitations": [
+    "Source PNG silhouettes and JSON nominal eave widths differ; preserved and disclosed, not silently reconciled.",
+    "A values remain estimates; decorative subdivisions are schematic.",
+    "Bell/drum pavilion positions and sizes remain open.",
+    "Raster-traced outlines are not new surveyed dimensions."
+  ],
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
