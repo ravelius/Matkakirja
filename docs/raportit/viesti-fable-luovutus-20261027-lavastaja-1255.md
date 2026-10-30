@@ -2168,7 +2168,7 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - TEHTY: leivonta-216/osasarja-v5-varjostaja.glb (osasarja_koe.py v5:stä, ei Blenderiä; leikkaus z 388: kivijalka 1,80 vs v4 1,20).
   uusinta/yhteiset.zsh: OSASARJA_VARJ → v5, TS → uusinta/tausta-v81-lahde (= v81 APFS-kopiona + kujien 0-3/1-3 lod0 lattia_tliitokset.py:llä,
   LISÄYS 153 kohta 2). aja_uusinta.zsh tausta + kujat.zsh: TUPLAT=1. Varmuuskopiot *.ennen-v5.
-- KETJU: uusinta/ketju-v5.zsh (pid 2967, loki ajo-ketju-v5.log) odottaa rak-ajon (pid 65713) loppuun, tarkistaa T-liitoskorjauksen (muuten
+- KETJU: uusinta/ketju-v5.zsh (pid 25357, odottaa myös lattia_tliitokset-ajon, loki ajo-ketju-v5.log) odottaa rak-ajon (pid 65713) loppuun, tarkistaa T-liitoskorjauksen (muuten
   keskeyttää), sitten tausta → kujat.zsh → muurikate (muurikatteenkin varjostaja v5). Rak ~05.00, ketju arviolta ~06.30.
 - Rakennukset-v86 leivotaan loppuun v4-varjostajalla (ajo alkoi 21.29 ennen v5:tä); ero vain kujan 05 länsimuurin juurella, kerro PT:lle jos merkitsee.
 - SEURAAVAKSI ketjun jälkeen: tarkista_leivonta (ehtoalueet kuten v73 / tarkistus-tausta-v82.txt, PT: 0 vikaa ehtoalueilla), VS:lle
@@ -2179,7 +2179,17 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - PK 22.0x: pelipuoli koodattu (proto-haara pelikoodari/leivonta-217 8732a8a1c), koe/osasarja läpäisi tarkisteen. Tarvitaan leivottu paketti v5:stä
   uudella nimellä; Blender vasta nykyisten leivontojen jälkeen.
 - TEHTY ilman Blenderiä: K/osasarja-v6/kielletty-osasarja-v6 = v5 + leivonta_uv1 (osat, lod1) + leivonta_atlas (valo.json, 3194 sijoitusta, 86 ruutua).
-- KETJU: leivonta-216/uusinta/ketju-osasarja-v6.zsh (pid 4410, loki ajo-osasarja-v6.log) odottaa ketju-v5:n (pid 2967) → leivo_osasarja.py kaikki 96
+- KETJU: leivonta-216/uusinta/ketju-osasarja-v6.zsh (pid 25370, loki ajo-osasarja-v6.log) odottaa ketju-v5:n (pid 25357) → leivo_osasarja.py kaikki 96
   → leivonta_karki.py. Pursotukset.glb EI tässä (työkalu tekemättä, LISÄYS 150) → peli pursottaa itse.
 - SEURAAVAKSI valmistuttua: paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> (paketti_osasarja_v5.zsh-malli, maailma-v4/kielletty-osasarja-v6,
   LAHTEET-paketti.md v6-otsikolla) → kansio PK:lle (local_601d33fc-…) + PT ≤ 3 riviä.
+- PT 22.27 (omistaja): valo junaan 216, juna lähtee vasta kun valo valmis → rakennukset, tausta TUPLAT=1 ja osasarja-v6 ovat junan 216 lähtöehto.
+
+## LISÄYS 158 (30.10. 22.46): LEIVONTA PYSÄYTETTY LEVYN TAKIA — ALOITA TÄSTÄ
+- Postivahti (PT:n ohje): levy 86 Gi → rak-ajo pysäytetty mallin t-katos-26 jälkeen (45/136), ketju-v5 ja ketju-osasarja-v6 pysäytetty. Ei Blenderiä
+  ennen kuin levy > 95 Gi. Jatko (kansio leivonta-216/uusinta, kaikki taustalle nohup): 1) `zsh aja_uusinta.zsh rak 1/1 >> ajo-rak.log` (jatkaa
+  rak-valmiit/:sta) 2) `zsh ketju-v5.zsh <rak-zsh:n pid> >> ajo-ketju-v5.log` 3) `zsh ketju-osasarja-v6.zsh <ketju-v5:n pid> >> ajo-osasarja-v6.log`.
+- Kujien T-liitoskorjaus (lattia_tliitokset.py → tausta-v81-lahde) saa jatkua (pelkkä Python); ketju-v5 odottaa sen.
+- PT 22.5x (UUSI EHTO, korvaa 95 Gi:n): jatka heti, kun NS:n laitekäännös päättyy; pysäytä vain jos levy < 82 Gi; 1 Blender, ei Unityn kanssa.
+  → uusinta/jatka-ns-jalkeen.zsh (pid 61196, loki ajo-jatka.log) odottaa NS-käännöksen (pid 45361) ja Unityn loppuun, käynnistää rak → ketju-v5 →
+  ketju-osasarja-v6 (pid:t lokissa) ja valvoo levyä (< 82 Gi → kaikki pois, jatko kuten yllä).
