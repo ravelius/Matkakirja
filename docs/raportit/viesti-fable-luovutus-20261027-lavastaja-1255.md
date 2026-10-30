@@ -1705,3 +1705,8 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   ladotaan piirroksen ruudukkoon ja verrataan ortokuvin ylhäältä ja edestä. Työkalut valmiina: meridiaani_syvennys.py (env MERIDIAANI_*),
   meridiaani_tunnelisokkeli.py (TUNNELI_KIVI_Y), meridiaani_aukot.py (kääntö, EI käytössä), apu: meridiaani_syvennys_apu.py, lappe_uv_g.py.
 - Väliversiot v84–v88 / c2-v23…27 eivät mene pakettiin. Paketti v97 on yhä uusin vienti.
+
+## LISÄYS 127 (30.10. 09.2x): LUOVUTUS (konteksti 36 %) — ALOITA TÄSTÄ
+- Jono tyhjä (PT:lle "JONO TYHJÄ: LAV" 09.2x): ulkomuuri 10 m + kulmatornit v1c tehty (paketti v97); A6 odottaa Codexin 7-välistä GLB:tä;
+  Meridiaaniportti odottaa hyväksyttyä julkisivupiirrosta (LISÄYS 126). UV-korjatun v189:n pari ajettiin valmiiksi 091047/06, ei lähetetty.
+- Ei taustaajoja kesken.
