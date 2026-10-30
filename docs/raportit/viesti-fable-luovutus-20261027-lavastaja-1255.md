@@ -2147,3 +2147,39 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - SIVULÖYDÖS: muurikate-v26-pohja.glb:ssä on kate (palatsi_katto y 3,71–4,34) muuri3-lansi-pohj-07:n kohdalla z 388 (osasarjan C3 4,58–5,03)
   → pohjaa ei leikattu muuri3-poluille? Tarkista (tuplakate).
 - Rakennusleivonta jatkuu (ajo-rak.log), älä pysäytä.
+
+## LISÄYS 155 (30.10. 21.3x): KIVIJALKAKORJAUS osasarja-v5 VALMIS PK:LLE — ALOITA TÄSTÄ
+- Rakennusleivonta oli pysähtynyt nollaukseen (21.26, 13/136) → käynnistetty uudelleen 21.29 (aja_uusinta.zsh rak 1/1 >> ajo-rak.log, 1 Blender).
+- SYY: kuja 05 kulkee muuri3-lansi-pohj-06/-07(-b/c/d) (ryhmä A, kivijalka 1,20, -t80) ja muuri-lansi-pohj-33-j:n (1,80) välissä. v3:ssa kivijalalla
+  ei ollut pintaa; v4:n kivijalka-1m-pintanäyte teki 1,20 m:n kivijalasta näkyvän → matala askelma + vaalea kansi. Havainteen kujamuureissa 1,80.
+- KORJAUS osasarja-v5 (K/osasarja-v5/kielletty-osasarja-v5): vain 5 kujaa rajaavaa muuri3-polkua (osasarja_v5_kujamuurit.py: kujalattia
+  V4_kujakivi_lattia 1 m:n päässä; muut 57 muuri3-polkua rajaavat aukioita → ennallaan) → pursotus kivijalka/-kansi 1,80 + uudet takaprofiilit
+  kivijalka-taka-t80/-kansi-taka-t80 (−0,84); päädyt paaty-alku/-loppu-t80-18 (pilari 1,80). Ryhmä on suljettu (portti 2,8 m, päädyt) → ei 1,2/1,8-saumoja.
+  Muut 1104 polkua ja v4:n osat tavulleen ennallaan (tarkistettu). Työkalut K/tyokalut/osasarja_v5_{osat,osat_pohja,ladonta,kujamuurit}.py, paketti_osasarja_v5.zsh.
+- PAKETTI _valmiit/juoksupeli-kk-lavastaja-osasarja-v5-vienti-20261030 (maailma-v4/kielletty-osasarja-v5, SHA256SUMS 29551b4a10f3). PK: OsasarjaKansio
+  kielletty-osasarja-v5, kokoa ja tee sovitettu pari 02/05.
+- LÄHIKUVAT: Blender varattu leivonnalle (PT: 1 Blender) → oma lähikuva vasta leivonnan jälkeen; PK:n pelipari on ensimmäinen kuvatarkistus.
+- HUOM leivonta: rakennusleivonnan varjostaja on osasarja-v4-varjostaja.glb (5 muurin kivijalka 1,20) – ero vain kujan 05 länsimuurin juurella;
+  tee osasarja-v5-varjostaja (osasarja_koe.py) ennen taustan uusintaa (TUPLAT=1, LISÄYS 153).
+- SIVULÖYDÖS (LISÄYS 154) muurikate-v26-pohjan tuplakate muuri3-lansi-pohj-07:llä yhä tarkistamatta.
+
+## LISÄYS 156 (30.10. 22.0x): osasarja-v5 JUNAAN 216 (omistaja 21.55) – TAUSTAN UUSINTA KETJUSSA v5-VARJOSTAJALLA — ALOITA TÄSTÄ
+- PT 21.55: omistaja hyväksyi osasarja-v5:n junaan 216; taustan uusinta (TUPLAT=1, rakennusten jälkeen) v5-muureilla, ei v4/v3.
+- TEHTY: leivonta-216/osasarja-v5-varjostaja.glb (osasarja_koe.py v5:stä, ei Blenderiä; leikkaus z 388: kivijalka 1,80 vs v4 1,20).
+  uusinta/yhteiset.zsh: OSASARJA_VARJ → v5, TS → uusinta/tausta-v81-lahde (= v81 APFS-kopiona + kujien 0-3/1-3 lod0 lattia_tliitokset.py:llä,
+  LISÄYS 153 kohta 2). aja_uusinta.zsh tausta + kujat.zsh: TUPLAT=1. Varmuuskopiot *.ennen-v5.
+- KETJU: uusinta/ketju-v5.zsh (pid 2967, loki ajo-ketju-v5.log) odottaa rak-ajon (pid 65713) loppuun, tarkistaa T-liitoskorjauksen (muuten
+  keskeyttää), sitten tausta → kujat.zsh → muurikate (muurikatteenkin varjostaja v5). Rak ~05.00, ketju arviolta ~06.30.
+- Rakennukset-v86 leivotaan loppuun v4-varjostajalla (ajo alkoi 21.29 ennen v5:tä); ero vain kujan 05 länsimuurin juurella, kerro PT:lle jos merkitsee.
+- SEURAAVAKSI ketjun jälkeen: tarkista_leivonta (ehtoalueet kuten v73 / tarkistus-tausta-v82.txt, PT: 0 vikaa ehtoalueilla), VS:lle
+  aukkoartefakti + jäljelle jäävät T:t (LISÄYS 153), paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-<pvm> (tausta-v82, muurikate-v30,
+  rakennukset-v86; LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md) → PT ≤ 3 riviä + VS (parit 02/03/06, palat + alueet + varjostajat.json:t).
+
+## LISÄYS 157 (30.10. 22.1x): OSASARJAN LEIVONTA v6 (PK, juna 217) KETJUSSA
+- PK 22.0x: pelipuoli koodattu (proto-haara pelikoodari/leivonta-217 8732a8a1c), koe/osasarja läpäisi tarkisteen. Tarvitaan leivottu paketti v5:stä
+  uudella nimellä; Blender vasta nykyisten leivontojen jälkeen.
+- TEHTY ilman Blenderiä: K/osasarja-v6/kielletty-osasarja-v6 = v5 + leivonta_uv1 (osat, lod1) + leivonta_atlas (valo.json, 3194 sijoitusta, 86 ruutua).
+- KETJU: leivonta-216/uusinta/ketju-osasarja-v6.zsh (pid 4410, loki ajo-osasarja-v6.log) odottaa ketju-v5:n (pid 2967) → leivo_osasarja.py kaikki 96
+  → leivonta_karki.py. Pursotukset.glb EI tässä (työkalu tekemättä, LISÄYS 150) → peli pursottaa itse.
+- SEURAAVAKSI valmistuttua: paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> (paketti_osasarja_v5.zsh-malli, maailma-v4/kielletty-osasarja-v6,
+  LAHTEET-paketti.md v6-otsikolla) → kansio PK:lle (local_601d33fc-…) + PT ≤ 3 riviä.
