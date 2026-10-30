@@ -1,0 +1,140 @@
+{
+  "kohde": "Sivuhallit 中右门 (länsi, h-zhongyoumen) ja 中左门 (itä, h-zhongzuomen), Taihedianin sivuilla",
+  "laatija": "Pelikoodari 30.10.2026 (omistajan päätös 09.11: piirrokset todellisin mitoin; jatko Taihedianista)",
+  "kehys": "AKSELIKEHYS: pohja.json kierrettynä origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä. Piirros 中右门; 中左门 on peilikuva (OSM-keskikohta x +77,0).",
+  "lahteet": {
+    "1": "Wikipedia zh: 太和殿 (kohta 中右门/中左门): https://zh.wikipedia.org/wiki/太和殿 (中右门：位于太和殿西侧。面阔五间，单檐歇山顶，上覆黄色琉璃瓦; 中左门 sama itäpuolella; 三大殿台基以下)",
+    "2": "OpenStreetMap way/638507841 (中右门) ja way/638507783 (中左门) (© OpenStreetMap contributors, ODbL 1.0), pohja.json kk-pohja-v1d-pk7",
+    "A": "ARVIO: arvo pelin nykyisestä mallista (Lavastajan rakennukset-v83, h-zhongyoumen-lod0: Taihemenistä skaalattu, sivuhalli_taihemenista.py). Varmistettava ennen 3D-työtä.",
+    "H": "Havainne 03 (omistajan hyväksymä havainnekuva, aukio Taihedianin edessä): sivuhallit näkyvät Taihedianin kummallakin puolella, kaksi kattokerrosta (重檐歇山). Rajaus havainne03-sivuhallit-rajaus.png.",
+    "K": "KUVAMITTAUS (Pelikoodari 30.10.): Commons File:Hall of Supreme Harmony and Mid L-R gates (20241127120000).jpg (N509FZ, CC BY-SA 4.0; Nikon D810 31 mm, akselilta, commons/sivuhalli/orig-s02.jpg). Mittakaava samasta kuvasta: Taihedianin etupylväsrivi 63,96 m [Taihedian 2] = 2328 px → 36,4 px/m, sivuhallin etutaso lähes samalla syvyydellä (36,5 px/m). Horisontti ratkaistu Taihedianin harjasta 35,05 ja pylväiden yläpäästä 13,6 [K] → kameran korkeus 1,0 m. Tarkkuus ±0,4 m."
+  },
+  "mitat": [
+    {
+      "osa": "halli",
+      "mitta": "jännemäärä",
+      "arvo": "5 (面阔五间)",
+      "lahde": "1",
+      "huom": "peli 5 ✓"
+    },
+    {
+      "osa": "halli",
+      "mitta": "kattomuoto",
+      "arvo": "重檐歇山 (VALINTA: havainne 03 [H]); lähde [1] 单檐歇山",
+      "lahde": "H",
+      "huom": "Omistajan linjaus 20.10.: ulkoasu havainteesta, paikat ja mitat todellisuudesta. Havainne näyttää kaksi kattokerrosta → pidetään 重檐; ristiriita lähteen [1] kanssa raportoitu PT:lle 30.10. KUVA [K] (läntinen ja itäinen) näyttää YHDEN kattokerroksen (单檐歇山), kuten lähde [1]; ristiriita havainteen kanssa → PT."
+    },
+    {
+      "osa": "jalusta",
+      "mitta": "ääriviiva",
+      "x_m": [
+        -93.3,
+        -66.6
+      ],
+      "z_m": [
+        -22.8,
+        -1.0
+      ],
+      "lahde": "2",
+      "huom": "26,7 × 21,8; ydin z −20,8..−3,0"
+    },
+    {
+      "osa": "portaat/luiskat",
+      "mitta": "pohjoinen ja etelä",
+      "x_m": [
+        -86.2,
+        -74.8
+      ],
+      "z_m": [
+        [
+          -39.7,
+          -22.8
+        ],
+        [
+          -1.0,
+          15.9
+        ]
+      ],
+      "lahde": "2",
+      "huom": "11,4 m leveät, 17 m pitkät (OSM); pelissä t-portti-m15 (ei tässä mitattu)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "seinä- ja pylväslinja",
+      "arvo_m": [
+        22.6,
+        14.6
+      ],
+      "x_m": [
+        -91.3,
+        -68.7
+      ],
+      "z_m": [
+        -19.2,
+        -4.6
+      ],
+      "lahde": "A",
+      "huom": "[K] etupylväsrivi 21,0 m (peli 22,6), jännejako 2,4 + 5,0 + 6,1 + 5,0 + 2,4; syvyys A",
+      "tapa": "kuva s02: punaisten pylväiden keskikohdat rivillä 2740 (x 167, 253, 436, 660, 844, 935 px), 36,5 px/m"
+    },
+    {
+      "osa": "halli",
+      "mitta": "lattia y",
+      "arvo_m": 2.5,
+      "lahde": "A"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pylväskerros y",
+      "arvo_m": [
+        2.5,
+        6.7
+      ],
+      "lahde": "K",
+      "huom": "yläpää [K] (peli 7,9); alapää = lattia A 2,5, kuvassa ihmisten takana",
+      "tapa": "kuva s02: punainen alkaa y 2688 (x 434)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "palkkivyö y",
+      "arvo_m": [
+        6.7,
+        8.0
+      ],
+      "lahde": "K",
+      "huom": "peli 7,9–9,0 (A); räystäs peittää yläosan",
+      "tapa": "kuva s02: y 2640–2688 (x 434/547)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "katot (重檐 sovitettuna [K]-korkeuteen)",
+      "arvo_m": {
+        "alaräystäs [K]": 8.3,
+        "alakatto → yläpalkkivyö [H]": [
+          8.3,
+          10.3
+        ],
+        "yläpalkkivyö [H]": [
+          10.3,
+          10.7
+        ],
+        "yläräystäs [H]": 10.9,
+        "harja [K]": 14.7,
+        "鸱吻 yläpää [K]": 15.7
+      },
+      "lahde": "K",
+      "huom": "PT 10.4x (KK 09.5x): havainteen kaksi kattoa pidetään, mitat todellisia. Räystäs 8,3 ja harja 14,7 kuvasta [K]; välirajat [H] = Taihemenin [K]-kerrossuhteet skaalattuna välille 8,3–14,7 (kerroin 0,464). Kuvassa ja lähteessä [1] YKSI katto.",
+      "tapa": "kuva s02: räystäs y 2625 (syvyys 171,4), harja y 2414 ja 鸱吻 y 2381 (syvyys 181,2); välirajat laskettu Taihemenin suhteista: 10,0→14,3→15,2→15,7→23,8"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pelin yläkerros ja yläkatto y",
+      "arvo_m": [
+        10.6,
+        19.2
+      ],
+      "lahde": "A",
+      "huom": "KORVATTU: katso rivi \"katot (重檐 sovitettuna [K]-korkeuteen)\"; pelin arvot 10,6–19,2 + 鸱吻 20,3 (A)"
+    }
+  ]
+}
