@@ -1671,3 +1671,11 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   Taivas näkyisi vain, jos h < −0,4 m (silmä maan alla) tai kamera < 55 m aukosta (silloin sali kasvaa, ks. 080449). Sivuaukoista ei näe
   läpi suorilla tunneleilla mistään U-pihan kohdasta, joka on yli ~2,5 m sivussa tunnelin akselista. → Havainteen kohdat 2 ja 3 eivät
   ole saavutettavissa todellisilla mitoilla ja paikoilla.
+
+## LISÄYS 123 (30.10. 08.3x): v187 valoisat tunnelit (OMISTAJAN PÄÄTÖS 08.27: todelliset mitat, "syvät kehykset, ja valon varjot tuovat syvyyttä")
+- Suorat tunnelit, kehyssyvennykset 1,4 m (MERIDIAANI_SYV), ovet ja kynnykset takareunan taakse, tunnelien seinät koko korkeudelta
+  vaaleaa sokkelikiveä (TUNNELI_KIVI_Y=20) → sivuaukoista näkyy valoisa tunnelin pinta. aja_v187_valoisa.zsh → K/valoisa-v187/
+  kielletty-rakennukset-v87 + kielletty-c2-v26 (lod1/2, tormays = v83). Pari runko c0b59f6b0, kohta 06, keisari 0,12:
+  lokit/havainne-editori-20261030-083011/06. Syvennysten varjot valon vaiheessa (VS).
+- Hyväksynnän jälkeen: paketti v98 = v97 + rakennukset-v87 + c2-v26; PK: kansiot "kielletty-rakennukset-v87/" ja "kielletty-c2-v26/".
+  Hylätyt/väliversiot (v84/v85/v86, c2-v23/24/25) eivät mene pakettiin; K/_roska/ = keskeneräiset v187-ajot.
