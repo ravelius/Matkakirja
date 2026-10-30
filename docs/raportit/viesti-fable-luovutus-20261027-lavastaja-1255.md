@@ -1686,3 +1686,11 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
 - 074212 näytti luontevalta vain, koska sivutunnelit oli käännetty (läpi näkyi valoa); todellisilla suorilla tunneleilla U-pihalta
   näkyy aina tunnelin sivuseinä. Vaihtoehdot: (a) kääntö takaisin (poikkeaa mitoista), (b) suora + punainen ja syvyys valon varjoista,
   (c) suora + sisäpinta tummempi/varjossa valon vaiheessa (VS), jolloin aukko lukeutuu käytäväksi eikä paneeliksi.
+
+## LISÄYS 125 (30.10. 09.0x): (c) hämärät käytävät – pari VS:n koodilla (KK valitsi (c), PT 08.4x)
+- VS teki hämärän peliin (linssiseppa2/kaytava-215 81169914c, korjaa 34cb7210c:n LOD0-ehdon): käytävät tunnistetaan LOD0:n V4_lattia-
+  lattioista, sisäpinnoille taivas/aurinko vain suuaukoista. Glb:hen EI kärkiväriä eikä uutta materiaalia (VS: tummentaisi kahdesti).
+- Geometria = v188 (suorat tunnelit, punaiset sisäpinnat, syvennykset 1,4 m, upotetut ovet): K/punainen-v188/kielletty-rakennukset-v88
+  + kielletty-c2-v27. Pari REF 81169914c, kohta 06, keisari 0,11: lokit/havainne-editori-20261030-090240/06 (34cb7210c-ajo 08xx ilman hämärää).
+- Hyväksynnän jälkeen: paketti v98 = v97 + rakennukset-v88 + c2-v27; PK: kansiot "kielletty-rakennukset-v88/", "kielletty-c2-v27/"; VS:n
+  kaytava-215 junaan samaan aikaan.
