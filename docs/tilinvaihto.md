@@ -119,6 +119,9 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
   palautus: `bash tools/tyotavat/palauta-sallinnat.sh` (vanha talteen .ennen-<pvm>, sitten PT:n session uudelleenkäynnistys).
   Gitin seurattua .claude/settings.local.json:ia ei committata.
 - Hookit: `bash tools/hooks/asenna-viestiraja-hook.sh --tarkista`; pt-taulu-muistutus.py: totuus S/hooks/ (peili tools/hooks/).
+- Automaattinen tiivistys pois (omistaja 30.10.2026 klo 19.22; Raamattu 7.37): "idleCompaction": false käyttäjän
+  /Users/koodaus/.claude/settings.json:ssa; Postivahti nollaa itsensä 30 %:ssa; ensimmäisen päivän iltana tarkista, ettei
+  yhdenkään roolin tallenteessa ole tiivistystä.
 
 ## 7. Macin tarkistukset (eivät riipu tilistä)
 - `launchctl list | grep -i -E 'matkakirja|runner'`: fi.matkakirja.juna, juna-vahti, naytto-auki, siivous, app.matkakirja.natiivi-bundle,
