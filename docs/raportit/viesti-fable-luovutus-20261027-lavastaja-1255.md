@@ -1625,3 +1625,14 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
   PK: "kielletty-rakennukset-v83/", "kielletty-c2-v22/". v96 korvautunut.
 - Muu jono: 03-vyön UV (PT:n vastaus), A6 (Codexin 7-välinen GLB).
 - 05.2x PT: 03-vyön UV -kohta SULJETTU (siipimuurien vanha kate/friisi poistettu c2-v20/v22, 03-parit hyväksytty). Jono: vain A6 (Codexin 7-välinen GLB).
+
+## LISÄYS 119 (30.10. 07.45): Meridiaaniportin sivuaukot avoimiksi (PT 07.2x, KK:n havainto parissa 051707/06)
+- Syy: "punaiset ovet" eivät olleet ovia. Sivutunnelit (x ±21, 4 m × 27,5 m) olivat suoria, joten U-pihalta (~80 m, ~24 m sivussa)
+  aukosta näkyi vain tunnelin punainen sisäseinä ja auki käännetty ovilehti.
+- Korjaus: sivutunnelit leikattu (shear) U-pihan akselipisteeseen (reitin S-N alku 3,5/−99): pohjoispää ~7 m ulospäin, etelän julkisivu,
+  ovet ja keskitunneli ennallaan; törmäysmallin laatikot samalla säännöllä (kulku auki). K/tyokalut/meridiaani_aukot.py + aja_v184_aukot.zsh
+  → K/aukot-v184/kielletty-rakennukset-v84 (lod0/1/2 + tormays) ja kielletty-c2-v23 (lod0-kaiteeton). Apuluokka lappe_uv_g.py
+  (lappe_uv.py:n tuonti ajoi sen päärutiinin; v183-työkopion lod0 palautettiin v97-paketista, sha täsmää).
+- Pari rungolla c0b59f6b0, kohta 06 (16.4 −474 −2.03, testikamera 2.5 6.2 3 51; keisari 0,12 = havainne):
+  ennen lokit/havainne-editori-20261030-073943/06, jälkeen lokit/havainne-editori-20261030-074212/06 (vierekkain.png).
+- Hyväksynnän jälkeen: paketti v98 = v97 + rakennukset-v84 + c2-v23; PK: kansiot "kielletty-rakennukset-v84/" ja "kielletty-c2-v23/".
