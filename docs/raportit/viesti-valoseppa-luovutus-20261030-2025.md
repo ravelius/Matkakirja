@@ -76,3 +76,8 @@ PT local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc, LAV local_beb68834-6c4f-4839-ac75
 ## Työkalut (/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/)
 - ero.py, varimittaus.py, glbmat.py, glbtex.py, qa-lahi.py (kuten ennen).
 - Skenaariot: varjo-v4(-vv).txt, lodraja-v4.txt, grafiikka67.txt, kaskadit67(-vv).txt.
+
+## LISÄYS 20.3x (PT)
+- PT perui aiemman kuittauksensa varjoparista ja LOD-rajasta. Uusi pari ajetaan `valo vertailu 0` -asetuksella, kun linja 2 vapautuu. Omistajan neljä varjoehtoa ovat voimassa.
+- PT hyväksyi linjaukset: AgX hylätty sellaisenaan; STP arvioidaan vain LT:n laitemittauksella.
+- Pelin oletus on yhä vertailuvalo (omistaja 27.10. 10.56). Valoerän lopuksi tarvitaan omistajan päätös siitä, milloin valo laitetaan peliin oletuksena päälle (`ValoKohteet.JuoksuVertailuValo` → false). PT kysyy sen KK:n kautta, kun parit ovat valmiit. Älä muuta oletusta ennen sitä.
