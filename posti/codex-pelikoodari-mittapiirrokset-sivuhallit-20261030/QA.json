@@ -1,0 +1,2265 @@
+{
+  "status": "PASS_WITH_DISCLOSED_SOURCE_CONFLICTS",
+  "checkedAt": "2026-10-30T08:14:11.716669+00:00",
+  "tasks": [
+    1305,
+    1306
+  ],
+  "files": [
+    {
+      "name": "sivuhalli-pohja-codex.svg",
+      "sha256": "83ef106ccfc9b2d5843ea26944df9b9b044956d938e93a436127dda3b96447e6",
+      "bytes": 73437
+    },
+    {
+      "name": "sivuhalli-pohja-codex.png",
+      "sha256": "45f819feb0a9f4e2cd5a4df6318a2dc11a54c95fc2f91aa1ad6f6f5ba53ca73a",
+      "bytes": 119481
+    },
+    {
+      "name": "sivuhalli-julkisivu-etela-codex.svg",
+      "sha256": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+      "bytes": 58920
+    },
+    {
+      "name": "sivuhalli-julkisivu-etela-codex.png",
+      "sha256": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68",
+      "bytes": 134793
+    }
+  ],
+  "evidence": {
+    "audit-side-elevation-exact": [
+      {
+        "id": "ridge-band",
+        "source_bbox_px": [
+          430,
+          216,
+          301,
+          17
+        ],
+        "actual_svg_bbox_px": [
+          430.0,
+          216.0,
+          301.0,
+          17.0
+        ]
+      },
+      {
+        "id": "central-opening",
+        "source_bbox_px": [
+          541,
+          443,
+          78,
+          108
+        ],
+        "actual_svg_bbox_px": [
+          541.0,
+          443.0,
+          78.0,
+          108.0
+        ]
+      },
+      {
+        "id": "lower-beam",
+        "source_bbox_px": [
+          354,
+          421,
+          453,
+          22
+        ],
+        "actual_svg_bbox_px": [
+          354.0,
+          421.0,
+          453.0,
+          22.0
+        ]
+      },
+      {
+        "id": "upper-wall",
+        "source_bbox_px": [
+          410,
+          361,
+          342,
+          28
+        ],
+        "actual_svg_bbox_px": [
+          410.0,
+          361.0,
+          342.0,
+          28.0
+        ]
+      },
+      {
+        "id": "upper-beam",
+        "source_bbox_px": [
+          410,
+          321,
+          342,
+          40
+        ],
+        "actual_svg_bbox_px": [
+          410.0,
+          321.0,
+          342.0,
+          40.0
+        ]
+      }
+    ],
+    "independent-measurement-audit": {
+      "schema": "sivuhallit-independent-audit-v1",
+      "status": "COMPLETE_BOTH_PASS_WITH_DISCLOSED_SOURCE_DISCREPANCIES",
+      "created_at": "2026-10-30T08:02:07.647871+00:00",
+      "full_order_read": true,
+      "source_json_read": [
+        "sivuhalli-pohja.json",
+        "sivuhalli-julkisivu-etela.json",
+        "sivuhallit-mitat.json"
+      ],
+      "source_png_viewed": [
+        "sivuhalli-pohja.png",
+        "sivuhalli-julkisivu-etela.png",
+        "havainne03-sivuhallit-rajaus.png"
+      ],
+      "source_hashes": {
+        "havainne03-sivuhallit-rajaus.png": "143f4241e29e724ecd2e822ba5f44c096c3499e627d5bee9b453e172a184c818",
+        "sivuhalli-julkisivu-etela.json": "0a982157f3473d1a52823082d29c751422bf84f346e1c722317862b2c9f59917",
+        "sivuhalli-julkisivu-etela.png": "7590bc5bf7564082375e48e94df063efd2ca59ba7dfc24e8db08cdd88826d22d",
+        "sivuhalli-pohja.json": "00aa3a1e68555549af26f5e0b1eb9d3184b2a3eb6d9f1d479e23f3616f2d61fc",
+        "sivuhalli-pohja.png": "8876ec32902d67f1b0d386b8391bea5bb83bc78e7d8a8ded03fca2be59eb1efd",
+        "sivuhallit-mitat.json": "2ce1a823e5e844fb3b5251dcfbaaed824be661b86e071fa333585ab6fbfc1d16"
+      },
+      "frames": [
+        {
+          "name": "sivuhalli-pohja",
+          "source_frame": {
+            "kuva": "sivuhalli-pohja.png",
+            "kuvaus": "Sivuhalli 中右门 pohjapiirros, akselikehys x/z",
+            "px_per_m": 14,
+            "x0": -105,
+            "x1": -55,
+            "a0": -45,
+            "a1": 20,
+            "marginaali_vasen_ylä": [
+              70,
+              120
+            ],
+            "koko": [
+              850,
+              1360
+            ],
+            "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+          },
+          "size_matches_png": true,
+          "grid_pixel_bounds": [
+            70,
+            120,
+            770,
+            1030
+          ],
+          "mapping": {
+            "u_intercept": 1540,
+            "u_x_factor": 14,
+            "v_intercept": 400,
+            "v_a_factor": -14
+          }
+        },
+        {
+          "name": "sivuhalli-julkisivu-etela",
+          "source_frame": {
+            "kuva": "sivuhalli-julkisivu-etela.png",
+            "kuvaus": "Sivuhalli 中右门 etelän julkisivu, akselikehys x/y",
+            "px_per_m": 20,
+            "x0": -105,
+            "x1": -55,
+            "a0": -1,
+            "a1": 24,
+            "marginaali_vasen_ylä": [
+              80,
+              120
+            ],
+            "koko": [
+              1160,
+              920
+            ],
+            "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+          },
+          "size_matches_png": true,
+          "grid_pixel_bounds": [
+            80,
+            120,
+            1080,
+            620
+          ],
+          "mapping": {
+            "u_intercept": 2180,
+            "u_x_factor": 20,
+            "v_intercept": 600,
+            "v_a_factor": -20
+          }
+        }
+      ],
+      "conflicts_and_open_items": [
+        {
+          "id": "SH01",
+          "part": "Kattokerrosten määrä",
+          "evidence": "Omistajan havainne ja tilaus määräävät kaksi kattokerrosta (重檐歇山), vaikka kirjallinen lähde [1] sanoo yksi (单檐).",
+          "handling": "Kaksi kattokerrosta [H] on sitova valinta. Kirjallinen ristiriita ilmoitetaan; ulkoasua ei muuteta yksikerroksiseksi."
+        },
+        {
+          "id": "SH02",
+          "part": "Jalustan ja portaiden muoto",
+          "evidence": "JSON antaa rajakoordinaatit, mutta OSM-katkoviiva lähde-PNG:ssä muodostaa porrastetun ja hieman epäsymmetrisen monikulmion. Tilaus käskee seuraamaan tätä katkoviivaa.",
+          "handling": "Jäljennä OSM-katkoviiva erillisenä mitattuna ääriviivana. Älä korvaa sitä pelkillä boundingbox-suorakulmioilla. JSON-rajat säilyvät nimellisarvoina; rasterijäljennöksen epävarmuus ilmoitetaan."
+        },
+        {
+          "id": "SH03",
+          "part": "Portaiden pituus",
+          "evidence": "JSON:n etelä −39,7…−22,8 ja pohjoinen −1,0…15,9 ovat kumpikin 16,9 m. Proosa käyttää pyöristystä 17 m.",
+          "handling": "Säilytä koordinaatit sekä lähdekatkoviiva. Noin 17 m ei oikeuta venyttämään portaita."
+        },
+        {
+          "id": "SH04",
+          "part": "Harja ja koristehuippu",
+          "evidence": "JSON mainitsee harjan 19,2 m ja koristehuipun 20,3 m [A]. PK-eteläkuvassa näkyy vain 19,2 m tasainen harja, ei erillistä 20,3 m koristeen siluettia.",
+          "handling": "Säilytä PNG:n näkyvä siluetti. 20,3 m jää avoimeksi A-huomautukseksi; älä keksi puuttuvaa koristesiluettia."
+        },
+        {
+          "id": "SH05",
+          "part": "Itäisen hallin peilaus",
+          "evidence": "Länsihallin keskus on noin x −80,0 m, mutta itäisen hallin OSM-keskukseksi ilmoitetaan +77,0 m. Sana peilikuva koskee tässä muotoa, ei todista paikkaa +80 m.",
+          "handling": "Toimita vain pyydetty länsihalli 中右门. Älä luo itäistä hallia tai sen sijaintia tässä toimituksessa."
+        }
+      ],
+      "expected_geometry": {
+        "hall_footprint": {
+          "x": [
+            -91.3,
+            -68.7
+          ],
+          "z": [
+            -19.2,
+            -4.6
+          ],
+          "width": 22.6,
+          "depth": 14.6,
+          "source": "A"
+        },
+        "foundation_nominal_bounds": {
+          "x": [
+            -93.3,
+            -66.6
+          ],
+          "z": [
+            -22.8,
+            -1.0
+          ],
+          "core_z": [
+            -20.8,
+            -3.0
+          ],
+          "geometry_priority": "OSM dashed source PNG per explicit order"
+        },
+        "stairs_nominal_bounds": {
+          "x": [
+            -86.2,
+            -74.8
+          ],
+          "south_z": [
+            -39.7,
+            -22.8
+          ],
+          "north_z": [
+            -1.0,
+            15.9
+          ],
+          "length_from_coordinates": 16.9,
+          "geometry_priority": "OSM dashed source PNG per explicit order"
+        },
+        "levels_y": {
+          "floor": 2.5,
+          "columns": [
+            2.5,
+            7.9
+          ],
+          "beam": [
+            7.9,
+            9.0
+          ],
+          "lower_roof": [
+            9.0,
+            10.6
+          ],
+          "upper_wall_and_roof": [
+            10.6,
+            19.2
+          ],
+          "ornament_unshown_nominal": 20.3
+        },
+        "lower_eave_x": [
+          -94.3,
+          -65.6
+        ],
+        "bays": 5,
+        "roof_layers": 2,
+        "scope": "west 中右门 only"
+      },
+      "a_estimates": [
+        {
+          "osa": "halli",
+          "mitta": "seinä- ja pylväslinja",
+          "arvo_m": [
+            22.6,
+            14.6
+          ],
+          "x_m": [
+            -91.3,
+            -68.7
+          ],
+          "z_m": [
+            -19.2,
+            -4.6
+          ],
+          "lahde": "A"
+        },
+        {
+          "osa": "halli",
+          "mitta": "lattia y",
+          "arvo_m": 2.5,
+          "lahde": "A"
+        },
+        {
+          "osa": "halli",
+          "mitta": "pylväskerros y",
+          "arvo_m": [
+            2.5,
+            7.9
+          ],
+          "lahde": "A"
+        },
+        {
+          "osa": "halli",
+          "mitta": "palkkivyö y",
+          "arvo_m": [
+            7.9,
+            9.0
+          ],
+          "lahde": "A"
+        },
+        {
+          "osa": "halli",
+          "mitta": "pelin alakatto y",
+          "arvo_m": [
+            9.0,
+            10.6
+          ],
+          "lahde": "A",
+          "huom": "räystäs x −94,3..−65,6"
+        },
+        {
+          "osa": "halli",
+          "mitta": "pelin yläkerros ja yläkatto y",
+          "arvo_m": [
+            10.6,
+            19.2
+          ],
+          "lahde": "A",
+          "huom": "huippu 19,2 + 鸱吻 20,3; 重檐 havainteen [H] mukaan"
+        }
+      ],
+      "final_checks": {
+        "sivuhalli-pohja": {
+          "frame": "PASS",
+          "size_px": [
+            850,
+            1360
+          ],
+          "px_per_m": 14,
+          "grid_pixel_bounds": [
+            70,
+            120,
+            770,
+            1030
+          ],
+          "vertical_gridlines": 51,
+          "horizontal_gridlines": 66,
+          "endpoint_labels": "PASS",
+          "embedded_raster_images": 0,
+          "svg_sha256": "83ef106ccfc9b2d5843ea26944df9b9b044956d938e93a436127dda3b96447e6",
+          "png_sha256": "45f819feb0a9f4e2cd5a4df6318a2dc11a54c95fc2f91aa1ad6f6f5ba53ca73a",
+          "text": {
+            "method": "Arial/Arial Bold font metrics at 10x resolution, SVG group/text transformations and text halo included",
+            "text_count": 46,
+            "overlaps": [],
+            "all_inside_canvas": true
+          },
+          "rectangles": [
+            {
+              "id": "hall-wall-footprint",
+              "world_bounds": [
+                -91.3,
+                -68.7,
+                -19.2,
+                -4.6
+              ],
+              "actual_svg_rect": [
+                261.8,
+                464.4,
+                316.4,
+                204.4
+              ],
+              "max_coordinate_error_px": 5.684341886080802e-14
+            },
+            {
+              "id": "roof-plan-envelope",
+              "world_bounds": [
+                -94.3,
+                -65.6,
+                -21.571428571428573,
+                -2.142857142857143
+              ],
+              "actual_svg_rect": [
+                219.8,
+                430.0,
+                401.8,
+                272.0
+              ],
+              "max_coordinate_error_px": 5.684341886080802e-14
+            }
+          ],
+          "osm_trace": {
+            "status": "PASS",
+            "source_rows": 779,
+            "svg_polygon_vertices": 233,
+            "max_endpoint_error_px": 1.1368683772161603e-13,
+            "method": "Actual SVG polygon left/right chains evaluated at every original row endpoint and compared with source beige fill/black dashed edge. No producer geometry coordinates used as the expected shape.",
+            "fully_occluded_interpolated_rows": [
+              430,
+              431,
+              701,
+              702,
+              760,
+              761,
+              762
+            ],
+            "source_dimension_label_occlusion": {
+              "rows": [
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567,
+                568,
+                569,
+                570,
+                571,
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578
+              ],
+              "raw_false_right_edge_exclusive_px": 597,
+              "corrected_right_edge_exclusive_px": 608,
+              "anchors": {
+                "555": 608,
+                "579": 608
+              },
+              "left_edge_unchanged": true
+            },
+            "original_shape_preserved": "Stepped and slightly slanted OSM footprint; no bounding rectangle substitution",
+            "uncertainty_px": 1,
+            "uncertainty_m": 0.07142857142857142
+          },
+          "visual_review": "Final plan inspected; labels readable. The corrected OSM segment is below the roof fill; no new visible overlap."
+        },
+        "sivuhalli-julkisivu-etela": {
+          "frame": "PASS",
+          "size_px": [
+            1160,
+            920
+          ],
+          "px_per_m": 20,
+          "grid_pixel_bounds": [
+            80,
+            120,
+            1080,
+            620
+          ],
+          "vertical_gridlines": 51,
+          "horizontal_gridlines": 26,
+          "endpoint_labels": "PASS",
+          "embedded_raster_images": 0,
+          "svg_sha256": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+          "png_sha256": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68",
+          "text": {
+            "method": "Arial/Arial Bold font metrics at 10x resolution, SVG group/text transformations and text halo included",
+            "text_count": 38,
+            "overlaps": [],
+            "all_inside_canvas": true
+          },
+          "rectangles": [
+            {
+              "id": "foundation",
+              "world_bounds": [
+                -93.3,
+                -66.6,
+                0,
+                2.5
+              ],
+              "actual_svg_rect": [
+                314.0,
+                550.0,
+                534.0,
+                50.0
+              ],
+              "max_coordinate_error_px": 5.684341886080802e-14
+            }
+          ],
+          "source_raster_rectangles": [
+            {
+              "id": "ridge-band",
+              "source_bbox_px": [
+                430,
+                216,
+                301,
+                17
+              ],
+              "actual_svg_bbox_px": [
+                430.0,
+                216.0,
+                301.0,
+                17.0
+              ]
+            },
+            {
+              "id": "central-opening",
+              "source_bbox_px": [
+                541,
+                443,
+                78,
+                108
+              ],
+              "actual_svg_bbox_px": [
+                541.0,
+                443.0,
+                78.0,
+                108.0
+              ]
+            },
+            {
+              "id": "lower-beam",
+              "source_bbox_px": [
+                354,
+                421,
+                453,
+                22
+              ],
+              "actual_svg_bbox_px": [
+                354.0,
+                421.0,
+                453.0,
+                22.0
+              ]
+            },
+            {
+              "id": "upper-wall",
+              "source_bbox_px": [
+                410,
+                361,
+                342,
+                28
+              ],
+              "actual_svg_bbox_px": [
+                410.0,
+                361.0,
+                342.0,
+                28.0
+              ]
+            },
+            {
+              "id": "upper-beam",
+              "source_bbox_px": [
+                410,
+                321,
+                342,
+                40
+              ],
+              "actual_svg_bbox_px": [
+                410.0,
+                321.0,
+                342.0,
+                40.0
+              ]
+            }
+          ],
+          "roof_scanlines": [
+            {
+              "id": "lower-roof",
+              "source_rows": 32,
+              "source_runs": 32,
+              "max_endpoint_delta_px": 0.0
+            },
+            {
+              "id": "upper-roof",
+              "source_rows": 88,
+              "source_runs": 88,
+              "max_endpoint_delta_px": 0.0
+            }
+          ],
+          "columns": {
+            "count": 6,
+            "spans": 5,
+            "x_centers_m": [
+              -91.3,
+              -86.78,
+              -82.26,
+              -77.74,
+              -73.22,
+              -68.7
+            ],
+            "equal_spacing_is_schematic": true
+          },
+          "top": {
+            "painted_top_y_m": 19.2,
+            "unshown_ornament_nominal_20_3_m": "Text-only open A item; not drawn as fabricated geometry"
+          },
+          "visual_review": "Final elevation inspected; two roof tiers visible, top19.2m, labels readable and no observed overlaps."
+        }
+      },
+      "completed_at": "2026-10-30T08:13:47.467466+00:00",
+      "source_files_unchanged": true,
+      "audit_fix_verified": {
+        "issue": "Source white14.6[A] label was being traced as an11px inward notch in the OSM foundation polygon.",
+        "fixed_by": "Production agent; this auditor did not modify artifacts.",
+        "change": "Only right edge rows556–578 restored to source continuation x608px exclusive.",
+        "final_verification": "All779 original row endpoints checked; source-visible portions and interpolated portions match.",
+        "elevation_hashes_unchanged": {
+          "svg": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+          "png": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68"
+        }
+      },
+      "final_sha256": {
+        "sivuhalli-pohja-codex.svg": "83ef106ccfc9b2d5843ea26944df9b9b044956d938e93a436127dda3b96447e6",
+        "sivuhalli-pohja-codex.png": "45f819feb0a9f4e2cd5a4df6318a2dc11a54c95fc2f91aa1ad6f6f5ba53ca73a",
+        "sivuhalli-julkisivu-etela-codex.svg": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+        "sivuhalli-julkisivu-etela-codex.png": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68"
+      }
+    },
+    "root-validation": {
+      "checkedAt": "2026-10-30T08:12:26.832010+00:00",
+      "result": "PASS",
+      "drawings": [
+        {
+          "stem": "sivuhalli-pohja",
+          "canvas": [
+            850,
+            1360
+          ],
+          "pxPerM": 14,
+          "margin": [
+            70,
+            120
+          ],
+          "grid": {
+            "x": [
+              -105,
+              -55
+            ],
+            "a": [
+              -45,
+              20
+            ],
+            "oneMetreLinesVerified": 117
+          },
+          "pureVector": true,
+          "resolvedClipReferences": true,
+          "worldToPixelPrimitivesVerified": 6,
+          "svgPNGAndRepeatedRenderPixelsIdentical": true,
+          "SVG_SHA256": "83ef106ccfc9b2d5843ea26944df9b9b044956d938e93a436127dda3b96447e6",
+          "PNG_SHA256": "45f819feb0a9f4e2cd5a4df6318a2dc11a54c95fc2f91aa1ad6f6f5ba53ca73a"
+        },
+        {
+          "stem": "sivuhalli-julkisivu-etela",
+          "canvas": [
+            1160,
+            920
+          ],
+          "pxPerM": 20,
+          "margin": [
+            80,
+            120
+          ],
+          "grid": {
+            "x": [
+              -105,
+              -55
+            ],
+            "a": [
+              -1,
+              24
+            ],
+            "oneMetreLinesVerified": 77
+          },
+          "pureVector": true,
+          "resolvedClipReferences": true,
+          "worldToPixelPrimitivesVerified": 14,
+          "svgPNGAndRepeatedRenderPixelsIdentical": true,
+          "SVG_SHA256": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+          "PNG_SHA256": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68"
+        }
+      ],
+      "sourceFilesUnchanged": true,
+      "scope": "Local frame, grid, pure vector and render verification; independent geometry and disclosed source conflicts are separate. No PK game comparison or owner approval claimed."
+    },
+    "sivuhalli-julkisivu-etela-geometry": {
+      "frame": {
+        "kuva": "sivuhalli-julkisivu-etela.png",
+        "kuvaus": "Sivuhalli 中右门 etelän julkisivu, akselikehys x/y",
+        "px_per_m": 20,
+        "x0": -105,
+        "x1": -55,
+        "a0": -1,
+        "a1": 24,
+        "marginaali_vasen_ylä": [
+          80,
+          120
+        ],
+        "koko": [
+          1160,
+          920
+        ],
+        "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+      },
+      "rotation_applied_deg": 0,
+      "geometry": [
+        {
+          "id": "foundation",
+          "type": "rectangle",
+          "world": [
+            [
+              -93.3,
+              2.5
+            ],
+            [
+              -66.6,
+              2.5
+            ],
+            [
+              -66.6,
+              0
+            ],
+            [
+              -93.3,
+              0
+            ]
+          ],
+          "source": "2 x; A y",
+          "role": "measured",
+          "bounds": {
+            "x0": -93.3,
+            "x1": -66.6,
+            "a0": 0,
+            "a1": 2.5
+          }
+        },
+        {
+          "id": "hall-body",
+          "type": "rectangle",
+          "world": [
+            [
+              -91.6,
+              7.899999999999999
+            ],
+            [
+              -68.4,
+              7.899999999999999
+            ],
+            [
+              -68.4,
+              2.4499999999999993
+            ],
+            [
+              -91.6,
+              2.4499999999999993
+            ]
+          ],
+          "source": "PK PNG; A",
+          "role": "measured",
+          "bounds": {
+            "x0": -91.6,
+            "x1": -68.4,
+            "a0": 2.4499999999999993,
+            "a1": 7.899999999999999
+          },
+          "note": "PNG painted outside column faces. Nominal centerline width22.6m A, five bays1.",
+          "trace_uncertainty_px": 1
+        },
+        {
+          "id": "central-opening",
+          "type": "rectangle",
+          "world": [
+            [
+              -81.95,
+              7.850000000000001
+            ],
+            [
+              -78.05,
+              7.850000000000001
+            ],
+            [
+              -78.05,
+              2.4499999999999993
+            ],
+            [
+              -81.95,
+              2.4499999999999993
+            ]
+          ],
+          "source": "PK PNG; A",
+          "role": "measured",
+          "bounds": {
+            "x0": -81.95,
+            "x1": -78.05,
+            "a0": 2.4499999999999993,
+            "a1": 7.850000000000001
+          },
+          "note": "Unspecified opening dimensions taken only from PNG visible dark rectangle; schematic A.",
+          "trace_uncertainty_px": 1
+        },
+        {
+          "id": "lower-beam",
+          "type": "rectangle",
+          "world": [
+            [
+              -91.3,
+              8.95
+            ],
+            [
+              -68.65,
+              8.95
+            ],
+            [
+              -68.65,
+              7.850000000000001
+            ],
+            [
+              -91.3,
+              7.850000000000001
+            ]
+          ],
+          "source": "PK PNG; A",
+          "role": "measured",
+          "bounds": {
+            "x0": -91.3,
+            "x1": -68.65,
+            "a0": 7.850000000000001,
+            "a1": 8.95
+          },
+          "note": "JSON y7.9..9.0; source raster y421..442.",
+          "trace_uncertainty_px": 1
+        },
+        {
+          "id": "lower-roof",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            294,
+            389,
+            575,
+            32
+          ],
+          "world_bounds": [
+            [
+              -94.3,
+              10.55
+            ],
+            [
+              -65.55,
+              8.95
+            ]
+          ],
+          "source": "PK PNG; A",
+          "trace_uncertainty_px": 1,
+          "trace_uncertainty_m": 0.05,
+          "note": "Double-roof lower tier9.0..10.6m A, source roof profile retained."
+        },
+        {
+          "id": "upper-wall",
+          "type": "rectangle",
+          "world": [
+            [
+              -88.5,
+              11.95
+            ],
+            [
+              -71.4,
+              11.95
+            ],
+            [
+              -71.4,
+              10.55
+            ],
+            [
+              -88.5,
+              10.55
+            ]
+          ],
+          "source": "PK PNG; A",
+          "role": "measured",
+          "bounds": {
+            "x0": -88.5,
+            "x1": -71.4,
+            "a0": 10.55,
+            "a1": 11.95
+          },
+          "note": "Visible source split inside upper story y10.6..19.2 A.",
+          "trace_uncertainty_px": 1
+        },
+        {
+          "id": "upper-beam",
+          "type": "rectangle",
+          "world": [
+            [
+              -88.5,
+              13.95
+            ],
+            [
+              -71.4,
+              13.95
+            ],
+            [
+              -71.4,
+              11.95
+            ],
+            [
+              -88.5,
+              11.95
+            ]
+          ],
+          "source": "PK PNG; A",
+          "role": "measured",
+          "bounds": {
+            "x0": -88.5,
+            "x1": -71.4,
+            "a0": 11.95,
+            "a1": 13.95
+          },
+          "note": "Visible source upper beam; decorative height not independently sourced.",
+          "trace_uncertainty_px": 1
+        },
+        {
+          "id": "upper-roof",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            381,
+            233,
+            398,
+            88
+          ],
+          "world_bounds": [
+            [
+              -89.95,
+              18.35
+            ],
+            [
+              -70.05,
+              13.95
+            ]
+          ],
+          "source": "PK PNG; A",
+          "trace_uncertainty_px": 1,
+          "trace_uncertainty_m": 0.05,
+          "note": "Double-roof upper tier prescribed by H; source shape retains its original limits."
+        },
+        {
+          "id": "ridge-band",
+          "type": "rectangle",
+          "world": [
+            [
+              -87.5,
+              19.2
+            ],
+            [
+              -72.45,
+              19.2
+            ],
+            [
+              -72.45,
+              18.35
+            ],
+            [
+              -87.5,
+              18.35
+            ]
+          ],
+          "source": "PK PNG; A",
+          "role": "measured",
+          "bounds": {
+            "x0": -87.5,
+            "x1": -72.45,
+            "a0": 18.35,
+            "a1": 19.2
+          },
+          "note": "Source top19.2m. No chiwen outline above this is present in the source PNG.",
+          "trace_uncertainty_px": 1
+        }
+      ],
+      "decorative_details": "All decoration clipped to measured envelopes; equal tile/bay subdivisions are illustrative.",
+      "notes": [
+        "Double roof H overrides contradictory single-roof source1 for this ordered appearance.",
+        "Only top19.2m silhouette is drawn;20.3m chiwen is a textual open item only.",
+        "East hall mirror not created."
+      ],
+      "validation": {
+        "status": "PASS",
+        "svg_pure_vector": true,
+        "canvas_exact": true,
+        "deterministic_repeat_identical": true,
+        "svg_sha256": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+        "png_sha256": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68",
+        "clip_count": 9
+      }
+    },
+    "sivuhalli-pohja-geometry": {
+      "frame": {
+        "kuva": "sivuhalli-pohja.png",
+        "kuvaus": "Sivuhalli 中右门 pohjapiirros, akselikehys x/z",
+        "px_per_m": 14,
+        "x0": -105,
+        "x1": -55,
+        "a0": -45,
+        "a1": 20,
+        "marginaali_vasen_ylä": [
+          70,
+          120
+        ],
+        "koko": [
+          850,
+          1360
+        ],
+        "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+      },
+      "rotation_applied_deg": 0,
+      "geometry": [
+        {
+          "id": "osm-foundation-and-access",
+          "type": "source-edge-polygon",
+          "world": [
+            [
+              -86.0,
+              15.928571428571429
+            ],
+            [
+              -86.0,
+              15.0
+            ],
+            [
+              -85.92857142857143,
+              14.928571428571429
+            ],
+            [
+              -85.92857142857143,
+              14.214285714285715
+            ],
+            [
+              -86.0,
+              14.142857142857142
+            ],
+            [
+              -86.0,
+              13.214285714285715
+            ],
+            [
+              -85.92857142857143,
+              13.142857142857142
+            ],
+            [
+              -85.92857142857143,
+              12.428571428571429
+            ],
+            [
+              -86.0,
+              12.357142857142858
+            ],
+            [
+              -86.0,
+              10.642857142857142
+            ],
+            [
+              -86.07142857142857,
+              10.571428571428571
+            ],
+            [
+              -86.07142857142857,
+              9.714285714285714
+            ],
+            [
+              -86.0,
+              9.642857142857142
+            ],
+            [
+              -86.0,
+              8.857142857142858
+            ],
+            [
+              -86.07142857142857,
+              8.785714285714286
+            ],
+            [
+              -86.07142857142857,
+              7.928571428571429
+            ],
+            [
+              -86.0,
+              7.857142857142858
+            ],
+            [
+              -86.0,
+              7.071428571428571
+            ],
+            [
+              -86.07142857142857,
+              7.0
+            ],
+            [
+              -86.07142857142857,
+              6.142857142857142
+            ],
+            [
+              -86.0,
+              6.071428571428571
+            ],
+            [
+              -86.0,
+              5.2857142857142865
+            ],
+            [
+              -86.07142857142857,
+              5.2142857142857135
+            ],
+            [
+              -86.07142857142857,
+              4.357142857142858
+            ],
+            [
+              -86.0,
+              4.2857142857142865
+            ],
+            [
+              -86.0,
+              3.5
+            ],
+            [
+              -86.07142857142857,
+              3.428571428571427
+            ],
+            [
+              -86.07142857142857,
+              1.2142857142857153
+            ],
+            [
+              -86.14285714285714,
+              1.1428571428571423
+            ],
+            [
+              -86.14285714285714,
+              0.7857142857142847
+            ],
+            [
+              -86.07142857142857,
+              0.7142857142857153
+            ],
+            [
+              -86.07142857142857,
+              -0.07142857142857295
+            ],
+            [
+              -86.14285714285714,
+              -0.14285714285714235
+            ],
+            [
+              -86.14285714285714,
+              -0.928571428571427
+            ],
+            [
+              -91.64285714285714,
+              -1.0
+            ],
+            [
+              -91.64285714285714,
+              -1.928571428571427
+            ],
+            [
+              -91.71428571428571,
+              -2.0
+            ],
+            [
+              -91.71428571428571,
+              -2.928571428571427
+            ],
+            [
+              -93.21428571428571,
+              -3.0
+            ],
+            [
+              -93.21428571428571,
+              -3.7857142857142847
+            ],
+            [
+              -93.28571428571429,
+              -3.8571428571428577
+            ],
+            [
+              -93.28571428571429,
+              -4.714285714285715
+            ],
+            [
+              -93.21428571428571,
+              -4.785714285714285
+            ],
+            [
+              -93.21428571428571,
+              -5.571428571428573
+            ],
+            [
+              -93.28571428571429,
+              -5.642857142857142
+            ],
+            [
+              -93.28571428571429,
+              -6.5
+            ],
+            [
+              -93.21428571428571,
+              -6.571428571428573
+            ],
+            [
+              -93.21428571428571,
+              -7.285714285714285
+            ],
+            [
+              -93.28571428571429,
+              -7.357142857142858
+            ],
+            [
+              -93.28571428571429,
+              -7.785714285714285
+            ],
+            [
+              -93.35714285714286,
+              -7.857142857142858
+            ],
+            [
+              -93.35714285714286,
+              -8.285714285714285
+            ],
+            [
+              -93.28571428571429,
+              -8.357142857142858
+            ],
+            [
+              -93.28571428571429,
+              -9.071428571428573
+            ],
+            [
+              -93.35714285714286,
+              -9.142857142857142
+            ],
+            [
+              -93.35714285714286,
+              -10.0
+            ],
+            [
+              -93.28571428571429,
+              -10.071428571428573
+            ],
+            [
+              -93.28571428571429,
+              -10.857142857142858
+            ],
+            [
+              -93.35714285714286,
+              -10.928571428571427
+            ],
+            [
+              -93.35714285714286,
+              -11.785714285714285
+            ],
+            [
+              -93.28571428571429,
+              -11.857142857142858
+            ],
+            [
+              -93.28571428571429,
+              -12.57142857142857
+            ],
+            [
+              -93.35714285714286,
+              -12.642857142857146
+            ],
+            [
+              -93.35714285714286,
+              -13.57142857142857
+            ],
+            [
+              -93.28571428571429,
+              -13.642857142857146
+            ],
+            [
+              -93.28571428571429,
+              -14.357142857142854
+            ],
+            [
+              -93.35714285714286,
+              -14.42857142857143
+            ],
+            [
+              -93.35714285714286,
+              -15.285714285714285
+            ],
+            [
+              -93.28571428571429,
+              -15.357142857142854
+            ],
+            [
+              -93.28571428571429,
+              -16.142857142857146
+            ],
+            [
+              -93.42857142857143,
+              -16.214285714285715
+            ],
+            [
+              -93.42857142857143,
+              -17.07142857142857
+            ],
+            [
+              -93.35714285714286,
+              -17.142857142857146
+            ],
+            [
+              -93.35714285714286,
+              -17.857142857142854
+            ],
+            [
+              -93.42857142857143,
+              -17.92857142857143
+            ],
+            [
+              -93.42857142857143,
+              -18.857142857142854
+            ],
+            [
+              -93.35714285714286,
+              -18.92857142857143
+            ],
+            [
+              -93.35714285714286,
+              -19.642857142857146
+            ],
+            [
+              -93.42857142857143,
+              -19.714285714285715
+            ],
+            [
+              -93.42857142857143,
+              -20.57142857142857
+            ],
+            [
+              -91.78571428571429,
+              -20.642857142857146
+            ],
+            [
+              -91.78571428571429,
+              -21.42857142857143
+            ],
+            [
+              -91.85714285714286,
+              -21.642857142857146
+            ],
+            [
+              -91.85714285714286,
+              -22.57142857142857
+            ],
+            [
+              -88.07142857142857,
+              -22.642857142857146
+            ],
+            [
+              -86.28571428571428,
+              -22.714285714285715
+            ],
+            [
+              -86.28571428571428,
+              -23.5
+            ],
+            [
+              -86.21428571428572,
+              -23.57142857142857
+            ],
+            [
+              -86.21428571428572,
+              -24.357142857142854
+            ],
+            [
+              -86.28571428571428,
+              -24.42857142857143
+            ],
+            [
+              -86.28571428571428,
+              -24.857142857142854
+            ],
+            [
+              -86.35714285714286,
+              -24.92857142857143
+            ],
+            [
+              -86.35714285714286,
+              -25.285714285714285
+            ],
+            [
+              -86.21428571428572,
+              -25.357142857142854
+            ],
+            [
+              -86.21428571428572,
+              -26.142857142857146
+            ],
+            [
+              -86.35714285714286,
+              -26.214285714285715
+            ],
+            [
+              -86.35714285714286,
+              -27.07142857142857
+            ],
+            [
+              -86.28571428571428,
+              -27.142857142857146
+            ],
+            [
+              -86.28571428571428,
+              -27.92857142857143
+            ],
+            [
+              -86.35714285714286,
+              -28.0
+            ],
+            [
+              -86.35714285714286,
+              -28.857142857142854
+            ],
+            [
+              -86.28571428571428,
+              -28.92857142857143
+            ],
+            [
+              -86.28571428571428,
+              -29.714285714285715
+            ],
+            [
+              -86.35714285714286,
+              -29.785714285714285
+            ],
+            [
+              -86.35714285714286,
+              -30.642857142857146
+            ],
+            [
+              -86.28571428571428,
+              -30.714285714285715
+            ],
+            [
+              -86.28571428571428,
+              -31.5
+            ],
+            [
+              -86.35714285714286,
+              -31.57142857142857
+            ],
+            [
+              -86.35714285714286,
+              -32.42857142857143
+            ],
+            [
+              -86.28571428571428,
+              -32.5
+            ],
+            [
+              -86.28571428571428,
+              -33.285714285714285
+            ],
+            [
+              -86.35714285714286,
+              -33.357142857142854
+            ],
+            [
+              -86.35714285714286,
+              -33.785714285714285
+            ],
+            [
+              -86.42857142857143,
+              -33.857142857142854
+            ],
+            [
+              -86.42857142857143,
+              -34.214285714285715
+            ],
+            [
+              -86.28571428571428,
+              -34.285714285714285
+            ],
+            [
+              -86.28571428571428,
+              -35.07142857142857
+            ],
+            [
+              -86.42857142857143,
+              -35.142857142857146
+            ],
+            [
+              -86.42857142857143,
+              -36.0
+            ],
+            [
+              -86.35714285714286,
+              -36.07142857142857
+            ],
+            [
+              -86.35714285714286,
+              -36.857142857142854
+            ],
+            [
+              -86.42857142857143,
+              -36.92857142857143
+            ],
+            [
+              -86.42857142857143,
+              -37.785714285714285
+            ],
+            [
+              -86.35714285714286,
+              -37.857142857142854
+            ],
+            [
+              -86.35714285714286,
+              -38.642857142857146
+            ],
+            [
+              -86.42857142857143,
+              -38.714285714285715
+            ],
+            [
+              -86.42857142857143,
+              -39.57142857142857
+            ],
+            [
+              -82.85714285714286,
+              -39.642857142857146
+            ],
+            [
+              -74.85714285714286,
+              -39.714285714285715
+            ],
+            [
+              -74.85714285714286,
+              -38.857142857142854
+            ],
+            [
+              -74.92857142857143,
+              -38.785714285714285
+            ],
+            [
+              -74.92857142857143,
+              -38.0
+            ],
+            [
+              -74.85714285714286,
+              -37.92857142857143
+            ],
+            [
+              -74.85714285714286,
+              -37.07142857142857
+            ],
+            [
+              -74.92857142857143,
+              -37.0
+            ],
+            [
+              -74.92857142857143,
+              -36.214285714285715
+            ],
+            [
+              -74.85714285714286,
+              -36.142857142857146
+            ],
+            [
+              -74.85714285714286,
+              -32.642857142857146
+            ],
+            [
+              -74.78571428571428,
+              -32.57142857142857
+            ],
+            [
+              -74.78571428571428,
+              -31.714285714285715
+            ],
+            [
+              -74.85714285714286,
+              -31.642857142857146
+            ],
+            [
+              -74.85714285714286,
+              -30.857142857142854
+            ],
+            [
+              -74.78571428571428,
+              -30.785714285714285
+            ],
+            [
+              -74.78571428571428,
+              -29.92857142857143
+            ],
+            [
+              -74.85714285714286,
+              -29.857142857142854
+            ],
+            [
+              -74.85714285714286,
+              -29.07142857142857
+            ],
+            [
+              -74.78571428571428,
+              -29.0
+            ],
+            [
+              -74.78571428571428,
+              -28.142857142857146
+            ],
+            [
+              -74.85714285714286,
+              -28.07142857142857
+            ],
+            [
+              -74.85714285714286,
+              -27.285714285714285
+            ],
+            [
+              -74.78571428571428,
+              -27.214285714285715
+            ],
+            [
+              -74.78571428571428,
+              -23.714285714285715
+            ],
+            [
+              -74.71428571428572,
+              -23.642857142857146
+            ],
+            [
+              -74.71428571428572,
+              -22.92857142857143
+            ],
+            [
+              -68.28571428571428,
+              -22.857142857142854
+            ],
+            [
+              -68.28571428571428,
+              -21.92857142857143
+            ],
+            [
+              -68.21428571428572,
+              -21.857142857142854
+            ],
+            [
+              -68.21428571428572,
+              -20.92857142857143
+            ],
+            [
+              -66.64285714285714,
+              -20.857142857142854
+            ],
+            [
+              -66.64285714285714,
+              -19.92857142857143
+            ],
+            [
+              -66.71428571428572,
+              -19.857142857142854
+            ],
+            [
+              -66.71428571428572,
+              -19.07142857142857
+            ],
+            [
+              -66.64285714285714,
+              -19.0
+            ],
+            [
+              -66.64285714285714,
+              -18.57142857142857
+            ],
+            [
+              -66.57142857142857,
+              -18.5
+            ],
+            [
+              -66.57142857142857,
+              -18.07142857142857
+            ],
+            [
+              -66.71428571428572,
+              -18.0
+            ],
+            [
+              -66.71428571428572,
+              -17.142857142857146
+            ],
+            [
+              -66.57142857142857,
+              -17.07142857142857
+            ],
+            [
+              -66.57142857142857,
+              -16.142857142857146
+            ],
+            [
+              -66.64285714285714,
+              -16.07142857142857
+            ],
+            [
+              -66.64285714285714,
+              -15.285714285714285
+            ],
+            [
+              -66.57142857142857,
+              -15.214285714285715
+            ],
+            [
+              -66.57142857142857,
+              -14.285714285714285
+            ],
+            [
+              -66.64285714285714,
+              -14.214285714285715
+            ],
+            [
+              -66.64285714285714,
+              -13.42857142857143
+            ],
+            [
+              -66.57142857142857,
+              -13.357142857142854
+            ],
+            [
+              -66.57142857142857,
+              -10.571428571428573
+            ],
+            [
+              -66.64285714285714,
+              -10.5
+            ],
+            [
+              -66.64285714285714,
+              -9.714285714285715
+            ],
+            [
+              -66.5,
+              -9.642857142857142
+            ],
+            [
+              -66.5,
+              -8.714285714285715
+            ],
+            [
+              -66.64285714285714,
+              -8.642857142857142
+            ],
+            [
+              -66.64285714285714,
+              -7.857142857142858
+            ],
+            [
+              -66.5,
+              -7.785714285714285
+            ],
+            [
+              -66.5,
+              -6.928571428571427
+            ],
+            [
+              -66.57142857142857,
+              -6.857142857142858
+            ],
+            [
+              -66.57142857142857,
+              -6.071428571428573
+            ],
+            [
+              -66.5,
+              -6.0
+            ],
+            [
+              -66.5,
+              -5.071428571428573
+            ],
+            [
+              -66.57142857142857,
+              -5.0
+            ],
+            [
+              -66.57142857142857,
+              -4.214285714285715
+            ],
+            [
+              -66.5,
+              -4.142857142857142
+            ],
+            [
+              -66.5,
+              -3.2142857142857153
+            ],
+            [
+              -68.14285714285714,
+              -3.1428571428571423
+            ],
+            [
+              -68.14285714285714,
+              -2.3571428571428577
+            ],
+            [
+              -68.07142857142857,
+              -2.1428571428571423
+            ],
+            [
+              -68.07142857142857,
+              -1.2142857142857153
+            ],
+            [
+              -74.57142857142857,
+              -1.1428571428571423
+            ],
+            [
+              -74.57142857142857,
+              -0.2857142857142847
+            ],
+            [
+              -74.64285714285714,
+              -0.2142857142857153
+            ],
+            [
+              -74.64285714285714,
+              0.5
+            ],
+            [
+              -74.57142857142857,
+              0.571428571428573
+            ],
+            [
+              -74.57142857142857,
+              1.5
+            ],
+            [
+              -74.64285714285714,
+              1.571428571428573
+            ],
+            [
+              -74.64285714285714,
+              2.2857142857142847
+            ],
+            [
+              -74.57142857142857,
+              2.3571428571428577
+            ],
+            [
+              -74.57142857142857,
+              4.571428571428571
+            ],
+            [
+              -74.5,
+              4.642857142857142
+            ],
+            [
+              -74.5,
+              5.071428571428571
+            ],
+            [
+              -74.57142857142857,
+              5.142857142857142
+            ],
+            [
+              -74.57142857142857,
+              5.857142857142858
+            ],
+            [
+              -74.5,
+              5.928571428571429
+            ],
+            [
+              -74.5,
+              6.857142857142858
+            ],
+            [
+              -74.57142857142857,
+              6.928571428571429
+            ],
+            [
+              -74.57142857142857,
+              7.642857142857142
+            ],
+            [
+              -74.5,
+              7.7142857142857135
+            ],
+            [
+              -74.5,
+              8.642857142857142
+            ],
+            [
+              -74.57142857142857,
+              8.714285714285714
+            ],
+            [
+              -74.57142857142857,
+              9.428571428571429
+            ],
+            [
+              -74.5,
+              9.5
+            ],
+            [
+              -74.5,
+              10.428571428571429
+            ],
+            [
+              -74.57142857142857,
+              10.5
+            ],
+            [
+              -74.57142857142857,
+              11.214285714285714
+            ],
+            [
+              -74.5,
+              11.285714285714286
+            ],
+            [
+              -74.5,
+              13.5
+            ],
+            [
+              -74.42857142857143,
+              13.571428571428571
+            ],
+            [
+              -74.42857142857143,
+              14.0
+            ],
+            [
+              -74.5,
+              14.071428571428571
+            ],
+            [
+              -74.5,
+              14.785714285714285
+            ],
+            [
+              -74.42857142857143,
+              14.857142857142858
+            ],
+            [
+              -74.42857142857143,
+              15.785714285714285
+            ],
+            [
+              -82.35714285714286,
+              15.857142857142858
+            ]
+          ],
+          "source": "2; PK PNG raster trace",
+          "trace_uncertainty_px": 1,
+          "trace_uncertainty_m": 0.07142857142857142,
+          "interpolated_occluded_rows_px": [
+            430,
+            431,
+            556,
+            557,
+            558,
+            559,
+            560,
+            561,
+            562,
+            563,
+            564,
+            565,
+            566,
+            567,
+            568,
+            569,
+            570,
+            571,
+            572,
+            573,
+            574,
+            575,
+            576,
+            577,
+            578,
+            701,
+            702,
+            760,
+            761,
+            762
+          ],
+          "full_row_occlusions_px": [
+            430,
+            431,
+            701,
+            702,
+            760,
+            761,
+            762
+          ],
+          "right_edge_label_occlusion": {
+            "rows_px": [
+              556,
+              557,
+              558,
+              559,
+              560,
+              561,
+              562,
+              563,
+              564,
+              565,
+              566,
+              567,
+              568,
+              569,
+              570,
+              571,
+              572,
+              573,
+              574,
+              575,
+              576,
+              577,
+              578
+            ],
+            "count": 23,
+            "source_label": "14,6 [A]",
+            "boundary_x_px_exclusive": 608,
+            "anchor_rows_px": [
+              555,
+              579
+            ],
+            "previous_incorrect_boundary_x_px_exclusive": 597
+          },
+          "nominal_json": {
+            "foundation_x": [
+              -93.3,
+              -66.6
+            ],
+            "foundation_z": [
+              -22.8,
+              -1
+            ],
+            "core_z": [
+              -20.8,
+              -3
+            ],
+            "access_x": [
+              -86.2,
+              -74.8
+            ],
+            "access_z": [
+              [
+                -39.7,
+                -22.8
+              ],
+              [
+                -1,
+                15.9
+              ]
+            ]
+          }
+        },
+        {
+          "id": "roof-plan-envelope",
+          "type": "rectangle",
+          "world": [
+            [
+              -94.3,
+              -2.1428571428571423
+            ],
+            [
+              -65.6,
+              -2.1428571428571423
+            ],
+            [
+              -65.6,
+              -21.57142857142857
+            ],
+            [
+              -94.3,
+              -21.57142857142857
+            ]
+          ],
+          "source": "A; x JSON, z PNG",
+          "role": "measured",
+          "bounds": {
+            "x0": -94.3,
+            "x1": -65.6,
+            "a0": -21.57142857142857,
+            "a1": -2.1428571428571423
+          },
+          "note": "Source eave depth absent from JSON; z bounds traced at source outline rows430 and702. x retains JSON -94.3..-65.6."
+        },
+        {
+          "id": "hall-wall-footprint",
+          "type": "rectangle",
+          "world": [
+            [
+              -91.3,
+              -4.6
+            ],
+            [
+              -68.7,
+              -4.6
+            ],
+            [
+              -68.7,
+              -19.2
+            ],
+            [
+              -91.3,
+              -19.2
+            ]
+          ],
+          "source": "A",
+          "role": "measured",
+          "bounds": {
+            "x0": -91.3,
+            "x1": -68.7,
+            "a0": -19.2,
+            "a1": -4.6
+          }
+        }
+      ],
+      "decorative_details": "All decoration clipped to measured envelopes; equal tile/bay subdivisions are illustrative.",
+      "notes": [
+        "Only the western hall is drawn.",
+        "Source OSM irregular outline traced; no rectangular substitution.",
+        "Source17m nominal access length equals16.9m coordinate difference.",
+        "Double-roof H instruction retained over single-roof source1."
+      ],
+      "validation": {
+        "status": "PASS",
+        "svg_pure_vector": true,
+        "canvas_exact": true,
+        "deterministic_repeat_identical": true,
+        "svg_sha256": "83ef106ccfc9b2d5843ea26944df9b9b044956d938e93a436127dda3b96447e6",
+        "png_sha256": "45f819feb0a9f4e2cd5a4df6318a2dc11a54c95fc2f91aa1ad6f6f5ba53ca73a",
+        "clip_count": 3
+      }
+    },
+    "sivuhalli-validation": {
+      "status": "PASS",
+      "checks": [
+        "Hall footprint matches JSON exactly.",
+        "Irregular stepped OSM outline retained; no rectangular substitution.",
+        "lower-roof: every source painted row envelope matches exactly.",
+        "upper-roof: every source painted row envelope matches exactly.",
+        "Top silhouette ends at 19.2 m; no invented 20.3 m ornament.",
+        "Source label occlusion rows556–578: right edge restored to x608 exclusive from intact rows555/579; 23 rows validated on final polygon."
+      ],
+      "visual_review": "Both final PNGs inspected: no clipped text, source bounds retained, two roof tiers visible.",
+      "raster_geometry_note": "OSM polygon retains pixel-scale edge irregularities; hidden rows identified in geometry JSON.",
+      "deterministic": {
+        "plan": true,
+        "elevation": true
+      },
+      "external_delivery": "not performed",
+      "correction": {
+        "reason": "Source white 14,6 [A] label occlusion produced an artificial11px notch.",
+        "right_edge_rows_px": [
+          556,
+          578
+        ],
+        "row_count": 23,
+        "corrected_x_px_exclusive": 608,
+        "other_plan_objects_unchanged": true,
+        "elevation_files_byte_identical": true,
+        "final_sha256": {
+          "sivuhalli-pohja-codex.svg": "83ef106ccfc9b2d5843ea26944df9b9b044956d938e93a436127dda3b96447e6",
+          "sivuhalli-julkisivu-etela-codex.svg": "75d12e05acb34fd17b3316ad7fa899b730b979fc547c44f999a7fd0d14f93916",
+          "sivuhalli-julkisivu-etela-codex.png": "21feee088ab249f4c2d10ceb45b37737dad5d7a608b764f33638d70e4ea9bb68",
+          "sivuhalli-pohja-codex.png": "45f819feb0a9f4e2cd5a4df6318a2dc11a54c95fc2f91aa1ad6f6f5ba53ca73a"
+        }
+      }
+    },
+    "source-verification": {
+      "status": "PASS",
+      "files": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030.md",
+          "sha256": "4a972e613546950152f5afb8ee1f88d4e3e56e4ab9fb2bce85512229796cb628",
+          "blob": "c717580fdeb97c6e25e3d9017eccf2bc1f6887f6"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/SHA256SUMS",
+          "sha256": "198861635a5977bce5bd295a8fe023c1adb1d26de38cdd975dcc85a074b1b911",
+          "blob": "c6a309d11cec58e1deb1c5676e425dc2bbfad8df"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/havainne03-sivuhallit-rajaus.png",
+          "sha256": "143f4241e29e724ecd2e822ba5f44c096c3499e627d5bee9b453e172a184c818",
+          "blob": "0c8f63e1bc958aea61fe5a5807cddb05152e5689"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/sivuhalli-julkisivu-etela.json",
+          "sha256": "0a982157f3473d1a52823082d29c751422bf84f346e1c722317862b2c9f59917",
+          "blob": "8ea7e2c067e4d2f498ecbb8a4bbdfe34b39965f8"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/sivuhalli-julkisivu-etela.png",
+          "sha256": "7590bc5bf7564082375e48e94df063efd2ca59ba7dfc24e8db08cdd88826d22d",
+          "blob": "b82bbca0445887b819a72d083e0b01652b8a3672"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/sivuhalli-pohja.json",
+          "sha256": "00aa3a1e68555549af26f5e0b1eb9d3184b2a3eb6d9f1d479e23f3616f2d61fc",
+          "blob": "dd9337380a2c1f0c5a1675ab2db437d444b7f50e"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/sivuhalli-pohja.png",
+          "sha256": "8876ec32902d67f1b0d386b8391bea5bb83bc78e7d8a8ded03fca2be59eb1efd",
+          "blob": "71cef527444987dff83f475b84a08f120f802fd9"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0751/pelikoodari-codex-mittapiirrokset-sivuhallit-20261030/sivuhallit-mitat.json",
+          "sha256": "2ce1a823e5e844fb3b5251dcfbaaed824be661b86e071fa333585ab6fbfc1d16",
+          "blob": "2d66379f878f5a57338b961d26e7904a917069fb"
+        }
+      ],
+      "manifestEntriesVerified": 6,
+      "verifiedAt": "2026-10-30T08:06:42.310950+00:00"
+    }
+  },
+  "visualReviewByRoot": true,
+  "sourceConflicts": "See MITTAHUOMIOT.md and independent-measurement-audit.",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
