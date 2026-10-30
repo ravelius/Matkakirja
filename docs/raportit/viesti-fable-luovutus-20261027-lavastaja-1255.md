@@ -2130,3 +2130,20 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   VS haluaa paketti-ilmoitukseen palat + alueet (x0 x1 z0 z1) ja <pala>-varjostajat.json:t.
 - Apu: leivonta-216/uusinta/{vertaa.py, peitto.py, uv1_kopio.py}. Paketti vielä tekemättä (nimi _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-
   vienti-<pvm>, LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md), muurikate-v30 + tausta + rakennukset-v86 samaan.
+
+## LISÄYS 154 (30.10. 21.5x): KIVIJALKAREGRESSIO 02/05 – SELVITYS KESKEN — LUOVUTUS, ALOITA TÄSTÄ
+- PT 21.23: jatka ETUSIJA 1 (LISÄYS 153). PT:lle luvattu ARVIO ~00.30 (korjaus + lähikuvat + paketti osasarja-v5 PK:lle). PT: "0 vikaa" koskee
+  vain EHTOALUEITA (KK 03.17); palojen saumat muualla tiedoksi.
+- Kuvat (oikea = v4): 02:ssa vasemman muurin kaukana kivijalan päällä vaalea nauha + porras (kivijalka ulkonee, takana korkeampi);
+  05:ssä vasen muuri: matala ulkoneva askelma + vaalea yläpinta. Ero v3→v4: 02 12,4 %, 05 9,2 % (ylä 0,6–0,7 %), muut ≤ 1,7 %.
+- Työkalu leivonta-216/uusinta/leikkaus.py <glb> <z> <x0> <x1>: kolmiot tason z läpi (materiaali, x/y-väli). osasarja-v4-varjostaja.glb
+  = koko v4 koottuna (yksi solmu 'ladonta', polut eivät erotu → tee polkukohtainen leikkaus ladonta.json:n solmuista + profiileista).
+- Havainnot: osat (seina-2m, -t80) EIVÄT sisällä kivijalkaa (V4_red 0–3,84); kivijalka tulee vain pursotuksista. Profiilit: v1-polut
+  kivijalka 1,8 (+kansi 1,86), v3-ryhmä A ('muuri3-…', esim. muuri3-lansi-pohj-06/07 kujan 05 länsipuolella x ≈ −251…−255, z 365–393)
+  kivijalka-12 = 1,2 m (+kansi 1,26) ja paksuus 0,80. Itäpuoli kujalla 05/02: muuri-lansi-pohj-33-* (1,8). Reunakivi 0,25 × 0,32 kaikilla.
+  Epäily: porras = 1,2 m:n (muuri3) ja 1,8 m:n kivijalan saumat näkyvissä + v4:n kansipinta (V4_kujakivi_sokkeli_yla) nyt vaalea. Tarkista
+  v3-kuvasta (vasen), oliko v3:ssa 1,2-kivijalka näkyvissä; jos ei, syy on v4-käärimessä (osasarja_v4_osat.py) → vertaa v3/v4 ladonta.json
+  + osat.glb. Ehdotus: muuri3-ryhmän kivijalka 1,8:ksi (profiilit kivijalka/-kansi, taka -t80 1,8) kujille näkyviltä osin, ellei havainne näytä 1,2:ta.
+- SIVULÖYDÖS: muurikate-v26-pohja.glb:ssä on kate (palatsi_katto y 3,71–4,34) muuri3-lansi-pohj-07:n kohdalla z 388 (osasarjan C3 4,58–5,03)
+  → pohjaa ei leikattu muuri3-poluille? Tarkista (tuplakate).
+- Rakennusleivonta jatkuu (ajo-rak.log), älä pysäytä.
