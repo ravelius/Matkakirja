@@ -17,14 +17,14 @@ ROOLIT = {
     'Matkakirja-fable': 'Päätoimittaja', 'Matkakirja-julkaisija': 'Julkaisija',
     'Matkakirja-3d-selvittaja': 'Natiiviseppä', 'Matkakirja-natiivi-ui': 'Natiivi-UI',
     'Matkakirja-linssiseppa': 'Linssiseppä', 'Matkakirja-linssiseppa-2': 'Valoseppä',
-    'Matkakirja-linnanrakentaja': 'Linnanrakentaja', 'Matkakirja-siirtoseppa': 'Siirtoseppä',
+    'Matkakirja-linnanrakentaja': 'Lavastaja', 'Matkakirja-siirtoseppa': 'Siirtoseppä',
     'Matkakirja-karttaseppa': 'Karttaseppä', 'Matkakirja-pelikoodari': 'Pelikoodari',
     'Matkakirja-sisaltokirjuri': 'Sisältökirjuri', 'Matkakirja-laitetestaaja': 'Laitetestaaja',
     'Matkakirja-posti': 'Postivahti',
 }
 WT = {'fable': 'Päätoimittaja', 'julkaisija': 'Julkaisija', 'natiiviseppa': 'Natiiviseppä',
       'natiivi-ui': 'Natiivi-UI', 'natiivi': 'Natiivi-UI', 'linssiseppa2': 'Valoseppä', 'linssiseppa-2': 'Valoseppä',
-      'linssiseppa': 'Linssiseppä', 'linnanrakentaja': 'Linnanrakentaja', 'siirtoseppa': 'Siirtoseppä',
+      'linssiseppa': 'Linssiseppä', 'linnanrakentaja': 'Lavastaja', 'lavastaja': 'Lavastaja', 'siirtoseppa': 'Siirtoseppä',
       'karttaseppa': 'Karttaseppä', 'pelikoodari': 'Pelikoodari', 'sisaltokirjuri': 'Sisältökirjuri',
       'laitetestaaja': 'Laitetestaaja'}
 # Tunnetut iPad-ajot selkokielelle; muuten skriptin nimi viivat välilyönneiksi.
@@ -137,10 +137,25 @@ def esivanhemmat(pid, P):
     return ketju
 
 
+POLKU_ROOLI = re.compile(r'(?:proto-3d/lokit/|_tyo/|/wt/(?:proto-)?)([a-z0-9]+(?:-[a-z0-9]+)*?)(?=[-/_.\s]|$)')
+
+
+def rooli_polusta(teksti):
+    """Rooli ajon työkansiosta tai komennosta, kun Claude-vanhempaa ei ole (esim. devicectl-ajo setsidillä):
+    proto-3d/lokit/<rooli>-…, _tyo/<rooli>/, wt/<rooli>-<aihe>."""
+    for m in POLKU_ROOLI.finditer(teksti or ''):
+        nimi = m.group(1)
+        for avain in sorted(WT, key=len, reverse=True):
+            if nimi == avain or nimi.startswith(avain + '-'):
+                return WT[avain]
+    return ''
+
+
 def rooli(pid, P):
+    paikka = rooli_polusta(' '.join(esivanhemmat(pid, P)) + ' ' + (tyokansio(pid) if pid in P else ''))
     for _ in range(40):
         if pid not in P or pid <= 1:
-            return ''
+            return paikka
         ppid, _e, cmd, _c = P[pid]
         if 'MacOS/claude' in cmd:
             polku = tyokansio(pid)
@@ -153,9 +168,9 @@ def rooli(pid, P):
                     for avain in sorted(WT, key=len, reverse=True):
                         if nimi.startswith(avain):
                             return WT[avain]
-            return ''
+            return paikka
         pid = ppid
-    return ''
+    return paikka
 
 
 def kesto_min(etime):
