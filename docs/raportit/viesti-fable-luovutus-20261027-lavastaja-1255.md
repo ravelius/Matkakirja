@@ -2147,3 +2147,18 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - SIVULÖYDÖS: muurikate-v26-pohja.glb:ssä on kate (palatsi_katto y 3,71–4,34) muuri3-lansi-pohj-07:n kohdalla z 388 (osasarjan C3 4,58–5,03)
   → pohjaa ei leikattu muuri3-poluille? Tarkista (tuplakate).
 - Rakennusleivonta jatkuu (ajo-rak.log), älä pysäytä.
+
+## LISÄYS 155 (30.10. 21.3x): KIVIJALKAKORJAUS osasarja-v5 VALMIS PK:LLE — ALOITA TÄSTÄ
+- Rakennusleivonta oli pysähtynyt nollaukseen (21.26, 13/136) → käynnistetty uudelleen 21.29 (aja_uusinta.zsh rak 1/1 >> ajo-rak.log, 1 Blender).
+- SYY: kuja 05 kulkee muuri3-lansi-pohj-06/-07(-b/c/d) (ryhmä A, kivijalka 1,20, -t80) ja muuri-lansi-pohj-33-j:n (1,80) välissä. v3:ssa kivijalalla
+  ei ollut pintaa; v4:n kivijalka-1m-pintanäyte teki 1,20 m:n kivijalasta näkyvän → matala askelma + vaalea kansi. Havainteen kujamuureissa 1,80.
+- KORJAUS osasarja-v5 (K/osasarja-v5/kielletty-osasarja-v5): vain 5 kujaa rajaavaa muuri3-polkua (osasarja_v5_kujamuurit.py: kujalattia
+  V4_kujakivi_lattia 1 m:n päässä; muut 57 muuri3-polkua rajaavat aukioita → ennallaan) → pursotus kivijalka/-kansi 1,80 + uudet takaprofiilit
+  kivijalka-taka-t80/-kansi-taka-t80 (−0,84); päädyt paaty-alku/-loppu-t80-18 (pilari 1,80). Ryhmä on suljettu (portti 2,8 m, päädyt) → ei 1,2/1,8-saumoja.
+  Muut 1104 polkua ja v4:n osat tavulleen ennallaan (tarkistettu). Työkalut K/tyokalut/osasarja_v5_{osat,osat_pohja,ladonta,kujamuurit}.py, paketti_osasarja_v5.zsh.
+- PAKETTI _valmiit/juoksupeli-kk-lavastaja-osasarja-v5-vienti-20261030 (maailma-v4/kielletty-osasarja-v5, SHA256SUMS 29551b4a10f3). PK: OsasarjaKansio
+  kielletty-osasarja-v5, kokoa ja tee sovitettu pari 02/05.
+- LÄHIKUVAT: Blender varattu leivonnalle (PT: 1 Blender) → oma lähikuva vasta leivonnan jälkeen; PK:n pelipari on ensimmäinen kuvatarkistus.
+- HUOM leivonta: rakennusleivonnan varjostaja on osasarja-v4-varjostaja.glb (5 muurin kivijalka 1,20) – ero vain kujan 05 länsimuurin juurella;
+  tee osasarja-v5-varjostaja (osasarja_koe.py) ennen taustan uusintaa (TUPLAT=1, LISÄYS 153).
+- SIVULÖYDÖS (LISÄYS 154) muurikate-v26-pohjan tuplakate muuri3-lansi-pohj-07:llä yhä tarkistamatta.
