@@ -1547,3 +1547,19 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - Pari-skriptit (scratchpad häviää): REF=3b9485eb8 MALLIT=file://H/juuri-pk7-vNN/ ESIKOM="ui juoksupeli palatsi url file://H/juuri-pk7-vNN/kk-pohja-v1d-pk7/pohja.json"
   LISA="ui juoksupeli valo kuvabias 0" PAIKKA_03=… TESTIKAMERA_03=… zsh K/tyokalut/editori-lr.sh 03 [03b] (PELIKAMERA ei asetettu).
 - Muu jono (109): 03-vyön UV (PT:n vastaus), A6 odottaa Codexin 7-välistä GLB:tä.
+
+## LISÄYS 112 klo 03.44 (30.10.): TAIHEDIANIN RIVIT TEHTY (v178), A4 KORJATTU (v179), PARI AJOSSA — ALOITA TÄSTÄ
+K = …/kielletty-rakennukset, H = …/havainne-kuja40.
+- v178 (tyokalut/aja_v178_taihedian.zsh, taihedian_rivit.py): K/taihedian-v178/kielletty-rakennukset-v80 = v79 − g-taihedian V4_harjaelain (lod0 11 400 kärkeä,
+  lod1 kortit; lod2:ssa ja c2/taustassa ei kopioita) + kielletty-lahipuut-v10 = a2_koristeet.py (lahipuut-v7 + siipikatot 8 + Taihedian 8 riviä; korvaa v8:n).
+  Taihedian: 4 kulmaa × ylä- ja alaräystäs, kuolematon + 10 eläintä (10. = hangshi) + chuishou; harja kulmassa lähes vaakasuora → a2_koristeet.py:hin
+  rivikentät 'elaimia', 'karki', 'profiili' (hahmot harjan yläpinnalle). Yläkaton kärki 3,6 m kulmasta (harjakaistale alkaa siitä), alakatolla ei harjaa → 2,5 m.
+  25 040 koristetta (v8 + 96, v8:n rivit tavulleen). Blender-tarkistus OK (scratchpad).
+- v179 (aja_v179_a4.zsh): a4_kannattimet.py korjattu: samassa tasossa erilliset vyöt omiksi sivuikseen (Jingshanin paviljongit yhdistyivät 263 m:n sivuksi
+  aukkojen yli), kolmion oma normaali (keskipisteestä kääntö käänsi Meridiaaniportin salin pohjoissivun sisään), yli 2,5 m korkea ≠ vyö (Meridiaaniportin seinä).
+  → K/a4-v179/kielletty-lahipuut-v11 = v10 + 4 913 kannatinta (ennen 6 552; Jingshan 1318 → pieni, Meridiaaniportti 641, o-palatsi 1078 ja l-palatsi 796 = kokonaisuuksia).
+- Juuret: H/juuri-pk7-v96 (= v94, rakennukset-v78 → v80, lahipuut-v7 → v10), H/juuri-pk7-v97 (= v96, lahipuut-v7 → v11).
+- Pari: PAIKKA_03="-14 -46 0" EI toiminut (keisari z −341, tyhjä aukio; lokit/havainne-editori-20261030-032631 ja -033508). Ajossa PAIKKA_03="1 -30 -65"
+  TESTIKAMERA_03="6 6 0 70" v94/v96/v97 (scratchpad pari178b.log). PT 03.4x: PK tekee kameran → pyyntö PK:lle lähetetty (Taihedianin lounaiskulma, juuret v94/v96/v97).
+- SEURAAVAKSI: pari (ennen/jälkeen) → PT; kuittauksen jälkeen paketti v95 (= v94 + rakennukset-v80 korvaa v79 + lahipuut-v11 (tai v10, jos A4 ei vielä) korvaa v8;
+  peli: kansiot PK). Sitten 03-vyön UV (PT), A6 (Codexin GLB).
