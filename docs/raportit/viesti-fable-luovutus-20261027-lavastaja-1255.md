@@ -1901,3 +1901,20 @@ Paketti v98 (Meridiaani) vasta KK:n Kyllän jälkeen.
 2) PIELIEN PYSTYKIVET eivät erotu VS:n parissa 145925/06 → näkyviksi (leveys ja sävyero havainteen mukaan; nyt 0,5 m V4_marmori syvennyksen
    takaseinässä, PYSTYKIVI-muuttuja). Uusi pari 06 pohjana VS 4b0476ca0 (REF=4b0476ca0) + lähikuva sivuaukosta → PT ≤ 3 riviä.
 Sitten LISÄYS 137 (laatat, kamera, C1-sivurivi).
+
+## LISÄYS 139 (30.10. 15.2x): LISÄYS 138 TEHTY (Meridiaani v197), PT KUITTASI 1,6 m — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- v197: K/tyokalut/aja_v197_meridiaani.zsh (KIVI=1.6, pohja taihemen-sivuhallit-v194) → K/meridiaani-v197/kielletty-rakennukset-v96 + kielletty-c2-v35;
+  juuri H/juuri-pk7-v120 (= v119, linkit kielletty-rakennukset-v83 / kielletty-c2-v22 → v96 / c2-v35). meridiaani_piirros.py: KIVI env; pystykivet
+  (V4_marmori) 0,5 m × kivijalan korkeus takaseinään + syvennyksen sivuseiniin (v195:ssä ehto b1 ≤ h ei täyttynyt → kiviä EI ollut mallissa;
+  varmuuskopio meridiaani_piirros-v195.py.bak). Uusi kivijalka_korkeus.py: siipien/U-jalustan v189-kivijalka 3,0 → KIVI, v = 1 − 0,57·y.
+- Mittaus + parit: proto-3d/lokit/kivijalka-v197-20261030-1520/LUE.md (horisonttimenetelmä wumen-center2-ccbysa.jpg), pari 06 + lähikuva
+  lokit/havainne-editori-20261030-151749/{06,07} (REF 4b0476ca0; 07 = sivuaukon lähikamera PAIKKA "30.7 -405 -2.03", TESTIKAMERA "1.7 6 0 45").
+- PT 15.2x: "1,6 m pätee (mitat todelliset, havainne vain ulkoasu)". v197 KK:n kortilla; PAKETTI v98 VASTA KK:N KYLLÄN JÄLKEEN
+  (v98 = v97 + rakennukset-v96 + c2-v35 + tausta-v77 (kiilat-v196) + c1 (kesken)). PK:lle portti06-mitat.json "harmaa kivisokkeli" 3,0 → 1,6 (PT välittää tarvittaessa).
+- LISÄYS 137: 1) harmaat laatat EIVÄT LAV:n malleissa → pohja.json muurit[338] / 侧墙6 (≈101, −15) → PT välittää PK:lle. 2) 03-parit VS:n kameralla
+  (sijoita 6.43 −190.73, TESTIKAMERA_03 "3.65 6.88 14.5 45"). 3) SEURAAVAKSI (PT: "Jatka C1-sivuriviä"): Taihemenin yläkaton C1-sivurivi.
+  Analyysi: v11:n sivupalat jo 0,11 ulos / 0,12 alas reunasta kuten etu (reuna |x| 22,13–22,47, y 15,46–16,6). c1_muunna.py C1_SIVU=v12 (reunakäyrä
+  |z|-lokeroittain, varmuuskopio c1_muunna-v11.py.bak) → K/c1-v12 ≈ v11 (EI juuressa). Irtonaisuus siis muusta: tee lähikamera nurkasta (Taihemen
+  pohja ~ (7.34, −262)), tarkista 1055-palan pivot/suunta sivulla (L-sarake 2 = ulos +x) ja kuva 150720/03/c1-ennen-jalkeen.png (sivurivi
+  erillinen vino rivi soffitin alla). Mahdollisesti sivurivi pitää nostaa katon pinnalle tai kallistaa lappeen mukaan.
+- Ei taustaajoja kesken.
