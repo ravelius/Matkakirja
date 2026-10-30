@@ -1918,3 +1918,22 @@ Sitten LISÄYS 137 (laatat, kamera, C1-sivurivi).
   pohja ~ (7.34, −262)), tarkista 1055-palan pivot/suunta sivulla (L-sarake 2 = ulos +x) ja kuva 150720/03/c1-ennen-jalkeen.png (sivurivi
   erillinen vino rivi soffitin alla). Mahdollisesti sivurivi pitää nostaa katon pinnalle tai kallistaa lappeen mukaan.
 - Ei taustaajoja kesken.
+
+## LISÄYS 140 (30.10. 16.2x): v98c VIETY, C1 v13 + TAIHEDIAN v198 TEHTY, KOOSTE PT:LLÄ — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- PAKETIT: v98 (koko juuri v120) HYLÄTTY (PT 15.5x: mukana kuittaamattomat v194 + c1-v11) → _valmiit/…-v98-HYLATTY-…; v98b = v97 + VAIN Meridiaani v197
+  (a-meridiaaniportti ×4 + rakennukset.json a-rivi + c2 kaiteeton) + kiilat (tausta-v77) → JU: ämpäri EI YLIKIRJOITA olemassa olevia polkuja → v98c =
+  v98b UUSILLA KANSIONIMILLÄ kielletty-rakennukset-v84 / -c2-v23 / -tausta-v77 (c1-v8 ym. ennallaan). PT kuittasi v98c, JU vie (pelin viittaukset PK/NS).
+  Skripti: scratchpad paketti_v98b.zsh / paketti_v98c.zsh (kopioi tähän tarvittaessa). Varmistus: Taihemen 03 v98b vs v97 23 px ero
+  (lokit/havainne-editori-20261030-154010/03/ero-v97-v98b.png), 06 kivijalka 154010/06.
+  SÄÄNTÖ JATKOSSA: jokainen muuttunut kansio uudella nimellä (seuraavat vapaat: rakennukset-v85, c2-v24, tausta-v78, c1-v9).
+- C1 v13 (PT 16.1x "hyvä, rivi kiinni"): K/tyokalut/c1_muunna.py C1_SIVU=v13 (oletus; varmuuskopio c1_muunna-v12.py.bak): sivupalat luokitus palan suunnasta
+  (keskiosa |x| 22,47 < 22,5 oli etuluokassa → v12 ei koskenut niihin), sivupivot SIVU_ULOS −0,25 (palat roikkuivat reunan ulkopuolella → taivasrako),
+  reunakäyrät ±0,5 m lokeroin, etu reunakäyrän mukaan (keskellä = v10 9,19/15,34), palat kallistettu reunan nousuun (h 0,52), kulmien 8 päällekkäistä
+  päätypalaa pois (vihreä kärki). Ajo kuten LISÄYS 136, sisään v97-paketin kielletty-c1-v8 → K/c1-v13/kielletty-c1-v13.
+- TAIHEDIAN v198 (PT 13.58 kohta 3): K/tyokalut/terassi_kivi.py + aja_v198_taihedian.zsh (pohja meridiaani-v197) → K/taihedian-v198/kielletty-rakennukset-v97
+  + kielletty-c2-v36: terassin tasojen seinät (tason reunalla ≤ 0,8 m, tason korkeuden alla; reunat tasapinnoista, z portaiden ulkopuolelta |x| > 20)
+  V4_marmori → V4_kujakivi_sokkeli; kaiteet/portaat marmoria. Kohdat a (viikset) ja b (alakatto) jo kunnossa (orto 155812).
+- JUURET: v121 = v120 + c1-v13; v122 = v98b-paketti; v123-v97 = v97-paketti; v124 = v121 + taihedian-v198 (rakennukset-v83 → v97, c2-v22 → v36).
+- KOOSTE PT:LLE LÄHETETTY 16.1x: proto-3d/lokit/kooste-v198-20261030-1615/koonti.png + LUE.md (Taihemen+sivuhallit v194, C1 v13, Taihedian v198) → kortille.
+  Kyllän jälkeen paketti v99 = v98c + rakennukset (taihedian-v198 R, sis. v194 + v193) nimellä rakennukset-v85, c2-v36 → c2-v24, c1-v13 → c1-v9
+  (pelin viittaukset!), SHA256SUMS → PT → JU. Ei taustaajoja kesken.
