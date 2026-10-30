@@ -34,3 +34,12 @@ mukana (koodissa yhä v51; juuri v76r vain koeajoon).
 - A6: kun Codexin korjattu GLB (7-välinen yläkerta) on LR:n paketissa → pari 03/03b rungosta 362182ba5 + Hongyigen läikät
   (atlas UV/mip/pakkaus; kuvabias ei ole syy, LR testasi). A6-osoittimet (V4_sivupaviljonki jo listalla e1f00d527).
 - Avoinna ennallaan: vanhat pinnat LR:lle (V4_sokkeli/_kansi avoimissa, V4_stone kulmatornin törmäyksessä).
+
+## LISÄYS 02.2x (PT:n pyynnöstä, ENSIMMÄISENÄ)
+- Luovutuksen jälkeen tehty: salikamera-215 **d54d4030d** (SaliSisakamera = true, PT/KK hyväksyivät 04-parin 014739) ja
+  osoitinhaara pelikoodari/lr-v91-215 **9961b447a** (LR v91 + v92: tausta-v76, rakennukset-v78, ulkorengas-v9, c2-v19, lahipuut-v7,
+  avoimet-v52; uusi palatsi-esto-v19 = _tyo/palatsi-esto-v19, v78 leivonta identtinen) – molemmat NS:llä junaan 215.
+  Taustaajot 1–3 VALMIIT (04 v52 014739 hyväksytty; työhuone 014856: kulma 57°, katto ei kuvassa).
+- **ENSIN: B2 (Meridiaaniportin keskiovi + nimitaulu) ja B3 (Taihedianin keskiovi) LÄHIKUVINA uusimmasta rungosta 2f05e3b34 (tai uudempi).**
+  B2 011845 hylätty (kaukaa, ovi pieni, vanhat kaariaukot). B3 0.8 -24/-28/-31 kaikki katon alla (ylle 17,6 m, Puyi maailmassa
+  z −363/−359/−356: pohjan z −4 → maailman z +4). Hae paikka z-suunnan tarkistuksella (esim. pohjan z -20/-16 tai x-siirto), editori 06 x z suunta.
