@@ -1624,3 +1624,4 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
 - PT: lappeet v104 HYVÄKSYTTY (KK) → paketti v97 (V/juoksupeli-kk-lavastaja-v97-vienti-20261030, SHA256SUMS 61a8547c, 716 tied.) ajettu, PT:lle ilmoitettu.
   PK: "kielletty-rakennukset-v83/", "kielletty-c2-v22/". v96 korvautunut.
 - Muu jono: 03-vyön UV (PT:n vastaus), A6 (Codexin 7-välinen GLB).
+- 05.2x PT: 03-vyön UV -kohta SULJETTU (siipimuurien vanha kate/friisi poistettu c2-v20/v22, 03-parit hyväksytty). Jono: vain A6 (Codexin 7-välinen GLB).
