@@ -1650,3 +1650,14 @@ Mittaus samasta rajauksesta (keisari 0,12 molemmissa; peli 074212 vs. havainne):
 3. SIVUAUKOT: todellisuudessa suorat sivutunnelit (27,5 m) eivät ole U-pihalta läpinäkyviä; v84:n kääntö (7 m) poikkeaa todellisesta.
 Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havainteen tapaan, (b) ovilehdet pieliin upotettuina (ei kavenna),
 (c) sivuaukot 5,0 m (json:n arvo), (d) v84-kääntö pois tai pidetään omistajan valinnan mukaan; keskiaukon syvyys jää todelliseksi.
+
+## LISÄYS 121 (30.10. 08.1x): v185 kehyssyvennykset + upotetut ovet + kääntö (PT 07.5x ALOITA)
+- Korjaus omaan LISÄYS 120:een: sivuaukot OVAT jo 5,0 m (malli ~2° kierrossa; luin akselinsuuntaisia rajoja) → leveyttä ei muutettu.
+- meridiaani_syvennys.py: kolmeen aukkoon syvennys (aukko + 1,07 m sivuille, + 1,6 m ylös, 1,0 m syvä; vanhat ulkonevat pilarikehykset
+  jäävät sisään ja poistuvat), sokkelikivi < 3 m, ovilehdet ja karmit syvennyksen taakse pieliin (sisäpinta ~1 cm seinästä), kynnykset
+  takareunaan. meridiaani_aukot.py: kääntö mallin kehyksessä syvennyksen takaseinästä. aja_v185_syvennys.zsh → K/syvennys-v185/
+  kielletty-rakennukset-v85 + kielletty-c2-v24 (lod1/lod2 vain kääntö: syvennys näkyy < 150 m).
+- Pari runko c0b59f6b0, kohta 06, keisari 0,12: lokit/havainne-editori-20261030-075838/06.
+- Havainto: havainteessa portin jalusta ja aukot ovat ~1,2 × suhteessa salirakennukseen (aukko 8,9 vs 7,6 m, sokkeli 3,9 vs 3,0 m
+  samalla keisarilla). Kokeilupari 14 m lähempää (080449/06) ei auta: sali kasvaa liikaa (räystäät 0,17/0,13 vs 0,27). Ero on
+  havainteen mittasuhteissa, ei kamerassa; todelliset mitat pidetty.
