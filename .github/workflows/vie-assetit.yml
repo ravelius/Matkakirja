@@ -178,7 +178,8 @@ jobs:
 
           for (const rivi of rivit) {
             const [laji, kansio] = rivi.split('\t');
-            const lista = await tiedostot(kansio);
+            // Vain kuvat (TYYPIT): kansion LUEMINUT.md ei mene ämpäriin (sync ottaa webp/jpg).
+            const lista = (await tiedostot(kansio)).filter((n) => TYYPIT[n.split('.').pop().toLowerCase()]);
             const jono = [...lista];
             const tyot = Array.from({ length: RINNAKKAIN }, async () => {
               for (let nimi = jono.shift(); nimi; nimi = jono.shift()) {
