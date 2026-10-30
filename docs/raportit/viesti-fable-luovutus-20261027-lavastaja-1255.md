@@ -1957,3 +1957,11 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - JONO: kortin Kyllän jälkeen paketti v99 = v98c + rakennukset-v85 (R v98), c2-v24 (C v37), tausta-v78, c1-v9 (C1 v13) → SHA256SUMS → PT → JU.
   Sen jälkeen osasarja-v2 (PK:n vaatimukset proto-3d/_tyo/pelikoodari/piirrokset-20261030/VAATIMUKSET-osasarja-v2.md; omistajan päätös 16.20),
   paketti PT:n kuittauksella.
+
+## LISÄYS 143 (30.10. 17.4x): OMISTAJA 17.26 HYVÄKSYI v199 → PAKETTI v99 TEHTY, PT:N SHA-KUITTAUS ODOTTAA
+- _valmiit/juoksupeli-kk-lavastaja-v99-vienti-20261030 (K/tyokalut/paketti_v99.zsh): v98c − rakennukset-v84/c2-v23/tausta-v77/c1-v8 +
+  rakennukset-v85 (= K/v199 R v98), c2-v24 (= C v37), tausta-v78, c1-v9 (= c1-v13). 720 tiedostoa, SHA256SUMS 76817d1b6284, 1,3 Gt; kansioiden SHA:t OK.
+  V4_yulu-kuva paketissa ka. sRGB 165/160/149 (= VAALEUS 0,9, ei puhki palanutta 1,22-koetta).
+- KK (1) harmaa vino levy kuvassa 4: ei LAV:n malleissa (alueella vain h-zhongzuomen + t-portti, tausta ei); näkyy samana jo v124:ssä → pelin pohja.json
+  muurit[338] (x ≈ 100, kuten LISÄYS 139) = PK/KS:n alue.
+- Seuraavaksi: PT kuittaa → JU vie (pelin viittaukset PK/NS). Sitten osasarja-v2 (VAATIMUKSET-osasarja-v2.md).
