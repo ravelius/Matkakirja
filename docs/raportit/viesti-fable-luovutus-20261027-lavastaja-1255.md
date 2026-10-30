@@ -1694,3 +1694,14 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   + kielletty-c2-v27. Pari REF 81169914c, kohta 06, keisari 0,11: lokit/havainne-editori-20261030-090240/06 (34cb7210c-ajo 08xx ilman hämärää).
 - Hyväksynnän jälkeen: paketti v98 = v97 + rakennukset-v88 + c2-v27; PK: kansiot "kielletty-rakennukset-v88/", "kielletty-c2-v27/"; VS:n
   kaytava-215 junaan samaan aikaan.
+
+## LISÄYS 126 (30.10. 09.1x): Meridiaaniportti PYSÄYTETTY (OMISTAJAN PÄÄTÖS 09.11) – odottaa todellisin mitoin tehtyä julkisivupiirrosta
+- Omistaja 09.06: sivukäytävät suorat, hämärä (c) peruttu (VS:n kaytava-215 ei junaan). Tehty v189 (aja_v189_porras.zsh → K/porras-v189/
+  kielletty-rakennukset-v89 + kielletty-c2-v28): porrastettu kehys (ulompi +1,07/+1,6/0,7 m, sisempi +0,5/+0,8/1,4 m), kivijalka 3 m kehyksen
+  ympäri ja käytävään, käytävän punaisen UV julkisivun kartoituksesta (tummat raidat pois), ovet pieliin piiloon, kynnykset lattian alle.
+  Pari 090823/06 (ennen UV-korjausta): KK:n lista 1 ✓, 2 ✗ (tumma/raitainen → korjattu UV), 3 ✓, 4 vain yläreunan viivat (0,7 m porras
+  ~3 px tästä kulmasta). UV-korjattu pari ajettiin (scratchpad pari190b.log) mutta PT 09.1x: ÄLÄ TEE PORTTIPARIA NYT.
+- 09.11: Meridiaaniportin 3D-kierrokset odottavat hyväksyttyä julkisivupiirrosta (PK tilaa Codexilta, todelliset mitat); sitten osat
+  ladotaan piirroksen ruudukkoon ja verrataan ortokuvin ylhäältä ja edestä. Työkalut valmiina: meridiaani_syvennys.py (env MERIDIAANI_*),
+  meridiaani_tunnelisokkeli.py (TUNNELI_KIVI_Y), meridiaani_aukot.py (kääntö, EI käytössä), apu: meridiaani_syvennys_apu.py, lappe_uv_g.py.
+- Väliversiot v84–v88 / c2-v23…27 eivät mene pakettiin. Paketti v97 on yhä uusin vienti.
