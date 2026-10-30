@@ -1710,3 +1710,18 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
 - Jono tyhjä (PT:lle "JONO TYHJÄ: LAV" 09.2x): ulkomuuri 10 m + kulmatornit v1c tehty (paketti v97); A6 odottaa Codexin 7-välistä GLB:tä;
   Meridiaaniportti odottaa hyväksyttyä julkisivupiirrosta (LISÄYS 126). UV-korjatun v189:n pari ajettiin valmiiksi 091047/06, ei lähetetty.
 - Ei taustaajoja kesken.
+
+## LISÄYS 128 (30.10. 12.3x): MERIDIAANIPORTTI v190 PIIRROKSEN MITOIN TEHTY + UUSI JONO (Taihemen, sivuhallit) — ALOITA TÄSTÄ
+- OMISTAJAN PÄÄTÖS 12.18 (PT): julkisivupiirros v2 hyväksytty → v190 tehty: K/tyokalut/meridiaani_piirros.py (+ _json.py), ketju aja_v190_piirros.zsh
+  → K/piirros-v190/kielletty-rakennukset-v90 (= v89) + kielletty-c2-v29 (= c2-v28); juuri H/juuri-pk7-v112 (= v111, linkit v83/c2-v22 → v90/c2-v29).
+  Keskiosa 27,0 m (w-kuvaus, päälinna siirtyy ehjänä +1,63), aukot 5,4×5,4 (holvi r 2,7) ja 5,1×4,6 ±14,3 suorina, kehys +0,5/+0,4/0,7, kivijalka 3 m,
+  otsapalkit V4_gold, päälinnan y-kuvaus [K]-korkeuksiin (Y_VANHA→Y_UUSI), lappe_uv + glb_tiivista. Kello/rumpu: piirroksessa paikka avoin → ei lisätty.
+- Ortovertailu (PK:n orto_glb.py + vertaa.py; orto.sh EI aja: orto-215 vaatii Unity b6, joka poistettu 09.35, b7 tilalla):
+  proto-3d/lokit/orto-glb-v190-20261030-1228/ (LUE.md). Pari 06: lokit/havainne-editori-20261030-122828/06 (REF aea0353cd = juna-216/b7;
+  c0b59f6b0 ei enää käänny). Pari-skripti: PAIKKA_06="16.4 -474 -2.03" TESTIKAMERA_06="2.5 6.2 3 51" MALLIT/ESIKOM juureen, K/tyokalut/editori-lr.sh 06.
+  PT:lle ilmoitettu 12.3x, odottaa kuittausta. Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v90 + c2-v29.
+- UUSI JONO (OMISTAJAN PÄÄTÖKSET 12.28, PT 12.3x): (1) Taihemen 3D: piirrokset-20261030/kortti/taihemen-*-codex-v3.png (+ taihemen-mitat.json):
+  pylväät ja alaräystäs [K]-korkeuksiin, keskijänne 7,9 m, sivuportaat akselille symmetrisesti, pronssileijonat x ±19 m.
+  (2) Sivuhallit 3D: kortti/sivuhalli-*-codex-v2.png (+ sivuhallit-mitat.json): harja 14,7 m (nyt 19,2), pylväät 6,7 m, leveys 21,0 m, kaksi kattoa.
+  Jokaisesta ortovertailu (orto_glb.py/vertaa.py; kohteet f = Taihemen) ja pari PT:lle. Taihedian myöhemmin omistajan hyväksynnän jälkeen.
+  Mallina meridiaani_piirros.py: kehys(), y-kuvaus paloittain, laatikon leikkaus (miinus_laatikko), uudet pinnat UV-sovituksella.
