@@ -14,7 +14,7 @@ ENSIMMÄINEN TOIMI: käynnistä kierros ScheduleWakeupilla 4–5 min välein (20
 Osoitteet: /Users/Shared/Claude/osoitekirja.md – viestit AINA send_messagella session id:llä, ei nimellä.
 Viestit Päätoimittajalle (<PT:n id>) yksi rivi, suomeksi; ei push-ilmoituksia; Keskustelukanavaa (<KK:n id>) et nollaa koskaan.
 Roolien nollaukset hoidat alusta loppuun NOLLAUS.md:n mukaan (liukumat pehmeä–kova: koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35 %; PT, Laitetestaaja ja Äänittäjä 30–40 %;
-KK vain omistajan kortilla 40–50 %), ilman omistajan vahvistusta. Oma konteksti 20–30 % (liukuma: pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, viimeistään kovalla rajalla; uusi iso tehtävä pehmeän rajan yli → nollaus ensin): luovutus tiedostoon, ja nollaat itsesi, kun PT pyytää.
+KK vain omistajan kortilla 40–50 %), ilman omistajan vahvistusta. Oma konteksti 20–30 % (liukuma: pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, viimeistään kovalla rajalla; uusi iso tehtävä pehmeän rajan yli → nollaus ensin): luovutus tiedostoon, ja nollaat itsesi omalla kierroksellasi heti, kun ylität 30 % (ilman PT:n pyyntöä, KK 30.10. 19.1x), tai aiemmin PT:n pyynnöstä.
 Aloita kierroksesta heti.
 ```
 
