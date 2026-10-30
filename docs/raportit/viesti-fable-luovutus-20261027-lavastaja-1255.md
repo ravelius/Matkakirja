@@ -2107,3 +2107,26 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - SEURAAVAKSI: tarkista VALO-rivit (max > 0), VS:n tarkista_leivonta.py (/Users/Shared/Claude/wt/proto-linssiseppa2-p11/tyokalut/) tausta-v82:lle,
   paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-20261030 (LAHTEET.md juuressa, SHA256SUMS, ei alikansioiden .md) → PT (≤ 3 riviä)
   + VS (local_3b36fe96-0199-4b17-9eb4-46a882ce7399) tekee parit 02/03/06. VS ja PT on jo ilmoitettu ajon alusta.
+
+## LISÄYS 153 (30.10. 21.2x): LUOVUTUS (konteksti 32 %) — ALOITA TÄSTÄ
+- ETUSIJA 1 (PT 21.2x, juna 216 ennen lähtöä; jos ei ehdi, osasarja-v4 pois junasta): osasarja-v4 toi regression kujille 02 ja 05: VASEMMAN
+  muurin kivijalkaan porras ja vaalea nauha (05:ssä selvä askelma), v3:ssa ei. Kuvat /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/
+  piirrokset-20261030/v4-parit-5/v2-02-peli-pari.png ja v2-05-peli-pari.png. Korjaa geometria (osasarja_v4_osat.py / kivijalkaprofiilit;
+  rakennusleivonta saa jatkua taustalla), oma tarkistus lähikuvin, sitten PK kokoaa ja tekee sovitetun parin. PT odottaa ARVIOTA valmistumisesta
+  heti nollauksen jälkeen (≤ 3 riviä).
+- RAKENNUSLEIVONTA AJOSSA (1 Blender, PT: EI kahta Blenderiä, swap täynnä): leivonta-216/uusinta/aja_uusinta.zsh rak 1/1 → ajo-rak.log,
+  ~3,7 min/malli, 8/136 valmiina 21.19 → valmis ~05.30. Ei uudelleenkäynnistystä tarvita; rak-valmiit/<malli> jatkaa keskeytyksestä.
+- TAUSTAN UUSINTA (PT: VASTA rakennusten jälkeen, ketjuun): tausta-v82 + muurikate-v30 leivottu, mutta tarkista_leivonta VIKA 3520
+  (TILA.md samassa kansiossa; v70: 13228). PT:n ehto: 0 vikaa ennen VS:n paria. Suunnitelma:
+  1) TUPLAT=1 leivo_valo-ajoon (palojen sisäiset päällekkäiset V4_lattia-kasvot pois; tummat tuplat 2528). Lisää aja_uusinta.zsh tausta-
+     haaran env:iin TUPLAT=1, aja tausta + kujat.zsh uudelleen rak-ajon perään, sitten tarkistus kuten tarkistus-tausta-v82.txt.
+  2) Kujan 1-3 lattia: aukot (17) ovat TARKISTIMEN artefakti (1 cm:n reunasääntö), oma peitto.py = 0 tyhjää. T-liitokset 220: uusi
+     tyokalut/lattia_tliitokset.py (hitsaus 2,5 mm + reunan jako, pelkkä Python) → 3 jäljellä (2 mm:n pyöristysrajalla; TOL 3 mm karkasi).
+     Ajettava kujan v81-lähteelle ENNEN leivontaa (lähde kopioksi, TS osoittamaan siihen). Kerro VS:lle aukkoartefaktista (pyydä reunasäännön
+     korjausta) ja 3 jäljellä olevasta T:stä.
+  3) Palojen saumojen reiät / väliset tuplat eivät ole ehtoalueilla (tiedoksi), mutta PT:n ehto "0 vikaa" → kysy PT:ltä, koskeeko koko
+     karttaa vai ehtoalueita (KK 03.17: PUHDAS-ehto ehtoalueittain).
+- VS (19.4x/21.2x): --valo lukee osasarja_varj:n; aukkotulpat EI mallinnu tarkistimessa (kerro, jos oviaukoista tummia vikoja → VS lisää).
+  VS haluaa paketti-ilmoitukseen palat + alueet (x0 x1 z0 z1) ja <pala>-varjostajat.json:t.
+- Apu: leivonta-216/uusinta/{vertaa.py, peitto.py, uv1_kopio.py}. Paketti vielä tekemättä (nimi _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-
+  vienti-<pvm>, LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md), muurikate-v30 + tausta + rakennukset-v86 samaan.
