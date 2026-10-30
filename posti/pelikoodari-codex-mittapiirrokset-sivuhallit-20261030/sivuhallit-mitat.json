@@ -1,0 +1,122 @@
+{
+  "kohde": "Sivuhallit 中右门 (länsi, h-zhongyoumen) ja 中左门 (itä, h-zhongzuomen), Taihedianin sivuilla",
+  "laatija": "Pelikoodari 30.10.2026 (omistajan päätös 09.11: piirrokset todellisin mitoin; jatko Taihedianista)",
+  "kehys": "AKSELIKEHYS: pohja.json kierrettynä origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä. Piirros 中右门; 中左门 on peilikuva (OSM-keskikohta x +77,0).",
+  "lahteet": {
+    "1": "Wikipedia zh: 太和殿 (kohta 中右门/中左门): https://zh.wikipedia.org/wiki/太和殿 (中右门：位于太和殿西侧。面阔五间，单檐歇山顶，上覆黄色琉璃瓦; 中左门 sama itäpuolella; 三大殿台基以下)",
+    "2": "OpenStreetMap way/638507841 (中右门) ja way/638507783 (中左门) (© OpenStreetMap contributors, ODbL 1.0), pohja.json kk-pohja-v1d-pk7",
+    "A": "ARVIO: arvo pelin nykyisestä mallista (Lavastajan rakennukset-v83, h-zhongyoumen-lod0: Taihemenistä skaalattu, sivuhalli_taihemenista.py). Varmistettava ennen 3D-työtä.",
+    "H": "Havainne 03 (omistajan hyväksymä havainnekuva, aukio Taihedianin edessä): sivuhallit näkyvät Taihedianin kummallakin puolella, kaksi kattokerrosta (重檐歇山). Rajaus havainne03-sivuhallit-rajaus.png."
+  },
+  "mitat": [
+    {
+      "osa": "halli",
+      "mitta": "jännemäärä",
+      "arvo": "5 (面阔五间)",
+      "lahde": "1",
+      "huom": "peli 5 ✓"
+    },
+    {
+      "osa": "halli",
+      "mitta": "kattomuoto",
+      "arvo": "重檐歇山 (VALINTA: havainne 03 [H]); lähde [1] 单檐歇山",
+      "lahde": "H",
+      "huom": "Omistajan linjaus 20.10.: ulkoasu havainteesta, paikat ja mitat todellisuudesta. Havainne näyttää kaksi kattokerrosta → pidetään 重檐; ristiriita lähteen [1] kanssa raportoitu PT:lle 30.10."
+    },
+    {
+      "osa": "jalusta",
+      "mitta": "ääriviiva",
+      "x_m": [
+        -93.3,
+        -66.6
+      ],
+      "z_m": [
+        -22.8,
+        -1.0
+      ],
+      "lahde": "2",
+      "huom": "26,7 × 21,8; ydin z −20,8..−3,0"
+    },
+    {
+      "osa": "portaat/luiskat",
+      "mitta": "pohjoinen ja etelä",
+      "x_m": [
+        -86.2,
+        -74.8
+      ],
+      "z_m": [
+        [
+          -39.7,
+          -22.8
+        ],
+        [
+          -1.0,
+          15.9
+        ]
+      ],
+      "lahde": "2",
+      "huom": "11,4 m leveät, 17 m pitkät (OSM); pelissä t-portti-m15 (ei tässä mitattu)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "seinä- ja pylväslinja",
+      "arvo_m": [
+        22.6,
+        14.6
+      ],
+      "x_m": [
+        -91.3,
+        -68.7
+      ],
+      "z_m": [
+        -19.2,
+        -4.6
+      ],
+      "lahde": "A"
+    },
+    {
+      "osa": "halli",
+      "mitta": "lattia y",
+      "arvo_m": 2.5,
+      "lahde": "A"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pylväskerros y",
+      "arvo_m": [
+        2.5,
+        7.9
+      ],
+      "lahde": "A"
+    },
+    {
+      "osa": "halli",
+      "mitta": "palkkivyö y",
+      "arvo_m": [
+        7.9,
+        9.0
+      ],
+      "lahde": "A"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pelin alakatto y",
+      "arvo_m": [
+        9.0,
+        10.6
+      ],
+      "lahde": "A",
+      "huom": "räystäs x −94,3..−65,6"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pelin yläkerros ja yläkatto y",
+      "arvo_m": [
+        10.6,
+        19.2
+      ],
+      "lahde": "A",
+      "huom": "huippu 19,2 + 鸱吻 20,3; 重檐 havainteen [H] mukaan"
+    }
+  ]
+}

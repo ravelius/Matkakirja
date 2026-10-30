@@ -1,0 +1,18 @@
+{
+ "kuva": "sivuhalli-pohja.png",
+ "kuvaus": "Sivuhalli 中右门 pohjapiirros, akselikehys x/z",
+ "px_per_m": 14,
+ "x0": -105,
+ "x1": -55,
+ "a0": -45,
+ "a1": 20,
+ "marginaali_vasen_ylä": [
+  70,
+  120
+ ],
+ "koko": [
+  850,
+  1360
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}
