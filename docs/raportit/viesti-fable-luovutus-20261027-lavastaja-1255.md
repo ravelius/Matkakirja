@@ -1516,3 +1516,16 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - 02.1x: pari 06 −5 −200 −120 (lokit/havainne-editori-20261030-015328/06) EI KÄYTETTÄVÄ: 06-tila nostaa kameran Taihemenin katolle ja kääntää etelään
   (Meridiaaniportti). A2-hahmojen pelitodennus yhä auki → käytä 03/03b-paikkaa ja kääntöä (esim. lisää PAIKKA-kohta editori-lr.sh:iin) tai pyydä PK:lta
   kamera lähelle taustan riviä (y < 15 m, ≤ 25 m vaakaan; esim. rivit (−22, −210) ja (36, −211) aukion etelälaidalla).
+
+## LISÄYS 110 klo 03.0x (30.10.): PAKETTI v93 + SIIPIKATOT v2 (rakennukset-v79) — ALOITA TÄSTÄ
+- 109b:n A2-pari 06 (v172b) valmistui ennen nollausta (EI käytettävä). PT (02.2x): harjaeläinten pelikuva Taihemenin kattokulmaan, REF 3b9485eb8.
+- JUURI H/juuri-pk7-v93 = v92-linkit + V/…v92-vienti/juoksupeli/maailma-v4 -kansiot (junan 215 nimet) + kielletty-lahipuut-v7 → K/a2-v172/kielletty-lahipuut-v8
+  + kielletty-halli-kaiteet-v4. v92-juuressa EI ollut junan 215 nimiä (rakennukset-v78, tausta-v76, c2-v19, avoimet-v52) → pelikuva tyhjä aukio.
+- EDITORI: K/tyokalut/editori-lr.sh (PAIKKA_<k>/TESTIKAMERA_<k>-ohitukset, EI pohja-url-riviä → anna ESIKOM="ui juoksupeli palatsi url <juuri>/kk-pohja-v1d-pk7/pohja.json");
+  H/editori-lr.sh (pohja-url, EI ohituksia). Pari-skripti: kamera PAIKKA_03="6.43 -203 -2.03" TESTIKAMERA_03="4 6 0 60" (PELIKAMERA ei saa olla asetettu).
+- Pari lokit/havainne-editori-20261030-023400/03 (rajaukset) HYVÄKSYTTY (KK 02.4x).
+- PAKETTI v93: V/juoksupeli-kk-lavastaja-v93-vienti-20261030, SHA256SUMS 478549fe, 713 tied. (= v92 + lahipuut-v8 (korvaa v7) + halli-kaiteet-v4; tyokalut/paketti_v93.py).
+  PT:lle ilmoitettu; PK: lähipuiden kansio v7 → v8.
+- KK:n 3 huomiota siipikattoihin → taihemen_siipikatto.py v2 (ohut 1268-pääharja 0,16 × 0,30, tiili 1,0/m), aja_v176_siipikatto2.zsh → K/siipikatto-v176/
+  kielletty-rakennukset-v79; kiila = Taihemenin jalustan marmorireunakivi (ei poistettu). Pari lokit/havainne-editori-20261030-025421/03 (juuri-pk7-v94) → PT 03.0x.
+- SEURAAVAKSI: PT:n kuittaus → paketti v94 (= v93 + rakennukset-v79 korvaa v78; peli: rakennukset-kansio v79, PK). Sitten 109:n lista (Taihedianin 10+1-rivi, A4, 03-vyön UV, NUI → v90).
