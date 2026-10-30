@@ -1636,3 +1636,17 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
 - Pari rungolla c0b59f6b0, kohta 06 (16.4 −474 −2.03, testikamera 2.5 6.2 3 51; keisari 0,12 = havainne):
   ennen lokit/havainne-editori-20261030-073943/06, jälkeen lokit/havainne-editori-20261030-074212/06 (vierekkain.png).
 - Hyväksynnän jälkeen: paketti v98 = v97 + rakennukset-v84 + c2-v23; PK: kansiot "kielletty-rakennukset-v84/" ja "kielletty-c2-v23/".
+
+## LISÄYS 120 (30.10. 08.0x): pari 074212 hylätty (omistaja 07.49 "liian kapealle, sisäosa syvemmälle") – mitat vs. havainne, PT:lle ennen työtä
+Mittaus samasta rajauksesta (keisari 0,12 molemmissa; peli 074212 vs. havainne):
+1. AUKKOJEN KOKO: havainteessa keskiaukko ~20 % leveämpi ja ~15 % korkeampi kuin mallin 6,0 × 7,6 m, ja jokaisen aukon ympärillä on
+   syvä suorakaiteinen kehyssyvennys (~1,3 × aukon leveys), joka saa aukot näyttämään leveiltä. Pelissä auki käännetyt punaiset ovilehdet
+   näkyvät pielissä ja kaventavat aukkoa. OMA RISTIRIITA: rakennukset.json:n reitin huomautus "sivutunnelit x ±21 (5,0 m)", mutta mallin
+   sivuaukko on 4,0 m. Todellisia aukkomittoja en saanut varmistettua (ei lähdettä haulla); 6 m / 5 m ovat mallin omat arvot.
+2. SYVYYS KESKIAUKOSTA: aukon takana näkyy Taihemen ja Kultaisen veden sillat. OSM-paikoilla Taihemen on ~150 m tunnelin pohjoispään
+   takana (todellinen etäisyys ~130–150 m); se täyttää aukon, koska se on ~60 m leveä. Havainteen "pitkä kivetty käytävä, jonka päässä
+   pieni portti" ei ole todellinen: väliin kuuluvat sillat ja joki, ja Taihemen näkyisi pienenä vain ~2 × todellisella etäisyydellä.
+   → RISTIRIITA todellisuuden kanssa; ei muutettavissa ilman paikkojen siirtoa.
+3. SIVUAUKOT: todellisuudessa suorat sivutunnelit (27,5 m) eivät ole U-pihalta läpinäkyviä; v84:n kääntö (7 m) poikkeaa todellisesta.
+Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havainteen tapaan, (b) ovilehdet pieliin upotettuina (ei kavenna),
+(c) sivuaukot 5,0 m (json:n arvo), (d) v84-kääntö pois tai pidetään omistajan valinnan mukaan; keskiaukon syvyys jää todelliseksi.
