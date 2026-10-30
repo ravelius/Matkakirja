@@ -2064,3 +2064,8 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - Koeajo leivonta-216/koe/osasarja (v4:n kopio): ruudut -5,-4 / -5,-1 / -3,-5 leivottu 32 näytteellä, tarkistuskuvat valo/tarkistus-*.png.
 - AUKI: pursotukset (PK: valmis glb vai kaava), taustan + rakennusten uusintaleivonta osasarja varjostajana, valon voimakkuudet VS:ltä.
 - Ei taustaajoja käynnissä.
+
+## LISÄYS 150 (30.10. 19.4x): PK KUITTASI LEIVONNAN RAJAPINNAN
+- (1) k-järjestys + tarkiste OK, (2) kärkivärit karki.bin:nä, (3) pursotukset LAV:lta valmiina pursotukset.glb:nä (UV1 + valo_rgbm). Kirjattu
+  leivonta-216/SOPIMUS.md "PK:N KUITTAUS". SEURAAVAKSI: pursotukset.glb-työkalu (pelin JuoksuOsasarja.Pursota-vastine, osasarja_koe.py:n
+  pursotusosa pohjana; huom. pelin järjestys/jiiri/kannet JuoksuOsasarja.cs:stä) + leivonta leivo_valo.py-tyyliin. VS:n vastaus yhä auki.
