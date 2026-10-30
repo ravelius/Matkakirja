@@ -1816,3 +1816,35 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   3) terassin kolme tasoa (3,1/5,3/8,13) ja sivuportaat eivät erotu edestä, näkyy yksi tasainen muuri → tarkista orto.sh g -kuvan kamera
      (EDE[g] z' −95,5, y 22) ja tasojen etureunat (z' −76,4 / −66,9 / −59,5); tarvittaessa tasojen etuseinät/kaiteet erottuviksi.
 - Sen jälkeen uusi orto (orto.sh g + vertaa.py) + pari 03 → PT; sitten LISÄYS 132:n jono.
+
+## LISÄYS 134 (30.10. 14.3x): v194 TAIHEMEN + SIVUHALLIT TEHTY, C1-VIIKSET KORJATTU (c1-v10) — LUOVUTUS (konteksti 34 %), ALOITA TÄSTÄ
+- Postivahdin välittämä PT:n ohje (voittaa LISÄYS 133:n järjestyksen): ensin Taihemen + sivuhallit, sitten Taihedian v193:n kolme korjausta.
+- TEHTY v194: K/tyokalut/aja_v194_taihemen_sivuhallit.zsh (taihemen_v194.py, sivuhalli_v194.py, v194_json.py) → K/taihemen-sivuhallit-v194/
+  kielletty-rakennukset-v94 (= v93 + Taihemen + sivuhallit + jalustat) + kielletty-c2-v33 (= c2-v32 + Taihemenin kaiteeton). Juuri H/juuri-pk7-v116.
+  Yksityiskohdat ja kuvat: /Users/Shared/Claude/proto-3d/lokit/orto-glb-v194-20261030-1403/LUE.md (koonti-v93-v94.png, c1-ennen-sininen-jalkeen-punainen.png).
+  sivuhalli_v194.kattokapenee(g, cx, kp) = yleinen "pystyseinäinen yläkatto → kalteva" -työkalu (x-skaala korkeuden mukaan ääriviivasta).
+- C1 (Taihedianin viikset, PT 13.58 kohta 1): pelin kielletty-c1-v8:n f-taihemen/g-taihedian-palat olivat vanhojen räystäiden kohdalla (1,5–3 m liian
+  ylhäällä v191/v193:n jälkeen). c1_raystaat2.py ei toimi enää (vanha kultareuna leikattu malleista) → K/tyokalut/c1_muunna.py muuntaa palat katon
+  pistekuvauksella (Jacobin + paikka) → K/c1-v10/kielletty-c1-v10 (peli lukee nimeä kielletty-c1-v8: juuressa v116 linkki c1-v8 → c1-v10).
+  Paketissa kansio pitää viedä nimellä, jota peli lukee (kielletty-c1-v8 → uusi versio vaatii PK:n nimimuutoksen TAI sisällön korvauksen; kysy PT).
+- Parit (juuri v116, REF aea0353cd, scratchpad pari_v194.zsh): sivuhalli 中左门 lokit/havainne-editori-20261030-140636/03 (PAIKKA_03 "55 -60 25");
+  Taihemen etäämpää TESTIKAMERA_03 "7 28 10 51" PAIKKA_03 "7.34 -262 -2.03" → PARI_TAIHEMEN (lähin kamera 140419/03 näytti ovet oikein, katto rajautui).
+- PT:LLE LÄHETETTY: v194 (3 riviä) — odottaa kuittausta. Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v94 + c2-v33 + c1-v10.
+- PT 14.2x (SITOVA, ENSIN ennen Taihemenin/Taihedianin jatkoa): MERIDIAANIPORTTI v192, KK palautti parin 140135/06. Portin kivijalka beige
+  (≈218/186/164) ja sivukäytävien sisäpinnat eri sävyä (≈176/153/141); OMISTAJAN PÄÄTÖS 27.10. 16.03: kivijalka = kujien harmaa (pari 053411/03).
+  Korjaa: 1) portin kivijalan ulkopinta + kaikkien käytävien sisäpinnat samaksi materiaaliksi kuin kujien kivijalka (V4_kujakivi_sokkeli? tarkista
+  kujamuurien materiaali; meridiaani_piirros.py / meridiaani_tunnelisokkeli.py, nyt V4_jalusta_lohkokivi?); 2) vaaleat pystykivet aukkojen reunoihin
+  havainteen mukaan (docs/raportit/kaappaukset/omistaja-20261030/portti06-sivuaukko-havainne.png). Pohjana VS:n raitakorjaus linssiseppa2/loiva-216
+  84d490f44 (pari-ajon REF). Uusi pari 06 (LISÄYS 128:n pari-skripti) + sävymittaus kivijalasta (peli-raaka.png pikselit) → PT ≤ 3 riviä.
+- C1-pari: viimeisin ajo (scratchpad pari_v194.zsh: Taihemen 03 etäältä + orto.sh g juurella v116) oli kesken luovutuksessa → uusin
+  lokit/havainne-editori-*/03 ja lokit/orto-*/g-edesta.png. Tarkista: Taihemenin C1-rivi räystään reunalla yhtenäisenä (ei litteinä palleroina katolla,
+  kuten 141211/03; korjattu: c1_muunna.py pystysuunta jäykkänä) ja Taihedianin viikset poissa. Jos rivi on yhä katolla, säädä YLA_SX/YLA_SZ tai
+  tarkista palan pivot (1055: takayläreuna z 0, etuhuuli z 0,5).
+- SEURAAVAKSI (Meridiaanin jälkeen): TAIHEDIAN v195 (PT 13.58, kohdat 1–3), pohja taihemen-sivuhallit-v194 → kielletty-rakennukset-v95:
+  1) viikset = C1 (korjattu c1-v10:ssä; glb-ortossa ei viiksiä). Jos v195 muuttaa Taihedianin kattoa, lisää kuvaus c1_muunna.py:n taihedian_F:ään.
+  2) alakatto "ohut nauha": pelin orton (orto-v193-taihedian-20261030-1351) mittaus x 0/±25: alakatto näkyy 15,6–20,2 m = piirroksen 15,7–20,1 m;
+     kapeaksi sen sai näyttämään vanhojen C1-palojen viiva 18,6–18,9 m:ssä. Aja orto.sh g juurella v116 ja tarkista ennen kuin muutat kattoa.
+  3) terassin tasot: geometria oikein (C2-kaiteet 3,1/5,3/8,13, glb-orto näyttää tasot), mutta pelissä valkoinen kaide valkoista seinää vasten ei erotu
+     (havainne 134256/03 zoomattuna: kolme kaiderivia heikosti). Ehdotus: tasojen pystypinnat V4_jalusta_lohkokivi (jalusta_lohkokivi.py, käytössä
+     Taihemenin jalustassa ja Meridiaanissa; piirroksessa tasoissa kivikerrokset) → kaiteet erottuvat. Sivuportaat (±10,5…16,0) näkyvät pelissä.
+     Tämä on materiaalivalinta olemassa olevasta → tee, ellei PT toisin sano; pari 03 + orto.sh g → PT.
