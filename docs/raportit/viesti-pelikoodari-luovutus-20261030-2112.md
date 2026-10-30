@@ -22,10 +22,14 @@ Edellinen luovutus: -20261030-2015. Muistin tilatiedosto: pelikoodari-tila-20261
   - Oman ajon perään tullut ajo (205913) oli oikein. NS:n nollaus (PlayerPrefs ja datakansio → <ajo>/tila-ennen/) on nyt käytössä.
   - Jos vika toistuu nollauksen kanssa, vertaa tila-ennen/-kansioita oikean ja väärän ajon välillä.
 
-## LAV:lle (PT 21.1x: kirjaa luovutukseen)
-- 02 ja 05 (P/v4-parit-5): vasemman muurin kivijalassa porras ja vaalea nauha. Kohdissa on v3:n 0,80 m:n muurit (-t80-osat ja aidat), joten muurin yläreuna jää matalammalle kuin vanhassa (vanha: punainen muuri ja kivijalka yhtenäisesti).
-- 05 oikea: vanhassa punaisessa muurissa oli pilasterit, uudessa muuri on yhtenäinen. Tarkista, kuuluuko niiden olla osasarjassa.
-- Nämä ovat geometriaa (ladonta ja osat), eivät pelin piirtovika: pinnat, tekstuurit ja sävyt ovat parissa kunnossa.
+## LAV:n v4-REGRESSIO ETUSIJALLA (PT 21.12, korjaa aiemman kuittauksen)
+- Kujat 02 ja 05 (P/v4-parit-5): vasemman muurin kivijalan porras ja vaalea nauha ovat **v4:n regressio**. v3:ssa niitä ei ole. Kyse ei ole LAV:n vanhasta geometriasta eikä 0,80 m:n muureista.
+- LAV korjaa paketin etusijalla samaan junaan 216.
+- **PK:n seuraava tehtävä tämän jälkeen:**
+  1. Kokoa osasarja uudelleen LAV:n uudella paketilla (kansio, ladonta ja kaukoniput; Peli-testit `MK_OSASARJA=<uusi kansio> ./kaanna.sh JuoksuOsasarja`).
+  2. Tee omistajalle sovitettu pari **peli vs havainne** (ei vanha vs uusi): havainne-editori ja sääntö 2.177. Kuvaparit vain PT:lle.
+- Lisäksi tarkistettavaksi: 05 oikea. Vanhassa punaisessa muurissa oli pilasterit, uudessa muuri on yhtenäinen.
+- Pinnat, tekstuurit ja sävyt ovat parissa kunnossa (tekstuurikorjaus 9ae1b6277).
 
 ## Jono seuraavaksi
 - **Reittivalinta (PT 19.2x):** yksi arviorivi PT:lle. Sisältö on edellisessä luovutuksessa (-2015, "Jono sen jälkeen"):
