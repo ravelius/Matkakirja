@@ -27,7 +27,7 @@ Viestit aina id:llä (mcp__ccd_session_mgmt__send_message; SendMessage pysähtyy
 2. LAV: rakennukset-v86 leivonnassa (1 Blender, valmis ~05.30); tausta-v82 + muurikate-v30: tarkista_leivonta 3520 vikaa →
    taustan uusinta TUPLAT=1 + kujan 1-3 lattiakorjaus VASTA rakennusten jälkeen (ei kahta Blenderiä: swap 24/24,5 Gt).
 3. VS: METAL 4b54413d7 + uusintaparit (valo vertailu 0) + STP vs MSAA -kuvanlaatupari; ota 70f507343 työkalupuuhun.
-4. PK: kiinteä siemen nyt (~1 h); aukeavat portit vain, jos pelaaja ei jo voi valita reittiä risteyksissä (PK selvittää ensin).
+4. Reittivalinta VALMIS: pelaaja valitsee jo reitin risteyksissä → portteja ei tehdä; siemen ei muuta aluetta eikä reittejä → ei kiinnitetä (KK 21.2x: esteiden vaihtelu pysyy). PK odottaa LAV:n v4-korjausta.
 5. Valoerän lopuksi kortti KK:n kautta: laitetaanko valo peliin oletuksena päälle (nyt vertailuvalo).
 6. Levy ~95 Gi, swap ~24 Gt; alle 90 Gi → PT pysäyttää LAV:n leivonnan väliaikaisesti (Postivahti ilmoittaa). T7:lle ei enää siirrettävää.
 7. Tilinvaihto arviolta su 1.11. ~10–12: KAIKKI sessiot nollataan heti aluksi (uusi 7.37).
