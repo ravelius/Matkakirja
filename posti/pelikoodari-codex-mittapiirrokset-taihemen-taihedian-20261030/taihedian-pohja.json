@@ -1,0 +1,18 @@
+{
+ "kuva": "taihedian-pohja.png",
+ "kuvaus": "Taihedian pohjapiirros ylhäältä, akselikehys x/z",
+ "px_per_m": 8,
+ "x0": -75,
+ "x1": 75,
+ "a0": -95,
+ "a1": 45,
+ "marginaali_vasen_ylä": [
+  70,
+  120
+ ],
+ "koko": [
+  1350,
+  1570
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}

@@ -1,0 +1,35 @@
+{
+  "kohde": "Taihemen 太和门 (Korkeimman sopusoinnun portti; juoksupeli, malli f-taihemen)",
+  "laatija": "Pelikoodari 30.10.2026 (omistajan päätös 09.11: pohja- ja julkisivupiirrokset todellisin mitoin; jatko portista 06)",
+  "kehys": "AKSELIKEHYS: pohja.json (X itä, Z pohjoinen, origo Taihedianin keskellä) kierrettynä origon ympäri 2,03° myötäpäivään, jolloin palatsin akseli osoittaa tasan pohjoiseen ja on x = 0. x' = x·cos 2,03° + z·sin 2,03°, z' = −x·sin 2,03° + z·cos 2,03°. Korkeus y = 0 aukion taso. Metrejä.",
+  "lahteet": {
+    "1": "Palatsimuseo (故宫博物院), 太和门-rakennussivu: https://www.dpm.org.cn/explore/building/236439.html (面阔9间，进深4间，建筑面积1300.00㎡; 重檐歇山顶; 汉白玉基座; 铜狮一对，铜鼎四只; 昭德门 itään, 贞度门 länteen)",
+    "2": "Wikipedia zh: 太和門: https://zh.wikipedia.org/wiki/太和門 (建筑通高23.8米; 前后石阶各三個，左右石阶各一個; ristiriitaisesti sekä 东西阔七间/南北两间/1371.14㎡ että 面闊九間/進深三間/1300㎡)",
+    "3": "OpenStreetMap way/638308745 (© OpenStreetMap contributors, ODbL 1.0), pohja.json kk-pohja-v1d-pk7: jalustan ja portaiden ääriviiva",
+    "4": "Matkakertomus (Ctrip, you.ctrip.com/travels/beijing1/4047756.html): 九尺高白石须弥座 (≈ 2,9 m Qing-jalalla 32 cm). HEIKKO lähde, vain suuruusluokka.",
+    "A": "ARVIO: ei löydettyä lähdettä; arvo pelin nykyisestä mallista (Lavastajan rakennukset-v83, f-taihemen-lod0) mitattuna. Nämä pitää varmistaa ennen 3D-työtä."
+  },
+  "mitat": [
+    {"osa": "jalusta 台基", "mitta": "ääriviiva", "arvo_m": [56.3, 29.9], "x_m": [-28.9, 27.4], "z_m": [-229.9, -200.0], "lahde": "3", "huom": "keskikohta x −0,75; peli 56,6 × 30,2 (x −28,6..28,0, z −231,4..−201,2)"},
+    {"osa": "jalusta", "mitta": "korkeus", "arvo_m": 3.9, "lahde": "A", "huom": "[4] 九尺 ≈ 2,9 m (heikko); LR:n kuvauksessa 3,4 m; pelin kansi y 3,9"},
+    {"osa": "jalusta", "mitta": "marmorikaide y", "arvo_m": [3.9, 4.9], "lahde": "A"},
+    {"osa": "jalusta", "mitta": "liitosmuurit sivuille (廊庑)", "x_m": [[-37.6, -28.9], [27.4, 34.2]], "z_m": [-228.0, -224.0], "lahde": "3", "huom": "kohti 贞度门 (länsi) ja 昭德门 (itä) [1]"},
+    {"osa": "portaat etelä", "mitta": "x-välit", "arvo": "3 portaikkoa [2]", "x_m": [[-10.2, -6.8], [-5.0, 1.6], [4.0, 7.5]], "z_m": [-240.6, -229.9], "lahde": "3", "huom": "PELISSÄ x [−20,0..−14,5], [−6,0..5,5], [14,0..19,5], etelään z −237,8: sivuportaat 10 m liian kaukana akselista"},
+    {"osa": "portaat pohjoinen", "mitta": "x-välit", "arvo": "3 portaikkoa [2]", "x_m": [[-10.0, -6.6], [-4.7, 1.3], [4.25, 7.6]], "z_m": [-200.0, -187.5], "lahde": "3", "huom": "pelissä kuten etelässä, pohjoiseen z −194,8"},
+    {"osa": "portaat sivut", "mitta": "määrä", "arvo": "1 + 1 (左右石阶各一個)", "lahde": "2", "huom": "ei OSM:ssä eikä pelissä"},
+    {"osa": "halli 门殿", "mitta": "jännemäärä", "arvo": "9 × 4 (面阔9间，进深4间)", "lahde": "1", "huom": "[2] myös 9 × 3 ja 7 × 2"},
+    {"osa": "halli", "mitta": "rakennusala", "arvo_m2": 1300.0, "lahde": "1", "huom": "[2] 1371,14 m² 四围廊子 mukaan; PELIN HALLI 46,2 × 20,0 = 924 m² (−29 %)"},
+    {"osa": "halli", "mitta": "seinä- ja pylväslinja", "arvo_m": [46.2, 20.0], "x_m": [-23.4, 22.8], "z_m": [-226.3, -206.3], "lahde": "A", "huom": "etupylväsrivi z −226,2, oviseinä z −222,2 (avoin etukuisti 4 m); 9 jännettä × 5,13 m"},
+    {"osa": "halli", "mitta": "keskiaukko (läpikulku)", "arvo_m": 5.9, "x_m": [-3.3, 2.6], "lahde": "A", "huom": "ovet (puu) x −8,6..−4,0 ja 3,3..7,9"},
+    {"osa": "halli", "mitta": "kokonaiskorkeus 通高", "arvo_m": 23.8, "lahde": "2", "huom": "peli: pääharja 23,6, harjakoristeet 鸱吻 24,9"},
+    {"osa": "halli", "mitta": "kattomuoto", "arvo": "重檐歇山 kaksinkertainen satulalonkkakatto", "lahde": "1"},
+    {"osa": "halli", "mitta": "pylväskerros y", "arvo_m": [3.9, 10.3], "lahde": "A"},
+    {"osa": "halli", "mitta": "alaräystään palkkivyö y", "arvo_m": [10.3, 12.2], "lahde": "A"},
+    {"osa": "halli", "mitta": "alakatto y", "arvo_m": [12.2, 14.2], "lahde": "A", "huom": "räystäs x ±26,3, z −228,9..−203,6"},
+    {"osa": "halli", "mitta": "yläkerroksen seinä ja palkkivyö y", "arvo_m": [14.2, 16.8], "lahde": "A"},
+    {"osa": "halli", "mitta": "yläkatto harjaan y", "arvo_m": [16.8, 22.2], "lahde": "A", "huom": "yläräystäs x ±22,5; harja 22,2–23,6, pituus 39 m"},
+    {"osa": "pronssileijonat 铜狮", "mitta": "paikka", "arvo": "pari [1]", "x_m": [-11.3, 10.7], "z_m": -237.0, "lahde": "A", "huom": "pelissä keskiportaiden sivuilla jalustan etelän edustalla"},
+    {"osa": "pronssikattilat 铜鼎", "mitta": "määrä", "arvo": "4 [1]", "lahde": "1", "huom": "ei pelissä"},
+    {"osa": "pelin lisäosat", "mitta": "pohjoiset muurit", "x_m": [[-8.1, -6.8], [6.1, 7.4]], "z_m": [-194.8, -174.8], "lahde": "A", "huom": "punaiset muurit ja f-taihemen-siipikatot (havainne 03 -erolista 4); ei lähteissä"}
+  ]
+}

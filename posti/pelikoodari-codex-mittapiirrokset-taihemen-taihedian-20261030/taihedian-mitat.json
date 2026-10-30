@@ -1,0 +1,33 @@
+{
+  "kohde": "Taihedian 太和殿 (Korkeimman sopusoinnun halli; juoksupeli, mallit g-taihedian + g-jalusta)",
+  "laatija": "Pelikoodari 30.10.2026 (omistajan päätös 09.11: pohja- ja julkisivupiirrokset todellisin mitoin; jatko portista 06 ja Taihemenistä)",
+  "kehys": "AKSELIKEHYS: pohja.json (X itä, Z pohjoinen, origo Taihedianin keskellä) kierrettynä origon ympäri 2,03° myötäpäivään, jolloin palatsin akseli osoittaa tasan pohjoiseen ja on x = 0. Korkeus y = 0 aukion taso. Metrejä.",
+  "lahteet": {
+    "1": "Palatsimuseo (故宫博物院), 太和殿-rakennussivu: https://www.dpm.org.cn/explore/building/236465.html (面阔11间，进深5间，建筑面积2377.00㎡，高26.92m，连同台基通高35.05m; 重檐庑殿顶; 大吻高3.40m; 檐角10个走兽; 宝座两侧6根直径1.00m巨柱; 月台上日晷、嘉量各一，铜龟、铜鹤各一对，铜鼎18座; 殿下为高8.13m的三层汉白玉石雕基座)",
+    "2": "Wikipedia zh: 太和殿: https://zh.wikipedia.org/wiki/太和殿 (面阔11间（63.96米），进深5间（宽37米）; 立柱72根，最高的12.7米，最粗的直径1.06米; 螭吻高3.40米、宽2.68米; 三台 工字形 8.13米)",
+    "3": "OpenStreetMap (© OpenStreetMap contributors, ODbL 1.0), pohja.json kk-pohja-v1d-pk7: halli way/638449347 (katon ääriviiva?), terassin etuosa way/638449432",
+    "A": "ARVIO: ei löydettyä lähdettä; arvo pelin nykyisestä mallista (Lavastajan rakennukset-v83, g-taihedian-lod0 ja g-jalusta-lod0) mitattuna. Nämä pitää varmistaa ennen 3D-työtä."
+  },
+  "mitat": [
+    {"osa": "terassi 三台", "mitta": "korkeus", "arvo_m": 8.13, "lahde": "1", "huom": "kolme kerrosta, 汉白玉; peli 8,13 (kaiteineen tasot 4,2 / 6,4 / 9,6, A)"},
+    {"osa": "terassi", "mitta": "muoto", "arvo": "工-muoto, kolme hallia", "lahde": "2"},
+    {"osa": "terassi", "mitta": "ylätason etuosa", "x_m": [[-33.0, 32.5], [-53.3, 53.7]], "z_m": [[-59.7, -28.9], [-28.9, -12.5]], "lahde": "3", "huom": "peli (pohja.json G.terassi = LR v33 malli) x −33,0..32,5 z −60,0; siivet x −54,0..53,5: täsmää"},
+    {"osa": "terassi", "mitta": "alataso", "x_m": [-67.8, 67.1], "z_m": -92.0, "lahde": "A", "huom": "pelin alin taso; etelän portaat z −92"},
+    {"osa": "halli 太和殿", "mitta": "leveys (11 jännettä)", "arvo_m": 63.96, "lahde": "2", "huom": "PELI 60,9 (x −30,8..30,1): −3,1 m"},
+    {"osa": "halli", "mitta": "syvyys (5 jännettä)", "arvo_m": 37.0, "lahde": "2", "huom": "PELI 34,1 (z −17,9..16,2): −2,9 m"},
+    {"osa": "halli", "mitta": "rakennusala", "arvo_m2": 2377.0, "lahde": "1", "huom": "63,96 × 37 = 2366 ✓; PELI 2077 m² (−13 %)"},
+    {"osa": "halli", "mitta": "katon ääriviiva (OSM)", "arvo_m": [67.3, 39.6], "x_m": [-33.7, 33.7], "z_m": [-20.1, 20.1], "lahde": "3", "huom": "peli alaräystäs 68,6 × 41,9 (x −34,7..34,0, z −21,8..20,1)"},
+    {"osa": "halli", "mitta": "korkeus terassilta", "arvo_m": 26.92, "lahde": "1"},
+    {"osa": "halli", "mitta": "kokonaiskorkeus 通高", "arvo_m": 35.05, "lahde": "1", "huom": "peli pääharja 35,0 ✓; 螭吻 yltää 36,65"},
+    {"osa": "halli", "mitta": "kattomuoto", "arvo": "重檐庑殿 kaksinkertainen lonkkakatto", "lahde": "1"},
+    {"osa": "halli", "mitta": "螭吻 harjakoriste", "arvo_m": [3.4, 2.68], "lahde": "2", "huom": "korkeus × leveys; peli harja 33,4–35,0, koriste 36,65 asti"},
+    {"osa": "halli", "mitta": "pylväät", "arvo": "72 kpl, korkein 12,7 m, Ø 1,06 m", "lahde": "2", "huom": "pelin ulkopylväät y 9,6–16,5 (6,9 m, A); korkein 12,7 m on sisäpylväs"},
+    {"osa": "halli", "mitta": "lattia y", "arvo_m": 8.95, "lahde": "A", "huom": "terassi 8,13 + hallin jalusta 0,8"},
+    {"osa": "halli", "mitta": "pylväskerros y", "arvo_m": [9.6, 16.5], "lahde": "A"},
+    {"osa": "halli", "mitta": "alaräystään palkkivyö y", "arvo_m": [16.5, 18.8], "lahde": "A"},
+    {"osa": "halli", "mitta": "alakatto y", "arvo_m": [18.8, 21.4], "lahde": "A", "huom": "räystäs x ±34,3"},
+    {"osa": "halli", "mitta": "yläkerroksen seinä ja palkkivyö y", "arvo_m": [21.4, 24.4], "lahde": "A"},
+    {"osa": "halli", "mitta": "yläkatto harjaan y", "arvo_m": [24.4, 33.4], "lahde": "A", "huom": "yläräystäs x ±30,5; harja 33,4–35,0, pituus 32,4 m"},
+    {"osa": "terassin esineet", "mitta": "määrä", "arvo": "日晷 1, 嘉量 1, 铜龟 2, 铜鹤 2, 铜鼎 18", "lahde": "1", "huom": "pelissä tarkistamatta"}
+  ]
+}
