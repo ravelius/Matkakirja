@@ -2174,3 +2174,12 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - SEURAAVAKSI ketjun jälkeen: tarkista_leivonta (ehtoalueet kuten v73 / tarkistus-tausta-v82.txt, PT: 0 vikaa ehtoalueilla), VS:lle
   aukkoartefakti + jäljelle jäävät T:t (LISÄYS 153), paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-<pvm> (tausta-v82, muurikate-v30,
   rakennukset-v86; LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md) → PT ≤ 3 riviä + VS (parit 02/03/06, palat + alueet + varjostajat.json:t).
+
+## LISÄYS 157 (30.10. 22.1x): OSASARJAN LEIVONTA v6 (PK, juna 217) KETJUSSA
+- PK 22.0x: pelipuoli koodattu (proto-haara pelikoodari/leivonta-217 8732a8a1c), koe/osasarja läpäisi tarkisteen. Tarvitaan leivottu paketti v5:stä
+  uudella nimellä; Blender vasta nykyisten leivontojen jälkeen.
+- TEHTY ilman Blenderiä: K/osasarja-v6/kielletty-osasarja-v6 = v5 + leivonta_uv1 (osat, lod1) + leivonta_atlas (valo.json, 3194 sijoitusta, 86 ruutua).
+- KETJU: leivonta-216/uusinta/ketju-osasarja-v6.zsh (pid 4410, loki ajo-osasarja-v6.log) odottaa ketju-v5:n (pid 2967) → leivo_osasarja.py kaikki 96
+  → leivonta_karki.py. Pursotukset.glb EI tässä (työkalu tekemättä, LISÄYS 150) → peli pursottaa itse.
+- SEURAAVAKSI valmistuttua: paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> (paketti_osasarja_v5.zsh-malli, maailma-v4/kielletty-osasarja-v6,
+  LAHTEET-paketti.md v6-otsikolla) → kansio PK:lle (local_601d33fc-…) + PT ≤ 3 riviä.
