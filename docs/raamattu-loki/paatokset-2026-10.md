@@ -3238,3 +3238,7 @@ KK:n kortti, sanatarkasti: "Otetaanko käyttöön tekijän oma tarkistus ennen k
 ## JUOKSUPELI: LADONTA PÄÄLLE MUUREILLE, KIVIJALOILLE JA KAITEILLE (omistaja 30.10.2026 klo 16.20) (30.10.2026 klo 16.27)
 
 KK:n kortti: "Kytketäänkö ladonta päälle muureille, kivijaloille ja kaiteille junassa 216?" → "Kytke päälle (Suositus)": heti nykyisten korjausten jälkeen; Pelikoodari todistaa vertailukuvilla, ettei ulkoasu muutu; sen jälkeen uudet muurit tehdään vain ladonnalla. Ainutkertaiset rakennukset (Taihemen, sivuhallit, Taihedian) pysyvät malleina.
+
+## POSTIVAHDIN OMA NOLLAUS 30 %:SSA ILMAN PT:N PYYNTÖÄ (KK 30.10. klo 19.1x) (30.10.2026 klo 19.09)
+
+KK:n mittaus 30.10. 00–19: Postivahti 17 % talon kulutuksesta (1946 vastausta, kontekstin mediaani 509k, p90 826k), vaikka raja on 20–30 %. Päätös (KK juoksupelin ohjilla, PT toteuttaa): Postivahti kirjoittaa luovutuksen ja nollaa itsensä omalla kierroksellaan, kun sen oma konteksti ylittää 30 %, ilman PT:n pyyntöä. Raamattu 7.37 päivitetty; Postivahti kirjasi säännön KIERROS.md:hen (luovutus 6967a05d4). Arvioitu säästö noin 12 % päivän kulutuksesta.
