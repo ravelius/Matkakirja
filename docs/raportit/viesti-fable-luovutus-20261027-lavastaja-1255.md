@@ -1513,3 +1513,6 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - SEURAAVAKSI: (1) A2-pari → PT (kuva + polku); (2) Taihedianin oma 10+1-rivi (rakennuksen V4_harjaelain, lod0 3800 kolmiota, vain ylempi räystäs) –
   ehdota PT:lle (LOD0:aan kevennetyt A2:t vai koristeet.json + upotetut pois); (3) A4 kannattimet räystäisiin c1-sijoitukset.json:n linjoista (lähikoristeina);
   (4) PT:n vastaus 03-vyön UV:sta; (5) NUI:n pari → v90.
+- 02.1x: pari 06 −5 −200 −120 (lokit/havainne-editori-20261030-015328/06) EI KÄYTETTÄVÄ: 06-tila nostaa kameran Taihemenin katolle ja kääntää etelään
+  (Meridiaaniportti). A2-hahmojen pelitodennus yhä auki → käytä 03/03b-paikkaa ja kääntöä (esim. lisää PAIKKA-kohta editori-lr.sh:iin) tai pyydä PK:lta
+  kamera lähelle taustan riviä (y < 15 m, ≤ 25 m vaakaan; esim. rivit (−22, −210) ja (36, −211) aukion etelälaidalla).
