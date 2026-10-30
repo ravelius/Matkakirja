@@ -34,7 +34,8 @@
       "mitta": "korkeus",
       "arvo_m": 4.0,
       "lahde": "K",
-      "huom": "kuvassa etupinta maasta kaiteen alareunaan 4,0 ± 0,3; peli 3,9 (ok); [4] 九尺 ≈ 2,9 m (heikko) ei täsmää; LR:n kuvauksessa 3,4 m"
+      "huom": "kuvassa etupinta maasta kaiteen alareunaan 4,0 ± 0,3; peli 3,9 (ok); [4] 九尺 ≈ 2,9 m (heikko) ei täsmää; LR:n kuvauksessa 3,4 m",
+      "tapa": "kuva t06: etupinta maasta (y 660) kaiteen alareunaan (y 557), etutason mittakaava"
     },
     {
       "osa": "jalusta",
@@ -169,7 +170,8 @@
         3.24
       ],
       "lahde": "K",
-      "huom": "symmetrisoitu (kuvan mittaus vasen/oikea 3,40/3,08, 5,34/5,02, 5,23/5,06, 5,44/5,34, keski 7,90); kulmajänteet kapeat, keskijänne leveä. PELISSÄ 9 tasajännettä 5,13 m ja keskiaukko 5,9 m"
+      "huom": "symmetrisoitu (kuvan mittaus vasen/oikea 3,40/3,08, 5,34/5,02, 5,23/5,06, 5,44/5,34, keski 7,90); kulmajänteet kapeat, keskijänne leveä. PELISSÄ 9 tasajännettä 5,13 m ja keskiaukko 5,9 m",
+      "tapa": "kuva t06: punaisten pylväiden keskikohdat riveiltä 1480–1520 (mittaa-f-kuva.py), symmetrisoitu; tarkistus t04/t07"
     },
     {
       "osa": "halli",
@@ -203,7 +205,8 @@
         8.0
       ],
       "lahde": "K",
-      "huom": "peli 3,9–10,3 (A): pylväät 2,3 m liian korkeat"
+      "huom": "peli 3,9–10,3 (A): pylväät 2,3 m liian korkeat",
+      "tapa": "kuva t06: palkkivyön alareuna y 455; horisontti- ja perspektiivimalli (kameran korkeus 1,6, etäisyys ≈ 125)"
     },
     {
       "osa": "halli",
@@ -213,7 +216,8 @@
         9.6
       ],
       "lahde": "K",
-      "huom": "peli 10,3–12,2 (A)"
+      "huom": "peli 10,3–12,2 (A)",
+      "tapa": "kuva t06: palkkivyö y 415–455; sama malli"
     },
     {
       "osa": "halli",
@@ -223,7 +227,8 @@
         14.3
       ],
       "lahde": "K",
-      "huom": "räystään reuna 10,0 keskellä, katto yläkerroksen palkkivyöhön 14,3; peli 12,2–14,2 (A), räystäs x ±26,3, z −228,9..−203,6"
+      "huom": "räystään reuna 10,0 keskellä, katto yläkerroksen palkkivyöhön 14,3; peli 12,2–14,2 (A), räystäs x ±26,3, z −228,9..−203,6",
+      "tapa": "kuva t06: räystään reuna keskellä y 400, katon yläraja y 310; sama malli"
     },
     {
       "osa": "halli",
@@ -233,7 +238,8 @@
         15.2
       ],
       "lahde": "K",
-      "huom": "peli 14,2–16,8 (A)"
+      "huom": "peli 14,2–16,8 (A)",
+      "tapa": "kuva t06: yläpalkkivyö y 288–310; sama malli"
     },
     {
       "osa": "halli",
@@ -243,7 +249,8 @@
         23.8
       ],
       "lahde": "K",
-      "huom": "yläräystään reuna 15,7, harja 23,8 [2]; peli 16,8–22,2 + harja 22,2–23,6, yläräystäs x ±22,5, harjan pituus 39 m (A); kuvassa 鸱吻 yläpää ≈ 25,2 (peli 24,9)"
+      "huom": "yläräystään reuna 15,7, harja 23,8 [2]; peli 16,8–22,2 + harja 22,2–23,6, yläräystäs x ±22,5, harjan pituus 39 m (A); kuvassa 鸱吻 yläpää ≈ 25,2 (peli 24,9)",
+      "tapa": "kuva t06: yläräystäs y 268; harja 23,8 [2] on mallin ankkuri"
     },
     {
       "osa": "pronssileijonat 铜狮",

@@ -1,0 +1,219 @@
+{
+  "kohde": "Taihedian 太和殿 (Korkeimman sopusoinnun halli; juoksupeli, mallit g-taihedian + g-jalusta)",
+  "laatija": "Pelikoodari 30.10.2026 (omistajan päätös 09.11: pohja- ja julkisivupiirrokset todellisin mitoin; jatko portista 06 ja Taihemenistä)",
+  "kehys": "AKSELIKEHYS: pohja.json (X itä, Z pohjoinen, origo Taihedianin keskellä) kierrettynä origon ympäri 2,03° myötäpäivään, jolloin palatsin akseli osoittaa tasan pohjoiseen ja on x = 0. Korkeus y = 0 aukion taso. Metrejä.",
+  "lahteet": {
+    "1": "Palatsimuseo (故宫博物院), 太和殿-rakennussivu: https://www.dpm.org.cn/explore/building/236465.html (面阔11间，进深5间，建筑面积2377.00㎡，高26.92m，连同台基通高35.05m; 重檐庑殿顶; 大吻高3.40m; 檐角10个走兽; 宝座两侧6根直径1.00m巨柱; 月台上日晷、嘉量各一，铜龟、铜鹤各一对，铜鼎18座; 殿下为高8.13m的三层汉白玉石雕基座)",
+    "2": "Wikipedia zh: 太和殿: https://zh.wikipedia.org/wiki/太和殿 (面阔11间（63.96米），进深5间（宽37米）; 立柱72根，最高的12.7米，最粗的直径1.06米; 螭吻高3.40米、宽2.68米; 三台 工字形 8.13米)",
+    "3": "OpenStreetMap (© OpenStreetMap contributors, ODbL 1.0), pohja.json kk-pohja-v1d-pk7: halli way/638449347 (katon ääriviiva?), terassin etuosa way/638449432",
+    "A": "ARVIO: ei löydettyä lähdettä; arvo pelin nykyisestä mallista (Lavastajan rakennukset-v83, g-taihedian-lod0 ja g-jalusta-lod0) mitattuna. Nämä pitää varmistaa ennen 3D-työtä.",
+    "K": "KUVAMITTAUS (Pelikoodari 30.10.): Commons File:20200110 Hall of Supreme Harmony courtyard-1.jpg (Balon Greyjoy, CC0; akselilta, Canon 5D III 59 mm, commons/taihedian/orig-h04.jpg). Mittakaava: etupylväsrivi 63,96 m [2] = uloimpien pylväiden keskiväli → etäisyys ≈ 188 m. Korkeudet horisonttimallilla, jonka ankkuri on harja 35,05 [1] hallin keskisyvyydellä; kameran korkeus 3 ± 1,5 m vaikuttaa tuloksiin alle 0,15 m. Tarkkuus noin ±0,6 m. Vertailukuva vertailu-g-kuvamittaus.png (vertaa-g-kuva.py)."
+  },
+  "mitat": [
+    {
+      "osa": "terassi 三台",
+      "mitta": "korkeus",
+      "arvo_m": 8.13,
+      "lahde": "1",
+      "huom": "kolme kerrosta, 汉白玉; peli 8,13 (kaiteineen tasot 4,2 / 6,4 / 9,6, A)"
+    },
+    {
+      "osa": "terassi",
+      "mitta": "muoto",
+      "arvo": "工-muoto, kolme hallia",
+      "lahde": "2"
+    },
+    {
+      "osa": "terassi",
+      "mitta": "ylätason etuosa",
+      "x_m": [
+        [
+          -33.0,
+          32.5
+        ],
+        [
+          -53.3,
+          53.7
+        ]
+      ],
+      "z_m": [
+        [
+          -59.7,
+          -28.9
+        ],
+        [
+          -28.9,
+          -12.5
+        ]
+      ],
+      "lahde": "3",
+      "huom": "peli (pohja.json G.terassi = LR v33 malli) x −33,0..32,5 z −60,0; siivet x −54,0..53,5: täsmää"
+    },
+    {
+      "osa": "terassi",
+      "mitta": "alataso",
+      "x_m": [
+        -67.8,
+        67.1
+      ],
+      "z_m": -92.0,
+      "lahde": "A",
+      "huom": "pelin alin taso; etelän portaat z −92"
+    },
+    {
+      "osa": "halli 太和殿",
+      "mitta": "leveys (11 jännettä)",
+      "arvo_m": 63.96,
+      "lahde": "2",
+      "huom": "PELI 60,9 (x −30,8..30,1): −3,1 m"
+    },
+    {
+      "osa": "halli",
+      "mitta": "syvyys (5 jännettä)",
+      "arvo_m": 37.0,
+      "lahde": "2",
+      "huom": "PELI 34,1 (z −17,9..16,2): −2,9 m"
+    },
+    {
+      "osa": "halli",
+      "mitta": "rakennusala",
+      "arvo_m2": 2377.0,
+      "lahde": "1",
+      "huom": "63,96 × 37 = 2366 ✓; PELI 2077 m² (−13 %)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "katon ääriviiva (OSM)",
+      "arvo_m": [
+        67.3,
+        39.6
+      ],
+      "x_m": [
+        -33.7,
+        33.7
+      ],
+      "z_m": [
+        -20.1,
+        20.1
+      ],
+      "lahde": "3",
+      "huom": "peli alaräystäs 68,6 × 41,9 (x −34,7..34,0, z −21,8..20,1)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "korkeus terassilta",
+      "arvo_m": 26.92,
+      "lahde": "1"
+    },
+    {
+      "osa": "halli",
+      "mitta": "kokonaiskorkeus 通高",
+      "arvo_m": 35.05,
+      "lahde": "1",
+      "huom": "peli pääharja 35,0 ✓; 螭吻 yltää 36,65"
+    },
+    {
+      "osa": "halli",
+      "mitta": "kattomuoto",
+      "arvo": "重檐庑殿 kaksinkertainen lonkkakatto",
+      "lahde": "1"
+    },
+    {
+      "osa": "halli",
+      "mitta": "螭吻 harjakoriste",
+      "arvo_m": [
+        3.4,
+        2.68
+      ],
+      "lahde": "2",
+      "huom": "korkeus × leveys; peli harja 33,4–35,0, koriste 36,65 asti; kuvassa [K] yläpää ≈ 37,7 (2,6 m harjan yläpinnan yli), tapa: kuva h04 y 1227, syvyys 206,5"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pylväät",
+      "arvo": "72 kpl, korkein 12,7 m, Ø 1,06 m",
+      "lahde": "2",
+      "huom": "pelin ulkopylväät y 9,6–16,5 (6,9 m, A); korkein 12,7 m on sisäpylväs"
+    },
+    {
+      "osa": "halli",
+      "mitta": "lattia y",
+      "arvo_m": 8.95,
+      "lahde": "A",
+      "huom": "terassi 8,13 + hallin jalusta 0,8"
+    },
+    {
+      "osa": "halli",
+      "mitta": "palkkivöiden leveys",
+      "arvo_m": {
+        "alapalkkivyö": 65.4,
+        "yläkerros (kulmapylväät)": 57.6
+      },
+      "lahde": "K",
+      "huom": "alapalkkivyö ulottuu 0,7 m kulmapylväiden yli; yläkerros sisäänvedetty 3,2 m sivuilta; PELISSÄ ala 61,3 ja ylä 54,8 (A)",
+      "tapa": "kuva h04: päätyjen rajaus (h04-paadyt.png), alavyö x 1082–4355, yläkerroksen kulmapylväät x 1297/4131; yläkerroksen syvyys ratkaistu ehdosta sivu- = syvyyssisäänveto"
+    },
+    {
+      "osa": "halli",
+      "mitta": "pylväskerros y",
+      "arvo_m": [
+        8.95,
+        13.6
+      ],
+      "lahde": "K",
+      "huom": "peli 9,6–16,5 (A): ulkopylväät 2,9 m liian korkeat; alapää = lattia 8,95 (A, kaiteen takana)",
+      "tapa": "kuva h04: pylväiden punainen alkaa y 2277 (pystyprofiilit x 1601/2184/2722); syvyys 188 m"
+    },
+    {
+      "osa": "halli",
+      "mitta": "alaräystään palkkivyö y",
+      "arvo_m": [
+        13.6,
+        16.3
+      ],
+      "lahde": "K",
+      "huom": "peli 16,5–18,8 (A)",
+      "tapa": "kuva h04: palkiston yläreuna päätypylväillä y 2143, alareuna y 2277; syvyys 188 m"
+    },
+    {
+      "osa": "halli",
+      "mitta": "alakatto y",
+      "arvo_m": [
+        15.5,
+        20.1
+      ],
+      "lahde": "K",
+      "huom": "räystään reuna keskellä 15,5, katto yläpalkkivyöhön 20,1; peli 18,8–21,4 (A), räystäs x ±34,3 (A)",
+      "tapa": "kuva h04: räystään reuna keskellä y 2172 (syvyys 184,5), yläraja = yläpalkkivyön alareuna"
+    },
+    {
+      "osa": "halli",
+      "mitta": "yläkerroksen seinä ja palkkivyö y",
+      "arvo_m": [
+        20.1,
+        21.3
+      ],
+      "lahde": "K",
+      "huom": "peli 21,4–24,4 (A); yläräystäs peittää vyön yläosan keskellä",
+      "tapa": "kuva h04: vyö y 1906–1968 kulmapylväillä; syvyys 191,2 (sisäänveto 3,2 m)"
+    },
+    {
+      "osa": "halli",
+      "mitta": "yläkatto harjaan y",
+      "arvo_m": [
+        20.8,
+        35.05
+      ],
+      "lahde": "K",
+      "huom": "yläräystäs keskellä 20,8, harja 35,05 [1]; peli 24,4–33,4 + harja 33,4–35,0 (A), yläräystäs x ±30,5 (A)",
+      "tapa": "kuva h04: yläräystään reuna keskellä y 1918 (syvyys 188,2); harja y 1346 on mallin ankkuri"
+    },
+    {
+      "osa": "terassin esineet",
+      "mitta": "määrä",
+      "arvo": "日晷 1, 嘉量 1, 铜龟 2, 铜鹤 2, 铜鼎 18",
+      "lahde": "1",
+      "huom": "pelissä tarkistamatta"
+    }
+  ]
+}
