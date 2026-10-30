@@ -1,0 +1,18 @@
+{
+ "kuva": "reitti-pohjakartta.png",
+ "kuvaus": "Juoksupelin reitti, akselikehys x/z",
+ "px_per_m": 1.4,
+ "x0": -500,
+ "x1": 500,
+ "a0": -1000,
+ "a1": 680,
+ "marginaali_vasen_ylä": [
+  80,
+  120
+ ],
+ "koko": [
+  1560,
+  2802
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}
