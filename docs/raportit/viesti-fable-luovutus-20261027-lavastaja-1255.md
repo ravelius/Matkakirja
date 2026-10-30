@@ -1609,3 +1609,13 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
 - SEURAAVAKSI: PT:n kuittaus → `python3 K/tyokalut/paketti_v96.py` (valmis, EI ajettu: v95 + rakennukset-v82 + c2-v21) → SHA256SUMS-tiiviste PT:lle;
   PK: kansiot "kielletty-rakennukset-v82/" ja "kielletty-c2-v21/". Huom: runko nyt 3aac603dc (v81-nimet).
 - Muu jono: 03-vyön UV (PT), A6 (Codexin GLB).
+
+## LISÄYS 117 klo 05.1x (30.10.): v96 KOOTTU MUTTA KORVAUTUU; LAIKUT KORJATTU v183, PAKETTI v97 VALMIINA — ALOITA TÄSTÄ
+- PT: lappeet v101 HYVÄKSYTTY (KK) → paketti v96 ajettu (SHA256SUMS 4c2fb2ec), PT:lle. Pari myös rungolla 3aac603dc (juuret v102/v103, v95-nimet): lokit/havainne-editori-20261030-050008 / -050225.
+- KK: alaräystään kulman laikut z-fightingia? EI: Taihedianissa ei päällekkäisiä kattopintoja, taustassa ei kopiota. Laikut = lähes vaakasuorat V4_gold-kolmiot
+  (|n.y| 0,97–0,99, nousevat kulmat) keskellä kattoa → lappe_uv.py v2: liita() siirtää kattoon rajautuvat loivat kultakolmiot (|n.y| ≥ 0,9, ≥ 2 yhteistä kärkeä,
+  toistuvasti) katon primitiiviin; lappe paikasta (rajauslaatikon lähin reuna = aumaharja 45°), normaali vain jos > 60° erossa. 30 612 kolmiota liitetty
+  (Meridiaaniportti 8 023, Baohedian 2 641 …); Blenderissä harjat säilyvät. aja_v183_lappeet.zsh → K/lappeet-v183/kielletty-rakennukset-v83 + kielletty-c2-v22.
+- Juuri H/juuri-pk7-v104 (v103 + v83/c2-v22 kaikilla nimillä). Pari v102→v104 (3aac603dc): lokit/havainne-editori-20261030-050810/06/lappeet-v102-v104-lahikuva.png → PT.
+- SEURAAVAKSI: PT:n kuittaus → `python3 K/tyokalut/paketti_v97.py` (valmis, EI ajettu: v96 + rakennukset-v83 + c2-v22) → tiiviste PT:lle; v96 EI JU:lle.
+  PK: kansiot "kielletty-rakennukset-v83/", "kielletty-c2-v22/". Muu jono: 03-vyön UV (PT), A6 (Codexin GLB).
