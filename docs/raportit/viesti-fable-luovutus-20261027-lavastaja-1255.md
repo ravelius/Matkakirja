@@ -1725,3 +1725,35 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   (2) Sivuhallit 3D: kortti/sivuhalli-*-codex-v2.png (+ sivuhallit-mitat.json): harja 14,7 m (nyt 19,2), pylväät 6,7 m, leveys 21,0 m, kaksi kattoa.
   Jokaisesta ortovertailu (orto_glb.py/vertaa.py; kohteet f = Taihemen) ja pari PT:lle. Taihedian myöhemmin omistajan hyväksynnän jälkeen.
   Mallina meridiaani_piirros.py: kehys(), y-kuvaus paloittain, laatikon leikkaus (miinus_laatikko), uudet pinnat UV-sovituksella.
+
+## LISÄYS 129 (30.10. 12.5x): TAIHEMEN + SIVUHALLIT v191 TEHTY, PARIT SOVITETTAVA; ENSIN MERIDIAANIN KORJAUS — LUOVUTUS (konteksti 34 %) — ALOITA TÄSTÄ
+- JÄRJESTYS (PT 12.5x): 1) Meridiaaniportin korjaus (KK palautti parin 122828/06, PT 12.4x), 2) Taihemen ja sivuhallit SOVITETUIN parein,
+  3) Taihedian 3D (OMISTAJAN PÄÄTÖS 12.36: julkisivu v3 hyväksytty: kortti/taihedian-*-codex-v3.png; terassi 3 tasoa 3,1 / 5,3 / 8,13 m, kaiteet,
+  御路-ramppi ±1,5, keski- ja sivuportaat ±10,5…16,0, halli 63,96 m, pylväät ja räystäät [K]-korkeuksiin, nyt 2,9–3,6 m liian korkealla).
+- 1) MERIDIAANI (K/tyokalut/meridiaani_piirros.py, ketju aja_v190_piirros.zsh → tee v192 omaan kansioon):
+  a) sivukäytävien sisäseinissä kivijalan ja rappauksen tekstuuri pystyraitoina (peli-raaka x 940–1110 ja 1650–1820, y 840–990): tunnelin
+     seinät (taso_u, laji 'wy') saavat UV:n UVK-matriisista, joka on sovitettu julkisivulle (u, y) → todennäköisesti suunta/mittakaava väärin
+     (myös vanhojen sivuseinien UV voi näkyä). Tavoite: harmaassa kivijalassa vaakasuorat kivikerrokset, punainen rappaus tasainen
+     (docs/raportit/kaappaukset/omistaja-20261030/portti06-sivuaukko-havainne.png).
+  b) keskiaukko: koko 5,4 × 5,4 -suorakaide auki, holvi syvemmällä tunnelin sisällä (nyt suun takaseinän kaarenpuoliskot näkyvät punaisena
+     seinänä 1,7 m:n syvyydessä). Helpoin: HOLVI_SISA 1,0 → esim. 4–5 m (suorakaiteinen suu syvemmälle). Jos valokuvan mukaan aukko on
+     holvikaari, perustele PT:lle.
+  Uusi pari 06 (pari-skripti LISÄYS 128) PT:lle.
+- 2) TAIHEMEN v191 (OMISTAJAN PÄÄTÖKSET 12.28): K/tyokalut/taihemen_piirros.py (+ _json.py), sivuhalli_piirros.py, ketju aja_v191_taihemen.zsh
+  → K/taihemen-v191/kielletty-rakennukset-v91 (= v90 + f-taihemen + h-zhongyoumen/h-zhongzuomen) + kielletty-c2-v30 (= c2-v29 + Taihemenin
+  kaiteeton, 1063-portaat, c2-sijoitukset r=1). Juuri H/juuri-pk7-v113 (= v112, linkit v83/c2-v22 → v91/c2-v30). Ketju ajettu sivuhallien kanssa.
+  Taihemen: y-kuvaus [3,9 10,3 12,25 14,2 16,82 23,62] → [3,9 8,0 9,8 14,3 15,45 23,8]; pylväät ±3,3/8,6/13,9/19,2/22,8 → ±3,95/9,34/14,49/19,67/22,91;
+  portaat keski ±5,5→±3,3 (御路 ±1,85 jäykkä), sivut ±(14,5…19,5)→±(5,4…8,85); leijonat ±11→±19; jalustan pitkien sivujen kaide (lod0/lod1)
+  ja C2-palat 1061/1062/1064 uudelleen jaolla ≈1,47 uusien aukkojen väliin; porraspylväät ja 1063 siirtyvät reunan mukana. Malli on
+  paikallisessa kehyksessä symmetrinen, 0,34 m akselista länteen (jätetty, alle ±1 m).
+  Sivuhallit: x 21,0/22,075 keskikohdan ympäri + pylväät jakoon 2,4·5,0·6,1·5,0·2,4; y [2,5 7,93 9,59 11,24 13,46 19,24 20,34] → [2,5 6,7 8,15 10,3 10,9 14,7 15,7].
+  ORTOVERTAILU: proto-3d/lokit/orto-glb-v191-20261030-1254/ (LUE.md; taihemen/ ja sivuhalli/ *-paalle.png, *-reunat.png, *-ero.txt, vanha-*-ero.txt):
+  Taihemen julkisivu IoU 0,44 → 0,67, pohja 0,86; sivuhalli julkisivu 0,28 → 0,63, pohja 0,88 → 0,84. Tehty orto_glb.py + vertaa.py
+  (piirros-png:n json = piirrokset-20261030/<nimi>.json kopioituna nimelle *-codex-v3.json / *-codex-v2.json). PT 12.3x: PK:n orto.sh toimii taas
+  b7:llä (haara pelikoodari/orto-216) → aja vertailu sillä uudelleen.
+  PARIT: Taihemen 124833/03 (v112) / 125108/03 (v113), kamera PAIKKA_03 "8.6 -252 -2.03", TESTIKAMERA_03 "6 12 0 60" → PT 12.5x HYLKÄSI:
+  sovittamaton (keisari 0,05 vs havainne 0,12, kuvakulma eri: havainteessa 03 Taihedian aukion takana). Tee uusi pari sovitetulla kameralla
+  (keisari 0,12, sama horisontti kuin havainteessa 03) ja liitä ortovertailun päällekkäiskuvat (julkisivu + pohja) PT:lle. Sama sivuhalleille:
+  sivuhallien pari 03s-kameralla (PAIKKA_03 "6.43 -203 -2.03", TESTIKAMERA_03 "4 6 0 60") oli ajossa luovutushetkellä (uusin lokit/havainne-editori-*
+  13.0x) – ei lähetetty; tarkista sovitus samoin.
+- Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v91 + c2-v30 (sisältää myös Meridiaanin v90:n; Meridiaanin korjaus tekee v92:n → ketjuta).
