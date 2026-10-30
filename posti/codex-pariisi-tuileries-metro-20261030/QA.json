@@ -1,0 +1,476 @@
+{
+  "status": "PASS_WITH_NONBLOCKING_STYLE_NOTES",
+  "checkedAt": "2026-10-30T19:58:14.337722+00:00",
+  "tasks": [
+    1320,
+    1321
+  ],
+  "imageGenerationTool": "built-in image_gen",
+  "generationCalls": 2,
+  "generationCallsPerAsset": 1,
+  "completeNewGeneration": true,
+  "ownerScreenshotVerified": false,
+  "ownerScreenshotLimitation": "Referenced screenshot absent at pinned current main; sender notified. Compared with all three explicitly named primary style assets.",
+  "rootVisualReview": {
+    "fullSizeLightAndDark": true,
+    "mapSize256LightAndDark": true,
+    "acceptedForDelivery": true
+  },
+  "evidence": {
+    "independent-review": {
+      "schema": "paris-miniatures-independent-review-v1",
+      "checked_at": "2026-10-30T19:57:55.958646+00:00",
+      "status": "PASS_WITH_NONBLOCKING_STYLE_NOTES",
+      "approved_for_delivery": true,
+      "owner_acceptance": "NOT_ASSERTED",
+      "game_integration": "NOT_ASSERTED",
+      "scope": "Read-only image/style/architecture-reference and output-file audit. Only independent-review.json/md written. No generation, retouching, image mutation or external delivery.",
+      "orders_fully_read": [
+        "order-0c7afb57.md",
+        "order-2249df50.md"
+      ],
+      "references_viewed": [
+        {
+          "file": "pariisi-palais-garnier.webp",
+          "sha256": "139cfd529177d66f38cd205591c01d977584370c3b5837eb394572b7faf6aa01"
+        },
+        {
+          "file": "pariisi-notre-dame.webp",
+          "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73"
+        },
+        {
+          "file": "pariisi-concorden-aukio.webp",
+          "sha256": "54c816edbca8c91324c875286229e520452844bb18f972ee60d5365e6c4c5ed2"
+        },
+        {
+          "file": "main-pariisi-palais-garnier.webp",
+          "sha256": "a443ea465b4d64e6bcc29a9a58b2549c669b58837c9e420924570b316889b38c"
+        },
+        {
+          "file": "main-pariisi-notre-dame.webp",
+          "sha256": "9fc7fb79fc416513f1d93ee2ca0b94d82b401e8cd92dd6e5a9e3621bec1b9d8e"
+        },
+        {
+          "file": "main-pariisi-concorden-aukio.webp",
+          "sha256": "d8fd791738e0f796b513a2398cf4bb224d063145417e7c8500089dd9cc01461b"
+        },
+        {
+          "file": "pariisi-metron-sisaankaynti.webp",
+          "sha256": "a02fcbe61981cd0fb7aa92576a8f50156725b372ee97c8b01f33446b72ac6ba3"
+        },
+        {
+          "file": "tuileries-baldus-1857-1859.jpg",
+          "sha256": "b160cb9a5536a0af24ef3d5331598dc1e1932d25ed635ba3fcf575758f083d03"
+        },
+        {
+          "file": "Dominey-Abbesses-Hotel-de-ville-480x309.jpg",
+          "sha256": "b34425d051dd02412851cf31adcf1ff2be27eb142b1e26da5f0efeacaf0121b4"
+        },
+        {
+          "file": "Dominey-Abbesses-vue-face1-357x480.jpg",
+          "sha256": "eecf04e887e01c2c4522d904763bc6dd0a81119605508538d52240003524fb2d"
+        }
+      ],
+      "owner_screenshot_available": false,
+      "screenshot_limitation": "Exact owner screenshot unavailable as documented by root; review uses all three explicitly specified primary style references.",
+      "criteria": {
+        "format": "1024×1024 WebP with real alpha",
+        "composition": "Whole centered subject, no clipping; readable at256px on light and dark backgrounds",
+        "style": "Colored hand-drawn linework and shading, restrained palette, oblique architectural view",
+        "excluded_elements": "No frame, sky, smoke, scenic background or unrelated landscape",
+        "tuileries": "Intact palace before1871, long façade and domed central pavilion consistent with provided Baldus panorama",
+        "metro": "Glazed Guimard Abbesses édicule with fan canopy, extended glazed roof, open sides, Art Nouveau ironwork and stairwell"
+      },
+      "files": [
+        {
+          "id": "tuileries",
+          "relative_delivery_path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+          "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52",
+          "bytes": 280936,
+          "format": "WEBP",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "source_candidate": "candidates/tuileries-v1-source.png",
+          "source_candidate_sha256": "d0cd125607451aa0104de8aa1a43ef44df933d1b477a2040361fb151e3408cd4",
+          "generation_attempt": 1,
+          "generation_log_source_hash_match": true,
+          "alpha": {
+            "fully_transparent_pixels": 902805,
+            "fully_opaque_pixels": 1135,
+            "partially_transparent_pixels": 144636,
+            "bbox_any_alpha": [
+              48,
+              307,
+              963,
+              744
+            ],
+            "bbox_alpha_gt16": [
+              64,
+              374,
+              960,
+              668
+            ],
+            "bbox_alpha_ge128": [
+              65,
+              375,
+              960,
+              667
+            ],
+            "core_center_offset_px": [
+              0.0,
+              9.0
+            ],
+            "all_outer_48px_alpha_zero": true,
+            "canvas_edge_alpha_zero": true,
+            "real_transparency_in_internal_openings": false
+          },
+          "independent_export_reproduction": {
+            "method": "Recomputed proportional928px contain +48px alpha padding with sharp in memory; compared decoded RGBA to delivery WebP",
+            "alpha_pixel_differences": 0,
+            "visible_color_channel_differences": 0,
+            "qa_rgba_png_exact_match": true
+          },
+          "previews_viewed": [
+            {
+              "file": "qa/tuileries-light.png",
+              "sha256": "01951ba9fec8f9e87cb9b29e9e8abaf6247a6ecfd0b48a1da6dd7f9c87ce8fa8"
+            },
+            {
+              "file": "qa/tuileries-dark.png",
+              "sha256": "13bbec009fc77c021ea5e6030495d8fe25d92141749215508669332946406760"
+            },
+            {
+              "file": "qa/tuileries-256-light.png",
+              "sha256": "086e7da08d8ff0f133de4f809a6139b70d72907a64e27ace340503ebe739f048"
+            },
+            {
+              "file": "qa/tuileries-256-dark.png",
+              "sha256": "f7446d40b66c739792cb07b1cd47daff08f5cba17de5b596f5cef1744c678005"
+            }
+          ],
+          "no_visible_clipping": true,
+          "no_visible_background_halo_on_light_or_dark": true,
+          "no_frame_sky_smoke_landscape": true,
+          "thumbnail_readability": "PASS at256×256 on both backgrounds",
+          "visual_status": "PASS",
+          "architecture_assessment": "Provided Baldus panorama and candidate agree in overall long continuous façade, dominant central domed pavilion, flanking roof masses and intact pre-fire appearance. Drawing details are illustrative; this is not a measured historical reconstruction."
+        },
+        {
+          "id": "metro",
+          "relative_delivery_path": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp",
+          "sha256": "1a6b933a4778821dadbbdd9328ee3d58c6b5288964c5e08eb1dd4beec1458d14",
+          "bytes": 761988,
+          "format": "WEBP",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "source_candidate": "candidates/metro-v1-source.png",
+          "source_candidate_sha256": "8835aeedade73ebf7f7bdd3b1ad65258c3071789f4b9bb602c1b402825628c5e",
+          "generation_attempt": 1,
+          "generation_log_source_hash_match": true,
+          "alpha": {
+            "fully_transparent_pixels": 640372,
+            "fully_opaque_pixels": 1632,
+            "partially_transparent_pixels": 406572,
+            "bbox_any_alpha": [
+              48,
+              64,
+              961,
+              976
+            ],
+            "bbox_alpha_gt16": [
+              119,
+              109,
+              949,
+              918
+            ],
+            "bbox_alpha_ge128": [
+              120,
+              109,
+              948,
+              918
+            ],
+            "core_center_offset_px": [
+              22.0,
+              1.5
+            ],
+            "all_outer_48px_alpha_zero": true,
+            "canvas_edge_alpha_zero": true,
+            "real_transparency_in_internal_openings": true
+          },
+          "independent_export_reproduction": {
+            "method": "Recomputed proportional928px contain +48px alpha padding with sharp in memory; compared decoded RGBA to delivery WebP",
+            "alpha_pixel_differences": 0,
+            "visible_color_channel_differences": 0,
+            "qa_rgba_png_exact_match": true
+          },
+          "previews_viewed": [
+            {
+              "file": "qa/metro-light.png",
+              "sha256": "309870345a16df60eba17d91636c69cce0ef65d626f8cec8449054b4f4afbd6e"
+            },
+            {
+              "file": "qa/metro-dark.png",
+              "sha256": "c8f18ae8043f1c0aa57ee900e2aa872b036261b73c4d7e46eaf4378b69a135a1"
+            },
+            {
+              "file": "qa/metro-256-light.png",
+              "sha256": "0046d3fd85106837f585b4450868785377b55d19943d3b8c166824c60a478601"
+            },
+            {
+              "file": "qa/metro-256-dark.png",
+              "sha256": "79d0495cf987a59676c0304d9917b069a878d0376c51d3c6a57ba187232b7de1"
+            }
+          ],
+          "no_visible_clipping": true,
+          "no_visible_background_halo_on_light_or_dark": true,
+          "no_frame_sky_smoke_landscape": true,
+          "thumbnail_readability": "PASS at256×256 on both backgrounds",
+          "visual_status": "PASS",
+          "architecture_assessment": "Matches the provided Dominey views in open glazed édicule type, curved fan-shaped front canopy, covered longitudinal roof, slender cast-iron supports, decorative balustrades and descending stairwell. METROPOLITAIN lettering is readable. Clearly distinct from the old uncovered gateway."
+        }
+      ],
+      "nonblocking_style_notes": [
+        {
+          "id": "STYLE-01",
+          "asset": "tuileries",
+          "finding": "The palace is slightly more finely rendered and architecturally regular than the looser primary references. Its elongated façade gives a low vertical silhouette; at256px the small window details merge while the main silhouette remains clear.",
+          "disposition": "Acceptable for delivery; recipient can assess visual weight alongside other map miniatures. No distortion or cropping recommended."
+        },
+        {
+          "id": "STYLE-02",
+          "asset": "metro",
+          "finding": "Ironwork contours are somewhat darker/heavier and modeled shading slightly stronger than the primary references; restrained sage/stone colors and hand-drawn treatment remain compatible.",
+          "disposition": "Acceptable for delivery; minor contrast difference for recipient style review."
+        }
+      ],
+      "blocking_findings": [],
+      "delivery_path_guard": {
+        "new_tuileries_miniature_path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+        "metro_replacement_path": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp",
+        "protected_wonder_path": "assets/kartat/ihmeet/ihme-tuileries.webp",
+        "protected_file_modified_by_reviewer": false,
+        "protected_file_in_candidate_delivery": false
+      },
+      "preview_caveat": "Direct transparent WebP previews may expose RGB values under zero alpha as colored streaks. Alpha-correct light/dark composites were inspected and show no such visible defects; hidden RGB is not counted as an image artifact."
+    },
+    "export-verification": {
+      "checkedAt": "2026-10-30T19:56:11.932Z",
+      "files": [
+        {
+          "id": "tuileries",
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/candidates/tuileries-v1-source.png",
+          "sourceDimensions": [
+            1774,
+            887
+          ],
+          "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/delivery/assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+          "outputDimensions": [
+            1024,
+            1024
+          ],
+          "format": "webp",
+          "lossless": true,
+          "transparentOuterPaddingPx": 48,
+          "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+          "hiddenRGBChannelsCanonicalizedByWebP": 71155,
+          "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+        },
+        {
+          "id": "metro",
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/candidates/metro-v1-source.png",
+          "sourceDimensions": [
+            1254,
+            1254
+          ],
+          "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/delivery/assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp",
+          "outputDimensions": [
+            1024,
+            1024
+          ],
+          "format": "webp",
+          "lossless": true,
+          "transparentOuterPaddingPx": 48,
+          "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+          "hiddenRGBChannelsCanonicalizedByWebP": 186182,
+          "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+        }
+      ]
+    },
+    "alpha-file-checks": [
+      {
+        "file": "output/pariisi-tuileries-metro-20261030/delivery/assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+        "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 280936,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 902805,
+        "transparentFraction": 0.8609819412231445,
+        "opaquePixels": 1135,
+        "semiTransparentPixels": 144636,
+        "alphaBounds": [
+          48,
+          307,
+          963,
+          744
+        ],
+        "visibleAlphaOver16Bounds": [
+          64,
+          374,
+          960,
+          668
+        ],
+        "all48pxOuterMarginsTransparent": true,
+        "visibleBoundsCenterOffsetPx": [
+          0.0,
+          9.0
+        ]
+      },
+      {
+        "file": "output/pariisi-tuileries-metro-20261030/delivery/assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp",
+        "sha256": "1a6b933a4778821dadbbdd9328ee3d58c6b5288964c5e08eb1dd4beec1458d14",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 761988,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 640372,
+        "transparentFraction": 0.6107063293457031,
+        "opaquePixels": 1632,
+        "semiTransparentPixels": 406572,
+        "alphaBounds": [
+          48,
+          64,
+          961,
+          976
+        ],
+        "visibleAlphaOver16Bounds": [
+          119,
+          109,
+          949,
+          918
+        ],
+        "all48pxOuterMarginsTransparent": true,
+        "visibleBoundsCenterOffsetPx": [
+          22.0,
+          1.5
+        ]
+      }
+    ],
+    "source-verification": {
+      "attachments": [
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-1949/pariisi-palais-garnier.webp",
+          "sha256": "139cfd529177d66f38cd205591c01d977584370c3b5837eb394572b7faf6aa01",
+          "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/pariisi-palais-garnier.webp",
+          "bytes": 148298,
+          "blobSha": "f425fd0ee002d9f3325a517b44a28810a6b3e4ca",
+          "sha256Verified": true
+        },
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-1949/pariisi-louvre.webp",
+          "sha256": "73e2d89ffdcb3a3fb0264c9fa9601dbb0c27fe3e3004a9e984bfa014e83b79d1",
+          "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/pariisi-louvre.webp",
+          "bytes": 87502,
+          "blobSha": "ab8e24409d779096b80f798aadd2c7180d9b7781",
+          "sha256Verified": true
+        },
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-1949/pariisi-notre-dame.webp",
+          "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73",
+          "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/pariisi-notre-dame.webp",
+          "bytes": 102432,
+          "blobSha": "cbabbe4717d5487da9bfc38337df81a1b7a00bbf",
+          "sha256Verified": true
+        },
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-1949/pariisi-metron-sisaankaynti.webp",
+          "sha256": "a02fcbe61981cd0fb7aa92576a8f50156725b372ee97c8b01f33446b72ac6ba3",
+          "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/pariisi-metron-sisaankaynti.webp",
+          "bytes": 185734,
+          "blobSha": "78689e7ee7e59bf44ff92645eddf076fcea992ee",
+          "sha256Verified": true
+        },
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-1949/pariisi-eiffel-torni.webp",
+          "sha256": "24746ebf52f1d938319203b0c2732df98e2a29f32adba1662d19a5f1c8155fac",
+          "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/pariisi-eiffel-torni.webp",
+          "bytes": 69732,
+          "blobSha": "aee51fcda24d559ef824be02a99ecf163bb33a89",
+          "sha256Verified": true
+        },
+        {
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-1949/pariisi-concorden-aukio.webp",
+          "sha256": "54c816edbca8c91324c875286229e520452844bb18f972ee60d5365e6c4c5ed2",
+          "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/pariisi-concorden-aukio.webp",
+          "bytes": 94670,
+          "blobSha": "416a94e93cb394d29873892b8e873022a4a45187",
+          "sha256Verified": true
+        }
+      ],
+      "sourceVersions": [
+        {
+          "commit": "0c7afb570748f1961bec147c58142cde7e88832c",
+          "path": "posti/fable-codex-pariisi-tuileries-metro-20261030.md",
+          "blobSha": "16a11df8c7707479ac2df32d4fb9ceee10f46d9f"
+        },
+        {
+          "commit": "2249df50c9e1f3fd73ccc7500cf7cded73640598",
+          "path": "posti/fable-codex-pariisi-tuileries-metro-20261030.md",
+          "blobSha": "dd55c8645eddf84ba37f68dad155474b818c96cd"
+        }
+      ],
+      "mainCommit": "825e3dd72b6e36c78c1ca0b202e24a810ef14575",
+      "requestedScreenshot": "docs/raportit/kaappaukset/omistaja-20261030/2142-pariisi-vaara-tyyli-rajaus.png",
+      "screenshotStatus": "Not found in pinned main complete recursive tree or file history; exact contents request HTTP404; local targeted search absent.",
+      "mainScreenshotAvailable": false
+    },
+    "main-model-verification": {
+      "mainCommit": "825e3dd72b6e36c78c1ca0b202e24a810ef14575",
+      "models": [
+        {
+          "path": "assets/kartat/miniatyyrit/pariisi-palais-garnier.webp",
+          "blob": "abfdbd38f0e009dfad84a6407db320c53ff86c41",
+          "sha256": "a443ea465b4d64e6bcc29a9a58b2549c669b58837c9e420924570b316889b38c",
+          "bytes": 470832,
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/main-pariisi-palais-garnier.webp"
+        },
+        {
+          "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+          "blob": "39ea69f1b59256a99c585b6762961e8f48f8a9f8",
+          "sha256": "9fc7fb79fc416513f1d93ee2ca0b94d82b401e8cd92dd6e5a9e3621bec1b9d8e",
+          "bytes": 318866,
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/main-pariisi-notre-dame.webp"
+        },
+        {
+          "path": "assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp",
+          "blob": "e2f6d48bfecbeee80d480f8d6957080f173ee412",
+          "sha256": "d8fd791738e0f796b513a2398cf4bb224d063145417e7c8500089dd9cc01461b",
+          "bytes": 277398,
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileries-metro-20261030/references/main-pariisi-concorden-aukio.webp"
+        }
+      ]
+    }
+  },
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
