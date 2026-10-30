@@ -2019,3 +2019,10 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   ehdota PT:lle mitkä jäävät vanhoiksi. 3) ladonta v3 = v2:n polut + uudet, leikkaus/C3/C2 kuten aja_osasarja_v2.zsh (uusi aja_osasarja_v3.zsh),
   ortot osasarja_v2_kohdat.zsh:lla, kolmiot _lahteet.py, paketti → PT (≤ 3 riviä) + kopio PK:lle.
 - Ei taustaajoja käynnissä.
+
+## LISÄYS 146 (30.10. 18.3x): PT – OSASARJA v3:N LISÄVAATIMUS (PK:n huoli) + v2-paketin korjaus
+- v3:ssa kaukonipuille osat-lod2 myös SEINILLE, KULMILLE JA PÄÄDYILLE (v2:n LOD1-kaukoniput yhteensä ≈ 785 000 kolmiota, vanhan taustan kaukomuurit
+  muutama tuhat) → yhtä kevyet kuin vanha tausta (esim. laatikko/kortti: red-runko + friisivyö + katekiila, muutama kolmio/osa). Nyt osat-lod2.glb:ssä
+  vain kaiteet (osasarja_v1.rakenna_lod2). Kooste-LUE.md:hen kaukonippujen kolmiot ENNEN ja JÄLKEEN.
+- v2-paketti: JU:n kuiva-ajo hylkäsi alikansion LAHTEET.md:n → poistettu, SHA256SUMS uusittu 60c0547ffea6 (106 tied.); paketti_osasarja_v2.zsh poistaa
+  jatkossa alikansioiden .md:t. JU vie.
