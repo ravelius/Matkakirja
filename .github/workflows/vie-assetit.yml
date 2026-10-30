@@ -108,8 +108,10 @@ jobs:
           while IFS=$'\t' read -r laji kansio; do
             [ -d "$kansio" ] || { echo "::error::$kansio puuttuu"; exit 1; }
             # Tuntematon pääte tarkoittaisi hiljaa väärää Content-Typeä
-            # (tai ohitettua tiedostoa), joten se kaataa ajon.
-            muut=$(find "$kansio" -type f ! -name '*.webp' ! -name '*.jpg' | head -5)
+            # (tai ohitettua tiedostoa), joten se kaataa ajon. Kansion ohje
+            # LUEMINUT.md ei ole kuva eikä mene ämpäriin (sync ottaa vain
+            # webp/jpg), joten se sallitaan (kaatoi ajon 30.10.2026).
+            muut=$(find "$kansio" -type f ! -name '*.webp' ! -name '*.jpg' ! -name 'LUEMINUT.md' | head -5)
             if [ -n "$muut" ]; then
               echo "::error::$kansio sisältää muuta kuin webp/jpg:"
               echo "$muut"
