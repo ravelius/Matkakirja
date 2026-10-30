@@ -2026,3 +2026,17 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   vain kaiteet (osasarja_v1.rakenna_lod2). Kooste-LUE.md:hen kaukonippujen kolmiot ENNEN ja JÄLKEEN.
 - v2-paketti: JU:n kuiva-ajo hylkäsi alikansion LAHTEET.md:n → poistettu, SHA256SUMS uusittu 60c0547ffea6 (106 tied.); paketti_osasarja_v2.zsh poistaa
   jatkossa alikansioiden .md:t. JU vie.
+
+## LISÄYS 147 (30.10. 18.3x): OSASARJA v3 VALMIS → PT:N KUITTAUS ODOTTAA (kopio PK:lle) — ALOITA TÄSTÄ
+- Paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v3-vienti-20261030, SHA256SUMS 77f02f0fc384 (106 tied., 438 Mt): kielletty-osasarja-v3,
+  tausta-v81, muurikate-v29, c2-v26. Kooste proto-3d/lokit/kooste-osasarja-v3-20261030/LUE.md (kuvat, luvut). Ketju K/tyokalut/aja_osasarja_v3.zsh
+  (ajo K/osasarja-v3:ssa, ~4 min; tasot-vaihe kommentoitu, analyysi/tasot.json valmiina). Paketti: tyokalut/paketti_osasarja_v3.zsh + juuren
+  LAHTEET.md = LAHTEET-paketti.md + kielletty-osasarja-v3/LAHTEET.md (alikansion .md poistetaan paketista).
+- LOD2 (LISÄYS 146 tehty): tyokalut/osasarja_v3_lod2.py (seinä 22, kulma 38, pääty 39 kolmiota; pinta C3_muurikate_kauko). Muurien kaukoniput
+  LOD1 ≈ 1,14 M → LOD2 ≈ 65 000. Vesisylkijällä ei LOD2:ta. Kuvat tyokalut/osasarja_v3_lod2_kuva.py.
+- Jäljelle jääneet muurit: osasarja_v3_tasot.py (pinnoittain) → osasarja_v3_ryhmat.py: A 52 jaksoa 2 050 m (osat -t80, paksuus 0,80, päätypilari 1,20),
+  C 7 jaksoa 198 m (-t80-aita: punainen 0–4,30 + konsoli + C3), D 15 jaksoa ~92 m jää vanhaksi. osasarja_v3_ladonta.py (polut 'muuri3-',
+  keskilinja mitattuun keskikohtaan, profiilit kivijalka-12 …), osasarja_v3_ladonta_json.py, osasarja_v3_leikkaa.py (muuri3: runko ±0,58, kate ±0,80
+  keskeltä), osasarja_v3_c3c2.py (C3 2455 → 61). osasarja_v3_osat.py tekee muunnelmat (MUUNNELMAT, PH). LOD0 +3,1 %.
+- Ortot: tyokalut/osasarja_v3_kohdat.zsh (lisäkohdat a20, a92, a77, c135). Ei taustaajoja käynnissä.
+- SEURAAVAKSI: PT:n kuittaus → JU vie; jos PT/PK palauttaa, korjaa ja aja ketju + paketti uudelleen (uusi kansio, vanha nimi varattu).
