@@ -1891,3 +1891,13 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
    vertaa VS:n 145925/03:n skenaario.txt:n "valo sijoita"/"testikamera"-rivejä omiin.)
 3) Taihemenin C1-sivurivi (LISÄYS 136 kohta 3).
 Paketti v98 (Meridiaani) vasta KK:n Kyllän jälkeen.
+
+## LISÄYS 138 (30.10. 15.2x): PT 15.2x – ENSIMMÄISEKSI ennen LISÄYS 137:n jonoa (KK pidätti Meridiaanin kortin)
+1) KIVIJALAN KORKEUS: 3,0 m (meridiaani_piirros.py KIVI = 3.0) on piirroksessa [A]-arvio ("varmennettava ennen 3D-työtä"). Lähdekuvissa
+   (commons/orig-Meridian_Gate_center.JPG, wumen-center*) punainen seinä alkaa ihmisten silmien tasolta (~1,6 m) ja lipunmyyntikojun räystään alta
+   → kivijalka ≤ ~1,6 m. Mittaa todellinen korkeus kuvasta, jossa seinän alaosa ja mittakaava (ihminen/ovi) näkyvät; kirjaa lähde + laskelma
+   LUE.md:hen; korjaa malli (ulkopinta + käytävät): KIVI env-muuttujaksi meridiaani_piirros.py:hyn ja aja aja_v195_meridiaani.zsh uutena versiona
+   (huom. siivet/U-jalusta v189:stä: tarkista myös niiden kivijalan korkeus, jalusta_lohkokivi-pinnat 0–3 m).
+2) PIELIEN PYSTYKIVET eivät erotu VS:n parissa 145925/06 → näkyviksi (leveys ja sävyero havainteen mukaan; nyt 0,5 m V4_marmori syvennyksen
+   takaseinässä, PYSTYKIVI-muuttuja). Uusi pari 06 pohjana VS 4b0476ca0 (REF=4b0476ca0) + lähikuva sivuaukosta → PT ≤ 3 riviä.
+Sitten LISÄYS 137 (laatat, kamera, C1-sivurivi).
