@@ -3262,3 +3262,7 @@ Omistaja 30.10. klo 21.42 (kuvat docs/raportit/kaappaukset/omistaja-20261030/214
 ## JUNA 216: KAIKKI SAMAAN JUNAAN, JULKAISU KUN VALO VALMIS (30.10.2026 klo 22.28)
 
 Omistaja 30.10. klo 22.27 (KK:n kautta): 'Tee kaikki samaan junaan ja julkaise vasta kun valo valmis.' Valo, STP/Unity 6.7 -kokeet, Pariisin kartta sekä Tuileries ja metro menevät junaan 216 (ei junaa 217). TestFlight vasta, kun valo on valmis ja omistajan hyväksymä.
+
+## OMISTAJAN YÖVALTUUTUS KK:LLE (30.10. klo 22.59) (30.10.2026 klo 23.00)
+
+Omistaja KK:n ikkunassa klo 22.59 (sanatarkasti): 'Menen nukkumaan. Saat hyväksyä puolestani kaikki'. Kuten 26.10. 22.47: omistajan seuraavaan viestiin asti KK päättää omistajalle kuuluvat kysymykset ja kuvien hyväksynnät omistajan aiempia sanoja vasten, merkinnällä 'KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA klo …'; ei ostoja, lupa-asetuksia, avaimia, tunnuksia eikä CLAUDE.md-muutoksia. Roolien KYSYMYS-rivit KK:lle heti, ei yöoletusta omistajan asioissa. KK kokoaa aamulla listan yön päätöksistä. Koskee myös avointa Tuileries-kysymystä (rauniopiirros vai ehjä palatsi + nimi).
