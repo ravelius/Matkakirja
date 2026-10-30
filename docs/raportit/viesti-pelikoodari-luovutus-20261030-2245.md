@@ -45,3 +45,8 @@ Edellinen luovutus: -20261030-2210 (+ lisäys). Muistin tilatiedosto: pelikoodar
 ## Huomiot
 - Linja 2: VS:n varjodiagnoosi 2 (a855d9fb6) menee PT:n mukaan edelle. Ilmoitin VS:lle klo 22.45, että linja on vapaa.
 - Muut junan 216 asiat ennallaan: osasarja-v5 a2d9e0c7b + esto-v23 NS:llä.
+
+## LISÄYS 22.5x (PT KIIRE, sitova)
+- Levy 85 Gi ja laskee: **ei uusia Unity-ajoja ennen PT:n lupaa** (Postivahti: ei ennen kuin levy > 95 Gi). Minulla ei ollut ajoja käynnissä (pid 43303 päättyi jo klo 22.43, exit 143).
+- VS:n diagnoosi: editorikaappaus (esikatselu.sh / kuva3d) ei piirrä varjokarttaa eikä leivottua valoa lainkaan. Siksi valo1/0-parit ovat identtisiä, ja **kerroin 3 -koe (kohta 1) ei kerro mitään ennen VS:n korjausta. Älä aja sitä.** Odota VS:n korjausta ja PT:n lupaa.
+- Kuja 02:n seinävika (kohta 2a) selvitetään **koodista käsin**, ei editoriajoilla.
