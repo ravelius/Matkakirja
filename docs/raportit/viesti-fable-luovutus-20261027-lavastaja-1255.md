@@ -1661,3 +1661,13 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
 - Havainto: havainteessa portin jalusta ja aukot ovat ~1,2 × suhteessa salirakennukseen (aukko 8,9 vs 7,6 m, sokkeli 3,9 vs 3,0 m
   samalla keisarilla). Kokeilupari 14 m lähempää (080449/06) ei auta: sali kasvaa liikaa (räystäät 0,17/0,13 vs 0,27). Ero on
   havainteen mittasuhteissa, ei kamerassa; todelliset mitat pidetty.
+
+## LISÄYS 122 (30.10. 08.1x): v186 suorat sivutunnelit + syvennykset + tunnelien kivisokkeli (PT 08.0x)
+- Kääntö pois ("edestä kolme, takaa viisi": etujulkisivun kolme aukkoa suoria). meridiaani_tunnelisokkeli.py: tunnelien seinät alle 3 m
+  sokkelikiveä (V4_jalusta_lohkokivi). aja_v186_suorat.zsh → K/suorat-v186/kielletty-rakennukset-v86 + kielletty-c2-v25 (lod1/2, tormays = v83).
+- Pari runko c0b59f6b0, kohta 06: lokit/havainne-editori-20261030-080919/06 (keisari 0,11).
+- SILMÄNKORKEUSLASKU (todelliset mitat): kamera ~85 m etelän aukosta (testikamera 6,2 m keisarin takana), aukon yläreuna 7,6 m (pohjoispään
+  holvi 10,45 m ei rajaa), Taihemen huippu 23,7 m ~258 m:ssä. Näkyvä yläraja Taihemenin kohdalla = h + (7,6 − h)·258/85 → h = 2,5 m: 17,5 m.
+  Taivas näkyisi vain, jos h < −0,4 m (silmä maan alla) tai kamera < 55 m aukosta (silloin sali kasvaa, ks. 080449). Sivuaukoista ei näe
+  läpi suorilla tunneleilla mistään U-pihan kohdasta, joka on yli ~2,5 m sivussa tunnelin akselista. → Havainteen kohdat 2 ja 3 eivät
+  ole saavutettavissa todellisilla mitoilla ja paikoilla.
