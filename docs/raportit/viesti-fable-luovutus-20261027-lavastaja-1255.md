@@ -1757,3 +1757,18 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   sivuhallien pari 03s-kameralla (PAIKKA_03 "6.43 -203 -2.03", TESTIKAMERA_03 "4 6 0 60") oli ajossa luovutushetkellä (uusin lokit/havainne-editori-*
   13.0x) – ei lähetetty; tarkista sovitus samoin.
 - Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v91 + c2-v30 (sisältää myös Meridiaanin v90:n; Meridiaanin korjaus tekee v92:n → ketjuta).
+
+## LISÄYS 130 (30.10. 13.2x): MERIDIAANI v192 + SOVITETUT PARIT (Taihemen, sivuhallit) PT:lle — ALOITA TÄSTÄ
+- 1b) Keskiaukko: meridiaani_piirros.py HOLVI_SISA env:stä (oletus 1,0); ketju aja_v192_meridiaani.zsh (HOLVI_SISA=4,5) ajaa Meridiaanin
+  v189:stä ja vaihtaa sen taihemen-v191:n päälle → K/meridiaani-v192/kielletty-rakennukset-v92 (= v91 + Meridiaani) + kielletty-c2-v31 (= c2-v30
+  + Meridiaani); json = v91. Juuri H/juuri-pk7-v114 (= v113, linkit v83/c2-v22 → v92/c2-v31). Pari 06 (REF aea0353cd, kamera kuten LISÄYS 128):
+  lokit/havainne-editori-20261030-130227/06 – 5,4 × 5,4 suu suorakaiteena, holvi 5,2 m syvemmällä (kaari näkyy pienenä käytävän päässä).
+- 1a) Sivukäytävien pystyraidat EIVÄT ole UV-virhe: tunnelin kivijalan UV = julkisivun (2,0 m/u pitkin käytävää, 1,75 m/v pystyyn, tarkistettu glb:stä),
+  V4_red:llä ei UV:ta (JuoksuLattia.shader SokkelonPinta piirtää maailmakoordinaateissa, valumat pystysuuntaisia). Raidat syntyvät loivassa
+  kulmassa varjostimessa (saumat häipyvät fwidth:n mukaan, kivittäiset sävyt jäävät pystyjuoviksi) → VS:n alue; kerrottu PT:lle. Sama näkyy v189:ssä (091047/06).
+- 2) Sovitetut parit (havainteen 03 kamera: TESTIKAMERA_03 "3.5 5.7 17 51", keisari 0,11–0,12; juuri v114):
+  Taihemen PAIKKA_03 "7.34 -340 -2.03": lokit/havainne-editori-20261030-132135/03 (Taihemen aukion takana kuten Taihedian havainteessa; horisontti 0,13).
+  Sivuhallit 03-oletuspaikalta lokit/…-131743/03 (sivuhallit lähimuurien takana, ei näy) → oma kulma PAIKKA_03 "55 -60 25", TESTIKAMERA_03 "3.5 5.7 12 51":
+  lokit/…-132419/03 (中左门 terassin takana). Ortopäällekkäiskuvat: proto-3d/lokit/orto-glb-v191-20261030-1254/{taihemen,sivuhalli}/{julkisivu,pohja}-paalle.png.
+  PK:n orto.sh (pelikoodari/orto-216) ei ajettu: haaraa ei löytynyt fetchillä proto-lavastaja-kerroin-puusta.
+- Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v92 + c2-v31. Seuraavaksi: 3) Taihedian 3D (LISÄYS 129).
