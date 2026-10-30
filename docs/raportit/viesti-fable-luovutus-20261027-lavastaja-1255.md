@@ -2040,3 +2040,14 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   keskeltä), osasarja_v3_c3c2.py (C3 2455 → 61). osasarja_v3_osat.py tekee muunnelmat (MUUNNELMAT, PH). LOD0 +3,1 %.
 - Ortot: tyokalut/osasarja_v3_kohdat.zsh (lisäkohdat a20, a92, a77, c135). Ei taustaajoja käynnissä.
 - SEURAAVAKSI: PT:n kuittaus → JU vie; jos PT/PK palauttaa, korjaa ja aja ketju + paketti uudelleen (uusi kansio, vanha nimi varattu).
+
+## LISÄYS 148 (30.10. 18.5x): v3 KUITATTU (JU vie), PINTALISTA + OSASARJA v4 (KIVIPINNAT) PT:LLÄ — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- PT kuittasi osasarja-v3:n (paketti 77f02f0fc384), JU vie.
+- Pintalista: C3_muurikate_kauko sallituksi, natiivi lavastaja/pintalista-kauko-216 = 548440f01 (juna-216 8d3bf122f:n päällä; worktree
+  /Users/Shared/Claude/wt/proto-lavastaja-pintalista-216), osoitinrivi NS:lle lähetetty.
+- OSASARJA v4 (PT kiireellinen, PK:n pelipari: kivijalka liila, reuna/kansi vaaleat): syy = osissa ei V4_kujakivi_sokkeli-pintaa (peli:
+  JuoksuOsasarjaKokoaja.EtsiPinta hakee profiilin pinnan osien verkoista) + kivikuvat tausta-v58:sta ilman images[].name (KiviJako).
+  Korjaus K/tyokalut/osasarja_v4_osat.py (kääre v3:n päälle: kujakivipinnat tausta-v81:stä nimineen, pintanäytteet kivijalka-1m ja LOD2 reunakivi-1m).
+  Paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v4-vienti-20261030 (vain kielletty-osasarja-v4), SHA256SUMS 9c781f204aa2, kopio PK:lle.
+  Kooste proto-3d/lokit/kooste-osasarja-v4-20261030/LUE.md. ODOTTAA PT:n kuittausta.
+- Avoin (PT): LOD1/LOD2-vaihtorajan sävy pelikuvasta, kun PK:n pari tulee. Ei taustaajoja käynnissä.
