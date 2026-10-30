@@ -1529,3 +1529,21 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - KK:n 3 huomiota siipikattoihin → taihemen_siipikatto.py v2 (ohut 1268-pääharja 0,16 × 0,30, tiili 1,0/m), aja_v176_siipikatto2.zsh → K/siipikatto-v176/
   kielletty-rakennukset-v79; kiila = Taihemenin jalustan marmorireunakivi (ei poistettu). Pari lokit/havainne-editori-20261030-025421/03 (juuri-pk7-v94) → PT 03.0x.
 - SEURAAVAKSI: PT:n kuittaus → paketti v94 (= v93 + rakennukset-v79 korvaa v78; peli: rakennukset-kansio v79, PK). Sitten 109:n lista (Taihedianin 10+1-rivi, A4, 03-vyön UV, NUI → v90).
+
+## LISÄYS 111 klo 03.2x (30.10.): v94 VIETY, A4 KESKEN, TAIHEDIANIN RIVIT HYVÄKSYTTY TEHTÄVÄKSI — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- PAKETTI v94 (V/juoksupeli-kk-lavastaja-v94-vienti-20261030, SHA256SUMS 7db5735e, = v93 + rakennukset-v79) PT kuittasi JU:lle.
+- Aumalappeiden raidat: PT päätti, että VS vaalentaa kattotiilen kourun kaikille katoille; LR:lle ei v95-työtä siitä.
+- TEE ENSIN (PT 03.1x HYVÄKSYTTY): upotetut harjaeläimet pois g-taihedianista (katto-solmun V4_harjaelain, y 26,3–28,35, 11 400 kärkeä; myös lod1/lod2
+  ja c2:n/taustan kopiot, jos niissä) ja Taihedianin 10+1-rivit ylä- ja alaräystään aumaharjoille koristeet.json:iin A2:na. Rivit #929-muodossa
+  ("harjaelaimet": keskikohta, +Z kärki räystääseen, kallistus = harjan kaltevuus; mallina siipikatto_rivit.py) → a2_koristeet.py:hin 10 eläimen
+  sääntö (A2-listan 11. = hangshi vain Taihedianille; nykyinen sääntö enintään 9). Pari 03 ennen/jälkeen samalla kameralla → PT.
+- A4 (PT: ok sillä välin): UUSI tyokalut/a4_kannattimet.py (+ a2_koristeet_apu.py = pienenna()): dougong-intercolumn/-corner (Codex #1263/1265, kuvat 512 px)
+  V4_palkkivyo-/V4_palatsi_friisi-vöiden yläreunaan räystään alle (ylin vyö per suunta, skaala vyön korkeus/1,25, räystään alapinta rajaa, f-taihemen-
+  siipikatot ohitetaan). → K/a4-v177/kielletty-lahipuut-v9 (= lahipuut-v8 + 6 552 kannatinta, 20 rakennusta; u-jingshan 1318, o-palatsi 1053,
+  a-meridiaaniportti 1046 epäilyttävän paljon → tarkista ennen pakettia). Blender-koe scratchpad a4koe2.png: Taihedianin alaräystään rivi näyttää oikealta.
+  Juuri H/juuri-pk7-v95 (= v94 + lahipuut-v7 → a4-v177/…-v9). Pari havainne-editori-20261030-030942: 03b-kamera (7 −195 178, "8 8 0 60") osui
+  Taihemenin pohjoisportaille, räystäät eivät näy → EI käytettävä. Uusi kamera: keisari ≤ 25 m rakennuksesta, räystäs kuvassa (esim. Taihedianin
+  eteläpuoli 0 −40 suunta 0, testikamera "6 6 0 60"), koristeraja 40 m.
+- Pari-skriptit (scratchpad häviää): REF=3b9485eb8 MALLIT=file://H/juuri-pk7-vNN/ ESIKOM="ui juoksupeli palatsi url file://H/juuri-pk7-vNN/kk-pohja-v1d-pk7/pohja.json"
+  LISA="ui juoksupeli valo kuvabias 0" PAIKKA_03=… TESTIKAMERA_03=… zsh K/tyokalut/editori-lr.sh 03 [03b] (PELIKAMERA ei asetettu).
+- Muu jono (109): 03-vyön UV (PT:n vastaus), A6 odottaa Codexin 7-välistä GLB:tä.
