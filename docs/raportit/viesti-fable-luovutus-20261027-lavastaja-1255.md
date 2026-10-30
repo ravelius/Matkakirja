@@ -1786,3 +1786,22 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
 - Ortovertailu (orto.sh g + vertaa.py): proto-3d/lokit/orto-v193-taihedian-20261030-1351/ julkisivu IoU 0,76, pohja 0,78 (*-paalle.png).
   Pari 03 havainteen kameralla (TESTIKAMERA_03 "3.5 5.7 17 51", keisari 0,12): lokit/havainne-editori-20261030-134256/03; pelin oletuskamera 134650/03.
 - Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v93 + c2-v32 (sisältää v90–v92).
+
+## LISÄYS 132 (30.10. 13.5x): LUOVUTUS (konteksti > 30 %) — ALOITA TÄSTÄ. Uusi jono PT 13.3x/13.50 (sitova)
+- KUITATTU: Meridiaani v192 keskiaukko OK. 1a pystyraidat → VS korjaa varjostimeen (PT 13.3x: ÄLÄ tee uutta materiaalia eikä geometrista kiertoa).
+  Taihedian v193 (LISÄYS 131) lähetetty, mutta PT:n järjestys: ensin alla olevat Taihemen- ja sivuhallikorjaukset, sitten Taihedian (v193 jää odottamaan).
+- PK 13.4x: orto.sh 06 korjattu (syvyysraja, bd3240620); uusi kuva juurella v114: proto-3d/lokit/orto-20261030-133445/06-{edesta,ylhaalta}.png.
+- JONO (PT 13.3x + 13.50, piirrokset proto-3d/_tyo/pelikoodari/piirrokset-20261030/kortti/{taihemen-*-codex-v3,sivuhalli-*-codex-v2}.png,
+  ortot nyt lokit/orto-glb-v191-20261030-1254/{taihemen,sivuhalli}/julkisivu-vierekkain.png):
+  1) SIVUHALLI (sivuhalli_piirros.py, h-zhongyoumen/h-zhongzuomen): yläkatto on pystyseinäinen laatikko → kaksi kaltevaa kattoa piirroksen
+     mukaan; julkisivuun ikkunaristikot ja ovijako (5 jännettä 2,4·5,0·6,1·5,0·2,4); jalusta harmaa möhkäle → matala valkoinen marmorijalusta.
+  2) TAIHEMEN (taihemen_piirros.py): yläkatto leveämmäksi (ylälappeen leveys piirroksen mukaan); harjan päällä harmaa nauha pois; alakaton
+     nurkkakaarre loivemmaksi; keskijänne (7,9 m) tumma tyhjä aukko → ovet piirroksen mukaan.
+  3) Uusi ketju v194 (pohja: K/taihedian-v193 sisältää jo v193:n Taihedianin; jos Taihedian halutaan erikseen, pohjaksi meridiaani-v192 ja v193 päälle
+     myöhemmin). Ortot: orto_glb.py + vertaa.py (kuten LUE.md lokit/orto-glb-v191-…) ja orto.sh f; vierekkäiskuvat todisteeksi.
+  4) PARIT: kamera, jossa kohde näkyy (132135/03 näytti Kultaisen veden siltoja). Ehdotus: Taihemen keisari siltojen pohjoispuolelle
+     (esim. PAIKKA_03 "7.34 -262 -2.03", orto.sh:n SIJ[f] = 9.2 −259.8) ja TESTIKAMERA_03 "3.5 5.7 12 51"; sivuhallille PAIKKA_03 "55 -60 25" (132419/03 näytti 中左门).
+     Pari-ajo: K/tyokalut/editori-lr.sh, REF=aea0353cd MALLIT=file://<juuri>/ ESIKOM="ui juoksupeli palatsi url file://<juuri>/kk-pohja-v1d-pk7/pohja.json".
+     Uusi juuri: cp -a H/juuri-pk7-v115 → v116 ja linkit kielletty-rakennukset-v83 / kielletty-c2-v22 uuteen versioon.
+  5) Valmis erä PT:lle ≤ 3 riviä; sitten Taihedian (v193 valmiina: ortot orto-v193-taihedian-20261030-1351, pari 134256/03) uudelleen PT:lle.
+- Ei taustaajoja kesken. Hyväksytyt paketin osat: v92 (Meridiaani). v98-paketti vasta kaikkien kuittausten jälkeen.
