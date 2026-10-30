@@ -1965,3 +1965,29 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - KK (1) harmaa vino levy kuvassa 4: ei LAV:n malleissa (alueella vain h-zhongzuomen + t-portti, tausta ei); näkyy samana jo v124:ssä → pelin pohja.json
   muurit[338] (x ≈ 100, kuten LISÄYS 139) = PK/KS:n alue.
 - Seuraavaksi: PT kuittaa → JU vie (pelin viittaukset PK/NS). Sitten osasarja-v2 (VAATIMUKSET-osasarja-v2.md).
+
+## LISÄYS 144 (30.10. 17.5x): OSASARJA-v2 KESKEN – ketju ja työkalut valmiit, kuja 02 -koe lähes ennallaan, 2 korjausta auki — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- v99 odottaa yhä PT:n SHA-kuittausta (ei viestiä tullut). Ei taustaajoja käynnissä.
+- Työkansio K/osasarja-v2 (K = …/kielletty-rakennukset). Koko ketju: `cd K/osasarja-v2 && ../tyokalut/aja_osasarja_v2.zsh > aja.log 2>&1`
+  (kolme ensimmäistä vaihetta kommentoitu pois – jaksot.json/raot.json/polut-keski.json/polut-puolet.json ovat valmiina; puolet-ajo 26 s, raot 20 s).
+  Lähtö = v99-paketin maailma-v4. Tulokset: kielletty-osasarja-v2 (osat = v1:n osat + pelin c2-v24:n paksunnetut 1061/1062/1064, LOD2-pylväs 0,394 × 1,265),
+  kielletty-tausta-v79 (kaikki LODit), kielletty-muurikate-v28 (v27 + v26-pohja leikattuina, c3-sijoitukset 2455 → 1173), kielletty-c2-v25
+  (c2-sijoitukset ilman r0/r1, kaiteeton pohja leikattu). Tiivistys glb_tiivista.py ketjun lopussa.
+- Työkalut (tyokalut/): osasarja_v2_polut.py (C3-palat → jaksot), _yhdista.py (kulmat suorien leikkaukseen ≤ 1,6 m; suorat raot ≤ 1,2 m, tai ≤ 8 m jos
+  taustan runko jatkuu = raot.json:n 51 C3-katteen rakoa), _raot.py, _puolet.py (KD-näytteet 1 m välein: runko/sokkeli/reuna/friisi/leveä; HUOM 'v' = +n =
+  (−dz, dx) = PK:n OIKEA), _ladonta.py (muuripolku oikealla pinnalla, reunakivet omina pursotuspolkuinaan; vain v1-profiilin muurit: friisi 4,0 m
+  molemmin puolin eikä leveää runkoa → 75 polkua 2 667 m / 5 005 m, loput polut-muurit-pois.json), osasarja_v2.py (osat + ladonta.json + kaiteet
+  r0/r1 1:1 NUI:n halli-kaiteet-v4-tavalla), _leikkaa.py (Sutherland–Hodgman-leikkaus polkukohtaisin laatikoin, attribuutit interpoloiden; laskurit.json
+  polku → poistetut), _c3c2.py, _lahteet.py (LAHTEET.md + kolmiovertailu; EI VIELÄ AJETTU), _orto.py (Blender Workbench ennen/jälkeen: yla/viisto/silma),
+  _laatat.py, _ylakuva.py, _leikkaus.py, _kartta.py. osasarja_koe.py päivitetty v2:lle (y, valinnaiset kulmat/toisto; v1-varmuuskopio .bak).
+- KOE kuja 02 (koe/aja_orto_kuja02.zsh, ikkuna x −275…−225, z 290…350, silmä "-245 330 90"): koe/vierekkain-{yla,viisto,silma}.png.
+  Korjattu jo: sivuvirhe (muurit 0,72 m kujaan). AUKI:
+  1) Vasemman muurin pilasterit: punainen yläosa katoaa (runkokäytävä ±0,50 keskilinjasta leikkaa ulkonevat pilasterit) → RAJA['runko'] o ±0,42
+     (o0 −0,78, o1 0,06), jolloin pilasterin ulkoneva osa jää; tarkista sama kate-luokalle (±0,60 → friisi/konsoli ulkonee 0,08).
+  2) Oikean muurin mutka (kujan 02 itämuuri, polku z 300–350 x ≈ −245): jälkeen-kuvassa suora jatke + punainen laatikko lopussa → tarkista
+     polut-muurit.json ja kartta (osasarja_v2_kartta.py) – mutkan C3-jakso jäänyt pois (profiili?) tai yhdistetty väärin.
+  Sitten: muut havainnekohdat 01–08 samalla orto-skriptillä (PK:n hyväksymisehto), kaiteet (koe/koe-kaiteet.glb, ikkuna x −135…−80, z −80…−35),
+  _lahteet.py → SHA256SUMS → paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v2-vienti-<pvm> (vain 4 kansiota) → PT:n kuittaus (≤ 3 riviä) + kopio PK:lle
+  (local_601d33fc-1c61-4ccd-8389-fa425417fafb; LAHTEET.md kertoo yhteen kuuluvat versiot: peli vaihtaa TaustaKansio v79, MuurikateTiedosto + C3Kansio v28, C2 v25).
+- Tiedossa olevat rajaukset (kerro PK:lle): ~2,3 km C3-muureja jää vanhoiksi (leveät teal-katteiset, friisittömät, korkeat) – v3 tarvitsee niille omat
+  osat; aitojen aukkojen päihin tulee paaty-pilari; reunakivipolkuja 223 (taustan reunakivi katkeilee).
