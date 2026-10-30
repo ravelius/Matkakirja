@@ -1,0 +1,18 @@
+{
+ "kuva": "portti06-pohja.png",
+ "kuvaus": "Portti 06 pohjapiirros ylhäältä, akselikehys x/z",
+ "px_per_m": 8,
+ "x0": -105,
+ "x1": 105,
+ "a0": -492,
+ "a1": -352,
+ "marginaali_vasen_ylä": [
+  70,
+  120
+ ],
+ "koko": [
+  1830,
+  1640
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}

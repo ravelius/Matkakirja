@@ -1,0 +1,18 @@
+{
+ "kuva": "portti06-julkisivu-etela.png",
+ "kuvaus": "Portti 06 etelän julkisivu, akselikehys x/y",
+ "px_per_m": 12,
+ "x0": -105,
+ "x1": 105,
+ "a0": -3,
+ "a1": 42,
+ "marginaali_vasen_ylä": [
+  80,
+  120
+ ],
+ "koko": [
+  2680,
+  1040
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}
