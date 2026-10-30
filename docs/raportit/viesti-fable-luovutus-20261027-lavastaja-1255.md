@@ -1944,3 +1944,16 @@ Ennen kuin yksikään pari tai kortti lähtee PT:lle, mukana AINA:
 2) Automaattinen tarkistus: materiaalien värit havainteeseen ja omistajan päätöksiin + lähikuvat jokaisesta muutetusta kohdasta.
 3) Piirroksen [A]-mitat varmennettu kuvista ennen 3D-työtä (lähde + laskelma LUE.md:hen).
 Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v99 odottaa omistajan korttia (LISÄYS 140).
+
+## LISÄYS 142 (30.10. 17.2x): v199 TEHTY (PT 16.4x + 16.5x), KOOSTE PT:LLE — JONO
+- v199: K/tyokalut/aja_v199.zsh → K/v199/{kielletty-rakennukset-v98, kielletty-c2-v37, kielletty-tausta-v78}, juuri H/juuri-pk7-v125
+  (= v124, linkit rakennukset-v83 → v98, c2-v22 → c2-v37, tausta-v76 → tausta-v78). Pohja meridiaani-v197 (v198:n terassi_kivi POIS = seinät marmoria).
+  Uudet työkalut: kaide_paksu.py (C2 1061 ×1,5/×1,15, 1062 paksuus ×2), yulu_kuva.py + yulu.py (keskiluiskat V4_yulu; valinta |x| ≤ 1,81, jänne ≥ 2,5,
+  nousu ≥ 1; VAALEUS 0,9 – 1,22 paloi puhki), tausta_jalusta_lattiaksi.py (2-1 vaaka-V4_marmori y > 0,9 → V4_lattia), lattia_kiilat_tasaa.py (2-0 lod0 kiilat → y 0).
+- Kooste: proto-3d/lokit/kooste-v199-20261030-1715/koonti.png + LUE.md (sääntö 2.177: IoU Taihedian 0,77 / Taihemen 0,72, värimittaus, lähikuvat).
+  Kortille 3 kysymystä: Taihemen (1–2), sivuhallit (3–4), Taihedian (5–7); 8 = sauma (virheen korjaus).
+- Avoin: yulu-kohokuvio on koodilla tehty väliaikainen kuvio (Codex voi tehdä aidon). Pelissä terassin seinä on yhtä vaalea kuin kaiteet (havainteessa
+  seinä on varjossa tummempi).
+- JONO: kortin Kyllän jälkeen paketti v99 = v98c + rakennukset-v85 (R v98), c2-v24 (C v37), tausta-v78, c1-v9 (C1 v13) → SHA256SUMS → PT → JU.
+  Sen jälkeen osasarja-v2 (PK:n vaatimukset proto-3d/_tyo/pelikoodari/piirrokset-20261030/VAATIMUKSET-osasarja-v2.md; omistajan päätös 16.20),
+  paketti PT:n kuittauksella.
