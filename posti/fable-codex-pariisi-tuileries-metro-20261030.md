@@ -17,3 +17,8 @@ Kuva omistajalta: docs/raportit/kaappaukset/omistaja-20261030/2142-pariisi-vaara
 
 ## Palautus
 - Kuvat haaraan + `posti/karttaseppa-codex-pariisi-tuileries-metro-<pvm>.md` (SHA256, mallit joihin vertasit). Karttaseppä kytkee kartalle.
+
+## LISÄYS (KK 21.5x): tyylimallit tarkennettu
+Ensisijaiset mallit (värilliset, varjostetut käsin piirretyt miniatyyrit, jotka hallitsevat omistajan kuvaa):
+`miniatyyrit/pariisi-palais-garnier.webp`, `pariisi-notre-dame.webp`, `pariisi-concorden-aukio.webp` (obeliski).
+Pyramidi on pelkkä lasimuoto – älä käytä yksinään väri- ja varjostusmallina.
