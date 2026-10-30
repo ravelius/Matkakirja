@@ -1805,3 +1805,14 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
      Uusi juuri: cp -a H/juuri-pk7-v115 → v116 ja linkit kielletty-rakennukset-v83 / kielletty-c2-v22 uuteen versioon.
   5) Valmis erä PT:lle ≤ 3 riviä; sitten Taihedian (v193 valmiina: ortot orto-v193-taihedian-20261030-1351, pari 134256/03) uudelleen PT:lle.
 - Ei taustaajoja kesken. Hyväksytyt paketin osat: v92 (Meridiaani). v98-paketti vasta kaikkien kuittausten jälkeen.
+
+## LISÄYS 133 (30.10. 14.0x): PT 13.58 – JÄRJESTYS MUUTTUI: TAIHEDIAN v193 KORJAUKSET ENSIN, sitten Taihemen + sivuhallit (LISÄYS 132)
+- Ortosta lokit/orto-v193-taihedian-20261030-1351/julkisivu-vierekkain.png:
+  1) alakaton räystäskulmista ohuet kaarevat "viikset" kauas sivuille → pois; räystään kaari piirroksen mukaan. (Todennäköisesti katto-verkon
+     kulmakoristeet/nurkkaköydet, jotka ulottuvat yli 34,32: KATTO_X/KATTO_Z jatkuvat päiden yli siirtona → tarkista osat |x| > 34,3 tai |z| > 20,9
+     lod0:ssa ja leikkaa/skaalaa räystään sisään.)
+  2) alakatto näkyy ohuena nauhana; piirroksessa leveä näkyvä lape 15,5–20,1 → ylä-/alakaton erotus: yläräystäs 20,8 peittää alakaton,
+     koska yläkaton räystäs ulottuu x ±31,6 (yläräystäs pitää olla piirroksen mukaan kapeampi tai alakatto ulommas/loivemmin näkyviin).
+  3) terassin kolme tasoa (3,1/5,3/8,13) ja sivuportaat eivät erotu edestä, näkyy yksi tasainen muuri → tarkista orto.sh g -kuvan kamera
+     (EDE[g] z' −95,5, y 22) ja tasojen etureunat (z' −76,4 / −66,9 / −59,5); tarvittaessa tasojen etuseinät/kaiteet erottuviksi.
+- Sen jälkeen uusi orto (orto.sh g + vertaa.py) + pari 03 → PT; sitten LISÄYS 132:n jono.
