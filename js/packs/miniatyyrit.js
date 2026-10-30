@@ -123,7 +123,9 @@ export const MINIATYYRIT = {
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
     Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
     Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
-    'Tuileriain rauniot': 'assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot.webp',
+    // Ehjä Tuileries-palatsi kartan piirrostyylissä (omistaja 30.10.2026 klo 21.42/21.45: vanha savuava
+    // maalaus väärää tyyliä; Codex #1320, PT 22.4x). Rauniokuva jää ämpäriin; ihme-tuileries ihmekortille.
+    'Tuileriain rauniot': 'assets/kartat/miniatyyrit/pariisi-tuileries.webp',
     'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
     'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
     'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
@@ -131,7 +133,9 @@ export const MINIATYYRIT = {
     'Bastilji 1789': 'assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
     'Lumière 1895': 'assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
     '72 nimeä': 'assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
-    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp',
+    // Guimardin lasikattoinen Abbesses-édicule (Codex #1321, omistaja 30.10. 21.42: vanha väärää tyyliä);
+    // uusi nimi -v2, ettei välimuisteihin jäänyt vanha kuva näy.
+    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
     'Notre-Damen kukko': 'assets/kartat/miniatyyrit/pariisi-notre-damen-kukko.webp',
     'Pariisi soi': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
     'Paras patonki': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',

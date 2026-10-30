@@ -1309,6 +1309,11 @@
   "taytto": 0.188,
   "reuna": 0
  },
+ "pariisi-metron-sisaankaynti-v2.webp": {
+  "sha": "1a6b933a4778821d",
+  "taytto": 0.334,
+  "reuna": 0
+ },
  "pariisi-metron-sisaankaynti.webp": {
   "sha": "a02fcbe61981cd0f",
   "taytto": 0.58,
@@ -1387,6 +1392,11 @@
  "pariisi-tuileriain-rauniot.webp": {
   "sha": "0d81142c5308284a",
   "taytto": 0.564,
+  "reuna": 0
+ },
+ "pariisi-tuileries.webp": {
+  "sha": "14bdc59164679bbb",
+  "taytto": 0.13,
   "reuna": 0
  },
  "pariisi-vrain-lucas.webp": {
