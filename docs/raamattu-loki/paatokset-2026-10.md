@@ -3234,3 +3234,7 @@ Omistajan kortti KK:ssa: 'Teetetäänkö pohja- ja julkisivupiirrokset todellisi
 ## JUOKSUPELI: TEKIJÄN OMA TARKISTUS ENNEN PARIA TAI KORTTIA (omistaja 30.10.2026 klo 16.0x) (30.10.2026 klo 16.15)
 
 KK:n kortti, sanatarkasti: "Otetaanko käyttöön tekijän oma tarkistus ennen kuin rakennus lähtee tarkistukseen?" → "Ota käyttöön. Ja hyödynnetäänkö nyt jo sitä unityn ladonta ominaisuutta?". Tarkistus: 1) edestä otettu orto piirroksen päälle, 2) automaattinen tarkistus: materiaalien värit havainteeseen ja omistajan päätöksiin + lähikuvat muutetuista kohdista, 3) piirroksen [A]-mitat varmennetaan kuvista ennen 3D-työtä. Tausta: Meridiaanin kortti palautettiin 30.10. kahdesti (beige kivijalka vastoin 27.10. päätöstä; 3,0 m [A]-arvio, todellinen 1,6 m). Raamattu 2.177.
+
+## JUOKSUPELI: LADONTA PÄÄLLE MUUREILLE, KIVIJALOILLE JA KAITEILLE (omistaja 30.10.2026 klo 16.20) (30.10.2026 klo 16.27)
+
+KK:n kortti: "Kytketäänkö ladonta päälle muureille, kivijaloille ja kaiteille junassa 216?" → "Kytke päälle (Suositus)": heti nykyisten korjausten jälkeen; Pelikoodari todistaa vertailukuvilla, ettei ulkoasu muutu; sen jälkeen uudet muurit tehdään vain ladonnalla. Ainutkertaiset rakennukset (Taihemen, sivuhallit, Taihedian) pysyvät malleina.
