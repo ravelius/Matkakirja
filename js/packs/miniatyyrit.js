@@ -123,10 +123,9 @@ export const MINIATYYRIT = {
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
     Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
     Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
-    // Käsin piirretyt rauniot (omistaja 30.10.2026 klo 21.42/21.45: ämpärin vanha savuava maalaus väärää tyyliä;
-    // PT 23.1x: nimi ja tarina ovat rauniot, joten kuva pysyy raunioina). Repon piirros nimellä -v2, ettei
-    // välimuisteihin jäänyt vanha ämpärikuva näy.
-    'Tuileriain rauniot': 'assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot-v2.webp',
+    // Ehjä Tuileries-palatsi kartan piirrostyylissä (omistaja 30.10.2026 klo 21.42/21.45: vanha savuava
+    // maalaus väärää tyyliä; Codex #1320, PT 22.4x). Rauniokuva jää ämpäriin; ihme-tuileries ihmekortille.
+    'Tuileriain rauniot': 'assets/kartat/miniatyyrit/pariisi-tuileries.webp',
     'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
     'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
     'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
