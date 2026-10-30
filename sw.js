@@ -1486,7 +1486,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
   './assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
   './assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
-  './assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot.webp',
+  './assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot-v2.webp',
   './assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
   './assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
   './assets/kartat/miniatyyrit/rooma-aqua-virgo.webp',
