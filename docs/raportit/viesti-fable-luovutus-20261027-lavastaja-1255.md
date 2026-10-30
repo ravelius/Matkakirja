@@ -1937,3 +1937,10 @@ Sitten LISÄYS 137 (laatat, kamera, C1-sivurivi).
 - KOOSTE PT:LLE LÄHETETTY 16.1x: proto-3d/lokit/kooste-v198-20261030-1615/koonti.png + LUE.md (Taihemen+sivuhallit v194, C1 v13, Taihedian v198) → kortille.
   Kyllän jälkeen paketti v99 = v98c + rakennukset (taihedian-v198 R, sis. v194 + v193) nimellä rakennukset-v85, c2-v36 → c2-v24, c1-v13 → c1-v9
   (pelin viittaukset!), SHA256SUMS → PT → JU. Ei taustaajoja kesken.
+
+## LISÄYS 141 (30.10. 16.2x): PYSYVÄ SÄÄNTÖ – TARKISTUKSET ENNEN PARIA/KORTTIA (PT 16.2x, omistaja 16.0x, Raamattu 2.177)
+Ennen kuin yksikään pari tai kortti lähtee PT:lle, mukana AINA:
+1) Edestä otettu orto piirroksen päälle: vierekkäin + päällekkäin, IoU-luku.
+2) Automaattinen tarkistus: materiaalien värit havainteeseen ja omistajan päätöksiin + lähikuvat jokaisesta muutetusta kohdasta.
+3) Piirroksen [A]-mitat varmennettu kuvista ennen 3D-työtä (lähde + laskelma LUE.md:hen).
+Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v99 odottaa omistajan korttia (LISÄYS 140).
