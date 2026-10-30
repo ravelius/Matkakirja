@@ -2184,3 +2184,9 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - SEURAAVAKSI valmistuttua: paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> (paketti_osasarja_v5.zsh-malli, maailma-v4/kielletty-osasarja-v6,
   LAHTEET-paketti.md v6-otsikolla) → kansio PK:lle (local_601d33fc-…) + PT ≤ 3 riviä.
 - PT 22.27 (omistaja): valo junaan 216, juna lähtee vasta kun valo valmis → rakennukset, tausta TUPLAT=1 ja osasarja-v6 ovat junan 216 lähtöehto.
+
+## LISÄYS 158 (30.10. 22.46): LEIVONTA PYSÄYTETTY LEVYN TAKIA — ALOITA TÄSTÄ
+- Postivahti (PT:n ohje): levy 86 Gi → rak-ajo pysäytetty mallin t-katos-26 jälkeen (45/136), ketju-v5 ja ketju-osasarja-v6 pysäytetty. Ei Blenderiä
+  ennen kuin levy > 95 Gi. Jatko (kansio leivonta-216/uusinta, kaikki taustalle nohup): 1) `zsh aja_uusinta.zsh rak 1/1 >> ajo-rak.log` (jatkaa
+  rak-valmiit/:sta) 2) `zsh ketju-v5.zsh <rak-zsh:n pid> >> ajo-ketju-v5.log` 3) `zsh ketju-osasarja-v6.zsh <ketju-v5:n pid> >> ajo-osasarja-v6.log`.
+- Kujien T-liitoskorjaus (lattia_tliitokset.py → tausta-v81-lahde) saa jatkua (pelkkä Python); ketju-v5 odottaa sen.
