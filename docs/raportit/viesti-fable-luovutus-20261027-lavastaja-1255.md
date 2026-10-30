@@ -1487,3 +1487,29 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H 
 - LÖYDÖS (PT:lle ilmoitettu): Hongyigen (弘义阁, x −117…−93, z −146…−82) katto puuttuu taustasta yksikerros-ketjusta v57 lähtien (vaaka_yksi_kerros.py)
   → valkoinen laatikko; A6 korvaa.
 - SEURAAVAKSI: (1) pari v171 → PT; (2) PT:n vastaus vyön UV:sta → lopullinen 03-pari; (3) Codex A2/A4/A1 (PK:n kansio proto-3d/_tyo/pelikoodari/codex-osat-215/).
+
+## LISÄYS 109 klo 02.08 (30.10.): PAKETIT v89–v92, avoimet-v52, A1/A2 LÄHIKORISTEET (lahipuut-v8) — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, H = …/havainne-kuja40, V = /Users/Shared/Claude/proto-3d/_valmiit.
+- Sivuhallit v171 pari 014144 (03/03b) HYVÄKSYTTY (KK 01.4x). v174 = sama erikseen v85:n päälle (aja_v174_sivuhallit_v85.zsh → K/sivuhallit-v174/rakennukset-v77).
+- PAKETIT (kaikki tyokalut/paketti_v8x/v9x.py; ei symlinkkejä):
+  - v89 = v85 + rakennukset-v77 (sivuhallit) + tausta-v76: V/juoksupeli-kk-lavastaja-v89-vienti-20261030, SHA256SUMS 94a9e403. PT kuittasi JU:lle.
+  - v90 = v89 + kielletty-halli-kaiteet-v4 (johde + kaide-pylväs V4_marmori = jalustan marmori 16; kaide_jalustan_marmori.py, K/halli-kaiteet-v4j): SHA 92c12c73.
+    ODOTTAA NUI:n 06-zoom-paria (PT 01.5x). v86/v87/v88 EIVÄT ämpäriin.
+  - v91 = v89 + avoimet-v52 (korvaa v51): SHA 1ac4ef78. Sali 04 hyväksytty (KK 01.5x). VS voi pyytää ruoteille oman materiaalinimen (sininen sävy) → uusi versio.
+  - v92 = v91 + rakennukset-v78 (K/sivuhallit-v175, aja_v175_sivuhallit_215.zsh: rakennukset-v148/v72 = k7 + siipikatot + reunakivi + tuplakuva, + sivuhallit)
+    + kielletty-c2-v19 (= K/c2-v17/kielletty-c2-v16; korvaa c2-v17; c2-v18 varattu hylätylle): SHA 02aeacd7, 701 tied. 03 kohta 4 HYVÄKSYTTY (KK 02.0x, pari 015223).
+    c1-v9 = c1-v8 tavulleen → ei mukana. Peli: rakennukset-v78, MuurikateC2Kansio "kielletty-c2-v19/" (PK). EI A6:ta eikä kaiteita v4.
+- avoimet-v52 (K/ruoteet-v173/avoimet-v52, ruoteet_palkkimaalaus.py): "Katto alapinta ruoteet" 0,09 → 1,0 + V4_palkkivyo:n 1067-kuva juhlasali/puutarha/
+  tyohuone/varasto. PK:lle ilmoitettu (04-pari + yksi muista).
+- A1/A2 LÄHIKORISTEET (PT 01.2x lupa; PT 01.5x: pysyvät lahipuut-kansiossa, ei uutta vakiota): tyokalut/a2_koristeet.py → K/a2-v172/kielletty-lahipuut-v8
+  (= lahipuut-v7 + koristeet.json: chiwen → A1 (sama mittasuhde), jokainen #929-rivi → kuolematon + 3/5/7/9 eläintä pituuden mukaan + chuishou pystyssä
+  harjalinjalla, hahmo 0,7 × vanha korkeus, rivi ≤ 1,6 × vanha pituus; kuvat A2 512 px, A1 1024 px; hangshi pois (vain Taihedianin 10-rivi)) + 8 riviä
+  Taihemenin siipikattojen aumaharjoille (siipikatto_rivit.py → K/a2-v172/siipikatto-rivit.json, KK:n kohta 3 / PT 02.0x). 24 944 koristetta, peli latasi
+  (unity.log "lähikoristeet: 24904 … lajeja 12" ennen siipikattorivejä). Juuri H/juuri-pk7-v92 (= v91 + lahipuut-v6 → a2-v172/kielletty-lahipuut-v8).
+  Blender-lähikuva K/a2-v172/kuvat/rivi-iso.png (esikatsele_a2.py) OK. Parit: 014544 (02/05/01) HYLÄTTY: pk7-juuren kujakamerat kattojen yllä, ei näyttöä;
+  020403 (03b): siipikattojen kulmat kuvan ulkopuolella. AJOSSA: pari 06 −5 −200 −120 (aukio, ~21 m riviin) → scratchpad pari-v172b.log →
+  lokit/havainne-editori-20261030-02xx/06 → tarkista lähikuvasta, näkyvätkö A2-hahmot → PT. Siipikattorivien todennus vaatii kameran, joka katsoo
+  etelään/sivuille 03b:stä (esim. 06 6.43 −182 180 tai sivulle 90/−90).
+- SEURAAVAKSI: (1) A2-pari → PT (kuva + polku); (2) Taihedianin oma 10+1-rivi (rakennuksen V4_harjaelain, lod0 3800 kolmiota, vain ylempi räystäs) –
+  ehdota PT:lle (LOD0:aan kevennetyt A2:t vai koristeet.json + upotetut pois); (3) A4 kannattimet räystäisiin c1-sijoitukset.json:n linjoista (lähikoristeina);
+  (4) PT:n vastaus 03-vyön UV:sta; (5) NUI:n pari → v90.
