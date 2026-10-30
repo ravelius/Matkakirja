@@ -3258,3 +3258,7 @@ Omistaja (KK:n välittämänä, sanatarkasti): "tilinvaihdossa pitää nollata h
 ## PARIISIN KARTTA: NÄHTÄVYYDET MITTAKAAVASSA, KADUT KEVYEMMIKSI, LÄHIN ZOOM 2× (30.10.2026 klo 21.51)
 
 Omistaja 30.10. klo 21.42 (kuvat docs/raportit/kaappaukset/omistaja-20261030/2142-pariisi-*.png): nähtävyyspiirrokset näkyvät koko ajan oikeassa koossa, eli hyvin pieninä kunnes ollaan täydessä zoomissa (korvaa 28.10. 14.23 suurennuksen); tiet kevyemmiksi ja vaaleammiksi. Kortti 21.45: väärän tyyliset ovat Tuileries ja metron sisäänkäynti (ei pyramidi) → Codex piirtää samaan käsin piirrettyyn tyyliin ilman kehystä ja taustaa (tilaus 0c7afb570/2249df50c). Kortti 21.50: kartan lähin zoom kaksi kertaa lähemmäs (noin 0,75 km leveä näkymä; ei 0,35 km:n tasoa); nähtävyyspiirrosten täysi koko uudella lähimmällä tasolla. Tekijä Karttaseppä.
+
+## JUNA 216: KAIKKI SAMAAN JUNAAN, JULKAISU KUN VALO VALMIS (30.10.2026 klo 22.28)
+
+Omistaja 30.10. klo 22.27 (KK:n kautta): 'Tee kaikki samaan junaan ja julkaise vasta kun valo valmis.' Valo, STP/Unity 6.7 -kokeet, Pariisin kartta sekä Tuileries ja metro menevät junaan 216 (ei junaa 217). TestFlight vasta, kun valo on valmis ja omistajan hyväksymä.
