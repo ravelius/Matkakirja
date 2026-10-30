@@ -1991,3 +1991,31 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   (local_601d33fc-1c61-4ccd-8389-fa425417fafb; LAHTEET.md kertoo yhteen kuuluvat versiot: peli vaihtaa TaustaKansio v79, MuurikateTiedosto + C3Kansio v28, C2 v25).
 - Tiedossa olevat rajaukset (kerro PK:lle): ~2,3 km C3-muureja jää vanhoiksi (leveät teal-katteiset, friisittömät, korkeat) – v3 tarvitsee niille omat
   osat; aitojen aukkojen päihin tulee paaty-pilari; reunakivipolkuja 223 (taustan reunakivi katkeilee).
+
+## LISÄYS 145 (30.10. 18.2x): OSASARJA v2 VALMIS JA KUITATTU (JU vie), OSASARJA v3 ALOITETTU — LUOVUTUS (konteksti 30 %), ALOITA TÄSTÄ
+- v100 (vain kielletty-tausta-v79, aukion 03 levy pois) kuitattu, JU vie. Osasarja-v2:n oma tausta nimetty kielletty-tausta-v80 (pohja = v100:n tausta-v79;
+  aja_osasarja_v2.zsh: P100, varmuuskopio aja_osasarja_v2-v99pohja.zsh.bak).
+- OSASARJA v2 = _valmiit/juoksupeli-kk-lavastaja-osasarja-v2-vienti-20261030 (SHA256SUMS 34406d75d65d, 107 tied., Lisenssi-rivi LAHTEET.md:ssä).
+  PT 18.2x: KUITATTU, JU vie; kolmiot +9,2 % LOD0 hyväksytty (a) junaan 216. Kooste proto-3d/lokit/kooste-osasarja-v2-20261030-1813/LUE.md.
+  Korjaukset: osasarja_v2_leikkaa.py runko ±0,42 (pilasterit; .bak v1), osasarja_v2_ladonta.py LOIVA = 40° (loivissa solmuissa polku katkaistaan
+  osapoluiksi -b, -c … ilman kulmaosaa; vain muuri-lansi-pohj-33; .bak v1). Uudet työkalut: osasarja_v2_koe_ikkuna.py (koe-glb ikkunan poluista),
+  osasarja_v2_kohdat.zsh (ennen/jälkeen-ortot havainnekohdissa 01–07+03b, VARJOT=0 + C2-kaiteet), paketti_osasarja_v2.zsh.
+  osasarja_v2_orto.py: env VARJOT=0 (Workbenchin varjotilavuus piirtää ei-umpinaisista osista pystyraitoja = EI geometriaa) ja C2=<kansio>.
+- PT:N JONO (sitova): OSASARJA v3 = (b) päätyjen ja kulmien C3 LEIKATTUINA + omat osat ~2,3 km:n jäljelle jääneille C3-muureille
+  (osasarja-v2/polut-muurit-pois.json). Muista LAHTEET.md:n Lisenssi-rivi, ei alikansioiden SHA256SUMS, muuttuneet kansiot uusin nimin.
+  Seuraavat vapaat nimet: osasarja-v3, tausta-v81, muurikate-v29, c2-v26.
+- v3 TEHTY: (b) K/tyokalut/osasarja_v3_osat.py → K/osasarja-v3/kielletty-osasarja-v3/{osat,osat-lod1,osat-lod2}.glb (kulma 5632 → 2054, pääty 2850 → ~1400;
+  pääty = 1057:n luonnollinen pää 0,88 m, kulma = keskiosa 0,72 m ×2, leikkaus pilkkoen). ladonta.json = v2:n kopio (osien nimet samat).
+  Lähikuva v2 vs v3: K/osasarja-v3/koe/pk14-v2-v3.png (muuri-lansi-pohj-14: pääty + kulma) – sama ulkoasu, tiilikuvio ei enää puristettu.
+- v3 KESKEN: jäljelle jääneiden muurien profiilit. Työkalu K/tyokalut/osasarja_v3_profiilit.py → K/osasarja-v3/analyysi/profiilit.{json,txt}
+  (rungon/kivijalan/friisin/katteen sivusiirrot ja korkeudet polkua kohden). Leikkauskuvat analyysi/leikkaukset.png (p3 leveä 2,5 m; p92/p20/p38/p77).
+  ALUSTAVA TULOS: suurin osa (~1,5 km) näyttää v1-profiililta (friisi 3,84–4,52, C3) mutta kivijalka 0–1,30 (kansi 1,20–1,30, ei 1,8) ja rungon
+  paksuus ~0,76–1,0. VAROITUS: polkujen keskilinja on C3:n keskilinja, ei muurin keskellä (p8: V4_red pinnat o −0,68 ja +0,08 → T ≈ 0,76, keskikohta
+  −0,30), ja tausta + muurikatteen pohja ovat päällekkäin (useita pintoja). "Leveä"-luokitus johtuu usein viereisen rakennuksen punaseinästä.
+  SEURAAVAKSI: 1) tarkka mittaus pinnoittain (V4_red-tasot pystykolmioiden normaalien mukaan, ei centroid-prosentiileja) muutamalle polulle;
+  2) ryhmät: (A) v1-profiili + kivijalka 1,30 → v1-osat sellaisinaan (T 0,72?) + uudet pursotusprofiilit kivijalka-13/-kansi/-taka, jos T täsmää,
+  muuten osat T-parametrilla (osasarja_v3_osat.py: rakenna-lähteen T vaihto + nimiin pääte); (B) yksipuoliset (runko 0,1–0,24 = rakennusta vasten),
+  (C) ilman runkoa/friisiä (135, 24, 61 aidat), (D) erikoiset (54/53 kivijalka 1,9, 31/75 friisi korkealla, 144/136/141/142/143/7 vain kate) →
+  ehdota PT:lle mitkä jäävät vanhoiksi. 3) ladonta v3 = v2:n polut + uudet, leikkaus/C3/C2 kuten aja_osasarja_v2.zsh (uusi aja_osasarja_v3.zsh),
+  ortot osasarja_v2_kohdat.zsh:lla, kolmiot _lahteet.py, paketti → PT (≤ 3 riviä) + kopio PK:lle.
+- Ei taustaajoja käynnissä.
