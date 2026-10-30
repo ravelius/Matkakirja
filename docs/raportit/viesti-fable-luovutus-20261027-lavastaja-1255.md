@@ -1848,3 +1848,12 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
      (havainne 134256/03 zoomattuna: kolme kaiderivia heikosti). Ehdotus: tasojen pystypinnat V4_jalusta_lohkokivi (jalusta_lohkokivi.py, käytössä
      Taihemenin jalustassa ja Meridiaanissa; piirroksessa tasoissa kivikerrokset) → kaiteet erottuvat. Sivuportaat (±10,5…16,0) näkyvät pelissä.
      Tämä on materiaalivalinta olemassa olevasta → tee, ellei PT toisin sano; pari 03 + orto.sh g → PT.
+
+## LISÄYS 135 (30.10. 14.3x): PT 14.3x – JÄRJESTYS UUDELLE LAV:LLE (sitova)
+1) Meridiaanin kivijalka (PT 14.2x, LISÄYS 134). 2) v116:n "kiilat/siirtymät" parissa 140636/03: aukiolla kolmiomaiset kiilat + harmaa laatta,
+   valkea terassi vasemmalla. HUOM (LR): 140636/03 oli tarkoituksella sivuhallin oma kulma (PAIKKA_03 "55 -60 25", ei havainteen kulma) ja 141211/03
+   kaukokamera (TESTIKAMERA_03 "7 28 10 51" → keisari 0,02 tarkoituksella). Selvitä silti kiilat: ovatko ne jo v115:ssä (aja sama kulma juurella v115)
+   vai v194:n (sivuhalli_v194 / jalustan materiaali / t-portti-zhongzuomen) – todennäköisesti t-portti-zhongzuomenin portaat tai C2/垂带-palat.
+   Aja sitten 03 havainteen kulmalla (TESTIKAMERA_03 "3.5 5.7 17 51", oletuspaikka) uudelleen. 3) Taihemenin yläkaton nurkissa kaksinkertainen porras
+   (todennäköisesti C1 1056-kulmat + mallin oma nurkka, c1_muunna.py:n YLA_SX/YLA_SZ) → yksi siisti räystäs kuten piirroksessa.
+   EI PAKETTIA ennen kuin 03 on ehjä.
