@@ -1679,3 +1679,10 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   lokit/havainne-editori-20261030-083011/06. Syvennysten varjot valon vaiheessa (VS).
 - Hyväksynnän jälkeen: paketti v98 = v97 + rakennukset-v87 + c2-v26; PK: kansiot "kielletty-rakennukset-v87/" ja "kielletty-c2-v26/".
   Hylätyt/väliversiot (v84/v85/v86, c2-v23/24/25) eivät mene pakettiin; K/_roska/ = keskeneräiset v187-ajot.
+
+## LISÄYS 124 (30.10. 08.4x): v188 punaiset sisäpinnat (omistaja 08.39 hylkäsi 083011) – EI LÄHETETTY PARINA, ristiriita PT:lle
+- aja_v188_punainen.zsh → K/punainen-v188/kielletty-rakennukset-v88 + kielletty-c2-v27 (v187 ilman kivisisustaa). Pari 084035/06
+  (keisari 0,12): sivuaukot näyttävät taas samalta kuin alkuperäinen valitus 051707 ("punaiset ovet"): suora tunneli + punainen seinä.
+- 074212 näytti luontevalta vain, koska sivutunnelit oli käännetty (läpi näkyi valoa); todellisilla suorilla tunneleilla U-pihalta
+  näkyy aina tunnelin sivuseinä. Vaihtoehdot: (a) kääntö takaisin (poikkeaa mitoista), (b) suora + punainen ja syvyys valon varjoista,
+  (c) suora + sisäpinta tummempi/varjossa valon vaiheessa (VS), jolloin aukko lukeutuu käytäväksi eikä paneeliksi.
