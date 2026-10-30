@@ -3254,3 +3254,7 @@ Omistajan kortti KK:ssa: "Kytkenkö automaattisen tiivistyksen pois kaikilta roo
 ## TILINVAIHDOSSA KAIKKI SESSIOT NOLLATAAN HETI ALUKSI (omistaja 30.10.2026 klo 19.22) (30.10.2026 klo 19.24)
 
 Omistaja (KK:n välittämänä, sanatarkasti): "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". KK:n tavoitekuvaus: jokainen sessio, myös KK, PT ja Postivahti, aloittaa uudella tilillä puhtaalta pöydältä luovutuksensa ja ajantasaisten asetusten varassa; nollaus on vaihdon ensimmäinen askel; omistajan pysyvä lupa nollata myös KK tilinvaihdossa ilman erillistä korttia. Seuraava vaihto arviolta su ~10–12. Kirjattu Raamattu 7.37 ja docs/tilinvaihto.md kohta 1.
+
+## PARIISIN KARTTA: NÄHTÄVYYDET MITTAKAAVASSA, KADUT KEVYEMMIKSI, LÄHIN ZOOM 2× (30.10.2026 klo 21.51)
+
+Omistaja 30.10. klo 21.42 (kuvat docs/raportit/kaappaukset/omistaja-20261030/2142-pariisi-*.png): nähtävyyspiirrokset näkyvät koko ajan oikeassa koossa, eli hyvin pieninä kunnes ollaan täydessä zoomissa (korvaa 28.10. 14.23 suurennuksen); tiet kevyemmiksi ja vaaleammiksi. Kortti 21.45: väärän tyyliset ovat Tuileries ja metron sisäänkäynti (ei pyramidi) → Codex piirtää samaan käsin piirrettyyn tyyliin ilman kehystä ja taustaa (tilaus 0c7afb570/2249df50c). Kortti 21.50: kartan lähin zoom kaksi kertaa lähemmäs (noin 0,75 km leveä näkymä; ei 0,35 km:n tasoa); nähtävyyspiirrosten täysi koko uudella lähimmällä tasolla. Tekijä Karttaseppä.
