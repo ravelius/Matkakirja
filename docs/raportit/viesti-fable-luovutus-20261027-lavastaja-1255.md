@@ -1595,3 +1595,17 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
   – rivit molemmilla aumaharjoilla. (v97-ajo kaatui pintatarkistukseen → raakakuva esikatselu-20261030-042115/havainne-06.png.) Molemmat PT:lle 04.5x.
 - paketti_v95.py päivitetty: v94 + rakennukset-v81 + lahipuut-v11 + c2-v20 (korvaa c2-v19; peli MuurikateC2Kansio "kielletty-c2-v20/"). AJA PT:n kuittauksella.
 - Taustaajoja ei ole.
+
+## LISÄYS 116 klo 05.0x (30.10.): v95 VIETY; AUMAKATTOJEN LAPPEET v182, PARI PT:LLÄ — ALOITA TÄSTÄ
+- Paketti v95 ajettu (SHA256SUMS cf36f386), PT:lle ilmoitettu.
+- PT (ennen junaa 215): tiilirivien suunta vaihtui kolmioittain kaarevilla lappeilla (palatsi_pinnat.py projisoi kolmion omalla normaalilla).
+  UUSI tyokalut/lappe_uv.py: V4_palatsi_katto-UV lapeittain (katon yhtenäiset palat, pääsuunnat 4-kertaisesta keskikulmasta, alamäki lukittu
+  lähimpään, yksi taso per lape, mittakaava nykyisestä UV:sta; pyöreät/8-kulmaiset palat ennallaan). aja_v182_lappeet.zsh →
+  K/lappeet-v182/kielletty-rakennukset-v82 (= v81) + kielletty-c2-v21 (= c2-v20). Blender-tarkistus tyokalut/lappe_kuva.py.
+  Avoimet-v52: lappeet jo tasaisia → ei muutosta.
+- Juuret H/juuri-pk7-v100 (= v99 + rakennukset-v79 → v81; ca3a1b7ad lukee v79:ää) ja -v101 (v78/v79 → v82, c2-v19 → v21).
+  Pari (PK:n paikka 06 -47 -28.5 67 8.13, LAHIKUVA "22 6 15 60", REF ca3a1b7ad): lokit/havainne-editori-20261030-045358 (ennen) / -045619 (jälkeen),
+  kooste 045619/06/lappeet-v100-v101-lahikuva.png → PT 05.0x. Rivit yhtenäiset; alaräystään kulmassa laikukas varjostus (valo, ei UV).
+- SEURAAVAKSI: PT:n kuittaus → `python3 K/tyokalut/paketti_v96.py` (valmis, EI ajettu: v95 + rakennukset-v82 + c2-v21) → SHA256SUMS-tiiviste PT:lle;
+  PK: kansiot "kielletty-rakennukset-v82/" ja "kielletty-c2-v21/". Huom: runko nyt 3aac603dc (v81-nimet).
+- Muu jono: 03-vyön UV (PT), A6 (Codexin GLB).
