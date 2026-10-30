@@ -1573,3 +1573,16 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
   rajaus 041415/03/muurikate-ennen-jalkeen.png: keltaiset raidat JÄÄVÄT → ne ovat siipikattojen oma kannatinvyö (V4_konsoli_kulta + V4_teal y 4,15–4,5).
   PT:lle ilmoitettu (04.19), kysytty VS/PK:n pinnasta. Odottaa PT:n linjausta (mallin materiaali vai pelin pinta).
 - Paketti v95 tulossa: rakennukset-v81 (sis. v80) + lahipuut-v11 (tai v10), kun PT kuittaa parit.
+
+## LISÄYS 114 klo 04.4x (30.10.): LUOVUTUS (konteksti 30 %) — YLÄKULMAN PARI AJOSSA, v95 VALMIINA KOOTTAVAKSI, ALOITA TÄSTÄ
+- PT 04.2x: v81 (muurikate pois) pidetään; kannatinvyön pinta (keltaraita) VS:lle. Paketti v95 kootaan, kun Taihedianin rivien pelipari hyväksytty:
+  `python3 K/tyokalut/paketti_v95.py` (valmis, EI ajettu) = v94 + rakennukset-v81 (korvaa v79) + lahipuut-v11 (korvaa v8); LAHTEET.md päivittyy.
+  Sitten PT:lle SHA256SUMS-tiiviste; PK: kansiot "kielletty-rakennukset-v81/" ja "kielletty-lahipuut-v11/".
+- PK:n pari (REF 41604ddef, editori.sh 06 -47 -28.5 67 8.13, LAHIKUVA "1.5 6 -20 60", PK:n skripti _tyo/pelikoodari/kuja05-pk6-20261029/aja-lr-taihedian-lounas.zsh):
+  v94 lokit/havainne-editori-20261030-040421, v96 -041015, v97 -035637; kooste 035637/06/taihedian-v94-v96-v97.png → PT (04.4x).
+  A4 näkyy v97:ssä molempien räystäiden alla. Harjaeläinrivit EIVÄT näy alakulmasta (katto peittää).
+- AJOSSA (LR, 04.4x): sama paikka ylhäältä LAHIKUVA "22 6 15 60", juuret v97 ja v94 (scratchpad th-yla.zsh → th-yla.log; tulos uusimmat
+  lokit/havainne-editori-20261030-04xxxx/06/peli.png kahdesta ajosta). Tarkista: näkyvätkö rivit kulman aumaharjoilla (ylä- ja alaräystäs) → PT (kuva + polku).
+  Jos skripti hävinnyt: kopioi PK:n skripti, vaihda LAHIKUVA ja `set -- 97 94`.
+- PK: pintatarkistus hylkää hangshi-pbr, dougong-corner-pbr, dougong-intercolumn-pbr → PT:lle kerrottu (lisätään listaan PT:n kautta).
+- Muu jono: 03-vyön UV (PT), A6 (Codexin GLB).
