@@ -1857,3 +1857,28 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
    Aja sitten 03 havainteen kulmalla (TESTIKAMERA_03 "3.5 5.7 17 51", oletuspaikka) uudelleen. 3) Taihemenin yläkaton nurkissa kaksinkertainen porras
    (todennäköisesti C1 1056-kulmat + mallin oma nurkka, c1_muunna.py:n YLA_SX/YLA_SZ) → yksi siisti räystäs kuten piirroksessa.
    EI PAKETTIA ennen kuin 03 on ehjä.
+
+## LISÄYS 136 (30.10. 15.1x): MERIDIAANI v195 KUITATTU, KIILAT POIS (tausta-v77), C1 v11 KESKEN — LUOVUTUS (konteksti 33 %), ALOITA TÄSTÄ
+- 1) MERIDIAANI v195 (PT 14.2x; PT 14.5x KUITTASI: "pidä v195:n materiaalit ja pystykivet", sävyn korjaa VS yhteiseen _JuoksuKujaKiviSokkeli-sävyyn):
+  K/tyokalut/aja_v195_meridiaani.zsh (pohja taihemen-sivuhallit-v194) → K/meridiaani-v195/kielletty-rakennukset-v95 + kielletty-c2-v34.
+  Kivijalka + käytävien kivijalka V4_jalusta_lohkokivi → V4_kujakivi_sokkeli (kivijalka_kujakivi.py, UV jo 2,0/1,75 m), aukkojen pielissä
+  V4_marmori-pystykivet (meridiaani_piirros.py PYSTYKIVI; varmuuskopio meridiaani_piirros-v192.py.bak). Pari 06: lokit/havainne-editori-20261030-142633/06 (LUE.md, sävymittaus).
+- 2) KIILAT (PT 14.3x): EIVÄT v194:stä — näkyvät jo v114:ssä (132419/03) ja v115:ssä (144935/03). Lähde: taustapalojen kk-tausta-2-1/2-2 (ja peilipuoli
+  1-1/1-2) vanhat kivijalkaseinät sivuhallien kohdalla, joista suorakaiteen toinen kolmio oli leikattu → pystyt kolmiokiilat. K/tyokalut/tausta_kiilat.py
+  poistaa orvot pystykolmiot (V4_kujakivi_sokkeli/V4_marmori, sivuhallien laatikot) → K/kiilat-v196/kielletty-tausta-v77 (= v92-paketin tausta-v76 + korjaus,
+  kaikki LODit). Juuri H/juuri-pk7-v119 (linkki kielletty-tausta-v76 → v77). Ennen/jälkeen: lokit/havainne-editori-20261030-150048/03/kiilat-ennen-jalkeen.png
+  (kamera PAIKKA_03 "55 -60 25", TESTIKAMERA_03 "3.5 5.7 12 51"). AVOIN: harmaa laatta + ohuet harmaat pystypalat oikealla (sama kuva) – ei vielä paikannettu.
+  Havainteen kulma 03 (v117, TESTIKAMERA_03 "3.5 5.7 17 51", oletuspaikka): lokit/havainne-editori-20261030-143817/03 – ei kiiloja, ehjä.
+  PT:lle EI VIELÄ LÄHETETTY kiiloista erillistä viestiä (rivi lähetetty luovutuksen yhteydessä).
+- 3) TAIHEMENIN YLÄKATON NURKAT (kaksoisporras): syy = C1-palat. v194 kavensi yläkattoa (sivureuna |x| 22,13, nurkka 22,38/9,95/y 16,66), mutta c1-v10:n
+  sivurivi ja 1056-kulmat olivat |x| 22,95 → leijuivat 0,8 m katon ulkopuolella. c1_muunna.py v11 (--taihemen-jalkeen <v194 f-taihemen-lod0>; varmuuskopio
+  c1_muunna-v10.py.bak): etupalat v10:n syvyys/korkeus, x skaalattu nurkkaan; sivupalat x = sivureuna + 0,1, y reunan mukaan; kulmat nurkkaan.
+  Toisto: `python3 c1_muunna.py <v97-paketin kielletty-c1-v8/c1-sijoitukset.json> <ulos> K/taihemen-sivuhallit-v194/kielletty-rakennukset-v94/rakennukset.json
+  --taihemen-ennen K/taihedian-v193/kielletty-rakennukset-v93/f-taihemen-lod0.glb --taihedian v193 --taihemen-jalkeen K/taihemen-sivuhallit-v194/kielletty-rakennukset-v94/f-taihemen-lod0.glb`
+  (ilman --taihemen-jalkeen tuottaa tavu tavulta c1-v10:n). Tulos K/c1-v11/kielletty-c1-v11 (juuret v118/v119: linkki kielletty-c1-v8 → c1-v11).
+  Pari (TESTIKAMERA_03 "7 28 10 51" PAIKKA_03 "7.34 -262 -2.03"): lokit/havainne-editori-20261030-150720/03/c1-ennen-jalkeen.png: etureuna ehjä, nurkka siistimpi,
+  MUTTA SIVURIVI YHÄ IRTI katon alapuolella (näkyy erillisenä vinona rivinä vasemmassa nurkassa). Seuraavaksi: tarkista c1_muunna.py:n taihemen_reuna/reuna(2,0,z)
+  – katon sivureunan y ja |x| (V4_palatsi_katto, y 14,5–19 voi poimia alemman pinnan); vertaa pala-y:tä reunan y:hyn z-kohdittain; tavoite sivurivi kuten etu.
+  HUOM: keskellä yläkattoa näkyvä lyhyt vihreä rivi = taempien rakennusten (Taihedian) C1 kaukaa, ei Taihemenin.
+- EI PAKETTIA ennen kuin 03 on ehjä (PT 14.3x). Sitten Taihedian v196+ (LISÄYS 134 "SEURAAVAKSI"; rakennukset-v95 on nyt Meridiaani → Taihedian seuraava vapaa numero).
+- Paketin osat valmiina: rakennukset-v95 + c2-v34 (meridiaani-v195), tausta-v77 (kiilat-v196), c1-v11 (kesken). Ei taustaajoja käynnissä.
