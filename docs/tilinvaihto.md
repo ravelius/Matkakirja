@@ -32,7 +32,11 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
 3. Kirjaa tili: päätili (omistajan muukin käyttö) = siirtoprompti 50 %:ssa; koodaustili = vain rivi 99 %:ssa. Kirjaus lokiin
    (`node tools/raamattu-kirjaa.mjs "TILINVAIHTO …"`) ja F/asemataulu/osoitteet.md:n taulukkoon; Postivahdille, kun se on luotu.
 
-## 1. Talteen ennen vanhojen sessioiden tyhjennystä
+## 1. Kaikki sessiot nollataan heti aluksi (omistaja 30.10.2026 klo 19.22; Raamattu 7.37)
+Omistaja: "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". Tämä on vaihdon ENSIMMÄINEN ASKEL heti tilin jälkeen
+(kohta 0) ja ennen sessioiden luontia: jokainen sessio, myös KK, PT ja Postivahti, aloittaa uudella tilillä puhtaalta pöydältä
+luovutuksensa ja ajantasaisten asetusten varassa (idleCompaction false, kohta 6). KK:n nollaukseen ei kysytä korttia (omistajan
+pysyvä lupa tilinvaihdossa). Järjestys: luovutukset ja tallenteet (alla 1–2), sitten nollaus (3).
 1. Jokainen rooli, jolla on keskeneräistä: luovutus + push (docs/moduulit/siirtoraportti.md). Lue roolien uusimmat luovutukset.
    Uusin luovutus löytyy aikajärjestyksessä (tiedostonimet -aamu/-ilta2/-yo eivät lajittele): `git fetch origin` ja
    `git log --remotes=origin --since=3.days --format='%ci %h %D' --name-only -- 'docs/raportit/viesti-<rooli>-luovutus-*' | head`.
