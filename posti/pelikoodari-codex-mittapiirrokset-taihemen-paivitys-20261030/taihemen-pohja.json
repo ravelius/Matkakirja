@@ -1,0 +1,18 @@
+{
+ "kuva": "taihemen-pohja.png",
+ "kuvaus": "Taihemen pohjapiirros ylhäältä, akselikehys x/z",
+ "px_per_m": 12,
+ "x0": -58,
+ "x1": 58,
+ "a0": -250,
+ "a1": -172,
+ "marginaali_vasen_ylä": [
+  70,
+  120
+ ],
+ "koko": [
+  1542,
+  1386
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}

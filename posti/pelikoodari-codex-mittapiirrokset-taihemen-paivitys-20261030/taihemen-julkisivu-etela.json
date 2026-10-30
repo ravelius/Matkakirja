@@ -1,0 +1,18 @@
+{
+ "kuva": "taihemen-julkisivu-etela.png",
+ "kuvaus": "Taihemen etelän julkisivu, akselikehys x/y",
+ "px_per_m": 16,
+ "x0": -50,
+ "x1": 50,
+ "a0": -2,
+ "a1": 27,
+ "marginaali_vasen_ylä": [
+  80,
+  120
+ ],
+ "koko": [
+  1760,
+  914
+ ],
+ "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+}
