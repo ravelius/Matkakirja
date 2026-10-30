@@ -1772,3 +1772,17 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   lokit/…-132419/03 (中左门 terassin takana). Ortopäällekkäiskuvat: proto-3d/lokit/orto-glb-v191-20261030-1254/{taihemen,sivuhalli}/{julkisivu,pohja}-paalle.png.
   PK:n orto.sh (pelikoodari/orto-216) ei ajettu: haaraa ei löytynyt fetchillä proto-lavastaja-kerroin-puusta.
 - Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v92 + c2-v31. Seuraavaksi: 3) Taihedian 3D (LISÄYS 129).
+
+## LISÄYS 131 (30.10. 13.5x): TAIHEDIAN v193 PIIRROKSEN v3 MITOIN — PT:lle, odottaa kuittausta
+- PT 13.0x jono: 1b/2/3 = LISÄYS 130. orto.sh (PK, proto-3d/_tyo/pelikoodari/piirrokset-20261030/orto.sh, JUURI_K=juuri): Taihemen lokit/orto-20261030-133011
+  (f ok); 06 lokit/orto-20261030-132733 kuvaa väärää kohdetta (mäki + pohjoisportti) → PK:n työkalu. 1a kysytty PT:ltä: geometrinen kierto
+  (1 cm kerrossaumat kivijalkaan + käytävän rappaukselle tasavärimateriaali) vai VS varjostimeen.
+- K/tyokalut/taihedian_piirros.py (+ _json.py), ketju aja_v193_taihedian.zsh → K/taihedian-v193/kielletty-rakennukset-v93 (= v92 + g-taihedian,
+  g-jalusta, g-jalusta-etu) + kielletty-c2-v32 (= c2-v31 + kaiteeton, 1063-portaat, C2-palat r=2). Juuri H/juuri-pk7-v115 (= v114, linkit → v93/c2-v32).
+  Halli: runko x × 1,051, z × 1,086 (63,96 × 37), y 8,95–16,51 → 8,95–13,6; katto-verkko x/z paloittain (yläkerros 57,6, alapalkkivyö 65,4,
+  räystäs ±34,5 × ±20,6), palkkivyöt 13,6–16,3 / 20,1–21,3, katto 15,5 → 20,2 / 20,8 → 33,45, harja 35,05, 螭吻 37,7.
+  Terassi: tasot 2,71/5,42/8,13 → 3,1/5,3/8,13 (isot palat paloittain, pienet jäykkinä pohjansa tai tason mukana); etelän portaat
+  ±1,55/4,5/10,4/15,3 → ±1,5/3,8/10,5/16,0 (z' < −59,3, 垂带 jäykkinä); C2: 1061/1062 pohjan mukaan, 1064 tason mukaan, 1062 sx porrasvälissä.
+- Ortovertailu (orto.sh g + vertaa.py): proto-3d/lokit/orto-v193-taihedian-20261030-1351/ julkisivu IoU 0,76, pohja 0,78 (*-paalle.png).
+  Pari 03 havainteen kameralla (TESTIKAMERA_03 "3.5 5.7 17 51", keisari 0,12): lokit/havainne-editori-20261030-134256/03; pelin oletuskamera 134650/03.
+- Hyväksynnän jälkeen paketti v98 = v97 + rakennukset-v93 + c2-v32 (sisältää v90–v92).
