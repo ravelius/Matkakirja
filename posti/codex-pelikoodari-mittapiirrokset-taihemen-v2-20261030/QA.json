@@ -1,0 +1,2217 @@
+{
+  "status": "PASS_WITH_DISCLOSED_SOURCE_CONFLICTS",
+  "checkedAt": "2026-10-30T08:29:23.620393+00:00",
+  "tasks": [
+    1309,
+    1310
+  ],
+  "files": [
+    {
+      "name": "taihemen-pohja-codex.svg",
+      "sha256": "96fa59afbbf3b994a2d0df81d3b777ff4786b2a1d787b450b376309e219775d1",
+      "bytes": 95864
+    },
+    {
+      "name": "taihemen-pohja-codex.png",
+      "sha256": "d8c680c59495facf28e52a9a5befca1a2dde8c8222236b09ad996e422ad6d168",
+      "bytes": 201599
+    },
+    {
+      "name": "taihemen-julkisivu-etela-codex.svg",
+      "sha256": "9ab8d2de382cb76a723d8a9e78b8a7b1c458b1539662019d124fde3771b0190e",
+      "bytes": 130083
+    },
+    {
+      "name": "taihemen-julkisivu-etela-codex.png",
+      "sha256": "edc83dd40b5619b6f6311d283768ae1ec3570fd915ff3933a25369800b6c62ca",
+      "bytes": 266250
+    }
+  ],
+  "evidence": {
+    "audit-elevation-checks": {
+      "frame": "PASS",
+      "size_px": [
+        1760,
+        914
+      ],
+      "px_per_m": 16,
+      "grid_pixel_bounds": [
+        80,
+        120,
+        1680,
+        584
+      ],
+      "vertical_gridlines": 101,
+      "horizontal_gridlines": 30,
+      "endpoint_labels": "PASS",
+      "embedded_raster_images": 0,
+      "svg_sha256": "9ab8d2de382cb76a723d8a9e78b8a7b1c458b1539662019d124fde3771b0190e",
+      "png_sha256": "edc83dd40b5619b6f6311d283768ae1ec3570fd915ff3933a25369800b6c62ca",
+      "exact_rectangles": [
+        {
+          "id": "foundation",
+          "world_bounds": [
+            -28.9,
+            27.4,
+            0,
+            4
+          ],
+          "actual_svg_rect": [
+            417.6,
+            488.0,
+            900.8,
+            64.0
+          ],
+          "max_coordinate_error_px": 0.0
+        },
+        {
+          "id": "balustrade-A",
+          "world_bounds": [
+            -28.9,
+            27.4,
+            3.9,
+            4.9
+          ],
+          "actual_svg_rect": [
+            417.6,
+            473.6,
+            900.8,
+            16.0
+          ],
+          "max_coordinate_error_px": 7.105427357601002e-15
+        },
+        {
+          "id": "south-stair-1",
+          "world_bounds": [
+            -10.2,
+            -6.8,
+            0,
+            4
+          ],
+          "actual_svg_rect": [
+            716.8,
+            488.0,
+            54.4,
+            64.0
+          ],
+          "max_coordinate_error_px": 7.105427357601002e-15
+        },
+        {
+          "id": "south-stair-2",
+          "world_bounds": [
+            -5,
+            1.6,
+            0,
+            4
+          ],
+          "actual_svg_rect": [
+            800.0,
+            488.0,
+            105.6,
+            64.0
+          ],
+          "max_coordinate_error_px": 0.0
+        },
+        {
+          "id": "south-stair-3",
+          "world_bounds": [
+            4,
+            7.5,
+            0,
+            4
+          ],
+          "actual_svg_rect": [
+            944.0,
+            488.0,
+            56.0,
+            64.0
+          ],
+          "max_coordinate_error_px": 0.0
+        }
+      ],
+      "traces": [
+        {
+          "id": "lower-roof",
+          "source_rows": 69,
+          "source_runs": 69,
+          "max_endpoint_delta_px": 0.0
+        },
+        {
+          "id": "upper-roof",
+          "source_rows": 110,
+          "source_runs": 110,
+          "max_endpoint_delta_px": 0.0
+        },
+        {
+          "id": "chiwen-west",
+          "source_rows": 24,
+          "source_runs": 24,
+          "max_endpoint_delta_px": 0.0
+        },
+        {
+          "id": "chiwen-east",
+          "source_rows": 24,
+          "direct_rows": 22,
+          "restored_source_occlusion_rows": [
+            170,
+            171
+          ],
+          "restoration": "West ornament +608px",
+          "max_endpoint_delta_px": 0
+        },
+        {
+          "id": "lion-west",
+          "source_rows": 49,
+          "direct_rows": 46,
+          "restored_source_occlusion_rows": [
+            507,
+            508,
+            509
+          ],
+          "restoration": "Equal visible edges from rows506/510",
+          "max_endpoint_delta_px": 0,
+          "source": "A schematic appearance and size"
+        },
+        {
+          "id": "lion-east",
+          "source_rows": 49,
+          "direct_rows": 46,
+          "restored_source_occlusion_rows": [
+            507,
+            508,
+            509
+          ],
+          "restoration": "Equal visible edges from rows506/510",
+          "max_endpoint_delta_px": 0,
+          "source": "A schematic appearance and size"
+        }
+      ],
+      "column_centers": {
+        "count": 10,
+        "spans": 9,
+        "x_m": [
+          -22.909999999999997,
+          -19.67,
+          -14.490000000000002,
+          -9.340000000000003,
+          -3.950000000000003,
+          3.950000000000003,
+          9.340000000000003,
+          14.489999999999995,
+          19.67,
+          22.909999999999997
+        ],
+        "bay_widths_m": [
+          3.239999999999995,
+          5.18,
+          5.149999999999999,
+          5.390000000000001,
+          7.900000000000006,
+          5.390000000000001,
+          5.1499999999999915,
+          5.180000000000007,
+          3.239999999999995
+        ],
+        "total_width_m": 45.81999999999999,
+        "status": "PASS"
+      },
+      "gaps": [
+        {
+          "nominal_y_m": [
+            9.6,
+            10
+          ],
+          "actual_pixel_gap": [
+            393,
+            398
+          ],
+          "painted_gap_m": 0.3125
+        },
+        {
+          "nominal_y_m": [
+            15.2,
+            15.7
+          ],
+          "actual_pixel_gap": [
+            301,
+            308
+          ],
+          "painted_gap_m": 0.4375
+        }
+      ],
+      "ridge": {
+        "actual_bbox_px": [
+          563.0,
+          171.0,
+          625.0,
+          20.0
+        ],
+        "expected_source_bbox_px": [
+          563,
+          171,
+          625,
+          20
+        ],
+        "exact": true,
+        "nominal_top_y_m": 23.8,
+        "raster_top_y_m": 23.8125
+      },
+      "all_ornaments_clipped": 20,
+      "text": {
+        "method": "Arial/Arial Bold font metrics at 10x resolution, SVG group/text transformations and text halo included",
+        "text_count": 55,
+        "overlaps": [],
+        "all_in_canvas": true
+      },
+      "visible_source_attribution": "K heights and bay widths green; A rail retained; CC BY3.0 / 江上清风1961 present; unknown objects legend only.",
+      "visual_review": "Final PNG inspected: readable labels, visible two roof levels and source gaps, no observed overlap or clipping."
+    },
+    "elevation-geometry": {
+      "frame": {
+        "kuva": "taihemen-julkisivu-etela.png",
+        "kuvaus": "Taihemen etelän julkisivu, akselikehys x/y",
+        "px_per_m": 16,
+        "x0": -50,
+        "x1": 50,
+        "a0": -2,
+        "a1": 27,
+        "marginaali_vasen_ylä": [
+          80,
+          120
+        ],
+        "koko": [
+          1760,
+          914
+        ],
+        "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+      },
+      "mapping": {
+        "X": "80+(x-(-50))*16",
+        "Y": "120+(27-a)*16",
+        "additional_rotation_deg": 0
+      },
+      "features": [
+        {
+          "id": "foundation",
+          "type": "rect",
+          "bbox_px": [
+            417.6,
+            488,
+            900.8,
+            64
+          ],
+          "world_bbox_m": {
+            "x_min": -28.9,
+            "x_max": 27.400000000000006,
+            "a_min": 0.0,
+            "a_max": 4.0
+          },
+          "source": "[3] x; [K] height",
+          "note": "Foundation4.0m[K] supersedes old3.9m[A].",
+          "nominal": {
+            "x_m": [
+              -28.9,
+              27.4
+            ],
+            "a_m": [
+              0,
+              4
+            ]
+          }
+        },
+        {
+          "id": "balustrade-A",
+          "type": "rect",
+          "bbox_px": [
+            417.6,
+            473.6,
+            900.8,
+            16.000000000000007
+          ],
+          "world_bbox_m": {
+            "x_min": -28.9,
+            "x_max": 27.400000000000006,
+            "a_min": 3.8999999999999986,
+            "a_max": 4.899999999999999
+          },
+          "source": "[A]",
+          "note": "Unchanged JSON rail overlaps new4.0m foundation by0.1m; not silently shifted.",
+          "nominal": {
+            "x_m": [
+              -28.9,
+              27.4
+            ],
+            "a_m": [
+              3.9,
+              4.9
+            ]
+          }
+        },
+        {
+          "id": "front-column-storey",
+          "type": "rect",
+          "bbox_px": [
+            507,
+            424,
+            746,
+            65
+          ],
+          "world_bbox_m": {
+            "x_min": -23.3125,
+            "x_max": 23.3125,
+            "a_min": 3.9375,
+            "a_max": 8.0
+          },
+          "source": "v2 PNG envelope; [K] columns",
+          "note": "Exact K centerlines inside the new painted source envelope; no equal spacing or old−0.3m recentering.",
+          "nominal": {
+            "y_m": [
+              4,
+              8
+            ],
+            "source": "[K]",
+            "centers_x_m": [
+              -22.91,
+              -19.67,
+              -14.490000000000002,
+              -9.340000000000002,
+              -3.950000000000002,
+              3.9499999999999984,
+              9.339999999999998,
+              14.489999999999998,
+              19.669999999999998,
+              22.909999999999997
+            ]
+          }
+        },
+        {
+          "id": "lower-beam",
+          "type": "rect",
+          "bbox_px": [
+            510,
+            398,
+            740,
+            27
+          ],
+          "world_bbox_m": {
+            "x_min": -23.125,
+            "x_max": 23.125,
+            "a_min": 7.9375,
+            "a_max": 9.625
+          },
+          "source": "v2 PNG; y[K], x[A]",
+          "note": "Nominal8.0–9.6m[K]. Source gap9.6–10.0m is intentionally retained.",
+          "nominal": {
+            "y_m": [
+              8,
+              9.6
+            ],
+            "source": "[K]"
+          }
+        },
+        {
+          "id": "lower-roof",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            454,
+            324,
+            843,
+            69
+          ],
+          "world_bbox_m": {
+            "x_min": -26.625,
+            "x_max": 26.0625,
+            "a_min": 9.9375,
+            "a_max": 14.25
+          },
+          "source": "v2 PNG; y[K], x[A]",
+          "note": "Fresh source polygon; no filling the gap below the10.0m eave.",
+          "nominal": {
+            "y_m": [
+              10,
+              14.3
+            ],
+            "source": "[K]",
+            "nominal_eave_halfwidth_m": 26.3,
+            "x_source": "[A]"
+          },
+          "path": "M549,324H1202V325H549Z M547,325H1204V326H547Z M546,326H1205V327H546Z M544,327H1207V328H544Z M543,328H1208V329H543Z M542,329H1209V330H542Z M540,330H1211V331H540Z M539,331H1212V332H539Z M537,332H1214V333H537Z M536,333H1215V334H536Z M535,334H1216V335H535Z M533,335H1218V336H533Z M532,336H1219V337H532Z M531,337H1220V338H531Z M529,338H1222V339H529Z M528,339H1223V340H528Z M526,340H1225V341H526Z M525,341H1226V342H525Z M524,342H1227V343H524Z M522,343H1229V344H522Z M521,344H1230V345H521Z M519,345H1232V346H519Z M518,346H1233V347H518Z M517,347H1234V348H517Z M515,348H1236V349H515Z M514,349H1237V350H514Z M512,350H1239V351H512Z M511,351H1240V352H511Z M510,352H1241V353H510Z M508,353H1243V354H508Z M507,354H1244V355H507Z M505,355H1246V356H505Z M504,356H1247V357H504Z M503,357H1248V358H503Z M501,358H1250V359H501Z M500,359H1251V360H500Z M499,360H1252V361H499Z M497,361H1254V362H497Z M496,362H1255V363H496Z M494,363H1257V364H494Z M493,364H1258V365H493Z M492,365H1259V366H492Z M490,366H1261V367H490Z M489,367H1262V368H489Z M487,368H1264V369H487Z M486,369H1265V370H486Z M485,370H1266V371H485Z M483,371H1268V372H483Z M482,372H1269V373H482Z M480,373H1271V374H480Z M479,374H1272V375H479Z M478,375H1273V376H478Z M476,376H1275V377H476Z M475,377H1276V378H475Z M473,378H1278V379H473Z M472,379H1279V380H472Z M471,380H1280V381H471Z M469,381H1282V382H469Z M468,382H1283V383H468Z M467,383H1284V384H467Z M465,384H1286V385H465Z M464,385H1287V386H464Z M462,386H1289V387H462Z M461,387H1290V388H461Z M460,388H1291V389H460Z M458,389H1293V390H458Z M457,390H1294V391H457Z M455,391H1296V392H455Z M454,392H1297V393H454Z",
+          "trace_tolerance_px": 1,
+          "trace_tolerance_m": 0.0625
+        },
+        {
+          "id": "upper-beam",
+          "type": "rect",
+          "bbox_px": [
+            550,
+            308,
+            651,
+            16
+          ],
+          "world_bbox_m": {
+            "x_min": -20.625,
+            "x_max": 20.0625,
+            "a_min": 14.25,
+            "a_max": 15.25
+          },
+          "source": "v2 PNG; y[K], x[A]",
+          "note": "Nominal14.3–15.2m[K]. Source gap15.2–15.7m is intentionally retained.",
+          "nominal": {
+            "y_m": [
+              14.3,
+              15.2
+            ],
+            "source": "[K]"
+          }
+        },
+        {
+          "id": "upper-roof",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            515,
+            191,
+            721,
+            110
+          ],
+          "world_bbox_m": {
+            "x_min": -22.8125,
+            "x_max": 22.25,
+            "a_min": 15.6875,
+            "a_max": 22.5625
+          },
+          "source": "v2 PNG; y[K], x[A]",
+          "note": "Fresh source upper roof, part of15.7–23.8m[K] roof/ridge interval.",
+          "nominal": {
+            "y_m": [
+              15.7,
+              23.8
+            ],
+            "source": "[K]",
+            "nominal_eave_halfwidth_m": 22.5,
+            "x_source": "[A]"
+          },
+          "path": "M563,191H1188V192H563Z M562,192H1189V193H562Z M562,193H1189V194H562Z M561,194H1190V195H561Z M561,195H1190V196H561Z M560,196H1191V197H560Z M560,197H1191V198H560Z M560,198H1191V199H560Z M559,199H1192V200H559Z M559,200H1192V201H559Z M558,201H1193V202H558Z M558,202H1193V203H558Z M557,203H1194V204H557Z M557,204H1194V205H557Z M556,205H1195V206H556Z M556,206H1195V207H556Z M556,207H1195V208H556Z M555,208H1196V209H555Z M555,209H1196V210H555Z M554,210H1197V211H554Z M554,211H1197V212H554Z M553,212H1198V213H553Z M553,213H1198V214H553Z M553,214H1198V215H553Z M552,215H1199V216H552Z M552,216H1199V217H552Z M551,217H1200V218H551Z M551,218H1200V219H551Z M550,219H1201V220H550Z M550,220H1201V221H550Z M549,221H1202V222H549Z M549,222H1202V223H549Z M549,223H1202V224H549Z M548,224H1203V225H548Z M548,225H1203V226H548Z M547,226H1204V227H547Z M547,227H1204V228H547Z M546,228H1205V229H546Z M546,229H1205V230H546Z M546,230H1205V231H546Z M545,231H1206V232H545Z M545,232H1206V233H545Z M544,233H1207V234H544Z M544,234H1207V235H544Z M543,235H1208V236H543Z M543,236H1208V237H543Z M542,237H1209V238H542Z M542,238H1209V239H542Z M542,239H1209V240H542Z M541,240H1210V241H541Z M541,241H1210V242H541Z M540,242H1211V243H540Z M540,243H1211V244H540Z M539,244H1212V245H539Z M539,245H1212V246H539Z M539,246H1212V247H539Z M538,247H1213V248H538Z M538,248H1213V249H538Z M537,249H1214V250H537Z M537,250H1214V251H537Z M536,251H1215V252H536Z M536,252H1215V253H536Z M536,253H1215V254H536Z M535,254H1216V255H535Z M535,255H1216V256H535Z M534,256H1217V257H534Z M534,257H1217V258H534Z M533,258H1218V259H533Z M533,259H1218V260H533Z M532,260H1219V261H532Z M532,261H1219V262H532Z M532,262H1219V263H532Z M531,263H1220V264H531Z M531,264H1220V265H531Z M530,265H1221V266H530Z M530,266H1221V267H530Z M529,267H1222V268H529Z M529,268H1222V269H529Z M529,269H1222V270H529Z M528,270H1223V271H528Z M528,271H1223V272H528Z M527,272H1224V273H527Z M527,273H1224V274H527Z M526,274H1225V275H526Z M526,275H1225V276H526Z M525,276H1226V277H525Z M525,277H1226V278H525Z M525,278H1226V279H525Z M524,279H1227V280H524Z M524,280H1227V281H524Z M523,281H1228V282H523Z M523,282H1228V283H523Z M522,283H1229V284H522Z M522,284H1229V285H522Z M522,285H1229V286H522Z M521,286H1230V287H521Z M521,287H1230V288H521Z M520,288H1231V289H520Z M520,289H1231V290H520Z M519,290H1232V291H519Z M519,291H1232V292H519Z M518,292H1233V293H518Z M518,293H1233V294H518Z M518,294H1233V295H518Z M517,295H1234V296H517Z M517,296H1234V297H517Z M516,297H1235V298H516Z M516,298H1235V299H516Z M515,299H1236V300H515Z M515,300H1236V301H515Z",
+          "trace_tolerance_px": 1,
+          "trace_tolerance_m": 0.0625
+        },
+        {
+          "id": "ridge-band",
+          "type": "rect",
+          "bbox_px": [
+            563,
+            171,
+            625,
+            20
+          ],
+          "world_bbox_m": {
+            "x_min": -19.8125,
+            "x_max": 19.25,
+            "a_min": 22.5625,
+            "a_max": 23.8125
+          },
+          "source": "v2 PNG; top[2/K], x[A]",
+          "note": "Top23.8m[2/K], quantized source top171px; ridge length39m[A].",
+          "nominal": {
+            "top_y_m": 23.8,
+            "top_source": "[2/K]",
+            "nominal_length_m": 39,
+            "length_source": "[A]"
+          }
+        },
+        {
+          "id": "chiwen-west",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            558,
+            148,
+            27,
+            24
+          ],
+          "world_bbox_m": {
+            "x_min": -20.125,
+            "x_max": -18.4375,
+            "a_min": 23.75,
+            "a_max": 25.25
+          },
+          "source": "v2 PNG; top[K], x[A]",
+          "note": "New25.2m[K] ornament silhouette. Right rows170/171 recovered from left+608px through blue-line occlusion.",
+          "nominal": {
+            "top_y_m": 25.2,
+            "source": "[K]"
+          },
+          "path": "M561,148H581V149H561Z M561,149H581V150H561Z M561,150H581V151H561Z M561,151H582V152H561Z M560,152H582V153H560Z M560,153H582V154H560Z M560,154H582V155H560Z M560,155H582V156H560Z M560,156H582V157H560Z M560,157H583V158H560Z M560,158H583V159H560Z M560,159H583V160H560Z M559,160H583V161H559Z M559,161H583V162H559Z M559,162H583V163H559Z M559,163H584V164H559Z M559,164H584V165H559Z M559,165H584V166H559Z M559,166H584V167H559Z M559,167H584V168H559Z M558,168H584V169H558Z M558,169H585V170H558Z M558,170H585V171H558Z M558,171H585V172H558Z",
+          "trace_tolerance_px": 1,
+          "trace_tolerance_m": 0.0625
+        },
+        {
+          "id": "chiwen-east",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            1166,
+            148,
+            27,
+            24
+          ],
+          "world_bbox_m": {
+            "x_min": 17.875,
+            "x_max": 19.5625,
+            "a_min": 23.75,
+            "a_max": 25.25
+          },
+          "source": "v2 PNG; top[K], x[A]",
+          "note": "New25.2m[K] ornament silhouette. Right rows170/171 recovered from left+608px through blue-line occlusion.",
+          "nominal": {
+            "top_y_m": 25.2,
+            "source": "[K]"
+          },
+          "path": "M1169,148H1189V149H1169Z M1169,149H1189V150H1169Z M1169,150H1189V151H1169Z M1169,151H1190V152H1169Z M1168,152H1190V153H1168Z M1168,153H1190V154H1168Z M1168,154H1190V155H1168Z M1168,155H1190V156H1168Z M1168,156H1190V157H1168Z M1168,157H1191V158H1168Z M1168,158H1191V159H1168Z M1168,159H1191V160H1168Z M1167,160H1191V161H1167Z M1167,161H1191V162H1167Z M1167,162H1191V163H1167Z M1167,163H1192V164H1167Z M1167,164H1192V165H1167Z M1167,165H1192V166H1167Z M1167,166H1192V167H1167Z M1167,167H1192V168H1167Z M1166,168H1192V169H1166Z M1166,169H1193V170H1166Z M1166,170H1193V171H1166Z M1166,171H1193V172H1166Z",
+          "trace_tolerance_px": 1,
+          "trace_tolerance_m": 0.0625
+        },
+        {
+          "id": "south-stair-1",
+          "type": "rect",
+          "bbox_px": [
+            716.8,
+            488,
+            54.39999999999999,
+            64
+          ],
+          "world_bbox_m": {
+            "x_min": -10.200000000000003,
+            "x_max": -6.800000000000004,
+            "a_min": 0.0,
+            "a_max": 4.0
+          },
+          "source": "[3] x; [K] top",
+          "note": "OSM stair envelope; tread count is schematic.",
+          "nominal": {
+            "x_m": [
+              -10.2,
+              -6.8
+            ],
+            "a_m": [
+              0,
+              4
+            ]
+          }
+        },
+        {
+          "id": "south-stair-2",
+          "type": "rect",
+          "bbox_px": [
+            800,
+            488,
+            105.6,
+            64
+          ],
+          "world_bbox_m": {
+            "x_min": -5.0,
+            "x_max": 1.6000000000000014,
+            "a_min": 0.0,
+            "a_max": 4.0
+          },
+          "source": "[3] x; [K] top",
+          "note": "OSM stair envelope; tread count is schematic.",
+          "nominal": {
+            "x_m": [
+              -5,
+              1.6
+            ],
+            "a_m": [
+              0,
+              4
+            ]
+          }
+        },
+        {
+          "id": "south-stair-3",
+          "type": "rect",
+          "bbox_px": [
+            944,
+            488,
+            56.0,
+            64
+          ],
+          "world_bbox_m": {
+            "x_min": 4.0,
+            "x_max": 7.5,
+            "a_min": 0.0,
+            "a_max": 4.0
+          },
+          "source": "[3] x; [K] top",
+          "note": "OSM stair envelope; tread count is schematic.",
+          "nominal": {
+            "x_m": [
+              4,
+              7.5
+            ],
+            "a_m": [
+              0,
+              4
+            ]
+          }
+        },
+        {
+          "id": "lion-west",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            688,
+            504,
+            23,
+            49
+          ],
+          "world_bbox_m": {
+            "x_min": -12.0,
+            "x_max": -10.5625,
+            "a_min": -0.0625,
+            "a_max": 3.0
+          },
+          "source": "v2 PNG [A]; pair[1]",
+          "note": "Schematic lion appearance/size. Three dimension-covered rows restored from matching adjacent bounds.",
+          "nominal": {
+            "center_x_m": -11.3,
+            "z_m": -237,
+            "location_source": "[A]",
+            "count_source": "[1]"
+          },
+          "path": "M691,504H708V505H691Z M691,505H708V506H691Z M691,506H708V507H691Z M691,507H708V508H691Z M691,508H708V509H691Z M691,509H708V510H691Z M691,510H708V511H691Z M691,511H708V512H691Z M690,512H708V513H690Z M690,513H709V514H690Z M690,514H709V515H690Z M690,515H709V516H690Z M690,516H709V517H690Z M690,517H709V518H690Z M690,518H709V519H690Z M690,519H709V520H690Z M690,520H709V521H690Z M690,521H709V522H690Z M690,522H709V523H690Z M690,523H709V524H690Z M690,524H709V525H690Z M690,525H709V526H690Z M690,526H709V527H690Z M690,527H709V528H690Z M689,528H709V529H689Z M689,529H710V530H689Z M689,530H710V531H689Z M689,531H710V532H689Z M689,532H710V533H689Z M689,533H710V534H689Z M689,534H710V535H689Z M689,535H710V536H689Z M689,536H710V537H689Z M689,537H710V538H689Z M689,538H710V539H689Z M689,539H710V540H689Z M689,540H710V541H689Z M689,541H710V542H689Z M689,542H710V543H689Z M689,543H710V544H689Z M688,544H710V545H688Z M688,545H711V546H688Z M688,546H711V547H688Z M688,547H711V548H688Z M688,548H711V549H688Z M688,549H711V550H688Z M688,550H711V551H688Z M688,551H711V552H688Z M688,552H711V553H688Z",
+          "trace_tolerance_px": 1,
+          "trace_tolerance_m": 0.0625
+        },
+        {
+          "id": "lion-east",
+          "type": "source-scanline-path",
+          "bbox_px": [
+            1040,
+            504,
+            23,
+            49
+          ],
+          "world_bbox_m": {
+            "x_min": 10.0,
+            "x_max": 11.4375,
+            "a_min": -0.0625,
+            "a_max": 3.0
+          },
+          "source": "v2 PNG [A]; pair[1]",
+          "note": "Schematic lion appearance/size. Three dimension-covered rows restored from matching adjacent bounds.",
+          "nominal": {
+            "center_x_m": 10.7,
+            "z_m": -237,
+            "location_source": "[A]",
+            "count_source": "[1]"
+          },
+          "path": "M1043,504H1060V505H1043Z M1043,505H1060V506H1043Z M1043,506H1060V507H1043Z M1043,507H1060V508H1043Z M1043,508H1060V509H1043Z M1043,509H1060V510H1043Z M1043,510H1060V511H1043Z M1043,511H1060V512H1043Z M1042,512H1060V513H1042Z M1042,513H1061V514H1042Z M1042,514H1061V515H1042Z M1042,515H1061V516H1042Z M1042,516H1061V517H1042Z M1042,517H1061V518H1042Z M1042,518H1061V519H1042Z M1042,519H1061V520H1042Z M1042,520H1061V521H1042Z M1042,521H1061V522H1042Z M1042,522H1061V523H1042Z M1042,523H1061V524H1042Z M1042,524H1061V525H1042Z M1042,525H1061V526H1042Z M1042,526H1061V527H1042Z M1042,527H1061V528H1042Z M1041,528H1061V529H1041Z M1041,529H1062V530H1041Z M1041,530H1062V531H1041Z M1041,531H1062V532H1041Z M1041,532H1062V533H1041Z M1041,533H1062V534H1041Z M1041,534H1062V535H1041Z M1041,535H1062V536H1041Z M1041,536H1062V537H1041Z M1041,537H1062V538H1041Z M1041,538H1062V539H1041Z M1041,539H1062V540H1041Z M1041,540H1062V541H1041Z M1041,541H1062V542H1041Z M1041,542H1062V543H1041Z M1041,543H1062V544H1041Z M1040,544H1062V545H1040Z M1040,545H1063V546H1040Z M1040,546H1063V547H1040Z M1040,547H1063V548H1040Z M1040,548H1063V549H1040Z M1040,549H1063V550H1040Z M1040,550H1063V551H1040Z M1040,551H1063V552H1040Z M1040,552H1063V553H1040Z",
+          "trace_tolerance_px": 1,
+          "trace_tolerance_m": 0.0625
+        }
+      ],
+      "source_sha256": {
+        "taihemen-julkisivu-etela.json": "0032b12691e5b3618d3d2b4001c97d6b02d212c5b096f71c4adc093dc69952a7",
+        "taihemen-mitat.json": "ff54ce7c2c7218950bf84e770cb6693f2143fe621cbec4919e15329b8a1dc9d8",
+        "taihemen-pohja.json": "298ec87c82a3a3441294fdf2d8e525b7ec877fdb2400686890fde2987fad0360"
+      },
+      "source_png_sha256": "f6c073615a52ace0ea5140bf017db8df5ec5eb4951b3454ab8aae47534e83cd6",
+      "front_columns": {
+        "center_x_m": 0,
+        "centers_x_m": [
+          -22.91,
+          -19.67,
+          -14.490000000000002,
+          -9.340000000000002,
+          -3.950000000000002,
+          3.9499999999999984,
+          9.339999999999998,
+          14.489999999999998,
+          19.669999999999998,
+          22.909999999999997
+        ],
+        "bay_widths_m": [
+          3.24,
+          5.18,
+          5.15,
+          5.39,
+          7.9,
+          5.39,
+          5.15,
+          5.18,
+          3.24
+        ],
+        "count": 10,
+        "span_count": 9,
+        "total_width_m": 45.82,
+        "source": "[K]",
+        "width_tolerance_m": 1
+      },
+      "levels_K_m": {
+        "foundation": 4,
+        "columns": [
+          4,
+          8
+        ],
+        "lower_beam": [
+          8,
+          9.6
+        ],
+        "lower_roof": [
+          10,
+          14.3
+        ],
+        "upper_beam": [
+          14.3,
+          15.2
+        ],
+        "upper_roof_and_ridge": [
+          15.7,
+          23.8
+        ],
+        "chiwen_top": 25.2
+      },
+      "preserved_gaps_m": [
+        [
+          9.6,
+          10
+        ],
+        [
+          15.2,
+          15.7
+        ]
+      ],
+      "K_tolerances_m": {
+        "height": 0.5,
+        "width": 1,
+        "foundation": 0.3
+      },
+      "legacy_conflicts": {
+        "hall_A_width_m": 46.2,
+        "hall_A_x_m": [
+          -23.4,
+          22.8
+        ],
+        "K_front_row_width_m": 45.82,
+        "K_front_row_center_x_m": 0,
+        "old_central_passage_A_width_m": 5.9,
+        "old_central_passage_A_x_m": [
+          -3.3,
+          2.6
+        ],
+        "central_K_bay_m": 7.9,
+        "quantities_are_not_identical": true,
+        "railing_A_y_m": [
+          3.9,
+          4.9
+        ],
+        "foundation_K_y_m": 4,
+        "rail_base_overlap_m": 0.1
+      },
+      "photo_reference": {
+        "creator": "江上清风1961",
+        "title": "太和门 - panoramio.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:太和门_-_panoramio.jpg",
+        "license": "CC BY3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "use": "Beam patterns, doors and railings interpreted within measured envelopes; no image pixels embedded"
+      },
+      "scale_bar": {
+        "world_m": 20,
+        "pixels": 320
+      },
+      "unknown_objects": {
+        "side_stairs": {
+          "count": "1+1",
+          "source": "[2]",
+          "coordinates": null
+        },
+        "bronze_ding": {
+          "count": 4,
+          "source": "[1]",
+          "coordinates": null
+        }
+      },
+      "game_stair_comparisons_included": false,
+      "extra_rotation_deg": 0,
+      "validation": {
+        "svg_xml": "PASS",
+        "unique_ids": "PASS",
+        "no_images": "PASS",
+        "ornaments_clipped": 20,
+        "frame_exact": "PASS",
+        "svg_sha256": "9ab8d2de382cb76a723d8a9e78b8a7b1c458b1539662019d124fde3771b0190e",
+        "png_sha256": "edc83dd40b5619b6f6311d283768ae1ec3570fd915ff3933a25369800b6c62ca",
+        "renderer": "sharp/librsvg fixed density72 and PNG options"
+      }
+    },
+    "independent-measurement-audit": {
+      "schema": "taihemen-v2-independent-audit-v1",
+      "status": "COMPLETE_BOTH_PASS_WITH_DISCLOSED_SOURCE_DISCREPANCIES",
+      "created_at": "2026-10-30T08:21:50.488024+00:00",
+      "scope": "Read-only source/geometry/text audit; only independent audit files written.",
+      "full_order_read": true,
+      "source_json_read": [
+        "taihemen-julkisivu-etela.json",
+        "taihemen-mitat.json",
+        "taihemen-pohja.json"
+      ],
+      "source_images_viewed": [
+        "taihemen-pohja.png",
+        "vertailu-f-kuvamittaus.png",
+        "taihemen-julkisivu-etela.png",
+        "commons-taihemen-panoramio-jiangshangqingfeng1961-CC-BY-3.0.jpg"
+      ],
+      "source_hashes": {
+        "taihemen-pohja.png": "e5f33d04addfa03c6895f401913abf019fae81f9d5757a0c571b54f4ad3db4a1",
+        "taihemen-julkisivu-etela.json": "0032b12691e5b3618d3d2b4001c97d6b02d212c5b096f71c4adc093dc69952a7",
+        "vertailu-f-kuvamittaus.png": "bde66888490dbe4abce2a652ceaa790ea66eb4c7422600fafa4fa80cdbdfacdd",
+        "taihemen-mitat.json": "ff54ce7c2c7218950bf84e770cb6693f2143fe621cbec4919e15329b8a1dc9d8",
+        "taihemen-julkisivu-etela.png": "f6c073615a52ace0ea5140bf017db8df5ec5eb4951b3454ab8aae47534e83cd6",
+        "taihemen-pohja.json": "298ec87c82a3a3441294fdf2d8e525b7ec877fdb2400686890fde2987fad0360",
+        "commons-taihemen-panoramio-jiangshangqingfeng1961-CC-BY-3.0.jpg": "713fe38e4816b56d5ebd4e52b563d655b4c0e7b2c51701560ba58e4ffdc2e66e",
+        "SHA256SUMS": "18abeb68294f87383228147785190c7686b2ee5876da8d2254677e93d14fef7d"
+      },
+      "order_sha256": "798c04ce47cd658f958a99d0ed10c0e5bec77052df5b703c7af75a82815d2774",
+      "frames": [
+        {
+          "name": "taihemen-pohja",
+          "source_frame": {
+            "kuva": "taihemen-pohja.png",
+            "kuvaus": "Taihemen pohjapiirros ylhäältä, akselikehys x/z",
+            "px_per_m": 12,
+            "x0": -58,
+            "x1": 58,
+            "a0": -250,
+            "a1": -172,
+            "marginaali_vasen_ylä": [
+              70,
+              120
+            ],
+            "koko": [
+              1542,
+              1386
+            ],
+            "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+          },
+          "mapping": {
+            "u_intercept": 766,
+            "u_x_factor": 12,
+            "v_intercept": -1944,
+            "v_a_factor": -12
+          },
+          "grid_pixel_bounds": [
+            70,
+            120,
+            1462,
+            1056
+          ]
+        },
+        {
+          "name": "taihemen-julkisivu-etela",
+          "source_frame": {
+            "kuva": "taihemen-julkisivu-etela.png",
+            "kuvaus": "Taihemen etelän julkisivu, akselikehys x/y",
+            "px_per_m": 16,
+            "x0": -50,
+            "x1": 50,
+            "a0": -2,
+            "a1": 27,
+            "marginaali_vasen_ylä": [
+              80,
+              120
+            ],
+            "koko": [
+              1760,
+              914
+            ],
+            "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+          },
+          "mapping": {
+            "u_intercept": 880,
+            "u_x_factor": 16,
+            "v_intercept": 552,
+            "v_a_factor": -16
+          },
+          "grid_pixel_bounds": [
+            80,
+            120,
+            1680,
+            584
+          ]
+        }
+      ],
+      "conflicts_and_open_items": [
+        {
+          "id": "TMV2-01",
+          "part": "Exact bay widths",
+          "evidence": "JSON3.24+5.18+5.15+5.39+7.90+5.39+5.15+5.18+3.24=45.82m. Order rounded summands total45.9 despite stated45.8.",
+          "handling": "Use exact JSON widths, report45.82m;45.8 is rounded overall label. Never redistribute rounded widths."
+        },
+        {
+          "id": "TMV2-02",
+          "part": "New K column center versus old A footprint",
+          "evidence": "Old A footprintx−23.4…22.8 has center−0.3. New source elevation column raster centers513/1246px have center879.5px≈x0 and fit±22.91m overall. New plan green bay center also≈x0.",
+          "handling": "K column centers span−22.91…22.91 centered0; preserve46.2×20A wall footprint separately and explain placement inferred from sourcePNG, not a new measured world offset."
+        },
+        {
+          "id": "TMV2-03",
+          "part": "Vertical gaps",
+          "evidence": "JSON leaves9.6–10.0m and15.2–15.7m unassigned. PNG also leaves visible empty gaps between corresponding beam/roof shapes.",
+          "handling": "Preserve source gaps; do not stretch measured beam heights to fill."
+        },
+        {
+          "id": "TMV2-04",
+          "part": "Balustrade and foundation",
+          "evidence": "Balustrade remains3.9–4.9m[A]; new foundation4.0m[K] overlaps it by0.1m.",
+          "handling": "Retain explicit separate intervals, disclose overlap instead of silently translating railing."
+        },
+        {
+          "id": "TMV2-05",
+          "part": "Center bay versus clear opening",
+          "evidence": "7.90m[K] is column interval. Existing5.9m clear passage atx−3.3…2.6 remains[A].",
+          "handling": "Do not relabel center bay as clear opening or stretch old opening to7.9."
+        },
+        {
+          "id": "TMV2-06",
+          "part": "Plan depth placement",
+          "evidence": "JSONnote places front columns atz−226.2 and doorwall−222.2; oldA footprintz−226.3…−206.3. K was only established for frontage widths, depth remainsA.",
+          "handling": "Use explicit z locations with A/placement source and4m porch; do not upgrade toK."
+        },
+        {
+          "id": "TMV2-07",
+          "part": "Ridge and ornament",
+          "evidence": "23.8m is ridge top[2]/K calibration anchor; new chiwen≈25.2m[K] is higher. Raster top can round by1px.",
+          "handling": "Show both; no old24.9A ornament and no attempt to make all silhouettes end at23.8."
+        },
+        {
+          "id": "TMV2-08",
+          "part": "Published area and bay-count alternatives",
+          "evidence": "DPM9×4 and1300m² differ from alternative counts/areas in[2] and oldA46.2×20=924m².",
+          "handling": "KeepDPM9×4; preserve source area discrepancy, do not scale unknown depth to area."
+        },
+        {
+          "id": "TMV2-09",
+          "part": "K photo limitations",
+          "evidence": "Primary CC BY3.0 photograph and comparison are supplied; two verification photographs and measurement scripts referenced inJSON are not attachments. General uncertainty±0.5m height/±1m width; foundation note±0.3m.",
+          "handling": "Audit supplied measurements and appearance; no claim of independent survey or remeasurement of unavailable photos."
+        },
+        {
+          "id": "TMV2-10",
+          "part": "Unchanged uncertain items",
+          "evidence": "Depth20m, roof/ridge x extents, lions and passage dimensions remainA. Side stairs1+1 and4 cauldrons have no coordinates. Orange game comparisons are not source structures.",
+          "handling": "Retain A attribution, unknown positions and omit game-only comparison additions."
+        }
+      ],
+      "expected_geometry": {
+        "bay_widths_K_m": [
+          3.24,
+          5.18,
+          5.15,
+          5.39,
+          7.9,
+          5.39,
+          5.15,
+          5.18,
+          3.24
+        ],
+        "bay_sum_m": 45.82,
+        "column_centers_x_m": [
+          -22.91,
+          -19.67,
+          -14.490000000000002,
+          -9.340000000000002,
+          -3.950000000000002,
+          3.9499999999999984,
+          9.339999999999998,
+          14.489999999999998,
+          19.669999999999998,
+          22.909999999999997
+        ],
+        "column_world_center_x_m": 0,
+        "K_center_position_source": "SourcePNG alignment; sourceJSON does not give a new absolute offset",
+        "A_footprint": {
+          "x": [
+            -23.4,
+            22.8
+          ],
+          "z": [
+            -226.3,
+            -206.3
+          ],
+          "width": 46.2,
+          "depth": 20
+        },
+        "A_front_column_z": -226.2,
+        "A_doorwall_z": -222.2,
+        "A_clear_opening_x": [
+          -3.3,
+          2.6
+        ],
+        "K_foundation_y": [
+          0,
+          4
+        ],
+        "A_balustrade_y": [
+          3.9,
+          4.9
+        ],
+        "K_column_y": [
+          4,
+          8
+        ],
+        "K_lower_beam_y": [
+          8,
+          9.6
+        ],
+        "K_lower_roof_y": [
+          10,
+          14.3
+        ],
+        "K_upper_beam_y": [
+          14.3,
+          15.2
+        ],
+        "K_upper_roof_and_ridge_y": [
+          15.7,
+          23.8
+        ],
+        "unassigned_vertical_gaps_y": [
+          [
+            9.6,
+            10
+          ],
+          [
+            15.2,
+            15.7
+          ]
+        ],
+        "K_chiwen_top_y": 25.2
+      },
+      "final_checks": {
+        "taihemen-pohja": {
+          "frame": "PASS",
+          "size_px": [
+            1542,
+            1386
+          ],
+          "px_per_m": 12,
+          "grid_pixel_bounds": [
+            70,
+            120,
+            1462,
+            1056
+          ],
+          "vertical_gridlines": 117,
+          "horizontal_gridlines": 79,
+          "endpoint_labels": "PASS",
+          "embedded_raster_images": 0,
+          "svg_sha256": "96fa59afbbf3b994a2d0df81d3b777ff4786b2a1d787b450b376309e219775d1",
+          "png_sha256": "d8c680c59495facf28e52a9a5befca1a2dde8c8222236b09ad996e422ad6d168",
+          "K_column_centers": {
+            "count": 10,
+            "x_m": [
+              -22.91,
+              -19.67,
+              -14.490000000000002,
+              -9.340000000000002,
+              -3.950000000000002,
+              3.9499999999999984,
+              9.339999999999998,
+              14.489999999999998,
+              19.669999999999998,
+              22.909999999999997
+            ],
+            "z_m": -226.2,
+            "spacing_source": "K",
+            "z_placement_source": "A",
+            "total_width_m": 45.82,
+            "actual_svg_positions": "PASS"
+          },
+          "previous_audited_geometry_unchanged": [
+            "foundation",
+            "connecting-wall-west",
+            "connecting-wall-east",
+            "south-stair-1",
+            "south-stair-2",
+            "south-stair-3",
+            "north-stair-1",
+            "north-stair-2",
+            "north-stair-3",
+            "lower-roof-eave",
+            "hall-wall-footprint",
+            "lion-west",
+            "lion-east"
+          ],
+          "text": {
+            "method": "Arial/Arial Bold font metrics at 10x resolution, SVG group/text transformations and text halo included",
+            "text_count": 80,
+            "overlaps": [],
+            "all_in_canvas": true
+          },
+          "K_green_texts": 20,
+          "visual_review": "Final PNG viewed; all nine bay widths readable, K row and old A footprint distinguished, no observed overlap or clipping."
+        },
+        "taihemen-julkisivu-etela": {
+          "frame": "PASS",
+          "size_px": [
+            1760,
+            914
+          ],
+          "px_per_m": 16,
+          "grid_pixel_bounds": [
+            80,
+            120,
+            1680,
+            584
+          ],
+          "vertical_gridlines": 101,
+          "horizontal_gridlines": 30,
+          "endpoint_labels": "PASS",
+          "embedded_raster_images": 0,
+          "svg_sha256": "9ab8d2de382cb76a723d8a9e78b8a7b1c458b1539662019d124fde3771b0190e",
+          "png_sha256": "edc83dd40b5619b6f6311d283768ae1ec3570fd915ff3933a25369800b6c62ca",
+          "exact_rectangles": [
+            {
+              "id": "foundation",
+              "world_bounds": [
+                -28.9,
+                27.4,
+                0,
+                4
+              ],
+              "actual_svg_rect": [
+                417.6,
+                488.0,
+                900.8,
+                64.0
+              ],
+              "max_coordinate_error_px": 0.0
+            },
+            {
+              "id": "balustrade-A",
+              "world_bounds": [
+                -28.9,
+                27.4,
+                3.9,
+                4.9
+              ],
+              "actual_svg_rect": [
+                417.6,
+                473.6,
+                900.8,
+                16.0
+              ],
+              "max_coordinate_error_px": 7.105427357601002e-15
+            },
+            {
+              "id": "south-stair-1",
+              "world_bounds": [
+                -10.2,
+                -6.8,
+                0,
+                4
+              ],
+              "actual_svg_rect": [
+                716.8,
+                488.0,
+                54.4,
+                64.0
+              ],
+              "max_coordinate_error_px": 7.105427357601002e-15
+            },
+            {
+              "id": "south-stair-2",
+              "world_bounds": [
+                -5,
+                1.6,
+                0,
+                4
+              ],
+              "actual_svg_rect": [
+                800.0,
+                488.0,
+                105.6,
+                64.0
+              ],
+              "max_coordinate_error_px": 0.0
+            },
+            {
+              "id": "south-stair-3",
+              "world_bounds": [
+                4,
+                7.5,
+                0,
+                4
+              ],
+              "actual_svg_rect": [
+                944.0,
+                488.0,
+                56.0,
+                64.0
+              ],
+              "max_coordinate_error_px": 0.0
+            }
+          ],
+          "traces": [
+            {
+              "id": "lower-roof",
+              "source_rows": 69,
+              "source_runs": 69,
+              "max_endpoint_delta_px": 0.0
+            },
+            {
+              "id": "upper-roof",
+              "source_rows": 110,
+              "source_runs": 110,
+              "max_endpoint_delta_px": 0.0
+            },
+            {
+              "id": "chiwen-west",
+              "source_rows": 24,
+              "source_runs": 24,
+              "max_endpoint_delta_px": 0.0
+            },
+            {
+              "id": "chiwen-east",
+              "source_rows": 24,
+              "direct_rows": 22,
+              "restored_source_occlusion_rows": [
+                170,
+                171
+              ],
+              "restoration": "West ornament +608px",
+              "max_endpoint_delta_px": 0
+            },
+            {
+              "id": "lion-west",
+              "source_rows": 49,
+              "direct_rows": 46,
+              "restored_source_occlusion_rows": [
+                507,
+                508,
+                509
+              ],
+              "restoration": "Equal visible edges from rows506/510",
+              "max_endpoint_delta_px": 0,
+              "source": "A schematic appearance and size"
+            },
+            {
+              "id": "lion-east",
+              "source_rows": 49,
+              "direct_rows": 46,
+              "restored_source_occlusion_rows": [
+                507,
+                508,
+                509
+              ],
+              "restoration": "Equal visible edges from rows506/510",
+              "max_endpoint_delta_px": 0,
+              "source": "A schematic appearance and size"
+            }
+          ],
+          "column_centers": {
+            "count": 10,
+            "spans": 9,
+            "x_m": [
+              -22.909999999999997,
+              -19.67,
+              -14.490000000000002,
+              -9.340000000000003,
+              -3.950000000000003,
+              3.950000000000003,
+              9.340000000000003,
+              14.489999999999995,
+              19.67,
+              22.909999999999997
+            ],
+            "bay_widths_m": [
+              3.239999999999995,
+              5.18,
+              5.149999999999999,
+              5.390000000000001,
+              7.900000000000006,
+              5.390000000000001,
+              5.1499999999999915,
+              5.180000000000007,
+              3.239999999999995
+            ],
+            "total_width_m": 45.81999999999999,
+            "status": "PASS"
+          },
+          "gaps": [
+            {
+              "nominal_y_m": [
+                9.6,
+                10
+              ],
+              "actual_pixel_gap": [
+                393,
+                398
+              ],
+              "painted_gap_m": 0.3125
+            },
+            {
+              "nominal_y_m": [
+                15.2,
+                15.7
+              ],
+              "actual_pixel_gap": [
+                301,
+                308
+              ],
+              "painted_gap_m": 0.4375
+            }
+          ],
+          "ridge": {
+            "actual_bbox_px": [
+              563.0,
+              171.0,
+              625.0,
+              20.0
+            ],
+            "expected_source_bbox_px": [
+              563,
+              171,
+              625,
+              20
+            ],
+            "exact": true,
+            "nominal_top_y_m": 23.8,
+            "raster_top_y_m": 23.8125
+          },
+          "all_ornaments_clipped": 20,
+          "text": {
+            "method": "Arial/Arial Bold font metrics at 10x resolution, SVG group/text transformations and text halo included",
+            "text_count": 55,
+            "overlaps": [],
+            "all_in_canvas": true
+          },
+          "visible_source_attribution": "K heights and bay widths green; A rail retained; CC BY3.0 / 江上清风1961 present; unknown objects legend only.",
+          "visual_review": "Final PNG inspected: readable labels, visible two roof levels and source gaps, no observed overlap or clipping."
+        }
+      },
+      "source_method_addendum": {
+        "path": "output/fable-mailbox-work-orders/attachments-20261030-0821/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-mitat.json",
+        "sha256": "590e610366e05155ea75e7b3917a76ad66047b92f588960be3af612c13f01e47",
+        "commit": "0000134685c398ecedd2ad95414169b0cf0035c4",
+        "recursive_diff": "Exactly7 added tapa fields, no other value changed.",
+        "methods": [
+          {
+            "part": "jalusta",
+            "measurement": "korkeus",
+            "tapa": "kuva t06: etupinta maasta (y 660) kaiteen alareunaan (y 557), etutason mittakaava"
+          },
+          {
+            "part": "halli",
+            "measurement": "jännejako (etupylväiden välit)",
+            "tapa": "kuva t06: punaisten pylväiden keskikohdat riveiltä 1480–1520 (mittaa-f-kuva.py), symmetrisoitu; tarkistus t04/t07"
+          },
+          {
+            "part": "halli",
+            "measurement": "pylväskerros y",
+            "tapa": "kuva t06: palkkivyön alareuna y 455; horisontti- ja perspektiivimalli (kameran korkeus 1,6, etäisyys ≈ 125)"
+          },
+          {
+            "part": "halli",
+            "measurement": "alaräystään palkkivyö y",
+            "tapa": "kuva t06: palkkivyö y 415–455; sama malli"
+          },
+          {
+            "part": "halli",
+            "measurement": "alakatto y",
+            "tapa": "kuva t06: räystään reuna keskellä y 400, katon yläraja y 310; sama malli"
+          },
+          {
+            "part": "halli",
+            "measurement": "yläkerroksen seinä ja palkkivyö y",
+            "tapa": "kuva t06: yläpalkkivyö y 288–310; sama malli"
+          },
+          {
+            "part": "halli",
+            "measurement": "yläkatto harjaan y",
+            "tapa": "kuva t06: yläräystäs y 268; harja 23,8 [2] on mallin ankkuri"
+          }
+        ]
+      },
+      "completed_at": "2026-10-30T08:29:06.786358+00:00",
+      "source_files_unchanged": true,
+      "final_sha256": {
+        "taihemen-pohja-codex.svg": "96fa59afbbf3b994a2d0df81d3b777ff4786b2a1d787b450b376309e219775d1",
+        "taihemen-pohja-codex.png": "d8c680c59495facf28e52a9a5befca1a2dde8c8222236b09ad996e422ad6d168",
+        "taihemen-julkisivu-etela-codex.svg": "9ab8d2de382cb76a723d8a9e78b8a7b1c458b1539662019d124fde3771b0190e",
+        "taihemen-julkisivu-etela-codex.png": "edc83dd40b5619b6f6311d283768ae1ec3570fd915ff3933a25369800b6c62ca"
+      },
+      "audit_fix_verified": {
+        "item": "Ridge-band horizontal painted envelope",
+        "previous_bbox_px": [
+          562,
+          171,
+          627,
+          20
+        ],
+        "correct_source_bbox_px": [
+          563,
+          171,
+          625,
+          20
+        ],
+        "result": "Corrected by producer and actual SVG rechecked; vertical coordinates and measured values unchanged."
+      },
+      "method_addendum_1314_verified": "Exactly7 tapa fields added; latest0821JSON referenced by hash/commit,0816sourcehistory retained.",
+      "limitations": [
+        "Verifies conformity to supplied source package, not independent real-world photogrammetry.",
+        "K uncertainty±0.5m heights/±1m widths; foundation note±0.3m retained.",
+        "A dimensions and unknown object positions remain open.",
+        "No external delivery, acceptance or game integration by this auditor."
+      ]
+    },
+    "plan-geometry": {
+      "frame": {
+        "kuva": "taihemen-pohja.png",
+        "kuvaus": "Taihemen pohjapiirros ylhäältä, akselikehys x/z",
+        "px_per_m": 12,
+        "x0": -58,
+        "x1": 58,
+        "a0": -250,
+        "a1": -172,
+        "marginaali_vasen_ylä": [
+          70,
+          120
+        ],
+        "koko": [
+          1542,
+          1386
+        ],
+        "kehys": "AKSELIKEHYS: pohja.json kierretty origon (Taihedian) ympäri 2,03° myötäpäivään; palatsin akseli x = 0, pohjoinen +z; y = 0 aukion taso; metrejä"
+      },
+      "rotation_applied_deg": 0,
+      "geometry": [
+        {
+          "id": "foundation",
+          "type": "rectangle",
+          "world": [
+            [
+              -28.9,
+              -200
+            ],
+            [
+              27.4,
+              -200
+            ],
+            [
+              27.4,
+              -229.9
+            ],
+            [
+              -28.9,
+              -229.9
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": -28.9,
+            "x1": 27.4,
+            "a0": -229.9,
+            "a1": -200
+          }
+        },
+        {
+          "id": "connecting-wall-west",
+          "type": "rectangle",
+          "world": [
+            [
+              -37.6,
+              -224
+            ],
+            [
+              -28.9,
+              -224
+            ],
+            [
+              -28.9,
+              -228
+            ],
+            [
+              -37.6,
+              -228
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": -37.6,
+            "x1": -28.9,
+            "a0": -228,
+            "a1": -224
+          }
+        },
+        {
+          "id": "connecting-wall-east",
+          "type": "rectangle",
+          "world": [
+            [
+              27.4,
+              -224
+            ],
+            [
+              34.2,
+              -224
+            ],
+            [
+              34.2,
+              -228
+            ],
+            [
+              27.4,
+              -228
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": 27.4,
+            "x1": 34.2,
+            "a0": -228,
+            "a1": -224
+          }
+        },
+        {
+          "id": "south-stair-1",
+          "type": "rectangle",
+          "world": [
+            [
+              -10.2,
+              -229.9
+            ],
+            [
+              -6.8,
+              -229.9
+            ],
+            [
+              -6.8,
+              -240.6
+            ],
+            [
+              -10.2,
+              -240.6
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": -10.2,
+            "x1": -6.8,
+            "a0": -240.6,
+            "a1": -229.9
+          }
+        },
+        {
+          "id": "south-stair-2",
+          "type": "rectangle",
+          "world": [
+            [
+              -5,
+              -229.9
+            ],
+            [
+              1.6,
+              -229.9
+            ],
+            [
+              1.6,
+              -240.6
+            ],
+            [
+              -5,
+              -240.6
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": -5,
+            "x1": 1.6,
+            "a0": -240.6,
+            "a1": -229.9
+          }
+        },
+        {
+          "id": "south-stair-3",
+          "type": "rectangle",
+          "world": [
+            [
+              4,
+              -229.9
+            ],
+            [
+              7.5,
+              -229.9
+            ],
+            [
+              7.5,
+              -240.6
+            ],
+            [
+              4,
+              -240.6
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": 4,
+            "x1": 7.5,
+            "a0": -240.6,
+            "a1": -229.9
+          }
+        },
+        {
+          "id": "north-stair-1",
+          "type": "rectangle",
+          "world": [
+            [
+              -10,
+              -187.5
+            ],
+            [
+              -6.6,
+              -187.5
+            ],
+            [
+              -6.6,
+              -200
+            ],
+            [
+              -10,
+              -200
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": -10,
+            "x1": -6.6,
+            "a0": -200,
+            "a1": -187.5
+          }
+        },
+        {
+          "id": "north-stair-2",
+          "type": "rectangle",
+          "world": [
+            [
+              -4.7,
+              -187.5
+            ],
+            [
+              1.3,
+              -187.5
+            ],
+            [
+              1.3,
+              -200
+            ],
+            [
+              -4.7,
+              -200
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": -4.7,
+            "x1": 1.3,
+            "a0": -200,
+            "a1": -187.5
+          }
+        },
+        {
+          "id": "north-stair-3",
+          "type": "rectangle",
+          "world": [
+            [
+              4.25,
+              -187.5
+            ],
+            [
+              7.6,
+              -187.5
+            ],
+            [
+              7.6,
+              -200
+            ],
+            [
+              4.25,
+              -200
+            ]
+          ],
+          "source": "3",
+          "role": "measured",
+          "bounds": {
+            "x0": 4.25,
+            "x1": 7.6,
+            "a0": -200,
+            "a1": -187.5
+          }
+        },
+        {
+          "id": "lower-roof-eave",
+          "type": "rectangle",
+          "world": [
+            [
+              -26.6,
+              -203.6
+            ],
+            [
+              26.0,
+              -203.6
+            ],
+            [
+              26.0,
+              -228.9
+            ],
+            [
+              -26.6,
+              -228.9
+            ]
+          ],
+          "source": "A; PNG center x -0.3",
+          "role": "measured",
+          "bounds": {
+            "x0": -26.6,
+            "x1": 26.0,
+            "a0": -228.9,
+            "a1": -203.6
+          }
+        },
+        {
+          "id": "hall-wall-footprint",
+          "type": "rectangle",
+          "world": [
+            [
+              -23.4,
+              -206.3
+            ],
+            [
+              22.8,
+              -206.3
+            ],
+            [
+              22.8,
+              -226.3
+            ],
+            [
+              -23.4,
+              -226.3
+            ]
+          ],
+          "source": "A",
+          "role": "measured",
+          "bounds": {
+            "x0": -23.4,
+            "x1": 22.8,
+            "a0": -226.3,
+            "a1": -206.3
+          }
+        },
+        {
+          "id": "lion-west",
+          "type": "location-symbol",
+          "world": [
+            -11.3,
+            -237
+          ],
+          "source": "A",
+          "radius_px": 8,
+          "physical_size": "unknown"
+        },
+        {
+          "id": "lion-east",
+          "type": "location-symbol",
+          "world": [
+            10.7,
+            -237
+          ],
+          "source": "A",
+          "radius_px": 8,
+          "physical_size": "unknown"
+        },
+        {
+          "id": "K-front-column-row",
+          "type": "column-centerline-row",
+          "source": "K spacing; A z placement",
+          "world": [
+            [
+              -22.91,
+              -226.2
+            ],
+            [
+              -19.67,
+              -226.2
+            ],
+            [
+              -14.49,
+              -226.2
+            ],
+            [
+              -9.34,
+              -226.2
+            ],
+            [
+              -3.95,
+              -226.2
+            ],
+            [
+              3.95,
+              -226.2
+            ],
+            [
+              9.34,
+              -226.2
+            ],
+            [
+              14.49,
+              -226.2
+            ],
+            [
+              19.67,
+              -226.2
+            ],
+            [
+              22.91,
+              -226.2
+            ]
+          ],
+          "bay_widths_m": [
+            3.24,
+            5.18,
+            5.15,
+            5.39,
+            7.9,
+            5.39,
+            5.15,
+            5.18,
+            3.24
+          ],
+          "total_width_m": 45.82,
+          "source_rounded_width_m": 45.8,
+          "x_center_m": 0,
+          "z_source": "A",
+          "width_uncertainty_m": 1,
+          "old_A_wall_bounds_retained": true
+        }
+      ],
+      "decorative_details": "All decoration clipped to measured envelopes; equal tile/bay subdivisions are illustrative.",
+      "notes": [
+        "Exact photo-derived bay sequence sums45.82m; rounded source total45.8m, not rescaled.",
+        "K column row centered x0 as source PNG; z=-226.2 is A placement.",
+        "Original46.2x20 A wall footprint retained separately.",
+        "North and south stair x ranges intentionally differ according to JSON.",
+        "Game-only comparisons omitted as in accepted V1.",
+        "No extra rotation applied."
+      ],
+      "validation": {
+        "status": "PASS",
+        "svg_pure_vector": true,
+        "canvas_exact": true,
+        "deterministic_repeat_identical": true,
+        "svg_sha256": "96fa59afbbf3b994a2d0df81d3b777ff4786b2a1d787b450b376309e219775d1",
+        "png_sha256": "d8c680c59495facf28e52a9a5befca1a2dde8c8222236b09ad996e422ad6d168",
+        "clip_count": 11,
+        "K_bay_widths_exact": true,
+        "K_total_width_m": 45.82,
+        "K_column_x": [
+          -22.91,
+          -19.67,
+          -14.49,
+          -9.34,
+          -3.95,
+          3.95,
+          9.34,
+          14.49,
+          19.67,
+          22.91
+        ],
+        "K_placement_z": -226.2,
+        "K_placement_z_source": "A",
+        "v1_geometry_objects_unchanged": [
+          "foundation",
+          "connecting-wall-west",
+          "connecting-wall-east",
+          "south-stair-1",
+          "south-stair-2",
+          "south-stair-3",
+          "north-stair-1",
+          "north-stair-2",
+          "north-stair-3",
+          "lower-roof-eave",
+          "hall-wall-footprint",
+          "lion-west",
+          "lion-east"
+        ],
+        "source_sha256": {
+          "taihemen-julkisivu-etela.json": "0032b12691e5b3618d3d2b4001c97d6b02d212c5b096f71c4adc093dc69952a7",
+          "taihemen-mitat.json": "ff54ce7c2c7218950bf84e770cb6693f2143fe621cbec4919e15329b8a1dc9d8",
+          "taihemen-pohja.json": "298ec87c82a3a3441294fdf2d8e525b7ec877fdb2400686890fde2987fad0360"
+        },
+        "text_bounds_check": "PASS",
+        "text_count": 80,
+        "text_overlaps_above_2px": [],
+        "visual_review": "Final PNG viewed. K bay labels and Chinese author attribution readable; K spacing and A row-placement legend colors separated."
+      }
+    },
+    "root-validation": {
+      "checkedAt": "2026-10-30T08:28:30.028115+00:00",
+      "result": "PASS",
+      "drawings": [
+        {
+          "stem": "taihemen-pohja",
+          "canvas": [
+            1542,
+            1386
+          ],
+          "pxPerM": 12,
+          "margin": [
+            70,
+            120
+          ],
+          "grid": {
+            "x": [
+              -58,
+              58
+            ],
+            "a": [
+              -250,
+              -172
+            ],
+            "oneMetreLinesVerified": 196
+          },
+          "pureVector": true,
+          "resolvedClipReferences": true,
+          "worldToPixelPrimitivesVerified": 22,
+          "svgPNGAndRepeatedRenderPixelsIdentical": true,
+          "SVG_SHA256": "96fa59afbbf3b994a2d0df81d3b777ff4786b2a1d787b450b376309e219775d1",
+          "PNG_SHA256": "d8c680c59495facf28e52a9a5befca1a2dde8c8222236b09ad996e422ad6d168"
+        },
+        {
+          "stem": "taihemen-julkisivu-etela",
+          "canvas": [
+            1760,
+            914
+          ],
+          "pxPerM": 16,
+          "margin": [
+            80,
+            120
+          ],
+          "grid": {
+            "x": [
+              -50,
+              50
+            ],
+            "a": [
+              -2,
+              27
+            ],
+            "oneMetreLinesVerified": 131
+          },
+          "pureVector": true,
+          "resolvedClipReferences": true,
+          "worldToPixelPrimitivesVerified": 9,
+          "svgPNGAndRepeatedRenderPixelsIdentical": true,
+          "SVG_SHA256": "9ab8d2de382cb76a723d8a9e78b8a7b1c458b1539662019d124fde3771b0190e",
+          "PNG_SHA256": "edc83dd40b5619b6f6311d283768ae1ec3570fd915ff3933a25369800b6c62ca"
+        }
+      ],
+      "sourceFilesUnchanged": true,
+      "scope": "Local frame, grid, pure vector and render verification; independent geometry and disclosed source conflicts are separate. No PK game comparison or owner approval claimed."
+    },
+    "source-methods-update-1314": {
+      "status": "PASS_DOCUMENTATION_ONLY",
+      "sourceCommit": "0000134685c398ecedd2ad95414169b0cf0035c4",
+      "files": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0821/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/SHA256SUMS",
+          "sha256": "49ff49248b9c7988a415d981669c4b2cd08272d93e401ba7580d15bc670cd391",
+          "gitBlob": "243930dd849f9c2f7d5fbfbf43e238b12dbeb96f"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0821/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-mitat.json",
+          "sha256": "590e610366e05155ea75e7b3917a76ad66047b92f588960be3af612c13f01e47",
+          "gitBlob": "616c646c2dde2477011dc0fd6af1e2c103c52d0b"
+        }
+      ],
+      "manifestEntries": [
+        "commons-taihemen-panoramio-jiangshangqingfeng1961-CC-BY-3.0.jpg",
+        "taihemen-julkisivu-etela.json",
+        "taihemen-julkisivu-etela.png",
+        "taihemen-mitat.json",
+        "taihemen-pohja.json",
+        "taihemen-pohja.png",
+        "vertailu-f-kuvamittaus.png"
+      ],
+      "geometryFieldsUnchanged": true,
+      "methods": [
+        {
+          "osa": "jalusta",
+          "mitta": "korkeus",
+          "arvo": 4.0,
+          "tapa": "kuva t06: etupinta maasta (y 660) kaiteen alareunaan (y 557), etutason mittakaava"
+        },
+        {
+          "osa": "halli",
+          "mitta": "jännejako (etupylväiden välit)",
+          "arvo": [
+            3.24,
+            5.18,
+            5.15,
+            5.39,
+            7.9,
+            5.39,
+            5.15,
+            5.18,
+            3.24
+          ],
+          "tapa": "kuva t06: punaisten pylväiden keskikohdat riveiltä 1480–1520 (mittaa-f-kuva.py), symmetrisoitu; tarkistus t04/t07"
+        },
+        {
+          "osa": "halli",
+          "mitta": "pylväskerros y",
+          "arvo": [
+            4.0,
+            8.0
+          ],
+          "tapa": "kuva t06: palkkivyön alareuna y 455; horisontti- ja perspektiivimalli (kameran korkeus 1,6, etäisyys ≈ 125)"
+        },
+        {
+          "osa": "halli",
+          "mitta": "alaräystään palkkivyö y",
+          "arvo": [
+            8.0,
+            9.6
+          ],
+          "tapa": "kuva t06: palkkivyö y 415–455; sama malli"
+        },
+        {
+          "osa": "halli",
+          "mitta": "alakatto y",
+          "arvo": [
+            10.0,
+            14.3
+          ],
+          "tapa": "kuva t06: räystään reuna keskellä y 400, katon yläraja y 310; sama malli"
+        },
+        {
+          "osa": "halli",
+          "mitta": "yläkerroksen seinä ja palkkivyö y",
+          "arvo": [
+            14.3,
+            15.2
+          ],
+          "tapa": "kuva t06: yläpalkkivyö y 288–310; sama malli"
+        },
+        {
+          "osa": "halli",
+          "mitta": "yläkatto harjaan y",
+          "arvo": [
+            15.7,
+            23.8
+          ],
+          "tapa": "kuva t06: yläräystäs y 268; harja 23,8 [2] on mallin ankkuri"
+        }
+      ]
+    },
+    "source-verification": {
+      "verifiedAt": "2026-10-30T08:18:32.749473+00:00",
+      "sourceCommit": "7426bae52430dd8a1da8495f34b82444b88b7dbc",
+      "files": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030.md",
+          "sha256": "798c04ce47cd658f958a99d0ed10c0e5bec77052df5b703c7af75a82815d2774",
+          "gitBlob": "4631648c95d41b1b9a71fa36f40ce86d3b6fe351",
+          "bytes": 2129
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/SHA256SUMS",
+          "sha256": "18abeb68294f87383228147785190c7686b2ee5876da8d2254677e93d14fef7d",
+          "gitBlob": "5450fb7e51b9906ff61970bec37b0873a5bdc6f8",
+          "bytes": 671
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/commons-taihemen-panoramio-jiangshangqingfeng1961-CC-BY-3.0.jpg",
+          "sha256": "713fe38e4816b56d5ebd4e52b563d655b4c0e7b2c51701560ba58e4ffdc2e66e",
+          "gitBlob": "b895c96686641f81b3d206f90df50ed610d03e50",
+          "bytes": 3386099
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-julkisivu-etela.json",
+          "sha256": "0032b12691e5b3618d3d2b4001c97d6b02d212c5b096f71c4adc093dc69952a7",
+          "gitBlob": "2b2e94ffa8246af3358cda70ebaf2b6c1e7ec11d",
+          "bytes": 401
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-julkisivu-etela.png",
+          "sha256": "f6c073615a52ace0ea5140bf017db8df5ec5eb4951b3454ab8aae47534e83cd6",
+          "gitBlob": "9c6b2c52233d4d17d4a3f5a58f237060f13c84e0",
+          "bytes": 172289
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-mitat.json",
+          "sha256": "ff54ce7c2c7218950bf84e770cb6693f2143fe621cbec4919e15329b8a1dc9d8",
+          "gitBlob": "92e9dd613cbbc6156bdc0496f2af4f979092f79f",
+          "bytes": 8426
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-pohja.json",
+          "sha256": "298ec87c82a3a3441294fdf2d8e525b7ec877fdb2400686890fde2987fad0360",
+          "gitBlob": "968160b2d03b5a7c3ac9cf888d7e7ad4944949a8",
+          "bytes": 403
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/taihemen-pohja.png",
+          "sha256": "e5f33d04addfa03c6895f401913abf019fae81f9d5757a0c571b54f4ad3db4a1",
+          "gitBlob": "647a42a7cae937934631283e18b7a4351518711b",
+          "bytes": 173311
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261030-0816/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030/vertailu-f-kuvamittaus.png",
+          "sha256": "bde66888490dbe4abce2a652ceaa790ea66eb4c7422600fafa4fa80cdbdfacdd",
+          "gitBlob": "b9e7bd48cdb34d7418d587e658b5ee3680c3190f",
+          "bytes": 618976
+        }
+      ],
+      "manifestEntries": [
+        "commons-taihemen-panoramio-jiangshangqingfeng1961-CC-BY-3.0.jpg",
+        "taihemen-julkisivu-etela.json",
+        "taihemen-julkisivu-etela.png",
+        "taihemen-mitat.json",
+        "taihemen-pohja.json",
+        "taihemen-pohja.png",
+        "vertailu-f-kuvamittaus.png"
+      ]
+    },
+    "taihedian-receiver-acknowledgement": {
+      "tasks": [
+        1303,
+        1304
+      ],
+      "acknowledgedBy": "Pelikoodari",
+      "receiverAccepted": true,
+      "forwardToPT": "confirmed-by-Pelikoodari",
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false,
+      "evidenceTask": 1311,
+      "sourceCommit": "7426bae52430dd8a1da8495f34b82444b88b7dbc",
+      "sourceBlob": "4631648c95d41b1b9a71fa36f40ce86d3b6fe351",
+      "sourcePath": "posti/pelikoodari-codex-mittapiirrokset-taihemen-paivitys-20261030.md",
+      "recordedAt": "2026-10-30T08:20:01.728558+00:00"
+    }
+  },
+  "visualReviewByRoot": true,
+  "sourceConflicts": "See MITTAHUOMIOT.md and independent-measurement-audit.",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
