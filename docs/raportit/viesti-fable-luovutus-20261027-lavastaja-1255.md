@@ -1586,3 +1586,12 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
   Jos skripti hävinnyt: kopioi PK:n skripti, vaihda LAHIKUVA ja `set -- 97 94`.
 - PK: pintatarkistus hylkää hangshi-pbr, dougong-corner-pbr, dougong-intercolumn-pbr → PT:lle kerrottu (lisätään listaan PT:n kautta).
 - Muu jono: 03-vyön UV (PT), A6 (Codexin GLB).
+
+## LISÄYS 115 klo 04.5x (30.10.): c2-v20 (KELTARAITA POIS), KUVAT PT:LLÄ — LUOVUTUS, ALOITA TÄSTÄ
+- PT 04.5x (VS): peli käyttää C2:n f-taihemen-lod0-kaiteeton.glb:tä → v181 (aja_v181_c2.zsh; taihemen_muurikate_pois.py nyt <kansio> [tiedostot],
+  MAT + V4_palkkivyo) → K/muurikate-v181/kielletty-c2-v20 (= v94-paketin c2-v19 − vanha kate 40, friisi 16, teal 4). Juuri H/juuri-pk7-v99 (= v98, c2-v19 → v20).
+  Pari 03s v98→v99: lokit/havainne-editori-20261030-044024/03/c2-v20-ennen-jalkeen.png – isot keltaraidat poissa (kapeat = konsoli_kulta, VS:n pinta).
+- Taihedianin yläkuva (LAHIKUVA "22 6 15 60", PK:n paikka): lokit/havainne-editori-20261030-042633/06/taihedian-yla-v94-v97.png + taihedian-yla-v97-lahikuva.png
+  – rivit molemmilla aumaharjoilla. (v97-ajo kaatui pintatarkistukseen → raakakuva esikatselu-20261030-042115/havainne-06.png.) Molemmat PT:lle 04.5x.
+- paketti_v95.py päivitetty: v94 + rakennukset-v81 + lahipuut-v11 + c2-v20 (korvaa c2-v19; peli MuurikateC2Kansio "kielletty-c2-v20/"). AJA PT:n kuittauksella.
+- Taustaajoja ei ole.
