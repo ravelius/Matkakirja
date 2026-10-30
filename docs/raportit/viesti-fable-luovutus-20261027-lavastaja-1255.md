@@ -2162,3 +2162,15 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - HUOM leivonta: rakennusleivonnan varjostaja on osasarja-v4-varjostaja.glb (5 muurin kivijalka 1,20) – ero vain kujan 05 länsimuurin juurella;
   tee osasarja-v5-varjostaja (osasarja_koe.py) ennen taustan uusintaa (TUPLAT=1, LISÄYS 153).
 - SIVULÖYDÖS (LISÄYS 154) muurikate-v26-pohjan tuplakate muuri3-lansi-pohj-07:llä yhä tarkistamatta.
+
+## LISÄYS 156 (30.10. 22.0x): osasarja-v5 JUNAAN 216 (omistaja 21.55) – TAUSTAN UUSINTA KETJUSSA v5-VARJOSTAJALLA — ALOITA TÄSTÄ
+- PT 21.55: omistaja hyväksyi osasarja-v5:n junaan 216; taustan uusinta (TUPLAT=1, rakennusten jälkeen) v5-muureilla, ei v4/v3.
+- TEHTY: leivonta-216/osasarja-v5-varjostaja.glb (osasarja_koe.py v5:stä, ei Blenderiä; leikkaus z 388: kivijalka 1,80 vs v4 1,20).
+  uusinta/yhteiset.zsh: OSASARJA_VARJ → v5, TS → uusinta/tausta-v81-lahde (= v81 APFS-kopiona + kujien 0-3/1-3 lod0 lattia_tliitokset.py:llä,
+  LISÄYS 153 kohta 2). aja_uusinta.zsh tausta + kujat.zsh: TUPLAT=1. Varmuuskopiot *.ennen-v5.
+- KETJU: uusinta/ketju-v5.zsh (pid 2967, loki ajo-ketju-v5.log) odottaa rak-ajon (pid 65713) loppuun, tarkistaa T-liitoskorjauksen (muuten
+  keskeyttää), sitten tausta → kujat.zsh → muurikate (muurikatteenkin varjostaja v5). Rak ~05.00, ketju arviolta ~06.30.
+- Rakennukset-v86 leivotaan loppuun v4-varjostajalla (ajo alkoi 21.29 ennen v5:tä); ero vain kujan 05 länsimuurin juurella, kerro PT:lle jos merkitsee.
+- SEURAAVAKSI ketjun jälkeen: tarkista_leivonta (ehtoalueet kuten v73 / tarkistus-tausta-v82.txt, PT: 0 vikaa ehtoalueilla), VS:lle
+  aukkoartefakti + jäljelle jäävät T:t (LISÄYS 153), paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-<pvm> (tausta-v82, muurikate-v30,
+  rakennukset-v86; LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md) → PT ≤ 3 riviä + VS (parit 02/03/06, palat + alueet + varjostajat.json:t).
