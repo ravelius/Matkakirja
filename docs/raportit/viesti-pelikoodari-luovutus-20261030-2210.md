@@ -37,6 +37,11 @@ Edellinen luovutus: -20261030-2152. Muistin tilatiedosto: pelikoodari-tila-20261
    - Sitten PT:lle 3 riviä: sha + kuvien polku.
 3. **A6:** kun Codexin 7-välinen GLB on LR:n paketissa, tarkista läikät.
 
+## LISÄYS 22.1x (LAV)
+- osasarja-v6 (= v5 + UV1 + valo.json) leivotaan heti LAV:n nykyisten leivontojen jälkeen: rakennukset ~05, tausta ~06.30, sitten osasarja (86 ruutua, 96 näytettä + karki.bin). Arvio: aamupäivä 31.10.
+  - Kansio: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset/osasarja-v6/kielletty-osasarja-v6. LAV ilmoittaa, kun paketti on valmis.
+- Pursotukset.glb ei tule tässä erässä (työkalu on tekemättä), joten käytössä on pelin oma pursotus ilman leivottua valoa.
+
 ## Huomiot
 - Muut junan 216 asiat ennallaan (-2152): osasarja-v5 a2d9e0c7b + esto-v23 NS:llä.
 - Peli-testit: `MK_OSASARJA_VALO=/Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/koe/osasarja ./kaanna.sh JuoksuOsasarja`.
