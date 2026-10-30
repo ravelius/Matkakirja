@@ -2190,3 +2190,6 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   ennen kuin levy > 95 Gi. Jatko (kansio leivonta-216/uusinta, kaikki taustalle nohup): 1) `zsh aja_uusinta.zsh rak 1/1 >> ajo-rak.log` (jatkaa
   rak-valmiit/:sta) 2) `zsh ketju-v5.zsh <rak-zsh:n pid> >> ajo-ketju-v5.log` 3) `zsh ketju-osasarja-v6.zsh <ketju-v5:n pid> >> ajo-osasarja-v6.log`.
 - Kujien T-liitoskorjaus (lattia_tliitokset.py → tausta-v81-lahde) saa jatkua (pelkkä Python); ketju-v5 odottaa sen.
+- PT 22.5x (UUSI EHTO, korvaa 95 Gi:n): jatka heti, kun NS:n laitekäännös päättyy; pysäytä vain jos levy < 82 Gi; 1 Blender, ei Unityn kanssa.
+  → uusinta/jatka-ns-jalkeen.zsh (pid 61196, loki ajo-jatka.log) odottaa NS-käännöksen (pid 45361) ja Unityn loppuun, käynnistää rak → ketju-v5 →
+  ketju-osasarja-v6 (pid:t lokissa) ja valvoo levyä (< 82 Gi → kaikki pois, jatko kuten yllä).
