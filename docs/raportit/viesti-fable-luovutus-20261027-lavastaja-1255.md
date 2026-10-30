@@ -2069,3 +2069,24 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - (1) k-järjestys + tarkiste OK, (2) kärkivärit karki.bin:nä, (3) pursotukset LAV:lta valmiina pursotukset.glb:nä (UV1 + valo_rgbm). Kirjattu
   leivonta-216/SOPIMUS.md "PK:N KUITTAUS". SEURAAVAKSI: pursotukset.glb-työkalu (pelin JuoksuOsasarja.Pursota-vastine, osasarja_koe.py:n
   pursotusosa pohjana; huom. pelin järjestys/jiiri/kannet JuoksuOsasarja.cs:stä) + leivonta leivo_valo.py-tyyliin. VS:n vastaus yhä auki.
+
+## LISÄYS 151 (30.10. 19.4x): VALON YHDISTELMÄ (PT 19.5x) – UUSINTALEIVONTA NYKYISELLÄ PUTKELLA — LUOVUTUS, ALOITA TÄSTÄ
+- PT hyväksyi 19.5x yhdistelmän (VS:n luovutus 59754848f, docs/raportit/viesti-valoseppa-luovutus-20261030-1930.md kohta "Työn alla 1"):
+  ruutuatlakset ja kärkivärit ODOTTAVAT (tehdään vain, jos iPad-mittaus tai pari vaatii; työkalut valmiina, LISÄYS 149). PT 19.4x: kuitattu.
+- LAV:N TEHTÄVÄ NYT (VS 19.5x): leivo UUDELLEEN nykyisellä putkella (leivo_valo.py / leivo_malli.py, valo_rgbm, M = 8) TAUSTA, RAKENNUKSET
+  ja MUURIKATTEEN POHJA: aurinko AZ=169.97 EL=30 (tyylikirja/leivonta-aurinko.json, kopio leivonta-216/leivonta-aurinko-d420087dc.json);
+  osasarja-v4 ladottuna + pursotukset VARJOSTAJANA; aukkotulpat. Uudet versionimet (tausta-v82?, rakennukset-v86?, muurikate-v30? – tarkista
+  vapaat), samaan junaan; ilmoita VS:lle (local_3b36fe96-…), joka tekee parit 02/03/06.
+- TEHTY: varjostaja leivonta-216/osasarja-v4-varjostaja.glb (osasarja_koe.py v4:stä, 360 Mt, kaikki polut + pursotukset). leivo_valo.py ja
+  leivo_malli.py lukevat OSASARJA_VARJ=<glb,...> (.ennen-osasarjavarj-varmuuskopiot).
+- AUKKOTULPAT (VS:n kuittaus /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/leivonta-216-vs-kuittaus.md kohta 6): aukkokohtainen taso 2–5 cm
+  aukon sisäpuolella (ovi- ja ikkuna-aukot), albedo = sisätilan keskisävy, ei emissiota; sisägeometria pois ulkoleivonnasta; kupera kuori vain,
+  jos pysyy ulkovaipan sisällä. EI VIELÄ TOTEUTETTU leivo_valo/leivo_malli-skripteihin (leivo_osasarja.py:ssä on kupera kuori -versio,
+  funktio tulppa()). Aukkojen tunnistus avoimista huoneista (avoimet-v52, sijoitus tausta-v81/avoimet-sijoitus.json) on ensimmäinen työ.
+- PARAMETRIT edellisestä täysleivonnasta (aja_ketju_v73.zsh): UV_EROTUS=1, TAIVAS_VARI=0.45,0.46,0.50, TAIVAS=1.8, KIMPOAMISET=4,
+  NAYTTEET=128, koko 2048 → valo_pakkaa.py 1024, glb_alfa_mask.py V4_puukortti, kuja/aukio-palat SAARIVARA=0.004 + LISAVARJ, lod1/2-kopiot,
+  tausta_lattia_uv0.py, tausta_json.py, tarkistus VS:n tarkista_leivonta.py. Rakennukset: aja_rakennukset_v35_leivonta.zsh-malli (leivo_malli.py
+  src-kansiosta, NAYTTEET 256, 1024). Lähteet: tausta = osasarja-v3/kielletty-tausta-v81 (uusin, leivottu; leivo_valo purkaa UV1:n uudelleen),
+  rakennukset-v85 (_valmiit/juoksupeli-kk-lavastaja-v99-…/kielletty-rakennukset-v85; selvitä sen src-kansio), muurikate-v29
+  (osasarja-v3/kielletty-muurikate-v29, pohja-glb), avoimet-v52. MUURIKATTEEN POHJAN leivontaskripti: etsi (grep "pohja" + leivo) ennen ajoa.
+- Huom: Blender-ajo tauon/hiljaisen tunnin säännöt; pitkät ajot taustalle. Ei taustaajoja käynnissä.
