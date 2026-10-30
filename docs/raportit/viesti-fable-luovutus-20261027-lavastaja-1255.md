@@ -1619,3 +1619,8 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
 - Juuri H/juuri-pk7-v104 (v103 + v83/c2-v22 kaikilla nimillä). Pari v102→v104 (3aac603dc): lokit/havainne-editori-20261030-050810/06/lappeet-v102-v104-lahikuva.png → PT.
 - SEURAAVAKSI: PT:n kuittaus → `python3 K/tyokalut/paketti_v97.py` (valmis, EI ajettu: v96 + rakennukset-v83 + c2-v22) → tiiviste PT:lle; v96 EI JU:lle.
   PK: kansiot "kielletty-rakennukset-v83/", "kielletty-c2-v22/". Muu jono: 03-vyön UV (PT), A6 (Codexin GLB).
+
+## LISÄYS 118 klo 05.1x (30.10.): PAKETTI v97 AJETTU — ALOITA TÄSTÄ
+- PT: lappeet v104 HYVÄKSYTTY (KK) → paketti v97 (V/juoksupeli-kk-lavastaja-v97-vienti-20261030, SHA256SUMS 61a8547c, 716 tied.) ajettu, PT:lle ilmoitettu.
+  PK: "kielletty-rakennukset-v83/", "kielletty-c2-v22/". v96 korvautunut.
+- Muu jono: 03-vyön UV (PT:n vastaus), A6 (Codexin 7-välinen GLB).
