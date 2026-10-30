@@ -2193,3 +2193,13 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - PT 22.5x (UUSI EHTO, korvaa 95 Gi:n): jatka heti, kun NS:n laitekäännös päättyy; pysäytä vain jos levy < 82 Gi; 1 Blender, ei Unityn kanssa.
   → uusinta/jatka-ns-jalkeen.zsh (pid 61196, loki ajo-jatka.log) odottaa NS-käännöksen (pid 45361) ja Unityn loppuun, käynnistää rak → ketju-v5 →
   ketju-osasarja-v6 (pid:t lokissa) ja valvoo levyä (< 82 Gi → kaikki pois, jatko kuten yllä).
+
+## LISÄYS 159 (31.10. 01.2x): LEVYVAHTI PYSÄYTTI 01.13 — ODOTTAA PT:N JATKOLUPAA — ALOITA TÄSTÄ
+- jatka-ns-jalkeen.zsh käynnisti 22.52 (NS-käännös päättyi); levyvahti pysäytti 01.13 (81 Gi < 82): rakennukset-v86 105/136, tausta ja osasarja-v6
+  ajamatta. Oma leivontakansio vain 1,4 Gt → levyä täyttää muu. PT:lle ja Postivahdille ilmoitettu; jatko PT:n luvalla tai kun > 82 Gi (LISÄYS 158 -ohje,
+  tai uudelleen `nohup zsh jatka-ns-jalkeen.zsh 1 >> ajo-jatka.log &` kansiossa leivonta-216/uusinta).
+- T-LIITOKSET: kuja 0-3:n korjaus jumittui (> 3 h, 1 T-liitos) → keskeytetty, 0-3 = v81 ennallaan. Kuja 1-3 korjattu sekunneissa (220 jakoa) →
+  tausta-v81-lahde valmis. ketju-v5.zsh tarkistaa nyt vain 1-3:n.
+- Meridiaani 404 (JU 31.10.): a-meridiaaniportti-1063-portaat.glb:tä ei kuulu olla (kaiteet a3a5-sijoitukset.json:ssa c2-v11:stä asti, 1063-portaat
+  vain f-taihemen/g-jalusta) → pelin haku PK:lle; JU ja PT tietävät.
+- Lahipuut-v12 (kuja 02:n puut pois): PK tekee (sovittu 30.10. 23.0x).
