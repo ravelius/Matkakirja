@@ -43,7 +43,7 @@ Tehty, proto-worktree `/Users/Shared/Claude/wt/proto-linssiseppa2-leivonta`, haa
 - Koehaara p11:ssä **linssiseppa2/varjo-v4-koe a855d9fb6** = PK:n v4 88eed2939 + QA osasarja-lahi + edelliset (cherry-pick). Älä merge sitä.
 
 Seuraavaksi:
-1. Tarkista varjoajon tulos: skenaario `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/varjo-v4.txt`; tulos uusimmassa `proto-3d/lokit/esikatselu-*`-kansiossa, jossa on v06-*/v03-*-kuvat. Siinä on 06 ja 03 havainteen kanssa, varjot päällä ja pois.
+1. Aja varjopari (pysäytetty jonosta 19.4x, ei tulosta): `esikatselu.sh a855d9fb6 <skenaario> ipad --batch`; skenaario `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/varjo-v4.txt`; tulos uusimmassa `proto-3d/lokit/esikatselu-*`-kansiossa, jossa on v06-*/v03-*-kuvat. Siinä on 06 ja 03 havainteen kanssa, varjot päällä ja pois.
 2. Tee oma tarkistus (2.177): värimittaus sekä lähikuvat muurien varjoista lattialla ja kivijalassa.
 3. Aja Metal ja testit 4b54413d7:lle. Muista: p11:llä on Library, joten aja testit siellä detached-tilassa.
 4. Lähetä pari PT:lle.
@@ -55,7 +55,7 @@ Seuraavaksi:
 Tehtävä: kaukomuurien C3_muurikate_kauko (osat-lod2.glb, tekstuuriton, bcf lin 0,759/0,247/0,006 = sRGB 226/136/18) ennen vaihtorajaa ja sen jälkeen. Mitattavat: kate, punainen runko ja kivijalka.
 - Tekstuurien keskiarvot eivät kelpaa vertailuun, koska atlaksen täyte vääristää ne: 1057 LOD0 144/80/17, LOD1 200/118/18. Ratkaisu on pelikuvan mittaus.
 - Koehaara **linssiseppa2/lodraja-v4-koe ce15442d7** = PK:n v4 + väliaikainen QA `palatsi osasarja-lahi <m>` (vaikuttaa heti).
-- Skenaario `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/lodraja-v4.txt`; tulos esikatselukansiossa, jossa on a-/b-lod1|oletus|lod2-kuvat. Ajo on jonossa tai ajossa.
+- Skenaario `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/lodraja-v4.txt`; tulos esikatselukansiossa, jossa on a-/b-lod1|oletus|lod2-kuvat. AJOA EI TEHTY (pysäytetty jonosta nollausta varten 19.4x): aja `zsh /Users/Shared/Claude/wt/proto-linssiseppa2-p11/tyokalut/esikatselu.sh ce15442d7 <skenaario> ipad --batch` taustalla.
 - Samasta kuvasta otetaan kolme versiota: lahi 9999 = LOD0/LOD1-instanssit, 60 = oletus, −100 = kaikki kaukonippuna (LOD2).
 - Opitut sudenkuopat:
   - `valo jaady 1` pysäyttää lähi/kauko-päivityksen. Siksi lahi vaihdetaan jaady 0 -tilassa.
