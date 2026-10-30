@@ -3242,3 +3242,7 @@ KK:n kortti: "Kytketäänkö ladonta päälle muureille, kivijaloille ja kaiteil
 ## POSTIVAHDIN OMA NOLLAUS 30 %:SSA ILMAN PT:N PYYNTÖÄ (KK 30.10. klo 19.1x) (30.10.2026 klo 19.09)
 
 KK:n mittaus 30.10. 00–19: Postivahti 17 % talon kulutuksesta (1946 vastausta, kontekstin mediaani 509k, p90 826k), vaikka raja on 20–30 %. Päätös (KK juoksupelin ohjilla, PT toteuttaa): Postivahti kirjoittaa luovutuksen ja nollaa itsensä omalla kierroksellaan, kun sen oma konteksti ylittää 30 %, ilman PT:n pyyntöä. Raamattu 7.37 päivitetty; Postivahti kirjasi säännön KIERROS.md:hen (luovutus 6967a05d4). Arvioitu säästö noin 12 % päivän kulutuksesta.
+
+## REITIT ITSE, EI LOPUTONTA RATAA; VALO ULKO-OSIEN JÄLKEEN; SISÄTILAT; TILI VIIKONLOPUKSI (omistaja 30.10. klo 19.12) (30.10.2026 klo 19.16)
+
+Sanatarkasti KK:n kautta: "minulla on vielä yksi kokonainen tili käytettäväksi viikonlopun aikana. pelaaja valitsee itse reitit, ei sitä tarvitse tehdä loputtomaksi. tarkoitus oli pitää nykyinen oikea palatsialue. sisätilat tarvitsevat varmasti myös rakentamista, mutta aloitetaan valon lisääminen kun ulko-osat valmistuvat mahdollisimman nopealla menetelmällä". Toteutus: juoksupelin valmis-kohta 3 (loputon, joka kerta erilainen) poistuu; alue = nykyinen todellinen palatsialue, PK selvittää reittivalinnan. VS suunnittelee valon nyt ja aloittaa, kun ladonta on junassa; ulkovalo ei saa vaatia uusimista sisätilojen takia. Sisätilat uutena rivinä (piirrokset ensin), valon jälkeen tai rinnalla. Kiintiö ei hiljennä viikonloppua: tilinvaihto, kun nykyinen loppuu (arvio su 1.11. ~10–12).
