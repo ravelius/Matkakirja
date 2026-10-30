@@ -1882,3 +1882,12 @@ Ehdotus todellisuuden rajoissa: (a) kehyssyvennykset aukkojen ympärille havaint
   HUOM: keskellä yläkattoa näkyvä lyhyt vihreä rivi = taempien rakennusten (Taihedian) C1 kaukaa, ei Taihemenin.
 - EI PAKETTIA ennen kuin 03 on ehjä (PT 14.3x). Sitten Taihedian v196+ (LISÄYS 134 "SEURAAVAKSI"; rakennukset-v95 on nyt Meridiaani → Taihedian seuraava vapaa numero).
 - Paketin osat valmiina: rakennukset-v95 + c2-v34 (meridiaani-v195), tausta-v77 (kiilat-v196), c1-v11 (kesken). Ei taustaajoja käynnissä.
+
+## LISÄYS 137 (30.10. 15.1x): PT 15.1x uudelle LAV:lle (sitova jono)
+1) Harmaa laatta oikealla + muurin edessä kaksi harmaata pystylaattaa (150048/03 jälkeen-kuva) → paikanna (taustan kk-tausta-2-1/2-2? tausta_kiilat.py:n
+   orvot.py-tyyppinen haku muille materiaaleille, esim. V4_harmaa/V4_marmori vinot) ja poista/korjaa.
+2) Kamerat: LAV:n 03-pareissa näkymä vinossa terassiin päin, kun VS:n 145925/03 (sama kohta) katsoo suoraan Taihedianiin → tarkista kamera/juuri ennen kuin
+   parit kelpaavat todisteeksi. (Huom. 144935/145156/150048 ajettiin tarkoituksella sivuhallin kulmasta PAIKKA_03 "55 -60 25"; havainteen kulma oli 143817/03 –
+   vertaa VS:n 145925/03:n skenaario.txt:n "valo sijoita"/"testikamera"-rivejä omiin.)
+3) Taihemenin C1-sivurivi (LISÄYS 136 kohta 3).
+Paketti v98 (Meridiaani) vasta KK:n Kyllän jälkeen.
