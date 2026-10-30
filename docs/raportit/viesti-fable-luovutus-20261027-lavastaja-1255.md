@@ -1563,3 +1563,13 @@ K = …/kielletty-rakennukset, H = …/havainne-kuja40.
   TESTIKAMERA_03="6 6 0 70" v94/v96/v97 (scratchpad pari178b.log). PT 03.4x: PK tekee kameran → pyyntö PK:lle lähetetty (Taihedianin lounaiskulma, juuret v94/v96/v97).
 - SEURAAVAKSI: pari (ennen/jälkeen) → PT; kuittauksen jälkeen paketti v95 (= v94 + rakennukset-v80 korvaa v79 + lahipuut-v11 (tai v10, jos A4 ei vielä) korvaa v8;
   peli: kansiot PK). Sitten 03-vyön UV (PT), A6 (Codexin GLB).
+
+## LISÄYS 113 klo 04.20 (30.10.): MUURIKATE v180, KELTARAITA EI POISTUNUT — ALOITA TÄSTÄ
+- PK ajaa Taihedianin lounaiskulman parin itse (editori.sh 06 -49 -29.5 66.7 8.13, LAHIKUVA "1.5 8 -20 70", REF 41604ddef; juuret v97, v94, v96)
+  ja lähettää lokikansiot. PAIKKA_03 ei sovi Taihedianille (03 kiinteä, ilman QA-lattiaa keisari jää terassiin). Oma pari178b pysäytetty.
+- PT 04.1x (VS:n löydös): v180 (aja_v180_muurikate.zsh, taihemen_muurikate_pois.py) → K/muurikate-v180/kielletty-rakennukset-v81 = v80 − f-taihemen
+  lod0/lod1 vanha porttimuurin kate (V4_gold 40), friisi (16), teal (4); V4_red-yläpinta jää. Juuri H/juuri-pk7-v98 (= v97, rakennukset → v81).
+  Pari v97→v98 03s-kamera (PAIKKA_03="6.43 -203 -2.03" TESTIKAMERA_03="4 6 0 60"): lokit/havainne-editori-20261030-040102 / -041415,
+  rajaus 041415/03/muurikate-ennen-jalkeen.png: keltaiset raidat JÄÄVÄT → ne ovat siipikattojen oma kannatinvyö (V4_konsoli_kulta + V4_teal y 4,15–4,5).
+  PT:lle ilmoitettu (04.19), kysytty VS/PK:n pinnasta. Odottaa PT:n linjausta (mallin materiaali vai pelin pinta).
+- Paketti v95 tulossa: rakennukset-v81 (sis. v80) + lahipuut-v11 (tai v10), kun PT kuittaa parit.
