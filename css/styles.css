@@ -18879,10 +18879,13 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
- * KEVYT MERKKI POISTETTU KOHDEKARTALTA (omistaja 31.10.2026 klo 09.31 "Kaikki pitää olla samalla kontrastilla",
- * PT: kevyt aukiomerkki kumottu tällä kartalla). Löydöksen 178 (26.9.2026) pienennys 0,72 ja peitto 0,78 pois;
- * luokka .kohde-kevyt jää tunnisteeksi.
+ * KEVYT MERKKI (löydös 178, omistaja 26.9.2026): aukio ja luonto pienempinä, jotta rakennukset kantavat kartan.
+ * HAALEUS POIS (omistaja 31.10.2026 klo 09.31 "Kaikki pitää olla samalla kontrastilla", PT): peitto 0,78 poistettu;
+ * pienennys 0,72 säilyy, jotta keskinäiset koot pysyvät (KK 31.10.).
  */
+.maakartta-piste.kohde-kevyt .kohde-piirros-kuva {
+  transform: scale(0.72);
+}
 
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
@@ -19344,10 +19347,11 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   object-fit: contain;
   /* Kontrasti ja kylläisyys tulevat kuvasta: kohdekartan piirrokset tasataan kuvakohtaisesti samaan musta- ja
    * valkopisteeseen (js/packs/kohdekartan-piirrokset.js, omistaja 31.10.2026 klo 09.31–09.34).
-   * VARJO ON KUVASSA (omistaja 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo
-   * monistaa", PT): kova pieni varjo leivotaan tasattuun kuvaan (tools/piirrostasaus.json "varjo"), joten web,
-   * natiivi ja kaikki kaupungit saavat saman ilman koodia. Pehmeä 0 2px 3px rgba(0,0,0,0.35) poistettu. */
-  filter: none;
+   * KOVA PIENI VARJO (omistaja 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo
+   * monistaa", 10.16 "Kelpaa"; 10.26 leivottu "Varjo liian iso" → PT: takaisin tähän): siluetti 1 px oikealle alas
+   * musteen sävyssä 45 % ilman sumennusta, yksi sääntö kaikille kaupungeille; natiivissa sama vakio (NUI 1ef556f1f).
+   * Ennen pehmeä 0 2px 3px rgba(0,0,0,0.35). */
+  filter: drop-shadow(1px 1px 0 rgba(44, 35, 24, 0.45));
   /* Klikki kuuluu napille, ei kuvalle — suurennettuna kuva vuotaa
    * laatikon yli, eikä ylivuoto saa napata napautuksia. */
   pointer-events: none;

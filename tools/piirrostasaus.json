@@ -1,5 +1,5 @@
 {
-  "kuvaus": "Kohdekartan piirrosten yhteinen tavoite (tools/piirrostasaus.py). Omistaja 31.10.2026: 09.27 kontrasti puoliväliin, 09.31 kaikki samalla kontrastilla, 09.33 sama musta- ja valkopiste, keskikontrasti yhteneväksi, saturaatiota alas tarvittaessa, 09.34 helppo monistaa kaikkiin kaupunkeihin. Arvot = Pariisin 14 kohdekartan piirroksen mediaani 09.27:n puolivälin näköisinä (kalibrointi Karttaseppä 31.10.). Musteen luminanssi 0–1: musta = 2. persentiili, valko = 98., keski = mediaani; kroma = keskimääräinen max−min. Kylläisyys: yli tavoitteen ei saa jäädä (alas aina); alle saa jäädä kroma_ali verran, kun nosto osuu kattoon (esim. Pariisin metro: musta ja vihreä muste, nosto ×2 jo katossa). Tallennus: 1024 px, webp-laatu 82 (PT 31.10.: repon koko; suurennuksessa ei näkyvää eroa).",
+  "kuvaus": "Kohdekartan piirrosten yhteinen tavoite (tools/piirrostasaus.py). Omistaja 31.10.2026: 09.27 kontrasti puoliväliin, 09.31 kaikki samalla kontrastilla, 09.33 sama musta- ja valkopiste, keskikontrasti yhteneväksi, saturaatiota alas tarvittaessa, 09.34 helppo monistaa kaikkiin kaupunkeihin. Arvot = Pariisin 14 kohdekartan piirroksen mediaani 09.27:n puolivälin näköisinä (kalibrointi Karttaseppä 31.10.). Musteen luminanssi 0–1: musta = 2. persentiili, valko = 98., keski = mediaani; kroma = keskimääräinen max−min. Kylläisyys: yli tavoitteen ei saa jäädä (alas aina); alle saa jäädä kroma_ali verran, kun nosto osuu kattoon (esim. Pariisin metro: musta ja vihreä muste, nosto ×2 jo katossa). Tallennus: 1024 px, webp-laatu 82 (PT 31.10.: repon koko; suurennuksessa ei näkyvää eroa). Varjo EI kuvassa (PT 31.10. omistajan 10.26 \"Varjo liian iso\" jälkeen: leivottu varjo skaalautui kuvan mukana): kohdekartan CSS-varjo 1 px #2c2318 45 % kuten hyväksytyssä c434ee879:ssä, natiivissa sama vakio (NUI).",
   "tavoite": {
     "musta": 0.36,
     "valko": 0.85,
@@ -16,12 +16,6 @@
     "keski": 0.03,
     "kroma_yli": 0.03,
     "kroma_ali": 0.08
-  },
-  "varjo": {
-    "siirto": 0.01,
-    "vari": "#2c2318",
-    "peitto": 0.45,
-    "kuvaus": "Kova pieni varjo kuvaan leivottuna (omistaja 10.07; 10.26 \"Varjo liian iso\" → 10.16 hyväksytyn kokoiseksi): siluetti siirrettynä oikealle alas 0,01 × kuvan leveys (≈ 10 px 1024 px:n kuvassa, lähimmällä zoomilla ohut reuna), ei sumennusta, musteen sävy 45 %. Mitat otetaan ennen varjoa."
   },
   "hyväksytyt_poikkeamat": [
     {
