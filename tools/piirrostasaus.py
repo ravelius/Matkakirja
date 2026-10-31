@@ -17,7 +17,7 @@ import json
 import math
 import sys
 
-from PIL import Image
+from PIL import Image, ImageChops, ImageMath
 
 RUUTU = 256
 
@@ -50,45 +50,81 @@ def mitat(im):
     }
 
 
-def _sovella(im, a0, a1, b0, b1, gamma, kerroin):
+def _sovella(im, a0, a1, b0, b1, gamma, kerroin, kroma_raja=0.35, reuna=(60, 200)):
+    """Tasot ja gamma (sama käyrä kaikille kanaville), kylläisyys ja reunan suojaus.
+
+    - Kylläisyys luminanssin ympäri (Rec. 709), mutta nosto vain vähäkylläisille pikseleille: pikselin oma kroma
+      kroma_rajaa kohti → kerroin kohti 1 (KK 31.10.: kattojen kultaukset kirkastuivat keltaisiksi pisteiksi).
+      Lasku (kerroin < 1) koskee kaikkia.
+    - Reunan suojaus: puoliläpinäkyvä reuna ja usva (alfa < reuna[1]) saavat korjauksen vain osittain, alle
+      reuna[0] ei lainkaan (KK 31.10.: Louvren ympärille tuli maitomainen huntu, kun gamma vaalensi usvan).
+    """
     alfa = im.getchannel('A')
-    rgb = im.convert('RGB')
+    alkup = im.convert('RGB')
 
     def kayra(i):
+        # Gamma vain musta–valko-välillä; sen ulkopuolella LINEAARINEN jatke eikä katkaisu (KK 31.10. Louvre: täyden
+        # koon ohuet ääriviivat ovat mustaa pistettä tummempia, ja katkaisu vaalensi ne maitomaiseksi hunnuksi).
         x = (i / 255 - a0) / (a1 - a0)
-        x = min(1.0, max(0.0, x)) ** gamma
-        return max(0, min(255, round(255 * (b0 + (b1 - b0) * x))))
-    rgb = rgb.point([kayra(i) for i in range(256)] * 3)
+        if x < 0:
+            y = b0 + (b1 - b0) * x * min(1.0, gamma)
+        elif x > 1:
+            y = b1 + (b1 - b0) * (x - 1)
+        else:
+            y = b0 + (b1 - b0) * x ** gamma
+        return max(0, min(255, round(255 * y)))
+    # Käyrä LUMINANSSILLE, muutos lisätään kaikkiin kanaviin (sävy ja kroma säilyvät; kanavittainen käyrä nosti tumman
+    # pikselin vaaleita kanavia ja musta piste karkasi, KK 31.10. Louvre).
+    L = alkup.convert('L', (0.2126, 0.7152, 0.0722, 0))
+    L2 = L.point([kayra(i) for i in range(256)])
+    rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] + a['u'] - a['v'], c=c, u=L2, v=L).convert('L')
+                              for c in alkup.split()])
     if abs(kerroin - 1) > 1e-3:
-        # Kylläisyys luminanssin ympäri (Rec. 709 -painot); harmaa (L) = sama kaikille kanaville.
         L = rgb.convert('L', (0.2126, 0.7152, 0.0722, 0))
         harmaa = Image.merge('RGB', (L, L, L))
-        rgb = Image.blend(harmaa, rgb, kerroin)
+        kyll = Image.blend(harmaa, rgb, kerroin)
+        if kerroin > 1:
+            r, g, b = rgb.split()
+            kroma = ImageChops.subtract(ImageChops.lighter(ImageChops.lighter(r, g), b),
+                                        ImageChops.darker(ImageChops.darker(r, g), b))
+            raja = 255 * kroma_raja
+            paino = kroma.point([max(0, min(255, round(255 * (1 - c / raja)))) for c in range(256)])
+            kyll = Image.composite(kyll, rgb, paino)
+        rgb = kyll
+    r0, r1 = reuna
+    suoja = alfa.point([0 if a <= r0 else 255 if a >= r1 else round(255 * (a - r0) / (r1 - r0)) for a in range(256)])
+    rgb = Image.composite(rgb, alkup, suoja)
     return Image.merge('RGBA', (*rgb.split(), alfa))
 
 
-def tasaa(im, tavoite, kierroksia=8):
-    """Sovittaa tasot, gamman ja kylläisyyden mittaamalla tulosta (koko kuva; mittaus 256 px:n kopiosta)."""
+def tasaa(im, tavoite, kierroksia=12):
+    """Sovittaa gamman, tasot ja kylläisyyden mittaamalla tulosta (koko kuva; mittaus 256 px:n kopiosta).
+
+    Vaimennettu sovitus rajoissa (KK 31.10.: Louvren gamma karkasi alakattoon, kun musta piste ja gamma ajoivat
+    toisiaan): gamma tavoitteen keskisävyyn, päätepisteet puolikkailla askelilla enintään ±0,12 tavoitteesta.
+    Jos keski ei osu rajoissa, poikkeama jää näkyviin tuloksiin ja testi kertoo sen.
+    """
     im = im.convert('RGBA')
     m = mitat(im)
     a0, a1 = m['musta'], max(m['musta'] + 1e-3, m['valko'])
-    b0, b1 = tavoite['musta'], tavoite['valko']
+    T0, T1, TK = tavoite['musta'], tavoite['valko'], tavoite['keski']
+    b0, b1 = T0, T1
     k = min(0.999, max(0.001, (m['keski'] - a0) / (a1 - a0)))
-    kt = min(0.999, max(0.001, (tavoite['keski'] - b0) / (b1 - b0)))
+    kt = min(0.999, max(0.001, (TK - b0) / (b1 - b0)))
     gamma = math.log(kt) / math.log(k)
     kerroin = tavoite['kroma'] / m['kroma'] if m['kroma'] > 1e-3 else 1.0
-    gmin, gmax, kkatto = tavoite.get('gamma_min', 0.45), tavoite.get('gamma_max', 2.2), tavoite.get('kylläisyys_katto', 1.6)
+    gmin, gmax = tavoite.get('gamma_min', 0.55), tavoite.get('gamma_max', 2.0)
+    kkatto, liik = tavoite.get('kylläisyys_katto', 2.0), tavoite.get('paatepiste_liikkuma', 0.12)
     for _ in range(kierroksia):
         gamma = min(gmax, max(gmin, gamma))
         kerroin = min(kkatto, max(0.3, kerroin))
         j = mitat(_sovella(im, a0, a1, b0, b1, gamma, kerroin))
-        # Korjaukset: päätepisteet suoraan erotuksella, keski gamman kautta, kroma suhteella.
-        b0 += tavoite['musta'] - j['musta']
-        b1 += tavoite['valko'] - j['valko']
-        if 0 < j['keski'] < 1 and 0 < tavoite['keski'] < 1:
-            gamma *= math.log(tavoite['keski']) / math.log(j['keski'])
+        b0 = min(T0 + liik, max(T0 - liik, b0 + 0.5 * (T0 - j['musta'])))
+        b1 = min(T1 + liik, max(T1 - liik, b1 + 0.5 * (T1 - j['valko'])))
+        if 0 < j['keski'] < 1:
+            gamma *= (math.log(TK) / math.log(j['keski'])) ** 0.7
         if j['kroma'] > 1e-3:
-            kerroin *= tavoite['kroma'] / j['kroma']
+            kerroin *= (tavoite['kroma'] / j['kroma']) ** 0.7
     gamma = min(gmax, max(gmin, gamma))
     kerroin = min(kkatto, max(0.3, kerroin))
     tulos = _sovella(im, a0, a1, b0, b1, gamma, kerroin)
