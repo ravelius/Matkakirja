@@ -16,5 +16,11 @@
     "keski": 0.03,
     "kroma_yli": 0.03,
     "kroma_ali": 0.08
+  },
+  "varjo": {
+    "siirto": 0.028,
+    "vari": "#2c2318",
+    "peitto": 0.45,
+    "kuvaus": "Kova pieni varjo kuvaan leivottuna (omistaja 10.07): siluetti siirrettynä oikealle alas 0,028 × kuvan leveys (≈ 1 px 36 px:n piirroksella), ei sumennusta, musteen sävy 45 %. Mitat otetaan ennen varjoa."
   }
 }

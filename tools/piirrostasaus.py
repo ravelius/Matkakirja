@@ -132,16 +132,36 @@ def tasaa(im, tavoite, kierroksia=12):
                                      'gamma': round(gamma, 3), 'kylläisyys': round(kerroin, 3)}
 
 
+def varjo(im, asetus):
+    """KOVA PIENI VARJO KUVAAN LEIVOTTUNA (omistaja 31.10.2026 klo 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja
+    pieneen varjoon mikäli helppo monistaa"; PT: yksi arvo yhteisessä asetuksessa → web, natiivi ja kaikki kaupungit
+    ilman erillistä koodia). Siluetti (alfa) siirrettynä oikealle alas osuuden verran kuvan leveydestä, ilman
+    sumennusta, yhtenäisellä värillä ja peitolla, piirroksen alle. Mitat (musta/valko/keski/kroma) otetaan ennen varjoa."""
+    if not asetus:
+        return im
+    w, h = im.size
+    d = max(1, round(asetus['siirto'] * w))
+    v = asetus['vari'].lstrip('#')
+    vari = tuple(int(v[i:i + 2], 16) for i in (0, 2, 4))
+    alfa = im.getchannel('A').point(lambda a: round(a * asetus['peitto']))
+    siirretty = Image.new('L', (w, h), 0)
+    siirretty.paste(alfa.crop((0, 0, w - d, h - d)), (d, d))
+    pohja = Image.new('RGBA', (w, h), vari + (0,))
+    pohja.putalpha(siirretty)
+    return Image.alpha_composite(pohja, im)
+
+
 def main():
     komento, argit = sys.argv[1], sys.argv[2:]
     if komento == 'mittaa':
         print(json.dumps({p: mitat(Image.open(p)) for p in argit}))
     elif komento == 'tasaa':
-        tavoite = json.load(open(argit[0], encoding='utf-8'))['tavoite']
+        asetus = json.load(open(argit[0], encoding='utf-8'))
+        tavoite = asetus['tavoite']
         tulos = {}
         for sisaan, ulos in zip(argit[1::2], argit[2::2]):
             kuva, ennen, jalkeen, kertoimet = tasaa(Image.open(sisaan), tavoite)
-            kuva.save(ulos, 'WEBP', quality=92, method=6, exact=True)
+            varjo(kuva, asetus.get('varjo')).save(ulos, 'WEBP', quality=92, method=6, exact=True)
             tulos[ulos] = {'ennen': ennen, 'jälkeen': jalkeen, 'kertoimet': kertoimet}
         print(json.dumps(tulos, ensure_ascii=False))
 

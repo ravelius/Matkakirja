@@ -19344,10 +19344,10 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   object-fit: contain;
   /* Kontrasti ja kylläisyys tulevat kuvasta: kohdekartan piirrokset tasataan kuvakohtaisesti samaan musta- ja
    * valkopisteeseen (js/packs/kohdekartan-piirrokset.js, omistaja 31.10.2026 klo 09.31–09.34).
-   * KOVA PIENI VARJO (omistaja 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo
-   * monistaa"): siluetti 1 px oikealle alas musteen sävyssä ilman sumennusta – yksi arvo kaikille kaupungeille,
-   * natiivissa sama (siluetin kopio siirrettynä, NUI). Ennen pehmeä 0 2px 3px rgba(0,0,0,0.35). */
-  filter: drop-shadow(1px 1px 0 rgba(44, 35, 24, 0.45));
+   * VARJO ON KUVASSA (omistaja 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo
+   * monistaa", PT): kova pieni varjo leivotaan tasattuun kuvaan (tools/piirrostasaus.json "varjo"), joten web,
+   * natiivi ja kaikki kaupungit saavat saman ilman koodia. Pehmeä 0 2px 3px rgba(0,0,0,0.35) poistettu. */
+  filter: none;
   /* Klikki kuuluu napille, ei kuvalle — suurennettuna kuva vuotaa
    * laatikon yli, eikä ylivuoto saa napata napautuksia. */
   pointer-events: none;

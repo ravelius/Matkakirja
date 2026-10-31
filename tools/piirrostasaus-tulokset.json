@@ -3,7 +3,7 @@
   "Eiffel-torni": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-eiffel-torni.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-eiffel-torni-kk.webp",
-   "sha": "7d73b221eedf3d64",
+   "sha": "ac3f08e68636f67e",
    "ennen": {
     "musta": 0.403,
     "valko": 0.87,
@@ -30,7 +30,7 @@
   "Riemukaari": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-riemukaari.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-riemukaari-kk.webp",
-   "sha": "7e77295973351b9a",
+   "sha": "b465119f5c8b6c8d",
    "ennen": {
     "musta": 0.361,
     "valko": 0.919,
@@ -57,7 +57,7 @@
   "Concorden aukio": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-concorden-aukio-kk.webp",
-   "sha": "02c285634c237389",
+   "sha": "928fff85c2f8193f",
    "ennen": {
     "musta": 0.351,
     "valko": 0.857,
@@ -84,7 +84,7 @@
   "Louvre": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-louvre.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-louvre-kk.webp",
-   "sha": "ecd51364c3bb79e8",
+   "sha": "d4cf03736beca272",
    "ennen": {
     "musta": 0.405,
     "valko": 0.822,
@@ -111,7 +111,7 @@
   "Luxembourgin puisto": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto-kk.webp",
-   "sha": "c8a422dbb18fb618",
+   "sha": "5b7299e289201321",
    "ennen": {
     "musta": 0.466,
     "valko": 0.867,
@@ -138,7 +138,7 @@
   "Sacré-Cœur": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-sacre-coeur.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-sacre-coeur-kk.webp",
-   "sha": "386ef97e1c8db7c7",
+   "sha": "2e223beffbfcfab8",
    "ennen": {
     "musta": 0.486,
     "valko": 0.977,
@@ -165,7 +165,7 @@
   "Panthéon": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-pantheon.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-pantheon-kk.webp",
-   "sha": "5db4a201b9a2b961",
+   "sha": "de443cb40921f7cc",
    "ennen": {
     "musta": 0.397,
     "valko": 0.883,
@@ -192,7 +192,7 @@
   "Notre-Dame": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-notre-dame-kk.webp",
-   "sha": "b7e430ba8a98d52e",
+   "sha": "f5322b7b43742d6c",
    "ennen": {
     "musta": 0.309,
     "valko": 0.834,
@@ -219,7 +219,7 @@
   "Orsayn taidemuseo": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo-kk.webp",
-   "sha": "23ff2518d98c16d5",
+   "sha": "67dd9ea2f4c21d02",
    "ennen": {
     "musta": 0.515,
     "valko": 0.893,
@@ -246,7 +246,7 @@
   "Palais Garnier": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-palais-garnier.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-palais-garnier-kk.webp",
-   "sha": "a2fb13f0302c01cd",
+   "sha": "657c6e6c5262bfa0",
    "ennen": {
     "musta": 0.457,
     "valko": 0.889,
@@ -273,7 +273,7 @@
   "Place des Vosges": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-place-des-vosges-kk.webp",
-   "sha": "b9960485a9dc082c",
+   "sha": "460a00133e8a0964",
    "ennen": {
     "musta": 0.451,
     "valko": 0.889,
@@ -300,7 +300,7 @@
   "Tuileries'n palatsi": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-tuileries-kk.webp",
-   "sha": "9e197f71bea5c51d",
+   "sha": "4713a86a79a0cc4a",
    "ennen": {
     "musta": 0.369,
     "valko": 0.795,
@@ -327,7 +327,7 @@
   "Bastilji": {
    "lahde": "pariisi-bastilji-vari2",
    "kuva": "assets/kartat/miniatyyrit/pariisi-bastilji-vari2-kk.webp",
-   "sha": "a063931021e3c498",
+   "sha": "7adc076c1c7871e9",
    "ennen": {
     "musta": 0.365,
     "valko": 0.938,
@@ -354,7 +354,7 @@
   "Metron sisäänkäynti": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2-kk.webp",
-   "sha": "8eb2028fdb364a4f",
+   "sha": "5a3e763f168f5f87",
    "ennen": {
     "musta": 0.242,
     "valko": 0.933,
