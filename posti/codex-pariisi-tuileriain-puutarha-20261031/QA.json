@@ -1,0 +1,262 @@
+{
+  "taskNumber": 1322,
+  "status": "PASS_WITH_NONBLOCKING_STYLE_NOTES",
+  "generationCalls": 1,
+  "generationTool": "builtin image_gen.imagegen",
+  "rootReview": {
+    "checkedAt": "2026-10-31T05:03:49.840151+00:00",
+    "taskNumber": 1322,
+    "status": "PASS",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileriain-puutarha-20261031/delivery/assets/kartat/miniatyyrit/pariisi-tuileriain-puutarha.webp",
+    "format": "WEBP",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "bytes": 784076,
+    "sha256": "8eb6e210b071433b0aa3433a3ed180f2ee11d366b9245fa8b9a09fdf99d0a626",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "fullyTransparentPixels": 634332,
+    "partiallyTransparentPixels": 414161,
+    "fullyOpaquePixels": 83,
+    "nonzeroAlphaBounds": [
+      48,
+      62,
+      967,
+      976
+    ],
+    "significantAlphaBounds": [
+      74,
+      217,
+      963,
+      853
+    ],
+    "outer48pxFullyTransparent": true,
+    "visualChecks": [
+      "current garden only; no palace or ruins",
+      "five motif groups: pool, clipped tree avenues, paths, chairs, low hedges",
+      "no statues, text, sky, background or people",
+      "coherent elevated 3/4 view and upper-left illumination",
+      "light/dark backgrounds inspected at 1024 and 256 pixels",
+      "whole original preserved; format conversion only"
+    ],
+    "nonBlockingStyleNotes": [
+      "Compressed garden vignette, not measured ground plan.",
+      "Foliage is slightly more richly shaded than older Garnier/Notre-Dame references."
+    ]
+  },
+  "independentReview": {
+    "schema": "tuileries-garden-independent-review-v1",
+    "task_number": 1322,
+    "checked_at": "2026-10-31T05:04:53.625573+00:00",
+    "status": "PASS_WITH_NONBLOCKING_STYLE_NOTES",
+    "acceptable_as_requested": true,
+    "blocking_findings": [],
+    "scope": "Single finished image QA. Reviewer wrote only independent-review.md/json; no generation, image changes, shared ledger changes or mail.",
+    "order_read_fully": true,
+    "order_sha256": "32d75e79adefaeff907613b13c8cbe40796a358cdf2454a661ee6a10a1fb27e9",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileriain-puutarha-20261031/delivery/assets/kartat/miniatyyrit/pariisi-tuileriain-puutarha.webp",
+    "sha256": "8eb6e210b071433b0aa3433a3ed180f2ee11d366b9245fa8b9a09fdf99d0a626",
+    "source_candidate_sha256": "83d3d91d95e5e4f4d72926d91c6ac122c3978dd748354b285fbd8018d734805e",
+    "format": "WEBP",
+    "dimensions_px": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "bytes": 784076,
+    "alpha_checks": {
+      "range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 634332,
+      "partly_transparent_pixels": 414161,
+      "fully_opaque_pixels": 83,
+      "significant_bounds_alpha_gt16": [
+        74,
+        217,
+        963,
+        853
+      ],
+      "significant_center_offset_px": [
+        6.5,
+        23.0
+      ],
+      "outer48px_fully_transparent": true,
+      "decoded_rgba_matches_qa_png": true
+    },
+    "references_viewed": [
+      {
+        "file": "references/pariisi-palais-garnier.png",
+        "sha256": "c745b7d31fe0e6568ab859def3ec64c677c9fd9e35299f1bf21bf5078fe3a551"
+      },
+      {
+        "file": "references/pariisi-notre-dame.png",
+        "sha256": "4fc4b50cf482d226a259c10d181368fcade0fa53a6d21e4a255d7d3fef201c4d"
+      },
+      {
+        "file": "references/pariisi-concorden-aukio.png",
+        "sha256": "f9706e29eede0f0c1b657ed9f665c8b83205fe7a6220a7bd8437ad1a5e1d185d"
+      },
+      {
+        "file": "references/pariisi-metron-sisaankaynti-v2.png",
+        "sha256": "42dfbd4fb3df15fc799e63e31f398bbd487a4773758df3c15776da658259c592"
+      }
+    ],
+    "previews_viewed": [
+      {
+        "file": "qa/garden-light.png",
+        "sha256": "0e4dcf98c0138a5cc8a3855b8a6fd71717146faaa198bccf6d425f3afe158b82"
+      },
+      {
+        "file": "qa/garden-dark.png",
+        "sha256": "15d6a97ff5801ff3f30d2e04fb6fd253c3b5f859a43fd77bbedb1a265f1d97f5"
+      },
+      {
+        "file": "qa/garden-256-light.png",
+        "sha256": "71dc1e4afd3b8b2442b56910ce58ec28a738d7415096cd20bed7a0357124ac5e"
+      },
+      {
+        "file": "qa/garden-256-dark.png",
+        "sha256": "4104f1e43395ac695134790df886af6f4ae28d04e39e70683fca3268dba2e959"
+      }
+    ],
+    "recognizable_motif_groups": [
+      {
+        "group": "Octagonal pool and fountain",
+        "result": "PASS: dominant clear octagonal basin, visible central water jet and ripples."
+      },
+      {
+        "group": "Tree avenues",
+        "result": "PASS: ordered rows of leafy deciduous trees behind the basin; trunks and perspective separation visible."
+      },
+      {
+        "group": "Pale gravel paths",
+        "result": "PASS: compact paths around the basin and between planted beds; no large empty lawn."
+      },
+      {
+        "group": "Green metal chairs",
+        "result": "PASS: recognizable green slatted chairs around the basin, including pairs and reclined forms; no crowds."
+      },
+      {
+        "group": "Low clipped hedges and planted beds",
+        "result": "PASS: geometric low hedge borders, rounded/conical topiary and restrained flower detail."
+      }
+    ],
+    "motif_group_count": 5,
+    "excluded_content": {
+      "palace": false,
+      "ruins": false,
+      "sky": false,
+      "smoke": false,
+      "scenic_background": false,
+      "frame": false,
+      "people_or_crowds": false,
+      "advertisements_or_text": false,
+      "statues_or_modern_artworks": false
+    },
+    "visual_checks": {
+      "garden_subject": "PASS: current garden vignette, not historical palace or ruins.",
+      "island_composition": "PASS: compact isolated ground patch, complete perimeter, no scene extending to canvas edges.",
+      "style": "PASS: colored hand-drawn outlines, restrained stone/green palette and modeled shading compatible with named references.",
+      "perspective": "PASS: coherent elevated three-quarter view; basin, paths, chairs and tree rows share the same ground perspective.",
+      "lighting": "PASS: soft illumination from upper-left with consistent lower-right shade; no conflicting hard light.",
+      "thumbnail": "PASS at256px on both backgrounds: basin/fountain, tree rows, hedges and small green chairs remain distinguishable.",
+      "alpha_composites": "PASS: light/dark composited PNGs show no visible colored fringe, backdrop rectangle or clipping. Raw hidden-RGB artifacts ignored as instructed."
+    },
+    "nonblocking_style_notes": [
+      {
+        "id": "GARDEN-STYLE-01",
+        "finding": "Foliage texture and green/yellow shading are somewhat richer than in the older predominantly stone-building references.",
+        "impact": "Minor; palette remains restrained and matches the current accepted metro treatment."
+      },
+      {
+        "id": "GARDEN-COMPOSITION-01",
+        "finding": "The clipped garden beds, paths and pool are a compact representative composition, not a literal measured plan of the full Jardin des Tuileries.",
+        "impact": "Fits the explicit3–5 motif miniature brief; not presented as a surveyed layout."
+      }
+    ],
+    "delivery_or_owner_acceptance": "Not performed or asserted by this review."
+  },
+  "exportVerification": {
+    "checkedAt": "2026-10-31T05:03:26.257Z",
+    "files": [
+      {
+        "id": "garden",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileriain-puutarha-20261031/candidates/garden-v1-source.png",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileriain-puutarha-20261031/delivery/assets/kartat/miniatyyrit/pariisi-tuileriain-puutarha.webp",
+        "outputDimensions": [
+          1024,
+          1024
+        ],
+        "format": "webp",
+        "lossless": true,
+        "transparentOuterPaddingPx": 48,
+        "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+        "hiddenRGBChannelsCanonicalizedByWebP": 143511,
+        "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+      }
+    ]
+  },
+  "sourceVerification": {
+    "sourceCommit": "90b40bb1cfee9e9751275286cd647c718cb4a5a0",
+    "sourceBlob": "6717202e5f99bcaff27003709efdbf5854f3c720",
+    "styleModels": [
+      {
+        "path": "assets/kartat/miniatyyrit/pariisi-palais-garnier.webp",
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-0459/pariisi-palais-garnier.webp",
+        "sha256": "a443ea465b4d64e6bcc29a9a58b2549c669b58837c9e420924570b316889b38c",
+        "blobSha": "abfdbd38f0e009dfad84a6407db320c53ff86c41"
+      },
+      {
+        "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-0459/pariisi-notre-dame.webp",
+        "sha256": "9fc7fb79fc416513f1d93ee2ca0b94d82b401e8cd92dd6e5a9e3621bec1b9d8e",
+        "blobSha": "39ea69f1b59256a99c585b6762961e8f48f8a9f8"
+      },
+      {
+        "path": "assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp",
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-0459/pariisi-concorden-aukio.webp",
+        "sha256": "d8fd791738e0f796b513a2398cf4bb224d063145417e7c8500089dd9cc01461b",
+        "blobSha": "e2f6d48bfecbeee80d480f8d6957080f173ee412"
+      }
+    ],
+    "metroV2": {
+      "mainCommit": "880e54f76f1c4c3580aaae412b293037059e30a8",
+      "path": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp",
+      "blobSha": "7cf39b724d37cf6050ca718099540ee584b8df6b",
+      "sha256": "1a6b933a4778821dadbbdd9328ee3d58c6b5288964c5e08eb1dd4beec1458d14",
+      "bytes": 761988,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuileriain-puutarha-20261031/references/pariisi-metron-sisaankaynti-v2.webp"
+    },
+    "ownerMetroAcceptance": "reported in order, not independently verified"
+  },
+  "factualSourceAccess": {
+    "sources": [
+      {
+        "url": "https://www.louvre.fr/decouvrir/le-palais/du-jardin-royal-au-jardin-public",
+        "usedFor": "Presence of octagonal and round pools; choose octagonal pool for compact miniature.",
+        "access": "Search result excerpt read; full page open timed out."
+      },
+      {
+        "url": "https://votrebanc.louvre.fr/fr/le-projet/",
+        "usedFor": "Characteristic current green metal chairs.",
+        "access": "Full primary source page read."
+      }
+    ],
+    "scope": "Stylized compact vignette, not measured garden plan. No historical dates or exact garden dimensions asserted."
+  },
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
