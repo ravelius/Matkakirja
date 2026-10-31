@@ -1,0 +1,45 @@
+/*
+ * Kohdekartan piirrosten tasaus (Karttaseppä 31.10.2026; omistaja 09.31 "Kaikki pitää olla samalla kontrastilla",
+ * 09.33 sama musta- ja valkopiste, keskikontrasti yhteneväksi, saturaatiota alas tarvittaessa, 09.34 monistettava).
+ * Mittaus tehdään tools/tasaa-kohdekartan-piirrokset.mjs:ssä (CI:ssä ei ole kuvakirjastoa); testi tarkistaa, että
+ * kirjatut mitat ovat tavoitteessa ja että kirjaus vastaa tiedostoja ja web-taulua.
+ */
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync } from 'node:fs';
+import { KOHDEKARTAN_PIIRROKSET } from '../js/packs/kohdekartan-piirrokset.js';
+import { MINIATYYRIT } from '../js/packs/miniatyyrit.js';
+
+const lue = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), 'utf8'));
+const { tavoite, toleranssi } = lue('tools/piirrostasaus.json');
+const TULOKSET = lue('tools/piirrostasaus-tulokset.json');
+
+test('jokainen tasattu piirros on yhteisessä musta- ja valkopisteessä, keskisävyssä ja kylläisyydessä', () => {
+  const poikkeavat = [];
+  for (const [kaupunki, kohteet] of Object.entries(TULOKSET)) {
+    for (const [nimi, t] of Object.entries(kohteet)) {
+      const j = t.jalkeen;
+      for (const k of ['musta', 'valko', 'keski']) {
+        if (Math.abs(j[k] - tavoite[k]) > toleranssi[k]) poikkeavat.push(`${kaupunki}/${nimi}: ${k} ${j[k]} (tavoite ${tavoite[k]})`);
+      }
+      if (j.kroma > tavoite.kroma + toleranssi.kroma_yli || j.kroma < tavoite.kroma - toleranssi.kroma_ali) {
+        poikkeavat.push(`${kaupunki}/${nimi}: kroma ${j.kroma} (tavoite ${tavoite.kroma})`);
+      }
+    }
+  }
+  assert.deepEqual(poikkeavat, []);
+});
+
+test('kirjaus vastaa tiedostoja ja web-taulua', () => {
+  for (const [kaupunki, kohteet] of Object.entries(TULOKSET)) {
+    for (const [nimi, t] of Object.entries(kohteet)) {
+      const polku = new URL(`../${t.kuva}`, import.meta.url);
+      assert.ok(existsSync(polku), t.kuva);
+      assert.equal(createHash('sha256').update(readFileSync(polku)).digest('hex').slice(0, 16), t.sha,
+        `${t.kuva}: aja node tools/tasaa-kohdekartan-piirrokset.mjs ${kaupunki}`);
+      assert.equal(KOHDEKARTAN_PIIRROKSET[kaupunki]?.[nimi], t.kuva, `${kaupunki}/${nimi}`);
+      assert.equal(MINIATYYRIT[kaupunki]?.[nimi], t.lahde, `${kaupunki}/${nimi}: alkuperäinen vaihtunut, tasaa uudelleen`);
+    }
+  }
+});

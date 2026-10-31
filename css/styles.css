@@ -18879,16 +18879,10 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
- * KEVYT MERKKI (löydös 178, omistaja 26.9.2026): aukio ja luonto jäävät
- * nähtävyyskartalle, mutta rakennusta keveämpinä — piirros pienempi ja
- * haaleampi, jotta rakennukset kantavat kartan.
+ * KEVYT MERKKI POISTETTU KOHDEKARTALTA (omistaja 31.10.2026 klo 09.31 "Kaikki pitää olla samalla kontrastilla",
+ * PT: kevyt aukiomerkki kumottu tällä kartalla). Löydöksen 178 (26.9.2026) pienennys 0,72 ja peitto 0,78 pois;
+ * luokka .kohde-kevyt jää tunnisteeksi.
  */
-.maakartta-piste.kohde-kevyt .kohde-piirros-kuva {
-  transform: scale(0.72);
-  opacity: 0.78;
-  /* Kevyt merkki pysyy haaleampana (löydös 178): ei kohdekartan kontrastivahvistusta. */
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
-}
 
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
@@ -19348,13 +19342,9 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* KONTRASTIA KOHDEKARTALLE (omistaja 31.10.2026 klo 09.14 "Osa rakennuksista on vielä liian haaleita tälle
-   * kartalle" ja 09.17 "Haaleus on tarkoituksellista siinä toisessa kartassa mutta tähän karttaan voisi lisätä
-   * kontrastia", PT): vaaleat akvarellit (Palais Garnier, Orsay, Panthéon, Sacré-Cœur) erottuvat kuten Notre-Dame.
-   * Kuvatiedostot ennallaan (sama kuva striimikartalla); natiivin kohdekartta samoilla kertoimilla (NUI).
-   * Kevyet (aukio, luonto) ilman vahvistusta, ks. .kohde-kevyt alla.
-   * Omistaja 09.27 "Uudessa liikaa kontrastia. Tee puoliväliin": 1,25 → 1,12. */
-  filter: brightness(0.92) contrast(1.12) saturate(1.2) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+  /* Kontrasti ja kylläisyys tulevat kuvasta: kohdekartan piirrokset tasataan kuvakohtaisesti samaan musta- ja
+   * valkopisteeseen (js/packs/kohdekartan-piirrokset.js, omistaja 31.10.2026 klo 09.31–09.34). */
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
   /* Klikki kuuluu napille, ei kuvalle — suurennettuna kuva vuotaa
    * laatikon yli, eikä ylivuoto saa napata napautuksia. */
   pointer-events: none;

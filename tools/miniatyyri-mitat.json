@@ -1254,10 +1254,20 @@
   "taytto": 0.787,
   "reuna": 0
  },
+ "pariisi-bastilji-vari2-kk.webp": {
+  "sha": "c064737ef2a363e1",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
  "pariisi-carmenin-ensi-ilta.webp": {
   "sha": "0298c485c9dc5852",
   "taytto": 0.79,
   "reuna": 0
+ },
+ "pariisi-concorden-aukio-kk.webp": {
+  "sha": "413988a6df1483cc",
+  "taytto": 0.158,
+  "reuna": 0.0
  },
  "pariisi-concorden-aukio.webp": {
   "sha": "d8fd791738e0f796",
@@ -1268,6 +1278,11 @@
   "sha": "bca26193aa625fb7",
   "taytto": 0.616,
   "reuna": 0
+ },
+ "pariisi-eiffel-torni-kk.webp": {
+  "sha": "e2c56d7a67dfb913",
+  "taytto": 0.117,
+  "reuna": 0.0
  },
  "pariisi-eiffel-torni.webp": {
   "sha": "ae81bb0b2b95e889",
@@ -1294,6 +1309,11 @@
   "taytto": 0.519,
   "reuna": 0
  },
+ "pariisi-louvre-kk.webp": {
+  "sha": "d7eb610f50298690",
+  "taytto": 0.137,
+  "reuna": 0.0
+ },
  "pariisi-louvre.webp": {
   "sha": "874417d163efed14",
   "taytto": 0.138,
@@ -1304,10 +1324,20 @@
   "taytto": 0.747,
   "reuna": 0
  },
+ "pariisi-luxembourgin-puisto-kk.webp": {
+  "sha": "fd4baac5c85054b0",
+  "taytto": 0.186,
+  "reuna": 0.0
+ },
  "pariisi-luxembourgin-puisto.webp": {
   "sha": "25cabc4c1c0c5d42",
   "taytto": 0.188,
   "reuna": 0
+ },
+ "pariisi-metron-sisaankaynti-v2-kk.webp": {
+  "sha": "7b457336627a6756",
+  "taytto": 0.332,
+  "reuna": 0.0
  },
  "pariisi-metron-sisaankaynti-v2.webp": {
   "sha": "1a6b933a4778821d",
@@ -1319,6 +1349,11 @@
   "taytto": 0.58,
   "reuna": 0
  },
+ "pariisi-notre-dame-kk.webp": {
+  "sha": "eeb5e8f99243663c",
+  "taytto": 0.189,
+  "reuna": 0.0
+ },
  "pariisi-notre-dame.webp": {
   "sha": "9fc7fb79fc416513",
   "taytto": 0.19,
@@ -1329,15 +1364,30 @@
   "taytto": 0.511,
   "reuna": 0
  },
+ "pariisi-orsayn-taidemuseo-kk.webp": {
+  "sha": "317269a88f365ed8",
+  "taytto": 0.358,
+  "reuna": 0.0
+ },
  "pariisi-orsayn-taidemuseo.webp": {
   "sha": "ef4fac586f91f149",
   "taytto": 0.359,
   "reuna": 0
  },
+ "pariisi-palais-garnier-kk.webp": {
+  "sha": "83e66084598fc308",
+  "taytto": 0.298,
+  "reuna": 0.0
+ },
  "pariisi-palais-garnier.webp": {
   "sha": "a443ea465b4d64e6",
   "taytto": 0.299,
   "reuna": 0
+ },
+ "pariisi-pantheon-kk.webp": {
+  "sha": "4bec0c9bc6da82a7",
+  "taytto": 0.192,
+  "reuna": 0.0
  },
  "pariisi-pantheon.webp": {
   "sha": "c80bc53594fce6c7",
@@ -1364,15 +1414,30 @@
   "taytto": 0.619,
   "reuna": 0
  },
+ "pariisi-place-des-vosges-kk.webp": {
+  "sha": "ccfa1692723b845e",
+  "taytto": 0.28,
+  "reuna": 0.0
+ },
  "pariisi-place-des-vosges.webp": {
   "sha": "1478bb2410ac5ac0",
   "taytto": 0.281,
   "reuna": 0
  },
+ "pariisi-riemukaari-kk.webp": {
+  "sha": "dd2cb31decaa978e",
+  "taytto": 0.281,
+  "reuna": 0.0
+ },
  "pariisi-riemukaari.webp": {
   "sha": "29408bce451e3856",
   "taytto": 0.282,
   "reuna": 0
+ },
+ "pariisi-sacre-coeur-kk.webp": {
+  "sha": "9fb29e1767dd3610",
+  "taytto": 0.185,
+  "reuna": 0.0
  },
  "pariisi-sacre-coeur.webp": {
   "sha": "929c8282c601e5fb",
@@ -1398,6 +1463,11 @@
   "sha": "0d81142c5308284a",
   "taytto": 0.564,
   "reuna": 0
+ },
+ "pariisi-tuileries-kk.webp": {
+  "sha": "2beee2ff3f97003e",
+  "taytto": 0.129,
+  "reuna": 0.0
  },
  "pariisi-tuileries.webp": {
   "sha": "14bdc59164679bbb",

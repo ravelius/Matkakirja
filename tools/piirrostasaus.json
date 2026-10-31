@@ -1,0 +1,19 @@
+{
+  "kuvaus": "Kohdekartan piirrosten yhteinen tavoite (tools/piirrostasaus.py). Omistaja 31.10.2026: 09.27 kontrasti puoliväliin, 09.31 kaikki samalla kontrastilla, 09.33 sama musta- ja valkopiste, keskikontrasti yhteneväksi, saturaatiota alas tarvittaessa, 09.34 helppo monistaa kaikkiin kaupunkeihin. Arvot = Pariisin 14 kohdekartan piirroksen mediaani 09.27:n puolivälin näköisinä (kalibrointi Karttaseppä 31.10.). Musteen luminanssi 0–1: musta = 2. persentiili, valko = 98., keski = mediaani; kroma = keskimääräinen max−min. Kylläisyys: yli tavoitteen ei saa jäädä (alas aina); alle saa jäädä kroma_ali verran, kun nosto osuu kattoon (esim. Pariisin metro: musta ja vihreä muste, nosto ×2 jo katossa).",
+  "tavoite": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24,
+    "gamma_min": 0.45,
+    "gamma_max": 2.2,
+    "kylläisyys_katto": 2.0
+  },
+  "toleranssi": {
+    "musta": 0.03,
+    "valko": 0.03,
+    "keski": 0.03,
+    "kroma_yli": 0.03,
+    "kroma_ali": 0.08
+  }
+}
