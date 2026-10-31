@@ -27,6 +27,6 @@ Päivitetty: 31.10.2026 klo 22.3x (Päätoimittaja local_5df52e10): TILINVAIHTO 
 | Postivahti | local_afae44f0-722b-4541-a3b8-30ca4f76543b | /Users/Shared/Claude/Matkakirja-posti | Sonnet 5.5, medium | mittarit, hälytykset, roolien nollaukset |
 | Asemataulu | local_54e2130a-2e0b-4bf3-8301-57448d1e48a5 | /Users/Shared/Claude/Matkakirja-asemataulu | Sonnet 5.5, low | Asemataulun vienti (auto-tila) |
 
-Asemataulu (tämän tilin taulu): https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix
+Asemataulu (tämän tilin taulu): https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm
 
 Vastuualueet tarkemmin: docs/vastuukartta.md (repossa).

@@ -63,7 +63,7 @@ Korvattu 14.10.: Postivahti lähettää kaikkien roolien aloitusviestit ja RC:n 
 `syke.py` lukee `lista/talo/katsoja.json`-kopiota. Aja `ArtifactData list` (collection talo, out_dir lista) AINA ennen `syke.py`:tä, muuten kopio vanhenee ja syke näyttää VANHA vaikka sivu on auki (vika 12.32–14.41: vienti jäi väliin). Aseta myös roolit.json:n ts ennen vientiä.
 
 ## Uusi rooli 11.10. 18.30: Äänittäjä (Sonnet 5.5, high)
-Session local_f8fe7e20-4700-42e5-91a0-f1227310dc0f, checkout /Users/Shared/Claude/Matkakirja-aanittaja (musiikki ja äänet). Kierroksella: get_usage(id) roolina 13, roolit.json-riviksi malli Sonnet, hälytysrajat kuten muilla. Rooleja nyt 13 (PT + 12 muuta).
+Rooli levossa, ei sessiota tällä tilillä (id osoitekirjasta); checkout /Users/Shared/Claude/Matkakirja-aanittaja (musiikki ja äänet). Kierroksella: get_usage(id) roolina 13, roolit.json-riviksi malli Sonnet, hälytysrajat kuten muilla. Rooleja nyt 13 (PT + 12 muuta).
 
 ## Omistajan vahvistus 14.10. 22.4x (chatissa): PT:n pyynnöt 22.20 ja 22.34
 - TF-ketju: joka kierroksella lue uusin `/Users/Shared/Claude/julkaisija-tyokalut/tf*-ketju.log`. Jos SISÄINEN/ULKOINEN-rivi on uusi eikä talo/eteneminen tai PT ole saanut sitä → rivi PT:lle ja Keskustelukanavalle (local_37f7c945-e1a0-4638-90b8-93c389a36fbe): "TF N sisäisillä klo HH.MM".
