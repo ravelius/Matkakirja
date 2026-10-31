@@ -49,3 +49,10 @@ wt/proto-pelikoodari-lod-216 (pelikoodari/tausta-lod-216).
 - **PT:** LOD-erä 06fed34e2 menee NS:lle junaan 216, kun mittausajo on ok (Kesken-kohta 3).
 - **JU 20.45:** valo-k1:n paketit ovat ämpärissä PT:n kuittauksella (osasarja-v6, rakennukset-v88, muurikate-v32, tausta-v86 ja tausta-v87; tarkistettu
   SHA256SUMSia vasten). Tarkistettu klo 20.46, kaikki palauttavat 200. Valo-k1-216:n esikatselupari voidaan ajaa heti (Kesken-kohta 2).
+
+## LISÄYS 2, 20.5x (PT, kohta 2: VS:n löydös) – PK:n TEHTÄVÄ, ENSIMMÄISENÄ
+- **Keisari juoksee kk-tausta-1-2 lod0:n terassin SISÄLLÄ** (terassin yläpinta y 0,70, laji 16; c3:n b-12/b-13, osumat-rivit:
+  lokit/esikatselu-20261031-202240/unity.log). Selvitä, onko vika reittiverkossa (JuoksuPalatsiVerkko: kulkupinta ja korkeus terassin kohdalla,
+  pohja kk-pohja-v1d-pk8 ja profiilit) vai terassin törmäyskopiossa tai peittokartan maanpinnassa (MaanPinta, avoimet-sijoitus.json, rakennusten
+  -tormays.glb), ja korjaa se. Kuvapari PT:lle (ennen ja jälkeen samasta kohdasta, skenaario c3/sk-c3.txt b-11…b-14).
+- LAV korjaa terassin materiaalin, turkoosin palkkivyön ja puuttuvan katon; ne eivät ole PK:n työtä.
