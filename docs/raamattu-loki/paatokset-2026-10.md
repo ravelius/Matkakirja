@@ -3392,3 +3392,7 @@ Omistaja (KK:n kortti, sanatarkasti): 'Tehdäänkö kontekstivahdille rivi, jonk
 ## TILINVAIHTO 31.10.2026 klo 22.3x (31.10.2026 klo 22.36)
 
 Päätililtä (org f04011ee, viikko 91 %) tilille org b408744a (tili c01e5d1e, vvi@vvi.fi). Vanhan tilin sessiot eivät näy tällä tilillä, joten nollaus samoina sessioina ei ollut mahdollinen: luotiin uudet KK (local_37f7c945), JU, NS, KS, VS, PK, NUI, LAV, Postivahti ja Asemataulu; PT local_5df52e10. Levossa olevat roolit merkitty osoitekirjaan ilman sessiota. Asemataulu: Qo5w6Wk4JSYRwYbyf2fJrm (tämän tilin vanha taulu päivitetty). Luovutus-PR:t 5750–5757 yhdistetty, kotikansiot mainiin (ohitettu posti, siirtoseppa, aanittaja, laitetestaaja).
+
+## ASEMATAULU: EI 5 MIN PÄIVITYSTÄ ILMAN BOOSTIA (31.10.2026 klo 22.51)
+
+OMISTAJAN PÄÄTÖS 31.10.2026 klo 22.49 (KK:n välittämä): "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä. Nyt se ei ole päällä". KK huomasi, että linja oli liukunut 14.10. klo 23.39 päätöksestä ("muulloin kierros A ja viennit tauolla"): 15.10. pysyvä A-cron ajoi */5 aina. PT:n toteutus: Asemataululla ei pysyvää cronia; A */5 luodaan vain Boostin ajaksi Postivahdin herätyksestä (KIERROS.md lukee talo/boostin) ja poistetaan, kun Boost päättyy; ilman Boostia sessiot kirjoittavat omat dokumenttinsa suoraan tauluun ja PT voi pyytää yksittäisen kierroksen. Muutettu: docs/moduulit/asemataulu.md luvut 0 ja 8, ASEMATAULU-ROOLI.md, Raamattu 7.39, docs/tilinvaihto.md.
