@@ -1414,6 +1414,16 @@
   "taytto": 0.167,
   "reuna": 0
  },
+ "dublin-nelsonin-pylvas-kk.webp": {
+  "sha": "71f734f42af69c22",
+  "taytto": 0.095,
+  "reuna": 0.0
+ },
+ "dublin-nelsonin-pylvas.webp": {
+  "sha": "8a1c55a0b911f089",
+  "taytto": 0.095,
+  "reuna": 0.0
+ },
  "dublin-patrickin-katedraali-kk.webp": {
   "sha": "bc9f7c119308bd24",
   "taytto": 0.223,
@@ -1849,6 +1859,16 @@
   "taytto": 0.33,
   "reuna": 0
  },
+ "helsinki-sibeliuksen-puisto-kk.webp": {
+  "sha": "86f3460e73fad1fc",
+  "taytto": 0.409,
+  "reuna": 0.0
+ },
+ "helsinki-sibeliuksen-puisto.webp": {
+  "sha": "4b2c955bd09149bc",
+  "taytto": 0.409,
+  "reuna": 0.0
+ },
  "helsinki-suomenlinna-kk.webp": {
   "sha": "3aa6eed8f07e1154",
   "taytto": 0.316,
@@ -2124,6 +2144,16 @@
   "taytto": 0.145,
   "reuna": 0
  },
+ "istanbul-pyhien-apostolien-kirkko-kk.webp": {
+  "sha": "c723ea49892118be",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
+ "istanbul-pyhien-apostolien-kirkko.webp": {
+  "sha": "91daf32b89981bd9",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
  "istanbul-sininen-moskeija-kk.webp": {
   "sha": "1382a76843aa0e68",
   "taytto": 0.102,
@@ -2163,6 +2193,16 @@
   "sha": "4ca603a504b25a70",
   "taytto": 0.229,
   "reuna": 0
+ },
+ "istanbul-suuri-palatsi-kk.webp": {
+  "sha": "b10aff2464c11c34",
+  "taytto": 0.309,
+  "reuna": 0.0
+ },
+ "istanbul-suuri-palatsi.webp": {
+  "sha": "9f1073e79b8063e5",
+  "taytto": 0.309,
+  "reuna": 0.0
  },
  "istanbul-topkapin-palatsi-kk.webp": {
   "sha": "9680d4f221213835",
@@ -3454,6 +3494,26 @@
   "taytto": 0.332,
   "reuna": 0.0
  },
+ "lontoo-vanha-westminsterin-palatsi-kk.webp": {
+  "sha": "c6db6a2a54df201a",
+  "taytto": 0.304,
+  "reuna": 0.0
+ },
+ "lontoo-vanha-westminsterin-palatsi.webp": {
+  "sha": "7060d464cf3af6f8",
+  "taytto": 0.304,
+  "reuna": 0.0
+ },
+ "lontoo-whitehallin-palatsi-kk.webp": {
+  "sha": "efd5ec21402634fc",
+  "taytto": 0.265,
+  "reuna": 0.0
+ },
+ "lontoo-whitehallin-palatsi.webp": {
+  "sha": "9f89ccd15e588f54",
+  "taytto": 0.265,
+  "reuna": 0.0
+ },
  "luxemburg-adolphe-silta-kk.webp": {
   "sha": "feecec40138ebefc",
   "taytto": 0.322,
@@ -4394,6 +4454,16 @@
   "taytto": 0.118,
   "reuna": 0
  },
+ "pariisi-galerie-des-machines-kk.webp": {
+  "sha": "3af8a69c48592fc2",
+  "taytto": 0.252,
+  "reuna": 0.0
+ },
+ "pariisi-galerie-des-machines.webp": {
+  "sha": "fb31c864fdc53c40",
+  "taytto": 0.252,
+  "reuna": 0.0
+ },
  "pariisi-impressionistit.webp": {
   "sha": "f6e08550529d8e3f",
   "taytto": 0.902,
@@ -4413,6 +4483,16 @@
   "sha": "b64e8bfc19a8a46e",
   "taytto": 0.519,
   "reuna": 0
+ },
+ "pariisi-les-hallesin-hallit-kk.webp": {
+  "sha": "9327d31f058d0bc0",
+  "taytto": 0.263,
+  "reuna": 0.0
+ },
+ "pariisi-les-hallesin-hallit.webp": {
+  "sha": "4ba2b5ec9a3d8bd8",
+  "taytto": 0.263,
+  "reuna": 0.0
  },
  "pariisi-louvre-kk.webp": {
   "sha": "9b90caa581b0af16",
@@ -4558,6 +4638,16 @@
   "sha": "7513a0eca1310309",
   "taytto": 0.691,
   "reuna": 0
+ },
+ "pariisi-trocaderon-palatsi-kk.webp": {
+  "sha": "a3dc292304538607",
+  "taytto": 0.123,
+  "reuna": 0.0
+ },
+ "pariisi-trocaderon-palatsi.webp": {
+  "sha": "b5ffa9e38dd77eac",
+  "taytto": 0.123,
+  "reuna": 0.0
  },
  "pariisi-tuileriain-rauniot-v2.webp": {
   "sha": "0d81142c5308284a",
@@ -5052,6 +5142,16 @@
  "rooma-forum-romanum-vari2-kk.webp": {
   "sha": "1e355ba817c62d47",
   "taytto": 0.47,
+  "reuna": 0.0
+ },
+ "rooma-jupiterin-temppeli-kk.webp": {
+  "sha": "506b2465e45ee58d",
+  "taytto": 0.416,
+  "reuna": 0.0
+ },
+ "rooma-jupiterin-temppeli.webp": {
+  "sha": "bf9b6e9e9db2c05a",
+  "taytto": 0.416,
   "reuna": 0.0
  },
  "rooma-kolikko-olan-yli.webp": {
@@ -6483,6 +6583,16 @@
   "sha": "c77557f36f2825fb",
   "taytto": 0.196,
   "reuna": 0
+ },
+ "varsova-saksin-palatsi-kk.webp": {
+  "sha": "1dc32f8affbd5ac9",
+  "taytto": 0.146,
+  "reuna": 0.0
+ },
+ "varsova-saksin-palatsi.webp": {
+  "sha": "58d355098a845117",
+  "taytto": 0.146,
+  "reuna": 0.0
  },
  "varsova-vanhankaupungin-tori-kk.webp": {
   "sha": "b9186e0ced74c727",

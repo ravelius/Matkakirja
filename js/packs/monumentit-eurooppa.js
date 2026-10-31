@@ -36,6 +36,36 @@ const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => 
 });
 
 /*
+ * KADONNUT IHME OMIN TEKSTEIN (omistaja 31.10.2026 klo 12.49: 43 kadonnutta ihmettä Euroopan kaupunkien kartoille; PT
+ * hyväksyi tekstit erittäin). Kuten kohde(), mutta kysymykset, korostukset ja ihmekortin lyhyt/selite/lähde ovat
+ * kohteen omia (malli Tuileries'n palatsi, fokuskohteet-fra.js). Sama nimi on kaupungin kohdekartalla, joten
+ * ihmetähti ja kortti osuvat nimellä (matkakirjanIhme). Generoitu: proto-3d/_tyo/karttaseppa/ihmeet-kytke.py.
+ */
+const ihmeKohde = ({
+  id, nimi, nimio, kysymykset, korostukset, nappi, laudat, teksti, lahde, kuva, lyhyt, selite, ihmeLahde, url,
+}) => ({
+  id: `hahmotelma-${id}`,
+  nimi,
+  ...(nimio ? { nimio } : {}),
+  tyyppi: 'historia',
+  lahi: true,
+  kysymykset,
+  korostukset,
+  nappi,
+  laudat,
+  teksti,
+  lahde,
+  ihme: {
+    osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${kuva}`,
+    kadonnut: true,
+    lyhyt,
+    selite,
+    lahde: ihmeLahde,
+    url,
+  },
+});
+
+/*
  * RAPPEUTUNUT KOHDE (kadonnut: false) — paikka on yhä olemassa
  * raunioina/muuttuneena, joten kartalla säilyy kohteen oma nykytila-
  * valokuva (Commonsista) ja "Koe ihme" -nappi avaa Codexin loistoaika-
@@ -70,7 +100,101 @@ const rappeutunutKohde = ({
 });
 
 export const EUROOPAN_KADONNEET = {
-  FRA: [kohde({
+  FRA: [
+    ihmeKohde({
+      id: 'trocadero',
+      nimi: 'Trocadéron palatsi',
+      nimio: 'Trocadéro',
+      kysymykset: ['Mitä Trocadéron palatsista jäi pystyyn?', 'Miksi palatsi purettiin 1935?'],
+      korostukset: ['maailmannäyttely|maailmannäyttelyä', 'Chaillot\'n palatsi|Chaillot\'n palatsin'],
+      nappi: 'Näyttelypalatsi, jota ei tehty kestämään',
+      laudat: { maailmankartta: { x: 5909.6, y: 1439.4 }, europe: { x: 255.1, y: 608.5 } },
+      teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 Pariisin maailmannäyttelyä varten Seinen '
+        + 'pohjoisrannalle, ja sen suunnittelivat Gabriel Davioud ja Jules Bourdais. '
+        + 'Mauri-bysanttilaistyylisessä palatsissa oli kaksi yli 80 metriä korkeaa tornia ja kaksi kaarevaa '
+        + 'siipeä, jotka venyttivät julkisivun noin 430 metriin. Keskellä oli 4 600 paikan sali, johon '
+        + 'vihittiin Cavaillé-Collin urut. Työt kestivät marraskuusta 1876 kesäkuuhun 1878, ja kustannukset '
+        + 'nousivat noin 12 miljoonaan kultafrangiin; palatsia ei ollut tarkoitettu kestämään näyttelyn '
+        + 'jälkeen. Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
+        + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadérota, sillä sen rakennustyöt '
+        + 'alkoivat vasta 1876.',
+      lahde: 'en-Wikipedia "Palais du Trocadéro", johdanto ja osiot "History" ja "Architecture"; "Palais de '
+        + 'Chaillot", osio "Design" ja "History" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-trocadero-loistoaika.jpg',
+      lyhyt: 'Kesäpukuiset pariisilaisperheet seisovat kaskadin reunalla ihailemassa palatsin kahta tornia, ja '
+        + 'sisällä 4 600 paikan salissa soivat vastavihityt urut; viisikymmentäseitsemän vuotta myöhemmin '
+        + 'keskiosa puretaan.',
+      selite: 'Vuonna 1878 näyttelyvieraat seisovat palatsin edessä kaskadin ja puutarhan yläpuolella ja '
+        + 'katsovat Seinen yli näyttelyalueelle, ja vieressä kohoavat kaksi korkeaa tornia. Sisällä '
+        + 'puoliympyrän muotoisessa salissa koko yleisö istuu 4 600 paikalla Cavaillé-Collin uruille, jotka '
+        + 'on juuri vihitty. Vieraiden mielestä palatsi on lähinnä jännittävä. Vuonna 1935 keskisali ja '
+        + 'tornit puretaan, ja jäljelle jäävät siivet uuden Chaillot\'n palatsin sisään.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1878). Faktat: en-Wikipedia '
+        + '"Palais du Trocadéro", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Palais_du_Trocad%C3%A9ro',
+    }),
+    ihmeKohde({
+      id: 'galerie-des-machines',
+      nimi: 'Galerie des Machines',
+      nimio: 'Konehalli',
+      kysymykset: ['Kuinka suuri maailmannäyttelyn konehalli oli?', 'Miksi halli purettiin?'],
+      korostukset: ['Eiffel-torni|Eiffel-torni', 'Ferdinand Dutert|Ferdinand Duterin'],
+      nappi: 'Halli, johon olisi mahtunut 15 000 ratsumiestä',
+      laudat: { maailmankartta: { x: 5910.0, y: 1439.8 }, europe: { x: 255.4, y: 608.8 } },
+      teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
+        + 'samalla kentällä kuin Eiffel-torni. Insinööri Victor Contaminin ja arkkitehti Ferdinand Duterin '
+        + 'suunnittelema halli oli 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä ollut yhtään '
+        + 'tukipilaria. Kaarten kolminivelinen rakenne oli lainattu siltasuunnittelusta. Vuoden 1889 arvion '
+        + 'mukaan sinne olisi mahtunut 15 000 hevosta ja 15 000 ratsastajaa, vaikka sitä ei koskaan '
+        + 'kokeiltu. Vieraita kuljettivat hallissa liikkuvat sillat. Halli purettiin 1909–1910 näkymän '
+        + 'avaamiseksi Champ-de-Marsille. Isoisä ei ehtinyt nähdä sitä: halli valmistui 16 vuotta hänen '
+        + 'matkansa jälkeen.',
+      lahde: 'en-Wikipedia "Galerie des machines", osiot "Construction", "Usage" ja "Destruction"; '
+        + 'fr-Wikipedia "Galerie des machines", osio "Historique" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-galerie-des-machines-loistoaika.jpg',
+      lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka teräskaari '
+        + 'nousee yli hallin; reilut kaksikymmentä vuotta myöhemmin halli puretaan.',
+      selite: 'Vuonna 1889 näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka '
+        + 'teräskaari kaartuu hänen ylitseen 115 metrin leveyden yli ilman ainuttakaan sisäpilaria. Alla '
+        + 'höyrykoneet ja sähkögeneraattorit hyrisevät rivi rivin perään, ja ihmiset kulkevat koneiden '
+        + 'välissä hattu kädessä. Vieraalle halli on tulevaisuuden temppeli, kunnes seuraava näyttely vie '
+        + 'huomion. Kaupunki päättää 1909 purkaa hallin ja avata näkymän Champ-de-Marsille; Orsayn museossa '
+        + 'on siitä 1:200-pienoismalli.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1889). Faktat: en-Wikipedia '
+        + '"Galerie des machines", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Galerie_des_machines',
+    }),
+    ihmeKohde({
+      id: 'les-halles',
+      nimi: 'Les Hallesin hallit',
+      nimio: 'Les Halles',
+      kysymykset: ['Miksi Les Halles tunnettiin nimellä Pariisin vatsa?', 'Mitä hallien tilalla on nykyään?'],
+      korostukset: ['Victor Baltard|Victor Baltardin', 'Émile Zola|Émile Zolan'],
+      nappi: 'Pariisin vatsa, jonka tilalle jäi kuoppa',
+      laudat: { maailmankartta: { x: 5911.5, y: 1439.4 }, europe: { x: 256.2, y: 608.5 } },
+      teksti: 'Les Halles oli Pariisin keskeinen ruokatori, jonka historia ulottuu 1000-luvulle; Filip II '
+        + 'Augustus otti sen haltuunsa 1183 ja rakennutti kaksi hallia kankaille. Victor Baltardin '
+        + 'suunnittelemat lasi- ja rautapaviljongit avattiin vaiheittain 1857–1874, joten isoisän käydessä '
+        + '1873 hallit olivat lähes valmiit. Émile Zolan romaani Pariisin vatsa (1873) sijoittuu näille '
+        + 'markkinoille ja antoi torille lempinimen. Tukkukauppa muutti Rungisiin 1969, ja hallit purettiin '
+        + '1971–1973. Paikalle jäi niin valtava työmaa, että sitä kutsuttiin nimellä "Les Hallesin reikä". '
+        + 'Yksi paviljonki pystytettiin uudelleen Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle '
+        + '1979.',
+      lahde: 'en-Wikipedia "Les Halles", osiot "History" (The market of the Little Fields; The wholesale '
+        + 'market; Major conversion); fr-Wikipedia "Halles de Paris", osio "Historique" (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-les-halles-loistoaika.jpg',
+      lyhyt: 'Aamuyöllä torimummot huutavat hintoja lasihallien katon alla vihannesvuorten keskellä; sata '
+        + 'vuotta myöhemmin hallit puretaan.',
+      selite: 'Vuonna 1873 aamuyöllä kärryt kolisevat täysinä kaalia, kalaa ja juustoa lasihallien väliselle '
+        + 'kadulle, ja torimummot huutavat hintoja toisiaan kovempaa. Rautapilarit kantavat lasikattoa, '
+        + 'jonka läpi aamuvalo hiipii hallin vihannesvuorten päälle. Ensimmäiset kaupat tehdään lyhtyjen '
+        + 'valossa ennen auringonnousua. Sata vuotta myöhemmin hallit puretaan ja tilalle jää suuri kuoppa, '
+        + 'josta kasvaa ostoskeskus.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+        + 'Faktat: en-Wikipedia "Les Halles" ja fr-Wikipedia "Halles de Paris", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Les_Halles',
+    }),kohde({
     id: 'saint-cloud', nimi: 'Saint-Cloud’n linna',
     nimio: 'Saint-Cloud',
     nappi: 'Aurinkokuninkaan veljen palatsi Pariisin länsipuolella',
@@ -105,6 +229,40 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   ITA: [
+    ihmeKohde({
+      id: 'capitolium',
+      nimi: 'Jupiterin temppeli',
+      nimio: 'Capitolium',
+      kysymykset: ['Minne Rooman voitonkulkueet päättyivät?', 'Mitä temppelistä on jäljellä?'],
+      korostukset: ['Jupiter Optimus Maximus|Jupiter Optimus Maximuksen', 'Domitianus|Domitianuksen'],
+      nappi: 'Temppeli, johon Rooman kenraalit nousivat voitonkulkueessa',
+      laudat: { maailmankartta: { x: 6249.4, y: 1727.9 }, europe: { x: 450.8, y: 791.8 } },
+      teksti: 'Jupiter Optimus Maximuksen temppeli kohosi Capitolium-kukkulalla, ja perinteen mukaan konsuli '
+        + 'Marcus Horatius Pulvillus vihki sen 13. syyskuuta 509 eaa. Sen kolmessa pyhäkkösalissa olivat '
+        + 'Jupiter keskellä, Juno vasemmalla ja Minerva oikealla. Voittokulkueet päättyivät tänne: '
+        + 'voittoisa kenraali nousi kukkulalle ja uhrasi kaksi valkoista härkää. Temppeli paloi kolme '
+        + 'kertaa, 83 eaa. sekä vuosina 69 ja 80, ja se rakennettiin joka kerta uudelleen, viimeksi '
+        + 'Domitianuksen aikana 82. Pakanalliset temppelit suljettiin 392, ja vandaalit veivät sen kullatut '
+        + 'tiilet 455. Poggio Bracciolini näki hyvin säilyneitä raunioita vielä 1447, mutta 1500-luvulla '
+        + 'paikalle rakennettiin Palazzo Caffarelli. Temppelin perustuksia näkyy nykyään Capitolinen '
+        + 'museoissa.',
+      lahde: 'en-Wikipedia "Temple of Jupiter Optimus Maximus", osiot "History", "Remains" ja "Area '
+        + 'Capitolina"; voitonkulkueen päätepiste: en-Wikipedia "Roman triumph", johdanto ja osio "Vir '
+        + 'triumphalis" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-capitolium-loistoaika.jpg',
+      lyhyt: 'Purppuratooga päällään voittoisa kenraali nousee temppelin portaita kahden valkoisen härän '
+        + 'perässä ja kansa täyttää kukkulan; lähes kolme vuosisataa myöhemmin pakanalliset temppelit '
+        + 'suljetaan.',
+      selite: 'Noin vuonna 100 voittoisa kenraali nousee Capitoliumin portaita purppuranpunaisessa, kullalla '
+        + 'kirjaillussa togassaan kaksi valkoista härkää edellään, ja kulkueen perässä marssivat sotilaat '
+        + 'ja vangit. Kukkulan rinteet ovat täynnä katsojia, ja temppelin kullatut tiilet kimaltavat '
+        + 'Domitianuksen rakennuttamassa julkisivussa. Vuonna 392 pakanalliset temppelit suljetaan, 455 '
+        + 'vandaalit riisuvat kullatut tiilet, ja lopulta kukkulalle jää perustukset, joiden päälle '
+        + 'rakennetaan palatsi.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 100). Faktat: '
+        + 'en-Wikipedia "Temple of Jupiter Optimus Maximus" ja "Roman triumph", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Temple_of_Jupiter_Optimus_Maximus',
+    }),
     kohde({
       id: 'circus-maximus', nimi: 'Circus Maximus',
       nappi: 'Rooman valtava vaunukilparata täyden katsomon aikana',
@@ -449,7 +607,37 @@ export const EUROOPAN_KADONNEET = {
       kuva: 'ihme-industripalatset-stockholm-1897-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/General_Art_and_Industrial_Exposition_of_Stockholm',
     }),
   ],
-  IRL: [kohde({
+  IRL: [
+    ihmeKohde({
+      id: 'nelsonin-pylvas',
+      nimi: 'Nelsonin pylväs',
+      kysymykset: ['Milloin ja miten Nelsonin pylväs tuhoutui?', 'Mikä seisoo pylvään paikalla nyt?'],
+      korostukset: ['Horatio Nelson|Horatio Nelsonin', 'Dublinin Spire|Dublinin Spire'],
+      nappi: 'Amiraali, jonka pylväs räjäytettiin 1966',
+      laudat: { maailmankartta: { x: 5624.7, y: 1241.4 }, europe: { x: 91.0, y: 490.5 } },
+      teksti: 'Nelsonin pylväs oli graniittipylväs Dublinin Sackville Streetin, nykyisen O\'Connell Streetin, '
+        + 'keskellä, ja sen huipulla seisoi amiraali Horatio Nelsonin patsas. Dublin päätti muistaa '
+        + 'Nelsonia Trafalgarin voiton jälkeen 1805; kulmakivi laskettiin 15. helmikuuta 1808, ja pylväs '
+        + 'valmistui 1809. Rahaa ei kertynyt tarpeeksi, joten William Wilkinsin suunnitelmaa '
+        + 'yksinkertaistettiin, ja patsaineen muistomerkki oli noin 41 metriä korkea. Huipulle johti 168 '
+        + 'askelman kierreportaat, ja tasanteelta aukeni näkymä yli kaupungin ja lahden. Maaliskuun 8. '
+        + 'päivänä 1966 räjähdys tuhosi yläosan ja patsaan, eikä kukaan kuollut; armeija räjäytti jäljelle '
+        + 'jääneen tyngän 14. maaliskuuta. Paikalla seisoo nykyään vuonna 2003 valmistunut Dublinin Spire.',
+      lahde: 'en-Wikipedia "Nelson\'s Pillar", osiot "Inception, design and construction", "Opening", "History, '
+        + '1809–1966", "Destruction" ja "Aftermath" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-nelsonin-pylvas-loistoaika.jpg',
+      lyhyt: 'Turistit kiipeävät kierreportaita pylvään huipulle ja katsovat Dublinin kattojen yli lahdelle '
+        + 'asti; yli kuusikymmentä vuotta myöhemmin pylväs räjähtää.',
+      selite: 'Noin vuonna 1900 matkailijat kiipeävät kierreportaita ylös pylvään huipulle, jossa tasanteelta '
+        + 'aukeaa näkymä Dublinin kattojen, maaseudun ja lahden yli. Alla Sackville Streetillä kulkevat '
+        + 'hevosvaunut ja ratikat, ja pylväs on kaupungin keskus, josta kaikki mittaavat etäisyytensä. '
+        + 'James Joyce asettaa sen ympärille romaaninsa Ulysses (1922) ratikkapysäkin. Maaliskuussa 1966 '
+        + 'räjähdys tuhoaa pylvään yläosan ja patsaan, jäljelle jäänyt tynkä räjäytetään, ja paikalle '
+        + 'nousee Dublinin Spire.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1900). Faktat: '
+        + 'en-Wikipedia "Nelson\'s Pillar", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Nelson%27s_Pillar',
+    }),kohde({
     id: 'dublinin-keskiaikainen-linna', nimi: 'Dublinin keskiaikainen linna',
     nimio: 'Dublin Castle',
     nappi: 'Englannin vallan nelitorninen linnoitus ennen vuoden 1684 paloa',
@@ -746,4 +934,171 @@ export const EUROOPAN_KADONNEET = {
     ihmeSelite: 'Orheiul Vechi kuvattuna keskiaikaisena linnakaupunkina ja luolaluostarina n. 1400-luvulla.',
     url: 'https://en.wikipedia.org/wiki/Old_Orhei',
   })],
+  GBR: [
+    ihmeKohde({
+      id: 'westminster-vanha',
+      nimi: 'Vanha Westminsterin palatsi',
+      nimio: 'Vanha Westminster',
+      kysymykset: ['Mikä sytytti vanhan parlamenttipalatsin palamaan 1834?', 'Mikä osa palatsista on yhä pystyssä?'],
+      korostukset: ['Westminster Hall|Westminster Hallin', 'lovipuu|lovipuiden'],
+      nappi: 'Parlamentti, joka paloi velkakeppien takia',
+      laudat: { maailmankartta: { x: 5829.2, y: 1324.4 }, europe: { x: 208.8, y: 539.2 } },
+      teksti: 'Vanha Westminsterin palatsi oli Englannin kuninkaiden pääasunto vuoteen 1512, ja parlamentti '
+        + 'kokoontui siellä jo 1200-luvulta. Edvard Tunnustaja rakennutti sen noin 1045–1050, ja vanhin '
+        + 'säilynyt osa, Westminster Hall, on Vilhelm II:n ajalta. Lokakuun 16. päivänä 1834 ylikuumentunut '
+        + 'uuni, jolla poltettiin valtiokonttorin lovipuiden eli kuittikeppien kasaa, sytytti Ylähuoneen '
+        + 'salin. Tuli tuhosi molemmat kamarit ja suurimman osan palatsista, mutta palomiehet ja tuulen '
+        + 'kääntyminen pelastivat Westminster Hallin. Maalari J. M. W. Turner katseli paloa ja maalasi '
+        + 'siitä useita tauluja. Tilalle nousi Charles Barryn suunnittelema uusi palatsi, jonka '
+        + 'rakennustyöt alkoivat 1840 ja kestivät noin 30 vuotta; sen kellotornia kutsutaan Big Beniksi.',
+      lahde: 'en-Wikipedia "Old Palace of Westminster" (johdanto, "History") ja "Palace of Westminster", osio '
+        + '"History > Fire and reconstruction" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-westminster-vanha-loistoaika.jpg',
+      lyhyt: 'Valtiokonttorin kirjuri leikkaa lovia kuittikeppiin Westminster Hallin varjossa; reilut '
+        + 'kolmekymmentä vuotta myöhemmin sen kaltaisten keppien kasa sytyttää koko palatsin.',
+      selite: 'Noin vuonna 1800 valtiokonttorin kirjuri istuu palatsin kyljessä ja leikkaa tarkkoja lovia '
+        + 'puiseen kuittikeppiin, joka kertoo, kuka on maksanut kuninkaalle ja paljonko. Samassa palatsissa '
+        + 'kokoontuvat parlamentti ja oikeusistuimet, ja käytävillä tungeksivat asianajajat, kirjurit ja '
+        + 'asiaansa odottavat. Veitsi narskuu kuivassa puussa, ja lastut putoavat kirjurin pöydän alle. '
+        + 'Lokakuussa 1834 vanhojen keppien kasa poltetaan uunissa, uuni ylikuumenee, ja palo vie '
+        + 'parlamentin kamarit; Westminster Hall pelastuu, ja sen viereen nousee uusi palatsi.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1800). Faktat: '
+        + 'en-Wikipedia "Old Palace of Westminster" ja "Palace of Westminster" (History > Fire and '
+        + 'reconstruction), tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Old_Palace_of_Westminster',
+    }),
+    ihmeKohde({
+      id: 'whitehall',
+      nimi: 'Whitehallin palatsi',
+      nimio: 'Whitehall',
+      kysymykset: ['Miten Euroopan suurin palatsi tuhoutui?', 'Mikä palatsista on yhä pystyssä?'],
+      korostukset: ['Inigo Jones|Inigo Jonesin', 'Banqueting House|Banqueting House'],
+      nappi: 'Palatsi, jonka tuhosi märkä pyykki',
+      laudat: { maailmankartta: { x: 5829.2, y: 1324.2 }, europe: { x: 208.8, y: 539.1 } },
+      teksti: 'Whitehallin palatsi oli Englannin kuninkaiden pääasunto Lontoossa vuodesta 1530 vuoteen 1698. '
+        + 'Henrik VIII otti paikan haltuunsa 1530, kun kardinaali Wolsey oli menettänyt asemansa. '
+        + 'Palatsissa oli yli 1 500 huonetta ja se peitti suurimmillaan noin 23 hehtaaria, joten aikoinaan '
+        + 'se oli Euroopan suurin. Juhlasali Banqueting House valmistui 1622 Inigo Jonesin suunnittelemana, '
+        + 'ja sen edessä mestattiin Kaarle I vuonna 1649. Tammikuun 4. päivänä 1698 palvelija ripusti '
+        + 'märkää pyykkiä hiilipannun viereen, ja syttynyt tuli tuhosi noin 15 tunnissa lähes kaikki asuin- '
+        + 'ja hallintorakennukset. Vain Banqueting House säilyi, eikä palatsia koskaan rakennettu '
+        + 'uudelleen. Paikalla on nykyään valtionhallinnon rakennuksia.',
+      lahde: 'en-Wikipedia "Palace of Whitehall", johdanto sekä osiot "History", "Destruction" ja "Present '
+        + 'day" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-whitehall-loistoaika.jpg',
+      lyhyt: 'Hovin pyykkäri kantaa puhtaita liinavaatteita pitkää galleriaa pitkin Kaarle I:n aikaan; reilut '
+        + 'kuusikymmentä vuotta myöhemmin palatsin tuhoaa palvelijan kuivattama märkä pyykki.',
+      selite: 'Kaarle I:n hovissa noin vuonna 1630 pyykkäri kiirehtii puhtaat liinavaatteet kainalossa pitkää '
+        + 'galleriaa pitkin, ohi kirjurien ja vartijoiden, kun toiset palvelijat kantavat pöytiä '
+        + 'juhlasaliin. Yli 1 500 huoneen ja pihojen sokkelo on pieni kaupunki, jossa jokaisella on '
+        + 'tehtävänsä ja jokainen tuntee hovin juonien hinnan. Pyykkäri ei vilkaise seiniä, sillä hänelle '
+        + 'ne ovat työpaikka eivätkä ihme. Tammikuun 4. päivänä 1698 palvelija ripustaa märkää pyykkiä '
+        + 'hiilipannun viereen, ja noin 15 tuntia kestävä palo vie lähes koko palatsin; jäljelle jää vain '
+        + 'Banqueting House, ainoa osa, jonka isoisäkin vielä näki.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1630). Faktat: '
+        + 'en-Wikipedia "Palace of Whitehall", osiot "History" ja "Destruction", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Palace_of_Whitehall',
+    }),
+  ],
+  TUR: [
+    ihmeKohde({
+      id: 'pyhat-apostolit',
+      nimi: 'Pyhien apostolien kirkko',
+      nimio: 'Apostolien kirkko',
+      kysymykset: ['Minkä kuuluisan kirkon esikuva Pyhien apostolien kirkko oli?', 'Mitä kirkon paikalla on nykyään?'],
+      korostukset: ['San Marcon basilika|San Marcon basilikan', 'Fatih-moskeija|Fatih-moskeijan'],
+      nappi: 'Kirkko, joka oli Venetsian esikuva',
+      laudat: { maailmankartta: { x: 6798.3, y: 1762.6 }, europe: { x: 767.0, y: 814.8 } },
+      teksti: 'Konstantinus Suuri aloitti Pyhien apostolien kirkon noin 330, mutta kuoli 337 ennen sen '
+        + 'valmistumista, ja hänen poikansa Konstantius II hautasi hänet kirkkoon. Justinianus rakennutti '
+        + 'paikalle uuden viisikupolisen ristikirkon, joka vihittiin 28. kesäkuuta 550; sen suunnittelivat '
+        + 'samat arkkitehdit kuin Hagia Sofian. Venetsian San Marcon basilikan uskotaan saaneen siitä '
+        + 'mallinsa. Kirkko oli Bysantin keisarien hautakirkko lähes seitsemän vuosisadan ajan Konstantinus '
+        + 'I:stä (337) Konstantinos VIII:aan (1028), ja siellä lepäsivät muun muassa Justinianus ja '
+        + 'Theodora. Ristiretkeläiset ryöstivät kirkon ja keisarien haudat 1204. Mehmed II purki '
+        + 'rappeutuneen kirkon 1461 ja rakennutti paikalle Fatih-moskeijan; nykyinen moskeija on '
+        + '1700-luvulta.',
+      lahde: 'en-Wikipedia "Church of the Holy Apostles", johdanto ja osiot "History", "Description" ja '
+        + '"Burials"; "Fatih Mosque", osio "History" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-pyhat-apostolit-loistoaika.jpg',
+      lyhyt: 'Pappi sytyttää kynttilät keisarien sarkofagien edessä viiden kupolin alla, ja hovivirkamiehet '
+        + 'seisovat jäykkinä; viisi vuosisataa myöhemmin kirkko puretaan.',
+      selite: 'Noin vuonna 950 pappi kulkee viiden kupolin alla kynttilä kädessä keisarien sarkofagien välissä, '
+        + 'ja hovivirkamiehet seisovat jäykkinä, koska keisarit ovat täällä kuolemassakin. Ristinmuotoisen '
+        + 'kirkon kupolit kohoavat jokaisen siiven ja risteyksen päälle; samaa mallia venetsialaiset '
+        + 'kopioivat vuosisadat myöhemmin San Marcon basilikaansa. Pappi ei tiedä, että ristiretkeläiset '
+        + 'ryöstävät nämä haudat vielä 1204. Mehmed II purkaa rappeutuneen kirkon noin 1461, ja paikalle '
+        + 'nousee Fatih-moskeija.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 950). Faktat: '
+        + 'en-Wikipedia "Church of the Holy Apostles", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Church_of_the_Holy_Apostles',
+    }),
+    ihmeKohde({
+      id: 'suuri-palatsi',
+      nimi: 'Konstantinopolin suuri palatsi',
+      nimio: 'Suuri palatsi',
+      kysymykset: ['Mitä palatsille tapahtui neljännessä ristiretkessä 1204?', 'Miksi palatsista on kaivettu esiin alle neljännes?'],
+      korostukset: ['Konstantinus Suuri|Konstantinus Suuri', 'neljäs ristiretki|neljännen ristiretken'],
+      nappi: 'Keisarien palatsi, jonka päällä on kaupunki',
+      laudat: { maailmankartta: { x: 6799.2, y: 1763.3 }, europe: { x: 767.6, y: 815.2 } },
+      teksti: 'Konstantinopolin suuri palatsi oli Bysantin keisarien pääasunto yli 700 vuotta, vuoteen 1081 '
+        + 'asti. Konstantinus Suuri suunnitteli sen 330, kun hän perusti kaupungin nykyisen Istanbulin '
+        + 'paikalle. Palatsi oli paviljonkien sarja kuudella terassilla Hippodromin ja meren välisessä '
+        + 'rinteessä, noin 16 hehtaarin alueella; siihen kuuluivat valtaistuinsali, polokenttä ja '
+        + 'merenrantapalatsi Bukoleon. Vuonna 1204 neljännen ristiretken sotilaat ryöstivät sen, ja Balduin '
+        + 'II myi katoista lyijyn. Keisarit hylkäsivät palatsin 1261 jälkeen, ja Mehmed II löysi sen '
+        + 'raunioina 1453. Alueesta on kaivettu esiin alle neljännes, koska suurin osa on moskeijan ja '
+        + 'muiden ottomaanikauden rakennusten alla.',
+      lahde: 'en-Wikipedia "Great Palace of Constantinople", johdanto sekä osiot "History", "Excavations" ja '
+        + '"Description"; "Sultan Ahmed Mosque", osio "History" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-suuri-palatsi-loistoaika.jpg',
+      lyhyt: 'Keisarin hovin nuoret miehet ajavat ratsain palatsin polokentällä, ja sama palatsi on reilut '
+        + 'kaksisataa vuotta myöhemmin ristiretkeläisten ryöstämä.',
+      selite: 'Noin vuonna 950 hovin nuoret miehet laukkaavat keisarin palatsin polokentällä, ja käytävä '
+        + 'yhdistää palatsin Hippodromin keisarinaitioon, josta kisoja seurataan. Rinteen terasseilla '
+        + 'paviljongit nousevat toistensa yläpuolelle meren rantaan asti, ja pääportti Chalke avautuu '
+        + 'Augustaion-aukiolle. Ratsastajat näyttävät pieniltä, sillä palatsin mittakaava kuuluu '
+        + 'keisarille, ei heille. Vuonna 1204 neljännen ristiretken sotilaat ryöstävät palatsin, 1261 '
+        + 'keisarit hylkäävät sen, ja jäljelle jää rinteen täyttävä rauniokenttä, jonka päälle kaupunki '
+        + 'rakentuu.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 950). Faktat: '
+        + 'en-Wikipedia "Great Palace of Constantinople", osiot "History" ja "Description", tarkistettu '
+        + '31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Great_Palace_of_Constantinople',
+    }),
+  ],
+  POL: [
+    ihmeKohde({
+      id: 'saksin-palatsi',
+      nimi: 'Saksin palatsi',
+      kysymykset: ['Missä palatsissa murrettiin Enigma?', 'Miten palatsi tuhoutui, ja mikä siitä on jäljellä?'],
+      korostukset: ['Augustus II Vahva|Augustus II Vahva', 'Enigma|Enigma'],
+      nappi: 'Palatsi, jossa Enigma murrettiin',
+      laudat: { maailmankartta: { x: 6533.7, y: 1291.3 }, europe: { x: 614.6, y: 519.7 } },
+      teksti: 'Saksin palatsi oli barokkipalatsi Varsovan keskustassa, jonka Puolan kuningas Augustus II Vahva '
+        + 'osti 1713 ja laajensi kuninkaalliseksi asunnoksi 1724 mennessä. Palatsin teatterisalissa '
+        + 'esitettiin näytelmiä jo 1716, kun Varsovassa ei ollut vielä teatteria. Venäjän armeija piti '
+        + 'palatsia hallussaan 1864–1915, joten isoisä näki sen 1873. Arkadin alle sijoitettiin 1925 '
+        + 'Tuntemattoman sotilaan hauta. Vuosina 1930–1937 palatsissa toimi salakirjoitustoimisto, jossa '
+        + 'Marian Rejewski, Jerzy Różycki ja Henryk Zygalski murtivat saksalaisen Enigma-koodin joulukuussa '
+        + '1932. Saksalaiset räjäyttivät palatsin joulukuun 1944 lopussa, ja vain osa arkadeista säilyi. '
+        + 'Jälleenrakennuksesta päätettiin laissa 2021.',
+      lahde: 'en-Wikipedia "Saxon Palace", osiot "A royal residence for the Saxon Kings…", "Interbellum: '
+        + 'Independence, War and Destruction" ja "Reconstruction plans"; pl-Wikipedia "Pałac Saski w '
+        + 'Warszawie", osio "Plany i przygotowania po 2018" (tila maaliskuussa 2026), tarkistettu '
+        + '31.10.2026.',
+      kuva: 'ihme-saksin-palatsi-loistoaika.jpg',
+      lyhyt: 'Hovin muusikot harjoittelevat palatsin teatterisalissa, ja ikkunasta näkyvät Saksin puutarhan '
+        + 'puut; yli kaksisataa vuotta myöhemmin saksalaiset räjäyttävät koko rakennuksen.',
+      selite: 'Noin vuonna 1730 palatsin teatterisalissa hovin muusikot ja näyttelijät harjoittelevat '
+        + 'iltaesitystä, ja palvelijat kantavat kynttilöitä paikoilleen. Kuningas Augustus II Vahva on '
+        + 'tehnyt entisestä Morsztynin palatsista kuninkaallisen asunnon, ja hovin väki tietää sen. Ikkunan '
+        + 'takana näkyvät palatsin puistot, ja kukaan ei arvaa, että tässä salissa salakirjoittajat istuvat '
+        + 'noin kaksisataa vuotta myöhemmin. Joulukuussa 1944 saksalaiset räjäyttävät palatsin, ja jäljelle '
+        + 'jää arkadin osa, jossa on Tuntemattoman sotilaan hauta.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1730). Faktat: '
+        + 'en-Wikipedia "Saxon Palace", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Saxon_Palace',
+    }),
+  ],
 };

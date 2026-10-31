@@ -526,6 +526,14 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 41.0335, etela: 40.9975, lansi: 28.958, ita: 29.024 },
     meri: 'maa',
+    // PYHIEN APOSTOLIEN KIRKON KAINALO (PT 31.10.2026, kadonneet ihmeet): kirkko (nyk. Fatihin moskeija, 41.0195,
+    // 28.9497) on rajauksen länsipuolella. Kainalo salmen avoveteen kuvan alaosaan, jossa ei ole kohteita.
+    kainalot: [
+      {
+        rajat: { pohjoinen: 41.0235, etela: 41.0155, lansi: 28.9425, ita: 28.9570 },
+        x: 44, y: 66, leveys: 14, suunta: '3 km länteen',
+      },
+    ],
   },
   lontoo: {
     // Hyde Parkin itälaidalta Tower Bridgelle, Regent's Parkin

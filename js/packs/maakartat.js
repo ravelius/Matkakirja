@@ -4312,6 +4312,12 @@ export const KAUPUNKIKARTAT = {
       + 'Üsküdar Aasian puolella ja Neitsyttorni omalla luodollaan. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-pyhat-apostolit
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Pyhien apostolien kirkko', lat: 41.0195, lon: 28.9497, nosto: 'hahmotelma-pyhat-apostolit' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-suuri-palatsi
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Konstantinopolin suuri palatsi', lat: 41.004, lon: 28.977, nosto: 'hahmotelma-suuri-palatsi' },
       /*
        * Suuresta basaarista ei ole suomenkielistä artikkelia; se jää
        * merkiksi. Sen katetut kujat piirtyvät kartalle tunnistettavana
@@ -5166,6 +5172,9 @@ export const KAUPUNKIKARTAT = {
       + 'ja se on 120 metriä korkea. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-nelsonin-pylvas
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Nelsonin pylväs', lat: 53.3498, lon: -6.2603, nosto: 'hahmotelma-nelsonin-pylvas' },
       /*
        * Dublinin linnasta ja Ha’penny-sillasta ei ole suomenkielistä
        * artikkelia; molemmat jäävät pelkiksi merkeiksi. Linna on
@@ -5268,6 +5277,15 @@ export const KAUPUNKIKARTAT = {
       + 'vihittiin 1919. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-trocadero
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Trocadéron palatsi', lat: 48.862, lon: 2.2885, nosto: 'hahmotelma-trocadero' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-galerie-des-machines
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Galerie des Machines', lat: 48.853, lon: 2.3, nosto: 'hahmotelma-galerie-des-machines' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-les-halles
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Les Hallesin hallit', lat: 48.8622, lon: 2.3447, nosto: 'hahmotelma-les-halles' },
       /*
        * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
        * Berliinin 10,2 km). Se on tietoinen poikkeus tiiviiseen
@@ -5952,6 +5970,12 @@ export const KAUPUNKIKARTAT = {
       + 'St Mary\'s -sairaalassa 1928 homeen tappavan bakteereja, ja siitä syntyi '
       + 'penisilliini. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-westminster-vanha
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, nosto: 'hahmotelma-westminster-vanha' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, nosto: 'hahmotelma-whitehall' },
       {
         nimi: 'Buckinghamin palatsi',
         lat: 51.5014,
@@ -6624,6 +6648,9 @@ export const KAUPUNKIKARTAT = {
       + 'ja ne valmistuivat 1725. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-capitolium
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Jupiterin temppeli', lat: 41.8925, lon: 12.4814, nosto: 'hahmotelma-capitolium' },
       /*
        * Numerointi kulkee lännestä itään, eli samassa järjestyksessä
        * kuin kävelijä ylittää joen ja etenee antiikin puolelle.
@@ -6839,6 +6866,9 @@ export const KAUPUNKIKARTAT = {
       + 'tiedekeskus avattiin Veikselin rannalla 2010. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-saksin-palatsi
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Saksin palatsi', lat: 52.2413, lon: 21.011, nosto: 'hahmotelma-saksin-palatsi' },
       /*
        * Numerointi pohjoisesta etelään, eli Kuninkaantietä pitkin
        * vanhastakaupungista Kulttuuri- ja tiedepalatsille.
