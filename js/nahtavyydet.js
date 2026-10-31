@@ -817,7 +817,9 @@ export function piirraKaupunkiKartta(ui, kohde, {
     if (raaka.nimiPuoli === 'vasen' || raaka.nimiPuoli === 'oikea') {
       piste.classList.add(`kohde-nimi-${raaka.nimiPuoli}`);
     }
-    const nimilappu = html('span', 'kohde-nimi', k.nimi);
+    // Kartalle kohteen oma karttanimi (`nimio`, PT 30.10.2026), jos
+    // nimi on liian pitkä; selitelista ja kortti pitävät koko nimen.
+    const nimilappu = html('span', 'kohde-nimi', raaka.nimio ?? k.nimi);
     piste.appendChild(nimilappu);
     /*
      * SELITELISTA ON PELKKIÄ NIMIÄ (omistajan tilaus 23.8.2026).
