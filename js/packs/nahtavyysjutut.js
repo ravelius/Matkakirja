@@ -4701,7 +4701,8 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Tuileriain rauniot': {
+    // Kohdekartan nimi fokuskohteen mukaan (omistaja 31.10. 08.22, PT): kadonnut ihme, teksti syvennystarinan oma.
+    'Tuileries\'n palatsi': {
       nosto: 'syvennys-pariisi-tuileriat',
       teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '

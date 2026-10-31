@@ -576,6 +576,7 @@ const SHELL = [
   './js/nostokategoriat.js',
   './js/lehtiosiot-kuvat.js',
   './js/packs/miniatyyrit.js',
+  './js/packs/ihmetahdet.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
   './assets/nostotyypit/merkki-vuori.png',
   './assets/nostotyypit/merkki-saari.png',
@@ -1486,6 +1487,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
   './assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
   './assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
+  './assets/kartat/miniatyyrit/pariisi-tuileries.webp',
   './assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
   './assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
   './assets/kartat/miniatyyrit/rooma-aqua-virgo.webp',

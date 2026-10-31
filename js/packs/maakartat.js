@@ -5349,9 +5349,14 @@ export const KAUPUNKIKARTAT = {
        * joten ne eivät voi olla kahtena merkkinä kolmenkymmenen metrin
        * päässä toisistaan. Lista on `nosto`-kentän toinen sallittu muoto
        * (tools/tarkista-nostopaikat.mjs kohdekarttojenNostot).
+       *
+       * KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 08.22, PT): nimi on fokuskohteen kaanonin mukainen
+       * "Tuileries'n palatsi", joten kohde osuu nimellä fokuskohteen `ihme`-lohkoon (matkakirjanIhme): kartalla ihmeen
+       * tähti ja piirroksena ehjä palatsi (js/packs/miniatyyrit.js). Ei "Tuileriain rauniot" (omistaja 06.55 "Kartta
+       * kuvaa nykyaikaa"; rauniot ovat syvennystarinan sisältö, eivät karttamerkki).
        */
       {
-        nimi: 'Tuileriain rauniot', lat: 48.8622, lon: 2.3325,
+        nimi: 'Tuileries\'n palatsi', lat: 48.8622, lon: 2.3325,
         nosto: ['syvennys-pariisi-tuileriat', 'tuileries'], nimiPuoli: 'vasen',
       },
       /*
