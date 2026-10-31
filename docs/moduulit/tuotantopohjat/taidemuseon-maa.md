@@ -240,6 +240,13 @@ Valo alkaa Lavastajan salista ja loppuu kuvapariin, jossa salin pelikuva on tavo
 - [ ] Linssit-testit ja `tyokalut/tarkista.sh` vihreänä (älä aja niitä samaan aikaan: sama dll).
 - [ ] Mac-esikatselu (Blender, sali-GLB + media) PT:lle kuvaparina, kun PT pyytää; ei simukuvia (Raamattu 9.1).
 
+**Ranskan museon henkilöt (omistajan päätös 20.10.2026 klo 23.50 PT:n kautta)**
+- Sijoitus: Salon Carré 1 seisoja Niken edessä, Daru 1 istuja penkillä, Mollien 1 kävelijä, Orsay 1; Grande Galerie k1 (kävelee) ja k2,
+  Salle des États vartija. Vartija ja seisojat saavat pieniä liikkeitä (pään käännös, painonsiirto), kun luurangot tulevat.
+- Määrä: 4 uutta Tripo-kävijää (PT738-K1…K4, Codexin kautta, Raamattu 7.15). Puutarha, Hôtel Biron ja Marmottan myöhemmin. Lisää kävijöitä
+  tilataan vasta, kun omistaja on nähnyt nämä pelissä.
+- Paikat ja käytös kirjataan maan `Resources/Museo/<maa>/henkilot.json`:iin (Ytimen MuseoHenkiloData), ei koodiin.
+
 **Opit (20.10.2026 asti)**
 - Louvren Tripo-henkilöt olivat mediassa kaksi päivää, mutta `MuseoHenkilot.Paalla = false` piti ne pois pelistä. Kehityslippu
   käännetään päälle samassa erässä, jossa media viedään.
