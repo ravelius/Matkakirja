@@ -43,3 +43,12 @@ Worktreet: wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216) ja wt/proto-
 ## Huomiot
 - Esikatselun linja 2 on vapaa, kun aja-korjaus2 on valmis (`pgrep -fl esikatselu.sh`).
 - Käyttämättömiä tiedostoja: _tyo/pelikoodari/reitti-216/sk-korjaus.txt (S-osa ei tuottanut nostoa, koska sivuvartijoita ei ole).
+
+## LISÄYS 20.1x (KK, omistajan päätös 18.26, Raamattu 2.177)
+- **Kohta 3 PÄÄTETTY, ei kysytä:** sivukujien eunukit lisätään avoimen palatsin verkkoon (JatkaVerkko). Mittari: sivukujasta tuleva
+  eunukki näkyy ajoissa (2,5 s:n sääntö), jotta pelaaja ehtii valita toisen reitin, ja lähellä hän voi väistää. Edellinen PK vahvisti 19.1x
+  "sivukujaeunukit 40 % kujista". Tarkista, milloin ne katosivat verkkotasosta (vertaa ruudukkopolkuun JuoksuV4.cs ~1092,
+  risteyksen VasenAuki/OikeaAuki), ja lisää verkon risteyksen sivuhaaroihin samalla säännöllä. Testi JuoksuReittivalintaTestit:
+  sivuvartijoita syntyy ja ne lähtevät "sivulta".
+- **KK:n vaatimus:** kaikki kolme kohtaa (kamera, harmaa lattia ja turkoosi nauha, sivueunukit) samaan arkkiin ja videoon ennen
+  omistajaa. Kohta 1 on KK:n katsottavana (korjaus/arkki-c2.jpg).
