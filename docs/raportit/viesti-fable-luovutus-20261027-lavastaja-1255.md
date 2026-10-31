@@ -2412,3 +2412,6 @@ Uusi session id local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd. U = proto-3d/_tyo/li
 - TAUSTA-V89D (c04d882d1ba0) = v89c + PK d5 b-16:n harmaa levy korjattu: v89:n askelmat y 0,45 V4_marmori → V4_lattia (T/lattiaksi_laatikko.py,
   U/tausta-v89d.zsh). Kuva U/kuvat-v89/askelmat-v89c-v89d.png. PT:lle ja PK:lle 23.4x. ODOTTAA: PK:n d5-uusinta, PT:n kuittaus → JU vientiin (junan 216 ehto).
 - VAROITUS: T/glb_tiivista.py POISTAA valo_rgbm-kuvan leivotuista paloista (viitataan vain nimellä) → älä käytä leivottuihin; korjaa työkalu (säilytä kuvat nimellä valo*).
+- PT 23.5x: v89d KUITATTU (PK:n d5-uusinta varmistaa pelissä). AVOIN, ALOITA TÄSTÄ: V4_marmori piirtyy kuviottomana harmaana muuallakin
+  (VS:n kiilat, v89d-kuvan oikean yläkulman punainen viiva) → kartoita KAIKKI V4_marmori-pinnat reitillä ja korjaa materiaali JUURESTA
+  (esim. V4_marmorin kuvitus/VS:n Lattia-laji 16 tai materiaalikartta), ei pinta kerrallaan. Selvitä ensin, miksi marmori on pelissä kuvioton.
