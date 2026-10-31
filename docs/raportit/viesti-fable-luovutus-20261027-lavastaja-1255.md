@@ -2278,3 +2278,14 @@ Kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta (
   Pariisin mallille. Leveä leikkaus pidetään (peittää Googlen restaurointityömaan). Ennen-kuva proto-3d/_tyo/natiiviseppa/nd-leikkaus/pari-K1-notre-dame.png
   (ylempi). Codexin tekstuurit tarvittaessa (pysyvä lupa). Vienti NS:n kautta, jälkeen-kuva NUI:n simulla → PT.
 - HERÄTYS: CronCreate d22878f3 (:07/:22/:37/:52, KK 17.4x) vie paketit 1–3; poistetaan paketin 3 jälkeen (session muistissa, nollaus hävittää → aseta uudelleen).
+
+## LISÄYS 165 (31.10. 19.3x): VALOJONO 1–3 VIETY — ALOITA TÄSTÄ (seuraavaksi jono 4: Pariisin Cesium-mallit, LISÄYS 164)
+VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skriptit leivonta-216/uusinta):
+- osasarja-v6 (SHA 12ea93377fe7) → PK + PT + KK. Leivonnan hidastuminen 5 → 13 min/ruutu johtui siitä, että objects.remove() kävi läpi kertyneet
+  materiaalit → leivo_osasarja.py: batch_remove + orphans_purge ruutujen välissä, osat-verkot use_fake_user (25 s/ruutu; vertailuruutu tavulleen sama).
+- leivonta-v2 (polvi 0,65/0,4, 01af37c39009) ja leivonta-v3 (0,65/0,3: tausta-v86, rakennukset-v88, muurikate-v32, 79b448a1d5f3) → VS. Tyokalut/valo_polvi.py
+  (glb ja valoatlas.png). VS:n parit: puhki 06 26,1 → 8,3 → 6,3 %, 03 8,8 → 5,3 → 5,0 %; 06 lattian mediaani 199 / havainne 200, p95 234 / 222.
+- tausta-v87 = v86 + kuja-0-3 (v84, hitsaus 2,5 mm, polvi), ehtoalueilla 0 vikaa (a1e090c344ac) → VS + PK + PT.
+- leivonta-k06 (koekohtaus 06, aurinko f4df529a6 45°/pohja 39,97°; tausta 1-0/2-0, muurikate, 6 rakennusta, 5 osasarjan ruutua, polvi 0,65/0,3;
+  koe06.zsh; 3dddcd3d20f7) → VS (pari 06 + puhki-% pyydetty) + PT. Jos VS pyytää säätöä: valo_polvi.py uudelleen *-k06-kopioihin tai koe06.zsh uudella PO/KU:lla.
+- Levyvahti päättynyt (18.39), herätykset poistettu. Työkalumuutokset: lattia_tliitokset.py (ALUE_LAATIKKO, VAAKA, HITSI=0), leivo_osasarja.py (siivous).
