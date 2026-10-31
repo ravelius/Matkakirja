@@ -123,9 +123,10 @@ export const MINIATYYRIT = {
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
     Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
     Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
-    // Tuileriain rauniot: EI PIIRROSTA (omistaja 31.10.2026 klo 06.55 "Kartta kuvaa nykyaikaa", PT: rauniokuva pois heti,
-    // periaate 9). Merkki näkyy historia-symbolina, kunnes nykyisen Tuileries'n puutarhan piirros on hyväksytty; silloin
-    // rivi palaa tähän. Ehjää palatsia (pariisi-tuileries.webp) ei palauteta.
+    // Tuileries'n palatsi KADONNEENA IHMEENÄ LOISTONSA AIKANA (omistaja 31.10.2026 klo 08.22 "Kartalle voi kyllä tehdä niitä
+    // ihmeitä. Tuilers voisi olla sellainen", PT): ehjä palatsi kartan piirrostyylissä (Codex #1320, omistaja 30.10. 22.58).
+    // Rauniokuvaa ei käytetä (omistaja 06.55 "Kartta kuvaa nykyaikaa").
+    'Tuileries\'n palatsi': 'assets/kartat/miniatyyrit/pariisi-tuileries.webp',
     'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
     'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
     'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',

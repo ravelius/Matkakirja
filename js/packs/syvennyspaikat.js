@@ -790,7 +790,7 @@ export const SYVENNYSPAIKAT = {
      * Lähde: en-Wikipedia "Tuileries Palace", prop=coordinates
      */
     tuileriat: {
-      lat: 48.86222, lon: 2.3325, symboli: 'historia', nimio: 'Tuileriain rauniot',
+      lat: 48.86222, lon: 2.3325, symboli: 'historia', nimio: 'Tuileries',   // nimiö fokuskohteen mukaan (omistaja 31.10. 08.22, PT)
     },
     /*
      * Pariisi (ei yhtä nimettyä paikkaa; koko piiritetty kaupunki ja Seinen katkaistu salakaapeli) (sijainti on arvio).
