@@ -1997,11 +1997,11 @@ export function vaistaNumeroympyrat(kotelo, ympyrat) {
  */
 export function hajautaPiirrospisteet(kotelo, pisteet, ydin) {
   if (pisteet.length < 2) return;
-  // 46 px ≈ 40 px:n laatikko + ilmarako (koko on elänyt omistajan
-  // palautteiden mukana: 64 → 48 → 40 px; väli vastaavasti
-  // 72 → 54 → 46). Pieni väli tarkoittaa pieniä siirtymiä, mikä
+  // 42 px ≈ 36 px:n laatikko + ilmarako (koko on elänyt omistajan
+  // palautteiden mukana: 64 → 48 → 40 → 36 px 31.10.2026; väli vastaavasti
+  // 72 → 54 → 46 → 42). Pieni väli tarkoittaa pieniä siirtymiä, mikä
   // sopii nuolettomaan karttaan.
-  const MIN = 46;
+  const MIN = 42;
   // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
   const M = 24;
   const asettele = () => {
