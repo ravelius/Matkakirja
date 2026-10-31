@@ -37,7 +37,6 @@ export const KOHDEKARTAN_PIIRROSKOOT = {
     "Uspenskin katedraali": 0.742,
     "Johanneksenkirkko": 0.9,
     "Suomenlinna": 0.716,
-    "Finlandia": 0.841,
   },
   "istanbul": {
     "Suuri basaari": 0.841,

@@ -2317,48 +2317,6 @@
     }
    },
    "koko": 0.716
-  },
-  "Finlandia": {
-   "lahde": "helsinki-finlandia-vari2",
-   "kuva": "assets/kartat/miniatyyrit/helsinki-finlandia-vari2-kk.webp",
-   "sha": "3f57d35034887d3e",
-   "ennen": {
-    "musta": 0.314,
-    "valko": 0.935,
-    "keski": 0.688,
-    "kroma": 0.297
-   },
-   "jalkeen": {
-    "musta": 0.359,
-    "valko": 0.849,
-    "keski": 0.613,
-    "kroma": 0.24
-   },
-   "kertoimet": {
-    "tasot": [
-     0.314,
-     0.935,
-     0.386,
-     0.851
-    ],
-    "gamma": 1.754,
-    "kylläisyys": 0.808
-   },
-   "kangas": {
-    "alkuperäinen": {
-     "leveys": 1024,
-     "korkeus": 1024,
-     "taytto": 0.229,
-     "alfa": "7398c3af6d266bff"
-    },
-    "tasattu": {
-     "leveys": 1024,
-     "korkeus": 1024,
-     "taytto": 0.229,
-     "alfa": "7398c3af6d266bff"
-    }
-   },
-   "koko": 0.841
   }
  },
  "istanbul": {

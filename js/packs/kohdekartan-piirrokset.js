@@ -37,7 +37,6 @@ export const KOHDEKARTAN_PIIRROKSET = {
     "Uspenskin katedraali": "assets/kartat/miniatyyrit/helsinki-uspenskin-katedraali-kk.webp",
     "Johanneksenkirkko": "assets/kartat/miniatyyrit/helsinki-johanneksenkirkko-kk.webp",
     "Suomenlinna": "assets/kartat/miniatyyrit/helsinki-suomenlinna-kk.webp",
-    "Finlandia": "assets/kartat/miniatyyrit/helsinki-finlandia-vari2-kk.webp",
   },
   "istanbul": {
     "Suuri basaari": "assets/kartat/miniatyyrit/istanbul-suuri-basaari-kk.webp",
