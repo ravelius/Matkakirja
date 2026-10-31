@@ -9,6 +9,8 @@ Olisiko parempi näin?" PT: ensin koe kahdella palalla, ja v6 jää varalle. Kok
   `posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031.md` ja kansio `…-20261031/`, jossa ovat v6-ohjekuvat r3-c4/r3-c5
   (3072 × 2048, 1 m/px, vain geometria), G-referenssi, `osuudet.py` ja SHA256SUMS.
   Pyydetty `pariisi-pseudo3d-r3-c4.png` ja `-r3-c5.png`, 3072 × 2048, yhteinen reuna 128 px (c4 x 2944–3071 = c5 x 0–127).
+- **TOIMITUS SAAPUI (Postivahti 23.3x): claude/postilaatikko 929cef880** (pseudo-3D-koepalat + Codexin saumamittaus). Tarkistus
+  on seuraavan Karttasepän ensimmäinen työ (alla oleva lista); edellinen sessio ei ehtinyt kontekstirajan vuoksi.
 - **Kun Codex toimittaa:**
   1. saumatesti reunakaistalla (vertailu kuten ohjekuvissa: |ero| > 8 osuus);
   2. katujen, Seinen ja reunan pysyvyys ohjekuvaa vasten (sallittu enintään 3 px);
