@@ -3274,3 +3274,7 @@ Omistaja 31.10. klo 06.55 (kortti KK:ssa, kysymys 'Pidetäänkö Tuileriesin koh
 ## AIKA: KADONNEET IHMEET KARTALLA LOISTONSA AIKANA (TUILERIES) (31.10.2026 klo 08.23)
 
 Omistaja 31.10. klo 08.22 (KK:n kautta, sanatarkasti): 'Kartalle voi kyllä tehdä niitä ihmeitä. Tuilers voisi olla sellainen'. LINJAUS (tarkentaa 06.55 'Kartta kuvaa nykyaikaa' ja periaate 10 -oppia): kartta kuvaa nykyaikaa, mutta kadonneet ihmeet saavat olla kartalla loistonsa aikana. Tuileries kytketään ihmeenä: ehjä palatsi, Codexin piirros #1320 pariisi-tuileries.webp (omistaja hyväksyi piirroksena 30.10. klo 22.58). Nimi kaanonin mukaan: 'Tuileries'n palatsi', kartan lyhyt nimiö 'Tuileries' (js/packs/fokuskohteet-fra.js). Vuoden 1873 rauniot jäävät tarinaan ja tekstiin. Puutarhatilaus (posti 90b40bb1c) perutaan. Ketju: KS kytkee → KK tarkistaa → kortti omistajalle.
+
+## TILINVAIHTO: NYKYINEN TILI 92 %:IIN (31.10.2026 klo 09.25)
+
+Omistaja 31.10.2026 klo 09.25 (KK:n kautta): 'Tämän tilin voi käyttää 92% asti'. Korvaa aiemman ~95 %:n (KK:n aloitus.md 2b). Viikkokäyttö 09.25 noin 71 %, nollaus 2.11. klo 09.00; arvio 92 % su 1.11. päivällä. PT:n toteutus: Postivahti hälyttää PT:lle ja KK:lle 85 %:ssa → KK lähettää omistajalle TOIMI TARVITAAN -listan (docs/tilinvaihto.md kohta 0.2); 90 %:ssa roolit luovuttavat; vaihto valmis ennen 92 %:a. Raamattu 12.21 ja docs/tilinvaihto.md päivitetty.
