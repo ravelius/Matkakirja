@@ -1,0 +1,20 @@
+{
+  "tile": "r3-c4",
+  "attempt": 4,
+  "status": "rejected-geometry-and-reduced-exaggeration",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuotantopalat-20261031/raw/r3-c4-v4.png",
+  "sha256": "c7931aa3c74a0d57f5654e0acba92707ebf075812ba5b9e1cec101c2925281f8",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "findings": [
+    "Notre-Dame base approximately x550,y520 instead of x294,y537",
+    "Notre-Dame placed on wrong bank; original Seine island geometry replaced",
+    "Sainte-Chapelle also placed on north bank",
+    "Caricature is reduced from the supplied owner-approved G image despite explicit placement diagram"
+  ],
+  "measurementNote": "coordinates are visual estimates, not automatic detection",
+  "deliveryAllowed": false,
+  "reviewOnly": true
+}

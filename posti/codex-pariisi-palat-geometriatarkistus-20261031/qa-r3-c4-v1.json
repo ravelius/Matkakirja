@@ -1,0 +1,18 @@
+{
+  "tile": "r3-c4",
+  "attempt": 1,
+  "status": "rejected-geometry-and-colour",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuotantopalat-20261031/raw/r3-c4-v1.png",
+  "sha256": "ce6c89d3801f3e7e702cde56945af1dbe498f7a3626ee90f9222c39c5b4a63a2",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "findings": [
+    "Notre-Dame ground attachment drawn approximately x410,y650 rather than prescribed x294,y537",
+    "Sainte-Chapelle also displaced toward centre",
+    "Red patch visible on Pompidou roof despite no-red requirement"
+  ],
+  "deliveryAllowed": false,
+  "next": "Complete new candidate with strict anchor and map tracing instructions"
+}

@@ -1,0 +1,22 @@
+{
+  "tile": "r3-c4",
+  "attempt": 3,
+  "status": "rejected-geometry",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-tuotantopalat-20261031/raw/r3-c4-v3.png",
+  "sha256": "38cb737ddb20c80aa18b846fc37b4c44265d488301470f18998128b1d87d033f",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "styleReference": "owner-confirmed original G attachment",
+  "exaggerationRestored": true,
+  "ownerAcceptedThisCandidate": false,
+  "findings": [
+    "Notre-Dame appears on north/right bank rather than the locked Ile de la Cite footprint",
+    "Island, river and road geometry changed visibly from the supplied locked map",
+    "The stronger approved G caricature is achieved, but fixed-coordinate production gate fails"
+  ],
+  "deliveryAllowed": false,
+  "reviewOnly": true,
+  "generationMode": "built-in image_gen, complete new image, no local creative editing"
+}
