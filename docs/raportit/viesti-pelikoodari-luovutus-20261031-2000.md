@@ -52,3 +52,17 @@ Worktreet: wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216) ja wt/proto-
   sivuvartijoita syntyy ja ne lähtevät "sivulta".
 - **KK:n vaatimus:** kaikki kolme kohtaa (kamera, harmaa lattia ja turkoosi nauha, sivueunukit) samaan arkkiin ja videoon ennen
   omistajaa. Kohta 1 on KK:n katsottavana (korjaus/arkki-c2.jpg).
+
+## LISÄYS 2, 20.2x (KK:n palaute arkki-c2:sta, kohta 1)
+- OK: porteissa aukko ja kujan jatko näkyvät (rivi 1, sarakkeet 6–7).
+- VIKA: kapeilla kujilla keisari on vain noin 15 px, kun aukioilla noin 45 px (rivi 1 sarakkeet 8–10, rivi 6 sarakkeet 1–3). Mittari on omistajan
+  sanoissa: 24.10 "keisari yhtä iso kuin kulmassa B" ja 21.10 "pysyy ylhäällä keisarin takana muurien yllä … ahtaassa jyrkkenee,
+  avarassa loivenee pehmeästi". Keisarin koko pysyy samana, ja kamera VAIN jyrkkenee. e5772ddbe (kenttä ei kapene) ja a70bf3382
+  (kauemmas) rikkovat tätä. Suunta: pidä kameran etäisyys keisariin nimellisenä ja kapennus päällä. Selvitä sen sijaan, miksi räystäsnosto
+  vie kameran 13–17 m:iin kapeilla kujilla (ennakoiva RaystasKohdassa ennakkopisteistä, rnosto lokissa). Sen pitäisi koskea vain
+  katettuja läpikulkuja, ja katto häivytetään. Katseen voi siirtää eteen vain niin paljon, että keisari pysyy kuvassa.
+- TARKISTA: rivi 1 sarake 6, jossa muuri täyttää yläreunan. Onko kamera muurin yllä?
+- TARKISTA: oranssit liekkimäiset palat leijuvat ilmassa kattojen lähellä (rivi 1 sarakkeet 8–10, rivi 6 sarakkeet 1–3). Ovatko ne harjakoristeita
+  (chiwen) tai räystäspaloja ilman kattoa (avoin katto häivytetty, koristeet jäivät)?
+- Kohta 2 näkyy yhä: harmaa lattia rivillä 6 sarakkeissa 4–7, turkoosi kaista rivin 6 sarakkeen 4 alareunassa.
+- Uusi arkki ja video KK:lle vasta, kun kohdat 1–3 ovat valmiit.
