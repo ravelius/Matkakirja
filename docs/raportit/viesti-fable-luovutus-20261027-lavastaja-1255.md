@@ -2316,3 +2316,13 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
 - PT:N VASTAUS (31.10. 19.5x, KÄSITELTY TÄSSÄ): Pariisista ei ole havainnekuvaa; "havainnetyyli" oli löysä ilmaus. Pohjaksi v6k26:n maa (hyväksytty).
   Omistajan 10.10. linja sitoo: ortokuvan oma kivetys, EI ruudukkoa eikä uusia keinotekoisia laattavyöhykkeitä. Vaalea laikku tummennetaan Googlen
   jalkakäytävien sävyyn, nurmen polut säilyvät; Pekingin havainne vain sävyviitteenä. Kuvapari ennen/jälkeen PT:lle.
+
+## LISÄYS 168 (31.10. 19.5x): JONO 4 VALMIS — v6k28 NS:LLE, ALOITA TÄSTÄ
+- Notre-Damessa EI ole tekstuuritonta valkoista osaa (lod0–2 renderöity ohjelmallisesti, _tyo/linnanrakentaja/nd-jono4/tyokalut/rend.py): pelikuvan valkoinen
+  sakaristo = vaaleat lyijykatot/terassit auringossa + maa_v9c:n vaaleat laikut. Korjattu: nd_atlas lod0–2 kattopinnat 131–139 → 112 (katot.py);
+  maa_v9c → maa_v9e: parvis = ortokuvan oma kivetys tummennettuna (×0,85), laikukkaat retusointialueet (tummat reiät) tasaiseksi päällysteeksi aukion
+  sävyllä + synteettinen rae (ei ruudukkoa, ei laattavyöhykkeitä), nurmi/polut/vesi ennallaan (maa.py). PT:n vastaus (LISÄYS 167) huomioitu.
+- Quai Branly: orton tasaiset beige-täytöt kivetykseksi lod0–2 (qb.py). Concorde, prefektuuri, Banque de France, Louvre: ei korjattavaa.
+- PAKETTI _valmiit/omat-mallit-vienti-20261031-v6k28 (rakenna-v6k28.py, portti 0 virhettä, SHA256SUMS 91b122e53d99) → NS vientiin (viesti 19.4x),
+  PT:lle ilmoitettu; kuvat nd-jono4/ (v28-ennen-jalkeen.png, quai-branly-ennen-jalkeen.png, SELVITYS.md).
+- ODOTTAA: NS:n vienti → NUI:n simukuva Notre-Damesta (K1-kohta) → PT. VS:n pari k06 (LISÄYS 165). Ei ajoja käynnissä.
