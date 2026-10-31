@@ -3309,3 +3309,7 @@ Omistaja 13.33 KK:n kautta (sanatarkasti): "Sinun ei tarvitse jatkossa antaa aik
 ## EI SELITEKAISTAA OMISTAJAN KUVISSA; KIERROKSEN TEKSTITYS SAA PEITTÄÄ (omistaja 31.10. klo 13.45) (31.10.2026 klo 14.48)
 
 Omistaja 13.45 KK:n kautta NUI:n todistuskuvan K3 jälkeen (sanatarkasti): "Älä laita tekstiä kuvan päälle" / "Siis noita mustalla pohjalla olevia selitys tekstejä" / "Tekstitys saa mennä kuvan päälle. Vain napit pitää jäädä korin päälle". 1) Omistajalle menevissä kuvissa ja videoissa ei mustaa selitekaistaa tai muuta selitetekstiä kuvan päällä (vahvistaa 24.10. raaka-säännön, Raamattu 4.48/9.10), kaikille rooleille; selite viestiin tai tiedostonimeen. 2) Kaupunkikierros: tekstitys saa peittää näkymää, napit pysyvät korin päällä; kameran rajaus korin reunan ja ylä-UI:n väliin ennallaan.
+
+## TILINVAIHTO: VANHAT SESSIOT NOLLATTUINA TAI ARKISTOON (omistaja 31.10.2026 klo 14.55) (31.10.2026 klo 14.56)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Tili vaihdossa uudella tilillä vanhat pitäisi automaattisesti arkistoida tai jatkaa vanhojen käyttöä kunhan resetoi ne vain ensin". Linjaus: ensisijaisesti samat sessiot jatkavat nollattuina (id:t pysyvät), jos teknisesti mahdollista; muuten vanhat arkistoidaan automaattisesti vaihdon lopuksi. Kirjattu tilinvaihto.md kohta 3 ja Raamattu 12.23 kohta 3. KK arkistoi omistajan pyynnöstä ("Poista vanhat sessiot") 13 vanhaa sessiota (aiempien tilien roolit + vanha KK local_f36040a0); nykyiset roolit ennallaan.
