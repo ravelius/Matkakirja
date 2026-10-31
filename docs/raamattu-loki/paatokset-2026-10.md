@@ -3301,3 +3301,7 @@ Tukholma: Kustaa III:n ooppera; Kööpenhamina: keskiaikainen Vor Frue Kirke; Br
 itäsiipi; Venetsia: San Geminianon kirkko. Toteutus: Codex piirtää (pysyvä lupa) loistonsa ajalta, KS sijoittaa (arvio-koordinaatit tarkistetaan ennen tilausta), uusi pienempi piirroskoko (omistaja
 12.15/12.4x). Omistaja 12.49 kortilla myös: Riian Mustapäiden talo ja Vilnan alalinna pois kadonneista ihmeistä tavallisiksi kohteiksi, koska ne on rakennettu uudelleen samanlaisina (sama sääntö kuin
 Frauenkirche).
+
+## EI AIKA-ARVIOITA OMISTAJALLE (omistaja 31.10. klo 13.33) (31.10.2026 klo 13.33)
+
+Omistaja 13.33 KK:n kautta (sanatarkasti): "Sinun ei tarvitse jatkossa antaa aika arvioita. Ne eivät yleensä pidä paikkaansa". Kirjattu Raamattuun 7.31: omistajalle, KK:lle välitettäväksi ja Asemataulun omistajalle näkyviin teksteihin ei valmistumisarvioita eikä kellonaika-ennusteita; kerrotaan vain työn alla oleva ja valmis, kun valmis. Roolien keskinäinen aikataulutus saa jatkua.
