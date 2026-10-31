@@ -5,6 +5,11 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Yksi Unity kerrallaan linjalla (lukot
 Koko 60 fps -työ: proto-3d/_tyo/natiiviseppa/fps60/LOYDOS.md (osiot "GC ja Nimikerros", "Nimikerros-korjaus", "Lado / GC / Cesium",
 "Ruutuprojektio"); työkalut samassa kansiossa (README-tyyliset otsakkeet skripteissä).
 
+## LISÄYS 01.55 (voittaa alla olevan)
+- PT kuittasi ruutuprojektion: **juna 216 runko = 513998a40** (99593f61d + 6c1f3f297, puu = 6c1f3f297), testit 2223/782/575, tarkista 0,
+  peilissä juna-216. JONO 1 tehty. iPadilla 6c1f3f297 = rungon puu.
+- Seuraavat (PT 01.5x): GC-allokoinnit ja KokoSivuPeitto (JONO 2), sama kaava.
+
 ## JONO
 1. **Ruutuprojektio 6c1f3f297 odottaa PT:n junakuittausta** (raportoitu PT:lle 01.50: Lado −42 %, KaupunkiMerkit −43 %, ≥ 16 ms ruudut
    203 → 167, vartija 0,0039 px, testit 2223/782/575, kuvaparit lokit/natiiviseppa-nimikuvat-pari-projektio-20261101).
