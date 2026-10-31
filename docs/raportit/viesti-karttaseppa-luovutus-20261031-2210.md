@@ -13,8 +13,12 @@ muu tila ennallaan (kohdat 1–6 edellisestä luovutuksesta alla).
   renderoi-g2.py tarkkuus 2 rajaus 9150 4500 10686 5524` (~1 min). G_MAAMERKIT=1 piirtää maamerkit tavallisina
   taloina (Notre-Dame nyt laatikkona, kunnes Codexin sprite tulee; tilaus 88455ded8, ei vielä toimitettu 22.05).
 - Kuvapari PT:lle lähetetty 22.04 (jonossa): `pariisi-pohja/koepala/r3-c4-g2-v2-vs-G.jpg`.
-- SEURAAVA: PT:n kuittaus/korjaukset → koko kaupunki renderoi-g2.py:llä. renderoi-g-laatat.py kutsuu vielä
+- SEURAAVA: v3 (alla) → PT:n kuittaus → koko kaupunki renderoi-g2.py:llä. renderoi-g-laatat.py kutsuu vielä
   renderoi-g.py:tä: vaihda skriptiksi renderoi-g2.py ja poista -I, sitten 55 laattaa (4 rinnakkain), kokoa-g.py. Talomassat yhä laattamaisia.
+
+## PT:N PALAUTE v2:STA (22.1x): TEE v3 ENNEN KOKO KAUPUNKIA
+Korjaukset (katot, korttelien yleistys ja korkeus ×1,5, isot puut, laiturimuurit, lämpimät julkisivut ja vahva muste):
+`docs/raportit/viesti-karttaseppa-pariisi-v3-korjaukset-20261031.md`. Kuvapari v3:sta PT:lle; koko kaupunki vasta uudella tilillä.
 
 ## PARIISIN PIIRROSKARTTA (juna 216 odottaa tätä: omistaja 21.08 "julkaise juna, kun Pariisin uusi kartta valmistuu")
 Kaikki tiedostot ovat kansiossa `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/`.
