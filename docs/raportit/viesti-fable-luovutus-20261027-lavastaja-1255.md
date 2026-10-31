@@ -2355,3 +2355,22 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
   nd-jono4/tyokalut/v29.py (maa_v9f: päällysteen sinertävyys pois, kirkkaus ennallaan; nd_atlas lod0–2 sakariston katto ×0,9), rakenna-v6k29.py
   → _valmiit/omat-mallit-vienti-20261031-v6k29 (portti 0 virhettä, SHA256SUMS 2741b9fa9707) PT:lle; pari nd-jono4/v29/v29-ennen-jalkeen.png.
   ODOTTAA: PT:n kuittaus → JU vie R2:een, NUI:n simukuva. Tausta-v88: VS:n pari.
+
+## LISÄYS 173 (31.10. 21.3x): LUOVUTUS (konteksti 30 %) — LONGZONGMENIN PORTTIAUKOT KESKEN, ALOITA TÄSTÄ
+- PT:N TEHTÄVÄ (reitti-216 kohta 3, PK c4 _tyo/pelikoodari/reitti-216/c4/terassi-ja-c4.md): keisari juoksee kk-tausta-1-2:n "laatan" sisällä.
+  SELVITETTY: rakennus on Longzongmen-portti 隆宗门 oikealla paikallaan (OSM way/638807749, pohja.json, kuva uusinta/kuvat-v89/longzongmen-osm.png),
+  ja pohjan kuja vie sen läpi itä–länsi (z ≈ 170). Codexin malli on umpilaatikko: laatta y 0,70 (+ alempi porras 0,20 renkaana
+  x −130…−125,2 ja −106,8…−103,6, z 160–180), seinät V4_red ja sokkeli ehjät länsi x ≈ −123,5 (z 155,9–182,8) ja itä x ≈ −109,5
+  (z 156,1–183,1), y −1,3…6, katto 5–12,4. Laatan alla ei ole lattiaa ~40 %:lla. PT valitsi (a): halli jää, keisari portin lattialle y 0,70
+  (katto piiloutuu, Raamattu 2.177). PT:LLE KERROTTU 21.3x: "teen porttiaukot + askelmat + 1-2 lod0 uudelleenleivonta → tausta-v89".
+- TEE: (1) lähde = leivonta-216/uusinta/tausta-v81-lahde (yhteiset.zsh TS) kk-tausta-1-2-lod0 kopioksi; Blender bmesh: bisect seinät z 168,5 / 173,5 /
+  y 4,0 ja poista pystykasvot ovilaatikoissa (x −123,5 ± 1,5 ja −109,5 ± 1,5, z 168,5–173,5, y < 4); askelma y 0,45 (V4_marmori, 1 m syvä,
+  5 m leveä) renkaalle laatan reunaan x −126,6…−125,6 ja −106,4…−105,4, z 168,5–173,5 (kärjet + sivut). (2) Lähteeseen myös v88:n korjaukset:
+  tausta_vyotaso_pois.py (tliitokset-v57o + yksikerros-v71) ja tausta_tasot_lattiaksi.py. (3) Leivo 1-2 kuten koe06.zsh:n tausta-silmukka, mutta
+  v3-auringolla (yhteiset.zsh YHT, ei f4df529a6): leivo_valo.py TUPLAT=1 UV_EROTUS=1 NAYTTEET=128 2048 → valo_pakkaa 1024 → glb_alfa_mask
+  V4_puukortti → valo_polvi 0,65 0,3. (4) tausta-v89 = v88 + uusi 1-2 lod0 (lod1/2 ennallaan), glb_tyhjat_pois, paketti (paketti_yleinen.zsh,
+  LAHTEET-tausta-v89.md) → VS kuvapari + PT + PK (PK: reitin y 0,70 portissa, glTF x −125,6…−106,4 / peli peilattuna).
+- HYLÄTYT: uusinta/kielletty-tausta-v89 ja -v89-hylatty (pelkkä laatan poisto, tausta-v89.zsh + tausta_laatta_pois.py) – EI käytetä, koska
+  seinät ja katto jäisivät ja syntyisi reikiä; kuva kuvat-v89/laatta-ennen-jalkeen-lod0.png. Tee uusi v89 eri nimellä tai siirrä nämä sivuun.
+- ODOTTAA: VS:n pari tausta-v88:sta (LISÄYS 171), PT:n kuittaus Notre-Dame v6k29:stä (LISÄYS 172). Ei ajoja käynnissä, ei herätyksiä.
+- PK:n c4-havainto: leijuvat harjakoristeet ovat 1-2:n katoilla, joita ei näy alta (sama syy kuin portissa: katto näkyy vain ylhäältä).
