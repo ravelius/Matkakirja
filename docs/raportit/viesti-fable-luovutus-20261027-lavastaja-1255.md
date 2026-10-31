@@ -2340,3 +2340,14 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
 - Ei ajoja käynnissä. Notre-Damen työkalut ja kuvat: _tyo/linnanrakentaja/nd-jono4/.
 - LISÄYS 170 (31.10. 20.3x, NS, ei kiire): kielletty-tausta-v81/kk-tausta-1-0-lod1.glb verkko rakennukset.018: primitiivi 545 kärkeä, 0 indeksiä
   → koekohtauksen 06 Surface Cache GI kaatuu ("index buffer is null"). POISTA tyhjä primitiivi seuraavassa tausta-paketissa (tarkista samalla muut lod1/lod2-palat).
+
+## LISÄYS 171 (31.10. 21.0x): K06-SAUMA SELVITETTY + TAUSTA-V88 (reitti-216 c3 b-13) VS:LLE — ALOITA TÄSTÄ
+- K06-SAUMA: ei leivontavika. Taustan lod1/lod2 eivät ole leivottuja missään versiossa (vain lod0); LOD valitaan palan keskipisteen etäisyydestä
+  (tausta.json 0/150/450 m), joten 1-0 (Unity x +18,5 = glTF x −18,5) piirtyy lod1:nä. Ehdotettu PK:lle (VS:n kautta): LOD lähimmästä pisteestä
+  palan rajoihin (rajat_xz tausta-lod*.json). Vaihtoehto PT:n päätöksellä: leivotut lod1:t (vaatii UV2:n). k06b: puhki 7,7 %, lattia 210/200.
+- TAUSTA-V88 = v87 + (b) v71:n (27.10. vaaka_yksi_kerros) keksimät V4_teal-vyötasot pois lod0:sta (tausta_vyotaso_pois.py; 1-2:n turkoosi kaista
+  y 4,97 x −125…−75 z 175…200 440 m², 2-1 404, 2-3 573 …) + (a) marmoriset kävelytasot ≥ 30 m² → V4_lattia lod0–2 (tausta_tasot_lattiaksi.py)
+  + tyhjät primitiivit pois (LISÄYS 170, glb_tyhjat_pois.py: 0-0/1-0/3-0 lod1/lod2). Ajo uusinta/tausta-v88.zsh; paketti
+  _valmiit/juoksupeli-kk-lavastaja-tausta-v88-vienti-20261031 (SHA256SUMS ee7676aa4bbd) → VS kuvapariin; VS:n OK:n jälkeen PT:lle ja JU:lle.
+- AVOIN: v71 keksi samoin V4_gold- ja V4_harmaa-vaakapintoja (satoja m²/pala, analyysi scratchpadin keksityt.py: yksikerros-v71 vs tliitokset-v57o);
+  koskematta ilman kuvaa. Keisari juoksee 1-2:n terassin sisällä y 0:ssa (VS → PK).
