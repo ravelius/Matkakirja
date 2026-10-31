@@ -15,15 +15,15 @@ Päivitetty: 31.10.2026 klo 22.3x (Päätoimittaja local_5df52e10): TILINVAIHTO 
 | Natiiviseppä | local_99130238-aa54-4a29-bcc9-7a023584944b | /Users/Shared/Claude/Matkakirja-3d-selvittaja | Opus, high | natiivijunat, käännökset, muistiajot, Unity |
 | Natiivi-UI | local_43962c89-fc14-4098-9dd7-6153133ffcea | /Users/Shared/Claude/Matkakirja-natiivi-ui | Opus, high | natiivin käyttöliittymä pohjilla |
 | Pelikoodari | local_91a1bc27-6870-46aa-9886-66fd33b68880 | /Users/Shared/Claude/Matkakirja-pelikoodari | Opus, high | pelilogiikka, ISS, kytkennät |
-| Linssiseppä | local_3017c16c-34f2-42c9-8b3b-fd2eb7f12cbb | /Users/Shared/Claude/Matkakirja-linssiseppa | Opus, high | museot ja opas |
+| Linssiseppä | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-linssiseppa | Opus, high | museot ja opas |
 | Valoseppä (ent. Linssiseppä 2) | local_fa464945-e15d-4f98-aaad-00877a60f63a | /Users/Shared/Claude/Matkakirja-linssiseppa-2 | Opus, high | valo, ilmakehä, materiaalit, avaruuskohtaukset |
 | Karttaseppä | local_740947d7-aa79-4b1e-948e-1b7dfc734364 | /Users/Shared/Claude/Matkakirja-karttaseppa | Opus, high | kartat, maasto, pallokierrosten kaupungit |
 | Lavastaja (ent. Linnanrakentaja) | local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd | /Users/Shared/Claude/Matkakirja-linnanrakentaja | Opus, medium | Codexin mallien kokoaminen kohtauksiksi (Louvre, linnan huoneet), museon kehysten pinnat |
-| Projektiseppä (ent. Siirtoseppä) | local_c264506b-dd61-4617-839f-23daf6d0bd5a | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | yksi projekti alusta loppuun: nyt Olavinlinna (logiikka, botti, Tripo-pilotin kokoaminen) |
-| Työkaluseppä | local_78dcb005-50d8-4361-adff-42534a2df3a1 | /Users/Shared/Claude/Matkakirja-tyokaluseppa | Opus, high | tuotantoputken tarkistukset: Codex-tuontitarkistus, kameratesti, nykäysvahti, botin putki |
-| Sisältökirjuri | local_6daf85ea-7311-4d73-a8b7-466cec71636d | /Users/Shared/Claude/Matkakirja-sisaltokirjuri | Sonnet 5.5, high | tekstit, esittelyt, kerronta |
-| Äänittäjä | local_f8fe7e20-4700-42e5-91a0-f1227310dc0f | /Users/Shared/Claude/Matkakirja-aanittaja | Sonnet 5.5, high | musiikki ja äänet (auto-tila) |
-| Laitetestaaja | local_ede7e965-02ff-40a0-a77d-44f3218ca146 | /Users/Shared/Claude/Matkakirja-laitetestaaja | Sonnet 5.5, high | laitetestit |
+| Projektiseppä (ent. Siirtoseppä) | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | yksi projekti alusta loppuun: nyt Olavinlinna (logiikka, botti, Tripo-pilotin kokoaminen) |
+| Työkaluseppä | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-tyokaluseppa | Opus, high | tuotantoputken tarkistukset: Codex-tuontitarkistus, kameratesti, nykäysvahti, botin putki |
+| Sisältökirjuri | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-sisaltokirjuri | Sonnet 5.5, high | tekstit, esittelyt, kerronta |
+| Äänittäjä | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-aanittaja | Sonnet 5.5, high | musiikki ja äänet (auto-tila) |
+| Laitetestaaja | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-laitetestaaja | Sonnet 5.5, high | laitetestit |
 | Postivahti | local_afae44f0-722b-4541-a3b8-30ca4f76543b | /Users/Shared/Claude/Matkakirja-posti | Sonnet 5.5, medium | mittarit, hälytykset, roolien nollaukset |
 | Asemataulu | local_54e2130a-2e0b-4bf3-8301-57448d1e48a5 | /Users/Shared/Claude/Matkakirja-asemataulu | Sonnet 5.5, low | Asemataulun vienti (auto-tila) |
 
