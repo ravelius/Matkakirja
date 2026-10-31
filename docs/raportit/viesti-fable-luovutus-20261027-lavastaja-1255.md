@@ -2326,3 +2326,15 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
 - PAKETTI _valmiit/omat-mallit-vienti-20261031-v6k28 (rakenna-v6k28.py, portti 0 virhettä, SHA256SUMS 91b122e53d99) → NS vientiin (viesti 19.4x),
   PT:lle ilmoitettu; kuvat nd-jono4/ (v28-ennen-jalkeen.png, quai-branly-ennen-jalkeen.png, SELVITYS.md).
 - ODOTTAA: NS:n vienti → NUI:n simukuva Notre-Damesta (K1-kohta) → PT. VS:n pari k06 (LISÄYS 165). Ei ajoja käynnissä.
+
+## LISÄYS 169 (31.10. 20.3x): LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- JONO 4: v6k28 PT:n kuittaama ja JU:n viemä R2:een 19.51 (kartta/omat-mallit/v6k28, SHA OK). R2-vienti on JU:n (local_b4a7e82a-…), ei NS:n.
+  ODOTTAA: NUI:n (local_a3754ed8-…) simukuva Notre-Damesta v6k28:lla → PT (pyydetty 19.5x).
+- K06: VS:n pari (puhki 9,8 %, lattia 214/200) → k06b tehty: polvi 0,6/0,3 samoihin uudelleen leivottuihin paloihin (valo_polvi.py sai env:n VANHA="P K",
+  joka purkaa vanhan polven ensin; varmuuskopio .ennen-vanha), uusinta/koe06b.zsh, paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-k06b-vienti-20261031
+  (SHA256SUMS e6132d6a6780, kansiot *-k06b) → VS.
+- K06 SAUMA (VS: keisarin itäpuolella x ≈ 18–19 / z ≈ −492 kylmän harmaa lattia ilman leivottua valoa, tumma reunakaista; kuva _tyo/linssiseppa2/k06-f0-sauma.png):
+  tausta 2-0:n V4_lattia on leivottu tasaisesti (Y ≈ 0,79, x 10–22), eikä k06:n rakennuksissa tai osasarjassa ole pintaa siinä kohdassa (scratchpadin
+  valopiste.py ja rakpiste.py; tee uudelleen tarvittaessa) → KYSYTTY VS:ltä GameObjectin ja meshin nimi. Kun vastaus tulee: leivo se pala uudella auringolla
+  (koe06.zsh-malli) + polvi 0,6/0,3 → k06c → VS.
+- Ei ajoja käynnissä. Notre-Damen työkalut ja kuvat: _tyo/linnanrakentaja/nd-jono4/.
