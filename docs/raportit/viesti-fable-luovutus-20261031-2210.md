@@ -28,3 +28,16 @@ Edellinen: viesti-fable-luovutus-20261031-2155.md (lue sekin; tämä on vain lis
 
 ## Säännöt, jotka opin
 - Tarkistustyökalun regex näki vain täydet id:t; lyhyet jäivät → tieto "katosi" tilinvaihdossa. Tarkista aina molemmat muodot.
+
+## LISÄYS 22.25 (ennen tilinvaihtoa)
+- Kaikki 7 roolia luovuttaneet ja pushanneet (JU 5750, NS 5751, KS 5752 068f23af2, VS 5753, PK 5755 3dd94e25e, NUI 5757, LAV 3ce461b5c).
+- OMISTAJAN PÄÄTÖS 22.17: kontekstivahti kaikille rooleille (tools/hooks/kontekstivahti.py, PR 5758 + rajaus 5759: vain
+  /Users/Shared/Claude/Matkakirja-* ja wt/). Omistaja asensi itse 22.4x (--tarkista OK). TARKISTA tilinvaihdon nollauksen jälkeen:
+  /Users/Shared/Claude/hooks/.kontekstivahti-tila.json saa rivit "mittaus:<roolin session-id>"; jos ei, koukut latautuvat vasta
+  käynnistyksessä → sessiot uudelleen.
+- Codexin 9 Pariisin maamerkkiä (postilaatikko 184ecedad) kuitattu 1172b8121; KS:n v3 käyttää niitä. Codex tekee 44 kuvan erää.
+- tausta-v89b viety ämpäriin (JU 22.12, kielletty-tausta-v89b); Longzongmen-liitos tarkistetaan VS:n reittikuvilla ennen junaa.
+- PK d2: linjaus (b) = tunnelista ulos tultaessa vaatiiPidetty/vaatiiLasku nollataan; kulku tunnelin läpi. c5 KK:lle vasta, kun nousu kunnossa.
+- Juna 216 runko ca536d93e (NS: museo-metro mukana). KK perui museometron poikkeaman (linjausten mukainen) → NUI ei koske.
+- Levy 108 Gi vapaana. Tarkistamatta: proto-kaannos-linja1-sisa 24 Gt (JU:n TF-linja), LAV havainne-kuja40 15 Gt.
+- PT:n keskustelu: /Users/Shared/Claude/keskustelut/Paatoimittaja-2026-10-31-klo-2203-2224.md.
