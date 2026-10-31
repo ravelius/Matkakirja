@@ -73,14 +73,14 @@ const ihmeKohde = ({
  * kulta-aika). Sama malli kuin fokuskohteet-grc.js:n Delfoi.
  */
 const rappeutunutKohde = ({
-  id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, ihmeKuva, ihmeSelite, url,
+  id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, ihmeKuva, ihmeSelite, url, kysymykset,
 }) => ({
   id: `hahmotelma-${id}`,
   nimi,
   ...(nimio ? { nimio } : {}),
   tyyppi: 'historia',
   lahi: true,
-  kysymykset: [
+  kysymykset: kysymykset ?? [
     `Miltä ${nimi} näytti loistoaikanaan?`,
     `Miksi ${nimi} on nykyään raunioina?`,
   ],
@@ -529,26 +529,54 @@ export const EUROOPAN_KADONNEET = {
     lahde: 'sk-Wikipedia "Vydrica" ja "Zuckermandel" (tarkistettu 21.9.2026).',
     kuva: 'ihme-vydrica-zuckermandel-loistoaika.jpg', url: 'https://sk.wikipedia.org/wiki/Vydrica_(Bratislava)',
   })],
-  LTU: [kohde({
+  /*
+   * RAKENNETTU UUDELLEEN → EI KADONNUT (omistaja 31.10.2026 klo 12.49, PT): palatsi on paikalla samanlaisena
+   * (museopalatsi 2018), joten kadonnut: false – kartalla nykytilan valokuva ja "Koe ihme" avaa loistoaikakuvan
+   * (sama sääntö kuin Dresdenin Frauenkirche).
+   */
+  LTU: [rappeutunutKohde({
     id: 'vilnan-alalinna', nimi: 'Vilnan alalinna',
-    nappi: 'Liettuan suurruhtinaiden palatsi ennen tsaarin purkutöitä',
+    nappi: 'Liettuan suurruhtinaiden palatsi, purettu 1801 ja rakennettu uudelleen',
     laudat: { maailmankartta: { x: 6676.3, y: 1180.3 }, europe: { x: 696.7, y: 455.4 } },
     teksti: 'Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus '
       + '1400-luvulta. Venäjän sota vaurioitti sitä pahoin 1655–1661, ja tsaarin '
-      + 'viranomaiset purkivat rauniot 1801–1805. Nykyinen museopalatsi on uusi jäljennös.',
+      + 'viranomaiset purkivat rauniot 1801–1805. Palatsi rakennettiin uudelleen museoksi, joka avattiin 2018.',
     lahde: 'en-Wikipedia "Palace of the Grand Dukes of Lithuania", historia (tarkistettu 21.9.2026).',
-    kuva: 'ihme-vilnan-alalinna-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Palace_of_the_Grand_Dukes_of_Lithuania',
+    kysymykset: ['Miltä Vilnan alalinna näytti loistoaikanaan?', 'Miksi palatsi purettiin ja rakennettiin uudelleen?'],
+    kuva: {
+      tiedosto: 'Vilnius Gedimino Pilies Bokštas Blick auf die Valdovu rumai.jpg',
+      selite: 'Uudelleen rakennettu suurruhtinaiden palatsi Gediminaksen tornista nähtynä.',
+      lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vilnius_Gedimino_Pilies_Bok%C5%A1tas_Blick_auf_die_Valdovu_rumai.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    ihmeKuva: 'ihme-vilnan-alalinna-loistoaika.jpg',
+    ihmeSelite: 'Vilnan alalinnan palatsi kuvattuna loistoaikanaan ennen 1600-luvun sotia.',
+    url: 'https://en.wikipedia.org/wiki/Palace_of_the_Grand_Dukes_of_Lithuania',
   })],
-  LVA: [kohde({
+  // Rakennettu uudelleen 1996–1999 → kadonnut: false (omistaja 31.10.2026 klo 12.49, PT; ks. Vilnan alalinna yllä).
+  LVA: [rappeutunutKohde({
     id: 'mustapaiden-talo', nimi: 'Riian Mustapäiden talo',
     nimio: 'Mustapäiden talo',
-    nappi: 'Kauppiasveljeskunnan manneristinen juhlarakennus',
+    nappi: 'Kauppiasveljeskunnan juhlarakennus, räjäytetty 1948 ja rakennettu uudelleen',
     laudat: { maailmankartta: { x: 6636.9, y: 1074.4 }, europe: { x: 674.1, y: 395.9 } },
     teksti: 'Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. '
       + 'Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin '
-      + '1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.',
+      + '1948. Talo rakennettiin uudelleen entisen näköiseksi vuosina 1996–1999.',
     lahde: 'en-Wikipedia "House of the Blackheads (Riga)", historia (tarkistettu 21.9.2026).',
-    kuva: 'ihme-mustapaiden-talo-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/House_of_the_Blackheads_(Riga)',
+    kysymykset: ['Miltä Mustapäiden talo näytti loistoaikanaan?', 'Miksi talo rakennettiin uudelleen?'],
+    kuva: {
+      tiedosto: 'House of Blackheads at Dusk 3, Riga, Latvia - Diliff.jpg',
+      selite: 'Uudelleen rakennettu Mustapäiden talo Raatihuoneentorilla.',
+      lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:House_of_Blackheads_at_Dusk_3,_Riga,_Latvia_-_Diliff.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    ihmeKuva: 'ihme-mustapaiden-talo-loistoaika.jpg',
+    ihmeSelite: 'Mustapäiden talo kuvattuna loistoaikanaan ennen vuoden 1941 tuhoa.',
+    url: 'https://en.wikipedia.org/wiki/House_of_the_Blackheads_(Riga)',
   })],
   EST: [kohde({
     id: 'narvan-vanhakaupunki', nimi: 'Narvan barokkinen vanhakaupunki',

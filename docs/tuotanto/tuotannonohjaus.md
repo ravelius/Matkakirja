@@ -21,7 +21,7 @@ pysyvä lupa; omistajalle tuodaan vain uudet asiat, makuvalinnat ja maksulliset 
 5. **Sinulle tuodaan vain sinun asiasi.** Niitä ovat päätökset, toimet ja valmiit asiat, suomeksi ja ilman ammattikieltä. Saat yhden suosituksen ja tavoitellun kokemuksen etkä numerovaihtoehtoja. Kysymykset tulevat kortilla Keskustelukanavan kautta.
 6. **Ennen kuin kysyt tai lupaat, tarkista.** Raamatusta, päätöslokista ja tuotantoputkesta katsotaan, onko asia jo päätetty ja millä tavalla se tehdään. Jo päätettyä ei kysytä uudelleen.
 7. **Luvat katsotaan lupataulukosta.** Kysymättä saa tehdä sen, mihin on pysyvä lupa: Codexin kuvat, kertojaäänet jo hyväksytyllä lukijaäänellä, kun ajo vie alle 3 % kuukauden kiintiöstä, ja tehosteäänet ammattikirjastoista, ensin Soundly Prosta ja Sonnissista. Lupa kysytään aina musiikkiin, uuteen ääneen, yli 3 %:n ajoon ja tekoälyllä tehtyyn tehosteeseen, ja lupa koskee vain pyydettyä määrää. Uusia ostoja ei tehdä eikä ehdoteta ennen kuin otat asian itse esille.
-8. **Olemassa olevat pohjat ensin.** Jokainen ikkuna, nappi ja tuote tehdään valmiilla pohjalla tai reseptillä. Jos pohja puuttuu, kysytään Päätoimittajan kautta eikä tehdä omaa ratkaisua.
+8. **Olemassa olevat pohjat ensin.** Jokainen ikkuna, nappi ja tuote tehdään valmiilla pohjalla tai reseptillä. Jos pohja puuttuu, kysytään Päätoimittajan kautta eikä tehdä omaa ratkaisua. Ennen toteutusta mietitään kevein tapa, joka näyttää ja tuntuu puhelimella parhaalta, ja sama asia tehdään kaikkialla samalla moottorilla; kun tapa paranee yhdessä paikassa, parannus viedään kaikkiin saman moottorin käyttäjiin (omistaja 31.10.2026 klo 11.25).
 9. **Väliaikaisia poikkeamia ei tehdä.** Jos osa poikkeaa päätöksestäsi, se poistetaan, ja julkaisu odottaa, kunnes se on tehty päätöksesi mukaan.
 10. **Virheestä opitaan periaatteen kautta.** Kun virhe sattuu, katsotaan ensin, mitä tämän sivun kohtaa rikottiin. Oppi kirjataan heti Raamattuun tai tuotantoputkeen eikä vain muistiin. Uusi tarkka sääntö kirjoitetaan vain, jos periaate ei riitä.
 
@@ -75,11 +75,13 @@ Portti on kohta, josta työ ei jatku ennen kuin ehto täyttyy.
    - erä: yksi erä = yksi haara, testit 0 fail, tulos tarkistettu itse pelistä, korjattu ja tarkistettu uudelleen,
      vika toistettu ennen korjausta, vanhat appit eivät rikkoudu, PT:lle yksi valmis-rivi (8.3);
    - sisältö: lisenssit kunnossa, media ämpärissä eikä repossa, puhe luvalla ja suomi pakotettuna, olemassa olevat
-     UI-pohjat, kameraliikkeet yhteisellä kamerajärjestelmällä testeineen (8.4);
+     UI-pohjat, kameraliikkeet yhteisellä kamerajärjestelmällä testeineen, käyttöliittymän liike yhteisellä kevyellä moottorilla
+     (tekotavat/koodi.md luku 3) (8.4);
    - juna: lähti omistajan pyynnöstä, vain automaattiset testit ja käännös, TF sisäisillä testaajilla, rivi PT:lle ja
      KK:lle, junakortissa yksi Uutta-lista (8.5).
 4. **PT:n hyväksyntä.** PT kuittaa yhden rivin perusteella (mitä muuttui, testit, commit); uudet näkymät, äänet ja
-   sisällön PT tarkistaa itse täysikokoisina ennen KK:ta, ja vika palauttaa työn tekijälle (9.2, 9.5).
+   sisällön PT tarkistaa itse täysikokoisina ennen KK:ta, ja vika palauttaa työn tekijälle (9.2, 9.5). Uusi liike tai
+   näkymä hyväksytään vain, jos se käyttää yhteistä moottoria (omistaja 31.10.2026 klo 11.25).
 5. **Omistajalle vain hänen asiansa** (7.31, 7.27): päätökset, toimet, hyväksynnät ja valmiina näkyvät asiat.
    Kortti vain lyhyisiin valintoihin; tekstit ja äänet viestinä numeroituna listana tai tiedostoina, ei korttina.
    Yksi suositus, ei numeroparametreja eikä A/B-vertailuja. Yöllä PT jatkaa oletuksella.
