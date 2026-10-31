@@ -1,5 +1,4 @@
 # Karttaseppä: luovutus 31.10.2026 klo 22.10
-
 Edellinen luovutus: 2968cec51 (21.54). Nollaus PT:n pyynnöstä: viikkokäyttö 90 % (raja 92 %). Vuorossa vain uusi koepala;
 muu tila ennallaan (kohdat 1–6 edellisestä luovutuksesta alla).
 
