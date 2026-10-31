@@ -1,0 +1,32 @@
+{
+  "ownerInstructions": [
+    {
+      "source": "direct-owner",
+      "observedAt": "2026-10-31T16:51:09.331241+00:00",
+      "quote": "Muuten hyvä mutta Älä liioittele muita kuin tärkeimpiä nähtävyyksiä ja pidä värit samana kuin edeltävässä kuvassa.",
+      "colourReference": "C (preceding D)",
+      "scope": "E: normal ordinary buildings; only Notre-Dame, Louvre with pyramid, Sainte-Chapelle exaggerated; C palette",
+      "ownerAccepted": false,
+      "tilesStarted": false
+    },
+    {
+      "source": "direct-owner",
+      "observedAt": "2026-10-31T16:54:09.965262+00:00",
+      "quote": "Nyt on vähemmän liioittelua. Pidä se yhtä isona",
+      "scope": "F: restore full D monument sizes; keep ordinary houses small and colours from C/E",
+      "EBranchUpdated": false,
+      "EUnpublishedCommit": "ec7d363c70972edae0ced4deea86ed9f2ee01244"
+    }
+  ],
+  "F1References": [
+    "D monument sizes",
+    "E ordinary city and palette"
+  ],
+  "F2References": [
+    "F1 huge monument silhouette sizes",
+    "C colours and ordinary small city"
+  ],
+  "previousECommitUnpublished": "ec7d363c70972edae0ced4deea86ed9f2ee01244",
+  "attribution": "© OpenStreetMap contributors; https://www.openstreetmap.org/copyright; ODbL 1.0",
+  "googleImageryUsed": false
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Pariisi F: suuren liioittelun palautus nähtävyyksiin",
+  "createdAt": "2026-10-31T16:57:51.815245+00:00",
+  "taskNumber": 1418,
+  "assets": [
+    {
+      "variant": "F",
+      "path": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/pariisi-piirroskartta-F-suuret-nahtavyydet.png",
+      "sha256": "1304cc496b2c621507b49f25f95fbb75d72b56715dc4ca6d1aed67496e25f466",
+      "bytes": 3919352,
+      "dimensions": [
+        1571,
+        1001
+      ],
+      "role": "D-sized-main-monuments-normal-city-soft-C-palette"
+    }
+  ],
+  "selectedCandidate": 2,
+  "generationCallsForF": 2,
+  "correctionGenerationCallsIncludingE": 3,
+  "comparisonSeriesGenerationCalls": 7,
+  "previousComparisonCommit": "3502acce4add4a8a704b98c6c0708923b2e597f3",
+  "ownerInstructions": [
+    {
+      "source": "direct-owner",
+      "observedAt": "2026-10-31T16:51:09.331241+00:00",
+      "quote": "Muuten hyvä mutta Älä liioittele muita kuin tärkeimpiä nähtävyyksiä ja pidä värit samana kuin edeltävässä kuvassa.",
+      "colourReference": "C (preceding D)",
+      "scope": "E: normal ordinary buildings; only Notre-Dame, Louvre with pyramid, Sainte-Chapelle exaggerated; C palette",
+      "ownerAccepted": false,
+      "tilesStarted": false
+    },
+    {
+      "source": "direct-owner",
+      "observedAt": "2026-10-31T16:54:09.965262+00:00",
+      "quote": "Nyt on vähemmän liioittelua. Pidä se yhtä isona",
+      "scope": "F: restore full D monument sizes; keep ordinary houses small and colours from C/E",
+      "EBranchUpdated": false,
+      "EUnpublishedCommit": "ec7d363c70972edae0ced4deea86ed9f2ee01244"
+    }
+  ],
+  "EWasNotMailboxDelivered": true,
+  "ownerAccepted": false,
+  "tilePhasePendingOwnerChoice": true,
+  "tilesStarted": false,
+  "exactGeometryCertified": false,
+  "gameIntegrated": false,
+  "published": false
+}
