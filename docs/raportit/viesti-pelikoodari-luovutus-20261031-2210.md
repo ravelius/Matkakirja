@@ -31,7 +31,10 @@ Proto-worktree wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216, kärki 6
   ennakko on 0, mutta tarve on yhä 10,1. Korjaus 24ab63986 koski vain portin jälkeisiä näytteitä, eikä se riitä.
 - Ratkaisu vaatii linjauksen: KK 29.10 "ennakoiva nosto ehtii ennen porttia" (kamera nousee portin yli) vs. tunneli (kamera aukosta
   läpi). Vaihtoehdot: (a) ennakkokohta, jonka KatonAlapinta ≥ PorttiMinAla, on aina lattiaa (kamera seuraa tunneliin); (b) tunnelista
-  ulos tultaessa (porttiJalki) vaatiiPidetty/vaatiiLasku nollataan nykytarpeeseen. Suositus (b) + (a) vain, jos KK/PT hyväksyy.
+  ulos tultaessa (porttiJalki) vaatiiPidetty/vaatiiLasku nollataan nykytarpeeseen.
+- **PT 22.2x LINJAUS: (b).** Kulku menee tunnelin läpi, joten (a) jää pois. Seuraava PK toteuttaa tilinvaihdon jälkeen (JuoksuV4Maailma.cs,
+  PehmeaDrone-lohko: porttiJalki-aikana vaatiiPidetty = vaatiiLasku = tarve, vaatiiLaskuV = vaatiiPito = 0) ja ajaa d3 (sk-d2 mallina,
+  ämpäristä v89b + ulkorengas-v10). c5 menee KK:lle vasta, kun nousu on kunnossa.
 
 ## Kesken / seuraava
 1. d2 analyysi. Jos portin jälkeinen nousu on kunnossa, toinen portti (c4 t 57–58: 6,4 m / 30° ennen porttia) tarkistetaan samasta lokista.
