@@ -2351,3 +2351,7 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
   _valmiit/juoksupeli-kk-lavastaja-tausta-v88-vienti-20261031 (SHA256SUMS ee7676aa4bbd) → VS kuvapariin; VS:n OK:n jälkeen PT:lle ja JU:lle.
 - AVOIN: v71 keksi samoin V4_gold- ja V4_harmaa-vaakapintoja (satoja m²/pala, analyysi scratchpadin keksityt.py: yksikerros-v71 vs tliitokset-v57o);
   koskematta ilman kuvaa. Keisari juoksee 1-2:n terassin sisällä y 0:ssa (VS → PK).
+- LISÄYS 172 (31.10. 21.0x): ND-VIIMEISTELY v6k29 (PT: simupari v6k28 kuitattu; maa hiukan Googlen aukion sävyyn, sakariston katto tummemmaksi):
+  nd-jono4/tyokalut/v29.py (maa_v9f: päällysteen sinertävyys pois, kirkkaus ennallaan; nd_atlas lod0–2 sakariston katto ×0,9), rakenna-v6k29.py
+  → _valmiit/omat-mallit-vienti-20261031-v6k29 (portti 0 virhettä, SHA256SUMS 2741b9fa9707) PT:lle; pari nd-jono4/v29/v29-ennen-jalkeen.png.
+  ODOTTAA: PT:n kuittaus → JU vie R2:een, NUI:n simukuva. Tausta-v88: VS:n pari.
