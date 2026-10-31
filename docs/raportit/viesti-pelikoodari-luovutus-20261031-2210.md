@@ -27,8 +27,8 @@ Proto-worktree wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216, kärki 6
 ## Kesken / seuraava
 1. d2 analyysi. Jos portin jälkeinen nousu on kunnossa, toinen portti (c4 t 57–58: 6,4 m / 30° ennen porttia) tarkistetaan samasta lokista.
 2. Pakettien vaihto reitti-216:ssa (d2:n jälkeen): TaustaKansio → kielletty-tausta-v89b (LAV 22.0x: v89 + liitos "longzongmen",
-   _valmiit/juoksupeli-kk-lavastaja-tausta-v89b-vienti-20261031, SHA256SUMS ec03c59ef662; v89 on ämpärissä JU 22.02, v89b ei vielä
-   → JU:lle pyyntö PT:n kuittauksen jälkeen) ja UlkorengasKansio v9 → v10 (VS/LAV). Omat koejuuret: ulkorengas v9 → v10 (VS:n juuri-k06c).
+   _valmiit/juoksupeli-kk-lavastaja-tausta-v89b-vienti-20261031, SHA256SUMS ec03c59ef662; v89 ämpärissä JU 22.02, v89b ämpärissä
+   JU 22.12) ja UlkorengasKansio v9 → v10 (VS/LAV). Omat koejuuret: ulkorengas v9 → v10 (VS:n juuri-k06c).
 3. c5 KK:lle kokonaisena ämpäristä (ei QA-juurta): sk-d2.txt ilman mallit-riviä. Mukana Longzongmenin läpijuoksu (katso, että keisari
    juoksee y 0,70:llä ja kamera kulkee hallin läpi tunnelina; Raamattu 2.177 katto piiloon sisällä, jos ei toteudu → PT:lle).
    Sitten merge-pyyntö NS:lle (pelikoodari/reitti-216).
