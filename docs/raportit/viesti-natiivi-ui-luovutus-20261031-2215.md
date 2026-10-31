@@ -21,7 +21,9 @@ Edellinen: viesti-natiivi-ui-luovutus-20261031-2100.md. Syy: viikkokäyttö 90 %
 - museo-metro-216: odottaa NS:n mergeä junaan 216 ja KK:n/omistajan katsetta videosta. Palautteen tullessa: worktree
   /Users/Shared/Claude/wt/proto-natiivi-ui-halli (haara natiivi-ui/museo-metro-216), skenaario ja ajoskripti
   proto-3d/_tyo/natiivi-ui/museo-metro/ (aja.zsh: käännös L1 ilman simua, sitten todistusajo; sk-museo-metro.txt).
-- **KK:n palaute videosta (22.3x), odottaa päätöstä:** (1) teoksen nimi häipyy, kun Auto Zoom suurentaa (PaivitaOtsikonRajaus,
+- **PERUTTU (PT/KK 22.4x): näihin ei kosketa** – toteutus on omistajan linjausten mukainen (nimi piilossa vain suurennuksen ajan
+  16.10. 20.04, kyltin tyyli 20.10.). Alla oleva palaute on vain historiaa.
+- KK:n palaute videosta (22.3x): (1) teoksen nimi häipyy, kun Auto Zoom suurentaa (PaivitaOtsikonRajaus,
   koodin linjaus "omistaja 16.10. 20.04"; loki-hae ei löytänyt sanatarkasti); KK haluaa nimen pysyvästi yläreunaan kuten kierroksella.
   (2) Kartan nimi (valkoinen Moderni) vaihtuu ristiin nimikylttiin (antiikva, vaaleassa salissa tumma); KK: yksi tyyli. Molemmat
   kumoavat aiemman linjauksen → PT/omistaja päättää; korjauksen jälkeen uusi video KK:lle (museo-metro/aja.zsh).
