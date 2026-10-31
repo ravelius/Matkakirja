@@ -35,3 +35,6 @@ Edellinen: viesti-fable-luovutus-20261031-1345.md. Viestit aina id:llä (mcp__cc
 ## Säännöt, jotka opin
 - Codex-asiat, joita omistaja ohjaa suoraan Codexissa: ei välitystä KK:lle eikä korttia; toimi Codexin postin mukaan.
 - Ristikkäisiä kuittauksia (JU kysyy, kun PT:n kuittaus jo jonossa) ei toisteta.
+
+## Lisäys 19.00
+- KK palautti PK:n reitti-216:n (338b06286) ennen omistajaa: kamera kääntyy kapeissa porteissa lähes suoraan alas (rikkoo ennakoinnin), harmaa teksturoimaton lattia-alue, taivaalla turkoosi nauha; lisäksi vahvistukset rikottavista, sivukujien eunukeista ja vapaasta liikkumisesta aukioilla. PK korjaa + b-08 puunrunko → sitten NS-merge.
