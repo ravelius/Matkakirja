@@ -2,8 +2,6 @@
 
 **Omistajan sanat sellaisinaan (31.10. 23.09):** "Osaisiko codex tehdä ilman liioittelua ensin peruskartan pseudo 3d:nä jonka päälle karikatyyrit laitetaan. Olisiko parempi näin?"
 
-Omistajan sanat sellaisinaan (31.10.2026 klo 23.09): "Osaisiko codex tehdä ilman liioittelua ensin peruskartan pseudo 3d:nä jonka päälle karikatyyrit laitetaan. Olisiko parempi näin?"
-
 OMISTAJAN PÄÄTÖS 23.09 (PT:n välittämänä) muuttaa tekotavan: ensin koe, jossa sinä maalaat kaksi vierekkäistä
 peruskarttapalaa pseudo-3D:nä **ilman liioittelua**. Karikatyyrimaamerkit (toimitit 184ecedad), puut ja elämä
 (df248de3a) lisään itse päälle. Jos kadut, Seine ja palojen reunat pysyvät paikallaan, koko kaupunki tehdään näin.
