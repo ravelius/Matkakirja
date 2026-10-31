@@ -55,6 +55,10 @@ Täydet mittarit ja kierrosten luvut: B testaus luku 3.3. Koodin kannalta:
 - **Muisti:** ei kiinteää rajaa (6.15); laitteella ei jetsameja ja vapaata ≥ 0,5 Gt. Tekstuurit ≤ 1024 px kerättäville ja esineille,
   glb:n kuvat tyhjennetään rakennuksen jälkeen (`g.Kuvat.Clear()`).
 - **Lataa vain tarvittava:** esim. paperilohikäärmeet vain, kun reitillä voi olla niitä (taso 1 ilman).
+- **Käyttöliittymän liike on kevyt ja yhteinen (omistaja 31.10.2026 klo 11.25):** valmiita tekstejä ja kuvia liikutetaan vain
+  siirtona, skaalauksena ja häivytyksenä (`translate`/`scale`/`opacity`, `UsageHints.DynamicTransform`); fonttikokoa, leveyttä ja
+  korkeutta ei muuteta joka ruudulla, asettelu lasketaan vain tilan vaihtuessa, ja teksti piirretään suurimmassa koossaan ja
+  skaalataan alas. Sama liike tehdään kaikkialla samalla moottorilla (esim. `OpasMetrolinja.cs`:n Kierrosmuunnokset kaikissa tiloissa).
 
 ## 4. Tyypilliset virheet
 
@@ -73,6 +77,10 @@ Täydet mittarit ja kierrosten luvut: B testaus luku 3.3. Koodin kannalta:
 ## 5. Opit
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui tässä.
+
+- **31.10.2026, metrokartan animaatiot.** Kierrostila liikkui kevyesti siirroilla ja skaalauksella, mutta muut tilat (taidemuseon
+  siirto, taidehallin kelaus, kipin veto) muuttivat fonttikokoa ja mittoja joka ruudulla. Muuttui: kaikki tilat samalle moottorille,
+  ja parannus yhdessä paikassa viedään kaikkiin saman moottorin käyttäjiin (luku 3).
 
 - **23.10.2026, Codexin lisäosa korvattuun maailmaan.** Yläreitti v2 tehtiin v4-maailmaan, jonka sokkelo korvasi; kytkentä jäi
   odottamaan tason 2 paluuta. Muuttuu: tarkista ennen tilausta ja ennen kytkentää, mikä maailma on pelissä (vaihe 1).
