@@ -5983,7 +5983,7 @@ export const KAUPUNKIKARTAT = {
         x: 20, y: 23, leveys: 11, korkeus: 17.71 },
       // Greenwichin palatsin kainalo (PT 31.10.2026, kadonneet ihmeet; tools/piirra-kaupunkikartta.mjs lontoo).
       { rajat: { pohjoinen: 51.4865, etela: 51.4785, lansi: -0.015, ita: 0.002 },
-        x: 68, y: 60, leveys: 11, korkeus: 15.91 },
+        x: 68, y: 60, leveys: 11, korkeus: 15.89 },
     ],
     esittely: 'Kartan alue on Lontoon ydin Thamesin molemmin puolin. Lännessä Westminsterin '
       + 'kohteita ovat Buckinghamin palatsi, Trafalgar Square, Big Ben ja joen vastarannalla '
