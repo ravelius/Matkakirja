@@ -18619,6 +18619,17 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   pointer-events: none;
 }
 
+/* Piirroksella tähti istuu musteen näkyvän yläreunan keskellä (KK 31.10.2026:
+ * matalan piirroksen tähti leijui laatikon kulmassa irrallaan rakennuksesta).
+ * --tahti-top ja --tahti-left mitataan kuvasta (js/nahtavyydet.js
+ * piirroksenPaikat); mittaamattomana laatikon yläreunan keskellä. Tähden
+ * alaosa (noin kolmannes) menee piirroksen päälle, jotta pari on yksi merkki. */
+.maakartta-piste.kohde-piirros > .kohde-ihmetahti {
+  top: calc(var(--tahti-top, 0%) - 10px);
+  left: calc(var(--tahti-left, 50%) - 7.5px);
+  right: auto;
+}
+
 /* Täplämerkki on 13 px eli tähteä pienempi: tähti nousee sen päälle
  * hieman tiukemmin, jotta pari pysyy yhtenä merkkinä. */
 .maakartta-piste.kohde-numero:not(.kohde-piirros) > .kohde-ihmetahti {

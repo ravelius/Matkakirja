@@ -25,6 +25,7 @@ import {
   KAUPUNKIKARTAT, KEVYET_KOHDETYYPIT, kaupunginTarinakohteet, kaupunkikartanKohteet, kohteenTyyppi, karttaKuvasuhde, karttapiste, mittakaava, ydinAla,
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
+import { IHMETAHDET } from './packs/ihmetahdet.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -58,6 +59,8 @@ const KYLTTIRAJAT = new Map();
 const MITTARUUTU = 64;
 /** Kynnys: pakkauksen jättämä hyvin vaalea usva ei ole vielä mustetta. */
 const MUSTEEN_RAJA = 24;
+/** Ihmeen tähden mittauskaista: sarakkeita musteen keskeltä kumpaankin suuntaan (64 sarakkeesta; ≈ tähden puolileveys). */
+const TAHDEN_KAISTA = 4;
 /** Kyltin ja rakennuksen jalan väli, prosenttia LAATIKON korkeudesta. */
 const KYLTIN_RAKO = 3;
 /**
@@ -69,30 +72,51 @@ const KYLTIN_RAKO = 3;
 const NIMEN_RAKO = 6;
 
 /**
- * Kuvan alin läpinäkymätön rivi osuutena kuvan korkeudesta (0–1).
- * Mittaamaton tai mittaamiskelvoton kuva palauttaa 1 eli kyltti menee
- * koko kuvan alle — sama paikka kuin ennen mittausta.
+ * Kuvan läpinäkymättömän musteen rajat osuuksina kuvan mitoista (0–1):
+ * `ala` = alin rivi (rakennuksen jalka), `yla` = ylin rivi ja `keski` =
+ * musteen vaakasuuntainen keskikohta. Mittaamaton tai mittaamiskelvoton
+ * kuva palauttaa koko kuvan (ala 1, yla 0, keski 0,5) — kyltti menee
+ * koko kuvan alle kuten ennen mittausta.
  */
-function mittaaAlareuna(kuva) {
+function mittaaRajat(kuva) {
+  const koko = { ala: 1, yla: 0, keski: 0.5 };
   try {
     const kangas = document.createElement('canvas');
     kangas.width = MITTARUUTU;
     kangas.height = MITTARUUTU;
     const piirto = kangas.getContext('2d', { willReadFrequently: true });
-    if (!piirto) return 1;
+    if (!piirto) return koko;
     piirto.drawImage(kuva, 0, 0, MITTARUUTU, MITTARUUTU);
     const { data } = piirto.getImageData(0, 0, MITTARUUTU, MITTARUUTU);
-    for (let y = MITTARUUTU - 1; y >= 0; y--) {
+    let yla = -1, ala = -1, vasen = MITTARUUTU, oikea = -1;
+    for (let y = 0; y < MITTARUUTU; y++) {
       for (let x = 0; x < MITTARUUTU; x++) {
-        if (data[((y * MITTARUUTU) + x) * 4 + 3] > MUSTEEN_RAJA) {
-          return (y + 1) / MITTARUUTU;
-        }
+        if (data[((y * MITTARUUTU) + x) * 4 + 3] <= MUSTEEN_RAJA) continue;
+        if (yla < 0) yla = y;
+        ala = y;
+        if (x < vasen) vasen = x;
+        if (x > oikea) oikea = x;
       }
     }
+    if (ala < 0) return koko;
+    // Tähden kohta: ylin muste KESKIKAISTALLA (±TAHDEN_KAISTA saraketta musteen keskeltä), ei koko kuvan ylin
+    // rivi — Forum Romanumin yläreunan muodostavat reunojen sypressit, joiden tasolla tähti leijui tyhjän päällä.
+    const c = Math.floor((vasen + oikea) / 2);
+    let kaista = -1;
+    for (let y = yla; y <= ala && kaista < 0; y++) {
+      for (let x = Math.max(vasen, c - TAHDEN_KAISTA); x <= Math.min(oikea, c + TAHDEN_KAISTA); x++) {
+        if (data[((y * MITTARUUTU) + x) * 4 + 3] > MUSTEEN_RAJA) { kaista = y; break; }
+      }
+    }
+    return {
+      ala: (ala + 1) / MITTARUUTU,
+      yla: (kaista >= 0 ? kaista : yla) / MITTARUUTU,
+      keski: (vasen + oikea + 1) / (2 * MITTARUUTU),
+    };
   } catch {
     /* Kangas ei aina ole käytettävissä (vanha selain, tiukka tila). */
   }
-  return 1;
+  return koko;
 }
 
 /**
@@ -116,28 +140,53 @@ function jalanOsuus(kuva, alareuna) {
 }
 
 /**
+ * Piirroksen mitatut paikat LAATIKON koordinaatistossa (0–1): `jalka`
+ * (kyltit, ks. jalanOsuus) sekä `yla` ja `keski` Matkakirjan ihmeen
+ * tähdelle. IHMEEN TÄHTI PIIRROKSEN NÄKYVÄÄN YLÄREUNAAN (KK 31.10.2026,
+ * Tuileries'n palatsi): matala piirros (täyttö 0,13) jättää neliön
+ * yläosan tyhjäksi, ja laatikon kulmaan sidottu tähti leijui ~55 px
+ * rakennuksen yläpuolella kuin erillinen merkki. Tähti istuu nyt
+ * musteen ylärajan keskellä samalla mittauksella kuin kyltti.
+ */
+function piirroksenPaikat(kuva) {
+  const r = mittaaRajat(kuva);
+  const suhde = (kuva.naturalWidth ?? 0) / (kuva.naturalHeight ?? 1);
+  const s = Number.isFinite(suhde) && suhde > 1 ? suhde : 1;
+  return { jalka: jalanOsuus(kuva, r.ala), yla: ((1 - (1 / s)) / 2) + (r.yla / s), keski: r.keski };
+}
+
+/**
  * Mittaa piirroksen (välimuistista) ja kirjoittaa kaksi paikkaa:
  * --kyltti-top valitun piirroksen nimikyltille ja --nimi-top
  * lepotilan pienelle karttanimelle (23.8.2026, ks. .kohde-nimi).
  * Kumpikin on laatikon koordinaatistossa, ja kumpikin osuu
  * rakennuksen jalan alle — mitattuna, ei arvattuna.
  */
-function asetaKylttiRaja(piste, polku) {
+function asetaKylttiRaja(piste, polku, tahti = null) {
   if (!piste || !polku) return;
+  // Ihmeen tähti: etukäteen mitattu paikka (js/packs/ihmetahdet.js) voittaa, koska selain ei voi mitata ämpärin kuvia
+  // (ei CORS-otsakkeita → kangas on suojattu, mittaaRajat palauttaa koko kuvan).
+  if (tahti) {
+    piste.style.setProperty('--tahti-top', `${(100 * tahti[0]).toFixed(1)}%`);
+    piste.style.setProperty('--tahti-left', `${(100 * tahti[1]).toFixed(1)}%`);
+  }
   if (!KYLTTIRAJAT.has(polku)) {
     KYLTTIRAJAT.set(polku, new Promise((valmis) => {
       const kuva = new Image();
       kuva.decoding = 'async';
-      kuva.onload = () => valmis(jalanOsuus(kuva, mittaaAlareuna(kuva)));
+      kuva.onload = () => valmis(piirroksenPaikat(kuva));
       // Mittaamaton kuva: molemmat paikat koko kuvan alle eli sinne,
       // missä ne olivat ennen mittauksen valmistumista.
-      kuva.onerror = () => valmis(1);
+      kuva.onerror = () => valmis({ jalka: 1, yla: 0, keski: 0.5 });
       kuva.src = polku;
     }));
   }
-  KYLTTIRAJAT.get(polku).then((osuus) => {
+  KYLTTIRAJAT.get(polku).then(({ jalka: osuus, yla, keski }) => {
     piste.style.setProperty('--kyltti-top', `${(-50 + (200 * osuus) + KYLTIN_RAKO).toFixed(1)}%`);
     piste.style.setProperty('--nimi-top', `${((100 * osuus) + NIMEN_RAKO).toFixed(1)}%`);
+    if (tahti) return;
+    piste.style.setProperty('--tahti-top', `${(100 * yla).toFixed(1)}%`);
+    piste.style.setProperty('--tahti-left', `${(100 * keski).toFixed(1)}%`);
   });
 }
 
@@ -675,7 +724,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
       // Kyltin paikka mitataan piirroksesta (ks. asetaKylttiRaja):
       // kuva on jo kartalla eli selaimen välimuistissa, joten mittaus
       // ei aiheuta uutta latausta.
-      asetaKylttiRaja(piste, miniatyyri);
+      asetaKylttiRaja(piste, miniatyyri, IHMETAHDET[MINIATYYRIT[kaupunki]?.[raaka.nimi]] ?? null);
       piirrosPisteet.push({ piste, x: p.x, y: p.y });
     }
     /*
