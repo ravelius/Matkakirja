@@ -1,0 +1,1544 @@
+{
+  "allTwentyPersonallyViewed": true,
+  "allTwentyPassed": true,
+  "rootReviews": [
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1325,
+      "id": "whitehall",
+      "role": "A",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/final/lontoo-whitehallin-palatsi.webp",
+      "sha256": "9f89ccd15e588f54da195dd9e5e83571009dd4de957f769aacdaf0dc18f06020",
+      "bytes": 572054,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Intact mixed Tudor palace ranges, two courts and distinctive classical Banqueting House; natural warm fine line and watercolor, full silhouette and clean alpha on both backgrounds. Compact representative reconstruction, not an exact measured site plan.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1326,
+      "id": "whitehall",
+      "role": "B",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/final/ihme-whitehall-loistoaika.jpg",
+      "sha256": "6ead9fcfb672b3318d9da3ff9320f764285309c559d527e6623979dac8997e74",
+      "bytes": 822244,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Laundress clearly carries clean folded linen in both supported hands through a long oak-paneled early Stuart gallery. Natural skin and textiles, believable stride, period garments. Lost gallery furnishings and people are interpretive, not exact documentary evidence.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1327,
+      "id": "westminster-vanha",
+      "role": "A",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/final/lontoo-vanha-westminsterin-palatsi.webp",
+      "sha256": "7060d464cf3af6f8f50bdc7d50b508fa7dac7ae97df59b6f54001b6827cd4067",
+      "bytes": 625872,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Selected complete v2 replaces cathedral-like v1. Broad secular hall roof, plain long wall, square flat-parapet end towers and subordinate old parliamentary buildings. No modern Parliament towers. Historical compound is condensed, not surveyed exact.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1328,
+      "id": "westminster-vanha",
+      "role": "B",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/final/ihme-westminster-vanha-loistoaika.jpg",
+      "sha256": "ec5fc8c6338c0a011687446471e17a950303b6638c1bbf50fe93325d4442f7ef",
+      "bytes": 771162,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Clerk cuts wooden tally at a shaded desk; hands, knife and already-notched stick are visible. Hall entrance follows historical engraving; period attire and courtyard, no modern towers. Reconstructed event, not an actual historical photograph.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1329,
+      "id": "suuri-palatsi",
+      "role": "A",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/final/istanbul-suuri-palatsi.webp",
+      "sha256": "9f1073e79b8063e59a215112f522e028f6eba0b26ba50f24757bac22e2754522",
+      "bytes": 658816,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Terraces, arcaded courts, brick and stone ranges with domed reception hall; coherent isolated Byzantine palace interpretation. No Ottoman minarets or ruins.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:18:19.500380+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "suuri-palatsi",
+      "role": "B",
+      "taskNumber": 1330,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/final/ihme-suuri-palatsi-loistoaika.jpg",
+      "sha256": "33cf826519599e3f39453376dcf5124906e8cb738ade3a55a55e5a6514d0732b",
+      "bytes": 841637,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Three court riders playing Byzantine tzykanion on a grass field by the palace; period net-ended sticks and clothing, coherent horse/rider anatomy and natural textures. Precise lost setting is interpretive.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1331,
+      "id": "pyhat-apostolit",
+      "role": "A",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/final/istanbul-pyhien-apostolien-kirkko.webp",
+      "sha256": "91daf32b89981bd912ea3738b9e5635dc2a5e4c1045e8918d4e8296cfcbc5720",
+      "bytes": 646922,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Five complete domes on cross-shaped Byzantine church; restrained brick and stone, no later minarets, coherent miniature.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:19:33.256329+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "pyhat-apostolit",
+      "role": "B",
+      "taskNumber": 1332,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/final/ihme-pyhat-apostolit-loistoaika.jpg",
+      "sha256": "189748331535bd1e5c98f96c46b6c50a9d97a353de4d7496e628d68cfdac8112",
+      "bytes": 811541,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Priest lights thin candles beside imperial porphyry sarcophagi within Byzantine domed church. Clear taper contact and natural anatomy, period robes and stone texture. Interior is an interpretive reconstruction; all five exterior domes are not forced into one interior view.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:27.251461+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "taskNumber": 1333,
+      "id": "capitolium",
+      "role": "A",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/final/rooma-jupiterin-temppeli.webp",
+      "sha256": "bf9b6e9e9db2c05acca4540328b0a73d740c0054f887e96c5f5b54273854fa54",
+      "bytes": 786858,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Six-column front, deep porch, raised podium and broad steps; complete Roman temple interpreted around 100 CE.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:23:10.482965+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "capitolium",
+      "role": "B",
+      "taskNumber": 1334,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/final/ihme-capitolium-loistoaika.jpg",
+      "sha256": "68593a37f4f46c59e5d88bdf3270f2bcb8ed48d5275f258c4b3a5dd434e5fa50",
+      "bytes": 783559,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Selected whole-new v2: six front temple columns, victorious man in purple-and-gold toga climbs behind exactly two white bulls with handlers. Coherent scale, steps, anatomy, period garments and natural photographic surfaces. Precise sculptural decor and people are reconstructions.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:50.715776+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "les-halles",
+      "role": "A",
+      "taskNumber": 1335,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/les-halles/final/pariisi-les-hallesin-hallit.webp",
+      "sha256": "4ba2b5ec9a3d8bd83cccf8a7a5c369822679ac06670a0e14777be5733a4a9e8c",
+      "bytes": 543170,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Glass and iron Baltard pavilion group, full compact footprint and natural watercolor palette; no modern roof canopy.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:18:19.497075+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "les-halles",
+      "role": "B",
+      "taskNumber": 1336,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/les-halles/final/ihme-les-halles-loistoaika.jpg",
+      "sha256": "eadf2b782267ecd4db88d1e68e0707318c76e4a11331e6023a2f7a116a82607f",
+      "bytes": 868377,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Pre-dawn produce market with calling elderly sellers under iron and glass halls; varied natural vegetables, correct period dress, no pasted-on food arrangement. Main hands and faces clear.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:50.718337+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "galerie-des-machines",
+      "role": "A",
+      "taskNumber": 1337,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/galerie-des-machines/final/pariisi-galerie-des-machines.webp",
+      "sha256": "fb31c864fdc53c409271b0e6ecbb399cdfee444957fb9d583014cb7c17d7b268",
+      "bytes": 531818,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Long glazed iron-arch exhibition hall and vaulted bay rhythm, coherent isolated drawing; no modern machines or city background.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:24:16.444260+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "galerie-des-machines",
+      "role": "B",
+      "taskNumber": 1338,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/galerie-des-machines/final/ihme-galerie-des-machines-loistoaika.jpg",
+      "sha256": "606be03f437a9d41fa730b3dbf1b99ced1e71e1abb8116fc628459cfb314116d",
+      "bytes": 956858,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Selected whole-new v2: exhibition visitor stands on elevated travelling bridge under immense iron/glass arches, machinery below. Running wheels correctly beneath deck on supporting rail. Period attire, readable anatomy, natural photographic finish, no modern screens. Exact visitors and machine arrangement interpretive.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:50.720959+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "trocadero",
+      "role": "A",
+      "taskNumber": 1339,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/trocadero/final/pariisi-trocaderon-palatsi.webp",
+      "sha256": "b5ffa9e38dd77eac9063351f083514b1f1913ff6950544baa7bb5ec45fd93727",
+      "bytes": 314180,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Recognizable 1878 twin-tower palace, closed central hall, curved arcaded wings and cascade; no later Palais de Chaillot or Eiffel Tower.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:24:51.363345+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "trocadero",
+      "role": "B",
+      "taskNumber": 1340,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/trocadero/final/ihme-trocadero-loistoaika.jpg",
+      "sha256": "a8e830eace7bddf285bd9086b1410c6b8b38f3bcdd20eafca805130de93ec004",
+      "bytes": 739206,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Summer family by cascade admires original 1878 twin-towered palace. Closed central palace, curved wings and complete cascade remain visible; period clothing and believable hands, no Eiffel Tower or 1937 buildings. Natural water, cloth, skin and architecture, color photographic reconstruction.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:50.723640+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "saksin-palatsi",
+      "role": "A",
+      "taskNumber": 1341,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/saksin-palatsi/final/varsova-saksin-palatsi.webp",
+      "sha256": "58d355098a8451177e1a13ea479009375880abcd9a3a8afb11a9774c0d3f78e1",
+      "bytes": 294888,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Early baroque closed long palace facade, not later open colonnade; complete silhouette and natural warm light.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:16:50.731694+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "saksin-palatsi",
+      "role": "B",
+      "taskNumber": 1342,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/saksin-palatsi/final/ihme-saksin-palatsi-loistoaika.jpg",
+      "sha256": "dbcd395f6f862e46b69f33baa69df88dbb3eb611e119986c873b65c912d9ed72",
+      "bytes": 728269,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Court chamber ensemble in theatre rehearsal with period strings and harpsichord, trees through tall windows. Hands and instruments plausible, natural photographic finish. Exact lost interior and people are interpretive.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:19:33.251469+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "nelsonin-pylvas",
+      "role": "A",
+      "taskNumber": 1343,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/nelsonin-pylvas/final/dublin-nelsonin-pylvas.webp",
+      "sha256": "8a1c55a0b911f08914319ca86e75ac03c9cbdc4010f16bb19e0f8181315f3f70",
+      "bytes": 209380,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Complete Dublin Doric fluted column with statue and square viewing platform, flat-topped entrance portal corrected in complete v2; source archive engraving checked, clean light/dark alpha and thumbnail.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T11:21:26.999511+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "nelsonin-pylvas",
+      "role": "B",
+      "taskNumber": 1344,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/nelsonin-pylvas/final/ihme-nelsonin-pylvas-loistoaika.jpg",
+      "sha256": "3dd3b14113e263525666c3fa536bab78524459a809eb53bbb16a78dd75b8c88f",
+      "bytes": 691774,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Selected whole-new v2: tourist emerges through a door within the shaft; internal stair curve visible, continuous external platform without erroneous floor hatch. Period tourists, roofscape and natural camera-like materials. Exact exit and skyline framing are reconstructed.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "independentRootFour": {
+    "reviewer": "independent-measurement-audit agent",
+    "checkedAt": "2026-10-31T11:21:44.443247+00:00",
+    "status": "PASS_ALL_FOUR",
+    "order": "references/order.md",
+    "referencesViewed": [
+      "references/pariisi-tuileries.webp",
+      "references/pariisi-notre-dame.webp",
+      "references/ihme-tuileries-loistoaika-v2.jpg",
+      "westminster-vanha/references/samuel-ireland-westminster-hall.jpg"
+    ],
+    "assets": [
+      {
+        "id": "whitehall",
+        "role": "A",
+        "sha256": "9f89ccd15e588f54da195dd9e5e83571009dd4de957f769aacdaf0dc18f06020",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/final/lontoo-whitehallin-palatsi.webp",
+        "bytes": 572054,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "notes": [
+          "Valmiit vaalea/tumma 1024 px ja molemmat 256 px esikatselut katsottu. Piirrosviiva, hillityt värit ja varjostus sopivat A-malleihin.",
+          "Tudor-rakennusryhmä ja vaalea Banqueting House erottuvat myös pienoiskoossa; ei taivasta, kehystä, nykyajan elementtejä tai reunaleikkautumista.",
+          "Rakennusryhmä on ilmoitettu tiivistetyksi historialliseksi rekonstruktioksi, ei tarkaksi asemapiirrokseksi."
+        ],
+        "technical": {
+          "outer48Transparent": true,
+          "qaRgbaEqualsFinal": true,
+          "alphaGt16Bounds": [
+            78,
+            295,
+            955,
+            836
+          ],
+          "selectedVersion": 1
+        }
+      },
+      {
+        "id": "whitehall",
+        "role": "B",
+        "sha256": "6ead9fcfb672b3318d9da3ff9320f764285309c559d527e6623979dac8997e74",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/final/ihme-whitehall-loistoaika.jpg",
+        "bytes": 822244,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "notes": [
+          "Lopullinen JPEG katsottu täyskoossa. Pyykkäri kantaa puhtaita viikattuja liinavaatteita pitkää galleriaa pitkin; toiminta vastaa tilausta.",
+          "Molemmat kädet tukevat liinapinoa uskottavasti. Näkyvissä käsissä ei havaittu ylimääräisiä sormia tai silmiinpistävää sulautumista.",
+          "Värillinen valokuvamainen pinta, luonnollinen valo, aikakauden asut ja pitkä puupaneloitu sisätila sopivat B-malliin. Sisustus ja henkilöt ovat rekonstruktiota."
+        ],
+        "technical": {
+          "aspect": "3:2",
+          "iccBytes": 480,
+          "finalJpegViewedDirectly": true
+        }
+      },
+      {
+        "id": "westminster-vanha",
+        "role": "A",
+        "sha256": "7060d464cf3af6f8f50bdc7d50b508fa7dac7ae97df59b6f54001b6827cd4067",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/final/lontoo-vanha-westminsterin-palatsi.webp",
+        "bytes": 625872,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "notes": [
+          "Valittu v2 varmistettu tilatiedostosta. Vaalea/tumma 1024 px ja molemmat 256 px esikatselut katsottu.",
+          "Hallin korkea yhtenäinen katto, suora tukipilarirytmi ja matalat neliömäiset päätytornit erottuvat; ei v1:n lentäviä tukikaaria eikä nykypalatsin kellotornia. Samuel Irelandin lähdekuva katsottu.",
+          "A-mallien hillitty piirros- ja akvarellityyli säilyy; alfa siisti, kohde kokonainen, pienoiskoon siluetti luettava. Ympäröivä rakennusryhmä on tiivistetty tulkinta."
+        ],
+        "technical": {
+          "outer48Transparent": true,
+          "qaRgbaEqualsFinal": true,
+          "alphaGt16Bounds": [
+            70,
+            242,
+            961,
+            845
+          ],
+          "selectedVersion": 2
+        }
+      },
+      {
+        "id": "westminster-vanha",
+        "role": "B",
+        "sha256": "ec5fc8c6338c0a011687446471e17a950303b6638c1bbf50fe93325d4442f7ef",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/final/ihme-westminster-vanha-loistoaika.jpg",
+        "bytes": 771162,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "notes": [
+          "Lopullinen JPEG katsottu täyskoossa. Kirjuri leikkaa veitsellä lovia puiseen kuittikeppiin varjoisalla pöydällä Westminster Hallin edessä.",
+          "Veitsi ja molempien käsien otteet näkyvät, liike on luettava eikä käsissä havaittu silmiinpistävää anatomista virhettä.",
+          "Taustan hallijulkisivu noudattaa katsottua historiallista kuvaa. Ajan vaatteet, hevosajoneuvot ja kirjurin välineet sopivat tilaukseen; ei Big Beniä tai moderneja elementtejä.",
+          "Värillinen fotorealismi ja luonnollinen sävy sopivat B-malliin. Tapahtuma ja henkilöt ovat tulkintaa."
+        ],
+        "technical": {
+          "aspect": "3:2",
+          "iccBytes": 480,
+          "finalJpegViewedDirectly": true
+        }
+      }
+    ],
+    "blockingFindings": [],
+    "scope": "Independent visual and file QA only. No production files, images or shared ledger changed. No delivery or recipient acceptance claimed."
+  },
+  "productionRecords": [
+    {
+      "id": "whitehall",
+      "role": "A",
+      "state": {
+        "status": "local-and-independent-QA-passed-awaiting-delivery",
+        "generationCalls": 1,
+        "attempt": 1,
+        "startedAt": "2026-10-31T11:09:20.183179+00:00",
+        "prompt": "prompts/A-v1.txt",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e822190b-3add-443f-8862-a770cc605ff8.png",
+        "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/candidates/A-v1-source.png",
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/final/lontoo-whitehallin-palatsi.webp",
+        "finalSha256": "9f89ccd15e588f54da195dd9e5e83571009dd4de957f769aacdaf0dc18f06020",
+        "generationMode": "builtin_imagegen",
+        "selectedAttempt": "v1",
+        "qa": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/qa/root-A-review.json",
+        "deliveryVerified": false,
+        "independentQA": "../qa/independent-root-four.json"
+      }
+    },
+    {
+      "id": "whitehall",
+      "role": "B",
+      "state": {
+        "status": "local-and-independent-QA-passed-awaiting-delivery",
+        "taskNumber": 1326,
+        "generationCalls": 1,
+        "prompt": "prompts/B-v1.txt",
+        "reference": "../references/ihme-tuileries-loistoaika-v2.jpg",
+        "deliveryVerified": false,
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bfbe359b-e15f-48db-a04b-2c91fdbc4ac0.png",
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/final/ihme-whitehall-loistoaika.jpg",
+        "finalSha256": "6ead9fcfb672b3318d9da3ff9320f764285309c559d527e6623979dac8997e74",
+        "generationMode": "builtin_imagegen",
+        "selectedAttempt": "v1",
+        "qa": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/whitehall/qa/root-B-review.json",
+        "independentQA": "../qa/independent-root-four.json"
+      }
+    },
+    {
+      "id": "westminster-vanha",
+      "role": "A",
+      "state": {
+        "status": "local-and-independent-QA-passed-awaiting-delivery",
+        "generationCalls": 2,
+        "attempt": 2,
+        "startedAt": "2026-10-31T11:09:20.184141+00:00",
+        "prompt": "prompts/A-v2.txt",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f6f6c0b8-e198-4da6-9d81-f232dd82ee29.png",
+        "qaIssue": "Westminster Hall became too cathedral-like: exaggerated flying buttresses, tall pinnacles and gothic side windows. Need subdued secular hall and square corner towers from primary visual reference.",
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/final/lontoo-vanha-westminsterin-palatsi.webp",
+        "finalSha256": "7060d464cf3af6f8f50bdc7d50b508fa7dac7ae97df59b6f54001b6827cd4067",
+        "generationMode": "builtin_imagegen",
+        "selectedAttempt": "v2",
+        "qa": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/qa/root-A-review.json",
+        "deliveryVerified": false,
+        "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/candidates/A-v2-source.png",
+        "attempts": [
+          {
+            "version": "v1",
+            "status": "rejected-QA",
+            "reason": "Cathedral-like hall with flying buttresses and pointed corner spires",
+            "source": "candidates/A-v1-source.png",
+            "prompt": "prompts/A-v1.txt"
+          },
+          {
+            "version": "v2",
+            "status": "selected-QA-passed",
+            "source": "candidates/A-v2-source.png",
+            "prompt": "prompts/A-v2.txt"
+          }
+        ],
+        "independentQA": "../qa/independent-root-four.json"
+      }
+    },
+    {
+      "id": "westminster-vanha",
+      "role": "B",
+      "state": {
+        "status": "local-and-independent-QA-passed-awaiting-delivery",
+        "taskNumber": 1328,
+        "generationCalls": 1,
+        "prompt": "prompts/B-v1.txt",
+        "reference": "../references/ihme-tuileries-loistoaika-v2.jpg",
+        "deliveryVerified": false,
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8b13194b-87dc-4287-9ae7-d556f82cac47.png",
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/final/ihme-westminster-vanha-loistoaika.jpg",
+        "finalSha256": "ec5fc8c6338c0a011687446471e17a950303b6638c1bbf50fe93325d4442f7ef",
+        "generationMode": "builtin_imagegen",
+        "selectedAttempt": "v1",
+        "qa": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/westminster-vanha/qa/root-B-review.json",
+        "independentQA": "../qa/independent-root-four.json"
+      }
+    },
+    {
+      "id": "suuri-palatsi",
+      "role": "A",
+      "state": {
+        "taskNumber": 1329,
+        "id": "suuri-palatsi",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "generationCalls": 1,
+        "selectedAttempt": "v1",
+        "attempts": [
+          {
+            "version": "v1",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-6b1426a2-41d5-49d8-8572-fe3ba1a3957a.png",
+            "status": "accepted-local-qa"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/final/istanbul-suuri-palatsi.webp",
+        "sourceSha256": "182072bbd458d4341e7f8c6ab21c7773a8ac493ab6ea0b467bc110077c8212ff",
+        "finalSha256": "9f1073e79b8063e59a215112f522e028f6eba0b26ba50f24757bac22e2754522",
+        "promptSha256": "46a99cc83edec2d0d8232aeba1529e2b0aa0db9644a85ae56c8f0a3479571097",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "losslessWebP": true,
+        "alpha": true,
+        "sourceURLs": [
+          "https://www.cambridge.org/core/elements/abs/great-palace/C0312B828AF9296A7BDC99D2ACBCD7C9",
+          "https://assets.cambridge.org/97810096/75529/excerpt/9781009675529_excerpt.pdf",
+          "https://centaur.reading.ac.uk/84544/1/RMS-2005-02_J._Kostenec%2C_Observations_on_the_Great_Palace_at_Constantinople.pdf",
+          "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/mediating-presence-curtains-in-middle-and-late-byzantine-imperial-ceremonial-and-portraiture/CF8BF61C5A90898B4F32C04C2EE4F762"
+        ],
+        "historicalUncertainty": "Lost complex: precise overall ground plan, roof forms, facades and building-to-building arrangement are uncertain. Image is an interpretive reconstruction, not an archaeological exact-plan model.",
+        "qa": {
+          "checkedAt": "2026-10-31T11:11:26.518433+00:00",
+          "fullLight": true,
+          "fullDark": true,
+          "thumbnail256Light": true,
+          "thumbnail256Dark": true,
+          "wholeSilhouette": true,
+          "styleMatch": true,
+          "noPeopleNoSkyNoFrameNoText": true,
+          "historicalForm": "PASS as interpretive palace reconstruction; terraces, courts, low Byzantine halls and central domed reception hall; no mosque/minarets/ruin substitution.",
+          "visibleRGBAEquality": true,
+          "notes": "Fine watercolor linework and normal tonal range. Full complex remains legible at256. Alpha framing checked on both backgrounds; no opaque rectangle. No retouch or tonal adjustment."
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "suuri-palatsi",
+      "role": "B",
+      "state": {
+        "taskNumber": 1330,
+        "id": "suuri-palatsi",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": "v1",
+        "attempts": [
+          {
+            "version": "v1",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-76734d45-ed58-4cc9-a209-e82a3167aac0.png",
+            "status": "accepted-local-qa"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/suuri-palatsi/final/ihme-suuri-palatsi-loistoaika.jpg",
+        "sourceSha256": "c4da4d6670c7c7eb4d25a5238dc7316d1cd26cfba23fc50250479d487277b7ee",
+        "finalSha256": "33cf826519599e3f39453376dcf5124906e8cb738ade3a55a55e5a6514d0732b",
+        "promptSha256": "53dd0ebf7b8fc65fdae241e4d1325d17e14796eca30da7a5e8ccefb4d41d3257",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "embeddedICC": false,
+        "styleReference": "references/ihme-tuileries-loistoaika-v2.jpg",
+        "styleReferenceSha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "sourceURLs": [
+          "https://www.cambridge.org/core/elements/abs/great-palace/C0312B828AF9296A7BDC99D2ACBCD7C9",
+          "https://assets.cambridge.org/97810096/75529/excerpt/9781009675529_excerpt.pdf",
+          "https://centaur.reading.ac.uk/84544/1/RMS-2005-02_J._Kostenec%2C_Observations_on_the_Great_Palace_at_Constantinople.pdf",
+          "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/mediating-presence-curtains-in-middle-and-late-byzantine-imperial-ceremonial-and-portraiture/CF8BF61C5A90898B4F32C04C2EE4F762",
+          "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/topical-essays/posts/fashion",
+          "https://fashionhistory.fitnyc.edu/byzantine/",
+          "https://www.pallasweb.com/p/Sports_in_the_Byzantine_Empire_by_Barba.pdf"
+        ],
+        "historicalUncertainty": "Exact tenth-century sports clothing and equipment are not preserved as a full ensemble; netted-loop description is a later Byzantine source used as cautious reconstruction. Palace field layout and facades are interpretive.",
+        "qa": {
+          "checkedAt": "2026-10-31T11:17:00.949009+00:00",
+          "sourceViewed": true,
+          "finalJPEGViewed": true,
+          "photographicRealism": true,
+          "periodPlausibility": true,
+          "anatomyAndInteraction": "PASS: three riders and three separate horses; coherent reins, sticks, tack, poses and one ball. No visibly fused bodies or extra limbs.",
+          "sceneMatchesOrder": true,
+          "noModernObjectsOrText": true,
+          "notes": "Color historical photography at eye level; court riders play on palace field; netted playing sticks follow later Byzantine evidence, explicitly documented as reconstruction. Organic grass, cloth, stone and horse surfaces. No image retouch or tonal changes."
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "pyhat-apostolit",
+      "role": "A",
+      "state": {
+        "taskNumber": 1331,
+        "id": "pyhat-apostolit",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "generationCalls": 1,
+        "selectedAttempt": "v1",
+        "attempts": [
+          {
+            "version": "v1",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-745bf1c1-f79c-493d-a68c-846e0c75e497.png",
+            "status": "accepted-local-qa"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/final/istanbul-pyhien-apostolien-kirkko.webp",
+        "sourceSha256": "957e2a064b89f338aaf7f594d8b2d8eb3c321aae65c903e71e89b28f9ff45ec8",
+        "finalSha256": "91daf32b89981bd912ea3738b9e5635dc2a5e4c1045e8918d4e8296cfcbc5720",
+        "promptSha256": "b199be334bc78336aada8f9360937ad4e4e12776d6f26e7de1e56ca769d97931",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "losslessWebP": true,
+        "alpha": true,
+        "sourceURLs": [
+          "https://icfadumbartonoaks.wordpress.com/2015/04/23/new-exhibit-from-icfa-the-holy-apostles-visualizing-a-lost-monument/",
+          "https://hum54-15.omeka.fas.harvard.edu/exhibits/show/memories-of-conquest-and-faith/second-church-of-the-apostles"
+        ],
+        "historicalUncertainty": "Destroyed church; reconstruction details and tenth-century drum changes remain uncertain. Five-dome cruciform silhouette is prioritized over speculative facade precision. Explicitly exclude Athens Holy Apostles: Apostoliki Diakonia item10 was checked and describes the different Athens church, not used.",
+        "qa": {
+          "checkedAt": "2026-10-31T11:12:37.377877+00:00",
+          "fullLight": true,
+          "fullDark": true,
+          "thumbnail256Light": true,
+          "thumbnail256Dark": true,
+          "wholeSilhouette": true,
+          "styleMatch": true,
+          "noPeopleNoSkyNoFrameNoText": true,
+          "historicalForm": "PASS as interpretive reconstruction: five separate shallow domes, central crossing and four cruciform arms; no minarets or Hagia Sophia substitution.",
+          "visibleRGBAEquality": true,
+          "notes": "Five domes and projecting cruciform arms remain readable at256; clean silhouette on light and dark backgrounds. Precise facade/drum details are reconstructed, not archaeological certainty. No retouch or tonal adjustment."
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "pyhat-apostolit",
+      "role": "B",
+      "state": {
+        "taskNumber": 1332,
+        "id": "pyhat-apostolit",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": "v1",
+        "attempts": [
+          {
+            "version": "v1",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-67ebc478-c4d4-4675-87b7-f6f7a4da47c1.png",
+            "status": "accepted-local-qa"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/pyhat-apostolit/final/ihme-pyhat-apostolit-loistoaika.jpg",
+        "sourceSha256": "c8d78b37100c3ab45be6327b00eb7124ea3662d73f3627bae6e7aaae4fb6eb73",
+        "finalSha256": "189748331535bd1e5c98f96c46b6c50a9d97a353de4d7496e628d68cfdac8112",
+        "promptSha256": "1e96ff5b9822854435e5228d92051916ab1d65da3aaa21625132f90e1b62d0b9",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "embeddedICC": false,
+        "styleReference": "references/ihme-tuileries-loistoaika-v2.jpg",
+        "styleReferenceSha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "sourceURLs": [
+          "https://icfadumbartonoaks.wordpress.com/2015/04/23/new-exhibit-from-icfa-the-holy-apostles-visualizing-a-lost-monument/",
+          "https://hum54-15.omeka.fas.harvard.edu/exhibits/show/memories-of-conquest-and-faith/second-church-of-the-apostles",
+          "https://www.metmuseum.org/de/perspectives/why-vestments",
+          "https://artsandculture.google.com/story/GgXhbmk37QTaWw"
+        ],
+        "historicalUncertainty": "Exact tomb placement and church interior are lost; the scene uses an adjoining imperial burial area with a plausible view into the domed church. Sarcophagi are not assigned to named emperors. Five-domed building does not imply all five domes can physically be visible in one photograph.",
+        "qa": {
+          "checkedAt": "2026-10-31T11:18:59.395947+00:00",
+          "sourceViewed": true,
+          "finalJPEGViewed": true,
+          "photographicRealism": true,
+          "periodPlausibility": true,
+          "anatomyAndInteraction": "PASS: one priest, coherent lighting taper and candle wick, plausible hands/face/stance, closed stone sarcophagi.",
+          "sceneMatchesOrder": true,
+          "noModernObjectsOrText": true,
+          "notes": "Photographic candle scene in imperial burial area beside domed church, uncovered priest with understated cloak/sticharion/stole. Porphyry surfaces have natural flecking, no repeating artificial pattern. Exact sarcophagus layout and interior decoration are interpretive. No image retouch or tonal changes."
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "capitolium",
+      "role": "A",
+      "state": {
+        "taskNumber": 1333,
+        "id": "capitolium",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "generationCalls": 1,
+        "selectedAttempt": "v1",
+        "attempts": [
+          {
+            "version": "v1",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-63056596-07c2-4808-8669-16055422c189.png",
+            "status": "accepted-local-qa"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/final/rooma-jupiterin-temppeli.webp",
+        "sourceSha256": "416f901b9c6e35b10ee5343920fad744aceb1f59ba01f18bb0d6250f6ff69e82",
+        "finalSha256": "bf9b6e9e9db2c05acca4540328b0a73d740c0054f887e96c5f5b54273854fa54",
+        "promptSha256": "07d577adf2de734ae90c978904a7d9db1772298110612964d2fa2d9afba8f074",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "losslessWebP": true,
+        "alpha": true,
+        "sourceURLs": [
+          "https://www.museicapitolini.org/en/sede/campidoglio_antico/tempio_di_giove_capitolino",
+          "https://www.turismoroma.it/en/node/1106",
+          "https://smarthistory.org/jupiter-optimus/"
+        ],
+        "historicalUncertainty": "Exact decorative details, color distribution and roof ornaments are reconstructed; later reliefs simplify the column count. Image follows architectural hexastyle reconstruction, not the relief shorthand.",
+        "qa": {
+          "checkedAt": "2026-10-31T11:13:52.481924+00:00",
+          "fullLight": true,
+          "fullDark": true,
+          "thumbnail256Light": true,
+          "thumbnail256Dark": true,
+          "wholeSilhouette": true,
+          "styleMatch": true,
+          "noPeopleNoSkyNoFrameNoText": true,
+          "historicalForm": "PASS as interpretive Domitian-era reconstruction: six front columns, deep multiple-row porch, high podium with frontal stairs, enclosed rear cella block, no Greek ruin substitution.",
+          "visibleRGBAEquality": true,
+          "notes": "Six foreground columns counted. Deep porch and frontal stair legible at256. Small pediment figures are ancient architectural sculpture, no living people. Clean silhouette on light and dark. No retouch or tonal adjustment."
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "capitolium",
+      "role": "B",
+      "state": {
+        "taskNumber": 1334,
+        "id": "capitolium",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 2,
+        "selectedAttempt": "v2",
+        "attempts": [
+          {
+            "version": "v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/candidates/B-v1-source.png",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/prompts/B-v1.txt",
+            "sourceSha256": "2502e9dc8ab5d05652d930bb6522436c8cf56077738265fe77b85ddb0a10f92a",
+            "status": "rejected-local-qa",
+            "reason": "Eight frontal columns instead of documented six; only one distinct leading attendant. Entire new generation required; no partial edits.",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-3e78d22f-29dc-4b67-b253-3e977dbb771b.png"
+          },
+          {
+            "version": "v2",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/candidates/B-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-9f724b61-4c6a-484a-bd11-c756c1da2636.png",
+            "status": "accepted-local-qa"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/final/ihme-capitolium-loistoaika.jpg",
+        "sourceSha256": "291ea74dc2743226b892d10e4d3cc461d90d9480328d494d74595370000925ec",
+        "finalSha256": "68593a37f4f46c59e5d88bdf3270f2bcb8ed48d5275f258c4b3a5dd434e5fa50",
+        "promptSha256": "2480b56b793bc367bfd9d853953062ad6f62eae17446d39ddd633fc10d00c27a",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "embeddedICC": false,
+        "styleReference": "references/ihme-tuileries-loistoaika-v2.jpg",
+        "styleReferenceSha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "sourceURLs": [
+          "https://www.museicapitolini.org/en/sede/campidoglio_antico/tempio_di_giove_capitolino",
+          "https://www.turismoroma.it/en/node/1106",
+          "https://smarthistory.org/jupiter-optimus/",
+          "https://www.rom.on.ca/learn/resources/activity-wear-toga",
+          "https://fashionhistory.fitnyc.edu/toga-picta/",
+          "https://museicapitolini.org/en/node/2700"
+        ],
+        "historicalUncertainty": "Narrative is the commissioned c100CE type scene, not a claim to reconstruct a specific recorded triumph. Architectural decoration, procession positions and clothing detail are interpretive. Later Marcus Aurelius relief supports ceremonial type, not exact AD100 identity.",
+        "qa": {
+          "checkedAt": "2026-10-31T11:22:16.100352+00:00",
+          "sourceViewed": true,
+          "finalJPEGViewed": true,
+          "photographicRealism": true,
+          "periodPlausibility": true,
+          "anatomyAndInteraction": "PASS: two distinct white bulls and two attendants, coherent legs/hooves/lead ropes; general ascends with credible footing. Six front columns and five gaps verified.",
+          "sceneMatchesOrder": true,
+          "noModernObjectsOrText": true,
+          "notes": "V1 rejected for eight frontal columns. V2 is a fully new generation with corrected six-column facade and two attendants. Purple draped toga, laurel, short attendants tunics and ancient architecture. Material realism and final JPEG checked; no local retouch or tonal changes."
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "architecturalReference": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/capitolium/final/rooma-jupiterin-temppeli.webp",
+          "sha256": "bf9b6e9e9db2c05acca4540328b0a73d740c0054f887e96c5f5b54273854fa54",
+          "use": "building form only; completely new photographic image, not an edit"
+        }
+      }
+    },
+    {
+      "id": "les-halles",
+      "role": "A",
+      "state": {
+        "task": 1335,
+        "id": "les-halles",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "1873",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "completedAt": "2026-10-31T11:11:54.543695+00:00",
+        "acceptedAttempt": "A-v1",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/les-halles/final/pariisi-les-hallesin-hallit.webp",
+        "sha256": "4ba2b5ec9a3d8bd83cccf8a7a5c369822679ac06670a0e14777be5733a4a9e8c",
+        "sourceSHA256": "afa4f1fd14e1b2fcc1eac15b5615f4f5e85707cc0b3c9cf748e27be0ed710126",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP",
+        "alphaBBox": [
+          48,
+          99,
+          976,
+          844
+        ],
+        "sourceURLs": [
+          "https://archives.paris.fr/offre-pedagogique/ressources-pedagogiques/les-halles-de-paris--vie-et-transformations-dun-espace-economique-1135-1974/les-halles-de-victor-baltard",
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/les-nouvelles-halles-centrales-a-paris-vue-exterieure-des-pavillons"
+        ],
+        "QA": {
+          "visual": "PASS",
+          "lightBackground": "PASS",
+          "darkBackground": "PASS",
+          "readability256": "PASS",
+          "architecture": "Baltard iron/glass original pavilions with tiered roofs and tall gabled covered passages; compact representative group, not a literal measured full site plan",
+          "noModernAdditions": true,
+          "noPeopleTextSky": true,
+          "alphaOuterMargin48": true,
+          "exportVerification": "qa/export-verification.json",
+          "notes": "Source alpha-zero hidden RGB speckles do not appear in composites; no visible chromatic edge contamination. No tonal changes."
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "accepted",
+            "sourceSHA256": "afa4f1fd14e1b2fcc1eac15b5615f4f5e85707cc0b3c9cf748e27be0ed710126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "les-halles",
+      "role": "B",
+      "state": {
+        "task": 1336,
+        "id": "les-halles",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "1873",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "completedAt": "2026-10-31T11:16:39.818931+00:00",
+        "acceptedAttempt": "B-v1",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/les-halles/final/ihme-les-halles-loistoaika.jpg",
+        "sha256": "eadf2b782267ecd4db88d1e68e0707318c76e4a11331e6023a2f7a116a82607f",
+        "sourceSHA256": "41492cdbfe5d398dc86b388799ed507eb14f234ce2fb02cc0e56238bec20c174",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG RGB",
+        "sourceURLs": [
+          "https://archives.paris.fr/offre-pedagogique/ressources-pedagogiques/les-halles-de-paris--vie-et-transformations-dun-espace-economique-1135-1974/les-halles-de-victor-baltard",
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/les-nouvelles-halles-centrales-a-paris-vue-exterieure-des-pavillons"
+        ],
+        "styleReference": "references/ihme-tuileries-loistoaika-v2.jpg",
+        "QA": {
+          "visual": "PASS",
+          "historicalScene": "Elderly market women calling prices among abundant vegetables, predawn, Baltard iron/glass pavilions",
+          "periodClothing": "PASS",
+          "anatomyHandsFaces": "PASS at full export resolution",
+          "photographicSurface": "PASS; natural fabric, leaves, skin and damp stone; no repeating artificial surface pattern",
+          "modernElements": "None detected",
+          "composition": "Candid eye-level environmental scene, full 3:2 rectangle",
+          "exportVerification": "qa/B-export-verification.json"
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted",
+            "sourceSHA256": "41492cdbfe5d398dc86b388799ed507eb14f234ce2fb02cc0e56238bec20c174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "galerie-des-machines",
+      "role": "A",
+      "state": {
+        "task": 1337,
+        "id": "galerie-des-machines",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "1889",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "completedAt": "2026-10-31T11:13:52.730445+00:00",
+        "acceptedAttempt": "A-v1",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/galerie-des-machines/final/pariisi-galerie-des-machines.webp",
+        "sha256": "fb31c864fdc53c409271b0e6ecbb399cdfee444957fb9d583014cb7c17d7b268",
+        "sourceSHA256": "3f28d297cbb50fe39a6ea91d6b914911beaf605bb78fb37d5d672c3d69799bc1",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP",
+        "alphaBBox": [
+          48,
+          89,
+          963,
+          893
+        ],
+        "sourceURLs": [
+          "https://cnum.cnam.fr/expo_virtuelle/expositions_universelles/1798_1900/pages/Paris_1889/Paris_1889_3.php",
+          "https://expositions.bnf.fr/cnac/grand/cir_2516.htm"
+        ],
+        "QA": {
+          "visual": "PASS",
+          "lightBackground": "PASS",
+          "darkBackground": "PASS",
+          "readability256": "PASS",
+          "architecture": "Long iron/glass nave, very large glazed end arch, repeated smaller glazed arches along long facade; compact map representation",
+          "noModernAdditions": true,
+          "noPeopleTextSky": true,
+          "alphaOuterMargin48": true,
+          "exportVerification": "qa/export-verification.json",
+          "notes": "No tonal changes; no visible alpha edge artifacts."
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "accepted",
+            "sourceSHA256": "3f28d297cbb50fe39a6ea91d6b914911beaf605bb78fb37d5d672c3d69799bc1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "galerie-des-machines",
+      "role": "B",
+      "state": {
+        "task": 1338,
+        "id": "galerie-des-machines",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 2,
+        "currentAttempt": "B-v2",
+        "historicalPeriod": "1889",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "rejected-QA",
+            "reason": "Bridge wheels appear above deck on passenger walkway; load-bearing arrangement not credible.",
+            "sourceSHA256": "525d4c3fc06dec2613e52f33645142220d4d0cfd39c891056500749ec34cedc0"
+          },
+          {
+            "attempt": "B-v2",
+            "status": "accepted",
+            "sourceSHA256": "d37eb240a15080b4e77474102fcdb52bb17e28dd97966094fc62aeb230b67cff"
+          }
+        ],
+        "retryAuthorization": "Owner permanent permission for quality retries",
+        "completedAt": "2026-10-31T11:23:34.625037+00:00",
+        "acceptedAttempt": "B-v2",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/galerie-des-machines/final/ihme-galerie-des-machines-loistoaika.jpg",
+        "sha256": "606be03f437a9d41fa730b3dbf1b99ced1e71e1abb8116fc628459cfb314116d",
+        "sourceSHA256": "d37eb240a15080b4e77474102fcdb52bb17e28dd97966094fc62aeb230b67cff",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG RGB",
+        "sourceURLs": [
+          "https://cnum.cnam.fr/expo_virtuelle/expositions_universelles/1798_1900/pages/Paris_1889/Paris_1889_3.php",
+          "https://expositions.bnf.fr/cnac/grand/cir_2516.htm",
+          "https://cnum.cnam.fr/PDF/cnum_8XAE353.3.pdf",
+          "https://www.ndl.go.jp/exposition/data/R/154r.html",
+          "https://commons.wikimedia.org/wiki/File:Galerie_des_machines._Les_ponts_roulants.jpg"
+        ],
+        "styleReference": "references/ihme-tuileries-loistoaika-v2.jpg",
+        "QA": {
+          "visual": "PASS",
+          "historicalScene": "Visitor on elevated moving bridge above 1889 machinery under huge glazed iron arch",
+          "bridgeMechanics": "PASS: wheels below passenger deck, on support track; original above-deck wheel defect removed by whole new generation",
+          "periodClothing": "PASS",
+          "anatomyHandsFaces": "PASS at full export resolution",
+          "photographicSurface": "PASS; coherent natural iron, timber, wool and skin",
+          "modernElements": "None detected",
+          "composition": "Eye-level view from neighboring gallery toward visitor and moving bridge; full 3:2 rectangle",
+          "exportVerification": "qa/B-export-verification.json"
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true
+      }
+    },
+    {
+      "id": "trocadero",
+      "role": "A",
+      "state": {
+        "task": 1339,
+        "id": "trocadero",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "1878",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "completedAt": "2026-10-31T11:14:16.857252+00:00",
+        "acceptedAttempt": "A-v1",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/trocadero/final/pariisi-trocaderon-palatsi.webp",
+        "sha256": "b5ffa9e38dd77eac9063351f083514b1f1913ff6950544baa7bb5ec45fd93727",
+        "sourceSHA256": "cacf1b98503648b14aaf6f31f460338f708c7aee79f155da28ff8e139b919596",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP",
+        "alphaBBox": [
+          48,
+          59,
+          976,
+          948
+        ],
+        "sourceURLs": [
+          "https://parismuseescollections.paris.fr/en/node/638585",
+          "https://id.rijksmuseum.nl/200342994"
+        ],
+        "QA": {
+          "visual": "PASS",
+          "lightBackground": "PASS",
+          "darkBackground": "PASS",
+          "readability256": "PASS",
+          "architecture": "1878 old Trocadero: solid central auditorium facade, two tall slender towers, curved arcaded wings, terminal domed pavilions, central cascade; not 1937 Chaillot",
+          "noModernAdditions": true,
+          "noPeopleTextSky": true,
+          "alphaOuterMargin48": true,
+          "exportVerification": "qa/export-verification.json",
+          "notes": "No tonal changes; clear edges against light and dark."
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "accepted",
+            "sourceSHA256": "cacf1b98503648b14aaf6f31f460338f708c7aee79f155da28ff8e139b919596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trocadero",
+      "role": "B",
+      "state": {
+        "task": 1340,
+        "id": "trocadero",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "1878",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "completedAt": "2026-10-31T11:24:10.692840+00:00",
+        "acceptedAttempt": "B-v1",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era1-20261031/trocadero/final/ihme-trocadero-loistoaika.jpg",
+        "sha256": "a8e830eace7bddf285bd9086b1410c6b8b38f3bcdd20eafca805130de93ec004",
+        "sourceSHA256": "bb21bceb4f636f760b7f7d29a3c1cda6d5479d032e496053b3a34716f5b21e59",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG RGB",
+        "sourceURLs": [
+          "https://parismuseescollections.paris.fr/en/node/638585",
+          "https://id.rijksmuseum.nl/200342994"
+        ],
+        "styleReference": "references/ihme-tuileries-loistoaika-v2.jpg",
+        "QA": {
+          "visual": "PASS",
+          "historicalScene": "1878 families in summer clothes beside cascade admiring old Trocadero two towers",
+          "architecture": "Correct 1878 palace central hall, two towers, curved arcaded wings; not 1937 Chaillot; no Eiffel Tower",
+          "periodClothing": "PASS",
+          "anatomyHandsFaces": "PASS at full export resolution",
+          "photographicSurface": "PASS; natural cloth, stone, water and foliage; no repeated embossed texture",
+          "modernElements": "None detected",
+          "composition": "Family in foreground right, palace architectural hero, full 3:2 rectangle",
+          "exportVerification": "qa/B-export-verification.json"
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted",
+            "sourceSHA256": "bb21bceb4f636f760b7f7d29a3c1cda6d5479d032e496053b3a34716f5b21e59"
+          }
+        ]
+      }
+    },
+    {
+      "id": "saksin-palatsi",
+      "role": "A",
+      "state": {
+        "taskNumber": 1341,
+        "type": "A",
+        "id": "saksin-palatsi",
+        "status": "READY_FOR_ROOT_QA",
+        "attempts": [
+          {
+            "version": 1,
+            "startedAt": "2026-10-31T11:11:14.673322+00:00",
+            "prompt": "prompts/A-v1.txt",
+            "completedAt": "2026-10-31T11:11:45.935701+00:00",
+            "source": "output/ihmeet-era1-20261031/saksin-palatsi/candidates/A-v1-source.png",
+            "sha256": "3beaff6d58f41271f0b9a6907a2d4d4321511e79d690076e3b2ddeda89fad491",
+            "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-a38462b7-239c-477e-954d-85ad6b1e77b7.png",
+            "dimensions": [
+              1536,
+              1024
+            ]
+          }
+        ],
+        "tool": "builtin-imagegen",
+        "prompt": "prompts/A-v1.txt",
+        "sourcesViewed": true,
+        "externalDelivery": false,
+        "updatedAt": "2026-10-31T11:11:10.049216+00:00",
+        "final": "output/ihmeet-era1-20261031/saksin-palatsi/final/varsova-saksin-palatsi.webp",
+        "sha256": "58d355098a8451177e1a13ea479009375880abcd9a3a8afb11a9774c0d3f78e1",
+        "qa": "qa/A-review.json"
+      }
+    },
+    {
+      "id": "saksin-palatsi",
+      "role": "B",
+      "state": {
+        "taskNumber": 1342,
+        "type": "B",
+        "id": "saksin-palatsi",
+        "status": "READY_FOR_ROOT_QA",
+        "attempts": [
+          {
+            "version": 1,
+            "startedAt": "2026-10-31T11:11:57.622658+00:00",
+            "prompt": "prompts/B-v1.txt",
+            "completedAt": "2026-10-31T11:13:33.431963+00:00",
+            "source": "output/ihmeet-era1-20261031/saksin-palatsi/candidates/B-v1-source.png",
+            "sha256": "474afd6b0b6481d83fda8075f675fbddb25c1c32f5bc442db7c62510e046d76b",
+            "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-2fef0631-ccf1-4dca-94da-259f31cd2a4f.png",
+            "dimensions": [
+              1536,
+              1024
+            ]
+          }
+        ],
+        "tool": "builtin-imagegen",
+        "prompt": "prompts/B-v1.txt",
+        "sourcesViewed": true,
+        "externalDelivery": false,
+        "updatedAt": "2026-10-31T11:11:10.049662+00:00",
+        "final": "output/ihmeet-era1-20261031/saksin-palatsi/final/ihme-saksin-palatsi-loistoaika.jpg",
+        "sha256": "dbcd395f6f862e46b69f33baa69df88dbb3eb611e119986c873b65c912d9ed72",
+        "qa": "qa/B-review.json"
+      }
+    },
+    {
+      "id": "nelsonin-pylvas",
+      "role": "A",
+      "state": {
+        "taskNumber": 1343,
+        "type": "A",
+        "id": "nelsonin-pylvas",
+        "status": "READY_FOR_ROOT_QA",
+        "attempts": [
+          {
+            "version": 1,
+            "startedAt": "2026-10-31T11:13:33.464041+00:00",
+            "prompt": "prompts/A-v1.txt",
+            "completedAt": "2026-10-31T11:14:41.835361+00:00",
+            "source": "output/ihmeet-era1-20261031/nelsonin-pylvas/candidates/A-v1-source.png",
+            "sha256": "d5c7a9faecc79f41f737e9fbfb56866dcde96720ca669dc9de3c5c2c9fe9cae1",
+            "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-b47f374c-2052-4f04-9bf1-6c2b2121a29a.png",
+            "dimensions": [
+              1254,
+              1254
+            ],
+            "decision": "REJECTED_BY_ROOT_FOR_TRIANGULAR_ENTRANCE_PEDIMENT",
+            "export": "candidates/A-v1-export.webp"
+          },
+          {
+            "version": 2,
+            "startedAt": "2026-10-31T11:16:58.369792+00:00",
+            "prompt": "prompts/A-v2.txt",
+            "method": "entirely new generation",
+            "completedAt": "2026-10-31T11:17:47.365994+00:00",
+            "source": "output/ihmeet-era1-20261031/nelsonin-pylvas/candidates/A-v2-source.png",
+            "sha256": "8981b6ac798cf278ddc86ef001528e8d4ab2b0516d768abfd100182c497ea033",
+            "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-37ff47b2-beaf-4ecb-82aa-f1d29847db00.png",
+            "dimensions": [
+              1254,
+              1254
+            ],
+            "decision": "PASS_PERSONALLY_VIEWED"
+          }
+        ],
+        "tool": "builtin-imagegen",
+        "prompt": "prompts/A-v1.txt",
+        "sourcesViewed": true,
+        "externalDelivery": false,
+        "updatedAt": "2026-10-31T11:11:10.049802+00:00",
+        "sha256": "8a1c55a0b911f08914319ca86e75ac03c9cbdc4010f16bb19e0f8181315f3f70",
+        "qa": "qa/A-review.json",
+        "selectedVersion": 2,
+        "final": "output/ihmeet-era1-20261031/nelsonin-pylvas/final/dublin-nelsonin-pylvas.webp"
+      }
+    },
+    {
+      "id": "nelsonin-pylvas",
+      "role": "B",
+      "state": {
+        "taskNumber": 1344,
+        "type": "B",
+        "id": "nelsonin-pylvas",
+        "status": "READY_FOR_ROOT_QA",
+        "attempts": [
+          {
+            "version": 1,
+            "startedAt": "2026-10-31T11:14:41.838498+00:00",
+            "prompt": "prompts/B-v1.txt",
+            "completedAt": "2026-10-31T11:16:40.791035+00:00",
+            "source": "output/ihmeet-era1-20261031/nelsonin-pylvas/candidates/B-v1-source.png",
+            "sha256": "9e929c63199c5f2b45141473acb04f1963287013a86cbbbb4f28d2c6f5acb3d4",
+            "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-e75bc450-cb25-406e-8b68-4e19fe49f0d4.png",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "decision": "REJECTED_BY_ROOT_FOR_OUTSIDE_FLOOR_HATCH",
+            "export": "candidates/B-v1-export.jpg"
+          },
+          {
+            "version": 2,
+            "startedAt": "2026-10-31T11:18:55.723370+00:00",
+            "prompt": "prompts/B-v2.txt",
+            "method": "entirely new generation",
+            "completedAt": "2026-10-31T11:19:42.349349+00:00",
+            "source": "output/ihmeet-era1-20261031/nelsonin-pylvas/candidates/B-v2-source.png",
+            "sha256": "4445e4240efc86a5c562dcb966fbdf1f026560f3f1c5faf612e7c893bbc7a4c0",
+            "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-059f8a7f-0c7f-4ff0-88be-99f7dd1155b2.png",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "decision": "PASS_PERSONALLY_VIEWED"
+          }
+        ],
+        "tool": "builtin-imagegen",
+        "prompt": "prompts/B-v1.txt",
+        "sourcesViewed": true,
+        "externalDelivery": false,
+        "updatedAt": "2026-10-31T11:11:10.049897+00:00",
+        "sha256": "3dd3b14113e263525666c3fa536bab78524459a809eb53bbb16a78dd75b8c88f",
+        "qa": "qa/B-review.json",
+        "selectedVersion": 2,
+        "final": "output/ihmeet-era1-20261031/nelsonin-pylvas/final/ihme-nelsonin-pylvas-loistoaika.jpg"
+      }
+    }
+  ],
+  "productionRecordNote": "Producer-local records preserve pre-delivery states. Coordinator R2 receipts and mailbox readback are authoritative for later technical delivery.",
+  "historicalReconstructionLimit": "Lost structures and scenes are source-informed visual reconstructions; exact people, events, furnishings and uncertain complete site plans are not documentary assertions."
+}

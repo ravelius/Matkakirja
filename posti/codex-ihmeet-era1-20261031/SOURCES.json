@@ -1,0 +1,379 @@
+{
+  "historicalEvidence": {
+    "whitehall": {
+      "historical-research.json": {
+        "sources": [
+          "https://www.rct.uk/collection/stories/charles-lost-collection/reimagining-charles-is-whitehall-palace",
+          "https://www.hrp.org.uk/banqueting-house/history-and-stories/the-whitehall-palace-fire-of-1698/",
+          "https://www.rijksmuseum.nl/en/collection/object/Whitehall-te-Londen-gezien-vanaf-de-Theems--dc6aa5f119269ed6d9dbf13815003b1f"
+        ],
+        "use": "Historical massing, periods and exclusion of later reconstruction; not copying a source photograph.",
+        "limitation": "Compact interpreted reconstruction, no exact surveyed ground plan asserted.",
+        "BInterpretation": "Laundress, long gallery interior and furnishings are a plausible early Stuart reconstruction, not exact surviving documentation."
+      }
+    },
+    "westminster-vanha": {
+      "historical-research.json": {
+        "sources": [
+          "https://www.parliament.uk/about/living-heritage/building/palace/estatehistory/reformation-1834/palace-from-18thc/",
+          "https://www.londonpicturearchive.org.uk/view-item?i=18650",
+          "https://www.parliament.uk/about/living-heritage/building/palace/ststephenschapel/"
+        ],
+        "use": "Historical massing, periods and exclusion of later reconstruction; not copying a source photograph.",
+        "limitation": "Compact interpreted reconstruction, no exact surveyed ground plan asserted.",
+        "additionalVisualSource": {
+          "url": "https://artvee.com/dl/westminster-hall/",
+          "imageUrl": "https://mdl.artvee.com/sftb/526948ld.jpg",
+          "title": "Samuel Ireland: Westminster Hall (historic engraving)",
+          "purpose": "Architectural shape only: north gable and square flat-parapet corner towers; existing primary archive catalogue supports circa1800 view",
+          "locallyViewed": true
+        },
+        "tallyPrimarySources": [
+          "https://collection.sciencemuseumgroup.org.uk/objects/co60106/exechequer-tally-1812-tally-stick-exchequer",
+          "https://www.parliament.uk/about/living-heritage/building/palace/architecture/palacestructure/great-fire/"
+        ],
+        "BInterpretation": "Fictional Exchequer clerk and worktable placement; tally use and pre-fire hall are supported, exact person/event not asserted."
+      }
+    },
+    "suuri-palatsi": {
+      "B-historical-evidence.json": {
+        "checkedAt": "2026-10-31",
+        "urls": [
+          "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/topical-essays/posts/fashion",
+          "https://fashionhistory.fitnyc.edu/byzantine/",
+          "https://www.pallasweb.com/p/Sports_in_the_Byzantine_Empire_by_Barba.pdf"
+        ],
+        "evidence": "Museum evidence supports tunics, belts and woven decoration in Byzantine clothing; use restrained riding-length clothes and boots. Barbara Schrodt, Journal of Sport History8/3(1981), Sports of the Byzantine Empire, quotes Cinnamus describing netted-loop sticks for mounted tzykanion.",
+        "uncertainty": "Exact tenth-century sports clothing and equipment are not preserved as a full ensemble; netted-loop description is a later Byzantine source used as cautious reconstruction. Palace field layout and facades are interpretive."
+      },
+      "historical-evidence.json": {
+        "checkedAt": "2026-10-31",
+        "urls": [
+          "https://www.cambridge.org/core/elements/abs/great-palace/C0312B828AF9296A7BDC99D2ACBCD7C9",
+          "https://assets.cambridge.org/97810096/75529/excerpt/9781009675529_excerpt.pdf",
+          "https://centaur.reading.ac.uk/84544/1/RMS-2005-02_J._Kostenec%2C_Observations_on_the_Great_Palace_at_Constantinople.pdf",
+          "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/mediating-presence-curtains-in-middle-and-late-byzantine-imperial-ceremonial-and-portraiture/CF8BF61C5A90898B4F32C04C2EE4F762"
+        ],
+        "evidence": "Palace complex extended across descending terraces; tenth-century ceremonial core included octagonal domed Chrysotriklinos with surrounding vaulted halls. Low palace wings, courtyards and palatine chapels are synthesized into a compact map symbol.",
+        "uncertainty": "Lost complex: precise overall ground plan, roof forms, facades and building-to-building arrangement are uncertain. Image is an interpretive reconstruction, not an archaeological exact-plan model."
+      }
+    },
+    "pyhat-apostolit": {
+      "B-historical-evidence.json": {
+        "checkedAt": "2026-10-31",
+        "urls": [
+          "https://www.metmuseum.org/de/perspectives/why-vestments",
+          "https://artsandculture.google.com/story/GgXhbmk37QTaWw",
+          "https://icfadumbartonoaks.wordpress.com/2015/04/23/new-exhibit-from-icfa-the-holy-apostles-visualizing-a-lost-monument/"
+        ],
+        "evidence": "Met museum essay explains sticharion, phelonion and priestly stole, distinguishing later elaborate vestments. Turkish Directorate General of Cultural Assets and Museums documents porphyry imperial sarcophagi, plain sides, pitched lids, wreath-and-cross carving and their Holy Apostles provenance.",
+        "uncertainty": "Exact tomb placement and church interior are lost; the scene uses an adjoining imperial burial area with a plausible view into the domed church. Sarcophagi are not assigned to named emperors. Five-domed building does not imply all five domes can physically be visible in one photograph."
+      },
+      "historical-evidence.json": {
+        "checkedAt": "2026-10-31",
+        "urls": [
+          "https://icfadumbartonoaks.wordpress.com/2015/04/23/new-exhibit-from-icfa-the-holy-apostles-visualizing-a-lost-monument/",
+          "https://hum54-15.omeka.fas.harvard.edu/exhibits/show/memories-of-conquest-and-faith/second-church-of-the-apostles"
+        ],
+        "evidence": "Dumbarton Oaks documents Underwood/Friend/Downey reconstruction research using written sources and comparative buildings; academic Harvard exhibition identifies cruciform five-domed form.",
+        "uncertainty": "Destroyed church; reconstruction details and tenth-century drum changes remain uncertain. Five-dome cruciform silhouette is prioritized over speculative facade precision. Explicitly exclude Athens Holy Apostles: Apostoliki Diakonia item10 was checked and describes the different Athens church, not used."
+      }
+    },
+    "capitolium": {
+      "B-historical-evidence.json": {
+        "checkedAt": "2026-10-31",
+        "urls": [
+          "https://www.rom.on.ca/learn/resources/activity-wear-toga",
+          "https://fashionhistory.fitnyc.edu/toga-picta/",
+          "https://www.museicapitolini.org/en/sede/campidoglio_antico/tempio_di_giove_capitolino",
+          "https://museicapitolini.org/en/node/2700"
+        ],
+        "evidence": "Royal Ontario Museum and FIT document purple/gold toga picta for triumphal dress; Capitoline Museums preserve relief evidence for imperial ceremony and bull at the Jupiter temple. Architecture uses the documented hexastyle front/deep porch/high podium.",
+        "uncertainty": "Narrative is the commissioned c100CE type scene, not a claim to reconstruct a specific recorded triumph. Architectural decoration, procession positions and clothing detail are interpretive. Later Marcus Aurelius relief supports ceremonial type, not exact AD100 identity."
+      },
+      "historical-evidence.json": {
+        "checkedAt": "2026-10-31",
+        "urls": [
+          "https://www.museicapitolini.org/en/sede/campidoglio_antico/tempio_di_giove_capitolino",
+          "https://www.turismoroma.it/en/node/1106",
+          "https://smarthistory.org/jupiter-optimus/"
+        ],
+        "evidence": "Capitoline Museums describe high podium, frontal stairs, colonnades on three sides, deep porch with two additional front rows and three cellae. Rome tourism specifies six front columns. AD100 corresponds to the rebuilt Domitian-era marble temple.",
+        "uncertainty": "Exact decorative details, color distribution and roof ornaments are reconstructed; later reliefs simplify the column count. Image follows architectural hexastyle reconstruction, not the relief shorthand."
+      }
+    },
+    "les-halles": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://archives.paris.fr/offre-pedagogique/ressources-pedagogiques/les-halles-de-paris--vie-et-transformations-dun-espace-economique-1135-1974/les-halles-de-victor-baltard",
+            "usedFor": "Baltard original iron/glass pavilions; no 1930s additions"
+          },
+          {
+            "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/les-nouvelles-halles-centrales-a-paris-vue-exterieure-des-pavillons",
+            "usedFor": "Original pavilions exterior and clerestory structure; 1857 engraving G.38549, CC0 Paris Musees"
+          }
+        ]
+      }
+    },
+    "galerie-des-machines": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://cnum.cnam.fr/expo_virtuelle/expositions_universelles/1798_1900/pages/Paris_1889/Paris_1889_3.php",
+            "usedFor": "1889 Galerie exterior, scalloped glazed long facade"
+          },
+          {
+            "url": "https://expositions.bnf.fr/cnac/grand/cir_2516.htm",
+            "usedFor": "1889 giant iron/glass nave; Dutert/Contamin context"
+          },
+          {
+            "url": "https://cnum.cnam.fr/PDF/cnum_8XAE353.3.pdf",
+            "usedFor": "Contemporary technical account p186: moving elevated visitor bridge with two end elevators in Palais des Machines"
+          },
+          {
+            "url": "https://www.ndl.go.jp/exposition/data/R/154r.html",
+            "usedFor": "Contemporary 1889 overview after Godefroy, giant roof and trusses; National Diet Library"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Galerie_des_machines._Les_ponts_roulants.jpg",
+            "usedFor": "Primary 1889 engraving of actual moving visitor bridge, wheels, track and railing, archival reproduction"
+          }
+        ]
+      }
+    },
+    "trocadero": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://parismuseescollections.paris.fr/en/node/638585",
+            "usedFor": "1878 Albert Fernique panorama, central hall, exactly two towers and curved arcaded wings. CC0 Paris Musees."
+          },
+          {
+            "url": "https://id.rijksmuseum.nl/200342994",
+            "usedFor": "1878 original palace corroborating period photograph; Public Domain"
+          }
+        ]
+      }
+    },
+    "saksin-palatsi": {
+      "historical-research.json": {
+        "subject": "Saxon Palace, Warsaw, approximately 1730",
+        "primarySources": [
+          {
+            "url": "https://odkryjpalacsaski.pl/2",
+            "publisher": "Official Palac Saski project",
+            "usedFor": [
+              "Early baroque closed facade rather than later central colonnade",
+              "Historical elevation after Carl Friedrich Poppelmann and Joachim Daniel Jauch"
+            ],
+            "limitation": "A historical design/elevation is a period-form guide, not an exact measured snapshot of every part of the palace in 1730."
+          },
+          {
+            "url": "https://palacsaski.pl/wystawa/wystawa-okruchy-pamieci",
+            "publisher": "Palac Saski official exhibition",
+            "usedFor": [
+              "Royal music and theatre under the Saxon dynasty; theatre added beside the northern wing in 1724",
+              "Garden-facing ceremonial interiors and early-18th-century decoration",
+              "Familiar colonnaded palace belongs to the much later 1839–1842 reconstruction"
+            ]
+          }
+        ],
+        "visualSources": [
+          {
+            "file": "references/baroque-facade.png",
+            "url": "https://admin.odkryjpalacsaski.pl/app/uploads/2022/05/Fasada_Palacu_Saskiego.png",
+            "caption": "Projekt barokowej fasady Palacu Saskiego wg Carla Friedricha Poppelmanna i Joachima Daniela Jaucha",
+            "attribution": "Leonhard Schmidtner / Daniel Knusman",
+            "sha256": "f317bc0f184a7b29bd8a490fa2cfdd54629d4eb0cf56bafb24935d5f0c00b077",
+            "personallyViewed": true
+          }
+        ],
+        "interpretation": "A reconstructs the low continuous baroque volume; rear depth and roof articulation are illustrative. B is an imagined theatre rehearsal and does not claim the precise documented room furnishings, musicians or window arrangement.",
+        "styles": {
+          "A": [
+            "../references/pariisi-tuileries.webp",
+            "../references/pariisi-notre-dame.webp"
+          ],
+          "B": "../references/ihme-tuileries-loistoaika-v2.jpg"
+        },
+        "sourcesViewedBeforeGeneration": true
+      }
+    },
+    "nelsonin-pylvas": {
+      "historical-research.json": {
+        "subject": "Nelsons Pillar Dublin, approximately 1900",
+        "primarySources": [
+          {
+            "url": "https://www.dublincity.ie/library/blog/onthisday-1966-nelsons-pillar-destroyed",
+            "publisher": "Dublin City Council / Dublin City Library and Archive",
+            "usedFor": [
+              "Doric column, internal spiral staircase and elevated visitor platform",
+              "1894 Beater entrance porch applies to the requested circa-1900 date",
+              "Archive engravings establish complete shaft, base and top; later photographs establish entrance details"
+            ],
+            "limitations": "The 1960s entrance and base photos are later than the requested setting; used only for persistent monument structure, not vehicles, clothing or city context."
+          }
+        ],
+        "visualSources": [
+          {
+            "file": "references/dublin-pillar-full.jpg",
+            "url": "https://www.dublincity.ie/sites/default/files/media/inline-images/migrated/nelsons-column%20copy%201.jpg",
+            "sha256": "e7aea40c0e265520aad977950ff5fbf60473b1539aa9126880acd6caafafaf68",
+            "personallyViewed": true
+          },
+          {
+            "file": "references/dublin-pillar-engraving.jpg",
+            "url": "https://www.dublincity.ie/sites/default/files/media/inline-images/migrated/nelsons-pillar-engraving%20copy%201.jpg",
+            "sha256": "c5c1c8fd377cb8279ba66cdde2142f4965dcec6edd557312fa4a3595fbd55d0d",
+            "personallyViewed": true
+          },
+          {
+            "file": "references/dublin-pillar-photo.jpg",
+            "url": "https://www.dublincity.ie/sites/default/files/media/inline-images/migrated/Nelsons_Pillar-1960s%20copy%201.jpg",
+            "sha256": "cd579674ac081c920fbfff6e8c1a57a72103f66ae636ccdc3c90c60999a7218e",
+            "personallyViewed": true
+          },
+          {
+            "file": "references/dublin-pillar-entrance.jpg",
+            "url": "https://www.dublincity.ie/sites/default/files/media/inline-images/migrated/Nelsons_%20Pillar_entrance%20copy%201.jpg",
+            "sha256": "9996a9956fd04f55dbd2bc0b29c408ff0755e13a0b60851bf6c15ad6aceeddd0",
+            "personallyViewed": true
+          }
+        ],
+        "interpretation": "B v2 uses a fictional camera position and adult tourists exiting through a vertical door in the central pillar, with steps enclosed inside. V1 exterior floor hatch rejected. Internal climb and city outlook are documented; exact door proportions and skyline composition are reconstructed. A v2 removes the v1 invented pediment.",
+        "styles": {
+          "A": [
+            "../references/pariisi-tuileries.webp",
+            "../references/pariisi-notre-dame.webp"
+          ],
+          "B": "../references/ihme-tuileries-loistoaika-v2.jpg"
+        },
+        "sourcesViewedBeforeGeneration": true
+      }
+    }
+  },
+  "BReference": {
+    "status": "RESOLVED_EXACT_REFERENCE",
+    "checkedAt": "2026-10-31T11:09:14.472220+00:00",
+    "imageViewed": true,
+    "file": "references/ihme-tuileries-loistoaika-v2.jpg",
+    "originalLocalPath": "output/ihmeet-loistoaika-v2/13-16/final-jpg/ihme-tuileries-loistoaika-v2.jpg",
+    "historicalManifest": "output/mailbox-photo-policy-20260912/posti/history-82-caption-source-package.json",
+    "historicalManifestSha256": "0c1ea788b6541f391db9f5a91287da906eb33f2a4622a1084cb205719f5968c9",
+    "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+    "gitBlobSha1ComputedFromBytes": "c21d250a133aa9cb850865302fdfa63018ba72eb",
+    "gitBlobPresenceConfirmed": false,
+    "bytes": 825207,
+    "format": "JPEG",
+    "size": [
+      1536,
+      1024
+    ],
+    "aspectRatio": "3:2 landscape",
+    "mode": "RGB",
+    "colored": true,
+    "embeddedICCBytes": 0,
+    "colorSpaceDeclaredByHistoricalManifest": "sRGB IEC61966-2.1",
+    "colorProfileNote": "The historical manifest declares sRGB, but these exact JPEG bytes have no embedded ICC profile. Do not claim that the original contains one.",
+    "liveMain": {
+      "ref": "0ac9a46250f77c131064d9622e9496abe8a35d52",
+      "exactRepoPath": "assets/kartat/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+      "exactPathResult": 404,
+      "directoryEntries": 104,
+      "exactFilenamePresent": false,
+      "relatedExistingFile": {
+        "path": "assets/kartat/ihmeet/ihme-tuileries.webp",
+        "blob": "c5e633a819f355bcc9ab19142fbe8a5128c512f2"
+      },
+      "codeSearchResultCount": 0
+    },
+    "r2Readback": [
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444915954017000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444916364947000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      }
+    ],
+    "style": "Colored photorealistic historical reconstruction, natural warm muted light, period people carrying out a small story within a detailed architectural setting. Full rectangular scene without illustration outlines, transparency, vignette border or aged-paper effect.",
+    "deliveryPractice": {
+      "bucket": "matkakirja",
+      "objectKeyTemplate": "kohtaamiset/ihmeet/ihme-<id>-loistoaika.jpg",
+      "repoCopyTemplate": "assets/kartat/ihmeet/ihme-<id>-loistoaika.jpg",
+      "mime": "image/jpeg",
+      "canonicalBase": "https://media.matkakirja.app/",
+      "workingUploader": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/tools/upload_r2.py",
+      "workingReceipt": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/R2-RECEIPTS.json",
+      "workingReceiptVerifiedCount": 6,
+      "jpegUploaderReference": "output/fable-20260924/upload-r2-verified.mjs",
+      "wrangler": "sites/matkakirjan-kuvat/node_modules/.bin/wrangler",
+      "configReference": "output/color-audit-bukarest/final/wrangler.json",
+      "steps": [
+        "Require exact image QA and local hash first",
+        "GET canonical object before upload; accept already-identical object, upload only absent object, stop on differing existing bytes",
+        "Wrangler remote object put with exact key and image/jpeg MIME",
+        "GET full object using Origin https://matkakirja.app and cache-busting SHA query",
+        "Require HTTP200, exact bytes and SHA256, image/jpeg MIME and allowed CORS",
+        "Record immutable receipt; keep recipient acceptance/integration separate"
+      ],
+      "adaptationNeeded": "These old uploaders are task-specific: adapt QA/state paths, item key, MIME and existing-key policy; do not execute unmodified. The older JPEG uploader has a restrictive key whitelist, old workspace path and requires embedded ICC, whereas the exact B reference has no embedded ICC.",
+      "executedDuringDiscovery": false
+    },
+    "networkNote": "Python urllib received HTTP403; established curl GET method succeeded with identical bytes on canonical media and known public bucket, both plain and cache-busted URLs. No authentication secrets accessed or printed.",
+    "externalWrites": false,
+    "generationPerformed": false
+  },
+  "AReferences": [
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-notre-dame.webp",
+      "blobSha": "cbabbe4717d5487da9bfc38337df81a1b7a00bbf",
+      "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73"
+    },
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-tuileries.webp",
+      "blobSha": "eb8a0dada89dc7113a4ae7628d182d29b519b41a",
+      "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52"
+    }
+  ]
+}
