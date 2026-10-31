@@ -15,6 +15,9 @@ muu tila ennallaan (kohdat 1–6 edellisestä luovutuksesta alla).
 - Kuvapari PT:lle lähetetty 22.04 (jonossa): `pariisi-pohja/koepala/r3-c4-g2-v2-vs-G.jpg`.
 - SEURAAVA: v3 (alla) → PT:n kuittaus → koko kaupunki renderoi-g2.py:llä. renderoi-g-laatat.py kutsuu vielä
   renderoi-g.py:tä: vaihda skriptiksi renderoi-g2.py ja poista -I, sitten 55 laattaa (4 rinnakkain), kokoa-g.py. Talomassat yhä laattamaisia.
+- **CODEXIN 9 MAAMERKKIÄ 184ecedad** (posti, SHA256 9/9 täsmää; ei vielä kytketty). Kuvat vain postin commitissa:
+  `git show 184ecedad:proto-3d/_tyo/codex/pariisi-spritet/maamerkki-<nimi>.png`, ankkurit posti/codex-pariisi-spritet-
+  maamerkit-20261031/manifest.json. Kytke kokoa-g.py:llä v3-koepalaan (ilman G_MAAMERKIT=1). Hahmoerä tulossa.
 
 ## PT:N PALAUTE v2:STA (22.1x): TEE v3 ENNEN KOKO KAUPUNKIA
 Korjaukset (katot, korttelien yleistys ja korkeus ×1,5, isot puut, laiturimuurit, lämpimät julkisivut ja vahva muste):
@@ -56,4 +59,3 @@ Kaikki tiedostot ovat kansiossa `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/
 6. **Valmis-ehto** (PT): webin ja natiivin PR:t, NS yhdistää junaan, ja KK:lle kuvapari pelistä G-kuvan rinnalla samasta kulmasta.
 ## Muut avoimet
 - NS:n muistimittaus juoksupelin haarasta 9287cb95e. Koe D iPadilla, kun LT ilmoittaa iPadin vapaaksi.
-- Worktreet: wt/proto-karttaseppa-piirros-pariisi (natiivi) ja wt/karttaseppa-pariisi-piirros (web). Muut ihme-worktreet on poistettu.
