@@ -5253,6 +5253,20 @@ export const KAUPUNKIKARTAT = {
   },
   pariisi: {
     polku: 'assets/kartat/pariisi-keskusta.png',
+    /*
+     * PIIRROSKARTTA (omistaja 31.10.2026: 19.40 G-tyyli "Hyvä. Tee nyt koko kaupunki noin.", 19.52 "Tehkää Pariisi
+     * valmiiksi"; PT). Koko Pariisi G-tyylisenä piirroksena kiinteästä kulmasta (pohjoinen ylös, kallistus 58,2°):
+     * maanpinnalla x on lineaarinen pituuspiirissä ja y leveyspiirissä, joten merkit asettuvat tavalliseen tapaan
+     * piirtoRajoista; kuvan pystysuunta on 0,85-kertainen (pystykerroin). Miniatyyrit piilossa (piirros näyttää
+     * rakennukset), nimiöt, napautus ja ihmetähdet jäävät (PT 20.5x). Pohja ja kokoaja: proto-3d/_tyo/karttaseppa/
+     * pariisi-pohja/ (Karttaseppä); natiivi levittää samat palat 3D-kartan päälle (PiirrosKerros.cs).
+     */
+    piirroskartta: {
+      polku: 'assets/kartat/piirroskartta/pariisi-piirros.webp',
+      piirtoRajat: { pohjoinen: 48.905348, etela: 48.801845, lansi: 2.221391, ita: 2.504519 },
+      pystykerroin: 0.85,
+      lahde: '© OpenStreetMap-tekijät (ODbL) · piirros: Matkakirja',
+    },
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     // Värikartta satelliitin tilalle (omistajan päätös 15.8.2026,
     // ks. berliini alla): sama juliste samalta piirtoRajat-alueelta.
@@ -21908,9 +21922,9 @@ export function karttapiste(kartta, lat, lon) {
  * kapenevat pohjoiseen, joten venytys otetaan rajauksen
  * keskileveydeltä.
  */
-export function karttaKuvasuhde(rajat) {
+export function karttaKuvasuhde(rajat, pystykerroin = 1) {
   const venytys = 1 / Math.cos(((rajat.pohjoinen + rajat.etela) / 2) * (Math.PI / 180));
-  return (rajat.ita - rajat.lansi) / ((rajat.pohjoinen - rajat.etela) * venytys);
+  return (rajat.ita - rajat.lansi) / ((rajat.pohjoinen - rajat.etela) * venytys * pystykerroin);
 }
 
 export function ydinAla(kartta) {

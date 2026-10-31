@@ -1,0 +1,207 @@
+{
+ "laatta_px": 2048,
+ "laatat": [
+  {
+   "r": 0,
+   "c": 0,
+   "pikselit": [
+    0,
+    0,
+    2048,
+    2048
+   ]
+  },
+  {
+   "r": 0,
+   "c": 1,
+   "pikselit": [
+    2048,
+    0,
+    4096,
+    2048
+   ]
+  },
+  {
+   "r": 0,
+   "c": 2,
+   "pikselit": [
+    4096,
+    0,
+    6144,
+    2048
+   ]
+  },
+  {
+   "r": 0,
+   "c": 3,
+   "pikselit": [
+    6144,
+    0,
+    8192,
+    2048
+   ]
+  },
+  {
+   "r": 0,
+   "c": 4,
+   "pikselit": [
+    8192,
+    0,
+    10240,
+    2048
+   ]
+  },
+  {
+   "r": 0,
+   "c": 5,
+   "pikselit": [
+    10240,
+    0,
+    10368,
+    2048
+   ]
+  },
+  {
+   "r": 1,
+   "c": 0,
+   "pikselit": [
+    0,
+    2048,
+    2048,
+    4096
+   ]
+  },
+  {
+   "r": 1,
+   "c": 1,
+   "pikselit": [
+    2048,
+    2048,
+    4096,
+    4096
+   ]
+  },
+  {
+   "r": 1,
+   "c": 2,
+   "pikselit": [
+    4096,
+    2048,
+    6144,
+    4096
+   ]
+  },
+  {
+   "r": 1,
+   "c": 3,
+   "pikselit": [
+    6144,
+    2048,
+    8192,
+    4096
+   ]
+  },
+  {
+   "r": 1,
+   "c": 4,
+   "pikselit": [
+    8192,
+    2048,
+    10240,
+    4096
+   ]
+  },
+  {
+   "r": 1,
+   "c": 5,
+   "pikselit": [
+    10240,
+    2048,
+    10368,
+    4096
+   ]
+  },
+  {
+   "r": 2,
+   "c": 0,
+   "pikselit": [
+    0,
+    4096,
+    2048,
+    4864
+   ]
+  },
+  {
+   "r": 2,
+   "c": 1,
+   "pikselit": [
+    2048,
+    4096,
+    4096,
+    4864
+   ]
+  },
+  {
+   "r": 2,
+   "c": 2,
+   "pikselit": [
+    4096,
+    4096,
+    6144,
+    4864
+   ]
+  },
+  {
+   "r": 2,
+   "c": 3,
+   "pikselit": [
+    6144,
+    4096,
+    8192,
+    4864
+   ]
+  },
+  {
+   "r": 2,
+   "c": 4,
+   "pikselit": [
+    8192,
+    4096,
+    10240,
+    4864
+   ]
+  },
+  {
+   "r": 2,
+   "c": 5,
+   "pikselit": [
+    10240,
+    4096,
+    10368,
+    4864
+   ]
+  }
+ ],
+ "kangas_px": [
+  10368,
+  4864
+ ],
+ "rajat_maanpinta": {
+  "pohjoinen": 48.905348,
+  "etela": 48.801845,
+  "lansi": 2.221391,
+  "ita": 2.504519
+ },
+ "kamera": {
+  "katsesuunta_ENU": [
+   0.0,
+   0.5269,
+   -0.8499
+  ],
+  "suunta_astetta": 0.0,
+  "kallistus_astetta": -58.2,
+  "huom": "Piirros näkyy oikein vain tästä suunnasta (suunta pohjoisesta itään, kallistus alaspäin). Natiivissa kapea näkökenttä tai ortografinen kamera; muissa kulmissa piirros häivytetään (omistaja 17.43)."
+ },
+ "korkeuskerroin": 0.527,
+ "s_m_per_px": 2.0
+}
