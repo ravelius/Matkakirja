@@ -3,6 +3,12 @@
 Vain voimassa oleva tila. Historia: /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna214/jono-214.txt (loppu = uusin).
 Id:t: /Users/Shared/Claude/osoitekirja.md. Levy ~110 Gi; laitekäännökset sallittu, yksi Unity kerrallaan (PT).
 
+## JÄRJESTYS (PT 02.1x)
+1. **Palatsin muistityö** (PT:n ykkösvika): huippu nyt 4494 Mt (kuja 02) / 4748 (aukio), tavoite > 1 Gt marginaali katosta 5,12 Gt.
+   Seuraavat askeleet: kartan kuvien vapautus juoksun ajaksi (KS 9287cb95e) ja LOD2:n purku (PK a045ae1d9) → KL-äpin mittaus (alla).
+   Kuittaukset junaan 216 (ehdolla, VS:n leivontavarmistus): PK kuvajako 06ef29f9b ja VS valopakkaus b7b91e20c / be9b9b96a.
+2. KS:n koe D -äppi (koehaara ks-fps-d-216 51415e442) muistiajon jälkeen.
+
 ## TILA
 - **Juna 216 runko natiiviseppa/juna-216 = 1c380e352** (6677eaaa6 + PK portaat-a3a5 be1597494), testit VIHREÄT 2217/777/575, peilissä,
   PT:lle ilmoitettu. iPad-äppi lokit/natiiviseppa-app-216-portaat.
