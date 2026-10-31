@@ -568,6 +568,12 @@ const KAUPUNGIT = {
         rajat: { pohjoinen: 51.5372, etela: 51.5262, lansi: -0.1875, ita: -0.1665 },
         x: 20, y: 23, leveys: 11, suunta: '5 km luoteeseen',
       },
+      // GREENWICHIN PALATSIN KAINALO (PT 31.10.2026, kadonneet ihmeet): Placentia (nyk. Old Royal Naval College,
+      // 51.4827, -0.0068) on rajauksen kaakkoispuolella. Oikea alakulma Rotherhithen kohdalla; ruudussa ei kohteita.
+      {
+        rajat: { pohjoinen: 51.4865, etela: 51.4785, lansi: -0.0150, ita: 0.0020 },
+        x: 68, y: 60, leveys: 11, suunta: '8 km itään',
+      },
     ],
   },
   rooma: {

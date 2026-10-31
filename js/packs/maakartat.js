@@ -5282,6 +5282,18 @@ export const KAUPUNKIKARTAT = {
       + 'vihittiin 1919. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-grand-chatelet
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Grand Châtelet', lat: 48.8578, lon: 2.3472, wiki: 'Grand Châtelet', nosto: 'hahmotelma-grand-chatelet' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-temple-torni
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Temple-torni', lat: 48.8652, lon: 2.3605, wiki: 'Tour du Temple', nosto: 'hahmotelma-temple-torni' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-palais-orsay
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Palais d\'Orsay', lat: 48.8598, lon: 2.3262, wiki: 'Palais d\'Orsay', nosto: 'hahmotelma-palais-orsay' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-palais-industrie
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Palais de l\'Industrie', lat: 48.8664, lon: 2.3127, wiki: 'Palais de l\'Industrie', nosto: 'hahmotelma-palais-industrie' },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-trocadero
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Trocadéron palatsi', lat: 48.862, lon: 2.2885, wiki: 'Palais du Trocadéro', nosto: 'hahmotelma-trocadero' },
@@ -5969,6 +5981,9 @@ export const KAUPUNKIKARTAT = {
     kainalot: [
       { rajat: { pohjoinen: 51.5372, etela: 51.5262, lansi: -0.1875, ita: -0.1665 },
         x: 20, y: 23, leveys: 11, korkeus: 17.71 },
+      // Greenwichin palatsin kainalo (PT 31.10.2026, kadonneet ihmeet; tools/piirra-kaupunkikartta.mjs lontoo).
+      { rajat: { pohjoinen: 51.4865, etela: 51.4785, lansi: -0.015, ita: 0.002 },
+        x: 68, y: 60, leveys: 11, korkeus: 15.91 },
     ],
     esittely: 'Kartan alue on Lontoon ydin Thamesin molemmin puolin. Lännessä Westminsterin '
       + 'kohteita ovat Buckinghamin palatsi, Trafalgar Square, Big Ben ja joen vastarannalla '
@@ -5979,6 +5994,15 @@ export const KAUPUNKIKARTAT = {
       + 'St Mary\'s -sairaalassa 1928 homeen tappavan bakteereja, ja siitä syntyi '
       + 'penisilliini. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-greenwich-palatsi
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Greenwichin palatsi', lat: 51.4828, lon: -0.0067, wiki: 'Palace of Placentia', nosto: 'hahmotelma-greenwich-palatsi' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-newgate
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Newgaten vankila', lat: 51.5157, lon: -0.1019, wiki: 'Newgate Prison', nosto: 'hahmotelma-newgate' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-euston-arch
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Euston Arch', lat: 51.5272, lon: -0.1335, wiki: 'Euston Arch', nosto: 'hahmotelma-euston-arch' },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-westminster-vanha
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, wiki: 'Old Palace of Westminster', nosto: 'hahmotelma-westminster-vanha' },
@@ -6657,6 +6681,9 @@ export const KAUPUNKIKARTAT = {
       + 'ja ne valmistuivat 1725. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-septizodium
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Septizodium', lat: 41.8866, lon: 12.4891, wiki: 'Septizodium', nosto: 'hahmotelma-septizodium' },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-capitolium
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Jupiterin temppeli', lat: 41.8925, lon: 12.4814, wiki: 'Temple of Jupiter Optimus Maximus', nosto: 'hahmotelma-capitolium' },
@@ -6875,6 +6902,12 @@ export const KAUPUNKIKARTAT = {
       + 'tiedekeskus avattiin Veikselin rannalla 2010. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-nevski-varsova
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Aleksanteri Nevskin katedraali', lat: 52.2403, lon: 21.0127, wiki: 'Alexander Nevsky Cathedral, Warsaw', nosto: 'hahmotelma-nevski-varsova' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-suuri-synagoga-varsova
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Varsovan suuri synagoga', lat: 52.2443, lon: 21.0007, wiki: 'Great Synagogue (Warsaw)', nosto: 'hahmotelma-suuri-synagoga-varsova' },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-saksin-palatsi
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Saksin palatsi', lat: 52.2413, lon: 21.011, wiki: 'Saxon Palace', nosto: 'hahmotelma-saksin-palatsi' },

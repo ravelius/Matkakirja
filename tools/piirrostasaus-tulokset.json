@@ -1,5 +1,173 @@
 {
  "pariisi": {
+  "Grand Châtelet": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-grand-chatelet.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-grand-chatelet-kk.webp",
+   "sha": "fbbfd1830c09a34a",
+   "ennen": {
+    "musta": 0.28,
+    "valko": 0.889,
+    "keski": 0.615,
+    "kroma": 0.169
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.232
+   },
+   "kertoimet": {
+    "tasot": [
+     0.28,
+     0.889,
+     0.368,
+     0.853
+    ],
+    "gamma": 1.174,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.408,
+     "alfa": "877c59e3d536c1e9"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.408,
+     "alfa": "877c59e3d536c1e9"
+    }
+   },
+   "koko": 0.63
+  },
+  "Temple-torni": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-temple-torni.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-temple-torni-kk.webp",
+   "sha": "53e0f6431bff3ff0",
+   "ennen": {
+    "musta": 0.256,
+    "valko": 0.887,
+    "keski": 0.612,
+    "kroma": 0.173
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.231
+   },
+   "kertoimet": {
+    "tasot": [
+     0.256,
+     0.887,
+     0.369,
+     0.853
+    ],
+    "gamma": 1.232,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.26,
+     "alfa": "db8b469f5040b491"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.26,
+     "alfa": "db8b469f5040b491"
+    }
+   },
+   "koko": 0.789
+  },
+  "Palais d'Orsay": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-palais-dorsay.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-palais-dorsay-kk.webp",
+   "sha": "2c213698f9178231",
+   "ennen": {
+    "musta": 0.274,
+    "valko": 0.871,
+    "keski": 0.633,
+    "kroma": 0.163
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.224
+   },
+   "kertoimet": {
+    "tasot": [
+     0.274,
+     0.871,
+     0.374,
+     0.859
+    ],
+    "gamma": 1.573,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.21,
+     "alfa": "be683741127ed5ee"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.21,
+     "alfa": "be683741127ed5ee"
+    }
+   },
+   "koko": 0.878
+  },
+  "Palais de l'Industrie": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-palais-de-lindustrie.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-palais-de-lindustrie-kk.webp",
+   "sha": "2e15059af50aa97f",
+   "ennen": {
+    "musta": 0.418,
+    "valko": 0.836,
+    "keski": 0.651,
+    "kroma": 0.124
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.186
+   },
+   "kertoimet": {
+    "tasot": [
+     0.418,
+     0.836,
+     0.371,
+     0.855
+    ],
+    "gamma": 1.282,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.189,
+     "alfa": "00a8ed6940a77f9d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.189,
+     "alfa": "00a8ed6940a77f9d"
+    }
+   },
+   "koko": 0.9
+  },
   "Trocadéron palatsi": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-trocaderon-palatsi.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-trocaderon-palatsi-kk.webp",
@@ -716,6 +884,48 @@
   }
  },
  "rooma": {
+  "Septizodium": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-septizodium.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-septizodium-kk.webp",
+   "sha": "81b70124a79058b5",
+   "ennen": {
+    "musta": 0.287,
+    "valko": 0.91,
+    "keski": 0.625,
+    "kroma": 0.216
+   },
+   "jalkeen": {
+    "musta": 0.358,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.287,
+     0.91,
+     0.368,
+     0.853
+    ],
+    "gamma": 1.169,
+    "kylläisyys": 1.336
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.352,
+     "alfa": "9c06171bb77a06d1"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.352,
+     "alfa": "9c06171bb77a06d1"
+    }
+   },
+   "koko": 0.678
+  },
   "Jupiterin temppeli": {
    "lahde": "assets/kartat/miniatyyrit/rooma-jupiterin-temppeli.webp",
    "kuva": "assets/kartat/miniatyyrit/rooma-jupiterin-temppeli-kk.webp",
@@ -1180,6 +1390,132 @@
   }
  },
  "lontoo": {
+  "Greenwichin palatsi": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi-kk.webp",
+   "sha": "744cea3ce473fe02",
+   "ennen": {
+    "musta": 0.355,
+    "valko": 0.863,
+    "keski": 0.551,
+    "kroma": 0.241
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.595,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.355,
+     0.863,
+     0.287,
+     0.841
+    ],
+    "gamma": 0.55,
+    "kylläisyys": 0.999
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.21,
+     "alfa": "d73009c64588954e"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.21,
+     "alfa": "d73009c64588954e"
+    }
+   },
+   "koko": 0.878
+  },
+  "Newgaten vankila": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-newgaten-vankila.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-newgaten-vankila-kk.webp",
+   "sha": "a1a8e0b1e93f9cf5",
+   "ennen": {
+    "musta": 0.29,
+    "valko": 0.842,
+    "keski": 0.592,
+    "kroma": 0.147
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.218
+   },
+   "kertoimet": {
+    "tasot": [
+     0.29,
+     0.842,
+     0.371,
+     0.856
+    ],
+    "gamma": 1.239,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.272,
+     "alfa": "8e13276985e19c12"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.272,
+     "alfa": "8e13276985e19c12"
+    }
+   },
+   "koko": 0.772
+  },
+  "Euston Arch": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-euston-arch.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-euston-arch-kk.webp",
+   "sha": "dd661998d17f3f38",
+   "ennen": {
+    "musta": 0.254,
+    "valko": 0.886,
+    "keski": 0.642,
+    "kroma": 0.195
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.254,
+     0.886,
+     0.378,
+     0.854
+    ],
+    "gamma": 1.554,
+    "kylläisyys": 1.572
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.238,
+     "alfa": "e5854d28cade6d89"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.238,
+     "alfa": "e5854d28cade6d89"
+    }
+   },
+   "koko": 0.825
+  },
   "Vanha Westminsterin palatsi": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-vanha-westminsterin-palatsi.webp",
    "kuva": "assets/kartat/miniatyyrit/lontoo-vanha-westminsterin-palatsi-kk.webp",
@@ -13394,6 +13730,90 @@
   }
  },
  "varsova": {
+  "Aleksanteri Nevskin katedraali": {
+   "lahde": "assets/kartat/miniatyyrit/varsova-aleksanteri-nevskin-katedraali.webp",
+   "kuva": "assets/kartat/miniatyyrit/varsova-aleksanteri-nevskin-katedraali-kk.webp",
+   "sha": "8ad7c7ec455e3ccf",
+   "ennen": {
+    "musta": 0.207,
+    "valko": 0.878,
+    "keski": 0.636,
+    "kroma": 0.175
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.207,
+     0.878,
+     0.372,
+     0.854
+    ],
+    "gamma": 1.644,
+    "kylläisyys": 1.9
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.419,
+     "alfa": "96382684811e28c6"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.419,
+     "alfa": "96382684811e28c6"
+    }
+   },
+   "koko": 0.622
+  },
+  "Varsovan suuri synagoga": {
+   "lahde": "assets/kartat/miniatyyrit/varsova-suuri-synagoga.webp",
+   "kuva": "assets/kartat/miniatyyrit/varsova-suuri-synagoga-kk.webp",
+   "sha": "924bbea701a60304",
+   "ennen": {
+    "musta": 0.226,
+    "valko": 0.884,
+    "keski": 0.637,
+    "kroma": 0.149
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.224
+   },
+   "kertoimet": {
+    "tasot": [
+     0.226,
+     0.884,
+     0.371,
+     0.852
+    ],
+    "gamma": 1.566,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.464,
+     "alfa": "aecbeb946d94a2c0"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "taytto": 0.464,
+     "alfa": "aecbeb946d94a2c0"
+    }
+   },
+   "koko": 0.591
+  },
   "Saksin palatsi": {
    "lahde": "assets/kartat/miniatyyrit/varsova-saksin-palatsi.webp",
    "kuva": "assets/kartat/miniatyyrit/varsova-saksin-palatsi-kk.webp",

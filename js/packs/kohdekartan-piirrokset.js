@@ -601,6 +601,9 @@
     "Lohikäärmesilta": "assets/kartat/miniatyyrit/ljubljana-lohikaarmesilta-kk.webp",
   },
   "lontoo": {
+    "Greenwichin palatsi": "assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi-kk.webp",
+    "Newgaten vankila": "assets/kartat/miniatyyrit/lontoo-newgaten-vankila-kk.webp",
+    "Euston Arch": "assets/kartat/miniatyyrit/lontoo-euston-arch-kk.webp",
     "Vanha Westminsterin palatsi": "assets/kartat/miniatyyrit/lontoo-vanha-westminsterin-palatsi-kk.webp",
     "Whitehallin palatsi": "assets/kartat/miniatyyrit/lontoo-whitehallin-palatsi-kk.webp",
     "Buckinghamin palatsi": "assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi-kk.webp",
@@ -797,6 +800,10 @@
     "Akershus": "assets/kartat/miniatyyrit/oslo-akershus-kk.webp",
   },
   "pariisi": {
+    "Grand Châtelet": "assets/kartat/miniatyyrit/pariisi-grand-chatelet-kk.webp",
+    "Temple-torni": "assets/kartat/miniatyyrit/pariisi-temple-torni-kk.webp",
+    "Palais d'Orsay": "assets/kartat/miniatyyrit/pariisi-palais-dorsay-kk.webp",
+    "Palais de l'Industrie": "assets/kartat/miniatyyrit/pariisi-palais-de-lindustrie-kk.webp",
     "Trocadéron palatsi": "assets/kartat/miniatyyrit/pariisi-trocaderon-palatsi-kk.webp",
     "Galerie des Machines": "assets/kartat/miniatyyrit/pariisi-galerie-des-machines-kk.webp",
     "Les Hallesin hallit": "assets/kartat/miniatyyrit/pariisi-les-hallesin-hallit-kk.webp",
@@ -903,6 +910,7 @@
     "Passeio Público": "assets/kartat/miniatyyrit/rio-passeio-publico-vari2-kk.webp",
   },
   "rooma": {
+    "Septizodium": "assets/kartat/miniatyyrit/rooma-septizodium-kk.webp",
     "Jupiterin temppeli": "assets/kartat/miniatyyrit/rooma-jupiterin-temppeli-kk.webp",
     "Pietarinkirkko": "assets/kartat/miniatyyrit/rooma-pietarinkirkko-kk.webp",
     "Castel Sant’Angelo": "assets/kartat/miniatyyrit/rooma-castel-santangelo-kk.webp",
@@ -1146,6 +1154,8 @@
     "Ramnagarin linnoitus": "assets/kartat/miniatyyrit/varanasi-ramnagarin-linnoitus-vari2-kk.webp",
   },
   "varsova": {
+    "Aleksanteri Nevskin katedraali": "assets/kartat/miniatyyrit/varsova-aleksanteri-nevskin-katedraali-kk.webp",
+    "Varsovan suuri synagoga": "assets/kartat/miniatyyrit/varsova-suuri-synagoga-kk.webp",
     "Saksin palatsi": "assets/kartat/miniatyyrit/varsova-saksin-palatsi-kk.webp",
     "Vanhankaupungin tori": "assets/kartat/miniatyyrit/varsova-vanhankaupungin-tori-kk.webp",
     "Varsovan linna": "assets/kartat/miniatyyrit/varsova-varsovan-linna-kk.webp",

@@ -102,6 +102,126 @@ const rappeutunutKohde = ({
 export const EUROOPAN_KADONNEET = {
   FRA: [
     ihmeKohde({
+      id: 'grand-chatelet',
+      nimi: 'Grand Châtelet',
+      kysymykset: ['Mikä kulki Grand Châtelet\'n rakennuksen alta?', 'Mitä Grand Châtelet\'n paikalla on?'],
+      korostukset: ['prévôt|prévôtin', 'Rue Saint-Denis|Rue Saint-Denis'],
+      nappi: 'Linnake, jonka läpi kulki katu',
+      laudat: { maailmankartta: { x: 5911.6, y: 1439.6 }, europe: { x: 256.3, y: 608.6 } },
+      teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla, jonka Ludvig VI '
+        + 'rakennutti kiveksi noin 1130. Philippe Auguste rakennutti kaupungin muurin 1190, ja linnakkeesta '
+        + 'tuli Pariisin prévôtin oikeudenkäytön ja poliisin pääpaikka. Ludvig XIV rakennutti rakennuksen '
+        + 'lähes kokonaan uudelleen 1684. Rue Saint-Denis kulki rakennuksen alta: idässä oli vankila, '
+        + 'lännessä tuomareiden salit ja kaupungin ruumishuone. Vankeina olivat muun muassa François '
+        + 'Villon, Molière ja rosvo Cartouche. Seudulla haisi läheisten teurastamojen veri, ja viemärivesi '
+        + 'virtasi Seineen. Prévôtin virka lakkautettiin 1790, ja linnake purettiin 1802–1810. Paikalle '
+        + 'tuli Place du Châtelet, jonka vierellä Théâtre du Châtelet avattiin 1862.',
+      lahde: 'en-Wikipedia "Grand Châtelet", johdanto ja osiot "History" ja "Demolition"; fr-Wikipedia "Grand '
+        + 'Châtelet", osiot "Histoire" ja "Prisons" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-grand-chatelet-loistoaika.jpg',
+      lyhyt: 'Kärryt ja kulkijat tunkevat Rue Saint-Denisin kautta Grand Châtelet\'n holvin alta, ja ilma '
+        + 'haisee läheisten teurastamoiden verestä; reilut viisikymmentä vuotta myöhemmin purku alkaa.',
+      selite: 'Noin vuonna 1750 kuormat, kantajat ja kauppiaat tunkevat Rue Saint-Denisiä pitkin Grand '
+        + 'Châtelet\'n rakennuksen alta, ja ilma haisee teurastamoiden verestä ja Seineen virtaavasta '
+        + 'viemärivedestä. Rakennuksen itäpuolella on vankila, länsipuolella tuomioistuin, ja kulkijat '
+        + 'ohittavat molemmat nopeasti. Prévôtin virka lakkautetaan 1790, ja linnake puretaan 1802–1810.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1750). Faktat: en- ja '
+        + 'fr-Wikipedia "Grand Châtelet", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Grand_Ch%C3%A2telet',
+    }),
+    ihmeKohde({
+      id: 'temple-torni',
+      nimi: 'Temple-torni',
+      kysymykset: ['Miksi Napoleon määräsi Temple-tornin purettavaksi?', 'Mitä Temple-tornin paikalla on?'],
+      korostukset: ['temppeliritari|temppeliritarien', 'kuningasperhe|kuningasperheen'],
+      nappi: 'Torni, jonka Napoleon käski purkaa',
+      laudat: { maailmankartta: { x: 5912.0, y: 1439.2 }, europe: { x: 256.5, y: 608.4 } },
+      teksti: 'Temple-torni eli Grosse Tour oli temppeliritarien Pariisin päämajan linnoitustorni, jonka '
+        + 'rakentaminen alkoi 1240 Ludvig Pyhän aikana. Torni oli noin 50 metriä korkea, sen muurit olivat '
+        + 'keskimäärin neljä metriä paksut, ja kulmissa oli neljä pienempää tornia. Temppeliritarikunta '
+        + 'lakkautettiin 1312. Elokuun 13. päivänä 1792 Pariisin kommuuni vei kuningasperheen Templeen; '
+        + 'Ludvig XVI lähti sieltä giljotiinille 21. tammikuuta 1793. Hänen poikansa Ludvig XVII kuoli '
+        + 'Templessä 8. kesäkuuta 1795 kymmenvuotiaana. Napoleon määräsi tornin purettavaksi 1808 '
+        + 'estääkseen rojalistien pyhiinvaellukset, ja purku kesti kaksi vuotta. Tornin paikasta osa on '
+        + 'nykyisin Square du Temple -puistoa.',
+      lahde: 'en-Wikipedia "Tour du Temple", johdanto ja osiot "Origins", "Royal imprisonment" ja '
+        + '"Demolition"; fr-Wikipedia "Tour du Temple", osiot "Histoire" ja "Prison" (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-temple-torni-loistoaika.jpg',
+      lyhyt: 'Temppeliritari ylittää linnoituksen pihan jättitornin varjossa, ja neljä kulmatornia kohoavat '
+        + 'taivasta vasten; yli viisisataa vuotta myöhemmin tornista tulee kuningasperheen vankila.',
+      selite: 'Noin vuonna 1260 temppeliritari ylittää Templen pihan, jonka yläpuolella kohoaa noin 50 metrin '
+        + 'torni, jonka kulmissa on neljä pienempää tornia. Neljän metrin paksuiset muurit tekevät siitä '
+        + 'varman paikan ritarikunnan päämajalle. Hänen kannuksensa kilahtavat kivipihaa vasten. Vuonna '
+        + '1792 kuningasperhe viedään Templeen vangiksi, ja Napoleon käskee 1808 purkaa tornin, jottei '
+        + 'siitä tule kuninkaanmuiston pyhiinvaelluskohdetta.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1260). Faktat: en- ja '
+        + 'fr-Wikipedia "Tour du Temple", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Tour_du_Temple',
+    }),
+    ihmeKohde({
+      id: 'palais-orsay',
+      nimi: 'Palais d\'Orsay',
+      nimio: 'Orsayn palatsi',
+      kysymykset: ['Kuka sytytti Palais d\'Orsayn tuleen vuonna 1871?', 'Mikä rakennus nousi palatsin raunioiden tilalle?'],
+      korostukset: ['kommunardi|kommunardit', 'fresko|freskoista'],
+      nappi: 'Palatsi, jonka raunioista tuli asema',
+      laudat: { maailmankartta: { x: 5910.9, y: 1439.5 }, europe: { x: 255.9, y: 608.6 } },
+      teksti: 'Palais d\'Orsay oli Seinen rannalla Quai d\'Orsay\'lla seissyt hallintopalatsi, jonka Napoleon I '
+        + 'aloitti 1810 ja joka valmistui vasta 1838. Arkkitehti Jacques-Charles Bonnard suunnitteli sen, '
+        + 'ja Jacques Lacornée jatkoi työtä. Valtioneuvosto muutti alakertaan 1840 ja '
+        + 'tilintarkastustuomioistuin Cour des comptes ensimmäiseen kerrokseen 1842, ja sen portaikkoon '
+        + 'Théodore Chassériau maalasi freskot. Palatsin sytyttivät tuleen kommunardit yönä 23.–24. '
+        + 'toukokuuta 1871. Rauniot jäivät keskelle Pariisia, ja isoisä näki ne 1873. Vain noin 60 '
+        + 'neliömetriä freskoista säilyi, koska ne jäivät sään armoille 27 vuodeksi. Rauniot purettiin '
+        + 'vuodesta 1898, ja paikalle rakennettiin Gare d\'Orsay vuoden 1900 maailmannäyttelyä varten.',
+      lahde: 'en-Wikipedia "Palais d\'Orsay", johdanto ja osiot "History" ja "Fire"; fr-Wikipedia "Palais '
+        + 'd\'Orsay"; en-Wikipedia "Musée d\'Orsay", johdanto (tarkistettu 31.10.2026).',
+      kuva: 'ihme-palais-orsay-loistoaika.jpg',
+      lyhyt: 'Tilintarkastajat nousevat Chassériaun maalaamaa portaikkoa Seinen rannan palatsissa; reilut '
+        + 'kymmenen vuotta myöhemmin kommunardit sytyttävät palatsin tuleen.',
+      selite: 'Noin vuonna 1860 tilintarkastajat ja valtioneuvoston virkamiehet nousevat Théodore Chassériaun '
+        + 'freskojen koristamaa portaikkoa, ja ikkunoista näkyy Seine. Alakerrassa valtioneuvosto on '
+        + 'istunut vuodesta 1840 ja yläkerrassa tilintarkastustuomioistuin vuodesta 1842, ja käytävillä '
+        + 'kahisevat asiakirjanipput. Toukokuussa 1871 kommunardit sytyttävät rakennuksen, ja rauniot '
+        + 'seisovat Seinen rannalla vuoteen 1898 asti; sitten ne puretaan ja paikalle rakennetaan asema.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1860). Faktat: en- ja '
+        + 'fr-Wikipedia "Palais d\'Orsay", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Palais_d%27Orsay',
+    }),
+    ihmeKohde({
+      id: 'palais-industrie',
+      nimi: 'Palais de l\'Industrie',
+      nimio: 'Teollisuuspalatsi',
+      kysymykset: ['Mitä Palais de l\'Industrien paikalle rakennettiin?', 'Mitä taidenäyttelyä siellä pidettiin vuosittain?'],
+      korostukset: ['Salon|Salon', 'Grand Palais|Grand Palais\'n'],
+      nappi: 'Lasihalli, jonka tilalle tuli Grand Palais',
+      laudat: { maailmankartta: { x: 5910.4, y: 1439.2 }, europe: { x: 255.6, y: 608.4 } },
+      teksti: 'Palais de l\'Industrie oli lasi- ja rautahalli Champs-Élysées\'n varrella, joka rakennettiin '
+        + 'vuoden 1855 Pariisin maailmannäyttelyä varten. Arkkitehti Jean-Marie-Victor Vielin ja insinööri '
+        + 'Alexis Barrault\'n suunnittelema rakennus piilotti rautarakenteensa kivijulkisivun taakse, ja sen '
+        + 'päälaiva oli 190 metriä pitkä ja 48 metriä leveä. Halli ei ollut valmis avajaisissa, ja huono '
+        + 'ilmanvaihto teki siitä päivisin tukalan. Kirjailija Octave Mirbeau vertasi sitä härkään, joka '
+        + 'tallaa ruusutarhaa. Vuosina 1857–1897 siellä pidettiin vuosittain Salon, ja 1881 ensimmäinen '
+        + 'kansainvälinen sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1896–1897 '
+        + 'Grand Palais\'n tieltä, ja sen rautaa ja kiveä käytettiin Notre-Dame-du-Travail-kirkossa.',
+      lahde: 'en-Wikipedia "Palais de l\'Industrie", johdanto ja osiot "Architecture", "History" ja "Legacy"; '
+        + 'fr-Wikipedia "Palais de l\'Industrie", osiot "Historique" ja "Utilisation" (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-palais-industrie-loistoaika.jpg',
+      lyhyt: 'Salonin vieraat kulkevat taulujen ohi lasikaton alla ja kriitikot voivottelevat rakennuksen '
+        + 'painavuutta; kaksikymmentäneljä vuotta myöhemmin halli on poissa.',
+      selite: 'Vuonna 1873 Salonin vieraat kulkevat rautaisen ja lasisen hallin sisällä taulujen ohi, ja ulkoa '
+        + 'Champs-Élysées\'lle näkyy kivijulkisivu, joka kätkee raudan. Arvostelijat pitävät rakennusta '
+        + 'raskaana, ja lasikaton alla kävijöiden askeleet kaikuvat. Sisäänkäynnin yllä komeilee Élias '
+        + 'Robertin veistosryhmä Ranska kruunaa taiteen ja teollisuuden. Halli puretaan 1896–1897 vuoden '
+        + '1900 maailmannäyttelyn tieltä, ja paikalle nousevat Grand Palais ja Petit Palais.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+        + 'Faktat: en-Wikipedia "Palais de l\'Industrie" ja fr-Wikipedia "Palais de l\'Industrie", '
+        + 'tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Palais_de_l%27Industrie',
+    }),
+    ihmeKohde({
       id: 'trocadero',
       nimi: 'Trocadéron palatsi',
       nimio: 'Trocadéro',
@@ -229,6 +349,37 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   ITA: [
+    ihmeKohde({
+      id: 'septizodium',
+      nimi: 'Septizodium',
+      kysymykset: ['Mitä Septizodiumissa tapahtui elokuussa 1241?', 'Mihin paavi Sixtus V käytti Septizodiumin kivet?'],
+      korostukset: ['Septimius Severus|Septimius Severus', 'kardinaali|kardinaalia'],
+      nappi: 'Julkisivu, josta tuli obeliskin jalusta',
+      laudat: { maailmankartta: { x: 6249.6, y: 1728.1 }, europe: { x: 451.0, y: 792.0 } },
+      teksti: 'Septizodium oli Rooman Palatinus-kukkulan juurella, Via Appian varrella seissyt monumentaalinen '
+        + 'julkisivu, jonka keisari Septimius Severus rakennutti vuonna 203. Se oli noin 90 metriä pitkä ja '
+        + 'kohosi kolmena pylväskerroksena, ja kolmeen puoliympyräsyvennykseen kuhunkin kuului pyöreä '
+        + 'suihkulähde. Jo 700-luvulle mennessä se oli rapistunut, ja siitä tehtiin paronien linnake. '
+        + 'Elokuussa 1241 yksitoista kardinaalia kokoontui Septizodiumiin valitsemaan paavia; vaali oli '
+        + 'niin ankara, että yksi heistä kuoli, ja valittu Selestinus IV kuoli 16 päivää valintansa '
+        + 'jälkeen. Paavi Sixtus V käski Domenico Fontanan purkaa julkisivun 1588–1589, ja kivistä '
+        + 'rakennettiin muun muassa obeliskin jalusta ja Marcus Aureliuksen pylvään korjaus.',
+      lahde: 'en-Wikipedia "Septizodium", johdanto ja osiot "History" sekä "Demolition"; it-Wikipedia '
+        + '"Settizonio", osiot "Descrizione" ja "Storia" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-septizodium-loistoaika.jpg',
+      lyhyt: 'Roomaan saapuva kulkija pysähtyy Palatinuksen juurella katsomaan kolmikerroksista '
+        + 'pylväsjulkisivua, josta vesi valuu suihkulähteisiin; lähes 1 400 vuotta myöhemmin paavi käskee '
+        + 'purkaa sen.',
+      selite: 'Noin vuonna 210 kulkija pysähtyy Palatinuksen juurella ja katsoo ylös kolmikerroksiseen '
+        + 'pylväsjulkisivuun, josta vesi virtaa pyöreisiin suihkulähteisiin. Julkisivu kuuluu keisarin '
+        + 'Domus Severiana -palatsialueelle, ja se on rakennettu näytettäväksi eikä asuttavaksi. '
+        + 'Aamuaurinko osuu pylväskerroksiin, ja varjot piirtävät julkisivuun vaakaraitoja. Keskiajalla '
+        + 'julkisivu muuttuu linnakkeeksi ja 1241 paavinvaalin paikaksi, ja vuonna 1588 paavi Sixtus V '
+        + 'käskee purkaa sen.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 210). Faktat: '
+        + 'en-Wikipedia "Septizodium" ja it-Wikipedia "Settizonio", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Septizodium',
+    }),
     ihmeKohde({
       id: 'capitolium',
       nimi: 'Jupiterin temppeli',
@@ -964,6 +1115,97 @@ export const EUROOPAN_KADONNEET = {
   })],
   GBR: [
     ihmeKohde({
+      id: 'greenwich-palatsi',
+      nimi: 'Greenwichin palatsi',
+      nimio: 'Placentia',
+      kysymykset: ['Ketkä kolme hallitsijaa syntyivät Greenwichin palatsissa?', 'Mikä palatsin aikainen rakennus on yhä pystyssä?'],
+      korostukset: ['Humphrey|Humphrey', 'Queen\'s House|Queen\'s House'],
+      nappi: 'Palatsi, jossa syntyivät Henrik VIII ja Elisabet I',
+      laudat: { maailmankartta: { x: 5833.1, y: 1325.1 }, europe: { x: 211.1, y: 539.6 } },
+      teksti: 'Greenwichin palatsi, tunnetummin Placentia, oli Tudorien kuninkaallinen palatsi Thamesin '
+        + 'rannalla. Humphrey, Gloucesterin herttua, rakennutti sen 1443 nimellä Bella Court, ja Margareta '
+        + 'Anjoulainen antoi sille nimen Placentia. Henrik VII rakennutti palatsin uudelleen 1498–1504. '
+        + 'Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni '
+        + 'täällä naimisiin Anna Clevesiläisen kanssa 1540. Sisällissodassa palatsi rapistui ja toimi '
+        + 'keksitehtaana ja sotavankileirinä. Kaarle II päätti 1660 rakentaa sen uudelleen, mutta vain '
+        + 'itäsiipi valmistui, eikä sitä koskaan asuttu; suurin osa palatsista purettiin. Palatsin alueelle '
+        + 'Inigo Jonesin suunnittelema Queen\'s House valmistui 1635, ja se on yhä pystyssä.',
+      lahde: 'en-Wikipedia "Palace of Placentia", johdanto ja osiot "History" ja "Archaeology"; "Queen\'s '
+        + 'House", osio "Early history" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-greenwich-palatsi-loistoaika.jpg',
+      lyhyt: 'Hovin väki täyttää Thamesin rannan palatsin pihat Henrik VIII:n aikana; reilut sata vuotta '
+        + 'myöhemmin Kaarle II päättää rakentaa palatsin uudelleen, ja suurin osa puretaan.',
+      selite: 'Noin vuonna 1530 palvelijat kantavat ruokaa Henrik VIII:n palatsin saleihin Thamesin rannalla, '
+        + 'ja hovin väki täyttää pihat. Kuningas ja hänen tyttärensä Maria ovat syntyneet täällä; Elisabet '
+        + 'syntyy kolmen vuoden kuluttua. Thamesilta kuuluvat soutajien huudot, kun kuninkaallinen proomu '
+        + 'laskee laituriin. Sisällissodan aikana palatsi rapistuu, Kaarle II käskee uuden rakennuksen, ja '
+        + 'suurin osa vanhasta palatsista puretaan; tontti pysyy tyhjänä vuoteen 1694.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1530). Faktat: '
+        + 'en-Wikipedia "Palace of Placentia", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Palace_of_Placentia',
+    }),
+    ihmeKohde({
+      id: 'newgate',
+      nimi: 'Newgaten vankila',
+      nimio: 'Newgate',
+      kysymykset: ['Milloin Britannian viimeinen julkinen hirtys tehtiin Newgatessa?', 'Mikä rakennus seisoo vankilan paikalla?'],
+      korostukset: ['George Dance nuorempi|George Dance nuorempi', 'Tyburn|Tyburnista'],
+      nappi: 'Vankila, jonka paikalle nousi Old Bailey',
+      laudat: { maailmankartta: { x: 5829.9, y: 1323.6 }, europe: { x: 209.2, y: 538.7 } },
+      teksti: 'Newgaten vankila oli Lontoon vankila, joka perustettiin 1188 Henrik II:n aikana ja toimi vuoteen '
+        + '1902. Nykyisen kivilinnan suunnitteli George Dance nuorempi, ja Gordon-mellakoitsijat tuhosivat '
+        + 'lähes valmiin rakennuksen 1780. Hirttolava siirrettiin Tyburnista Newgateen 1783, ja vuonna 1807 '
+        + 'noin 40 000 hengen yleisö kerääntyi seuraamaan hirtystä; väkijoukon ryntäys tappoi kymmeniä. '
+        + 'Viimeinen julkinen hirtys Britanniassa tehtiin täällä 26. toukokuuta 1868, minkä jälkeen '
+        + 'teloitukset siirtyivät muurien sisälle. Vankila oli käytössä isoisän käydessä 1873, ja Dickens '
+        + 'sijoitti sen useisiin romaaneihinsa. Se purettiin 1902–1904, ja Old Bailey -oikeustalo on '
+        + 'rakennettu suureen osaan sen paikkaa.',
+      lahde: 'en-Wikipedia "Newgate Prison", johdanto sekä osiot "History", "Executions" ja "Closure" '
+        + '(tarkistettu 31.10.2026).',
+      kuva: 'ihme-newgate-loistoaika.jpg',
+      lyhyt: 'Kulkija kiirehtii Newgaten korkean kivimuurin ohi eikä nosta katsettaan, ja Dickensin kuvaama '
+        + 'vankila tuijottaa takaisin; noin kolmekymmentä vuotta myöhemmin se puretaan.',
+      selite: 'Vuonna 1873 lontoolainen kulkee Newgaten korkean kivimuurin ohi eikä nosta katsettaan, sillä '
+        + 'vankila on hänelle yhtä arkinen kuin leipurin ikkuna. Dickensin kirjojen lukijat tuntevat muurit '
+        + 'jo nimeltä, ja julkiset hirtykset on lopetettu viisi vuotta aiemmin. Vankila on ollut paikallaan '
+        + 'lähes seitsemän vuosisataa, ja muurin takaa kuuluu avainten kalina. Vuonna 1902 vankila '
+        + 'suljetaan, se puretaan 1904 mennessä, ja suuri osa paikasta jää Old Baileylle.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+        + 'Faktat: en-Wikipedia "Newgate Prison", osiot "History", "Executions" ja "Closure", tarkistettu '
+        + '31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Newgate_Prison',
+    }),
+    ihmeKohde({
+      id: 'euston-arch',
+      nimi: 'Euston Arch',
+      kysymykset: ['Mistä Euston Archin kivet löytyivät?', 'Paljonko portin purkaminen ja siirtäminen olisivat maksaneet?'],
+      korostukset: ['rautatieyhtiö|rautatieyhtiölle', 'Lea-joki|Lea-joen'],
+      nappi: 'Portti, joka löytyi joen pohjasta',
+      laudat: { maailmankartta: { x: 5828.9, y: 1323.1 }, europe: { x: 208.6, y: 538.4 } },
+      teksti: 'Euston Arch oli Lontoon Euston-aseman 21 metriä korkea doorilainen portti, jonka Philip Hardwick '
+        + 'suunnitteli Lontoon ja Birminghamin rautatieyhtiölle 1837. Neljän pylvään halkaisija oli 2,6 '
+        + 'metriä, hiekkakivi tuotiin Yorkshirestä ja hinnaksi tuli 35 000 puntaa. Yhtiö lisäsi siihen 1870 '
+        + 'kultakirjaimin nimen Euston, joten isoisä näki sen 1873. Vuoden 1851 näyttelyopas piti porttia '
+        + 'jättimäisenä ja varsin älyttömänä. Vuonna 1961 liikenneministeri Ernest Marples arvioi '
+        + 'purkamisen maksavan 12 000 ja siirtämisen 190 000 puntaa, ja pääministeri Harold Macmillan '
+        + 'hylkäsi pelastajien esityksen. Purku alkoi käsin saman vuoden lopulla. Kivet päätyivät Lea-joen '
+        + 'pohjaan, ja Dan Cruickshank löysi vähintään 60 prosenttia niistä 1994.',
+      lahde: 'en-Wikipedia "Euston Arch", johdanto sekä osiot "Architecture and construction", "Removal" ja '
+        + '"Remains" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-euston-arch-loistoaika.jpg',
+      lyhyt: 'Matkustaja pysähtyy neljän doorilaisen pylvään eteen ja lukee kultakirjaimin kirjoitetun nimen '
+        + 'Euston; lähes yhdeksänkymmentä vuotta myöhemmin portti puretaan.',
+      selite: 'Vuonna 1873 matkustaja jää seisomaan Eustonin portin eteen, nostaa katseensa neljän doorilaisen '
+        + 'pylvään yli ja lukee kultakirjaimin kirjoitetun nimen Euston. Portin takana on asema, jonne '
+        + 'junat saapuvat Birminghamista, ja jokainen sinne matkaava kulkee muistomerkin ohi. Höyryveturin '
+        + 'vihellys kaikuu dooristen pylväiden välistä. Vuonna 1961 portti puretaan käsin ilman räjähteitä, '
+        + 'ja sen kivet jäävät joenpohjaan, kunnes ne löydetään 1994.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+        + 'Faktat: en-Wikipedia "Euston Arch", osiot "Architecture and construction", "Removal" ja '
+        + '"Remains", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Euston_Arch',
+    }),
+    ihmeKohde({
       id: 'westminster-vanha',
       nimi: 'Vanha Westminsterin palatsi',
       nimio: 'Vanha Westminster',
@@ -1096,6 +1338,68 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   POL: [
+    ihmeKohde({
+      id: 'nevski-varsova',
+      nimi: 'Aleksanteri Nevskin katedraali',
+      nimio: 'Nevskin katedraali',
+      kysymykset: ['Miksi Aleksanteri Nevskin katedraali purettiin?', 'Kuinka monta räjäytystä purkuun tarvittiin?'],
+      korostukset: ['Leon Benois|Leon Benois\'n', 'kellotorni|kellotorni'],
+      nappi: 'Katedraali, jota purettiin kaksi vuotta',
+      laudat: { maailmankartta: { x: 6533.8, y: 1291.4 }, europe: { x: 614.6, y: 519.7 } },
+      teksti: 'Aleksanteri Nevskin katedraali oli Venäjän keisarikunnan rakennuttama ortodoksinen katedraali '
+        + 'Varsovan Saksin aukiolla. Keisari Aleksanteri III hyväksyi Leon Benois\'n suunnitelman '
+        + 'tammikuussa 1894, perustuskivi laskettiin 30. elokuuta 1894 ja katedraali vihittiin 20. '
+        + 'toukokuuta 1912. Kustannukset nousivat noin 3,1 miljoonaan ruplaan, vaikka arvio oli 900 000. '
+        + 'Erillinen kellotorni oli 70 metriä korkea, rakennuksen päällä oli viisi kultakupolia, ja '
+        + 'Moskovassa valettiin 14 kelloa. Katedraali suljettiin 1924 ja purettiin 1924–1926, koska se oli '
+        + 'Venäjän vallan symboli ja täytti pääaukion; työhön tarvittiin lähes 15 000 hallittua räjäytystä. '
+        + 'Marmoria käytettiin uudelleen Varsovan rakennuksissa.',
+      lahde: 'en-Wikipedia "Alexander Nevsky Cathedral, Warsaw", johdanto ja osiot "Construction" ja '
+        + '"Demolition"; pl-Wikipedia "Sobór św. Aleksandra Newskiego w Warszawie", osiot "Budowa" ja '
+        + '"Rozbiórka" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-nevski-varsova-loistoaika.jpg',
+      lyhyt: 'Vihkiäispäivänä 20. toukokuuta 1912 kellot soivat ja viisi kultakupolia kimaltaa Saksin '
+        + 'aukiolla; kaksitoista vuotta myöhemmin rakennus suljetaan ja purku alkaa.',
+      selite: 'Toukokuussa 1912 kellot soivat Saksin aukiolla ja viisi kultakupolia kimaltaa auringossa, kun '
+        + 'ortodoksiseurakunta kokoontuu vihkiäisjuhlaan. Kellotornin 70 metriä näkyy kauas, ja sisällä '
+        + 'jaspispylväät ja mosaiikit vastaavat ulkoa näkyvää loistoa. Kellojen soitto kuuluu Saksin aukion '
+        + 'yli. Vuonna 1921 kellotorni puretaan, vuosina 1924–1926 koko rakennus räjäytetään osiin, ja '
+        + 'marmori päätyy muihin Varsovan rakennuksiin.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1912). Faktat: en-Wikipedia '
+        + '"Alexander Nevsky Cathedral, Warsaw" ja pl-Wikipedia, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Alexander_Nevsky_Cathedral,_Warsaw',
+    }),
+    ihmeKohde({
+      id: 'suuri-synagoga-varsova',
+      nimi: 'Varsovan suuri synagoga',
+      nimio: 'Suuri synagoga',
+      kysymykset: ['Kuinka monta rukoilijaa Varsovan suureen synagogaan mahtui?', 'Mitä synagogan paikalla on?'],
+      korostukset: ['Leandro Marconi|Leandro Marconi', 'Tłomackie|Tłomackie-kadulla'],
+      nappi: 'Synagoga, jossa oli 2 200 paikkaa',
+      laudat: { maailmankartta: { x: 6533.4, y: 1291.2 }, europe: { x: 614.4, y: 519.6 } },
+      teksti: 'Varsovan suuri synagoga seisoi Tłomackie-kadulla, ja sen suunnitteli Leandro Marconi. Kaupungin '
+        + 'juutalaisyhteisö rakennutti sen vuosina 1876–1878; kustannukset nousivat noin 200 000 ruplaan, '
+        + 'vaikka suunnitelma oli 150 000. Synagoga avattiin 26. syyskuuta 1878 juutalaisen uudenvuoden '
+        + 'aikaan, ja siellä oli 2 200 paikkaa: 1 150 päähallissa ja 1 050 naisten parvilla. Päähalli oli '
+        + '29 × 33 metriä, ja Toora-arkki oli tehty Libanonin setristä. Saarnat pidettiin puolaksi, ja '
+        + 'jumalanpalvelusta säesti kuoro. SS räjäytti synagogan 16. toukokuuta 1943 Varsovan gettokapinan '
+        + 'päätteeksi. Paikalla seisoo Sininen pilvenpiirtäjä, joka valmistui 1991.',
+      lahde: 'en-Wikipedia "Great Synagogue (Warsaw)", johdanto ja osiot "Construction" ja "Destruction"; '
+        + 'pl-Wikipedia "Wielka Synagoga w Warszawie", osiot "Historia" ja "Architektura" (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-suuri-synagoga-varsova-loistoaika.jpg',
+      lyhyt: 'Kuoro laulaa juutalaisen uudenvuoden jumalanpalveluksessa, ja päähalli ja naisten parvet '
+        + 'täyttyvät 2 200 paikasta; reilut kolmekymmentä vuotta myöhemmin SS räjäyttää synagogan.',
+      selite: 'Noin vuonna 1910 juutalaisen uudenvuoden jumalanpalvelukseen kokoontuu suuri joukko '
+        + 'varsovalaisia, ja päähalli ja naisten parvet täyttyvät. Saarna pidetään puolaksi, kuoro laulaa '
+        + 'ja Libanonin setristä tehty Toora-arkki kuuluu salin koristukseen. Kuoron ääni täyttää salin '
+        + 'kupolin alla. Toukokuussa 1943 SS räjäyttää rakennuksen Varsovan gettokapinan päätteeksi, ja '
+        + 'paikalle nousee myöhemmin Sininen pilvenpiirtäjä.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1910). Faktat: '
+        + 'en-Wikipedia "Great Synagogue (Warsaw)" ja pl-Wikipedia "Wielka Synagoga w Warszawie", '
+        + 'tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Great_Synagogue_(Warsaw)',
+    }),
     ihmeKohde({
       id: 'saksin-palatsi',
       nimi: 'Saksin palatsi',

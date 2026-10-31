@@ -68,7 +68,7 @@ const VIRRATON = packById('maailmankartta').cities.find((city) => !FOKUSVIRRAT[c
 /* ---------- 1. vaihejärjestys ---------- */
 
 /** Kadonneet ihmeet 31.10.2026 (Karttaseppä): kytketyt erät, lopuksi 43. */
-const IHMEET_20261031 = 10;
+const IHMEET_20261031 = 20;
 
 test('virta kulkee vaiheet sovitussa järjestyksessä', () => {
   let tila = fokusvirtaAlkutila();
