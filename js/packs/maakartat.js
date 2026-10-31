@@ -6190,7 +6190,9 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Checkpoint Charlie', lat: 52.5076, lon: 13.3904, wiki: 'Checkpoint Charlie' },
       { nimi: 'Museosaari', lat: 52.5169, lon: 13.401, wiki: 'Museumsinsel' },
-      { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni' },
+      // KIINTEÄ (KK 31.10.2026): hajautus työnsi tornin Museosaaren ja Maailmankellon välistä Spreen väärälle rannalle
+      // (~900 m); kiinteää kohdetta naapurit väistävät, ja torni pysyy Alexanderplatzilla (js/nahtavyydet.js hajautus).
+      { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni', kiintea: true },
       { nimi: 'East Side Gallery', lat: 52.505, lon: 13.4399, wiki: 'East Side Gallery' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
