@@ -10,14 +10,15 @@ samassa musta- ja valkopisteessä ja samalla kovalla pienellä varjolla. Omistaj
 - 09.33 "Määrittele kaikille sama musta piste ja valkopiste ja Säädä Keski kontrasti yhteneväksi ja pudota saturaatiota tarvittaessa"
 - 09.34 "Mieti tapa joka on helppo monistaa kaikkiin kaupunkeihin"
 - 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo monistaa."
-- 10.16 tasattu Pariisi pienellä terävällä varjolla: "Kelpaa"; 10.26 leivottu varjo "liian iso" → 10.16:n kokoon.
+- 10.16 tasattu Pariisi pienellä terävällä varjolla: "Kelpaa"; 10.26 kuvaan leivottu varjo "Varjo liian iso" → PT: takaisin 10.16:n CSS-varjoon.
 - 09.17 "Haaleus on tarkoituksellista siinä toisessa kartassa" → striimikartta käyttää alkuperäisiä kuvia.
 
 ## Tavoite
 
 Kaikki kohdekartan piirrokset yhdessä asetuksessa (`tools/piirrostasaus.json`): musteen (alfa > 200) luminanssi
-musta = 2. persentiili 0,36, valko = 98. persentiili 0,85, keski = mediaani 0,61, kroma (max − min) 0,24; kova varjo
-0,01 × kuvan leveys oikealle alas (lähimmällä zoomilla ohut reuna), ei sumennusta, #2c2318 45 %. Tallennus 1024 px, webp-laatu 82 (PT). Arvot = Pariisin 14 piirroksen 09.27-puolivälin mediaani.
+musta = 2. persentiili 0,36, valko = 98. persentiili 0,85, keski = mediaani 0,61, kroma (max − min) 0,24. Tallennus 1024 px,
+webp-laatu 82 (PT). Varjo EI kuvassa: kohdekartan CSS-sääntö `drop-shadow(1px 1px 0 rgba(44, 35, 24, 0.45))`, natiivissa
+sama vakio (siluetti 1 pt oikealle ja alas, Natiivi-UI). Piirroksen paikka ja keskinäinen koko pysyvät (kevyiden pienennys 0,72). Arvot = Pariisin 14 piirroksen 09.27-puolivälin mediaani.
 
 ## Tekotapa
 
@@ -48,4 +49,5 @@ musta = 2. persentiili 0,36, valko = 98. persentiili 0,85, keski = mediaani 0,61
 - Yhteinen CSS-suodatin kaikille: ei tasaa piirroksia keskenään (09.31). Kontrasti tulee kuvasta, CSS:ssä vain `filter: none`.
 - Kuvien muuttaminen alkuperäisinä: muuttaa myös striimikartan. Aina uusi `-kk.webp`.
 - Selaimen canvas-mittaus ämpärin kuvista ei toimi tuotannossa (ei CORS-otsakkeita): mitat etukäteen työkalulla.
-- Leivottu varjo on suhteessa kuvaan: liian suuri siirto (0,028) näkyi lähimmällä zoomilla ja suurennuksessa paksuna (omistaja 10.26).
+- Kuvaan leivottu varjo skaalautuu kuvan mukana (leveillä piirroksilla ja suurennuksessa paksu, omistaja 10.26): varjo aina CSS:llä.
+- Hajautusvälin tai kevyen pienennyksen muuttaminen siirtää piirroksia ja muuttaa keskinäisiä kokoja (KK 31.10.): älä koske niihin tasauksessa.
