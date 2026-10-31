@@ -3380,3 +3380,7 @@ muistutusta; (2) Postivahti luki vain roolit, joiden lastActivityAt muuttui, ja 
 kirjaa luovutukseensa tarkemman syyn. KORJAUS: Postivahti lukee joka kierroksella kaikkien roolien kontekstin YKSI KERRALLAAN (ei rinnakkain) ja pysäyttää kovan rajan ylittäjän heti luovutukseen;
 roolit tarkistavat get_usage selfin ennen kuvan lukemista ja lukevat kuvat pienennettyinä. Avoin PT:lle: KONTEKSTIVAHTI-koukku kaikkien roolien kansioihin vaatii lupa-asetuksen muutoksen = vain
 omistajan omalla viestillä (CLAUDE.md).
+
+## TILINVAIHTOON TARKISTUS ENNEN KUIN TYÖ JATKUU (omistaja 31.10.2026 klo 22.06) (31.10.2026 klo 22.07)
+
+Omistaja (KK:n kortti, sanatarkasti): kysymys 'Lisätäänkö tilinvaihtoon tarkistus: osoitteet, Asemataulu ja asetukset?' → 'Kyllä (Suositus)' (selite: 'Vaihdon jälkeen puutteet korjataan ennen kuin työ jatkuu.'). Tausta: 'Miksi tilin vaihdossa häviää tietoa vaikka sessiot pyörivät mac studiolla samoissa hakemistoissa tilin vaihdoista huolimatta?' ja 'jotain häviää tilin vaihdossa mitä ei häviä normaalissa nollauksessa.' Toteutus (PT): docs/tilinvaihto.md kohta 7.5; tools/tyotavat/tilinvaihto-valmis.mjs tarkistaa nyt myös lyhyet id:t (local_<8>), kotikansioiden juuren .md:t ja ~/.claude/CLAUDE.md:n (löysi heti NOLLAUS.md:n ja KK:n aloitus.md:n vanhan local_febfd152:n). Asetukset ja Asemataulu: työkalun osat 1 ja 5. Tulos KK:lle yhdellä rivillä; työ jatkuu vasta, kun paluu on 0. KK:n toinen ehdotus (roolien keskustelujen tallennus) peruttu: tavallisessa nollauksessa ei ongelmia.
