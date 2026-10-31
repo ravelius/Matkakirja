@@ -3326,3 +3326,7 @@ ja Louvre koko kaupunkina Akropolis-tyylillä). Tavoite (KK): Pariisin kohdekart
 nähtävyyspiirroksissa (27.9.), nähtävyydet luonnostaan oikean kokoisia. Pohjana omat ja avoimet karttatiedot, ei Googlen kuvia. Codex piirtää palat isometric.nyc:n tapaan (pelkistetty 3D-kuva →
 tyylipiirros pala kerrallaan naapurin jatkoksi, noin 40 esimerkkiä), Karttaseppä kokoaa. Valmiita karttoja (tiny.london ym.) ei käytetä: ei avointa lisenssiä, pikselityyli, osin Googlen aineistoa.
 Tekijän työkalujen lisenssi tarkistetaan koepalan alussa. Aloitus vasta junan 216 jälkeen.
+
+## PARIISIN PIIRROSKARTTA HETI KIIREELLISENÄ (omistaja 31.10.2026 klo 17.35) (31.10.2026 klo 17.36)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Pyydä piirros heti codexilta Pariisista kiireellisenä." Muuttaa 17.11 päätöksen ajoituksen: koepala ei odota junaa 216. PT tilasi Codexilta 17.4x (posti/paatoimittaja-codex-pariisi-piirroskartta-20261031.md, 111a43155): ensin yksi iso kuva tyylin hyväksyntään KK:n kautta omistajalle, sitten saumattomat palat; ennen ihmeiden erien 3–4 jatkoa.
