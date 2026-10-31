@@ -1,0 +1,1775 @@
+{
+  "allAssetsPersonallyViewed": true,
+  "allAssetsPassed": true,
+  "rootReviews": [
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "palast-der-republik",
+      "role": "A",
+      "taskNumber": 1365,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/berliini-palast-der-republik.webp",
+      "sha256": "37583d64a3c512d5e9b540d6fd47f28495b2514feaa9018a993054c6f064f556",
+      "bytes": 446572,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Low horizontal bronze-glass palace with white marble raised end blocks/lowered middle and terrace. True transparent silhouette, warm fine line watercolor, no visible art/interior.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "palast-der-republik",
+      "role": "B",
+      "taskNumber": 1366,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/ihme-palast-der-republik-loistoaika.jpg",
+      "sha256": "c542188db3e04cfdc3cec87bbe4044c01d0baa96de20b7834ae3f3fcb8804f3f",
+      "bytes": 650320,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "B-v2 replaces duplicated foreground woman in v1. Seven distinct adults with different clothes and coherent walking anatomy. Natural marble/glass reflection and pavement surface. Exterior only, DDR state emblem part of historical facade; no interior artworks.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "anhalter-bahnhof",
+      "role": "A",
+      "taskNumber": 1367,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/berliini-anhalter-bahnhof.webp",
+      "sha256": "a0821381e28bb17fca584fd37c58454b117c2e73bbe5957cfccb027403bbbd95",
+      "bytes": 595908,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Complete intact station with rounded broad glazed gable, low arched wings, projecting portico and long train shed. Light/dark alpha clean, complete silhouette and fine line watercolor. Ornament and color source-informed interpretive.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "anhalter-bahnhof",
+      "role": "B",
+      "taskNumber": 1368,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/ihme-anhalter-bahnhof-loistoaika.jpg",
+      "sha256": "3536dddc36568315b5ff1cae10d156dd31f1db5065e818d41c1ed4f069b35fd3",
+      "bytes": 838629,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Photographic brick/terracotta station and plausible1900 travelers. Horse four legs, reins/harness/shafts coherent; carriage wheels and contact shadows credible. Worn suitcase/cloth/paving and natural diffuse daylight. Landmark large arched gable and portico legible.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:12:32.200942+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "ciutadella",
+      "role": "A",
+      "taskNumber": 1369,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/final/barcelona-ciutadella.webp",
+      "sha256": "0b474b3918f5be0555e35b7d999b6d16301643fc8c2ff52f8a871550942c6cf9",
+      "bytes": 742084,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Five bastions and five ravelins legible, sparse enclosed buildings; personally inspected light and dark alpha composites, no fringe.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:12:32.203392+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "ciutadella",
+      "role": "B",
+      "taskNumber": 1370,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/final/ihme-ciutadella-loistoaika.jpg",
+      "sha256": "b5fbd320384c30afed4486613fd4c24b281dbb3a19c23662ca61761ce6813aec",
+      "bytes": 796412,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Natural stone surface and daylight, three distinct Spanish soldiers with coherent legs and muskets at fortress gate; physically coherent bridge and shadows.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:18:02.159507+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "luxemburgin-linnoitus",
+      "role": "A",
+      "taskNumber": 1371,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/final/luxemburg-linnoitus.webp",
+      "sha256": "5071ab7933391ecf733c8aa7138810153e53373e4cc0c7d5c2b670ce77d30f46",
+      "bytes": 712518,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Fortifications, casemate openings and rock plateau clear; clean light and dark alpha boundary.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:18:02.742769+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "luxemburgin-linnoitus",
+      "role": "B",
+      "taskNumber": 1372,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/final/ihme-luxemburgin-linnoitus-loistoaika.jpg",
+      "sha256": "efcd7c91e097227decfb4558c9b7fa11bce6f01616f93345a89e325569346e75",
+      "bytes": 749849,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Two coherent Prussian soldiers, genuine rough masonry and rock with vegetation in depth, valley below; physically natural cloudy daylight.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:18:03.345023+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "suuri-synagoga-vilna",
+      "role": "A",
+      "taskNumber": 1373,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/suuri-synagoga-vilna/final/vilna-suuri-synagoga.webp",
+      "sha256": "3988cce4b093f7b0101fa3b20f07966834ef62d5cdb749ab0bfe6007450e5c43",
+      "bytes": 806530,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Tall plain hall, steep roof, distinctive two-level gallery gable; clean light/dark alpha. No dome or modern Choral synagogue confusion.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:18:04.317374+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "suuri-synagoga-vilna",
+      "role": "B",
+      "taskNumber": 1374,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/suuri-synagoga-vilna/final/ihme-suuri-synagoga-vilna-loistoaika.jpg",
+      "sha256": "f97ca281cd454f58c3f1b5b27677a64c1ee0260ee503b072a28d87afabc3179d",
+      "bytes": 580647,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Real camera texture on weathered plaster, wool clothing and wood. Book physically supported, hands coherent.1873 courtyard excludes later Strashun library. Topmost roof tip slightly cropped, gallery and hall identity fully visible.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:21:28.685880+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "gogolin-synagoga",
+      "role": "A",
+      "taskNumber": 1375,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/gogolin-synagoga/final/riika-gogolin-kadun-synagoga.webp",
+      "sha256": "33867f8c375210ae86d6389ce6c7fe9abf30f4e3f9d7939f1d00d430610aebec",
+      "bytes": 779360,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Three shaped gables and round windows, no large dome, correct elongated body. Clean alpha light/dark.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:21:28.689205+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "gogolin-synagoga",
+      "role": "B",
+      "taskNumber": 1376,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/gogolin-synagoga/final/ihme-gogolin-synagoga-loistoaika.jpg",
+      "sha256": "b9e0504f0b3cde27dbb4101b27b0d55a6d17081fbeb7f06dc2c98acb0329cdcd",
+      "bytes": 873231,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Natural foliage, plaster, wool clothing and coherent entrance path through open gate. Three-part facade clear though highest edge tightly framed. No cloned foreground people or fused limbs.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:12:32.204895+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "sukharev",
+      "role": "A",
+      "taskNumber": 1377,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/sukharev/final/moskova-sukharevin-torni.webp",
+      "sha256": "1e4ee7aec9d25ebd8c417d09d4741fcf886ec3e1e55a720420b227dbb4404827",
+      "bytes": 533624,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Red brick clock tower and white trim, green steep spire and covered stair legible; light/dark alpha views clean.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:12:32.205680+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "sukharev",
+      "role": "B",
+      "taskNumber": 1378,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/sukharev/final/ihme-sukharev-loistoaika.jpg",
+      "sha256": "bc9168280c1c4af7d1561f9d3d4ec4028a950015cb94f7ad2805d9d06c9e8258",
+      "bytes": 681914,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Natural fabric, faces, metal samovar and wet cobbles; coherent horse, cab and human anatomy. Covered stair and multi-stage clock tower match source massing.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:21:28.695448+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "tsudov",
+      "role": "A",
+      "taskNumber": 1379,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/tsudov/final/moskova-tsudovin-luostari.webp",
+      "sha256": "e6c3006f0c7ef85002946a56918341cd0bc9e9cb489d10adaaca25093fe3ee2f",
+      "bytes": 554916,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Five-dome church mass with partly occluded rear dome, monastery front and twin pointed porch towers. Clean light/dark alpha.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:21:28.698569+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "tsudov",
+      "role": "B",
+      "taskNumber": 1380,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/tsudov/final/ihme-tsudov-loistoaika.jpg",
+      "sha256": "56b4acbb8c27c4d2c7c4af2f823c3864190a154da794a9185df70cfda4ce0617",
+      "bytes": 779446,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Natural plaster aging and stone, monks and pilgrims with coherent anatomy and scale, believable daylight, no CGI sheen. Historical white/pale walls with green roofs.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "vacaresti",
+      "role": "A",
+      "taskNumber": 1381,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/vacaresti/final/bukarest-vacarestin-luostari.webp",
+      "sha256": "e23970c76df55764b3447ff10919ef56aef0867f2d663dfa6e2ff1fc91eadbc4",
+      "bytes": 519546,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "reviewedAt": "2026-10-31T14:27:39.521924+00:00",
+      "visualNotes": "Two courtyards, open two-level gallery and independent church massing coherent; personally inspected light and dark composites with clean alpha.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "vacaresti",
+      "role": "B",
+      "taskNumber": 1382,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/vacaresti/final/ihme-vacaresti-loistoaika.jpg",
+      "sha256": "da58e67aa7548ecbdffb7ff161674e1425cb149a02bff17792ff4c046881a9b9",
+      "bytes": 606236,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "reviewedAt": "2026-10-31T14:27:39.527722+00:00",
+      "visualNotes": "Personally viewed final JPEG. Natural limestone/plaster, faces, fabric, depth, sunlight and vegetation; closed apsis/church flank and open monastic gallery coherent. Approximate c1840 reconstruction preserves the separately recorded requested1900 chronology conflict.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:21:28.699161+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "old-tolbooth",
+      "role": "A",
+      "taskNumber": 1383,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/final/edinburgh-old-tolbooth.webp",
+      "sha256": "d5e83b928d734a3a0d0c4eb79dc33936c4b82272abb7efb37347c8e44485b76c",
+      "bytes": 916776,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Crow-stepped gables, round stair turrets, tall chimneys and low annexe readable. Clean light/dark alpha.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:21:28.704346+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "old-tolbooth",
+      "role": "B",
+      "taskNumber": 1384,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/final/ihme-old-tolbooth-loistoaika.jpg",
+      "sha256": "f8fc5f0373b2051452241f153b15e0a8c317896a09cb58ac53a12d0346846ac8",
+      "bytes": 868685,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Coherent four foreground citizens, rough aged stone and street, natural optical depth. No modern sign or post remains. Narrow Royal Mile and StGiles side context.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "independentRootAssets": {
+    "status": "PASS_ALL_FOUR",
+    "reviewer": "portti06_measurement_audit",
+    "reviewedAt": "2026-10-31T14:21:50.106111+00:00",
+    "scope": "Independent visual and exact final file QA; no generation, editing, upload or ledger mutation. Local delivery eligibility only; recipient and owner acceptance are separate.",
+    "orderReadInFull": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/source/order.md",
+    "manifestReadInFull": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/source/manifest.json",
+    "referenceBasis": [
+      "E1 exact A watercolor/line miniatures and color photographic 1536x1024 B reference, personally viewed during this production run",
+      "Palast: Bundestag archival exterior photographs pdr1_bild.jpg and fassade_bild.jpg",
+      "Anhalter: Berlin heritage authority 1903 historical front and Zentralinstitut archival 1910 photograph"
+    ],
+    "ownerPhotographicFeedback": "B images must resemble genuine camera photographs with natural materials, lighting and people, not game renders. Applied to both final B versions.",
+    "excludedVersions": [
+      "palast-der-republik B-v1: superseded rejected duplicate person"
+    ],
+    "assets": [
+      {
+        "id": "palast-der-republik",
+        "role": "A",
+        "version": "A-v1",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/berliini-palast-der-republik.webp",
+        "sha256": "37583d64a3c512d5e9b540d6fd47f28495b2514feaa9018a993054c6f064f556",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "views": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/qa/A-light.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/qa/A-dark.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/qa/A-256-light.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/qa/A-256-dark.png"
+        ],
+        "technicalChecks": {
+          "format": "WEBP",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "bytes": 446572,
+          "matchesCurrentFinalStateHash": true,
+          "trueAlpha": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alphaBBox": [
+            48,
+            87,
+            965,
+            947
+          ],
+          "clear48pxBorder": true
+        },
+        "ownerPhotographicFeedbackApplied": false,
+        "notes": [
+          "Katsottu vaalealla ja tummalla taustalla sekä molemmat 256 px esikatselut. Matala vaakasuuntainen pronssilasijulkisivu, valkoiset korotetut päätymassat, alempi keskiosa ja terassi vastaavat Bundestagin arkistokuvien rakennusluonnetta.",
+          "Kohde on eristetty ja kokonainen. Läpinäkyvän reunan toimivuudessa tai pienoiskoon luettavuudessa ei havaittu estettä. Hillitty värillinen piirros-/akvarellikäsittely sopii A-malliin.",
+          "Vain ulkojulkisivu; ei sisätilojen taideteoksia. Ei estävää huomautusta."
+        ],
+        "blockingIssues": []
+      },
+      {
+        "id": "palast-der-republik",
+        "role": "B",
+        "version": "B-v2",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/ihme-palast-der-republik-loistoaika.jpg",
+        "sha256": "c542188db3e04cfdc3cec87bbe4044c01d0baa96de20b7834ae3f3fcb8804f3f",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "views": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/ihme-palast-der-republik-loistoaika.jpg"
+        ],
+        "technicalChecks": {
+          "format": "JPEG",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 650320,
+          "matchesCurrentFinalStateHash": true,
+          "iccProfileBytes": 480
+        },
+        "ownerPhotographicFeedbackApplied": true,
+        "notes": [
+          "Katsottu lopullinen B-v2 JPEG täysikokoisena. Seitsemän erillistä henkilöä; aiemman hylätyn B-v1:n toistuvaa naista ei ole. Kasvot, näkyvät kädet, jalat ja kävelyasennot ovat uskottavia.",
+          "Kamerakuvan vaikutelma: luonnolliset pronssilasin heijastukset, kiveyksen ja vaatteiden pinnat sekä päivänvalo. Ei silmään osuvaa toistokuviota tai pelirenderin muovista pintaa.",
+          "Historiallinen ulkojulkisivu ja valtion tunnus näkyvät, sisätiloja tai taideteoksia ei esitetä. Pienet pinnan ja henkilöiden yksityiskohdat ovat rekonstruktiota. Ei estävää huomautusta."
+        ],
+        "blockingIssues": []
+      },
+      {
+        "id": "anhalter-bahnhof",
+        "role": "A",
+        "version": "A-v1",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/berliini-anhalter-bahnhof.webp",
+        "sha256": "a0821381e28bb17fca584fd37c58454b117c2e73bbe5957cfccb027403bbbd95",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "views": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/qa/A-light.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/qa/A-dark.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/qa/A-256-light.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/qa/A-256-dark.png"
+        ],
+        "technicalChecks": {
+          "format": "WEBP",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "bytes": 595908,
+          "matchesCurrentFinalStateHash": true,
+          "trueAlpha": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alphaBBox": [
+            48,
+            66,
+            976,
+            976
+          ],
+          "clear48pxBorder": true
+        },
+        "ownerPhotographicFeedbackApplied": false,
+        "notes": [
+          "Katsottu vaalealla ja tummalla taustalla sekä molemmat 256 px esikatselut. Ehjä laaja kaareva lasipääty, pitkä asemahalli, matalat siivet ja ulkoneva sisäänkäynti tunnistuvat arkistovalokuvien Anhalter Bahnhofiksi.",
+          "Siluetti pysyy kokonaisena, alfa toimii molemmilla taustoilla ja asema tunnistuu 256 px koossa. Tiili-/terrakottavärit sekä ohut piirrosviiva ovat A-mallin mukaisia.",
+          "Koristeiden tarkat profiilit ja värit ovat lähteisiin perustuvaa kuvallista tulkintaa; ne eivät muodosta havaittua tunnistettavuus- tai rakennevirhettä. Ei estävää huomautusta."
+        ],
+        "blockingIssues": []
+      },
+      {
+        "id": "anhalter-bahnhof",
+        "role": "B",
+        "version": "B-v1",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/ihme-anhalter-bahnhof-loistoaika.jpg",
+        "sha256": "3536dddc36568315b5ff1cae10d156dd31f1db5065e818d41c1ed4f069b35fd3",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "views": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/ihme-anhalter-bahnhof-loistoaika.jpg"
+        ],
+        "technicalChecks": {
+          "format": "JPEG",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 838629,
+          "matchesCurrentFinalStateHash": true,
+          "iccProfileBytes": 480
+        },
+        "ownerPhotographicFeedbackApplied": true,
+        "notes": [
+          "Katsottu lopullinen B-v1 JPEG täysikokoisena. Matkustajien matkalaukkujen kahvat ja käsien kontaktit, jalat sekä eteneminen aseman avoimille sisäänkäynneille ovat johdonmukaiset.",
+          "Hevosella näkyy neljä uskottavasti sijoittuvaa jalkaa. Ohjakset, valjaat, aisat ja vaunujen pyörät muodostavat ymmärrettävän kokonaisuuden ilman havaittua estävää anatomia- tai kytkentävirhettä.",
+          "Luonnollinen päivänvalo, epätasainen kiveys, kuluneet laukut ja kankaat sekä rakennuksen kivipinnat täyttävät omistajan valokuvailmettä koskevan tarkennetun vaatimuksen. Ei havaittua CGI-pintojen toistokuviota.",
+          "Kaareva pääty, portiikki ja ehjä asema ovat tunnistettavat. Pienten koristeiden ja kaukaisten ihmisten yksityiskohdat ovat kuvallinen rekonstruktio. Ei estävää huomautusta."
+        ],
+        "blockingIssues": []
+      }
+    ],
+    "receiverAccepted": false,
+    "ownerAccepted": false,
+    "uploadedByThisReview": false
+  },
+  "productionRecords": [
+    {
+      "id": "palast-der-republik",
+      "role": "A",
+      "state": {
+        "id": "palast-der-republik",
+        "role": "A",
+        "taskNumber": 1365,
+        "status": "qa-passed-awaiting-independent-review",
+        "generationCalls": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/A-v1.txt",
+            "status": "selected-root-qa-pass",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-cbbad554-01f3-421d-b1c6-b2bf74309872.png",
+            "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/candidates/A-v1-source.png",
+            "sha256": "07227fc1b4de96c071ae1cba47edbad1c1e179fb6a9f8f8ec981653d6dd45821"
+          }
+        ],
+        "updatedAt": "2026-10-31T14:00:48.171008+00:00",
+        "delivered": false,
+        "selectedAttempt": 1,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "palast-der-republik",
+          "role": "A",
+          "taskNumber": 1365,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/berliini-palast-der-republik.webp",
+          "sha256": "37583d64a3c512d5e9b540d6fd47f28495b2514feaa9018a993054c6f064f556",
+          "bytes": 446572,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "Low horizontal bronze-glass palace with white marble raised end blocks/lowered middle and terrace. True transparent silhouette, warm fine line watercolor, no visible art/interior.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "productionActive": false
+      }
+    },
+    {
+      "id": "palast-der-republik",
+      "role": "B",
+      "state": {
+        "id": "palast-der-republik",
+        "role": "B",
+        "taskNumber": 1366,
+        "status": "qa-passed-awaiting-independent-review",
+        "generationCalls": 2,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/B-v1.txt",
+            "status": "rejected",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-210ec876-28cb-4cca-86c3-9cd262e15742.png",
+            "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/candidates/B-v1-source.png",
+            "sha256": "a4b1e7f373ad1e8effbf2c73ce2167c0f137d453aa9a3545a1347e36dab12651",
+            "reason": "Repeated near-identical floral-dress woman in foreground and right foreground. Full new generation with seven distinct adults."
+          },
+          {
+            "version": 2,
+            "prompt": "prompts/B-v2.txt",
+            "status": "selected-root-qa-pass",
+            "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/candidates/B-v2-source.png",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-15da2ae7-79f7-427e-889c-24a7b1380d7e.png",
+            "sha256": "259d0991c8681508aa6f3947f9639160d171ad6609b77c2eee2769ecdb35c28e"
+          }
+        ],
+        "updatedAt": "2026-10-31T14:00:48.171459+00:00",
+        "delivered": false,
+        "selectedAttempt": 2,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "palast-der-republik",
+          "role": "B",
+          "taskNumber": 1366,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/palast-der-republik/final/ihme-palast-der-republik-loistoaika.jpg",
+          "sha256": "c542188db3e04cfdc3cec87bbe4044c01d0baa96de20b7834ae3f3fcb8804f3f",
+          "bytes": 650320,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "B-v2 replaces duplicated foreground woman in v1. Seven distinct adults with different clothes and coherent walking anatomy. Natural marble/glass reflection and pavement surface. Exterior only, DDR state emblem part of historical facade; no interior artworks.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "productionActive": false
+      }
+    },
+    {
+      "id": "anhalter-bahnhof",
+      "role": "A",
+      "state": {
+        "id": "anhalter-bahnhof",
+        "role": "A",
+        "taskNumber": 1367,
+        "status": "qa-passed-awaiting-independent-review",
+        "generationCalls": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/A-v1.txt",
+            "status": "selected-root-qa-pass",
+            "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/candidates/A-v1-source.png",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a78a930d-e41b-4f51-907a-d708c692f6c2.png",
+            "sha256": "b118ca81280a261f932d459b733914b4b8a52c407b595b6d4da7b8ee0d35d14a"
+          }
+        ],
+        "delivered": false,
+        "selectedAttempt": 1,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "anhalter-bahnhof",
+          "role": "A",
+          "taskNumber": 1367,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/berliini-anhalter-bahnhof.webp",
+          "sha256": "a0821381e28bb17fca584fd37c58454b117c2e73bbe5957cfccb027403bbbd95",
+          "bytes": 595908,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "Complete intact station with rounded broad glazed gable, low arched wings, projecting portico and long train shed. Light/dark alpha clean, complete silhouette and fine line watercolor. Ornament and color source-informed interpretive.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "productionActive": false
+      }
+    },
+    {
+      "id": "anhalter-bahnhof",
+      "role": "B",
+      "state": {
+        "id": "anhalter-bahnhof",
+        "role": "B",
+        "taskNumber": 1368,
+        "status": "qa-passed-awaiting-independent-review",
+        "generationCalls": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/B-v1.txt",
+            "status": "selected-root-qa-pass",
+            "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/candidates/B-v1-source.png",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-437bc9b5-b09d-438c-8367-2153dd5d311a.png",
+            "sha256": "ff83c3ed5087e64010e168bc387e33ca1de12a962d9c36b59fcddc6566986631"
+          }
+        ],
+        "delivered": false,
+        "selectedAttempt": 1,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:08:13.994607+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "anhalter-bahnhof",
+          "role": "B",
+          "taskNumber": 1368,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/anhalter-bahnhof/final/ihme-anhalter-bahnhof-loistoaika.jpg",
+          "sha256": "3536dddc36568315b5ff1cae10d156dd31f1db5065e818d41c1ed4f069b35fd3",
+          "bytes": 838629,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "Photographic brick/terracotta station and plausible1900 travelers. Horse four legs, reins/harness/shafts coherent; carriage wheels and contact shadows credible. Worn suitcase/cloth/paving and natural diffuse daylight. Landmark large arched gable and portico legible.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "productionActive": false
+      }
+    },
+    {
+      "id": "ciutadella",
+      "role": "A",
+      "state": {
+        "taskNumber": 1369,
+        "id": "ciutadella",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 2,
+        "selectedAttempt": 2,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-8c1d100b-87df-4df9-a8c4-34410e9ed59f.png",
+            "status": "rejected",
+            "reason": "Incorrect six-sided fortress geometry; required five bastions. Preserved without editing."
+          },
+          {
+            "version": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/prompts/A-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/candidates/A-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-6ddaa876-7c74-4794-9a86-192b16432710.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/final/barcelona-ciutadella.webp",
+        "sourceSha256": "2b06ecc47e458c0e1433e201e825e665442775e288dbc9619f42ccd50cb2d481",
+        "finalSha256": "0b474b3918f5be0555e35b7d999b6d16301643fc8c2ff52f8a871550942c6cf9",
+        "promptSha256": "0ee8657548a2a0ac5e28a31d3673d5402f7584e589e6823392c6e3e14cde15a4",
+        "bytes": 742084,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.parlament.cat/wp/pcat/parlament/historia-del-palau/el-palau-del-parlament/",
+          "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/143542/1/20230310_PD_DOC_Ciutadella_SW-Web-1.pdf",
+          "https://www.ub.edu/geocrit/sn/sn-431.htm",
+          "https://tramits.gencat.cat/en/diada-nacional-de-catalunya/historia/escenaris/index.html",
+          "https://ejercito.defensa.gob.es/Galerias/multimedia/revista-ejercito/2017/914/accesible/Revista_Ejercito_Accesible.pdf",
+          "https://elrincondebyron.com/2022/09/30/la-ciudadela-de-barcelona-y-su-protagonismo-en-el-periodo-1808-1814/"
+        ],
+        "historicalUncertainty": "Historical reconstruction, not an authenticated historical photograph. A preserves verified five-bastion/five-ravelin topology but internal buildings, exact colors and full elevation are interpretive. B reconstructs intact gate from later demolition view; exact regiment, heraldic relief, chapel details and disposition of guards circa1800 not established.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:10:25.983621+00:00",
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "architecture": "Five bastions, five separate triangular ravelins, dry moat and low artillery fortress; no modern park.",
+          "style": "Fine warm outlines and shaded normal watercolor; no alpha halo on light/dark, legible at256px.",
+          "limitations": "Historical reconstruction, not an authenticated historical photograph. A preserves verified five-bastion/five-ravelin topology but internal buildings, exact colors and full elevation are interpretive. B reconstructs intact gate from later demolition view; exact regiment, heraldic relief, chapel details and disposition of guards circa1800 not established.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/qa/export-verification.json",
+          "outerEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ]
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "ciutadella",
+      "role": "B",
+      "state": {
+        "taskNumber": 1370,
+        "id": "ciutadella",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-3e1a4dc9-5241-420c-a1c6-cd44f2a8960a.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/final/ihme-ciutadella-loistoaika.jpg",
+        "sourceSha256": "7caa59542ccd2d05dd089e30214161f2a59cd84f6dff575a5400238fcd03da2b",
+        "finalSha256": "b5fbd320384c30afed4486613fd4c24b281dbb3a19c23662ca61761ce6813aec",
+        "promptSha256": "dfdc42bcc487714c785524dadf6a6826470254fcda47127eef3af5b2bf598d3f",
+        "bytes": 796412,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.parlament.cat/wp/pcat/parlament/historia-del-palau/el-palau-del-parlament/",
+          "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/143542/1/20230310_PD_DOC_Ciutadella_SW-Web-1.pdf",
+          "https://www.ub.edu/geocrit/sn/sn-431.htm",
+          "https://tramits.gencat.cat/en/diada-nacional-de-catalunya/historia/escenaris/index.html",
+          "https://ejercito.defensa.gob.es/Galerias/multimedia/revista-ejercito/2017/914/accesible/Revista_Ejercito_Accesible.pdf",
+          "https://elrincondebyron.com/2022/09/30/la-ciudadela-de-barcelona-y-su-protagonismo-en-el-periodo-1808-1814/"
+        ],
+        "historicalUncertainty": "Historical reconstruction, not an authenticated historical photograph. A preserves verified five-bastion/five-ravelin topology but internal buildings, exact colors and full elevation are interpretive. B reconstructs intact gate from later demolition view; exact regiment, heraldic relief, chapel details and disposition of guards circa1800 not established.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:10:25.998912+00:00",
+          "views": [
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Intact low bastioned gate and masonry bridge, three circa1800 white-coated Spanish guards.",
+          "style": "Camera-like stones, natural individual pitting, ordinary light and coherent walking legs/hands/weapons; no repeated procedural texture.",
+          "limitations": "Historical reconstruction, not an authenticated historical photograph. A preserves verified five-bastion/five-ravelin topology but internal buildings, exact colors and full elevation are interpretive. B reconstructs intact gate from later demolition view; exact regiment, heraldic relief, chapel details and disposition of guards circa1800 not established.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "luxemburgin-linnoitus",
+      "role": "A",
+      "state": {
+        "taskNumber": 1371,
+        "id": "luxemburgin-linnoitus",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-36918cf1-0701-4512-8091-5a86eb8a8acd.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/final/luxemburg-linnoitus.webp",
+        "sourceSha256": "0e5deffeb1225beec2485ee2ccc3fc1a1ab7ccb97d7946bf032d28b50f9d54be",
+        "finalSha256": "5071ab7933391ecf733c8aa7138810153e53373e4cc0c7d5c2b670ce77d30f46",
+        "promptSha256": "2074555f77f3c8e0627b6422fbb3cc2f76dd6d878f823e980954f8f4b36dc47f",
+        "bytes": 712518,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://whc.unesco.org/archive/advisory_body_evaluation/699.pdf",
+          "https://inpa.public.lu/fr/itineraires_culturels/itineraire_culturel_forteresse/vauban/le_bock.html",
+          "https://m3e.public.lu/en/centre-de-documentation/armes-forteresse.html",
+          "https://upload.wikimedia.org/wikipedia/commons/2/2b/De_Bock_1867.jpg",
+          "https://www.dhm.de/assets/DHM/Download/Ausstellungen/Archiv/2016/K%C3%B6niggr%C3%A4tz/Flyer_Koeniggraetz-web.pdf"
+        ],
+        "historicalUncertainty": "Bock is a representative compact part of the much larger Luxembourg fortress, not a comprehensive city defense plan. Historic1867 photograph is near the requested circa1860 date. Unseen elevations, exact barrack configurations, material colors and soldiers' regiment are interpretive.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:12:30.711507+00:00",
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "architecture": "Recognizable Bock pre-dismantling massive casemate wall and gun openings above layered rock, compact representative fortress complex.",
+          "style": "Fine-line shaded watercolor matching reference; complete alpha silhouette, light/dark full and256px checked.",
+          "limitations": "Bock is a representative compact part of the much larger Luxembourg fortress, not a comprehensive city defense plan. Historic1867 photograph is near the requested circa1860 date. Unseen elevations, exact barrack configurations, material colors and soldiers' regiment are interpretive.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/qa/export-verification.json",
+          "outerEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ]
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "luxemburgin-linnoitus",
+      "role": "B",
+      "state": {
+        "taskNumber": 1372,
+        "id": "luxemburgin-linnoitus",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-8a85734a-e361-4045-a4b5-7bd05ba2694a.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/final/ihme-luxemburgin-linnoitus-loistoaika.jpg",
+        "sourceSha256": "8c08af9bb0d9466852685aef8527980e646d8ebb9aa000bdfb4dd4d2260d2ff5",
+        "finalSha256": "efcd7c91e097227decfb4558c9b7fa11bce6f01616f93345a89e325569346e75",
+        "promptSha256": "1d76863576a126279402825a57e52eae92f3d4704d0780b0e721652a536cffb4",
+        "bytes": 749849,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://whc.unesco.org/archive/advisory_body_evaluation/699.pdf",
+          "https://inpa.public.lu/fr/itineraires_culturels/itineraire_culturel_forteresse/vauban/le_bock.html",
+          "https://m3e.public.lu/en/centre-de-documentation/armes-forteresse.html",
+          "https://upload.wikimedia.org/wikipedia/commons/2/2b/De_Bock_1867.jpg",
+          "https://www.dhm.de/assets/DHM/Download/Ausstellungen/Archiv/2016/K%C3%B6niggr%C3%A4tz/Flyer_Koeniggraetz-web.pdf"
+        ],
+        "historicalUncertainty": "Bock is a representative compact part of the much larger Luxembourg fortress, not a comprehensive city defense plan. Historic1867 photograph is near the requested circa1860 date. Unseen elevations, exact barrack configurations, material colors and soldiers' regiment are interpretive.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:12:30.746667+00:00",
+          "views": [
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Prussian garrison on rampart above Alzette with intact Bock casemate defenses based on1867 photograph.",
+          "style": "Convincing photographic light, stone erosion, coherent people/clothing/weapons and natural depth; no synthetic repeating surface.",
+          "limitations": "Bock is a representative compact part of the much larger Luxembourg fortress, not a comprehensive city defense plan. Historic1867 photograph is near the requested circa1860 date. Unseen elevations, exact barrack configurations, material colors and soldiers' regiment are interpretive.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/luxemburgin-linnoitus/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "suuri-synagoga-vilna",
+      "role": "A",
+      "state": {
+        "id": "suuri-synagoga-vilna",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/A-v1.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-b4eb05a0-04f6-4dd0-a7e6-fe07b50e048a.png",
+            "raw": "candidates/A-v1-source.png",
+            "sha256": "f378c5520fe943c8bfad364d2f5f54c17e2aed2a493b0037d9e04b9b352c7aa2"
+          }
+        ],
+        "delivered": false,
+        "uploaded": false,
+        "selectedVersion": 1,
+        "final": {
+          "id": "suuri-synagoga-vilna",
+          "role": "A",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/suuri-synagoga-vilna/final/vilna-suuri-synagoga.webp",
+          "sha256": "3988cce4b093f7b0101fa3b20f07966834ef62d5cdb749ab0bfe6007450e5c43",
+          "bytes": 806530,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "format": "WEBP",
+          "selectedVersion": 1,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "notes": [
+            "Four final light/dark 1024/256 composites personally viewed. Entire isolated silhouette and true alpha, no clipping.",
+            "Two-tier timber gable, steep roof and three high side windows recognizable; no dome or later Strashun Library.",
+            "Colors and lower annex geometry interpretive for circa 1873; later historic photographs establish the older gable, not every 1873 courtyard detail."
+          ],
+          "outer48FullyTransparent": true,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        "productionActive": false,
+        "localFinalExists": true
+      }
+    },
+    {
+      "id": "suuri-synagoga-vilna",
+      "role": "B",
+      "state": {
+        "id": "suuri-synagoga-vilna",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/B-v1.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-7ebae5a6-5a68-4de6-9bf0-1accab919a6e.png",
+            "raw": "candidates/B-v1-source.png",
+            "sha256": "fab3e9de628178b74ca3ddbfd1d7e55077fd53941f266ea3788a17bc3c3bc11d"
+          }
+        ],
+        "delivered": false,
+        "uploaded": false,
+        "selectedVersion": 1,
+        "final": {
+          "id": "suuri-synagoga-vilna",
+          "role": "B",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/suuri-synagoga-vilna/final/ihme-suuri-synagoga-vilna-loistoaika.jpg",
+          "sha256": "f97ca281cd454f58c3f1b5b27677a64c1ee0260ee503b072a28d87afabc3179d",
+          "bytes": 580647,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "JPEG",
+          "selectedVersion": 1,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "notes": [
+            "Final JPEG personally viewed at original 1536x1024. Documentary color photographic appearance with naturally worn plaster/cobbles, genuine-looking cloth/skin and diffuse daylight; no obvious CGI or paper texture.",
+            "Two distinct students at a supported book, merchant with cloth on table and two separate passersby. Hands, feet, table contacts and book support inspected; no blocking anatomical defect.",
+            "Old synagogue recognizable; no post-1900 rusticated library. Framing clips the extreme roof apex at upper image edge, a minor scene-composition issue, not loss of diagnostic galleries.",
+            "Exact 1873 annex arrangement, colors and people are reconstructed."
+          ],
+          "iccBytes": 480,
+          "ownerPhotographicFeedback": "PASS"
+        },
+        "productionActive": false,
+        "localFinalExists": true
+      }
+    },
+    {
+      "id": "gogolin-synagoga",
+      "role": "A",
+      "state": {
+        "id": "gogolin-synagoga",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/A-v1.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-93d7fb83-8a02-4c6c-a522-013ac95cf56e.png",
+            "raw": "candidates/A-v1-source.png",
+            "sha256": "426fbf875c5d4d743a2544d494713f4389bf894150216ea9b9e3b1303ae121b9"
+          }
+        ],
+        "delivered": false,
+        "uploaded": false,
+        "selectedVersion": 1,
+        "final": {
+          "id": "gogolin-synagoga",
+          "role": "A",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/gogolin-synagoga/final/riika-gogolin-kadun-synagoga.webp",
+          "sha256": "33867f8c375210ae86d6389ce6c7fe9abf30f4e3f9d7939f1d00d430610aebec",
+          "bytes": 779360,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "format": "WEBP",
+          "selectedVersion": 1,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "notes": [
+            "Four final light/dark 1024/256 composites personally viewed. Entire isolated silhouette and true alpha, no clipping.",
+            "Three shaped entrance gables, circular windows, bracketed cornice, grouped arched lights and three entrances recognize Gogol Street building rather than Peitav.",
+            "Fine gable scallops and tracery are simplified/interpretive, not measured reproductions. Color inferred from monochrome source."
+          ],
+          "outer48FullyTransparent": true,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        "productionActive": false,
+        "localFinalExists": true
+      }
+    },
+    {
+      "id": "gogolin-synagoga",
+      "role": "B",
+      "state": {
+        "id": "gogolin-synagoga",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/B-v1.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-04526ff5-404c-44f2-b299-7917e5a2a2e1.png",
+            "raw": "candidates/B-v1-source.png",
+            "sha256": "9f6246254f0c56e65743b8ef660f072187bb2cd289ddbe6f771fcfe7eb457d8c"
+          }
+        ],
+        "delivered": false,
+        "uploaded": false,
+        "selectedVersion": 1,
+        "final": {
+          "id": "gogolin-synagoga",
+          "role": "B",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/gogolin-synagoga/final/ihme-gogolin-synagoga-loistoaika.jpg",
+          "sha256": "b9e0504f0b3cde27dbb4101b27b0d55a6d17081fbeb7f06dc2c98acb0329cdcd",
+          "bytes": 873231,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "JPEG",
+          "selectedVersion": 1,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "notes": [
+            "Final JPEG personally viewed at original 1536x1024. Natural color photographic appearance: irregular stone and plaster, believable fabric and daylight; no obvious CGI or repetitive artificial texture.",
+            "Congregants differ in dress/pose; visible hands, feet, door openings and connected route through open gate inspected. No blocked path or blocking anatomy defect.",
+            "Three-bay historicist facade remains readable. The top crest approaches the frame; scene framing is tight but principal masonry gable is retained.",
+            "Fine gable/scallop profiles, fenestration ornament, colors and exact people/courtyard details are interpretive."
+          ],
+          "iccBytes": 480,
+          "ownerPhotographicFeedback": "PASS"
+        },
+        "productionActive": false,
+        "localFinalExists": true
+      }
+    },
+    {
+      "id": "sukharev",
+      "role": "A",
+      "state": {
+        "task": 1377,
+        "id": "sukharev",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "c1900",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "A-v1",
+        "completedAt": "2026-10-31T14:12:01.381689+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/sukharev/final/moskova-sukharevin-torni.webp",
+        "sha256": "1e4ee7aec9d25ebd8c417d09d4741fcf886ec3e1e55a720420b227dbb4404827",
+        "sourceSHA256": "bce4313cd63bc942356bf7824571be67fa7becee863f8a1c078e67568f74ef18",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP RGBA",
+        "sourceURLs": [
+          "https://russiainphoto.ru/photos/14586/",
+          "https://commons.wikimedia.org/wiki/File:Suharev_Tower_1900.jpg",
+          "https://ar.culture.ru/en/subject/arhitekturnye-detali-suharevoy-bashni"
+        ],
+        "QA": [
+          "1024 light/dark alpha previews inspected",
+          "256 thumbnail inspected",
+          "Tower silhouette, red brick/white carved decoration and covered staircase match period references",
+          "True alpha and visible RGBA export verified"
+        ],
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "accepted",
+            "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/sukharev/candidates/A-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sukharev",
+      "role": "B",
+      "state": {
+        "task": 1378,
+        "id": "sukharev",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "c1900",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "B-v1",
+        "completedAt": "2026-10-31T14:12:01.384046+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/sukharev/final/ihme-sukharev-loistoaika.jpg",
+        "sha256": "bc9168280c1c4af7d1561f9d3d4ec4028a950015cb94f7ad2805d9d06c9e8258",
+        "sourceSHA256": "f7facdfd8e7019daf9d83d170434c2c6316c605b36e16b1eb635ee39d950330a",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB q95 4:4:4",
+        "sourceURLs": [
+          "https://russiainphoto.ru/photos/14586/",
+          "https://commons.wikimedia.org/wiki/File:Suharev_Tower_1900.jpg",
+          "https://ar.culture.ru/en/subject/arhitekturnye-detali-suharevoy-bashni"
+        ],
+        "QA": [
+          "Final full-size export visually inspected",
+          "Natural camera appearance, varied skin and textile detail, plausible horse/cart and market figures",
+          "Clocktower, side stair and gateway consistent with primary period imagery",
+          "No illustration/CGI surface style, modern vehicles or invented lettering"
+        ],
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted",
+            "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/sukharev/candidates/B-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tsudov",
+      "role": "A",
+      "state": {
+        "task": 1379,
+        "id": "tsudov",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 2,
+        "currentAttempt": "A-v2",
+        "historicalPeriod": "c1850",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "rejected",
+            "reason": "QA detects extra onion dome beyond five in architectural reference; regenerate whole image."
+          },
+          {
+            "attempt": "A-v2",
+            "status": "accepted",
+            "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/tsudov/candidates/A-v2-source.png"
+          }
+        ],
+        "acceptedAttempt": "A-v2",
+        "completedAt": "2026-10-31T14:17:48.833419+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/tsudov/final/moskova-tsudovin-luostari.webp",
+        "sha256": "e6c3006f0c7ef85002946a56918341cd0bc9e9cb489d10adaaca25093fe3ee2f",
+        "sourceSHA256": "c04c78d8c140dec9243d684eb659f279ee38c5a73cd6d04e9eb3f8ba8dd524fe",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP RGBA",
+        "sourceURLs": [
+          "https://www.prlib.ru/item/1028831",
+          "https://www.kreml.ru/en-Us/about-museums/museum-collection/collection-fotografiya/",
+          "https://commons.wikimedia.org/wiki/File:Chudov_monastery_(1900-s).jpg",
+          "https://kraeved1147.ru/kremlin-monasteries/"
+        ],
+        "QA": [
+          "1024 light/dark alpha and256 thumbnail inspected",
+          "Exactly five church domes; portico twin pointed pinnacles; no cropped masonry",
+          "Facade and portico consistent with Fischer period photo and Indeytsev1850s print",
+          "True alpha and visible RGBA export verified"
+        ],
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true
+      }
+    },
+    {
+      "id": "tsudov",
+      "role": "B",
+      "state": {
+        "task": 1380,
+        "id": "tsudov",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "c1850",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "B-v1",
+        "completedAt": "2026-10-31T14:17:50.666026+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/tsudov/final/ihme-tsudov-loistoaika.jpg",
+        "sha256": "56b4acbb8c27c4d2c7c4af2f823c3864190a154da794a9185df70cfda4ce0617",
+        "sourceSHA256": "c554815eb87c6123dcef7fea8e89f019e0503013bd6c822f6a6b8b7da85b671c",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB q95 4:4:4",
+        "sourceURLs": [
+          "https://www.prlib.ru/item/1028831",
+          "https://www.kreml.ru/en-Us/about-museums/museum-collection/collection-fotografiya/",
+          "https://commons.wikimedia.org/wiki/File:Chudov_monastery_(1900-s).jpg",
+          "https://kraeved1147.ru/kremlin-monasteries/"
+        ],
+        "QA": [
+          "Final full-size export inspected",
+          "Believable camera optics, natural skin and cloth, varied real surface imperfections",
+          "Historic refectory, ornate entrance and church background match primary images",
+          "Period monks and pilgrims; no modern objects; no synthetic paper pattern"
+        ],
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted",
+            "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/tsudov/candidates/B-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vacaresti",
+      "role": "A",
+      "state": {
+        "task": 1381,
+        "id": "vacaresti",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 2,
+        "currentAttempt": "A-v2",
+        "historicalPeriod": "c1840",
+        "eraCorrection": {
+          "requested": "c1900",
+          "depicted": "c1840",
+          "authorizedBy": "Parent root following source contradiction; owner scene preserved",
+          "reason": "1900 was prison phase, not active monastery with fully open original galleries. Municipal museum dates monastic use to1848; architect record dates permanent prison conversion1865 and gallery infills afterward.",
+          "evidenceLimit": "No claim of a photograph taken in1840. Approximate era reconstruction informed by surviving original architecture recorded in surveys, pre-prison documentary description and restoration-architect model. Exact minor maintenance details remain interpretive.",
+          "gallerySupport": "Original1730s two-level arcades documented by architect Panaitescu and AINMI measured-survey records reproduced by Marinescu.",
+          "roofChoice": "Muted terracotta barrel tiles, before later replacement with sheet metal by1864."
+        },
+        "deliveryStatus": "not-uploaded-not-posted",
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "rejected",
+            "reason": "Unwanted exterior halo and small-court subdivision absent from original site plan; landscape composition instead of square miniature."
+          },
+          {
+            "attempt": "A-v2",
+            "status": "accepted",
+            "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/vacaresti/candidates/A-v2-source.png"
+          }
+        ],
+        "acceptedAttempt": "A-v2",
+        "completedAt": "2026-10-31T14:25:49.932110+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/vacaresti/final/bukarest-vacarestin-luostari.webp",
+        "sha256": "e23970c76df55764b3447ff10919ef56aef0867f2d663dfa6e2ff1fc91eadbc4",
+        "sourceSHA256": "157ac7b2e7c5eeef1e3679fd2dabc84cb142df146448c8ad9090785fe402f0aa",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP RGBA",
+        "sourceURLs": [
+          "https://muzeulbucurestiului.ro/ansamblul-manastirii-vacaresti/",
+          "https://arhitectura-1906.ro/2018/06/manastirea-vacaresti-un-tezaur-risipit/",
+          "https://centrulexpo.uauim.ro/ro/proiecte/reconstructia-in-mediu-virtual-a-muzeului-simu/40-expozitia-memoria-arhitecturii-marturiile-unor-arhitecti-despre-manastirea-vacaresti",
+          "https://dsftrom.s3.eu-central-1.amazonaws.com/3cbcdfa8ecd631a9208067fc16f89986.pdf"
+        ],
+        "QA": [
+          "1024 light/dark alpha previews and256 thumbnail inspected",
+          "Two-court plan, separating belltower range, main four-drum church and original east two-level gallery preserved",
+          "No external halo or prison subdivision from rejected v1",
+          "True alpha/lossless visible RGBA export verified",
+          "Circa1840 monastic reconstruction: era correction and evidence limits in references/sources.json and qa/era-correction.json"
+        ],
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true
+      }
+    },
+    {
+      "id": "vacaresti",
+      "role": "B",
+      "state": {
+        "task": 1382,
+        "id": "vacaresti",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 3,
+        "currentAttempt": "B-v3",
+        "historicalPeriod": "c1840",
+        "eraCorrection": {
+          "requested": "c1900",
+          "depicted": "c1840",
+          "authorizedBy": "Parent root following source contradiction; owner scene preserved",
+          "reason": "1900 was prison phase, not active monastery with fully open original galleries. Municipal museum dates monastic use to1848; architect record dates permanent prison conversion1865 and gallery infills afterward.",
+          "evidenceLimit": "No claim of a photograph taken in1840. Approximate era reconstruction informed by surviving original architecture recorded in surveys, pre-prison documentary description and restoration-architect model. Exact minor maintenance details remain interpretive.",
+          "gallerySupport": "Original1730s two-level arcades documented by architect Panaitescu and AINMI measured-survey records reproduced by Marinescu.",
+          "roofChoice": "Muted terracotta barrel tiles, before later replacement with sheet metal by1864."
+        },
+        "deliveryStatus": "not-uploaded-not-posted",
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "rejected",
+            "reason": "Camera geometry wrong: east-gallery view showed west church porch, copied reference viewpoint. Whole regeneration to show closed east apse and side."
+          },
+          {
+            "attempt": "B-v2",
+            "status": "rejected",
+            "reason": "Photographic quality good but invented open arcade on church south side; correct to solid closed walls and apses."
+          },
+          {
+            "attempt": "B-v3",
+            "status": "accepted",
+            "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/vacaresti/candidates/B-v3-source.png"
+          }
+        ],
+        "acceptedAttempt": "B-v3",
+        "completedAt": "2026-10-31T14:25:49.944363+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/vacaresti/final/ihme-vacaresti-loistoaika.jpg",
+        "sha256": "da58e67aa7548ecbdffb7ff161674e1425cb149a02bff17792ff4c046881a9b9",
+        "sourceSHA256": "89544b4ec8a1fedda21b76996eb8b0bd98268e45bbd5f1444d893abeae64a82f",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB q95 4:4:4",
+        "sourceURLs": [
+          "https://muzeulbucurestiului.ro/ansamblul-manastirii-vacaresti/",
+          "https://arhitectura-1906.ro/2018/06/manastirea-vacaresti-un-tezaur-risipit/",
+          "https://centrulexpo.uauim.ro/ro/proiecte/reconstructia-in-mediu-virtual-a-muzeului-simu/40-expozitia-memoria-arhitecturii-marturiile-unor-arhitecti-despre-manastirea-vacaresti",
+          "https://dsftrom.s3.eu-central-1.amazonaws.com/3cbcdfa8ecd631a9208067fc16f89986.pdf"
+        ],
+        "QA": [
+          "Final1536x1024 export inspected",
+          "Convincing physical camera appearance, natural faces, cloth, paving and lime plaster",
+          "Monks in open rounded-arch gallery; closed church apse/side instead of incorrect west porch or invented side colonnade",
+          "No prison fixtures or modern objects",
+          "Approximate1840 reconstruction supported by original fabric/survey references; detailed perspective and maintenance state interpretive, not a claim of exact1840 photographic documentation"
+        ],
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true
+      }
+    },
+    {
+      "id": "old-tolbooth",
+      "role": "A",
+      "state": {
+        "taskNumber": 1383,
+        "id": "old-tolbooth",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-128a8975-fa2c-4ef7-8eea-d7707acb0769.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/final/edinburgh-old-tolbooth.webp",
+        "sourceSha256": "5aa31eae26ad9e1a1a45f755713028713cb9ac766ad106953404e0806a9c7d51",
+        "finalSha256": "d5e83b928d734a3a0d0c4eb79dc33936c4b82272abb7efb37347c8e44485b76c",
+        "promptSha256": "aea6555eb61f4ff8e595963e9623a9f2cf88a834356a627653c4297f396ec301",
+        "bytes": 916776,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.capitalcollections.org.uk/view-item?i=621",
+          "https://www.capitalcollections.org.uk/view-item?i=2824",
+          "https://www.nls.uk/collections/stories/literature-and-poetry/sir-walter-scott-and-his-historical-influences/"
+        ],
+        "historicalUncertainty": "Historical reconstruction of the original vanished Old Tolbooth, not Canongate Tolbooth. Surviving view is near demolition1817; exact1790 finishes, unrecorded rear elevation and street participants are inferred. Color and material treatment interpretive from monochrome engraving.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:16:22.996994+00:00",
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "architecture": "Original vanished Tolbooth double rounded stair turrets, irregular windows, stepped gables, tall chimneys and low annex following NLS engraving; not Canongate.",
+          "style": "Fine-line shaded warm watercolor; whole alpha silhouette clean on light/dark full and256px.",
+          "limitations": "Historical reconstruction of the original vanished Old Tolbooth, not Canongate Tolbooth. Surviving view is near demolition1817; exact1790 finishes, unrecorded rear elevation and street participants are inferred. Color and material treatment interpretive from monochrome engraving.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/qa/export-verification.json",
+          "outerEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ]
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "old-tolbooth",
+      "role": "B",
+      "state": {
+        "taskNumber": 1384,
+        "id": "old-tolbooth",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 2,
+        "selectedAttempt": 2,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-59618845-8a4e-4eb8-8560-3cdb2ee82489.png",
+            "status": "rejected",
+            "reason": "Modern roadside pole/stickers and distant traffic sign in1790scene. Rejected, preserved without editing."
+          },
+          {
+            "version": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/candidates/B-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-5028e83d-84e6-46fc-8291-915b5ccffe56.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/final/ihme-old-tolbooth-loistoaika.jpg",
+        "sourceSha256": "32a4b8ff25607cc9561cebce33b90e0742c3de375f87ae3d954b9dd908f6bd3d",
+        "finalSha256": "f8fc5f0373b2051452241f153b15e0a8c317896a09cb58ac53a12d0346846ac8",
+        "promptSha256": "2830902b5f5f68e76ad7e73a31d543e225e242f1a4a0d7d81334d3961b5af811",
+        "bytes": 868685,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.capitalcollections.org.uk/view-item?i=621",
+          "https://www.capitalcollections.org.uk/view-item?i=2824",
+          "https://www.nls.uk/collections/stories/literature-and-poetry/sir-walter-scott-and-his-historical-influences/"
+        ],
+        "historicalUncertainty": "Historical reconstruction of the original vanished Old Tolbooth, not Canongate Tolbooth. Surviving view is near demolition1817; exact1790 finishes, unrecorded rear elevation and street participants are inferred. Color and material treatment interpretive from monochrome engraving.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:16:23.806427+00:00",
+          "views": [
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Vanished Old Tolbooth beside St Giles, circa1790 townspeople; version2 has no modern poles or traffic signs.",
+          "style": "Photographic irregular masonry and slate surfaces, plausible clothing and people, natural optical depth; full image and384px QA pass.",
+          "limitations": "Historical reconstruction of the original vanished Old Tolbooth, not Canongate Tolbooth. Surviving view is near demolition1817; exact1790 finishes, unrecorded rear elevation and street participants are inferred. Color and material treatment interpretive from monochrome engraving.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/old-tolbooth/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    }
+  ],
+  "ownerPhotographicFeedback": {
+    "recordedAt": "2026-10-31T11:44:11.230987+00:00",
+    "directOwnerQuote": "Nämä pitää olla oikean valokuvan näköisiä",
+    "scope": "Lost-wonders B historical scene illustrations; A map drawings remain separately commissioned drawing style",
+    "requirement": "Real-camera photographic appearance: natural optical depth, human anatomy and poses, irregular credible material surfaces and light. Reject CGI render, painted or smooth artificial surface. Whole-new generation when needed.",
+    "appliedToBatches": [
+      2,
+      3,
+      4
+    ],
+    "rootSeptizodiumBReopened": true
+  },
+  "productionRecordNote": "Producer-local records preserve pre-delivery states. Coordinator R2 receipts and mailbox readback are authoritative for later technical delivery.",
+  "historicalReconstructionLimit": "Lost structures and scenes are source-informed visual reconstructions; exact people, events, furnishings and uncertain complete site plans are not documentary assertions."
+}

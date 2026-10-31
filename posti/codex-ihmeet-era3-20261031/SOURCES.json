@@ -1,0 +1,412 @@
+{
+  "historicalEvidence": {
+    "palast-der-republik": {
+      "research.json": {
+        "checkedAt": "2026-10-31T14:00:13.255302+00:00",
+        "sources": [
+          {
+            "url": "https://www.bundestag.de/parlament/geschichte/schauplaetze/palast",
+            "type": "primary parliamentary history and archival photographs",
+            "findings": "Low cuboidal building with white marble upper end blocks framing a lowered central roof, long bronze reflective grid facade and white vertical structural strips, stepped front terrace. Exterior only. Full archival photo1986 and facade1985 viewed."
+          }
+        ],
+        "historicalUncertainty": "Circa1980 exterior reconstructed from archival mid1980s photographs. Incidental people and clothing illustrative, not portraits. No interior or artworks."
+      }
+    },
+    "anhalter-bahnhof": {
+      "research.json": {
+        "checkedAt": "2026-10-31T14:00:13.255302+00:00",
+        "sources": [
+          {
+            "url": "https://www.berlin.de/landesdenkmalamt/denkmale/aus-der-praxis-erkennen-und-erhalten/industrie-und-verkehr/portalruine-anhalter-bahnhof-640724.php",
+            "type": "primary Berlin heritage authority,1903 Titzenthaler image",
+            "findings": "Full station brick and terracotta1880 building; giant rounded glazed gable over lower projecting portico and long flanking arcaded wings; long train shed behind, allegorical sculptures."
+          },
+          {
+            "url": "https://artsandculture.google.com/asset/anhalter-bahnhof/zwEmBGixVMuGXA?hl=en",
+            "type": "Zentralinstitut fuer Kunstgeschichte archive, Waldemar Titzenthaler1910,ZI-0155-02-2-Th179077",
+            "imageURL": "https://lh3.googleusercontent.com/ci/AL18g_QmtZlXu9-BnD6CN6yBYOUrFOQ9e_wnznEQBWqWc7dD8m7ImgGWKdJ7U96bZFhbBEX2gMd1XFg"
+          }
+        ],
+        "historicalUncertainty": "1900 appearance reconstructed from1903 photo; colours and figures illustrative. Preserve full building not current ruin."
+      }
+    },
+    "ciutadella": {
+      "historical-evidence.json": {
+        "sources": [
+          {
+            "url": "https://www.parlament.cat/wp/pcat/parlament/historia-del-palau/el-palau-del-parlament/",
+            "kind": "Catalan Parliament official building history",
+            "supports": "Pentagonal fortress built after1714 by Verboom; arsenal survives. Modern decorative palace adaptations not copied."
+          },
+          {
+            "url": "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/143542/1/20230310_PD_DOC_Ciutadella_SW-Web-1.pdf",
+            "kind": "Barcelona municipal masterplan historical section",
+            "supports": "Five bastions, five ravelins, dry moat and glacis."
+          },
+          {
+            "url": "https://www.ub.edu/geocrit/sn/sn-431.htm",
+            "kind": "University of Barcelona publication reproducing1804 primary archival plan",
+            "supports": "Antonio Lopez1804 plan, Archivo General Simancas MPD29,57."
+          },
+          {
+            "url": "https://tramits.gencat.cat/en/diada-nacional-de-catalunya/historia/escenaris/index.html",
+            "kind": "Generalitat official history",
+            "supports": "Original arsenal, governor house, chapel; demolished1869."
+          },
+          {
+            "url": "https://ejercito.defensa.gob.es/Galerias/multimedia/revista-ejercito/2017/914/accesible/Revista_Ejercito_Accesible.pdf",
+            "kind": "Spanish Army official history journal",
+            "supports": "Line infantry white before1802; uniform palette used circa1800."
+          },
+          {
+            "url": "https://elrincondebyron.com/2022/09/30/la-ciudadela-de-barcelona-y-su-protagonismo-en-el-periodo-1808-1814/",
+            "kind": "Secondary host of historic demolition painting and relief",
+            "supports": "Illustrated principal gate, bridge, church and buildings. Relief yielded incorrect hexagon in A-v1, rejected; archivalplan and confirmed five-sided description prioritized."
+          }
+        ],
+        "uncertainty": "Historical reconstruction, not an authenticated historical photograph. A preserves verified five-bastion/five-ravelin topology but internal buildings, exact colors and full elevation are interpretive. B reconstructs intact gate from later demolition view; exact regiment, heraldic relief, chapel details and disposition of guards circa1800 not established."
+      }
+    },
+    "luxemburgin-linnoitus": {
+      "historical-evidence.json": {
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/archive/advisory_body_evaluation/699.pdf",
+            "kind": "UNESCO advisory evaluation",
+            "supports": "Prussian garrison1815–1867 and fortress dismantled after treaty1867; Bock casemates and stone bridge."
+          },
+          {
+            "url": "https://inpa.public.lu/fr/itineraires_culturels/itineraire_culturel_forteresse/vauban/le_bock.html",
+            "kind": "National heritage institute",
+            "supports": "Bock remade17thcentury, casemates enlarged18thcentury, rock defenses and bridge."
+          },
+          {
+            "url": "https://m3e.public.lu/en/centre-de-documentation/armes-forteresse.html",
+            "kind": "Musee Drai Eechelen",
+            "supports": "Relief records fortress final1867 form."
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/De_Bock_1867.jpg",
+            "kind": "Historic1867 photograph reproduced on Wikimedia",
+            "supports": "Pre-dismantling upperworks, rock spur, casemates and barracks; attribution metadata not independently established."
+          },
+          {
+            "url": "https://www.dhm.de/assets/DHM/Download/Ausstellungen/Archiv/2016/K%C3%B6niggr%C3%A4tz/Flyer_Koeniggraetz-web.pdf",
+            "kind": "Deutsches Historisches Museum",
+            "supports": "Prussian spiked helmet M1860 period form."
+          }
+        ],
+        "uncertainty": "Bock is a representative compact part of the much larger Luxembourg fortress, not a comprehensive city defense plan. Historic1867 photograph is near the requested circa1860 date. Unseen elevations, exact barrack configurations, material colors and soldiers' regiment are interpretive."
+      }
+    },
+    "suuri-synagoga-vilna": {
+      "historical-research.json": {
+        "period": "around 1873",
+        "sources": [
+          {
+            "url": "https://www.lndm.lt/jano-bulhako-zydiskasis-vilnius-pasaulis-kurio-nebera/",
+            "institution": "Lithuanian National Museum of Art",
+            "evidence": "Jan Bulhak historic photographs: 1915 gable, 1940 Great Synagogue/library view, 1913 school courtyard."
+          },
+          {
+            "url": "https://www.vsaa.lt/en/news-cat/research-of-the-great-synagogue-2/",
+            "institution": "Vilnius Old Town Renewal Agency / archaeological project",
+            "evidence": "Older Renaissance-Baroque synagogue and shulhoyf; Strashun library new building in 1903."
+          },
+          {
+            "url": "https://cja.huji.ac.il/?id=334&mode=set",
+            "institution": "Hebrew University Center for Jewish Art",
+            "evidence": "Historical Great City Synagogue object and primary postcard catalog."
+          },
+          {
+            "url": "https://www.seligman.org.il/vilna_synagogue_history.html",
+            "institution": "Jon Seligman, excavation director",
+            "access": "Search-index excerpt available; live site suspended, not treated as a live page read.",
+            "evidence": "High main hall, three bays and high segment-headed windows per facade; early-19th-century double wooden gable gallery; side vestibule."
+          }
+        ],
+        "decisions": [
+          "Depict old Great City Synagogue, not the surviving 1903 Choral Synagogue. No dome.",
+          "Exclude rusticated Strashun Library front building, a post-1900 addition. Photographs are later than requested circa 1873 and used only for long-standing gable architecture.",
+          "Nearly square hall with steep pitched roof, high windows, older low annexes, two-tier open timber gallery in gable.",
+          "Exact lower annex appearance, full 1873 courtyard layout, colors and people remain interpretation."
+        ],
+        "imagesPersonallyViewed": [
+          {
+            "file": "Fi-310-8_auksta.jpeg",
+            "sha256": "e9d72536db1c56016849baaec7fc46adcd3d7821233b329514654a645fe5c40d"
+          },
+          {
+            "file": "Fi-273_auksta.jpeg",
+            "sha256": "393315b0c84b12b7dfeae4f83630b8f12643098233fa9a2e455ab8940517b143"
+          },
+          {
+            "file": "Fi-316-2_auksta.jpeg",
+            "sha256": "6928508f03b4456e0524f253d80f7dc9d382cbc48703e625bc731108c7e50864"
+          }
+        ],
+        "styleReferences": [
+          "../../ihmeet-era1-20261031/references/pariisi-tuileries.webp",
+          "../../ihmeet-era1-20261031/references/ihme-tuileries-loistoaika-v2.jpg"
+        ],
+        "ownerPhotographicFeedback": "B must look like actual color camera photograph, not CGI, with non-repeating natural surfaces and credible anatomy."
+      }
+    },
+    "gogolin-synagoga": {
+      "historical-research.json": {
+        "period": "around 1900",
+        "sources": [
+          {
+            "url": "https://cja.huji.ac.il/gross/browser.php?id=9476&mode=set",
+            "institution": "Hebrew University Center for Jewish Art",
+            "evidence": "Hardenack, 1868–1871, stone/brick/metal and Renaissance character at 25 Gogola St."
+          },
+          {
+            "url": "https://cja.huji.ac.il/gross/browser.php?id=46599&mode=set",
+            "institution": "Hebrew University Center for Jewish Art / Gross collection",
+            "evidence": "1899 postcard P.1609 catalog confirms building; image endpoint inaccessible."
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Great_Choral_Synagogue_(Riga).jpg",
+            "institution": "Historical photograph, private collection reproduction",
+            "evidence": "Direct primary historic exterior photograph downloaded and viewed; source catalog calls it 1930s.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Great_Choral_Synagogue_%28Riga%29.jpg"
+          }
+        ],
+        "decisions": [
+          "Riga Gogol Street Great Choral Synagogue, not Peitav.",
+          "Distinctive lobed shaped masonry gables and rosettes, bracketed cornice, tall arched grouped windows; no large dome.",
+          "The historical photo postdates requested circa 1900; matching 1899 CJA postcard catalog confirms same building. Colors, hidden bays and people remain reconstructed."
+        ],
+        "imagesPersonallyViewed": [
+          {
+            "file": "riga-historic.jpg",
+            "sha256": "8311227ac495fd4795c0844c97c12c5b8b1c4a66542a3a61d328c79c127dd143"
+          }
+        ],
+        "styleReferences": [
+          "../../ihmeet-era1-20261031/references/pariisi-tuileries.webp",
+          "../../ihmeet-era1-20261031/references/ihme-tuileries-loistoaika-v2.jpg"
+        ],
+        "ownerPhotographicFeedback": "B must look like actual color camera photograph, not CGI, with non-repeating natural surfaces and credible anatomy."
+      }
+    },
+    "sukharev": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://russiainphoto.ru/photos/14586/",
+            "usedFor": "MAMM/MDF period1900s hand-colored postcard, side elevation, long covered exterior stair."
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Suharev_Tower_1900.jpg",
+            "usedFor": "Otto Kirchner1902 historical photograph, frontal clocktower proportions and ornamental gateway."
+          },
+          {
+            "url": "https://ar.culture.ru/en/subject/arhitekturnye-detali-suharevoy-bashni",
+            "usedFor": "Museum architectural fragments confirm exposed red brick and white carved stone Naryshkin baroque decoration."
+          }
+        ]
+      }
+    },
+    "tsudov": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://www.prlib.ru/item/1028831",
+            "usedFor": "RGIA record1850 identifies contemporary view; image not exposed online."
+          },
+          {
+            "url": "https://www.kreml.ru/en-Us/about-museums/museum-collection/collection-fotografiya/",
+            "usedFor": "Kremlin museum collection confirms Chudov portico historical photography."
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Chudov_monastery_(1900-s).jpg",
+            "usedFor": "Karl Fischer historical original photograph, portico and domes; later-era corroboration, historical not present-day building."
+          },
+          {
+            "url": "https://kraeved1147.ru/kremlin-monasteries/",
+            "usedFor": "Primary historical images reproduced from Architecture Museum exhibition: D. Indeytsev/Daциаро1850s panorama and1846-1859 cathedral engraving, corroborate pre1850 portico and domes. Fischer1900 photo supplies architectural detail; no later tomb chapel shown."
+          }
+        ]
+      }
+    },
+    "vacaresti": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://muzeulbucurestiului.ro/ansamblul-manastirii-vacaresti/",
+            "usedFor": "Bucharest municipal museum architecture and monastery/prison chronology; rules out active monastery1900."
+          },
+          {
+            "url": "https://arhitectura-1906.ro/2018/06/manastirea-vacaresti-un-tezaur-risipit/",
+            "usedFor": "Architect Alexandru Panaitescu firsthand architectural/restoration account, model and arcaded enclosures, later infilling."
+          },
+          {
+            "url": "https://centrulexpo.uauim.ro/ro/proiecte/reconstructia-in-mediu-virtual-a-muzeului-simu/40-expozitia-memoria-arhitecturii-marturiile-unor-arhitecti-despre-manastirea-vacaresti",
+            "usedFor": "University original1908 measured drawings provenance and prison status."
+          },
+          {
+            "url": "https://dsftrom.s3.eu-central-1.amazonaws.com/3cbcdfa8ecd631a9208067fc16f89986.pdf",
+            "usedFor": "Marinescu2011 pp186-188: transcribed original architectural survey/restoration records AINMI Fond DMI2315/1974 and2320/1974-1976; galleries two levels, ground round arches, upper trilobate arches, circular brick columns; original form distinguished from later prison infills. pp91-92 and341 reproduce1856 catagraph with carved-stone gallery corridor."
+          }
+        ],
+        "eraCorrection": {
+          "requested": "c1900",
+          "depicted": "c1840",
+          "authorizedBy": "Parent root following source contradiction; owner scene preserved",
+          "reason": "1900 was prison phase, not active monastery with fully open original galleries. Municipal museum dates monastic use to1848; architect record dates permanent prison conversion1865 and gallery infills afterward.",
+          "evidenceLimit": "No claim of a photograph taken in1840. Approximate era reconstruction informed by surviving original architecture recorded in surveys, pre-prison documentary description and restoration-architect model. Exact minor maintenance details remain interpretive.",
+          "gallerySupport": "Original1730s two-level arcades documented by architect Panaitescu and AINMI measured-survey records reproduced by Marinescu.",
+          "roofChoice": "Muted terracotta barrel tiles, before later replacement with sheet metal by1864."
+        }
+      }
+    },
+    "old-tolbooth": {
+      "historical-evidence.json": {
+        "sources": [
+          {
+            "url": "https://www.capitalcollections.org.uk/view-item?i=621",
+            "kind": "Edinburgh City Libraries historic collection",
+            "supports": "James Skene1817 watercolor of original Old Tolbooth adjoining St Giles; turrets, irregular windows, low annex; demolished1817."
+          },
+          {
+            "url": "https://www.capitalcollections.org.uk/view-item?i=2824",
+            "kind": "Edinburgh City Libraries",
+            "supports": "Engraving after Alexander Nasmyth, old building by westStGiles."
+          },
+          {
+            "url": "https://www.nls.uk/collections/stories/literature-and-poetry/sir-walter-scott-and-his-historical-influences/",
+            "kind": "National Library of Scotland",
+            "supports": "Primary historic engraving after Nasmyth, Heart of Mid-Lothian jail Bdg.m.39, used as visual silhouette reference."
+          }
+        ],
+        "uncertainty": "Historical reconstruction of the original vanished Old Tolbooth, not Canongate Tolbooth. Surviving view is near demolition1817; exact1790 finishes, unrecorded rear elevation and street participants are inferred. Color and material treatment interpretive from monochrome engraving."
+      }
+    }
+  },
+  "BReference": {
+    "status": "RESOLVED_EXACT_REFERENCE",
+    "checkedAt": "2026-10-31T11:09:14.472220+00:00",
+    "imageViewed": true,
+    "file": "references/ihme-tuileries-loistoaika-v2.jpg",
+    "originalLocalPath": "output/ihmeet-loistoaika-v2/13-16/final-jpg/ihme-tuileries-loistoaika-v2.jpg",
+    "historicalManifest": "output/mailbox-photo-policy-20260912/posti/history-82-caption-source-package.json",
+    "historicalManifestSha256": "0c1ea788b6541f391db9f5a91287da906eb33f2a4622a1084cb205719f5968c9",
+    "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+    "gitBlobSha1ComputedFromBytes": "c21d250a133aa9cb850865302fdfa63018ba72eb",
+    "gitBlobPresenceConfirmed": false,
+    "bytes": 825207,
+    "format": "JPEG",
+    "size": [
+      1536,
+      1024
+    ],
+    "aspectRatio": "3:2 landscape",
+    "mode": "RGB",
+    "colored": true,
+    "embeddedICCBytes": 0,
+    "colorSpaceDeclaredByHistoricalManifest": "sRGB IEC61966-2.1",
+    "colorProfileNote": "The historical manifest declares sRGB, but these exact JPEG bytes have no embedded ICC profile. Do not claim that the original contains one.",
+    "liveMain": {
+      "ref": "0ac9a46250f77c131064d9622e9496abe8a35d52",
+      "exactRepoPath": "assets/kartat/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+      "exactPathResult": 404,
+      "directoryEntries": 104,
+      "exactFilenamePresent": false,
+      "relatedExistingFile": {
+        "path": "assets/kartat/ihmeet/ihme-tuileries.webp",
+        "blob": "c5e633a819f355bcc9ab19142fbe8a5128c512f2"
+      },
+      "codeSearchResultCount": 0
+    },
+    "r2Readback": [
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444915954017000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444916364947000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      }
+    ],
+    "style": "Colored photorealistic historical reconstruction, natural warm muted light, period people carrying out a small story within a detailed architectural setting. Full rectangular scene without illustration outlines, transparency, vignette border or aged-paper effect.",
+    "deliveryPractice": {
+      "bucket": "matkakirja",
+      "objectKeyTemplate": "kohtaamiset/ihmeet/ihme-<id>-loistoaika.jpg",
+      "repoCopyTemplate": "assets/kartat/ihmeet/ihme-<id>-loistoaika.jpg",
+      "mime": "image/jpeg",
+      "canonicalBase": "https://media.matkakirja.app/",
+      "workingUploader": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/tools/upload_r2.py",
+      "workingReceipt": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/R2-RECEIPTS.json",
+      "workingReceiptVerifiedCount": 6,
+      "jpegUploaderReference": "output/fable-20260924/upload-r2-verified.mjs",
+      "wrangler": "sites/matkakirjan-kuvat/node_modules/.bin/wrangler",
+      "configReference": "output/color-audit-bukarest/final/wrangler.json",
+      "steps": [
+        "Require exact image QA and local hash first",
+        "GET canonical object before upload; accept already-identical object, upload only absent object, stop on differing existing bytes",
+        "Wrangler remote object put with exact key and image/jpeg MIME",
+        "GET full object using Origin https://matkakirja.app and cache-busting SHA query",
+        "Require HTTP200, exact bytes and SHA256, image/jpeg MIME and allowed CORS",
+        "Record immutable receipt; keep recipient acceptance/integration separate"
+      ],
+      "adaptationNeeded": "These old uploaders are task-specific: adapt QA/state paths, item key, MIME and existing-key policy; do not execute unmodified. The older JPEG uploader has a restrictive key whitelist, old workspace path and requires embedded ICC, whereas the exact B reference has no embedded ICC.",
+      "executedDuringDiscovery": false
+    },
+    "networkNote": "Python urllib received HTTP403; established curl GET method succeeded with identical bytes on canonical media and known public bucket, both plain and cache-busted URLs. No authentication secrets accessed or printed.",
+    "externalWrites": false,
+    "generationPerformed": false
+  },
+  "AReferences": [
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-notre-dame.webp",
+      "blobSha": "cbabbe4717d5487da9bfc38337df81a1b7a00bbf",
+      "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73"
+    },
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-tuileries.webp",
+      "blobSha": "eb8a0dada89dc7113a4ae7628d182d29b519b41a",
+      "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52"
+    }
+  ]
+}
