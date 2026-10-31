@@ -1269,6 +1269,11 @@
   "taytto": 0.616,
   "reuna": 0
  },
+ "pariisi-eiffel-torni-v3.webp": {
+  "sha": "8c2384801c315808",
+  "taytto": 0.118,
+  "reuna": 0
+ },
  "pariisi-eiffel-torni.webp": {
   "sha": "ae81bb0b2b95e889",
   "taytto": 0.118,
@@ -1292,6 +1297,11 @@
  "pariisi-lavoisier-1780.webp": {
   "sha": "b64e8bfc19a8a46e",
   "taytto": 0.519,
+  "reuna": 0
+ },
+ "pariisi-louvre-v3.webp": {
+  "sha": "162cb29849e5c723",
+  "taytto": 0.138,
   "reuna": 0
  },
  "pariisi-louvre.webp": {
@@ -1329,14 +1339,29 @@
   "taytto": 0.511,
   "reuna": 0
  },
+ "pariisi-orsayn-taidemuseo-v3.webp": {
+  "sha": "dbba2463a89541fc",
+  "taytto": 0.359,
+  "reuna": 0
+ },
  "pariisi-orsayn-taidemuseo.webp": {
   "sha": "ef4fac586f91f149",
   "taytto": 0.359,
   "reuna": 0
  },
+ "pariisi-palais-garnier-v3.webp": {
+  "sha": "25d70b1d377db6f7",
+  "taytto": 0.299,
+  "reuna": 0
+ },
  "pariisi-palais-garnier.webp": {
   "sha": "a443ea465b4d64e6",
   "taytto": 0.299,
+  "reuna": 0
+ },
+ "pariisi-pantheon-v3.webp": {
+  "sha": "8a09f112bdde2d98",
+  "taytto": 0.193,
   "reuna": 0
  },
  "pariisi-pantheon.webp": {
@@ -1369,9 +1394,19 @@
   "taytto": 0.281,
   "reuna": 0
  },
+ "pariisi-riemukaari-v3.webp": {
+  "sha": "33fe3b92b8d2dd12",
+  "taytto": 0.282,
+  "reuna": 0
+ },
  "pariisi-riemukaari.webp": {
   "sha": "29408bce451e3856",
   "taytto": 0.282,
+  "reuna": 0
+ },
+ "pariisi-sacre-coeur-v3.webp": {
+  "sha": "11ecbc055a8e6d09",
+  "taytto": 0.186,
   "reuna": 0
  },
  "pariisi-sacre-coeur.webp": {

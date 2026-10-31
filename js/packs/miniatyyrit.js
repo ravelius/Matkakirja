@@ -82,19 +82,22 @@ export const MINIATYYRIT = {
     'Suomi herää 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
   },
   pariisi: {
-    'Eiffel-torni': 'assets/kartat/miniatyyrit/pariisi-eiffel-torni.webp',
-    Riemukaari: 'assets/kartat/miniatyyrit/pariisi-riemukaari.webp',
+    // -v3 = KYLLÄISTETYT (omistaja 31.10.2026 klo 09.14 "Osa rakennuksista on vielä liian haaleita tälle kartalle",
+    // PT): vaaleat akvarellit kohti Notre-Damen ja Tuileriesin kylläisyyttä (tools/miniatyyri-kyllaisyys.py; alfa ennallaan).
+    // Uusi nimi myös siksi, ettei Cloudflaren 30 päivän välimuisti näytä vanhaa kuvaa.
+    'Eiffel-torni': 'assets/kartat/miniatyyrit/pariisi-eiffel-torni-v3.webp',
+    Riemukaari: 'assets/kartat/miniatyyrit/pariisi-riemukaari-v3.webp',
     'Concorden aukio': 'assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp',
-    Louvre: 'assets/kartat/miniatyyrit/pariisi-louvre.webp',
+    Louvre: 'assets/kartat/miniatyyrit/pariisi-louvre-v3.webp',
     'Luxembourgin puisto': 'assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto.webp',
-    'Sacré-Cœur': 'assets/kartat/miniatyyrit/pariisi-sacre-coeur.webp',
-    Panthéon: 'assets/kartat/miniatyyrit/pariisi-pantheon.webp',
+    'Sacré-Cœur': 'assets/kartat/miniatyyrit/pariisi-sacre-coeur-v3.webp',
+    Panthéon: 'assets/kartat/miniatyyrit/pariisi-pantheon-v3.webp',
     'Notre-Dame': 'assets/kartat/miniatyyrit/pariisi-notre-dame.webp',
     // Paketti O4 (16.8.2026). Orsay vaati kolme yritystä: yleinen
     // pikkuasema, matala laatikko ja vasta kolmantena talon
     // tunnusmerkki eli koko pituudelta kaartuva lasikatto.
-    'Orsayn taidemuseo': 'assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp',
-    'Palais Garnier': 'assets/kartat/miniatyyrit/pariisi-palais-garnier.webp',
+    'Orsayn taidemuseo': 'assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo-v3.webp',
+    'Palais Garnier': 'assets/kartat/miniatyyrit/pariisi-palais-garnier-v3.webp',
     'Place des Vosges': 'assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp',
     /*
      * MERKINTÄ ON LUPAUS PIIRROKSESTA (Raamattu, KARTTAUUDISTUKSEN
