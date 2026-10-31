@@ -19,6 +19,9 @@ Proto-worktree wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216, kärki 6
 - d2 (_tyo/pelikoodari/reitti-216/d2, aja-d2.zsh taustalla, loki aja-d2.log) jonottaa linjalla 2 VS:n ajojen jälkeen.
   Skenaario = c4 + `palatsi mallit file://…/linssiseppa2/juuri-r89/` (v89 v81-nimellä), SHA luetaan lukon saannin hetkellä.
   **Älä committoi reitti-216:een ennen kuin d2 on saanut lukon** (TaustaKansio-vaihto v89:ään rikkoisi juuri-r89-ajon).
+  Vertailu: VS:n ajo c2ecc5896 + juuri-r89 (lokit/esikatselu-20261031-220050): tausta ilman vikoja, mutta portin läpikulussa kamera
+  katsoo yhä jyrkästi alas ja seinät näkyvät ilman kattoa (_tyo/linssiseppa2/reitti-v89/kooste-v89-0.jpg rivi 4, kooste-v89-35.jpg rivi 5).
+  Ajossa oli vielä vanha koodi ilman 24ab63986:ta. Katso, korjaako d2 kohdan; jos ei, se on c5:n este.
   Tarkista: kameraväli t ~57–63 ja ~80–83: tarve ja `ennakko`-kenttä; tavoite kamera ≤ ~4 m portista tultaessa (c4: 8,3 m, kenttä 29°).
 
 ## Kesken / seuraava
