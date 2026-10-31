@@ -2415,3 +2415,10 @@ Uusi session id local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd. U = proto-3d/_tyo/li
 - PT 23.5x: v89d KUITATTU (PK:n d5-uusinta varmistaa pelissä). AVOIN, ALOITA TÄSTÄ: V4_marmori piirtyy kuviottomana harmaana muuallakin
   (VS:n kiilat, v89d-kuvan oikean yläkulman punainen viiva) → kartoita KAIKKI V4_marmori-pinnat reitillä ja korjaa materiaali JUURESTA
   (esim. V4_marmorin kuvitus/VS:n Lattia-laji 16 tai materiaalikartta), ei pinta kerrallaan. Selvitä ensin, miksi marmori on pelissä kuvioton.
+
+## LISÄYS 177 (31.10. 23.52): PUNAINEN JA MARMORI = PELIN PINNAT, V4_MARMORI SULJETTU (PT)
+- Pihan 06 muuri = a-meridiaaniportti runko V4_red, mutta rakennukset piirretään nimellä "sokkelo …" → LattiaLaji antaa V4_red:lle aina lajin 10
+  (rappaus.jpg × _JuoksuRappausSavy × k21; JuoksuV4Maailma.Lattia.cs:79, JuoksuLattia.shader:296) → glb:n V4_red-väri ei vaikuta. PT vei VS:lle (pelin rappaussävy).
+- V4_marmori = laji 16 maailman koordinaateilla (ei UV:ta); pysty (|n.y| < 0,6) = mallin väri ±4 % kuvioton (tarkoituksellinen), vaaka 45 % mallin väriä.
+  tausta-v89d:n lod0-normaalit tarkistettu (0 m² vaakapintaa pystynormaalilla). PT 23.5x: ei sävykorjausta; vain jos VS:n o3-pari mittaa eron → VS pyytää arvot.
+- SEURAAVA AVOIN: VS:n parit v89(b/d) ja 06 ulkorengas-v10:llä (LISÄYS 175) → OK:n jälkeen PT + JU. Ei ajoja käynnissä.
