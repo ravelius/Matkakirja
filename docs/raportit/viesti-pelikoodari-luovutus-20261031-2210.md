@@ -24,6 +24,15 @@ Proto-worktree wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216, kärki 6
   Ajossa oli vielä vanha koodi ilman 24ab63986:ta. Katso, korjaako d2 kohdan; jos ei, se on c5:n este.
   Tarkista: kameraväli t ~57–63 ja ~80–83: tarve ja `ennakko`-kenttä; tavoite kamera ≤ ~4 m portista tultaessa (c4: 8,3 m, kenttä 29°).
 
+## d2 TULOS (valmis 22.18, lokit/esikatselu-20261031-220258, 693ac624d, juuri-r89): EI KUNNOSSA
+- Portin jälkeinen nousu jatkuu: t 61,2 tarve 10,1 (tunneli −1,42), kamera 8,6 m t 62,7, kenttä 28–33°. Toinen portti t 75–81 lievempi (5 m).
+- Syy lokin uudesta ennakko-kentästä: ennen porttia (t 60,4) ennakko 15,9 m / 2,0 s / näyte k / 10,6 m edessä = reitin oma
+  tunnelikohta, jonka H on porttirakennuksen katto. Pito (KulmaPitoS) ja jousi kantavat tarpeen tunnelin yli, ja portin jälkeen
+  ennakko on 0, mutta tarve on yhä 10,1. Korjaus 24ab63986 koski vain portin jälkeisiä näytteitä, eikä se riitä.
+- Ratkaisu vaatii linjauksen: KK 29.10 "ennakoiva nosto ehtii ennen porttia" (kamera nousee portin yli) vs. tunneli (kamera aukosta
+  läpi). Vaihtoehdot: (a) ennakkokohta, jonka KatonAlapinta ≥ PorttiMinAla, on aina lattiaa (kamera seuraa tunneliin); (b) tunnelista
+  ulos tultaessa (porttiJalki) vaatiiPidetty/vaatiiLasku nollataan nykytarpeeseen. Suositus (b) + (a) vain, jos KK/PT hyväksyy.
+
 ## Kesken / seuraava
 1. d2 analyysi. Jos portin jälkeinen nousu on kunnossa, toinen portti (c4 t 57–58: 6,4 m / 30° ennen porttia) tarkistetaan samasta lokista.
 2. Pakettien vaihto reitti-216:ssa (d2:n jälkeen): TaustaKansio → kielletty-tausta-v89b (LAV 22.0x: v89 + liitos "longzongmen",
