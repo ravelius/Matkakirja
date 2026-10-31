@@ -2193,3 +2193,188 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - PT 22.5x (UUSI EHTO, korvaa 95 Gi:n): jatka heti, kun NS:n laitekäännös päättyy; pysäytä vain jos levy < 82 Gi; 1 Blender, ei Unityn kanssa.
   → uusinta/jatka-ns-jalkeen.zsh (pid 61196, loki ajo-jatka.log) odottaa NS-käännöksen (pid 45361) ja Unityn loppuun, käynnistää rak → ketju-v5 →
   ketju-osasarja-v6 (pid:t lokissa) ja valvoo levyä (< 82 Gi → kaikki pois, jatko kuten yllä).
+
+## LISÄYS 159 (31.10. 01.2x): LEVYVAHTI PYSÄYTTI 01.13 — ODOTTAA PT:N JATKOLUPAA — ALOITA TÄSTÄ
+- jatka-ns-jalkeen.zsh käynnisti 22.52 (NS-käännös päättyi); levyvahti pysäytti 01.13 (81 Gi < 82): rakennukset-v86 105/136, tausta ja osasarja-v6
+  ajamatta. Oma leivontakansio vain 1,4 Gt → levyä täyttää muu. PT:lle ja Postivahdille ilmoitettu; jatko PT:n luvalla tai kun > 82 Gi (LISÄYS 158 -ohje,
+  tai uudelleen `nohup zsh jatka-ns-jalkeen.zsh 1 >> ajo-jatka.log &` kansiossa leivonta-216/uusinta).
+- T-LIITOKSET: kuja 0-3:n korjaus jumittui (> 3 h, 1 T-liitos) → keskeytetty, 0-3 = v81 ennallaan. Kuja 1-3 korjattu sekunneissa (220 jakoa) →
+  tausta-v81-lahde valmis. ketju-v5.zsh tarkistaa nyt vain 1-3:n.
+- Meridiaani 404 (JU 31.10.): a-meridiaaniportti-1063-portaat.glb:tä ei kuulu olla (kaiteet a3a5-sijoitukset.json:ssa c2-v11:stä asti, 1063-portaat
+  vain f-taihemen/g-jalusta) → pelin haku PK:lle; JU ja PT tietävät.
+- Lahipuut-v12 (kuja 02:n puut pois): PK tekee (sovittu 30.10. 23.0x).
+- 01.2x: omat wt/lavastaja-* (4) poistettu → levy 87; PT 01.2x raja tilapäisesti 78 Gi (uusinta/levyvahti.zsh <raja> <pid:t>; palaa 82:een leivonnan jälkeen).
+  wt/proto-lavastaja-* (4, ~1,9 G) EI poistettu: haarat eivät proto-masterissa, havainteessa 2 tallentamatonta muutosta (Postivahdille kerrottu).
+
+## LISÄYS 160 (31.10. 12.4x): YÖN TULOKSET + JATKOAJO — ALOITA TÄSTÄ
+- VALMIINA (uusinta/): rakennukset-v86 135/136 (02.22), tausta-v82 uudelleen TUPLAT=1 + v5-varjostaja + kujat.zsh + muurikate-v30 (03.19).
+- VIAT JA KORJAUKSET: (1) leivo_osasarja.py kaatui 27/86 ruudun jälkeen KeyError 'kaide-johde-1.5m' (nimi katkesi pisteestä) → nimi_() poistaa vain .001-päätteen;
+  lisätty JATKA=1 (leivotut ruudut ohi). (2) f-taihemen kaatui joka kerta ('palkit' ilman kasvoja → smart_project) → leivo_malli.py kohteet vain
+  kasvollisista verkoista. Varmuuskopiot .ennen-nimikorjaus / .ennen-tyhjat.
+- JATKOAJO 12.34: aja_uusinta.zsh rak 1/1 (pid 40767, vain f-taihemen) → ketju-osasarja-v6.zsh (pid 40768, JATKA=1, 59 ruutua ~8 min/kpl → ~20.30)
+  → leivonta_karki.py; levyvahti 78 Gi (lokit ajo-rak.log, ajo-osasarja-v6.log, ajo-jatka.log).
+- TARKISTUS ajossa: tarkista_leivonta tausta-v82 ehtoalueilla kuten v73 (−248.8 −244.2 298 360 | −255 −246.8 361 403 | −138.6 −133.0 340 437)
+  → uusinta/tarkistus-tausta-v82b.txt. PT: 0 vikaa ehtoalueilla.
+- SEURAAVAKSI: (a) tarkistus → jos 0: paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-20261031 (tausta-v82, muurikate-v30, rakennukset-v86
+  kun f-taihemen valmis; LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md) → VS (local_3b36fe96-…: palat + alueet + varjostajat.json:t, parit 02/03/06)
+  + PT ≤ 3 riviä. (b) osasarja-v6 valmis → paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> → PK + PT. (c) levyraja takaisin 82.
+
+## LISÄYS 161 (31.10. 12.5x): LEIVONTA v1 -PAKETTI VIETY — ALOITA TÄSTÄ
+- f-taihemen leivottu 12.37 → rakennukset-v86 136/136. Tarkistus tausta-v82 (uusinta/tarkistus-tausta-v82b.txt): ehtoalueilla kuja-0-3 T-liitos 1 ja kuja-1-3
+  "aukko" 28 ruutua (tarkistimen reunasääntö); muualla tiedoksi (tummat tuplat 2405).
+- PT 12.5x: paketti nyt, poikkeamat LAHTEET.md:hen → _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-20261031 (tausta-v82, muurikate-v30, rakennukset-v86;
+  SHA256SUMS 6c040967e35a; uusinta/paketti_leivonta_v1.zsh + LAHTEET-leivonta-v1.md). VS, PK ja PT ilmoitettu.
+- KUJA 0-3: T-liitoskorjaus onnistui MATERIAALI=V4_kujakivi_lattia (8 jakoa; reunamateriaalin kanssa jumittui) → tausta-v81-lahde. uusinta/kuja03.zsh (pid 69838,
+  ajo-kuja03.log) odottaa osasarja-v6:n (pid 40768) → tausta-v83 = v82 + kuja-0-3 uudelleen + tarkistus (tarkistus-tausta-v83.txt). Sitten pieni paketti
+  (_valmiit/juoksupeli-kk-lavastaja-tausta-v83-vienti-<pvm>, vain kielletty-tausta-v83) → VS + PK + PT.
+- OSASARJA-v6: ~2 min/ruutu (33/86 klo 12.49) → valmis ~14.40; sitten karki.bin, paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> → PK + PT.
+- Kaiken jälkeen levyvahdin raja takaisin 82 (PT 01.2x).
+
+## LISÄYS 162 (31.10. 16.1x): OSASARJA-v6 JATKUU, KUJA 0-3 T-LIITOS RAJATULLA KORJAUKSELLA — LUOVUTUS, ALOITA TÄSTÄ
+- 13.34 levyvahti pysäytti osasarja-v6:n (< 78 Gi, 41/86); kuja03.zsh tulkitsi pid:n katoamisen valmistumiseksi ja teki tausta-v83:n (13.35–13.49),
+  jossa T-liitos yhä 1 (tarkistus-tausta-v83.txt, piste (−254,92; 0,25; 382,77) = reunakiven yläpinta). v83:A EI PAKATA.
+- KK 15.46 (juoksupelin ohjat): jatka osasarja-v6, korjaa 0-3 T ennen pakettia. TEHTY 15.48: ketju-osasarja-v6.zsh 999999 (pid 35472, JATKA=1) +
+  levyvahti.zsh 78 35472 (pid 35473). Valmistuttua karki.bin, sitten paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm>
+  (paketti_osasarja_v5.zsh-malli; LAHTEET-paketti.md v6-otsikolla) → PK + PT (+ KK).
+- T-LIITOS: lattia_tliitokset.py sai env:t ALUE="x0 x1 z0 z1" ja KIERROKSET (.ennen-alue). MATERIAALI reunan kanssa koko palassa karkaa (jaot kasvavat).
+  ALUE "-256 -254 381.5 384" HITSI=0 KIERROKSET=1 korjaa pisteen (oma tarkistin scratchpad tpiste.py → 0 säteellä 1,5 m), mutta jättää 1 uuden T:n
+  (−254,82; 0; 383,0) lattiassa (luultavasti kolmio, jonka keskipiste alueen ulkopuolella). Koe isommilla alueilla ajossa (tasks bd1arqag0).
+  Lähde nyt: tausta-v81-lahde/kk-tausta-kuja-0-3-lod0.glb (lattia-korjattu, 8 jakoa); korjattu tulos kopioidaan sen päälle ja kuja03.zsh ajetaan
+  uudella nimellä tausta-v84 (muuta TU-rivi, tarkistin uusinta/tarkista_leivonta-be65cd9ee.py = VS:n reunasääntökorjaus) osasarja-v6:n jälkeen.
+- VS sai LEIVONTA v1:n (SHA OK), sovitettu pari kun PK vapauttaa Unityn. Levyraja takaisin 82, kun kaikki valmista.
+
+## LISÄYS 163 (31.10. 16.3x): LUOVUTUS (konteksti 37 %) — JONO JÄRJESTYKSESSÄ, ALOITA TÄSTÄ
+JONO (KK 16.2x + PT 16.2x): 1) osasarja-v6 loppuun → paketti PK + PT (+KK). 2) kuja 0-3 T-liitos → tausta-v84 → pieni paketti VS + PK + PT.
+3) AUKIOIDEN LEIVONTAKORJAUS (PT): VS:n leivottu pari (koehaara c9455d902, LAV v1, kerroin 1 paras): aukio 06 palaa puhki 26,5 % pikseleistä (juna-216 2,6 %),
+   03 8,9 % → korjaus leivontaan (kerroin ei korjaa). Kuvat /Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261031-155856/{03,06}/ (vierekkain.png).
+   Tee 1–2:n jälkeen; pieni paketti → VS uusi pari.
+- OSASARJA-v6: 50/86 klo 16.3x, ajossa (pid 35472, levyvahti pid 35473, 78 Gi).
+- KK:N EHTO: v84-ajo (kuja03.zsh-malli) saa käynnistyä vasta, kun ajo-osasarja-v6.log:iin tulee rivi "OSASARJA-V6 VALMIS" (EI pid:n katoamisesta – levyvahdin
+  pysäytys 13.34 käynnisti v83:n liian aikaisin). Muuta kuja03.zsh:n odotus: `until grep -q "^$(date +%H)…OSASARJA-V6 VALMIS"` → käytännössä odota, että lokin
+  VALMIS-rivien määrä kasvaa aloitushetken määrästä (nyt 1 vanha rivi 06.51), ja TU=…/kielletty-tausta-v84.
+- T-LIITOS (kuja 0-3, ehtoalue −255 −246,8 361 403): alkuperäinen T (−254,92; 0,25; 382,77) reunakiven yläpinnassa. Työkalu uusinta/tpiste.py <glb> x z säde
+  (tulostaa jokaisen T:n kahdesti → todellinen määrä = luku/2…/3). Kokeet (lähde tausta-v81-lahde/kk-tausta-kuja-0-3-lod0.glb, HITSI=0):
+  ALUE "-256 -254 381.5 384"/"-257 -253 381 385" KIERROKSET=1–2 → alkuperäinen poistuu, mutta 1 uusi T (−254,82; 0; 383,0) lattiassa (lattian kärki toisen
+  vaakakolmion reunalla); isompi alue (−258 −252 380 386) → 10 T:tä; ilman ALUEtta reunan kanssa jako karkaa (jaot kasvavat 51→123→1864).
+  Seuraava kokeilu: selvitä, minkä kolmion reunalla (−254,82; 0; 383,0) on (materiaali, y ≈ 0; mahdollisesti V4_lattia, joka ei ole MATERIAALI-listassa →
+  lisää MATERIAALI=V4_kujakivi_lattia,V4_kujakivi_reuna,V4_lattia ALUE-rajauksella) tai jaa se yksittäin. Tavoite tpiste.py = 0 säteellä 8 m.
+- Levyvahdin raja takaisin 82, kun jono valmis (PT 01.2x).
+
+## LISÄYS 164 (31.10. 16.4x): AJOKETJU KÄYNNISSÄ (osasarja-v6 → v84 → leivonta v2) — ALOITA TÄSTÄ
+Kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta (U). Kolme irrallista ajoa peräkkäin, kukin odottaa edellisen lokirivin:
+1) ketju-osasarja-v6.zsh (pid 35472, levyvahti 35473 / 78 Gi) → ajo-osasarja-v6.log "OSASARJA-V6 VALMIS" (16.31: 51/86 atlasta, ~5 min/ruutu).
+2) kuja04.zsh (pid 73580, loki ajo-kuja03.log) odottaa UUTTA VALMIS-riviä (KK:n ehto) → tausta-v84 + tarkistus-tausta-v84.txt → "KUJA03-V84 VALMIS".
+3) polvi.zsh (pid 75240, loki ajo-polvi.log) odottaa v84:n → tausta-v85 / rakennukset-v87 / muurikate-v31 = polvi → "POLVI VALMIS".
+- T-LIITOS RATKAISTU: jäljelle jäänyt T oli ison kolmion reunalla (keskipiste ALUEen ulkopuolella) ja työkalu käytti ehdokkaina reunakiven pystypintojen
+  kärkiä (tarkistin ei) → lattia_tliitokset.py: ALUE_LAATIKKO=1, VAAKA=1, HITSI=0 ohittaa hitsauksen (oli neliöllinen). Lähde tausta-v81-lahde/
+  kk-tausta-kuja-0-3-lod0.glb korvattu (tpiste.py ehtoalueella 0; vanha .ennen-tliitos-vaaka).
+- AUKIOT 03/06: puhki palaa lattia; aukion aurinkoinen V4_lattia valokartassa 0,95–1,0 (kujat 0,5–0,7). Korjaus tyokalut/valo_polvi.py 0,65 0,4
+  (0,95 → 0,77, kujat 0,70 → 0,67). Osasarja-v6 jo alle polven → ei muutosta.
+- PAKETIT (U/paketti_yleinen.zsh <nimi> <LAHTEET> <kansiot…>): osasarja-v6 (LAHTEET-osasarja-v6.md, kansio kielletty-rakennukset/osasarja-v6/
+  kielletty-osasarja-v6) → PK + PT (+KK); tausta-v84 (LAHTEET-tausta-v84.md, jos tarkistus 0) → VS + PK + PT; leivonta-v2 (LAHTEET-leivonta-v2.md,
+  kielletty-tausta-v85 kielletty-rakennukset-v87 kielletty-muurikate-v31) → VS uusi pari 03/06 + PT. Lopuksi levyvahdin raja 82.
+- JONO 4 (PT 31.10. 17.5x, valotöiden 1–3 jälkeen, ei estä junaa 216): Pariisin omat Cesium-mallit (mallit.json). Notre-Damen oma maa nd_maa (409×269 m)
+  näkyy vaaleana laikkuna → aukion kivetys + puutarhan nurmi/polut havainnetyyliin; sakariston valkoinen tekstuuriton osa tekstuuriin; sama tarkistus 5 muulle
+  Pariisin mallille. Leveä leikkaus pidetään (peittää Googlen restaurointityömaan). Ennen-kuva proto-3d/_tyo/natiiviseppa/nd-leikkaus/pari-K1-notre-dame.png
+  (ylempi). Codexin tekstuurit tarvittaessa (pysyvä lupa). Vienti NS:n kautta, jälkeen-kuva NUI:n simulla → PT.
+- HERÄTYS: CronCreate d22878f3 (:07/:22/:37/:52, KK 17.4x) vie paketit 1–3; poistetaan paketin 3 jälkeen (session muistissa, nollaus hävittää → aseta uudelleen).
+
+## LISÄYS 165 (31.10. 19.3x): VALOJONO 1–3 VIETY — ALOITA TÄSTÄ (seuraavaksi jono 4: Pariisin Cesium-mallit, LISÄYS 164)
+VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skriptit leivonta-216/uusinta):
+- osasarja-v6 (SHA 12ea93377fe7) → PK + PT + KK. Leivonnan hidastuminen 5 → 13 min/ruutu johtui siitä, että objects.remove() kävi läpi kertyneet
+  materiaalit → leivo_osasarja.py: batch_remove + orphans_purge ruutujen välissä, osat-verkot use_fake_user (25 s/ruutu; vertailuruutu tavulleen sama).
+- leivonta-v2 (polvi 0,65/0,4, 01af37c39009) ja leivonta-v3 (0,65/0,3: tausta-v86, rakennukset-v88, muurikate-v32, 79b448a1d5f3) → VS. Tyokalut/valo_polvi.py
+  (glb ja valoatlas.png). VS:n parit: puhki 06 26,1 → 8,3 → 6,3 %, 03 8,8 → 5,3 → 5,0 %; 06 lattian mediaani 199 / havainne 200, p95 234 / 222.
+- tausta-v87 = v86 + kuja-0-3 (v84, hitsaus 2,5 mm, polvi), ehtoalueilla 0 vikaa (a1e090c344ac) → VS + PK + PT.
+- leivonta-k06 (koekohtaus 06, aurinko f4df529a6 45°/pohja 39,97°; tausta 1-0/2-0, muurikate, 6 rakennusta, 5 osasarjan ruutua, polvi 0,65/0,3;
+  koe06.zsh; 3dddcd3d20f7) → VS (pari 06 + puhki-% pyydetty) + PT. Jos VS pyytää säätöä: valo_polvi.py uudelleen *-k06-kopioihin tai koe06.zsh uudella PO/KU:lla.
+- Levyvahti päättynyt (18.39), herätykset poistettu. Työkalumuutokset: lattia_tliitokset.py (ALUE_LAATIKKO, VAAKA, HITSI=0), leivo_osasarja.py (siivous).
+
+## LISÄYS 166 (31.10. 19.4x): JONO 4 SELVITYS (Notre-Dame) — ALOITA TÄSTÄ
+- Mallit: R2 omat-mallit <versio>/mallit.json; paikallinen v6k26 = _valmiit/omat-mallit-vienti-20261017-v6k26/kartta/omat-mallit/v6k26/ (Pariisi: notre-dame,
+  concorde, prefektuuri, banque-de-france, quai-branly, louvre). NS:n ehdokas v6k27 (_tyo/natiiviseppa/nd-leikkaus/v6k27, muut linkkeinä v6k26:een) poisti
+  notre-damen maan (vain nd_rakennus + spiira) → PT: leveä leikkaus pidetään → pohjaksi v6k26:n notre-dame (solmut maa, nd_puut, nd_rakennus, spiira).
+- ND v6k26 lod0: maa-mesh materiaalit nd_maa (kuva maa_v9c, 27 912 kolmiota) + nd_kalkkikivi (940, rantamuurit); nd_atlas (nd_atlas_lod0, 130 589 kolmiota).
+  Lähteet _valmiit/notre-dame-v1 (lahde/maa.py, parvis_v9.py = IGN-orto retusoituna; tekstuurit/maa_v9c.jpg 2048², maa.json rajat x −205…208, y −292…121,
+  UV = rajat koko kuvaan). Omistaja 10.10. (parvis_v9): "vähemmän keinotekoinen" → ortokuvan kivetys, ei 2 m:n ruudukkoa. maa_v9d = v9c × 0,57 (hylätty: tummensi).
+- KYSYTTY PT:ltä 19.4x: mikä on "havainnetyylin" kuva Pariisille (ei löydy). Ehdotus: v6k26:n maa + Pekingin havainteen tyyli, laikku tummemmaksi Googlen
+  jalkakäytävien tasolle, parvis selkeiksi laattavyöhykkeiksi, nurmen polut ennallaan. Sakaristo: etsi nd_atlasista valkoinen tekstuuriton alue (UV-saari ilman
+  atlasta) → tekstuuri (kivi_nd tai Codex). 5 muuta Pariisin mallia: sama tarkistus (maa/valkoiset osat). Vienti NS:n kautta, jälkeen-kuva NUI:n simulla PT:lle.
+
+## LISÄYS 167 (31.10. 19.5x): LUOVUTUS (konteksti 37 %) — JONO 4 KESKEN, ALOITA TÄSTÄ
+- Valojono 1–3 VIETY (LISÄYS 165). Ei ajoja käynnissä, ei herätyksiä. Odottaa: VS:n pari k06 (puhki-%) → säätö tarvittaessa (LISÄYS 165).
+- PT:n VASTAUS kysymykseen "havainnetyyli Pariisille" (lähetetty 19.4x) — jos et näe sitä, kysy PT:ltä uudelleen yhdellä rivillä.
+- Notre-Dame v6k26 lod0: kuvat ovat KTX2 (KHR_texture_basisu) → purku: "/Volumes/T7 4TB/koodaus/linssiseppa2-tyokalut/ktx/bin/ktx" extract
+  <in.ktx2> <out.png> (puretut maa_v9c.png ja nd_atlas_lod0.png 2048²/… ovat Lavastajan scratchpadissa, tee uudelleen). Uudelleenpakkaus:
+  Matkakirja-proto/tyokalut/omat_mallit_ktx2.py --portti <paketti> (gltf-transform + toktx, T7-polut). Paketin rakennusmalli
+  _tyo/linnanrakentaja/louvre/rakenna-v6k26.py (uusi versio v6k28 tms. → ei ämpärin ylikirjoitusta; NS vie R2:een).
+- Solmut: maa (mesh 0: nd_maa 27 912 kolmiota + nd_kalkkikivi 940 rantamuurit), nd_puut (instanssit), nd_rakennus (mesh 'ikkunat', materiaali nd_atlas,
+  130 589 kolmiota, yksi atlas nd_atlas_lod0). Sakariston valkoista osaa EI löytynyt atlasnäytteistä (kolmioiden keskipisteissä ei valkoista
+  > 215 kuin 9 kolmiota, rajat x −10…18 z −37…7) → selvitä renderöimällä (Blender, lod0 ylhäältä kaakosta) tai NUI:n simukuvasta: voi olla
+  UV-saari atlaksen täyttämättömällä alueella (näytä keskipisteen sijaan koko kolmion alue) tai maa-meshin kalkkikivi.
+- Notre-dame-v1 (lähteet): lahde/maa.py (IGN-orto 2018 retusoitu), parvis_v9.py (omistaja 10.10.: vähemmän keinotekoinen), maa.json rajat, UV = rajat.
+- PT:N VASTAUS (31.10. 19.5x, KÄSITELTY TÄSSÄ): Pariisista ei ole havainnekuvaa; "havainnetyyli" oli löysä ilmaus. Pohjaksi v6k26:n maa (hyväksytty).
+  Omistajan 10.10. linja sitoo: ortokuvan oma kivetys, EI ruudukkoa eikä uusia keinotekoisia laattavyöhykkeitä. Vaalea laikku tummennetaan Googlen
+  jalkakäytävien sävyyn, nurmen polut säilyvät; Pekingin havainne vain sävyviitteenä. Kuvapari ennen/jälkeen PT:lle.
+
+## LISÄYS 168 (31.10. 19.5x): JONO 4 VALMIS — v6k28 NS:LLE, ALOITA TÄSTÄ
+- Notre-Damessa EI ole tekstuuritonta valkoista osaa (lod0–2 renderöity ohjelmallisesti, _tyo/linnanrakentaja/nd-jono4/tyokalut/rend.py): pelikuvan valkoinen
+  sakaristo = vaaleat lyijykatot/terassit auringossa + maa_v9c:n vaaleat laikut. Korjattu: nd_atlas lod0–2 kattopinnat 131–139 → 112 (katot.py);
+  maa_v9c → maa_v9e: parvis = ortokuvan oma kivetys tummennettuna (×0,85), laikukkaat retusointialueet (tummat reiät) tasaiseksi päällysteeksi aukion
+  sävyllä + synteettinen rae (ei ruudukkoa, ei laattavyöhykkeitä), nurmi/polut/vesi ennallaan (maa.py). PT:n vastaus (LISÄYS 167) huomioitu.
+- Quai Branly: orton tasaiset beige-täytöt kivetykseksi lod0–2 (qb.py). Concorde, prefektuuri, Banque de France, Louvre: ei korjattavaa.
+- PAKETTI _valmiit/omat-mallit-vienti-20261031-v6k28 (rakenna-v6k28.py, portti 0 virhettä, SHA256SUMS 91b122e53d99) → NS vientiin (viesti 19.4x),
+  PT:lle ilmoitettu; kuvat nd-jono4/ (v28-ennen-jalkeen.png, quai-branly-ennen-jalkeen.png, SELVITYS.md).
+- ODOTTAA: NS:n vienti → NUI:n simukuva Notre-Damesta (K1-kohta) → PT. VS:n pari k06 (LISÄYS 165). Ei ajoja käynnissä.
+
+## LISÄYS 169 (31.10. 20.3x): LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- JONO 4: v6k28 PT:n kuittaama ja JU:n viemä R2:een 19.51 (kartta/omat-mallit/v6k28, SHA OK). R2-vienti on JU:n (local_b4a7e82a-…), ei NS:n.
+  ODOTTAA: NUI:n (local_a3754ed8-…) simukuva Notre-Damesta v6k28:lla → PT (pyydetty 19.5x).
+- K06: VS:n pari (puhki 9,8 %, lattia 214/200) → k06b tehty: polvi 0,6/0,3 samoihin uudelleen leivottuihin paloihin (valo_polvi.py sai env:n VANHA="P K",
+  joka purkaa vanhan polven ensin; varmuuskopio .ennen-vanha), uusinta/koe06b.zsh, paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-k06b-vienti-20261031
+  (SHA256SUMS e6132d6a6780, kansiot *-k06b) → VS.
+- K06 SAUMA (VS: keisarin itäpuolella x ≈ 18–19 / z ≈ −492 kylmän harmaa lattia ilman leivottua valoa, tumma reunakaista; kuva _tyo/linssiseppa2/k06-f0-sauma.png):
+  tausta 2-0:n V4_lattia on leivottu tasaisesti (Y ≈ 0,79, x 10–22), eikä k06:n rakennuksissa tai osasarjassa ole pintaa siinä kohdassa (scratchpadin
+  valopiste.py ja rakpiste.py; tee uudelleen tarvittaessa) → KYSYTTY VS:ltä GameObjectin ja meshin nimi. Kun vastaus tulee: leivo se pala uudella auringolla
+  (koe06.zsh-malli) + polvi 0,6/0,3 → k06c → VS.
+- Ei ajoja käynnissä. Notre-Damen työkalut ja kuvat: _tyo/linnanrakentaja/nd-jono4/.
+- LISÄYS 170 (31.10. 20.3x, NS, ei kiire): kielletty-tausta-v81/kk-tausta-1-0-lod1.glb verkko rakennukset.018: primitiivi 545 kärkeä, 0 indeksiä
+  → koekohtauksen 06 Surface Cache GI kaatuu ("index buffer is null"). POISTA tyhjä primitiivi seuraavassa tausta-paketissa (tarkista samalla muut lod1/lod2-palat).
+
+## LISÄYS 171 (31.10. 21.0x): K06-SAUMA SELVITETTY + TAUSTA-V88 (reitti-216 c3 b-13) VS:LLE — ALOITA TÄSTÄ
+- K06-SAUMA: ei leivontavika. Taustan lod1/lod2 eivät ole leivottuja missään versiossa (vain lod0); LOD valitaan palan keskipisteen etäisyydestä
+  (tausta.json 0/150/450 m), joten 1-0 (Unity x +18,5 = glTF x −18,5) piirtyy lod1:nä. Ehdotettu PK:lle (VS:n kautta): LOD lähimmästä pisteestä
+  palan rajoihin (rajat_xz tausta-lod*.json). Vaihtoehto PT:n päätöksellä: leivotut lod1:t (vaatii UV2:n). k06b: puhki 7,7 %, lattia 210/200.
+- TAUSTA-V88 = v87 + (b) v71:n (27.10. vaaka_yksi_kerros) keksimät V4_teal-vyötasot pois lod0:sta (tausta_vyotaso_pois.py; 1-2:n turkoosi kaista
+  y 4,97 x −125…−75 z 175…200 440 m², 2-1 404, 2-3 573 …) + (a) marmoriset kävelytasot ≥ 30 m² → V4_lattia lod0–2 (tausta_tasot_lattiaksi.py)
+  + tyhjät primitiivit pois (LISÄYS 170, glb_tyhjat_pois.py: 0-0/1-0/3-0 lod1/lod2). Ajo uusinta/tausta-v88.zsh; paketti
+  _valmiit/juoksupeli-kk-lavastaja-tausta-v88-vienti-20261031 (SHA256SUMS ee7676aa4bbd) → VS kuvapariin; VS:n OK:n jälkeen PT:lle ja JU:lle.
+- AVOIN: v71 keksi samoin V4_gold- ja V4_harmaa-vaakapintoja (satoja m²/pala, analyysi scratchpadin keksityt.py: yksikerros-v71 vs tliitokset-v57o);
+  koskematta ilman kuvaa. Keisari juoksee 1-2:n terassin sisällä y 0:ssa (VS → PK).
+- LISÄYS 172 (31.10. 21.0x): ND-VIIMEISTELY v6k29 (PT: simupari v6k28 kuitattu; maa hiukan Googlen aukion sävyyn, sakariston katto tummemmaksi):
+  nd-jono4/tyokalut/v29.py (maa_v9f: päällysteen sinertävyys pois, kirkkaus ennallaan; nd_atlas lod0–2 sakariston katto ×0,9), rakenna-v6k29.py
+  → _valmiit/omat-mallit-vienti-20261031-v6k29 (portti 0 virhettä, SHA256SUMS 2741b9fa9707) PT:lle; pari nd-jono4/v29/v29-ennen-jalkeen.png.
+  ODOTTAA: PT:n kuittaus → JU vie R2:een, NUI:n simukuva. Tausta-v88: VS:n pari.
+
+## LISÄYS 173 (31.10. 21.3x): LUOVUTUS (konteksti 30 %) — LONGZONGMENIN PORTTIAUKOT KESKEN, ALOITA TÄSTÄ
+- PT:N TEHTÄVÄ (reitti-216 kohta 3, PK c4 _tyo/pelikoodari/reitti-216/c4/terassi-ja-c4.md): keisari juoksee kk-tausta-1-2:n "laatan" sisällä.
+  SELVITETTY: rakennus on Longzongmen-portti 隆宗门 oikealla paikallaan (OSM way/638807749, pohja.json, kuva uusinta/kuvat-v89/longzongmen-osm.png),
+  ja pohjan kuja vie sen läpi itä–länsi (z ≈ 170). Codexin malli on umpilaatikko: laatta y 0,70 (+ alempi porras 0,20 renkaana
+  x −130…−125,2 ja −106,8…−103,6, z 160–180), seinät V4_red ja sokkeli ehjät länsi x ≈ −123,5 (z 155,9–182,8) ja itä x ≈ −109,5
+  (z 156,1–183,1), y −1,3…6, katto 5–12,4. Laatan alla ei ole lattiaa ~40 %:lla. PT valitsi (a): halli jää, keisari portin lattialle y 0,70
+  (katto piiloutuu, Raamattu 2.177). PT:LLE KERROTTU 21.3x: "teen porttiaukot + askelmat + 1-2 lod0 uudelleenleivonta → tausta-v89".
+- TEE: (1) lähde = leivonta-216/uusinta/tausta-v81-lahde (yhteiset.zsh TS) kk-tausta-1-2-lod0 kopioksi; Blender bmesh: bisect seinät z 168,5 / 173,5 /
+  y 4,0 ja poista pystykasvot ovilaatikoissa (x −123,5 ± 1,5 ja −109,5 ± 1,5, z 168,5–173,5, y < 4); askelma y 0,45 (V4_marmori, 1 m syvä,
+  5 m leveä) renkaalle laatan reunaan x −126,6…−125,6 ja −106,4…−105,4, z 168,5–173,5 (kärjet + sivut). (2) Lähteeseen myös v88:n korjaukset:
+  tausta_vyotaso_pois.py (tliitokset-v57o + yksikerros-v71) ja tausta_tasot_lattiaksi.py. (3) Leivo 1-2 kuten koe06.zsh:n tausta-silmukka, mutta
+  v3-auringolla (yhteiset.zsh YHT, ei f4df529a6): leivo_valo.py TUPLAT=1 UV_EROTUS=1 NAYTTEET=128 2048 → valo_pakkaa 1024 → glb_alfa_mask
+  V4_puukortti → valo_polvi 0,65 0,3. (4) tausta-v89 = v88 + uusi 1-2 lod0 (lod1/2 ennallaan), glb_tyhjat_pois, paketti (paketti_yleinen.zsh,
+  LAHTEET-tausta-v89.md) → VS kuvapari + PT + PK (PK: reitin y 0,70 portissa, glTF x −125,6…−106,4 / peli peilattuna).
+- HYLÄTYT: uusinta/kielletty-tausta-v89 ja -v89-hylatty (pelkkä laatan poisto, tausta-v89.zsh + tausta_laatta_pois.py) – EI käytetä, koska
+  seinät ja katto jäisivät ja syntyisi reikiä; kuva kuvat-v89/laatta-ennen-jalkeen-lod0.png. Tee uusi v89 eri nimellä tai siirrä nämä sivuun.
+- ODOTTAA: VS:n pari tausta-v88:sta (LISÄYS 171), PT:n kuittaus Notre-Dame v6k29:stä (LISÄYS 172). Ei ajoja käynnissä, ei herätyksiä.
+- PK:n c4-havainto: leijuvat harjakoristeet ovat 1-2:n katoilla, joita ei näy alta (sama syy kuin portissa: katto näkyy vain ylhäältä).
+- LISÄYS 174 (31.10. 21.4x, VS): tausta-v88 OK turkoosin kaistan ja terassin osalta (esikatselu 20261031-205709, 70 kuvaa); kultaisia tai harmaita
+  kattolaikkuja ei näy. JÄÄ: pieniä harmaita kuviottomia marmorikiiloja muurien juurella kapeilla kujilla (b-08…11, b-16, b-18, b-19), jäivät
+  tasot-rajan alle (< 30 m² tai y ≤ 0,3) → v89:ssä tausta_tasot_lattiaksi.py ilman rajoja (ALA=0 YMIN=0 tai kaikki V4_marmori-vaakapinnat →
+  V4_lattia; portaat ja kaiteet sitten myös, mikä on VS:n ehdotus). Kuvat _tyo/linssiseppa2/reitti-v88/v88-epailyt.jpg ja kooste-v88-a.jpg (rivit 2–3).
