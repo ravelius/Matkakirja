@@ -660,6 +660,7 @@ export const RAAMATTU = {
         '13.76 docs/tuotanto/reseptit/3d-maamerkki.md — C resepti: 3D-maamerkki (Lavastaja).',
         '13.77 docs/tuotanto/reseptit/historiapeli.md — C resepti: historiapeli (Pelikoodari).',
         '13.78 docs/tuotanto/reseptit/minipeli.md — C resepti: minipeli (Pelikoodari).',
+        '13.79 docs/tuotanto/reseptit/kohdekartan-piirrokset.md — C resepti: kohdekartan piirrosten tasaus kaikille kaupungeille (Karttaseppä; omistaja 31.10.2026).',
       ],
     },
     {

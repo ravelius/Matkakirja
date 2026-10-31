@@ -27,6 +27,7 @@ import {
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { IHMETAHDET } from './packs/ihmetahdet.js';
 import { KOHDEKARTAN_PIIRROKSET } from './packs/kohdekartan-piirrokset.js';
+import { KOHDEKARTAN_PIIRROSKOOT } from './packs/kohdekartan-piirroskoot.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -731,8 +732,11 @@ export function piirraKaupunkiKartta(ui, kohde, {
       // Kyltin paikka mitataan piirroksesta (ks. asetaKylttiRaja):
       // kuva on jo kartalla eli selaimen välimuistissa, joten mittaus
       // ei aiheuta uutta latausta.
+      // Koko näkyvän osan mukaan (omistaja 31.10.2026 klo 12.15, js/packs/kohdekartan-piirroskoot.js); suurennus ennallaan.
+      const koko = KOHDEKARTAN_PIIRROSKOOT[kaupunki]?.[raaka.nimi];
+      if (koko) piste.style.setProperty('--piirros-koko', String(koko));
       asetaKylttiRaja(piste, miniatyyri, IHMETAHDET[miniatyyriArvo] ?? null);   // tasaus ei muuta alfaa → sama paikka
-      piirrosPisteet.push({ piste, x: p.x, y: p.y });
+      piirrosPisteet.push({ piste, x: p.x, y: p.y, kiintea: Boolean(raaka.kiintea), koko: koko ?? 1 });
     }
     /*
      * MERKIN VÄISTÖ NAAPURIN ALTA (2.9.2026, karsitut karttanostot
@@ -2013,6 +2017,8 @@ export function hajautaPiirrospisteet(kotelo, pisteet, ydin) {
   const MIN = 42;
   // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
   const M = 24;
+  // Kiinteän kohteen osuus työnnöstä (0 = ei liiku lainkaan; 0 työnsi naapurin ketjussa liian kauas, KK 31.10.).
+  const KIINTEAN_OSUUS = 0.15;
   const asettele = () => {
     const mitat = kotelo.getBoundingClientRect();
     /*
@@ -2059,14 +2065,22 @@ export function hajautaPiirrospisteet(kotelo, pisteet, ydin) {
           let dx = B.X - A.X;
           let dy = B.Y - A.Y;
           let d = Math.hypot(dx, dy);
-          if (d >= MIN) continue;
+          // Väli piirrosten omasta koosta (omistaja 31.10.2026 klo 12.15: piirrokset pienenivät näkyvän osan mukaan,
+          // KK: kiinteä 42 px työnsi pieniä piirroksia turhaan kauas oikeilta paikoiltaan). Täysikokoisille (kerroin 1)
+          // sama 42 px kuin ennen.
+          const raja = MIN * ((A.koko ?? 1) + (B.koko ?? 1)) / 2;
+          if (d >= raja) continue;
           // Täsmälleen päällekkäiset erotetaan vaakasuuntaan.
           if (d < 0.001) { dx = 1; dy = 0; d = 1; }
-          const siirto = (MIN - d) / 2;
-          A.X -= (dx / d) * siirto;
-          A.Y -= (dy / d) * siirto;
-          B.X += (dx / d) * siirto;
-          B.Y += (dy / d) * siirto;
+          // KIINTEÄ KOHDE (maakartat.js `kiintea: true`, KK 31.10.2026: Berliinin Tv-torni) liikkuu vain KIINTEAN_OSUUS
+          // siirrosta, naapuri loput; kahdella kiinteällä tasan.
+          const osuusA = A.kiintea === B.kiintea ? 0.5 : A.kiintea ? KIINTEAN_OSUUS : 1 - KIINTEAN_OSUUS;
+          const osuusB = 1 - osuusA;
+          const siirto = raja - d;
+          A.X -= (dx / d) * siirto * osuusA;
+          A.Y -= (dy / d) * siirto * osuusA;
+          B.X += (dx / d) * siirto * osuusB;
+          B.Y += (dy / d) * siirto * osuusB;
           liikkui = true;
         }
       }

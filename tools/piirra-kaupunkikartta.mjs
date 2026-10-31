@@ -552,6 +552,15 @@ const KAUPUNGIT = {
     // Gardens pohjoisessa ja lännessä sekä Bermondsey idässä.
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     laajennus: 1.6,
+    // ABBEY ROADIN KAINALO (KK ja PT 31.10.2026): suojatie oli datassa Mayfairissa (51.5117, -0.1403) ilman perustetta;
+    // oikea paikka St John's Wood (51.5320, -0.1773) on rajauksen luoteispuolella. Kainalo vasempaan yläkulmaan kuten
+    // Helsingin Suomenlinna; kulmassa ei ole kohteita. Ruudussa myös Lord's.
+    kainalot: [
+      {
+        rajat: { pohjoinen: 51.5372, etela: 51.5262, lansi: -0.1875, ita: -0.1665 },
+        x: 20, y: 23, leveys: 11, suunta: '5 km luoteeseen',
+      },
+    ],
   },
   rooma: {
     // Tiber tulee kuvaan alhaalta, kaartaa Vatikaanin ohi ja poistuu

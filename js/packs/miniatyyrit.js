@@ -53,7 +53,7 @@ export const MINIATYYRIT = {
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Kulta-Liisa': 'berliini-kulta-liisa-vari2',
-    'Hobrechtin putket': 'berliini-hobrechtin-putket-vari2',
+    'Radialsystem V': 'berliini-hobrechtin-putket-vari2',
     'Muuri 1961': 'assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
     'Hattupäinen ukkeli': 'assets/kartat/miniatyyrit/berliini-hattupainen-ukkeli.webp',
     'Gaertnerin Berliini': 'assets/kartat/miniatyyrit/berliini-gaertnerin-berliini.webp',
@@ -76,7 +76,7 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Löyly ja avanto': 'helsinki-loyly-ja-avanto-vari2',
     Kantele: 'helsinki-kantele-vari2',
-    Finlandia: 'helsinki-finlandia-vari2',
+    // Finlandia (nuottiteline) pois kartalta: musiikkiteos ei ole paikka (omistaja 31.10.2026 klo 11.26, PT).
     Pirtukuningas: 'helsinki-pirtukuningas-vari2',
     'Nurmen kohu': 'helsinki-nurmen-kohu-vari2',
     'Suomi herää 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
@@ -153,7 +153,7 @@ export const MINIATYYRIT = {
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
     'Etelämeren kupla': 'lontoo-etelameren-kupla',
     'Cheapsiden kätkö': 'lontoo-cheapsiden-katko',
-    'Thamesin vuorovesi': 'lontoo-thamesin-vuorovesi',
+    'Millennium Bridgen portaat': 'lontoo-thamesin-vuorovesi',
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.

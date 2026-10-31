@@ -4856,9 +4856,15 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Kantele', tyyppi: 'esine', lat: 60.1699, lon: 24.9384,
         nosto: 'syvennys-helsinki-kantele',
       },
+      /*
+       * SIBELIUKSEN PUISTO FINLANDIAN TILALLE (omistaja 31.10.2026 klo 11.26: "Helsingissä on kohde joka ei ole paikka
+       * vaan musiikki teos. Näitä ei saa olla kartalla. Helsingissä on sibelius monumentti jonka yhteyteen musiikki
+       * viittauksen voi sisällyttää tekstissa"; 11.43 kortti B: kohde "Sibeliuksen puisto", piirros puistosta ilman
+       * veistosta, monumentti ja Finlandia vain tekstissä – Eila Hiltusen teos on tekijänoikeuden suojaama).
+       * Sibeliuksen puisto, Töölö (en/fi-Wikipedia "Sibelius Park"/"Sibeliuksen puisto").
+       */
       {
-        nimi: 'Finlandia', lat: 60.16722, lon: 24.94333,
-        nosto: 'syvennys-helsinki-finlandia',
+        nimi: 'Sibeliuksen puisto', tyyppi: 'luonto', lat: 60.18222, lon: 24.91306, wiki: 'Sibeliuksen puisto',
       },
       {
         nimi: 'Pirtukuningas', tyyppi: 'henkilo', lat: 60.1676, lon: 24.9547,
@@ -4876,10 +4882,11 @@ export const KAUPUNKIKARTAT = {
        * karttapaikka; juttu on sanatarkasti hetken teksti
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
-      // Ruotsalainen teatteri; sama piste kuin syvennys Finlandia, nimiö oikealle.
+      // Ruotsalainen teatteri, nimiö oikealle. Samaan pisteeseen myös syvennystarina Finlandia (sama ilta 1899; omistaja
+      // 31.10.2026: musiikkiteos ei ole oma karttamerkki) – listamuoto kuten Pariisin Tuileries'n palatsi.
       {
         nimi: 'Suomi herää 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
-        nosto: 'hetki-sibelius-finlandia-1899',
+        nosto: ['hetki-sibelius-finlandia-1899', 'syvennys-helsinki-finlandia'],
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
     ],
@@ -5935,6 +5942,11 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
+    // Abbey Roadin kainalo (KK ja PT 31.10.2026, tools/piirra-kaupunkikartta.mjs lontoo): vasen yläkulma, 5 km luoteeseen.
+    kainalot: [
+      { rajat: { pohjoinen: 51.5372, etela: 51.5262, lansi: -0.1875, ita: -0.1665 },
+        x: 20, y: 23, leveys: 11, korkeus: 17.71 },
+    ],
     esittely: 'Kartan alue on Lontoon ydin Thamesin molemmin puolin. Lännessä Westminsterin '
       + 'kohteita ovat Buckinghamin palatsi, Trafalgar Square, Big Ben ja joen vastarannalla '
       + 'Lontoon silmä; idässä kartta päättyy Tower Bridgeen.\n\n'
@@ -6014,7 +6026,9 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-lontoo-cheapside', nimiPuoli: 'oikea',
       },
       {
-        nimi: 'Thamesin vuorovesi', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
+        // Paikan nimi (omistaja 31.10.2026 klo 11.26: kartalla vain paikkoja, PT): rantaportaat Millennium Bridgen
+        // pohjoispäässä, jossa mudlarkit laskeutuvat laskuveden rantaan; vuorovesi kerrotaan jutussa.
+        nimi: 'Millennium Bridgen portaat', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
       },
       /*
        * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
@@ -6097,7 +6111,8 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-the-george-pubi',
       },
       {
-        nimi: 'Abbey Roadin suojatie', tyyppi: 'aukio', lat: 51.5117, lon: -0.1403,
+        // Oikea paikka St John's Wood (KK 31.10.2026; ennen Mayfairissa 51.5117, -0.1403 ilman perustetta) → kainalossa.
+        nimi: 'Abbey Roadin suojatie', tyyppi: 'aukio', lat: 51.532, lon: -0.1773,
         nosto: 'nosto-abbey-roadin-suojatie',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -6194,7 +6209,9 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Checkpoint Charlie', lat: 52.5076, lon: 13.3904, wiki: 'Checkpoint Charlie' },
       { nimi: 'Museosaari', lat: 52.5169, lon: 13.401, wiki: 'Museumsinsel' },
-      { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni' },
+      // KIINTEÄ (KK 31.10.2026): hajautus työnsi tornin Museosaaren ja Maailmankellon välistä Spreen väärälle rannalle
+      // (~900 m); kiinteää kohdetta naapurit väistävät, ja torni pysyy Alexanderplatzilla (js/nahtavyydet.js hajautus).
+      { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni', kiintea: true },
       { nimi: 'East Side Gallery', lat: 52.505, lon: 13.4399, wiki: 'East Side Gallery' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
@@ -6233,7 +6250,9 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-berliini-kultaliisa',
       },
       {
-        nimi: 'Hobrechtin putket', lat: 52.5219, lon: 13.4132,
+        // Paikan nimi (omistaja 31.10.2026 klo 11.26, PT): Hobrechtin säteittäisjärjestelmän pumppuasema V (1881),
+        // nykyinen Radialsystem V, Holzmarktstraße 33 (OSM); viemärit kerrotaan jutussa.
+        nimi: 'Radialsystem V', lat: 52.5106, lon: 13.4281,
         nosto: 'syvennys-berliini-viemarit',
       },
       /*
@@ -6277,7 +6296,10 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Maailmankello', lat: 52.5219, lon: 13.4132,
+        // Weltzeituhr Alexanderplatzilla (OSM 52.52134, 13.41327; ennen 52.5219 = samassa pisteessä kuin Hobrechtin
+        // putket). Kiinteä kuten Tv-torni (KK 31.10.2026: hajautus työnsi kellon ~1 km koilliseen), jolloin pari jakaa
+        // väistön tasan ja molemmat pysyvät Alexanderplatzilla.
+        nimi: 'Maailmankello', lat: 52.5213, lon: 13.4133, kiintea: true,
         nosto: 'nosto-maailmankello',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },

@@ -62,6 +62,16 @@ const TUNNETUT_KOHTAUSKUVAT = new Set([
   'wien-yhdeksas-1824.webp',
 ]);
 
+/*
+ * ISOT LEIKATUT (Karttaseppä 31.10.2026): leikattu kohde ilman taustaa (reuna 0), mutta suuri rakennus täyttää
+ * kuvasta yli rajan. Täyttöraja ei koske näitä; reunaehto koskee (tausta ei saa ulottua reunaan).
+ */
+const ISOT_LEIKATUT = new Set([
+  'rooma-vatikaanin-palatsi-kk.webp',   // Vatikaanin palatsi: suljettu kortteli; alkuperäinen vain ämpärissä
+  'tukholma-norrstrom-kk.webp',         // Norrström: leveä virta siltoineen; alkuperäinen vain ämpärissä
+  'valletta-pyhan-elmon-linnake-kk.webp', // Pyhän Elmon linnake: tähtilinnake niemellä, kohdekartan versio leikattu
+]);
+
 const MITAT = JSON.parse(readFileSync(new URL('../tools/miniatyyri-mitat.json', import.meta.url), 'utf8'));
 
 /** {taytto, reuna} manifestista; kaatuu, jos kuva on vaihtunut mittauksen jälkeen. */
@@ -73,7 +83,7 @@ function mittaa(nimi) {
   return m;
 }
 
-const onKohtaus = (m) => m.taytto >= TAYTTO_RAJA || m.reuna > REUNA_RAJA;
+const onKohtaus = (m, nimi) => (m.taytto >= TAYTTO_RAJA && !ISOT_LEIKATUT.has(nimi)) || m.reuna > REUNA_RAJA;
 const KUVAT = readdirSync(KANSIO).filter((n) => n.endsWith('.webp'));
 
 test('miniatyyrit ovat leikattuja kohteita: ei maalattua taustaa', () => {
@@ -82,7 +92,7 @@ test('miniatyyrit ovat leikattuja kohteita: ei maalattua taustaa', () => {
   for (const nimi of KUVAT) {
     if (TUNNETUT_KOHTAUSKUVAT.has(nimi)) continue;
     const m = mittaa(nimi);
-    if (onKohtaus(m)) huonot.push(`${nimi}: täyttö ${m.taytto.toFixed(2)}, reuna ${m.reuna.toFixed(2)}`);
+    if (onKohtaus(m, nimi)) huonot.push(`${nimi}: täyttö ${m.taytto.toFixed(2)}, reuna ${m.reuna.toFixed(2)}`);
   }
   assert.deepEqual(huonot, [], 'kuva on kohtaus — tilaa leikattu versio kuvaputkelta');
 });

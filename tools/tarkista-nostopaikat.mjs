@@ -263,6 +263,13 @@ export function kohdekartallaSisalla(kartta, lat, lon) {
     && lon >= rajat.lansi && lon <= rajat.ita;
 }
 
+/** Piste näkyy kohdekartalla: ydinrajauksessa tai kainalossa (js/packs/maakartat.js karttapiste; Karttaseppä 31.10.2026,
+ * Lontoon Abbey Road kainalossa kuten Helsingin Suomenlinna). Nostojen sijoitussäännöt käyttävät yhä pelkkää ydinrajausta. */
+export function kohdekartallaNakyvissa(kartta, lat, lon) {
+  if (kohdekartallaSisalla(kartta, lat, lon)) return true;
+  return (kartta?.kainalot ?? []).some(({ rajat: r }) => lat <= r.pohjoinen && lat >= r.etela && lon >= r.lansi && lon <= r.ita);
+}
+
 /*
  * Merkin karkea ala ja kehyksen leveys pikseleinä — samat luvut kuin
  * tools/tarkista-karttapisteet.mjs:n päällekkäisyysmitassa, jotta kaksi
