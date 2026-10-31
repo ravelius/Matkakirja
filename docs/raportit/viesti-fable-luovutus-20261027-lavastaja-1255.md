@@ -2397,3 +2397,18 @@ Kansio U = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusin
   pari 06 v10:llä näytä yhä saumaa. Kuva U/kuvat-v89/rengas-v9-v10.png.
 - ODOTTAA: VS:n parit v89(b):stä ja 06:sta ulkorengas-v10:llä → OK:n jälkeen PT + JU vientiin. PT:n kuittaus.
 - Notre-Dame v6k29 junassa 216 ec0554ca8, NUI:n K1 simussa OK (pari lokit/todistus-nd-v6k29-juna216-20261031-2124/) – jono 4 valmis.
+
+## LISÄYS 176 (31.10. 23.46, uusi tili): LUOVUTUS (konteksti 30 %) — K06C/K06D, TAUSTA-V89C/V89D VALMIIT, ALOITA TÄSTÄ
+Uusi session id local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd. U = proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut. Ei ajoja, ei herätyksiä.
+- MUURIN PUNAINEN (PT kuittasi (a); VS mittaa): V4_red pelkkä baseColorFactor (ei kuvaa) kaikissa paloissa (494 materiaalia). Muuri on auringon
+  varjopuolella → valo kertoo albedon, joten kerroin = havainne lin. / peli lin. (VS k06h: sumu vain G −11, JuoksuUsva alkaa 150 m:stä).
+  k06c (0,2436/0,0111/0,0069, SHA 8dd6c497be7d) → VS:n uusilla valoarvoilla k06d (0,365/0,0111/0,0088, SHA 9f2d15200f9f) = k06b + ulkorengas-v10
+  vain materiaali (T/glb_materiaali_vari.py; U/k06c-punainen.zsh, k06d-punainen.zsh; kansiot -k06c/-k06d, ulkorengas-v11/v12). ODOTTAA: VS:n pari.
+  JUNAAN myöhemmin: sama väri junan palaversioihin (rakennukset, tausta-v89d, muurikate, osasarja, ulkorengas) PT:n päätöksellä k06-parin jälkeen.
+- K06 MUOTO (KK:n tarkistus kohta 4): kamera z −492 oli U:n pään (z −475) ulkopuolella; PT: VS siirtää kameran U:n sisään (~z −440).
+  Harmaata kivijalkaa ja kapeaa pihaa EI rakenneta (mitat oikeat 20.10., julkisivupiirros v2 30.10.).
+- TAUSTA-V89C (e33e6f85d607): kk-tausta-1-2 lod0/1/2 juurisolmu "katto-longzongmen" (katto, kulta, harjat, päätytiilet, V4_teal, V4_red y > 6,9;
+  laatikko glTF x −128…−104, z 151…188; T/katto_erota.py jakaa vain indeksit). PK häivyttää "katto*"-solmut. Kuva U/kuvat-v89/katto-longzongmen-lod012.png.
+- TAUSTA-V89D (c04d882d1ba0) = v89c + PK d5 b-16:n harmaa levy korjattu: v89:n askelmat y 0,45 V4_marmori → V4_lattia (T/lattiaksi_laatikko.py,
+  U/tausta-v89d.zsh). Kuva U/kuvat-v89/askelmat-v89c-v89d.png. PT:lle ja PK:lle 23.4x. ODOTTAA: PK:n d5-uusinta, PT:n kuittaus → JU vientiin (junan 216 ehto).
+- VAROITUS: T/glb_tiivista.py POISTAA valo_rgbm-kuvan leivotuista paloista (viitataan vain nimellä) → älä käytä leivottuihin; korjaa työkalu (säilytä kuvat nimellä valo*).
