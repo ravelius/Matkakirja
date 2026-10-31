@@ -42,8 +42,10 @@ pysyvä lupa tilinvaihdossa). Järjestys: luovutukset ja tallenteet (alla 1–2)
    `git log --remotes=origin --since=3.days --format='%ci %h %D' --name-only -- 'docs/raportit/viesti-<rooli>-luovutus-*' | head`.
 2. PT:n ja Keskustelukanavan keskustelut: `python3 tools/tallenna-keskustelu.py <session-uuid> Päätoimittaja` ja
    `… <session-uuid> Keskustelukanava` (kirjoittaa S/keskustelut/). Muut roolit: luovutus riittää.
-3. Vanhat sessiot tyhjiksi: `clear_session`, tarkistus `list_events` = 0. Jos vanhan tilin sessiot eivät näy uudella tilillä,
-   ne jäävät vanhalle tilille – ei toimia (ne eivät kuluta uuden tilin kiintiötä).
+3. Vanhat sessiot (omistaja 31.10.2026 klo 14.55): ENSISIJAISESTI samat sessiot jatkavat uudella tilillä nollattuina
+   (`clear_session`, tarkistus `list_events` = 0; id:t pysyvät, osoitekirja ennallaan), jos se on teknisesti mahdollista.
+   Muuten vanhat sessiot ARKISTOIDAAN automaattisesti vaihdon lopuksi (`archive_session`, kysymättä omistajalta), kun
+   uudet roolisessiot on luotu ja osoitekirja päivitetty.
 
 ## 1.5 Kotikansiot mainiin ENNEN sessioiden luontia (Raamattu 12.23 kohta 17 ja 7.47; KK 26.10.2026)
 Sovellus lataa CLAUDE.md:n session kansiosta vain käynnistyessään, joten jäljessä oleva kotikansio antaa uudelle sessiolle vanhat
