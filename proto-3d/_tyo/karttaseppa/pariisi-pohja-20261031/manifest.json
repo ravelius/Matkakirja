@@ -1,0 +1,1518 @@
+{
+ "otsikko": "Pariisin lukittu pohja (koko kaupunki, OSM relation 7444) G-tyylin tuotantokarttaan",
+ "tekija": "Karttaseppä 31.10.2026",
+ "tilaaja": "Päätoimittaja (omistaja 31.10.2026 klo 19.40)",
+ "projektio": {
+  "kuvaus": "ortografinen kamera G-kuvan mittasuhteilla: x = E - 0.0 N, y = -0.85 N - 0.0 E - 0.527 h (h = korkeus m)",
+  "origo_latlon": [
+   48.859,
+   2.3475
+  ],
+  "kx_m_per_aste": 73239.02166766467,
+  "ky_m_per_aste": 110574.0,
+  "eteenpain": "E=(lon-lon0)*kx; N=(lat-lat0)*ky; X=E-0.0N; Y=-0.85N-0.0E-0.527h; px=(X-X0)/s; py=(Y-Y0)/s",
+  "kaanteinen_maanpinta": "det=-0.85; E=(-0.85X+0.0Y)/det; N=(0.0X+Y)/det; lat=lat0+N/ky; lon=lon0+E/kx",
+  "X0_m": -9236.084015313147,
+  "Y0_m": -4356.141812399643,
+  "s_m_per_px": 2.0,
+  "korkeuskerroin": 0.527,
+  "pohjoinen": "suoraan ylös",
+  "kamera": {
+   "katsesuunta_ENU": [
+    0.0,
+    0.5269,
+    -0.8499
+   ],
+   "suunta_astetta": 0.0,
+   "kallistus_astetta": -58.2,
+   "huom": "Piirros näkyy oikein vain tästä suunnasta (suunta pohjoisesta itään, kallistus alaspäin). Natiivissa kapea näkökenttä tai ortografinen kamera; muissa kulmissa piirros häivytetään (omistaja 17.43)."
+  }
+ },
+ "kangas_px": [
+  10368,
+  4864
+ ],
+ "palat": {
+  "leveys": 1536,
+  "korkeus": 1024,
+  "limitys_px": 64,
+  "riveja": 5,
+  "sarakkeita": 7,
+  "nimeaminen": "pariisi-<taso>-r<rivi>-c<sarake>.png (rivi 1 = pohjoisin, sarake 1 = läntisin)",
+  "tasot": {
+   "pohja": "maa, puistot, vesi, kadut, radat",
+   "malli": "pohja + valkoinen pienoismalli (OSM-jalanjäljet ja -korkeudet)",
+   "maski": "kaupungin raja 7444: valkoinen = Pariisi"
+  },
+  "lista": [
+   {
+    "nimi": "r1-c1",
+    "rivi": 1,
+    "sarake": 1,
+    "pikselit": [
+     0,
+     0,
+     1536,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.221391
+     ],
+     "ne": [
+      48.905348,
+      2.263336
+     ],
+     "se": [
+      48.883558,
+      2.263336
+     ],
+     "sw": [
+      48.883558,
+      2.221391
+     ]
+    },
+    "bbox_latlon": [
+     2.221391,
+     48.883558,
+     2.263336,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r1-c2",
+    "rivi": 1,
+    "sarake": 2,
+    "pikselit": [
+     1472,
+     0,
+     3008,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.261588
+     ],
+     "ne": [
+      48.905348,
+      2.303533
+     ],
+     "se": [
+      48.883558,
+      2.303533
+     ],
+     "sw": [
+      48.883558,
+      2.261588
+     ]
+    },
+    "bbox_latlon": [
+     2.261588,
+     48.883558,
+     2.303533,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.137
+   },
+   {
+    "nimi": "r1-c3",
+    "rivi": 1,
+    "sarake": 3,
+    "pikselit": [
+     2944,
+     0,
+     4480,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.301786
+     ],
+     "ne": [
+      48.905348,
+      2.34373
+     ],
+     "se": [
+      48.883558,
+      2.34373
+     ],
+     "sw": [
+      48.883558,
+      2.301786
+     ]
+    },
+    "bbox_latlon": [
+     2.301786,
+     48.883558,
+     2.34373,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.723
+   },
+   {
+    "nimi": "r1-c4",
+    "rivi": 1,
+    "sarake": 4,
+    "pikselit": [
+     4416,
+     0,
+     5952,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.341983
+     ],
+     "ne": [
+      48.905348,
+      2.383928
+     ],
+     "se": [
+      48.883558,
+      2.383928
+     ],
+     "sw": [
+      48.883558,
+      2.341983
+     ]
+    },
+    "bbox_latlon": [
+     2.341983,
+     48.883558,
+     2.383928,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.832
+   },
+   {
+    "nimi": "r1-c5",
+    "rivi": 1,
+    "sarake": 5,
+    "pikselit": [
+     5888,
+     0,
+     7424,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.38218
+     ],
+     "ne": [
+      48.905348,
+      2.424125
+     ],
+     "se": [
+      48.883558,
+      2.424125
+     ],
+     "sw": [
+      48.883558,
+      2.38218
+     ]
+    },
+    "bbox_latlon": [
+     2.38218,
+     48.883558,
+     2.424125,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.299
+   },
+   {
+    "nimi": "r1-c6",
+    "rivi": 1,
+    "sarake": 6,
+    "pikselit": [
+     7360,
+     0,
+     8896,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.422377
+     ],
+     "ne": [
+      48.905348,
+      2.464322
+     ],
+     "se": [
+      48.883558,
+      2.464322
+     ],
+     "sw": [
+      48.883558,
+      2.422377
+     ]
+    },
+    "bbox_latlon": [
+     2.422377,
+     48.883558,
+     2.464322,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r1-c7",
+    "rivi": 1,
+    "sarake": 7,
+    "pikselit": [
+     8832,
+     0,
+     10368,
+     1024
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.905348,
+      2.462574
+     ],
+     "ne": [
+      48.905348,
+      2.504519
+     ],
+     "se": [
+      48.883558,
+      2.504519
+     ],
+     "sw": [
+      48.883558,
+      2.462574
+     ]
+    },
+    "bbox_latlon": [
+     2.462574,
+     48.883558,
+     2.504519,
+     48.905348
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r2-c1",
+    "rivi": 2,
+    "sarake": 1,
+    "pikselit": [
+     0,
+     960,
+     1536,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.221391
+     ],
+     "ne": [
+      48.88492,
+      2.263336
+     ],
+     "se": [
+      48.86313,
+      2.263336
+     ],
+     "sw": [
+      48.86313,
+      2.221391
+     ]
+    },
+    "bbox_latlon": [
+     2.221391,
+     48.86313,
+     2.263336,
+     48.88492
+    ],
+    "kaupunkia_osuus": 0.417
+   },
+   {
+    "nimi": "r2-c2",
+    "rivi": 2,
+    "sarake": 2,
+    "pikselit": [
+     1472,
+     960,
+     3008,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.261588
+     ],
+     "ne": [
+      48.88492,
+      2.303533
+     ],
+     "se": [
+      48.86313,
+      2.303533
+     ],
+     "sw": [
+      48.86313,
+      2.261588
+     ]
+    },
+    "bbox_latlon": [
+     2.261588,
+     48.86313,
+     2.303533,
+     48.88492
+    ],
+    "kaupunkia_osuus": 0.872
+   },
+   {
+    "nimi": "r2-c3",
+    "rivi": 2,
+    "sarake": 3,
+    "pikselit": [
+     2944,
+     960,
+     4480,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.301786
+     ],
+     "ne": [
+      48.88492,
+      2.34373
+     ],
+     "se": [
+      48.86313,
+      2.34373
+     ],
+     "sw": [
+      48.86313,
+      2.301786
+     ]
+    },
+    "bbox_latlon": [
+     2.301786,
+     48.86313,
+     2.34373,
+     48.88492
+    ],
+    "kaupunkia_osuus": 1.0
+   },
+   {
+    "nimi": "r2-c4",
+    "rivi": 2,
+    "sarake": 4,
+    "pikselit": [
+     4416,
+     960,
+     5952,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.341983
+     ],
+     "ne": [
+      48.88492,
+      2.383928
+     ],
+     "se": [
+      48.86313,
+      2.383928
+     ],
+     "sw": [
+      48.86313,
+      2.341983
+     ]
+    },
+    "bbox_latlon": [
+     2.341983,
+     48.86313,
+     2.383928,
+     48.88492
+    ],
+    "kaupunkia_osuus": 1.0
+   },
+   {
+    "nimi": "r2-c5",
+    "rivi": 2,
+    "sarake": 5,
+    "pikselit": [
+     5888,
+     960,
+     7424,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.38218
+     ],
+     "ne": [
+      48.88492,
+      2.424125
+     ],
+     "se": [
+      48.86313,
+      2.424125
+     ],
+     "sw": [
+      48.86313,
+      2.38218
+     ]
+    },
+    "bbox_latlon": [
+     2.38218,
+     48.86313,
+     2.424125,
+     48.88492
+    ],
+    "kaupunkia_osuus": 0.681
+   },
+   {
+    "nimi": "r2-c6",
+    "rivi": 2,
+    "sarake": 6,
+    "pikselit": [
+     7360,
+     960,
+     8896,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.422377
+     ],
+     "ne": [
+      48.88492,
+      2.464322
+     ],
+     "se": [
+      48.86313,
+      2.464322
+     ],
+     "sw": [
+      48.86313,
+      2.422377
+     ]
+    },
+    "bbox_latlon": [
+     2.422377,
+     48.86313,
+     2.464322,
+     48.88492
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r2-c7",
+    "rivi": 2,
+    "sarake": 7,
+    "pikselit": [
+     8832,
+     960,
+     10368,
+     1984
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.88492,
+      2.462574
+     ],
+     "ne": [
+      48.88492,
+      2.504519
+     ],
+     "se": [
+      48.86313,
+      2.504519
+     ],
+     "sw": [
+      48.86313,
+      2.462574
+     ]
+    },
+    "bbox_latlon": [
+     2.462574,
+     48.86313,
+     2.504519,
+     48.88492
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r3-c1",
+    "rivi": 3,
+    "sarake": 1,
+    "pikselit": [
+     0,
+     1920,
+     1536,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.221391
+     ],
+     "ne": [
+      48.864492,
+      2.263336
+     ],
+     "se": [
+      48.842702,
+      2.263336
+     ],
+     "sw": [
+      48.842702,
+      2.221391
+     ]
+    },
+    "bbox_latlon": [
+     2.221391,
+     48.842702,
+     2.263336,
+     48.864492
+    ],
+    "kaupunkia_osuus": 0.704
+   },
+   {
+    "nimi": "r3-c2",
+    "rivi": 3,
+    "sarake": 2,
+    "pikselit": [
+     1472,
+     1920,
+     3008,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.261588
+     ],
+     "ne": [
+      48.864492,
+      2.303533
+     ],
+     "se": [
+      48.842702,
+      2.303533
+     ],
+     "sw": [
+      48.842702,
+      2.261588
+     ]
+    },
+    "bbox_latlon": [
+     2.261588,
+     48.842702,
+     2.303533,
+     48.864492
+    ],
+    "kaupunkia_osuus": 1.0
+   },
+   {
+    "nimi": "r3-c3",
+    "rivi": 3,
+    "sarake": 3,
+    "pikselit": [
+     2944,
+     1920,
+     4480,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.301786
+     ],
+     "ne": [
+      48.864492,
+      2.34373
+     ],
+     "se": [
+      48.842702,
+      2.34373
+     ],
+     "sw": [
+      48.842702,
+      2.301786
+     ]
+    },
+    "bbox_latlon": [
+     2.301786,
+     48.842702,
+     2.34373,
+     48.864492
+    ],
+    "kaupunkia_osuus": 1.0
+   },
+   {
+    "nimi": "r3-c4",
+    "rivi": 3,
+    "sarake": 4,
+    "pikselit": [
+     4416,
+     1920,
+     5952,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.341983
+     ],
+     "ne": [
+      48.864492,
+      2.383928
+     ],
+     "se": [
+      48.842702,
+      2.383928
+     ],
+     "sw": [
+      48.842702,
+      2.341983
+     ]
+    },
+    "bbox_latlon": [
+     2.341983,
+     48.842702,
+     2.383928,
+     48.864492
+    ],
+    "kaupunkia_osuus": 1.0
+   },
+   {
+    "nimi": "r3-c5",
+    "rivi": 3,
+    "sarake": 5,
+    "pikselit": [
+     5888,
+     1920,
+     7424,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.38218
+     ],
+     "ne": [
+      48.864492,
+      2.424125
+     ],
+     "se": [
+      48.842702,
+      2.424125
+     ],
+     "sw": [
+      48.842702,
+      2.38218
+     ]
+    },
+    "bbox_latlon": [
+     2.38218,
+     48.842702,
+     2.424125,
+     48.864492
+    ],
+    "kaupunkia_osuus": 0.794
+   },
+   {
+    "nimi": "r3-c6",
+    "rivi": 3,
+    "sarake": 6,
+    "pikselit": [
+     7360,
+     1920,
+     8896,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.422377
+     ],
+     "ne": [
+      48.864492,
+      2.464322
+     ],
+     "se": [
+      48.842702,
+      2.464322
+     ],
+     "sw": [
+      48.842702,
+      2.422377
+     ]
+    },
+    "bbox_latlon": [
+     2.422377,
+     48.842702,
+     2.464322,
+     48.864492
+    ],
+    "kaupunkia_osuus": 0.047
+   },
+   {
+    "nimi": "r3-c7",
+    "rivi": 3,
+    "sarake": 7,
+    "pikselit": [
+     8832,
+     1920,
+     10368,
+     2944
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.864492,
+      2.462574
+     ],
+     "ne": [
+      48.864492,
+      2.504519
+     ],
+     "se": [
+      48.842702,
+      2.504519
+     ],
+     "sw": [
+      48.842702,
+      2.462574
+     ]
+    },
+    "bbox_latlon": [
+     2.462574,
+     48.842702,
+     2.504519,
+     48.864492
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r4-c1",
+    "rivi": 4,
+    "sarake": 1,
+    "pikselit": [
+     0,
+     2880,
+     1536,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.221391
+     ],
+     "ne": [
+      48.844063,
+      2.263336
+     ],
+     "se": [
+      48.822273,
+      2.263336
+     ],
+     "sw": [
+      48.822273,
+      2.221391
+     ]
+    },
+    "bbox_latlon": [
+     2.221391,
+     48.822273,
+     2.263336,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.116
+   },
+   {
+    "nimi": "r4-c2",
+    "rivi": 4,
+    "sarake": 2,
+    "pikselit": [
+     1472,
+     2880,
+     3008,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.261588
+     ],
+     "ne": [
+      48.844063,
+      2.303533
+     ],
+     "se": [
+      48.822273,
+      2.303533
+     ],
+     "sw": [
+      48.822273,
+      2.261588
+     ]
+    },
+    "bbox_latlon": [
+     2.261588,
+     48.822273,
+     2.303533,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.68
+   },
+   {
+    "nimi": "r4-c3",
+    "rivi": 4,
+    "sarake": 3,
+    "pikselit": [
+     2944,
+     2880,
+     4480,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.301786
+     ],
+     "ne": [
+      48.844063,
+      2.34373
+     ],
+     "se": [
+      48.822273,
+      2.34373
+     ],
+     "sw": [
+      48.822273,
+      2.301786
+     ]
+    },
+    "bbox_latlon": [
+     2.301786,
+     48.822273,
+     2.34373,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.981
+   },
+   {
+    "nimi": "r4-c4",
+    "rivi": 4,
+    "sarake": 4,
+    "pikselit": [
+     4416,
+     2880,
+     5952,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.341983
+     ],
+     "ne": [
+      48.844063,
+      2.383928
+     ],
+     "se": [
+      48.822273,
+      2.383928
+     ],
+     "sw": [
+      48.822273,
+      2.341983
+     ]
+    },
+    "bbox_latlon": [
+     2.341983,
+     48.822273,
+     2.383928,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.999
+   },
+   {
+    "nimi": "r4-c5",
+    "rivi": 4,
+    "sarake": 5,
+    "pikselit": [
+     5888,
+     2880,
+     7424,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.38218
+     ],
+     "ne": [
+      48.844063,
+      2.424125
+     ],
+     "se": [
+      48.822273,
+      2.424125
+     ],
+     "sw": [
+      48.822273,
+      2.38218
+     ]
+    },
+    "bbox_latlon": [
+     2.38218,
+     48.822273,
+     2.424125,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.751
+   },
+   {
+    "nimi": "r4-c6",
+    "rivi": 4,
+    "sarake": 6,
+    "pikselit": [
+     7360,
+     2880,
+     8896,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.422377
+     ],
+     "ne": [
+      48.844063,
+      2.464322
+     ],
+     "se": [
+      48.822273,
+      2.464322
+     ],
+     "sw": [
+      48.822273,
+      2.422377
+     ]
+    },
+    "bbox_latlon": [
+     2.422377,
+     48.822273,
+     2.464322,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.932
+   },
+   {
+    "nimi": "r4-c7",
+    "rivi": 4,
+    "sarake": 7,
+    "pikselit": [
+     8832,
+     2880,
+     10368,
+     3904
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.844063,
+      2.462574
+     ],
+     "ne": [
+      48.844063,
+      2.504519
+     ],
+     "se": [
+      48.822273,
+      2.504519
+     ],
+     "sw": [
+      48.822273,
+      2.462574
+     ]
+    },
+    "bbox_latlon": [
+     2.462574,
+     48.822273,
+     2.504519,
+     48.844063
+    ],
+    "kaupunkia_osuus": 0.084
+   },
+   {
+    "nimi": "r5-c1",
+    "rivi": 5,
+    "sarake": 1,
+    "pikselit": [
+     0,
+     3840,
+     1536,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.221391
+     ],
+     "ne": [
+      48.823635,
+      2.263336
+     ],
+     "se": [
+      48.801845,
+      2.263336
+     ],
+     "sw": [
+      48.801845,
+      2.221391
+     ]
+    },
+    "bbox_latlon": [
+     2.221391,
+     48.801845,
+     2.263336,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r5-c2",
+    "rivi": 5,
+    "sarake": 2,
+    "pikselit": [
+     1472,
+     3840,
+     3008,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.261588
+     ],
+     "ne": [
+      48.823635,
+      2.303533
+     ],
+     "se": [
+      48.801845,
+      2.303533
+     ],
+     "sw": [
+      48.801845,
+      2.261588
+     ]
+    },
+    "bbox_latlon": [
+     2.261588,
+     48.801845,
+     2.303533,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.0
+   },
+   {
+    "nimi": "r5-c3",
+    "rivi": 5,
+    "sarake": 3,
+    "pikselit": [
+     2944,
+     3840,
+     4480,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.301786
+     ],
+     "ne": [
+      48.823635,
+      2.34373
+     ],
+     "se": [
+      48.801845,
+      2.34373
+     ],
+     "sw": [
+      48.801845,
+      2.301786
+     ]
+    },
+    "bbox_latlon": [
+     2.301786,
+     48.801845,
+     2.34373,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.162
+   },
+   {
+    "nimi": "r5-c4",
+    "rivi": 5,
+    "sarake": 4,
+    "pikselit": [
+     4416,
+     3840,
+     5952,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.341983
+     ],
+     "ne": [
+      48.823635,
+      2.383928
+     ],
+     "se": [
+      48.801845,
+      2.383928
+     ],
+     "sw": [
+      48.801845,
+      2.341983
+     ]
+    },
+    "bbox_latlon": [
+     2.341983,
+     48.801845,
+     2.383928,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.261
+   },
+   {
+    "nimi": "r5-c5",
+    "rivi": 5,
+    "sarake": 5,
+    "pikselit": [
+     5888,
+     3840,
+     7424,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.38218
+     ],
+     "ne": [
+      48.823635,
+      2.424125
+     ],
+     "se": [
+      48.801845,
+      2.424125
+     ],
+     "sw": [
+      48.801845,
+      2.38218
+     ]
+    },
+    "bbox_latlon": [
+     2.38218,
+     48.801845,
+     2.424125,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.001
+   },
+   {
+    "nimi": "r5-c6",
+    "rivi": 5,
+    "sarake": 6,
+    "pikselit": [
+     7360,
+     3840,
+     8896,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.422377
+     ],
+     "ne": [
+      48.823635,
+      2.464322
+     ],
+     "se": [
+      48.801845,
+      2.464322
+     ],
+     "sw": [
+      48.801845,
+      2.422377
+     ]
+    },
+    "bbox_latlon": [
+     2.422377,
+     48.801845,
+     2.464322,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.189
+   },
+   {
+    "nimi": "r5-c7",
+    "rivi": 5,
+    "sarake": 7,
+    "pikselit": [
+     8832,
+     3840,
+     10368,
+     4864
+    ],
+    "kulmat_maanpinta_latlon": {
+     "nw": [
+      48.823635,
+      2.462574
+     ],
+     "ne": [
+      48.823635,
+      2.504519
+     ],
+     "se": [
+      48.801845,
+      2.504519
+     ],
+     "sw": [
+      48.801845,
+      2.462574
+     ]
+    },
+    "bbox_latlon": [
+     2.462574,
+     48.801845,
+     2.504519,
+     48.823635
+    ],
+    "kaupunkia_osuus": 0.005
+   }
+  ]
+ },
+ "ankkurit": [
+  {
+   "nimi": "Arc de Triomphe",
+   "lat": 48.87377778,
+   "lon": 2.29502778,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    2696.5,
+    1483.6
+   ],
+   "pala": "r2-c2"
+  },
+  {
+   "nimi": "Centre Pompidou",
+   "lat": 48.86064194,
+   "lon": 2.352245,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    4791.8,
+    2100.9
+   ],
+   "pala": "r3-c4"
+  },
+  {
+   "nimi": "Eiffel Tower",
+   "lat": 48.85822222,
+   "lon": 2.2945,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    2677.2,
+    2214.6
+   ],
+   "pala": "r3-c2"
+  },
+  {
+   "nimi": "Les Invalides",
+   "lat": 48.855,
+   "lon": 2.3125,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    3336.4,
+    2366.0
+   ],
+   "pala": "r3-c3"
+  },
+  {
+   "nimi": "Louvre",
+   "lat": 48.8611,
+   "lon": 2.3358,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    4189.6,
+    2079.4
+   ],
+   "pala": "r3-c3"
+  },
+  {
+   "nimi": "Notre-Dame de Paris",
+   "lat": 48.85305556,
+   "lon": 2.35,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    4709.6,
+    2457.4
+   ],
+   "pala": "r3-c4"
+  },
+  {
+   "nimi": "Palais Garnier",
+   "lat": 48.87194444,
+   "lon": 2.33166667,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    4038.2,
+    1569.8
+   ],
+   "pala": "r2-c3"
+  },
+  {
+   "nimi": "Panthéon",
+   "lat": 48.84611111,
+   "lon": 2.34583333,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    4557.0,
+    2783.8
+   ],
+   "pala": "r3-c4"
+  },
+  {
+   "nimi": "Sainte-Chapelle",
+   "lat": 48.85527778,
+   "lon": 2.345,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    4526.5,
+    2353.0
+   ],
+   "pala": "r3-c4"
+  },
+  {
+   "nimi": "Tour Montparnasse",
+   "lat": 48.8421,
+   "lon": 2.322,
+   "lahde": "Wikipedia GeoData",
+   "pikseli": [
+    3684.2,
+    2972.3
+   ],
+   "pala": "r4-c3"
+  },
+  {
+   "nimi": "Bois de Boulogne",
+   "lat": 48.864722222222,
+   "lon": 2.2508333333333,
+   "lahde": "Wikidata Q209626",
+   "pikseli": [
+    1078.2,
+    1909.2
+   ],
+   "pala": "r2-c1"
+  },
+  {
+   "nimi": "Bois de Vincennes",
+   "lat": 48.82805555555556,
+   "lon": 2.4330555555555557,
+   "lahde": "Wikidata Q271639",
+   "pikseli": [
+    7751.0,
+    3632.3
+   ],
+   "pala": "r4-c6"
+  },
+  {
+   "nimi": "Grand Palais",
+   "lat": 48.866111,
+   "lon": 2.3125,
+   "lahde": "Wikidata Q457318",
+   "pikseli": [
+    3336.4,
+    1843.9
+   ],
+   "pala": "r2-c3"
+  },
+  {
+   "nimi": "Jardin du Luxembourg",
+   "lat": 48.846944444444446,
+   "lon": 2.337222222222222,
+   "lahde": "Wikidata Q309458",
+   "pikseli": [
+    4241.7,
+    2744.6
+   ],
+   "pala": "r3-c3"
+  },
+  {
+   "nimi": "Parc de la Villette",
+   "lat": 48.89306,
+   "lon": 2.39056,
+   "lahde": "Wikidata Q246448",
+   "pikseli": [
+    6194.9,
+    577.5
+   ],
+   "pala": "r1-c5"
+  },
+  {
+   "nimi": "Place de la Bastille",
+   "lat": 48.853138888889,
+   "lon": 2.3691111111111,
+   "lahde": "Wikidata Q778784",
+   "pikseli": [
+    5409.4,
+    2453.5
+   ],
+   "pala": "r3-c4"
+  },
+  {
+   "nimi": "Père Lachaise Cemetery",
+   "lat": 48.861111111111114,
+   "lon": 2.3941666666666666,
+   "lahde": "Wikidata Q311",
+   "pikseli": [
+    6327.0,
+    2078.9
+   ],
+   "pala": "r3-c5"
+  },
+  {
+   "nimi": "Sacré-Cœur, Paris",
+   "lat": 48.88665,
+   "lon": 2.34295,
+   "lahde": "Wikidata Q28785",
+   "pikseli": [
+    4451.4,
+    878.7
+   ],
+   "pala": "r1-c4"
+  }
+ ],
+ "lahteet": {
+  "osm": "OpenStreetMap, Overpass API 31.10.2026 (24 solua bboxissa 2.219,48.809,2.476,48.909)",
+  "raja": "relation 7444",
+  "alkioita": 507832,
+  "rakennuksia": 276649,
+  "googlen_kuvia": false
+ },
+ "attribuutio": "© OpenStreetMap contributors · https://www.openstreetmap.org/copyright · ODbL 1.0"
+}

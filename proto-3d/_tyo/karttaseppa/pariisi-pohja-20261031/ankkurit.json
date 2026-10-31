@@ -1,0 +1,110 @@
+[
+ {
+  "nimi": "Arc de Triomphe",
+  "lat": 48.87377778,
+  "lon": 2.29502778,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Centre Pompidou",
+  "lat": 48.86064194,
+  "lon": 2.352245,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Eiffel Tower",
+  "lat": 48.85822222,
+  "lon": 2.2945,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Les Invalides",
+  "lat": 48.855,
+  "lon": 2.3125,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Louvre",
+  "lat": 48.8611,
+  "lon": 2.3358,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Notre-Dame de Paris",
+  "lat": 48.85305556,
+  "lon": 2.35,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Palais Garnier",
+  "lat": 48.87194444,
+  "lon": 2.33166667,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Panthéon",
+  "lat": 48.84611111,
+  "lon": 2.34583333,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Sainte-Chapelle",
+  "lat": 48.85527778,
+  "lon": 2.345,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Tour Montparnasse",
+  "lat": 48.8421,
+  "lon": 2.322,
+  "lahde": "Wikipedia GeoData"
+ },
+ {
+  "nimi": "Bois de Boulogne",
+  "lat": 48.864722222222,
+  "lon": 2.2508333333333,
+  "lahde": "Wikidata Q209626"
+ },
+ {
+  "nimi": "Bois de Vincennes",
+  "lat": 48.82805555555556,
+  "lon": 2.4330555555555557,
+  "lahde": "Wikidata Q271639"
+ },
+ {
+  "nimi": "Grand Palais",
+  "lat": 48.866111,
+  "lon": 2.3125,
+  "lahde": "Wikidata Q457318"
+ },
+ {
+  "nimi": "Jardin du Luxembourg",
+  "lat": 48.846944444444446,
+  "lon": 2.337222222222222,
+  "lahde": "Wikidata Q309458"
+ },
+ {
+  "nimi": "Parc de la Villette",
+  "lat": 48.89306,
+  "lon": 2.39056,
+  "lahde": "Wikidata Q246448"
+ },
+ {
+  "nimi": "Place de la Bastille",
+  "lat": 48.853138888889,
+  "lon": 2.3691111111111,
+  "lahde": "Wikidata Q778784"
+ },
+ {
+  "nimi": "Père Lachaise Cemetery",
+  "lat": 48.861111111111114,
+  "lon": 2.3941666666666666,
+  "lahde": "Wikidata Q311"
+ },
+ {
+  "nimi": "Sacré-Cœur, Paris",
+  "lat": 48.88665,
+  "lon": 2.34295,
+  "lahde": "Wikidata Q28785"
+ }
+]
