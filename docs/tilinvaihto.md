@@ -136,6 +136,17 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
 - `bash tools/tyotavat/peili.sh --tarkista`: Mac-ohjeet ja peili samat.
 - `bash tools/tarkista-tyotilat.sh`.
 
+## 7.5 Tarkistus ennen kuin työ jatkuu (omistaja 31.10.2026 klo 22.06, kortti "Kyllä")
+Heti vaihdon jälkeen ja ennen kuin yksikään rooli jatkaa työtä PT ajaa `node tools/tyotavat/tilinvaihto-valmis.mjs` ja korjaa
+jokaisen PUUTE-rivin. Samat sessiot jatkavat (14.55) → tarkistus vahvistaa, ettei mikään osoite muuttunut.
+1. Osoitteet: vanhat id:t (täysi ja lyhyt muoto local_<8>) id:itä toistavista tiedostoista, kotikansioiden juuren .md:istä
+   (esim. Matkakirja-posti/NOLLAUS.md) ja ~/.claude/CLAUDE.md:stä → osoitekirjan id:t (`paivita-idt.mjs --kirjoita`; kansion oma
+   rooli korjaa omat tiedostonsa; CLAUDE.md:t korjaa KK omistajan luvalla).
+2. Asemataulu: uusi taulu auki, työlista, junat, roolit ja mittarit samat kuin vanhassa (kohta 4; työkalun osa 5).
+3. Asetukset: jokaisen session malli, effort, lupatila, vastaustyyli, nimi ja RC roolitaulukon mukaan (työkalun osa 1;
+   korjaus ccd_session_mgmt-työkaluilla).
+Tulos KK:lle yhdellä rivillä ("Tilinvaihdon tarkistus: N puutetta korjattu, 0 jäljellä"). Työ jatkuu vasta, kun paluu on 0.
+
 ## 8. Lopuksi
 `node tools/tyotavat/tilinvaihto-valmis.mjs` (paluu 0 = valmis): osoitekirjan id:t elossa sovelluksen sessiotiedostoista (tili,
 ei arkistoitu, malli ja effort kuten osoitekirjassa, lupatila ja RC tiedoksi), peili ajan tasalla, aloitusviestit olemassa, vanhoja
