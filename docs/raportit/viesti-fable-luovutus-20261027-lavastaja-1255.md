@@ -2338,3 +2338,5 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
   valopiste.py ja rakpiste.py; tee uudelleen tarvittaessa) → KYSYTTY VS:ltä GameObjectin ja meshin nimi. Kun vastaus tulee: leivo se pala uudella auringolla
   (koe06.zsh-malli) + polvi 0,6/0,3 → k06c → VS.
 - Ei ajoja käynnissä. Notre-Damen työkalut ja kuvat: _tyo/linnanrakentaja/nd-jono4/.
+- LISÄYS 170 (31.10. 20.3x, NS, ei kiire): kielletty-tausta-v81/kk-tausta-1-0-lod1.glb verkko rakennukset.018: primitiivi 545 kärkeä, 0 indeksiä
+  → koekohtauksen 06 Surface Cache GI kaatuu ("index buffer is null"). POISTA tyhjä primitiivi seuraavassa tausta-paketissa (tarkista samalla muut lod1/lod2-palat).
