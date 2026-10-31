@@ -42,3 +42,10 @@ wt/proto-pelikoodari-lod-216 (pelikoodari/tausta-lod-216).
 ## Huomiot
 - Linja 2 vapaa (`pgrep -fl esikatselu.sh`). c3-ajo kesti 1 294 s.
 - MK_JUURI testeille: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/leivonta-217/juuri-k3 (ei v87/v88-kansioita).
+
+## LISÄYS 20.4x (PT ja JU)
+- **PT:** c3-arkki ja video lähetetty KK:lle 20.46 kohtien 1 ja 3 osalta. **Kohta 2 on työn alla, ja PT ohjaa sen:** harmaa terassi menee LAV:lle tai VS:lle,
+  turkoosi taivaskaista VS:lle. Pelikoodari ei tee kohtaa 2, ellei PT anna erää.
+- **PT:** LOD-erä 06fed34e2 menee NS:lle junaan 216, kun mittausajo on ok (Kesken-kohta 3).
+- **JU 20.45:** valo-k1:n paketit ovat ämpärissä PT:n kuittauksella (osasarja-v6, rakennukset-v88, muurikate-v32, tausta-v86 ja tausta-v87; tarkistettu
+  SHA256SUMSia vasten). Tarkistettu klo 20.46, kaikki palauttavat 200. Valo-k1-216:n esikatselupari voidaan ajaa heti (Kesken-kohta 2).
