@@ -378,5 +378,1718 @@
     "kylläisyys": 2
    }
   }
+ },
+ "rooma": {
+  "Pietarinkirkko": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-pietarinkirkko.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-pietarinkirkko-kk.webp",
+   "sha": "0f12cd86e066d2bb",
+   "ennen": {
+    "musta": 0.373,
+    "valko": 0.935,
+    "keski": 0.628,
+    "kroma": 0.193
+   },
+   "jalkeen": {
+    "musta": 0.362,
+    "valko": 0.85,
+    "keski": 0.606,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.373,
+     0.935,
+     0.316,
+     0.85
+    ],
+    "gamma": 0.684,
+    "kylläisyys": 1.623
+   }
+  },
+  "Castel Sant’Angelo": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-castel-santangelo.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-castel-santangelo-kk.webp",
+   "sha": "a6c7768991028586",
+   "ennen": {
+    "musta": 0.395,
+    "valko": 0.866,
+    "keski": 0.65,
+    "kroma": 0.22
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.395,
+     0.866,
+     0.371,
+     0.851
+    ],
+    "gamma": 1.19,
+    "kylläisyys": 1.288
+   }
+  },
+  "Espanjalaiset portaat": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-espanjalaiset-portaat.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-espanjalaiset-portaat-kk.webp",
+   "sha": "deb93c03f060eb4f",
+   "ennen": {
+    "musta": 0.417,
+    "valko": 0.901,
+    "keski": 0.674,
+    "kroma": 0.183
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.417,
+     0.901,
+     0.368,
+     0.85
+    ],
+    "gamma": 1.153,
+    "kylläisyys": 1.71
+   }
+  },
+  "Trevin suihkulähde": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-trevin-suihkulahde.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-trevin-suihkulahde-kk.webp",
+   "sha": "0ac0caad2fbdbbfb",
+   "ennen": {
+    "musta": 0.329,
+    "valko": 0.915,
+    "keski": 0.661,
+    "kroma": 0.153
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.23
+   },
+   "kertoimet": {
+    "tasot": [
+     0.329,
+     0.915,
+     0.37,
+     0.851
+    ],
+    "gamma": 1.264,
+    "kylläisyys": 2
+   }
+  },
+  "Pantheon": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-pantheon.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-pantheon-kk.webp",
+   "sha": "6cc7a6e54caed6f3",
+   "ennen": {
+    "musta": 0.364,
+    "valko": 0.879,
+    "keski": 0.649,
+    "kroma": 0.17
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.364,
+     0.879,
+     0.374,
+     0.851
+    ],
+    "gamma": 1.237,
+    "kylläisyys": 1.933
+   }
+  },
+  "Forum Romanum": {
+   "lahde": "rooma-forum-romanum-vari2",
+   "kuva": "assets/kartat/miniatyyrit/rooma-forum-romanum-vari2-kk.webp",
+   "sha": "1e355ba817c62d47",
+   "ennen": {
+    "musta": 0.37,
+    "valko": 0.929,
+    "keski": 0.761,
+    "kroma": 0.167
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.613,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.37,
+     0.929,
+     0.398,
+     0.857
+    ],
+    "gamma": 2.971,
+    "kylläisyys": 1.92
+   }
+  },
+  "Colosseum": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-colosseum.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-colosseum-kk.webp",
+   "sha": "25a724f89266c219",
+   "ennen": {
+    "musta": 0.377,
+    "valko": 0.898,
+    "keski": 0.676,
+    "kroma": 0.211
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.377,
+     0.898,
+     0.381,
+     0.851
+    ],
+    "gamma": 1.471,
+    "kylläisyys": 1.39
+   }
+  },
+  "Torre Argentina": {
+   "lahde": "rooma-torre-argentina",
+   "kuva": "assets/kartat/miniatyyrit/rooma-torre-argentina-kk.webp",
+   "sha": "b52692fb1ab0b90d",
+   "ennen": {
+    "musta": 0.344,
+    "valko": 0.889,
+    "keski": 0.609,
+    "kroma": 0.234
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.609,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.344,
+     0.889,
+     0.351,
+     0.849
+    ],
+    "gamma": 0.889,
+    "kylläisyys": 1.094
+   }
+  },
+  "Vatikaanin palatsi": {
+   "lahde": "rooma-vatikaanin-palatsi",
+   "kuva": "assets/kartat/miniatyyrit/rooma-vatikaanin-palatsi-kk.webp",
+   "sha": "9e68dd851477eb69",
+   "ennen": {
+    "musta": 0.251,
+    "valko": 0.796,
+    "keski": 0.525,
+    "kroma": 0.21
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.251,
+     0.796,
+     0.361,
+     0.851
+    ],
+    "gamma": 0.974,
+    "kylläisyys": 1.418
+   }
+  },
+  "Norsu ja obeliski": {
+   "lahde": "assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp",
+   "kuva": "assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski-kk.webp",
+   "sha": "21b5db6ca706f96b",
+   "ennen": {
+    "musta": 0.377,
+    "valko": 0.894,
+    "keski": 0.72,
+    "kroma": 0.208
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.377,
+     0.894,
+     0.388,
+     0.856
+    ],
+    "gamma": 1.932,
+    "kylläisyys": 1.389
+   }
+  }
+ },
+ "lontoo": {
+  "Buckinghamin palatsi": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi-kk.webp",
+   "sha": "d104ef9abdb7fbb3",
+   "ennen": {
+    "musta": 0.425,
+    "valko": 0.863,
+    "keski": 0.654,
+    "kroma": 0.206
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.425,
+     0.863,
+     0.364,
+     0.851
+    ],
+    "gamma": 1.097,
+    "kylläisyys": 1.487
+   }
+  },
+  "Trafalgar Square": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-trafalgar-square.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-trafalgar-square-kk.webp",
+   "sha": "e42b3e65514e6314",
+   "ennen": {
+    "musta": 0.422,
+    "valko": 0.872,
+    "keski": 0.642,
+    "kroma": 0.244
+   },
+   "jalkeen": {
+    "musta": 0.364,
+    "valko": 0.85,
+    "keski": 0.606,
+    "kroma": 0.241
+   },
+   "kertoimet": {
+    "tasot": [
+     0.422,
+     0.872,
+     0.328,
+     0.848
+    ],
+    "gamma": 0.809,
+    "kylläisyys": 1.01
+   }
+  },
+  "Big Ben": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-big-ben.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-big-ben-kk.webp",
+   "sha": "230bba5a3c3fe3c1",
+   "ennen": {
+    "musta": 0.403,
+    "valko": 0.84,
+    "keski": 0.61,
+    "kroma": 0.189
+   },
+   "jalkeen": {
+    "musta": 0.364,
+    "valko": 0.851,
+    "keski": 0.606,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.403,
+     0.84,
+     0.319,
+     0.847
+    ],
+    "gamma": 0.742,
+    "kylläisyys": 1.701
+   }
+  },
+  "Lontoon silmä": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-lontoon-silma.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-lontoon-silma-kk.webp",
+   "sha": "730e6eae53194048",
+   "ennen": {
+    "musta": 0.472,
+    "valko": 0.922,
+    "keski": 0.795,
+    "kroma": 0.169
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.664,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.472,
+     0.922,
+     0.419,
+     0.858
+    ],
+    "gamma": 3,
+    "kylläisyys": 1.902
+   }
+  },
+  "Pyhän Paavalin katedraali": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali-kk.webp",
+   "sha": "02d1203db07d9f21",
+   "ennen": {
+    "musta": 0.398,
+    "valko": 0.924,
+    "keski": 0.669,
+    "kroma": 0.19
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.398,
+     0.924,
+     0.362,
+     0.851
+    ],
+    "gamma": 1.029,
+    "kylläisyys": 1.65
+   }
+  },
+  "Tower Bridge": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-tower-bridge.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-tower-bridge-kk.webp",
+   "sha": "8a01b2b5b92d64d7",
+   "ennen": {
+    "musta": 0.368,
+    "valko": 0.904,
+    "keski": 0.634,
+    "kroma": 0.247
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.848,
+    "keski": 0.609,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.368,
+     0.904,
+     0.348,
+     0.85
+    ],
+    "gamma": 0.904,
+    "kylläisyys": 0.972
+   }
+  },
+  "Thamesin vuorovesi": {
+   "lahde": "lontoo-thamesin-vuorovesi",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-thamesin-vuorovesi-kk.webp",
+   "sha": "a5aed4ad061890d4",
+   "ennen": {
+    "musta": 0.175,
+    "valko": 0.852,
+    "keski": 0.501,
+    "kroma": 0.156
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.226
+   },
+   "kertoimet": {
+    "tasot": [
+     0.175,
+     0.852,
+     0.352,
+     0.849
+    ],
+    "gamma": 0.891,
+    "kylläisyys": 2
+   }
+  },
+  "Vanha London Bridge": {
+   "lahde": "lontoo-vanha-london-bridge-vari2",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-vanha-london-bridge-vari2-kk.webp",
+   "sha": "e9764af05a8a2746",
+   "ennen": {
+    "musta": 0.341,
+    "valko": 0.947,
+    "keski": 0.687,
+    "kroma": 0.166
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.225
+   },
+   "kertoimet": {
+    "tasot": [
+     0.341,
+     0.947,
+     0.374,
+     0.852
+    ],
+    "gamma": 1.337,
+    "kylläisyys": 2
+   }
+  },
+  "Exchange Alley": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-exchange-alley.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-exchange-alley-kk.webp",
+   "sha": "28dcfb719b2b7e58",
+   "ennen": {
+    "musta": 0.113,
+    "valko": 0.924,
+    "keski": 0.606,
+    "kroma": 0.211
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.113,
+     0.924,
+     0.366,
+     0.852
+    ],
+    "gamma": 1.457,
+    "kylläisyys": 1.428
+   }
+  },
+  "Dickensin pubi": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-dickensin-pubi-kk.webp",
+   "sha": "f465d17d3741cfd4",
+   "ennen": {
+    "musta": 0.167,
+    "valko": 0.921,
+    "keski": 0.455,
+    "kroma": 0.211
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.85,
+    "keski": 0.609,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.167,
+     0.921,
+     0.328,
+     0.849
+    ],
+    "gamma": 0.584,
+    "kylläisyys": 1.503
+   }
+  },
+  "Abbey Roadin suojatie": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie-kk.webp",
+   "sha": "5af1950b62294b94",
+   "ennen": {
+    "musta": 0.169,
+    "valko": 0.925,
+    "keski": 0.562,
+    "kroma": 0.18
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.169,
+     0.925,
+     0.361,
+     0.851
+    ],
+    "gamma": 1.033,
+    "kylläisyys": 1.893
+   }
+  },
+  "Leake Streetin tunneli": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli-kk.webp",
+   "sha": "b8744e4bae8d4128",
+   "ennen": {
+    "musta": 0.22,
+    "valko": 0.853,
+    "keski": 0.565,
+    "kroma": 0.266
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.22,
+     0.853,
+     0.365,
+     0.852
+    ],
+    "gamma": 1.137,
+    "kylläisyys": 0.902
+   }
+  },
+  "Turbiinihalli": {
+   "lahde": "assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp",
+   "kuva": "assets/kartat/miniatyyrit/lontoo-turbiinihalli-kk.webp",
+   "sha": "3424d188f51e2645",
+   "ennen": {
+    "musta": 0.282,
+    "valko": 0.837,
+    "keski": 0.502,
+    "kroma": 0.243
+   },
+   "jalkeen": {
+    "musta": 0.364,
+    "valko": 0.852,
+    "keski": 0.604,
+    "kroma": 0.243
+   },
+   "kertoimet": {
+    "tasot": [
+     0.282,
+     0.837,
+     0.289,
+     0.845
+    ],
+    "gamma": 0.55,
+    "kylläisyys": 0.999
+   }
+  }
+ },
+ "ateena": {
+  "Antiikin agora": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-antiikin-agora.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-antiikin-agora-kk.webp",
+   "sha": "28642a0d22d8e9d3",
+   "ennen": {
+    "musta": 0.402,
+    "valko": 0.89,
+    "keski": 0.657,
+    "kroma": 0.166
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.237
+   },
+   "kertoimet": {
+    "tasot": [
+     0.402,
+     0.89,
+     0.364,
+     0.849
+    ],
+    "gamma": 1.081,
+    "kylläisyys": 2
+   }
+  },
+  "Akropolis": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-akropolis.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-akropolis-kk.webp",
+   "sha": "e5e6f795e2de1d66",
+   "ennen": {
+    "musta": 0.421,
+    "valko": 0.92,
+    "keski": 0.701,
+    "kroma": 0.196
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.851,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.421,
+     0.92,
+     0.378,
+     0.852
+    ],
+    "gamma": 1.284,
+    "kylläisyys": 1.594
+   }
+  },
+  "Akropolis-museo": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-akropolis-museo.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-akropolis-museo-kk.webp",
+   "sha": "2e2960f681d6af21",
+   "ennen": {
+    "musta": 0.399,
+    "valko": 0.906,
+    "keski": 0.725,
+    "kroma": 0.197
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.399,
+     0.906,
+     0.385,
+     0.856
+    ],
+    "gamma": 1.795,
+    "kylläisyys": 1.57
+   }
+  },
+  "Zeuksen temppeli": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-zeuksen-temppeli.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-zeuksen-temppeli-kk.webp",
+   "sha": "4567cb8fb54b5b4d",
+   "ennen": {
+    "musta": 0.457,
+    "valko": 0.901,
+    "keski": 0.708,
+    "kroma": 0.229
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.457,
+     0.901,
+     0.379,
+     0.852
+    ],
+    "gamma": 1.406,
+    "kylläisyys": 1.194
+   }
+  },
+  "Sýntagman aukio": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-syntagman-aukio.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-syntagman-aukio-kk.webp",
+   "sha": "008ea69ff15e4463",
+   "ennen": {
+    "musta": 0.413,
+    "valko": 0.881,
+    "keski": 0.686,
+    "kroma": 0.237
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.849,
+    "keski": 0.614,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.413,
+     0.881,
+     0.392,
+     0.855
+    ],
+    "gamma": 1.686,
+    "kylläisyys": 1.055
+   }
+  },
+  "Iliou Melathron": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-iliou-melathron.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-iliou-melathron-kk.webp",
+   "sha": "02609a4d1b350d80",
+   "ennen": {
+    "musta": 0.222,
+    "valko": 0.952,
+    "keski": 0.672,
+    "kroma": 0.239
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.852,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.222,
+     0.952,
+     0.374,
+     0.852
+    ],
+    "gamma": 1.549,
+    "kylläisyys": 1.004
+   }
+  },
+  "Lykavittós": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-lykavittos.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-lykavittos-kk.webp",
+   "sha": "0d63bd2891e13012",
+   "ennen": {
+    "musta": 0.231,
+    "valko": 0.903,
+    "keski": 0.731,
+    "kroma": 0.2
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.624,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.231,
+     0.903,
+     0.391,
+     0.856
+    ],
+    "gamma": 3,
+    "kylläisyys": 1.486
+   }
+  },
+  "Kallimarmaro": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-kallimarmaro.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-kallimarmaro-kk.webp",
+   "sha": "c47ed8009563b34a",
+   "ennen": {
+    "musta": 0.439,
+    "valko": 0.902,
+    "keski": 0.709,
+    "kroma": 0.202
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.851,
+    "keski": 0.614,
+    "kroma": 0.239
+   },
+   "kertoimet": {
+    "tasot": [
+     0.439,
+     0.902,
+     0.387,
+     0.85
+    ],
+    "gamma": 1.634,
+    "kylläisyys": 1.499
+   }
+  },
+  "Niken temppeli": {
+   "lahde": "assets/kartat/miniatyyrit/ateena-niken-temppeli.webp",
+   "kuva": "assets/kartat/miniatyyrit/ateena-niken-temppeli-kk.webp",
+   "sha": "80357e23f7575392",
+   "ennen": {
+    "musta": 0.422,
+    "valko": 0.958,
+    "keski": 0.731,
+    "kroma": 0.208
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.422,
+     0.958,
+     0.377,
+     0.854
+    ],
+    "gamma": 1.354,
+    "kylläisyys": 1.423
+   }
+  }
+ },
+ "helsinki": {
+  "Temppeliaukion kirkko": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko-kk.webp",
+   "sha": "e1878b13ad9f0314",
+   "ennen": {
+    "musta": 0.258,
+    "valko": 0.811,
+    "keski": 0.555,
+    "kroma": 0.257
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.258,
+     0.811,
+     0.367,
+     0.852
+    ],
+    "gamma": 1.116,
+    "kylläisyys": 0.934
+   }
+  },
+  "Linnanmäki": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-linnanmaki.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-linnanmaki-kk.webp",
+   "sha": "ee0907682f6f8fab",
+   "ennen": {
+    "musta": 0.296,
+    "valko": 0.891,
+    "keski": 0.646,
+    "kroma": 0.254
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.296,
+     0.891,
+     0.375,
+     0.854
+    ],
+    "gamma": 1.432,
+    "kylläisyys": 0.945
+   }
+  },
+  "Päärautatieasema": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-paarautatieasema.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-paarautatieasema-kk.webp",
+   "sha": "374cf2ab4df0d213",
+   "ennen": {
+    "musta": 0.258,
+    "valko": 0.839,
+    "keski": 0.573,
+    "kroma": 0.257
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.258,
+     0.839,
+     0.367,
+     0.851
+    ],
+    "gamma": 1.144,
+    "kylläisyys": 0.934
+   }
+  },
+  "Kaisaniemen puisto": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-kaisaniemen-puisto.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-kaisaniemen-puisto-kk.webp",
+   "sha": "f8d7180f4c964ed0",
+   "ennen": {
+    "musta": 0.274,
+    "valko": 0.886,
+    "keski": 0.609,
+    "kroma": 0.238
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.274,
+     0.886,
+     0.366,
+     0.851
+    ],
+    "gamma": 1.17,
+    "kylläisyys": 1.026
+   }
+  },
+  "Kallion kirkko": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-kallion-kirkko.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-kallion-kirkko-kk.webp",
+   "sha": "9cdb6e9c29773abb",
+   "ennen": {
+    "musta": 0.323,
+    "valko": 0.815,
+    "keski": 0.615,
+    "kroma": 0.272
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.849,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.323,
+     0.815,
+     0.379,
+     0.854
+    ],
+    "gamma": 1.439,
+    "kylläisyys": 0.882
+   }
+  },
+  "Tuomiokirkko": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-tuomiokirkko.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-tuomiokirkko-kk.webp",
+   "sha": "df4296dbcb62440d",
+   "ennen": {
+    "musta": 0.329,
+    "valko": 0.933,
+    "keski": 0.681,
+    "kroma": 0.278
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.329,
+     0.933,
+     0.374,
+     0.851
+    ],
+    "gamma": 1.343,
+    "kylläisyys": 0.863
+   }
+  },
+  "Uspenskin katedraali": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-uspenskin-katedraali.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-uspenskin-katedraali-kk.webp",
+   "sha": "f5e79e733e7b0090",
+   "ennen": {
+    "musta": 0.304,
+    "valko": 0.846,
+    "keski": 0.582,
+    "kroma": 0.243
+   },
+   "jalkeen": {
+    "musta": 0.362,
+    "valko": 0.851,
+    "keski": 0.611,
+    "kroma": 0.243
+   },
+   "kertoimet": {
+    "tasot": [
+     0.304,
+     0.846,
+     0.362,
+     0.851
+    ],
+    "gamma": 1.006,
+    "kylläisyys": 0.999
+   }
+  },
+  "Johanneksenkirkko": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-johanneksenkirkko.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-johanneksenkirkko-kk.webp",
+   "sha": "4134ed190066fd7e",
+   "ennen": {
+    "musta": 0.288,
+    "valko": 0.843,
+    "keski": 0.571,
+    "kroma": 0.244
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.288,
+     0.843,
+     0.361,
+     0.851
+    ],
+    "gamma": 0.997,
+    "kylläisyys": 0.984
+   }
+  },
+  "Suomenlinna": {
+   "lahde": "assets/kartat/miniatyyrit/helsinki-suomenlinna.webp",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-suomenlinna-kk.webp",
+   "sha": "3aa6eed8f07e1154",
+   "ennen": {
+    "musta": 0.282,
+    "valko": 0.84,
+    "keski": 0.589,
+    "kroma": 0.237
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.282,
+     0.84,
+     0.369,
+     0.851
+    ],
+    "gamma": 1.191,
+    "kylläisyys": 1.034
+   }
+  },
+  "Finlandia": {
+   "lahde": "helsinki-finlandia-vari2",
+   "kuva": "assets/kartat/miniatyyrit/helsinki-finlandia-vari2-kk.webp",
+   "sha": "3f57d35034887d3e",
+   "ennen": {
+    "musta": 0.314,
+    "valko": 0.935,
+    "keski": 0.688,
+    "kroma": 0.297
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.849,
+    "keski": 0.613,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.314,
+     0.935,
+     0.386,
+     0.851
+    ],
+    "gamma": 1.754,
+    "kylläisyys": 0.808
+   }
+  }
+ },
+ "istanbul": {
+  "Suuri basaari": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-suuri-basaari.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-suuri-basaari-kk.webp",
+   "sha": "184016ebeb9225c5",
+   "ennen": {
+    "musta": 0.459,
+    "valko": 0.923,
+    "keski": 0.776,
+    "kroma": 0.187
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.613,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.459,
+     0.923,
+     0.406,
+     0.853
+    ],
+    "gamma": 2.709,
+    "kylläisyys": 1.669
+   }
+  },
+  "Sininen moskeija": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-sininen-moskeija.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-sininen-moskeija-kk.webp",
+   "sha": "1382a76843aa0e68",
+   "ennen": {
+    "musta": 0.407,
+    "valko": 0.878,
+    "keski": 0.659,
+    "kroma": 0.199
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.407,
+     0.878,
+     0.369,
+     0.849
+    ],
+    "gamma": 1.148,
+    "kylläisyys": 1.546
+   }
+  },
+  "Hagia Sofia": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-hagia-sofia.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-hagia-sofia-kk.webp",
+   "sha": "265c0443b8918ff5",
+   "ennen": {
+    "musta": 0.356,
+    "valko": 0.868,
+    "keski": 0.625,
+    "kroma": 0.253
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.356,
+     0.868,
+     0.365,
+     0.851
+    ],
+    "gamma": 1.08,
+    "kylläisyys": 0.949
+   }
+  },
+  "Topkapın palatsi": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-topkapin-palatsi.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-topkapin-palatsi-kk.webp",
+   "sha": "9680d4f221213835",
+   "ennen": {
+    "musta": 0.363,
+    "valko": 0.916,
+    "keski": 0.665,
+    "kroma": 0.175
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.363,
+     0.916,
+     0.376,
+     0.851
+    ],
+    "gamma": 1.259,
+    "kylläisyys": 1.819
+   }
+  },
+  "Galatan torni": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-galatan-torni.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-galatan-torni-kk.webp",
+   "sha": "8637c031776a098a",
+   "ennen": {
+    "musta": 0.342,
+    "valko": 0.947,
+    "keski": 0.654,
+    "kroma": 0.168
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.239
+   },
+   "kertoimet": {
+    "tasot": [
+     0.342,
+     0.947,
+     0.361,
+     0.852
+    ],
+    "gamma": 1.014,
+    "kylläisyys": 1.993
+   }
+  },
+  "Üsküdar": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-uskudar.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-uskudar-kk.webp",
+   "sha": "5ae357c568468188",
+   "ennen": {
+    "musta": 0.385,
+    "valko": 0.895,
+    "keski": 0.699,
+    "kroma": 0.213
+   },
+   "jalkeen": {
+    "musta": 0.358,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.385,
+     0.895,
+     0.392,
+     0.851
+    ],
+    "gamma": 1.791,
+    "kylläisyys": 1.389
+   }
+  },
+  "Süleymaniyen moskeija": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-suleymaniyen-moskeija.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-suleymaniyen-moskeija-kk.webp",
+   "sha": "af5f879c0e7ef08c",
+   "ennen": {
+    "musta": 0.416,
+    "valko": 0.892,
+    "keski": 0.686,
+    "kroma": 0.203
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.416,
+     0.892,
+     0.378,
+     0.851
+    ],
+    "gamma": 1.372,
+    "kylläisyys": 1.518
+   }
+  },
+  "Galatan silta": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-galatan-silta.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-galatan-silta-kk.webp",
+   "sha": "ff860073fb813268",
+   "ennen": {
+    "musta": 0.465,
+    "valko": 0.893,
+    "keski": 0.715,
+    "kroma": 0.227
+   },
+   "jalkeen": {
+    "musta": 0.358,
+    "valko": 0.85,
+    "keski": 0.615,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.465,
+     0.893,
+     0.39,
+     0.852
+    ],
+    "gamma": 1.722,
+    "kylläisyys": 1.227
+   }
+  },
+  "Sirkecin asema": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-sirkecin-asema.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-sirkecin-asema-kk.webp",
+   "sha": "638117070f03b756",
+   "ennen": {
+    "musta": 0.385,
+    "valko": 0.833,
+    "keski": 0.623,
+    "kroma": 0.224
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.385,
+     0.833,
+     0.37,
+     0.851
+    ],
+    "gamma": 1.138,
+    "kylläisyys": 1.217
+   }
+  },
+  "Neitsyttorni": {
+   "lahde": "assets/kartat/miniatyyrit/istanbul-neitsyttorni.webp",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-neitsyttorni-kk.webp",
+   "sha": "f01b5b30e7afae51",
+   "ennen": {
+    "musta": 0.334,
+    "valko": 0.898,
+    "keski": 0.652,
+    "kroma": 0.202
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.239
+   },
+   "kertoimet": {
+    "tasot": [
+     0.334,
+     0.898,
+     0.378,
+     0.85
+    ],
+    "gamma": 1.338,
+    "kylläisyys": 1.507
+   }
+  },
+  "Camondon portaat": {
+   "lahde": "istanbul-camondon-portaat",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-camondon-portaat-kk.webp",
+   "sha": "8679843b5bd78159",
+   "ennen": {
+    "musta": 0.282,
+    "valko": 0.92,
+    "keski": 0.624,
+    "kroma": 0.21
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.282,
+     0.92,
+     0.366,
+     0.851
+    ],
+    "gamma": 1.11,
+    "kylläisyys": 1.409
+   }
+  },
+  "Käärmepylväs": {
+   "lahde": "istanbul-kaarmepylvas",
+   "kuva": "assets/kartat/miniatyyrit/istanbul-kaarmepylvas-kk.webp",
+   "sha": "9b83b015945c0b6d",
+   "ennen": {
+    "musta": 0.21,
+    "valko": 0.881,
+    "keski": 0.594,
+    "kroma": 0.206
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.21,
+     0.881,
+     0.369,
+     0.852
+    ],
+    "gamma": 1.302,
+    "kylläisyys": 1.477
+   }
+  }
+ },
+ "berliini": {
+  "Valtiopäivätalo": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-valtiopaivatalo.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-valtiopaivatalo-kk.webp",
+   "sha": "d7ff4048f05d1869",
+   "ennen": {
+    "musta": 0.297,
+    "valko": 0.881,
+    "keski": 0.601,
+    "kroma": 0.145
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.216
+   },
+   "kertoimet": {
+    "tasot": [
+     0.297,
+     0.881,
+     0.362,
+     0.851
+    ],
+    "gamma": 1.048,
+    "kylläisyys": 2
+   }
+  },
+  "Brandenburgin portti": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-brandenburgin-portti.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-brandenburgin-portti-kk.webp",
+   "sha": "444e081813d0050c",
+   "ennen": {
+    "musta": 0.306,
+    "valko": 0.856,
+    "keski": 0.646,
+    "kroma": 0.215
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.306,
+     0.856,
+     0.38,
+     0.855
+    ],
+    "gamma": 1.591,
+    "kylläisyys": 1.347
+   }
+  },
+  "Checkpoint Charlie": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-checkpoint-charlie.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-checkpoint-charlie-kk.webp",
+   "sha": "8369a2924d94307a",
+   "ennen": {
+    "musta": 0.24,
+    "valko": 0.904,
+    "keski": 0.606,
+    "kroma": 0.169
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.24,
+     0.904,
+     0.369,
+     0.852
+    ],
+    "gamma": 1.175,
+    "kylläisyys": 1.872
+   }
+  },
+  "Museosaari": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-museosaari.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-museosaari-kk.webp",
+   "sha": "76ed38076a490c63",
+   "ennen": {
+    "musta": 0.185,
+    "valko": 0.794,
+    "keski": 0.492,
+    "kroma": 0.187
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.185,
+     0.794,
+     0.363,
+     0.853
+    ],
+    "gamma": 0.999,
+    "kylläisyys": 1.73
+   }
+  },
+  "Tv-torni": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-tv-torni.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-tv-torni-kk.webp",
+   "sha": "425e51601950a474",
+   "ennen": {
+    "musta": 0.245,
+    "valko": 0.909,
+    "keski": 0.581,
+    "kroma": 0.121
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.191
+   },
+   "kertoimet": {
+    "tasot": [
+     0.245,
+     0.909,
+     0.36,
+     0.851
+    ],
+    "gamma": 0.988,
+    "kylläisyys": 2
+   }
+  },
+  "East Side Gallery": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-east-side-gallery.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-east-side-gallery-kk.webp",
+   "sha": "f91af60ffc69c1d7",
+   "ennen": {
+    "musta": 0.312,
+    "valko": 0.828,
+    "keski": 0.551,
+    "kroma": 0.168
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.85,
+    "keski": 0.609,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.312,
+     0.828,
+     0.339,
+     0.85
+    ],
+    "gamma": 0.806,
+    "kylläisyys": 1.976
+   }
+  },
+  "Kulta-Liisa": {
+   "lahde": "berliini-kulta-liisa-vari2",
+   "kuva": "assets/kartat/miniatyyrit/berliini-kulta-liisa-vari2-kk.webp",
+   "sha": "a8bdafd5e3a00b98",
+   "ennen": {
+    "musta": 0.448,
+    "valko": 0.928,
+    "keski": 0.75,
+    "kroma": 0.18
+   },
+   "jalkeen": {
+    "musta": 0.358,
+    "valko": 0.849,
+    "keski": 0.617,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.448,
+     0.928,
+     0.398,
+     0.862
+    ],
+    "gamma": 2.209,
+    "kylläisyys": 1.836
+   }
+  },
+  "Hobrechtin putket": {
+   "lahde": "berliini-hobrechtin-putket-vari2",
+   "kuva": "assets/kartat/miniatyyrit/berliini-hobrechtin-putket-vari2-kk.webp",
+   "sha": "4c913112cd1a3363",
+   "ennen": {
+    "musta": 0.288,
+    "valko": 0.913,
+    "keski": 0.694,
+    "kroma": 0.255
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.851,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.288,
+     0.913,
+     0.378,
+     0.856
+    ],
+    "gamma": 1.963,
+    "kylläisyys": 0.941
+   }
+  },
+  "Maailmankello": {
+   "lahde": "assets/kartat/miniatyyrit/berliini-maailmankello.webp",
+   "kuva": "assets/kartat/miniatyyrit/berliini-maailmankello-kk.webp",
+   "sha": "24089d6e6db93de8",
+   "ennen": {
+    "musta": 0.325,
+    "valko": 0.859,
+    "keski": 0.64,
+    "kroma": 0.123
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.849,
+    "keski": 0.611,
+    "kroma": 0.19
+   },
+   "kertoimet": {
+    "tasot": [
+     0.325,
+     0.859,
+     0.376,
+     0.852
+    ],
+    "gamma": 1.39,
+    "kylläisyys": 2
+   }
+  }
  }
 }
