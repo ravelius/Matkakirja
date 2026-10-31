@@ -2313,3 +2313,6 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
   > 215 kuin 9 kolmiota, rajat x −10…18 z −37…7) → selvitä renderöimällä (Blender, lod0 ylhäältä kaakosta) tai NUI:n simukuvasta: voi olla
   UV-saari atlaksen täyttämättömällä alueella (näytä keskipisteen sijaan koko kolmion alue) tai maa-meshin kalkkikivi.
 - Notre-dame-v1 (lähteet): lahde/maa.py (IGN-orto 2018 retusoitu), parvis_v9.py (omistaja 10.10.: vähemmän keinotekoinen), maa.json rajat, UV = rajat.
+- PT:N VASTAUS (31.10. 19.5x, KÄSITELTY TÄSSÄ): Pariisista ei ole havainnekuvaa; "havainnetyyli" oli löysä ilmaus. Pohjaksi v6k26:n maa (hyväksytty).
+  Omistajan 10.10. linja sitoo: ortokuvan oma kivetys, EI ruudukkoa eikä uusia keinotekoisia laattavyöhykkeitä. Vaalea laikku tummennetaan Googlen
+  jalkakäytävien sävyyn, nurmen polut säilyvät; Pekingin havainne vain sävyviitteenä. Kuvapari ennen/jälkeen PT:lle.
