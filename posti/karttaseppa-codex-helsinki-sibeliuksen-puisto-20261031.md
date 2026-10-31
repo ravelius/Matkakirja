@@ -11,7 +11,7 @@ veistosta, ei sen muotoa muistuttavia putkia, ei Sibeliuksen kasvoreliefiä). Mo
   merenlahtea (Seurasaarenselkä) yhdellä reunalla. Halutessa puistonpenkki tai matala kivimuuri. Ei ihmisiä.
 - Tyyli (sitova): sama käsin piirretty, värillinen ja varjostettu karttanähtävyystyyli kuin Helsingin muut miniatyyrit,
   mallit `helsinki-kaisaniemen-puisto` (puistoaihe), `helsinki-tuomiokirkko` ja `helsinki-uspenskin-katedraali`
-  (ämpäri `kohtaamiset/miniatyyrit/`, .png). Kuvakulma ja valon suunta kuten malleissa.
+  (repossa `assets/kartat/miniatyyrit/<nimi>.webp`). Kuvakulma ja valon suunta kuten malleissa.
 - Läpinäkyvä alfa, 1024 × 1024 webp, aihe keskellä, ei kehystä, ei taustaa, ei taivasta.
 - Tasaus tehdään meillä työkalulla (tools/piirrostasaus.json: musta 0,36 / valko 0,85 / keski 0,61): älä yritä itse
   "kirkastaa" tai kontrastoida; pidä akvarellin normaali sävyala.
