@@ -28,6 +28,8 @@ Edellinen: viesti-valoseppa-luovutus-20261031-2210.md (työtavat voimassa). Prot
 2. **Pilvet terävämmiksi** (vasen ylä sumeita): STP `valo terava 0/0.6/1` ei vaikuta (reunaterävyys 760 vs havainne 1509) →
    panoraama itse pehmeä. Seuraavaksi `ui juoksupeli valo paivataivas 0` (proseduraalinen; vaikuttaa vasta seuraavasta juoksusta →
    asetuslohkoon ennen `oleta 240 palatsi`), tai Codexilta terävämpi panoraama (7.15).
+   **PT 23.5x:** `paivataivas 0` VAIN kokeena: Codexin taivas-v3 on valittu → jos proseduraalinen muuttaa ilmettä, ratkaisu on
+   terävämpi panoraama Codexilta (PT tilaa), ei vaihto. Muurin lähteen selvityksen (`a-meridiaaniportti lod0 runko+palkit`) PT lähettää LAV:lle.
 3. **Taivaan sininen** B 222 → 251: samaan erään taivasarvolla, jos p5 ja muuri eivät muutu; muuten kirjaus.
 → Uusi o3-pari (juuri-k06e tai uudempi) + värimittaus → PT → KK.
 
