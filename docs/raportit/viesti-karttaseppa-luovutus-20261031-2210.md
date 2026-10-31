@@ -37,12 +37,8 @@ Kaikki tiedostot ovat kansiossa `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/
    - Kokoaja: kokoa-g.py sijoittaa maamerkit ankkureihin (leveys × liioittelu, jalusta ankkurissa) → kokoelma/G/natiivi/
      <r>-<c>.jpg + -maski.jpg + natiivi.json ja web-5184.webp. Hahmojen sijoittelu puuttuu vielä: lisää renderoi-g.py:n
      maalausjonoon (ihmiset jalkakäytäville ja laitureille, autot kaduille suunnan mukaan, veneet Seinelle).
-3. **Koepala r3-c4** PT:lle: koepala/r3-c4-vs-G.png (v1, 2 m/px). **PT:n palaute** (21.4x): viivatyö, vaaleus, talot
-   pienoismalleina, Seine, puut, valo. **SEURAAVA ON UUSI KOEPALA** palautteen mukaan, 1 m/px ja mieluiten Codexin
-   Notre-Damen kanssa, ENNEN koko kaupungin uusintaa. Komento: `python3 -I renderoi-g.py tarkkuus 2 rajaus 9150 4500 10686 5524`
-   (Cité ja Saint-Louis). Vertailu G:hen: G-alkuperäinen on postissa 1d986baa7 (owner-style-G-confirmed.jpg).
-4. **Natiivikerros** (proto, paikallinen repo, ei pushia): haara `karttaseppa/piirros-pariisi-216`, kärki **c7700d99c**
-   (sisältää NUI:n Suorista-napin, merge natiivi-ui/suorista-216).
+3. **Koepala v1** (koepala/r3-c4-vs-G.png) hylätty; v2 ja v3 yllä. G-alkuperäinen: posti 1d986baa7 (owner-style-G-confirmed.jpg).
+4. **Natiivikerros** (proto, paikallinen repo, ei pushia): haara `karttaseppa/piirros-pariisi-216`, kärki **c7700d99c** (sisältää NUI:n Suorista-napin, merge natiivi-ui/suorista-216).
    - Kartta/PiirrosKerros.cs + Resources/PiirrosKerros.shader: laatat maanpinnalle (h 80 m ellipsoidista), ZTest Always.
      Häivytys kulman (±3–12°) ja korkeuden (25–60 km) mukaan, kamera kääntyy saapuessa piirroskulmaan, Suorista,
      pehmeä reuna maskista. Laatat ladataan kameran läheltä GPU-pakattuina ja kaukaiset vapautetaan.
@@ -58,7 +54,6 @@ Kaikki tiedostot ovat kansiossa `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/
    ja vie-assetit-vaihtoehto, mutta pidä webkuva kansion ulkopuolella (esim. assets/kartat/pariisi-piirroskartta.webp),
    jotta mediaskeema ei vaadi asset-piirroskartta-lajia. Poista nykyiset koelaatat assets/kartat/piirroskartta/pariisi/.
 6. **Valmis-ehto** (PT): webin ja natiivin PR:t, NS yhdistää junaan, ja KK:lle kuvapari pelistä G-kuvan rinnalla samasta kulmasta.
-
 ## Muut avoimet
 - NS:n muistimittaus juoksupelin haarasta 9287cb95e. Koe D iPadilla, kun LT ilmoittaa iPadin vapaaksi.
 - Worktreet: wt/proto-karttaseppa-piirros-pariisi (natiivi) ja wt/karttaseppa-pariisi-piirros (web). Muut ihme-worktreet on poistettu.
