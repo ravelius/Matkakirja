@@ -18610,13 +18610,21 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  */
 .kohde-ihmetahti {
   position: absolute;
-  top: -6px;
-  right: -3px;
-  width: 15px;
-  height: 15px;
+  top: -5px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
   overflow: visible;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0.5px 0.5px rgba(0, 0, 0, 0.2));
   pointer-events: none;
+}
+
+/* KEVYEMPI JA PIENEMPI IHMEEN MERKKI (omistaja 31.10.2026 klo 09.08 "Tee hieman kevyempi ja pienempi ihmeen
+ * merkki", PT): 15 → 12 px, ohuempi musteääriviiva ja himmeämpi varjo, kulta hieman läpikuultava — erottuu
+ * yhä ihmeeksi, mutta ei hallitse piirrosta. Pääkartan tähtisymboli (.nostosym-tahti) ennallaan. */
+.kohde-ihmetahti .nostosym-tahti {
+  stroke-width: 0.9;
+  fill-opacity: 0.88;
 }
 
 /* Piirroksella tähti istuu musteen näkyvän yläreunan keskellä (KK 31.10.2026:
@@ -18625,18 +18633,18 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * piirroksenPaikat); mittaamattomana laatikon yläreunan keskellä. Tähden
  * alaosa (noin kolmannes) menee piirroksen päälle, jotta pari on yksi merkki. */
 .maakartta-piste.kohde-piirros > .kohde-ihmetahti {
-  top: calc(var(--tahti-top, 0%) - 10px);
-  left: calc(var(--tahti-left, 50%) - 7.5px);
+  top: calc(var(--tahti-top, 0%) - 8px);
+  left: calc(var(--tahti-left, 50%) - 6px);
   right: auto;
 }
 
 /* Täplämerkki on 13 px eli tähteä pienempi: tähti nousee sen päälle
  * hieman tiukemmin, jotta pari pysyy yhtenä merkkinä. */
 .maakartta-piste.kohde-numero:not(.kohde-piirros) > .kohde-ihmetahti {
-  top: -8px;
-  right: -7px;
-  width: 13px;
-  height: 13px;
+  top: -7px;
+  right: -6px;
+  width: 11px;
+  height: 11px;
 }
 
 /* Suurennettuna piirros vuotaa laatikkonsa yli ja saa nimikyltin;
