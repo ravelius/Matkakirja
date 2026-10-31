@@ -1,0 +1,550 @@
+{
+ "pariisi": {
+  "Eiffel-torni": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-eiffel-torni.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-eiffel-torni-kk.webp",
+   "sha": "46e4c7f2fd0140d1",
+   "ennen": {
+    "musta": 0.403,
+    "valko": 0.87,
+    "keski": 0.638,
+    "kroma": 0.203
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.85,
+    "keski": 0.609,
+    "kroma": 0.241
+   },
+   "kertoimet": {
+    "tasot": [
+     0.403,
+     0.87,
+     0.352,
+     0.851
+    ],
+    "gamma": 0.946,
+    "kylläisyys": 1.504
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c5a3f061f34e292a"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c5a3f061f34e292a"
+    }
+   }
+  },
+  "Riemukaari": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-riemukaari.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-riemukaari-kk.webp",
+   "sha": "eec27c3f2a7742b1",
+   "ennen": {
+    "musta": 0.361,
+    "valko": 0.919,
+    "keski": 0.659,
+    "kroma": 0.166
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.361,
+     0.919,
+     0.369,
+     0.851
+    ],
+    "gamma": 1.148,
+    "kylläisyys": 1.92
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "a94a8a1d6af74045"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "a94a8a1d6af74045"
+    }
+   }
+  },
+  "Concorden aukio": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-concorden-aukio-kk.webp",
+   "sha": "42441abdb0e53091",
+   "ennen": {
+    "musta": 0.351,
+    "valko": 0.857,
+    "keski": 0.637,
+    "kroma": 0.216
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.351,
+     0.857,
+     0.379,
+     0.852
+    ],
+    "gamma": 1.383,
+    "kylläisyys": 1.336
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "36fa0ffc565bf492"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "36fa0ffc565bf492"
+    }
+   }
+  },
+  "Louvre": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-louvre.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-louvre-kk.webp",
+   "sha": "9b90caa581b0af16",
+   "ennen": {
+    "musta": 0.405,
+    "valko": 0.822,
+    "keski": 0.586,
+    "kroma": 0.232
+   },
+   "jalkeen": {
+    "musta": 0.364,
+    "valko": 0.85,
+    "keski": 0.587,
+    "kroma": 0.237
+   },
+   "kertoimet": {
+    "tasot": [
+     0.405,
+     0.822,
+     0.262,
+     0.841
+    ],
+    "gamma": 0.55,
+    "kylläisyys": 1.206
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "2e250604d8e60823"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "2e250604d8e60823"
+    }
+   }
+  },
+  "Luxembourgin puisto": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto-kk.webp",
+   "sha": "932cfe1737a7d1b6",
+   "ennen": {
+    "musta": 0.466,
+    "valko": 0.867,
+    "keski": 0.667,
+    "kroma": 0.197
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.85,
+    "keski": 0.609,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.466,
+     0.867,
+     0.347,
+     0.849
+    ],
+    "gamma": 0.924,
+    "kylläisyys": 1.626
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d8a18ff8e24035d8"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d8a18ff8e24035d8"
+    }
+   }
+  },
+  "Sacré-Cœur": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-sacre-coeur.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-sacre-coeur-kk.webp",
+   "sha": "ff40a8010471c29a",
+   "ennen": {
+    "musta": 0.486,
+    "valko": 0.977,
+    "keski": 0.73,
+    "kroma": 0.188
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.847,
+    "keski": 0.609,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.486,
+     0.977,
+     0.348,
+     0.85
+    ],
+    "gamma": 0.917,
+    "kylläisyys": 1.71
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b476933499a0f2b8"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b476933499a0f2b8"
+    }
+   }
+  },
+  "Panthéon": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-pantheon.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-pantheon-kk.webp",
+   "sha": "447ba39521c1fdc7",
+   "ennen": {
+    "musta": 0.397,
+    "valko": 0.883,
+    "keski": 0.686,
+    "kroma": 0.192
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.397,
+     0.883,
+     0.386,
+     0.852
+    ],
+    "gamma": 1.617,
+    "kylläisyys": 1.602
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "1da0ca8a12d7c42f"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "1da0ca8a12d7c42f"
+    }
+   }
+  },
+  "Notre-Dame": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-notre-dame-kk.webp",
+   "sha": "38883fa0ccf5e5d4",
+   "ennen": {
+    "musta": 0.309,
+    "valko": 0.834,
+    "keski": 0.558,
+    "kroma": 0.205
+   },
+   "jalkeen": {
+    "musta": 0.363,
+    "valko": 0.85,
+    "keski": 0.606,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.309,
+     0.834,
+     0.328,
+     0.848
+    ],
+    "gamma": 0.757,
+    "kylläisyys": 1.453
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "94d147b545551206"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "94d147b545551206"
+    }
+   }
+  },
+  "Orsayn taidemuseo": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo-kk.webp",
+   "sha": "31064978d1f36f52",
+   "ennen": {
+    "musta": 0.515,
+    "valko": 0.893,
+    "keski": 0.722,
+    "kroma": 0.185
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.85,
+    "keski": 0.612,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.515,
+     0.893,
+     0.363,
+     0.851
+    ],
+    "gamma": 1.227,
+    "kylläisyys": 1.774
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d2b00033456f395c"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d2b00033456f395c"
+    }
+   }
+  },
+  "Palais Garnier": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-palais-garnier.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-palais-garnier-kk.webp",
+   "sha": "a404284f2123dfb1",
+   "ennen": {
+    "musta": 0.457,
+    "valko": 0.889,
+    "keski": 0.663,
+    "kroma": 0.194
+   },
+   "jalkeen": {
+    "musta": 0.365,
+    "valko": 0.85,
+    "keski": 0.605,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.457,
+     0.889,
+     0.313,
+     0.848
+    ],
+    "gamma": 0.735,
+    "kylläisyys": 1.656
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "29e0315be32c932d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "29e0315be32c932d"
+    }
+   }
+  },
+  "Place des Vosges": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-place-des-vosges-kk.webp",
+   "sha": "1ecf3e716b8021f6",
+   "ennen": {
+    "musta": 0.451,
+    "valko": 0.889,
+    "keski": 0.629,
+    "kroma": 0.204
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.85,
+    "keski": 0.588,
+    "kroma": 0.239
+   },
+   "kertoimet": {
+    "tasot": [
+     0.451,
+     0.889,
+     0.266,
+     0.846
+    ],
+    "gamma": 0.55,
+    "kylläisyys": 1.624
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "4feed7b1d3b86904"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "4feed7b1d3b86904"
+    }
+   }
+  },
+  "Tuileries'n palatsi": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-tuileries-kk.webp",
+   "sha": "fc0792830ecf6187",
+   "ennen": {
+    "musta": 0.369,
+    "valko": 0.795,
+    "keski": 0.597,
+    "kroma": 0.184
+   },
+   "jalkeen": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.611,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.369,
+     0.795,
+     0.368,
+     0.857
+    ],
+    "gamma": 1.168,
+    "kylläisyys": 1.874
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "962713f5f46c342e"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "962713f5f46c342e"
+    }
+   }
+  },
+  "Bastilji": {
+   "lahde": "pariisi-bastilji-vari2",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-bastilji-vari2-kk.webp",
+   "sha": "e742a62a0ec49c78",
+   "ennen": {
+    "musta": 0.365,
+    "valko": 0.938,
+    "keski": 0.744,
+    "kroma": 0.177
+   },
+   "jalkeen": {
+    "musta": 0.359,
+    "valko": 0.849,
+    "keski": 0.615,
+    "kroma": 0.24
+   },
+   "kertoimet": {
+    "tasot": [
+     0.365,
+     0.938,
+     0.407,
+     0.862
+    ],
+    "gamma": 2.556,
+    "kylläisyys": 1.878
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "63301895b8a191eb"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "63301895b8a191eb"
+    }
+   }
+  },
+  "Metron sisäänkäynti": {
+   "lahde": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp",
+   "kuva": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2-kk.webp",
+   "sha": "f3622b5847ae1889",
+   "ennen": {
+    "musta": 0.242,
+    "valko": 0.933,
+    "keski": 0.535,
+    "kroma": 0.129
+   },
+   "jalkeen": {
+    "musta": 0.361,
+    "valko": 0.85,
+    "keski": 0.608,
+    "kroma": 0.193
+   },
+   "kertoimet": {
+    "tasot": [
+     0.242,
+     0.933,
+     0.323,
+     0.849
+    ],
+    "gamma": 0.643,
+    "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b53c19306feec197"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b53c19306feec197"
+    }
+   }
+  }
+ }
+}

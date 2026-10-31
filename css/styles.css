@@ -18879,14 +18879,10 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
- * KEVYT MERKKI (löydös 178, omistaja 26.9.2026): aukio ja luonto jäävät
- * nähtävyyskartalle, mutta rakennusta keveämpinä — piirros pienempi ja
- * haaleampi, jotta rakennukset kantavat kartan.
+ * KEVYT MERKKI POISTETTU KOHDEKARTALTA (omistaja 31.10.2026 klo 09.31 "Kaikki pitää olla samalla kontrastilla",
+ * PT: kevyt aukiomerkki kumottu tällä kartalla). Löydöksen 178 (26.9.2026) pienennys 0,72 ja peitto 0,78 pois;
+ * luokka .kohde-kevyt jää tunnisteeksi.
  */
-.maakartta-piste.kohde-kevyt .kohde-piirros-kuva {
-  transform: scale(0.72);
-  opacity: 0.78;
-}
 
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
@@ -19235,16 +19231,17 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kuva suoraan kartan päällä — ei ympyrää, taustaa, reunaa eikä
  * numerobadgea. Laatikko on ympyrää suurempi, koska leikatun kuvan
  * reunoilla on läpinäkyvää tyhjää; drop-shadow seuraa piirroksen
- * ääriviivaa, ei laatikkoa. Näkyvä koko 40 px (omistajan palautteet
- * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40).
+ * ääriviivaa, ei laatikkoa. Näkyvä koko 36 px (omistajan palautteet
+ * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40; 31.10.2026
+ * klo 09.27 "tee kuvat hieman pienemmiksi" → 36).
  *
  * Pienenä koko piirros on klikattavissa (omistajan tarkennus
  * 15.8.2026: osuma-alueen puolitus koskee vain SUURENNETTUA tilaa —
  * "siis silloin kun nähtävyys on isona kartalla, ei silloin kun se
  * on pienenä"). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: none;
   border: none;
   border-radius: 0;
@@ -19345,7 +19342,12 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+  /* Kontrasti ja kylläisyys tulevat kuvasta: kohdekartan piirrokset tasataan kuvakohtaisesti samaan musta- ja
+   * valkopisteeseen (js/packs/kohdekartan-piirrokset.js, omistaja 31.10.2026 klo 09.31–09.34).
+   * KOVA PIENI VARJO (omistaja 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo
+   * monistaa"): siluetti 1 px oikealle alas musteen sävyssä ilman sumennusta – yksi arvo kaikille kaupungeille,
+   * natiivissa sama (siluetin kopio siirrettynä, NUI). Ennen pehmeä 0 2px 3px rgba(0,0,0,0.35). */
+  filter: drop-shadow(1px 1px 0 rgba(44, 35, 24, 0.45));
   /* Klikki kuuluu napille, ei kuvalle — suurennettuna kuva vuotaa
    * laatikon yli, eikä ylivuoto saa napata napautuksia. */
   pointer-events: none;
@@ -19380,8 +19382,12 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * näkyvä koko on sama joka zoomiasennossa.
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  transition: width 160ms ease, height 160ms ease,
-    left 160ms ease, top 160ms ease;
+  /* Suurennus animoituna ease-in-out (omistaja 31.10.2026 klo 09.29 "Suurennus pitää tulla animoidusti easy in out"):
+   * tyylikirjan suurennusliike (sama natiivissa, Tyylikirja.Liike). */
+  transition: width var(--tk-liike-suurennus-kesto) var(--tk-liike-suurennus-kayra),
+    height var(--tk-liike-suurennus-kesto) var(--tk-liike-suurennus-kayra),
+    left var(--tk-liike-suurennus-kesto) var(--tk-liike-suurennus-kayra),
+    top var(--tk-liike-suurennus-kesto) var(--tk-liike-suurennus-kayra);
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {

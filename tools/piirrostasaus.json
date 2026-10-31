@@ -1,0 +1,29 @@
+{
+  "kuvaus": "Kohdekartan piirrosten yhteinen tavoite (tools/piirrostasaus.py). Omistaja 31.10.2026: 09.27 kontrasti puoliväliin, 09.31 kaikki samalla kontrastilla, 09.33 sama musta- ja valkopiste, keskikontrasti yhteneväksi, saturaatiota alas tarvittaessa, 09.34 helppo monistaa kaikkiin kaupunkeihin. Arvot = Pariisin 14 kohdekartan piirroksen mediaani 09.27:n puolivälin näköisinä (kalibrointi Karttaseppä 31.10.). Musteen luminanssi 0–1: musta = 2. persentiili, valko = 98., keski = mediaani; kroma = keskimääräinen max−min. Kylläisyys: yli tavoitteen ei saa jäädä (alas aina); alle saa jäädä kroma_ali verran, kun nosto osuu kattoon (esim. Pariisin metro: musta ja vihreä muste, nosto ×2 jo katossa). Tallennus: 1024 px, webp-laatu 82 (PT 31.10.: repon koko; suurennuksessa ei näkyvää eroa). Varjo EI kuvassa (PT 31.10. omistajan 10.26 \"Varjo liian iso\" jälkeen: leivottu varjo skaalautui kuvan mukana): kohdekartan CSS-varjo 1 px #2c2318 45 % kuten hyväksytyssä c434ee879:ssä, natiivissa sama vakio (NUI).",
+  "tavoite": {
+    "musta": 0.36,
+    "valko": 0.85,
+    "keski": 0.61,
+    "kroma": 0.24,
+    "gamma_min": 0.55,
+    "gamma_max": 3.0,
+    "kylläisyys_katto": 2.0,
+    "paatepiste_liikkuma": 0.12
+  },
+  "toleranssi": {
+    "musta": 0.03,
+    "valko": 0.03,
+    "keski": 0.03,
+    "kroma_yli": 0.03,
+    "kroma_ali": 0.08
+  },
+  "hyväksytyt_poikkeamat": [
+    {
+      "kohde": "lontoo/Lontoon silmä",
+      "mitta": "keski",
+      "enintään": 0.07,
+      "syy": "Ohut valkoinen maailmanpyörä: musteen mediaani on lähes valkoinen rakenne; gamma 3 tummentaa jo pinnat (keski 0,664), enempi likaisi piirroksen. Karttasepän otos 31.10.2026, PT:lle kerrottu."
+    }
+  ],
+  "webp_laatu": 82
+}

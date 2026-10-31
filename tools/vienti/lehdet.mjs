@@ -507,6 +507,11 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   }
   kokoelmat.miniatyyrit.kuvaus += ' Skeema 1.18: kuva = { arvo, url, varat, leveys, korkeus } (piirroskuva kohteelle '
     + 'kaupunki + nimi).';
+  // Skeema 1.66 (Karttaseppä 31.10.2026): kohdekartan tasatut piirrokset samaan muotoon kuin miniatyyrit.
+  for (const a of kokoelmat.kohdekartanPiirrokset?.alkiot ?? []) {
+    const arvo = typeof a.data === 'string' ? a.data : a.data?.url ?? null;
+    a.kuva = arvo ? { arvo, ...(media(arvo, 'miniatyyri') ?? { url: assetOsoite('miniatyyrit', arvo), varat: [] }) } : null;
+  }
 
   // Skeema 1.19 (2.0-polku): kysymykset ja pulmat päätasolle
   // (natiivin Kysymysdata.cs ja Pulmat.cs lukevat niitä).

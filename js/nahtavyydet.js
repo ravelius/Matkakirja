@@ -26,6 +26,7 @@ import {
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { IHMETAHDET } from './packs/ihmetahdet.js';
+import { KOHDEKARTAN_PIIRROKSET } from './packs/kohdekartan-piirrokset.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -609,8 +610,14 @@ export function piirraKaupunkiKartta(ui, kohde, {
      * on ämpärissä JPG:nä — js/media.js assetOsoite tuntee molemmat, ja
      * tämä tiedosto ei tiedä kummasta on kyse.
      */
-    const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi]
-      ? assetOsoite('miniatyyrit', MINIATYYRIT[kaupunki][raaka.nimi])
+    /*
+     * KOHDEKARTAN TASATTU VERSIO (omistaja 31.10.2026 klo 09.31–09.34: kaikki samalla kontrastilla, sama musta- ja
+     * valkopiste): js/packs/kohdekartan-piirrokset.js (tools/tasaa-kohdekartan-piirrokset.mjs); puuttuvalle
+     * alkuperäinen. Striimikartta käyttää aina alkuperäistä (omistaja 09.17).
+     */
+    const miniatyyriArvo = MINIATYYRIT[kaupunki]?.[raaka.nimi];
+    const miniatyyri = miniatyyriArvo
+      ? assetOsoite('miniatyyrit', KOHDEKARTAN_PIIRROKSET[kaupunki]?.[raaka.nimi] ?? miniatyyriArvo)
       : null;
     /*
      * ══ KARTALLE JÄÄVÄT VAIN PIIRRETYT NÄHTÄVYYSRAKENNUKSET ════════
@@ -724,7 +731,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
       // Kyltin paikka mitataan piirroksesta (ks. asetaKylttiRaja):
       // kuva on jo kartalla eli selaimen välimuistissa, joten mittaus
       // ei aiheuta uutta latausta.
-      asetaKylttiRaja(piste, miniatyyri, IHMETAHDET[MINIATYYRIT[kaupunki]?.[raaka.nimi]] ?? null);
+      asetaKylttiRaja(piste, miniatyyri, IHMETAHDET[miniatyyriArvo] ?? null);   // tasaus ei muuta alfaa → sama paikka
       piirrosPisteet.push({ piste, x: p.x, y: p.y });
     }
     /*
@@ -1997,11 +2004,11 @@ export function vaistaNumeroympyrat(kotelo, ympyrat) {
  */
 export function hajautaPiirrospisteet(kotelo, pisteet, ydin) {
   if (pisteet.length < 2) return;
-  // 46 px ≈ 40 px:n laatikko + ilmarako (koko on elänyt omistajan
-  // palautteiden mukana: 64 → 48 → 40 px; väli vastaavasti
-  // 72 → 54 → 46). Pieni väli tarkoittaa pieniä siirtymiä, mikä
+  // 42 px ≈ 36 px:n laatikko + ilmarako (koko on elänyt omistajan
+  // palautteiden mukana: 64 → 48 → 40 → 36 px 31.10.2026; väli vastaavasti
+  // 72 → 54 → 46 → 42). Pieni väli tarkoittaa pieniä siirtymiä, mikä
   // sopii nuolettomaan karttaan.
-  const MIN = 46;
+  const MIN = 42;
   // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
   const M = 24;
   const asettele = () => {

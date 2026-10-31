@@ -5357,7 +5357,9 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Tuileries\'n palatsi', lat: 48.8622, lon: 2.3325,
-        nosto: ['syvennys-pariisi-tuileriat', 'tuileries'], nimiPuoli: 'vasen',
+        // Nimiö keskelle alle (31.10.2026): Concorden aukio on nyt täysikokoinen (kevyt merkki pois); vasemmalla nimiö
+        // osui lähimmällä zoomilla Concorden nimiöön, oikealla Louvren piirrokseen.
+        nosto: ['syvennys-pariisi-tuileriat', 'tuileries'],
       },
       /*
        * BASTILJI — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE (omistajan päätös
