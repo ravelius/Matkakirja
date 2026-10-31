@@ -3355,3 +3355,7 @@ valmiiksi?" → "Kyllä, portin piha 06 (Suositus)"; lisäys 18.28: "Voin nähd�
 visuaalisesti mahdollisimman hieno. Ja sen jälkeen vasta aletaan miettimään, miten se saadaan laitteissa pyörimään tarpeeksi nopeasti. Ja samalla pitää myös miettiä, mitä kaikkea Unity beta nyt
 mahdollistaa." (korvaa 18.28 selitteen "tarkistetaan iPadilla"). Toteutus: VS vetää koekohtauksen 06, LAV leivonta v2, NS 6000.7-beetan mahdollisuudet, PK kytkentä. Juna 216 odottaa valoa (30.10.
 22.27). Raamattu 2.177.
+
+## PARIISIN PIIRROSKARTTA: G-TYYLI HYVÄKSYTTY, KOKO KAUPUNKI (omistaja Codexissa 31.10.2026 klo 19.40) (31.10.2026 klo 19.42)
+
+Omistaja ohjasi Codexia suoraan (sääntö 21.10. 08.45), Codexin posti d0191a334 sanatarkasti: F:stä "Nyt hyvä mutta poista punaista." → G; G:stä "Hyvä. Tee nyt koko kaupunki noin." Linja: vain tärkeimmät nähtävyydet liioitellaan voimakkaasti, tavallinen kaupunki pieni, rauhalliset värit (C:n suunta), ei punaisia korostuksia; ihmiset, liikenne, veneet ja lentokoneet mukana. Codex toimitti koko Pariisin yleiskuvituksen + 12 esikatselupalaa (ei georeferoituja). PT tilasi Karttasepältä lukitun pohjan (OSM relation 7444: kadut, rannat, puistot, jalanjäljet, valkoinen pienoismallipohja, yhteinen projektio ja palaruudukko) Codexille tuotantopaloja varten. OSM-attribuutio näkyviin lopulliseen karttaan (G:stä puuttui).
