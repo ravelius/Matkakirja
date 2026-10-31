@@ -1,4 +1,4 @@
-# PT:n luovutus 31.10.2026 klo 22.50 (tilinvaihdon jälkeen)
+# PT:n luovutus 31.10.2026 klo 22.42 (tilinvaihdon jälkeen)
 
 Edellinen: viesti-fable-luovutus-20261031-2210.md (lue sekin). Osoitteet: /Users/Shared/Claude/osoitekirja.md.
 
