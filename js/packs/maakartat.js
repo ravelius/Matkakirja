@@ -5451,8 +5451,12 @@ export const KAUPUNKIKARTAT = {
       },
       // Abbesses'n asema, yksi jäljellä olevista Guimardin
       // sisäänkäynneistä (48,8844 N / 2,3382 E). Oma piste, ei naapureita.
+      // Karttanimi `nimio` (PT 30.10.2026 klo 23.5x): "Metron sisäänkäynti"
+      // on 19 merkkiä ja lyheni kartalla muotoon "Metron." (18 merkin
+      // lyhennyssääntö, js/fokusnosto-symbolit.js nostosymLyhennaNimio).
+      // Karttanimet vain suomeksi (omistaja 29.10.), siksi ei "Métropolitain".
       {
-        nimi: 'Metron sisäänkäynti', lat: 48.8844, lon: 2.3382,
+        nimi: 'Metron sisäänkäynti', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
         nosto: 'nosto-guimardin-metro',
       },
       // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.

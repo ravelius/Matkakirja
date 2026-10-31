@@ -3282,3 +3282,34 @@ Omistaja 31.10.2026 klo 09.25 (KK:n kautta): 'Tämän tilin voi käyttää 92% a
 ## KOHDEKARTTA: KAIKKI PIIRROKSET SAMALLA KONTRASTILLA (31.10.2026 klo 09.32)
 
 Omistaja 31.10.2026 klo 09.31 (kortti KK:ssa 'Pidetäänkö aukiot ja puistot kevyempinä?'): 'Kaikki pitää olla samalla kontrastilla. Nyt osa voimakkaampia kuin toiset. Metro liian voimakas esim.' Aiemmin samana aamuna: 09.17 'Haaleus on tarkoituksellista siinä toisessa kartassa mutta tähän karttaan voisi lisätä kontrastia'; 09.27 'Uudessa liikaa kontrastia. Tee puoliväliin ja tee kuvat hieman pienemmiksi. Ja kun kuvaa painaa niin se pitäisi avautua isommaksi samalla tavalla kuin nähtävyyskartassa'; 09.29 'Suurennus pitää tulla aninoidusti easy in out'. LINJAUS: kohdekartan kaikki piirrokset (myös aukiot ja puistot) samalla kontrastitasolla = 09.27:n puoliväli; voimakkaat (esim. metro) kevyemmiksi, Concorde/Vosges/Luxembourg vahvemmiksi; KS mittaa ettei yksikään poikkea. Kumoaa 26.9.:n kevyemmän aukiomerkin kohdekartalla (Raamattu 2.139 päivitetty). Striimikartan haaleus säilyy. Web KS, natiivi NUI (juna 216).
+
+## TUOTANTOPUTKI: KEVYIN TAPA JA YHTEINEN MOOTTORI (31.10.2026 klo 11.26)
+
+Omistaja 31.10.2026 klo 11.17: 'Tarkista että muissakin metrokartoissa sama kevyt bittikartta toteutus animaatioissa. Kaikki saisivat käyttää samaa moottoria'; 11.18: 'Tuotantoputkeen pitöisi kirjata että aina mietitään tällaisia tapoja toteuttaa. Mieti miten tämä kannattaa kirjata fiksuiten'; 11.25 kortti 'Kirjataanko kevyt toteutus ja yhteinen moottori näin?' → 'Kyllä, näin (Suositus)'. Kirjattu: tuotannonohjaus.md periaate 8 (kevein tapa, sama moottori, parannus kaikkiin käyttäjiin), valmiin määritelmä 8.4 ja portti 4 (uusi liike tai näkymä hyväksytään vain yhteisellä moottorilla), tekotavat/koodi.md luku 3 (siirto/skaalaus/häivytys, ei fonttikokoa/mittoja joka ruudulla) ja Opit 31.10. NUI laajentaa OpasMetrolinja.cs:n Kierrosmuunnokset kaikkiin tiloihin junaan 216.
+
+## KADONNEET IHMEET EUROOPASSA: 43 UUTTA JA KAKSI POIS (omistaja 31.10. klo 12.49) (31.10.2026 klo 12.49)
+
+Omistaja 11.28: "Lisäksi voisi katsoa onko Euroopassa kaikki oleelliset kadonneet kohteet ihmeinä ja tehdä kaikki merkittävät puuttuvat kohteet". KK:n agentin luonnos (51) → PT karsi 43:een (pois:
+Königsbergin linna, Dresdenin Semper-synagoga, Münchenin Glaspalast – kaupunki ei pelissä; Gamla Uppsalan temppeli – ulkonäkö epävarma; Prahan Stalin-monumentti ja Sofian Dimitrovin mausoleumi –
+diktaattorien muistomerkit eivät sovi loistonsa ajan ihmeiksi; Rooman getto, Spina di Borgo ja Bukarestin Uranus-kaupunginosa – kortteleita, Uranuksesta mukana Văcăreștin luostari). Omistaja 12.49
+kortilla: hyväksyi listan 43 kadonneesta ihmeestä: Lontoo: Whitehallin palatsi, vanha Westminsterin palatsi, Euston Arch, Newgaten vankila, Greenwichin palatsi; Istanbul: Konstantinopolin suuri
+palatsi, Pyhien apostolien kirkko; Rooma: Capitolium (Jupiterin temppeli), Septizodium; Pariisi: Les Hallesin hallit, Galerie des Machines, Trocadéron palatsi, Palais de l'Industrie, Palais d'Orsay,
+Temple-torni, Grand Châtelet; Varsova: Saksin palatsi, suuri synagoga, Aleksanteri Nevskin katedraali; Berliini: Palast der Republik, Anhalter Bahnhof; Dublin: Nelsonin pylväs; Barcelona:
+Ciutadella-linnake; Luxemburg: linnoitus; Vilna: suuri synagoga; Riika: Gogolin kadun synagoga; Moskova: Sukharevin torni, Kremlin Tšudovin ja Taivaaseenastumisen luostarit; Bukarest: Văcăreștin
+luostari; Edinburgh: Old Tolbooth; Firenze: Mercato Vecchio; Helsinki: vanha rautatieasema; Pietari: Nyenskans; Lissabon: Tejon kuninkaallinen ooppera; Wien: Kärntnertor-teatteri, Ringtheater;
+Tukholma: Kustaa III:n ooppera; Kööpenhamina: keskiaikainen Vor Frue Kirke; Bryssel: Maison du Peuple; Marseille: Pont Transbordeur; Budapest: alkuperäinen Erzsébet-silta; Praha: vanhan raatihuoneen
+itäsiipi; Venetsia: San Geminianon kirkko. Toteutus: Codex piirtää (pysyvä lupa) loistonsa ajalta, KS sijoittaa (arvio-koordinaatit tarkistetaan ennen tilausta), uusi pienempi piirroskoko (omistaja
+12.15/12.4x). Omistaja 12.49 kortilla myös: Riian Mustapäiden talo ja Vilnan alalinna pois kadonneista ihmeistä tavallisiksi kohteiksi, koska ne on rakennettu uudelleen samanlaisina (sama sääntö kuin
+Frauenkirche).
+
+## EI AIKA-ARVIOITA OMISTAJALLE (omistaja 31.10. klo 13.33) (31.10.2026 klo 13.33)
+
+Omistaja 13.33 KK:n kautta (sanatarkasti): "Sinun ei tarvitse jatkossa antaa aika arvioita. Ne eivät yleensä pidä paikkaansa". Kirjattu Raamattuun 7.31: omistajalle, KK:lle välitettäväksi ja Asemataulun omistajalle näkyviin teksteihin ei valmistumisarvioita eikä kellonaika-ennusteita; kerrotaan vain työn alla oleva ja valmis, kun valmis. Roolien keskinäinen aikataulutus saa jatkua.
+
+## EI SELITEKAISTAA OMISTAJAN KUVISSA; KIERROKSEN TEKSTITYS SAA PEITTÄÄ (omistaja 31.10. klo 13.45) (31.10.2026 klo 14.48)
+
+Omistaja 13.45 KK:n kautta NUI:n todistuskuvan K3 jälkeen (sanatarkasti): "Älä laita tekstiä kuvan päälle" / "Siis noita mustalla pohjalla olevia selitys tekstejä" / "Tekstitys saa mennä kuvan päälle. Vain napit pitää jäädä korin päälle". 1) Omistajalle menevissä kuvissa ja videoissa ei mustaa selitekaistaa tai muuta selitetekstiä kuvan päällä (vahvistaa 24.10. raaka-säännön, Raamattu 4.48/9.10), kaikille rooleille; selite viestiin tai tiedostonimeen. 2) Kaupunkikierros: tekstitys saa peittää näkymää, napit pysyvät korin päällä; kameran rajaus korin reunan ja ylä-UI:n väliin ennallaan.
+
+## TILINVAIHTO: VANHAT SESSIOT NOLLATTUINA TAI ARKISTOON (omistaja 31.10.2026 klo 14.55) (31.10.2026 klo 14.56)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Tili vaihdossa uudella tilillä vanhat pitäisi automaattisesti arkistoida tai jatkaa vanhojen käyttöä kunhan resetoi ne vain ensin". Linjaus: ensisijaisesti samat sessiot jatkavat nollattuina (id:t pysyvät), jos teknisesti mahdollista; muuten vanhat arkistoidaan automaattisesti vaihdon lopuksi. Kirjattu tilinvaihto.md kohta 3 ja Raamattu 12.23 kohta 3. KK arkistoi omistajan pyynnöstä ("Poista vanhat sessiot") 13 vanhaa sessiota (aiempien tilien roolit + vanha KK local_f36040a0); nykyiset roolit ennallaan.
