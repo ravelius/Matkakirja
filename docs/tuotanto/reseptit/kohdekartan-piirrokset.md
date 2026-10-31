@@ -10,14 +10,14 @@ samassa musta- ja valkopisteessä ja samalla kovalla pienellä varjolla. Omistaj
 - 09.33 "Määrittele kaikille sama musta piste ja valkopiste ja Säädä Keski kontrasti yhteneväksi ja pudota saturaatiota tarvittaessa"
 - 09.34 "Mieti tapa joka on helppo monistaa kaikkiin kaupunkeihin"
 - 10.07 "Poista pehmeä varjo ja vaihda se kovaan ja pieneen varjoon mikäli helppo monistaa."
-- 10.16 tasattu Pariisi pienellä terävällä varjolla: "Kelpaa".
+- 10.16 tasattu Pariisi pienellä terävällä varjolla: "Kelpaa"; 10.26 leivottu varjo "liian iso" → 10.16:n kokoon.
 - 09.17 "Haaleus on tarkoituksellista siinä toisessa kartassa" → striimikartta käyttää alkuperäisiä kuvia.
 
 ## Tavoite
 
 Kaikki kohdekartan piirrokset yhdessä asetuksessa (`tools/piirrostasaus.json`): musteen (alfa > 200) luminanssi
 musta = 2. persentiili 0,36, valko = 98. persentiili 0,85, keski = mediaani 0,61, kroma (max − min) 0,24; kova varjo
-0,028 × kuvan leveys oikealle alas, ei sumennusta, #2c2318 45 %. Arvot = Pariisin 14 piirroksen 09.27-puolivälin mediaani.
+0,01 × kuvan leveys oikealle alas (lähimmällä zoomilla ohut reuna), ei sumennusta, #2c2318 45 %. Tallennus 1024 px, webp-laatu 82 (PT). Arvot = Pariisin 14 piirroksen 09.27-puolivälin mediaani.
 
 ## Tekotapa
 
@@ -29,7 +29,7 @@ musta = 2. persentiili 0,36, valko = 98. persentiili 0,85, keski = mediaani 0,61
 3. **Testit:** `tests/piirrostasaus.test.mjs` (jokainen piirros tavoitteessa ±0,03; kroma ei yli, alle saa jäädä 0,08) ja
    `tests/miniatyyrit-leikkaus.test.mjs`. Rakenteellinen poikkeus kirjataan perusteluineen asetuksen
    `hyväksytyt_poikkeamat`-listaan (esim. Lontoon silmä: ohut valkoinen pyörä).
-4. **Pari:** kohdekartta ennen/jälkeen sekä aloitusnäkymässä että lähimmällä zoomilla (kokoruutu, zoom 3).
+4. **Pari:** kohdekartta ennen/jälkeen lähimmällä zoomilla (kokoruutu, zoom 3) ja napautettu suurennus täysikokoisena.
 5. **Vienti:** ensin `vie-assetit` (miniatyyrit) PR-haarasta, sitten merge; `vie-sisalto` vie kokoelman
    `kohdekartanPiirrokset` (skeema 1.66), josta natiivin kohdekartta lukee samat kuvat.
 
@@ -48,4 +48,4 @@ musta = 2. persentiili 0,36, valko = 98. persentiili 0,85, keski = mediaani 0,61
 - Yhteinen CSS-suodatin kaikille: ei tasaa piirroksia keskenään (09.31). Kontrasti tulee kuvasta, CSS:ssä vain `filter: none`.
 - Kuvien muuttaminen alkuperäisinä: muuttaa myös striimikartan. Aina uusi `-kk.webp`.
 - Selaimen canvas-mittaus ämpärin kuvista ei toimi tuotannossa (ei CORS-otsakkeita): mitat etukäteen työkalulla.
-- Leivottu varjo on suhteessa kuvaan: isona avatussa piirroksessa se näkyy muutaman pikselin levyisenä.
+- Leivottu varjo on suhteessa kuvaan: liian suuri siirto (0,028) näkyi lähimmällä zoomilla ja suurennuksessa paksuna (omistaja 10.26).
