@@ -67,3 +67,10 @@ wt/proto-pelikoodari-lod-216 (pelikoodari/tausta-lod-216).
   ajoissa ("pystyy ennakoimaan"; lähtö 2,5 s ennen kontaktia).
 - Ennallaan, kohta 2 (PT/LAV/VS): harmaa terassi (rivi 2 sarakkeet 2–4, s0-0…s0-1), turkoosi kaista (rivit 1, 2 ja 8) ja oranssit leijuvat koristeet.
 - KK: omistajalle vasta, kun kaikki nämä on korjattu samassa arkissa ja videossa.
+
+## PT:n c4-lista, 21.0x (kaikki SAMAAN ajoon c4; c4 KK:lle vasta, kun kaikki on mukana)
+1. Käytävissä näkyy vain lattiaa (c3-arkin rivi 3 sarakkeet 8–10 ja rivi 5 sarakkeet 6–9): katse on liian jyrkkä tai liian lähellä kapeassa kohdassa.
+   Korjaa niin, että kuja ja seinät näkyvät eteenpäin (lisäys 3).
+2. Leijuvat oranssit koristeet: selvitä, ovatko ne kerättäviä vai harjakoristeita (chiwen), ja laske ne maahan tai poista.
+3. Keisari juoksee terassin sisällä (lisäys 2).
+LAV korjaa terassin materiaalin ja turkoosin vyön.
