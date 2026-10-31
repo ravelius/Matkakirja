@@ -6292,7 +6292,10 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Maailmankello', lat: 52.5219, lon: 13.4132,
+        // Weltzeituhr Alexanderplatzilla (OSM 52.52134, 13.41327; ennen 52.5219 = samassa pisteessä kuin Hobrechtin
+        // putket). Kiinteä kuten Tv-torni (KK 31.10.2026: hajautus työnsi kellon ~1 km koilliseen), jolloin pari jakaa
+        // väistön tasan ja molemmat pysyvät Alexanderplatzilla.
+        nimi: 'Maailmankello', lat: 52.5213, lon: 13.4133, kiintea: true,
         nosto: 'nosto-maailmankello',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
