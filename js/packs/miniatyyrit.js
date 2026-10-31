@@ -76,7 +76,7 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Löyly ja avanto': 'helsinki-loyly-ja-avanto-vari2',
     Kantele: 'helsinki-kantele-vari2',
-    Finlandia: 'helsinki-finlandia-vari2',
+    // Finlandia (nuottiteline) pois kartalta: musiikkiteos ei ole paikka (omistaja 31.10.2026 klo 11.26, PT).
     Pirtukuningas: 'helsinki-pirtukuningas-vari2',
     'Nurmen kohu': 'helsinki-nurmen-kohu-vari2',
     'Suomi herää 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
