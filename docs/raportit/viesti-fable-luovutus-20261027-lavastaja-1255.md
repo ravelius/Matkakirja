@@ -2300,3 +2300,16 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
 - KYSYTTY PT:ltä 19.4x: mikä on "havainnetyylin" kuva Pariisille (ei löydy). Ehdotus: v6k26:n maa + Pekingin havainteen tyyli, laikku tummemmaksi Googlen
   jalkakäytävien tasolle, parvis selkeiksi laattavyöhykkeiksi, nurmen polut ennallaan. Sakaristo: etsi nd_atlasista valkoinen tekstuuriton alue (UV-saari ilman
   atlasta) → tekstuuri (kivi_nd tai Codex). 5 muuta Pariisin mallia: sama tarkistus (maa/valkoiset osat). Vienti NS:n kautta, jälkeen-kuva NUI:n simulla PT:lle.
+
+## LISÄYS 167 (31.10. 19.5x): LUOVUTUS (konteksti 37 %) — JONO 4 KESKEN, ALOITA TÄSTÄ
+- Valojono 1–3 VIETY (LISÄYS 165). Ei ajoja käynnissä, ei herätyksiä. Odottaa: VS:n pari k06 (puhki-%) → säätö tarvittaessa (LISÄYS 165).
+- PT:n VASTAUS kysymykseen "havainnetyyli Pariisille" (lähetetty 19.4x) — jos et näe sitä, kysy PT:ltä uudelleen yhdellä rivillä.
+- Notre-Dame v6k26 lod0: kuvat ovat KTX2 (KHR_texture_basisu) → purku: "/Volumes/T7 4TB/koodaus/linssiseppa2-tyokalut/ktx/bin/ktx" extract
+  <in.ktx2> <out.png> (puretut maa_v9c.png ja nd_atlas_lod0.png 2048²/… ovat Lavastajan scratchpadissa, tee uudelleen). Uudelleenpakkaus:
+  Matkakirja-proto/tyokalut/omat_mallit_ktx2.py --portti <paketti> (gltf-transform + toktx, T7-polut). Paketin rakennusmalli
+  _tyo/linnanrakentaja/louvre/rakenna-v6k26.py (uusi versio v6k28 tms. → ei ämpärin ylikirjoitusta; NS vie R2:een).
+- Solmut: maa (mesh 0: nd_maa 27 912 kolmiota + nd_kalkkikivi 940 rantamuurit), nd_puut (instanssit), nd_rakennus (mesh 'ikkunat', materiaali nd_atlas,
+  130 589 kolmiota, yksi atlas nd_atlas_lod0). Sakariston valkoista osaa EI löytynyt atlasnäytteistä (kolmioiden keskipisteissä ei valkoista
+  > 215 kuin 9 kolmiota, rajat x −10…18 z −37…7) → selvitä renderöimällä (Blender, lod0 ylhäältä kaakosta) tai NUI:n simukuvasta: voi olla
+  UV-saari atlaksen täyttämättömällä alueella (näytä keskipisteen sijaan koko kolmion alue) tai maa-meshin kalkkikivi.
+- Notre-dame-v1 (lähteet): lahde/maa.py (IGN-orto 2018 retusoitu), parvis_v9.py (omistaja 10.10.: vähemmän keinotekoinen), maa.json rajat, UV = rajat.
