@@ -5931,6 +5931,11 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
+    // Abbey Roadin kainalo (KK ja PT 31.10.2026, tools/piirra-kaupunkikartta.mjs lontoo): vasen yläkulma, 5 km luoteeseen.
+    kainalot: [
+      { rajat: { pohjoinen: 51.5372, etela: 51.5262, lansi: -0.1875, ita: -0.1665 },
+        x: 20, y: 23, leveys: 11, korkeus: 17.71 },
+    ],
     esittely: 'Kartan alue on Lontoon ydin Thamesin molemmin puolin. Lännessä Westminsterin '
       + 'kohteita ovat Buckinghamin palatsi, Trafalgar Square, Big Ben ja joen vastarannalla '
       + 'Lontoon silmä; idässä kartta päättyy Tower Bridgeen.\n\n'
@@ -6093,7 +6098,8 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-the-george-pubi',
       },
       {
-        nimi: 'Abbey Roadin suojatie', tyyppi: 'aukio', lat: 51.5117, lon: -0.1403,
+        // Oikea paikka St John's Wood (KK 31.10.2026; ennen Mayfairissa 51.5117, -0.1403 ilman perustetta) → kainalossa.
+        nimi: 'Abbey Roadin suojatie', tyyppi: 'aukio', lat: 51.532, lon: -0.1773,
         nosto: 'nosto-abbey-roadin-suojatie',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
