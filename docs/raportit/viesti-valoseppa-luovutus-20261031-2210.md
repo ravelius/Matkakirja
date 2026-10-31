@@ -31,3 +31,7 @@ PT local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc, NS local_c7344e20-fba8-433d-ba8e-
 ## LISÄYS 22.2x: sauman syy löytyi (LAV)
 Sauma = **kk-ulkorengas-3-2:n V4_lattia** (lod2, leipomaton, y 0,2–0,9), joka työntyy kielekkeinä palatsin lattian päälle z −500…−488,9; yksi kieleke osuu kohtaan x 16,6–19,6. LAV:n **ulkorengas-v10** (`_valmiit/juoksupeli-kk-lavastaja-ulkorengas-v10-vienti-20261031`, SHA256SUMS 3cf8ab80147d, summat OK) rajaa renkaan lattian taustan reunaan. Tausta-v90:aa ei tarvita. → k06j:n tulos ei enää ole kiireellinen (tarkistus vain).
 **Valmiina, ei käynnistetty** (PT: ei uusia raskaita ajoja): juuri `_tyo/linssiseppa2/juuri-k06c` (= juuri-k06b, ulkorengas-v9-linkki → v10) ja skripti `skriptit-20261031/pari-k06k.zsh` (f25-asetukset). Aja: `zsh .../pari-k06k.zsh > .../pari-k06k.out 2>&1` (taustalla) → sauma poissa? → värimittaus → PT.
+
+## LISÄYS 22.3x: v89 OK ja kattoväri
+- tausta-v89 PK:n c4-reitillä (esikatselu-20261031-220050): ei harmaita kiiloja, turkoosia kaistaa eikä terassia → "VS OK" LAV:lle ja kuvat PT:lle. 1-3:n kiilojen kohtaa ei ajettu.
+- k06i: `savy palatsikatto` vaikuttaa voimakkaasti (i1 1,2/1,07/0,83 w 1,2 → katto 241/162/39 vs havainne 213/145/72; puhki 9,3 %). Seuraavaksi ~`1.08 1.03 0.9 1.1`; laatta ~`0.95 0.98 1.04` (lattian mediaani 211 → 200). Lisää ne pari-k06k:hon ennen ajoa.
