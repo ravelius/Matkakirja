@@ -1,0 +1,62 @@
+{
+  "sourceHead": "35a40dedfbe304820fa84f42667e20705808a924",
+  "allSourceFilesByteVerified": true,
+  "files": [
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031.md",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/karttaseppa-codex-pariisi-pseudo3d-koe-20261031.md",
+      "blobSha": "12016c266c24dda62d767ab6f04fb218acbd3d5d",
+      "bytes": 3590,
+      "sha256": "de9d9adc27d56d521f515d4e0793070d65780d0c64a2bb9017989a41ea7ed3b7"
+    },
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/G-referenssi-owner-style-G-confirmed.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/G-referenssi-owner-style-G-confirmed.jpg",
+      "blobSha": "1289746568e058675724623dd221892bb5f25299",
+      "bytes": 532470,
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f"
+    },
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/SHA256SUMS",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/SHA256SUMS",
+      "blobSha": "98afee36192ea407dfff44122d8324fa8362b595",
+      "bytes": 459,
+      "sha256": "dec5ba9ac9ab74dfe8f832f4b2468fc595244ffd1442478ad83e585e211a8498"
+    },
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/ohje-r3-c4-v6-geometria.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/ohje-r3-c4-v6-geometria.png",
+      "blobSha": "3bd579087164bc4af4f61081de946d24ac978daa",
+      "bytes": 4182670,
+      "sha256": "7de8543bb1aa52f4f34fa807699484c7ba3548154615b7f42a7c964c473ff1bd"
+    },
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/ohje-r3-c5-v6-geometria.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/ohje-r3-c5-v6-geometria.png",
+      "blobSha": "af3ac7498a0868b8397f02be297fc0a786b7b3f7",
+      "bytes": 3626341,
+      "sha256": "2b9064eeedcaa271d7a5ef27d7438b489e3f5604262141818980eddcc1e7527f"
+    },
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/ohje-yhdessa-1-4.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/ohje-yhdessa-1-4.jpg",
+      "blobSha": "a9ec7e33ef9b3b541a4616772701f9112dbc03d4",
+      "bytes": 355631,
+      "sha256": "0451719f01cdd91def5d8307c12bc153d7b364f7475e3b4c203f6317ce3744b4"
+    },
+    {
+      "path": "posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/osuudet.py",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/osuudet.py",
+      "blobSha": "0cc770cfce956ddc0bd2428f5453c7d1c3b0435d",
+      "bytes": 867,
+      "sha256": "03c049d40d66dea7410920ce09660d6edfda31f0f30fbe3cd5f3b71253a66604"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-pariisi-spritet-hahmot-kuittaus-20261031.md",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/source/paatoimittaja-codex-pariisi-spritet-hahmot-kuittaus-20261031.md",
+      "blobSha": "d0b8f1bca0dac9ee37d0b8553527e514c156d3df",
+      "bytes": 582,
+      "sha256": "6293c0bded9acc866ff97f60641c0356e9743e97fab81c724b5b1c95c263f015"
+    }
+  ]
+}

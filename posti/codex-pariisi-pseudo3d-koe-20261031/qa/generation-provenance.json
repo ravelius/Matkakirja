@@ -1,0 +1,14 @@
+[
+  {
+    "tile": "r3-c4",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/prompts/r3-c4-v1.txt",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-16a1156e-f19b-4e22-a009-f4a60a9f319b.png",
+    "mode": "built-in image_gen; complete new generation from geometry and G style references"
+  },
+  {
+    "tile": "r3-c5",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/prompts/r3-c5-v1.txt",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-47d301cf-d865-404f-858a-88dcec8974fd.png",
+    "mode": "built-in image_gen; complete new generation from geometry and G style references"
+  }
+]

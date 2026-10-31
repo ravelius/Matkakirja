@@ -1,0 +1,229 @@
+{
+  "checkedAt": "2026-10-31T21:28:40.200584+00:00",
+  "method": "Built-in full new generation per tile; RGB Lanczos 2x export only. No geometry repair, edge copying or compositing.",
+  "tiles": [
+    {
+      "tile": "r3-c4",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/final/pariisi-pseudo3d-r3-c4.png",
+      "sha256": "5ba0944118966448cf99f8a6eca8a73a7426c28621a0e689febf622a95dae9ac",
+      "bytes": 11081318,
+      "mode": "RGB",
+      "exportSize": [
+        3072,
+        2048
+      ],
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeSha256": "4581d034e9d0f23d72f3e67bbcecea517e5e87c8cc11167dc96271d92eb05fb6",
+      "resampled": true,
+      "sourceColourRatios": {
+        "seinä": {
+          "percent": 17.726,
+          "medianRGB": [
+            214,
+            193,
+            150
+          ]
+        },
+        "katto": {
+          "percent": 14.532,
+          "medianRGB": [
+            126,
+            140,
+            157
+          ]
+        },
+        "puu": {
+          "percent": 5.761,
+          "medianRGB": [
+            193,
+            211,
+            140
+          ]
+        },
+        "vesi": {
+          "percent": 4.585,
+          "medianRGB": [
+            126,
+            193,
+            205
+          ]
+        }
+      },
+      "outputColourRatios": {
+        "seinä": {
+          "percent": 26.238,
+          "medianRGB": [
+            213,
+            184,
+            134
+          ]
+        },
+        "katto": {
+          "percent": 10.763,
+          "medianRGB": [
+            132,
+            146,
+            161
+          ]
+        },
+        "puu": {
+          "percent": 5.91,
+          "medianRGB": [
+            197,
+            213,
+            131
+          ]
+        },
+        "vesi": {
+          "percent": 4.974,
+          "medianRGB": [
+            98,
+            191,
+            208
+          ]
+        }
+      },
+      "waterBoundaryDiagnostic": {
+        "3": {
+          "generatedBoundaryPixelsBeyondRadius": 5855,
+          "fraction": 0.259749,
+          "metric": "Chebyshev pixel distance; colour threshold heuristic"
+        },
+        "8": {
+          "generatedBoundaryPixelsBeyondRadius": 5264,
+          "fraction": 0.23353,
+          "metric": "Chebyshev pixel distance; colour threshold heuristic"
+        },
+        "16": {
+          "generatedBoundaryPixelsBeyondRadius": 5072,
+          "fraction": 0.225012,
+          "metric": "Chebyshev pixel distance; colour threshold heuristic"
+        }
+      }
+    },
+    {
+      "tile": "r3-c5",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-koe-20261031/final/pariisi-pseudo3d-r3-c5.png",
+      "sha256": "394f4fb826a6101bbc2afb57f6b49966db173b9a3622e6b9682b925cdc05c01f",
+      "bytes": 9540618,
+      "mode": "RGB",
+      "exportSize": [
+        3072,
+        2048
+      ],
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeSha256": "cb349b3dab43fe5ffc08380768d3a2453b6dd0e4dd4c20f3b422fdea79fd3022",
+      "resampled": true,
+      "sourceColourRatios": {
+        "seinä": {
+          "percent": 14.272,
+          "medianRGB": [
+            214,
+            193,
+            150
+          ]
+        },
+        "katto": {
+          "percent": 11.756,
+          "medianRGB": [
+            126,
+            140,
+            157
+          ]
+        },
+        "puu": {
+          "percent": 3.891,
+          "medianRGB": [
+            193,
+            211,
+            140
+          ]
+        },
+        "vesi": {
+          "percent": 0.063,
+          "medianRGB": [
+            126,
+            193,
+            204
+          ]
+        }
+      },
+      "outputColourRatios": {
+        "seinä": {
+          "percent": 18.889,
+          "medianRGB": [
+            210,
+            182,
+            136
+          ]
+        },
+        "katto": {
+          "percent": 9.856,
+          "medianRGB": [
+            127,
+            141,
+            158
+          ]
+        },
+        "puu": {
+          "percent": 7.016,
+          "medianRGB": [
+            195,
+            207,
+            134
+          ]
+        },
+        "vesi": {
+          "percent": 0.18,
+          "medianRGB": [
+            114,
+            173,
+            196
+          ]
+        }
+      },
+      "waterBoundaryDiagnostic": {
+        "3": {
+          "generatedBoundaryPixelsBeyondRadius": 6352,
+          "fraction": 0.949761,
+          "metric": "Chebyshev pixel distance; colour threshold heuristic"
+        },
+        "8": {
+          "generatedBoundaryPixelsBeyondRadius": 6352,
+          "fraction": 0.949761,
+          "metric": "Chebyshev pixel distance; colour threshold heuristic"
+        },
+        "16": {
+          "generatedBoundaryPixelsBeyondRadius": 6350,
+          "fraction": 0.949462,
+          "metric": "Chebyshev pixel distance; colour threshold heuristic"
+        }
+      }
+    }
+  ],
+  "groundGeometryCertified": false,
+  "assembledPilotApproved": false,
+  "gameIntegrated": false,
+  "published": false,
+  "sourceOverlap": {
+    "identical": false,
+    "exactPixelFraction": 0.9995079040527344,
+    "meanAbsoluteChannelDifference": 0.030821482340494793,
+    "pixelCount": 262144
+  },
+  "generatedOverlap": {
+    "identical": false,
+    "exactPixelFraction": 0.001354217529296875,
+    "meanAbsoluteChannelDifference": 23.972484588623047,
+    "pixelCount": 262144
+  },
+  "deliveryClassification": "EXPERIMENT_ONLY_NOT_GEOMETRY_APPROVED",
+  "qualityDecision": "FAIL_SEAM_AND_UNVERIFIED_3PX_GEOMETRY",
+  "visualReview": "Two islands and major routes remain broadly recognizable; ordinary houses have warmer walls and blue-grey roofs, no exaggerated monuments or added life. Individual block outlines and road widths differ. Right city fade retained. Exact geometric fidelity is not certified."
+}
