@@ -3313,3 +3313,7 @@ Omistaja 13.45 KK:n kautta NUI:n todistuskuvan K3 jälkeen (sanatarkasti): "Äl�
 ## TILINVAIHTO: VANHAT SESSIOT NOLLATTUINA TAI ARKISTOON (omistaja 31.10.2026 klo 14.55) (31.10.2026 klo 14.56)
 
 Omistaja (KK:n välittämä, sanatarkasti): "Tili vaihdossa uudella tilillä vanhat pitäisi automaattisesti arkistoida tai jatkaa vanhojen käyttöä kunhan resetoi ne vain ensin". Linjaus: ensisijaisesti samat sessiot jatkavat nollattuina (id:t pysyvät), jos teknisesti mahdollista; muuten vanhat arkistoidaan automaattisesti vaihdon lopuksi. Kirjattu tilinvaihto.md kohta 3 ja Raamattu 12.23 kohta 3. KK arkistoi omistajan pyynnöstä ("Poista vanhat sessiot") 13 vanhaa sessiota (aiempien tilien roolit + vanha KK local_f36040a0); nykyiset roolit ennallaan.
+
+## KAMERA: KATSE EI NOUSE LASKEUTUESSA, KOKO RAKENNUS KORIN YLÄPUOLELLA (omistaja 31.10.2026 klo 16.51) (31.10.2026 klo 16.52)
+
+Omistaja (KK:n välittämä kortin vastaus "Hyväksytkö Notre-Damen kameran?", NUI 967630faa, sanatarkasti): "Kip jäi nyt ylemmäs eikä kirkko näkynyt sen takia vieläkään kokonaan vaikka kamera kääntyi alaspäin. Lisäksi kamerakulma ei saa nousta ylös välillä kun laskeudutaan alas." Linjaus kaikkiin pysähdyksiin: kippi matalammalle, koko rakennus korin yläpuolella; laskeutuessa katse ei nouse välillä ylös (yleinen kamerasääntö). Raamattu 2.82. NUI korjaa.
