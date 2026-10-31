@@ -2273,3 +2273,8 @@ Kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta (
 - PAKETIT (U/paketti_yleinen.zsh <nimi> <LAHTEET> <kansiot…>): osasarja-v6 (LAHTEET-osasarja-v6.md, kansio kielletty-rakennukset/osasarja-v6/
   kielletty-osasarja-v6) → PK + PT (+KK); tausta-v84 (LAHTEET-tausta-v84.md, jos tarkistus 0) → VS + PK + PT; leivonta-v2 (LAHTEET-leivonta-v2.md,
   kielletty-tausta-v85 kielletty-rakennukset-v87 kielletty-muurikate-v31) → VS uusi pari 03/06 + PT. Lopuksi levyvahdin raja 82.
+- JONO 4 (PT 31.10. 17.5x, valotöiden 1–3 jälkeen, ei estä junaa 216): Pariisin omat Cesium-mallit (mallit.json). Notre-Damen oma maa nd_maa (409×269 m)
+  näkyy vaaleana laikkuna → aukion kivetys + puutarhan nurmi/polut havainnetyyliin; sakariston valkoinen tekstuuriton osa tekstuuriin; sama tarkistus 5 muulle
+  Pariisin mallille. Leveä leikkaus pidetään (peittää Googlen restaurointityömaan). Ennen-kuva proto-3d/_tyo/natiiviseppa/nd-leikkaus/pari-K1-notre-dame.png
+  (ylempi). Codexin tekstuurit tarvittaessa (pysyvä lupa). Vienti NS:n kautta, jälkeen-kuva NUI:n simulla → PT.
+- HERÄTYS: CronCreate d22878f3 (:07/:22/:37/:52, KK 17.4x) vie paketit 1–3; poistetaan paketin 3 jälkeen (session muistissa, nollaus hävittää → aseta uudelleen).
