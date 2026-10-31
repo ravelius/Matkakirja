@@ -67,7 +67,10 @@
  */
 
 /** Luxemburgin hahmotelmanostot: sisällölliset kohteet, ei pelikaupunkia. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_LUX = [
+  ...(EUROOPAN_KADONNEET.LUX ?? []),
   {
     id: 'hahmotelma-clervaux',
     kuva: {

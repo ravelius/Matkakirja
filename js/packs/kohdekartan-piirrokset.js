@@ -88,6 +88,7 @@
     "Hua Lamphong": "assets/kartat/miniatyyrit/bangkok-hua-lamphong-vari2-kk.webp",
   },
   "barcelona": {
+    "Barcelonan Ciutadellan linnake": "assets/kartat/miniatyyrit/barcelona-ciutadella-kk.webp",
     "Sagrada Família": "assets/kartat/miniatyyrit/barcelona-sagrada-familia-kk.webp",
     "Casa Batlló": "assets/kartat/miniatyyrit/barcelona-casa-batllo-kk.webp",
     "Arc de Triomf": "assets/kartat/miniatyyrit/barcelona-arc-de-triomf-kk.webp",
@@ -106,6 +107,8 @@
     "Yliopistomuseo": "assets/kartat/miniatyyrit/bergen-yliopistomuseo-kk.webp",
   },
   "berliini": {
+    "Anhalter Bahnhof": "assets/kartat/miniatyyrit/berliini-anhalter-bahnhof-kk.webp",
+    "Palast der Republik": "assets/kartat/miniatyyrit/berliini-palast-der-republik-kk.webp",
     "Valtiopäivätalo": "assets/kartat/miniatyyrit/berliini-valtiopaivatalo-kk.webp",
     "Brandenburgin portti": "assets/kartat/miniatyyrit/berliini-brandenburgin-portti-kk.webp",
     "Checkpoint Charlie": "assets/kartat/miniatyyrit/berliini-checkpoint-charlie-kk.webp",
@@ -113,10 +116,11 @@
     "Tv-torni": "assets/kartat/miniatyyrit/berliini-tv-torni-kk.webp",
     "East Side Gallery": "assets/kartat/miniatyyrit/berliini-east-side-gallery-kk.webp",
     "Kulta-Liisa": "assets/kartat/miniatyyrit/berliini-kulta-liisa-vari2-kk.webp",
-    "Radialsystem V": "assets/kartat/miniatyyrit/berliini-hobrechtin-putket-vari2-kk.webp",
+    "Radialsystem V": "assets/kartat/miniatyyrit/berliini-radialsystem-v-kk.webp",
     "Maailmankello": "assets/kartat/miniatyyrit/berliini-maailmankello-kk.webp",
   },
   "bryssel": {
+    "Maison du Peuple": "assets/kartat/miniatyyrit/bryssel-maison-du-peuple-kk.webp",
     "Brysselin pörssi": "assets/kartat/miniatyyrit/bryssel-brysselin-porssi-kk.webp",
     "Manneken Pis": "assets/kartat/miniatyyrit/bryssel-manneken-pis-kk.webp",
     "Oikeuspalatsi": "assets/kartat/miniatyyrit/bryssel-oikeuspalatsi-kk.webp",
@@ -126,6 +130,7 @@
     "Kuninkaanpalatsi": "assets/kartat/miniatyyrit/bryssel-kuninkaanpalatsi-kk.webp",
   },
   "budapest": {
+    "Alkuperäinen Erzsébet-silta": "assets/kartat/miniatyyrit/budapest-erzsebet-silta-alkuperainen-kk.webp",
     "Kalastajanlinnake": "assets/kartat/miniatyyrit/budapest-kalastajanlinnake-kk.webp",
     "Ketjusilta": "assets/kartat/miniatyyrit/budapest-ketjusilta-kk.webp",
     "Parlamenttitalo": "assets/kartat/miniatyyrit/budapest-parlamenttitalo-kk.webp",
@@ -148,6 +153,7 @@
     "Santo Domingon luostari": "assets/kartat/miniatyyrit/buenosaires-santo-domingon-luostari-vari2-kk.webp",
   },
   "bukarest": {
+    "Văcărești-luostari": "assets/kartat/miniatyyrit/bukarest-vacarestin-luostari-kk.webp",
     "Romanian ateneum": "assets/kartat/miniatyyrit/bukarest-romanian-ateneum-kk.webp",
     "Cișmigiun puutarha": "assets/kartat/miniatyyrit/bukarest-cismigiun-puutarha-kk.webp",
     "Yliopiston aukio": "assets/kartat/miniatyyrit/bukarest-yliopiston-aukio-kk.webp",
@@ -255,6 +261,7 @@
     "Dubrovnikin katedraali": "assets/kartat/miniatyyrit/dubrovnik-dubrovnikin-katedraali-vari2-kk.webp",
   },
   "edinburgh": {
+    "Old Tolbooth": "assets/kartat/miniatyyrit/edinburgh-old-tolbooth-kk.webp",
     "Charlotte Square": "assets/kartat/miniatyyrit/edinburgh-charlotte-square-kk.webp",
     "Edinburghin linna": "assets/kartat/miniatyyrit/edinburgh-edinburghin-linna-kk.webp",
     "St Gilesin katedraali": "assets/kartat/miniatyyrit/edinburgh-st-gilesin-katedraali-kk.webp",
@@ -263,6 +270,7 @@
     "Scott-monumentti": "assets/kartat/miniatyyrit/edinburgh-scott-monumentti-kk.webp",
   },
   "firenze": {
+    "Mercato Vecchio": "assets/kartat/miniatyyrit/firenze-mercato-vecchio-kk.webp",
     "Duomo": "assets/kartat/miniatyyrit/firenze-duomo-kk.webp",
     "Palazzo Vecchio": "assets/kartat/miniatyyrit/firenze-palazzo-vecchio-kk.webp",
     "Uffizi": "assets/kartat/miniatyyrit/firenze-uffizi-kk.webp",
@@ -314,6 +322,7 @@
     "Kirjallisuuden temppeli": "assets/kartat/miniatyyrit/hanoi-kirjallisuuden-temppeli-vari2-kk.webp",
   },
   "helsinki": {
+    "Helsingin vanha rautatieasema": "assets/kartat/miniatyyrit/helsinki-vanha-rautatieasema-kk.webp",
     "Temppeliaukion kirkko": "assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko-kk.webp",
     "Linnanmäki": "assets/kartat/miniatyyrit/helsinki-linnanmaki-kk.webp",
     "Päärautatieasema": "assets/kartat/miniatyyrit/helsinki-paarautatieasema-kk.webp",
@@ -524,6 +533,7 @@
     "Kiovan kultainen portti": "assets/kartat/miniatyyrit/kiova-kiovan-kultainen-portti-kk.webp",
   },
   "kobenhavn": {
+    "Vor Frue Kirke": "assets/kartat/miniatyyrit/kobenhavn-vor-frue-keskiaikainen-kk.webp",
     "Amalienborg": "assets/kartat/miniatyyrit/kobenhavn-amalienborg-kk.webp",
     "Rundetårn": "assets/kartat/miniatyyrit/kobenhavn-rundetarn-kk.webp",
     "Nyhavn": "assets/kartat/miniatyyrit/kobenhavn-nyhavn-kk.webp",
@@ -583,6 +593,7 @@
     "Lhasan suuri moskeija": "assets/kartat/miniatyyrit/lhasa-lhasan-suuri-moskeija-vari2-kk.webp",
   },
   "lissabon": {
+    "Tejon kuninkaallinen ooppera": "assets/kartat/miniatyyrit/lissabon-tejon-ooppera-kk.webp",
     "Rossio": "assets/kartat/miniatyyrit/lissabon-rossio-kk.webp",
     "São Jorgen linna": "assets/kartat/miniatyyrit/lissabon-sao-jorgen-linna-kk.webp",
     "Tuomiokirkko": "assets/kartat/miniatyyrit/lissabon-tuomiokirkko-kk.webp",
@@ -621,6 +632,7 @@
     "Turbiinihalli": "assets/kartat/miniatyyrit/lontoo-turbiinihalli-kk.webp",
   },
   "luxemburg": {
+    "Luxemburgin linnoitus": "assets/kartat/miniatyyrit/luxemburg-linnoitus-kk.webp",
     "Adolphe-silta": "assets/kartat/miniatyyrit/luxemburg-adolphe-silta-kk.webp",
     "Guillaume II:n aukio": "assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio-kk.webp",
     "Notre-Damen katedraali": "assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali-kk.webp",
@@ -679,6 +691,7 @@
     "Rizal-puisto": "assets/kartat/miniatyyrit/manila-rizal-puisto-vari2-kk.webp",
   },
   "marseille": {
+    "Marseillen siirtosilta": "assets/kartat/miniatyyrit/marseille-pont-transbordeur-kk.webp",
     "MuCEM": "assets/kartat/miniatyyrit/marseille-mucem-vari2-kk.webp",
     "Marseillen katedraali": "assets/kartat/miniatyyrit/marseille-marseillen-katedraali-vari2-kk.webp",
     "Saint-Victorin kirkko": "assets/kartat/miniatyyrit/marseille-saint-victorin-kirkko-vari2-kk.webp",
@@ -720,6 +733,8 @@
     "Olympia-teatteri": "assets/kartat/miniatyyrit/miami-olympia-teatteri-kk.webp",
   },
   "moskova": {
+    "Tšudovin ja Taivaaseenastumisen luostarit": "assets/kartat/miniatyyrit/moskova-tsudovin-luostari-kk.webp",
+    "Sukharevin torni": "assets/kartat/miniatyyrit/moskova-sukharevin-torni-kk.webp",
     "Bolšoi-teatteri": "assets/kartat/miniatyyrit/moskova-bolsoi-teatteri-kk.webp",
     "Punainen tori": "assets/kartat/miniatyyrit/moskova-punainen-tori-kk.webp",
     "Pyhän Vasilin katedraali": "assets/kartat/miniatyyrit/moskova-pyhan-vasilin-katedraali-kk.webp",
@@ -856,6 +871,7 @@
     "Uhripaikka": "assets/kartat/miniatyyrit/petra-uhripaikka-vari2-kk.webp",
   },
   "pietari": {
+    "Nyenskans": "assets/kartat/miniatyyrit/pietari-nyenskans-kk.webp",
     "Pietari-Paavalin linnoitus": "assets/kartat/miniatyyrit/pietari-pietari-paavalin-linnoitus-kk.webp",
     "Talvipalatsi": "assets/kartat/miniatyyrit/pietari-talvipalatsi-kk.webp",
     "Verikirkko": "assets/kartat/miniatyyrit/pietari-verikirkko-kk.webp",
@@ -874,6 +890,7 @@
     "Vanuatun parlamenttitalo": "assets/kartat/miniatyyrit/portvila-vanuatun-parlamenttitalo-kk.webp",
   },
   "praha": {
+    "Prahan vanhan raatihuoneen itäsiipi": "assets/kartat/miniatyyrit/praha-vanhan-raatihuoneen-itasiipi-kk.webp",
     "Petřínin näkötorni": "assets/kartat/miniatyyrit/praha-petrinin-nakotorni-kk.webp",
     "Prahan linna": "assets/kartat/miniatyyrit/praha-prahan-linna-kk.webp",
     "Kaarlensilta": "assets/kartat/miniatyyrit/praha-kaarlensilta-kk.webp",
@@ -890,6 +907,7 @@
     "Saudi-Arabian kansallismuseo": "assets/kartat/miniatyyrit/riad-saudi-arabian-kansallismuseo-vari2-kk.webp",
   },
   "riika": {
+    "Gogolin kadun synagoga": "assets/kartat/miniatyyrit/riika-gogolin-kadun-synagoga-kk.webp",
     "Vapaudenpatsas": "assets/kartat/miniatyyrit/riika-vapaudenpatsas-kk.webp",
     "Kolme veljestä -talot": "assets/kartat/miniatyyrit/riika-kolme-veljesta-kk.webp",
     "Riian tuomiokirkko": "assets/kartat/miniatyyrit/riika-riian-tuomiokirkko-kk.webp",
@@ -1117,6 +1135,7 @@
     "Polaria": "assets/kartat/miniatyyrit/tromssa-polaria-vari2-kk.webp",
   },
   "tukholma": {
+    "Kustaa III:n ooppera": "assets/kartat/miniatyyrit/tukholma-kustaa-iiin-ooppera-kk.webp",
     "Kaupungintalo": "assets/kartat/miniatyyrit/tukholma-kaupungintalo-kk.webp",
     "Riddarholmenin kirkko": "assets/kartat/miniatyyrit/tukholma-riddarholmenin-kirkko-kk.webp",
     "Sergelin tori": "assets/kartat/miniatyyrit/tukholma-sergelin-tori-kk.webp",
@@ -1166,6 +1185,7 @@
     "Wienin asema": "assets/kartat/miniatyyrit/varsova-wienin-asema-vari2-kk.webp",
   },
   "venetsia": {
+    "San Geminianon kirkko": "assets/kartat/miniatyyrit/venetsia-san-geminianon-kirkko-kk.webp",
     "Canal Grande": "assets/kartat/miniatyyrit/venetsia-canal-grande-vari2-kk.webp",
     "La Fenicen oopperatalo": "assets/kartat/miniatyyrit/venetsia-la-fenicen-oopperatalo-vari2-kk.webp",
     "Rialton silta": "assets/kartat/miniatyyrit/venetsia-rialton-silta-vari2-kk.webp",
@@ -1175,6 +1195,7 @@
     "Dogen palatsi": "assets/kartat/miniatyyrit/venetsia-dogen-palatsi-vari2-kk.webp",
   },
   "vilna": {
+    "Vilnan suuri synagoga": "assets/kartat/miniatyyrit/vilna-suuri-synagoga-kk.webp",
     "Gediminaksen torni": "assets/kartat/miniatyyrit/vilna-gediminaksen-torni-kk.webp",
     "Vilnan tuomiokirkko": "assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko-kk.webp",
     "Pyhän Annan kirkko": "assets/kartat/miniatyyrit/vilna-pyhan-annan-kirkko-kk.webp",
@@ -1204,6 +1225,8 @@
     "Basin Reserve": "assets/kartat/miniatyyrit/wellington-basin-reserve-kk.webp",
   },
   "wien": {
+    "Ringtheater": "assets/kartat/miniatyyrit/wien-ringtheater-kk.webp",
+    "Kärntnertor-teatteri": "assets/kartat/miniatyyrit/wien-karntnertor-teatteri-kk.webp",
     "Raatihuone": "assets/kartat/miniatyyrit/wien-raatihuone-kk.webp",
     "Hofburg": "assets/kartat/miniatyyrit/wien-hofburg-kk.webp",
     "Valtionooppera": "assets/kartat/miniatyyrit/wien-valtionooppera-kk.webp",

@@ -88,6 +88,7 @@
     "Hua Lamphong": 0.662,
   },
   "barcelona": {
+    "Barcelonan Ciutadellan linnake": 0.636,
     "Sagrada Família": 0.87,
     "Casa Batlló": 0.633,
     "Arc de Triomf": 0.679,
@@ -106,6 +107,8 @@
     "Yliopistomuseo": 0.564,
   },
   "berliini": {
+    "Anhalter Bahnhof": 0.757,
+    "Palast der Republik": 0.843,
     "Valtiopäivätalo": 0.599,
     "Brandenburgin portti": 0.651,
     "Checkpoint Charlie": 0.665,
@@ -113,10 +116,11 @@
     "Tv-torni": 0.9,
     "East Side Gallery": 0.683,
     "Kulta-Liisa": 0.9,
-    "Radialsystem V": 0.665,
+    "Radialsystem V": 0.629,
     "Maailmankello": 0.785,
   },
   "bryssel": {
+    "Maison du Peuple": 0.59,
     "Brysselin pörssi": 0.598,
     "Manneken Pis": 0.599,
     "Oikeuspalatsi": 0.595,
@@ -126,6 +130,7 @@
     "Kuninkaanpalatsi": 0.682,
   },
   "budapest": {
+    "Alkuperäinen Erzsébet-silta": 0.9,
     "Kalastajanlinnake": 0.745,
     "Ketjusilta": 0.891,
     "Parlamenttitalo": 0.749,
@@ -148,6 +153,7 @@
     "Santo Domingon luostari": 0.69,
   },
   "bukarest": {
+    "Văcărești-luostari": 0.802,
     "Romanian ateneum": 0.788,
     "Cișmigiun puutarha": 0.576,
     "Yliopiston aukio": 0.595,
@@ -255,6 +261,7 @@
     "Dubrovnikin katedraali": 0.624,
   },
   "edinburgh": {
+    "Old Tolbooth": 0.577,
     "Charlotte Square": 0.9,
     "Edinburghin linna": 0.812,
     "St Gilesin katedraali": 0.896,
@@ -263,6 +270,7 @@
     "Scott-monumentti": 0.9,
   },
   "firenze": {
+    "Mercato Vecchio": 0.9,
     "Duomo": 0.876,
     "Palazzo Vecchio": 0.9,
     "Uffizi": 0.802,
@@ -314,6 +322,7 @@
     "Kirjallisuuden temppeli": 0.644,
   },
   "helsinki": {
+    "Helsingin vanha rautatieasema": 0.872,
     "Temppeliaukion kirkko": 0.675,
     "Linnanmäki": 0.742,
     "Päärautatieasema": 0.702,
@@ -524,6 +533,7 @@
     "Kiovan kultainen portti": 0.9,
   },
   "kobenhavn": {
+    "Vor Frue Kirke": 0.74,
     "Amalienborg": 0.679,
     "Rundetårn": 0.75,
     "Nyhavn": 0.548,
@@ -583,6 +593,7 @@
     "Lhasan suuri moskeija": 0.675,
   },
   "lissabon": {
+    "Tejon kuninkaallinen ooppera": 0.722,
     "Rossio": 0.753,
     "São Jorgen linna": 0.762,
     "Tuomiokirkko": 0.812,
@@ -621,6 +632,7 @@
     "Turbiinihalli": 0.678,
   },
   "luxemburg": {
+    "Luxemburgin linnoitus": 0.688,
     "Adolphe-silta": 0.709,
     "Guillaume II:n aukio": 0.536,
     "Notre-Damen katedraali": 0.629,
@@ -679,6 +691,7 @@
     "Rizal-puisto": 0.785,
   },
   "marseille": {
+    "Marseillen siirtosilta": 0.9,
     "MuCEM": 0.619,
     "Marseillen katedraali": 0.606,
     "Saint-Victorin kirkko": 0.597,
@@ -720,6 +733,8 @@
     "Olympia-teatteri": 0.58,
   },
   "moskova": {
+    "Tšudovin ja Taivaaseenastumisen luostarit": 0.758,
+    "Sukharevin torni": 0.812,
     "Bolšoi-teatteri": 0.617,
     "Punainen tori": 0.714,
     "Pyhän Vasilin katedraali": 0.762,
@@ -856,6 +871,7 @@
     "Uhripaikka": 0.61,
   },
   "pietari": {
+    "Nyenskans": 0.7,
     "Pietari-Paavalin linnoitus": 0.885,
     "Talvipalatsi": 0.762,
     "Verikirkko": 0.765,
@@ -874,6 +890,7 @@
     "Vanuatun parlamenttitalo": 0.9,
   },
   "praha": {
+    "Prahan vanhan raatihuoneen itäsiipi": 0.668,
     "Petřínin näkötorni": 0.9,
     "Prahan linna": 0.9,
     "Kaarlensilta": 0.9,
@@ -890,6 +907,7 @@
     "Saudi-Arabian kansallismuseo": 0.777,
   },
   "riika": {
+    "Gogolin kadun synagoga": 0.594,
     "Vapaudenpatsas": 0.9,
     "Kolme veljestä -talot": 0.681,
     "Riian tuomiokirkko": 0.837,
@@ -1117,6 +1135,7 @@
     "Polaria": 0.657,
   },
   "tukholma": {
+    "Kustaa III:n ooppera": 0.749,
     "Kaupungintalo": 0.602,
     "Riddarholmenin kirkko": 0.815,
     "Sergelin tori": 0.726,
@@ -1166,6 +1185,7 @@
     "Wienin asema": 0.676,
   },
   "venetsia": {
+    "San Geminianon kirkko": 0.668,
     "Canal Grande": 0.577,
     "La Fenicen oopperatalo": 0.551,
     "Rialton silta": 0.678,
@@ -1175,6 +1195,7 @@
     "Dogen palatsi": 0.594,
   },
   "vilna": {
+    "Vilnan suuri synagoga": 0.591,
     "Gediminaksen torni": 0.9,
     "Vilnan tuomiokirkko": 0.613,
     "Pyhän Annan kirkko": 0.621,
@@ -1204,6 +1225,8 @@
     "Basin Reserve": 0.737,
   },
   "wien": {
+    "Ringtheater": 0.65,
+    "Kärntnertor-teatteri": 0.663,
     "Raatihuone": 0.9,
     "Hofburg": 0.9,
     "Valtionooppera": 0.699,

@@ -4435,6 +4435,9 @@ export const KAUPUNKIKARTAT = {
       + 'tehtiin 1840-luvun lopulla. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-tejo-ooppera
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Tejon kuninkaallinen ooppera', lat: 38.7075, lon: -9.1365, wiki: 'Ópera do Tejo', nosto: 'hahmotelma-tejo-ooppera' },
       /*
        * Kansallispanteonista ei ole suomenkielistä artikkelia; se jää
        * merkiksi. Glórian köysirata siirrettiin löydös 178:ssa Rossion
@@ -4527,6 +4530,9 @@ export const KAUPUNKIKARTAT = {
       + 'mainitaan ensimmäisen kerran 1217. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-ciutadella
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Barcelonan Ciutadellan linnake', lat: 41.388, lon: 2.186, wiki: 'Citadel of Barcelona', nosto: 'hahmotelma-ciutadella' },
       /*
        * Boquerian kauppahallista ja Kolumbuksen patsaasta ei ole
        * suomenkielisiä artikkeleita.
@@ -4662,6 +4668,9 @@ export const KAUPUNKIKARTAT = {
       + 'kruunutorni on 1400-luvulta. Scott-monumentti on 61 metriä korkea. '
       + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-old-tolbooth
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Old Tolbooth', lat: 55.9497, lon: -3.1915, wiki: 'Old Tolbooth', nosto: 'hahmotelma-old-tolbooth' },
       /*
        * Charlotte Squaresta ei ole suomenkielistä artikkelia, joten se
        * jää pelkäksi merkiksi. Se on silti listalla, koska se on ainoa
@@ -4719,6 +4728,9 @@ export const KAUPUNKIKARTAT = {
       + 'sen monumentaaliset portaat vihittiin 1927. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-pont-transbordeur
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Marseillen siirtosilta', lat: 43.295, lon: 5.363, wiki: 'Marseille Transporter Bridge', nosto: 'hahmotelma-pont-transbordeur' },
       /*
        * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
        * suomenkielisiä artikkeleita; molemmat jäävät merkeiksi.
@@ -4815,6 +4827,9 @@ export const KAUPUNKIKARTAT = {
       + 'käyttöön 1969. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-helsinki-vanha-asema
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Helsingin vanha rautatieasema', lat: 60.1709, lon: 24.9415, wiki: 'Helsingin päärautatieasema', nosto: 'hahmotelma-helsinki-vanha-asema' },
       /*
        * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
        * vaikka se mahtuisi: se olisi kasannut kolmannen numeron
@@ -5555,6 +5570,9 @@ export const KAUPUNKIKARTAT = {
       + 'avattiin 1896 Andrássy-kadun alle. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-erzsebet-silta
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Alkuperäinen Erzsébet-silta', lat: 47.4906, lon: 19.051, wiki: 'Elisabeth Bridge (Budapest)', nosto: 'hahmotelma-erzsebet-silta' },
       /*
        * Kolme kohdetta kummallakin rannalla, jotta kartan juoni —
        * kukkula lännessä, tasanko idässä — näkyy myös numeroissa.
@@ -5619,6 +5637,9 @@ export const KAUPUNKIKARTAT = {
       + 'mukaillen, ja se on 63,5 metriä korkea. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-praha-raatihuone
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Prahan vanhan raatihuoneen itäsiipi', lat: 50.087, lon: 14.4208, wiki: 'Old Town Hall (Prague)', nosto: 'hahmotelma-praha-raatihuone' },
       /*
        * Lännestä itään: Petřínin kukkulalta Václavin aukion yläpäähän.
        * Petřínin näkötornista ei ole suomenkielistä artikkelia, joten
@@ -5721,6 +5742,12 @@ export const KAUPUNKIKARTAT = {
       + 'metriä korkea. Schönbrunn on Unescon maailmanperintökohde vuodesta '
       + '1996. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-ringtheater
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Ringtheater', lat: 48.2133, lon: 16.3624, wiki: 'Ringtheater', nosto: 'hahmotelma-ringtheater' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-karntnertor
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Kärntnertor-teatteri', lat: 48.203, lon: 16.369, wiki: 'Theater am Kärntnertor', nosto: 'hahmotelma-karntnertor' },
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
        * 10 %:n — molemmat tarkoituksella laidassa, koska muuten
@@ -6248,6 +6275,12 @@ export const KAUPUNKIKARTAT = {
       + 'Itä-Saksa alkoi sulkea rajaa; raja avattiin 9. marraskuuta 1989. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-anhalter-bahnhof
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Anhalter Bahnhof', lat: 52.5036, lon: 13.3818, wiki: 'Anhalter Bahnhof', nosto: 'hahmotelma-anhalter-bahnhof' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-palast-der-republik
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Palast der Republik', lat: 52.5178, lon: 13.4022, wiki: 'Palast der Republik', nosto: 'hahmotelma-palast-der-republik' },
       /*
        * Järjestys on kartan numerointi (omistajan taittopäätös
        * 7.8.2026: numeroympyrät kartalla, selitteet tekstinä sen
@@ -6519,6 +6552,9 @@ export const KAUPUNKIKARTAT = {
       + '1961, ja museo avattiin 1990. Skansen perustettiin 1891. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-kustaa-ooppera
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Kustaa III:n ooppera', lat: 59.3305, lon: 18.0705, wiki: 'Royal Swedish Opera', nosto: 'hahmotelma-kustaa-ooppera' },
       /*
        * Lännestä itään: kaupungintalolta Skansenille. Jokaisen wiki on
        * tarkistettu fi.wikipedian artikkeli. Stortorget ja
@@ -6612,6 +6648,9 @@ export const KAUPUNKIKARTAT = {
       + '1792, tuhoutui tulipalossa 1996 ja avattiin uudelleen 2003. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-san-geminiano
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'San Geminianon kirkko', lat: 45.4337, lon: 12.3375, wiki: 'San Geminiano, Venice', nosto: 'hahmotelma-san-geminiano' },
       /*
        * Numerointi seuraa Canal Grandea lännestä itään, eli samassa
        * järjestyksessä kuin vaporetto ajaa. Jokaisen wiki on
@@ -7184,6 +7223,9 @@ export const KAUPUNKIKARTAT = {
     kainalot: [
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
         x: 20.625, y: 24.375, leveys: 16.25, korkeus: 15.54 },
+      // Văcăreștin luostarin kainalo (PT 31.10.2026, kadonneet ihmeet; tools/piirra-kaupunkikartta.mjs bukarest).
+      { rajat: { pohjoinen: 44.4085, etela: 44.3995, lansi: 26.1107, ita: 26.1233 },
+        x: 68, y: 68, leveys: 12, korkeus: 11.83 },
     ],
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
@@ -7203,6 +7245,9 @@ export const KAUPUNKIKARTAT = {
       + 'tieltä purettiin suuri osa Uranuksen kaupunginosaa. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-vacaresti
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Văcărești-luostari', lat: 44.404, lon: 26.117, wiki: 'Văcărești Monastery', nosto: 'hahmotelma-vacaresti' },
       /*
        * Numerointi pohjoisesta etelään: ateneumilta vanhaankaupunkiin
        * ja siitä lounaaseen Parlamenttipalatsille. Antipan museo on
@@ -7459,6 +7504,11 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/pietari-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
+    // Nyenskansin kainalo (PT 31.10.2026, kadonneet ihmeet; tools/piirra-kaupunkikartta.mjs pietari).
+    kainalot: [
+      { rajat: { pohjoinen: 59.946, etela: 59.937, lansi: 30.401, ita: 30.419 },
+        x: 68, y: 40, leveys: 12, korkeus: 10.8 },
+    ],
     piirtoRajat: { pohjoinen: 59.965, etela: 59.909, lansi: 30.2651, ita: 30.3659 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
@@ -7477,6 +7527,9 @@ export const KAUPUNKIKARTAT = {
       + 'järjestelmän 1869, kun hän opetti Pietarin yliopistossa. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-nyenskans
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Nyenskans', lat: 59.9415, lon: 30.41, wiki: 'Nyenskans', nosto: 'hahmotelma-nyenskans' },
       /*
        * Numerointi pohjoisesta etelään. Tämä on pelin ainoa
        * kaupunkikartta, jolla kaikilla kuudella kohteella on
@@ -7555,6 +7608,11 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/moskova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+    // Sukharevin tornin kainalo (PT 31.10.2026, kadonneet ihmeet; tools/piirra-kaupunkikartta.mjs moskova).
+    kainalot: [
+      { rajat: { pohjoinen: 55.777, etela: 55.768, lansi: 37.6245, ita: 37.6405 },
+        x: 68, y: 32, leveys: 12, korkeus: 11.33 },
+    ],
     piirtoRajat: { pohjoinen: 55.7748, etela: 55.7252, lansi: 37.5759, ita: 37.6591 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
@@ -7573,6 +7631,12 @@ export const KAUPUNKIKARTAT = {
       + 'kiinalaistyylinen ulkoasu on vuodelta 1896. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-tsudov
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Tšudovin ja Taivaaseenastumisen luostarit', lat: 55.752, lon: 37.6195, wiki: 'Chudov Monastery', nosto: 'hahmotelma-tsudov' },
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-sukharev
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Sukharevin torni', lat: 55.7725, lon: 37.6325, wiki: 'Sukharev Tower', nosto: 'hahmotelma-sukharev' },
       /*
        * Numerointi pohjoisesta etelään.
        *
@@ -7938,6 +8002,9 @@ export const KAUPUNKIKARTAT = {
       + 'paljastettiin Langeliniella 1913. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-vor-frue-keskiaika
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Vor Frue Kirke', lat: 55.6795, lon: 12.573, wiki: 'Church of Our Lady, Copenhagen', nosto: 'hahmotelma-vor-frue-keskiaika' },
       /*
        * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
        * Tanskan kuninkaanlinna vaan ruotsalainen panimo
@@ -8160,6 +8227,9 @@ export const KAUPUNKIKARTAT = {
       + 'se avattiin 1903. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-luxemburgin-linnoitus
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Luxemburgin linnoitus', lat: 49.6117, lon: 6.1365, wiki: 'Fortress of Luxembourg', nosto: 'hahmotelma-luxemburgin-linnoitus' },
       {
         nimi: 'Adolphe-silta', lat: 49.6083, lon: 6.1270,
         aika: '1900–1903',
@@ -8352,6 +8422,9 @@ export const KAUPUNKIKARTAT = {
       + '1950- ja 1960-luvuilla. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-maison-du-peuple
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Maison du Peuple', lat: 50.839, lon: 4.348, wiki: 'Maison du Peuple, Brussels', nosto: 'hahmotelma-maison-du-peuple' },
       { nimi: 'Brysselin pörssi', lat: 50.84795, lon: 4.34916, wiki: 'Brysselin pörssi' },
       { nimi: 'Manneken Pis', lat: 50.84499, lon: 4.34999, wiki: 'Manneken Pis' },
       {
@@ -8887,6 +8960,9 @@ export const KAUPUNKIKARTAT = {
       + 'silta, jota ei räjäytetty 1944. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-mercato-vecchio
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Mercato Vecchio', lat: 43.7716, lon: 11.254, wiki: 'Piazza della Repubblica, Florence', nosto: 'hahmotelma-mercato-vecchio' },
       /*
        * NELJÄ ANSAA fi.wikipediassa, kaikki tarkistettu
        * rajapinnasta (17.8.2026, täydennys 18.8.2026):
@@ -9020,6 +9096,9 @@ export const KAUPUNKIKARTAT = {
       + 'ilmalaivahallien rungoista ja avattiin 1930. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-gogolin-synagoga
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Gogolin kadun synagoga', lat: 56.944, lon: 24.117, wiki: 'Great Choral Synagogue (Riga)', nosto: 'hahmotelma-gogolin-synagoga' },
       /*
        * NELJÄLLÄ KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
        * Kaksi ansaa kirjattu tähän, jotta niihin ei astuta uudelleen:
@@ -9063,6 +9142,9 @@ export const KAUPUNKIKARTAT = {
       + 'huhtikuuta 1997. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
+      // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-suuri-synagoga-vilna
+      // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
+      { nimi: 'Vilnan suuri synagoga', lat: 54.6803, lon: 25.285, wiki: 'Great Synagogue of Vilna', nosto: 'hahmotelma-suuri-synagoga-vilna' },
       /*
        * KOLMELLA KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
        * fi.wikipediassa ei ole artikkelia Gediminaksen tornista,

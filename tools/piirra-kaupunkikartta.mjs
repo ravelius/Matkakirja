@@ -1005,6 +1005,12 @@ const KAUPUNGIT = {
         rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
         x: 20.625, y: 24.375, leveys: 16.25, suunta: '1 km pohjoiseen',
       },
+      // VĂCĂREȘTIN LUOSTARIN KAINALO (PT 31.10.2026, kadonneet ihmeet): luostarin paikka (44.404, 26.117) on rajauksen
+      // kaakkoispuolella. Oikea alakulma ydinalassa, jossa ei kohteita.
+      {
+        rajat: { pohjoinen: 44.4085, etela: 44.3995, lansi: 26.1107, ita: 26.1233 },
+        x: 68, y: 68, leveys: 12, suunta: '3 km kaakkoon',
+      },
     ],
   },
   sarajevo: {
@@ -1099,6 +1105,14 @@ const KAUPUNGIT = {
     // Lisäksi Pietarissa ei ole tyhjää nurkkaa mihin ruutu sopisi.
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    // NYENSKANSIN KAINALO (PT 31.10.2026, kadonneet ihmeet): linnoitus Ohtan suulla (59.9415, 30.41) 5 km itään.
+    // Ruutu ydinalan oikeaan laitaan, jossa ei kohteita (mitattu kohdepisteistä 31.10.2026).
+    kainalot: [
+      {
+        rajat: { pohjoinen: 59.946, etela: 59.937, lansi: 30.401, ita: 30.419 },
+        x: 68, y: 40, leveys: 12, suunta: '5 km itään',
+      },
+    ],
   },
   moskova: {
     // TÄMÄ RAJAUS ON TAHALLAAN ISOMPI KUIN PITÄISI, ja syy on mitattu.
@@ -1120,6 +1134,14 @@ const KAUPUNGIT = {
     // keskellä. Kaikki kolme ovat lehden juttuja, ei kartan kohteita.
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    // SUKHAREVIN TORNIN KAINALO (PT 31.10.2026, kadonneet ihmeet): Sukharevin aukio (55.7725, 37.6325) on rajauksen
+    // pohjoispuolella. Oikea yläosa ydinalassa, jossa ei kohteita.
+    kainalot: [
+      {
+        rajat: { pohjoinen: 55.777, etela: 55.768, lansi: 37.6245, ita: 37.6405 },
+        x: 68, y: 32, leveys: 12, suunta: '3 km pohjoiseen',
+      },
+    ],
   },
   odessa: {
     // Kolmiosainen kuva: oikea kolmannes merta, yläreunassa satama
