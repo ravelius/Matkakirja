@@ -2218,3 +2218,14 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - SEURAAVAKSI: (a) tarkistus → jos 0: paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-20261031 (tausta-v82, muurikate-v30, rakennukset-v86
   kun f-taihemen valmis; LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md) → VS (local_3b36fe96-…: palat + alueet + varjostajat.json:t, parit 02/03/06)
   + PT ≤ 3 riviä. (b) osasarja-v6 valmis → paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> → PK + PT. (c) levyraja takaisin 82.
+
+## LISÄYS 161 (31.10. 12.5x): LEIVONTA v1 -PAKETTI VIETY — ALOITA TÄSTÄ
+- f-taihemen leivottu 12.37 → rakennukset-v86 136/136. Tarkistus tausta-v82 (uusinta/tarkistus-tausta-v82b.txt): ehtoalueilla kuja-0-3 T-liitos 1 ja kuja-1-3
+  "aukko" 28 ruutua (tarkistimen reunasääntö); muualla tiedoksi (tummat tuplat 2405).
+- PT 12.5x: paketti nyt, poikkeamat LAHTEET.md:hen → _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-20261031 (tausta-v82, muurikate-v30, rakennukset-v86;
+  SHA256SUMS 6c040967e35a; uusinta/paketti_leivonta_v1.zsh + LAHTEET-leivonta-v1.md). VS, PK ja PT ilmoitettu.
+- KUJA 0-3: T-liitoskorjaus onnistui MATERIAALI=V4_kujakivi_lattia (8 jakoa; reunamateriaalin kanssa jumittui) → tausta-v81-lahde. uusinta/kuja03.zsh (pid 69838,
+  ajo-kuja03.log) odottaa osasarja-v6:n (pid 40768) → tausta-v83 = v82 + kuja-0-3 uudelleen + tarkistus (tarkistus-tausta-v83.txt). Sitten pieni paketti
+  (_valmiit/juoksupeli-kk-lavastaja-tausta-v83-vienti-<pvm>, vain kielletty-tausta-v83) → VS + PK + PT.
+- OSASARJA-v6: ~2 min/ruutu (33/86 klo 12.49) → valmis ~14.40; sitten karki.bin, paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> → PK + PT.
+- Kaiken jälkeen levyvahdin raja takaisin 82 (PT 01.2x).
