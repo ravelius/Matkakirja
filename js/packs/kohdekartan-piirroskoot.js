@@ -237,6 +237,7 @@
     "Tekstiilisuuk": 0.695,
   },
   "dublin": {
+    "Nelsonin pylväs": 0.9,
     "Guinness-panimo": 0.868,
     "Patrickin katedraali": 0.852,
     "Dublinin linna": 0.845,
@@ -322,6 +323,7 @@
     "Uspenskin katedraali": 0.742,
     "Johanneksenkirkko": 0.9,
     "Suomenlinna": 0.716,
+    "Sibeliuksen puisto": 0.629,
   },
   "hongkong": {
     "Tsim Sha Tsuin kellotorni": 0.9,
@@ -369,6 +371,8 @@
     "Chahar Baghin koulu": 0.645,
   },
   "istanbul": {
+    "Pyhien apostolien kirkko": 0.732,
+    "Konstantinopolin suuri palatsi": 0.724,
     "Suuri basaari": 0.841,
     "Sininen moskeija": 0.9,
     "Hagia Sofia": 0.9,
@@ -597,6 +601,11 @@
     "Lohikäärmesilta": 0.696,
   },
   "lontoo": {
+    "Greenwichin palatsi": 0.878,
+    "Newgaten vankila": 0.772,
+    "Euston Arch": 0.825,
+    "Vanha Westminsterin palatsi": 0.73,
+    "Whitehallin palatsi": 0.782,
     "Buckinghamin palatsi": 0.763,
     "Trafalgar Square": 0.9,
     "Big Ben": 0.9,
@@ -791,6 +800,13 @@
     "Akershus": 0.522,
   },
   "pariisi": {
+    "Grand Châtelet": 0.63,
+    "Temple-torni": 0.789,
+    "Palais d'Orsay": 0.878,
+    "Palais de l'Industrie": 0.9,
+    "Trocadéron palatsi": 0.9,
+    "Galerie des Machines": 0.802,
+    "Les Hallesin hallit": 0.785,
     "Eiffel-torni": 0.9,
     "Riemukaari": 0.759,
     "Concorden aukio": 0.9,
@@ -894,6 +910,8 @@
     "Passeio Público": 0.715,
   },
   "rooma": {
+    "Septizodium": 0.678,
+    "Jupiterin temppeli": 0.624,
     "Pietarinkirkko": 0.843,
     "Castel Sant’Angelo": 0.832,
     "Espanjalaiset portaat": 0.9,
@@ -1136,6 +1154,9 @@
     "Ramnagarin linnoitus": 0.655,
   },
   "varsova": {
+    "Aleksanteri Nevskin katedraali": 0.622,
+    "Varsovan suuri synagoga": 0.591,
+    "Saksin palatsi": 0.9,
     "Vanhankaupungin tori": 0.701,
     "Varsovan linna": 0.9,
     "Kopernikuksen tiedekeskus": 0.839,

@@ -44,10 +44,11 @@
   "1.63": "bc9bd2680b093976",
   "1.64": "a7d69237b2a11d79",
   "1.65": "43301da4c1caa3be",
-  "1.66": "f0a3305d04f89780"
+  "1.66": "f0a3305d04f89780",
+  "1.67": "32f04df5cff5f6ac"
  },
  "uusin": {
-  "skeemaversio": "1.66",
+  "skeemaversio": "1.67",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -545,6 +546,7 @@
     "data",
     "id",
     "ihme",
+    "korostukset",
     "kuva",
     "kysymykset",
     "lahde",

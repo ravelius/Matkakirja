@@ -272,7 +272,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (KohdekarttaNakyma, NUI juna 216) käyttää niitä; puuttuva kokoelma tai nimi = miniatyyrit-kokoelman kuva.
  *        Striimikartta käyttää aina alkuperäistä. Vanhat buildit ohittavat kokoelman.
  */
-export const SKEEMAVERSIO_TARKKA = '1.66';
+/*
+ *   1.67 monumentit.korostukset (valinnainen, ['perusmuoto|taivutettu', …]): kadonneet ihmeet Euroopan kaupunkikartoille
+ *        (Karttaseppä 31.10.2026; omistaja 12.49, PT hyväksyi tekstit) tuovat monumentteihin omat korostukset kuten
+ *        fokuskohteilla. Natiivi korostaa ne tekstissä kuten fokuskohteissa; vanhat buildit ohittavat kentän.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.67';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

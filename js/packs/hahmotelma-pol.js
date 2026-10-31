@@ -56,7 +56,10 @@
  */
 
 /** Puolan hahmotelmanostot: sisällölliset kohteet kaupunkien ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_POL = [
+  ...(EUROOPAN_KADONNEET.POL ?? []),
   {
     id: 'hahmotelma-bialowieza',
     kuva: {
