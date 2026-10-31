@@ -5,7 +5,8 @@ työnsä rajalla."). Asennus: bash tools/hooks/asenna-kontekstivahti-hook.sh (om
 
 Rooli päätellään session kansiosta (cwd), rajat Raamattu 7.37 NOLLAUSRAJAT ROOLEITTAIN (pehmeä–kova):
 Postivahti 20–30; Laitetestaaja ja Äänittäjä 30–40; muut roolit 25–35. Päätoimittajan ja Keskustelukanavan
-yhteinen kansio Matkakirja-fable ohitetaan: sillä on oma vahti (pt-taulu-muistutus.py).
+yhteinen kansio Matkakirja-fable ohitetaan: sillä on oma vahti (pt-taulu-muistutus.py). Koskee vain kansioita
+/Users/Shared/Claude/Matkakirja-* ja /Users/Shared/Claude/wt/* (ei omistajan muita projekteja).
 Mittaus enintään kerran 2 minuutissa ja muistutus enintään kerran 10 minuutissa per laji ja sessio
 (tila /Users/Shared/Claude/hooks/.kontekstivahti-tila.json). Ei koskaan estä mitään; virheessä hiljaa.
 """
@@ -16,6 +17,7 @@ import time
 
 TILA = "/Users/Shared/Claude/hooks/.kontekstivahti-tila.json"
 OHITA = "/Users/Shared/Claude/Matkakirja-fable"
+KOSKEE = ("/Users/Shared/Claude/Matkakirja-", "/Users/Shared/Claude/wt/")  # KK 31.10. 22.2x: ei omistajan muita projekteja
 MITTAUSVALI = 120
 VALI = 600
 IKKUNA = 1_000_000  # get_usage: contextWindow 1000000
@@ -80,7 +82,7 @@ def main():
     except ValueError:
         return
     cwd = str(d.get("cwd") or os.getcwd())
-    if cwd.rstrip("/") == OHITA:
+    if cwd.rstrip("/") == OHITA or not cwd.startswith(KOSKEE):
         return
     polku = str(d.get("transcript_path") or "")
     sessio = str(d.get("session_id") or "")
