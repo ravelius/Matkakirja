@@ -12,8 +12,8 @@ Proto-worktree wt/proto-pelikoodari-reitti-216 (pelikoodari/reitti-216, kärki 6
 - Koejuuri _tyo/pelikoodari/reitti-216/lzm/juuri (= juuri-r89 + oma avoimet-sijoitus.json arvioidulla liitoksella):
   MK_VERKKO_KOHTA=-117,171 → verkko kulkee aukosta z ≈ 170–172, profiili 0 → 0,70 → 0, ei rakennusten läpi.
 - LOD-erä: koekohtauksen 06 sauma EI ole LOD:n syytä. LAV löysi syyn: kk-ulkorengas-3-2:n lod2-kieleke, ja korjaus on ulkorengas-v10
-  (_valmiit/juoksupeli-kk-lavastaja-ulkorengas-v10-vienti-20261031). PT:ltä on kysytty, viedäänkö tausta-lod-216 silti junaan.
-  Oletus: ei. Kuvat _tyo/pelikoodari/tausta-lod-216/pari-06.jpg ja sauma-06-rajaus.jpg.
+  (_valmiit/juoksupeli-kk-lavastaja-ulkorengas-v10-vienti-20261031). PT 22.1x: tausta-lod-216 EI junaan 216
+  (sauma ei liity LODiin); VS tekee parin 06 ulkorengas-v10:llä. Kuvat _tyo/pelikoodari/tausta-lod-216/pari-06.jpg ja sauma-06-rajaus.jpg.
 
 ## Ajossa
 - d2 (_tyo/pelikoodari/reitti-216/d2, aja-d2.zsh taustalla, loki aja-d2.log) jonottaa linjalla 2 VS:n ajojen jälkeen.
