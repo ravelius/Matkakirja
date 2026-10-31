@@ -151,6 +151,14 @@ def varjo(im, asetus):
     return Image.alpha_composite(pohja, im)
 
 
+def _kangas(im):
+    """Kankaan mitat ja alfakanavan tiiviste (PT 31.10.: tasaus muuttaa vain sävyjä, ei kokoa, rajausta eikä alfaa)."""
+    import hashlib
+    im = im.convert('RGBA')
+    return {'leveys': im.width, 'korkeus': im.height,
+            'alfa': hashlib.sha256(im.getchannel('A').tobytes()).hexdigest()[:16]}
+
+
 def main():
     komento, argit = sys.argv[1], sys.argv[2:]
     if komento == 'mittaa':
@@ -162,7 +170,8 @@ def main():
         for sisaan, ulos in zip(argit[1::2], argit[2::2]):
             kuva, ennen, jalkeen, kertoimet = tasaa(Image.open(sisaan), tavoite)
             varjo(kuva, asetus.get('varjo')).save(ulos, 'WEBP', quality=asetus.get('webp_laatu', 92), method=6, exact=True)
-            tulos[ulos] = {'ennen': ennen, 'jälkeen': jalkeen, 'kertoimet': kertoimet}
+            tulos[ulos] = {'ennen': ennen, 'jälkeen': jalkeen, 'kertoimet': kertoimet,
+                           'kangas': {'alkuperäinen': _kangas(Image.open(sisaan)), 'tasattu': _kangas(Image.open(ulos))}}
         print(json.dumps(tulos, ensure_ascii=False))
 
 
