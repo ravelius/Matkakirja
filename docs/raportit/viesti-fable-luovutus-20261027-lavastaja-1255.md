@@ -2374,3 +2374,7 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
   seinät ja katto jäisivät ja syntyisi reikiä; kuva kuvat-v89/laatta-ennen-jalkeen-lod0.png. Tee uusi v89 eri nimellä tai siirrä nämä sivuun.
 - ODOTTAA: VS:n pari tausta-v88:sta (LISÄYS 171), PT:n kuittaus Notre-Dame v6k29:stä (LISÄYS 172). Ei ajoja käynnissä, ei herätyksiä.
 - PK:n c4-havainto: leijuvat harjakoristeet ovat 1-2:n katoilla, joita ei näy alta (sama syy kuin portissa: katto näkyy vain ylhäältä).
+- LISÄYS 174 (31.10. 21.4x, VS): tausta-v88 OK turkoosin kaistan ja terassin osalta (esikatselu 20261031-205709, 70 kuvaa); kultaisia tai harmaita
+  kattolaikkuja ei näy. JÄÄ: pieniä harmaita kuviottomia marmorikiiloja muurien juurella kapeilla kujilla (b-08…11, b-16, b-18, b-19), jäivät
+  tasot-rajan alle (< 30 m² tai y ≤ 0,3) → v89:ssä tausta_tasot_lattiaksi.py ilman rajoja (ALA=0 YMIN=0 tai kaikki V4_marmori-vaakapinnat →
+  V4_lattia; portaat ja kaiteet sitten myös, mikä on VS:n ehdotus). Kuvat _tyo/linssiseppa2/reitti-v88/v88-epailyt.jpg ja kooste-v88-a.jpg (rivit 2–3).
