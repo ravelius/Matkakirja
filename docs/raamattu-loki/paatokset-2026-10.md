@@ -3305,3 +3305,7 @@ Frauenkirche).
 ## EI AIKA-ARVIOITA OMISTAJALLE (omistaja 31.10. klo 13.33) (31.10.2026 klo 13.33)
 
 Omistaja 13.33 KK:n kautta (sanatarkasti): "Sinun ei tarvitse jatkossa antaa aika arvioita. Ne eivät yleensä pidä paikkaansa". Kirjattu Raamattuun 7.31: omistajalle, KK:lle välitettäväksi ja Asemataulun omistajalle näkyviin teksteihin ei valmistumisarvioita eikä kellonaika-ennusteita; kerrotaan vain työn alla oleva ja valmis, kun valmis. Roolien keskinäinen aikataulutus saa jatkua.
+
+## EI SELITEKAISTAA OMISTAJAN KUVISSA; KIERROKSEN TEKSTITYS SAA PEITTÄÄ (omistaja 31.10. klo 13.45) (31.10.2026 klo 14.48)
+
+Omistaja 13.45 KK:n kautta NUI:n todistuskuvan K3 jälkeen (sanatarkasti): "Älä laita tekstiä kuvan päälle" / "Siis noita mustalla pohjalla olevia selitys tekstejä" / "Tekstitys saa mennä kuvan päälle. Vain napit pitää jäädä korin päälle". 1) Omistajalle menevissä kuvissa ja videoissa ei mustaa selitekaistaa tai muuta selitetekstiä kuvan päällä (vahvistaa 24.10. raaka-säännön, Raamattu 4.48/9.10), kaikille rooleille; selite viestiin tai tiedostonimeen. 2) Kaupunkikierros: tekstitys saa peittää näkymää, napit pysyvät korin päällä; kameran rajaus korin reunan ja ylä-UI:n väliin ennallaan.
