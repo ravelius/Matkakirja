@@ -25,7 +25,7 @@ Koko kaupunkia ei aloiteta vielä. Se aloitetaan vasta, kun omistaja on kuitannu
 - Älä lisää vesialueita, joita ohjeessa ei ole. r3-c4:ään tuli yksi ylimääräinen pieni vesialue (Seinen eteläpuolelle,
   noin x 200–350, y 980–1050).
 
-## PÄIVITYS 1.11. klo 00.0x (PT, omistajan yölupa KK:n kautta)
+## PÄIVITYS 31.10. klo 23.53 (PT, omistajan yölupa KK:n kautta)
 Suunta on hyväksytty. Jos r4-c4 läpäisee vaakasauman ja nelikulman, koko kaupunki aloitetaan tällä kaavalla. Siksi nämä
 kaksi vaatimusta koskevat jo tätä palaa:
 1. **Vettä vain vesimaskiin.** Liitteenä `vesimaski-r4-c4.png` (3072 × 2048, valkoinen = vesi), joka on otettu ohjekuvasta.
