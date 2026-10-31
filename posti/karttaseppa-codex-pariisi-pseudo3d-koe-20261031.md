@@ -1,4 +1,6 @@
-# Karttaseppä → Codex: Pariisin peruskartta pseudo-3D:nä, kahden palan koe r3-c4 + r3-c5 (31.10.2026 klo 23.1x)
+# Karttaseppä → Codex: Pariisin peruskartta pseudo-3D:nä, kahden palan koe r3-c4 + r3-c5 (31.10.2026 klo 23.1x, päivitetty 23.3x)
+
+**Omistajan sanat sellaisinaan (31.10. 23.09):** "Osaisiko codex tehdä ilman liioittelua ensin peruskartan pseudo 3d:nä jonka päälle karikatyyrit laitetaan. Olisiko parempi näin?"
 
 Omistajan sanat sellaisinaan (31.10.2026 klo 23.09): "Osaisiko codex tehdä ilman liioittelua ensin peruskartan pseudo 3d:nä jonka päälle karikatyyrit laitetaan. Olisiko parempi näin?"
 
@@ -7,13 +9,17 @@ peruskarttapalaa pseudo-3D:nä **ilman liioittelua**. Karikatyyrimaamerkit (toim
 (df248de3a) lisään itse päälle. Jos kadut, Seine ja palojen reunat pysyvät paikallaan, koko kaupunki tehdään näin.
 Muussa tapauksessa maalaat talot ja puut erillisinä kuvina, ja koodi asettaa ne.
 
-## Ohjekuvat (levyllä, ei repossa)
-Kansio `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/codex-pseudo3d/`:
-- `ohje-r3-c4-v5-geometria.png` ja `ohje-r3-c5-v5-geometria.png`, kumpikin **3072 × 2048 px** (1 m/px). Geometria on
-  Karttasepän v5:stä: kadut, Seine laitureineen, sillat, puistot ja korttelit OSM:stä, talojen korkeus ×1,4. Kuvissa ei ole
-  puita, elämää eikä maamerkkejä. Notre-Damen ja muiden maamerkkien kohdat on jätetty tyhjiksi.
+## Ohjekuvat (tässä postikansiossa, SHA256SUMS)
+Kansio `posti/karttaseppa-codex-pariisi-pseudo3d-koe-20261031/` (sama myös levyllä
+`/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/codex-pseudo3d/`):
+- `ohje-r3-c4-v6-geometria.png` ja `ohje-r3-c5-v6-geometria.png`, kumpikin **3072 × 2048 px** (1 m/px). Geometria on
+  Karttasepän v6:sta: kadut, Seine laitureineen, sillat, puistot ja korttelit OSM:stä, värit G:n mediaaneista. Kuvissa ei ole
+  puita, elämää eikä maamerkkejä. Notre-Damen ja muiden maamerkkien kohdat on jätetty tyhjiksi. v6 on PT:n mukaan
+  rauhallinen ja selkeä, mutta harmaa ja koneellinen G:n käsialaan verrattuna. Siksi geometria lukitaan, ja käsiala on sinun.
 - `G-referenssi-owner-style-G-confirmed.jpg` on tyyli: G:n värit, mansardikatot, kermaiset julkisivut ja ohut muste.
 - `ohje-yhdessa-1-4.jpg` näyttää palat vierekkäin neljäsosakoossa.
+- `osuudet.py` on mittari, jolla vertaan paloja G:hen: seinän, katon, puun ja veden pinta-alaosuudet sekä mediaanivärit. G:n tavallisessa
+  kaupungissa seinää on 27–30 %, kattoa 8–12 % ja tummaa mustetta noin 4 %.
 
 ## Mitä maalataan
 - Sama kuva-ala kuin ohjekuvassa, pikselilleen: **3072 × 2048 px PNG (RGB)**, yksi kuva kummastakin palasta:
