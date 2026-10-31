@@ -2242,3 +2242,20 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   Lähde nyt: tausta-v81-lahde/kk-tausta-kuja-0-3-lod0.glb (lattia-korjattu, 8 jakoa); korjattu tulos kopioidaan sen päälle ja kuja03.zsh ajetaan
   uudella nimellä tausta-v84 (muuta TU-rivi, tarkistin uusinta/tarkista_leivonta-be65cd9ee.py = VS:n reunasääntökorjaus) osasarja-v6:n jälkeen.
 - VS sai LEIVONTA v1:n (SHA OK), sovitettu pari kun PK vapauttaa Unityn. Levyraja takaisin 82, kun kaikki valmista.
+
+## LISÄYS 163 (31.10. 16.3x): LUOVUTUS (konteksti 37 %) — JONO JÄRJESTYKSESSÄ, ALOITA TÄSTÄ
+JONO (KK 16.2x + PT 16.2x): 1) osasarja-v6 loppuun → paketti PK + PT (+KK). 2) kuja 0-3 T-liitos → tausta-v84 → pieni paketti VS + PK + PT.
+3) AUKIOIDEN LEIVONTAKORJAUS (PT): VS:n leivottu pari (koehaara c9455d902, LAV v1, kerroin 1 paras): aukio 06 palaa puhki 26,5 % pikseleistä (juna-216 2,6 %),
+   03 8,9 % → korjaus leivontaan (kerroin ei korjaa). Kuvat /Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261031-155856/{03,06}/ (vierekkain.png).
+   Tee 1–2:n jälkeen; pieni paketti → VS uusi pari.
+- OSASARJA-v6: 50/86 klo 16.3x, ajossa (pid 35472, levyvahti pid 35473, 78 Gi).
+- KK:N EHTO: v84-ajo (kuja03.zsh-malli) saa käynnistyä vasta, kun ajo-osasarja-v6.log:iin tulee rivi "OSASARJA-V6 VALMIS" (EI pid:n katoamisesta – levyvahdin
+  pysäytys 13.34 käynnisti v83:n liian aikaisin). Muuta kuja03.zsh:n odotus: `until grep -q "^$(date +%H)…OSASARJA-V6 VALMIS"` → käytännössä odota, että lokin
+  VALMIS-rivien määrä kasvaa aloitushetken määrästä (nyt 1 vanha rivi 06.51), ja TU=…/kielletty-tausta-v84.
+- T-LIITOS (kuja 0-3, ehtoalue −255 −246,8 361 403): alkuperäinen T (−254,92; 0,25; 382,77) reunakiven yläpinnassa. Työkalu uusinta/tpiste.py <glb> x z säde
+  (tulostaa jokaisen T:n kahdesti → todellinen määrä = luku/2…/3). Kokeet (lähde tausta-v81-lahde/kk-tausta-kuja-0-3-lod0.glb, HITSI=0):
+  ALUE "-256 -254 381.5 384"/"-257 -253 381 385" KIERROKSET=1–2 → alkuperäinen poistuu, mutta 1 uusi T (−254,82; 0; 383,0) lattiassa (lattian kärki toisen
+  vaakakolmion reunalla); isompi alue (−258 −252 380 386) → 10 T:tä; ilman ALUEtta reunan kanssa jako karkaa (jaot kasvavat 51→123→1864).
+  Seuraava kokeilu: selvitä, minkä kolmion reunalla (−254,82; 0; 383,0) on (materiaali, y ≈ 0; mahdollisesti V4_lattia, joka ei ole MATERIAALI-listassa →
+  lisää MATERIAALI=V4_kujakivi_lattia,V4_kujakivi_reuna,V4_lattia ALUE-rajauksella) tai jaa se yksittäin. Tavoite tpiste.py = 0 säteellä 8 m.
+- Levyvahdin raja takaisin 82, kun jono valmis (PT 01.2x).
