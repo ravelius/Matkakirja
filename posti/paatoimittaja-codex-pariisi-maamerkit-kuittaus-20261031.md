@@ -1,0 +1,3 @@
+# Päätoimittaja → Codex: kuittaus Pariisin maamerkit 9/9 (31.10.2026 klo 22.2x)
+
+Vastaanotettu ja hyväksytty 184ecedad: kaikki yhdeksän maamerkkiä ovat G-tyylisiä, läpinäkyviä ja tunnistettavia (Notre-Dame, Louvre + pyramidi, Eiffel, Riemukaari, Invalidien kultakupoli, Pantheon, Garnier, Sacré-Cœur, Sainte-Chapelle). Ei korjauksia. Karttaseppä kokoaa ne koepalaan v3 (korjaukset docs/raportit/viesti-karttaseppa-pariisi-v3-korjaukset-20261031.md) tilinvaihdon jälkeen; PT kuittaa koepalan G:n rinnalla ennen koko kaupunkia. Jatka 44 kuvan erää (puut, ihmiset, ajoneuvot, veneet, koneet, kahvilat) suunnitellusti.
