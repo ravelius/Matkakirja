@@ -3363,3 +3363,7 @@ Omistaja ohjasi Codexia suoraan (sääntö 21.10. 08.45), Codexin posti d0191a33
 ## PARIISI VALMIIKSI (omistaja 31.10.2026 klo 19.52) (31.10.2026 klo 19.54)
 
 KK välitti sanatarkasti: "Tehkää Pariisi valmiiksi" (kaappaus docs/raportit/kaappaukset/omistaja-20261031/kk-1952-codex-pariisi-valmiiksi.png; Codexissa "Toimita claudelle"). Ketju ilman välipysähdyksiä omistajalle: Karttaseppä lukittu pohja 5 × 9 → Codex piirtää kaikki tuotantopalat G-tyylillä zoomin tarkkuudella → Karttaseppä kokoaa saumattomaksi (häivytys + Suorista-nappi, 17.43; OSM-attribuutio näkyviin). Valmis Pariisi pelistä KK:lle G-kuvan rinnalla samasta kulmasta. Jos juna 216 valmis ennen Pariisia → KYSYMYS KK:lle (ei oletusta). PT:n tilaus Codexille 80b4fb3f7.
+
+## MUSEOIDEN METROKARTTA KUIN KAUPUNKIKIERROKSELLA (omistaja 31.10.2026 klo 21.07) (31.10.2026 klo 21.07)
+
+Omistaja kysyi 21.06: "Onko metrokartta päivitetty jo museoihin myös?". KK:n kortti "Tehdäänkö museoiden metrokarttaan samat muutokset kuin kaupunkikierrokseen?" → "Kyllä, junaan 216 (Suositus)" (selite: "Otsikko pois, kartta pienenee kohteessa ja nimi siirtyy yläreunaan, pehmeät siirtymät."). Taidemuseo ja taidehalli: Kierrostila (154b318f0) kuten kierroksella, periaate 8. Natiivi-UI, juna 216.
