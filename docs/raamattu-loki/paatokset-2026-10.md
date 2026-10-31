@@ -3317,3 +3317,12 @@ Omistaja (KK:n välittämä, sanatarkasti): "Tili vaihdossa uudella tilillä van
 ## KAMERA: KATSE EI NOUSE LASKEUTUESSA, KOKO RAKENNUS KORIN YLÄPUOLELLA (omistaja 31.10.2026 klo 16.51) (31.10.2026 klo 16.52)
 
 Omistaja (KK:n välittämä kortin vastaus "Hyväksytkö Notre-Damen kameran?", NUI 967630faa, sanatarkasti): "Kip jäi nyt ylemmäs eikä kirkko näkynyt sen takia vieläkään kokonaan vaikka kamera kääntyi alaspäin. Lisäksi kamerakulma ei saa nousta ylös välillä kun laskeudutaan alas." Linjaus kaikkiin pysähdyksiin: kippi matalammalle, koko rakennus korin yläpuolella; laskeutuessa katse ei nouse välillä ylös (yleinen kamerasääntö). Raamattu 2.82. NUI korjaa.
+
+## PARIISIN PIIRROSKARTAN KOEPALA JUNAN 216 JÄLKEEN (omistaja 31.10.2026 klo 17.11) (31.10.2026 klo 17.12)
+
+Omistaja 16.54 (kuva tiny.london/world, docs/raportit/kaappaukset/omistaja-20261031/tiny-london-world-1654.png), sanatarkasti: "Voisiko näitä käyttää hyväksi?" + "ei siis välttämättä suoraan, mutta
+jos jotenkin sovelletaan" + "Voiko noita jo tehtyjä käyttää?". Kortti 17.11 "Tehdäänkö Pariisista piirroskartan koepala junan 216 jälkeen?" → "Kyllä, junan 216 jälkeen (Suositus)" (selite: Cité-saari
+ja Louvre koko kaupunkina Akropolis-tyylillä). Tavoite (KK): Pariisin kohdekartta isoisän piirtämän näköisenä saumattomana zoomattavana pienoiskaupunkina, sama isometrinen seepiatyyli kuin
+nähtävyyspiirroksissa (27.9.), nähtävyydet luonnostaan oikean kokoisia. Pohjana omat ja avoimet karttatiedot, ei Googlen kuvia. Codex piirtää palat isometric.nyc:n tapaan (pelkistetty 3D-kuva →
+tyylipiirros pala kerrallaan naapurin jatkoksi, noin 40 esimerkkiä), Karttaseppä kokoaa. Valmiita karttoja (tiny.london ym.) ei käytetä: ei avointa lisenssiä, pikselityyli, osin Googlen aineistoa.
+Tekijän työkalujen lisenssi tarkistetaan koepalan alussa. Aloitus vasta junan 216 jälkeen.
