@@ -20,8 +20,14 @@ Edellinen: viesti-valoseppa-luovutus-20261031-2210.md (työtavat voimassa). Prot
   p1 = uudet oletukset. Tarkista, ettei p1 ole liian tumma tai puhki ilman SSR/GI:tä (ambientti 2,3 → 1,2 koskee KAIKKIA juoksupelin
   kohtauksia). Tulos rivinä PT:lle (ennen runkolupaa). k06p kaatui: rungossa ei ole `valo gi|sumu|ssr|kiilto` (tuntematon = ajo kaatuu).
 
+- **k06p2 TULOS (23.5x):** rungossa ilman koe 6.7:ää uudet k17-arvot eivät auta: p5 132 / 132, kylläisyys 0,203 / 0,207, puhki 5,9 → 8,2 %
+  (p0 vanhat / p1 uudet). → ea732b7d3 kuuluu runkoon VASTA koe 6.7:n (SSR/GI/sumu/leivonta) kanssa, ei yksin.
+
 ### AVOIMET ENNEN OMISTAJAA (PT 23.4x)
-1. **Muurin punainen 0,48 → 0,61** (muuri 123/58/49 vs havainne 147/58/53). LAV:n V4_red k06c (0,2436/…) ja k06d (0,365/0,0111/0,0088)
+1. **TEHTY 1.11. 00.0x (k06r):** muuri = sokkelon laji 10 rappaus.jpg × _JuoksuRappausSavy (LAV/PT) → `savy rappaus 1.86 0.48 0.38`
+   (r1): muuri 123/58/49 → 149/62/55 (havainne 147/58/53), p5 67, puhki 4,9 %; pohjoiskäytävän (z 188) muurit 148/73/50 → 176/79/58.
+   Koodiin: **f07cb0eae** (JuoksuK11RappausSavy, sama haara, ei runkoon). Kuva `lokit/pari-k06r-20261031-235119/kooste-r1.jpg`. Vanha selvitys alla:
+   **Muurin punainen 0,48 → 0,61** (muuri 123/58/49 vs havainne 147/58/53). LAV:n V4_red k06c (0,2436/…) ja k06d (0,365/0,0111/0,0088)
    EIVÄT muuttaneet muuria (k06o o3 = k06q q0) → muuria ei piirrä V4_red. mika (k06m, unity.log esikatselu-20261031-225207 rivi 16983):
    säteellä `a-meridiaaniportti lod0 runko+palkit` (Maailma/Lattia, ei LAV:n paketissa) ja ulkorengas 2-2/3-2. Selvitä LAV:n kanssa,
    mikä materiaali porttiseinässä on (meridiaaniportin oma?), ja korjaa se lähteessä. Ei uutta kerrointa (PT: ei väliaikaisia).
