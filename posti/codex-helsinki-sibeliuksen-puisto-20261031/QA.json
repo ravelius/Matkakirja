@@ -1,0 +1,194 @@
+{
+  "taskNumber": 1324,
+  "status": "PASS_WITH_NONBLOCKING_STYLE_NOTES",
+  "generationCalls": 1,
+  "generationTool": "builtin image_gen.imagegen",
+  "toneAdjustmentApplied": false,
+  "rootReview": {
+    "taskNumber": 1324,
+    "checkedAt": "2026-10-31T10:02:54.034769+00:00",
+    "status": "PASS",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-sibeliuksen-puisto-20261031/delivery/assets/kartat/miniatyyrit/helsinki-sibeliuksen-puisto.webp",
+    "sha256": "4b2c955bd09149bc806ce784db3d88bfa8e7dd1b031872492b5f7d8501cc730b",
+    "bytes": 968888,
+    "format": "WEBP",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "fullyTransparentPixels": 581462,
+    "partiallyTransparentPixels": 466982,
+    "fullyOpaquePixels": 132,
+    "alphaBounds": [
+      48,
+      54,
+      972,
+      976
+    ],
+    "significantAlphaBounds": [
+      83,
+      145,
+      953,
+      886
+    ],
+    "outer48pxFullyTransparent": true,
+    "toneAdjustmentApplied": false,
+    "visualChecks": [
+      "smooth rounded granite shoreline, birches with white trunks and Scots pines identifiable",
+      "modest grass, curving path and simple bench",
+      "narrow connected seawater strip follows one continuous shoreline edge, no horizon or surrounding sea",
+      "no monument, metal pipe sculpture, portrait relief, music stand, people or text",
+      "hand-drawn watercolor style, elevated 3/4 view and gentle upper-left light",
+      "inspected on light and dark backgrounds at 1024 and 256 pixels",
+      "no visible repeating stamp textures, clipping or background rectangle"
+    ],
+    "nonBlockingStyleNotes": [
+      "Representative compressed park vignette, not a surveyed site plan.",
+      "Foliage and rock have more fine detail than the older Kaisaniemi miniature; main forms remain legible."
+    ]
+  },
+  "independentReview": {
+    "order": "#1324",
+    "subject": "Helsinki – Sibeliuksen puisto",
+    "reviewed_at": "2026-10-31T10:04:04.126321+00:00",
+    "status": "PASS_WITH_NONBLOCKING_STYLE_NOTES",
+    "ready_for_delivery": true,
+    "scope": "Independent review of the single finished image; no image generation, modification, delivery or ledger changes.",
+    "orders_read": [
+      "references/order-v1.md",
+      "references/order-v2.md"
+    ],
+    "references_viewed": [
+      "references/helsinki-kaisaniemen-puisto.webp",
+      "references/helsinki-tuomiokirkko.webp",
+      "references/helsinki-uspenskin-katedraali.webp"
+    ],
+    "final_previews_viewed": [
+      "qa/park-light.png",
+      "qa/park-dark.png",
+      "qa/park-256-light.png",
+      "qa/park-256-dark.png"
+    ],
+    "visual_checks": {
+      "smooth_coastal_rock": "PASS – rounded pale rock outcrops with coherent rocky shoreline",
+      "birches_and_pines": "PASS – white marked birch trunks and recognisable pine trunks/crowns",
+      "grass_and_path": "PASS – green patches and pale winding path remain readable at 256 px",
+      "sea_strip": "PASS – one continuous blue-gray strip along the front/right shoreline edge; no separate inland water patch",
+      "optional_bench": "PASS – simple bench is allowed by the order",
+      "forbidden_content": "PASS – no monument, pipe sculpture forms, face relief, people, buildings, text, music stand, frame, sky or surrounding background",
+      "perspective_and_lighting": "PASS – coherent elevated three-quarter view and upper-left lighting compatible with references",
+      "watercolor_style": "PASS – muted natural watercolor hues, hand-drawn outlines and shaded volume",
+      "thumbnail_readability": "PASS – rock, trees, path and sea remain distinct on both 256 px backgrounds",
+      "alpha_edges_and_clipping": "PASS – clean light/dark composites; no clipping or visible colored fringe"
+    },
+    "blocking_findings": [],
+    "nonblocking_style_notes": [
+      "Foliage and rock texture are slightly denser and richer than the loosest Kaisaniemi reference washes. The hand-drawn watercolor character and subdued palette remain compatible."
+    ],
+    "technical_checks": {
+      "file": "delivery/assets/kartat/miniatyyrit/helsinki-sibeliuksen-puisto.webp",
+      "sha256": "4b2c955bd09149bc806ce784db3d88bfa8e7dd1b031872492b5f7d8501cc730b",
+      "bytes": 968888,
+      "format": "WEBP",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_zero_pixels": 581462,
+      "alpha_partial_pixels": 466982,
+      "alpha_opaque_pixels": 132,
+      "outer_48_px_fully_transparent": true,
+      "alpha_gt16_bbox": [
+        83,
+        145,
+        953,
+        886
+      ],
+      "alpha_gt16_center_offset_px": [
+        6.0,
+        3.5
+      ],
+      "decoded_webp_equals_qa_rgba": true,
+      "source_sha256": "e08201c1f364aa0fbda5dbdd0ee7c9bc44c9a4586a78af969b79b2877f656a58",
+      "independent_in_memory_resize_reproduction": {
+        "alpha_differences": 0,
+        "visible_rgb_channel_differences": 0,
+        "operation": "Uniform Lanczos3 fit into 928×928 and 48 px transparent border only",
+        "no_brightness_contrast_or_color_adjustments": true
+      }
+    },
+    "decision": "Acceptable for delivery. No blocking image defects found; minor texture-density observation may be left to recipient preference. Delivery and recipient acceptance are outside this review."
+  },
+  "exportVerification": {
+    "checkedAt": "2026-10-31T10:02:22.400Z",
+    "files": [
+      {
+        "id": "park",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-sibeliuksen-puisto-20261031/candidates/park-v1-source.png",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-sibeliuksen-puisto-20261031/delivery/assets/kartat/miniatyyrit/helsinki-sibeliuksen-puisto.webp",
+        "outputDimensions": [
+          1024,
+          1024
+        ],
+        "format": "webp",
+        "lossless": true,
+        "transparentOuterPaddingPx": 48,
+        "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+        "hiddenRGBChannelsCanonicalizedByWebP": 253311,
+        "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+      }
+    ]
+  },
+  "sourceVerification": {
+    "sourceVersions": [
+      {
+        "commit": "7c83e66be32af07d67f7816e657a25a7bb1df011",
+        "path": "posti/karttaseppa-codex-helsinki-sibeliuksen-puisto-20261031.md",
+        "blobSha": "69d6a7a75cee4b134cd252ddb6a29e0e8678f861",
+        "text": "# Karttaseppä → Codex: Helsingin kohdekartta – Sibeliuksen puisto (31.10.2026)\n\nOmistaja 31.10. klo 11.26: Helsingin kartalla ollut \"Finlandia\" (musiikkiteos, nuottiteline) ei ole paikka → pois.\nKortti 11.43, vaihtoehto B: tilalle **Sibeliuksen puisto** (Töölö, 60.1822 N, 24.9131 E), piirros puistosta\n**ILMAN Sibelius-monumenttia** (Eila Hiltusen teräsputkiveistos 1967, tekijä k. 2003 → tekijänoikeus voimassa: ei\nveistosta, ei sen muotoa muistuttavia putkia, ei Sibeliuksen kasvoreliefiä). Monumentti ja Finlandia kerrotaan vain tekstissä.\n\n## Tilaus (1 kuva, 1 otto; Codexin kuvien pysyvä lupa)\n→ `assets/kartat/miniatyyrit/helsinki-sibeliuksen-puisto.webp`\n- Aihe: kallioinen rantapuisto pienenä \"saarekkeena\": silokallio, koivuja ja mäntyjä, nurmea, polku ja kapea kaistale\n  merenlahtea (Seurasaarenselkä) yhdellä reunalla. Halutessa puistonpenkki tai matala kivimuuri. Ei ihmisiä.\n- Tyyli (sitova): sama käsin piirretty, värillinen ja varjostettu karttanähtävyystyyli kuin Helsingin muut miniatyyrit,\n  mallit `helsinki-kaisaniemen-puisto` (puistoaihe), `helsinki-tuomiokirkko` ja `helsinki-uspenskin-katedraali`\n  (ämpäri `kohtaamiset/miniatyyrit/`, .png). Kuvakulma ja valon suunta kuten malleissa.\n- Läpinäkyvä alfa, 1024 × 1024 webp, aihe keskellä, ei kehystä, ei taustaa, ei taivasta.\n- Tasaus tehdään meillä työkalulla (tools/piirrostasaus.json: musta 0,36 / valko 0,85 / keski 0,61): älä yritä itse\n  \"kirkastaa\" tai kontrastoida; pidä akvarellin normaali sävyala.\n\n## Palautus\nKuva haaraan + `posti/karttaseppa-codex-helsinki-sibeliuksen-puisto-<pvm>.md` (SHA256, mallit). Karttaseppä kytkee kartalle.\n"
+      },
+      {
+        "commit": "493f3e6c93dad54dd39929314e5b928a6a908859",
+        "path": "posti/karttaseppa-codex-helsinki-sibeliuksen-puisto-20261031.md",
+        "blobSha": "e1a4ed955463fd83d63628f17cc489eb52ae293a",
+        "text": "# Karttaseppä → Codex: Helsingin kohdekartta – Sibeliuksen puisto (31.10.2026)\n\nOmistaja 31.10. klo 11.26: Helsingin kartalla ollut \"Finlandia\" (musiikkiteos, nuottiteline) ei ole paikka → pois.\nKortti 11.43, vaihtoehto B: tilalle **Sibeliuksen puisto** (Töölö, 60.1822 N, 24.9131 E), piirros puistosta\n**ILMAN Sibelius-monumenttia** (Eila Hiltusen teräsputkiveistos 1967, tekijä k. 2003 → tekijänoikeus voimassa: ei\nveistosta, ei sen muotoa muistuttavia putkia, ei Sibeliuksen kasvoreliefiä). Monumentti ja Finlandia kerrotaan vain tekstissä.\n\n## Tilaus (1 kuva, 1 otto; Codexin kuvien pysyvä lupa)\n→ `assets/kartat/miniatyyrit/helsinki-sibeliuksen-puisto.webp`\n- Aihe: kallioinen rantapuisto pienenä \"saarekkeena\": silokallio, koivuja ja mäntyjä, nurmea, polku ja kapea kaistale\n  merenlahtea (Seurasaarenselkä) yhdellä reunalla. Halutessa puistonpenkki tai matala kivimuuri. Ei ihmisiä.\n- Tyyli (sitova): sama käsin piirretty, värillinen ja varjostettu karttanähtävyystyyli kuin Helsingin muut miniatyyrit,\n  mallit `helsinki-kaisaniemen-puisto` (puistoaihe), `helsinki-tuomiokirkko` ja `helsinki-uspenskin-katedraali`\n  (repossa `assets/kartat/miniatyyrit/<nimi>.webp`). Kuvakulma ja valon suunta kuten malleissa.\n- Läpinäkyvä alfa, 1024 × 1024 webp, aihe keskellä, ei kehystä, ei taustaa, ei taivasta.\n- Tasaus tehdään meillä työkalulla (tools/piirrostasaus.json: musta 0,36 / valko 0,85 / keski 0,61): älä yritä itse\n  \"kirkastaa\" tai kontrastoida; pidä akvarellin normaali sävyala.\n\n## Palautus\nKuva haaraan + `posti/karttaseppa-codex-helsinki-sibeliuksen-puisto-<pvm>.md` (SHA256, mallit). Karttaseppä kytkee kartalle.\n"
+      }
+    ],
+    "attachments": [
+      {
+        "path": "assets/kartat/miniatyyrit/helsinki-kaisaniemen-puisto.webp",
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-0959/helsinki-kaisaniemen-puisto.webp",
+        "blobSha": "95f023116cced9e02973dfed9cb21e75cd88608b",
+        "sha256": "2441e0aa2865d39ae6870aed1d969f5fc4b321587147f0d2ddd2fab4311bd1db"
+      },
+      {
+        "path": "assets/kartat/miniatyyrit/helsinki-tuomiokirkko.webp",
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-0959/helsinki-tuomiokirkko.webp",
+        "blobSha": "540eec740aed876a874f5fdf16ea1ff0046bc57f",
+        "sha256": "a53593ac165c6a5416cc47bff2a6434056a2faf930ea74ae76750950e3577db2"
+      },
+      {
+        "path": "assets/kartat/miniatyyrit/helsinki-uspenskin-katedraali.webp",
+        "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-0959/helsinki-uspenskin-katedraali.webp",
+        "blobSha": "5bf4c0393758e0c122f7c8ade854f55ae1061d96",
+        "sha256": "be43be6db0a119863ebfcb335891c6d025a2e861ec11853f87839ad427793052"
+      }
+    ],
+    "sourceReadInFull": true,
+    "allBlobAndSHA256ChecksPassed": true
+  },
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
