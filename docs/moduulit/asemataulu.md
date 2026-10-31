@@ -7,8 +7,8 @@ docs/raamattu-loki/paatokset-2026-09.md ja -2026-10.md, otsikot "ASEMATAULU: …
 SPEKSI (19.10.)" ja "ASEMATAULU TARKENNUS: LUKITUN JUNAN RIVI").
 
 Ylläpitäjä: Päätoimittaja. Jokainen sivun, skriptin, ohjeen tai tietomuodon muutos tehdään docs-PR:llä kansioon tools/asemataulu/ ja
-tähän speksiin samana päivänä. Työkansio päivittyy mergen jälkeen itsestään seuraavalla 5 min kierroksella (luku 2, KIERROS);
-kenenkään ei tarvitse muistaa ajaa komentoa.
+tähän speksiin samana päivänä. Työkansio päivittyy mergen jälkeen itsestään seuraavalla Asemataulun kierroksella (luku 2, KIERROS; kierroksia vain Boostin aikana
+tai PT:n pyynnöstä, luku 8).
 
 ## 1. Tiedostot: koodi repossa, tila työkansiossa
 
@@ -225,25 +225,27 @@ Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä m
 
 ## 8. Päivitysrytmi
 
-- CRONIT (Asemataulu-sessio luo ne heti nollauksen jälkeen ilman uutta lupaa, omistaja 15.10.2026 klo 23.35): vain A `*/5`;
-  B-cronia ei ole (20.10.2026) eikä kulutus-cronia (Kulutus poistettu 20.10.2026 klo 23.32). Tarkat askeleet: ASEMATAULU-ROOLI.md.
+- EI PYSYVÄÄ CRONIA (omistaja 31.10.2026 klo 22.49: "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä. Nyt se ei
+  ole päällä"; palauttaa 14.10. klo 23.39 linjan "muulloin kierros A ja viennit tauolla" ja kumoaa 15.10. klo 23.35 pysyvän A-cronin):
+  Asemataulu luo A `*/5` -cronin vain Boostin ajaksi ja poistaa sen itse, kun Boost päättyy; B-cronia ei ole (20.10.2026) eikä kulutus-cronia (Kulutus poistettu 20.10.2026 klo 23.32). Tarkat askeleet: ASEMATAULU-ROOLI.md.
 - BOOST = TÄYSI TARKISTUS (omistaja 20.10.2026 klo 09.56; aiemmin 14.10. klo 22.34–23.39, Raamattu 7.39): "kun se painetaan päälle,
   sen pitäisi tarkistaa että kaikki osiot taulusta ovat ajantasalla ja pitää ne ajantasalla". Napin selite "Tarkista ja päivitä koko
-  taulu tunniksi". Nappi kirjoittaa `talo/boost` `{paalla, alkoi, paattyy}`; Asemataulun A-kierros (5 min) huomaa sen ja tekee heti
-  täyden tarkistuksen: mittarit, roolit, laitteet, junat TF-lokeja vasten ja työlista (B), sama 5 min välein
-  tunnin ajan. Postivahti herättää Asemataulun lisäksi `paattyy`-kentän perusteella. Boost sammuu itsestään tunnin kuluttua.
-- ILMAN BOOSTIA: Asemataulu ei kokoa eikä tarkista itse; se kokoaa vain roolikortit (`kierros.py --vain-roolit`, luku 6) ja vie
-  sessioiden omat kirjoitukset (PT junat, työlista, huom, VAATII TOIMIA) muuttuneina sekä synkka.py:n siivoamat toimi-dokumentit. Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
+  taulu tunniksi". Nappi kirjoittaa `talo/boost` `{paalla, alkoi, paattyy}`. BOOSTIN HUOMAAMINEN: Postivahti lukee `talo/boost`in joka
+  kierroksellaan (KIERROS.md) ja herättää Asemataulun kerran per Boost ("BOOST päällä klo HH.MM–HH.MM"); Asemataulu tekee heti
+  täyden tarkistuksen (mittarit, roolit, laitteet, junat TF-lokeja vasten ja työlista, B), luo A `*/5` -cronin ja toistaa saman
+  tunnin ajan. Boost sammuu itsestään tunnin kuluttua; ensimmäinen kierros sen jälkeen poistaa cronin.
+- ILMAN BOOSTIA taulu ei päivity itsestään: Asemataululla ei ole ajastusta. Sessiot kirjoittavat omat dokumenttinsa suoraan
+  tauluun (PT junat, työlista, huom ja VAATII TOIMIA ArtifactDatalla, `ts` mukana). PT:n pyynnöstä Asemataulu ajaa yhden kierroksen
+  (roolikortit `kierros.py --vain-roolit`, luku 6, ja synkka.py). Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
   itse kuten ennen. Raati ja Testaajat klo 08 ja kun uusi juna saapuu TF:ään.
 - PÄIVITYSNAPPI (omistaja 10.10.2026): oikean yläkulman nappi näyttää mittareiden iän (nyt, 5 min, 1 h 5 min; punainen yli 15 min).
   Napautus lähettää PT:n sessiolle kommentin "Päivitä Asemataulu"; PT ajaa `paivita.py`, vie tiedot batchilla (if_version) ja
   ratkaisee ketjun.
 - KATSOJAN SYKE: näkyvissä oleva sivu kirjoittaa `talo/katsoja.ts` 2 min välein ja esiin tullessaan; vienti ei riipu sykkeestä.
-- VIENTI JOKA KIERROKSELLA (20.10.2026: taulun otsikossa "päivitetty 22.39", vaikka tyolista.json oli 23.07): Asemataulun A-kierros
-  ajaa synkka.py:n PT:n dokumenteille (junat, tyolista, huom) myös ilman Boostia; PT:n oma suora kirjoitus ei
-  korvaa vientiä. Taulun aika on dokumentin `ts`, joten PT päivittää myös sen.
+- VIENTI (20.10.2026: taulun otsikossa "päivitetty 22.39", vaikka tyolista.json oli 23.07): Asemataulun kierros ajaa synkka.py:n
+  PT:n dokumenteille (junat, tyolista, huom); ilman Boostia PT kirjoittaa ne itse suoraan tauluun ja TILA-tiedostoon. Taulun aika on dokumentin `ts`, joten PT päivittää myös sen.
 - KONTEKSTIPALKIN TUOREUS (omistaja 21.10.2026 klo 01.13: taulu näytti KK:n 35 %, kun luku oli 29 %): `kk_konteksti` ja `pt_konteksti`
-  haetaan `get_usage`lla JOKA kierroksella, myös ilman Boostia, ja heti kun Postivahti ilmoittaa nollauksesta. Jos luku on yli 15 min vanha
+  haetaan `get_usage`lla jokaisella kierroksella ja heti kun Postivahti ilmoittaa nollauksesta. Jos luku on yli 15 min vanha
   tai session id on vaihtunut, vanhaa lukua ei viedä: kentät poistetaan mittarit-dokumentista, kunnes tuore luku on haettu (sivun "päivittyy"-näyttöä ei tehdä, PT 21.10.2026).
 - VANHENEMINEN: synkka.py ilmoittaa "VANHA|<doc>" (Asemataulu → PT "ASEMATAULU VANHA"), kun junat tai työlista on yli 45 min jäljessä
   viimeisimmästä tapahtumasta tai työlista yli 6 h päivällä.

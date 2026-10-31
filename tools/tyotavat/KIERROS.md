@@ -9,7 +9,7 @@ Kierros 4–5 min välein ScheduleWakeup, prompt: "Lue /Users/Shared/Claude/Matk
 2. `list_sessions` (limit 14): isRunning, lastActivityAt.
 3. KONTEKSTIT – PAKOLLINEN JOKA KIERROKSELLA, myös harvennetulla (omistaja 15.10. 14.39: "varmista että jatkossa ei tapahdu"; 12.19–14.34 tämä jäi 21 kierroksella tekemättä ja PT ehti 59 %:iin): `get_usage(session_id)` AINA Päätoimittajalle (local_5df52e10-10e4-4b72-9554-0049db300dfe) ja Keskustelukanavalle (local_37f7c945-e1a0-4638-90b8-93c389a36fbe) sekä jokaiselle roolille, jonka lastActivityAt on muuttunut edellisen luennan jälkeen. Kierroksen loppuriville luvut muodossa "PT 31 %, KK 22 %, PK 18 %"; kierros ilman PT:n lukua on kesken.
 4. Levy: `df -h /`.
-5. Talon tila 10 min välein (tiedosto /Users/Shared/Claude/Matkakirja-fable/scratchpad/talon-tila.json, kentät `paivitetty` (date +%H.%M) ja `roolit`; älä koske `junat`/`huom`). Kirjoita python3:lla .tmp → os.replace.
+5. Talon tila 10 min välein vain paikalliseen tiedostoon, ei vientiä tauluun (31.10. 22.49) (tiedosto /Users/Shared/Claude/Matkakirja-fable/scratchpad/talon-tila.json, kentät `paivitetty` (date +%H.%M) ja `roolit`; älä koske `junat`/`huom`). Kirjoita python3:lla .tmp → os.replace.
 
 ## Hälytysrajat (rivi PT:lle, kukin vain kerran per raja)
 - Nollausrajat liukumalla (omistaja 14.10. 22.52–22.58): pehmeä raja → nollaus ensimmäisellä luontevalla tauolla (tehtävä valmis, muutos pushattu tai odotus käännökseen); kova raja = pehmeä +10 %-yks. Pehmeä–kova: Postivahti 20–30; koodi-, kartta- ja sisältöroolit + Julkaisija + Asemataulu 25–35; PT + Laitetestaaja + Äänittäjä 30–40; Keskustelukanava 40–50. Rooli konteksti ≥ pehmeä raja → rivi PT:lle kerran roolia kohden (uudelleen kovalla rajalla). KOVALLA RAJALLA rivi myös SUORAAN ROOLILLE (KK 15.10. 16.1x: Linnanrakentaja kasvoi 39 → 48 %, kun PT oli omassa nollauksessaan): "KOVA RAJA <x> % (raja <k>): viimeistele käynnissä oleva askel, tee luovutus + push ja lähetä Postivahdille LUOVUTUS VALMIS". Kun rooli luovuttaa (LUOVUTUS VALMIS), Postivahti nollaa NOLLAUS.md:n mukaan. Roolit saavat nollata itsensä heti luovutuksen jälkeen kysymättä omistajalta (pysyvä lupa 22.52).
@@ -55,8 +55,8 @@ Käynnistyslevyllä aina vähintään 100 Gi vapaana. Kirjoita PT:lle yksi rivi 
 Korvattu 14.10.: Postivahti lähettää kaikkien roolien aloitusviestit ja RC:n NOLLAUS.md:n mukaan.
 
 ## Asemataulu, junan edistys ja raati (PT 11.10., omistajan toive)
-- Vienti artefaktiin 5 min välein, kun katsojan syke on tuore (`tools/asemataulu/syke.py`); roolit.json:n ts päivitetään käsin vientiin.
-- Kun junat-dokumentissa on juna tilassa "käännöksessä": aja `python3 -I tools/juna-edistys.py <ajo-id>` jokaisella kierroksella ja kirjoita `edistys` + `valmis_arvio` ArtifactDatan update-kutsulla if_versionilla (sykkeestä riippumatta; muihin kenttiin ei koskea). Vaiheessa 5 tila "TestFlightissa" + rivi PT:lle.
+- EI 5 MIN VIENTIÄ (omistaja 31.10.2026 klo 22.49: "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä"): Postivahti ei vie artefaktiin kierroksellaan (syke.py-vienti pois). Ainoa Boost-tehtävä on alla oleva BOOST-herätys; Boostin aikana Asemataulu vie itse.
+- Kun junat-dokumentissa on juna tilassa "käännöksessä": aja `python3 -I tools/juna-edistys.py <ajo-id>` jokaisella kierroksella, mutta kirjoita `edistys` + `valmis_arvio` ArtifactDatan update-kutsulla if_versionilla VAIN kun vaihe (`edistys`) muuttuu (omistaja 14.10.: "junien vaiheet päivittyvät edelleen heti"; pelkkä aika-arvion päivitys ei ole vaihe, 31.10. 22.49; muihin kenttiin ei koskea). Vaiheessa 5 tila "TestFlightissa" + rivi PT:lle.
 - Raati ja Testaajat (omistaja 14.10. 22.4x): `python3 -I tools/raati-seuranta.py` ja testaajaluvut vain kerran päivässä klo 08 ja kun uusi TF-juna saapuu TestFlightiin; ei joka kierroksella. Rivi PT:lle vain kun luku kasvaa.
 
 ## Muistutus (11.10. 14.45): listaa talo joka kierroksella

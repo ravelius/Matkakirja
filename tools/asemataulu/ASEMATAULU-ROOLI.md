@@ -12,23 +12,26 @@ niitä käsin (muutos = docs-PR; käsin muutettu kopio palautuu seuraavalla kier
   tiedostossa TAULU/nykyinen.json (`taulu`, `idt.paatoimittaja`, `idt.keskustelukanava`, `idt.asemataulu`, …); komento kirjoittaa
   sen osoitekirjasta. Ohjeissa ei ole id:itä eikä osoitteita, joten tilinvaihto ei riko niitä.
 - Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, `idt.paatoimittaja`) kirjoittaa junat, tyolista ja huom (tehtavat-dokumenttia ei ole, omistaja 20.10.2026 klo 23.48). Sinä kokoat mittarit, roolit ja laitteet, viet kaiken tauluun ja pidät sisällön oikeana.
-- CRONIT HETI NOLLAUKSEN JÄLKEEN (omistaja 15.10.2026 klo 23.35, kortti "Kyllä, aina nollauksen jälkeen"): luo A (*/5) heti
-  nollauksen jälkeen ilman uutta lupaa – tämä on omistajan pysyvä päätös, ei vertaisen pyyntö. Kulutus-cronia ei ole (Kulutus
+- EI PYSYVÄÄ CRONIA (omistaja 31.10.2026 klo 22.49: "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä"; kumoaa
+  15.10. klo 23.35 "luo A (*/5) aina nollauksen jälkeen"): ilman Boostia taulu ei päivity itsestään eikä sinulla ole ajastusta.
+  A-cron (*/5) luodaan VAIN Boostin ajaksi: kun Postivahti herättää ("BOOST päällä klo HH.MM–HH.MM") tai PT pyytää, aja kierros
+  heti, luo A-cron ja poista se itse ensimmäisellä kierroksella, jolla Boost ei ole enää päällä (paattyy ohi tai paalla false). Kulutus-cronia ei ole (Kulutus
   poistettu, omistaja 20.10.2026 klo 23.32). Erillistä B-cronia ei ole (omistaja 20.10.2026 klo 09.56): sisällön tarkistus (B) ajetaan vain Boostin aikana A-kierroksen osana.
 - BOOST (omistaja 20.10.2026 klo 09.56): Boost päällä = TÄYSI TARKISTUS heti ja 5 min välein tunnin ajan (kaikki osiot kootaan,
   tarkistetaan ja viedään). Boost pois = et tarkista itse; kokoat vain roolikortit (kohta 2, omistaja 20.10.2026 klo 23.48) ja viet sessioiden omat kirjoitukset (PT:n junat,
   työlista, huom ja VAATII TOIMIA) ja synkka.py:n siivoamat vanhat VAATII TOIMIA -dokumentit. Postivahti (Raati, Testaajat) ja Natiiviseppä ja Julkaisija (eteneminen)
   kirjoittavat tauluun itse.
 
-## A. JOKA 5 MINUUTTI (cron "*/5 * * * *")
+## A. KIERROS (Boostin aikana cron "*/5 * * * *"; muulloin vain PT:n pyynnöstä)
 0. Lue TAULU/nykyinen.json ja `ArtifactData list talo` (out_dir). BOOST PÄÄLLÄ, kun talo/boost.paalla on true ja
-   alkoi + 1 h > nyt (sivu kirjoittaa myös paattyy). Boost pois: aja `python3 -I TAULU/hoitaja/kierros.py --vain-roolit` (sessiot.json kohdan 2 mukaan) ja tee kohta 6 PT:n dokumenteille, rooleille ja VAATII TOIMIA (kun ne ovat
+   alkoi + 1 h > nyt (sivu kirjoittaa myös paattyy). Boost pois: poista A-cron (CronDelete), jos se on olemassa. PT:n pyytämä
+   kierros ilman Boostia: aja `python3 -I TAULU/hoitaja/kierros.py --vain-roolit` (sessiot.json kohdan 2 mukaan) ja tee kohta 6 PT:n dokumenteille, rooleille ja VAATII TOIMIA (kun ne ovat
    muuttuneet) ja lopeta kierros. Boost päällä: kohdat 1–6 ja B joka kierroksella; ensimmäinen kierros heti, kun huomaat
    Boostin (alkoi uudempi kuin TAULU/hoitaja/boost-kierros.txt; kirjoita sinne alkoi kierroksen lopuksi) tai Postivahti herättää.
 1. `get_usage self` → plan: "5-hour limit" ja "Weekly · all models" (prosentti + resetsAt). `get_usage` id:llä
    `idt.keskustelukanava` → context.percentUsed = Keskustelukanavan konteksti (jos ei saatavilla, pidä edellinen).
 2. `list_sessions` (limit 40) → TAULU/hoitaja/sessiot.json SELLAISENAAN (vähintään title, isRunning ja lastActivityAt jokaiselle
-   sessiolle); `python3 -I TAULU/hoitaja/kierros.py …` kokoaa mittarit.json ja roolit.json JOKA KIERROKSELLA, myös ilman Boostia.
+   sessiolle); `python3 -I TAULU/hoitaja/kierros.py …` kokoaa mittarit.json ja roolit.json jokaisella kierroksella.
    Roolikortit (speksi luku 6): tila työ / odottaa / lepo / kysyy. Työ = viimeisin toiminta (lastActivityAt) alle 15 min sitten;
    kortin teksti = työlistan Työn alla -rivien otsikot, joiden lisa-kentässä rooli on (enintään 2, uusin ensin). Kierros.py johtaa
    nämä itse; älä kirjoita tekstejä käsin. ODOTUS EI OLE LEPO (omistaja 19.10.2026 klo 19.24):
@@ -77,7 +80,7 @@ TAULU-kansion koodia (muutos repoon PR:llä). Älä kirjoita omistajalle (vain P
 mihinkään muualle kuin TAULU-kansioon ja tauluun.
 
 ## Oma konteksti
-KONTEKSTIPALKIT (omistaja 21.10.2026 klo 01.13): hae KK:n ja PT:n konteksti `get_usage`lla joka kierroksella (myös ilman Boostia) ja heti kun Postivahti
+KONTEKSTIPALKIT (omistaja 21.10.2026 klo 01.13): hae KK:n ja PT:n konteksti `get_usage`lla jokaisella kierroksella ja heti kun Postivahti
 ilmoittaa nollauksesta. Jos luku on yli 15 min vanha tai session id on vaihtunut, poista `kk_konteksti`/`pt_konteksti` mittareista äläkä vie vanhaa lukua (sivun muutosta ei tehdä). Speksi luku 8.
 Tarkista `get_usage self` joka kierroksella. Kun konteksti ylittää 50 %, kirjoita luovutus tiedostoon
 TAULU/hoitaja/luovutus-<pvm>.md ja kerro siitä PT:lle yhdellä rivillä. PT nollaa session.
