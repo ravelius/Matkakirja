@@ -3367,3 +3367,7 @@ KK välitti sanatarkasti: "Tehkää Pariisi valmiiksi" (kaappaus docs/raportit/k
 ## MUSEOIDEN METROKARTTA KUIN KAUPUNKIKIERROKSELLA (omistaja 31.10.2026 klo 21.07) (31.10.2026 klo 21.07)
 
 Omistaja kysyi 21.06: "Onko metrokartta päivitetty jo museoihin myös?". KK:n kortti "Tehdäänkö museoiden metrokarttaan samat muutokset kuin kaupunkikierrokseen?" → "Kyllä, junaan 216 (Suositus)" (selite: "Otsikko pois, kartta pienenee kohteessa ja nimi siirtyy yläreunaan, pehmeät siirtymät."). Taidemuseo ja taidehalli: Kierrostila (154b318f0) kuten kierroksella, periaate 8. Natiivi-UI, juna 216.
+
+## JUNA 216 LÄHTEE KUN PARIISIN UUSI KARTTA VALMIS (omistaja 31.10.2026 klo 21.08) (31.10.2026 klo 21.08)
+
+KK välitti sanatarkasti: "julkaisi juna, kun Pariisin uusi kartta valmistuu" (kirjoitusvirhe = julkaise). Ehdot: Pariisin uusi piirroskartta pelissä valmis (19.52), valo omistajan hyväksymä (30.10. 22.27), karttatyöt (13.27, valmiit). KK tarkistaa Pariisin pelistä G-kuvaa vasten ennen TF:ää; ehtojen täyttyessä juna lähtee ilman uutta julkaisupyyntöä.
