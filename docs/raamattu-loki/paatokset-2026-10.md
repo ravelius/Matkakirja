@@ -3371,3 +3371,12 @@ Omistaja kysyi 21.06: "Onko metrokartta päivitetty jo museoihin myös?". KK:n k
 ## JUNA 216 LÄHTEE KUN PARIISIN UUSI KARTTA VALMIS (omistaja 31.10.2026 klo 21.08) (31.10.2026 klo 21.08)
 
 KK välitti sanatarkasti: "julkaisi juna, kun Pariisin uusi kartta valmistuu" (kirjoitusvirhe = julkaise). Ehdot: Pariisin uusi piirroskartta pelissä valmis (19.52), valo omistajan hyväksymä (30.10. 22.27), karttatyöt (13.27, valmiit). KK tarkistaa Pariisin pelistä G-kuvaa vasten ennen TF:ää; ehtojen täyttyessä juna lähtee ilman uutta julkaisupyyntöä.
+
+## OPPI: ROOLIEN KONTEKSTIT KARKASIVAT 75 %:IIN JA SOVELLUS KAATUI (omistaja 31.10.2026 klo 21.26) (31.10.2026 klo 21.54)
+
+Omistaja (KK, sanatarkasti): "sessioiden kontekstit eivät pysy kurissa." Sovellus kaatui ~21.27, kun KK luki 10 session kontekstia rinnakkain; kaikki sessiot pysähtyivät, PT herätti roolit 21.5x.
+Mitattu: KS 75 % (raja 25–35), NUI:n edellinen 76 % ennen luovutusta, PK 38 % (kova 35), Postivahti 32 % (kova 30). SYYT (PT): (1) KONTEKSTIVAHTI-koukku on vain PT:n kansiossa, rooleilla ei
+muistutusta; (2) Postivahti luki vain roolit, joiden lastActivityAt muuttui, ja oli itse yli rajansa; (3) KS ja NUI lukivat paljon täysikokoisia kuvia (simu- ja vertailupareja) pitkissä vuoroissa. KS
+kirjaa luovutukseensa tarkemman syyn. KORJAUS: Postivahti lukee joka kierroksella kaikkien roolien kontekstin YKSI KERRALLAAN (ei rinnakkain) ja pysäyttää kovan rajan ylittäjän heti luovutukseen;
+roolit tarkistavat get_usage selfin ennen kuvan lukemista ja lukevat kuvat pienennettyinä. Avoin PT:lle: KONTEKSTIVAHTI-koukku kaikkien roolien kansioihin vaatii lupa-asetuksen muutoksen = vain
+omistajan omalla viestillä (CLAUDE.md).
