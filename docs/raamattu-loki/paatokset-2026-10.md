@@ -3338,3 +3338,7 @@ Omistaja (KK:n välittämä, sanatarkasti): "Piirros voisi pehmeästi hävitä j
 ## HERÄTYKSET JA VALVONTA KUULUVAT PT:LLE (omistaja 31.10.2026 klo 17.55) (31.10.2026 klo 17.56)
 
 Omistaja (KK:n välittämä, sanatarkasti): "Eikö päätoimittajan pitäisi huolehtia sessioiden herätykset ja valvoa niitä?" Vastaus kyllä (Raamattu 7: Postivahti herättää PT:n, PT roolit). Aukot 31.10.: KS lepäsi, vaikka Codexin erät 3–4 ja Radialsystem V olivat postissa; LAV:n leivontaketjun loppuun ei ollut herätystä. Oppi: jokainen Codex-toimitus herättää vastaanottajaroolin heti (Postivahdin kierros + PT:n postilaatikkomonitori), jokaiselle pitkälle ajolle varmistetaan herätys ajon loppuun (roolin oma herätys tai Postivahti seuraa pid/lokia). KK ei herätä rooleja; tarkistaa vain ennen omistajalle kertomista.
+
+## PARIISIN PIIRROSKARTAN TYYLI HYVÄKSYTTY, VÄRIT LÄMPIMIKSI (omistaja 31.10.2026 klo 18.16) (31.10.2026 klo 18.17)
+
+Kortti "Hyväksytkö Pariisin piirroskartan tyylin?" (Codexin koepala-1.png, d0cbbc6ca) → "Kyllä, värit lämpimiksi (Suositus)" (selite: "Codex lämmittää värit nähtävyyspiirrosten seepiaan ja piirtää sitten palat."). Tavoite: piirroskartta ja nähtävyyspiirrokset vierekkäin samaa käsialaa (lämmin seepia kuten pariisi-notre-dame-kk.webp); joki, nurmet ja katot hillitymmiksi. Palat lukitusta OSM-geometriasta (esim. Cité-saaren itäpää puistoa). PT tilasi Codexilta 18.2x.
