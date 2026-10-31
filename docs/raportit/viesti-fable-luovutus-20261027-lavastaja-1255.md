@@ -2229,3 +2229,16 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
   (_valmiit/juoksupeli-kk-lavastaja-tausta-v83-vienti-<pvm>, vain kielletty-tausta-v83) → VS + PK + PT.
 - OSASARJA-v6: ~2 min/ruutu (33/86 klo 12.49) → valmis ~14.40; sitten karki.bin, paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> → PK + PT.
 - Kaiken jälkeen levyvahdin raja takaisin 82 (PT 01.2x).
+
+## LISÄYS 162 (31.10. 16.1x): OSASARJA-v6 JATKUU, KUJA 0-3 T-LIITOS RAJATULLA KORJAUKSELLA — LUOVUTUS, ALOITA TÄSTÄ
+- 13.34 levyvahti pysäytti osasarja-v6:n (< 78 Gi, 41/86); kuja03.zsh tulkitsi pid:n katoamisen valmistumiseksi ja teki tausta-v83:n (13.35–13.49),
+  jossa T-liitos yhä 1 (tarkistus-tausta-v83.txt, piste (−254,92; 0,25; 382,77) = reunakiven yläpinta). v83:A EI PAKATA.
+- KK 15.46 (juoksupelin ohjat): jatka osasarja-v6, korjaa 0-3 T ennen pakettia. TEHTY 15.48: ketju-osasarja-v6.zsh 999999 (pid 35472, JATKA=1) +
+  levyvahti.zsh 78 35472 (pid 35473). Valmistuttua karki.bin, sitten paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm>
+  (paketti_osasarja_v5.zsh-malli; LAHTEET-paketti.md v6-otsikolla) → PK + PT (+ KK).
+- T-LIITOS: lattia_tliitokset.py sai env:t ALUE="x0 x1 z0 z1" ja KIERROKSET (.ennen-alue). MATERIAALI reunan kanssa koko palassa karkaa (jaot kasvavat).
+  ALUE "-256 -254 381.5 384" HITSI=0 KIERROKSET=1 korjaa pisteen (oma tarkistin scratchpad tpiste.py → 0 säteellä 1,5 m), mutta jättää 1 uuden T:n
+  (−254,82; 0; 383,0) lattiassa (luultavasti kolmio, jonka keskipiste alueen ulkopuolella). Koe isommilla alueilla ajossa (tasks bd1arqag0).
+  Lähde nyt: tausta-v81-lahde/kk-tausta-kuja-0-3-lod0.glb (lattia-korjattu, 8 jakoa); korjattu tulos kopioidaan sen päälle ja kuja03.zsh ajetaan
+  uudella nimellä tausta-v84 (muuta TU-rivi, tarkistin uusinta/tarkista_leivonta-be65cd9ee.py = VS:n reunasääntökorjaus) osasarja-v6:n jälkeen.
+- VS sai LEIVONTA v1:n (SHA OK), sovitettu pari kun PK vapauttaa Unityn. Levyraja takaisin 82, kun kaikki valmista.
