@@ -1,0 +1,2514 @@
+{
+  "allAssetsPersonallyViewed": true,
+  "allAssetsPassed": true,
+  "rootReviews": [
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:32:15.211817+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "mercato-vecchio",
+      "role": "A",
+      "taskNumber": 1385,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/final/firenze-mercato-vecchio.webp",
+      "sha256": "cd494c10d03e96bddf175d2822fc45841838d4062e382c661d45e8bd676579fd",
+      "bytes": 429768,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Personally viewed light/dark. Nine long-side arch bays, two end arches and market column. Crisp modest ink/watercolor, true alpha, whole roof and column. A5 preserves prior rejected shorter loggias.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:32:15.211817+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "mercato-vecchio",
+      "role": "B",
+      "taskNumber": 1386,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/final/ihme-mercato-vecchio-loistoaika.jpg",
+      "sha256": "219fa4e894e5f987306ace25e244fca820f6cfee1cfd39391ffea73ff901dcf4",
+      "bytes": 790407,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Personally viewed final JPEG. Natural sunlit masonry, wet fish, rough wood, fabric and distinct people. Loggia and market column readable; old dense fabric and Duomo silhouette source-informed. No repeated artificial surface pattern.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:15:11.772882+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "helsinki-vanha-asema",
+      "role": "A",
+      "taskNumber": 1387,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/helsinki-vanha-rautatieasema.webp",
+      "sha256": "070f67bcd35f0849e90a7b2ff03a54d52302de262fdccdeb70c749a7c55982cb",
+      "bytes": 409660,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Full Edelfelt1862 station and clean alpha on light/dark. Museum photograph main gables, canopy and window structure retained.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:41:58.450498+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "helsinki-vanha-asema",
+      "role": "B",
+      "taskNumber": 1388,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/ihme-helsinki-vanha-asema-loistoaika.jpg",
+      "sha256": "cc12bbca5f29eb5fc003b13a9503f7958ecaf83271c5063858c0bbee9615ea58",
+      "bytes": 639657,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "New whole image B2 matches amended 1873 locomotive/platform scene. Natural wood canopy, believable dark iron locomotive and metal fittings, wool clothes and daylight. Edelfelt facade, no Saarinen tower. Final JPEG personally viewed.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false,
+      "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+      "depictedEra": "1873"
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "nyenskans",
+      "role": "A",
+      "taskNumber": 1389,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/final/pietari-nyenskans.webp",
+      "sha256": "765abd858e20535066575152d0406e48f519c3fa7fe0ca4473db49ec228b10fd",
+      "bytes": 663844,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Rectangular timber courtyard and early earth/wood bank rather than later completed1703star fort, full unclipped map silhouette.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "nyenskans",
+      "role": "B",
+      "taskNumber": 1390,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/final/ihme-nyenskans-loistoaika.jpg",
+      "sha256": "b384b4f270c7339335766a165458dfe028430c1b8ca3844a14bf5c63e4ea8cc4",
+      "bytes": 828476,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "1660Nyen shore with charred rebuilding evidence, opposite-bank timber fort, coherent workers/boats/reflections, natural photographic timber and cloth.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "tejo-ooppera",
+      "role": "A",
+      "taskNumber": 1391,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/final/lissabon-tejon-ooppera.webp",
+      "sha256": "b27f0f1de365294d9886fb36ac8a09ecbc5cf597e03c6a2d243c7ccbe99e7529",
+      "bytes": 584516,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Pale long theater mass, tall stage house and lower wing, fully visible map outline. Exact external elevations interpreted from surviving plans.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "tejo-ooppera",
+      "role": "B",
+      "taskNumber": 1392,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/final/ihme-tejo-ooppera-loistoaika.jpg",
+      "sha256": "2fd395bc29c3b1a4004bb1ce9e6453173368ba0ea90af36a7a9865fc4cff6b12",
+      "bytes": 748186,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Theater interior with large columns, four tiers of boxes, audience and singers on stage. Stage scenery is physically painted scenery, not painterly image surface. Coherent people and candle-lit real-room optics.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "karntnertor",
+      "role": "A",
+      "taskNumber": 1393,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/karntnertor/final/wien-karntnertor-teatteri.webp",
+      "sha256": "ba8a768d602543a4898a82fff953397997e77693481366d4bafdbdb2a63ca353",
+      "bytes": 643782,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Historic building facade, pavilion and three bays clear; entire roofline inside alpha margins.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "karntnertor",
+      "role": "B",
+      "taskNumber": 1394,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/karntnertor/final/ihme-karntnertor-loistoaika.jpg",
+      "sha256": "4dcb13cff044bbcf7e94569fade74a53dc8cbb06c731006dc313df82314df04a",
+      "bytes": 728669,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Full opera hall, large orchestra/choir onstage and seated audience; convincing candlelit fabric and faces. Full-scale room rather than toy miniature. Instrument and seating layout remain reconstruction.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "ringtheater",
+      "role": "A",
+      "taskNumber": 1395,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/ringtheater/final/wien-ringtheater.webp",
+      "sha256": "6729416eab60b03736d1c2d716079f89717dbffc7185806279cf739062afb357",
+      "bytes": 738318,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Tall narrow neo-Renaissance facade with deep central arch and rooftop group, fully visible.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "ringtheater",
+      "role": "B",
+      "taskNumber": 1396,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/ringtheater/final/ihme-ringtheater-loistoaika.jpg",
+      "sha256": "cd16395b399b16e323d1cd8801a0fc1d49f5cef316fcf00ed5151c4dca01ebdc",
+      "bytes": 733362,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "New theatre facade, winter-clothed arriving guests, coherent horses and wet stone. January1874 scene; only very top edge of tallest statue gesture close to border, main facade complete.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:28:41.472440+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "kustaa-ooppera",
+      "role": "A",
+      "taskNumber": 1397,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/tukholma-kustaa-iiin-ooppera.webp",
+      "sha256": "177be48ea8678ae3e2e79858cf41e3b3b885b009258a868f5a394ffc655e1852",
+      "bytes": 539748,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Personally viewed light/dark composites. Restrained yellow historic opera block, low central attic and classical pilasters consistent with archived facade, no current opera silhouette. True alpha clean. Rear massing is approximate reconstruction.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "kustaa-ooppera",
+      "role": "B",
+      "taskNumber": 1398,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/ihme-kustaa-ooppera-loistoaika.jpg",
+      "sha256": "816f483dcfc713b15d8d84aff72481f48b0dca2a8e33eb7bcc1e166ad942b121",
+      "bytes": 662436,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Natural candlelit full-size photographic ballroom; coherent masked guests, silk and powdered hair. Architecture compared with official model of original1782opera. Temporary ball floor, late18thcostume; exact party arrangement is interpretation.",
+      "depictedEra": "16 March1792",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "vor-frue-keskiaika",
+      "role": "A",
+      "taskNumber": 1399,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/kobenhavn-vor-frue-keskiaikainen.webp",
+      "sha256": "e1f54344d71a21b54fc7980848ca121a4225b5a214af6545fa3dd088ed0d0f1e",
+      "bytes": 674646,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Medieval red brick Gothic body and long choir match the scholarly reconstruction, western central spire and corner pinnacles. Entire silhouette and light/dark alpha personally inspected. Approximate1650adaptation, exact1611spire detail interpretive.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "vor-frue-keskiaika",
+      "role": "B",
+      "taskNumber": 1400,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/ihme-vor-frue-keskiaika-loistoaika.jpg",
+      "sha256": "5aed1c2fd8b3af6bfb965bc4afd4373731222d02379e9b78527146f937f637b7",
+      "bytes": 646422,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Whole medieval brick church, tall spire/finial fit with narrow upper gap. Normal daylight on individual bricks, modest1650gathering by entrances, no later1738/1829church. Geometry grounded in scholarly reconstruction.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:31:29.047118+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "maison-du-peuple",
+      "role": "A",
+      "taskNumber": 1401,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/final/bryssel-maison-du-peuple.webp",
+      "sha256": "e6a5981837b03d65e6f563cbb69364ddce29f8d7bea59e009cfc8d2a3ace794d",
+      "bytes": 975600,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "A2 restores deep concave central facade, large left arched entry and projecting glass bays. Personally viewed light/dark, clean alpha and full massing, fine ink and watercolor. Near-front three-quarter view prioritizes faithful facade; exact rear not asserted.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:31:29.050003+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "maison-du-peuple",
+      "role": "B",
+      "taskNumber": 1402,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/final/ihme-maison-du-peuple-loistoaika.jpg",
+      "sha256": "e92ca62327c33a3edf3436ad70429b34c430747c118acec27ace88f0924be5be",
+      "bytes": 823338,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "B2 restores source concave facade and left arch. Final JPEG personally viewed: natural iron/glass/brick, reflections and anonymous1900 workers. A few tall decorative finial tips outside top edge, but roof and main architectural form fully legible; not material identity loss.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:32:15.211817+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "pont-transbordeur",
+      "role": "A",
+      "taskNumber": 1403,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/final/marseille-pont-transbordeur.webp",
+      "sha256": "1707f947c5d5cbbbb3a9ac996d5d666166d45c32703abbeb517ad95c7a6c5f06",
+      "bytes": 153004,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Personally viewed light/dark. Entire transport bridge, fine thin trusses and low suspended gondola; correct open alpha. Dark iron naturally low contrast on dark background, no tones modified.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:32:15.211817+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "pont-transbordeur",
+      "role": "B",
+      "taskNumber": 1404,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/final/ihme-pont-transbordeur-loistoaika.jpg",
+      "sha256": "146c6d1b51cd3334747a9b89a5c7597616e295bd8469018c3f72be57d9829a07",
+      "bytes": 731083,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Personally viewed final JPEG. Gondola platform near water/quay level, cables and tall trusses coherent. Physical weathered boats, net and rippling water; full towers, no fake repeating textures. Approximate early1930 scene, not exact documented crossing.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:49:28.470851+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "erzsebet-silta",
+      "role": "A",
+      "taskNumber": 1405,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/final/budapest-erzsebet-silta-alkuperainen.webp",
+      "sha256": "51f291b00a4ed5853e1a6bb5467f52dc20d0686c1d09c26e3d27565ba3d243cf",
+      "bytes": 362420,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Both original decorative portals and wide bridge deck, all bridge ends inside alpha margins.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:54:22.722089+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "erzsebet-silta",
+      "role": "B",
+      "taskNumber": 1406,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/final/ihme-erzsebet-silta-loistoaika.jpg",
+      "sha256": "023b9151dc2b3d65d9b187ea40fcd4408883ba87f5c0a1837e9c32b35fdd3a01",
+      "bytes": 708115,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "B4 new photo toward flat Pest removes postwar palace dome and wrong hill background. Period tram, plausible people and four-lane-width deck, sidewalks inside suspender rows. Realistic iron, paving, clothing and daylight. Tall finials very close to top frame, main arch complete.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:52:08.317990+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "praha-raatihuone",
+      "role": "A",
+      "taskNumber": 1407,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/final/praha-vanhan-raatihuoneen-itasiipi.webp",
+      "sha256": "6509f49524ec9a0cfd573efb11af240462b0927765758685521ef56a9bb7b433",
+      "bytes": 778810,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Clock and chapel bay joined to surviving historic neo-Gothic wing. Whole tower and wing, natural watercolor and transparent margin. Decorative divisions partly occluded by chapel; interpretive detail recorded by producer.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:52:08.320755+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "praha-raatihuone",
+      "role": "B",
+      "taskNumber": 1408,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/final/ihme-praha-raatihuone-loistoaika.jpg",
+      "sha256": "78c107428c4d64f84f24546d3bae0b72a4c20133de92ae7b5712711e0de4e75a",
+      "bytes": 810650,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Clock and chapel bay joined to surviving historic neo-Gothic wing. Natural camera viewpoint and stone surfaces, coherent1900pedestrians. Deliberately close scene of clock/chapel/wing junction; upper tower and distant wing end out of frame. Clock markings are reconstructed decorative detail, not exact astronomical calibration.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:49:28.473231+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "san-geminiano",
+      "role": "A",
+      "taskNumber": 1409,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/san-geminiano/final/venetsia-san-geminianon-kirkko.webp",
+      "sha256": "e9fc60f4ec3c3ecb30c2b41f1332af02a4af6b1e4956fd09d4543e275a40aba4",
+      "bytes": 681972,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Sansovino church marble facade, round central window, small corner pinnacles and attached square wings match source-informed reconstruction; roof behind facade remains interpretive. Transparent watercolor complete silhouette.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:49:28.473771+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "san-geminiano",
+      "role": "B",
+      "taskNumber": 1410,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/san-geminiano/final/ihme-san-geminiano-loistoaika.jpg",
+      "sha256": "f07f2e892a74aa963ed3e686e499ce542523367c543bed82f8e846fd59512779",
+      "bytes": 695488,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Sansovino church marble facade, round central window, small corner pinnacles and attached square wings match source-informed reconstruction; roof behind facade remains interpretive. Natural weathered stone, coherent1700clothes and figures, no modern lamps.",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "independentRootAssets": {
+    "status": "PASS_ALL_EIGHT_WITH_DISCLOSED_MINOR_COMPOSITION_LIMITS",
+    "reviewer": "portti06_measurement_audit",
+    "reviewedAt": "2026-10-31T14:54:52.405290+00:00",
+    "scope": "Independent review of current final files only, after scene amendment 3bcef53d89907dbfaed3be6449fa69763954dd94. A composites light/dark at1024 and256; all final B JPEGs at1536x1024. No assets altered.",
+    "versions": {
+      "helsinki-vanha-asema": "A1/B2",
+      "kustaa-ooppera": "A1/B2",
+      "vor-frue-keskiaika": "A2/B3",
+      "maison-du-peuple": "A2/B2"
+    },
+    "blockingFindings": [],
+    "assets": [
+      {
+        "id": "helsinki-vanha-asema",
+        "role": "A",
+        "sha256": "070f67bcd35f0849e90a7b2ff03a54d52302de262fdccdeb70c749a7c55982cb",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/helsinki-vanha-rautatieasema.webp",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Viewed all four light/dark 1024/256 composites. Complete historic Edelfelt station silhouette, coherent window rhythm and central balcony; no clipping or background. Normal ink/watercolor tones."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "format": "WEBP",
+          "mode": "RGBA",
+          "shaMatchesCurrentState": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alphaBBox": [
+            59,
+            77,
+            975,
+            958
+          ],
+          "clearBorderAtLeast48": true
+        },
+        "ownerPhotographicFeedbackApplied": false
+      },
+      {
+        "id": "helsinki-vanha-asema",
+        "role": "B",
+        "sha256": "cc12bbca5f29eb5fc003b13a9503f7958ecaf83271c5063858c0bbee9615ea58",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/ihme-helsinki-vanha-asema-loistoaika.jpg",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Final B2 JPEG viewed at full resolution. The 1873 wooden platform and canopy, early locomotive and Edelfelt station support the amended scene. Realistic uneven wood, iron, soot, wool and daylight. Foreground suitcase grip, walking feet and distinct people coherent; track/platform routes continuous. Exact locomotive fittings and canopy are reconstruction."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "format": "JPEG",
+          "mode": "RGB",
+          "shaMatchesCurrentState": true,
+          "iccBytes": 480
+        },
+        "ownerPhotographicFeedbackApplied": true
+      },
+      {
+        "id": "kustaa-ooppera",
+        "role": "A",
+        "sha256": "177be48ea8678ae3e2e79858cf41e3b3b885b009258a868f5a394ffc655e1852",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/tukholma-kustaa-iiin-ooppera.webp",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Viewed all four composites. Low classical yellow opera block, central pilasters/attic and complete base, distinct from current opera. Rear volume is acknowledged reconstruction. True transparent silhouette reads at 256."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "format": "WEBP",
+          "mode": "RGBA",
+          "shaMatchesCurrentState": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alphaBBox": [
+            48,
+            63,
+            976,
+            942
+          ],
+          "clearBorderAtLeast48": true
+        },
+        "ownerPhotographicFeedbackApplied": false
+      },
+      {
+        "id": "kustaa-ooppera",
+        "role": "B",
+        "sha256": "816f483dcfc713b15d8d84aff72481f48b0dca2a8e33eb7bcc1e166ad942b121",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/ihme-kustaa-ooppera-loistoaika.jpg",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Final B2 JPEG viewed full size against official old-auditorium model. Classical white/gold boxes, broad stage and blue-green drapery match source character. The 1792 masked-ball scene has plausible candlelight, silk/wool/hair/skin, coherent hands/fans/glasses and distinct guests. Photographic film-set/camera appearance, not painted or CGI. Exact guests and temporary floor arrangement remain reconstruction."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "format": "JPEG",
+          "mode": "RGB",
+          "shaMatchesCurrentState": true,
+          "iccBytes": 480
+        },
+        "ownerPhotographicFeedbackApplied": true
+      },
+      {
+        "id": "vor-frue-keskiaika",
+        "role": "A",
+        "sha256": "e1f54344d71a21b54fc7980848ca121a4225b5a214af6545fa3dd088ed0d0f1e",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/kobenhavn-vor-frue-keskiaikainen.webp",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Viewed all four composites against scholarly reconstruction p42. Brick Gothic body, polygonal choir, stepped side chapel and west spire/corner pinnacles agree in overall form. Complete silhouette, no cut spire, true alpha and legible at 256. Exact 1650/1611 spire details are interpretive as disclosed."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "format": "WEBP",
+          "mode": "RGBA",
+          "shaMatchesCurrentState": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alphaBBox": [
+            59,
+            60,
+            964,
+            976
+          ],
+          "clearBorderAtLeast48": true
+        },
+        "ownerPhotographicFeedbackApplied": false
+      },
+      {
+        "id": "vor-frue-keskiaika",
+        "role": "B",
+        "sha256": "5aed1c2fd8b3af6bfb965bc4afd4373731222d02379e9b78527146f937f637b7",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/ihme-vor-frue-keskiaika-loistoaika.jpg",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Final B3 JPEG viewed full size. Brick Gothic structure follows scholarly reconstruction; no replacement neoclassical facade. Full spire tip visible with narrow margin. Individual bricks, worn cobbles, timber, clothing and natural daylight read as a camera photograph; people/routes coherent and nonduplicated. Square furnishing and precise 1650 details remain interpreted."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "format": "JPEG",
+          "mode": "RGB",
+          "shaMatchesCurrentState": true,
+          "iccBytes": 480
+        },
+        "ownerPhotographicFeedbackApplied": true
+      },
+      {
+        "id": "maison-du-peuple",
+        "role": "A",
+        "sha256": "e6a5981837b03d65e6f563cbb69364ddce29f8d7bea59e009cfc8d2a3ace794d",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/final/bryssel-maison-du-peuple.webp",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Viewed all four composites against KIK-IRPA full facade. Deep concave center, projecting glass bays and left arched entry retained. Whole structure fits. Fine dark finials lose contrast against dark background at 256 but main mass remains clear; minor and not blocking."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "format": "WEBP",
+          "mode": "RGBA",
+          "shaMatchesCurrentState": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alphaBBox": [
+            48,
+            54,
+            976,
+            976
+          ],
+          "clearBorderAtLeast48": true
+        },
+        "ownerPhotographicFeedbackApplied": false
+      },
+      {
+        "id": "maison-du-peuple",
+        "role": "B",
+        "sha256": "e92ca62327c33a3edf3436ad70429b34c430747c118acec27ace88f0924be5be",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/final/ihme-maison-du-peuple-loistoaika.jpg",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "notes": [
+          "Final B2 JPEG viewed full size. Correct concave facade and projected bays, coherent entry stairs and people. Plausible natural glass reflections, brick, stone and fabric; photographic daylight and optical depth. A few high finial tips leave the upper edge; disclosed minor composition limitation, not identity loss. Anonymous period arrivals are compatible with the 1899 opening scene; exact crowd is reconstruction."
+        ],
+        "technicalChecks": {
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "format": "JPEG",
+          "mode": "RGB",
+          "shaMatchesCurrentState": true,
+          "iccBytes": 480
+        },
+        "ownerPhotographicFeedbackApplied": true
+      }
+    ]
+  },
+  "productionRecords": [
+    {
+      "id": "mercato-vecchio",
+      "role": "A",
+      "state": {
+        "taskNumber": 1385,
+        "id": "mercato-vecchio",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 5,
+        "selectedAttempt": 5,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-b3d2dc56-006b-4fed-9902-dcd1ade2018b.png",
+            "status": "rejected-preserved",
+            "reason": "Arcade shortened to seven long-side openings."
+          },
+          {
+            "version": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/prompts/A-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/candidates/A-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-ac904711-e764-4e5e-8722-4df4d4bc3659.png",
+            "status": "rejected-preserved",
+            "reason": "Arcade shortened to eight long-side openings."
+          },
+          {
+            "version": 3,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/prompts/A-v3.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/candidates/A-v3-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-47bc3049-ebda-4b78-867f-395dd360d2f9.png",
+            "status": "rejected-preserved",
+            "reason": "Arcade shortened to seven long-side openings."
+          },
+          {
+            "version": 4,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/prompts/A-v4.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/candidates/A-v4-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-f437799d-8526-431e-b3f1-c75b0fae4bab.png",
+            "status": "rejected-preserved",
+            "reason": "Arcade shortened to eight long-side openings."
+          },
+          {
+            "version": 5,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/prompts/A-v5.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/candidates/A-v5-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-5a46d8f0-96d4-4e6e-90a0-4917ca0c2484.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/final/firenze-mercato-vecchio.webp",
+        "sourceSha256": "436d1067e7b50262bc91b7e72148b8dcfdd9aa99042880b5abfa53e13eec64e5",
+        "finalSha256": "cd494c10d03e96bddf175d2822fc45841838d4062e382c661d45e8bd676579fd",
+        "promptSha256": "dfc865b6c760570bed2fbc64e6181e54beda547018d3e48c7f87a73e19222856",
+        "bytes": 429768,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.uffizi.it/en/artworks/giuseppe-and-vittorio-jacquier-and-the-image-of-italy",
+          "https://florenceasitwas.wlu.edu/19th-century-views-of-florence.html",
+          "https://archiviodistatofirenze.cultura.gov.it/asfi/fileadmin/risorse/allegati_inventari_on_line/demolizione_inventario.pdf",
+          "https://www.palazzospinelli.org/architetture/scheda.asp?ID=173&offset=510",
+          "https://www.arteleonardo.com/en/blog/432/vasaris-loggia-del-pesce-a-troubled-history"
+        ],
+        "historicalUncertainty": "Original Mercato Vecchio1873 before clearance. Archive descriptions differ on later booth-clearance dates;1873 is treated as pre-clearance. Compact A deliberately compresses spacing between loggia, Column of Abundance and booths; not a scale site plan. Nine long-facade arches verified against rebuilt loggia photograph, historic forms supported by museum/archive images. Exact stall arrangement, people, color and unseen masonry inferred. B cathedral sightline is consistent with Jacquier Uffizi photograph; focal perspective is interpretive.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:31:02.042002+00:00",
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "architecture": "Nine long-facade arches and two end arches, fish medallions, Tuscan stone columns, hipped tile roof, separate female Abundance statue column and old low booths.",
+          "style": "Fine-line ordinary shaded watercolor; no tone alteration. Full and256px light/dark inspected.",
+          "limitations": "Original Mercato Vecchio1873 before clearance. Archive descriptions differ on later booth-clearance dates;1873 is treated as pre-clearance. Compact A deliberately compresses spacing between loggia, Column of Abundance and booths; not a scale site plan. Nine long-facade arches verified against rebuilt loggia photograph, historic forms supported by museum/archive images. Exact stall arrangement, people, color and unseen masonry inferred. B cathedral sightline is consistent with Jacquier Uffizi photograph; focal perspective is interpretive.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/qa/export-verification.json",
+          "outerEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ]
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "mercato-vecchio",
+      "role": "B",
+      "state": {
+        "taskNumber": 1386,
+        "id": "mercato-vecchio",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-67a6b3c3-e1cc-4371-8e52-dcd5ac169496.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/final/ihme-mercato-vecchio-loistoaika.jpg",
+        "sourceSha256": "b7e6c8b8ce013253e76fd231c046206ed900d2f1ce2c135688930d81e4027cfd",
+        "finalSha256": "219fa4e894e5f987306ace25e244fca820f6cfee1cfd39391ffea73ff901dcf4",
+        "promptSha256": "bfedddcd1937dbb45c918cc442fbd6e72cb66530690a87e43cda0bf7ee1ceb37",
+        "bytes": 790407,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.uffizi.it/en/artworks/giuseppe-and-vittorio-jacquier-and-the-image-of-italy",
+          "https://florenceasitwas.wlu.edu/19th-century-views-of-florence.html",
+          "https://archiviodistatofirenze.cultura.gov.it/asfi/fileadmin/risorse/allegati_inventari_on_line/demolizione_inventario.pdf",
+          "https://www.palazzospinelli.org/architetture/scheda.asp?ID=173&offset=510",
+          "https://www.arteleonardo.com/en/blog/432/vasaris-loggia-del-pesce-a-troubled-history"
+        ],
+        "historicalUncertainty": "Original Mercato Vecchio1873 before clearance. Archive descriptions differ on later booth-clearance dates;1873 is treated as pre-clearance. Compact A deliberately compresses spacing between loggia, Column of Abundance and booths; not a scale site plan. Nine long-facade arches verified against rebuilt loggia photograph, historic forms supported by museum/archive images. Exact stall arrangement, people, color and unseen masonry inferred. B cathedral sightline is consistent with Jacquier Uffizi photograph; focal perspective is interpretive.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:31:02.071088+00:00",
+          "views": [
+            "native source full image",
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Old fish loggia and Column of Abundance, crowded market booths, historic plaster houses; no modern Piazza Repubblica. Original Jacquier photo supports distant Duomo/campanile composition.",
+          "style": "Full-color real-camera photographic material/optics/light; no conspicuous CGI, paper or procedural surface. Faces, limbs, props and architecture inspected.",
+          "limitations": "Original Mercato Vecchio1873 before clearance. Archive descriptions differ on later booth-clearance dates;1873 is treated as pre-clearance. Compact A deliberately compresses spacing between loggia, Column of Abundance and booths; not a scale site plan. Nine long-facade arches verified against rebuilt loggia photograph, historic forms supported by museum/archive images. Exact stall arrangement, people, color and unseen masonry inferred. B cathedral sightline is consistent with Jacquier Uffizi photograph; focal perspective is interpretive.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/mercato-vecchio/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "unusedPromptDrafts": [
+          "B-v2 drafted while evaluating perspective; NOT generated. Original Jacquier photograph comparison supported B-v1 composition."
+        ]
+      }
+    },
+    {
+      "id": "helsinki-vanha-asema",
+      "role": "A",
+      "state": {
+        "id": "helsinki-vanha-asema",
+        "role": "A",
+        "taskNumber": 1387,
+        "status": "qa-passed-awaiting-independent-review",
+        "selectedAttempt": 1,
+        "generationCalls": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/candidates/A-v1-source.png",
+            "qa": "PASS"
+          }
+        ],
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:15:11.772882+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "helsinki-vanha-asema",
+          "role": "A",
+          "taskNumber": 1387,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/helsinki-vanha-rautatieasema.webp",
+          "sha256": "070f67bcd35f0849e90a7b2ff03a54d52302de262fdccdeb70c749a7c55982cb",
+          "bytes": 409660,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "Full Edelfelt1862 station and clean alpha on light/dark. Museum photograph main gables, canopy and window structure retained.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false
+      }
+    },
+    {
+      "id": "helsinki-vanha-asema",
+      "role": "B",
+      "state": {
+        "id": "helsinki-vanha-asema",
+        "role": "B",
+        "taskNumber": 1388,
+        "status": "FINAL_QA_PASS",
+        "selectedAttempt": 2,
+        "generationCalls": 2,
+        "attempts": [
+          {
+            "attempt": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/candidates/B-v1-source.png",
+            "qa": "SUPERSEDED_BY_SCENE_AMENDMENT"
+          },
+          {
+            "attempt": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/candidates/B-v2-source.png",
+            "qa": "PASS"
+          }
+        ],
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:41:58.450498+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "helsinki-vanha-asema",
+          "role": "B",
+          "taskNumber": 1388,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/ihme-helsinki-vanha-asema-loistoaika.jpg",
+          "sha256": "cc12bbca5f29eb5fc003b13a9503f7958ecaf83271c5063858c0bbee9615ea58",
+          "bytes": 639657,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "New whole image B2 matches amended 1873 locomotive/platform scene. Natural wood canopy, believable dark iron locomotive and metal fittings, wool clothes and daylight. Edelfelt facade, no Saarinen tower. Final JPEG personally viewed.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false,
+          "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+          "depictedEra": "1873"
+        },
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preAmendmentFinal": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:15:11.775344+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "helsinki-vanha-asema",
+          "role": "B",
+          "taskNumber": 1388,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/helsinki-vanha-asema/final/ihme-helsinki-vanha-asema-loistoaika.jpg",
+          "sha256": "658ddae2041e999a071f16d0aa641c7716e5393b88f367bf4d94d8c6b430927e",
+          "bytes": 702006,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "Real photographic plaster, wool clothing, pale northern daylight and unpaved square. Four visible horse legs and coherent cab. Edelfelt station massing matches museum photo, no later Saarinen tower.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "depictedEra": "1873"
+      }
+    },
+    {
+      "id": "nyenskans",
+      "role": "A",
+      "state": {
+        "taskNumber": 1389,
+        "id": "nyenskans",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-83473e74-e911-436d-9742-4201e912f5a7.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/final/pietari-nyenskans.webp",
+        "sourceSha256": "16610217ca85cb0da84f0ab6b6434b19126364d2a5b40a47afee745895ada38d",
+        "finalSha256": "765abd858e20535066575152d0406e48f519c3fa7fe0ca4473db49ec228b10fd",
+        "promptSha256": "b161d510618201fb5616fcb588c16a2eb7384306001624066647d4356111bea5",
+        "bytes": 663844,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.old.archeo.ru/izdaniya-1/archaeological-news/contents-of-issues/arheologicheskie-vesti/36.pdf",
+          "https://lib.kunstkamera.ru/files/lib/987-5-88431-196-1/987-5-88431-196-1_12.pdf",
+          "https://doi.org/10.1080/10572414.2024.2413068",
+          "https://nyen-spb.ru/istoriya-kreposti"
+        ],
+        "historicalUncertainty": "A remains circa1650 under original order, based on Sorokin early/transitional wood-earth fort, NOT later1703 completed five-point star; exact interim outlines and elevations inferred. B follows the new scene amendment: circa1660 Nyen town near bank with1656destruction traces and opposite-bank Nyenskans. Population majority Finnish-speaking is historical context, not visually identifiable ethnicity. Exact street/fort rebuilding state, people and dress are interpretive. Ships from superseded B-v1 remain history only.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:36:24.923648+00:00",
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "architecture": "Early rectangular timber court, low wood/earth outerworks and unfinished bank. Not later complete five-point1703star or high stone castle.",
+          "style": "Fine-line ordinary shaded watercolor; no tone alteration. Full and256px light/dark inspected.",
+          "limitations": "A remains circa1650 under original order, based on Sorokin early/transitional wood-earth fort, NOT later1703 completed five-point star; exact interim outlines and elevations inferred. B follows the new scene amendment: circa1660 Nyen town near bank with1656destruction traces and opposite-bank Nyenskans. Population majority Finnish-speaking is historical context, not visually identifiable ethnicity. Exact street/fort rebuilding state, people and dress are interpretive. Ships from superseded B-v1 remain history only.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/qa/export-verification.json",
+          "outerEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ]
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "nyenskans",
+      "role": "B",
+      "state": {
+        "taskNumber": 1390,
+        "id": "nyenskans",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 2,
+        "selectedAttempt": 2,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-b998e373-78b4-4c2a-ba35-ec551f721d98.png",
+            "status": "rejected-preserved",
+            "reason": "Superseded by scene amendment3bcef53d89907dbfaed3be6449fa69763954dd94: era1660 town life/rebuilding across river fromfort, not original1650shipping scene."
+          },
+          {
+            "version": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/candidates/B-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-d2636f36-0a03-4512-88ea-db15fd540c33.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/final/ihme-nyenskans-loistoaika.jpg",
+        "sourceSha256": "ee77ffe29958e6ee66823e9fcd68e0937b1de9ec935e4d91c0a4f93ed227de7c",
+        "finalSha256": "b384b4f270c7339335766a165458dfe028430c1b8ca3844a14bf5c63e4ea8cc4",
+        "promptSha256": "c22a02ee13a83c0ce55d924310eec3ced9f0279abee4290a7797f7d7da77ca18",
+        "bytes": 828476,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.old.archeo.ru/izdaniya-1/archaeological-news/contents-of-issues/arheologicheskie-vesti/36.pdf",
+          "https://lib.kunstkamera.ru/files/lib/987-5-88431-196-1/987-5-88431-196-1_12.pdf",
+          "https://doi.org/10.1080/10572414.2024.2413068",
+          "https://nyen-spb.ru/istoriya-kreposti"
+        ],
+        "historicalUncertainty": "A remains circa1650 under original order, based on Sorokin early/transitional wood-earth fort, NOT later1703 completed five-point star; exact interim outlines and elevations inferred. B follows the new scene amendment: circa1660 Nyen town near bank with1656destruction traces and opposite-bank Nyenskans. Population majority Finnish-speaking is historical context, not visually identifiable ethnicity. Exact street/fort rebuilding state, people and dress are interpretive. Ships from superseded B-v1 remain history only.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:36:24.953971+00:00",
+          "views": [
+            "native source full image",
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Near-bank timber Nyen trading town, ruined/burned foundation and repaired roof, everyday trade; opposite-bank fort across Okhta. Circa1660 reconstruction after1656, not modernPetersburg.",
+          "style": "Full-color real-camera photographic material/optics/light; no conspicuous CGI, paper or procedural surface. Faces, limbs, props and architecture inspected.",
+          "limitations": "A remains circa1650 under original order, based on Sorokin early/transitional wood-earth fort, NOT later1703 completed five-point star; exact interim outlines and elevations inferred. B follows the new scene amendment: circa1660 Nyen town near bank with1656destruction traces and opposite-bank Nyenskans. Population majority Finnish-speaking is historical context, not visually identifiable ethnicity. Exact street/fort rebuilding state, people and dress are interpretive. Ships from superseded B-v1 remain history only.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/nyenskans/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "tejo-ooppera",
+      "role": "A",
+      "state": {
+        "taskNumber": 1391,
+        "id": "tejo-ooppera",
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-8f2a9da7-5f33-489c-bf5b-d91b5639e415.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/final/lissabon-tejon-ooppera.webp",
+        "sourceSha256": "436b287ca02928097abd244a820ce93aba577de87cbdba9d859fe828385d7464",
+        "finalSha256": "b27f0f1de365294d9886fb36ac8a09ecbc5cf597e03c6a2d243c7ccbe99e7529",
+        "promptSha256": "e6ba50ba2f65b5f43a6a381e24e0ffa4ceede7bd1822ea1ae8e4d5926436df15",
+        "bytes": 584516,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.lisboa.pt/fileadmin/informacao/publicacoes/arquivo_municipal/Cadernos_Arquivo_Municipal_9.pdf",
+          "https://www.britishmuseum.org/collection/object/P_1949-1008-420",
+          "https://operadotejo.org/2009/09/12/nova-revisao-do-projecto-city-and-spectacle/",
+          "https://iiclisbona.esteri.it/wp-content/uploads/resource/doc/2021/11/16._gomes_januario_12_2017-213-223.pdf",
+          "https://commons.wikimedia.org/wiki/File:Cen%C3%A1rio_para_a_inaugura%C3%A7%C3%A3o_da_%C3%93pera_do_Tejo,_31_de_Mar%C3%A7o_de_1755.png"
+        ],
+        "historicalUncertainty": "A exterior is explicitly a cautious historical reconstruction: complete final1755 facade lacks a certain surviving contemporary overall view. Masses, asymmetrical annex, stone-window rhythm and tall stagehouse derive from early plans,1757 ruin engraving and later architectural research; exact roofline, ornament and openings are inferred. Not TeatroSãoCarlos1793. B follows scene amendment3bcef53d89907dbfaed3be6449fa69763954dd94: lateMarch1755 interior performance, parterre andfour boxorders with colossal columns. Room layout sourced from final-plan analysis, stage scenic composition from GiovanniBerardi1755 opening engraving. Exact color, audience and performers' likenesses are interpretive; distant singers represent the roles, not verified portraits. First exterior B prompt was NEVER generated.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:40:19.864526+00:00",
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "architecture": "Longrectangularbaroque theatre, tallstagehouse, lowerauditoriumandservicewing; paleplaster/stone andterracottaroof. Externaldecorative detailsinterpretive.",
+          "style": "Fine-line ordinary shaded watercolor; no tone alteration. Full and256px light/dark inspected.",
+          "limitations": "A exterior is explicitly a cautious historical reconstruction: complete final1755 facade lacks a certain surviving contemporary overall view. Masses, asymmetrical annex, stone-window rhythm and tall stagehouse derive from early plans,1757 ruin engraving and later architectural research; exact roofline, ornament and openings are inferred. Not TeatroSãoCarlos1793. B follows scene amendment3bcef53d89907dbfaed3be6449fa69763954dd94: lateMarch1755 interior performance, parterre andfour boxorders with colossal columns. Room layout sourced from final-plan analysis, stage scenic composition from GiovanniBerardi1755 opening engraving. Exact color, audience and performers' likenesses are interpretive; distant singers represent the roles, not verified portraits. First exterior B prompt was NEVER generated.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/qa/export-verification.json",
+          "outerEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ]
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "tejo-ooppera",
+      "role": "B",
+      "state": {
+        "taskNumber": 1392,
+        "id": "tejo-ooppera",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-eaaff302-a5ab-4dbb-8a8a-344e06f61d8a.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/final/ihme-tejo-ooppera-loistoaika.jpg",
+        "sourceSha256": "5f5d6ca615aab0d5bbe2393ff6d26de46074a153f9c6c184b4773a74eb704c2b",
+        "finalSha256": "2fd395bc29c3b1a4004bb1ce9e6453173368ba0ea90af36a7a9865fc4cff6b12",
+        "promptSha256": "83d8f8224c91e4009a00f6399b0a06ef05f1c37e4a8a3669f14a823134f79ca5",
+        "bytes": 748186,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.lisboa.pt/fileadmin/informacao/publicacoes/arquivo_municipal/Cadernos_Arquivo_Municipal_9.pdf",
+          "https://www.britishmuseum.org/collection/object/P_1949-1008-420",
+          "https://operadotejo.org/2009/09/12/nova-revisao-do-projecto-city-and-spectacle/",
+          "https://iiclisbona.esteri.it/wp-content/uploads/resource/doc/2021/11/16._gomes_januario_12_2017-213-223.pdf",
+          "https://commons.wikimedia.org/wiki/File:Cen%C3%A1rio_para_a_inaugura%C3%A7%C3%A3o_da_%C3%93pera_do_Tejo,_31_de_Mar%C3%A7o_de_1755.png"
+        ],
+        "historicalUncertainty": "A exterior is explicitly a cautious historical reconstruction: complete final1755 facade lacks a certain surviving contemporary overall view. Masses, asymmetrical annex, stone-window rhythm and tall stagehouse derive from early plans,1757 ruin engraving and later architectural research; exact roofline, ornament and openings are inferred. Not TeatroSãoCarlos1793. B follows scene amendment3bcef53d89907dbfaed3be6449fa69763954dd94: lateMarch1755 interior performance, parterre andfour boxorders with colossal columns. Room layout sourced from final-plan analysis, stage scenic composition from GiovanniBerardi1755 opening engraving. Exact color, audience and performers' likenesses are interpretive; distant singers represent the roles, not verified portraits. First exterior B prompt was NEVER generated.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:40:19.893339+00:00",
+          "views": [
+            "native source full image",
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Newamended interior scene: parterre crowd, fourboxlevels, colossalcolumnorder and stage singers; scenery based on1755 openingengraving. Photograph of actualtheater, sceneryitself is periodpaintedcanvas.",
+          "style": "Full-color real-camera photographic material/optics/light; no conspicuous CGI, paper or procedural surface. Faces, limbs, props and architecture inspected.",
+          "limitations": "A exterior is explicitly a cautious historical reconstruction: complete final1755 facade lacks a certain surviving contemporary overall view. Masses, asymmetrical annex, stone-window rhythm and tall stagehouse derive from early plans,1757 ruin engraving and later architectural research; exact roofline, ornament and openings are inferred. Not TeatroSãoCarlos1793. B follows scene amendment3bcef53d89907dbfaed3be6449fa69763954dd94: lateMarch1755 interior performance, parterre andfour boxorders with colossal columns. Room layout sourced from final-plan analysis, stage scenic composition from GiovanniBerardi1755 opening engraving. Exact color, audience and performers' likenesses are interpretive; distant singers represent the roles, not verified portraits. First exterior B prompt was NEVER generated.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/tejo-ooppera/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "karntnertor",
+      "role": "A",
+      "state": {
+        "task": 1393,
+        "id": "karntnertor",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": 1,
+        "acceptedAttempt": 1,
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/karntnertor/final/wien-karntnertor-teatteri.webp",
+        "sha256": "ba8a768d602543a4898a82fff953397997e77693481366d4bafdbdb2a63ca353",
+        "sourceSHA256": "3ec863514089117b348be0b9182179b10af3b5fe278b670d1928825d0dffc3b4",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP RGBA",
+        "sourceURLs": [
+          "https://www.beethoven.de/de/media/view/5926626504212480",
+          "https://sammlung.wienmuseum.at/en/object/136383-1-albertinaplatz-2-u-3-ehemaliges-kaerntnertor-theater/",
+          "https://www.beethovenfest.de/de/magazin/1824-zwei-meisterwerke-entstehen/172",
+          "https://www.beethoven.de/de/media/view/5270671751905280"
+        ],
+        "historicalPeriod": "1824",
+        "completedAt": "2026-10-31T14:38:53.440792+00:00",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "uncertainties": [
+          "Reconstruction of 1824 appearance using c1830 print; no exact 1824 photograph exists. Colors and concert audience are plausible reconstruction, not documentary record."
+        ],
+        "QA": {
+          "visual": "PASS",
+          "filesViewed": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-dark.png"
+          ],
+          "notes": "Early projecting porch, three-bay rounded facade, complete alpha silhouette; light/dark tested, no visible edge halo.",
+          "technical": "PASS"
+        }
+      }
+    },
+    {
+      "id": "karntnertor",
+      "role": "B",
+      "state": {
+        "task": 1394,
+        "id": "karntnertor",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 3,
+        "currentAttempt": 3,
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "rejected",
+            "reason": "First upper-storey windows became round-headed rather than rectangular; all pediments curved rather than alternating."
+          },
+          {
+            "attempt": 2,
+            "status": "superseded-by-new-scene-order",
+            "reason": "New 14:14Z source requests 1824 theatre INTERIOR with large orchestra, instead of exterior queue."
+          }
+        ],
+        "sceneAmendment": "source/scene-amendment.md; 3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "acceptedAttempt": 3,
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/karntnertor/final/ihme-karntnertor-loistoaika.jpg",
+        "sha256": "4dcb13cff044bbcf7e94569fade74a53dc8cbb06c731006dc313df82314df04a",
+        "sourceSHA256": "34b971f2ae39e821d76746504004d0b3dc10c5531d0ffc350e5dfb508ecaa1e0",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC quality95 4:4:4",
+        "sourceURLs": [
+          "https://www.beethoven.de/de/media/view/5926626504212480",
+          "https://sammlung.wienmuseum.at/en/object/136383-1-albertinaplatz-2-u-3-ehemaliges-kaerntnertor-theater/",
+          "https://www.beethovenfest.de/de/magazin/1824-zwei-meisterwerke-entstehen/172",
+          "https://www.beethoven.de/de/media/view/5270671751905280"
+        ],
+        "historicalPeriod": "1824",
+        "completedAt": "2026-10-31T14:38:53.440792+00:00",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "uncertainties": [
+          "Reconstruction of 1824 appearance using c1830 print; no exact 1824 photograph exists. Colors and concert audience are plausible reconstruction, not documentary record."
+        ],
+        "QA": {
+          "visual": "PASS",
+          "filesViewed": [
+            "B-full.png"
+          ],
+          "notes": "New scene-amendment interior: five galleries, packed audience, unusually large orchestra on stage, natural camera light/materials/optics. No modern concert technology. Exact crowd/orchestral placement is illustrative, not an archival photograph.",
+          "technical": "PASS"
+        }
+      }
+    },
+    {
+      "id": "ringtheater",
+      "role": "A",
+      "state": {
+        "task": 1395,
+        "id": "ringtheater",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": 1,
+        "acceptedAttempt": 1,
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/ringtheater/final/wien-ringtheater.webp",
+        "sha256": "6729416eab60b03736d1c2d716079f89717dbffc7185806279cf739062afb357",
+        "sourceSHA256": "8b706dbd6d21a0858277712a3b801dadc5b80d5bf79efec4925e03134b86965c",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP RGBA",
+        "sourceURLs": [
+          "https://sammlung.wienmuseum.at/en/object/179709-1-schottenring-7-ringtheater-komische-oper/",
+          "https://www.digital.wienbibliothek.at/name/view/3229245"
+        ],
+        "historicalPeriod": "1874 building",
+        "completedAt": "2026-10-31T14:40:14.788343+00:00",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "uncertainties": [
+          "Exterior colors reconstructed from monochrome photograph; audience and gaslight atmosphere are interpretive."
+        ],
+        "QA": {
+          "visual": "PASS",
+          "filesViewed": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-dark.png"
+          ],
+          "notes": "Matches primary facade arch, high compact volume, side loggias and attic sculptures. Clean transparent silhouette on light/dark.",
+          "technical": "PASS"
+        }
+      }
+    },
+    {
+      "id": "ringtheater",
+      "role": "B",
+      "state": {
+        "task": 1396,
+        "id": "ringtheater",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": 1,
+        "historicalPeriod": "January 1874",
+        "sceneAmendment": "source/scene-amendment.md; 3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "acceptedAttempt": 1,
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/ringtheater/final/ihme-ringtheater-loistoaika.jpg",
+        "sha256": "cd16395b399b16e323d1cd8801a0fc1d49f5cef316fcf00ed5151c4dca01ebdc",
+        "sourceSHA256": "8099c3907db06905845d2e7fea13836761ac9c8e737852f24e76bad3d016bda1",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC quality95 4:4:4",
+        "sourceURLs": [
+          "https://sammlung.wienmuseum.at/en/object/179709-1-schottenring-7-ringtheater-komische-oper/",
+          "https://www.digital.wienbibliothek.at/name/view/3229245"
+        ],
+        "completedAt": "2026-10-31T14:40:14.788343+00:00",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "uncertainties": [
+          "Exterior colors reconstructed from monochrome photograph; audience and gaslight atmosphere are interpretive."
+        ],
+        "QA": {
+          "visual": "PASS",
+          "filesViewed": [
+            "B-full.png"
+          ],
+          "notes": "Winter 1874 arrival matches new scene order: bare trees, winter capes, no later-name sign, compact tall facade matches primary photo; camera-real materials and coherent crowd.",
+          "technical": "PASS"
+        }
+      }
+    },
+    {
+      "id": "kustaa-ooppera",
+      "role": "A",
+      "state": {
+        "id": "kustaa-ooppera",
+        "role": "A",
+        "taskNumber": 1397,
+        "status": "qa-passed-awaiting-independent-review",
+        "selectedAttempt": 1,
+        "generationCalls": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/candidates/A-v1-source.png",
+            "qa": "PASS",
+            "reason": "Personally viewed light/dark composites. Restrained yellow historic opera block, low central attic and classical pilasters consistent with archived facade, no current opera silhouette. True alpha clean. Rear massing is approximate reconstruction."
+          }
+        ],
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:28:41.472440+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "kustaa-ooppera",
+          "role": "A",
+          "taskNumber": 1397,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/tukholma-kustaa-iiin-ooppera.webp",
+          "sha256": "177be48ea8678ae3e2e79858cf41e3b3b885b009258a868f5a394ffc655e1852",
+          "bytes": 539748,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "Personally viewed light/dark composites. Restrained yellow historic opera block, low central attic and classical pilasters consistent with archived facade, no current opera silhouette. True alpha clean. Rear massing is approximate reconstruction.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false
+      }
+    },
+    {
+      "id": "kustaa-ooppera",
+      "role": "B",
+      "state": {
+        "id": "kustaa-ooppera",
+        "role": "B",
+        "taskNumber": 1398,
+        "status": "FINAL_QA_PASS",
+        "selectedAttempt": 2,
+        "generationCalls": 2,
+        "attempts": [
+          {
+            "attempt": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/candidates/B-v1-source.png",
+            "qa": "SUPERSEDED_BY_SCENE_AMENDMENT",
+            "reason": "Final JPEG personally viewed. Six distinct foreground masquerade guests, coherent hands and legs. Natural skin, silk/wool, cool dusk and candlelight. Old opera facade with low attic; no later equestrian statue. Scene not depiction of identified actual people."
+          },
+          {
+            "attempt": 2,
+            "qa": "PASS",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/candidates/B-v2-source.png"
+          }
+        ],
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "kustaa-ooppera",
+          "role": "B",
+          "taskNumber": 1398,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/ihme-kustaa-ooppera-loistoaika.jpg",
+          "sha256": "816f483dcfc713b15d8d84aff72481f48b0dca2a8e33eb7bcc1e166ad942b121",
+          "bytes": 662436,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "Natural candlelit full-size photographic ballroom; coherent masked guests, silk and powdered hair. Architecture compared with official model of original1782opera. Temporary ball floor, late18thcostume; exact party arrangement is interpretation.",
+          "depictedEra": "16 March1792",
+          "historicalReconstruction": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preAmendmentFinal": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:28:41.472440+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "kustaa-ooppera",
+          "role": "B",
+          "taskNumber": 1398,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/kustaa-ooppera/final/ihme-kustaa-ooppera-loistoaika.jpg",
+          "sha256": "0d1e11ba3c451bcb5f9fefbd879c4dd8525a14c5c3d19c361348101fe7f40e8a",
+          "bytes": 687453,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "Final JPEG personally viewed. Six distinct foreground masquerade guests, coherent hands and legs. Natural skin, silk/wool, cool dusk and candlelight. Old opera facade with low attic; no later equestrian statue. Scene not depiction of identified actual people.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "depictedEra": "16 March1792"
+      }
+    },
+    {
+      "id": "vor-frue-keskiaika",
+      "role": "A",
+      "state": {
+        "id": "vor-frue-keskiaika",
+        "role": "A",
+        "taskNumber": 1399,
+        "status": "FINAL_QA_PASS",
+        "selectedAttempt": 2,
+        "generationCalls": 2,
+        "attempts": [
+          {
+            "attempt": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/candidates/A-v1-source.png",
+            "qa": "SUPERSEDED_BY_SCENE_AMENDMENT",
+            "reason": "Personally viewed light/dark composites. Long pre1807 hall, tall multistage spire and small east turret. Clean alpha; historic1738 replacement retaining Gothic form, not present1829 classical church."
+          },
+          {
+            "attempt": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/prompts/A-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/candidates/A-v2-source.png",
+            "qa": "PASS"
+          }
+        ],
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "vor-frue-keskiaika",
+          "role": "A",
+          "taskNumber": 1399,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/kobenhavn-vor-frue-keskiaikainen.webp",
+          "sha256": "e1f54344d71a21b54fc7980848ca121a4225b5a214af6545fa3dd088ed0d0f1e",
+          "bytes": 674646,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "Medieval red brick Gothic body and long choir match the scholarly reconstruction, western central spire and corner pinnacles. Entire silhouette and light/dark alpha personally inspected. Approximate1650adaptation, exact1611spire detail interpretive.",
+          "historicalReconstruction": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preAmendmentFinal": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:28:41.472440+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "vor-frue-keskiaika",
+          "role": "A",
+          "taskNumber": 1399,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/kobenhavn-vor-frue-keskiaikainen.webp",
+          "sha256": "a6dbeb7936a161b1c995ed8c6a68dc166669e994b4722422186a561f9f52d4ca",
+          "bytes": 499158,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "Personally viewed light/dark composites. Long pre1807 hall, tall multistage spire and small east turret. Clean alpha; historic1738 replacement retaining Gothic form, not present1829 classical church.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "depictedEra": "1650"
+      }
+    },
+    {
+      "id": "vor-frue-keskiaika",
+      "role": "B",
+      "state": {
+        "id": "vor-frue-keskiaika",
+        "role": "B",
+        "taskNumber": 1400,
+        "status": "FINAL_QA_PASS",
+        "selectedAttempt": 3,
+        "generationCalls": 3,
+        "attempts": [
+          {
+            "attempt": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/candidates/B-v1-source.png",
+            "qa": "REJECT",
+            "reason": "Initial framing clipped top finial and foreground legs. Replaced by complete new image."
+          },
+          {
+            "attempt": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/candidates/B-v2-source.png",
+            "qa": "SUPERSEDED_BY_SCENE_AMENDMENT",
+            "reason": "B2 final JPEG personally viewed. Entire spire and foreground people feet within frame. Natural weathered plaster/slate, diffuse daylight and street texture; coherent four foreground figures. Pre1807 source silhouette retained, approximate scene c1800."
+          },
+          {
+            "attempt": 3,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/prompts/B-v3.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/candidates/B-v3-source.png",
+            "qa": "PASS"
+          }
+        ],
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:48:14.410372+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "vor-frue-keskiaika",
+          "role": "B",
+          "taskNumber": 1400,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/ihme-vor-frue-keskiaika-loistoaika.jpg",
+          "sha256": "5aed1c2fd8b3af6bfb965bc4afd4373731222d02379e9b78527146f937f637b7",
+          "bytes": 646422,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "Whole medieval brick church, tall spire/finial fit with narrow upper gap. Normal daylight on individual bricks, modest1650gathering by entrances, no later1738/1829church. Geometry grounded in scholarly reconstruction.",
+          "historicalReconstruction": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "preAmendmentFinal": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:28:41.472440+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "vor-frue-keskiaika",
+          "role": "B",
+          "taskNumber": 1400,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/vor-frue-keskiaika/final/ihme-vor-frue-keskiaika-loistoaika.jpg",
+          "sha256": "a465749ed7114719d31711067a7a251a53fd63c6c87e40683d9579b9ca9ccb48",
+          "bytes": 621368,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "B2 final JPEG personally viewed. Entire spire and foreground people feet within frame. Natural weathered plaster/slate, diffuse daylight and street texture; coherent four foreground figures. Pre1807 source silhouette retained, approximate scene c1800.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "depictedEra": "1650"
+      }
+    },
+    {
+      "id": "maison-du-peuple",
+      "role": "A",
+      "state": {
+        "id": "maison-du-peuple",
+        "role": "A",
+        "status": "qa-passed-awaiting-independent-review",
+        "generationCalls": 2,
+        "attempts": [
+          {
+            "attempt": 1,
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/candidates/A-v1-source.png",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/prompts/A-v1.txt",
+            "qa": "REJECT",
+            "reason": "Near-straight rectangular corner block lost deep concave central sweep plus projecting left arch bay. Whole new image from full archive facade required."
+          },
+          {
+            "attempt": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/prompts/A-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/candidates/A-v2-source.png",
+            "qa": "PASS",
+            "reason": "A2 restores deep concave central facade, large left arched entry and projecting glass bays. Personally viewed light/dark, clean alpha and full massing, fine ink and watercolor. Near-front three-quarter view prioritizes faithful facade; exact rear not asserted."
+          }
+        ],
+        "selectedAttempt": 2,
+        "taskNumber": 1401,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:31:29.047118+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "maison-du-peuple",
+          "role": "A",
+          "taskNumber": 1401,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/final/bryssel-maison-du-peuple.webp",
+          "sha256": "e6a5981837b03d65e6f563cbb69364ddce29f8d7bea59e009cfc8d2a3ace794d",
+          "bytes": 975600,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "visualNotes": "A2 restores deep concave central facade, large left arched entry and projecting glass bays. Personally viewed light/dark, clean alpha and full massing, fine ink and watercolor. Near-front three-quarter view prioritizes faithful facade; exact rear not asserted.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "maison-du-peuple",
+      "role": "B",
+      "state": {
+        "id": "maison-du-peuple",
+        "role": "B",
+        "status": "qa-passed-awaiting-independent-review",
+        "generationCalls": 2,
+        "attempts": [
+          {
+            "attempt": 1,
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/candidates/B-v1-source.png",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/prompts/B-v1.txt",
+            "qa": "REJECT",
+            "reason": "Near-straight rectangular corner block lost deep concave central sweep plus projecting left arch bay. Whole new image from full archive facade required."
+          },
+          {
+            "attempt": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/candidates/B-v2-source.png",
+            "qa": "PASS",
+            "reason": "B2 restores source concave facade and left arch. Final JPEG personally viewed: natural iron/glass/brick, reflections and anonymous1900 workers. A few tall decorative finial tips outside top edge, but roof and main architectural form fully legible; not material identity loss."
+          }
+        ],
+        "selectedAttempt": 2,
+        "taskNumber": 1402,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:31:29.050003+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "maison-du-peuple",
+          "role": "B",
+          "taskNumber": 1402,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/maison-du-peuple/final/ihme-maison-du-peuple-loistoaika.jpg",
+          "sha256": "e92ca62327c33a3edf3436ad70429b34c430747c118acec27ace88f0924be5be",
+          "bytes": 823338,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "B2 restores source concave facade and left arch. Final JPEG personally viewed: natural iron/glass/brick, reflections and anonymous1900 workers. A few tall decorative finial tips outside top edge, but roof and main architectural form fully legible; not material identity loss.",
+          "historicalReconstruction": true,
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "pont-transbordeur",
+      "role": "A",
+      "state": {
+        "id": "pont-transbordeur",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "updatedAt": "2026-10-31T14:31:20.624639+00:00",
+        "generator": "built-in image_gen",
+        "selectedVersion": "A-v3",
+        "attempts": [
+          {
+            "version": "A-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/candidates/A-v1-source.png",
+            "sha256": "a460fcb6b8daf6c5471654c42847e07d07861193fd1dc30faaa56d2e63e30a00",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/prompts/A-v1.txt",
+            "selected": false,
+            "reason": "Pylons too tall relative to span"
+          },
+          {
+            "version": "A-v2",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/candidates/A-v2-source.png",
+            "sha256": "da68a955745e6fd3cc458e0d6aade2ab225304b749e686e802d87943fff86baf",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/prompts/A-v2.txt",
+            "selected": false,
+            "reason": "Gondola too high above quay/water level"
+          },
+          {
+            "version": "A-v3",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/candidates/A-v3-source.png",
+            "sha256": "7a78f0ddc796e37ffcc005802cc172e697bf3b94c470b67399b690246518f1a7",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/prompts/A-v3.txt",
+            "selected": true,
+            "reason": "Selected after final visual and file QA"
+          }
+        ],
+        "final": {
+          "id": "pont-transbordeur",
+          "role": "A",
+          "taskNumber": 1403,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/final/marseille-pont-transbordeur.webp",
+          "sha256": "1707f947c5d5cbbbb3a9ac996d5d666166d45c32703abbeb517ad95c7a6c5f06",
+          "bytes": 153004,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "Third full generation selected. Long span and two open lattice pylons, high stayed girder, shallow central truss, low suspended gondola and separate masonry feet. Full silhouette is present. Light/dark1024 and256 personally viewed; fine dark steel naturally has lower contrast on dark background, no tone adjustment applied.",
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "WEBP",
+          "mode": "RGBA",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "clear48pxBorder": true
+        }
+      }
+    },
+    {
+      "id": "pont-transbordeur",
+      "role": "B",
+      "state": {
+        "id": "pont-transbordeur",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "updatedAt": "2026-10-31T14:31:20.624639+00:00",
+        "generator": "built-in image_gen",
+        "selectedVersion": "B-v2",
+        "attempts": [
+          {
+            "version": "B-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/candidates/B-v1-source.png",
+            "sha256": "3801f7059b2278e48170d653e4d3d9fe32378783732a545ac13d15ad90cc8a84",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/prompts/B-v1.txt",
+            "selected": false,
+            "reason": "Gondola too high above quay/water level"
+          },
+          {
+            "version": "B-v2",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/candidates/B-v2-source.png",
+            "sha256": "6524589a3751b9e92720b4249ad846343564d919de3506170f54a49475413810",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/prompts/B-v2.txt",
+            "selected": true,
+            "reason": "Selected after final visual and file QA"
+          }
+        ],
+        "final": {
+          "id": "pont-transbordeur",
+          "role": "B",
+          "taskNumber": 1404,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/final/ihme-pont-transbordeur-loistoaika.jpg",
+          "sha256": "146c6d1b51cd3334747a9b89a5c7597616e295bd8469018c3f72be57d9829a07",
+          "bytes": 731083,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "Second full generation selected: gondola now at water/quay level with continuous long suspension lines, not hanging high in midair. Natural photographic water/paint/stone, fisherman anatomy and net handling plausible; boats clear of crossing. Period context reconstructed.",
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false,
+          "depictedEra": "1905"
+        },
+        "technicalChecks": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "iccBytes": 480
+        },
+        "sceneAmendment": {
+          "source": "../source/scene-amendment.md",
+          "commit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+          "originalRequestedEra": "circa1930",
+          "depictedEra": "1905",
+          "review": "B-v2 re-reviewed against amended1905 text. Low suspended basket crossing, complete new-type engineering structure, no later vehicles; surface wear concentrated on boats, no heavily corroded bridge. Period clothes tiny/generic. Existing candidate satisfies revised scene without new pixel changes."
+        }
+      }
+    },
+    {
+      "id": "erzsebet-silta",
+      "role": "A",
+      "state": {
+        "id": "erzsebet-silta",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "updatedAt": "2026-10-31T14:40:19.293876+00:00",
+        "generator": "built-in image_gen",
+        "selectedVersion": "A-v2",
+        "attempts": [
+          {
+            "version": "A-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/candidates/A-v1-source.png",
+            "sha256": "225d61e3dc4aad3ed04e458355bb3dcb12e141b5c1022608e76c1b84fc7c1889",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/prompts/A-v1.txt",
+            "selected": false,
+            "reason": "Cropped bridge ends"
+          },
+          {
+            "version": "A-v2",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/candidates/A-v2-source.png",
+            "sha256": "3c8575fa85cbdf4b6dbf0b0290b7492b8fec8163c9337754b48d9eb91caa49ce",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/prompts/A-v2.txt",
+            "selected": true,
+            "reason": "Selected after full visual/file QA"
+          }
+        ],
+        "final": {
+          "id": "erzsebet-silta",
+          "role": "A",
+          "taskNumber": 1405,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/final/budapest-erzsebet-silta-alkuperainen.webp",
+          "sha256": "51f291b00a4ed5853e1a6bb5467f52dc20d0686c1d09c26e3d27565ba3d243cf",
+          "bytes": 362420,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "Full original ornate metal gateways and complete end abutments within canvas. Light/dark1024 and256 personally viewed. A-v1 was rejected for end cropping; A-v2 preserves the complete silhouette. Fine ink and normal watercolor tones, actual alpha.",
+          "depictedEra": "circa1930",
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "WEBP",
+          "mode": "RGBA",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "clear48pxBorder": true
+        },
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94"
+      }
+    },
+    {
+      "id": "erzsebet-silta",
+      "role": "B",
+      "state": {
+        "id": "erzsebet-silta",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "updatedAt": "2026-10-31T14:53:38.660990+00:00",
+        "generator": "built-in image_gen",
+        "selectedVersion": "B-v4",
+        "attempts": [
+          {
+            "version": "B-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/candidates/B-v1-source.png",
+            "sha256": "400f857e912b217fe2b82537c3a6cd99905d9834437e585c696752e3a3224db4",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/prompts/B-v1.txt",
+            "selected": false,
+            "reason": "Ambiguous extra portal post"
+          },
+          {
+            "version": "B-v2",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/candidates/B-v2-source.png",
+            "sha256": "0438e91ecb743945ff6b957fde2ab4128e02a8814827569bb882738457354751",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/prompts/B-v2.txt",
+            "selected": false,
+            "reason": "Footpath appeared outside suspension hangers"
+          },
+          {
+            "version": "B-v3",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/candidates/B-v3-source.png",
+            "sha256": "1ce6f1e7a6337823aca3e69aedf4625f5581d2d770d5e1b81cbb35b15a8b809e",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/prompts/B-v3.txt",
+            "selected": false,
+            "reason": "Rejected: anachronistic postwar Buda Palace dome identified by root; entire image replaced."
+          },
+          {
+            "version": "B-v4",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/candidates/B-v4-source.png",
+            "sha256": "53c68eabf48c8b536e186908c0f3b3cee48b2342656d5e36c48af3f9c5df0386",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/prompts/B-v4.txt",
+            "selected": true,
+            "reason": "New entire image toward flat Pest; no Buda Palace dome or hills. Personally reviewed final JPEG."
+          }
+        ],
+        "final": {
+          "id": "erzsebet-silta",
+          "role": "B",
+          "taskNumber": 1406,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/final/ihme-erzsebet-silta-loistoaika.jpg",
+          "sha256": "023b9151dc2b3d65d9b187ea40fcd4408883ba87f5c0a1837e9c32b35fdd3a01",
+          "bytes": 708115,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "B-v4 final JPEG personally viewed at full resolution. Eastward view toward flat Pest removes B-v3 modern palace dome. Ornate portal, linked chains, continuous sidewalks inside hangers and tracks are coherent. Natural irregular stone, aged metal, wool clothing, daylight and atmospheric depth; distinct people, credible hands and feet. Minor composition note: the right finial apex touches the upper edge. Distant Pest facades and small church tower are reconstructed contextual architecture, not a measured skyline replica.",
+          "depictedEra": "circa1930",
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "iccBytes": 480
+        },
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94"
+      }
+    },
+    {
+      "id": "praha-raatihuone",
+      "role": "A",
+      "state": {
+        "id": "praha-raatihuone",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "updatedAt": "2026-10-31T14:49:09.780545+00:00",
+        "generator": "built-in image_gen",
+        "selectedVersion": "A-v3",
+        "attempts": [
+          {
+            "version": "A-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/candidates/A-v1-source.png",
+            "sha256": "df6ff7ab944c90db83faf516e39016c07ed2ecd8af6dab7fb23fd669284774a0",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/prompts/A-v1.txt",
+            "selected": false,
+            "reason": "Towerfinial clipped and wrong facade rhythm"
+          },
+          {
+            "version": "A-v2",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/candidates/A-v2-source.png",
+            "sha256": "9afdfaced7f9e5714e9a3af641c9d371c6ce9c8e43ef64264475a2096c10e75f",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/prompts/A-v2.txt",
+            "selected": false,
+            "reason": "Extra upper windowbay"
+          },
+          {
+            "version": "A-v3",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/candidates/A-v3-source.png",
+            "sha256": "95ba56526b7f018dad909dcf6d640e4e18004f82ae65b7fce52ed00b90aee8e8",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/prompts/A-v3.txt",
+            "selected": true,
+            "reason": "Selected with oriel obscuring left upperbay"
+          }
+        ],
+        "final": {
+          "id": "praha-raatihuone",
+          "role": "A",
+          "taskNumber": 1407,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/final/praha-vanhan-raatihuoneen-itasiipi.webp",
+          "sha256": "6509f49524ec9a0cfd573efb11af240462b0927765758685521ef56a9bb7b433",
+          "bytes": 778810,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "A-v3 selected. Complete tower tips and building silhouette; intact low-roof lost wing with central three arches, two separate upper storeys and Gothic parapet. Astronomical clock and chapel oriel present. Light/dark1024 and256 personally viewed; source-bay occlusion disclosed in research notes.",
+          "depictedEra": "circa1900",
+          "ownerPhotographicFeedbackApplied": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "WEBP",
+          "mode": "RGBA",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "clear48pxBorder": true
+        },
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94"
+      }
+    },
+    {
+      "id": "praha-raatihuone",
+      "role": "B",
+      "state": {
+        "id": "praha-raatihuone",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "updatedAt": "2026-10-31T14:49:09.780545+00:00",
+        "generator": "built-in image_gen",
+        "selectedVersion": "B-v3",
+        "attempts": [
+          {
+            "version": "B-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/candidates/B-v1-source.png",
+            "sha256": "b213275e01aba743a5d8338ddf36cf0349a38d10029d91c56e7669a4ce10b1df",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/prompts/B-v1.txt",
+            "selected": false,
+            "reason": "Upperfloors merged into tall windows"
+          },
+          {
+            "version": "B-v2",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/candidates/B-v2-source.png",
+            "sha256": "17a395c08a8257b97bac0d15d9f3438828ad5b0445e5f9e6bd11fc9b5b8b242c",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/prompts/B-v2.txt",
+            "selected": false,
+            "reason": "Inconsistent facade bay rhythm and incidental tower clipping"
+          },
+          {
+            "version": "B-v3",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/candidates/B-v3-source.png",
+            "sha256": "307a1d883c044c459d4b48b4e62101a821ce59238d84afcc4a826f3b2655f02e",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/prompts/B-v3.txt",
+            "selected": true,
+            "reason": "Selected deliberate closeview of source-evidenced junction"
+          }
+        ],
+        "final": {
+          "id": "praha-raatihuone",
+          "role": "B",
+          "taskNumber": 1408,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/final/ihme-praha-raatihuone-loistoaika.jpg",
+          "sha256": "78c107428c4d64f84f24546d3bae0b72a4c20133de92ae7b5712711e0de4e75a",
+          "bytes": 810650,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "B-v3 selected and final JPEG personally viewed: documentary closeview of clock, Gothic chapel oriel and intact adjoining east wing. Mother/child hand contact, basket grip, walking feet and entrance route coherent. Natural photographic masonry, cloth and daylight. Deliberately bounded street view follows Rijksmuseum historical photograph, not a whole-building view.",
+          "depictedEra": "circa1900",
+          "ownerPhotographicFeedbackApplied": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "iccBytes": 480
+        },
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94"
+      }
+    },
+    {
+      "id": "san-geminiano",
+      "role": "A",
+      "state": {
+        "task": 1409,
+        "id": "san-geminiano",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": 1,
+        "acceptedAttempt": 1,
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/san-geminiano/final/venetsia-san-geminianon-kirkko.webp",
+        "sha256": "e9fc60f4ec3c3ecb30c2b41f1332af02a4af6b1e4956fd09d4543e275a40aba4",
+        "sourceSHA256": "183eb8e3598a8248fed919d6cf30201f5e047402e1e71a5c666bda9400b4c6e7",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP RGBA",
+        "sourceURLs": [
+          "https://www.calcografica.it/stampe/inventario.php?id=S-FC75148",
+          "https://www.rct.uk/collection/405935/piazza-san-marco-looking-west-towards-san-geminiano",
+          "https://colnaghifoundation.org/pdf/CF_BowiesTintoretto_OK.pdf"
+        ],
+        "historicalPeriod": "circa 1700",
+        "completedAt": "2026-10-31T14:46:07.549084+00:00",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "uncertainties": [
+          "No photograph of demolished church exists. Rear nave volume and colors are conservative reconstruction; facade follows dated 1703 primary view.",
+          "Low rear cupola/roof exterior partly hidden in the near-frontal view: conservative volume interpretation of documented central dome and 1703 facade; exact roof exterior not established."
+        ],
+        "QA": {
+          "visual": "PASS",
+          "filesViewed": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-dark.png"
+          ],
+          "notes": "Facade follows Carlevarijs1703; clean alpha on light/dark. Rear roof/cupola outer detail is conservative interpretation, not directly established by facade print.",
+          "technical": "PASS"
+        }
+      }
+    },
+    {
+      "id": "san-geminiano",
+      "role": "B",
+      "state": {
+        "task": 1410,
+        "id": "san-geminiano",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 2,
+        "currentAttempt": 2,
+        "historicalPeriod": "circa 1700",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "rejected",
+            "reason": "Modern-looking globe lamps and electrical bar under left arcade; incompatible with c1700."
+          }
+        ],
+        "acceptedAttempt": 2,
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/san-geminiano/final/ihme-san-geminiano-loistoaika.jpg",
+        "sha256": "f07f2e892a74aa963ed3e686e499ce542523367c543bed82f8e846fd59512779",
+        "sourceSHA256": "237e046c3dcf5a3dcb009555b4f03f63ff6535149514d4eced7879d9b92dfb9a",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC quality95 4:4:4",
+        "sourceURLs": [
+          "https://www.calcografica.it/stampe/inventario.php?id=S-FC75148",
+          "https://www.rct.uk/collection/405935/piazza-san-marco-looking-west-towards-san-geminiano",
+          "https://colnaghifoundation.org/pdf/CF_BowiesTintoretto_OK.pdf"
+        ],
+        "completedAt": "2026-10-31T14:46:07.549084+00:00",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "uncertainties": [
+          "No photograph of demolished church exists. Rear nave volume and colors are conservative reconstruction; facade follows dated 1703 primary view.",
+          "Low rear cupola/roof exterior partly hidden in the near-frontal view: conservative volume interpretation of documented central dome and 1703 facade; exact roof exterior not established."
+        ],
+        "QA": {
+          "visual": "PASS",
+          "filesViewed": [
+            "B-full.png"
+          ],
+          "notes": "1700 facade, paired columns, oculus, lion and surrounding Procuratie. Natural stone/camera appearance. No globe lamps in acceptedv2. People plausible period reconstruction.",
+          "technical": "PASS"
+        }
+      }
+    }
+  ],
+  "ownerPhotographicFeedback": {
+    "recordedAt": "2026-10-31T11:44:11.230987+00:00",
+    "directOwnerQuote": "Nämä pitää olla oikean valokuvan näköisiä",
+    "scope": "Lost-wonders B historical scene illustrations; A map drawings remain separately commissioned drawing style",
+    "requirement": "Real-camera photographic appearance: natural optical depth, human anatomy and poses, irregular credible material surfaces and light. Reject CGI render, painted or smooth artificial surface. Whole-new generation when needed.",
+    "appliedToBatches": [
+      2,
+      3,
+      4
+    ],
+    "rootSeptizodiumBReopened": true
+  },
+  "ownerPhotographicReinforcement": {
+    "text": "Pidä huoli että kuvat näyttävät aidoilta valokuvilta",
+    "recordedAt": "2026-10-31T14:53:52.357560+00:00",
+    "appliesTo": "B historical scene images",
+    "action": "Full-size visual inspection of physical materials, natural lighting, anatomy and camera optics; full new generations for visible CGI/painted surfaces. Ordered A map watercolor style unchanged."
+  },
+  "productionRecordNote": "Producer-local records preserve pre-delivery states. Coordinator R2 receipts and mailbox readback are authoritative for later technical delivery.",
+  "historicalReconstructionLimit": "Lost structures and scenes are source-informed visual reconstructions; exact people, events, furnishings and uncertain complete site plans are not documentary assertions."
+}

@@ -1,0 +1,660 @@
+{
+  "historicalEvidence": {
+    "mercato-vecchio": {
+      "historical-evidence.json": {
+        "checkedAt": "2026-10-31T14:31:02.030557+00:00",
+        "sources": [
+          {
+            "url": "https://www.uffizi.it/en/artworks/giuseppe-and-vittorio-jacquier-and-the-image-of-italy",
+            "evidence": "Uffizi Jacquier photograph of old market, historical neighboring buildings and cathedral sightline.",
+            "local": "jacquier-uffizi.jpg"
+          },
+          {
+            "url": "https://florenceasitwas.wlu.edu/19th-century-views-of-florence.html",
+            "evidence": "Washington and Lee digital art-history project, Borbottoni old loggia/Column Abundance layout.",
+            "local": "borbottoni-loggia.jpg"
+          },
+          {
+            "url": "https://archiviodistatofirenze.cultura.gov.it/asfi/fileadmin/risorse/allegati_inventari_on_line/demolizione_inventario.pdf",
+            "evidence": "State Archive demolition inventory; old beccherie around column and1870s market changes."
+          },
+          {
+            "url": "https://www.palazzospinelli.org/architetture/scheda.asp?ID=173&offset=510",
+            "evidence": "Claudio Paolini architectural inventory cites original loggia, arcades, fish spandrel medallions and later rebuilding."
+          },
+          {
+            "url": "https://www.arteleonardo.com/en/blog/432/vasaris-loggia-del-pesce-a-troubled-history",
+            "evidence": "Modern rebuilt loggia facade photograph used only as nine-bay geometric comparator, not for1873 context or color.",
+            "local": "loggia-modern-geometry.jpg"
+          }
+        ],
+        "historicalUncertainty": "Original Mercato Vecchio1873 before clearance. Archive descriptions differ on later booth-clearance dates;1873 is treated as pre-clearance. Compact A deliberately compresses spacing between loggia, Column of Abundance and booths; not a scale site plan. Nine long-facade arches verified against rebuilt loggia photograph, historic forms supported by museum/archive images. Exact stall arrangement, people, color and unseen masonry inferred. B cathedral sightline is consistent with Jacquier Uffizi photograph; focal perspective is interpretive."
+      }
+    },
+    "helsinki-vanha-asema": {
+      "old-station-museum-source.json": {
+        "id": "helsinki-vanha-asema",
+        "path": "output/ihmeet-era4-20261031/helsinki-vanha-asema/references/old-station-museum.jpg",
+        "url": "https://historia.hel.fi/sites/default/files/styles/orig_927w_free/public/M014_SRMV1_725.jpg.webp",
+        "sha256": "a9a83e7ea8290e08ad9823eef7e705f970751f01f175d1f24970e85a3e21388d"
+      },
+      "old-station-platform-source.json": {
+        "id": "helsinki-vanha-asema",
+        "path": "output/ihmeet-era4-20261031/helsinki-vanha-asema/references/old-station-platform.jpg",
+        "url": "https://historia.hel.fi/sites/default/files/styles/orig_927w_free/public/166918589400200.jpg.webp",
+        "sha256": "34be56eb95166f5b7725b4cf7e46d6b0fa8eb6065207129e370bddd0f9273680"
+      },
+      "research.json": {
+        "sources": [
+          {
+            "url": "https://historia.hel.fi/fi/kaannekohdat/1800-luku/rautatie-saapuu-helsinkiin",
+            "publisher": "City of Helsinki",
+            "evidence": "Old station photo from Finnish Railway Museum: original Edelfelt facade,1873 scene architecture reference; viewed locally. Platform photo later date context only."
+          },
+          {
+            "url": "https://www.finna.fi/Record/hkm.C034E22A-F9C6-46EA-B0CE-A1E548FA9B80",
+            "publisher": "Helsinki City Museum",
+            "evidence": "Hoffers1862-1872 record describes unpaved square, paved only late1870s. Record text checked; direct image403 so used museum image embedded in city history."
+          }
+        ],
+        "materialDecision": "Archival massing controls, masonry/plastered station, not guessed wooden station or current Saarinen architecture. Color is restrained reconstruction, monochrome photo does not prove precise paint shade."
+      }
+    },
+    "nyenskans": {
+      "historical-evidence.json": {
+        "checkedAt": "2026-10-31T14:36:24.911973+00:00",
+        "sources": [
+          {
+            "url": "https://www.old.archeo.ru/izdaniya-1/archaeological-news/contents-of-issues/arheologicheskie-vesti/36.pdf",
+            "evidence": "P.E.Sorokin, ArchaeologicalNews36(2022),pp244–263, original archaeological analysis of Nyenskans in first half/middle17th century. Fig1 distinguishes1643 actual plans from1644 proposal. Later1659–1665 star rebuilding excluded.",
+            "local": "archeo36.pdf"
+          },
+          {
+            "url": "https://lib.kunstkamera.ru/files/lib/987-5-88431-196-1/987-5-88431-196-1_12.pdf",
+            "evidence": "Academic Nyen discussion distinguishes ideal projects from existing rectangular royal court."
+          },
+          {
+            "url": "https://doi.org/10.1080/10572414.2024.2413068",
+            "evidence": "Marine archaeology research on WitteSwaen1636/1638: Dutch fluit trade from Amsterdam to Nyenskans in Swedish Ingria; supports merchant vessel type."
+          },
+          {
+            "url": "https://nyen-spb.ru/istoriya-kreposti",
+            "evidence": "Sorokin historical synthesis, fort rebuilding after1656, later1659–1665 phase."
+          }
+        ],
+        "historicalUncertainty": "A remains circa1650 under original order, based on Sorokin early/transitional wood-earth fort, NOT later1703 completed five-point star; exact interim outlines and elevations inferred. B follows the new scene amendment: circa1660 Nyen town near bank with1656destruction traces and opposite-bank Nyenskans. Population majority Finnish-speaking is historical context, not visually identifiable ethnicity. Exact street/fort rebuilding state, people and dress are interpretive. Ships from superseded B-v1 remain history only."
+      }
+    },
+    "tejo-ooppera": {
+      "historical-evidence.json": {
+        "checkedAt": "2026-10-31T14:40:19.849699+00:00",
+        "sources": [
+          {
+            "url": "https://www.lisboa.pt/fileadmin/informacao/publicacoes/arquivo_municipal/Cadernos_Arquivo_Municipal_9.pdf",
+            "evidence": "GiuseppinaRaggi municipal archive research2017 pp103–122. Figs4–5 earlyANBAplans;Figs6–12 laterRioBN andMNAA drawings support monumentalcolumns around intimate hall and royalbox layout.",
+            "local": "lisboa-archive9.pdf"
+          },
+          {
+            "url": "https://www.britishmuseum.org/collection/object/P_1949-1008-420",
+            "evidence": "Primary1757LeBas ruin engraving, upper roundheaded windows and masonry rhythm; not proof of complete original externalfacade.",
+            "local": "ruins-lebas-bm.jpg"
+          },
+          {
+            "url": "https://operadotejo.org/2009/09/12/nova-revisao-do-projecto-city-and-spectacle/",
+            "evidence": "CHAIA UniversityEvora reconstruction team's stated uncertainty about exteriorfacade, betterdocumentedinterior."
+          },
+          {
+            "url": "https://iiclisbona.esteri.it/wp-content/uploads/resource/doc/2021/11/16._gomes_januario_12_2017-213-223.pdf",
+            "evidence": "PedroJanuario research: threebuildingmasses, bell-shapedroom,38boxes infourorders,31March1755 premiere.",
+            "local": "januario-bibiena.pdf"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Cen%C3%A1rio_para_a_inaugura%C3%A7%C3%A3o_da_%C3%93pera_do_Tejo,_31_de_Mar%C3%A7o_de_1755.png",
+            "evidence": "Faithfulreproduction of GiovanniBerardi1755 opening-stage engraving; primaryvisual used for actualpaintedstage set, no engravedtexture applied.",
+            "local": "inaugural-stage-1755.png"
+          }
+        ],
+        "historicalUncertainty": "A exterior is explicitly a cautious historical reconstruction: complete final1755 facade lacks a certain surviving contemporary overall view. Masses, asymmetrical annex, stone-window rhythm and tall stagehouse derive from early plans,1757 ruin engraving and later architectural research; exact roofline, ornament and openings are inferred. Not TeatroSãoCarlos1793. B follows scene amendment3bcef53d89907dbfaed3be6449fa69763954dd94: lateMarch1755 interior performance, parterre andfour boxorders with colossal columns. Room layout sourced from final-plan analysis, stage scenic composition from GiovanniBerardi1755 opening engraving. Exact color, audience and performers' likenesses are interpretive; distant singers represent the roles, not verified portraits. First exterior B prompt was NEVER generated."
+      }
+    },
+    "karntnertor": {
+      "sources.json": {
+        "period": "1824",
+        "sources": [
+          {
+            "url": "https://www.beethoven.de/de/media/view/5926626504212480",
+            "kind": "primary museum print",
+            "date": "circa 1830",
+            "artist": "Johann Wenzel Zinke after Eduard Gurk",
+            "record": "Beethoven-Haus B 2122",
+            "local": "1830-gurk-zinke.jpg",
+            "use": "Near-period facade, early hip-roofed projecting entrance porch, tiled roof and curved front corners."
+          },
+          {
+            "url": "https://sammlung.wienmuseum.at/en/object/136383-1-albertinaplatz-2-u-3-ehemaliges-kaerntnertor-theater/",
+            "kind": "primary photograph",
+            "date": "before 1870",
+            "artist": "Michael Frankenstein & Comp.",
+            "local": "frankenstein-before1870.jpg",
+            "use": "Building volume and window architecture cross-check only; later flat entry marquee not used for 1824."
+          },
+          {
+            "url": "https://www.beethovenfest.de/de/magazin/1824-zwei-meisterwerke-entstehen/172",
+            "kind": "original museum interior engraving reproduced by Beethovenfest",
+            "date": "circa 1810, impression circa 1822-1827",
+            "record": "Beethoven-Haus B2419",
+            "local": "artaria-interior-B2419.jpg",
+            "use": "Five gallery tiers, proportions and decoration of auditorium."
+          },
+          {
+            "url": "https://www.beethoven.de/de/media/view/5270671751905280",
+            "kind": "primary stage/pit engraving by Franz Xaver Stoeber",
+            "date": "1821",
+            "record": "B2144",
+            "local": "1821-stoeber-stage.jpg",
+            "use": "Stage, proscenium and orchestra pit layout."
+          }
+        ],
+        "uncertainties": [
+          "Reconstruction of 1824 appearance using c1830 print; no exact 1824 photograph exists. Colors and concert audience are plausible reconstruction, not documentary record."
+        ],
+        "sceneAmendment": {
+          "time": "2026-10-31T14:14Z",
+          "scene": "Interior with unusually large orchestra on 7 May 1824",
+          "supersedes": "exterior queue"
+        }
+      }
+    },
+    "ringtheater": {
+      "sources.json": {
+        "period": "circa 1880",
+        "sources": [
+          {
+            "url": "https://sammlung.wienmuseum.at/en/object/179709-1-schottenring-7-ringtheater-komische-oper/",
+            "kind": "primary photograph",
+            "date": "circa 1875",
+            "artist": "Michael Frankenstein & Comp.",
+            "record": "79000/11296",
+            "local": "1875-frankenstein.jpg",
+            "use": "Facade, large central semicircular recess, central pediment and rooftop sculptures, paired corner loggias and attic pavilions."
+          },
+          {
+            "url": "https://www.digital.wienbibliothek.at/name/view/3229245",
+            "kind": "primary period publication catalogue",
+            "date": "1879",
+            "use": "Period Ringtheater almanac record."
+          }
+        ],
+        "uncertainties": [
+          "Exterior colors reconstructed from monochrome photograph; audience and gaslight atmosphere are interpretive."
+        ],
+        "periodB": "January 1874, Komische Oper before later name Ringtheater"
+      }
+    },
+    "kustaa-ooppera": {
+      "interior-amendment-research.json": {
+        "source": "https://www.operan.se/om-operan/historia-arkiv-och-samlingar/var-historia",
+        "image": "https://www.operan.se/media/ij1jnlfw/modell_gustav_iii_operahus_20220225_ka6729-1webb.jpg",
+        "referenceFile": "old-auditorium-model.jpg",
+        "personallyViewed": true,
+        "supports": "Official historical auditorium model of1782Gustavian opera. White/gold boxes and blue details; broad classical proscenium. Official history records1792masked ball.",
+        "limits": "Model used only for full-size architecture. Exact ball layout, clothes, guests and lighting reconstructed; no identifiable portrait of king or assailants."
+      },
+      "research.json": {
+        "sources": [
+          {
+            "url": "https://www.stockholmskallan.se/postfiles/SMF/Rapport_Gustav_Adolfs_Torg.pdf",
+            "type": "Stockholm City Museum report; viewed pages22,24,29 for old opera facade, separate background spire and roof"
+          },
+          {
+            "url": "https://stockholmskallan.stockholm.se/post/8103",
+            "type": "City archive; Anna Palm1894 picture of demolished old opera, architecture reference only, not photographic style"
+          },
+          {
+            "url": "https://www.operan.se/om-operan/historia-arkiv-och-samlingar/var-historia",
+            "type": "Royal Opera institutional history"
+          }
+        ],
+        "interpretation": "Gustav III old opera facade retained;1792 masquerade crowd is anonymous reconstructed scene. No1796 equestrian monument. Rear building volumes and clothing are approximate. Painting colors and existing archive appearance are interpretations, not exact1792 measured survey.",
+        "checkedAt": "2026-10-31T14:28:56.066139+00:00",
+        "localEvidence": [
+          {
+            "file": "history-page-22.png",
+            "sha256": "c4de87640f7f28ac302c57ac3dd04d39711a916e19a86cbc3bc9cebb87eda6f9"
+          },
+          {
+            "file": "history-page-24.png",
+            "sha256": "dd9fabe6bab827688615bf970ca5351f6774a7c5f07f825b511f5856c97e8b3a"
+          },
+          {
+            "file": "history-page-28.png",
+            "sha256": "4e244f04d34f9dc874a84b9959e0705c67253924c7f33e5f3c9bd1922de4b522"
+          },
+          {
+            "file": "history-page-29.png",
+            "sha256": "7c764306be103345406e4d89b7ad4e3a0209b4d4f6d5d5cd0a1f070002ba06f1"
+          },
+          {
+            "file": "history.pdf",
+            "sha256": "532f98899f80aed450434924e1c1fbffaab7b29ec3de4eb28fea6ac541254905"
+          },
+          {
+            "file": "palm-facade.jpg",
+            "sha256": "3f54b17d441198f227152d89e1057c360b228c70fc6d05cfaf490a153af22fc3"
+          }
+        ]
+      }
+    },
+    "vor-frue-keskiaika": {
+      "medieval-amendment-research.json": {
+        "source": "https://slaegtsbibliotek.dk/928549.pdf",
+        "pages": [
+          40,
+          41,
+          42
+        ],
+        "pdfPages": [
+          48,
+          49,
+          50
+        ],
+        "personallyViewed": true,
+        "evidence": "Published archaeological groundplan and reconstruction of Vor Frue at end of Middle Ages; long three-aisled body, west tower and four corner pinnacles, polygonal choir and stepped side chapel. Fig30 p42 used as architectural evidence.",
+        "officialHistory": "https://www.domkirken.dk/om-kirken/kirkens-historie",
+        "amendedEra": "1650",
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "limitations": "The reference is itself a later scholarly reconstruction, not a1650photograph. Exact1611spire details, colors and square furnishing are interpreted; no precision dimensions claimed. Earlier1738/1800reference and candidates retained but superseded."
+      },
+      "pre1807-church-source.json": {
+        "id": "vor-frue-keskiaika",
+        "path": "output/ihmeet-era4-20261031/vor-frue-keskiaika/references/pre1807-church.jpg",
+        "url": "https://www.domkirken.dk/uploads/kzJP0e9H/arkivfoto__msi___jpg.jpg",
+        "sha256": "aebfabc4a765a92bf8a7725223a601a4d6b87f1533691b55bb196beda9a9dbe2"
+      },
+      "research.json": {
+        "sources": [
+          {
+            "url": "https://www.domkirken.dk/om-kirken/kirkens-historie",
+            "type": "Official cathedral history and pre1807 engraving"
+          },
+          {
+            "url": "https://www.domkirken.dk/uploads/kzJP0e9H/arkivfoto__msi___jpg.jpg",
+            "type": "Viewed primary institutional illustration of pre1807 church"
+          }
+        ],
+        "interpretation": "Order label medieval refers to vanished pre1807 form; actual building depicted is1738 rebuild in Gothic tradition after1728 fire, around1800, not current1829 classical cathedral. Precise colors, figures and paving approximate.",
+        "checkedAt": "2026-10-31T14:28:56.088860+00:00",
+        "localEvidence": [
+          {
+            "file": "pre1807-church.jpg",
+            "sha256": "aebfabc4a765a92bf8a7725223a601a4d6b87f1533691b55bb196beda9a9dbe2"
+          }
+        ]
+      }
+    },
+    "maison-du-peuple": {
+      "research.json": {
+        "sources": [
+          {
+            "url": "https://balat.kikirpa.be/fr/object/20060963/",
+            "type": "KIK-IRPA national conservation archive original Horta building photographic record; personally viewed full facade B196922 and earlier A127797/A127802"
+          },
+          {
+            "url": "https://monument.heritage.brussels/files/cities/1000/documents/03-vol-c-fr-def_k.pdf",
+            "type": "Brussels heritage inventory, building description p416"
+          }
+        ],
+        "interpretation": "Actual Horta four-storey concave/convex facade used.1964 documentary images establish structure only; cars/signs removed by full new generation for1900 scene. Material colors, anonymous workers and exact rear massing approximate. First complete candidates rejected for straightened facade; v2 uses full frontal evidence.",
+        "checkedAt": "2026-10-31T14:28:56.089892+00:00",
+        "localEvidence": [
+          {
+            "file": "A127797.jpg",
+            "sha256": "24051ce11fee49d7b7060167e4da51137a3b8e2ac1b04c8e322f8b4809558a7a"
+          },
+          {
+            "file": "A127802.jpg",
+            "sha256": "dc8c719619d1723a9615e8643e2885c9150f84af1c8c5096218a0fed77b16a41"
+          },
+          {
+            "file": "B196922.jpg",
+            "sha256": "13fc2ca656fd00538d4f47b15058b1d480f0505c156d90698090703d0a885a84"
+          },
+          {
+            "file": "b196928.jpg",
+            "sha256": "111ab0c79b1a7122fdc85f39d238d9ae05df1c021fa7ea321107cf62f610085e"
+          },
+          {
+            "file": "b196937.jpg",
+            "sha256": "d9f56d1857959e8599348f81979786b751a592ac2c7960d6a31134424c5bc1e5"
+          },
+          {
+            "file": "heritage-page-416.png",
+            "sha256": "a09126db6f7d18ab13663a2979ea40cbb22596f10fd65f9c2be3b59838398c38"
+          },
+          {
+            "file": "heritage.pdf",
+            "sha256": "53561c27414fa4e104686cb879205444f456264e5c3667c5d08b609891a1ce7e"
+          },
+          {
+            "file": "m001944.jpg",
+            "sha256": "b3e96c662173708f92303f0c176fe82f66471c402d23aced82833a9fad84b768"
+          },
+          {
+            "file": "m001953.jpg",
+            "sha256": "2a9c2a42d4c6230eb1b7028ae58fc9f505dced1861826a5d384501f4af41dfbf"
+          },
+          {
+            "file": "m103671.jpg",
+            "sha256": "3004d8fb87ca1b87ea0fb3eb4c0bf5afb8bacbf72dc9f513c0a8bf5fc22eda29"
+          },
+          {
+            "file": "m103673.jpg",
+            "sha256": "8f855c38a66cf7cba85359fc643ace1a40636c9d6b531796293b67124f962506"
+          },
+          {
+            "file": "m103950.jpg",
+            "sha256": "dfe24482727def7882375c5ca6ad793cc4a955da6a46f60ffbab45ae1b3ae193"
+          }
+        ]
+      }
+    },
+    "pont-transbordeur": {
+      "historical-research.json": {
+        "id": "pont-transbordeur",
+        "eraRequested": "circa 1930",
+        "sources": [
+          {
+            "url": "https://musee-histoire.marseille.fr/node/2765",
+            "type": "City museum historical explanation",
+            "finding": "Original Arnodin transporter, not a road bridge; suspended crossing of Vieux-Port."
+          },
+          {
+            "url": "https://www.afgc.asso.fr/app/uploads/2024/08/TransbordeurMarseille_LeGC-n17-19060224.pdf",
+            "type": "Primary 1906 engineering journal, hosted by AFGC",
+            "finding": "Two steel pylons, high horizontal girder with diagonal stays, small central parabolic truss, low gondola hanging from traveling trolley."
+          },
+          {
+            "url": "https://www.afgc.asso.fr/history-heritage/le-pont-transbordeur-de-marseille-1903-1905/",
+            "type": "Civil-engineering historical description",
+            "finding": "Diagrams and photo used to verify silhouette and gondola operation. Operational decline during 1930s; scene follows commissioned approximate era rather than claiming a documented specific crossing date."
+          }
+        ],
+        "personallyViewedImages": [
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/references/historic-general.jpg",
+            "sha256": "a5f022cdfcc080e3e88381c9ef42c72e9c38d3d7cda2b010f40f9c78a3ecdf9b"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/pont-transbordeur/references/historic-drawing.jpg",
+            "sha256": "a116e03a9ea2dfa1700fc67a71b1d6d04440ef28a24d116d11488324d07f0350"
+          }
+        ],
+        "interpretationLimits": [
+          "Small machine/restaurant hut details, exact paint, boats and incidental waterfront/people are reconstructed, not measured copies.",
+          "A preserves engineering silhouette at miniature scale; it is not a measured engineering drawing."
+        ],
+        "sourceImagesRedistributedAsDelivery": false,
+        "sceneAmendment": {
+          "source": "../source/scene-amendment.md",
+          "commit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+          "originalRequestedEra": "circa1930",
+          "depictedEra": "1905",
+          "review": "B-v2 re-reviewed against amended1905 text. Low suspended basket crossing, complete new-type engineering structure, no later vehicles; surface wear concentrated on boats, no heavily corroded bridge. Period clothes tiny/generic. Existing candidate satisfies revised scene without new pixel changes."
+        }
+      }
+    },
+    "erzsebet-silta": {
+      "historical-research.json": {
+        "id": "erzsebet-silta",
+        "depictedEra": "circa1930",
+        "sources": [
+          {
+            "url": "https://bparchiv.hu/leveltari-egyperces-2023-33-az-erzsebet-hid/",
+            "publisher": "Budapest City Archives",
+            "evidence": "Klösz1903, FSZEK1903-04 front and Fortepan/Mészöly1929 photos personally viewed. Original ornate metal portal and linked eyebar chains; not modern1964 bridge."
+          },
+          {
+            "url": "https://mandadb.hu/tetel/292472/Erzsebet_hid_1930as_evek",
+            "publisher": "Hungarian National Digital Archive / MKVM",
+            "evidence": "1930s original bridge photograph and tram traffic in period."
+          }
+        ],
+        "personallyViewedImages": [
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/references/historic-1930-full.jpg",
+            "sha256": "7ed3f650f0785ca1b21edd5daf98fd6c85c8be8856f5e9b48ab7d0a4aea5bd52"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/references/historic-1930.jpg",
+            "sha256": "efda3291b8cfdb51cbb67075786d3f059bea2755d14a1dcaf5d355290d6dcc24"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/references/image-325-1024x849.jpeg",
+            "sha256": "76865420741af153b11d0a68e578097c70a55b63063d6e21b2f3355af92d040f"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/references/image-326.jpeg",
+            "sha256": "73a8482c9b5c00916a8c53477cb5b94881dcf029f86801ecf015fa4950557c56"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/erzsebet-silta/references/image-327-1024x718.jpeg",
+            "sha256": "37c5b550cb96c57535c092a04bea9c8c49e779d439cfd4b18c8a095b20e15482"
+          }
+        ],
+        "interpretationLimits": [
+          "Paint colors, finial fine profiles, pavement textures and anonymous traffic/people are reconstructed, not measured exact replicas.",
+          "A simplifies details at miniature scale. B viewpoint places the other portal behind the camera.",
+          "B makes four-lane deck legible as two outside tram lanes with central road space; no modern lane paint."
+        ],
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "amendedSceneApplied": true,
+        "sourceImagesRedistributedAsDelivery": false
+      }
+    },
+    "praha-raatihuone": {
+      "historical-research.json": {
+        "id": "praha-raatihuone",
+        "depictedEra": "circa1900",
+        "sources": [
+          {
+            "url": "https://www.prazske-povstani.cz/en/places-and-stories/old-town-hall/",
+            "publisher": "Museum of Prague",
+            "evidence": "Destroyed eastern/northern wings and original chapel/oriel context."
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Staromestsk%C3%A9_n%C3%A1mest%C3%AD,_Praag,_gezien_naar_het_Oude_Stadhuis,_RP-F-2008-59-59.jpg",
+            "publisher": "Rijksmuseum original photograph, reproduced on Commons",
+            "evidence": "Primary historical closeview of clock, chapel oriel and first wing bays; B-v3 composition follows this evidence."
+          },
+          {
+            "url": "https://www.milujuprahu.cz/promeny-staromestske-radnice/",
+            "publisher": "Reproduced historical photographs selected/captioned by Old Town Hall Prague profile",
+            "evidence": "Personally viewed1866 frontal and1910 elevated photos showing seven-bay civic block, central three-arch loggia, separate upper rows, low roof and parapet."
+          }
+        ],
+        "personallyViewedImages": [
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/references/historic-rijksmuseum.jpg",
+            "sha256": "596413a9b780bd1d3274af41157a27de9ce3a20133654a008eeae77b5549831b"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/references/1866.jpg",
+            "sha256": "c25f706e5c0ef331465949d38badc368ff823de1f51dc08865ff721c75953ac9"
+          },
+          {
+            "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era4-20261031/praha-raatihuone/references/1910-z-vysky.jpg",
+            "sha256": "ba62feaddb6d5c0537f67c2572c931f0d5d5d3f01e9306f83a7f26f167cdb049"
+          }
+        ],
+        "interpretationLimits": [
+          "A uses seven ground-level bay positions with central three arches; the projecting oriel obscures the tower-side upper bay in the chosen miniature angle. Fine tracery, clock dial markings and paint are illustrative, not survey-accurate.",
+          "B-v3 intentionally presents the historically evidenced closeview of clock, chapel and adjoining wing: tower top and far end of long wing continue beyond frame. It does not claim a complete architectural elevation.",
+          "B retains separate upper floors; the wider B1/B2 candidates were rejected for merged floors or inconsistent facade rhythm."
+        ],
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "amendedSceneApplied": true,
+        "sourceImagesRedistributedAsDelivery": false
+      }
+    },
+    "san-geminiano": {
+      "sources.json": {
+        "period": "circa 1700",
+        "sources": [
+          {
+            "url": "https://www.calcografica.it/stampe/inventario.php?id=S-FC75148",
+            "kind": "primary etching museum record",
+            "date": "1703",
+            "artist": "Luca Carlevarijs",
+            "record": "S-FC75148",
+            "local": "1703-carlevarijs.jpg",
+            "use": "Near-contemporary Sansovino facade, paired side finials, central oculus, lion relief, doors, adjacent Procuratie relationship and forecourt."
+          },
+          {
+            "url": "https://www.rct.uk/collection/405935/piazza-san-marco-looking-west-towards-san-geminiano",
+            "kind": "primary painting museum record",
+            "date": "1723-1724",
+            "artist": "Canaletto",
+            "record": "RCIN 405935",
+            "use": "West-end position and pale Istrian-stone church; later Napoleonic wing excluded."
+          },
+          {
+            "url": "https://colnaghifoundation.org/pdf/CF_BowiesTintoretto_OK.pdf",
+            "kind": "museum art-historical catalogue with primary Coronelli 1710 interior and pre1807 BnF floorplan reproductions",
+            "use": "Web-index excerpt records centrally planned three-aisle church around a dome and pre1807 BnF plan. Direct PDF returned404; not downloaded or claimed visually inspected."
+          }
+        ],
+        "uncertainties": [
+          "No photograph of demolished church exists. Rear nave volume and colors are conservative reconstruction; facade follows dated 1703 primary view.",
+          "Low rear cupola/roof exterior partly hidden in the near-frontal view: conservative volume interpretation of documented central dome and 1703 facade; exact roof exterior not established."
+        ]
+      }
+    }
+  },
+  "sceneAmendment": {
+    "commit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+    "fullText": "# Karttaseppä → Codex: ihmeiden B-kohtaukset PT:n hyväksymien tekstien mukaan (erät 2–4) – 31.10.2026\n\nTilaus erät 2–4 lähti ennen kuin PT hyväksyi kohteiden tekstit. Ihmekortin kuva ja sen selite näkyvät yhdessä, joten\nB-kuvan kohtauksen ja aikakauden pitää vastata hyväksyttyä selitettä. Kaikki muu (tyyli, koko, R2-avain, valokuva-ilme\nomistajan 13.44 tarkennuksen mukaan) ennallaan. Codexin kuvien pysyvä lupa.\n\n## 1) Uusinta jo toimitetusta (erä 2)\n- **temple-torni** (`ihme-temple-torni-loistoaika.jpg`, sama avain): aikakausi **n. 1260**, ei 1780. Temppeliritari\n  valkoisessa viitassa punaisella ristillä ylittää ritarikunnan päämajan kivipihan; taustalla noin 50 m korkea\n  keskiaikainen kivitorni, jonka kulmissa neljä pienempää pyöreää tornia (A-piirroksen torni käy). Ei toria eikä 1700-luvun\n  vaatteita. Vanha otto korvataan; A-piirros pysyy.\n\n## 2) Erien 3 ja 4 kohtaukset (käytä näitä tilauksen Kohtaus-sarakkeen sijaan, jos et ole vielä tehnyt)\n- **Palast der Republik**: Noin vuonna 1980 itäberliiniläiset nousevat Palast der Republikin portaikkoa, jonka valot palavat päivin ja öin. Kolmessa alimmassa kerroksessa ravintolat ja baarit täyttyvät, keilarata jylisee ja teatterin esirippu nousee.\n- **Anhalter Bahnhof**: Noin vuonna 1900 Anhalterilta lähtee päivässä kymmeniä junia: 85 lähijunaa, 27 aluejunaa ja 26 pika- tai kaukojunaa. Etelään pääsee Leipzigiin, Dresdeniin ja Wieniin.\n- **Barcelonan Ciutadellan linnake**: Noin vuonna 1800 vartiosotilaat kävelevät linnakkeen muureilla, joiden kaupunkiin päin olevat kaksi bastionia kohoavat yli 16 metrin korkeuteen. Viisikulmainen linnake täyttää 28,6 hehtaaria, ja sisällä on kasarmeja, joihin mahtuu tuhansia sotilaita.\n- **Luxemburgin linnoitus**: Noin vuonna 1860 preussilaiset varusväet vartioivat linnoituksen muureja ja portteja, ja kaupunki on ahdettu kolmen muurivyöhykkeen sisään, koska linnoitus ei anna sen kasvaa. Kallion sisällä kasematit yhdistävät asemat toisiinsa, ja käytävissä lyhtyjen valo heijastuu kosteasta kivestä.\n- **Vilnan suuri synagoga**: Vuonna 1873 pyhäpäivän rukoukseen kokoontuva yhteisö laskeutuu syvälle katutason alapuolelle upotettuun saliin, jonka katto kohoaa yli viiden kerroksen korkeuteen. Salin keskellä on rokokoo-tyylinen bimah, ja uskonnollisina juhlapäivinä rukoilijoita on tuhansia.\n- **Gogolin kadun synagoga**: Synagoga on valmistunut 1871 Paul von Hardenackin suunnitelmien mukaan. Noin vuonna 1900 sapatin alkaessa kanttori ja kuoro täyttävät uusrenessanssityylisen tiilisalin äänellä, ja yhteisö kuuntelee Riian suurimmassa synagogassa.\n- **Sukharevin torni**: Noin vuonna 1900 Moskovan ohikulkijat kiertävät 64 metriä korkeaa Sukharevin tornia, jonka huipulla seisoo kotka ja jonka seinässä on kello ja neljä pientä tornia. Siellä on toiminut matematiikan ja navigaation koulu, ja yläkerrassa Venäjän ensimmäinen tähtitorni.\n- **Tšudovin ja Taivaaseenastumisen luostarit**: Noin vuonna 1850 nunnat sytyttävät kynttilöitä Taivaaseenastumisen luostarin viisikupolisessa katedraalissa Moskovan suuriruhtinattarien ja tsaarittarien haudoilla. Viereisessä Tšudovin luostarissa munkit hoitavat katedraalia, jossa tsaarien lapsia on kastettu.\n- **Văcărești-luostari**: Noin vuonna 1740 oppilaat opiskelevat luostarin kreikankielisessä koulussa, ja kirjapainosta tulee tuoreita kirjoja. Kirjaston luettelossa on jo 237 kirjoittajaa, ja kirkko seisoo luostarin pihalla vuonna 1724 vihittynä.\n- **Old Tolbooth**: Noin vuonna 1790 High Streetin kulkijat ohittavat St Gilesin katedraalin kulmassa seisovan Old Tolboothin, joka on kiinni Luckenbooths-nimisessä rakennusrivissä. Sisällä toimivat vankila ja kaupungin hallinto, ja viereisissä kojuissa käydään kauppaa.\n- **Mercato Vecchio**: Vuonna 1873 aamutori kuuluu jo kadulle asti: teurastajat, kalakauppiaat ja kojumyyjät huutavat toistensa yli Beccherian ja Vasarin kalahallin välissä, ja keskellä aukiota seisoo Abbondanza-pylväs. Kivetyksellä kolisevat kärryt, ja kapeilta kaduilta nousee kalan ja lihan haju keskiaikaisten tornien varjoon, geton taloihin asti.\n- **Helsingin vanha rautatieasema**: Vuonna 1873 höyryveturi seisoo laiturilla puisen katoksen alla. Kaukomatkustajat kulkevat odotussalien läpi, mutta lähijunaan noustaan suoraan Kaivokadun rautaportista.\n- **Nyenskans**: Noin vuonna 1660 Okhta-joen rannalla elää noin 2 000 asukkaan kauppakaupunki, jonka väki on kirkonkirjojen mukaan enimmäkseen suomalaista. Venäläisten hyökkäys 1656 on vahingoittanut sitä pahoin, mutta joen toisella puolella Nyenskansin linnoitus vartioi yhä Nevan ja Okhtan yhtymäkohtaa.\n- **Tejon kuninkaallinen ooppera**: Maaliskuun lopussa 1755 katsojat täyttävät uuden oopperatalon parterren ja 38 aitiota Tejon rannalla, vanhan Ribeiran palatsin kyljessä. Lavalla tenori Anton Raaff ja kastraatti Caffarelli laulavat Alessandro nell’Indie -oopperan roolit, ja Petronio Mazzoni vastaa lavakoneiston tehosteista.\n- **Kärntnertor-teatteri**: Toukokuun 7. päivänä 1824 teatteri on täynnä yleisöä, ja lavalla soittaa lähes kaksi kertaa tavallista suurempi orkesteri. Samassa salissa on kuultu Mozartin pianokonserttoa nro 25 ja Beethovenin Fideliota.\n- **Ringtheater**: Tammikuussa 1874 katsojat saapuvat uuteen teatteriin, joka on mitoitettu 1 700 hengelle ja rakennettu pienelle tontille korkeaksi. Vuodesta 1878 ohjelmassa on puhenäytelmiä, saksalaista ja italialaista oopperaa sekä varietee-esityksiä.\n- **Kustaa III:n ooppera**: Maaliskuun 16. päivänä 1792 kuningas lukee illallisella nimettömän kirjeen, joka varoittaa salaliitosta ja kehottaa lykkäämään naamiaisia, mutta hän ei välitä siitä. Oopperan salissa on naamioituneita vieraita, ja puoliyön aikaan naamioidut miehet tukkivat hänen tiensä.\n- **Vor Frue Kirke (keskiaikainen)**: Noin vuonna 1650 kaupunkilaiset kokoontuvat punatiilisessä goottilaisessa kirkossa, jonka korkea torni ja neljä kulmakärkeä näkyvät Kööpenhaminan korkeimmalta kohdalta. Reformaatio on jo hajottanut sen patsaat ja alttarit, kun satoja kaupunkilaisia ryntäsi kirkkoon joulukuussa 1530.\n- **Maison du Peuple**: Huhtikuussa 1899 Maison du Peuple vihitään, ja ranskalainen sosialisti Jean Jaurès on paikalla. Julkisivu on noin 80 metriä pitkä.\n- **Marseillen siirtosilta**: Vuonna 1905 uuden sillan kannesta roikkuva kori ylittää Vanhan sataman puolessatoista minuutissa, ja 239 metriä pitkän, 52 metrin korkeudessa kulkevan kannen alta laivat pääsevät satamaan. Kori on 20 tonnin painoinen ja pinta-alaltaan 120 neliömetriä.\n- **Alkuperäinen Erzsébet-silta**: Noin vuonna 1930 kävelijät ja liikenne ylittävät Tonavan sillalla, jonka kannella on neljä kaistaa ja molemmilla puolilla jalkakäytävä. Joki on tässä Budapestin seudun kapeimmillaan.\n- **Prahan vanhan raatihuoneen itäsiipi**: Noin vuonna 1900 uusgoottilainen siipi liittyy keskiaikaiseen torniin Vanhankaupungin torin laidalla, ja tornin astronominen kello on käynyt vuodesta 1410, siis jo lähes viisisataa vuotta. Tornissa on myös 1381 vihitty kappeli.\n- **San Geminianon kirkko**: Noin vuonna 1700 Pyhän Markuksen torin länsilaidalla seisoo keskikupolinen kirkko, jonka julkisivu on istrialaista marmoria ja jonka Sansovino on suunnitellut; sen sisällä lepäävät hän ja hänen lapsensa Fiorenza ja Francesco. Urkujen ovia koristavat Veronesen maalaukset.\n\nHuom. erityisesti: **Văcărești n. 1740** (kreikankielinen koulu ja kirjapaino, munkit ja oppilaat; ei 1900),\n**Vor Frue Kirke n. 1650** (keskiaikainen punatiilinen goottilainen kirkko; ei 1800), **Marseillen siirtosilta 1905**\n(uusi silta; ei 1930). Kuvaan vain kohtaus, ei tekstiä kuvaan. Jos jokin erän 3–4 B-kuva on jo valmis ja poikkeaa,\ntee uusi otto samaan avaimeen ja kirjaa se toimitukseen.\n\n"
+  },
+  "BReference": {
+    "status": "RESOLVED_EXACT_REFERENCE",
+    "checkedAt": "2026-10-31T11:09:14.472220+00:00",
+    "imageViewed": true,
+    "file": "references/ihme-tuileries-loistoaika-v2.jpg",
+    "originalLocalPath": "output/ihmeet-loistoaika-v2/13-16/final-jpg/ihme-tuileries-loistoaika-v2.jpg",
+    "historicalManifest": "output/mailbox-photo-policy-20260912/posti/history-82-caption-source-package.json",
+    "historicalManifestSha256": "0c1ea788b6541f391db9f5a91287da906eb33f2a4622a1084cb205719f5968c9",
+    "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+    "gitBlobSha1ComputedFromBytes": "c21d250a133aa9cb850865302fdfa63018ba72eb",
+    "gitBlobPresenceConfirmed": false,
+    "bytes": 825207,
+    "format": "JPEG",
+    "size": [
+      1536,
+      1024
+    ],
+    "aspectRatio": "3:2 landscape",
+    "mode": "RGB",
+    "colored": true,
+    "embeddedICCBytes": 0,
+    "colorSpaceDeclaredByHistoricalManifest": "sRGB IEC61966-2.1",
+    "colorProfileNote": "The historical manifest declares sRGB, but these exact JPEG bytes have no embedded ICC profile. Do not claim that the original contains one.",
+    "liveMain": {
+      "ref": "0ac9a46250f77c131064d9622e9496abe8a35d52",
+      "exactRepoPath": "assets/kartat/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+      "exactPathResult": 404,
+      "directoryEntries": 104,
+      "exactFilenamePresent": false,
+      "relatedExistingFile": {
+        "path": "assets/kartat/ihmeet/ihme-tuileries.webp",
+        "blob": "c5e633a819f355bcc9ab19142fbe8a5128c512f2"
+      },
+      "codeSearchResultCount": 0
+    },
+    "r2Readback": [
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444915954017000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444916364947000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      }
+    ],
+    "style": "Colored photorealistic historical reconstruction, natural warm muted light, period people carrying out a small story within a detailed architectural setting. Full rectangular scene without illustration outlines, transparency, vignette border or aged-paper effect.",
+    "deliveryPractice": {
+      "bucket": "matkakirja",
+      "objectKeyTemplate": "kohtaamiset/ihmeet/ihme-<id>-loistoaika.jpg",
+      "repoCopyTemplate": "assets/kartat/ihmeet/ihme-<id>-loistoaika.jpg",
+      "mime": "image/jpeg",
+      "canonicalBase": "https://media.matkakirja.app/",
+      "workingUploader": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/tools/upload_r2.py",
+      "workingReceipt": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/R2-RECEIPTS.json",
+      "workingReceiptVerifiedCount": 6,
+      "jpegUploaderReference": "output/fable-20260924/upload-r2-verified.mjs",
+      "wrangler": "sites/matkakirjan-kuvat/node_modules/.bin/wrangler",
+      "configReference": "output/color-audit-bukarest/final/wrangler.json",
+      "steps": [
+        "Require exact image QA and local hash first",
+        "GET canonical object before upload; accept already-identical object, upload only absent object, stop on differing existing bytes",
+        "Wrangler remote object put with exact key and image/jpeg MIME",
+        "GET full object using Origin https://matkakirja.app and cache-busting SHA query",
+        "Require HTTP200, exact bytes and SHA256, image/jpeg MIME and allowed CORS",
+        "Record immutable receipt; keep recipient acceptance/integration separate"
+      ],
+      "adaptationNeeded": "These old uploaders are task-specific: adapt QA/state paths, item key, MIME and existing-key policy; do not execute unmodified. The older JPEG uploader has a restrictive key whitelist, old workspace path and requires embedded ICC, whereas the exact B reference has no embedded ICC.",
+      "executedDuringDiscovery": false
+    },
+    "networkNote": "Python urllib received HTTP403; established curl GET method succeeded with identical bytes on canonical media and known public bucket, both plain and cache-busted URLs. No authentication secrets accessed or printed.",
+    "externalWrites": false,
+    "generationPerformed": false
+  },
+  "AReferences": [
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-notre-dame.webp",
+      "blobSha": "cbabbe4717d5487da9bfc38337df81a1b7a00bbf",
+      "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73"
+    },
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-tuileries.webp",
+      "blobSha": "eb8a0dada89dc7113a4ae7628d182d29b519b41a",
+      "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52"
+    }
+  ]
+}
