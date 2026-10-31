@@ -1,0 +1,527 @@
+{
+  "allAssetsPersonallyViewed": true,
+  "allAssetsPassed": true,
+  "rootReviews": [
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "temple-torni",
+      "role": "B",
+      "taskNumber": 1412,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/final/ihme-temple-torni-loistoaika.jpg",
+      "sha256": "d32de7629f38cb494de1d0a3962b5f641c5357dd4eef1e8af7a2302993e22632",
+      "bytes": 632956,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Temple keep roof silhouette visible; weather vane reaches top border, main architecture uncut. Full Templar knight, natural wool/masonry and courtyard light. Model informs tower, not exact1260enclosure.",
+      "depictedEra": "1260",
+      "historicalReconstruction": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:53:52.356740+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "ciutadella",
+      "role": "B",
+      "taskNumber": 1370,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/final/ihme-ciutadella-loistoaika.jpg",
+      "sha256": "a6c9cf8e10daea2a768c4324942c26c68afb562e8d1a8b03266b38206ab609be",
+      "bytes": 757038,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Soldiers walking on high stone bastion with courtyard/barracks behind, low historical skyline, plausible weapons and hands. Natural stone/mortar, cloth and skin in camera daylight; no late Gothic tower spires. Exact1800city spread is reconstruction.",
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:59:40.915648+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "suuri-synagoga-vilna",
+      "role": "B",
+      "taskNumber": 1374,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/suuri-synagoga-vilna/final/ihme-suuri-synagoga-vilna-loistoaika.jpg",
+      "sha256": "38815ae30dc7e6eff2b7b6eaad78e799a4e9a437e7cf56ed1b3e744439793348",
+      "bytes": 632161,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Large sunken prayer hall, descending men on coherent stairs with railing, central rococo bimah between columns. Natural plaster/marble/worn wood, daylight and candles, realistic black coats and posture; no obvious procedural material pattern. Exact stair viewpoint and1873colors are documented reconstruction.",
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T15:04:25.995491+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "gogolin-synagoga",
+      "role": "B",
+      "taskNumber": 1376,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/gogolin-synagoga/final/ihme-gogolin-synagoga-loistoaika.jpg",
+      "sha256": "8f406578b71918d056f8cfbe093c1755742ad324f0bcb0d952685f99d6cbc839",
+      "bytes": 485984,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Full-size final personally viewed before context compaction. Photographic natural brick, stone, wood, candle and daylight; coherent hands and song books, cantor and male choir with listening community. Ordinary camera depth of field without synthetic repeating surface patterns. No verified historical interior photograph was obtained: the partial neo-Renaissance brick hall is explicitly a reconstruction, with interior decoration, colors and choir placement uncertain. Not a depiction of Peitav synagogue.",
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T15:00:39.657550+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "tsudov",
+      "role": "B",
+      "taskNumber": 1380,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/tsudov/final/ihme-tsudov-loistoaika.jpg",
+      "sha256": "3978e1ed3ab5d8d39c071de683bf91c636396ada24df64e69e28c5fb7544d55a",
+      "bytes": 642928,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Nun lighting candle at documented Euphrosyne shrine in Ascension Convent cathedral. Natural dim daylight and candle reflections, convincing metallic wear, velvet, black cloth and skin; correct fingers/wick gesture. Deliberate close interior view; not an invented full cathedral panorama.1850colors and exact textiles reconstructed from later archive photo and1852description.",
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:54:46.543422+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "vacaresti",
+      "role": "B",
+      "taskNumber": 1382,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/vacaresti/final/ihme-vacaresti-loistoaika.jpg",
+      "sha256": "db523feb78692d0506537919f9d4fca1d8b8e1b72144d6f09f3ad68e33cc92ad",
+      "bytes": 529089,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "1740Greek school scene with monk, pupils and books. Natural skin, facial hair, linen and wool weave, paper and worn table, photographic depth of field. Source-informed church behind; no unsupported printing room. Books have non-legible illustrative text; press-location source conflict recorded.",
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "templeIndependentReview": {
+    "reviewer": "/root/ihmeet1_istanbul_rome",
+    "reviewedAt": "2026-10-31T14:49:43.776863+00:00",
+    "independentOfRootReview": true,
+    "personallyViewed": true,
+    "approvedForDelivery": true,
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/final/ihme-temple-torni-loistoaika.jpg",
+    "sha256": "d32de7629f38cb494de1d0a3962b5f641c5357dd4eef1e8af7a2302993e22632",
+    "bytes": 632956,
+    "id": "temple-torni",
+    "role": "B",
+    "taskNumber": 1412,
+    "viewedFiles": [
+      "final/ihme-temple-torni-loistoaika.jpg",
+      "../../ihmeet-era2-20261031/temple-torni/references/model-1.jpg",
+      "../../ihmeet-era2-20261031/temple-torni/references/model-2.jpg"
+    ],
+    "notes": [
+      "Personally inspected the final 1536 x 1024 JPEG. Medieval courtyard, a full-length Templar knight with white cloak and red cross, and the Temple keep match the amended circa 1260 scene. No eighteenth-century market or costumes.",
+      "The keep silhouette and front annex are consistent with the supplied Carnavalet model views. The medieval courtyard is an interpretive reconstruction; the later museum model cannot establish every detail of the enclosure in 1260.",
+      "Stone, wool, faces, hands, feet and directional sunlight read photographically at final size. No material anatomy, repeated surface-pattern or CGI rendering defect found.",
+      "Minor framing reservation: the thin central weather-vane rod reaches the top edge, and the requested extra sky margin is not achieved. The solid main roof and its apex are fully visible; this does not obscure the building or prevent delivery."
+    ],
+    "minorReservations": [
+      "Tight top framing around the central weather-vane rod."
+    ],
+    "technical": {
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "iccBytes": 480,
+      "rootExportRecord": "qa/B-export-verification.json"
+    },
+    "materialDefects": [],
+    "scope": "Independent local final-image QA only. R2 delivery, recipient acceptance, owner acceptance, runtime integration and publication are not established by this review."
+  },
+  "productionRecords": [
+    {
+      "id": "temple-torni",
+      "state": {
+        "id": "temple-torni",
+        "role": "B",
+        "taskNumber": 1412,
+        "attempts": [
+          {
+            "attempt": 1,
+            "qa": "REJECTED",
+            "reason": "Main tower roof cropped",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/candidates/B-v1-source.png",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/prompts/B-v1.txt"
+          },
+          {
+            "attempt": 2,
+            "qa": "PASS",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/candidates/B-v2-source.png"
+          }
+        ],
+        "status": "FINAL_QA_PASS",
+        "selectedAttempt": 2,
+        "generationCalls": 2,
+        "final": {
+          "reviewer": "root",
+          "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "id": "temple-torni",
+          "role": "B",
+          "taskNumber": 1412,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/temple-torni/final/ihme-temple-torni-loistoaika.jpg",
+          "sha256": "d32de7629f38cb494de1d0a3962b5f641c5357dd4eef1e8af7a2302993e22632",
+          "bytes": 632956,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "visualNotes": "Temple keep roof silhouette visible; weather vane reaches top border, main architecture uncut. Full Templar knight, natural wool/masonry and courtyard light. Model informs tower, not exact1260enclosure.",
+          "depictedEra": "1260",
+          "historicalReconstruction": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "depictedEra": "1260",
+        "amendmentSource": "3bcef53d89907dbfaed3be6449fa69763954dd94"
+      }
+    },
+    {
+      "id": "ciutadella",
+      "state": {
+        "taskNumber": 1370,
+        "id": "ciutadella",
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 2,
+        "generationCallsIncludingOriginalDelivery": 3,
+        "selectedAttempt": 3,
+        "attempts": [
+          {
+            "version": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/candidates/B-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-42acf98d-d9b8-4144-9b9b-dc91c9915497.png",
+            "status": "rejected-preserved",
+            "reason": "Later-looking Gothicspires in distantcityskyline; rejected."
+          },
+          {
+            "version": 3,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/prompts/B-v3.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/candidates/B-v3-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-78c1840d-897c-4153-ad48-9aee6e6d0e35.png",
+            "status": "selected-local-qa-pass"
+          }
+        ],
+        "supersedes": {
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era3-20261031/ciutadella/final/ihme-ciutadella-loistoaika.jpg",
+          "sha256": "b5fbd320384c30afed4486613fd4c24b281dbb3a19c23662ca61761ce6813aec",
+          "reason": "Original scene at gate replaced by newly required guards walking on rampart. E3 deliveredfile untouched."
+        },
+        "sourceAmendment": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/references/scene-amendment.md",
+          "commit": "3bcef53d89907dbfaed3be6449fa69763954dd94"
+        },
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/final/ihme-ciutadella-loistoaika.jpg",
+        "sourceSha256": "72060ea92048d3ec1004389f03b9db38a71af46ced8e35625c9b29adf0e549b8",
+        "finalSha256": "a6c9cf8e10daea2a768c4324942c26c68afb562e8d1a8b03266b38206ab609be",
+        "promptSha256": "17bbb13b6ee1cbcd8ec4d80cac721356e347f9403ebe6bba3b435b488da28ec2",
+        "bytes": 757038,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.parlament.cat/wp/pcat/parlament/historia-del-palau/el-palau-del-parlament/",
+          "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/143542/1/20230310_PD_DOC_Ciutadella_SW-Web-1.pdf",
+          "https://www.ub.edu/geocrit/sn/sn-431.htm",
+          "https://tramits.gencat.cat/en/diada-nacional-de-catalunya/historia/escenaris/index.html",
+          "https://ejercito.defensa.gob.es/Galerias/multimedia/revista-ejercito/2017/914/accesible/Revista_Ejercito_Accesible.pdf",
+          "https://elrincondebyron.com/2022/09/30/la-ciudadela-de-barcelona-y-su-protagonismo-en-el-periodo-1808-1814/"
+        ],
+        "historicalUncertainty": "Historical reconstruction circa1800; exactregiment, positions, garrison chapel details and city panorama inferred. No modernneoGothic cathedral facade or modernpark. Highangledcity-facingbastion anddrymoat followhistoricfortificationtype; image is not a measured siteplan.",
+        "qa": {
+          "status": "pass",
+          "checkedAt": "2026-10-31T14:45:09.823433+00:00",
+          "views": [
+            "source full",
+            "B-full.png",
+            "B-384.png"
+          ],
+          "architecture": "Walkingguards on highbastionwallwalk, angledbastion/dr ymoat, simplebarracks andlowcityskyline. No gate-changingguardcomposition.",
+          "style": "Realcameracolor/optics, individualroughstone andnaturallight; coherenthands, walkinglegs andsinglemuskets; no CGI orrepeatingproceduraltexture.",
+          "limitations": "Historical reconstruction circa1800; exactregiment, positions, garrison chapel details and city panorama inferred. No modernneoGothic cathedral facade or modernpark. Highangledcity-facingbastion anddrymoat followhistoricfortificationtype; image is not a measured siteplan.",
+          "technicalVerification": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/ciutadella/qa/B-export-verification.json"
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "suuri-synagoga-vilna",
+      "state": {
+        "id": "suuri-synagoga-vilna",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "selectedVersion": "B-v1",
+        "updatedAt": "2026-10-31T14:59:00.632936+00:00",
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "originalDeliveryPreserved": true,
+        "attempts": [
+          {
+            "version": "B-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/suuri-synagoga-vilna/candidates/B-v1-source.png",
+            "sha256": "5df9122376b071945422869e402d244dab098a4100f0c0925e913ae816a747e3",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/suuri-synagoga-vilna/prompts/B-v1.txt",
+            "selected": true
+          }
+        ],
+        "final": {
+          "id": "suuri-synagoga-vilna",
+          "role": "B",
+          "taskNumber": 1374,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/suuri-synagoga-vilna/final/ihme-suuri-synagoga-vilna-loistoaika.jpg",
+          "sha256": "38815ae30dc7e6eff2b7b6eaad78e799a4e9a437e7cf56ed1b3e744439793348",
+          "bytes": 632161,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "Final JPEG personally viewed at full resolution. Real photographic stone, wood, wool, skin and daylight; broad connected descending staircase, plausible separate feet and handrail grips. Central multi-tier rococo bimah between massive pale columns and separate east-wall ark correspond to historical photographic character. Exact stair placement, ornament, colors, people and framing are reconstruction; later primary photographs used for the historic hall. Upper vaults continue beyond frame; no claim of measured five-storey height or exactly thousands of people visible.",
+          "depictedEra": 1873,
+          "ownerPhotographicFeedbackApplied": true,
+          "historicalReconstruction": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "iccBytes": 480,
+          "colorEdits": false
+        }
+      }
+    },
+    {
+      "id": "gogolin-synagoga",
+      "state": {
+        "id": "gogolin-synagoga",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "selectedVersion": "B-v1",
+        "updatedAt": "2026-10-31T15:02:01.837270+00:00",
+        "amendmentCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "originalDeliveryPreserved": true,
+        "attempts": [
+          {
+            "version": "B-v1",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/gogolin-synagoga/candidates/B-v1-source.png",
+            "sha256": "ff8877ea5f5409708c29be56572a518a75edfcfff88db08a7e371b630b383ad6",
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/gogolin-synagoga/prompts/B-v1.txt",
+            "selected": true
+          }
+        ],
+        "final": {
+          "id": "gogolin-synagoga",
+          "role": "B",
+          "taskNumber": 1376,
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/gogolin-synagoga/final/ihme-gogolin-synagoga-loistoaika.jpg",
+          "sha256": "8f406578b71918d056f8cfbe093c1755742ad324f0bcb0d952685f99d6cbc839",
+          "bytes": 485984,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "visualNotes": "Final JPEG personally viewed at full resolution. Circa1900 cantor and male choir with listening congregation; believable book grips, hand gesture, feet and continuous platform steps. Natural camera depth, skin/beards, woven cloth, aged wood and uneven brick; no painted/CGI surface or repeated people. Warm Renaissance brick hall agrees with required scene and catalog character. Specific interior arrangement, ark, colors and decorative details are explicitly reconstructed: no historical Gogol interior photograph was available to verify. This is not Peitav and no Egyptian/Assyrian motifs were used.",
+          "depictedEra": "circa1900",
+          "ownerPhotographicFeedbackApplied": true,
+          "historicalReconstruction": true,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        },
+        "technicalChecks": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "iccBytes": 480,
+          "colorEdits": false
+        }
+      }
+    },
+    {
+      "id": "tsudov",
+      "state": {
+        "id": "tsudov",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "c1850",
+        "depictedBuilding": "Ascension Cathedral, Ascension Convent, Moscow Kremlin",
+        "sceneAmendmentMailCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "B-v1",
+        "completedAt": "2026-10-31T14:59:39.520714+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/tsudov/final/ihme-tsudov-loistoaika.jpg",
+        "sha256": "3978e1ed3ab5d8d39c071de683bf91c636396ada24df64e69e28c5fb7544d55a",
+        "sourceSHA256": "ed67a2cf7fca399c0e025a8da06a36657abd119246143beaa3958b494e5e0adb",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC quality95 4:4:4",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "sourceURLs": [
+          "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%B0%D0%BA%D0%B0_%D1%81_%D0%BC%D0%BE%D1%89%D0%B0%D0%BC%D0%B8_%D0%BF%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D0%BD%D0%BE%D0%B9_%D0%95%D0%B2%D1%84%D1%80%D0%BE%D1%81%D0%B8%D0%BD%D0%B8%D0%B8_%D0%B2_%D0%92%D0%BE%D0%B7%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%D0%B5_1890-1894_%D0%B3%D0%BE%D0%B4_580.jpg",
+          "https://azbyka.ru/otechnik/Spravochniki/polnoe-sobranie-istoricheskih-svedenij-o-vseh-byvshih-v-drevnosti-i-nyne-sushhestvuyushhih-monastyrjah-i-primechatelnyh-tserkvah-v-rossii/23",
+          "https://kreml.ru/storage/mediafiles/files/researches/26043/naykabiblmatisst25sbor26.pdf"
+        ],
+        "QA": {
+          "visual": "PASS",
+          "technical": "PASS",
+          "filesViewed": [
+            "B-full.png"
+          ],
+          "notes": "Three nuns at royal womens tombs, with principal Euphrosyne1822 shrine matching archival silhouette; full-resolution image is photographic, naturally dim candle/window lighting, natural skin and black wool, irregular metal/plaster surfaces, no repetitive synthetic grain; correct1536x1024 export."
+        },
+        "uncertainties": [
+          "Later archive photograph1890-94 provides shape of documented1822 shrine; precise1850 colors, textile decoration and nun placement are reconstructed.",
+          "Not claiming exact full cathedral interior panorama."
+        ],
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vacaresti",
+      "state": {
+        "id": "vacaresti",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 2,
+        "currentAttempt": "B-v2",
+        "historicalPeriod": "c1740",
+        "sceneAmendmentMailCommit": "3bcef53d89907dbfaed3be6449fa69763954dd94",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "rejected",
+            "reason": "Requested east apse became flat closed front; incorrect church volume. New full composition using photographed west porch directly."
+          },
+          {
+            "attempt": "B-v2",
+            "status": "accepted",
+            "reason": "Archive-matched west-front church background, natural photographic school scene."
+          }
+        ],
+        "acceptedAttempt": "B-v2",
+        "completedAt": "2026-10-31T14:53:56.136127+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-kohtauskorjaukset-20261031/vacaresti/final/ihme-vacaresti-loistoaika.jpg",
+        "sha256": "db523feb78692d0506537919f9d4fca1d8b8e1b72144d6f09f3ad68e33cc92ad",
+        "sourceSHA256": "6387654a6c3c2fea73b6f2a9dd89d02d7447a33d858d068d55bc61edc4443d04",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC quality95 4:4:4",
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "sourceURLs": [
+          "https://muzeulbucurestiului.ro/ansamblul-manastirii-vacaresti/",
+          "https://arhitectura-1906.ro/2018/06/manastirea-vacaresti-un-tezaur-risipit/",
+          "https://bmim.muzeulbucurestiului.ro/fisiere/05-Bucuresti-Materiale-de-Istorie-si-Muzeografie-V-1967_026.pdf"
+        ],
+        "QA": {
+          "visual": "PASS",
+          "technical": "PASS",
+          "filesViewed": [
+            "B-full.png"
+          ],
+          "notes": "Real-camera photographic skin, hair, linen, wool and light; pupils/monk reading books c1740; archive-matched western open porch and paired front towers; no prison fittings, no modern items; correctly exported full size."
+        },
+        "uncertainties": [
+          "Exact table location, people, bookbindings and garments are reconstruction, not archival record.",
+          "1741 School of Vacaresti printshop location has contradictory historical accounts; an on-site press room is deliberately not depicted.",
+          "Church consecration date in order1724 differs from municipal museum1723; not represented with text in image."
+        ]
+      }
+    }
+  ],
+  "ownerPhotorealismReinforcement": {
+    "text": "Pidä huoli että kuvat näyttävät aidoilta valokuvilta",
+    "recordedAt": "2026-10-31T14:53:52.357560+00:00",
+    "appliesTo": "B historical scene images",
+    "action": "Full-size visual inspection of physical materials, natural lighting, anatomy and camera optics; full new generations for visible CGI/painted surfaces. Ordered A map watercolor style unchanged."
+  },
+  "note": "Producer states preserve their recorded stage; exact-file root reviews and full GET receipts are the package gates. Recipient acceptance and runtime/publication are separate.",
+  "historicalLimit": "Lost interiors, furnishings and persons are source-informed reconstructions, not documentary photographs."
+}
