@@ -2203,3 +2203,18 @@ Puuttuva kohta = palautus. Koskee myös v99:n jälkeisiä eriä. Jono: tyhjä, v
 - Meridiaani 404 (JU 31.10.): a-meridiaaniportti-1063-portaat.glb:tä ei kuulu olla (kaiteet a3a5-sijoitukset.json:ssa c2-v11:stä asti, 1063-portaat
   vain f-taihemen/g-jalusta) → pelin haku PK:lle; JU ja PT tietävät.
 - Lahipuut-v12 (kuja 02:n puut pois): PK tekee (sovittu 30.10. 23.0x).
+- 01.2x: omat wt/lavastaja-* (4) poistettu → levy 87; PT 01.2x raja tilapäisesti 78 Gi (uusinta/levyvahti.zsh <raja> <pid:t>; palaa 82:een leivonnan jälkeen).
+  wt/proto-lavastaja-* (4, ~1,9 G) EI poistettu: haarat eivät proto-masterissa, havainteessa 2 tallentamatonta muutosta (Postivahdille kerrottu).
+
+## LISÄYS 160 (31.10. 12.4x): YÖN TULOKSET + JATKOAJO — ALOITA TÄSTÄ
+- VALMIINA (uusinta/): rakennukset-v86 135/136 (02.22), tausta-v82 uudelleen TUPLAT=1 + v5-varjostaja + kujat.zsh + muurikate-v30 (03.19).
+- VIAT JA KORJAUKSET: (1) leivo_osasarja.py kaatui 27/86 ruudun jälkeen KeyError 'kaide-johde-1.5m' (nimi katkesi pisteestä) → nimi_() poistaa vain .001-päätteen;
+  lisätty JATKA=1 (leivotut ruudut ohi). (2) f-taihemen kaatui joka kerta ('palkit' ilman kasvoja → smart_project) → leivo_malli.py kohteet vain
+  kasvollisista verkoista. Varmuuskopiot .ennen-nimikorjaus / .ennen-tyhjat.
+- JATKOAJO 12.34: aja_uusinta.zsh rak 1/1 (pid 40767, vain f-taihemen) → ketju-osasarja-v6.zsh (pid 40768, JATKA=1, 59 ruutua ~8 min/kpl → ~20.30)
+  → leivonta_karki.py; levyvahti 78 Gi (lokit ajo-rak.log, ajo-osasarja-v6.log, ajo-jatka.log).
+- TARKISTUS ajossa: tarkista_leivonta tausta-v82 ehtoalueilla kuten v73 (−248.8 −244.2 298 360 | −255 −246.8 361 403 | −138.6 −133.0 340 437)
+  → uusinta/tarkistus-tausta-v82b.txt. PT: 0 vikaa ehtoalueilla.
+- SEURAAVAKSI: (a) tarkistus → jos 0: paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v1-vienti-20261031 (tausta-v82, muurikate-v30, rakennukset-v86
+  kun f-taihemen valmis; LAHTEET.md juureen, SHA256SUMS, ei alikansioiden .md) → VS (local_3b36fe96-…: palat + alueet + varjostajat.json:t, parit 02/03/06)
+  + PT ≤ 3 riviä. (b) osasarja-v6 valmis → paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v6-vienti-<pvm> → PK + PT. (c) levyraja takaisin 82.
