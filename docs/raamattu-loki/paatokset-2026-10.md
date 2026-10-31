@@ -3286,3 +3286,18 @@ Omistaja 31.10.2026 klo 09.31 (kortti KK:ssa 'Pidetäänkö aukiot ja puistot ke
 ## TUOTANTOPUTKI: KEVYIN TAPA JA YHTEINEN MOOTTORI (31.10.2026 klo 11.26)
 
 Omistaja 31.10.2026 klo 11.17: 'Tarkista että muissakin metrokartoissa sama kevyt bittikartta toteutus animaatioissa. Kaikki saisivat käyttää samaa moottoria'; 11.18: 'Tuotantoputkeen pitöisi kirjata että aina mietitään tällaisia tapoja toteuttaa. Mieti miten tämä kannattaa kirjata fiksuiten'; 11.25 kortti 'Kirjataanko kevyt toteutus ja yhteinen moottori näin?' → 'Kyllä, näin (Suositus)'. Kirjattu: tuotannonohjaus.md periaate 8 (kevein tapa, sama moottori, parannus kaikkiin käyttäjiin), valmiin määritelmä 8.4 ja portti 4 (uusi liike tai näkymä hyväksytään vain yhteisellä moottorilla), tekotavat/koodi.md luku 3 (siirto/skaalaus/häivytys, ei fonttikokoa/mittoja joka ruudulla) ja Opit 31.10. NUI laajentaa OpasMetrolinja.cs:n Kierrosmuunnokset kaikkiin tiloihin junaan 216.
+
+## KADONNEET IHMEET EUROOPASSA: 43 UUTTA JA KAKSI POIS (omistaja 31.10. klo 12.49) (31.10.2026 klo 12.49)
+
+Omistaja 11.28: "Lisäksi voisi katsoa onko Euroopassa kaikki oleelliset kadonneet kohteet ihmeinä ja tehdä kaikki merkittävät puuttuvat kohteet". KK:n agentin luonnos (51) → PT karsi 43:een (pois:
+Königsbergin linna, Dresdenin Semper-synagoga, Münchenin Glaspalast – kaupunki ei pelissä; Gamla Uppsalan temppeli – ulkonäkö epävarma; Prahan Stalin-monumentti ja Sofian Dimitrovin mausoleumi –
+diktaattorien muistomerkit eivät sovi loistonsa ajan ihmeiksi; Rooman getto, Spina di Borgo ja Bukarestin Uranus-kaupunginosa – kortteleita, Uranuksesta mukana Văcăreștin luostari). Omistaja 12.49
+kortilla: hyväksyi listan 43 kadonneesta ihmeestä: Lontoo: Whitehallin palatsi, vanha Westminsterin palatsi, Euston Arch, Newgaten vankila, Greenwichin palatsi; Istanbul: Konstantinopolin suuri
+palatsi, Pyhien apostolien kirkko; Rooma: Capitolium (Jupiterin temppeli), Septizodium; Pariisi: Les Hallesin hallit, Galerie des Machines, Trocadéron palatsi, Palais de l'Industrie, Palais d'Orsay,
+Temple-torni, Grand Châtelet; Varsova: Saksin palatsi, suuri synagoga, Aleksanteri Nevskin katedraali; Berliini: Palast der Republik, Anhalter Bahnhof; Dublin: Nelsonin pylväs; Barcelona:
+Ciutadella-linnake; Luxemburg: linnoitus; Vilna: suuri synagoga; Riika: Gogolin kadun synagoga; Moskova: Sukharevin torni, Kremlin Tšudovin ja Taivaaseenastumisen luostarit; Bukarest: Văcăreștin
+luostari; Edinburgh: Old Tolbooth; Firenze: Mercato Vecchio; Helsinki: vanha rautatieasema; Pietari: Nyenskans; Lissabon: Tejon kuninkaallinen ooppera; Wien: Kärntnertor-teatteri, Ringtheater;
+Tukholma: Kustaa III:n ooppera; Kööpenhamina: keskiaikainen Vor Frue Kirke; Bryssel: Maison du Peuple; Marseille: Pont Transbordeur; Budapest: alkuperäinen Erzsébet-silta; Praha: vanhan raatihuoneen
+itäsiipi; Venetsia: San Geminianon kirkko. Toteutus: Codex piirtää (pysyvä lupa) loistonsa ajalta, KS sijoittaa (arvio-koordinaatit tarkistetaan ennen tilausta), uusi pienempi piirroskoko (omistaja
+12.15/12.4x). Omistaja 12.49 kortilla myös: Riian Mustapäiden talo ja Vilnan alalinna pois kadonneista ihmeistä tavallisiksi kohteiksi, koska ne on rakennettu uudelleen samanlaisina (sama sääntö kuin
+Frauenkirche).
