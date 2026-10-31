@@ -4856,9 +4856,16 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Kantele', tyyppi: 'esine', lat: 60.1699, lon: 24.9384,
         nosto: 'syvennys-helsinki-kantele',
       },
+      /*
+       * SIBELIUS-MONUMENTTI FINLANDIAN TILALLE (omistaja 31.10.2026 klo 11.26: "Helsingissä on kohde joka ei ole paikka
+       * vaan musiikki teos. Näitä ei saa olla kartalla. Helsingissä on sibelius monumentti jonka yhteyteen musiikki
+       * viittauksen voi sisällyttää tekstissa"; PT). Sibeliuksen puisto, en/fi-Wikipedia "Sibelius Monument"
+       * (60°10′56″N 24°54′47″E). Finlandia kerrotaan jutussa; syvennystarina syvennys-helsinki-finlandia ennallaan.
+       * Piirros puuttuu vielä: Eila Hiltusen teos (k. 2003) on tekijänoikeuden suojaama (tekijä k. < 70 v ei kuviin),
+       * joten Codex-tilaus odottaa PT:n päätöstä. Ilman piirrosta kohde on kaupungin sisäinen nosto (ei karttamerkkiä).
+       */
       {
-        nimi: 'Finlandia', lat: 60.16722, lon: 24.94333,
-        nosto: 'syvennys-helsinki-finlandia',
+        nimi: 'Sibelius-monumentti', tyyppi: 'taide', lat: 60.18222, lon: 24.91306, wiki: 'Sibelius-monumentti',
       },
       {
         nimi: 'Pirtukuningas', tyyppi: 'henkilo', lat: 60.1676, lon: 24.9547,
@@ -4876,10 +4883,11 @@ export const KAUPUNKIKARTAT = {
        * karttapaikka; juttu on sanatarkasti hetken teksti
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
-      // Ruotsalainen teatteri; sama piste kuin syvennys Finlandia, nimiö oikealle.
+      // Ruotsalainen teatteri, nimiö oikealle. Samaan pisteeseen myös syvennystarina Finlandia (sama ilta 1899; omistaja
+      // 31.10.2026: musiikkiteos ei ole oma karttamerkki) – listamuoto kuten Pariisin Tuileries'n palatsi.
       {
         nimi: 'Suomi herää 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
-        nosto: 'hetki-sibelius-finlandia-1899',
+        nosto: ['hetki-sibelius-finlandia-1899', 'syvennys-helsinki-finlandia'],
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
     ],
