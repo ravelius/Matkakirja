@@ -531,7 +531,7 @@ const KAUPUNGIT = {
     kainalot: [
       {
         rajat: { pohjoinen: 41.0235, etela: 41.0155, lansi: 28.9425, ita: 28.9570 },
-        x: 44, y: 66, leveys: 14, suunta: '3 km länteen',
+        x: 49, y: 66, leveys: 14, suunta: '3 km länteen',
       },
     ],
   },

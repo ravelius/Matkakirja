@@ -67,6 +67,9 @@ const VIRRATON = packById('maailmankartta').cities.find((city) => !FOKUSVIRRAT[c
 
 /* ---------- 1. vaihejärjestys ---------- */
 
+/** Kadonneet ihmeet 31.10.2026 (Karttaseppä): kytketyt erät, lopuksi 43. */
+const IHMEET_20261031 = 10;
+
 test('virta kulkee vaiheet sovitussa järjestyksessä', () => {
   let tila = fokusvirtaAlkutila();
   assert.equal(tila.vaihe, 'matkakirja');
@@ -970,8 +973,11 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
    * SWE, BLR, BIH) ja 8 rappeutunutta parikuvana (SRB, ALB, MKD, MNE,
    * CYP, MLT, MDA, BIH); DNK oli jo pelissä (christiansborg), joten
    * nettolisäys on 13.
+   *
+   * KADONNEET IHMEET EUROOPAN KAUPUNKIKARTOILLE (omistaja 31.10.2026 klo 12.49): 43 kohdetta neljässä erässä
+   * (monumentit-eurooppa.js ihmeKohde); IHMEET_20261031 kasvaa erä kerrallaan.
    */
-  assert.equal(ihmeita, 117, 'Matkakirjan ihmeitä on sataseitsemäntoista');
+  assert.equal(ihmeita, 117 + IHMEET_20261031, 'Matkakirjan ihmeitä on 117 + 31.10.2026 erät');
 });
 
 /*
@@ -988,14 +994,14 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 104,
-    'kansiossa on sataneljä ihmekuvaa');
+  assert.equal(tiedostot.length, 104 + IHMEET_20261031,
+    'kansiossa on 104 ihmekuvaa + 31.10.2026 erät');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }
   const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
   const euroopanJpg = tiedostot.filter((nimi) => nimi.endsWith('-loistoaika.jpg'));
-  assert.equal(euroopanJpg.length, 69, 'Euroopan erässä on 69 JPG-kuvaa');
+  assert.equal(euroopanJpg.length, 69 + IHMEET_20261031, 'Euroopan erissä on 69 + 31.10.2026 erien JPG-kuvat');
   for (const nimi of euroopanJpg) {
     assert.ok(!sw.includes(`assets/kartat/ihmeet/${nimi}`),
       `${nimi}: R2:sta ladattavaa 1600 px kuvaa ei lisätä SHELL-esilataukseen`);
