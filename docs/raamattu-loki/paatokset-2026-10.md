@@ -3400,3 +3400,7 @@ OMISTAJAN PÄÄTÖS 31.10.2026 klo 22.49 (KK:n välittämä): "Asemataulu ei saa
 ## PARIISI: CODEX MAALAA PERUSKARTAN ENSIN (KOE KAHDELLA PALALLA) (31.10.2026 klo 23.10)
 
 OMISTAJAN PÄÄTÖS 31.10.2026 klo 23.09 (KK:n kortti): omistaja kysyi "Onko Pariisin uuden kartan tekotapa järkevä?" ja "Osaisiko codex tehdä ilman liioittelua ensin peruskartan pseudo 3d:nä jonka päälle karikatyyrit laitetaan. Olisiko parempi näin?"; kortti "Kokeillaanko ensin sinun tapaasi kahdella vierekkäisellä palalla?" → "Kyllä (Suositus)". Codex maalaa kaksi vierekkäistä peruskarttapalaa ilman liioittelua; jos kadut, Seine ja reunat pysyvät, koko kaupunki tehdään näin, muuten Codex maalaa talot ja puut erillisinä kuvina ja koodi asettaa ne. PT: Karttaseppä tilaa (ohjekuvina v5:n geometria r3-c4 ja r3-c5 + G), saumatesti KS:llä; KS:n oma renderöinti v6 tauolle. Kokeen palat PT → KK G:n rinnalle ennen koko kaupunkia.
+
+## YÖLUPA: KK HYVÄKSYY OMISTAJAN PUOLESTA AAMUUN (omistaja 31.10.2026 klo 23.42) (31.10.2026 klo 23.42)
+
+Omistaja KK:lle: "Menen nukkumaan.Saat hyväksyä puolestani kaikki". KK hyväksyy aamuun asti omistajan puolesta, aina omistajan omia sanoja vasten (valon pari o3, Pariisin koepalat G:tä vasten, kortit). Roolien kysymykset KK:lle, ei odotusta aamuun. Rajat: ei ostoja, ei uusia pysyviä poistoja, ei asetuksia, avaimia eikä CLAUDE.md-tiedostoja, eikä jo päätettyä kumota. Juna 216 lähtee vain omistajan 21.08-ehdoilla (Pariisi valmis + valo hyväksytty). Omistajan Olavinlinna-poistoajo jatkuu (71/314 klo 23.42) → JU:n vahti, tulos KK:lle.
