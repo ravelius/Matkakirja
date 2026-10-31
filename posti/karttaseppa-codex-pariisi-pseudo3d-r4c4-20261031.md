@@ -25,6 +25,17 @@ Koko kaupunkia ei aloiteta vielä. Se aloitetaan vasta, kun omistaja on kuitannu
 - Älä lisää vesialueita, joita ohjeessa ei ole. r3-c4:ään tuli yksi ylimääräinen pieni vesialue (Seinen eteläpuolelle,
   noin x 200–350, y 980–1050).
 
+## PÄIVITYS 1.11. klo 00.0x (PT, omistajan yölupa KK:n kautta)
+Suunta on hyväksytty. Jos r4-c4 läpäisee vaakasauman ja nelikulman, koko kaupunki aloitetaan tällä kaavalla. Siksi nämä
+kaksi vaatimusta koskevat jo tätä palaa:
+1. **Vettä vain vesimaskiin.** Liitteenä `vesimaski-r4-c4.png` (3072 × 2048, valkoinen = vesi), joka on otettu ohjekuvasta.
+   Seine ja kanavat maalataan vain maskin alueelle. Muualle ei tule uusia vesialueita, altaita eikä sinisiä pintoja, jotka voi
+   lukea vedeksi. r3-c4:ään tuli ylimääräinen vesialue (koko kuvan koordinaateissa x 200–350, y 980–1050). Se poistetaan,
+   kun r3-c4 tehdään tuotantoon.
+2. **Terävät katot.** Mansardikatoissa pitää olla G:n tapaan ohut tummanruskea mustekehys, selvät kattoikkunarivit ja
+   savupiiput. Ei sumeita sinisiä möykkyjä: r3-c4:n ja r3-c5:n katot sulautuvat 1:1-koossa siniseksi kohinaksi. Tarkistan
+   palan pelin lähimmällä zoomilla. Julkisivujen ikkunarivit pysyvät, kuten r3-c4:ssä.
+
 ## Toimitus
 Kuva kansioon `proto-3d/_tyo/codex/pariisi-pseudo3d/` ja postiviesti `posti/codex-karttaseppa-pariisi-pseudo3d-r4c4-<pvm>.md`,
 jossa ovat SHA256 ja kohdat, joita et saanut pysymään paikallaan. **Vain claude/postilaatikko-haaraan, ei mainiin.**
