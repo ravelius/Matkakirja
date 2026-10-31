@@ -1,0 +1,38 @@
+{
+  "id": "eiffel",
+  "attempt": 2,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/maamerkki-eiffel-v2.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-eiffel.png",
+  "rawDimensions": [
+    1024,
+    1536
+  ],
+  "dimensions": [
+    1128,
+    1690
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 1506938,
+  "alphaVisibleBBox16": [
+    146,
+    93,
+    985,
+    1601
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual review passed: subject, G style, complete silhouette, no red accents, no ground or neighbours.",
+  "exportOperation": "format=rgba,pad=1128:1690:52:77:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/maamerkki-eiffel-v2.txt",
+  "sha256": "1106f520e3e6065ff30a519210765a5766abee6848a2be5198a46e27267fcb22",
+  "bytes": 2066560,
+  "suggestedBottomCentreAnchorPx": [
+    565.5,
+    1601
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}

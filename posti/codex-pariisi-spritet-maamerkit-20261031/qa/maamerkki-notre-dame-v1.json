@@ -1,0 +1,38 @@
+{
+  "id": "notre-dame",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/maamerkki-notre-dame-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-notre-dame.png",
+  "rawDimensions": [
+    1254,
+    1254
+  ],
+  "dimensions": [
+    1380,
+    1380
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 969532,
+  "alphaVisibleBBox16": [
+    115,
+    73,
+    1288,
+    1314
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual review passed: subject, G style, complete silhouette, no red accents, no ground or neighbours.",
+  "exportOperation": "format=rgba,pad=1380:1380:63:63:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/maamerkki-notre-dame-v1.txt",
+  "sha256": "bea21a716ce3dbaeaee4563f8c77d085bacb7665386e1e8ddd359f9c0421cbc8",
+  "bytes": 2373254,
+  "suggestedBottomCentreAnchorPx": [
+    701.5,
+    1314
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}

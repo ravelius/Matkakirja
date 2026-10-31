@@ -1,0 +1,38 @@
+{
+  "id": "louvre",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/maamerkki-louvre-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-louvre.png",
+  "rawDimensions": [
+    1536,
+    1024
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 860010,
+  "alphaVisibleBBox16": [
+    109,
+    72,
+    1431,
+    981
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual review passed: subject, G style, complete silhouette, no red accents, no ground or neighbours.",
+  "exportOperation": "scale=1412:942:force_original_aspect_ratio=decrease:flags=lanczos,format=rgba,pad=1536:1024:(ow-iw)/2:(oh-ih)/2:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/maamerkki-louvre-v1.txt",
+  "sha256": "2006654655e2f93e3a29e3c063a4685313f52880ab24e9108aefb248bf25e219",
+  "bytes": 2474796,
+  "suggestedBottomCentreAnchorPx": [
+    770.0,
+    981
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}

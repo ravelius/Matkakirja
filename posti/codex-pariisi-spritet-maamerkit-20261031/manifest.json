@@ -1,0 +1,276 @@
+{
+  "task": 1422,
+  "batch": "landmarks",
+  "assets": [
+    {
+      "id": "eiffel",
+      "file": "maamerkki-eiffel.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.858264,
+        2.294512
+      ],
+      "atlasPixel": [
+        2678,
+        2213
+      ],
+      "atlasTile": "r3-c2",
+      "targetBaseWidthPx": 226,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 2,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-eiffel.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-eiffel-v2.json",
+      "dimensions": [
+        1128,
+        1690
+      ],
+      "sha256": "1106f520e3e6065ff30a519210765a5766abee6848a2be5198a46e27267fcb22",
+      "bytes": 2066560,
+      "suggestedBottomCentreAnchorPx": [
+        565.5,
+        1601
+      ]
+    },
+    {
+      "id": "notre-dame",
+      "file": "maamerkki-notre-dame.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.852878,
+        2.349929
+      ],
+      "atlasPixel": [
+        4707,
+        2466
+      ],
+      "atlasTile": "r3-c4",
+      "targetBaseWidthPx": 201,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-notre-dame.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-notre-dame-v1.json",
+      "dimensions": [
+        1380,
+        1380
+      ],
+      "sha256": "bea21a716ce3dbaeaee4563f8c77d085bacb7665386e1e8ddd359f9c0421cbc8",
+      "bytes": 2373254,
+      "suggestedBottomCentreAnchorPx": [
+        701.5,
+        1314
+      ]
+    },
+    {
+      "id": "louvre",
+      "file": "maamerkki-louvre.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.861182,
+        2.335216
+      ],
+      "atlasPixel": [
+        4168,
+        2076
+      ],
+      "atlasTile": "r3-c3",
+      "targetBaseWidthPx": 443,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-louvre.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-louvre-v1.json",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "2006654655e2f93e3a29e3c063a4685313f52880ab24e9108aefb248bf25e219",
+      "bytes": 2474796,
+      "suggestedBottomCentreAnchorPx": [
+        770.0,
+        981
+      ]
+    },
+    {
+      "id": "sacre-coeur",
+      "file": "maamerkki-sacre-coeur.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.886801,
+        2.343007
+      ],
+      "atlasPixel": [
+        4454,
+        872
+      ],
+      "atlasTile": "r1-c4",
+      "targetBaseWidthPx": 122,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-sacre-coeur.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-sacre-coeur-v1.json",
+      "dimensions": [
+        1128,
+        1690
+      ],
+      "sha256": "ae3735beaf1fba5771906ada322bfc60a85d6865ebe1c581926d0b998f8812ea",
+      "bytes": 2684770,
+      "suggestedBottomCentreAnchorPx": [
+        573.0,
+        1595
+      ]
+    },
+    {
+      "id": "riemukaari",
+      "file": "maamerkki-riemukaari.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.873746,
+        2.295029
+      ],
+      "atlasPixel": [
+        2697,
+        1485
+      ],
+      "atlasTile": "r2-c2",
+      "targetBaseWidthPx": 115,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 2,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-riemukaari.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-riemukaari-v2.json",
+      "dimensions": [
+        1128,
+        1690
+      ],
+      "sha256": "45d7e5e17f651b298329661cf94b080ce8d0806d8d8de649f124ba5a67eef551",
+      "bytes": 2850371,
+      "suggestedBottomCentreAnchorPx": [
+        573.0,
+        1579
+      ]
+    },
+    {
+      "id": "sainte-chapelle",
+      "file": "maamerkki-sainte-chapelle.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.855388,
+        2.345003
+      ],
+      "atlasPixel": [
+        4527,
+        2348
+      ],
+      "atlasTile": "r3-c4",
+      "targetBaseWidthPx": 80,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-sainte-chapelle.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-sainte-chapelle-v1.json",
+      "dimensions": [
+        1128,
+        1690
+      ],
+      "sha256": "ff100f932b4e08f235211b47c4ee7b8dc24ce17ae5cd68b9bd664f53e07aa51d",
+      "bytes": 2158760,
+      "suggestedBottomCentreAnchorPx": [
+        593.5,
+        1585
+      ]
+    },
+    {
+      "id": "garnier",
+      "file": "maamerkki-garnier.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.871825,
+        2.33183
+      ],
+      "atlasPixel": [
+        4044,
+        1575
+      ],
+      "atlasTile": "r2-c3",
+      "targetBaseWidthPx": 118,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-garnier.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-garnier-v1.json",
+      "dimensions": [
+        1690,
+        1128
+      ],
+      "sha256": "6f128be2ddbcc5303fdaae5f21f4a767fb7838f896c2d14626ce549b7bebb564",
+      "bytes": 2459177,
+      "suggestedBottomCentreAnchorPx": [
+        878.5,
+        1065
+      ]
+    },
+    {
+      "id": "invalides",
+      "file": "maamerkki-invalides.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.855061,
+        2.31254
+      ],
+      "atlasPixel": [
+        3338,
+        2363
+      ],
+      "atlasTile": "r3-c3",
+      "targetBaseWidthPx": 98,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 2,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-invalides.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-invalides-v2.json",
+      "dimensions": [
+        1128,
+        1690
+      ],
+      "sha256": "fd9580226607f8129170bbc44aeade7839ab57e9c2da3e859970c8e5ffb1ca2c",
+      "bytes": 2268953,
+      "suggestedBottomCentreAnchorPx": [
+        565.5,
+        1591
+      ]
+    },
+    {
+      "id": "pantheon",
+      "file": "maamerkki-pantheon.png",
+      "kind": "landmark",
+      "anchorLatLon": [
+        48.846223,
+        2.34601
+      ],
+      "atlasPixel": [
+        4563,
+        2779
+      ],
+      "atlasTile": "r3-c4",
+      "targetBaseWidthPx": 142,
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-pantheon.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/maamerkki-pantheon-v1.json",
+      "dimensions": [
+        1128,
+        1690
+      ],
+      "sha256": "bf06840691cf7bbb33bd0fd747b27188b1bd0068985f8c5a240ea985122ec5b0",
+      "bytes": 2362135,
+      "suggestedBottomCentreAnchorPx": [
+        591.5,
+        1579
+      ]
+    }
+  ],
+  "referenceSha256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+  "sourceCommit": "88455ded83a734fe4cfeb19af8013a1c6a9295e3",
+  "artworkQa": "pass",
+  "receiverAccepted": false,
+  "assembledPilotVerified": false,
+  "tiles35Verified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "anchorNote": "Map anchors are exact values copied from order. PNG silhouette bottom centre is a placement suggestion, not measured ground footprint or proof of composition."
+}

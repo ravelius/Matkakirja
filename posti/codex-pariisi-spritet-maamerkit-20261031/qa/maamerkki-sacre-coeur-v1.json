@@ -1,0 +1,38 @@
+{
+  "id": "sacre-coeur",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/maamerkki-sacre-coeur-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/maamerkit/maamerkki-sacre-coeur.png",
+  "rawDimensions": [
+    1024,
+    1536
+  ],
+  "dimensions": [
+    1128,
+    1690
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 1042759,
+  "alphaVisibleBBox16": [
+    122,
+    93,
+    1024,
+    1595
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual review passed: subject, G style, complete silhouette, no red accents, no ground or neighbours.",
+  "exportOperation": "format=rgba,pad=1128:1690:52:77:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/maamerkki-sacre-coeur-v1.txt",
+  "sha256": "ae3735beaf1fba5771906ada322bfc60a85d6865ebe1c581926d0b998f8812ea",
+  "bytes": 2684770,
+  "suggestedBottomCentreAnchorPx": [
+    573.0,
+    1595
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}
