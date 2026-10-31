@@ -1,0 +1,42 @@
+{
+  "ownerInstruction": {
+    "source": "direct-owner",
+    "observedAt": "2026-10-31T17:17:45.771671+00:00",
+    "quote": "Nyt hyvä mutta poista punaista",
+    "scope": "Keep F design and large landmark proportions; remove red accents only",
+    "FDesignFeedback": "positive subject to red reduction",
+    "referenceVariant": "F",
+    "ownerFinalAccepted": false,
+    "tilesStarted": false
+  },
+  "reference": {
+    "variant": "F",
+    "selectedCandidate": 2,
+    "personallyViewed": true,
+    "approvedForComparisonDelivery": true,
+    "reviewedAt": "2026-10-31T16:57:51.815245+00:00",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-54fe69a6-45c5-43ed-9f81-3ba538d927a7.png",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-F-suuret-nahtavyydet.png",
+    "sha256": "1304cc496b2c621507b49f25f95fbb75d72b56715dc4ca6d1aed67496e25f466",
+    "bytes": 3919352,
+    "dimensions": [
+      1571,
+      1001
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "generationCallsForF": 2,
+    "notes": [
+      "Notre-Dame and Louvre retain the huge top-heavy silhouette scale from F1/D; E reduction corrected. Sainte-Chapelle remains very tall.",
+      "Ordinary dense city blocks remain subordinate and do not receive the top-heavy monument treatment; varied ordinary building heights remain.",
+      "Palette softened from F1 towards C: softer stone, subdued roofs/water and lighter green; visually checked, not an exact colour-transfer claim.",
+      "Whole new generation, no partial edit, raster resizing or colour filtering.",
+      "Style concept only: exact OSM footprint/location geometry not certified."
+    ],
+    "ownerAccepted": false,
+    "gameIntegrated": false,
+    "published": false
+  },
+  "attribution": "© OpenStreetMap contributors · https://www.openstreetmap.org/copyright · ODbL 1.0",
+  "googleImageryUsed": false
+}

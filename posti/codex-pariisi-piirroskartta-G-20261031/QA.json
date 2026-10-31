@@ -1,0 +1,27 @@
+{
+  "variant": "G",
+  "personallyViewed": true,
+  "approvedForComparisonDelivery": true,
+  "reviewedAt": "2026-10-31T17:19:32.040967+00:00",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f666b627-27ab-4695-933b-b0937926c3c4.png",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-G-ilman-punaisia-korostuksia.png",
+  "sha256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+  "bytes": 3728207,
+  "dimensions": [
+    1571,
+    1001
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "generationCalls": 1,
+  "notes": [
+    "Red awnings, clothing, traffic, boats, chimneys and aircraft accents replaced by muted blue-grey, olive, cream/stone tones; pink tree blossoms replaced by pale cream.",
+    "Large top-heavy Notre-Dame and Louvre landmark silhouettes retained; ordinary city remains smaller; lively details remain.",
+    "The original footer attribution did not render visibly in this candidate. OSM attribution retained in accompanying manifest, README and delivery report; add visible attribution in the later approved map presentation.",
+    "Whole new image generation; no partial edit, filtering, resizing or cropping.",
+    "Design review candidate only; exact OSM footprint geometry not certified."
+  ],
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

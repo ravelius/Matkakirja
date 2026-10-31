@@ -1,0 +1,36 @@
+{
+  "title": "Pariisi G: punaisten korostusten poisto",
+  "createdAt": "2026-10-31T17:19:32.040967+00:00",
+  "assets": [
+    {
+      "variant": "G",
+      "path": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/pariisi-piirroskartta-G-ilman-punaisia-korostuksia.png",
+      "sha256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+      "bytes": 3728207,
+      "dimensions": [
+        1571,
+        1001
+      ]
+    }
+  ],
+  "generationCalls": 1,
+  "comparisonSeriesGenerationCalls": 8,
+  "sourceVariant": "F",
+  "previousDeliveryCommit": "7250ea77e33a239f34a861940b6cc2cb22c2d849",
+  "ownerInstruction": {
+    "source": "direct-owner",
+    "observedAt": "2026-10-31T17:17:45.771671+00:00",
+    "quote": "Nyt hyvä mutta poista punaista",
+    "scope": "Keep F design and large landmark proportions; remove red accents only",
+    "FDesignFeedback": "positive subject to red reduction",
+    "referenceVariant": "F",
+    "ownerFinalAccepted": false,
+    "tilesStarted": false
+  },
+  "ownerAccepted": false,
+  "tilesStarted": false,
+  "tilePhasePendingOwnerChoice": true,
+  "gameIntegrated": false,
+  "published": false,
+  "attribution": "© OpenStreetMap contributors · https://www.openstreetmap.org/copyright · ODbL 1.0"
+}
