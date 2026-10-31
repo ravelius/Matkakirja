@@ -1,0 +1,54 @@
+{
+  "personallyViewed": true,
+  "approvedForIllustrationDelivery": true,
+  "reviewedAt": "2026-10-31T17:38:02.294095+00:00",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f489e40a-a384-4426-975e-15450161ee08.png",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koko-kaupunki-20261031/final/pariisi-koko-kaupunki-G-tyyli.png",
+  "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+  "bytes": 4365837,
+  "dimensions": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "generationCalls": 1,
+  "scope": "whole-city illustration, not street-accurate game map",
+  "styleReference": "owner-approved G",
+  "checks": {
+    "mainLandmarksProminent": true,
+    "ordinaryCitySubordinate": true,
+    "noRedAccents": true,
+    "bothWoodedParksVisible": true,
+    "northSouthEastWestCityFabricVisible": true,
+    "OSMAttributionVisible": true
+  },
+  "visibleLandmarks": [
+    "Eiffel Tower",
+    "Arc de Triomphe",
+    "Sacre-Coeur",
+    "Louvre/pyramid",
+    "Notre-Dame",
+    "Sainte-Chapelle",
+    "Palais Garnier",
+    "Invalides",
+    "Pantheon",
+    "Tour Montparnasse",
+    "Grand Palais",
+    "La Villette"
+  ],
+  "limitations": [
+    "Generated city is stylized and geographically approximate; OSM-locked streets/building footprints not verified.",
+    "Not every individual building or street is represented exactly.",
+    "Native resolution recorded; no artificial enlargement."
+  ],
+  "exactGeometryCertified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "tileQA": {
+    "allPixelsIdenticalToMaster": true,
+    "tileCount": 12,
+    "coreCoverageComplete": true,
+    "originalUnchanged": true
+  },
+  "deliveryRole": "full-city illustration and seamless preview cuts; not navigation/runtime-georeferenced production"
+}

@@ -1,0 +1,304 @@
+{
+  "rows": 3,
+  "columns": 4,
+  "masterDimensions": [
+    1672,
+    941
+  ],
+  "masterSHA256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+  "overlapEachEdgePx": 32,
+  "tiles": [
+    {
+      "row": 1,
+      "column": 1,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r1-c1.png",
+      "coreBox": [
+        0,
+        0,
+        418,
+        314
+      ],
+      "cropBox": [
+        0,
+        0,
+        450,
+        346
+      ],
+      "width": 450,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "88a21d4f5359ca8de84f1fb6267da09ade26ccccd4a563e9eab41ecdf38f9f4c",
+      "bytes": 346474,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r1-c2.png",
+      "coreBox": [
+        418,
+        0,
+        836,
+        314
+      ],
+      "cropBox": [
+        386,
+        0,
+        868,
+        346
+      ],
+      "width": 482,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "edaa397d356adfdc0b18c42041f1929562822c2dddeca07c51872574690894ec",
+      "bytes": 408478,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r1-c3.png",
+      "coreBox": [
+        836,
+        0,
+        1254,
+        314
+      ],
+      "cropBox": [
+        804,
+        0,
+        1286,
+        346
+      ],
+      "width": 482,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "329ce12ea549c31982c48e4702aad8b28a83f4712dcc56683b23d0bf1ad95c98",
+      "bytes": 408053,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 1,
+      "column": 4,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r1-c4.png",
+      "coreBox": [
+        1254,
+        0,
+        1672,
+        314
+      ],
+      "cropBox": [
+        1222,
+        0,
+        1672,
+        346
+      ],
+      "width": 450,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "2201f2d54e201130912595e9d90c2c76b0605d06d16a278fed96b2d7dbbff067",
+      "bytes": 344299,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r2-c1.png",
+      "coreBox": [
+        0,
+        314,
+        418,
+        627
+      ],
+      "cropBox": [
+        0,
+        282,
+        450,
+        659
+      ],
+      "width": 450,
+      "height": 377,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "d4d6045145b9fff9b4cce723f7022766b8621e83351871bb07e25e6ad02b0808",
+      "bytes": 427725,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r2-c2.png",
+      "coreBox": [
+        418,
+        314,
+        836,
+        627
+      ],
+      "cropBox": [
+        386,
+        282,
+        868,
+        659
+      ],
+      "width": 482,
+      "height": 377,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "01fdfc541e39f131d552b63feb351e3c4646424096c35986c2d30a3735b47431",
+      "bytes": 462923,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r2-c3.png",
+      "coreBox": [
+        836,
+        314,
+        1254,
+        627
+      ],
+      "cropBox": [
+        804,
+        282,
+        1286,
+        659
+      ],
+      "width": 482,
+      "height": 377,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "4bb185a9e58359914acdc030e9e7e3707f18ac9889ff3958cf176d8d0beb57f6",
+      "bytes": 464536,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 2,
+      "column": 4,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r2-c4.png",
+      "coreBox": [
+        1254,
+        314,
+        1672,
+        627
+      ],
+      "cropBox": [
+        1222,
+        282,
+        1672,
+        659
+      ],
+      "width": 450,
+      "height": 377,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "c88646508247324b7b2646bc8009613f81b0f09afcdcafdf6dfa4fa618822d81",
+      "bytes": 429073,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r3-c1.png",
+      "coreBox": [
+        0,
+        627,
+        418,
+        941
+      ],
+      "cropBox": [
+        0,
+        595,
+        450,
+        941
+      ],
+      "width": 450,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "008684a437d91c2bb3c8b79ab6e0be8984fa74df1ceb885265ffd7db6c15b3f7",
+      "bytes": 375751,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r3-c2.png",
+      "coreBox": [
+        418,
+        627,
+        836,
+        941
+      ],
+      "cropBox": [
+        386,
+        595,
+        868,
+        941
+      ],
+      "width": 482,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "73cd98eaa26a9558993c8992ab1e1cc3748a30a5fa1d3e9a7205956b2cb120b9",
+      "bytes": 409105,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r3-c3.png",
+      "coreBox": [
+        836,
+        627,
+        1254,
+        941
+      ],
+      "cropBox": [
+        804,
+        595,
+        1286,
+        941
+      ],
+      "width": 482,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "2ecdcdaa2384e8703d2fe5fdb2315c1e2f8992c77d22589a3e081bfe648586b8",
+      "bytes": 415226,
+      "pixelsIdenticalToMaster": true
+    },
+    {
+      "row": 3,
+      "column": 4,
+      "file": "output/pariisi-koko-kaupunki-20261031/final/palat/pariisi-r3-c4.png",
+      "coreBox": [
+        1254,
+        627,
+        1672,
+        941
+      ],
+      "cropBox": [
+        1222,
+        595,
+        1672,
+        941
+      ],
+      "width": 450,
+      "height": 346,
+      "actualGeographicBounds": null,
+      "geographicBoundsReason": "Whole illustration is not a certified georeferenced map",
+      "sha256": "230cee86f3bf621c4b015a4449a496527159b4ea717f9618586bb0f40a430f2a",
+      "bytes": 370776,
+      "pixelsIdenticalToMaster": true
+    }
+  ],
+  "allTilePixelsIdenticalToMaster": true,
+  "purpose": "lossless illustration preview tiles; no new detail beyond the master",
+  "georeferencedProductionTiles": false,
+  "method": "FFmpeg lossless pixel-window export; original master unchanged"
+}

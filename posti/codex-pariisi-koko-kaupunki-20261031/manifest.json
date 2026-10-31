@@ -1,0 +1,119 @@
+{
+  "title": "Koko Pariisin kuvitus hyväksytyllä G-tyylillä",
+  "createdAt": "2026-10-31T17:40:29.116521+00:00",
+  "ownerApproval": {
+    "source": "direct-owner",
+    "quote": "Hyvä. Tee nyt koko kaupunki noin",
+    "observedAt": "2026-10-31T17:35:21.544519+00:00",
+    "approvedStyle": "G",
+    "approvedImageSHA256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+    "scope": "Full Paris including both Bois; same G style; large main landmarks only; no red accents",
+    "tilePhaseAuthorized": true
+  },
+  "assets": [
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r1-c1.png",
+      "sha256": "88a21d4f5359ca8de84f1fb6267da09ade26ccccd4a563e9eab41ecdf38f9f4c",
+      "bytes": 346474,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r1-c2.png",
+      "sha256": "edaa397d356adfdc0b18c42041f1929562822c2dddeca07c51872574690894ec",
+      "bytes": 408478,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r1-c3.png",
+      "sha256": "329ce12ea549c31982c48e4702aad8b28a83f4712dcc56683b23d0bf1ad95c98",
+      "bytes": 408053,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r1-c4.png",
+      "sha256": "2201f2d54e201130912595e9d90c2c76b0605d06d16a278fed96b2d7dbbff067",
+      "bytes": 344299,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r2-c1.png",
+      "sha256": "d4d6045145b9fff9b4cce723f7022766b8621e83351871bb07e25e6ad02b0808",
+      "bytes": 427725,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r2-c2.png",
+      "sha256": "01fdfc541e39f131d552b63feb351e3c4646424096c35986c2d30a3735b47431",
+      "bytes": 462923,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r2-c3.png",
+      "sha256": "4bb185a9e58359914acdc030e9e7e3707f18ac9889ff3958cf176d8d0beb57f6",
+      "bytes": 464536,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r2-c4.png",
+      "sha256": "c88646508247324b7b2646bc8009613f81b0f09afcdcafdf6dfa4fa618822d81",
+      "bytes": 429073,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r3-c1.png",
+      "sha256": "008684a437d91c2bb3c8b79ab6e0be8984fa74df1ceb885265ffd7db6c15b3f7",
+      "bytes": 375751,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r3-c2.png",
+      "sha256": "73cd98eaa26a9558993c8992ab1e1cc3748a30a5fa1d3e9a7205956b2cb120b9",
+      "bytes": 409105,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r3-c3.png",
+      "sha256": "2ecdcdaa2384e8703d2fe5fdb2315c1e2f8992c77d22589a3e081bfe648586b8",
+      "bytes": 415226,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/palat/pariisi-r3-c4.png",
+      "sha256": "230cee86f3bf621c4b015a4449a496527159b4ea717f9618586bb0f40a430f2a",
+      "bytes": 370776,
+      "role": "pixel-exact-preview-tile"
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-koko-kaupunki/pariisi-koko-kaupunki-G-tyyli.png",
+      "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+      "bytes": 4365837,
+      "role": "whole-city-master"
+    }
+  ],
+  "nativeDimensions": [
+    1672,
+    941
+  ],
+  "fullCityGenerationCalls": 1,
+  "tiles": {
+    "rows": 3,
+    "columns": 4,
+    "count": 12,
+    "overlapPx": 32,
+    "allPixelsIdenticalToMaster": true,
+    "extraResolutionAdded": false
+  },
+  "sourceGeographicScope": [
+    2.219,
+    48.809,
+    2.476,
+    48.909
+  ],
+  "intendedCity": "Paris including Bois de Boulogne and Bois de Vincennes",
+  "illustrationComplete": true,
+  "exactGeometryCertified": false,
+  "georeferencedProductionTiles": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "attribution": "© OpenStreetMap contributors · https://www.openstreetmap.org/copyright · ODbL 1.0"
+}

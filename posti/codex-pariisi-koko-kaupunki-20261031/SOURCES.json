@@ -1,0 +1,159 @@
+{
+  "ownerApproval": {
+    "source": "direct-owner",
+    "quote": "Hyvä. Tee nyt koko kaupunki noin",
+    "observedAt": "2026-10-31T17:35:21.544519+00:00",
+    "approvedStyle": "G",
+    "approvedImageSHA256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+    "scope": "Full Paris including both Bois; same G style; large main landmarks only; no red accents",
+    "tilePhaseAuthorized": true
+  },
+  "styleReference": {
+    "file": "../pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-G-ilman-punaisia-korostuksia.png",
+    "sha256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62"
+  },
+  "OSMRelation": 7444,
+  "OSMSource": "https://api.openstreetmap.org/api/0.6/relation/7444/full",
+  "OSMBoundarySHA256": "47a0ea2c17e001bb06545a625f033dc5c6a64395761cfd72e86326c5d16ca387",
+  "landmarkAnchors": [
+    {
+      "name": "Arc de Triomphe",
+      "lon": 2.29502778,
+      "lat": 48.87377778,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Centre Pompidou",
+      "lon": 2.352245,
+      "lat": 48.86064194,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Eiffel Tower",
+      "lon": 2.2945,
+      "lat": 48.85822222,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Les Invalides",
+      "lon": 2.3125,
+      "lat": 48.855,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Louvre",
+      "lon": 2.3358,
+      "lat": 48.8611,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Notre-Dame de Paris",
+      "lon": 2.35,
+      "lat": 48.85305556,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Palais Garnier",
+      "lon": 2.33166667,
+      "lat": 48.87194444,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Panthéon",
+      "lon": 2.34583333,
+      "lat": 48.84611111,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Sainte-Chapelle",
+      "lon": 2.345,
+      "lat": 48.85527778,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Tour Montparnasse",
+      "lon": 2.322,
+      "lat": 48.8421,
+      "source": "Wikipedia GeoData"
+    },
+    {
+      "name": "Bois de Boulogne",
+      "lon": 2.2508333333333,
+      "lat": 48.864722222222,
+      "source": "Wikidata Q209626"
+    },
+    {
+      "name": "Bois de Vincennes",
+      "lon": 2.4330555555555557,
+      "lat": 48.82805555555556,
+      "source": "Wikidata Q271639"
+    },
+    {
+      "name": "Grand Palais",
+      "lon": 2.3125,
+      "lat": 48.866111,
+      "source": "Wikidata Q457318"
+    },
+    {
+      "name": "Jardin du Luxembourg",
+      "lon": 2.337222222222222,
+      "lat": 48.846944444444446,
+      "source": "Wikidata Q309458"
+    },
+    {
+      "name": "Parc de la Villette",
+      "lon": 2.39056,
+      "lat": 48.89306,
+      "source": "Wikidata Q246448"
+    },
+    {
+      "name": "Place de la Bastille",
+      "lon": 2.3691111111111,
+      "lat": 48.853138888889,
+      "source": "Wikidata Q778784"
+    },
+    {
+      "name": "Père Lachaise Cemetery",
+      "lon": 2.3941666666666666,
+      "lat": 48.861111111111114,
+      "source": "Wikidata Q311"
+    },
+    {
+      "name": "Sacré-Cœur, Paris",
+      "lon": 2.34295,
+      "lat": 48.88665,
+      "source": "Wikidata Q28785"
+    }
+  ],
+  "layout": {
+    "bbox": [
+      2.219,
+      48.809,
+      2.476,
+      48.909
+    ],
+    "actualCityBoundaryOSMRelation": 7444,
+    "dimensions": [
+      2400,
+      1400
+    ],
+    "projection": "x=E-.23N;y=-.61N-.06E",
+    "scale": 0.10382181879032641,
+    "worldLo": [
+      -10691.394284294858,
+      -3959.9328570575008
+    ],
+    "worldHi": [
+      10691.394284295007,
+      3959.9328570579855
+    ],
+    "mapCenterPixel": [
+      1200.0,
+      730.0
+    ],
+    "note": "Boundary and landmark anchors verified; Seine reference partial; no full-city building footprints available in this reference"
+  },
+  "attribution": "© OpenStreetMap contributors · https://www.openstreetmap.org/copyright · ODbL 1.0",
+  "googleImageryUsed": false,
+  "dataLimit": "Full-city streets/building footprints were not supplied as a locked production base; broad Overpass fetch failed. Shape and landmark anchors guide the illustration; they do not certify raster ground geometry."
+}
