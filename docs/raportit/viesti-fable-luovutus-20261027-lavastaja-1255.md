@@ -2259,3 +2259,17 @@ JONO (KK 16.2x + PT 16.2x): 1) osasarja-v6 loppuun → paketti PK + PT (+KK). 2)
   Seuraava kokeilu: selvitä, minkä kolmion reunalla (−254,82; 0; 383,0) on (materiaali, y ≈ 0; mahdollisesti V4_lattia, joka ei ole MATERIAALI-listassa →
   lisää MATERIAALI=V4_kujakivi_lattia,V4_kujakivi_reuna,V4_lattia ALUE-rajauksella) tai jaa se yksittäin. Tavoite tpiste.py = 0 säteellä 8 m.
 - Levyvahdin raja takaisin 82, kun jono valmis (PT 01.2x).
+
+## LISÄYS 164 (31.10. 16.4x): AJOKETJU KÄYNNISSÄ (osasarja-v6 → v84 → leivonta v2) — ALOITA TÄSTÄ
+Kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta (U). Kolme irrallista ajoa peräkkäin, kukin odottaa edellisen lokirivin:
+1) ketju-osasarja-v6.zsh (pid 35472, levyvahti 35473 / 78 Gi) → ajo-osasarja-v6.log "OSASARJA-V6 VALMIS" (16.31: 51/86 atlasta, ~5 min/ruutu).
+2) kuja04.zsh (pid 73580, loki ajo-kuja03.log) odottaa UUTTA VALMIS-riviä (KK:n ehto) → tausta-v84 + tarkistus-tausta-v84.txt → "KUJA03-V84 VALMIS".
+3) polvi.zsh (pid 75240, loki ajo-polvi.log) odottaa v84:n → tausta-v85 / rakennukset-v87 / muurikate-v31 = polvi → "POLVI VALMIS".
+- T-LIITOS RATKAISTU: jäljelle jäänyt T oli ison kolmion reunalla (keskipiste ALUEen ulkopuolella) ja työkalu käytti ehdokkaina reunakiven pystypintojen
+  kärkiä (tarkistin ei) → lattia_tliitokset.py: ALUE_LAATIKKO=1, VAAKA=1, HITSI=0 ohittaa hitsauksen (oli neliöllinen). Lähde tausta-v81-lahde/
+  kk-tausta-kuja-0-3-lod0.glb korvattu (tpiste.py ehtoalueella 0; vanha .ennen-tliitos-vaaka).
+- AUKIOT 03/06: puhki palaa lattia; aukion aurinkoinen V4_lattia valokartassa 0,95–1,0 (kujat 0,5–0,7). Korjaus tyokalut/valo_polvi.py 0,65 0,4
+  (0,95 → 0,77, kujat 0,70 → 0,67). Osasarja-v6 jo alle polven → ei muutosta.
+- PAKETIT (U/paketti_yleinen.zsh <nimi> <LAHTEET> <kansiot…>): osasarja-v6 (LAHTEET-osasarja-v6.md, kansio kielletty-rakennukset/osasarja-v6/
+  kielletty-osasarja-v6) → PK + PT (+KK); tausta-v84 (LAHTEET-tausta-v84.md, jos tarkistus 0) → VS + PK + PT; leivonta-v2 (LAHTEET-leivonta-v2.md,
+  kielletty-tausta-v85 kielletty-rakennukset-v87 kielletty-muurikate-v31) → VS uusi pari 03/06 + PT. Lopuksi levyvahdin raja 82.
