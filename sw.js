@@ -578,6 +578,7 @@ const SHELL = [
   './js/packs/miniatyyrit.js',
   './js/packs/ihmetahdet.js',
   './js/packs/kohdekartan-piirrokset.js',
+  './js/packs/kohdekartan-piirroskoot.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
   './assets/nostotyypit/merkki-vuori.png',
   './assets/nostotyypit/merkki-saari.png',

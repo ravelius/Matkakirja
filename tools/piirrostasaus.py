@@ -155,8 +155,11 @@ def _kangas(im):
     """Kankaan mitat ja alfakanavan tiiviste (PT 31.10.: tasaus muuttaa vain sävyjä, ei kokoa, rajausta eikä alfaa)."""
     import hashlib
     im = im.convert('RGBA')
-    return {'leveys': im.width, 'korkeus': im.height,
-            'alfa': hashlib.sha256(im.getchannel('A').tobytes()).hexdigest()[:16]}
+    a = im.getchannel('A')
+    pieni = a.resize((256, 256), Image.BILINEAR)
+    taytto = sum(1 for v in pieni.get_flattened_data() if v > 200) / (256 * 256)
+    return {'leveys': im.width, 'korkeus': im.height, 'taytto': round(taytto, 3),
+            'alfa': hashlib.sha256(a.tobytes()).hexdigest()[:16]}
 
 
 def main():

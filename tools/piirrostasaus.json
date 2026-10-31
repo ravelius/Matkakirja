@@ -25,5 +25,11 @@
       "syy": "Ohut valkoinen maailmanpyörä: musteen mediaani on lähes valkoinen rakenne; gamma 3 tummentaa jo pinnat (keski 0,664), enempi likaisi piirroksen. Karttasepän otos 31.10.2026, PT:lle kerrottu."
     }
   ],
-  "webp_laatu": 82
+  "webp_laatu": 82,
+  "koko": {
+    "perus": 0.9,
+    "taytto_tavoite": 0.2,
+    "pienin": 0.55,
+    "kuvaus": "Piirroksen koko kohdekartalla näkyvän osan mukaan (omistaja 31.10.2026 klo 12.15 \"Kohteet peittävät liikaa karttaa. Tee niistä pienempiä. Osa varsinkin aivan liian isoja\"): kerroin = perus × min(1, √(taytto_tavoite / täyttö)), vähintään pienin × perus; täyttö = läpinäkymättömän (alfa > 200) osuus kuvasta. Täyteläiset ja leveät pienenevät eniten, ohuet tornit pysyvät perus-koossa. Laatikko 36 px × kerroin (suurennus ennallaan)."
+  }
 }

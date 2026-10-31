@@ -27,6 +27,7 @@ import {
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { IHMETAHDET } from './packs/ihmetahdet.js';
 import { KOHDEKARTAN_PIIRROKSET } from './packs/kohdekartan-piirrokset.js';
+import { KOHDEKARTAN_PIIRROSKOOT } from './packs/kohdekartan-piirroskoot.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -731,6 +732,9 @@ export function piirraKaupunkiKartta(ui, kohde, {
       // Kyltin paikka mitataan piirroksesta (ks. asetaKylttiRaja):
       // kuva on jo kartalla eli selaimen välimuistissa, joten mittaus
       // ei aiheuta uutta latausta.
+      // Koko näkyvän osan mukaan (omistaja 31.10.2026 klo 12.15, js/packs/kohdekartan-piirroskoot.js); suurennus ennallaan.
+      const koko = KOHDEKARTAN_PIIRROSKOOT[kaupunki]?.[raaka.nimi];
+      if (koko) piste.style.setProperty('--piirros-koko', String(koko));
       asetaKylttiRaja(piste, miniatyyri, IHMETAHDET[miniatyyriArvo] ?? null);   // tasaus ei muuta alfaa → sama paikka
       piirrosPisteet.push({ piste, x: p.x, y: p.y, kiintea: Boolean(raaka.kiintea) });
     }

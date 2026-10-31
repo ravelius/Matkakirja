@@ -30,14 +30,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.117,
      "alfa": "c5a3f061f34e292a"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.117,
      "alfa": "c5a3f061f34e292a"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Riemukaari": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-riemukaari.webp",
@@ -69,14 +72,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.281,
      "alfa": "a94a8a1d6af74045"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.281,
      "alfa": "a94a8a1d6af74045"
     }
-   }
+   },
+   "koko": 0.759
   },
   "Concorden aukio": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp",
@@ -108,14 +114,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.158,
      "alfa": "36fa0ffc565bf492"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.158,
      "alfa": "36fa0ffc565bf492"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Louvre": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-louvre.webp",
@@ -147,14 +156,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.137,
      "alfa": "2e250604d8e60823"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.137,
      "alfa": "2e250604d8e60823"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Luxembourgin puisto": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto.webp",
@@ -186,14 +198,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.186,
      "alfa": "d8a18ff8e24035d8"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.186,
      "alfa": "d8a18ff8e24035d8"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Sacré-Cœur": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-sacre-coeur.webp",
@@ -225,14 +240,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.185,
      "alfa": "b476933499a0f2b8"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.185,
      "alfa": "b476933499a0f2b8"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Panthéon": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-pantheon.webp",
@@ -264,14 +282,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.192,
      "alfa": "1da0ca8a12d7c42f"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.192,
      "alfa": "1da0ca8a12d7c42f"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Notre-Dame": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
@@ -303,14 +324,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.189,
      "alfa": "94d147b545551206"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.189,
      "alfa": "94d147b545551206"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Orsayn taidemuseo": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp",
@@ -342,14 +366,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.358,
      "alfa": "d2b00033456f395c"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.358,
      "alfa": "d2b00033456f395c"
     }
-   }
+   },
+   "koko": 0.673
   },
   "Palais Garnier": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-palais-garnier.webp",
@@ -381,14 +408,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.298,
      "alfa": "29e0315be32c932d"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.298,
      "alfa": "29e0315be32c932d"
     }
-   }
+   },
+   "koko": 0.737
   },
   "Place des Vosges": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp",
@@ -420,14 +450,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.28,
      "alfa": "4feed7b1d3b86904"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.28,
      "alfa": "4feed7b1d3b86904"
     }
-   }
+   },
+   "koko": 0.761
   },
   "Tuileries'n palatsi": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
@@ -459,14 +492,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.129,
      "alfa": "962713f5f46c342e"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.129,
      "alfa": "962713f5f46c342e"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Bastilji": {
    "lahde": "pariisi-bastilji-vari2",
@@ -498,14 +534,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.377,
      "alfa": "63301895b8a191eb"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.377,
      "alfa": "63301895b8a191eb"
     }
-   }
+   },
+   "koko": 0.656
   },
   "Metron sisäänkäynti": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp",
@@ -537,14 +576,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.332,
      "alfa": "b53c19306feec197"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.332,
      "alfa": "b53c19306feec197"
     }
-   }
+   },
+   "koko": 0.699
   }
  },
  "rooma": {
@@ -578,14 +620,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.228,
      "alfa": "0ff554103e883b3a"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.228,
      "alfa": "0ff554103e883b3a"
     }
-   }
+   },
+   "koko": 0.843
   },
   "Castel Sant’Angelo": {
    "lahde": "assets/kartat/miniatyyrit/rooma-castel-santangelo.webp",
@@ -617,14 +662,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.234,
      "alfa": "9e821d3fa0c938eb"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.234,
      "alfa": "9e821d3fa0c938eb"
     }
-   }
+   },
+   "koko": 0.832
   },
   "Espanjalaiset portaat": {
    "lahde": "assets/kartat/miniatyyrit/rooma-espanjalaiset-portaat.webp",
@@ -656,14 +704,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.196,
      "alfa": "dd70f389645d1881"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.196,
      "alfa": "dd70f389645d1881"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Trevin suihkulähde": {
    "lahde": "assets/kartat/miniatyyrit/rooma-trevin-suihkulahde.webp",
@@ -695,14 +746,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.544,
      "alfa": "b87fcda02efb67f3"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.544,
      "alfa": "b87fcda02efb67f3"
     }
-   }
+   },
+   "koko": 0.546
   },
   "Pantheon": {
    "lahde": "assets/kartat/miniatyyrit/rooma-pantheon.webp",
@@ -734,14 +788,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.194,
      "alfa": "734f6ac543b6f487"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.194,
      "alfa": "734f6ac543b6f487"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Forum Romanum": {
    "lahde": "rooma-forum-romanum-vari2",
@@ -773,14 +830,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.47,
      "alfa": "6186c684cb5cf1bc"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.47,
      "alfa": "6186c684cb5cf1bc"
     }
-   }
+   },
+   "koko": 0.587
   },
   "Colosseum": {
    "lahde": "assets/kartat/miniatyyrit/rooma-colosseum.webp",
@@ -812,14 +872,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.379,
      "alfa": "c6e00607c54d2c2a"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.379,
      "alfa": "c6e00607c54d2c2a"
     }
-   }
+   },
+   "koko": 0.654
   },
   "Torre Argentina": {
    "lahde": "rooma-torre-argentina",
@@ -851,14 +914,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.555,
      "alfa": "5bcd33ba84475313"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.555,
      "alfa": "5bcd33ba84475313"
     }
-   }
+   },
+   "koko": 0.54
   },
   "Vatikaanin palatsi": {
    "lahde": "rooma-vatikaanin-palatsi",
@@ -890,14 +956,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.63,
      "alfa": "c98e372c33e4bd72"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.63,
      "alfa": "c98e372c33e4bd72"
     }
-   }
+   },
+   "koko": 0.507
   },
   "Norsu ja obeliski": {
    "lahde": "assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp",
@@ -929,14 +998,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.223,
      "alfa": "e7e61f609b35d662"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.223,
      "alfa": "e7e61f609b35d662"
     }
-   }
+   },
+   "koko": 0.852
   }
  },
  "lontoo": {
@@ -970,14 +1042,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.278,
      "alfa": "ec07c1ebf9c1fcf8"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.278,
      "alfa": "ec07c1ebf9c1fcf8"
     }
-   }
+   },
+   "koko": 0.763
   },
   "Trafalgar Square": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-trafalgar-square.webp",
@@ -1009,14 +1084,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.151,
      "alfa": "c3e4c3801e70964d"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.151,
      "alfa": "c3e4c3801e70964d"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Big Ben": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-big-ben.webp",
@@ -1048,14 +1126,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.134,
      "alfa": "6b49c3bf63d85f9d"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.134,
      "alfa": "6b49c3bf63d85f9d"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Lontoon silmä": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-lontoon-silma.webp",
@@ -1087,14 +1168,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.198,
      "alfa": "17cfad14c4f2a04a"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.198,
      "alfa": "17cfad14c4f2a04a"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Pyhän Paavalin katedraali": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali.webp",
@@ -1126,14 +1210,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.178,
      "alfa": "015b2a21147801a5"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.178,
      "alfa": "015b2a21147801a5"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Tower Bridge": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-tower-bridge.webp",
@@ -1165,14 +1252,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.224,
      "alfa": "f0a12b3baa8f0b79"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.224,
      "alfa": "f0a12b3baa8f0b79"
     }
-   }
+   },
+   "koko": 0.85
   },
   "Thamesin vuorovesi": {
    "lahde": "lontoo-thamesin-vuorovesi",
@@ -1204,14 +1294,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.359,
      "alfa": "7dea08a3a454308d"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.359,
      "alfa": "7dea08a3a454308d"
     }
-   }
+   },
+   "koko": 0.672
   },
   "Vanha London Bridge": {
    "lahde": "lontoo-vanha-london-bridge-vari2",
@@ -1243,14 +1336,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.332,
      "alfa": "f3c25a2422c64924"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.332,
      "alfa": "f3c25a2422c64924"
     }
-   }
+   },
+   "koko": 0.699
   },
   "Exchange Alley": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-exchange-alley.webp",
@@ -1282,14 +1378,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.385,
      "alfa": "ba5a4e7429b3c63c"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.385,
      "alfa": "ba5a4e7429b3c63c"
     }
-   }
+   },
+   "koko": 0.649
   },
   "Dickensin pubi": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp",
@@ -1321,14 +1420,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.592,
      "alfa": "0d50c66bd3f5142c"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.592,
      "alfa": "0d50c66bd3f5142c"
     }
-   }
+   },
+   "koko": 0.523
   },
   "Abbey Roadin suojatie": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp",
@@ -1360,14 +1462,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.215,
      "alfa": "15aeadec4afc427f"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.215,
      "alfa": "15aeadec4afc427f"
     }
-   }
+   },
+   "koko": 0.868
   },
   "Leake Streetin tunneli": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp",
@@ -1399,14 +1504,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.397,
      "alfa": "c1ee3ce8efb12a87"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.397,
      "alfa": "c1ee3ce8efb12a87"
     }
-   }
+   },
+   "koko": 0.639
   },
   "Turbiinihalli": {
    "lahde": "assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp",
@@ -1438,14 +1546,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.352,
      "alfa": "cae25f3bef4312e4"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.352,
      "alfa": "cae25f3bef4312e4"
     }
-   }
+   },
+   "koko": 0.678
   }
  },
  "ateena": {
@@ -1479,14 +1590,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.296,
      "alfa": "25b444d235031c9f"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.296,
      "alfa": "25b444d235031c9f"
     }
-   }
+   },
+   "koko": 0.74
   },
   "Akropolis": {
    "lahde": "assets/kartat/miniatyyrit/ateena-akropolis.webp",
@@ -1518,14 +1632,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.309,
      "alfa": "55cb2f5c5f05f5ca"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.309,
      "alfa": "55cb2f5c5f05f5ca"
     }
-   }
+   },
+   "koko": 0.724
   },
   "Akropolis-museo": {
    "lahde": "assets/kartat/miniatyyrit/ateena-akropolis-museo.webp",
@@ -1557,14 +1674,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.459,
      "alfa": "2c9583462324c1af"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.459,
      "alfa": "2c9583462324c1af"
     }
-   }
+   },
+   "koko": 0.594
   },
   "Zeuksen temppeli": {
    "lahde": "assets/kartat/miniatyyrit/ateena-zeuksen-temppeli.webp",
@@ -1596,14 +1716,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.324,
      "alfa": "35003a8b69968285"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.324,
      "alfa": "35003a8b69968285"
     }
-   }
+   },
+   "koko": 0.707
   },
   "Sýntagman aukio": {
    "lahde": "assets/kartat/miniatyyrit/ateena-syntagman-aukio.webp",
@@ -1635,14 +1758,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.253,
      "alfa": "337329261929c7d9"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.253,
      "alfa": "337329261929c7d9"
     }
-   }
+   },
+   "koko": 0.8
   },
   "Iliou Melathron": {
    "lahde": "assets/kartat/miniatyyrit/ateena-iliou-melathron.webp",
@@ -1674,14 +1800,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.508,
      "alfa": "f84e81bee0f97e10"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.508,
      "alfa": "f84e81bee0f97e10"
     }
-   }
+   },
+   "koko": 0.565
   },
   "Lykavittós": {
    "lahde": "assets/kartat/miniatyyrit/ateena-lykavittos.webp",
@@ -1713,14 +1842,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.102,
      "alfa": "d55bd23acc76ec51"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.102,
      "alfa": "d55bd23acc76ec51"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Kallimarmaro": {
    "lahde": "assets/kartat/miniatyyrit/ateena-kallimarmaro.webp",
@@ -1752,14 +1884,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.271,
      "alfa": "368707a963cdaa14"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.271,
      "alfa": "368707a963cdaa14"
     }
-   }
+   },
+   "koko": 0.773
   },
   "Niken temppeli": {
    "lahde": "assets/kartat/miniatyyrit/ateena-niken-temppeli.webp",
@@ -1791,14 +1926,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.37,
      "alfa": "5816e404c396bb0b"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.37,
      "alfa": "5816e404c396bb0b"
     }
-   }
+   },
+   "koko": 0.662
   }
  },
  "helsinki": {
@@ -1832,14 +1970,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.356,
      "alfa": "e42b6a5ddd5d4220"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.356,
      "alfa": "e42b6a5ddd5d4220"
     }
-   }
+   },
+   "koko": 0.675
   },
   "Linnanmäki": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-linnanmaki.webp",
@@ -1871,14 +2012,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.294,
      "alfa": "5fba9d33a79d5402"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.294,
      "alfa": "5fba9d33a79d5402"
     }
-   }
+   },
+   "koko": 0.742
   },
   "Päärautatieasema": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-paarautatieasema.webp",
@@ -1910,14 +2054,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.329,
      "alfa": "2c6929ecb736a6d5"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.329,
      "alfa": "2c6929ecb736a6d5"
     }
-   }
+   },
+   "koko": 0.702
   },
   "Kaisaniemen puisto": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-kaisaniemen-puisto.webp",
@@ -1949,14 +2096,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.439,
      "alfa": "f99653f7ea49ddd5"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.439,
      "alfa": "f99653f7ea49ddd5"
     }
-   }
+   },
+   "koko": 0.607
   },
   "Kallion kirkko": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-kallion-kirkko.webp",
@@ -1988,14 +2138,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.32,
      "alfa": "361ae153692ef238"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.32,
      "alfa": "361ae153692ef238"
     }
-   }
+   },
+   "koko": 0.712
   },
   "Tuomiokirkko": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-tuomiokirkko.webp",
@@ -2027,14 +2180,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.302,
      "alfa": "98b29d9d81525d6f"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.302,
      "alfa": "98b29d9d81525d6f"
     }
-   }
+   },
+   "koko": 0.732
   },
   "Uspenskin katedraali": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-uspenskin-katedraali.webp",
@@ -2066,14 +2222,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.294,
      "alfa": "76c0a50f30cf2226"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.294,
      "alfa": "76c0a50f30cf2226"
     }
-   }
+   },
+   "koko": 0.742
   },
   "Johanneksenkirkko": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-johanneksenkirkko.webp",
@@ -2105,14 +2264,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.197,
      "alfa": "338c8bf00c901be2"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.197,
      "alfa": "338c8bf00c901be2"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Suomenlinna": {
    "lahde": "assets/kartat/miniatyyrit/helsinki-suomenlinna.webp",
@@ -2144,14 +2306,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.316,
      "alfa": "7e297ffbaa9ddff7"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.316,
      "alfa": "7e297ffbaa9ddff7"
     }
-   }
+   },
+   "koko": 0.716
   },
   "Finlandia": {
    "lahde": "helsinki-finlandia-vari2",
@@ -2183,14 +2348,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.229,
      "alfa": "7398c3af6d266bff"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.229,
      "alfa": "7398c3af6d266bff"
     }
-   }
+   },
+   "koko": 0.841
   }
  },
  "istanbul": {
@@ -2224,14 +2392,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.229,
      "alfa": "c7b20d531df79f5c"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.229,
      "alfa": "c7b20d531df79f5c"
     }
-   }
+   },
+   "koko": 0.841
   },
   "Sininen moskeija": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-sininen-moskeija.webp",
@@ -2263,14 +2434,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.102,
      "alfa": "f2e05569d77fcb06"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.102,
      "alfa": "f2e05569d77fcb06"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Hagia Sofia": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-hagia-sofia.webp",
@@ -2302,14 +2476,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.173,
      "alfa": "a46649735c0cb8d0"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.173,
      "alfa": "a46649735c0cb8d0"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Topkapın palatsi": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-topkapin-palatsi.webp",
@@ -2341,14 +2518,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.219,
      "alfa": "9a5ba1583c659561"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.219,
      "alfa": "9a5ba1583c659561"
     }
-   }
+   },
+   "koko": 0.86
   },
   "Galatan torni": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-galatan-torni.webp",
@@ -2380,14 +2560,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.147,
      "alfa": "57b13c34dceef97d"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.147,
      "alfa": "57b13c34dceef97d"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Üsküdar": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-uskudar.webp",
@@ -2419,14 +2602,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.143,
      "alfa": "310f9072335ed703"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.143,
      "alfa": "310f9072335ed703"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Süleymaniyen moskeija": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-suleymaniyen-moskeija.webp",
@@ -2458,14 +2644,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.214,
      "alfa": "948c7dea0e101a7d"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.214,
      "alfa": "948c7dea0e101a7d"
     }
-   }
+   },
+   "koko": 0.87
   },
   "Galatan silta": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-galatan-silta.webp",
@@ -2497,14 +2686,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.158,
      "alfa": "ae6ded0ebb7e01aa"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.158,
      "alfa": "ae6ded0ebb7e01aa"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Sirkecin asema": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-sirkecin-asema.webp",
@@ -2536,14 +2728,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.239,
      "alfa": "0e24abe7595c879c"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.239,
      "alfa": "0e24abe7595c879c"
     }
-   }
+   },
+   "koko": 0.823
   },
   "Neitsyttorni": {
    "lahde": "assets/kartat/miniatyyrit/istanbul-neitsyttorni.webp",
@@ -2575,14 +2770,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.144,
      "alfa": "47694c744e1f2e73"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.144,
      "alfa": "47694c744e1f2e73"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Camondon portaat": {
    "lahde": "istanbul-camondon-portaat",
@@ -2614,14 +2812,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.452,
      "alfa": "210fc700ddc54d09"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.452,
      "alfa": "210fc700ddc54d09"
     }
-   }
+   },
+   "koko": 0.599
   },
   "Käärmepylväs": {
    "lahde": "istanbul-kaarmepylvas",
@@ -2653,14 +2854,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.287,
      "alfa": "1184f73e228cd91c"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.287,
      "alfa": "1184f73e228cd91c"
     }
-   }
+   },
+   "koko": 0.751
   }
  },
  "berliini": {
@@ -2694,14 +2898,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.451,
      "alfa": "0061508a7a885b68"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.451,
      "alfa": "0061508a7a885b68"
     }
-   }
+   },
+   "koko": 0.599
   },
   "Brandenburgin portti": {
    "lahde": "assets/kartat/miniatyyrit/berliini-brandenburgin-portti.webp",
@@ -2733,14 +2940,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.382,
      "alfa": "214276981a61c4c0"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.382,
      "alfa": "214276981a61c4c0"
     }
-   }
+   },
+   "koko": 0.651
   },
   "Checkpoint Charlie": {
    "lahde": "assets/kartat/miniatyyrit/berliini-checkpoint-charlie.webp",
@@ -2772,14 +2982,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.366,
      "alfa": "0931d787081cecb6"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.366,
      "alfa": "0931d787081cecb6"
     }
-   }
+   },
+   "koko": 0.665
   },
   "Museosaari": {
    "lahde": "assets/kartat/miniatyyrit/berliini-museosaari.webp",
@@ -2811,14 +3024,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.403,
      "alfa": "0a275978efe58321"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.403,
      "alfa": "0a275978efe58321"
     }
-   }
+   },
+   "koko": 0.634
   },
   "Tv-torni": {
    "lahde": "assets/kartat/miniatyyrit/berliini-tv-torni.webp",
@@ -2850,14 +3066,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.044,
      "alfa": "a3ad09c8e6ce87fd"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.044,
      "alfa": "a3ad09c8e6ce87fd"
     }
-   }
+   },
+   "koko": 0.9
   },
   "East Side Gallery": {
    "lahde": "assets/kartat/miniatyyrit/berliini-east-side-gallery.webp",
@@ -2889,14 +3108,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.347,
      "alfa": "dd841cdf5d47a465"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.347,
      "alfa": "dd841cdf5d47a465"
     }
-   }
+   },
+   "koko": 0.683
   },
   "Kulta-Liisa": {
    "lahde": "berliini-kulta-liisa-vari2",
@@ -2928,14 +3150,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.092,
      "alfa": "baecd62027c005d4"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.092,
      "alfa": "baecd62027c005d4"
     }
-   }
+   },
+   "koko": 0.9
   },
   "Hobrechtin putket": {
    "lahde": "berliini-hobrechtin-putket-vari2",
@@ -2967,14 +3192,17 @@
     "alkuperäinen": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.366,
      "alfa": "69a532d9482a5802"
     },
     "tasattu": {
      "leveys": 1024,
      "korkeus": 1024,
+     "taytto": 0.366,
      "alfa": "69a532d9482a5802"
     }
-   }
+   },
+   "koko": 0.665
   },
   "Maailmankello": {
    "lahde": "assets/kartat/miniatyyrit/berliini-maailmankello.webp",
@@ -3006,14 +3234,17 @@
     "alkuperäinen": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.263,
      "alfa": "f2124791b433e3d3"
     },
     "tasattu": {
      "leveys": 512,
      "korkeus": 512,
+     "taytto": 0.263,
      "alfa": "f2124791b433e3d3"
     }
-   }
+   },
+   "koko": 0.785
   }
  }
 }

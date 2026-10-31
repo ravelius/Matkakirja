@@ -19240,8 +19240,10 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * "siis silloin kun nähtävyys on isona kartalla, ei silloin kun se
  * on pienenä"). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 36px;
-  height: 36px;
+  /* --piirros-koko: kerroin piirroksen näkyvän osan mukaan (omistaja 31.10.2026 klo 12.15 "Kohteet peittävät liikaa
+   * karttaa. Tee niistä pienempiä"; js/packs/kohdekartan-piirroskoot.js). */
+  width: calc(36px * var(--piirros-koko, 1));
+  height: calc(36px * var(--piirros-koko, 1));
   background: none;
   border: none;
   border-radius: 0;

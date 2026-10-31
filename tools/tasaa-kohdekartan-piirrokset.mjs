@@ -25,6 +25,14 @@ const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const AMPARI = 'https://media.matkakirja.app/kohtaamiset/miniatyyrit/';
 const KANSIO = 'assets/kartat/miniatyyrit/';
 const PAKKI = join(JUURI, 'js/packs/kohdekartan-piirrokset.js');
+const KOOT = join(JUURI, 'js/packs/kohdekartan-piirroskoot.js');
+const ASETUS = JSON.parse(readFileSync(join(JUURI, 'tools/piirrostasaus.json'), 'utf8'));
+/** Koko näkyvän osan mukaan (omistaja 31.10. 12.15; tools/piirrostasaus.json "koko"). */
+const kokoKerroin = (taytto) => {
+  const k = ASETUS.koko;
+  if (!k || !(taytto > 0)) return 1;
+  return +(k.perus * Math.max(k.pienin, Math.min(1, Math.sqrt(k.taytto_tavoite / taytto)))).toFixed(3);
+};
 const TULOKSET = join(JUURI, 'tools/piirrostasaus-tulokset.json');
 
 const kaupungit = process.argv.slice(2);
@@ -66,6 +74,7 @@ for (const kaupunki of kaupungit) {
       lahde: p.arvo, kuva: p.ulos,
       sha: createHash('sha256').update(readFileSync(join(JUURI, p.ulos))).digest('hex').slice(0, 16),
       ennen: m.ennen, jalkeen: m['jälkeen'], kertoimet: m.kertoimet, kangas: m.kangas,
+      koko: kokoKerroin(m.kangas?.tasattu?.taytto),
     };
     console.log(`${kaupunki}: ${p.nimi.padEnd(24)} ${JSON.stringify(m.ennen)} → ${JSON.stringify(m['jälkeen'])}`);
   }
@@ -84,4 +93,16 @@ ${rivit.join('\n')}
 };
 `);
 writeFileSync(TULOKSET, `${JSON.stringify(tulokset, null, 1)}\n`);
+const kokorivit = Object.entries(tulokset).sort(([a], [b]) => a.localeCompare(b)).map(([k, t]) =>
+  `  ${JSON.stringify(k)}: {\n${Object.entries(t).map(([n, v]) => `    ${JSON.stringify(n)}: ${v.koko ?? 1},`).join('\n')}\n  },`);
+writeFileSync(KOOT, `/*
+ * KOHDEKARTAN PIIRROSTEN KOOT: kaupunki → nähtävyyden nimi → kerroin 36 px:n laatikolle (omistaja 31.10.2026 klo 12.15
+ * "Kohteet peittävät liikaa karttaa. Tee niistä pienempiä. Osa varsinkin aivan liian isoja"). Lasketaan piirroksen
+ * näkyvästä osasta (tools/piirrostasaus.json "koko"); puuttuva = 1. Natiivi: moduulit/js/packs/kohdekartan-piirroskoot.json.
+ * GENEROITU: node tools/tasaa-kohdekartan-piirrokset.mjs <kaupunki> — älä muokkaa käsin.
+ */
+export const KOHDEKARTAN_PIIRROSKOOT = {
+${kokorivit.join('\n')}
+};
+`);
 console.log(`→ js/packs/kohdekartan-piirrokset.js, tools/piirrostasaus-tulokset.json`);

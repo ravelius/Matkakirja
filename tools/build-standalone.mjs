@@ -121,6 +121,7 @@ const MODULES = [
   'js/packs/miniatyyrit.js',
   'js/packs/ihmetahdet.js',
   'js/packs/kohdekartan-piirrokset.js',
+  'js/packs/kohdekartan-piirroskoot.js',
   'js/packs/julisteet.js',
   // Maakohtaiset paikallisaarteet: laattatyyppien nimet ennen pakkoja.
   'js/packs/paikallisaarteet.js',
