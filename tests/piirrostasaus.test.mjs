@@ -12,7 +12,9 @@ import { KOHDEKARTAN_PIIRROKSET } from '../js/packs/kohdekartan-piirrokset.js';
 import { MINIATYYRIT } from '../js/packs/miniatyyrit.js';
 
 const lue = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), 'utf8'));
-const { tavoite, toleranssi } = lue('tools/piirrostasaus.json');
+const { tavoite, toleranssi, hyväksytyt_poikkeamat: poikkeamat = [] } = lue('tools/piirrostasaus.json');
+/** Asetukseen perusteltuna kirjattu poikkeama (kohde + mitta) saa poiketa enintään oman rajansa verran. */
+const raja = (kohde, mitta) => poikkeamat.find((p) => p.kohde === kohde && p.mitta === mitta)?.enintään ?? toleranssi[mitta];
 const TULOKSET = lue('tools/piirrostasaus-tulokset.json');
 
 test('jokainen tasattu piirros on yhteisessä musta- ja valkopisteessä, keskisävyssä ja kylläisyydessä', () => {
@@ -21,7 +23,7 @@ test('jokainen tasattu piirros on yhteisessä musta- ja valkopisteessä, keskis�
     for (const [nimi, t] of Object.entries(kohteet)) {
       const j = t.jalkeen;
       for (const k of ['musta', 'valko', 'keski']) {
-        if (Math.abs(j[k] - tavoite[k]) > toleranssi[k]) poikkeavat.push(`${kaupunki}/${nimi}: ${k} ${j[k]} (tavoite ${tavoite[k]})`);
+        if (Math.abs(j[k] - tavoite[k]) > raja(`${kaupunki}/${nimi}`, k)) poikkeavat.push(`${kaupunki}/${nimi}: ${k} ${j[k]} (tavoite ${tavoite[k]})`);
       }
       if (j.kroma > tavoite.kroma + toleranssi.kroma_yli || j.kroma < tavoite.kroma - toleranssi.kroma_ali) {
         poikkeavat.push(`${kaupunki}/${nimi}: kroma ${j.kroma} (tavoite ${tavoite.kroma})`);

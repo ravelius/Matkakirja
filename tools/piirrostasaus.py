@@ -113,7 +113,7 @@ def tasaa(im, tavoite, kierroksia=12):
     kt = min(0.999, max(0.001, (TK - b0) / (b1 - b0)))
     gamma = math.log(kt) / math.log(k)
     kerroin = tavoite['kroma'] / m['kroma'] if m['kroma'] > 1e-3 else 1.0
-    gmin, gmax = tavoite.get('gamma_min', 0.55), tavoite.get('gamma_max', 2.0)
+    gmin, gmax = tavoite.get('gamma_min', 0.55), tavoite.get('gamma_max', 3.0)
     kkatto, liik = tavoite.get('kylläisyys_katto', 2.0), tavoite.get('paatepiste_liikkuma', 0.12)
     for _ in range(kierroksia):
         gamma = min(gmax, max(gmin, gamma))
@@ -161,7 +161,7 @@ def main():
         tulos = {}
         for sisaan, ulos in zip(argit[1::2], argit[2::2]):
             kuva, ennen, jalkeen, kertoimet = tasaa(Image.open(sisaan), tavoite)
-            varjo(kuva, asetus.get('varjo')).save(ulos, 'WEBP', quality=92, method=6, exact=True)
+            varjo(kuva, asetus.get('varjo')).save(ulos, 'WEBP', quality=asetus.get('webp_laatu', 92), method=6, exact=True)
             tulos[ulos] = {'ennen': ennen, 'jälkeen': jalkeen, 'kertoimet': kertoimet}
         print(json.dumps(tulos, ensure_ascii=False))
 
