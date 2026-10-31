@@ -27,3 +27,7 @@ Tulokset: `_tyo/linssiseppa2/k06f-tulos.md` (luvut, värimittaus, sauma).
 
 ## Osoitteet
 PT local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc, NS local_c7344e20-fba8-433d-ba8e-184a325037ef, PK local_601d33fc-1c61-4ccd-8389-fa425417fafb, LAV local_beb68834-6c4f-4839-ac75-7876b45052c3, Postivahti local_d8d003f6-1ae3-4a1b-854a-e0c018ed19f5.
+
+## LISÄYS 22.2x: sauman syy löytyi (LAV)
+Sauma = **kk-ulkorengas-3-2:n V4_lattia** (lod2, leipomaton, y 0,2–0,9), joka työntyy kielekkeinä palatsin lattian päälle z −500…−488,9; yksi kieleke osuu kohtaan x 16,6–19,6. LAV:n **ulkorengas-v10** (`_valmiit/juoksupeli-kk-lavastaja-ulkorengas-v10-vienti-20261031`, SHA256SUMS 3cf8ab80147d, summat OK) rajaa renkaan lattian taustan reunaan. Tausta-v90:aa ei tarvita. → k06j:n tulos ei enää ole kiireellinen (tarkistus vain).
+**Valmiina, ei käynnistetty** (PT: ei uusia raskaita ajoja): juuri `_tyo/linssiseppa2/juuri-k06c` (= juuri-k06b, ulkorengas-v9-linkki → v10) ja skripti `skriptit-20261031/pari-k06k.zsh` (f25-asetukset). Aja: `zsh .../pari-k06k.zsh > .../pari-k06k.out 2>&1` (taustalla) → sauma poissa? → värimittaus → PT.
