@@ -393,6 +393,7 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'palast-der-republik',
       nimi: 'Palast der Republik',
+      nimio: 'Tasavallan palatsi',  // kartan nimiö ≤ 18 merkkiä (skeema 1.40)
       kysymykset: ['Mikä talo oli yhtä aikaa parlamentti ja keilarata?', 'Miksi palatsi suljettiin syyskuussa 1990?'],
       korostukset: ['kansankamari|kansankamarin', 'asbesti|Asbestin', 'Humboldt Forum|Humboldt Forum'],
       nappi: 'Parlamentti, jossa oli keilarata',
@@ -886,7 +887,7 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'praha-raatihuone',
       nimi: 'Prahan vanhan raatihuoneen itäsiipi',
-      nimio: 'Raatihuoneen itäsiipi',
+      nimio: 'Raatihuoneen siipi',  // kartan nimiö ≤ 18 merkkiä (skeema 1.40)
       kysymykset: ['Mikä tuhosi raatihuoneen itäsiiven toukokuussa 1945?', 'Miksi siipeä ei rakennettu uudelleen?'],
       korostukset: ['Prahan kansannousu|Prahan kansannousun', 'astronominen kello|astronomista kelloa'],
       nappi: 'Siipi, jonka paikka jäi tyhjäksi',
@@ -1061,6 +1062,7 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'suuri-synagoga-vilna',
       nimi: 'Vilnan suuri synagoga',
+      nimio: 'Suuri synagoga',  // kartan nimiö ≤ 18 merkkiä (skeema 1.40)
       kysymykset: ['Miksi Vilnan suuren synagogan lattia oli kaivettu syvälle maahan?', 'Mitä synagogan paikalla on löydetty kaivauksissa?'],
       korostukset: ['bimah|bimah', 'Johann Christoph Glaubitz|Johann Christoph Glaubitz'],
       nappi: 'Synagoga, jonka lattia kaivettiin kirkkoa matalammalle',
@@ -1113,6 +1115,7 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'gogolin-synagoga',
       nimi: 'Gogolin kadun synagoga',
+      nimio: 'Gogolin synagoga',  // kartan nimiö ≤ 18 merkkiä (skeema 1.40)
       kysymykset: ['Minkä vuoksi Gogolin kadun synagoga tunnettiin koko Riiassa?', 'Mitä synagogan paikalla on muistona?'],
       korostukset: ['Paul von Hardenack|Paul von Hardenack', 'kanttori|kanttoreistaan', 'Jānis Lipke|Jānis Lipkelle'],
       nappi: 'Synagoga, joka tunnettiin kanttoreistaan',
@@ -2087,6 +2090,7 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'luxemburgin-linnoitus',
       nimi: 'Luxemburgin linnoitus',
+      nimio: 'Vanha linnoitus',  // kartan nimiö ≤ 18 merkkiä (skeema 1.40)
       kysymykset: ['Miksi Luxemburgin linnoitus purettiin?', 'Mikä linnoituksesta on yhä jäljellä?'],
       korostukset: ['Vauban|Vaubanin', 'Gibraltar|Gibraltariksi', 'kasematti|kasematit'],
       nappi: 'Pohjoisen Gibraltar, jonka sopimus purki',
