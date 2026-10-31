@@ -3330,3 +3330,7 @@ Tekijän työkalujen lisenssi tarkistetaan koepalan alussa. Aloitus vasta junan 
 ## PARIISIN PIIRROSKARTTA HETI KIIREELLISENÄ (omistaja 31.10.2026 klo 17.35) (31.10.2026 klo 17.36)
 
 Omistaja (KK:n välittämä, sanatarkasti): "Pyydä piirros heti codexilta Pariisista kiireellisenä." Muuttaa 17.11 päätöksen ajoituksen: koepala ei odota junaa 216. PT tilasi Codexilta 17.4x (posti/paatoimittaja-codex-pariisi-piirroskartta-20261031.md, 111a43155): ensin yksi iso kuva tyylin hyväksyntään KK:n kautta omistajalle, sitten saumattomat palat; ennen ihmeiden erien 3–4 jatkoa.
+
+## PIIRROSKARTTA: HÄIVYTYS KÄÄNNÖSSÄ JA SUORISTA-NAPPI (omistaja 31.10.2026 klo 17.43) (31.10.2026 klo 17.43)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Piirros voisi pehmeästi hävitä jos pelaaja kääntää tai kallistaa karttaa. Silloin voisi tulla ruudulle nappi suorista joka palauttaa kartan takaisin ja tuo piirroksen näkyviin". Linjaus koepalan speksiin: piirros näkyy vain omassa kuvakulmassaan; käännössä tai kallistuksessa se häipyy pehmeästi tavallisen kartan alle ja ruudulle tulee Suorista-nappi olemassa olevalla nappipohjalla (UI-POHJAT; puuttuva pohja → kysy); nappi kääntää kartan pehmeästi takaisin piirroksen kulmaan ja piirros palaa.
