@@ -102,6 +102,38 @@ const rappeutunutKohde = ({
 export const EUROOPAN_KADONNEET = {
   FRA: [
     ihmeKohde({
+      id: 'pont-transbordeur',
+      nimi: 'Marseillen siirtosilta',
+      nimio: 'Pont Transbordeur',
+      kysymykset: ['Miten matkustajat ylittivät Vanhan sataman siirtosillalla?', 'Milloin Marseillen siirtosilta räjäytettiin?'],
+      korostukset: ['Ferdinand Arnodin|Ferdinand Arnodinin', 'Vanha satama|Vanhan sataman'],
+      nappi: 'Silta, jonka kori ylitti sataman puolessatoista minuutissa',
+      laudat: { maailmankartta: { x: 6012.1, y: 1671.4 }, europe: { x: 314.2, y: 754.9 } },
+      teksti: 'Marseillen siirtosilta ylitti Vanhan sataman Quai du Portin ja Rive-Neuven välillä. Insinööri '
+        + 'Ferdinand Arnodinin suunnittelema rakenne valmistui 19 kuukaudessa ja avattiin 15. joulukuuta '
+        + '1905. Kaksi 86,6 metriä korkeaa tornia kannatti 239 metriä pitkää kantta 52 metrin korkeudessa '
+        + 'veden yläpuolella. Matkustajat ylittivät sataman kannesta roikkuvalla korilla, joka liikkui '
+        + 'kantta pitkin ja kulki matkan noin puolessatoista minuutissa. Pohjoisessa tornissa oli hissi '
+        + '1907 lähtien, 74 metrin korkeudella oli näköalataso ja kannen pohjoispäässä kalaravintola. '
+        + '1930-luvulla silta oli enää koriste, koska huoltoon ei ollut varoja. Saksalaiset räjäyttivät sen '
+        + '22. elokuuta 1944; vain pohjoinen torni putosi, ja loput romahti 1. syyskuuta 1945.',
+      lahde: 'fr-Wikipedia ”Pont transbordeur de Marseille”; en-Wikipedia ”Marseille Transporter Bridge” '
+        + '(tarkistettu 31.10.2026).',
+      kuva: 'ihme-pont-transbordeur-loistoaika.jpg',
+      lyhyt: 'Kannesta roikkuva kori ylittää Vanhan sataman puolessatoista minuutissa, ja ylhäällä on '
+        + 'kalaravintola ja 74 metrin korkeudella näköalataso; lähes neljäkymmentä vuotta myöhemmin silta '
+        + 'räjäytetään.',
+      selite: 'Vuonna 1905 uuden sillan kannesta roikkuva kori ylittää Vanhan sataman puolessatoista '
+        + 'minuutissa, ja 239 metriä pitkän, 52 metrin korkeudessa kulkevan kannen alta laivat pääsevät '
+        + 'satamaan. Kori on 20 tonnin painoinen ja pinta-alaltaan 120 neliömetriä. Tornista pääsee '
+        + 'portaita ylös näköalatasolle, ja kannella odottaa kalaravintola. Elokuussa 1944 saksalaiset '
+        + 'räjäyttävät sillan Marseillen vapautuksen aikana sataman tukkimiseksi, ja loput kaatuu '
+        + 'syyskuussa 1945.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1905). Faktat: fr- ja '
+        + 'en-Wikipedia, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Marseille_Transporter_Bridge',
+    }),
+    ihmeKohde({
       id: 'grand-chatelet',
       nimi: 'Grand Châtelet',
       kysymykset: ['Mikä kulki Grand Châtelet\'n rakennuksen alta?', 'Mitä Grand Châtelet\'n paikalla on?'],
@@ -326,6 +358,67 @@ export const EUROOPAN_KADONNEET = {
     kuva: 'ihme-saint-cloud-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Cloud',
   })],
   DEU: [
+    ihmeKohde({
+      id: 'anhalter-bahnhof',
+      nimi: 'Anhalter Bahnhof',
+      nimio: 'Anhalterin asema',
+      kysymykset: ['Kuinka tiheästi junat lähtivät Anhalterin asemalta 1930-luvulla?', 'Mikä Anhalterin asemasta on yhä jäljellä?'],
+      korostukset: ['Franz Schwechten|Franz Schwechten', 'Theresienstadt|Theresienstadtiin'],
+      nappi: 'Asema, jonka julkisivusta jäi vain katkelma',
+      laudat: { maailmankartta: { x: 6279.4, y: 1279.6 }, europe: { x: 468.1, y: 512.8 } },
+      teksti: 'Anhalter Bahnhof oli Berliinin eteläinen pääteasema. Franz Schwechten suunnitteli sen 1872 '
+        + 'vuonna 1841 avatun vanhan aseman tilalle, ja uusi asema avattiin 15. kesäkuuta 1880. Julkisivu '
+        + 'oli 101 metriä leveä, ja seinät muurattiin klinkkeritiilestä ja koristeltiin terrakotalla. '
+        + 'Hallin teräskatto kohosi 34 metrin korkeuteen 62 metrin jännevälillä. Asemalta pääsi Leipzigiin, '
+        + 'Müncheniin, Wieniin ja Roomaan, ja 1930-luvulla juna lähti kolmen–viiden minuutin välein. Yli 9 '
+        + '600 berliiniläistä juutalaista karkotettiin täältä 116 junalla, enimmäkseen Theresienstadtiin. '
+        + 'Ilmahyökkäys poltti hallin 3. helmikuuta 1945, liikenne loppui 1952, ja rauniot purettiin '
+        + '1959–1961. Jäljelle jäi osa pääsisäänkäynnin julkisivusta.',
+      lahde: 'en-Wikipedia "Anhalter Bahnhof", osiot rakennus- ja asemahistoriasta sekä purusta; de-Wikipedia '
+        + '"Anhalter Bahnhof", osiot hallista, tuhosta, purusta ja liikennemääristä (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-anhalter-bahnhof-loistoaika.jpg',
+      lyhyt: 'Matkustajat täyttävät hallin laiturit, ja kaukojunat lähtevät kohti Leipzigia ja Wieniä; reilut '
+        + 'viisikymmentä vuotta myöhemmin asema suljetaan.',
+      selite: 'Noin vuonna 1900 Anhalterilta lähtee päivässä kymmeniä junia: 85 lähijunaa, 27 aluejunaa ja 26 '
+        + 'pika- tai kaukojunaa. Etelään pääsee Leipzigiin, Dresdeniin ja Wieniin. Teräskatto kaartuu 34 '
+        + 'metrin korkeuteen laitureiden yllä, ja hallin päätyseinä on muurattu klinkkeritiilestä ja '
+        + 'koristeltu terrakotalla. Veturien höyry nousee kattoon, ja konduktöörin pilli vihlaisee '
+        + 'laiturilla. Helmikuussa 1945 pommit polttavat hallin, 1952 liikenne loppuu ja 1959–1961 rauniot '
+        + 'puretaan; vain osa pääsisäänkäynnin julkisivusta jää.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1900). Faktat: en- ja '
+        + 'de-Wikipedia "Anhalter Bahnhof", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Anhalter_Bahnhof',
+    }),
+    ihmeKohde({
+      id: 'palast-der-republik',
+      nimi: 'Palast der Republik',
+      kysymykset: ['Mikä talo oli yhtä aikaa parlamentti ja keilarata?', 'Miksi palatsi suljettiin syyskuussa 1990?'],
+      korostukset: ['kansankamari|kansankamarin', 'asbesti|Asbestin', 'Humboldt Forum|Humboldt Forum'],
+      nappi: 'Parlamentti, jossa oli keilarata',
+      laudat: { maailmankartta: { x: 6280.1, y: 1279.0 }, europe: { x: 468.5, y: 512.4 } },
+      teksti: 'Palast der Republik oli Itä-Berliinin Schlossplatzilla seissyt DDR:n kansankamarin ja '
+        + 'kulttuuritalon yhdistelmä. Arkkitehti Heinz Graffunderin suunnittelema talo avattiin 23. '
+        + 'huhtikuuta 1976, ja parlamentin lisäksi siellä oli teatteri, galleria, keilarata ja kolmetoista '
+        + 'ravintolaa. Suuren salin paikkamäärä vaihteli noin tuhannesta 4 500:aan. Monien valaisimien '
+        + 'takia talo sai lempinimen Erichs Lampenladen, Erichin lamppukauppa. Elokuun 22.–23. päivän yönä '
+        + '1990 kansankamari äänesti täällä DDR:n liittymisestä Saksan liittotasavaltaan. Asbestin vuoksi '
+        + 'palatsi suljettiin 19. syyskuuta 1990, ja se purettiin 2006–2008. Paikalla on Berliinin '
+        + 'kaupunginlinnan jälleenrakennus, jossa toimii Humboldt Forum.',
+      lahde: 'en-Wikipedia "Palast der Republik" ja de-Wikipedia "Palast der Republik", johdanto sekä osiot '
+        + 'rakennushistoriasta, käytöstä, sulkemisesta ja purusta (tarkistettu 31.10.2026).',
+      kuva: 'ihme-palast-der-republik-loistoaika.jpg',
+      lyhyt: 'Perhe nousee Palast der Republikin valaistua portaikkoa ravintolaan, ja alhaalla keilarata '
+        + 'jylisee; kymmenen vuotta myöhemmin asbesti sulkee talon.',
+      selite: 'Noin vuonna 1980 itäberliiniläiset nousevat Palast der Republikin portaikkoa, jonka valot '
+        + 'palavat päivin ja öin. Kolmessa alimmassa kerroksessa ravintolat ja baarit täyttyvät, keilarata '
+        + 'jylisee ja teatterin esirippu nousee. Kävijöille talo on arkinen kohtaamispaikka eikä historiaa: '
+        + 'tärkein kysymys on, mistä saa pöydän. Elokuussa 1990 kansankamari äänestää täällä liittymisestä '
+        + 'Länsi-Saksaan, syyskuussa asbesti sulkee talon, ja 2006–2008 se puretaan.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1980). Faktat: en- ja '
+        + 'de-Wikipedia "Palast der Republik", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Palast_der_Republik',
+    }),
     kohde({
       id: 'hampurin-vanha-raatihuone', nimi: 'Hampurin vanha raatihuone',
       nimio: 'Vanha raatihuone',
@@ -349,6 +442,70 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   ITA: [
+    ihmeKohde({
+      id: 'san-geminiano',
+      nimi: 'San Geminianon kirkko',
+      nimio: 'San Geminiano',
+      kysymykset: ['Miksi San Geminianon kirkko purettiin 1807?', 'Kuka suunnitteli kirkon julkisivun?'],
+      korostukset: ['Jacopo Sansovino|Jacopo Sansovinon', 'Napoleon|Napoleonin'],
+      nappi: 'Kirkko, jonka tilalle tuli Napoleonin siipi',
+      laudat: { maailmankartta: { x: 6244.6, y: 1583.9 }, europe: { x: 448.1, y: 698.7 } },
+      teksti: 'San Geminianon kirkko seisoi Pyhän Markuksen torin länsilaidalla, ja perinteen mukaan '
+        + 'bysanttilainen kenraali Narses perusti sen 500-luvulla. Doge Sebastiano Zianin aikana 1100-luvun '
+        + 'lopulla kirkko purettiin ja rakennettiin uudelleen toiseen paikkaan, jotta tori saatiin '
+        + 'laajemmaksi. Nykyinen keskikupolinen kirkko aloitettiin 1505, ja Jacopo Sansovinon suunnittelema '
+        + 'julkisivu valmistui 1557. Sansovino haudattiin kirkkoon 1570. Kun Venetsian tasavalta kaatui '
+        + '1797, kirkko toimi kasarmina. Napoleonin aikana purku alkoi 19. toukokuuta 1807, ja kirkon '
+        + 'tilalle rakennettiin Napoleonin siipi. Sansovinon jäännökset siirrettiin Salute-seminaariin ja '
+        + 'pyhän Geminianuksen pyhäinjäännökset Nome di Gesù -kirkkoon.',
+      lahde: 'en-Wikipedia ”San Geminiano, Venice” ja ”Procuratie” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-san-geminiano-loistoaika.jpg',
+      lyhyt: 'Venetsialaiset kulkevat Sansovinon marmorijulkisivun ohi Pyhän Markuksen torin länsilaidalla; '
+        + 'reilut sata vuotta myöhemmin sama kirkko puretaan Napoleonin siiven tieltä.',
+      selite: 'Noin vuonna 1700 Pyhän Markuksen torin länsilaidalla seisoo keskikupolinen kirkko, jonka '
+        + 'julkisivu on istrialaista marmoria ja jonka Sansovino on suunnitellut; sen sisällä lepäävät hän '
+        + 'ja hänen lapsensa Fiorenza ja Francesco. Urkujen ovia koristavat Veronesen maalaukset. '
+        + 'Tasavallan kaaduttua kirkko toimii kasarmina, ja toukokuussa 1807 purkutyöt alkavat Napoleonin '
+        + 'siiven tieltä. Sansovinon jäännökset viedään Salute-seminaariin.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1700). Faktat: '
+        + 'en-Wikipedia ”San Geminiano, Venice” ja ”Procuratie”, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/San_Geminiano,_Venice',
+    }),
+    ihmeKohde({
+      id: 'mercato-vecchio',
+      nimi: 'Mercato Vecchio',
+      nimio: 'Vanha tori',
+      kysymykset: ['Mitä Firenzen vanhan torin paikalle rakennettiin?', 'Mitä uuden aukion kaareen on kirjoitettu?'],
+      korostukset: ['Giorgio Vasari|Giorgio Vasarin', 'Piazza della Repubblica|Piazza della Repubblica'],
+      nappi: 'Foorumi, jonka päälle rakennettiin kahvilaaukio',
+      laudat: { maailmankartta: { x: 6208.5, y: 1652.1 }, europe: { x: 427.3, y: 742.4 } },
+      teksti: 'Mercato Vecchio oli Firenzen vanha keskustori samalla paikalla, jossa roomalaisen Florentian '
+        + 'foorumi oli ollut. Markkinat vakiintuivat vuoden 1000 jälkeen, ja 1800-luvulla aukion ympärillä '
+        + 'oli kojuja, kauppoja ja teurastajien Beccheria. Siellä seisoivat myös Giorgio Vasarin '
+        + 'suunnittelema kalahalli Loggia del Pesce ja Abbondanza-pylväs, ja osassa aluetta asui '
+        + 'juutalaisia, jotka oli määrätty gettoon 1571. Kun Firenze oli ollut Italian pääkaupunki, '
+        + 'kaupunki päätti vanhan keskustan saneerauksesta; hanke hyväksyttiin 2. huhtikuuta 1885, ja '
+        + 'tieltä häädettiin 1 778 perhettä, yhteensä 5 822 ihmistä. Tilalle nousi Piazza Vittorio Emanuele '
+        + 'II, nykyinen Piazza della Repubblica, jonka kaareen kirjoitettiin: ”L’antico centro della '
+        + 'città”.',
+      lahde: 'en-Wikipedia ”Piazza della Repubblica, Florence”, osiot ”Origins”, ”Ghetto” ja ”Risanamento”; '
+        + 'it-Wikipedia ”Mercato Vecchio (Firenze)”, osiot ”Ghetto” ja ”Demolizione” (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-mercato-vecchio-loistoaika.jpg',
+      lyhyt: 'Teurastajat ja kalakauppiaat huutavat hintoja Vasarin kalahallin ja vanhan pylvään välissä, ja '
+        + 'torin ympärillä kohoavat keskiaikaiset tornit; alle kahdenkymmenen vuoden kuluttua koko kortteli '
+        + 'puretaan.',
+      selite: 'Vuonna 1873 aamutori kuuluu jo kadulle asti: teurastajat, kalakauppiaat ja kojumyyjät huutavat '
+        + 'toistensa yli Beccherian ja Vasarin kalahallin välissä, ja keskellä aukiota seisoo '
+        + 'Abbondanza-pylväs. Kivetyksellä kolisevat kärryt, ja kapeilta kaduilta nousee kalan ja lihan '
+        + 'haju keskiaikaisten tornien varjoon, geton taloihin asti. Kun saneeraus alkaa, kalahalli '
+        + 'puretaan ja pystytetään uudelleen toiseen paikkaan, ja 1890-luvun puoliväliin mennessä tori ja '
+        + 'sen ympäristö ovat poissa.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+        + 'Faktat: en-Wikipedia ”Piazza della Repubblica, Florence” ja it-Wikipedia ”Mercato Vecchio '
+        + '(Firenze)”, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Piazza_della_Repubblica,_Florence',
+    }),
     ihmeKohde({
       id: 'septizodium',
       nimi: 'Septizodium',
@@ -447,6 +604,37 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   ESP: [
+    ihmeKohde({
+      id: 'ciutadella',
+      nimi: 'Barcelonan Ciutadellan linnake',
+      nimio: 'Ciutadella',
+      kysymykset: ['Miksi Filip V rakennutti linnakkeen Barcelonaan?', 'Mitä linnakkeen paikalla on nykyään?'],
+      korostukset: ['Filip V|Filip V', 'La Ribera|La Riberan', 'Prim|Prim'],
+      nappi: 'Linnake, joka rakennettiin kaupunkia vastaan',
+      laudat: { maailmankartta: { x: 5906.2, y: 1748.0 }, europe: { x: 253.2, y: 805.1 } },
+      teksti: 'Ciutadella oli Barcelonan linnake, jonka Espanjan kuningas Filip V rakennutti 1713–1714 käydyn '
+        + 'piirityksen jälkeen pitämään kaupunki ja Katalonia kurissa. Markiisi Verboomin suunnittelema '
+        + 'viisikulmainen linnake valmistui 1725. Sen alta purettiin 1 016 taloa La Riberan kaupunginosan '
+        + '38 kadulta, ja noin 4 500 ihmistä jäi ilman kotia ja ilman korvausta. Rakennusaikanaan se oli '
+        + 'Euroopan suurin linnake, ja siihen mahtui 8 000 sotilasta. Barcelonalaiset vihasivat sitä, ja '
+        + 'kenraali Prim luovutti sen jäljellä olevan alueen kaupungille 1869. Linnake purettiin, ja '
+        + 'alueelle perustettiin puisto. Arsenaali, kuvernöörin palatsi ja kappeli jäivät pystyyn; '
+        + 'arsenaali on nykyään Katalonian parlamentin talo.',
+      lahde: 'en-Wikipedia "Citadel of Barcelona", johdanto ja osiot "Barceloneta", "Demolition"; ca-Wikipedia '
+        + '"Ciutadella de Barcelona" ja es-Wikipedia "Ciudadela de Barcelona" (mitat, talojen ja kadujen '
+        + 'määrä, rakennusvuodet; tarkistettu 31.10.2026).',
+      kuva: 'ihme-ciutadella-loistoaika.jpg',
+      lyhyt: 'Sotilaat vaihtavat vartiota viisikulmaisen linnakkeen bastionilla, ja kaupunki jää heidän '
+        + 'tykkiensä ulottuville; reilut kuusikymmentä vuotta myöhemmin linnake luovutetaan kaupungille.',
+      selite: 'Noin vuonna 1800 vartiosotilaat kävelevät linnakkeen muureilla, joiden kaupunkiin päin olevat '
+        + 'kaksi bastionia kohoavat yli 16 metrin korkeuteen. Viisikulmainen linnake täyttää 28,6 '
+        + 'hehtaaria, ja sisällä on kasarmeja, joihin mahtuu tuhansia sotilaita. Rummut kuuluvat muureilta '
+        + 'kaupunkiin asti, kun vartio vaihtuu. Joulukuussa 1869 linnake luovutetaan kaupungille ja '
+        + 'puretaan, ja jäljelle jäävät arsenaali, kappeli ja kuvernöörin palatsi.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1800). Faktat: en-, ca- '
+        + 'ja es-Wikipedia "Citadel of Barcelona" / "Ciutadella de Barcelona", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Citadel_of_Barcelona',
+    }),
     kohde({
       id: 'real-alcazar-madrid', nimi: 'Madridin Real Alcázar',
       nimio: 'Real Alcázar',
@@ -471,6 +659,36 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   PRT: [
+    ihmeKohde({
+      id: 'tejo-ooppera',
+      nimi: 'Tejon kuninkaallinen ooppera',
+      nimio: 'Ópera do Tejo',
+      kysymykset: ['Kuinka kauan Tejon ooppera ehti toimia?', 'Mikä tuhosi oopperatalon marraskuussa 1755?'],
+      korostukset: ['Giovanni Carlo Galli Bibiena|Giovanni Carlo Galli Bibienalta', 'Ribeiran palatsi|Ribeiran palatsin'],
+      nappi: 'Ooppera, joka ehti toimia seitsemän kuukautta',
+      laudat: { maailmankartta: { x: 5528.8, y: 1853.4 }, europe: { x: 35.8, y: 875.6 } },
+      teksti: 'Tejon kuninkaallisen oopperan vihkiäisiä vietettiin 31. maaliskuuta 1755 kuningatar Mariana '
+        + 'Vitórian syntymäpäivänä. Kuningas José I tilasi talon arkkitehti Giovanni Carlo Galli '
+        + 'Bibienalta, ja se rakennettiin Tejo-joen rannalle vanhan Ribeiran palatsin kylkeen. Salissa oli '
+        + 'noin 600 henkeä parterressa ja 38 aitiota sekä kuninkaallinen aitio. Ensi-illassa esitettiin '
+        + 'David Perezin ooppera Alessandro nell’Indie, ja siinä lauloivat tenori Anton Raaff ja kastraatti '
+        + 'Caffarelli. Lokakuussa 1755 ohjelmassa oli Antonio Mazzonin Antigono. Marraskuun alkuun oli '
+        + 'suunniteltu Artaserse, mutta Lissabonin maanjäristys 1. marraskuuta 1755 tuhosi talon, joka oli '
+        + 'ehtinyt toimia noin seitsemän kuukautta.',
+      lahde: 'pt-Wikipedia ”Ópera do Tejo”; en-Wikipedia ”Ópera do Tejo” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-tejo-ooppera-loistoaika.jpg',
+      lyhyt: 'Yleisö täyttää uuden oopperatalon Tejon rannalla, ja lavalla Caffarelli laulaa Poron osaa; '
+        + 'seitsemän kuukautta myöhemmin maanjäristys tuhoaa talon.',
+      selite: 'Maaliskuun lopussa 1755 katsojat täyttävät uuden oopperatalon parterren ja 38 aitiota Tejon '
+        + 'rannalla, vanhan Ribeiran palatsin kyljessä. Lavalla tenori Anton Raaff ja kastraatti Caffarelli '
+        + 'laulavat Alessandro nell’Indie -oopperan roolit, ja Petronio Mazzoni vastaa lavakoneiston '
+        + 'tehosteista. Esityksiä on maanantaisin ja torstaisin, ja lokakuussa ohjelmassa on vielä Mazzonin '
+        + 'Antigono. Lissabonin maanjäristys 1. marraskuuta 1755 tuhoaa talon, ennen kuin suunniteltu '
+        + 'Artaserse ehtii ensi-iltaan.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1755). Faktat: pt- ja '
+        + 'en-Wikipedia ”Ópera do Tejo”, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/%C3%93pera_do_Tejo',
+    }),
     kohde({
       id: 'paco-da-ribeira', nimi: 'Paço da Ribeira',
       nappi: 'Portugalin kuninkaanlinna Tejo-joen rannalla',
@@ -530,6 +748,68 @@ export const EUROOPAN_KADONNEET = {
     }),
   ],
   AUT: [
+    ihmeKohde({
+      id: 'ringtheater',
+      nimi: 'Ringtheater',
+      kysymykset: ['Mikä rakennus nousi Ringtheaterin paikalle palon jälkeen?', 'Mitä Wienissä muutettiin palon jälkeen?'],
+      korostukset: ['Sühnhaus|Sühnhaus', 'Franz Joseph|Franz Josephin'],
+      nappi: 'Teatteri, jonka palo muutti Wienin turvallisuussäännöt',
+      laudat: { maailmankartta: { x: 6378.7, y: 1467.1 }, europe: { x: 525.4, y: 625.6 } },
+      teksti: 'Ringtheater oli wieniläinen teatteri, joka avattiin 17. tammikuuta 1874 Rossinin Sevillan '
+        + 'parturilla. Arkkitehti Emil von Förster suunnitteli talon noin 1 700 katsojalle, ja pienen '
+        + 'tontin vuoksi se rakennettiin korkeaksi. Valaistus toimi kaasulla. Joulukuun 8. päivänä 1881 '
+        + 'tulipalo syttyi lavan puolella juuri ennen Offenbachin Hoffmannin tarinoiden esitystä ja levisi '
+        + 'nopeasti katsomoon. Palossa kuoli yli 380 ihmistä. Seuraavana vuonna Wienissä säädettiin uusi '
+        + 'teatterilaki, palokunta järjestettiin uudelleen ja perustettiin Wienin vapaaehtoinen '
+        + 'pelastusseura. Paikalle rakennettiin Sühnhaus, jonka keisari Franz Josephin yksityisvarat '
+        + 'kustansivat ja jonka vuokratulot menivät hyväntekeväisyyteen.',
+      lahde: 'en-Wikipedia ”Ringtheater”; de-Wikipedia ”Ringtheater” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-ringtheater-loistoaika.jpg',
+      lyhyt: 'Yleisö täyttää uuden teatterin tammikuussa 1874, ja talo on mitoitettu 1 700 katsojalle; '
+        + 'seitsemän vuotta myöhemmin tulipalo tuhoaa sen.',
+      selite: 'Tammikuussa 1874 katsojat saapuvat uuteen teatteriin, joka on mitoitettu 1 700 hengelle ja '
+        + 'rakennettu pienelle tontille korkeaksi. Vuodesta 1878 ohjelmassa on puhenäytelmiä, saksalaista '
+        + 'ja italialaista oopperaa sekä varietee-esityksiä. Joulukuussa 1881 tulipalo syttyy lavan '
+        + 'puolella ennen iltaesitystä ja tuhoaa talon, ja onnettomuus uudistaa Wienin '
+        + 'teatteriturvallisuuden. Jäljelle jäänyt kuori puretaan joulukuussa 1882, ja paikalle nousee '
+        + 'Sühnhaus, sovituksen talo.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1874–1881). Faktat: en- ja '
+        + 'de-Wikipedia ”Ringtheater”, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Ringtheater',
+    }),
+    ihmeKohde({
+      id: 'karntnertor',
+      nimi: 'Kärntnertor-teatteri',
+      nimio: 'Kärntnertor',
+      kysymykset: ['Minkä sinfonian kantaesitys oli Kärntnertor-teatterissa 1824?', 'Mikä hotelli seisoo teatterin paikalla?'],
+      korostukset: ['Ludwig van Beethoven|Ludwig van Beethovenin', 'Fidelio|Fidelion'],
+      nappi: 'Teatteri, jossa Beethovenin yhdeksäs kuultiin ensi kerran',
+      laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
+      teksti: 'Kärntnertor-teatteri oli Wienin hovin teatteri, jonka Antonio Beduzzi suunnitteli ja joka '
+        + 'avattiin 30. marraskuuta 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
+        + 'uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio 23. '
+        + 'toukokuuta 1814 ja Chopinin Wienin-debyytti 1829. Huipentuma oli 7. toukokuuta 1824: Beethovenin '
+        + 'yhdeksännen sinfonian kantaesitys, jossa soitti lähes kaksi kertaa tavallista suurempi '
+        + 'orkesteri. Viimeinen ooppera, Rossinin Wilhelm Tell, esitettiin 17. huhtikuuta 1870, ja uusi '
+        + 'hovioopperatalo oli avattu jo 1869. Kärntnertor purettiin, ja tilalle rakennettiin asuintalo, '
+        + 'josta tuli Hotel Sacher. Isoisän matkavuonna 1873 teatteria ei enää ollut.',
+      lahde: 'en-Wikipedia ”Theater am Kärntnertor”; de-Wikipedia ”Theater am Kärntnertor”; en-Wikipedia '
+        + '”Symphony No. 9 (Beethoven)”, osio ”Premiere” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-karntnertor-loistoaika.jpg',
+      lyhyt: 'Toukokuun 7. päivänä 1824 kuuroutunut säveltäjä antaa tahdit lavan vieressä istuen, ja '
+        + 'loppusuosion aikana laulaja kääntää hänet yleisöön päin; vajaat viisikymmentä vuotta myöhemmin '
+        + 'teatteri puretaan.',
+      selite: 'Toukokuun 7. päivänä 1824 teatteri on täynnä yleisöä, ja lavalla soittaa lähes kaksi kertaa '
+        + 'tavallista suurempi orkesteri. Samassa salissa on kuultu Mozartin pianokonserttoa nro 25 ja '
+        + 'Beethovenin Fideliota. Lähes kuuro Beethoven istuu lavan vieressä ja antaa tahdit, vaikka ei '
+        + 'kuule soittoa. Kun sinfonia päättyy, alttolaulaja Caroline Unger kääntää hänet kasvot yleisöön '
+        + 'päin, jotta hän näkisi liinat, hatut ja nostetut kädet. Huhtikuussa 1870 teatterin viimeinen '
+        + 'ooppera on soitettu, ja talo puretaan.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1824). Faktat: en- ja '
+        + 'de-Wikipedia ”Theater am Kärntnertor” sekä en-Wikipedia ”Symphony No. 9 (Beethoven)”, '
+        + 'tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Theater_am_K%C3%A4rntnertor',
+    }),
     kohde({
       id: 'vanha-burgtheater', nimi: 'Wienin vanha Burgtheater',
       nimio: 'Burgtheater',
@@ -602,7 +882,37 @@ export const EUROOPAN_KADONNEET = {
       kuva: 'ihme-grand-hotel-schreiber-rigi-kulm-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rigi_Kulm_Hotel',
     }),
   ],
-  CZE: [kohde({
+  CZE: [
+    ihmeKohde({
+      id: 'praha-raatihuone',
+      nimi: 'Prahan vanhan raatihuoneen itäsiipi',
+      nimio: 'Raatihuoneen itäsiipi',
+      kysymykset: ['Mikä tuhosi raatihuoneen itäsiiven toukokuussa 1945?', 'Miksi siipeä ei rakennettu uudelleen?'],
+      korostukset: ['Prahan kansannousu|Prahan kansannousun', 'astronominen kello|astronomista kelloa'],
+      nappi: 'Siipi, jonka paikka jäi tyhjäksi',
+      laudat: { maailmankartta: { x: 6314.0, y: 1386.4 }, europe: { x: 488.1, y: 576.3 } },
+      teksti: 'Prahan Vanhankaupungin raatihuoneen itäsiipi rakennettiin uusgoottilaiseksi vuosina 1838–1848, '
+        + 'ja sen tieltä purettiin kaksi 1300-luvun taloa. Arkkitehteina työskentelivät Pietro Nobile ja '
+        + 'Pavel Sprenger. Toukokuun alussa 1945 Prahan kansannousun aikana raatihuone toimi vastarinnan '
+        + 'keskuksena. Saksalaiset joukot ampuivat sitä 8. toukokuuta, muutama tunti ennen antautumisensa '
+        + 'allekirjoitusta, ja itäsiipi paloi kuoreksi. Tuli vahingoitti myös tornia ja astronomista kelloa '
+        + 'ja tuhosi osan kaupunginarkistosta. Jäljelle jääneet seinät purettiin tornin viereistä osaa '
+        + 'lukuun ottamatta. Kilpailut vuodesta 1899 lähtien jäivät ilman voittajaa tai toteutusta, eikä '
+        + 'siivelle ole rakennettu korvaajaa.',
+      lahde: 'cs-Wikipedia ”Staroměstská radnice”; en-Wikipedia ”Old Town Hall (Prague)” (tarkistettu '
+        + '31.10.2026).',
+      kuva: 'ihme-praha-raatihuone-loistoaika.jpg',
+      lyhyt: 'Noin vuonna 1900 kaupungin virkamiehet kulkevat uusgoottilaisen siiven käytävillä, ja tornin '
+        + 'astronominen kello käy vierestä; vajaat viisikymmentä vuotta myöhemmin siipi palaa.',
+      selite: 'Noin vuonna 1900 uusgoottilainen siipi liittyy keskiaikaiseen torniin Vanhankaupungin torin '
+        + 'laidalla, ja tornin astronominen kello on käynyt vuodesta 1410, siis jo lähes viisisataa vuotta. '
+        + 'Tornissa on myös 1381 vihitty kappeli. Toukokuun 8. päivänä 1945 saksalaisten tulitus sytyttää '
+        + 'siiven, ja se palaa kuoreksi; tuli tuhoaa myös kappelin, ja vain sen portaali säilyy. Paikka on '
+        + 'jäänyt tyhjäksi, koska kilpailut eivät tuottaneet toteutettua suunnitelmaa.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1900). Faktat: '
+        + 'cs-Wikipedia ja en-Wikipedia, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Old_Town_Hall_(Prague)',
+    }),kohde({
     id: 'josefov-asanace', nimi: 'Josefov ennen asanacea',
     nimio: 'Josefov',
     nappi: 'Prahan juutalaiskorttelin keskiaikainen kujaverkko',
@@ -613,7 +923,37 @@ export const EUROOPAN_KADONNEET = {
     lahde: 'en-Wikipedia "Josefov" ja Prague Jewish Town redevelopment (tarkistettu 21.9.2026).',
     kuva: 'ihme-josefov-asanace-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Josefov',
   })],
-  HUN: [kohde({
+  HUN: [
+    ihmeKohde({
+      id: 'erzsebet-silta',
+      nimi: 'Alkuperäinen Erzsébet-silta',
+      nimio: 'Erzsébet-silta',
+      kysymykset: ['Kuinka pitkä oli sillan jänneväli?', 'Miten alkuperäinen Erzsébet-silta tuhoutui?'],
+      korostukset: ['Tonava|Tonavan', 'keisarinna Elisabet|keisarinna Elisabetin'],
+      nappi: 'Ketjusilta, jonka jänneväli oli ennätys',
+      laudat: { maailmankartta: { x: 6468.4, y: 1497.8 }, europe: { x: 577.0, y: 644.6 } },
+      teksti: 'Budapestin Erzsébet-silta avattiin 10. lokakuuta 1903 ja nimettiin Itävalta-Unkarin keisarinna '
+        + 'Elisabetin mukaan. Siltaa varten järjestettiin kansainvälinen kilpailu, johon tuli 53 ehdotusta, '
+        + 'mutta voittanutta riippusiltaa ei voitu rakentaa, koska Unkarissa ei ollut sopivaa teräsköyttä. '
+        + 'Kauppaministeriön insinöörit Aurél Czekelius ja Antal Kherndl suunnittelivat tilalle '
+        + 'ketjusillan. Silta ylitti Tonavan 290 metrin jännevälillä, ja se oli pisin ketjusillan '
+        + 'jänneväli, kunnes Hercílio Luz -silta valmistui Brasiliassa 1926. Saksalaiset joukot räjäyttivät '
+        + 'sillan 18. tammikuuta 1945 perääntyessään. Se on ainoa Budapestin silloista, jota ei rakennettu '
+        + 'entisen mallisena, ja nykyinen silta valmistui 1964.',
+      lahde: 'en-Wikipedia ”Elisabeth Bridge (Budapest)”; de-Wikipedia ”Elisabethbrücke (Budapest)” '
+        + '(tarkistettu 31.10.2026).',
+      kuva: 'ihme-erzsebet-silta-loistoaika.jpg',
+      lyhyt: 'Jalankulkijat ja liikenne ylittävät Tonavan ketjusillalla, jonka sirojen pylväsporttien välinen '
+        + 'jänneväli on 290 metriä; reilut kolmekymmentä vuotta myöhemmin silta räjäytetään.',
+      selite: 'Noin vuonna 1930 kävelijät ja liikenne ylittävät Tonavan sillalla, jonka kannella on neljä '
+        + 'kaistaa ja molemmilla puolilla jalkakäytävä. Joki on tässä Budapestin seudun kapeimmillaan. '
+        + 'Pylväät kohoavat portteina molemmin puolin vettä, ja niiden valurautaiset kärjet erottuvat joen '
+        + 'yllä. Tammikuussa 1945 saksalaiset räjäyttävät sillan; se on ainoa Budapestin silloista, jota ei '
+        + 'rakennettu entisen mallisena. Tilalle valmistuu 1964 uusi silta, joka kestää nykyliikennettä.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1930). Faktat: en- ja '
+        + 'de-Wikipedia, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Elisabeth_Bridge_(Budapest)',
+    }),kohde({
     id: 'budan-matyas-palatsi', nimi: 'Budan Mátyás-palatsi',
     nimio: 'Mátyás-palatsi',
     nappi: 'Mátyás Corvinuksen italialainen renessanssihovi',
@@ -659,7 +999,39 @@ export const EUROOPAN_KADONNEET = {
     lahde: 'en-Wikipedia "Salona", johdanto ja tuho (tarkistettu 21.9.2026).',
     kuva: 'ihme-salona-porta-caesarea-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Salona',
   })],
-  ROU: [kohde({
+  ROU: [
+    ihmeKohde({
+      id: 'vacaresti',
+      nimi: 'Văcărești-luostari',
+      nimio: 'Văcărești',
+      kysymykset: ['Miksi Ceaușescu määräsi Văcărești-luostarin purettavaksi?', 'Mitä luostarissa oli ennen kuin siitä tuli vankila?'],
+      korostukset: ['Nicolae Mavrocordat|Nicolae Mavrocordat', 'kirjapaino|kirjapaino', 'Ceaușescu|Ceaușescu'],
+      nappi: 'Luostari, jonka tilalle jäi keskeneräinen työmaa',
+      laudat: { maailmankartta: { x: 6703.9, y: 1626.3 }, europe: { x: 712.6, y: 725.8 } },
+      teksti: 'Văcărești oli Bukarestin suuri luostari, jonka Valakian ruhtinas Nicolae Mavrocordat aloitti '
+        + '1716; kirkko vihittiin 24. syyskuuta 1724. Luostariin perustettiin kreikankielinen koulu, '
+        + 'kirjapaino ja kirjasto, jonka vuoden 1723 luettelossa oli 237 kirjoittajaa. Vuoden 1848 '
+        + 'vallankumouksen johtajia pidettiin täällä vangittuina, ja vuodesta 1868 luostari oli '
+        + 'virallisesti vankila. 1970-luvulla se alettiin kunnostaa uskonnollisen taiteen museoksi, mutta '
+        + 'työ keskeytyi vuoden 1977 maanjäristyksen jälkeen. Ceaușescu määräsi luostarin purettavaksi, kun '
+        + 'patriarkka ei suostunut ottamaan sitä käyttöön ennen kunnostusta. Purku alkoi syksyllä 1985, ja '
+        + 'koko kompleksi oli maan tasalla 1987. Tilalle suunniteltu oikeusministeriön rakennus jäi kesken '
+        + '1990.',
+      lahde: 'en-Wikipedia "Văcărești Monastery", johdanto ja osiot historiasta ja purusta; ro-Wikipedia '
+        + '"Mănăstirea Văcărești", osio purusta (tarkistettu 31.10.2026).',
+      kuva: 'ihme-vacaresti-loistoaika.jpg',
+      lyhyt: 'Oppilaat opiskelevat luostarin kreikankielisessä koulussa, kirjapaino tuottaa uusia kirjoja ja '
+        + 'kirjasto täyttyy; reilut kaksisataa vuotta myöhemmin Ceaușescu määrää luostarin purettavaksi.',
+      selite: 'Noin vuonna 1740 oppilaat opiskelevat luostarin kreikankielisessä koulussa, ja kirjapainosta '
+        + 'tulee tuoreita kirjoja. Kirjaston luettelossa on jo 237 kirjoittajaa, ja kirkko seisoo luostarin '
+        + 'pihalla vuonna 1724 vihittynä. Länsipuolella on kappeli ja pienempi toinen piha, jotka on '
+        + 'lisätty 1736. Painon puristin narahtaa, ja märät arkit ripustetaan kuivumaan. Syksyllä 1985 '
+        + 'alkaa purku, joka vie koko kompleksin maan tasalle 1987 mennessä; tilalle valetaan perustukset, '
+        + 'mutta rakennus jää kesken.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1740). Faktat: en- ja '
+        + 'ro-Wikipedia "Văcărești Monastery", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/V%C4%83c%C4%83re%C8%99ti_Monastery',
+    }),kohde({
     id: 'coltea-torni', nimi: 'Colțea-torni',
     nappi: 'Bukarestin korkein kellotorni juuri ennen purkua',
     laudat: { maailmankartta: { x: 6703.5, y: 1625.1 }, europe: { x: 712.4, y: 725.0 } },
@@ -685,7 +1057,37 @@ export const EUROOPAN_KADONNEET = {
    * (museopalatsi 2018), joten kadonnut: false – kartalla nykytilan valokuva ja "Koe ihme" avaa loistoaikakuvan
    * (sama sääntö kuin Dresdenin Frauenkirche).
    */
-  LTU: [rappeutunutKohde({
+  LTU: [
+    ihmeKohde({
+      id: 'suuri-synagoga-vilna',
+      nimi: 'Vilnan suuri synagoga',
+      kysymykset: ['Miksi Vilnan suuren synagogan lattia oli kaivettu syvälle maahan?', 'Mitä synagogan paikalla on löydetty kaivauksissa?'],
+      korostukset: ['bimah|bimah', 'Johann Christoph Glaubitz|Johann Christoph Glaubitz'],
+      nappi: 'Synagoga, jonka lattia kaivettiin kirkkoa matalammalle',
+      laudat: { maailmankartta: { x: 6676.2, y: 1180.6 }, europe: { x: 696.7, y: 455.5 } },
+      teksti: 'Vilnan suuri synagoga rakennettiin kivestä 1630–1633 kaupungin juutalaisyhteisön pääsynagogaksi. '
+        + 'Koska synagoga ei saanut olla kirkkoa korkeampi, sen lattia kaivettiin syvälle maahan: ulkoa '
+        + 'rakennus näytti kolmikerroksiselta, mutta sisällä tila kohosi yli viiden kerroksen korkeuteen. '
+        + '1700-luvun puolivälissä arkkitehti Johann Christoph Glaubitz uudisti sisätilat, ja salin '
+        + 'keskelle tehtiin rokokoo-tyylinen bimah, Tooran lukukoroke. Ennen sotaa korkeimpina pyhäpäivinä '
+        + 'synagogassa rukoili jopa 5 000 ihmistä. Natsit ryöstivät ja polttivat sen toisen maailmansodan '
+        + 'aikana, ja Neuvostoliiton viranomaiset purkivat rauniot 1957 mennessä. Kaivauksissa on '
+        + '2010-luvulta lähtien löytynyt seinien ja bimahin jäännöksiä.',
+      lahde: 'en-Wikipedia "Great Synagogue of Vilna", johdanto ja osiot rakennuksesta, tuhoutumisesta ja '
+        + 'kaivauksista (tarkistettu 31.10.2026).',
+      kuva: 'ihme-suuri-synagoga-vilna-loistoaika.jpg',
+      lyhyt: 'Yhteisö laskeutuu portaita syvälle maan alle upotettuun saliin, jonka katto kohoaa yli viiden '
+        + 'kerroksen korkeuteen; vajaat seitsemänkymmentä vuotta myöhemmin natsit polttavat synagogan.',
+      selite: 'Vuonna 1873 pyhäpäivän rukoukseen kokoontuva yhteisö laskeutuu syvälle katutason alapuolelle '
+        + 'upotettuun saliin, jonka katto kohoaa yli viiden kerroksen korkeuteen. Salin keskellä on '
+        + 'rokokoo-tyylinen bimah, ja uskonnollisina juhlapäivinä rukoilijoita on tuhansia. Ulkoapäin '
+        + 'synagoga näyttää vain kolmikerroksiselta, koska kirkkoa korkeampaa temppeliä ei saanut rakentaa. '
+        + 'Vuonna 1941 natsit ryöstävät ja polttavat synagogan, ja Neuvostoliiton viranomaiset purkavat '
+        + 'rauniot 1957 mennessä.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873). Faktat: en-Wikipedia '
+        + '"Great Synagogue of Vilna", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Great_Synagogue_of_Vilna',
+    }),rappeutunutKohde({
     id: 'vilnan-alalinna', nimi: 'Vilnan alalinna',
     nappi: 'Liettuan suurruhtinaiden palatsi, purettu 1801 ja rakennettu uudelleen',
     laudat: { maailmankartta: { x: 6676.3, y: 1180.3 }, europe: { x: 696.7, y: 455.4 } },
@@ -707,7 +1109,37 @@ export const EUROOPAN_KADONNEET = {
     url: 'https://en.wikipedia.org/wiki/Palace_of_the_Grand_Dukes_of_Lithuania',
   })],
   // Rakennettu uudelleen 1996–1999 → kadonnut: false (omistaja 31.10.2026 klo 12.49, PT; ks. Vilnan alalinna yllä).
-  LVA: [rappeutunutKohde({
+  LVA: [
+    ihmeKohde({
+      id: 'gogolin-synagoga',
+      nimi: 'Gogolin kadun synagoga',
+      kysymykset: ['Minkä vuoksi Gogolin kadun synagoga tunnettiin koko Riiassa?', 'Mitä synagogan paikalla on muistona?'],
+      korostukset: ['Paul von Hardenack|Paul von Hardenack', 'kanttori|kanttoreistaan', 'Jānis Lipke|Jānis Lipkelle'],
+      nappi: 'Synagoga, joka tunnettiin kanttoreistaan',
+      laudat: { maailmankartta: { x: 6637.2, y: 1074.5 }, europe: { x: 674.2, y: 396.0 } },
+      teksti: 'Gogolin kadun synagoga eli Riian suuri koraalisynagoga oli kaupungin suurin synagoga. Arkkitehti '
+        + 'Paul von Hardenack suunnitteli tiilirakennuksen 1868, ja se valmistui 1871; tyylissä hallitsi '
+        + 'uusrenessanssi. Koko Riiassa synagoga tunnettiin kanttoreistaan ja kuorostaan. Saksan '
+        + 'miehityksen ensimmäisinä päivinä, 4. heinäkuuta 1941, synagoga sytytettiin palamaan, ja '
+        + 'tulipalossa kuoli ihmisiä; lähteet eroavat siinä, kuinka monta. Neuvostoviranomaiset purkivat '
+        + 'jäljelle jääneet rauniot ja tekivät paikasta aukion. Paikalle pystytettiin muistokivi 1988 ja '
+        + 'muistomerkki 1993, joka seuraa synagogan seinien linjaa, sekä 2007 muistomerkki Jānis Lipkelle '
+        + 'ja muille juutalaisia pelastaneille.',
+      lahde: 'en-Wikipedia "Great Choral Synagogue (Riga)" ja "Burning of the Riga synagogues", johdanto ja '
+        + 'osiot rakennuksesta, tuhosta ja muistomerkeistä (tarkistettu 31.10.2026).',
+      kuva: 'ihme-gogolin-synagoga-loistoaika.jpg',
+      lyhyt: 'Kanttori ja kuoro täyttävät synagogan äänellä sapatin alkaessa, ja yhteisö kuuntelee; reilut '
+        + 'neljäkymmentä vuotta myöhemmin synagoga poltetaan.',
+      selite: 'Synagoga on valmistunut 1871 Paul von Hardenackin suunnitelmien mukaan. Noin vuonna 1900 sapatin '
+        + 'alkaessa kanttori ja kuoro täyttävät uusrenessanssityylisen tiilisalin äänellä, ja yhteisö '
+        + 'kuuntelee Riian suurimmassa synagogassa. Koko kaupungissa puhutaan synagogan kanttoreista ja '
+        + 'kuorosta, ja rakennus on yhteisön keskus. Heinäkuussa 1941 synagoga sytytetään, ja tulipalossa '
+        + 'kuolee ihmisiä. Neuvostoviranomaiset purkavat rauniot, ja paikalle jää aukio, jossa muistomerkki '
+        + 'seuraa synagogan seinien linjaa.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1900). Faktat: '
+        + 'en-Wikipedia "Great Choral Synagogue (Riga)", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Great_Choral_Synagogue_(Riga)',
+    }),rappeutunutKohde({
     id: 'mustapaiden-talo', nimi: 'Riian Mustapäiden talo',
     nimio: 'Mustapäiden talo',
     nappi: 'Kauppiasveljeskunnan juhlarakennus, räjäytetty 1948 ja rakennettu uudelleen',
@@ -740,7 +1172,41 @@ export const EUROOPAN_KADONNEET = {
     lahde: 'en-Wikipedia "Narva", toinen maailmansota ja jälleenrakennus (tarkistettu 21.9.2026).',
     kuva: 'ihme-narvan-vanhakaupunki-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Narva',
   })],
-  FIN: [kohde({
+  FIN: [
+    ihmeKohde({
+      id: 'helsinki-vanha-asema',
+      nimi: 'Helsingin vanha rautatieasema',
+      nimio: 'Vanha asema',
+      kysymykset: ['Miksi Helsingin ensimmäinen rautatieasema purettiin?', 'Kuka suunnitteli korvaavan aseman?'],
+      korostukset: ['Carl Albert Edelfelt|Carl Albert Edelfeltin', 'Eliel Saarinen|Eliel Saarisen'],
+      nappi: 'Asema, jolla paloi kaasuvalo',
+      laudat: { maailmankartta: { x: 6664.7, y: 917.2 }, europe: { x: 690.1, y: 311.1 } },
+      teksti: 'Helsingin ensimmäinen rautatieasema valmistui 1861 Kluuvinlahden täytemaalle, ja liikenne '
+        + 'Hämeenlinnaan alkoi 17. maaliskuuta 1862. Hämeen lääninarkkitehti Carl Albert Edelfeltin '
+        + 'suunnittelema rakennus oli kolmikerroksinen ja verhoiltu luonnonkivellä, ja se muistutti '
+        + 'uusgoottilaisen ja uusrenessanssin sekoitusta tudor-tyylisine kaarineen, kuin romanttista '
+        + 'kartanoa. Torni jäi kustannussyistä rakentamatta. Muista asemista poiketen siinä paloi '
+        + 'kaasuvalo, sillä kaupungin ensimmäinen kaasulaitos rakennettiin viereen. Asema mitoitettiin noin '
+        + '20 000 asukkaan kaupungille, mutta väkiluku kasvoi lähes 70 000:lla 1900-luvun alkuun mennessä. '
+        + 'Rakennus purettiin joulukuussa 1918, ja Eliel Saarisen suunnittelema asema vihittiin 5. '
+        + 'maaliskuuta 1919.',
+      lahde: 'fi-Wikipedia ”Helsingin päärautatieasema”, osio ”Historia > Ensimmäinen asemarakennus”; '
+        + 'en-Wikipedia ”Helsinki Central Station”, osio ”First station” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-helsinki-vanha-asema-loistoaika.jpg',
+      lyhyt: 'Kaukojunan matkustaja kulkee odotussalien läpi puukatoksen alle laiturille, ja yläkerroksissa '
+        + 'asuvat rautatiepäällikkö ja asemapäällikkö; reilut neljäkymmentä vuotta myöhemmin asema '
+        + 'puretaan.',
+      selite: 'Vuonna 1873 höyryveturi seisoo laiturilla puisen katoksen alla. Kaukomatkustajat kulkevat '
+        + 'odotussalien läpi, mutta lähijunaan noustaan suoraan Kaivokadun rautaportista. Aseman edessä '
+        + 'levittäytyy Rautatientori, joka raivattiin pienten rakennusten tilalle rautatien tieltä. '
+        + 'Yläkerroksissa ovat rautatiepäällikön ja asemapäällikön asunnot, ja ikkunoissa loistaa '
+        + 'kaasuvalo. Vanhasta asemasta tulee lopulta liian pieni, ja se puretaan joulukuussa 1918, kun '
+        + 'Saarisen asema on valmis.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+        + 'Faktat: fi-Wikipedia ”Helsingin päärautatieasema” ja en-Wikipedia ”Helsinki Central Station”, '
+        + 'tarkistettu 31.10.2026.',
+      url: 'https://fi.wikipedia.org/wiki/Helsingin_p%C3%A4%C3%A4rautatieasema',
+    }),kohde({
     id: 'turun-tuomiokirkon-vanha-torni', nimi: 'Turun tuomiokirkon vanha torni',
     nimio: 'Tuomiokirkon torni',
     nappi: 'Sipulikupolinen barokkitorni ennen Turun suurpaloa',
@@ -752,6 +1218,37 @@ export const EUROOPAN_KADONNEET = {
     kuva: 'ihme-turun-tuomiokirkon-vanha-torni-loistoaika.jpg', url: 'https://fi.wikipedia.org/wiki/Turun_tuomiokirkko',
   })],
   SWE: [
+    ihmeKohde({
+      id: 'kustaa-ooppera',
+      nimi: 'Kustaa III:n ooppera',
+      nimio: 'Vanha ooppera',
+      kysymykset: ['Mitä Kustaa III:lle tapahtui oopperan naamiaisissa 1792?', 'Minkä Verdin oopperan aihe on tämä tapahtuma?'],
+      korostukset: ['Carl Fredrik Adelcrantz|Carl Fredrik Adelcrantzin', 'Verdi|Verdin'],
+      nappi: 'Ooppera, jossa kuningas ammuttiin naamiaisissa',
+      laudat: { maailmankartta: { x: 6435.7, y: 958.9 }, europe: { x: 558.2, y: 333.2 } },
+      teksti: 'Kustaa III perusti Ruotsin oopperan ja rakennutti sille talon Gustav Adolfs torgin itälaidalle. '
+        + 'Carl Fredrik Adelcrantzin suunnittelema ooppera vihittiin 30. syyskuuta 1782 Naumannin '
+        + 'oopperalla Cora och Alonzo. Lavan koko oli noin 10,7 × 23,7 metriä, ja katsomossa oli parteri ja '
+        + 'neljä parvea. Maaliskuun 16. päivänä 1792 talossa pidettiin naamiaiset, joissa aatelisten '
+        + 'salaliittolaiset ampuivat kuningasta; hän kuoli 29. maaliskuuta. Naamiaiset kiellettiin 1821 '
+        + 'asti, ja Verdin ooppera Un ballo in maschera (1859) sai tapahtumasta aiheensa. Vanha ooppera '
+        + 'purettiin 1892, koska koneisto oli vanhentunut ja talo oli palovaarallinen, ja Oskar II halusi '
+        + 'nykyaikaisen oopperan samalle paikalle. Se oli vielä pystyssä isoisän matkavuonna 1873.',
+      lahde: 'sv-Wikipedia ”Gustavianska operahuset” ja ”Kungliga Operan”; en-Wikipedia ”Royal Swedish Opera” '
+        + 'ja ”Gustav III of Sweden” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-kustaa-ooppera-loistoaika.jpg',
+      lyhyt: 'Yleisö täyttää parterren ja neljä parvea, ja avajaisissa 30. syyskuuta 1782 soi Naumannin Cora '
+        + 'och Alonzo; kymmenen vuotta myöhemmin kuningas ammutaan samassa talossa.',
+      selite: 'Maaliskuun 16. päivänä 1792 kuningas lukee illallisella nimettömän kirjeen, joka varoittaa '
+        + 'salaliitosta ja kehottaa lykkäämään naamiaisia, mutta hän ei välitä siitä. Oopperan salissa on '
+        + 'naamioituneita vieraita, ja puoliyön aikaan naamioidut miehet tukkivat hänen tiensä. Laukaus '
+        + 'kuuluu takaa, ja kuningas kuolee haavaansa 29. maaliskuuta. Talo on kuninkaan oma hanke, ja se '
+        + 'palvelee vielä sata vuotta; se puretaan 1892, ja uusi ooppera vihitään 1898.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1792). Faktat: sv-Wikipedia '
+        + '”Gustavianska operahuset” ja ”Kungliga Operan” sekä en-Wikipedia ”Gustav III of Sweden”, '
+        + 'tarkistettu 31.10.2026.',
+      url: 'https://sv.wikipedia.org/wiki/Gustavianska_operahuset',
+    }),
     kohde({
       id: 'tre-kronor', nimi: 'Tre Kronor',
       nappi: 'Ruotsin keskiaikainen kuninkaanlinna ennen vuoden 1697 paloa',
@@ -828,6 +1325,37 @@ export const EUROOPAN_KADONNEET = {
     kuva: 'ihme-dublinin-keskiaikainen-linna-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Dublin_Castle',
   })],
   DNK: [
+    ihmeKohde({
+      id: 'vor-frue-keskiaika',
+      nimi: 'Vor Frue Kirke',
+      kysymykset: ['Mitkä kaksi tulipaloa tuhosivat Vor Frue Kirken?', 'Kenen patsaat ovat nykyisessä kirkossa?'],
+      korostukset: ['Absalon|Absalonin', 'Bertel Thorvaldsen|Bertel Thorvaldsenin'],
+      nappi: 'Kirkko, joka paloi kahdesti',
+      laudat: { maailmankartta: { x: 6252.4, y: 1134.2 }, europe: { x: 452.6, y: 429.2 } },
+      teksti: 'Vor Frue Kirke oli Kööpenhaminan vanha pääkirkko korkeimmalla kohdalla, ja sen rakentaminen oli '
+        + 'alkanut Absalonin aikana viimeistään 1187. Palon jälkeen 1314 se rakennettiin goottilaiseksi '
+        + 'tiilikirkoksi. Salamaniskut 1573 ja 1585 aiheuttivat paloja ja sortumia, ja torni purettiin ja '
+        + 'rakennettiin uudelleen 1609 mennessä korkealla keskikärjellä ja neljällä kulmakärjellä. '
+        + 'Lokakuussa 1728 neljä päivää riehunut tulipalo tuhosi keskiaikaisen kirkon ja kolmanneksen '
+        + 'kaupungista, ja uusi kirkko vihittiin 1738. Brittien pommitus syyskuussa 1807 poltti senkin. C. '
+        + 'F. Hansen rakensi paikalle uusklassisen kirkon 1817–1829, ja Bertel Thorvaldsenin veistämät '
+        + 'Kristus- ja apostolipatsaat koristavat sen sisätiloja. Juudaksen tilalla seisoo Paavali.',
+      lahde: 'en-Wikipedia ”Church of Our Lady, Copenhagen”; da-Wikipedia ”Vor Frue Kirke (København)” '
+        + '(tarkistettu 31.10.2026).',
+      kuva: 'ihme-vor-frue-keskiaika-loistoaika.jpg',
+      lyhyt: 'Kaupunkilaiset kokoontuvat punatiiliseen goottilaiseen kirkkoon, jonka korkea keskikärki kohoaa '
+        + 'Kööpenhaminan korkeimmalla kohdalla; reilut seitsemänkymmentä vuotta myöhemmin tulipalo tuhoaa '
+        + 'sen.',
+      selite: 'Noin vuonna 1650 kaupunkilaiset kokoontuvat punatiilisessä goottilaisessa kirkossa, jonka korkea '
+        + 'torni ja neljä kulmakärkeä näkyvät Kööpenhaminan korkeimmalta kohdalta. Reformaatio on jo '
+        + 'hajottanut sen patsaat ja alttarit, kun satoja kaupunkilaisia ryntäsi kirkkoon joulukuussa 1530. '
+        + 'Lokakuussa 1728 tulipalo tuhoaa kirkon, ja seuraava kirkko palaa syyskuussa 1807, kun Britannian '
+        + 'laivasto pommittaa kaupunkia. C. F. Hansenin uusklassinen kirkko vihitään 1829.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1650). Faktat: '
+        + 'en-Wikipedia ”Church of Our Lady, Copenhagen” ja da-Wikipedia ”Vor Frue Kirke (København)”, '
+        + 'tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Church_of_Our_Lady,_Copenhagen',
+    }),
     kohde({
       id: 'christiansborg', nimi: 'Toinen Christiansborg',
       nimio: 'Christiansborg',
@@ -850,7 +1378,100 @@ export const EUROOPAN_KADONNEET = {
       kuva: 'ihme-vesterport-loistoaika.jpg', url: 'https://da.wikipedia.org/wiki/Vesterport',
     }),
   ],
-  RUS: [kohde({
+  RUS: [
+    ihmeKohde({
+      id: 'nyenskans',
+      nimi: 'Nyenskans',
+      nimio: 'Nyen',
+      kysymykset: ['Kuka valtasi Nyenskansin 1703?', 'Mitä Nyenskansin ympäristöön päätettiin perustaa?'],
+      korostukset: ['Nyenskans|Nyenskansin', 'Inkeri|Inkerissä'],
+      nappi: 'Ruotsalaislinna, jonka ympärille nousi Pietari',
+      laudat: { maailmankartta: { x: 6847.0, y: 928.6 }, europe: { x: 795.1, y: 317.1 } },
+      teksti: 'Nyenskans oli ruotsalainen linnoitus Nevan ja Okhta-joen yhtymäkohdassa, ja Ruotsi rakensi sen '
+        + '1611 vahvistaakseen valtaansa Inkerissä. Okhta-joen toiselle puolelle kasvoi Nyenin '
+        + 'kauppakaupunki, joka sai kaupunkioikeudet 1632. Sen asukasmäärä oli 1600-luvun puolivälissä noin '
+        + '2 000, ja kirkonkirjojen mukaan asukkaat olivat enimmäkseen suomalaisia, sitten ruotsalaisia ja '
+        + 'joitakin saksalaisia. Venäläiset hyökkäsivät kaupunkiin 1656 ja vahingoittivat sitä pahoin, '
+        + 'mutta linnoitus kesti. Pietari Suuri valtasi Nyenskansin 1. toukokuuta 1703 ja päätti perustaa '
+        + 'uuden pääkaupungin sen ympäristöön, vaikka maa kuului vielä virallisesti Ruotsille. Linnoitus '
+        + 'purettiin vähitellen kaupungin kasvaessa.',
+      lahde: 'en-Wikipedia ”Nyenskans” ja ”Nyen” (tarkistettu 31.10.2026).',
+      kuva: 'ihme-nyenskans-loistoaika.jpg',
+      lyhyt: 'Kauppiaat ja käsityöläiset, enimmäkseen suomalaisia, asioivat Okhta-joen rannan kaupungissa '
+        + 'linnan vallien varjossa; reilut neljäkymmentä vuotta myöhemmin Pietari Suuri valtaa '
+        + 'linnoituksen.',
+      selite: 'Noin vuonna 1660 Okhta-joen rannalla elää noin 2 000 asukkaan kauppakaupunki, jonka väki on '
+        + 'kirkonkirjojen mukaan enimmäkseen suomalaista. Venäläisten hyökkäys 1656 on vahingoittanut sitä '
+        + 'pahoin, mutta joen toisella puolella Nyenskansin linnoitus vartioi yhä Nevan ja Okhtan '
+        + 'yhtymäkohtaa. Kukaan ei arvaa, että tällä kulmalla seisoo tulevan suurkaupungin paikka. '
+        + 'Toukokuussa 1703 Pietari Suuri valtaa linnoituksen ja päättää perustaa uuden pääkaupungin sen '
+        + 'ympärille.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1660). Faktat: '
+        + 'en-Wikipedia ”Nyenskans” ja ”Nyen”, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Nyenskans',
+    }),
+    ihmeKohde({
+      id: 'tsudov',
+      nimi: 'Tšudovin ja Taivaaseenastumisen luostarit',
+      nimio: 'Kremlin luostarit',
+      kysymykset: ['Minkä Kremlin luostarin katedraalissa tsaarien lapsia kastettiin?', 'Missä Taivaaseenastumisen luostarin haudat ovat nykyään?'],
+      korostukset: ['Tšudovin luostari|Tšudovin luostarin', 'marsalkka Davout|marsalkka Davout', 'Arkkienkelinkatedraali|Arkkienkelinkatedraalin'],
+      nappi: 'Kaksi Kremlin luostaria, joiden tilalle tuli sotakoulu',
+      laudat: { maailmankartta: { x: 7087.3, y: 1130.8 }, europe: { x: 933.5, y: 427.3 } },
+      teksti: 'Tšudovin luostari ja Taivaaseenastumisen luostari olivat Moskovan Kremlin vanhimpia luostareita, '
+        + 'molemmat perustettu 1300-luvulla. Tšudovin luostarin katedraalissa kastettiin tsaarien lapsia, '
+        + 'muun muassa Pietari Suuri, ja Ranskan hyökkäyksen aikana 1812 marsalkka Davout otti luostarin '
+        + 'toimistokseen. Taivaaseenastumisen luostarin katedraalin holviin haudattiin Moskovan '
+        + 'suuriruhtinattaria ja tsaarittaria, muun muassa Ivan Julman vaimoja. Neuvostohallitus purki '
+        + 'molemmat luostarit vuonna 1929 ja rakensi paikalle sotakoulun, ja hautoja siirrettiin '
+        + 'Arkkienkelinkatedraalin lisärakennukseen. Taivaaseenastumisen katedraalin ikonostaasi vietiin '
+        + 'Kaksitoista apostolia -katedraaliin. Sotakoulun rakennus purettiin lopulta vuonna 2016.',
+      lahde: 'en-Wikipedia "Chudov Monastery" ja "Ascension Convent", johdannot ja osiot historiasta, '
+        + 'hautauksista ja purusta; Interfax-uutinen 8.5.2016 ja Kremlin Presidium -artikkeli (paikan '
+        + 'nykytila; tarkistettu 31.10.2026).',
+      kuva: 'ihme-tsudov-loistoaika.jpg',
+      lyhyt: 'Nunnat sytyttävät kynttilöitä katedraalissa Moskovan ruhtinattarien haudoilla, ja viereisessä '
+        + 'luostarissa kastetaan tsaarin lapsia; vajaat kahdeksankymmentä vuotta myöhemmin molemmat '
+        + 'puretaan.',
+      selite: 'Noin vuonna 1850 nunnat sytyttävät kynttilöitä Taivaaseenastumisen luostarin viisikupolisessa '
+        + 'katedraalissa Moskovan suuriruhtinattarien ja tsaarittarien haudoilla. Viereisessä Tšudovin '
+        + 'luostarissa munkit hoitavat katedraalia, jossa tsaarien lapsia on kastettu. Kremlin kupolit '
+        + 'kohoavat luostarien yläpuolelle, ja iltakellojen ääni kantautuu muurien yli. Vuonna 1929 '
+        + 'molemmat luostarit puretaan, haudat siirretään Arkkienkelinkatedraalin lisärakennukseen, ja '
+        + 'paikalle rakennetaan sotakoulu.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1850). Faktat: '
+        + 'en-Wikipedia "Chudov Monastery" ja "Ascension Convent", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Chudov_Monastery',
+    }),
+    ihmeKohde({
+      id: 'sukharev',
+      nimi: 'Sukharevin torni',
+      kysymykset: ['Millainen Venäjän ensimmäinen laitos toimi Sukharevin tornissa?', 'Kenen rykmentistä torni sai nimensä?'],
+      korostukset: ['Pietari I|Pietari I:n', 'Jakov Bruce|Jakov Bruce', 'navigaatio|navigaation'],
+      nappi: 'Torni, jossa Venäjän ensimmäinen tähtitorni toimi',
+      laudat: { maailmankartta: { x: 7087.8, y: 1129.8 }, europe: { x: 933.7, y: 426.8 } },
+      teksti: 'Sukharevin torni oli punatiilinen, valkokivikoristeinen torni Moskovassa, joka rakennettiin '
+        + 'Pietari I:n käskystä 1692–1695. Nimi tuli Lavrenti Sukharevin johtamasta streltsi- eli '
+        + 'jousiampujarykmentistä, joka tuki Pietaria. Torni oli 64 metriä korkea, ja siinä oli kello ja '
+        + 'neljä pientä tornia. Kolmanteen kerrokseen perustettiin 1701 matematiikan ja navigaation koulu, '
+        + 'ja yläkertaan Jakov Bruce rakensi Venäjän ensimmäisen tähtitornin, jonka kaukoputket olivat jopa '
+        + '20 metriä pitkiä. Neuvostohallitus teki tornista museon 1921, mutta se purettiin 1934, koska sen '
+        + 'sanottiin haittaavan liikennettä. Purku kesti huhtikuun puolivälistä 11. kesäkuuta. Perustukset '
+        + 'löydettiin alikulkukäytävän työmaalla ja säilytettiin.',
+      lahde: 'en-Wikipedia "Sukharev Tower" ja ru-Wikipedia "Сухарева башня", johdanto ja osiot historiasta, '
+        + 'purusta ja nykytilasta (tarkistettu 31.10.2026).',
+      kuva: 'ihme-sukharev-loistoaika.jpg',
+      lyhyt: 'Kauppiaat ja kärryt kiertävät Sukharevin tornia, jonka kello lyö ja kotka seisoo huipulla; '
+        + 'kolmekymmentäneljä vuotta myöhemmin torni puretaan.',
+      selite: 'Noin vuonna 1900 Moskovan ohikulkijat kiertävät 64 metriä korkeaa Sukharevin tornia, jonka '
+        + 'huipulla seisoo kotka ja jonka seinässä on kello ja neljä pientä tornia. Siellä on toiminut '
+        + 'matematiikan ja navigaation koulu, ja yläkerrassa Venäjän ensimmäinen tähtitorni. Tornin '
+        + 'juurella Sukharevin torilla kauppiaat huutavat hintojaan. Vuonna 1934 torni puretaan, koska sen '
+        + 'sanotaan haittaavan liikennettä, ja jäljelle jäävät vain perustukset.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1900). Faktat: en- ja '
+        + 'ru-Wikipedia "Sukharev Tower", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Sukharev_Tower',
+    }),kohde({
     id: 'valkokivinen-kreml', nimi: 'Moskovan valkokivinen Kreml',
     nimio: 'Kreml',
     nappi: 'Dmitri Donskoin kalkkikivimuuri ennen tiililinnoitusta',
@@ -1114,6 +1735,35 @@ export const EUROOPAN_KADONNEET = {
     url: 'https://en.wikipedia.org/wiki/Old_Orhei',
   })],
   GBR: [
+    ihmeKohde({
+      id: 'old-tolbooth',
+      nimi: 'Old Tolbooth',
+      kysymykset: ['Minkä kirjailijan kartanossa Old Tolboothin ovi on?', 'Mikä merkitsee Old Tolboothin sisäänkäynnin paikan?'],
+      korostukset: ['Walter Scott|Walter Scott', 'Maria Stuart|Maria Stuart', 'Abbotsford|Abbotsfordiin'],
+      nappi: 'Vankila, jonka ovi päätyi kirjailijan kartanoon',
+      laudat: { maailmankartta: { x: 5727.0, y: 1121.5 }, europe: { x: 149.9, y: 422.1 } },
+      teksti: 'Old Tolbooth oli Edinburghin High Streetillä St Gilesin katedraalin luoteiskulmassa seissyt '
+        + 'raatihuone ja vankila. Kuningas Robert II myönsi paikasta peruskirjan 1386. Parlamentti '
+        + 'kokoontui siellä ensimmäisen kerran 27. marraskuuta 1438, ja Maria Stuart määräsi rakennuksen '
+        + 'purettavaksi ja rakennettavaksi uudelleen 1562. Parlamentti muutti omaan taloonsa 1639, ja '
+        + 'rakennuksesta tuli ennen kaikkea vankila; vuodesta 1785 teloitukset toimitettiin sen '
+        + 'laajennuksen katolla. Rakennus purettiin 1817, ja Walter Scott sai sen rautaoven avaimineen '
+        + 'kartanoonsa Abbotsfordiin. Scott kirjoitti vankilasta romaanin The Heart of Midlothian (1818), '
+        + 'ja Heart of Midlothian -nimiset kivet merkitsevät sisäänkäynnin paikan.',
+      lahde: 'en-Wikipedia "Old Tolbooth", johdanto ja osiot historiasta, purosta ja Walter Scottista '
+        + '(tarkistettu 31.10.2026).',
+      kuva: 'ihme-old-tolbooth-loistoaika.jpg',
+      lyhyt: 'Raatihuone ja vankila nojaavat St Gilesin katedraalin kulmaan High Streetillä; vajaat '
+        + 'kolmekymmentä vuotta myöhemmin rakennus puretaan.',
+      selite: 'Noin vuonna 1790 High Streetin kulkijat ohittavat St Gilesin katedraalin kulmassa seisovan Old '
+        + 'Tolboothin, joka on kiinni Luckenbooths-nimisessä rakennusrivissä. Sisällä toimivat vankila ja '
+        + 'kaupungin hallinto, ja viereisissä kojuissa käydään kauppaa. Parlamentti on jo 1639 muuttanut '
+        + 'omaan taloonsa, ja kapealla kadulla kärryt kolisevat raatihuoneen ohi. Valtuusto muuttaa pois '
+        + '1811, rakennus puretaan 1817, ja sen ovi päätyy Walter Scottin kartanoon.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1790). Faktat: '
+        + 'en-Wikipedia "Old Tolbooth", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Old_Tolbooth',
+    }),
     ihmeKohde({
       id: 'greenwich-palatsi',
       nimi: 'Greenwichin palatsi',
@@ -1431,6 +2081,71 @@ export const EUROOPAN_KADONNEET = {
       ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1730). Faktat: '
         + 'en-Wikipedia "Saxon Palace", tarkistettu 31.10.2026.',
       url: 'https://en.wikipedia.org/wiki/Saxon_Palace',
+    }),
+  ],
+  LUX: [
+    ihmeKohde({
+      id: 'luxemburgin-linnoitus',
+      nimi: 'Luxemburgin linnoitus',
+      kysymykset: ['Miksi Luxemburgin linnoitus purettiin?', 'Mikä linnoituksesta on yhä jäljellä?'],
+      korostukset: ['Vauban|Vaubanin', 'Gibraltar|Gibraltariksi', 'kasematti|kasematit'],
+      nappi: 'Pohjoisen Gibraltar, jonka sopimus purki',
+      laudat: { maailmankartta: { x: 6037.9, y: 1407.0 }, europe: { x: 329.0, y: 588.8 } },
+      teksti: 'Luxemburgin linnoitus kasvoi Bock-kallion päälle, jonne kreivi Siegfried rakensi linnan 963. '
+        + 'Vuosisatojen kuluessa burgundilaiset, espanjalaiset, ranskalaiset, itävaltalaiset ja '
+        + 'preussilaiset laajensivat sitä, ja Vaubanin johtamassa jälleenrakennuksessa 1684–1688 '
+        + 'työskenteli yli 3 000 miestä. Linnoitusvyöhyke peitti noin 180 hehtaaria, kun kaupunki oli noin '
+        + '120 hehtaaria, ja kallion sisään louhittiin noin 23 kilometriä kasemattikäytäviä. Sitä '
+        + 'kutsuttiin Pohjoisen Gibraltariksi. Toinen Lontoon sopimus teki Luxemburgista pysyvästi '
+        + 'puolueettoman 1867 ja määräsi linnoituksen purettavaksi. Purku kesti vuoteen 1883 ja maksoi 1,5 '
+        + 'miljoonaa frangia, joten isoisän käydessä 1873 se oli vielä kesken. Bockin ja Pétrussen '
+        + 'kasematit jäivät.',
+      lahde: 'en-Wikipedia "Fortress of Luxembourg", johdanto ja osiot historiasta, mitoista ja purusta; '
+        + 'de-Wikipedia "Festung Luxemburg", osiot "Festung" ja "Schleifung" (tarkistettu 31.10.2026).',
+      kuva: 'ihme-luxemburgin-linnoitus-loistoaika.jpg',
+      lyhyt: 'Preussilainen vartiosotilas seisoo linnoituksen portilla Bockin kallion juurella; seitsemän '
+        + 'vuotta myöhemmin sopimus määrää koko linnoituksen purettavaksi.',
+      selite: 'Noin vuonna 1860 preussilaiset varusväet vartioivat linnoituksen muureja ja portteja, ja '
+        + 'kaupunki on ahdettu kolmen muurivyöhykkeen sisään, koska linnoitus ei anna sen kasvaa. Kallion '
+        + 'sisällä kasematit yhdistävät asemat toisiinsa, ja käytävissä lyhtyjen valo heijastuu kosteasta '
+        + 'kivestä. Vuonna 1867 sopimus määrää linnoituksen purettavaksi ja Preussin joukot lähtevät '
+        + 'kaupungista; purku kestää 1883 asti ja jättää jäljelle vain osan kasemateista, kallion ja '
+        + 'muutaman tornin.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1860). Faktat: '
+        + 'en-Wikipedia "Fortress of Luxembourg", tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Fortress_of_Luxembourg',
+    }),
+  ],
+  BEL: [
+    ihmeKohde({
+      id: 'maison-du-peuple',
+      nimi: 'Maison du Peuple',
+      nimio: 'Kansan talo',
+      kysymykset: ['Kuka suunnitteli Brysselin Maison du Peuple\'n?', 'Mihin purettu rakennus päätyi?'],
+      korostukset: ['Victor Horta|Victor Horta', 'Jean Jaurès|Jean Jaurèsin'],
+      nappi: 'Talo, joka purettiin numeroituina osina',
+      laudat: { maailmankartta: { x: 5978.3, y: 1353.5 }, europe: { x: 294.7, y: 556.5 } },
+      teksti: 'Maison du Peuple oli Belgian työväenpuolueen talo Brysselissä. Victor Horta suunnitteli sen, ja '
+        + 'se vihittiin 2. huhtikuuta 1899 Jean Jaurèsin läsnä ollessa. Rakennus oli rauta- ja lasitalo, '
+        + 'jonka runkoon käytettiin yli 600 000 kiloa rautaa: alakerrassa oli myymälöitä ja '
+        + 'kahvila-ravintola, ylempänä puolueen toimistoja, kirjasto ja kokoushuoneita ja ylimpänä suuri '
+        + 'juhlasali. Julkisivu oli noin 80 metriä pitkä, ja Hortan koristeet rajoittuivat lähinnä '
+        + 'kaiteiden kaariin. Talo purettiin 1965, vaikka satoja arkkitehteja ja taiteilijoita vastusti '
+        + 'sitä. Osat numeroitiin, jotta rakennus voitaisiin pystyttää muualle, mutta sitä ei koskaan '
+        + 'tehty, ja osa ruostui ulkona. Tilalle nousi 26-kerroksinen toimistotorni.',
+      lahde: 'en-Wikipedia ”Maison du Peuple, Brussels”; fr-Wikipedia ”Maison du Peuple (Bruxelles)” '
+        + '(tarkistettu 31.10.2026).',
+      kuva: 'ihme-maison-du-peuple-loistoaika.jpg',
+      lyhyt: 'Alakerrassa kahvila ja myymälät, ylempänä puolueen toimistot ja kirjasto, ylimpänä suuri '
+        + 'juhlasali rautarungon sisällä; reilut kuusikymmentä vuotta myöhemmin talo puretaan osiin.',
+      selite: 'Huhtikuussa 1899 Maison du Peuple vihitään, ja ranskalainen sosialisti Jean Jaurès on paikalla. '
+        + 'Julkisivu on noin 80 metriä pitkä. Alakerrassa on myymälöitä ja kahvila-ravintola, ylempänä '
+        + 'puolueen toimistot, kirjasto ja kokoushuoneita, ylimmässä kerroksessa suuri juhlasali. Hortan '
+        + 'talossa rauta on rakenne eikä koriste. Vuonna 1965 talo puretaan, ja osat numeroidaan; osa '
+        + 'niistä päätyy lopulta Antwerpenin Horta Grand Caféen ja Brysselin Horta-metroasemalle.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1899). Faktat: en- ja '
+        + 'fr-Wikipedia ”Maison du Peuple”, tarkistettu 31.10.2026.',
+      url: 'https://en.wikipedia.org/wiki/Maison_du_Peuple,_Brussels',
     }),
   ],
 };

@@ -60,7 +60,10 @@
  */
 
 /** Belgian hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_BEL = [
+  ...(EUROOPAN_KADONNEET.BEL ?? []),
   {
     id: 'hahmotelma-high-fens',
     kuva: {

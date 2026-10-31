@@ -25,6 +25,12 @@
       "mitta": "keski",
       "enintään": 0.07,
       "syy": "Ohut valkoinen maailmanpyörä: musteen mediaani on lähes valkoinen rakenne; gamma 3 tummentaa jo pinnat (keski 0,664), enempi likaisi piirroksen. Karttasepän otos 31.10.2026, PT:lle kerrottu."
+    },
+    {
+      "kohde": "marseille/Marseillen siirtosilta",
+      "mitta": "keski",
+      "enintään": 0.15,
+      "syy": "Ohut tumma teräsristikko (Pont Transbordeur, kadonnut ihme): muste on lähes kokonaan tummaa rautaa; gamma 0,55 vaalentaa jo (keski 0,272 → 0,466), enempi haalistaisi rakenteen harmaaksi. Lontoon silmän peilikuva. Karttaseppä 31.10.2026."
     }
   ],
   "webp_laatu": 82,
