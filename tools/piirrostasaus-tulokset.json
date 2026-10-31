@@ -573,6 +573,18 @@
     ],
     "gamma": 0.684,
     "kylläisyys": 1.623
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "0ff554103e883b3a"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "0ff554103e883b3a"
+    }
    }
   },
   "Castel Sant’Angelo": {
@@ -600,6 +612,18 @@
     ],
     "gamma": 1.19,
     "kylläisyys": 1.288
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "9e821d3fa0c938eb"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "9e821d3fa0c938eb"
+    }
    }
   },
   "Espanjalaiset portaat": {
@@ -627,6 +651,18 @@
     ],
     "gamma": 1.153,
     "kylläisyys": 1.71
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "dd70f389645d1881"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "dd70f389645d1881"
+    }
    }
   },
   "Trevin suihkulähde": {
@@ -654,6 +690,18 @@
     ],
     "gamma": 1.264,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "b87fcda02efb67f3"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "b87fcda02efb67f3"
+    }
    }
   },
   "Pantheon": {
@@ -681,6 +729,18 @@
     ],
     "gamma": 1.237,
     "kylläisyys": 1.933
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "734f6ac543b6f487"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "734f6ac543b6f487"
+    }
    }
   },
   "Forum Romanum": {
@@ -708,6 +768,18 @@
     ],
     "gamma": 2.971,
     "kylläisyys": 1.92
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "6186c684cb5cf1bc"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "6186c684cb5cf1bc"
+    }
    }
   },
   "Colosseum": {
@@ -735,6 +807,18 @@
     ],
     "gamma": 1.471,
     "kylläisyys": 1.39
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c6e00607c54d2c2a"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c6e00607c54d2c2a"
+    }
    }
   },
   "Torre Argentina": {
@@ -762,6 +846,18 @@
     ],
     "gamma": 0.889,
     "kylläisyys": 1.094
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "5bcd33ba84475313"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "5bcd33ba84475313"
+    }
    }
   },
   "Vatikaanin palatsi": {
@@ -789,6 +885,18 @@
     ],
     "gamma": 0.974,
     "kylläisyys": 1.418
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "c98e372c33e4bd72"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "c98e372c33e4bd72"
+    }
    }
   },
   "Norsu ja obeliski": {
@@ -816,6 +924,18 @@
     ],
     "gamma": 1.932,
     "kylläisyys": 1.389
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "e7e61f609b35d662"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "e7e61f609b35d662"
+    }
    }
   }
  },
@@ -845,6 +965,18 @@
     ],
     "gamma": 1.097,
     "kylläisyys": 1.487
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "ec07c1ebf9c1fcf8"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "ec07c1ebf9c1fcf8"
+    }
    }
   },
   "Trafalgar Square": {
@@ -872,6 +1004,18 @@
     ],
     "gamma": 0.809,
     "kylläisyys": 1.01
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c3e4c3801e70964d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c3e4c3801e70964d"
+    }
    }
   },
   "Big Ben": {
@@ -899,6 +1043,18 @@
     ],
     "gamma": 0.742,
     "kylläisyys": 1.701
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "6b49c3bf63d85f9d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "6b49c3bf63d85f9d"
+    }
    }
   },
   "Lontoon silmä": {
@@ -926,6 +1082,18 @@
     ],
     "gamma": 3,
     "kylläisyys": 1.902
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "17cfad14c4f2a04a"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "17cfad14c4f2a04a"
+    }
    }
   },
   "Pyhän Paavalin katedraali": {
@@ -953,6 +1121,18 @@
     ],
     "gamma": 1.029,
     "kylläisyys": 1.65
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "015b2a21147801a5"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "015b2a21147801a5"
+    }
    }
   },
   "Tower Bridge": {
@@ -980,6 +1160,18 @@
     ],
     "gamma": 0.904,
     "kylläisyys": 0.972
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "f0a12b3baa8f0b79"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "f0a12b3baa8f0b79"
+    }
    }
   },
   "Thamesin vuorovesi": {
@@ -1007,6 +1199,18 @@
     ],
     "gamma": 0.891,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "7dea08a3a454308d"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "7dea08a3a454308d"
+    }
    }
   },
   "Vanha London Bridge": {
@@ -1034,6 +1238,18 @@
     ],
     "gamma": 1.337,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "f3c25a2422c64924"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "f3c25a2422c64924"
+    }
    }
   },
   "Exchange Alley": {
@@ -1061,6 +1277,18 @@
     ],
     "gamma": 1.457,
     "kylläisyys": 1.428
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "ba5a4e7429b3c63c"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "ba5a4e7429b3c63c"
+    }
    }
   },
   "Dickensin pubi": {
@@ -1088,6 +1316,18 @@
     ],
     "gamma": 0.584,
     "kylläisyys": 1.503
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "0d50c66bd3f5142c"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "0d50c66bd3f5142c"
+    }
    }
   },
   "Abbey Roadin suojatie": {
@@ -1115,6 +1355,18 @@
     ],
     "gamma": 1.033,
     "kylläisyys": 1.893
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "15aeadec4afc427f"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "15aeadec4afc427f"
+    }
    }
   },
   "Leake Streetin tunneli": {
@@ -1142,6 +1394,18 @@
     ],
     "gamma": 1.137,
     "kylläisyys": 0.902
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c1ee3ce8efb12a87"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c1ee3ce8efb12a87"
+    }
    }
   },
   "Turbiinihalli": {
@@ -1169,6 +1433,18 @@
     ],
     "gamma": 0.55,
     "kylläisyys": 0.999
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "cae25f3bef4312e4"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "cae25f3bef4312e4"
+    }
    }
   }
  },
@@ -1198,6 +1474,18 @@
     ],
     "gamma": 1.081,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "25b444d235031c9f"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "25b444d235031c9f"
+    }
    }
   },
   "Akropolis": {
@@ -1225,6 +1513,18 @@
     ],
     "gamma": 1.284,
     "kylläisyys": 1.594
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "55cb2f5c5f05f5ca"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "55cb2f5c5f05f5ca"
+    }
    }
   },
   "Akropolis-museo": {
@@ -1252,6 +1552,18 @@
     ],
     "gamma": 1.795,
     "kylläisyys": 1.57
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "2c9583462324c1af"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "2c9583462324c1af"
+    }
    }
   },
   "Zeuksen temppeli": {
@@ -1279,6 +1591,18 @@
     ],
     "gamma": 1.406,
     "kylläisyys": 1.194
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "35003a8b69968285"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "35003a8b69968285"
+    }
    }
   },
   "Sýntagman aukio": {
@@ -1306,6 +1630,18 @@
     ],
     "gamma": 1.686,
     "kylläisyys": 1.055
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "337329261929c7d9"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "337329261929c7d9"
+    }
    }
   },
   "Iliou Melathron": {
@@ -1333,6 +1669,18 @@
     ],
     "gamma": 1.549,
     "kylläisyys": 1.004
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "f84e81bee0f97e10"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "f84e81bee0f97e10"
+    }
    }
   },
   "Lykavittós": {
@@ -1360,6 +1708,18 @@
     ],
     "gamma": 3,
     "kylläisyys": 1.486
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d55bd23acc76ec51"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d55bd23acc76ec51"
+    }
    }
   },
   "Kallimarmaro": {
@@ -1387,6 +1747,18 @@
     ],
     "gamma": 1.634,
     "kylläisyys": 1.499
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "368707a963cdaa14"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "368707a963cdaa14"
+    }
    }
   },
   "Niken temppeli": {
@@ -1414,6 +1786,18 @@
     ],
     "gamma": 1.354,
     "kylläisyys": 1.423
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "5816e404c396bb0b"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "5816e404c396bb0b"
+    }
    }
   }
  },
@@ -1443,6 +1827,18 @@
     ],
     "gamma": 1.116,
     "kylläisyys": 0.934
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "e42b6a5ddd5d4220"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "e42b6a5ddd5d4220"
+    }
    }
   },
   "Linnanmäki": {
@@ -1470,6 +1866,18 @@
     ],
     "gamma": 1.432,
     "kylläisyys": 0.945
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "5fba9d33a79d5402"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "5fba9d33a79d5402"
+    }
    }
   },
   "Päärautatieasema": {
@@ -1497,6 +1905,18 @@
     ],
     "gamma": 1.144,
     "kylläisyys": 0.934
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "2c6929ecb736a6d5"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "2c6929ecb736a6d5"
+    }
    }
   },
   "Kaisaniemen puisto": {
@@ -1524,6 +1944,18 @@
     ],
     "gamma": 1.17,
     "kylläisyys": 1.026
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "f99653f7ea49ddd5"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "f99653f7ea49ddd5"
+    }
    }
   },
   "Kallion kirkko": {
@@ -1551,6 +1983,18 @@
     ],
     "gamma": 1.439,
     "kylläisyys": 0.882
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "361ae153692ef238"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "361ae153692ef238"
+    }
    }
   },
   "Tuomiokirkko": {
@@ -1578,6 +2022,18 @@
     ],
     "gamma": 1.343,
     "kylläisyys": 0.863
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "98b29d9d81525d6f"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "98b29d9d81525d6f"
+    }
    }
   },
   "Uspenskin katedraali": {
@@ -1605,6 +2061,18 @@
     ],
     "gamma": 1.006,
     "kylläisyys": 0.999
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "76c0a50f30cf2226"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "76c0a50f30cf2226"
+    }
    }
   },
   "Johanneksenkirkko": {
@@ -1632,6 +2100,18 @@
     ],
     "gamma": 0.997,
     "kylläisyys": 0.984
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "338c8bf00c901be2"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "338c8bf00c901be2"
+    }
    }
   },
   "Suomenlinna": {
@@ -1659,6 +2139,18 @@
     ],
     "gamma": 1.191,
     "kylläisyys": 1.034
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "7e297ffbaa9ddff7"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "7e297ffbaa9ddff7"
+    }
    }
   },
   "Finlandia": {
@@ -1686,6 +2178,18 @@
     ],
     "gamma": 1.754,
     "kylläisyys": 0.808
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "7398c3af6d266bff"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "7398c3af6d266bff"
+    }
    }
   }
  },
@@ -1715,6 +2219,18 @@
     ],
     "gamma": 2.709,
     "kylläisyys": 1.669
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c7b20d531df79f5c"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c7b20d531df79f5c"
+    }
    }
   },
   "Sininen moskeija": {
@@ -1742,6 +2258,18 @@
     ],
     "gamma": 1.148,
     "kylläisyys": 1.546
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "f2e05569d77fcb06"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "f2e05569d77fcb06"
+    }
    }
   },
   "Hagia Sofia": {
@@ -1769,6 +2297,18 @@
     ],
     "gamma": 1.08,
     "kylläisyys": 0.949
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "a46649735c0cb8d0"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "a46649735c0cb8d0"
+    }
    }
   },
   "Topkapın palatsi": {
@@ -1796,6 +2336,18 @@
     ],
     "gamma": 1.259,
     "kylläisyys": 1.819
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "9a5ba1583c659561"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "9a5ba1583c659561"
+    }
    }
   },
   "Galatan torni": {
@@ -1823,6 +2375,18 @@
     ],
     "gamma": 1.014,
     "kylläisyys": 1.993
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "57b13c34dceef97d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "57b13c34dceef97d"
+    }
    }
   },
   "Üsküdar": {
@@ -1850,6 +2414,18 @@
     ],
     "gamma": 1.791,
     "kylläisyys": 1.389
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "310f9072335ed703"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "310f9072335ed703"
+    }
    }
   },
   "Süleymaniyen moskeija": {
@@ -1877,6 +2453,18 @@
     ],
     "gamma": 1.372,
     "kylläisyys": 1.518
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "948c7dea0e101a7d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "948c7dea0e101a7d"
+    }
    }
   },
   "Galatan silta": {
@@ -1904,6 +2492,18 @@
     ],
     "gamma": 1.722,
     "kylläisyys": 1.227
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "ae6ded0ebb7e01aa"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "ae6ded0ebb7e01aa"
+    }
    }
   },
   "Sirkecin asema": {
@@ -1931,6 +2531,18 @@
     ],
     "gamma": 1.138,
     "kylläisyys": 1.217
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "0e24abe7595c879c"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "0e24abe7595c879c"
+    }
    }
   },
   "Neitsyttorni": {
@@ -1958,6 +2570,18 @@
     ],
     "gamma": 1.338,
     "kylläisyys": 1.507
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "47694c744e1f2e73"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "47694c744e1f2e73"
+    }
    }
   },
   "Camondon portaat": {
@@ -1985,6 +2609,18 @@
     ],
     "gamma": 1.11,
     "kylläisyys": 1.409
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "210fc700ddc54d09"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "210fc700ddc54d09"
+    }
    }
   },
   "Käärmepylväs": {
@@ -2012,6 +2648,18 @@
     ],
     "gamma": 1.302,
     "kylläisyys": 1.477
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "1184f73e228cd91c"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "1184f73e228cd91c"
+    }
    }
   }
  },
@@ -2041,6 +2689,18 @@
     ],
     "gamma": 1.048,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "0061508a7a885b68"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "0061508a7a885b68"
+    }
    }
   },
   "Brandenburgin portti": {
@@ -2068,6 +2728,18 @@
     ],
     "gamma": 1.591,
     "kylläisyys": 1.347
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "214276981a61c4c0"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "214276981a61c4c0"
+    }
    }
   },
   "Checkpoint Charlie": {
@@ -2095,6 +2767,18 @@
     ],
     "gamma": 1.175,
     "kylläisyys": 1.872
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "0931d787081cecb6"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "0931d787081cecb6"
+    }
    }
   },
   "Museosaari": {
@@ -2122,6 +2806,18 @@
     ],
     "gamma": 0.999,
     "kylläisyys": 1.73
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "0a275978efe58321"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "0a275978efe58321"
+    }
    }
   },
   "Tv-torni": {
@@ -2149,6 +2845,18 @@
     ],
     "gamma": 0.988,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "a3ad09c8e6ce87fd"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "a3ad09c8e6ce87fd"
+    }
    }
   },
   "East Side Gallery": {
@@ -2176,6 +2884,18 @@
     ],
     "gamma": 0.806,
     "kylläisyys": 1.976
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "dd841cdf5d47a465"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "dd841cdf5d47a465"
+    }
    }
   },
   "Kulta-Liisa": {
@@ -2203,6 +2923,18 @@
     ],
     "gamma": 2.209,
     "kylläisyys": 1.836
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "baecd62027c005d4"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "baecd62027c005d4"
+    }
    }
   },
   "Hobrechtin putket": {
@@ -2230,6 +2962,18 @@
     ],
     "gamma": 1.963,
     "kylläisyys": 0.941
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "69a532d9482a5802"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "69a532d9482a5802"
+    }
    }
   },
   "Maailmankello": {
@@ -2257,6 +3001,18 @@
     ],
     "gamma": 1.39,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "f2124791b433e3d3"
+    },
+    "tasattu": {
+     "leveys": 512,
+     "korkeus": 512,
+     "alfa": "f2124791b433e3d3"
+    }
    }
   }
  }
