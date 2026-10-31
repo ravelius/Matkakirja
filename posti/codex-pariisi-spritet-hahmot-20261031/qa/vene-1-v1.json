@@ -1,0 +1,38 @@
+{
+  "id": "vene-1",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/vene-1-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/vene-1.png",
+  "rawDimensions": [
+    1254,
+    1254
+  ],
+  "dimensions": [
+    256,
+    256
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 43484,
+  "alphaVisibleBBox16": [
+    10,
+    35,
+    246,
+    220
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual QA on ivory contact sheet passed: requested object, correct direction, complete silhouette, quiet palette, genuine alpha, no backdrop or ground. Tiny natural vehicle rear lamps retained; no red body/cloth accents.",
+  "exportOperation": "crop=816:640:243:311,scale=236:236:force_original_aspect_ratio=decrease:flags=lanczos,format=rgba,pad=256:256:(ow-iw)/2:(oh-ih)/2:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/vene-1-v1.txt",
+  "sha256": "69411b9d2c822a52175b26861fda98b78959be12de89d1634bf4ebc63f098d87",
+  "bytes": 73285,
+  "suggestedBottomCentreAnchorPx": [
+    128.0,
+    220
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}

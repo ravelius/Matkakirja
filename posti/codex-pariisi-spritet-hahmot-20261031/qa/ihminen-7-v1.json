@@ -1,0 +1,38 @@
+{
+  "id": "ihminen-7",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/ihminen-7-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-7.png",
+  "rawDimensions": [
+    1254,
+    1254
+  ],
+  "dimensions": [
+    256,
+    256
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 51674,
+  "alphaVisibleBBox16": [
+    66,
+    10,
+    189,
+    246
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual QA on ivory composite passed: correct object/direction, complete silhouette, consistent quiet palette, no opaque backdrop or ground. Tiny natural vehicle rear lamps retained; no red body/cloth accents.",
+  "exportOperation": "crop=472:907:414:171,scale=236:236:force_original_aspect_ratio=decrease:flags=lanczos,format=rgba,pad=256:256:(ow-iw)/2:(oh-ih)/2:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/ihminen-7-v1.txt",
+  "sha256": "fc25e11379ece5ca9bd32eb04552cdd9ddc398bedc9daff56cf4212a2edeff5b",
+  "bytes": 46952,
+  "suggestedBottomCentreAnchorPx": [
+    127.5,
+    246
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}

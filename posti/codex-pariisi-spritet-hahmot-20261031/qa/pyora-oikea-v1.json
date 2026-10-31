@@ -1,0 +1,38 @@
+{
+  "id": "pyora-oikea",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/pyora-oikea-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/pyora-oikea.png",
+  "rawDimensions": [
+    1254,
+    1254
+  ],
+  "dimensions": [
+    256,
+    256
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 40813,
+  "alphaVisibleBBox16": [
+    10,
+    17,
+    246,
+    239
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual QA on ivory contact sheet passed: requested object, correct direction, complete silhouette, quiet palette, genuine alpha, no backdrop or ground. Tiny natural vehicle rear lamps retained; no red body/cloth accents.",
+  "exportOperation": "crop=1016:955:140:155,scale=236:236:force_original_aspect_ratio=decrease:flags=lanczos,format=rgba,pad=256:256:(ow-iw)/2:(oh-ih)/2:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/pyora-oikea-v1.txt",
+  "sha256": "f63aab96f28ac181da7585c33b9fafe0d0996ed94bcaefd42698a5b730adc687",
+  "bytes": 95462,
+  "suggestedBottomCentreAnchorPx": [
+    128.0,
+    239
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}

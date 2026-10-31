@@ -1,0 +1,852 @@
+{
+  "task": 1422,
+  "batch": "life",
+  "assetCount": 44,
+  "assets": [
+    {
+      "id": "puu-1",
+      "file": "puu-1.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/puu-1.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/puu-1-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "49f46d510857257d03a5e4812b8dec52f7297529b12897a3d713a6ca98572383",
+      "bytes": 107894,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "puu-2",
+      "file": "puu-2.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/puu-2.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/puu-2-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "6c827c2d98e72105e4d792c8319a662ff8f65ad210757dbdca39f10722e5feed",
+      "bytes": 107781,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "puu-3",
+      "file": "puu-3.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/puu-3.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/puu-3-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "636015041317f193019077015da5b3d5712a16a631063b1aa9559d1fcfddd9cc",
+      "bytes": 100008,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "puu-4",
+      "file": "puu-4.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/puu-4.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/puu-4-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f8f642296547082f55cec1358a1fc0063bb3e2d598e046c4d146236b740f1ccc",
+      "bytes": 32685,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "puu-5",
+      "file": "puu-5.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/puu-5.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/puu-5-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "e8aa9d6bc75dff2294d8babfd99ba09fd377ec22f4553c9baa8203efc9c05131",
+      "bytes": 37955,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "puu-6",
+      "file": "puu-6.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/puu-6.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/puu-6-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "d5f36068c6c687675be392633fa17e6f2edade2d014a8e2c5fce62013d5196d6",
+      "bytes": 125661,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        244
+      ]
+    },
+    {
+      "id": "ihminen-1",
+      "file": "ihminen-1.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-1.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-1-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "a34b13740d1aed79be72259e78ea259d1b38bcea08e94807e5a0fb4294ad4684",
+      "bytes": 42796,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-2",
+      "file": "ihminen-2.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-2.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-2-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "91c8b0eeff035be5eaad9122894f854997f8838d19385dab9af2d1111c5959bc",
+      "bytes": 42441,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-3",
+      "file": "ihminen-3.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-3.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-3-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "afecda032a255bfab97a7d80208f431c74beee64bb06ad3fb49f19ac5a9dc7ef",
+      "bytes": 44812,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-4",
+      "file": "ihminen-4.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-4.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-4-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "4d9e03115961bbb8d13624bdb7c123bbce716fa8af27d47ef1535b65d1e3dfd8",
+      "bytes": 51743,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-5",
+      "file": "ihminen-5.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-5.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-5-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "900d358e586d2acab9173832b02752d5ce7607e92aba79d010806eabe49fe030",
+      "bytes": 46968,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-6",
+      "file": "ihminen-6.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-6.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-6-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f9815ed21e3d313dc67030cb4dfd20e69d5fc8ce93a2eabeb226f36cf574a8c9",
+      "bytes": 42777,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-7",
+      "file": "ihminen-7.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-7.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-7-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "fc25e11379ece5ca9bd32eb04552cdd9ddc398bedc9daff56cf4212a2edeff5b",
+      "bytes": 46952,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-8",
+      "file": "ihminen-8.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-8.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-8-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "194e52369c486a1aafeeae1a778859b88f102280d06e978583b0c3d2020ddf40",
+      "bytes": 48548,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-9",
+      "file": "ihminen-9.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-9.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-9-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "13517823afe07413c685152aa32b9bcad6a3787d32e99aa00f1e382a3bba1fd1",
+      "bytes": 66697,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-10",
+      "file": "ihminen-10.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-10.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-10-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "1770f11b908f2970d40a6e60744bbb76bf6126d4636048f52e6cb9f0a5b80cc3",
+      "bytes": 46056,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-11",
+      "file": "ihminen-11.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-11.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-11-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "30840ef59c5b08f13a53f6c2e29ff3dcde1f51e140040212cb2010ebac73407c",
+      "bytes": 51997,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "ihminen-12",
+      "file": "ihminen-12.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/ihminen-12.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/ihminen-12-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "5fbf8541f22980a8a76214aac5c13f9934cb6f53929a8070f0f84d7629825bc8",
+      "bytes": 42732,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "auto-1-vasen",
+      "file": "auto-1-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-1-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-1-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "753804c9b1efda0705caccb0e8d3262536698884aafcbf5a4d74ab1fafa46aaf",
+      "bytes": 62734,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        202
+      ]
+    },
+    {
+      "id": "auto-1-oikea",
+      "file": "auto-1-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-1-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-1-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f45f4fa09dc7322c188ce1dac2ffcfcc93b68693a22877885da6b5910a8de7bc",
+      "bytes": 68977,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        205
+      ]
+    },
+    {
+      "id": "auto-2-vasen",
+      "file": "auto-2-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-2-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-2-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "bf42f9c026ceeea36050ef38e327a9c8d1717cde8e442d06c28192f2ef929043",
+      "bytes": 72493,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        215
+      ]
+    },
+    {
+      "id": "auto-2-oikea",
+      "file": "auto-2-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-2-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-2-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "b76fb7d177fac1c57035686b2ca3dad957e117bbeff6b46792540f3eec326e61",
+      "bytes": 72756,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        215
+      ]
+    },
+    {
+      "id": "auto-3-vasen",
+      "file": "auto-3-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-3-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-3-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "e1bd510da5ffab1823c98d889ce923707925469399df5a2b355f7bbfed896c6e",
+      "bytes": 62972,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        200
+      ]
+    },
+    {
+      "id": "auto-3-oikea",
+      "file": "auto-3-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-3-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-3-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f2ea7de6c7faed70f88dbe057da7da96bf5247de491f38d61ccfb9a8eecca34d",
+      "bytes": 64531,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        202
+      ]
+    },
+    {
+      "id": "auto-4-vasen",
+      "file": "auto-4-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-4-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-4-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "09e735699575e0af23dadd078bef913c1912ca1de3eeed284808a75283373ff2",
+      "bytes": 65364,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        207
+      ]
+    },
+    {
+      "id": "auto-4-oikea",
+      "file": "auto-4-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-4-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-4-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "bd3abe728cde6d8cba35ede620d3636bdb643125b0738d3b0c417c59c2f0f3d8",
+      "bytes": 70893,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        210
+      ]
+    },
+    {
+      "id": "auto-5-vasen",
+      "file": "auto-5-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-5-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-5-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "78d608195f471430a0326587826365b92a3f3cd5bdff319c9e1a8ea48d5dda49",
+      "bytes": 62054,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        196
+      ]
+    },
+    {
+      "id": "auto-5-oikea",
+      "file": "auto-5-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-5-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-5-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "fd147176a1cf1ed8fe5a3dd97f7984ded3e27fae981115f43b613c6ddc095063",
+      "bytes": 67748,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        202
+      ]
+    },
+    {
+      "id": "auto-6-vasen",
+      "file": "auto-6-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-6-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-6-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "784725a75ad1d02323d1ccf7d5a3663cd688b87fc76d52617f47af6a41ccbb67",
+      "bytes": 64178,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        211
+      ]
+    },
+    {
+      "id": "auto-6-oikea",
+      "file": "auto-6-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/auto-6-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/auto-6-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "7d9f43d46f2b5be7712d192611905b4dc1932bb62da699aa934fe836a73cccf5",
+      "bytes": 71683,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        217
+      ]
+    },
+    {
+      "id": "bussi-vasen",
+      "file": "bussi-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/bussi-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/bussi-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "46791625fb3bc8eb6061cf47f3b3e72c6f5714a7403e3fe5a6c6337f10889163",
+      "bytes": 62534,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        202
+      ]
+    },
+    {
+      "id": "bussi-oikea",
+      "file": "bussi-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/bussi-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/bussi-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "ac635333f06b2eeb8e0cf65f260a2a39f20b02b74f3c0ebb7374d2156ba04406",
+      "bytes": 66765,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        206
+      ]
+    },
+    {
+      "id": "pyora-vasen",
+      "file": "pyora-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/pyora-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/pyora-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "a64aaf13b3a203344b656529cd66772283753a6bdbc6c95b1f96ebb58ac2b098",
+      "bytes": 98232,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        244
+      ]
+    },
+    {
+      "id": "pyora-oikea",
+      "file": "pyora-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/pyora-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/pyora-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f63aab96f28ac181da7585c33b9fafe0d0996ed94bcaefd42698a5b730adc687",
+      "bytes": 95462,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        239
+      ]
+    },
+    {
+      "id": "bateau-mouche-vasen",
+      "file": "bateau-mouche-vasen.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/bateau-mouche-vasen.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/bateau-mouche-vasen-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "16e38b634a8e47aa6c1e3a8ab544893df6d5bf5928290dc0d32a27b4e5200643",
+      "bytes": 49534,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        188
+      ]
+    },
+    {
+      "id": "bateau-mouche-oikea",
+      "file": "bateau-mouche-oikea.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/bateau-mouche-oikea.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/bateau-mouche-oikea-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "2c246710cffde18f28eeb30e4a8a2be3845863e0a567828514bb2b62054b9c8c",
+      "bytes": 53287,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        192
+      ]
+    },
+    {
+      "id": "vene-1",
+      "file": "vene-1.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/vene-1.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/vene-1-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "69411b9d2c822a52175b26861fda98b78959be12de89d1634bf4ebc63f098d87",
+      "bytes": 73285,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        220
+      ]
+    },
+    {
+      "id": "vene-2",
+      "file": "vene-2.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/vene-2.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/vene-2-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "7c4e4938d9da11e8c621676dd8746d91d14078f5c19b004966d9cdd9317b64b4",
+      "bytes": 49412,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        198
+      ]
+    },
+    {
+      "id": "vana",
+      "file": "vana.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/vana.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/vana-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f1d331568f122b3385e8657eb76231973d8699dd2afb5d8f491e02bd07c82903",
+      "bytes": 40858,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        181
+      ]
+    },
+    {
+      "id": "kone-1",
+      "file": "kone-1.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/kone-1.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/kone-1-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "226ba5ce80a0fe2533d344d5bc930dc4e1300478227250529a87c3baec6d2985",
+      "bytes": 61039,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        211
+      ]
+    },
+    {
+      "id": "kone-2",
+      "file": "kone-2.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/kone-2.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/kone-2-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "4b4198caf33caa47624c6563a064669090a9f792ffb1989b4ac6e69d433e68c7",
+      "bytes": 60505,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        209
+      ]
+    },
+    {
+      "id": "kahvila-1",
+      "file": "kahvila-1.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/kahvila-1.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/kahvila-1-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "77b46342aed41e3244cb96f9d38c3ab6c053598e9e07c8548532e05141d84466",
+      "bytes": 83462,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    },
+    {
+      "id": "kahvila-2",
+      "file": "kahvila-2.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/kahvila-2.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/kahvila-2-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "cf8940e0518a92be2850ad0fee7c6ac490b352440c46b3d118849231f0965ad0",
+      "bytes": 89367,
+      "suggestedBottomCentreAnchorPx": [
+        128.0,
+        246
+      ]
+    },
+    {
+      "id": "kukkakoju",
+      "file": "kukkakoju.png",
+      "kind": "life",
+      "status": "artwork-qa-pass",
+      "selectedAttempt": 1,
+      "filePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/kukkakoju.png",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/qa/kukkakoju-v1.json",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "f8ecd53fc09e175a3e823e68374ff9e60567a5abe7317c418abec9d8788d0581",
+      "bytes": 112925,
+      "suggestedBottomCentreAnchorPx": [
+        127.5,
+        246
+      ]
+    }
+  ],
+  "referenceSha256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+  "sourceCommit": "88455ded83a734fe4cfeb19af8013a1c6a9295e3",
+  "landmarksDeliveryCommit": "184ecedad80f9d40f8afdc7feb29a141e68fe859",
+  "landmarksReceiverAcceptanceCommit": "1172b81211afbf985915f594fbaeae9c18f65be1",
+  "receiverAccepted": false,
+  "assembledPilotVerified": false,
+  "tiles35Verified": false,
+  "gameIntegrated": false,
+  "published": false
+}

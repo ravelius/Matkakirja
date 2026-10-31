@@ -1,0 +1,38 @@
+{
+  "id": "kukkakoju",
+  "attempt": 1,
+  "status": "artwork-qa-pass-awaiting-receiver",
+  "rawPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/raw/kukkakoju-v1.png",
+  "finalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/final/hahmot/kukkakoju.png",
+  "rawDimensions": [
+    1254,
+    1254
+  ],
+  "dimensions": [
+    256,
+    256
+  ],
+  "mode": "RGBA",
+  "alphaZeroPixels": 30442,
+  "alphaVisibleBBox16": [
+    12,
+    10,
+    243,
+    246
+  ],
+  "noBackgroundVerified": true,
+  "visualReview": "Visual QA on ivory contact sheet passed: requested object, correct direction, complete silhouette, quiet palette, genuine alpha, no backdrop or ground. Tiny natural vehicle rear lamps retained; no red body/cloth accents.",
+  "exportOperation": "crop=1019:1040:131:113,scale=236:236:force_original_aspect_ratio=decrease:flags=lanczos,format=rgba,pad=256:256:(ow-iw)/2:(oh-ih)/2:color=black@0",
+  "exportIsMechanicalOnly": true,
+  "generationMode": "built-in image_gen, complete new image",
+  "sourcePrompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-spritet-20261031/prompts/kukkakoju-v1.txt",
+  "sha256": "f8ecd53fc09e175a3e823e68374ff9e60567a5abe7317c418abec9d8788d0581",
+  "bytes": 112925,
+  "suggestedBottomCentreAnchorPx": [
+    127.5,
+    246
+  ],
+  "anchorNote": "Bounding silhouette bottom-centre convention; Karttaseppa aligns actual ground footprint and scale during composition. Not proof of assembled map coordinates.",
+  "receiverAccepted": false,
+  "runtimeIntegrated": false
+}
