@@ -2378,3 +2378,22 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
   kattolaikkuja ei näy. JÄÄ: pieniä harmaita kuviottomia marmorikiiloja muurien juurella kapeilla kujilla (b-08…11, b-16, b-18, b-19), jäivät
   tasot-rajan alle (< 30 m² tai y ≤ 0,3) → v89:ssä tausta_tasot_lattiaksi.py ilman rajoja (ALA=0 YMIN=0 tai kaikki V4_marmori-vaakapinnat →
   V4_lattia; portaat ja kaiteet sitten myös, mikä on VS:n ehdotus). Kuvat _tyo/linssiseppa2/reitti-v88/v88-epailyt.jpg ja kooste-v88-a.jpg (rivit 2–3).
+
+## LISÄYS 175 (31.10. 22.1x): LUOVUTUS (PT: viikkokäyttö 90 %) — TAUSTA-V89/V89B JA ULKORENGAS-V10 VALMIIT, ALOITA TÄSTÄ
+Kansio U = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta; työkalut kielletty-rakennukset/tyokalut. Ei ajoja käynnissä, ei herätyksiä.
+- TAUSTA-V89 (_valmiit/juoksupeli-kk-lavastaja-tausta-v89-vienti-20261031, SHA256SUMS 9f7cc3626696; ajo U/tausta-v89.zsh, LAHTEET-tausta-v89.md) = v88 +
+  (1) Longzongmenin pohjoiskäytävän (z 186–190) irrallinen jalustalevy y 0,70 x −114…−100 z 175…190,7 (117 m²) pois (tausta_kaytava_laatta_pois.py;
+  jalustan reunat ja lattia y 0 olivat jo); (2) porttiaukot länsi/itä (x ≈ −122,8 / −109,5), z 168,5–173,5, y 0,70–4, pielet+kamana V4_red, lännen kynnys,
+  askelmat y 0,45 x −126,6…−125,45 ja −106,55…−105,4 (longzongmen_aukot.py, Blender bmesh; lähde U/tausta-v89-lahde = v81-lahde + v88-korjaukset + alla 3),
+  1-2 lod0 leivottu v3-auringolla + polvi 0,65/0,3; (3) VS:n harmaat kiilat = marmoritasot y 0,1–0,3 → V4_lattia (tausta_tasot_lattiaksi.py YMIN=0.1, ALA 30,
+  kaikki palat lod0–2; ≈ 26 800 m² lod0:ssa). HUOM LISÄYS 174: VS ehdotti rajoitta (ALA=0 YMIN=0) – tein YMIN 0,1 / ALA 30; jos kiiloja jää, aja ilman rajoja.
+  1-3:een jäi pieni erillinen marmorikolmio x −150…−135 z 242–246 (< 30 m²). Kuvat U/kuvat-v89/{laatta-kaytava,aukot,kiilat-1-3}-v88-v89.png. Hylätty
+  laatanpoisto: U/hylatty-tausta-v89-laatta*.
+- TAUSTA-V89B (…-tausta-v89b-vienti-20261031, SHA ec03c59ef662) = v89 + PK:n korkeudellinen liitos avoimet-sijoitus.json "liitokset" {"nimi":"longzongmen",
+  leveys 3, z 171, x −140→−96, y 0/0,2/0,45/0,7 portaat 5 cm:n pisteparina} (peli tukee reitti-216 693ac624d). PK:lle ilmoitettu 22.1x.
+- ULKORENGAS-V10 (…-ulkorengas-v10-vienti-20261031, SHA 3cf8ab80147d; LAHTEET-ulkorengas-v10.md): K06-SAUMAN SYY (pohja x 17,8, z −487) = ulkorengas-v9:n
+  3-2 V4_lattia (lod2, leipomaton, y 0,2–0,9) kielekkeinä palatsin lattian päällä z −500 → −488,9. ulkorengas_lattia_rajaus.py rajaa renkaan lattian taustan
+  reunaan (x −480…475, z −500…675) + tyhjät primitiivit pois. Taustan 1-0/2-0 kohtaavat x = 0:ssa saumatta (valo sama) → TAUSTA-V90 EI TARVITA, ellei VS:n
+  pari 06 v10:llä näytä yhä saumaa. Kuva U/kuvat-v89/rengas-v9-v10.png.
+- ODOTTAA: VS:n parit v89(b):stä ja 06:sta ulkorengas-v10:llä → OK:n jälkeen PT + JU vientiin. PT:n kuittaus.
+- Notre-Dame v6k29 junassa 216 ec0554ca8, NUI:n K1 simussa OK (pari lokit/todistus-nd-v6k29-juna216-20261031-2124/) – jono 4 valmis.
