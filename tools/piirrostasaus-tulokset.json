@@ -25,6 +25,18 @@
     ],
     "gamma": 0.946,
     "kylläisyys": 1.504
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c5a3f061f34e292a"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "c5a3f061f34e292a"
+    }
    }
   },
   "Riemukaari": {
@@ -52,6 +64,18 @@
     ],
     "gamma": 1.148,
     "kylläisyys": 1.92
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "a94a8a1d6af74045"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "a94a8a1d6af74045"
+    }
    }
   },
   "Concorden aukio": {
@@ -79,6 +103,18 @@
     ],
     "gamma": 1.383,
     "kylläisyys": 1.336
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "36fa0ffc565bf492"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "36fa0ffc565bf492"
+    }
    }
   },
   "Louvre": {
@@ -106,6 +142,18 @@
     ],
     "gamma": 0.55,
     "kylläisyys": 1.206
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "2e250604d8e60823"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "2e250604d8e60823"
+    }
    }
   },
   "Luxembourgin puisto": {
@@ -133,6 +181,18 @@
     ],
     "gamma": 0.924,
     "kylläisyys": 1.626
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d8a18ff8e24035d8"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d8a18ff8e24035d8"
+    }
    }
   },
   "Sacré-Cœur": {
@@ -160,6 +220,18 @@
     ],
     "gamma": 0.917,
     "kylläisyys": 1.71
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b476933499a0f2b8"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b476933499a0f2b8"
+    }
    }
   },
   "Panthéon": {
@@ -187,6 +259,18 @@
     ],
     "gamma": 1.617,
     "kylläisyys": 1.602
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "1da0ca8a12d7c42f"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "1da0ca8a12d7c42f"
+    }
    }
   },
   "Notre-Dame": {
@@ -214,6 +298,18 @@
     ],
     "gamma": 0.757,
     "kylläisyys": 1.453
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "94d147b545551206"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "94d147b545551206"
+    }
    }
   },
   "Orsayn taidemuseo": {
@@ -241,6 +337,18 @@
     ],
     "gamma": 1.227,
     "kylläisyys": 1.774
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d2b00033456f395c"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "d2b00033456f395c"
+    }
    }
   },
   "Palais Garnier": {
@@ -268,6 +376,18 @@
     ],
     "gamma": 0.735,
     "kylläisyys": 1.656
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "29e0315be32c932d"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "29e0315be32c932d"
+    }
    }
   },
   "Place des Vosges": {
@@ -295,6 +415,18 @@
     ],
     "gamma": 0.55,
     "kylläisyys": 1.624
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "4feed7b1d3b86904"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "4feed7b1d3b86904"
+    }
    }
   },
   "Tuileries'n palatsi": {
@@ -322,6 +454,18 @@
     ],
     "gamma": 1.168,
     "kylläisyys": 1.874
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "962713f5f46c342e"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "962713f5f46c342e"
+    }
    }
   },
   "Bastilji": {
@@ -349,6 +493,18 @@
     ],
     "gamma": 2.556,
     "kylläisyys": 1.878
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "63301895b8a191eb"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "63301895b8a191eb"
+    }
    }
   },
   "Metron sisäänkäynti": {
@@ -376,6 +532,18 @@
     ],
     "gamma": 0.643,
     "kylläisyys": 2
+   },
+   "kangas": {
+    "alkuperäinen": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b53c19306feec197"
+    },
+    "tasattu": {
+     "leveys": 1024,
+     "korkeus": 1024,
+     "alfa": "b53c19306feec197"
+    }
    }
   }
  },

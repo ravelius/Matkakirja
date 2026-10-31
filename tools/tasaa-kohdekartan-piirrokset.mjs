@@ -65,7 +65,7 @@ for (const kaupunki of kaupungit) {
     tulokset[kaupunki][p.nimi] = {
       lahde: p.arvo, kuva: p.ulos,
       sha: createHash('sha256').update(readFileSync(join(JUURI, p.ulos))).digest('hex').slice(0, 16),
-      ennen: m.ennen, jalkeen: m['jälkeen'], kertoimet: m.kertoimet,
+      ennen: m.ennen, jalkeen: m['jälkeen'], kertoimet: m.kertoimet, kangas: m.kangas,
     };
     console.log(`${kaupunki}: ${p.nimi.padEnd(24)} ${JSON.stringify(m.ennen)} → ${JSON.stringify(m['jälkeen'])}`);
   }

@@ -45,3 +45,16 @@ test('kirjaus vastaa tiedostoja ja web-taulua', () => {
     }
   }
 });
+
+test('tasaus ei muuta kangasta eikä alfaa: mitat ja alfakanava = alkuperäinen (PT 31.10.)', () => {
+  const eroavat = [];
+  for (const [kaupunki, kohteet] of Object.entries(TULOKSET)) {
+    for (const [nimi, t] of Object.entries(kohteet)) {
+      const k = t.kangas;
+      if (!k) { eroavat.push(`${kaupunki}/${nimi}: kangas kirjaamatta`); continue; }
+      const a = k['alkuperäinen'], b = k.tasattu;
+      if (a.leveys !== b.leveys || a.korkeus !== b.korkeus || a.alfa !== b.alfa) eroavat.push(`${kaupunki}/${nimi}`);
+    }
+  }
+  assert.deepEqual(eroavat, []);
+});
