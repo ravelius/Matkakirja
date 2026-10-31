@@ -14,7 +14,7 @@ muu tila ennallaan (kohdat 1–6 edellisestä luovutuksesta alla).
 - Kuvapari PT:lle lähetetty 22.04 (jonossa): `pariisi-pohja/koepala/r3-c4-g2-v2-vs-G.jpg`.
 - SEURAAVA: v3 (alla) → PT:n kuittaus → koko kaupunki renderoi-g2.py:llä. renderoi-g-laatat.py kutsuu vielä
   renderoi-g.py:tä: vaihda skriptiksi renderoi-g2.py ja poista -I, sitten 55 laattaa (4 rinnakkain), kokoa-g.py. Talomassat yhä laattamaisia.
-- **CODEXIN 9 MAAMERKKIÄ 184ecedad** (posti, SHA256 9/9 täsmää; ei vielä kytketty). Kuvat vain postin commitissa:
+- **CODEXIN 9 MAAMERKKIÄ 184ecedad** (PT kuittasi 1172b8121; SHA256 9/9; v3-koepala käyttää näitä, Notre-Dame spritenä). Kuvat vain postin commitissa:
   `git show 184ecedad:proto-3d/_tyo/codex/pariisi-spritet/maamerkki-<nimi>.png`, ankkurit posti/codex-pariisi-spritet-
   maamerkit-20261031/manifest.json. Kytke kokoa-g.py:llä v3-koepalaan (ilman G_MAAMERKIT=1). Hahmoerä tulossa.
 
