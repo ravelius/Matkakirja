@@ -1,0 +1,26 @@
+{
+  "taskNumber": 1413,
+  "title": "Pariisin piirroskartan kiireellinen koepala",
+  "createdAt": "2026-10-31T16:05:08.713583+00:00",
+  "sourceCommit": "111a4315547dbebd533331bdc1acb6827ba92175",
+  "sourcePath": "posti/paatoimittaja-codex-pariisi-piirroskartta-20261031.md",
+  "scope": "One image for owner style approval only",
+  "file": "proto-3d/_tyo/codex/pariisi-piirroskartta-koepala-1.png",
+  "sha256": "095ffb010ea84b272a04349a311e495cf9d41f07d6b6fc0c7b1a0f9365dc8d55",
+  "bytes": 3996875,
+  "dimensions": [
+    1572,
+    1001
+  ],
+  "selectedCandidate": 3,
+  "generationCalls": 3,
+  "generator": "built-in image_gen",
+  "promptFile": "PROMPT.md",
+  "qaStatus": "PASS for style review delivery; exact geometry not certified",
+  "ownerAccepted": false,
+  "receiverAccepted": false,
+  "tilesStarted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "R2Delivery": "not requested; mailbox image delivery only"
+}

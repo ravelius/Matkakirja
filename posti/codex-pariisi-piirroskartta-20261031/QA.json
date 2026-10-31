@@ -1,0 +1,45 @@
+{
+  "taskNumber": 1413,
+  "reviewer": "root",
+  "reviewedAt": "2026-10-31T16:05:08.713583+00:00",
+  "personallyViewed": true,
+  "approvedForStyleReviewDelivery": true,
+  "approvedForGameIntegration": false,
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-20261031/final/pariisi-piirroskartta-koepala-1.png",
+  "selectedCandidate": 3,
+  "generationCalls": 3,
+  "sha256": "095ffb010ea84b272a04349a311e495cf9d41f07d6b6fc0c7b1a0f9365dc8d55",
+  "bytes": 3996875,
+  "dimensions": [
+    1572,
+    1001
+  ],
+  "mode": "RGB",
+  "format": "PNG",
+  "unchangedGeneratedBytes": true,
+  "checks": {
+    "singleContinuousCityView": true,
+    "mutedSepiaInkAndWatercolour": true,
+    "sameStyleAcrossBuildingsStreetsParksRiver": true,
+    "fixedObliqueCamera": true,
+    "TuileriesLouvreCitePresent": true,
+    "contemporaryGlassPyramidPresent": true,
+    "noPhotographicBackground": true,
+    "osmReferenceActuallyFetched": true,
+    "googleImageryUsed": false,
+    "attributionVisible": true,
+    "earlierOversizedCathedralCandidatesWithheld": true,
+    "scaleImprovedForStylePrototype": true
+  },
+  "limitations": [
+    "This is a style-approval prototype, not a surveyed map or a validated navigational base.",
+    "Generative interpretation simplifies and alters individual buildings, facades, small details, street widths and local scale despite the OSM reference. Exact footprint and bridge alignment are not certified.",
+    "The final production map must use the coordinator supplied white geometry base or a deterministic OSM base to lock geometry before seamless tiles are approved.",
+    "Output is native 1572 x 1001 pixels, no upscaling; no resolution requirement was specified in the source."
+  ],
+  "ownerAccepted": false,
+  "receiverAccepted": false,
+  "tilesStarted": false,
+  "gameIntegrated": false,
+  "published": false
+}

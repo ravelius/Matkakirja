@@ -1,0 +1,188 @@
+{
+  "order": {
+    "path": "posti/paatoimittaja-codex-pariisi-piirroskartta-20261031.md",
+    "commit": "111a4315547dbebd533331bdc1acb6827ba92175",
+    "blob": "2e2aa2c3e7ff987e6c63e4e4c9d4880b9aab76fe",
+    "readInFull": true,
+    "receivedFrom": "Päätoimittaja",
+    "priority": "urgent",
+    "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635"
+  },
+  "orderText": "# Päätoimittaja → Codex: Pariisin piirroskartan koepala – KIIREELLINEN (omistaja 31.10.2026 klo 17.35)\n\nOmistaja pyysi sanatarkasti: \"Pyydä piirros heti codexilta Pariisista kiireellisenä.\" Tee tämä ENNEN kadonneiden ihmeiden\nerien 3–4 jatkoa (jatka niitä heti tämän ensimmäisen kuvan jälkeen).\n\n## Tilaus\nPiirrä Pariisin piirroskartan koepala: Cité-saari (Notre-Dame) ja Louvre Tuileries'n puutarhoineen Seinen varrelta yhtenä\nkaupunkinäkymänä. Kaikki talot, kadut, sillat, puistot ja joki on piirretty samalla tyylillä kuin pelin nähtävyyspiirrokset\n(Akropolis-tyyli: pieni isometrinen pienoismalli, hillitty seepia, isoisän matkapäiväkirjan käsinpiirretty tunnelma).\nTyylimallit repossa: `assets/kartat/miniatyyrit/pariisi-notre-dame-kk.webp` ja `assets/kartat/miniatyyrit/pariisi-louvre-kk.webp`.\nKuvakulma on kiinteä ja viisto ylhäältä, ja nähtävyydet ovat oikean kokoisia osana kaupunkia. Kaupunki on nykyaikainen\n(Louvren lasipyramidi mukana), vain estetiikka on vanhaa. Pohjaksi kadut ja korttelit OpenStreetMapista; Googlen kuvia ei\nkäytetä pohjana.\n\n## Toimitus\n1. ENSIN yksi iso kuva tyylin hyväksyntään (omistaja katsoo sen Keskustelukanavan kautta).\n2. Hyväksynnän jälkeen sama paloina, joista jokainen jatkaa naapuripalaa saumattomasti (myöhemmin Karttaseppä voi antaa\n   valkoisen pienoismallipohjan omasta datasta tarkkaa versiota varten).\n\nVastaus: `posti/paatoimittaja-codex-pariisi-piirroskartta-<pvm>.md` + kuva (esim. `proto-3d/_tyo/codex/pariisi-piirroskartta-koepala-1.png`\ntai postin viereen), niin Postivahti huomaa sen.\n\n",
+  "styleReferences": [
+    {
+      "file": "pariisi-notre-dame-kk.webp",
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame-kk.webp",
+      "ref": "main",
+      "blob": "740b92235014803fa223f1dc72e0cba00425a49a",
+      "sha256": "38883fa0ccf5e5d48a4e44f3629feb48ed640f0096feb2485903a6b29be23bc9",
+      "bytes": 77864,
+      "role": "style-reference-only"
+    },
+    {
+      "file": "pariisi-louvre-kk.webp",
+      "path": "assets/kartat/miniatyyrit/pariisi-louvre-kk.webp",
+      "ref": "main",
+      "blob": "028944dae71995347c888160409c3c312f73ac80",
+      "sha256": "9b90caa581b0af16e67666262eb1e9e24ff614d8f3004f5a0bdda9297072afa8",
+      "bytes": 74052,
+      "role": "style-reference-only"
+    }
+  ],
+  "geography": {
+    "bbox": [
+      2.316,
+      48.848,
+      2.358,
+      48.866
+    ],
+    "downloadedAt": "2026-10-31T15:57:26.629458+00:00",
+    "parts": [
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.337,48.848,2.3475,48.857",
+        "bbox": [
+          2.337,
+          48.848,
+          2.3475,
+          48.857
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-2a.osm",
+        "sha256": "24469a57c418610872347e247c07ad5876e892f10d17f754eb2c33d809932c41",
+        "nodes": 33251,
+        "ways": 4861,
+        "relations": 664
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.3475,48.848,2.358,48.857",
+        "bbox": [
+          2.3475,
+          48.848,
+          2.358,
+          48.857
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-2b.osm",
+        "sha256": "fa3ee3f91cc5c746686a6c0571e9230407df928765ceb0e233f2e43b9e278bdb",
+        "nodes": 29636,
+        "ways": 4028,
+        "relations": 610
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.337,48.857,2.3475,48.866",
+        "bbox": [
+          2.337,
+          48.857,
+          2.3475,
+          48.866
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-4a.osm",
+        "sha256": "ca6d0f3021506bda2b1950b4d07229b83b78edcd94e34e62e0f0b76b526a7a83",
+        "nodes": 34282,
+        "ways": 4606,
+        "relations": 641
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.3475,48.857,2.358,48.866",
+        "bbox": [
+          2.3475,
+          48.857,
+          2.358,
+          48.866
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-4b.osm",
+        "sha256": "62964d89d96380ae28af827f7f02f49f0af9e92e43b80881a77e145438b5f0f5",
+        "nodes": 35119,
+        "ways": 4766,
+        "relations": 762
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.316,48.848,2.337,48.857",
+        "bbox": [
+          2.316,
+          48.848,
+          2.337,
+          48.857
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-1.osm",
+        "sha256": "dd9e58eb659b851f67c850d673420540503fe4d646ee9bebcf89724a418240cd",
+        "nodes": 46089,
+        "ways": 5864,
+        "relations": 739
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.316,48.857,2.337,48.866",
+        "bbox": [
+          2.316,
+          48.857,
+          2.337,
+          48.866
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-3.osm",
+        "sha256": "cfb24ce63e966b557e3d61dc5dc58e2333f5d07d6136961de58a5afa4ecb8e24",
+        "nodes": 42658,
+        "ways": 5637,
+        "relations": 580
+      }
+    ],
+    "attribution": "© OpenStreetMap contributors",
+    "license": "ODbL 1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "source": "OpenStreetMap API; no Google imagery",
+    "waterRelationSource": "https://api.openstreetmap.org/api/0.6/relation/2191006/full"
+  },
+  "geometryReference": {
+    "projection": "oblique local metric plane: x=E-0.23N; y=-0.61N-0.06E",
+    "dimensions": [
+      2200,
+      1400
+    ],
+    "uniqueNodes": 204040,
+    "uniqueWays": 28929,
+    "uniqueRelations": 2873,
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-20261031/references/osm-oblique-layout.png",
+    "labels": "reference annotations only, omit in generated artwork except OSM credit"
+  },
+  "localSourceFileHashes": [
+    {
+      "file": "references/osm-oblique-layout.png",
+      "sha256": "69acbe60e72f961fbd1a4229640e45a8511aa9974b93801b5511502685b69b93",
+      "bytes": 347065
+    },
+    {
+      "file": "references/osm-part-1.osm",
+      "sha256": "dd9e58eb659b851f67c850d673420540503fe4d646ee9bebcf89724a418240cd",
+      "bytes": 13846375
+    },
+    {
+      "file": "references/osm-part-2a.osm",
+      "sha256": "24469a57c418610872347e247c07ad5876e892f10d17f754eb2c33d809932c41",
+      "bytes": 12076125
+    },
+    {
+      "file": "references/osm-part-2b.osm",
+      "sha256": "fa3ee3f91cc5c746686a6c0571e9230407df928765ceb0e233f2e43b9e278bdb",
+      "bytes": 11122994
+    },
+    {
+      "file": "references/osm-part-3.osm",
+      "sha256": "cfb24ce63e966b557e3d61dc5dc58e2333f5d07d6136961de58a5afa4ecb8e24",
+      "bytes": 13954849
+    },
+    {
+      "file": "references/osm-part-4a.osm",
+      "sha256": "ca6d0f3021506bda2b1950b4d07229b83b78edcd94e34e62e0f0b76b526a7a83",
+      "bytes": 13446019
+    },
+    {
+      "file": "references/osm-part-4b.osm",
+      "sha256": "62964d89d96380ae28af827f7f02f49f0af9e92e43b80881a77e145438b5f0f5",
+      "bytes": 13546351
+    },
+    {
+      "file": "references/osm-seine-relation.osm",
+      "sha256": "7366fce5cc50593f189beb2a93f259aef7492a2e62bbc2e10d6d54bd6e682d22",
+      "bytes": 299569
+    }
+  ],
+  "attribution": "Map data © OpenStreetMap contributors; ODbL 1.0; https://www.openstreetmap.org/copyright",
+  "note": "Reference geometry rendered directly from OSM nodes and ways; native ImageGen final is an artistic interpretation. Main-branch style references were read and viewed; horizontal display artifacts in them were explicitly excluded."
+}
