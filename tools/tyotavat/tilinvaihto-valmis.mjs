@@ -11,7 +11,8 @@
  *     lupatila ja Remote Control (tiedoksi);
  *  2) peili ajan tasalla (bash tools/tyotavat/peili.sh --tarkista);
  *  3) aloitusviestit olemassa (docs/tilinvaihto.md:n roolitaulukon Aloitusviesti-sarake);
- *  4) vanhoja id:itä ei ole jäänyt id:itä toistaviin tiedostoihin (paivita-idt.mjs:n KOHTEET);
+ *  4) vanhoja id:itä (täysi tai lyhyt muoto) ei ole jäänyt id:itä toistaviin tiedostoihin (paivita-idt.mjs:n KOHTEET),
+ *     kotikansioiden juuren .md-tiedostoihin eikä ~/.claude/CLAUDE.md:hen;
  *  5) Asemataulu: työkansion kopiot = main ja tarkistin läpi (python3 -I tools/asemataulu/asemataulu.py --tarkista;
  *     docs/moduulit/asemataulu.md luku 2).
  * Paluuarvo 0 = valmis, 1 = puutteita (tulostetaan).
@@ -84,12 +85,24 @@ let puuttuu = 0;
 for (const p of polut) if (!existsSync(join(REPO, p))) { huom(`aloitusviesti puuttuu: ${p}`); puuttuu++; }
 console.log(`Aloitusviestit: ${polut.size - puuttuu}/${polut.size} olemassa.`);
 
-// 4) vanhat id:t
+// 4) vanhat id:t: täysi ja lyhyt muoto (local_<8 merkkiä>); KOHTEET + kotikansioiden juuren .md:t + CLAUDE.md:t
+// (omistaja 31.10.2026 klo 22.06: NOLLAUS.md:n lyhyt local_febfd152 jäi aiemmin huomaamatta)
 const nykyiset = new Set(rivit.map((r) => r.id));
-for (const polku of kohteet()) {
+const lyhyet = new Set(rivit.map((r) => r.id.slice(0, 14)));
+const tarkistettavat = new Set(kohteet());
+for (const k of readdirSync('/Users/Shared/Claude')) {
+  if (!k.startsWith('Matkakirja-')) continue;
+  const kansio = join('/Users/Shared/Claude', k);
+  try { for (const t of readdirSync(kansio)) if (t.endsWith('.md')) tarkistettavat.add(join(kansio, t)); } catch {}
+}
+tarkistettavat.add(join(homedir(), '.claude/CLAUDE.md'));
+for (const polku of tarkistettavat) {
   if (!existsSync(polku) || polku === OSOITEKIRJA) continue;
-  const vanhat = [...new Set(readFileSync(polku, 'utf8').match(/local_[0-9a-f]{8}-[0-9a-f-]{27}/g) || [])].filter((i) => !nykyiset.has(i));
-  if (vanhat.length) huom(`${polku}: id:t, joita osoitekirjassa ei ole: ${vanhat.map((i) => i.slice(0, 14)).join(', ')}`);
+  const teksti = readFileSync(polku, 'utf8');
+  const taydet = (teksti.match(/local_[0-9a-f]{8}-[0-9a-f-]{27}/g) || []).filter((i) => !nykyiset.has(i));
+  const lyh = (teksti.match(/local_[0-9a-f]{8}(?![0-9a-f-])/g) || []).filter((i) => !lyhyet.has(i));
+  const vanhat = [...new Set([...taydet.map((i) => i.slice(0, 14)), ...lyh])];
+  if (vanhat.length) huom(`${polku}: id:t, joita osoitekirjassa ei ole: ${vanhat.join(', ')}`);
 }
 
 // 5) Asemataulu

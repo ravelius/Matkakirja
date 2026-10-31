@@ -39,6 +39,8 @@
 
 export const MINIATYYRIT = {
   berliini: {
+    'Anhalter Bahnhof': 'assets/kartat/miniatyyrit/berliini-anhalter-bahnhof.webp',  // kadonnut ihme (31.10.2026)
+    'Palast der Republik': 'assets/kartat/miniatyyrit/berliini-palast-der-republik.webp',  // kadonnut ihme (31.10.2026)
     Valtiopäivätalo: 'assets/kartat/miniatyyrit/berliini-valtiopaivatalo.webp',
     'Brandenburgin portti': 'assets/kartat/miniatyyrit/berliini-brandenburgin-portti.webp',
     'Checkpoint Charlie': 'assets/kartat/miniatyyrit/berliini-checkpoint-charlie.webp',
@@ -53,7 +55,7 @@ export const MINIATYYRIT = {
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Kulta-Liisa': 'berliini-kulta-liisa-vari2',
-    'Hobrechtin putket': 'berliini-hobrechtin-putket-vari2',
+    'Radialsystem V': 'assets/kartat/miniatyyrit/berliini-radialsystem-v.webp',  // Codex 31.10.2026: rakennuksen oma piirros (PT)
     'Muuri 1961': 'assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
     'Hattupäinen ukkeli': 'assets/kartat/miniatyyrit/berliini-hattupainen-ukkeli.webp',
     'Gaertnerin Berliini': 'assets/kartat/miniatyyrit/berliini-gaertnerin-berliini.webp',
@@ -62,6 +64,8 @@ export const MINIATYYRIT = {
     Maailmankello: 'assets/kartat/miniatyyrit/berliini-maailmankello.webp',
   },
   helsinki: {
+    'Helsingin vanha rautatieasema': 'assets/kartat/miniatyyrit/helsinki-vanha-rautatieasema.webp',  // kadonnut ihme (31.10.2026)
+    'Sibeliuksen puisto': 'assets/kartat/miniatyyrit/helsinki-sibeliuksen-puisto.webp',  // Codex #1324 ilman veistosta (omistaja 31.10. 11.43 B)
     'Temppeliaukion kirkko': 'assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko.webp',
     Linnanmäki: 'assets/kartat/miniatyyrit/helsinki-linnanmaki.webp',
     Päärautatieasema: 'assets/kartat/miniatyyrit/helsinki-paarautatieasema.webp',
@@ -76,12 +80,19 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Löyly ja avanto': 'helsinki-loyly-ja-avanto-vari2',
     Kantele: 'helsinki-kantele-vari2',
-    Finlandia: 'helsinki-finlandia-vari2',
+    // Finlandia (nuottiteline) pois kartalta: musiikkiteos ei ole paikka (omistaja 31.10.2026 klo 11.26, PT).
     Pirtukuningas: 'helsinki-pirtukuningas-vari2',
     'Nurmen kohu': 'helsinki-nurmen-kohu-vari2',
     'Suomi herää 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
   },
   pariisi: {
+    'Grand Châtelet': 'assets/kartat/miniatyyrit/pariisi-grand-chatelet.webp',  // kadonnut ihme (31.10.2026)
+    'Temple-torni': 'assets/kartat/miniatyyrit/pariisi-temple-torni.webp',  // kadonnut ihme (31.10.2026)
+    'Palais d\'Orsay': 'assets/kartat/miniatyyrit/pariisi-palais-dorsay.webp',  // kadonnut ihme (31.10.2026)
+    'Palais de l\'Industrie': 'assets/kartat/miniatyyrit/pariisi-palais-de-lindustrie.webp',  // kadonnut ihme (31.10.2026)
+    'Trocadéron palatsi': 'assets/kartat/miniatyyrit/pariisi-trocaderon-palatsi.webp',  // kadonnut ihme (31.10.2026)
+    'Galerie des Machines': 'assets/kartat/miniatyyrit/pariisi-galerie-des-machines.webp',  // kadonnut ihme (31.10.2026)
+    'Les Hallesin hallit': 'assets/kartat/miniatyyrit/pariisi-les-hallesin-hallit.webp',  // kadonnut ihme (31.10.2026)
     'Eiffel-torni': 'assets/kartat/miniatyyrit/pariisi-eiffel-torni.webp',
     Riemukaari: 'assets/kartat/miniatyyrit/pariisi-riemukaari.webp',
     'Concorden aukio': 'assets/kartat/miniatyyrit/pariisi-concorden-aukio.webp',
@@ -123,7 +134,10 @@ export const MINIATYYRIT = {
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
     Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
     Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
-    'Tuileriain rauniot': 'assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot.webp',
+    // Tuileries'n palatsi KADONNEENA IHMEENÄ LOISTONSA AIKANA (omistaja 31.10.2026 klo 08.22 "Kartalle voi kyllä tehdä niitä
+    // ihmeitä. Tuilers voisi olla sellainen", PT): ehjä palatsi kartan piirrostyylissä (Codex #1320, omistaja 30.10. 22.58).
+    // Rauniokuvaa ei käytetä (omistaja 06.55 "Kartta kuvaa nykyaikaa").
+    'Tuileries\'n palatsi': 'assets/kartat/miniatyyrit/pariisi-tuileries.webp',
     'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
     'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
     'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
@@ -131,13 +145,20 @@ export const MINIATYYRIT = {
     'Bastilji 1789': 'assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
     'Lumière 1895': 'assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
     '72 nimeä': 'assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
-    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp',
+    // Guimardin lasikattoinen Abbesses-édicule (Codex #1321, omistaja 30.10. 21.42: vanha väärää tyyliä);
+    // uusi nimi -v2, ettei välimuisteihin jäänyt vanha kuva näy.
+    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
     'Notre-Damen kukko': 'assets/kartat/miniatyyrit/pariisi-notre-damen-kukko.webp',
     'Pariisi soi': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
     'Paras patonki': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
     'Pariisin vuosisadat': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {
+    'Greenwichin palatsi': 'assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi.webp',  // kadonnut ihme (31.10.2026)
+    'Newgaten vankila': 'assets/kartat/miniatyyrit/lontoo-newgaten-vankila.webp',  // kadonnut ihme (31.10.2026)
+    'Euston Arch': 'assets/kartat/miniatyyrit/lontoo-euston-arch.webp',  // kadonnut ihme (31.10.2026)
+    'Vanha Westminsterin palatsi': 'assets/kartat/miniatyyrit/lontoo-vanha-westminsterin-palatsi.webp',  // kadonnut ihme (31.10.2026)
+    'Whitehallin palatsi': 'assets/kartat/miniatyyrit/lontoo-whitehallin-palatsi.webp',  // kadonnut ihme (31.10.2026)
     'Buckinghamin palatsi': 'assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi.webp',
     'Trafalgar Square': 'assets/kartat/miniatyyrit/lontoo-trafalgar-square.webp',
     'Big Ben': 'assets/kartat/miniatyyrit/lontoo-big-ben.webp',
@@ -148,7 +169,7 @@ export const MINIATYYRIT = {
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
     'Etelämeren kupla': 'lontoo-etelameren-kupla',
     'Cheapsiden kätkö': 'lontoo-cheapsiden-katko',
-    'Thamesin vuorovesi': 'lontoo-thamesin-vuorovesi',
+    'Millennium Bridgen portaat': 'lontoo-thamesin-vuorovesi',
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
@@ -172,6 +193,7 @@ export const MINIATYYRIT = {
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
   // Kööpenhaminasta").
   kobenhavn: {
+    'Vor Frue Kirke': 'assets/kartat/miniatyyrit/kobenhavn-vor-frue-keskiaikainen.webp',  // kadonnut ihme (31.10.2026)
     Amalienborg: 'assets/kartat/miniatyyrit/kobenhavn-amalienborg.webp',
     Rundetårn: 'assets/kartat/miniatyyrit/kobenhavn-rundetarn.webp',
     Nyhavn: 'assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
@@ -190,6 +212,8 @@ export const MINIATYYRIT = {
     Alberti: 'kobenhavn-alberti-vari2',
   },
   rooma: {
+    'Septizodium': 'assets/kartat/miniatyyrit/rooma-septizodium.webp',  // kadonnut ihme (31.10.2026)
+    'Jupiterin temppeli': 'assets/kartat/miniatyyrit/rooma-jupiterin-temppeli.webp',  // kadonnut ihme (31.10.2026)
     Pietarinkirkko: 'assets/kartat/miniatyyrit/rooma-pietarinkirkko.webp',
     'Castel Sant’Angelo': 'assets/kartat/miniatyyrit/rooma-castel-santangelo.webp',
     'Espanjalaiset portaat': 'assets/kartat/miniatyyrit/rooma-espanjalaiset-portaat.webp',
@@ -213,6 +237,8 @@ export const MINIATYYRIT = {
     Nasone: 'assets/kartat/miniatyyrit/rooma-nasone.webp',
   },
   wien: {
+    'Ringtheater': 'assets/kartat/miniatyyrit/wien-ringtheater.webp',  // kadonnut ihme (31.10.2026)
+    'Kärntnertor-teatteri': 'assets/kartat/miniatyyrit/wien-karntnertor-teatteri.webp',  // kadonnut ihme (31.10.2026)
     Raatihuone: 'assets/kartat/miniatyyrit/wien-raatihuone.webp',
     Hofburg: 'assets/kartat/miniatyyrit/wien-hofburg.webp',
     Valtionooppera: 'assets/kartat/miniatyyrit/wien-valtionooppera.webp',
@@ -236,6 +262,7 @@ export const MINIATYYRIT = {
     'Tonava kaunoinen': 'assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
   },
   praha: {
+    'Prahan vanhan raatihuoneen itäsiipi': 'assets/kartat/miniatyyrit/praha-vanhan-raatihuoneen-itasiipi.webp',  // kadonnut ihme (31.10.2026)
     'Petřínin näkötorni': 'assets/kartat/miniatyyrit/praha-petrinin-nakotorni.webp',
     'Prahan linna': 'assets/kartat/miniatyyrit/praha-prahan-linna.webp',
     Kaarlensilta: 'assets/kartat/miniatyyrit/praha-kaarlensilta.webp',
@@ -268,6 +295,7 @@ export const MINIATYYRIT = {
     Yövartio: 'assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
   },
   tukholma: {
+    'Kustaa III:n ooppera': 'assets/kartat/miniatyyrit/tukholma-kustaa-iiin-ooppera.webp',  // kadonnut ihme (31.10.2026)
     Kaupungintalo: 'assets/kartat/miniatyyrit/tukholma-kaupungintalo.webp',
     'Riddarholmenin kirkko': 'assets/kartat/miniatyyrit/tukholma-riddarholmenin-kirkko.webp',
     'Sergelin tori': 'assets/kartat/miniatyyrit/tukholma-sergelin-tori.webp',
@@ -308,6 +336,7 @@ export const MINIATYYRIT = {
     Tuomiokirkko: 'tampere-tuomiokirkko-vari2',
   },
   firenze: {
+    'Mercato Vecchio': 'assets/kartat/miniatyyrit/firenze-mercato-vecchio.webp',  // kadonnut ihme (31.10.2026)
     Duomo: 'assets/kartat/miniatyyrit/firenze-duomo.webp',
     'Palazzo Vecchio': 'assets/kartat/miniatyyrit/firenze-palazzo-vecchio.webp',
     Uffizi: 'assets/kartat/miniatyyrit/firenze-uffizi.webp',
@@ -403,6 +432,7 @@ export const MINIATYYRIT = {
   // Kuvat on tarkistettu sekä täydessä koossa että 96 px koossa ennen
   // pelipakettiin lisäämistä.
   bryssel: {
+    'Maison du Peuple': 'assets/kartat/miniatyyrit/bryssel-maison-du-peuple.webp',  // kadonnut ihme (31.10.2026)
     'Brysselin pörssi': 'assets/kartat/miniatyyrit/bryssel-brysselin-porssi.webp',
     'Manneken Pis': 'assets/kartat/miniatyyrit/bryssel-manneken-pis.webp',
     Oikeuspalatsi: 'assets/kartat/miniatyyrit/bryssel-oikeuspalatsi.webp',
@@ -456,6 +486,8 @@ export const MINIATYYRIT = {
     'Tekstiilisuuk': 'assets/kartat/miniatyyrit/dubai-tekstiilisuuk.webp',
   },
   istanbul: {
+    'Pyhien apostolien kirkko': 'assets/kartat/miniatyyrit/istanbul-pyhien-apostolien-kirkko.webp',  // kadonnut ihme (31.10.2026)
+    'Konstantinopolin suuri palatsi': 'assets/kartat/miniatyyrit/istanbul-suuri-palatsi.webp',  // kadonnut ihme (31.10.2026)
     'Suuri basaari': 'assets/kartat/miniatyyrit/istanbul-suuri-basaari.webp',
     'Sininen moskeija': 'assets/kartat/miniatyyrit/istanbul-sininen-moskeija.webp',
     'Hagia Sofia': 'assets/kartat/miniatyyrit/istanbul-hagia-sofia.webp',
@@ -538,6 +570,7 @@ export const MINIATYYRIT = {
     Vihellyskonsertti: 'sofia-vihellyskonsertti-vari2',
   },
   bukarest: {
+    'Văcărești-luostari': 'assets/kartat/miniatyyrit/bukarest-vacarestin-luostari.webp',  // kadonnut ihme (31.10.2026)
     'Romanian ateneum': 'assets/kartat/miniatyyrit/bukarest-romanian-ateneum.webp',
     'Cișmigiun puutarha': 'assets/kartat/miniatyyrit/bukarest-cismigiun-puutarha.webp',
     'Yliopiston aukio': 'assets/kartat/miniatyyrit/bukarest-yliopiston-aukio.webp',
@@ -596,6 +629,7 @@ export const MINIATYYRIT = {
     'Gran Vía': 'assets/kartat/miniatyyrit/madrid-gran-v-a.webp',
   },
   lissabon: {
+    'Tejon kuninkaallinen ooppera': 'assets/kartat/miniatyyrit/lissabon-tejon-ooppera.webp',  // kadonnut ihme (31.10.2026)
     Rossio: 'assets/kartat/miniatyyrit/lissabon-rossio.webp',
     'São Jorgen linna': 'assets/kartat/miniatyyrit/lissabon-sao-jorgen-linna.webp',
     Tuomiokirkko: 'assets/kartat/miniatyyrit/lissabon-tuomiokirkko.webp',
@@ -613,6 +647,7 @@ export const MINIATYYRIT = {
     'Kolumbus 1484': 'lissabon-kolumbus-1484-vari2',
   },
   budapest: {
+    'Alkuperäinen Erzsébet-silta': 'assets/kartat/miniatyyrit/budapest-erzsebet-silta-alkuperainen.webp',  // kadonnut ihme (31.10.2026)
     Kalastajanlinnake: 'assets/kartat/miniatyyrit/budapest-kalastajanlinnake.webp',
     Ketjusilta: 'assets/kartat/miniatyyrit/budapest-ketjusilta.webp',
     Parlamenttitalo: 'assets/kartat/miniatyyrit/budapest-parlamenttitalo.webp',
@@ -628,6 +663,9 @@ export const MINIATYYRIT = {
     'Seuson hopeat': 'budapest-seuson-hopeat-vari2',
   },
   varsova: {
+    'Aleksanteri Nevskin katedraali': 'assets/kartat/miniatyyrit/varsova-aleksanteri-nevskin-katedraali.webp',  // kadonnut ihme (31.10.2026)
+    'Varsovan suuri synagoga': 'assets/kartat/miniatyyrit/varsova-suuri-synagoga.webp',  // kadonnut ihme (31.10.2026)
+    'Saksin palatsi': 'assets/kartat/miniatyyrit/varsova-saksin-palatsi.webp',  // kadonnut ihme (31.10.2026)
     'Vanhankaupungin tori': 'assets/kartat/miniatyyrit/varsova-vanhankaupungin-tori.webp',
     'Varsovan linna': 'assets/kartat/miniatyyrit/varsova-varsovan-linna.webp',
     'Kopernikuksen tiedekeskus': 'assets/kartat/miniatyyrit/varsova-kopernikuksen-tiedekeskus.webp',
@@ -665,6 +703,7 @@ export const MINIATYYRIT = {
     'Fram 1893': 'oslo-fram-1893-vari2',
   },
   dublin: {
+    'Nelsonin pylväs': 'assets/kartat/miniatyyrit/dublin-nelsonin-pylvas.webp',  // kadonnut ihme (31.10.2026)
     'Guinness-panimo': 'assets/kartat/miniatyyrit/dublin-guinness-panimo.webp',
     'Patrickin katedraali': 'assets/kartat/miniatyyrit/dublin-patrickin-katedraali.webp',
     'Dublinin linna': 'assets/kartat/miniatyyrit/dublin-dublinin-linna.webp',
@@ -681,6 +720,7 @@ export const MINIATYYRIT = {
     'Ouzel Galley': 'dublin-ouzel-galley-vari2',
   },
   barcelona: {
+    'Barcelonan Ciutadellan linnake': 'assets/kartat/miniatyyrit/barcelona-ciutadella.webp',  // kadonnut ihme (31.10.2026)
     'Sagrada Família': 'assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
     'Casa Batlló': 'assets/kartat/miniatyyrit/barcelona-casa-batllo.webp',
     'Arc de Triomf': 'assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
@@ -693,6 +733,7 @@ export const MINIATYYRIT = {
     'Roviran aukio': 'barcelona-roviran-aukio-vari2',
   },
   edinburgh: {
+    'Old Tolbooth': 'assets/kartat/miniatyyrit/edinburgh-old-tolbooth.webp',  // kadonnut ihme (31.10.2026)
     'Charlotte Square': 'assets/kartat/miniatyyrit/edinburgh-charlotte-square.webp',
     'Edinburghin linna': 'assets/kartat/miniatyyrit/edinburgh-edinburghin-linna.webp',
     'Greyfriars Bobby': 'assets/kartat/miniatyyrit/edinburgh-greyfriars-bobby.webp',
@@ -711,6 +752,8 @@ export const MINIATYYRIT = {
    * onnistuu); prompti tiukennettu, uusinta erän 5 mukana.
    */
   moskova: {
+    'Tšudovin ja Taivaaseenastumisen luostarit': 'assets/kartat/miniatyyrit/moskova-tsudovin-luostari.webp',  // kadonnut ihme (31.10.2026)
+    'Sukharevin torni': 'assets/kartat/miniatyyrit/moskova-sukharevin-torni.webp',  // kadonnut ihme (31.10.2026)
     'Bolšoi-teatteri': 'assets/kartat/miniatyyrit/moskova-bolsoi-teatteri.webp',
     'Punainen tori': 'assets/kartat/miniatyyrit/moskova-punainen-tori.webp',
     'Pyhän Vasilin katedraali': 'assets/kartat/miniatyyrit/moskova-pyhan-vasilin-katedraali.webp',
@@ -727,6 +770,7 @@ export const MINIATYYRIT = {
     'Perlovin teetalo': 'moskova-perlovin-teetalo-vari2',
   },
   pietari: {
+    'Nyenskans': 'assets/kartat/miniatyyrit/pietari-nyenskans.webp',  // kadonnut ihme (31.10.2026)
     'Pietari-Paavalin linnoitus': 'assets/kartat/miniatyyrit/pietari-pietari-paavalin-linnoitus.webp',
     Talvipalatsi: 'assets/kartat/miniatyyrit/pietari-talvipalatsi.webp',
     Verikirkko: 'assets/kartat/miniatyyrit/pietari-verikirkko.webp',
@@ -754,6 +798,7 @@ export const MINIATYYRIT = {
     'Kiovan kultainen portti': 'assets/kartat/miniatyyrit/kiova-kiovan-kultainen-portti.webp',
   },
   riika: {
+    'Gogolin kadun synagoga': 'assets/kartat/miniatyyrit/riika-gogolin-kadun-synagoga.webp',  // kadonnut ihme (31.10.2026)
     Vapaudenpatsas: 'assets/kartat/miniatyyrit/riika-vapaudenpatsas.webp',
     'Kolme veljestä -talot': 'assets/kartat/miniatyyrit/riika-kolme-veljesta.webp',
     'Riian tuomiokirkko': 'assets/kartat/miniatyyrit/riika-riian-tuomiokirkko.webp',
@@ -767,6 +812,7 @@ export const MINIATYYRIT = {
    * promptia, 20 kaupunkia) on tällä valmis.
    */
   vilna: {
+    'Vilnan suuri synagoga': 'assets/kartat/miniatyyrit/vilna-suuri-synagoga.webp',  // kadonnut ihme (31.10.2026)
     'Gediminaksen torni': 'assets/kartat/miniatyyrit/vilna-gediminaksen-torni.webp',
     'Vilnan tuomiokirkko': 'assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
     'Pyhän Annan kirkko': 'assets/kartat/miniatyyrit/vilna-pyhan-annan-kirkko.webp',
@@ -937,6 +983,7 @@ export const MINIATYYRIT = {
     'Leventis-museo': 'nikosia-leventis-museo-vari2',
   },
   luxemburg: {
+    'Luxemburgin linnoitus': 'assets/kartat/miniatyyrit/luxemburg-linnoitus.webp',  // kadonnut ihme (31.10.2026)
     'Adolphe-silta': 'assets/kartat/miniatyyrit/luxemburg-adolphe-silta.webp',
     'Guillaume II:n aukio': 'assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio.webp',
     'Notre-Damen katedraali': 'assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali.webp',
@@ -964,6 +1011,7 @@ export const MINIATYYRIT = {
     Msheireb: 'doha-msheireb-vari2',
   },
   marseille: {
+    'Marseillen siirtosilta': 'assets/kartat/miniatyyrit/marseille-pont-transbordeur.webp',  // kadonnut ihme (31.10.2026)
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
@@ -975,6 +1023,7 @@ export const MINIATYYRIT = {
     'Saint-Charlesin asema': 'marseille-saint-charlesin-asema-vari2',
   },
   venetsia: {
+    'San Geminianon kirkko': 'assets/kartat/miniatyyrit/venetsia-san-geminianon-kirkko.webp',  // kadonnut ihme (31.10.2026)
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.

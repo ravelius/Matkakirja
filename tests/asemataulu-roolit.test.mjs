@@ -51,7 +51,7 @@ test('A: tila työ, kun viimeisin toiminta on alle 15 min vanha; muuten odottaa 
   assert.equal(k['Valoseppä'].tila, 'työ', 'juuri nyt käynnissä = työ');
   assert.equal(k['Päätoimittaja'].tila, 'työ');
   assert.equal(k['Asemataulu'].tila, 'työ');
-  assert.ok(!k['Postivahti']);
+  assert.equal(k['Postivahti'].tila, 'työ', 'Postivahdilla oma kortti (omistaja 13.15: taulu kaikilta osilta)');
   // Tarkistin hyväksyy kortit.
   const tr = spawnSync('python3', ['-I', join(t, 'tarkista-junat.py'), '--kansio', join(t, 'data/talo')], { encoding: 'utf8' });
   assert.doesNotMatch(tr.stdout, /VIRHE.*roolit/);

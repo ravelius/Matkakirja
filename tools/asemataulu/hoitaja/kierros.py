@@ -103,7 +103,7 @@ def roolikortit(sessiot, odottaa, tyolista, nyt=None):
     rivit = []
     for s in sessiot:
         title = str(s.get("title") or "")
-        if title.startswith(("Postivahti", "Asemataulu")) or " (" not in title:
+        if title.startswith("Asemataulu") or " (" not in title:
             continue
         n, rest = title.split(" (", 1)
         osat = rest.rstrip(")").split(", ")

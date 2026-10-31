@@ -61,7 +61,10 @@
  */
 
 /** Britannian hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_GBR = [
+  ...(EUROOPAN_KADONNEET.GBR ?? []),
   {
     id: 'hahmotelma-giants-causeway',
     kuva: {

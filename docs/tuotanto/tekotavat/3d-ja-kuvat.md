@@ -189,3 +189,25 @@ mustien taso, kylläisyys ja varjo-osuus, havainne | oma. PT:lle lähtee vasta p
 **Tarkistus.** Jokaisesta havainnekuvan kulmasta pelikuvapari (havainnekuva | peli, pelikamera, ei tekstiä kuvan päällä) ja
 taulukon jokainen rivi ok tai vika (Raamattu 9.5). Kun pelin kuvakulma on omistajan valitsema ja poikkeaa havainnekuvan kulmasta,
 kuvan ulkopuolelle jäävää ei venytetä näkyviin. Blender-kuva ei riitä: kattovirheet löytyivät 24.10. vasta pelivideosta.
+
+## 12. Juoksupelin osasarja
+
+*(Lavastaja 29.10.2026. KK:n spesi 21.3x omistajan tavoitteesta 26.10. klo 21.11 "Pitää saada nopeammin tuloksia aikaan."; omistaja
+hyväksyi 21.07; paketin muoto Pelikoodarin `tyokalut/osasarja/MUOTO.md` (proto-repo f88ee94e7).)* Palatsin muurit, kivijalat,
+reunakivet ja muurikatteet tehdään yhteisistä osista, jotka peli latoo polkuja pitkin; sama korjaus tehdään yhteen osaan, ei
+jokaiseen kujaan erikseen.
+
+- **Osat** (Lavastaja): `kielletty-osasarja-vN/osat.glb` (+ `osat-lod1.glb`), yksi juurisolmu per osa (`seina-2m`, `seina-1m`,
+  `kulma-ulko`, `kulma-sisa`, `paaty-alku`, `paaty-loppu`, `laatta-2m`, `porrasreunakivi-1m`, `kaide-pylvas`, `kaide-johde-1.5m`,
+  `vesisylkija`). Lähde: kujissa hyväksytyt mitat (v1: kujan 02 länsimuuri). Tekijä `tyokalut/osasarja_v1.py` Lavastajan työkansiossa.
+- **Ruudukko ja kehys**: 2 m:n moduuli (1 m täyttöön), pivot pohja-keski, x toistosuunta, y ylös, +z ulos (z = 0 seinän
+  ulkopinta). Peli venyttää välin osia tasan (sx), enintään ±15 %.
+- **Ladonta** (Pelikoodari, puhdas koodi `JuoksuOsasarja` + `Kokoaja`, ei ajonaikaisia Splines-komponentteja; Splines vain kaariin): `ladonta.json` – polku seinän ulkopinnan juurta pitkin, ulos = oikealle
+  kulkusuunnasta; vasen käännös ulkokulma, oikea sisäkulma; kulma- ja päätyosien vähennys `osat`-taulussa. Kivijalka, kivijalan
+  kansi ja reunakivi pursotetaan profiileina koko polun pituudelta (jiiri kulmissa). Lavastajan `osasarja_koe.py` latoo samoilla
+  säännöillä tarkistuskuviin ennen pelikoodia.
+- **Jaettu pintasarja** (Valoseppä): yksi materiaali per pintalaji kaikissa osissa; UV metreinä (1 UV = 1 m), Valoseppä asettaa
+  kuvan tiheyden. Vain `tyylikirja/palatsi-pinnat.json`:n sallitut pinnat.
+- **Pintatarkistus**: `tyokalut/havainne/palatsipinnat.py` (proto-repo) ajetaan juurelle ennen pakettia; kielletty pinta = vika.
+- **Uusi kohde** (aukio, sali, portti): ensin polut olemassa olevilla osilla; puuttuva osa lisätään osasarjaan (uusi versio),
+  ei kohteen omaksi malliksi.

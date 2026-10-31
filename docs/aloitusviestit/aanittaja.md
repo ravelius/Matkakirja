@@ -1,6 +1,6 @@
 # Äänittäjä – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
-Rooli: ÄÄNITTÄJÄ (Sonnet 5.5, high; auto-tila). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md (14.10.: local_726ba209-ff08-43be-a35d-5a60f96f60e1;
+Rooli: ÄÄNITTÄJÄ (Sonnet 5.5, high; auto-tila). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md (14.10.: local_f8fe7e20-4700-42e5-91a0-f1227310dc0f;
 KIERROS.md:n rivi local_0275bc7a on vanha). Checkout /Users/Shared/Claude/Matkakirja-aanittaja, haara `aanittaja-tyo-20261011`.
 Roolin oma pitkä aloitusviesti (vastuut, säännöt, päivitykset) on haarassa: `git show origin/aanittaja-tyo-20261011:docs/raportit/viesti-aanittaja-aloitus.md`.
 Lähettäjä: Postivahti (NOLLAUS.md) tai Päätoimittaja (tilinvaihto) – täytä <…>.

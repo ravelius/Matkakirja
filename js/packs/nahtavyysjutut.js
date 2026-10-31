@@ -788,7 +788,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Hobrechtin putket': {
+    'Radialsystem V': {
       nosto: 'syvennys-berliini-viemarit',
       teksti: 'Ne perustukset, joita kaduilla lyötiin, olivat osaksi viemäriä: '
         + 'Berliinillä ei sellaista vielä ollut. James Hobrecht oli laatinut '
@@ -2744,7 +2744,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Thamesin vuorovesi': {
+    'Millennium Bridgen portaat': {
       nosto: 'syvennys-lontoo-vuorovesi',
       teksti: 'Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa '
         + 'tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: '
@@ -4701,7 +4701,8 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Tuileriain rauniot': {
+    // Kohdekartan nimi fokuskohteen mukaan (omistaja 31.10. 08.22, PT): kadonnut ihme, teksti syvennystarinan oma.
+    'Tuileries\'n palatsi': {
       nosto: 'syvennys-pariisi-tuileriat',
       teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
@@ -5403,20 +5404,17 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    Finlandia: {
-      nosto: 'syvennys-helsinki-finlandia',
-      teksti: 'Isoisäsi näki kukkulalla keisarin allekirjoituksen. '
-        + 'Kaksikymmentäkuusi vuotta hänen käyntinsä jälkeen samassa '
-        + 'kaupungissa tehtiin allekirjoitus toiseen suuntaan. Marraskuussa '
-        + '1899 Helsingissä järjestettiin sanomalehtien juhla vastalauseeksi '
-        + 'Venäjän sortotoimille. Ruotsalaisessa teatterissa esitettiin '
-        + 'kuvaelmia Suomen historiasta, ja Jean Sibelius johti itse viimeisen '
-        + 'osan, jonka nimi oli Suomi herää. Se kiihotti kuulijoita niin, että '
-        + 'kappaletta soitettiin sen jälkeen vaihtuvilla nimillä — yksi niistä '
-        + 'oli pelkkä Impromptu, joka tarkoittaa suunnilleen ”jotain, mitä nyt '
-        + 'sattui syntymään”. Nimen Finlandia teos sai vasta vuonna 1900. Se '
-        + 'kestää noin kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, '
-        + 'mitä yksikään puhe ei olisi saanut tehdä ääneen.',
+    // Sibeliuksen puisto Finlandian tilalle (omistaja 31.10.2026 klo 11.26 ja 11.43, PT): paikka kartalla, monumentti
+    // ja teos jutussa.
+    'Sibeliuksen puisto': {
+      aika: '1967',
+      teksti: 'Sibeliuksen puisto on Töölön rantaan laskeva kallioinen puisto, jossa koivut ja männyt kasvavat meren ääressä. '
+        + 'Puistossa seisoo yli kuudestasadasta hitsatusta teräsputkesta koottu monumentti. '
+        + 'Sen teki kuvanveistäjä Eila Hiltunen, ja se paljastettiin vuonna 1967, kymmenen vuotta säveltäjän '
+        + 'kuoleman jälkeen. Putket muistuttavat urkuja, ja kun osa kaupunkilaisista kaipasi muistomerkkiin ihmistä, '
+        + 'kallion viereen lisättiin Sibeliuksen kasvot. Säveltäjän tunnetuin teos syntyi vastalauseena: marraskuussa '
+        + '1899 sanomalehtien juhlassa Ruotsalaisessa teatterissa soi kuvaelmien viimeinen osa Suomi herää, ja '
+        + 'sensuurin aikana sitä soitettiin vaihtuvilla nimillä. Nimen Finlandia teos sai vasta vuonna 1900.',
       kuvat: [
         {
           tiedosto: 'Jean-Sibelius-at-the-piano.jpg',

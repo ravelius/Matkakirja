@@ -3184,3 +3184,207 @@ Kortti KK:ssa: 'Kelpaavatko viisi uutta muistokuvaa?' → 'Kelpaavat (suositus)'
 ## TILINVAIHTO PYYDETTY (omistaja 29.10. klo 12.53) (29.10.2026 klo 12.56)
 
 Omistaja KK:ssa: 'tee siirtoprompti toiselle tilille'. Vanha tili sami.reivinen@vvi.fi (org ddaee6a2), viikko 97 %, nollautuu 2.11. klo 03. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20261029.md (PT 12.55); uusi tili omistajan valitsema, rivi osoitteet.md:hen uuden PT:n toimesta.
+
+## TILINVAIHTO 29.10.2026 klo 13.xx (29.10.2026 klo 13.06)
+
+Tilinvaihto tilille org f04011ee (päätili). PT local_cf5b4eca, KK local_231e4bad; 9 roolia uusina sessioina (Postivahti, Asemataulu, Julkaisija, Natiiviseppä, Pelikoodari, Lavastaja, Karttaseppä, Natiivi-UI, Sisältökirjuri); levossa olevat tämän tilin vanhoihin sessioihin (Linssiseppä, Valoseppä, Projektiseppä, Äänittäjä, Laitetestaaja); Työkaluseppä ilman tämän tilin sessiota (luodaan tarvittaessa). Taulu Rq5ajPU4SraE2XKd7BYAix (v84, tietokanta täytetty). Kotikansiot mainiin, ohitettu Matkakirja-posti (Postivahti mergeää itse), -aanittaja, -laitetestaaja, -siirtoseppa (levossa, JÄLJESSÄ). Ohjeiden koe 10/10 läpi.
+
+## STRIIMIKARTAN SÄVYTYS (omistaja 29.10. 14.03) (29.10.2026 klo 14.03)
+
+Kortti 'Sävytetäänkö julkiset rakennukset ja asemat näin?' → 'Kyllä (suositus)'. Julkiset rakennukset kullanruskeina, liikerakennukset ja asemat liuskeenharmaina tiilen kirkkaudella, vain katutasolla (KS savytys-214 704fa8629, pari savytys-214/pt/ käännös 4fdecb927) → junaan 214. Pieni iPad saa uuden version vasta, kun saumat ja merkittävyys ovat valmiit (omistaja 13.22).
+
+## KARTTASAUMAT KELPAA (omistaja 29.10.2026 klo 17.13) (29.10.2026 klo 17.14)
+
+Kortti 'Kelpaako karttasaumojen korjaus?' → 'Kelpaa (suositus)' (selite: 'Korjaus menee junaan, kun mittaus pienellä iPadilla on tehty'). KS 5767441da (siirtyma-sse-214) junaan vasta pienen iPadin mittauksen jälkeen seuraavalla studiokäynnillä. Striimikartasta jäljellä merkittävyys, sitten pieni iPad (päätös 13.22).
+
+## LEVY-1029: IPAD-ASENNUSVÄLIMUISTI TYHJENNETÄÄN (omistaja 29.10.2026 klo 17.14) (29.10.2026 klo 17.14)
+
+Kortti 'Saako iPad-asennusten 50 Gt:n välimuistin tyhjentää Macilta?' → 'Kyllä (suositus)' (selite: 'Vapauttaa 50 Gt; seuraava iPad-asennus kestää hieman kauemmin.'). NS poistaa vain AppInstallationBinaryDeltas-kansion (CoreDeviceService Caches).
+
+## OMISTAJA PYYSI JULKAISUA: JUNA 214 (omistaja 29.10.2026 klo 17.20) (29.10.2026 klo 17.21)
+
+Omistaja KK:lle: "Lähden kotiin, niin julkaise TestFlightissa ilman testejä sitten kun valmistuu". KK:n tulkinta omistajalle kerrottuna: juna 214 TF:ään kokonaisena heti kun Työn alla -osat valmiit (kujat 02+05 omistajan kortin jälkeen, Alppien sauma, karttasaumat ilman pienen iPadin mittausta); ei laite-/simukierrosta; automaattiset käännöstestit kuten aina. PT: JU aloittaa maaston z10–12 kopiot heti.
+
+## OPPI: OMISTAJAN KUVAPARI AINA SOVITETTUNA (PT 29.10.2026 klo 17.30) (29.10.2026 klo 17.30)
+
+PT lähetti KK:lle kujakortin parin 172625, jossa keisari oli pelissä 1,4–1,6× havainnekuvaa suurempi (kamera lähempänä → laatat näyttävät isommilta), ja jätti 05:n vanhat kivet erilliseksi kysymykseksi. KK palautti: rikottu periaatteet 1 (sanat mitattavissa) ja 9 (ei väliaikaisia poikkeamia). Jo voimassa 7.20 (havainnemittari) ja B kohta 11: PT avaa mittari.txt:n ja tarkistaa keisarin koon, kynnyksen ja pakopisteen ennen kuin pari menee KK:lle; omistajan sanat koskevat kaikkia sen kattamia kohteita, ei vain kuvattua.
+
+## JUNA 214: KUJAT KELPAA (29.10.2026 klo 18.23)
+
+OMISTAJAN PÄÄTÖS klo 18.22 (kortti KK:ssa, sanatarkasti): "Kelpaavatko kujat 02 ja 05 junaan 214?" → "Kelpaa (suositus)" (selite: "Juna 214 lähtee TestFlightiin, kun vanhat harmaat tiilet on vaihdettu."). Parit havainne-editori-20261029-181331 (LR v69, PK pk7v66-214 c22908502). Ennen TF:ää LR v70: 05:n oikean seinän kivijalan yläreuna ja portin takana näkyvän seinän kivijalka isoiksi kiviksi, vino harmaa levy korjataan; PT tarkistaa parin → NS kokoaa → JU TF. Seuraavaan junaan: 02:n räystään alta pistävä kannatinpala. OPPI (periaate 2): PT ohitti 175511:n portin pielten pikkutiilen ja vasta 181331:ssä huomasi osan jäänteistä; tarkista koko kuvan kaikki kivipinnat, myös kauempana portin takana.
+
+## JUOKSUPELI: YHTEINEN OSASARJA (TEKOTAPA) (29.10.2026 klo 20.51)
+
+KK 29.10. klo 21.3x (juoksupelin ohjat) omistajan kysymysten pohjalta, sanatarkasti 20.2x: "Onko juoksupelin rakennustapa järkevä?" ja "Löytyisikö jostain apua tai valmista toteutustapaa millä
+rakentaminen olisi nopeampaa?" (tavoite 26.10. 21.11 "Pitää saada nopeammin tuloksia aikaan."). PT käynnisti operatiivisena tekotapana: 1) LR noin 12 yhteistä prefabia kiinteällä ruudukolla (seinä,
+kivijalka, reunakivi, muurikate + vihreä vyö, sisä-/ulkokulma, portin pääty, laatta-alue, kaiteen pylväs + johde, porrasreunakivi), lähtökohta kujien hyväksytyt osat; 2) PK Unity Splines -ladonta
+(com.unity.splines 2.9.x, Unity Companion License, ei osto; SplineInstantiate + SplineExtrude, staattinen niputus); 3) VS yksi jaettu Codex-pintamateriaali per pintalaji (2D-pinta 27.10. 21.51); 4)
+automaattinen sallittujen pintojen tarkistus (saa kulkea junassa, 9.1); 5) jokainen pariajo kuvaa kaikki 8 havainnekohtaa. Rajat: mitat ennallaan (20.10. 07.30), ei ACA Builderia, ei ostoja, ei
+tekoälymalleja osiin. Aukion erolista 1–5 rinnakkain. Spesi scratchpad/keskustelukanava/osasarja-juoksupeli-20261029.md; LR kirjaa tekotavan B 3d-ja-kuvat.md:hen. Raamatun linjaukseksi vasta OMISTAJAN
+PÄÄTÖS -rivillä.
+
+## JUOKSUPELI: OSASARJA OMISTAJAN HYVÄKSYMÄ; HALLI JA PORTTI 06 RINNAKKAIN (29.10.2026 klo 21.11)
+
+Omistaja 29.10.2026 klo 21.07 KK:n osasarjaselityksen jälkeen, sanatarkasti: "Hyvä. Keksitkö vielä muita tapoja tämän lisäksi" → yhteinen osasarja (loki 20.51) on omistajan hyväksymä tekotapa. KK:n lisäsuositus (operatiivinen): ainutlaatuiset rakennukset rinnakkain osasarjan kanssa. PT 21.1x: Taihedianin halli (erolista 1, 2, 5) → Natiivi-UI, Meridiaaniportti 06 → Karttaseppä (uusien sessioiden luonti estyi: Remote Control -tilassa start_session vaatii työpöytäsovelluksessa kirjoitetun viestin; levossa olevat Opus-roolit käytettiin). LR jatkaa osasarjaa ja aukion muureja; PK lähettää tänä iltana yhden Codex-tilauksen kaikista ainutlaatuisista osista (harjakoristeet ja harjaeläimet, kannatinryhmät, ristikko-ovet, palkkimaalaus, kaidepylväät, sivupaviljongit) havainnekuvien rajauksin. Tavoite: aukion, hallin ja portin parit lähes yhtä aikaa.
+
+## JUOKSUPELI: POHJA- JA JULKISIVUPIIRROKSET TODELLISIN MITOIN (omistaja 30.10.2026 klo 09.11) (30.10.2026 klo 09.12)
+
+Omistajan kortti KK:ssa: 'Teetetäänkö pohja- ja julkisivupiirrokset todellisin mitoin?' → 'Kyllä, portista alkaen' (koko reitin pohja ja päärakennusten julkisivut). Omistajan sanat: 'tämä pitäisi olla ihan matemaattista ja selkeää rakennustyötä. Eli rakennetaan suoraan oikeanlainen maailma, missä on tietynlaiset elementit ja ne vain ladotaan siihen. Kolmiulotteinen kuva saattaa hämätä tai hidastaa työtä.' Tekotapa: (1) Meridiaaniportti ensin (pohja ylhäältä + etelän julkisivu), koko reitin pohjakartta todellisista koordinaateista, sitten Taihemen, Taihedian, sivuhallit; (2) mitat todellisista lähteistä, lähde jokaiseen mittaan; Codex piirtää mittatarkat viivapiirrokset metriruudukolle havainnekuvien väreillä (PK tilaa); (3) omistaja hyväksyy julkisivun ennen 3D-rakentamista; (4) peli kuvataan ortografisesti samoista suunnista ja verrataan päällekkäin automaattisesti, osasarja ladotaan ruudukkoon; (5) perspektiiviset havainnekuvat vain tunnelman, värien ja valon malli.
+
+## JUOKSUPELI: TEKIJÄN OMA TARKISTUS ENNEN PARIA TAI KORTTIA (omistaja 30.10.2026 klo 16.0x) (30.10.2026 klo 16.15)
+
+KK:n kortti, sanatarkasti: "Otetaanko käyttöön tekijän oma tarkistus ennen kuin rakennus lähtee tarkistukseen?" → "Ota käyttöön. Ja hyödynnetäänkö nyt jo sitä unityn ladonta ominaisuutta?". Tarkistus: 1) edestä otettu orto piirroksen päälle, 2) automaattinen tarkistus: materiaalien värit havainteeseen ja omistajan päätöksiin + lähikuvat muutetuista kohdista, 3) piirroksen [A]-mitat varmennetaan kuvista ennen 3D-työtä. Tausta: Meridiaanin kortti palautettiin 30.10. kahdesti (beige kivijalka vastoin 27.10. päätöstä; 3,0 m [A]-arvio, todellinen 1,6 m). Raamattu 2.177.
+
+## JUOKSUPELI: LADONTA PÄÄLLE MUUREILLE, KIVIJALOILLE JA KAITEILLE (omistaja 30.10.2026 klo 16.20) (30.10.2026 klo 16.27)
+
+KK:n kortti: "Kytketäänkö ladonta päälle muureille, kivijaloille ja kaiteille junassa 216?" → "Kytke päälle (Suositus)": heti nykyisten korjausten jälkeen; Pelikoodari todistaa vertailukuvilla, ettei ulkoasu muutu; sen jälkeen uudet muurit tehdään vain ladonnalla. Ainutkertaiset rakennukset (Taihemen, sivuhallit, Taihedian) pysyvät malleina.
+
+## POSTIVAHDIN OMA NOLLAUS 30 %:SSA ILMAN PT:N PYYNTÖÄ (KK 30.10. klo 19.1x) (30.10.2026 klo 19.09)
+
+KK:n mittaus 30.10. 00–19: Postivahti 17 % talon kulutuksesta (1946 vastausta, kontekstin mediaani 509k, p90 826k), vaikka raja on 20–30 %. Päätös (KK juoksupelin ohjilla, PT toteuttaa): Postivahti kirjoittaa luovutuksen ja nollaa itsensä omalla kierroksellaan, kun sen oma konteksti ylittää 30 %, ilman PT:n pyyntöä. Raamattu 7.37 päivitetty; Postivahti kirjasi säännön KIERROS.md:hen (luovutus 6967a05d4). Arvioitu säästö noin 12 % päivän kulutuksesta.
+
+## REITIT ITSE, EI LOPUTONTA RATAA; VALO ULKO-OSIEN JÄLKEEN; SISÄTILAT; TILI VIIKONLOPUKSI (omistaja 30.10. klo 19.12) (30.10.2026 klo 19.16)
+
+Sanatarkasti KK:n kautta: "minulla on vielä yksi kokonainen tili käytettäväksi viikonlopun aikana. pelaaja valitsee itse reitit, ei sitä tarvitse tehdä loputtomaksi. tarkoitus oli pitää nykyinen oikea palatsialue. sisätilat tarvitsevat varmasti myös rakentamista, mutta aloitetaan valon lisääminen kun ulko-osat valmistuvat mahdollisimman nopealla menetelmällä". Toteutus: juoksupelin valmis-kohta 3 (loputon, joka kerta erilainen) poistuu; alue = nykyinen todellinen palatsialue, PK selvittää reittivalinnan. VS suunnittelee valon nyt ja aloittaa, kun ladonta on junassa; ulkovalo ei saa vaatia uusimista sisätilojen takia. Sisätilat uutena rivinä (piirrokset ensin), valon jälkeen tai rinnalla. Kiintiö ei hiljennä viikonloppua: tilinvaihto, kun nykyinen loppuu (arvio su 1.11. ~10–12).
+
+## EI AUTOMAATTISTA TIIVISTYSTÄ (omistaja 30.10.2026 klo 19.22) (30.10.2026 klo 19.23)
+
+Omistajan kortti KK:ssa: "Kytkenkö automaattisen tiivistyksen pois kaikilta rooleilta?" → "Pois kaikilta (Suositus)". Omistajan kysymys 19.1x: "miksi nollaukset eivät toimineet sinulle eikä postivahdille? miten estää jatkossa tilinvaihdon jälkeen?" Syy (KK mitannut): sovelluksen idle-tiivistys 26.10. alkaen (tunnin hiljaisuus → tiivistelmä; 30.10. 13 kpl, KK 10.49/13.34/18.22) piti kontekstit nollausrajan alla; Postivahti ei hiljene, joten se kasvoi täyteen (yli rajan ainakin 20.10. alkaen). KK lisäsi "idleCompaction": false tiedostoon /Users/koodaus/.claude/settings.json (kaikki roolit; voimaan viimeistään kunkin seuraavassa aloituksessa). Raamattu 7.37 ja docs/tilinvaihto.md kohta 6 päivitetty: idleCompaction false; Postivahti nollaa itsensä 30 %:ssa; ensimmäisen päivän iltana tarkistetaan, ettei yhdenkään roolin tallenteessa ole tiivistystä.
+
+## TILINVAIHDOSSA KAIKKI SESSIOT NOLLATAAN HETI ALUKSI (omistaja 30.10.2026 klo 19.22) (30.10.2026 klo 19.24)
+
+Omistaja (KK:n välittämänä, sanatarkasti): "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". KK:n tavoitekuvaus: jokainen sessio, myös KK, PT ja Postivahti, aloittaa uudella tilillä puhtaalta pöydältä luovutuksensa ja ajantasaisten asetusten varassa; nollaus on vaihdon ensimmäinen askel; omistajan pysyvä lupa nollata myös KK tilinvaihdossa ilman erillistä korttia. Seuraava vaihto arviolta su ~10–12. Kirjattu Raamattu 7.37 ja docs/tilinvaihto.md kohta 1.
+
+## PARIISIN KARTTA: NÄHTÄVYYDET MITTAKAAVASSA, KADUT KEVYEMMIKSI, LÄHIN ZOOM 2× (30.10.2026 klo 21.51)
+
+Omistaja 30.10. klo 21.42 (kuvat docs/raportit/kaappaukset/omistaja-20261030/2142-pariisi-*.png): nähtävyyspiirrokset näkyvät koko ajan oikeassa koossa, eli hyvin pieninä kunnes ollaan täydessä zoomissa (korvaa 28.10. 14.23 suurennuksen); tiet kevyemmiksi ja vaaleammiksi. Kortti 21.45: väärän tyyliset ovat Tuileries ja metron sisäänkäynti (ei pyramidi) → Codex piirtää samaan käsin piirrettyyn tyyliin ilman kehystä ja taustaa (tilaus 0c7afb570/2249df50c). Kortti 21.50: kartan lähin zoom kaksi kertaa lähemmäs (noin 0,75 km leveä näkymä; ei 0,35 km:n tasoa); nähtävyyspiirrosten täysi koko uudella lähimmällä tasolla. Tekijä Karttaseppä.
+
+## JUNA 216: KAIKKI SAMAAN JUNAAN, JULKAISU KUN VALO VALMIS (30.10.2026 klo 22.28)
+
+Omistaja 30.10. klo 22.27 (KK:n kautta): 'Tee kaikki samaan junaan ja julkaise vasta kun valo valmis.' Valo, STP/Unity 6.7 -kokeet, Pariisin kartta sekä Tuileries ja metro menevät junaan 216 (ei junaa 217). TestFlight vasta, kun valo on valmis ja omistajan hyväksymä.
+
+## OMISTAJAN YÖVALTUUTUS KK:LLE (30.10. klo 22.59) (30.10.2026 klo 23.00)
+
+Omistaja KK:n ikkunassa klo 22.59 (sanatarkasti): 'Menen nukkumaan. Saat hyväksyä puolestani kaikki'. Kuten 26.10. 22.47: omistajan seuraavaan viestiin asti KK päättää omistajalle kuuluvat kysymykset ja kuvien hyväksynnät omistajan aiempia sanoja vasten, merkinnällä 'KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA klo …'; ei ostoja, lupa-asetuksia, avaimia, tunnuksia eikä CLAUDE.md-muutoksia. Roolien KYSYMYS-rivit KK:lle heti, ei yöoletusta omistajan asioissa. KK kokoaa aamulla listan yön päätöksistä. Koskee myös avointa Tuileries-kysymystä (rauniopiirros vai ehjä palatsi + nimi).
+
+## AIKA: TUILERIESIN KARTTAMERKKI NYKYAJAN PUUTARHAKSI (31.10.2026 klo 06.56)
+
+Omistaja 31.10. klo 06.55 (kortti KK:ssa, kysymys 'Pidetäänkö Tuileriesin kohdalla rauniopiirros?'): 'Kartta kuvaa nykyaikaa'. PT:n linjaus: Tuileriesin kartan piirros näyttää nykyisen Tuileries'n puutarhan samassa käsin piirretyssä tyylissä ilman kehystä ja taustaa; ei raunioita eikä ehjää palatsia (molemmat AIKA-linjauksen vastaisia, Raamattu luku 1). Kohteen nimiö pysyy 'Tuileries' ja fokuskohde 'Tuileries'n palatsi' tarinoineen ennallaan: vuoden 1873 rauniot elävät tekstissä ja kysymyksessä 'Mitä palatsin paikalla on nykyään?'. Ketju: Codex piirtää → KS kytkee → KK tarkistaa → kortti. OPPI (KK:n periaate 10): kartan piirroksen aihe tarkistetaan AIKA-linjausta vasten; loistoaikakuvat vain ihmekortteihin. Muita historiamerkkejä (esim. Bastilji) ei laajenneta ilman omistajan kysymystä. KK:n virhe 23.01 (rauniot) ja PT:n linjaus 23.0x korjattu tällä.
+
+## AIKA: KADONNEET IHMEET KARTALLA LOISTONSA AIKANA (TUILERIES) (31.10.2026 klo 08.23)
+
+Omistaja 31.10. klo 08.22 (KK:n kautta, sanatarkasti): 'Kartalle voi kyllä tehdä niitä ihmeitä. Tuilers voisi olla sellainen'. LINJAUS (tarkentaa 06.55 'Kartta kuvaa nykyaikaa' ja periaate 10 -oppia): kartta kuvaa nykyaikaa, mutta kadonneet ihmeet saavat olla kartalla loistonsa aikana. Tuileries kytketään ihmeenä: ehjä palatsi, Codexin piirros #1320 pariisi-tuileries.webp (omistaja hyväksyi piirroksena 30.10. klo 22.58). Nimi kaanonin mukaan: 'Tuileries'n palatsi', kartan lyhyt nimiö 'Tuileries' (js/packs/fokuskohteet-fra.js). Vuoden 1873 rauniot jäävät tarinaan ja tekstiin. Puutarhatilaus (posti 90b40bb1c) perutaan. Ketju: KS kytkee → KK tarkistaa → kortti omistajalle.
+
+## TILINVAIHTO: NYKYINEN TILI 92 %:IIN (31.10.2026 klo 09.25)
+
+Omistaja 31.10.2026 klo 09.25 (KK:n kautta): 'Tämän tilin voi käyttää 92% asti'. Korvaa aiemman ~95 %:n (KK:n aloitus.md 2b). Viikkokäyttö 09.25 noin 71 %, nollaus 2.11. klo 09.00; arvio 92 % su 1.11. päivällä. PT:n toteutus: Postivahti hälyttää PT:lle ja KK:lle 85 %:ssa → KK lähettää omistajalle TOIMI TARVITAAN -listan (docs/tilinvaihto.md kohta 0.2); 90 %:ssa roolit luovuttavat; vaihto valmis ennen 92 %:a. Raamattu 12.21 ja docs/tilinvaihto.md päivitetty.
+
+## KOHDEKARTTA: KAIKKI PIIRROKSET SAMALLA KONTRASTILLA (31.10.2026 klo 09.32)
+
+Omistaja 31.10.2026 klo 09.31 (kortti KK:ssa 'Pidetäänkö aukiot ja puistot kevyempinä?'): 'Kaikki pitää olla samalla kontrastilla. Nyt osa voimakkaampia kuin toiset. Metro liian voimakas esim.' Aiemmin samana aamuna: 09.17 'Haaleus on tarkoituksellista siinä toisessa kartassa mutta tähän karttaan voisi lisätä kontrastia'; 09.27 'Uudessa liikaa kontrastia. Tee puoliväliin ja tee kuvat hieman pienemmiksi. Ja kun kuvaa painaa niin se pitäisi avautua isommaksi samalla tavalla kuin nähtävyyskartassa'; 09.29 'Suurennus pitää tulla aninoidusti easy in out'. LINJAUS: kohdekartan kaikki piirrokset (myös aukiot ja puistot) samalla kontrastitasolla = 09.27:n puoliväli; voimakkaat (esim. metro) kevyemmiksi, Concorde/Vosges/Luxembourg vahvemmiksi; KS mittaa ettei yksikään poikkea. Kumoaa 26.9.:n kevyemmän aukiomerkin kohdekartalla (Raamattu 2.139 päivitetty). Striimikartan haaleus säilyy. Web KS, natiivi NUI (juna 216).
+
+## TUOTANTOPUTKI: KEVYIN TAPA JA YHTEINEN MOOTTORI (31.10.2026 klo 11.26)
+
+Omistaja 31.10.2026 klo 11.17: 'Tarkista että muissakin metrokartoissa sama kevyt bittikartta toteutus animaatioissa. Kaikki saisivat käyttää samaa moottoria'; 11.18: 'Tuotantoputkeen pitöisi kirjata että aina mietitään tällaisia tapoja toteuttaa. Mieti miten tämä kannattaa kirjata fiksuiten'; 11.25 kortti 'Kirjataanko kevyt toteutus ja yhteinen moottori näin?' → 'Kyllä, näin (Suositus)'. Kirjattu: tuotannonohjaus.md periaate 8 (kevein tapa, sama moottori, parannus kaikkiin käyttäjiin), valmiin määritelmä 8.4 ja portti 4 (uusi liike tai näkymä hyväksytään vain yhteisellä moottorilla), tekotavat/koodi.md luku 3 (siirto/skaalaus/häivytys, ei fonttikokoa/mittoja joka ruudulla) ja Opit 31.10. NUI laajentaa OpasMetrolinja.cs:n Kierrosmuunnokset kaikkiin tiloihin junaan 216.
+
+## KADONNEET IHMEET EUROOPASSA: 43 UUTTA JA KAKSI POIS (omistaja 31.10. klo 12.49) (31.10.2026 klo 12.49)
+
+Omistaja 11.28: "Lisäksi voisi katsoa onko Euroopassa kaikki oleelliset kadonneet kohteet ihmeinä ja tehdä kaikki merkittävät puuttuvat kohteet". KK:n agentin luonnos (51) → PT karsi 43:een (pois:
+Königsbergin linna, Dresdenin Semper-synagoga, Münchenin Glaspalast – kaupunki ei pelissä; Gamla Uppsalan temppeli – ulkonäkö epävarma; Prahan Stalin-monumentti ja Sofian Dimitrovin mausoleumi –
+diktaattorien muistomerkit eivät sovi loistonsa ajan ihmeiksi; Rooman getto, Spina di Borgo ja Bukarestin Uranus-kaupunginosa – kortteleita, Uranuksesta mukana Văcăreștin luostari). Omistaja 12.49
+kortilla: hyväksyi listan 43 kadonneesta ihmeestä: Lontoo: Whitehallin palatsi, vanha Westminsterin palatsi, Euston Arch, Newgaten vankila, Greenwichin palatsi; Istanbul: Konstantinopolin suuri
+palatsi, Pyhien apostolien kirkko; Rooma: Capitolium (Jupiterin temppeli), Septizodium; Pariisi: Les Hallesin hallit, Galerie des Machines, Trocadéron palatsi, Palais de l'Industrie, Palais d'Orsay,
+Temple-torni, Grand Châtelet; Varsova: Saksin palatsi, suuri synagoga, Aleksanteri Nevskin katedraali; Berliini: Palast der Republik, Anhalter Bahnhof; Dublin: Nelsonin pylväs; Barcelona:
+Ciutadella-linnake; Luxemburg: linnoitus; Vilna: suuri synagoga; Riika: Gogolin kadun synagoga; Moskova: Sukharevin torni, Kremlin Tšudovin ja Taivaaseenastumisen luostarit; Bukarest: Văcăreștin
+luostari; Edinburgh: Old Tolbooth; Firenze: Mercato Vecchio; Helsinki: vanha rautatieasema; Pietari: Nyenskans; Lissabon: Tejon kuninkaallinen ooppera; Wien: Kärntnertor-teatteri, Ringtheater;
+Tukholma: Kustaa III:n ooppera; Kööpenhamina: keskiaikainen Vor Frue Kirke; Bryssel: Maison du Peuple; Marseille: Pont Transbordeur; Budapest: alkuperäinen Erzsébet-silta; Praha: vanhan raatihuoneen
+itäsiipi; Venetsia: San Geminianon kirkko. Toteutus: Codex piirtää (pysyvä lupa) loistonsa ajalta, KS sijoittaa (arvio-koordinaatit tarkistetaan ennen tilausta), uusi pienempi piirroskoko (omistaja
+12.15/12.4x). Omistaja 12.49 kortilla myös: Riian Mustapäiden talo ja Vilnan alalinna pois kadonneista ihmeistä tavallisiksi kohteiksi, koska ne on rakennettu uudelleen samanlaisina (sama sääntö kuin
+Frauenkirche).
+
+## EI AIKA-ARVIOITA OMISTAJALLE (omistaja 31.10. klo 13.33) (31.10.2026 klo 13.33)
+
+Omistaja 13.33 KK:n kautta (sanatarkasti): "Sinun ei tarvitse jatkossa antaa aika arvioita. Ne eivät yleensä pidä paikkaansa". Kirjattu Raamattuun 7.31: omistajalle, KK:lle välitettäväksi ja Asemataulun omistajalle näkyviin teksteihin ei valmistumisarvioita eikä kellonaika-ennusteita; kerrotaan vain työn alla oleva ja valmis, kun valmis. Roolien keskinäinen aikataulutus saa jatkua.
+
+## EI SELITEKAISTAA OMISTAJAN KUVISSA; KIERROKSEN TEKSTITYS SAA PEITTÄÄ (omistaja 31.10. klo 13.45) (31.10.2026 klo 14.48)
+
+Omistaja 13.45 KK:n kautta NUI:n todistuskuvan K3 jälkeen (sanatarkasti): "Älä laita tekstiä kuvan päälle" / "Siis noita mustalla pohjalla olevia selitys tekstejä" / "Tekstitys saa mennä kuvan päälle. Vain napit pitää jäädä korin päälle". 1) Omistajalle menevissä kuvissa ja videoissa ei mustaa selitekaistaa tai muuta selitetekstiä kuvan päällä (vahvistaa 24.10. raaka-säännön, Raamattu 4.48/9.10), kaikille rooleille; selite viestiin tai tiedostonimeen. 2) Kaupunkikierros: tekstitys saa peittää näkymää, napit pysyvät korin päällä; kameran rajaus korin reunan ja ylä-UI:n väliin ennallaan.
+
+## TILINVAIHTO: VANHAT SESSIOT NOLLATTUINA TAI ARKISTOON (omistaja 31.10.2026 klo 14.55) (31.10.2026 klo 14.56)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Tili vaihdossa uudella tilillä vanhat pitäisi automaattisesti arkistoida tai jatkaa vanhojen käyttöä kunhan resetoi ne vain ensin". Linjaus: ensisijaisesti samat sessiot jatkavat nollattuina (id:t pysyvät), jos teknisesti mahdollista; muuten vanhat arkistoidaan automaattisesti vaihdon lopuksi. Kirjattu tilinvaihto.md kohta 3 ja Raamattu 12.23 kohta 3. KK arkistoi omistajan pyynnöstä ("Poista vanhat sessiot") 13 vanhaa sessiota (aiempien tilien roolit + vanha KK local_f36040a0); nykyiset roolit ennallaan.
+
+## KAMERA: KATSE EI NOUSE LASKEUTUESSA, KOKO RAKENNUS KORIN YLÄPUOLELLA (omistaja 31.10.2026 klo 16.51) (31.10.2026 klo 16.52)
+
+Omistaja (KK:n välittämä kortin vastaus "Hyväksytkö Notre-Damen kameran?", NUI 967630faa, sanatarkasti): "Kip jäi nyt ylemmäs eikä kirkko näkynyt sen takia vieläkään kokonaan vaikka kamera kääntyi alaspäin. Lisäksi kamerakulma ei saa nousta ylös välillä kun laskeudutaan alas." Linjaus kaikkiin pysähdyksiin: kippi matalammalle, koko rakennus korin yläpuolella; laskeutuessa katse ei nouse välillä ylös (yleinen kamerasääntö). Raamattu 2.82. NUI korjaa.
+
+## PARIISIN PIIRROSKARTAN KOEPALA JUNAN 216 JÄLKEEN (omistaja 31.10.2026 klo 17.11) (31.10.2026 klo 17.12)
+
+Omistaja 16.54 (kuva tiny.london/world, docs/raportit/kaappaukset/omistaja-20261031/tiny-london-world-1654.png), sanatarkasti: "Voisiko näitä käyttää hyväksi?" + "ei siis välttämättä suoraan, mutta
+jos jotenkin sovelletaan" + "Voiko noita jo tehtyjä käyttää?". Kortti 17.11 "Tehdäänkö Pariisista piirroskartan koepala junan 216 jälkeen?" → "Kyllä, junan 216 jälkeen (Suositus)" (selite: Cité-saari
+ja Louvre koko kaupunkina Akropolis-tyylillä). Tavoite (KK): Pariisin kohdekartta isoisän piirtämän näköisenä saumattomana zoomattavana pienoiskaupunkina, sama isometrinen seepiatyyli kuin
+nähtävyyspiirroksissa (27.9.), nähtävyydet luonnostaan oikean kokoisia. Pohjana omat ja avoimet karttatiedot, ei Googlen kuvia. Codex piirtää palat isometric.nyc:n tapaan (pelkistetty 3D-kuva →
+tyylipiirros pala kerrallaan naapurin jatkoksi, noin 40 esimerkkiä), Karttaseppä kokoaa. Valmiita karttoja (tiny.london ym.) ei käytetä: ei avointa lisenssiä, pikselityyli, osin Googlen aineistoa.
+Tekijän työkalujen lisenssi tarkistetaan koepalan alussa. Aloitus vasta junan 216 jälkeen.
+
+## PARIISIN PIIRROSKARTTA HETI KIIREELLISENÄ (omistaja 31.10.2026 klo 17.35) (31.10.2026 klo 17.36)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Pyydä piirros heti codexilta Pariisista kiireellisenä." Muuttaa 17.11 päätöksen ajoituksen: koepala ei odota junaa 216. PT tilasi Codexilta 17.4x (posti/paatoimittaja-codex-pariisi-piirroskartta-20261031.md, 111a43155): ensin yksi iso kuva tyylin hyväksyntään KK:n kautta omistajalle, sitten saumattomat palat; ennen ihmeiden erien 3–4 jatkoa.
+
+## PIIRROSKARTTA: HÄIVYTYS KÄÄNNÖSSÄ JA SUORISTA-NAPPI (omistaja 31.10.2026 klo 17.43) (31.10.2026 klo 17.43)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Piirros voisi pehmeästi hävitä jos pelaaja kääntää tai kallistaa karttaa. Silloin voisi tulla ruudulle nappi suorista joka palauttaa kartan takaisin ja tuo piirroksen näkyviin". Linjaus koepalan speksiin: piirros näkyy vain omassa kuvakulmassaan; käännössä tai kallistuksessa se häipyy pehmeästi tavallisen kartan alle ja ruudulle tulee Suorista-nappi olemassa olevalla nappipohjalla (UI-POHJAT; puuttuva pohja → kysy); nappi kääntää kartan pehmeästi takaisin piirroksen kulmaan ja piirros palaa.
+
+## HERÄTYKSET JA VALVONTA KUULUVAT PT:LLE (omistaja 31.10.2026 klo 17.55) (31.10.2026 klo 17.56)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Eikö päätoimittajan pitäisi huolehtia sessioiden herätykset ja valvoa niitä?" Vastaus kyllä (Raamattu 7: Postivahti herättää PT:n, PT roolit). Aukot 31.10.: KS lepäsi, vaikka Codexin erät 3–4 ja Radialsystem V olivat postissa; LAV:n leivontaketjun loppuun ei ollut herätystä. Oppi: jokainen Codex-toimitus herättää vastaanottajaroolin heti (Postivahdin kierros + PT:n postilaatikkomonitori), jokaiselle pitkälle ajolle varmistetaan herätys ajon loppuun (roolin oma herätys tai Postivahti seuraa pid/lokia). KK ei herätä rooleja; tarkistaa vain ennen omistajalle kertomista.
+
+## PARIISIN PIIRROSKARTAN TYYLI HYVÄKSYTTY, VÄRIT LÄMPIMIKSI (omistaja 31.10.2026 klo 18.16) (31.10.2026 klo 18.17)
+
+Kortti "Hyväksytkö Pariisin piirroskartan tyylin?" (Codexin koepala-1.png, d0cbbc6ca) → "Kyllä, värit lämpimiksi (Suositus)" (selite: "Codex lämmittää värit nähtävyyspiirrosten seepiaan ja piirtää sitten palat."). Tavoite: piirroskartta ja nähtävyyspiirrokset vierekkäin samaa käsialaa (lämmin seepia kuten pariisi-notre-dame-kk.webp); joki, nurmet ja katot hillitymmiksi. Palat lukitusta OSM-geometriasta (esim. Cité-saaren itäpää puistoa). PT tilasi Codexilta 18.2x.
+
+## JUOKSUPELI: AVOIN PALATSI JA ENNAKOITAVAT EUNUKIT, PELIN YDINAJATUS (omistaja 31.10.2026 klo 18.26) (31.10.2026 klo 18.27)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Ja reitti tosiaan pitää olla täysin pelaajan itsensä valittavissa. Lisää kerättäviä ja rikottavia asioita voi kyllä ilmestyä, jos pelaaja menee uudestaan samaan paikkaan, mutta vähemmän kuin ensimmäisellä kerralla. Muuten pelin maailma pitää olla täysin avoin, eli pelaaja voi liikkua minne tahansa. Ja eunukkeja pitää tulla sivuilta ja edestäpäin niin, että pelaaja pystyy ennakoimaan ja valitsemaan reitit aina niin, että pystyy ennakolta väistämään eunukkeja, mutta tarvittaessa lähellä myös tekemään sitten niitä eri väistöliikkeitä. Se on se koko pelin idea." Täydentää 30.10. 19.12 (oikea palatsialue, reitit valitaan itse); työlistan kohta 2 reittivalinta (Pelikoodari). Raamattu 2.177 PELIN YDINAJATUS; vanha "rata toistuvista paloista" merkitty korvatuksi. KK tarkistaa toteutuksen näitä sanoja vasten.
+
+## ENSIN YKSI KOHTAUS MAHDOLLISIMMAN HIENOKSI, SUORITUSKYKY MYÖHEMMIN (omistaja 31.10.2026 klo 18.27–18.31) (31.10.2026 klo 18.32)
+
+Omistaja 18.27 (sanatarkasti): "Kannattaisiko tehdä ensin yksi kohtaus, missä valo toimii varmasti oikein ja vasta sitten siirtyä seuraaviin?" Kortti 18.28 "Tehdäänkö valo ensin yhteen kohtaukseen
+valmiiksi?" → "Kyllä, portin piha 06 (Suositus)"; lisäys 18.28: "Voin nähdä samassa myös, miltä taivas näyttää silloin. Sekä kaikki mahdolliset grafiikka- ja valo- ja muut efektiparannukset käytössä."
+18.31: "Minusta kannattaa ensin yrittää tehdä näkymästä mahdollisimman hieno, eikä välittää siitä, pyöriikö se laitteella vai ei, joten tarkastusajojakaan ei tarvita. Tärkeintä, että saadaan pelistä
+visuaalisesti mahdollisimman hieno. Ja sen jälkeen vasta aletaan miettimään, miten se saadaan laitteissa pyörimään tarpeeksi nopeasti. Ja samalla pitää myös miettiä, mitä kaikkea Unity beta nyt
+mahdollistaa." (korvaa 18.28 selitteen "tarkistetaan iPadilla"). Toteutus: VS vetää koekohtauksen 06, LAV leivonta v2, NS 6000.7-beetan mahdollisuudet, PK kytkentä. Juna 216 odottaa valoa (30.10.
+22.27). Raamattu 2.177.
+
+## PARIISIN PIIRROSKARTTA: G-TYYLI HYVÄKSYTTY, KOKO KAUPUNKI (omistaja Codexissa 31.10.2026 klo 19.40) (31.10.2026 klo 19.42)
+
+Omistaja ohjasi Codexia suoraan (sääntö 21.10. 08.45), Codexin posti d0191a334 sanatarkasti: F:stä "Nyt hyvä mutta poista punaista." → G; G:stä "Hyvä. Tee nyt koko kaupunki noin." Linja: vain tärkeimmät nähtävyydet liioitellaan voimakkaasti, tavallinen kaupunki pieni, rauhalliset värit (C:n suunta), ei punaisia korostuksia; ihmiset, liikenne, veneet ja lentokoneet mukana. Codex toimitti koko Pariisin yleiskuvituksen + 12 esikatselupalaa (ei georeferoituja). PT tilasi Karttasepältä lukitun pohjan (OSM relation 7444: kadut, rannat, puistot, jalanjäljet, valkoinen pienoismallipohja, yhteinen projektio ja palaruudukko) Codexille tuotantopaloja varten. OSM-attribuutio näkyviin lopulliseen karttaan (G:stä puuttui).
+
+## PARIISI VALMIIKSI (omistaja 31.10.2026 klo 19.52) (31.10.2026 klo 19.54)
+
+KK välitti sanatarkasti: "Tehkää Pariisi valmiiksi" (kaappaus docs/raportit/kaappaukset/omistaja-20261031/kk-1952-codex-pariisi-valmiiksi.png; Codexissa "Toimita claudelle"). Ketju ilman välipysähdyksiä omistajalle: Karttaseppä lukittu pohja 5 × 9 → Codex piirtää kaikki tuotantopalat G-tyylillä zoomin tarkkuudella → Karttaseppä kokoaa saumattomaksi (häivytys + Suorista-nappi, 17.43; OSM-attribuutio näkyviin). Valmis Pariisi pelistä KK:lle G-kuvan rinnalla samasta kulmasta. Jos juna 216 valmis ennen Pariisia → KYSYMYS KK:lle (ei oletusta). PT:n tilaus Codexille 80b4fb3f7.
+
+## MUSEOIDEN METROKARTTA KUIN KAUPUNKIKIERROKSELLA (omistaja 31.10.2026 klo 21.07) (31.10.2026 klo 21.07)
+
+Omistaja kysyi 21.06: "Onko metrokartta päivitetty jo museoihin myös?". KK:n kortti "Tehdäänkö museoiden metrokarttaan samat muutokset kuin kaupunkikierrokseen?" → "Kyllä, junaan 216 (Suositus)" (selite: "Otsikko pois, kartta pienenee kohteessa ja nimi siirtyy yläreunaan, pehmeät siirtymät."). Taidemuseo ja taidehalli: Kierrostila (154b318f0) kuten kierroksella, periaate 8. Natiivi-UI, juna 216.
+
+## JUNA 216 LÄHTEE KUN PARIISIN UUSI KARTTA VALMIS (omistaja 31.10.2026 klo 21.08) (31.10.2026 klo 21.08)
+
+KK välitti sanatarkasti: "julkaisi juna, kun Pariisin uusi kartta valmistuu" (kirjoitusvirhe = julkaise). Ehdot: Pariisin uusi piirroskartta pelissä valmis (19.52), valo omistajan hyväksymä (30.10. 22.27), karttatyöt (13.27, valmiit). KK tarkistaa Pariisin pelistä G-kuvaa vasten ennen TF:ää; ehtojen täyttyessä juna lähtee ilman uutta julkaisupyyntöä.
+
+## OPPI: ROOLIEN KONTEKSTIT KARKASIVAT 75 %:IIN JA SOVELLUS KAATUI (omistaja 31.10.2026 klo 21.26) (31.10.2026 klo 21.54)
+
+Omistaja (KK, sanatarkasti): "sessioiden kontekstit eivät pysy kurissa." Sovellus kaatui ~21.27, kun KK luki 10 session kontekstia rinnakkain; kaikki sessiot pysähtyivät, PT herätti roolit 21.5x.
+Mitattu: KS 75 % (raja 25–35), NUI:n edellinen 76 % ennen luovutusta, PK 38 % (kova 35), Postivahti 32 % (kova 30). SYYT (PT): (1) KONTEKSTIVAHTI-koukku on vain PT:n kansiossa, rooleilla ei
+muistutusta; (2) Postivahti luki vain roolit, joiden lastActivityAt muuttui, ja oli itse yli rajansa; (3) KS ja NUI lukivat paljon täysikokoisia kuvia (simu- ja vertailupareja) pitkissä vuoroissa. KS
+kirjaa luovutukseensa tarkemman syyn. KORJAUS: Postivahti lukee joka kierroksella kaikkien roolien kontekstin YKSI KERRALLAAN (ei rinnakkain) ja pysäyttää kovan rajan ylittäjän heti luovutukseen;
+roolit tarkistavat get_usage selfin ennen kuvan lukemista ja lukevat kuvat pienennettyinä. Avoin PT:lle: KONTEKSTIVAHTI-koukku kaikkien roolien kansioihin vaatii lupa-asetuksen muutoksen = vain
+omistajan omalla viestillä (CLAUDE.md).
+
+## TILINVAIHTOON TARKISTUS ENNEN KUIN TYÖ JATKUU (omistaja 31.10.2026 klo 22.06) (31.10.2026 klo 22.07)
+
+Omistaja (KK:n kortti, sanatarkasti): kysymys 'Lisätäänkö tilinvaihtoon tarkistus: osoitteet, Asemataulu ja asetukset?' → 'Kyllä (Suositus)' (selite: 'Vaihdon jälkeen puutteet korjataan ennen kuin työ jatkuu.'). Tausta: 'Miksi tilin vaihdossa häviää tietoa vaikka sessiot pyörivät mac studiolla samoissa hakemistoissa tilin vaihdoista huolimatta?' ja 'jotain häviää tilin vaihdossa mitä ei häviä normaalissa nollauksessa.' Toteutus (PT): docs/tilinvaihto.md kohta 7.5; tools/tyotavat/tilinvaihto-valmis.mjs tarkistaa nyt myös lyhyet id:t (local_<8>), kotikansioiden juuren .md:t ja ~/.claude/CLAUDE.md:n (löysi heti NOLLAUS.md:n ja KK:n aloitus.md:n vanhan local_febfd152:n). Asetukset ja Asemataulu: työkalun osat 1 ja 5. Tulos KK:lle yhdellä rivillä; työ jatkuu vasta, kun paluu on 0. KK:n toinen ehdotus (roolien keskustelujen tallennus) peruttu: tavallisessa nollauksessa ei ongelmia.
+
+## KONTEKSTIVAHTI KAIKILLE ROOLEILLE, OMISTAJA AJAA RIVIN (omistaja 31.10.2026 klo 22.17) (31.10.2026 klo 22.19)
+
+Omistaja (KK:n kortti, sanatarkasti): 'Tehdäänkö kontekstivahdille rivi, jonka ajat itse tilinvaihdossa?' → 'Kyllä (Suositus)' (selite: 'Jokainen rooli näkee oman kokonsa ja luovuttaa työnsä rajalla.'). Toteutus (PT): tools/hooks/kontekstivahti.py + asenna-kontekstivahti-hook.sh (viestiraja-hookin mallilla, käyttäjätaso ~/.claude/settings.json, PostToolUse * ja UserPromptSubmit; rajat 7.37 kansion mukaan: Postivahti 20–30, Laitetestaaja ja Äänittäjä 30–40, muut 25–35; Matkakirja-fable ohitetaan, PT/KK:lla oma vahti). Omistaja ajaa rivin itse; tilinvaihto.md kohta 6.

@@ -29,7 +29,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  kohdekarttojenNostot, kohdekartallaSisalla, nostojenKarttapaikat,
+  kohdekarttojenNostot, kohdekartallaSisalla, kohdekartallaNakyvissa, nostojenKarttapaikat,
 } from '../tools/tarkista-nostopaikat.mjs';
 import { KAUPUNGIN_KOHDALLA_SADE } from '../js/fokuskohteet.js';
 import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
@@ -223,8 +223,8 @@ test('kohdekartan nostopiste on napautettava ja rajauksen sisällä', () => {
     assert.ok(avattava,
       `${kaupunki}/${piste} kantaa nostoa ${tunnus}, mutta pisteellä ei ole `
       + 'juttua eikä wiki-artikkelia — merkki, jolle ei tapahdu mitään');
-    assert.ok(kohdekartallaSisalla(kartta, kohde.lat, kohde.lon),
-      `${kaupunki}/${piste} on kartan rajauksen ulkopuolella`);
+    assert.ok(kohdekartallaNakyvissa(kartta, kohde.lat, kohde.lon),
+      `${kaupunki}/${piste} on kartan rajauksen ja kainaloiden ulkopuolella`);
   }
 });
 

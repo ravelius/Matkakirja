@@ -53,6 +53,10 @@ export const VAATIMUKSET = {
   '1.64': ['!fokusvirrat.aarremerkinta'],
   // Pelikoodari 12.10.2026 (PT, juna 184): kaaren kohtaamis- ja aarreluennan tallenteet natiiville.
   '1.65': ['tarinakaari.aanet'],
+  // Karttaseppä 31.10.2026: kohdekartan tasatut piirrokset (omistaja 09.31–09.34; natiivi NUI juna 216).
+  '1.66': ['kokoelma:kohdekartanPiirrokset', 'kohdekartanPiirrokset.kuva'],
+  // Karttaseppä 31.10.2026: kadonneiden ihmeiden korostukset monumenteissa (omistaja 12.49, PT).
+  '1.67': ['monumentit.korostukset'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

@@ -32,14 +32,20 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
 3. Kirjaa tili: päätili (omistajan muukin käyttö) = siirtoprompti 50 %:ssa; koodaustili = vain rivi 99 %:ssa. Kirjaus lokiin
    (`node tools/raamattu-kirjaa.mjs "TILINVAIHTO …"`) ja F/asemataulu/osoitteet.md:n taulukkoon; Postivahdille, kun se on luotu.
 
-## 1. Talteen ennen vanhojen sessioiden tyhjennystä
+## 1. Kaikki sessiot nollataan heti aluksi (omistaja 30.10.2026 klo 19.22; Raamattu 7.37)
+Omistaja: "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". Tämä on vaihdon ENSIMMÄINEN ASKEL heti tilin jälkeen
+(kohta 0) ja ennen sessioiden luontia: jokainen sessio, myös KK, PT ja Postivahti, aloittaa uudella tilillä puhtaalta pöydältä
+luovutuksensa ja ajantasaisten asetusten varassa (idleCompaction false, kohta 6). KK:n nollaukseen ei kysytä korttia (omistajan
+pysyvä lupa tilinvaihdossa). Järjestys: luovutukset ja tallenteet (alla 1–2), sitten nollaus (3).
 1. Jokainen rooli, jolla on keskeneräistä: luovutus + push (docs/moduulit/siirtoraportti.md). Lue roolien uusimmat luovutukset.
    Uusin luovutus löytyy aikajärjestyksessä (tiedostonimet -aamu/-ilta2/-yo eivät lajittele): `git fetch origin` ja
    `git log --remotes=origin --since=3.days --format='%ci %h %D' --name-only -- 'docs/raportit/viesti-<rooli>-luovutus-*' | head`.
 2. PT:n ja Keskustelukanavan keskustelut: `python3 tools/tallenna-keskustelu.py <session-uuid> Päätoimittaja` ja
    `… <session-uuid> Keskustelukanava` (kirjoittaa S/keskustelut/). Muut roolit: luovutus riittää.
-3. Vanhat sessiot tyhjiksi: `clear_session`, tarkistus `list_events` = 0. Jos vanhan tilin sessiot eivät näy uudella tilillä,
-   ne jäävät vanhalle tilille – ei toimia (ne eivät kuluta uuden tilin kiintiötä).
+3. Vanhat sessiot (omistaja 31.10.2026 klo 14.55): ENSISIJAISESTI samat sessiot jatkavat uudella tilillä nollattuina
+   (`clear_session`, tarkistus `list_events` = 0; id:t pysyvät, osoitekirja ennallaan), jos se on teknisesti mahdollista.
+   Muuten vanhat sessiot ARKISTOIDAAN automaattisesti vaihdon lopuksi (`archive_session`, kysymättä omistajalta), kun
+   uudet roolisessiot on luotu ja osoitekirja päivitetty.
 
 ## 1.5 Kotikansiot mainiin ENNEN sessioiden luontia (Raamattu 12.23 kohta 17 ja 7.47; KK 26.10.2026)
 Sovellus lataa CLAUDE.md:n session kansiosta vain käynnistyessään, joten jäljessä oleva kotikansio antaa uudelle sessiolle vanhat
@@ -118,7 +124,12 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
   gitin versiota Macin päälle. Macin versio on peilissä tools/tyotavat/settings.local.json.malli (peili.sh pitää ajan tasalla);
   palautus: `bash tools/tyotavat/palauta-sallinnat.sh` (vanha talteen .ennen-<pvm>, sitten PT:n session uudelleenkäynnistys).
   Gitin seurattua .claude/settings.local.json:ia ei committata.
+- KONTEKSTIVAHTI kaikille rooleille (omistaja 31.10.2026 klo 22.17): OMISTAJA ajaa itse `bash tools/hooks/asenna-kontekstivahti-hook.sh`
+  (käyttäjätaso, rajat 7.37 kansion mukaan; tarkistus `--tarkista`). Sessiot eivät muuta asetuksia.
 - Hookit: `bash tools/hooks/asenna-viestiraja-hook.sh --tarkista`; pt-taulu-muistutus.py: totuus S/hooks/ (peili tools/hooks/).
+- Automaattinen tiivistys pois (omistaja 30.10.2026 klo 19.22; Raamattu 7.37): "idleCompaction": false käyttäjän
+  /Users/koodaus/.claude/settings.json:ssa; Postivahti nollaa itsensä 30 %:ssa; ensimmäisen päivän iltana tarkista, ettei
+  yhdenkään roolin tallenteessa ole tiivistystä.
 
 ## 7. Macin tarkistukset (eivät riipu tilistä)
 - `launchctl list | grep -i -E 'matkakirja|runner'`: fi.matkakirja.juna, juna-vahti, naytto-auki, siivous, app.matkakirja.natiivi-bundle,
@@ -126,6 +137,17 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
 - `pgrep -fl vahti.zsh`: Julkaisijan vahdit (käynnistys yllä).
 - `bash tools/tyotavat/peili.sh --tarkista`: Mac-ohjeet ja peili samat.
 - `bash tools/tarkista-tyotilat.sh`.
+
+## 7.5 Tarkistus ennen kuin työ jatkuu (omistaja 31.10.2026 klo 22.06, kortti "Kyllä")
+Heti vaihdon jälkeen ja ennen kuin yksikään rooli jatkaa työtä PT ajaa `node tools/tyotavat/tilinvaihto-valmis.mjs` ja korjaa
+jokaisen PUUTE-rivin. Samat sessiot jatkavat (14.55) → tarkistus vahvistaa, ettei mikään osoite muuttunut.
+1. Osoitteet: vanhat id:t (täysi ja lyhyt muoto local_<8>) id:itä toistavista tiedostoista, kotikansioiden juuren .md:istä
+   (esim. Matkakirja-posti/NOLLAUS.md) ja ~/.claude/CLAUDE.md:stä → osoitekirjan id:t (`paivita-idt.mjs --kirjoita`; kansion oma
+   rooli korjaa omat tiedostonsa; CLAUDE.md:t korjaa KK omistajan luvalla).
+2. Asemataulu: uusi taulu auki, työlista, junat, roolit ja mittarit samat kuin vanhassa (kohta 4; työkalun osa 5).
+3. Asetukset: jokaisen session malli, effort, lupatila, vastaustyyli, nimi ja RC roolitaulukon mukaan (työkalun osa 1;
+   korjaus ccd_session_mgmt-työkaluilla).
+Tulos KK:lle yhdellä rivillä ("Tilinvaihdon tarkistus: N puutetta korjattu, 0 jäljellä"). Työ jatkuu vasta, kun paluu on 0.
 
 ## 8. Lopuksi
 `node tools/tyotavat/tilinvaihto-valmis.mjs` (paluu 0 = valmis): osoitekirjan id:t elossa sovelluksen sessiotiedostoista (tili,
@@ -144,7 +166,7 @@ VIIMEINEN VAIHE (omistaja 15.10.2026 klo 14.39): PT luovuttaa ja nollautuu heti,
 | Mittareiden vienti Asemataululle | Asemataulu-sessio: Boostin aikana täysi tarkistus (mittarit, roolit, laitteet, junat TF-lokeja vasten, työlista, tehtävät) heti ja 5 min välein (talo/boost, sammuu 1 h; omistaja 20.10. klo 09.56); ilman Boostia vain sessioiden omien kirjoitusten vienti; Raati ja Testaajat klo 08 ja TF:n saapuessa (omistaja 14.10. klo 22.34 ja 22.40); Postivahti vie junan edistyksen ja lukee talo/boostin | Postivahti 5 min syke-ehdolla (11.10.); "5 min aina" (13.10.); Raati ja Testaajat Postivahdin kierroksella |
 | Asemataulun osoite | osoitekirjan rivi "Asemataulu (tämän tilin taulu): …" (sama TAULU/nykyinen.json:ssa ja osoitteet.md:n KÄYTÖSSÄ-rivillä; docs/moduulit/asemataulu.md luku 9); muut tilit F/asemataulu/osoitteet.md | EekZDPMuAcsjT3awvn4jPb on VVI-tilin taulu (13.10.), Rq5ajPU4SraE2XKd7BYAix päätilin (10.10.) |
 | Kontekstirajat | liukumat pehmeä–kova (omistaja 14.10. klo 22.55 ja 22.57): Postivahti 20–30 %; koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35 %; PT (oma nollaus), Laitetestaaja ja Äänittäjä 30–40 %; KK 40–50 % kortilla "Nollaanko nyt?" (vain KK:n nollaus kysytään omistajalta). Pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, uusi iso tehtävä → nollaus ensin; luovutus → Postivahti nollaa ilman omistajan vahvistusta. VALVONTA (omistaja 15.10. klo 14.39): KONTEKSTIVAHTI-koukku muistuttaa 30/35/40 % (muistutus on käsky), Postivahti lukee PT:n ja KK:n kontekstin joka kierroksella, PT ≥ 40 % = pakkonollaus; PT lukee get_usage selfin jokaisen pyynnön alussa (Raamattu VALVONTA JA PAKKONOLLAUS) | roolit 50 % (10.10.), 35 % (14.10. 22.4x); PT 65 %; KK 55/65 %; Postivahti ei nollaa KK:ta |
-| Viikkokiintiö | päätili: siirtoprompti 50 %:ssa; koodaustilit: vain rivi 99 %:ssa (Postivahti hälyttää 96 % ja 99 %); ei keventämistä | "ei siirtopromptia" koskee vain koodaustilejä |
+| Viikkokiintiö | NYKYINEN TILI (omistaja 31.10. 09.25): käyttö enintään 92 % → vaihto valmis ennen sitä (85 %: TOIMI-lista omistajalle, 90 %: luovutukset); päätili: siirtoprompti 50 %:ssa; koodaustilit: vain rivi 99 %:ssa (Postivahti hälyttää 96 % ja 99 %); ei keventämistä | "ei siirtopromptia" koskee vain koodaustilejä |
 | TF-juna | lähtee vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA", PT:n välittämä riittää), kaikki kuitattu samaan junaan, TF enintään 2/pv | "heti kun valmista" (6.10.); launchd fi.matkakirja.juna (2 h välein 08–22) ja juna-vahti (10 min) ovat simulaattorikäännöksiä, eivät TF-junia |
 | Session id:t | vain S/osoitekirja.md | Raamatun ja vanhojen ohjeiden kovakoodatut id:t |
 | PT:n malli | Opus, medium | "Opus max" (28.9.) |

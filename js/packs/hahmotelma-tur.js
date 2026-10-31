@@ -53,7 +53,10 @@
  */
 
 /** Turkin hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_TUR = [
+  ...(EUROOPAN_KADONNEET.TUR ?? []),
   {
     id: 'hahmotelma-nemrut',
     kuva: {
