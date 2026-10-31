@@ -1,0 +1,118 @@
+{
+  "purpose": "Compare A/B warm alternatives, C fresh lively caricature and D stronger top-heavy caricature; owner design choice pending",
+  "allFinalImagesPersonallyViewed": true,
+  "allComparisonImagesApprovedForDelivery": true,
+  "versions": [
+    {
+      "variant": "A",
+      "personallyViewed": true,
+      "approvedForComparisonDelivery": true,
+      "reviewedAt": "2026-10-31T16:36:57.467881+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-feb5b623-ce5b-4c82-8179-0505c95aeef9.png",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-A-lammin-mittakaava.png",
+      "sha256": "c20626afa6b69849590498fa6031f40277054ad1ea380330ce08e36790f3adb9",
+      "bytes": 3804686,
+      "dimensions": [
+        1572,
+        1001
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "generationCalls": 1,
+      "notes": [
+        "Warm taupe-grey water replaces cyan; pale olive vegetation and warm brown-grey roofs; fine sepia drawing consistent across city.",
+        "Accepted prototype composition preserved at practical viewing level. Landmarks kept as small city buildings, not tourist-map icons.",
+        "Ile de la Cite eastern end shown with trees and paths. Ground plan remains a generated interpretation and is not certified pixel-exact OSM geometry.",
+        "No tiles or runtime assets created; owner comparison choice pending."
+      ],
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "variant": "B",
+      "personallyViewed": true,
+      "approvedForComparisonDelivery": true,
+      "reviewedAt": "2026-10-31T16:39:01.787683+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-303844c1-4e87-4825-a4a4-e5b00fce5ac1.png",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-B-lammin-korostettu.png",
+      "sha256": "25d16425ec8b77b2dccef082ed3a4479c89104ac0fe4b06d6f679feffc2e0270",
+      "bytes": 3621507,
+      "dimensions": [
+        1571,
+        1001
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "generationCalls": 1,
+      "notes": [
+        "Warm palette, frame and ordinary city composition match version A at practical comparison scale. The full drawing was regenerated, not locally pasted or recolored.",
+        "Notre-Dame is intentionally much more prominent; Louvre and pyramid are enlarged; Sainte-Chapelle has a taller single spire; bridge anchors remain visually consistent.",
+        "Eastern Cite park remains visible; street and landmark details are not certified exact OSM geometry.",
+        "Ordinary city composition is kept for comparison, but full regeneration is not a guarantee of pixel-identical ordinary roofs or facades.",
+        "No tiles or runtime assets created; owner comparison choice pending."
+      ],
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "variant": "C",
+      "personallyViewed": true,
+      "approvedForComparisonDelivery": true,
+      "reviewedAt": "2026-10-31T16:44:59.565650+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-528c5cea-1e82-4c21-b8b8-751f3b9559cb.png",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-C-raikas-elava-karikatyyri.png",
+      "sha256": "d2dd473e84146775c3f49b1c2a008b9b701fcb7a10eb416b402e1a6d254bc045",
+      "bytes": 4189026,
+      "dimensions": [
+        1572,
+        1001
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "generationCalls": 1,
+      "notes": [
+        "Stronger vertical architectural caricature than B, especially Notre-Dame twin towers and Sainte-Chapelle; Louvre pavilions and surrounding rooftops rise more prominently. Upper building parts emphasised while overall city anchors are retained visually.",
+        "Cleaner ivory ground, fresh muted blue-grey roofs and river, warmer stone facades, livelier green vegetation; no longer the strongly brown A/B palette.",
+        "Visible varied tiny pedestrians, traffic, cafe/park activity, boats with wakes and two small aircraft; no photographic background or pasted-in objects.",
+        "Visual comparison concept only: ground footprints and individual street alignments are not certified exact locked OSM geometry. A deterministic production base must lock locations after the design choice.",
+        "Full new generation; not a partial edit or a post-processing colour filter. Prior versions preserved."
+      ],
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "variant": "D",
+      "personallyViewed": true,
+      "approvedForComparisonDelivery": true,
+      "reviewedAt": "2026-10-31T16:48:52.866608+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d37eeb93-4748-451e-a14e-4ded9cb30172.png",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-D-voimakas-karikatyyri.png",
+      "sha256": "e43f5e47c8ec51e9f5961c08ed6fe85efffd38173cef065504b5e3cabebf305f",
+      "bytes": 4172420,
+      "dimensions": [
+        1572,
+        1001
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "generationCalls": 1,
+      "notes": [
+        "Radically stronger caricature than C: tall top-heavy Notre-Dame twin towers with visibly flaring upper belfries, enlarged Louvre pavilion crowns, comically large mansard roofs on ordinary buildings.",
+        "Fresh lively colours, visible people and traffic, boats, cafes and two airborne aircraft; whole illustration redrawn.",
+        "Style exploration only: the generated city block shapes and density differ from C and are not certified exact ground footprints. A geometry-locked production map is separate work after owner design choice.",
+        "No cropping, resizing, colour filtering or partial edits. C and other previous versions preserved."
+      ],
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "sameNativeDimensions": false,
+  "noRasterResizingCroppingOrPartialEdits": true,
+  "pixelIdenticalBackgroundCertified": false,
+  "exactGeometryCertified": false,
+  "scopeLimit": "Complete generated design comparison images. Ground-footprint shapes and city blocks are not certified exact, and differ especially in D. A locked non-generative geometry base and seamless tiles are separate later work after owner selection."
+}

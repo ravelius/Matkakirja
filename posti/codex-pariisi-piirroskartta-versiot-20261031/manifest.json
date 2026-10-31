@@ -1,0 +1,132 @@
+{
+  "title": "Pariisin karttavertailu A–D; D uusin voimakas karikatyyri",
+  "createdAt": "2026-10-31T16:49:24.533742+00:00",
+  "taskNumbers": [
+    1414,
+    1415,
+    1416,
+    1417
+  ],
+  "sourceOrders": [
+    {
+      "path": "posti/paatoimittaja-codex-pariisi-piirroskartta-palat-20261031.md",
+      "commit": "f639cf76f13b458190023b9cefb2feb0a5a740c6",
+      "blob": "f20791eef908c4ea4f968fcab4ed2191aba4325d",
+      "readInFull": true,
+      "local": "warm-colors-order.md"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-pariisi-piirroskartta-versiot-20261031.md",
+      "commit": "b9551abed22160a3d12b933e5b064181e401921a",
+      "blob": "0e5c6a909dae3c62958f4d9cf1891af5b116db33",
+      "readInFull": true,
+      "local": "comparison-order.md"
+    }
+  ],
+  "latestOrderSupersedesTilesStart": true,
+  "assetCount": 4,
+  "assets": [
+    {
+      "variant": "A",
+      "path": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/pariisi-piirroskartta-A-lammin-mittakaava.png",
+      "sha256": "c20626afa6b69849590498fa6031f40277054ad1ea380330ce08e36790f3adb9",
+      "bytes": 3804686,
+      "dimensions": [
+        1572,
+        1001
+      ],
+      "role": "normal-relative-scale-warm",
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "variant": "B",
+      "path": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/pariisi-piirroskartta-B-lammin-korostettu.png",
+      "sha256": "25d16425ec8b77b2dccef082ed3a4479c89104ac0fe4b06d6f679feffc2e0270",
+      "bytes": 3621507,
+      "dimensions": [
+        1571,
+        1001
+      ],
+      "role": "emphasized-landmarks-warm",
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "variant": "C",
+      "path": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/pariisi-piirroskartta-C-raikas-elava-karikatyyri.png",
+      "sha256": "d2dd473e84146775c3f49b1c2a008b9b701fcb7a10eb416b402e1a6d254bc045",
+      "bytes": 4189026,
+      "dimensions": [
+        1572,
+        1001
+      ],
+      "role": "fresh-lively-vertical-caricature",
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "variant": "D",
+      "path": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/pariisi-piirroskartta-D-voimakas-karikatyyri.png",
+      "sha256": "e43f5e47c8ec51e9f5961c08ed6fe85efffd38173cef065504b5e3cabebf305f",
+      "bytes": 4172420,
+      "dimensions": [
+        1572,
+        1001
+      ],
+      "role": "strong-top-heavy-caricature",
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "comparisonPath": "proto-3d/_tyo/codex/pariisi-piirroskartta-versiot/vertailu.html",
+  "selectedCandidates": {
+    "A": 1,
+    "B": 1,
+    "C": 1,
+    "D": 1
+  },
+  "generationCalls": 4,
+  "generator": "built-in image_gen",
+  "fullNewGenerations": true,
+  "priorPrototypePreserved": true,
+  "priorStyleApprovedWarmthRequested": true,
+  "ownerChoice": null,
+  "tilesStarted": false,
+  "tilePhasePendingOwnerChoice": true,
+  "exactOsmGeometryCertified": false,
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "r2Status": "not requested; four comparison PNGs and metadata in mailbox only",
+  "latestVariant": "D",
+  "ownerSteering": [
+    {
+      "source": "direct owner messages in current conversation",
+      "observedAt": "2026-10-31T16:41:52.312290+00:00",
+      "quotes": [
+        "Tee vielä suurempi liioittelu. Ja sävymaailmassa saa olla vähän raikkaampi.",
+        "ja piirrän mukaan ihmisiä, autoja, veneitä, lentokoneita, mikä vain tekee kuvituksesta hauskan, elävän ja mielenkiintoisen.",
+        "Rakennukset saavat siis olla omilla paikoillaan, mutta ne voisivat karikatyyrimäisesti venyä ylikorkeiksi ja kasvaa ylhäällä isommiksi. Mitä olet tällaisesta mieltä?"
+      ],
+      "scope": "One new complete C variant: stronger landmark exaggeration, fresher colours and lively people/traffic/boats/aircraft; no tiles yet",
+      "priorABMailboxPublished": false,
+      "priorABUnpublishedCommit": "22c0ce9cb47bba49b1e30e392e627bcbcf8264a4",
+      "latestClarification": "Ground footprints and street locations stay fixed; exaggeration is vertical stretching and widening of upper building parts, strongest on landmarks and milder on ordinary buildings",
+      "updatedAt": "2026-10-31T16:42:41.885859+00:00"
+    },
+    {
+      "source": "direct owner message",
+      "observedAt": "2026-10-31T16:47:01.192096+00:00",
+      "quote": "Paljon parempi. Tee kokeeksi vielä karikatyyrimäisempi ja voimakkaammin liioiteltu versio.",
+      "CFeedback": "positive; comparison decision still open",
+      "scope": "Full new D with radically taller and top-heavy buildings, same fresh colours and lively city; no tiles"
+    }
+  ],
+  "ownerFeedbackC": "Paljon parempi; pyysi vielä voimakkaampaa D-kokeilua. Lopullinen versio-/palavalinta avoin."
+}

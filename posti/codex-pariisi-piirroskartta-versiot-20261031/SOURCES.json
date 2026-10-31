@@ -1,0 +1,182 @@
+{
+  "orders": {
+    "orders": [
+      {
+        "path": "posti/paatoimittaja-codex-pariisi-piirroskartta-palat-20261031.md",
+        "commit": "f639cf76f13b458190023b9cefb2feb0a5a740c6",
+        "blob": "f20791eef908c4ea4f968fcab4ed2191aba4325d",
+        "readInFull": true,
+        "local": "warm-colors-order.md"
+      },
+      {
+        "path": "posti/paatoimittaja-codex-pariisi-piirroskartta-versiot-20261031.md",
+        "commit": "b9551abed22160a3d12b933e5b064181e401921a",
+        "blob": "0e5c6a909dae3c62958f4d9cf1891af5b116db33",
+        "readInFull": true,
+        "local": "comparison-order.md"
+      }
+    ],
+    "latestOverridesEarlierTileStart": true,
+    "scope": "Two warm complete comparison images A real scale and B enlarged landmarks; no tiles until owner choice"
+  },
+  "orderTexts": {
+    "warm-colors-order.md": "# Päätoimittaja → Codex: Pariisin piirroskartta – tyyli HYVÄKSYTTY, värit lämpimiksi, sitten palat (omistaja 31.10.2026 klo 18.16)\n\nOmistaja vastasi kysymykseen \"Hyväksytkö Pariisin piirroskartan tyylin?\" (koepala-1.png): **\"Kyllä, värit lämpimiksi\"**\n(selite: \"Codex lämmittää värit nähtävyyspiirrosten seepiaan ja piirtää sitten palat.\").\n\n## 1. Värit\nTavoite: piirroskartta ja nähtävyyspiirrokset näyttävät vierekkäin samalta käsialalta. Lämmin seepia kuten\n`assets/kartat/miniatyyrit/pariisi-notre-dame-kk.webp` ja `pariisi-louvre-kk.webp`. Hillitse: joki (nyt turkoosi → lämmin\nharmaansininen/seepiaan taittuva), nurmikot (nyt kirkas vihreä → haalea oliivi), katot (nyt siniharmaat → lämpimät harmaat ja\nruskeat). Toimita ensin yksi lämmitetty kokonaiskuva samasta alueesta (posti), jatka siitä heti paloihin odottamatta.\n\n## 2. Palat\n- Sama alue (Tuileries–Louvre–Seine–Cité), kiinteä viisto kuvakulma, jokainen pala jatkaa naapuria saumattomasti\n  (limitys reunoilla, sama valo ja mittakaava). Ehdota ruudukko itse (esim. 4 × 3) ja kirjaa se manifestiin\n  (palan nimi, rivi/sarake, kattama alue lat/lon-rajoina).\n- Geometria: rakennukset, kadut, puistot ja rannat LUKITUSTA OSM-geometriasta, ei generatiivista tulkintaa paikoista.\n  Esim. Cité-saaren itäpää Notre-Damen takana on puistoa (Square Jean-XXIII), ei taloja; Notre-Dame oikean kokoisena.\n- Nykyaika (lasipyramidi mukana), estetiikka vanha. Ei Googlen kuvia. OSM-attribuutio manifestiin.\n- Vastaus: `posti/codex-paatoimittaja-pariisi-piirroskartta-palat-<pvm>.md` + kuvat kansioon\n  `proto-3d/_tyo/codex/pariisi-piirroskartta-palat/`.\n\n",
+    "comparison-order.md": "# Päätoimittaja → Codex: Pariisin piirroskartta – TOINEN VERSIO liioitelluin nähtävyyksin; palat odottavat (omistaja 31.10.2026 klo 18.22)\n\nOmistaja pyysi sanatarkasti: \"Pyydä codexia tekemään toinen versio, missä tärkeimpiä nähtävyyksiä on liioiteltun jotta näkyvät paremmin\"\n\nMUUTOS edelliseen tilaukseen (`paatoimittaja-codex-pariisi-piirroskartta-palat-20261031.md`): **älä aloita paloja vielä.**\nTee kaksi lämmitettyä kokonaiskuvaa samasta alueesta (Tuileries–Louvre–Seine–Cité), samalla lämpimällä seepialla:\n- **Versio A:** nähtävyydet oikeassa mittakaavassa (kuten tilattu).\n- **Versio B:** tärkeimmät nähtävyydet – tällä alueella Notre-Dame, Louvre lasipyramideineen (ja Pont Neuf / Sainte-Chapelle, jos\n  luontevaa) – piirretty todellista suurempina, jotta ne erottuvat kaupungista yhdellä silmäyksellä puhelimen ruudulla kuten\n  vanhoissa matkailijakartoissa. Muu kaupunki ennallaan.\nOmistaja valitsee vierekkäin; palat vasta valinnan jälkeen. Vastaus `posti/codex-paatoimittaja-pariisi-piirroskartta-versiot-<pvm>.md`.\n\n"
+  },
+  "approvedPrototype": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-20261031/final/pariisi-piirroskartta-koepala-1.png",
+    "sha256": "095ffb010ea84b272a04349a311e495cf9d41f07d6b6fc0c7b1a0f9365dc8d55",
+    "deliveryCommit": "d0cbbc6ca11703ad5ea1e0b52c098e7677ac4215"
+  },
+  "osm": {
+    "bbox": [
+      2.316,
+      48.848,
+      2.358,
+      48.866
+    ],
+    "downloadedAt": "2026-10-31T15:57:26.629458+00:00",
+    "parts": [
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.337,48.848,2.3475,48.857",
+        "bbox": [
+          2.337,
+          48.848,
+          2.3475,
+          48.857
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-2a.osm",
+        "sha256": "24469a57c418610872347e247c07ad5876e892f10d17f754eb2c33d809932c41",
+        "nodes": 33251,
+        "ways": 4861,
+        "relations": 664
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.3475,48.848,2.358,48.857",
+        "bbox": [
+          2.3475,
+          48.848,
+          2.358,
+          48.857
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-2b.osm",
+        "sha256": "fa3ee3f91cc5c746686a6c0571e9230407df928765ceb0e233f2e43b9e278bdb",
+        "nodes": 29636,
+        "ways": 4028,
+        "relations": 610
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.337,48.857,2.3475,48.866",
+        "bbox": [
+          2.337,
+          48.857,
+          2.3475,
+          48.866
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-4a.osm",
+        "sha256": "ca6d0f3021506bda2b1950b4d07229b83b78edcd94e34e62e0f0b76b526a7a83",
+        "nodes": 34282,
+        "ways": 4606,
+        "relations": 641
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.3475,48.857,2.358,48.866",
+        "bbox": [
+          2.3475,
+          48.857,
+          2.358,
+          48.866
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-4b.osm",
+        "sha256": "62964d89d96380ae28af827f7f02f49f0af9e92e43b80881a77e145438b5f0f5",
+        "nodes": 35119,
+        "ways": 4766,
+        "relations": 762
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.316,48.848,2.337,48.857",
+        "bbox": [
+          2.316,
+          48.848,
+          2.337,
+          48.857
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-1.osm",
+        "sha256": "dd9e58eb659b851f67c850d673420540503fe4d646ee9bebcf89724a418240cd",
+        "nodes": 46089,
+        "ways": 5864,
+        "relations": 739
+      },
+      {
+        "url": "https://api.openstreetmap.org/api/0.6/map?bbox=2.316,48.857,2.337,48.866",
+        "bbox": [
+          2.316,
+          48.857,
+          2.337,
+          48.866
+        ],
+        "file": "output/pariisi-piirroskartta-20261031/references/osm-part-3.osm",
+        "sha256": "cfb24ce63e966b557e3d61dc5dc58e2333f5d07d6136961de58a5afa4ecb8e24",
+        "nodes": 42658,
+        "ways": 5637,
+        "relations": 580
+      }
+    ],
+    "attribution": "© OpenStreetMap contributors",
+    "license": "ODbL 1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "source": "OpenStreetMap API; no Google imagery",
+    "waterRelationSource": "https://api.openstreetmap.org/api/0.6/relation/2191006/full"
+  },
+  "styleReferences": [
+    {
+      "file": "pariisi-notre-dame-kk.webp",
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame-kk.webp",
+      "ref": "main",
+      "blob": "740b92235014803fa223f1dc72e0cba00425a49a",
+      "sha256": "38883fa0ccf5e5d48a4e44f3629feb48ed640f0096feb2485903a6b29be23bc9",
+      "bytes": 77864,
+      "role": "style-reference-only"
+    },
+    {
+      "file": "pariisi-louvre-kk.webp",
+      "path": "assets/kartat/miniatyyrit/pariisi-louvre-kk.webp",
+      "ref": "main",
+      "blob": "028944dae71995347c888160409c3c312f73ac80",
+      "sha256": "9b90caa581b0af16e67666262eb1e9e24ff614d8f3004f5a0bdda9297072afa8",
+      "bytes": 74052,
+      "role": "style-reference-only"
+    }
+  ],
+  "geometryReference": {
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/references/osm-warm-layout.png",
+    "sha256": "9679d80bf855faa71d4bbb0c86e14e439cdd30919a5d8fb240a503b37be7a67b"
+  },
+  "attribution": "© OpenStreetMap contributors; https://www.openstreetmap.org/copyright; ODbL 1.0",
+  "googleImageryUsed": false,
+  "note": "OSM raw tags may contain external image links; none of those Google links were opened or used.",
+  "directOwnerSteering": [
+    {
+      "source": "direct owner messages in current conversation",
+      "observedAt": "2026-10-31T16:41:52.312290+00:00",
+      "quotes": [
+        "Tee vielä suurempi liioittelu. Ja sävymaailmassa saa olla vähän raikkaampi.",
+        "ja piirrän mukaan ihmisiä, autoja, veneitä, lentokoneita, mikä vain tekee kuvituksesta hauskan, elävän ja mielenkiintoisen.",
+        "Rakennukset saavat siis olla omilla paikoillaan, mutta ne voisivat karikatyyrimäisesti venyä ylikorkeiksi ja kasvaa ylhäällä isommiksi. Mitä olet tällaisesta mieltä?"
+      ],
+      "scope": "One new complete C variant: stronger landmark exaggeration, fresher colours and lively people/traffic/boats/aircraft; no tiles yet",
+      "priorABMailboxPublished": false,
+      "priorABUnpublishedCommit": "22c0ce9cb47bba49b1e30e392e627bcbcf8264a4",
+      "latestClarification": "Ground footprints and street locations stay fixed; exaggeration is vertical stretching and widening of upper building parts, strongest on landmarks and milder on ordinary buildings",
+      "updatedAt": "2026-10-31T16:42:41.885859+00:00"
+    },
+    {
+      "source": "direct owner message",
+      "observedAt": "2026-10-31T16:47:01.192096+00:00",
+      "quote": "Paljon parempi. Tee kokeeksi vielä karikatyyrimäisempi ja voimakkaammin liioiteltu versio.",
+      "CFeedback": "positive; comparison decision still open",
+      "scope": "Full new D with radically taller and top-heavy buildings, same fresh colours and lively city; no tiles"
+    }
+  ],
+  "effectiveScope": "Four complete design comparisons A-D, D latest owner experiment; no tiles until owner choice"
+}
