@@ -3334,3 +3334,7 @@ Omistaja (KK:n välittämä, sanatarkasti): "Pyydä piirros heti codexilta Parii
 ## PIIRROSKARTTA: HÄIVYTYS KÄÄNNÖSSÄ JA SUORISTA-NAPPI (omistaja 31.10.2026 klo 17.43) (31.10.2026 klo 17.43)
 
 Omistaja (KK:n välittämä, sanatarkasti): "Piirros voisi pehmeästi hävitä jos pelaaja kääntää tai kallistaa karttaa. Silloin voisi tulla ruudulle nappi suorista joka palauttaa kartan takaisin ja tuo piirroksen näkyviin". Linjaus koepalan speksiin: piirros näkyy vain omassa kuvakulmassaan; käännössä tai kallistuksessa se häipyy pehmeästi tavallisen kartan alle ja ruudulle tulee Suorista-nappi olemassa olevalla nappipohjalla (UI-POHJAT; puuttuva pohja → kysy); nappi kääntää kartan pehmeästi takaisin piirroksen kulmaan ja piirros palaa.
+
+## HERÄTYKSET JA VALVONTA KUULUVAT PT:LLE (omistaja 31.10.2026 klo 17.55) (31.10.2026 klo 17.56)
+
+Omistaja (KK:n välittämä, sanatarkasti): "Eikö päätoimittajan pitäisi huolehtia sessioiden herätykset ja valvoa niitä?" Vastaus kyllä (Raamattu 7: Postivahti herättää PT:n, PT roolit). Aukot 31.10.: KS lepäsi, vaikka Codexin erät 3–4 ja Radialsystem V olivat postissa; LAV:n leivontaketjun loppuun ei ollut herätystä. Oppi: jokainen Codex-toimitus herättää vastaanottajaroolin heti (Postivahdin kierros + PT:n postilaatikkomonitori), jokaiselle pitkälle ajolle varmistetaan herätys ajon loppuun (roolin oma herätys tai Postivahti seuraa pid/lokia). KK ei herätä rooleja; tarkistaa vain ennen omistajalle kertomista.
