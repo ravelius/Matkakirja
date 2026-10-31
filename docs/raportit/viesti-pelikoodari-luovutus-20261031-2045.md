@@ -56,3 +56,14 @@ wt/proto-pelikoodari-lod-216 (pelikoodari/tausta-lod-216).
   pohja kk-pohja-v1d-pk8 ja profiilit) vai terassin törmäyskopiossa tai peittokartan maanpinnassa (MaanPinta, avoimet-sijoitus.json, rakennusten
   -tormays.glb), ja korjaa se. Kuvapari PT:lle (ennen ja jälkeen samasta kohdasta, skenaario c3/sk-c3.txt b-11…b-14).
 - LAV korjaa terassin materiaalin, turkoosin palkkivyön ja puuttuvan katon; ne eivät ole PK:n työtä.
+
+## LISÄYS 3, 21.0x (KK:n tarkistus arkki-c3:sta)
+- OK, kohta 1: keisari on samankokoinen aukioilla ja muurien välissä (rivi 3, sarakkeet 5–7), eikä kamera enää siirry kauemmas.
+- **VIKA, kohta 1 ("ei näe eteen"):** kuvassa näkyy vain lattiaa rivin 3 sarakkeissa 8–10 ja **rivin 5 sarakkeissa 6–9 (b-45…b-48)**,
+  ja b-45:ssä keisari on noin 25 px. Selvitä kameraväli-lokista (lokit/esikatselu-20261031-202240/unity.log, b-27…b-31 ja b-45…b-48):
+  kulma, korkeus, rnosto, rennakko ja kenttä. Mittari on sama kuin ennen: keisari samankokoinen, kamera vain jyrkkenee, katse eteen
+  vain niin paljon, että keisari pysyy kuvassa.
+- TARKISTA, kohta 3: kuvassa s0-0 sivueunukin pää on aivan alareunassa kameran vieressä. Varmista lokista ja videosta, että eunukki näkyi edessä
+  ajoissa ("pystyy ennakoimaan"; lähtö 2,5 s ennen kontaktia).
+- Ennallaan, kohta 2 (PT/LAV/VS): harmaa terassi (rivi 2 sarakkeet 2–4, s0-0…s0-1), turkoosi kaista (rivit 1, 2 ja 8) ja oranssit leijuvat koristeet.
+- KK: omistajalle vasta, kun kaikki nämä on korjattu samassa arkissa ja videossa.
