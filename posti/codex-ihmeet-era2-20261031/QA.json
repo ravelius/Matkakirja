@@ -1,0 +1,1805 @@
+{
+  "allAssetsPersonallyViewed": true,
+  "allAssetsPassed": true,
+  "rootReviews": [
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:56:08.871476+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "euston-arch",
+      "role": "A",
+      "taskNumber": 1345,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/final/lontoo-euston-arch.webp",
+      "sha256": "e2497e24406d4f2643f6bcc3bc7bfe90071a1a2da126fe6ae45a060ed392580c",
+      "bytes": 446740,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Doric entrance arch with two front and rear columns, two attached flanking lodges and gatework. Unlettered lintel matches pre1874 phase. Small-scale lines, no floating elements.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:00:13.245343+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "euston-arch",
+      "role": "B",
+      "taskNumber": 1346,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/final/ihme-euston-arch-loistoaika.jpg",
+      "sha256": "81ab51ae06d6b0a2dc0d795da972f79866e339a461b1de77d2a0521d19b262a6",
+      "bytes": 683897,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "B-v3 full new candidate. Credible worn sandstone, naturally irregular damp paving, real cloth and relaxed walking poses. Porter suitcase contact and anatomy coherent. Front entrance landmark and period clothes clear. No repeating synthetic surface pattern.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "newgate",
+      "role": "A",
+      "taskNumber": 1347,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/final/lontoo-newgaten-vankila.webp",
+      "sha256": "fcafb9defdbdf7f13626efc7e8ebfa8aa35d43fb702fc97e9305a1ce36ca616c",
+      "bytes": 538934,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Severe rusticated prison block with very few arched openings, central administrative block, coherent roof walls and chimneys. Fine warm ink and watercolor, attached base, clean alpha.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "newgate",
+      "role": "B",
+      "taskNumber": 1348,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/final/ihme-newgate-loistoaika.jpg",
+      "sha256": "5153e1ed8ff5b881862a464501d8371688eeea751e30ca856e85fc575a85eb81",
+      "bytes": 781731,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Naturally worn irregular stone, soft daylight and credible optical depth. Letter exchange hands, satchel and guard stance coherent. Horse/carriage and background pedestrians credible at their size. No illustrative texture.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:03:20.616742+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "greenwich-palatsi",
+      "role": "A",
+      "taskNumber": 1349,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/final/lontoo-greenwichin-palatsi.webp",
+      "sha256": "08efd5de3e7a40ceddfa84ba805244a55735d8aba2aad58c4dfb64eebeb9b5cc",
+      "bytes": 472474,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Complete compact Tudor palace miniature, fine ink/watercolor, clear glazing and chimneys; real alpha light/dark backgrounds, no fringe or clipping.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:03:20.619409+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "greenwich-palatsi",
+      "role": "B",
+      "taskNumber": 1350,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/final/ihme-greenwich-palatsi-loistoaika.jpg",
+      "sha256": "20dfc963d0d5959f2bdc4e4ecc823ea487dd119af6ab159d38094253c9babddd",
+      "bytes": 808742,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Photographic river landing with four believable people in wooden boat, credible hands/oars/rope and boat water contact. Brick, weathered timbers, fabrics and ripples have natural varied texture. Palace form reviewed with producer primary-source reconstruction notes; exact lost palace details interpretive.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "septizodium",
+      "role": "A",
+      "taskNumber": 1351,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/septizodium/final/rooma-septizodium.webp",
+      "sha256": "fe8684f60bdde4fff041cb49f84952204f7c66eb92e9c8f30f9dd247ca6111b8",
+      "bytes": 673500,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Three separate columned tiers verified, curved facade and terminal wings. Light/dark composites show clean alpha. Earlier double-height-arch and two-tier attempts rejected; selected A-v3. Exact marble/statues interpretive.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "septizodium",
+      "role": "B",
+      "taskNumber": 1352,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/septizodium/final/ihme-septizodium-loistoaika.jpg",
+      "sha256": "0adb649e628092355eb9f5200697f03e2f5ee94f2d34c1ad434f7bb13017ef0e",
+      "bytes": 800491,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Selected B-v3 after owner photo feedback. Three tiers, soft cloudy daylight, nonuniform marble and water staining, naturally irregular pavement and real cloth, credible relaxed staff hand. No visible repetitive surface pattern; foreground/midground depth photographic. Architecture interpretive.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "palais-industrie",
+      "role": "A",
+      "taskNumber": 1353,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-industrie/final/pariisi-palais-de-lindustrie.webp",
+      "sha256": "06da523e1c04d7fed1348fba0d371bbb3020bf89a93225d12120c0d47cbbea73",
+      "bytes": 383242,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Long two-storey stone facade, central triumphal entry and three iron/glass roof sections match primary drawings in simplified map style. Clean full silhouette and connected paving.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:56:08.860968+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "palais-industrie",
+      "role": "B",
+      "taskNumber": 1354,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-industrie/final/ihme-palais-industrie-loistoaika.jpg",
+      "sha256": "a16e606508e11cc5d11257fedb8d55c2c35ccb6e64e2874d81efcdefdf3c3375",
+      "bytes": 806056,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Selected B-v2. One occupied upper gallery, upper lattice is roof support; coherent round iron/glass vault, generic paintings and browsing public. Natural soft daylight, irregular worn stone, rumpled real fabrics, credible hand on cane and relaxed poses. v1 excess upper gallery rejected.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "palais-orsay",
+      "role": "A",
+      "taskNumber": 1355,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-orsay/final/pariisi-palais-dorsay.webp",
+      "sha256": "d3eec795747ea2761f23ab137015de5fc97c54a119270cf6178912a6ec357b2c",
+      "bytes": 438442,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Two arched window rows and small attic, long rectangular courtyard massing. Old palace, not modern station. Crisp small-scale roof and window drawing, no detached background.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "palais-orsay",
+      "role": "B",
+      "taskNumber": 1356,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-orsay/final/ihme-palais-orsay-loistoaika.jpg",
+      "sha256": "a3e1d490dc6df5cd16a292b3c9b39a9ef23d80c38d266af3f8a9118cc610d4a3",
+      "bytes": 785459,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Original palace massing with arched rows, three officials climbing coherently supported steps and period cart. Stone and cloth photographically textured, blue sky/reflections/relative depth credible. Sunlit clean facade still photographic, no paper/CGI texture seen.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:56:08.876122+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "temple-torni",
+      "role": "A",
+      "taskNumber": 1357,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/temple-torni/final/pariisi-temple-torni.webp",
+      "sha256": "303bb08501ba27c194763ad65d10704c916caa38a33b931bd12a6e3cfe09ff2e",
+      "bytes": 527492,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Square medieval keep with four round corner turrets, tall slate roof, attached lower Petit Temple projection. Coherent ink drawing, attached footprint, unobscured roof/finials.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:00:25.221619+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "temple-torni",
+      "role": "B",
+      "taskNumber": 1358,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/temple-torni/final/ihme-temple-torni-loistoaika.jpg",
+      "sha256": "3ac8d91956403a60ada9beedcf338bee1ef8ad18fa707885ce84848a913500e7",
+      "bytes": 691810,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Photographic market scene: believable aged faces and hands handling irregular linen, timber, worn masonry and stone street. Period costume and Temple tower with corner turrets legible. Natural soft sun/cloud light, no pasted subjects or synthetic repeated surface motif.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:07:23.953039+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "grand-chatelet",
+      "role": "A",
+      "taskNumber": 1359,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/grand-chatelet/final/pariisi-grand-chatelet.webp",
+      "sha256": "643de5b1ce04ca61b63b103bd0619b9b3cfa042ad50d864b1c295c42da72dde3",
+      "bytes": 798422,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Full compact fortified complex, two overhanging gate turrets and clock, larger round tower and mixed slate roofs; fine warm linework. Alpha light/dark clean and silhouette intact.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:07:23.955952+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "grand-chatelet",
+      "role": "B",
+      "taskNumber": 1360,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/grand-chatelet/final/ihme-grand-chatelet-loistoaika.jpg",
+      "sha256": "813a43507ea831da5248d74a47c11c184987ab3e98361d2e02faa2f79f6cdb84",
+      "bytes": 725937,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Photographic1750 prison transport scene at gate, credible horse/harness and carriage geometry, coherent hands/feet, natural sun on varied masonry/wood/cloth. Handcart and building readable without synthetic repeating surface artifacts.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "suuri-synagoga-varsova",
+      "role": "A",
+      "taskNumber": 1361,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/suuri-synagoga-varsova/final/varsova-suuri-synagoga.webp",
+      "sha256": "43b15e9648a1b353e87e8b0fc4944a95bc7322a7c0065ec171959e3e7cfb52d2",
+      "bytes": 766630,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Distinct high domed front, four-column portico, fanlight, lower side wings and coherent entrance steps. Finial and edges intact, clean background.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "suuri-synagoga-varsova",
+      "role": "B",
+      "taskNumber": 1362,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/suuri-synagoga-varsova/final/ihme-suuri-synagoga-varsova-loistoaika.jpg",
+      "sha256": "3dd3d1282a8eb38d7924beb692ddad545dd2762a039583364cc20436f4e3c86a",
+      "bytes": 710608,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Family hands, steps and varied walking poses credible; irregular paving, light through foliage, real cloth texture and glass reflections read as camera image. Portico-width entrance rise and main facade coherent.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T13:56:08.880164+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "nevski-varsova",
+      "role": "A",
+      "taskNumber": 1363,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/nevski-varsova/final/varsova-aleksanteri-nevskin-katedraali.webp",
+      "sha256": "786c5c96837e9fe2d1bd16a6f0cf27211d2036876db401384c06cc5705f1b50d",
+      "bytes": 793882,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Warsaw cathedral five main domes plus porch cupola; separate campanile retained. Tiered portico, consistent doors/stair treads, golden domes, clean translucent cutout margins.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:03:57.352607+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "nevski-varsova",
+      "role": "B",
+      "taskNumber": 1364,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/nevski-varsova/final/ihme-nevski-varsova-loistoaika.jpg",
+      "sha256": "900ced307a6b9376dc6810d523814680e606f3c47cd6c47999bb5baa4d39908c",
+      "bytes": 768661,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visualNotes": "Natural photo-like1913 plaza scene, six domes plus separate bell tower, three entrance portals. Plausible people clothing anatomy and stone pavement. Gilded domes and newly completed stone have credible material surface. Source limitation on slightly pointed gables preserved in producer notes.",
+      "historicalReconstruction": true,
+      "ownerPhotographicFeedbackApplied": true,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "independentRootAssets": {
+    "status": "PASS_ALL_FOUR",
+    "reviewer": "independent subagent /root/portti06_measurement_audit",
+    "reviewedAt": "2026-10-31T14:04:07.145657+00:00",
+    "scope": "Selected final files only: Septizodium A-v3/B-v3 and Palais de l Industrie A-v1/B-v2. No asset modifications.",
+    "order": "source/order.md",
+    "styleReferences": [
+      "../ihmeet-era1-20261031/references/pariisi-tuileries.webp",
+      "../ihmeet-era1-20261031/references/ihme-tuileries-loistoaika-v2.jpg"
+    ],
+    "historicalReferencesPersonallyViewed": [
+      "septizodium/references/reconstruction-page4.png",
+      "palais-industrie/references/facade.jpg",
+      "palais-industrie/references/section.jpg"
+    ],
+    "blockingDefects": [],
+    "assets": [
+      {
+        "id": "septizodium",
+        "role": "A",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/septizodium/final/rooma-septizodium.webp",
+        "sha256": "fe8684f60bdde4fff041cb49f84952204f7c66eb92e9c8f30f9dd247ca6111b8",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "selectedVersion": 3,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "bytes": 673500,
+        "notes": [
+          "Personally viewed final-derived 1024 light/dark and 256 light/dark composites. Three distinct tiers of columns, concave facade sections and terminal wings remain legible.",
+          "Restrained colored architectural drawing matches A role. Native alpha, no clipping or conspicuous edge artifacts on either background.",
+          "Complete facade details and marble/statue scheme are an explicitly interpretive reconstruction; primary surviving plan/drawings do not fix every detail."
+        ],
+        "matchesRootStateSha256": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outer48FullyTransparent": true,
+        "personallyViewedFiles": [
+          "output/ihmeet-era2-20261031/septizodium/qa/A-light.png",
+          "output/ihmeet-era2-20261031/septizodium/qa/A-dark.png",
+          "output/ihmeet-era2-20261031/septizodium/qa/A-256-light.png",
+          "output/ihmeet-era2-20261031/septizodium/qa/A-256-dark.png"
+        ]
+      },
+      {
+        "id": "septizodium",
+        "role": "B",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/septizodium/final/ihme-septizodium-loistoaika.jpg",
+        "sha256": "0adb649e628092355eb9f5200697f03e2f5ee94f2d34c1ad434f7bb13017ef0e",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "selectedVersion": 3,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "bytes": 800491,
+        "notes": [
+          "Personally viewed selected B-v3 final JPEG at original 1536×1024. Three columned tiers, fountain front and travelers are clear.",
+          "Owner photographic feedback PASS: nonuniform marble veining/stains, irregular worn paving and wet reflections, believable cloth and diffuse natural light. No conspicuous repeating synthetic texture, paper-grain overlay or smooth game-render finish.",
+          "Foreground staff grip, visible arms, feet, faces and distant pedestrians inspected; no blocking anatomy or contact defects. Main traveler activity is passive looking, appropriate to the order.",
+          "Exact upper tiers, statues and color distribution remain historical reconstruction, not a surveyed record."
+        ],
+        "matchesRootStateSha256": true,
+        "iccBytes": 480,
+        "ownerPhotographicFeedbackApplied": true,
+        "ownerPhotographicFeedbackReview": "PASS",
+        "personallyViewedFiles": [
+          "output/ihmeet-era2-20261031/septizodium/final/ihme-septizodium-loistoaika.jpg"
+        ]
+      },
+      {
+        "id": "palais-industrie",
+        "role": "A",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-industrie/final/pariisi-palais-de-lindustrie.webp",
+        "sha256": "06da523e1c04d7fed1348fba0d371bbb3020bf89a93225d12120c0d47cbbea73",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "selectedVersion": 1,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "bytes": 383242,
+        "notes": [
+          "Personally viewed final-derived 1024 light/dark and 256 light/dark composites. Two-story long stone facade, central monumental portal and three glazed roof volumes match the supplied primary facade/section references in simplified form.",
+          "Clear isolated silhouette, restrained watercolor/line style, no clipping or conspicuous alpha fringe. Fine roof ribs simplify at 256px but remain readable."
+        ],
+        "matchesRootStateSha256": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "outer48FullyTransparent": true,
+        "personallyViewedFiles": [
+          "output/ihmeet-era2-20261031/palais-industrie/qa/A-light.png",
+          "output/ihmeet-era2-20261031/palais-industrie/qa/A-dark.png",
+          "output/ihmeet-era2-20261031/palais-industrie/qa/A-256-light.png",
+          "output/ihmeet-era2-20261031/palais-industrie/qa/A-256-dark.png"
+        ]
+      },
+      {
+        "id": "palais-industrie",
+        "role": "B",
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-industrie/final/ihme-palais-industrie-loistoaika.jpg",
+        "sha256": "a16e606508e11cc5d11257fedb8d55c2c35ccb6e64e2874d81efcdefdf3c3375",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "selectedVersion": 2,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "bytes": 806056,
+        "notes": [
+          "Personally viewed selected B-v2 final JPEG at original 1536×1024; rejected B-v1 is not approved.",
+          "One occupied upper gallery above ground level on either side, matching the two-level source section. Higher lattice belongs to the roof-support system and is not an additional occupied public floor.",
+          "Owner photographic feedback PASS: credible fabric folds, irregular floor wear, natural diffused daylight through glazing and coherent optical depth; no paper texture or overt CGI material finish.",
+          "Foreground cane grip, figures, visible hands and standing/walking contacts inspected; no blocking anatomy defects. Generic paintings and exact hanging layout are interpretive."
+        ],
+        "matchesRootStateSha256": true,
+        "iccBytes": 480,
+        "ownerPhotographicFeedbackApplied": true,
+        "ownerPhotographicFeedbackReview": "PASS",
+        "personallyViewedFiles": [
+          "output/ihmeet-era2-20261031/palais-industrie/final/ihme-palais-industrie-loistoaika.jpg"
+        ]
+      }
+    ],
+    "deliveryBoundary": "Independent local image QA only; no assertion of owner acceptance, integration or publication."
+  },
+  "productionRecords": [
+    {
+      "id": "euston-arch",
+      "role": "A",
+      "state": {
+        "id": "euston-arch",
+        "taskNumber": 1345,
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-b0bb1912-83b2-4ad8-b681-a9311daa93da.png",
+            "status": "selected-qa-passed"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/final/lontoo-euston-arch.webp",
+        "sourceSha256": "4a2e6141af3297a881f856f0c1c0fb683e861a2cc3d180c1d9e686bc4f405a04",
+        "finalSha256": "e2497e24406d4f2643f6bcc3bc7bfe90071a1a2da126fe6ae45a060ed392580c",
+        "promptSha256": "079795a21a8560e63b49bc22874223c3d7b889ac765b6a908ad2c767e22143d9",
+        "bytes": 446740,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-euston-station/",
+          "https://historicengland.org.uk/images-books/photos/item/DD84/00001",
+          "https://images.historicenglandservices.org.uk/historic-images/victorian-age-1890s/euston-arch-london-cc97-01007-1128956.html",
+          "https://www.londonpicturearchive.org.uk/view-item?i=115700"
+        ],
+        "historicalUncertainty": "Reconstructed 1873 condition based on surviving later archival photographs and railway chronology; incidental lodge details, dress and passerby identities illustrative, not documented individuals. No EUSTON lettering in 1873.",
+        "qa": {
+          "status": "passed",
+          "checkedAt": "2026-10-31T11:40:42.035855+00:00",
+          "views": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/qa/A-light.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/qa/A-dark.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/qa/A-256-light.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/qa/A-256-dark.png"
+          ],
+          "architecture": "Two front fluted Doric columns between rectangular end piers, rear supports, shallow triangular pediment and flanking lodges checked against archive. Entablature unlettered for 1873.",
+          "style": "Fine shaded architectural watercolor",
+          "limitations": "Incidentals reconstructed; not a claim of an exact historical photograph.",
+          "allOuterEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "technicalVerification": {
+            "checkedAt": "2026-10-31T11:38:58.273Z",
+            "files": [
+              {
+                "id": "A",
+                "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/candidates/A-v1-source.png",
+                "sourceDimensions": [
+                  1254,
+                  1254
+                ],
+                "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/final/lontoo-euston-arch.webp",
+                "outputDimensions": [
+                  1024,
+                  1024
+                ],
+                "format": "webp",
+                "lossless": true,
+                "transparentOuterPaddingPx": 48,
+                "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+                "hiddenRGBChannelsCanonicalizedByWebP": 64226,
+                "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+              }
+            ]
+          }
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "euston-arch",
+      "role": "B",
+      "state": {
+        "id": "euston-arch",
+        "taskNumber": 1346,
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 3,
+        "selectedAttempt": 3,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-bb4b3855-c331-444e-bf7d-8e213fb40fa6.png",
+            "status": "superseded-after-stricter-owner-photorealism-review",
+            "reason": "Replaced to improve natural stone and ordinary photographic surface/lighting."
+          },
+          {
+            "version": 2,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/prompts/B-v2.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/candidates/B-v2-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-c31153c8-3eb9-48df-8a79-5cc75af79f79.png",
+            "status": "rejected-qa",
+            "reason": "Handcart wheel geometry ambiguous/inconsistent; candidate preserved."
+          },
+          {
+            "version": 3,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/prompts/B-v3.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/candidates/B-v3-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-9e30f910-365d-4555-8c80-469e3adf0dff.png",
+            "status": "selected-qa-passed",
+            "reason": "Photographic natural materials; no cart geometry issue. Image recovered from native generated directory after tool response interruption; no duplicate call."
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/final/ihme-euston-arch-loistoaika.jpg",
+        "sourceSha256": "69a6e0146071327f34893bed896b2b750f1fc88f56ba12d9e42cf6b1decda7b6",
+        "finalSha256": "81ab51ae06d6b0a2dc0d795da972f79866e339a461b1de77d2a0521d19b262a6",
+        "promptSha256": "dabdf2c182822d56ae42e554628b071dc5535e646e470965d810317513ba09a1",
+        "bytes": 683897,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-euston-station/",
+          "https://historicengland.org.uk/images-books/photos/item/DD84/00001",
+          "https://images.historicenglandservices.org.uk/historic-images/victorian-age-1890s/euston-arch-london-cc97-01007-1128956.html",
+          "https://www.londonpicturearchive.org.uk/view-item?i=115700"
+        ],
+        "historicalUncertainty": "Reconstructed 1873 condition based on surviving later archival photographs and railway chronology; incidental lodge details, dress and passerby identities illustrative, not documented individuals. No EUSTON lettering in 1873.",
+        "qa": {
+          "status": "passed",
+          "checkedAt": "2026-10-31T13:59:38.404229+00:00",
+          "views": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/qa/B-full.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/qa/B-384.png"
+          ],
+          "architecture": "Two front fluted Doric columns between rectangular end piers, rear supports, shallow triangular pediment and flanking lodges checked against archive. Entablature unlettered for 1873.",
+          "style": "Stricter owner photorealism review: real-camera-like granular sandstone and varied block surfaces, organic cloud lighting, coherent human anatomy, period wool and leather; no handcart or wheel geometry.",
+          "limitations": "Incidentals reconstructed; not a claim of an exact historical photograph.",
+          "technicalVerification": {
+            "input": {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/candidates/B-v3-source.png",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "png"
+            },
+            "output": {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/euston-arch/final/ihme-euston-arch-loistoaika.jpg",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "jpeg",
+              "space": "srgb",
+              "iccBytes": 480
+            },
+            "processing": "JPEG quality95 4:4:4, sRGB ICC. No resize, crop, paint, contrast, brightness, saturation or image edits."
+          }
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "newgate",
+      "role": "A",
+      "state": {
+        "id": "newgate",
+        "taskNumber": 1347,
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-fcd4b06b-20d4-4e78-8e67-5cb709435450.png",
+            "status": "selected-qa-passed"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/final/lontoo-newgaten-vankila.webp",
+        "sourceSha256": "499992581fdb25b3b9fa7aec0210a51b329b6848805315eb5cb34000d780024f",
+        "finalSha256": "fcafb9defdbdf7f13626efc7e8ebfa8aa35d43fb702fc97e9305a1ce36ca616c",
+        "promptSha256": "00fc5df5fbfc93e893391c4958ff6012d7fb797251d9cf2114b07b074c8934dc",
+        "bytes": 538934,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://www.cityoflondon.gov.uk/assets/Services-Environment/newgate-street-conservation-area-character-summary.pdf",
+          "https://www.londonmuseum.org.uk/collections/london-stories/history-londons-newgate-prison/",
+          "https://www.londonmuseum.org.uk/collections/v/object-731453/door-prison-door/",
+          "https://www.brisk.org.uk/london1894/newgateprison.html",
+          "https://staging1.postalmuseum.org/blog/dressed-to-deliver-how-postal-workwear-has-changed-over-time/"
+        ],
+        "historicalUncertainty": "The 1873 reconstruction uses a later period photograph of the same George Dance building. Concealed court/roof arrangement and incidental uniforms are interpretive; two people are fictional. Exterior prison doorway is a plausible context, not a claim the museum retained door was at this exact entrance.",
+        "qa": {
+          "status": "passed",
+          "checkedAt": "2026-10-31T11:43:13.098961+00:00",
+          "views": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/qa/A-light.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/qa/A-dark.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/qa/A-256-light.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/qa/A-256-dark.png"
+          ],
+          "architecture": "Long rusticated Georgian prison, sparse arched barred windows, straight cornice and parapet, narrow three-storey central governor house. Not medieval gate or later Old Bailey courthouse.",
+          "style": "Fine shaded architectural watercolor",
+          "limitations": "Enclosed court/roof details, exact door positioning and individuals are reconstructed.",
+          "allOuterEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "technicalVerification": {
+            "checkedAt": "2026-10-31T11:42:18.593Z",
+            "files": [
+              {
+                "id": "A",
+                "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/candidates/A-v1-source.png",
+                "sourceDimensions": [
+                  1254,
+                  1254
+                ],
+                "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/final/lontoo-newgaten-vankila.webp",
+                "outputDimensions": [
+                  1024,
+                  1024
+                ],
+                "format": "webp",
+                "lossless": true,
+                "transparentOuterPaddingPx": 48,
+                "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+                "hiddenRGBChannelsCanonicalizedByWebP": 196189,
+                "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+              }
+            ]
+          }
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "newgate",
+      "role": "B",
+      "state": {
+        "id": "newgate",
+        "taskNumber": 1348,
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-77d6d626-d78e-42d3-88bf-5f7922d27f1c.png",
+            "status": "selected-qa-passed"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/final/ihme-newgate-loistoaika.jpg",
+        "sourceSha256": "fe8a8ee748d250ff26d1c7d2f1309478160ae1f8c871de6bcc6d62f9bdb28193",
+        "finalSha256": "5153e1ed8ff5b881862a464501d8371688eeea751e30ca856e85fc575a85eb81",
+        "promptSha256": "5955a1b0991189554a74678f6b8fe60ac573503e8660f3e75728193c82432676",
+        "bytes": 781731,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://www.cityoflondon.gov.uk/assets/Services-Environment/newgate-street-conservation-area-character-summary.pdf",
+          "https://www.londonmuseum.org.uk/collections/london-stories/history-londons-newgate-prison/",
+          "https://www.londonmuseum.org.uk/collections/v/object-731453/door-prison-door/",
+          "https://www.brisk.org.uk/london1894/newgateprison.html",
+          "https://staging1.postalmuseum.org/blog/dressed-to-deliver-how-postal-workwear-has-changed-over-time/"
+        ],
+        "historicalUncertainty": "The 1873 reconstruction uses a later period photograph of the same George Dance building. Concealed court/roof arrangement and incidental uniforms are interpretive; two people are fictional. Exterior prison doorway is a plausible context, not a claim the museum retained door was at this exact entrance.",
+        "qa": {
+          "status": "passed",
+          "checkedAt": "2026-10-31T11:43:13.119410+00:00",
+          "views": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/qa/B-full.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/qa/B-384.png"
+          ],
+          "architecture": "Long rusticated Georgian prison, sparse arched barred windows, straight cornice and parapet, narrow three-storey central governor house. Not medieval gate or later Old Bailey courthouse.",
+          "style": "Full color photorealistic historical reconstruction, coherent visible hands/envelope/poses, irregular stone surfaces, period blue postal uniform.",
+          "limitations": "Enclosed court/roof details, exact door positioning and individuals are reconstructed.",
+          "technicalVerification": {
+            "input": {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/candidates/B-v1-source.png",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "png"
+            },
+            "output": {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/newgate/final/ihme-newgate-loistoaika.jpg",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "jpeg",
+              "space": "srgb",
+              "iccBytes": 480
+            },
+            "processing": "JPEG quality95 4:4:4, sRGB ICC. No resize, crop, paint, contrast, brightness, saturation or image edits."
+          }
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "greenwich-palatsi",
+      "role": "A",
+      "state": {
+        "id": "greenwich-palatsi",
+        "taskNumber": 1349,
+        "role": "A",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/prompts/A-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/candidates/A-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-0719e8ca-e6a6-432d-8e15-4152edd95567.png",
+            "status": "selected-qa-passed"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/final/lontoo-greenwichin-palatsi.webp",
+        "sourceSha256": "499c73761c4f27d25dcd10466d84243e56243b88a28f6c72c5843516b98ba055",
+        "finalSha256": "08efd5de3e7a40ceddfa84ba805244a55735d8aba2aad58c4dfb64eebeb9b5cc",
+        "promptSha256": "cccba70669ebaa1d676e36526dba613bc98ca2c984dddf838f1d0d0047cb64c3",
+        "bytes": 472474,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "WEBP",
+        "alpha": true,
+        "lossless": true,
+        "sRGBICCEmbedded": false,
+        "sourceURLs": [
+          "https://historicengland.org.uk/listing/the-list/list-entry/1410710",
+          "https://www.rmg.co.uk/stories/royal-history/greenwich-palace-tudors",
+          "https://ornc.org/our-history/greenwich-palace/the-tudors/",
+          "https://www.rmg.co.uk/sites/default/files/styles/max_width_1440/public/Palace%20of%20Placentia.jpg.webp?itok=zgH_5_lp"
+        ],
+        "historicalUncertainty": "Lost palace reconstructed approximately from historic depictions, surviving archaeology and museum descriptions. Exact 1530 wing/turret/window details and court boat/dress are interpretive; no claim of exact surveyed building or identifiable historical individuals. Later Queen House/Naval College deliberately excluded.",
+        "qa": {
+          "status": "passed",
+          "checkedAt": "2026-10-31T14:02:30.176667+00:00",
+          "views": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/qa/A-light.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/qa/A-dark.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/qa/A-256-light.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/qa/A-256-dark.png"
+          ],
+          "architecture": "Long red-brick Tudor riverfront palace, crenellated towers, pale mullions, historic roof massing checked against RMG engraving; no later Queens House or Wren Naval College.",
+          "style": "Fine shaded architectural watercolor",
+          "limitations": "Approximate lost-palace reconstruction; exact window and tower details, landing position, boat and fictional people interpretive.",
+          "allOuterEdgesFullyTransparent": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "technicalVerification": {
+            "checkedAt": "2026-10-31T14:01:27.248Z",
+            "files": [
+              {
+                "id": "A",
+                "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/candidates/A-v1-source.png",
+                "sourceDimensions": [
+                  1254,
+                  1254
+                ],
+                "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/final/lontoo-greenwichin-palatsi.webp",
+                "outputDimensions": [
+                  1024,
+                  1024
+                ],
+                "format": "webp",
+                "lossless": true,
+                "transparentOuterPaddingPx": 48,
+                "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+                "hiddenRGBChannelsCanonicalizedByWebP": 109019,
+                "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+              }
+            ]
+          }
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "greenwich-palatsi",
+      "role": "B",
+      "state": {
+        "id": "greenwich-palatsi",
+        "taskNumber": 1350,
+        "role": "B",
+        "status": "local-qa-passed-awaiting-root-delivery",
+        "generationMode": "builtin_imagegen",
+        "underlyingModel": "not exposed by tool",
+        "generationCalls": 1,
+        "selectedAttempt": 1,
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/prompts/B-v1.txt",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/candidates/B-v1-source.png",
+            "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a191a4-bb55-7ea1-8f3b-dd7cc6049154/exec-fd708287-8964-464e-82b4-e72681cc8ac9.png",
+            "status": "selected-qa-passed"
+          }
+        ],
+        "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/final/ihme-greenwich-palatsi-loistoaika.jpg",
+        "sourceSha256": "405106970a9abbb63b503e9d750c31f429ee1389902a9ad2f291250cb26e2e44",
+        "finalSha256": "20dfc963d0d5959f2bdc4e4ecc823ea487dd119af6ab159d38094253c9babddd",
+        "promptSha256": "c653139e9d387ded3cf4f271082a86896649db5dd866757966a3c15876bdf08c",
+        "bytes": 808742,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG",
+        "alpha": false,
+        "lossless": false,
+        "sRGBICCEmbedded": true,
+        "sourceURLs": [
+          "https://historicengland.org.uk/listing/the-list/list-entry/1410710",
+          "https://www.rmg.co.uk/stories/royal-history/greenwich-palace-tudors",
+          "https://ornc.org/our-history/greenwich-palace/the-tudors/",
+          "https://www.rmg.co.uk/sites/default/files/styles/max_width_1440/public/Palace%20of%20Placentia.jpg.webp?itok=zgH_5_lp"
+        ],
+        "historicalUncertainty": "Lost palace reconstructed approximately from historic depictions, surviving archaeology and museum descriptions. Exact 1530 wing/turret/window details and court boat/dress are interpretive; no claim of exact surveyed building or identifiable historical individuals. Later Queen House/Naval College deliberately excluded.",
+        "qa": {
+          "status": "passed",
+          "checkedAt": "2026-10-31T14:02:30.191335+00:00",
+          "views": [
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/qa/B-full.png",
+            "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/qa/B-384.png"
+          ],
+          "architecture": "Long red-brick Tudor riverfront palace, crenellated towers, pale mullions, historic roof massing checked against RMG engraving; no later Queens House or Wren Naval College.",
+          "style": "Owner strict photorealism: natural brick, cloth, skin, water, coherent boat hull/oars/rope and four individually posed people, realistic ordinary daylight and optical distance detail.",
+          "limitations": "Approximate lost-palace reconstruction; exact window and tower details, landing position, boat and fictional people interpretive.",
+          "technicalVerification": {
+            "input": {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/candidates/B-v1-source.png",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "png"
+            },
+            "output": {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/greenwich-palatsi/final/ihme-greenwich-palatsi-loistoaika.jpg",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "jpeg",
+              "space": "srgb",
+              "iccBytes": 480
+            },
+            "processing": "JPEG quality95 4:4:4, sRGB ICC. No resize, crop, paint, contrast, brightness, saturation or image edits."
+          }
+        },
+        "delivery": {
+          "r2Uploaded": false,
+          "mailSent": false,
+          "receiverAccepted": false,
+          "ownerAccepted": false,
+          "gameIntegrated": false,
+          "published": false
+        }
+      }
+    },
+    {
+      "id": "septizodium",
+      "role": "A",
+      "state": {
+        "reviewer": "root",
+        "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "id": "septizodium",
+        "role": "A",
+        "taskNumber": 1351,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/septizodium/final/rooma-septizodium.webp",
+        "sha256": "fe8684f60bdde4fff041cb49f84952204f7c66eb92e9c8f30f9dd247ca6111b8",
+        "bytes": 673500,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "visualNotes": "Three separate columned tiers verified, curved facade and terminal wings. Light/dark composites show clean alpha. Earlier double-height-arch and two-tier attempts rejected; selected A-v3. Exact marble/statues interpretive.",
+        "historicalReconstruction": true,
+        "ownerPhotographicFeedbackApplied": false,
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "qa-passed-awaiting-independent-review",
+        "productionStarted": true,
+        "productionActive": false,
+        "localFinalExists": true,
+        "delivered": false,
+        "rawAttempts": 3
+      }
+    },
+    {
+      "id": "septizodium",
+      "role": "B",
+      "state": {
+        "reviewer": "root",
+        "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "id": "septizodium",
+        "role": "B",
+        "taskNumber": 1352,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/septizodium/final/ihme-septizodium-loistoaika.jpg",
+        "sha256": "0adb649e628092355eb9f5200697f03e2f5ee94f2d34c1ad434f7bb13017ef0e",
+        "bytes": 800491,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "visualNotes": "Selected B-v3 after owner photo feedback. Three tiers, soft cloudy daylight, nonuniform marble and water staining, naturally irregular pavement and real cloth, credible relaxed staff hand. No visible repetitive surface pattern; foreground/midground depth photographic. Architecture interpretive.",
+        "historicalReconstruction": true,
+        "ownerPhotographicFeedbackApplied": true,
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "qa-passed-awaiting-independent-review",
+        "productionStarted": true,
+        "productionActive": false,
+        "localFinalExists": true,
+        "delivered": false,
+        "rawAttempts": 3
+      }
+    },
+    {
+      "id": "palais-industrie",
+      "role": "A",
+      "state": {
+        "reviewer": "root",
+        "reviewedAt": "2026-10-31T13:52:49.884096+00:00",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "id": "palais-industrie",
+        "role": "A",
+        "taskNumber": 1353,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-industrie/final/pariisi-palais-de-lindustrie.webp",
+        "sha256": "06da523e1c04d7fed1348fba0d371bbb3020bf89a93225d12120c0d47cbbea73",
+        "bytes": 383242,
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "visualNotes": "Long two-storey stone facade, central triumphal entry and three iron/glass roof sections match primary drawings in simplified map style. Clean full silhouette and connected paving.",
+        "historicalReconstruction": true,
+        "ownerPhotographicFeedbackApplied": false,
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "qa-passed-awaiting-independent-review",
+        "productionStarted": true,
+        "productionActive": false,
+        "localFinalExists": true,
+        "delivered": false,
+        "rawAttempts": 1
+      }
+    },
+    {
+      "id": "palais-industrie",
+      "role": "B",
+      "state": {
+        "reviewer": "root",
+        "reviewedAt": "2026-10-31T13:56:08.860968+00:00",
+        "personallyViewed": true,
+        "approvedForDelivery": true,
+        "id": "palais-industrie",
+        "role": "B",
+        "taskNumber": 1354,
+        "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-industrie/final/ihme-palais-industrie-loistoaika.jpg",
+        "sha256": "a16e606508e11cc5d11257fedb8d55c2c35ccb6e64e2874d81efcdefdf3c3375",
+        "bytes": 806056,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "visualNotes": "Selected B-v2. One occupied upper gallery, upper lattice is roof support; coherent round iron/glass vault, generic paintings and browsing public. Natural soft daylight, irregular worn stone, rumpled real fabrics, credible hand on cane and relaxed poses. v1 excess upper gallery rejected.",
+        "historicalReconstruction": true,
+        "ownerPhotographicFeedbackApplied": true,
+        "receiverAccepted": false,
+        "ownerAccepted": false,
+        "gameIntegrated": false,
+        "published": false,
+        "status": "qa-passed-awaiting-independent-review",
+        "productionStarted": true,
+        "productionActive": false,
+        "localFinalExists": true,
+        "delivered": false,
+        "rawAttempts": 2
+      }
+    },
+    {
+      "id": "palais-orsay",
+      "role": "A",
+      "state": {
+        "task": 1355,
+        "id": "palais-orsay",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "c1860",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "A-v1",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-orsay/final/pariisi-palais-dorsay.webp",
+        "sha256": "d3eec795747ea2761f23ab137015de5fc97c54a119270cf6178912a6ec357b2c",
+        "sourceSHA256": "f33bd542be6559dcb7ed2083692cea57520e8e0c02fae3b736141af36c641fd6",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP with true alpha",
+        "completedAt": "2026-10-31T11:42:11.311970+00:00",
+        "QA": {
+          "light1024": "pass",
+          "dark1024": "pass",
+          "light256": "pass",
+          "historicalArchitecture": "double arcaded storeys and low horizontal palazzo, not station",
+          "alphaAndVisibleRGBA": "pass",
+          "tonesChanged": false
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "sourceURLs": [
+          "https://www.vie-publique.fr/files/2021-02/9782111573178.pdf"
+        ]
+      }
+    },
+    {
+      "id": "palais-orsay",
+      "role": "B",
+      "state": {
+        "task": 1356,
+        "id": "palais-orsay",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 2,
+        "currentAttempt": "B-v2",
+        "historicalPeriod": "c1860",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "rejected",
+            "reason": "Facade deviates from archive: upper main storey rectangular windows and high mansard pavilions resembling Tuileries. Whole new generation required."
+          },
+          {
+            "attempt": "B-v2",
+            "status": "accepted",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-orsay/candidates/B-v2-source.png"
+          }
+        ],
+        "acceptedAttempt": "B-v2",
+        "completedAt": "2026-10-31T11:43:13.669855+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/palais-orsay/final/ihme-palais-orsay-loistoaika.jpg",
+        "sha256": "a3e1d490dc6df5cd16a292b3c9b39a9ef23d80c38d266af3f8a9118cc610d4a3",
+        "sourceSHA256": "befa2a9b0e85bb2871af12d0be4f37fb7a98038eb0b24467ab0c4b44eda14781",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC",
+        "sourceURLs": [
+          "https://www.vie-publique.fr/files/2021-02/9782111573178.pdf"
+        ],
+        "QA": {
+          "visualFinal": "pass",
+          "historicalArchitecture": "Both main storeys round-arched, square attic, restrained horizontal palazzo, no station clock or train shed.",
+          "scene": "Clerks ascend entrance steps beside Seine,1860 clothes, natural feet and documents.",
+          "photorealism": "pass",
+          "tonesChanged": false
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true
+      }
+    },
+    {
+      "id": "temple-torni",
+      "role": "A",
+      "state": {
+        "task": 1357,
+        "id": "temple-torni",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "c1780",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "A-v1",
+        "completedAt": "2026-10-31T13:59:42.473283+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/temple-torni/final/pariisi-temple-torni.webp",
+        "sha256": "303bb08501ba27c194763ad65d10704c916caa38a33b931bd12a6e3cfe09ff2e",
+        "sourceSHA256": "32f3136918ef3cb9d40eb6e87bfa00a286742cd623292162e4b32f213017be30",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP with true alpha",
+        "sourceURLs": [
+          "https://parismuseescollections.paris.fr/de/node/76199",
+          "https://www.parismuseescollections.paris.fr/de/node/133628"
+        ],
+        "QA": {
+          "visualFinal": "pass",
+          "historicalArchitecture": "Square keep with four cylindrical corner towers, high central pyramidal roof, lower Petit Temple annex and small corbelled turrets.",
+          "style": "thin-line shaded watercolor, upper-left illumination, transparent cutout",
+          "lightAndDarkPreview": "pass",
+          "tonesChanged": false
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "accepted",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/temple-torni/candidates/A-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "temple-torni",
+      "role": "B",
+      "state": {
+        "task": 1358,
+        "id": "temple-torni",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "c1780",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "B-v1",
+        "completedAt": "2026-10-31T13:59:42.482703+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/temple-torni/final/ihme-temple-torni-loistoaika.jpg",
+        "sha256": "3ac8d91956403a60ada9beedcf338bee1ef8ad18fa707885ce84848a913500e7",
+        "sourceSHA256": "01f2b87205efc46343f5fc9693382a5c8bdc444c830a90ae0b475eefccee5f66",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC",
+        "sourceURLs": [
+          "https://parismuseescollections.paris.fr/de/node/76199",
+          "https://www.parismuseescollections.paris.fr/de/node/133628"
+        ],
+        "QA": {
+          "visualFinal": "pass",
+          "historicalArchitecture": "Square keep with four cylindrical corner towers, high central pyramidal roof, lower Petit Temple annex and small corbelled turrets.",
+          "style": "natural candid color photograph, irregular actual material surfaces, natural skin, cloth, mortar;1780 merchants and no modern objects",
+          "lightAndDarkPreview": "not-applicable",
+          "tonesChanged": false
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/temple-torni/candidates/B-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "grand-chatelet",
+      "role": "A",
+      "state": {
+        "task": 1359,
+        "id": "grand-chatelet",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "A-v1",
+        "historicalPeriod": "c1750",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "A-v1",
+        "completedAt": "2026-10-31T14:03:23.836524+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/grand-chatelet/final/pariisi-grand-chatelet.webp",
+        "sha256": "643de5b1ce04ca61b63b103bd0619b9b3cfa042ad50d864b1c295c42da72dde3",
+        "sourceSHA256": "bd63f56490a9cb2450bf0eb3e4ea1572d0e7f99104ef7c6f6f48ba4d8bc79c6e",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "format": "lossless WebP with true alpha",
+        "sourceURLs": [
+          "https://collections.louvre.fr/ark:/53355/cl020567843",
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/le-grand-chatelet-au-xviiieme-siecle",
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/le-grand-chatelet-vue-prise-depuis-la-rue-saint-denis-en-1800"
+        ],
+        "QA": {
+          "visualFinal": "pass",
+          "historicalArchitecture": "Single pointed arch, two corbelled slim cylindrical gate turrets, clock above paired mullioned windows, large full-height round tower at left, asymmetric prison wings; not Petit Chatelet or modern theater.",
+          "style": "thin-line shaded watercolor, transparent cutout",
+          "scene": "isolated architectural miniature",
+          "lightAndDarkPreview": "pass",
+          "tonesChanged": false
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "A-v1",
+            "status": "accepted",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/grand-chatelet/candidates/A-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "grand-chatelet",
+      "role": "B",
+      "state": {
+        "task": 1360,
+        "id": "grand-chatelet",
+        "status": "qa-passed-ready-for-root-delivery",
+        "generationCalls": 1,
+        "currentAttempt": "B-v1",
+        "historicalPeriod": "c1750",
+        "deliveryStatus": "not-uploaded-not-posted",
+        "acceptedAttempt": "B-v1",
+        "completedAt": "2026-10-31T14:03:23.839708+00:00",
+        "finalFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/grand-chatelet/final/ihme-grand-chatelet-loistoaika.jpg",
+        "sha256": "813a43507ea831da5248d74a47c11c184987ab3e98361d2e02faa2f79f6cdb84",
+        "sourceSHA256": "8412eee88118453a4bfbd90a945cd7d075de6567d5fb7832f3017bcbe6dbcdd3",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "format": "JPEG sRGB ICC",
+        "sourceURLs": [
+          "https://collections.louvre.fr/ark:/53355/cl020567843",
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/le-grand-chatelet-au-xviiieme-siecle",
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/le-grand-chatelet-vue-prise-depuis-la-rue-saint-denis-en-1800"
+        ],
+        "QA": {
+          "visualFinal": "pass",
+          "historicalArchitecture": "Single pointed arch, two corbelled slim cylindrical gate turrets, clock above paired mullioned windows, large full-height round tower at left, asymmetric prison wings; not Petit Chatelet or modern theater.",
+          "style": "natural candid color photograph, irregular stone/wood surfaces, plausible carriage horse harness and1750 clothing",
+          "scene": "guarded enclosed prisoner conveyance exiting gate and sack handcart waiting alongside; no violence",
+          "lightAndDarkPreview": "not-applicable",
+          "tonesChanged": false
+        },
+        "generationMode": "built-in ImageGen",
+        "originalCandidatesPreserved": true,
+        "noPartialEdits": true,
+        "attempts": [
+          {
+            "attempt": "B-v1",
+            "status": "accepted",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/grand-chatelet/candidates/B-v1-source.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "suuri-synagoga-varsova",
+      "role": "A",
+      "state": {
+        "id": "suuri-synagoga-varsova",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/A-v1.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-a4ab247a-3fcc-46a6-a1fd-f750856234c6.png",
+            "raw": "candidates/A-v1-source.png",
+            "sha256": "c861a4e986c2c5276c3cadb9225829e1bcf5b07a6bc69e482b1999b864a8e7f3"
+          }
+        ],
+        "delivered": false,
+        "selectedVersion": 1,
+        "final": {
+          "id": "suuri-synagoga-varsova",
+          "role": "A",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/suuri-synagoga-varsova/final/varsova-suuri-synagoga.webp",
+          "sha256": "43b15e9648a1b353e87e8b0fc4944a95bc7322a7c0065ec171959e3e7cfb52d2",
+          "bytes": 766630,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "format": "WEBP",
+          "selectedVersion": 1,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "outer48FullyTransparent": true,
+          "contentBBoxAlpha16": [
+            59,
+            64,
+            967,
+            944
+          ],
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "notes": [
+            "Four Corinthian columns, pediment, small porch dome, square lunette drum, crown-topped low main dome and side massing recognizable.",
+            "No clipping; real alpha; small rendition legible; normal watercolor tones. Ornament simplified/reconstructed, not a measured architectural record."
+          ]
+        },
+        "uploaded": false
+      }
+    },
+    {
+      "id": "suuri-synagoga-varsova",
+      "role": "B",
+      "state": {
+        "id": "suuri-synagoga-varsova",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/B-v1.txt",
+            "status": "REJECTED",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-dd9fec1b-c8c8-416c-b20e-d3f2ff68cef8.png",
+            "raw": "candidates/B-v1-source.png",
+            "sha256": "c7c06c7a7e0402646f5b97a4d328db86fa5c66927ad6bcc969fec3a402772a36",
+            "reason": "Entrance staircase became a monumental multi-flight square-wide stair, contradicting the short portico-width source stair. Full new generation required."
+          },
+          {
+            "version": 2,
+            "prompt": "prompts/B-v2.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-1a1e94cd-b213-45a8-b6b8-ee17036c95bd.png",
+            "raw": "candidates/B-v2-source.png",
+            "sha256": "3f4663f38acd06bddefa1213837438043f86c1e5c69e16a30e015042d3ca3070"
+          }
+        ],
+        "delivered": false,
+        "selectedVersion": 2,
+        "final": {
+          "id": "suuri-synagoga-varsova",
+          "role": "B",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/suuri-synagoga-varsova/final/ihme-suuri-synagoga-varsova-loistoaika.jpg",
+          "sha256": "3dd3d1282a8eb38d7924beb692ddad545dd2762a039583364cc20436f4e3c86a",
+          "bytes": 710608,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "JPEG",
+          "selectedVersion": 2,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "iccBytes": 480,
+          "notes": [
+            "Selected full new v2 generation corrects v1 exaggerated staircase. Short portico-width continuous stair leads to actual central doorway.",
+            "Families in period formal clothes; limbs, visible hands, hand contact and feet inspected in final JPEG at full resolution, no blocking anatomy defects.",
+            "Colors, ornament and people are historical reconstruction; no claim of exact surveyed reproduction."
+          ]
+        },
+        "uploaded": false
+      }
+    },
+    {
+      "id": "nevski-varsova",
+      "role": "A",
+      "state": {
+        "id": "nevski-varsova",
+        "role": "A",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/A-v1.txt",
+            "status": "REJECTED",
+            "raw": "candidates/A-v1-source.png",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-3a5b8d8f-42b7-433e-9d2b-17886428dfaf.png",
+            "sha256": "17ee123f9af5c50dee8ee535d6efd9b3f99cf87e5a099c4bb9a79e9c5f1973b4",
+            "reason": "Sixth entrance-porch dome lacks the clearly windowed tall drum visible in primary photo. New full generation."
+          },
+          {
+            "version": 2,
+            "prompt": "prompts/A-v2.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-84cf9402-0139-4307-9afa-0a0b1038d7a0.png",
+            "raw": "candidates/A-v2-source.png",
+            "sha256": "3e556171d59aa2955c7fafb34fb185d4cbd79fe429627f25fc739c970ebd1909"
+          }
+        ],
+        "delivered": false,
+        "selectedVersion": 2,
+        "final": {
+          "id": "nevski-varsova",
+          "role": "A",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/nevski-varsova/final/varsova-aleksanteri-nevskin-katedraali.webp",
+          "sha256": "786c5c96837e9fe2d1bd16a6f0cf27211d2036876db401384c06cc5705f1b50d",
+          "bytes": 793882,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA",
+          "format": "WEBP",
+          "selectedVersion": 2,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "outer48FullyTransparent": true,
+          "contentBBoxAlpha16": [
+            74,
+            71,
+            956,
+            939
+          ],
+          "views": [
+            "A-light.png",
+            "A-dark.png",
+            "A-256-light.png",
+            "A-256-dark.png"
+          ],
+          "notes": [
+            "Selected full new A-v2 supplies visibly windowed sixth porch-dome drum missing from A-v1.",
+            "Five main-volume domes plus sixth porch dome, separate tower, three portals and continuous steps. Clear silhouette at 256px; no clipping.",
+            "Illustrated decorative profiles and proportions are reconstructed, not measured architectural drawings."
+          ]
+        },
+        "uploaded": false
+      }
+    },
+    {
+      "id": "nevski-varsova",
+      "role": "B",
+      "state": {
+        "id": "nevski-varsova",
+        "role": "B",
+        "status": "FINAL_QA_PASS",
+        "attempts": [
+          {
+            "version": 1,
+            "prompt": "prompts/B-v1.txt",
+            "status": "REJECTED",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-c3bfda32-c892-4ac0-b500-b8ddddcf3a90.png",
+            "raw": "candidates/B-v1-source.png",
+            "sha256": "856a93f36dc5eaa7e843c1a9b3b14d7ab4fb372bdd86387f339e8e2efc1ba0a8",
+            "reason": "Porch has four rather than three frontal portals, contrary to primary photograph. New full generation."
+          },
+          {
+            "version": 2,
+            "prompt": "prompts/B-v2.txt",
+            "status": "SELECTED_QA_PASS",
+            "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a18bb7-3b75-71a1-8045-d7cf80540227/exec-9d9ec72c-c293-4efe-9153-be5da95929d5.png",
+            "raw": "candidates/B-v2-source.png",
+            "sha256": "f6cd04b664d2b1306bec7b2f43b3b628bed0194f98b69d7e18e4cb620f06b815"
+          }
+        ],
+        "delivered": false,
+        "selectedVersion": 2,
+        "final": {
+          "id": "nevski-varsova",
+          "role": "B",
+          "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ihmeet-era2-20261031/nevski-varsova/final/ihme-nevski-varsova-loistoaika.jpg",
+          "sha256": "900ced307a6b9376dc6810d523814680e606f3c47cd6c47999bb5baa4d39908c",
+          "bytes": 768661,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "JPEG",
+          "selectedVersion": 2,
+          "personallyViewed": true,
+          "approvedForDelivery": true,
+          "iccBytes": 480,
+          "ownerPhotographicFeedback": "PASS: final JPEG viewed; natural irregular cobbles, cloth, daylight, optically plausible people, no paper texture or obvious game-render finish.",
+          "notes": [
+            "Selected full new B-v2 corrects four portals in B-v1 to a central tall portal and two flanking portals. All are actual usable openings, stair remains continuous.",
+            "1913 selected for gilded domes and bells; five main-volume domes plus sixth porch dome and freestanding bell tower visible.",
+            "Foreground hands, cane contact, feet, faces and background pedestrians inspected; no blocking anatomy defects.",
+            "Decorative profiles and exact background buildings are interpretive. Main gable crowns slightly taper; no claim of measured architectural accuracy."
+          ]
+        },
+        "uploaded": false
+      }
+    }
+  ],
+  "ownerPhotographicFeedback": {
+    "recordedAt": "2026-10-31T11:44:11.230987+00:00",
+    "directOwnerQuote": "Nämä pitää olla oikean valokuvan näköisiä",
+    "scope": "Lost-wonders B historical scene illustrations; A map drawings remain separately commissioned drawing style",
+    "requirement": "Real-camera photographic appearance: natural optical depth, human anatomy and poses, irregular credible material surfaces and light. Reject CGI render, painted or smooth artificial surface. Whole-new generation when needed.",
+    "appliedToBatches": [
+      2,
+      3,
+      4
+    ],
+    "rootSeptizodiumBReopened": true
+  },
+  "productionRecordNote": "Producer-local records preserve pre-delivery states. Coordinator R2 receipts and mailbox readback are authoritative for later technical delivery.",
+  "historicalReconstructionLimit": "Lost structures and scenes are source-informed visual reconstructions; exact people, events, furnishings and uncertain complete site plans are not documentary assertions."
+}

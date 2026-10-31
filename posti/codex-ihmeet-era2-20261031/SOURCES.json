@@ -1,0 +1,426 @@
+{
+  "historicalEvidence": {
+    "euston-arch": {
+      "historical-evidence.json": {
+        "subject": "Euston Arch, London, 1873",
+        "taskNumbers": [
+          1345,
+          1346
+        ],
+        "sources": [
+          {
+            "url": "https://www.networkrail.co.uk/who-we-are/our-history/iconic-infrastructure/the-history-of-london-euston-station/",
+            "authority": "Network Rail",
+            "usedFor": "Original Doric gateway architect Philip Hardwick; EUSTON name only carved in 1874, therefore omitted in 1873."
+          },
+          {
+            "url": "https://historicengland.org.uk/images-books/photos/item/DD84/00001",
+            "authority": "Historic England archive",
+            "usedFor": "Surviving archival view of the propylaeum."
+          },
+          {
+            "url": "https://images.historicenglandservices.org.uk/historic-images/victorian-age-1890s/euston-arch-london-cc97-01007-1128956.html",
+            "authority": "Historic England York & Son photograph",
+            "usedFor": "Two front fluted Doric columns between rectangular antae; two rear columns; heavy triangular pediment, flanking lodges and gates. Later lettering deliberately not copied."
+          },
+          {
+            "url": "https://www.londonpicturearchive.org.uk/view-item?i=115700",
+            "authority": "The London Archives",
+            "usedFor": "Flanking lodges and ornate gates, pedestrian/vehicle gateway before station not railway track through portico."
+          }
+        ],
+        "uncertainty": "Reconstructed 1873 condition based on surviving later archival photographs and railway chronology; incidental lodge details, dress and passerby identities illustrative, not documented individuals. No EUSTON lettering in 1873."
+      }
+    },
+    "newgate": {
+      "historical-evidence.json": {
+        "subject": "Newgate Prison, George Dance the Younger building, London 1873",
+        "taskNumbers": [
+          1347,
+          1348
+        ],
+        "sources": [
+          {
+            "url": "https://www.cityoflondon.gov.uk/assets/Services-Environment/newgate-street-conservation-area-character-summary.pdf",
+            "authority": "City of London conservation authority",
+            "usedFor": "George Dance prison, deeply rusticated walls enclosing three internal courts, archive photographs and measured drawing on PDF pages 7-8."
+          },
+          {
+            "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-londons-newgate-prison/",
+            "authority": "London Museum",
+            "usedFor": "Building identification and museum collection painting of the intact late Georgian prison."
+          },
+          {
+            "url": "https://www.londonmuseum.org.uk/collections/v/object-731453/door-prison-door/",
+            "authority": "London Museum original object 2004.25/1",
+            "usedFor": "Wood doors reinforced with sheet iron and iron studs, dating to 1770s rebuilding."
+          },
+          {
+            "url": "https://www.brisk.org.uk/london1894/newgateprison.html",
+            "authority": "1894 Descriptive Album of London historical photograph, reproduced by Brisk",
+            "usedFor": "Direct period visual evidence for facade massing; not a source for modern historical claims."
+          },
+          {
+            "url": "https://staging1.postalmuseum.org/blog/dressed-to-deliver-how-postal-workwear-has-changed-over-time/",
+            "authority": "The Postal Museum",
+            "usedFor": "Letter carrier blue coat and trousers by 1860 and all letter carriers uniformed by 1872; red piping."
+          }
+        ],
+        "uncertainty": "The 1873 reconstruction uses a later period photograph of the same George Dance building. Concealed court/roof arrangement and incidental uniforms are interpretive; two people are fictional. Exterior prison doorway is a plausible context, not a claim the museum retained door was at this exact entrance."
+      }
+    },
+    "greenwich-palatsi": {
+      "historical-evidence.json": {
+        "subject": "Greenwich Palace / Placentia, London circa 1530",
+        "taskNumbers": [
+          1349,
+          1350
+        ],
+        "sources": [
+          {
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1410710",
+            "authority": "Historic England scheduled monument entry",
+            "usedFor": "Historic Tudor palace location, early sixteenth-century rebuilding and court arrangement."
+          },
+          {
+            "url": "https://www.rmg.co.uk/stories/royal-history/greenwich-palace-tudors",
+            "authority": "Royal Museums Greenwich",
+            "usedFor": "Henry VII red-brick rebuilding, Henry VIII additions, royal arrival by water and Thames pier; museum historical Placentia engraving."
+          },
+          {
+            "url": "https://ornc.org/our-history/greenwich-palace/the-tudors/",
+            "authority": "Old Royal Naval College historical site organisation",
+            "usedFor": "Tudor royal palace context and Henry VIII occupancy."
+          },
+          {
+            "url": "https://www.rmg.co.uk/sites/default/files/styles/max_width_1440/public/Palace%20of%20Placentia.jpg.webp?itok=zgH_5_lp",
+            "authority": "Royal Museums Greenwich historical engraving PAI5655",
+            "usedFor": "Long riverfront facade, towers, Tudor windows and roof massing; later historical depiction rather than exact 1530 survey."
+          }
+        ],
+        "uncertainty": "Lost palace reconstructed approximately from historic depictions, surviving archaeology and museum descriptions. Exact 1530 wing/turret/window details and court boat/dress are interpretive; no claim of exact surveyed building or identifiable historical individuals. Later Queen House/Naval College deliberately excluded."
+      }
+    },
+    "septizodium": {
+      "research.json": {
+        "sources": [
+          {
+            "url": "https://istitutocentraleperlagrafica.cultura.gov.it/tutti-gli-archivi/eventi/19834-19834.html",
+            "institution": "Istituto Centrale per la Grafica, Italian Ministry of Culture",
+            "evidence": "Three storeys, three semicircular niches, two rectilinear wings; coloured marble, Corinthian columns, fountain and sculpture."
+          },
+          {
+            "url": "https://ajaonline.org/article/1416/",
+            "author": "Susann S. Lusnia, American Journal of Archaeology 2004",
+            "evidence": "Research reconstruction identifies three-story columnar facade and large plaza at terminus of Via Appia; exact appearance debated."
+          },
+          {
+            "url": "https://collections.soane.org/ARC18334",
+            "institution": "Sir John Soanes Museum",
+            "evidence": "Surviving east-wing fragment four bays; long facade with colonnaded exedrae extended leftwards."
+          }
+        ],
+        "uncertainty": "Interpretive historical reconstruction: surviving plan and drawings determine massing; precise statues, marble colours and complete upper tiers uncertain. Not a survey reconstruction."
+      }
+    },
+    "palais-industrie": {
+      "research.json": {
+        "sources": [
+          {
+            "url": "https://www.musee-orsay.fr/fr/oeuvres/palais-de-lindustrie-coupe-transversale-56006",
+            "institution": "Musée dOrsay",
+            "evidence": "Triple metal nave, high curved glass-covered central vault, side entrance behind monumental stone facade; Salon use."
+          },
+          {
+            "url": "https://www.musee-orsay.fr/fr/oeuvres/palais-de-lindustrie-facade-principale-elevation-56007",
+            "institution": "Musée dOrsay",
+            "evidence": "Berthelin elevation: two-storey long round-arched facade, central triumphal entrance, paired giant columns and sculptural group."
+          },
+          {
+            "url": "https://parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/exposition-universelle-de-1855-vue-interieure-de-la-grande-nef-du-palais-de",
+            "institution": "Paris Musées Carnavalet",
+            "evidence": "Historic print of main nave and surrounding first-floor galleries."
+          }
+        ],
+        "uncertainty": "Period reconstruction; reference drawings predate completion, no claim of exact Salon painting placement in 1873. Art is invented generic period genre paintings, not identifiable copied works."
+      }
+    },
+    "palais-orsay": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://www.vie-publique.fr/files/2021-02/9782111573178.pdf",
+            "usedFor": "Official Cour des comptes history. Original pre-fire Duban elevation c1837 (p47) and Lacornee quai elevation/section c1833-39; long Renaissance-palazzo facade with two arcaded storeys and square attic windows; not railway station."
+          },
+          {
+            "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/facade-du-palais-d-orsay-cour-des-comptes-et-conseil-d-etat-apres-l",
+            "usedFor": "Surviving original facade details after1871fire, supports original palace identity; no destruction depicted in new images"
+          }
+        ]
+      }
+    },
+    "temple-torni": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://parismuseescollections.paris.fr/de/node/76199",
+            "usedFor": "Carnavalet PM33 period model, large square keep, four cylindrical corner turrets, steep hipped center roof, lower north annex with two corbelled turrets; CC0."
+          },
+          {
+            "url": "https://www.parismuseescollections.paris.fr/de/node/133628",
+            "usedFor": "Period enclosure model1783-87 confirms tower within pre-Revolution temple district."
+          }
+        ]
+      }
+    },
+    "grand-chatelet": {
+      "sources.json": {
+        "sources": [
+          {
+            "url": "https://collections.louvre.fr/ark:/53355/cl020567843",
+            "usedFor": "Israel Silvestre primary engraving of Grand Chatelet, medieval round towers, arched passage and clock front; earlier-period corroboration."
+          },
+          {
+            "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/le-grand-chatelet-au-xviiieme-siecle",
+            "usedFor": "Carnavalet18th-century-state depiction, clock/gate/towers and flanking buildings."
+          },
+          {
+            "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/le-grand-chatelet-vue-prise-depuis-la-rue-saint-denis-en-1800",
+            "usedFor": "Hoffbauer museum reconstruction of1800 appearance used to corroborate corbelled gate turrets, clock and large left tower; not contemporary1750."
+          }
+        ]
+      }
+    },
+    "suuri-synagoga-varsova": {
+      "downloads.json": [
+        [
+          "suuri-synagoga-varsova",
+          "synagogue-1878.jpg",
+          "https://www.jhi.pl/storage/image/core_files/2020/10/26/3763999f4eeddc3623da2713d2be457e/jpg/jhi/preview/1._Tygodnik_Ilustrowany_P._Boczkowski_1878r.jpg"
+        ],
+        [
+          "suuri-synagoga-varsova",
+          "synagogue-library-1936.jpg",
+          "https://www.jhi.pl/storage/image/core_files/2020/10/26/ee341600fde71f1ac4652718b03ed9d3/jpg/jhi/preview/4._Fasada_G__wnej_Biblioteki_Jud._K._Wojuty_ski_1936-1939r_001.jpg"
+        ]
+      ],
+      "historical-research.json": {
+        "period": "around 1910",
+        "sources": [
+          {
+            "url": "https://www.jhi.pl/en/articles/the-history-of-the-great-synagogue,113",
+            "institution": "Jewish Historical Institute",
+            "use": "Historical architecture, 1878 engraving, chronology of 1920s stair modifications and 1928–36 neighboring library"
+          },
+          {
+            "url": "https://www.jhi.pl/en/articles/the-great-synagogue-on-tlomackie-street-and-its-destruction,5574",
+            "institution": "Jewish Historical Institute",
+            "use": "Classical entrance and facade context"
+          }
+        ],
+        "decisions": [
+          "Four fluted Corinthian columns between antae, shallow pediment, low porch dome, tall square lunette drum and broad crown-topped main dome.",
+          "1878 engraving is primary shape reference; 1936 image used only to cross-check facade, excluding later library and stair modifications.",
+          "Families in ordinary formal urban Jewish clothes, circa 1910 Sabbath. Colors and people are reconstruction, not documented portraits."
+        ],
+        "images_personally_viewed": [
+          {
+            "file": "synagogue-library-1936.jpg",
+            "sha256": "57a6114883ea7c13ec63b9da4a4b23fc80c4e03f33e6975370d541d8e10f17db"
+          },
+          {
+            "file": "synagogue-1878.jpg",
+            "sha256": "d5bfa8ebe5de3aa3c947346c362a0e3d454812eec8c7bed1b4dd8b531c9389d6"
+          }
+        ],
+        "style_references": [
+          "../../ihmeet-era1-20261031/references/pariisi-tuileries.webp",
+          "../../ihmeet-era1-20261031/references/pariisi-notre-dame.webp",
+          "../../ihmeet-era1-20261031/references/ihme-tuileries-loistoaika-v2.jpg"
+        ]
+      }
+    },
+    "nevski-varsova": {
+      "downloads.json": [
+        [
+          "nevski-varsova",
+          "museum-1919-aerial.jpg",
+          "https://mw-prod.s3.amazonaws.com/inspirations/images/34eabcc4-d097-42ff-97d6-62bc3e4f10ff.jpg.605x960_q85.jpg"
+        ],
+        [
+          "nevski-varsova",
+          "museum-1912-medal.jpg",
+          "https://mw-prod.s3.amazonaws.com/inspirations/images/b3ed17cd-6b77-4424-bf81-a878dbaad144.jpg.605x960_q85.jpg"
+        ]
+      ],
+      "historical-research.json": {
+        "period": "1913, within ordered 1912–24 interval",
+        "sources": [
+          {
+            "url": "https://kolekcje.muzeumwarszawy.pl/en/articles/interpretations/sobor-aleksandra-newskiego",
+            "institution": "Museum of Warsaw",
+            "use": "Dome arrangement, freestanding bell tower, war alterations"
+          },
+          {
+            "url": "https://kolekcje.muzeumwarszawy.pl/en/objects/8543/",
+            "institution": "Museum of Warsaw",
+            "use": "1910 postcard AI 9584, front-left facade and separate tower"
+          },
+          {
+            "url": "https://www.foto.karta.org.pl/nasze-zbiory/kolekcje/fok_499_tematyczna_architektura_warszawy_1900-1914,131746,zdjecie.html",
+            "institution": "KARTA archival collection",
+            "use": "Independent prewar cathedral and tower dating"
+          }
+        ],
+        "decisions": [
+          "Warsaw building, not Sofia or Tallinn. Five large main-volume domes plus sixth porch dome; separate tall bell tower.",
+          "1913 selected because bells and gilding precede wartime removal.",
+          "1919 aerial used only for site massing, not postwar roof color. Medal obverse reviewed but not useful as architecture reference.",
+          "Museum reproduction is a private historical study reference; not a delivered image or direct reproduction. Colors, pedestrians and moment of ringing are reconstruction."
+        ],
+        "images_personally_viewed": [
+          {
+            "file": "museum-1910-front.jpg",
+            "sha256": "f5524281128dc602df62ffa7d1912668285171392c90a599623adc4fe0996f1b"
+          },
+          {
+            "file": "museum-1919-aerial.jpg",
+            "sha256": "dce9208b3e6d447ca8ce4a3c87c9846ad55eb988c2b0dac6cae41c4a69418192"
+          },
+          {
+            "file": "museum-1912-medal.jpg",
+            "sha256": "7b44557af8025655ffa8488fececb89db12b7ae2d858d0f8ab3f576482b69070"
+          }
+        ],
+        "style_references": [
+          "../../ihmeet-era1-20261031/references/pariisi-tuileries.webp",
+          "../../ihmeet-era1-20261031/references/pariisi-notre-dame.webp",
+          "../../ihmeet-era1-20261031/references/ihme-tuileries-loistoaika-v2.jpg"
+        ]
+      }
+    }
+  },
+  "BReference": {
+    "status": "RESOLVED_EXACT_REFERENCE",
+    "checkedAt": "2026-10-31T11:09:14.472220+00:00",
+    "imageViewed": true,
+    "file": "references/ihme-tuileries-loistoaika-v2.jpg",
+    "originalLocalPath": "output/ihmeet-loistoaika-v2/13-16/final-jpg/ihme-tuileries-loistoaika-v2.jpg",
+    "historicalManifest": "output/mailbox-photo-policy-20260912/posti/history-82-caption-source-package.json",
+    "historicalManifestSha256": "0c1ea788b6541f391db9f5a91287da906eb33f2a4622a1084cb205719f5968c9",
+    "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+    "gitBlobSha1ComputedFromBytes": "c21d250a133aa9cb850865302fdfa63018ba72eb",
+    "gitBlobPresenceConfirmed": false,
+    "bytes": 825207,
+    "format": "JPEG",
+    "size": [
+      1536,
+      1024
+    ],
+    "aspectRatio": "3:2 landscape",
+    "mode": "RGB",
+    "colored": true,
+    "embeddedICCBytes": 0,
+    "colorSpaceDeclaredByHistoricalManifest": "sRGB IEC61966-2.1",
+    "colorProfileNote": "The historical manifest declares sRGB, but these exact JPEG bytes have no embedded ICC profile. Do not claim that the original contains one.",
+    "liveMain": {
+      "ref": "0ac9a46250f77c131064d9622e9496abe8a35d52",
+      "exactRepoPath": "assets/kartat/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+      "exactPathResult": 404,
+      "directoryEntries": 104,
+      "exactFilenamePresent": false,
+      "relatedExistingFile": {
+        "path": "assets/kartat/ihmeet/ihme-tuileries.webp",
+        "blob": "c5e633a819f355bcc9ab19142fbe8a5128c512f2"
+      },
+      "codeSearchResultCount": 0
+    },
+    "r2Readback": [
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444915954017000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      },
+      {
+        "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg?verify=1793444916364947000",
+        "curl_exit": 0,
+        "status": "200",
+        "bytes": 825207,
+        "sha256": "79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1",
+        "matches_exact_local": true,
+        "content_type": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "etag": "\"7879117a894453b017d55e6534e154d3\""
+      }
+    ],
+    "style": "Colored photorealistic historical reconstruction, natural warm muted light, period people carrying out a small story within a detailed architectural setting. Full rectangular scene without illustration outlines, transparency, vignette border or aged-paper effect.",
+    "deliveryPractice": {
+      "bucket": "matkakirja",
+      "objectKeyTemplate": "kohtaamiset/ihmeet/ihme-<id>-loistoaika.jpg",
+      "repoCopyTemplate": "assets/kartat/ihmeet/ihme-<id>-loistoaika.jpg",
+      "mime": "image/jpeg",
+      "canonicalBase": "https://media.matkakirja.app/",
+      "workingUploader": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/tools/upload_r2.py",
+      "workingReceipt": "output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/R2-RECEIPTS.json",
+      "workingReceiptVerifiedCount": 6,
+      "jpegUploaderReference": "output/fable-20260924/upload-r2-verified.mjs",
+      "wrangler": "sites/matkakirjan-kuvat/node_modules/.bin/wrangler",
+      "configReference": "output/color-audit-bukarest/final/wrangler.json",
+      "steps": [
+        "Require exact image QA and local hash first",
+        "GET canonical object before upload; accept already-identical object, upload only absent object, stop on differing existing bytes",
+        "Wrangler remote object put with exact key and image/jpeg MIME",
+        "GET full object using Origin https://matkakirja.app and cache-busting SHA query",
+        "Require HTTP200, exact bytes and SHA256, image/jpeg MIME and allowed CORS",
+        "Record immutable receipt; keep recipient acceptance/integration separate"
+      ],
+      "adaptationNeeded": "These old uploaders are task-specific: adapt QA/state paths, item key, MIME and existing-key policy; do not execute unmodified. The older JPEG uploader has a restrictive key whitelist, old workspace path and requires embedded ICC, whereas the exact B reference has no embedded ICC.",
+      "executedDuringDiscovery": false
+    },
+    "networkNote": "Python urllib received HTTP403; established curl GET method succeeded with identical bytes on canonical media and known public bucket, both plain and cache-busted URLs. No authentication secrets accessed or printed.",
+    "externalWrites": false,
+    "generationPerformed": false
+  },
+  "AReferences": [
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-notre-dame.webp",
+      "blobSha": "cbabbe4717d5487da9bfc38337df81a1b7a00bbf",
+      "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73"
+    },
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-tuileries.webp",
+      "blobSha": "eb8a0dada89dc7113a4ae7628d182d29b519b41a",
+      "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52"
+    }
+  ]
+}
