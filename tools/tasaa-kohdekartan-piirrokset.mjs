@@ -44,6 +44,35 @@ const taulu = structuredClone(vanha);
 const tulokset = existsSync(TULOKSET) ? JSON.parse(readFileSync(TULOKSET, 'utf8')) : {};
 const valiaikainen = mkdtempSync(join(tmpdir(), 'piirrostasaus-'));
 
+function kirjoita() {
+const rivit = Object.entries(taulu).sort(([a], [b]) => a.localeCompare(b)).map(([k, t]) =>
+    `  ${JSON.stringify(k)}: {\n${Object.entries(t).map(([n, p]) => `    ${JSON.stringify(n)}: ${JSON.stringify(p)},`).join('\n')}\n  },`);
+  writeFileSync(PAKKI, `/*
+   * KOHDEKARTAN PIIRROKSET: kaupunki → nähtävyyden nimi → kohdekartan tasattu kuva (sama musta- ja valkopiste,
+   * keskikontrasti ja kylläisyys kaikille; omistaja 31.10.2026 klo 09.31–09.34). Puuttuva kaupunki tai nimi →
+   * alkuperäinen js/packs/miniatyyrit.js:stä. Striimikartta käyttää aina alkuperäistä (omistaja 09.17).
+   * GENEROITU: node tools/tasaa-kohdekartan-piirrokset.mjs <kaupunki> — älä muokkaa käsin.
+   */
+  export const KOHDEKARTAN_PIIRROKSET = {
+  ${rivit.join('\n')}
+  };
+  `);
+  writeFileSync(TULOKSET, `${JSON.stringify(tulokset, null, 1)}\n`);
+  const kokorivit = Object.entries(tulokset).sort(([a], [b]) => a.localeCompare(b)).map(([k, t]) =>
+    `  ${JSON.stringify(k)}: {\n${Object.entries(t).map(([n, v]) => `    ${JSON.stringify(n)}: ${v.koko ?? 1},`).join('\n')}\n  },`);
+  writeFileSync(KOOT, `/*
+   * KOHDEKARTAN PIIRROSTEN KOOT: kaupunki → nähtävyyden nimi → kerroin 36 px:n laatikolle (omistaja 31.10.2026 klo 12.15
+   * "Kohteet peittävät liikaa karttaa. Tee niistä pienempiä. Osa varsinkin aivan liian isoja"). Lasketaan piirroksen
+   * näkyvästä osasta (tools/piirrostasaus.json "koko"); puuttuva = 1. Natiivi: moduulit/js/packs/kohdekartan-piirroskoot.json.
+   * GENEROITU: node tools/tasaa-kohdekartan-piirrokset.mjs <kaupunki> — älä muokkaa käsin.
+   */
+  export const KOHDEKARTAN_PIIRROSKOOT = {
+  ${kokorivit.join('\n')}
+  };
+  `);
+  console.log(`→ js/packs/kohdekartan-piirrokset.js, tools/piirrostasaus-tulokset.json`);
+}
+
 for (const kaupunki of kaupungit) {
   const kartta = KAUPUNKIKARTAT[kaupunki];
   if (!kartta) { console.error(`ei kohdekarttaa: ${kaupunki}`); process.exit(2); }
@@ -54,10 +83,20 @@ for (const kaupunki of kaupungit) {
     let sisaan = join(JUURI, arvo);
     if (!(arvo.includes('/') && existsSync(sisaan))) {
       const nimi = arvo.includes('/') ? basename(arvo) : `${arvo}.png`;
-      const vastaus = await fetch(AMPARI + nimi);
-      if (!vastaus.ok) { console.warn(`ohitetaan ${kohde.nimi}: ämpäri ${vastaus.status}`); continue; }
+      // Uudelleenyritys: 125 kaupungin ajossa ämpärin yhteys katkesi kesken (Karttaseppä 31.10.2026).
+      let tavut = null, tila = 'ei yhteyttä';
+      for (let yritys = 1; yritys <= 4 && !tavut; yritys++) {
+        try {
+          const vastaus = await fetch(AMPARI + nimi);
+          tila = vastaus.status;
+          if (vastaus.ok) tavut = Buffer.from(await vastaus.arrayBuffer());
+          else if (vastaus.status === 404) break;
+        } catch (e) { console.warn(`  ${nimi}: ${e.message}, yritys ${yritys}`); }
+        if (!tavut) await new Promise((r) => setTimeout(r, 2000 * yritys));
+      }
+      if (!tavut) { console.warn(`ohitetaan ${kohde.nimi}: ämpäri ${tila}`); continue; }
       sisaan = join(valiaikainen, nimi);
-      writeFileSync(sisaan, Buffer.from(await vastaus.arrayBuffer()));
+      writeFileSync(sisaan, tavut);
     }
     const ulos = `${KANSIO}${basename(arvo).replace(/\.(webp|png)$/, '')}-kk.webp`;
     parit.push({ nimi: kohde.nimi, arvo, sisaan, ulos });
@@ -78,31 +117,7 @@ for (const kaupunki of kaupungit) {
     };
     console.log(`${kaupunki}: ${p.nimi.padEnd(24)} ${JSON.stringify(m.ennen)} → ${JSON.stringify(m['jälkeen'])}`);
   }
+  kirjoita();   // kaupunki kerrallaan: kaatunut ajo jatkuu siitä, mihin jäi
 }
 
-const rivit = Object.entries(taulu).sort(([a], [b]) => a.localeCompare(b)).map(([k, t]) =>
-  `  ${JSON.stringify(k)}: {\n${Object.entries(t).map(([n, p]) => `    ${JSON.stringify(n)}: ${JSON.stringify(p)},`).join('\n')}\n  },`);
-writeFileSync(PAKKI, `/*
- * KOHDEKARTAN PIIRROKSET: kaupunki → nähtävyyden nimi → kohdekartan tasattu kuva (sama musta- ja valkopiste,
- * keskikontrasti ja kylläisyys kaikille; omistaja 31.10.2026 klo 09.31–09.34). Puuttuva kaupunki tai nimi →
- * alkuperäinen js/packs/miniatyyrit.js:stä. Striimikartta käyttää aina alkuperäistä (omistaja 09.17).
- * GENEROITU: node tools/tasaa-kohdekartan-piirrokset.mjs <kaupunki> — älä muokkaa käsin.
- */
-export const KOHDEKARTAN_PIIRROKSET = {
-${rivit.join('\n')}
-};
-`);
-writeFileSync(TULOKSET, `${JSON.stringify(tulokset, null, 1)}\n`);
-const kokorivit = Object.entries(tulokset).sort(([a], [b]) => a.localeCompare(b)).map(([k, t]) =>
-  `  ${JSON.stringify(k)}: {\n${Object.entries(t).map(([n, v]) => `    ${JSON.stringify(n)}: ${v.koko ?? 1},`).join('\n')}\n  },`);
-writeFileSync(KOOT, `/*
- * KOHDEKARTAN PIIRROSTEN KOOT: kaupunki → nähtävyyden nimi → kerroin 36 px:n laatikolle (omistaja 31.10.2026 klo 12.15
- * "Kohteet peittävät liikaa karttaa. Tee niistä pienempiä. Osa varsinkin aivan liian isoja"). Lasketaan piirroksen
- * näkyvästä osasta (tools/piirrostasaus.json "koko"); puuttuva = 1. Natiivi: moduulit/js/packs/kohdekartan-piirroskoot.json.
- * GENEROITU: node tools/tasaa-kohdekartan-piirrokset.mjs <kaupunki> — älä muokkaa käsin.
- */
-export const KOHDEKARTAN_PIIRROSKOOT = {
-${kokorivit.join('\n')}
-};
-`);
-console.log(`→ js/packs/kohdekartan-piirrokset.js, tools/piirrostasaus-tulokset.json`);
+kirjoita();

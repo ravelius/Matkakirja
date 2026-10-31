@@ -15,6 +15,9 @@ const lue = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), 
 const { tavoite, toleranssi, hyväksytyt_poikkeamat: poikkeamat = [] } = lue('tools/piirrostasaus.json');
 /** Asetukseen perusteltuna kirjattu poikkeama (kohde + mitta) saa poiketa enintään oman rajansa verran. */
 const raja = (kohde, mitta) => poikkeamat.find((p) => p.kohde === kohde && p.mitta === mitta)?.enintään ?? toleranssi[mitta];
+/** Gamma tai kylläisyyden nosto rajallaan (tools/piirrostasaus.json toleranssi.rajalla_kuvaus, Karttaseppä 31.10.2026). */
+const gammaRajalla = (k) => k && (k.gamma <= tavoite.gamma_min + 1e-3 || k.gamma >= tavoite.gamma_max - 1e-3);
+const nostoKatossa = (k) => k && k['kylläisyys'] >= tavoite['kylläisyys_katto'] - 1e-3;
 const TULOKSET = lue('tools/piirrostasaus-tulokset.json');
 
 test('jokainen tasattu piirros on yhteisessä musta- ja valkopisteessä, keskisävyssä ja kylläisyydessä', () => {
@@ -23,9 +26,12 @@ test('jokainen tasattu piirros on yhteisessä musta- ja valkopisteessä, keskis�
     for (const [nimi, t] of Object.entries(kohteet)) {
       const j = t.jalkeen;
       for (const k of ['musta', 'valko', 'keski']) {
-        if (Math.abs(j[k] - tavoite[k]) > raja(`${kaupunki}/${nimi}`, k)) poikkeavat.push(`${kaupunki}/${nimi}: ${k} ${j[k]} (tavoite ${tavoite[k]})`);
+        const r = k === 'keski' && gammaRajalla(t.kertoimet)
+          ? Math.max(toleranssi.keski_rajalla, raja(`${kaupunki}/${nimi}`, k)) : raja(`${kaupunki}/${nimi}`, k);
+        if (Math.abs(j[k] - tavoite[k]) > r) poikkeavat.push(`${kaupunki}/${nimi}: ${k} ${j[k]} (tavoite ${tavoite[k]})`);
       }
-      if (j.kroma > tavoite.kroma + toleranssi.kroma_yli || j.kroma < tavoite.kroma - toleranssi.kroma_ali) {
+      if (j.kroma > tavoite.kroma + toleranssi.kroma_yli
+        || (j.kroma < tavoite.kroma - toleranssi.kroma_ali && !nostoKatossa(t.kertoimet))) {
         poikkeavat.push(`${kaupunki}/${nimi}: kroma ${j.kroma} (tavoite ${tavoite.kroma})`);
       }
     }

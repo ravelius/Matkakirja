@@ -1,23 +1,68 @@
 {
+ "aden-craterin-tori-vari2-kk.webp": {
+  "sha": "a2186b22cf9d714c",
+  "taytto": 0.597,
+  "reuna": 0.0
+ },
+ "aden-kansallismuseo-vari2-kk.webp": {
+  "sha": "1fa8c8f6788c49b4",
+  "taytto": 0.445,
+  "reuna": 0.0
+ },
+ "aden-steamer-point-vari2-kk.webp": {
+  "sha": "45a7bf7228f0f5fe",
+  "taytto": 0.422,
+  "reuna": 0.0
+ },
+ "aden-tawilan-altaat-vari2-kk.webp": {
+  "sha": "034efebc7464e565",
+  "taytto": 0.4,
+  "reuna": 0.0
+ },
+ "amsterdam-anne-frankin-talo-kk.webp": {
+  "sha": "43e661b5d446d4d0",
+  "taytto": 0.212,
+  "reuna": 0.0
+ },
  "amsterdam-anne-frankin-talo.webp": {
   "sha": "eec373a444bd6e25",
   "taytto": 0.213,
   "reuna": 0
+ },
+ "amsterdam-artis-elaintarha-kk.webp": {
+  "sha": "0cb70e2795937d61",
+  "taytto": 0.272,
+  "reuna": 0.0
  },
  "amsterdam-artis-elaintarha.webp": {
   "sha": "0ecd51224b91b6bd",
   "taytto": 0.274,
   "reuna": 0
  },
+ "amsterdam-herengracht-537-kk.webp": {
+  "sha": "3d5965b0bb64ebc3",
+  "taytto": 0.33,
+  "reuna": 0.0
+ },
  "amsterdam-herengracht-537.webp": {
   "sha": "6b634fa453eb4183",
   "taytto": 0.331,
   "reuna": 0
  },
+ "amsterdam-kapein-talo-kk.webp": {
+  "sha": "fd5f713cf8d619d7",
+  "taytto": 0.25,
+  "reuna": 0.0
+ },
  "amsterdam-kapein-talo.webp": {
   "sha": "3e46583b30301ade",
   "taytto": 0.252,
   "reuna": 0
+ },
+ "amsterdam-keskusrautatieasema-kk.webp": {
+  "sha": "7fa5797019e5e03d",
+  "taytto": 0.265,
+  "reuna": 0.0
  },
  "amsterdam-keskusrautatieasema.webp": {
   "sha": "4709934880890852",
@@ -29,6 +74,11 @@
   "taytto": 0.242,
   "reuna": 0
  },
+ "amsterdam-kuninkaanpalatsi-kk.webp": {
+  "sha": "c8926f0da836ca41",
+  "taytto": 0.407,
+  "reuna": 0.0
+ },
  "amsterdam-kuninkaanpalatsi.webp": {
   "sha": "56c3abe53b08f94e",
   "taytto": 0.409,
@@ -39,10 +89,20 @@
   "taytto": 0.36,
   "reuna": 0
  },
+ "amsterdam-rembrandtin-talo-kk.webp": {
+  "sha": "c58e94b5cfb9ef48",
+  "taytto": 0.298,
+  "reuna": 0.0
+ },
  "amsterdam-rembrandtin-talo.webp": {
   "sha": "381393b2ac8f973f",
   "taytto": 0.299,
   "reuna": 0
+ },
+ "amsterdam-rijksmuseum-kk.webp": {
+  "sha": "3381c3b277d028b9",
+  "taytto": 0.2,
+  "reuna": 0.0
  },
  "amsterdam-rijksmuseum.webp": {
   "sha": "1cb97be720d04fca",
@@ -54,35 +114,115 @@
   "taytto": 0.484,
   "reuna": 0
  },
+ "ankara-anatolian-sivilisaatioiden-museo-kk.webp": {
+  "sha": "d413bf2d4b586f50",
+  "taytto": 0.287,
+  "reuna": 0.0
+ },
  "ankara-anatolian-sivilisaatioiden-museo.webp": {
   "sha": "a7e8e287b0de886a",
   "taytto": 0.288,
   "reuna": 0
+ },
+ "ankara-ankaran-linna-kk.webp": {
+  "sha": "39f7319ba8b99cd1",
+  "taytto": 0.202,
+  "reuna": 0.0
  },
  "ankara-ankaran-linna.webp": {
   "sha": "537d8319c5a4c929",
   "taytto": 0.204,
   "reuna": 0
  },
+ "ankara-augustuksen-temppeli-kk.webp": {
+  "sha": "7c449348d350b2e1",
+  "taytto": 0.16,
+  "reuna": 0.0
+ },
  "ankara-augustuksen-temppeli.webp": {
   "sha": "232a4cb4185b183a",
   "taytto": 0.161,
   "reuna": 0
+ },
+ "ankara-julianuksen-pylvas-kk.webp": {
+  "sha": "fd2aba092d3f77eb",
+  "taytto": 0.096,
+  "reuna": 0.0
  },
  "ankara-julianuksen-pylvas.webp": {
   "sha": "a025ff262f5b6c06",
   "taytto": 0.097,
   "reuna": 0
  },
+ "ankara-linnanportin-kellotorni-kk.webp": {
+  "sha": "2c87af3f69efd086",
+  "taytto": 0.178,
+  "reuna": 0.0
+ },
  "ankara-linnanportin-kellotorni.webp": {
   "sha": "aedbf3639e0d29ce",
   "taytto": 0.178,
   "reuna": 0
  },
+ "ankara-roomalainen-kylpyla-kk.webp": {
+  "sha": "b33235bf968b5dd2",
+  "taytto": 0.366,
+  "reuna": 0.0
+ },
  "ankara-roomalainen-kylpyla.webp": {
   "sha": "bc98b0b2eb69cc8f",
   "taytto": 0.367,
   "reuna": 0
+ },
+ "astana-akorda-vari2-kk.webp": {
+  "sha": "0280e036735bd0fc",
+  "taytto": 0.345,
+  "reuna": 0.0
+ },
+ "astana-astana-opera-vari2-kk.webp": {
+  "sha": "3940c11e5ad95352",
+  "taytto": 0.325,
+  "reuna": 0.0
+ },
+ "astana-bajterek-vari2-kk.webp": {
+  "sha": "e1e0013cab309e42",
+  "taytto": 0.183,
+  "reuna": 0.0
+ },
+ "astana-hazrat-sultanin-moskeija-vari2-kk.webp": {
+  "sha": "9d5e34c46e83954d",
+  "taytto": 0.414,
+  "reuna": 0.0
+ },
+ "astana-kansallismuseo-vari2-kk.webp": {
+  "sha": "b99dfa2f58a81003",
+  "taytto": 0.381,
+  "reuna": 0.0
+ },
+ "astana-khan-shatyr-vari2-kk.webp": {
+  "sha": "49afebc577d7edb3",
+  "taytto": 0.284,
+  "reuna": 0.0
+ },
+ "astana-nurjol-bulevardi-vari2-kk.webp": {
+  "sha": "f7cf86a80b2f04ee",
+  "taytto": 0.447,
+  "reuna": 0.0
+ },
+ "astana-rauhan-ja-sovinnon-palatsi-vari2-kk.webp": {
+  "sha": "ac9bfb9ab9221935",
+  "taytto": 0.29,
+  "reuna": 0.0
+ },
+ "asuncion-ateneo-paraguayo-kk.webp": {
+  "sha": "3f07f2ba3117514b",
+  "taytto": 0.274,
+  "reuna": 0.0
+ },
+ "asuncion-kaupunginteatteri-kk.webp": {
+  "sha": "0648f726864719e6",
+  "taytto": 0.28,
+  "reuna": 0.0
  },
  "ateena-akropolis-kk.webp": {
   "sha": "e5e6f795e2de1d66",
@@ -194,105 +334,310 @@
   "taytto": 0.326,
   "reuna": 0
  },
+ "auckland-albert-park-vari2-kk.webp": {
+  "sha": "cc9e4b01ed221fc6",
+  "taytto": 0.379,
+  "reuna": 0.0
+ },
+ "auckland-aucklandin-kaupungintalo-vari2-kk.webp": {
+  "sha": "4237b6fb736f10ca",
+  "taytto": 0.263,
+  "reuna": 0.0
+ },
+ "auckland-eden-park-vari2-kk.webp": {
+  "sha": "abc9ad9152b4d077",
+  "taytto": 0.339,
+  "reuna": 0.0
+ },
+ "auckland-ewelme-cottage-vari2-kk.webp": {
+  "sha": "4259f38cf65d0782",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
+ "auckland-ferry-building-vari2-kk.webp": {
+  "sha": "6aea6637b97dd494",
+  "taytto": 0.234,
+  "reuna": 0.0
+ },
+ "auckland-highwic-vari2-kk.webp": {
+  "sha": "afac5edb44a1c2f7",
+  "taytto": 0.413,
+  "reuna": 0.0
+ },
+ "auckland-karangahape-road-vari2-kk.webp": {
+  "sha": "ac54e16520979707",
+  "taytto": 0.285,
+  "reuna": 0.0
+ },
+ "auckland-maungawhau-vari2-kk.webp": {
+  "sha": "4cad93a2d5687b50",
+  "taytto": 0.303,
+  "reuna": 0.0
+ },
+ "auckland-symonds-streetin-hautausmaa-vari2-kk.webp": {
+  "sha": "190e2f313537f818",
+  "taytto": 0.345,
+  "reuna": 0.0
+ },
+ "auckland-victoria-park-market-vari2-kk.webp": {
+  "sha": "88cb3d415c9d1886",
+  "taytto": 0.258,
+  "reuna": 0.0
+ },
+ "bagdad-abbasidipalatsi-kk.webp": {
+  "sha": "a5480d63d02dd574",
+  "taytto": 0.157,
+  "reuna": 0.0
+ },
  "bagdad-abbasidipalatsi.webp": {
   "sha": "54e1edb5921e38c4",
   "taytto": 0.157,
   "reuna": 0
+ },
+ "bagdad-al-wazirin-moskeija-kk.webp": {
+  "sha": "34305e0980fbbefe",
+  "taytto": 0.145,
+  "reuna": 0.0
  },
  "bagdad-al-wazirin-moskeija.webp": {
   "sha": "c5a5ebaf947daaf5",
   "taytto": 0.145,
   "reuna": 0
  },
+ "bagdad-bagdadin-museo-kk.webp": {
+  "sha": "4f792b8da6d85075",
+  "taytto": 0.263,
+  "reuna": 0.0
+ },
  "bagdad-bagdadin-museo.webp": {
   "sha": "bd39ecc84a2a0dcf",
   "taytto": 0.263,
   "reuna": 0
+ },
+ "bagdad-haydarkhanan-moskeija-kk.webp": {
+  "sha": "8f0e518c7863755c",
+  "taytto": 0.211,
+  "reuna": 0.0
  },
  "bagdad-haydarkhanan-moskeija.webp": {
   "sha": "ebc606b947f25872",
   "taytto": 0.212,
   "reuna": 0
  },
+ "bagdad-khan-mirjan-kk.webp": {
+  "sha": "fcd7c3f61d221f93",
+  "taytto": 0.281,
+  "reuna": 0.0
+ },
  "bagdad-khan-mirjan.webp": {
   "sha": "97481904dffb83b5",
   "taytto": 0.282,
   "reuna": 0
+ },
+ "bagdad-mustansiriya-koulu-kk.webp": {
+  "sha": "6b40bbc91af57013",
+  "taytto": 0.276,
+  "reuna": 0.0
  },
  "bagdad-mustansiriya-koulu.webp": {
   "sha": "020ceff07a9c76b7",
   "taytto": 0.277,
   "reuna": 0
  },
+ "bagdad-mutanabbin-katu-kk.webp": {
+  "sha": "71c738c5dcad3b1f",
+  "taytto": 0.319,
+  "reuna": 0.0
+ },
  "bagdad-mutanabbin-katu.webp": {
   "sha": "6bc6316ae952e603",
   "taytto": 0.32,
   "reuna": 0
+ },
+ "bagdad-qushlan-kellotorni-kk.webp": {
+  "sha": "5fda62608537d8e9",
+  "taytto": 0.086,
+  "reuna": 0.0
  },
  "bagdad-qushlan-kellotorni.webp": {
   "sha": "195ded443496a7cc",
   "taytto": 0.087,
   "reuna": 0
  },
+ "bangkok-hua-lamphong-vari2-kk.webp": {
+  "sha": "c21b6802ffe6426a",
+  "taytto": 0.37,
+  "reuna": 0.0
+ },
+ "bangkok-sanam-luang-vari2-kk.webp": {
+  "sha": "d9de80a705441877",
+  "taytto": 0.396,
+  "reuna": 0.0
+ },
+ "bangkok-sao-ching-cha-vari2-kk.webp": {
+  "sha": "ef73ee378fb89476",
+  "taytto": 0.171,
+  "reuna": 0.0
+ },
+ "bangkok-suurpalatsi-vari2-kk.webp": {
+  "sha": "63556402f709f2d0",
+  "taytto": 0.343,
+  "reuna": 0.0
+ },
+ "bangkok-wat-arun-vari2-kk.webp": {
+  "sha": "a95be8f194d05ad8",
+  "taytto": 0.275,
+  "reuna": 0.0
+ },
+ "bangkok-wat-pho-vari2-kk.webp": {
+  "sha": "396d3d57cbbcb43b",
+  "taytto": 0.402,
+  "reuna": 0.0
+ },
+ "bangkok-wat-phra-kaew-vari2-kk.webp": {
+  "sha": "8d106a7bcb9afdc7",
+  "taytto": 0.294,
+  "reuna": 0.0
+ },
+ "bangkok-wat-saket-ja-kultainen-vuori-vari2-kk.webp": {
+  "sha": "3b9ede9f56300988",
+  "taytto": 0.382,
+  "reuna": 0.0
+ },
+ "bangkok-yaowarat-vari2-kk.webp": {
+  "sha": "e8dc32cf721611d9",
+  "taytto": 0.436,
+  "reuna": 0.0
+ },
+ "barcelona-arc-de-triomf-kk.webp": {
+  "sha": "0af00d21cd9340d9",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
  "barcelona-arc-de-triomf.webp": {
   "sha": "49586c4e1c93a7f4",
   "taytto": 0.352,
   "reuna": 0
+ },
+ "barcelona-boquerian-kauppahalli-kk.webp": {
+  "sha": "095ee24e1a01ebf0",
+  "taytto": 0.409,
+  "reuna": 0.0
  },
  "barcelona-boquerian-kauppahalli.webp": {
   "sha": "fbd6c8f68b89cc12",
   "taytto": 0.41,
   "reuna": 0
  },
+ "barcelona-casa-batllo-kk.webp": {
+  "sha": "f9d1d5ed7a377124",
+  "taytto": 0.404,
+  "reuna": 0.0
+ },
  "barcelona-casa-batllo.webp": {
   "sha": "c05130e57bd03e8c",
   "taytto": 0.405,
   "reuna": 0
+ },
+ "barcelona-musiikkipalatsi-kk.webp": {
+  "sha": "b99e309feb319946",
+  "taytto": 0.407,
+  "reuna": 0.0
  },
  "barcelona-musiikkipalatsi.webp": {
   "sha": "a01400a2c8f7e580",
   "taytto": 0.408,
   "reuna": 0
  },
+ "barcelona-roviran-aukio-vari2-kk.webp": {
+  "sha": "cd41606dfc8ea77b",
+  "taytto": 0.493,
+  "reuna": 0.0
+ },
+ "barcelona-sagrada-familia-kk.webp": {
+  "sha": "82cf89f574cec38a",
+  "taytto": 0.214,
+  "reuna": 0.0
+ },
  "barcelona-sagrada-familia.webp": {
   "sha": "afd57619251c06b5",
   "taytto": 0.216,
   "reuna": 0
+ },
+ "bergen-fredriksbergin-linnake-kk.webp": {
+  "sha": "a0afefd37c14754f",
+  "taytto": 0.436,
+  "reuna": 0.0
  },
  "bergen-fredriksbergin-linnake.webp": {
   "sha": "0e75fb491beb2110",
   "taytto": 0.436,
   "reuna": 0
  },
+ "bergen-kaupunginkirjasto-kk.webp": {
+  "sha": "87a1ae70f2f16e20",
+  "taytto": 0.358,
+  "reuna": 0.0
+ },
  "bergen-kaupunginkirjasto.webp": {
   "sha": "ba28a3a7c4176be6",
   "taytto": 0.359,
   "reuna": 0
+ },
+ "bergen-korskirken-kk.webp": {
+  "sha": "9d505e66f617d380",
+  "taytto": 0.351,
+  "reuna": 0.0
  },
  "bergen-korskirken.webp": {
   "sha": "c5e9e0e1cbb7a5f7",
   "taytto": 0.352,
   "reuna": 0
  },
+ "bergen-munkelivin-luostari-kk.webp": {
+  "sha": "56b1fe54d955e821",
+  "taytto": 0.537,
+  "reuna": 0.0
+ },
  "bergen-munkelivin-luostari.webp": {
   "sha": "85d4b81f589f5b8a",
   "taytto": 0.539,
   "reuna": 0
+ },
+ "bergen-nykirken-kk.webp": {
+  "sha": "7a95236320256f9f",
+  "taytto": 0.228,
+  "reuna": 0.0
  },
  "bergen-nykirken.webp": {
   "sha": "f90cb8f63300a0d2",
   "taytto": 0.229,
   "reuna": 0
  },
+ "bergen-permanenten-kk.webp": {
+  "sha": "6f0c03144b11483a",
+  "taytto": 0.575,
+  "reuna": 0.0
+ },
  "bergen-permanenten.webp": {
   "sha": "32b70778dc5eef2c",
   "taytto": 0.577,
   "reuna": 0
  },
+ "bergen-pyhan-yrjanan-kirkko-kk.webp": {
+  "sha": "cba1947650ed1a97",
+  "taytto": 0.418,
+  "reuna": 0.0
+ },
  "bergen-pyhan-yrjanan-kirkko.webp": {
   "sha": "3617728234459d60",
   "taytto": 0.418,
   "reuna": 0
+ },
+ "bergen-yliopistomuseo-kk.webp": {
+  "sha": "4ddd68c345facb31",
+  "taytto": 0.509,
+  "reuna": 0.0
  },
  "bergen-yliopistomuseo.webp": {
   "sha": "36e14d7ad444ac13",
@@ -404,200 +749,760 @@
   "taytto": 0.453,
   "reuna": 0
  },
+ "bryssel-brysselin-porssi-kk.webp": {
+  "sha": "6e9a0bb8f78c32c9",
+  "taytto": 0.453,
+  "reuna": 0.0
+ },
  "bryssel-brysselin-porssi.webp": {
   "sha": "b9914207a8e32fa0",
   "taytto": 0.454,
   "reuna": 0
+ },
+ "bryssel-galeries-royales-saint-hubert-kk.webp": {
+  "sha": "d235b55d27661832",
+  "taytto": 0.428,
+  "reuna": 0.0
  },
  "bryssel-galeries-royales-saint-hubert.webp": {
   "sha": "c005c5dbdc7da631",
   "taytto": 0.429,
   "reuna": 0
  },
+ "bryssel-grand-place-kk.webp": {
+  "sha": "4db9b347538415f0",
+  "taytto": 0.376,
+  "reuna": 0.0
+ },
  "bryssel-grand-place.webp": {
   "sha": "2bc232758050190e",
   "taytto": 0.378,
   "reuna": 0
+ },
+ "bryssel-kuninkaanpalatsi-kk.webp": {
+  "sha": "6e1206acaa18b380",
+  "taytto": 0.348,
+  "reuna": 0.0
  },
  "bryssel-kuninkaanpalatsi.webp": {
   "sha": "e178441ca66372f8",
   "taytto": 0.349,
   "reuna": 0
  },
+ "bryssel-manneken-pis-kk.webp": {
+  "sha": "4bbf1352e2e4caed",
+  "taytto": 0.452,
+  "reuna": 0.0
+ },
  "bryssel-manneken-pis.webp": {
   "sha": "4f7f9919389b155e",
   "taytto": 0.452,
   "reuna": 0
+ },
+ "bryssel-mont-des-arts-kk.webp": {
+  "sha": "b5f465632ec57456",
+  "taytto": 0.433,
+  "reuna": 0.0
  },
  "bryssel-mont-des-arts.webp": {
   "sha": "77aebfcd890f1670",
   "taytto": 0.434,
   "reuna": 0
  },
+ "bryssel-oikeuspalatsi-kk.webp": {
+  "sha": "c64122c3aee1b12b",
+  "taytto": 0.458,
+  "reuna": 0.001
+ },
  "bryssel-oikeuspalatsi.webp": {
   "sha": "6249564084df9f17",
   "taytto": 0.459,
   "reuna": 0.002
+ },
+ "budapest-gellertinvuori-kk.webp": {
+  "sha": "67e97f885a3ebb71",
+  "taytto": 0.076,
+  "reuna": 0.0
  },
  "budapest-gellertinvuori.webp": {
   "sha": "39bb5733165e1000",
   "taytto": 0.077,
   "reuna": 0
  },
+ "budapest-kalastajanlinnake-kk.webp": {
+  "sha": "a6de9038c1ae6f4c",
+  "taytto": 0.292,
+  "reuna": 0.0
+ },
  "budapest-kalastajanlinnake.webp": {
   "sha": "9ccc34fbf1a4872f",
   "taytto": 0.293,
   "reuna": 0
+ },
+ "budapest-ketjusilta-kk.webp": {
+  "sha": "20ab2feb4ac84425",
+  "taytto": 0.204,
+  "reuna": 0.0
  },
  "budapest-ketjusilta.webp": {
   "sha": "c446fd80771f75e0",
   "taytto": 0.206,
   "reuna": 0
  },
+ "budapest-maanalainen-vari2-kk.webp": {
+  "sha": "1dabf9bdf96fcc86",
+  "taytto": 0.417,
+  "reuna": 0.0
+ },
+ "budapest-parlamenttitalo-kk.webp": {
+  "sha": "52211b2915ff9c47",
+  "taytto": 0.289,
+  "reuna": 0.0
+ },
  "budapest-parlamenttitalo.webp": {
   "sha": "ce5a4d03b2fb1d10",
   "taytto": 0.29,
   "reuna": 0
+ },
+ "budapest-pyhan-tapanin-kirkko-kk.webp": {
+  "sha": "46ba599208ba145a",
+  "taytto": 0.235,
+  "reuna": 0.0
  },
  "budapest-pyhan-tapanin-kirkko.webp": {
   "sha": "5ca55ecb4051e3e8",
   "taytto": 0.236,
   "reuna": 0
  },
+ "budapest-sankarien-aukio-kk.webp": {
+  "sha": "4231576c459d8e40",
+  "taytto": 0.113,
+  "reuna": 0.0
+ },
  "budapest-sankarien-aukio.webp": {
   "sha": "d1caa23fda76d751",
   "taytto": 0.114,
   "reuna": 0
+ },
+ "budapest-suuri-kauppahalli-kk.webp": {
+  "sha": "1da2fb4524b45fed",
+  "taytto": 0.313,
+  "reuna": 0.0
  },
  "budapest-suuri-kauppahalli.webp": {
   "sha": "1b0dc7f6077341dd",
   "taytto": 0.314,
   "reuna": 0
  },
+ "buenosaires-buenos-airesin-katedraali-vari2-kk.webp": {
+  "sha": "999a882e1e1574ee",
+  "taytto": 0.406,
+  "reuna": 0.0
+ },
+ "buenosaires-cafe-tortoni-vari2-kk.webp": {
+  "sha": "e314f5011a868599",
+  "taytto": 0.418,
+  "reuna": 0.0
+ },
+ "buenosaires-kongressipalatsi-vari2-kk.webp": {
+  "sha": "32a123c2c5983ff5",
+  "taytto": 0.324,
+  "reuna": 0.0
+ },
+ "buenosaires-manzana-de-las-luces-vari2-kk.webp": {
+  "sha": "91000bbd4e4d3c6c",
+  "taytto": 0.327,
+  "reuna": 0.0
+ },
+ "buenosaires-museo-mitre-vari2-kk.webp": {
+  "sha": "333952388b9e2d5b",
+  "taytto": 0.395,
+  "reuna": 0.0
+ },
+ "buenosaires-palacio-barolo-vari2-kk.webp": {
+  "sha": "61dc71c93f18cc2d",
+  "taytto": 0.233,
+  "reuna": 0.0
+ },
+ "buenosaires-palacio-de-aguas-corrientes-vari2-kk.webp": {
+  "sha": "7e69c8838ffebd35",
+  "taytto": 0.458,
+  "reuna": 0.0
+ },
+ "buenosaires-pilarin-basilika-vari2-kk.webp": {
+  "sha": "7569e77816115818",
+  "taytto": 0.344,
+  "reuna": 0.0
+ },
+ "buenosaires-plaza-san-martin-vari2-kk.webp": {
+  "sha": "0352b0bd03601095",
+  "taytto": 0.348,
+  "reuna": 0.0
+ },
+ "buenosaires-santo-domingon-luostari-vari2-kk.webp": {
+  "sha": "28b299184ce3c6b1",
+  "taytto": 0.34,
+  "reuna": 0.0
+ },
+ "bukarest-antipan-museo-kk.webp": {
+  "sha": "f69b7d47302a3441",
+  "taytto": 0.317,
+  "reuna": 0.0
+ },
  "bukarest-antipan-museo.webp": {
   "sha": "001a25ea2d3368d6",
   "taytto": 0.317,
   "reuna": 0
+ },
+ "bukarest-cismigiun-puutarha-kk.webp": {
+  "sha": "e39a2b0513ec7646",
+  "taytto": 0.489,
+  "reuna": 0.0
  },
  "bukarest-cismigiun-puutarha.webp": {
   "sha": "a787ec8feadf79d2",
   "taytto": 0.491,
   "reuna": 0
  },
+ "bukarest-coltean-torni-vari2-kk.webp": {
+  "sha": "c68c7578c5864e6e",
+  "taytto": 0.208,
+  "reuna": 0.0
+ },
+ "bukarest-parlamenttipalatsi-kk.webp": {
+  "sha": "00bd0221289680ed",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
  "bukarest-parlamenttipalatsi.webp": {
   "sha": "1c2f364f84f176d1",
   "taytto": 0.393,
   "reuna": 0
+ },
+ "bukarest-romanian-ateneum-kk.webp": {
+  "sha": "6d14adda3505cb5c",
+  "taytto": 0.261,
+  "reuna": 0.0
  },
  "bukarest-romanian-ateneum.webp": {
   "sha": "0f0d0d29910231e3",
   "taytto": 0.262,
   "reuna": 0
  },
+ "bukarest-stavropoleoksen-kirkko-kk.webp": {
+  "sha": "550abb06200153df",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
  "bukarest-stavropoleoksen-kirkko.webp": {
   "sha": "2aef5842aae12ccd",
   "taytto": 0.334,
   "reuna": 0
+ },
+ "bukarest-vanha-ruhtinaanhovi-kk.webp": {
+  "sha": "920f4a99c4667d70",
+  "taytto": 0.202,
+  "reuna": 0.0
  },
  "bukarest-vanha-ruhtinaanhovi.webp": {
   "sha": "74d7720f1cd94ca7",
   "taytto": 0.202,
   "reuna": 0
  },
+ "bukarest-yliopiston-aukio-kk.webp": {
+  "sha": "9783fba83f6cc7b2",
+  "taytto": 0.457,
+  "reuna": 0.0
+ },
  "bukarest-yliopiston-aukio.webp": {
   "sha": "10f5d5d732e87a0e",
   "taytto": 0.459,
   "reuna": 0
+ },
+ "chennai-chennai-centralin-asema-vari2-kk.webp": {
+  "sha": "6b9ecd348adca84c",
+  "taytto": 0.299,
+  "reuna": 0.0
+ },
+ "chennai-chennai-egmoren-asema-vari2-kk.webp": {
+  "sha": "63d4d7d7dd42c50f",
+  "taytto": 0.336,
+  "reuna": 0.0
+ },
+ "chennai-chepaukin-palatsi-vari2-kk.webp": {
+  "sha": "1a05ba4b82ea99a3",
+  "taytto": 0.37,
+  "reuna": 0.0
+ },
+ "chennai-fort-st-george-vari2-kk.webp": {
+  "sha": "12eb437186bec0c7",
+  "taytto": 0.211,
+  "reuna": 0.0
+ },
+ "chennai-government-museum-vari2-kk.webp": {
+  "sha": "fb46d95702f2b9c9",
+  "taytto": 0.315,
+  "reuna": 0.0
+ },
+ "chennai-kapaleeshwararin-temppeli-vari2-kk.webp": {
+  "sha": "034569f3e1cd4516",
+  "taytto": 0.337,
+  "reuna": 0.0
+ },
+ "chennai-madrasin-ylin-oikeus-vari2-kk.webp": {
+  "sha": "a799fb30fd100feb",
+  "taytto": 0.331,
+  "reuna": 0.0
+ },
+ "chennai-marina-beach-vari2-kk.webp": {
+  "sha": "06f6f8227ca1010c",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
+ "chennai-ripon-building-vari2-kk.webp": {
+  "sha": "3960d3081f6758cc",
+  "taytto": 0.282,
+  "reuna": 0.0
+ },
+ "chennai-san-thomen-basilika-vari2-kk.webp": {
+  "sha": "a69875908a71c193",
+  "taytto": 0.205,
+  "reuna": 0.0
+ },
+ "christchurch-canterburyn-museo-kk.webp": {
+  "sha": "a94fbd73554ee67c",
+  "taytto": 0.275,
+  "reuna": 0.0
+ },
+ "christchurch-kaupungintalo-kk.webp": {
+  "sha": "c3ad7b5800fbadee",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
+ "christchurch-new-regent-street-kk.webp": {
+  "sha": "d536098517283559",
+  "taytto": 0.293,
+  "reuna": 0.0
+ },
+ "christchurch-provinssineuvoston-talo-kk.webp": {
+  "sha": "ca5a4740a640660c",
+  "taytto": 0.425,
+  "reuna": 0.0
+ },
+ "christchurch-taidegalleria-kk.webp": {
+  "sha": "d7085b1101bf57b2",
+  "taytto": 0.174,
+  "reuna": 0.0
+ },
+ "christchurch-victorian-kellotorni-kk.webp": {
+  "sha": "2ca784a1e22696cc",
+  "taytto": 0.09,
+  "reuna": 0.0
+ },
+ "colombo-beira-jarvi-vari2-kk.webp": {
+  "sha": "e6cd56b2b5f16182",
+  "taytto": 0.295,
+  "reuna": 0.0
+ },
+ "colombo-colombon-kansallismuseo-vari2-kk.webp": {
+  "sha": "5aea7bf419ea53fc",
+  "taytto": 0.335,
+  "reuna": 0.0
+ },
+ "colombo-colombon-satama-vari2-kk.webp": {
+  "sha": "9aa598f7985837ca",
+  "taytto": 0.244,
+  "reuna": 0.0
+ },
+ "colombo-fortin-kellotorni-vari2-kk.webp": {
+  "sha": "8bcbcd477086c4d1",
+  "taytto": 0.227,
+  "reuna": 0.0
+ },
+ "colombo-fortin-rautatieasema-vari2-kk.webp": {
+  "sha": "8749cc5eb9d8a420",
+  "taytto": 0.226,
+  "reuna": 0.0
+ },
+ "colombo-galle-face-hotel-vari2-kk.webp": {
+  "sha": "658786bde005fa65",
+  "taytto": 0.232,
+  "reuna": 0.0
+ },
+ "colombo-gangaramayan-temppeli-vari2-kk.webp": {
+  "sha": "37c1cab3df49caeb",
+  "taytto": 0.289,
+  "reuna": 0.0
+ },
+ "colombo-punainen-moskeija-vari2-kk.webp": {
+  "sha": "61721c43833a67a2",
+  "taytto": 0.422,
+  "reuna": 0.0
+ },
+ "colombo-wolvendaalin-kirkko-vari2-kk.webp": {
+  "sha": "23a461fe6cb30e74",
+  "taytto": 0.301,
+  "reuna": 0.0
+ },
+ "damaskos-damaskoksen-linnoitus-vari2-kk.webp": {
+  "sha": "655198ffff787059",
+  "taytto": 0.244,
+  "reuna": 0.0
+ },
+ "damaskos-hamidiyyan-suuki-vari2-kk.webp": {
+  "sha": "fc025a5f1df550f8",
+  "taytto": 0.515,
+  "reuna": 0.0
+ },
+ "damaskos-itaportti-vari2-kk.webp": {
+  "sha": "0745b29a9374a1ef",
+  "taytto": 0.252,
+  "reuna": 0.0
+ },
+ "damaskos-khan-as-ad-pashan-vari2-kk.webp": {
+  "sha": "4b1460b2e780f5b0",
+  "taytto": 0.5,
+  "reuna": 0.0
+ },
+ "damaskos-kisanin-portti-vari2-kk.webp": {
+  "sha": "fb8083882fda93bb",
+  "taytto": 0.382,
+  "reuna": 0.0
+ },
+ "damaskos-umaijadien-moskeija-vari2-kk.webp": {
+  "sha": "81522d470176c71c",
+  "taytto": 0.366,
+  "reuna": 0.0
+ },
+ "delhi-chandni-chowk-vari2-kk.webp": {
+  "sha": "5866f3a66b65751c",
+  "taytto": 0.403,
+  "reuna": 0.0
+ },
+ "delhi-delhi-junction-vari2-kk.webp": {
+  "sha": "052c0d31f5e63903",
+  "taytto": 0.438,
+  "reuna": 0.0
+ },
+ "delhi-delhin-kaupungintalo-vari2-kk.webp": {
+  "sha": "6588c0ba379c39d5",
+  "taytto": 0.328,
+  "reuna": 0.0
+ },
+ "delhi-fatehpuri-moskeija-vari2-kk.webp": {
+  "sha": "9c85f248784401e2",
+  "taytto": 0.396,
+  "reuna": 0.0
+ },
+ "delhi-gurdwara-sis-ganj-sahib-vari2-kk.webp": {
+  "sha": "cb8373b68b567854",
+  "taytto": 0.317,
+  "reuna": 0.0
+ },
+ "delhi-humayunin-mausoleumi-vari2-kk.webp": {
+  "sha": "1c1ac731e0572aaf",
+  "taytto": 0.36,
+  "reuna": 0.0
+ },
+ "delhi-jama-masjid-vari2-kk.webp": {
+  "sha": "66b186f1f8c824cb",
+  "taytto": 0.411,
+  "reuna": 0.0
+ },
+ "delhi-punainen-linnoitus-vari2-kk.webp": {
+  "sha": "f19e06a5ddf2d53f",
+  "taytto": 0.227,
+  "reuna": 0.0
+ },
+ "denver-brown-palace-hotelli-kk.webp": {
+  "sha": "d0ccdade2c17e88e",
+  "taytto": 0.407,
+  "reuna": 0.0
+ },
+ "denver-coors-field-kk.webp": {
+  "sha": "c414330762fd13bb",
+  "taytto": 0.234,
+  "reuna": 0.0
+ },
+ "denver-daniels-fisher-torni-kk.webp": {
+  "sha": "ee3c2b622e711ea4",
+  "taytto": 0.069,
+  "reuna": 0.0
+ },
+ "denver-esittavan-taiteen-keskus-kk.webp": {
+  "sha": "ffc0c9cf7968a52a",
+  "taytto": 0.359,
+  "reuna": 0.0
+ },
+ "denver-kasvitieteellinen-puutarha-kk.webp": {
+  "sha": "99d7ae8eff9cc319",
+  "taytto": 0.197,
+  "reuna": 0.0
+ },
+ "denver-katedraalibasilika-kk.webp": {
+  "sha": "59c346ba5124c95d",
+  "taytto": 0.257,
+  "reuna": 0.0
+ },
+ "denver-molly-brownin-talo-kk.webp": {
+  "sha": "910bd03c592a5f2a",
+  "taytto": 0.321,
+  "reuna": 0.0
+ },
+ "denver-taidemuseo-kk.webp": {
+  "sha": "8b3b418ef6524d17",
+  "taytto": 0.128,
+  "reuna": 0.0
+ },
+ "doha-al-koot-linnake-vari2-kk.webp": {
+  "sha": "4ababc986898602d",
+  "taytto": 0.304,
+  "reuna": 0.0
+ },
+ "doha-corniche-vari2-kk.webp": {
+  "sha": "d6ee5bc545bb50bc",
+  "taytto": 0.396,
+  "reuna": 0.0
+ },
+ "doha-islamilaisen-taiteen-museo-vari2-kk.webp": {
+  "sha": "d5043e76b199afed",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
+ "doha-msheireb-vari2-kk.webp": {
+  "sha": "fa9eec8b9396f10e",
+  "taytto": 0.394,
+  "reuna": 0.0
+ },
+ "doha-qatarin-kansallismuseo-vari2-kk.webp": {
+  "sha": "d9e83cf7fca0a367",
+  "taytto": 0.303,
+  "reuna": 0.0
+ },
+ "doha-souq-waqif-vari2-kk.webp": {
+  "sha": "2a8951c481f24552",
+  "taytto": 0.349,
+  "reuna": 0.0
+ },
+ "dubai-abra-laiturit-kk.webp": {
+  "sha": "734a6bfd553423cc",
+  "taytto": 0.208,
+  "reuna": 0.0
  },
  "dubai-abra-laiturit.webp": {
   "sha": "cc6333d231d10ee0",
   "taytto": 0.209,
   "reuna": 0
  },
+ "dubai-al-ahmadiyan-koulu-kk.webp": {
+  "sha": "20f61dc59bba97a7",
+  "taytto": 0.267,
+  "reuna": 0.0
+ },
  "dubai-al-ahmadiyan-koulu.webp": {
   "sha": "ed9342140a384790",
   "taytto": 0.268,
   "reuna": 0
+ },
+ "dubai-al-fahidin-linnoitus-kk.webp": {
+  "sha": "6ef764663b3cd6d5",
+  "taytto": 0.216,
+  "reuna": 0.0
  },
  "dubai-al-fahidin-linnoitus.webp": {
   "sha": "8cac0181b1346417",
   "taytto": 0.217,
   "reuna": 0
  },
+ "dubai-al-shindagha-kk.webp": {
+  "sha": "2e9af1a386c964b0",
+  "taytto": 0.287,
+  "reuna": 0.0
+ },
  "dubai-al-shindagha.webp": {
   "sha": "28083ca4dd7fd8cc",
   "taytto": 0.288,
   "reuna": 0
+ },
+ "dubai-bastakian-kaupunginosa-kk.webp": {
+  "sha": "1f835d8b3ea9dc55",
+  "taytto": 0.183,
+  "reuna": 0.0
  },
  "dubai-bastakian-kaupunginosa.webp": {
   "sha": "3b6cdfb8cd923412",
   "taytto": 0.185,
   "reuna": 0
  },
+ "dubai-dhow-satama-kk.webp": {
+  "sha": "6e16d395220c1eb7",
+  "taytto": 0.219,
+  "reuna": 0.0
+ },
  "dubai-dhow-satama.webp": {
   "sha": "722db54a2b8b0e8c",
   "taytto": 0.22,
   "reuna": 0
+ },
+ "dubai-kultasuuk-kk.webp": {
+  "sha": "a66ebb1f959a92a8",
+  "taytto": 0.416,
+  "reuna": 0.0
  },
  "dubai-kultasuuk.webp": {
   "sha": "986a42ebbf6660fa",
   "taytto": 0.417,
   "reuna": 0
  },
+ "dubai-maustesuuk-kk.webp": {
+  "sha": "84a89365c4a6780a",
+  "taytto": 0.211,
+  "reuna": 0.0
+ },
  "dubai-maustesuuk.webp": {
   "sha": "4ea6bd860f52cab3",
   "taytto": 0.211,
   "reuna": 0
+ },
+ "dubai-suuri-moskeija-kk.webp": {
+  "sha": "0e81752495b7e861",
+  "taytto": 0.207,
+  "reuna": 0.0
  },
  "dubai-suuri-moskeija.webp": {
   "sha": "39bdccf4c39b13eb",
   "taytto": 0.208,
   "reuna": 0
  },
+ "dubai-tekstiilisuuk-kk.webp": {
+  "sha": "e01e6821c4da98c3",
+  "taytto": 0.335,
+  "reuna": 0.0
+ },
  "dubai-tekstiilisuuk.webp": {
   "sha": "bb9783a61537886b",
   "taytto": 0.336,
   "reuna": 0
+ },
+ "dublin-dublinin-linna-kk.webp": {
+  "sha": "6653eba70f8222b3",
+  "taytto": 0.227,
+  "reuna": 0.0
  },
  "dublin-dublinin-linna.webp": {
   "sha": "744f2fadd98f50cc",
   "taytto": 0.228,
   "reuna": 0
  },
+ "dublin-guinness-panimo-kk.webp": {
+  "sha": "ddc4e0957ac31d06",
+  "taytto": 0.215,
+  "reuna": 0.0
+ },
  "dublin-guinness-panimo.webp": {
   "sha": "a2d81361ce325431",
   "taytto": 0.216,
   "reuna": 0
+ },
+ "dublin-hapenny-silta-kk.webp": {
+  "sha": "f7996a1796bb64db",
+  "taytto": 0.165,
+  "reuna": 0.0
  },
  "dublin-hapenny-silta.webp": {
   "sha": "6c23eb07ed655abd",
   "taytto": 0.167,
   "reuna": 0
  },
+ "dublin-patrickin-katedraali-kk.webp": {
+  "sha": "bc9f7c119308bd24",
+  "taytto": 0.223,
+  "reuna": 0.0
+ },
  "dublin-patrickin-katedraali.webp": {
   "sha": "f073ace50a2bbe2a",
   "taytto": 0.224,
   "reuna": 0
+ },
+ "dublin-spire-kk.webp": {
+  "sha": "9562847a700c1579",
+  "taytto": 0.034,
+  "reuna": 0.0
  },
  "dublin-spire.webp": {
   "sha": "9b1e277367ce9c77",
   "taytto": 0.034,
   "reuna": 0
  },
+ "dublin-st-james-s-gate-kk.webp": {
+  "sha": "b928a37cc046242c",
+  "taytto": 0.539,
+  "reuna": 0.0
+ },
+ "dublin-trinity-college-kk.webp": {
+  "sha": "2cc4e24d6380f5fe",
+  "taytto": 0.323,
+  "reuna": 0.0
+ },
  "dublin-trinity-college.webp": {
   "sha": "1e1e192149a000bb",
   "taytto": 0.325,
   "reuna": 0
+ },
+ "dubrovnik-dubrovnikin-katedraali-vari2-kk.webp": {
+  "sha": "43ac6c4225f9cb53",
+  "taytto": 0.416,
+  "reuna": 0.0
+ },
+ "dubrovnik-lovrijenacin-linnake-vari2-kk.webp": {
+  "sha": "a9f8e2ad09995771",
+  "taytto": 0.492,
+  "reuna": 0.0
+ },
+ "dubrovnik-mincetan-torni-vari2-kk.webp": {
+  "sha": "c113ea2240a1ac0e",
+  "taytto": 0.457,
+  "reuna": 0.0
+ },
+ "dubrovnik-pilen-portti-vari2-kk.webp": {
+  "sha": "640d8bc8af6d8457",
+  "taytto": 0.5,
+  "reuna": 0.0
+ },
+ "dubrovnik-sponzan-palatsi-vari2-kk.webp": {
+  "sha": "336c5bb6518765d6",
+  "taytto": 0.501,
+  "reuna": 0.0
+ },
+ "dubrovnik-vanhasatama-vari2-kk.webp": {
+  "sha": "8b93d949c4369de7",
+  "taytto": 0.543,
+  "reuna": 0.0
+ },
+ "edinburgh-calton-hill-kk.webp": {
+  "sha": "f4e37fd3e297a470",
+  "taytto": 0.231,
+  "reuna": 0.0
  },
  "edinburgh-calton-hill.webp": {
   "sha": "2d504f7cb244b049",
   "taytto": 0.232,
   "reuna": 0
  },
+ "edinburgh-charlotte-square-kk.webp": {
+  "sha": "6e87ddb1cf0dcb8b",
+  "taytto": 0.152,
+  "reuna": 0.0
+ },
  "edinburgh-charlotte-square.webp": {
   "sha": "dd9914f6fabb989f",
   "taytto": 0.153,
   "reuna": 0
+ },
+ "edinburgh-edinburghin-linna-kk.webp": {
+  "sha": "5c2b907d54c8513f",
+  "taytto": 0.246,
+  "reuna": 0.0
  },
  "edinburgh-edinburghin-linna.webp": {
   "sha": "5bc8feba2557301e",
@@ -609,55 +1514,125 @@
   "taytto": 0.287,
   "reuna": 0
  },
+ "edinburgh-holyroodin-palatsi-kk.webp": {
+  "sha": "32c652ac95cf7472",
+  "taytto": 0.197,
+  "reuna": 0.0
+ },
  "edinburgh-holyroodin-palatsi.webp": {
   "sha": "a017c6e16fedf849",
   "taytto": 0.198,
   "reuna": 0
+ },
+ "edinburgh-scott-monumentti-kk.webp": {
+  "sha": "ce35203548155823",
+  "taytto": 0.192,
+  "reuna": 0.0
+ },
+ "edinburgh-st-gilesin-katedraali-kk.webp": {
+  "sha": "1b77001b52f6af15",
+  "taytto": 0.202,
+  "reuna": 0.0
  },
  "edinburgh-st-gilesin-katedraali.webp": {
   "sha": "5a08a3cf0751784d",
   "taytto": 0.202,
   "reuna": 0
  },
+ "firenze-bargello-kk.webp": {
+  "sha": "d287035ae5c8b923",
+  "taytto": 0.254,
+  "reuna": 0.0
+ },
  "firenze-bargello.webp": {
   "sha": "625100241e65dbfd",
   "taytto": 0.256,
   "reuna": 0
+ },
+ "firenze-bobolin-puutarha-kk.webp": {
+  "sha": "1931971ec0dd069c",
+  "taytto": 0.206,
+  "reuna": 0.0
  },
  "firenze-bobolin-puutarha.webp": {
   "sha": "ff2715169fae7294",
   "taytto": 0.208,
   "reuna": 0
  },
+ "firenze-duomo-kk.webp": {
+  "sha": "3269f1133021c3d6",
+  "taytto": 0.211,
+  "reuna": 0.0
+ },
  "firenze-duomo.webp": {
   "sha": "fbb65a3402144a2c",
   "taytto": 0.212,
   "reuna": 0
+ },
+ "firenze-galleria-dellaccademia-kk.webp": {
+  "sha": "8bcb45c5bde7cbf0",
+  "taytto": 0.221,
+  "reuna": 0.0
  },
  "firenze-galleria-dellaccademia.webp": {
   "sha": "17696950caafed89",
   "taytto": 0.223,
   "reuna": 0
  },
+ "firenze-palazzo-vecchio-kk.webp": {
+  "sha": "7dc3e00395d134dd",
+  "taytto": 0.18,
+  "reuna": 0.0
+ },
  "firenze-palazzo-vecchio.webp": {
   "sha": "321614478d4c3bf7",
   "taytto": 0.18,
   "reuna": 0
+ },
+ "firenze-poggin-terassi-vari3-kk.webp": {
+  "sha": "fb1ae62df7a45451",
+  "taytto": 0.418,
+  "reuna": 0.0
+ },
+ "firenze-ponte-vecchio-kk.webp": {
+  "sha": "65510c399a16d0df",
+  "taytto": 0.288,
+  "reuna": 0.0
  },
  "firenze-ponte-vecchio.webp": {
   "sha": "dce81e25c6fa3cef",
   "taytto": 0.289,
   "reuna": 0
  },
+ "firenze-porcellino-vari2-kk.webp": {
+  "sha": "cecbb7773b578221",
+  "taytto": 0.439,
+  "reuna": 0.0
+ },
+ "firenze-santa-croce-kk.webp": {
+  "sha": "53f6e30fd355f28f",
+  "taytto": 0.217,
+  "reuna": 0.0
+ },
  "firenze-santa-croce.webp": {
   "sha": "92789a8515607709",
   "taytto": 0.218,
   "reuna": 0
  },
+ "firenze-santa-maria-novella-kk.webp": {
+  "sha": "bcbd87dd920e7f9d",
+  "taytto": 0.448,
+  "reuna": 0.0
+ },
  "firenze-santa-maria-novella.webp": {
   "sha": "6ccd7252d716e36d",
   "taytto": 0.45,
   "reuna": 0
+ },
+ "firenze-uffizi-kk.webp": {
+  "sha": "93ce65a5c896e868",
+  "taytto": 0.252,
+  "reuna": 0.0
  },
  "firenze-uffizi.webp": {
   "sha": "62da0f93b00505cc",
@@ -669,14 +1644,159 @@
   "taytto": 0.27,
   "reuna": 0
  },
+ "granada-albaicinin-nakoalapaikka-vari2-kk.webp": {
+  "sha": "2c2ef7d18ce25f96",
+  "taytto": 0.494,
+  "reuna": 0.0
+ },
+ "granada-alcaiceria-vari2-kk.webp": {
+  "sha": "61c3124ebe065873",
+  "taytto": 0.474,
+  "reuna": 0.0
+ },
+ "granada-alhambra-vari2-kk.webp": {
+  "sha": "e4fcbcc15bc4ccb6",
+  "taytto": 0.451,
+  "reuna": 0.0
+ },
+ "granada-generalife-vari2-kk.webp": {
+  "sha": "9fa7da2f9f260ad3",
+  "taytto": 0.292,
+  "reuna": 0.0
+ },
+ "granada-granadan-katedraali-vari2-kk.webp": {
+  "sha": "e4f851847513947e",
+  "taytto": 0.425,
+  "reuna": 0.0
+ },
+ "granada-irvingin-huoneet-vari2-kk.webp": {
+  "sha": "9eefd19fcb9bce2e",
+  "taytto": 0.434,
+  "reuna": 0.0
+ },
+ "granada-leijonain-piha-kk.webp": {
+  "sha": "144fd90f9c6d39d4",
+  "taytto": 0.343,
+  "reuna": 0.0
+ },
+ "granada-manuel-de-fallan-talo-vari2-kk.webp": {
+  "sha": "a329bde8adf01446",
+  "taytto": 0.43,
+  "reuna": 0.0
+ },
+ "granada-sacromonten-luolat-vari2-kk.webp": {
+  "sha": "f74ad84e0b950088",
+  "taytto": 0.436,
+  "reuna": 0.0
+ },
  "gronlanti-jaavuoret.webp": {
   "sha": "017a36c8f3e3f7ac",
   "taytto": 0.225,
   "reuna": 0
  },
- "helsinki-finlandia-vari2-kk.webp": {
-  "sha": "3f57d35034887d3e",
-  "taytto": 0.229,
+ "halab-aleppon-linnoitus-vari2-kk.webp": {
+  "sha": "5cb86a761054d4ea",
+  "taytto": 0.449,
+  "reuna": 0.0
+ },
+ "halab-antiokian-portti-vari2-kk.webp": {
+  "sha": "07cd1b75c88f2ef8",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
+ "halab-arghunin-sairaala-vari2-kk.webp": {
+  "sha": "2662a719527d9f39",
+  "taytto": 0.409,
+  "reuna": 0.0
+ },
+ "halab-beit-ajiqbash-vari2-kk.webp": {
+  "sha": "2385c81738f4d363",
+  "taytto": 0.489,
+  "reuna": 0.0
+ },
+ "halab-qinnesrinin-portti-vari2-kk.webp": {
+  "sha": "d9f34028fbf739b2",
+  "taytto": 0.437,
+  "reuna": 0.0
+ },
+ "halab-saippuakhan-vari2-kk.webp": {
+  "sha": "52150e45c3a9b416",
+  "taytto": 0.43,
+  "reuna": 0.0
+ },
+ "halifax-atlantin-merimuseo-kk.webp": {
+  "sha": "da490a556e3d06dc",
+  "taytto": 0.254,
+  "reuna": 0.0
+ },
+ "halifax-julkinen-puutarha-kk.webp": {
+  "sha": "65d1f5f89fa4e0cf",
+  "taytto": 0.259,
+  "reuna": 0.0
+ },
+ "halifax-pier-21-kk.webp": {
+  "sha": "f981b7fcb3fe6196",
+  "taytto": 0.148,
+  "reuna": 0.0
+ },
+ "halifax-point-pleasant-park-kk.webp": {
+  "sha": "932339ffe93e2891",
+  "taytto": 0.249,
+  "reuna": 0.0
+ },
+ "halifax-pyhan-paavalin-kirkko-kk.webp": {
+  "sha": "6b1dfc810fede370",
+  "taytto": 0.239,
+  "reuna": 0.0
+ },
+ "halifax-vanha-hautausmaa-kk.webp": {
+  "sha": "eeeca83dc443ecd6",
+  "taytto": 0.214,
+  "reuna": 0.0
+ },
+ "halifax-vanha-kellotorni-kk.webp": {
+  "sha": "7090e52ae4a028c9",
+  "taytto": 0.271,
+  "reuna": 0.0
+ },
+ "hanoi-hanoin-lippulinna-vari2-kk.webp": {
+  "sha": "cc218d762c4af0d4",
+  "taytto": 0.247,
+  "reuna": 0.0
+ },
+ "hanoi-kirjallisuuden-temppeli-vari2-kk.webp": {
+  "sha": "3bbb10369825c6dd",
+  "taytto": 0.391,
+  "reuna": 0.0
+ },
+ "hanoi-long-bienin-silta-vari2-kk.webp": {
+  "sha": "581b837761dd8792",
+  "taytto": 0.246,
+  "reuna": 0.0
+ },
+ "hanoi-ngoc-sonin-temppeli-vari2-kk.webp": {
+  "sha": "ddd068ef1bfe7f2f",
+  "taytto": 0.338,
+  "reuna": 0.0
+ },
+ "hanoi-ong-xuanin-tori-vari2-kk.webp": {
+  "sha": "3be5f1fb6e383dcc",
+  "taytto": 0.267,
+  "reuna": 0.0
+ },
+ "hanoi-pyhan-joosefin-katedraali-vari2-kk.webp": {
+  "sha": "64b0557f5966ae60",
+  "taytto": 0.484,
+  "reuna": 0.0
+ },
+ "hanoi-thang-longin-keisarilinna-vari2-kk.webp": {
+  "sha": "df1ee861bcd4136c",
+  "taytto": 0.402,
+  "reuna": 0.0
+ },
+ "hanoi-yhden-pilarin-pagodi-vari2-kk.webp": {
+  "sha": "a01db6c5f13c3a45",
+  "taytto": 0.335,
   "reuna": 0.0
  },
  "helsinki-johanneksenkirkko-kk.webp": {
@@ -773,6 +1893,181 @@
   "sha": "1400e0cb55190a9f",
   "taytto": 0.295,
   "reuna": 0
+ },
+ "hongkong-man-mo-temppeli-vari2-kk.webp": {
+  "sha": "f8ccae33690530b4",
+  "taytto": 0.412,
+  "reuna": 0.0
+ },
+ "hongkong-pyhan-johanneksen-katedraali-vari2-kk.webp": {
+  "sha": "493268bc2d126a68",
+  "taytto": 0.342,
+  "reuna": 0.0
+ },
+ "hongkong-sininen-talo-vari2-kk.webp": {
+  "sha": "a1af751b98c21072",
+  "taytto": 0.281,
+  "reuna": 0.0
+ },
+ "hongkong-star-ferryn-laituri-vari2-kk.webp": {
+  "sha": "221719bf31f399df",
+  "taytto": 0.272,
+  "reuna": 0.0
+ },
+ "hongkong-tai-kwun-vari2-kk.webp": {
+  "sha": "50ce01762c994738",
+  "taytto": 0.355,
+  "reuna": 0.0
+ },
+ "hongkong-tsim-sha-tsuin-kellotorni-vari2-kk.webp": {
+  "sha": "318a52f7bb2b9fa2",
+  "taytto": 0.195,
+  "reuna": 0.0
+ },
+ "hongkong-vaunuradan-alaterminaali-vari2-kk.webp": {
+  "sha": "cd37545e7ea290dd",
+  "taytto": 0.402,
+  "reuna": 0.0
+ },
+ "hongkong-victoria-peak-vari2-kk.webp": {
+  "sha": "32d0f53eda8c84f6",
+  "taytto": 0.399,
+  "reuna": 0.0
+ },
+ "hongkong-western-market-vari2-kk.webp": {
+  "sha": "e42990692a27ba23",
+  "taytto": 0.354,
+  "reuna": 0.0
+ },
+ "honiara-guadalcanalin-muistomerkki-kk.webp": {
+  "sha": "e664f90f21c63089",
+  "taytto": 0.304,
+  "reuna": 0.0
+ },
+ "honiara-holy-cross-katedraali-kk.webp": {
+  "sha": "534abe07f766fb39",
+  "taytto": 0.263,
+  "reuna": 0.0
+ },
+ "honiara-kansallismuseo-kk.webp": {
+  "sha": "2d4ac6397325ff7c",
+  "taytto": 0.278,
+  "reuna": 0.0
+ },
+ "honiara-parlamenttitalo-kk.webp": {
+  "sha": "f2104abaf8a63abc",
+  "taytto": 0.132,
+  "reuna": 0.0
+ },
+ "honiara-point-cruz-kk.webp": {
+  "sha": "cf6415417f7a4e63",
+  "taytto": 0.317,
+  "reuna": 0.0
+ },
+ "houston-astrosin-stadion-kk.webp": {
+  "sha": "7fcd0de62276df1e",
+  "taytto": 0.211,
+  "reuna": 0.0
+ },
+ "houston-buffalo-bayoun-puisto-kk.webp": {
+  "sha": "3d468e1e40d3b8c1",
+  "taytto": 0.352,
+  "reuna": 0.0
+ },
+ "houston-hermann-park-kk.webp": {
+  "sha": "9578756535a976af",
+  "taytto": 0.228,
+  "reuna": 0.0
+ },
+ "houston-julia-idesonin-kirjasto-kk.webp": {
+  "sha": "b0f748fc5aa3ad34",
+  "taytto": 0.482,
+  "reuna": 0.0
+ },
+ "houston-kongressikeskus-kk.webp": {
+  "sha": "d48ed60d6aca566c",
+  "taytto": 0.188,
+  "reuna": 0.0
+ },
+ "houston-market-squaren-puisto-kk.webp": {
+  "sha": "2159f987725e67bc",
+  "taytto": 0.219,
+  "reuna": 0.0
+ },
+ "houston-menilin-kokoelma-kk.webp": {
+  "sha": "783570d65bd742d6",
+  "taytto": 0.217,
+  "reuna": 0.0
+ },
+ "houston-sam-houstonin-puisto-kk.webp": {
+  "sha": "17b8dde0cf85255c",
+  "taytto": 0.295,
+  "reuna": 0.0
+ },
+ "irkutsk-130-kortteli-vari2-kk.webp": {
+  "sha": "59f9d6341cf64a56",
+  "taytto": 0.384,
+  "reuna": 0.0
+ },
+ "irkutsk-epifanian-katedraali-vari2-kk.webp": {
+  "sha": "d382593786e5571c",
+  "taytto": 0.364,
+  "reuna": 0.0
+ },
+ "irkutsk-jaanmurtaja-angara-vari2-kk.webp": {
+  "sha": "5c3e4846266e15c1",
+  "taytto": 0.327,
+  "reuna": 0.0
+ },
+ "irkutsk-rautatieasema-vari2-kk.webp": {
+  "sha": "6ee6cc11078482b4",
+  "taytto": 0.297,
+  "reuna": 0.0
+ },
+ "irkutsk-ristin-ylentamisen-kirkko-vari2-kk.webp": {
+  "sha": "356b25792111e092",
+  "taytto": 0.296,
+  "reuna": 0.0
+ },
+ "irkutsk-taivaaseenastumisen-kirkko-vari2-kk.webp": {
+  "sha": "07b0300f31fdc93f",
+  "taytto": 0.242,
+  "reuna": 0.0
+ },
+ "irkutsk-znamenskin-luostari-vari2-kk.webp": {
+  "sha": "06e713cf6661a9d8",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
+ "isfahan-ali-qapu-vari2-kk.webp": {
+  "sha": "ecae3d85af53054d",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "isfahan-chahar-baghin-koulu-vari2-kk.webp": {
+  "sha": "54adacd7e6141961",
+  "taytto": 0.389,
+  "reuna": 0.0
+ },
+ "isfahan-hasht-behesht-vari2-kk.webp": {
+  "sha": "91647c50da7ca6b4",
+  "taytto": 0.424,
+  "reuna": 0.0
+ },
+ "isfahan-isfahanin-basaari-vari2-kk.webp": {
+  "sha": "f7b3a20e55ece44a",
+  "taytto": 0.446,
+  "reuna": 0.0
+ },
+ "isfahan-jameh-moskeija-vari2-kk.webp": {
+  "sha": "ff4766c359c16a14",
+  "taytto": 0.345,
+  "reuna": 0.0
+ },
+ "isfahan-shaahin-moskeija-vari2-kk.webp": {
+  "sha": "04c6acd573fd6449",
+  "taytto": 0.397,
+  "reuna": 0.0
  },
  "istanbul-camondon-portaat-kk.webp": {
   "sha": "8679843b5bd78159",
@@ -889,255 +2184,1105 @@
   "taytto": 0.144,
   "reuna": 0
  },
+ "izmir-hisarin-moskeija-kk.webp": {
+  "sha": "1adad3ae1d1439e9",
+  "taytto": 0.158,
+  "reuna": 0.0
+ },
  "izmir-hisarin-moskeija.webp": {
   "sha": "5174a02ad84c26d6",
   "taytto": 0.16,
   "reuna": 0
+ },
+ "izmir-izmirin-kellotorni-kk.webp": {
+  "sha": "fd5ba1a3a658ee63",
+  "taytto": 0.124,
+  "reuna": 0.0
  },
  "izmir-izmirin-kellotorni.webp": {
   "sha": "4e2763d8f5057387",
   "taytto": 0.124,
   "reuna": 0
  },
+ "izmir-kemeraltin-basaari-kk.webp": {
+  "sha": "79cf62fd4bd8d761",
+  "taytto": 0.193,
+  "reuna": 0.0
+ },
  "izmir-kemeraltin-basaari.webp": {
   "sha": "88422e43d1294ac2",
   "taytto": 0.195,
   "reuna": 0
+ },
+ "izmir-salepcioglun-moskeija-kk.webp": {
+  "sha": "d6a06584d05aa182",
+  "taytto": 0.168,
+  "reuna": 0.0
  },
  "izmir-salepcioglun-moskeija.webp": {
   "sha": "3d0dff18e60829af",
   "taytto": 0.169,
   "reuna": 0
  },
+ "izmir-smyrnan-agora-kk.webp": {
+  "sha": "d3e20005f7c185c5",
+  "taytto": 0.326,
+  "reuna": 0.0
+ },
  "izmir-smyrnan-agora.webp": {
   "sha": "a87138dde638de3d",
   "taytto": 0.328,
   "reuna": 0
+ },
+ "izmir-sulu-han-kk.webp": {
+  "sha": "30fd12dd095be515",
+  "taytto": 0.29,
+  "reuna": 0.0
  },
  "izmir-sulu-han.webp": {
   "sha": "dbe74af7ebf8b072",
   "taytto": 0.292,
   "reuna": 0
  },
+ "jakarta-fatahillah-aukio-vari2-kk.webp": {
+  "sha": "9c4623f99f46287f",
+  "taytto": 0.294,
+  "reuna": 0.0
+ },
+ "jakarta-istiqlal-moskeija-vari2-kk.webp": {
+  "sha": "921e3ff34262e540",
+  "taytto": 0.317,
+  "reuna": 0.0
+ },
+ "jakarta-jakarta-kotan-asema-vari2-kk.webp": {
+  "sha": "87198c83a6fc8d7a",
+  "taytto": 0.389,
+  "reuna": 0.0
+ },
+ "jakarta-jakartan-katedraali-vari2-kk.webp": {
+  "sha": "7883431d4f4f3a0b",
+  "taytto": 0.272,
+  "reuna": 0.0
+ },
+ "jakarta-kansallismonumentti-monas-vari2-kk.webp": {
+  "sha": "794bc47311babc76",
+  "taytto": 0.11,
+  "reuna": 0.0
+ },
+ "jakarta-kim-tek-ie-temppeli-vari2-kk.webp": {
+  "sha": "ab28b3abc029093f",
+  "taytto": 0.38,
+  "reuna": 0.0
+ },
+ "jakarta-kota-intanin-nostosilta-vari2-kk.webp": {
+  "sha": "305b2f87b684fd60",
+  "taytto": 0.258,
+  "reuna": 0.0
+ },
+ "jakarta-merenkulkumuseo-vari2-kk.webp": {
+  "sha": "382dce2465d173bb",
+  "taytto": 0.342,
+  "reuna": 0.0
+ },
+ "jakarta-sunda-kelapan-satama-vari2-kk.webp": {
+  "sha": "6f185187cd04af0e",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "jakarta-toko-merah-vari2-kk.webp": {
+  "sha": "0e464ac7978ae2c1",
+  "taytto": 0.494,
+  "reuna": 0.0
+ },
+ "jakutsk-jaroslavskin-museo-vari2-kk.webp": {
+  "sha": "dea0a8f2f548b8f2",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
+ "jakutsk-kansallinen-taidemuseo-vari2-kk.webp": {
+  "sha": "4c5d7682a9e66066",
+  "taytto": 0.435,
+  "reuna": 0.0
+ },
+ "jakutsk-nikolskin-kirkko-vari2-kk.webp": {
+  "sha": "257dcd750ef3d66c",
+  "taytto": 0.29,
+  "reuna": 0.0
+ },
+ "jakutsk-ooppera-ja-balettiteatteri-vari2-kk.webp": {
+  "sha": "28e18c9f76ae5026",
+  "taytto": 0.4,
+  "reuna": 0.0
+ },
+ "jakutsk-pushkinin-draamateatteri-vari2-kk.webp": {
+  "sha": "d380acbab4f54200",
+  "taytto": 0.438,
+  "reuna": 0.0
+ },
+ "jakutsk-saha-teatteri-vari2-kk.webp": {
+  "sha": "bcfe918ad1000c8c",
+  "taytto": 0.434,
+  "reuna": 0.0
+ },
+ "jakutsk-spasskin-luostari-vari2-kk.webp": {
+  "sha": "08904822c841f71d",
+  "taytto": 0.316,
+  "reuna": 0.0
+ },
+ "jakutsk-vanhakaupunki-vari2-kk.webp": {
+  "sha": "57c1f5b2cf5c5e7e",
+  "taytto": 0.442,
+  "reuna": 0.0
+ },
+ "jekaterinburg-historiallinen-aukio-vari2-kk.webp": {
+  "sha": "166c8ed5c64d0491",
+  "taytto": 0.326,
+  "reuna": 0.0
+ },
+ "jekaterinburg-kharitonovin-kartano-vari2-kk.webp": {
+  "sha": "dfbf4a1e46241afd",
+  "taytto": 0.471,
+  "reuna": 0.0
+ },
+ "jekaterinburg-kolminaisuuden-katedraali-vari2-kk.webp": {
+  "sha": "bdf1dd22bb56b0cd",
+  "taytto": 0.357,
+  "reuna": 0.0
+ },
+ "jekaterinburg-kuvataidemuseo-vari2-kk.webp": {
+  "sha": "1512cda278c5a31e",
+  "taytto": 0.354,
+  "reuna": 0.0
+ },
+ "jekaterinburg-suuri-zlatoust-vari2-kk.webp": {
+  "sha": "0bd0e5f9a5c7629e",
+  "taytto": 0.226,
+  "reuna": 0.0
+ },
+ "jekaterinburg-uralin-valtionyliopisto-vari2-kk.webp": {
+  "sha": "0a9241585d9a7d25",
+  "taytto": 0.378,
+  "reuna": 0.0
+ },
+ "jekaterinburg-vanha-rautatieasema-vari2-kk.webp": {
+  "sha": "d1b6bdb213def414",
+  "taytto": 0.347,
+  "reuna": 0.0
+ },
+ "jerusalem-al-aqsa-moskeija-vari2-kk.webp": {
+  "sha": "0b5a5d5617ae3aa0",
+  "taytto": 0.365,
+  "reuna": 0.0
+ },
+ "jerusalem-damaskoksen-portti-vari2-kk.webp": {
+  "sha": "2f3091a0936fab7e",
+  "taytto": 0.533,
+  "reuna": 0.0
+ },
+ "jerusalem-jaffan-portti-vari2-kk.webp": {
+  "sha": "dddf3414aef1a129",
+  "taytto": 0.424,
+  "reuna": 0.0
+ },
+ "jerusalem-kalliomoskeija-vari2-kk.webp": {
+  "sha": "fca651affc009956",
+  "taytto": 0.44,
+  "reuna": 0.0
+ },
+ "jerusalem-lantinen-muuri-vari2-kk.webp": {
+  "sha": "3910057eb0e9d260",
+  "taytto": 0.416,
+  "reuna": 0.0
+ },
+ "jerusalem-pyhan-haudan-kirkko-vari2-kk.webp": {
+  "sha": "99fd1e2a61fe1ba1",
+  "taytto": 0.414,
+  "reuna": 0.0
+ },
+ "kabul-baburin-puutarhat-vari2-kk.webp": {
+  "sha": "52d91ef40cfbcc81",
+  "taytto": 0.374,
+  "reuna": 0.0
+ },
+ "kabul-bala-hissar-vari2-kk.webp": {
+  "sha": "3cfbd3236ffa3be6",
+  "taytto": 0.306,
+  "reuna": 0.0
+ },
+ "kabul-chihil-sutunin-palatsi-vari2-kk.webp": {
+  "sha": "86dbc66e41d7677b",
+  "taytto": 0.371,
+  "reuna": 0.0
+ },
+ "kabul-darul-amanin-palatsi-vari2-kk.webp": {
+  "sha": "9d3aa28a0cb9b5c3",
+  "taytto": 0.292,
+  "reuna": 0.0
+ },
+ "kabul-ka-faroshin-lintutori-vari2-kk.webp": {
+  "sha": "7cfcd0ee1ea3d2fa",
+  "taytto": 0.527,
+  "reuna": 0.0
+ },
+ "kabul-kabulin-vanha-kaupunginmuuri-vari2-kk.webp": {
+  "sha": "ab9c16a4095b831d",
+  "taytto": 0.358,
+  "reuna": 0.0
+ },
+ "kabul-shah-do-shamshiran-moskeija-vari2-kk.webp": {
+  "sha": "7c82c0ce5f7d7909",
+  "taytto": 0.415,
+  "reuna": 0.0
+ },
+ "kabul-timur-shahin-mausoleumi-vari2-kk.webp": {
+  "sha": "fae04c502b024d73",
+  "taytto": 0.383,
+  "reuna": 0.0
+ },
+ "kairo-abdeenin-palatsi-kk.webp": {
+  "sha": "3b45286779bdad97",
+  "taytto": 0.177,
+  "reuna": 0.0
+ },
  "kairo-abdeenin-palatsi.webp": {
   "sha": "8a979b577e7f8c0d",
   "taytto": 0.178,
   "reuna": 0
+ },
+ "kairo-al-azhar-puisto-kk.webp": {
+  "sha": "241723b07743c003",
+  "taytto": 0.223,
+  "reuna": 0.0
  },
  "kairo-al-azhar-puisto.webp": {
   "sha": "167886331bc4482f",
   "taytto": 0.224,
   "reuna": 0
  },
+ "kairo-bab-zuweila-kk.webp": {
+  "sha": "6faf2005cc9b48a7",
+  "taytto": 0.254,
+  "reuna": 0.0
+ },
  "kairo-bab-zuweila.webp": {
   "sha": "23a79ad84ff2204a",
   "taytto": 0.255,
   "reuna": 0
+ },
+ "kairo-egyptin-museo-kk.webp": {
+  "sha": "fadf04dbc409fe16",
+  "taytto": 0.324,
+  "reuna": 0.0
  },
  "kairo-egyptin-museo.webp": {
   "sha": "30548aff4efd466b",
   "taytto": 0.324,
   "reuna": 0
  },
+ "kairo-ibn-tulunin-moskeija-kk.webp": {
+  "sha": "41274381f2bd9679",
+  "taytto": 0.258,
+  "reuna": 0.0
+ },
  "kairo-ibn-tulunin-moskeija.webp": {
   "sha": "b6400a8de9e94e6d",
   "taytto": 0.259,
   "reuna": 0
+ },
+ "kairo-kairon-torni-kk.webp": {
+  "sha": "8e44738b31a87542",
+  "taytto": 0.085,
+  "reuna": 0.0
  },
  "kairo-kairon-torni.webp": {
   "sha": "57fa6055daae3499",
   "taytto": 0.085,
   "reuna": 0
  },
+ "kairo-khan-el-khalili-kk.webp": {
+  "sha": "accf46f938a2ec01",
+  "taytto": 0.309,
+  "reuna": 0.0
+ },
  "kairo-khan-el-khalili.webp": {
   "sha": "eb4045440f70052e",
   "taytto": 0.31,
   "reuna": 0
+ },
+ "kairo-saladinin-linnoitus-kk.webp": {
+  "sha": "e3fcaadba7abae06",
+  "taytto": 0.263,
+  "reuna": 0.0
  },
  "kairo-saladinin-linnoitus.webp": {
   "sha": "a4ce2ee150cbb6f2",
   "taytto": 0.264,
   "reuna": 0
  },
+ "kairo-sulttaani-hassanin-moskeija-kk.webp": {
+  "sha": "c0b0f19a182b1e01",
+  "taytto": 0.247,
+  "reuna": 0.0
+ },
  "kairo-sulttaani-hassanin-moskeija.webp": {
   "sha": "6a220fe8d277c705",
   "taytto": 0.248,
   "reuna": 0
+ },
+ "kairo-tahririn-aukio-kk.webp": {
+  "sha": "823033bdbb7a6a3b",
+  "taytto": 0.183,
+  "reuna": 0.0
  },
  "kairo-tahririn-aukio.webp": {
   "sha": "7c1c78d5a7a2cfaf",
   "taytto": 0.184,
   "reuna": 0
  },
+ "kanton-chenin-suvun-sali-vari2-kk.webp": {
+  "sha": "5efe2711269369c0",
+  "taytto": 0.424,
+  "reuna": 0.0
+ },
+ "kanton-guangxiao-temppeli-vari2-kk.webp": {
+  "sha": "fa49e5201290c922",
+  "taytto": 0.388,
+  "reuna": 0.0
+ },
+ "kanton-huaisheng-moskeija-vari2-kk.webp": {
+  "sha": "8cad36bbe77de8de",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "kanton-kolmentoista-faktorian-paikka-vari2-kk.webp": {
+  "sha": "f6fa56cf1feee02e",
+  "taytto": 0.346,
+  "reuna": 0.0
+ },
+ "kanton-liurong-temppeli-vari2-kk.webp": {
+  "sha": "963c80d28947fb51",
+  "taytto": 0.267,
+  "reuna": 0.0
+ },
+ "kanton-pyhan-sydamen-katedraali-vari2-kk.webp": {
+  "sha": "e8d2454c48a63be0",
+  "taytto": 0.32,
+  "reuna": 0.0
+ },
+ "kanton-shamianin-saari-vari2-kk.webp": {
+  "sha": "cf7919c5e860658d",
+  "taytto": 0.251,
+  "reuna": 0.0
+ },
+ "kanton-zhenhai-torni-vari2-kk.webp": {
+  "sha": "2ed631760a707aa3",
+  "taytto": 0.342,
+  "reuna": 0.0
+ },
+ "kapkaupunki-greenmarket-square-kk.webp": {
+  "sha": "123ca2973e761703",
+  "taytto": 0.397,
+  "reuna": 0.0
+ },
+ "kapkaupunki-hyvantoivonlinnoitus-kk.webp": {
+  "sha": "bbcef4842bf9aa0f",
+  "taytto": 0.216,
+  "reuna": 0.0
+ },
+ "kapkaupunki-iziko-etela-afrikan-museo-kk.webp": {
+  "sha": "21ac4d11aea8bd44",
+  "taytto": 0.242,
+  "reuna": 0.0
+ },
+ "kapkaupunki-iziko-slave-lodge-kk.webp": {
+  "sha": "046a274ffaade12a",
+  "taytto": 0.153,
+  "reuna": 0.0
+ },
+ "kapkaupunki-va-waterfront-kk.webp": {
+  "sha": "29584b98763867e1",
+  "taytto": 0.268,
+  "reuna": 0.0
+ },
+ "karachi-denso-hall-vari2-kk.webp": {
+  "sha": "8055f77d6490b8f6",
+  "taytto": 0.446,
+  "reuna": 0.0
+ },
+ "karachi-empress-market-vari2-kk.webp": {
+  "sha": "3cd71a99b62b154c",
+  "taytto": 0.321,
+  "reuna": 0.0
+ },
+ "karachi-frere-hall-vari2-kk.webp": {
+  "sha": "6d998c0a3a42f91f",
+  "taytto": 0.328,
+  "reuna": 0.0
+ },
+ "karachi-karachi-cityn-rautatieasema-vari2-kk.webp": {
+  "sha": "f3a6487e423e83ff",
+  "taytto": 0.402,
+  "reuna": 0.0
+ },
+ "karachi-karachin-kaupungintalo-vari2-kk.webp": {
+  "sha": "297e0b96e1dccc0f",
+  "taytto": 0.31,
+  "reuna": 0.0
+ },
+ "karachi-merewetherin-kellotorni-vari2-kk.webp": {
+  "sha": "5c0c6c9ce9bedfbf",
+  "taytto": 0.194,
+  "reuna": 0.0
+ },
+ "karachi-mohatta-palace-vari2-kk.webp": {
+  "sha": "22c3bbdce168cb74",
+  "taytto": 0.503,
+  "reuna": 0.0
+ },
+ "karachi-pyhan-kolminaisuuden-katedraali-vari2-kk.webp": {
+  "sha": "54274c80e755e66b",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
+ "karachi-satamahallinnon-talo-vari2-kk.webp": {
+  "sha": "405b6f034cdbb086",
+  "taytto": 0.5,
+  "reuna": 0.0
+ },
+ "karachi-wazir-mansion-vari2-kk.webp": {
+  "sha": "de06c520f5433309",
+  "taytto": 0.372,
+  "reuna": 0.0
+ },
+ "kashgar-afaq-khojan-mausoleumi-vari2-kk.webp": {
+  "sha": "e4a5e4fc2bcaae76",
+  "taytto": 0.323,
+  "reuna": 0.0
+ },
+ "kashgar-chini-bagh-vari2-kk.webp": {
+  "sha": "adf3e0a24d2c0150",
+  "taytto": 0.349,
+  "reuna": 0.0
+ },
+ "kashgar-id-kahin-moskeija-vari2-kk.webp": {
+  "sha": "ee12200bcc4814c1",
+  "taytto": 0.369,
+  "reuna": 0.0
+ },
+ "kashgar-kansanpuisto-vari2-kk.webp": {
+  "sha": "59cca451e31e2052",
+  "taytto": 0.384,
+  "reuna": 0.0
+ },
+ "kashgar-suuri-basaari-vari2-kk.webp": {
+  "sha": "59961b8350d5fc28",
+  "taytto": 0.366,
+  "reuna": 0.0
+ },
+ "kashgar-vanhakaupunki-vari2-kk.webp": {
+  "sha": "fe3670c1d9c0a671",
+  "taytto": 0.384,
+  "reuna": 0.0
+ },
+ "kashgar-yusuf-khass-hajibin-mausoleumi-vari2-kk.webp": {
+  "sha": "b96f206641bf6ade",
+  "taytto": 0.251,
+  "reuna": 0.0
+ },
+ "kathmandu-boudhanath-vari2-kk.webp": {
+  "sha": "76c7c934fa3d8dd9",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
+ "kathmandu-dharahara-vari2-kk.webp": {
+  "sha": "563032c2ad8687ff",
+  "taytto": 0.131,
+  "reuna": 0.0
+ },
+ "kathmandu-kathmandun-durbar-aukio-vari2-kk.webp": {
+  "sha": "38c195a8c4b25f0c",
+  "taytto": 0.425,
+  "reuna": 0.0
+ },
+ "kathmandu-pashupatinath-vari2-kk.webp": {
+  "sha": "0741b80ed7248478",
+  "taytto": 0.398,
+  "reuna": 0.0
+ },
+ "kathmandu-patanin-durbar-aukio-vari2-kk.webp": {
+  "sha": "2061695f5eecc5d1",
+  "taytto": 0.509,
+  "reuna": 0.0
+ },
+ "kathmandu-rani-pokhari-vari2-kk.webp": {
+  "sha": "76e7448d157120f7",
+  "taytto": 0.335,
+  "reuna": 0.0
+ },
+ "kathmandu-swayambhunath-vari2-kk.webp": {
+  "sha": "e235af79088baa80",
+  "taytto": 0.321,
+  "reuna": 0.0
+ },
+ "kathmandu-unelmien-puutarha-vari2-kk.webp": {
+  "sha": "2a19044471ebe40e",
+  "taytto": 0.395,
+  "reuna": 0.0
+ },
+ "kioto-fushimi-inari-taisha-vari2-kk.webp": {
+  "sha": "27d3e1e52960d3b3",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "kioto-ginkaku-ji-vari2-kk.webp": {
+  "sha": "26266b353b05dd53",
+  "taytto": 0.416,
+  "reuna": 0.0
+ },
+ "kioto-gion-vari2-kk.webp": {
+  "sha": "991fc1bc057f1314",
+  "taytto": 0.424,
+  "reuna": 0.0
+ },
+ "kioto-keisarillinen-palatsi-vari2-kk.webp": {
+  "sha": "0b69259010914463",
+  "taytto": 0.427,
+  "reuna": 0.0
+ },
+ "kioto-kinkaku-ji-vari2-kk.webp": {
+  "sha": "af3bd45db635f98a",
+  "taytto": 0.393,
+  "reuna": 0.0
+ },
+ "kioto-kiyomizu-dera-vari2-kk.webp": {
+  "sha": "d9647408bb08aac8",
+  "taytto": 0.483,
+  "reuna": 0.0
+ },
+ "kioto-nijo-linna-vari2-kk.webp": {
+  "sha": "457c95b0e4472da5",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
+ "kioto-nishiki-tori-vari2-kk.webp": {
+  "sha": "09b5b6d9cfe7b020",
+  "taytto": 0.398,
+  "reuna": 0.0
+ },
+ "kioto-sanjusangen-do-vari2-kk.webp": {
+  "sha": "126e16fc45d588e8",
+  "taytto": 0.218,
+  "reuna": 0.0
+ },
+ "kioto-to-ji-vari2-kk.webp": {
+  "sha": "5d3ec27ffb620f5d",
+  "taytto": 0.233,
+  "reuna": 0.0
+ },
+ "kiova-andreaksen-kirkko-kk.webp": {
+  "sha": "eb738fae9a84898b",
+  "taytto": 0.16,
+  "reuna": 0.0
+ },
  "kiova-andreaksen-kirkko.webp": {
   "sha": "6fb40bccfbceef4c",
   "taytto": 0.16,
   "reuna": 0
+ },
+ "kiova-itsenaisyyden-aukio-kk.webp": {
+  "sha": "17a5a681cc476355",
+  "taytto": 0.159,
+  "reuna": 0.0
  },
  "kiova-itsenaisyyden-aukio.webp": {
   "sha": "d0a53471528813f1",
   "taytto": 0.161,
   "reuna": 0
  },
+ "kiova-kiovan-kultainen-portti-kk.webp": {
+  "sha": "3d1a3d8ac814f480",
+  "taytto": 0.184,
+  "reuna": 0.0
+ },
  "kiova-kiovan-kultainen-portti.webp": {
   "sha": "54e906297798c714",
   "taytto": 0.184,
   "reuna": 0
+ },
+ "kiova-kontraktovan-aukio-kk.webp": {
+  "sha": "ef746ebac5b3956e",
+  "taytto": 0.264,
+  "reuna": 0.0
  },
  "kiova-kontraktovan-aukio.webp": {
   "sha": "30a4e3149b385f80",
   "taytto": 0.265,
   "reuna": 0
  },
+ "kiova-pyhan-mikaelin-luostari-kk.webp": {
+  "sha": "ca7b000cbeecb8a4",
+  "taytto": 0.252,
+  "reuna": 0.0
+ },
  "kiova-pyhan-mikaelin-luostari.webp": {
   "sha": "aced12f996612f6b",
   "taytto": 0.254,
   "reuna": 0
+ },
+ "kiova-pyhan-sofian-katedraali-kk.webp": {
+  "sha": "4a3a43e5648d8e5e",
+  "taytto": 0.295,
+  "reuna": 0.0
  },
  "kiova-pyhan-sofian-katedraali.webp": {
   "sha": "a5bd0c3695711db7",
   "taytto": 0.296,
   "reuna": 0
  },
+ "kobenhavn-amalienborg-kk.webp": {
+  "sha": "837f7b35a1611d6a",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
  "kobenhavn-amalienborg.webp": {
   "sha": "50263b7d5a10f088",
   "taytto": 0.353,
   "reuna": 0
+ },
+ "kobenhavn-christiansborg-kk.webp": {
+  "sha": "b6ccd7bd8075bca6",
+  "taytto": 0.214,
+  "reuna": 0.0
  },
  "kobenhavn-christiansborg.webp": {
   "sha": "f9cb4d9195c01655",
   "taytto": 0.214,
   "reuna": 0
  },
+ "kobenhavn-kastellet-kk.webp": {
+  "sha": "4e9fa7fa99c681ae",
+  "taytto": 0.194,
+  "reuna": 0.0
+ },
  "kobenhavn-kastellet.webp": {
   "sha": "22271819e1a52ed5",
   "taytto": 0.195,
   "reuna": 0
+ },
+ "kobenhavn-nyhavn-kk.webp": {
+  "sha": "4b50f54a11c95233",
+  "taytto": 0.539,
+  "reuna": 0.0
  },
  "kobenhavn-nyhavn.webp": {
   "sha": "3008c4960cbbeca5",
   "taytto": 0.541,
   "reuna": 0
  },
+ "kobenhavn-rosenborgin-linna-kk.webp": {
+  "sha": "a94afaeacd15a8d1",
+  "taytto": 0.178,
+  "reuna": 0.0
+ },
  "kobenhavn-rosenborgin-linna.webp": {
   "sha": "b94d09921e5dfe1d",
   "taytto": 0.178,
   "reuna": 0
+ },
+ "kobenhavn-rundetarn-kk.webp": {
+  "sha": "9426cc11ed09ec71",
+  "taytto": 0.288,
+  "reuna": 0.0
  },
  "kobenhavn-rundetarn.webp": {
   "sha": "4792297a7a6389d5",
   "taytto": 0.289,
   "reuna": 0
  },
+ "kobenhavn-tivoli-kk.webp": {
+  "sha": "a39863d6aa64031a",
+  "taytto": 0.296,
+  "reuna": 0.0
+ },
  "kobenhavn-tivoli.webp": {
   "sha": "74ff8adf8eff9a26",
   "taytto": 0.297,
   "reuna": 0
+ },
+ "kobenhavn-tivolin-portti-kk.webp": {
+  "sha": "b78e290c622651a0",
+  "taytto": 0.374,
+  "reuna": 0.0
+ },
+ "kobenhavn-vapahtajan-kirkko-kk.webp": {
+  "sha": "8d9a2a86c6b7791b",
+  "taytto": 0.119,
+  "reuna": 0.0
  },
  "kobenhavn-vapahtajan-kirkko.webp": {
   "sha": "199ccc55a1217d5b",
   "taytto": 0.119,
   "reuna": 0
  },
+ "kolkata-college-street-vari2-kk.webp": {
+  "sha": "8b6d761643207ff4",
+  "taytto": 0.48,
+  "reuna": 0.0
+ },
+ "kolkata-howrah-silta-vari2-kk.webp": {
+  "sha": "3dce45699490b99c",
+  "taytto": 0.13,
+  "reuna": 0.0
+ },
+ "kolkata-howrahin-rautatieasema-vari2-kk.webp": {
+  "sha": "f278c4e038138150",
+  "taytto": 0.365,
+  "reuna": 0.0
+ },
+ "kolkata-intian-museo-vari2-kk.webp": {
+  "sha": "cdcfd80913395b6b",
+  "taytto": 0.307,
+  "reuna": 0.0
+ },
+ "kolkata-marble-palace-vari2-kk.webp": {
+  "sha": "efe5c0fec478e1a4",
+  "taytto": 0.386,
+  "reuna": 0.0
+ },
+ "kolkata-nakhodan-moskeija-vari2-kk.webp": {
+  "sha": "fa1007fbaac87850",
+  "taytto": 0.343,
+  "reuna": 0.0
+ },
+ "kolkata-shaheed-minar-vari2-kk.webp": {
+  "sha": "308724c9a3207c2d",
+  "taytto": 0.131,
+  "reuna": 0.0
+ },
+ "kolkata-st-john-sin-kirkko-vari2-kk.webp": {
+  "sha": "0c2979b9104d77da",
+  "taytto": 0.221,
+  "reuna": 0.0
+ },
+ "kolkata-victoria-memorial-vari2-kk.webp": {
+  "sha": "3b2dd7f196705ef5",
+  "taytto": 0.385,
+  "reuna": 0.0
+ },
+ "kolkata-writers-building-vari2-kk.webp": {
+  "sha": "5c3f2c60b154e744",
+  "taytto": 0.137,
+  "reuna": 0.0
+ },
+ "kosice-hlavn-katu-kk.webp": {
+  "sha": "b80c529f2614a2e6",
+  "taytto": 0.297,
+  "reuna": 0.0
+ },
  "kosice-hlavn-katu.webp": {
   "sha": "1dcdf150e95aa356",
   "taytto": 0.298,
   "reuna": 0
+ },
+ "kosice-immaculata-kk.webp": {
+  "sha": "979a6a8ebae06212",
+  "taytto": 0.202,
+  "reuna": 0.0
  },
  "kosice-immaculata.webp": {
   "sha": "f9107fdc915ff987",
   "taytto": 0.203,
   "reuna": 0
  },
+ "kosice-jakabin-palatsi-kk.webp": {
+  "sha": "4a36964e1a16a30d",
+  "taytto": 0.39,
+  "reuna": 0.0
+ },
  "kosice-jakabin-palatsi.webp": {
   "sha": "fcc2ce6f7a9c5528",
   "taytto": 0.392,
   "reuna": 0
+ },
+ "kosice-miklu-in-vankila-kk.webp": {
+  "sha": "a515653f8d4f2650",
+  "taytto": 0.531,
+  "reuna": 0.0
  },
  "kosice-miklu-in-vankila.webp": {
   "sha": "9ae4621485ff8577",
   "taytto": 0.531,
   "reuna": 0
  },
+ "kosice-pyhan-elisabetin-tuomiokirkko-kk.webp": {
+  "sha": "bc82617c4032c61b",
+  "taytto": 0.512,
+  "reuna": 0.0
+ },
  "kosice-pyhan-elisabetin-tuomiokirkko.webp": {
   "sha": "0c95a852004175c9",
   "taytto": 0.513,
   "reuna": 0
+ },
+ "kosice-pyovelin-bastioni-kk.webp": {
+  "sha": "1f5a05da509ab3cb",
+  "taytto": 0.389,
+  "reuna": 0.006
  },
  "kosice-pyovelin-bastioni.webp": {
   "sha": "9333766544c66b0d",
   "taytto": 0.389,
   "reuna": 0.006
  },
+ "kosice-urbanin-torni-kk.webp": {
+  "sha": "29fabff3707fc9f3",
+  "taytto": 0.239,
+  "reuna": 0.0
+ },
  "kosice-urbanin-torni.webp": {
   "sha": "0ac59e98a9658c76",
   "taytto": 0.24,
   "reuna": 0
+ },
+ "kosice-valtionteatteri-kk.webp": {
+  "sha": "7a4c631bdf946231",
+  "taytto": 0.546,
+  "reuna": 0.0
  },
  "kosice-valtionteatteri.webp": {
   "sha": "5d93edbfe5088941",
   "taytto": 0.548,
   "reuna": 0
  },
+ "krakova-barbakaani-vari2-kk.webp": {
+  "sha": "9581d8ee00dbbd2f",
+  "taytto": 0.379,
+  "reuna": 0.0
+ },
+ "krakova-collegium-maius-vari2-kk.webp": {
+  "sha": "0c4efd96d50bbff3",
+  "taytto": 0.442,
+  "reuna": 0.0
+ },
+ "krakova-kazimierz-vari2-kk.webp": {
+  "sha": "3e7601364dde4b5a",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
+ "krakova-mariankirkko-vari2-kk.webp": {
+  "sha": "6a6aac4c3a96ac59",
+  "taytto": 0.349,
+  "reuna": 0.0
+ },
+ "krakova-wawel-kk.webp": {
+  "sha": "349a66dd75bac0bf",
+  "taytto": 0.569,
+  "reuna": 0.0
+ },
+ "krakova-wawelin-linna-vari2-kk.webp": {
+  "sha": "7354d556d6384494",
+  "taytto": 0.558,
+  "reuna": 0.0
+ },
+ "krakova-wawelin-lohikaarme-vari2-kk.webp": {
+  "sha": "28ae98491af08119",
+  "taytto": 0.474,
+  "reuna": 0.0
+ },
+ "kuwait-al-hamra-torni-vari2-kk.webp": {
+  "sha": "1da32b5ad72e0bb2",
+  "taytto": 0.217,
+  "reuna": 0.0
+ },
+ "kuwait-kuwait-tornit-vari2-kk.webp": {
+  "sha": "52d96d0c4b1627d5",
+  "taytto": 0.154,
+  "reuna": 0.0
+ },
+ "kuwait-kuwaitin-suurmoskeija-vari2-kk.webp": {
+  "sha": "c7de956dac66d0c1",
+  "taytto": 0.304,
+  "reuna": 0.0
+ },
+ "kuwait-mubarakiyan-tori-vari2-kk.webp": {
+  "sha": "6c449a12080b7ac1",
+  "taytto": 0.434,
+  "reuna": 0.0
+ },
+ "kuwait-sadu-house-vari2-kk.webp": {
+  "sha": "ff346935816fbe33",
+  "taytto": 0.418,
+  "reuna": 0.0
+ },
+ "kuwait-seifin-palatsi-vari2-kk.webp": {
+  "sha": "33c754dfbb5c4468",
+  "taytto": 0.34,
+  "reuna": 0.0
+ },
+ "lhasa-chagpori-vari2-kk.webp": {
+  "sha": "2ac8bb96c7b1454a",
+  "taytto": 0.435,
+  "reuna": 0.0
+ },
+ "lhasa-jokhang-temppeli-vari2-kk.webp": {
+  "sha": "8331d61a62e5f60d",
+  "taytto": 0.3,
+  "reuna": 0.0
+ },
+ "lhasa-lhasan-suuri-moskeija-vari2-kk.webp": {
+  "sha": "3ecbf754203d5742",
+  "taytto": 0.356,
+  "reuna": 0.0
+ },
+ "lhasa-norbulingka-vari2-kk.webp": {
+  "sha": "71b5ec1b98bb5b52",
+  "taytto": 0.262,
+  "reuna": 0.0
+ },
+ "lhasa-potala-palatsi-vari2-kk.webp": {
+  "sha": "9a25af11a16a8699",
+  "taytto": 0.375,
+  "reuna": 0.0
+ },
+ "lhasa-ramoche-temppeli-vari2-kk.webp": {
+  "sha": "466e7cf6df365c92",
+  "taytto": 0.387,
+  "reuna": 0.0
+ },
+ "lhasa-tiibetin-museo-vari2-kk.webp": {
+  "sha": "e2b0493cc6459a2a",
+  "taytto": 0.323,
+  "reuna": 0.0
+ },
+ "lissabon-kansallispanteoni-kk.webp": {
+  "sha": "60b6f0e8e664f2d9",
+  "taytto": 0.291,
+  "reuna": 0.0
+ },
  "lissabon-kansallispanteoni.webp": {
   "sha": "755e48d0d8596298",
   "taytto": 0.292,
   "reuna": 0
+ },
+ "lissabon-kauppatori-kk.webp": {
+  "sha": "fb937978a4144cca",
+  "taytto": 0.206,
+  "reuna": 0.0
  },
  "lissabon-kauppatori.webp": {
   "sha": "fd08482099868089",
   "taytto": 0.207,
   "reuna": 0
  },
+ "lissabon-largo-da-severa-kk.webp": {
+  "sha": "bec2b61423f6a6b6",
+  "taytto": 0.495,
+  "reuna": 0.0
+ },
+ "lissabon-rossio-kk.webp": {
+  "sha": "e2be77099631bb3e",
+  "taytto": 0.286,
+  "reuna": 0.0
+ },
  "lissabon-rossio.webp": {
   "sha": "b20bd8547464e66f",
   "taytto": 0.287,
   "reuna": 0
+ },
+ "lissabon-sao-jorgen-linna-kk.webp": {
+  "sha": "b84ea3ce07c80ff0",
+  "taytto": 0.279,
+  "reuna": 0.0
  },
  "lissabon-sao-jorgen-linna.webp": {
   "sha": "ee26c69c1f774870",
   "taytto": 0.28,
   "reuna": 0
  },
+ "lissabon-tuomiokirkko-kk.webp": {
+  "sha": "4da04f230830df72",
+  "taytto": 0.246,
+  "reuna": 0.0
+ },
  "lissabon-tuomiokirkko.webp": {
   "sha": "e77ddb720c23ce2a",
   "taytto": 0.247,
   "reuna": 0
+ },
+ "ljubljana-keskustori-kk.webp": {
+  "sha": "7ecb055670734256",
+  "taytto": 0.32,
+  "reuna": 0.0
  },
  "ljubljana-keskustori.webp": {
   "sha": "2e645dbbe3105bff",
   "taytto": 0.32,
   "reuna": 0
  },
+ "ljubljana-kri-anke-kk.webp": {
+  "sha": "5fea1840945ff68c",
+  "taytto": 0.37,
+  "reuna": 0.0
+ },
  "ljubljana-kri-anke.webp": {
   "sha": "b13632566fdf0256",
   "taytto": 0.371,
   "reuna": 0
+ },
+ "ljubljana-ljubljanan-linna-kk.webp": {
+  "sha": "feea8e3602e315dd",
+  "taytto": 0.43,
+  "reuna": 0.0
  },
  "ljubljana-ljubljanan-linna.webp": {
   "sha": "9d7b5e703eccc045",
   "taytto": 0.431,
   "reuna": 0
  },
+ "ljubljana-ljubljanan-tuomiokirkko-kk.webp": {
+  "sha": "9f5bf9aa8fcb14e8",
+  "taytto": 0.504,
+  "reuna": 0.0
+ },
  "ljubljana-ljubljanan-tuomiokirkko.webp": {
   "sha": "13817b5c0b8a2783",
   "taytto": 0.505,
   "reuna": 0
+ },
+ "ljubljana-lohikaarmesilta-kk.webp": {
+  "sha": "3bec100ff05ea74b",
+  "taytto": 0.334,
+  "reuna": 0.0
  },
  "ljubljana-lohikaarmesilta.webp": {
   "sha": "e0841fb2df86b9a2",
   "taytto": 0.335,
   "reuna": 0
  },
+ "ljubljana-pre-ernin-aukio-kk.webp": {
+  "sha": "f502f2671ce0a340",
+  "taytto": 0.335,
+  "reuna": 0.0
+ },
  "ljubljana-pre-ernin-aukio.webp": {
   "sha": "00848829574b24c7",
   "taytto": 0.335,
   "reuna": 0
  },
+ "ljubljana-tivoli-puisto-kk.webp": {
+  "sha": "279dff1e7c68e4ae",
+  "taytto": 0.485,
+  "reuna": 0.0
+ },
  "ljubljana-tivoli-puisto.webp": {
   "sha": "de15e18f7e11ff32",
   "taytto": 0.487,
   "reuna": 0
+ },
+ "ljubljana-tromostovje-kk.webp": {
+  "sha": "4bfc81b7aebe5cb3",
+  "taytto": 0.23,
+  "reuna": 0.0
  },
  "ljubljana-tromostovje.webp": {
   "sha": "9df48d615868ac06",
@@ -1309,45 +3454,120 @@
   "taytto": 0.332,
   "reuna": 0.0
  },
+ "luxemburg-adolphe-silta-kk.webp": {
+  "sha": "feecec40138ebefc",
+  "taytto": 0.322,
+  "reuna": 0.0
+ },
  "luxemburg-adolphe-silta.webp": {
   "sha": "7b726c8f650adbe2",
   "taytto": 0.324,
   "reuna": 0
+ },
+ "luxemburg-bockin-kasematit-kk.webp": {
+  "sha": "6102653955c4e409",
+  "taytto": 0.521,
+  "reuna": 0.0
  },
  "luxemburg-bockin-kasematit.webp": {
   "sha": "b1cd6bc09a13206b",
   "taytto": 0.521,
   "reuna": 0
  },
+ "luxemburg-chemin-de-la-corniche-kk.webp": {
+  "sha": "3f5def6a54fbba5d",
+  "taytto": 0.32,
+  "reuna": 0.0
+ },
  "luxemburg-chemin-de-la-corniche.webp": {
   "sha": "ecf2211e51936ea3",
   "taytto": 0.321,
   "reuna": 0
+ },
+ "luxemburg-guillaume-ii-aukio-kk.webp": {
+  "sha": "3ef38c585c92e27b",
+  "taytto": 0.564,
+  "reuna": 0.0
  },
  "luxemburg-guillaume-ii-aukio.webp": {
   "sha": "f7fd3bbdabd755e4",
   "taytto": 0.566,
   "reuna": 0
  },
+ "luxemburg-notre-damen-katedraali-kk.webp": {
+  "sha": "7844b955cc6d14aa",
+  "taytto": 0.41,
+  "reuna": 0.0
+ },
  "luxemburg-notre-damen-katedraali.webp": {
   "sha": "b960675a706aa4c3",
   "taytto": 0.412,
   "reuna": 0
+ },
+ "luxemburg-suurherttuallinen-palatsi-kk.webp": {
+  "sha": "b74c37e6653132c1",
+  "taytto": 0.538,
+  "reuna": 0.0
  },
  "luxemburg-suurherttuallinen-palatsi.webp": {
   "sha": "79470e4f47268f53",
   "taytto": 0.54,
   "reuna": 0
  },
+ "luxor-karnakin-suuri-pylvassali-vari2-kk.webp": {
+  "sha": "6cfb6f04bafecf88",
+  "taytto": 0.511,
+  "reuna": 0.0
+ },
+ "luxor-khonsun-temppeli-vari2-kk.webp": {
+  "sha": "9ce4759482ef7b7e",
+  "taytto": 0.378,
+  "reuna": 0.0
+ },
+ "luxor-luxorin-museo-vari2-kk.webp": {
+  "sha": "c115a2c7973906b5",
+  "taytto": 0.431,
+  "reuna": 0.0
+ },
+ "luxor-luxorin-temppeli-vari2-kk.webp": {
+  "sha": "61277bdbbb755427",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
+ "luxor-mutin-temppeli-vari2-kk.webp": {
+  "sha": "c6a78c73d94f0adc",
+  "taytto": 0.368,
+  "reuna": 0.0
+ },
+ "luxor-sfinksikuja-vari2-kk.webp": {
+  "sha": "a923f6b3d9611645",
+  "taytto": 0.378,
+  "reuna": 0.0
+ },
+ "madrid-alcalan-portti-kk.webp": {
+  "sha": "e1483742094e2c85",
+  "taytto": 0.508,
+  "reuna": 0.0
+ },
  "madrid-alcalan-portti.webp": {
   "sha": "54664ea2249d8d2a",
   "taytto": 0.51,
   "reuna": 0
  },
+ "madrid-casa-de-fieras-vari2-kk.webp": {
+  "sha": "67b47433b79ce296",
+  "taytto": 0.458,
+  "reuna": 0.0
+ },
  "madrid-chotis.webp": {
   "sha": "25352ea49051931b",
   "taytto": 0.363,
   "reuna": 0
+ },
+ "madrid-cibeleen-aukio-kk.webp": {
+  "sha": "2955743e85884739",
+  "taytto": 0.429,
+  "reuna": 0.0
  },
  "madrid-cibeleen-aukio.webp": {
   "sha": "2699efafb19ce370",
@@ -1359,6 +3579,11 @@
   "taytto": 0.328,
   "reuna": 0
  },
+ "madrid-gran-v-a-kk.webp": {
+  "sha": "ad8d33b290af713e",
+  "taytto": 0.338,
+  "reuna": 0.0
+ },
  "madrid-gran-v-a.webp": {
   "sha": "490001323be0ef07",
   "taytto": 0.339,
@@ -1368,6 +3593,11 @@
   "sha": "9847d9268a3ffadf",
   "taytto": 0.376,
   "reuna": 0
+ },
+ "madrid-kuninkaanlinna-kk.webp": {
+  "sha": "96df48c4305ab316",
+  "taytto": 0.529,
+  "reuna": 0.0
  },
  "madrid-kuninkaanlinna.webp": {
   "sha": "b0b18504f2d8cb6b",
@@ -1379,15 +3609,30 @@
   "taytto": 0.518,
   "reuna": 0
  },
+ "madrid-plaza-mayor-kk.webp": {
+  "sha": "66d156fd3dceccad",
+  "taytto": 0.366,
+  "reuna": 0.0
+ },
  "madrid-plaza-mayor.webp": {
   "sha": "ba2b0513b983dd0b",
   "taytto": 0.367,
   "reuna": 0
  },
+ "madrid-prado-museo-kk.webp": {
+  "sha": "9946c337ac54f36c",
+  "taytto": 0.329,
+  "reuna": 0.0
+ },
  "madrid-prado-museo.webp": {
   "sha": "4bcba337e79b7632",
   "taytto": 0.33,
   "reuna": 0
+ },
+ "madrid-puerta-del-sol-kk.webp": {
+  "sha": "6350ffd680ed5939",
+  "taytto": 0.588,
+  "reuna": 0.0
  },
  "madrid-puerta-del-sol.webp": {
   "sha": "ae533727c281ecf6",
@@ -1399,110 +3644,705 @@
   "taytto": 0.305,
   "reuna": 0
  },
+ "magadan-kaupungin-sauna-vari2-kk.webp": {
+  "sha": "a3700779b14427e0",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
+ "magadan-kinoteatteri-gornjak-vari2-kk.webp": {
+  "sha": "bda6e700a38d90c3",
+  "taytto": 0.452,
+  "reuna": 0.0
+ },
+ "magadan-leninin-valtakatu-18-vari2-kk.webp": {
+  "sha": "6430b5ed91d6a53a",
+  "taytto": 0.364,
+  "reuna": 0.0
+ },
+ "magadan-nagajevanlahti-vari2-kk.webp": {
+  "sha": "d60e7433018cc928",
+  "taytto": 0.474,
+  "reuna": 0.0
+ },
+ "magadan-pushkinin-kirjasto-vari2-kk.webp": {
+  "sha": "cf74a629cac2bddd",
+  "taytto": 0.355,
+  "reuna": 0.0
+ },
+ "magadan-severovostokzoloton-talo-vari2-kk.webp": {
+  "sha": "0aa08591bfd8a9ea",
+  "taytto": 0.396,
+  "reuna": 0.0
+ },
+ "magadan-urheilupalatsi-vari2-kk.webp": {
+  "sha": "a96d55b6817bd960",
+  "taytto": 0.4,
+  "reuna": 0.0
+ },
+ "mandalay-kuthodaw-pagodi-vari2-kk.webp": {
+  "sha": "5bd2de63879e0600",
+  "taytto": 0.347,
+  "reuna": 0.0
+ },
+ "mandalay-kyauktawgyi-pagodi-vari2-kk.webp": {
+  "sha": "bac398d1a58de659",
+  "taytto": 0.277,
+  "reuna": 0.0
+ },
+ "mandalay-mahamuni-temppeli-vari2-kk.webp": {
+  "sha": "512c5859266e8e65",
+  "taytto": 0.252,
+  "reuna": 0.0
+ },
+ "mandalay-mandalay-kukkula-vari2-kk.webp": {
+  "sha": "b8aa3534e6865999",
+  "taytto": 0.401,
+  "reuna": 0.0
+ },
+ "mandalay-mandalayn-palatsi-vari2-kk.webp": {
+  "sha": "07bebd831a1b2134",
+  "taytto": 0.248,
+  "reuna": 0.0
+ },
+ "mandalay-sandamuni-pagodi-vari2-kk.webp": {
+  "sha": "6afa5fa166a98bf8",
+  "taytto": 0.244,
+  "reuna": 0.0
+ },
+ "mandalay-setkyathiha-pagodi-vari2-kk.webp": {
+  "sha": "4415418441ce3d0d",
+  "taytto": 0.297,
+  "reuna": 0.0
+ },
+ "mandalay-shwenandaw-luostari-vari2-kk.webp": {
+  "sha": "ff65469385e8c410",
+  "taytto": 0.268,
+  "reuna": 0.0
+ },
+ "mandalay-zegyo-tori-vari2-kk.webp": {
+  "sha": "e0f1ed8e43d7fc58",
+  "taytto": 0.288,
+  "reuna": 0.0
+ },
+ "manila-baluarte-de-san-diego-vari2-kk.webp": {
+  "sha": "de20bdac1f0257c5",
+  "taytto": 0.305,
+  "reuna": 0.0
+ },
+ "manila-binondon-kirkko-vari2-kk.webp": {
+  "sha": "c7f40eac04e1eaf9",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "manila-escolta-katu-vari2-kk.webp": {
+  "sha": "8fe93f0809b2bb17",
+  "taytto": 0.407,
+  "reuna": 0.0
+ },
+ "manila-fort-santiago-vari2-kk.webp": {
+  "sha": "c1e4e21640285ff3",
+  "taytto": 0.393,
+  "reuna": 0.0
+ },
+ "manila-jones-silta-vari2-kk.webp": {
+  "sha": "988b1f5bae17167e",
+  "taytto": 0.125,
+  "reuna": 0.0
+ },
+ "manila-kansallinen-taidemuseo-vari2-kk.webp": {
+  "sha": "49d96577359190b0",
+  "taytto": 0.35,
+  "reuna": 0.0
+ },
+ "manila-manilan-katedraali-vari2-kk.webp": {
+  "sha": "5b80b5ac9a3065cc",
+  "taytto": 0.361,
+  "reuna": 0.0
+ },
+ "manila-quiapon-kirkko-vari2-kk.webp": {
+  "sha": "09f55b6f6c10153b",
+  "taytto": 0.423,
+  "reuna": 0.0
+ },
+ "manila-rizal-puisto-vari2-kk.webp": {
+  "sha": "3ca53c362cf0b6e4",
+  "taytto": 0.263,
+  "reuna": 0.0
+ },
+ "manila-san-agustinin-kirkko-vari2-kk.webp": {
+  "sha": "ccb29ef4143825b1",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
  "marrakech-koutoubia.webp": {
   "sha": "6a3997566a5cff12",
   "taytto": 0.217,
   "reuna": 0
+ },
+ "marseille-marseillen-katedraali-vari2-kk.webp": {
+  "sha": "1c26dd46733dcff8",
+  "taytto": 0.441,
+  "reuna": 0.0
+ },
+ "marseille-mucem-vari2-kk.webp": {
+  "sha": "e21d802fe057c1eb",
+  "taytto": 0.423,
+  "reuna": 0.0
+ },
+ "marseille-notre-dame-de-la-garde-vari2-kk.webp": {
+  "sha": "8102eddecaf594cb",
+  "taytto": 0.344,
+  "reuna": 0.0
+ },
+ "marseille-saint-charlesin-asema-vari2-kk.webp": {
+  "sha": "25125a6526d9ce06",
+  "taytto": 0.468,
+  "reuna": 0.0
+ },
+ "marseille-saint-victorin-kirkko-vari2-kk.webp": {
+  "sha": "b88145cefc03523b",
+  "taytto": 0.455,
+  "reuna": 0.0
+ },
+ "marseille-vanhasatama-vari2-kk.webp": {
+  "sha": "bed3a8cf33501e8f",
+  "taytto": 0.275,
+  "reuna": 0.0
+ },
+ "masqat-al-alamin-palatsi-vari2-kk.webp": {
+  "sha": "123e7d9f901e997d",
+  "taytto": 0.331,
+  "reuna": 0.0
+ },
+ "masqat-al-jalalin-linnake-vari2-kk.webp": {
+  "sha": "55b070f087ce2027",
+  "taytto": 0.396,
+  "reuna": 0.0
+ },
+ "masqat-al-miranin-linnake-vari2-kk.webp": {
+  "sha": "295fca15cc6763c3",
+  "taytto": 0.44,
+  "reuna": 0.0
+ },
+ "masqat-bait-al-zubair-vari2-kk.webp": {
+  "sha": "9c6c3a7294403f06",
+  "taytto": 0.482,
+  "reuna": 0.0
+ },
+ "masqat-masqatin-portti-vari2-kk.webp": {
+  "sha": "50f8c77fae35461d",
+  "taytto": 0.358,
+  "reuna": 0.0
+ },
+ "masqat-motishwar-mandir-vari2-kk.webp": {
+  "sha": "b59620c81d5e5628",
+  "taytto": 0.369,
+  "reuna": 0.0
+ },
+ "medina-al-baqin-hautausmaa-vari2-kk.webp": {
+  "sha": "a4ed398e605b531b",
+  "taytto": 0.37,
+  "reuna": 0.0
+ },
+ "medina-al-ghamama-moskeija-vari2-kk.webp": {
+  "sha": "879e399a77d9876d",
+  "taytto": 0.288,
+  "reuna": 0.0
+ },
+ "medina-hidzaz-radan-asema-vari2-kk.webp": {
+  "sha": "a6fb5382137767b3",
+  "taytto": 0.314,
+  "reuna": 0.0
+ },
+ "medina-profeetan-moskeija-vari2-kk.webp": {
+  "sha": "e97c8dfcd159ebec",
+  "taytto": 0.379,
+  "reuna": 0.0
+ },
+ "medina-qiblatayn-moskeija-vari2-kk.webp": {
+  "sha": "f889b8137b286e45",
+  "taytto": 0.391,
+  "reuna": 0.0
+ },
+ "medina-quba-moskeija-vari2-kk.webp": {
+  "sha": "43bb61168effc36a",
+  "taytto": 0.363,
+  "reuna": 0.0
+ },
+ "medina-seitseman-moskeijaa-vari2-kk.webp": {
+  "sha": "92dced61a3e4c416",
+  "taytto": 0.469,
+  "reuna": 0.0
+ },
+ "mekka-jabal-al-nour-vari2-kk.webp": {
+  "sha": "cfff39ffdff1147e",
+  "taytto": 0.352,
+  "reuna": 0.0
+ },
+ "mekka-jannat-al-mu-alla-vari2-kk.webp": {
+  "sha": "c07d4cb05554497e",
+  "taytto": 0.415,
+  "reuna": 0.0
+ },
+ "mekka-jinnien-moskeija-vari2-kk.webp": {
+  "sha": "520868a2ec47fd2b",
+  "taytto": 0.276,
+  "reuna": 0.0
+ },
+ "mekka-kellotorni-vari2-kk.webp": {
+  "sha": "eae5fe886b2fe59f",
+  "taytto": 0.235,
+  "reuna": 0.0
+ },
+ "mekka-mekan-kirjasto-vari2-kk.webp": {
+  "sha": "ab47fea503a7741e",
+  "taytto": 0.381,
+  "reuna": 0.0
+ },
+ "mekka-suuri-moskeija-vari2-kk.webp": {
+  "sha": "07e4a3ae80c419f4",
+  "taytto": 0.347,
+  "reuna": 0.0
+ },
+ "miami-bayfront-park-kk.webp": {
+  "sha": "b76a5c9f2a321f08",
+  "taytto": 0.151,
+  "reuna": 0.0
+ },
+ "miami-esittavan-taiteen-keskus-kk.webp": {
+  "sha": "b8dbf065f8ed96ce",
+  "taytto": 0.196,
+  "reuna": 0.0
+ },
+ "miami-lyric-teatteri-kk.webp": {
+  "sha": "422c302203595bc7",
+  "taytto": 0.274,
+  "reuna": 0.0
+ },
+ "miami-olympia-teatteri-kk.webp": {
+  "sha": "6cc6b93d03140c99",
+  "taytto": 0.481,
+  "reuna": 0.0
+ },
+ "miami-perezin-taidemuseo-kk.webp": {
+  "sha": "7f43072005c8fed9",
+  "taytto": 0.176,
+  "reuna": 0.0
+ },
+ "miami-vapaudentorni-kk.webp": {
+  "sha": "83f5ae316c7a479d",
+  "taytto": 0.115,
+  "reuna": 0.0
+ },
+ "moskova-bolsoi-teatteri-kk.webp": {
+  "sha": "cb74953512f717ea",
+  "taytto": 0.425,
+  "reuna": 0.0
  },
  "moskova-bolsoi-teatteri.webp": {
   "sha": "ae323eaea3c6474f",
   "taytto": 0.426,
   "reuna": 0
  },
+ "moskova-moskovan-kreml-kk.webp": {
+  "sha": "66a8ad18042e6fc3",
+  "taytto": 0.336,
+  "reuna": 0.0
+ },
  "moskova-moskovan-kreml.webp": {
   "sha": "244de27955e0341b",
   "taytto": 0.337,
   "reuna": 0
+ },
+ "moskova-perlovin-teetalo-vari2-kk.webp": {
+  "sha": "df5b938082fd1852",
+  "taytto": 0.511,
+  "reuna": 0.0
+ },
+ "moskova-punainen-tori-kk.webp": {
+  "sha": "32bcdf788471bfee",
+  "taytto": 0.318,
+  "reuna": 0.0
  },
  "moskova-punainen-tori.webp": {
   "sha": "30b1a62c832c7994",
   "taytto": 0.32,
   "reuna": 0
  },
+ "moskova-pyhan-vasilin-katedraali-kk.webp": {
+  "sha": "cbe3fd33a6c45157",
+  "taytto": 0.279,
+  "reuna": 0.0
+ },
  "moskova-pyhan-vasilin-katedraali.webp": {
   "sha": "d60199a8672ae0cc",
   "taytto": 0.281,
   "reuna": 0
+ },
+ "moskova-tretjakovin-galleria-kk.webp": {
+  "sha": "0b5df0c0afc98819",
+  "taytto": 0.383,
+  "reuna": 0.0
  },
  "moskova-tretjakovin-galleria.webp": {
   "sha": "fe410cc7f7c7481e",
   "taytto": 0.384,
   "reuna": 0
  },
+ "moskova-vapahtajan-katedraali-kk.webp": {
+  "sha": "da0f568d1a58191a",
+  "taytto": 0.374,
+  "reuna": 0.0
+ },
  "moskova-vapahtajan-katedraali.webp": {
   "sha": "e60e0e4c1d26ae3a",
   "taytto": 0.376,
   "reuna": 0
+ },
+ "mosul-al-masfin-moskeija-vari2-kk.webp": {
+  "sha": "c511c2101d4d27c7",
+  "taytto": 0.327,
+  "reuna": 0.0
+ },
+ "mosul-al-nabi-jirjisin-moskeija-vari2-kk.webp": {
+  "sha": "9aa5970f9bae499a",
+  "taytto": 0.352,
+  "reuna": 0.0
+ },
+ "mosul-al-nurin-moskeija-vari2-kk.webp": {
+  "sha": "1599d338b9b4419c",
+  "taytto": 0.338,
+  "reuna": 0.0
+ },
+ "mosul-bash-tapian-linna-vari2-kk.webp": {
+  "sha": "514783e827bb74f1",
+  "taytto": 0.409,
+  "reuna": 0.0
+ },
+ "mosul-kuyunjikin-kumpu-vari2-kk.webp": {
+  "sha": "ce3b155ead58d3be",
+  "taytto": 0.389,
+  "reuna": 0.0
+ },
+ "mosul-nabi-yunusin-kumpu-vari2-kk.webp": {
+  "sha": "98d101e4743604ea",
+  "taytto": 0.438,
+  "reuna": 0.0
+ },
+ "mosul-qara-saray-vari2-kk.webp": {
+  "sha": "ed2dc38e101c3a47",
+  "taytto": 0.445,
+  "reuna": 0.0
+ },
+ "mumbai-bombayn-korkein-oikeus-vari2-kk.webp": {
+  "sha": "6cc0354e4cb74929",
+  "taytto": 0.336,
+  "reuna": 0.0
+ },
+ "mumbai-chhatrapati-shivaji-maharaj-terminus-vari2-kk.webp": {
+  "sha": "cbffe394621b2473",
+  "taytto": 0.394,
+  "reuna": 0.0
+ },
+ "mumbai-crawford-market-vari2-kk.webp": {
+  "sha": "cb1c0b486b04a9a3",
+  "taytto": 0.277,
+  "reuna": 0.0
+ },
+ "mumbai-david-sassoonin-kirjasto-vari2-kk.webp": {
+  "sha": "250e673bd2b6789f",
+  "taytto": 0.381,
+  "reuna": 0.0
+ },
+ "mumbai-gateway-of-india-vari2-kk.webp": {
+  "sha": "0a57ac4f1bdf1113",
+  "taytto": 0.341,
+  "reuna": 0.0
+ },
+ "mumbai-marine-drive-vari2-kk.webp": {
+  "sha": "4023d2fddbeaa68b",
+  "taytto": 0.471,
+  "reuna": 0.0
+ },
+ "mumbai-prince-of-walesin-museo-vari2-kk.webp": {
+  "sha": "b17540a762440a83",
+  "taytto": 0.268,
+  "reuna": 0.0
+ },
+ "mumbai-rajabain-kellotorni-vari2-kk.webp": {
+  "sha": "6176618ea392954e",
+  "taytto": 0.138,
+  "reuna": 0.0
+ },
+ "mumbai-st-thomasin-katedraali-vari2-kk.webp": {
+  "sha": "0405d0a0ba55f1e3",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
+ "mumbai-town-hall-vari2-kk.webp": {
+  "sha": "dc9d24a626daf400",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
+ "nairobi-arboretum-kk.webp": {
+  "sha": "410066b676db1cfe",
+  "taytto": 0.412,
+  "reuna": 0.0
+ },
+ "nairobi-kenian-kansallisarkisto-kk.webp": {
+  "sha": "8a11835b97728dae",
+  "taytto": 0.269,
+  "reuna": 0.0
+ },
+ "nairobi-rautatiemuseo-kk.webp": {
+  "sha": "1ed9a35dc32b3319",
+  "taytto": 0.282,
+  "reuna": 0.0
+ },
+ "newyork-empire-state-building-kk.webp": {
+  "sha": "acbf1633b902e35d",
+  "taytto": 0.105,
+  "reuna": 0.0
  },
  "newyork-empire-state-building.webp": {
   "sha": "58776a6b7818257d",
   "taytto": 0.106,
   "reuna": 0
  },
+ "newyork-flatiron-building-kk.webp": {
+  "sha": "015d845ea44007da",
+  "taytto": 0.162,
+  "reuna": 0.0
+ },
  "newyork-flatiron-building.webp": {
   "sha": "d0094f1dbab42faa",
   "taytto": 0.163,
   "reuna": 0
+ },
+ "newyork-kaupungintalo-kk.webp": {
+  "sha": "9133acc441543f8c",
+  "taytto": 0.21,
+  "reuna": 0.0
  },
  "newyork-kaupungintalo.webp": {
   "sha": "34b208568312f2d0",
   "taytto": 0.211,
   "reuna": 0
  },
+ "newyork-luonnonhistoriallinen-museo-kk.webp": {
+  "sha": "84a010fe71156706",
+  "taytto": 0.192,
+  "reuna": 0.0
+ },
  "newyork-luonnonhistoriallinen-museo.webp": {
   "sha": "89d9e4713f48872a",
   "taytto": 0.193,
   "reuna": 0
+ },
+ "newyork-metropolitan-museo-kk.webp": {
+  "sha": "d02f16c11a58e63a",
+  "taytto": 0.443,
+  "reuna": 0.0
  },
  "newyork-metropolitan-museo.webp": {
   "sha": "2bfa0215bbc5113b",
   "taytto": 0.442,
   "reuna": 0
  },
+ "newyork-paakirjasto-kk.webp": {
+  "sha": "69b93dfcd46dd3e2",
+  "taytto": 0.194,
+  "reuna": 0.0
+ },
  "newyork-paakirjasto.webp": {
   "sha": "815682ffa2986162",
   "taytto": 0.194,
   "reuna": 0
+ },
+ "newyork-pyhan-patrickin-katedraali-kk.webp": {
+  "sha": "0061c50a192907a3",
+  "taytto": 0.159,
+  "reuna": 0.0
  },
  "newyork-pyhan-patrickin-katedraali.webp": {
   "sha": "9cac19b21fea90e6",
   "taytto": 0.16,
   "reuna": 0
  },
+ "newyork-times-square-vari2-kk.webp": {
+  "sha": "31a501a6a822bde2",
+  "taytto": 0.285,
+  "reuna": 0.0
+ },
+ "newyork-trinity-church-kk.webp": {
+  "sha": "898bd427117f7fa0",
+  "taytto": 0.122,
+  "reuna": 0.0
+ },
  "newyork-trinity-church.webp": {
   "sha": "1b3265c813a76f2d",
   "taytto": 0.123,
   "reuna": 0
+ },
+ "newyork-washington-squaren-riemukaari-kk.webp": {
+  "sha": "56c52926af932e7a",
+  "taytto": 0.252,
+  "reuna": 0.0
  },
  "newyork-washington-squaren-riemukaari.webp": {
   "sha": "f7001937965dcda8",
   "taytto": 0.253,
   "reuna": 0
  },
+ "nikosia-buyuk-han-vari2-kk.webp": {
+  "sha": "1171101831f61247",
+  "taytto": 0.421,
+  "reuna": 0.0
+ },
+ "nikosia-faneromenin-kirkko-vari2-kk.webp": {
+  "sha": "ef353a2131ae8c2e",
+  "taytto": 0.449,
+  "reuna": 0.0
+ },
+ "nikosia-kyproksen-museo-vari2-kk.webp": {
+  "sha": "d34d993d99333f08",
+  "taytto": 0.446,
+  "reuna": 0.0
+ },
+ "nikosia-leventis-museo-vari2-kk.webp": {
+  "sha": "adf3ca9484b36f63",
+  "taytto": 0.502,
+  "reuna": 0.0
+ },
+ "nikosia-omeryen-hamam-vari2-kk.webp": {
+  "sha": "276fd36483d33e3d",
+  "taytto": 0.35,
+  "reuna": 0.0
+ },
+ "nikosia-selimiyen-moskeija-vari2-kk.webp": {
+  "sha": "3d0eece5a7d65257",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
+ "novosibirsk-aleksanteri-nevskin-katedraali-vari2-kk.webp": {
+  "sha": "66427d165b1aff02",
+  "taytto": 0.464,
+  "reuna": 0.0
+ },
+ "novosibirsk-kaupungin-kauppatalo-vari2-kk.webp": {
+  "sha": "12eb700f8a775739",
+  "taytto": 0.428,
+  "reuna": 0.0
+ },
+ "novosibirsk-novosibirsk-glavnyi-vari2-kk.webp": {
+  "sha": "c51536e82155bfb4",
+  "taytto": 0.409,
+  "reuna": 0.0
+ },
+ "novosibirsk-satohuoneiston-talo-vari2-kk.webp": {
+  "sha": "4ff7077d9c9f86e9",
+  "taytto": 0.426,
+  "reuna": 0.0
+ },
+ "novosibirsk-taidemuseo-vari2-kk.webp": {
+  "sha": "327725014e74c17a",
+  "taytto": 0.417,
+  "reuna": 0.0
+ },
+ "odessa-kaupunginpuisto-vari2-kk.webp": {
+  "sha": "ac5c4f1dbff54a1b",
+  "taytto": 0.465,
+  "reuna": 0.0
+ },
+ "odessa-odessan-oopperatalo-vari2-kk.webp": {
+  "sha": "9ab0df60bf06fb03",
+  "taytto": 0.455,
+  "reuna": 0.0
+ },
+ "odessa-odessan-satama-vari2-kk.webp": {
+  "sha": "900df8c9df9ebf6f",
+  "taytto": 0.277,
+  "reuna": 0.0
+ },
+ "odessa-potjomkin-portaat-vari2-kk.webp": {
+  "sha": "c0f60398d79742a2",
+  "taytto": 0.421,
+  "reuna": 0.0
+ },
+ "odessa-potjomkinin-portaat-vari2-kk.webp": {
+  "sha": "27eefebed8ff8615",
+  "taytto": 0.563,
+  "reuna": 0.0
+ },
+ "odessa-privozin-tori-vari2-kk.webp": {
+  "sha": "0275d52f0f2711cb",
+  "taytto": 0.325,
+  "reuna": 0.0
+ },
+ "odessa-vorontsovin-majakka-vari2-kk.webp": {
+  "sha": "deacec82bb02bf8a",
+  "taytto": 0.201,
+  "reuna": 0.0
+ },
+ "oslo-akershus-kk.webp": {
+  "sha": "b2dabf40e4c8a900",
+  "taytto": 0.595,
+  "reuna": 0.0
+ },
+ "oslo-akershusin-linnoitus-kk.webp": {
+  "sha": "22bc43a1390c3bf1",
+  "taytto": 0.18,
+  "reuna": 0.0
+ },
  "oslo-akershusin-linnoitus.webp": {
   "sha": "b9154ea6a53991f6",
   "taytto": 0.181,
   "reuna": 0
+ },
+ "oslo-karl-johans-gate-kk.webp": {
+  "sha": "847202411be0293a",
+  "taytto": 0.506,
+  "reuna": 0.0
  },
  "oslo-karl-johans-gate.webp": {
   "sha": "f4eb4bfa8a30c50c",
   "taytto": 0.507,
   "reuna": 0
  },
+ "oslo-kaupungintalo-kk.webp": {
+  "sha": "05cda6c6ac2665fb",
+  "taytto": 0.267,
+  "reuna": 0.0
+ },
  "oslo-kaupungintalo.webp": {
   "sha": "8400dc212eb9ed49",
   "taytto": 0.268,
   "reuna": 0
+ },
+ "oslo-kuninkaanlinna-kk.webp": {
+  "sha": "3b659b23e793feda",
+  "taytto": 0.378,
+  "reuna": 0.0
  },
  "oslo-kuninkaanlinna.webp": {
   "sha": "99caf2430b4b1c49",
   "taytto": 0.379,
   "reuna": 0
  },
+ "oslo-oopperatalo-kk.webp": {
+  "sha": "dcf355c5e86e1aad",
+  "taytto": 0.158,
+  "reuna": 0.0
+ },
  "oslo-oopperatalo.webp": {
   "sha": "6cf7689176d41b1c",
   "taytto": 0.16,
   "reuna": 0
+ },
+ "oslo-oslon-tuomiokirkko-kk.webp": {
+  "sha": "036f4fe0919d25eb",
+  "taytto": 0.208,
+  "reuna": 0.0
  },
  "oslo-oslon-tuomiokirkko.webp": {
   "sha": "bfaa12d9c3963fc6",
@@ -1744,25 +4584,185 @@
   "taytto": 0.878,
   "reuna": 0
  },
+ "peking-jingshanin-puisto-vari2-kk.webp": {
+  "sha": "788cffc0dc853f87",
+  "taytto": 0.378,
+  "reuna": 0.0
+ },
+ "peking-kesapalatsi-vari2-kk.webp": {
+  "sha": "82f7171d51171fd0",
+  "taytto": 0.397,
+  "reuna": 0.0
+ },
+ "peking-kielletty-kaupunki-vari2-kk.webp": {
+  "sha": "0f16ab90d261d1ee",
+  "taytto": 0.415,
+  "reuna": 0.0
+ },
+ "peking-nanluoguxiang-vari2-kk.webp": {
+  "sha": "694412d36f67c4c7",
+  "taytto": 0.383,
+  "reuna": 0.0
+ },
+ "peking-rumpu-ja-kellotorni-vari2-kk.webp": {
+  "sha": "6b8765ea6e5943b8",
+  "taytto": 0.286,
+  "reuna": 0.0
+ },
+ "peking-taivaan-temppeli-vari2-kk.webp": {
+  "sha": "517089066c04ad69",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
+ "peking-tiananmen-vari2-kk.webp": {
+  "sha": "a43fe1298d0ca605",
+  "taytto": 0.383,
+  "reuna": 0.0
+ },
+ "peking-vanha-kesapalatsi-vari2-kk.webp": {
+  "sha": "cbcd9e2fbe4ed1e7",
+  "taytto": 0.526,
+  "reuna": 0.0
+ },
+ "peking-yonghe-temppeli-vari2-kk.webp": {
+  "sha": "7148a88deb54f3ae",
+  "taytto": 0.366,
+  "reuna": 0.0
+ },
+ "peking-zhengyangmen-vari2-kk.webp": {
+  "sha": "a477004a4b47a46f",
+  "taytto": 0.28,
+  "reuna": 0.0
+ },
+ "persepolis-aarrekammio-vari2-kk.webp": {
+  "sha": "a5db72bb5c1e9423",
+  "taytto": 0.327,
+  "reuna": 0.0
+ },
+ "persepolis-apadana-vari2-kk.webp": {
+  "sha": "00c81f989d7a2622",
+  "taytto": 0.371,
+  "reuna": 0.0
+ },
+ "persepolis-artakserkses-iii-n-hauta-vari2-kk.webp": {
+  "sha": "65fba1360433419d",
+  "taytto": 0.537,
+  "reuna": 0.0
+ },
+ "persepolis-hadishin-palatsi-vari2-kk.webp": {
+  "sha": "23a608af9c01796d",
+  "taytto": 0.425,
+  "reuna": 0.0
+ },
+ "persepolis-kaikkien-kansojen-portti-vari2-kk.webp": {
+  "sha": "f67c7ea7399d95de",
+  "taytto": 0.478,
+  "reuna": 0.0
+ },
+ "persepolis-kolmen-oven-sali-vari2-kk.webp": {
+  "sha": "009fb12a145fcefa",
+  "taytto": 0.332,
+  "reuna": 0.0
+ },
+ "persepolis-sadan-pylvaan-sali-vari2-kk.webp": {
+  "sha": "3e9beea8a172ea39",
+  "taytto": 0.402,
+  "reuna": 0.0
+ },
+ "persepolis-tachara-vari2-kk.webp": {
+  "sha": "572c1efc596b076e",
+  "taytto": 0.383,
+  "reuna": 0.0
+ },
+ "petra-ad-deir-vari2-kk.webp": {
+  "sha": "ba76df2d4113b69a",
+  "taytto": 0.526,
+  "reuna": 0.0
+ },
+ "petra-al-khazneh-vari2-kk.webp": {
+  "sha": "6a18d31cf8e0ba92",
+  "taytto": 0.567,
+  "reuna": 0.0
+ },
+ "petra-bysanttilainen-kirkko-vari2-kk.webp": {
+  "sha": "c616cdc64942f951",
+  "taytto": 0.385,
+  "reuna": 0.0
+ },
+ "petra-kuninkaanhaudat-vari2-kk.webp": {
+  "sha": "caeb071a3c4da6ff",
+  "taytto": 0.439,
+  "reuna": 0.0
+ },
+ "petra-qasr-al-bint-vari2-kk.webp": {
+  "sha": "252c9850fd893703",
+  "taytto": 0.413,
+  "reuna": 0.0
+ },
+ "petra-siq-vari2-kk.webp": {
+  "sha": "2a8d00d0f2621518",
+  "taytto": 0.547,
+  "reuna": 0.0
+ },
+ "petra-suuri-temppeli-vari2-kk.webp": {
+  "sha": "2af1ec107912adce",
+  "taytto": 0.34,
+  "reuna": 0.0
+ },
+ "petra-teatteri-vari2-kk.webp": {
+  "sha": "d4f905e95fa38be2",
+  "taytto": 0.518,
+  "reuna": 0.0
+ },
+ "petra-uhripaikka-vari2-kk.webp": {
+  "sha": "08b812a9eae52f68",
+  "taytto": 0.436,
+  "reuna": 0.0
+ },
+ "pietari-faberge-museo-vari2-kk.webp": {
+  "sha": "a9f459698fde9ba6",
+  "taytto": 0.3,
+  "reuna": 0.0
+ },
  "pietari-janissaari-1703.webp": {
   "sha": "dea648596df897a9",
   "taytto": 0.725,
   "reuna": 0.026
+ },
+ "pietari-kazanin-katedraali-kk.webp": {
+  "sha": "fbe772ed7a8337d8",
+  "taytto": 0.189,
+  "reuna": 0.0
  },
  "pietari-kazanin-katedraali.webp": {
   "sha": "b6c248f5446ec990",
   "taytto": 0.19,
   "reuna": 0
  },
+ "pietari-mariinski-teatteri-kk.webp": {
+  "sha": "b52592570204461c",
+  "taytto": 0.341,
+  "reuna": 0.0
+ },
  "pietari-mariinski-teatteri.webp": {
   "sha": "346332be65efdf16",
   "taytto": 0.342,
   "reuna": 0
  },
+ "pietari-pietari-paavalin-linnoitus-kk.webp": {
+  "sha": "d9e649bf7b980554",
+  "taytto": 0.207,
+  "reuna": 0.0
+ },
  "pietari-pietari-paavalin-linnoitus.webp": {
   "sha": "997c5bdde55f9af5",
   "taytto": 0.208,
   "reuna": 0
+ },
+ "pietari-talvipalatsi-kk.webp": {
+  "sha": "207897fc297d3333",
+  "taytto": 0.279,
+  "reuna": 0.0
  },
  "pietari-talvipalatsi.webp": {
   "sha": "7a8ce647a836eed6",
@@ -1774,65 +4774,240 @@
   "taytto": 0.311,
   "reuna": 0
  },
+ "pietari-verikirkko-kk.webp": {
+  "sha": "aef9b77588948a99",
+  "taytto": 0.277,
+  "reuna": 0.0
+ },
  "pietari-verikirkko.webp": {
   "sha": "39dbd4d02904e995",
   "taytto": 0.279,
   "reuna": 0
+ },
+ "portoalegre-joaquim-felizardon-museo-kk.webp": {
+  "sha": "337984d5b53d426a",
+  "taytto": 0.338,
+  "reuna": 0.0
+ },
+ "portvila-independence-park-kk.webp": {
+  "sha": "56f155b5dea5d802",
+  "taytto": 0.159,
+  "reuna": 0.0
+ },
+ "portvila-kormanin-stadion-kk.webp": {
+  "sha": "8ebf475f37ad1449",
+  "taytto": 0.152,
+  "reuna": 0.0
+ },
+ "portvila-pyhan-sydamen-katedraali-kk.webp": {
+  "sha": "c5849cb30a8c975a",
+  "taytto": 0.183,
+  "reuna": 0.0
+ },
+ "portvila-vanuatun-kulttuurikeskus-kk.webp": {
+  "sha": "1ae8b78eb91277af",
+  "taytto": 0.297,
+  "reuna": 0.0
+ },
+ "portvila-vanuatun-parlamenttitalo-kk.webp": {
+  "sha": "e2405fcfa109f653",
+  "taytto": 0.101,
+  "reuna": 0.0
+ },
+ "praha-kaarlensilta-kk.webp": {
+  "sha": "2c4f48b1b5fea86f",
+  "taytto": 0.073,
+  "reuna": 0.0
  },
  "praha-kaarlensilta.webp": {
   "sha": "9e2d4f9cf4cc661b",
   "taytto": 0.074,
   "reuna": 0
  },
+ "praha-kansallismuseo-kk.webp": {
+  "sha": "7a2d6073f780c050",
+  "taytto": 0.196,
+  "reuna": 0.0
+ },
  "praha-kansallismuseo.webp": {
   "sha": "3663bb061c978025",
   "taytto": 0.197,
   "reuna": 0
+ },
+ "praha-klementinum-kk.webp": {
+  "sha": "42cade4f9cc641aa",
+  "taytto": 0.453,
+  "reuna": 0.0
+ },
+ "praha-petrinin-nakotorni-kk.webp": {
+  "sha": "1225756c84fd51c2",
+  "taytto": 0.097,
+  "reuna": 0.0
  },
  "praha-petrinin-nakotorni.webp": {
   "sha": "9588ac09ba9b7ace",
   "taytto": 0.098,
   "reuna": 0
  },
+ "praha-prahan-linna-kk.webp": {
+  "sha": "38885998b252faf2",
+  "taytto": 0.152,
+  "reuna": 0.0
+ },
  "praha-prahan-linna.webp": {
   "sha": "b4dcc27a481b912e",
   "taytto": 0.153,
   "reuna": 0
+ },
+ "praha-vanhauusi-synagoga-kk.webp": {
+  "sha": "2f4f34e526ac1ded",
+  "taytto": 0.265,
+  "reuna": 0.0
  },
  "praha-vanhauusi-synagoga.webp": {
   "sha": "7c7843c7397e2997",
   "taytto": 0.266,
   "reuna": 0
  },
+ "riad-imam-turkin-suurmoskeija-vari2-kk.webp": {
+  "sha": "98115f91c8e834f3",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
+ "riad-masmakin-linnoitus-vari2-kk.webp": {
+  "sha": "4f13153ebdb746af",
+  "taytto": 0.295,
+  "reuna": 0.0
+ },
+ "riad-murabban-palatsi-vari2-kk.webp": {
+  "sha": "3a932ca77a9e88f4",
+  "taytto": 0.383,
+  "reuna": 0.0
+ },
+ "riad-punainen-palatsi-vari2-kk.webp": {
+  "sha": "748a3157588e6313",
+  "taytto": 0.429,
+  "reuna": 0.0
+ },
+ "riad-riadin-vesitorni-vari2-kk.webp": {
+  "sha": "d8059f67c3addb38",
+  "taytto": 0.254,
+  "reuna": 0.0
+ },
+ "riad-saudi-arabian-kansallismuseo-vari2-kk.webp": {
+  "sha": "6401e9a2a7c1c598",
+  "taytto": 0.268,
+  "reuna": 0.0
+ },
+ "riika-keskustori-kk.webp": {
+  "sha": "a644e530008c3d0f",
+  "taytto": 0.228,
+  "reuna": 0.0
+ },
  "riika-keskustori.webp": {
   "sha": "953766fa4a1b0d1f",
   "taytto": 0.229,
   "reuna": 0
+ },
+ "riika-kolme-veljesta-kk.webp": {
+  "sha": "b9e5f06d728b9a68",
+  "taytto": 0.349,
+  "reuna": 0.0
  },
  "riika-kolme-veljesta.webp": {
   "sha": "f1520d0d420cf148",
   "taytto": 0.35,
   "reuna": 0
  },
+ "riika-mustapaiden-talo-kk.webp": {
+  "sha": "30c49bb2bfc91bbf",
+  "taytto": 0.242,
+  "reuna": 0.0
+ },
  "riika-mustapaiden-talo.webp": {
   "sha": "95f905ad4a3190c7",
   "taytto": 0.243,
   "reuna": 0
+ },
+ "riika-pyhan-pietarin-kirkko-kk.webp": {
+  "sha": "20b8353537b45f17",
+  "taytto": 0.131,
+  "reuna": 0.0
  },
  "riika-pyhan-pietarin-kirkko.webp": {
   "sha": "f127a3c0adc14dec",
   "taytto": 0.131,
   "reuna": 0
  },
+ "riika-riian-tuomiokirkko-kk.webp": {
+  "sha": "e6328e988689061c",
+  "taytto": 0.231,
+  "reuna": 0.0
+ },
  "riika-riian-tuomiokirkko.webp": {
   "sha": "ebd965eaa6978076",
   "taytto": 0.232,
   "reuna": 0
  },
+ "riika-vapaudenpatsas-kk.webp": {
+  "sha": "c6ff4c958a770652",
+  "taytto": 0.091,
+  "reuna": 0.0
+ },
  "riika-vapaudenpatsas.webp": {
   "sha": "606054650f504c03",
   "taytto": 0.091,
   "reuna": 0
+ },
+ "rio-central-do-brasilin-asema-vari2-kk.webp": {
+  "sha": "fabe04f595b6a2d9",
+  "taytto": 0.256,
+  "reuna": 0.0
+ },
+ "rio-kansallinen-historiallinen-museo-vari2-kk.webp": {
+  "sha": "bbfdbd5b5890daa8",
+  "taytto": 0.322,
+  "reuna": 0.0
+ },
+ "rio-lapan-akvedukti-vari2-kk.webp": {
+  "sha": "6ef894f3200532a8",
+  "taytto": 0.159,
+  "reuna": 0.0
+ },
+ "rio-maracanan-stadion-vari2-kk.webp": {
+  "sha": "6d65096f0022a52b",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
+ "rio-passeio-publico-vari2-kk.webp": {
+  "sha": "81cf2cbccf947eb2",
+  "taytto": 0.317,
+  "reuna": 0.0
+ },
+ "rio-quinta-da-boa-vista-vari2-kk.webp": {
+  "sha": "3e8154781b48aa83",
+  "taytto": 0.352,
+  "reuna": 0.0
+ },
+ "rio-real-gabinete-kirjasto-vari2-kk.webp": {
+  "sha": "e3a93000d84bd78e",
+  "taytto": 0.347,
+  "reuna": 0.0
+ },
+ "rio-sao-benton-luostari-vari2-kk.webp": {
+  "sha": "ea749480723756f2",
+  "taytto": 0.32,
+  "reuna": 0.0
+ },
+ "rio-theatro-municipal-vari2-kk.webp": {
+  "sha": "3973cef12d00fba1",
+  "taytto": 0.342,
+  "reuna": 0.0
+ },
+ "rio-vanha-katedraali-antiga-se-vari2-kk.webp": {
+  "sha": "8ee790861989eda3",
+  "taytto": 0.349,
+  "reuna": 0.0
  },
  "rooma-aqua-virgo.webp": {
   "sha": "cfe97000e6bb43ce",
@@ -1949,475 +5124,1585 @@
   "taytto": 0.19,
   "reuna": 0
  },
+ "salalah-al-baleedin-puisto-vari2-kk.webp": {
+  "sha": "db34b6b7fb75f8b1",
+  "taytto": 0.391,
+  "reuna": 0.0
+ },
+ "salalah-al-haffan-basaari-vari2-kk.webp": {
+  "sha": "6ae69dd27caf44f7",
+  "taytto": 0.323,
+  "reuna": 0.0
+ },
+ "salalah-al-husnin-palatsi-vari2-kk.webp": {
+  "sha": "683171b16f24a052",
+  "taytto": 0.489,
+  "reuna": 0.0
+ },
+ "salalah-burj-an-nahda-vari2-kk.webp": {
+  "sha": "19f0dffe8f070837",
+  "taytto": 0.223,
+  "reuna": 0.0
+ },
+ "salalah-nabi-umranin-hauta-vari2-kk.webp": {
+  "sha": "678cf2284e465fa1",
+  "taytto": 0.304,
+  "reuna": 0.0
+ },
+ "salalah-suitsukemuseo-vari2-kk.webp": {
+  "sha": "3a7f46752e274138",
+  "taytto": 0.397,
+  "reuna": 0.0
+ },
+ "salalah-sultan-qaboosin-moskeija-vari2-kk.webp": {
+  "sha": "7464b96dfe93dd67",
+  "taytto": 0.349,
+  "reuna": 0.0
+ },
+ "samarkand-afrasiyabin-rauniokumpu-vari2-kk.webp": {
+  "sha": "6d9987e80106fe29",
+  "taytto": 0.421,
+  "reuna": 0.0
+ },
+ "samarkand-bibi-khanymin-moskeija-vari2-kk.webp": {
+  "sha": "48a5e09105403a6d",
+  "taytto": 0.405,
+  "reuna": 0.0
+ },
+ "samarkand-gur-e-amir-vari2-kk.webp": {
+  "sha": "d6d8f500e37e433b",
+  "taytto": 0.316,
+  "reuna": 0.0
+ },
+ "samarkand-hazrat-khizrin-moskeija-vari2-kk.webp": {
+  "sha": "86ba5c8661f19369",
+  "taytto": 0.355,
+  "reuna": 0.0
+ },
+ "samarkand-ishratkhanan-mausoleumi-vari2-kk.webp": {
+  "sha": "35c8651d4dbab69c",
+  "taytto": 0.446,
+  "reuna": 0.0
+ },
+ "samarkand-khoja-doniyorin-mausoleumi-vari2-kk.webp": {
+  "sha": "d9f0ba7108636053",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
  "samarkand-registan.webp": {
   "sha": "856240288d14ff50",
   "taytto": 0.327,
   "reuna": 0
+ },
+ "samarkand-registanin-aukio-vari2-kk.webp": {
+  "sha": "001c197b96e54866",
+  "taytto": 0.361,
+  "reuna": 0.0
+ },
+ "samarkand-shah-i-zindan-hautakuja-vari2-kk.webp": {
+  "sha": "eae407bc19fb1a9e",
+  "taytto": 0.492,
+  "reuna": 0.0
+ },
+ "samarkand-ulugbekin-observatorio-vari2-kk.webp": {
+  "sha": "5e4841677cce3099",
+  "taytto": 0.384,
+  "reuna": 0.0
+ },
+ "sana-al-bakiriyyan-moskeija-vari2-kk.webp": {
+  "sha": "65543abe15aa18ad",
+  "taytto": 0.299,
+  "reuna": 0.0
+ },
+ "sana-al-mahdin-moskeija-vari2-kk.webp": {
+  "sha": "0c01cd24b3c5db3c",
+  "taytto": 0.371,
+  "reuna": 0.0
+ },
+ "sana-bab-al-yaman-vari2-kk.webp": {
+  "sha": "38ab43a012a79b5a",
+  "taytto": 0.475,
+  "reuna": 0.0
+ },
+ "sana-suolatori-vari2-kk.webp": {
+  "sha": "3ef45f5be3d2460e",
+  "taytto": 0.473,
+  "reuna": 0.0
+ },
+ "sana-suuri-moskeija-vari2-kk.webp": {
+  "sha": "660d5699108ffb5d",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "sana-talhan-moskeija-vari2-kk.webp": {
+  "sha": "331dcd121b854994",
+  "taytto": 0.38,
+  "reuna": 0.0
+ },
+ "sanfrancisco-coit-tower-vari2-kk.webp": {
+  "sha": "095ecf5908bbe12d",
+  "taytto": 0.21,
+  "reuna": 0.0
+ },
+ "sanfrancisco-ferry-building-vari2-kk.webp": {
+  "sha": "dbae7f874ac0803e",
+  "taytto": 0.198,
+  "reuna": 0.0
+ },
+ "sanfrancisco-ghirardelli-square-vari2-kk.webp": {
+  "sha": "d4f826b36f6af872",
+  "taytto": 0.317,
+  "reuna": 0.0
+ },
+ "sanfrancisco-grace-cathedral-vari2-kk.webp": {
+  "sha": "987de3d43442e781",
+  "taytto": 0.312,
+  "reuna": 0.0
+ },
+ "sanfrancisco-haas-lilienthalin-talo-vari2-kk.webp": {
+  "sha": "d73b32b195fa99fc",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
+ "sanfrancisco-old-st-mary-s-katedraali-vari2-kk.webp": {
+  "sha": "e5aeb70be4a980d9",
+  "taytto": 0.374,
+  "reuna": 0.0
+ },
+ "sanfrancisco-palace-hotel-vari2-kk.webp": {
+  "sha": "e33e1599168dca69",
+  "taytto": 0.397,
+  "reuna": 0.0
+ },
+ "sanfrancisco-san-franciscon-kaupungintalo-vari2-kk.webp": {
+  "sha": "efb0fd3789d29848",
+  "taytto": 0.367,
+  "reuna": 0.0
+ },
+ "sanfrancisco-transamerica-pyramid-vari2-kk.webp": {
+  "sha": "ba1bb4022461316b",
+  "taytto": 0.131,
+  "reuna": 0.0
+ },
+ "sanfrancisco-union-square-vari2-kk.webp": {
+  "sha": "8fb97670e55ada77",
+  "taytto": 0.363,
+  "reuna": 0.0
+ },
+ "sarajevo-bascarsija-kk.webp": {
+  "sha": "72ad1602b015d76d",
+  "taytto": 0.286,
+  "reuna": 0.0
  },
  "sarajevo-bascarsija.webp": {
   "sha": "355c3e35ebbe062a",
   "taytto": 0.288,
   "reuna": 0
  },
+ "sarajevo-gazi-husrev-begin-moskeija-kk.webp": {
+  "sha": "9a3b40968d22ea50",
+  "taytto": 0.216,
+  "reuna": 0.0
+ },
  "sarajevo-gazi-husrev-begin-moskeija.webp": {
   "sha": "04975c51de976a1c",
   "taytto": 0.217,
   "reuna": 0
+ },
+ "sarajevo-inat-kuca-vari2-kk.webp": {
+  "sha": "9630abd46306da0f",
+  "taytto": 0.525,
+  "reuna": 0.0
+ },
+ "sarajevo-keltainen-linnake-kk.webp": {
+  "sha": "8dad0c5583e53247",
+  "taytto": 0.162,
+  "reuna": 0.0
  },
  "sarajevo-keltainen-linnake.webp": {
   "sha": "b9cfd994a994837e",
   "taytto": 0.163,
   "reuna": 0
  },
+ "sarajevo-latinalaissilta-kk.webp": {
+  "sha": "ff75bff1b1e32bcc",
+  "taytto": 0.114,
+  "reuna": 0.0
+ },
  "sarajevo-latinalaissilta.webp": {
   "sha": "86c62889911ddcab",
   "taytto": 0.116,
   "reuna": 0
+ },
+ "sarajevo-sarajevon-katedraali-kk.webp": {
+  "sha": "3254d708d3790b91",
+  "taytto": 0.221,
+  "reuna": 0.0
  },
  "sarajevo-sarajevon-katedraali.webp": {
   "sha": "fd740e17b0e78f69",
   "taytto": 0.222,
   "reuna": 0
  },
+ "sarajevo-vijecnica-kk.webp": {
+  "sha": "cc91d5ad5a4014a6",
+  "taytto": 0.232,
+  "reuna": 0.0
+ },
  "sarajevo-vijecnica.webp": {
   "sha": "b792b5c744b7cb5b",
   "taytto": 0.233,
   "reuna": 0
+ },
+ "sevilla-alcazar-vari2-kk.webp": {
+  "sha": "95c7aed3dc38ccb2",
+  "taytto": 0.509,
+  "reuna": 0.0
+ },
+ "sevilla-katedraali-ja-giralda-vari2-kk.webp": {
+  "sha": "6b0882f633e3e9bb",
+  "taytto": 0.438,
+  "reuna": 0.0
+ },
+ "sevilla-maestranzan-areena-vari2-kk.webp": {
+  "sha": "162d7e3fed58e5fd",
+  "taytto": 0.525,
+  "reuna": 0.0
+ },
+ "sevilla-plaza-de-espana-vari2-kk.webp": {
+  "sha": "4b1be52a414ee6ce",
+  "taytto": 0.378,
+  "reuna": 0.0
+ },
+ "sevilla-torre-del-oro-vari2-kk.webp": {
+  "sha": "b2425c5433edba5e",
+  "taytto": 0.354,
+  "reuna": 0.0
+ },
+ "sevilla-trianan-silta-vari2-kk.webp": {
+  "sha": "83c313b09e6b3dba",
+  "taytto": 0.283,
+  "reuna": 0.0
+ },
+ "sevilla-victorian-laituri-vari2-kk.webp": {
+  "sha": "a30f6c6ed79290cd",
+  "taytto": 0.376,
+  "reuna": 0.0
+ },
+ "shanghai-bund-kk.webp": {
+  "sha": "64b9df04c99434f1",
+  "taytto": 0.201,
+  "reuna": 0.0
  },
  "shanghai-bund.webp": {
   "sha": "357c9f5996f48108",
   "taytto": 0.202,
   "reuna": 0
  },
+ "shanghai-dajingin-pavilonki-kk.webp": {
+  "sha": "54607f71e26a82ce",
+  "taytto": 0.23,
+  "reuna": 0.0
+ },
  "shanghai-dajingin-pavilonki.webp": {
   "sha": "6ca1047acc5e777f",
   "taytto": 0.231,
   "reuna": 0
+ },
+ "shanghai-fuyoun-moskeija-kk.webp": {
+  "sha": "87de978ea0f266a5",
+  "taytto": 0.287,
+  "reuna": 0.0
  },
  "shanghai-fuyoun-moskeija.webp": {
   "sha": "51561fe016287047",
   "taytto": 0.288,
   "reuna": 0
  },
+ "shanghai-kaupunginjumalan-temppeli-kk.webp": {
+  "sha": "202dc5153d8d19dd",
+  "taytto": 0.263,
+  "reuna": 0.0
+ },
  "shanghai-kaupunginjumalan-temppeli.webp": {
   "sha": "93650d213d20b36c",
   "taytto": 0.264,
   "reuna": 0
+ },
+ "shanghai-nanjing-katu-kk.webp": {
+  "sha": "bec11c9344f5ee36",
+  "taytto": 0.339,
+  "reuna": 0.0
  },
  "shanghai-nanjing-katu.webp": {
   "sha": "d2e01df3543dacc0",
   "taytto": 0.341,
   "reuna": 0
  },
+ "shanghai-rauhanhotelli-kk.webp": {
+  "sha": "6f8ab586d82c5c4b",
+  "taytto": 0.244,
+  "reuna": 0.0
+ },
  "shanghai-rauhanhotelli.webp": {
   "sha": "7ec2c8d577a8168f",
   "taytto": 0.244,
   "reuna": 0
+ },
+ "shanghai-shanghain-museo-kk.webp": {
+  "sha": "f5764d0c5ead2908",
+  "taytto": 0.115,
+  "reuna": 0.0
  },
  "shanghai-shanghain-museo.webp": {
   "sha": "5173be8bbdf8fdb0",
   "taytto": 0.115,
   "reuna": 0
  },
+ "shanghai-waibaidun-silta-kk.webp": {
+  "sha": "5cf571f1d8db0dcc",
+  "taytto": 0.166,
+  "reuna": 0.0
+ },
  "shanghai-waibaidun-silta.webp": {
   "sha": "56fe94940d816851",
   "taytto": 0.167,
   "reuna": 0
+ },
+ "shanghai-yu-puutarha-kk.webp": {
+  "sha": "e6c9523176dd32a1",
+  "taytto": 0.341,
+  "reuna": 0.0
  },
  "shanghai-yu-puutarha.webp": {
   "sha": "c940f2adb10392c7",
   "taytto": 0.342,
   "reuna": 0
  },
+ "singapore-boat-quay-vari2-kk.webp": {
+  "sha": "7c2e8ab5fceed3cd",
+  "taytto": 0.473,
+  "reuna": 0.0
+ },
+ "singapore-clarke-quay-vari2-kk.webp": {
+  "sha": "fd5a8f5848cfe409",
+  "taytto": 0.417,
+  "reuna": 0.0
+ },
+ "singapore-empress-place-vari2-kk.webp": {
+  "sha": "3ae0b19c3739be38",
+  "taytto": 0.329,
+  "reuna": 0.0
+ },
+ "singapore-fort-canningin-kukkula-vari2-kk.webp": {
+  "sha": "3e68d506f170ab9b",
+  "taytto": 0.493,
+  "reuna": 0.0
+ },
+ "singapore-gardens-by-the-bay-vari2-kk.webp": {
+  "sha": "1578ef8c27654c29",
+  "taytto": 0.33,
+  "reuna": 0.0
+ },
+ "singapore-merlion-puisto-vari2-kk.webp": {
+  "sha": "d590d63aa074eb41",
+  "taytto": 0.325,
+  "reuna": 0.0
+ },
+ "singapore-raffles-hotel-vari2-kk.webp": {
+  "sha": "a65d2216c43d2779",
+  "taytto": 0.409,
+  "reuna": 0.0
+ },
+ "singapore-sri-mariamman-temppeli-vari2-kk.webp": {
+  "sha": "862c86e1c42d8330",
+  "taytto": 0.334,
+  "reuna": 0.0
+ },
+ "singapore-sultan-moskeija-vari2-kk.webp": {
+  "sha": "a691cf938e763343",
+  "taytto": 0.363,
+  "reuna": 0.0
+ },
+ "singapore-thian-hock-keng-temppeli-vari2-kk.webp": {
+  "sha": "9fe0d8775cd2fbc8",
+  "taytto": 0.396,
+  "reuna": 0.0
+ },
+ "sofia-banja-bashin-moskeija-kk.webp": {
+  "sha": "c239cc847fb3ad86",
+  "taytto": 0.266,
+  "reuna": 0.0
+ },
+ "sofia-borisovan-puutarha-kk.webp": {
+  "sha": "730faef17994dc3d",
+  "taytto": 0.194,
+  "reuna": 0.0
+ },
  "sofia-borisovan-puutarha.webp": {
   "sha": "959870d6a7541362",
   "taytto": 0.197,
   "reuna": 0
+ },
+ "sofia-kansalliskulttuuripalatsi-kk.webp": {
+  "sha": "524302c1e86101b7",
+  "taytto": 0.395,
+  "reuna": 0.0
  },
  "sofia-kansalliskulttuuripalatsi.webp": {
   "sha": "848f44b0e466ca4f",
   "taytto": 0.396,
   "reuna": 0
  },
+ "sofia-mineraalikylpyla-kk.webp": {
+  "sha": "368a68e561a5ffc7",
+  "taytto": 0.384,
+  "reuna": 0.0
+ },
  "sofia-mineraalikylpyla.webp": {
   "sha": "d6452e3b5b94075a",
   "taytto": 0.385,
   "reuna": 0
+ },
+ "sofia-pyhan-yrjon-rotunda-kk.webp": {
+  "sha": "c133ef1d46c7998c",
+  "taytto": 0.391,
+  "reuna": 0.0
  },
  "sofia-pyhan-yrjon-rotunda.webp": {
   "sha": "6cb987d9e4c669a2",
   "taytto": 0.393,
   "reuna": 0
  },
+ "sofia-serdican-areena-kk.webp": {
+  "sha": "7c45e922f5589c5c",
+  "taytto": 0.404,
+  "reuna": 0.0
+ },
+ "sofia-sofian-katedraali-kk.webp": {
+  "sha": "8312b963dd84db67",
+  "taytto": 0.27,
+  "reuna": 0.0
+ },
  "sofia-sofian-katedraali.webp": {
   "sha": "c08c759278af42d3",
   "taytto": 0.271,
   "reuna": 0
+ },
+ "sofia-sofian-yliopisto-kk.webp": {
+  "sha": "49595939214bc0a2",
+  "taytto": 0.297,
+  "reuna": 0.0
  },
  "sofia-sofian-yliopisto.webp": {
   "sha": "bb974de230e4e3fc",
   "taytto": 0.298,
   "reuna": 0
  },
+ "soul-bosingak-kk.webp": {
+  "sha": "b3ad1b15bcfb6910",
+  "taytto": 0.264,
+  "reuna": 0.0
+ },
  "soul-bosingak.webp": {
   "sha": "7e85094a25045b3b",
   "taytto": 0.265,
   "reuna": 0
+ },
+ "soul-bukchonin-hanok-kyla-kk.webp": {
+  "sha": "81d6103896b172ec",
+  "taytto": 0.261,
+  "reuna": 0.0
  },
  "soul-bukchonin-hanok-kyla.webp": {
   "sha": "0d5ba9dac2dbefd1",
   "taytto": 0.263,
   "reuna": 0
  },
+ "soul-changdeokgung-kk.webp": {
+  "sha": "bdc3c523b338fe51",
+  "taytto": 0.157,
+  "reuna": 0.0
+ },
  "soul-changdeokgung.webp": {
   "sha": "1b2e4125fd5ebfc4",
   "taytto": 0.159,
   "reuna": 0
+ },
+ "soul-gwanghwamun-kk.webp": {
+  "sha": "bb6596a8790e092b",
+  "taytto": 0.278,
+  "reuna": 0.0
  },
  "soul-gwanghwamun.webp": {
   "sha": "3cbc76b812e733d9",
   "taytto": 0.28,
   "reuna": 0
  },
+ "soul-gyeongbokgung-kk.webp": {
+  "sha": "c741ca581aab8177",
+  "taytto": 0.208,
+  "reuna": 0.0
+ },
  "soul-gyeongbokgung.webp": {
   "sha": "fcd366b77e50adbb",
   "taytto": 0.209,
   "reuna": 0
+ },
+ "soul-insadong-kk.webp": {
+  "sha": "de0564480795094e",
+  "taytto": 0.365,
+  "reuna": 0.0
  },
  "soul-insadong.webp": {
   "sha": "7362be684a9d3d24",
   "taytto": 0.367,
   "reuna": 0
  },
+ "soul-jogyesa-kk.webp": {
+  "sha": "b5feb9704921066a",
+  "taytto": 0.294,
+  "reuna": 0.0
+ },
  "soul-jogyesa.webp": {
   "sha": "4944d39202f076cf",
   "taytto": 0.295,
   "reuna": 0
+ },
+ "soul-jongmyo-kk.webp": {
+  "sha": "3d4fac1d94bb3df3",
+  "taytto": 0.277,
+  "reuna": 0.0
  },
  "soul-jongmyo.webp": {
   "sha": "6ff69fe4f5c47e99",
   "taytto": 0.278,
   "reuna": 0
  },
+ "soul-tapgol-puisto-kk.webp": {
+  "sha": "94a61904c5aabfbc",
+  "taytto": 0.183,
+  "reuna": 0.0
+ },
  "soul-tapgol-puisto.webp": {
   "sha": "e55afd7cebdfded7",
   "taytto": 0.185,
   "reuna": 0
+ },
+ "sydney-anzac-muistomerkki-vari2-kk.webp": {
+  "sha": "92b7e5ddea874f27",
+  "taytto": 0.279,
+  "reuna": 0.0
+ },
+ "sydney-australian-museo-vari2-kk.webp": {
+  "sha": "36794592f0f79b7b",
+  "taytto": 0.385,
+  "reuna": 0.0
+ },
+ "sydney-hyde-park-barracks-vari2-kk.webp": {
+  "sha": "c02fb73ea7219821",
+  "taytto": 0.356,
+  "reuna": 0.0
+ },
+ "sydney-mrs-macquarie-s-chair-vari2-kk.webp": {
+  "sha": "fc71007cc2d2bf47",
+  "taytto": 0.318,
+  "reuna": 0.0
+ },
+ "sydney-pyhan-andreaksen-katedraali-vari2-kk.webp": {
+  "sha": "e6cb068383cba6c6",
+  "taytto": 0.312,
+  "reuna": 0.0
+ },
+ "sydney-pyhan-marian-katedraali-vari2-kk.webp": {
+  "sha": "966c0f2a644d275f",
+  "taytto": 0.288,
+  "reuna": 0.0
+ },
+ "sydney-pyrmontin-silta-vari2-kk.webp": {
+  "sha": "9e928fc4bd35f55e",
+  "taytto": 0.227,
+  "reuna": 0.0
+ },
+ "sydney-sydney-harbour-bridge-vari2-kk.webp": {
+  "sha": "84b2668b291fd695",
+  "taytto": 0.141,
+  "reuna": 0.0
+ },
+ "sydney-sydneyn-konservatorio-vari2-kk.webp": {
+  "sha": "a98909855a60b690",
+  "taytto": 0.36,
+  "reuna": 0.0
+ },
+ "sydney-sydneyn-oopperatalo-vari2-kk.webp": {
+  "sha": "4b83576eed93ced1",
+  "taytto": 0.253,
+  "reuna": 0.0
+ },
+ "tabriz-arg-vari2-kk.webp": {
+  "sha": "9551edba518d8026",
+  "taytto": 0.445,
+  "reuna": 0.0
+ },
+ "tabriz-azerbaidzanin-museo-vari2-kk.webp": {
+  "sha": "6612b496ae256508",
+  "taytto": 0.293,
+  "reuna": 0.0
+ },
+ "tabriz-perustuslakitalo-vari2-kk.webp": {
+  "sha": "6665a353478f3446",
+  "taytto": 0.46,
+  "reuna": 0.0
+ },
+ "tabriz-saat-torni-vari2-kk.webp": {
+  "sha": "a138f42150b94140",
+  "taytto": 0.353,
+  "reuna": 0.0
+ },
+ "tabriz-sininen-moskeija-vari2-kk.webp": {
+  "sha": "bc4622ae6a295764",
+  "taytto": 0.402,
+  "reuna": 0.0
+ },
+ "tabriz-tabrizin-basaari-vari2-kk.webp": {
+  "sha": "610ee73de6d92dfe",
+  "taytto": 0.443,
+  "reuna": 0.0
+ },
+ "taipei-baoan-temppeli-vari2-kk.webp": {
+  "sha": "b86a808ac5460006",
+  "taytto": 0.43,
+  "reuna": 0.0
+ },
+ "taipei-bopiliaon-vanha-kortteli-vari2-kk.webp": {
+  "sha": "4c0f35021a61c026",
+  "taytto": 0.345,
+  "reuna": 0.0
+ },
+ "taipei-chiang-kai-shek-muistosali-vari2-kk.webp": {
+  "sha": "9d1de4c6a24b215a",
+  "taytto": 0.343,
+  "reuna": 0.0
+ },
+ "taipei-dihua-katu-vari2-kk.webp": {
+  "sha": "32677bd91a63de95",
+  "taytto": 0.423,
+  "reuna": 0.0
+ },
+ "taipei-kasvitieteellinen-puutarha-vari2-kk.webp": {
+  "sha": "3e18d7022663cd63",
+  "taytto": 0.335,
+  "reuna": 0.0
+ },
+ "taipei-lungshan-temppeli-vari2-kk.webp": {
+  "sha": "948b69837f8031be",
+  "taytto": 0.357,
+  "reuna": 0.0
+ },
+ "taipei-pohjoisportti-vari2-kk.webp": {
+  "sha": "e6e4e5bd143705ff",
+  "taytto": 0.468,
+  "reuna": 0.0
+ },
+ "taipei-presidentinlinna-vari2-kk.webp": {
+  "sha": "4fb8949d64116a66",
+  "taytto": 0.332,
+  "reuna": 0.0
+ },
+ "taipei-punainen-talo-vari2-kk.webp": {
+  "sha": "caf98eb536e4ae49",
+  "taytto": 0.322,
+  "reuna": 0.0
+ },
+ "taipei-taipei-101-vari2-kk.webp": {
+  "sha": "c45b0560a60d9ddc",
+  "taytto": 0.141,
+  "reuna": 0.0
+ },
+ "tallinna-lyhyen-jalan-torni-vari2-kk.webp": {
+  "sha": "d2801d214e183bda",
+  "taytto": 0.388,
+  "reuna": 0.0
+ },
+ "tallinna-matkustajasatama-kk.webp": {
+  "sha": "10ffa2a0a840bc80",
+  "taytto": 0.193,
+  "reuna": 0.0
  },
  "tallinna-matkustajasatama.webp": {
   "sha": "ef4af4b7a7788fc3",
   "taytto": 0.194,
   "reuna": 0
  },
+ "tallinna-nevskin-katedraali-kk.webp": {
+  "sha": "35f21654af91c9ac",
+  "taytto": 0.234,
+  "reuna": 0.0
+ },
  "tallinna-nevskin-katedraali.webp": {
   "sha": "efbb305d871f3dfd",
   "taytto": 0.235,
   "reuna": 0
+ },
+ "tallinna-olevisten-kirkko-kk.webp": {
+  "sha": "64bb990bda797fec",
+  "taytto": 0.076,
+  "reuna": 0.0
  },
  "tallinna-olevisten-kirkko.webp": {
   "sha": "87ebbec50add7d5b",
   "taytto": 0.076,
   "reuna": 0
  },
+ "tallinna-paksu-margareeta-kk.webp": {
+  "sha": "dc7362ccb23b8709",
+  "taytto": 0.238,
+  "reuna": 0.0
+ },
  "tallinna-paksu-margareeta.webp": {
   "sha": "5c5a658a72ec756e",
   "taytto": 0.239,
   "reuna": 0
+ },
+ "tallinna-raatihuoneentori-kk.webp": {
+  "sha": "6939f1c859476114",
+  "taytto": 0.215,
+  "reuna": 0.0
  },
  "tallinna-raatihuoneentori.webp": {
   "sha": "2e9a1eb229ae3a51",
   "taytto": 0.217,
   "reuna": 0
  },
+ "tallinna-virun-portti-kk.webp": {
+  "sha": "1ee0df2db21a7487",
+  "taytto": 0.164,
+  "reuna": 0.0
+ },
  "tallinna-virun-portti.webp": {
   "sha": "a8b05744c939588e",
   "taytto": 0.164,
   "reuna": 0
+ },
+ "tampere-amurin-tyolaismuseokortteli-kk.webp": {
+  "sha": "654ce58b0fdc462f",
+  "taytto": 0.197,
+  "reuna": 0.0
  },
  "tampere-amurin-tyolaismuseokortteli.webp": {
   "sha": "9cc5552518b68a8a",
   "taytto": 0.198,
   "reuna": 0
  },
+ "tampere-finlayson-vari2-kk.webp": {
+  "sha": "3fd3149c964352c5",
+  "taytto": 0.482,
+  "reuna": 0.0
+ },
+ "tampere-finlaysonin-tehdasalue-kk.webp": {
+  "sha": "a666be27c7464158",
+  "taytto": 0.186,
+  "reuna": 0.0
+ },
  "tampere-finlaysonin-tehdasalue.webp": {
   "sha": "4a44832f658709c8",
   "taytto": 0.187,
   "reuna": 0
+ },
+ "tampere-hameensilta-kk.webp": {
+  "sha": "139bcb1fc269286a",
+  "taytto": 0.258,
+  "reuna": 0.0
  },
  "tampere-hameensilta.webp": {
   "sha": "1e9f0c56c9a07ce9",
   "taytto": 0.26,
   "reuna": 0
  },
+ "tampere-museokeskus-vapriikki-kk.webp": {
+  "sha": "00cee683805e905a",
+  "taytto": 0.439,
+  "reuna": 0.0
+ },
  "tampere-museokeskus-vapriikki.webp": {
   "sha": "550c38d1410b796d",
   "taytto": 0.44,
   "reuna": 0
+ },
+ "tampere-nasinneula-kk.webp": {
+  "sha": "28d012e01ddba59b",
+  "taytto": 0.088,
+  "reuna": 0.0
  },
  "tampere-nasinneula.webp": {
   "sha": "e5daf8bf5af6db1a",
   "taytto": 0.088,
   "reuna": 0
  },
+ "tampere-pyynikin-nakotorni-kk.webp": {
+  "sha": "ff81149a13a6a151",
+  "taytto": 0.262,
+  "reuna": 0.0
+ },
  "tampere-pyynikin-nakotorni.webp": {
   "sha": "3c16622305f308f1",
   "taytto": 0.263,
   "reuna": 0
+ },
+ "tampere-tallipiha-kk.webp": {
+  "sha": "1fac53a10995d29e",
+  "taytto": 0.243,
+  "reuna": 0.0
  },
  "tampere-tallipiha.webp": {
   "sha": "80e0ad2ae36550d5",
   "taytto": 0.243,
   "reuna": 0
  },
+ "tampere-tampereen-tuomiokirkko-kk.webp": {
+  "sha": "e4f2626044f45274",
+  "taytto": 0.159,
+  "reuna": 0.0
+ },
  "tampere-tampereen-tuomiokirkko.webp": {
   "sha": "ee8788cc8ed2413b",
   "taytto": 0.159,
   "reuna": 0
+ },
+ "tampere-tuomiokirkko-vari2-kk.webp": {
+  "sha": "5dbb3a5c6029ca97",
+  "taytto": 0.404,
+  "reuna": 0.0
+ },
+ "teheran-bagh-e-mellin-portti-kk.webp": {
+  "sha": "b95f9b7b370a909c",
+  "taytto": 0.343,
+  "reuna": 0.0
  },
  "teheran-bagh-e-mellin-portti.webp": {
   "sha": "fe31c0e0ad45eb3f",
   "taytto": 0.343,
   "reuna": 0
  },
+ "teheran-dar-al-fonun-kk.webp": {
+  "sha": "2543df8de51ff12f",
+  "taytto": 0.487,
+  "reuna": 0.0
+ },
  "teheran-dar-al-fonun.webp": {
   "sha": "44a8d566d85aebfc",
   "taytto": 0.487,
   "reuna": 0
+ },
+ "teheran-golestanin-palatsi-kk.webp": {
+  "sha": "f79396d9b96cd88c",
+  "taytto": 0.248,
+  "reuna": 0.0
  },
  "teheran-golestanin-palatsi.webp": {
   "sha": "3c7287f3ce94f155",
   "taytto": 0.249,
   "reuna": 0
  },
+ "teheran-iranin-kansallismuseo-kk.webp": {
+  "sha": "fedd46b06102b489",
+  "taytto": 0.282,
+  "reuna": 0.0
+ },
  "teheran-iranin-kansallismuseo.webp": {
   "sha": "c0a5a4d96228c8f6",
   "taytto": 0.282,
   "reuna": 0
+ },
+ "teheran-masoudiehin-talo-kk.webp": {
+  "sha": "fe06285b0ae63c02",
+  "taytto": 0.21,
+  "reuna": 0.0
  },
  "teheran-masoudiehin-talo.webp": {
   "sha": "8604d2dc01185da0",
   "taytto": 0.211,
   "reuna": 0
  },
+ "teheran-sepahsalarin-moskeija-kk.webp": {
+  "sha": "55d593141a4b33bc",
+  "taytto": 0.231,
+  "reuna": 0.0
+ },
  "teheran-sepahsalarin-moskeija.webp": {
   "sha": "a6d1bda5006269be",
   "taytto": 0.232,
   "reuna": 0
+ },
+ "teheran-teheranin-basaari-kk.webp": {
+  "sha": "bbf04f5a40b42d48",
+  "taytto": 0.264,
+  "reuna": 0.0
  },
  "teheran-teheranin-basaari.webp": {
   "sha": "368e3f1bf261c5c9",
   "taytto": 0.265,
   "reuna": 0
  },
+ "teheran-toopkhanen-aukio-kk.webp": {
+  "sha": "702200f63f2b0948",
+  "taytto": 0.118,
+  "reuna": 0.0
+ },
  "teheran-toopkhanen-aukio.webp": {
   "sha": "1f8160102c89e18c",
   "taytto": 0.119,
   "reuna": 0
+ },
+ "tokio-hanayashiki-kk.webp": {
+  "sha": "5cdce55701a771e9",
+  "taytto": 0.441,
+  "reuna": 0.0
  },
  "tokio-hanayashiki.webp": {
   "sha": "d0476bf7041cc25e",
   "taytto": 0.442,
   "reuna": 0
  },
+ "tokio-kaminarimon-kk.webp": {
+  "sha": "a97a1a0b9d7b86e4",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
  "tokio-kaminarimon.webp": {
   "sha": "ce3c31178fdf141d",
   "taytto": 0.377,
   "reuna": 0
+ },
+ "tokio-kanei-ji-kk.webp": {
+  "sha": "df0a3f3f7c0b9514",
+  "taytto": 0.21,
+  "reuna": 0.0
  },
  "tokio-kanei-ji.webp": {
   "sha": "ad8c72094039bd16",
   "taytto": 0.211,
   "reuna": 0
  },
+ "tokio-kyu-iwasaki-tei-kk.webp": {
+  "sha": "14f1ab40c7aa7af3",
+  "taytto": 0.239,
+  "reuna": 0.0
+ },
  "tokio-kyu-iwasaki-tei.webp": {
   "sha": "bfaf27be31825a06",
   "taytto": 0.24,
   "reuna": 0
+ },
+ "tokio-senso-ji-kk.webp": {
+  "sha": "e6ce83527a1e6cda",
+  "taytto": 0.291,
+  "reuna": 0.0
  },
  "tokio-senso-ji.webp": {
   "sha": "dee3247324c3678b",
   "taytto": 0.293,
   "reuna": 0
  },
+ "tokio-shitamachi-museo-kk.webp": {
+  "sha": "7605f1cca6e05af8",
+  "taytto": 0.225,
+  "reuna": 0.0
+ },
  "tokio-shitamachi-museo.webp": {
   "sha": "6b26476d07e91220",
   "taytto": 0.226,
   "reuna": 0
+ },
+ "tokio-tokion-kansallismuseo-kk.webp": {
+  "sha": "c6c4db9d945ae235",
+  "taytto": 0.236,
+  "reuna": 0.0
  },
  "tokio-tokion-kansallismuseo.webp": {
   "sha": "afed1b308eeb205c",
   "taytto": 0.237,
   "reuna": 0
  },
+ "tokio-ueno-tosho-gu-kk.webp": {
+  "sha": "f01b2923d566f010",
+  "taytto": 0.362,
+  "reuna": 0.0
+ },
  "tokio-ueno-tosho-gu.webp": {
   "sha": "caabe65180c27f5f",
   "taytto": 0.364,
   "reuna": 0
+ },
+ "tokio-uenon-asema-kk.webp": {
+  "sha": "f006dc92123016c1",
+  "taytto": 0.213,
+  "reuna": 0.0
  },
  "tokio-uenon-asema.webp": {
   "sha": "32e368eccf531209",
   "taytto": 0.214,
   "reuna": 0
  },
+ "tokio-uenon-puisto-kk.webp": {
+  "sha": "cdcac8f35be633ae",
+  "taytto": 0.107,
+  "reuna": 0.0
+ },
  "tokio-uenon-puisto.webp": {
   "sha": "3ac09eb8cfd89350",
   "taytto": 0.112,
   "reuna": 0
+ },
+ "tripoli-an-naqan-moskeija-kk.webp": {
+  "sha": "7fa1e43535b84ba9",
+  "taytto": 0.407,
+  "reuna": 0.0
  },
  "tripoli-an-naqan-moskeija.webp": {
   "sha": "d5d32240719f7542",
   "taytto": 0.408,
   "reuna": 0
  },
+ "tripoli-darghutin-moskeija-kk.webp": {
+  "sha": "b1da373167dfcb3a",
+  "taytto": 0.171,
+  "reuna": 0.0
+ },
  "tripoli-darghutin-moskeija.webp": {
   "sha": "75e32abb2c5bd063",
   "taytto": 0.171,
   "reuna": 0
+ },
+ "tripoli-gurgin-moskeija-kk.webp": {
+  "sha": "53e627ea669fcf3e",
+  "taytto": 0.213,
+  "reuna": 0.0
  },
  "tripoli-gurgin-moskeija.webp": {
   "sha": "0b0c66d072724a10",
   "taytto": 0.214,
   "reuna": 0
  },
+ "tripoli-karamanlin-moskeija-kk.webp": {
+  "sha": "d36b068c32dbfc5c",
+  "taytto": 0.194,
+  "reuna": 0.0
+ },
  "tripoli-karamanlin-moskeija.webp": {
   "sha": "786aad5a58697687",
   "taytto": 0.195,
   "reuna": 0
+ },
+ "tripoli-marcus-aureliuksen-riemukaari-kk.webp": {
+  "sha": "3602208aad7db5f9",
+  "taytto": 0.28,
+  "reuna": 0.0
  },
  "tripoli-marcus-aureliuksen-riemukaari.webp": {
   "sha": "3720da2658b3c1e3",
   "taytto": 0.281,
   "reuna": 0
  },
+ "tripoli-punainen-linna-kk.webp": {
+  "sha": "b493bc821443e357",
+  "taytto": 0.237,
+  "reuna": 0.0
+ },
  "tripoli-punainen-linna.webp": {
   "sha": "359913aa28e515c7",
   "taytto": 0.238,
   "reuna": 0
+ },
+ "tripoli-vanhankaupungin-kellotorni-kk.webp": {
+  "sha": "fac31d9688535165",
+  "taytto": 0.132,
+  "reuna": 0.0
  },
  "tripoli-vanhankaupungin-kellotorni.webp": {
   "sha": "1da0f385c09d4c17",
   "taytto": 0.133,
   "reuna": 0
  },
+ "tromssa-jaamerenkatedraali-vari2-kk.webp": {
+  "sha": "9aa24d61515003da",
+  "taytto": 0.308,
+  "reuna": 0.0
+ },
+ "tromssa-polaarimuseo-vari2-kk.webp": {
+  "sha": "fda0b5aac85ba30a",
+  "taytto": 0.432,
+  "reuna": 0.0
+ },
+ "tromssa-polaria-vari2-kk.webp": {
+  "sha": "b3d7e731674d5de9",
+  "taytto": 0.375,
+  "reuna": 0.0
+ },
+ "tromssa-tromssan-silta-vari2-kk.webp": {
+  "sha": "6e46dfe964065af1",
+  "taytto": 0.117,
+  "reuna": 0.0
+ },
+ "tromssa-tromssan-tuomiokirkko-vari2-kk.webp": {
+  "sha": "b43f136a2b75d4a8",
+  "taytto": 0.294,
+  "reuna": 0.0
+ },
+ "tukholma-kaupungintalo-kk.webp": {
+  "sha": "7373f67c8d9c1ddc",
+  "taytto": 0.447,
+  "reuna": 0.0
+ },
  "tukholma-kaupungintalo.webp": {
   "sha": "61757f615023bdac",
   "taytto": 0.448,
   "reuna": 0
+ },
+ "tukholma-kuninkaanlinna-kk.webp": {
+  "sha": "ef305c262885ee69",
+  "taytto": 0.313,
+  "reuna": 0.0
  },
  "tukholma-kuninkaanlinna.webp": {
   "sha": "f1824f586ffd13bc",
   "taytto": 0.314,
   "reuna": 0
  },
+ "tukholma-norrstrom-kk.webp": {
+  "sha": "fdcf4e9a0200ec92",
+  "taytto": 0.621,
+  "reuna": 0.0
+ },
+ "tukholma-riddarholmenin-kirkko-kk.webp": {
+  "sha": "ef579bac3aec62e5",
+  "taytto": 0.244,
+  "reuna": 0.0
+ },
  "tukholma-riddarholmenin-kirkko.webp": {
   "sha": "d88fbb349e592904",
   "taytto": 0.246,
   "reuna": 0
+ },
+ "tukholma-sergelin-tori-kk.webp": {
+  "sha": "71a6ab85fdaa5bd5",
+  "taytto": 0.307,
+  "reuna": 0.0
  },
  "tukholma-sergelin-tori.webp": {
   "sha": "189409a25781666e",
   "taytto": 0.308,
   "reuna": 0
  },
+ "tukholma-skansen-kk.webp": {
+  "sha": "ca9a10cb6e2d93b3",
+  "taytto": 0.302,
+  "reuna": 0.0
+ },
  "tukholma-skansen.webp": {
   "sha": "c10ff1705a8c09af",
   "taytto": 0.304,
   "reuna": 0
+ },
+ "tukholma-vasa-museo-kk.webp": {
+  "sha": "ccd20ed9075ef841",
+  "taytto": 0.247,
+  "reuna": 0.0
  },
  "tukholma-vasa-museo.webp": {
   "sha": "ba96e967146962fc",
   "taytto": 0.248,
   "reuna": 0
  },
+ "ulanbator-bogd-khanin-talvipalatsi-vari2-kk.webp": {
+  "sha": "9d3135bf8f2bb61b",
+  "taytto": 0.444,
+  "reuna": 0.0
+ },
+ "ulanbator-choijin-laman-temppeli-vari2-kk.webp": {
+  "sha": "bb473001d63f535e",
+  "taytto": 0.345,
+  "reuna": 0.0
+ },
+ "ulanbator-gandantegchinlenin-luostari-vari2-kk.webp": {
+  "sha": "2e1f27c477beaaf6",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
+ "ulanbator-kansallisstadion-vari2-kk.webp": {
+  "sha": "f1da405f722fd1f8",
+  "taytto": 0.372,
+  "reuna": 0.0
+ },
+ "ulanbator-mongolian-kansallismuseo-vari2-kk.webp": {
+  "sha": "ae1559ade25e7097",
+  "taytto": 0.356,
+  "reuna": 0.0
+ },
+ "ulanbator-rautatieasema-vari2-kk.webp": {
+  "sha": "1367e58b6d1ec5f4",
+  "taytto": 0.301,
+  "reuna": 0.0
+ },
+ "ulanbator-sukhbaatarin-aukio-vari2-kk.webp": {
+  "sha": "bc419606878b30bd",
+  "taytto": 0.385,
+  "reuna": 0.0
+ },
+ "ulanbator-zaisanin-muistomerkki-vari2-kk.webp": {
+  "sha": "9ffab33d0254ddca",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
+ "valletta-auberge-de-castille-kk.webp": {
+  "sha": "04d445372a4f1ba8",
+  "taytto": 0.533,
+  "reuna": 0.0
+ },
  "valletta-auberge-de-castille.webp": {
   "sha": "59aafce0e0cdc578",
   "taytto": 0.534,
   "reuna": 0
+ },
+ "valletta-piirityskello-muistomerkki-kk.webp": {
+  "sha": "0308172006d2f1b7",
+  "taytto": 0.496,
+  "reuna": 0.0
  },
  "valletta-piirityskello-muistomerkki.webp": {
   "sha": "9f956e632994cc7e",
   "taytto": 0.497,
   "reuna": 0
  },
+ "valletta-pyhan-elmon-linnake-kk.webp": {
+  "sha": "1e5a8311174871fb",
+  "taytto": 0.621,
+  "reuna": 0.0
+ },
  "valletta-pyhan-elmon-linnake.webp": {
   "sha": "74fa7aeb20be4b4f",
   "taytto": 0.622,
   "reuna": 0
+ },
+ "valletta-pyhan-johanneksen-ko-katedraali-kk.webp": {
+  "sha": "30d289688c62eee7",
+  "taytto": 0.582,
+  "reuna": 0.0
  },
  "valletta-pyhan-johanneksen-ko-katedraali.webp": {
   "sha": "a2998b0163637c18",
   "taytto": 0.583,
   "reuna": 0
  },
+ "valletta-suurmestarin-palatsi-kk.webp": {
+  "sha": "905d3f410fa8118f",
+  "taytto": 0.595,
+  "reuna": 0.0
+ },
  "valletta-suurmestarin-palatsi.webp": {
   "sha": "eb8569813b2b007b",
   "taytto": 0.597,
   "reuna": 0
+ },
+ "valletta-ylabarrakka-puutarhat-kk.webp": {
+  "sha": "304543ea727f4862",
+  "taytto": 0.513,
+  "reuna": 0.0
  },
  "valletta-ylabarrakka-puutarhat.webp": {
   "sha": "cc4a95cef397ed2a",
   "taytto": 0.515,
   "reuna": 0
  },
+ "varanasi-assi-ghat-vari2-kk.webp": {
+  "sha": "436d23dcffb0f10a",
+  "taytto": 0.477,
+  "reuna": 0.0
+ },
+ "varanasi-chaukhandi-stupa-vari2-kk.webp": {
+  "sha": "bc31514077ac85dd",
+  "taytto": 0.377,
+  "reuna": 0.0
+ },
+ "varanasi-dashashwamedh-ghat-vari2-kk.webp": {
+  "sha": "1fa1615fc4403a19",
+  "taytto": 0.408,
+  "reuna": 0.0
+ },
+ "varanasi-dhamek-stupa-vari2-kk.webp": {
+  "sha": "030951c84630822e",
+  "taytto": 0.437,
+  "reuna": 0.0
+ },
+ "varanasi-durga-kund-temppeli-vari2-kk.webp": {
+  "sha": "bc132b1bf3f37b3d",
+  "taytto": 0.316,
+  "reuna": 0.0
+ },
+ "varanasi-kashi-vishwanath-temppeli-vari2-kk.webp": {
+  "sha": "f31b02aa7f41ef43",
+  "taytto": 0.382,
+  "reuna": 0.0
+ },
+ "varanasi-manikarnika-ghat-vari2-kk.webp": {
+  "sha": "e30f66696549abcb",
+  "taytto": 0.443,
+  "reuna": 0.0
+ },
+ "varanasi-ramnagarin-linnoitus-vari2-kk.webp": {
+  "sha": "94df28b2dfae867f",
+  "taytto": 0.378,
+  "reuna": 0.0
+ },
+ "varsova-kopernikuksen-tiedekeskus-kk.webp": {
+  "sha": "2d6863ed757f66cb",
+  "taytto": 0.23,
+  "reuna": 0.0
+ },
  "varsova-kopernikuksen-tiedekeskus.webp": {
   "sha": "4d36b2d058c1554d",
   "taytto": 0.231,
   "reuna": 0
+ },
+ "varsova-kulttuuri-ja-tiedepalatsi-kk.webp": {
+  "sha": "7765648036ec0855",
+  "taytto": 0.198,
+  "reuna": 0.0
  },
  "varsova-kulttuuri-ja-tiedepalatsi.webp": {
   "sha": "434ab9486574432b",
   "taytto": 0.199,
   "reuna": 0
  },
+ "varsova-pyhan-ristin-kirkko-kk.webp": {
+  "sha": "31d35918bd7b768c",
+  "taytto": 0.195,
+  "reuna": 0.0
+ },
  "varsova-pyhan-ristin-kirkko.webp": {
   "sha": "c77557f36f2825fb",
   "taytto": 0.196,
   "reuna": 0
+ },
+ "varsova-vanhankaupungin-tori-kk.webp": {
+  "sha": "b9186e0ced74c727",
+  "taytto": 0.33,
+  "reuna": 0.0
  },
  "varsova-vanhankaupungin-tori.webp": {
   "sha": "3fc435daf6d21fdd",
   "taytto": 0.332,
   "reuna": 0
  },
+ "varsova-varsovan-kansallismuseo-kk.webp": {
+  "sha": "c202eaedb4fb459d",
+  "taytto": 0.295,
+  "reuna": 0.0
+ },
  "varsova-varsovan-kansallismuseo.webp": {
   "sha": "2c1ad485f055171f",
   "taytto": 0.296,
   "reuna": 0
+ },
+ "varsova-varsovan-linna-kk.webp": {
+  "sha": "0d3d1b6b9bd28daf",
+  "taytto": 0.168,
+  "reuna": 0.0
  },
  "varsova-varsovan-linna.webp": {
   "sha": "b7b11103979adf2f",
   "taytto": 0.169,
   "reuna": 0
  },
+ "varsova-wienin-asema-vari2-kk.webp": {
+  "sha": "f73636463c75939f",
+  "taytto": 0.355,
+  "reuna": 0.0
+ },
+ "venetsia-arsenaali-vari2-kk.webp": {
+  "sha": "29dd1ae03d25bbc0",
+  "taytto": 0.414,
+  "reuna": 0.0
+ },
+ "venetsia-canal-grande-vari2-kk.webp": {
+  "sha": "5605ad13aec13ff2",
+  "taytto": 0.487,
+  "reuna": 0.0
+ },
+ "venetsia-dogen-palatsi-vari2-kk.webp": {
+  "sha": "2795ce904baa2ea4",
+  "taytto": 0.459,
+  "reuna": 0.0
+ },
+ "venetsia-la-fenicen-oopperatalo-vari2-kk.webp": {
+  "sha": "500953b99b218dc9",
+  "taytto": 0.534,
+  "reuna": 0.0
+ },
+ "venetsia-pyhan-markuksen-tori-vari2-kk.webp": {
+  "sha": "fe30dc6d40160318",
+  "taytto": 0.314,
+  "reuna": 0.0
+ },
+ "venetsia-rialton-silta-vari2-kk.webp": {
+  "sha": "c2ea821f8e57cace",
+  "taytto": 0.352,
+  "reuna": 0.0
+ },
+ "venetsia-san-giorgio-maggiore-vari2-kk.webp": {
+  "sha": "73c91407bce60111",
+  "taytto": 0.388,
+  "reuna": 0.0
+ },
+ "vilna-aamuportti-kk.webp": {
+  "sha": "cba4374c207f14b2",
+  "taytto": 0.369,
+  "reuna": 0.0
+ },
  "vilna-aamuportti.webp": {
   "sha": "a5d26b89d2ee24d5",
   "taytto": 0.37,
   "reuna": 0
+ },
+ "vilna-gediminaksen-torni-kk.webp": {
+  "sha": "d912397279d0365d",
+  "taytto": 0.159,
+  "reuna": 0.0
  },
  "vilna-gediminaksen-torni.webp": {
   "sha": "79344eab39436b9b",
   "taytto": 0.16,
   "reuna": 0
  },
+ "vilna-pyhan-annan-kirkko-kk.webp": {
+  "sha": "7fed7e13d4f2b2d9",
+  "taytto": 0.42,
+  "reuna": 0.0
+ },
  "vilna-pyhan-annan-kirkko.webp": {
   "sha": "d3163b697224d6a5",
   "taytto": 0.422,
   "reuna": 0
+ },
+ "vilna-uzupis-kk.webp": {
+  "sha": "3a9fe5ab01d0a79a",
+  "taytto": 0.186,
+  "reuna": 0.0
  },
  "vilna-uzupis.webp": {
   "sha": "86e28f06d1a1628e",
   "taytto": 0.187,
   "reuna": 0
  },
+ "vilna-vilnan-tuomiokirkko-kk.webp": {
+  "sha": "d814d4865584e64d",
+  "taytto": 0.431,
+  "reuna": 0.0
+ },
  "vilna-vilnan-tuomiokirkko.webp": {
   "sha": "3e49482470275183",
   "taytto": 0.432,
   "reuna": 0
  },
+ "vilna-vilnan-yliopisto-kk.webp": {
+  "sha": "e3ab261e729e8f52",
+  "taytto": 0.237,
+  "reuna": 0.0
+ },
  "vilna-vilnan-yliopisto.webp": {
   "sha": "dd391972b8c8b70c",
   "taytto": 0.237,
   "reuna": 0
+ },
+ "vladivostok-arsenjevin-museo-vari2-kk.webp": {
+  "sha": "5ac7653bf527e89f",
+  "taytto": 0.451,
+  "reuna": 0.0
+ },
+ "vladivostok-funikulaari-vari2-kk.webp": {
+  "sha": "570188f750db432d",
+  "taytto": 0.28,
+  "reuna": 0.0
+ },
+ "vladivostok-gum-tavaratalo-vari2-kk.webp": {
+  "sha": "1ca34ef25a4a27cf",
+  "taytto": 0.38,
+  "reuna": 0.0
+ },
+ "vladivostok-kotkanpesan-kukkula-vari2-kk.webp": {
+  "sha": "b274bef3716dfa79",
+  "taytto": 0.454,
+  "reuna": 0.0
+ },
+ "vladivostok-kultaisen-sarven-silta-vari2-kk.webp": {
+  "sha": "42e5d76c7174fe4c",
+  "taytto": 0.146,
+  "reuna": 0.0
+ },
+ "vladivostok-linnoitusmuseo-vari2-kk.webp": {
+  "sha": "41f864782a9a53fd",
+  "taytto": 0.408,
+  "reuna": 0.0
+ },
+ "vladivostok-pokrovskin-puisto-vari2-kk.webp": {
+  "sha": "3485ff0fb7a90afb",
+  "taytto": 0.414,
+  "reuna": 0.0
+ },
+ "vladivostok-rautatieasema-vari2-kk.webp": {
+  "sha": "6544cd6fff4d3d57",
+  "taytto": 0.294,
+  "reuna": 0.0
+ },
+ "vladivostok-sukellusvene-s-56-vari2-kk.webp": {
+  "sha": "06410113506e39e9",
+  "taytto": 0.351,
+  "reuna": 0.0
+ },
+ "wellington-basin-reserve-kk.webp": {
+  "sha": "0e665000f95f6291",
+  "taytto": 0.298,
+  "reuna": 0.0
+ },
+ "wellington-bolton-streetin-hautausmaa-kk.webp": {
+  "sha": "5f097e1d0ab1e121",
+  "taytto": 0.44,
+  "reuna": 0.0
+ },
+ "wellington-circa-teatteri-kk.webp": {
+  "sha": "696b121bedb370ca",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
+ "wellington-embassy-teatteri-kk.webp": {
+  "sha": "30058ddb049d1045",
+  "taytto": 0.305,
+  "reuna": 0.0
+ },
+ "wellington-nairn-streetin-mokki-kk.webp": {
+  "sha": "2b310f1ec5df75de",
+  "taytto": 0.33,
+  "reuna": 0.0
+ },
+ "wellington-oriental-bay-kk.webp": {
+  "sha": "80263640f332ee0a",
+  "taytto": 0.264,
+  "reuna": 0.0
+ },
+ "wellington-rautatieasema-kk.webp": {
+  "sha": "168934dc926501bc",
+  "taytto": 0.197,
+  "reuna": 0.0
+ },
+ "wellington-wellingtonin-museo-kk.webp": {
+  "sha": "66b3487aed2ff905",
+  "taytto": 0.448,
+  "reuna": 0.0
+ },
+ "wien-belvedere-kk.webp": {
+  "sha": "098cac317337b8a0",
+  "taytto": 0.116,
+  "reuna": 0.0
  },
  "wien-belvedere.webp": {
   "sha": "fa0cadeaca529c00",
@@ -2429,10 +6714,20 @@
   "taytto": 0.835,
   "reuna": 0
  },
+ "wien-hofburg-kk.webp": {
+  "sha": "e1031147b46791c8",
+  "taytto": 0.158,
+  "reuna": 0.0
+ },
  "wien-hofburg.webp": {
   "sha": "a859d866582e8a52",
   "taytto": 0.159,
   "reuna": 0
+ },
+ "wien-jattiratas-kk.webp": {
+  "sha": "0931f43bb2f7219a",
+  "taytto": 0.198,
+  "reuna": 0.0
  },
  "wien-jattiratas.webp": {
   "sha": "b58e32437507c86d",
@@ -2444,6 +6739,11 @@
   "taytto": 0.689,
   "reuna": 0
  },
+ "wien-raatihuone-kk.webp": {
+  "sha": "5147e4d0e15fab57",
+  "taytto": 0.166,
+  "reuna": 0.0
+ },
  "wien-raatihuone.webp": {
   "sha": "5db14e40f4525650",
   "taytto": 0.167,
@@ -2454,10 +6754,20 @@
   "taytto": 0.498,
   "reuna": 0
  },
+ "wien-schonbrunn-kk.webp": {
+  "sha": "ec2a9598a8da919d",
+  "taytto": 0.224,
+  "reuna": 0.0
+ },
  "wien-schonbrunn.webp": {
   "sha": "6ccc515945159bce",
   "taytto": 0.226,
   "reuna": 0
+ },
+ "wien-stephansdom-kk.webp": {
+  "sha": "e624b78eb713bb7b",
+  "taytto": 0.141,
+  "reuna": 0.0
  },
  "wien-stephansdom.webp": {
   "sha": "0bc2d4ce726d438a",
@@ -2474,6 +6784,11 @@
   "taytto": 0.599,
   "reuna": 0
  },
+ "wien-valtionooppera-kk.webp": {
+  "sha": "72d363d5f37c99f3",
+  "taytto": 0.332,
+  "reuna": 0.0
+ },
  "wien-valtionooppera.webp": {
   "sha": "99b4cd75252e79bd",
   "taytto": 0.333,
@@ -2488,5 +6803,95 @@
   "sha": "1e1b353a2c8694a0",
   "taytto": 0.796,
   "reuna": 0
+ },
+ "xian-anyuan-portti-vari2-kk.webp": {
+  "sha": "d75f77a00e0eccdb",
+  "taytto": 0.433,
+  "reuna": 0.0
+ },
+ "xian-kellotorni-vari2-kk.webp": {
+  "sha": "893a7b1f26c9cb27",
+  "taytto": 0.342,
+  "reuna": 0.0
+ },
+ "xian-rumpitorni-vari2-kk.webp": {
+  "sha": "136dac910143a995",
+  "taytto": 0.395,
+  "reuna": 0.0
+ },
+ "xian-shaanxin-historiallinen-museo-vari2-kk.webp": {
+  "sha": "04fabeeec2f10bed",
+  "taytto": 0.333,
+  "reuna": 0.0
+ },
+ "xian-steelametsa-vari2-kk.webp": {
+  "sha": "355ce345c7b92e87",
+  "taytto": 0.483,
+  "reuna": 0.0
+ },
+ "xian-suuri-moskeija-vari2-kk.webp": {
+  "sha": "85134d935bcbb280",
+  "taytto": 0.368,
+  "reuna": 0.0
+ },
+ "xian-suuri-villihanhipagoda-vari2-kk.webp": {
+  "sha": "cb509a624428c678",
+  "taytto": 0.269,
+  "reuna": 0.0
+ },
+ "xian-xi-anin-rautatieasema-vari2-kk.webp": {
+  "sha": "0e8003887ffc22e7",
+  "taytto": 0.392,
+  "reuna": 0.0
+ },
+ "xian-yongning-portti-vari2-kk.webp": {
+  "sha": "c573a1ddcf6a888a",
+  "taytto": 0.5,
+  "reuna": 0.0
+ },
+ "yangon-bogyoken-markkinat-vari2-kk.webp": {
+  "sha": "3b0e4a2512239676",
+  "taytto": 0.437,
+  "reuna": 0.0
+ },
+ "yangon-botataung-pagodi-vari2-kk.webp": {
+  "sha": "32a5f33ce3ae4b3c",
+  "taytto": 0.292,
+  "reuna": 0.0
+ },
+ "yangon-chaukhtatgyin-temppeli-vari2-kk.webp": {
+  "sha": "f2a9fa431370fcdb",
+  "taytto": 0.414,
+  "reuna": 0.0
+ },
+ "yangon-kandawgyi-jarvi-ja-karaweik-vari2-kk.webp": {
+  "sha": "8f499e4ac6d11678",
+  "taytto": 0.295,
+  "reuna": 0.0
+ },
+ "yangon-shwedagon-pagodi-vari2-kk.webp": {
+  "sha": "31a037ea85f11500",
+  "taytto": 0.283,
+  "reuna": 0.0
+ },
+ "yangon-sihteeristo-vari2-kk.webp": {
+  "sha": "3be6111e56a68aca",
+  "taytto": 0.268,
+  "reuna": 0.0
+ },
+ "yangon-strand-hotelli-vari2-kk.webp": {
+  "sha": "a3bb28fa7439862a",
+  "taytto": 0.322,
+  "reuna": 0.0
+ },
+ "yangon-sule-pagodi-vari2-kk.webp": {
+  "sha": "6a29312c90bbddf2",
+  "taytto": 0.292,
+  "reuna": 0.0
+ },
+ "yangon-yangonin-keskusasema-vari2-kk.webp": {
+  "sha": "dfbf8f084941c289",
+  "taytto": 0.297,
+  "reuna": 0.0
  }
 }

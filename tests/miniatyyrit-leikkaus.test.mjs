@@ -68,6 +68,8 @@ const TUNNETUT_KOHTAUSKUVAT = new Set([
  */
 const ISOT_LEIKATUT = new Set([
   'rooma-vatikaanin-palatsi-kk.webp',   // Vatikaanin palatsi: suljettu kortteli; alkuperäinen vain ämpärissä
+  'tukholma-norrstrom-kk.webp',         // Norrström: leveä virta siltoineen; alkuperäinen vain ämpärissä
+  'valletta-pyhan-elmon-linnake-kk.webp', // Pyhän Elmon linnake: tähtilinnake niemellä, kohdekartan versio leikattu
 ]);
 
 const MITAT = JSON.parse(readFileSync(new URL('../tools/miniatyyri-mitat.json', import.meta.url), 'utf8'));
