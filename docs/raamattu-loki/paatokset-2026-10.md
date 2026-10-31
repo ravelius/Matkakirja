@@ -3346,3 +3346,12 @@ Kortti "Hyväksytkö Pariisin piirroskartan tyylin?" (Codexin koepala-1.png, d0c
 ## JUOKSUPELI: AVOIN PALATSI JA ENNAKOITAVAT EUNUKIT, PELIN YDINAJATUS (omistaja 31.10.2026 klo 18.26) (31.10.2026 klo 18.27)
 
 Omistaja (KK:n välittämä, sanatarkasti): "Ja reitti tosiaan pitää olla täysin pelaajan itsensä valittavissa. Lisää kerättäviä ja rikottavia asioita voi kyllä ilmestyä, jos pelaaja menee uudestaan samaan paikkaan, mutta vähemmän kuin ensimmäisellä kerralla. Muuten pelin maailma pitää olla täysin avoin, eli pelaaja voi liikkua minne tahansa. Ja eunukkeja pitää tulla sivuilta ja edestäpäin niin, että pelaaja pystyy ennakoimaan ja valitsemaan reitit aina niin, että pystyy ennakolta väistämään eunukkeja, mutta tarvittaessa lähellä myös tekemään sitten niitä eri väistöliikkeitä. Se on se koko pelin idea." Täydentää 30.10. 19.12 (oikea palatsialue, reitit valitaan itse); työlistan kohta 2 reittivalinta (Pelikoodari). Raamattu 2.177 PELIN YDINAJATUS; vanha "rata toistuvista paloista" merkitty korvatuksi. KK tarkistaa toteutuksen näitä sanoja vasten.
+
+## ENSIN YKSI KOHTAUS MAHDOLLISIMMAN HIENOKSI, SUORITUSKYKY MYÖHEMMIN (omistaja 31.10.2026 klo 18.27–18.31) (31.10.2026 klo 18.32)
+
+Omistaja 18.27 (sanatarkasti): "Kannattaisiko tehdä ensin yksi kohtaus, missä valo toimii varmasti oikein ja vasta sitten siirtyä seuraaviin?" Kortti 18.28 "Tehdäänkö valo ensin yhteen kohtaukseen
+valmiiksi?" → "Kyllä, portin piha 06 (Suositus)"; lisäys 18.28: "Voin nähdä samassa myös, miltä taivas näyttää silloin. Sekä kaikki mahdolliset grafiikka- ja valo- ja muut efektiparannukset käytössä."
+18.31: "Minusta kannattaa ensin yrittää tehdä näkymästä mahdollisimman hieno, eikä välittää siitä, pyöriikö se laitteella vai ei, joten tarkastusajojakaan ei tarvita. Tärkeintä, että saadaan pelistä
+visuaalisesti mahdollisimman hieno. Ja sen jälkeen vasta aletaan miettimään, miten se saadaan laitteissa pyörimään tarpeeksi nopeasti. Ja samalla pitää myös miettiä, mitä kaikkea Unity beta nyt
+mahdollistaa." (korvaa 18.28 selitteen "tarkistetaan iPadilla"). Toteutus: VS vetää koekohtauksen 06, LAV leivonta v2, NS 6000.7-beetan mahdollisuudet, PK kytkentä. Juna 216 odottaa valoa (30.10.
+22.27). Raamattu 2.177.
