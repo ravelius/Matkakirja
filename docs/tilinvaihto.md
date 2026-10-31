@@ -124,6 +124,8 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
   gitin versiota Macin päälle. Macin versio on peilissä tools/tyotavat/settings.local.json.malli (peili.sh pitää ajan tasalla);
   palautus: `bash tools/tyotavat/palauta-sallinnat.sh` (vanha talteen .ennen-<pvm>, sitten PT:n session uudelleenkäynnistys).
   Gitin seurattua .claude/settings.local.json:ia ei committata.
+- KONTEKSTIVAHTI kaikille rooleille (omistaja 31.10.2026 klo 22.17): OMISTAJA ajaa itse `bash tools/hooks/asenna-kontekstivahti-hook.sh`
+  (käyttäjätaso, rajat 7.37 kansion mukaan; tarkistus `--tarkista`). Sessiot eivät muuta asetuksia.
 - Hookit: `bash tools/hooks/asenna-viestiraja-hook.sh --tarkista`; pt-taulu-muistutus.py: totuus S/hooks/ (peili tools/hooks/).
 - Automaattinen tiivistys pois (omistaja 30.10.2026 klo 19.22; Raamattu 7.37): "idleCompaction": false käyttäjän
   /Users/koodaus/.claude/settings.json:ssa; Postivahti nollaa itsensä 30 %:ssa; ensimmäisen päivän iltana tarkista, ettei
