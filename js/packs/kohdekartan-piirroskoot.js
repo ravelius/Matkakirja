@@ -24,7 +24,7 @@ export const KOHDEKARTAN_PIIRROSKOOT = {
     "Tv-torni": 0.9,
     "East Side Gallery": 0.683,
     "Kulta-Liisa": 0.9,
-    "Hobrechtin putket": 0.665,
+    "Radialsystem V": 0.665,
     "Maailmankello": 0.785,
   },
   "helsinki": {
@@ -60,7 +60,7 @@ export const KOHDEKARTAN_PIIRROSKOOT = {
     "Lontoon silmä": 0.9,
     "Pyhän Paavalin katedraali": 0.9,
     "Tower Bridge": 0.85,
-    "Thamesin vuorovesi": 0.672,
+    "Millennium Bridgen portaat": 0.672,
     "Vanha London Bridge": 0.699,
     "Exchange Alley": 0.649,
     "Dickensin pubi": 0.523,

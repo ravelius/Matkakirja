@@ -6015,7 +6015,9 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-lontoo-cheapside', nimiPuoli: 'oikea',
       },
       {
-        nimi: 'Thamesin vuorovesi', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
+        // Paikan nimi (omistaja 31.10.2026 klo 11.26: kartalla vain paikkoja, PT): rantaportaat Millennium Bridgen
+        // pohjoispäässä, jossa mudlarkit laskeutuvat laskuveden rantaan; vuorovesi kerrotaan jutussa.
+        nimi: 'Millennium Bridgen portaat', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
       },
       /*
        * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
@@ -6237,7 +6239,9 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-berliini-kultaliisa',
       },
       {
-        nimi: 'Hobrechtin putket', lat: 52.5219, lon: 13.4132,
+        // Paikan nimi (omistaja 31.10.2026 klo 11.26, PT): Hobrechtin säteittäisjärjestelmän pumppuasema V (1881),
+        // nykyinen Radialsystem V, Holzmarktstraße 33 (OSM); viemärit kerrotaan jutussa.
+        nimi: 'Radialsystem V', lat: 52.5106, lon: 13.4281,
         nosto: 'syvennys-berliini-viemarit',
       },
       /*

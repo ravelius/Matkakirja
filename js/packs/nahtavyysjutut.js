@@ -788,7 +788,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Hobrechtin putket': {
+    'Radialsystem V': {
       nosto: 'syvennys-berliini-viemarit',
       teksti: 'Ne perustukset, joita kaduilla lyötiin, olivat osaksi viemäriä: '
         + 'Berliinillä ei sellaista vielä ollut. James Hobrecht oli laatinut '
@@ -2744,7 +2744,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Thamesin vuorovesi': {
+    'Millennium Bridgen portaat': {
       nosto: 'syvennys-lontoo-vuorovesi',
       teksti: 'Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa '
         + 'tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: '

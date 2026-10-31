@@ -24,7 +24,7 @@ export const KOHDEKARTAN_PIIRROKSET = {
     "Tv-torni": "assets/kartat/miniatyyrit/berliini-tv-torni-kk.webp",
     "East Side Gallery": "assets/kartat/miniatyyrit/berliini-east-side-gallery-kk.webp",
     "Kulta-Liisa": "assets/kartat/miniatyyrit/berliini-kulta-liisa-vari2-kk.webp",
-    "Hobrechtin putket": "assets/kartat/miniatyyrit/berliini-hobrechtin-putket-vari2-kk.webp",
+    "Radialsystem V": "assets/kartat/miniatyyrit/berliini-hobrechtin-putket-vari2-kk.webp",
     "Maailmankello": "assets/kartat/miniatyyrit/berliini-maailmankello-kk.webp",
   },
   "helsinki": {
@@ -60,7 +60,7 @@ export const KOHDEKARTAN_PIIRROKSET = {
     "Lontoon silmä": "assets/kartat/miniatyyrit/lontoo-lontoon-silma-kk.webp",
     "Pyhän Paavalin katedraali": "assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali-kk.webp",
     "Tower Bridge": "assets/kartat/miniatyyrit/lontoo-tower-bridge-kk.webp",
-    "Thamesin vuorovesi": "assets/kartat/miniatyyrit/lontoo-thamesin-vuorovesi-kk.webp",
+    "Millennium Bridgen portaat": "assets/kartat/miniatyyrit/lontoo-thamesin-vuorovesi-kk.webp",
     "Vanha London Bridge": "assets/kartat/miniatyyrit/lontoo-vanha-london-bridge-vari2-kk.webp",
     "Exchange Alley": "assets/kartat/miniatyyrit/lontoo-exchange-alley-kk.webp",
     "Dickensin pubi": "assets/kartat/miniatyyrit/lontoo-dickensin-pubi-kk.webp",
