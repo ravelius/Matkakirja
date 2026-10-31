@@ -1,0 +1,141 @@
+{
+  "root": {
+    "reviewer": "root",
+    "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+    "personallyViewed": true,
+    "approvedForDelivery": true,
+    "id": "radialsystem-v",
+    "role": "A",
+    "taskNumber": 1411,
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/final/berliini-radialsystem-v.webp",
+    "sha256": "4352f7b0c608568be0a3a9213f0d18b238d87319f382011088a8829ce800a219",
+    "bytes": 866064,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "visualNotes": "Current four-arched brick hall and curved-gabled wing, tall chimney, glass2006overbuild, narrow river. Light/dark alpha checked, readable watercolor, no people/cars/logos.",
+    "depictedEra": "present",
+    "historicalReconstruction": false,
+    "receiverAccepted": false,
+    "ownerAccepted": false,
+    "gameIntegrated": false,
+    "published": false
+  },
+  "independent": {
+    "reviewer": "/root/ihmeet1_istanbul_rome",
+    "reviewedAt": "2026-10-31T14:49:43.776863+00:00",
+    "independentOfRootReview": true,
+    "personallyViewed": true,
+    "approvedForDelivery": true,
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/final/berliini-radialsystem-v.webp",
+    "sha256": "4352f7b0c608568be0a3a9213f0d18b238d87319f382011088a8829ce800a219",
+    "bytes": 866064,
+    "id": "radialsystem-v",
+    "role": "A",
+    "taskNumber": 1411,
+    "viewedFiles": [
+      "final/berliini-radialsystem-v.webp",
+      "qa/A-light.png",
+      "qa/A-dark.png",
+      "references/official-01.jpg",
+      "references/official-02.jpg",
+      "../ihmeet-era4-20261031/references/pariisi-tuileries.webp"
+    ],
+    "notes": [
+      "Personally inspected the final 1024 x 1024 WebP and full-size light/dark QA composites. Architecture matches the official reference photographs: four arched brick bays, ornate curved-gable right wing, elevated glass-and-steel extension, glazed left shaft and tall chimney.",
+      "The narrow river strip and waterfront terrace are present. No sky, opaque backing, labels, logos, people or vehicles. Chimney, building and water silhouette remain within transparent padding.",
+      "Fine linework and watercolor surface treatment are compatible with the supplied Tuileries map style. The building remains recognizable without contrast or brightness processing.",
+      "The dark and light composites show clean coherent alpha edges, including the glazing, chimney and irregular water boundary. Colored streaks visible in the direct WebP preview are absent in the decoded PNG composites; independent pixel comparison confirms alpha and every visible RGB pixel equal the supplied A-rgba.png."
+    ],
+    "minorReservations": [],
+    "technical": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "WEBP",
+      "mode": "RGBA",
+      "losslessChunk": "VP8L",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        48,
+        89,
+        968,
+        951
+      ],
+      "allAlphaEqualQARGBAPNG": true,
+      "allVisibleRGBEqualQARGBAPNG": true,
+      "rootExportRecord": "qa/export-verification.json"
+    },
+    "materialDefects": [],
+    "scope": "Independent local final-image QA only. R2 delivery, recipient acceptance, owner acceptance, runtime integration and publication are not established by this review."
+  },
+  "production": {
+    "id": "radialsystem-v",
+    "role": "A",
+    "taskNumber": 1411,
+    "attempts": [
+      {
+        "attempt": 1,
+        "qa": "PASS",
+        "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/prompts/A-v1.txt",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/candidates/A-v1-source.png"
+      }
+    ],
+    "status": "FINAL_QA_PASS",
+    "selectedAttempt": 1,
+    "generationCalls": 1,
+    "final": {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "radialsystem-v",
+      "role": "A",
+      "taskNumber": 1411,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/final/berliini-radialsystem-v.webp",
+      "sha256": "4352f7b0c608568be0a3a9213f0d18b238d87319f382011088a8829ce800a219",
+      "bytes": 866064,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Current four-arched brick hall and curved-gabled wing, tall chimney, glass2006overbuild, narrow river. Light/dark alpha checked, readable watercolor, no people/cars/logos.",
+      "depictedEra": "present",
+      "historicalReconstruction": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    "depictedEra": "present"
+  },
+  "technical": {
+    "checkedAt": "2026-10-31T14:44:01.475Z",
+    "files": [
+      {
+        "id": "A",
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/candidates/A-v1-source.png",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/final/berliini-radialsystem-v.webp",
+        "outputDimensions": [
+          1024,
+          1024
+        ],
+        "format": "webp",
+        "lossless": true,
+        "transparentOuterPaddingPx": 48,
+        "allAlphaValuesAndVisibleRGBEqualToResizedPNG": true,
+        "hiddenRGBChannelsCanonicalizedByWebP": 40965,
+        "processing": "Uniform proportional fit into 928 square plus 48px transparent margin on all sides, total1024. No crop, retouch, alpha keying, painted changes or generative edits. WebP may canonicalize invisible RGB under zero alpha; all alpha and visible color values verified unchanged."
+      }
+    ]
+  }
+}

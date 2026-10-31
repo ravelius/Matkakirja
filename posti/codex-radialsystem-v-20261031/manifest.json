@@ -1,0 +1,34 @@
+{
+  "taskNumber": 1411,
+  "assetCount": 1,
+  "sourceCommit": "f0f863ff833e54c37f652b6498946f53e3ef0375",
+  "sourcePath": "posti/karttaseppa-codex-berliini-radialsystem-v-20261031.md",
+  "assets": [
+    {
+      "reviewer": "root",
+      "reviewedAt": "2026-10-31T14:44:24.837373+00:00",
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "id": "radialsystem-v",
+      "role": "A",
+      "taskNumber": 1411,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/radialsystem-v-20261031/final/berliini-radialsystem-v.webp",
+      "sha256": "4352f7b0c608568be0a3a9213f0d18b238d87319f382011088a8829ce800a219",
+      "bytes": 866064,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "visualNotes": "Current four-arched brick hall and curved-gabled wing, tall chimney, glass2006overbuild, narrow river. Light/dark alpha checked, readable watercolor, no people/cars/logos.",
+      "depictedEra": "present",
+      "historicalReconstruction": false,
+      "receiverAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrated": false,
+      "published": false,
+      "path": "assets/kartat/miniatyyrit/berliini-radialsystem-v.webp",
+      "source": "new built-in ImageGen",
+      "r2Requested": false
+    }
+  ]
+}

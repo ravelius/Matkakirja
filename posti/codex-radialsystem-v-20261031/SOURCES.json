@@ -1,0 +1,38 @@
+{
+  "architecture": {
+    "officialPress": "https://www.radialsystem.de/de/service/presse/",
+    "officialHistory": "https://www.radialsystem.de/de/venue/geschichte/",
+    "photos": [
+      {
+        "url": "https://www.radialsystem.de/site/assets/files/3942/01_radialsystem_c_phil-dera.1480x925.jpg",
+        "local": "official-01.jpg",
+        "credit": "Phil Dera / Radialsystem",
+        "use": "Architectural reference only, not redistributed"
+      },
+      {
+        "url": "https://www.radialsystem.de/site/assets/files/3942/02_radialsystem_c_phil-dera.1480x925.jpg",
+        "local": "official-02.jpg",
+        "credit": "Phil Dera / Radialsystem",
+        "use": "Architectural reference only, not redistributed"
+      }
+    ],
+    "personallyViewed": true,
+    "interpretation": "Current waterfront facade after2006extension: surviving1905east part, glass addition, four arches, ornate right wing, chimney. Official history dates original station1881 and expansion1905; image depicts current surviving complex, not entire original1881station.",
+    "style": "pariisi-tuileries.webp; source style verification copied",
+    "toneAdjusted": false
+  },
+  "style": [
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-notre-dame.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-notre-dame.webp",
+      "blobSha": "cbabbe4717d5487da9bfc38337df81a1b7a00bbf",
+      "sha256": "e05a668a12a20bd45a7447cc227be23dce9a3235dea7493cab65936a6c585d73"
+    },
+    {
+      "path": "assets/kartat/miniatyyrit/pariisi-tuileries.webp",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261031-1105/pariisi-tuileries.webp",
+      "blobSha": "eb8a0dada89dc7113a4ae7628d182d29b519b41a",
+      "sha256": "14bdc59164679bbbf8e6ae96aaf59f1569daab55ff9458bb8c2a7aad46820d52"
+    }
+  ]
+}
