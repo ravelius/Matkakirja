@@ -3388,3 +3388,7 @@ Omistaja (KK:n kortti, sanatarkasti): kysymys 'Lisätäänkö tilinvaihtoon tark
 ## KONTEKSTIVAHTI KAIKILLE ROOLEILLE, OMISTAJA AJAA RIVIN (omistaja 31.10.2026 klo 22.17) (31.10.2026 klo 22.19)
 
 Omistaja (KK:n kortti, sanatarkasti): 'Tehdäänkö kontekstivahdille rivi, jonka ajat itse tilinvaihdossa?' → 'Kyllä (Suositus)' (selite: 'Jokainen rooli näkee oman kokonsa ja luovuttaa työnsä rajalla.'). Toteutus (PT): tools/hooks/kontekstivahti.py + asenna-kontekstivahti-hook.sh (viestiraja-hookin mallilla, käyttäjätaso ~/.claude/settings.json, PostToolUse * ja UserPromptSubmit; rajat 7.37 kansion mukaan: Postivahti 20–30, Laitetestaaja ja Äänittäjä 30–40, muut 25–35; Matkakirja-fable ohitetaan, PT/KK:lla oma vahti). Omistaja ajaa rivin itse; tilinvaihto.md kohta 6.
+
+## TILINVAIHTO 31.10.2026 klo 22.3x (31.10.2026 klo 22.36)
+
+Päätililtä (org f04011ee, viikko 91 %) tilille org b408744a (tili c01e5d1e, vvi@vvi.fi). Vanhan tilin sessiot eivät näy tällä tilillä, joten nollaus samoina sessioina ei ollut mahdollinen: luotiin uudet KK (local_37f7c945), JU, NS, KS, VS, PK, NUI, LAV, Postivahti ja Asemataulu; PT local_5df52e10. Levossa olevat roolit merkitty osoitekirjaan ilman sessiota. Asemataulu: Qo5w6Wk4JSYRwYbyf2fJrm (tämän tilin vanha taulu päivitetty). Luovutus-PR:t 5750–5757 yhdistetty, kotikansiot mainiin (ohitettu posti, siirtoseppa, aanittaja, laitetestaaja).
