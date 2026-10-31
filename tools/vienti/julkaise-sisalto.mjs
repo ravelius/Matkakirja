@@ -114,7 +114,7 @@ const MUUTOSNIMET = {
   kaupunkilehdet: 'kaupunkilehteä', maalehdet: 'maalehteä', nahtavyydet: 'nähtävyyttä', kysymykset: 'kysymystä',
   kohtaamiset: 'kohtaamista', julisteet: 'julistetta', radiot: 'radioasemaa', kohdekartat: 'kohdekarttaa',
   luennat: 'luentoa', elaintayt: 'eläinjuttua', kulttuurivisat: 'kulttuurivisaa', lehtitehtavat: 'lehtitehtävää',
-  miniatyyrit: 'pienoismallia', paikallisaarteet: 'paikallisaarretta', historianHetket: 'historian hetkeä',
+  miniatyyrit: 'pienoismallia', kohdekartanPiirrokset: 'kohdekartan piirrosta', paikallisaarteet: 'paikallisaarretta', historianHetket: 'historian hetkeä',
 };
 /*
  * PÄIVITETYT KOKOELMAT (Natiivi-UI 28.9.2026, omistajan toive Fablen kautta: "Peli päivittyi" -lappu kertoo oikeat

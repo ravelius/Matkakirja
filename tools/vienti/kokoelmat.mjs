@@ -239,6 +239,11 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
       'Nähtävyysjutut kaupungeittain; nimi = nähtävyyden nimi.'),
     miniatyyrit: sisakkain(`${P}miniatyyrit.js#MINIATYYRIT`, hae(`${P}miniatyyrit.js`).MINIATYYRIT,
       'Pienoismallit kaupungeittain: nähtävyyden nimi → kuvan polku tai tunnus (media.json, asset-miniatyyrit).'),
+    kohdekartanPiirrokset: sisakkain(`${P}kohdekartan-piirrokset.js#KOHDEKARTAN_PIIRROKSET`,
+      hae(`${P}kohdekartan-piirrokset.js`).KOHDEKARTAN_PIIRROKSET,
+      'Kohdekartan tasatut piirrokset kaupungeittain (omistaja 31.10.2026: sama musta- ja valkopiste ja keskikontrasti, '
+        + 'tools/tasaa-kohdekartan-piirrokset.mjs): nähtävyyden nimi → kuvan polku. Puuttuva = miniatyyrit-kokoelman '
+        + 'alkuperäinen; striimikartta käyttää aina alkuperäistä.'),
     skandaalit: ryhmittain(`${P}skandaalit.js#SKANDAALIT`, hae(`${P}skandaalit.js`).SKANDAALIT,
       'Skandaalit maittain (ISO3), sijainti lat/lon datassa.', 'maa'),
     monumentit: ryhmittain(`${P}monumentit-eurooppa.js#EUROOPAN_KADONNEET`,

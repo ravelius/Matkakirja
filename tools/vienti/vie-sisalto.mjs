@@ -266,7 +266,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (js/packs/tarinakaari.js kaariAanite; PT 12.10.2026, juna 184). Natiivi soittaa ne kysymyksen avautuessa ja
  *        paljastuksessa saapumisen tallenteen tavoin; vanhat buildit ohittavat kentän (lukijaääni kuten ennen).
  */
-export const SKEEMAVERSIO_TARKKA = '1.65';
+/*
+ *   1.66 kokoelma kohdekartanPiirrokset (Karttaseppä 31.10.2026; omistaja 09.31–09.34): kohdekartan tasatut piirrokset
+ *        kaupunki + nimi → kuva { arvo, url, varat, leveys, korkeus } kuten miniatyyrit. Natiivin kohdekartta
+ *        (KohdekarttaNakyma, NUI juna 216) käyttää niitä; puuttuva kokoelma tai nimi = miniatyyrit-kokoelman kuva.
+ *        Striimikartta käyttää aina alkuperäistä. Vanhat buildit ohittavat kokoelman.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.66';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

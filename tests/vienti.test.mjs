@@ -163,6 +163,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     maalehdet: avaimia(ns('maa-kategoriat.js').MAA_KATEGORIAT),
     nahtavyydet: sisakkain(ns('nahtavyysjutut.js').NAHTAVYYSJUTUT),
     miniatyyrit: sisakkain(ns('miniatyyrit.js').MINIATYYRIT),
+    kohdekartanPiirrokset: sisakkain(ns('kohdekartan-piirrokset.js').KOHDEKARTAN_PIIRROKSET),
     skandaalit: alkioita(ns('skandaalit.js').SKANDAALIT),
     monumentit: alkioita(ns('monumentit-eurooppa.js').EUROOPAN_KADONNEET),
     historianHetket: ns('historian-hetket.js').HISTORIAN_HETKET.length,

@@ -43,7 +43,7 @@ export const TYYPITETYT = {
 
 /** Kokoelmat, joiden raaka data ei ole olio: raaka → päätason kenttä. */
 export const RAAKA_KOKONAAN = {
-  kaupunkilehdet: 'aiheet ja kansi', maalehdet: 'aiheet', miniatyyrit: 'kuva', paikkatiedot: 'teksti (merkkijono-data)',
+  kaupunkilehdet: 'aiheet ja kansi', maalehdet: 'aiheet', miniatyyrit: 'kuva', kohdekartanPiirrokset: 'kuva', paikkatiedot: 'teksti (merkkijono-data)',
   pulmaaineisto: 'aineisto (sama arvo)',
 };
 const poimi = (d, avaimet) => Object.fromEntries(avaimet.map(([ulos, sisaan = ulos]) => [ulos, nollaksi(d?.[sisaan])]));
