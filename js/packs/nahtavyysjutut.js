@@ -5404,10 +5404,12 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    // Sibelius-monumentti Finlandian tilalle (omistaja 31.10.2026 klo 11.26, PT): paikka kartalla, teos jutussa.
-    'Sibelius-monumentti': {
+    // Sibeliuksen puisto Finlandian tilalle (omistaja 31.10.2026 klo 11.26 ja 11.43, PT): paikka kartalla, monumentti
+    // ja teos jutussa.
+    'Sibeliuksen puisto': {
       aika: '1967',
-      teksti: 'Sibeliuksen puistossa Töölössä seisoo yli kuudestasadasta hitsatusta teräsputkesta koottu monumentti. '
+      teksti: 'Sibeliuksen puisto on Töölön rantaan laskeva kallioinen puisto, jossa koivut ja männyt kasvavat meren ääressä. '
+        + 'Puistossa seisoo yli kuudestasadasta hitsatusta teräsputkesta koottu monumentti. '
         + 'Sen teki kuvanveistäjä Eila Hiltunen, ja se paljastettiin vuonna 1967, kymmenen vuotta säveltäjän '
         + 'kuoleman jälkeen. Putket muistuttavat urkuja, ja kun osa kaupunkilaisista kaipasi muistomerkkiin ihmistä, '
         + 'kallion viereen lisättiin Sibeliuksen kasvot. Säveltäjän tunnetuin teos syntyi vastalauseena: marraskuussa '

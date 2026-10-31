@@ -4857,15 +4857,14 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-helsinki-kantele',
       },
       /*
-       * SIBELIUS-MONUMENTTI FINLANDIAN TILALLE (omistaja 31.10.2026 klo 11.26: "Helsingissä on kohde joka ei ole paikka
+       * SIBELIUKSEN PUISTO FINLANDIAN TILALLE (omistaja 31.10.2026 klo 11.26: "Helsingissä on kohde joka ei ole paikka
        * vaan musiikki teos. Näitä ei saa olla kartalla. Helsingissä on sibelius monumentti jonka yhteyteen musiikki
-       * viittauksen voi sisällyttää tekstissa"; PT). Sibeliuksen puisto, en/fi-Wikipedia "Sibelius Monument"
-       * (60°10′56″N 24°54′47″E). Finlandia kerrotaan jutussa; syvennystarina syvennys-helsinki-finlandia ennallaan.
-       * Piirros puuttuu vielä: Eila Hiltusen teos (k. 2003) on tekijänoikeuden suojaama (tekijä k. < 70 v ei kuviin),
-       * joten Codex-tilaus odottaa PT:n päätöstä. Ilman piirrosta kohde on kaupungin sisäinen nosto (ei karttamerkkiä).
+       * viittauksen voi sisällyttää tekstissa"; 11.43 kortti B: kohde "Sibeliuksen puisto", piirros puistosta ilman
+       * veistosta, monumentti ja Finlandia vain tekstissä – Eila Hiltusen teos on tekijänoikeuden suojaama).
+       * Sibeliuksen puisto, Töölö (en/fi-Wikipedia "Sibelius Park"/"Sibeliuksen puisto").
        */
       {
-        nimi: 'Sibelius-monumentti', tyyppi: 'taide', lat: 60.18222, lon: 24.91306, wiki: 'Sibelius-monumentti',
+        nimi: 'Sibeliuksen puisto', tyyppi: 'luonto', lat: 60.18222, lon: 24.91306, wiki: 'Sibeliuksen puisto',
       },
       {
         nimi: 'Pirtukuningas', tyyppi: 'henkilo', lat: 60.1676, lon: 24.9547,
