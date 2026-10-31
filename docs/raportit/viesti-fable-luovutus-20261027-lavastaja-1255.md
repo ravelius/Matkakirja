@@ -2289,3 +2289,14 @@ VIEDYT (_valmiit/juoksupeli-kk-lavastaja-<nimi>-vienti-20261031; ajot ja skripti
 - leivonta-k06 (koekohtaus 06, aurinko f4df529a6 45°/pohja 39,97°; tausta 1-0/2-0, muurikate, 6 rakennusta, 5 osasarjan ruutua, polvi 0,65/0,3;
   koe06.zsh; 3dddcd3d20f7) → VS (pari 06 + puhki-% pyydetty) + PT. Jos VS pyytää säätöä: valo_polvi.py uudelleen *-k06-kopioihin tai koe06.zsh uudella PO/KU:lla.
 - Levyvahti päättynyt (18.39), herätykset poistettu. Työkalumuutokset: lattia_tliitokset.py (ALUE_LAATIKKO, VAAKA, HITSI=0), leivo_osasarja.py (siivous).
+
+## LISÄYS 166 (31.10. 19.4x): JONO 4 SELVITYS (Notre-Dame) — ALOITA TÄSTÄ
+- Mallit: R2 omat-mallit <versio>/mallit.json; paikallinen v6k26 = _valmiit/omat-mallit-vienti-20261017-v6k26/kartta/omat-mallit/v6k26/ (Pariisi: notre-dame,
+  concorde, prefektuuri, banque-de-france, quai-branly, louvre). NS:n ehdokas v6k27 (_tyo/natiiviseppa/nd-leikkaus/v6k27, muut linkkeinä v6k26:een) poisti
+  notre-damen maan (vain nd_rakennus + spiira) → PT: leveä leikkaus pidetään → pohjaksi v6k26:n notre-dame (solmut maa, nd_puut, nd_rakennus, spiira).
+- ND v6k26 lod0: maa-mesh materiaalit nd_maa (kuva maa_v9c, 27 912 kolmiota) + nd_kalkkikivi (940, rantamuurit); nd_atlas (nd_atlas_lod0, 130 589 kolmiota).
+  Lähteet _valmiit/notre-dame-v1 (lahde/maa.py, parvis_v9.py = IGN-orto retusoituna; tekstuurit/maa_v9c.jpg 2048², maa.json rajat x −205…208, y −292…121,
+  UV = rajat koko kuvaan). Omistaja 10.10. (parvis_v9): "vähemmän keinotekoinen" → ortokuvan kivetys, ei 2 m:n ruudukkoa. maa_v9d = v9c × 0,57 (hylätty: tummensi).
+- KYSYTTY PT:ltä 19.4x: mikä on "havainnetyylin" kuva Pariisille (ei löydy). Ehdotus: v6k26:n maa + Pekingin havainteen tyyli, laikku tummemmaksi Googlen
+  jalkakäytävien tasolle, parvis selkeiksi laattavyöhykkeiksi, nurmen polut ennallaan. Sakaristo: etsi nd_atlasista valkoinen tekstuuriton alue (UV-saari ilman
+  atlasta) → tekstuuri (kivi_nd tai Codex). 5 muuta Pariisin mallia: sama tarkistus (maa/valkoiset osat). Vienti NS:n kautta, jälkeen-kuva NUI:n simulla PT:lle.
