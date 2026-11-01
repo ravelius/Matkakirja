@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-01T02:08:52.811402+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "outcome": "13 native selected images ready for receiver seam review; minor lock-edge deviations disclosed",
+  "evidenceViewed": [
+    "qa/contact-sheet.png",
+    "qa/guide-contact-sheet.png",
+    "final/pariisi-1m-r01-c06.png",
+    "final/pariisi-1m-r02-c09.png",
+    "workers/worker.json",
+    "qa/batch-validation.json"
+  ],
+  "findings": [
+    "Guide and final contact sheets preserve visible street, block, rail, park, canal and paper-edge arrangement.",
+    "Native r02-c09 roofs and facade linework retain q11-style detail; canal, bridges and dry lock island remain visible.",
+    "All 13 files are native 1536x1024 RGB and match their selected raw bytes.",
+    "No large water-colour components outside masks; small roof highlights are not classified as water."
+  ],
+  "limitations": [
+    "r02-c09:n sulun sivuissa on kaksi pientä sinistä reunakaistaletta 5 pikselillä laajennetun maskin ulkopuolella: 225 px [749,181,774,223] ja 96 px [720,196,735,225]. Kuiva sulku/saari säilyy; täysin pikselintarkkaa vesimaskin noudattamista ei väitetä.",
+    "Erän 17 limityksen RGB-MAE on 8,04–27,15/255. Vastaanottajan saumaleikkaus ja lopullinen saumakatselmus ovat vielä tekemättä.",
+    "Kaupunkireunan paperisävy ja häivytyksen voimakkuus vaihtelevat hieman kuvien välillä.",
+    "Geometrian tarkistus on visuaalinen; pikselintarkkaa maanpintageometriaa, vastaanottajan hyväksyntää tai pelinäyttöä ei ole varmennettu."
+  ]
+}

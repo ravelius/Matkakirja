@@ -1,0 +1,19 @@
+{
+  "order": "row major, 4 columns",
+  "tiles": [
+    "pariisi-1m-r01-c05",
+    "pariisi-1m-r01-c06",
+    "pariisi-1m-r01-c07",
+    "pariisi-1m-r01-c08",
+    "pariisi-1m-r01-c09",
+    "pariisi-1m-r01-c10",
+    "pariisi-1m-r02-c04",
+    "pariisi-1m-r02-c05",
+    "pariisi-1m-r02-c06",
+    "pariisi-1m-r02-c07",
+    "pariisi-1m-r02-c08",
+    "pariisi-1m-r02-c09",
+    "pariisi-1m-r02-c10"
+  ],
+  "purpose": "Separate complete tiles, overlaps repeated; not a stitched game map."
+}
