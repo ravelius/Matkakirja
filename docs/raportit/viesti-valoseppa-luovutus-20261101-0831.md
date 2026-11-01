@@ -26,3 +26,13 @@ Syy: konteksti 26 % (pehmeä raja, luonteva tauko: PT:n kuittausta odotetaan). L
 
 ## AVOIN 2 (ennallaan)
 - Lokit T7:lle kuittausten jälkeen (PT:n siirra_lokit_t7.py); LAV v4 odottaa levyä ≥ 70 Gi.
+
+## LISÄYS 08.4x: PT 08.3x kuittasi b5:n suunnaksi — ENSIN kaksi korjausta, sitten oletus
+1) **Marmorikaiteen alaosan laikut** (b5 lähikuva, koko leveydeltä) → kaiteet ohi kartasta. Toteutus: RakennaSolmut-ryhmän pinta (V4_marmori /
+   kaide) tai mallin nimi ("kaiteet", g-jalusta-kaiteet, osasarja kaide-*) → ei Kolmiot()-varjostajiksi; tarkista nimet `mika`lla kaiteen kohdalta.
+2) **Kaukokuvan k5 kaksi tummaa suorakaidetta** muurin keskiportin molemmin puolin (raystaskartta-kauko-k0-k5.jpg, alempi kuva, portin vasen ja
+   oikea puoli, muurin yläpuoliskolla; k0:ssa ei). Terävä yläreuna = alaspäin katsova kerros juuri tuolla korkeudella muurin edessä
+   (oletus: muurin sisäinen/portin sivukäytävän katto tai kateosa, joka osuu 0,45 m + solun pyöristyksen sisään). Selvitä vianhaulla
+   (`valo raystasliuku 2 0 3.5` kaukokamerassa) + `mika` suorakaiteen kohdalta; korjaus todennäköisesti lähdesuodatuksella tai
+   näytteen ulos-etäisyyden kasvatuksella (0,45 → 0,7) tai vaatimalla kerrokselta vähimmäisuloke.
+3) Sitten b5 oletukseksi (ValoKohteet: voima 1, alku 0,5, pituus 3,5) → todennus → sha NS:lle runkoon 216 + uusi pari (lähikuva + kauko) PT:lle.
