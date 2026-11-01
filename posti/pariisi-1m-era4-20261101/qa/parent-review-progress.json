@@ -1,0 +1,12 @@
+{
+  "reviewComplete": false,
+  "tiles": {
+    "r05-c03": {
+      "sha256": "561b894e69e93095598cb270268b0620af9f3c22d3cc45da2d3e3be560aad141",
+      "reviewedAt": "2026-11-01T02:25:31.163190+00:00",
+      "fullGuideMaskFinalViewed": true,
+      "status": "pass-for-receiver-review",
+      "waterProxyResolution": "Missing-water proxy corresponds to the two explicit dry grassy islands/peninsulas in guide. Both preserved, not erroneously filled blue. Riverbank and road layout retained."
+    }
+  }
+}

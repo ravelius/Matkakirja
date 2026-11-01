@@ -1,0 +1,28 @@
+{
+  "reviewedAt": "2026-11-01T02:29:12.808725+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "outcome": "native-16-images-reviewed-source-v2-corrections-applied-with-small-disclosed-water-edge-residuals",
+  "reviewedImageCount": 16,
+  "fullNativeFlaggedTilesViewed": [
+    "r05-c01",
+    "r05-c02",
+    "r05-c03",
+    "r05-c04",
+    "r06-c01"
+  ],
+  "fullGuideAndFinalContactsCompared": true,
+  "nativeRawIdentityVerified": true,
+  "exactGroundGeometryCertified": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "limitations": [
+    "V2-lähteen kokonaiset uusinnat: r05-c01,c02,c04; lisäksi r06-c01:n laaja jokirajavirhe korjattu uudella kokonaisella otolla. V1-yritykset säilyvät historiassa.",
+    "Pieniä jäljelle jääviä vesiväripoikkeamia annetaan vastaanottajan arvioon: r05-c01 355px pitkä reunajäämä bbox608,915,619,1024 ja163px bbox568,555,593,609; r05-c02 pieni202px sininen tasku bbox785,98,805,114 sekä24px kanavanpätkä bbox548,224,557,229.",
+    "r06-c01: sallitun lammen yläpuolisessa kapeassa kanavassa on429px sininen jäämä bbox606,13,628,169 sekä68px jatke. Pääjoen aiempi25pxalapään ylitys ja laaja sivusiirtymä poistettu. Ei väitettä täysin pikselintarkasta vesimaskin toteutumisesta.",
+    "r05-c02/c03:n suuret puuttuvan vesivärin mittaushavainnot ovat ohjeessa olevia kuivia nurmisaari- ja niemimuotoja; niitä ei täytetty vedellä. r05-c01/r06-c01:n puuttuvan vesivärin reunahavainnot sisältävät vaalean rantaviivan ja paperihäivytyksen.",
+    "Ulkoreunojen rakennusmusteen voimakkuus vaihtelee hieman; erityisesti r05-c11 on lähteen hyvin haaleaa reunaa tummempi. Maanpinnan kadut ja tyhjät paperialueet säilyvät.",
+    "20sisälimityksen RGB-MAE 3.51–28.94/255 ei ole vastaanottajan saumahyväksyntä; tarvitaan lähteen pienimmän eron leikkauspolku ja kapea häivytys."
+  ]
+}
