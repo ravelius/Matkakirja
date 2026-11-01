@@ -2671,3 +2671,10 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 ## LISÄYS 200 (1.11. 15.2x): JONOON – KUJAKIVIEN LATTIAKUVA (PK, PT: ei nyt)
 - AVOIN (jono, ei aloitettu): kujakivien lattiatekstuurissa ruskea marmorisuonitus; havainteessa tasaisempi harmaa kivi ja kivikohtainen
   sävyvaihtelu. Kuva proto-3d/lokit/havainne-editori-20261101-152108/kivi-lahikuva-02.jpg (havainne | ennen | jälkeen PK:n sävykorjauksen a1de2563d).
+
+## LISÄYS 201 (1.11. 15.4x): JONOON – WUMENIN U-PIHAN LEVEYS (VS, PT:n pyynnöstä, ei kiireellinen)
+- AVOIN (jono, ei aloitettu): havainne 06 näyttää kapean käytävän Wumenin (Meridiaaniportin) siipien välissä (siivet terasseineen lähellä,
+  keskiaukko auki); pelin U-piha moninkertaisesti leveämpi → siivet eivät mahdu kuvaan eikä siiven varjo osu käytävälle. Kuvat:
+  proto-3d/lokit/esikatselu-20261101-154237/v06-koonti.jpg (yläkuvat), havainne-editori-20261101-145338/06/havainne.png.
+  HUOM ennen muutosta: havainne koskee ulkoasua, paikat ja mitat pidetään oikeina (omistaja 20.10.) → tarkista oikea pihan leveys
+  ennen kuin kavennetaan; mahdollisesti kyse kameran paikasta, ei mallista. Päätös PT:ltä.
