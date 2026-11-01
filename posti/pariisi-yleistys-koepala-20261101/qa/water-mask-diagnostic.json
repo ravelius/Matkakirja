@@ -1,0 +1,326 @@
+{
+  "method": "Approximate turquoise segmentation RGB: G-R>35,B-R>35,abs(G-B)<23,G>125; 4-connected components>=20 px; mask dilated by 6 pixels. Diagnostic only, not exact geometry validation.",
+  "components": [
+    {
+      "pixels": 8253,
+      "box": [
+        474,
+        405,
+        668,
+        491
+      ],
+      "insideMask": 7926,
+      "outside6pxTolerance": 3
+    },
+    {
+      "pixels": 8063,
+      "box": [
+        137,
+        276,
+        345,
+        393
+      ],
+      "insideMask": 7736,
+      "outside6pxTolerance": 1
+    },
+    {
+      "pixels": 5791,
+      "box": [
+        0,
+        203,
+        135,
+        296
+      ],
+      "insideMask": 5719,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 5513,
+      "box": [
+        1216,
+        629,
+        1367,
+        757
+      ],
+      "insideMask": 2822,
+      "outside6pxTolerance": 1248
+    },
+    {
+      "pixels": 4910,
+      "box": [
+        1260,
+        775,
+        1408,
+        899
+      ],
+      "insideMask": 3209,
+      "outside6pxTolerance": 403
+    },
+    {
+      "pixels": 4780,
+      "box": [
+        666,
+        444,
+        849,
+        574
+      ],
+      "insideMask": 3123,
+      "outside6pxTolerance": 177
+    },
+    {
+      "pixels": 4732,
+      "box": [
+        352,
+        366,
+        471,
+        438
+      ],
+      "insideMask": 4563,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 2524,
+      "box": [
+        1377,
+        714,
+        1477,
+        778
+      ],
+      "insideMask": 1715,
+      "outside6pxTolerance": 66
+    },
+    {
+      "pixels": 2508,
+      "box": [
+        867,
+        494,
+        1040,
+        567
+      ],
+      "insideMask": 192,
+      "outside6pxTolerance": 1144
+    },
+    {
+      "pixels": 2229,
+      "box": [
+        1420,
+        875,
+        1510,
+        930
+      ],
+      "insideMask": 2002,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 1890,
+      "box": [
+        800,
+        584,
+        949,
+        701
+      ],
+      "insideMask": 1377,
+      "outside6pxTolerance": 13
+    },
+    {
+      "pixels": 965,
+      "box": [
+        1135,
+        593,
+        1199,
+        632
+      ],
+      "insideMask": 13,
+      "outside6pxTolerance": 669
+    },
+    {
+      "pixels": 930,
+      "box": [
+        1494,
+        771,
+        1536,
+        811
+      ],
+      "insideMask": 360,
+      "outside6pxTolerance": 253
+    },
+    {
+      "pixels": 891,
+      "box": [
+        1130,
+        777,
+        1238,
+        839
+      ],
+      "insideMask": 614,
+      "outside6pxTolerance": 6
+    },
+    {
+      "pixels": 887,
+      "box": [
+        1057,
+        561,
+        1116,
+        597
+      ],
+      "insideMask": 36,
+      "outside6pxTolerance": 587
+    },
+    {
+      "pixels": 722,
+      "box": [
+        94,
+        129,
+        130,
+        155
+      ],
+      "insideMask": 578,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 497,
+      "box": [
+        969,
+        705,
+        1024,
+        733
+      ],
+      "insideMask": 260,
+      "outside6pxTolerance": 13
+    },
+    {
+      "pixels": 412,
+      "box": [
+        1502,
+        937,
+        1536,
+        963
+      ],
+      "insideMask": 130,
+      "outside6pxTolerance": 106
+    },
+    {
+      "pixels": 350,
+      "box": [
+        313,
+        220,
+        339,
+        238
+      ],
+      "insideMask": 222,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 326,
+      "box": [
+        1060,
+        745,
+        1106,
+        777
+      ],
+      "insideMask": 121,
+      "outside6pxTolerance": 25
+    },
+    {
+      "pixels": 110,
+      "box": [
+        337,
+        265,
+        351,
+        277
+      ],
+      "insideMask": 50,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 101,
+      "box": [
+        370,
+        211,
+        384,
+        221
+      ],
+      "insideMask": 58,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 56,
+      "box": [
+        1023,
+        730,
+        1039,
+        742
+      ],
+      "insideMask": 15,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 40,
+      "box": [
+        712,
+        500,
+        727,
+        513
+      ],
+      "insideMask": 19,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 29,
+      "box": [
+        998,
+        711,
+        1017,
+        721
+      ],
+      "insideMask": 29,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 24,
+      "box": [
+        1373,
+        841,
+        1385,
+        847
+      ],
+      "insideMask": 21,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 23,
+      "box": [
+        887,
+        649,
+        900,
+        658
+      ],
+      "insideMask": 3,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 23,
+      "box": [
+        1266,
+        837,
+        1275,
+        842
+      ],
+      "insideMask": 23,
+      "outside6pxTolerance": 0
+    },
+    {
+      "pixels": 21,
+      "box": [
+        1254,
+        844,
+        1259,
+        852
+      ],
+      "insideMask": 0,
+      "outside6pxTolerance": 10
+    }
+  ],
+  "detectedWaterPixels": 57600,
+  "outside6pxTolerancePixels": 4724
+}

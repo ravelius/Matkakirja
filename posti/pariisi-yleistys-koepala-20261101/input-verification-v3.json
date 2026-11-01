@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-01T06:28:13.145529+00:00",
+  "commit": "0b4c84ce342d2f8075ff3031f09cbe2af3641d41",
+  "sourceBlob": "5940565c1beaaab80facbc649822896d24b3cdf3",
+  "files": [
+    {
+      "file": "ohje-pariisi-yleistys-koepala-v3.png",
+      "sha256": "e62b432cab94b2e1fa90728a34e9fc5e28cd52395bca7c33f4c1a632c7c169a9",
+      "bytes": 2533980
+    },
+    {
+      "file": "vertailu-ohje-nyt-sama-rajaus.png",
+      "sha256": "d68ea95b155d1bf499f5df845a29b20a0fce34413276ce501509dc0cf8bdb998",
+      "bytes": 3128282
+    },
+    {
+      "file": "vesimaski-pariisi-yleistys-koepala.png",
+      "sha256": "bb67aca776836dea58b726a6ae59508627e5847b151c3f6d26387dad28dcc0d9",
+      "bytes": 7772
+    },
+    {
+      "file": "G-referenssi-owner-style-G-confirmed.jpg",
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f",
+      "bytes": 532470
+    },
+    {
+      "file": "vertailu-G-nyt-yleistys.jpg",
+      "sha256": "29d955a8dd0481a71a2cd1e91d13ef61f8696966591a2eeabcceb4e4be867a26",
+      "bytes": 2061882
+    }
+  ],
+  "supersededV2Generations": 0
+}

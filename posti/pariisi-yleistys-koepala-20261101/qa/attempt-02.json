@@ -1,0 +1,11 @@
+{
+  "attempt": 2,
+  "status": "reserve-style-candidate-with-known-water-geometry-deviations",
+  "sha256": "9e43777834f1cd16b02299204acee32ade701609ac8cc5de26e3d04cbf576797",
+  "findings": [
+    "Northern Cite river branch wider/shifted than v3 mask, about 10-25 px locally",
+    "Small basins enlarged slightly",
+    "Cite ordinary blocks restored; Orsay and Louvre cleared; no cathedral/chapel"
+  ],
+  "pixelRetouch": false
+}

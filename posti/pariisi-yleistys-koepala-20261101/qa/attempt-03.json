@@ -1,0 +1,11 @@
+{
+  "attempt": 3,
+  "status": "rejected",
+  "sha256": "752b053675123f0bf2874b8b762d404fe130d48ed67122499f45ee09c6a4dead",
+  "findings": [
+    "Orsay site retains an unwanted roofed strip",
+    "Additional building intrudes on eastern Cite reservation",
+    "Water footprint still does not precisely follow mask"
+  ],
+  "pixelRetouch": false
+}

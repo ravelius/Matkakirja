@@ -1,0 +1,64 @@
+{
+  "taskNumber": 1578,
+  "reviewedAt": "2026-11-01T06:37:54.776639+00:00",
+  "selectedAttempt": 2,
+  "generationCalls": 3,
+  "tool": "built-in image_gen",
+  "fullNewGenerationEveryAttempt": true,
+  "pixelRetouch": false,
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "nativeMode": "RGB",
+  "nativeBytes": 4039682,
+  "nativeSHA256": "9e43777834f1cd16b02299204acee32ade701609ac8cc5de26e3d04cbf576797",
+  "status": "style-trial-reviewed-with-disclosed-geometry-deviations",
+  "strictGeometryPass": false,
+  "ownerReviewCandidate": true,
+  "productionGameReady": false,
+  "fullImageReviewed": true,
+  "nativeDetailCropsReviewed": [
+    "attempt-02-cite.png",
+    "attempt-02-tuileries-orsay.png",
+    "attempt-02-block-detail.png"
+  ],
+  "passes": [
+    "Broad blue-grey mansard building volumes with pale facades",
+    "Broad ivory streets; large round tree rows",
+    "Cite ordinary blocks retained",
+    "Louvre/Cour Carree dry and open without pyramid",
+    "Orsay main museum footprint open",
+    "No Notre-Dame cathedral or Sainte-Chapelle spire; eastern island plaza open",
+    "Four mapped Tuileries basins; no extra central basin",
+    "No identifiable people, cars, boats, aircraft or text"
+  ],
+  "deviations": [
+    {
+      "area": "Cite northern channel",
+      "detail": "Locally widened and shifted roughly 10-25 pixels relative to v3 water mask; strict mask invariant not met."
+    },
+    {
+      "area": "Cite eastern bend and Ile Saint-Louis shore",
+      "detail": "Bank contour and channel width change locally; exact land/water registration not certified."
+    },
+    {
+      "area": "Tuileries small basins",
+      "detail": "Correct locations, slightly enlarged outlines, within 6-pixel mask diagnostic tolerance."
+    },
+    {
+      "area": "Sainte-Chapelle and future landmark sprite reservations",
+      "detail": "Named landmarks absent; exact future enlarged sprite fitting and fully unobstructed footprints not certified from illustrative geometry."
+    },
+    {
+      "area": "Building generalization",
+      "detail": "Main masses broadened, but some narrow residual houses remain in small triangular plots."
+    }
+  ],
+  "waterDiagnostic": "water-mask-diagnostic.json",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "citywideGeneralizationAuthorized": false
+}

@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "status": "rejected-for-full-regeneration",
+  "sha256": "6ca45ce3ae0dcb496dc0d121e10e29c4a156d0fb88a4c14f5c42e8185dc7d376",
+  "findings": [
+    "Cite ordinary building blocks wrongly removed wholesale",
+    "Extra Tuileries water basin near 263,190 outside mask",
+    "Orsay reservation not cleared"
+  ],
+  "positive": [
+    "G-like blue-grey roofs and pale facades",
+    "Large round tree rows",
+    "Louvre reservation cleared",
+    "Main street and river geometry broadly followed"
+  ],
+  "pixelRetouch": false
+}
