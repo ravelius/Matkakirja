@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-sky-two-tile-trial",
+  "atlas": {
+    "width": 4096,
+    "height": 2048,
+    "origin": "top-left",
+    "xDirection": "right",
+    "yDirection": "down"
+  },
+  "nativePixelToAtlasPixelRatio": 1,
+  "upscaled": false,
+  "horizonY": 1024,
+  "tiles": [
+    {
+      "file": "pala-1.png",
+      "x0": 0,
+      "y0": 137,
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "pala-2.png",
+      "x0": 1508,
+      "y0": 137,
+      "width": 1774,
+      "height": 887
+    }
+  ],
+  "overlap": {
+    "width": 266,
+    "x0": 1508,
+    "x1Exclusive": 1774,
+    "y0": 137,
+    "y1Exclusive": 1024
+  },
+  "suggestedTrialCrossfade": {
+    "firstTileWeight": "1 - t",
+    "secondTileWeight": "t",
+    "t": "(atlasX - 1508) / 265",
+    "note": "Diagnostic preview uses encoded RGB linear weights; receiver chooses final game blend."
+  },
+  "coveredRectangle": {
+    "x0": 0,
+    "y0": 137,
+    "width": 3282,
+    "height": 887
+  },
+  "fullPanorama": false,
+  "receiverSeamTest": "pending",
+  "gameScreenshotQa": "not-run",
+  "metadataFile": "taivas.json",
+  "sourceOrder": "posti/valoseppa-codex-paivataivas-v3-paloina-20261101.md",
+  "sourceCommit": "f1903f573a873b103dd8d7011cf9c78fb20525d9",
+  "generationMode": "built-in image_gen; two complete new native images",
+  "generationCalls": 2,
+  "licenseBasis": "own AI-generated production; no external photography"
+}

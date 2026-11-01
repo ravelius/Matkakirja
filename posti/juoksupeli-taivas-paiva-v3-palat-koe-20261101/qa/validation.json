@@ -1,0 +1,203 @@
+{
+  "checkedAt": "2026-11-01T00:34:21.550691+00:00",
+  "status": "NATIVE_TWO_TILE_TRIAL_READY_FOR_RECEIVER_SEAM_TEST",
+  "generationCalls": 2,
+  "upscaled": false,
+  "nativePixelToAtlasPixelRatio": 1,
+  "files": [
+    {
+      "file": "pala-1.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1893456,
+      "sha256": "2fa93629a7f14cce01df9b08101777250f5b5ccaf51e6b22d388bbe9270abeca",
+      "identicalToNativeToolOutput": true
+    },
+    {
+      "file": "pala-2.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1841247,
+      "sha256": "4381752c43acaec10e8bb1c320c515517a8018a1ff473eb05672800a5b78d560",
+      "identicalToNativeToolOutput": true
+    }
+  ],
+  "overlap": {
+    "globalX": [
+      1508,
+      1774
+    ],
+    "globalY": [
+      137,
+      1024
+    ],
+    "width": 266,
+    "rgbMeanAbsoluteError": 8.451746615693688,
+    "rgbMedianAbsoluteError": 6,
+    "rgb95PercentileAbsoluteError": 24,
+    "meanSignedRgbDifference": [
+      5.2974163141789035,
+      1.1400767985352331,
+      -0.84731417043173
+    ],
+    "pixelIdentical": false,
+    "cloudSilhouetteProximityChebyshevPixels": {
+      "1": {
+        "tile1EdgesNearTile2Percent": 75.57113187954309,
+        "tile2EdgesNearTile1Percent": 73.16639125460786
+      },
+      "2": {
+        "tile1EdgesNearTile2Percent": 90.99169262720665,
+        "tile2EdgesNearTile1Percent": 89.5004448964027
+      },
+      "4": {
+        "tile1EdgesNearTile2Percent": 95.8073727933541,
+        "tile2EdgesNearTile1Percent": 93.61891445277743
+      },
+      "8": {
+        "tile1EdgesNearTile2Percent": 97.533748701973,
+        "tile2EdgesNearTile1Percent": 96.12304563365959
+      },
+      "16": {
+        "tile1EdgesNearTile2Percent": 98.05295950155764,
+        "tile2EdgesNearTile1Percent": 98.41108427609
+      }
+    },
+    "method": "R>115 G>125 B>135 R/B>0.65, inner contour from 3x3 erosion, exclude 3px frame. Symmetric contour coverage within radius. No image retouching."
+  },
+  "nativeCloudSharpnessDiagnostic": {
+    "roi": [
+      240,
+      180,
+      1480,
+      800
+    ],
+    "method": "grayscale FIND_EDGES variance excluding 1px filter frame; identical native-size ROI per source/output pair",
+    "tiles": [
+      {
+        "tile": 1,
+        "sourceCropVariance": 90.17635835202564,
+        "nativeCandidateVariance": 728.3406012602977,
+        "ratio": 8.076846465866815
+      },
+      {
+        "tile": 2,
+        "sourceCropVariance": 105.03007957892994,
+        "nativeCandidateVariance": 552.2745065029474,
+        "ratio": 5.258250862200994
+      }
+    ],
+    "notTheGameScreenshotMetric": true
+  },
+  "sun": {
+    "localCenter": [
+      520.9410430839002,
+      644.8412698412699
+    ],
+    "maskPixels": 1323,
+    "globalCenter": [
+      2028.9410430839002,
+      781.8412698412699
+    ],
+    "azimuthDeg": 235.00489636479594,
+    "elevationDeg": 21.28348214285714
+  },
+  "metadataSha256": "74e8ca33af7f7416220a22b89ea58417aaf1a8671f1413059192620a96217c53",
+  "gameScreenshotQa": {
+    "status": "not-run",
+    "targetVariance": 1400,
+    "receiver": "Valoseppa piha06 o3 at 1448x1086"
+  },
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "remainingPanoramaTilesAuthorized": false,
+  "skyColorDiagnostics": {
+    "measurements": [
+      {
+        "tile": 1,
+        "roi": [
+          0,
+          790,
+          120,
+          835
+        ],
+        "medianRgb": [
+          92,
+          167,
+          241
+        ]
+      },
+      {
+        "tile": 2,
+        "roi": [
+          550,
+          750,
+          650,
+          790
+        ],
+        "medianRgb": [
+          106,
+          173,
+          240
+        ]
+      }
+    ],
+    "targetApproximateRgb": [
+      145,
+      193,
+      251
+    ],
+    "gameScreenshotColorMetricNotRun": true,
+    "horizonBandMeasurements": [
+      {
+        "tile": 1,
+        "bandLocalY": [
+          860,
+          887
+        ],
+        "bandGlobalY": [
+          997,
+          1024
+        ],
+        "unobstructedBlueCriterion": "R/B < 0.7 and G/B < 0.9",
+        "pixelCount": 37367,
+        "medianRgb": [
+          127,
+          182,
+          235
+        ]
+      },
+      {
+        "tile": 2,
+        "bandLocalY": [
+          860,
+          887
+        ],
+        "bandGlobalY": [
+          997,
+          1024
+        ],
+        "unobstructedBlueCriterion": "R/B < 0.7 and G/B < 0.9",
+        "pixelCount": 36567,
+        "medianRgb": [
+          134,
+          195,
+          245
+        ]
+      }
+    ]
+  },
+  "visualReview": {
+    "seamStripsViewedAtNativeScale": true,
+    "crossfadePreviewViewed": true,
+    "outcome": "Suitable for receiver crossfade trial: no gross seam or dominant cloud displacement, small local silhouette/brightness differences retained and quantified.",
+    "finalGameAcceptance": false
+  }
+}
