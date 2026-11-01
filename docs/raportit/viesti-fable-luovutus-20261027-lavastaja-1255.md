@@ -2744,3 +2744,10 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 - PT: tausta-v91 (7e9b6819202c) ja rakennukset-v92 (70c7b997c2f9, ilman edusta-v3:a) kuitattu. PT ilmoittaa, kun lukitus aukeaa → sitten
   SHA-rivit JU:lle/NS:lle (PK "kielletty-tausta-v91/", "kielletty-rakennukset-v92/").
 - Jono: LISÄYS 200 (kujakivi, PT: ei nyt), 201 (Wumenin U-piha, odottaa PT:n päätöstä). Ei ajoja käynnissä.
+
+## LISÄYS 209 (1.11. 23.2x): WUMENIN U-PIHA (LISÄYS 201, PT:n päätös) = TODELLINEN → EI MALLIMUUTOSTA, KAMERAN PAIKKA
+- Mittaus: a-meridiaaniportti-lod2 (v92) U-jalustan siipien sisäseinät x −37,3 / +41,0 → piha 78,3 m; siivet 24,1 m.
+  OSM way/638156366 (juoksupeli-kk-pohja-v1/pohja.json, portit.A): sisäreunat −26,5…53,7 (pohjoispää) / −24,3…56,0 (eteläpää) → 80,2–80,3 m;
+  siivet 21,0 (länsi) ja 23,8 m (itä). Peli ≈ todellisuus (−2 m) → ei kavennusta (omistaja 20.10.: mitat oikeina).
+- Havainteen 06 kapea käytävä = kameran paikka → rivi VS:lle 23.2x (kamera 06 lähemmäs / siipien väliin). LISÄYS 201 suljettu.
+- Jono: LISÄYS 200 (kujakivi, PT: ei nyt). v92 + tausta-v91 odottavat junan 217 lukituksen aukeamista (PT ilmoittaa).
