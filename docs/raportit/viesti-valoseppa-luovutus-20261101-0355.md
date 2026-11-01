@@ -20,6 +20,11 @@ Edellinen: viesti-valoseppa-luovutus-20261101-0325.md (työtavat voimassa). Prot
   `_tyo/linssiseppa2/taivas-v3-8192-tulos.md`, kuva `lokit/pari-k06z2-20261101-034452/taivas-saumat.jpg`. Palat: `_tyo/linssiseppa2/taivas-v3-8192/`.
   PT:lle lähetetty 03.5x.
 
+## PT:n PÄÄTÖS 04.3x
+- Taivas 8192 kuitattu SUUNNAKSI (saumaton, selvästi terävämpi; 948 vs 1400 = pilvien tiheys, ei tarkkuus; KK arvioi reitin koosteissa).
+  Ehdot runkoon: iPadin GPU-mittaus (JU:n simu tai laite); pakkaus (`taivaspakkaus 1`) vasta, jos muisti ei riitä.
+- Räystäiden juurisyy (kaiteeton c2-glb ilman leivontaa) kuitattu; jatko LAV:n leivonnan jälkeen (kohta 1).
+
 ## AVOIMET (järjestys)
 1. **Räystäät**: kun LAV toimittaa leivotut kaiteettomat → juureen (juuri-k06f/kielletty-c2-v26 → uusi kansio), aja
    `skriptit-20261031/pari-k06z2.zsh` -pohjalla o3 + p1 (tayttopeitto 1 0.35) ja mika (tarkista "LEIVOTTU"). Sitten o3-pari PT:lle.
