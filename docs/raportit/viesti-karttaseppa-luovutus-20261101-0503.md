@@ -39,3 +39,15 @@ Luovutuksen syy: konteksti 25 % (pehmeä raja).
 - Maaston 2026-09-24 → 2026-10-29 -vaihdon pieni PR (luovutus 20261031-2325, kohta 4). 60 FPS koe D ei mene junaan.
 - Levyllä on vapaata 74 Gi: älä tallenna koko kaupungin 1x-kuvia (kooste tallentaa vain 1/2, 1/4, rajaukset ja laatat).
 - Postilaatikko-wt säilytetään, kunnes Pariisi on pelissä.
+
+## 4. LISÄYS 05.5x – SEURAAJAN ENSIMMÄINEN TYÖ: KK:N PALAUTE KOOSTEESTA (PT 05.5x, ennen pelikytkentää; kytkentä voi jatkua rinnalla)
+KK: kadut, Seine ja karikatyyrit ovat OK. **EI vielä junaan:** tavallinen kaupunki on G:tä tummempi ja harmaampi ("harmaa massa");
+puita, veneitä, ihmisiä ja autoja on vain murto-osa G:n määrästä; puistot ovat tyhjiä (Tuileries ilman käytäviä ja suihkulähteitä).
+Korjaa KOODIKERROKSESSA (`P/kerros-1m.py` ja `P/kooste-1m.py`; Codexin pohjaa ei maalata uudelleen):
+1. **Pohjan sävy** vaaleammaksi ja lämpimämmäksi G:n mediaanivärejä kohti (G: `P/codex-pseudo3d/G-referenssi-owner-style-G-confirmed.jpg`;
+   mittaa katot, seinät ja kadut kuten era-qa.py:n `luokat`). Sävymuunnos tehdään koosteessa ennen maamerkkejä, jotta maamerkit pysyvät ennallaan.
+2. **Puut** G:n kokoisina riveinä bulevardeille, laitureille ja puistoihin. Nyt puut ovat pieniä ja harvassa; vertaa G-kuvan puiden kokoa ja väliä.
+3. **Veneet, ihmiset ja autot** G:n tiheyteen (nyt murto-osa).
+4. **Puistoihin käytävät ja suihkulähteet** (Tuileries, Luxembourg, Champ-de-Mars ym.; OSM footway/path ja fountain puistojen sisällä).
+Sen jälkeen kuvapari pelistä G:n rinnalle samasta kulmasta → PT → KK. Kokeile ensin keskustan rajauksella (`-keskusta-1x`,
+noin 15 s), ja aja koko kaupunki vasta lopuksi. Muista ajaa myös pelivienti uudelleen (`KOOSTE_PELI`).
