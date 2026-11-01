@@ -1,4 +1,4 @@
-# Natiivisepän luovutus 1.11.2026 klo 05.16 (konteksti 27 %, 7.37)
+# Natiivisepän luovutus 1.11.2026 klo 05.16, päivitetty 05.2x (konteksti 28 %, 7.37)
 
 Vain voimassa oleva tila. Edellinen: viesti-natiiviseppa-luovutus-20261101-0253.md (sen JONO 3–4 ennallaan alla).
 Id:t: /Users/Shared/Claude/osoitekirja.md. Yksi Unity kerrallaan linjalla (lukot). Ei keskeneräisiä ajoja eikä agentteja.
@@ -6,10 +6,8 @@ Koko 60 fps -työ: proto-3d/_tyo/natiiviseppa/fps60/LOYDOS.md (uusimmat osiot "V
 "GC-kevennys 1: mittaus"); työkalut samassa kansiossa.
 
 ## JONO
-1. **GC-kevennys 1 odottaa PT:n kuittausta** (raportoitu 05.15): haara natiiviseppa/fps-gc-216 = 72b039301 (peilissä), pohja runko 28d8f3486.
-   Kohdeallokoijat (NimiNakyy, deviceModel, Lyhenna/Regex) 181 → 0, allokointi 818 → 731 ms / 210 s, GC-viipaleet 385 → 327 ms (max 30 → 18),
-   testit 2223/782/578, tarkista 0, nimikuvapari 0,03–0,21 %. Kuittauksen jälkeen: merge runkoon wt/proto-natiiviseppa-ehdokas
-   (`git merge --no-ff natiiviseppa/fps-gc-216`, viesti mallina 28d8f3486), peili juna-216, uusi runko-SHA PT:lle.
+1. **GC-kevennys 1 viety runkoon** (PT kuittasi 05.2x): 19e8ec057 = 28d8f3486 + natiiviseppa/fps-gc-216 72b039301 (puu = 72b039301, testit
+   2223/782/578, tarkista 0). Kohdeallokoijat (NimiNakyy, deviceModel, Lyhenna/Regex) 181 → 0, GC-viipaleet 385 → 327 ms (max 30 → 18).
 2. **Seuraava löydös vain PT:n pyynnöstä (YKSI ehdotus ensin):** jäljellä Nimikerros.LisaaElavat 76 (merkkijonoliitokset Id/Luokka),
    PiiloVartija.LaskettuSuodin 51 (resolvedStyle.filter → ToManaged; ei allokoimatonta API:a, PT hyväksyi pois jättämisen),
    Asetukset.Kehittaja (PlayerPrefs.GetString joka kutsulla ← Testaaja, ~13), VieritysHeratyksen FindObjectsByType ~1 ms/s.
@@ -17,12 +15,13 @@ Koko 60 fps -työ: proto-3d/_tyo/natiiviseppa/fps60/LOYDOS.md (uusimmat osiot "V
 4. **PK:n taustan LOD -erä EI junaan 216** (PT 31.10.).
 
 ## TILA
-- **Juna 216 runko = 28d8f3486** (bb115574d + VieritysHeratys d152a0278, PT kuittasi 04.1x; puu = d152a0278), testit 2223/782/577, tarkista 0,
+- **Juna 216 runko = 19e8ec057** (28d8f3486 = bb115574d + VieritysHeratys d152a0278, + GC-kevennys 1 72b039301; PT kuittasi molemmat;
+  puu = 72b039301), testit 2223/782/578, tarkista 0,
   peilissä natiivi-backup peili/proto/natiiviseppa/juna-216. Worktree wt/proto-natiiviseppa-ehdokas (haara natiiviseppa/juna-216).
 - **VieritysHeratys** (d152a0278): UIDocumenttien juuriin ChangeEvent<float>-kuuntelija TrickleDown, ei UQuerya; 1181 → 121 ms / 210 s,
   ≥ 8 ms 51 → 0. Komento `peli vieritys` tulostaa "vieritettäviä N, seurannassa M". Simutodistus _tyo/natiiviseppa/vieritys/ (sk-vieritys.txt:
   oppaan Eurooppa-lista; museo ja oppaan aloitus mahtuvat iPadin vaakaruutuun → ei vieritettävää).
-- **Ison iPadin äppi nyt d152a0278** (= rungon puu; muisti-tarkka.txt = "pois"). Laiteäpit lokit/natiiviseppa-app-216-{vieritys d152a0278,
+- **Ison iPadin äppi nyt d152a0278** (= edellisen rungon puu; uusi runko = äppi 216-gc; muisti-tarkka.txt = "pois"). Laiteäpit lokit/natiiviseppa-app-216-{vieritys d152a0278,
   gc 72b039301, kokosivu 8b75e386b, ks-fps-d}; projektio-äppi poistettu levyn takia. Palautus: _tyo/natiiviseppa/fps60/palauta-runko.zsh.
 - **Mittaus:** `AB=gc zsh _tyo/natiiviseppa/fps60/nimikerros-ab.zsh kaanna|mittaa` (uusi erä = uusi AB-haara; mittaa ipad-lukko.sh:n kautta,
   IPAD_ODOTA=<s> jonottaa). Ketju mallina gc-ketju.zsh. xctrace.log "Device got disconnected" = tyhjä profiili → uusinta (gc-jalkeen-uusinta.zsh).
