@@ -2578,3 +2578,16 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   holviin (Blender-kuvat K/ovet-meridiaani/ovi-etela-kiinni.png ja -auki.png).
 - Lisätty: leivonta v4 RU (kielletty-rakennukset-v91/a-meridiaaniportti-lod0.glb, varmuuskopio U/leivonta-v4/…ennen-ovet; LAHTEET-leivonta-v4.md
   rivi) ja U/kaiteeton-v6.zsh (valmis-ovet-merkki, ennen pakettia). PK: PorttiOvet-kytkentä Meridiaaniportille (rakennukset + C2-kaiteeton).
+
+## LISÄYS 192 (1.11. 06.3x): LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- KÄYNNISSÄ: leivonta v4 rakennukset LIMAlla (06.23 d-itainen-kukkaportti; a-meridiaaniportti valmis + ovet lisätty) → osasarja → paketti
+  _valmiit/…-leivonta-v4-vienti-<pvm>. Vahti U/jatka-v4-kaiteeton.zsh (pgrep -fl jatka-v4) käynnistää levypysähdyksen jälkeen odotusajon
+  uudelleen ja v4:n jälkeen U/kaiteeton-v6.zsh (c2-v31 + Meridiaaniportin ovet) → _valmiit/…-kaiteeton-v3-vienti-<pvm>.
+- KUN VALMIS: tarkista lokit U/ajo-leivonta-v4.log ja U/ajo-kaiteeton-v6.log; SHA256SUMS-rivit PT:lle (v4-paketti ja kaiteeton-v3) →
+  PK: RakennusKansio v91 + MuurikateC2Kansio "kielletty-c2-v31/" + PorttiOvet Meridiaaniportille. Tarkista ennen lähettämistä, että
+  a-meridiaaniportti-lod0(-kaiteeton).glb:ssä on solmut ovi_V/ovi_O (glb_materiaali_vari.py ei saa pudottaa niitä) ja edustan LIMA-mittari
+  kohti.py-tyyppisesti yhdelle rakennukselle (pylväsviistot nolla < 10 %).
+- AVOIN: (1) rakennukset-v92 = v91 + edusta-v3 (LISÄYS 180 AVOIN 2: q-duanmen/q-chaofang leivottuina edusta-v3:ssa). (2) jalustalaattojen
+  länsipuoliskon nolla (LISÄYS 186) – sama syy kuin chaofangilla? tarkista, ovatko laatat irrallisia kasvoja/omina saarekkeina.
+- Levy 84 Gi (PT siirsi lokeja T7:lle); jos < 75 Gi, omat kuitatut välitiedostot T7:lle (/Volumes/T7 4TB/Matkakirja-linnanrakentaja), ei poistoja yöllä.
