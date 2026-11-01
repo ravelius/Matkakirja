@@ -59,3 +59,4 @@ Edellinen: -20261101-1625. Muistin tila: pelikoodari-tila-20261018-aamu.md.
 ## Lisäys 23.3x (PT, omistaja nukkumassa, yölupa loki PR 5920)
 TF 217 lähtee yöllä, kun korjaukset (taso 1 oletukseksi, eunukit harvemmiksi + tehtävä, 3-2-1, sivunykäykset, seinäpala 0.41) ovat
 haarassa → SHA NS:lle runkoon ja uusi tallenne (UI mukana) PT:lle (EI KK:lle yöllä). PT katsoo videon ja tilaa TF:n.
+- JU kuittasi 23.3x: kielletty-rakennukset-v92 (546) ja kielletty-tausta-v91 (100) viety, virheitä 0 → kansionvaihto 35fe715be valmis tallenteeseen.
