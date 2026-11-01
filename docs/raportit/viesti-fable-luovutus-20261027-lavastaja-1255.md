@@ -2575,6 +2575,6 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   UV1 = yksi leivottu seinätekseli (runko ja leivonta ennallaan).
 - Meridiaaniportti: ovet eteläosan suorakaideaukkoon z −10 (x −2,35…3,06, katto 5,40; holviosa z −6,7…14,5 ei sovi 65°:n avautumiselle).
   Lehdet eri levyiset (2,34 / 3,05 m), koska aukko on 0,36 m itään origosta ja peli jakaa x = 0:ssa (kuten zhongyoumen). 65° pohjoiseen ei osu
-  holviin (Blender-kuvat scratchpadissa, kiinni/auki).
+  holviin (Blender-kuvat K/ovet-meridiaani/ovi-etela-kiinni.png ja -auki.png).
 - Lisätty: leivonta v4 RU (kielletty-rakennukset-v91/a-meridiaaniportti-lod0.glb, varmuuskopio U/leivonta-v4/…ennen-ovet; LAHTEET-leivonta-v4.md
   rivi) ja U/kaiteeton-v6.zsh (valmis-ovet-merkki, ennen pakettia). PK: PorttiOvet-kytkentä Meridiaaniportille (rakennukset + C2-kaiteeton).
