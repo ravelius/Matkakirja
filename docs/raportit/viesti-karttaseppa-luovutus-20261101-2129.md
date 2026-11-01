@@ -17,7 +17,7 @@ Koko kulku: `L/MUISTIO.md` (merkintä 21.22).
 
 ## AVOIN
 1. Omistajan OK väreihin → PT pyytää JU:lta viennin `K/G-tasot-66-hill/natiivi/` (koko Pariisi-sarja). Jos värit liian voimakkaat
-   tai harmaat: ajetaan `hillitse-savyt.py K/G-tasot-66 K/G-tasot-66-hill` uusin KV/KS/VS-arvoin + `savy-pari.py` (skenaario
-   scratchpadissa poistuu: kopio komennoista L/MUISTIO 21.22 ja ajo-simu: MATKAKIRJA_PIIRROS = laatat / tyhjä `K/tyhja-piirros/natiivi/`).
+   tai harmaat: ajetaan `hillitse-savyt.py K/G-tasot-66 K/G-tasot-66-hill` uusin KV/KS/VS-arvoin + `savy-pari.py` (skenaario ja
+   ajo: `L/savy-66/savy-pari.txt` + `ajo-pari.zsh`, MATKAKIRJA_PIIRROS = laatat / tyhjä `K/tyhja-piirros/natiivi/`; simuvuoro JU:lta).
 2. Huomio omistajalle tarvittaessa: välitasossa näkyy pehmeä raja, jossa lähitasosta pienennetty keskusta vaihtuu vanhaan välitasoon.
 3. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; muut kaupungit vasta tilauksesta (nyt uuden ohjeen mukaan); L:n siivous.
