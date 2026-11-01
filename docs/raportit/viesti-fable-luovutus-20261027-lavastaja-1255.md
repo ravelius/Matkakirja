@@ -2720,3 +2720,22 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   Tulos U/kujaportti-avoin/p-kujaportti-lod0.glb (korvasi LISÄYS 202:n; EI leivottu). UV1/UV2 uusille pinnoille nolla → leivonta purkaa.
 - Pari: U/kujaportti-avoin/pari-05-nyk-uusi2-havainne.jpg (nyk | uusi | havainne 05), kamera kuten LISÄYS 204. → PT:lle kuittauspyyntö 22.5x.
 - ODOTTAA PT:n kuittausta, sitten LISÄYS 202:n jatkovaiheet (leivonta, lod1/2 samoilla parametreilla, paketti rakennukset-v92). Jonossa 200, 201, 203.
+
+## LISÄYS 206 (1.11. 23.0x): RAKENNUKSET-V92 VALMIS (PT kuittasi kujaportin e295c7696) — JUNA 217 LUKITTU: EI NS:LLE ENNEN PT:N LUPAA
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- U/rakennukset-v92.zsh (loki ajo-rakennukset-v92.log): leivonta-v4:n kielletty-rakennukset-v91 + p-kujaportti (lod0 leivottu v4:n asetuksin
+  U/kujaportti-avoin/rs-kloonista, polvi 0,6/0,3 → 3,3 % yli, V4_red; lod1/lod2 portti_avoimeksi.py v91:stä, sama 3.3 3.62 5.6 2.60).
+  _valmiit/juoksupeli-kk-lavastaja-rakennukset-v92-vienti-20261101, SHA256SUMS 70c7b997c2f9 (546 tiedostoa kuten v91). Lod-kuva
+  U/kujaportti-avoin/v92-lod0-1-2.jpg. portti_avoimeksi.py: kevyessä lodissa ilman friisiä palkki räystään alapuulla.
+- Edusta-v3 EI mukana: v91:n q-duanmen/q-chaofang on jo leivottu LIMAlla v4:n auringolla (edusta-v3 vanhalla) → LISÄYS 192 AVOIN 1 suljettu.
+- PT 23.xx: juna 217 lukittu omistajan videoon → v92 valmiina, ÄLÄ lähetä NS:lle/JU:lle ennen kuin PT ilmoittaa lukituksen auenneen.
+- HUOM ennallaan: taustan 0-3 / kuja-0-3 lattiassa vanhan katon leivottu varjo, kunnes tausta leivotaan uudelleen.
+
+## LISÄYS 207 (1.11. 23.0x): 07 NURMI HAVAINTEEN SÄVYYN → TAUSTA-V91 PT:LLE (LISÄYS 203)
+- Mittaus (havainne-editori-20261101-211745/07/peli.png vs havainne.png, vihreä maski): pelin nurmi sRGB ~ (148, 188, 98), havainne ~ (90, 115, 70).
+  V4_ruoho baseColor [0,2 0,3 0,12] → [0,069 0,102 0,060] (lineaarinen suhde 0,345 / 0,341 / 0,501). Leivottu valo ennallaan.
+- U/tausta-v91.zsh: _valmiit/juoksupeli-kk-lavastaja-tausta-v91-vienti-20261101 = leivonta-v4:n kielletty-tausta-v90 + uusi V4_ruoho (30/69 glb),
+  SHA256SUMS 7e9b6819202c → PT → (juna 217:n lukitus) → JU → PK "kielletty-tausta-v91/". Arvio (pikselisimulaatio, ei peliajoa):
+  U/nurmi07/nurmi07-arvio.jpg (peli nyt | arvio | havainne). Jingshanin rinne tummuu samalla (sama materiaali).
+- Lähde päivitetty tuleville leivonnoille: U/tausta-v89-lahde = uusi V4_ruoho; vanha U/varmuus-nurmi-tausta-v89-lahde.
+- Jonossa: LISÄYS 200 (kujakivi), 201 (Wumenin U-piha). Ei ajoja käynnissä. Levy 71 Gi.
