@@ -1,0 +1,377 @@
+{
+  "sourceCommit": "55969ea330286864930e9274d6d61585ccad6389",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-lahitaso-era2-v2-20261101.md",
+  "imageCount": 20,
+  "totalCalls": 21,
+  "images": [
+    {
+      "tile": "r05c07",
+      "taskNumber": 1614,
+      "filename": "pariisi-lahi-r05c07.png",
+      "sha256": "ae4ea495dfff7ec2a012412ac3374507631779f49fc2544700d4ba3e956cf968",
+      "bytes": 3816475,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c07.png"
+    },
+    {
+      "tile": "r05c08",
+      "taskNumber": 1615,
+      "filename": "pariisi-lahi-r05c08.png",
+      "sha256": "66878bde249e496014805710d503ba409b01f2ab6e716a20bfcbc10d30a865fe",
+      "bytes": 3682849,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c08.png"
+    },
+    {
+      "tile": "r05c09",
+      "taskNumber": 1616,
+      "filename": "pariisi-lahi-r05c09.png",
+      "sha256": "cf7a8a1ba6ff612a0a5fe70c59c50850f3fd9f3c4d6a285f201f30e263e1614f",
+      "bytes": 3672474,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c09.png"
+    },
+    {
+      "tile": "r05c10",
+      "taskNumber": 1617,
+      "filename": "pariisi-lahi-r05c10.png",
+      "sha256": "d86d0874437a65141d6bbde7788173be376f5dd9a1f01de7e49bb546cd8e491e",
+      "bytes": 3762191,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c10.png"
+    },
+    {
+      "tile": "r05c11",
+      "taskNumber": 1618,
+      "filename": "pariisi-lahi-r05c11.png",
+      "sha256": "e6f8810290eece9be4e323f4518a5f03ce8e614210c79f711b20749ca289c2df",
+      "bytes": 3864358,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c11.png"
+    },
+    {
+      "tile": "r05c12",
+      "taskNumber": 1619,
+      "filename": "pariisi-lahi-r05c12.png",
+      "sha256": "8ec428c19238a4ea2430280032d5138d6de8f3adedf18bcb57c092c57e625bef",
+      "bytes": 3742308,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c12.png"
+    },
+    {
+      "tile": "r06c12",
+      "taskNumber": 1620,
+      "filename": "pariisi-lahi-r06c12.png",
+      "sha256": "4ac27808557128b5e26ad9ee94641db7e2b73d3de150c7746ba1c7b1c7c614d6",
+      "bytes": 3767448,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r06c12.png"
+    },
+    {
+      "tile": "r07c12",
+      "taskNumber": 1621,
+      "filename": "pariisi-lahi-r07c12.png",
+      "sha256": "8f3fa70129c69afaf6afc5869b44b75de3958af6dd14c7f1c6c77328777ea293",
+      "bytes": 3555468,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r07c12.png"
+    },
+    {
+      "tile": "r08c12",
+      "taskNumber": 1622,
+      "filename": "pariisi-lahi-r08c12.png",
+      "sha256": "9c2e8f7d4a1d9615036e85fa583bae58a08fa0f40cf53b6465e2bd8dd58570b4",
+      "bytes": 3660949,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r08c12.png"
+    },
+    {
+      "tile": "r09c12",
+      "taskNumber": 1623,
+      "filename": "pariisi-lahi-r09c12.png",
+      "sha256": "c5240edc7b126e00ea6d8a1d2fdb6a060b369d69326b496f897e0748144c1c39",
+      "bytes": 3482976,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r09c12.png"
+    },
+    {
+      "tile": "r10c12",
+      "taskNumber": 1624,
+      "filename": "pariisi-lahi-r10c12.png",
+      "sha256": "bff218661538bbf2a93624b95202ce0f2d989758efd6142329728eeb55dff826",
+      "bytes": 3565931,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r10c12.png"
+    },
+    {
+      "tile": "r10c11",
+      "taskNumber": 1625,
+      "filename": "pariisi-lahi-r10c11.png",
+      "sha256": "5241ab50a337071bc0d4e77ca377aa3b609f4629c864e7fc642e5e91d3242671",
+      "bytes": 3860474,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r10c11.png"
+    },
+    {
+      "tile": "r10c10",
+      "taskNumber": 1626,
+      "filename": "pariisi-lahi-r10c10.png",
+      "sha256": "2e3d62db461cc280a6989007d8f7dbbdc438cec651a225ac21c3ac8cee6aaef6",
+      "bytes": 3722001,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r10c10.png"
+    },
+    {
+      "tile": "r10c09",
+      "taskNumber": 1627,
+      "filename": "pariisi-lahi-r10c09.png",
+      "sha256": "d70b105a1aa34bfb731ba1fe728aab021770a5928c43e73c7914d0dfcd45edeb",
+      "bytes": 3562107,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r10c09.png"
+    },
+    {
+      "tile": "r10c08",
+      "taskNumber": 1628,
+      "filename": "pariisi-lahi-r10c08.png",
+      "sha256": "80ed79630da6f10e6df41be5fe714ddf0db0eaf0d4db3b80da8c70f055eca874",
+      "bytes": 3629378,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r10c08.png"
+    },
+    {
+      "tile": "r10c07",
+      "taskNumber": 1629,
+      "filename": "pariisi-lahi-r10c07.png",
+      "sha256": "b017cf589fddfa271956d1ff4aff45100108956acef2ca00d8d01fef5d0adba3",
+      "bytes": 3665263,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r10c07.png"
+    },
+    {
+      "tile": "r09c07",
+      "taskNumber": 1630,
+      "filename": "pariisi-lahi-r09c07.png",
+      "sha256": "1371a89246b10978bc8092d2516766f54163eba528aa37a7812926b918da323b",
+      "bytes": 3462607,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r09c07.png"
+    },
+    {
+      "tile": "r08c07",
+      "taskNumber": 1631,
+      "filename": "pariisi-lahi-r08c07.png",
+      "sha256": "12c6b5de0e0568d3eb588c45ad6a5da0979918b9f926955177d51c1ae5b62ae6",
+      "bytes": 3587558,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r08c07.png"
+    },
+    {
+      "tile": "r07c07",
+      "taskNumber": 1632,
+      "filename": "pariisi-lahi-r07c07.png",
+      "sha256": "f8831c3c9bf228156011ac5aa2137ea6dcdfaa5ca278d00a895d640cd78c8e24",
+      "bytes": 3769515,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "review-with-documented-limitations",
+      "contentRetryReason": null,
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r07c07.png"
+    },
+    {
+      "tile": "r06c07",
+      "taskNumber": 1633,
+      "filename": "pariisi-lahi-r06c07.png",
+      "sha256": "669615ba03c928ab0f17f0979a593a61a482faae21fa1d1083aded2d38005509",
+      "bytes": 3577176,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 2,
+      "selectedAttempt": 2,
+      "byteIdenticalToNative": true,
+      "visualQA": "pass-for-receiver-review",
+      "contentRetryReason": "Invented three fixed fountains in Arc traffic roundabout where source shows cars; a place-inappropriate structure, explicitly allowed content-error retry.",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r06c07.png"
+    }
+  ],
+  "stripCopiesIntoOutput": 0,
+  "maskEdits": 0,
+  "postprocessing": false,
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "ring3Authorized": false,
+  "createdAt": "2026-11-01T14:42:37.887963+00:00"
+}

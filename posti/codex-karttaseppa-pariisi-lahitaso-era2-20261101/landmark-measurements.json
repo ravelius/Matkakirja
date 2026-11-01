@@ -1,0 +1,107 @@
+{
+  "sourceCommit": "55969ea330286864930e9274d6d61585ccad6389",
+  "method": "Native1536x1024 visual inspection with view_image, plus read-only in-memory magnifications of the Eiffel antenna and landmark feet. No image files were changed or created. Approximate visual bounds, not segmented pixel measurements. Coordinates originate at top-left; bbox=[left,top,right,bottom]. Width includes the full outer ground/plinth span, not only the front-facing foot or central arch.",
+  "baseCenterDefinition": "The x value is the midpoint of the total visible base span. Base-center y is the midpoint of the visible ground/plinth envelope, not an inferred physical ground-plane centroid. The lowest footing is reported separately.",
+  "landmarks": [
+    {
+      "name": "Eiffel Tower, principal tile",
+      "tile": "r07c07",
+      "sha256": "f8831c3c9bf228156011ac5aa2137ea6dcdfaa5ca278d00a895d640cd78c8e24",
+      "widthPx": 555,
+      "targetWidthPx": 500,
+      "centerPx": [
+        416.5,
+        454
+      ],
+      "baseCenterPx": [
+        416.5,
+        842
+      ],
+      "bbox": [
+        139,
+        0,
+        694,
+        908
+      ],
+      "lowestFootingY": 908,
+      "topTip": null,
+      "uncertainty": {
+        "bboxEdges": 8,
+        "totalBaseWidth": 12,
+        "centerX": 6,
+        "baseEnvelopeY": 12,
+        "lowestFootingY": 5
+      },
+      "notes": "Antennin kärki puuttuu kuvan yläreunan ulkopuolelle; koko torni kärjineen ei mahdu kuvaan. Tämä on avoin completeness-poikkeama, ei hyväksytty lopputulos. Jalusta noin11% tavoitetta leveämpi."
+    },
+    {
+      "name": "Eiffel Tower, lower-foot continuation",
+      "tile": "r08c07",
+      "sha256": "12c6b5de0e0568d3eb588c45ad6a5da0979918b9f926955177d51c1ae5b62ae6",
+      "widthPx": 556,
+      "targetWidthPx": 500,
+      "centerPx": [
+        417,
+        96
+      ],
+      "baseCenterPx": [
+        417,
+        127
+      ],
+      "bbox": [
+        139,
+        0,
+        695,
+        192
+      ],
+      "lowestFootingY": 192,
+      "topTip": null,
+      "uncertainty": {
+        "bboxEdges": 8,
+        "totalBaseWidth": 12,
+        "centerX": 6,
+        "baseEnvelopeY": 12,
+        "lowestFootingY": 5
+      },
+      "notes": "Saman Eiffelin alajalat jatkopalassa; rajaus yläreunassa tarkoituksellinen. Jatkon alin jalka vastaa715px askelta likimääräisesti. Tämä ei palauta pohjoisen kuvan puuttuvaa antennin kärkeä."
+    },
+    {
+      "name": "Arc de Triomphe",
+      "tile": "r05c07",
+      "sha256": "ae4ea495dfff7ec2a012412ac3374507631779f49fc2544700d4ba3e956cf968",
+      "widthPx": 202,
+      "targetWidthPx": 180,
+      "centerPx": [
+        451,
+        597.5
+      ],
+      "baseCenterPx": [
+        451,
+        714
+      ],
+      "bbox": [
+        350,
+        447,
+        552,
+        748
+      ],
+      "lowestFootingY": 748,
+      "topTip": [
+        439,
+        447
+      ],
+      "uncertainty": {
+        "bboxEdges": 6,
+        "totalBaseWidth": 10,
+        "centerX": 5,
+        "baseEnvelopeY": 10,
+        "topTipY": 5,
+        "lowestFootingY": 5
+      },
+      "notes": "Koko Riemukaari näkyy; jalusta noin12% tavoitetta leveämpi. Vastaanottaja arvioi sallitun lievän ylityksen."
+    }
+  ],
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "updatedAt": "2026-11-01T14:38:32.781551+00:00"
+}

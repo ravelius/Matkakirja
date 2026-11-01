@@ -1,0 +1,133 @@
+{
+  "reviewer": "independent-landmark-review",
+  "date": "2026-11-01",
+  "source": "source-v2-20261101.md",
+  "sourceSHA256": "c961c9b6387d7e25b5f5ef773da6ed7c6ec837459bbe21ef4220ba954883e337",
+  "scope": ["r07c07", "r08c07", "r05c07"],
+  "method": "Native1536x1024 visual inspection with view_image, plus read-only in-memory magnifications of the Eiffel antenna and landmark feet. No image files were changed or created. Approximate visual bounds, not segmented pixel measurements. Coordinates originate at top-left; bbox=[left,top,right,bottom]. Width includes the full outer ground/plinth span, not only the front-facing foot or central arch.",
+  "baseCenterDefinition": "The x value is the midpoint of the total visible base span. Base-center y is the midpoint of the visible ground/plinth envelope, not an inferred physical ground-plane centroid. The lowest footing is reported separately.",
+  "instructionInterpretation": "One take per tile and no position/anchor iteration. Small width overshoot is allowed in principle by the source, but the receiver KS+PT must assess the actual result. Eiffel must have the complete tower in one tile with continuation in its neighbor. Raw delivery does not constitute receiver acceptance.",
+  "images": [
+    {
+      "tile": "r07c07",
+      "landmark": "Eiffel Tower, principal tile",
+      "file": "selected/pariisi-lahi-r07c07.png",
+      "sha256": "f8831c3c9bf228156011ac5aa2137ea6dcdfaa5ca278d00a895d640cd78c8e24",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "measurements": {
+        "visibleBBox": [139,0,694,908],
+        "bboxCenterXY": [416.5,454],
+        "totalGroundBaseXRange": [139,694],
+        "totalGroundBaseWidthPx": 555,
+        "visibleGroundBaseEnvelopeBBox": [139,776,694,908],
+        "baseCenterXY": [416.5,842],
+        "upperShaftCenterXApprox": 423,
+        "visibleTopY": 0,
+        "topTipXY": null,
+        "lowestFootingXYApprox": [454,908],
+        "lowestFootingY": 908,
+        "uncertaintyPx": {"bboxEdges": 8, "totalBaseWidth": 12, "centerX": 6, "baseEnvelopeY": 12, "lowestFootingY": 5},
+        "topTipUncertainty": "The actual terminal point is outside the frame. Its y coordinate and missing length cannot be recovered from this image."
+      },
+      "targetBaseWidthPx": 500,
+      "baseWidthDeviationPxApprox": 55,
+      "baseWidthDeviationPercentApprox": 11,
+      "contentObservations": [
+        "A single recognizable Eiffel Tower, main lattice body, platforms, broad arches and ground feet are present in the intended riverside park district.",
+        "The upper antenna is actually clipped. In the source-pixel enlargement x395..450,y0..90, a finite-width vertical shaft intersects the top border with no visible terminal cap or tapered end. This is not an intact tip merely touching the edge.",
+        "The main tower body and feet are visible, but the complete tower including its terminal antenna is not contained in this tile. The clipped extent is unknown."
+      ],
+      "geometryObservations": [
+        "Total base width is about555 px versus500 px. This is a scale discrepancy, not evidence of a wrong-block placement.",
+        "Base center is approximatelyx417. The lowest/front footing is approximatelyy908. These independently estimated values are approximate and do not imply an exact seam match."
+      ],
+      "tipClipped": true,
+      "completeTowerIncludingTerminalAntennaVisible": false,
+      "receiverReviewLimitation": "The true missing antenna tip must be disclosed separately from the approximately11 percent base-width overshoot. A full-tower claim is unsupported. Whether to retain this cropped antenna is a KS+PT receiver decision; no regeneration or final acceptance is authorized by this QA report.",
+      "status": "REVIEW_WITH_DOCUMENTED_LIMITATIONS_RECEIVER_DECISION_PENDING"
+    },
+    {
+      "tile": "r08c07",
+      "landmark": "Eiffel Tower, lower-foot continuation",
+      "file": "selected/pariisi-lahi-r08c07.png",
+      "sha256": "12c6b5de0e0568d3eb588c45ad6a5da0979918b9f926955177d51c1ae5b62ae6",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "measurements": {
+        "visibleBBox": [139,0,695,192],
+        "bboxCenterXY": [417,96],
+        "totalGroundBaseXRange": [139,695],
+        "totalGroundBaseWidthPx": 556,
+        "visibleGroundBaseEnvelopeBBox": [139,62,695,192],
+        "baseCenterXY": [417,127],
+        "visibleTopY": 0,
+        "topTipXY": null,
+        "lowestFootingXYApprox": [454,192],
+        "lowestFootingY": 192,
+        "uncertaintyPx": {"bboxEdges": 8, "totalBaseWidth": 12, "centerX": 6, "baseEnvelopeY": 12, "lowestFootingY": 5},
+        "topTipUncertainty": "Tower tip and upper structure are intentionally outside this continuation tile; no tip coordinate can be measured here."
+      },
+      "targetBaseWidthPx": 500,
+      "baseWidthDeviationPxApprox": 56,
+      "baseWidthDeviationPercentApprox": 11,
+      "contentObservations": [
+        "The same large lower lattice arches and feet continue through the top edge, with the park/esplanade extending below. No duplicate full tower appears.",
+        "Cropping of the upper tower is expected in this lower continuation; this tile does not restore the missing terminal antenna of r07c07."
+      ],
+      "geometryObservations": [
+        "Base width and horizontal center are visually consistent with r07c07 within measurement uncertainty.",
+        "With the715 px vertical tile step, the measured r07c07 lowest footing y908 predicts y193 here; the observed approximately192 differs by about1 px, well inside uncertainty. This is an approximate landmark-footing check, not a full overlap or seam validation."
+      ],
+      "upperStructureClippedByDesign": true,
+      "receiverReviewLimitation": "Shares the approximately555 px Eiffel base scale rather than the nominal500 px. Receiver must assess the combined landmark and neighboring seam; this report does not establish final assembly acceptance.",
+      "status": "CONTENT_CONTINUATION_PRESENT_GEOMETRY_FOR_RECEIVER_REVIEW"
+    },
+    {
+      "tile": "r05c07",
+      "landmark": "Arc de Triomphe",
+      "file": "selected/pariisi-lahi-r05c07.png",
+      "sha256": "ae4ea495dfff7ec2a012412ac3374507631779f49fc2544700d4ba3e956cf968",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "measurements": {
+        "visibleBBox": [350,447,552,748],
+        "bboxCenterXY": [451,597.5],
+        "totalGroundBaseXRange": [350,552],
+        "totalGroundBaseWidthPx": 202,
+        "visibleGroundBaseEnvelopeBBox": [350,680,552,748],
+        "baseCenterXY": [451,714],
+        "topTipXYApprox": [439,447],
+        "topTipDefinition": "Topmost visible roof ornament/finial, included in the full visible bounding box.",
+        "lowestFootingXYApprox": [479,748],
+        "lowestFootingY": 748,
+        "uncertaintyPx": {"bboxEdges": 6, "totalBaseWidth": 10, "centerX": 5, "baseEnvelopeY": 10, "topTipY": 5, "lowestFootingY": 5}
+      },
+      "targetWidthPx": 180,
+      "baseWidthDeviationPxApprox": 22,
+      "baseWidthDeviationPercentApprox": 12,
+      "contentObservations": [
+        "One recognizable classical triumphal arch is present in the intended open radial street/plaza setting, with its roof, main arch opening, side passage and plinths visible.",
+        "The full visible monument including its roof ornament and lowest footing is inside the frame; no clipping is observed."
+      ],
+      "geometryObservations": [
+        "Total outer plinth span is approximately202 px, centered aboutx451, versus the180 px target.",
+        "This is a modest scale overshoot of approximately12 percent. The source permits small overshoot in principle; final allowance remains a receiver decision."
+      ],
+      "tipClipped": false,
+      "completeVisibleMonumentInsideFrame": true,
+      "receiverReviewLimitation": "Report the approximately202 px actual width rather than the nominal180 px. No anchor iteration or final receiver approval follows from this QA.",
+      "status": "CONTENT_PRESENT_GEOMETRY_FOR_RECEIVER_REVIEW"
+    }
+  ],
+  "overall": {
+    "imagesModified": false,
+    "generatedImages": false,
+    "ledgerOrProductionStateModified": false,
+    "regenerationRequested": false,
+    "finalAcceptance": false,
+    "receiver": "Karttaseppa + PT",
+    "receiverStatus": "PENDING",
+    "keyLimitation": "r07c07 does not contain the complete terminal antenna: the top shaft visibly exits the frame. Preserve this explicit completeness limitation in receiver review and delivery claims."
+  }
+}
