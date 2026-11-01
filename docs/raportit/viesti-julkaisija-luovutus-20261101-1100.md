@@ -3,6 +3,8 @@
 Rooli: Julkaisija (JU). Työkalut /Users/Shared/Claude/julkaisija-tyokalut/. Edellinen: viesti-julkaisija-luovutus-20261101-0455.md.
 
 ## Kesken / odottaa
+- **ENSIMMÄINEN TYÖ (lisäys 18.31): TF 216 ILMAN testejä/simuvuoroa.** OMISTAJAN PÄÄTÖS 18.30 (PT:n välittämä, sanatarkasti): "Joo, julkaistaan, kun Pariisi on valmis, niin testaan sen pelissä." + 18.2x "julkaise ilman testejä". Käynnistys heti, kun NS ilmoittaa juna 216 -rungon, jossa KS:n Pariisin lähitaso (64 + r03c10, maskin mukainen zoom). 30.10. valoehto ohitettu tämän julkaisun osalta. Versionumero: `git fetch origin main` juuri ennen (docs/roolitus.md "Julkaisusäännöt"). Pohjat: julkaisija-tyokalut/tf215.sh (ketju: TF-ajo → sisäinen → vain-arvio → vienti → ulkoinen → vanhennus) ja mac-tf-215.zsh; muistit tf-jarjestys-muutosloki-ensin, julkaisija-tf-vaiheet-asemataululle. TF-linkki/tila PT:lle ja KK:lle.
+- Muut tänään 13.0x jälkeen: viety leivonta-v4 (770), kaiteeton-v3 (19), muurikate-v37 (6), polut PK:lle; NS:n laitekäännökset eddff7063, 70861ee16, 30ab21cdc tehty. Omistaja ajoi simu-poiston 11.0x (4 yhteistä jäljellä). Yösiivouksen launchd ei vielä kytketty.
 - Ei omia ajoja käynnissä. Linja 2 ja simut vapaat (11.00).
 - Omistajan toimet PT → KK:n kautta (PT hoitaa): yösiivouksen asennusrivi (PR 5837, plistin kommentissa; ajetaan main-checkoutin
   juuresta) ja simulaattorien poisto /Users/Shared/Claude/_levy/simu-poisto-20261101.sh (≈ 383 Gt, PT luki, EI ajettu).
