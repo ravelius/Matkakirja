@@ -589,7 +589,7 @@ export const RAAMATTU = {
         '13.5 docs/raamattu-loki/paatokset-2026-09-03--09-14.md — päätösloki 3.9.–19.9.2026 (Viisas Pöllö -osion 225 kohtaa: linssit, pallo, pulu, äänet, työtavat).',
         '13.6 docs/raamattu-loki/paatokset-2026-09-13--09-20.md — päätösloki 13.9.–20.9.2026 (Kaupungit-osion 101 kohtaa: KARTTAUUDISTUKSEN PAATOKSET 1–53, astronautin kamera, sessiot).',
         '13.7 docs/raamattu-loki/paatokset-2026-09.md — juokseva päätösloki 20.9.2026 illasta eteenpäin (tools/raamattu-kirjaa.mjs kirjoittaa).',
-        '13.8 docs/raamattu-loki/paatokset-2026-10.md — juokseva päätösloki lokakuu 2026 (15.10.2026 alkaen kuukausitiedosto; tools/raamattu-kirjaa.mjs kirjoittaa).',
+        '13.8 docs/raamattu-loki/paatokset-2026-10.md + docs/raamattu-loki/paatokset-2026-11.md — juoksevat päätöslokit loka- ja marraskuu 2026 (15.10.2026 alkaen kuukausitiedosto; tools/raamattu-kirjaa.mjs kirjoittaa).',
         '13.9 Tieto kulkee sessiolta toiselle vain kirjoitettuna. Kartta on täydellinen: dokumentti, jota ei ole listalla, ei ole ohje. Testi valvoo (tests/dokumentit.test.mjs).',
         '13.10 SIIRTOPROMPTIT (omistaja 19.8.2026): kun sessio kirjoittaa omistajalle promptin toiselle sessiolle vietäväksi, se annetaan vastauksessa AINA yhtenä koodilohkona, jotta omistajan ympäristöön tulee kopioi-nappi — ei koskaan juoksevana tekstinä tai vaakaviivoin rajattuna.',
         '13.11 CLAUDE.md — sisääntulo, osoittaa tänne.',
