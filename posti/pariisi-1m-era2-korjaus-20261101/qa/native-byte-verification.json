@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-01T02:32:31.268681+00:00",
+  "selectedCount": 2,
+  "allNative1536x1024RGB": true,
+  "allNativeRawFinalSHAIdentical": true,
+  "generationCalls": 2,
+  "productionActive": false,
+  "safeEnded": true,
+  "checks": [
+    {
+      "tile": "pariisi-1m-r01-c09",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeRawFinalSHAIdentical": true,
+      "sha256": "e4f82903b47d874677206dfd2d29bc9cfdd77a1e486b649c6968a7c98a55b565",
+      "sourceVersion": "v2",
+      "maskSHA256": "a9d5fb46da7ec2283c0da11ee3b42cf372abe09fb822cd72c85c615ee469a832",
+      "selectedAttempt": 1
+    },
+    {
+      "tile": "pariisi-1m-r02-c09",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeRawFinalSHAIdentical": true,
+      "sha256": "415e3f0149c998ce8b8e7a68c449700c48bf2ecc387bd6ebba5079ce3c28c6ff",
+      "sourceVersion": "v2",
+      "maskSHA256": "1547a3c488f724b73ee8320a5985527de9aa302c4da4708758ec303b3cf62c85",
+      "selectedAttempt": 1
+    }
+  ]
+}

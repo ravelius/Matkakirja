@@ -1,0 +1,296 @@
+{
+  "verifiedAt": "2026-11-01T02:09:54.334215+00:00",
+  "commit": "95de8159fbb7d3a785f0164c9eb2cba9f4b39fba",
+  "branchHead": "95de8159fbb7d3a785f0164c9eb2cba9f4b39fba",
+  "branchContainsDelivery": true,
+  "allFilesByteVerified": true,
+  "files": [
+    {
+      "path": "posti/pariisi-1m-era2-20261101/QA-FI.md",
+      "blob": "f04f6fa898f23d962d6738d8d40c0a5ebd966010",
+      "sha256": "7a142ae87f2327148dd92711f53fa07fa0c436f1948f1ef7a548232a2430e592",
+      "bytesVerified": 4240
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/SHA256SUMS",
+      "blob": "8c3731ff95d1523e168285c5d6aeb80fd7855249",
+      "sha256": "b68393dbb9338eb7dee52ca82c8a8b2aa4ec6da01b3247c91f0b05ff55d5935f",
+      "bytesVerified": 4166
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/manifest.json",
+      "blob": "f03fd122544e44e4b839e791d16ca5cc7f4fcf75",
+      "sha256": "1ab7d92a30965bd078038ef5b7336e9108a3e8b2bc78e827837897835e35fb97",
+      "bytesVerified": 30563
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r01-c05-attempt001.txt",
+      "blob": "8f117761c16c2696398b6fd080b40c2e6f11bbcc",
+      "sha256": "c67b085a661b36788af2790c3280af61515dcc3d030f4ed75323944e2f2ad52f",
+      "bytesVerified": 2701
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r01-c06-attempt001.txt",
+      "blob": "41696d63510eac3326c59f476f56b75a585a873e",
+      "sha256": "c97e081d36fd5a1b407fe474e5965eddbf4a9437cc687ad0836e6423cbf9447e",
+      "bytesVerified": 2678
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r01-c07-attempt001.txt",
+      "blob": "c845e69d45ca7f0c2d7e36c09034749117d124ec",
+      "sha256": "ebd746bf80f0514a500049e6eaae12d7d34b5e1bc3780f26743cea1840dde512",
+      "bytesVerified": 2658
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r01-c08-attempt001.txt",
+      "blob": "d489487831954e65bc64fc75eed2dd6c5a2465b5",
+      "sha256": "a9efe3716ba7e39b9efd97fe3e0044c9d3d4857288d3394a8674f3800b482434",
+      "bytesVerified": 2721
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r01-c09-attempt001.txt",
+      "blob": "be3cd87977e6ab713a0e8a8934de7bfaee7cb62e",
+      "sha256": "691772a0fdad5f2dd929ddc64fb76e134346dc9edb051135ecd925a618442b5f",
+      "bytesVerified": 3218
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r01-c10-attempt001.txt",
+      "blob": "434fd65e3f89e1ded2ee151d6f6295220441e0e1",
+      "sha256": "da32362e4a9d2a14bb26af5fda12b5c61b5e0d9b5474e143fea7d2ff20a42ca2",
+      "bytesVerified": 2712
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c04-attempt001.txt",
+      "blob": "5907333e0a8ca9b1321097fa41b42e9c1a919b2b",
+      "sha256": "51ba2e7f8a40400ab1684bee96d459d728774aa67392d75b81b06c8e07a0ec9b",
+      "bytesVerified": 2725
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c05-attempt001.txt",
+      "blob": "14fd69c80e5d9492f2fc6538b4645da7d21de836",
+      "sha256": "e049d70354991f7c3b2bb65faef5f1a005be2775d6be09b3eee9a396f6ab0664",
+      "bytesVerified": 2860
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c06-attempt001.txt",
+      "blob": "dd5cf01c6b952f9aafbc86f4ca5fef9942a146a5",
+      "sha256": "dce7d2a69292798212b1adb4685368a020826af90a34a87f915e82077e4b7a40",
+      "bytesVerified": 2656
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c07-attempt001.txt",
+      "blob": "bb664754d680c3d336745c176155bf3b52ade31c",
+      "sha256": "e00df7682694ae8667614fbb9b9ee298c9ad79ccf4de20b5a56eaab72c43483f",
+      "bytesVerified": 2702
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c08-attempt001.txt",
+      "blob": "a197177b39a4faa44925ef5c8692758fe11cfa09",
+      "sha256": "ac03e148ff4b2f300c4567691f5922c2680e5a0b7e6157e98b2fb5fa660983b7",
+      "bytesVerified": 2839
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c09-attempt001.txt",
+      "blob": "932f479aa0588ab7c0c196bada3d3ca142c11014",
+      "sha256": "a77ed1f27638a5cd825928c8ca92f672eeb6ffafa734bc229e9a63427b1e3a8a",
+      "bytesVerified": 3567
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/prompts/r02-c10-attempt001.txt",
+      "blob": "04d5cdebef68bd19f9870a6a20c66e0060657737",
+      "sha256": "2e031ff2cd38c7433c96c2bfe1d18050ef45b5243c0efecd958eb4207343c02b",
+      "bytesVerified": 2761
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r01-c05.png",
+      "blob": "d35eb08d97bc6528fff2d2180b09bd8733c75500",
+      "sha256": "a6790c07e84c3efb444b23d6ce39552cadcb5dda3b0377f501b03c239fc284c2",
+      "bytesVerified": 1805466
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r01-c06.png",
+      "blob": "02ed5ebefb8f806cfc8007e304b40c8835e68c19",
+      "sha256": "179d62ad6b57956e10e1a0e76d7067805c266e868f92e8443a5ac8d9ab563f13",
+      "bytesVerified": 2569492
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r01-c07.png",
+      "blob": "ad60e216e5e98f36f174f96c3abc4b9ecab82c8a",
+      "sha256": "2c4cf8c3b38b921bfa05fc8197ed0a55fe4aff50542e5ed03706fcfaa90982e4",
+      "bytesVerified": 2686415
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r01-c08.png",
+      "blob": "85060ff36ace0b3a24dd185d71075c9df26b2124",
+      "sha256": "7c25dfae1d29f9d7e2c83e875d1c58b5bf72e72e706e9af99ee93d32f4a4cbcc",
+      "bytesVerified": 2570872
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r01-c09.png",
+      "blob": "89b5354d4fa11cd1feda41b4ad4ff1cfd9820adf",
+      "sha256": "6946914dc21269f3fbf06e846511e5126475f20d6470a4ba7d6353412f40ec47",
+      "bytesVerified": 2575367
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r01-c10.png",
+      "blob": "2831b99e948a7088a1fd36c62de7e64709e90957",
+      "sha256": "e0913fb8170be459032a860716798ed52e0fafb0457571cd5d46ba54abdcbb11",
+      "bytesVerified": 1190682
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c04.png",
+      "blob": "4248a4b683bfad0253642628bdbce6fcf6746d3e",
+      "sha256": "686f6c583133c73eebe04d42665a7ab91c527fa803e9dd5ebb119b7f8ec41f29",
+      "bytesVerified": 2234081
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c05.png",
+      "blob": "a1b6a36dfdc18138a424a3d82f71cebe4d399b29",
+      "sha256": "53edfc4b129e6aa02fd66c3a396dec51d555589b600d1ca22e8ff6bff3ff7259",
+      "bytesVerified": 3522828
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c06.png",
+      "blob": "d03bf2a7d40a0d53561a009ebf23a8180e579d7c",
+      "sha256": "3e92826e7dc69939f65daa2ff8795381eea9147c6648ba096c9e0bc70aae51c2",
+      "bytesVerified": 3788114
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c07.png",
+      "blob": "5534d74624a67ea361f8412e45064bc74c2bb7b8",
+      "sha256": "4ae61e2df7685f0eda56a6f0379f11a5e9df0f95172d7c9cf2aae0b59a5e731d",
+      "bytesVerified": 3541484
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c08.png",
+      "blob": "287fada1a32eae9c37119eef1063c1be65f3ab4d",
+      "sha256": "bc57f881dd72f135bf0b4b4b76c55797aa58fc68059344efb9a504aae5b85fb8",
+      "bytesVerified": 3547555
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c09.png",
+      "blob": "765bdc64e394f7030e27b539822b572047de9ca8",
+      "sha256": "f8658ba596ebac73cb32fe2305f76d48adf4abc021daa7dccffeb289b9035b1c",
+      "bytesVerified": 3563394
+    },
+    {
+      "path": "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r02-c10.png",
+      "blob": "eda80cf78c8c1600e1523c2b736731fcf51e01b0",
+      "sha256": "4f26fffcc624a73aed34ae9929ce9b340cf94638529ade5adcd89b81bf9543f0",
+      "bytesVerified": 1627511
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/qa/batch-validation.json",
+      "blob": "1648297f86e8b5618e03260ff25d050fecf066a1",
+      "sha256": "73f91a1765104407ad0bd2aeb632e9d1cc8c0d1afcb74786a73018345c780e0b",
+      "bytesVerified": 30433
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/qa/contact-sheet-layout.json",
+      "blob": "f61aacdaec5cc3787e43876c3676e64f086769b4",
+      "sha256": "4897ffee9377af16ca37f009b727714e73bb0cf6314c837c626f78e589552771",
+      "bytesVerified": 478
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/qa/contact-sheet.png",
+      "blob": "a1d6e8d55b38dc0c534c495a739ec0cfbaa3449b",
+      "sha256": "e087c01c5f2bf2cd3cd8c4755aca98bfa7d60d4065f0341e983ab6ebce021d6e",
+      "bytesVerified": 2347812
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/qa/guide-contact-sheet.png",
+      "blob": "2292cf19b559d9403464dfc46d149cc5b8ffa79b",
+      "sha256": "363d0324bbf73866001b9f6e71b05d0bb0f4407eee559c645bfe9b11a4f5ed1e",
+      "bytesVerified": 1823942
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/qa/parent-visual-review.json",
+      "blob": "c7fa52d792dad982213c8fe6f7d86798a407be9e",
+      "sha256": "a4039f86378b593709a70eebea679d90b2eef3af7dca599bd2160763cccb6dbc",
+      "bytesVerified": 1566
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/qa/production.json",
+      "blob": "6d2c4ab1ddf5b333f29500d9d3ef3abb99ae34fe",
+      "sha256": "48d555fcb142d26708d6f447d82df84505ca81586a235c24ec597d3f4587a542",
+      "bytesVerified": 49630
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/source/erat.json",
+      "blob": "75b169785fdd30dda682e359bd6dad0894c14230",
+      "sha256": "38696b6a0aceb5ae465d5a309fb4416d7fd2b12070a739f811659ff9562fb597",
+      "bytesVerified": 2184
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/source/input-verification.json",
+      "blob": "64ee92a1485eac169d845008c7136f07609983db",
+      "sha256": "86ad2aab3a5819f61c1b3f1c33a39c63734814617fc470bfbad0fb0cc08160fd",
+      "bytesVerified": 31149
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/source/order.md",
+      "blob": "c825409e5097c19cfdfdd887f111d329ae3c457c",
+      "sha256": "612ca4355d8a1f66f63f92b3cf786bffbcd07dda7adf84fbbf30673ca6f5d92e",
+      "bytesVerified": 2556
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/source/palat-1m.json",
+      "blob": "8bc45317249b4897c68a3aec19c9e9880cada085",
+      "sha256": "efd92a2230e66f91d2becb4f435fce798454d9cb511fe8db8fc22d53f641b6ab",
+      "bytesVerified": 30493
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/source/source-mask-interpretation.json",
+      "blob": "bc3ad436ae66e938093770db3704306efb1fabf3",
+      "sha256": "7df89111aceb6caf8d9a51e369ab5b19cf85482d13a325b3f88d02d1ca86783b",
+      "bytesVerified": 775
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/source/source-mask-overlap-check.json",
+      "blob": "1eaebabeb58db24bd478a72d216afcad010f94ae",
+      "sha256": "0943a5bc22c90f92903fd30d8d63c05a627df32744b55f6bbc44c771516aeb19",
+      "bytesVerified": 22157
+    },
+    {
+      "path": "posti/pariisi-1m-era2-20261101/workers/worker.json",
+      "blob": "3fcf81e0fcc0211b958cdf1cb8976749c219b5f5",
+      "sha256": "8688b3996c5f1a754c877141b3297925e2a809c851b39adfc9764b49bb0b96f1",
+      "bytesVerified": 49295
+    },
+    {
+      "path": "posti/codex-karttaseppa-pariisi-1m-era2-20261101.md",
+      "blob": "f04f6fa898f23d962d6738d8d40c0a5ebd966010",
+      "sha256": "7a142ae87f2327148dd92711f53fa07fa0c436f1948f1ef7a548232a2430e592",
+      "bytesVerified": 4240
+    }
+  ],
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "protectedEarlierPathsUnchanged": {
+    "proto-3d/_tyo/codex/pariisi-pseudo3d/pariisi-pseudo3d-r4-c4-q11-1m.png": "4b162cea6f6df43b3b82ad75b8c3b58c11f395bd",
+    "posti/juoksupeli-taivas-paiva-v3-palat-koe-20261101/pala-1.png": "851fa8ad67c865a14fcc9e3af9cdcdeae2d7763e",
+    "posti/juoksupeli-taivas-paiva-v3-palat-koe-20261101/pala-2.png": "b660e3d550dbff49dd522e342d6dc271920a9a75",
+    "proto-3d/_tyo/codex/pariisi-pseudo3d/pariisi-pseudo3d-r3-c4.png": "b2212e87e878fa00b33dbfb014eb75206c524920",
+    "proto-3d/_tyo/codex/pariisi-pseudo3d/pariisi-pseudo3d-r3-c5.png": "312f665cce1f68b443f2ef8ddefc920beef8aec6",
+    "posti/karttaseppa-codex-pariisi-pseudo3d-1m-koe-20261101.md": "8e38ee12674c04092b07c488bb3ce4a0ffee6d41",
+    "posti/juoksupeli-taivas-paiva-v2-20261027/taivas.png": "09dc53720640ab22063b1cf02d0ae67c650d028e",
+    "posti/juoksupeli-taivas-paiva-v2-20261027/taivas.json": "7e5f9511028a586f4440bd3188cfc51bcec5b0c7",
+    "posti/valoseppa-codex-taivas-paiva-v2-20261027.md": "ef8ed03681fa124103ee23d5d7a3acc5e1fee1a5",
+    "proto-3d/_tyo/codex/pariisi-pseudo3d/pariisi-pseudo3d-r4-c4.png": "3c548cb88e3b9342b61fa31e39d79651528ce53d",
+    "posti/paatoimittaja-codex-pariisi-piirroskartta-palat-20261031.md": "f20791eef908c4ea4f968fcab4ed2191aba4325d",
+    "posti/paatoimittaja-codex-pariisi-piirroskartta-versiot-20261031.md": "0e5c6a909dae3c62958f4d9cf1891af5b116db33",
+    "proto-3d/_tyo/codex/pariisi-piirroskartta-koepala-1.png": "47c052b2c0a339e6b3aa9c94c931f7074c2e10d7",
+    "posti/codex-paatoimittaja-pariisi-piirroskartta-koepala-20261031.md": "2899f13b3af4b197bcb0a6320160f2c4108aad05",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r05-c06.png": "f1cd62e6be16e50b54b4b12a53b6f3a7140c2a34",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r05-c07.png": "669976e3dfffe38286c19474e1afde472f116817",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r05-c08.png": "6052f87e720122475a168b9322b3454729f280b6",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r06-c06.png": "a0354f2893284d9ac151e1e5f5c04bdcb3d808ad",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r06-c07.png": "39d147112d9784f511519dd6fccaeb67327a9cab",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r06-c08.png": "6a5dc1fa048fabef5218e2a063411429e5822658",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r07-c06.png": "6697cde48bb2bbbd4942fe06f5dfa69e9c085e9a",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r07-c07.png": "65686778178e1704c639cd8eed08d1b046dcae60",
+    "proto-3d/_tyo/codex/pariisi-1m/pariisi-1m-r07-c08.png": "bc1d14ac262fa96afef8e6941e4d3dafb55cb112"
+  }
+}

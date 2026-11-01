@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-11-01T02:38:09.305908+00:00",
+  "reviewer": "/root/sky8192_row_a",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "outcome": "CORRECTION-CANDIDATES-WITH-EXPLICIT-MASK-GUIDE-CONFLICTS",
+  "unqualifiedPass": false,
+  "exactWaterMaskPass": false,
+  "sourceCommit": "afd3613ccac8200cb66a8b56cd1b66bc12bacf68",
+  "sourceVersion": "source-v2",
+  "limitations": [
+    "r01-c09: oikean reunan kanava x1448–1536/y869–917 näkyy geometriassa ja valitussa kuvassa, mutta puuttuu v2-vesimaskista (2680 cyan-proxypikseliä yli 5 px maskirajan). Sama kanava jatkuu r02-c09:n yläoikeassa reunassa (1101 px). Tämä on näkyvä lähdegeometrian ja maskin ristiriita; ehdotonta maski-PASSia ei anneta.",
+    "r01-c09: yläreunan kanavien paperihäivytys jatkuu maskirajan ulkopuolelle. Proxykomponentit 1556 px kohdassa x0–120/y299–335 ja 1439 px kohdassa x324–377/y266–324 seuraavat ohjeen kanavia/häivytystä.",
+    "r01-c09: koristeallas noin x250–303/y385–414 ei ole kokonaan kuiva. Maskissa on sen kohdalla pieni 47 px valkoinen jäänne, mutta kuvan sininen ulottuu myös tämän ulkopuolelle (74 px nollatoleranssilla ROI:ssa).",
+    "r02-c09: kapean saaren/sulun vasemmalla sivulla noin x719–742/y191–235 on geometriassa sininen mutta maskissa musta ohut vesiviiva (115 px yli 5 px maskirajan). Sillan kansi, kivisaari ja rakennus pysyvät kuivina.",
+    "Kaikki maskissa osoitetut suuret kanavaosuudet on palautettu: erodoidun vesi-interiöörin puuttuvan cyan-värin proxy on 5 px / 0 px. Tämä ei ole pikselitarkka geometria-sertifikaatti.",
+    "Palojen 128 px pystylimitys on tarkistettu natiivikaistoina; kanavien sijainnit jatkuvat, mutta julkisivuissa ja katoissa on renderöintieroja. RGB-MAE 19,919/255. Vastaanottajan saumaleikkaus ja arvio ovat erillisiä.",
+    "Uusien lähdemaskien r01-c08/r01-c09-vaakalimityksessä jää 103 px lähdepoikkeama (bbox 101,331,128,341 limityskaistan koordinaateissa). Hyväksyttyä r01-c08-kuvaa ei muuteta."
+  ],
+  "reviewMethod": [
+    "Full native images compared with full source-v2 geometry guides and binary masks.",
+    "Current final/guide details for canal edge, tiny ornament, lock island and roofs inspected with mechanical in-memory crops.",
+    "Native 128 px vertical-overlap strips inspected; no blended view treated as seam certification.",
+    "Batch colour diagnostics interpreted visually. All final/raw/native source hashes checked."
+  ],
+  "tiles": {
+    "pariisi-1m-r01-c09": {
+      "selectedAttempt": 1,
+      "sha256": "e4f82903b47d874677206dfd2d29bc9cfdd77a1e486b649c6968a7c98a55b565",
+      "nativeRawAndSourceByteIdentity": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "waterMaskSha256": "a9d5fb46da7ec2283c0da11ee3b42cf372abe09fb822cd72c85c615ee469a832",
+      "geometryGuideSha256": "388cd31f841eaac522e503e1664f63bc8711296146a4219b41d3137ee5d1645f",
+      "roofs": "Sharp fine ink, bluegray roofs and beige facades in the q11 style range; visible roof joints/windows remain resolved in native detail.",
+      "groundGeometry": "Main street, rail, block, canal and bridge layout follows the guide visually; no pixel-perfect claim.",
+      "water": "Required v2 canal network restored, but the explicit exceptions remain.",
+      "forbiddenElements": "No visible people, trees, cars or boats introduced.",
+      "paper": "r01 source city-edge fade retained; r02 is a full city tile.",
+      "groundGeometryCertified": false,
+      "unqualifiedWaterMaskPass": false
+    },
+    "pariisi-1m-r02-c09": {
+      "selectedAttempt": 1,
+      "sha256": "415e3f0149c998ce8b8e7a68c449700c48bf2ecc387bd6ebba5079ce3c28c6ff",
+      "nativeRawAndSourceByteIdentity": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "waterMaskSha256": "1547a3c488f724b73ee8320a5985527de9aa302c4da4708758ec303b3cf62c85",
+      "geometryGuideSha256": "b05b977cffd5bdbdaf29027f10397688304468e52a2da503704fb7031978a579",
+      "roofs": "Sharp fine ink, bluegray roofs and beige facades in the q11 style range; visible roof joints/windows remain resolved in native detail.",
+      "groundGeometry": "Main street, rail, block, canal and bridge layout follows the guide visually; no pixel-perfect claim.",
+      "water": "Required v2 canal network restored, but the explicit exceptions remain.",
+      "forbiddenElements": "No visible people, trees, cars or boats introduced.",
+      "paper": "r01 source city-edge fade retained; r02 is a full city tile.",
+      "groundGeometryCertified": false,
+      "unqualifiedWaterMaskPass": false
+    }
+  },
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "generationCallsThisTask": 0
+}
