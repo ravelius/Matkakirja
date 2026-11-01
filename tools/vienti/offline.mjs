@@ -68,14 +68,14 @@ export const OFFLINE_LAHTEET = {
     kaupunkitaso: { tasot: [9], sadeKm: 60, kaupungit: "kokoelma kaupungit, tyyppi 'kaupunki'" },
   },
   maasto: {
-    layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json',
-    url: 'https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/{z}/{x}/{y}.terrain?v=2026-09-24-maailma',
+    layer: 'https://media.matkakirja.app/julisteet/maasto/2026-10-29-maailma/layer.json',
+    url: 'https://media.matkakirja.app/julisteet/maasto/2026-10-29-maailma/{z}/{x}/{y}.terrain?v=2026-10-29-maailma',
     skeema: 'tms', projektio: 'EPSG:4326', globaaliMax: 6,
     /*
      * Skeema 1.53 (Fable 27.9.2026, ehdotus B1+C docs/raportit/siirtoseppa-maasto-offline-ehdotus-20260927.md):
      * maan maasto-kenttä enintään kokoMaaMax (z10), ja tarkemmat tasot vain kaupunkien ympäriltä omassa avaimessa
      * maat.*.kaupunkiMaasto (vanhat buildit ohittavat). Verkossa maasto haetaan ennallaan layer.json-tasoille asti.
-     * Sama sarja kuin natiivin kohtauksessa (Pallo.unity maastoLayer, 24.9. alkaen 2026-09-24-maailma): natiivi lataa
+     * Sama sarja kuin natiivin kohtauksessa (Pallo.unity maastoLayer, 29.10. alkaen 2026-10-29-maailma, juna 214): natiivi lataa
      * laatat kohtauksen pohjasta näillä väleillä, joten vanha 2026-09-23b (z7+ vain Ranska) jätti 127 maata ilman
      * offline-maastoa (Siirtoseppä 28.9.2026). Sarjan vaihtuessa: vaihda molemmat ja aja --paivita-koot.
      */

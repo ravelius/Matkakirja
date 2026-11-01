@@ -25,7 +25,7 @@
  *
  * VUORISTOKERROS (Karttaseppä 12.10.2026, PT erä 184): `--mapterhorn` lukee
  * Mapterhornin laserkeilatun maanpinnan raakalaatoista (mapterhorn.mjs) ja
- * käyttää Copernicusta varalla. `--vanhempi ../2026-09-24-maailma/` kirjoittaa
+ * käyttää Copernicusta varalla. `--vanhempi ../2026-10-29-maailma/` kirjoittaa
  * layer.jsoniin parentUrl:n, jolloin kerros sisältää vain syvät tasot
  * (esim. --tasot 13-15) ja Cesium hakee matalammat maailmanmaastosta.
  *

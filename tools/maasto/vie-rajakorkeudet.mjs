@@ -29,8 +29,10 @@
  *
  * === MITÄ h TARKOITTAA ================================================
  *
- * Natiivin maasto on quantized-mesh `julisteet/maasto/2026-09-24-maailma`
- * (tee-maasto.mjs). Tason z laatan verkko on RTIN-harvennettu 65 × 65
+ * Natiivin maasto on quantized-mesh `julisteet/maasto/2026-10-29-maailma`
+ * (tee-maasto.mjs; juna 214 alkaen, ennen 2026-09-24-maailma). Sarjan tasot 0–9
+ * ajettiin virhekertoimella 0,25, joten rtinKynnys (kerroin 0,5) on niille
+ * väljä yläraja: korkeudet pysyvät verkon yläpuolella. Tason z laatan verkko on RTIN-harvennettu 65 × 65
  * -ruudukosta, jonka näytteet ovat MAAILMANHILASSA lon = −180 + i·s,
  * lat = −90 + j·s, s = 180 / 2^z / 64, ja näyte on `dem.korkeus(lon, lat, s)`
  * (sama GLO-30/GLO-90-valinta, sama overview). RTIN-kolmiot ovat
@@ -110,9 +112,9 @@ export const RTIN_KERROIN = 2;
 /** Nousuvara (m), jonka ylittyessä yläraja rajataan laatan korkeimpaan näytteeseen (z ≤ 8). */
 export const KATON_RAJA = 200;
 
-/** Oletukset = maailma-ajo 2026-09-24-maailma (maasto-poltto/aja-maailma.sh). */
+/** Oletukset = maailma-ajo 2026-09-24-maailma (maasto-poltto/aja-maailma.sh); 2026-10-29-maailma sama geometria. */
 export const MAASTO = {
-  versio: '2026-09-24-maailma',
+  versio: '2026-10-29-maailma',
   alue: [-25, 34, 45, 72],
   maailma: 10,
   vainMaaAlkaen: 7,
