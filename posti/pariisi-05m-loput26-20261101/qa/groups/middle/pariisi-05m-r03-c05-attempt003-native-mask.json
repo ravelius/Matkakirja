@@ -1,0 +1,110 @@
+{
+  "tile": "pariisi-05m-r03-c05",
+  "attempt": 3,
+  "sha256": "e2cb3a4feb707768aca5a6e734a8465a59dd129d00f6d0961655191e9a948290",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "nativeByteIdentity": true,
+  "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+  "outside5pxCyanTotal": 40,
+  "outsideComponents": [
+    {
+      "area": 7,
+      "bbox": [
+        755,
+        841,
+        759,
+        845
+      ]
+    },
+    {
+      "area": 3,
+      "bbox": [
+        1060,
+        639,
+        1061,
+        642
+      ]
+    },
+    {
+      "area": 3,
+      "bbox": [
+        480,
+        935,
+        482,
+        937
+      ]
+    },
+    {
+      "area": 2,
+      "bbox": [
+        1167,
+        562,
+        1168,
+        564
+      ]
+    },
+    {
+      "area": 2,
+      "bbox": [
+        841,
+        912,
+        843,
+        913
+      ]
+    },
+    {
+      "area": 2,
+      "bbox": [
+        1258,
+        1016,
+        1260,
+        1017
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        1033,
+        14,
+        1034,
+        15
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        38,
+        28,
+        39,
+        29
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        926,
+        176,
+        927,
+        177
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        252,
+        400,
+        253,
+        401
+      ]
+    }
+  ],
+  "missingEroded5pxCyanTotal": 0,
+  "missingComponents": [],
+  "colourProxyOnly": true,
+  "sourceCommit": "b9ba46ec6c637d2a8e17b5160b61123af6d14076",
+  "checkedAt": "2026-11-01T05:24:24.629943+00:00"
+}

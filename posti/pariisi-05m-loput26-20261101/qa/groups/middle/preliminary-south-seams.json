@@ -1,0 +1,17 @@
+[
+  {
+    "tile": "pariisi-05m-r03-c03",
+    "neighbor": "pariisi-05m-r04-c03",
+    "rgbMAE": 17.368572658962673
+  },
+  {
+    "tile": "pariisi-05m-r03-c04",
+    "neighbor": "pariisi-05m-r04-c04",
+    "rgbMAE": 18.005199856228298
+  },
+  {
+    "tile": "pariisi-05m-r03-c05",
+    "neighbor": "pariisi-05m-r04-c05",
+    "rgbMAE": 24.85134718153212
+  }
+]

@@ -1,0 +1,6 @@
+ONE COMPLETE NEW native1536x1024 RGB PNG, entirely newlypainted map, NOT partial editing, not enlargement/retouch. Reference1 is sharp currentcandidate: keep all precise geometry, streets, roof/house footprints, emptyplots and native detail. Reference2 approved softmodel gives exact ground materials. Reference3 approved0.5m fine thinbrownink, bluegreyroofs, creamstone style.
+Make these THREE courtyard corrections fromreference1:
+1 Upper-middle-left IRREGULAR pointed courtyard inside the block at bbox[473,143,575,311], centre(525,220): ENTIRE courtyard SAGE GREEN GRASS as reference2, NOT cream. This is the tall triangularheaded court, just above the longcreamcourt in the left-centre.
+2 Small mid-upper court bbox[707,332,792,395], centre(750,360): ENTIRE CREAM/IVORY STONE, NOT green.
+3 Long lower-right horizontal enclosed court bbox[1035,666,1263,778], centre(1150,720): ENTIRE CREAM/IVORY STONE, NOT green.
+All other current colours unchanged: preserve top-leftbiggreen clipped courtyard, leftparkgreen, bottomparkgreen, and centralgreen near(850,600), rightgreencomplex(1240,500). Keep circular ornament(329,870) entirely drycream. NO WATER anywhere, no trees/life/landmarks/text. Retain reference1 individually crisp windowrows, dormers/chimneys, same fine detail and framing. Wholeimage anew1536x1024.

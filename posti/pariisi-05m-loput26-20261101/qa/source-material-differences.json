@@ -1,0 +1,1264 @@
+{
+  "purpose": "Prompt preparation diagnostic only; inspect references visually, not an automatic semantic classifier. Keep geometry guide footprints but painted model material colours. Coordinates are native pixels.",
+  "tiles": [
+    {
+      "tile": "pariisi-05m-r01-c01",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 14612,
+          "bbox": [
+            66,
+            865,
+            228,
+            1024
+          ]
+        },
+        {
+          "area": 8751,
+          "bbox": [
+            1178,
+            570,
+            1262,
+            884
+          ]
+        },
+        {
+          "area": 7734,
+          "bbox": [
+            1171,
+            0,
+            1298,
+            130
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 1574,
+          "bbox": [
+            297,
+            942,
+            354,
+            1024
+          ]
+        },
+        {
+          "area": 1475,
+          "bbox": [
+            492,
+            470,
+            560,
+            506
+          ]
+        },
+        {
+          "area": 1405,
+          "bbox": [
+            1113,
+            482,
+            1163,
+            659
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r01-c02",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 4144,
+          "bbox": [
+            1314,
+            949,
+            1435,
+            1024
+          ]
+        },
+        {
+          "area": 4057,
+          "bbox": [
+            420,
+            256,
+            527,
+            313
+          ]
+        },
+        {
+          "area": 3688,
+          "bbox": [
+            617,
+            79,
+            746,
+            116
+          ]
+        },
+        {
+          "area": 2818,
+          "bbox": [
+            596,
+            695,
+            671,
+            760
+          ]
+        },
+        {
+          "area": 1133,
+          "bbox": [
+            126,
+            734,
+            158,
+            812
+          ]
+        },
+        {
+          "area": 805,
+          "bbox": [
+            234,
+            0,
+            302,
+            28
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": []
+    },
+    {
+      "tile": "pariisi-05m-r01-c03",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 9567,
+          "bbox": [
+            1201,
+            928,
+            1330,
+            1024
+          ]
+        },
+        {
+          "area": 6340,
+          "bbox": [
+            694,
+            921,
+            965,
+            1008
+          ]
+        },
+        {
+          "area": 5702,
+          "bbox": [
+            922,
+            0,
+            975,
+            166
+          ]
+        },
+        {
+          "area": 3428,
+          "bbox": [
+            386,
+            301,
+            548,
+            340
+          ]
+        },
+        {
+          "area": 1512,
+          "bbox": [
+            1078,
+            129,
+            1142,
+            167
+          ]
+        },
+        {
+          "area": 1054,
+          "bbox": [
+            0,
+            952,
+            27,
+            1024
+          ]
+        },
+        {
+          "area": 801,
+          "bbox": [
+            1092,
+            0,
+            1127,
+            39
+          ]
+        },
+        {
+          "area": 689,
+          "bbox": [
+            581,
+            40,
+            613,
+            86
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 10372,
+          "bbox": [
+            516,
+            492,
+            630,
+            609
+          ]
+        },
+        {
+          "area": 10053,
+          "bbox": [
+            447,
+            767,
+            589,
+            869
+          ]
+        },
+        {
+          "area": 4826,
+          "bbox": [
+            1462,
+            71,
+            1536,
+            193
+          ]
+        },
+        {
+          "area": 1572,
+          "bbox": [
+            230,
+            297,
+            263,
+            366
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r01-c04",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 4314,
+          "bbox": [
+            1336,
+            250,
+            1416,
+            352
+          ]
+        },
+        {
+          "area": 1744,
+          "bbox": [
+            656,
+            133,
+            710,
+            195
+          ]
+        },
+        {
+          "area": 833,
+          "bbox": [
+            1362,
+            779,
+            1395,
+            846
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 25587,
+          "bbox": [
+            759,
+            180,
+            986,
+            371
+          ]
+        },
+        {
+          "area": 11036,
+          "bbox": [
+            766,
+            895,
+            918,
+            1012
+          ]
+        },
+        {
+          "area": 8497,
+          "bbox": [
+            54,
+            71,
+            212,
+            195
+          ]
+        },
+        {
+          "area": 5064,
+          "bbox": [
+            573,
+            859,
+            686,
+            935
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r01-c05",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 2884,
+          "bbox": [
+            1474,
+            55,
+            1536,
+            132
+          ]
+        },
+        {
+          "area": 1700,
+          "bbox": [
+            980,
+            787,
+            1039,
+            877
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r02-c01",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 14077,
+          "bbox": [
+            66,
+            0,
+            229,
+            151
+          ]
+        },
+        {
+          "area": 6375,
+          "bbox": [
+            473,
+            143,
+            575,
+            311
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 3604,
+          "bbox": [
+            1035,
+            666,
+            1263,
+            778
+          ]
+        },
+        {
+          "area": 3461,
+          "bbox": [
+            257,
+            46,
+            354,
+            211
+          ]
+        },
+        {
+          "area": 2725,
+          "bbox": [
+            707,
+            332,
+            792,
+            395
+          ]
+        },
+        {
+          "area": 1503,
+          "bbox": [
+            220,
+            375,
+            286,
+            507
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r02-c02",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 21313,
+          "bbox": [
+            143,
+            521,
+            329,
+            844
+          ]
+        },
+        {
+          "area": 4093,
+          "bbox": [
+            1314,
+            53,
+            1435,
+            129
+          ]
+        },
+        {
+          "area": 3890,
+          "bbox": [
+            197,
+            190,
+            287,
+            305
+          ]
+        },
+        {
+          "area": 756,
+          "bbox": [
+            1214,
+            585,
+            1249,
+            653
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 9556,
+          "bbox": [
+            329,
+            271,
+            474,
+            396
+          ]
+        },
+        {
+          "area": 6578,
+          "bbox": [
+            975,
+            382,
+            1069,
+            571
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r02-c03",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 20763,
+          "bbox": [
+            1177,
+            32,
+            1330,
+            227
+          ]
+        },
+        {
+          "area": 17751,
+          "bbox": [
+            121,
+            442,
+            296,
+            748
+          ]
+        },
+        {
+          "area": 6340,
+          "bbox": [
+            694,
+            25,
+            965,
+            112
+          ]
+        },
+        {
+          "area": 3533,
+          "bbox": [
+            1104,
+            638,
+            1236,
+            694
+          ]
+        },
+        {
+          "area": 3242,
+          "bbox": [
+            1103,
+            340,
+            1184,
+            407
+          ]
+        },
+        {
+          "area": 1064,
+          "bbox": [
+            0,
+            56,
+            27,
+            129
+          ]
+        },
+        {
+          "area": 745,
+          "bbox": [
+            410,
+            243,
+            456,
+            272
+          ]
+        },
+        {
+          "area": 668,
+          "bbox": [
+            614,
+            845,
+            666,
+            881
+          ]
+        },
+        {
+          "area": 532,
+          "bbox": [
+            1025,
+            973,
+            1072,
+            991
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 5169,
+          "bbox": [
+            467,
+            603,
+            624,
+            685
+          ]
+        },
+        {
+          "area": 4229,
+          "bbox": [
+            1345,
+            702,
+            1526,
+            769
+          ]
+        },
+        {
+          "area": 1250,
+          "bbox": [
+            186,
+            962,
+            232,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r02-c04",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 5167,
+          "bbox": [
+            968,
+            733,
+            1062,
+            849
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 11059,
+          "bbox": [
+            766,
+            0,
+            918,
+            116
+          ]
+        },
+        {
+          "area": 2880,
+          "bbox": [
+            573,
+            0,
+            674,
+            39
+          ]
+        },
+        {
+          "area": 2739,
+          "bbox": [
+            0,
+            718,
+            118,
+            769
+          ]
+        },
+        {
+          "area": 1539,
+          "bbox": [
+            222,
+            776,
+            312,
+            811
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r02-c05",
+      "group": "north",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 12039,
+          "bbox": [
+            1278,
+            432,
+            1466,
+            640
+          ]
+        },
+        {
+          "area": 10965,
+          "bbox": [
+            409,
+            222,
+            602,
+            343
+          ]
+        },
+        {
+          "area": 4220,
+          "bbox": [
+            1471,
+            118,
+            1536,
+            220
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 5570,
+          "bbox": [
+            904,
+            349,
+            1031,
+            451
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r03-c01",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [],
+      "guideGrassAbsentFromModel": []
+    },
+    {
+      "tile": "pariisi-05m-r03-c02",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 8866,
+          "bbox": [
+            1449,
+            145,
+            1536,
+            319
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r03-c03",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 841,
+          "bbox": [
+            294,
+            291,
+            353,
+            329
+          ]
+        },
+        {
+          "area": 532,
+          "bbox": [
+            1025,
+            77,
+            1072,
+            95
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 23653,
+          "bbox": [
+            41,
+            66,
+            247,
+            325
+          ]
+        },
+        {
+          "area": 3148,
+          "bbox": [
+            650,
+            899,
+            728,
+            965
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r03-c04",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 1725,
+          "bbox": [
+            1286,
+            817,
+            1379,
+            878
+          ]
+        },
+        {
+          "area": 1245,
+          "bbox": [
+            496,
+            562,
+            553,
+            686
+          ]
+        },
+        {
+          "area": 1010,
+          "bbox": [
+            929,
+            660,
+            979,
+            702
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r03-c05",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 8464,
+          "bbox": [
+            240,
+            727,
+            425,
+            902
+          ]
+        },
+        {
+          "area": 3417,
+          "bbox": [
+            188,
+            399,
+            323,
+            497
+          ]
+        },
+        {
+          "area": 1647,
+          "bbox": [
+            508,
+            593,
+            567,
+            653
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": []
+    },
+    {
+      "tile": "pariisi-05m-r04-c01",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 2923,
+          "bbox": [
+            1215,
+            854,
+            1329,
+            911
+          ]
+        },
+        {
+          "area": 2144,
+          "bbox": [
+            1043,
+            705,
+            1113,
+            767
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": []
+    },
+    {
+      "tile": "pariisi-05m-r04-c02",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 3417,
+          "bbox": [
+            520,
+            748,
+            673,
+            847
+          ]
+        },
+        {
+          "area": 567,
+          "bbox": [
+            1044,
+            741,
+            1066,
+            783
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": []
+    },
+    {
+      "tile": "pariisi-05m-r05-c01",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 1700,
+          "bbox": [
+            562,
+            967,
+            618,
+            1024
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 6229,
+          "bbox": [
+            1226,
+            908,
+            1343,
+            998
+          ]
+        },
+        {
+          "area": 613,
+          "bbox": [
+            1503,
+            920,
+            1536,
+            964
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r05-c02",
+      "group": "middle",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 3293,
+          "bbox": [
+            1402,
+            242,
+            1475,
+            328
+          ]
+        },
+        {
+          "area": 3027,
+          "bbox": [
+            778,
+            235,
+            862,
+            298
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 5579,
+          "bbox": [
+            95,
+            879,
+            217,
+            968
+          ]
+        },
+        {
+          "area": 2219,
+          "bbox": [
+            511,
+            764,
+            558,
+            835
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r06-c01",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 5396,
+          "bbox": [
+            523,
+            71,
+            638,
+            203
+          ]
+        },
+        {
+          "area": 1621,
+          "bbox": [
+            618,
+            731,
+            686,
+            792
+          ]
+        },
+        {
+          "area": 783,
+          "bbox": [
+            70,
+            430,
+            107,
+            522
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 6229,
+          "bbox": [
+            1226,
+            12,
+            1343,
+            102
+          ]
+        },
+        {
+          "area": 658,
+          "bbox": [
+            1471,
+            908,
+            1522,
+            936
+          ]
+        },
+        {
+          "area": 613,
+          "bbox": [
+            1503,
+            24,
+            1536,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r06-c02",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 8795,
+          "bbox": [
+            1199,
+            482,
+            1292,
+            590
+          ]
+        },
+        {
+          "area": 4800,
+          "bbox": [
+            653,
+            254,
+            703,
+            407
+          ]
+        },
+        {
+          "area": 2687,
+          "bbox": [
+            930,
+            259,
+            977,
+            345
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 7438,
+          "bbox": [
+            878,
+            743,
+            1110,
+            1024
+          ]
+        },
+        {
+          "area": 5184,
+          "bbox": [
+            95,
+            0,
+            217,
+            72
+          ]
+        },
+        {
+          "area": 953,
+          "bbox": [
+            1225,
+            703,
+            1240,
+            815
+          ]
+        },
+        {
+          "area": 658,
+          "bbox": [
+            63,
+            908,
+            114,
+            936
+          ]
+        },
+        {
+          "area": 588,
+          "bbox": [
+            1277,
+            841,
+            1289,
+            909
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r07-c01",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 4794,
+          "bbox": [
+            501,
+            645,
+            593,
+            769
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 7380,
+          "bbox": [
+            826,
+            703,
+            926,
+            864
+          ]
+        },
+        {
+          "area": 2300,
+          "bbox": [
+            662,
+            794,
+            727,
+            877
+          ]
+        },
+        {
+          "area": 658,
+          "bbox": [
+            1471,
+            12,
+            1522,
+            40
+          ]
+        },
+        {
+          "area": 562,
+          "bbox": [
+            1357,
+            610,
+            1380,
+            675
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r07-c02",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 3403,
+          "bbox": [
+            1413,
+            766,
+            1462,
+            901
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 10044,
+          "bbox": [
+            874,
+            0,
+            1266,
+            432
+          ]
+        },
+        {
+          "area": 658,
+          "bbox": [
+            63,
+            12,
+            114,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r07-c03",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 7683,
+          "bbox": [
+            670,
+            200,
+            831,
+            319
+          ]
+        },
+        {
+          "area": 3404,
+          "bbox": [
+            5,
+            766,
+            54,
+            901
+          ]
+        },
+        {
+          "area": 501,
+          "bbox": [
+            1476,
+            486,
+            1494,
+            535
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c04",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 3334,
+          "bbox": [
+            305,
+            829,
+            396,
+            910
+          ]
+        },
+        {
+          "area": 501,
+          "bbox": [
+            68,
+            486,
+            86,
+            535
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": [
+        {
+          "area": 1038,
+          "bbox": [
+            1182,
+            822,
+            1221,
+            868
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r07-c05",
+      "group": "south",
+      "modelGrassAbsentFromGuide": [
+        {
+          "area": 21224,
+          "bbox": [
+            1098,
+            752,
+            1299,
+            1024
+          ]
+        },
+        {
+          "area": 1926,
+          "bbox": [
+            536,
+            988,
+            627,
+            1024
+          ]
+        }
+      ],
+      "guideGrassAbsentFromModel": []
+    }
+  ]
+}

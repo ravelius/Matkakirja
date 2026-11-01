@@ -1,0 +1,1698 @@
+{
+  "startedAt": "2026-11-01T05:11:41.454928+00:00",
+  "productionStartedAt": "2026-11-01T05:11:41.454928+00:00",
+  "updatedAt": "2026-11-01T05:37:32.438901+00:00",
+  "productionActive": false,
+  "safeEnded": true,
+  "generationCalls": 19,
+  "inFlight": [],
+  "status": "complete-with-documented-exceptions",
+  "sourceCommit": "b9ba46ec6c637d2a8e17b5160b61123af6d14076",
+  "sourceBlob": "31b29b24ae929056533f199b3680fa066ce43de0",
+  "scope": [
+    "pariisi-05m-r01-c01",
+    "pariisi-05m-r01-c02",
+    "pariisi-05m-r01-c03",
+    "pariisi-05m-r01-c04",
+    "pariisi-05m-r01-c05",
+    "pariisi-05m-r02-c01",
+    "pariisi-05m-r02-c02",
+    "pariisi-05m-r02-c03",
+    "pariisi-05m-r02-c04",
+    "pariisi-05m-r02-c05"
+  ],
+  "tiles": {
+    "pariisi-05m-r01-c01": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c01-attempt001.txt",
+          "promptSha256": "7adb6db3508c357c08340fb3404134de925bef003c8221b7cfffda4247ddeed7",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c01-v6-geometria.png",
+              "sha256": "568cbc0551bb28059667ff3eae295bcd43d389f6604bfadac04d18337b86b036"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c01-1m-2x.png",
+              "sha256": "4b3052e037fd8b674a39644f1fd74cc4970e2a94c57fbc5bd29b7594a48cddf2"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c01.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:12:09.609705+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-be92a680-70d2-4216-a9c0-a2f9393cd19e.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt001-native.png",
+          "sha256": "17aa61de11e096d27a506d582985b50ea610846a29a13b54a334fcde2e768f52",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2944230,
+          "completedAt": "2026-11-01T05:13:00.309861+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c01-attempt001-detail.png",
+          "detailCropXYWH": [
+            430,
+            380,
+            250,
+            270
+          ]
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c01-attempt002.txt",
+          "promptSha256": "8855b141b8f88086e5043364d7cb6504370aebc8f2d48d7cf33858e36c9da310",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c01-v6-geometria.png",
+              "sha256": "568cbc0551bb28059667ff3eae295bcd43d389f6604bfadac04d18337b86b036"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c01-1m-2x.png",
+              "sha256": "4b3052e037fd8b674a39644f1fd74cc4970e2a94c57fbc5bd29b7594a48cddf2"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c01.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:13:00.565418+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-c2344580-9d78-418e-8f36-d3ebf96aa58c.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt002-native.png",
+          "sha256": "7d743c870e63c49e7042ad74227e86037eaa688c529d9503fd0a5b047592ebd9",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2928140,
+          "completedAt": "2026-11-01T05:13:42.227320+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c01-attempt002-detail.png",
+          "detailCropXYWH": [
+            430,
+            380,
+            250,
+            270
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "All-black water mask and no water visible. Full geometry and slender block strips retained. Native windows, chimneys and roof ridges crisp. Attempt002 corrects two courtyards (525,490) and (350,980) to model creamstone while retaining model grass at (140,945),(1230,35),(140,565),(945,488). Central large courtyard stays empty cream."
+          },
+          "limitations": [
+            "Fine geometry/antialiasing differences remain possible; no exact pixel-geometry claim. Cross-tile seams pending parent review."
+          ]
+        },
+        {
+          "attempt": 3,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c01-attempt003.txt",
+          "promptSha256": "0cd25b5378de7ea604e987d57457aa02d3e4cbb75d1f97d4fd184d8e7b34b583",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt002-native.png",
+              "sha256": "7d743c870e63c49e7042ad74227e86037eaa688c529d9503fd0a5b047592ebd9"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c01-1m-2x.png",
+              "sha256": "4b3052e037fd8b674a39644f1fd74cc4970e2a94c57fbc5bd29b7594a48cddf2"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c01.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:15:24.518829+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-09c4f910-4bc1-431a-b40a-8223f335c68f.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt003-native.png",
+          "sha256": "a78a548b5d17e2e97a1783f608e1f0beccdd8261a7cec4c418234f2ada78a178",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2782201,
+          "completedAt": "2026-11-01T05:16:28.796031+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c01-attempt003-detail.png",
+          "detailCropXYWH": [
+            1050,
+            450,
+            270,
+            450
+          ]
+        },
+        {
+          "attempt": 4,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c01-attempt004.txt",
+          "promptSha256": "a43ac080bd17e55d817c256a4fa59f9c913dc84bcb377473f9183e7330fff306",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt003-native.png",
+              "sha256": "a78a548b5d17e2e97a1783f608e1f0beccdd8261a7cec4c418234f2ada78a178"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c01-1m-2x.png",
+              "sha256": "4b3052e037fd8b674a39644f1fd74cc4970e2a94c57fbc5bd29b7594a48cddf2"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            }
+          ],
+          "startedAt": "2026-11-01T05:16:28.944703+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-e11c5000-d503-451a-9909-bc7a4b2583fa.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt004-native.png",
+          "sha256": "85cd62daee6b7820a6eb48172be12ee8dba459df1e257be040eb243301cddc6f",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2678870,
+          "completedAt": "2026-11-01T05:17:12.229971+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c01-attempt004-detail.png",
+          "detailCropXYWH": [
+            250,
+            840,
+            280,
+            184
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "No water on black mask. Model-material conflicts corrected through full new attempts: long right court [1178,570,1262,884] green; neighbouring [1113,482,1163,659] cream; clipped bottom [297,942,354,1024] cream; small (525,490) cream. Model large green courtyards retained. Fine roofs, window rows and chimneys resolved; large centre court empty cream.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Native detail differs slightly by roof; no claim of exact pixel geometry. Parent cross-tile review pending."
+          ]
+        }
+      ],
+      "sha256": "85cd62daee6b7820a6eb48172be12ee8dba459df1e257be040eb243301cddc6f",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-e11c5000-d503-451a-9909-bc7a4b2583fa.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c01-attempt004-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c01-attempt004.txt",
+      "promptSha256": "a43ac080bd17e55d817c256a4fa59f9c913dc84bcb377473f9183e7330fff306",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 2678870,
+      "selectedAttempt": 4,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r01-c01.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "No water on black mask. Model-material conflicts corrected through full new attempts: long right court [1178,570,1262,884] green; neighbouring [1113,482,1163,659] cream; clipped bottom [297,942,354,1024] cream; small (525,490) cream. Model large green courtyards retained. Fine roofs, window rows and chimneys resolved; large centre court empty cream.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Native detail differs slightly by roof; no claim of exact pixel geometry. Parent cross-tile review pending."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 4,
+        "sha256": "85cd62daee6b7820a6eb48172be12ee8dba459df1e257be040eb243301cddc6f",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c01.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 11,
+        "cyanStrictOutsidePixels": 11,
+        "cyanOutside5pxPixels": 11,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "No water on black mask. Model-material conflicts corrected through full new attempts: long right court [1178,570,1262,884] green; neighbouring [1113,482,1163,659] cream; clipped bottom [297,942,354,1024] cream; small (525,490) cream. Model large green courtyards retained. Fine roofs, window rows and chimneys resolved; large centre court empty cream."
+        },
+        "limitations": [
+          "Native detail differs slightly by roof; no claim of exact pixel geometry. Parent cross-tile review pending."
+        ]
+      }
+    },
+    "pariisi-05m-r01-c02": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c02-attempt001.txt",
+          "promptSha256": "7d51f2b2528fd3aab8c019d203c7235bd5e161cd9cfcefe2576151abd1311872",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c02-v6-geometria.png",
+              "sha256": "aa057b3a08e8fbd9299ff7463af1205eead4785de75bd9e798f8e96b24e5200a"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c02-1m-2x.png",
+              "sha256": "ae2ece725675c1091e2d3705dfd231ae904de2a55fa6fb9a858716b584824eb1"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c02.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:14:02.026675+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-3bef4dfe-d0a3-48e1-98af-15bafa11e478.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c02-attempt001-native.png",
+          "sha256": "34c51adbb140bf1709a484ee3ca6c3a59817496fd443254ef452dfecfde3411c",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2998304,
+          "completedAt": "2026-11-01T05:14:49.398661+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c02-attempt001-detail.png",
+          "detailCropXYWH": [
+            360,
+            175,
+            300,
+            230
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "No water on all-black mask. Large Garnier reserved irregular plot (300–540,480–780) remains flat empty stone. Approved model green courtyards correctly retained, including model/geometry conflicts. Fine native window rows, roof planes, dormers and chimneys consistent with approved 0.5m style.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Fine geometry/antialiasing variation possible. Cross-tile overlap is parent QA."
+          ]
+        }
+      ],
+      "sha256": "34c51adbb140bf1709a484ee3ca6c3a59817496fd443254ef452dfecfde3411c",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-3bef4dfe-d0a3-48e1-98af-15bafa11e478.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c02-attempt001-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c02-attempt001.txt",
+      "promptSha256": "7d51f2b2528fd3aab8c019d203c7235bd5e161cd9cfcefe2576151abd1311872",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 2998304,
+      "selectedAttempt": 1,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r01-c02.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "No water on all-black mask. Large Garnier reserved irregular plot (300–540,480–780) remains flat empty stone. Approved model green courtyards correctly retained, including model/geometry conflicts. Fine native window rows, roof planes, dormers and chimneys consistent with approved 0.5m style.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Fine geometry/antialiasing variation possible. Cross-tile overlap is parent QA."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 1,
+        "sha256": "34c51adbb140bf1709a484ee3ca6c3a59817496fd443254ef452dfecfde3411c",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c02.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 223,
+        "cyanStrictOutsidePixels": 223,
+        "cyanOutside5pxPixels": 223,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "No water on all-black mask. Large Garnier reserved irregular plot (300–540,480–780) remains flat empty stone. Approved model green courtyards correctly retained, including model/geometry conflicts. Fine native window rows, roof planes, dormers and chimneys consistent with approved 0.5m style."
+        },
+        "limitations": [
+          "Fine geometry/antialiasing variation possible. Cross-tile overlap is parent QA."
+        ]
+      }
+    },
+    "pariisi-05m-r01-c03": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c03-attempt001.txt",
+          "promptSha256": "eeda2456b9e80d87660df639d56d2357298247e4b49379e0640c136c31281c0f",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c03-v6-geometria.png",
+              "sha256": "9171baccefeab0f486874fa318e1b0cef8136e041bd457ba4f1efd5ab6d348f9"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c03-1m-2x.png",
+              "sha256": "445f2cacb93e34de06305261aa5c48662bc7eebaa892350e5dfedb7be9ae847c"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c03.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:17:24.920816+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-b4df959c-ee07-4a62-ae35-91b2dab4a3de.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c03-attempt001-native.png",
+          "sha256": "d898c9dd8d4bb36981fabddc920c98958037127f2abf61163d1d5c1f1b706f74",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3009794,
+          "completedAt": "2026-11-01T05:18:13.357873+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c03-attempt001-detail.png",
+          "detailCropXYWH": [
+            990,
+            410,
+            220,
+            160
+          ]
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c03-attempt002.txt",
+          "promptSha256": "156de98ed2a672ac776ecb8030417aac1dde4095db51cea143565822017992f1",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c03-attempt001-native.png",
+              "sha256": "d898c9dd8d4bb36981fabddc920c98958037127f2abf61163d1d5c1f1b706f74"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c03-1m-2x.png",
+              "sha256": "445f2cacb93e34de06305261aa5c48662bc7eebaa892350e5dfedb7be9ae847c"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c03.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            }
+          ],
+          "startedAt": "2026-11-01T05:18:28.775495+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-07d0fefe-6660-4d54-9bff-c46f06d2cfdc.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c03-attempt002-native.png",
+          "sha256": "1c5256c61b9968166a5fb77be50adae937756882cbc4c9117db0c267d75e9ae6",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2907444,
+          "completedAt": "2026-11-01T05:19:17.690411+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c03-attempt002-detail.png",
+          "detailCropXYWH": [
+            990,
+            410,
+            220,
+            160
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "All-black mask with no visible water. Large cream courtyards and model-green top/bottom courts retain intended colours; full attempt002 fixes tiny courtyard [1117,483,1175,512] from green to cream. Fine roofs, dormers and window rows match accepted row; empty courts remain empty.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Exact pixel geometry not certified; boundary antialiasing and cross-tile overlaps require parent QA."
+          ]
+        }
+      ],
+      "sha256": "1c5256c61b9968166a5fb77be50adae937756882cbc4c9117db0c267d75e9ae6",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-07d0fefe-6660-4d54-9bff-c46f06d2cfdc.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c03-attempt002-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c03-attempt002.txt",
+      "promptSha256": "156de98ed2a672ac776ecb8030417aac1dde4095db51cea143565822017992f1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 2907444,
+      "selectedAttempt": 2,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r01-c03.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "All-black mask with no visible water. Large cream courtyards and model-green top/bottom courts retain intended colours; full attempt002 fixes tiny courtyard [1117,483,1175,512] from green to cream. Fine roofs, dormers and window rows match accepted row; empty courts remain empty.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Exact pixel geometry not certified; boundary antialiasing and cross-tile overlaps require parent QA."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 2,
+        "sha256": "1c5256c61b9968166a5fb77be50adae937756882cbc4c9117db0c267d75e9ae6",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c03.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 48,
+        "cyanStrictOutsidePixels": 48,
+        "cyanOutside5pxPixels": 48,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "All-black mask with no visible water. Large cream courtyards and model-green top/bottom courts retain intended colours; full attempt002 fixes tiny courtyard [1117,483,1175,512] from green to cream. Fine roofs, dormers and window rows match accepted row; empty courts remain empty."
+        },
+        "limitations": [
+          "Exact pixel geometry not certified; boundary antialiasing and cross-tile overlaps require parent QA."
+        ]
+      }
+    },
+    "pariisi-05m-r01-c04": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c04-attempt001.txt",
+          "promptSha256": "3f036fed36859a76a185fc8683d6ff2dc1f93d5c4395da69c75fa1217c2a0f16",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c04-v6-geometria.png",
+              "sha256": "632c0765fd6fd71007e84acd8cf9865fcfdae6a83c7dc6abfd062e83ecf810bc"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c04-1m-2x.png",
+              "sha256": "d5be86cf38b4a4c47bc228e8772f8c1984810d15ff5224f87216db00750a4e40"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c04.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:19:32.703558+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-e2c87619-355b-44d4-9e92-c9a4b719d780.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c04-attempt001-native.png",
+          "sha256": "3873835e7ad624558e9cb6c75ad7d9298de70ace703409d74a8f78ec7c387bdc",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3126344,
+          "completedAt": "2026-11-01T05:20:26.891044+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c04-attempt001-detail.png",
+          "detailCropXYWH": [
+            560,
+            400,
+            340,
+            260
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "No water on black mask. Uppermiddle and bottom cream courtyards follow model instead of guidegrass, and specified model-green courts retained. Large central reservation remains flat empty stone. Native fine dormers, chimneys and window rows sharp and consistent.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "No pixel-exact geometry certificate; cross-tile overlaps pending parent review."
+          ]
+        }
+      ],
+      "sha256": "3873835e7ad624558e9cb6c75ad7d9298de70ace703409d74a8f78ec7c387bdc",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-e2c87619-355b-44d4-9e92-c9a4b719d780.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c04-attempt001-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c04-attempt001.txt",
+      "promptSha256": "3f036fed36859a76a185fc8683d6ff2dc1f93d5c4395da69c75fa1217c2a0f16",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3126344,
+      "selectedAttempt": 1,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r01-c04.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "No water on black mask. Uppermiddle and bottom cream courtyards follow model instead of guidegrass, and specified model-green courts retained. Large central reservation remains flat empty stone. Native fine dormers, chimneys and window rows sharp and consistent.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "No pixel-exact geometry certificate; cross-tile overlaps pending parent review."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 1,
+        "sha256": "3873835e7ad624558e9cb6c75ad7d9298de70ace703409d74a8f78ec7c387bdc",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c04.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 42,
+        "cyanStrictOutsidePixels": 42,
+        "cyanOutside5pxPixels": 42,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "No water on black mask. Uppermiddle and bottom cream courtyards follow model instead of guidegrass, and specified model-green courts retained. Large central reservation remains flat empty stone. Native fine dormers, chimneys and window rows sharp and consistent."
+        },
+        "limitations": [
+          "No pixel-exact geometry certificate; cross-tile overlaps pending parent review."
+        ]
+      }
+    },
+    "pariisi-05m-r01-c05": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c05-attempt001.txt",
+          "promptSha256": "e5b75e869e11cca1a67afd9b6b22f058e427d9236ab8e4ab4d568ee8ba81f285",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c05-v6-geometria.png",
+              "sha256": "f671082fb933a03f2f0156c962db8ddb543c2d305e4aeac8d65e6acc3a59ebb2"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c05-1m-2x.png",
+              "sha256": "9de75407da9158df88afb3521c743f796f13fd40c0292cb437298f811bdd8e0e"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c05.png",
+              "sha256": "9dca20dc4295d929592d02e19e528f9db3d802bd0af81d39d89ddb296d555751"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:20:44.807353+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-aec58f25-3b97-45e6-b5f3-eb1ab3f69f09.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c05-attempt001-native.png",
+          "sha256": "ae743bb98750b2bde77582a019a0ebaa462a8cef0164646dc4e2093b9e518bf6",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3428800,
+          "completedAt": "2026-11-01T05:21:40.664499+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c05-attempt001-detail.png",
+          "detailCropXYWH": [
+            740,
+            240,
+            230,
+            230
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Four white-mask canal reaches are present and bridges dry. Narrow lock channel [818,284,906,410] is correctly dry cream despite both guide/model blue, following black mask. Fine roofs/windows crisp. Upperright clipped and lowercanal triangle courtyards cream asmodel."
+          },
+          "limitations": [
+            "Small courtyards near (720,315) and (650,475) appear greener than approved model; retained for parent review and quantified final audit. Exact bank pixel matching not certified."
+          ]
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c05-attempt002.txt",
+          "promptSha256": "82d3e453e5fa1c96ac409b8ca11af21e3661c02801b178e2c1837d1f87edaa9d",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c05-attempt001-native.png",
+              "sha256": "ae743bb98750b2bde77582a019a0ebaa462a8cef0164646dc4e2093b9e518bf6"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r01-c05-1m-2x.png",
+              "sha256": "9de75407da9158df88afb3521c743f796f13fd40c0292cb437298f811bdd8e0e"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c05.png",
+              "sha256": "9dca20dc4295d929592d02e19e528f9db3d802bd0af81d39d89ddb296d555751"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r01-c05-v6-geometria.png",
+              "sha256": "f671082fb933a03f2f0156c962db8ddb543c2d305e4aeac8d65e6acc3a59ebb2"
+            }
+          ],
+          "startedAt": "2026-11-01T05:33:59.778096+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-bb8728fd-4ba3-4d26-a177-345cdcae0093.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c05-attempt002-native.png",
+          "sha256": "5f5c37decdda1bb39571da1541ba6659cfce964c0d55314b5f5f35ec23df1c96",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3283003,
+          "completedAt": "2026-11-01T05:34:42.217009+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r01-c05-attempt002-detail.png",
+          "detailCropXYWH": [
+            600,
+            245,
+            335,
+            280
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Whole-image second attempt corrects both small courtyard colours: triangle near (720,315) and horizontal courtyard near (650,475) now dry cream matching approved model. Other model greens preserved. Four permitted canal reaches preserved; mask-black narrow lock x818–906,y284–410 remains entirely dry cream despite blue in model/geometry. Thin ink, dormers and narrow window rows retained.",
+            "waterMaskConclusion": "reviewed-with-disclosed-boundary-exception"
+          },
+          "limitations": [
+            "Water mask overrides both model and geometry for the narrow dry lock x818–906,y284–410. Four white canal reaches remain cyan. Visual review does not assert pixel-exact shorelines.",
+            "Diagnostic cyan outside5px mask margin:86px total; largest connected30px bbox[942,460,958,463], a small rim at the beginning of the middle canal. Strict outside2852px includes near-bank rasterization. No eroded-mask missing-water component."
+          ]
+        }
+      ],
+      "sha256": "5f5c37decdda1bb39571da1541ba6659cfce964c0d55314b5f5f35ec23df1c96",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-bb8728fd-4ba3-4d26-a177-345cdcae0093.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r01-c05-attempt002-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r01-c05-attempt002.txt",
+      "promptSha256": "82d3e453e5fa1c96ac409b8ca11af21e3661c02801b178e2c1837d1f87edaa9d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3283003,
+      "selectedAttempt": 2,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r01-c05.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Whole-image second attempt corrects both small courtyard colours: triangle near (720,315) and horizontal courtyard near (650,475) now dry cream matching approved model. Other model greens preserved. Four permitted canal reaches preserved; mask-black narrow lock x818–906,y284–410 remains entirely dry cream despite blue in model/geometry. Thin ink, dormers and narrow window rows retained.",
+        "waterMaskConclusion": "reviewed-with-disclosed-boundary-exception"
+      },
+      "limitations": [
+        "Water mask overrides both model and geometry for the narrow dry lock x818–906,y284–410. Four white canal reaches remain cyan. Visual review does not assert pixel-exact shorelines.",
+        "Diagnostic cyan outside5px mask margin:86px total; largest connected30px bbox[942,460,958,463], a small rim at the beginning of the middle canal. Strict outside2852px includes near-bank rasterization. No eroded-mask missing-water component."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 2,
+        "sha256": "5f5c37decdda1bb39571da1541ba6659cfce964c0d55314b5f5f35ec23df1c96",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c05.png",
+        "maskSha256": "9dca20dc4295d929592d02e19e528f9db3d802bd0af81d39d89ddb296d555751",
+        "maskWhitePixels": 39674,
+        "cyanProxyPixels": 41329,
+        "cyanStrictOutsidePixels": 2852,
+        "cyanOutside5pxPixels": 86,
+        "cyanOutside5pxComponents": [
+          {
+            "pixels": 30,
+            "bbox": [
+              942,
+              460,
+              958,
+              463
+            ]
+          }
+        ],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [
+          {
+            "pixels": 13541,
+            "bbox": [
+              774,
+              0,
+              920,
+              269
+            ]
+          },
+          {
+            "pixels": 10590,
+            "bbox": [
+              913,
+              450,
+              1075,
+              679
+            ]
+          },
+          {
+            "pixels": 7865,
+            "bbox": [
+              1157,
+              866,
+              1295,
+              1024
+            ]
+          },
+          {
+            "pixels": 7678,
+            "bbox": [
+              1048,
+              681,
+              1175,
+              851
+            ]
+          }
+        ],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "Whole-image second attempt corrects both small courtyard colours: triangle near (720,315) and horizontal courtyard near (650,475) now dry cream matching approved model. Other model greens preserved. Four permitted canal reaches preserved; mask-black narrow lock x818–906,y284–410 remains entirely dry cream despite blue in model/geometry. Thin ink, dormers and narrow window rows retained."
+        },
+        "limitations": [
+          "Water mask overrides both model and geometry for the narrow dry lock x818–906,y284–410. Four white canal reaches remain cyan. Visual review does not assert pixel-exact shorelines."
+        ]
+      }
+    },
+    "pariisi-05m-r02-c01": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c01-attempt001.txt",
+          "promptSha256": "3438999abec4999e4cbcac96e6fe9f5ffc54c8458110d23321a2e373ffe9643c",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r02-c01-v6-geometria.png",
+              "sha256": "1fc939c49759112471e37b34f01346adfd6ebe0b360b0321da7ca6e9ebbc7e1a"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c01-1m-2x.png",
+              "sha256": "3eb06e7b748d64022afad216c2b188f37e4836859c5f317de4e1ea6ee4420552"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c01.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:21:59.800881+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-a8c2f4e1-41b9-45e5-8c79-8d2b616ec9da.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c01-attempt001-native.png",
+          "sha256": "f43a7acb9fbfe0d0bcb913bab31d76e104f0afba90f12a3b0151e25c7c4f8737",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2894650,
+          "completedAt": "2026-11-01T05:23:25.235838+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c01-attempt001-detail.png",
+          "detailCropXYWH": [
+            420,
+            100,
+            420,
+            340
+          ]
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c01-attempt002.txt",
+          "promptSha256": "705662692395f889b96e6e560a1012aef02da232b59a11f769d34abdd19e49dc",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c01-attempt001-native.png",
+              "sha256": "f43a7acb9fbfe0d0bcb913bab31d76e104f0afba90f12a3b0151e25c7c4f8737"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c01-1m-2x.png",
+              "sha256": "3eb06e7b748d64022afad216c2b188f37e4836859c5f317de4e1ea6ee4420552"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            }
+          ],
+          "startedAt": "2026-11-01T05:23:25.387372+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-6d04987d-75f0-459f-a7eb-91cb2c43e71e.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c01-attempt002-native.png",
+          "sha256": "b2ea73e32d7520a3241cea72925a97162c2e025119e1623090d1672c783bce63",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2628819,
+          "completedAt": "2026-11-01T05:24:22.906062+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c01-attempt002-detail.png",
+          "detailCropXYWH": [
+            680,
+            275,
+            160,
+            160
+          ]
+        },
+        {
+          "attempt": 3,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c01-attempt003.txt",
+          "promptSha256": "ef88750853a70260e38828e88fb44505e46c38bc672aef703c1123212ad3eff5",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c01-attempt002-native.png",
+              "sha256": "b2ea73e32d7520a3241cea72925a97162c2e025119e1623090d1672c783bce63"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c01-1m-2x.png",
+              "sha256": "3eb06e7b748d64022afad216c2b188f37e4836859c5f317de4e1ea6ee4420552"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            }
+          ],
+          "startedAt": "2026-11-01T05:24:23.039905+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-104bbb52-4c96-45e4-bb93-d27c126414ec.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c01-attempt003-native.png",
+          "sha256": "80422175747fab450555e6129cd350e114a602ff13c4adc499fc3130c5104f25",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2574488,
+          "completedAt": "2026-11-01T05:25:14.408387+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c01-attempt003-detail.png",
+          "detailCropXYWH": [
+            680,
+            275,
+            160,
+            160
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Full fresh attempts corrected three material conflicts: pointed uppercourt (525,220) green, small midupper court (750,360) cream, long lower-right court (1150,720) cream. Decorative circle (329,870) completely dry; all-black mask, no water seen. Large empty grounds/lawns and footprint positions retained; fine native details resolved.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Fine antialiasing/geometry variance possible; parent aggregate seams pending."
+          ]
+        }
+      ],
+      "sha256": "80422175747fab450555e6129cd350e114a602ff13c4adc499fc3130c5104f25",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-104bbb52-4c96-45e4-bb93-d27c126414ec.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c01-attempt003-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c01-attempt003.txt",
+      "promptSha256": "ef88750853a70260e38828e88fb44505e46c38bc672aef703c1123212ad3eff5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 2574488,
+      "selectedAttempt": 3,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r02-c01.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Full fresh attempts corrected three material conflicts: pointed uppercourt (525,220) green, small midupper court (750,360) cream, long lower-right court (1150,720) cream. Decorative circle (329,870) completely dry; all-black mask, no water seen. Large empty grounds/lawns and footprint positions retained; fine native details resolved.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Fine antialiasing/geometry variance possible; parent aggregate seams pending."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 3,
+        "sha256": "80422175747fab450555e6129cd350e114a602ff13c4adc499fc3130c5104f25",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c01.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 43,
+        "cyanStrictOutsidePixels": 43,
+        "cyanOutside5pxPixels": 43,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "Full fresh attempts corrected three material conflicts: pointed uppercourt (525,220) green, small midupper court (750,360) cream, long lower-right court (1150,720) cream. Decorative circle (329,870) completely dry; all-black mask, no water seen. Large empty grounds/lawns and footprint positions retained; fine native details resolved."
+        },
+        "limitations": [
+          "Fine antialiasing/geometry variance possible; parent aggregate seams pending."
+        ]
+      }
+    },
+    "pariisi-05m-r02-c02": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c02-attempt001.txt",
+          "promptSha256": "c7213036b2de59d48a66c0758b05b86037267eded922578aeee42e587601bb43",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r02-c02-v6-geometria.png",
+              "sha256": "fb985b72fda97368d870958ec80a13cbcbeade1be3b9f40fab462b077fb93ed8"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c02-1m-2x.png",
+              "sha256": "a4333ddcad60df4f93f20356be440014ad83c711c13d6b5e9d14b51f210ad990"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c02.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:25:31.381358+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-c49fcada-b4a0-47c9-8c26-f9d6802b358e.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c02-attempt001-native.png",
+          "sha256": "88e895d5c5df561ca582593c836fd17f96e746a80e72340bac6432df627d2bd8",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3051018,
+          "completedAt": "2026-11-01T05:26:35.602373+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c02-attempt001-detail.png",
+          "detailCropXYWH": [
+            530,
+            800,
+            550,
+            224
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "All-black mask and dry ornament at (1444,663). Big irregular leftcourt green, central-left rectangle cream, long midrightcourt cream. Native detail crisp. Attempt002 tried correcting small upper court but did not correct it and was softer; sharper a1 selected.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Small upper courtyard approx [902,210,955,233], centre(930,221), remains creamstone whereas model is grass after one full retry. Exact pixel geometry/cross-tile seam QA pending parent.",
+            "Small horizontal courtyard near(930,221), approximately bbox[902,210,955,233], remains cream stone rather than model green. Two complete attempts inspected; attempt001 retained for sharper detail because attempt002 failed to change this court and softened roofs."
+          ]
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c02-attempt002.txt",
+          "promptSha256": "5a8511aaec4a726c0146e2ceab543cbebc17587858be9ac647211082fe00e07c",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c02-attempt001-native.png",
+              "sha256": "88e895d5c5df561ca582593c836fd17f96e746a80e72340bac6432df627d2bd8"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c02-1m-2x.png",
+              "sha256": "a4333ddcad60df4f93f20356be440014ad83c711c13d6b5e9d14b51f210ad990"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            }
+          ],
+          "startedAt": "2026-11-01T05:26:56.285624+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-4628d3f8-55f7-464e-ab82-99c33a1b213d.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c02-attempt002-native.png",
+          "sha256": "88cd21c40bc83258c12bf79c6fe741e245a54b911ff2c2bcfc1339d24c3c59b4",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 2761236,
+          "completedAt": "2026-11-01T05:27:55.917039+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c02-attempt002-detail.png",
+          "detailCropXYWH": [
+            850,
+            140,
+            170,
+            160
+          ]
+        }
+      ],
+      "sha256": "88e895d5c5df561ca582593c836fd17f96e746a80e72340bac6432df627d2bd8",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-c49fcada-b4a0-47c9-8c26-f9d6802b358e.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c02-attempt001-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c02-attempt001.txt",
+      "promptSha256": "c7213036b2de59d48a66c0758b05b86037267eded922578aeee42e587601bb43",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3051018,
+      "selectedAttempt": 1,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r02-c02.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "All-black mask and dry ornament at (1444,663). Big irregular leftcourt green, central-left rectangle cream, long midrightcourt cream. Native detail crisp. Attempt002 tried correcting small upper court but did not correct it and was softer; sharper a1 selected.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Small upper courtyard approx [902,210,955,233], centre(930,221), remains creamstone whereas model is grass after one full retry. Exact pixel geometry/cross-tile seam QA pending parent.",
+        "Small horizontal courtyard near(930,221), approximately bbox[902,210,955,233], remains cream stone rather than model green. Two complete attempts inspected; attempt001 retained for sharper detail because attempt002 failed to change this court and softened roofs."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 1,
+        "sha256": "88e895d5c5df561ca582593c836fd17f96e746a80e72340bac6432df627d2bd8",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c02.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 131,
+        "cyanStrictOutsidePixels": 131,
+        "cyanOutside5pxPixels": 131,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "All-black mask and dry ornament at (1444,663). Big irregular leftcourt green, central-left rectangle cream, long midrightcourt cream. Native detail crisp. Attempt002 tried correcting small upper court but did not correct it and was softer; sharper a1 selected."
+        },
+        "limitations": [
+          "Small upper courtyard approx [902,210,955,233], centre(930,221), remains creamstone whereas model is grass after one full retry. Exact pixel geometry/cross-tile seam QA pending parent."
+        ]
+      }
+    },
+    "pariisi-05m-r02-c03": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c03-attempt001.txt",
+          "promptSha256": "850feffbe43ddb2a475e55ee580c68db735363e97e3e1c425e0fe18abcf6bcc3",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c03-1m-2x.png",
+              "sha256": "1d00ea04a74c96211a22078f174262113eabe84faef3d36591c87190e70509e2"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r02-c03-v6-geometria.png",
+              "sha256": "e783a5b6ba584a31c3bfed1f83fc240473399203c60036e0e64469aa05247681"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c03.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:28:36.371828+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-a7f6f83b-9cb1-42f6-9ae2-6b2ce04ee391.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c03-attempt001-native.png",
+          "sha256": "79aae7333b27f82181bcc6492a62c39a497cdbb391bf998c7a505ed3c69d1c41",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3250705,
+          "completedAt": "2026-11-01T05:29:55.642617+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c03-attempt001-detail.png",
+          "detailCropXYWH": [
+            800,
+            500,
+            420,
+            300
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Model-first reference preserved grass and stone colours, including large upper-right and longleft grasscourts, small model-green patios and central cream triangle. Native detail sharp and new, not copied blur; empty plots remain empty. All-black water mask and no visible water.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Fine geometry/antialiasing variance possible; aggregate overlaps pending parent."
+          ]
+        }
+      ],
+      "sha256": "79aae7333b27f82181bcc6492a62c39a497cdbb391bf998c7a505ed3c69d1c41",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-a7f6f83b-9cb1-42f6-9ae2-6b2ce04ee391.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c03-attempt001-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c03-attempt001.txt",
+      "promptSha256": "850feffbe43ddb2a475e55ee580c68db735363e97e3e1c425e0fe18abcf6bcc3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3250705,
+      "selectedAttempt": 1,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r02-c03.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Model-first reference preserved grass and stone colours, including large upper-right and longleft grasscourts, small model-green patios and central cream triangle. Native detail sharp and new, not copied blur; empty plots remain empty. All-black water mask and no visible water.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Fine geometry/antialiasing variance possible; aggregate overlaps pending parent."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 1,
+        "sha256": "79aae7333b27f82181bcc6492a62c39a497cdbb391bf998c7a505ed3c69d1c41",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c03.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 451,
+        "cyanStrictOutsidePixels": 451,
+        "cyanOutside5pxPixels": 451,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "Model-first reference preserved grass and stone colours, including large upper-right and longleft grasscourts, small model-green patios and central cream triangle. Native detail sharp and new, not copied blur; empty plots remain empty. All-black water mask and no visible water."
+        },
+        "limitations": [
+          "Fine geometry/antialiasing variance possible; aggregate overlaps pending parent."
+        ]
+      }
+    },
+    "pariisi-05m-r02-c04": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c04-attempt001.txt",
+          "promptSha256": "efbac785a6a6b277138e7385b39a30a68ec02b0ee474598a20fef3b56a1c7136",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c04-1m-2x.png",
+              "sha256": "4e2b5129e512afb387cfd675d2fe7dbb4c969e69289698e723e8725e52e73848"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r02-c04-v6-geometria.png",
+              "sha256": "f6c19d30cf617a780a37eb61d8356d5264f7c304ddf4db67fdda9aebc28d3660"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c04.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:30:16.967919+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-a834830f-64f8-4db0-b02a-87e202ddbf5d.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c04-attempt001-native.png",
+          "sha256": "ee227e67adaaa540849d4f11353d412e1640f19f1ced37790819896f04cd683f",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3193559,
+          "completedAt": "2026-11-01T05:31:24.694693+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c04-attempt001-detail.png",
+          "detailCropXYWH": [
+            780,
+            560,
+            410,
+            300
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Native roof/windows detail consistent with approved 0.5m style. Black water mask: no waterways; two oblong ornaments at approximately (848,628) and (830,672) are dry cream. Model courtyard green in lower complex and skinny adjacent court retained; source-guide-only green replaced with model cream. Empty reservations remain empty.",
+            "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+          },
+          "limitations": [
+            "Visual geometry review, not a claim of pixel-exact generated boundaries. Parent performs whole-grid seam review."
+          ]
+        }
+      ],
+      "sha256": "ee227e67adaaa540849d4f11353d412e1640f19f1ced37790819896f04cd683f",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-a834830f-64f8-4db0-b02a-87e202ddbf5d.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c04-attempt001-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c04-attempt001.txt",
+      "promptSha256": "efbac785a6a6b277138e7385b39a30a68ec02b0ee474598a20fef3b56a1c7136",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3193559,
+      "selectedAttempt": 1,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r02-c04.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Native roof/windows detail consistent with approved 0.5m style. Black water mask: no waterways; two oblong ornaments at approximately (848,628) and (830,672) are dry cream. Model courtyard green in lower complex and skinny adjacent court retained; source-guide-only green replaced with model cream. Empty reservations remain empty.",
+        "waterMaskConclusion": "visually-dry; cyan-proxy-components-under30px"
+      },
+      "limitations": [
+        "Visual geometry review, not a claim of pixel-exact generated boundaries. Parent performs whole-grid seam review."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 1,
+        "sha256": "ee227e67adaaa540849d4f11353d412e1640f19f1ced37790819896f04cd683f",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c04.png",
+        "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+        "maskWhitePixels": 0,
+        "cyanProxyPixels": 176,
+        "cyanStrictOutsidePixels": 176,
+        "cyanOutside5pxPixels": 176,
+        "cyanOutside5pxComponents": [],
+        "erodedMaskNonCyanPixels": 0,
+        "erodedMaskNonCyanComponents": [],
+        "maskWhiteComponents": [],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "Native roof/windows detail consistent with approved 0.5m style. Black water mask: no waterways; two oblong ornaments at approximately (848,628) and (830,672) are dry cream. Model courtyard green in lower complex and skinny adjacent court retained; source-guide-only green replaced with model cream. Empty reservations remain empty."
+        },
+        "limitations": [
+          "Visual geometry review, not a claim of pixel-exact generated boundaries. Parent performs whole-grid seam review."
+        ]
+      }
+    },
+    "pariisi-05m-r02-c05": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c05-attempt001.txt",
+          "promptSha256": "647a24c9f63829dfb04a61a173cc5027ad968c4cbdc00a46a499236333829fa7",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c05-1m-2x.png",
+              "sha256": "0d1268998663ec68cd850eea1f75f09b527e3899e92386326b4c6643b8fa24fe"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r02-c05-v6-geometria.png",
+              "sha256": "ca6d099263fb46784c8d414e7ba7aef28a7fde54bda0c429f1f1daf5845df1cb"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c05.png",
+              "sha256": "1e12d1d6b0089e6ecf251f62eea536143c58f2bc3fe2e91432e341444daf3bde"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "startedAt": "2026-11-01T05:32:49.786744+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-a181db0a-83db-4c1a-bc7a-806cb8f69238.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c05-attempt001-native.png",
+          "sha256": "db0c63e13139070e491557f2f4805f3fa8ff137af3170ccfb4d1f87d84433bc1",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3418645,
+          "completedAt": "2026-11-01T05:33:29.766831+00:00",
+          "nativeByteIdentity": true,
+          "selected": false,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c05-attempt001-detail.png",
+          "detailCropXYWH": [
+            1120,
+            200,
+            416,
+            410
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Three permitted canal reaches preserved with dry bridge separations. Central oblong fountain and round ornament fully dry cream, no blue outside canal seen. Correct model grass in upper-left triangle and large right court, cream in middle small court; roof/window detail newly resolved and consistent with approved 0.5m."
+          },
+          "limitations": [
+            "Visual geometry review, not a pixel-exact boundary claim. Full mask diagnostic and parent seam review follow."
+          ]
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c05-attempt002.txt",
+          "promptSha256": "313274ffe32036ecff4f86d53ffd799906f4882d59b242111df110221b814af5",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c05-attempt001-native.png",
+              "sha256": "db0c63e13139070e491557f2f4805f3fa8ff137af3170ccfb4d1f87d84433bc1"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c05.png",
+              "sha256": "1e12d1d6b0089e6ecf251f62eea536143c58f2bc3fe2e91432e341444daf3bde"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/ohje-pariisi-05m-r02-c05-v6-geometria.png",
+              "sha256": "ca6d099263fb46784c8d414e7ba7aef28a7fde54bda0c429f1f1daf5845df1cb"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/malli-pariisi-05m-r02-c05-1m-2x.png",
+              "sha256": "0d1268998663ec68cd850eea1f75f09b527e3899e92386326b4c6643b8fa24fe"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/accepted-era1/pariisi-05m-r04-c04.png",
+              "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be"
+            }
+          ],
+          "startedAt": "2026-11-01T05:36:02.078225+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-cd15abdb-441d-4b4c-ac78-1abbd8335851.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c05-attempt002-native.png",
+          "sha256": "20916661b167fad3d93482fcd06a7427e52d15b536e8d5403e40c6c33124f9af",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "bytes": 3285806,
+          "completedAt": "2026-11-01T05:36:44.668776+00:00",
+          "nativeByteIdentity": true,
+          "selected": true,
+          "detailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/pariisi-05m-r02-c05-attempt002-detail.png",
+          "detailCropXYWH": [
+            1240,
+            130,
+            250,
+            370
+          ],
+          "visualQA": {
+            "fullImageReviewed": true,
+            "nativeDetailReviewed": true,
+            "waterMaskReviewed": true,
+            "observation": "Whole retry narrows right-edge canal, reducing cyan beyond 5px mask margin from1278 to333 diagnostic pixels. All three water reaches and dry bridge separations preserved, ornaments dry cream, model courtyard materials remain correct. Native narrow windows/roof detail reviewed.",
+            "waterMaskConclusion": "reviewed-with-disclosed-boundary-exception"
+          },
+          "limitations": [
+            "Canal still has a small eastward offset/widening relative to exact mask. At y200 mask x1307–1317 versus final x1311–1327; y300 mask x1368–1377 versus final x1371–1386. Selected whole retry improves outside-mask area but is NOT an exact mask pass. Full diagnostic includes components and missing interior pixels.",
+            "Global geometry is visually consistent but not pixel-identical. Parent reviews seams and receiver accepts disclosed exceptions.",
+            "Selected attempt002 cyan beyond5px mask margin333px total; largest component147px bbox[1302,160,1348,236]. Missing cyan inside5px-eroded mask77px bbox[1502,518,1528,562] at clipped right edge. Small residual canal offset is explicitly not an exact mask pass."
+          ]
+        }
+      ],
+      "sha256": "20916661b167fad3d93482fcd06a7427e52d15b536e8d5403e40c6c33124f9af",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-cd15abdb-441d-4b4c-ac78-1abbd8335851.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/raw/pariisi-05m-r02-c05-attempt002-native.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/prompts/pariisi-05m-r02-c05-attempt002.txt",
+      "promptSha256": "313274ffe32036ecff4f86d53ffd799906f4882d59b242111df110221b814af5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3285806,
+      "selectedAttempt": 2,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/final/pariisi-05m-r02-c05.png",
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Whole retry narrows right-edge canal, reducing cyan beyond 5px mask margin from1278 to333 diagnostic pixels. All three water reaches and dry bridge separations preserved, ornaments dry cream, model courtyard materials remain correct. Native narrow windows/roof detail reviewed.",
+        "waterMaskConclusion": "reviewed-with-disclosed-boundary-exception"
+      },
+      "limitations": [
+        "Canal still has a small eastward offset/widening relative to exact mask. At y200 mask x1307–1317 versus final x1311–1327; y300 mask x1368–1377 versus final x1371–1386. Selected whole retry improves outside-mask area but is NOT an exact mask pass. Full diagnostic includes components and missing interior pixels.",
+        "Global geometry is visually consistent but not pixel-identical. Parent reviews seams and receiver accepts disclosed exceptions.",
+        "Selected attempt002 cyan beyond5px mask margin333px total; largest component147px bbox[1302,160,1348,236]. Missing cyan inside5px-eroded mask77px bbox[1502,518,1528,562] at clipped right edge. Small residual canal offset is explicitly not an exact mask pass."
+      ],
+      "maskDiagnostic": {
+        "selectedAttempt": 2,
+        "sha256": "20916661b167fad3d93482fcd06a7427e52d15b536e8d5403e40c6c33124f9af",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "finalEqualsNativeAndRaw": true,
+        "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c05.png",
+        "maskSha256": "1e12d1d6b0089e6ecf251f62eea536143c58f2bc3fe2e91432e341444daf3bde",
+        "maskWhitePixels": 12472,
+        "cyanProxyPixels": 12796,
+        "cyanStrictOutsidePixels": 3208,
+        "cyanOutside5pxPixels": 333,
+        "cyanOutside5pxComponents": [
+          {
+            "pixels": 147,
+            "bbox": [
+              1302,
+              160,
+              1348,
+              236
+            ]
+          }
+        ],
+        "erodedMaskNonCyanPixels": 110,
+        "erodedMaskNonCyanComponents": [
+          {
+            "pixels": 77,
+            "bbox": [
+              1502,
+              518,
+              1528,
+              562
+            ]
+          }
+        ],
+        "maskWhiteComponents": [
+          {
+            "pixels": 7161,
+            "bbox": [
+              1167,
+              0,
+              1300,
+              150
+            ]
+          },
+          {
+            "pixels": 4091,
+            "bbox": [
+              1287,
+              163,
+              1477,
+              477
+            ]
+          },
+          {
+            "pixels": 1220,
+            "bbox": [
+              1495,
+              503,
+              1536,
+              589
+            ]
+          }
+        ],
+        "visualQA": {
+          "fullImageReviewed": true,
+          "nativeDetailReviewed": true,
+          "waterMaskReviewed": true,
+          "observation": "Whole retry narrows right-edge canal, reducing cyan beyond 5px mask margin from1278 to333 diagnostic pixels. All three water reaches and dry bridge separations preserved, ornaments dry cream, model courtyard materials remain correct. Native narrow windows/roof detail reviewed."
+        },
+        "limitations": [
+          "Canal still has a small eastward offset/widening relative to exact mask. At y200 mask x1307–1317 versus final x1311–1327; y300 mask x1368–1377 versus final x1371–1386. Selected whole retry improves outside-mask area but is NOT an exact mask pass. Full diagnostic includes components and missing interior pixels.",
+          "Global geometry is visually consistent but not pixel-identical. Parent reviews seams and receiver accepts disclosed exceptions."
+        ]
+      }
+    }
+  },
+  "completedAt": "2026-11-01T05:37:32.438901+00:00",
+  "qaReport": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/north/qa/production.json",
+  "readyForParentAggregateQA": true,
+  "allNativeFinalWritesComplete": true
+}

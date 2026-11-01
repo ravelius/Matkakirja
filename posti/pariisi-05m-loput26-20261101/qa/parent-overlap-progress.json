@@ -1,0 +1,199 @@
+{
+  "reviews": {
+    "horizontal-overlaps-r06.png": {
+      "sha256": "fa88d046602009e3dba5f2ed681297a55db0b596d48a99c9dd5dcaf97f8b53d4",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:41:18.293523+00:00",
+      "status": "reviewed-with-disclosed-local-variations"
+    },
+    "horizontal-overlaps-r07.png": {
+      "sha256": "2efa43492ace8e9749cbd49b3d9daebd036c9bd3b51f0600811bc33d433e4def",
+      "pairs": 4,
+      "reviewedAt": "2026-11-01T05:31:18.704744+00:00",
+      "status": "reviewed-no-major-layout-break"
+    },
+    "vertical-overlaps-r06-r07.png": {
+      "sha256": "44d297b3f1f080dab2ff1a8c1c45424be4fad74fa3f74645568b444e5a3ed95f",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:41:18.293523+00:00",
+      "status": "reviewed-with-disclosed-local-variations"
+    },
+    "horizontal-overlaps-r01.png": {
+      "sha256": "0ca8b17308e0224319d9c61b230c6ec1569ba2c58bfc4a08a8d98257d70764fd",
+      "pairs": 4,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-before-compaction-needs-changed-output-recheck"
+    },
+    "horizontal-overlaps-r02.png": {
+      "sha256": "4da9b475054ca04e5cfa38e94547efd5945af2c7141890e35762a0970738c6eb",
+      "pairs": 4,
+      "reviewedAt": "2026-11-01T05:41:18.293523+00:00",
+      "status": "reviewed-with-disclosed-local-variations"
+    },
+    "horizontal-overlaps-r03.png": {
+      "sha256": "2ea93f1e38d562a553401cbeee3fc9dc26cb8c96a46767dfb3a8bcbc5a2871e6",
+      "pairs": 4,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "vertical-overlaps-r01-r02.png": {
+      "sha256": "2f545b06e8bd7e44cb88ded43fdd9d86899ac90b4564c1c6a7a6473f0b31935f",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "vertical-overlaps-r02-r03.png": {
+      "sha256": "a4fcde3858c2d06a672a26433d7231dbcd900211197501c92f2e9558ddb7cdff",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "native-detail-r01.png": {
+      "sha256": "c8235c4194dda3aced5d513e3d0604554e7fa4e735960d6705e5c83040836787",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-sharp-native-detail"
+    },
+    "native-detail-r02.png": {
+      "sha256": "7bd4fd4b6160a4ae3ce53a356f49fe0abf80e15ac5a9e53f57e21186c3b42c62",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "native-detail-r03.png": {
+      "sha256": "f6b767acffd3116d13cb29e202b771df4f42e7fed4c646f235a4103101cf092e",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "horizontal-overlaps-r04.png": {
+      "sha256": "98b9930e986e38f4702e58d40e08ee4fd5733d3345c95582ec86aacda5d2ce2d",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:41:08.133606+00:00",
+      "status": "reviewed-provisional-check-final-hash"
+    },
+    "vertical-overlaps-r03-r04.png": {
+      "sha256": "72bd822c2f4352a77c61512861548c50d01c81cb40565c9bb1bc3a651b7f1987",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "vertical-overlaps-r04-r05.png": {
+      "sha256": "33a47b4b48991bef978f1cc5026c97df71b2cd5c3ad2d0b54ec5abcb9faaccc4",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "native-detail-r04.png": {
+      "sha256": "787c34a8e84a5e18f1d64a06f75d7bcafd3d70b139d26a6005b0ad6eac11446a",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:41:08.133606+00:00",
+      "status": "reviewed-provisional-check-final-hash"
+    },
+    "native-detail-r05.png": {
+      "sha256": "27607f890ce1b5db3985ae5c46f89be0b68c483e7ecda06ddf0504631369e6cd",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "native-detail-r06.png": {
+      "sha256": "f695b78a29b998e2bd0fd596aee38fe711ca2d568a35d9e3a5cdb8f9c260feec",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:41:18.293523+00:00",
+      "status": "reviewed-with-disclosed-local-variations"
+    },
+    "native-detail-r07.png": {
+      "sha256": "10b1d18c59a5567f099c3135fa230ea5710be6056f40e4369f3c692127fa2a5a",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:41:18.293523+00:00",
+      "status": "reviewed-with-disclosed-local-variations"
+    },
+    "horizontal-overlaps-r05.png": {
+      "sha256": "9f887504708035c5082b688341ef222278bbefcd0ad6ec147c82b3d07ce05617",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    },
+    "vertical-overlaps-r05-r06.png": {
+      "sha256": "bbc33faee4c300f92ae1ec76a022585e412f51930543cbe10d06f5015214b598",
+      "pairs": 2,
+      "reviewedAt": "2026-11-01T05:46:08.288184+00:00",
+      "status": "reviewed-final-native-boards-with-disclosed-local-variations"
+    }
+  },
+  "observations": [
+    "r06c02 east park paths differ substantially from accepted r06c03: whole retry requested. Upper-left clipped courtyard also changed grass to stone per model.",
+    "r06c01/c02 lower clipped courtyard lawn extents differ, full-width street alignments retained; disclose if unresolved after c02 retry.",
+    "r06c02/r07c02 park path shapes differ; review after c02 retry.",
+    "r06c05/r07c05 Seine hue slightly stronger in new tile but river banks and bridge line up.",
+    "Northern22 overlap pairs reviewed. Large r03c02/c03 upper courtyard material mismatch sent for full regeneration. Other main streets and blocks follow; small clipped court/roof differences remain.",
+    "Native-detail rows1–3 show sharper thin ink, windows and chimneys than enlarged 1m models.",
+    "Row4 horizontal and row3→4 vertical primary roads/river/banks/reservations align; handdrawn roof/detail/tone differences remain.",
+    "r04c01/r05c01 small round courtyard around x355,y915 / x355,y19 is more closed in r05c01; street alignments match. Report local building-detail mismatch; choose receiver seam within overlap.",
+    "Cross-row source material check confirms r02c02/r03c02 large top-right court is correctly green. Actual correction requested only r03c02 extreme-right court x1449..1535,y145..319; r01c04/r02c04 long court correctly green.",
+    "Final r03c02 extreme-right courtyard is corrected to stone and r05c02 small eastern boundary courtyard to grass. Remaining r05c02/accepted r05c03 upper overlap block has a roof-versus-courtyard coverage difference around y210–335; report as local architectural overlap variation rather than claiming identical roof projection."
+  ],
+  "priorBoardReviews": [
+    {
+      "file": "horizontal-overlaps-r03.png",
+      "sha256": "b8235bfff0e0de563fa737bc1efd6be8354dc986a3621fc84492381ae1aceb24",
+      "pairs": 4,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-before-compaction-needs-changed-output-recheck"
+    },
+    {
+      "file": "native-detail-r02.png",
+      "sha256": "a1ac77a268ba39b16a3974fde929dfa9263ba037a7802ce4aa5ea8ae5a3193ec",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-sharp-native-detail"
+    },
+    {
+      "file": "native-detail-r03.png",
+      "sha256": "00153437fe56c914fa0f6a859eef6843a44062bcbc686b88b53fe261ff077c1a",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-sharp-native-detail"
+    },
+    {
+      "file": "native-detail-r05.png",
+      "sha256": "aff574d0d60530dc283572a3ad5834f368d84caa9eb920e281207ca69f8d948b",
+      "pairs": 1,
+      "reviewedAt": "2026-11-01T05:41:08.133606+00:00",
+      "status": "reviewed-provisional-check-final-hash"
+    },
+    {
+      "file": "vertical-overlaps-r01-r02.png",
+      "sha256": "f20905b204664af5c17f154e90e661ebdff2800fb9fca88bf3d011e7fe9ec2d2",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-before-compaction-needs-changed-output-recheck"
+    },
+    {
+      "file": "vertical-overlaps-r02-r03.png",
+      "sha256": "6af399ed0666a1704c16532d9c483e646883ab696dd5e60e8eaa39d7f975a5dd",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:39:22.142527+00:00",
+      "status": "reviewed-before-compaction-needs-changed-output-recheck"
+    },
+    {
+      "file": "vertical-overlaps-r03-r04.png",
+      "sha256": "0f6cfe2fcb1cad22f7fb6954e15ec53b28a6839cee435b56b66b1055ee92e5ef",
+      "pairs": 5,
+      "reviewedAt": "2026-11-01T05:41:08.133606+00:00",
+      "status": "reviewed-provisional-check-final-hash"
+    },
+    {
+      "file": "vertical-overlaps-r04-r05.png",
+      "sha256": "e5e6ef51a0b0ecf69457675d0b9409c786150f06d0a7bb27fae3b89199e4e7ac",
+      "pairs": 1,
+      "reviewedAt": "2026-11-01T05:41:08.133606+00:00",
+      "status": "reviewed-provisional-check-final-hash"
+    }
+  ],
+  "overview": {
+    "sha256": "dba95922b4e29df8ad9c23e22bf94d1d6682764ff4b501fdfb50e6e564961251",
+    "reviewedAt": "2026-11-01T05:46:24.855146+00:00",
+    "observation": "35 individually labeled tiles reviewed as overall palette/detail/layout context:26new+9prior. Blue-gray roofs, cream buildings and green lawns coherent. This is a contact sheet, not a stitched game or seam proof."
+  }
+}

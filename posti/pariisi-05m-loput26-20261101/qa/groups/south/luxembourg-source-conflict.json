@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-01T05:20:25.644255+00:00",
+  "landmark": "Luxembourg Palace",
+  "anchorSource": "output/pariisi-maamerkit6-20261101/assets.json",
+  "sourceAtlasPixel1m": [
+    8488,
+    5298
+  ],
+  "atlasPixel05m": [
+    16976,
+    10596
+  ],
+  "tile": "pariisi-05m-r06-c02",
+  "tileOrigin05m": [
+    15744,
+    10112
+  ],
+  "tileLocalAnchor": [
+    1232,
+    484
+  ],
+  "conflict": "Geometry and painted model both include large courtyard palace; order text explicitly requires Luxembourg palace reservation empty.",
+  "resolution": "Parent independently agrees named landmark text takes priority; complete generation retry removes identified courtyard palace, preserves park paths/neighbour footprints and mask-required pool.",
+  "previousCandidateRetained": true
+}

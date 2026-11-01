@@ -1,0 +1,354 @@
+{
+  "checkedAt": "2026-11-01T05:38:26.844539+00:00",
+  "worker": "/root/sky8192_row_b",
+  "sourceCommit": "b9ba46ec6c637d2a8e17b5160b61123af6d14076",
+  "sourceOrdersReadInFull": true,
+  "status": "seven-native-selections-ready-for-parent-aggregate-qa",
+  "generationCalls": 15,
+  "selectedCount": 7,
+  "productionActive": false,
+  "safeEnded": true,
+  "allSelectedNative1536x1024RGB": true,
+  "allSelectedByteIdenticalToNativeSource": true,
+  "allRawAttemptsPreservedAndShaVerified": true,
+  "allInputsMatchParentVerifiedSha": true,
+  "noResizeCropRetouchSharpenOrLocalColourEdits": true,
+  "qaFiles": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/native-water-verification.json",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/vivid-water-diagnostic.json",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/luxembourg-source-conflict.json",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/r06-c02-seam-correction.json"
+  ],
+  "namedLandmarks": {
+    "Luxembourg": {
+      "tile": "pariisi-05m-r06-c02",
+      "localAnchor": [
+        1232,
+        484
+      ],
+      "emptyReservation": true,
+      "sourceConflictResolved": true
+    },
+    "Pantheon": {
+      "tile": "pariisi-05m-r07-c03",
+      "localAnchor": [
+        1100,
+        108
+      ],
+      "emptyReservation": true,
+      "northAcceptedNeighbour": "pariisi-05m-r06-c03",
+      "northLocalAnchor": [
+        1100,
+        1004
+      ]
+    }
+  },
+  "delivery": "Not performed by this worker; parent owns aggregate review, ledger and delivery.",
+  "tiles": [
+    {
+      "selectedAttempt": 3,
+      "sha256": "b4d583183207a517bd6a40a8491ec90a32fc050edb64fea536e91693bebeeafd",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-db6850ef-1b4a-4661-8920-9e9256c03164.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r06-c01-attempt003-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r06-c01.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r06-c01-attempt003.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS final full retry: upper-middle curved inner court is now green, upper-right cropped court beige, lower-centre U court green, and left-edge narrow court green, all visibly matching approved same-location model. Large upper-left pale reservation remains blank. Ordinary geometry, dense ink detail and zero water retained. Supersedes attempt002 which late QA found still had two material mismatches.",
+      "name": "pariisi-05m-r06-c01",
+      "attemptCount": 3,
+      "limitations": [
+        "Whole new generation; exact per-pixel geometry equivalence is not claimed. Parent reviews all 35 tiles and overlap seams separately.",
+        "Colour harmonization and seam cutting belong to recipient; delivered final is the unmodified native output."
+      ]
+    },
+    {
+      "selectedAttempt": 4,
+      "sha256": "27bd6717964a4e75e115a6cd85ad7da6edbb971bc369ee8321d871f2677d6435",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-890ce23d-2f61-496f-954f-c716de2d56a2.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r06-c02-attempt004-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r06-c02.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r06-c02-attempt004.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS with disclosed seam variation after parent clarification: upper-left court beige; east diagonal, vertical and three cross-path branches restored; roofed pavilion present; upper curved park boundary retained. Luxembourg remains empty and blue octagonal pool retained. East arc differs: candidate starts near[1428,865] and bends left toward[1325,980], versus accepted east arc entering[1408,819], bulging[1426,865], exiting[1408,918]. Main cross-path continuations remain; no exact pixel equivalence claimed. Lower-right corner path design conflicts with own south neighbour.",
+      "name": "pariisi-05m-r06-c02",
+      "attemptCount": 6,
+      "limitations": [
+        "East path arc shape differs at x1408..1536,y819..1000; principal branches restored.",
+        "Lower-right corner x1325..1536,y896..1024 conflicts with own r07-c02 faint-path design; approved east neighbour prioritized.",
+        "Whole source-generated native; no pixel-edit/crop/resize/sharpen of final. Parent aggregate QA remains separate."
+      ]
+    },
+    {
+      "selectedAttempt": 2,
+      "sha256": "fd4fb1b7f92014480469b061edadee7118ce414a5b46c72bfd0c1e08c02a2cd4",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-ce8e43ef-4deb-4887-9a4e-216e97250504.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r07-c01-attempt002-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r07-c01.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r07-c01-attempt002.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS: Complete retry corrects all named material conflicts: lower-left long courtyard is green, two lower-middle triangular courts are beige, far lower-right garden remains green. Dense block/street geometry and fine native detail retained. No water or added scene objects. Model-first references used for material priority; precise geometry equality and aggregate seams not claimed.",
+      "name": "pariisi-05m-r07-c01",
+      "attemptCount": 2,
+      "limitations": [
+        "Whole new generation; exact per-pixel geometry equivalence is not claimed. Parent reviews all 35 tiles and overlap seams separately.",
+        "Colour harmonization and seam cutting belong to recipient; delivered final is the unmodified native output."
+      ]
+    },
+    {
+      "selectedAttempt": 1,
+      "sha256": "f6f8eefdac3ee7fb0f43190d84afca0f0854412378557a5215d6d51ac9683280",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-0f83118a-633f-4303-88e5-5038fe75e067.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r07-c02-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r07-c02.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r07-c02-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS visual: entire new crisp fine ink tile; park model paths and grass retained, right-edge narrow courtyard green, large central courtyard dry beige. Only top-edge clipped octagonal pool is blue per mask. Native geometry and ordinary footprints retained; no added landmarks, people, trees or traffic. Exact overlap pixel equivalence remains parent QA.",
+      "name": "pariisi-05m-r07-c02",
+      "attemptCount": 1,
+      "limitations": [
+        "Whole new generation; exact per-pixel geometry equivalence is not claimed. Parent reviews all 35 tiles and overlap seams separately.",
+        "Colour harmonization and seam cutting belong to recipient; delivered final is the unmodified native output."
+      ]
+    },
+    {
+      "selectedAttempt": 1,
+      "sha256": "ffad6910c5fa472fa5a2c722e635e17f64d5d3f5df583ac0178696ef059bc330",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-79a6f5b7-478e-4fc6-aa62-67a32db6bcad.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r07-c03-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r07-c03.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r07-c03-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS visual: Pantheon reservation at [1100,108] remains completely empty pale paving, consistent with accepted north neighbour empty bottom area. All model green courts preserved including upper-middle and left-edge courtyard. Black water mask respected; circular park ornament dry. Fine new windows/chimneys and ordinary footprints retained. Small raster alignment differences possible in aggregate overlap.",
+      "name": "pariisi-05m-r07-c03",
+      "attemptCount": 1,
+      "limitations": [
+        "Whole new generation; exact per-pixel geometry equivalence is not claimed. Parent reviews all 35 tiles and overlap seams separately.",
+        "Colour harmonization and seam cutting belong to recipient; delivered final is the unmodified native output."
+      ]
+    },
+    {
+      "selectedAttempt": 1,
+      "sha256": "add5aec0d580c639afc1b8b3632e0abcd8fd7c1f1774b40d7e553e63fc9d5d50",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-9619eb8f-22a0-4ca9-a9fc-09bcf3ed16c1.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r07-c04-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r07-c04.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r07-c04-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS visual: lower-left enclosed court green per model, lower-right court beige per model, upper-centre green enclosure and curved structure retained. Park lawns/path perimeter retained, no invented trees or buildings. Circular ornaments dry stone; tiny dark slate-grey edge on raised circular feature is shading, not a water body. Black mask respected visually. Native fine detail. Parent overlap QA separate.",
+      "name": "pariisi-05m-r07-c04",
+      "attemptCount": 1,
+      "limitations": [
+        "Whole new generation; exact per-pixel geometry equivalence is not claimed. Parent reviews all 35 tiles and overlap seams separately.",
+        "Colour harmonization and seam cutting belong to recipient; delivered final is the unmodified native output."
+      ]
+    },
+    {
+      "selectedAttempt": 1,
+      "sha256": "458d7195ef248fae1e0b194a8a7af86dbda20e34bd72521a05e38a97c61ca6db",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-89a9e734-bf40-4330-980b-d8f6c92aec05.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/raw/pariisi-05m-r07-c05-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/final/pariisi-05m-r07-c05.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/prompts/pariisi-05m-r07-c05-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "PASS visual: large lower-right and bottom-edge courts green per painted model. Park remains open flat grass with existing isolated structures and dry ornaments; curved basin dry. River confined to diagonal water corridor with existing dry bridge and bank edges; no extra waterways or trees/traffic. Crisp native windows and roof details. Water shade slightly stronger than north neighbour; final seam alignment and palette harmonization remain recipient/parent checks.",
+      "name": "pariisi-05m-r07-c05",
+      "attemptCount": 1,
+      "limitations": [
+        "Whole new generation; exact per-pixel geometry equivalence is not claimed. Parent reviews all 35 tiles and overlap seams separately.",
+        "Colour harmonization and seam cutting belong to recipient; delivered final is the unmodified native output.",
+        "Vivid river cyan has 4144 pixels outside exact binary mask, but only34 outside 5px tolerance, chiefly tiny roof/edge signals; there is no broad displaced water body. River shade differs slightly from northern neighbour."
+      ]
+    }
+  ],
+  "waterDiagnosticSummary": [
+    {
+      "tile": "pariisi-05m-r06-c01",
+      "vividCyanPixels": 0,
+      "outsideExact": 0,
+      "outside5px": 0,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r06-c02",
+      "selectedAttempt": 4,
+      "vividCyanPixels": 6226,
+      "outsideExact": 343,
+      "outside5px": 2
+    },
+    {
+      "tile": "pariisi-05m-r07-c01",
+      "vividCyanPixels": 9,
+      "outsideExact": 9,
+      "outside5px": 9,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c02",
+      "vividCyanPixels": 1616,
+      "outsideExact": 92,
+      "outside5px": 73,
+      "components": [
+        {
+          "pixels": 8,
+          "bbox": [
+            308,
+            886,
+            312,
+            890
+          ]
+        },
+        {
+          "pixels": 5,
+          "bbox": [
+            131,
+            48,
+            133,
+            51
+          ]
+        },
+        {
+          "pixels": 4,
+          "bbox": [
+            1459,
+            436,
+            1460,
+            440
+          ]
+        },
+        {
+          "pixels": 4,
+          "bbox": [
+            331,
+            742,
+            333,
+            745
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r07-c03",
+      "vividCyanPixels": 0,
+      "outsideExact": 0,
+      "outside5px": 0,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c04",
+      "vividCyanPixels": 0,
+      "outsideExact": 0,
+      "outside5px": 0,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c05",
+      "vividCyanPixels": 222704,
+      "outsideExact": 4144,
+      "outside5px": 34,
+      "components": [
+        {
+          "pixels": 8,
+          "bbox": [
+            173,
+            996,
+            176,
+            1000
+          ]
+        },
+        {
+          "pixels": 6,
+          "bbox": [
+            1281,
+            249,
+            1283,
+            253
+          ]
+        }
+      ]
+    }
+  ],
+  "seamCorrection": {
+    "checkedAt": "2026-11-01T05:38:26.844539+00:00",
+    "tile": "pariisi-05m-r06-c02",
+    "selectedAttempt": 4,
+    "sha256": "27bd6717964a4e75e115a6cd85ad7da6edbb971bc369ee8321d871f2677d6435",
+    "newWholeGenerationAttempts": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "selectedReason": "Best complete candidate after parent clarified that main path continuity is required but non-identical hand-drawn curve shapes may be disclosed. Attempt6 lost diagonal branch and altered other internal layout.",
+    "corrected": [
+      "Upper-left clipped courtyard beige paving",
+      "East diagonal path y713..746 restored",
+      "East vertical and transverse paths y865,900,985 restored",
+      "Roofed round pavilion near1480,805 restored",
+      "Curved outer park border preserved",
+      "Luxembourg palace remains absent",
+      "Octagonal pool remains blue inside permitted mask"
+    ],
+    "remainingDifferences": [
+      {
+        "region": [
+          1408,
+          819,
+          1536,
+          1000
+        ],
+        "description": "Candidate curve begins around1428,865 and descends left to1325,980; accepted east overlap curve enters1408,819, bulges1426,865 and exits1408,918. Transverse branches and right-hand vertical path continue, but curve is not identical."
+      },
+      {
+        "region": [
+          1325,
+          896,
+          1536,
+          1024
+        ],
+        "description": "Own r07-c02 top strip has faint grass-shape boundaries here, whereas east-approved continuation adds cream curve and horizontal path in current r06-c02. Explicitly disclosed lower-right corner conflict; other six tiles not changed."
+      },
+      {
+        "region": [
+          878,
+          896,
+          1115,
+          1024
+        ],
+        "description": "Pool-side lower paths and small structures continue; hand-drawn width/curve differences remain."
+      }
+    ],
+    "qaImages": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/r06-c02-east-selected4.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/r06-c02-south-selected4.png"
+    ],
+    "referenceProcessing": "ffmpeg lossless-size crops used only as reference/QA strips; all selected finals are unchanged native imagegen output."
+  }
+}

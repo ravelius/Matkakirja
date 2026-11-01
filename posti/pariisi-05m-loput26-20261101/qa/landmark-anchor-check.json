@@ -1,0 +1,203 @@
+{
+  "method": "Later-six source explicitly gives 1 m/px atlas (factor2). Earlier-nine 5x7 atlas uses half those coordinates (factor4 to res4); scale inferred and visually cross-checked at Garnier, Louvre and prior Notre-Dame blank reservations. Tile offsets derived from authoritative palat-05m.json. All landmark anchor points require visual review, not automatic object labels.",
+  "landmarks": [
+    {
+      "id": "notre-dame",
+      "sourceFile": "output/pariisi-spritet-20261031/assets.json",
+      "sourceSha256": "4a1d4e5f2f916976c0185a34fd9504776e64ac91f347417295db267418315e2d",
+      "sourceAtlasPixel": [
+        4707,
+        2466
+      ],
+      "res4Scale": 4,
+      "res4Anchor": [
+        18828,
+        9864
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r05-c04",
+          "localAnchor": [
+            268,
+            648
+          ]
+        }
+      ]
+    },
+    {
+      "id": "louvre",
+      "sourceFile": "output/pariisi-spritet-20261031/assets.json",
+      "sourceSha256": "4a1d4e5f2f916976c0185a34fd9504776e64ac91f347417295db267418315e2d",
+      "sourceAtlasPixel": [
+        4168,
+        2076
+      ],
+      "res4Scale": 4,
+      "res4Anchor": [
+        16672,
+        8304
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r03-c02",
+          "localAnchor": [
+            928,
+            880
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sainte-chapelle",
+      "sourceFile": "output/pariisi-spritet-20261031/assets.json",
+      "sourceSha256": "4a1d4e5f2f916976c0185a34fd9504776e64ac91f347417295db267418315e2d",
+      "sourceAtlasPixel": [
+        4527,
+        2348
+      ],
+      "res4Scale": 4,
+      "res4Anchor": [
+        18108,
+        9392
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r05-c03",
+          "localAnchor": [
+            956,
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garnier",
+      "sourceFile": "output/pariisi-spritet-20261031/assets.json",
+      "sourceSha256": "4a1d4e5f2f916976c0185a34fd9504776e64ac91f347417295db267418315e2d",
+      "sourceAtlasPixel": [
+        4044,
+        1575
+      ],
+      "res4Scale": 4,
+      "res4Anchor": [
+        16176,
+        6300
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r01-c02",
+          "localAnchor": [
+            432,
+            668
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pantheon",
+      "sourceFile": "output/pariisi-spritet-20261031/assets.json",
+      "sourceSha256": "4a1d4e5f2f916976c0185a34fd9504776e64ac91f347417295db267418315e2d",
+      "sourceAtlasPixel": [
+        4563,
+        2779
+      ],
+      "res4Scale": 4,
+      "res4Anchor": [
+        18252,
+        11116
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r06-c03",
+          "localAnchor": [
+            1100,
+            1004
+          ]
+        },
+        {
+          "tile": "pariisi-05m-r07-c03",
+          "localAnchor": [
+            1100,
+            108
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orsay",
+      "sourceFile": "output/pariisi-maamerkit6-20261101/assets.json",
+      "sourceSha256": "7652b602b611d09bff15a00dcc6691a46e6f64278390296a5f5107f949514184",
+      "sourceAtlasPixel": [
+        7722,
+        4250
+      ],
+      "res4Scale": 2,
+      "res4Anchor": [
+        15444,
+        8500
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r04-c01",
+          "localAnchor": [
+            1108,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concorde",
+      "sourceFile": "output/pariisi-maamerkit6-20261101/assets.json",
+      "sourceSha256": "7652b602b611d09bff15a00dcc6691a46e6f64278390296a5f5107f949514184",
+      "sourceAtlasPixel": [
+        7305,
+        3747
+      ],
+      "res4Scale": 2,
+      "res4Anchor": [
+        14610,
+        7494
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r02-c01",
+          "localAnchor": [
+            274,
+            966
+          ]
+        },
+        {
+          "tile": "pariisi-05m-r03-c01",
+          "localAnchor": [
+            274,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "id": "luxembourg",
+      "sourceFile": "output/pariisi-maamerkit6-20261101/assets.json",
+      "sourceSha256": "7652b602b611d09bff15a00dcc6691a46e6f64278390296a5f5107f949514184",
+      "sourceAtlasPixel": [
+        8488,
+        5298
+      ],
+      "res4Scale": 2,
+      "res4Anchor": [
+        16976,
+        10596
+      ],
+      "tiles": [
+        {
+          "tile": "pariisi-05m-r06-c02",
+          "localAnchor": [
+            1232,
+            484
+          ]
+        }
+      ]
+    }
+  ]
+}

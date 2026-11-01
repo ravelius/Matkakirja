@@ -1,0 +1,419 @@
+{
+  "checkedAt": "2026-11-01T05:36:53.406784+00:00",
+  "scope": [
+    "pariisi-05m-r01-c01",
+    "pariisi-05m-r01-c02",
+    "pariisi-05m-r01-c03",
+    "pariisi-05m-r01-c04",
+    "pariisi-05m-r01-c05",
+    "pariisi-05m-r02-c01",
+    "pariisi-05m-r02-c02",
+    "pariisi-05m-r02-c03",
+    "pariisi-05m-r02-c04",
+    "pariisi-05m-r02-c05"
+  ],
+  "generationCalls": 19,
+  "attemptsPreserved": 19,
+  "limitations": [
+    "Cyan proxy is diagnostic, not a segmentation truth: blue roofs can false-positive and faint blue pools may be missed. Full native visual reviews are separate.",
+    "Mask dilated and eroded 5px for boundary diagnostic; strict counts remain recorded."
+  ],
+  "tiles": {
+    "pariisi-05m-r01-c01": {
+      "selectedAttempt": 4,
+      "sha256": "85cd62daee6b7820a6eb48172be12ee8dba459df1e257be040eb243301cddc6f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c01.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 11,
+      "cyanStrictOutsidePixels": 11,
+      "cyanOutside5pxPixels": 11,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "No water on black mask. Model-material conflicts corrected through full new attempts: long right court [1178,570,1262,884] green; neighbouring [1113,482,1163,659] cream; clipped bottom [297,942,354,1024] cream; small (525,490) cream. Model large green courtyards retained. Fine roofs, window rows and chimneys resolved; large centre court empty cream."
+      },
+      "limitations": [
+        "Native detail differs slightly by roof; no claim of exact pixel geometry. Parent cross-tile review pending."
+      ]
+    },
+    "pariisi-05m-r01-c02": {
+      "selectedAttempt": 1,
+      "sha256": "34c51adbb140bf1709a484ee3ca6c3a59817496fd443254ef452dfecfde3411c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c02.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 223,
+      "cyanStrictOutsidePixels": 223,
+      "cyanOutside5pxPixels": 223,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "No water on all-black mask. Large Garnier reserved irregular plot (300–540,480–780) remains flat empty stone. Approved model green courtyards correctly retained, including model/geometry conflicts. Fine native window rows, roof planes, dormers and chimneys consistent with approved 0.5m style."
+      },
+      "limitations": [
+        "Fine geometry/antialiasing variation possible. Cross-tile overlap is parent QA."
+      ]
+    },
+    "pariisi-05m-r01-c03": {
+      "selectedAttempt": 2,
+      "sha256": "1c5256c61b9968166a5fb77be50adae937756882cbc4c9117db0c267d75e9ae6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c03.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 48,
+      "cyanStrictOutsidePixels": 48,
+      "cyanOutside5pxPixels": 48,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "All-black mask with no visible water. Large cream courtyards and model-green top/bottom courts retain intended colours; full attempt002 fixes tiny courtyard [1117,483,1175,512] from green to cream. Fine roofs, dormers and window rows match accepted row; empty courts remain empty."
+      },
+      "limitations": [
+        "Exact pixel geometry not certified; boundary antialiasing and cross-tile overlaps require parent QA."
+      ]
+    },
+    "pariisi-05m-r01-c04": {
+      "selectedAttempt": 1,
+      "sha256": "3873835e7ad624558e9cb6c75ad7d9298de70ace703409d74a8f78ec7c387bdc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c04.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 42,
+      "cyanStrictOutsidePixels": 42,
+      "cyanOutside5pxPixels": 42,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "No water on black mask. Uppermiddle and bottom cream courtyards follow model instead of guidegrass, and specified model-green courts retained. Large central reservation remains flat empty stone. Native fine dormers, chimneys and window rows sharp and consistent."
+      },
+      "limitations": [
+        "No pixel-exact geometry certificate; cross-tile overlaps pending parent review."
+      ]
+    },
+    "pariisi-05m-r01-c05": {
+      "selectedAttempt": 2,
+      "sha256": "5f5c37decdda1bb39571da1541ba6659cfce964c0d55314b5f5f35ec23df1c96",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r01-c05.png",
+      "maskSha256": "9dca20dc4295d929592d02e19e528f9db3d802bd0af81d39d89ddb296d555751",
+      "maskWhitePixels": 39674,
+      "cyanProxyPixels": 41329,
+      "cyanStrictOutsidePixels": 2852,
+      "cyanOutside5pxPixels": 86,
+      "cyanOutside5pxComponents": [
+        {
+          "pixels": 30,
+          "bbox": [
+            942,
+            460,
+            958,
+            463
+          ]
+        }
+      ],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [
+        {
+          "pixels": 13541,
+          "bbox": [
+            774,
+            0,
+            920,
+            269
+          ]
+        },
+        {
+          "pixels": 10590,
+          "bbox": [
+            913,
+            450,
+            1075,
+            679
+          ]
+        },
+        {
+          "pixels": 7865,
+          "bbox": [
+            1157,
+            866,
+            1295,
+            1024
+          ]
+        },
+        {
+          "pixels": 7678,
+          "bbox": [
+            1048,
+            681,
+            1175,
+            851
+          ]
+        }
+      ],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Whole-image second attempt corrects both small courtyard colours: triangle near (720,315) and horizontal courtyard near (650,475) now dry cream matching approved model. Other model greens preserved. Four permitted canal reaches preserved; mask-black narrow lock x818–906,y284–410 remains entirely dry cream despite blue in model/geometry. Thin ink, dormers and narrow window rows retained."
+      },
+      "limitations": [
+        "Water mask overrides both model and geometry for the narrow dry lock x818–906,y284–410. Four white canal reaches remain cyan. Visual review does not assert pixel-exact shorelines."
+      ]
+    },
+    "pariisi-05m-r02-c01": {
+      "selectedAttempt": 3,
+      "sha256": "80422175747fab450555e6129cd350e114a602ff13c4adc499fc3130c5104f25",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c01.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 43,
+      "cyanStrictOutsidePixels": 43,
+      "cyanOutside5pxPixels": 43,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Full fresh attempts corrected three material conflicts: pointed uppercourt (525,220) green, small midupper court (750,360) cream, long lower-right court (1150,720) cream. Decorative circle (329,870) completely dry; all-black mask, no water seen. Large empty grounds/lawns and footprint positions retained; fine native details resolved."
+      },
+      "limitations": [
+        "Fine antialiasing/geometry variance possible; parent aggregate seams pending."
+      ]
+    },
+    "pariisi-05m-r02-c02": {
+      "selectedAttempt": 1,
+      "sha256": "88e895d5c5df561ca582593c836fd17f96e746a80e72340bac6432df627d2bd8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c02.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 131,
+      "cyanStrictOutsidePixels": 131,
+      "cyanOutside5pxPixels": 131,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "All-black mask and dry ornament at (1444,663). Big irregular leftcourt green, central-left rectangle cream, long midrightcourt cream. Native detail crisp. Attempt002 tried correcting small upper court but did not correct it and was softer; sharper a1 selected."
+      },
+      "limitations": [
+        "Small upper courtyard approx [902,210,955,233], centre(930,221), remains creamstone whereas model is grass after one full retry. Exact pixel geometry/cross-tile seam QA pending parent."
+      ]
+    },
+    "pariisi-05m-r02-c03": {
+      "selectedAttempt": 1,
+      "sha256": "79aae7333b27f82181bcc6492a62c39a497cdbb391bf998c7a505ed3c69d1c41",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c03.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 451,
+      "cyanStrictOutsidePixels": 451,
+      "cyanOutside5pxPixels": 451,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Model-first reference preserved grass and stone colours, including large upper-right and longleft grasscourts, small model-green patios and central cream triangle. Native detail sharp and new, not copied blur; empty plots remain empty. All-black water mask and no visible water."
+      },
+      "limitations": [
+        "Fine geometry/antialiasing variance possible; aggregate overlaps pending parent."
+      ]
+    },
+    "pariisi-05m-r02-c04": {
+      "selectedAttempt": 1,
+      "sha256": "ee227e67adaaa540849d4f11353d412e1640f19f1ced37790819896f04cd683f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c04.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "maskWhitePixels": 0,
+      "cyanProxyPixels": 176,
+      "cyanStrictOutsidePixels": 176,
+      "cyanOutside5pxPixels": 176,
+      "cyanOutside5pxComponents": [],
+      "erodedMaskNonCyanPixels": 0,
+      "erodedMaskNonCyanComponents": [],
+      "maskWhiteComponents": [],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Native roof/windows detail consistent with approved 0.5m style. Black water mask: no waterways; two oblong ornaments at approximately (848,628) and (830,672) are dry cream. Model courtyard green in lower complex and skinny adjacent court retained; source-guide-only green replaced with model cream. Empty reservations remain empty."
+      },
+      "limitations": [
+        "Visual geometry review, not a claim of pixel-exact generated boundaries. Parent performs whole-grid seam review."
+      ]
+    },
+    "pariisi-05m-r02-c05": {
+      "selectedAttempt": 2,
+      "sha256": "20916661b167fad3d93482fcd06a7427e52d15b536e8d5403e40c6c33124f9af",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "finalEqualsNativeAndRaw": true,
+      "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r02-c05.png",
+      "maskSha256": "1e12d1d6b0089e6ecf251f62eea536143c58f2bc3fe2e91432e341444daf3bde",
+      "maskWhitePixels": 12472,
+      "cyanProxyPixels": 12796,
+      "cyanStrictOutsidePixels": 3208,
+      "cyanOutside5pxPixels": 333,
+      "cyanOutside5pxComponents": [
+        {
+          "pixels": 147,
+          "bbox": [
+            1302,
+            160,
+            1348,
+            236
+          ]
+        }
+      ],
+      "erodedMaskNonCyanPixels": 110,
+      "erodedMaskNonCyanComponents": [
+        {
+          "pixels": 77,
+          "bbox": [
+            1502,
+            518,
+            1528,
+            562
+          ]
+        }
+      ],
+      "maskWhiteComponents": [
+        {
+          "pixels": 7161,
+          "bbox": [
+            1167,
+            0,
+            1300,
+            150
+          ]
+        },
+        {
+          "pixels": 4091,
+          "bbox": [
+            1287,
+            163,
+            1477,
+            477
+          ]
+        },
+        {
+          "pixels": 1220,
+          "bbox": [
+            1495,
+            503,
+            1536,
+            589
+          ]
+        }
+      ],
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "waterMaskReviewed": true,
+        "observation": "Whole retry narrows right-edge canal, reducing cyan beyond 5px mask margin from1278 to333 diagnostic pixels. All three water reaches and dry bridge separations preserved, ornaments dry cream, model courtyard materials remain correct. Native narrow windows/roof detail reviewed."
+      },
+      "limitations": [
+        "Canal still has a small eastward offset/widening relative to exact mask. At y200 mask x1307–1317 versus final x1311–1327; y300 mask x1368–1377 versus final x1371–1386. Selected whole retry improves outside-mask area but is NOT an exact mask pass. Full diagnostic includes components and missing interior pixels.",
+        "Global geometry is visually consistent but not pixel-identical. Parent reviews seams and receiver accepts disclosed exceptions."
+      ]
+    }
+  }
+}

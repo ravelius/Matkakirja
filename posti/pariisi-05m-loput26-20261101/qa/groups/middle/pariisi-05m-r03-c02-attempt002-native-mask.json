@@ -1,0 +1,56 @@
+{
+  "tile": "pariisi-05m-r03-c02",
+  "attempt": 2,
+  "sha256": "5799fc0804971ec94857416b2a077780739a30756b19bfcb703095277c0a4a16",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "nativeByteIdentity": true,
+  "maskSha256": "f1704d822bc2b74cf4d136e3373906ab633b608cd648ca46e996faef5f2a87db",
+  "outside5pxCyanTotal": 5,
+  "outsideComponents": [
+    {
+      "area": 2,
+      "bbox": [
+        1303,
+        554,
+        1304,
+        556
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        43,
+        2,
+        44,
+        3
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        776,
+        2,
+        777,
+        3
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        1011,
+        181,
+        1012,
+        182
+      ]
+    }
+  ],
+  "missingEroded5pxCyanTotal": 0,
+  "missingComponents": [],
+  "colourProxyOnly": true,
+  "sourceCommit": "b9ba46ec6c637d2a8e17b5160b61123af6d14076",
+  "checkedAt": "2026-11-01T05:15:45.792245+00:00"
+}

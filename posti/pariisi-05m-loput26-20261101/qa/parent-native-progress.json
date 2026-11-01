@@ -1,0 +1,219 @@
+{
+  "method": "Full native image viewed by parent using view_image original. Separate detail and all-overlap QA still pending.",
+  "reviews": {
+    "pariisi-05m-r01-c01": {
+      "sha256": "85cd62daee6b7820a6eb48172be12ee8dba459df1e257be040eb243301cddc6f",
+      "reviewedAt": "2026-11-01T05:18:32.574792+00:00",
+      "observation": "Fine roof and window detail; model long right green courtyard and adjacent cream courtyard now present, empty centre square; no water or props.",
+      "status": "native-reviewed-awaiting-seams"
+    },
+    "pariisi-05m-r01-c02": {
+      "sha256": "34c51adbb140bf1709a484ee3ca6c3a59817496fd443254ef452dfecfde3411c",
+      "reviewedAt": "2026-11-01T05:18:32.576391+00:00",
+      "observation": "Fine roof/window rows, large Garnier reservation empty, cream and green courts; no forbidden props.",
+      "status": "native-reviewed-awaiting-seams"
+    },
+    "pariisi-05m-r03-c01": {
+      "sha256": "612a344f5dd8b6136d222b398902ea9975fa1147b7713e51931b1dc90ddb3b28",
+      "reviewedAt": "2026-11-01T05:34:07.597313+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Latest complete Orsay correction viewed: bottom-right obsolete museum roof gone, independent ordinary small block near[700,930] preserved. River, bridges, allowed octagonal pool and dry ornaments maintained; empty Concorde area."
+    },
+    "pariisi-05m-r03-c02": {
+      "sha256": "0415bd0911b1b0a321fc188913ccf05e367c0b2bbb7bfb04af19ea422401bd77",
+      "reviewedAt": "2026-11-01T05:42:20.921005+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Whole retry viewed: extreme-right partial courtyard now cream matching east tile; separate long upper-right court stays green, Louvre flat empty, round ornaments dry and small Seine wedge retained."
+    },
+    "pariisi-05m-r06-c01": {
+      "sha256": "b4d583183207a517bd6a40a8491ec90a32fc050edb64fea536e91693bebeeafd",
+      "reviewedAt": "2026-11-01T05:29:10.065386+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Latest full native viewed. Upper-middle court now grass; upperright clipped court cream; lower U court green. Fine roof lines and main street structure retained; blank upperleft ground reservation."
+    },
+    "pariisi-05m-r06-c02": {
+      "sha256": "27bd6717964a4e75e115a6cd85ad7da6edbb971bc369ee8321d871f2677d6435",
+      "reviewedAt": "2026-11-01T05:40:00.671487+00:00",
+      "status": "native-reviewed-awaiting-final-overlap-check",
+      "observation": "Selected attempt004 full native and native east/south strips viewed. Eastern diagonal/vertical/transverse paths restored, pavilion and cream upper-left court present, palace absent. Curved path differs from eastern accepted neighbor and southeast corner differs from southern tile; coordinates and evidence retained in worker QA."
+    },
+    "pariisi-05m-r03-c03": {
+      "sha256": "7a22e1fe837716c8ae53734c2662f0a0a9c3f4b8a352e4dd11a3cc1b3d2b9ca8",
+      "reviewedAt": "2026-11-01T05:19:15.047077+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: crisp thin ink and windows/roofs, pale large northwest and midwest courtyards, no water in black mask. South boundary courtyard green to match prior accepted tile. Park ornaments remain dry."
+    },
+    "pariisi-05m-r01-c03": {
+      "sha256": "1c5256c61b9968166a5fb77be50adae937756882cbc4c9117db0c267d75e9ae6",
+      "reviewedAt": "2026-11-01T05:20:03.900677+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Fine complete native image viewed: detailed roof dormers/window rows and cream courtyards; green top and bottom courts as worker model checks. No water or scene props."
+    },
+    "pariisi-05m-r07-c01": {
+      "sha256": "fd4fb1b7f92014480469b061edadee7118ce414a5b46c72bfd0c1e08c02a2cd4",
+      "reviewedAt": "2026-11-01T05:20:03.902329+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Fine native roof/chimney/window detail, long lower-left court grass and lower-middle triangular court cream; streets empty, no water or props."
+    },
+    "pariisi-05m-r01-c04": {
+      "sha256": "3873835e7ad624558e9cb6c75ad7d9298de70ace703409d74a8f78ec7c387bdc",
+      "reviewedAt": "2026-11-01T05:21:16.565629+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: green long eastern court and cream upper middle court, sharp thin roof and facade details, open stone reservations with no extra scene props or water."
+    },
+    "pariisi-05m-r01-c05": {
+      "sha256": "5f5c37decdda1bb39571da1541ba6659cfce964c0d55314b5f5f35ec23df1c96",
+      "reviewedAt": "2026-11-01T05:40:00.671487+00:00",
+      "status": "native-reviewed-awaiting-final-overlap-check",
+      "observation": "Latest whole native reviewed: corrected cream courtyards, canals and dry lock retained, fine roof/window lines; narrow bank residual disclosed."
+    },
+    "pariisi-05m-r03-c04": {
+      "sha256": "a1f58e89446657be611c9c6d171f464c9054fefb3fcac804bba4cc27d6c87718",
+      "reviewedAt": "2026-11-01T05:22:52.382319+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Crisp dense roof/window detail, cream triangular courtyards and central cross grass garden. No water or forbidden props."
+    },
+    "pariisi-05m-r07-c02": {
+      "sha256": "f6f8eefdac3ee7fb0f43190d84afca0f0854412378557a5215d6d51ac9683280",
+      "reviewedAt": "2026-11-01T05:24:31.350293+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: green open Luxembourg park, clipped allowed pool at top edge, cream central courtyard, fine roof lines and no added scene props. Pool and paths require overlap review with corrected north neighbor."
+    },
+    "pariisi-05m-r03-c05": {
+      "sha256": "e2cb3a4feb707768aca5a6e734a8465a59dd129d00f6d0961655191e9a948290",
+      "reviewedAt": "2026-11-01T05:25:23.880877+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed; dry upperleft basin and precise fine roofs, three lawn courts. Round internal courtyard near[1146,420] more openly rendered than soft model as disclosed, otherwise main block silhouette retained."
+    },
+    "pariisi-05m-r07-c03": {
+      "sha256": "ffad6910c5fa472fa5a2c722e635e17f64d5d3f5df583ac0178696ef059bc330",
+      "reviewedAt": "2026-11-01T05:25:23.882546+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed; large Panthéon reservation at upperright anchor[1100,108] completely flat and empty. Grass courts, dry ornament, fine native roof and window detail; no water or scene props."
+    },
+    "pariisi-05m-r02-c01": {
+      "sha256": "80422175747fab450555e6129cd350e114a602ff13c4adc499fc3130c5104f25",
+      "reviewedAt": "2026-11-01T05:29:10.063553+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: pointed upper court green, midupper and long lower-right court cream. Concorde area flat empty stone; decorative circle dry. Fine roofs and windows."
+    },
+    "pariisi-05m-r07-c04": {
+      "sha256": "add5aec0d580c639afc1b8b3632e0abcd8fd7c1f1774b40d7e553e63fc9d5d50",
+      "reviewedAt": "2026-11-01T05:29:10.066723+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Native viewed: open Jardin des Plantes lawn, dry ornaments and calm slate roofs. Lowerleft courtyard grass and lowerright stone; roof/window detail sharp."
+    },
+    "pariisi-05m-r07-c05": {
+      "sha256": "458d7195ef248fae1e0b194a8a7af86dbda20e34bd72521a05e38a97c61ca6db",
+      "reviewedAt": "2026-11-01T05:29:10.067839+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Native viewed: river and bridge follow diagonal corridor, dry elongated garden basin and flat lawn. Park existing small structures retained; green lower courts. River somewhat stronger cyan than prior northern tile, flagged for overlap review."
+    },
+    "pariisi-05m-r02-c02": {
+      "sha256": "88e895d5c5df561ca582593c836fd17f96e746a80e72340bac6432df627d2bd8",
+      "reviewedAt": "2026-11-01T05:32:00.725525+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: fine independent roof planes and window rows, empty stone reserve at left. Large green and cream courts visually consistent; small [902,210,955,233] cream instead of model grass remains disclosed after failed retry."
+    },
+    "pariisi-05m-r02-c03": {
+      "sha256": "79aae7333b27f82181bcc6492a62c39a497cdbb391bf998c7a505ed3c69d1c41",
+      "reviewedAt": "2026-11-01T05:32:00.727193+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: sharp fine roof and facade detail, large grass courts at top and right, open streets and ground; no props or water."
+    },
+    "pariisi-05m-r04-c01": {
+      "sha256": "98ffabd5bc157e614f6b20b74c8f7dd6fb6a59addf73a83781c609c28602bda7",
+      "reviewedAt": "2026-11-01T05:32:00.728386+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full corrected native viewed: main Orsay mass absent, flat pale reservation and narrower east neighboring block retained. River banks unchanged. Small upper-middle courtyard green instead of model cream remains disclosed. Adjacent row roof-removal seam pending."
+    },
+    "pariisi-05m-r02-c04": {
+      "sha256": "ee227e67adaaa540849d4f11353d412e1640f19f1ced37790819896f04cd683f",
+      "reviewedAt": "2026-11-01T05:34:07.595489+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: dry oblong park ornaments, grass lower courtyards, open stone plots and distinct roof/window/chimney detail. No water or props."
+    },
+    "pariisi-05m-r02-c05": {
+      "sha256": "20916661b167fad3d93482fcd06a7427e52d15b536e8d5403e40c6c33124f9af",
+      "reviewedAt": "2026-11-01T05:40:00.671487+00:00",
+      "status": "native-reviewed-awaiting-final-overlap-check",
+      "observation": "Latest whole native reviewed: canal bank improved, dry decorative ornaments, crisp roofs and lawns; narrow eastern mask mismatch disclosed."
+    },
+    "pariisi-05m-r04-c02": {
+      "sha256": "941bccbbab09ba5894e9026d7562c286fb9c5a3e05ea1e409485f957e2d87a5f",
+      "reviewedAt": "2026-11-01T05:40:25.993430+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native reviewed: Louvre whole north area flat empty; three bridges and river banks, dry ornaments, fine ordinary roof/chimney/window details retained. No props."
+    },
+    "pariisi-05m-r05-c01": {
+      "sha256": "faadd5c41ee91a86f58d02545e852dd868603f8702b4c864f927a9a8e6dbeecc",
+      "reviewedAt": "2026-11-01T05:40:43.014876+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native reviewed: clear dense ordinary roofs and window rows, open green lawns with cream paths, upper-left blank ground, no water or scene props."
+    },
+    "pariisi-05m-r05-c02": {
+      "sha256": "7d52630c5507823fca111882e68c807296fae12a8a18eef739c4e41463d6e26f",
+      "reviewedAt": "2026-11-01T05:45:22.101506+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Final a2 whole native viewed: tiny east boundary court now green to continue accepted neighbor. Fine roof/window/chimney detail and all other main materials preserved; dry black water mask."
+    }
+  },
+  "priorReviews": [
+    {
+      "tile": "pariisi-05m-r06-c02",
+      "sha256": "c3d48f7bfae05254b75fd192a3274af371b344b724e4dd398b3d063dc8b48cfe",
+      "reviewedAt": "2026-11-01T05:18:32.581207+00:00",
+      "observation": "Native detail and octagonal pool viewed. Possible Luxembourg palace retained despite text order, escalated to worker for source validation and full retry if confirmed.",
+      "status": "needs-landmark-check"
+    },
+    {
+      "tile": "pariisi-05m-r06-c01",
+      "sha256": "994565a58acab9097e1ce4f094fa3b2f9f3dc8560f11338563d6fdac2a560e25",
+      "reviewedAt": "2026-11-01T05:18:32.580034+00:00",
+      "observation": "Model green courtyards restored and native detail consistent. No water or props.",
+      "status": "native-reviewed-awaiting-seams"
+    },
+    {
+      "tile": "pariisi-05m-r03-c01",
+      "sha256": "68ec08f09d18543c03dcdd16a4ca26403997aa4c47aea785eb3fb406457dbffd",
+      "reviewedAt": "2026-11-01T05:18:32.577405+00:00",
+      "observation": "Full Seine, octagonal pool and green park viewed; pool is explicitly allowed in mask per worker source check. Empty Concorde stone reservation.",
+      "status": "awaiting-whole-image-orsay-boundary-retry"
+    },
+    {
+      "tile": "pariisi-05m-r01-c05",
+      "sha256": "ae743bb98750b2bde77582a019a0ebaa462a8cef0164646dc4e2093b9e518bf6",
+      "reviewedAt": "2026-11-01T05:22:52.380800+00:00",
+      "status": "needs-courtyard-audit",
+      "observation": "Full native viewed: four water sections and dry lock between upper bends. Fine detail; two small greener courtyard divergences await worker final audit."
+    },
+    {
+      "tile": "pariisi-05m-r02-c05",
+      "sha256": "db0c63e13139070e491557f2f4805f3fa8ff137af3170ccfb4d1f87d84433bc1",
+      "reviewedAt": "2026-11-01T05:34:43.815749+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: canal sections at right with dry bridge, center round and long ornaments dry. Large triangular grass court and fine architectural detail; no extra scene props."
+    },
+    {
+      "tile": "pariisi-05m-r06-c02",
+      "sha256": "db8ebc81834e48d7acda0431b67c67bc80eeefa45e0c61efff5ffbc4b0c6e0ae",
+      "reviewedAt": "2026-11-01T05:22:52.383584+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Corrected complete native viewed. Luxembourg palace U-building now entirely absent and site flat green. Source-mask octagonal pool remains blue; other architectural blocks and park lawn retained. Small path-shape variations disclosed."
+    },
+    {
+      "tile": "pariisi-05m-r03-c02",
+      "sha256": "5799fc0804971ec94857416b2a077780739a30756b19bfcb703095277c0a4a16",
+      "reviewedAt": "2026-11-01T05:18:32.578450+00:00",
+      "observation": "Empty Louvre area, dry small round basins, thin ink and small river corner; source placeholder omission noted by worker.",
+      "status": "native-reviewed-awaiting-seams"
+    },
+    {
+      "tile": "pariisi-05m-r05-c02",
+      "sha256": "b48379341b8f0acd6a257da93cf4775064c6cd782f8906e4b9d960eaefa6d6b8",
+      "reviewedAt": "2026-11-01T05:43:21.773899+00:00",
+      "status": "native-reviewed-awaiting-seams",
+      "observation": "Full native viewed: sharp roof/window/chimney details, stone and green inner courts, dry black water mask, no forbidden props. Street and narrow block silhouettes present."
+    }
+  ]
+}

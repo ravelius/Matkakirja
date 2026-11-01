@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-01T05:27:56.645202+00:00",
+  "explicitTextOverridesReferenceBuildings": true,
+  "luxembourg": {
+    "tile": "pariisi-05m-r06-c02",
+    "anchor": [
+      1232,
+      484
+    ],
+    "decision": "Remove entire U palace; leave flat green site. Verified from later-six 1m anchor and source grid. Corrected native already visually reviewed."
+  },
+  "orsay": {
+    "tiles": [
+      "pariisi-05m-r04-c01",
+      "pariisi-05m-r03-c01"
+    ],
+    "anchorR04C01": [
+      1108,
+      180
+    ],
+    "decision": "Remove main large museum block and its top-edge overlap in preceding row; retain narrower eastern ordinary block roughly x1250..1425,y240..375.",
+    "basis": "Source main footprint197x139m implies approximately394x278px at0.5m. Parent visual inference from source geometry: narrower eastern addition is separately articulated and excluded conservatively. Exact semantic building boundary not certified; report to receiver."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-11-01T05:38:26.844539+00:00",
+  "tile": "pariisi-05m-r06-c02",
+  "selectedAttempt": 4,
+  "sha256": "27bd6717964a4e75e115a6cd85ad7da6edbb971bc369ee8321d871f2677d6435",
+  "newWholeGenerationAttempts": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "selectedReason": "Best complete candidate after parent clarified that main path continuity is required but non-identical hand-drawn curve shapes may be disclosed. Attempt6 lost diagonal branch and altered other internal layout.",
+  "corrected": [
+    "Upper-left clipped courtyard beige paving",
+    "East diagonal path y713..746 restored",
+    "East vertical and transverse paths y865,900,985 restored",
+    "Roofed round pavilion near1480,805 restored",
+    "Curved outer park border preserved",
+    "Luxembourg palace remains absent",
+    "Octagonal pool remains blue inside permitted mask"
+  ],
+  "remainingDifferences": [
+    {
+      "region": [
+        1408,
+        819,
+        1536,
+        1000
+      ],
+      "description": "Candidate curve begins around1428,865 and descends left to1325,980; accepted east overlap curve enters1408,819, bulges1426,865 and exits1408,918. Transverse branches and right-hand vertical path continue, but curve is not identical."
+    },
+    {
+      "region": [
+        1325,
+        896,
+        1536,
+        1024
+      ],
+      "description": "Own r07-c02 top strip has faint grass-shape boundaries here, whereas east-approved continuation adds cream curve and horizontal path in current r06-c02. Explicitly disclosed lower-right corner conflict; other six tiles not changed."
+    },
+    {
+      "region": [
+        878,
+        896,
+        1115,
+        1024
+      ],
+      "description": "Pool-side lower paths and small structures continue; hand-drawn width/curve differences remain."
+    }
+  ],
+  "qaImages": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/r06-c02-east-selected4.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/groups/south/qa/r06-c02-south-selected4.png"
+  ],
+  "referenceProcessing": "ffmpeg lossless-size crops used only as reference/QA strips; all selected finals are unchanged native imagegen output."
+}

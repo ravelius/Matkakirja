@@ -1,0 +1,110 @@
+{
+  "method": "Stricter water diagnostic: G-R>55, B-R>65, G>110,B>120. Excludes desaturated slate roofs. Not a semantic classifier.",
+  "tiles": [
+    {
+      "tile": "pariisi-05m-r06-c01",
+      "vividCyanPixels": 0,
+      "outsideExact": 0,
+      "outside5px": 0,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r06-c02",
+      "selectedAttempt": 4,
+      "vividCyanPixels": 6226,
+      "outsideExact": 343,
+      "outside5px": 2
+    },
+    {
+      "tile": "pariisi-05m-r07-c01",
+      "vividCyanPixels": 9,
+      "outsideExact": 9,
+      "outside5px": 9,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c02",
+      "vividCyanPixels": 1616,
+      "outsideExact": 92,
+      "outside5px": 73,
+      "components": [
+        {
+          "pixels": 8,
+          "bbox": [
+            308,
+            886,
+            312,
+            890
+          ]
+        },
+        {
+          "pixels": 5,
+          "bbox": [
+            131,
+            48,
+            133,
+            51
+          ]
+        },
+        {
+          "pixels": 4,
+          "bbox": [
+            1459,
+            436,
+            1460,
+            440
+          ]
+        },
+        {
+          "pixels": 4,
+          "bbox": [
+            331,
+            742,
+            333,
+            745
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "pariisi-05m-r07-c03",
+      "vividCyanPixels": 0,
+      "outsideExact": 0,
+      "outside5px": 0,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c04",
+      "vividCyanPixels": 0,
+      "outsideExact": 0,
+      "outside5px": 0,
+      "components": []
+    },
+    {
+      "tile": "pariisi-05m-r07-c05",
+      "vividCyanPixels": 222704,
+      "outsideExact": 4144,
+      "outside5px": 34,
+      "components": [
+        {
+          "pixels": 8,
+          "bbox": [
+            173,
+            996,
+            176,
+            1000
+          ]
+        },
+        {
+          "pixels": 6,
+          "bbox": [
+            1281,
+            249,
+            1283,
+            253
+          ]
+        }
+      ]
+    }
+  ]
+}

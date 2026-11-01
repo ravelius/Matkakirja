@@ -1,0 +1,170 @@
+{
+  "checkedAt": "2026-11-01T05:44:38.425446+00:00",
+  "selectedCount": 9,
+  "toolCallAttempts": 23,
+  "completedGenerations": 22,
+  "generationCalls": 22,
+  "selected": [
+    {
+      "name": "pariisi-05m-r03-c01",
+      "selectedAttempt": 3,
+      "sha256": "612a344f5dd8b6136d222b398902ea9975fa1147b7713e51931b1dc90ddb3b28",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r03-c01.png",
+      "maskSha256": "04f385ab31092dc6262a4618d8f90827be22410db97b8df3e70aa8474da14e4f",
+      "limitations": [
+        "Latest-mask octagon water intentionally differs from old dry painted model. Orsay fragment removal overrides obsolete geometry/model roof.",
+        "Second image overremoved independent ordinary block and is rejected; first image retained historical Orsay roof and is superseded. No selected output was edited or cropped.",
+        "Minor hand-drawn bank/roof line variations remain; parent aggregate seam QA pending."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r03-c02",
+      "selectedAttempt": 3,
+      "sha256": "0415bd0911b1b0a321fc188913ccf05e367c0b2bbb7bfb04af19ea422401bd77",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r03-c02.png",
+      "maskSha256": "f1704d822bc2b74cf4d136e3373906ab633b608cd648ca46e996faef5f2a87db",
+      "limitations": [
+        "Far-right courtyard intentionally follows painted-model material rather than obsolete green geometry fill; parent aggregate seam review pending.",
+        "Water colour proxy finds 72 outside-mask pixels, largest component 16px on roof/dormer; no visible false pond. Geometry is visually reviewed, not pixel-identical proof."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r03-c03",
+      "selectedAttempt": 2,
+      "sha256": "7a22e1fe837716c8ae53734c2662f0a0a9c3f4b8a352e4dd11a3cc1b3d2b9ca8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r03-c03.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "limitations": [
+        "Approved south neighbor r04-c03 overrides old same-place model only at bottom central courtyard bbox[650,899,728,965]: green lawn preserved to continue neighbor top128px; parent explicitly confirmed this exception.",
+        "Park interior path and dry decorative-outline rendering follows accepted model appearance within guide perimeter; pixel-identical internal line placement is not certified. Parent aggregate seam QA pending.",
+        "Tiny cyan diagnostic components are roof highlights, not water."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r03-c04",
+      "selectedAttempt": 2,
+      "sha256": "a1f58e89446657be611c9c6d171f464c9054fefb3fcac804bba4cc27d6c87718",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r03-c04.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "limitations": [
+        "Only isolated cyan roof-highlight proxy pixels outside black mask (107px total, maximum11px component), no visible water.",
+        "Internal architectural detail is newly drawn and not pixel-identical to guide. Parent aggregate seams still pending."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r03-c05",
+      "selectedAttempt": 3,
+      "sha256": "e2cb3a4feb707768aca5a6e734a8465a59dd129d00f6d0961655191e9a948290",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r03-c05.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "limitations": [
+        "Central round building's small cream inner court is drawn more openly than the soft model; ordinary outer footprint and surrounding courtyard remain in place. Parent should inspect near[1120,390,1185,450] in final/native. No new landmark introduced.",
+        "Tiny cyan diagnostic pixels are roof highlights. Aggregate bottom128px seam to approved r04-c05 remains parent review."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r04-c01",
+      "selectedAttempt": 3,
+      "sha256": "98ffabd5bc157e614f6b20b74c8f7dd6fb6a59addf73a83781c609c28602bda7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r04-c01.png",
+      "maskSha256": "3ddb668e73616b1eb387b84eae75b217e3741358b059ace1fecaab139064b5b3",
+      "limitations": [
+        "Small narrow upper-middle court near[650,206,680,239] remains green like geometry, though old painted model shows cream. Attempt2 had cream here but missed required lower-right green courtyard; current selection prioritizes restored Orsay boundary and two larger model lawns. This is an explicit remaining material QA exception for parent.",
+        "Orsay removal intentionally overrides building-filled geometry and old model. Approx main-mass polygon[924,45;1291,165;1226,311;866,205], east ordinary neighbor preserved. Boundary is visually interpreted, not pixel-certified.",
+        "Parent aggregate seam review pending, including north tile whose obsolete Orsay top roof is being regenerated."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r04-c02",
+      "selectedAttempt": 3,
+      "sha256": "941bccbbab09ba5894e9026d7562c286fb9c5a3e05ea1e409485f957e2d87a5f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r04-c02.png",
+      "maskSha256": "9058428635ecc22f909df43bde81fd6adb46250d11c99817eec6cf13f846c43a",
+      "limitations": [
+        "Only isolated roof-highlight cyan pixels outside mask+5px (84px total, largest6px); missing-water diagnostic0px.",
+        "Thin lawn strip within left block around[310,745,411,780] is very narrow/partly occluded by new roofs, so model-material matching there is not pixel-certified.",
+        "Parent aggregate seam to accepted east r04-c03 remains pending."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r05-c01",
+      "selectedAttempt": 2,
+      "sha256": "faadd5c41ee91a86f58d02545e852dd868603f8702b4c864f927a9a8e6dbeecc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r05-c01.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "limitations": [
+        "Material reference placed first and geometry second with explicit geometry-priority roles for footprint boundaries; no source or final pixel edits performed.",
+        "Fine roof shapes and garden path ink lines are freshly drawn, not pixel-identical to guide. Parent aggregate seams pending."
+      ]
+    },
+    {
+      "name": "pariisi-05m-r05-c02",
+      "selectedAttempt": 2,
+      "sha256": "7d52630c5507823fca111882e68c807296fae12a8a18eef739c4e41463d6e26f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "mask": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-loput26-20261101/source/vesimaski-pariisi-05m-r05-c02.png",
+      "maskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "limitations": [
+        "EXPLICIT MODEL EXCEPTION: far-right partial courtyard [1506,571,1536,616] is green according to new geometry and already-approved r05-c03 east neighbor; old1m2x model is cream here. Accepted-neighbor continuity governs this overlap.",
+        "Cyan proxy64outside-mask pixels, largest4px roofdetail; no visible false water.",
+        "All35-tile seam acceptance remains parent aggregateQA."
+      ]
+    }
+  ],
+  "retainedNativeAttempts": 22,
+  "sourceReferencesUnchanged": true,
+  "deliveryStatus": "not-delivered-by-worker; parent aggregate QA and delivery pending"
+}
