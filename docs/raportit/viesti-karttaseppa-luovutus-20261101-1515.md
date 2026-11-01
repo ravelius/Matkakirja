@@ -23,9 +23,13 @@ Codexin vahti: odotusskripti, joka fetchaa origin/claude/postilaatikko minuutin 
   näkyvyysluku, 1,0 = ei erotu), liitos.py (min-cut-saumaleikkaus per limityssivu + σ10 häivytys; mekaniikka testattu), saumat.py.
 
 ## AVOIN (järjestyksessä)
-1. **PT:n vastaus (lähetetty 15.1x, jonossa):** ehdotus rengas 1 uudelleen renkaan 2 tavalla (12 uutta ottoa, koko pala myös
-   limityksessä, G/naapurit viitteenä) ja leikkaus liitos.py:llä **G:n uloimman 128 px:n sisällä** (PT:n raja 15.0x).
-   Kun PT kuittaa → Codexille tilaus (yhdistä jo tilattujen korjausten kanssa) samaan postiin.
+1. **PT KUITTASI 15.2x → LÄHETÄ TILAUS CODEXILLE HETI:** rengas 1 uudelleen renkaan 2 tavalla, kaikki 12 palaa (jokaisessa
+   näkyvä sauma): koko pala piirretään myös limityksessä, G ja naapurit erillisinä viitekuvina (ei kopiota, ei kovaa liimausta
+   ohjeeseen → tee ohjeet ilman G-kaistaa: ohjeet.py liittää valmiit() automaattisesti, lisää esim. env-lippu, joka jättää ne
+   pois ja tallentaa viite-<nimi>.png erikseen). Puisto (r09c09), Invalidit (r08c08 + r07c08) ja Panthéon (r09c10) samoihin
+   ottoihin (ks. 8684f900f kohta 1), ettei samaa palaa piirretä kahdesti; jos Codex on jo tehnyt ne kaistakopiolla, tehdään
+   uudelleen. Toimitetaan raakapalat ilman takaisinliimausta. Sauma leikataan liitos.py:llä G:n uloimman 128 px:n sisällä,
+   G:n sisäosa pikselilleen. Codexin kuvalupa pysyvä. Kansiotilauksen malli: C/postilaatikko-tyokalut/postita2.sh.
 2. **liitos.py:hyn syvyysraja:** leikkaus saa mennä G:hen enintään 128 px (sakko DP-kustannukseen G:n sisäosassa); G:n sisäosa
    pikselilleen. Testaa, kun palat tulevat; kamera-saumat.py ennen/jälkeen → pari PT:lle.
 3. Codexin toimitukset → SHA → kokoa → kamera → PT; rengas 2 vasta kun rengas 1 kelpaa (KS + PT).
