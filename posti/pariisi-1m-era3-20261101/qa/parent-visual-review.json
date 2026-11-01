@@ -1,0 +1,25 @@
+{
+  "reviewedAt": "2026-11-01T02:43:08.134146+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "outcome": "20-native-images-for-receiver-review-with-explicit-unresolved-water-mask-exceptions",
+  "exactWaterMaskCompliance": false,
+  "reviewedImageCount": 20,
+  "nativeRawIdentityVerified": true,
+  "fullGuideAndFinalContactsCompared": true,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "receiverDecisionRequiredTiles": [
+    "r04-c01",
+    "r04-c02"
+  ],
+  "limitations": [
+    "Kaikki20 kuvaa ovat natiiveja1536x1024RGB ja tavuiltaan valittujen alkuperäisten PNG:iden kopioita.51kokonaista generointia, ei osaretusointia tai koonmuutosta. V2-maskit käytössä; kuuden vaaditun palan kokonaiset uusinnat tehty.",
+    "r04-c01:12kokonaisen yrityksen jälkeen valittiin11.otto parhaan maanpinnan ja paperihäivytyksen perusteella. Uusi keskioikean kanavahaaran kapea nauha on mukana, mutta oikean reunan vesikaaren sijainti on edelleen osin maskin yläpuolella:4216px bbox1416,277,1536,394; kuivaksi merkityn välin ylittää237px ohut sininen viiva. Pääjoen paperipuoli jää osin maskin sisällä vaaleaksi (10680px ja2008px proxyalueet). Tämä pala toimitetaan nimenomaisesti arvioon, EI virheettömäksi tai runtime-valmiiksi hyväksyttynä.",
+    "r04-c02:9.otto palauttaa vasemman kanavan kärjen kuvan reunaan; keskikohdan kapea2451px rantaviivan sivusiirtymä bbox152,142,342,366 jää arvioitavaksi. Oikean alakulman735px vesiproxyalue jää vaaleaksi. Keski- ja alareunan koristealtaat ovat kuivat.",
+    "r03-c08: lähdeoppaan kanavassa on sinistä427px bbox1059,251,1096,299 ja391px bbox711,782,740,817, vaikka v2-maskissa kyseiset osat ovat mustia. Lähikatselu vahvistaa, että kanavat seuraavat värillistä geometriaohjetta; kuivat sillat ovat mukana. Maskin ja geometriaohjeen ristiriita annetaan vastaanottajan arvioitavaksi, ei automaattista PASSia.",
+    "Reunarakennusten haaleus ja musteen vahvuus vaihtelevat hieman. r03c02:n +90px maskimuutos ei edellyttänyt uuden kuvan valintaa aiemman katselun perusteella. Kuivia saaria ja siltoja ei maalattu vedeksi.",
+    "27sisälimityksen RGB-MAE4.91–25.03/255 on mittaus, ei sauman lopullinen hyväksyntä. Vastaanottajan pienimmän eron leikkauspolku+kapea häivytys sekä katureunojen mittaus ovat vielä erilliset."
+  ]
+}

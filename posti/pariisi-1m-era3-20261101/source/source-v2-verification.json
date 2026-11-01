@@ -1,0 +1,123 @@
+{
+  "sourceCommit": "afd3613ccac8200cb66a8b56cd1b66bc12bacf68",
+  "sourceBlob": "5cfd9fede06fce7617bbe2992a6110f716a2d54d",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-1m-era2-kuittaus-20261101.md",
+  "originalSourcePreserved": true,
+  "effectiveSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+  "checks": [
+    {
+      "file": "SHA256SUMS",
+      "sha256": "eb8bbc52f0b9fa1dbea5437162c96888915a12ae05b8c29740c9df0be6b97a6c",
+      "blobSha": "0b87c797946be66e528279aeac59d0bb4bb830de",
+      "verified": true
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r01-c09.png",
+      "sha256": "a9d5fb46da7ec2283c0da11ee3b42cf372abe09fb822cd72c85c615ee469a832",
+      "blobSha": "eede6536030b796fcb1b765d8e44674bda834769",
+      "verified": true,
+      "addedWhite": 17648,
+      "removedWhite": 0,
+      "pixelDiff": 17648
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r02-c09.png",
+      "sha256": "1547a3c488f724b73ee8320a5985527de9aa302c4da4708758ec303b3cf62c85",
+      "blobSha": "7f56c504cced045cd49d371445f1aa27efcdb989",
+      "verified": true,
+      "addedWhite": 13655,
+      "removedWhite": 0,
+      "pixelDiff": 13655
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r03-c02.png",
+      "sha256": "32fc2d00dd9650cc6053be54a70510b5e044e3a44551e5963bf98a7b13d14650",
+      "blobSha": "dd784b28b33fe8b5317a96b3a9849d9c5bbef4d9",
+      "verified": true,
+      "addedWhite": 90,
+      "removedWhite": 0,
+      "pixelDiff": 90
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r03-c08.png",
+      "sha256": "d223166a683b1c274ee9e84bbb1784f54c594682276fe8a978ed693c560a54fc",
+      "blobSha": "55d19db4761997b959d68aa641401e744ac54513",
+      "verified": true,
+      "addedWhite": 3327,
+      "removedWhite": 0,
+      "pixelDiff": 3327
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r03-c09.png",
+      "sha256": "75239a3a70a2b6839fb300cb901bbbfb0efd9f8450cef6f2102592305f2dd1cc",
+      "blobSha": "15b36c69175c58012bcc0e7cf8d8f3902efbbb80",
+      "verified": true,
+      "addedWhite": 2531,
+      "removedWhite": 0,
+      "pixelDiff": 2531
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r04-c01.png",
+      "sha256": "68c30e67f4bbf55d4f004a2abe2f7dfe967f36cba9232e90dd35c1ce134e162a",
+      "blobSha": "fda2c3a4e55aa2f4188f88787eb54c9e63e80cbb",
+      "verified": true,
+      "addedWhite": 2259,
+      "removedWhite": 0,
+      "pixelDiff": 2259
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r04-c02.png",
+      "sha256": "fba42f89a374f0ac92a51cf050bedd25c323f9b9374ad5aa6ae5abde9086a74c",
+      "blobSha": "ffcdd7bfe7469abfc5e7e0dbb77e85f769252663",
+      "verified": true,
+      "addedWhite": 4212,
+      "removedWhite": 0,
+      "pixelDiff": 4212
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r04-c03.png",
+      "sha256": "54180d3f2bbf713b2069432e7babb4fb5603e1686b4429dde670b9ab6e1247c0",
+      "blobSha": "25b75654c2de22724943c8d8c24a744659a548f7",
+      "verified": true,
+      "addedWhite": 5594,
+      "removedWhite": 0,
+      "pixelDiff": 5594
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r04-c08.png",
+      "sha256": "59ac19605df131221dc205344a38ecb06ed30429dbf5880da238872a57ae25a7",
+      "blobSha": "bbaed489a8882ea61ef3d690f7b8acbcd1fc3a1a",
+      "verified": true,
+      "addedWhite": 7909,
+      "removedWhite": 0,
+      "pixelDiff": 7909
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r05-c01.png",
+      "sha256": "ade2b8a932db25ff2dd13053c72d116bbdb7844cd9c2cb8f18b33b7beeb7d295",
+      "blobSha": "38244f180d3bcffcb377a7d1526f8db6982c22db",
+      "verified": true,
+      "addedWhite": 1511,
+      "removedWhite": 0,
+      "pixelDiff": 1511
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r05-c02.png",
+      "sha256": "b53eb94c1e089bd92f3378e4872c3ab5c0b736873989a39b57a48765b0921d15",
+      "blobSha": "0fe823f8d103892a4c991ca058e602fac0790527",
+      "verified": true,
+      "addedWhite": 880,
+      "removedWhite": 0,
+      "pixelDiff": 880
+    },
+    {
+      "file": "vesimaski-pariisi-1m-r05-c04.png",
+      "sha256": "5f8eda002f0f244eb5628e863d53fb0e04795ca4aa49e502ef41606b40e6968d",
+      "blobSha": "fefc2541ab85267b85308911d72907eab20a9d53",
+      "verified": true,
+      "addedWhite": 420,
+      "removedWhite": 0,
+      "pixelDiff": 420
+    }
+  ]
+}
