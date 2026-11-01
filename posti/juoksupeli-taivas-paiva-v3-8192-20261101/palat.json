@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "width": 8192,
+    "height": 4096,
+    "origin": "top-left",
+    "horizonY": 2048
+  },
+  "nativePixelToAtlasPixelRatio": 1,
+  "upscaledDeliverables": false,
+  "tileSize": [
+    1774,
+    887
+  ],
+  "tiles": [
+    {
+      "file": "a1.png",
+      "x0": 0,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "a2.png",
+      "x0": 1366,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "a3.png",
+      "x0": 2732,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "a4.png",
+      "x0": 4098,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "a5.png",
+      "x0": 5464,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "a6.png",
+      "x0": 6830,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "wrapX": true
+    },
+    {
+      "file": "b1.png",
+      "x0": 0,
+      "y0": 364,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "b2.png",
+      "x0": 1366,
+      "y0": 364,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "b3.png",
+      "x0": 2732,
+      "y0": 364,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "b4.png",
+      "x0": 4098,
+      "y0": 364,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "b5.png",
+      "x0": 5464,
+      "y0": 364,
+      "width": 1774,
+      "height": 887,
+      "wrapX": false
+    },
+    {
+      "file": "b6.png",
+      "x0": 6830,
+      "y0": 364,
+      "width": 1774,
+      "height": 887,
+      "wrapX": true
+    }
+  ],
+  "horizontalOverlapPixels": 408,
+  "wrapOverlapPixels": 412,
+  "verticalOverlapPixels": 90,
+  "coveredGlobalY": [
+    364,
+    2048
+  ],
+  "zenithGlobalY": [
+    0,
+    364
+  ],
+  "zenithSource": "existing V2 per order; not generated in this batch",
+  "belowHorizonGenerated": false,
+  "metadataFile": "taivas.json",
+  "metadataByteIdenticalToV2": true,
+  "generationMode": "built-in image_gen; complete new native images",
+  "generationCalls": 16,
+  "sourcePath": "posti/valoseppa-codex-paivataivas-v3-8192-palat-20261101.md",
+  "sourceCommit": "9cf6e7062b6b325b4cd5adb2f3993f7f6e146f97",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

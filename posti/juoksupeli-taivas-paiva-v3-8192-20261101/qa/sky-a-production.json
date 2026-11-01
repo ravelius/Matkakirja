@@ -1,0 +1,157 @@
+{
+  "status": "row-production-complete-parent-aggregate-QA-pending",
+  "checkedAt": "2026-11-01T01:27:49.299927+00:00",
+  "horizontalSeams": [
+    {
+      "from": "a1",
+      "to": "a2",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 9.20255174598964,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a2",
+      "to": "a3",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 11.161608123144035,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a3",
+      "to": "a4",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 6.469800716227867,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a4",
+      "to": "a5",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 11.14861728231315,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a5",
+      "to": "a6",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 11.077385952502008,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a6",
+      "to": "a1",
+      "overlapWidth": 412,
+      "meanAbsoluteRgbDifference": 11.470269954721745,
+      "exactPixelMatch": false
+    }
+  ],
+  "sunDiagnostic": {
+    "diagnosticOnly": true,
+    "method": "Near-white neutral pixel centroid in local a3 ROI (1250,330,1400,480); includes glow, not authoritative metadata",
+    "localCenter": [
+      1327.2029507016912,
+      406.6621086721842
+    ],
+    "pixels": 5558,
+    "atlasCenter": [
+      4059.2029507016914,
+      1567.6621086721843
+    ],
+    "azimuthDeg": 235.06294216950792,
+    "elevationDeg": 21.108598739991905
+  },
+  "limits": [
+    "Independent image generations do not have exact-pixel-matching overlaps; parent reviews the blended seams.",
+    "Near-horizon color is approximate and varies between tiles; no color retouch applied.",
+    "Sun centroid measures near-white glow and is diagnostic only. Source metadata stays 235 deg / 21.2 deg.",
+    "No game integration, R2 or mailbox delivery performed by this worker."
+  ],
+  "tiles": [
+    {
+      "tile": "a1",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a1.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1796351,
+      "sha256": "5b5d64dece31580e77beeb9a097d39109c6af3b76547f33cf012c4e1ed5546d7",
+      "postprocessing": "none; selected native imagegen output copied byte-for-byte"
+    },
+    {
+      "tile": "a2",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a2.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1826208,
+      "sha256": "821d90089376984c057255c0e9c9462dc0efbd83ed61ef35c9a051373aea3f83",
+      "postprocessing": "none; selected native imagegen output copied byte-for-byte"
+    },
+    {
+      "tile": "a3",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a3.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1812934,
+      "sha256": "093463a8616d67aec2f3fd31ad72d1a1ef1b49b5af7b74d7e2da324258b2b86e",
+      "postprocessing": "none; selected native imagegen output copied byte-for-byte"
+    },
+    {
+      "tile": "a4",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a4.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1827602,
+      "sha256": "345c46204e8152ddb871a0eaed5d9a8b3bc87d0a93f5c9b2398d438620eb1463",
+      "postprocessing": "none; selected native imagegen output copied byte-for-byte"
+    },
+    {
+      "tile": "a5",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a5.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1837572,
+      "sha256": "5e787163e6be37e79e9f3300c6de43c73f52a71a80952f2afc2e69f65bc11439",
+      "postprocessing": "none; selected native imagegen output copied byte-for-byte"
+    },
+    {
+      "tile": "a6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a6.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1617323,
+      "sha256": "4ed518ba75a742ce9532a1bfd86fd3f10f5d00c1a9c593712aa479589736d72f",
+      "postprocessing": "none; selected native imagegen output copied byte-for-byte"
+    }
+  ],
+  "wrapVisualQA": {
+    "status": "visual-wrap-preview-pass",
+    "artifact": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/qa/a6-a1-wrap-triptych.png",
+    "layout": "A6 right412 | linear crossfade | A1 left412",
+    "observation": "Cloud forms align closely enough for this preview; no obvious doubled major cloud or hard edge in blended panel. Upper blue differs between source strips and becomes a continuous gradient in the blend. Final full-atlas/game appearance remains for parent and receiver QA."
+  },
+  "sourceRawFinalByteIdentityReverified": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6"
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "worker": "sky8192_row_a",
+  "taskNumbers": [
+    1437,
+    1438,
+    1439,
+    1440,
+    1441,
+    1442
+  ],
+  "productionActive": false,
+  "status": "six-selected-native-tiles-awaiting-parent-aggregate-QA",
+  "generationCalls": 8,
+  "startedAt": "2026-11-01T01:21:56.144535+00:00",
+  "updatedAt": "2026-11-01T01:28:10.784839+00:00",
+  "tiles": {
+    "a1": {
+      "id": "a1",
+      "attempt": 2,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-6c321655-7e7d-4192-8a70-5f8bc74b3648.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a1-attempt002-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a1.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "5b5d64dece31580e77beeb9a097d39109c6af3b76547f33cf012c4e1ed5546d7",
+      "bytes": 1796351,
+      "x0": 0,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "byteIdenticalToToolOutput": true,
+      "upscaled": false,
+      "bottomBlueMedianRgb": [
+        135,
+        190,
+        252
+      ],
+      "bottomBlueSamplePixels": 49675,
+      "bottomBlueMask": "local y850..886; R/B<.72 G/B<.9",
+      "visualQA": "Viewed full native output; cloud placement and photographic detail suitable for aggregate seam QA",
+      "status": "selected-awaiting-aggregate-seam-qa",
+      "byteIdentityReverifiedAt": "2026-11-01T01:28:10.759261+00:00"
+    },
+    "a2": {
+      "id": "a2",
+      "attempt": 2,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-f2d344cf-23ac-4739-b505-0f261db41da0.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a2-attempt002-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a2.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "821d90089376984c057255c0e9c9462dc0efbd83ed61ef35c9a051373aea3f83",
+      "bytes": 1826208,
+      "x0": 1366,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "byteIdenticalToToolOutput": true,
+      "upscaled": false,
+      "bottomBlueMedianRgb": [
+        132.0,
+        190.0,
+        252.0
+      ],
+      "bottomBlueSamplePixels": 52256,
+      "bottomBlueMask": "local y850..886; R/B<.72 G/B<.9",
+      "visualQA": "Viewed full native output; cloud placement and photographic detail suitable for aggregate seam QA",
+      "status": "selected-awaiting-aggregate-seam-qa",
+      "byteIdentityReverifiedAt": "2026-11-01T01:28:10.768456+00:00"
+    },
+    "a3": {
+      "id": "a3",
+      "attempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-ef949456-f802-4988-8dd1-49b10e026324.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a3-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a3.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "093463a8616d67aec2f3fd31ad72d1a1ef1b49b5af7b74d7e2da324258b2b86e",
+      "bytes": 1812934,
+      "x0": 2732,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "byteIdenticalToToolOutput": true,
+      "upscaled": false,
+      "bottomBlueMedianRgb": [
+        141,
+        199,
+        253
+      ],
+      "bottomBlueSamplePixels": 47865,
+      "bottomBlueMask": "local y850..886; R/B<.72 G/B<.9",
+      "visualQA": "Viewed full native output; cloud placement and photographic detail suitable for aggregate seam QA",
+      "status": "selected-awaiting-aggregate-seam-qa",
+      "byteIdentityReverifiedAt": "2026-11-01T01:28:10.777065+00:00"
+    },
+    "a4": {
+      "id": "a4",
+      "attempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-e85a1995-2ba6-4e79-803a-7eb3c2ab7f02.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a4-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a4.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "345c46204e8152ddb871a0eaed5d9a8b3bc87d0a93f5c9b2398d438620eb1463",
+      "bytes": 1827602,
+      "x0": 4098,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "byteIdenticalToToolOutput": true,
+      "upscaled": false,
+      "bottomBlueMedianRgb": [
+        137,
+        198,
+        253
+      ],
+      "bottomBlueSamplePixels": 52837,
+      "bottomBlueMask": "local y850..886; R/B<.72 G/B<.9",
+      "visualQA": "Viewed full native output; cloud placement and photographic detail suitable for aggregate seam QA",
+      "status": "selected-awaiting-aggregate-seam-qa",
+      "byteIdentityReverifiedAt": "2026-11-01T01:28:10.779721+00:00"
+    },
+    "a5": {
+      "id": "a5",
+      "attempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-57921590-83dc-4d27-bf98-f0a2898d294f.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a5-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a5.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "5e787163e6be37e79e9f3300c6de43c73f52a71a80952f2afc2e69f65bc11439",
+      "bytes": 1837572,
+      "x0": 5464,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "byteIdenticalToToolOutput": true,
+      "upscaled": false,
+      "bottomBlueMedianRgb": [
+        127,
+        193,
+        253
+      ],
+      "bottomBlueSamplePixels": 56461,
+      "bottomBlueMask": "local y850..886; R/B<.72 G/B<.9",
+      "visualQA": "Viewed full native output; cloud placement and photographic detail suitable for aggregate seam QA",
+      "status": "selected-awaiting-aggregate-seam-qa",
+      "byteIdentityReverifiedAt": "2026-11-01T01:28:10.782323+00:00"
+    },
+    "a6": {
+      "id": "a6",
+      "attempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-65d1542e-3cf6-4005-b868-567403c2ed79.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a6-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/final/a6.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "4ed518ba75a742ce9532a1bfd86fd3f10f5d00c1a9c593712aa479589736d72f",
+      "bytes": 1617323,
+      "x0": 6830,
+      "y0": 1161,
+      "width": 1774,
+      "height": 887,
+      "byteIdenticalToToolOutput": true,
+      "upscaled": false,
+      "bottomBlueMedianRgb": [
+        126,
+        189,
+        252
+      ],
+      "bottomBlueSamplePixels": 57363,
+      "bottomBlueMask": "local y850..886; R/B<.72 G/B<.9",
+      "visualQA": "Viewed full native output; cloud placement and photographic detail suitable for aggregate seam QA",
+      "status": "selected-awaiting-aggregate-seam-qa",
+      "byteIdentityReverifiedAt": "2026-11-01T01:28:10.784739+00:00"
+    }
+  },
+  "attempts": [
+    {
+      "tile": "a1",
+      "attempt": 1,
+      "status": "rejected-native-dimensions",
+      "prompt": "output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a1-attempt001.txt",
+      "size": [
+        1773,
+        887
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-816929e9-4f0c-4969-9d29-333cf4b95189.png",
+      "raw": "output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a1-attempt001-rejected-native1773x887.png",
+      "sha256": "259f4d398489153c2d51000b371a23b61059cb0f7bcb191d4e3fdd55fcce882a",
+      "reason": "Required1774x887; no scaling or padding allowed"
+    },
+    {
+      "tile": "a1",
+      "attempt": 2,
+      "status": "selected",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a1-attempt002.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-6c321655-7e7d-4192-8a70-5f8bc74b3648.png",
+      "sha256": "5b5d64dece31580e77beeb9a097d39109c6af3b76547f33cf012c4e1ed5546d7"
+    },
+    {
+      "tile": "a2",
+      "attempt": 1,
+      "status": "superseded-colour-quality-retry",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a2-attempt001.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-0a0a2fde-7414-4c51-83e4-e3de5b0ba02b.png",
+      "sha256": "10025a18dcd00b5e747ed3dce4d9f4cf6ec38acd2e0c489ccce0faf937f35fe1",
+      "reason": "Parent requested brighter near-horizon colour matching145/193/251; initial measured123/187/253"
+    },
+    {
+      "tile": "a3",
+      "attempt": 1,
+      "status": "selected",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a3-attempt001.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-ef949456-f802-4988-8dd1-49b10e026324.png",
+      "sha256": "093463a8616d67aec2f3fd31ad72d1a1ef1b49b5af7b74d7e2da324258b2b86e"
+    },
+    {
+      "tile": "a2",
+      "attempt": 2,
+      "status": "selected",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a2-attempt002.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-f2d344cf-23ac-4739-b505-0f261db41da0.png",
+      "sha256": "821d90089376984c057255c0e9c9462dc0efbd83ed61ef35c9a051373aea3f83"
+    },
+    {
+      "tile": "a4",
+      "attempt": 1,
+      "status": "selected",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a4-attempt001.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-e85a1995-2ba6-4e79-803a-7eb3c2ab7f02.png",
+      "sha256": "345c46204e8152ddb871a0eaed5d9a8b3bc87d0a93f5c9b2398d438620eb1463"
+    },
+    {
+      "tile": "a5",
+      "attempt": 1,
+      "status": "selected",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a5-attempt001.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-57921590-83dc-4d27-bf98-f0a2898d294f.png",
+      "sha256": "5e787163e6be37e79e9f3300c6de43c73f52a71a80952f2afc2e69f65bc11439"
+    },
+    {
+      "tile": "a6",
+      "attempt": 1,
+      "status": "selected",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/prompts/a6-attempt001.txt",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-648d-7380-a199-39f7d5b1b0ec/exec-65d1542e-3cf6-4005-b868-567403c2ed79.png",
+      "sha256": "4ed518ba75a742ce9532a1bfd86fd3f10f5d00c1a9c593712aa479589736d72f"
+    }
+  ],
+  "deliveryVerified": false,
+  "horizontalSeams": [
+    {
+      "from": "a1",
+      "to": "a2",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 9.20255174598964,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a2",
+      "to": "a3",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 11.161608123144035,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a3",
+      "to": "a4",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 6.469800716227867,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a4",
+      "to": "a5",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 11.14861728231315,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a5",
+      "to": "a6",
+      "overlapWidth": 408,
+      "meanAbsoluteRgbDifference": 11.077385952502008,
+      "exactPixelMatch": false
+    },
+    {
+      "from": "a6",
+      "to": "a1",
+      "overlapWidth": 412,
+      "meanAbsoluteRgbDifference": 11.470269954721745,
+      "exactPixelMatch": false
+    }
+  ],
+  "sunDiagnostic": {
+    "diagnosticOnly": true,
+    "method": "Near-white neutral pixel centroid in local a3 ROI (1250,330,1400,480); includes glow, not authoritative metadata",
+    "localCenter": [
+      1327.2029507016912,
+      406.6621086721842
+    ],
+    "pixels": 5558,
+    "atlasCenter": [
+      4059.2029507016914,
+      1567.6621086721843
+    ],
+    "azimuthDeg": 235.06294216950792,
+    "elevationDeg": 21.108598739991905
+  },
+  "gameIntegrationVerified": false,
+  "wrapVisualQA": {
+    "status": "visual-wrap-preview-pass",
+    "artifact": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/qa/a6-a1-wrap-triptych.png",
+    "layout": "A6 right412 | linear crossfade | A1 left412",
+    "observation": "Cloud forms align closely enough for this preview; no obvious doubled major cloud or hard edge in blended panel. Upper blue differs between source strips and becomes a continuous gradient in the blend. Final full-atlas/game appearance remains for parent and receiver QA."
+  }
+}

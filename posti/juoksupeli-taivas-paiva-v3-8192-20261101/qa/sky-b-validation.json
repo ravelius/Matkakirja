@@ -1,0 +1,226 @@
+{
+  "checkedAt": "2026-11-01T01:29:52.610039+00:00",
+  "worker": "sky8192_row_b",
+  "tiles": {
+    "b1": {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "da7e4e2c729867d5e3e9bbd7efbb122c3850b485367130305df6d29911c9d107",
+      "verticalOverlap": {
+        "size": [
+          1774,
+          90
+        ],
+        "meanAbsoluteRgbDifference": 10.1306756023216,
+        "meanSignedRgbDifference": [
+          1.085262432669417,
+          -4.173531253914561,
+          -10.498221220092688
+        ],
+        "pixelIdentical": false
+      },
+      "sourceEdgeVariance": 4.45666516989763,
+      "nativeEdgeVariance": 282.6351385463269,
+      "visualReview": "Full image reviewed: same overall cloud arrangement, no sun, photographic sky; final seam acceptance needs parent aggregate and receiver check."
+    },
+    "b2": {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "640b26312f88e74fe4b0b2258a0783ded5a1db9d703add62148f2c804bf05a23",
+      "verticalOverlap": {
+        "size": [
+          1774,
+          90
+        ],
+        "meanAbsoluteRgbDifference": 21.29768883878241,
+        "meanSignedRgbDifference": [
+          18.156764374295378,
+          15.08932732055618,
+          15.368470499812105
+        ],
+        "pixelIdentical": false
+      },
+      "sourceEdgeVariance": 8.861126167130992,
+      "nativeEdgeVariance": 625.9184148325695,
+      "visualReview": "Full image reviewed: same overall cloud arrangement, no sun, photographic sky; final seam acceptance needs parent aggregate and receiver check.",
+      "leftHorizontalOverlap": {
+        "size": [
+          408,
+          887
+        ],
+        "meanAbsoluteRgbDifference": 19.024421380728167,
+        "meanSignedRgbDifference": [
+          16.180728717642637,
+          13.510544465813368,
+          16.19126765700642
+        ],
+        "pixelIdentical": false
+      }
+    },
+    "b3": {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "eb534979d2f4e4b29d97ed219d58b1e92e36b81a151ace173f3097c99339cd47",
+      "verticalOverlap": {
+        "size": [
+          1774,
+          90
+        ],
+        "meanAbsoluteRgbDifference": 15.360436761451417,
+        "meanSignedRgbDifference": [
+          2.0728172366278272,
+          -6.263152950018792,
+          -14.533064011023413
+        ],
+        "pixelIdentical": false
+      },
+      "sourceEdgeVariance": 7.12450476704087,
+      "nativeEdgeVariance": 463.9874715286816,
+      "visualReview": "Full image reviewed: same overall cloud arrangement, no sun, photographic sky; final seam acceptance needs parent aggregate and receiver check.",
+      "leftHorizontalOverlap": {
+        "size": [
+          408,
+          887
+        ],
+        "meanAbsoluteRgbDifference": 14.29257576762385,
+        "meanSignedRgbDifference": [
+          9.244796847713154,
+          6.294673055242384,
+          3.1814720251121855
+        ],
+        "pixelIdentical": false
+      }
+    },
+    "b4": {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "c25a20a193110cb857856a7bbbab8df147c78ba99eb43acfcc0d6cd7197c9c33",
+      "verticalOverlap": {
+        "size": [
+          1774,
+          90
+        ],
+        "meanAbsoluteRgbDifference": 14.304225646164767,
+        "meanSignedRgbDifference": [
+          0.712501565827381,
+          -1.2729237128899058,
+          -1.8898095953902043
+        ],
+        "pixelIdentical": false
+      },
+      "sourceEdgeVariance": 9.143486539833944,
+      "nativeEdgeVariance": 458.84272581841975,
+      "visualReview": "Full image reviewed: same overall cloud arrangement, no sun, photographic sky; final seam acceptance needs parent aggregate and receiver check.",
+      "leftHorizontalOverlap": {
+        "size": [
+          408,
+          887
+        ],
+        "meanAbsoluteRgbDifference": 5.320962375931207,
+        "meanSignedRgbDifference": [
+          -1.4707098171850461,
+          -3.330291022835297,
+          -0.19610053717090636
+        ],
+        "pixelIdentical": false
+      }
+    },
+    "b5": {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "700faa8c92c3a4b90228556e0d74ffec82496f1c503d7cfa16e6d8e72a582722",
+      "verticalOverlap": {
+        "size": [
+          1774,
+          90
+        ],
+        "meanAbsoluteRgbDifference": 14.744127103428118,
+        "meanSignedRgbDifference": [
+          1.126030314418145,
+          -2.921251409244661,
+          -11.270606288362785
+        ],
+        "pixelIdentical": false
+      },
+      "sourceEdgeVariance": 7.106998145922051,
+      "nativeEdgeVariance": 443.0858116758359,
+      "visualReview": "Full image reviewed: same overall cloud arrangement, no sun, photographic sky; final seam acceptance needs parent aggregate and receiver check.",
+      "leftHorizontalOverlap": {
+        "size": [
+          408,
+          887
+        ],
+        "meanAbsoluteRgbDifference": 8.083625314086552,
+        "meanSignedRgbDifference": [
+          -5.9434367884696115,
+          -4.480472290381769,
+          -3.619470787187481
+        ],
+        "pixelIdentical": false
+      }
+    },
+    "b6": {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "e8572b594a7a2991e577f30c68146222cc9e5b0ff9ad4212daec79ba49a15bf9",
+      "verticalOverlap": {
+        "size": [
+          1774,
+          90
+        ],
+        "meanAbsoluteRgbDifference": 8.840473506200675,
+        "meanSignedRgbDifference": [
+          9.225335087060003,
+          0.5049855943880743,
+          -13.503200551171233
+        ],
+        "pixelIdentical": false
+      },
+      "sourceEdgeVariance": 1.850689347280495,
+      "nativeEdgeVariance": 11.625315230939995,
+      "visualReview": "Full image reviewed: same overall cloud arrangement, no sun, photographic sky; final seam acceptance needs parent aggregate and receiver check.",
+      "leftHorizontalOverlap": {
+        "size": [
+          408,
+          887
+        ],
+        "meanAbsoluteRgbDifference": 4.552320740396873,
+        "meanSignedRgbDifference": [
+          2.0758864425138714,
+          5.676393217941069,
+          4.980936512147139
+        ],
+        "pixelIdentical": false
+      },
+      "wrapOverlap": {
+        "size": [
+          412,
+          887
+        ],
+        "meanAbsoluteRgbDifference": 9.053279481033117,
+        "meanSignedRgbDifference": [
+          4.171312157266229,
+          -5.022383730475809,
+          -17.833427282976345
+        ],
+        "pixelIdentical": false
+      }
+    }
+  },
+  "method": "All source/current images read at native size; no asset changes. Mean absolute RGB difference on corresponding native overlaps. FIND_EDGES variance is source-image diagnostic only, not game QA.",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

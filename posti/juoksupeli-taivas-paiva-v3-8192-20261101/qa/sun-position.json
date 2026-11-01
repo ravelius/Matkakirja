@@ -1,0 +1,17 @@
+{
+  "localCenter": [
+    1327.2029507016914,
+    406.66210867218433
+  ],
+  "atlasCenter": [
+    4059.2029507016914,
+    1567.6621086721843
+  ],
+  "whiteMaskPixels": 5558,
+  "azimuthDeg": 235.06294216950792,
+  "elevationDeg": 21.108598739991905,
+  "metadataUnchanged": true,
+  "expectedAzimuth": 235,
+  "expectedElevation": 21.2,
+  "method": "White disk centroid within expected a3 sun ROI, not all highlights across image"
+}

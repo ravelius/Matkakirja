@@ -1,0 +1,11 @@
+{
+ "aurinko": {
+  "atsimuutti": 235,
+  "korkeus": 21.2
+ },
+ "taivas": {
+  "vasen": 56.68
+ },
+ "kierto": 0,
+ "lahde": "Codex 24.10.2026 (posti f3d18ce4b, PT hyväksyi): paivataivas-panoraama.png, SKY-PROJECTION.json (atsimuutti = (56,68 + 360·u) mod 360, aurinko mitattu 21,2°)"
+}

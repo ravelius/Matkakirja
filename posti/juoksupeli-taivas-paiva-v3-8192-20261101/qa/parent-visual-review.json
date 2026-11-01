@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-01T01:32:19.076880+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "selectedImages": 12,
+  "nativePixelAndByteIdentity": "PASS",
+  "visualResult": "Photographic cloud detail and continuous full-band crossfade suitable for receiver game evaluation.",
+  "limitations": [
+    "Kaikkien 18 limityksen mittaukset ja koko kaistan ristihäivytysesikatselu tarkistettu. Pilvien päämuodot jatkuvat; pienissä hattaroissa, varjoissa ja kirkkaudessa on eroja. Limitykset eivät ole pikseli-identtisiä.",
+    "Suurimmat erot ovat B1–B2-vaakasaumassa (19,02/255) ja B2–A2-pystysaumassa (21,30/255). Näiden erilliset vertailut katsottu: esikatselun häivytys on jatkuva, mutta pelin lähitarkistus tarvitaan.",
+    "B6 valittiin kolmannesta kokonaisesta otosta. Sen kiertosauman ero pieneni 20,87:stä 9,05:een; alkuperäiset versiot säilyvät historiassa.",
+    "Horisontin sinimaskin mediaanit vaihtelevat 126–142 / 190–199 / 252–253. A5/A6 ovat hieman tummempia ja kylläisempiä kuin noin 145/193/251-tavoite. Nämä ovat likiarvoja; täsmällistä värimätsiä ei väitetä.",
+    "Aurinkokiekon valkoisen keskuksen arvio on 235,06° / 21,11°. Metatiedon 235° / 21,2° säilytettiin tavulleen; kiekon arvio poikkeaa tavoitepaikasta noin 1–2 pikseliä. Esikatselussa yksi aurinko.",
+    "Pelin o3-terävyys, varsinainen shader-häivytys, iPadin GPU-muisti, vastaanottajan/PT:n/KK:n hyväksyntä, runtime-integraatio ja julkaisu ovat vielä todentamatta."
+  ]
+}

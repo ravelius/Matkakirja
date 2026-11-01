@@ -1,0 +1,11 @@
+Create one COMPLETE NEW native 1774 × 887 RGB PNG photographic sky atlas tile, exactly 2:1. This tile is quiet clear DEEP BLUE sky with the restrained darker exposure of reference 4. Directly colour-match reference 4. Preserve its saturation and lighting. Top blue is DARK COBALT RGB (4,76,177); middle is restrained blue RGB (10,91,197); bottom is medium blue RGB (26,111,216). This is one smooth photographic sky. No panels, vignette, posterization, grain or surface texture. No sun, horizon, objects, text or borders. No invented clouds.
+
+REFERENCE 1: Complete composition map, 1774 × 887. Precisely preserve its tiny cloud fragment clipped by the far left around y350–420 and tiny wisps clipped by the bottom around x500–760. Everywhere else is completely empty blue. Keep exact cloud positions and scale. Entirely new, sharply resolved photographic vapour.
+
+REFERENCE 2: Native 1774 × 90 strip. It is this tile's BOTTOM 90 pixels, y797–886, at 1:1 scale. Precisely match its restrained blue and tiny cloud silhouettes. Never place this strip at the top or stretch it.
+
+REFERENCE 3: Native 408 × 887 strip. It is this tile's LEFT 408 columns, x0–407, at 1:1 scale. Exactly continue its restrained deep blue and tiny cloud fragment.
+
+REFERENCE 4: Native 412 × 887 strip. It is this tile's RIGHT 412 columns, x1362–1773, at 1:1 scale for seamless wrap. This is the most important overall photographic colour and exposure reference: dark cobalt top, restrained middle blue, modestly brighter bottom. The whole empty blue image should look as dark and quiet as reference 4. Match its blue at the right overlap exactly, with only subtle horizontal variation matching reference 3.
+
+Preserve full 1774 × 887 dimensions. One complete fresh photographic image; generate all detail anew. Smooth natural sky at 35–74 degrees elevation. The native reference blue colour and exposure must be preserved faithfully. Bright electric blue or luminous cyan will fail. White cloud fragments are tiny and only at the left and bottom, exactly as reference 1.

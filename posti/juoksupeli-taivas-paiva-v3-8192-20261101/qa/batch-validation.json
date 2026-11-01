@@ -1,0 +1,574 @@
+{
+  "checkedAt": "2026-11-01T01:31:16.258930+00:00",
+  "status": "aggregate-metrics-ready-for-visual-review",
+  "files": [
+    {
+      "file": "a1.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1796351,
+      "sha256": "5b5d64dece31580e77beeb9a097d39109c6af3b76547f33cf012c4e1ed5546d7",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a1-attempt002-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "a2.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1826208,
+      "sha256": "821d90089376984c057255c0e9c9462dc0efbd83ed61ef35c9a051373aea3f83",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a2-attempt002-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "a3.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1812934,
+      "sha256": "093463a8616d67aec2f3fd31ad72d1a1ef1b49b5af7b74d7e2da324258b2b86e",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a3-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "a4.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1827602,
+      "sha256": "345c46204e8152ddb871a0eaed5d9a8b3bc87d0a93f5c9b2398d438620eb1463",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a4-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "a5.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1837572,
+      "sha256": "5e787163e6be37e79e9f3300c6de43c73f52a71a80952f2afc2e69f65bc11439",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a5-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "a6.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1617323,
+      "sha256": "4ed518ba75a742ce9532a1bfd86fd3f10f5d00c1a9c593712aa479589736d72f",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/a6-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "b1.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1755566,
+      "sha256": "da7e4e2c729867d5e3e9bbd7efbb122c3850b485367130305df6d29911c9d107",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/b1-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "b2.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1912776,
+      "sha256": "640b26312f88e74fe4b0b2258a0783ded5a1db9d703add62148f2c804bf05a23",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/b2-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "b3.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1631502,
+      "sha256": "eb534979d2f4e4b29d97ed219d58b1e92e36b81a151ace173f3097c99339cd47",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/b3-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "b4.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1717856,
+      "sha256": "c25a20a193110cb857856a7bbbab8df147c78ba99eb43acfcc0d6cd7197c9c33",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/b4-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "b5.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1793846,
+      "sha256": "700faa8c92c3a4b90228556e0d74ffec82496f1c503d7cfa16e6d8e72a582722",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/b5-attempt001-native.png",
+      "identicalToRaw": true
+    },
+    {
+      "file": "b6.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1430536,
+      "sha256": "e8572b594a7a2991e577f30c68146222cc9e5b0ff9ad4212daec79ba49a15bf9",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v3-8192-20261101/raw/b6-attempt003-native.png",
+      "identicalToRaw": true
+    }
+  ],
+  "seams": [
+    {
+      "kind": "horizontal",
+      "from": "a1",
+      "to": "a2",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 9.20255174598964,
+      "meanSignedRgbDifference": [
+        2.458526759068903,
+        -0.655293233415108,
+        -2.7733464862833443
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "a2",
+      "to": "a3",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 11.161608123144035,
+      "meanSignedRgbDifference": [
+        1.5699206401839376,
+        2.7647307513761064,
+        5.869042487344416
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "a3",
+      "to": "a4",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 6.469800716227867,
+      "meanSignedRgbDifference": [
+        -2.6266966200234094,
+        -2.8370664500298517,
+        -2.237474302009417
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "a4",
+      "to": "a5",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 11.148617282313152,
+      "meanSignedRgbDifference": [
+        -9.255454605743097,
+        -7.0592131441077015,
+        -3.12864193027832
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "a5",
+      "to": "a6",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 11.077385952502008,
+      "meanSignedRgbDifference": [
+        -8.424580542476292,
+        -5.239872781130487,
+        -4.168623029820736
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "wrap",
+      "from": "a6",
+      "to": "a1",
+      "overlap": 412,
+      "rgbMeanAbsoluteError": 11.470269954721743,
+      "meanSignedRgbDifference": [
+        5.354648044570439,
+        9.5325357647136,
+        14.817378312409033
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "b1",
+      "to": "b2",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 19.024421380728167,
+      "meanSignedRgbDifference": [
+        16.180728717642637,
+        13.510544465813368,
+        16.19126765700642
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "b2",
+      "to": "b3",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 14.29257576762385,
+      "meanSignedRgbDifference": [
+        9.244796847713154,
+        6.294673055242384,
+        3.1814720251121855
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "b3",
+      "to": "b4",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 5.320962375931207,
+      "meanSignedRgbDifference": [
+        -1.4707098171850461,
+        -3.330291022835297,
+        -0.19610053717090636
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "b4",
+      "to": "b5",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 8.083625314086552,
+      "meanSignedRgbDifference": [
+        -5.9434367884696115,
+        -4.480472290381769,
+        -3.619470787187481
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "horizontal",
+      "from": "b5",
+      "to": "b6",
+      "overlap": 408,
+      "rgbMeanAbsoluteError": 4.552320740396873,
+      "meanSignedRgbDifference": [
+        2.0758864425138714,
+        5.676393217941069,
+        4.980936512147139
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "wrap",
+      "from": "b6",
+      "to": "b1",
+      "overlap": 412,
+      "rgbMeanAbsoluteError": 9.053279481033117,
+      "meanSignedRgbDifference": [
+        -4.171312157266229,
+        5.022383730475809,
+        17.833427282976345
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "vertical",
+      "from": "b1",
+      "to": "a1",
+      "overlap": 90,
+      "rgbMeanAbsoluteError": 10.1306756023216,
+      "meanSignedRgbDifference": [
+        -1.085262432669417,
+        4.173531253914561,
+        10.498221220092688
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "vertical",
+      "from": "b2",
+      "to": "a2",
+      "overlap": 90,
+      "rgbMeanAbsoluteError": 21.29768883878241,
+      "meanSignedRgbDifference": [
+        -18.156764374295378,
+        -15.08932732055618,
+        -15.368470499812105
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "vertical",
+      "from": "b3",
+      "to": "a3",
+      "overlap": 90,
+      "rgbMeanAbsoluteError": 15.360436761451417,
+      "meanSignedRgbDifference": [
+        -2.0728172366278272,
+        6.263152950018792,
+        14.533064011023413
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "vertical",
+      "from": "b4",
+      "to": "a4",
+      "overlap": 90,
+      "rgbMeanAbsoluteError": 14.304225646164767,
+      "meanSignedRgbDifference": [
+        -0.712501565827381,
+        1.2729237128899058,
+        1.8898095953902043
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "vertical",
+      "from": "b5",
+      "to": "a5",
+      "overlap": 90,
+      "rgbMeanAbsoluteError": 14.744127103428118,
+      "meanSignedRgbDifference": [
+        -1.126030314418145,
+        2.921251409244661,
+        11.270606288362785
+      ],
+      "pixelIdentical": false
+    },
+    {
+      "kind": "vertical",
+      "from": "b6",
+      "to": "a6",
+      "overlap": 90,
+      "rgbMeanAbsoluteError": 8.840473506200675,
+      "meanSignedRgbDifference": [
+        -9.225335087060003,
+        -0.5049855943880743,
+        13.503200551171233
+      ],
+      "pixelIdentical": false
+    }
+  ],
+  "horizonColours": [
+    {
+      "id": "a1",
+      "bandLocalY": [
+        860,
+        887
+      ],
+      "clearBluePixels": 37934,
+      "medianRgb": [
+        136.0,
+        191.0,
+        252.0
+      ],
+      "mask": "R/B<0.75 and G/B<0.9",
+      "targetApprox": [
+        145,
+        193,
+        251
+      ]
+    },
+    {
+      "id": "a2",
+      "bandLocalY": [
+        860,
+        887
+      ],
+      "clearBluePixels": 39523,
+      "medianRgb": [
+        133,
+        191,
+        252
+      ],
+      "mask": "R/B<0.75 and G/B<0.9",
+      "targetApprox": [
+        145,
+        193,
+        251
+      ]
+    },
+    {
+      "id": "a3",
+      "bandLocalY": [
+        860,
+        887
+      ],
+      "clearBluePixels": 36423,
+      "medianRgb": [
+        142,
+        199,
+        253
+      ],
+      "mask": "R/B<0.75 and G/B<0.9",
+      "targetApprox": [
+        145,
+        193,
+        251
+      ]
+    },
+    {
+      "id": "a4",
+      "bandLocalY": [
+        860,
+        887
+      ],
+      "clearBluePixels": 40422,
+      "medianRgb": [
+        139.0,
+        199.0,
+        253.0
+      ],
+      "mask": "R/B<0.75 and G/B<0.9",
+      "targetApprox": [
+        145,
+        193,
+        251
+      ]
+    },
+    {
+      "id": "a5",
+      "bandLocalY": [
+        860,
+        887
+      ],
+      "clearBluePixels": 41225,
+      "medianRgb": [
+        128,
+        194,
+        253
+      ],
+      "mask": "R/B<0.75 and G/B<0.9",
+      "targetApprox": [
+        145,
+        193,
+        251
+      ]
+    },
+    {
+      "id": "a6",
+      "bandLocalY": [
+        860,
+        887
+      ],
+      "clearBluePixels": 43407,
+      "medianRgb": [
+        126,
+        190,
+        253
+      ],
+      "mask": "R/B<0.75 and G/B<0.9",
+      "targetApprox": [
+        145,
+        193,
+        251
+      ]
+    }
+  ],
+  "nativeEdgeDiagnostics": [
+    {
+      "id": "a1",
+      "referenceVariance": 8.091799250127467,
+      "nativeVariance": 262.84453837241375,
+      "ratio": 32.48282986855776
+    },
+    {
+      "id": "a2",
+      "referenceVariance": 9.361183202077378,
+      "nativeVariance": 241.75261130896706,
+      "ratio": 25.8250058876445
+    },
+    {
+      "id": "a3",
+      "referenceVariance": 9.920808204877208,
+      "nativeVariance": 410.6048425344979,
+      "ratio": 41.388245196861966
+    },
+    {
+      "id": "a4",
+      "referenceVariance": 10.926951997266935,
+      "nativeVariance": 337.2785716622851,
+      "ratio": 30.866665447660587
+    },
+    {
+      "id": "a5",
+      "referenceVariance": 7.453137087115165,
+      "nativeVariance": 244.58700704204716,
+      "ratio": 32.816652126912345
+    },
+    {
+      "id": "a6",
+      "referenceVariance": 4.415956524639288,
+      "nativeVariance": 128.3354880559035,
+      "ratio": 29.061764385550973
+    },
+    {
+      "id": "b1",
+      "referenceVariance": 4.446269949645916,
+      "nativeVariance": 282.46927109732314,
+      "ratio": 63.529491977835924
+    },
+    {
+      "id": "b2",
+      "referenceVariance": 8.866591036669778,
+      "nativeVariance": 627.2729116652285,
+      "ratio": 70.7456686646537
+    },
+    {
+      "id": "b3",
+      "referenceVariance": 7.135129127518232,
+      "nativeVariance": 464.57568950344216,
+      "ratio": 65.11104160844145
+    },
+    {
+      "id": "b4",
+      "referenceVariance": 9.13338776394719,
+      "nativeVariance": 459.03677125121175,
+      "ratio": 50.259200979421585
+    },
+    {
+      "id": "b5",
+      "referenceVariance": 7.1160270734542825,
+      "nativeVariance": 444.7138764612657,
+      "ratio": 62.494685850793346
+    },
+    {
+      "id": "b6",
+      "referenceVariance": 1.8467740456348463,
+      "nativeVariance": 11.332249385619455,
+      "ratio": 6.13624033346423
+    }
+  ],
+  "diagnosticNotGameScreenshotMetric": true,
+  "metadataSha256": "74e8ca33af7f7416220a22b89ea58417aaf1a8671f1413059192620a96217c53",
+  "nativePixelToAtlasPixelRatio": 1,
+  "upscaledDeliverables": false,
+  "receiverAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "gameO3SharpnessTarget": 1400,
+  "gameO3Measured": false,
+  "iPadGpuMemoryMeasured": false
+}
