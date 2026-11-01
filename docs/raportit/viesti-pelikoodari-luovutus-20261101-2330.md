@@ -60,3 +60,7 @@ Edellinen: -20261101-1625. Muistin tila: pelikoodari-tila-20261018-aamu.md.
 TF 217 lähtee yöllä, kun korjaukset (taso 1 oletukseksi, eunukit harvemmiksi + tehtävä, 3-2-1, sivunykäykset, seinäpala 0.41) ovat
 haarassa → SHA NS:lle runkoon ja uusi tallenne (UI mukana) PT:lle (EI KK:lle yöllä). PT katsoo videon ja tilaa TF:n.
 - JU kuittasi 23.3x: kielletty-rakennukset-v92 (546) ja kielletty-tausta-v91 (100) viety, virheitä 0 → kansionvaihto 35fe715be valmis tallenteeseen.
+- DIAGNOSTIIKKA 232407 (sk-taso1, lokit/esikatselu-20261101-232407): taso 1 toimii QA:lla – "ovi aukeaa sarana tyohuone__tyohuone_side_door-1 … Puyi 0.7 m",
+  OhjausPelaajalle, maali + Meridiaaniportin ovi. UI näkyy tallenteessa (HUD-palkki, ☰) → 7ddd353e8 toimii. Aukiolla yhä paljon seisovia eunukkeja
+  (arkki _tyo/pelikoodari/tallenne-217/20261101-232407-arkki-alku.jpg). Kuvien fps 72 (opetuksen tauot: peliaika seisoo) – videon
+  tekoon tallenne-video.sh käyttää fps.txt:tä; tarkista videon kesto. Seuraavaksi: taso 1 oletukseksi koodiin + eunukit + bugit.
