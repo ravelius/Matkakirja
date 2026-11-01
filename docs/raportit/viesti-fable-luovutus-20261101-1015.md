@@ -34,3 +34,11 @@ Omistaja hereillä (palasi 08.07): yölupa päättynyt. Kellonaika: `date` ennen
 - Koepari omistajalle vain samalla rajauksella ja mittakaavalla kuin malli (G); muuten ei vertailukelpoinen.
 - Monitorin uudelleenviritys: lue prev ls-remotesta, ei kovakoodattuna.
 - PR:n auto-merge ei ole sallittu repossa: `gh pr merge --squash` suoraan.
+
+## LISÄYS 10.3x
+- Laaja v2 (6bd1ed940) tullut, KS kuittasi (658fa8eb1). PT päätti: laajaan EI liitetä lähitasoa (näkyi suorakulmiona); Codexin oma
+  G-alue jää, zoomissa ristihäivytys lähitasoon. KS tekee omistajan parin ilman liitosta → PT → KK, sitten välitason erien suunnitelma PT:lle.
+- VS: räystäskartta puhtaana haarana db48220d1 (27aba116d päällä) NS:llä; täyttöpeitto p4 tulee vastaavana haarana (PT sanoi kyllä).
+- Omistaja 10.1x: "Tarkista sinä läpi koko sinulaattorien käyttötapa…" → KK tekee läpikäynnin ja suosituksen; muita simumuutoksia
+  (paitsi JU:n yösiivous) EI ennen omistajan päätöstä → kartoituksen simu-osuus vain tiedoksi KK:lle, ei poistolistaan vielä.
+  Työlistaan rivi lisätty (vastuu KK).
