@@ -42,3 +42,8 @@ paperialueita (1/4-kuvassa vasemmalla ylhäällä noin x470–620 / y100–200 j
 tasaisella PAPERI-värillä, ja Codexin palojen oma paperi on eri sävyä ja päättyy palarajaan. Korjaus: häivytä koosteen lopuksi
 kaikki **kaupungin rajaa pitkin** yhteiseen paperiin, kuten renderoi-g6 tekee (`tulos/maski-kokonainen.png`, skaalaus res 2:een, sumennus,
 composite PAPERI-kankaaseen ja sama kohinamultiplikaatio). Ei palarajoja pitkin.
+
+## 5. SEURAAJAN ENSIMMÄINEN TYÖ (PT 1.11.)
+Codex on toimittanut **erän 3** (20 palaa, avoimet QA-havainnot, postilaatikko dfbf089aa) ja **erän 4** (16 palaa, ee08e7762).
+Tarkista ne `era-qa.py`:llä v2-maskeilla (kohta 1), kuittaa Codexille ja lähetä vain poikkeamat PT:lle. Erä 3 kattaa rivit r03–r04, ja erä 4 rivit r05–r06
+(erat.json). Kokoa lopuksi välikooste uudelleen kohdan 4 paperikorjauksen kanssa.
