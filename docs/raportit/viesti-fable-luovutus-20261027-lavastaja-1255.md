@@ -2798,3 +2798,10 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 - Tapa: paikanna `ui juoksupeli mika x y` (mikä malli/materiaali pelin kohdassa), korjaa lähteessä → uusi paketti → SHA NS:lle runkoon 217
   + rivi PT:lle. Pohjat: rakennukset-v92, tausta-v91, muurikate-v37, kaiteeton-v3 (c2-v31), leivonta-v4 (U = leivonta-216/uusinta).
 - Ei aloitettu tässä sessiossa (konteksti 27 %, luovutettu heti).
+
+## LISÄYS 216 (2.11. 01.5x): JUNAN 217 MALLIVIAT – PAIKANNUS ALOITETTU, KORJAUKSET KESKEN (konteksti ~31 %) — ALOITA TÄSTÄ
+- PT: ei nollausta yöllä; jatkettu. Paikannusajo tehty: proto-3d/_tyo/linnanrakentaja/bugit-217/ (LUE.md = löydökset ja jatko, aja.zsh,
+  sk-paikannus.txt, mika-tiivis.txt; kuvat lokit/esikatselu-20261102-013233). Alustavasti: 11 = kk-tausta-1-2 palasauma x −100;
+  5 = h-zhongyoumen katto ei näy (pelin katonpiilotus vai malli?); 7 = t-portti-m216 katto; 8, 9, 6, 14, 15 tarvitsevat tarkemmat mika-pisteet.
+- SEURAAVAKSI: tarkenna mika-pisteet kuvista (lisää rivejä sk-paikannus.txt:hen, aja.zsh uudelleen), korjaa lähteissä, paketti → SHA NS:lle
+  runkoon 217 + rivi PT:lle.
