@@ -1,0 +1,416 @@
+{
+ "kuvaus": "Pariisin keskustan 0,5 m/px -palat (res 4, lähin taso); saumat pienimmän eron leikkauksella kuten 1 m/px",
+ "leveys": 1536,
+ "korkeus": 1024,
+ "limitys_px": 128,
+ "askel": [
+  1408,
+  896
+ ],
+ "alue_res2": [
+  7168,
+  2816,
+  10752,
+  6016
+ ],
+ "alue_res4": [
+  14336,
+  5632,
+  21504,
+  12032
+ ],
+ "origo_res4": [
+  14336,
+  5632
+ ],
+ "riveja": 7,
+ "sarakkeita": 5,
+ "paloja": 35,
+ "palat": [
+  {
+   "nimi": "pariisi-05m-r01-c01",
+   "rivi": 1,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    5632,
+    15872,
+    6656
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r01-c02",
+   "rivi": 1,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    5632,
+    17280,
+    6656
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r01-c03",
+   "rivi": 1,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    5632,
+    18688,
+    6656
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r01-c04",
+   "rivi": 1,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    5632,
+    20096,
+    6656
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r01-c05",
+   "rivi": 1,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    5632,
+    21504,
+    6656
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r02-c01",
+   "rivi": 2,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    6528,
+    15872,
+    7552
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r02-c02",
+   "rivi": 2,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    6528,
+    17280,
+    7552
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r02-c03",
+   "rivi": 2,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    6528,
+    18688,
+    7552
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r02-c04",
+   "rivi": 2,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    6528,
+    20096,
+    7552
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r02-c05",
+   "rivi": 2,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    6528,
+    21504,
+    7552
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r03-c01",
+   "rivi": 3,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    7424,
+    15872,
+    8448
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r03-c02",
+   "rivi": 3,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    7424,
+    17280,
+    8448
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r03-c03",
+   "rivi": 3,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    7424,
+    18688,
+    8448
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r03-c04",
+   "rivi": 3,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    7424,
+    20096,
+    8448
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r03-c05",
+   "rivi": 3,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    7424,
+    21504,
+    8448
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r04-c01",
+   "rivi": 4,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    8320,
+    15872,
+    9344
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r04-c02",
+   "rivi": 4,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    8320,
+    17280,
+    9344
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r04-c03",
+   "rivi": 4,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    8320,
+    18688,
+    9344
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r04-c04",
+   "rivi": 4,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    8320,
+    20096,
+    9344
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r04-c05",
+   "rivi": 4,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    8320,
+    21504,
+    9344
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r05-c01",
+   "rivi": 5,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    9216,
+    15872,
+    10240
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r05-c02",
+   "rivi": 5,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    9216,
+    17280,
+    10240
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r05-c03",
+   "rivi": 5,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    9216,
+    18688,
+    10240
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r05-c04",
+   "rivi": 5,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    9216,
+    20096,
+    10240
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r05-c05",
+   "rivi": 5,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    9216,
+    21504,
+    10240
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r06-c01",
+   "rivi": 6,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    10112,
+    15872,
+    11136
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r06-c02",
+   "rivi": 6,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    10112,
+    17280,
+    11136
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r06-c03",
+   "rivi": 6,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    10112,
+    18688,
+    11136
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r06-c04",
+   "rivi": 6,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    10112,
+    20096,
+    11136
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r06-c05",
+   "rivi": 6,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    10112,
+    21504,
+    11136
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r07-c01",
+   "rivi": 7,
+   "sarake": 1,
+   "rajaus_res4": [
+    14336,
+    11008,
+    15872,
+    12032
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r07-c02",
+   "rivi": 7,
+   "sarake": 2,
+   "rajaus_res4": [
+    15744,
+    11008,
+    17280,
+    12032
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r07-c03",
+   "rivi": 7,
+   "sarake": 3,
+   "rajaus_res4": [
+    17152,
+    11008,
+    18688,
+    12032
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r07-c04",
+   "rivi": 7,
+   "sarake": 4,
+   "rajaus_res4": [
+    18560,
+    11008,
+    20096,
+    12032
+   ]
+  },
+  {
+   "nimi": "pariisi-05m-r07-c05",
+   "rivi": 7,
+   "sarake": 5,
+   "rajaus_res4": [
+    19968,
+    11008,
+    21504,
+    12032
+   ]
+  }
+ ]
+}
