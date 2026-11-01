@@ -43,3 +43,11 @@ materiaalien väreistä havainteeseen + lähikuvat muutetuista kohdista; luvut v
 - zsh: `git show $R:polku` → `$R:A`-muunnin; kirjoita `"${R}:polku"` tai SHA suoraan.
 - Mediaan viety paketti → ei paikallista juurta (PALATSI/palatsi mallit); juuri-k06z8 + edusta-v3 antaa kattolaikkuja (NS).
 - Kuolleen pid:n esikatselulukko vapautuu itsestään (esikatselu.sh tarkistaa kill -0).
+
+## LISÄYS 14.0x: PT:n aurinkopäätös tehty
+- PT 13.5x: peliaurinko 45°/318° (ei uutta leivontaa). Proto **linssiseppa2/aurinko-216 a8c8835e5** (= aea684c3c + Valopohja.JuoksuK22
+  oletukseksi, ValoKohteet.LeivontaAurinko* = K22, tyylikirja/leivonta-aurinko.json = f4df529a6:n; skripti _tyo/linssiseppa2/
+  skriptit-20261031/aurinko-216.py, temp-indeksi, ei worktreetä), natiivi-backupissa.
+- Koonnin uusinta ajossa: `aurinko-kuvat.zsh` → `aurinko-kuvat.log` (viimeisenä "HAVAINNE VALMIS <kansio>"). Valmistuttua: koonti.png
+  + polku HETI PT:lle (ennen/jälkeen: havainne-editori-20261101-133524), sitten simukuva 03 REF=a8c8835e5:llä (AVOIN 1), sitten
+  PT:n kuittauksella NS:lle runkoon 216 (yksi commit, kolme tiedostoa).
