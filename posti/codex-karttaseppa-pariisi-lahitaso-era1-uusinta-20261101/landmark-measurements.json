@@ -1,0 +1,124 @@
+{
+  "method": "Approximate native1536x1024 visual outer-building bounds; excludes trees, shadows and detached buildings. +/-15px measurement uncertainty, not source alignment tolerance. Gold-dome width is recorded separately where applicable.",
+  "checkedAt": "2026-11-01T14:04:18.615223+00:00",
+  "sourceCommit": "4111a5ae43c2f0600fa105addfcf27b944ec0b89",
+  "measurements": [
+    {
+      "name": "Pantheon",
+      "tile": "r09c10",
+      "sha256": "8d05465a6e540b3faeff1913802935b8ab86956ca58420c58fd2dd950bbcfd7b",
+      "visibleBuildingBBox": [
+        375,
+        155,
+        800,
+        682
+      ],
+      "visibleBuildingWidthPx": 425,
+      "bboxCenterXY": [
+        587.5,
+        418.5
+      ],
+      "horizontalCenterX": 588,
+      "domeAxisX": 594,
+      "footingY": 682,
+      "domeTipY": 155,
+      "domeTipCropped": false,
+      "approximateUncertaintyPx": {
+        "bboxEdges": 10,
+        "width": 15,
+        "center": 10,
+        "footingY": 8,
+        "domeTipY": 8
+      },
+      "contentFinding": "Correct recognizable Pantheon, one instance, in the intended left-middle block. Tall drum, blue-gray dome, classical columned facade and foundation are present. No wrong-block or missing-landmark content error observed.",
+      "limitation": "Width approximately425 versus440; center approximately18 px right of the stated570; foundation approximately22 px lower than660. The important conflict is the dome/lantern tip at about155: approximately154 px above the required y>309 boundary. The dome visibly crosses the proposed G cut band y181..309. This is not compliant with the retained dome-containment requirement.",
+      "receiverReviewRequired": true
+    },
+    {
+      "name": "Invalides",
+      "tile": "r08c08",
+      "sha256": "420499878cfac83ce72b8d576ae82abfecf14fcd62f8fc6a1bfb3bd3c4f69029",
+      "visibleBuildingBBox": [
+        326,
+        0,
+        703,
+        562
+      ],
+      "visibleBuildingWidthPx": 377,
+      "bboxCenterXY": [
+        514.5,
+        281
+      ],
+      "horizontalCenterX": 515,
+      "domeAxisX": 515,
+      "footingY": 562,
+      "domeTipY": null,
+      "domeTipCropped": true,
+      "visibleTopY": 0,
+      "domeTipNote": "Lantern continues through the top frame; the actual tip is outside this tile and cannot be measured here.",
+      "goldDomeBodyXRangeApprox": [
+        375,
+        652
+      ],
+      "goldDomeBodyWidthPxApprox": 277,
+      "approximateUncertaintyPx": {
+        "bboxEdges": 10,
+        "width": 15,
+        "center": 10,
+        "footingY": 8,
+        "goldDomeBodyWidth": 15
+      },
+      "contentFinding": "Correct recognizable gold-domed Invalides, one instance, in the intended left block on the x500 axis. Cream drum and classical front are present; cropped top continues toward the upper neighbor as expected. No wrong-block or missing-landmark content error observed. Continuity with r07c08 is outside this two-image review.",
+      "limitation": "Dome centerline approximately515 is close to the specified500; foundation approximately562 is close to550. The complete visible building is approximately377 px wide, about117 px wider than the260 px upper target (about45 percent). Measuring only the gold dome body gives approximately277 px and must not be substituted for the full-building width to conceal the scale discrepancy.",
+      "receiverReviewRequired": true
+    },
+    {
+      "name": "Opera Garnier",
+      "tile": "r06c09",
+      "sha256": "99891c438b1077516dd0dbf98e1f12911cd0d69cce39414876d3757f427b9b93",
+      "visibleBuildingBBox": [
+        575,
+        0,
+        951,
+        325
+      ],
+      "visibleBuildingWidthPx": 376,
+      "bboxCenterXY": [
+        763.0,
+        162.5
+      ],
+      "approximateUncertaintyPx": 15,
+      "receiverReviewRequired": true,
+      "targetWidthPx": 355,
+      "footingYApprox": 325,
+      "topClipped": true,
+      "contentFinding": "Correct green-roof opera in intended upper block. G lower content corrected in attempt002.",
+      "limitation": "Visible width about376px versus355 accepted earlier; measured for receiver, not retried for size."
+    },
+    {
+      "name": "Invalides continuation",
+      "tile": "r07c08",
+      "sha256": "a56b79d22835edfed48de28df3f8c6e2db3ca2eb706bbc30c663a580f58d4998",
+      "visibleBuildingBBox": [
+        337,
+        586,
+        682,
+        1024
+      ],
+      "visibleBuildingWidthPx": 345,
+      "bboxCenterXY": [
+        509.5,
+        805.0
+      ],
+      "approximateUncertaintyPx": 15,
+      "receiverReviewRequired": true,
+      "domeAxisXApprox": 515,
+      "domeTipYApprox": 586,
+      "footingY": null,
+      "bottomClipped": true,
+      "goldDomeBodyWidthPxApprox": 289,
+      "contentFinding": "One gold dome on same x-axis, esplanade to Seine; lower body continues off frame.",
+      "limitation": "Visible continuation widthabout345px; compare with r08c08 full building377px and target240–260 during assembly."
+    }
+  ]
+}

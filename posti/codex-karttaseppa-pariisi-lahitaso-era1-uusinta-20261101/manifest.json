@@ -1,0 +1,259 @@
+{
+  "sourceCommit": "045e9ed8ee3c4a905a92a05b1ad128008971ad16",
+  "continuationCommit": "4111a5ae43c2f0600fa105addfcf27b944ec0b89",
+  "deliveryScope": "remaining11 raw ring1 candidates for receiver warp/cut review",
+  "imageCount": 11,
+  "callsForThisDelivery": 12,
+  "fullRedrawOrderCallsIncludingFirstTileHistory": 16,
+  "alreadyAcceptedFirstTile": {
+    "tile": "r06c08",
+    "selectedAttempt": 3,
+    "priorCalls": 4,
+    "rawSHA256": "05e8cbb56cdc10f22bb79ab39207f16991dc85675a2fa5c17d6a597e1839ed04",
+    "acceptanceCommit": "4111a5ae43c2f0600fa105addfcf27b944ec0b89",
+    "receiverWarpedAndCut": true,
+    "includedInThisDelivery": false,
+    "regeneratedAfterAcceptance": false
+  },
+  "stripCopiesIntoOutput": 0,
+  "maskEdits": 0,
+  "postprocessing": false,
+  "images": [
+    {
+      "tile": "r06c09",
+      "taskNumber": 1641,
+      "filename": "pariisi-lahi-r06c09.png",
+      "sha256": "99891c438b1077516dd0dbf98e1f12911cd0d69cce39414876d3757f427b9b93",
+      "rawSHA256": "99891c438b1077516dd0dbf98e1f12911cd0d69cce39414876d3757f427b9b93",
+      "nativeSHA256": "99891c438b1077516dd0dbf98e1f12911cd0d69cce39414876d3757f427b9b93",
+      "bytes": 3614265,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 2,
+      "selectedAttempt": 2,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": "Wrong structure in G overlap: coarse-guide round domed pavilion and irregular green pool remain instead of G ordinary houses and round/rectangular blue fountain garden; conflicting gold-spired roof replaces G slate pavilion.",
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r06c09.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r06c09.png"
+    },
+    {
+      "tile": "r06c10",
+      "taskNumber": 1642,
+      "filename": "pariisi-lahi-r06c10.png",
+      "sha256": "88f254f134fb5ceb78357249ce68f78968059829dc27236e2bbc58ce1d47b6ef",
+      "rawSHA256": "88f254f134fb5ceb78357249ce68f78968059829dc27236e2bbc58ce1d47b6ef",
+      "nativeSHA256": "88f254f134fb5ceb78357249ce68f78968059829dc27236e2bbc58ce1d47b6ef",
+      "bytes": 3772844,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r06c10.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r06c10.png"
+    },
+    {
+      "tile": "r06c11",
+      "taskNumber": 1643,
+      "filename": "pariisi-lahi-r06c11.png",
+      "sha256": "e46a466835100b974890556431945ae4fcf4dc7e9a6b9894dbef19ef456c8d4a",
+      "rawSHA256": "e46a466835100b974890556431945ae4fcf4dc7e9a6b9894dbef19ef456c8d4a",
+      "nativeSHA256": "e46a466835100b974890556431945ae4fcf4dc7e9a6b9894dbef19ef456c8d4a",
+      "bytes": 3762531,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r06c11.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r06c11.png"
+    },
+    {
+      "tile": "r07c11",
+      "taskNumber": 1644,
+      "filename": "pariisi-lahi-r07c11.png",
+      "sha256": "3134912c5d66821631cc2d1a3158142b3fc2ece2e0071ff9b7defa5ff5a066c5",
+      "rawSHA256": "3134912c5d66821631cc2d1a3158142b3fc2ece2e0071ff9b7defa5ff5a066c5",
+      "nativeSHA256": "3134912c5d66821631cc2d1a3158142b3fc2ece2e0071ff9b7defa5ff5a066c5",
+      "bytes": 3606919,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r07c11.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r07c11.png"
+    },
+    {
+      "tile": "r08c11",
+      "taskNumber": 1645,
+      "filename": "pariisi-lahi-r08c11.png",
+      "sha256": "8015cacc533433157355fbf05236fded163695128b3314daff2a58575cb691a5",
+      "rawSHA256": "8015cacc533433157355fbf05236fded163695128b3314daff2a58575cb691a5",
+      "nativeSHA256": "8015cacc533433157355fbf05236fded163695128b3314daff2a58575cb691a5",
+      "bytes": 3576548,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r08c11.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r08c11.png"
+    },
+    {
+      "tile": "r09c11",
+      "taskNumber": 1646,
+      "filename": "pariisi-lahi-r09c11.png",
+      "sha256": "c51f149d7b18e511f8511779e1c5320c5392dc37891ab9fd7026fe87bb698ea9",
+      "rawSHA256": "c51f149d7b18e511f8511779e1c5320c5392dc37891ab9fd7026fe87bb698ea9",
+      "nativeSHA256": "c51f149d7b18e511f8511779e1c5320c5392dc37891ab9fd7026fe87bb698ea9",
+      "bytes": 3595648,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r09c11.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r09c11.png"
+    },
+    {
+      "tile": "r09c10",
+      "taskNumber": 1647,
+      "filename": "pariisi-lahi-r09c10.png",
+      "sha256": "8d05465a6e540b3faeff1913802935b8ab86956ca58420c58fd2dd950bbcfd7b",
+      "rawSHA256": "8d05465a6e540b3faeff1913802935b8ab86956ca58420c58fd2dd950bbcfd7b",
+      "nativeSHA256": "8d05465a6e540b3faeff1913802935b8ab86956ca58420c58fd2dd950bbcfd7b",
+      "bytes": 3613721,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "review-with-documented-limitations",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r09c10.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r09c10.png"
+    },
+    {
+      "tile": "r09c09",
+      "taskNumber": 1648,
+      "filename": "pariisi-lahi-r09c09.png",
+      "sha256": "6b2e588d6859dc84a31c073fd52419721419e11acbf04e007ab6088b4e32addc",
+      "rawSHA256": "6b2e588d6859dc84a31c073fd52419721419e11acbf04e007ab6088b4e32addc",
+      "nativeSHA256": "6b2e588d6859dc84a31c073fd52419721419e11acbf04e007ab6088b4e32addc",
+      "bytes": 3788248,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r09c09.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r09c09.png"
+    },
+    {
+      "tile": "r09c08",
+      "taskNumber": 1649,
+      "filename": "pariisi-lahi-r09c08.png",
+      "sha256": "e6647ead103bfbf00e6857ddaadbf777ba3cfe253ebdfb65f18b8d0607cf50bd",
+      "rawSHA256": "e6647ead103bfbf00e6857ddaadbf777ba3cfe253ebdfb65f18b8d0607cf50bd",
+      "nativeSHA256": "e6647ead103bfbf00e6857ddaadbf777ba3cfe253ebdfb65f18b8d0607cf50bd",
+      "bytes": 3506020,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "pass-for-receiver-review",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r09c08.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r09c08.png"
+    },
+    {
+      "tile": "r08c08",
+      "taskNumber": 1650,
+      "filename": "pariisi-lahi-r08c08.png",
+      "sha256": "420499878cfac83ce72b8d576ae82abfecf14fcd62f8fc6a1bfb3bd3c4f69029",
+      "rawSHA256": "420499878cfac83ce72b8d576ae82abfecf14fcd62f8fc6a1bfb3bd3c4f69029",
+      "nativeSHA256": "420499878cfac83ce72b8d576ae82abfecf14fcd62f8fc6a1bfb3bd3c4f69029",
+      "bytes": 3667141,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "review-with-documented-limitations",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r08c08.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r08c08.png"
+    },
+    {
+      "tile": "r07c08",
+      "taskNumber": 1651,
+      "filename": "pariisi-lahi-r07c08.png",
+      "sha256": "a56b79d22835edfed48de28df3f8c6e2db3ca2eb706bbc30c663a580f58d4998",
+      "rawSHA256": "a56b79d22835edfed48de28df3f8c6e2db3ca2eb706bbc30c663a580f58d4998",
+      "nativeSHA256": "a56b79d22835edfed48de28df3f8c6e2db3ca2eb706bbc30c663a580f58d4998",
+      "bytes": 3717247,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "contentRetryReason": null,
+      "visualQA": "review-with-documented-limitations",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era1-uusinta-20261101/pariisi-lahi-r07c08.png",
+      "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-uusinta-20261101/selected/pariisi-lahi-r07c08.png"
+    }
+  ],
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "ring2Started": false
+}

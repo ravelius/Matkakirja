@@ -1,0 +1,153 @@
+{
+  "status": "raw-review-delivery-with-explicit-geometry-limitations",
+  "contentReviews": [
+    {
+      "tile": "r06c09",
+      "attempt": 2,
+      "sha256": "99891c438b1077516dd0dbf98e1f12911cd0d69cce39414876d3757f427b9b93",
+      "status": "pass-for-receiver-review",
+      "notes": "Content-only retry fixed the incorrect G structures: round blue fountain plus rectangular pool and ordinary mansard houses replace the dome/green pool at lower-left; slate pavilion with stone finials replaces the conflicting gold spire. Garnier remains at the top on its source block. Fine style and continuous drawing. Geometry reserved for KS warp/cut.",
+      "reviewedAt": "2026-11-01T14:02:38.631791+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r06c10",
+      "attempt": 1,
+      "sha256": "88f254f134fb5ceb78357249ce68f78968059829dc27236e2bbc58ce1d47b6ef",
+      "status": "pass-for-receiver-review",
+      "notes": "Main block geometry, diagonal streets, central garden/plaza and lower-left formal green strip remain. Fine mansard-house detail, no invented landmark, missing park/water or hard pasted panel observed. G alignment left for receiver warp/cut under waived tolerance.",
+      "reviewedAt": "2026-11-01T13:59:23.049652+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r06c11",
+      "attempt": 1,
+      "sha256": "e46a466835100b974890556431945ae4fcf4dc7e9a6b9894dbef19ef456c8d4a",
+      "status": "pass-for-receiver-review",
+      "notes": "Diagonal right-side canal and its bridge crossings retained, with major tree-lined street intersections and ordinary mansard blocks. G corner contains appropriate house content. No missing waterway or invented major landmark. No position-only retry.",
+      "reviewedAt": "2026-11-01T14:00:36.014844+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r07c11",
+      "attempt": 1,
+      "sha256": "3134912c5d66821631cc2d1a3158142b3fc2ece2e0071ff9b7defa5ff5a066c5",
+      "status": "pass-for-receiver-review",
+      "notes": "Large rectangular classical public building with low roof, columned facade and central arch retained in the right-hand block. Left-bottom river and ordinary street network present; fine consistent house style. No invented or missing major content observed.",
+      "reviewedAt": "2026-11-01T14:01:55.523144+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r08c11",
+      "attempt": 1,
+      "sha256": "8015cacc533433157355fbf05236fded163695128b3314daff2a58575cb691a5",
+      "status": "pass-for-receiver-review",
+      "notes": "Both the broad Seine on the left and the independent right-side canal are present, with bridges, planted quays, boats and fine cream/slate house detail. No missing waterway or major landmark block error. G-side details and joins need receiver warp/cut review under source4111; no position-only retry.",
+      "reviewedAt": "2026-11-01T13:58:23.377908+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r09c11",
+      "attempt": 1,
+      "sha256": "c51f149d7b18e511f8511779e1c5320c5392dc37891ab9fd7026fe87bb698ea9",
+      "status": "pass-for-receiver-review",
+      "notes": "Broad diagonal Seine, separate narrow right-side channel, bridge crossings and lower-left park all present. G upper-left now uses a mansard house rather than the coarse-guide round dome. Minor shape/position differences reserved for receiver warp/cut. No missing content observed.",
+      "reviewedAt": "2026-11-01T14:01:54.966176+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r09c10",
+      "attempt": 1,
+      "sha256": "8d05465a6e540b3faeff1913802935b8ab86956ca58420c58fd2dd950bbcfd7b",
+      "status": "review-with-documented-limitations",
+      "notes": "Recognizable Pantheon in intended block, high drum/dome and columned facade present. Independent native-size estimate: width425px, centerx588, footingy682, dome tipy155. Retained entire-dome-below309 condition is NOT met; dome crosses G cut region. Do not assume normal warp fixes it. Explicit receiver correction/review required; no position-only regeneration under source4111.",
+      "reviewedAt": "2026-11-01T14:04:17.769170+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r09c09",
+      "attempt": 1,
+      "sha256": "6b2e588d6859dc84a31c073fd52419721419e11acbf04e007ab6088b4e32addc",
+      "status": "pass-for-receiver-review",
+      "notes": "The required broad connected park at approximately x850..1400,y320..700 is restored with lawns, mature trees and paths. Separate formal G statue garden remains at upper-right. Ordinary blocks and streets retained; no hard pasted panel. Ready for receiver warp/cut and camera review.",
+      "reviewedAt": "2026-11-01T13:58:23.685678+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r09c08",
+      "attempt": 1,
+      "sha256": "e6647ead103bfbf00e6857ddaadbf777ba3cfe253ebdfb65f18b8d0607cf50bd",
+      "status": "pass-for-receiver-review",
+      "notes": "Ordinary civic/residential blocks and street layout retained; upper-right contains the G corner block with blue shop awnings and an open tree-lined frontage. No new monument or waterway. Fine continuous illustration; receiver warp/cut still required.",
+      "reviewedAt": "2026-11-01T14:00:35.708063+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r08c08",
+      "attempt": 1,
+      "sha256": "420499878cfac83ce72b8d576ae82abfecf14fcd62f8fc6a1bfb3bd3c4f69029",
+      "status": "review-with-documented-limitations",
+      "notes": "Single gold-domed Invalides correctly placed near x515 rather than old x750, footingy562. Entire visible building about377px wide versus240–260 target; gold dome body alone277px must not be substituted for building width. Top continues out of frame. Receiver must assess size and continuation with r07c08; dimension compliance NOT asserted. No anchor/size-only retry under source4111.",
+      "reviewedAt": "2026-11-01T14:04:18.055225+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r07c08",
+      "attempt": 1,
+      "sha256": "a56b79d22835edfed48de28df3f8c6e2db3ca2eb706bbc30c663a580f58d4998",
+      "status": "review-with-documented-limitations",
+      "notes": "Single Invalides dome continues through bottom near x515 with esplanade north to Seine; Grand Palais/bridges retained and G has the correct three blue pools rather than wrong round pavilion. Visible continuation building about345px wide and gold body about289px; size continuity with oversized r08c08 requires receiver review. No missing-content error or anchor-only retry.",
+      "reviewedAt": "2026-11-01T14:04:18.333920+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "The +/-15px condition was waived by source4111a5ae. Check content; minor position differences are handled by receiver warping and cuts. Receiver camera/PT review remains required.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    }
+  ],
+  "contentRetryCount": 1,
+  "positionOnlyRetryCountSinceContinuation": 0,
+  "passForReceiverReviewCount": 8,
+  "documentedLimitationTiles": [
+    "r09c10",
+    "r08c08",
+    "r07c08"
+  ],
+  "technical": {
+    "nativeByteIdentityCount": 11,
+    "requiredSizeRGBCount": 11,
+    "sharedCopyByteIdentityCount": 11
+  },
+  "landmarkDimensionCompliance": false,
+  "pantheonDomeContainmentCompliance": false,
+  "receiverWarpCutCameraPTReviewPending": true
+}

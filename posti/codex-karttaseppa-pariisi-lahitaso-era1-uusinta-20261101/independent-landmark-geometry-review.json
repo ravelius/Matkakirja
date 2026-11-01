@@ -1,0 +1,87 @@
+{
+  "reviewer": "independent-landmark-geometry-review",
+  "date": "2026-11-01",
+  "scope": ["r09c10", "r08c08"],
+  "method": "Visual silhouette estimates using view_image at original 1536x1024 resolution. Bounding boxes include the visible main building, roof, ornament/lantern and foundation steps, excluding trees, cast shadows, people and detached buildings. Measurements are approximate, not pixel segmentation. Origin top-left; bbox=[left,top,right,bottom].",
+  "sourceEvidence": {
+    "source-order.md": "85d063c854a214745d25b7209a4d27c1c295373f16f736afafeaaec35667a642",
+    "source-continuation-20261101.md": "14ab71e277751ad7fcc8a430db0c057974b937935c69ca21a348746c7d578ed3"
+  },
+  "governingInstruction": "Continuation commit 4111a5ae removes the +/-15 px requirement and anchor iteration. One take per remaining tile; regenerate only for content errors. The named landmark corrections remain in force, so their geometric conflicts must be reported rather than silently accepted. Receiver performs warp, seam cut and game-camera review.",
+  "landmarks": [
+    {
+      "tile": "r09c10",
+      "landmark": "Pantheon",
+      "file": "selected/pariisi-lahi-r09c10.png",
+      "sha256": "8d05465a6e540b3faeff1913802935b8ab86956ca58420c58fd2dd950bbcfd7b",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "measurements": {
+        "visibleBuildingBBox": [375,155,800,682],
+        "visibleBuildingWidthPx": 425,
+        "bboxCenterXY": [587.5,418.5],
+        "horizontalCenterX": 588,
+        "domeAxisX": 594,
+        "footingY": 682,
+        "domeTipY": 155,
+        "domeTipCropped": false,
+        "approximateUncertaintyPx": {"bboxEdges": 10, "width": 15, "center": 10, "footingY": 8, "domeTipY": 8}
+      },
+      "retainedRequirements": {
+        "buildingWidthPx": 440,
+        "masonryXRange": [350,790],
+        "centerX": 570,
+        "footingY": 660,
+        "entireDomeBelowY": 309,
+        "form": "Tall cylindrical windowed drum and prominent blue-gray dome"
+      },
+      "contentFinding": "Correct recognizable Pantheon, one instance, in the intended left-middle block. Tall drum, blue-gray dome, classical columned facade and foundation are present. No wrong-block or missing-landmark content error observed.",
+      "geometryFinding": "Width approximately425 versus440; center approximately18 px right of the stated570; foundation approximately22 px lower than660. The important conflict is the dome/lantern tip at about155: approximately154 px above the required y>309 boundary. The dome visibly crosses the proposed G cut band y181..309. This is not compliant with the retained dome-containment requirement.",
+      "receiverReviewLimitation": "The receiver must explicitly assess preservation of the complete dome during G warp/cut. It cannot be assumed that the normal alignment warp will solve this: the dome extends into G's retained/cut area and may be clipped or obscured. This report does not approve that conflict or assert that it is already repaired.",
+      "contentErrorRequiringRegenerationObserved": false,
+      "anchorRegenerationRecommended": false,
+      "status": "CONTENT_PRESENT_IN_CORRECT_BLOCK_GEOMETRY_CONFLICT_FOR_RECEIVER_REVIEW"
+    },
+    {
+      "tile": "r08c08",
+      "landmark": "Invalides",
+      "file": "selected/pariisi-lahi-r08c08.png",
+      "sha256": "420499878cfac83ce72b8d576ae82abfecf14fcd62f8fc6a1bfb3bd3c4f69029",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "measurements": {
+        "visibleBuildingBBox": [326,0,703,562],
+        "visibleBuildingWidthPx": 377,
+        "bboxCenterXY": [514.5,281],
+        "horizontalCenterX": 515,
+        "domeAxisX": 515,
+        "footingY": 562,
+        "domeTipY": null,
+        "domeTipCropped": true,
+        "visibleTopY": 0,
+        "domeTipNote": "Lantern continues through the top frame; the actual tip is outside this tile and cannot be measured here.",
+        "goldDomeBodyXRangeApprox": [375,652],
+        "goldDomeBodyWidthPxApprox": 277,
+        "approximateUncertaintyPx": {"bboxEdges": 10, "width": 15, "center": 10, "footingY": 8, "goldDomeBodyWidth": 15}
+      },
+      "retainedRequirements": {
+        "visibleBuildingWidthPxRange": [240,260],
+        "domeCenterlineX": 500,
+        "footingYApprox": 550,
+        "form": "Single gold dome and cream drum; northward esplanade; same landmark continues into r07c08"
+      },
+      "contentFinding": "Correct recognizable gold-domed Invalides, one instance, in the intended left block on the x500 axis. Cream drum and classical front are present; cropped top continues toward the upper neighbor as expected. No wrong-block or missing-landmark content error observed. Continuity with r07c08 is outside this two-image review.",
+      "geometryFinding": "Dome centerline approximately515 is close to the specified500; foundation approximately562 is close to550. The complete visible building is approximately377 px wide, about117 px wider than the260 px upper target (about45 percent). Measuring only the gold dome body gives approximately277 px and must not be substituted for the full-building width to conceal the scale discrepancy.",
+      "receiverReviewLimitation": "The receiver must explicitly assess the oversized building and its shared scale with r07c08. The correct x500 placement does not establish size compliance, and the source's removal of anchor tolerance does not itself waive the retained240..260 px size instruction. No corrective warp or scale result is verified here.",
+      "contentErrorRequiringRegenerationObserved": false,
+      "anchorRegenerationRecommended": false,
+      "status": "CONTENT_PRESENT_IN_CORRECT_BLOCK_GEOMETRY_CONFLICT_FOR_RECEIVER_REVIEW"
+    }
+  ],
+  "overall": {
+    "finalApproval": false,
+    "receiverReviewLimitationsRequired": true,
+    "regenerationRequested": false,
+    "reason": "Both are correct landmarks in the intended blocks. The measured discrepancies are retained landmark geometry conflicts, not an instruction to resume prohibited anchor iteration. Preserve the explicit limitations in receiver delivery/review; do not label the dimensions or Pantheon dome containment compliant."
+  }
+}
