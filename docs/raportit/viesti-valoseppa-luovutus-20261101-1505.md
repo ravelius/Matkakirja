@@ -45,4 +45,7 @@ sitten hinta-ms (kohta 2) + simukuva 03 + pari 03/06 (NS:n korjaus 067a0fc38:n k
    keskiakselilla x 16,4) oli ajossa 15.0x: tulos `skriptit-20261031/suu-216c.log` (KUVA OK -rivit). PT: jos suu ei tumma vaikka leivottu valo
    päällä → tarkista ladataanko portin tunnelin atlas (LOD/solmu), rivi PT:lle. Jos z-arvot eivät osu suulle: PK:n suu.py-geometria
    (_tyo/pelikoodari/reitti-216/tallenne/kaari/havainnot.md: eteläsuu x −3…3, tunneli 25 m ovelle).
-4. Vanhat (luovutus 13.50): läikät 03/04, 07 usva + taivassauma. Kivetyksen sävy annettu PK:lle (PT 15.1x, pohja varjo-216 067a0fc38) → EI seuraajalle.
+4. HARKITTAVA (PT 15.1x): kuva-ajojen nopeutus – yksi taustalla pysyvä Unity-editori (ei ikkunoita), johon kuvat ajetaan komennoilla
+   (nyt ~8 min/ajo, josta osa Unityn käynnistystä). Yksi koe säästöstä; huomioi PK:n ja NS:n samanaikaiset Unity-ajot (projektilukko).
+   Säästö > 3 min/ajo → käyttöön, rivi PT:lle.
+5. Vanhat (luovutus 13.50): läikät 03/04, 07 usva + taivassauma. Kivetyksen sävy annettu PK:lle (PT 15.1x, pohja varjo-216 067a0fc38) → EI seuraajalle.
