@@ -1,5 +1,7 @@
 # Karttaseppä → Codex: Pariisi, korttelien yleistys G:n tapaan: YKSI koepala G:n alueelta (1.11.2026)
 
+**PÄIVITYS klo 08.4x (PT 08.2x):** ohjekuvaksi vaihtui v3 (Cité levennetty) ja vesimaski tarkentui. Käytä vain v3:a.
+
 **Omistajan päätös 1.11. klo 08.07 (KK, PT 08.12):** omistaja vertasi G-kuvaa (`G-referenssi-owner-style-G-confirmed.jpg`)
 ja nykyistä pelikuvaa Citéstä. G on oikea suunta, ja nykyinen pelikuva ei ole hyvä. Linjaus:
 **talot isommiksi ja harvemmiksi korttelimassoiksi, kadut leveiksi ja valkoisiksi, pienet kujat pois, puut isoiksi riveiksi.**
@@ -12,9 +14,11 @@ G:n alue Tuileries'sta Louvren ja Citén kautta Île Saint-Louis'n länsikärkee
 1 m/px -paloissasi (pohjoinen ylös, sama pseudo-3D).
 
 ## Aineisto (tämä kansio, SHA256SUMS)
-- `ohje-pariisi-yleistys-koepala-v2.png` (1536 × 1024): **yleistetty geometria. Maalaa tämän päälle.** Kujat, huoltotiet
+- `ohje-pariisi-yleistys-koepala-v3.png` (1536 × 1024): **yleistetty geometria. Maalaa tämän päälle.** Kujat, huoltotiet
   ja kävelytiet on poistettu, kadut ovat noin 1,4× leveämpiä ja valkoisia, ja korttelit on yhdistetty isoiksi massoiksi
   (talot 40–60 m leveitä, raot alle 12 m suljettu). Seine, sillat, rannat ja pääkadut ovat oikeilla paikoillaan.
+  **Île de la Cité on levennetty G:n tapaan** noin 70 m veteen (vihreä reunakaista), ja joen haaroille jää vähintään
+  30 m. Kaksinkertainen Notre-Dame mahtuu siten saarelle, ja Sainte-Chapelle jää sen viereen kuten G:ssä.
 - `vesimaski-pariisi-yleistys-koepala.png`: valkoinen = vesi.
 - `vertailu-ohje-nyt-sama-rajaus.png`: nykyinen (yleistämätön) geometria samasta rajauksesta, vain vertailuun.
 - `vertailu-G-nyt-yleistys.jpg`: vasemmalla G, keskellä nykyinen geometria, oikealla tämä ohje.
@@ -25,6 +29,9 @@ G:n alue Tuileries'sta Louvren ja Citén kautta Île Saint-Louis'n länsikärkee
 ## Mitä maalataan
 - Kadut, Seine, rannat, sillat ja korttelien rajat ohjeesta. **Talot tehdään isoina kuten G:ssä, ei pikkutaloina:**
   korttelin reunalla on muutama iso talo, ei kymmeniä kapeita.
+- **Citén levennetty reuna** on puistoa ja rantaa isoine puineen kuten G:ssä. Saaren itäpää Notre-Damen ympärillä
+  jätetään avoimeksi aukioksi, koska suurennettu katedraali (2×, 200 m nykyisestä itään) tulee sen päälle.
+- **Tuileries kuten G:ssä:** isot pyöreät suihkulähdealtaat ja tiheät puurivit puiston reunoilla ja käytävillä.
 - **Puut maalataan tähän koepalaan** isoina riveinä kuten G:ssä: bulevardit, laiturit ja Tuileries. Myös
   sisäpihoille saa puita. Ihmiset, autot ja veneet jätetään pois, koska ne tulevat päälle.
 - Vettä vain vesimaskin alueelle.
