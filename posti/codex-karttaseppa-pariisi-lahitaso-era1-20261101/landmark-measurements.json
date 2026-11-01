@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-01T12:52:12.604439+00:00",
+  "method": "Manual outer visible building/masonry extents checked on full1536px PNG using20px coordinate grids. Approximate +/-5px; target pass not asserted. Trees/shadows are excluded.",
+  "measurements": [
+    {
+      "name": "Opera Garnier",
+      "tile": "r06c09",
+      "sha256": "5e7f66024c6de8ea3e9fae970f3492b7483c35c221b782316fffa8f043e16cb4",
+      "targetWidthPx": 390,
+      "measuredWidthPxApprox": 355,
+      "uncertaintyPx": 5,
+      "xBoundsApprox": [
+        590,
+        945
+      ],
+      "targetSatisfied": false
+    },
+    {
+      "name": "Invalides",
+      "tile": "r08c08",
+      "sha256": "db3bdbc170719fbe8736eba25b0f6caa33335221f1f80aef208d1415e4e52201",
+      "targetWidthPx": 240,
+      "measuredWidthPxApprox": 260,
+      "uncertaintyPx": 5,
+      "xBoundsApprox": [
+        635,
+        895
+      ],
+      "targetSatisfied": false,
+      "continuationTile": "r07c08",
+      "note": "Building outer extent, not gold dome diameter; dome itself approximately190px."
+    },
+    {
+      "name": "Pantheon",
+      "tile": "r09c10",
+      "sha256": "5c02793ebdd7735ea5d037a9478f6b14305045e6bf699eb3b34325d265e40432",
+      "targetWidthPx": 440,
+      "measuredWidthPxApprox": 340,
+      "uncertaintyPx": 5,
+      "xBoundsApprox": [
+        450,
+        790
+      ],
+      "targetSatisfied": false,
+      "completeDomeBelowFixedStrip": true,
+      "footingConforms": false,
+      "note": "Selected003 retains complete dome; source target left edge about350 and basey660, selected left about450 and basey610."
+    }
+  ]
+}

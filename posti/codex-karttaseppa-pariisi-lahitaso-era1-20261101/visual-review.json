@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-11-01T12:52:12.604439+00:00",
+  "reviewer": "parent-strong-model-visual-review",
+  "reviewedTiles": [
+    "r06c08",
+    "r06c09",
+    "r06c10",
+    "r06c11",
+    "r07c11",
+    "r08c11",
+    "r09c11",
+    "r09c10",
+    "r09c09",
+    "r09c08",
+    "r08c08",
+    "r07c08"
+  ],
+  "deliveryDisposition": "ready-for-source-owner-review",
+  "visualQAPassed": false,
+  "gameReady": false,
+  "readyForDependentRing": false,
+  "reason": "Candidate handoff for technical source-owner assessment, not a completed/accepted image order.",
+  "technicalOnly": "All fixed G pixels and all overlapping candidate pairs are exact; this does not establish visual continuity.",
+  "method": "Full selected PNG visual review plus source guides/contact sheet, independent north review, and manual coordinate-grid landmark measurements. No external geographical certification.",
+  "independentReview": "independent-north-review.json",
+  "independentReviewVersionNote": "Independent north report covers older r06c09attempt002 and pre-recomposition r06c10; parent inspected current selected versions and confirms unresolved seams. It is not a certificate for all current hashes.",
+  "tiles": [
+    {
+      "tile": "r06c08",
+      "sha256": "d2b9c837e000d30608bee0eccb63f0f1bb0b627e2eebbb12581bccae4e692e03",
+      "selectedAttempt": 5,
+      "visualQAPassed": false,
+      "findings": [
+        "Grand Palais, Seine and main bridges retained. Fixed G lower-right corner has local tone/roof discontinuity."
+      ]
+    },
+    {
+      "tile": "r06c09",
+      "sha256": "5e7f66024c6de8ea3e9fae970f3492b7483c35c221b782316fffa8f043e16cb4",
+      "selectedAttempt": 3,
+      "visualQAPassed": false,
+      "findings": [
+        "Garnier preserved in source upper-edge framing, about355 +/-5px wide versus390 target. Long visible G seam at y715 remains after attempt003."
+      ]
+    },
+    {
+      "tile": "r06c10",
+      "sha256": "cc6333bff88ad2f70bb073d5ff663df5cfd00b7570f347b68a307ac45c39c93d",
+      "selectedAttempt": 2,
+      "visualQAPassed": false,
+      "findings": [
+        "Major street/park layout retained. Long visible G seam at y715 remains; updated left fixed strip is exact but not a visual continuity pass."
+      ]
+    },
+    {
+      "tile": "r06c11",
+      "sha256": "bd53a44c94b451c7e16db7e1c6d118cdf0f46e2f3b73b9f2364067e0aa5d77ae",
+      "selectedAttempt": 2,
+      "visualQAPassed": false,
+      "findings": [
+        "Canal and bridges retained. Local G lower-left corner seam."
+      ]
+    },
+    {
+      "tile": "r07c11",
+      "sha256": "9e6736ddea57f61901ed71b70be01f956b24ac67d34d551083d65ebb0b1d5c96",
+      "selectedAttempt": 3,
+      "visualQAPassed": false,
+      "findings": [
+        "Large rectangular public building restored in attempt003 after its loss in attempt002. Fixed left/top boundaries still have visible discontinuities."
+      ]
+    },
+    {
+      "tile": "r08c11",
+      "sha256": "03ef4c164879af656b1670b0a5e3c1fc03f4796d94e7505e1f6090e9e68f83d7",
+      "selectedAttempt": 2,
+      "visualQAPassed": false,
+      "findings": [
+        "Right-side narrow canal restored in attempt002 after loss in attempt001; left Seine retained. Visible left/top joins remain."
+      ]
+    },
+    {
+      "tile": "r09c11",
+      "sha256": "74746546b21b9c13957e5b077aa9c164f3297a7c2ba3125120763d23015b51a1",
+      "selectedAttempt": 1,
+      "visualQAPassed": false,
+      "findings": [
+        "Broad Seine, right canal branch, park and bridges retained. Fixed corner/top joins need correction."
+      ]
+    },
+    {
+      "tile": "r09c10",
+      "sha256": "5c02793ebdd7735ea5d037a9478f6b14305045e6bf699eb3b34325d265e40432",
+      "selectedAttempt": 3,
+      "visualQAPassed": false,
+      "findings": [
+        "Selected attempt003 has complete dome/lantern below y309. Building about340 +/-5px versus440 target; base approximately50px right and50px above source target. Attempts004/005 retained but not selected;005 clips lantern at fixed top strip. No landmark compliance pass."
+      ]
+    },
+    {
+      "tile": "r09c09",
+      "sha256": "12db2623fb3bfcbf2637fe0f82cba97533b0d10f3f8bc7e657a0136e9ea087ac",
+      "selectedAttempt": 1,
+      "visualQAPassed": false,
+      "findings": [
+        "Church-like central building retained, but substantial green/park area in the source right half is replaced by dense housing. Content rework needed. Strong y309 fixed-top seam."
+      ]
+    },
+    {
+      "tile": "r09c08",
+      "sha256": "8aa0da718e00c06ca750bba542c350dda593724f1f5244384ed2139b247a909c",
+      "selectedAttempt": 1,
+      "visualQAPassed": false,
+      "findings": [
+        "Ordinary block and local civic-building composition retained approximately; visible right fixed-neighbor boundary and upper-right G corner."
+      ]
+    },
+    {
+      "tile": "r08c08",
+      "sha256": "db3bdbc170719fbe8736eba25b0f6caa33335221f1f80aef208d1415e4e52201",
+      "selectedAttempt": 1,
+      "visualQAPassed": false,
+      "findings": [
+        "Invalides gold dome retained; complete visible building width about260 +/-5px versus240 target. Strong fixed-right and lower-neighbor boundary. Exact guide-footing compliance not confirmed."
+      ]
+    },
+    {
+      "tile": "r07c08",
+      "sha256": "5c466a6bd62ff10eb4e8182031423765c1c0c2e95402add74c04a63afdcb6817",
+      "selectedAttempt": 1,
+      "visualQAPassed": false,
+      "findings": [
+        "Grand Palais/Seine from upper neighbor and Invalides continuation from lower neighbor are pixel-exact. The drawn river turn at the fixed-right G border is visibly discontinuous; top and bottom joins also require review."
+      ]
+    }
+  ]
+}

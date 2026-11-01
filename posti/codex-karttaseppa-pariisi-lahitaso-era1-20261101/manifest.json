@@ -1,0 +1,115 @@
+{
+  "createdAt": "2026-11-01T12:52:12.810808+00:00",
+  "status": "prepared-not-delivered",
+  "sourceCommit": "8ced1e0e43cf83f2d54a01c377b0488dafdb95fa",
+  "clarificationCommit": "ad411d1b008f57a573cd705471a340caf918e554",
+  "imageCount": 12,
+  "actualCalls": 27,
+  "files": [
+    {
+      "tile": "r06c08",
+      "file": "pariisi-lahi-r06c08.png",
+      "sha256": "d2b9c837e000d30608bee0eccb63f0f1bb0b627e2eebbb12581bccae4e692e03",
+      "bytes": 3454468,
+      "actualCalls": 5,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r06c08-attempt005.json"
+    },
+    {
+      "tile": "r06c09",
+      "file": "pariisi-lahi-r06c09.png",
+      "sha256": "5e7f66024c6de8ea3e9fae970f3492b7483c35c221b782316fffa8f043e16cb4",
+      "bytes": 3422771,
+      "actualCalls": 3,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r06c09-attempt003.json"
+    },
+    {
+      "tile": "r06c10",
+      "file": "pariisi-lahi-r06c10.png",
+      "sha256": "cc6333bff88ad2f70bb073d5ff663df5cfd00b7570f347b68a307ac45c39c93d",
+      "bytes": 3406362,
+      "actualCalls": 2,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r06c10-attempt002-recomposed001.json"
+    },
+    {
+      "tile": "r06c11",
+      "file": "pariisi-lahi-r06c11.png",
+      "sha256": "bd53a44c94b451c7e16db7e1c6d118cdf0f46e2f3b73b9f2364067e0aa5d77ae",
+      "bytes": 3368147,
+      "actualCalls": 2,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r06c11-attempt002-recomposed001.json"
+    },
+    {
+      "tile": "r07c11",
+      "file": "pariisi-lahi-r07c11.png",
+      "sha256": "9e6736ddea57f61901ed71b70be01f956b24ac67d34d551083d65ebb0b1d5c96",
+      "bytes": 3271103,
+      "actualCalls": 3,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r07c11-attempt003.json"
+    },
+    {
+      "tile": "r08c11",
+      "file": "pariisi-lahi-r08c11.png",
+      "sha256": "03ef4c164879af656b1670b0a5e3c1fc03f4796d94e7505e1f6090e9e68f83d7",
+      "bytes": 3177198,
+      "actualCalls": 2,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r08c11-attempt002.json"
+    },
+    {
+      "tile": "r09c11",
+      "file": "pariisi-lahi-r09c11.png",
+      "sha256": "74746546b21b9c13957e5b077aa9c164f3297a7c2ba3125120763d23015b51a1",
+      "bytes": 3148091,
+      "actualCalls": 1,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r09c11-attempt001.json"
+    },
+    {
+      "tile": "r09c10",
+      "file": "pariisi-lahi-r09c10.png",
+      "sha256": "5c02793ebdd7735ea5d037a9478f6b14305045e6bf699eb3b34325d265e40432",
+      "bytes": 3380223,
+      "actualCalls": 5,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r09c10-attempt003.json"
+    },
+    {
+      "tile": "r09c09",
+      "file": "pariisi-lahi-r09c09.png",
+      "sha256": "12db2623fb3bfcbf2637fe0f82cba97533b0d10f3f8bc7e657a0136e9ea087ac",
+      "bytes": 3442639,
+      "actualCalls": 1,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r09c09-attempt001.json"
+    },
+    {
+      "tile": "r09c08",
+      "file": "pariisi-lahi-r09c08.png",
+      "sha256": "8aa0da718e00c06ca750bba542c350dda593724f1f5244384ed2139b247a909c",
+      "bytes": 3509767,
+      "actualCalls": 1,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r09c08-attempt001.json"
+    },
+    {
+      "tile": "r08c08",
+      "file": "pariisi-lahi-r08c08.png",
+      "sha256": "db3bdbc170719fbe8736eba25b0f6caa33335221f1f80aef208d1415e4e52201",
+      "bytes": 3444636,
+      "actualCalls": 1,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r08c08-attempt001.json"
+    },
+    {
+      "tile": "r07c08",
+      "file": "pariisi-lahi-r07c08.png",
+      "sha256": "5c466a6bd62ff10eb4e8182031423765c1c0c2e95402add74c04a63afdcb6817",
+      "bytes": 3333805,
+      "actualCalls": 1,
+      "qaReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era1-20261101/qa/r07c08-attempt001.json"
+    }
+  ],
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "deliveryType": "candidate-review-only",
+  "visualQAPassed": false,
+  "gameReady": false,
+  "readyForDependentRing": false,
+  "qaDisposition": "Needs seam, landmark and r09c09 park correction; not an accepted delivery."
+}

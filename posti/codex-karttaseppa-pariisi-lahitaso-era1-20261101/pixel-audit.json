@@ -1,0 +1,328 @@
+{
+  "checkedAt": "2026-11-01T12:50:54.614544+00:00",
+  "actualCalls": 27,
+  "candidateCount": 12,
+  "images": [
+    {
+      "tile": "r06c08",
+      "sha256": "d2b9c837e000d30608bee0eccb63f0f1bb0b627e2eebbb12581bccae4e692e03",
+      "bytes": 3454468,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 105369,
+      "fixedChangedPixels": 0,
+      "actualCalls": 5
+    },
+    {
+      "tile": "r06c09",
+      "sha256": "5e7f66024c6de8ea3e9fae970f3492b7483c35c221b782316fffa8f043e16cb4",
+      "bytes": 3422771,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 474624,
+      "fixedChangedPixels": 0,
+      "actualCalls": 3
+    },
+    {
+      "tile": "r06c10",
+      "sha256": "cc6333bff88ad2f70bb073d5ff663df5cfd00b7570f347b68a307ac45c39c93d",
+      "bytes": 3406362,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 474624,
+      "fixedChangedPixels": 0,
+      "actualCalls": 2
+    },
+    {
+      "tile": "r06c11",
+      "sha256": "bd53a44c94b451c7e16db7e1c6d118cdf0f46e2f3b73b9f2364067e0aa5d77ae",
+      "bytes": 3368147,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 105369,
+      "fixedChangedPixels": 0,
+      "actualCalls": 2
+    },
+    {
+      "tile": "r07c11",
+      "sha256": "9e6736ddea57f61901ed71b70be01f956b24ac67d34d551083d65ebb0b1d5c96",
+      "bytes": 3271103,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 349184,
+      "fixedChangedPixels": 0,
+      "actualCalls": 3
+    },
+    {
+      "tile": "r08c11",
+      "sha256": "03ef4c164879af656b1670b0a5e3c1fc03f4796d94e7505e1f6090e9e68f83d7",
+      "bytes": 3177198,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 349184,
+      "fixedChangedPixels": 0,
+      "actualCalls": 2
+    },
+    {
+      "tile": "r09c11",
+      "sha256": "74746546b21b9c13957e5b077aa9c164f3297a7c2ba3125120763d23015b51a1",
+      "bytes": 3148091,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 105369,
+      "fixedChangedPixels": 0,
+      "actualCalls": 1
+    },
+    {
+      "tile": "r09c10",
+      "sha256": "5c02793ebdd7735ea5d037a9478f6b14305045e6bf699eb3b34325d265e40432",
+      "bytes": 3380223,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 474624,
+      "fixedChangedPixels": 0,
+      "actualCalls": 5
+    },
+    {
+      "tile": "r09c09",
+      "sha256": "12db2623fb3bfcbf2637fe0f82cba97533b0d10f3f8bc7e657a0136e9ea087ac",
+      "bytes": 3442639,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 474624,
+      "fixedChangedPixels": 0,
+      "actualCalls": 1
+    },
+    {
+      "tile": "r09c08",
+      "sha256": "8aa0da718e00c06ca750bba542c350dda593724f1f5244384ed2139b247a909c",
+      "bytes": 3509767,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 105369,
+      "fixedChangedPixels": 0,
+      "actualCalls": 1
+    },
+    {
+      "tile": "r08c08",
+      "sha256": "db3bdbc170719fbe8736eba25b0f6caa33335221f1f80aef208d1415e4e52201",
+      "bytes": 3444636,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 349184,
+      "fixedChangedPixels": 0,
+      "actualCalls": 1
+    },
+    {
+      "tile": "r07c08",
+      "sha256": "5c466a6bd62ff10eb4e8182031423765c1c0c2e95402add74c04a63afdcb6817",
+      "bytes": 3333805,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "fixedPixels": 349184,
+      "fixedChangedPixels": 0,
+      "actualCalls": 1
+    }
+  ],
+  "overlapPairs": [
+    {
+      "a": "r06c08",
+      "b": "r06c09",
+      "size": [
+        341,
+        1024
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r06c08",
+      "b": "r07c08",
+      "size": [
+        1536,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r06c09",
+      "b": "r06c10",
+      "size": [
+        341,
+        1024
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r06c09",
+      "b": "r07c08",
+      "size": [
+        341,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r06c10",
+      "b": "r06c11",
+      "size": [
+        341,
+        1024
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r06c10",
+      "b": "r07c11",
+      "size": [
+        341,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r06c11",
+      "b": "r07c11",
+      "size": [
+        1536,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r07c11",
+      "b": "r08c11",
+      "size": [
+        1536,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r08c11",
+      "b": "r09c11",
+      "size": [
+        1536,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r08c11",
+      "b": "r09c10",
+      "size": [
+        341,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r09c11",
+      "b": "r09c10",
+      "size": [
+        341,
+        1024
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r09c10",
+      "b": "r09c09",
+      "size": [
+        341,
+        1024
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r09c09",
+      "b": "r09c08",
+      "size": [
+        341,
+        1024
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r09c09",
+      "b": "r08c08",
+      "size": [
+        341,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r09c08",
+      "b": "r08c08",
+      "size": [
+        1536,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    },
+    {
+      "a": "r08c08",
+      "b": "r07c08",
+      "size": [
+        1536,
+        309
+      ],
+      "changedPixels": 0,
+      "exact": true
+    }
+  ],
+  "allFixedPixelsExact": true,
+  "allCandidateOverlapsExact": true,
+  "visualApprovalNotImplied": true
+}
