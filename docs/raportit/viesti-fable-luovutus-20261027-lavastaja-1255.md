@@ -2454,3 +2454,11 @@ K = proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, T = K/tyokalut, U = lei
 - AVOIN: (1) PK:n pari edustasta → korjaukset. (2) Mallit leipomatta: v4:n jälkeen leivo q-duanmen/q-chaofang ja yhdistä rakennukset-v92 =
   v91 + edusta (rakennukset.json mallit-avaimet). (3) ulkorengas-v13 pohjautuu k06d:n v12:een; jos v4-paketin ulkorengas-v12 eroaa, aja
   edusta_poista.py uudelleen sen kopioon. (4) Duanmen 290 m portista: sumu voi vaalentaa → VS. (5) LISÄYS 175/178 odotukset ennallaan.
+
+## LISÄYS 181 (1.11. 02.4x): LEIVONTA v4 – 0-0 UUDELLEEN, ODOTUSAJO KÄYNNISSÄ (PT) — ALOITA TÄSTÄ
+- Ajo 02.21: kk-tausta-0-0 VIKA (_valmiit/…-v99-vienti puuttui JU:n NAS-siirron aikana; nyt palautettu), 0-1 leivottu, 02.26 pysähtyi levyyn.
+  0-0 ei ole U/leivonta-v4/valmiit/-merkeissä → leivotaan uudelleen automaattisesti. U/leivonta-v4-odota.zsh käynnistetty uudelleen nohupilla
+  02.4x (loki U/ajo-leivonta-v4.log): jatkaa itse, kun levy ≥ 82 Gi (nyt 77). Älä käynnistä toista rinnalle (pgrep -fl leivonta-v4).
+- tausta-v89d-vienti on JU:n NAS:lla (/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/julkaisija/vienti-arkisto/); VS:n o3-pari ja PK:n
+  reitti-216/d6-juuri tarvitsevat sen _valmiit:iin → JU palauttaa (PT tietää). Leivonta käyttää kopiota U/leivonta-v4/kielletty-tausta-v90 (0-1 jo leivottu).
+- PT kuittasi edusta-v1:n raakana; PK kytkee, leivonta myöhemmin (LISÄYS 180 AVOIN 2).
