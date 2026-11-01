@@ -50,3 +50,11 @@ Edellinen: viesti-valoseppa-luovutus-20261031-2210.md (työtavat voimassa). Prot
 ## Osoitteet (osoitekirja, uusi tili)
 PT local_5df52e10-10e4-4b72-9554-0049db300dfe, LAV local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd, NS local_99130238-aa54-4a29-bcc9-7a023584944b,
 PK local_91a1bc27-6870-46aa-9886-66fd33b68880, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b.
+
+## LISÄYS 1.11. 02.1x (omistajan suunta 02.04: valo ykkösprioriteetti; piha 06 loppuun, sitten sama valo koko reitille)
+- Codex-tilaus terävästä päivätaivaasta: postilaatikko **05c6492af** (`posti/valoseppa-codex-paivataivas-v3-terava-20261101.md`) → vastaanota, `taivas-paiva-codex-v3/`, o3-pari.
+- **VALOPAKETTI** proto `linssiseppa2/k17-piha06-216` **c5ea5c835** = juna-216 ca536d93e + koe67 5a51c8181 + k17 ea732b7d3 + rappaus f07cb0eae + sumu oletuksena pois.
+  **VIKA (PT 02.1x):** TaustaKansio pitää olla `kielletty-tausta-v89d` ja RakennusKansio `kielletty-rakennukset-v89` (ei v87/v88) → ota juna-216:n
+  uusin kärki, yhdistä paketti sen päälle, korjaa kansiot, lisää linkit juuri-k06f:ään ja aja `pari-k06s.zsh` uudelleen (ensimmäinen k06s v87:llä = hylätään). → o3-pari PT → KK.
+- Reitti: globaalit arvot (k17, rappaus, SSR/GI/kiilto, sumu pois) koskevat koko reittiä; LAV leipoo reitin (aurinko 45°/318°, polvi 0,6/0,3,
+  k06d, v89d/v89; viesti lähetetty 02.1x) → PK:n c4-reitin koosteet 0/35/70 % valopaketilla vs runko → PT → KK.
