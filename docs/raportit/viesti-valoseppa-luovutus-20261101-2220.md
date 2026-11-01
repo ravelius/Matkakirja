@@ -28,3 +28,7 @@ Loki: `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md`.
 - wt/proto-linssiseppa2-vahti216: haara linssiseppa2/varjosavy-216 (1fe307e5a). Haarat ilmakivi-216, vahti-216 rungossa.
 - wt/proto-linssiseppa2-varjo216: linssiseppa2/ilma07-216 (12c5ceca5 kokeilu, korvattu 096f5fd11:llä) → poistettavissa.
 - wt/proto-linssiseppa2-k17 jää (3 committia ei rungossa).
+
+## LISÄYS 1.11. 22.3x (PT)
+- PT kuittasi 1fe307e5a junaan 217 → pyyntö NS:lle lähetetty; seuraaja tarkistaa ancestry NS:n vastauksesta.
+- LINJAUS (PT): mitattu havainne voittaa PT:n 25.10. lämpimät varjot → **varjojen sävy = havainteen sinivioletti (h 250–280°)**.
