@@ -9,8 +9,9 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Yksi Unity kerrallaan linjalla (lukot
    merge runkoon → käännös → L1/L2 (Notre-Dame, Louvre) lähimmältä tasolta 0,75 km → PT (KK arvioi terävyyden).
    Skenaario valmiina: proto-3d/_tyo/natiiviseppa/piirros/sk-lahin2.txt (aja: `SHA=<sha> A=app-<sha> zsh aja.zsh kaanna`,
    sitten `SK=sk-lahin2 U=<UDID> zsh aja.zsh todista`).
-2. **1,5 km:n terävyys:** kuvat PT:llä (todistus-piirros-sk-lahin3-20261101-0700: T1-eiffel, T2-montmartre, T3-notre-dame). Jos KK pitää
-   pehmeänä, säädä `PiirrosKerros.LahinLeveys` (0,45 ≈ 1,5 km; 0,54 ≈ 1,8 km) + vartijatesti Kartta-testit/Testit/PiirrosLahinTestit.cs (raja 1,3–1,7 km).
+2. **PT 07.2x: 1,5 km:n raja ja runko 17ed92b29 kuitattu** (T2 Montmartre riittävän terävä 1 m/px:llä). Seuraavaan junan 216 erään
+   (käännös JU:n vuorolla): KS:n 0,5 m/px -palat (26 tilattu) + tarkkuusalue päälle (kohta 1), VS:n räystäsvarjo, LAV v4 + ovet + sauma-v89f
+   (tulevat merge-pyyntöinä; liikevahti tarkistettava, ks. JATKOKOMENNOT).
 3. **Seuraava GC-löydös vain PT:n pyynnöstä (YKSI ehdotus ensin):** Nimikerros.LisaaElavat 76, Asetukset.Kehittaja ~13,
    VieritysHeratyksen FindObjectsByType ~1 ms/s (PiiloVartija.LaskettuSuodin jätetty pois, PT hyväksyi).
 4. **VS:n kiiltokoe piha 06** (koehaara natiiviseppa/koe67-piha06 = 5a51c8181, wt/proto-natiiviseppa-koe67, ÄLÄ poista): tulos VS:ltä ei tullut.
