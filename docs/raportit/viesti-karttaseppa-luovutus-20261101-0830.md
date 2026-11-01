@@ -16,7 +16,8 @@ P = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/`, C = `P/code
 - G:stä mitatut kertoimet: Louvre ×1,4, Notre-Dame ×2,0, Sainte-Chapelle ×1,25, ja PT hyväksyi ne 08.2x.
   Notre-Dame on siirretty 200 m itään, jotta Sainte-Chapelle näkyy (G:n tapaan).
 - kooste-1m.py sai ympäristömuuttujat KOOSTE_MAAMERKIT ja KOOSTE_SIIRTO (oletus ennallaan). Pari G:n rajauksella (lon 2.3215–2.3585):
-  `pari-G-peli-g-koko.jpg` on lähetetty PT:lle 08.2x. **Odottaa PT → KK → omistaja.**
+  `pari-G-peli-g-koko.jpg` on lähetetty PT:lle 08.2x. PT hyväksyi koot jatkoon 08.3x. **Omistajalle EI tätä paria, vaan vain yksi
+  yhdistetty pari: G | Codexin koepala + G-kokoiset maamerkit, samalla rajauksella ja zoomilla kuin G (PT 08.3x).**
 - Uudet Codex-maamerkit tarvitaan vain 0,5 m:n tasolle (Louvre ≥ 2500 px, Notre-Dame ≥ 1650 px). Tilaus tehdään vasta,
   kun koko on hyväksytty. Muut maamerkit eivät ole G:n alueella, joten niitä ei ole skaalattu.
 - Peliin vienti hyväksynnän jälkeen: koko kooste (1 m/px ja 0,5 m/px) + KOOSTE_PELI → JU.
