@@ -4,7 +4,7 @@ Syy: konteksti 25 % (pehmeä raja). Edellinen: viesti-valoseppa-luovutus-2026110
 -20261101-2124.md:ssä, voimassa). Loki: `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md` (22.25–01.4x).
 Mittarit `_tyo/linssiseppa2/skriptit-20261031/`: + punainen.py (punaiset pinnat h −12…16°, tumma/vaalea puolisko), rappaus-koonti.py.
 
-## SEURAAJAN ENSIMMÄINEN TYÖ (PT 2.11. 01.4x, yö; LAV jumissa nollausta odottaen, estää TF 217:n)
+## PERUTTU (PT 2.11. 01.5x): LAV TEKEE – Lavastaja nollautui ja ottaa bugit-217 takaisin; seuraaja EI tee niitä (alla vain tiedoksi)
 Junan 217 malliviat LAV:n paikannuksesta: `/Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/bugit-217/LUE.md` + bugilista
 `/Users/Shared/Claude/proto-3d/lokit/bugit-juoksu-217-20261102/RAPORTTI.md`: **11** kk-tausta-1-2 palasauma x −100, **7** t-portti-m216
 katto, **6** kattolevy leijuu, **8** valkoinen portaikko, **9** siniset raidat portaissa, **14** valopisteet muurin/sokkelin saumassa,
