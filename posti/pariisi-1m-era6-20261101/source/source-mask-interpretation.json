@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-11-01T02:04:22.758609+00:00",
+  "type": "parent interpretation after viewing source images, not a new receiver instruction",
+  "example": "pariisi-1m-r05-c02",
+  "observation": "The source water mask is one solid white lake polygon and omits holes for long grass islands, buildings and a bridge visible in the geometry guide.",
+  "decision": "Keep geometry-guide dry islands/buildings/bridges at their coordinates. White mask limits where water may appear; it does not require flooding these explicitly drawn dry features. Black mask forbids new water. Actual blue guide water within white mask must remain water.",
+  "qaConsequence": "Non-cyan pixels inside eroded white mask are candidates for visual review, not automatic missing-water failures."
+}

@@ -1,0 +1,681 @@
+{
+  "productionActive": false,
+  "generationCalls": 23,
+  "status": "17-selected-ready-for-aggregate-QA",
+  "safeEnded": true,
+  "agent": "/root",
+  "updatedAt": "2026-11-01T02:30:57.186089+00:00",
+  "tiles": {
+    "r09-c03": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c03-attempt001.txt",
+          "startedAt": "2026-11-01T02:14:32.675456+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-596ff8d7-a55d-4967-93db-0ddd38370980.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c03-attempt001-native.png",
+          "sha256": "981cb785c80967b42e7b364ce29afa5669bb0a8c3e250e96c2fa8aad8c227141",
+          "bytes": 1216453,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: same small top city fragment, fixed street/lawn shapes, predominantly blank paper, no water or added buildings. Fade slightly stronger ink than guide before disappearing."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-596ff8d7-a55d-4967-93db-0ddd38370980.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c03-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c03.png",
+      "sha256": "981cb785c80967b42e7b364ce29afa5669bb0a8c3e250e96c2fa8aad8c227141",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c03-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: same small top city fragment, fixed street/lawn shapes, predominantly blank paper, no water or added buildings. Fade slightly stronger ink than guide before disappearing.",
+      "limitations": []
+    },
+    "r09-c04": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c04-attempt001.txt",
+          "startedAt": "2026-11-01T02:14:32.675456+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-70dae243-b8b9-4cbe-90d2-01af57295df5.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c04-attempt001-native.png",
+          "sha256": "54a7b0c802ee89e2f1aba4b69c2eafc365b61a7a73cb4d59a35bc1772ee24d32",
+          "bytes": 1436282,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: roundjunction and top-right city footprint held, major blank lower/left paper retained. Fade ink slightly stronger than source; no water."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-70dae243-b8b9-4cbe-90d2-01af57295df5.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c04-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c04.png",
+      "sha256": "54a7b0c802ee89e2f1aba4b69c2eafc365b61a7a73cb4d59a35bc1772ee24d32",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c04-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: roundjunction and top-right city footprint held, major blank lower/left paper retained. Fade ink slightly stronger than source; no water.",
+      "limitations": []
+    },
+    "r09-c05": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c05-attempt001.txt",
+          "startedAt": "2026-11-01T02:14:32.675456+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-12591cf3-f45a-495a-8177-b03065ce2afa.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c05-attempt001-native.png",
+          "sha256": "a96d39ffa6bbfdb9682b2a4c83caacc06fd0277d776e9158a5c19118407898af",
+          "bytes": 2362513,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: diagonal railfan and boulevard retained; crisp q11 roofs, dry lawns, same lower boundary fade and blank paper. No water."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-12591cf3-f45a-495a-8177-b03065ce2afa.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c05-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c05.png",
+      "sha256": "a96d39ffa6bbfdb9682b2a4c83caacc06fd0277d776e9158a5c19118407898af",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c05-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: diagonal railfan and boulevard retained; crisp q11 roofs, dry lawns, same lower boundary fade and blank paper. No water.",
+      "limitations": []
+    },
+    "r09-c06": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c06-attempt001.txt",
+          "startedAt": "2026-11-01T02:14:32.675456+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ebe46861-0042-4206-bf35-ea72eef32b0d.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c06-attempt001-native.png",
+          "sha256": "e0a0bf2d26604662796d86328bd64f22f405bac980e08bb62744c8d5c7913240",
+          "bytes": 3016409,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: dense source blocks and grass courtyard retained, curved park paths fixed, tiny permitted right-edge water crescent present, lower-left paperfade kept. No added water."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ebe46861-0042-4206-bf35-ea72eef32b0d.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c06-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c06.png",
+      "sha256": "e0a0bf2d26604662796d86328bd64f22f405bac980e08bb62744c8d5c7913240",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c06-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: dense source blocks and grass courtyard retained, curved park paths fixed, tiny permitted right-edge water crescent present, lower-left paperfade kept. No added water.",
+      "limitations": []
+    },
+    "r09-c07": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c07-attempt001.txt",
+          "startedAt": "2026-11-01T02:16:30.103367+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bb8f706d-6349-419a-8c50-f116eef5a002.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c07-attempt001-native.png",
+          "sha256": "6e92298292a55ea6b42475e71e610d990f468a94e9fa3d5c73ec11551786d23e",
+          "bytes": 3341462,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: left leaf pool and dry island preserved; bottom-right decorative basin fully dry. Thin blue line below leaf pool is a small potential out-of-mask residual for aggregate measurement. Fixed city blocks, parks and paths retained."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bb8f706d-6349-419a-8c50-f116eef5a002.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c07-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c07.png",
+      "sha256": "6e92298292a55ea6b42475e71e610d990f468a94e9fa3d5c73ec11551786d23e",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c07-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: left leaf pool and dry island preserved; bottom-right decorative basin fully dry. Thin blue line below leaf pool is a small potential out-of-mask residual for aggregate measurement. Fixed city blocks, parks and paths retained.",
+      "limitations": []
+    },
+    "r09-c08": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c08-attempt001.txt",
+          "startedAt": "2026-11-01T02:16:30.103367+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-aa9b5821-90b3-4f7f-933c-fad16e35932f.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c08-attempt001-native.png",
+          "sha256": "3f2b7e1098f04e6363f366d2cc0bc90d970acf0959c6d22ca32b4e13d7664c5a",
+          "bytes": 3572743,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: dense blocks, diagonal boulevard, upper-left park and lower-right paperfade preserved; no water or extra objects. Roof ink/shapes crisp."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-aa9b5821-90b3-4f7f-933c-fad16e35932f.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c08-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c08.png",
+      "sha256": "3f2b7e1098f04e6363f366d2cc0bc90d970acf0959c6d22ca32b4e13d7664c5a",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c08-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: dense blocks, diagonal boulevard, upper-left park and lower-right paperfade preserved; no water or extra objects. Roof ink/shapes crisp.",
+      "limitations": []
+    },
+    "r09-c09": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "rejected-visual-QA",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c09-attempt001.txt",
+          "startedAt": "2026-11-01T02:16:30.103367+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-92d3eae1-5ea0-4d73-8870-dfa60afdd140.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c09-attempt001-native.png",
+          "sha256": "64dd17a6aa7633f71b3735c97aca417707cef0db5460bed619514bea8af0b711",
+          "bytes": 2308814,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Third river segment continues blue fade beyond white-mask terminus around y332. Needs full retry, retain three water segments only."
+        },
+        {
+          "attempt": 2,
+          "status": "rejected-visual-QA",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c09-attempt002.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1677bec1-8a21-40f7-876d-52d472376965.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c09-attempt002-native.png",
+          "sha256": "eab10b743257b981db47bf038c60732c2d9935a2f05f293f768c23e381eefb43",
+          "bytes": 2293793,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Water-mask exterior still blue."
+        },
+        {
+          "attempt": 3,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c09-attempt003.txt",
+          "status": "rejected-visual-QA",
+          "startedAt": "2026-11-01T02:27:49.128352+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-840c355a-d39e-4c3f-a85b-51bbb7be6b49.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c09-attempt003-native.png",
+          "sha256": "dd71cb76c9559d2e190dd9ccb8261096327818e5e5ced5d3576ec0c2434001e4",
+          "bytes": 2254771,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Third river reach still continues about60px past mask endpoint."
+        },
+        {
+          "attempt": 4,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c09-attempt004.txt",
+          "status": "selected-after-full-image-review",
+          "startedAt": "2026-11-01T02:30:01.401647+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-743e9755-49bb-4343-b445-05d2bdf540e9.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c09-attempt004-native.png",
+          "sha256": "1ad648ecaed6c3cc96a87bdc2205bb99573fc1825c2ff28bc2e8061f67db0b8a",
+          "bytes": 2204172,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-output reviewed: third river reach shortened to source mask, dry paper beyond, both bridges preserved. Faint right-edge house opacity varies from source; some near-invisible ghost footprints fade sooner."
+        }
+      ],
+      "selectedAttempt": 4,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-743e9755-49bb-4343-b445-05d2bdf540e9.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c09-attempt004-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c09.png",
+      "sha256": "1ad648ecaed6c3cc96a87bdc2205bb99573fc1825c2ff28bc2e8061f67db0b8a",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c09-attempt004.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-output reviewed: third river reach shortened to source mask, dry paper beyond, both bridges preserved. Faint right-edge house opacity varies from source; some near-invisible ghost footprints fade sooner.",
+      "limitations": []
+    },
+    "r09-c10": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c10-attempt001.txt",
+          "startedAt": "2026-11-01T02:16:30.103367+00:00",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-73f73711-aee1-4bb9-a396-fb10fedb8592.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c10-attempt001-native.png",
+          "sha256": "ffd990f8d932bde2b1cb9f3092bb22531c61d3cef736fcb14844caf982c72dbd",
+          "bytes": 1801611,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-image reviewed: fixed upper-right park and clipped upper-left railfan, mostly blank paper retained. Boundary building ink stronger than pale source but city footprint and outer fade maintained."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-73f73711-aee1-4bb9-a396-fb10fedb8592.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c10-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c10.png",
+      "sha256": "ffd990f8d932bde2b1cb9f3092bb22531c61d3cef736fcb14844caf982c72dbd",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c10-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-image reviewed: fixed upper-right park and clipped upper-left railfan, mostly blank paper retained. Boundary building ink stronger than pale source but city footprint and outer fade maintained.",
+      "limitations": []
+    },
+    "r09-c11": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c11-attempt001.txt",
+          "startedAt": "2026-11-01T02:21:39.191760+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7b6c9478-b446-4286-be0a-df6388795134.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c11-attempt001-native.png",
+          "sha256": "ed5b55742fe26a293fd4b73b43aba108d85f717716ba2ad3810381d66b68f5f5",
+          "bytes": 1816956,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full image inspected: correct park paths, top-clipped pond only, decorative canals dry, source lower-half fade preserved."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7b6c9478-b446-4286-be0a-df6388795134.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c11-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c11.png",
+      "sha256": "ed5b55742fe26a293fd4b73b43aba108d85f717716ba2ad3810381d66b68f5f5",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c11-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full image inspected: correct park paths, top-clipped pond only, decorative canals dry, source lower-half fade preserved.",
+      "limitations": []
+    },
+    "r09-c12": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "rejected-visual-QA",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c12-attempt001.txt",
+          "startedAt": "2026-11-01T02:21:39.191760+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-77ab7acf-96e9-476c-9bad-5b1550751d54.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c12-attempt001-native.png",
+          "sha256": "7e02765c589c3b43f4ab48d93be3c493336cb1e03dbeab0459f9010e01685980",
+          "bytes": 2322105,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Forbidden blue ornamental basins remain around x875y554, x740y706 and x830y800; whole new attempt needed."
+        },
+        {
+          "attempt": 2,
+          "status": "rejected-visual-QA",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c12-attempt002.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-705b437e-5179-4a54-b438-0e191a525af8.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c12-attempt002-native.png",
+          "sha256": "8da681afb024c80fe7080d625c533e3d69d5315d1508c93c46597645eef5e20d",
+          "bytes": 2060475,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Water-mask exterior still blue."
+        },
+        {
+          "attempt": 3,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c12-attempt003.txt",
+          "status": "selected-after-full-image-review",
+          "startedAt": "2026-11-01T02:27:49.128352+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3744252d-ae9e-4018-bddb-0101aa2c49c0.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c12-attempt003-native.png",
+          "sha256": "39aad61bc086a4f0ae92fc577798496fe78a6ca9be800c615697c875b9bc5a26",
+          "bytes": 2438606,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full image reviewed: all named central ornamental pools now ivory; big banana lake preserved. Very small blue remnant in far-right thin channel needs disclosed technical review."
+        }
+      ],
+      "selectedAttempt": 3,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3744252d-ae9e-4018-bddb-0101aa2c49c0.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c12-attempt003-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c12.png",
+      "sha256": "39aad61bc086a4f0ae92fc577798496fe78a6ca9be800c615697c875b9bc5a26",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c12-attempt003.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full image reviewed: all named central ornamental pools now ivory; big banana lake preserved. Very small blue remnant in far-right thin channel needs disclosed technical review.",
+      "limitations": []
+    },
+    "r09-c13": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c13-attempt001.txt",
+          "startedAt": "2026-11-01T02:21:39.191760+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-cb5724d1-5328-44e9-88be-ca4eda8ea0ed.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c13-attempt001-native.png",
+          "sha256": "fb6b33c405e1dc5d86b4b65f6f4d7b9b530c38aa5c8159c255453f3826b3d939",
+          "bytes": 1952088,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full image inspected: dry ornamental basins, fixed park paths and sparse buildings, eastern blank paper fade retained, no blue water."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-cb5724d1-5328-44e9-88be-ca4eda8ea0ed.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r09-c13-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r09-c13.png",
+      "sha256": "fb6b33c405e1dc5d86b4b65f6f4d7b9b530c38aa5c8159c255453f3826b3d939",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r09-c13-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full image inspected: dry ornamental basins, fixed park paths and sparse buildings, eastern blank paper fade retained, no blue water.",
+      "limitations": []
+    },
+    "r10-c06": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c06-attempt001.txt",
+          "startedAt": "2026-11-01T02:21:39.191760+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9884bcad-35dc-4d79-9c31-cd2c15050001.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c06-attempt001-native.png",
+          "sha256": "b6ef1750f1ceb7dab0b884bbaa7e9cdf43f92160fac131827c69a3d64b8473f4",
+          "bytes": 1353971,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full image inspected: exact top-right city strip and predominantly blank paper retained, no water. Edge ink somewhat stronger before fade."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9884bcad-35dc-4d79-9c31-cd2c15050001.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c06-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r10-c06.png",
+      "sha256": "b6ef1750f1ceb7dab0b884bbaa7e9cdf43f92160fac131827c69a3d64b8473f4",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c06-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full image inspected: exact top-right city strip and predominantly blank paper retained, no water. Edge ink somewhat stronger before fade.",
+      "limitations": []
+    },
+    "r10-c07": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c07-attempt001.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1765fb34-4c4d-464c-9c82-6a6c503afae1.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c07-attempt001-native.png",
+          "sha256": "a7f115857a5ee30ea373143951e806adc716f6105a87d96dc0e787757c250309",
+          "bytes": 1606490,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1765fb34-4c4d-464c-9c82-6a6c503afae1.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c07-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r10-c07.png",
+      "sha256": "a7f115857a5ee30ea373143951e806adc716f6105a87d96dc0e787757c250309",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c07-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide.",
+      "limitations": []
+    },
+    "r10-c08": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c08-attempt001.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9f36f1c5-722f-42e2-ace6-08068fc43021.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c08-attempt001-native.png",
+          "sha256": "1cd7677c217ec4ac4a1296dbefe9ec05dc81f631e8347a26abc6f04c3d6b412b",
+          "bytes": 1546509,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9f36f1c5-722f-42e2-ace6-08068fc43021.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c08-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r10-c08.png",
+      "sha256": "1cd7677c217ec4ac4a1296dbefe9ec05dc81f631e8347a26abc6f04c3d6b412b",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c08-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide.",
+      "limitations": []
+    },
+    "r10-c11": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c11-attempt001.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f28f7e17-1caf-44f9-a671-0684db763595.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c11-attempt001-native.png",
+          "sha256": "30988e1cd2552a3769ca6f3e29a1e2f22b94a9b52df56e07d528d05e6218dce4",
+          "bytes": 1032896,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f28f7e17-1caf-44f9-a671-0684db763595.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c11-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r10-c11.png",
+      "sha256": "30988e1cd2552a3769ca6f3e29a1e2f22b94a9b52df56e07d528d05e6218dce4",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c11-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide.",
+      "limitations": []
+    },
+    "r10-c12": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "rejected-visual-QA",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c12-attempt001.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-006c6a3e-0c36-4fd2-88c1-de755f5dd0ad.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c12-attempt001-native.png",
+          "sha256": "ba0d7514daa1ef094eb95621f0405a78d886f8cb7aa14e602d93da0e38ecf340",
+          "bytes": 1222363,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Southern boundary houses much too dark compared with nearly invisible source fade."
+        },
+        {
+          "attempt": 2,
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c12-attempt002.txt",
+          "status": "selected-after-full-image-review",
+          "startedAt": "2026-11-01T02:27:49.128352+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b14519e4-35b0-4219-a618-abc1c4cfac79.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c12-attempt002-native.png",
+          "sha256": "a701dc733b7f12a2b37f1c9c347b8291c475e88e0c6966bdb4c16708ae9c1cae",
+          "bytes": 1180872,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full guide/output reviewed: corrected almost-invisible southern boundary houses, fixed native footprints and tiny top clipped pond; predominantly blank paper retained."
+        }
+      ],
+      "selectedAttempt": 2,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b14519e4-35b0-4219-a618-abc1c4cfac79.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c12-attempt002-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r10-c12.png",
+      "sha256": "a701dc733b7f12a2b37f1c9c347b8291c475e88e0c6966bdb4c16708ae9c1cae",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c12-attempt002.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full guide/output reviewed: corrected almost-invisible southern boundary houses, fixed native footprints and tiny top clipped pond; predominantly blank paper retained.",
+      "limitations": []
+    },
+    "r10-c13": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "selected-after-full-image-review",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c13-attempt001.txt",
+          "startedAt": "2026-11-01T02:23:50.661782+00:00",
+          "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2",
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5994c619-bb41-4d53-85aa-8a7dd06e69dc.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c13-attempt001-native.png",
+          "sha256": "94a66d033d9f6f8d854a9ef586e4f30a8c2d21e78743703512478bb1e7359049",
+          "bytes": 1278733,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide."
+        }
+      ],
+      "selectedAttempt": 1,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5994c619-bb41-4d53-85aa-8a7dd06e69dc.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/raw/r10-c13-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/final/pariisi-1m-r10-c13.png",
+      "sha256": "94a66d033d9f6f8d854a9ef586e4f30a8c2d21e78743703512478bb1e7359049",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era6/prompts/r10-c13-attempt001.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualQA": "Full-guide/full-output reviewed: original city/park footprint and mostly empty outer paper retained, no unauthorized water or extra city. Source fade followed; some boundary ink slightly darker than guide.",
+      "limitations": []
+    }
+  }
+}

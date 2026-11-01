@@ -1,0 +1,2162 @@
+{
+ "kuvaus": "Pariisin 1 m/px -palat (res 2), Codex maalaa kaupunkipalat; saumat pienimmän eron leikkauksella (saumaleikkaus.py)",
+ "leveys": 1536,
+ "korkeus": 1024,
+ "limitys_px": 128,
+ "askel": [
+  1408,
+  896
+ ],
+ "kangas_res2": [
+  20736,
+  9728
+ ],
+ "kaupunkipaloja": 97,
+ "palat": [
+  {
+   "nimi": "pariisi-1m-r01-c01",
+   "rivi": 1,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    0,
+    1536,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c02",
+   "rivi": 1,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    0,
+    2944,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c03",
+   "rivi": 1,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    0,
+    4352,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c04",
+   "rivi": 1,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    0,
+    5760,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c05",
+   "rivi": 1,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    0,
+    7168,
+    1024
+   ],
+   "kaupunkia_osuus": 0.193,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r01-c06",
+   "rivi": 1,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    0,
+    8576,
+    1024
+   ],
+   "kaupunkia_osuus": 0.589,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r01-c07",
+   "rivi": 1,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    0,
+    9984,
+    1024
+   ],
+   "kaupunkia_osuus": 0.637,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r01-c08",
+   "rivi": 1,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    0,
+    11392,
+    1024
+   ],
+   "kaupunkia_osuus": 0.673,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r01-c09",
+   "rivi": 1,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    0,
+    12800,
+    1024
+   ],
+   "kaupunkia_osuus": 0.621,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r01-c10",
+   "rivi": 1,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    0,
+    14208,
+    1024
+   ],
+   "kaupunkia_osuus": 0.04,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r01-c11",
+   "rivi": 1,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    0,
+    15616,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c12",
+   "rivi": 1,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    0,
+    17024,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c13",
+   "rivi": 1,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    0,
+    18432,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c14",
+   "rivi": 1,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    0,
+    19840,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r01-c15",
+   "rivi": 1,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    0,
+    21248,
+    1024
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c01",
+   "rivi": 2,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    896,
+    1536,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c02",
+   "rivi": 2,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    896,
+    2944,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c03",
+   "rivi": 2,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    896,
+    4352,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c04",
+   "rivi": 2,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    896,
+    5760,
+    1920
+   ],
+   "kaupunkia_osuus": 0.297,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c05",
+   "rivi": 2,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    896,
+    7168,
+    1920
+   ],
+   "kaupunkia_osuus": 0.917,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c06",
+   "rivi": 2,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    896,
+    8576,
+    1920
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c07",
+   "rivi": 2,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    896,
+    9984,
+    1920
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c08",
+   "rivi": 2,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    896,
+    11392,
+    1920
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c09",
+   "rivi": 2,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    896,
+    12800,
+    1920
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c10",
+   "rivi": 2,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    896,
+    14208,
+    1920
+   ],
+   "kaupunkia_osuus": 0.201,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r02-c11",
+   "rivi": 2,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    896,
+    15616,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c12",
+   "rivi": 2,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    896,
+    17024,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c13",
+   "rivi": 2,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    896,
+    18432,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c14",
+   "rivi": 2,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    896,
+    19840,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r02-c15",
+   "rivi": 2,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    896,
+    21248,
+    1920
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r03-c01",
+   "rivi": 3,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    1792,
+    1536,
+    2816
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r03-c02",
+   "rivi": 3,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    1792,
+    2944,
+    2816
+   ],
+   "kaupunkia_osuus": 0.102,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c03",
+   "rivi": 3,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    1792,
+    4352,
+    2816
+   ],
+   "kaupunkia_osuus": 0.336,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c04",
+   "rivi": 3,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    1792,
+    5760,
+    2816
+   ],
+   "kaupunkia_osuus": 0.915,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c05",
+   "rivi": 3,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    1792,
+    7168,
+    2816
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c06",
+   "rivi": 3,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    1792,
+    8576,
+    2816
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c07",
+   "rivi": 3,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    1792,
+    9984,
+    2816
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c08",
+   "rivi": 3,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    1792,
+    11392,
+    2816
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c09",
+   "rivi": 3,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    1792,
+    12800,
+    2816
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c10",
+   "rivi": 3,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    1792,
+    14208,
+    2816
+   ],
+   "kaupunkia_osuus": 0.551,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r03-c11",
+   "rivi": 3,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    1792,
+    15616,
+    2816
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r03-c12",
+   "rivi": 3,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    1792,
+    17024,
+    2816
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r03-c13",
+   "rivi": 3,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    1792,
+    18432,
+    2816
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r03-c14",
+   "rivi": 3,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    1792,
+    19840,
+    2816
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r03-c15",
+   "rivi": 3,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    1792,
+    21248,
+    2816
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r04-c01",
+   "rivi": 4,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    2688,
+    1536,
+    3712
+   ],
+   "kaupunkia_osuus": 0.261,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c02",
+   "rivi": 4,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    2688,
+    2944,
+    3712
+   ],
+   "kaupunkia_osuus": 0.866,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c03",
+   "rivi": 4,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    2688,
+    4352,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c04",
+   "rivi": 4,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    2688,
+    5760,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c05",
+   "rivi": 4,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    2688,
+    7168,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c06",
+   "rivi": 4,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    2688,
+    8576,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c07",
+   "rivi": 4,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    2688,
+    9984,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c08",
+   "rivi": 4,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    2688,
+    11392,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c09",
+   "rivi": 4,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    2688,
+    12800,
+    3712
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c10",
+   "rivi": 4,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    2688,
+    14208,
+    3712
+   ],
+   "kaupunkia_osuus": 0.913,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c11",
+   "rivi": 4,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    2688,
+    15616,
+    3712
+   ],
+   "kaupunkia_osuus": 0.008,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r04-c12",
+   "rivi": 4,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    2688,
+    17024,
+    3712
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r04-c13",
+   "rivi": 4,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    2688,
+    18432,
+    3712
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r04-c14",
+   "rivi": 4,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    2688,
+    19840,
+    3712
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r04-c15",
+   "rivi": 4,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    2688,
+    21248,
+    3712
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r05-c01",
+   "rivi": 5,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    3584,
+    1536,
+    4608
+   ],
+   "kaupunkia_osuus": 0.74,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c02",
+   "rivi": 5,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    3584,
+    2944,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c03",
+   "rivi": 5,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    3584,
+    4352,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c04",
+   "rivi": 5,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    3584,
+    5760,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c05",
+   "rivi": 5,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    3584,
+    7168,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c06",
+   "rivi": 5,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    3584,
+    8576,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c07",
+   "rivi": 5,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    3584,
+    9984,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c08",
+   "rivi": 5,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    3584,
+    11392,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c09",
+   "rivi": 5,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    3584,
+    12800,
+    4608
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c10",
+   "rivi": 5,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    3584,
+    14208,
+    4608
+   ],
+   "kaupunkia_osuus": 0.949,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c11",
+   "rivi": 5,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    3584,
+    15616,
+    4608
+   ],
+   "kaupunkia_osuus": 0.032,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r05-c12",
+   "rivi": 5,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    3584,
+    17024,
+    4608
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r05-c13",
+   "rivi": 5,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    3584,
+    18432,
+    4608
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r05-c14",
+   "rivi": 5,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    3584,
+    19840,
+    4608
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r05-c15",
+   "rivi": 5,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    3584,
+    21248,
+    4608
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r06-c01",
+   "rivi": 6,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    4480,
+    1536,
+    5504
+   ],
+   "kaupunkia_osuus": 0.503,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c02",
+   "rivi": 6,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    4480,
+    2944,
+    5504
+   ],
+   "kaupunkia_osuus": 0.979,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c03",
+   "rivi": 6,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    4480,
+    4352,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c04",
+   "rivi": 6,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    4480,
+    5760,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c05",
+   "rivi": 6,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    4480,
+    7168,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c06",
+   "rivi": 6,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    4480,
+    8576,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c07",
+   "rivi": 6,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    4480,
+    9984,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c08",
+   "rivi": 6,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    4480,
+    11392,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c09",
+   "rivi": 6,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    4480,
+    12800,
+    5504
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c10",
+   "rivi": 6,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    4480,
+    14208,
+    5504
+   ],
+   "kaupunkia_osuus": 0.997,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c11",
+   "rivi": 6,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    4480,
+    15616,
+    5504
+   ],
+   "kaupunkia_osuus": 0.101,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r06-c12",
+   "rivi": 6,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    4480,
+    17024,
+    5504
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r06-c13",
+   "rivi": 6,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    4480,
+    18432,
+    5504
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r06-c14",
+   "rivi": 6,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    4480,
+    19840,
+    5504
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r06-c15",
+   "rivi": 6,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    4480,
+    21248,
+    5504
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r07-c01",
+   "rivi": 7,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    5376,
+    1536,
+    6400
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c02",
+   "rivi": 7,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    5376,
+    2944,
+    6400
+   ],
+   "kaupunkia_osuus": 0.535,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c03",
+   "rivi": 7,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    5376,
+    4352,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c04",
+   "rivi": 7,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    5376,
+    5760,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c05",
+   "rivi": 7,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    5376,
+    7168,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c06",
+   "rivi": 7,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    5376,
+    8576,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c07",
+   "rivi": 7,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    5376,
+    9984,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c08",
+   "rivi": 7,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    5376,
+    11392,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c09",
+   "rivi": 7,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    5376,
+    12800,
+    6400
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c10",
+   "rivi": 7,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    5376,
+    14208,
+    6400
+   ],
+   "kaupunkia_osuus": 0.969,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c11",
+   "rivi": 7,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    5376,
+    15616,
+    6400
+   ],
+   "kaupunkia_osuus": 0.358,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c12",
+   "rivi": 7,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    5376,
+    17024,
+    6400
+   ],
+   "kaupunkia_osuus": 0.628,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c13",
+   "rivi": 7,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    5376,
+    18432,
+    6400
+   ],
+   "kaupunkia_osuus": 0.373,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r07-c14",
+   "rivi": 7,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    5376,
+    19840,
+    6400
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r07-c15",
+   "rivi": 7,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    5376,
+    21248,
+    6400
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r08-c01",
+   "rivi": 8,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    6272,
+    1536,
+    7296
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r08-c02",
+   "rivi": 8,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    6272,
+    2944,
+    7296
+   ],
+   "kaupunkia_osuus": 0.145,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c03",
+   "rivi": 8,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    6272,
+    4352,
+    7296
+   ],
+   "kaupunkia_osuus": 0.666,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c04",
+   "rivi": 8,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    6272,
+    5760,
+    7296
+   ],
+   "kaupunkia_osuus": 0.875,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c05",
+   "rivi": 8,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    6272,
+    7168,
+    7296
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c06",
+   "rivi": 8,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    6272,
+    8576,
+    7296
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c07",
+   "rivi": 8,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    6272,
+    9984,
+    7296
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c08",
+   "rivi": 8,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    6272,
+    11392,
+    7296
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c09",
+   "rivi": 8,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    6272,
+    12800,
+    7296
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c10",
+   "rivi": 8,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    6272,
+    14208,
+    7296
+   ],
+   "kaupunkia_osuus": 0.898,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c11",
+   "rivi": 8,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    6272,
+    15616,
+    7296
+   ],
+   "kaupunkia_osuus": 0.849,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c12",
+   "rivi": 8,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    6272,
+    17024,
+    7296
+   ],
+   "kaupunkia_osuus": 1.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c13",
+   "rivi": 8,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    6272,
+    18432,
+    7296
+   ],
+   "kaupunkia_osuus": 0.72,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r08-c14",
+   "rivi": 8,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    6272,
+    19840,
+    7296
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r08-c15",
+   "rivi": 8,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    6272,
+    21248,
+    7296
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r09-c01",
+   "rivi": 9,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    7168,
+    1536,
+    8192
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r09-c02",
+   "rivi": 9,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    7168,
+    2944,
+    8192
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r09-c03",
+   "rivi": 9,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    7168,
+    4352,
+    8192
+   ],
+   "kaupunkia_osuus": 0.032,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c04",
+   "rivi": 9,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    7168,
+    5760,
+    8192
+   ],
+   "kaupunkia_osuus": 0.117,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c05",
+   "rivi": 9,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    7168,
+    7168,
+    8192
+   ],
+   "kaupunkia_osuus": 0.517,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c06",
+   "rivi": 9,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    7168,
+    8576,
+    8192
+   ],
+   "kaupunkia_osuus": 0.891,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c07",
+   "rivi": 9,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    7168,
+    9984,
+    8192
+   ],
+   "kaupunkia_osuus": 0.999,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c08",
+   "rivi": 9,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    7168,
+    11392,
+    8192
+   ],
+   "kaupunkia_osuus": 0.967,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c09",
+   "rivi": 9,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    7168,
+    12800,
+    8192
+   ],
+   "kaupunkia_osuus": 0.477,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c10",
+   "rivi": 9,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    7168,
+    14208,
+    8192
+   ],
+   "kaupunkia_osuus": 0.175,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c11",
+   "rivi": 9,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    7168,
+    15616,
+    8192
+   ],
+   "kaupunkia_osuus": 0.494,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c12",
+   "rivi": 9,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    7168,
+    17024,
+    8192
+   ],
+   "kaupunkia_osuus": 0.965,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c13",
+   "rivi": 9,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    7168,
+    18432,
+    8192
+   ],
+   "kaupunkia_osuus": 0.583,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r09-c14",
+   "rivi": 9,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    7168,
+    19840,
+    8192
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r09-c15",
+   "rivi": 9,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    7168,
+    21248,
+    8192
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c01",
+   "rivi": 10,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    8064,
+    1536,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c02",
+   "rivi": 10,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    8064,
+    2944,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c03",
+   "rivi": 10,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    8064,
+    4352,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c04",
+   "rivi": 10,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    8064,
+    5760,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c05",
+   "rivi": 10,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    8064,
+    7168,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c06",
+   "rivi": 10,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    8064,
+    8576,
+    9088
+   ],
+   "kaupunkia_osuus": 0.096,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r10-c07",
+   "rivi": 10,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    8064,
+    9984,
+    9088
+   ],
+   "kaupunkia_osuus": 0.268,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r10-c08",
+   "rivi": 10,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    8064,
+    11392,
+    9088
+   ],
+   "kaupunkia_osuus": 0.199,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r10-c09",
+   "rivi": 10,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    8064,
+    12800,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c10",
+   "rivi": 10,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    8064,
+    14208,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c11",
+   "rivi": 10,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    8064,
+    15616,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r10-c12",
+   "rivi": 10,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    8064,
+    17024,
+    9088
+   ],
+   "kaupunkia_osuus": 0.116,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r10-c13",
+   "rivi": 10,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    8064,
+    18432,
+    9088
+   ],
+   "kaupunkia_osuus": 0.096,
+   "codex": true
+  },
+  {
+   "nimi": "pariisi-1m-r10-c14",
+   "rivi": 10,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    8064,
+    19840,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r10-c15",
+   "rivi": 10,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    8064,
+    21248,
+    9088
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c01",
+   "rivi": 11,
+   "sarake": 1,
+   "rajaus_res2": [
+    0,
+    8960,
+    1536,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c02",
+   "rivi": 11,
+   "sarake": 2,
+   "rajaus_res2": [
+    1408,
+    8960,
+    2944,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c03",
+   "rivi": 11,
+   "sarake": 3,
+   "rajaus_res2": [
+    2816,
+    8960,
+    4352,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c04",
+   "rivi": 11,
+   "sarake": 4,
+   "rajaus_res2": [
+    4224,
+    8960,
+    5760,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c05",
+   "rivi": 11,
+   "sarake": 5,
+   "rajaus_res2": [
+    5632,
+    8960,
+    7168,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c06",
+   "rivi": 11,
+   "sarake": 6,
+   "rajaus_res2": [
+    7040,
+    8960,
+    8576,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c07",
+   "rivi": 11,
+   "sarake": 7,
+   "rajaus_res2": [
+    8448,
+    8960,
+    9984,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c08",
+   "rivi": 11,
+   "sarake": 8,
+   "rajaus_res2": [
+    9856,
+    8960,
+    11392,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c09",
+   "rivi": 11,
+   "sarake": 9,
+   "rajaus_res2": [
+    11264,
+    8960,
+    12800,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c10",
+   "rivi": 11,
+   "sarake": 10,
+   "rajaus_res2": [
+    12672,
+    8960,
+    14208,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c11",
+   "rivi": 11,
+   "sarake": 11,
+   "rajaus_res2": [
+    14080,
+    8960,
+    15616,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c12",
+   "rivi": 11,
+   "sarake": 12,
+   "rajaus_res2": [
+    15488,
+    8960,
+    17024,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c13",
+   "rivi": 11,
+   "sarake": 13,
+   "rajaus_res2": [
+    16896,
+    8960,
+    18432,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c14",
+   "rivi": 11,
+   "sarake": 14,
+   "rajaus_res2": [
+    18304,
+    8960,
+    19840,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  },
+  {
+   "nimi": "pariisi-1m-r11-c15",
+   "rivi": 11,
+   "sarake": 15,
+   "rajaus_res2": [
+    19712,
+    8960,
+    21248,
+    9984
+   ],
+   "kaupunkia_osuus": 0.0,
+   "codex": false
+  }
+ ]
+}

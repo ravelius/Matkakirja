@@ -1,0 +1,20 @@
+{
+  "reviewedAt": "2026-11-01T02:31:55.748175+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "outcome": "17-native-images-full-output-reviewed-small-disclosed-residuals",
+  "all17FullGeneratedOutputsViewed": true,
+  "guidesAndMasksViewed": true,
+  "nativeIdentityVerified": true,
+  "groundGeometryCertified": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "limitations": [
+    "Erä6:17natiivia kuvaa,23kokonaista kutsua. Reunapalojen suuret paperialat ovat tarkoituksellisia ja seuraavat ohjetta; r10-c11 on lähes kokonaan paperia, oikean yläkulman hyvin haalea fragmentti säilyy.",
+    "r09-c09:n neljäs kokonainen otto korjasi kolmannen jokijakson aiemman pitkän ylityksen. Valkoisen maskin sisällä338px ei-sininen alue bbox1039,287,1105,323 on viimeisen vesijakson lyhyen päätyrajan ja talojen reunalla. Ei väitettä pikseli-identtisestä geometriasta.",
+    "r09-c12:n pienet keskialtaat korjattu kolmannella otolla; oikean reunan kanavassa67px sininen jäämä bbox1415,851,1424,866 jää vastaanottajan arvioon. r09-c07:77px pieni rajapoikkeama bbox139,541,164,560. Muut siniproxyn pienet havainnot ovat pääosin kattosävyjä.",
+    "Reunojen haaleiden talojen mustevoimakkuus vaihtelee hieman lähteeseen nähden. r09-c09 muutama lähes näkymätön haamujalanjälki häviää aiemmin; r09-c10,r10-c06/r10-c13 osa viivoista hieman tummempia. r10-c12:n etelärivi korjattu erillisellä uudella otolla alkuperäisen haaleaksi.",
+    "20sisälimityksen RGB-MAE 1.80–20.04/255; vastaanottajan leikkauspolku/kapea häivytys ja veden sävyjen tasaus erillinen. Ei runtime-/julkaisunäyttöä."
+  ]
+}
