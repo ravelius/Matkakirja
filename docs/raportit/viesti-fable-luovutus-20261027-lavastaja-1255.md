@@ -2708,3 +2708,15 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   venytä aukon reunaan) ja ohut palkki (V4_palatsi_friisi tms. olemassa olevista materiaaleista).
 - Uusi pari tasaisessa valossa (U/kujaportti-avoin/, rendtasa.py-tyyppinen workbench, kamera −0,3 / 9 / 4,2, 76°, 180°, 20 mm) → PT → kuittaus.
   Sitten LISÄYS 202:n jatkovaiheet (leivonta, lod1/2, paketti). Scratchpadin rendtasa.py katoaa: kopioi tarvittaessa uudelleen.
+
+## LISÄYS 205 (1.11. 22.5x): P-KUJAPORTTI KORJATTU (LISÄYS 204) → UUSI PARI PT:LLE — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- T/portti_avoimeksi.py laajennettu (vanhat parametrit ennallaan): [AUKKO_X] [KATE_X0 3,54] [KATE_X1 6,21] [PALKKI_ALA 4,08] [PALKKI_YLA 4,36] [PALKKI_S 0,18].
+  Ovilehdet/nastat/kynnys (V4_ovilehti, V4_nasta, V4_wood) eivät leikkaudu. AUKKO_X annettuna: sivumuurin kate (friisi, räystäs, kultareunat,
+  kate, harja) kopioidaan siirrettynä aukon reunaan |x| = AUKKO_X (ei venytystä), päätyyn kopio muurin päädyn punaisesta päätykappaleesta,
+  ja aukon ylle ohut palkki (etu/taka V4_palatsi_friisi muurin friisin UV:illa, muut V4_raystas_alus_puu).
+- Ajo: portti_avoimeksi.py -- RS/p-kujaportti-lod0.glb ulos 3.3 3.62 5.6 2.60 → pilarit muurin korkeuteen (3,30), umpilaatta pois, katteet
+  jatkuvat aukon reunaan samalla korkeudella, palkki 4,08–4,36 (lepää harjojen päällä), ovet 4,07 ennallaan, kulkuaukon mitat ennallaan.
+  Tulos U/kujaportti-avoin/p-kujaportti-lod0.glb (korvasi LISÄYS 202:n; EI leivottu). UV1/UV2 uusille pinnoille nolla → leivonta purkaa.
+- Pari: U/kujaportti-avoin/pari-05-nyk-uusi2-havainne.jpg (nyk | uusi | havainne 05), kamera kuten LISÄYS 204. → PT:lle kuittauspyyntö 22.5x.
+- ODOTTAA PT:n kuittausta, sitten LISÄYS 202:n jatkovaiheet (leivonta, lod1/2 samoilla parametreilla, paketti rakennukset-v92). Jonossa 200, 201, 203.
