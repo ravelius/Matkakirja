@@ -18,6 +18,11 @@ P = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/`, C = `P/code
 - kooste-1m.py sai ympäristömuuttujat KOOSTE_MAAMERKIT ja KOOSTE_SIIRTO (oletus ennallaan). Pari G:n rajauksella (lon 2.3215–2.3585):
   `pari-G-peli-g-koko.jpg` on lähetetty PT:lle 08.2x. PT hyväksyi koot jatkoon 08.3x. **Omistajalle EI tätä paria, vaan vain yksi
   yhdistetty pari: G | Codexin koepala + G-kokoiset maamerkit, samalla rajauksella ja zoomilla kuin G (PT 08.3x).**
+- **Lopullisen parin mitta (PT 08.2x):** pyramidin kärki – ruusuikkuna yhtä monta pikseliä kuin G:ssä (428 px / 1280).
+  Skaalatuilla maamerkeillä väli on noin 1272 m, joten rajaus on noin 3,8 km leveä (res 2: x 6487–10291, y 3205–5627,
+  ensimmäinen pari.py:n kehys). Koepala (lon 2.3215–2.3585, 2,7 km) peittää vain keskiosan, joten reunat tulevat nykyisestä
+  pohjasta tai rajausta tasataan. Notre-Dame ei saa leikkautua reunaan. Omistajalle yksi rivi: "Notre-Dame on siirretty
+  200 m itään, jotta Sainte-Chapelle näkyy sen vieressä kuten G:ssä." 
 - Uudet Codex-maamerkit tarvitaan vain 0,5 m:n tasolle (Louvre ≥ 2500 px, Notre-Dame ≥ 1650 px). Tilaus tehdään vasta,
   kun koko on hyväksytty. Muut maamerkit eivät ole G:n alueella, joten niitä ei ole skaalattu.
 - Peliin vienti hyväksynnän jälkeen: koko kooste (1 m/px ja 0,5 m/px) + KOOSTE_PELI → JU.
