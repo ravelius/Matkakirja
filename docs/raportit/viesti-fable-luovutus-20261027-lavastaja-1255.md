@@ -2757,3 +2757,13 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   vaihe 1 养心殿 + 储秀宫, vaihe 2 muut kuuden palatsin päähallit tyyppinä (korvaavat 21 yleistä avointa huonetta samoilla kujilla),
   vaihe 3 keskiakselin salit; mittalähteet; Codexin piirrostilausluonnos (pohja 1:100 + 4 seinäkuvaa, ei sisäkattoa).
 - ODOTTAA PT:n kuittausta. Muu jono: 200 (ei nyt); v92 + tausta-v91 odottavat junan 217 lukitusta.
+
+## LISÄYS 211 (1.11. 23.1x): SISÄTILAT VAIHE 1 – CODEX-TILAUS POSTISSA + LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+- PT kuittasi suunnitelman (c1adebf33). Codex-tilaus origin/claude/postilaatikko 658a9f6ed:
+  posti/lavastaja-codex-sisatilat-vaihe1-piirrokset-20261101.md (养心殿 + 储秀宫: pohja 1:100 + 4 seinäkuvaa, mitat.json, QA-FI.md).
+  Toimitus tulee posti/juoksupeli-sisatilat-vaihe1-20261101/ + viesti codex-lavastaja-sisatilat-vaihe1-toimitus-<pvm>.md.
+- KUN TOIMITUS TULEE: tarkista ulkomitat OSM:ään (养心殿 36,0 × 15,6, 储秀宫 26,8 × 13,2 akselin suunnassa; pohja.json way/40606461,
+  way/40631826) ja [A]-mitat kuvista → PT kuittaa → vasta sitten mallinnus (sisätila avoimen huoneen paikalle, katto omaksi solmuksi).
+- 延禧宫 päätetään vaiheessa 2 (AIKA: nykyasu sallittu).
+- ODOTTAA: v92 (70c7b997c2f9) + tausta-v91 (7e9b6819202c) kuitattu, lähtevät JU/NS:lle vasta PT:n ilmoitettua junan 217 lukituksen aukeamisesta.
+- Jono: 200 (kujakivi, PT: ei nyt). Ei ajoja käynnissä. Levy 71 Gi.
