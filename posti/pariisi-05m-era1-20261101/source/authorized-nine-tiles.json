@@ -1,0 +1,110 @@
+[
+  {
+    "nimi": "pariisi-05m-r04-c03",
+    "rivi": 4,
+    "sarake": 3,
+    "rajaus_res4": [
+      17152,
+      8320,
+      18688,
+      9344
+    ],
+    "taskNumber": 1543
+  },
+  {
+    "nimi": "pariisi-05m-r04-c04",
+    "rivi": 4,
+    "sarake": 4,
+    "rajaus_res4": [
+      18560,
+      8320,
+      20096,
+      9344
+    ],
+    "taskNumber": 1544
+  },
+  {
+    "nimi": "pariisi-05m-r04-c05",
+    "rivi": 4,
+    "sarake": 5,
+    "rajaus_res4": [
+      19968,
+      8320,
+      21504,
+      9344
+    ],
+    "taskNumber": 1545
+  },
+  {
+    "nimi": "pariisi-05m-r05-c03",
+    "rivi": 5,
+    "sarake": 3,
+    "rajaus_res4": [
+      17152,
+      9216,
+      18688,
+      10240
+    ],
+    "taskNumber": 1546
+  },
+  {
+    "nimi": "pariisi-05m-r05-c04",
+    "rivi": 5,
+    "sarake": 4,
+    "rajaus_res4": [
+      18560,
+      9216,
+      20096,
+      10240
+    ],
+    "taskNumber": 1547
+  },
+  {
+    "nimi": "pariisi-05m-r05-c05",
+    "rivi": 5,
+    "sarake": 5,
+    "rajaus_res4": [
+      19968,
+      9216,
+      21504,
+      10240
+    ],
+    "taskNumber": 1548
+  },
+  {
+    "nimi": "pariisi-05m-r06-c03",
+    "rivi": 6,
+    "sarake": 3,
+    "rajaus_res4": [
+      17152,
+      10112,
+      18688,
+      11136
+    ],
+    "taskNumber": 1549
+  },
+  {
+    "nimi": "pariisi-05m-r06-c04",
+    "rivi": 6,
+    "sarake": 4,
+    "rajaus_res4": [
+      18560,
+      10112,
+      20096,
+      11136
+    ],
+    "taskNumber": 1550
+  },
+  {
+    "nimi": "pariisi-05m-r06-c05",
+    "rivi": 6,
+    "sarake": 5,
+    "rajaus_res4": [
+      19968,
+      10112,
+      21504,
+      11136
+    ],
+    "taskNumber": 1551
+  }
+]

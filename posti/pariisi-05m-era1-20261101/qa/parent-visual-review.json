@@ -1,0 +1,211 @@
+{
+  "reviewedAt": "2026-11-01T04:57:10.946607+00:00",
+  "reviewer": "root coordinator",
+  "sourceCommit": "c87e87855534ae485749e7f5226a9152636832c1",
+  "outcome": "nine-native-tiles-ready-for-PT-seam-and-LOD-review-with-source-differences-disclosed",
+  "readyForReceiverReview": true,
+  "fullNativeImagesReviewed": 9,
+  "nativeDetailComparisonsReviewed": 9,
+  "horizontalOverlapPairsReviewed": 6,
+  "verticalOverlapPairsReviewed": 6,
+  "nativeDeliverablesUnchanged": true,
+  "noVisibleExtraWaterBodies": true,
+  "noMissingRiverReachObserved": true,
+  "noForbiddenTreesPeopleCarsBoatsTextObserved": true,
+  "mainLandmarkReservationsRemainBlank": true,
+  "groundGeometryCertified": false,
+  "receiverDecisionRequiredTiles": [],
+  "deviations": [
+    "Kaikissa paloissa kattojen, ikkunoiden, savupiippujen, muurin saumojen ja aaltojen pienet viivat ovat uudelleen piirrettyjä. Niiden sijainnit ja pieni sävyvaihtelu eivät ole limityksissä pikselilleen samoja. Kadut, joenhaarat, sillat ja suuret korttelirajat jatkuvat 12 tarkastellussa limityksessä visuaalisesti; vastaanottajan minimieron saumaleikkausta ei ole tässä suoritettu eikä lopullista pelin tasovaihtoa varmennettu.",
+    "r04-c05: keskialueen sisäpihan [830,320,940,430] vihreä nurmisävy säilytettiin hyväksytystä maalausmallista. Geometriaohjeen beige väri tuli ensimmäiseen ottoon; koko kuva uusittiin ja valittiin otto 2.",
+    "r05-c03: uuden geometriaohjeen ja vesimaskin joenosat palautettiin myös pehmeän mallin oikeasta reunasta puuttuvilta alueilta. Uusi maski oli veden sijainnin määräävä lähde.",
+    "r05-c04: Notre-Damen tyhjän päärakennusvarauksen vieressä säilyvät kaksi pienrakennetta geometriaohjeen mukaisesti. Ne puuttuvat pehmeästä maalausmallista. Natiivit tarkastelualueet [140,615,195,680] ja [438,718,480,770]; päärakennusvaraus on tyhjä. Tämä lähteiden ero tulee huomioida 0,5/1 m:n tasovaihdossa.",
+    "r05-c05: ylävasemman U-korttelin sisäpiha [280,240,555,340] pidettiin hyväksytyn maalausmallin beigenä, vaikka geometriaohje näyttää sen vihreänä. Piha-alueen raja on geometriasta.",
+    "r06-c03: vasemman puiston polkujen pienissä muodoissa on tulkintaeroja pehmeään maalausmalliin nähden; suuret puisto-, katu- ja rakennusrajat säilyvät.",
+    "r06-c05: oikean alakulman sulku-/siltarakenteen pieni sininen yhdyskohta noin [1170,876] oli geometriassa/mallissa mutta puuttuu vesimaskista. Valittu uusi kokonaisotto 2 jättää sen kuivaksi kiveksi maskin mukaan.",
+    "Väriproxyssä suurin maskin ulkopuolinen yhtenäinen siniosuma on 31 px katon/ikkunan kohdalla, ei uusi vesialue. Vesialueen sisällä proxyyn osumattomat pisteet ovat enintään 3 px:n yhtenäisiä vaaleita aallonviivoja. Nämä diagnostiset väriluvut eivät ole vesigeometrian sertifikaatti."
+  ],
+  "files": [
+    {
+      "file": "pariisi-05m-r04-c03.png",
+      "sha256": "6a418bc3b3957ca0f5b52f96a9f46d4e6fe97c13f7307e4ef032e7f71b22a3ac",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r04-c04.png",
+      "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r04-c05.png",
+      "sha256": "07a6aeb691bb3ab44f9eb855f1a90733b69652f10d19b810bc425f4e466e701a",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r05-c03.png",
+      "sha256": "1ed160550817a769d3be1861624a94702e4a7cdea10e99388211d914b9cd5f32",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r05-c04.png",
+      "sha256": "68bc899373b546531ea0051785cd9bf0f6daa2b50c05f63f8cd07de5fa58aed6",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r05-c05.png",
+      "sha256": "d4e171c23cc97a86281a218b729435ba9e3af139bfeec91a4f02fbccedc1ef56",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r06-c03.png",
+      "sha256": "1d3154e63394068f8ead659793a2ebf071c4ed805bdef8ab5a73c6ece969a62c",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r06-c04.png",
+      "sha256": "44cc8f73b86ba8ab9a26f455aa505e54e5921a4f8a62b6feb14bee090f6333bd",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    },
+    {
+      "file": "pariisi-05m-r06-c05.png",
+      "sha256": "6aed617eb2a25f415c7b5300b954b02005c35cef03319da46f970d1245301ded",
+      "fullNativeReviewed": true,
+      "nativeByteIdentity": true
+    }
+  ],
+  "seams": [
+    {
+      "kind": "horizontal",
+      "from": "pariisi-05m-r04-c03",
+      "to": "pariisi-05m-r04-c04",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 18.86615498860677,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "vertical",
+      "from": "pariisi-05m-r04-c03",
+      "to": "pariisi-05m-r05-c03",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 19.561653984917534,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "horizontal",
+      "from": "pariisi-05m-r04-c04",
+      "to": "pariisi-05m-r04-c05",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 21.55401611328125,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "vertical",
+      "from": "pariisi-05m-r04-c04",
+      "to": "pariisi-05m-r05-c04",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 21.087644788953995,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "vertical",
+      "from": "pariisi-05m-r04-c05",
+      "to": "pariisi-05m-r05-c05",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 20.10914781358507,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "horizontal",
+      "from": "pariisi-05m-r05-c03",
+      "to": "pariisi-05m-r05-c04",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 15.855275472005209,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "vertical",
+      "from": "pariisi-05m-r05-c03",
+      "to": "pariisi-05m-r06-c03",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 22.185533311631943,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "horizontal",
+      "from": "pariisi-05m-r05-c04",
+      "to": "pariisi-05m-r05-c05",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 18.547587076822918,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "vertical",
+      "from": "pariisi-05m-r05-c04",
+      "to": "pariisi-05m-r06-c04",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 15.850599500868057,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "vertical",
+      "from": "pariisi-05m-r05-c05",
+      "to": "pariisi-05m-r06-c05",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 16.27520921495226,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "horizontal",
+      "from": "pariisi-05m-r06-c03",
+      "to": "pariisi-05m-r06-c04",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 19.22448984781901,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    },
+    {
+      "kind": "horizontal",
+      "from": "pariisi-05m-r06-c04",
+      "to": "pariisi-05m-r06-c05",
+      "overlap": 128,
+      "rgbMeanAbsoluteError": 18.849344889322918,
+      "visualGroundContinuityReviewed": true,
+      "smallRoofAndStrokeDifferencesPresent": true,
+      "minimumDifferenceCutNotExecuted": true
+    }
+  ],
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "remaining26TilesAuthorized": false
+}

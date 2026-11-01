@@ -1,0 +1,348 @@
+{
+  "checkedAt": "2026-11-01T04:52:28.177133+00:00",
+  "sourceCommit": "c87e87855534ae485749e7f5226a9152636832c1",
+  "status": "native-and-mask-diagnostics-complete",
+  "colourProxyCaution": "Cyan proxy is diagnostic only: blue roof highlights can be false positives; tiny border discrepancies and non-cyan water highlights are not automatically errors. Visual review determines semantic meaning.",
+  "files": [
+    {
+      "tile": "pariisi-05m-r05-c03",
+      "sha256": "1ed160550817a769d3be1861624a94702e4a7cdea10e99388211d914b9cd5f32",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "maskSha256": "ff23b244b15e8efdcc588cc723c55813ddee1b9fd0d0e30c51e41a8d8daa0f25",
+      "outside5pxCyanTotal": 310,
+      "outsideComponents": [
+        {
+          "area": 13,
+          "bbox": [
+            123,
+            825,
+            130,
+            828
+          ]
+        },
+        {
+          "area": 12,
+          "bbox": [
+            733,
+            629,
+            737,
+            633
+          ]
+        },
+        {
+          "area": 11,
+          "bbox": [
+            219,
+            357,
+            225,
+            361
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            1117,
+            557,
+            1122,
+            560
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            522,
+            810,
+            525,
+            814
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            358,
+            1015,
+            363,
+            1017
+          ]
+        },
+        {
+          "area": 7,
+          "bbox": [
+            169,
+            28,
+            173,
+            31
+          ]
+        },
+        {
+          "area": 7,
+          "bbox": [
+            358,
+            485,
+            364,
+            487
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            1418,
+            852,
+            1420,
+            855
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            35,
+            33,
+            37,
+            37
+          ]
+        }
+      ],
+      "missingEroded5pxCyanTotal": 0,
+      "missingComponents": []
+    },
+    {
+      "tile": "pariisi-05m-r05-c04",
+      "sha256": "68bc899373b546531ea0051785cd9bf0f6daa2b50c05f63f8cd07de5fa58aed6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "maskSha256": "fca498fc65d9611f55a6da1b6acdc75ac1ffc3343b52298240e5697a3577fa8e",
+      "outside5pxCyanTotal": 444,
+      "outsideComponents": [
+        {
+          "area": 15,
+          "bbox": [
+            1297,
+            960,
+            1300,
+            967
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            1453,
+            876,
+            1458,
+            881
+          ]
+        },
+        {
+          "area": 12,
+          "bbox": [
+            1027,
+            690,
+            1031,
+            694
+          ]
+        },
+        {
+          "area": 11,
+          "bbox": [
+            1207,
+            200,
+            1211,
+            205
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            1302,
+            42,
+            1306,
+            47
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            1219,
+            352,
+            1223,
+            356
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            520,
+            571,
+            527,
+            574
+          ]
+        },
+        {
+          "area": 9,
+          "bbox": [
+            1243,
+            66,
+            1246,
+            71
+          ]
+        },
+        {
+          "area": 9,
+          "bbox": [
+            907,
+            99,
+            911,
+            103
+          ]
+        },
+        {
+          "area": 9,
+          "bbox": [
+            1205,
+            693,
+            1208,
+            699
+          ]
+        }
+      ],
+      "missingEroded5pxCyanTotal": 0,
+      "missingComponents": []
+    },
+    {
+      "tile": "pariisi-05m-r05-c05",
+      "sha256": "d4e171c23cc97a86281a218b729435ba9e3af139bfeec91a4f02fbccedc1ef56",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeByteIdentity": true,
+      "maskSha256": "95c54a2ff0215c2ecf54420861d5b019d9cb20bc2a4ae5dcfdaf58db24687d96",
+      "outside5pxCyanTotal": 482,
+      "outsideComponents": [
+        {
+          "area": 15,
+          "bbox": [
+            988,
+            421,
+            991,
+            428
+          ]
+        },
+        {
+          "area": 12,
+          "bbox": [
+            742,
+            438,
+            748,
+            444
+          ]
+        },
+        {
+          "area": 12,
+          "bbox": [
+            185,
+            857,
+            189,
+            863
+          ]
+        },
+        {
+          "area": 11,
+          "bbox": [
+            1320,
+            5,
+            1324,
+            9
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            82,
+            308,
+            87,
+            313
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            602,
+            740,
+            605,
+            744
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            7,
+            773,
+            10,
+            780
+          ]
+        },
+        {
+          "area": 9,
+          "bbox": [
+            286,
+            27,
+            289,
+            32
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            782,
+            21,
+            785,
+            25
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            770,
+            232,
+            774,
+            236
+          ]
+        }
+      ],
+      "missingEroded5pxCyanTotal": 0,
+      "missingComponents": []
+    }
+  ],
+  "seams": [
+    {
+      "fromColumn": 3,
+      "toColumn": 4,
+      "overlapPixels": 128,
+      "rgbMeanAbsoluteError": 15.855275472005209,
+      "exactPixelEqualityRequired": false,
+      "receiverSeamCutReviewPending": true
+    },
+    {
+      "fromColumn": 4,
+      "toColumn": 5,
+      "overlapPixels": 128,
+      "rgbMeanAbsoluteError": 18.547587076822918,
+      "exactPixelEqualityRequired": false,
+      "receiverSeamCutReviewPending": true
+    }
+  ],
+  "groundGeometryPixelCertified": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

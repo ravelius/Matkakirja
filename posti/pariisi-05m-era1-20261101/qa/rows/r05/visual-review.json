@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-11-01T04:53:09.690661+00:00",
+  "reviewer": "/root/sky8192_row_a",
+  "scope": "Only r05 c03,c04,c05 of 0.5m Paris batch1",
+  "sourceCommit": "c87e87855534ae485749e7f5226a9152636832c1",
+  "reviewComplete": true,
+  "selectedImages": 3,
+  "generationCalls": 3,
+  "native1536x1024RGB": true,
+  "byteIdenticalToNativeRawAndToolSource": true,
+  "wholeNewGenerationsOnly": true,
+  "upscaled": false,
+  "retouched": false,
+  "sharpened": false,
+  "visualOutcome": "3 native candidates ready for parent aggregate seam and LOD review; source/model differences explicitly retained",
+  "waterAssessment": "All required eroded mask water present; no visually identified invented water body. Outside proxy components are only tiny roof-colour hits, maximum 13/15/15 pixels. No claim of pixel-exact geometry certification.",
+  "roofAssessment": "Separate windows, dormers, chimney silhouettes and roof ridges are sharply resolved in newly generated native pixels. Fine detail is more regular than old enlarged model; adjoining row and lower-LOD review remains with parent.",
+  "landmarkReservationAssessment": "Notre-Dame main footprint remains flat and empty. Two guide-defined small peripheral structures in c04 are disclosed separately and were explicitly accepted for keeping by parent without a retry.",
+  "tileLimits": {
+    "pariisi-05m-r05-c04": "Source/model difference retained under geometry priority: guide has two tiny pre-existing structures beside (not filling) the empty Notre-Dame reservation, while the 1m-2x painted model omits them. Exact native review ROIs [x0,y0,x1,y1): [140,615,195,680] and [438,718,480,770]. Main blank Notre-Dame footprint stays empty. Parent instructed no retry solely for these source structures.",
+    "pariisi-05m-r05-c05": "Source/model colour difference: U-shaped upper-left block inner courtyard, review ROI [280,240,555,340], is green in geometry guide but ivory/beige in accepted 1m-2x painting. Selected final follows painted-model colour while retaining the geometry-guide boundary."
+  },
+  "nativeOverlapVisualAssessment": "Native side-by-side 128px strips inspected. Street and river crossing positions continue without an obvious broad displacement; building rendering details differ. Recipient minimum-difference cut and narrow feather still required; not a certified seam pass.",
+  "seams": [
+    {
+      "fromColumn": 3,
+      "toColumn": 4,
+      "overlapPixels": 128,
+      "rgbMeanAbsoluteError": 15.855275472005209,
+      "exactPixelEqualityRequired": false,
+      "receiverSeamCutReviewPending": true
+    },
+    {
+      "fromColumn": 4,
+      "toColumn": 5,
+      "overlapPixels": 128,
+      "rgbMeanAbsoluteError": 18.547587076822918,
+      "exactPixelEqualityRequired": false,
+      "receiverSeamCutReviewPending": true
+    }
+  ],
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "files": [
+    {
+      "tile": "pariisi-05m-r05-c03",
+      "sha256": "1ed160550817a769d3be1861624a94702e4a7cdea10e99388211d914b9cd5f32",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r05/final/pariisi-05m-r05-c03.png"
+    },
+    {
+      "tile": "pariisi-05m-r05-c04",
+      "sha256": "68bc899373b546531ea0051785cd9bf0f6daa2b50c05f63f8cd07de5fa58aed6",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r05/final/pariisi-05m-r05-c04.png"
+    },
+    {
+      "tile": "pariisi-05m-r05-c05",
+      "sha256": "d4e171c23cc97a86281a218b729435ba9e3af139bfeec91a4f02fbccedc1ef56",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r05/final/pariisi-05m-r05-c05.png"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "pariisi-05m-r04-c03": {
+    "waterMaskPixels": 257077,
+    "cyanBeyond5pxMask": 1121,
+    "outsideComponents": [
+      {
+        "area": 31,
+        "bbox": [
+          990,
+          547,
+          1004,
+          556
+        ]
+      }
+    ],
+    "nonCyanInsideEroded5pxMask": 0,
+    "missingComponents": []
+  },
+  "pariisi-05m-r04-c04": {
+    "waterMaskPixels": 27241,
+    "cyanBeyond5pxMask": 77,
+    "outsideComponents": [],
+    "nonCyanInsideEroded5pxMask": 6,
+    "missingComponents": []
+  },
+  "pariisi-05m-r04-c05": {
+    "waterMaskPixels": 0,
+    "cyanBeyond5pxMask": 0,
+    "outsideComponents": [],
+    "nonCyanInsideEroded5pxMask": 0,
+    "missingComponents": []
+  }
+}

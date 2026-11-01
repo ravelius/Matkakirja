@@ -1,0 +1,173 @@
+{
+  "verifiedAt": "2026-11-01T04:46:51.129871+00:00",
+  "sourceCommit": "c87e87855534ae485749e7f5226a9152636832c1",
+  "sourceBlob": "f1a2bfffe1cabfb346cb91262ae2f00d7917d74d",
+  "sourceReadInFull": true,
+  "files": [
+    {
+      "file": "G-referenssi-owner-style-G-confirmed.jpg",
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f",
+      "bytes": 532470
+    },
+    {
+      "file": "malli-pariisi-05m-r04-c03-1m-2x.png",
+      "sha256": "717f8e4f591289d4c8224c26858a150e259d3250fd5d223260acdb0874086e7c",
+      "bytes": 2001891
+    },
+    {
+      "file": "malli-pariisi-05m-r04-c04-1m-2x.png",
+      "sha256": "5a561cabce4356ca99b78fdd3308a70cbbc37b73c6f7db46d78a48c5e5998296",
+      "bytes": 2385009
+    },
+    {
+      "file": "malli-pariisi-05m-r04-c05-1m-2x.png",
+      "sha256": "8320e930f41f61f8ffd599e19e1a4fdfc21d03205da80e69ce117b0549aab271",
+      "bytes": 2625804
+    },
+    {
+      "file": "malli-pariisi-05m-r05-c03-1m-2x.png",
+      "sha256": "456d7eacb9344bdadcd4a74258adfa9be5893ad79cc20d94838efc775c0a4a89",
+      "bytes": 2241837
+    },
+    {
+      "file": "malli-pariisi-05m-r05-c04-1m-2x.png",
+      "sha256": "ba7a5f82fa16bcc1c1df752bf57b8779c8f2042fb6a32ecc6c19048bec07479c",
+      "bytes": 2068985
+    },
+    {
+      "file": "malli-pariisi-05m-r05-c05-1m-2x.png",
+      "sha256": "5f92a98b3862b3799bd5ba1149b0d04dc19b829a3162c9811e88201396b55f74",
+      "bytes": 2469926
+    },
+    {
+      "file": "malli-pariisi-05m-r06-c03-1m-2x.png",
+      "sha256": "e00009d20415a56ae4c92fc14bad89aa21d151e78abde82334e82f06e6a2bd1f",
+      "bytes": 2214466
+    },
+    {
+      "file": "malli-pariisi-05m-r06-c04-1m-2x.png",
+      "sha256": "b0c505c74af0b8fad217727052535ca2a1ba1e49f7230b90a407729abfea5bd3",
+      "bytes": 2410643
+    },
+    {
+      "file": "malli-pariisi-05m-r06-c05-1m-2x.png",
+      "sha256": "d794c472d899ff6639bdcb3b9319cbaedc0431b1d22685aa0423b0e3a03fa243",
+      "bytes": 2086956
+    },
+    {
+      "file": "ohje-pariisi-05m-r04-c03-v6-geometria.png",
+      "sha256": "7e5cc3c3f47a2e88885ac4793d7eb5e058fef38405dc821a57abe6594820cd02",
+      "bytes": 565998
+    },
+    {
+      "file": "ohje-pariisi-05m-r04-c04-v6-geometria.png",
+      "sha256": "2c953f897a7b45e94666e14bc5eda3bc11f0436640962b3ab7c367e171c6bea8",
+      "bytes": 687993
+    },
+    {
+      "file": "ohje-pariisi-05m-r04-c05-v6-geometria.png",
+      "sha256": "503daff18d4059a994f6a2392c93405fbce38a0deba55ca4e91e3372fe2f34da",
+      "bytes": 735865
+    },
+    {
+      "file": "ohje-pariisi-05m-r05-c03-v6-geometria.png",
+      "sha256": "fc6ab3777ab49346161efe21b217e03073fb5b74f9e6dc7007fb9899fcda0bb1",
+      "bytes": 650929
+    },
+    {
+      "file": "ohje-pariisi-05m-r05-c04-v6-geometria.png",
+      "sha256": "a9408ab21f4e1f741f883cbe0bee9fd5626a12b3cd08520bc690b052ff138bcb",
+      "bytes": 596867
+    },
+    {
+      "file": "ohje-pariisi-05m-r05-c05-v6-geometria.png",
+      "sha256": "c4bb18e088eada95785e0baaea04b65ecff243797ab89959a737d9792b46f35e",
+      "bytes": 661552
+    },
+    {
+      "file": "ohje-pariisi-05m-r06-c03-v6-geometria.png",
+      "sha256": "59d1d0c142e47f9a36386159e6f84937475510f0a216da49d7853ebd145e6b5c",
+      "bytes": 629346
+    },
+    {
+      "file": "ohje-pariisi-05m-r06-c04-v6-geometria.png",
+      "sha256": "3758fbeffcc00e6e9004aecdfb4b3869d51cab7ca285a67f8eede16e572e4060",
+      "bytes": 675131
+    },
+    {
+      "file": "ohje-pariisi-05m-r06-c05-v6-geometria.png",
+      "sha256": "4ad8b871b8321d389e6c2205e26acd651b59bc37b7a5f17923b9b9b239c5e764",
+      "bytes": 577927
+    },
+    {
+      "file": "order.md",
+      "sha256": "610d94a65243aa942b978ddd1d9734ca0f81909a7c171bbca97f8e7989817a82",
+      "bytes": 3610
+    },
+    {
+      "file": "osuudet.py",
+      "sha256": "03c049d40d66dea7410920ce09660d6edfda31f0f30fbe3cd5f3b71253a66604",
+      "bytes": 867
+    },
+    {
+      "file": "palat-05m.json",
+      "sha256": "3ca9faf17dae6514137a84a7a7c56baeda65ec32b4af23ef815949b4ac3228ee",
+      "bytes": 5303
+    },
+    {
+      "file": "tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+      "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d",
+      "bytes": 3806172
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r04-c03.png",
+      "sha256": "37e97ef648207193a96c8894d5ce04a791626c3c6e9efbf55176b9f870d9b662",
+      "bytes": 6224
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r04-c04.png",
+      "sha256": "83eec524293d3b3cc54642b4dd28797766b1c23561cb084bc05b505bb9c86f9a",
+      "bytes": 2587
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r04-c05.png",
+      "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "bytes": 1605
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r05-c03.png",
+      "sha256": "ff23b244b15e8efdcc588cc723c55813ddee1b9fd0d0e30c51e41a8d8daa0f25",
+      "bytes": 5627
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r05-c04.png",
+      "sha256": "fca498fc65d9611f55a6da1b6acdc75ac1ffc3343b52298240e5697a3577fa8e",
+      "bytes": 8890
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r05-c05.png",
+      "sha256": "95c54a2ff0215c2ecf54420861d5b019d9cb20bc2a4ae5dcfdaf58db24687d96",
+      "bytes": 3384
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r06-c03.png",
+      "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "bytes": 1605
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r06-c04.png",
+      "sha256": "0acb57ed235a3d6e56a832cf88e02f0dfceb33439b17861316e95194195edb62",
+      "bytes": 3956
+    },
+    {
+      "file": "vesimaski-pariisi-05m-r06-c05.png",
+      "sha256": "c64fc00bc506bca44f60693d88d00885a42240673f0906e2d785f35242e89420",
+      "bytes": 7622
+    },
+    {
+      "file": "yleiskuva-ruudukko-05m-1-2.jpg",
+      "sha256": "09609fa64934efba6e43c7c82bbdcebeaf224ca3b26ca4f16d0f55b86fd9e561",
+      "bytes": 1979559
+    }
+  ]
+}

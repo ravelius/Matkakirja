@@ -1,0 +1,386 @@
+{
+  "checkedAt": "2026-11-01T04:52:52.584040+00:00",
+  "allByteIdenticalToNative": true,
+  "allInputsMatchVerifiedSource": true,
+  "waterDetector": "RGB cyan: G-R>25, B-R>20, G>100, B>100; expanded mask tolerance5px; only a diagnostic, roofs and antialiasing may be false positives.",
+  "tiles": [
+    {
+      "name": "pariisi-05m-r06-c03",
+      "selectedAttempt": 1,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "1d3154e63394068f8ead659793a2ebf071c4ed805bdef8ab5a73c6ece969a62c",
+      "nativeByteIdentical": true,
+      "waterMaskWhitePixels": 0,
+      "cyanPixels": 1719,
+      "cyanOutsideExactMask": 1719,
+      "cyanOutside5pxMask": 1719,
+      "cyanOutsideComponents": [
+        {
+          "pixels": 24,
+          "bbox": [
+            13,
+            19,
+            17,
+            30
+          ]
+        },
+        {
+          "pixels": 16,
+          "bbox": [
+            958,
+            189,
+            964,
+            193
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            1237,
+            410,
+            1243,
+            413
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            773,
+            196,
+            777,
+            200
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            850,
+            838,
+            854,
+            843
+          ]
+        },
+        {
+          "pixels": 12,
+          "bbox": [
+            1270,
+            873,
+            1274,
+            877
+          ]
+        },
+        {
+          "pixels": 12,
+          "bbox": [
+            837,
+            1005,
+            842,
+            1009
+          ]
+        },
+        {
+          "pixels": 11,
+          "bbox": [
+            77,
+            37,
+            80,
+            45
+          ]
+        },
+        {
+          "pixels": 11,
+          "bbox": [
+            717,
+            441,
+            723,
+            444
+          ]
+        },
+        {
+          "pixels": 10,
+          "bbox": [
+            1060,
+            695,
+            1064,
+            700
+          ]
+        },
+        {
+          "pixels": 10,
+          "bbox": [
+            1256,
+            857,
+            1260,
+            860
+          ]
+        },
+        {
+          "pixels": 10,
+          "bbox": [
+            288,
+            126,
+            291,
+            132
+          ]
+        }
+      ],
+      "visualQA": "PASS candidate: Main roads, triangular blocks, central narrow courtyard, right-centre green courtyard and bottom landmark void remain in guide/model positions. Fine separate windows, dormers and chimneys are newly resolved; cream/blue-grey palette retained without doubling ink thickness. Entire black mask respected: small circular ornament is dry beige, no water. No trees, people or transport. Small left-park path details differ from soft model and require aggregate review; exact pixel equality not claimed."
+    },
+    {
+      "name": "pariisi-05m-r06-c04",
+      "selectedAttempt": 1,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "44cc8f73b86ba8ab9a26f455aa505e54e5921a4f8a62b6feb14bee090f6333bd",
+      "nativeByteIdentical": true,
+      "waterMaskWhitePixels": 115522,
+      "cyanPixels": 118299,
+      "cyanOutsideExactMask": 3362,
+      "cyanOutside5pxMask": 1980,
+      "cyanOutsideComponents": [
+        {
+          "pixels": 31,
+          "bbox": [
+            1377,
+            99,
+            1384,
+            107
+          ]
+        },
+        {
+          "pixels": 18,
+          "bbox": [
+            1159,
+            936,
+            1164,
+            945
+          ]
+        },
+        {
+          "pixels": 17,
+          "bbox": [
+            1520,
+            936,
+            1524,
+            943
+          ]
+        },
+        {
+          "pixels": 17,
+          "bbox": [
+            1421,
+            949,
+            1427,
+            954
+          ]
+        },
+        {
+          "pixels": 17,
+          "bbox": [
+            878,
+            566,
+            884,
+            570
+          ]
+        },
+        {
+          "pixels": 15,
+          "bbox": [
+            409,
+            939,
+            413,
+            945
+          ]
+        },
+        {
+          "pixels": 14,
+          "bbox": [
+            1275,
+            648,
+            1279,
+            653
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            557,
+            149,
+            565,
+            152
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            677,
+            204,
+            682,
+            210
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            862,
+            877,
+            866,
+            881
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            1388,
+            755,
+            1394,
+            759
+          ]
+        },
+        {
+          "pixels": 13,
+          "bbox": [
+            765,
+            312,
+            768,
+            318
+          ]
+        }
+      ],
+      "visualQA": "PASS candidate: River remains in upper diagonal mask with all three crossing decks dry, no extra pools. Lower-left rectangular ornament is dry beige. Road intersections, narrow triangular strips, walled green courtyard and lower-right garden's tall building retain source composition. Thin separate windows/dormers/chimneys resolved without coarse 2x linework. No trees, people, traffic or inserted landmarks. Pixel-perfect geometry and seam continuity remain parent QA; river shade is a little brighter than geometric guide, consistent with painted model."
+    },
+    {
+      "name": "pariisi-05m-r06-c05",
+      "selectedAttempt": 2,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "6aed617eb2a25f415c7b5300b954b02005c35cef03319da46f970d1245301ded",
+      "nativeByteIdentical": true,
+      "waterMaskWhitePixels": 364060,
+      "cyanPixels": 367655,
+      "cyanOutsideExactMask": 5906,
+      "cyanOutside5pxMask": 4298,
+      "cyanOutsideComponents": [
+        {
+          "pixels": 44,
+          "bbox": [
+            716,
+            234,
+            725,
+            241
+          ]
+        },
+        {
+          "pixels": 32,
+          "bbox": [
+            707,
+            243,
+            721,
+            250
+          ]
+        },
+        {
+          "pixels": 32,
+          "bbox": [
+            277,
+            875,
+            284,
+            884
+          ]
+        },
+        {
+          "pixels": 32,
+          "bbox": [
+            823,
+            317,
+            837,
+            328
+          ]
+        },
+        {
+          "pixels": 31,
+          "bbox": [
+            944,
+            556,
+            950,
+            563
+          ]
+        },
+        {
+          "pixels": 28,
+          "bbox": [
+            619,
+            124,
+            628,
+            129
+          ]
+        },
+        {
+          "pixels": 28,
+          "bbox": [
+            254,
+            743,
+            261,
+            751
+          ]
+        },
+        {
+          "pixels": 27,
+          "bbox": [
+            877,
+            34,
+            886,
+            42
+          ]
+        },
+        {
+          "pixels": 26,
+          "bbox": [
+            890,
+            530,
+            895,
+            537
+          ]
+        },
+        {
+          "pixels": 26,
+          "bbox": [
+            1060,
+            210,
+            1066,
+            216
+          ]
+        },
+        {
+          "pixels": 25,
+          "bbox": [
+            7,
+            936,
+            13,
+            944
+          ]
+        },
+        {
+          "pixels": 25,
+          "bbox": [
+            306,
+            905,
+            313,
+            911
+          ]
+        }
+      ],
+      "visualQA": "PASS candidate: All river branches, quay edges, dry triangular island and bridge endpoints retain guide placement. Right canal remains separate; the formerly erroneous cyan bridge/lock parallelogram near x1170,y876 is now fully beige dry stone with original wall outline. Main blank courtyards and tiny northern green triangle remain empty. Newly detailed windows, roof ridges, chimneys and dormers, thin q11 ink and model cream/slate palette. No trees, people or boats; narrow blue-roof objects on dry right-bank grass are source-footprint houses. Exact pixel equality and aggregate seam acceptance not claimed."
+    }
+  ]
+}

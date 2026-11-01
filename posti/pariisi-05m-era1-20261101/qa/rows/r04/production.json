@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "completedAt": "2026-11-01T04:55:27.474287+00:00",
+  "scope": [
+    "pariisi-05m-r04-c03",
+    "pariisi-05m-r04-c04",
+    "pariisi-05m-r04-c05"
+  ],
+  "taskNumbers": [
+    1543,
+    1544,
+    1545
+  ],
+  "sourceCommit": "c87e87855534ae485749e7f5226a9152636832c1",
+  "sourceBlob": "f1a2bfffe1cabfb346cb91262ae2f00d7917d74d",
+  "sourceFilesReverified": 33,
+  "generationCalls": 4,
+  "selectedImages": 3,
+  "selectedAttempts": {
+    "pariisi-05m-r04-c03": 1,
+    "pariisi-05m-r04-c04": 1,
+    "pariisi-05m-r04-c05": 2
+  },
+  "readyForParentAggregateQA": true,
+  "mailboxDeliveryPerformed": false,
+  "receiverAcceptance": "not assessed by this worker",
+  "exactPixelGeometryCertified": false,
+  "exactWaterMaskComplianceCertified": false,
+  "majorVisualWaterViolationsDetected": false,
+  "diagnosticMethod": {
+    "cyanThreshold": "G-R>35 and B-R>35 and R<170",
+    "maskTolerancePixels": 5,
+    "components": "4-neighbor connectivity; >=30 pixels listed",
+    "limitations": "Cyan is a diagnostic proxy; roof reflections can be cyan and pale pools may evade it. Full images and native crops were inspected separately."
+  },
+  "retryReason": "r04-c05 attempt001 used stone in the large central courtyard where the approved 1m-2x model has sage grass. A complete new attempt002 corrected that material. Both raw candidates preserved.",
+  "finalPixelProcessing": "none; every final is byte-identical to selected native ImageGen output",
+  "verification": [
+    {
+      "tile": "pariisi-05m-r04-c03",
+      "selectedAttempt": 1,
+      "sha256": "6a418bc3b3957ca0f5b52f96a9f46d4e6fe97c13f7307e4ef032e7f71b22a3ac",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/final/pariisi-05m-r04-c03.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rawAndNativeAndFinalIdentical": true,
+      "allAttemptPromptsAndBytesVerified": true
+    },
+    {
+      "tile": "pariisi-05m-r04-c04",
+      "selectedAttempt": 1,
+      "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/final/pariisi-05m-r04-c04.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rawAndNativeAndFinalIdentical": true,
+      "allAttemptPromptsAndBytesVerified": true
+    },
+    {
+      "tile": "pariisi-05m-r04-c05",
+      "selectedAttempt": 2,
+      "sha256": "07a6aeb691bb3ab44f9eb855f1a90733b69652f10d19b810bc425f4e466e701a",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/final/pariisi-05m-r04-c05.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rawAndNativeAndFinalIdentical": true,
+      "allAttemptPromptsAndBytesVerified": true
+    }
+  ],
+  "tiles": {
+    "pariisi-05m-r04-c03": {
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "observation": "Full view: geometry and all river reaches/bridges retained; three decorative circles fully dry beige; upperleft emptyplot and lower-right courtyard stay empty. Fine windowrows, dormers and chimneys genuinely resolved beyond blurry2xmodel.",
+        "nativeDetailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/pariisi-05m-r04-c03-native-detail.png",
+        "nativeDetailCropRectXYWH": [
+          600,
+          150,
+          360,
+          280
+        ],
+        "detailObservation": "Individual thin window rows, dormers, roof ridges, chimneys and entrances resolve at native scale; finer and crisper than the supplied blurred 1m-2x model. Thin brown linework, cream stone and blue-grey roof palette are consistent across this row.",
+        "waterMaskReviewed": true,
+        "waterObservation": "Permitted river reaches are present; banks and dry bridge/island structures visually retained. The sole >=30 px out-of-mask cyan component (31 px; bbox [990,547,1004,556]) is a roof/window reflection, visually confirmed in native crop; it is not ground water. Three decorative circles near (0,137), (1395,87), (1290,675) are dry beige stone.",
+        "decorativeDryCentersXY": [
+          [
+            0,
+            137
+          ],
+          [
+            1395,
+            87
+          ],
+          [
+            1290,
+            675
+          ]
+        ],
+        "maskDiagnostics": {
+          "waterMaskPixels": 257077,
+          "cyanBeyond5pxMask": 1121,
+          "outsideComponents": [
+            {
+              "area": 31,
+              "bbox": [
+                990,
+                547,
+                1004,
+                556
+              ]
+            }
+          ],
+          "nonCyanInsideEroded5pxMask": 0,
+          "missingComponents": []
+        },
+        "reviewedAt": "2026-11-01T04:55:27.474287+00:00",
+        "majorVisualWaterViolationsDetected": false
+      },
+      "limitations": [
+        "Visual composition and pixel-color diagnostics do not certify pixel-exact geometry or exact water-mask equality. Fine boundary/antialiasing variation remains possible.",
+        "Cross-tile overlap, nine-tile aggregate review and receiver acceptance are separate parent stages."
+      ]
+    },
+    "pariisi-05m-r04-c04": {
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "observation": "Full view: lower-left permitted river and bridges retained, rectangular basin495,305 completely dry. Large lower-left emptyplot remains empty. Windowrows/dormers/chimneys clearly resolved, fine lines and q11palette consistent with c03.",
+        "nativeDetailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/pariisi-05m-r04-c04-native-detail.png",
+        "nativeDetailCropRectXYWH": [
+          700,
+          250,
+          360,
+          280
+        ],
+        "detailObservation": "Individual thin window rows, dormers, roof ridges, chimneys and entrances resolve at native scale; finer and crisper than the supplied blurred 1m-2x model. Thin brown linework, cream stone and blue-grey roof palette are consistent across this row.",
+        "waterMaskReviewed": true,
+        "waterObservation": "Permitted small lower-left river reaches are present with dry bridges. No >=30 px cyan component beyond 5 px mask tolerance. Rectangular basin near (495,305) and partial upper-left edge circle are dry beige stone. Six non-cyan interior proxy pixels are below connected-component threshold and do not indicate visually missing river.",
+        "decorativeDryCentersXY": [
+          [
+            495,
+            305
+          ]
+        ],
+        "maskDiagnostics": {
+          "waterMaskPixels": 27241,
+          "cyanBeyond5pxMask": 77,
+          "outsideComponents": [],
+          "nonCyanInsideEroded5pxMask": 6,
+          "missingComponents": []
+        },
+        "reviewedAt": "2026-11-01T04:55:27.474287+00:00",
+        "majorVisualWaterViolationsDetected": false
+      },
+      "limitations": [
+        "Visual composition and pixel-color diagnostics do not certify pixel-exact geometry or exact water-mask equality. Fine boundary/antialiasing variation remains possible.",
+        "Cross-tile overlap, nine-tile aggregate review and receiver acceptance are separate parent stages."
+      ]
+    },
+    "pariisi-05m-r04-c05": {
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "observation": "Full new attempt002 corrected central courtyard883,373 to sagegrass matching approved2xmodel. Other housefootprints and streets retained; no water or newlandmarks. Detailed dormers/windows/chimneys retained.",
+        "nativeDetailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/pariisi-05m-r04-c05-native-detail.png",
+        "nativeDetailCropRectXYWH": [
+          750,
+          250,
+          360,
+          280
+        ],
+        "detailObservation": "Individual thin window rows, dormers, roof ridges, chimneys and entrances resolve at native scale; finer and crisper than the supplied blurred 1m-2x model. Thin brown linework, cream stone and blue-grey roof palette are consistent across this row.",
+        "waterMaskReviewed": true,
+        "waterObservation": "All-black water mask: no water detected by cyan proxy and no water seen visually. The small lower ornaments near (1108,973) and (1211,995) are dry beige stone.",
+        "decorativeDryCentersXY": [
+          [
+            1108,
+            973
+          ],
+          [
+            1211,
+            995
+          ]
+        ],
+        "maskDiagnostics": {
+          "waterMaskPixels": 0,
+          "cyanBeyond5pxMask": 0,
+          "outsideComponents": [],
+          "nonCyanInsideEroded5pxMask": 0,
+          "missingComponents": []
+        },
+        "reviewedAt": "2026-11-01T04:55:27.474287+00:00",
+        "majorVisualWaterViolationsDetected": false
+      },
+      "limitations": [
+        "Visual composition and pixel-color diagnostics do not certify pixel-exact geometry or exact water-mask equality. Fine boundary/antialiasing variation remains possible.",
+        "Cross-tile overlap, nine-tile aggregate review and receiver acceptance are separate parent stages."
+      ]
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "startedAt": "2026-11-01T04:48:04.146310+00:00",
+  "productionStartedAt": "2026-11-01T04:48:04.146310+00:00",
+  "updatedAt": "2026-11-01T04:55:27.474287+00:00",
+  "productionActive": false,
+  "safeEnded": true,
+  "status": "complete-awaiting-parent-aggregate-qa",
+  "generationCalls": 4,
+  "inFlight": [],
+  "sourceCommit": "c87e87855534ae485749e7f5226a9152636832c1",
+  "sourceBlob": "f1a2bfffe1cabfb346cb91262ae2f00d7917d74d",
+  "scope": [
+    "pariisi-05m-r04-c03",
+    "pariisi-05m-r04-c04",
+    "pariisi-05m-r04-c05"
+  ],
+  "tiles": {
+    "pariisi-05m-r04-c03": {
+      "selectedAttempt": 1,
+      "sha256": "6a418bc3b3957ca0f5b52f96a9f46d4e6fe97c13f7307e4ef032e7f71b22a3ac",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-ccb2a18f-0cd9-49c8-a582-4d2cec8480db.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c03-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/final/pariisi-05m-r04-c03.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c03-attempt001.txt",
+      "promptSha256": "c7ac24f46518f4f8706cc8c4922b67f87148593bd4600a66acf7c9e6d797c3b0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3119215,
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "observation": "Full view: geometry and all river reaches/bridges retained; three decorative circles fully dry beige; upperleft emptyplot and lower-right courtyard stay empty. Fine windowrows, dormers and chimneys genuinely resolved beyond blurry2xmodel.",
+        "nativeDetailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/pariisi-05m-r04-c03-native-detail.png",
+        "nativeDetailCropRectXYWH": [
+          600,
+          150,
+          360,
+          280
+        ],
+        "detailObservation": "Individual thin window rows, dormers, roof ridges, chimneys and entrances resolve at native scale; finer and crisper than the supplied blurred 1m-2x model. Thin brown linework, cream stone and blue-grey roof palette are consistent across this row.",
+        "waterMaskReviewed": true,
+        "waterObservation": "Permitted river reaches are present; banks and dry bridge/island structures visually retained. The sole >=30 px out-of-mask cyan component (31 px; bbox [990,547,1004,556]) is a roof/window reflection, visually confirmed in native crop; it is not ground water. Three decorative circles near (0,137), (1395,87), (1290,675) are dry beige stone.",
+        "decorativeDryCentersXY": [
+          [
+            0,
+            137
+          ],
+          [
+            1395,
+            87
+          ],
+          [
+            1290,
+            675
+          ]
+        ],
+        "maskDiagnostics": {
+          "waterMaskPixels": 257077,
+          "cyanBeyond5pxMask": 1121,
+          "outsideComponents": [
+            {
+              "area": 31,
+              "bbox": [
+                990,
+                547,
+                1004,
+                556
+              ]
+            }
+          ],
+          "nonCyanInsideEroded5pxMask": 0,
+          "missingComponents": []
+        },
+        "reviewedAt": "2026-11-01T04:55:27.474287+00:00",
+        "majorVisualWaterViolationsDetected": false
+      },
+      "limitations": [
+        "Visual composition and pixel-color diagnostics do not certify pixel-exact geometry or exact water-mask equality. Fine boundary/antialiasing variation remains possible.",
+        "Cross-tile overlap, nine-tile aggregate review and receiver acceptance are separate parent stages."
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-ccb2a18f-0cd9-49c8-a582-4d2cec8480db.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c03-attempt001-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c03-attempt001.txt",
+          "promptSha256": "c7ac24f46518f4f8706cc8c4922b67f87148593bd4600a66acf7c9e6d797c3b0",
+          "sha256": "6a418bc3b3957ca0f5b52f96a9f46d4e6fe97c13f7307e4ef032e7f71b22a3ac",
+          "bytes": 3119215,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "selected": true,
+          "fullImageReviewed": true,
+          "result": "Full view: geometry and all river reaches/bridges retained; three decorative circles fully dry beige; upperleft emptyplot and lower-right courtyard stay empty. Fine windowrows, dormers and chimneys genuinely resolved beyond blurry2xmodel.",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/ohje-pariisi-05m-r04-c03-v6-geometria.png",
+              "sha256": "7e5cc3c3f47a2e88885ac4793d7eb5e058fef38405dc821a57abe6594820cd02"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/malli-pariisi-05m-r04-c03-1m-2x.png",
+              "sha256": "717f8e4f591289d4c8224c26858a150e259d3250fd5d223260acdb0874086e7c"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/vesimaski-pariisi-05m-r04-c03.png",
+              "sha256": "37e97ef648207193a96c8894d5ce04a791626c3c6e9efbf55176b9f870d9b662"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "nativeByteIdentityVerifiedAt": "2026-11-01T04:55:27.474287+00:00",
+          "generationMethod": "built-in image_gen complete new image",
+          "postProcessing": "none"
+        }
+      ]
+    },
+    "pariisi-05m-r04-c04": {
+      "selectedAttempt": 1,
+      "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-4250c9b9-130d-44c2-b700-d5c5c95ff6ef.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c04-attempt001-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/final/pariisi-05m-r04-c04.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c04-attempt001.txt",
+      "promptSha256": "268c5b5ee1b5449a42ec64bb767f4a91abd476945af09f254049a799f84b5e11",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3071323,
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "observation": "Full view: lower-left permitted river and bridges retained, rectangular basin495,305 completely dry. Large lower-left emptyplot remains empty. Windowrows/dormers/chimneys clearly resolved, fine lines and q11palette consistent with c03.",
+        "nativeDetailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/pariisi-05m-r04-c04-native-detail.png",
+        "nativeDetailCropRectXYWH": [
+          700,
+          250,
+          360,
+          280
+        ],
+        "detailObservation": "Individual thin window rows, dormers, roof ridges, chimneys and entrances resolve at native scale; finer and crisper than the supplied blurred 1m-2x model. Thin brown linework, cream stone and blue-grey roof palette are consistent across this row.",
+        "waterMaskReviewed": true,
+        "waterObservation": "Permitted small lower-left river reaches are present with dry bridges. No >=30 px cyan component beyond 5 px mask tolerance. Rectangular basin near (495,305) and partial upper-left edge circle are dry beige stone. Six non-cyan interior proxy pixels are below connected-component threshold and do not indicate visually missing river.",
+        "decorativeDryCentersXY": [
+          [
+            495,
+            305
+          ]
+        ],
+        "maskDiagnostics": {
+          "waterMaskPixels": 27241,
+          "cyanBeyond5pxMask": 77,
+          "outsideComponents": [],
+          "nonCyanInsideEroded5pxMask": 6,
+          "missingComponents": []
+        },
+        "reviewedAt": "2026-11-01T04:55:27.474287+00:00",
+        "majorVisualWaterViolationsDetected": false
+      },
+      "limitations": [
+        "Visual composition and pixel-color diagnostics do not certify pixel-exact geometry or exact water-mask equality. Fine boundary/antialiasing variation remains possible.",
+        "Cross-tile overlap, nine-tile aggregate review and receiver acceptance are separate parent stages."
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-4250c9b9-130d-44c2-b700-d5c5c95ff6ef.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c04-attempt001-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c04-attempt001.txt",
+          "promptSha256": "268c5b5ee1b5449a42ec64bb767f4a91abd476945af09f254049a799f84b5e11",
+          "sha256": "434cc6ad25aaa95d39f4c4186d758b2cd24d37ea60da5b1773ed8d50474a49be",
+          "bytes": 3071323,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "selected": true,
+          "fullImageReviewed": true,
+          "result": "Full view: lower-left permitted river and bridges retained, rectangular basin495,305 completely dry. Large lower-left emptyplot remains empty. Windowrows/dormers/chimneys clearly resolved, fine lines and q11palette consistent with c03.",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/ohje-pariisi-05m-r04-c04-v6-geometria.png",
+              "sha256": "2c953f897a7b45e94666e14bc5eda3bc11f0436640962b3ab7c367e171c6bea8"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/malli-pariisi-05m-r04-c04-1m-2x.png",
+              "sha256": "5a561cabce4356ca99b78fdd3308a70cbbc37b73c6f7db46d78a48c5e5998296"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/vesimaski-pariisi-05m-r04-c04.png",
+              "sha256": "83eec524293d3b3cc54642b4dd28797766b1c23561cb084bc05b505bb9c86f9a"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "nativeByteIdentityVerifiedAt": "2026-11-01T04:55:27.474287+00:00",
+          "generationMethod": "built-in image_gen complete new image",
+          "postProcessing": "none"
+        }
+      ]
+    },
+    "pariisi-05m-r04-c05": {
+      "selectedAttempt": 2,
+      "sha256": "07a6aeb691bb3ab44f9eb855f1a90733b69652f10d19b810bc425f4e466e701a",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-95bb0b2c-8c97-48db-b37b-cd1cfbd5ef4f.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c05-attempt002-native.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/final/pariisi-05m-r04-c05.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c05-attempt002.txt",
+      "promptSha256": "c77ee6b412c9c21c9db3ca6d044559beca77c0f6bd134fcc3ca063718f566b10",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3232059,
+      "nativeByteIdentity": true,
+      "visualQA": {
+        "fullImageReviewed": true,
+        "nativeDetailReviewed": true,
+        "observation": "Full new attempt002 corrected central courtyard883,373 to sagegrass matching approved2xmodel. Other housefootprints and streets retained; no water or newlandmarks. Detailed dormers/windows/chimneys retained.",
+        "nativeDetailCrop": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/pariisi-05m-r04-c05-native-detail.png",
+        "nativeDetailCropRectXYWH": [
+          750,
+          250,
+          360,
+          280
+        ],
+        "detailObservation": "Individual thin window rows, dormers, roof ridges, chimneys and entrances resolve at native scale; finer and crisper than the supplied blurred 1m-2x model. Thin brown linework, cream stone and blue-grey roof palette are consistent across this row.",
+        "waterMaskReviewed": true,
+        "waterObservation": "All-black water mask: no water detected by cyan proxy and no water seen visually. The small lower ornaments near (1108,973) and (1211,995) are dry beige stone.",
+        "decorativeDryCentersXY": [
+          [
+            1108,
+            973
+          ],
+          [
+            1211,
+            995
+          ]
+        ],
+        "maskDiagnostics": {
+          "waterMaskPixels": 0,
+          "cyanBeyond5pxMask": 0,
+          "outsideComponents": [],
+          "nonCyanInsideEroded5pxMask": 0,
+          "missingComponents": []
+        },
+        "reviewedAt": "2026-11-01T04:55:27.474287+00:00",
+        "majorVisualWaterViolationsDetected": false
+      },
+      "limitations": [
+        "Visual composition and pixel-color diagnostics do not certify pixel-exact geometry or exact water-mask equality. Fine boundary/antialiasing variation remains possible.",
+        "Cross-tile overlap, nine-tile aggregate review and receiver acceptance are separate parent stages."
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-0b3ce5b9-7fb7-4519-9ed0-56fa69f89739.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c05-attempt001-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c05-attempt001.txt",
+          "promptSha256": "c4d419c9886813f7fe1743c3494b8a5ef09149d1f89212b74fd4f10c4f3f4fe4",
+          "sha256": "045e1dff3b1fd070333520e94414342cdcd6e7fc101a068748780585b2c2e167",
+          "bytes": 3493354,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "selected": false,
+          "fullImageReviewed": true,
+          "result": "Full view: all-blackmask and tinygroundornaments dry; crisp detailedroofstyle consistent. Large central courtyardx830–940,y320–430 rendered cream followingguide but approved2xmodel isgreen; complete retry required for material continuity.",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/ohje-pariisi-05m-r04-c05-v6-geometria.png",
+              "sha256": "503daff18d4059a994f6a2392c93405fbce38a0deba55ca4e91e3372fe2f34da"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/malli-pariisi-05m-r04-c05-1m-2x.png",
+              "sha256": "8320e930f41f61f8ffd599e19e1a4fdfc21d03205da80e69ce117b0549aab271"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/vesimaski-pariisi-05m-r04-c05.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "nativeByteIdentityVerifiedAt": "2026-11-01T04:55:27.474287+00:00",
+          "generationMethod": "built-in image_gen complete new image",
+          "postProcessing": "none"
+        },
+        {
+          "attempt": 2,
+          "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-95bb0b2c-8c97-48db-b37b-cd1cfbd5ef4f.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c05-attempt002-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/prompts/pariisi-05m-r04-c05-attempt002.txt",
+          "promptSha256": "c77ee6b412c9c21c9db3ca6d044559beca77c0f6bd134fcc3ca063718f566b10",
+          "sha256": "07a6aeb691bb3ab44f9eb855f1a90733b69652f10d19b810bc425f4e466e701a",
+          "bytes": 3232059,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "selected": true,
+          "fullImageReviewed": true,
+          "result": "Full new attempt002 corrected central courtyard883,373 to sagegrass matching approved2xmodel. Other housefootprints and streets retained; no water or newlandmarks. Detailed dormers/windows/chimneys retained.",
+          "references": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/raw/pariisi-05m-r04-c05-attempt001-native.png",
+              "sha256": "045e1dff3b1fd070333520e94414342cdcd6e7fc101a068748780585b2c2e167"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/malli-pariisi-05m-r04-c05-1m-2x.png",
+              "sha256": "8320e930f41f61f8ffd599e19e1a4fdfc21d03205da80e69ce117b0549aab271"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/vesimaski-pariisi-05m-r04-c05.png",
+              "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/source/tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+              "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d"
+            }
+          ],
+          "nativeByteIdentityVerifiedAt": "2026-11-01T04:55:27.474287+00:00",
+          "generationMethod": "built-in image_gen complete new image",
+          "postProcessing": "none"
+        }
+      ]
+    }
+  },
+  "completedAt": "2026-11-01T04:55:27.474287+00:00",
+  "qaReport": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-05m-era1-20261101/rows/r04/qa/production.json",
+  "qaReportSha256": "b99e5c9a68bce03ce0a22080492bcde83d3cb4de39a9d2d09cb0657140576c2a"
+}

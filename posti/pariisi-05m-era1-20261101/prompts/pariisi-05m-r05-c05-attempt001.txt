@@ -1,0 +1,13 @@
+Use case: illustration-story. Make one COMPLETELY NEW native 1536 × 1024 RGB PNG Paris map tile, pariisi-05m-r05-c05, 0.5 metres per pixel. Draw every detail anew. Do not enlarge, sharpen or retouch an existing image.
+
+Reference roles in input order:
+1 ohje-pariisi-05m-r05-c05-v6-geometria.png: exact ground geometry and map camera. Preserve the original pixel positions and shapes of streets, banks, bridges, blocks, courtyards and building footprints; houses rise from their existing footprints.
+2 malli-pariisi-05m-r05-c05-1m-2x.png: accepted painting of THIS exact place, specifying palette, roof/facade rhythm, courtyard colours and composition, not its blurry enlarged texture. Keep slate bluegray roofs, warm pale beige limestone, ivory stone, flat pale green lawns, turquoise river.
+3 vesimaski-pariisi-05m-r05-c05.png: white areas ONLY permit water; all black areas must remain dry; do not show the mask.
+4 tyylimalli-r4-c4-q11-1m-hyvaksytty.png: crisp thin ink and separate small detail, NOT geometry.
+
+Provide newly resolved high-detail architecture: individually legible windows and balcony/gateway openings, separate chimney stacks, thin dormers, roof ridges and eave moldings. Maintain the q11 line width of the original 1 m tiles, not doubled lines. Crisp delicate economical ink, no heavy black contour, blur, fuzzy enlargement, pixelated edges, sharpening halos or melted roofs. Keep all ordinary roofs, building heights and volumes in their accepted footprint layout, no new buildings and no caricature.
+
+Water geometry: the river bends along the LOWER LEFT border and the small LOWER RIGHT edge sliver; these are the only water areas. Preserve dry islands and quays. The large U-shaped rectangular block in the upper-left/middle has the same EMPTY inner yard; use its dry ivory/beige stone colour from the accepted painted model while preserving the guide's exact yard boundary. The large flat green square near upper right around x1030–1260/y35–220 stays open lawn, with FOUR tiny flat BEIGE DRY round/square stone ornaments, NEVER blue pools or fountains. All grass and plain courtyards remain flat and clear. Preserve any deliberately empty landmark reservation; never add a church, cathedral, monument or tower into an empty area.
+
+Exactly the original 1536 × 1024 framing; no zoom, crop, shift, rotation, extra margin, border, labels or inset. No trees, people, cars, boats, planes, text, legends or watermark. Return only the newly drawn complete tile.

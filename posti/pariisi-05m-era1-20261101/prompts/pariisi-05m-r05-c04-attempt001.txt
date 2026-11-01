@@ -1,0 +1,14 @@
+Use case: illustration-story. Produce a completely NEW native 1536 × 1024 RGB PNG map tile pariisi-05m-r05-c04 at 0.5 metres per pixel. Entirely redraw the image with newly resolved fine architectural detail; do not enlarge, sharpen, retouch or reuse existing image pixels.
+
+Four reference inputs have distinct roles:
+1 ohje-pariisi-05m-r05-c04-v6-geometria.png = absolute geometry/camera/composition authority: every street, bank, bridge, block ground boundary and existing building footprint stays precisely in place.
+2 malli-pariisi-05m-r05-c04-1m-2x.png = accepted same-location painting for palette, roof/facade rhythm and matching layout. Maintain the same slate bluegray roofs, warm beige facades, ivory stone streets and flat pale green lawns. Its enlargement blur and thick outlines are NOT the target.
+3 vesimaski-pariisi-05m-r05-c04.png = WHITE is allowed river water; BLACK must remain dry. Bridges and the two dry islands remain dry. Never show this black/white mask in the finished illustration.
+4 tyylimalli-r4-c4-q11-1m-hyvaksytty.png = fine clean ink/detail quality reference ONLY, not geometry.
+
+New drawing has sharply separate individual window rows, dormers, chimney stacks, roof ridges, fine eaves moldings and small gateway arches. Hairline ink stays as thin as native q11, never doubled because this is the closer level. Avoid blurry enlarged texture, dark thick contours, oversized details, coarse pixels, repeated melted roof blobs and excessive contrast. Ordinary buildings retain exactly the provided volumes, heights, roofs and footprint positions; no caricature or invented building.
+
+Critical composition: keep the broad Y-shaped Seine channels, dry Île de la Cité on the left and dry Île Saint-Louis on the right, with every cream bridge at its exact location. The pointed island tip near x730/y490 remains dry stone, not water. All water must stay within white mask regions, with no decorative pool, fountain or new blue patch on land.
+The large EMPTY Notre-Dame landmark reservation in the lower-left island, roughly x60–440/y540–700, is deliberately blank flat ivory stone. Its adjoining lower lawn, roughly x270–600/y680–840, stays flat pale green with its existing simple dry paths. Never fill these empty reserved areas with a cathedral, chapel, tower, statue, monument or new building. Keep all other existing empty courtyards and landmark reservations open as in the references. Do not add land to the river.
+
+Exact same 1536 × 1024 framing and map camera, no zoom, rotation, perspective shift, added margin, border or panel. No trees, people, cars, boats, airplanes, labels, text, legends or watermarks. Return only the one complete finished map tile.

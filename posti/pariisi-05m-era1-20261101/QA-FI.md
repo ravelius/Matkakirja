@@ -1,0 +1,10 @@
+Yhdeksän palan tarkastus on tiedostoissa `qa/parent-visual-review.json`, `qa/batch-validation.json` ja `qa/rows/`.
+
+- Kaikissa paloissa kattojen, ikkunoiden, savupiippujen, muurin saumojen ja aaltojen pienet viivat ovat uudelleen piirrettyjä. Niiden sijainnit ja pieni sävyvaihtelu eivät ole limityksissä pikselilleen samoja. Kadut, joenhaarat, sillat ja suuret korttelirajat jatkuvat 12 tarkastellussa limityksessä visuaalisesti; vastaanottajan minimieron saumaleikkausta ei ole tässä suoritettu eikä lopullista pelin tasovaihtoa varmennettu.
+- r04-c05: keskialueen sisäpihan [830,320,940,430] vihreä nurmisävy säilytettiin hyväksytystä maalausmallista. Geometriaohjeen beige väri tuli ensimmäiseen ottoon; koko kuva uusittiin ja valittiin otto 2.
+- r05-c03: uuden geometriaohjeen ja vesimaskin joenosat palautettiin myös pehmeän mallin oikeasta reunasta puuttuvilta alueilta. Uusi maski oli veden sijainnin määräävä lähde.
+- r05-c04: Notre-Damen tyhjän päärakennusvarauksen vieressä säilyvät kaksi pienrakennetta geometriaohjeen mukaisesti. Ne puuttuvat pehmeästä maalausmallista. Natiivit tarkastelualueet [140,615,195,680] ja [438,718,480,770]; päärakennusvaraus on tyhjä. Tämä lähteiden ero tulee huomioida 0,5/1 m:n tasovaihdossa.
+- r05-c05: ylävasemman U-korttelin sisäpiha [280,240,555,340] pidettiin hyväksytyn maalausmallin beigenä, vaikka geometriaohje näyttää sen vihreänä. Piha-alueen raja on geometriasta.
+- r06-c03: vasemman puiston polkujen pienissä muodoissa on tulkintaeroja pehmeään maalausmalliin nähden; suuret puisto-, katu- ja rakennusrajat säilyvät.
+- r06-c05: oikean alakulman sulku-/siltarakenteen pieni sininen yhdyskohta noin [1170,876] oli geometriassa/mallissa mutta puuttuu vesimaskista. Valittu uusi kokonaisotto 2 jättää sen kuivaksi kiveksi maskin mukaan.
+- Väriproxyssä suurin maskin ulkopuolinen yhtenäinen siniosuma on 31 px katon/ikkunan kohdalla, ei uusi vesialue. Vesialueen sisällä proxyyn osumattomat pisteet ovat enintään 3 px:n yhtenäisiä vaaleita aallonviivoja. Nämä diagnostiset väriluvut eivät ole vesigeometrian sertifikaatti.

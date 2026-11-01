@@ -1,0 +1,13 @@
+Use case: illustration-story. Create one entirely NEW native 1536 × 1024 RGB PNG game-map tile, pariisi-05m-r05-c03, at 0.5 metre per pixel. Redraw the complete image from scratch with genuinely resolved new detail, not an enlarged or sharpened copy.
+
+REFERENCE ROLES, in order:
+1. ohje-pariisi-05m-r05-c03-v6-geometria.png: EXACT ground geometry, camera and composition. Keep every street, embankment, bridge, courtyard, building footprint and cropped boundary at its original pixel location. Buildings must rise from these footprints.
+2. malli-pariisi-05m-r05-c03-1m-2x.png: same-place accepted lower-detail painting, solely for its palette, existing roof/facade rhythms and matching composition. Do NOT copy its enlargement blur or thick outlines; where it omits a river segment that reference 1 and the water mask show, follow reference 1 and the mask.
+3. vesimaski-pariisi-05m-r05-c03.png: white permits water, black prohibits water; never paint the mask itself.
+4. tyylimalli-r4-c4-q11-1m-hyvaksytty.png: crisp fine ink/detail style only, NOT its geometry.
+
+Draw an exceptionally crisp finely inked Paris map with warm pale beige limestone facades, slate bluegray roofs, quiet cream stone streets, flat pale green lawns and turquoise river water matching reference 2's palette. Every individual window row, chimney, dormer, roof ridge, thin eaves molding and gateway should be separately legible. Keep ink outlines as thin as the native q11 reference, NOT twice as thick. No dark heavy contour halo, blur, soft focus, coarse pixels or generalized melted roof clusters. Keep the existing building heights and spatial rhythm, no caricature or added building mass.
+
+Keep the central river's diagonal course and all FIVE edge/crossing water segments strictly in white mask areas, including the river between the right-side bridges which the blurry model partially misses. Bridges and quays remain dry cream stone. Do not add pools or fountains. The upper large green courtyard stays open. The large blank landmark reservation on the right bank, roughly x1280–1536/y440–650, MUST remain flat stone and sparse flat lawn shapes exactly as in the geometry; no cathedral, monument, tower, new building or vegetation may fill this blank area. All other empty plazas/landmark locations remain completely empty.
+
+Exact same 1536 × 1024 view, no rotation, zoom, recentering, changed perspective, crop, margin, border or panel. No trees, people, cars, boats, airplanes, text, labels, symbols, watermark or legend. Produce the whole new finished tile only.
