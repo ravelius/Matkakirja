@@ -2552,3 +2552,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   (poistuu; pohja T/nollavalo/ruudut.py + |x|-rajaus).
 - AVOIN: leivonta v4:n rakennukset leivotaan ilman LIMAa → jos niissäkin on irrallisia pylväsfasetteja, PT:n päätös SOLU_LIMA=0.003
   oletukseksi ja v4:n rakennukset uudelleen (rm U/leivonta-v4/valmiit/r-*). Tarkista ensin valmis malli kohti.py-tyyppisellä mittarilla.
+
+## LISÄYS 189 (1.11. 06.3x): SOLU_LIMA OLETUKSEKSI, LEIVONTA v4:N RAKENNUKSET ALUSTA (PT 06.3x) — ALOITA TÄSTÄ
+- PT kuittasi edusta-v3:n (e25d5f5c4d0d) ja päätti: SOLU_LIMA=0.003 yhteiseksi oletukseksi. T/leivo_malli.py (varmuuskopio .ennen-lima) asettaa nyt
+  os.environ.setdefault: SOLU_SYL=1, SOLU_LIMA=0.003, MARGINAALI=0, DILAATIO=4 (env voittaa). solu_uv1.py:n oma oletus LIMA 0 → leivo_valo
+  (tausta, muurikate) ennallaan.
+- Leivonta v4 pysäytetty 06.3x kesken c-lantinen-kukkaportin; 16 r-merkkiä → U/leivonta-v4/valmiit-ilman-lima/; odotusajo nohupilla uudelleen
+  (pgrep -fl leivonta-v4) → rakennukset alusta a-meridiaaniportista LIMAlla. Tausta ja muurikate (t-*, muurikate) valmiit, ei uusita.
+- HUOM: kaiteeton-c2 (kaiteeton-v5.zsh) ja muut leivo_malli-ajot saavat LIMAn jatkossa automaattisesti; c2-v30 leivottiin ilman → aja kaiteeton-v5
+  uudelleen v4:n jälkeen, jos PT haluaa (kaiteettomissa samat pylväät).
