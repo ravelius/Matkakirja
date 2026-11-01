@@ -2422,3 +2422,17 @@ Uusi session id local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd. U = proto-3d/_tyo/li
 - V4_marmori = laji 16 maailman koordinaateilla (ei UV:ta); pysty (|n.y| < 0,6) = mallin väri ±4 % kuvioton (tarkoituksellinen), vaaka 45 % mallin väriä.
   tausta-v89d:n lod0-normaalit tarkistettu (0 m² vaakapintaa pystynormaalilla). PT 23.5x: ei sävykorjausta; vain jos VS:n o3-pari mittaa eron → VS pyytää arvot.
 - SEURAAVA AVOIN: VS:n parit v89(b/d) ja 06 ulkorengas-v10:llä (LISÄYS 175) → OK:n jälkeen PT + JU. Ei ajoja käynnissä.
+
+## LISÄYS 178 (1.11. 02.1x): LUOVUTUS (konteksti 26 %) — LEIVONTA v4 (KOKO REITTI) AJOSSA, ALOITA TÄSTÄ
+Kansio U = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusinta; työkalut kielletty-rakennukset/tyokalut.
+- AJOSSA: U/leivonta-v4.zsh (nohup, loki U/ajo-leivonta-v4.log; alkoi 02.1x). Omistajan suunta 02.04 (PT): koko reitti piha 06:n valolla ennen
+  ulkoasun arviota. Aurinko f4df529a6 (45° / peli 318°), polvi 0,6/0,3, V4_red k06d. Järjestys tausta (26 palaa) → muurikate → rakennukset (136)
+  → osasarja (kaikki ruudut) → V4_red + paketti _valmiit/juoksupeli-kk-lavastaja-leivonta-v4-vienti-<pvm> (tausta-v90, rakennukset-v91,
+  muurikate-v33, osasarja-v7, ulkorengas-v12). Aikaisemmat vastaavat: tausta ~1 h, rak ~5 h, osasarja useita tunteja. Jatkuu keskeytyksestä
+  (U/leivonta-v4/valmiit/), levyvahti < 82 Gi pysäyttää → aja uudelleen samoin. VIKA-rivit lokissa = pala jäi vanhaksi → leivo erikseen.
+- VALMIIN JÄLKEEN: polku + SHA256SUMS → VS (local_fa464945-e15d-4f98-aaad-00877a60f63a) ja PK (local_91a1bc27-6870-46aa-9886-66fd33b68880;
+  c4-reitin koosteet 0/35/70 %) → PT. Tarkista ennen: VIKA-rivit, tausta-jalki (katto-longzongmen, askelmat), sillat V4_lattia, ovi_V/ovi_O.
+- VALMIIT 1.11.: rakennukset-v89 (siltojen kansi V4_lattiaksi lattiaksi_leveat.py + sivusiltojen reitit sillat_sivureitit.py, SHA dc854bcbe5b7),
+  rakennukset-v90 (= v89 + 中右门/中左门 pariovet juurisolmuiksi ovi_V/ovi_O ovet_solmuiksi.py, jako x = 0 koska peli venyttää lehden origoon;
+  SHA 1976a9658a76). Molemmat PK:lle ja PT:lle; PK vaihtaa RakennusKansion ja ajaa c5:n. Leivonta v4 pohjautuu v90:een.
+- ODOTTAA: VS:n parit v89(b/d) ja 06 ulkorengas-v10:llä (LISÄYS 175); PK:n c5 v90:llä (Puyi sillalla, ovet).
