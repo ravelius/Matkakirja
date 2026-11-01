@@ -26,3 +26,5 @@ c5g/arkki.py = kuva-arkki: `python3 c5g/arkki.py <lokikansio> <ulos.jpg> <alku> 
 4. Edellisen luovutuksen Kesken 4 (botin uupuminen, kuva-ajoissa elinvoima-apu; s-osa/MK_TAUSTA, ≤ 4,5 m, valo-k1-216) ennallaan.
 Huom. maalin hetki vaihtelee ajoittain (botti): c5g b-97, c5h b-108, c5i b-59 – etsi maali lokista ("maali Meridiaaniportti",
 kameran paikka pysähtyy).
+
+LISÄYS 04.5x: PT kuittasi c5i:n ("KELPAA videoon 6fbd10a68:sta") → kohta 1 tehty; VIDEO on seuraajan ensimmäinen työ (video → PT → KK).
