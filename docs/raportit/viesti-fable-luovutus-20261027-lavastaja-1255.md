@@ -2647,3 +2647,14 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   U/odota-muurikate-v37.zsh (nohup, loki U/ajo-muurikate-v37.log) odottaa, että jatka-v4-kaiteeton ja Blender ovat päättyneet, ja ajaa sitten
   v37:n → _valmiit/juoksupeli-kk-lavastaja-muurikate-v37-vienti-<pvm>. KUN VALMIS: SHA-rivi PT:lle, korvaa v36:n (PK "kielletty-muurikate-v37/").
 - Leivonta v4 07.2x: 42/136 rakennusta (~2 min/kpl), vahti pid 46916 ennallaan.
+
+## LISÄYS 198 (1.11. 13.0x): LEIVONTA V4, KAITEETON-V3 JA MUURIKATE-V37 VALMIIT — ALOITA TÄSTÄ
+- LEIVONTA V4: _valmiit/juoksupeli-kk-lavastaja-leivonta-v4-vienti-20261101 SHA256SUMS 56331d2f9bbd (136 rakennusta LIMAlla, taustat v89f-korjauksin;
+  paketin muurikate-v33 ei käyttöön). KAITEETON-V3 (kielletty-c2-v31): SHA256SUMS a34677944e7a. PT kuittasi molemmat 13.0x → JU, PK kytkee.
+  Ovisolmut ovi_V/ovi_O + V4_portin_ovi tallella molemmissa Meridiaaniporteissa. Lokin rivien 7–8 virhe oli vanhasta ajosta (0-0 leivottu myöhemmin).
+  Mittari (T/nollavalo/suunnat.py, V4_red sivu-nolla): meridiaaniportti 2 %, g-taihedian 13 %, f-taihemen 13 % (pylväsviistoja ei eroteltu).
+- MUURIKATE-V37 (LISÄYS 197): _valmiit/juoksupeli-kk-lavastaja-muurikate-v37-vienti-20261101 SHA256SUMS a77cd792725b, korvaa v36:n → PT → JU →
+  PK "kielletty-muurikate-v37/". V4_marmorikaide nolla v36 → v37: ylös 56 → 32 %, sivu 65 → 30 %, alas 75 → 52 %; _varjo sivu 75 → 51 %.
+  Jalustalaatat ennallaan (sivu ~85 % = laattojen kyljet toisiaan vasten).
+- AVOIN: (1) rakennukset-v92 = v91 + edusta-v3. (2) marmorikaiteen jäljelle jäävä nolla ~30 % (syy tarkistamatta: varjo vai saarekkeet).
+  (3) taihedian/taihemen sivu-nolla 13 %: erottele pylväsviistot, jos PT haluaa.
