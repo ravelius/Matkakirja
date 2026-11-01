@@ -26,6 +26,8 @@ valmis-riviä, Error/Exception/Killed lokissa). Ajon loppuun kuvien tarkistus (`
   jatkosta, ks. AVOIN 2).
 
 ## AVOIN (järjestys)
+**PT 15.0x: NS selvittää rakennusten ShadowCaster-polun (kohta 1) → seuraaja EI tee samaa, vaan odottaa NS:n korjaushaaraa ja tekee
+sitten hinta-ms (kohta 2) + simukuva 03 + pari 03/06 (NS:n korjaus 067a0fc38:n kanssa).**
 1. **RAKENNUSVARJOJEN SYY**: miksi rakennukset eivät näy varjokartassa, vaikka shadowCastingMode On (d2 kaikki). Epäillyt: (a) JuoksuMaailma.shader /
    JuoksuLattia.shader ShadowCaster-pass (häivytys `JuoksuHaivytys.hlsl` "näkymättömästä ei varjoa" → clip, `_Haivytys`, alfa), (b) julkisivut
    ovat osasarjan palat/kopiot (Palatsi.cs:1043 kopioi mr.shadowCastingMode syntyhetkellä; myöhempi PaivitaKappaleet kattaa vain Juuren alla
