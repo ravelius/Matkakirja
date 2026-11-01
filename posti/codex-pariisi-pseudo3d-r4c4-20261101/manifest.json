@@ -1,0 +1,74 @@
+{
+  "sourceHead": "1f6a1e23b19edeb21d4873562b42c8c4e72d5f0d",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-pseudo3d-r4c4-20261031.md",
+  "asset": {
+    "checkedAt": "2026-11-01T00:07:33.010337+00:00",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-r4c4-20261101/final/pariisi-pseudo3d-r4-c4.png",
+    "sha256": "02782ed61c440621185d832abf566b7063f3b3924b4e77ce051e6619966609b9",
+    "bytes": 11335007,
+    "mode": "RGB",
+    "dimensions": [
+      3072,
+      2048
+    ],
+    "nativeDimensions": [
+      1536,
+      1024
+    ],
+    "nativeSha256": "88e8e5171ad4eced07d2fe4e75cb1ef628a23ec67691a17bbabd9e4652df3277",
+    "resampled": "2x Lanczos export; not native 3072 detail",
+    "generationMode": "built-in image_gen complete new generation",
+    "generationCalls": 2,
+    "selectedAttempt": 2,
+    "rejectedAttempt1": "two copied blue ornaments outside water mask",
+    "waterColourDiagnostics": {
+      "cyanPixels": 202229,
+      "outsideMask": 10318,
+      "beyond3pxMask": 4173,
+      "caution": "colour mask can include roof highlights and antialiasing; not a semantic water/shoreline certificate",
+      "correctedOrnamentChecks": {
+        "east-L-ornament": {
+          "box": [
+            2700,
+            560,
+            2820,
+            660
+          ],
+          "cyanPixels": 10,
+          "visual": "dry ivory/grass, no turquoise fill"
+        },
+        "far-east-strip": {
+          "box": [
+            2960,
+            820,
+            3072,
+            920
+          ],
+          "cyanPixels": 0,
+          "visual": "dry ivory/grass, no turquoise fill"
+        }
+      }
+    },
+    "horizontalOverlapDiagnostic": {
+      "meanAbsoluteChannelDifference": 20.937915378146702,
+      "exactPixelEqualityRequired": false,
+      "receiverCrossfadeAndCornerReviewRequired": true
+    },
+    "visualQA": {
+      "ordinaryBuildings": true,
+      "noExaggeration": true,
+      "noAddedTreesPeopleTraffic": true,
+      "railYardsAndBridgesRetainedBroadly": true,
+      "twoUnpermittedPoolsRemoved": true,
+      "roofInkAndDormersVisibleAtNativeCrop": true,
+      "closestGameZoomSharpnessAccepted": false,
+      "roofNote": "Fine details still limited by 1536px native output; no claim of native 3072px line fidelity",
+      "groundGeometryCertified": false
+    },
+    "receiverAccepted": false,
+    "gameIntegrated": false,
+    "published": false
+  },
+  "classification": "third-trial-awaiting-KS-horizontal-crossfade-corner-and-close-zoom-review",
+  "fullCityStarted": false
+}
