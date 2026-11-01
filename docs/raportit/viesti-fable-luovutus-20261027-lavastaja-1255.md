@@ -2751,3 +2751,9 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   siivet 21,0 (länsi) ja 23,8 m (itä). Peli ≈ todellisuus (−2 m) → ei kavennusta (omistaja 20.10.: mitat oikeina).
 - Havainteen 06 kapea käytävä = kameran paikka → rivi VS:lle 23.2x (kamera 06 lähemmäs / siipien väliin). LISÄYS 201 suljettu.
 - Jono: LISÄYS 200 (kujakivi, PT: ei nyt). v92 + tausta-v91 odottavat junan 217 lukituksen aukeamista (PT ilmoittaa).
+
+## LISÄYS 210 (1.11. 23.3x): PALATSIN SISÄTILAT – SUUNNITELMA PT:LLÄ (EI MALLINNUSTA ENNEN KUITTAUSTA) — ALOITA TÄSTÄ
+- PT 23.2x: uusi erä sisätilat (omistaja 30.10. 19.12, piirrokset ensin). Suunnitelma docs/raportit/lavastaja-sisatilat-suunnitelma-20261101.md:
+  vaihe 1 养心殿 + 储秀宫, vaihe 2 muut kuuden palatsin päähallit tyyppinä (korvaavat 21 yleistä avointa huonetta samoilla kujilla),
+  vaihe 3 keskiakselin salit; mittalähteet; Codexin piirrostilausluonnos (pohja 1:100 + 4 seinäkuvaa, ei sisäkattoa).
+- ODOTTAA PT:n kuittausta. Muu jono: 200 (ei nyt); v92 + tausta-v91 odottavat junan 217 lukitusta.
