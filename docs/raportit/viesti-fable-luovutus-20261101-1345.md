@@ -45,3 +45,6 @@ Ei lukitusta eikä TF:ää ennen omistajan hyväksyntää uudesta Pariisista ja 
 
 ## LISÄYS 13.5x (VS)
 - VS: pelikuvissa ei yhtään elävää heittovarjoa (ei hahmonkaan); elävä aurinko 188°/30° ≠ leivonnan 318°/45°. PT: simukuva 03 yhteinen-iPad13 hyväksytty; VS selvittää LAV:n kanssa leivonta-auringon (PT hyväksyi 30.10. leivonta-aurinko.json 169,97°/30°; 318°/45° = vika). Sitten kivetyksen sävy, läikät, 07. Tiedostot havainne-editori-20261101-133524/{varimittaus,syyt-ja-ehdotukset}.txt.
+
+## LISÄYS 13.5x (omistaja 13.46)
+- "hyvä. tärkeintä on ensin saada visuaalisuus kuntoon, tehdään muut vasta sitten" → valon viat ja Pariisi ensin; NS:n 60 fps vasta kun NS ei ole tarpeen valon korjauksissa (lokissa).
