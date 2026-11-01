@@ -1,0 +1,37 @@
+{
+  "measuredAt": "2026-11-01T15:32:05.692159+00:00",
+  "reviewer": "root",
+  "method": "Visual pixel estimate in native1536x1024 image; no output edits. Bbox right/bottom exclusive.",
+  "landmarks": [
+    {
+      "name": "Sacré-Cœur",
+      "tile": "r04c10",
+      "sha256": "7b0980098ebdbc79fb68d2faaffab2e1d7612094071cce47880219f9ecb806e9",
+      "targetWidthPx": 340,
+      "widthPx": 350,
+      "widthUncertaintyPx": 12,
+      "bboxApprox": [
+        204,
+        0,
+        554,
+        257
+      ],
+      "centerPx": [
+        379,
+        128.5
+      ],
+      "centerDefinition": "center of visible building bounding box, not whole uncut basilica",
+      "groundBaseCenterPxApprox": [
+        379,
+        225
+      ],
+      "upperDomesClipped": true,
+      "clippingAllowedBySource": true,
+      "notes": "Basilika pysyy vasemmassa yläkulmassa; näkyvän rakennuksen leveys noin350±12px (tilaus340px), näkyvän rajauslaatikon keskipiste noin(379,129). Jalustan keskikohta noin(379,225). Kupolien yläosa leikkautuu lähteen nimenomaisesti sallimalla tavalla; koko leikkaamattoman basilikan korkeutta ei mitata."
+    }
+  ],
+  "eiffelNotes": "r07c06/r08c06 source requests only partial foot/riverbank in overlap; no new whole tower.",
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "cameraMetricMeasured": false
+}
