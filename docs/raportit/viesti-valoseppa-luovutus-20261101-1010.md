@@ -32,3 +32,9 @@ Syy: konteksti 25 % (pehmeä raja, luonteva tauko: k06z20 odottaa levyä). Loki:
 
 ## AVOIN 2 (ennallaan)
 - Lokit T7:lle kuittausten jälkeen; LAV v4 odottaa levyä ≥ 70 Gi. linssiseppa-pohja-lento-worktree jätetty (ei mergetty mainiin).
+
+## LISÄYS 10.3x: AVOIN 1 TEHTY
+- k06z20 (lokit/pari-k06z20-20261101-100859): oletus ilman QA:ta = b5 (0,70 0,64 0,70 0,76 0,83 0,89 0,94 0,97 … 1,00), 10,9 M kolmiota,
+  ei error CS; kaukokuvassa ei suorakaiteita eikä kaidelaikkuja. Pari raystas-oletus-b0-bo.jpg + raystas-oletus-kauko-k0-ko.jpg → PT.
+- 8 committia (548a1b169 87c821fd3 11e8044fa 9f498cdc9 e30ca990f 7e7554663 b1fead5dc d1415715d) → NS:lle runkoon 216 (viesti lähetetty).
+- Seuraajalle: odota PT:n kuittausta parille ja NS:n vahvistusta rungosta; vianhakunäkymien siivous vain PT:n pyynnöstä. Muuten ei avointa.
