@@ -2697,3 +2697,14 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 ## LISÄYS 203 (1.11. 23.1x): JONOON – ILMAKUVA 07:N NURMI (PT, ei kiire; portin 05 jälkeen)
 - AVOIN (ei aloitettu): 07 ilmakuvan kirkkaanvihreä nurmi tulee taustamallin väristä (VS). Sävytä havainteen 07 mukaiseksi, vertailu
   proto-3d/lokit/havainne-editori-20261101-211745/ilma07-koonti.jpg. Samassa erässä p-kujaportin (LISÄYS 202) kanssa tai erikseen.
+
+## LISÄYS 204 (1.11. 23.2x): P-KUJAPORTTI – PT EI KUITANNUT, KORJAA ENSIN — ALOITA TÄSTÄ
+- PT 23.1x: LISÄYS 202:n uusi (pari-05-nyk-uusi-havainne.jpg keskikuva) ei vastaa havainnetta 05: aukon ylle jäi paljas punainen umpilaatta
+  (pilarit + palkki 4,6 m:iin), joka nousee sivumuurien räystäiden (y 3,3–4,1) yli ilman katetta → keskeneräisen näköinen.
+- KORJAA (portti_avoimeksi.py-parametrit tai jatko): umpilaatta pois tai muurin korkeuteen katteineen; sivumuurien katteet ja räystäät
+  jatkuvat aukon reunaan samalla korkeudella; aukon yläreunaksi ohut palkki räystäslinjan tuntumaan (≈ 4,1); ovien korkeus havainteen
+  suhteessa (lähes muurin korkuiset) VAIN jos kulkuaukon mitat eivät muutu. Kokeile ensin PALKKI_Y ≈ 4,15 (leikkaus sivukatteiden
+  yläreunaan) ja katso, tarvitaanko katteen jatke pilarien päälle (sivukatteen V4_palatsi_katto/gold/raystas-osat |x| 3,5…5,3 → peilaa/
+  venytä aukon reunaan) ja ohut palkki (V4_palatsi_friisi tms. olemassa olevista materiaaleista).
+- Uusi pari tasaisessa valossa (U/kujaportti-avoin/, rendtasa.py-tyyppinen workbench, kamera −0,3 / 9 / 4,2, 76°, 180°, 20 mm) → PT → kuittaus.
+  Sitten LISÄYS 202:n jatkovaiheet (leivonta, lod1/2, paketti). Scratchpadin rendtasa.py katoaa: kopioi tarvittaessa uudelleen.
