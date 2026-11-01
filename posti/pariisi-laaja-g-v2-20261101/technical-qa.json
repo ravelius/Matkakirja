@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-11-01T08:12:48.091896+00:00",
+  "selectedAttempt": 2,
+  "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2f95c216-4485-4fd5-ab5a-d0b301b89679.png",
+  "width": 1536,
+  "height": 1024,
+  "mode": "RGB",
+  "bytes": 2630817,
+  "sha256": "667535b36e25f8e78344c0fc1c1a2de6ee4402d2d11ebd94ed1df86e208c895d",
+  "nativeByteIdentical": true,
+  "postProcessing": false,
+  "contentBBoxApprox": [
+    16,
+    169,
+    1519,
+    850
+  ],
+  "requiredMaskBBox": [
+    17,
+    172,
+    1519,
+    851
+  ],
+  "maskAnalysisMethod": "Strongly drawn colored features min RGB<185 and chroma>22, excludes ivory; approximate diagnostic, not exact silhouette segmentation",
+  "drawnFeaturePixels": 442216,
+  "drawnFeaturePixelsOutsideMask": 4103,
+  "drawnFeatureFractionOutsideMask": 0.009278271252057818,
+  "exactMaskMatch": false,
+  "GSeamIntegrationVerified": false,
+  "waterCrossingsHeuristic": {
+    "west": {
+      "guide": [
+        [
+          484,
+          490
+        ]
+      ],
+      "candidate": [
+        [
+          484,
+          490
+        ]
+      ]
+    },
+    "east": {
+      "guide": [
+        [
+          534,
+          541
+        ],
+        [
+          554,
+          556
+        ],
+        [
+          561,
+          562
+        ],
+        [
+          564,
+          565
+        ],
+        [
+          567,
+          573
+        ],
+        [
+          585,
+          586
+        ]
+      ],
+      "candidate": [
+        [
+          534,
+          545
+        ],
+        [
+          554,
+          558
+        ],
+        [
+          568,
+          576
+        ],
+        [
+          585,
+          587
+        ]
+      ]
+    }
+  },
+  "waterCrossingMethod": "Majority of 5 pixels around edge have G-R>12,B-R>15,B>100; fragmented by banks/bridges; visual review required"
+}
