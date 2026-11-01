@@ -1,0 +1,68 @@
+{
+  "verifiedAt": "2026-11-01T07:26:10.937270+00:00",
+  "sourceCommit": "6c070bce7d1622cb6b36b0c80951d508fbbee341",
+  "sourceBlob": "f8c5bfc7474dec241d4fb59bd08c07cdfb5af13a",
+  "files": [
+    {
+      "file": "G-referenssi-owner-style-G-confirmed.jpg",
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f",
+      "bytes": 532470,
+      "size": [
+        1280,
+        815
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "asettelu-g-2x2.png",
+      "sha256": "d5dd45c1bc92af5fa3bcc5337c77be3814a9437f14bac5b5edcc71b396fcca4e",
+      "bytes": 2229682,
+      "size": [
+        1280,
+        815
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ohje-g-2x2-r1c1.png",
+      "sha256": "b5e813ddee1ba68853e1fe33155056011c8f6afd2f50325d737334490f9aa4e7",
+      "bytes": 2560585,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ohje-g-2x2-r1c2.png",
+      "sha256": "41656361bc91b5356d09a6967e5d4299ed2f14805869180363aabaaf2c6d9293",
+      "bytes": 2568037,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ohje-g-2x2-r2c1.png",
+      "sha256": "520e95b9b2cd5fac3bed9bdc1ea7ab767febb21345653f2d5b0e1968955edf19",
+      "bytes": 2715684,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "ohje-g-2x2-r2c2.png",
+      "sha256": "a7beac8fabc560f3023d8cbd7bb76415c875c3267bc36f67610a2f02b8ab288f",
+      "bytes": 2619738,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "allSixAttachmentsVerified": true
+}

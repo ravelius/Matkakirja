@@ -1,0 +1,62 @@
+[
+  {
+    "name": "top-horizontal",
+    "tiles": [
+      "r1c1",
+      "r1c2"
+    ],
+    "axis": "x",
+    "widthOrHeight": 341,
+    "meanAbsoluteChannelDifference": [
+      33.22592100439883,
+      31.79405127382698,
+      31.552659915689148
+    ],
+    "method": "Unregistered native-pixel RGB difference, diagnostic not an acceptance threshold"
+  },
+  {
+    "name": "left-vertical",
+    "tiles": [
+      "r1c1",
+      "r2c1"
+    ],
+    "axis": "y",
+    "widthOrHeight": 309,
+    "meanAbsoluteChannelDifference": [
+      25.707684398597628,
+      24.45826380461165,
+      24.792519973705502
+    ],
+    "method": "Unregistered native-pixel RGB difference, diagnostic not an acceptance threshold"
+  },
+  {
+    "name": "right-vertical",
+    "tiles": [
+      "r1c2",
+      "r2c2"
+    ],
+    "axis": "y",
+    "widthOrHeight": 309,
+    "meanAbsoluteChannelDifference": [
+      13.339801611380798,
+      10.796708552454152,
+      12.052281384843582
+    ],
+    "method": "Unregistered native-pixel RGB difference, diagnostic not an acceptance threshold"
+  },
+  {
+    "name": "bottom-horizontal",
+    "tiles": [
+      "r2c1",
+      "r2c2"
+    ],
+    "axis": "x",
+    "widthOrHeight": 341,
+    "meanAbsoluteChannelDifference": [
+      21.869269496884165,
+      18.98198657441349,
+      21.60219254032258
+    ],
+    "method": "Unregistered native-pixel RGB difference, diagnostic not an acceptance threshold"
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "reviewedAt": "2026-11-01T07:37:17.116435+00:00",
+  "status": "visual-QA-passed-with-disclosed-overlap-differences-for-trial-review",
+  "reviewedFullImages": 4,
+  "reviewedNativeDetailCrops": 4,
+  "reviewedNeighbourOverlaps": 4,
+  "reviewedFourWayOverlap": true,
+  "reviewedCrossfadePreview": true,
+  "landmarksAndExtremeExaggerationPreserved": true,
+  "prohibitedTextAircraftBirdsAbsent": true,
+  "nativeUnmodifiedDeliverables": true,
+  "generationCalls": 6,
+  "fullImageRegenerationOnly": true,
+  "referencePreparation": "The final r2c2 attempt used a separate full-frame guide assembled from source crop and accepted neighbour bands. This is a guidance artifact only; all four final tiles are unchanged native imagegen outputs.",
+  "findings": [
+    {
+      "severity": "minor",
+      "pair": [
+        "r1c1",
+        "r1c2"
+      ],
+      "detail": "Strongest remaining overlap difference: individual roof/facade edges, small people and boats differ slightly; full-width crossfade softens some Louvre/pyramid/river details."
+    },
+    {
+      "severity": "minor",
+      "pair": [
+        "r1c1",
+        "r2c1"
+      ],
+      "detail": "Some windows, roof details, trees, wakes and tiny people vary; primary streets and riverbank continue."
+    },
+    {
+      "severity": "minor",
+      "pair": [
+        "r1c2",
+        "r2c2"
+      ],
+      "detail": "Third full r2c2 generation fixes large tower displacement. Small roof/stone/foliage differences remain; no previous pronounced duplicated tower cornices in reviewed blend."
+    },
+    {
+      "severity": "minor",
+      "pair": [
+        "r2c1",
+        "r2c2"
+      ],
+      "detail": "Top-left corner inherits upper neighbour priority; small figures/tree/boat differences remain. Lower garden and main street align visually."
+    },
+    {
+      "severity": "note",
+      "area": "outer margins",
+      "detail": "Top and right paper margins became neighbourhood continuation. Lower edges contain streets, trees and clipped houses; some open pale paved spaces remain near the lower-left edge."
+    },
+    {
+      "severity": "note",
+      "area": "palette",
+      "detail": "Consistent across tiles, slightly crisper/stronger contrast and more saturated turquoise than the small original G."
+    }
+  ],
+  "limitations": [
+    "Overlaps are not pixel-identical; no claim of mathematically perfect seams.",
+    "Preview is an independent linear-crossfade diagnostic; it is not a game asset replacement or confirmed runtime assembly.",
+    "Sprite/text anchors, receiver approval, owner acceptance, runtime and publication remain unverified."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "purpose": "Reference layout only for a new whole-image generation; never a deliverable or pixel edit to a deliverable",
+  "base": "source/ohje-g-2x2-r2c2.png",
+  "leftStrip": "references/r2c1-right-341.png",
+  "leftPlacement": [
+    0,
+    0,
+    341,
+    1024
+  ],
+  "topStrip": "references/r1c2-bottom-309.png",
+  "topPlacement": [
+    0,
+    0,
+    1536,
+    309
+  ],
+  "cornerPriority": "top strip",
+  "sha256": "16bf4cbc71a1dbf9a853649d3cb3b5c209d916f304032b94c426708a5b493754",
+  "finalTilesRemainNativeAndUntouched": true
+}

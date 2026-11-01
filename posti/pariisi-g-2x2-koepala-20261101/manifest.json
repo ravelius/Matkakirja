@@ -1,0 +1,108 @@
+{
+  "taskNumbers": [
+    1579,
+    1580,
+    1581,
+    1582
+  ],
+  "sourceCommit": "6c070bce7d1622cb6b36b0c80951d508fbbee341",
+  "sourceBlob": "f8c5bfc7474dec241d4fb59bd08c07cdfb5af13a",
+  "generatedWith": "built-in image_gen",
+  "totalFullImageGenerations": 6,
+  "tileSize": [
+    1536,
+    1024
+  ],
+  "overlapPixels": {
+    "horizontal": 341,
+    "vertical": 309
+  },
+  "integerTileOrigins": {
+    "r1c1": [
+      0,
+      0
+    ],
+    "r1c2": [
+      1195,
+      0
+    ],
+    "r2c1": [
+      0,
+      715
+    ],
+    "r2c2": [
+      1195,
+      715
+    ]
+  },
+  "assembledSizeAtIntegerOrigins": [
+    2731,
+    1739
+  ],
+  "exactSourceStepBeforeRounding": [
+    1194.6666666667,
+    714.6666666667
+  ],
+  "roundingNote": "Given overlap341/309 uses integer origins; exact G crop scaled32/15 has one-third pixel fractional overlaps. At most one-pixel raster rounding difference is expected.",
+  "images": [
+    {
+      "tile": "r1c1",
+      "taskNumber": 1579,
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "path": "proto-3d/_tyo/codex/pariisi-g-2x2/pariisi-g-2x2-r1c1.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 3681555,
+      "sha256": "6b231999a0af82b1b7baed05a6a678f5393c6726c9c5b2d8421c7a051a888e17",
+      "nativeOutputUnmodified": true
+    },
+    {
+      "tile": "r1c2",
+      "taskNumber": 1580,
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "path": "proto-3d/_tyo/codex/pariisi-g-2x2/pariisi-g-2x2-r1c2.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 3657360,
+      "sha256": "23bdd7af1e67c66296ea63207cd8e8e0b2417329f418c7d723da22f98c4ff4a9",
+      "nativeOutputUnmodified": true
+    },
+    {
+      "tile": "r2c1",
+      "taskNumber": 1581,
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "path": "proto-3d/_tyo/codex/pariisi-g-2x2/pariisi-g-2x2-r2c1.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 3703260,
+      "sha256": "b52567b7351c63e9b57f64fbdb9221fb846aec6e4e5fe1caa27c6bf175154f17",
+      "nativeOutputUnmodified": true
+    },
+    {
+      "tile": "r2c2",
+      "taskNumber": 1582,
+      "selectedAttempt": 3,
+      "generationCalls": 3,
+      "path": "proto-3d/_tyo/codex/pariisi-g-2x2/pariisi-g-2x2-r2c2.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 3491386,
+      "sha256": "757d5f94218f767e5786f109367dcdda3f1e70f8b35f4bc78b7d7f246f7025db",
+      "nativeOutputUnmodified": true
+    }
+  ],
+  "sourceOfCurrentDirection": "Owner decision in source order, G layout takes precedence over real coordinates; old locked-map route retired",
+  "previousTrial1578": "closed-by-owner-no-retry",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "citywideProductionAuthorized": false
+}
