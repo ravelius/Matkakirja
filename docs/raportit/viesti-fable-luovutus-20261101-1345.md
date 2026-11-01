@@ -48,3 +48,4 @@ Ei lukitusta eikä TF:ää ennen omistajan hyväksyntää uudesta Pariisista ja 
 
 ## LISÄYS 13.5x (omistaja 13.46)
 - "hyvä. tärkeintä on ensin saada visuaalisuus kuntoon, tehdään muut vasta sitten" → valon viat ja Pariisi ensin; NS:n 60 fps vasta kun NS ei ole tarpeen valon korjauksissa (lokissa).
+- 13.5x VS: VIKA vahvistettu: v4 leivottu 45°/318° (havainneaurinko, leivonta-aurinko-f4df529a6.json), peliaurinko 30°/188° → varjot eri suuntiin. PT päätti: peliaurinko 45°/318° ilman uutta leivontaa (VS:n haara aea684c3c:n päälle) → simukuva 03 + koonnin uusinta → PT → NS.
