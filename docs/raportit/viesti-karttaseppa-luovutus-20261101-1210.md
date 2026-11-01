@@ -29,3 +29,8 @@ Garnier 390, Sacré-Cœur 340, Invalidit 240, Riemukaari 180).
 3. Postilaatikko: `git fetch origin claude/postilaatikko` + `git show …:<polku>`; kuittaukset plumbingilla
    (skriptimalli scratchpadissa ei säily → ks. 1035-luovutus kohta 3).
 4. Siivottavissa (ei kiire): `pariisi-pohja/_muokkaa_*.py`, `*.ennen-*.py`, kooste-1m.py:n KOOSTE_KOEPALA.
+
+## LISÄYS 12.2x (PT, sitova: ei väliaikaisia poikkeamia)
+Lähin zoom EI muutu. `PorrastettuPelissa` true vasta, kun **koko kaupungilla on lähitaso** samalla lähimmällä zoomilla kuin nyt
+(0,75 km tarkkuusalue säilyy); siihen asti pelissä nykyiset 1 m/px- ja 0,5 m/px -laatat. Proto 990659ede (ehto koodin
+kommenttiin), NS-LISTA päivitetty. Avoimen kohdan 2 kääntö siis vasta lähitasojen jälkeen (määrä ja tilaus PT:ltä).
