@@ -42,3 +42,6 @@ Ei lukitusta eikä TF:ää ennen omistajan hyväksyntää uudesta Pariisista ja 
 - Omistajan asennusrivi: git -C … fetch + git show origin/main:polku, ei cd && git pull (KK korjasi).
 - Pari omistajalle: sama kohde kokonaan kaikissa ruuduissa, ei vanhoja ei-G-piirroksia vertailuna.
 - Runkotiedotteet kuvausajossa olevalle roolille vain, jos muutos koskee kuvattavaa.
+
+## LISÄYS 13.5x (VS)
+- VS: pelikuvissa ei yhtään elävää heittovarjoa (ei hahmonkaan); elävä aurinko 188°/30° ≠ leivonnan 318°/45°. PT: simukuva 03 yhteinen-iPad13 hyväksytty; VS selvittää LAV:n kanssa leivonta-auringon (PT hyväksyi 30.10. leivonta-aurinko.json 169,97°/30°; 318°/45° = vika). Sitten kivetyksen sävy, läikät, 07. Tiedostot havainne-editori-20261101-133524/{varimittaus,syyt-ja-ehdotukset}.txt.
