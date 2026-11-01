@@ -1,0 +1,123 @@
+{
+  "reviewer": "independent-correction-review",
+  "date": "2026-11-01",
+  "scope": ["r06c07-uusinta", "r05c09-uusinta"],
+  "sourceOrderSHA256": "0487dd8b9ba74df7a664c421354d40bbb79bfa3838d25818dc3e39704d8db709",
+  "method": "Visual inspection of original1536x1024 images and both ohje/viite reference pairs; read-only in-memory magnification of tower tip/bottom and Garnier. A small pixel-row inspection identifies the terminal tip's first antialiased row. Other coordinates are approximate visual estimates. No source/output image was changed, no composite or camera test was produced.",
+  "coordinateConvention": "Origin top-left. Bboxes=[left,top,right,bottom], right/bottom exclusive. Visible tower height is the extent inside this image only. No assembled full-tower height is claimed.",
+  "images": [
+    {
+      "tile": "r06c07",
+      "task": 1652,
+      "file": "selected/pariisi-lahi-r06c07-uusinta.png",
+      "sha256": "1ba4a68265e7ec8520c56e3674ff48fe18d6197341ecbc75f08d19d326142c27",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "referenceSHA256": "0cc0393a159f563ae6ad6fd3fd9e3df4b02a863de41d7253cfb8195ad7024c6a",
+      "guideSHA256": "7be60fbcffab07d70532e09ca83f7dedb69e86c7fdd0bca677213231ed49d7a2",
+      "measurements": {
+        "visibleUpperPortionBBoxApprox": [431,376,555,1024],
+        "bboxCenterXYApprox": [493,700],
+        "terminalTipXYApprox": [498,376],
+        "firstAntialiasedTerminalRow": 376,
+        "firstClearlyDarkTerminalRow": 377,
+        "lastVisibleRow": 1023,
+        "visibleUpperPortionHeightPx": 648,
+        "heightDefinition": "Rows376 through1023 inclusive:1024-376=648px. Choosing the first solid dark row instead gives647px; antialias-edge uncertainty is about1px.",
+        "centerAxisXApprox": 495,
+        "bottomCrossSectionXRangeApprox": [432,554],
+        "bottomCrossSectionWidthPxApprox": 122,
+        "upperPlatformYRangeApprox": [640,685],
+        "entireAssembledTowerHeightPx": null,
+        "groundBaseWidthInThisImage": null,
+        "uncertaintyPx": {"tipXY": 2, "height": 1, "bboxSideEdges": 6, "axisX": 5, "bottomWidth": 10, "platformY": 10}
+      },
+      "referenceComparison": {
+        "referenceCenterAxisXApprox": 420,
+        "axisDeltaXPxApprox": 75,
+        "referenceBottomCrossSectionXRangeApprox": [375,463],
+        "referenceBottomCrossSectionWidthPxApprox": 88,
+        "bottomWidthDeltaPxApprox": 34,
+        "referenceUpperPlatformYRangeApprox": [840,880],
+        "upperPlatformVerticalShiftPxApprox": -200
+      },
+      "contentObservations": [
+        "A recognizable brown lattice Eiffel upper section, upper platform, mast and complete terminal point are now present. The terminal point is fully inside the frame with roughly376px above it; it is not clipped.",
+        "The tower continues through the bottom edge as requested. This image contains the visible UPPER PORTION, not the whole Eiffel Tower or its555px ground base. The648px figure must not be described as the complete tower height.",
+        "The surrounding Arc/plaza at top, right-side neighborhood/Grand Palais edge and bottom river context are drawn; no gray reference rectangle or obvious straight pasted-panel border is visible."
+      ],
+      "continuityRisks": [
+        "The new centerline is about75px right of the supplied lower-tower reference. An unadjusted seam would not join the lattice shafts.",
+        "The bottom cross-section is about122px wide versus approximately88px in the reference at the same image row. The new platform also sits roughly200px higher. These shape/scale differences mean that a horizontal translation alone would not establish structural continuity.",
+        "The lattice color and general architectural vocabulary are compatible, but the platform elevations, taper and mast details require receiver review during the join. No claim is made that warp/cut has resolved these differences."
+      ],
+      "tipCompleteWithinImage": true,
+      "requestedMissingUpperContentNowPresent": true,
+      "assembledTowerContinuityVerified": false,
+      "receiverReviewRequired": true
+    },
+    {
+      "tile": "r05c09",
+      "task": 1653,
+      "file": "selected/pariisi-lahi-r05c09-uusinta.png",
+      "sha256": "b1446f0fbf8ec741d09e56d3e992310763a53b6568d7fbd49455791269f259e9",
+      "size": [1536,1024],
+      "mode": "RGB",
+      "referenceSHA256": "f9c4e47b5d994be290d48a6e1c901f4ec521cd5f29d367d4965a3b30325e3ee3",
+      "guideSHA256": "4ccbe6c539dc44401b4ff798c433fcaa5a9259702bd04b517273c7ef63bb39b7",
+      "comparisonPriority": "The new viite image, especially left x0..341, takes priority over the conflicting coarse ohje geometry.",
+      "leftReferenceContentObservations": [
+        "The long cream mansard block with red shop awnings at upper-left is recognizable and present, together with its adjacent pale street and mature trees.",
+        "Both connected paved plaza areas, the row of small trees/hedge between them, the orange-roof kiosk and the rounded green lawn are present in the intended left neighborhood. The left reference has not been replaced by unrelated housing.",
+        "The tree-lined avenue continues downward through the left/lower district. It is drawn continuously inside the candidate, without an obvious straight rectangular collage edge."
+      ],
+      "approximateLandmarkComparisons": [
+        {
+          "feature": "Rounded green lawn in lower plaza",
+          "referenceCenterXY": [295,520],
+          "candidateCenterXY": [319,475],
+          "deltaXY": [24,-45],
+          "uncertaintyPx": 10
+        },
+        {
+          "feature": "Orange-roof kiosk beside lawn",
+          "referenceCenterXY": [220,495],
+          "candidateCenterXY": [234,443],
+          "deltaXY": [14,-52],
+          "uncertaintyPx": 10
+        },
+        {
+          "feature": "Upper-left long red-awning block, lower/front end",
+          "referencePositionXYApprox": [225,280],
+          "candidatePositionXYApprox": [235,207],
+          "deltaXYApprox": [10,-73],
+          "uncertaintyPx": 15
+        }
+      ],
+      "garnierAndRightObservations": [
+        "One green-roof Garnier remains in the lower central/right position, with matching broad silhouette, classical facade, columns and gold roof ornaments. No duplicate opera building is present.",
+        "The candidate exposes more of Garnier's upper roof and central roof ornament above the reference's masked y715 boundary. The shared facade/roof details in the visible overlap are approximately25..35px higher than the reference, with relatively small horizontal displacement. This is a geometry difference, not proof of an exact continuation.",
+        "The right-side mansard blocks, pale streets and curved block above the tree-lined junction remain recognizable. Local block/street placements differ by tens of pixels; the complete right overlap has not been pixel-registered or tested in an assembly."
+      ],
+      "continuityRisks": [
+        "The intended left-side content is now present, but the plaza and upper-left block are roughly45..75px higher than the new viite, with smaller rightward displacement. A seam taken without receiver adjustment can cross displaced building edges, trees, pavement borders and lawn contours.",
+        "The varying shifts across the upper block, plaza and lower avenue are not demonstrably one uniform translation. Content correspondence alone does not prove that the r05c08-r05c09 seam is resolved.",
+        "The Garnier facade/roof elevation shift creates a separate bottom-overlap risk. The candidate is internally continuous, but that does not establish continuity to the already accepted lower/right neighbors."
+      ],
+      "leftRequestedContentPresent": true,
+      "leftSeamToNeighborVerified": false,
+      "garnierContinuationVerified": false,
+      "receiverReviewRequired": true
+    }
+  ],
+  "overall": {
+    "outputsEdited": false,
+    "generationPerformed": false,
+    "compositeProduced": false,
+    "cameraMetricMeasured": false,
+    "cameraPassClaimed": false,
+    "acceptanceDecision": "NOT_MADE",
+    "receiver": "Karttaseppa + PT",
+    "summary": "Both requested content corrections are visibly present. Eiffel has a complete in-frame terminal tip and648px of visible upper portion, but its axis/scale/platform positions differ materially from the continuation reference. r05c09 restores the required left plaza/block content while retaining measurable positional drift and a Garnier overlap shift. Receiver assembly review remains necessary."
+  }
+}

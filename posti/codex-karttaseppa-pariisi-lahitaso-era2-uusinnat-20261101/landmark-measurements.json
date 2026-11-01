@@ -1,0 +1,31 @@
+{
+  "measuredAt": "2026-11-01T15:03:59.337938+00:00",
+  "method": "Independent visual and pixel inspection at native1536x1024; coordinates approximate except visible image-row extent. Not a game camera measurement.",
+  "tile": "r06c07",
+  "sha256": "1ba4a68265e7ec8520c56e3674ff48fe18d6197341ecbc75f08d19d326142c27",
+  "tipPx": [
+    498,
+    376
+  ],
+  "visibleBottomY": 1023,
+  "visibleUpperHeightPx": 648,
+  "visibleUpperHeightUncertaintyPx": 2,
+  "entireTowerHeightPx": null,
+  "axisXApprox": 495,
+  "referenceAxisXApprox": 420,
+  "axisShiftPxApprox": 75,
+  "bottomShaftWidthPxApprox": 122,
+  "referenceBottomShaftWidthPxApprox": 88,
+  "terminalTipInsideFrame": true,
+  "lowerShaftIntentionallyCrossesBottom": true,
+  "upperPlatformYApprox": [
+    650,
+    680
+  ],
+  "referenceUpperPlatformYApprox": [
+    840,
+    880
+  ],
+  "continuityVerified": false,
+  "heightExplanationFi": "Kuvassa r06c07-uusinta näkyvän tornin yläosan korkeus on noin **648 px**: antennin kärki noin (498,376), kuvaan jäävän rungon alin rivi y1023. Tämä mitta on vain tässä palassa näkyvä yläosa, EI koottuun karttaan jatkuvan koko Eiffel-tornin korkeus. Koko tornin korkeutta ei ole varmennettu. Akseli on noin x495 (viite noin x420), alareunan runkoleveys noin122 px (viite noin88 px) ja ylätaso noin y650–680 (viitteessä noin840–880); alempaan palaan liittyminen vaatii vastaanottajan arvioinnin eikä pelkkää x-siirtoa väitetä riittäväksi."
+}

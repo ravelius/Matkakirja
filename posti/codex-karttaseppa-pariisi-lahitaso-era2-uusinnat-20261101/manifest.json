@@ -1,0 +1,56 @@
+{
+  "sourceCommit": "d8051f83a1113c8788dd88205718dbb2443fd8ca",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-lahitaso-era2-uusinnat-20261101.md",
+  "taskNumbers": [
+    1652,
+    1653
+  ],
+  "imageCount": 2,
+  "totalCalls": 2,
+  "images": [
+    {
+      "tile": "r06c07",
+      "taskNumber": 1652,
+      "filename": "pariisi-lahi-r06c07-uusinta.png",
+      "sha256": "1ba4a68265e7ec8520c56e3674ff48fe18d6197341ecbc75f08d19d326142c27",
+      "bytes": 3740246,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "review-with-documented-limitations",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r06c07-uusinta.png"
+    },
+    {
+      "tile": "r05c09",
+      "taskNumber": 1653,
+      "filename": "pariisi-lahi-r05c09-uusinta.png",
+      "sha256": "b1446f0fbf8ec741d09e56d3e992310763a53b6568d7fbd49455791269f259e9",
+      "bytes": 3774729,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "calls": 1,
+      "selectedAttempt": 1,
+      "byteIdenticalToNative": true,
+      "visualQA": "review-with-documented-limitations",
+      "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era2-20261101/pariisi-lahi-r05c09-uusinta.png"
+    }
+  ],
+  "stripCopiesIntoOutput": 0,
+  "maskEdits": 0,
+  "postprocessing": false,
+  "deliveryPurpose": "raw-correction-candidates-for-KS-camera-and-PT-review",
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "ring3Authorized": false,
+  "createdAt": "2026-11-01T15:05:50.138527+00:00"
+}

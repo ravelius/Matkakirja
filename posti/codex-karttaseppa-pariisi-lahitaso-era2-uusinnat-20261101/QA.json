@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "d8051f83a1113c8788dd88205718dbb2443fd8ca",
+  "images": [
+    {
+      "tile": "r06c07",
+      "attempt": 1,
+      "sha256": "1ba4a68265e7ec8520c56e3674ff48fe18d6197341ecbc75f08d19d326142c27",
+      "status": "review-with-documented-limitations",
+      "notes": "Eiffelin yläosa, ylin taso ja sulkeutuva antennin pää näkyvät kokonaan; torni jatkuu kuvan alareunan yli. Ympäristön Riemukaaren alaosa, autoliikenne, oikean reunan korttelit ja alareunan joki ovat mukana. Avoin laatupoikkeama: tornin akseli on siirtynyt viitteen noin x420:stä kohti x495:tä ja alareunan runko on leventynyt, joten jatkumoa alemman palan torniin ei ole hyväksytty. Antennissa on pallomainen pää. Täsmälliset pikseliarviot riippumattomassa raportissa. Toimitetaan raakakuvana vastaanottajan arvioon, ei sisällöllisesti lopullisena tai saumavarmennettuna; ei uusia ottoja tämän kahden kutsun tilauksen puitteissa.",
+      "reviewedAt": "2026-11-01T15:03:42.284926+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "Source d8051f83 requires Eiffel upper continuation and r05c09 left geometry. Raw whole images only; final assembled-camera seam and PT review remain separate.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    },
+    {
+      "tile": "r05c09",
+      "attempt": 1,
+      "sha256": "b1446f0fbf8ec741d09e56d3e992310763a53b6568d7fbd49455791269f259e9",
+      "status": "review-with-documented-limitations",
+      "notes": "Vasemman reunan pitkä talorivi, kivetty aukio, vihreä soikio, oranssi katos ja puistokatu ovat nyt viitteen sisältöä vastaavasti mukana. Garnier jatkuu alareunan yli, oikean reunan korttelit ovat mukana, harmaita alueita tai kaistaliimauksia ei ole. Avoin laatupoikkeama: aukion ja talojen sijainneissa sekä mittakaavassa näkyy eroja viitteeseen; Garnierin kattoraja on muuttunut. Saumamittauksen 1,3 rajan täyttymistä ei ole varmennettu. Toimitetaan raakakuvana KS:n kokoamis- ja kameratarkistukseen, ei hyväksyttynä saumakorjauksena.",
+      "reviewedAt": "2026-11-01T15:03:42.621815+00:00",
+      "reviewer": "root",
+      "geometryTolerance": "Source d8051f83 requires Eiffel upper continuation and r05c09 left geometry. Raw whole images only; final assembled-camera seam and PT review remain separate.",
+      "receiverAccepted": false,
+      "ptAccepted": false
+    }
+  ],
+  "scope": "Root visual review; actual assembled camera seam and KS/PT acceptance remain separate."
+}
