@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-01T09:24:16.949521+00:00",
+  "images": [
+    {
+      "file": "pariisi-valitaso-r2c2.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-26398ad7-5ec1-4ed6-be50-10779ef3ee94.png",
+      "sha256": "409b23801d38ff86c0873a1d22d9fd69689542be22cfa088d43f21627fc4441d",
+      "bytes": 4054309,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "nativeBytesIdentical": true,
+      "postProcessing": false
+    },
+    {
+      "file": "pariisi-valitaso-r2c3.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9f0d363a-5d49-4d81-9a7e-6b4b4e5b3ef9.png",
+      "sha256": "43682758efee4ae7476e4ce05b6e102c931756f8e08333f297fdc98cbbaf1c9d",
+      "bytes": 4052704,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "nativeBytesIdentical": true,
+      "postProcessing": false
+    }
+  ]
+}

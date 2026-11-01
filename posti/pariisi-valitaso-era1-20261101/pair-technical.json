@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-11-01T09:16:52.568693+00:00",
+  "images": [
+    {
+      "tile": "r2c2",
+      "sha256": "409b23801d38ff86c0873a1d22d9fd69689542be22cfa088d43f21627fc4441d",
+      "bytes": 4054309,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "waterColorHeuristic": {
+        "selectedPixels": 53990,
+        "medianSaturation": 0.38636363636363646
+      }
+    },
+    {
+      "tile": "r2c3",
+      "sha256": "43682758efee4ae7476e4ce05b6e102c931756f8e08333f297fdc98cbbaf1c9d",
+      "bytes": 4052704,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "waterColorHeuristic": {
+        "selectedPixels": 42554,
+        "medianSaturation": 0.2828947368421053
+      }
+    }
+  ],
+  "approvedGWaterColorHeuristic": {
+    "selectedPixels": 273091,
+    "medianSaturation": 0.45070422535211274
+  },
+  "overlapWidthApprox": 333,
+  "overlapWaterMaskIoUHeuristic": 0.7136697540721814,
+  "overlapColumnWaterIntervals": [
+    {
+      "r2c2x": 1250,
+      "r2c3x": 47,
+      "r2c2Rows": [
+        [
+          563,
+          593
+        ]
+      ],
+      "r2c3Rows": [
+        [
+          563,
+          596
+        ]
+      ]
+    },
+    {
+      "r2c2x": 1350,
+      "r2c3x": 147,
+      "r2c2Rows": [
+        [
+          652,
+          691
+        ]
+      ],
+      "r2c3Rows": [
+        [
+          651,
+          674
+        ]
+      ]
+    },
+    {
+      "r2c2x": 1450,
+      "r2c3x": 247,
+      "r2c2Rows": [
+        [
+          694,
+          714
+        ]
+      ],
+      "r2c3Rows": [
+        [
+          693,
+          715
+        ]
+      ]
+    },
+    {
+      "r2c2x": 1530,
+      "r2c3x": 327,
+      "r2c2Rows": [
+        [
+          570,
+          580
+        ],
+        [
+          646,
+          658
+        ],
+        [
+          704,
+          713
+        ],
+        [
+          724,
+          745
+        ]
+      ],
+      "r2c3Rows": [
+        [
+          573,
+          581
+        ],
+        [
+          645,
+          660
+        ],
+        [
+          704,
+          712
+        ],
+        [
+          723,
+          744
+        ]
+      ]
+    }
+  ],
+  "methodLimitations": "HSV-selected water pixels only; excludes bridges/boats and may include similar colored roofs. Not an exact geometric alignment test. Identical pixel seams are not established by these measures.",
+  "pixelIdenticalOverlap": false,
+  "receiverCompositeVerified": false
+}

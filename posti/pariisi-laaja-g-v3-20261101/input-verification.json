@@ -1,0 +1,25 @@
+{
+  "sourceCommit": "d2d1386c1b4db18eb38e3a8d4b1348063576c868",
+  "sourceBlob": "39d6af5cb254021d0d93d7a62a2f09162d20b1aa",
+  "verifiedAt": "2026-11-01T08:36:54.913868+00:00",
+  "files": [
+    {
+      "name": "kaupunkimaski-laaja.png",
+      "sha256": "b400d07e5a516a4b405780eebc72f8878e5612d8b48cc56f3d575f56b5ca3687",
+      "bytes": 6650,
+      "verified": true
+    },
+    {
+      "name": "ohje-laaja-v3-pohja-v2.png",
+      "sha256": "667535b36e25f8e78344c0fc1c1a2de6ee4402d2d11ebd94ed1df86e208c895d",
+      "bytes": 2630817,
+      "verified": true
+    },
+    {
+      "name": "G-referenssi-owner-style-G-confirmed.jpg",
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f",
+      "bytes": 532470,
+      "verified": true
+    }
+  ]
+}

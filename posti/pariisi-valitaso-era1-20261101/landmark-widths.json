@@ -1,0 +1,147 @@
+{
+  "method": "Manual horizontal silhouette ranges on native1536x1024 images. Approximate, not calibrated segmentation. Entire building extent includes all wings, excludes gardens, pavement and shadows. Interprets Invalides as golden cup per companion wide-v3 source.",
+  "qaStrictPass": false,
+  "units": "native pixels",
+  "landmarks": [
+    {
+      "tile": "r2c2",
+      "name": "Louvre",
+      "targetPx": 250,
+      "xRangeApprox": [
+        938,
+        1308
+      ],
+      "measuredPxApprox": 370,
+      "uncertaintyPx": 10,
+      "deltaPx": 120,
+      "scope": "All connected palace wings; neither courtyard alone nor just the larger east pavilion"
+    },
+    {
+      "tile": "r2c2",
+      "name": "Notre-Dame",
+      "targetPx": 165,
+      "xRangeApprox": [
+        1368,
+        1523
+      ],
+      "measuredPxApprox": 155,
+      "uncertaintyPx": 5,
+      "deltaPx": -10,
+      "scope": "Whole cathedral silhouette"
+    },
+    {
+      "tile": "r2c2",
+      "name": "Sainte-Chapelle",
+      "targetPx": 40,
+      "xRangeApprox": [
+        1298,
+        1348
+      ],
+      "measuredPxApprox": 50,
+      "uncertaintyPx": 5,
+      "deltaPx": 10,
+      "scope": "Whole narrow chapel"
+    },
+    {
+      "tile": "r2c2",
+      "name": "Eiffel-base",
+      "targetPx": 145,
+      "xRangeApprox": [
+        198,
+        351
+      ],
+      "measuredPxApprox": 153,
+      "uncertaintyPx": 5,
+      "deltaPx": 8,
+      "scope": "Outermost iron feet, excludes garden and shadows"
+    },
+    {
+      "tile": "r2c2",
+      "name": "Pantheon",
+      "targetPx": 125,
+      "xRangeApprox": [
+        1274,
+        1400
+      ],
+      "measuredPxApprox": 126,
+      "uncertaintyPx": 5,
+      "deltaPx": 1,
+      "scope": "Whole building"
+    },
+    {
+      "tile": "r2c2",
+      "name": "Invalides-gold-cup",
+      "targetPx": 70,
+      "xRangeApprox": [
+        605,
+        680
+      ],
+      "measuredPxApprox": 75,
+      "uncertaintyPx": 5,
+      "deltaPx": 5,
+      "scope": "Gold cap only; excludes stone drum"
+    },
+    {
+      "tile": "r2c2",
+      "name": "Arc-de-Triomphe",
+      "targetPx": 50,
+      "xRangeApprox": [
+        261,
+        311
+      ],
+      "measuredPxApprox": 50,
+      "uncertaintyPx": 3,
+      "deltaPx": 0,
+      "scope": "Arch silhouette, excludes roundabout"
+    },
+    {
+      "tile": "r2c3",
+      "name": "Louvre",
+      "targetPx": 250,
+      "xRangeApprox": null,
+      "measuredPxApprox": null,
+      "uncertaintyPx": null,
+      "deltaPx": null,
+      "scope": "Palace clipped by left frame: full width cannot be measured in this tile"
+    },
+    {
+      "tile": "r2c3",
+      "name": "Notre-Dame",
+      "targetPx": 165,
+      "xRangeApprox": [
+        168,
+        322
+      ],
+      "measuredPxApprox": 154,
+      "uncertaintyPx": 5,
+      "deltaPx": -11,
+      "scope": "Whole cathedral silhouette"
+    },
+    {
+      "tile": "r2c3",
+      "name": "Sainte-Chapelle",
+      "targetPx": 40,
+      "xRangeApprox": [
+        94,
+        146
+      ],
+      "measuredPxApprox": 52,
+      "uncertaintyPx": 5,
+      "deltaPx": 12,
+      "scope": "Whole chapel silhouette"
+    },
+    {
+      "tile": "r2c3",
+      "name": "Pantheon",
+      "targetPx": 125,
+      "xRangeApprox": [
+        72,
+        199
+      ],
+      "measuredPxApprox": 127,
+      "uncertaintyPx": 5,
+      "deltaPx": 2,
+      "scope": "Whole building"
+    }
+  ]
+}

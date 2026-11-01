@@ -1,0 +1,117 @@
+{
+  "method": "Manual horizontal silhouette ranges on native1536x1024 image using enlarged rulers. Approximate, no calibrated segmentation. Courtyards, roads, gardens and cast shadows excluded. Not an exact-size or map-scale certification.",
+  "selectedAttempt": 5,
+  "sha256": "e827148535059269027dfa3561484fc431fe5e00279ddfc906a5c5e9124ca430",
+  "units": "native pixels",
+  "qaStrictPass": false,
+  "landmarks": [
+    {
+      "name": "Louvre",
+      "targetPx": 72,
+      "xRangeApprox": [
+        706,
+        760
+      ],
+      "measuredPxApprox": 54,
+      "uncertaintyPx": 3,
+      "deltaPx": -18,
+      "scope": "Entire connected palace body, not its wider courtyard or pyramid"
+    },
+    {
+      "name": "Notre-Dame",
+      "targetPx": 48,
+      "xRangeApprox": [
+        762,
+        812
+      ],
+      "measuredPxApprox": 50,
+      "uncertaintyPx": 3,
+      "deltaPx": 2,
+      "scope": "Whole visible cathedral including rear extent"
+    },
+    {
+      "name": "Sainte-Chapelle",
+      "targetPx": 12,
+      "xRangeApprox": [
+        746,
+        758
+      ],
+      "measuredPxApprox": 12,
+      "uncertaintyPx": 2,
+      "deltaPx": 0,
+      "scope": "Tiny chapel body and roof; excludes adjacent island and trees"
+    },
+    {
+      "name": "Eiffel-base",
+      "targetPx": 42,
+      "xRangeApprox": [
+        425,
+        476
+      ],
+      "measuredPxApprox": 51,
+      "uncertaintyPx": 3,
+      "deltaPx": 9,
+      "scope": "Outermost visible tower feet, excludes garden"
+    },
+    {
+      "name": "Pantheon",
+      "targetPx": 37,
+      "xRangeApprox": [
+        734,
+        770
+      ],
+      "measuredPxApprox": 36,
+      "uncertaintyPx": 3,
+      "deltaPx": -1,
+      "scope": "Whole visible building body"
+    },
+    {
+      "name": "Opera-Garnier",
+      "targetPx": 33,
+      "xRangeApprox": [
+        657,
+        693
+      ],
+      "measuredPxApprox": 36,
+      "uncertaintyPx": 3,
+      "deltaPx": 3,
+      "scope": "Whole visible opera building"
+    },
+    {
+      "name": "Sacre-Coeur",
+      "targetPx": 28,
+      "xRangeApprox": [
+        722,
+        754
+      ],
+      "measuredPxApprox": 32,
+      "uncertaintyPx": 3,
+      "deltaPx": 4,
+      "scope": "Visible church silhouette, excludes mound and trees"
+    },
+    {
+      "name": "Invalides-gold-cup",
+      "targetPx": 20,
+      "xRangeApprox": [
+        550,
+        568
+      ],
+      "measuredPxApprox": 18,
+      "uncertaintyPx": 2,
+      "deltaPx": -2,
+      "scope": "Golden cap only, not the stone drum or building below"
+    },
+    {
+      "name": "Arc-de-Triomphe",
+      "targetPx": 15,
+      "xRangeApprox": [
+        442,
+        460
+      ],
+      "measuredPxApprox": 18,
+      "uncertaintyPx": 2,
+      "deltaPx": 3,
+      "scope": "Whole arch silhouette, excludes roundabout"
+    }
+  ]
+}

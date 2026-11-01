@@ -1,0 +1,33 @@
+{
+  "createdAt": "2026-11-01T09:24:16.982809+00:00",
+  "taskNumbers": [
+    1588
+  ],
+  "sourceCommit": "d2d1386c1b4db18eb38e3a8d4b1348063576c868",
+  "amendmentCommit": null,
+  "actualCalls": 9,
+  "selectedAttempts": {
+    "wide": 5
+  },
+  "images": [
+    {
+      "file": "pariisi-laaja-g-v3.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a19640-2e21-7ad0-a7f7-e851c6eca98c/exec-7fdfdf32-5140-4b06-b6b1-f6f6e320e069.png",
+      "sha256": "e827148535059269027dfa3561484fc431fe5e00279ddfc906a5c5e9124ca430",
+      "bytes": 2713682,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "nativeBytesIdentical": true,
+      "postProcessing": false
+    }
+  ],
+  "qaVerdict": "REVIEW_WITH_DIMENSION_DEVIATIONS",
+  "qaStrictPass": false,
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "productionActive": false,
+  "remainingTenAuthorized": false
+}

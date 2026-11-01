@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-11-01T08:21:35.422373+00:00",
+  "sourceCommit": "8f9c17356609f6cdc85285a20d4fdc20048ac6a9",
+  "sourceBlob": "57afbfcaacd28ca494da1747c02cc298702fc752",
+  "files": [
+    {
+      "name": "ohje-valitaso-r2c2.png",
+      "sha256": "d65286c852c49b83951be3098246f056dd94d9771de7773d89a4ba04acb3bb34",
+      "bytes": 2701040,
+      "verified": true
+    },
+    {
+      "name": "ohje-valitaso-r2c3.png",
+      "sha256": "dac4d34cf8f17e3051db291497f467923788e184b85414b6edf9569f33477e0e",
+      "bytes": 2687232,
+      "verified": true
+    },
+    {
+      "name": "asettelu-valitaso-era1.png",
+      "sha256": "facddcb149e9f36d64c7205c96ca52de17f5f2aeb02842dbeb9a92dd3e9cb600",
+      "bytes": 2173005,
+      "verified": true
+    },
+    {
+      "name": "G-referenssi-owner-style-G-confirmed.jpg",
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f",
+      "bytes": 532470,
+      "verified": true
+    },
+    {
+      "name": "g-alue-lahitaso-savytetty.jpg",
+      "sha256": "1c95f340687b4e9116972b108dd75f19c966a30e7442d2f7db858437e38cc7a6",
+      "bytes": 2331380,
+      "verified": true
+    }
+  ]
+}
