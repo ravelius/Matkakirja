@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "9b2bd8ea7451e7d4d502147dc7244f8cdc8d473a",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-laaja-g-v4-20261101.md",
+  "receivedAt": "2026-11-01T09:36:23.510187+00:00",
+  "previousReportedLouvreWidthPx": 370,
+  "correctedReceiverWidthPxApprox": 250,
+  "correctedXRangeApprox": [
+    1050,
+    1300
+  ],
+  "reason": "Prior370px measurement incorrectly included Rue de Rivoli residential row; only palace wings belong in Louvre width.",
+  "noRetry": true,
+  "originalDeliveryPreserved": true
+}

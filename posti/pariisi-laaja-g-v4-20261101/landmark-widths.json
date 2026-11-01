@@ -1,0 +1,57 @@
+{
+  "selectedAttempt": 7,
+  "sha256": "e081a953c7ac4a7fb0dc39f080efa15c3975970a021897cf7cc229a43622ffce",
+  "method": "Manual x-coordinate bounds on diagnostic enlargements of native1536x1024 image. Approximate silhouette measurements; not calibrated segmentation or exact map geometry.",
+  "landmarks": [
+    {
+      "name": "Louvre",
+      "targetPx": 72,
+      "xRangeApprox": [
+        686,
+        767
+      ],
+      "measuredPxApprox": 81,
+      "uncertaintyPx": 4,
+      "scope": "Entire visible palace including both galleries; excludes Rue de Rivoli houses and garden"
+    },
+    {
+      "name": "Eiffel-base",
+      "targetPx": 42,
+      "xRangeApprox": [
+        430,
+        473
+      ],
+      "measuredPxApprox": 43,
+      "uncertaintyPx": 3,
+      "scope": "Outermost iron feet; excludes white path and garden"
+    },
+    {
+      "name": "Pantheon-building",
+      "targetPx": 37,
+      "xRangeApprox": [
+        741,
+        775
+      ],
+      "measuredPxApprox": 34,
+      "uncertaintyPx": 3,
+      "scope": "Actual visible building body; excludes platform and adjacent roof"
+    },
+    {
+      "name": "Arc-de-Triomphe",
+      "targetPx": 15,
+      "xRangeApprox": [
+        441,
+        461
+      ],
+      "measuredPxApprox": 20,
+      "uncertaintyPx": 2,
+      "scope": "Full visible stone and roof silhouette; excludes white roundabout paving"
+    }
+  ],
+  "exactTargetMatch": false,
+  "reviewNotes": [
+    "Louvre remains approximately9px wider than72px target; west end near requested684, east extent goes beyond756",
+    "Arc remains approximately5px wider than15px target",
+    "Eiffel and Pantheon close to targets within stated manual uncertainty"
+  ]
+}
