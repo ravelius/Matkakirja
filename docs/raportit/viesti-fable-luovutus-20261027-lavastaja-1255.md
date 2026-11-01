@@ -2537,3 +2537,18 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut, K = kielletty-rake
   varjostajina. Sama avoin syy jalustalaattojen länsipuoliskossa (LISÄYS 186). Koe: aja edusta-v2.zsh:n leivo_malli ilman avoimia (SIJ tyhjään json:iin
   {"huoneet": []}) → jos nolla katoaa, huone peittää; sitten uusi paketti + SHA → PT.
 - Siivous: K/_roska/*, K/hylatty-v88a-c2v18, K/koe-v111, U/kielletty-tausta-v82…v84 poistettu (APFS-klooneja, tilaa ei vapautunut).
+
+## LISÄYS 188 (1.11. 05.4x): EDUSTA-V3 PT:LLÄ — CHAOFANGIN NOLLAT = IRRALLISET PYLVÄSFASETIT, EI VARJOSTAJA — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- KOE (U/edusta-v2-koe/, koe.zsh): A ilman avoimia huoneita ja B ilman mitään ulkoisia varjostajia antoivat TÄSMÄLLEEN saman nollan kuin v2
+  → ei varjostaja (avoimet huoneet ovat z 300–550, chaofang z −612). Nollafasetit näkevät taivaan (Blender-säde normaalin ja 45° suuntaan vapaa).
+- SYY: chaofangin kahdeksankulmaisten pylväiden fasetit ovat irrallisia kasvoja (ei yhteisiä kärkiä) → solu_uv1:n SOLU_SYL-kaista sai oikeat
+  UV:t, mutta pack_islands näki jokaisen fasetin omana saarekkeena (14 × 0,5 tekseliä, 4 px marginaalit) → tekselikeskipiste ei osu → leipomaton,
+  dilaatio ei ylety. KORJAUS: solu_uv1.py SOLU_LIMA=<m> (oletus 0 → käynnissä oleva v4 ennallaan; varmuuskopio solu_uv1.py.ennen-lima):
+  kaistan fasetit limittäin LIMA m → merge_overlap yhdistää kaistaksi.
+- EDUSTA-V3 (U/edusta-v3.zsh, SOLU_LIMA=0.003, muuten kuten v2): _valmiit/juoksupeli-kk-lavastaja-edusta-v3-vienti-20261101, SHA256SUMS
+  e25d5f5c4d0d. Chaofang |x| 50–56, y 1,9–4,5 V4_red m²: aukiolle päin pylväsviistot 45 → 3 %, suorat 20 → 11 % (loput = ±z-sivut ristikko-
+  paneeleja vasten); poispäin viistot 80 → 58 % (seinää vasten). Duanmen runko V4_red 8 → 3 % (keskipiste.py). Mittari: scratchpadin kohti.py
+  (poistuu; pohja T/nollavalo/ruudut.py + |x|-rajaus).
+- AVOIN: leivonta v4:n rakennukset leivotaan ilman LIMAa → jos niissäkin on irrallisia pylväsfasetteja, PT:n päätös SOLU_LIMA=0.003
+  oletukseksi ja v4:n rakennukset uudelleen (rm U/leivonta-v4/valmiit/r-*). Tarkista ensin valmis malli kohti.py-tyyppisellä mittarilla.
