@@ -55,3 +55,7 @@ Edellinen: -20261101-1625. Muistin tila: pelikoodari-tila-20261018-aamu.md.
 1. Lue diagnostiikka-ajon tulos (sk-taso1) ja tee korjaus-217:ään: taso 1 oletukseksi (2), eunukit (3), bugit (4–6).
 2. tarkista.sh + testit, SHA NS:lle (local_99130238-aa54-4a29-bcc9-7a023584944b) ja PT:lle.
 3. Uusi tallenne omistajalle (taso 1, opetus kuten uudella pelaajalla, UI mukana) → KK + PT.
+
+## Lisäys 23.3x (PT, omistaja nukkumassa, yölupa loki PR 5920)
+TF 217 lähtee yöllä, kun korjaukset (taso 1 oletukseksi, eunukit harvemmiksi + tehtävä, 3-2-1, sivunykäykset, seinäpala 0.41) ovat
+haarassa → SHA NS:lle runkoon ja uusi tallenne (UI mukana) PT:lle (EI KK:lle yöllä). PT katsoo videon ja tilaa TF:n.
