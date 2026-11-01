@@ -2638,3 +2638,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 - ODOTTAA PT:tä: tausta-v89f (7d5f71b1b85a). Muurikate-v36 kuitattu (PT 06.4x).
 - AVOIN: (1) rakennukset-v92 = v91 + edusta-v3 (LISÄYS 192). (2) V4_marmorikaide x −120…−88 mahdollisesti nurinpäin (LISÄYS 193).
 - Levy 76 Gi (raja 70).
+
+## LISÄYS 197 (1.11. 07.3x): MARMORIKAIDE NURINPÄIN (LISÄYS 196 AVOIN 2) → MUURIKATE-V37 JONOSSA V4:N JÄLKEEN — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- VAHVISTETTU: muurikate-v36-lähteen V4_marmorikaide x −120,2…−87,8: 156/390 kappaletta (1872 kolmiota) + V4_marmorikaide_varjo 68/216 (816)
+  peilattuja; kaikki suljettuja (jokainen särmä kahdesti vastakkain), kierto ja NORMAL sisäänpäin → sama vika kuin jalustalaatoissa (LISÄYS 193).
+- KORJAUS JONOSSA: U/muurikate-v37.zsh = v36 + kaanna_nurin.py V4_marmorikaide (lähde U/muurikate-v36/lahde → U/muurikate-v37/lahde).
+  U/odota-muurikate-v37.zsh (nohup, loki U/ajo-muurikate-v37.log) odottaa, että jatka-v4-kaiteeton ja Blender ovat päättyneet, ja ajaa sitten
+  v37:n → _valmiit/juoksupeli-kk-lavastaja-muurikate-v37-vienti-<pvm>. KUN VALMIS: SHA-rivi PT:lle, korvaa v36:n (PK "kielletty-muurikate-v37/").
+- Leivonta v4 07.2x: 42/136 rakennusta (~2 min/kpl), vahti pid 46916 ennallaan.
