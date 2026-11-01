@@ -2739,3 +2739,8 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   U/nurmi07/nurmi07-arvio.jpg (peli nyt | arvio | havainne). Jingshanin rinne tummuu samalla (sama materiaali).
 - Lähde päivitetty tuleville leivonnoille: U/tausta-v89-lahde = uusi V4_ruoho; vanha U/varmuus-nurmi-tausta-v89-lahde.
 - Jonossa: LISÄYS 200 (kujakivi), 201 (Wumenin U-piha). Ei ajoja käynnissä. Levy 71 Gi.
+
+## LISÄYS 208 (1.11. 23.1x): PT KUITTASI TAUSTA-V91:N JA V92:N — MOLEMMAT ODOTTAVAT JUNAN 217 LUKITUKSEN AUKEAMISTA
+- PT: tausta-v91 (7e9b6819202c) ja rakennukset-v92 (70c7b997c2f9, ilman edusta-v3:a) kuitattu. PT ilmoittaa, kun lukitus aukeaa → sitten
+  SHA-rivit JU:lle/NS:lle (PK "kielletty-tausta-v91/", "kielletty-rakennukset-v92/").
+- Jono: LISÄYS 200 (kujakivi, PT: ei nyt), 201 (Wumenin U-piha, odottaa PT:n päätöstä). Ei ajoja käynnissä.
