@@ -2561,3 +2561,10 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   (pgrep -fl leivonta-v4) → rakennukset alusta a-meridiaaniportista LIMAlla. Tausta ja muurikate (t-*, muurikate) valmiit, ei uusita.
 - HUOM: kaiteeton-c2 (kaiteeton-v5.zsh) ja muut leivo_malli-ajot saavat LIMAn jatkossa automaattisesti; c2-v30 leivottiin ilman → aja kaiteeton-v5
   uudelleen v4:n jälkeen, jos PT haluaa (kaiteettomissa samat pylväät).
+
+## LISÄYS 190 (1.11. 06.4x): VAHTI v4 → KAITEETON-V6 (c2-v31, LIMA) (PT 06.4x) — ALOITA TÄSTÄ
+- U/jatka-v4-kaiteeton.zsh nohupilla (loki U/ajo-jatka-v4-kaiteeton.log; pgrep -fl jatka-v4): 2 min välein, jos leivonta-v4 ei käynnissä eikä
+  lokissa "LEIVONTA V4 VALMIS" → odotusajo uudelleen (levypysähdykset); VIKA → pysähtyy. V4:n jälkeen ajaa U/kaiteeton-v6.zsh (= v5 + LIMA-oletus)
+  → _valmiit/…-kaiteeton-v3-vienti-<pvm> (kielletty-c2-v31) → SHA PT:lle, PK MuurikateC2Kansio "kielletty-c2-v31/".
+- Levy 75 Gi (raja 70). PT: jos ajo kirjoittaa paljon, kuitatut välitiedostot T7:lle (/Volumes/T7 4TB/Matkakirja-linnanrakentaja), ei poistoja
+  yöllä. Omat koekansiot ovat pieniä (< 120 Mt), ei siirretty.
