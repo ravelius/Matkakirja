@@ -8,6 +8,11 @@ Jokainen pitkä Unity-ajo **Monitor-työkalulla**, joka tulostaa rivin sekä val
 valmis-riviä, Error/Exception/Killed lokissa). Ajon loppuun kuvien tarkistus (`[[ -s kuva.png ]]`). Kuollut ajo → heti uudelleen + rivi PT:lle.
 (aurinko-kuvat.zsh kuoli 13.49 jonossa huomaamatta: "jonossa"-tilassa odottava esikatselu kuolee, jos käynnistänyt sessio nollautuu.)
 
+## PYSYVÄ TYÖTAPA 2 (OMISTAJAN PÄÄTÖS 15.02 kortilla, PT:n kautta: "Kyllä, suoraan")
+Jokaisen valmistuneen kuva-ajon koonti/kuvat HETI omassa sessiossa **SendUserFile**-työkalulla (status proactive, display render),
+keskeneräisetkin, lyhyt suomenkielinen kuvateksti (mikä kohta, mikä muuttui, mikä vielä vialla). Polku + rivi PT:lle kuten ennenkin.
+Lähetetty 15.1x: pari-03-06.jpg ja koonti 141625.
+
 ## TEHTY
 - Koonti 8 kohtaa rungolla **a8c8835e5** (peliaurinko 45°/318°): `proto-3d/lokit/havainne-editori-20261101-141625/koonti.png`.
   PT: EI omistajalle (ei heittovarjoja). Leivottu valo päällä pelissä: 165 "leivottu valo … kt" -riviä, pelivalo 45°/318°.
