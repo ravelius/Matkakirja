@@ -38,3 +38,12 @@ Syy: konteksti 25 % (pehmeä raja, luonteva tauko: k06z20 odottaa levyä). Loki:
   ei error CS; kaukokuvassa ei suorakaiteita eikä kaidelaikkuja. Pari raystas-oletus-b0-bo.jpg + raystas-oletus-kauko-k0-ko.jpg → PT.
 - 8 committia (548a1b169 87c821fd3 11e8044fa 9f498cdc9 e30ca990f 7e7554663 b1fead5dc d1415715d) → NS:lle runkoon 216 (viesti lähetetty).
 - Seuraajalle: odota PT:n kuittausta parille ja NS:n vahvistusta rungosta; vianhakunäkymien siivous vain PT:n pyynnöstä. Muuten ei avointa.
+
+## LISÄYS 10.4x: NS:n poiminta törmäsi → yksi haara junaan
+- PT kuittasi b5-oletuksen pelikuvasta. NS: 548a1b169 ei poimiutunut (nojasi 96a0a64fe/5d75ef4d7/2fc42c04b:hen) → tein netto-diffin
+  13fe8b7a5..d1415715d juna-216:n 27aba116d päälle: proto-haara **linssiseppa2/raystaskartta-216 kärki db48220d1** (natiivi-backup,
+  worktree /Users/Shared/Claude/wt/proto-linssiseppa2-rk216). Törmäykset (Valopohja, ValoKohteet, V4Maailma.Valo, JuoksuValo.hlsl) olivat
+  täyttöpeiton konteksteja: täyttöpeitto jätetty pois, koska sitä ei ole junassa. Ei käännetty itse (NS: merge, testit, käännös).
+- AVOIN: PT:n vastaus kysymykseen, viedäänkö täyttöpeitto 2 oletus p4 (k17 c1b545b2c/b04510488/03a9aa832) samoin haarana junaan
+  (b5 viritettiin sen kanssa; ilman sitä räystään alla ~8 % vaaleampi). Jos kyllä: sama menetelmä (git diff <edeltäjä>..03a9aa832 niiden
+  tiedostoihin, 27aba116d:n tai NS:n uuden kärjen päälle). rk216-worktree poistetaan, kun NS on mergennyt.
