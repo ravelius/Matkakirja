@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-11-01T11:49:57.953832+00:00",
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "assemblySize": [
+    1536,
+    1738
+  ],
+  "overlap": {
+    "top": [
+      0,
+      714,
+      1536,
+      1024
+    ],
+    "bottom": [
+      0,
+      0,
+      1536,
+      310
+    ],
+    "changedPixels": 0,
+    "exact": true,
+    "pixelSHA256": "ed7fe4ee9a21c274563c688e7f747e389a15269d4f6cb9d1b6bba91ef6b809a1"
+  },
+  "method": "Built-in imagegen, followed by owner-authorized lossless strip copy in Python/Pillow. No resampling or crossfade in deliverable tiles. Originals and raw generations retained.",
+  "actualGenerationCalls": 2,
+  "visualReview": {
+    "detailImproved": true,
+    "exaggerationPreservedVisually": true,
+    "majorGeometryPreservedVisually": true,
+    "geometryPixelIdentityProven": false,
+    "seamCheckedAtNativeResolution": true,
+    "note": "Top310 rows of lower tile byte-exact to upper bottom310. Small line/ornament differences at boundary remain possible; architecture globally redrawn, so original outline pixel identity is not certified. KS camera comparison and PT/owner acceptance pending."
+  },
+  "images": [
+    {
+      "file": "pariisi-nd-05m-ala.png",
+      "sha256": "b74525d5faa0292d0a95fb8022f1e4e67bbf0128faeb3d79a16a0a697a3e2c65",
+      "bytes": 3352350
+    },
+    {
+      "file": "pariisi-nd-05m-ylä.png",
+      "sha256": "638fa9ff910e6b67aabc8f201a18900216c870dca35b691abf767d22f0ddddb5",
+      "bytes": 3329794
+    },
+    {
+      "file": "kooste-tarkistukseen.png",
+      "sha256": "ad0c4b3aa370de9b1a5d9d4ded25295dca0924089f544201ec6f4c7328fb28da",
+      "bytes": 5693902
+    }
+  ]
+}
