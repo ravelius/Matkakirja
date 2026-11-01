@@ -2780,3 +2780,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   3,0 m kivijalka – tarkista, puuttuuko sisäseinistä/porttimuurista), 2) siipien etupään (eteläpään) terassit kaiteineen.
   Tarkista ensin todellisista kuvista (mitat ja paikat oikeat, omistaja 20.10.), sitten tasainen-valo-pari PT:lle. Varjoon ei kosketa.
 - Muu: sisätilat odottavat Codexia (LISÄYS 211); 200 ei nyt.
+
+## LISÄYS 214 (1.11. 23.4x): CODEX TOIMITTI SISÄTILAT VAIHE 1 → MITTAKATSELMUS ENSIN (PT) — ALOITA TÄSTÄ (ennen LISÄYS 213:a)
+- JU vei rakennukset-v92 (546) + tausta-v91 (100), virheitä 0; PK ja NS kuitattu.
+- Codexin toimitus origin/claude/postilaatikko 6c01ceea3: posti/juoksupeli-sisatilat-vaihe1-20261101/ (10 piirrosta + mitat.json + QA-FI.md).
+  PT: muoto hyvä (养心殿 中正仁和-laatta, Mingjian + kamarit).
+- TEHTÄVÄ: mittakatselmus QA-FI.md:n kohtien mukaan; ratkaise erityisesti 养心殿:n eteläinen 3,6 m kaista (DPM 36 × 12 vs OSM 36 × 15,6:
+  veranta/räystäskäytävä vai osa salia? → katso valokuvat/Palatsimuseon kuvaus) ja sisäänjuoksuovi kujareittiin (avoimet-sijoitus.json-ovet
+  ja kujan puoli). Tulos ≤ 3 riviä PT:lle → kuittaus → mallinnus. Codexin piirroksiin EI omia muutoksia; korjauspyynnöt postilaatikkoon
+  (worktree tools/uusi-worktree.sh lavastaja <aihe> origin/claude/postilaatikko, push HEAD:claude/postilaatikko).
