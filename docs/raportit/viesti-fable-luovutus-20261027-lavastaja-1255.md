@@ -2767,3 +2767,7 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 - 延禧宫 päätetään vaiheessa 2 (AIKA: nykyasu sallittu).
 - ODOTTAA: v92 (70c7b997c2f9) + tausta-v91 (7e9b6819202c) kuitattu, lähtevät JU/NS:lle vasta PT:n ilmoitettua junan 217 lukituksen aukeamisesta.
 - Jono: 200 (kujakivi, PT: ei nyt). Ei ajoja käynnissä. Levy 71 Gi.
+
+## LISÄYS 212 (1.11. 23.2x): JUNAN 217 LUKITUS AUKI (PT) → V92 JA TAUSTA-V91 LÄHETETTY NS:LLE JA JU:LLE
+- SHA-rivit lähetetty: rakennukset-v92 70c7b997c2f9 ("kielletty-rakennukset-v92/"), tausta-v91 7e9b6819202c ("kielletty-tausta-v91/").
+  LISÄYS 211:n ODOTTAA-kohta tehty. Muu tila kuten LISÄYS 211 (Codexin sisätilapiirrokset odotettavissa; jono 200 ei nyt).
