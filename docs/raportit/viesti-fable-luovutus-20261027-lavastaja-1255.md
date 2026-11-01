@@ -2509,3 +2509,18 @@ tarkistus: python3 /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/kesk
 - LEIVONTA v4: tausta + muurikate valmiit, vaihe 3 rakennukset alkoi 04.07 (solu_uv1 v2). Levypysähdyksen jälkeen: pgrep -fl leivonta-v4 →
   jos ei mitään, nohup zsh U/leivonta-v4-odota.zsh >> U/ajo-leivonta-v4.log 2>&1 & (odotusajo päättyy käynnistettyään).
   Valmiin jälkeen: rakennukset-v92 = v91 + edusta (LISÄYS 180), kaiteeton-v4.zsh uudelleen v91-geometrialle jos muuttui, LISÄYS 178 tarkistukset.
+
+## LISÄYS 187 (1.11. 05.2x): LUOVUTUS (konteksti 25 %) — -DIL OLETUKSIKSI, C2-V30 JA EDUSTA-V2 PT:LLÄ, CHAOFANG KORJATTAVA — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut, K = kielletty-rakennukset. Mittarit: T/nollavalo/ + VS:n keskipiste.py.
+- -DIL = UUDET OLETUKSET (VS k06z5 poisti pylväsraidat ja kattoläikät, PT kuittasi 04.5x): solu_uv1 SOLU_SYL=1, leivo_malli MARGINAALI=0,
+  DILAATIO=4 (varmuuskopiot solu_uv1.py.v2, leivo_malli.py.ennen-marginaali). Kaikki leivo_malli-ajot käyttävät näitä.
+- KAITEETON-V2 = c2-v30 (U/kaiteeton-v5.zsh, muurikatepohja ilman OSASARJA_VARJ:ia): _valmiit/…-kaiteeton-v2-vienti-20261101, SHA256SUMS
+  3394e44ed57c → PT:n kuittaus → JU vie → PK MuurikateC2Kansio "kielletty-c2-v30/". MUURIKATE-V35 (LISÄYS 186) odottaa samoin.
+- LEIVONTA v4: rakennukset aloitettiin alusta -dil:llä 04.52 (vanhat merkit U/leivonta-v4/valmiit-vanha-uv/). 05.18 levypysähdys (68 < 70 Gi),
+  odotusajo käynnissä (pgrep -fl leivonta-v4). PT hoitaa levytilan. Valmiina mm. meridiaaniportti … p-kujaportti.
+- EDUSTA-V2 (U/edusta-v2.zsh): _valmiit/…-edusta-v2-vienti-20261101, SHA256SUMS 38f510349665. PT: duanmen OK. KORJATTAVA (PT 05.3x, ei odoteta PK:ta):
+  q-chaofang:n aukiolle näkyvä etujulkisivu (|x| 50–56, y 1,9–4,5, 190 m²) 28 % täyttä nollaa (sisähallit |x| 60–71 saavat jäädä).
+  EI syy: tila edessä (3 m vapaa), jaetut tekselit, tuplapinnat. TARKISTAMATTA: avoimet huoneet (AV/SIJ = U/tausta-v89-lahde/avoimet-sijoitus.json)
+  varjostajina. Sama avoin syy jalustalaattojen länsipuoliskossa (LISÄYS 186). Koe: aja edusta-v2.zsh:n leivo_malli ilman avoimia (SIJ tyhjään json:iin
+  {"huoneet": []}) → jos nolla katoaa, huone peittää; sitten uusi paketti + SHA → PT.
+- Siivous: K/_roska/*, K/hylatty-v88a-c2v18, K/koe-v111, U/kielletty-tausta-v82…v84 poistettu (APFS-klooneja, tilaa ei vapautunut).
