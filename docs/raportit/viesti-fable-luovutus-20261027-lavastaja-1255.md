@@ -2482,3 +2482,13 @@ K = proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, T = K/tyokalut, U = lei
 - Lattian/marmorin nollat = suljetut sisälattiat (porttikäytävä y 0, päähalli y 13, galleriat y 12,5), ei leivontavika (isot.py-tarkistus).
 - Räystäät: leivonta antaa okkluusion (VS 03.28: räystään alla 0,13–0,17, seinä 0,35–0,55) → tasaisuus pelin täytöstä (VS c1b545b2c).
 - Leivonta v4 ajossa (03.44 tausta kuja-0-3); vaihe 3 käyttää v2:ta. Työkalut scratchpadissa: kp_ala.py, isot.py, tiheys.py.
+
+## LISÄYS 184 (1.11. 04.0x): KAITEETTOMAT LEIVOTTU — KAITEETON-V1 PT:LLÄ — ALOITA TÄSTÄ
+- VS: peli piirtää Meridiaaniportin, F-taihemenin, G-jalustan LOD0:n ja muurikatteen v18-pohjan C2:n *-kaiteeton.glb:istä (Muurikate.cs:36
+  MuurikateC2Kansio = "kielletty-c2-v26/"), joissa ei ollut leivottua valoa → julkisivu tasainen.
+- U/kaiteeton-v4.zsh (loki U/ajo-kaiteeton-v4.log): leivo_malli.py:n uusi MALLI_GLB (kohteeksi kaiteeton, sijainti rakennukset.jsonista),
+  muurikate leivo_valo.py KOHDE_GLB; polvi 0,6/0,3. Tulos _valmiit/juoksupeli-kk-lavastaja-kaiteeton-v1-vienti-20261101 (kielletty-c2-v29 =
+  c2-v26 + 4 leivottua, sijoitukset ennallaan, SHA256SUMS b2d694f70621). Meridiaaniportti kaiteeton: runko nolla 3 % m², katto 0 %.
+- ODOTTAA: PT:n kuittaus → JU vie; PK vaihtaa MuurikateC2Kansio "kielletty-c2-v29/" ja varmistaa valo_rgbm:n luvun; VS k06-pari uusiksi.
+- HUOM: leivonta v4:n rakennukset-v91 ei päivitä kaiteettomia → kun rakennusten geometria muuttuu, aja kaiteeton-v4.zsh uudelleen.
+- Leivonta v4: odotusajo (pgrep -fl leivonta-v4) odottaa levyä ≥ 82 Gi (04.0x: 81). Wt lavastaja-luovutus-176 poistettu (PT).
