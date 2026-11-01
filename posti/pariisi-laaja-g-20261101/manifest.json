@@ -1,0 +1,21 @@
+{
+  "task": 1583,
+  "image": "pariisi-laaja-g-v1.png",
+  "sha256": "d7d47c8e8a27ee43c80c84465502fee9eb74297a5541928233f1c2b213527f45",
+  "bytes": 3426362,
+  "width": 1536,
+  "height": 1024,
+  "mode": "RGB",
+  "tool": "built-in image_gen",
+  "actualCalls": 1,
+  "nativeBytesUnchanged": true,
+  "localWorkingCopy": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-laaja/pariisi-laaja-g-v1.png",
+  "sourceCommit": "3b1061a1c9ccb24666fa0e3f71bde28788d54569",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-laaja-g-20261101.md",
+  "qa": "QA-FI.md",
+  "prompt": "prompt-v1.txt",
+  "mapDataAttribution": "© OpenStreetMap contributors; https://www.openstreetmap.org/copyright",
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

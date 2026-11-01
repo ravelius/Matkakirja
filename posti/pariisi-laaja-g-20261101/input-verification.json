@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "3b1061a1c9ccb24666fa0e3f71bde28788d54569",
+  "sourceBlob": "b06fc32720c3dd5714295de5c059e20c078cae81",
+  "referencesInspected": true,
+  "references": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261101-0749/ohje-laaja-pariisi-g-keskella.png",
+      "sha256": "a3171f106e4fc99af2b150b26163ef67e43e4df6b1ec7753de388ed925e3d8a1"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261101-0749/G-referenssi-owner-style-G-confirmed.jpg",
+      "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261101-0749/g-2x2-koottu-lahitaso.jpg",
+      "sha256": "524cdca1a84c06049243cd03ac8e5b7fd34ac9e2776f935a8fd0e89c2691c2b5"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/attachments-20261101-0749/nykyinen-laaja-pelista.png",
+      "sha256": "438c904be56ef49f6eb8d2fffceaaf379bdf4c3586d39e55fe18e5470d6ce1d9"
+    }
+  ]
+}

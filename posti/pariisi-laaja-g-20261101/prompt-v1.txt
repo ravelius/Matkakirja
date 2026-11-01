@@ -1,0 +1,28 @@
+Use case: stylized-concept. Asset: a premium hand-painted pseudo-3D illustrated city map for a Finnish adventure game.
+Create ONE completely new finished 1536 x 1024 landscape RGB image showing the ENTIRE playable city of Paris. Redraw the complete image from scratch; references are guidance, not a base to paste onto or a crop. High detail and clean crisp finish.
+
+REFERENCE ROLES:
+1. ohje-laaja-pariisi-g-keskella.png is the wide composition/geographic guide. Match its full-city extent, north-up orientation, Seine route, broad city outline, main boulevard network, western and eastern forest parks, and relative landmark positions. Its small rectangular G insert at about x612–838, y451–595 identifies the CENTRAL DISTRICT ONLY; in the result it must blend seamlessly into one coherent illustration, without a box or seam.
+2. G-referenssi-owner-style-G-confirmed.jpg is the authoritative approved STYLE. Use its charming detailed miniature Paris, creamy limestone facades, blue-grey mansard roofs, broad pale streets, beautifully rounded green trees, soft clean shadows, turquoise water and lively tiny boats/people/vehicles. Apply this visual style across the entire city, not just the middle.
+3. g-2x2-koottu-lahitaso.jpg is the approved close view of the central district, showing the intended fine detail and emphatically exaggerated landmarks. In this wide image, that district occupies the small central area specified by reference 1.
+4. nykyinen-laaja-pelista.png supports the wide geographic extent, only. Do not copy its washed-out tiny noisy rendering or lime-green color cast.
+
+COMPOSITION:
+A broad Paris city silhouette covers the sheet from roughly x20–1510 and y175–850, with clean warm ivory paper around it and softly fading irregular city edges. No horizon, no sky. Bois de Boulogne is a large wooded park on the far LEFT/west. Bois de Vincennes is a large wooded park on the far RIGHT/east, projecting outward in the lower-right. Both are dense rounded green tree forests with their lakes and paths. Between them, dense coherent Parisian neighborhoods, readable spacious boulevard lines, and the Seine turning from lower right through the central islands toward lower left, with the bends and bridges of the guide. Retain the city-wide framing; do not zoom into central Paris.
+North is up; maintain the G reference's elevated pseudo-3D camera with roof tops and front facades visible. Ordinary neighborhood buildings stay small and fairly uniform in scale.
+
+ESSENTIAL STYLE INVARIANT:
+Only the IMPORTANT LANDMARKS are caricature-exaggerated: dramatically taller than neighboring houses, stretched upwards and slightly broader toward the top, in the same bold spirit as Notre-Dame and Louvre in G. Do not weaken the exaggeration when showing the whole city. Keep normal residential blocks at their normal miniature scale. This is a joyful sophisticated illustrated map, not a flat GIS map or photorealistic satellite view.
+
+CENTRAL DISTRICT:
+At the guide's central G location and scale, preserve its recognizable Tuileries garden and pools to the upper-left of the Louvre, the tall exaggerated Louvre palace and glass pyramid, the Seine and island of Cité with an exaggerated twin-tower Notre-Dame and the Sainte-Chapelle spire. Continue the same streets, trees, river banks and roofs seamlessly into the surrounding city; the central district must not look pasted on.
+
+ADDITIONAL MAJOR LANDMARKS, in their approximate geographic places as in the guide:
+Eiffel Tower toward western/left-center Paris south of the Seine (around x445,y500); Arc de Triomphe north-west (x450,y385); Sacré-Coeur atop Montmartre in the north (x750,y280); gold-domed Invalides south-west of the center (x555,y545); Pantheon south of the islands (x760,y605); Opera Garnier north of the central district; glass-roofed Grand Palais beside the western Seine; Orsay on the south bank opposite the Tuileries; Luxembourg palace and garden south of the center; Concorde between Tuileries and Champs-Elysees. These are map anchors, with a little artistic flexibility allowed. Each landmark should remain recognizable. Do not invent duplicate Eiffel towers, Notre-Dame cathedrals, or Sacré-Coeur buildings.
+
+PALETTE:
+Match reference G closely: pale warm stone, blue-grey/slate mansard roofs, fresh natural green rounded foliage, restrained gold details, turquoise Seine, softly warm ivory paper. No red roof wash, no vivid red accents, no neon lime saturation. Tiny scattered people, cars and river boats may enliven the city.
+
+EXCLUDE COMPLETELY:
+All text, labels, names, numbers, legends, compass marks, aircraft, birds, borders, logos, watermarks, copyright text. Do not reproduce any writing from a reference.
+Deliver one coherent native 1536 x 1024 illustration with the strong approved G-style landmark exaggeration, full-city extent, and crisp graceful detail.
