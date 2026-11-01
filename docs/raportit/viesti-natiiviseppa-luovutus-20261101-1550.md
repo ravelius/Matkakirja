@@ -1,13 +1,11 @@
 # Natiivisepän luovutus 1.11.2026 klo 15.50 (konteksti 33 %, 7.37)
 
 Vain voimassa oleva tila. Edellinen: viesti-natiiviseppa-luovutus-20261101-1305.md (PR 5849, sisältö tässä ajan tasalla).
-Id:t: /Users/Shared/Claude/osoitekirja.md. Yksi Unity kerrallaan linjalla (lukot). Käynnissä: havainnepari (alla, JONO 1).
+Id:t: /Users/Shared/Claude/osoitekirja.md. Yksi Unity kerrallaan linjalla (lukot). Ei keskeneräisiä ajoja.
 
 ## JONO
-1. **Havainnepari valonipusta PT:lle ja VS:lle (PT 15.3x "pari PT:lle ja VS:lle"):** ajossa 15.45 alkaen
-   `REF=65ceff743 RUNKO=natiiviseppa/juna-216 zsh tyokalut/havainne/editori.sh kaikki` (wt/proto-natiiviseppa-ehdokas), tuloste
-   proto-3d/_tyo/natiiviseppa/varjo-rakennus/havainne-65ceff743.out, viimeinen rivi "HAVAINNE VALMIS <kansio>". Kun valmis: rivi PT:lle ja
-   VS:lle (mitä, sha 65ceff743, kansio + pari-*.jpg / koonti.png). Jos ajo kaatui (pid kuollut, ei VALMIS-riviä), aja uudelleen.
+1. **Havainnepari valonipusta: VALMIS 16.0x**, PT:lle ja VS:lle lähetetty: lokit/havainne-editori-20261101-154506/koonti.png
+   (+ kohtakansiot; 06:n pelikamera katsoo yhä lattiaan, VS:llä).
 2. **60 fps (valotyön jälkeen, omistaja 13.46 "visuaalisuus ensin"):** PT 15.0x: toista elävät nimet -mittaus uudella rungolla; jos
    ≥ 20 ms -jaksojen kasvu (84 → 96) pysyy, YKSI rivi syystä PT:lle. Ajo: proto-3d/_tyo/natiiviseppa/fps60/nimikerros-ab.zsh: lisää
    AB-haara (ennen = 9697d5d48 = runko juuri ennen fps-mergeä, jälkeen = 65ceff743), molemmat käännetään. Käännösvuoro JU:lta,
