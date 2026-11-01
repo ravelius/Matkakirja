@@ -2693,3 +2693,7 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   Pitkä ajo Monitorilla (LISÄYS 199). HUOM: tausta 0-3 / kuja-0-3 lattiassa vanhan katon leivottu varjo, kunnes tausta leivotaan uudelleen.
 - Rakennukset-v92 voi samalla sisältää edusta-v3:n (LISÄYS 192 AVOIN 1) – kysy PT:ltä.
 - Jonossa: LISÄYS 200 (kujakivi), 201 (Wumenin U-piha). Ei ajoja käynnissä. Levy 87 Gi.
+
+## LISÄYS 203 (1.11. 23.1x): JONOON – ILMAKUVA 07:N NURMI (PT, ei kiire; portin 05 jälkeen)
+- AVOIN (ei aloitettu): 07 ilmakuvan kirkkaanvihreä nurmi tulee taustamallin väristä (VS). Sävytä havainteen 07 mukaiseksi, vertailu
+  proto-3d/lokit/havainne-editori-20261101-211745/ilma07-koonti.jpg. Samassa erässä p-kujaportin (LISÄYS 202) kanssa tai erikseen.
