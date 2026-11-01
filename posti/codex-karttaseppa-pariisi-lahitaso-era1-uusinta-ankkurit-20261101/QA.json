@@ -1,0 +1,97 @@
+{
+  "status": "no-candidate-approved-after-four-whole-image-calls",
+  "sourceCommit": "045e9ed8ee3c4a905a92a05b1ad128008971ad16",
+  "sourceBlob": "9214a1dcaea582fbbc097c73acf6b69d57cce8fd",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-lahitaso-era1-uusinta-20261101.md",
+  "totalCalls": 4,
+  "generatedTiles": 1,
+  "requiredTiles": 12,
+  "remainingTilesNotStarted": 11,
+  "stripCopiesIntoOutput": 0,
+  "maskEdits": 0,
+  "postprocessing": false,
+  "generatedWith": "same built-in image_gen__imagegen, exact root prompt executed by Luna",
+  "state": "receiver seam feasibility decision requested before propagating unapproved geometry",
+  "attempts": [
+    {
+      "attempt": 1,
+      "rawSHA256": "dcac44a21df0d37048077929c47d1b34f050ca62fae22b467d300147300d69ff",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a196fe-ac71-7d93-a9c6-21f801d168bc/exec-2fea9659-fde4-409a-9a66-960df9e1f2ee.png",
+      "bytes": 3487600,
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "tile": "r06c08",
+        "attempt": 1,
+        "sha256": "dcac44a21df0d37048077929c47d1b34f050ca62fae22b467d300147300d69ff",
+        "status": "retry-required",
+        "notes": "Fine detailed style and Grand Palais are retained, but G overlap geometry was ignored: the round domed pavilion from the coarse guide remains where the G reference requires mansard houses and a round/rectangular fountain garden. Retry before propagating.",
+        "reviewedAt": "2026-11-01T13:27:16.935547+00:00",
+        "reviewer": "root",
+        "geometryTolerance": "Approximate visual check; full +/-15px correspondence is not certified. Receiver seam assembly and game-camera review remain required.",
+        "receiverAccepted": false,
+        "ptAccepted": false
+      }
+    },
+    {
+      "attempt": 2,
+      "rawSHA256": "7fb86f5742f98f7f0444f1dc08c3628cee58f0e6967c96a2318ef26d1d148d84",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a196fe-ac71-7d93-a9c6-21f801d168bc/exec-3945c18d-e16e-4353-9754-3e459fab1b40.png",
+      "bytes": 3601350,
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "tile": "r06c08",
+        "attempt": 2,
+        "sha256": "7fb86f5742f98f7f0444f1dc08c3628cee58f0e6967c96a2318ef26d1d148d84",
+        "status": "retry-required",
+        "notes": "G subject matter restored and hard panel edge absent, but independent visual check found main houses shifted about85–90px left and fountain60px left; y errors10–25px. Critical seam bands still contain different features. Reorder references and use absolute anchors before propagating.",
+        "reviewedAt": "2026-11-01T13:32:50.163554+00:00",
+        "reviewer": "root",
+        "geometryTolerance": "Approximate visual check; full +/-15px correspondence is not certified. Receiver seam assembly and game-camera review remain required.",
+        "receiverAccepted": false,
+        "ptAccepted": false
+      }
+    },
+    {
+      "attempt": 3,
+      "rawSHA256": "05e8cbb56cdc10f22bb79ab39207f16991dc85675a2fa5c17d6a597e1839ed04",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a196fe-ac71-7d93-a9c6-21f801d168bc/exec-4d89291e-950b-48c1-9e21-5d87bbaff586.png",
+      "bytes": 3815144,
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "tile": "r06c08",
+        "attempt": 3,
+        "sha256": "05e8cbb56cdc10f22bb79ab39207f16991dc85675a2fa5c17d6a597e1839ed04",
+        "status": "retry-required",
+        "notes": "Reference reorder improved horizontal G alignment but enlarged/moved the pool garden upward: round pool is around(1470,865) instead of(1485,940), and the prominent house around(1360,715) instead of(1375,810). Whole-image candidate still exceeds target. One simplified frame-and-crop prompt next.",
+        "reviewedAt": "2026-11-01T13:38:38.592018+00:00",
+        "reviewer": "root",
+        "geometryTolerance": "Approximate visual check; full +/-15px correspondence is not certified. Receiver seam assembly and game-camera review remain required.",
+        "receiverAccepted": false,
+        "ptAccepted": false
+      }
+    },
+    {
+      "attempt": 4,
+      "rawSHA256": "b228a6d9a92596846c9db8d6c3822c18a6ca94eae09c09743199e127ec559eba",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a196fe-ac71-7d93-a9c6-21f801d168bc/exec-0a09198a-955a-497d-87a0-b66af5976dde.png",
+      "bytes": 3989405,
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "tile": "r06c08",
+        "attempt": 4,
+        "sha256": "b228a6d9a92596846c9db8d6c3822c18a6ca94eae09c09743199e127ec559eba",
+        "status": "retry-required",
+        "notes": "G first simplified prompt moved the fountain closer (about1485,905 versus1485,940) but substantially changed the coarse-map geography: Grand Palais shrank and moved upward, base about y750 instead of y920; the entire block/street scale changed. No accepted candidate after four distinct prompts. Send raw studies to Karttaseppa for source seam feasibility before dependent generation.",
+        "reviewedAt": "2026-11-01T13:44:08.769842+00:00",
+        "reviewer": "root",
+        "geometryTolerance": "Approximate visual check; full +/-15px correspondence is not certified. Receiver seam assembly and game-camera review remain required.",
+        "receiverAccepted": false,
+        "ptAccepted": false
+      }
+    }
+  ],
+  "runtimeIntegrated": false,
+  "published": false,
+  "receiverAccepted": false,
+  "ptAccepted": false
+}
