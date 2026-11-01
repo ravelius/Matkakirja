@@ -2510,6 +2510,19 @@ tarkistus: python3 /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/kesk
   jos ei mitään, nohup zsh U/leivonta-v4-odota.zsh >> U/ajo-leivonta-v4.log 2>&1 & (odotusajo päättyy käynnistettyään).
   Valmiin jälkeen: rakennukset-v92 = v91 + edusta (LISÄYS 180), kaiteeton-v4.zsh uudelleen v91-geometrialle jos muuttui, LISÄYS 178 tarkistukset.
 
+## LISÄYS 186 (1.11. 04.4x): MUURIKATE-V35 PT:LLÄ, PYLVÄSRAIDAT AUKI, LEVYRAJA 70 Gi — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut, K = kielletty-rakennukset.
+- LEVYRAJA 82 → 70 Gi (PT 06.5x) leivonta-v4.zsh ja -odota.zsh (varmuuskopiot *.ennen-70). v4 vaihe 3 jatkui 04.31 (g-taihedian ...).
+- MUURIKATE-V35 (PT:n kuittaukseen, korvaa v34:n): syy v34:n nollavaloon = OSASARJA_VARJ osasarja-v5-varjostaja.glb peitti pohjan omat katot/kaiteet
+  (K/muurikate-v34-nollavalo.md; työkalut T/nollavalo/). PK: pohjan katot/kaiteet NÄKYVÄT (kaide > 40 m) → U/muurikate-v35.zsh ilman osasarjaa:
+  _valmiit/juoksupeli-kk-lavastaja-muurikate-v35-vienti-20261101 (SHA256SUMS abbf3a81b8e8). Katto nolla 49 → 11 %, kaiteet 80 → 52 %.
+  HUOM: leivonta v4:n oma muurikate (vaihe 2) leivottiin samalla YHT:lla (osasarja varjostajana) → v4-paketissa käytä v35:n pohjaa.
+  AUKI: jalustalaatat (x −131…−89) länsipuolisko nolla, syy ei varjostaja (tausta/rak/pohja/osasarja tarkistettu); ehdokas avoimet huoneet.
+- PYLVÄSRAIDAT (VS k06z3, kaiteeton c2-v29 Meridiaaniportti): pylväsfasetit 0,19 m, atlas 2048 = 5 tekseliä/m. Kokeet (U/kaiteeton-syl-koe.zsh,
+  KOE/MARGINAALI/DILAATIO-envit): solu_uv1 SOLU_SYL=1 (pystypintaryhmät viistoilla → sylinteri-/tasokaista; oletus 0; varmuuskopio solu_uv1.py.v2)
+  → leipomatta kokonaan 7,8 → 5,2 %, osittain 58 → 30 %. leivo_malli.py DILAATIO=N + MARGINAALI + MARGIN_TYYPPI (varmuuskopio .ennen-marginaali)
+  → ei muutosta: V4_red-nollat ovat leivottua nollaa (33 % seinää vasten). VS ajaa parin k06z5 mallista U/kaiteeton-syl-koe-dil/ulos/ → päätä sen jälkeen.
+  4096² (+33 Mt/malli) = PT:n päätös iPad-mittauksen jälkeen (VS välittää). Jos korjaus otetaan käyttöön: v4:n rakennukset uudelleen (rm valmiit/r-*).
 ## LISÄYS 187 (1.11. 05.2x): LUOVUTUS (konteksti 25 %) — -DIL OLETUKSIKSI, C2-V30 JA EDUSTA-V2 PT:LLÄ, CHAOFANG KORJATTAVA — ALOITA TÄSTÄ
 U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut, K = kielletty-rakennukset. Mittarit: T/nollavalo/ + VS:n keskipiste.py.
 - -DIL = UUDET OLETUKSET (VS k06z5 poisti pylväsraidat ja kattoläikät, PT kuittasi 04.5x): solu_uv1 SOLU_SYL=1, leivo_malli MARGINAALI=0,
