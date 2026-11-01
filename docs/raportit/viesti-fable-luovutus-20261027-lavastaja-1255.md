@@ -2474,3 +2474,11 @@ K = proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, T = K/tyokalut, U = lei
 - Leivonta v4: pysähtyi 03.00 levyyn; odotusajo uudelleen nohupilla 03.06 → käynnissä (tausta 1-1). Odotusajo päättyy käynnistettyään
   leivonnan → levypysähdyksen jälkeen käynnistä leivonta-v4-odota.zsh uudelleen (pgrep -fl leivonta-v4 ensin).
 - ODOTTAA: VS:n kommentti solukokoon/atlakseen; PK:n edusta-pari; VS:n parit v89b/d. edusta-v1 SHA256SUMS korjattu (JU, ca0a1f4dc1fc).
+
+## LISÄYS 183 (1.11. 03.4x): SOLU_UV1 v2 (8 m:n tasosolu) — MARMORI/LATTIA = SISÄLATTIAT — ALOITA TÄSTÄ
+- solu_uv1.py v2 (varmuuskopio solu_uv1.py.v1): avain = syvyys 1 m (SOLU_UV) × tasossa 8 m (SOLU_TASO) × ±akseli; avaimet hyllyihin
+  todellisten rajojen mukaan (kiinteä 4 m:n väli → isot lattiakolmiot päällekkäin). v1:n 18 000 saarekkeen marginaalit veivät atlaksen
+  (9 tekseliä/m², 10 % käytössä) → v2 20 tekseliä/m². Meridiaaniportti 64 n. (scratchpad koe3): nolla m²: katto 0 %, julkisivu 8 %, chiwen 14 %.
+- Lattian/marmorin nollat = suljetut sisälattiat (porttikäytävä y 0, päähalli y 13, galleriat y 12,5), ei leivontavika (isot.py-tarkistus).
+- Räystäät: leivonta antaa okkluusion (VS 03.28: räystään alla 0,13–0,17, seinä 0,35–0,55) → tasaisuus pelin täytöstä (VS c1b545b2c).
+- Leivonta v4 ajossa (03.44 tausta kuja-0-3); vaihe 3 käyttää v2:ta. Työkalut scratchpadissa: kp_ala.py, isot.py, tiheys.py.
