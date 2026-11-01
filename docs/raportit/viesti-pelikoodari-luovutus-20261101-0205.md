@@ -25,6 +25,14 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/reitti-216/ (c5b, c5c,
    keisari tulee (kädet osuvat), ei läpijuoksua. Toteuta tälle portille OLEMASSA OLEVALLA ovilogiikalla (QA `ui juoksupeli ovet`,
    JuoksupeliNakyma.cs); jos ovilehdet puuttuvat mallista tai ovat yhtä kappaletta, pyydä LAV:lta suoraan. Uusi kuva ovikohdasta → PT
    (skenaario c5e/sk-c5e.txt riittää pohjaksi; kuvat b-60…68).
+0b. LISÄYS 02.2x (PT, KK kuittasi c5e:n sillan) – SAMAAN ERÄÄN ovien kanssa, ennen omistajaa (kuvat lokit/esikatselu-20261101-015229):
+   (1) b-105: kamera kallistuu ~20°, horisontti vino.
+   (2) b-113…117: Longzongmenin häivytetty katto jättää läpikuultavia oranssinpunaisia laattoja kaaren yläpuolelle (= c3:n leijuvat
+       kattokoristeet): koristeet/laatat häivytettävä katon mukana.
+   (3) b-115…117: portin läpi vain tyhjää lattiaa ja valkoista horisonttia: tausta puuttuu (tarkista taustan rajaus/kaukotaso;
+       LAV:lle suoraan, jos puuttuu paketista).
+   (4) b-118…119: maalikamera näyttää vain katon ja auringon: portti ja Puyi kuvaan.
+   Sitten LOPULLINEN VIDEO PT:lle → KK (KK tarkistaa myös sivueunukin ennakoitavuuden ≥ 2,5 s).
 1. Valmis: PT kuittasi c5e:n 02.1x ja vie c5:n KK:lle; sitten merge-pyyntö NS:lle (pelikoodari/reitti-216), ovikorjaus mukaan.
 2. (ks. 0) Vanha vika: ovien läpijuoksu.
 3. Botin uupuminen: pelissä elinvoima voi loppua ennen maalia (c5b-siemen 993805462 simussakin uupuu 666 m:ssä). Kuva-ajoihin
