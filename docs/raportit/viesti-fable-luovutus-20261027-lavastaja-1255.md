@@ -2591,3 +2591,16 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 - AVOIN: (1) rakennukset-v92 = v91 + edusta-v3 (LISÄYS 180 AVOIN 2: q-duanmen/q-chaofang leivottuina edusta-v3:ssa). (2) jalustalaattojen
   länsipuoliskon nolla (LISÄYS 186) – sama syy kuin chaofangilla? tarkista, ovatko laatat irrallisia kasvoja/omina saarekkeina.
 - Levy 84 Gi (PT siirsi lokeja T7:lle); jos < 75 Gi, omat kuitatut välitiedostot T7:lle (/Volumes/T7 4TB/Matkakirja-linnanrakentaja), ei poistoja yöllä.
+
+## LISÄYS 193 (1.11. 06.3x): JALUSTALAATTOJEN NOLLA = NURINPÄIN OLEVAT LOHKOT → MUURIKATE-V36 PT:LLE — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- SYY (LISÄYS 186/192 AVOIN 2): muurikate-v26-pohjan jalustalaatat x < −110 ovat peilattuja: suljettujen laattalohkojen kiertosuunta ja NORMAL
+  sisäänpäin (etumerkillinen tilavuus < 0; ylöspäin kiertävä pinta y 1,490 = lohkon pohja, yläpinta 1,500 kiertää alas) → leivonta laatan sisältä.
+  UV-saarekkeet samat kuin idässä (6,6 tekseliä), ei varjostaja.
+- KORJAUS: uusi T/kaanna_nurin.py <sis.glb> <ulos.glb> [materiaalietuliite, oletus V4_jalustalaatta] [--kuiva]: kääntää tilavuudeltaan negatiiviset
+  kappaleet (indeksit 1↔2, −NORMAL). 3048 kolmiota (59–67 lohkoa/materiaali), uusinta-ajo 0. Muihin materiaaleihin EI käytetty: avoimet pinnat
+  antavat väärän merkin (kuiva-ajo näyttää satoja "nurin" katoissa). Mahdollinen sama vika: V4_marmorikaide x −120…−88 (156/390), tarkistamatta.
+- MUURIKATE-V36 (U/muurikate-v36.zsh = v35 + korjattu pohja U/muurikate-v36/lahde/): _valmiit/juoksupeli-kk-lavastaja-muurikate-v36-vienti-20261101,
+  SHA256SUMS 6f1519f40c50, korvaa v35:n (abbf3a81b8e8). Laattojen yläpinnat (ruudut.py): y 1,4 nolla 52 → 0 %, y 2,0 52 → 13 %.
+  → PT:n kuittaus → JU vie → PK "kielletty-muurikate-v36/". v4-paketin oma kielletty-muurikate-v33 (osasarja varjostajana) EI käyttöön.
+- Leivonta v4 + vahti (pid 46916) jatkuvat ennallaan (LISÄYS 192 KÄYNNISSÄ / KUN VALMIS).
