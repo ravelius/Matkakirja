@@ -1,0 +1,596 @@
+{
+  "createdAt": "2026-11-01T11:35:29.162600+00:00",
+  "ownerAuthorization": "Kopioi kaistat häviöttömästi",
+  "sourceCommit": "310f95761ce7c13e12f271395d4df44f8d39da55",
+  "geometry": {
+    "horizontalOverlaps": [
+      329,
+      333,
+      329
+    ],
+    "verticalOverlaps": [
+      366,
+      369
+    ],
+    "nominalOrderHorizontal": 329,
+    "nominalOrderVertical": 369,
+    "reason": "Measured supplied masks and exact existing pixel overlaps; central overlap 333 is byte-identical while 329 is not."
+  },
+  "files": [
+    {
+      "tile": "r2c1",
+      "selectedAttempt": 2,
+      "file": "pariisi-valitaso-r2c1.png",
+      "sha256": "041f33b5de3d71d1538c29724405beb1f5c1c03eaecaa20d013f492e8c7bef23",
+      "bytes": 3209369,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r2c1-attempt002.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        1207,
+        0,
+        1536,
+        1024
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "e3d72b9353c3f1d386616dbbd44070d1675a58215b3b69506c5b55b67baf5a0f",
+      "copiedNeighbors": [],
+      "neighborChecks": [],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r2c4",
+      "selectedAttempt": 1,
+      "file": "pariisi-valitaso-r2c4.png",
+      "sha256": "86abd1512c477a7dbf7a573ae8094e214f436484f8c6c8e5cb49642909f4f34b",
+      "bytes": 2048372,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r2c4-attempt001.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        0,
+        329,
+        1024
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "6d04f2a6b074a52c74a9d35796b5ec29b9f11ef0f7465ae9baabe1734e5c2d79",
+      "copiedNeighbors": [],
+      "neighborChecks": [],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r1c2",
+      "selectedAttempt": 3,
+      "file": "pariisi-valitaso-r1c2.png",
+      "sha256": "5cd3f4d368c5d810a74b692c0f7bea00d90de86eea1401a94131a3218aebf8e4",
+      "bytes": 3254959,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r1c2-attempt003.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        658,
+        1536,
+        1024
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "7db8018ccf827189e817cb820fe6db8ac36d9954fd994cacad856ad2cb0c62c6",
+      "copiedNeighbors": [],
+      "neighborChecks": [],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r1c3",
+      "selectedAttempt": 2,
+      "file": "pariisi-valitaso-r1c3.png",
+      "sha256": "c5fd2f33b2ec27f5494695adbec0f6e38126e65d8cdd4ceb28ae9adb2fd0946f",
+      "bytes": 3368632,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r1c3-attempt002.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        658,
+        1536,
+        1024
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "b78cbd035659bf4ebe63e4766718df80134cda9828ba9f3ac17d317355a366c1",
+      "copiedNeighbors": [
+        {
+          "neighbor": "r1c2",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r1c2.png",
+          "sourceBox": [
+            1203,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "pixelSHA256": "f5fa7a3adac66b30605e6bc1107c3b675298f84f395b0f4a9b49c16a11807950"
+        }
+      ],
+      "neighborChecks": [
+        {
+          "neighbor": "r1c2",
+          "sourceBox": [
+            1203,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        }
+      ],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r1c1",
+      "selectedAttempt": 3,
+      "file": "pariisi-valitaso-r1c1.png",
+      "sha256": "43f8681741d6b8f8ecf4bd3bd56db18ca6654903b91c97def3539e60b296096a",
+      "bytes": 2092113,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r1c1-attempt003.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        1207,
+        658,
+        1536,
+        1024
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "7105b1994e9a1684ea1ad42e540806c8f70e1d2e29e1bfc877f83adf6639759a",
+      "copiedNeighbors": [
+        {
+          "neighbor": "r1c2",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r1c2.png",
+          "sourceBox": [
+            0,
+            0,
+            329,
+            1024
+          ],
+          "destinationXY": [
+            1207,
+            0
+          ],
+          "pixelSHA256": "0b585413385d683cedf934e6f220847a41fc99c6b9a884098f70fe6e1d299862"
+        },
+        {
+          "neighbor": "r2c1",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r2c1.png",
+          "sourceBox": [
+            0,
+            0,
+            1536,
+            366
+          ],
+          "destinationXY": [
+            0,
+            658
+          ],
+          "pixelSHA256": "bcdacf05a44e91b0edad0c180c73d2249cca16488a93543853e6f06a87d1a1a5"
+        }
+      ],
+      "neighborChecks": [
+        {
+          "neighbor": "r1c2",
+          "sourceBox": [
+            0,
+            0,
+            329,
+            1024
+          ],
+          "destinationXY": [
+            1207,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        },
+        {
+          "neighbor": "r2c1",
+          "sourceBox": [
+            0,
+            0,
+            1536,
+            366
+          ],
+          "destinationXY": [
+            0,
+            658
+          ],
+          "changedPixels": 0,
+          "identical": true
+        }
+      ],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r1c4",
+      "selectedAttempt": 1,
+      "file": "pariisi-valitaso-r1c4.png",
+      "sha256": "99ddbac0875590f62df7bae31c2c0bdb85a4228c2c4155f4770fa5ee6f7ff153",
+      "bytes": 1479937,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r1c4-attempt001.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        658,
+        329,
+        1024
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "9ffaec35616b4c32a9d45bead167c572da161e4986aafeccd731e4ce5dbc9e45",
+      "copiedNeighbors": [
+        {
+          "neighbor": "r1c3",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r1c3.png",
+          "sourceBox": [
+            1207,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "pixelSHA256": "8602af87b94b4d3224f801e03ed3d94c530a289b53d719e8dc48b517fcd8f97f"
+        },
+        {
+          "neighbor": "r2c4",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r2c4.png",
+          "sourceBox": [
+            0,
+            0,
+            1536,
+            366
+          ],
+          "destinationXY": [
+            0,
+            658
+          ],
+          "pixelSHA256": "7437af6c76605c5c3720e4d6447a638989c5a6a64d9a71dbf4caab4d5b407ca6"
+        }
+      ],
+      "neighborChecks": [
+        {
+          "neighbor": "r1c3",
+          "sourceBox": [
+            1207,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        },
+        {
+          "neighbor": "r2c4",
+          "sourceBox": [
+            0,
+            0,
+            1536,
+            366
+          ],
+          "destinationXY": [
+            0,
+            658
+          ],
+          "changedPixels": 0,
+          "identical": true
+        }
+      ],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r3c2",
+      "selectedAttempt": 2,
+      "file": "pariisi-valitaso-r3c2.png",
+      "sha256": "75eb39ca4ea5407943bc318cc6d5608084741d237f738efbfe8842196c875050",
+      "bytes": 3221262,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r3c2-attempt002.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        0,
+        1536,
+        369
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "0f92f68286774764a32504738e9e6bca719fb00b5f2e32a737ccfb6648d4cd6b",
+      "copiedNeighbors": [],
+      "neighborChecks": [],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r3c3",
+      "selectedAttempt": 2,
+      "file": "pariisi-valitaso-r3c3.png",
+      "sha256": "715f53d69a11e98b54a1521d049c903dae309fe6c24635de2a9a071b8ff64ea5",
+      "bytes": 3220155,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r3c3-attempt002.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        0,
+        1536,
+        369
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "0de0f35c30c3cbbab95338ae646f77dbadf6ec506a7a1f5d6c2d6e4c27fedfbb",
+      "copiedNeighbors": [
+        {
+          "neighbor": "r3c2",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r3c2.png",
+          "sourceBox": [
+            1203,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "pixelSHA256": "6210a3ebf20fe1c41953b876f9a866d072d685e3e658a0de9790fff9e4b13851"
+        }
+      ],
+      "neighborChecks": [
+        {
+          "neighbor": "r3c2",
+          "sourceBox": [
+            1203,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        }
+      ],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r3c1",
+      "selectedAttempt": 2,
+      "file": "pariisi-valitaso-r3c1.png",
+      "sha256": "7d3c2fade41341a9050bc1c3fd63a33b345e7afdd23dec1066526cee82e2cadf",
+      "bytes": 2223725,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r3c1-attempt002.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        1207,
+        0,
+        1536,
+        369
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "028438ecf0ff03c0da7cc64ce6e5596d2d33bf97136781677165ad7215f106b3",
+      "copiedNeighbors": [
+        {
+          "neighbor": "r3c2",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r3c2.png",
+          "sourceBox": [
+            0,
+            0,
+            329,
+            1024
+          ],
+          "destinationXY": [
+            1207,
+            0
+          ],
+          "pixelSHA256": "0f980f6b37be2638aec0937ee380baf584ea56869af48f3c0573ed4fd3dd979e"
+        },
+        {
+          "neighbor": "r2c1",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r2c1.png",
+          "sourceBox": [
+            0,
+            655,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "pixelSHA256": "00ab36d5d23c67ba22020392a994559942b8ff0715ae66379621103181ed10c8"
+        }
+      ],
+      "neighborChecks": [
+        {
+          "neighbor": "r3c2",
+          "sourceBox": [
+            0,
+            0,
+            329,
+            1024
+          ],
+          "destinationXY": [
+            1207,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        },
+        {
+          "neighbor": "r2c1",
+          "sourceBox": [
+            0,
+            655,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        }
+      ],
+      "visualQA": "review-required-residual-local-seam-differences"
+    },
+    {
+      "tile": "r3c4",
+      "selectedAttempt": 2,
+      "file": "pariisi-valitaso-r3c4.png",
+      "sha256": "2fdc63575feb08636de8926610e3c647561a0cd1cbea8e8b770af0b7994aa9af",
+      "bytes": 2609949,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeGeneration": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/raw/r3c4-attempt002.png",
+      "postProcessing": "Lossless source and neighbor strip copying explicitly authorized by owner",
+      "fixedBox": [
+        0,
+        0,
+        329,
+        369
+      ],
+      "fixedPixelsIdentical": true,
+      "fixedChangedPixels": 0,
+      "fixedPixelSHA256": "6ff93a91c7034757d38406edc42f155269a85c9c4c8890576b5031b26010f9bf",
+      "copiedNeighbors": [
+        {
+          "neighbor": "r3c3",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r3c3.png",
+          "sourceBox": [
+            1207,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "pixelSHA256": "9523917d0d833998ec71a461046f6072f3a974c6a4f783722180650d88250959"
+        },
+        {
+          "neighbor": "r2c4",
+          "sourceFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-valitaso-era2-20261101/composed-v6/pariisi-valitaso-r2c4.png",
+          "sourceBox": [
+            0,
+            655,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "pixelSHA256": "a9f607da1bfc1e3e6eaeedc3398157c27b975c9548c1283b432a8f84dbb9b27c"
+        }
+      ],
+      "neighborChecks": [
+        {
+          "neighbor": "r3c3",
+          "sourceBox": [
+            1207,
+            0,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        },
+        {
+          "neighbor": "r2c4",
+          "sourceBox": [
+            0,
+            655,
+            1536,
+            1024
+          ],
+          "destinationXY": [
+            0,
+            0
+          ],
+          "changedPixels": 0,
+          "identical": true
+        }
+      ],
+      "visualQA": "review-required-residual-local-seam-differences"
+    }
+  ],
+  "visualQA": "Needs Karttaseppa seam review; fixed-pixel preservation PASS does not imply visual seamlessness",
+  "qaStrictPass": false,
+  "actualCalls": 20
+}

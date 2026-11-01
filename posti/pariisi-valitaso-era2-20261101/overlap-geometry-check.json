@@ -1,0 +1,74 @@
+{
+  "centerHorizontalOverlapSearch": [
+    {
+      "overlap": 325,
+      "mean": 69.64538881883145,
+      "exact": false
+    },
+    {
+      "overlap": 326,
+      "mean": 67.59702247253792,
+      "exact": false
+    },
+    {
+      "overlap": 327,
+      "mean": 64.42271742339422,
+      "exact": false
+    },
+    {
+      "overlap": 328,
+      "mean": 60.01444144564397,
+      "exact": false
+    },
+    {
+      "overlap": 329,
+      "mean": 54.06967905171603,
+      "exact": false
+    },
+    {
+      "overlap": 330,
+      "mean": 46.08131313131313,
+      "exact": false
+    },
+    {
+      "overlap": 331,
+      "mean": 34.83154760922083,
+      "exact": false
+    },
+    {
+      "overlap": 332,
+      "mean": 19.395382074747076,
+      "exact": false
+    },
+    {
+      "overlap": 333,
+      "mean": 0.0,
+      "exact": true
+    },
+    {
+      "overlap": 334,
+      "mean": 19.437221186043214,
+      "exact": false
+    },
+    {
+      "overlap": 335,
+      "mean": 34.8681564853329,
+      "exact": false
+    },
+    {
+      "overlap": 336,
+      "mean": 46.09582357533177,
+      "exact": false
+    },
+    {
+      "overlap": 337,
+      "mean": 54.06094706858437,
+      "exact": false
+    }
+  ],
+  "nominalHorizontal": 329,
+  "sourceConfirmedCenterHorizontal": 333,
+  "topFixedBandHeight": 366,
+  "bottomFixedBandHeight": 369,
+  "note": "Use actual authoritative fixed source rectangles for exact copied pixels. Center column source composites overlap by 333 pixels, although order text gives nominal 329."
+}

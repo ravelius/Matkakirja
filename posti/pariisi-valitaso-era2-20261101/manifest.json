@@ -1,0 +1,88 @@
+{
+  "createdAt": "2026-11-01T11:37:11.907939+00:00",
+  "sourceCommit": "310f95761ce7c13e12f271395d4df44f8d39da55",
+  "taskNumbers": [
+    1590,
+    1591,
+    1592,
+    1593,
+    1594,
+    1595,
+    1596,
+    1597,
+    1598,
+    1599
+  ],
+  "mode": "built-in-imagegen + owner-authorized lossless source-strip copying",
+  "actualCalls": 20,
+  "imageCount": 10,
+  "technicalFixedPixelsPass": true,
+  "qaStrictPass": false,
+  "status": "review-candidates-with-disclosed-seam-differences",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "files": [
+    {
+      "file": "pariisi-valitaso-r2c1.png",
+      "sha256": "041f33b5de3d71d1538c29724405beb1f5c1c03eaecaa20d013f492e8c7bef23",
+      "bytes": 3209369,
+      "selectedAttempt": 2
+    },
+    {
+      "file": "pariisi-valitaso-r2c4.png",
+      "sha256": "86abd1512c477a7dbf7a573ae8094e214f436484f8c6c8e5cb49642909f4f34b",
+      "bytes": 2048372,
+      "selectedAttempt": 1
+    },
+    {
+      "file": "pariisi-valitaso-r1c2.png",
+      "sha256": "5cd3f4d368c5d810a74b692c0f7bea00d90de86eea1401a94131a3218aebf8e4",
+      "bytes": 3254959,
+      "selectedAttempt": 3
+    },
+    {
+      "file": "pariisi-valitaso-r1c3.png",
+      "sha256": "c5fd2f33b2ec27f5494695adbec0f6e38126e65d8cdd4ceb28ae9adb2fd0946f",
+      "bytes": 3368632,
+      "selectedAttempt": 2
+    },
+    {
+      "file": "pariisi-valitaso-r1c1.png",
+      "sha256": "43f8681741d6b8f8ecf4bd3bd56db18ca6654903b91c97def3539e60b296096a",
+      "bytes": 2092113,
+      "selectedAttempt": 3
+    },
+    {
+      "file": "pariisi-valitaso-r1c4.png",
+      "sha256": "99ddbac0875590f62df7bae31c2c0bdb85a4228c2c4155f4770fa5ee6f7ff153",
+      "bytes": 1479937,
+      "selectedAttempt": 1
+    },
+    {
+      "file": "pariisi-valitaso-r3c2.png",
+      "sha256": "75eb39ca4ea5407943bc318cc6d5608084741d237f738efbfe8842196c875050",
+      "bytes": 3221262,
+      "selectedAttempt": 2
+    },
+    {
+      "file": "pariisi-valitaso-r3c3.png",
+      "sha256": "715f53d69a11e98b54a1521d049c903dae309fe6c24635de2a9a071b8ff64ea5",
+      "bytes": 3220155,
+      "selectedAttempt": 2
+    },
+    {
+      "file": "pariisi-valitaso-r3c1.png",
+      "sha256": "7d3c2fade41341a9050bc1c3fd63a33b345e7afdd23dec1066526cee82e2cadf",
+      "bytes": 2223725,
+      "selectedAttempt": 2
+    },
+    {
+      "file": "pariisi-valitaso-r3c4.png",
+      "sha256": "2fdc63575feb08636de8926610e3c647561a0cd1cbea8e8b770af0b7994aa9af",
+      "bytes": 2609949,
+      "selectedAttempt": 2
+    }
+  ]
+}
