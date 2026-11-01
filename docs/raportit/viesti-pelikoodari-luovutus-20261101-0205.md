@@ -19,9 +19,14 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/reitti-216/ (c5b, c5c,
 - c5d (pelin tila -komennoilla) jäi tarpeettomaksi; huom: esikatselussa ei ole komentoa "tila" (VIKA), passiivinen on `paikka`.
 
 ## Kesken / seuraava
-1. PT:n kuittaus c5e:lle → c5 KK:lle kokonaisena (PT päättää, käytetäänkö c5e:tä vai uutta ajoa ilman elinvoima-apua),
-   sitten merge-pyyntö NS:lle (pelikoodari/reitti-216).
-2. Vanha vika (ei v89): Puyi juoksee portin suljettujen ovien läpi (c5 b-06…07, c5b b-64…66, z ≈ −388) – mainittu PT:lle.
+0. LISÄYS 02.1x – SEURAAVA ERÄ (PT 1.11.): OVET. c5e kuitattu, PT vie c5:n KK:lle. Puyi juoksee portin suljettujen ovien läpi
+   (c5 b-06…07, c5b b-64…66; kamera ≈ (81,5; −388), portti c5b-kuvissa ennen Taihemenin aukiota). Päätös on jo olemassa
+   (omistaja 24.10. 14.39 ja 27.10. 10.10, loki: node tools/loki-hae.mjs ovet): reitin ovilehdet ovat kiinni ja aukeavat, kun
+   keisari tulee (kädet osuvat), ei läpijuoksua. Toteuta tälle portille OLEMASSA OLEVALLA ovilogiikalla (QA `ui juoksupeli ovet`,
+   JuoksupeliNakyma.cs); jos ovilehdet puuttuvat mallista tai ovat yhtä kappaletta, pyydä LAV:lta suoraan. Uusi kuva ovikohdasta → PT
+   (skenaario c5e/sk-c5e.txt riittää pohjaksi; kuvat b-60…68).
+1. Valmis: PT kuittasi c5e:n 02.1x ja vie c5:n KK:lle; sitten merge-pyyntö NS:lle (pelikoodari/reitti-216), ovikorjaus mukaan.
+2. (ks. 0) Vanha vika: ovien läpijuoksu.
 3. Botin uupuminen: pelissä elinvoima voi loppua ennen maalia (c5b-siemen 993805462 simussakin uupuu 666 m:ssä). Kuva-ajoihin
    elinvoima-apu; pelin tasapaino PT:n päätös, jos kysyy.
 4. Edellisen luovutuksen Kesken 3 (s-osa ei toteudu, MK_TAUSTA-oletus) ja 4 (≤ 4,5 m -tavoite, valo-k1-216) ennallaan.
