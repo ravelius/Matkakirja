@@ -1,0 +1,43 @@
+{
+  "reviewedAt": "2026-11-01T02:38:07.019575+00:00",
+  "reviewer": "/root/paris_1m_block1",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "readyForMailboxDelivery": true,
+  "readinessScope": "Suitable for delivery to receiver for evaluation with explicitly disclosed real mask exceptions; not unconditional acceptance.",
+  "outcome": "native-22-images-reviewed-ready-for-receiver-evaluation-with-real-disclosed-minor-water-mask-exceptions",
+  "reviewedImageCount": 22,
+  "fullGuideAndFinalContactsCompared": true,
+  "fullNativeFlaggedTilesViewed": [
+    "r08-c02",
+    "r08-c03"
+  ],
+  "all22NativeRoofDetailsReviewedDuringProduction": true,
+  "nativeRawIdentityVerified": true,
+  "exactWaterMaskCompliance": false,
+  "unqualifiedWaterMaskPass": false,
+  "exactGroundGeometryCertified": false,
+  "broadVisibleDeliveryBlockingGeometryFailure": false,
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "generationCalls": 30,
+  "sourceV2ChangesEra5": false,
+  "sourceV2Note": "Current source-v2 geometry and masks are unchanged for all Era5 tiles; no additional generation was required for afd3613cc.",
+  "evidence": {
+    "batchValidationSHA256": "9831f42727f26afdc0c98a06b15236001d81940254fa6a1272d4e1733d6f91fc",
+    "independentEdgeReviewSHA256": "6bd3af09c187d96a3fc33ff97bbd4f5fd71ca2f89c7779955e0ae57395f5f3d5",
+    "contactSheetSHA256": "90095a3a352a187b094fc943ed6f7623e63ff5174fceee9048c8a8f71e1ba73e",
+    "guideContactSheetSHA256": "f0babf147167f8722322b3ee6ca21646b23db3ec826fc6178a2ffc288d2f628e"
+  },
+  "limitations": [
+    "r08-c02: oikean reunan paperihäivytyksessä on vaalea sinivihreä vesikiila noin bbox[1500,440,1536,510] kokonaan mustan vesimaskin alueella. Sama aihe esiintyy geometriaohjeessa; finaali säilyttää sen. Tämä on todellinen pieni maskipoikkeama, ei kattoväri. Täysin vedenpitävää maski-PASSia ei anneta.",
+    "r08-c03: joen paperihäivytyksen sininen osa ylittää maskin+5px kolmessa vierekkäisessä komponentissa:755px bbox[256,410,337,429],160px bbox[163,420,206,438] ja119px bbox[207,422,256,428]. Kyse on yhden olemassa olevan joen reunahäivytyksestä, ei kolmesta uudesta vesialueesta.",
+    "r08-c03: pieni koristeallas lähellä683,935 ei kuivunut kokonaan. Sen kärjessä on35px vaaleansininen vesiaihe bbox[679,935,688,944]; tiukalla sinikynnyksellä11px bbox[682,936,687,941]. Riippumaton semanttinen tarkistus täsmentää aiempaa tuotantoraportin harmaanvihreä-vivahdekuvausta: tämä on todellinen jäljelle jäänyt koristevesi, ei vain varjo. Se annetaan vastaanottajan arvioitavaksi eikä sitä retusoitu.",
+    "r07-c11/r07-c13/r08-c13: geometriaohjeiden kuivat saaret säilytettiin vaikka valkoisista maskeista puuttuu saaren reikä. Mittauksen puuttuvan sinisen suurkomponentit7995px bbox[507,569,683,628],2757px bbox[385,990,504,1024] ja23519px bbox[371,96,518,302] vastaavat näitä kuivia saaria. Lähteen tarkennetun tulkinnan mukaan saaria ja rakennuksia ei hukuteta.",
+    "Katot, tavallisten talojen geometria ja paletti vastaavat q11-tyyliä. Reunan rakennusten musteen voimakkuus vaihtelee lähteeseen nähden; tyhjät paperialueet ja kaupunkirajojen paikat säilyvät. Kaikkien maapikselien täydellistä yhtäläisyyttä ei sertifioida.",
+    "28 erän sisäisen128px-limityksen RGB-MAE4.23–27.63/255 on diagnostiikkaa, ei vastaanottajan saumahyväksyntä. Vastaanottaja tekee lähteen määräämän pienimmän eron leikkauspolun, kapean häivytyksen sekä valtuutetun veden sävyntasauksen.",
+    "Kolme todellista vesimaskipoikkeamaa ovat paikallisia ja pieniä koko kuvan mittakaavassa. Niiden hyväksyntä jää vastaanottajalle/PT:lle; nollapoikkeamatason vaatimus edellyttäisi uutta kokonaista generointia. Tässä valmistelussa ei generoitu eikä muutettu kuvia."
+  ]
+}

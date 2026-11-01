@@ -1,0 +1,2590 @@
+{
+  "sourceCommit": "f093175d081e8d243795ffe04143fd15106d39c0",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-1m-loput88-20261101.md",
+  "batch": 5,
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "metersPerPixel": 1,
+  "overlapPixels": 128,
+  "step": [
+    1408,
+    896
+  ],
+  "upscaled": false,
+  "retouched": false,
+  "nativeByteIdentityVerified": true,
+  "generationMode": "built-in image_gen, complete new images",
+  "generationCalls": 30,
+  "tiles": [
+    {
+      "nimi": "pariisi-1m-r07-c01",
+      "rivi": 7,
+      "sarake": 1,
+      "rajaus_res2": [
+        0,
+        5376,
+        1536,
+        6400
+      ],
+      "kaupunkia_osuus": 0.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c02",
+      "rivi": 7,
+      "sarake": 2,
+      "rajaus_res2": [
+        1408,
+        5376,
+        2944,
+        6400
+      ],
+      "kaupunkia_osuus": 0.535,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c03",
+      "rivi": 7,
+      "sarake": 3,
+      "rajaus_res2": [
+        2816,
+        5376,
+        4352,
+        6400
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c04",
+      "rivi": 7,
+      "sarake": 4,
+      "rajaus_res2": [
+        4224,
+        5376,
+        5760,
+        6400
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c05",
+      "rivi": 7,
+      "sarake": 5,
+      "rajaus_res2": [
+        5632,
+        5376,
+        7168,
+        6400
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c09",
+      "rivi": 7,
+      "sarake": 9,
+      "rajaus_res2": [
+        11264,
+        5376,
+        12800,
+        6400
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c10",
+      "rivi": 7,
+      "sarake": 10,
+      "rajaus_res2": [
+        12672,
+        5376,
+        14208,
+        6400
+      ],
+      "kaupunkia_osuus": 0.969,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c11",
+      "rivi": 7,
+      "sarake": 11,
+      "rajaus_res2": [
+        14080,
+        5376,
+        15616,
+        6400
+      ],
+      "kaupunkia_osuus": 0.358,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c12",
+      "rivi": 7,
+      "sarake": 12,
+      "rajaus_res2": [
+        15488,
+        5376,
+        17024,
+        6400
+      ],
+      "kaupunkia_osuus": 0.628,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r07-c13",
+      "rivi": 7,
+      "sarake": 13,
+      "rajaus_res2": [
+        16896,
+        5376,
+        18432,
+        6400
+      ],
+      "kaupunkia_osuus": 0.373,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c02",
+      "rivi": 8,
+      "sarake": 2,
+      "rajaus_res2": [
+        1408,
+        6272,
+        2944,
+        7296
+      ],
+      "kaupunkia_osuus": 0.145,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c03",
+      "rivi": 8,
+      "sarake": 3,
+      "rajaus_res2": [
+        2816,
+        6272,
+        4352,
+        7296
+      ],
+      "kaupunkia_osuus": 0.666,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c04",
+      "rivi": 8,
+      "sarake": 4,
+      "rajaus_res2": [
+        4224,
+        6272,
+        5760,
+        7296
+      ],
+      "kaupunkia_osuus": 0.875,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c05",
+      "rivi": 8,
+      "sarake": 5,
+      "rajaus_res2": [
+        5632,
+        6272,
+        7168,
+        7296
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c06",
+      "rivi": 8,
+      "sarake": 6,
+      "rajaus_res2": [
+        7040,
+        6272,
+        8576,
+        7296
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c07",
+      "rivi": 8,
+      "sarake": 7,
+      "rajaus_res2": [
+        8448,
+        6272,
+        9984,
+        7296
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c08",
+      "rivi": 8,
+      "sarake": 8,
+      "rajaus_res2": [
+        9856,
+        6272,
+        11392,
+        7296
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c09",
+      "rivi": 8,
+      "sarake": 9,
+      "rajaus_res2": [
+        11264,
+        6272,
+        12800,
+        7296
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c10",
+      "rivi": 8,
+      "sarake": 10,
+      "rajaus_res2": [
+        12672,
+        6272,
+        14208,
+        7296
+      ],
+      "kaupunkia_osuus": 0.898,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c11",
+      "rivi": 8,
+      "sarake": 11,
+      "rajaus_res2": [
+        14080,
+        6272,
+        15616,
+        7296
+      ],
+      "kaupunkia_osuus": 0.849,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c12",
+      "rivi": 8,
+      "sarake": 12,
+      "rajaus_res2": [
+        15488,
+        6272,
+        17024,
+        7296
+      ],
+      "kaupunkia_osuus": 1.0,
+      "codex": true
+    },
+    {
+      "nimi": "pariisi-1m-r08-c13",
+      "rivi": 8,
+      "sarake": 13,
+      "rajaus_res2": [
+        16896,
+        6272,
+        18432,
+        7296
+      ],
+      "kaupunkia_osuus": 0.72,
+      "codex": true
+    }
+  ],
+  "files": [
+    {
+      "file": "pariisi-1m-r07-c01.png",
+      "bytes": 1088949,
+      "sha256": "98ba04a9fea6229723e8e2324a57a0f22d33aed5f2d3d5cebf07f60cab4f39f3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c01-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c01.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 0,
+      "cyanBeyond5pxMask": 0,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c02.png",
+      "bytes": 2443969,
+      "sha256": "10964c5f28c8228679614294e9b335327a09536ffe1cf8c6ddcd2981bd25319f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c02-attempt002-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c02.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 723,
+      "cyanBeyond5pxMask": 723,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 22,
+          "bbox": [
+            1313,
+            871,
+            1324,
+            877
+          ]
+        },
+        {
+          "area": 21,
+          "bbox": [
+            641,
+            42,
+            654,
+            47
+          ]
+        },
+        {
+          "area": 20,
+          "bbox": [
+            1474,
+            426,
+            1484,
+            431
+          ]
+        },
+        {
+          "area": 20,
+          "bbox": [
+            1132,
+            729,
+            1140,
+            735
+          ]
+        },
+        {
+          "area": 17,
+          "bbox": [
+            1384,
+            574,
+            1392,
+            578
+          ]
+        },
+        {
+          "area": 17,
+          "bbox": [
+            1097,
+            634,
+            1108,
+            637
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            1372,
+            216,
+            1380,
+            219
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            1146,
+            428,
+            1152,
+            432
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c03.png",
+      "bytes": 3328547,
+      "sha256": "e898c70ec1fd9ea6dd3f7cabb5701d1c3ea5bd9ea5d5002a52a952659bd60920",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c03-attempt002-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c03.png",
+      "waterMaskSha256": "fa41003b10b79586a46053b62f21834a7ef4c3fc7c7b076bcbb216393a6342c3",
+      "waterMaskPixels": 156171,
+      "cyanPixels": 158389,
+      "cyanBeyond5pxMask": 202,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 13,
+          "bbox": [
+            1492,
+            170,
+            1498,
+            174
+          ]
+        },
+        {
+          "area": 12,
+          "bbox": [
+            1523,
+            102,
+            1529,
+            105
+          ]
+        },
+        {
+          "area": 7,
+          "bbox": [
+            1121,
+            1000,
+            1125,
+            1002
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            815,
+            98,
+            817,
+            102
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            513,
+            375,
+            517,
+            377
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            938,
+            712,
+            942,
+            714
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            1161,
+            1002,
+            1165,
+            1004
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            429,
+            207,
+            432,
+            210
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c04.png",
+      "bytes": 3780406,
+      "sha256": "5793343e0b68d2e2a9caf94218ae1825cc5bac36920808ac4a5779568dfe5d50",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c04-attempt002-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c04.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 64,
+      "cyanBeyond5pxMask": 64,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 8,
+          "bbox": [
+            104,
+            102,
+            108,
+            106
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1,
+            111,
+            3,
+            113
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            619,
+            203,
+            621,
+            205
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1029,
+            65,
+            1031,
+            66
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1129,
+            326,
+            1130,
+            328
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1137,
+            330,
+            1138,
+            332
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            938,
+            334,
+            940,
+            335
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            938,
+            336,
+            940,
+            337
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c05.png",
+      "bytes": 3939833,
+      "sha256": "6038b2f33c872c677537e6ec90e2955c0f3c1d0e02191c22f54f957b0249558a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c05-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c05.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 31,
+      "cyanBeyond5pxMask": 31,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 7,
+          "bbox": [
+            1086,
+            727,
+            1089,
+            731
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            844,
+            623,
+            846,
+            625
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1245,
+            888,
+            1247,
+            890
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            469,
+            979,
+            471,
+            981
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            1439,
+            96,
+            1440,
+            97
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            840,
+            136,
+            841,
+            137
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            1221,
+            198,
+            1222,
+            199
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            1170,
+            365,
+            1171,
+            366
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c09.png",
+      "bytes": 3637376,
+      "sha256": "d7a82a5a9b010c7d0c6995252ddb11dded69bc4752a7e825634f2f50c29c7cb2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c09-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c09.png",
+      "waterMaskSha256": "e1dc25c98e789c80b0b48ef9a8625d911697a18927fc5008d4c3f9a497662a04",
+      "waterMaskPixels": 5468,
+      "cyanPixels": 5688,
+      "cyanBeyond5pxMask": 51,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 4,
+          "bbox": [
+            507,
+            182,
+            509,
+            185
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            390,
+            895,
+            392,
+            897
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            883,
+            493,
+            885,
+            495
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            823,
+            35,
+            825,
+            36
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            913,
+            475,
+            914,
+            477
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1167,
+            582,
+            1169,
+            583
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1035,
+            675,
+            1036,
+            677
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1251,
+            755,
+            1253,
+            756
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c10.png",
+      "bytes": 3264321,
+      "sha256": "0a4d7b090a99b5e2662aacd490c7d52cd845000b383b053dcf6c93e3c968a8e9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c10-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c10.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 161,
+      "cyanBeyond5pxMask": 161,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 10,
+          "bbox": [
+            256,
+            888,
+            260,
+            892
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            281,
+            903,
+            285,
+            907
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            639,
+            422,
+            645,
+            423
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            90,
+            432,
+            93,
+            434
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            304,
+            554,
+            306,
+            557
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            706,
+            742,
+            709,
+            744
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            240,
+            215,
+            244,
+            216
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            650,
+            423,
+            653,
+            425
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c11.png",
+      "bytes": 1995303,
+      "sha256": "952a6e6191d6bf45a2aa873120d71c601bd5bd411c60e1bfce90146dc7c14034",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c11-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c11.png",
+      "waterMaskSha256": "a5a7bf9c494949caeaa3066fbf93e8f98d65ac35d845164af56ae8a7acb5146f",
+      "waterMaskPixels": 15437,
+      "cyanPixels": 8819,
+      "cyanBeyond5pxMask": 794,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 35,
+          "bbox": [
+            1418,
+            904,
+            1425,
+            913
+          ]
+        },
+        {
+          "area": 22,
+          "bbox": [
+            88,
+            239,
+            95,
+            243
+          ]
+        },
+        {
+          "area": 22,
+          "bbox": [
+            154,
+            299,
+            162,
+            304
+          ]
+        },
+        {
+          "area": 19,
+          "bbox": [
+            150,
+            61,
+            157,
+            66
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            148,
+            67,
+            153,
+            72
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            105,
+            274,
+            109,
+            280
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            116,
+            270,
+            120,
+            274
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            99,
+            278,
+            102,
+            285
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 7995,
+      "largestMissingWaterProxyComponents": [
+        {
+          "area": 7995,
+          "bbox": [
+            507,
+            569,
+            683,
+            628
+          ]
+        }
+      ],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c12.png",
+      "bytes": 2051117,
+      "sha256": "9621f798f394d3fe8adef476475c12fac51b0f2128988f76f5debd3c6e56ccae",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c12-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c12.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 144,
+      "cyanBeyond5pxMask": 144,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 25,
+          "bbox": [
+            672,
+            459,
+            678,
+            466
+          ]
+        },
+        {
+          "area": 11,
+          "bbox": [
+            621,
+            596,
+            627,
+            599
+          ]
+        },
+        {
+          "area": 11,
+          "bbox": [
+            741,
+            617,
+            744,
+            621
+          ]
+        },
+        {
+          "area": 7,
+          "bbox": [
+            648,
+            489,
+            652,
+            492
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            160,
+            988,
+            163,
+            991
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            751,
+            575,
+            754,
+            577
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            703,
+            468,
+            706,
+            470
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            598,
+            567,
+            601,
+            569
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r07-c13.png",
+      "bytes": 1949620,
+      "sha256": "21b911a715a94b3f39022a8209bc7072b4ce3f53758f1858798c0fd570388b5a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r07-c13-attempt002-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r07-c13.png",
+      "waterMaskSha256": "1410401fdd6c177bccbb6fe0d746978a62ce8936ddef98bd9fc99c00b9a7eac8",
+      "waterMaskPixels": 14603,
+      "cyanPixels": 12887,
+      "cyanBeyond5pxMask": 830,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 49,
+          "bbox": [
+            533,
+            886,
+            547,
+            895
+          ]
+        },
+        {
+          "area": 30,
+          "bbox": [
+            453,
+            398,
+            457,
+            407
+          ]
+        },
+        {
+          "area": 26,
+          "bbox": [
+            1120,
+            772,
+            1126,
+            778
+          ]
+        },
+        {
+          "area": 22,
+          "bbox": [
+            651,
+            453,
+            658,
+            457
+          ]
+        },
+        {
+          "area": 21,
+          "bbox": [
+            661,
+            455,
+            666,
+            465
+          ]
+        },
+        {
+          "area": 19,
+          "bbox": [
+            1164,
+            828,
+            1170,
+            834
+          ]
+        },
+        {
+          "area": 19,
+          "bbox": [
+            533,
+            881,
+            538,
+            887
+          ]
+        },
+        {
+          "area": 18,
+          "bbox": [
+            186,
+            354,
+            189,
+            363
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 2776,
+      "largestMissingWaterProxyComponents": [
+        {
+          "area": 2757,
+          "bbox": [
+            385,
+            990,
+            504,
+            1024
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            381,
+            988,
+            385,
+            989
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            432,
+            982,
+            435,
+            983
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            413,
+            994,
+            416,
+            995
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            447,
+            918,
+            448,
+            919
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            395,
+            982,
+            396,
+            983
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            437,
+            982,
+            438,
+            983
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            458,
+            982,
+            459,
+            983
+          ]
+        }
+      ],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c02.png",
+      "bytes": 1800524,
+      "sha256": "f5d4aa2cdd329afc9cd76350bd97412c44e79cf87752d083386875052c880c58",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c02-attempt002-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c02.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 44,
+      "cyanBeyond5pxMask": 44,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 5,
+          "bbox": [
+            1342,
+            56,
+            1345,
+            59
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            1267,
+            163,
+            1269,
+            165
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            827,
+            12,
+            828,
+            14
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1357,
+            49,
+            1358,
+            51
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1336,
+            52,
+            1337,
+            54
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1189,
+            266,
+            1190,
+            268
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1433,
+            393,
+            1434,
+            395
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1450,
+            454,
+            1452,
+            455
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c03.png",
+      "bytes": 2380234,
+      "sha256": "2dea4409966d9d051120c8adf974be813750bd48d99d9e811f215860c57a3fad",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c03-attempt004-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c03.png",
+      "waterMaskSha256": "620d558284afd9fc63e7f32f208cf99c61d0e0143b44810da7dc5d56c808d1be",
+      "waterMaskPixels": 65082,
+      "cyanPixels": 67280,
+      "cyanBeyond5pxMask": 1206,
+      "outsideLargeComponents": 1,
+      "largestOutsideComponents": [
+        {
+          "area": 755,
+          "bbox": [
+            256,
+            410,
+            337,
+            429
+          ]
+        },
+        {
+          "area": 160,
+          "bbox": [
+            163,
+            420,
+            206,
+            438
+          ]
+        },
+        {
+          "area": 119,
+          "bbox": [
+            207,
+            422,
+            256,
+            428
+          ]
+        },
+        {
+          "area": 24,
+          "bbox": [
+            331,
+            407,
+            342,
+            412
+          ]
+        },
+        {
+          "area": 11,
+          "bbox": [
+            682,
+            936,
+            687,
+            941
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            133,
+            438,
+            141,
+            439
+          ]
+        },
+        {
+          "area": 7,
+          "bbox": [
+            1034,
+            16,
+            1037,
+            19
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            1030,
+            16,
+            1033,
+            18
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 241,
+      "largestMissingWaterProxyComponents": [
+        {
+          "area": 6,
+          "bbox": [
+            498,
+            74,
+            504,
+            75
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            299,
+            386,
+            305,
+            387
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            281,
+            392,
+            287,
+            393
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            480,
+            158,
+            485,
+            159
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            312,
+            290,
+            317,
+            291
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            365,
+            338,
+            370,
+            339
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            294,
+            380,
+            299,
+            381
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            305,
+            380,
+            310,
+            381
+          ]
+        }
+      ],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c04.png",
+      "bytes": 3221029,
+      "sha256": "0f3c9d3115331b1c08c7f1593c77f519e2f46527e6243932d253dcf9cdc7e8fd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c04-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c04.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 115,
+      "cyanBeyond5pxMask": 115,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 11,
+          "bbox": [
+            550,
+            127,
+            555,
+            131
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            908,
+            20,
+            913,
+            24
+          ]
+        },
+        {
+          "area": 7,
+          "bbox": [
+            702,
+            42,
+            705,
+            45
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            1378,
+            451,
+            1381,
+            453
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            385,
+            328,
+            388,
+            330
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            874,
+            465,
+            876,
+            468
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            878,
+            468,
+            880,
+            471
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            633,
+            797,
+            636,
+            799
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c05.png",
+      "bytes": 3818729,
+      "sha256": "9cb9fcfc7986024da3dd4b1f6e839b97fa60886a461f6fb5a28c2ecce49f9dbf",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c05-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c05.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 88,
+      "cyanBeyond5pxMask": 88,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 28,
+          "bbox": [
+            220,
+            150,
+            232,
+            161
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            687,
+            251,
+            689,
+            253
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1414,
+            354,
+            1416,
+            356
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            382,
+            424,
+            385,
+            425
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            601,
+            637,
+            603,
+            639
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            606,
+            639,
+            608,
+            641
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            217,
+            147,
+            219,
+            148
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            169,
+            256,
+            171,
+            257
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c06.png",
+      "bytes": 3634730,
+      "sha256": "5cef005afb5cc9a572f87719d8ccd14ad76e4548bb11ac4fbf4324ab5107681a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c06-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c06.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 35,
+      "cyanBeyond5pxMask": 35,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 3,
+          "bbox": [
+            129,
+            347,
+            131,
+            349
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1377,
+            195,
+            1379,
+            196
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            130,
+            346,
+            132,
+            347
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            933,
+            571,
+            935,
+            572
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1034,
+            656,
+            1036,
+            657
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            943,
+            663,
+            944,
+            665
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            305,
+            928,
+            307,
+            929
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            165,
+            1000,
+            167,
+            1001
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c07.png",
+      "bytes": 3659555,
+      "sha256": "0502e0812fc70e221871d20263d16439c577d3ef830041fb284c25348935fd74",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c07-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c07.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 150,
+      "cyanBeyond5pxMask": 150,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 8,
+          "bbox": [
+            1223,
+            575,
+            1228,
+            577
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            208,
+            742,
+            214,
+            744
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            443,
+            614,
+            446,
+            617
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            1104,
+            569,
+            1107,
+            571
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            511,
+            143,
+            513,
+            145
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            1470,
+            348,
+            1474,
+            349
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            1027,
+            827,
+            1029,
+            829
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1331,
+            503,
+            1334,
+            504
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c08.png",
+      "bytes": 3692526,
+      "sha256": "c48a7cb023096a28ed38dc33b56041a4211394370fed253b5befc08acd53eaa1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c08-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c08.png",
+      "waterMaskSha256": "79246f3f5a0b2d560b04a773782be127928dd205f8c58a9e534afb70e073a577",
+      "waterMaskPixels": 29838,
+      "cyanPixels": 31529,
+      "cyanBeyond5pxMask": 1291,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 18,
+          "bbox": [
+            59,
+            600,
+            67,
+            605
+          ]
+        },
+        {
+          "area": 15,
+          "bbox": [
+            180,
+            80,
+            189,
+            84
+          ]
+        },
+        {
+          "area": 15,
+          "bbox": [
+            598,
+            951,
+            606,
+            955
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            520,
+            349,
+            525,
+            353
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            1323,
+            382,
+            1328,
+            386
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            839,
+            549,
+            847,
+            555
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            686,
+            945,
+            692,
+            950
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            904,
+            715,
+            908,
+            720
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c09.png",
+      "bytes": 3296223,
+      "sha256": "3db435cefdd4c9d5c0cd71f6b3736b0ba10e86b1d666d457b822af3ec8047cfc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c09-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c09.png",
+      "waterMaskSha256": "efa9bdddc622a3033e2f06667ad5f1600e7c0890eb7073ecd8d63db8cad993ff",
+      "waterMaskPixels": 151441,
+      "cyanPixels": 152814,
+      "cyanBeyond5pxMask": 102,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 11,
+          "bbox": [
+            375,
+            697,
+            381,
+            700
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            155,
+            863,
+            158,
+            866
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            331,
+            766,
+            333,
+            769
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            1489,
+            211,
+            1491,
+            213
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            413,
+            717,
+            415,
+            720
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1379,
+            5,
+            1381,
+            7
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1487,
+            232,
+            1488,
+            235
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            92,
+            555,
+            94,
+            557
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c10.png",
+      "bytes": 2993439,
+      "sha256": "11a8f9825d1aeffe37dc5a6fd4341a5635b99934cc489f2d22195b9fdcfd8fc2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c10-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c10.png",
+      "waterMaskSha256": "de4cff5cccbce95eb06758b55ef7b0b7ef130bb6e9b649470dc23c251baf9bab",
+      "waterMaskPixels": 50010,
+      "cyanPixels": 52152,
+      "cyanBeyond5pxMask": 21,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 8,
+          "bbox": [
+            165,
+            272,
+            169,
+            275
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            161,
+            271,
+            165,
+            273
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            970,
+            357,
+            971,
+            359
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            795,
+            473,
+            796,
+            475
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            713,
+            47,
+            714,
+            48
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            750,
+            96,
+            751,
+            97
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            171,
+            275,
+            172,
+            276
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            950,
+            342,
+            951,
+            343
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c11.png",
+      "bytes": 2194084,
+      "sha256": "4a354bad932c81ef4996aeaf65bb7a4e352fb035486850f91f197e2c487f8558",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c11-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c11.png",
+      "waterMaskSha256": "b7d45196b7f9fb0765d2fc31c86a7952a7ab364658ba27a35aa9a349d08bc24d",
+      "waterMaskPixels": 38817,
+      "cyanPixels": 39799,
+      "cyanBeyond5pxMask": 270,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 18,
+          "bbox": [
+            1356,
+            376,
+            1361,
+            381
+          ]
+        },
+        {
+          "area": 14,
+          "bbox": [
+            1406,
+            192,
+            1409,
+            201
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            548,
+            42,
+            551,
+            47
+          ]
+        },
+        {
+          "area": 13,
+          "bbox": [
+            863,
+            657,
+            868,
+            661
+          ]
+        },
+        {
+          "area": 12,
+          "bbox": [
+            1375,
+            43,
+            1379,
+            47
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            1488,
+            167,
+            1491,
+            172
+          ]
+        },
+        {
+          "area": 10,
+          "bbox": [
+            858,
+            648,
+            863,
+            653
+          ]
+        },
+        {
+          "area": 8,
+          "bbox": [
+            459,
+            553,
+            461,
+            559
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 6,
+      "largestMissingWaterProxyComponents": [
+        {
+          "area": 2,
+          "bbox": [
+            265,
+            950,
+            267,
+            951
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            146,
+            764,
+            147,
+            765
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            194,
+            818,
+            195,
+            819
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            262,
+            950,
+            263,
+            951
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            285,
+            956,
+            286,
+            957
+          ]
+        }
+      ],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c12.png",
+      "bytes": 2037131,
+      "sha256": "2a27c90032bb22f8521aee5149d785cdad7f9f4d47b3f49b0fe2a0aef6684967",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c12-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c12.png",
+      "waterMaskSha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03",
+      "waterMaskPixels": 0,
+      "cyanPixels": 72,
+      "cyanBeyond5pxMask": 72,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 8,
+          "bbox": [
+            1197,
+            212,
+            1199,
+            216
+          ]
+        },
+        {
+          "area": 6,
+          "bbox": [
+            1415,
+            676,
+            1419,
+            679
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            840,
+            30,
+            843,
+            32
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            933,
+            150,
+            935,
+            152
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            79,
+            167,
+            81,
+            169
+          ]
+        },
+        {
+          "area": 3,
+          "bbox": [
+            1332,
+            591,
+            1334,
+            593
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1235,
+            169,
+            1236,
+            171
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1285,
+            182,
+            1286,
+            184
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 0,
+      "largestMissingWaterProxyComponents": [],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    },
+    {
+      "file": "pariisi-1m-r08-c13.png",
+      "bytes": 2279927,
+      "sha256": "f48b415f177488848adc1ec3090bce9adb68a6b99981c5ff61873c6764983527",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c13-attempt001-native.png",
+      "identicalToRaw": true,
+      "waterMaskSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c13.png",
+      "waterMaskSha256": "867b07bb2803f43b5fd4d21cf249e2cb681cdc0f4e852fc1da5b3a7e25359a4b",
+      "waterMaskPixels": 63852,
+      "cyanPixels": 41808,
+      "cyanBeyond5pxMask": 41,
+      "outsideLargeComponents": 0,
+      "largestOutsideComponents": [
+        {
+          "area": 12,
+          "bbox": [
+            610,
+            340,
+            613,
+            347
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            965,
+            420,
+            967,
+            423
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            498,
+            1,
+            499,
+            3
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            64,
+            393,
+            65,
+            395
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            1009,
+            396,
+            1010,
+            398
+          ]
+        },
+        {
+          "area": 2,
+          "bbox": [
+            281,
+            558,
+            282,
+            560
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            566,
+            26,
+            567,
+            27
+          ]
+        },
+        {
+          "area": 1,
+          "bbox": [
+            568,
+            26,
+            569,
+            27
+          ]
+        }
+      ],
+      "nonCyanInsideErodedWater": 23643,
+      "largestMissingWaterProxyComponents": [
+        {
+          "area": 23519,
+          "bbox": [
+            371,
+            96,
+            518,
+            302
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            345,
+            194,
+            350,
+            195
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            343,
+            230,
+            348,
+            231
+          ]
+        },
+        {
+          "area": 5,
+          "bbox": [
+            300,
+            290,
+            305,
+            291
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            393,
+            74,
+            397,
+            75
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            380,
+            92,
+            384,
+            93
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            354,
+            128,
+            358,
+            129
+          ]
+        },
+        {
+          "area": 4,
+          "bbox": [
+            374,
+            128,
+            378,
+            129
+          ]
+        }
+      ],
+      "waterColourCaution": "Colour proxy includes blue roof highlights. Outside components >400 need visual inspection; no automatic water claim."
+    }
+  ],
+  "qaOutcome": "native-22-images-reviewed-ready-for-receiver-evaluation-with-real-disclosed-minor-water-mask-exceptions",
+  "groundGeometryPixelCertified": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "mapAttribution": "© OpenStreetMap contributors — https://www.openstreetmap.org/copyright",
+  "maskCorrectionSourceCommit": "afd3613ccac8200cb66a8b56cd1b66bc12bacf68",
+  "effectiveWaterMasks": "source-v2",
+  "originalSourcePreserved": true
+}

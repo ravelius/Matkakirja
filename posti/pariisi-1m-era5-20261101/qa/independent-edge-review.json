@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-01T02:35:28.976925+00:00",
+  "reviewer": "/root/sky8192_row_a",
+  "scope": "Independent read-only visual review of selected era5 r08-c02 and r08-c03, their unchanged geometry guides and source-v2 water masks.",
+  "sourceCommit": "afd3613ccac8200cb66a8b56cd1b66bc12bacf68",
+  "method": [
+    "Full native 1536x1024 final images, complete geometry guides and complete v2 masks inspected visually.",
+    "Current final/guide detail views were mechanically cropped and magnified in memory with ffmpeg; no crop or altered image was saved.",
+    "Batch colour-proxy results were compared with semantic visual appearance; colour-proxy counts alone were not treated as water labels.",
+    "Selected final, raw, dimensions and SHA256 were rechecked before writing this report."
+  ],
+  "batchReport": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/qa/batch-validation.json",
+    "checkedAt": "2026-11-01T02:33:29.142846+00:00",
+    "sha256": "9831f42727f26afdc0c98a06b15236001d81940254fa6a1272d4e1733d6f91fc"
+  },
+  "overall": {
+    "classification": "minor-real-mask-exceptions-no-broad-geometry-failure",
+    "unqualifiedWaterMaskPass": false,
+    "broadVisibleDeliveryBlockingGeometryFailure": false,
+    "recommendation": "These are localized exceptions suitable for explicit disclosure in the delivery QA, not evidence of a large invented water body or displaced river. Do not describe either tile as exact water-mask PASS. The r08-c03 decorative basin is a real residual water motif, not merely a gray-green shadow. Receiver acceptance of the disclosed exceptions remains separate.",
+    "strictMaskCompliance": false,
+    "receiverAccepted": null,
+    "gameIntegrated": null,
+    "published": null
+  },
+  "tiles": {
+    "r08-c02": {
+      "selectedAttempt": 2,
+      "inputs": {
+        "final": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/final/pariisi-1m-r08-c02.png",
+          "sha256": "f5d4aa2cdd329afc9cd76350bd97412c44e79cf87752d083386875052c880c58"
+        },
+        "raw": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c02-attempt002-native.png",
+          "sha256": "f5d4aa2cdd329afc9cd76350bd97412c44e79cf87752d083386875052c880c58"
+        },
+        "geometryGuide": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/ohje-pariisi-1m-r08-c02-v6-geometria.png",
+          "sha256": "0f8f16056848195c596b909be3ee6f9d80a61a07420833d24719265c6490160b"
+        },
+        "waterMask": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c02.png",
+          "sha256": "9cda97ab0082012560c8745934b4a7fc2cec4272e38205e38372ae1ff6db0e03"
+        }
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeRawIdentityVerified": true,
+      "waterMaskPixels": 0,
+      "cyanBeyond5pxMask": 44,
+      "exactMaskCompliance": false,
+      "broadVisibleDeliveryBlockingGeometryFailure": false,
+      "issues": [
+        {
+          "id": "right-edge-water-like-wedge",
+          "reviewROI": [
+            1300,
+            350,
+            1536,
+            580
+          ],
+          "approxVisibleRegion": [
+            1500,
+            440,
+            1536,
+            510
+          ],
+          "observation": "A pale cyan-green wedge lies outside the all-black mask, immediately right of a diagonal embankment/edge line. The same wedge and line are present in the geometry guide, but the mask authorizes no water. Final rendering retains and slightly strengthens that guide motif.",
+          "semanticAssessment": "Real localized water-like remnant in the paper fade; not a blue roof highlight, and not evidence of a new broad interior pool.",
+          "visibility": "Low prominence in the complete native tile; identifiable on a 4x detail view.",
+          "severity": "minor-disclosable-mask-exception",
+          "exactMaskViolation": true,
+          "blocksUnqualifiedMaskPass": true,
+          "broadGeometryDeliveryBlocker": false,
+          "recommendation": "Disclose the retained guide/fade wedge and zero-water mask conflict. It does not by itself justify calling the complete tile a broad geometry failure."
+        }
+      ]
+    },
+    "r08-c03": {
+      "selectedAttempt": 4,
+      "inputs": {
+        "final": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/final/pariisi-1m-r08-c03.png",
+          "sha256": "2dea4409966d9d051120c8adf974be813750bd48d99d9e811f215860c57a3fad"
+        },
+        "raw": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/raw/r08-c03-attempt004-native.png",
+          "sha256": "2dea4409966d9d051120c8adf974be813750bd48d99d9e811f215860c57a3fad"
+        },
+        "geometryGuide": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/ohje-pariisi-1m-r08-c03-v6-geometria.png",
+          "sha256": "85c4c7205b21c1da4ce46201ab9a73259d298d10ff82bef1c7a40c04e979c360"
+        },
+        "waterMask": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/source-v2/vesimaski-pariisi-1m-r08-c03.png",
+          "sha256": "620d558284afd9fc63e7f32f208cf99c61d0e0143b44810da7dc5d56c808d1be"
+        }
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeRawIdentityVerified": true,
+      "waterMaskPixels": 65082,
+      "cyanBeyond5pxMask": 1206,
+      "exactMaskCompliance": false,
+      "broadVisibleDeliveryBlockingGeometryFailure": false,
+      "issues": [
+        {
+          "id": "river-paper-fade-extension",
+          "reviewROI": [
+            100,
+            330,
+            460,
+            550
+          ],
+          "reportedComponents": [
+            {
+              "area": 755,
+              "bbox": [
+                256,
+                410,
+                337,
+                429
+              ]
+            },
+            {
+              "area": 160,
+              "bbox": [
+                163,
+                420,
+                206,
+                438
+              ]
+            },
+            {
+              "area": 119,
+              "bbox": [
+                207,
+                422,
+                256,
+                428
+              ]
+            }
+          ],
+          "observation": "These components lie together at the downstream end of the allowed river where the city fades into cream paper. The guide likewise continues a pale river and embankment through its fade below the binary mask cutoff. The selected final keeps that same direction and river topology; no isolated new pond or diverted channel is visible.",
+          "semanticAssessment": "Small boundary/fade overrun of the existing river, not three separate invented water bodies.",
+          "visibility": "Pale extension is visible in native context but merges smoothly into the required paper fade.",
+          "severity": "minor-disclosable-boundary-exception",
+          "exactMaskViolation": true,
+          "blocksUnqualifiedMaskPass": true,
+          "broadGeometryDeliveryBlocker": false,
+          "recommendation": "Report as river/fade boundary mismatch. Do not interpret the 755 px diagnostic component as a new large water feature."
+        },
+        {
+          "id": "residual-decorative-basin-water",
+          "reviewROI": [
+            610,
+            900,
+            760,
+            1004
+          ],
+          "mutedCoolBBox": [
+            679,
+            935,
+            688,
+            944
+          ],
+          "reportedMutedCoolPixelCount": 35,
+          "strictCyanComponent": {
+            "area": 11,
+            "bbox": [
+              682,
+              936,
+              687,
+              941
+            ]
+          },
+          "observation": "A small enclosed kidney-shaped beige ornament contains a distinct pale blue/cyan lower tip. The guide contains the same decorative water motif, and the mask is black at this location. The final reduces its colour but does not completely turn it into dry beige stone or grass.",
+          "semanticAssessment": "Actual residual decorative water motif. The description gray-green shadow understates the visible shape and colour in the magnified detail.",
+          "visibility": "Extremely small in the full native tile; unambiguous in a 6x detail view. Its semantic defect remains real despite its small area.",
+          "severity": "minor-disclosable-content-exception",
+          "exactMaskViolation": true,
+          "blocksUnqualifiedMaskPass": true,
+          "broadGeometryDeliveryBlocker": false,
+          "recommendation": "Disclose as a tiny undried decorative basin. If a zero-exception mask-compliant final is required, this tile needs a complete new generation; no local retouch is recommended or performed. This review does not authorize acceptance or initiate a retry."
+        }
+      ]
+    }
+  },
+  "mutations": {
+    "generatedImages": 0,
+    "modifiedImages": 0,
+    "workerModified": false,
+    "onlyWrittenPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-loput88-20261101/era5/qa/independent-edge-review.json"
+  },
+  "productionActive": false,
+  "safeEnded": true
+}
