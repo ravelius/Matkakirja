@@ -2789,3 +2789,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   veranta/räystäskäytävä vai osa salia? → katso valokuvat/Palatsimuseon kuvaus) ja sisäänjuoksuovi kujareittiin (avoimet-sijoitus.json-ovet
   ja kujan puoli). Tulos ≤ 3 riviä PT:lle → kuittaus → mallinnus. Codexin piirroksiin EI omia muutoksia; korjauspyynnöt postilaatikkoon
   (worktree tools/uusi-worktree.sh lavastaja <aihe> origin/claude/postilaatikko, push HEAD:claude/postilaatikko).
+
+## LISÄYS 215 (2.11. 00.0x): ENSIMMÄISEKSI – JUNAN 217 MALLIVIAT KK:N BUGILISTASTA (ESTÄÄ TF 217:N) — ALOITA TÄSTÄ (ennen 214 ja 213)
+- PT: /Users/Shared/Claude/proto-3d/lokit/bugit-juoksu-217-20261102/RAPORTTI.md, malliviat (aikaleimat videosta):
+  5 räystään katto puuttuu (1.42) · 6 kattolevy leijuu (2.19) · 7 kattogeometria sekaisin (1.56, 2.02) · 8 valkoinen portaikko/luiska ilman
+  askelmia (1.54–1.57) · 9 siniset raidat portaissa · 11 lattian sauma aukiolla · 14 valopisteet muurin ja sokkelin saumassa · 15 varjot ilman
+  heittäjää (epävarma). Lisäksi seinäpala 0.41 (PK paikantaa).
+- Tapa: paikanna `ui juoksupeli mika x y` (mikä malli/materiaali pelin kohdassa), korjaa lähteessä → uusi paketti → SHA NS:lle runkoon 217
+  + rivi PT:lle. Pohjat: rakennukset-v92, tausta-v91, muurikate-v37, kaiteeton-v3 (c2-v31), leivonta-v4 (U = leivonta-216/uusinta).
+- Ei aloitettu tässä sessiossa (konteksti 27 %, luovutettu heti).
