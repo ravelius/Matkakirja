@@ -2616,3 +2616,25 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 - Sama paikka myös: leivonta v4:n U/leivonta-v4/kielletty-tausta-v90/kk-tausta-2-0-lod0.glb (v4-paketti saa sen) ja lähde
   U/tausta-v89-lahde/kk-tausta-2-0-lod0.glb (tulevat leivonnat); alkuperäiset U/varmuus-ramppi/.
 - AVOIN: tile 1-0:n puolella x −3…0, z −351…−353 pieni harjanne (y 0) yläreunassa, ei PK:n osumissa.
+
+## LISÄYS 195 (1.11. 07.1x): TAUSTA-V89F – PORTIN EDUSTA JA TUNNELI YHDEKSI TASOKSI (PT 07.0x, v89e ei riittänyt) — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- SYY: Meridiaaniportin lattia_y = 0, mutta taustan V4_lattia oli sen edessä ja tunnelissa maaston painaumassa (0 → −0,77), limittäisiä
+  kerroksia (piilokerros jäi kärkisiirrossa samaan tasoon) → v89e:n jälkeenkin vinoja kolmioita (PK m-loppu-v89e-lattia.png).
+- KORJAUS: uusi T/lattia_alue_tasoon.py (Blender): -- <sis> <ulos> X0 X1 Z0 Z1 TAYTTO_X0 TAYTTO_X1 [TASO]: V4_lattia bisect alueen rajoilla,
+  alueen lattiakasvot (ylös, y −0,9…0,2) pois, täyttö 2 m ruudukko tasolle. Alue x −80…80, z −397…−350; 1-0 täyttää x −80…0, 2-0 x 0…80.
+  Lähteet U/tausta-v89f/lahde/. Tarkistus (scratchpadin kartta2.py, poistuu): alueella 0 reikää, 0 poikkeamaa tasosta, ei uusia päällekkäisyyksiä.
+  T/tasoita_ramppi.py sai env-parametrit RAMPPI_X0/X1/Z0/Z1/A/K/KYNNYS (lod1/2: A=K=0).
+- TAUSTA-V89F (U/tausta-v89f.zsh, loki ajo-tausta-v89f.log): v89d + 1-0/2-0 lod0 leivottu v89d:n asetuksin (polvi 0,65/0,3), lod1/2 tasoon 0:
+  _valmiit/juoksupeli-kk-lavastaja-tausta-v89f-vienti-20261101, SHA256SUMS 7d5f71b1b85a, korvaa v89e:n → PT → JU → PK "kielletty-tausta-v89f/".
+  Portin edustan lattiavalo nolla 0 %, med 0,59–0,67.
+- Sama leivottuna v4:n asetuksin U/leivonta-v4/kielletty-tausta-v90/:een (1-0, 2-0 lod0–2) ja lähde U/tausta-v89-lahde/ päivitetty;
+  alkuperäiset U/varmuus-ramppi/. lod1/2: limittäiset kerrokset samassa tasossa → mahdollinen kaukovälkyntä (ei tarkistettu).
+
+## LISÄYS 196 (1.11. 07.2x): LUOVUTUS (konteksti 27 %) — ALOITA TÄSTÄ
+- KÄYNNISSÄ ennallaan (LISÄYS 192): leivonta v4 rakennukset (07.15 t-katos-21), vahti U/jatka-v4-kaiteeton.zsh (pid 46916) → kaiteeton-v6.
+  Uusi seuranta: pgrep -fl jatka-v4; lokit U/ajo-leivonta-v4.log, U/ajo-kaiteeton-v6.log. KUN VALMIS: kuten LISÄYS 192 (ovisolmut ovi_V/ovi_O,
+  LIMA-mittari) → SHA-rivit PT:lle. v4-paketin taustassa on jo v89f-korjaus (1-0, 2-0); muurikatteeksi PK käyttää v36:ta (LISÄYS 193).
+- ODOTTAA PT:tä: tausta-v89f (7d5f71b1b85a). Muurikate-v36 kuitattu (PT 06.4x).
+- AVOIN: (1) rakennukset-v92 = v91 + edusta-v3 (LISÄYS 192). (2) V4_marmorikaide x −120…−88 mahdollisesti nurinpäin (LISÄYS 193).
+- Levy 76 Gi (raja 70).
