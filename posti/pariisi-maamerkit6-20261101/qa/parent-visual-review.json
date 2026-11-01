@@ -1,0 +1,18 @@
+{
+  "reviewedAt": "2026-11-01T02:40:02.082429+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "reviewedImages": 6,
+  "outcome": "six-native-RGBA-landmark-caricatures-reviewed-ready-for-receiver",
+  "nativeRawIdentityVerified": true,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "limitations": [
+    "Kaikki kuusi valittua kuvaa tarkistettu kokonaisina valkoiselle taustalle tehdyistä QA-komposiiteista. Toimitettavat PNG:t pysyvät alkuperäisinä RGBA-tavuina.",
+    "Rakennukset ovat ohjeen mukaisia liioiteltuja karikatyyrejä; arkkitehtuurin pienet koriste- ja veistosdetaljit ovat tulkintoja. Orsayn kaksi kelloa ja lasiholvi, Grand Palais’n kupoli, Moulin Rougen ruskea mylly, Concorden kaksi kuivaa suihkulähdettä sekä yksi Pont Alexandre -pylväs ovat mukana.",
+    "Näkyvän alfan (A>8) pienin marginaali on pylvään yläreunassa noin3,71%; Orsayn oikea reuna noin3,91%. Muut vähintään4,7%. Osa ylä-/alareunoista on väljempiä kuin4%; kohteita ei rajata koodilla.",
+    "Moulin Rouge ja Pont Alexandre: natiivin alfan enimmäisarvo254; hyvin himmeitä A1–8-pikseleitä on säilytetty. Valkoisessa komposiitissa ei näy häiritsevää taustaa tai haloa.",
+    "Katselukulma on yläviisto ja julkisivu sekä katot näkyvät. Lopullinen karttakohtainen suunta, skaalaus ja sijoitus varmistetaan vastaanottajan sommittelussa; natiiveja ei geometrisesti käännetty."
+  ]
+}

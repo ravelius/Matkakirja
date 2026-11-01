@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-01T02:38:53.705434+00:00",
+  "worker": "/root/sky8192_row_b",
+  "status": "production-complete-awaiting-parent-aggregate-qa",
+  "generationCalls": 16,
+  "selectedCount": 6,
+  "allNativeByteIdentical": true,
+  "allRGBAWithGenuineAlpha": true,
+  "minimumVisibleMarginPercent": 3.711,
+  "fullGenerationsOnly": true,
+  "selectedAssetsPostprocessed": false,
+  "qaCompositesAreNotDeliverableAssets": true,
+  "sourceOrdersReadInFull": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/source/order.md",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/source/previous-sprite-order.md"
+  ],
+  "styleSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-G-ilman-punaisia-korostuksia.png",
+  "historyPreserved": true,
+  "assets": [
+    {
+      "id": "orsay",
+      "selectedAttempt": 3,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/final/maamerkki-orsay.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-orsay-attempt003-native.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-be8eb2bc-1e9c-47a4-ac97-4f9e2bda29a3.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/prompts/maamerkki-orsay-attempt003.txt",
+      "sha256": "70b06fb5ec2d2d8f25aed3631b8dc489be413880dfb6d01a32ac9ab96e784a14",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "byteIdenticalToNativeSource": true,
+      "alphaQA": {
+        "extrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 1071150,
+        "opaquePixels": 209,
+        "nearOpaquePixels": 460187,
+        "totalPixels": 1572516,
+        "bbox": [
+          0,
+          19,
+          1234,
+          1254
+        ],
+        "bboxAbove8": [
+          89,
+          239,
+          1205,
+          1072
+        ],
+        "bboxAbove127": [
+          90,
+          241,
+          1204,
+          1071
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visibleMarginsPixelsLeftTopRightBottom": [
+          89,
+          239,
+          49,
+          182
+        ],
+        "visibleMarginsPercentLeftTopRightBottom": [
+          7.097,
+          19.059,
+          3.907,
+          14.514
+        ],
+        "bboxThresholdExplanation": "Alpha >8 used for visible silhouette; alpha >0 bounds also preserved. Very faint native alpha noise is not removed."
+      },
+      "visualQA": "PASS: Complete tall twin-clock station with blue-grey end pavilion crowns and long glass vault. Fine ink, warm stone, flared high pavilions; no red, environment or clipping. White-matte QA confirms no visible fringe. Genuine alpha. Visible margins L7.10%, T19.06%, R3.91%, B14.51%; generous square canvas retained natively.",
+      "whiteMatteQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/qa/orsay-attempt003-white.png",
+      "limitations": [
+        "Illustrated architectural caricature matching approved G; facade details are not an architectural survey.",
+        "Native raster and alpha preserved without resizing, padding, recolouring, sharpening, retouching or alpha cleanup.",
+        "Some native alpha values 1-8 exist outside visible silhouette; these are retained and appear clean in white-matte visual QA.",
+        "Approximate 4% margin: minimum visible margin is 3.907%; no object edge is cropped.",
+        "Parent aggregate review, package/mailbox delivery, receiver/owner acceptance, runtime integration and release remain separate."
+      ],
+      "attemptCount": 3
+    },
+    {
+      "id": "grand-palais",
+      "selectedAttempt": 3,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/final/maamerkki-grand-palais.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-grand-palais-attempt003-native.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-eabe527e-87e1-4dc9-9924-17905a8cc1da.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/prompts/maamerkki-grand-palais-attempt003.txt",
+      "sha256": "5af7c100da16833e764172a6e7c2015fcf98d72c8f8eedd92efd9c7885f0eec7",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "byteIdenticalToNativeSource": true,
+      "alphaQA": {
+        "extrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 958610,
+        "opaquePixels": 464,
+        "nearOpaquePixels": 575468,
+        "totalPixels": 1572516,
+        "bbox": [
+          0,
+          25,
+          1226,
+          1254
+        ],
+        "bboxAbove8": [
+          122,
+          187,
+          1165,
+          1071
+        ],
+        "bboxAbove127": [
+          123,
+          188,
+          1164,
+          1070
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visibleMarginsPixelsLeftTopRightBottom": [
+          122,
+          187,
+          89,
+          183
+        ],
+        "visibleMarginsPercentLeftTopRightBottom": [
+          9.729,
+          14.912,
+          7.097,
+          14.593
+        ],
+        "bboxThresholdExplanation": "Alpha >8 used for visible silhouette; alpha >0 bounds also preserved. Very faint native alpha noise is not removed."
+      },
+      "visualQA": "PASS: Enormous iron/glass barrel vaults and central cupola, tall cream colonnaded base, roof-corner quadriga groups. Strongly enlarged upper glass volume and fine ink. No background, neighbouring scene, red or clipping. White-matte composite reviewed. Visible margins L9.73%,T14.91%,R7.10%,B14.59%.",
+      "whiteMatteQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/qa/grand-palais-attempt003-white.png",
+      "limitations": [
+        "Illustrated architectural caricature matching approved G; facade details are not an architectural survey.",
+        "Native raster and alpha preserved without resizing, padding, recolouring, sharpening, retouching or alpha cleanup.",
+        "Some native alpha values 1-8 exist outside visible silhouette; these are retained and appear clean in white-matte visual QA.",
+        "Visible margins are at least4%; some sides are deliberately more generous than the nominal4% target.",
+        "Parent aggregate review, package/mailbox delivery, receiver/owner acceptance, runtime integration and release remain separate."
+      ],
+      "attemptCount": 3
+    },
+    {
+      "id": "moulin-rouge",
+      "selectedAttempt": 3,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/final/maamerkki-moulin-rouge.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-moulin-rouge-attempt003-native.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-a287af0e-5377-4328-b556-5ff992d79317.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/prompts/maamerkki-moulin-rouge-attempt003.txt",
+      "sha256": "516bc55dd4a7b816d204fb35f2a7280a1334e8a9785a4742af6217698a1bc86f",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "byteIdenticalToNativeSource": true,
+      "alphaQA": {
+        "extrema": [
+          0,
+          254
+        ],
+        "transparentPixels": 1000732,
+        "opaquePixels": 0,
+        "nearOpaquePixels": 443954,
+        "totalPixels": 1572864,
+        "bbox": [
+          0,
+          17,
+          1014,
+          1536
+        ],
+        "bboxAbove8": [
+          147,
+          133,
+          876,
+          1389
+        ],
+        "bboxAbove127": [
+          148,
+          134,
+          875,
+          1388
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "visibleMarginsPixelsLeftTopRightBottom": [
+          147,
+          133,
+          148,
+          147
+        ],
+        "visibleMarginsPercentLeftTopRightBottom": [
+          14.355,
+          8.659,
+          14.453,
+          9.57
+        ],
+        "bboxThresholdExplanation": "Alpha >8 used for visible silhouette; alpha >0 bounds also preserved. Very faint native alpha noise is not removed."
+      },
+      "visualQA": "PASS: Complete four open lattice sails, exaggerated tall ochre windmill and compact cream/slate cabaret facade. All sail gaps have true alpha; no red, labels, ground or surroundings. White-matte composite shows no glow. Native alpha max254 retained. Visible margins L14.36%,T8.66%,R14.45%,B9.57%.",
+      "whiteMatteQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/qa/moulin-rouge-attempt003-white.png",
+      "limitations": [
+        "Illustrated architectural caricature matching approved G; facade details are not an architectural survey.",
+        "Native raster and alpha preserved without resizing, padding, recolouring, sharpening, retouching or alpha cleanup.",
+        "Some native alpha values 1-8 exist outside visible silhouette; these are retained and appear clean in white-matte visual QA.",
+        "Native alpha max254; near-opaque body is 254/255. It was not normalized or edited.",
+        "Visible margins are at least4%; some sides are deliberately more generous than the nominal4% target.",
+        "Parent aggregate review, package/mailbox delivery, receiver/owner acceptance, runtime integration and release remain separate."
+      ],
+      "attemptCount": 3
+    },
+    {
+      "id": "concorde",
+      "selectedAttempt": 2,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/final/maamerkki-concorde.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-concorde-attempt002-native.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-6aa149a6-4bbd-4659-934b-55fd393f061e.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/prompts/maamerkki-concorde-attempt002.txt",
+      "sha256": "f859b12d072c6d7764266891cb1873e587a7448b576f9a24237cba4ec920554a",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "byteIdenticalToNativeSource": true,
+      "alphaQA": {
+        "extrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 1210345,
+        "opaquePixels": 822,
+        "nearOpaquePixels": 292645,
+        "totalPixels": 1572516,
+        "bbox": [
+          25,
+          19,
+          1240,
+          1254
+        ],
+        "bboxAbove8": [
+          80,
+          72,
+          1175,
+          1179
+        ],
+        "bboxAbove127": [
+          81,
+          72,
+          1174,
+          1178
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visibleMarginsPixelsLeftTopRightBottom": [
+          80,
+          72,
+          79,
+          75
+        ],
+        "visibleMarginsPercentLeftTopRightBottom": [
+          6.38,
+          5.742,
+          6.3,
+          5.981
+        ],
+        "bboxThresholdExplanation": "Alpha >8 used for visible silhouette; alpha >0 bounds also preserved. Very faint native alpha noise is not removed."
+      },
+      "visualQA": "PASS: Tall hieroglyph obelisk with golden cap centred between exactly two dry sculptural fountain structures, independent bases and transparent gaps. Fine ink, restrained stone/verdigris/gold, no red, ground, water or scene. Complete silhouettes. White-matte composite reviewed. Visible margins L6.38%,T5.74%,R6.30%,B5.98%.",
+      "whiteMatteQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/qa/concorde-attempt002-white.png",
+      "limitations": [
+        "Illustrated architectural caricature matching approved G; facade details are not an architectural survey.",
+        "Native raster and alpha preserved without resizing, padding, recolouring, sharpening, retouching or alpha cleanup.",
+        "Some native alpha values 1-8 exist outside visible silhouette; these are retained and appear clean in white-matte visual QA.",
+        "Visible margins are at least4%; some sides are deliberately more generous than the nominal4% target.",
+        "Parent aggregate review, package/mailbox delivery, receiver/owner acceptance, runtime integration and release remain separate."
+      ],
+      "attemptCount": 2
+    },
+    {
+      "id": "luxembourg",
+      "selectedAttempt": 3,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/final/maamerkki-luxembourg.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-luxembourg-attempt003-native.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-c1a81940-f496-4ecf-8680-aa320910102e.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/prompts/maamerkki-luxembourg-attempt003.txt",
+      "sha256": "4b0d7ba22bad4f104263c378c1a0a3ab80035827086b5647e2a79093805d014b",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "byteIdenticalToNativeSource": true,
+      "alphaQA": {
+        "extrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 1057204,
+        "opaquePixels": 909,
+        "nearOpaquePixels": 478148,
+        "totalPixels": 1572516,
+        "bbox": [
+          0,
+          31,
+          1206,
+          1206
+        ],
+        "bboxAbove8": [
+          67,
+          293,
+          1195,
+          1006
+        ],
+        "bboxAbove127": [
+          67,
+          294,
+          1195,
+          1005
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visibleMarginsPixelsLeftTopRightBottom": [
+          67,
+          293,
+          59,
+          248
+        ],
+        "visibleMarginsPercentLeftTopRightBottom": [
+          5.343,
+          23.365,
+          4.705,
+          19.777
+        ],
+        "bboxThresholdExplanation": "Alpha >8 used for visible silhouette; alpha >0 bounds also preserved. Very faint native alpha noise is not removed."
+      },
+      "visualQA": "PASS: Complete symmetric palace, tall outward-flared domed side pavilions, central crown, warm cream stone and slate roofs. No flags/red, gardens, ground or surrounding objects. White-matte QA confirms clean silhouette. Genuine alpha. Visible margins L5.34%, T23.37%, R4.70%, B19.78%; generous square canvas retained natively.",
+      "whiteMatteQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/qa/luxembourg-attempt003-white.png",
+      "limitations": [
+        "Illustrated architectural caricature matching approved G; facade details are not an architectural survey.",
+        "Native raster and alpha preserved without resizing, padding, recolouring, sharpening, retouching or alpha cleanup.",
+        "Some native alpha values 1-8 exist outside visible silhouette; these are retained and appear clean in white-matte visual QA.",
+        "Visible margins are at least4%; some sides are deliberately more generous than the nominal4% target.",
+        "Parent aggregate review, package/mailbox delivery, receiver/owner acceptance, runtime integration and release remain separate."
+      ],
+      "attemptCount": 3
+    },
+    {
+      "id": "pont-alexandre-pylvas",
+      "selectedAttempt": 2,
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/final/maamerkki-pont-alexandre-pylvas.png",
+      "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-pont-alexandre-pylvas-attempt002-native.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b2-8231-74c3-97f5-324a7b3f7f98/exec-925e4216-e980-48f4-bfac-d909188c9ad8.png",
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/prompts/maamerkki-pont-alexandre-pylvas-attempt002.txt",
+      "sha256": "4d8175e94e366036ec18a2f874cebf839f53dff19bd7c5b870dd869f79e76c1d",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "byteIdenticalToNativeSource": true,
+      "alphaQA": {
+        "extrema": [
+          0,
+          254
+        ],
+        "transparentPixels": 1204516,
+        "opaquePixels": 0,
+        "nearOpaquePixels": 319094,
+        "totalPixels": 1572864,
+        "bbox": [
+          0,
+          44,
+          992,
+          1512
+        ],
+        "bboxAbove8": [
+          315,
+          57,
+          799,
+          1414
+        ],
+        "bboxAbove127": [
+          316,
+          58,
+          798,
+          1413
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visibleMarginsPixelsLeftTopRightBottom": [
+          315,
+          57,
+          225,
+          122
+        ],
+        "visibleMarginsPercentLeftTopRightBottom": [
+          30.762,
+          3.711,
+          21.973,
+          7.943
+        ],
+        "bboxThresholdExplanation": "Alpha >8 used for visible silhouette; alpha >0 bounds also preserved. Very faint native alpha noise is not removed."
+      },
+      "visualQA": "PASS: Exactly one tall stone pylon with strongly flared ornate capital and a golden winged horse/figure group. Entire wings, laurel and compact own base intact. No bridge, surrounding water, ground or red. White-matte composite shows clean actual alpha, no visible glow. Native alpha max254 retained. Visible margins L30.76%,T3.71%,R21.97%,B7.94%.",
+      "whiteMatteQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/qa/pont-alexandre-pylvas-attempt002-white.png",
+      "limitations": [
+        "Illustrated architectural caricature matching approved G; facade details are not an architectural survey.",
+        "Native raster and alpha preserved without resizing, padding, recolouring, sharpening, retouching or alpha cleanup.",
+        "Some native alpha values 1-8 exist outside visible silhouette; these are retained and appear clean in white-matte visual QA.",
+        "Native alpha max254; near-opaque body is 254/255. It was not normalized or edited.",
+        "Approximate 4% margin: minimum visible margin is 3.711%; no object edge is cropped.",
+        "Parent aggregate review, package/mailbox delivery, receiver/owner acceptance, runtime integration and release remain separate."
+      ],
+      "attemptCount": 2
+    }
+  ],
+  "deliveryStatus": "parent-owned-not-performed-by-worker",
+  "ownerAcceptance": "not-claimed",
+  "runtimeIntegration": "not-claimed",
+  "release": "not-claimed"
+}

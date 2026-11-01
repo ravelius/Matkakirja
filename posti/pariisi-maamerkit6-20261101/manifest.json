@@ -1,0 +1,298 @@
+{
+  "sourceCommit": "7bfc239161d8e5545197cedf71ca3bb27dcc3c74",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-maamerkit6-20261101.md",
+  "assets": [
+    {
+      "taskNumber": 1537,
+      "id": "orsay",
+      "file": "maamerkki-orsay.png",
+      "anchorLatLon": [
+        48.860126,
+        2.326821
+      ],
+      "atlasPixel": [
+        7722,
+        4250
+      ],
+      "atlasTile": "r05-c06",
+      "targetBaseWidthPx": 390,
+      "status": "authorized-queued-after-era4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1496118,
+      "sha256": "70b06fb5ec2d2d8f25aed3631b8dc489be413880dfb6d01a32ac9ab96e784a14",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-orsay-attempt003-native.png",
+      "identicalToRaw": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6811695397693887,
+      "alphaBBoxGt8": [
+        89,
+        239,
+        1205,
+        1072
+      ],
+      "alphaMarginsFractionsLTRB": [
+        0.07097288676236045,
+        0.19059011164274323,
+        0.03907496012759171,
+        0.14513556618819776
+      ],
+      "suggestedBottomCentreAnchorPx": [
+        647.0,
+        1072
+      ],
+      "alphaTouchesImageEdge": false
+    },
+    {
+      "taskNumber": 1538,
+      "id": "grand-palais",
+      "file": "maamerkki-grand-palais.png",
+      "anchorLatLon": [
+        48.866195,
+        2.31264
+      ],
+      "atlasPixel": [
+        6683,
+        3680
+      ],
+      "atlasTile": "r05-c05",
+      "targetBaseWidthPx": 360,
+      "status": "authorized-queued-after-era4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1957592,
+      "sha256": "5af7c100da16833e764172a6e7c2015fcf98d72c8f8eedd92efd9c7885f0eec7",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-grand-palais-attempt003-native.png",
+      "identicalToRaw": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6096027003858784,
+      "alphaBBoxGt8": [
+        122,
+        187,
+        1165,
+        1071
+      ],
+      "alphaMarginsFractionsLTRB": [
+        0.09728867623604466,
+        0.14912280701754385,
+        0.07097288676236045,
+        0.145933014354067
+      ],
+      "suggestedBottomCentreAnchorPx": [
+        643.5,
+        1071
+      ],
+      "alphaTouchesImageEdge": false
+    },
+    {
+      "taskNumber": 1539,
+      "id": "moulin-rouge",
+      "file": "maamerkki-moulin-rouge.png",
+      "anchorLatLon": [
+        48.884167,
+        2.332222
+      ],
+      "atlasPixel": [
+        8117,
+        1991
+      ],
+      "atlasTile": "r03-c06",
+      "targetBaseWidthPx": 150,
+      "status": "authorized-queued-after-era4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "bytes": 2338382,
+      "sha256": "516bc55dd4a7b816d204fb35f2a7280a1334e8a9785a4742af6217698a1bc86f",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-moulin-rouge-attempt003-native.png",
+      "identicalToRaw": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.6362482706705729,
+      "alphaBBoxGt8": [
+        147,
+        133,
+        876,
+        1389
+      ],
+      "alphaMarginsFractionsLTRB": [
+        0.1435546875,
+        0.08658854166666667,
+        0.14453125,
+        0.095703125
+      ],
+      "suggestedBottomCentreAnchorPx": [
+        511.5,
+        1389
+      ],
+      "alphaTouchesImageEdge": false
+    },
+    {
+      "taskNumber": 1540,
+      "id": "concorde",
+      "file": "maamerkki-concorde.png",
+      "anchorLatLon": [
+        48.865481,
+        2.321128
+      ],
+      "atlasPixel": [
+        7305,
+        3747
+      ],
+      "atlasTile": "r05-c06",
+      "targetBaseWidthPx": 140,
+      "status": "authorized-queued-after-era4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1074119,
+      "sha256": "f859b12d072c6d7764266891cb1873e587a7448b576f9a24237cba4ec920554a",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-concorde-attempt002-native.png",
+      "identicalToRaw": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.7696869221044492,
+      "alphaBBoxGt8": [
+        80,
+        72,
+        1175,
+        1179
+      ],
+      "alphaMarginsFractionsLTRB": [
+        0.06379585326953748,
+        0.05741626794258373,
+        0.06299840510366826,
+        0.05980861244019139
+      ],
+      "suggestedBottomCentreAnchorPx": [
+        627.5,
+        1179
+      ],
+      "alphaTouchesImageEdge": false
+    },
+    {
+      "taskNumber": 1541,
+      "id": "luxembourg",
+      "file": "maamerkki-luxembourg.png",
+      "anchorLatLon": [
+        48.848979,
+        2.337287
+      ],
+      "atlasPixel": [
+        8488,
+        5298
+      ],
+      "atlasTile": "r06-c06",
+      "targetBaseWidthPx": 290,
+      "status": "authorized-queued-after-era4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1455983,
+      "sha256": "4b0d7ba22bad4f104263c378c1a0a3ab80035827086b5647e2a79093805d014b",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-luxembourg-attempt003-native.png",
+      "identicalToRaw": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6723009495610855,
+      "alphaBBoxGt8": [
+        67,
+        293,
+        1195,
+        1006
+      ],
+      "alphaMarginsFractionsLTRB": [
+        0.05342902711323764,
+        0.23365231259968103,
+        0.04704944178628389,
+        0.19776714513556617
+      ],
+      "suggestedBottomCentreAnchorPx": [
+        631.0,
+        1006
+      ],
+      "alphaTouchesImageEdge": false
+    },
+    {
+      "taskNumber": 1542,
+      "id": "pont-alexandre-pylvas",
+      "file": "maamerkki-pont-alexandre-pylvas.png",
+      "anchorLatLon": [
+        48.863608,
+        2.313623
+      ],
+      "atlasPixel": [
+        6755,
+        3923
+      ],
+      "atlasTile": "r05-c05",
+      "targetBaseWidthPx": null,
+      "targetHeightPx": 60,
+      "status": "authorized-queued-after-era4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "bytes": 1821046,
+      "sha256": "4d8175e94e366036ec18a2f874cebf839f53dff19bd7c5b870dd869f79e76c1d",
+      "nativeRaw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-maamerkit6-20261101/raw/maamerkki-pont-alexandre-pylvas-attempt002-native.png",
+      "identicalToRaw": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.7658106486002604,
+      "alphaBBoxGt8": [
+        315,
+        57,
+        799,
+        1414
+      ],
+      "alphaMarginsFractionsLTRB": [
+        0.3076171875,
+        0.037109375,
+        0.2197265625,
+        0.07942708333333333
+      ],
+      "suggestedBottomCentreAnchorPx": [
+        557.0,
+        1414
+      ],
+      "alphaTouchesImageEdge": false
+    }
+  ],
+  "generationCalls": 16,
+  "nativeByteIdentityVerified": true,
+  "upscaled": false,
+  "retouched": false,
+  "transparentBackground": true,
+  "artworkQA": "six-native-RGBA-landmark-caricatures-reviewed-ready-for-receiver",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
