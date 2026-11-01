@@ -2667,3 +2667,7 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   tasainen, ei päällekkäisiä pintoja eikä UV-jakoa; muut paketit eivät tuo pintaa eteen. Kuviot = tunnelien holvi/katot nähtynä julkisivun läpi
   (V4_red doubleSided) → PK:n tarkistettava pelin puoli. Todisteet ja skriptit: U/meridiaani-kaari/ (havainnot.md, renderöinnit). Ei uutta pakettia.
 - Ei ajoja käynnissä 14.4x.
+
+## LISÄYS 200 (1.11. 15.2x): JONOON – KUJAKIVIEN LATTIAKUVA (PK, PT: ei nyt)
+- AVOIN (jono, ei aloitettu): kujakivien lattiatekstuurissa ruskea marmorisuonitus; havainteessa tasaisempi harmaa kivi ja kivikohtainen
+  sävyvaihtelu. Kuva proto-3d/lokit/havainne-editori-20261101-152108/kivi-lahikuva-02.jpg (havainne | ennen | jälkeen PK:n sävykorjauksen a1de2563d).
