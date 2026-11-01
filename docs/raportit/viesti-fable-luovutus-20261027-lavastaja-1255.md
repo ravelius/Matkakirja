@@ -2658,3 +2658,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   Jalustalaatat ennallaan (sivu ~85 % = laattojen kyljet toisiaan vasten).
 - AVOIN: (1) rakennukset-v92 = v91 + edusta-v3. (2) marmorikaiteen jäljelle jäävä nolla ~30 % (syy tarkistamatta: varjo vai saarekkeet).
   (3) taihedian/taihemen sivu-nolla 13 %: erottele pylväsviistot, jos PT haluaa.
+
+## LISÄYS 199 (1.11. 14.4x): MERIDIAANIPORTIN KUULTAVA KAARI + PYSYVÄ TYÖTAPA: PITKÄT AJOT MONITORILLA — ALOITA TÄSTÄ
+- PYSYVÄ TYÖTAPA (PT 14.4x, luvattu omistajalle): jokainen pitkä Blender-/Unity-ajo (leivonnat, paketit) seurataan Monitor-työkalulla, joka
+  tulostaa rivin sekä valmistumisesta että kuolemasta (prosessi poissa ilman VALMIS-riviä, tai Error/Traceback/Killed lokissa). Kuollut ajo →
+  käynnistä heti uudelleen (skriptit jatkavat valmiit/-merkeistä) ja yksi rivi PT:lle. Ei pelkkää taustasilmukkaa ilman kuolemantunnistusta.
+- KUULTAVA KAARI (PT 13.3x, PK:n tallenne 20261101-131815-arkki-portti.jpg): v91-mallissa ja leivonnassa EI vikaa – julkisivu umpinainen, valo
+  tasainen, ei päällekkäisiä pintoja eikä UV-jakoa; muut paketit eivät tuo pintaa eteen. Kuviot = tunnelien holvi/katot nähtynä julkisivun läpi
+  (V4_red doubleSided) → PK:n tarkistettava pelin puoli. Todisteet ja skriptit: U/meridiaani-kaari/ (havainnot.md, renderöinnit). Ei uutta pakettia.
+- Ei ajoja käynnissä 14.4x.
