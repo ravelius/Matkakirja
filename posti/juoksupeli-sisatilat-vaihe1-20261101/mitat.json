@@ -1,0 +1,1471 @@
+{
+  "schemaVersion": 1,
+  "units": "metres",
+  "coordinateSystem": "Palatsin pohjoinen +y, ita+x, korkeus+z; SWulkokulma(0,0),lattia0;ei piirroskiertoa",
+  "sourceOrderCommit": "658a9f6edd8bbb2bbd7e21aacd4950e0fe2b489d",
+  "mainPlanCommit": "c9665438c66a1cfcca930c6eb67f9b8d00a5a4a6",
+  "status": "metric-review-draft-with-explicit-estimates",
+  "notSurveyCertification": true,
+  "sources": {
+    "O1": {
+      "name": "Tilauksen OSM-ulkomitat ja pohjoissuunta",
+      "path": "posti/lavastaja-codex-sisatilat-vaihe1-piirrokset-20261101.md",
+      "commit": "658a9f6edd8bbb2bbd7e21aacd4950e0fe2b489d"
+    },
+    "OSM-Y": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/40606461/full.json",
+      "version": 9,
+      "license": "ODbL 1.0",
+      "use": "mitat; ei karttakuvaa"
+    },
+    "OSM-C": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/40631826/full.json",
+      "version": 5,
+      "license": "ODbL 1.0",
+      "use": "mitat; ei karttakuvaa"
+    },
+    "D1": {
+      "url": "https://www.dpm.org.cn/explore/building/236442.html",
+      "name": "Palatsimuseo: Yangxindian",
+      "facts": "Etuhalli 36 x 12 m, kolme rakennejannetta molempiin suuntiin; sali, ita- ja lansikamarit, keskivaltaistuin ja plakaatti; itakamari valtaistuin katsoo lanteen."
+    },
+    "D2": {
+      "url": "https://img.dpm.org.cn/Uploads/File/2023/07/19/u64b75fda11a18.pdf",
+      "name": "Palatsimuseo: lansikamari, 2023, painetut sivut 123–124",
+      "facts": "Lansikamari 10.15 x 11.5 m, etelan jakoseina 5.15 m eturaystaasta; itakaytava 2.14 m."
+    },
+    "D3": {
+      "url": "https://www.dpm.org.cn/classify_detail/257945.html",
+      "name": "Palatsimuseon luento 4.8.2022",
+      "facts": "Sanxitang 2.1 x 6.0 x 2.1 m; etela- ja pohjoisosa, valiseinassa ikkuna, etelan kang."
+    },
+    "D4": {
+      "url": "https://www.dpm.org.cn/Uploads/File/2022/01/14/u61e0e8410e833.pdf",
+      "name": "Palatsimuseon tutkimus 2022, painetut sivut 91–92",
+      "facts": "Pohjoisnuolelliset yleis- ja lansikamaripohjat; etelan ulokkeet ja pohjoisen yhteys; kaytetty huoneiden jarjestyksen, ei tarkkojen absoluuttisten paikkojen lahteena."
+    },
+    "D5": {
+      "url": "https://www.dpm.org.cn/explore/building/236486.html",
+      "name": "Palatsimuseo: Chuxiugong",
+      "facts": "Viisi jannetta, etuveranta, keskusvaltaistuin/viisiosainen sermi; bambu-/magnoliapuu-lasiseinat, viinikoynnos-zhao; lansipaan makuuhuone ja tuulisermi."
+    },
+    "P1": {
+      "file": "养心殿东暖阁.JPG",
+      "author": "Gisling",
+      "url": "https://commons.wikimedia.org/wiki/File:养心殿东暖阁.JPG",
+      "license": "CC BY-SA 3.0",
+      "use": "materiaalit ja kalustetyypit; ei mitallisia kuvasuhteita tai kuvan osia toimituksessa"
+    },
+    "P2": {
+      "file": "Cité interdite les chambres de la suite impériale (2).JPG",
+      "author": "Pierre André Leclercq",
+      "url": "https://commons.wikimedia.org/wiki/File:Cité_interdite_les_chambres_de_la_suite_impériale_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "use": "kang, ikkunat ja huonekalutyypit; ei mitallisia kuvasuhteita tai kuvan osia toimituksessa"
+    },
+    "P3": {
+      "file": "Cité interdite les chambres de la suite impériale (3).JPG",
+      "author": "Pierre André Leclercq",
+      "url": "https://commons.wikimedia.org/wiki/File:Cité_interdite_les_chambres_de_la_suite_impériale_(3).JPG",
+      "license": "CC BY-SA 4.0",
+      "use": "lasiseina ja kalusteet; ei mitallisia kuvasuhteita tai kuvan osia toimituksessa"
+    }
+  },
+  "estimateMethods": {
+    "A-envelope": "Tilauksen suorakaide toimii ulkokehyksena. OSM-polygonin pienet vinoudet suoristettu. Chuxiugongin seinapaksuus0.30m; Yangxindianin paatyt0.75m ja etela/pohjoinen0.25m ovat sovituksen rakennusteknisia arvioita, eivat OSM-mittoja.",
+    "A-Y-body": "DPM12m etuhalli asetettu ehdotuksena y=3.6..15.6. Erotus15.6-12=3.6m jaettu etelaan piirrosluonnoksen verandakaistaksi. DPM-pohjissa on etelan ulokkeita, mutta OSM-rajan ja niiden suhde ei ole varmennettu. EI todistettu tayden leveyden veranda; katselmuksessa ratkaistava.",
+    "A-Y-columns": "Kolme jannetta D1. Pylvaslinjat x=.5,11.6,24.2,35.5 ovat D4-pohjan kolmen salialueen suhteita mukaileva sovitus35m akselileveydelle; yksittaiset11.1/12.6/11.3m eivat museon mittalukuja. Y-jako hallin11.5m sisasyvyys/3. Pylvaan halkaisija.45m suunnitteluarvio.",
+    "A-Y-partitions": "Lansikamarin lahdemitat10.15x11.5 ja itakaytava2.14m sailytetty; siirto x=.75,y=3.85 on arvio. Etelajako5.15m mitattu lahteen eturaystaslinjasta, jonka samaistus y=3.85 on arvio. Sanxitang2.1x6.0 sijoitus lounaiskulmaan ja muut ovet D4-jarjestyksen perusteella; tarkat koordinaatit arvioita.",
+    "A-C-columns": "Viisi jannetta D5; keskijanne6m ja sivujanteet5.2m summasta26.8m. Sisaisetlinjat5.2,10.4,16.4,21.6m. Paadyn pylvaat.4m sisaan, joten pylvasakselijanteet ovat4.8,5.2,6,5.2,4.8. Syvyysakselit2.3,5.8,9.3,12.8m ovat suunnittelujako3x3.5m; veranda2.0m arvio.",
+    "A-C-partitions": "D5 huonejarjestys sovitettu arvioitujen viiden janteen rajoille; lasiseinien ja zhao-seinan paikat ja aukot ovat paikkahypoteesi. Etuveranta2m ja seinapaksuus.3m ovat arvioita.",
+    "A-openings": "Aukon paikka ja koko johdettu ehdotetusta huonejaosta ja kulkukelpoisuudesta; ei laser-/valokuvamittaus. Paasisaanjuoksuovi2.4m, sisaiset ovet1.0..1.4m; korkeus2.8m, ikkunan alareuna.9m ja korkeus2.1m suunnitteluarvio. Kynnys.14m, lattialaatta.6m ja ristikkojako.3m havainnollistavia.",
+    "A-height": "Palkin alapinnan korkeudeksi ehdotettu5.4m Yangxindianissa ja5.0m Chuxiugongissa; ei suoraan lahteesta. Sanxitang2.1m poikkeus D3. Palkkimaalauksen/seinavyon korkeus.5m on graafinen arvio; sisakattoa ei piirreta.",
+    "A-furniture": "Kalustetyypit ja osa keskinasesta jarjestyksesta D1–D5/P1–P3. Jokaisen kalusteen jaljempana annettu paikka, jalka, korkeus ja suunta ovat katselmusehdotus: symmetria, huoneeseen sovitus ja vapaa kulku; ei perspektiivikuvasta mitattu. Kalustekaiverrus on oma viitteellinen viivakuvio.",
+    "A-decoration": "Nimilaattojen tekstit D1/D5; niiden mitat ja paikat, kayrojen/maalauksien rajaukset seka koristelun viivarytmi ovat omia kaaviomaisia arvioita. Historiallista kuva-aihetta ei keksita."
+  },
+  "buildings": [
+    {
+      "id": "yangxindian",
+      "title": "YANGXINDIAN  养心殿",
+      "subtitle": "Etuhalli · Mingjian sekä itäinen ja läntinen lämpökamari",
+      "width_m": 36.0,
+      "depth_m": 15.6,
+      "height_m": 5.4,
+      "bodySouth_m": 3.6,
+      "columnDiameter_m": 0.45,
+      "columnX_m": [
+        0.5,
+        11.6,
+        24.2,
+        35.5
+      ],
+      "columnY_m": [
+        3.85,
+        7.683333,
+        11.516667,
+        15.35
+      ],
+      "bayCountSource": "D1",
+      "columnMethod": "A-Y-columns",
+      "source": "D1",
+      "osm": "OSM-Y",
+      "roomLabels": [
+        [
+          5.8,
+          12.9,
+          "Buddhatila [A]",
+          false
+        ],
+        [
+          6.4,
+          6.8,
+          "Qinzheng Qinxian",
+          false
+        ],
+        [
+          1.8,
+          6.3,
+          "Sanxitang",
+          true
+        ],
+        [
+          9.9,
+          6.2,
+          "Käytävä",
+          true
+        ],
+        [
+          17.9,
+          6.2,
+          "MINGJIAN",
+          false
+        ],
+        [
+          29.9,
+          5.4,
+          "ITÄKAMARI",
+          false
+        ]
+      ],
+      "plaque": "中正仁和",
+      "rooms": [
+        {
+          "id": "Y-west",
+          "label": "Länsilämpökamari",
+          "x_m": 0.75,
+          "y_m": 3.85,
+          "width_m": 10.15,
+          "depth_m": 11.5,
+          "dimensionSource": "D2",
+          "positionStatus": "A",
+          "method": "A-Y-partitions",
+          "dimensionReferenceAssumption": "A: lahdemitan lukuarvo sovellettu huoneen vapaaksi kehykseksi; alkuperainen mittausraja (sisapinta/akseli) ei ole varmistettu"
+        },
+        {
+          "id": "Y-sanxi",
+          "label": "Sanxitang",
+          "x_m": 0.75,
+          "y_m": 3.85,
+          "width_m": 2.1,
+          "depth_m": 6.0,
+          "height_m": 2.1,
+          "dimensionSource": "D3",
+          "positionStatus": "A",
+          "method": "A-Y-partitions",
+          "dimensionReferenceAssumption": "A: lahdemitan lukuarvo sovellettu huoneen vapaaksi kehykseksi; alkuperainen mittausraja (sisapinta/akseli) ei ole varmistettu"
+        },
+        {
+          "id": "Y-east-passage",
+          "label": "Länsikamarin itäkäytävä",
+          "x_m": 8.76,
+          "y_m": 3.85,
+          "width_m": 2.14,
+          "depth_m": 5.15,
+          "dimensionSource": "D2",
+          "positionStatus": "A",
+          "method": "A-Y-partitions",
+          "dimensionReferenceAssumption": "A: lahdemitan lukuarvo sovellettu huoneen vapaaksi kehykseksi; alkuperainen mittausraja (sisapinta/akseli) ei ole varmistettu"
+        }
+      ],
+      "partitions": [
+        {
+          "id": "Y-P1",
+          "axis": "x",
+          "position_m": 11.025,
+          "start_m": 3.85,
+          "end_m": 15.35,
+          "kind": "wall",
+          "doors_m": [
+            [
+              7.5,
+              8.9
+            ],
+            [
+              13.8,
+              15.0
+            ]
+          ],
+          "thickness_m": 0.25,
+          "height_m": 5.4,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P2",
+          "axis": "x",
+          "position_m": 24.2,
+          "start_m": 3.85,
+          "end_m": 15.35,
+          "kind": "wall",
+          "doors_m": [
+            [
+              6.6,
+              8.0
+            ],
+            [
+              13.7,
+              15.1
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 5.4,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P3",
+          "axis": "y",
+          "position_m": 9.08,
+          "start_m": 3.01,
+          "end_m": 10.9,
+          "kind": "wood",
+          "doors_m": [
+            [
+              9.2,
+              10.4
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P4",
+          "axis": "x",
+          "position_m": 2.93,
+          "start_m": 3.85,
+          "end_m": 10.01,
+          "kind": "wood",
+          "doors_m": [
+            [
+              8.3,
+              9.3
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P5",
+          "axis": "x",
+          "position_m": 8.68,
+          "start_m": 3.85,
+          "end_m": 9.0,
+          "kind": "glass",
+          "doors_m": [
+            [
+              4.2,
+              5.2
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P6",
+          "axis": "y",
+          "position_m": 6.85,
+          "start_m": 0.75,
+          "end_m": 2.85,
+          "kind": "window",
+          "doors_m": [
+            [
+              1.55,
+              2.3
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P7",
+          "axis": "y",
+          "position_m": 9.9,
+          "start_m": 24.35,
+          "end_m": 35.5,
+          "kind": "zhao",
+          "doors_m": [
+            [
+              27.9,
+              29.3
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        },
+        {
+          "id": "Y-P8",
+          "axis": "y",
+          "position_m": 9.93,
+          "start_m": 0.75,
+          "end_m": 3.01,
+          "kind": "wood",
+          "doors_m": [],
+          "thickness_m": 0.16,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-Y-partitions",
+          "typeSource": "D4"
+        }
+      ],
+      "wallThickness_m": {
+        "west": 0.75,
+        "east": 0.75,
+        "north": 0.25,
+        "south": 0.25,
+        "status": "A",
+        "method": "A-envelope"
+      },
+      "furniture": [
+        {
+          "id": "Y01",
+          "kind": "dais",
+          "x_m": 15.3,
+          "y_m": 10.8,
+          "width_m": 5.4,
+          "depth_m": 3.1,
+          "height_m": 0.45,
+          "facing": "S",
+          "label": "Koroke",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y02",
+          "kind": "screen",
+          "x_m": 15.55,
+          "y_m": 13.35,
+          "width_m": 4.9,
+          "depth_m": 0.26,
+          "height_m": 3.2,
+          "facing": "S",
+          "label": "Sermi",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y03",
+          "kind": "throne",
+          "x_m": 16.8,
+          "y_m": 12.0,
+          "width_m": 2.4,
+          "depth_m": 1.15,
+          "height_m": 1.8,
+          "facing": "S",
+          "label": "Valtaistuin",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.45
+        },
+        {
+          "id": "Y04",
+          "kind": "table",
+          "x_m": 16.4,
+          "y_m": 10.7,
+          "width_m": 3.2,
+          "depth_m": 0.8,
+          "height_m": 0.9,
+          "facing": "S",
+          "label": "Pöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y05",
+          "kind": "vase",
+          "x_m": 14.0,
+          "y_m": 12.0,
+          "width_m": 0.65,
+          "depth_m": 0.65,
+          "height_m": 1.3,
+          "facing": "S",
+          "label": "Maljakko",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y06",
+          "kind": "vase",
+          "x_m": 21.35,
+          "y_m": 12.0,
+          "width_m": 0.65,
+          "depth_m": 0.65,
+          "height_m": 1.3,
+          "facing": "S",
+          "label": "Maljakko",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y07",
+          "kind": "kang",
+          "x_m": 0.85,
+          "y_m": 3.98,
+          "width_m": 1.75,
+          "depth_m": 1.6,
+          "height_m": 0.65,
+          "facing": "S",
+          "label": "Sanxitang-kang",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y08",
+          "kind": "table",
+          "x_m": 3.65,
+          "y_m": 7.1,
+          "width_m": 3.1,
+          "depth_m": 1.1,
+          "height_m": 0.9,
+          "facing": "S",
+          "label": "Työpöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y09",
+          "kind": "chair",
+          "x_m": 4.7,
+          "y_m": 8.25,
+          "width_m": 1.2,
+          "depth_m": 0.55,
+          "height_m": 1.25,
+          "facing": "S",
+          "label": "Istuin",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y10",
+          "kind": "cabinet",
+          "x_m": 0.9,
+          "y_m": 12.2,
+          "width_m": 1.5,
+          "depth_m": 2.5,
+          "height_m": 2.2,
+          "facing": "E",
+          "label": "Kaappi",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y11",
+          "kind": "altar",
+          "x_m": 4.3,
+          "y_m": 12.1,
+          "width_m": 2.9,
+          "depth_m": 1.8,
+          "height_m": 2.4,
+          "facing": "S",
+          "label": "Buddhatilan kaluste",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y12",
+          "kind": "dais",
+          "x_m": 31.3,
+          "y_m": 5.4,
+          "width_m": 3.6,
+          "depth_m": 3.1,
+          "height_m": 0.4,
+          "facing": "W",
+          "label": "Itäkamarin koroke",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y13",
+          "kind": "throne",
+          "x_m": 33.0,
+          "y_m": 6.1,
+          "width_m": 1.4,
+          "depth_m": 1.65,
+          "height_m": 1.8,
+          "facing": "W",
+          "label": "Länteen katsova istuin",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.4
+        },
+        {
+          "id": "Y14",
+          "kind": "screen",
+          "x_m": 34.55,
+          "y_m": 5.6,
+          "width_m": 0.25,
+          "depth_m": 2.8,
+          "height_m": 3.2,
+          "facing": "W",
+          "label": "Itäkamarin sermi",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y15",
+          "kind": "table",
+          "x_m": 31.2,
+          "y_m": 6.2,
+          "width_m": 0.8,
+          "depth_m": 1.5,
+          "height_m": 0.9,
+          "facing": "W",
+          "label": "Pöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y16",
+          "kind": "cabinet",
+          "x_m": 29.7,
+          "y_m": 13.8,
+          "width_m": 4.2,
+          "depth_m": 0.65,
+          "height_m": 2.1,
+          "facing": "S",
+          "label": "Kirjakaapit",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "Y17",
+          "kind": "bench",
+          "x_m": 25.1,
+          "y_m": 11.3,
+          "width_m": 3.5,
+          "depth_m": 1.3,
+          "height_m": 0.6,
+          "facing": "S",
+          "label": "Kang-penkki",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        }
+      ],
+      "mainDoor": {
+        "side": "south",
+        "center_m": 18.0,
+        "width_m": 2.4,
+        "height_m": 2.8,
+        "threshold_m": 0.14,
+        "status": "A",
+        "method": "A-openings",
+        "note": "Pihalta kulku; ulkopuolisen kujan reittiliitos PK:n erillinen ratkaisu. Ei uutta ovireikaa sivuseinaan."
+      },
+      "openings": [
+        {
+          "id": "yangxindian-southwindow0",
+          "side": "south",
+          "position_m": 4.449999999999999,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings"
+        },
+        {
+          "id": "yangxindian-northwindow0",
+          "side": "north",
+          "position_m": 4.449999999999999,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings",
+          "typeSource": "D2"
+        },
+        {
+          "id": "yangxindian-southwindow2",
+          "side": "south",
+          "position_m": 28.25,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings"
+        },
+        {
+          "id": "yangxindian-northwindow2",
+          "side": "north",
+          "position_m": 28.25,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings",
+          "typeSource": "D2"
+        },
+        {
+          "id": "yangxindian-rear-door",
+          "side": "north",
+          "position_m": 17.3,
+          "width_m": 1.4,
+          "height_m": 2.8,
+          "status": "A",
+          "method": "A-openings",
+          "kind": "door"
+        }
+      ],
+      "furnitureMethod": "A-furniture",
+      "decorativeModule_m": {
+        "floorTile": 0.6,
+        "lattice": 0.3,
+        "beamFrieze": 0.5,
+        "source": "A-openings/A-decoration"
+      }
+    },
+    {
+      "id": "chuxiugong",
+      "title": "CHUXIUGONG  储秀宫",
+      "subtitle": "Päähalli · viisi jännettä · puu- ja lasiväliseinät",
+      "width_m": 26.8,
+      "depth_m": 13.2,
+      "height_m": 5.0,
+      "bodySouth_m": 2.0,
+      "columnDiameter_m": 0.4,
+      "columnX_m": [
+        0.4,
+        5.2,
+        10.4,
+        16.4,
+        21.6,
+        26.4
+      ],
+      "columnY_m": [
+        2.3,
+        5.8,
+        9.3,
+        12.8
+      ],
+      "bayCountSource": "D5",
+      "columnMethod": "A-C-columns",
+      "source": "D5",
+      "osm": "OSM-C",
+      "roomLabels": [
+        [
+          2.7,
+          4.1,
+          "LÄNSIPÄÄ",
+          false
+        ],
+        [
+          7.8,
+          4.1,
+          "Länsikammio",
+          false
+        ],
+        [
+          13.4,
+          4.1,
+          "KESKUSSALI",
+          false
+        ],
+        [
+          19.0,
+          4.1,
+          "Itäkammio",
+          false
+        ],
+        [
+          24.2,
+          4.1,
+          "ITÄPÄÄ",
+          false
+        ]
+      ],
+      "plaque": "大圆宝镜",
+      "rooms": [],
+      "partitions": [
+        {
+          "id": "C-P1",
+          "axis": "x",
+          "position_m": 5.2,
+          "start_m": 2.3,
+          "end_m": 12.9,
+          "kind": "glass",
+          "doors_m": [
+            [
+              5.0,
+              6.4
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-C-partitions",
+          "typeSource": "D5"
+        },
+        {
+          "id": "C-P2",
+          "axis": "x",
+          "position_m": 10.4,
+          "start_m": 2.3,
+          "end_m": 12.9,
+          "kind": "glass",
+          "doors_m": [
+            [
+              5.0,
+              6.4
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-C-partitions",
+          "typeSource": "D5"
+        },
+        {
+          "id": "C-P3",
+          "axis": "x",
+          "position_m": 16.4,
+          "start_m": 2.3,
+          "end_m": 12.9,
+          "kind": "glass",
+          "doors_m": [
+            [
+              5.0,
+              6.4
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-C-partitions",
+          "typeSource": "D5"
+        },
+        {
+          "id": "C-P4",
+          "axis": "x",
+          "position_m": 21.6,
+          "start_m": 2.3,
+          "end_m": 12.9,
+          "kind": "zhao",
+          "doors_m": [
+            [
+              4.8,
+              6.6
+            ]
+          ],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-C-partitions",
+          "typeSource": "D5"
+        },
+        {
+          "id": "C-P5",
+          "axis": "y",
+          "position_m": 6.9,
+          "start_m": 3.2,
+          "end_m": 5.05,
+          "kind": "wood",
+          "doors_m": [],
+          "thickness_m": 0.16,
+          "height_m": 3.3,
+          "status": "A",
+          "method": "A-C-partitions",
+          "typeSource": "D5"
+        }
+      ],
+      "wallThickness_m": {
+        "west": 0.3,
+        "east": 0.3,
+        "north": 0.3,
+        "south": 0.3,
+        "status": "A",
+        "method": "A-envelope"
+      },
+      "furniture": [
+        {
+          "id": "C01",
+          "kind": "dais",
+          "x_m": 11.0,
+          "y_m": 9.6,
+          "width_m": 4.8,
+          "depth_m": 2.8,
+          "height_m": 0.4,
+          "facing": "S",
+          "label": "Valtaistuinkoroke",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C02",
+          "kind": "screen",
+          "x_m": 11.1,
+          "y_m": 12.0,
+          "width_m": 4.6,
+          "depth_m": 0.23,
+          "height_m": 3.2,
+          "facing": "S",
+          "label": "Viisiosainen sermi",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C03",
+          "kind": "throne",
+          "x_m": 12.3,
+          "y_m": 10.9,
+          "width_m": 2.2,
+          "depth_m": 1.0,
+          "height_m": 1.7,
+          "facing": "S",
+          "label": "Valtaistuin",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.4
+        },
+        {
+          "id": "C04",
+          "kind": "table",
+          "x_m": 12.0,
+          "y_m": 9.45,
+          "width_m": 2.8,
+          "depth_m": 0.85,
+          "height_m": 0.85,
+          "facing": "S",
+          "label": "Pöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C05",
+          "kind": "kang",
+          "x_m": 0.7,
+          "y_m": 9.5,
+          "width_m": 3.7,
+          "depth_m": 2.8,
+          "height_m": 0.65,
+          "facing": "S",
+          "label": "Lännen makuukang",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C06",
+          "kind": "cabinet",
+          "x_m": 0.65,
+          "y_m": 3.0,
+          "width_m": 1.0,
+          "depth_m": 2.0,
+          "height_m": 2.0,
+          "facing": "E",
+          "label": "Kaappi",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C07",
+          "kind": "table",
+          "x_m": 6.3,
+          "y_m": 10.6,
+          "width_m": 2.7,
+          "depth_m": 1.0,
+          "height_m": 0.85,
+          "facing": "S",
+          "label": "Pöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C08",
+          "kind": "chair",
+          "x_m": 7.1,
+          "y_m": 11.75,
+          "width_m": 1.0,
+          "depth_m": 0.65,
+          "height_m": 1.1,
+          "facing": "S",
+          "label": "Istuin",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C09",
+          "kind": "vase",
+          "x_m": 6.2,
+          "y_m": 8.9,
+          "width_m": 0.6,
+          "depth_m": 0.6,
+          "height_m": 1.3,
+          "facing": "S",
+          "label": "Maljakko",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C10",
+          "kind": "bench",
+          "x_m": 17.0,
+          "y_m": 10.9,
+          "width_m": 3.8,
+          "depth_m": 1.6,
+          "height_m": 0.65,
+          "facing": "S",
+          "label": "Kang-penkki",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C11",
+          "kind": "table",
+          "x_m": 18.25,
+          "y_m": 10.2,
+          "width_m": 1.1,
+          "depth_m": 0.7,
+          "height_m": 0.55,
+          "facing": "S",
+          "label": "Kang-pöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C12",
+          "kind": "table",
+          "x_m": 24.8,
+          "y_m": 8.8,
+          "width_m": 0.9,
+          "depth_m": 3.0,
+          "height_m": 0.9,
+          "facing": "W",
+          "label": "Itäpäädyn pöytä",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C13",
+          "kind": "cabinet",
+          "x_m": 22.2,
+          "y_m": 11.95,
+          "width_m": 2.1,
+          "depth_m": 0.55,
+          "height_m": 2.1,
+          "facing": "S",
+          "label": "Kaappi",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        },
+        {
+          "id": "C14",
+          "kind": "vase",
+          "x_m": 24.8,
+          "y_m": 7.5,
+          "width_m": 0.65,
+          "depth_m": 0.65,
+          "height_m": 1.3,
+          "facing": "S",
+          "label": "Maljakko",
+          "status": "A",
+          "method": "A-furniture",
+          "baseElevation_m": 0.0
+        }
+      ],
+      "mainDoor": {
+        "side": "south",
+        "center_m": 13.4,
+        "width_m": 2.4,
+        "height_m": 2.8,
+        "threshold_m": 0.14,
+        "status": "A",
+        "method": "A-openings",
+        "note": "Pihalta kulku; ulkopuolisen kujan reittiliitos PK:n erillinen ratkaisu. Ei uutta ovireikaa sivuseinaan."
+      },
+      "openings": [
+        {
+          "id": "chuxiugong-southwindow0",
+          "side": "south",
+          "position_m": 1.2000000000000002,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings"
+        },
+        {
+          "id": "chuxiugong-southwindow1",
+          "side": "south",
+          "position_m": 6.200000000000001,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings"
+        },
+        {
+          "id": "chuxiugong-southwindow3",
+          "side": "south",
+          "position_m": 17.4,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings"
+        },
+        {
+          "id": "chuxiugong-southwindow4",
+          "side": "south",
+          "position_m": 22.4,
+          "width_m": 3.2,
+          "sill_m": 0.9,
+          "height_m": 2.1,
+          "status": "A",
+          "method": "A-openings"
+        },
+        {
+          "id": "chuxiugong-rear-door",
+          "side": "north",
+          "position_m": 12.700000000000001,
+          "width_m": 1.4,
+          "height_m": 2.8,
+          "status": "A",
+          "method": "A-openings",
+          "kind": "door"
+        }
+      ],
+      "furnitureMethod": "A-furniture",
+      "decorativeModule_m": {
+        "floorTile": 0.6,
+        "lattice": 0.3,
+        "beamFrieze": 0.5,
+        "source": "A-openings/A-decoration"
+      }
+    }
+  ],
+  "sheets": [
+    {
+      "drawing": "pohja",
+      "building": "yangxindian",
+      "units": "m",
+      "px_per_m": 100,
+      "printScaleDenominator": 100,
+      "pixelSize": [
+        5000,
+        3000
+      ],
+      "physicalSize_mm": [
+        500.0,
+        300.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        350.0,
+        540
+      ],
+      "elevationFloorY_px": 1530
+    },
+    {
+      "drawing": "p",
+      "building": "yangxindian",
+      "units": "m",
+      "px_per_m": 100,
+      "printScaleDenominator": 100,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        350.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "e",
+      "building": "yangxindian",
+      "units": "m",
+      "px_per_m": 100,
+      "printScaleDenominator": 100,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        350.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "i",
+      "building": "yangxindian",
+      "units": "m",
+      "px_per_m": 200,
+      "printScaleDenominator": 50,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        590.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "l",
+      "building": "yangxindian",
+      "units": "m",
+      "px_per_m": 200,
+      "printScaleDenominator": 50,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        590.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "pohja",
+      "building": "chuxiugong",
+      "units": "m",
+      "px_per_m": 100,
+      "printScaleDenominator": 100,
+      "pixelSize": [
+        5000,
+        3000
+      ],
+      "physicalSize_mm": [
+        500.0,
+        300.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        810.0,
+        540
+      ],
+      "elevationFloorY_px": 1530
+    },
+    {
+      "drawing": "p",
+      "building": "chuxiugong",
+      "units": "m",
+      "px_per_m": 100,
+      "printScaleDenominator": 100,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        810.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "e",
+      "building": "chuxiugong",
+      "units": "m",
+      "px_per_m": 100,
+      "printScaleDenominator": 100,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        810.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "i",
+      "building": "chuxiugong",
+      "units": "m",
+      "px_per_m": 200,
+      "printScaleDenominator": 50,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        830.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    },
+    {
+      "drawing": "l",
+      "building": "chuxiugong",
+      "units": "m",
+      "px_per_m": 200,
+      "printScaleDenominator": 50,
+      "pixelSize": [
+        5000,
+        2300
+      ],
+      "physicalSize_mm": [
+        500.0,
+        230.0
+      ],
+      "pngDpi": 254,
+      "northUp": true,
+      "rotation_deg": 0,
+      "coordinateSystem": "x itaan, y pohjoiseen, z korkeus; lounaisulkokulma0,0; lattia z=0",
+      "planOrigin_px": [
+        830.0,
+        520
+      ],
+      "elevationFloorY_px": 1510
+    }
+  ],
+  "outerDimensionChecks": {
+    "yangxindian": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/40606461/full.json",
+      "wayId": 40606461,
+      "version": 9,
+      "timestamp": "2023-08-01T18:40:27Z",
+      "sourceFrameDimensions_m": [
+        35.93745217084478,
+        15.60311193135317
+      ],
+      "drawingTarget_m": [
+        36,
+        15.6
+      ],
+      "targetMinusMeasured_m": [
+        0.06254782915522128,
+        -0.0031119313531711157
+      ],
+      "withinOrderTolerance0_2m": true,
+      "calculation": "Local equirectangular metres R6371008.8 then established project OSM source frame: x=e*cos(2.03)+north*sin(2.03); z=-e*sin(2.03)+north*cos(2.03). Drawing uses this aligned frame with no further rotation.",
+      "normalizedPoints_m": [
+        [
+          0.17969129392958294,
+          15.60311193135317
+        ],
+        [
+          13.665360413097687,
+          15.436653911672355
+        ],
+        [
+          21.90553229586677,
+          15.344857718864946
+        ],
+        [
+          35.93745217084478,
+          15.18129081329721
+        ],
+        [
+          35.757760876887204,
+          0.0
+        ],
+        [
+          25.530581152758234,
+          0.12884624627925945
+        ],
+        [
+          0.0,
+          0.4218211188455534
+        ],
+        [
+          0.17969129392958294,
+          15.60311193135317
+        ]
+      ]
+    },
+    "chuxiugong": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/40631826/full.json",
+      "wayId": 40631826,
+      "version": 5,
+      "timestamp": "2021-12-03T16:58:40Z",
+      "sourceFrameDimensions_m": [
+        26.738675592425025,
+        13.235751591336207
+      ],
+      "drawingTarget_m": [
+        26.8,
+        13.2
+      ],
+      "targetMinusMeasured_m": [
+        0.06132440757497548,
+        -0.035751591336207866
+      ],
+      "withinOrderTolerance0_2m": true,
+      "calculation": "Local equirectangular metres R6371008.8 then established project OSM source frame: x=e*cos(2.03)+north*sin(2.03); z=-e*sin(2.03)+north*cos(2.03). Drawing uses this aligned frame with no further rotation.",
+      "normalizedPoints_m": [
+        [
+          0.09555029136611637,
+          13.235751591336207
+        ],
+        [
+          26.738675592425025,
+          13.047986953989724
+        ],
+        [
+          26.643125301058905,
+          0.0
+        ],
+        [
+          0.0,
+          0.18776463734648363
+        ],
+        [
+          0.09555029136611637,
+          13.235751591336207
+        ]
+      ]
+    }
+  },
+  "sourceMeasuredInteriorDimensions": {
+    "yangxindianFrontHall": {
+      "width_m": 36,
+      "depth_m": 12,
+      "source": "D1",
+      "mappingIntoOuterEnvelope": "A-Y-body"
+    },
+    "yangxindianWestChamber": {
+      "width_m": 10.15,
+      "depth_m": 11.5,
+      "source": "D2",
+      "position": "A-Y-partitions"
+    },
+    "westChamberEastPassage": {
+      "width_m": 2.14,
+      "depth_m": 5.15,
+      "source": "D2",
+      "position": "A-Y-partitions"
+    },
+    "sanxitang": {
+      "width_m": 2.1,
+      "depth_m": 6.0,
+      "height_m": 2.1,
+      "source": "D3",
+      "position": "A-Y-partitions"
+    }
+  },
+  "acceptance": {
+    "lavastaja": false,
+    "PT": false,
+    "3DStarted": false,
+    "gameIntegrated": false,
+    "published": false
+  }
+}
