@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "619fbd1b910739739206e311bbd00627a08e9b47",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-lahitaso-era4-peruttu-r03c10-20261101.md",
+  "taskNumber": 1716,
+  "originalTaskNumber": 1686,
+  "imageCount": 1,
+  "filename": "pariisi-lahi-r03c10.png",
+  "sha256": "07ed7c8fcb492fcefef291204a94852bda5f97c529f28dc5bbed8bb65c9f0b9f",
+  "bytes": 3466142,
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "originalImageCalls": 1,
+  "newImageCalls": 0,
+  "originalRing4BatchCalls": 18,
+  "byteIdenticalToNative": true,
+  "postprocessing": false,
+  "sharedFile": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-lahitaso/_review-era4-20261101/pariisi-lahi-r03c10.png",
+  "visualQA": "review-with-documented-limitations",
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "runtimeIntegrated": false,
+  "published": false
+}

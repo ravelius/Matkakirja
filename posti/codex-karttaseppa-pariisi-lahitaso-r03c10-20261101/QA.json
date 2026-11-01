@@ -1,0 +1,33 @@
+{
+  "taskNumber": 1716,
+  "originalTaskNumber": 1686,
+  "tile": "r03c10",
+  "sha256": "07ed7c8fcb492fcefef291204a94852bda5f97c529f28dc5bbed8bb65c9f0b9f",
+  "reviewedAt": "2026-11-01T16:26:50.787286+00:00",
+  "reviewer": "root",
+  "status": "review-with-documented-limitations",
+  "originalContentQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lahitaso-era4-20261101/qa/r03c10-attempt001-visual.json",
+  "newEdgeRequirementReviewed": true,
+  "existingImageReused": true,
+  "newCalls": 0,
+  "originalCalls": 1,
+  "findings": [
+    "One basilica continues the same lower-left location; no duplicate. Main dome axis approximately x402±8px versus reference about390; width352±12px versus overlap about340.",
+    "Lower facade is about55px higher than the overlap reference. Receiver positioning/warp remains necessary. No anchor retry performed.",
+    "Top edge retains the same broad sequence of building blocks, diagonal streets and right boulevard; fine building footprints, courtyard spacing and tree positions differ.",
+    "Left edge retains urban blocks above and Montmartre woodland below, but individual edge-crossing buildings and paths are not pixel-aligned.",
+    "Right edge retains the near-vertical broad boulevard and alternating blocks/tree groups, with local alignment differences.",
+    "New direct transition from left/top/right edges to the intermediate layer has NOT been verified in the assembled game camera. Receiver must evaluate exposed transitions before acceptance."
+  ],
+  "structuralContentErrorRequiringNewCallIdentified": false,
+  "exactEdgeAlignmentClaimed": false,
+  "assembledCameraVerified": false,
+  "receiverAccepted": false,
+  "ptAccepted": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "qaComparisons": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-sacre-coeur-ylaosa-20261101/qa/top-edge-comparison.jpg",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-sacre-coeur-ylaosa-20261101/qa/side-edge-comparison.jpg"
+  ]
+}

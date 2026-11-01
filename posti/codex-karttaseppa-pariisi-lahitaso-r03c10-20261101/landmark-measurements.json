@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "bddbd46865b2f91aa241693c5f1d7f55172c001f",
+  "method": "Root visual pixel estimates from1536x1024native image and matching approved-overlap reference; not an assembled-camera measurement",
+  "measuredAt": "2026-11-01T16:11:01.756579+00:00",
+  "landmarks": [
+    {
+      "name": "Sacré-Cœur",
+      "tile": "r03c10",
+      "sha256": "07ed7c8fcb492fcefef291204a94852bda5f97c529f28dc5bbed8bb65c9f0b9f",
+      "widthPx": 352,
+      "widthUncertaintyPx": 12,
+      "centerPx": [
+        380,
+        707
+      ],
+      "centerDefinition": "visible architectural bounding-box midpoint",
+      "visibleBoundingBoxPx": [
+        204,
+        444,
+        556,
+        970
+      ],
+      "centralDomeAxisXPx": 402,
+      "axisUncertaintyPx": 8,
+      "referenceCentralDomeAxisXPxApprox": 390,
+      "axisDifferencePxApprox": 12,
+      "referenceWidthPxApprox": 340,
+      "baseVerticalDifferencePxApprox": -55,
+      "notes": "Yksi basilika jatkaa viitteen rakennusta: leveys noin352±12px, pääkupolin akseli x402±8px (viite noin390). Rakennuksen alaosa nousee noin55px viitteen alareunasta. Sijaintiero kirjattu KS:n vääntö- ja kameratarkistukseen; ei ankkuriuusintaa."
+    }
+  ]
+}
