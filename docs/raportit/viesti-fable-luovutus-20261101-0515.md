@@ -6,8 +6,8 @@ YÖLUPA (KK 23.42) voimassa aamuun: ei ostoja, ei uusia pysyviä poistoja, ei as
 
 ## JUNA 216 (runko 28d8f3486 = bb115574d + VieritysHeratys d152a0278, NS)
 - Ehdot ennallaan: (1) Pariisin uusi kartta KK:n hyväksymänä, (2) valo hyväksytty.
-- NS: GC-kevennys 1 (deviceModel, NimiNakyy, Lyhenna) hyväksytty, testit vihreät, odottaa käännöstä + iPad-mittausta (ennen/jälkeen
-  allokointi + GC, nimikuvapari). Kuittaa sitten runkoon.
+- NS: GC-kevennys 1 (72b039301) KUITATTU 05.2x (GC max 30 → 18 ms, nimikuvat ennallaan) → NS vie runkoon ja luovuttaa; uusi
+  runko-SHA NS:n viestistä/luovutuksesta.
 
 ## PARIISI (KS) – kartta koottu, KK:n korjauskierros
 - Codexin 97/97 palaa 1 m/px (PT valitsi 1 m/px: katot erottuvat), koodikerros (puut, elämä) ja 15 karikatyyriä (6 uutta).
