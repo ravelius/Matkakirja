@@ -2462,3 +2462,15 @@ K = proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, T = K/tyokalut, U = lei
 - tausta-v89d-vienti on JU:n NAS:lla (/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/julkaisija/vienti-arkisto/); VS:n o3-pari ja PK:n
   reitti-216/d6-juuri tarvitsevat sen _valmiit:iin → JU palauttaa (PT tietää). Leivonta käyttää kopiota U/leivonta-v4/kielletty-tausta-v90 (0-1 jo leivottu).
 - PT kuittasi edusta-v1:n raakana; PK kytkee, leivonta myöhemmin (LISÄYS 180 AVOIN 2).
+
+## LISÄYS 182 (1.11. 03.0x): RAKENNUSTEN LEIVONNAN UV1 KORJATTU (VS raystas-tulos.md) — ALOITA TÄSTÄ
+- VS 03.1x: rakennusten valo_rgbm lähes tyhjä (Meridiaaniportti runko V4_red 81 %, katot 99 % kolmioista valo 0) → pelissä räystäiden alla
+  tasainen täyttö. Kaksi syytä: (A) lähdemalleissa vanhat UV1-kerrokset (t-portit TEXCOORD_0–3) → uusi UV1 meni TEXCOORD_3:een, peli luki
+  TEXCOORD_1:tä; (B) smart_project → ~100 000 saareketta alle tekselin.
+- KORJAUS T/leivo_malli.py (varmuuskopio leivo_malli.py.ennen-solu-uv): ylimääräiset UV-kerrokset pois; oletus UV_TAPA=solu → uusi
+  T/solu_uv1.py (1 m:n solu × ±akseli = saareke, päällekkäiset jakavat tekselit, pack margin 4 px); > 20 000 kolmiota → atlas 2048
+  (ISO_KOLM/ISO_KOKO). Vanha tapa: UV_TAPA=vanha. Koe 64 näytettä (scratchpad): Meridiaaniportti nolla m²-painotettuna runko 10 %,
+  palatsi_katto 2 %, marmori 34 %, lattia 28 %; t-portti-424 TEXCOORD_0+1. Leivonta v4:n vaihe 3 käyttää korjausta automaattisesti.
+- Leivonta v4: pysähtyi 03.00 levyyn; odotusajo uudelleen nohupilla 03.06 → käynnissä (tausta 1-1). Odotusajo päättyy käynnistettyään
+  leivonnan → levypysähdyksen jälkeen käynnistä leivonta-v4-odota.zsh uudelleen (pgrep -fl leivonta-v4 ensin).
+- ODOTTAA: VS:n kommentti solukokoon/atlakseen; PK:n edusta-pari; VS:n parit v89b/d. edusta-v1 SHA256SUMS korjattu (JU, ca0a1f4dc1fc).
