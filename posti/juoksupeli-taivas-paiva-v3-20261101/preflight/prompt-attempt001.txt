@@ -1,0 +1,9 @@
+Use case: photorealistic-natural
+Asset type: a lossless, genuinely native 4096 x 2048 pixel 360-degree equirectangular daytime sky panorama for a photorealistic running game.
+Input image 1: composition and celestial-position reference ONLY. Generate an entirely new complete panorama, not a local patch, not an enlargement, not a sharpened copy.
+Primary request: recreate the reference's exact overall layout, cloud group locations and silhouettes, but with newly resolved fine photographic cloud structures and crisp sunlit cumulus edges at native 4096 x 2048 resolution.
+Projection: full spherical equirectangular 360 degrees horizontal, 180 degrees vertical, 2:1 aspect ratio. Zenith top, horizon exactly halfway down, pale smooth empty blue nadir in the bottom half. Left and right borders must meet seamlessly. No terrain or ground objects.
+Composition invariants: isolated sun center at normalized x=0.4953, y=0.3822. Main tall cumulus masses at left x=0.29 and right x=0.72 in the upper hemisphere; retain all main reference cloud forms, gaps, and horizon cloudlets. Keep the reference distribution, no extra dominant cloud, no lens flare.
+Style: genuine high-resolution outdoor photograph, detailed volumetric white cumulus with bright clean lit contours, visible rounded small cloud lobes and subtle natural self-shadow, excellent optical clarity, no haze or watercolor softness. Preserve natural cloud texture, avoid oversharpening halos.
+Color: richer clear blue atmosphere than the reference, about RGB 145/193/251 just above the horizon in unobstructed sky and deeper natural blue toward the zenith. Neutral luminous white cloud highlights.
+Technical requirement: actual native 4096 x 2048 pixels, PNG; do not supply an upscaled low-resolution image. Complete image, no border, no writing, no labels, no watermarks, no architecture, no people, no landscape.

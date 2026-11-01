@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-11-01T00:14:04.474997+00:00",
+  "status": "FAIL_REQUIRED_NATIVE_RESOLUTION",
+  "requiredSizes": [
+    [
+      4096,
+      2048
+    ],
+    [
+      8192,
+      4096
+    ]
+  ],
+  "generationCalls": 2,
+  "upscaled": false,
+  "mode": "built-in image_gen complete-panorama attempts with composition reference",
+  "files": [
+    {
+      "file": "source/taivas-v1-native.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1783901,
+      "sha256": "780349d9229c69d1c4be100d0f14f83f16e93d185968ed91a362e2475778999a",
+      "cloudCropLumaFindEdgesVariance": 1210.61896958573
+    },
+    {
+      "file": "raw/taivas-v3-attempt001-native.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1725562,
+      "sha256": "93b1a0612dad730949faae8531df1a2bd0e19e259e680689e9e22f5e4d1528c2",
+      "cloudCropLumaFindEdgesVariance": 1474.0238250808038
+    },
+    {
+      "file": "raw/taivas-v3-attempt002-native.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "bytes": 1744060,
+      "sha256": "ebea33aa62d2792d43cfe2ab036a70342992e3d1fd3032b73a1e2d45465f5a45",
+      "cloudCropLumaFindEdgesVariance": 1753.3601654447284
+    }
+  ],
+  "metadataByteIdentical": true,
+  "metadataSha256": "74e8ca33af7f7416220a22b89ea58417aaf1a8671f1413059192620a96217c53",
+  "gameScreenshotMetric": {
+    "status": "NOT_MEASURED",
+    "requiredVariance": 1400,
+    "reason": "Requires exact 1448x1086 piha06 o3 game render; panorama cloud crop is a different diagnostic and cannot establish pass."
+  },
+  "finalDeliverableReady": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
