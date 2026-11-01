@@ -2492,3 +2492,20 @@ K = proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, T = K/tyokalut, U = lei
 - ODOTTAA: PT:n kuittaus → JU vie; PK vaihtaa MuurikateC2Kansio "kielletty-c2-v29/" ja varmistaa valo_rgbm:n luvun; VS k06-pari uusiksi.
 - HUOM: leivonta v4:n rakennukset-v91 ei päivitä kaiteettomia → kun rakennusten geometria muuttuu, aja kaiteeton-v4.zsh uudelleen.
 - Leivonta v4: odotusajo (pgrep -fl leivonta-v4) odottaa levyä ≥ 82 Gi (04.0x: 81). Wt lavastaja-luovutus-176 poistettu (PT).
+
+## LISÄYS 185 (1.11. 04.1x): LUOVUTUS (konteksti 25 %) — MUURIKATE-V34 PT:LLÄ, LEIVONTA v4 VAIHE 3 AJOSSA, ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut. Skratsityökalut (kp_ala.py, isot.py, tiheys.py, uv1lista.py) poistuvat sessiosta;
+tarkistus: python3 /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tyokalut/keskipiste.py <glb> (VS:n työkalu).
+- PT:N KUITTAUKSEEN: (1) kaiteeton-v1 (_valmiit/…-kaiteeton-v1-vienti-20261101, kielletty-c2-v29, SHA256SUMS b2d694f70621, JU:n
+  lisenssirivi lisätty) → PK MuurikateC2Kansio "kielletty-c2-v29/" (Muurikate.cs:36). (2) muurikate-v34 (_valmiit/…-muurikate-v34-vienti-
+  20261101 = muurikate-v29 + leivottu kk-muurikate-v26-pohja, SHA256SUMS b16d86c3e3a4) → PK "kielletty-muurikate-v29/" → v34 (pelin
+  lataama pohja, PK 05.5x). Ajot U/kaiteeton-v4.zsh ja U/muurikate-v34.zsh (lokit U/ajo-*.log).
+- AVOIN: muurikate-v34:n katot 52 % ja kaiteet/laatat 70–77 % nollavaloa m² (runko 7 %; sama k06d:n v32:ssa). Epäily: taustapalojen omat
+  muurikatot päällekkäin varjostajina (leivo_valo KOHDE_GLB tuo kaikki taustapalat). Tarkista: varjostajatta koe / päällekkäisyys tausta vs pohja.
+- leivo_valo.py: UV_TAPA oletus solu KOHDE_GLB:llä (muurikate), muuten vanha (tausta ennallaan); varmuuskopio leivo_valo.py.ennen-solu-uv.
+  leivo_malli.py: MALLI_GLB (kohteeksi esim. kaiteeton). Kaikki skriptit: zsh-glob LAHTEET*.md(N) (ei (N) keskellä).
+- PÄÄTÖKSET (PT 06.1x): kulmatornit (kulmatorni-v1c, 4 instanssia) ja instanssiosat (c1, c2-osat, halli-kaiteet, osasarja-osat, lähipuut)
+  = pelin valo (VS), ei leivontaa. Edusta-v1 q-duanmen/q-chaofang leivotaan rakennukset-v92:ssa (LISÄYS 180 AVOIN 2).
+- LEIVONTA v4: tausta + muurikate valmiit, vaihe 3 rakennukset alkoi 04.07 (solu_uv1 v2). Levypysähdyksen jälkeen: pgrep -fl leivonta-v4 →
+  jos ei mitään, nohup zsh U/leivonta-v4-odota.zsh >> U/ajo-leivonta-v4.log 2>&1 & (odotusajo päättyy käynnistettyään).
+  Valmiin jälkeen: rakennukset-v92 = v91 + edusta (LISÄYS 180), kaiteeton-v4.zsh uudelleen v91-geometrialle jos muuttui, LISÄYS 178 tarkistukset.
