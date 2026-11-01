@@ -23,6 +23,8 @@ fetchaa origin/claude/postilaatikko minuutin välein ja päättyy ensimmäiseen 
 1. **Rengas 4 Codexilta (bddbd4686)** → SHA → kokoa: kopioi kokoa-r3.sh → kokoa-r4.sh (pohja rengas3/koottu-rengas3.png
    3585,2145; palat myötäpäivään r03c06 … r04c05; SYVPALA tyhjäksi aluksi) → kamera-saumat → yli 1,3: profiloi raja (ero vs
    vertailu) ja kokeile SYVPALA=<pala>:256 vain sille palalle → Sacré-Cœurin jatkuvuus erikseen → pari välitaso | lähitaso PT:lle.
-2. PT:n vastaus G:n utuisuuteen (uusinta vai ennallaan).
+2. **G:n utuisuus – PT PÄÄTTI (18.0x):** kuitattu sisällöksi, EI uusintaa nyt (1:1-rajalla lievä tyyliero, näkyy lähinnä
+   koko kaupungin yleiskuvassa). Kun KOKO lähitaso on valmis: kuva pelin kamerasta G:n reunalta (lähi- ja välietäisyys) PT:lle;
+   jos raja erottuu pelissä, G:n 4 palaa uusitaan silloin renkaiden tyyliin.
 3. Seuraavat erät suunnitelman mukaan: Bois de Boulogne (27), Bois de Vincennes (21), renkaat 5+ (suunnitelma.py) PT:n luvalla.
 4. tee-tasot.py ja NS-LISTA (luovutus 13.43 kohta 3) ennallaan; L:n kokeilukoosteet (*.ennen-*.py, kamera-saumat-r2*/r1*) siivottavissa.
