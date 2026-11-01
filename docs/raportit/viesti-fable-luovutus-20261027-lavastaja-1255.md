@@ -2440,3 +2440,17 @@ Kansio U = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusin
   (PK c5e b-115…117: /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261101-015229/b-115.png, b-117.png). Tausta-v89d/ulkorengas-v10: pohja
   x −60…+80, z −395…−700 ei yli 0,5 m:n geometriaa. Pyyntö: portin edustan aukio sivumuureineen + Duanmen akselille (tarkista ensin havainne ja
   omistajan linjaus, loki-hae "Duanmen"/"Meridiaaniportin edusta"). Tee leivonta v4:n jälkeen tai erillisenä palana; kuittaus PK:lle.
+
+## LISÄYS 180 (1.11. 02.3x): LUOVUTUS (konteksti 27 %) — EDUSTA v1 PK:LLA, LEIVONTA v4 AJOSSA, ALOITA TÄSTÄ
+K = proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset, T = K/tyokalut, U = leivonta-216/uusinta.
+- LEIVONTA v4 käynnistyi odotusajosta 02.21 (levy 82 Gi), loki U/ajo-leivonta-v4.log – älä käynnistä uudelleen. HUOM: _valmiit/…-tausta-v89d-vienti
+  on poistettu (joku siivosi levyä), mutta leivonta oli jo kopioinut sen U/leivonta-v4/kielletty-tausta-v90:een → ajo turvassa; jos ajo pitää
+  aloittaa alusta, TU-kopio on lähde (älä poista sitä).
+- EDUSTA v1 (LISÄYS 179) VALMIS, PK:lle ja PT:lle 02.3x: _valmiit/juoksupeli-kk-lavastaja-edusta-v1-vienti-20261101 (SHA256SUMS 6935fbfa04c0).
+  Ajo T/aja_edusta_v1.zsh; uusi T/kk_edusta.py (q-duanmen = kk_portit.kaupunkiportti 117,7 × 38,8 × 12,5 m, 5 holvia, 9 × 5 重檐歇山, huippu 34 m,
+  OSM-Duanmen siirretty 4,6 m akselille x = 0; q-chaofang = mitat.GALLERIA-hallit OSM 638170121/124 + 阙门 638249691/692), vie.py:hyn
+  EHDOKKAAT-lisäys (varmuuskopio vie.py.ennen-edusta), T/edusta_poista.py (ulkorengas: OSM-Duanmen + irralliset hallikatot + puut pois, aukion
+  maa y −0,02; poistaa tyhjät primitiivit). Kuvat K/edusta-v1/kuvat/v1-*.png. Itärivin pohjoispää z −490…−477 on taustassa → ei mallinnettu.
+- AVOIN: (1) PK:n pari edustasta → korjaukset. (2) Mallit leipomatta: v4:n jälkeen leivo q-duanmen/q-chaofang ja yhdistä rakennukset-v92 =
+  v91 + edusta (rakennukset.json mallit-avaimet). (3) ulkorengas-v13 pohjautuu k06d:n v12:een; jos v4-paketin ulkorengas-v12 eroaa, aja
+  edusta_poista.py uudelleen sen kopioon. (4) Duanmen 290 m portista: sumu voi vaalentaa → VS. (5) LISÄYS 175/178 odotukset ennallaan.
