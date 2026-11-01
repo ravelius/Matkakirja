@@ -35,3 +35,16 @@ kk/ 1–5 (5 = G rinnalla). Lähin taso vastaa KS:n kallistus-koonnin kuvaa 4 (G
 - proto-3d/tyokalut/simu-lukko.sh ei ole suoritettava: aja `zsh …/simu-lukko.sh kaari natiivi-ui yhteinen-iPad13 -- <skripti>`.
 - Suorista-napilla ei ole tekstiä: skenaariossa `tap-teksti mk-suoristaNappi` / `nakyy 6 mk-suoristaNappi`.
 - Kuvien raaka-kopiot: kuvat/raaka/<nimi>.png (ei .kiertamaton) = ilman selitekaistaa KK:lle.
+
+## LISÄYS 21.1x: ENSIMMÄINEN TYÖ SEURAAJALLE (PT, korjattava ennen TF:ää)
+PT (KS vahvisti): aa50ebaca:n regressio – piirroksen reunan takana välitasolla tyhjä paperi + tiheät pienet katunimet
+(18.53-kuvassa ennen linssiä striimi näkyi). KS:n syy: maapohjan kerros valitsee laattatason/häivytyksen todellisen kameran
+etäisyyden mukaan; linssin aikana kamera on ~5,9× kauempana (tan25°/tan4,5°).
+Korjaus: maapohjan laatat (elävä kartta / Laattapalvelin / KarttaKerrokset: taso, häivytys, kaukotaso) loogiseen korkeuteen
+(kierto.korkeus 50°:lla, PalloKierto.LogiikanFov), kuten nimikerros jo. Varakeino vain jos ei onnistu: katunimet piiloon piirroksen
+ulkopuolella piirroksen näkyessä. Samaan haaraan → reunakuva + 5-G-rinnalla uudelleen KK:lle → omistajan OK → NS.
+Jo tarkistettu (ei syy): ElavaKerros kopioi pääkameran fieldOfView/leikkaustasot (oikein), Varitaso.Taso laskee PalloKierto.Sade-
+säteistä + fieldOfView (johdonmukainen). Epäilys: raster-laattojen pienet nimet = liian tarkka z → katso Laattapalvelin.Elava.cs
+(ElavaTyyli.DataTaso, Cesiumin pyytämä z) ja mikä päättää täytteiden piirron/häivytyksen; vertaa 3eb16133e-b kuva 5 (sama tyhjä).
+Todistusskenaario: kopioi /Users/Shared/Claude/proto-3d/lokit/todistus-piirros-suora-aa50ebaca-20261101-2057/ (kuva 5 =
+`komento aja 48.872 2.236 0.05 3`). KK:n kysymys "Marseille, syyskuussa" kyltissä: testiajon uusi peli Marseillessa (vastattu).
