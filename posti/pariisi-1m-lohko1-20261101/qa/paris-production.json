@@ -1,0 +1,991 @@
+{
+  "status": "local-production-and-visual-qa-complete",
+  "generationMode": "built-in image_gen, complete new images",
+  "tiles": [
+    {
+      "tile": "r05-c06",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r05-c06.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-9d2bb7f1-5d57-4351-81ca-05eb15abef57.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3287918,
+      "sha256": "dc79262ad99bbfb5980fd73286714889cead838788e4188b89da48180bcb5cba",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          500,
+          700,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r05-c06.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c06-attempt001.txt",
+      "promptSha256": "48f6fa3a04e4e367bf6a7e18d768d481588c079fe3f777de258c76342f9143f1",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c06-attempt001-native.png"
+    },
+    {
+      "tile": "r05-c07",
+      "selectedAttempt": 4,
+      "generationCalls": 4,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r05-c07.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-32380c11-a1f9-4882-a778-f92b86a44399.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3343180,
+      "sha256": "e204368161fdca20b0d5f55a6ddf8dcd8e4e837bde9e06ef054e0aa8eaef2ff1",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          600,
+          180,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-r05c07-a4-roof.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA",
+        "correctedAreaCrops": [
+          "/tmp/paris-r05c07-a4-basin1.png",
+          "/tmp/paris-r05c07-a4-basin2.png",
+          "/tmp/paris-r05c07-a4-edge.png"
+        ],
+        "cyanProxyCaution": "Largest outside5px cyan component32px bbox959,98,977,104 is visually confirmed blue roof highlight; muted blue basin centres were also checked visually."
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c07-attempt004.txt",
+      "promptSha256": "a24083bbfe67d7494bf398d561ddf298489a9280261f9af82e7117817b0cf084",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c07-attempt004-native.png",
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-db3506c3-5ca4-4f13-9904-9bc266440963.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c07-attempt001-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c07-attempt001.txt",
+          "promptSha256": "a8f7bb0eb85b0ac3d0a3fb86b71b3c64e10cac7c05725d6550d69e7f66144bbf",
+          "sha256": "5aa8cb9282122bad6f368a50d7e6f2d9ae6dfe4dd4931b590efcfb58153ac7d5",
+          "bytes": 3749212,
+          "selected": false,
+          "assessment": "Rejected: forbidden water areas retained",
+          "waterMetrics": {
+            "tile": "r05-c07",
+            "attempt": 1,
+            "sha256": "5aa8cb9282122bad6f368a50d7e6f2d9ae6dfe4dd4931b590efcfb58153ac7d5",
+            "outsidePixels": 6062,
+            "outsideComponents": [
+              {
+                "area": 3786,
+                "bbox": [
+                  744,
+                  974,
+                  864,
+                  1024
+                ]
+              },
+              {
+                "area": 591,
+                "bbox": [
+                  308,
+                  998,
+                  348,
+                  1024
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 0,
+            "insideNoncyanComponents": []
+          }
+        },
+        {
+          "attempt": 2,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-5aae4679-cde2-47bb-99bb-b2741c5f0fc1.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c07-attempt002-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c07-attempt002.txt",
+          "promptSha256": "b2e6f1c29d1ece003609753e7e037e90462295b8ec5a0fae7f09efc68f6cafea",
+          "sha256": "9596582ea10b11d5f1e1b8c4236d4e3f04906a8d343e654d5cefaa02c9af85fa",
+          "bytes": 3511283,
+          "selected": false,
+          "assessment": "Superseded by attempt004: two residual blue basin centres and433px bottom-edge cyan sliver corrected in004. Previous colour proxy missed the muted blue second basin.",
+          "waterMetrics": {
+            "tile": "r05-c07",
+            "attempt": 2,
+            "sha256": "9596582ea10b11d5f1e1b8c4236d4e3f04906a8d343e654d5cefaa02c9af85fa",
+            "outsidePixels": 1179,
+            "outsideComponents": [
+              {
+                "area": 433,
+                "bbox": [
+                  313,
+                  1002,
+                  346,
+                  1024
+                ]
+              },
+              {
+                "area": 42,
+                "bbox": [
+                  127,
+                  645,
+                  137,
+                  650
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 72,
+            "insideNoncyanComponents": []
+          }
+        },
+        {
+          "attempt": 3,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-069200e5-e3df-4007-91a4-1628f66aa7df.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c07-attempt003-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c07-attempt003.txt",
+          "promptSha256": "be30861bdd1d9e1ba5016db868c3779cc8419647291859f107fa90cf55e91233",
+          "sha256": "7232359161e0cbfe3cf6922fd992962bdb251bd95c36016123c6f1e91fc8aad6",
+          "bytes": 3682852,
+          "selected": false,
+          "assessment": "Rejected: substantial allowed water incorrectly dried",
+          "waterMetrics": {
+            "tile": "r05-c07",
+            "attempt": 3,
+            "sha256": "7232359161e0cbfe3cf6922fd992962bdb251bd95c36016123c6f1e91fc8aad6",
+            "outsidePixels": 3499,
+            "outsideComponents": [
+              {
+                "area": 512,
+                "bbox": [
+                  309,
+                  999,
+                  347,
+                  1024
+                ]
+              },
+              {
+                "area": 32,
+                "bbox": [
+                  657,
+                  196,
+                  671,
+                  200
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 16742,
+            "insideNoncyanComponents": [
+              {
+                "area": 16742,
+                "bbox": [
+                  384,
+                  860,
+                  719,
+                  1007
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "attempt": 4,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-32380c11-a1f9-4882-a778-f92b86a44399.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c07-attempt004-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c07-attempt004.txt",
+          "promptSha256": "a24083bbfe67d7494bf398d561ddf298489a9280261f9af82e7117817b0cf084",
+          "sha256": "e204368161fdca20b0d5f55a6ddf8dcd8e4e837bde9e06ef054e0aa8eaef2ff1",
+          "bytes": 3343180,
+          "selected": true,
+          "assessment": "Selected: two ornamental basins and bottom-edge cyan sliver corrected, main dry riverbed retained, all permitted river preserved.",
+          "waterMetrics": {
+            "tile": "r05-c07",
+            "attempt": 4,
+            "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-32380c11-a1f9-4882-a778-f92b86a44399.png",
+            "sha256": "e204368161fdca20b0d5f55a6ddf8dcd8e4e837bde9e06ef054e0aa8eaef2ff1",
+            "outsidePixels": 651,
+            "outsideComponents": [
+              {
+                "area": 32,
+                "bbox": [
+                  959,
+                  98,
+                  977,
+                  104
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 25,
+            "insideNoncyanComponents": []
+          }
+        }
+      ],
+      "selectedWaterMetrics": {
+        "tile": "r05-c07",
+        "attempt": 4,
+        "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-32380c11-a1f9-4882-a778-f92b86a44399.png",
+        "sha256": "e204368161fdca20b0d5f55a6ddf8dcd8e4e837bde9e06ef054e0aa8eaef2ff1",
+        "outsidePixels": 651,
+        "outsideComponents": [
+          {
+            "area": 32,
+            "bbox": [
+              959,
+              98,
+              977,
+              104
+            ]
+          }
+        ],
+        "insideNoncyanPixels": 25,
+        "insideNoncyanComponents": []
+      },
+      "waterExceptions": [],
+      "selectionReason": "Attempt004 corrects both circular blue basins and bottom-edge forbidden water sliver while preserving all allowed river water and previously corrected dry bottom-right riverbed; full frame and native detail QA reviewed."
+    },
+    {
+      "tile": "r05-c08",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r05-c08.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-cd3ac5ac-19b7-405d-8424-a0cfab90dc98.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3876914,
+      "sha256": "99f6946e659dd69c7ece9ed892aae255417a588d406dc6b822620e67cd60da1c",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          400,
+          350,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r05-c08.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r05-c08-attempt001.txt",
+      "promptSha256": "9abf3245b697c059b0368d4a2f30b294290b42ead54e03fae9cf2a198c088c9f",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r05-c08-attempt001-native.png"
+    },
+    {
+      "tile": "r06-c06",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r06-c06.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-1b5e0018-e418-4f00-a89c-9d67a33a2692.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3678661,
+      "sha256": "f5546713a7cbe3c17bc9abbdbf90f4609dd0862000193c5955631846bae1b1bb",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          500,
+          500,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r06-c06.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c06-attempt001.txt",
+      "promptSha256": "96ff628387c25f8ca5eb2fb2b3c2370fce8df4b19ed746ecfba5acc741e8acf3",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c06-attempt001-native.png"
+    },
+    {
+      "tile": "r06-c07",
+      "selectedAttempt": 4,
+      "generationCalls": 4,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r06-c07.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-b2d78ca5-3fee-4716-9e90-3264d875616e.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3242065,
+      "sha256": "227699ddd0c879a5137c8939186b5832e76a4f9b02dc5484b2828441e7349d83",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          500,
+          650,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-retry4-r06-c07.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c07-attempt004.txt",
+      "promptSha256": "dde3697928160fd7cea508281631ac44fcf970e12c81b7f46238993a937ad6e8",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c07-attempt004-native.png",
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-221e4b55-3549-460f-81b5-faeec984603b.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c07-attempt001-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c07-attempt001.txt",
+          "promptSha256": "1aed9b682ca4a88ef22478e74c60b068b802423215371a85f11dbccac14bee9d",
+          "sha256": "ee9c7decf17fed1b1677dbb710d945a3e69fb525b128790ec78defbf2d89097a",
+          "bytes": 3389623,
+          "selected": false,
+          "assessment": "Rejected: forbidden water areas retained",
+          "waterMetrics": {
+            "tile": "r06-c07",
+            "attempt": 1,
+            "sha256": "ee9c7decf17fed1b1677dbb710d945a3e69fb525b128790ec78defbf2d89097a",
+            "outsidePixels": 4654,
+            "outsideComponents": [
+              {
+                "area": 2171,
+                "bbox": [
+                  232,
+                  0,
+                  350,
+                  35
+                ]
+              },
+              {
+                "area": 1821,
+                "bbox": [
+                  759,
+                  414,
+                  850,
+                  480
+                ]
+              },
+              {
+                "area": 649,
+                "bbox": [
+                  1511,
+                  449,
+                  1536,
+                  495
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 16,
+            "insideNoncyanComponents": []
+          }
+        },
+        {
+          "attempt": 2,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-2b5dd2cd-6691-4687-b1de-805adcc3711b.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c07-attempt002-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c07-attempt002.txt",
+          "promptSha256": "1275bf8e839fd178bb7cd1381ded3328d2fa5810a677e826aeb02e1da2abdee2",
+          "sha256": "b75814c7edb88aef753681ba0d9e34f3386baa6c7766a79dbeffbc992e095100",
+          "bytes": 3597916,
+          "selected": false,
+          "assessment": "Rejected: substantial allowed water incorrectly dried",
+          "waterMetrics": {
+            "tile": "r06-c07",
+            "attempt": 2,
+            "sha256": "b75814c7edb88aef753681ba0d9e34f3386baa6c7766a79dbeffbc992e095100",
+            "outsidePixels": 1427,
+            "outsideComponents": [
+              {
+                "area": 1001,
+                "bbox": [
+                  284,
+                  0,
+                  351,
+                  27
+                ]
+              },
+              {
+                "area": 32,
+                "bbox": [
+                  276,
+                  968,
+                  285,
+                  973
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 6844,
+            "insideNoncyanComponents": [
+              {
+                "area": 4948,
+                "bbox": [
+                  127,
+                  9,
+                  289,
+                  107
+                ]
+              },
+              {
+                "area": 1895,
+                "bbox": [
+                  595,
+                  348,
+                  727,
+                  407
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "attempt": 3,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-f718d540-1d86-41e7-8a46-b31b3c8f95f6.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c07-attempt003-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c07-attempt003.txt",
+          "promptSha256": "4344f5bf553873b528e66ec9ee5952fa23e93d1bd42d2a4edf894bf84a4c4f76",
+          "sha256": "538a9e744771d0c683fd0f0c274f66a441e81328937b8850f778c29a3582e5af",
+          "bytes": 3514812,
+          "selected": false,
+          "assessment": "Rejected: substantial allowed water incorrectly dried",
+          "waterMetrics": {
+            "tile": "r06-c07",
+            "attempt": 3,
+            "sha256": "538a9e744771d0c683fd0f0c274f66a441e81328937b8850f778c29a3582e5af",
+            "outsidePixels": 1869,
+            "outsideComponents": [
+              {
+                "area": 1787,
+                "bbox": [
+                  760,
+                  415,
+                  851,
+                  480
+                ]
+              }
+            ],
+            "insideNoncyanPixels": 29393,
+            "insideNoncyanComponents": [
+              {
+                "area": 16167,
+                "bbox": [
+                  1100,
+                  475,
+                  1372,
+                  678
+                ]
+              },
+              {
+                "area": 13094,
+                "bbox": [
+                  384,
+                  9,
+                  719,
+                  111
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "attempt": 4,
+          "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-b2d78ca5-3fee-4716-9e90-3264d875616e.png",
+          "raw": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c07-attempt004-native.png",
+          "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c07-attempt004.txt",
+          "promptSha256": "dde3697928160fd7cea508281631ac44fcf970e12c81b7f46238993a937ad6e8",
+          "sha256": "227699ddd0c879a5137c8939186b5832e76a4f9b02dc5484b2828441e7349d83",
+          "bytes": 3242065,
+          "selected": true,
+          "assessment": "Selected: forbidden reaches removed and allowed water preserved",
+          "waterMetrics": {
+            "tile": "r06-c07",
+            "attempt": 4,
+            "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-b2d78ca5-3fee-4716-9e90-3264d875616e.png",
+            "sha256": "227699ddd0c879a5137c8939186b5832e76a4f9b02dc5484b2828441e7349d83",
+            "outsidePixels": 16,
+            "outsideComponents": [],
+            "insideNoncyanPixels": 0,
+            "insideNoncyanComponents": []
+          }
+        }
+      ],
+      "selectedWaterMetrics": {
+        "tile": "r06-c07",
+        "attempt": 4,
+        "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-b2d78ca5-3fee-4716-9e90-3264d875616e.png",
+        "sha256": "227699ddd0c879a5137c8939186b5832e76a4f9b02dc5484b2828441e7349d83",
+        "outsidePixels": 16,
+        "outsideComponents": [],
+        "insideNoncyanPixels": 0,
+        "insideNoncyanComponents": []
+      },
+      "waterExceptions": [],
+      "selectionReason": "Attempt004 corrects all three forbidden river reaches while preserving all eroded-white permitted water: outside5px cyan16 scatteredpixels, no component>30px; missing eroded-white water0px. Roof detail slightly softer than001 but q11 visual language retained."
+    },
+    {
+      "tile": "r06-c08",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r06-c08.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-def3a35e-f475-45c9-87ee-ac44a6201649.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3663429,
+      "sha256": "0957e8650fe04ad92960e1b82736070b84f8b716c09e8b6d4ad0980bf7a40213",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          400,
+          350,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r06-c08.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r06-c08-attempt001.txt",
+      "promptSha256": "fb8cc4bfdfd2ad0d5429c88ab5595f1b89b996b008973641ebc979d795189a6a",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r06-c08-attempt001-native.png"
+    },
+    {
+      "tile": "r07-c06",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r07-c06.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-ae8697d6-b10d-425b-9d30-9470ad0fdcd2.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3450836,
+      "sha256": "dcc9b73993005e9de099d7c19f20c513d4cb40128c45f5f3c560fd216dac738e",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          500,
+          300,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r07-c06.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r07-c06-attempt001.txt",
+      "promptSha256": "bfdfbe6ed684dc89c3b5ce6a99043ba44f64e2eba532b84a35f773b55534154b",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r07-c06-attempt001-native.png"
+    },
+    {
+      "tile": "r07-c07",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r07-c07.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-e7ac04f4-def7-4e7a-8787-f1edeb6dab35.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3634818,
+      "sha256": "a007b335ed73e0c273a7068507d7191f497ccae45027072df5324f0ec7c0ea1e",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          650,
+          550,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r07-c07.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r07-c07-attempt001.txt",
+      "promptSha256": "2bc7f1b3824cb1d80c38d0516a2a2cff337624ee40046bcd2799f7e70c37b7ff",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r07-c07-attempt001-native.png"
+    },
+    {
+      "tile": "r07-c08",
+      "selectedAttempt": 1,
+      "generationCalls": 1,
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/final/pariisi-1m-r07-c08.png",
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-817026c2-974a-475e-90cf-4df02f34f4c9.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 3406255,
+      "sha256": "97dbbcec57c9f721810c5515acd69aae7d242c34d963c7c19c06e294e70cbd0b",
+      "byteIdenticalToNative": true,
+      "visualReview": {
+        "fullTile": true,
+        "approvedStyleConsistent": true,
+        "noAddedWaterOutsideMaskVisible": true,
+        "emptyLandmarkPlotsPreserved": true,
+        "noTreesPeopleTraffic": true,
+        "groundGeometryPixelExactCertified": false,
+        "nativeRoofCropReviewed": true,
+        "roofCropXYWH": [
+          950,
+          350,
+          320,
+          240
+        ],
+        "roofCropDiagnostic": "/tmp/paris-roof-r07-c08.png",
+        "roofAssessment": "PASS: distinct blue-grey roof planes, thin ridges, small dormers/chimneys, regular cream facade window rows; no smeared roof clusters",
+        "overall": "PASS_FOR_PARENT_AGGREGATE_QA"
+      },
+      "prompt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/prompts/r07-c08-attempt001.txt",
+      "promptSha256": "dcf88d9e1c89968a123205942ed0ff437d2f5dbc03aaf3de0c8e16bb7c830b68",
+      "rawAttempt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-1m-lohko1-20261101/raw/r07-c08-attempt001-native.png"
+    }
+  ],
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "completedAt": "2026-11-01T01:39:18.512656+00:00",
+  "generationCalls": 15,
+  "retries": 6,
+  "selectedFinalCount": 9,
+  "constraints": {
+    "nativeWidth": 1536,
+    "nativeHeight": 1024,
+    "nativePixelScaleMetres": 1,
+    "fullNewImagePerAttempt": true,
+    "nativeFinalsByteIdentical": true,
+    "noRetouchResizeCropOfFinals": true,
+    "primaryStyle": "tyylimalli-r4-c4-q11-1m-hyvaksytty.png",
+    "whiteWaterMaskAuthoritative": true,
+    "dryOrnamentalPoolsOutsideMask": true,
+    "noLandmarksTreesLifeTraffic": true,
+    "sourceGeometryPreservedVisually": true,
+    "overlapPixels": 128,
+    "dryOrnamentalPoolsOutsideMaskNote": "Both muted blue basins in selectedr05c07 were corrected and checked at native crop in attempt004."
+  },
+  "limitations": [
+    "Visual QA is not a pixel-exact ground-geometry certification.",
+    "Native generation can vary fine ordinary-building roof/detail and colour across overlaps; receiver minimum-difference seam processing and aggregate QA remain separate.",
+    "r06-c08 source geometry canal continues to top border but authoritative water mask does not permit its upper approximately 100px. Prompt and result keep this segment dry. Parent source-mask overlap check records the source discrepancy.",
+    "Receiver/PT/owner approval, GitHub delivery, runtime integration and publication are not established by this local production record.",
+    "r06-c07 attempt004 uses a complete fresh generation guided by attempt001 composition, authoritative mask and q11; all allowed water preserved and large forbidden areas removed.",
+    "r05-c07 attempt004 is final; both blue circular basins and bottom-edge sliver in previous002 were corrected. Attempts001\u2013004 preserved as history.",
+    "Total15 complete-generationcalls across9tiles; r05c07 andr06c07 each4attempts, other7tiles1attempt. Native finals remain unmodified ImageGen bytes.",
+    "Cyanproxy can miss low-saturation blue: both formerly blue roundbasin centres inr05c07 were explicitly inspected visually at native crop after correction."
+  ],
+  "retryCandidateMetrics": [
+    {
+      "tile": "r05-c07",
+      "attempt": 1,
+      "sha256": "5aa8cb9282122bad6f368a50d7e6f2d9ae6dfe4dd4931b590efcfb58153ac7d5",
+      "outsidePixels": 6062,
+      "outsideComponents": [
+        {
+          "area": 3786,
+          "bbox": [
+            744,
+            974,
+            864,
+            1024
+          ]
+        },
+        {
+          "area": 591,
+          "bbox": [
+            308,
+            998,
+            348,
+            1024
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 0,
+      "insideNoncyanComponents": []
+    },
+    {
+      "tile": "r05-c07",
+      "attempt": 2,
+      "sha256": "9596582ea10b11d5f1e1b8c4236d4e3f04906a8d343e654d5cefaa02c9af85fa",
+      "outsidePixels": 1179,
+      "outsideComponents": [
+        {
+          "area": 433,
+          "bbox": [
+            313,
+            1002,
+            346,
+            1024
+          ]
+        },
+        {
+          "area": 42,
+          "bbox": [
+            127,
+            645,
+            137,
+            650
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 72,
+      "insideNoncyanComponents": []
+    },
+    {
+      "tile": "r05-c07",
+      "attempt": 3,
+      "sha256": "7232359161e0cbfe3cf6922fd992962bdb251bd95c36016123c6f1e91fc8aad6",
+      "outsidePixels": 3499,
+      "outsideComponents": [
+        {
+          "area": 512,
+          "bbox": [
+            309,
+            999,
+            347,
+            1024
+          ]
+        },
+        {
+          "area": 32,
+          "bbox": [
+            657,
+            196,
+            671,
+            200
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 16742,
+      "insideNoncyanComponents": [
+        {
+          "area": 16742,
+          "bbox": [
+            384,
+            860,
+            719,
+            1007
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "r06-c07",
+      "attempt": 1,
+      "sha256": "ee9c7decf17fed1b1677dbb710d945a3e69fb525b128790ec78defbf2d89097a",
+      "outsidePixels": 4654,
+      "outsideComponents": [
+        {
+          "area": 2171,
+          "bbox": [
+            232,
+            0,
+            350,
+            35
+          ]
+        },
+        {
+          "area": 1821,
+          "bbox": [
+            759,
+            414,
+            850,
+            480
+          ]
+        },
+        {
+          "area": 649,
+          "bbox": [
+            1511,
+            449,
+            1536,
+            495
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 16,
+      "insideNoncyanComponents": []
+    },
+    {
+      "tile": "r06-c07",
+      "attempt": 2,
+      "sha256": "b75814c7edb88aef753681ba0d9e34f3386baa6c7766a79dbeffbc992e095100",
+      "outsidePixels": 1427,
+      "outsideComponents": [
+        {
+          "area": 1001,
+          "bbox": [
+            284,
+            0,
+            351,
+            27
+          ]
+        },
+        {
+          "area": 32,
+          "bbox": [
+            276,
+            968,
+            285,
+            973
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 6844,
+      "insideNoncyanComponents": [
+        {
+          "area": 4948,
+          "bbox": [
+            127,
+            9,
+            289,
+            107
+          ]
+        },
+        {
+          "area": 1895,
+          "bbox": [
+            595,
+            348,
+            727,
+            407
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "r06-c07",
+      "attempt": 3,
+      "sha256": "538a9e744771d0c683fd0f0c274f66a441e81328937b8850f778c29a3582e5af",
+      "outsidePixels": 1869,
+      "outsideComponents": [
+        {
+          "area": 1787,
+          "bbox": [
+            760,
+            415,
+            851,
+            480
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 29393,
+      "insideNoncyanComponents": [
+        {
+          "area": 16167,
+          "bbox": [
+            1100,
+            475,
+            1372,
+            678
+          ]
+        },
+        {
+          "area": 13094,
+          "bbox": [
+            384,
+            9,
+            719,
+            111
+          ]
+        }
+      ]
+    },
+    {
+      "tile": "r06-c07",
+      "attempt": 4,
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-b2d78ca5-3fee-4716-9e90-3264d875616e.png",
+      "sha256": "227699ddd0c879a5137c8939186b5832e76a4f9b02dc5484b2828441e7349d83",
+      "outsidePixels": 16,
+      "outsideComponents": [],
+      "insideNoncyanPixels": 0,
+      "insideNoncyanComponents": []
+    },
+    {
+      "tile": "r05-c07",
+      "attempt": 4,
+      "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a194b1-ff10-71c2-bf84-392ae8943e34/exec-32380c11-a1f9-4882-a778-f92b86a44399.png",
+      "sha256": "e204368161fdca20b0d5f55a6ddf8dcd8e4e837bde9e06ef054e0aa8eaef2ff1",
+      "outsidePixels": 651,
+      "outsideComponents": [
+        {
+          "area": 32,
+          "bbox": [
+            959,
+            98,
+            977,
+            104
+          ]
+        }
+      ],
+      "insideNoncyanPixels": 25,
+      "insideNoncyanComponents": []
+    }
+  ],
+  "retryMetricsMethod": "cyan R<170,G-R>35,B-R>35; outside >5px expanded mask; missing >5px eroded mask; colour proxy requires visual review",
+  "strictWaterMaskPass": null,
+  "waterMaskVisualReview": "No remaining visible water exceptions in selected corrective versionsr05c07a4/r06c07a4; colourproxy is not exact pixelgeometry proof."
+}

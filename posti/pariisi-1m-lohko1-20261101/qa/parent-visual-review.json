@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-01T01:40:10.318103+00:00",
+  "reviewComplete": true,
+  "readyForReceiverReview": true,
+  "outcome": "native-quality-reviewed-with-documented-source-and-seam-boundary-limitations",
+  "selectedImages": 9,
+  "generationCalls": 15,
+  "selectedCorrectiveAttempts": {
+    "r05-c07": 4,
+    "r06-c07": 4
+  },
+  "nativeByteIdentityVerified": true,
+  "groundGeometryPixelCertified": false,
+  "limitations": [
+    "r05-c07 ja r06-c07 valittiin neljänsistä kokonaisista otoista. Ensimmäisten versioiden ylimääräiset vesialueet sekä r05-c07:n kaksi sinistä pyöreää allasta korjattiin. Korjauskuvien sallitut jokialueet säilyivät; valitut versiot katsottiin täyskoossa ja lähikuvina.",
+    "Värimaskin tarkistus ei löytänyt yhdessäkään finaalissa yli 400 pikselin yhtenäistä sinialuetta yli 5 pikseliä vesimaskin ulkopuolelta. Mittari tunnistaa myös kattokiiltoja ja voi ohittaa vähäkylläistä sinistä, joten tämä ei ole täydellisen maskinmukaisuuden todistus.",
+    "Pienet sauma-alueen vesireunapoikkeamat: r05-c08 bbox [1064,999,1087,1024], 360 värimaskipikseliä, sekä r06-c06 bbox [1510,0,1536,18], 253 pikseliä. Molemmat ovat 128 pikselin limityksessä. Näiden lähikuvat ovat QA-paketissa; huomioitava vastaanottajan leikkauspolussa.",
+    "Lähdevesimaskit eivät itse ole täysin yhtenäiset limityksissä: seitsemässä 12 saumasta on valkoisen/mustan alueen eroja (158–7083 pikseliä). Tarkat alueet: qa/source-mask-overlap-check.json. Eroja ei peitetty muuttamalla lähteitä tai toimituskuvia.",
+    "r06-c08:n geometriaohjeessa kanava jatkuu yläreunaan, mutta vesimaski kieltää sen ylimmät noin 100–110 pikseliä. Finaali seuraa vesimaskia ja näyttää tämän osan kuivana. Alue on 128 pikselin limityksessä r05-c08:n kanssa; vastaanottajan pitää huomioida ristiriita saumaleikkauksessa.",
+    "Kattosävy, musteviivat ja julkisivut pysyvät q11-tyylissä. Kahdessa uusintakuvassa pienet kattodetaljit ovat hieman pehmeämpiä. Kuvia ei suurennettu, terävöitetty tai retusoitu.",
+    "Kadun, rannan ja korttelin ääriviivoissa sekä rakennusten nousussa voi olla pieniä generatiivisia poikkeamia. Täsmällistä kadunkeskilinjojen pikselisiirtymää ei ole sertifioitu. Vastaanottajan pienimmän eron leikkauspolku, kapea häivytys, lähizoomi ja PT:n yhtenäisyysarvio ovat erillisiä seuraavia vaiheita.",
+    "Yhdeksän palan esikatselu näyttää erilliset kokonaiset palat vierekkäin ja sisältää limitykset kahteen kertaan; se ei ole pelissä käytettävä saumattu kartta.",
+    "Omistajan/PT:n lopullinen tämän erän hyväksyntä, runtime-integraatio ja julkaisu eivät sisälly tähän toimitukseen. Lähteen seuraavia 88 palaa ei ole vielä tilattu eikä aloitettu."
+  ]
+}

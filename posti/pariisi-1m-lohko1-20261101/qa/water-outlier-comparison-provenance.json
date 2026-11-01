@@ -1,0 +1,54 @@
+{
+  "createdAt": "2026-11-01T01:39:22.472562+00:00",
+  "description": "water-outlier-1..4.png compare initial attempt001 final / source geometry / source water mask, vertically; retained as rejected-version QA history, not current final checks.",
+  "files": [
+    {
+      "file": "water-outlier-1.png",
+      "tile": "r05-c07",
+      "attempt": 1,
+      "crop": [
+        260,
+        900,
+        910,
+        1024
+      ],
+      "sha256": "5aa8cb9282122bad6f368a50d7e6f2d9ae6dfe4dd4931b590efcfb58153ac7d5"
+    },
+    {
+      "file": "water-outlier-2.png",
+      "tile": "r06-c07",
+      "attempt": 1,
+      "crop": [
+        200,
+        0,
+        400,
+        100
+      ],
+      "sha256": "ee9c7decf17fed1b1677dbb710d945a3e69fb525b128790ec78defbf2d89097a"
+    },
+    {
+      "file": "water-outlier-3.png",
+      "tile": "r06-c07",
+      "attempt": 1,
+      "crop": [
+        720,
+        380,
+        920,
+        520
+      ],
+      "sha256": "ee9c7decf17fed1b1677dbb710d945a3e69fb525b128790ec78defbf2d89097a"
+    },
+    {
+      "file": "water-outlier-4.png",
+      "tile": "r06-c07",
+      "attempt": 1,
+      "crop": [
+        1436,
+        400,
+        1536,
+        540
+      ],
+      "sha256": "ee9c7decf17fed1b1677dbb710d945a3e69fb525b128790ec78defbf2d89097a"
+    }
+  ]
+}
