@@ -2678,3 +2678,18 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   proto-3d/lokit/esikatselu-20261101-154237/v06-koonti.jpg (yläkuvat), havainne-editori-20261101-145338/06/havainne.png.
   HUOM ennen muutosta: havainne koskee ulkoasua, paikat ja mitat pidetään oikeina (omistaja 20.10.) → tarkista oikea pihan leveys
   ennen kuin kavennetaan; mahdollisesti kyse kameran paikasta, ei mallista. Päätös PT:ltä.
+
+## LISÄYS 202 (1.11. 23.0x): OVI05 = P-KUJAPORTTI AVOIMEKSI (PT 22.4x, VS) + LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- SYY (VS): juoksun 05 portin (p-kujaportti, paikka −251,3, 400,0) ovet lähes mustat, koska aukon yllä 1,8 m porttirakennus (V4_red 4,1–5,9 m,
+  sinivihreä vyö) + aumakatto → katettu käytävä; havainne 05: avoin muuriaukko, yllä vain palkki ja taivas.
+- TEHTY: uusi T/portti_avoimeksi.py (Blender) <sis> <ulos> [PALKKI_Y 4,6] [LEVEYS 3,62] [KATTO_Y 5,6]: pinnat y > 5,6 pois (katto, chiwen,
+  harjaeläimet), |x| < 3,62 leikkaus 4,6:ssa + yläpuoli pois + kansi. Sivumuurien räystäät (y 3,3–4,1) ja muut mitat ennallaan.
+  Lähde RS (v85) → U/kujaportti-avoin/p-kujaportti-lod0.glb (EI leivottu). Pari tasaisessa valossa U/kujaportti-avoin/pari-05-nyk-uusi-havainne.jpg
+  → PT:lle kuittauspyyntö 23.0x.
+- ODOTTAA PT:n kuittausta. SEN JÄLKEEN: (1) RS-klooni (cp -c -R $RS U/kujaportti-avoin/rs) + leikattu lod0 sinne → leivo_malli.py kuten
+  leivonta-v4.zsh vaihe 3 yhdelle mallille (SIJ, NAYTTEET 256, 1024, SOLU_LIMA oletus) → valo_polvi 0,6/0,3 → glb_materiaali_vari V4_red;
+  (2) lod1/lod2: portti_avoimeksi.py v91:n lod1/lod2:een (ei valoa); (3) paketti rakennukset-v92 (= v91 + p-kujaportti) → SHA PT:lle.
+  Pitkä ajo Monitorilla (LISÄYS 199). HUOM: tausta 0-3 / kuja-0-3 lattiassa vanhan katon leivottu varjo, kunnes tausta leivotaan uudelleen.
+- Rakennukset-v92 voi samalla sisältää edusta-v3:n (LISÄYS 192 AVOIN 1) – kysy PT:ltä.
+- Jonossa: LISÄYS 200 (kujakivi), 201 (Wumenin U-piha). Ei ajoja käynnissä. Levy 87 Gi.
