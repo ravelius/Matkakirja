@@ -2604,3 +2604,15 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   SHA256SUMS 6f1519f40c50, korvaa v35:n (abbf3a81b8e8). Laattojen yläpinnat (ruudut.py): y 1,4 nolla 52 → 0 %, y 2,0 52 → 13 %.
   → PT:n kuittaus → JU vie → PK "kielletty-muurikate-v36/". v4-paketin oma kielletty-muurikate-v33 (osasarja varjostajana) EI käyttöön.
 - Leivonta v4 + vahti (pid 46916) jatkuvat ennallaan (LISÄYS 192 KÄYNNISSÄ / KUN VALMIS).
+
+## LISÄYS 194 (1.11. 06.4x): MAALIPORTIN EDUSTAN VINO SAUMA → TAUSTA-V89E PT:LLE (PT 06.5x) — ALOITA TÄSTÄ
+- SYY (PK pelikoodari/reitti-216/sauma/sauma-havainnot.txt): kk-tausta-2-0:n V4_lattia-ramppi (z −350,6 → −364,5, y 0 → −0,37, koko seinän
+  levyinen) oli x 0–25 kohdalla rikki: harjanteet y 0 (x ≈ 0–1 ja 12–13), upotettu tasanne −0,46 ja pinnan alla piilokerros → vinot taitteet.
+- KORJAUS: uusi T/tasoita_ramppi.py <sis> <ulos> [--kuiva]: alueella x −0,01…25,5, z −364,5…−350,6 piilokolmiot (> 2 cm näkyvän pinnan alla)
+  pois ja kärjet y = 8,313 + 0,02381·z (sovitus puhtaasta rampista x 26–56, jäännös med 1 cm), NORMAL rampin; UV:t ja valo ennallaan.
+  42 kärkeä, suurin siirto 0,30 m, 4 kolmiota pois. Pohjareuna (portin syvennys −0,46…−0,74) ennallaan. lod1/2 ennallaan.
+- TAUSTA-V89E (U/tausta-v89e.zsh) = v89d + paikattu 2-0-lod0: _valmiit/juoksupeli-kk-lavastaja-tausta-v89e-vienti-20261101, SHA256SUMS
+  d17cdbc7b163 → PT → JU → PK "kielletty-tausta-v89e/". Blender-tuonti OK.
+- Sama paikka myös: leivonta v4:n U/leivonta-v4/kielletty-tausta-v90/kk-tausta-2-0-lod0.glb (v4-paketti saa sen) ja lähde
+  U/tausta-v89-lahde/kk-tausta-2-0-lod0.glb (tulevat leivonnat); alkuperäiset U/varmuus-ramppi/.
+- AVOIN: tile 1-0:n puolella x −3…0, z −351…−353 pieni harjanne (y 0) yläreunassa, ei PK:n osumissa.
