@@ -1,0 +1,42 @@
+{
+  "attachmentsByteVerified": [
+    {
+      "file": "katot-2x-r3c4-r4c4-G.jpg",
+      "sha256": "b6bfd5f519380cc753fd4dfa250a551b9e07ed94a3c59077c4c319d525d3ff87",
+      "bytes": 370498,
+      "size": [
+        2440,
+        600
+      ]
+    },
+    {
+      "file": "nykyinen-r4-c4-q11-2x-suurennos.png",
+      "sha256": "12e1f27b45e5cdf8e917d8ec61966bede0a05226c654d5bcafb1d0df31908cad",
+      "bytes": 2808065,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "ohje-r4-c4-q11-v6-geometria.png",
+      "sha256": "0b85429e1a87ef9ef5d703c72754411a61809cddcc21026b7c4cc444ff686285",
+      "bytes": 1064717,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "vesimaski-r4-c4-q11.png",
+      "sha256": "c51177d11c438d3b1a46a375b2e63d5f1aa084b29c42c632d747307636365f99",
+      "bytes": 1605,
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "maskAllBlack": true,
+  "waterAllowedPixels": 0
+}

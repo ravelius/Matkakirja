@@ -1,0 +1,32 @@
+{
+  "taskNumber": 1427,
+  "assetPath": "proto-3d/_tyo/codex/pariisi-pseudo3d/pariisi-pseudo3d-r4-c4-q11-1m.png",
+  "width": 1536,
+  "height": 1024,
+  "mode": "RGB",
+  "nativeMetersPerPixel": 1,
+  "nativeOutputByteIdentical": true,
+  "upscaled": false,
+  "croppedAfterGeneration": false,
+  "retouchedAfterGeneration": false,
+  "generationCalls": 1,
+  "generationMode": "built-in image_gen; complete new image",
+  "sourceCommit": "69e448b4b195df418832647920fe6b3ae6bb653e",
+  "sourcePath": "posti/karttaseppa-codex-pariisi-pseudo3d-1m-koe-20261101.md",
+  "sourceCropInR4C4": {
+    "x0": 0,
+    "y0": 0,
+    "width": 1536,
+    "height": 1024
+  },
+  "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d",
+  "bytes": 3806172,
+  "mapAttribution": "© OpenStreetMap contributors — https://www.openstreetmap.org/copyright",
+  "approvedStyleReference": "G-referenssi-owner-style-G-confirmed.jpg; ordinary building style only",
+  "waterAllowedPixels": 0,
+  "deliveryScope": "one native quarter-tile trial; claude/postilaatikko only",
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "fullCityAuthorized": false
+}

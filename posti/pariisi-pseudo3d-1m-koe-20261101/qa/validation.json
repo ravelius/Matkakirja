@@ -1,0 +1,248 @@
+{
+  "checkedAt": "2026-11-01T01:07:42.408935+00:00",
+  "taskNumber": 1427,
+  "generationMode": "built-in image_gen, complete new image",
+  "generationCalls": 1,
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pseudo3d-r4c4-q11-1m-20261101/final/pariisi-pseudo3d-r4-c4-q11-1m.png",
+  "bytes": 3806172,
+  "sha256": "23a01c075d22eff5b17c492a8923c2becccf0bf3cd0d9d33eed434efe9b5380d",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "upscaled": false,
+  "byteIdenticalToNativeOutput": true,
+  "nativeMetersPerPixel": 1,
+  "sourceCropInR4C4": {
+    "x0": 0,
+    "y0": 0,
+    "width": 1536,
+    "height": 1024
+  },
+  "waterDiagnostics": {
+    "allowedWaterPixels": 0,
+    "turquoiseCandidatePixels": 7028,
+    "visuallyAddedWater": false,
+    "method": "G-R>35 and B-R>35 and R<170; colour proxy plus full visual review, not semantic classifier",
+    "connectedComponents": 2493,
+    "largestComponents": [
+      {
+        "pixels": 37,
+        "bbox": [
+          277,
+          795,
+          281,
+          807
+        ]
+      },
+      {
+        "pixels": 35,
+        "bbox": [
+          252,
+          383,
+          269,
+          392
+        ]
+      },
+      {
+        "pixels": 34,
+        "bbox": [
+          1034,
+          989,
+          1052,
+          991
+        ]
+      },
+      {
+        "pixels": 33,
+        "bbox": [
+          425,
+          748,
+          432,
+          753
+        ]
+      },
+      {
+        "pixels": 31,
+        "bbox": [
+          719,
+          445,
+          731,
+          448
+        ]
+      },
+      {
+        "pixels": 27,
+        "bbox": [
+          1370,
+          861,
+          1379,
+          865
+        ]
+      },
+      {
+        "pixels": 25,
+        "bbox": [
+          1362,
+          124,
+          1370,
+          131
+        ]
+      },
+      {
+        "pixels": 25,
+        "bbox": [
+          91,
+          996,
+          95,
+          1004
+        ]
+      },
+      {
+        "pixels": 24,
+        "bbox": [
+          1499,
+          117,
+          1508,
+          122
+        ]
+      },
+      {
+        "pixels": 24,
+        "bbox": [
+          434,
+          710,
+          444,
+          713
+        ]
+      },
+      {
+        "pixels": 23,
+        "bbox": [
+          1165,
+          377,
+          1172,
+          386
+        ]
+      },
+      {
+        "pixels": 22,
+        "bbox": [
+          183,
+          39,
+          191,
+          47
+        ]
+      },
+      {
+        "pixels": 22,
+        "bbox": [
+          876,
+          268,
+          881,
+          275
+        ]
+      },
+      {
+        "pixels": 22,
+        "bbox": [
+          698,
+          846,
+          704,
+          853
+        ]
+      },
+      {
+        "pixels": 21,
+        "bbox": [
+          1,
+          830,
+          9,
+          836
+        ]
+      }
+    ],
+    "componentsAbove400Pixels": 0,
+    "colourProxyIncludesBlueRoofHighlights": true
+  },
+  "groundGeometryDiagnostic": {
+    "roadColourMaskIoU": 0.8806768587256182,
+    "roadMaskReferencePixels": 320267,
+    "roadMaskCandidatePixels": 332578,
+    "contourCoverageWithinChebyshevPixels": {
+      "1": {
+        "referenceContourNearCandidatePercent": 94.78974702630256,
+        "candidateContourNearReferencePercent": 78.75301723529495
+      },
+      "2": {
+        "referenceContourNearCandidatePercent": 98.01976880549506,
+        "candidateContourNearReferencePercent": 82.39487317024971
+      },
+      "4": {
+        "referenceContourNearCandidatePercent": 99.15898810521026,
+        "candidateContourNearReferencePercent": 85.12203040526234
+      },
+      "8": {
+        "referenceContourNearCandidatePercent": 99.72357178756911,
+        "candidateContourNearReferencePercent": 87.22809593043773
+      }
+    },
+    "method": "Near-white RGB road proxy, R>=238 G>=236 B>=226 channel spread<24; inner contour, exclude 3px frame. Bright architecture can enter proxy. This is not a certified street-centreline displacement measurement.",
+    "pixelExactGeometryCertified": false
+  },
+  "sharpnessDiagnostic": {
+    "method": "Grayscale FIND_EDGES variance, same atlas-coordinate crops, exclude 1px filter edge; edge contrast proxy, not proof of readable dormers or in-game acceptance",
+    "rois": {
+      "center": {
+        "roi": [
+          600,
+          350,
+          984,
+          670
+        ],
+        "previousUpscaledVariance": 1056.557006042128,
+        "newNativeVariance": 7995.59438555628,
+        "ratio": 7.567593929936491
+      },
+      "southwest": {
+        "roi": [
+          160,
+          620,
+          544,
+          940
+        ],
+        "previousUpscaledVariance": 1028.5268550497506,
+        "newNativeVariance": 7614.298495129039,
+        "ratio": 7.403111020140286
+      },
+      "northeast": {
+        "roi": [
+          1050,
+          190,
+          1434,
+          510
+        ],
+        "previousUpscaledVariance": 1047.062795725618,
+        "newNativeVariance": 8141.36086713294,
+        "ratio": 7.775427510525719
+      }
+    }
+  },
+  "visualReview": {
+    "fullTileViewed": true,
+    "sameAtlasCropAt200PercentViewed": true,
+    "roofPlanesMoreSeparatedThanPrevious": true,
+    "thinBrownRoofContoursVisible": true,
+    "distinctChimneyMarksVisible": true,
+    "smallDormerMarksVisible": true,
+    "noAddedTreesPeopleTraffic": true,
+    "noAddedLandmarks": true,
+    "noWaterVisible": true,
+    "caution": "Small dormers remain stylized and do not all resolve into complete window structures; closest-game-zoom acceptance belongs to receiver. Minor outlines and shadows differ from geometry source."
+  },
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "fullCityAuthorized": false
+}
