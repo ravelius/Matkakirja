@@ -2771,3 +2771,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
 ## LISÄYS 212 (1.11. 23.2x): JUNAN 217 LUKITUS AUKI (PT) → V92 JA TAUSTA-V91 LÄHETETTY NS:LLE JA JU:LLE
 - SHA-rivit lähetetty: rakennukset-v92 70c7b997c2f9 ("kielletty-rakennukset-v92/"), tausta-v91 7e9b6819202c ("kielletty-tausta-v91/").
   LISÄYS 211:n ODOTTAA-kohta tehty. Muu tila kuten LISÄYS 211 (Codexin sisätilapiirrokset odotettavissa; jono 200 ei nyt).
+
+## LISÄYS 213 (1.11. 23.3x): JONOON – WUMENIN U-PIHA HAVAINNE 06: KIVIJALKA + SIIPIEN TERASSIT (PT, ei kiire) — ALOITA TÄSTÄ
+- tausta-v91: JU hylkäsi (LAHTEET.md ilman lisenssiä) → rivi "Lisenssi: oma …" lisätty pakettiin ja U/LAHTEET-tausta-v91.md:hen, SHA ennallaan
+  7e9b6819202c, JU:lle kuitattu. v92 viennissä; NS: PK vaihtaa kansiot junaan 217.
+- AVOIN (ei aloitettu, PT 23.3x): a-meridiaaniportti, havainne 06 (VS c9edd5e56, kuva proto-3d/lokit/havainne-editori-20261101-231802/06/
+  kamera06-ennen-jalkeen.jpg): 1) harmaa kivijalka porttimuuriin ja siipien sisäseiniin (~¼ korkeudesta; HUOM v17:ssä U-jalustalle jo
+  3,0 m kivijalka – tarkista, puuttuuko sisäseinistä/porttimuurista), 2) siipien etupään (eteläpään) terassit kaiteineen.
+  Tarkista ensin todellisista kuvista (mitat ja paikat oikeat, omistaja 20.10.), sitten tasainen-valo-pari PT:lle. Varjoon ei kosketa.
+- Muu: sisätilat odottavat Codexia (LISÄYS 211); 200 ei nyt.
