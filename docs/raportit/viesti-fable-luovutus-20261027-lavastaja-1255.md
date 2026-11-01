@@ -2537,3 +2537,57 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut, K = kielletty-rake
   varjostajina. Sama avoin syy jalustalaattojen länsipuoliskossa (LISÄYS 186). Koe: aja edusta-v2.zsh:n leivo_malli ilman avoimia (SIJ tyhjään json:iin
   {"huoneet": []}) → jos nolla katoaa, huone peittää; sitten uusi paketti + SHA → PT.
 - Siivous: K/_roska/*, K/hylatty-v88a-c2v18, K/koe-v111, U/kielletty-tausta-v82…v84 poistettu (APFS-klooneja, tilaa ei vapautunut).
+
+## LISÄYS 188 (1.11. 05.4x): EDUSTA-V3 PT:LLÄ — CHAOFANGIN NOLLAT = IRRALLISET PYLVÄSFASETIT, EI VARJOSTAJA — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- KOE (U/edusta-v2-koe/, koe.zsh): A ilman avoimia huoneita ja B ilman mitään ulkoisia varjostajia antoivat TÄSMÄLLEEN saman nollan kuin v2
+  → ei varjostaja (avoimet huoneet ovat z 300–550, chaofang z −612). Nollafasetit näkevät taivaan (Blender-säde normaalin ja 45° suuntaan vapaa).
+- SYY: chaofangin kahdeksankulmaisten pylväiden fasetit ovat irrallisia kasvoja (ei yhteisiä kärkiä) → solu_uv1:n SOLU_SYL-kaista sai oikeat
+  UV:t, mutta pack_islands näki jokaisen fasetin omana saarekkeena (14 × 0,5 tekseliä, 4 px marginaalit) → tekselikeskipiste ei osu → leipomaton,
+  dilaatio ei ylety. KORJAUS: solu_uv1.py SOLU_LIMA=<m> (oletus 0 → käynnissä oleva v4 ennallaan; varmuuskopio solu_uv1.py.ennen-lima):
+  kaistan fasetit limittäin LIMA m → merge_overlap yhdistää kaistaksi.
+- EDUSTA-V3 (U/edusta-v3.zsh, SOLU_LIMA=0.003, muuten kuten v2): _valmiit/juoksupeli-kk-lavastaja-edusta-v3-vienti-20261101, SHA256SUMS
+  e25d5f5c4d0d. Chaofang |x| 50–56, y 1,9–4,5 V4_red m²: aukiolle päin pylväsviistot 45 → 3 %, suorat 20 → 11 % (loput = ±z-sivut ristikko-
+  paneeleja vasten); poispäin viistot 80 → 58 % (seinää vasten). Duanmen runko V4_red 8 → 3 % (keskipiste.py). Mittari: scratchpadin kohti.py
+  (poistuu; pohja T/nollavalo/ruudut.py + |x|-rajaus).
+- AVOIN: leivonta v4:n rakennukset leivotaan ilman LIMAa → jos niissäkin on irrallisia pylväsfasetteja, PT:n päätös SOLU_LIMA=0.003
+  oletukseksi ja v4:n rakennukset uudelleen (rm U/leivonta-v4/valmiit/r-*). Tarkista ensin valmis malli kohti.py-tyyppisellä mittarilla.
+
+## LISÄYS 189 (1.11. 06.3x): SOLU_LIMA OLETUKSEKSI, LEIVONTA v4:N RAKENNUKSET ALUSTA (PT 06.3x) — ALOITA TÄSTÄ
+- PT kuittasi edusta-v3:n (e25d5f5c4d0d) ja päätti: SOLU_LIMA=0.003 yhteiseksi oletukseksi. T/leivo_malli.py (varmuuskopio .ennen-lima) asettaa nyt
+  os.environ.setdefault: SOLU_SYL=1, SOLU_LIMA=0.003, MARGINAALI=0, DILAATIO=4 (env voittaa). solu_uv1.py:n oma oletus LIMA 0 → leivo_valo
+  (tausta, muurikate) ennallaan.
+- Leivonta v4 pysäytetty 06.3x kesken c-lantinen-kukkaportin; 16 r-merkkiä → U/leivonta-v4/valmiit-ilman-lima/; odotusajo nohupilla uudelleen
+  (pgrep -fl leivonta-v4) → rakennukset alusta a-meridiaaniportista LIMAlla. Tausta ja muurikate (t-*, muurikate) valmiit, ei uusita.
+- HUOM: kaiteeton-c2 (kaiteeton-v5.zsh) ja muut leivo_malli-ajot saavat LIMAn jatkossa automaattisesti; c2-v30 leivottiin ilman → aja kaiteeton-v5
+  uudelleen v4:n jälkeen, jos PT haluaa (kaiteettomissa samat pylväät).
+
+## LISÄYS 190 (1.11. 06.4x): VAHTI v4 → KAITEETON-V6 (c2-v31, LIMA) (PT 06.4x) — ALOITA TÄSTÄ
+- U/jatka-v4-kaiteeton.zsh nohupilla (loki U/ajo-jatka-v4-kaiteeton.log; pgrep -fl jatka-v4): 2 min välein, jos leivonta-v4 ei käynnissä eikä
+  lokissa "LEIVONTA V4 VALMIS" → odotusajo uudelleen (levypysähdykset); VIKA → pysähtyy. V4:n jälkeen ajaa U/kaiteeton-v6.zsh (= v5 + LIMA-oletus)
+  → _valmiit/…-kaiteeton-v3-vienti-<pvm> (kielletty-c2-v31) → SHA PT:lle, PK MuurikateC2Kansio "kielletty-c2-v31/".
+- Levy 75 Gi (raja 70). PT: jos ajo kirjoittaa paljon, kuitatut välitiedostot T7:lle (/Volumes/T7 4TB/Matkakirja-linnanrakentaja), ei poistoja
+  yöllä. Omat koekansiot ovat pieniä (< 120 Mt), ei siirretty.
+
+## LISÄYS 191 (1.11. 07.3x): MERIDIAANIPORTIN KESKIAUKON OVET (PT 07.1x) — ALOITA TÄSTÄ
+- Uusi T/ovet_lisaa.py <lod0.glb> <kuvalähde.glb> <Z>: rakentaa pariovilehdet juurisolmuiksi ovi_V (x < 0) / ovi_O (x > 0) aukon leikkauksesta
+  (seinät + katto tasolla Z), materiaali V4_portin_ovi = p-kujaportti-3:n portin-ovilehti-512 (punainen, 9 × 9 kultanastaa), paksuus 0,12;
+  UV1 = yksi leivottu seinätekseli (runko ja leivonta ennallaan).
+- Meridiaaniportti: ovet eteläosan suorakaideaukkoon z −10 (x −2,35…3,06, katto 5,40; holviosa z −6,7…14,5 ei sovi 65°:n avautumiselle).
+  Lehdet eri levyiset (2,34 / 3,05 m), koska aukko on 0,36 m itään origosta ja peli jakaa x = 0:ssa (kuten zhongyoumen). 65° pohjoiseen ei osu
+  holviin (Blender-kuvat K/ovet-meridiaani/ovi-etela-kiinni.png ja -auki.png).
+- Lisätty: leivonta v4 RU (kielletty-rakennukset-v91/a-meridiaaniportti-lod0.glb, varmuuskopio U/leivonta-v4/…ennen-ovet; LAHTEET-leivonta-v4.md
+  rivi) ja U/kaiteeton-v6.zsh (valmis-ovet-merkki, ennen pakettia). PK: PorttiOvet-kytkentä Meridiaaniportille (rakennukset + C2-kaiteeton).
+
+## LISÄYS 192 (1.11. 06.3x): LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
+- KÄYNNISSÄ: leivonta v4 rakennukset LIMAlla (06.23 d-itainen-kukkaportti; a-meridiaaniportti valmis + ovet lisätty) → osasarja → paketti
+  _valmiit/…-leivonta-v4-vienti-<pvm>. Vahti U/jatka-v4-kaiteeton.zsh (pgrep -fl jatka-v4) käynnistää levypysähdyksen jälkeen odotusajon
+  uudelleen ja v4:n jälkeen U/kaiteeton-v6.zsh (c2-v31 + Meridiaaniportin ovet) → _valmiit/…-kaiteeton-v3-vienti-<pvm>.
+- KUN VALMIS: tarkista lokit U/ajo-leivonta-v4.log ja U/ajo-kaiteeton-v6.log; SHA256SUMS-rivit PT:lle (v4-paketti ja kaiteeton-v3) →
+  PK: RakennusKansio v91 + MuurikateC2Kansio "kielletty-c2-v31/" + PorttiOvet Meridiaaniportille. Tarkista ennen lähettämistä, että
+  a-meridiaaniportti-lod0(-kaiteeton).glb:ssä on solmut ovi_V/ovi_O (glb_materiaali_vari.py ei saa pudottaa niitä) ja edustan LIMA-mittari
+  kohti.py-tyyppisesti yhdelle rakennukselle (pylväsviistot nolla < 10 %).
+- AVOIN: (1) rakennukset-v92 = v91 + edusta-v3 (LISÄYS 180 AVOIN 2: q-duanmen/q-chaofang leivottuina edusta-v3:ssa). (2) jalustalaattojen
+  länsipuoliskon nolla (LISÄYS 186) – sama syy kuin chaofangilla? tarkista, ovatko laatat irrallisia kasvoja/omina saarekkeina.
+- Levy 84 Gi (PT siirsi lokeja T7:lle); jos < 75 Gi, omat kuitatut välitiedostot T7:lle (/Volumes/T7 4TB/Matkakirja-linnanrakentaja), ei poistoja yöllä.
