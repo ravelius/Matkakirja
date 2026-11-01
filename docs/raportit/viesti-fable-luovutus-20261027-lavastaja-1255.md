@@ -2436,3 +2436,7 @@ Kansio U = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-216/uusin
   rakennukset-v90 (= v89 + 中右门/中左门 pariovet juurisolmuiksi ovi_V/ovi_O ovet_solmuiksi.py, jako x = 0 koska peli venyttää lehden origoon;
   SHA 1976a9658a76). Molemmat PK:lle ja PT:lle; PK vaihtaa RakennusKansion ja ajaa c5:n. Leivonta v4 pohjautuu v90:een.
 - ODOTTAA: VS:n parit v89(b/d) ja 06 ulkorengas-v10:llä (LISÄYS 175); PK:n c5 v90:llä (Puyi sillalla, ovet).
+- LISÄYS 179 (1.11. 02.2x, PK, PT:n erä): AVOIN UUSI TYÖ — Meridiaaniportin keskiaukosta etelään näkyy tyhjä lattia ja valkoinen horisontti
+  (PK c5e b-115…117: /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261101-015229/b-115.png, b-117.png). Tausta-v89d/ulkorengas-v10: pohja
+  x −60…+80, z −395…−700 ei yli 0,5 m:n geometriaa. Pyyntö: portin edustan aukio sivumuureineen + Duanmen akselille (tarkista ensin havainne ja
+  omistajan linjaus, loki-hae "Duanmen"/"Meridiaaniportin edusta"). Tee leivonta v4:n jälkeen tai erillisenä palana; kuittaus PK:lle.
