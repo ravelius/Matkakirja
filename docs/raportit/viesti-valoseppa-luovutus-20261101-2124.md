@@ -12,7 +12,11 @@ send_messagella, kopio PT:lle. Ajon jälkeen `grep "Shader error" unity.log`. Lo
   kylläisyys × 0,45, sävy 0,56–0,62) osui haudan sävyyn. Korjaus: k15-kaista päättyy .58/.62 (oli .62/.67) + avovesi 0/0,13/0,24;
   07 85/116/148 → 69/128/184 (havainne 58/132/174). QA `valo k15 1 k a ta tl l` (57f81aadc). PT kuittasi, NS testit vihreät.
 
-## ODOTTAA PT:N KUITTAUSTA → NS
+## SEURAAJAN ENSIMMÄINEN TYÖ (PT 1.11. 21.3x)
+- 07 ilmakuvan kiven valotus: peli 219/212/207 vs havainne 188/177/175, säätö VAIN ilmakuvaan rajattuna (lähinäkymien kivi täsmää).
+  Lähtötiedot alla kohdassa AVOIN. Koonti KK:lle + kopio PT:lle, sitten kuittauspyyntö → NS.
+
+## KUITATTU PT 21.3x → NS (ei vielä varmistettu rungosta)
 - **5c8529d25** (linssiseppa2/ilma07-216, 5677e3b79:n päällä): 07 ilmakuvan puut tummemmiksi. Puut = korttipuut (JuoksuMaailma);
   uusi `_JuoksuPuukorttiSavy` (QA `valo savy puukortti r g b [kyll]`, 07b184df2) + `_Puukortti`-materiaalimerkintä kaikille
   V4_puukortti*-pinnoille (ulkorengas ei saa JUOKSU_KORTTI-avainsanaa, 1d1b93beb) + oletus 0,6/0,68/0,7 kyll 0,4.
