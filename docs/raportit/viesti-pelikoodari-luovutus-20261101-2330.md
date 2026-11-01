@@ -64,3 +64,6 @@ haarassa → SHA NS:lle runkoon ja uusi tallenne (UI mukana) PT:lle (EI KK:lle y
   OhjausPelaajalle, maali + Meridiaaniportin ovi. UI näkyy tallenteessa (HUD-palkki, ☰) → 7ddd353e8 toimii. Aukiolla yhä paljon seisovia eunukkeja
   (arkki _tyo/pelikoodari/tallenne-217/20261101-232407-arkki-alku.jpg). Kuvien fps 72 (opetuksen tauot: peliaika seisoo) – videon
   tekoon tallenne-video.sh käyttää fps.txt:tä; tarkista videon kesto. Seuraavaksi: taso 1 oletukseksi koodiin + eunukit + bugit.
+- KK:N BUGILISTA (PT 00.0x): /Users/Shared/Claude/proto-3d/lokit/bugit-juoksu-217-20261102/RAPORTTI.md (+ ruutukuvat). PK:lle: 1–3 kamera muurin
+  sisällä ja alkulento portin holvin läpi, 4 kamera ei seuraa käännöksessä, 10 alun sininen ruutu, 12 oliivi palkki maassa, 13 kameran 25° nykäys
+  0.47 (= omistajan sivunykäys?). Malliviat 5–9, 11, 14–15 → LAV. KAIKKI estävät TF 217:n (+ eunukit, 3-2-1, lähtö sisältä). Video PT:lle.
