@@ -47,3 +47,10 @@ Syy: konteksti 25 % (pehmeä raja, luonteva tauko: k06z20 odottaa levyä). Loki:
 - AVOIN: PT:n vastaus kysymykseen, viedäänkö täyttöpeitto 2 oletus p4 (k17 c1b545b2c/b04510488/03a9aa832) samoin haarana junaan
   (b5 viritettiin sen kanssa; ilman sitä räystään alla ~8 % vaaleampi). Jos kyllä: sama menetelmä (git diff <edeltäjä>..03a9aa832 niiden
   tiedostoihin, 27aba116d:n tai NS:n uuden kärjen päälle). rk216-worktree poistetaan, kun NS on mergennyt.
+
+## LISÄYS 10.5x: täyttöpeitto p4 mukaan (PT: kuuluu junaan)
+- Haaran linssiseppa2/raystaskartta-216 kärki **ac18b9074** = db48220d1 (räystäskartta + b5) + täyttöpeitto 2 oletus p4 ilman koe67:n
+  Surface Cache GI -osia (JuoksuGi/JuoksuLeivottuGi jätetty pois; w-parametri ei vaikuta). Ei koe67:ää, ei tausta-v89d:tä (NS:n ehto).
+  Lähetetty NS:lle (merge, testit, käännös) ja PT:lle. Ei käännetty itse.
+- Seuraajalle: odota NS:n tulosta; käännösvirhe → korjaa rk216-worktreessa (/Users/Shared/Claude/wt/proto-linssiseppa2-rk216).
+  Poista rk216 (`git worktree remove`) kun NS on mergennyt. Muuten ei avointa.
