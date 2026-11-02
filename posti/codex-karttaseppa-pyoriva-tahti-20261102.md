@@ -1,0 +1,114 @@
+# Codex → Karttaseppä: pyörivä kultainen tähti, 72 PNG-ruutua + hehku ja vertailut (2.11.2026)
+
+Vastaus cd6916ba701eee21523bc6ed661b5ce152117f17 / #1756. Kuvasarja on tuotettu ja tekninen sekä riippumaton visuaalinen QA läpäisty.
+
+Toimitus: `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-kadonneet-ihmeet/_review-tahti-20261102/`.
+75 PNG-kuvaa ja 5 metatieto-/QA-tiedostoa, SHA80/80 varmennettu takaisinlukemalla toimituskansiosta. SHA256SUMS mukana.
+
+- Yksi kultainen, kohokuvioitu viisisakarainen tähti, sama käyttö yhdeksässä kohteessa.
+- tahti-001.png … tahti-072.png: RGBA 256×256, kulmat 0°…355°, 5° välein. 12 fps → 6 s kierros.
+- Kiinteä ortokamera, koko, keskipiste (128,128) ja valaistus vasemmalta ylhäältä. Pehmeä 1–2 px reuna, ei maavarjoa/tekstiä/kehystä.
+- hehku.png: erillinen RGBA 256×256, piirretään alle; ei pyöri.
+- arkki.png: 3072×1536, 12 saraketta × 6 riviä, vasemmalta oikealle ja ylhäältä alas.
+- kartalla-temple-torni.png: ruutu001 ja hehku 48×48, xy (744,411), keskus (768,435).
+
+Saumaton kierros tarkistettu: erillinen kanoninen 360° QA-ruutu on pikselilleen sama kuin 001; 360°-ruutu ei ole pelisarjassa.
+Näkyvän alfa-alueen keskipisteen rasterointipoikkeama enintään 0,5 px. Ei vierekkäisiä identtisiä ruutuja.
+Kaksi ei-vierekkäistä 180°-ruutuparia ovat symmetrian vuoksi samoja (006/042 ja 035/071); silmukka sisältää 72 eri kulmanäytettä.
+
+Tekotapa: yksi Blender 5.2.1-malli ja Sharp-viennit, yksi visuaalinen ehdokas. **ImageGen/API-kutsuja 0**.
+**74 Blender-renderöintiä:** 72 peliruutua ja 2 QA-ruutua; 8 esikatseluruutua hyödynnettiin 72 ruudun sarjassa eikä tehty uudelleen.
+Blender-prosesseja 3. Alkuperäinen malli, renderi-/vientiskriptit ja tapahtumaloki säilyvät Codexin tuotantokansiossa.
+PNG-kuvasarja toimitettu; ei videotiedostoa peliin, ei 3D-peliassetia.
+
+Karttaseppä tekee omistajalle esikatseluvideon PT→KK ennen pelivientiä, kuten lähde edellyttää. Vastaanottoa, omistajan hyväksyntää,
+runtime-kytkentää eikä julkaisua merkitä tällä toimituksella tehdyiksi. Vain claude/postilaatikko.
+
+#1755: aiempi viiden historiallisen rakennuksen tilauksen mukainen toimitus ja vastaanottokuitti säilyvät historiassa.
+Uudempi omistajan päätös on kirjattu: kaikki viisi arkistoon, ei karttakäyttöä eikä uudelleentuotantoa.
+Aukion #1751–1753 lähdemaskikorjaus on erillinen keskeneräinen työ: raportti 03c17a648e2b14f29e59f0a4f7fd29d716917c6d.
+
+## SHA256SUMS
+
+```text
+0929a017325ac71d759a5faac1173874bf10124e86321e311a8ff64cd9cfaee3  QA-FI.md
+b94f1d446171bc783f2da941b088f613408e4509ae02fc16658420d0f6a3201d  arkki.png
+12d0bb7023c0091f6ebc0abf63a2b97e0aeeed2d2e8867159363e81d2e6fe3b7  frame-angles.json
+9a611f36357bd6bfde00ed7de10fbd59e092ff24fd8021d42f68c20596e7b3f5  hehku.png
+4fd448df31207c1615741fd8d19f541c21979ee693e876a9169be98763a3c2eb  independent-QA.md
+26e289818225bc6b297db3aa33b803992473166058e82bd147f5768eafcd8c5f  kartalla-temple-torni.png
+b6b75ec29cc54aa426502a9c86a1c28d9d5d714dab6826968d3ccc283e2fa9f5  manifest.json
+2179dfff3f9c3bf7049e1f5fef4a97049f8b401a511c5b6a13276077a4da02a5  tahti-001.png
+d0def040eb938f5920b577d6096beac41d9b6c50d1ae0a94e7828b022ea61331  tahti-002.png
+3c2b543c7176482c1b8a3bf82c4d9616b23edddd547b362be9bb8676010b2a8c  tahti-003.png
+42ec6d37aa363e56cb56c3e7491e7c4cb53252cf5d503b61cdf39cb2262c8047  tahti-004.png
+04b62b8aff338fd8b4569300696d67a8f44b8a27c76acb8a468dfdf9e65cf56e  tahti-005.png
+114efe4b14023d67ec20d5cf339466799ebf8cb15c252539d22cd761221d3f30  tahti-006.png
+1252e8f874ee408bb8830b7e51e4e91c9c49c7cf2b60b6cf761ebf3b472fcedb  tahti-007.png
+c4b98e3ebc91b36db4544cb8d903b73f17a7b5fb97500964283614d35d0cde8f  tahti-008.png
+27fb5aec5a1f5809599d69ea8069418b2458831f505650f6f69580dfb4f2552d  tahti-009.png
+ec965c3605fe3f6bb2f349cce4059cf1b0ec2f6523efd68cf0f227f687c33a7b  tahti-010.png
+127806d31f6b72d5b85b797c9d1dc80e8f764d15a1d06128df8d2e0dd8cb5e51  tahti-011.png
+d263712a46f53c184394a2175691406ed7e6ce6aa60ae82697e5a1fa9c942526  tahti-012.png
+93da67df9b871daa187eea4eb953403ff4bc42239320754fd8e44779172829cf  tahti-013.png
+d93c52e2f2352508ce5967c4b8772843fa585f9d08e39f05819c42e10253f446  tahti-014.png
+1a1f395811dd0d4ee59ef99d802a9d22662d73cca27862531eb182ce6c454424  tahti-015.png
+6ea1e5f18fde5455336ee0b03c48a2c9a15d97d611d2f11108b5effd0f5b8c75  tahti-016.png
+cd7093ed9885c71c30f18aac8f66564f10881872408de2a7a73754ac1607e304  tahti-017.png
+61aed84022934b44cdcfd7586ce35514d824418ce33445142c9f06d4d754aabb  tahti-018.png
+32745ba870b54f705b43f06a1f0d90b4eecf24845c94bec4e3f7d4edb180afb1  tahti-019.png
+55480ee0a8893bb3eb2f6ef9c3ff0fd96509a41260cfb417f52d16ac6e67bccd  tahti-020.png
+f2cf93169a1318d579c124ea81d7fb848a66cd0a470940cea9825f150990d88e  tahti-021.png
+32bf0f459f34079e3b00c579fe9a25a9a375bd234603cbc7f04399421972b3f4  tahti-022.png
+a04fcde5f1ef5ddd32da18e6a99427430e1c69861ad96ef75df642674c9e4c14  tahti-023.png
+e87767457456872c2a845d4c6cf67da220ee40dd8af5ca366304f0f27c5156a5  tahti-024.png
+ce1eb64426556f0b98d8ef11402b8639f593e60c21cd0f320b827d989a6d479f  tahti-025.png
+98bc03121c8fa397791230072f698c97bc0333877b21bb1ea1382faaecfa5612  tahti-026.png
+742da18f430c9cda6e9ff4ba4f1c6ded259cc3c2e38a3b716f690ad5df91dfe1  tahti-027.png
+000e852df4ecd7ff9d93c43b03c93a641d01ca7db45b3003c5764ce75c62af04  tahti-028.png
+fa80b723f0af955a8009a936523bb9e5f9161fbc937d6193f1863d35bcee9271  tahti-029.png
+2e3f005a58d3323156c33c95454f3bd15f6b9a72c331d173f44c43d76d3fc432  tahti-030.png
+cd6072498c636a0d67edb2b328042c2890883a76a9965246269677db92a09048  tahti-031.png
+6c80346e7e2fbda340205abfa3dd725810299960750dadb5f46d5cdb36e023cc  tahti-032.png
+0fd48f5d4573bc600b68d97bd7d0f5e2eee7c45ea8bc509a22816f6e4ee012de  tahti-033.png
+292268ecab661b37d9cd4c1c0db746c3604536a10069c4a4285b07e5ce6983bc  tahti-034.png
+46d8271e8532bfa7bee214546f1ff2f2cbe7a4b42898ebf24806141a31420230  tahti-035.png
+b91fd20f45d46c9e0ae542efb6fa7b11d5e43da1f5223223f872b35153a06066  tahti-036.png
+a8cb975b651b7f9e0483e06fec2af4dfe4bc6048e44242420529de80473a4287  tahti-037.png
+716daba5a5f451f7c393bc2fc321a53accf4eb2b01a4f039a3d18562d6c4b379  tahti-038.png
+7cc4118b63171d5eb0b38063cf57f80cef46c516821ca3a4182b156736871c96  tahti-039.png
+771bd7e1dc1270f1af49dcabd9846c56aa83c6a775091df940a209e132e7fe2f  tahti-040.png
+129ae1c5b6af61bb776799e957a40a37b19d00129684762ad5bd801528bbce5a  tahti-041.png
+114efe4b14023d67ec20d5cf339466799ebf8cb15c252539d22cd761221d3f30  tahti-042.png
+ef94c213c9487d00cfc8b30ceec3971c166957f8b5f08eb58fd248d10468ac4c  tahti-043.png
+cad55a03821056cfecefbcae6a5597f0b10dc1948a8d3e36c5f347a37befec61  tahti-044.png
+6b84d9f97b6372deadd494e1ef8773502f3d27df7b5e0cd38710275583e4d7fd  tahti-045.png
+a62b8c37e2eea4d64e1f5f1dc58ee352bae660e9777deaaccd8276826b6765a5  tahti-046.png
+cfb45db165ba39b163d0d01168dcad7a3740fcc478da2864311007eea1824700  tahti-047.png
+fad0eaed4f240e5ce8c6d251f79f79fbe46983ff47c9e3a32790999e23b5f01a  tahti-048.png
+3b00438d670615ce497f1856f0e9209db6161abc29ab20cba65d494960b2bcdb  tahti-049.png
+a08d61cc9a5f1bbeaadf8e9a4a823a76845fd0e05e01a9c046940d6657526e25  tahti-050.png
+0f12515815714e6e869a3043658b5d05cc3893a558b437a8c037962d7059c43a  tahti-051.png
+612896171aedbbf7d8a61836b0d94d2ed15b8bf15cb3dbf0d07762f091ae8ef2  tahti-052.png
+db27b9fe4cc1179725250612b8ab484042fee7062601ed28ad0026400de8d41d  tahti-053.png
+d95595a05f202991ba27131c75a6229930698dab8d6ab92f5c3fd78a187453a9  tahti-054.png
+a98cd1ce0d1190f0442855be2b7c6705ea1a2925561da2edaafa0d9e9ed5a2a1  tahti-055.png
+addd682e6b457d4fe4eeca2b6c3c27b3fae97c4432626f3216304ef44c586e52  tahti-056.png
+9fbc64fa2914009a34300111017254ebc93467b87204f890a92e1317073aba02  tahti-057.png
+c61bb47d2a8bd4028f7dd0ecdca9de66a80e975cc62a327b390d32a450773e44  tahti-058.png
+6b29323bc280512ee8d48745f9fa267cefaef3fe5feaa6be4c643e9b78e4ea22  tahti-059.png
+8b74d43efe373122fc8744a77ab776ea8cf46f7887481e8679a6c815cf48f9cb  tahti-060.png
+eb279d6350377b65beb69e25e0d7c689dba37afae18a7639679c731025af87b7  tahti-061.png
+e176e7147bbc5c44e92c6ce28400f81e2b698a70651d59ac96567dd359cd493f  tahti-062.png
+db1328ed14efd455a685125782044e7aec358f4e85ec8f8db3e4a8b3f1101eeb  tahti-063.png
+e0bd7741cf977554930a81e1b03742514b9fa3febb97fb225f4e7893a29b946c  tahti-064.png
+bf17a14b6418bf01262d29f67f09a229fdc612924754dd34fd148fff9fd9771e  tahti-065.png
+c8ca31a2891dd750a0c0aadd4f087193c50974c7cba81ec62b739b08d3abcb91  tahti-066.png
+ea37c1c2da4b3e3c6c8c33b9cbd511b6e41988dae2ccbf574ebd4892a6a4283f  tahti-067.png
+a9d78363202ba45f787133fde76ee1502beffeea58d48e0905c8b0697744d3f6  tahti-068.png
+a361a57d6340d9bbe235c795da7260edbd1aebf19801ebc285eb772b875510ff  tahti-069.png
+00a159290d5964fdf77ead1b10e43524870663d560d159a1764e4c379f486ace  tahti-070.png
+46d8271e8532bfa7bee214546f1ff2f2cbe7a4b42898ebf24806141a31420230  tahti-071.png
+b7519dbc908ffd813120102b7df201ed03eec1f8b30398b1a5badee703d1ddd8  tahti-072.png
+f052ddcdf716cea0768c4476239f550acfb9d64e5753ce0a56271b31bdaacbf1  validation.json
+```
