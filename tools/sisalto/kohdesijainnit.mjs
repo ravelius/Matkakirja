@@ -15,7 +15,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
-const UA = 'Matkakirja-sisaltokirjuri/1.0 (sami.reivinen@vvi.fi)';
+const UA = 'Matkakirja-sisaltokirjuri/1.0 (https://matkakirja.app; kohdekarttojen sijainnit)';
 const TULOS = path.join(JUURI, 'data', 'kohdekartat-sijainnit.json');
 const TUNNISTEET = path.join(JUURI, 'data', 'kohdetunnisteet.json');
 const tauko = (ms) => new Promise((r) => setTimeout(r, ms));

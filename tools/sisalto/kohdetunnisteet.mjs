@@ -21,7 +21,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
-const UA = 'Matkakirja-karttaseppa/1.0 (vvi@vvi.fi)';
+const UA = 'Matkakirja-karttaseppa/1.0 (https://matkakirja.app; pelin kohdetunnisteet)';
 const TUNNISTEET = path.join(JUURI, 'data', 'kohdetunnisteet.json');
 const SADE = 250;
 const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
