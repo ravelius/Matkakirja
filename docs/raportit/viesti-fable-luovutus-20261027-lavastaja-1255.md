@@ -3108,3 +3108,14 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - JU 12.44: kielletty-rakennukset-v96/ viety (546, virheitä 0); kytkentä vasta PK:n Yangxindian-salitallenteen kuittauksen jälkeen (PT).
 - PT 13.0x: LIITOS 2 EI (ei keksittyä porttia; takapiha umpikujaksi kuten todellisuudessa; jos verkko vaatii, todellinen takaportti lähteineen PT:lle). esto-v25 vientikansio _valmiit/juoksupeli-palatsi-esto-v25-vienti-20261102 (SHA256SUMS fe1976b75f9e), worktree poistettu. PK:lle polut 13.0x; JU:lle tausta-v100 + rakennukset-v97 + esto-v25 PT:n parikuittauksen jälkeen.
 - PT 13.1x: LIITOS 1 KUITATTU → JU:lle viety-pyyntö (tausta-v100, rakennukset-v97, esto-v25) 13.1x, PK kytkee. Liitos 2 ei. Jos PK:n salitallenne näyttää takapihan erillisenä saarekkeena, korjaa yhteys PIHAN SISÄLLÄ (ei muuriin). Sitten työlistan seuraava (储秀宫 vaihe 1b; bugi 2 odottaa PK:n renderer-listaa).
+
+## LISÄYS 240 (2.11. 13.00): 储秀宫 (VAIHE 1b) ALOITETTU – PAIKKAPÄÄTÖS KYSYTTY PT:LTÄ — ALOITA TÄSTÄ
+- Uusi sessio (Postivahti 12.5x). Työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-1b/: tyokalut/kartta.py (liitokset-218:n kopio, alue x −175…−75 z 380…480,
+  tausta-v100 + rakennukset-v97 + avoimet huoneet ja liitokset), kartta-chuxiu.png; codex/ = Codexin vaihe 1 -toimitus (mitat.json, chuxiugong-pohja/seinät, QA-FI).
+- Tilanne: pohja.json way/40631826 储秀宫 (−124,5…−97,4; 423,5…437,3; ovi S, korkeus 11,4). Pelissä kohdalla vain taustan umpitalo, ei rakennusta;
+  avoin huone tyohuone-kaista6 (x −135,4…−123,2, z 419,9…437,9) heti lännessä, sen itäovi (suljettu) hallin länsipäädyssä. Codexin mainDoor: S keski 13,4, 2,4 m,
+  "ei uutta ovireikää sivuseinään"; takaovi N 12,7 (1,4 m). Sali 5 jännettä, pylväät x 0,4/5,2/10,4/16,4/21,6/26,4, y 2,3/5,8/9,3/12,8, väliseinät C-P1…P5.
+- PT:ltä kysytty 13.00: suositus todellinen paikka kuten 养心殿 (oma rakennus, taustan talo pois, kuori + sali sisään), sisään pihan kautta etelän keskiovesta
+  (kaista6:n eteläoven liitos jatkuu itään pihalle z ≈ 418), kaista6 ennalleen vaiheeseen 2. Vaihtoehto: korvaa kaista6. ODOTTAA VASTAUSTA.
+- Seuraavaksi kuittauksen jälkeen: sisatilat-214:n työkalut (sisatila_geom.py, sisatila_yangxindian_kuori.py, kokoa_n.py, tausta_pois_n.py, leivo.zsh, valokuva_v.py)
+  pohjaksi; uusi malli rakennukset.json:iin (nimi esim. "c-chuxiugong"), kuori havainteen tyyliin (ei omistajan julkisivua → taustan talon ulkoasu).
