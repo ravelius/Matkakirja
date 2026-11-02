@@ -15,7 +15,9 @@ Viestit: mcp__ccd_session_mgmt__send_message session id:llä. Junarivit vain too
 
 ## PIENI iPAD (omistaja 13.30; asennus vasta KK:n luvalla)
 - Rungossa 218 a7cdb4478: Liiku 217-asu, 14.37 kohdat (logo puoleen, sade pois), saapuminen zoomauksella, VS salikatot.
-- PUUTTUU: NS:n saapumisen nykäyskorjaus 8aa00a90b (Purku 83 laattaa/ruutu, 149 ms) → todistus + runkoon. PT kysyi NS:ltä 17.03.
+- PUUTTUU: NS:n saapumisen nykäyskorjaus, nyt e48588e37 (haara natiiviseppa/saapuminen-vahti-218): purku pois, zoom max 191 → 142 ms,
+  mutta vahti yhä HYLÄTTY (82 pitkää; GC, Nimikerros, KaupunkiMerkit). Laitemittaus vs runko 8b81a3f29 käynnissä 17.0x (~40 min);
+  runkoon vasta kun ei huononna. NS luovuttaa pian (25 %).
 - Sitten: rivi KK:lle "pienen iPadin päivitys valmis asennettavaksi".
 - NUI:n B (nostot lajimerkein c94645ac3) kuitattu, merge NS:lle VASTA iPadin käännöksen jälkeen.
 
@@ -30,5 +32,5 @@ Viestit: mcp__ccd_session_mgmt__send_message session id:llä. Junarivit vain too
 ## KARTTASEPPÄ
 - Magnific-koe: Codex piirtää uuden tyylin perustan 3 kuvan tarkkuudella (ei Chromea) → KS kytkee Magnific-yhdistimen omaan
   sessioonsa (ccd_connectors) ja suurentaa (images_upscale, Creative) → pari koepala | Magnific → PT → KK.
-- Tunnisteajo pid 42702 (Postivahti seuraa).
+- Tunnisteajo pid 48629 (Postivahti seuraa).
 - Kaupunkien tarkkuus odottaa omistajan valintaa (PT:n suositus 2,5 m/px, 15 palaa); ei tilauksia ennen.
