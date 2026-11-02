@@ -37,6 +37,16 @@ Vanhat taso1-a/-b (15.49/16.03) VIALLISIA, älä lähetä.
 Jos ajot kuolivat nollauksessa: aja puuttuvat samoilla skripteillä taustalla (Monitorilla) ja rivi PT:lle.
 Salien alku/maali = LAV:n rakennukset-reitti S-N:n päät (paikka_pohja + pisteet[0]/[-1] x,z): sk-<koodi>.txt.
 
+## TILA 18.3x (taso 1 -uusinta ajettu)
+- **taso1a2 OK** (tallenne-218t/20261102-175105-taso1a2.mp4, ohjaamaton): avaus loppuun asti, ohjaus 38,5 s, kiinniotto vasta sen jälkeen
+  seinällä odottaessa → uupui 28 s. Lähetetty PT:lle 18.3x.
+- **taso1b2 EPÄONNISTUI skenaarion ajoituksen takia** (20261102-180356-taso1b2.mp4, älä lähetä): `odota-peli 37` on Time.timea, mutta
+  avauksen kello kulkee Tahti-kertoimella nopeammin → ohjaus siirtyi jo aiemmin ja keisari jäi kiinni ennen ensimmäistä `kaanna 1`:tä
+  (lokissa kiinni rivillä 5388, kaanna 5396). KORJAUS sk-taso1-b.txt: aloita kaanna-silmukka aikaisemmin (esim. `odota-peli 24` ja
+  60 × (kaanna 1; odota-peli 0.3; hyppy-jos kaannetty …)) TAI tarkista unity.logista toisen sekvenssin OhjausPelaajalle-aika ja aseta
+  odota-peli sen mukaan. Varmista ensin, ettei kaanna ennen seinää käännä keisaria avauksen aikana (Kaanna palauttaa "ei", jos ei aukkoa).
+  Aja ketju6:n (salit) jälkeen samalla JU-vuorolla; sitten PT:lle.
+
 ## Jono
 1. **Tarkista ja lähetä**: taso1a2 (ohjaamaton: keisari ei saa jäädä kiinni ennen ohjausta 38,5 s; seinällä pidempään odottaessa
    kiinniotto on sallittu) ja taso1b2 (ohjattu: oikea käännös hyväksytään, juoksu 60 s) → PT:lle polut, PT välittää KK:lle (KK tarkistaa
