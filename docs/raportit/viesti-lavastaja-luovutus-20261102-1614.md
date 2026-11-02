@@ -36,3 +36,12 @@ Uudet lisäykset TÄHÄN tiedostoon.
 
 ## Lisäys 258
 - JONO 1 TEHTY: PK kytki 咸福宫:n 4520c653b (rakennukset-v109, tausta-v108, esto v32; SHA:t täsmäävät), 797/797, umpikujia 0; salitallenne sali-218b cab3ff92b.
+
+## Lisäys 259 (PT 16.2x: kolmion korjaus + seuraava sali)
+- PUNAINEN KOLMIO = taustan V4_ikkunakehyksen vaakasuorat hajakolmiot (y 1,72, sivu 3–6 m), 3 kpl sekä cc:ssä että xf:ssä; kuvassa kulman ulkopuolella.
+  kuori_c.py (2f ja 2g) poistaa ikkunakehyskolmiot, joiden pisin sivu > 2 m (kehyksen osat ≤ 1,3 m). xf-v1/korjaa-v110.zsh: lod0 + leivonta uudelleen;
+  v109:n lähteet talteen *-v109.glb. Törmäys, tausta ja esto ennallaan. Paketti rakennukset-v110 (vain cc + xf lod0/1/2) leivonnan jälkeen.
+- SEURAAVA SALI: proto-3d/_tyo/linnanrakentaja/seuraava-sali/ (hallit.py, kartta.py, reittikartta.png). Sokkelo itäpuolella = kuja-338:n 8 avoimet-huonetta
+  ja liitokset itäisten palatsien välissä. Etäisyys sokkeloon: 承乾宫 (OSM 承干宫) 5,3 m, 钟粹宫 5,8, 永和宫 6,2, 景阳宫 9,9, 景仁宫 21 (sokkelon eteläpuolella),
+  延禧宫 rauniona pois. 重华宫 lähimpänä nykyisiä saleja (75 m 咸福宫:sta), mutta 38 m reitistä (vain 重华门 1,8 m) → vaatisi uuden reitin.
+  Ehdotus: 承乾宫 ensin, sitten 钟粹宫, 永和宫, 景阳宫; 景仁宫 ja 重华宫 vasta reittijatkon kanssa.
