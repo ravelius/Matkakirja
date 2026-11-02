@@ -3043,3 +3043,17 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - AUKI: 1) PT:n kuittaus v2:lle + PK:n leveystarkistus; 2) paketit: rakennukset-v95 (v94 + n-v2 lod0 leivottu + lod1/2/tormays + rakennukset.json)
   ja tausta-v99 (v98 + n-v2/tausta-koe 1-3 lod0/1/2) → JU, SHA NS:lle; 3) pieni: mustia kaistoja lattian ja väliseinien saumassa (maskin reuna?),
   lod1/2 leipomatta (vanha v94-käytäntö: vain lod0); 4) 储秀宫 (vaihe 1b); bugi 2 odottaa PK:ta.
+
+## LISÄYS 236 (2.11. 09.3x): PT 09.3x – tausta-v99 VIETY JU:LLE; 214 v2 VÄRIT/VALOTUS KORJATTU, ODOTTAA PT:N KUITTAUSTA → v95 — LUOVUTUS (konteksti 31 %) — ALOITA TÄSTÄ
+- tausta-v99 (PT kuittasi): leivonta-216/uusinta/tausta-v99.zsh, _valmiit/juoksupeli-kk-lavastaja-tausta-v99-vienti-20261102, SHA256SUMS 449b159daa4a,
+  vain kk-tausta-1-3-lod0/1/2 muuttuivat; JU:lle 09.3x (PK-kansio "kielletty-tausta-v99/").
+- PT:n "värit kadonneet valkoiseksi": valokuva_m.py käyttää tasaista harmaata albedoa kaikille (näyttää vain valon) → UUSI sisatilat-214/tyokalut/valokuva_v.py
+  (materiaalin oma väri/tekstuuri × leivottu valo, pelin kynnys); n-v2/kuvapari-vari.zsh → n-v2/pari-vari.jpg (PT:lle).
+- Oikeat korjaukset: 1) lattia: vanhan rungon V4_lattia = kaksi 33 m:n kolmiota → UV1-soluprojektio antoi toiselle nollavalon (myös v94:n musta lattia)
+  → sisatila_yangxindian_kuori.py: 1,2 m V4_lattia-ruudukko samalla alalla ja korkeudella, kokoa_n.py KUORI=1 poistaa vanhan (养心门:n lattia ennallaan).
+  2) sisa_katoton.py: maskin uudet kentät "kerroin" ja "lum_max" (n-v2/sisa-maski.json: aurinko false, kerroin 0,6, lum_max 0,45) → lattia mediaani 0,17,
+  seinät 0,12 (varmuuskopio sisa_katoton.py.ennen-aurinko). Leivonta n-v2/leivottu/ (aiemmat leivottu-1..3 vertailuun).
+- AUKI: 1) PT:n kuittaus pari-vari.jpg → rakennukset-v95 (v94 + n-v2: leivottu lod0 + lod1/2/tormays + n-v2/rakennukset.json) JU:lle, SHA NS:lle;
+  2) edusta-kuvan "punainen viiva" = vaalea leivottu pystykaista etujulkisivun puuristikossa x ≈ 24 (väliseinä P2:n alku 0,2 m kuoren takana) –
+  todennäköisesti UV1-solun valovuoto; korjausehdokas: P2/P1:n etupää irti kuoresta 0,3 m tai ristikon UV1 erilleen; 3) PK:n leveystarkistus (PT välittää);
+  4) 储秀宫 (vaihe 1b); bugi 2 odottaa PK:ta.
