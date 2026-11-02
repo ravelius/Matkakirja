@@ -49,10 +49,10 @@ Uudet lisäykset TÄHÄN tiedostoon.
 ## Lisäys 260 (PT 16.3x–16.4x: järjestys ja salien pinnat)
 - PT: KÄY 承乾宫 → 钟粹宫 → 永和宫 → 景阳宫 (重华宫 odottaa). JÄRJESTYSMUUTOS: kolmiokorjaus → salien pinnat (VS salit3/erot.md) → 承乾宫 uusilla pinnoilla.
 - Kolmiokorjaus: lähikuva sisatilat-2g/xf-v1/lahikuva-kolmio-v110.jpg PT:lle 16.3x (kolmio poissa). rakennukset-v110.zsh valmiina, EI ajettu:
-  ajetaan vasta pintojen kanssa (v110 = kolmio + pinnat kaikissa 8 salissa) → muokkaa skripti kopioimaan kaikki 8 leivottua.
+  PÄIVITYS: PT kuittasi → v110 TEHTY kolmiokorjatuista (leivottu/*-lod0-v110.glb), SHA256SUMS e7ec09b453a3, JU + PK-rivi 16.4x. Pinnat → v111.
 - Worktreet lavastaja-sisatilat-korjaus ja lavastaja-lisays245 poistettu (Postivahti/PT, haarat jäävät).
 - PINNAT: proto-3d/_tyo/linnanrakentaja/salipinnat/ (pinnat.py, aja.zsh, kuvaa.zsh, kokoa_pari.py). pinnat.py jälkikäsittelee lod0:n ennen leivontaa,
   vain olemassa olevilla materiaaleilla (juhlasali.glb avoimet-v52): lattia V4_jinzhuan → "Floor tile 0–9" laatoittain + V4_sokkeli-sauma;
   Dark warm timber + V4_wood → "Sisapaneeli puu" (UV × 0,5); korokkeen kansi → "Juoksumatto huone"; sermi (Muted gold ≥ 1 m²) → V4_palatsi_friisi.
   aja.zsh: lod0 talteen *-lod0-ennen-pinnat.glb (myös leivottu/), pinnat, rk-kopio, leivonta; 8 salia xf cc c y ys th tj ty.
-  Seuraavaksi: kuvaa.zsh <kansio/nimi> jokaiselle → kokoa_pari.py → salit-pinnat-pari.jpg PT:lle → kuittaus → rakennukset-v110 (8 salia) → JU + PK.
+  Seuraavaksi: kuvaa.zsh <kansio/nimi> jokaiselle → kokoa_pari.py → salit-pinnat-pari.jpg PT:lle → kuittaus → rakennukset-v111 (8 salia, pohjaksi v110) → JU + PK.
