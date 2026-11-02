@@ -126,3 +126,13 @@ test('koukku: aktiivinen yli 3 h vanha työn alla -rivi listataan, tuore ja yli 
   const k2 = uusi([{ otsikko: 'Tuore rivi', edistys: 1, tila: 'työn alla', ts: nyt - H }]);
   assert.doesNotMatch(koukku(k2, 'x', 'PostToolUse'), /TYÖLISTA \(hook\)/);
 });
+
+test('--juna: tuntematon juna hylätään, ja koko historia säilyy', () => {
+  const k = uusi();
+  writeFileSync(join(k, 'junat.json'), JSON.stringify({ rivit: [{ nimi: 'Juna 300', tila: 'Työn alla', edistys: 1, teksti: 'Työn alla:\n– a' }], ts: 1 }));
+  const ennen = readFileSync(join(k, 'tyolista.json'), 'utf8');
+  assert.equal(aja(k, 'tilanne', 'automaattisesti', 'x', '--juna', '999').status, 1);
+  assert.equal(readFileSync(join(k, 'tyolista.json'), 'utf8'), ennen);
+  for (const t of ['a', 'b', 'c', 'd', 'e']) assert.equal(aja(k, 'tilanne', 'automaattisesti', t).status, 0);
+  assert.equal(lue(k).rivit[0].tilanne.split('\n\nAiempi: ').length, 6);
+});

@@ -9,7 +9,7 @@ Käyttö (python3 -I, vain stdlib):
   python3 -I tools/asemataulu/tyolista.py … valmis  "OTSIKKO" "teksti" [--juna N [--juna-kohta "osa Työn alla -kohdasta"]]
 
 - lisaa: uusi rivi alkuun (tila "työn alla", edistys 1).
-- tilanne: lisää tilanteen eteen "pp.kk. hh.mmx: teksti", vanha tilanne siirtyy kohtaan "Aiempi: …" (enintään 3 tasoa),
+- tilanne: lisää tilanteen eteen "pp.kk. hh.mmx: teksti", vanha tilanne siirtyy kohtaan "Aiempi: …" ,
   päivittää rivin ts:n ja poistaa rivin vahti-kentän. --juna N lisää saman tekstin junan N Työn alle (juna.py lisaa).
 - valmis: tila valmis, edistys 5, valmistui = tänään. --juna N siirtää junan N Työn alla -kohdan Valmiinaan (juna.py valmis;
   kohta haetaan tekstillä tai --juna-kohta-osalla).
@@ -28,7 +28,6 @@ import time
 
 OLETUS_KANSIOT = ("scratchpad/asemataulu/data/talo", "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo")
 AIEMPI = "\n\nAiempi: "
-AIEMPIA_ENINTAAN = 3
 
 
 class Virhe(Exception):
@@ -119,8 +118,7 @@ def uusi_tilanne(rivi, teksti, nyt_s):
     vanha = str(rivi.get("tilanne") or "").strip()
     if not vanha:
         return uusi
-    osat = vanha.split(AIEMPI)[:AIEMPIA_ENINTAAN]
-    return uusi + AIEMPI + AIEMPI.join(osat)
+    return uusi + AIEMPI + vanha  # koko historia säilyy (Asemataulun tapa)
 
 
 def lataa_juna():
@@ -134,6 +132,13 @@ def lataa_juna():
 def junavaihe(komento, juna, teksti, kansio):
     """Ajaa juna.py:n lisaa/valmis samassa prosessissa; Virhe, jos juna.py hylkää."""
     j = lataa_juna()
+    try:
+        with open(os.path.join(kansio, "junat.json"), encoding="utf-8") as f:
+            nimet = [str(r.get("nimi", "")) for r in json.load(f).get("rivit", [])]
+    except (OSError, ValueError):
+        nimet = []
+    if "Juna %s" % juna not in nimet:
+        raise Virhe("junaa %s ei ole junat.json:ssa (uusi juna: juna.py lisaa suoraan); työlistaan ei kirjoitettu" % juna)
     ns = argparse.Namespace(kansio=kansio, komento=komento, juna=juna, teksti=teksti)
     try:
         j.toiminta(ns)
