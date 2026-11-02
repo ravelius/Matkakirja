@@ -28,12 +28,12 @@ const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function api(params) {
   const url = `https://www.wikidata.org/w/api.php?format=json&${new URLSearchParams(params)}`;
-  for (let i = 0; i < 30; i += 1) {   // CirrusSearch: too-busy-error, kun haetaan tiheään (2.11.)
+  for (let i = 0; i < 30; i += 1) {   // CirrusSearch: too-busy-error, kun haetaan tiheään; DBConnectionError ohimenevä (2.11.)
     const r = await fetch(url, { headers: { 'User-Agent': UA } }).catch(() => null);
     if (r?.ok) {
       const j = await r.json();
       if (!j.error) { await tauko(1500); return j; }
-      if (!/busy|ratelimit|maxlag/i.test(j.error.code)) throw new Error(`${j.error.code}: ${url}`);
+      if (!/busy|ratelimit|maxlag|DBConnection|internal_api_error/i.test(j.error.code)) throw new Error(`${j.error.code}: ${url}`);
     }
     await tauko(Math.min(5000 * 2 ** i, 120000));
   }
