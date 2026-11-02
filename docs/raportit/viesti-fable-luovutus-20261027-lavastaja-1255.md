@@ -3146,3 +3146,14 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   2) c-v1/rakennukset-v99.zsh (v98 + c-*; lod1 = lod2 = leivottu lod0) → SHA; 3) PT:n kuittauksella JU:lle rakennukset-v99 + tausta-v101,
   PK:lle reitti (päät kaista6:n liitosten kulmissa; uudet materiaalit V4_kujakivi_sokkeli(_yla), V4_ikkunakehys, V4_konsoli, V4_ristikko rakennuksessa → PK tarkistaa sidonnan);
   4) esto-v26 (PK:n PalatsiEstoLeivonta, worktree kuten esto-v25: pohja pk8 + tausta-v101 + rakennukset-v99 + osasarja-v6).
+
+## LISÄYS 243 (2.11. 13.2x): BUGI 2 PAIKANNETTU = OMAT A4-KANNATTIMET (dougong-intercolumn-lähikoristeet); JU vienyt v97–v98 + tausta-v100 + esto-v25 — LUOVUTUS (konteksti 33 %) — ALOITA TÄSTÄ
+- JU 13.1x: tausta-v100, esto-v25, rakennukset-v97 ja v98 viety (virheitä 0); PK kytkee v98:n. PK 13.10: sali verkossa umpikujasalina (be73a2795).
+- BUGI 2: PK:n piirtäjälista proto-3d/_tyo/pelikoodari/korjaus-218/piirtajat-218p.txt (video 20261102-125154-218p.mp4, 100–110 s). Ainoa ≤ 6 m:n pieni
+  piirtäjä kohdassa 1.44,3–1.45,4 (video 104,2–105,5 s, kamera Unity (82,1; 6,5; −371…−364)) on "lahikoriste dougong-intercolumn(Clone)": rivi
+  0,55 × 0,37 × 0,22 m:n kannattimia 0,84 m välein x 76,8…86,0, y 9,77, z −367,81 (ja toinen rivi z −382,64 kohdassa 102–103 s), 3,1–5,8 m kamerasta
+  → kameran läpi kulkeva kannatinrivi näyttää ristikolta. Nämä ovat LAV:n A4-kannattimet (lisäys 109→: kielletty-rakennukset/tyokalut/a4_kannattimet.py,
+  c1-sijoitukset.json:n räystäslinjat, lahipuut-paketti). SEURAAVAKSI: muunna Unity → pohja (PK:n kehys: bugi2-kuvat), etsi a4-sijoituksista rivit
+  y 9,77 näissä kohdissa (todennäköisesti portin/hallin räystäs kameran reitin päällä), poista ne rivit (tai kaikki A4-rivit, joiden alitse reitti kulkee
+  < 6 m) → uusi lahipuut-versio → PT:n kuittaus → JU. PK:lle ja PT:lle ilmoitettu 13.2x.
+- 储秀宫 c-v1 -leivonta käynnissä (lisäys 242); jatka sieltä.
