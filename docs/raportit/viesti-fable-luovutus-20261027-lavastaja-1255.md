@@ -2874,7 +2874,7 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   mika-ajo pelissä, bugit-217/aja4.zsh + sk-paikannus-tiedosto pohjana). 3) Codexin 214-korjaus kun tulee → mallinnus.
 - Avoin worktree /Users/Shared/Claude/wt/lavastaja-sisatilat-korjaus (postilaatikko, pushattu).
 
-## LISÄYS 223 (2.11. 04.0x): BUGI 12 = PELIN PAIKKAMALLI (PK); KOLMIOAUKOT KORJATTU, LEIVONTA VALMIINA AJOON TF 217:N JÄLKEEN — ALOITA TÄSTÄ
+## LISÄYS 223 (2.11. 03.5x): BUGI 12 = PELIN PAIKKAMALLI (PK); KOLMIOAUKOT KORJATTU, LEIVONTA VALMIINA AJOON TF 217:N JÄLKEEN — ALOITA TÄSTÄ
 - BUGI 12: harmaanoliivi palkki (video 1.10) on pelin hyppyesteen harmaa paikkamalli (JuoksuV4Maailma.cs LuoEste: Lohko lev × 0,5 × 0,3 m), joka
   jää, kun Codexin estemalli ei lataudu → PT:lle 03.5x (PK:n asia, ei lavastusta).
 - KOLMIOAUKOT: porras-terassi.glb ja porras-suora.glb (sama geometria): kylkiseinä marmori_kaide x = ±0,70 yksipuolinen, katsoo ulos → portaan
