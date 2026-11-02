@@ -2842,3 +2842,13 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   tausta-v94 (= v93 + täyttö) c693358ce5fe. Jäljellä vain kokonaan leipomattomat saaret (kaiteettomat 6–9 %, tausta ≤ 0,1 %).
 - Kuva PT:lle bugit-217/vika14/ennen-jalkeen-vika14.jpg (Meridiaaniportin sokkelin saumapisteet poissa).
 - SEURAAVAKSI: 214 sisätilojen mittakatselmus → 213 Wumenin kivijalka + terassit → porras-terassin kaiteen kolmioaukot.
+
+## LISÄYS 220 (2.11. 03.5x): 214 KUITATTU + CODEX-KORJAUSPYYNTÖ; 213 KYSYTTY PT:LTÄ; HOLVIN LEIVONTA JONOON — ALOITA TÄSTÄ
+- NS tilasi c2-v32 + muurikate-v38 + tausta-v94 (JU vie, PK vaihtaa kansiot junaan 217). PT kuittasi bugi 14:n.
+- 214 KUITATTU (PT): Codexin korjauspyyntö postilaatikossa 9fc5e0026 (posti/lavastaja-codex-sisatilat-vaihe1-korjaus-20261102.md;
+  储秀宫 hyväksytty, 养心殿 卷棚抱厦 vain keski- + länsijänteen edessä, itäjänne ulkotilaa, neliöpilarit 2/jänne, lähde DPM D1).
+  Worktree /Users/Shared/Claude/wt/lavastaja-sisatilat-korjaus (poista --poista, kun Codex toimittanut). Odottaa Codexia → mallinnus.
+- 213: todelliset kuvat proto-3d/_tyo/linnanrakentaja/wumen-213/ eivät tue havainnetta (seinät punaiset maahan asti, harmaa vyö
+  vain yläreunassa, ei terasseja); mallissa on jo 1,6 m kivijalka. Kysytty PT:ltä 03.5x (suositus: ei muutosta) → odottaa vastausta.
+- PT: TF 217:n jälkeen ENNEN muuta: Meridiaaniportin holvin (porttikäytävät) sisäpintojen oikea leivonta (laajat kokonaan
+  leipomattomat saaret: bugit-217/vika14/ennen-sauma.png). Sitten porras-terassin kaiteen kolmioaukot ym. (LISÄYS 217).
