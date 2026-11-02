@@ -28,7 +28,7 @@ rajalla (Raamattu 7.37).
   eletilan korkeudesta (17,5 → 5,7 km olisi läpäissyt).
 
 ## SEURAAJAN JONO
-1. PT 10.1x kuittasi a9568fc20 + 586222bc5 → merge-pyyntö lähti NS:lle (tahti-haaran kärki 586222bc5 rungon bc82ac8e6 päälle).
+1. PT 10.1x kuittasi a9568fc20 + 586222bc5 → NS mergesi: **runko 218 = 52ba93dea** (seuraavat erät tämän päälle).
    **JATKOKOHTA (PT 10.1x)**: avatun aarrepisteen ydin kylläiseksi vihreäksi (Valopiste _Ydin 1: nyt keskus vaalennettu 35 % valkoiseen
    ja hehku pehmeä → piirroksella vaalea), jotta auki/lukittu erottuu yhdellä silmäyksellä; ei kovakoodattuja värejä varjostimeen
    (valovahti), Mathf.Lerp C#:ssa vaatii `// liikepoikkeus:`. Pari ympyröitynä PT:lle (sama kamera kuin tahti-h).
