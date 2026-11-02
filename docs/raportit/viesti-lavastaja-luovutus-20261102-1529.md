@@ -36,3 +36,9 @@ Uudet lisäykset TÄHÄN tiedostoon.
      W_SERMI 11,51 − 0,75 = 10,76; versiot tausta-v107 / rakennukset-v108 / esto-v32), sisa-maski (kierto −1,63, alue uw PAIKKAan nähden), kokoa/valmistele/leivo/kuvapari
      2e:n ty-v1-skripteistä (pohja = 2e ty-v1/tausta-lahde + rk), kartta_c:n T/R/alue, iou_y:n ajo.
 3. 咸福宫 (way/40631832, −165,75; 424,46).
+
+## Lisäys 255 (2.11. klo 15.5x)
+- JONO 1 tehty: PK kytki rakennukset-v107 (7dcdc05d2, SHA täsmää, 797/797); salitallenteiden runko sali-218b bb0deb72c.
+- JONO 2 长春宫 2f cc-v1: kokoa, valmistele, leivonta (15.43–15.46) ja kuvapari tehty; pari-cc1.jpg ja kartta-reitti.png PT:lle 15.5x, ODOTTAA KUITTAUSTA.
+  merkinta_c.py 2f: U_REITTI 12,32, U_KIERTO 9,32, W_SERMI 10,76, W_TAKA 14,4 (takapiha), portaat w −0,77/0,13 ja 12,90/13,80.
+  Paketit kuittauksen jälkeen: cc-v1/tausta-v107.zsh → rakennukset-v108.zsh → esto-v32.zsh (worktree proto-lavastaja-esto-2e) → JU-pyyntö + PK-rivi.
