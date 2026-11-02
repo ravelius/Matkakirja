@@ -2947,3 +2947,13 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - Kuvapari pelin UUDELLA kynnyksellä: portaat-v93/valokuva_m.py (PEITTO 3: puuttuva = (1 − ram(l × 0,75)) × smoothstep(0,08, 0,3, RGBM-kerroin)),
   bugit-217/vika14/holvi-pari-v34.zsh → holvi-v34-ennen-jalkeen.jpg (vasen c2-v33, oikea c2-v34; ylä s2, ala s3): ei sinistä täyttöä kummassakaan.
 - JONO jäljellä: 2) v97 LOD2 PK:n kanssa, jos PK pyytää. 3) 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 230 (2.11. 05.4x): V97:N PUNAVIIVA → PÄÄTYSEINIEN KANSI + LOD2:N KATTO → TAUSTA-V98 JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- PT 05.3x (juna 218, bugikorjaus): v97:n päätyseinät katkeavat y = 4,0:aan ilman kantta → häivytetyn katon alla kamera näkee yksipuolisen
+  seinätason reunan punaviivana (PK:n video proto-3d/_tyo/pelikoodari/korjaus-218/20261102-051759-218c-porttihalli-58-70s.mp4, ~64 s).
+- muuriportti-218/kansi.py: taustan V4_red-päätyseinien yläreunan janoista vaakakansi V4_kujakivi_sokkeli_yla y = 4,01, 0,30 m HALLIN PUOLELLE,
+  0,02 m taakse (ensin kokeiltu 0,6 m ulos → reunus aukion julkisivuun, hylätty). UV0 sokkeli_yla-sovite (0,5 uv/m), LOD0 UV1 seinän yläreunasta.
+  + LOD2: taustan V4_palatsi_katto 20 + V4_teal 6 kolmiota → katto-longzongmenin tyhjiin primitiiveihin (kuten LOD1) = v97:n LOD2-huomio korjattu.
+- tausta-v98 SHA256SUMS 674d7b854977 (_valmiit/juoksupeli-kk-lavastaja-tausta-v98-vienti-20261102, leivonta-216/uusinta/tausta-v98.zsh); vain
+  kk-tausta-1-2-lod0/1/2 muuttuivat. Kuva muuriportti-218/kuvat98/kansi-pari.jpg (LOD0/LOD2 v97 vs v98 ylhäältä, katto piilossa).
+- JONO jäljellä: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
