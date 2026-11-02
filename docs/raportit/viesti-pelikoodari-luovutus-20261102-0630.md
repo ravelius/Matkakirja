@@ -29,6 +29,11 @@ rivinä PT:lle (→ LAV). Pysyvä kuittaus: bugilistan korjaukset junaan 218, ku
   ristikko-ovessa, Puyi pois 0,5 s. Molemmissa ajoissa "kamera rakennusmassassa" portilla x 81,5, z −516…−499 (Puyi katon alla,
   ala 4,8 m, kamera 5,1–5,6 m, huippu 10,6–14,8 m; s 344–352) → kamera nousee katon alapinnan yläpuolelle portin sisällä.
   Tarkista KattoHaivytys/portin profiili tälle portille (vrt. B2 Longzongmen) ja tunnelikorkeus. Tallenne JU:n vuorolla.
+- **Sitten kohta 3 (PT 06.3x, pysyvä kuittaus, tallenne PT:lle → SHA NS:lle)**: LAV:n mukaan a-meridiaaniportin holvissa näkyy
+  LOD1 (ei leivottua valoa), koska JuoksuSokkeloMaailma.Palatsi.cs:1146 valitsee LODin Puyin etäisyydestä, ja alkulennossa kamera
+  on holvissa kaukana Puyista. Korjaus: alkulennon ajan (AvausT ≥ 0, maailman osuus) LOD kameran etäisyydestä. Varmista 218d-
+  skenaariolla (taso 0), 0.09,4–0.10,9.
+- ccc8eeda0 on NS:n rungossa 51efa85e7 (testit 2223/790/585, tarkista 0).
 - Kohta 1 lieventynyt (haalea raita 0,07 s), kohta 10 vain `avaus nyt` -uudelleenkäynnistyksessä tasolla 0 → ei kiire.
 - Worktreet: wt/proto-pelikoodari-korjaus-217 (kamera4-218), wt/proto-pelikoodari-kivi-216 (tallenne-218e),
   wt/proto-pelikoodari-kansiot-218 ja -peitto-218 (vanhat, voi poistaa).
