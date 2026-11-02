@@ -2873,3 +2873,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   ei löytynyt rakennukset-, osamallit791-, kaiteeton-, muurikate- eikä tausta-v89-lahde-jsoneista kohdasta (125, −562) ± 25 m →
   mika-ajo pelissä, bugit-217/aja4.zsh + sk-paikannus-tiedosto pohjana). 3) Codexin 214-korjaus kun tulee → mallinnus.
 - Avoin worktree /Users/Shared/Claude/wt/lavastaja-sisatilat-korjaus (postilaatikko, pushattu).
+
+## LISÄYS 223 (2.11. 04.0x): BUGI 12 = PELIN PAIKKAMALLI (PK); KOLMIOAUKOT KORJATTU, LEIVONTA VALMIINA AJOON TF 217:N JÄLKEEN — ALOITA TÄSTÄ
+- BUGI 12: harmaanoliivi palkki (video 1.10) on pelin hyppyesteen harmaa paikkamalli (JuoksuV4Maailma.cs LuoEste: Lohko lev × 0,5 × 0,3 m), joka
+  jää, kun Codexin estemalli ei lataudu → PT:lle 03.5x (PK:n asia, ei lavastusta).
+- KOLMIOAUKOT: porras-terassi.glb ja porras-suora.glb (sama geometria): kylkiseinä marmori_kaide x = ±0,70 yksipuolinen, katsoo ulos → portaan
+  sisältä askelmien ja kaiteen jalustan välit läpinäkyvät. osamallit791/kylki_sisa.py (käännetty kopio 3 mm sisemmäs, 4 kolmiota/glb) →
+  osamallit791/v9/media (tehty, Workbench-pari vahvisti). Leivonta + paketti osamallit791/v9.zsh → osamallit791-v9 (juna 218) — AJA vasta
+  TF 217:n jälkeen (ensin holvi kaiteeton-v7.zsh, LISÄYS 221): nohup zsh v9.zsh >> v9/ajo.log 2>&1 → SHA NS:lle (PK "osamallit791-v9/") + PT.
