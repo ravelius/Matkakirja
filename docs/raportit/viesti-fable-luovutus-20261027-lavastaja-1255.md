@@ -3071,3 +3071,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
      Uusi materiaalinimi tarvitsee PK:lta sidonnan (SokkelonPinta/Lattia), tai käytä tasaväriä (esim. 0,16 0,16 0,15) ilman sidontaa → kysy PT:ltä, kumpi.
   3) Uudelleenleivonta n-v2/leivo.zsh, kuvapari n-v2/kuvapari-vari.zsh (valokuva_v.py) → PT; sitten rakennukset-v96 (kopioi rakennukset-v95.zsh, v95 → v96).
 - Bugi 2: PK kysyi 09.4x; vastattu: t-portissa ei ristikkoa → PK:lta rendererien nimet/materiaalit kameran läheltä kohdassa 1.44,3–1.45,4.
+- JU 09.35: kielletty-rakennukset-v95/ viety (546, virheitä 0). Junaan vasta PK:n eunukkikorjauksen jälkeen (v95:n rakennukset.json pudottaa eunukit nollaan – PK:n korjaus, PT kuittaa). tausta-v99 junan 218 rungossa (NS d85660f03).
