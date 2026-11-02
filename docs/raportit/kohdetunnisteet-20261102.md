@@ -20,7 +20,11 @@ tunniste (Wikidata-Q tai OSM-kohde) ja tarkistettu sijainti.
 Ero kartan pisteeseen: 0–50 m 782, 50–150 m 154, 150–300 m 57, yli 300 m 9. Kaikki yhdeksän yli 300 m:n eroa on
 tarkistettu: niissä pelin piste on väärä ja Wikidatan oikea (Berliinin Museosaari, Brysselin Maison du Peuple,
 Bukarestin Văcărești-luostari, Pietarin Nyenskans, Riian koraalisynagoga, Tampereen Finlayson, Asgabatin Nisa,
-Ateenan Iliou Melathron, Pekingin Nanluoguxiang).
+Ateenan Iliou Melathron, Pekingin Nanluoguxiang). PT 3.11.: korjattu samaan PR:ään (faktavirhe):
+`js/packs/maakartat.js` pisteet Wikidatan paikkaan, Iliou Melathron myös `js/packs/syvennyspaikat.js`:ssä. Văcăreștin
+luostari (purettu 1986, nyk. Sun Plazan kohta) siirtyi kainalon ulkopuolelle: kainalon rajaus siirretty ja Bukarestin
+kohdekartta ja värikartta piirretty uudelleen (`tools/piirra-kaupunkikartta.mjs bukarest [--vari]`). Uuden ajon jälkeen
+yli 300 m:n eroja on 0.
 
 ## Työvaiheet
 
