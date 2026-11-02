@@ -2865,3 +2865,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - BUGI 12 (PT, TF 217:n jälkeen): tasanteen etupinta ilman tekstuuria, video 1.10 (kuva lokit/bugit-juoksu-217-20261102/11_*). PK: vain
   sijainti: Unityn juurikehys x ≈ 124–126, z ≈ −562 (Puyi (127, −562), kulku länteen), runko 6ba27bf5b. Mallia ei paikannettu →
   etsi sijoituksista, mikä malli kattaa kohdan (tai mika-ajo), korjaa UV/materiaali.
+
+## LISÄYS 222 (2.11. 04.0x): LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ, sitten LISÄYS 221
+- NS: c2-v32 + muurikate-v38 + tausta-v94 junan 217 lukitussa rungossa 60bd5c356; TF 217 JU:lla. Uudet korjaukset junaan 218.
+- SEURAAJAN JÄRJESTYS: 1) kun PT/JU kertoo TF 217:n lähteneen (tai pgrep ei näytä Unityn rakennusajoa): holvi = zsh kaiteeton-v7.zsh
+  (LISÄYS 221) → kuvapari PT:lle + SHA NS:lle (juna 218); harkitse NOLLA_MIN myös leivo_valo.py:hyn. 2) bugi 12 (LISÄYS 221: mallia
+  ei löytynyt rakennukset-, osamallit791-, kaiteeton-, muurikate- eikä tausta-v89-lahde-jsoneista kohdasta (125, −562) ± 25 m →
+  mika-ajo pelissä, bugit-217/aja4.zsh + sk-paikannus-tiedosto pohjana). 3) Codexin 214-korjaus kun tulee → mallinnus.
+- Avoin worktree /Users/Shared/Claude/wt/lavastaja-sisatilat-korjaus (postilaatikko, pushattu).
