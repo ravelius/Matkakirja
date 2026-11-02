@@ -24,8 +24,8 @@ KK:n suunnitelma: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskusteluka
 1. **Tähti, kun Codex toimittaa** (`_review-tahti-20261102/`): SHA, arkki, silmukan sauma (001 vs 072) →
    `python3 C/tahdet-20261102/esikatselu.py <review> <ulos.mp4>` (oletus Louvre–Halles, 4 tähteä, 2 kierrosta; testattu koetähdellä)
    → video PT:lle (→ KK omistajalle). Vasta omistajan OK:n jälkeen: sarja + hehku uuteen kansioon V/:hen, tahdet nui-rivit NUI:lle.
-2. **PT/JU:** aukio-laattojen vienti (TasoVersio aukio-20261102 samaan junaan NUI:n info+kioski-leikkeiden kanssa; pohjana veneet-20261102).
-   Odota PT:n kuittausta parista ennen kuin vienti pyydetään.
+2. **Aukio-laatat VIETY** (JU 10.12, PT kuittasi: piirroskartta/pariisi/aukio-20261102/ 54/54, julkinen SHA ok). TasoVersion vaihto
+   "aukio-20261102" samaan junaan NUI:n info+kioski-leikkeiden kanssa (rivit NUI:n seuraajalle Postivahdin aloitusviestissä).
 3. Postilaatikon worktree `/Users/Shared/Claude/wt/karttaseppa-postilaatikko-veneet` (claude/postilaatikko): pidä tähteen asti.
 4. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; I monistus (paketti + tarkistuslista) vasta kun Pariisi valmis; 7.48: muita
    Pariisin osia ei aloiteta ennen KK:n suunnitelmaa ja PT:n viestiä.
