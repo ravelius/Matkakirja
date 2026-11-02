@@ -137,3 +137,11 @@ Valosepän vertailu havainteeseen (esikatselu-20261102-135020/sali-pari.jpg): 04
 ## SATUNNAISET KORISTEET: VAIN SADE POIS; SAAPUMINEN: ZOOMAUS ENNEN INTROKUVIA (2.11.2026 klo 14.38)
 
 Omistaja 2.11.2026 klo 14.37 (kortti KK:ssa): 'Poistetaanko satunnaiset koristeet kartalta?' → 'Vain sade pois' (laiva, juna, lintuparvi ja kyyhky jäävät). Samana hetkenä pyyntö: kaupunkiin saavuttaessa ensin zoomaus peruskartalta kaupunkinäkymään, vasta sen jälkeen introkuvat noin 70 % kuva-alasta, kartta näkyy ympärillä (korvaa suunnitelman E-kohdan 'zoomaus kulkee introa pitkin'). iPadin aloituslogo mustalla taustalla puolet nykyisestä, iPhone ennallaan.
+
+## Pariisin piirros ilman metsiä (omistaja 2.11. 16.48) (2.11.2026 klo 16.49)
+
+Omistaja 16.48 (KK:n kortti, sanatarkasti): "metsiä ei tarvitse. tee uusi koekuva joka samaa tarkkuutta kuin max 15 kuvaa ilman metsiä". Piirretty Pariisi tehdään ilman Bois de Boulognea ja Bois de Vincennesia (laaja v4 -maski ilman metsiä). Koekuva tarkkuudella, jolla kaupunki mahtuu enintään 15 palaan (1536×1024); valinta omistajalta ennen tilauksia.
+
+## Magnific tilattu, käyttö MCP-yhdistimellä (omistaja 2.11. 16.59–17.01) (2.11.2026 klo 17.02)
+
+Omistaja 16.59 (KK:n kortti): "Kyllä, Magnific"; "Kyllä, hankin sen". 17.00: "yhdistetään se MCP:llä" (korvaa Chrome-reitin). 17.01: "nyt yhdistetty" (claude.ai Connectors → Magnific). Koe: Codex piirtää Pariisin uuden tyylin perustan 3 kuvan tarkkuudella, Karttaseppä suurentaa Magnific MCP:llä (Creative-tila, sama tyyliohje), pari KK:n kautta omistajalle. Raamattu 12.24 kohta 5.
