@@ -22,8 +22,10 @@ C = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/codex-pseudo3d
 ## AVOIN (järjestyksessä)
 1. ~~PT:n kuittaus B-parille~~ KUITATTU 14.4x, PT lähettää merge-pyynnön NS:lle itse (ei KS:n tehtävä): `karttaseppa/perinto-kipinat-218` 9afaad3cc (NUI:n d7b4244c5 menee omana).
    Parihaara karttaseppa/perinto-pari-218 on vain käännöstä varten (ei mergeen). Worktree `/Users/Shared/Claude/wt/proto-karttaseppa-perinto-218`.
-2. **Tunnisteajo käynnissä** taustalla 14.0x alkaen (alkoi alusta; 14.30 noin 31/313 kaupunkia, loki `T/ajo.log`). Jos loki ei kasva,
-   jatka: `node /Users/Shared/Claude/wt/karttaseppa-kohdetunnisteet/tools/sisalto/kohdetunnisteet.mjs --kaikki --ehdokkaat T/ehdokkaat.json >> T/ajo.log`.
+2. **Tunnisteajo käynnissä** (päivitys 16.04): ajo EI ole valmis. Se kaatui 14.4x ja 16.02 Wikidatan geohaun `cirrussearch-too-busy-error`iin
+   (haku liian tiheä). Korjattu 6597275df (1,5 s väli, 30 uusintaa ≤ 2 min) ja käynnistetty 16.03 uudelleen (node, jatkaa siitä mihin jäi;
+   kaatunut ajo oli päässyt noin 96/313). Valmis = prosessi `kohdetunnisteet.mjs --kaikki` poissa ja `T/ajo.log`:n viimeinen rivi ei ole
+   virhe. Jos kaatuu, käynnistä sama komento uudelleen: `node /Users/Shared/Claude/wt/karttaseppa-kohdetunnisteet/tools/sisalto/kohdetunnisteet.mjs --kaikki --ehdokkaat T/ehdokkaat.json >> T/ajo.log`.
 3. **Ajon jälkeen** neljä käsin lukittua `data/kohdetunnisteet.json`:iin (nimet KAUPUNKIKARTAT-avaimista, pvm 2.11.2026):
    `nouakchott:Nouakchottin yliopisto` qid Q3119358 käsin "wiki-uudelleenohjaus antoi väärän Q:n"; `freetown:Fourah Bay College` osm way/28548338
    "Wikidatan piste = vanha rakennus Cline Townissa" (OSM-keskipiste 8.47816, −13.22129 tarkistettu); `bamako:Koulouban palatsi` osm node/8065650962
