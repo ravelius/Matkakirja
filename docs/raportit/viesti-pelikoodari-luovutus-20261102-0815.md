@@ -17,9 +17,15 @@ Pysyvä kuittaus: tallenne PT:lle → SHA NS:lle. NS:n runko 024832f05 (sis. rak
   korjaus-218/20261102-073200-218f.mp4 (sk-218f, taso 1) ja 20261102-075318-218g.mp4 (sk-218g = 218e-skenaario, taso 0).
   Kuvat: korjaus-218/218f-*.png, 218g-*.png, 218d-…-vertailu.png. Lähetetty PT:lle 08.10; KUITTAUS AUKI → SHA:t NS:lle.
 
+PT KUITTASI 08.2x: eunukit (f691d2e2d) ja kohta 3 (a70ef8f41) lähetetty NS:lle junaan 218.
+
+## ENSIMMÄISENÄ (PT 08.2x, pysyvä kuittaus: tallenne PT:lle → SHA NS:lle)
+- **Pariovet auki alkulennon ajaksi** (PT: KYLLÄ). 218g: alkulento lentää a-meridiaaniportin LOD0:n kiinni olevien pariovien läpi
+  0.10,5–0.11 (LOD1:ssä ei ovia). Ovet: JuoksuSokkeloMaailma "pariovet ovi_V ovi_O (kiinni, aukeavat keisarin työntäminä)" (loki
+  "palatsi v2: a-meridiaaniportti: pariovet"); avaa ne, kun AvausT ≥ 0 (alkulento), ja palauta kiinni ennen ohjausta vain, jos keisarin
+  työntö on tarinan kohta (tarkista, ettei taso 0:n työntö katoa). Tallenne sk-218g-skenaariolla (taso 0) 0.09–0.12 JU:n vuorolla.
+
 ## Avoimet
-- **218g: alkulento lentää a-meridiaaniportin LOD0:n kiinni olevien pariovien läpi 0.10,5–0.11** (LOD1:ssä ei ovia). Ehdotin PT:lle
-  ovet auki alkulennon ajaksi (avaus: JuoksuSokkeloMaailma pariovet "aukeavat keisarin työntäminä"); odottaa PT:n vastausta.
 - **Kohta 2 (ristikko-ovi) LAV:lla** (PT 07.5x): portti t-portti-120, pohjassa Puyi x ≈ −83,5, z 126 → 109; kamera (−83,7; 129…119)
   5,1–5,6 m, katon ala 4,8. Ristikko näkyy, vaikka katto on häivytetty → ristikko ei ole katto-solmussa. Vastattu LAV:lle (kuvat
   korjaus-218/bugi2-kuvat/). Tarkista LAV:n kansio tultua tallenteella (sk-218e-skenaario, 1.44).
