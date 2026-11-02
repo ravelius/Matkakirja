@@ -46,7 +46,7 @@ TF_OTSIKKO_RE = re.compile(r"^Uutta \(\d{1,2}\.\d{1,2}\. klo \d{1,2}\.\d[\dx](?:
 TESTAAJILLA_RE = re.compile(r"testaaj", re.I)
 # Junarivin muoto (omistaja 2.11.2026): kohdissa ei päivämääriä eikä kellonaikoja, kukin asia kerran, lyhyt rivi,
 # avoimen junan Työn alla -kohdassa ei valmiin työn sanoja. Vanhat TF-rivit (N < TF_MUOTO_ALKAEN) ohitetaan.
-TF_MUOTO_ALKAEN = 217
+TF_MUOTO_ALKAEN = 216  # TF 216 siivottu 2.11. (KK); vanhemmat historiaa
 KOHTA_MAX = 110
 PVM_RE = re.compile(r"\d+\.\d+\.")
 AIKA_RE = re.compile(r"\b\d{1,2}\.\d[\dx]\b|\bklo\b", re.I)

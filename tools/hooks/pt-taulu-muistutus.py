@@ -25,6 +25,8 @@ TILA = os.environ.get("PT_TAULU_TILA") or "/Users/Shared/Claude/hooks/.pt-taulu-
 VALI = 600
 DATA = os.environ.get("PT_TAULU_DATA") or "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo"
 TARKISTIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "asemataulu", "tarkista-junat.py")
+if not os.path.exists(TARKISTIN):  # asennettu kopio /Users/Shared/Claude/hooks/ (KK 2.11.)
+    TARKISTIN = "/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tarkista-junat.py"
 JUNA = re.compile(r"KUITATTU|LUKITSE|OMISTAJA PYYSI|BUILD 1\d\d|TF 1\d\d|juna(an)? 1\d\d", re.I)
 IKKUNA = 1_000_000  # Opus 1 M (get_usage: contextWindow 1000000)
 LOPPU_TAVUT = 3_000_000  # viimeinen mallikutsu löytyy tallenteen lopusta
