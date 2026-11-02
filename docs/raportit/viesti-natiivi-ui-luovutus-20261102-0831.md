@@ -11,7 +11,14 @@ pienempänä kauemmilla zoom-tasoilla." Worktree /Users/Shared/Claude/wt/proto-n
 - Todistus: proto-3d/lokit/todistus-kyltit-b7b45fef0-20261102-0827/ (kk/1-kyltit-lahin-vs-2x.jpg, selitteet.txt), 0 poikkeusta.
   PT KUITTASI 08.3x ja lähetti b7b45fef0:n NS:lle junaan 218 (ei avointa työtä tässä erässä).
 
-**SEURAAJAN JÄRJESTYS (PT 08.3x): ENSIMMÄISENÄ piirros-eleet-218 (e093d2e68, ea25c610e) simutodistus + kohta 3 nipistys, sitten 5–6 karikatyyri, sitten 7 veneet.**
+**SEURAAJAN JÄRJESTYS (PT 08.3x, OMISTAJAN PÄÄTÖS 08.31, loki 9f5ceb12d):**
+1. piirros-eleet-218 (e093d2e68, ea25c610e) simutodistus + kohta 3 nipistys
+2. a) kadonneen ihmeen nimikylttiin tähti (kyltti = NostotKartalla --kyltti, kohteet joiden nostolinkki hahmotelma-…)
+3. kohta 5 Karikatyyrikartta-kytkin + b) suurennuslasin KARTTA-välilehdelle oma kytkin kadonneille ihmeille (mk-linssirivi-pohja,
+   oletus päällä) + kohta 6 suoristus 0°:een
+4. c) leikattujen kuvien kerros piirroksen päälle (KS toimittaa Codexin kuvat Temple-tornista ja Grand Châtelet'sta + sijainnit;
+   kiinteä paikka/koko kuten piirros)
+5. kohta 7 veneet
 - Huomio: Palais d'Orsay ja Orsayn taidemuseo lähes samassa pisteessä → kyltit päällekkäin (korjaus PiirrosKyljet-kylki tai data).
   2× kauempaa kyltit ~9 pt (pieniä mutta luettavia); jos omistaja haluaa isommat, nosta KyltinTaysiPt tai mittakaavan viite.
 
