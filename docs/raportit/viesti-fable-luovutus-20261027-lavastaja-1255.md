@@ -2852,3 +2852,16 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   vain yläreunassa, ei terasseja); mallissa on jo 1,6 m kivijalka. Kysytty PT:ltä 03.5x (suositus: ei muutosta) → odottaa vastausta.
 - PT: TF 217:n jälkeen ENNEN muuta: Meridiaaniportin holvin (porttikäytävät) sisäpintojen oikea leivonta (laajat kokonaan
   leipomattomat saaret: bugit-217/vika14/ennen-sauma.png). Sitten porras-terassin kaiteen kolmioaukot ym. (LISÄYS 217).
+
+## LISÄYS 221 (2.11. 03.5x): 213 SULJETTU; HOLVI VALMIINA AJOON TF 217:N JÄLKEEN; BUGI 12 SIJAINTI — ALOITA TÄSTÄ
+- 213 SULJETTU (PT): ei muutosta (todelliset kuvat + omistaja 20.10.).
+- HOLVI (TF 217:n jälkeen, PT): juurisyy = leivottu mutta hyvin tumma tekseli koodautui RGB 0:ksi = pelin puuttuva näyte → taivastäyttö.
+  Korjaus tehty kielletty-rakennukset/tyokalut/leivo_malli.py: NOLLA_MIN (oletus 1; leivotuille RGB ≥ 1,5/255). leivo_valo.py:ssä sama
+  koodaus (rivi 181, m_ min 1e-6) → tarkista/korjaa samoin, jos muurikatteen/taustan holveissa sama. Ajoskripti valmiina:
+  leivonta-216/uusinta/kaiteeton-v7.zsh → paketti kaiteeton-v5 (c2-v33). Käynnistetty 03.41 vahingossa TF-käännöksen aikana ja
+  pysäytetty heti (kaiteeton-v7/ulos voi sisältää keskeneräistä; ei valmis-leivonta-lippua) → aja uudelleen, kun TF 217 on lähtenyt:
+  zsh kaiteeton-v7.zsh >> ajo-kaiteeton-v7.log 2>&1. Sitten valokuva.py-pari (porttikäytävä, kamera 12 1.7 32 → 12 1.3 17.6, kuten
+  bugit-217/vika14/ennen-s2.png) PT:lle + SHA NS:lle.
+- BUGI 12 (PT, TF 217:n jälkeen): tasanteen etupinta ilman tekstuuria, video 1.10 (kuva lokit/bugit-juoksu-217-20261102/11_*). PK: vain
+  sijainti: Unityn juurikehys x ≈ 124–126, z ≈ −562 (Puyi (127, −562), kulku länteen), runko 6ba27bf5b. Mallia ei paikannettu →
+  etsi sijoituksista, mikä malli kattaa kohdan (tai mika-ajo), korjaa UV/materiaali.
