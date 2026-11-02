@@ -3058,3 +3058,16 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   todennäköisesti UV1-solun valovuoto; korjausehdokas: P2/P1:n etupää irti kuoresta 0,3 m tai ristikon UV1 erilleen; 3) PK:n leveystarkistus (PT välittää);
   4) 储秀宫 (vaihe 1b); bugi 2 odottaa PK:ta.
 - PK 09.4x (PT:n päätös): n S-N "leveys": 1.4 (yksi kaista, PK 4b107df7e) – päivitetty n-v2/rakennukset.json; janat ennallaan.
+
+## LISÄYS 237 (2.11. 09.4x): rakennukset-v95 JU:LLE; SEURAAVAKSI v96 — LUOVUTUS (konteksti 31 %) — ALOITA TÄSTÄ
+- PT 09.4x kuittasi pari-vari.jpg → rakennukset-v95 (sisatilat-214/n-v2/rakennukset-v95.zsh): _valmiit/juoksupeli-kk-lavastaja-rakennukset-v95-vienti-20261102,
+  SHA256SUMS 26d1e1e42bd9, vain n-* (lod0 leivottu, lod1/2/törmäys) + rakennukset.json (leveys 1,4) muuttuivat; JU:lle 09.4x. tausta-v99 viety (JU 09.19, PK+NS kuitattu).
+- JONO (PT 09.4x, samaan rakennukset-v96:een → pari PT:lle):
+  1) P2-valovuoto: vaalea pystykaista etujulkisivun puuristikossa (V4_wood, y 5,22, doubleSided) x ≈ 24 = väliseinä P2:n etupää (y 5,61, 0,19 m kuoresta).
+     Kokeile: P1/P2:n etupää irti kuoresta 0,3 m (sisatila_yangxindian_kuori.py: a0 = max(a0, Y0 + 0,3) x-akselin väliseinille) tai ristikon UV1-saari
+     erilleen; tarkista n-v2/kuvat-vari/edusta-v2.png:n oikea reuna (rajaus kuten lisäys 236).
+  2) Sisälattian sävy: nyt V4_lattia (malli 0,62 kerma; peli sitoo lajiin 2 = pihan kivilaatta) → Kielletyn kaupungin salien tummanharmaa "kultatiili"
+     (金砖). Lähde: Codexin olemassa oleva pinta (etsi juhlasali/avoimet-v52-materiaaleista tummaa kivilaattaa) tai Commons (vain PD/CC, tarkistettu).
+     Uusi materiaalinimi tarvitsee PK:lta sidonnan (SokkelonPinta/Lattia), tai käytä tasaväriä (esim. 0,16 0,16 0,15) ilman sidontaa → kysy PT:ltä, kumpi.
+  3) Uudelleenleivonta n-v2/leivo.zsh, kuvapari n-v2/kuvapari-vari.zsh (valokuva_v.py) → PT; sitten rakennukset-v96 (kopioi rakennukset-v95.zsh, v95 → v96).
+- Bugi 2: PK kysyi 09.4x; vastattu: t-portissa ei ristikkoa → PK:lta rendererien nimet/materiaalit kameran läheltä kohdassa 1.44,3–1.45,4.
