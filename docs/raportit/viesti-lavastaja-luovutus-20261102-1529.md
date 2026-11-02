@@ -42,3 +42,10 @@ Uudet lisäykset TÄHÄN tiedostoon.
 - JONO 2 长春宫 2f cc-v1: kokoa, valmistele, leivonta (15.43–15.46) ja kuvapari tehty; pari-cc1.jpg ja kartta-reitti.png PT:lle 15.5x, ODOTTAA KUITTAUSTA.
   merkinta_c.py 2f: U_REITTI 12,32, U_KIERTO 9,32, W_SERMI 10,76, W_TAKA 14,4 (takapiha), portaat w −0,77/0,13 ja 12,90/13,80.
   Paketit kuittauksen jälkeen: cc-v1/tausta-v107.zsh → rakennukset-v108.zsh → esto-v32.zsh (worktree proto-lavastaja-esto-2e) → JU-pyyntö + PK-rivi.
+
+## Lisäys 256 (2.11.)
+- 长春宫 2f KUITATTU (PT). Paketit: tausta-v107 cbbfa616d5b7, rakennukset-v108 ea9218625ae7, palatsi-esto-v32 fee400ebb176 (152 776 ruutua) → JU-pyyntö + PK-rivi lähetetty.
+  Esto ajettiin uudessa worktreessa /Users/Shared/Claude/wt/proto-lavastaja-esto-2f (5cba23158, detached; 2e:n worktree oli poistettu).
+- 咸福宫 2g: kansio sisatilat-2g (tyokalut = 2f:n kopio, kehys_c:ssä SW/SE/PAIKKA asetettu, muut vakiot KESKEN). Taustan halli on matala laatikko
+  (OSM 2,0 m: seinä 1,2 m, räystäs y 1,8, ei ikkunoita), katso xf-v1/katso.jpg. KYSYTTY PT:ltä: kuori cc-v1:n kuoresta 20,2 × 14,6 m:n pohjaan (5 jännettä à 3,5)
+  + taustan matala halli pois. Odottaa vastausta.
