@@ -51,3 +51,6 @@ rajalla (27 %). Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-
   (PT kuittasi; JU vie) → kytke kuten 9e31aa94e kun viety. **太极殿** tj-taijidian: rakennukset-v105, tausta-v105, esto-v30 tulossa.
 - **LAV 15.0x: lahipuut-v15 tehty** (849fe603e028) = v14 + 52 itäistä riviä takaisin v12:sta (x 66,6…88,1, y 9,586); JU vie →
   kytke v15 (ei v14:ää): LahipuutKansio kielletty-lahipuut-v15/, MK_PUUT, testit, pari 218q vs uusi (104–105,5 s) PT:lle.
+- **TEHTY 15.0x: 体和殿 kytketty 8109408cb** (proto-kärki; JU 14.56: rakennukset-v104 / tausta-v104 / esto-v29, SHA256SUMS täsmäävät):
+  testit juuri-ys:llä (symlinkit v104/v104/v29 lisätty) 796/796, palatsi 1664 → 1690 solmua, umpikujia 0 (+ sali 1); unity-tarkistus 0.
+  Seuraava: 太极殿 (v105/v105/v30) samoin kun viety.
