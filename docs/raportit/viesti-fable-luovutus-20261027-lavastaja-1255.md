@@ -3210,7 +3210,7 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - Esto-ajo: Matkakirja-proto worktree --detach juna-218 kärjestä (natiiviseppa/juna-218), kaanna.sh PalatsiEstoLeivonta (y-v1/esto-v27.zsh), worktree pois.
 - PT 14.1x: c-v4 KUITATTU → JU:lle rakennukset-v102 (korvaa v101) + PK-rivi lähetetty 14.1x. AUKI-kohta 1 tehty.
 
-## LISÄYS 249 (2.11. 14.3x): 永寿宫 2b VALMIS → PT:n kuittausta
+## LISÄYS 249 (2.11. 14.27): 永寿宫 2b VALMIS → PT:n kuittausta
 - Nollauksen jälkeen: JU vei 翊坤宫:n (rakennukset-v101, tausta-v102, esto-v27) 14.15 ja rakennukset-v102:n (c-v4) 14.24 → lisäyksen 248 AUKI 1–2 tehty.
 - PT 14.2x: seuraava sali 永寿宫 (2b), sitten 体和殿. Työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-2b/ (LUE.md = mitat, EROLISTA, reitti, tulos;
   tyokalut/ = 2a:n kopiot 2b-vakioin; ys-v1/). Taustan halli on 储秀宫:n tyyppiä (6 jännettä, keskussali 2), jalusta 0,56, länsiseinä puuttui → lisätty.
@@ -3222,7 +3222,7 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   2) jos PK lähettää rivin lähikoristeen (dougong-intercolumn) väärästä sijoituksesta → korjaa ENSIN (PT 14.2x, bugi 2, juna 218);
   3) seuraava 体和殿 (25,7 × 12,5): analysoi_c.py + seinat_c.py tausta-v103:sta ensin (hallityyppi vaihtelee).
 
-## LISÄYS 250 (2.11. 14.4x): 永寿宫 KUITATTU (JU vie, PK:lle rivi); 体和殿 analysoitu — LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+## LISÄYS 250 (2.11. 14.29): 永寿宫 KUITATTU (JU vie, PK:lle rivi); 体和殿 analysoitu — LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
 - PT 14.3x kuittasi 永寿宫 2b:n. JU:lle lähetetty rakennukset-v103 (b07f21d87187), tausta-v103 (451f43567125) ja esto-v28 (f1523df574cc);
   PK:lle kytkentärivi (jonossa, puukortit etupihalla → kaista avautuu?). Asemataulun tyolista.json päivitetty (Palatsin sisätilat).
 - 体和殿 (2c, PT: seuraavaksi): työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-2c/ — LUE.md:ssä mitat, vakioehdotukset ja askeleet;
