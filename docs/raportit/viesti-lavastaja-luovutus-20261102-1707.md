@@ -35,3 +35,4 @@ Edellinen tiivis luovutus viesti-lavastaja-luovutus-20261102-1614.md (lisäykset
   (pinnat.py SAUMA_LEV 0,012 → ~0,005 ja vaaleampi sauma, esim. V4_kivireunus 0,62 V4_sokkelin 0,5:n sijaan) ja lämpimämpi kivi
   (juhlasalin "Stone tile 0–4" (0,56–0,72, lämmin) "Floor tile":n sijaan), pienempi laatta (jaa 1,2 m quad 2 × 2:ksi). Vain olemassa olevat materiaalit.
   Tee tämä ennen 承乾宫:ta tai samassa erässä (aja.zsh kaikille 8 + 承乾宫), pari PT:lle.
+- v111 KYTKETTY: PK 42dcf0b68 (797/797); salitallenteet th…xf v111:llä, cx/yk/ys uudelleen lopuksi.
