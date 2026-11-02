@@ -29,3 +29,11 @@ Palais d'Orsayn kyltit päällekkäin; tähdet pysähtyvät levossa.
    PT voi pyytää isompaa tähteä kaukaa tai kylttien väistöä (Orsay).
 2. PT:n järjestys jatkuu: B nostot lajimerkein piirrokselle, F Avauskortti + kutsuminiatyyri pois, E saapumiszoomaus (ks. luovutus 0930 kohdat 2–4).
 3. Jos jono tyhjä: rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
+
+## LISÄYS 12.5x: PT:n kaksi korjausta ennen kuittausta (tähti pisteenä kaukaa ja levossa pysähtyminen OK)
+1. Orsayn taidemuseo (Merkittavat) ja Palais d'Orsay (kadonnut ★-kyltti, Kohdenostot) päällekkäin (kuva 2b) → kadonneen ihmeen kyltti
+   väistää tai eri kyljelle (NostotKartalla: kyltin kylki/väistö, Kohdenostot.Kadonnut; vrt. Kohdelaatikot-kalusteet).
+2. Temple-tornin kyltissä pieni tyhjä laatta ★:llä ja nimi laatan ulkopuolella (pari-tahdet-lahella.png oikea) → nimi laatan sisään
+   kuten muissa (NostotKartalla ~rivi 1719 `kadonnut = kyltti && nimi.Length > 0`, tähti 3d093444a; tarkista nimiön leveys/tyhjä nimi).
+Tee samaan haaraan natiivi-ui/piirros-tahdet-218 d6331330e:n päälle, uusi simuajo (kaanna-tahdet-a.zsh + tahdet-a.txt todistuskansiossa,
+vaihda SHA), uusi pari PT:lle → PT kuittaa NS:lle ja JU:lle.
