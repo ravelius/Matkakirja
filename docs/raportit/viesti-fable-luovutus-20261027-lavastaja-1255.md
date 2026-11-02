@@ -3157,3 +3157,18 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   y 9,77 näissä kohdissa (todennäköisesti portin/hallin räystäs kameran reitin päällä), poista ne rivit (tai kaikki A4-rivit, joiden alitse reitti kulkee
   < 6 m) → uusi lahipuut-versio → PT:n kuittaus → JU. PK:lle ja PT:lle ilmoitettu 13.2x.
 - 储秀宫 c-v1 -leivonta käynnissä (lisäys 242); jatka sieltä.
+
+## LISÄYS 244 (2.11. 13.3x): 储秀宫 c-v1 LEIVOTTU, MUTTA KUORESSA VIRHE → c-v2 TARVITAAN; rakennukset-v99 EI VIETÄVÄKSI — LUOVUTUS (konteksti 35 %) — ALOITA TÄSTÄ
+- Leivonta 13.12–13.15 ok (c-v1/leivottu/, sisäkeskiarvo 0,017 → 0,114). Kuvapari c-v1/pari-c1.jpg (vasen tausta-v100, oikea c-v1: edusta, ylhäältä, valtaistuin).
+- VIRHE (pari-c1.jpg, edusta): taustan halli EI ole avoin – etelä- ja länsiseinä ovat UMPINAISIA V4_red-tasoja (isot kolmiot y 0,22…11,45 päätyineen; S/N-normaali
+  w 1,15 ×5, W-normaali u 2,78 – analysoi_c/julkisivu_c rajasivat ne pois y < 5,5 -ehdolla). Pohjoisseinässä samoin umpitaso + pylväät/ikkunat sen päällä.
+  Siksi c-v1:ssä: 1) pääovi on umpiseinän takana (portaat seinään), 2) peilatut ikkunat + pylväät muuttivat eteläjulkisivun (alkuperäinen tasainen punainen seinä).
+- KORJAUS c-v2 (kuori pysyy, 214:n linjaus): kuori_c.py: EI peilauksia (poista eteläseinän ja länsiseinän peilaus); oviaukot leikataan olemassa oleviin
+  seinätasoihin: eteläseinä w 1,15/1,51 ja pohjoisseinä w 11,51/11,94, aukko u 13,14…15,20, h 1,2…4,0 (y), pielet + kamana; pohjoisseinän keskipylväs
+  (u 13,8…14,55) pois kuten nyt. Työkalupohja liitokset-218/tyokalut/tausta_ovi.py (x-normaaliselle seinälle → tee w-normaali versio hallin kehyksessä,
+  attribuutit interpoloidaan; UV1 tulee leivonnasta uutena, joten interpolointi vain UV0/NORMAL). sisa_c.py tormays: ovet jo auki (ok). Portaat ok.
+  Sitten kokoa_c.py → valmistele.zsh (kopioi uusi lod0 rk/) → leivo.zsh → kuvapari.zsh (tarkista edusta: seinä tasainen punainen + oviaukko) →
+  poista _valmiit/juoksupeli-kk-lavastaja-rakennukset-v99-vienti-20261102 (oma, ei viety; SHA fb659a865bc0) ja aja rakennukset-v99.zsh uudelleen → pari PT:lle.
+  Huom. sisäpuolella taustan seinätasot ovat myös sisäpinta (valtaistuin-kuvassa ennen: punainen seinä + tummat läikät) → leivonnan maski kattaa ne (runko-solmu).
+- tausta-v101 (29abaa4c7a51) on oikein (halli pois taustasta) → odottaa c-v2:ta, viedään yhdessä.
+- Bugi 2 (lisäys 243): A4-kannatinrivit pois reitin yltä – tekemättä.
