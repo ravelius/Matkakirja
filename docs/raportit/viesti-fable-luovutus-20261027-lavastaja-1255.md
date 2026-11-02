@@ -2923,3 +2923,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   odottaa konetta (toinen esikatselu ajossa). Jos mika osuu kk-tausta-1-2:een kohdassa: TEE paketti tausta-v96 = v95 + nousu_kivi.py lod0:aan
   (kopioi tausta-v95.zsh pohjaksi; myös lähde tausta-v89-lahde, varmuus) → JU + NS (PK "kielletty-tausta-v96/") + PT. Jos ristiriita: rivi PT:lle.
 - Konteksti 25 % → luovutus tämän jälkeen.
+
+## LISÄYS 227 (2.11. 05.1x): BUGI 12 VALMIS → TAUSTA-V96 JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- Mika-ajo 6 (bugit-217/aja6.zsh, mika6.txt, loki esikatselu-20261102-045937; ajo 5:n mika-komennot jäivät käsittelemättä tallenteen loppuessa →
+  odota-peli jokaisen perään): osumat kk-tausta-1-2 lod0 lattia x −127…−119 (z ≈ 170) = LÄNSIOVEN puoli. Siellä peilikuvaporras x −126,6…−125,45
+  samalla viallla (V4_marmori-nousupinta). nousu_kivi.py korjaa molemmat (12 kolmiota).
+- tausta-v96 = v95 + kk-tausta-1-2-lod0 portaat, SHA256SUMS ab70086a15ad (_valmiit/juoksupeli-kk-lavastaja-tausta-v96-vienti-20261102,
+  tausta-v96.zsh; lähde päivitetty, varmuus-nousu-v96/). PK "kielletty-tausta-v96/" (juna 218). Kuva pelistä: lokit/esikatselu-20261102-042313/b700.png.
+- SEURAAVAKSI: 214 sisätilat, kun Codex toimittaa + PT kuittaa. Konteksti 27 % → luovutus.
