@@ -21,10 +21,8 @@ KK:n suunnitelma: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskusteluka
 4. Forum des Halles = Q939893 (KYLTIT-NUI.md, sijainnit.json).
 
 ## AVOIN (järjestyksessä)
-1. **Tähti v2 TILATTU** (omistaja 10.17 "Piirrostyylisemmäksi": muste + akvarellikulta, ei 3D-kiiltoa, hehku ≈ 1,5× tähti;
-   posti 25befeea3; v1 acb2831ee hylätty). Toimitus `CX/pariisi-kadonneet-ihmeet/_review-tahti-v2-20261102/` → SHA, arkki, sauma 001/072,
-   kartalla-puhdas.png → video `python3 C/tahdet-20261102/esikatselu.py <review> <ulos.mp4>` PT:lle (→ KK). Omistajan OK → sarja +
-   hehku uuteen kansioon V/:hen ja C/tahdet-20261102/nui-rivit.txt (9 paikkaa, vaihe i·8) NUI:lle.
+1. **Tähti v2 VALMIS** (omistaja 10.48 "Kyllä, vie peliin", Codex f84dfb5b4, kuitattu): paketti NUI:lle
+   `V/pariisi-tahdet-20261102/` (72 ruutua + hehku, nui-rivit.txt 9 paikkaa, LUE-NUI.md: 48 px kartalla, vaihe i·8, 12 kuvaa/s).
 2. **Aukio-laatat VIETY** (JU 10.12, PT kuittasi: piirroskartta/pariisi/aukio-20261102/ 54/54, julkinen SHA ok). TasoVersion vaihto
    "aukio-20261102" samaan junaan NUI:n info+kioski-leikkeiden kanssa (rivit NUI:n seuraajalle Postivahdin aloitusviestissä).
 3. **HAAMU ennen junaa (KK:n löydös, PT 10.2x):** Temple-tornin länsipuolella läpikuultava talo-ryhmä kangas ~6180–6280 × 2890–3030
