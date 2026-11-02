@@ -2996,3 +2996,25 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   muurikatteessa ei osumaa. 1070-ristikko on 15 rakennuksessa (a, b, c, d, f, g×3, h×2, l, m, n, o, u), lähin g-baohedian 79 m.
 - SEURAAVAKSI: selvitä, mikä verkko piirtää ristikon (PK: renderer-nimet kameran lähellä tai mika-ajo 218e:n rataan ilman satunnaisuutta;
   bugit-218/aja2.zsh-pohja, mika 0.5 0.3 / 0.5 0.6 kohdissa 1.44,3–1.45,4). Jos se on pelin oma kopio/LOD tai toinen paketti, korjaus sinne.
+
+## LISÄYS 234 (2.11. 08.5x): 214 SISÄTILAT – CODEX #1721 KUITATTU, YANGXINDIANIN SISÄTILA V1 (EI LEIVOTTU) — LUOVUTUS (konteksti 27 %) — ALOITA TÄSTÄ
+- Codex #1721 (bda7096d3) hyväksytty, kuittaus postilaatikossa ea0601d3e (huomautukset: seinä-e:n akselin numerot peilikuvana, pohjassa
+  päällekkäiset tekstit; PT: ok ilman korjauskierrosta). PT kuittasi 08.5x: mallinnus alkaa.
+- Työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-214 (mitat korjaus-1721/mitat.json). Sisätila = n-mielen-ravitsemisen-halli (rakennukset-v94),
+  ei avoin huone. Työkalut sisatilat-214/tyokalut/: sisatila_geom.py (laatikot, seinät aukkoineen, friisinauhat), sisatila_yangxindian.py
+  (mitat.json → seinät, kuisti + puusermi, väliseinät, pyöreät pylväät + N1–N6, 0,6 m lattiatiilet, kalusteet, nimilaatta ilman tekstiä),
+  kokoa_n.py <n-taso.glb> <juhlasali.glb> <mitat> <ulos> [lod0|lod1|lod2|tormays] (hallin vanha runko w > 3 pois, 养心门 ja jalusta ennallaan;
+  katto ja palkit ennallaan), reitti_n.py (S-N valtaistuimen länsipuolelta, sermin takaa takaovesta), esikatsele_n.py (EEVEE).
+- KEHYS: pohja (x itä 0..36, y pohjoinen 0..15,6) → u = x − 17,8, w = y + 5,3 (jalustan yläpinta), kierto −2,0335°, lattia y 1,55.
+  mitat.jsonin ikkunoiden/takaoven position_m = VASEN reuna. glTF-data on peilikuva Blenderissä (peli kääntää x:n) → kuisti näkyy Blenderissä idässä.
+- Tulos sisatilat-214/n-v1/: n-…-lod0/lod1/lod2/tormays.glb (törmäys: 178 laatikkoa, ikkunat umpinaisia), rakennukset.json (uusi S-N-reitti,
+  kapein 1,4 m takaovi, 1,7 m sermin takana; leveys-kenttä 3,0 ennallaan → PK tarkistaa). Kuvat n-v1/pari-ulko.jpg, pari-sisa-ylhaalta.jpg.
+  Ulkoasu muuttui: seinät OSM-mittaan 36 × 15,6 jalustan reunaan, yläreuna 7,31 räystään alle, friisinauha 2 × 0,55 m, ulkopylväät pois.
+- LEIVONTA VALMISTELTU, EI AJETTU (hiljainen tunti / PT): leivo_malli.py + SISA_KATOTON=<maski.json> (uusi kielletty-rakennukset/tyokalut/sisa_katoton.py;
+  varmuus leivo_malli.py.ennen-sisa): sisäpinnat 2. leivonnasta ilman katon varjoa, ulkopinnat ja katto 1. leivonnasta. Maski-json tekemättä:
+  {"kierto_deg": -2.0335, "alueet_uw": [[-17.04, 6.14, 5.56, 8.90], [-17.04, 17.44, 8.90, 20.64]], "y_max": 7.2, "solmut": ["runko"]}
+  (sisäalueet: kuisti x 0,75..23,95 y 0,25..3,6 ja sali x 0,75..35,25 y 3,6..15,35, ±0,01). Ajo kuten bugit-218/rakennukset-v94.zsh:n
+  lähde (leivonta-216/uusinta/aja_uusinta.zsh rivi 37: YHT-env, MALLI_GLB=n-v1/…-lod0.glb). sisa_katoton.py on koeajamaton.
+- AUKI: 1) PT:n vastaus reitistä (kysytty 08.4x) ja PK:n leveydet; 2) leivonta + pelin kuvapari; 3) ulkopinnan viimeistely (kivijalka,
+  etujulkisivun pylväät/ristikot, jos PT/omistaja haluaa vanhan ilmeen); 4) paketti rakennukset-v95 (v94 + n-*) JU:lle, SHA NS:lle; 5) 储秀宫 (vaihe 1b).
+- Bugi 2 (lisäys 233) odottaa PK:ta (PT 08.5x: PK palaa kohtaan 2).
