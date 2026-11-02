@@ -49,3 +49,12 @@ Uudet lisäykset TÄHÄN tiedostoon.
 - 咸福宫 2g: kansio sisatilat-2g (tyokalut = 2f:n kopio, kehys_c:ssä SW/SE/PAIKKA asetettu, muut vakiot KESKEN). Taustan halli on matala laatikko
   (OSM 2,0 m: seinä 1,2 m, räystäs y 1,8, ei ikkunoita), katso xf-v1/katso.jpg. KYSYTTY PT:ltä: kuori cc-v1:n kuoresta 20,2 × 14,6 m:n pohjaan (5 jännettä à 3,5)
   + taustan matala halli pois. Odottaa vastausta.
+
+## Lisäys 257 (2.11. klo 15.58)
+- 长春宫 2f: PK kytki 54fac919c (v108/v107/esto-v32), 797/797, umpikujia 0. JU vei 2e:n (v107 15.52).
+- 咸福宫 2g xf-v1 (PT: kuori cc-v1:stä, matala OSM-halli pois): tyokalut/siirra_cc.py siirtää 长春宫:n kuoren (tausta-v106 1-3, 2f:n valinta) 咸福宫:n
+  kehykseen: u paloittain 6 → 5 jännettä (2,83 / 2,83 / 6,00 / 2,83 / 2,83; keskusjänne valtaistuimelle ja 1,5 m:n kululle), w × 1,13, y − 0,01 → xf-v1/lahde/.
+  Koroke ja sermi 3,0 m (KAPEA), nimilaatta 2,8 m. Reitti juhlasalin etelä- → pohjoisliitokseen (merkinta_c 2g; W_TAKA 15,6, U_KIERTO 7,80, W_SERMI 12,17).
+  Puukortit etupihalla eivät estä: esto merkitsee vain janojen sulkemat ruudut, ja reittien kaistat kaiverretaan sen jälkeen.
+  Leivottu 15.53–15.56, pari-xf1.jpg PT:lle 15.58 → ODOTTAA KUITTAUSTA. Paketit: xf-v1/tausta-v108.zsh → rakennukset-v109.zsh → esto-v33.zsh
+  (HUOM: esto-v33.zsh käyttää worktreetä wt/proto-lavastaja-esto-2f).
