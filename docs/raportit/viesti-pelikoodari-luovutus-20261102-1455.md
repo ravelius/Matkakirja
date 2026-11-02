@@ -49,3 +49,5 @@ rajalla (27 %). Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-
   tee v15 = v14 + v13:n turhaan poistamat itäiset rivit takaisin v12:sta → kytke v15, jos se ehtii, muuten v14.
 - **LAV: 体和殿** th-tihedian: rakennukset-v104 + reitti S-N (puutarha-kaista5:n liitoksista keskiakselia läpi), tausta-v104, esto-v29
   (PT kuittasi; JU vie) → kytke kuten 9e31aa94e kun viety. **太极殿** tj-taijidian: rakennukset-v105, tausta-v105, esto-v30 tulossa.
+- **LAV 15.0x: lahipuut-v15 tehty** (849fe603e028) = v14 + 52 itäistä riviä takaisin v12:sta (x 66,6…88,1, y 9,586); JU vie →
+  kytke v15 (ei v14:ää): LahipuutKansio kielletty-lahipuut-v15/, MK_PUUT, testit, pari 218q vs uusi (104–105,5 s) PT:lle.
