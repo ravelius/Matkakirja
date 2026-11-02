@@ -3127,3 +3127,22 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - PT: liitos 2 pysyy pois; PK jättää salin umpikujakarsinnan ulkopuolelle merkittynä kohteena.
 - PT 13.0x: 储秀宫 KUITATTU suosituksen mukaan: oma rakennus todelliseen paikkaan (taustan umpitalo kk-tausta-1-3:sta pois: jalusta 1,2, seinät ~4,8, katto 5,6–12;
   sisatilat-1b/tyokalut/tausta_talo.py listaa kolmiot), sisään etelän keskiovesta pihan kautta, kaista6:n eteläoven liitos jatkuu itään. kaista6 ennalleen.
+
+## LISÄYS 242 (2.11. 13.2x): 储秀宫 c-v1 RAKENNETTU, LEIVONTA KÄYNNISSÄ, tausta-v101 VALMIS — ALOITA TÄSTÄ
+- Työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-1b/ (tyokalut/ + c-v1/). Uusi rakennus c-chuxiugong, paikka_pohja (−110,95; 430,40) (OSM-pohjan keskipiste).
+- LÖYDÖS: taustan halli (kk-tausta-1-3; katon 4 kolmiota 1-4:ssä) on 22,8 × 10,8 m, 6 jännettä, AVOIN etelään ja länteen (vain pohjoisseinä: pylväät +
+  ikkunakehykset, itäseinä, katto, jalusta 1,2 m). 214:n linjaus (kuori pysyy) → kuori taustasta: tyokalut/kuori_c.py (eteläseinä = pohjoisseinän peili,
+  länsiseinä = itäseinän peili, keskipylväs pois → pää- ja takaovi 2,06 m ikkunakehysten välissä; katto = keskipiste y > 4,85).
+  tyokalut/kehys_c.py (hallin kehys u/w, akseli +1,63°), glb_uusi.py (uusi GLB materiaaleineen), sisa_c.py (Codexin sali: väliseinät C-P1…P4 pylväslinjoille
+  u 6,58/10,37/17,97/21,76, keskussali 7,6 m; valtaistuinryhmä keskiakselilla u 14,17, koroke ja sermi 4,4 m [A], sermin takana 1,5 m; portaat 7 × 0,17 m
+  molempiin oviin; kalusteet todellisessa koossa lohkoihinsa rajattuna), kokoa_c.py (lod0 / tormays: 60 laatikkoa, kuoren seinät umpinaisina, ovet auki),
+  merkinta_c.py (rakennukset.json-merkintä + reitti S-N 12 pistettä: kaista6-etelä-liitoksen kulma (−128,974; 417,91) → piha → pääovi → valtaistuimen
+  länsipuolelta → sermin takaa → takaovi → takapiha → kaista6-pohjoinen-liitoksen kulma (−129,613; 439,89); leveys 1,4; lattia_y 1,2), tausta_pois_c.py.
+  Tarkistuskuvat c-v1/tarkistus.png (julkisivut + pohja), c-v1/kartta-reitti.png (reitti vapaa taustan seinistä).
+- c-v1/: valmistele.zsh (tausta-lahde = 214 n-v2/tausta-lahde − halli; rk = RS v85 + c), leivo.zsh (sisa-maski.json kierto −1,6305, alue u −10,39..12,03
+  w −5,17..5,22, aurinko false, kerroin 0,6, lum_max 0,45) → c-v1/leivottu/c-chuxiugong-lod0.glb; LEIVONTA KÄYNNISTETTY 13.1x (leivo.log).
+- tausta-v101 VALMIS: _valmiit/juoksupeli-kk-lavastaja-tausta-v101-vienti-20261102, SHA256SUMS 29abaa4c7a51 (1-3 lod0/1/2 + 1-4 lod0 muuttuivat).
+- SEURAAVAKSI: 1) leivonnan jälkeen c-v1/kuvapari.zsh → c-v1/pari-c1.jpg (ennen taustan halli / jälkeen c: edusta, sisä ylhäältä, valtaistuin) → PT;
+  2) c-v1/rakennukset-v99.zsh (v98 + c-*; lod1 = lod2 = leivottu lod0) → SHA; 3) PT:n kuittauksella JU:lle rakennukset-v99 + tausta-v101,
+  PK:lle reitti (päät kaista6:n liitosten kulmissa; uudet materiaalit V4_kujakivi_sokkeli(_yla), V4_ikkunakehys, V4_konsoli, V4_ristikko rakennuksessa → PK tarkistaa sidonnan);
+  4) esto-v26 (PK:n PalatsiEstoLeivonta, worktree kuten esto-v25: pohja pk8 + tausta-v101 + rakennukset-v99 + osasarja-v6).
