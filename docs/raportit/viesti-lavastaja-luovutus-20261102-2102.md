@@ -27,3 +27,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-1755.md on vain viite. Uudet lisäy
 1. Varmista JU:n vienti ja PK:n kytkentä (v110/v114/v35).
 2. 永和宫 (sitten 景阳宫): seuraava-sali/hallit.py + reittikartta.png; tee sisatilat-3c/ 3b:n mallilla (kopioi tyokalut/*_z.py, uusi kehys: OSM-pohja → seinat_z.py-analyysi, laatat, jännemäärä,
    keskipylväs?, ikkunat → ovet; reitti lähimmistä kujaliitoksista, reittiesteet_z.py). Pohjana tausta-v110 ja rk = z-v1/rk + z3 leivottu.
+- 21.0x 钟粹宫 KYTKETTY: PK 7127ca0c3 (797/797, umpikujia 0). JU:n vientikuittaus odottaa.
