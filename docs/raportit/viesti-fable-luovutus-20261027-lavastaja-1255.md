@@ -2823,3 +2823,13 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   kaiteeton-v4 (U/kaiteeton-v6.zsh pohjana, kielletty-c2-v32) → NS + PT. Huom: bugi 9:n agentti voi raportoida saman portin.
 - Jonoon TF 217:n jälkeen (PT): porras-terassin kaiteen kyljen kolmioaukot; tausta-v92:n 18 palarajan matalat portaat (328 rakokohtaa,
   ≤ 0,30 m); LOD2:n yksikerroksisten rakennusten leijuvat katot. Sitten 214 (sisätilojen mittakatselmus) ja 213 (Wumenin kivijalka).
+
+## LISÄYS 218 (2.11. 03.xx): BUGI 9 VALMIS → RAKENNUKSET-V93 NS:LLE; ENSIMMÄISEKSI BUGI 14 = KAITEETON-V4 (PT) — ALOITA TÄSTÄ
+- rakennukset-v93 SHA256SUMS f9657ba7cea6 (546, 561 Mt) NS:lle runkoon 217 (PK "kielletty-rakennukset-v93/"). Syy: valo_rgbm:n UV1-saarekkeissa
+  leipomattomia tekseleitä (nolla) → peli (JuoksuValo.hlsl) antaa täyden ympäristövalon = sininen raita. Korjaus U/portaat-v93/valo_tayta.py
+  (täyttää saarekkeen nollat saman saarekkeen valosta + 6 tekselin reuna; muu valo tavulleen sama), kaikki 136 lod0:aa, U/rakennukset-v93.zsh.
+  Kuva U/portaat-v93/ennen-jalkeen-vika9.jpg. Täysin leipomattomat saarekkeet jätetty (esim. g-jalustan marmori ~35 %).
+- ENSIMMÄISEKSI (PT): bugi 14 (LISÄYS 217) – todennäköisesti sama nollatekselivika: kaiteettomissa (c2-v31) a-meridiaaniportti (matalat
+  pinnat 79 % nollaa), f-taihemen, g-jalusta, kk-muurikate-v18-pohja. TEE: valo_tayta.py niille → kielletty-c2-v32 = kaiteeton-v4
+  (_valmiit/…-kaiteeton-v4-vienti-<pvm>, LAHTEET + SHA256SUMS kuten v3) → tarkista b1570:n sauma (seinä y 1,60) korjaantuu → NS + PT.
+  Tarkista myös tausta-v93 ja muurikate-v37 samasta viasta (agentti ei mitannut).
