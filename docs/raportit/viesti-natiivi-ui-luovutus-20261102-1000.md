@@ -35,6 +35,11 @@ rajalla (Raamattu 7.37).
 2. **C (UUSI, PT 09.4x, Raamattu-loki "kadonneet ihmeet pyörivinä tähtinä" #5964)**: 9 pyörivää tähteä (KS:n Codex-kuvasarja,
    PNG-silmukka), kukin eri vaiheesta, pieni valohehku vain tähden ympärille; neljällä tähti nykyrakennuksen viereen, ★-kyltti pysyy;
    Kadonneet-kytkin oletus päällä. Odottaa KS:n kuvasarjaa. PiirrosKerros.Leikkeet-lista pysyy tyhjänä.
+   **OMISTAJAN PÄÄTÖS 10.48 (PT 10.5x): piirrostyylinen tähti peliin.** KS kokoaa paketin /Users/Shared/Claude/proto-3d/_valmiit/
+   pariisi-tahdet-20261102/ (72 ruutua, 12 fps silmukka, hehku, 9 sijaintia). Toteutus: 9 tähteä, kukin eri vaiheesta (ruutusiirtymä),
+   pieni hehku vain tähden alle, neljällä nykyrakennuksen vieressä ★-kyltti pysyy, Kadonneet-kytkin oletus päällä, leikkeitä ei.
+   Simu + kuva PT:lle → NS. Pohja: runko 218 52ba93dea (uusi proto-haara natiivi-ui/piirros-tahdet-218 sen päältä). Animaatio = liike:
+   liikevahti vaatii Liikepohjan tai `// liikepoikkeus:` (kuvaruudun vaihto on dataa); valovahti: ei kovakoodattuja värejä varjostimiin.
 3. **G (PT 10.2x kuittasi)**: KS:n info + kioski -leikkeet piirrokseen: /Users/Shared/Claude/proto-3d/_valmiit/pariisi-info-kioski-20261102/
    (nui-rivit.txt, info-kioski.json, leikkeet-20261102/, sijainnit.json) ja SAMAAN muutokseen TasoVersio = "aukio-20261102" (JU vie laatat).
    Huom.: KS:n kadonneiden leikkeet ovat mitättömiä; tarkista nui-rivit.txt:stä, että lista on vain info + kioski.
