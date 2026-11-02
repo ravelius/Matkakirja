@@ -2895,3 +2895,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   kansi_raot_umpeen.py). Varmista portti_kuva.py:llä (Blender, -- <glb> <etuliite>) → paketti tausta-v95 → NS + PT.
 - Kehysmuunnos Unity → malli (likimääräinen, OrigoZ epävarma ±30 m): JuoksuPalatsi.Pohjaan; kanoninen kierto −2,0335° portin A ympäri.
   Paikannustyökalut muuriportti-218/: pystyleikkaus.py "x0,x1,dx" "z,..." glb… (pinnat pisteessä), kaikki_pysty.py x0 x1 z0 z1 glb… (pystypinnat).
+- PT KUITTASI (2.11. 04.1x): oviaukko LOD1/2:een LOD0:n mukaan → tausta-v95 junaan 218; PT välittää PK:lle (peittokartan yläraja 4,0).
