@@ -59,6 +59,9 @@ lento ripeänä. PT päivittää 2.177:n.
 - Pari korjaus-218/218p-vs-218q-104-105.5.png: ruudut identtiset (ajo deterministinen). lahipuut-v13 latautui (unity.log), mutta
   "lahikoriste dougong-intercolumn(Clone)" piirtyy yhä: 117 riviä piirtäjälistassa molemmissa (218q: lokit/esikatselu-20261102-135937/
   piirtajat.txt), kohta z −382,6, y 9,6. Ristikko on LÄHIKORISTE, ei lähipuu → v13 ei koske sitä; PT päättää (LAV/PK lähikoristeen sijoitus).
+- PT 14.2x: SELVITÄ, mistä lähikoristeen dougong-intercolumn 53 sijoitusta (z −382,6, y 9,6; x 78,4…84,3) tulevat. Sijoituskoodista
+  (Palatsi v2/lahikoriste, JuoksuSokkeloMaailma*) → korjaa itse; LAV:n datasta → rivi koordinaatteineen LAV:lle (local_16f6f272-…), korjaa
+  ennen 永寿宫:ta. Sitten pari 218q vs uusi samasta kohdasta PT:lle. (KK:n 13.38-tehtävät ensin, KK:n järjestys.)
 - Kameratallenne PIDÄTETTY: kamera-218/SEIS-tiedosto (aja-kamera.zsh lopettaa heti); poista SEIS ja aja JU:n vuorolla.
 (Alkuperäinen ohje alla.)
 - Ajo PROTO_LINJA=1 zsh korjaus-218/aja-218q.zsh alkoi 13.39 (ensimmäinen yritys 13.32 pysähtyi levyrajaan 29 Gi). Tulos korjaus-218/
