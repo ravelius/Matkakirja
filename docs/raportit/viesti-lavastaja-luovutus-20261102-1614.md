@@ -56,3 +56,4 @@ Uudet lisäykset TÄHÄN tiedostoon.
   Dark warm timber + V4_wood → "Sisapaneeli puu" (UV × 0,5); korokkeen kansi → "Juoksumatto huone"; sermi (Muted gold ≥ 1 m²) → V4_palatsi_friisi.
   aja.zsh: lod0 talteen *-lod0-ennen-pinnat.glb (myös leivottu/), pinnat, rk-kopio, leivonta; 8 salia xf cc c y ys th tj ty.
   Seuraavaksi: kuvaa.zsh <kansio/nimi> jokaiselle → kokoa_pari.py → salit-pinnat-pari.jpg PT:lle → kuittaus → rakennukset-v111 (8 salia, pohjaksi v110) → JU + PK.
+- v110 KYTKETTY: PK 38347d50f (797/797, 1680 solmua), salitallenteet sali-218b 4aeaacbbd.
