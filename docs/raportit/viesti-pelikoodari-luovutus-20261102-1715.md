@@ -25,12 +25,11 @@ ei originia), kärki **6f8d7b6ab** (42dcf0b68 + pystylatauskuva). Salirunko peli
 - Worktreet pelikoodari-postilaatikko ja -luovutus-1455 poistettu (Postivahti/PT).
 
 ## KÄYNNISSÄ: JU:n ESIKATSELU NYT linja 1 (JU 15.4x; ilmoita JU:lle "ESIKATSELU VAPAA", kun kaikki alla on ajettu)
-Ketjut (taustalla, odottavat toisiaan pgrep-silmukalla):
-1. proto-3d/_tyo/pelikoodari/tallenne-218t/ketju.zsh: 218r ✔ → taso 1 A+B (viallinen avaus, ÄLÄ käytä) ✔ → sali-218b/aja-salit.zsh:
-   cx ✔, yk ✔ (v110), ys (v110), th, tj, ty, cc, xf (v111, sali-218b luetaan kunkin ajon alussa).
-2. tallenne-218t/ketju2.zsh: taso 1 A+B uudelleen b9b9c5c58+:lla → videot `*-taso1a2.mp4`, `*-taso1b2.mp4` (B: oikea pyyhkäisy toistetaan
-   hyppy-jos-silmukalla, kunnes hyväksytään, sitten botti 1 + elinvoima 60 s).
-3. sali-218b/ketju3.zsh: cx, yk, ys uudelleen v111:llä (lokit aja-cx2.ulos jne.; videot `<aika>-cx.mp4`, uusin = v111).
+TILA 17.55: valmiit sali-218b/: 20261102-171916-th.mp4 ja 20261102-173316-tj.mp4 (v111); cx/yk/ys 16.28–17.19 ovat v110:llä (uusitaan).
+Levyraja (aja-sk.zsh: < 30 Gi → LEVY) katkaisi ty/cc/xf ja taso 1 -uusinnan 17.49; omien ajojen ruutukansiot poistettu → 39 Gi.
+**KÄYNNISSÄ sali-218b/ketju4.zsh** (taustalla, tämän session prosessi): ty, cc, xf → taso 1 A+B (taso1a2, taso1b2, b9b9c5c58+) →
+cx, yk, ys (v111; lokit aja-cx2.ulos jne.). Siivoaa kunkin ajon ruutukansion videon jälkeen. Tila: `cat sali-218b/aja-*.ulos`.
+Valmistuu arviolta ~20.20. Vanhat taso1-a/-b (15.49/16.03) VIALLISIA, älä lähetä.
 Jos ajot kuolivat nollauksessa: aja puuttuvat samoilla skripteillä taustalla (Monitorilla) ja rivi PT:lle.
 Salien alku/maali = LAV:n rakennukset-reitti S-N:n päät (paikka_pohja + pisteet[0]/[-1] x,z): sk-<koodi>.txt.
 
