@@ -220,7 +220,7 @@ Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä m
   `valmis "OTSIKKO" "teksti" [--juna N [--juna-kohta …]]`. Komento lisää tilanteen eteen ("pp.kk. hh.mmx: …", vanha → "Aiempi: …"),
   päivittää rivin ja ylätason `ts`:n, poistaa vahti-kentän ja kirjaa halutessa saman asian junaan (juna.py) yhdellä komennolla.
   Koukku `tools/hooks/pt-taulu-muistutus.py` muistuttaa komennosta, kun Keskustelukanavan välittämässä viestissä on
-  "OMISTAJAN PÄÄTÖS|PYYNTÖ|OMISTAJA klo", ja listaa enintään 3 työn alla -riviä, joiden `ts` on yli 3 h (alle 48 h) vanha.
+  "OMISTAJAN PÄÄTÖS|PYYNTÖ|OMISTAJA klo", ja listaa enintään 3 työn alla -riviä, joiden `ts` on yli 3 h vanha, sekä keskeneräiset rivit, joiden uusin tilanne sanoo valmis.
 - LAITTEET ennen rooleja: ruudut iPad, Blender, Unity-käännökset, Pilviajot, Simulaattorit,
   Codex-tilaukset ja Googlen musiikki (Lyria-ajot). Käytössä vihreä ja "Rooli: mitä", vapaa harmaa,
   prosessorin käyttö viitenä pienenä palkkina ja prosenttina. Otsikko näyttää käytössä olevat laitteet

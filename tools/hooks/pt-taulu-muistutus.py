@@ -34,7 +34,6 @@ if not os.path.exists(TARKISTIN):  # asennettu kopio /Users/Shared/Claude/hooks/
 OMISTAJAN_VIESTI = re.compile(r"OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA klo")
 TYOLISTA_KOMENTO = "python3 -I tools/asemataulu/tyolista.py"
 VANHA_H = 3
-AKTIIVINEN_H = 48
 JUNA = re.compile(r"KUITATTU|LUKITSE|OMISTAJA PYYSI|BUILD 1\d\d|TF 1\d\d|juna(an)? 1\d\d", re.I)
 IKKUNA = 1_000_000  # Opus 1 M (get_usage: contextWindow 1000000)
 LOPPU_TAVUT = 3_000_000  # viimeinen mallikutsu löytyy tallenteen lopusta
@@ -160,7 +159,8 @@ def junarivivahti(d, sessio):
 
 
 def tyolistavanhat(d, sessio):
-    """Aktiiviset (ts alle 48 h) mutta yli 3 h päivittämättömät työn alla -rivit, enintään 3; kerran 10 min per sessio."""
+    """Yli 3 h päivittämättömät työn alla/kesken -rivit ja keskeneräiset rivit, joiden uusin tilanne sanoo valmis
+    (omistaja 2.11. 11.49: "Työlistassa on vielä vanhoja juttuja"); enintään 3 kumpaakin, kerran 10 min per sessio."""
     polku = os.path.join(DATA, "tyolista.json")
     if not os.path.exists(polku):
         return None
@@ -168,22 +168,31 @@ def tyolistavanhat(d, sessio):
         tl = json.load(f)
     nyt = time.time() * 1000
     vanhat = []
+    valmiit = []
     for r in tl.get("rivit") or []:
-        if not isinstance(r, dict) or not re.search(r"työn alla", str(r.get("tila", "")), re.I):
+        if not isinstance(r, dict) or not re.search(r"työn alla|kesken|jonossa", str(r.get("tila", "")), re.I):
             continue
+        uusin = str(r.get("tilanne", "")).split("\n")[0]
+        if re.search(r"\bvalmis\b|valmiina junassa|junassa 2\d\d \(TF", uusin, re.I) and not re.search(r"\bei valmis|kun .* valmis", uusin, re.I):
+            valmiit.append(str(r.get("otsikko", "?"))[:60])
         ts = r.get("ts")
         if isinstance(ts, str) and ts.strip().isdigit():
             ts = int(ts)
         if isinstance(ts, bool) or not isinstance(ts, (int, float)):
             continue
         ika_h = (nyt - ts) / 3_600_000
-        if VANHA_H < ika_h < AKTIIVINEN_H:
+        if ika_h > VANHA_H:
             vanhat.append((ika_h, str(r.get("otsikko", "?"))[:60]))
-    if not vanhat or not saa_muistuttaa("tyolista-vanha", sessio):
+    if not (vanhat or valmiit) or not saa_muistuttaa("tyolista-vanha", sessio):
         return None
     vanhat.sort(reverse=True)
-    rivit = "; ".join("%s (%d h)" % (o, h) for h, o in vanhat[:3])
-    return (f"TYÖLISTA (hook): työn alla -rivejä ilman tuoretta tilannetta: {rivit}. Päivitä: "
+    osat = []
+    if vanhat:
+        osat.append("työn alla -rivejä ilman tuoretta tilannetta: "
+                    + "; ".join("%s (%d h)" % (o, h) for h, o in vanhat[:3]))
+    if valmiit:
+        osat.append("tilanne sanoo valmis mutta tila ei: " + "; ".join(valmiit[:3]))
+    return (f"TYÖLISTA (hook): {'. '.join(osat)}. Päivitä: "
             f"{TYOLISTA_KOMENTO} tilanne \"OTSIKKO\" \"teksti\" [--juna N] tai valmis.")
 
 

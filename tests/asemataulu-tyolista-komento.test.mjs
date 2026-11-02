@@ -104,25 +104,27 @@ function koukku(data, prompt, tapahtuma = 'UserPromptSubmit') {
 }
 
 test('koukku: KK:n välittämä OMISTAJAN PÄÄTÖS muistuttaa tyolista.py:stä, muu roolien viesti ei', () => {
-  const k = uusi();
+  const k = uusi([{ otsikko: 'Tuore', edistys: 1, tila: 'työn alla', ts: Date.now() }]);
   const kk = '<cross-session-message from="local_37f7c945">OMISTAJAN PÄÄTÖS klo 11.40: tee x</cross-session-message>';
   assert.match(koukku(k, kk), /tyolista\.py lisaa[\s\S]*tyolista\.py tilanne/);
   assert.equal(koukku(k, '<cross-session-message from="muu">Valmis erä</cross-session-message>'), '');
   assert.match(koukku(k, 'tee jotain'), /ASEMATAULU \(hook\)/);
 });
 
-test('koukku: aktiivinen yli 3 h vanha työn alla -rivi listataan, tuore ja yli 48 h vanha eivät', () => {
+test('koukku: yli 3 h vanhat työn alla -rivit listataan (myös yli 48 h), tuore ja valmis eivät; valmis-tilanne huomataan', () => {
   const nyt = Date.now();
   const k = uusi([
     { otsikko: 'Vanhahko rivi', edistys: 1, tila: 'työn alla', ts: nyt - 5 * H },
     { otsikko: 'Tuore rivi', edistys: 1, tila: 'työn alla', ts: nyt - 1 * H },
     { otsikko: 'Hylätty rivi', edistys: 1, tila: 'työn alla', ts: nyt - 60 * H },
     { otsikko: 'Valmis rivi', edistys: 5, tila: 'valmis', ts: nyt - 5 * H },
+    { otsikko: 'Unohtunut valmis', edistys: 0, tila: 'työn alla', tilanne: '1.11. 17.2x: valmis ja kuitattu, menossa junaan 216.', ts: nyt - 0.5 * H },
   ]);
   const t = koukku(k, '<cross-session-message>x</cross-session-message>', 'PostToolUse');
   assert.match(t, /TYÖLISTA \(hook\)/);
-  assert.match(t, /Vanhahko rivi/);
-  assert.doesNotMatch(t, /Tuore rivi|Hylätty rivi|Valmis rivi/);
+  assert.match(t, /Vanhahko rivi[\s\S]*Hylätty rivi|Hylätty rivi[\s\S]*Vanhahko rivi/);
+  assert.match(t, /tilanne sanoo valmis mutta tila ei: Unohtunut valmis/);
+  assert.doesNotMatch(t, /Tuore rivi|Valmis rivi/);
   const k2 = uusi([{ otsikko: 'Tuore rivi', edistys: 1, tila: 'työn alla', ts: nyt - H }]);
   assert.doesNotMatch(koukku(k2, 'x', 'PostToolUse'), /TYÖLISTA \(hook\)/);
 });
