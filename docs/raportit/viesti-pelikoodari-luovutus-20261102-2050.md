@@ -51,3 +51,14 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla.
   arkilla: botti kulkee salin läpi, kamera ei seinissä, kierros näyttää valtaistuimen, Maali ~3 s. Jos maalia ei saavuteta salin
   sisällä (silmukka 110 s loppuun), kokeile takaoven ulkopistettä tai `ui juoksupeli suosi`.
 - Sitten osa 3 KK:lle (loput salit + taso1b4 + iPad pysty), kopio PT:lle ≤ 3 riviä, ja JU:lle "ESIKATSELU VAPAA".
+
+## TILA 21.35: KK:N KORJAUSPYYNNÖT (KK 21.3x, ennen kuin salit näytetään omistajalle) – SEURAAJAN ENSIMMÄINEN TYÖ
+1. **Kamera oviaukossa seinän sisällä**: cx-v2 noin 14,5–15,5 s (videoaika, leikattu) keisari kulkee oviaukosta, kamera ensin
+   sivulla ja sitten punaisen oven tai seinän sisällä (koko ruutu punainen ~0,5 s). Pelin kamerakorjaus (ei vain tallenne):
+   ovien/oviaukkojen kamera (seinähäivytys / kameran törmäys oviaukossa). Tarkista kaikista 8 salista.
+2. **Maali-kortti: Puyin hattu peittää näkymän keskeltä** (kamera keisarin takana kortin aikana). Korjaa loppukortin kamera tai
+   kortin paikka; tarkista kaikista saleista.
+3. **Latauskuvan otsikko**: iPad vaaka (ipad-lataus-2.png): hattu peittää "keisari"-sanan s-kirjaimen alaosan → siirrä tai pienennä
+   otsikkoa niin, että se näkyy kokonaan (iPhone OK). Sama tarkistus iPad pystylle (jonka kuva ei vielä onnistunut, ks. yllä).
+   Latauskuvat vaaka + iPhone on jo näytetty omistajalle.
+4. Salit KK:lle vasta, kun kamera ei mene seinien sisään. Codex-tilaukseen lisätty 21.17 lakaisija + vedenkantajan fill (2a5910c5a).
