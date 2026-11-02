@@ -19,6 +19,10 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä ajoja eikä mergej
 4. **PT:n pysyvät kuittaukset:** LAV:n bugikorjaukset ja PK:n juoksun 217 -bugilistan korjaukset runkoon kysymättä; muut vain PT:n
    kuittauksella (PK:n/VS:n "PT kuittasi" SHA:n kera on vakiotapa). Malli-/laattapaketit: JU:n VIETY ennen mergeä.
 
+## NOLLAUKSEN HETKELLÄ (13.4x)
+- Runko paikallisesti **b0fd44819** = 8aa129301 + PK kapea-reitti-218 f4d65d024 (PT kuittasi; tausta-v100, rakennukset-v98, esto-v25 mediassa 200). Testit jäivät kesken nollauksessa → aja uudelleen, sitten peili + Asemataulu + rivi PT:lle/PK:lle.
+- Odottaa: NUI piirros-tahdet-218 **a24a6acd8:aan asti** (PT kuittasi 13.4x, merge-tree puhdas; EI 38b32b860) → merge, kun JU:n VIETY tähti- ja leike-PNG:istä (nyt 404).
+
 ## TILA
 - **TF 217 testaajilla** (runko 60bd5c356, tagi natiiviseppa/runko-217-tf).
 - **Juna 218 runko = 8aa129301** (wt/proto-natiiviseppa-ehdokas, haara natiiviseppa/juna-218, peili ajan tasalla). Testit 2223/790/586,
