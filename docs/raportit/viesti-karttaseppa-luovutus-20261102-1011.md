@@ -26,8 +26,13 @@ KK:n suunnitelma: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskusteluka
    korjattavaa → tyylikorjaustilaus Codexille (omistajan sanat). Oma video tarvittaessa: C/tahdet-20261102/esikatselu.py <review> <ulos.mp4>.
 2. **Aukio-laatat VIETY** (JU 10.12, PT kuittasi: piirroskartta/pariisi/aukio-20261102/ 54/54, julkinen SHA ok). TasoVersion vaihto
    "aukio-20261102" samaan junaan NUI:n info+kioski-leikkeiden kanssa (rivit NUI:n seuraajalle Postivahdin aloitusviestissä).
-3. Postilaatikon worktree `/Users/Shared/Claude/wt/karttaseppa-postilaatikko-veneet` (claude/postilaatikko): pidä tähteen asti.
-4. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; I monistus (paketti + tarkistuslista) vasta kun Pariisi valmis; 7.48: muita
+3. **HAAMU ennen junaa (KK:n löydös, PT 10.2x):** Temple-tornin länsipuolella läpikuultava talo-ryhmä kangas ~6180–6280 × 2890–3030
+   (`C/ihmeet-20261102/haamu-temple-lansi.jpg` = koottu-65 rajaus 5850,2800). Diagnoosi: on jo lähdekoosteessa koottu-65 → palojen
+   r06c11/r07c11 limityssauma (y 2860–3169, ristihäivytys kahdesta eri talopiirroksesta), ei laatta- eikä vanha kerros. Korjaus ilman
+   Codexia: alueelle vain toinen pala (min-cut/maski uudelleen) → koottu-68a:han → putki (scratchpadin putki-68a.sh malli) → uusi
+   TasoVersio JU:lle. Etsi samalla muut haamut limityskaistoilta (x = 3585+(c−8)·1195…+341, y = 2860+(r−6)·715…+309).
+4. Postilaatikon worktree `/Users/Shared/Claude/wt/karttaseppa-postilaatikko-veneet` (claude/postilaatikko): pidä tähteen asti.
+5. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; I monistus (paketti + tarkistuslista) vasta kun Pariisi valmis; 7.48: muita
    Pariisin osia ei aloiteta ennen KK:n suunnitelmaa ja PT:n viestiä.
 Vahti: scratchpadin vahti.sh (review-kansiot + postilaatikko) oli tämän session Monitorissa; käynnistä omasi.
 Huom: Wikidata-haussa 09.0x User-Agentissa meni vahingossa omistajan sähköposti; älä toista (vain projektinimi).
