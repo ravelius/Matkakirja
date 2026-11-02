@@ -7,7 +7,9 @@
  * (alle 150 m), muuten oma kartan piste. Tulos: data/kohdekartat-sijainnit.json (kaupunki kerrallaan päivittyy).
  * Tunnisteet (data/kohdetunnisteet.json, tools/sisalto/kohdetunnisteet.mjs; KS 2.11.2026): käsin lukittu qid ohittaa wiki-haun,
  * käsin lukittu OSM-kohde (osm "node/123" | "way/123") haetaan OSM API:sta (api/0.6, way: /full ja solmujen keskipiste; ei
- * Overpassia, robots.txt), automaattinen qid (nimi+säde) antaa wikittömälle kohteelle Wikidatan pisteen.
+ * Overpassia, robots.txt), automaattinen qid (nimi+säde) antaa wikittömälle kohteelle Wikidatan pisteen. Käsin lukittu
+ * kartta: true pitää kartan pisteen (Wikidatan piste väärä tai laajan kohteen yleispiste; KS 3.11.2026), tarkistetut
+ * ehdokkaat (tapa 'ehdokas') toimivat kuten automaattinen qid.
  * Pyynnöt: yksi erä kerrallaan, User-Agent ja 1 s tauko (Wikimedian API-ohje).
  */
 import fs from 'node:fs';
@@ -102,6 +104,7 @@ for (const kid of kaupungit) {
   const en = await qidit('en', wikit.filter((w) => !fi.has(w)));
   const qMap = new Map([...en, ...fi]);
   const tun = (k) => tunnisteet[`${kid}:${k.nimi}`];
+  const q0 = (k) => (k.wiki ? qMap.get(k.wiki)?.qid : null) ?? null;
   const tunQ = kohteet.map(tun).filter((t) => t?.qid && !t.osm).map((t) => t.qid);
   const koord = await koordinaatit([...new Set([...[...qMap.values()].map((x) => x.qid), ...tunQ])]);
   const osm = new Map();
@@ -112,6 +115,9 @@ for (const kid of kaupungit) {
     const t = tun(k);
     const ero = (c) => Math.round(etaisyysM(kartanPiste, c));
     // Käsin lukittu tunniste ensin (wiki-uudelleenohjaus tai Wikidatan piste voi olla väärä), sitten wiki, sitten automaattinen.
+    if (t?.kartta && t.tapa === 'käsin') {
+      return { id, nimi: k.nimi, qid: q0(k), lat: k.lat, lon: k.lon, lahde: `kartan piste (käsin: ${t.huom ?? ''})`, kartanPiste, eroKartanPisteesta_m: 0 };
+    }
     if (t?.osm && osm.get(t.osm)) {
       const c = osm.get(t.osm);
       return { id, nimi: k.nimi, qid: null, osm: t.osm, lat: c.lat, lon: c.lon, lahde: `osm ${t.osm} (${t.tapa}: ${t.huom ?? ''})`, kartanPiste, eroKartanPisteesta_m: ero(c) };
@@ -132,7 +138,7 @@ for (const kid of kaupungit) {
     return { id, nimi: k.nimi, qid: q?.qid ?? null, lat: k.lat, lon: k.lon, lahde: k.wiki ? 'kartan piste (Wikidatassa ei koordinaattia / artikkelia ei löytynyt)' : 'kartan piste (nostokohde ilman wikiä)', kartanPiste, eroKartanPisteesta_m: 0 };
   });
   // Nostokohteet ilman omaa Wikidataa: sama paikka kuin lähin wiki-kohde (alle 150 m), jotta nosto istuu nähtävyyden kohdalle.
-  for (const r of rivit.filter((x) => x.qid === null && !x.osm)) {
+  for (const r of rivit.filter((x) => x.qid === null && !x.osm && !x.lahde.startsWith('kartan piste (käsin'))) {
     let paras = null;
     for (const m of rivit.filter((x) => x.qid && x.lahde.startsWith('wikidata'))) {
       const d = etaisyysM(r.kartanPiste, { lat: m.lat, lon: m.lon });
