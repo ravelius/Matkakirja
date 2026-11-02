@@ -9,7 +9,9 @@ pienempänä kauemmilla zoom-tasoilla." Worktree /Users/Shared/Claude/wt/proto-n
   fs 22 pt (KyltinTaysiPt) ja scale-muunnos pisteen ympäri = KaupunkiPalloMitat.PiirrosMittakaava(korkeus, MinKorkeus, 0).
   Alle 6 pt (KyltinMinPt) kyltti häipyy. Sovita käsittelee kyltit ensin (muut väistävät niitä). `ui kohdenostot` näyttää "kyltti ala ×0,42 = 9,3 pt".
 - Todistus: proto-3d/lokit/todistus-kyltit-b7b45fef0-20261102-0827/ (kk/1-kyltit-lahin-vs-2x.jpg, selitteet.txt), 0 poikkeusta.
-  PT:lle lähetetty 08.31; odottaa PT:n/omistajan OK:ta → SHA NS:lle junaan 218.
+  PT KUITTASI 08.3x ja lähetti b7b45fef0:n NS:lle junaan 218 (ei avointa työtä tässä erässä).
+
+**SEURAAJAN JÄRJESTYS (PT 08.3x): ENSIMMÄISENÄ piirros-eleet-218 (e093d2e68, ea25c610e) simutodistus + kohta 3 nipistys, sitten 5–6 karikatyyri, sitten 7 veneet.**
 - Huomio: Palais d'Orsay ja Orsayn taidemuseo lähes samassa pisteessä → kyltit päällekkäin (korjaus PiirrosKyljet-kylki tai data).
   2× kauempaa kyltit ~9 pt (pieniä mutta luettavia); jos omistaja haluaa isommat, nosta KyltinTaysiPt tai mittakaavan viite.
 
