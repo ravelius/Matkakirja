@@ -38,3 +38,11 @@ Ehdot: uusi leivonta → tilaus LAV:lle ja jatka seuraavasta; jokaisesta pari sa
 ## Worktree (proto-3d)
 - wt/proto-linssiseppa2-seinat218: haara linssiseppa2/sali-218 = runko 218 8aa129301 + f8eb37cfe (QA valo kattotieto; ei vielä kuittausta,
   diagnoosityökalu, voi mennä junaan kohdan 1 korjauksen mukana). Haara rae-218 rungossa.
+
+## LISÄYS 2.11. 13.5x: PT:N PÄÄTÖKSET SEURAAJALLE (sitovat)
+1) PT:n 25.10. linjaus KUMOTTU (PT:n, ei omistajan): `JuoksuSaliKattoVarjo` = true (salikattovarjo 1). Lisäksi (b): piilotettu katon pääpala
+   heittää varjoa edelleen (ShadowsOnly piilotettuna; ks. kohta 1 SEURAAVA (2): merkintä, jota PaivitaKappaleet käyttää), jotta sali on hämärä
+   kuten havainne 04. Valojuovat ikkunoista ERIKSEEN (keila tai valokuvio ikkuna-aukoista): juovien osuus lattiasta mitattuna ~25 % (havainne).
+   Pari tasaisessa vertailussa (sama rajaus) PT:lle.
+2) Seinät: suunta pysyy; maavalo varjoseinille OK, mittaa kirkkaimmat arvot havainnetta vasten (punaisen p90+/p25-, ks. JONO 13.5x).
+3) Sitten kohdat 2 (katetut tilat mustia) ja 4 (06 lattia).
