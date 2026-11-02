@@ -19,13 +19,17 @@ C = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/codex-pseudo3d
 0. **ETUSIJA (PT 13.4x, tehdään ENNEN tunnistetyötä, tässä järjestyksessä):**
    a. **Siltaleikkeet (omistajan pyyntö 13.19, NUI pyytää):** Pariisin kanaalin/Seinen veneiden reitin sillat (~15) leikkeinä veneiden
       päälle samalla leikekerroksella kuin kioski (`_valmiit/pariisi-info-kioski-20261102/`, aukio-työ `C/info-kioski-20261102/`).
-      Sovi muoto ja vienti NUI:n kanssa (local_43962c89-fc14-4098-9dd7-6153133ffcea).
+      NUI:n määrittely (13.4x): jokainen silta, jonka alta seine-reitti.json:n reitti (Cité-saaren eteläinen haara) kulkee; leike = kansi
+      + kaiteet + kaaret haamu3-laattojen piirroksesta, RGBA, muu läpinäkyvä, lähitason 1 m/px (tai 2× kuten info/kioski). Paketti
+      `_valmiit/pariisi-sillat-<pvm>/leikkeet-sillat-<pvm>/leike-silta-<tunnus>.png` + SHA256SUMS + nui-rivit.txt:
+      `("silta-<tunnus>", pohjoinen, etelä, länsi, itä, null)` kuten Leikkeet-taulukossa. Valmis → pari PT:lle + rivi NUI:lle (id
+      local_43962c89-fc14-4098-9dd7-6153133ffcea); JU vie PT:n kuittauksen jälkeen.
    b. **Hehkut ja maailmanperintö (omistajan pyyntö 13.21, juna 218):** kuva `docs/raportit/kaappaukset/omistaja-20261102/1321-eurooppa-hehkut-maailmanperinto.png`.
       (1) Kaukozoomissa ei kirkkaita ympyröitä käytyjen/nykyisen kaupungin kohdalla (kuvassa Helsinki, Pariisi). (2) Suurennuslasin
       maailmanperintökytkin päällä → kaikki Euroopan maailmanperintökohteet kipinöinä korostusvärillä, myös valmiit nostot; pois →
       ei korostusta (Ranskan noston kellertävä hehku nyt aina päällä = vika). Kipinät = KS:n työ (a884e7824); ympyrät/nostojen
       hehku mahdollisesti NUI:n koodia → sovi NUI:n kanssa. Pari PT:lle: kytkin päällä / pois + kaukozoom.
-1. **Ajo (tunnisteet, vasta kohdan 0 jälkeen):** jos `T/ajo.log` ei kasva (prosessi kuoli nollauksessa), jatka: worktree `/Users/Shared/Claude/wt/karttaseppa-kohdetunnisteet`,
+1. **Ajo (tunnisteet, vasta kohdan 0 jälkeen; PT kuittasi suunnitelman, Overpass hitaasti ehtojen mukaan):** jos `T/ajo.log` ei kasva (prosessi kuoli nollauksessa), jatka: worktree `/Users/Shared/Claude/wt/karttaseppa-kohdetunnisteet`,
    `node tools/sisalto/kohdetunnisteet.mjs --kaikki --ehdokkaat T/ehdokkaat.json >> T/ajo.log` (taustalle; jatkaa siitä, mihin jäi).
 2. **Ajon jälkeen** lisää käsin lukitut 31.10.:n neljä (ajo ylikirjoittaa tiedoston, siksi vasta lopuksi) data/kohdetunnisteet.json:iin:
    `"nouakchott:Nouakchottin yliopisto": {"qid":"Q3119358","tapa":"käsin","huom":"wiki-uudelleenohjaus antoi väärän Q:n"}`,
