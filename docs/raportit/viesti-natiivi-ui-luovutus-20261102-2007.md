@@ -40,3 +40,7 @@ proto-3d/tyokalut/natiiviseppa-skriptit/juna218/saapuminen-matka218.sh (Iso iPad
    natiivi-ui/nimikerros-218 (EI mittaus-haaraa). Jos ei vähene: ei runkoon, rivi PT:lle.
 3. Jos Lado varaa yhä paljon: seuraava epäilty on HaePaikka (uusi Paikka + sanakirjarivi joka riville joka tason vaihdossa) ja
    LisaaElavat (Aluenimi + 2 sanakirjaa per nimi; pysyvää dataa) – Karsi voi pyörittää samoja nimiä (ElavaEnintaan 4000 → 3000).
+
+**NS 20.1x: ajaa itse.** Laitekäännös 2a1a6e0e7, sitten saapuminen-matka218 vuorotellen 4fff097b6/2a1a6e0e7 ×2 (Iso iPad).
+Tulokset proto-3d/lokit/natiiviseppa-saapuminen-matka-nimik-{ennen,jalkeen}{1,2}-20261102; NS lähettää rivin NUI:lle ja PT:lle.
+Seuraaja: odota NS:n riviä, jatka jonon kohdasta 2.
