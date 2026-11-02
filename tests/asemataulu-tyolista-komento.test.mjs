@@ -105,7 +105,9 @@ function koukku(data, prompt, tapahtuma = 'UserPromptSubmit') {
 
 test('koukku: KK:n välittämä OMISTAJAN PÄÄTÖS muistuttaa tyolista.py:stä, muu roolien viesti ei', () => {
   const k = uusi([{ otsikko: 'Tuore', edistys: 1, tila: 'työn alla', ts: Date.now() }]);
-  const kk = '<cross-session-message from="local_37f7c945">OMISTAJAN PÄÄTÖS klo 11.40: tee x</cross-session-message>';
+  const kk = '<cross-session-message from="local_37f7c945-e1a0-4638-90b8-93c389a36fbe">\nOMISTAJAN PÄÄTÖS klo 11.40: tee x</cross-session-message>';
+  assert.doesNotMatch(koukku(k, '<cross-session-message from="local_5df52e10">\nOMISTAJAN PÄÄTÖS klo 11.40: x</cross-session-message>'), /tyolista\.py lisaa/);
+  assert.doesNotMatch(koukku(k, '<cross-session-message from="local_37f7c945-e1a0-4638-90b8-93c389a36fbe">KK: lainaus "OMISTAJAN PÄÄTÖS" -sanasta</cross-session-message>'), /tyolista\.py lisaa/);
   assert.match(koukku(k, kk), /tyolista\.py lisaa[\s\S]*tyolista\.py tilanne/);
   assert.equal(koukku(k, '<cross-session-message from="muu">Valmis erä</cross-session-message>'), '');
   assert.match(koukku(k, 'tee jotain'), /ASEMATAULU \(hook\)/);

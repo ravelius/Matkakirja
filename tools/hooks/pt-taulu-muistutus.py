@@ -11,7 +11,7 @@ Hook (vain Päätoimittajan checkout, Matkakirja-fable/.claude/settings.local.js
 - KONTEKSTIVAHTI (molemmat tapahtumat, myös roolien viestit): lukee session oman tallenteen viimeisen
   mallikutsun kontekstin ja muistuttaa 30/35/40 %:ssa (PT 30 pehmeä / 40 kova; KK 35 aloitus.md / 40 kortti).
   Viesti kertoo kummankin säännön, koska koukku ei tiedä roolia. Ei riipu Postivahdista.
-- KK:N VÄLITTÄMÄT OMISTAJAN PÄÄTÖKSET (2.11.2026): UserPromptSubmit-viesti, jossa cross-session-message ja rivi
+- KK:N VÄLITTÄMÄT OMISTAJAN PÄÄTÖKSET (2.11.2026): UserPromptSubmit-viesti KK:lta (from=KK:n id), jonka rivi alkaa
   "OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA klo", muistuttaa kirjaamaan sen työlistaan tools/asemataulu/tyolista.py:llä
   (omistaja puhuu vain Keskustelukanavan kautta, joten ennen näitä viestejä ei muistutettu lainkaan).
 - TYÖLISTAN AKTIIVISET VANHENTUNEET (molemmat tapahtumat): enintään 3 "työn alla" -riviä, joiden ts on yli 3 h mutta alle 48 h vanha.
@@ -31,7 +31,9 @@ DATA = os.environ.get("PT_TAULU_DATA") or "/Users/Shared/Claude/Matkakirja-fable
 TARKISTIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "asemataulu", "tarkista-junat.py")
 if not os.path.exists(TARKISTIN):  # asennettu kopio /Users/Shared/Claude/hooks/ (KK 2.11.)
     TARKISTIN = "/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tarkista-junat.py"
-OMISTAJAN_VIESTI = re.compile(r"OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA klo")
+# vain KK:n lähettämä viesti, jonka rivi alkaa päätöksellä tai pyynnöllä (KK 2.11. 12.1x: PT:n lainaus laukaisi muistutuksen KK:ssa)
+KK_ID = "local_37f7c945-e1a0-4638-90b8-93c389a36fbe"
+OMISTAJAN_VIESTI = re.compile(r"(?m)^\s*(OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA) klo")
 TYOLISTA_KOMENTO = "python3 -I tools/asemataulu/tyolista.py"
 VANHA_H = 3
 JUNA = re.compile(r"KUITATTU|LUKITSE|OMISTAJA PYYSI|BUILD 1\d\d|TF 1\d\d|juna(an)? 1\d\d", re.I)
@@ -121,7 +123,7 @@ def kontekstivahti(d, sessio):
 def taulumuistutus(d, tapahtuma, sessio):
     if tapahtuma == "UserPromptSubmit":
         p = str(d.get("prompt") or "")
-        if "cross-session-message" in p and OMISTAJAN_VIESTI.search(p):
+        if f'from="{KK_ID}"' in p and OMISTAJAN_VIESTI.search(p):
             if saa_muistuttaa("omistaja-kk", sessio):
                 return ("ASEMATAULU (hook): Keskustelukanava välitti omistajan päätöksen tai pyynnön. Kirjaa se työlistaan "
                         f"samassa vuorossa: {TYOLISTA_KOMENTO} lisaa \"OTSIKKO\" --teksti \"…\" --lisa \"…\" (uusi) tai "
