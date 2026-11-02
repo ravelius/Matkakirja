@@ -36,3 +36,16 @@ rajalla (27 %). Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-
    sk-sali.txt käyttää `botti 1` (Autopilotti on nyt pois oletuksena) ja `taso 0`.
 5. lahipuut-v14 kytkentä (yllä) heti kun vienti on _valmiit/:ssa.
 6. Eunukkikorjaus, eunukkimäärät (12.13), Taso1ReittiPortiltaAukiolle03-siivous, kameratallenne (kamera-218/SEIS) JU:n vuorolla.
+
+## LISÄYS 15.0x: luovutuksen JÄLKEEN tulleet viestit (KÄSITTELEMÄTTÖMIÄ – tee nämä)
+- **KK 14.5x: AVAUS HYVÄKSYTTY** (jono 1 auki, kaksi viestiä samaa sisältöä): lento → ovet auki → keisari juoksee kujalle ja PYSÄHTYY
+  vastapäisen seinän eteen (uusi seinämekaniikka 7b8456f41) → huuto olan yli ovelle → kamera kiertää ripeästi taakse kujan suuntaan →
+  3-2-1 → pelaaja kääntää itse ohjeen kanssa. Jos vastaseinällä voi kääntyä myös OIKEALLE, opeta ensin oikea pyyhkäisy (omistaja 27.10.
+  08.26 "ehkä mieluummin vain oikealle"), muuten vasen. T-risteyksen opetus ennallaan. Avauksen botti pois (JuoksupeliNakyma
+  AvausKesken-haaran BottiAskel). Tallenne taso 1:n alusta (jono 3) KK:lle ja PT:lle ENNEN junaa; KK tarkistaa omistajan sanoja vasten.
+- **JU 14.40**: rakennukset-v103 / tausta-v103 / esto-v28 viety – jo kytketty 9e31aa94e, SHA256SUMS täsmäävät (b07f21d87187,
+  451f43567125, f1523df574cc). Ei toimia.
+- **LAV: lahipuut-v14 tehty** (809458bef99b, = v13 − läntiset etu- ja takarivit); JU vie → kytke (jono 5). Vastattu LAV:lle 15.0x:
+  tee v15 = v14 + v13:n turhaan poistamat itäiset rivit takaisin v12:sta → kytke v15, jos se ehtii, muuten v14.
+- **LAV: 体和殿** th-tihedian: rakennukset-v104 + reitti S-N (puutarha-kaista5:n liitoksista keskiakselia läpi), tausta-v104, esto-v29
+  (PT kuittasi; JU vie) → kytke kuten 9e31aa94e kun viety. **太极殿** tj-taijidian: rakennukset-v105, tausta-v105, esto-v30 tulossa.
