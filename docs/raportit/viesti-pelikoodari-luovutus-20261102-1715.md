@@ -57,3 +57,8 @@ Salien alku/maali = LAV:n rakennukset-reitti S-N:n päät (paikka_pohja + pistee
    ja leima näkyvissä) → PT:lle polut. Tarkista: ei mustia reunoja, poika ja otsikko kokonaan.
 4. Edellisen luovutuksen kohta 4 (eunukkikorjaus, eunukkimäärät 12.13, Taso1ReittiPortiltaAukiolle03-siivous, kamera-218/SEIS).
 5. HUOMIO KK:lle (edellisestä): seinän opetus oikealle vie pohjoiseen p-kujaportille, poispäin maalista; vasen vaatisi kameran kaaren.
+
+## TILA 20.05: 8 SALIA VALMIIT (v112, kaikki maalissa) – lähetä PT:lle yhdessä taso1a2:n ja taso1b3:n kanssa
+/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/: 20261102-182753-cx.mp4 (储秀宫), -184702-yk.mp4 (翊坤宫), -185946-ys.mp4 (永寿宫),
+-191119-th.mp4 (体和殿), -192310-tj.mp4 (太极殿), -193416-ty.mp4 (体元殿), -194533-cc.mp4 (长春宫), -195649-xf.mp4 (咸福宫).
+Taso1b3 (ketju7) ~20.30 → tarkista käännös → paketti PT:lle → latauskuvat (jono 3) → JU:lle "ESIKATSELU VAPAA".
