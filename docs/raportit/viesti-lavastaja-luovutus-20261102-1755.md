@@ -31,3 +31,5 @@ Edellinen viesti-lavastaja-luovutus-20261102-1707.md (lisäykset 261–262) on v
   KATTO_Y tai päätykolmiot kattoon; 2) kuvapari.zsh (xf:n mallista, ennen = tausta-v108 2-3) → pari PT:lle; 3) kuittauksen jälkeen tausta-v109
   (xf tausta-v108.zsh mallina, 2-3 lod0/1/2 tausta_pois_c.py 3a), rakennukset-v113 (pohja v112 + c3 lod0/1/2/törmäys, merkinta_c.py), esto v34 → JU + PK.
 - Sitten 钟粹宫, 永和宫, 景阳宫 (reittikartta seuraava-sali/).
+
+- v112 KYTKETTY: PK 60e8b11aa (797/797); salitallenteet v112:lla taso 1 -tallenteiden jälkeen.
