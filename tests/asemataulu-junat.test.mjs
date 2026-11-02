@@ -296,13 +296,9 @@ test('muoto: valmiin työn sana avoimen junan Työn alla -kohdassa hylätään, 
   assert.equal(aja(d).status, 0, 'korjataan ei ole valmiin työn sana');
 });
 
-test('muoto: TF 217+ kohdat tarkistetaan, vanha TF ohitetaan, Uutta-otsikon aika sallitaan', () => {
+test('muoto: TF-rivejä ei valvota (omistaja 2.11. 10.39)', () => {
   const d = hyva();
   d.rivit[0].nimi = 'Juna 218';
-  d.rivit[1] = { nimi: 'TF 217', tila: 'Testaajilla (TestFlight)', teksti: 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus' };
+  d.rivit[1] = { nimi: 'TF 217', tila: 'Testaajilla (TestFlight)', teksti: 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus 2.11. 04.07' };
   assert.equal(aja(d).status, 0, aja(d).stdout);
-  d.rivit[1].teksti = 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus 2.11. 04.07';
-  assert.equal(aja(d).status, 1);
-  d.rivit[1] = { nimi: 'TF 216', tila: 'Testaajilla (TestFlight)', teksti: 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus 2.11. 04.07' };
-  assert.equal(aja(d).status, 0, 'vanha TF-rivi ohitetaan');
 });

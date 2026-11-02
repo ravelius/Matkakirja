@@ -45,8 +45,7 @@ TF_OTSIKKO_RE = re.compile(r"^Uutta \(\d{1,2}\.\d{1,2}\. klo \d{1,2}\.\d[\dx](?:
 # Juna N -rivin tila ei kerro testaajista; testaajilla oleva juna on "TF N" (206 ja 207 jäivät Juna-riveiksi 20.10.).
 TESTAAJILLA_RE = re.compile(r"testaaj", re.I)
 # Junarivin muoto (omistaja 2.11.2026): kohdissa ei päivämääriä eikä kellonaikoja, kukin asia kerran, lyhyt rivi,
-# avoimen junan Työn alla -kohdassa ei valmiin työn sanoja. Vanhat TF-rivit (N < TF_MUOTO_ALKAEN) ohitetaan.
-TF_MUOTO_ALKAEN = 217
+# avoimen junan Työn alla -kohdassa ei valmiin työn sanoja. TF-rivejä ei valvota (omistaja 2.11. 10.39: ne tehdään juna.py tf:llä).
 KOHTA_MAX = 110
 PVM_RE = re.compile(r"\d+\.\d+\.")
 AIKA_RE = re.compile(r"\b\d{1,2}\.\d[\dx]\b|\bklo\b", re.I)
@@ -177,8 +176,7 @@ def tarkista_rivi(r, i, nakyva, virheet, varoitukset, lukitut=()):
 
 def tarkista_muoto(p, nimi, on_juna, lukittu, teksti, virheet):
     """Junarivin muoto (2.11.): osiot, ei aikoja, ei toistoa, lyhyet kohdat, ei valmiin työn sanoja Työn alla -kohdassa."""
-    nro_ = int(NIMI_RE.match(nimi).group(2))
-    if not on_juna and nro_ < TF_MUOTO_ALKAEN:
+    if not on_juna:
         return
     osiot, nykyinen, nahty = [], None, set()
     for rivi in teksti.split("\n"):
