@@ -33,6 +33,24 @@ kärki **31094e036**. Salirunko **pelikoodari/sali-218d = 0e0e89be5** (31094e036
 - Kapea-reitti-218:n uudet commitit NS:lle vain PT:n kuittauksella (pysyvä kuittaus: tallenne PT:lle → SHA NS:lle): 1657d1932 (景阳宫) ja
   31094e036 (vain QA-polku; PT päättää, tarvitaanko junaan).
 
+## KK:N PALAUTE OSAAN 3 (KK 3.11. ~01.55) – SEURAAJAN ENSIMMÄINEN TYÖ
+HYVÄKSYTTY (KK omistajan puolesta, yövaltuutus): latauskuvat ipad-v2-lataus-2.png ja ipad-pysty-v2-lataus-2.png; taso 1:n dronelento,
+käännös ohjeen mukaan ja ei kiinniottoa. EI VIELÄ (kamera seinän läpi tai Puyi poissa ruudusta; ajat leikatun videon sekunteja):
+- taso1b4 40,3–41,3 s: kamera oven yläpalkin ja seinän läpi (koristepalkki ylösalaisin, sitten pelkkää punaista).
+- yk-v2 13–15 s: pelkkää punaista seinää.
+- tj-v2 9–19 s: kamera seinässä oven yläpuolella; koristepalkki lähikuvana, Puyi näkyy 9 s vain seinän raosta.
+- th-v2 13–20 s ja ty-v2 17–24 s: kamera kattojen yllä horisonttia kohti 8 s, Puyi ei ruudussa (= maalin näköala/korkea kamera
+  ennen kierrosta: maali saavutettiin kesken lennon, kamera nousi; KK EI halua kattonäkymää juoksun tilalle).
+- cx-v2 12–13 s: seinä täyttää ruudun. yk, cx, th ja ty ~11 s: sumea ohitus salin ovella.
+TAVOITE (KK): Puyi koko ajan ruudussa; kamera ei koskaan kulje seinän, oven, palkin tai katon läpi, eikä ruudussa pelkkää seinää.
+Oviaukossa kamera lähenee Puyin taakse tai nousee aukon yläpuolelle seinän ulkopuolelle; kattonäkymä ei korvaa juoksua. Maali-kortti
+tulee VALTAISTUINNÄKYMÄN päälle ja Puyi näkyy kortin alla (→ kortti kierroksen jälkeen valtaistuinkuvassa, ei pelikameran kuvassa).
+Uudet tallenteet SUORAAN KK:lle (KK katsoo sekunneittain ennen omistajaa).
+Vihjeet: kamerasuoja (JuoksuV4Maailma ~2365) vetää vain Massassa-pisteet; palkit/ovenkarmit/räystäät eivät ehkä ole Massassa →
+tarkista näkölinja Puyin rintaan myös näillä (PeittaaNakyman) ja OviLehtiJanalla-tyyliin karmeille. Kattonäkymä th/ty: maalin
+"NÄKÖALA ESTEEN YLI" (JuoksuV4Maailma ~2210, mYlos huippujen yli) – salitallenteissa näköala pois tai maali vasta kierroksen jälkeen.
+Tallenteiden ajat: sekunti leikatussa videossa + leikkauksen alku (aja-<koodi>-v2.ulos "alku X s") = raakavideo / kamera-<aika>-<koodi>.txt.
+
 ## Jono
 1. **Arkiset hahmot** heti, kun Codexin paketti tulee postilaatikkoon (tilaus 409d7f494 + 2a5910c5a: ruokaeunukki, palvelijatar, vedenkantaja
    + täyttö, lakaisija, särkyvät tavarat; särkymisen ääni EI houkuttele jahtaajia). Video omistajalle taso 1:stä KK:n kautta.
