@@ -34,3 +34,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-1707.md (lisäykset 261–262) on v
 
 - v112 KYTKETTY: PK 60e8b11aa (797/797); salitallenteet v112:lla taso 1 -tallenteiden jälkeen.
 - 承乾宫 UUSINTA VALMIS 17.58 (SERMI_TAKA 1,5): c3-v1/leivottu + tark.jpg; jatka kohdasta SEURAAVAKSI 1.
+- 20.2x: vinot kolmiot = keskipisteluokitus (isot seinäkolmiot); korjattu kuori_c.py jaa_y (V4_red leikataan KATTO_Y:ssä; vanha kuori_c_v2a.py). Uusi leivonta + kuvapari.zsh → pari-c31.jpg PT:lle 20.2x, ODOTTAA KUITTAUSTA → sitten SEURAAVAKSI 3.
