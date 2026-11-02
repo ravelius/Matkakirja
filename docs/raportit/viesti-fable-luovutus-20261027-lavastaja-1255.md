@@ -3119,3 +3119,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   (kaista6:n eteläoven liitos jatkuu itään pihalle z ≈ 418), kaista6 ennalleen vaiheeseen 2. Vaihtoehto: korvaa kaista6. ODOTTAA VASTAUSTA.
 - Seuraavaksi kuittauksen jälkeen: sisatilat-214:n työkalut (sisatila_geom.py, sisatila_yangxindian_kuori.py, kokoa_n.py, tausta_pois_n.py, leivo.zsh, valokuva_v.py)
   pohjaksi; uusi malli rakennukset.json:iin (nimi esim. "c-chuxiugong"), kuori havainteen tyyliin (ei omistajan julkisivua → taustan talon ulkoasu).
+
+## LISÄYS 241 (2.11. 13.1x): rakennukset-v98 (PK:n 2 reittipistettä) VALMIS; 储秀宫 1b KUITATTU (todellinen paikka) — ALOITA TÄSTÄ
+- PK 12.59: liitos-zunyimen päättyi 西一长街:lle kohtaan ilman kadun verkkolinjaa → 2 pistettä loppuun [43.484, 0, −37.981], [44.983, 0, −37.928]
+  (pohja (−75,06; 222,14) → (−73,56; 222,20)). liitokset-218/rakennukset.json (+ rakennukset-v97.json = edellinen), rakennukset-v98.zsh →
+  _valmiit/juoksupeli-kk-lavastaja-rakennukset-v98-vienti-20261102, SHA256SUMS 70a78d780c7c, vain rakennukset.json muuttui. PK + PT:lle 13.1x; JU vie PT:n kuittauksella.
+- PT: liitos 2 pysyy pois; PK jättää salin umpikujakarsinnan ulkopuolelle merkittynä kohteena.
+- PT 13.0x: 储秀宫 KUITATTU suosituksen mukaan: oma rakennus todelliseen paikkaan (taustan umpitalo kk-tausta-1-3:sta pois: jalusta 1,2, seinät ~4,8, katto 5,6–12;
+  sisatilat-1b/tyokalut/tausta_talo.py listaa kolmiot), sisään etelän keskiovesta pihan kautta, kaista6:n eteläoven liitos jatkuu itään. kaista6 ennalleen.
