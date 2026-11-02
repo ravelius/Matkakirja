@@ -29,4 +29,8 @@ Edellinen: -20261102-0405 (PR 5936; lue sen SELVITYS ja haarat). Tilaus (PT 04.0
 1. JU:n vuoro → aja sk-218a → katso video: alku (latauskuva → avauslento, ei sinistä) ja ohjauksen siirto (ei syöksyä; siirtoloki:
    dNyt ja kenttä muuttuvat tasaisesti ~1 s). Jos kunnossa: SHA ee17f6928 NS:lle (local_99130238) seuraavaan runkoon + rivi PT:lle
    videon polun kanssa. Jos siirto tuntuu yhä hätäiseltä, LaskentaLukkoS 1 → 1,5 s (DroneNosto.cs:247) on seuraava säätö.
-2. Muurikulut: LAV:n LOD-löydös (edellinen luovutus). Diagnostiikka f8a5e05e3 (peitto-218) ei vielä NS:lle.
+2. Muurikulut (PT 04.2x, LAV:n löydös): muuriportti on taustapala kk-tausta-1-2, seinä mallikehyksessä x ≈ −109,5, ovi z 168,5…173,5.
+   LOD0: ovi 5 m leveä, 0,7–4,0 m; LOD1/2: seinä umpinainen 8,5 m:iin ilman ovea (7,7 m = viereisen hallin katon alapinta, ei aukko).
+   LAV tekee oviaukon LOD1/2:een (tausta-v95, juna 218). SINULLE: v95:n tultua tarkista `palatsi peittopiste x z` aukon kohdalta, että
+   peittokartan aukon yläraja on 4,0 m, ja tallenteesta (porttirakennus Puyi x 115 → 101, z −561), että kamera pysyy aukon sisällä.
+   Diagnostiikka f8a5e05e3 (peitto-218) ei vielä NS:lle.
