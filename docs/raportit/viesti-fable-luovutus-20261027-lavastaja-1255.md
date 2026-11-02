@@ -2805,3 +2805,9 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   5 = h-zhongyoumen katto ei näy (pelin katonpiilotus vai malli?); 7 = t-portti-m216 katto; 8, 9, 6, 14, 15 tarvitsevat tarkemmat mika-pisteet.
 - SEURAAVAKSI: tarkenna mika-pisteet kuvista (lisää rivejä sk-paikannus.txt:hen, aja.zsh uudelleen), korjaa lähteissä, paketti → SHA NS:lle
   runkoon 217 + rivi PT:lle.
+
+## LISÄYS 252 (2.11. 14.5x): 太极殿 2d tj-v1 VALMIS → PT:n kuittausta — LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+- 太极殿: sisatilat-2d/LUE.md (TOTEUTUS-osio: vakiot, reitti, tarkistus, mitä kuittauksen jälkeen). Uusi tj-taijidian, paikka (−162,405; 324,08), jalusta 0,52,
+  itäseinä lisätty; 2b-tyyppinen sali [A]. Pari tj-v1/pari-tj1.jpg PT:lle 14.5x. Paketteja (tausta-v105, rakennukset-v105, esto-v30) EI vielä tehty.
+- AUKI: 1) PT:n kuittaus 2d → paketit (LUE.md:n ohje) → JU-pyyntö + PK-rivi; 2) varmista JU:n vienti v104/v104/esto-v29 (pyydetty 14.45); 3) PK:n lähikoristerivi
+  ENSIN jos tulee; 4) seuraavaksi 体元殿 (way/40631789, keskipiste −163,01; 343,25; PT: "+体元殿"), sitten 长春宫 (way/40631798).
