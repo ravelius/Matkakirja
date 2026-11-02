@@ -23,18 +23,16 @@ Koko kulku: `C/lahitaso-20261101/MUISTIO.md` (merkinnät 2.11. 08.40–08.53).
 2. **Ihmeet, kun Codex toimittaa** (`CX/pariisi-kadonneet-ihmeet/_review-20261102/`, 5 kohdetta): kartalla-<t>.png → PT (→ KK).
    Sijainti NUI:lle: kangas x = rajaus_x0 + vasen + leveys/2 (paikat.json), lat_kuva = 48.896857 − 0.071176·y/6744,
    lon = 2.272929 + 0.134148·x/9901; päivitä samalla sijainnit.json:n leike-rivit (alustavat). Leikkeet ämpäriin uuteen kansioon.
-3. **Info + kioski, kun Codex toimittaa** (`CX/turistiinfo-lehtikioski/_review-20261102/`): kartalla-pariisi-opera.png → PT (→ KK);
-   sijainti NUI:lle samalla kaavalla (`C/info-kioski-20261102/tilaus/paikat.json`, rajaus_x0 3532, rajaus_y0 1958).
+3. **Info + kioski, kun Codex toimittaa** (`CX/turistiinfo-lehtikioski/_review-20261102/`): PAIKKA VAIHDETTU Place de
+   l'Hôtel de Villelle (PT 08.5x, omistaja 08.45: zoom päättyy keskustaan), muutosposti 3b537739e (Codex oli aloittanut 4757f6a5d
+   juuri ennen; 4×-masterit ennallaan). kartalla-pariisi-hotel-de-ville.png → PT (→ KK); sijainti NUI:lle samalla kaavalla
+   (`C/info-kioski-20261102/tilaus-hdv/paikat.json`, rajaus_x0 5292, rajaus_y0 3048; info 6030,3580, kioski 6190,3600).
 4. **Forum des Halles: PT KYLLÄ (08.5x)** → uusi nykyinen kyltti 48.8625, 2.3450 ja kadonnut ★ alle; kirjattu KYLTIT-NUI.md:hen ja
    sijainnit.json:iin (ankkurikyltti). Wikidata-tunnus tarkistettava.
 6. **NUI:n leikekerros valmis** (proto natiivi-ui/piirros-tahti-218 c4f9e16ba): PiirrosKerros.Leikkeet = {(tunnus, pohjoinen,
    etela, lansi, ita)} maanpinnan leveyksinä kuten Tasot; kuvat <kansio>/leikkeet-20261102/leike-<tunnus>.png (RGBA). Täytä
    rivit Codexin kulmista (kohta 2) ja lähetä NUI:lle; kyltit (★) tekee NUI:n seuraaja.
-7. **AVOIN KYSYMYS PT:lle (omistaja 08.45: saapumiszoomaus päättyy kaupungin keskustaan):** Pariisin keskipiste 48.857, 2.351
-   osuu piirroksessa Notre-Damelle (kangas 5762, 3776); Place de l'Opéra on ~2 km sivussa. Ehdotin siirtoa Place de
-   l'Hôtel de Villelle (oikea turisti-info, ~300 m keskipisteestä, kangas ~6000, 3550). PT oli ennen tätä kuitannut Opéran.
-   Jos PT valitsee Hôtel de Villen: tee uusi ympäristörajaus (info-kioski-20261102/tilaus.py, X, Y ja PAIKAT) ja muutosposti
-   Codexille (tilaus 1bbfff840; Codex ei ollut aloittanut 08.55).
+7. Info-paikka ratkaistu (kohta 3). Veneiden pari: PT kuittasi JU:lle 08.5x.
 5. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; muut kaupungit vasta tilauksesta.
 Postilaatikon worktree: `/Users/Shared/Claude/wt/karttaseppa-postilaatikko-veneet` (claude/postilaatikko); poista, kun ihmeet ja
 info/kioski kuitattu. Vahtiskripti (review-kansiot + posti) oli tämän session Monitorissa; käynnistä omasi.
