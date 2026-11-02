@@ -2985,3 +2985,14 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   PK-kansio "kielletty-rakennukset-v94/". Kuvapari bugit-218/sauma-ennen-jalkeen.jpg (valokuva_m.py, pelin kynnys; vain valo, ei albedoa).
 - Sivuhuomio: etusokkeli x −39,7…−32,7 (malli) on valokartassa nollaa (päällekkäinen leipomaton saari), todennäköisesti piilossa; ei korjattu.
 - JONO jäljellä: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 233 (2.11. 07.5x): BUGI 2 (KAMERA RISTIKKO-OVIJULKISIVUN LÄPI, 218e 1.44,3–1.45,4) KESKEN — LUOVUTUS (konteksti 27 %) — ALOITA TÄSTÄ
+- PT 07.3x: korjaa kuten Longzongmen v97/v98 (julkisivun yläosa katto-solmuun + kansi). PK 07.4x: pohjassa (JuoksuPalatsi.Pohjaan, kierto −2,0335°)
+  Puyi x ≈ −83,5, z 126 → 109 = t-portti-120 (−85,2/119,75) S-N; kamera (−83,7; 129,1 → 118,8), y 5,1–5,6; katon ala 4,8; kuvat
+  proto-3d/_tyo/pelikoodari/korjaus-218/bugi2-kuvat/ (1.45,0: katto häivytetty, ristikko ei). Unity-juuren kehyksessä (81,4; 5,6; −515,8).
+- LÖYDÖS: t-portti-120 (rakennukset-v94 lod0/1/2/tormays) EI sisällä ristikkoa (ei 1070-kuvaa, materiaalit V4_red/gold/teal/katto/friisi/
+  marmori/sokkeli/lattia; runko V4_red y ≤ 4,8, kaikki yläpuolinen jo katto-solmussa). bugit-218/v2_etsi.py (X Z R ympäristöstä): pohjassa
+  (−83,7; 124) R 5 m ainoa osuma on t-portti-120:n katto V4_red. Taustassa, ulkorenkaassa, edustassa, kulmatornissa, osamalleissa, c2:ssa,
+  muurikatteessa ei osumaa. 1070-ristikko on 15 rakennuksessa (a, b, c, d, f, g×3, h×2, l, m, n, o, u), lähin g-baohedian 79 m.
+- SEURAAVAKSI: selvitä, mikä verkko piirtää ristikon (PK: renderer-nimet kameran lähellä tai mika-ajo 218e:n rataan ilman satunnaisuutta;
+  bugit-218/aja2.zsh-pohja, mika 0.5 0.3 / 0.5 0.6 kohdissa 1.44,3–1.45,4). Jos se on pelin oma kopio/LOD tai toinen paketti, korjaus sinne.
