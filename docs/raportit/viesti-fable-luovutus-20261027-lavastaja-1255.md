@@ -3230,3 +3230,14 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   itäpuolen naapuriseinä u 26,2 → RAJA u1 26,0.
 - AUKI: 1) varmista JU:n vienti (v103/v103/esto-v28) ja PK:n kuittaus; 2) PK:n mahdollinen lähikoristerivi (dougong-intercolumn) ENSIN (PT 14.2x);
   3) 体和殿: LUE.md:n askeleet 1–4 (erolista ja reitti selvitettävä ennen rakentamista).
+
+## LISÄYS 251 (2.11. 14.45): 体和殿 2c VALMIS JA KUITATTU (JU vie, PK:lle rivi); 太极殿 2d analyysi aloitettu — ALOITA TÄSTÄ
+- JU vei 永寿宫:n 14.40 (rakennukset-v103, tausta-v103, esto-v28) → lisäyksen 250 AUKI 1 tehty. PK:lta ei lähikoristeriviä.
+- 体和殿 (2c): proto-3d/_tyo/linnanrakentaja/sisatilat-2c/ (LUE.md: mitat, erolista, reitti, tarkistus, paketit; th-v1/). Uusi th-tihedian, paikka (−109,365; 401,88),
+  jalusta 0,33. Läpikulkuhalli [A]: keskussali avoin S-N (ei valtaistuinryhmää), nimilaatta takaoven yllä, itäkammiossa ruokapöytä + 4 istuinta.
+  Reitti puutarha-kaista5:n liitoksista keskiakselia u 13,08. IoU etu 0,967 / sivu 0,982 / pohja 0,990. Pari th-v1/pari-th1.jpg.
+- Paketit: rakennukset-v104 8768c0dd365d, tausta-v104 70a574434a80, esto-v29 df8a1b97336e (152 814 ruutua, v28: 152 833; juna-218 23b37d035, estokoodi
+  b0ea927c8 ennallaan, worktree poistettu). PT kuittasi; JU-pyyntö ja PK-rivi lähetetty 14.45.
+- 太极殿 (2d, PT: seuraavaksi 太极殿 (+体元殿), sitten 长春宫): sisatilat-2d/LUE.md + tyokalut/ (2c-kopiot, kehys/analyysi vaihdettu). TAUSTAN HALLI ERI TYYPPIÄ:
+  6 jännettä à 3,64 (u 1,15–23,01, vain ~22 m / OSM 26,7), jalusta 0,52, länsiseinä ON, ITÄSEINÄ PUUTTUU, ikkunat molemmilla pitkillä sivuilla.
+- AUKI: 1) varmista JU:n vienti v104/v104/esto-v29; 2) PK:n lähikoristerivi ENSIN, jos tulee; 3) 太极殿: LUE.md:n askeleet 1–4 (erolista + reitti ennen rakentamista).
