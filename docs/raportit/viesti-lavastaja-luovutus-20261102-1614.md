@@ -33,3 +33,6 @@ Uudet lisäykset TÄHÄN tiedostoon.
 2. PT:n pikkuhuomio seuraavaan pakettiin (ei estä): sisä-kuvissa vasemman etukulman alla pieni tummanpunainen kolmio (pari-xf1 sisa ~x820 y300,
    cc ~x795 y655, eli SW-kulma seinän ulkopuolella matalalla). Jos se on irtopala, poista se kuori_c:ssä (mahdollisesti länsipäätyseinän alareuna u < 1,2).
 3. Seuraava sali PT:ltä (läntisten palatsien rivi: 储秀宫, 翊坤宫, 永寿宫, 长春宫 ja 咸福宫 tehty). Jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: Lavastaja".
+
+## Lisäys 258
+- JONO 1 TEHTY: PK kytki 咸福宫:n 4520c653b (rakennukset-v109, tausta-v108, esto v32; SHA:t täsmäävät), 797/797, umpikujia 0; salitallenne sali-218b cab3ff92b.
