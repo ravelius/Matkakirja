@@ -277,7 +277,15 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (Karttaseppä 31.10.2026; omistaja 12.49, PT hyväksyi tekstit) tuovat monumentteihin omat korostukset kuten
  *        fokuskohteilla. Natiivi korostaa ne tekstissä kuten fokuskohteissa; vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.67';
+/*
+ *   1.68 kaupungit.keskusta { lat, lon } | null ja kaupungit.alue { p, e, l, i } | null (Karttaseppä 2.11.2026; omistaja 21.42,
+ *        suunnitelma 20261102-nostot-ja-zoomaus-kaikkiin osa B): saapumiszoomauksen OSM-tarkistettu keskipiste Euroopan
+ *        kaupungeille ja alueiden (alpit, lappi, islanti, kreeta, sisilia) rajaus nostojen ja kohteiden ulkorajasta.
+ *        Natiivi (PeliOhjain.SaapumisZoomaus, NUI) käyttää niitä; puuttuva = kaupungin piste. Lisäksi karttavalot.viuhka (valinnainen,
+ *        true = ei yksilöitävää paikkaa kaupungissa → kaupunkimerkin viuhka, osa D; data/nostopaikat.json siirtää muut keskustaan
+ *        kasatut nostot omille paikoilleen). Vanhat buildit ohittavat kentät.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.68';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
