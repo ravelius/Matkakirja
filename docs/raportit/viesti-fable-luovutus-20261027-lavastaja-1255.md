@@ -3106,3 +3106,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   suositus uusi 2,4 m portti muuriin 325 x ≈ −95 kujalle kuja-78 (z 296), vaihtoehto muuri 200 z ≈ 284 → 西一长街. Toteutus samalla tavalla: taustan seinät
   (tausta_ovi.py tai poisto) + reitti n:n rakennukset.json:iin (takajalustan kaista N-pää (−119,1; 282,3) y 1,0) + uusi esto (v26) ja pari.
 - JU 12.44: kielletty-rakennukset-v96/ viety (546, virheitä 0); kytkentä vasta PK:n Yangxindian-salitallenteen kuittauksen jälkeen (PT).
+- PT 13.0x: LIITOS 2 EI (ei keksittyä porttia; takapiha umpikujaksi kuten todellisuudessa; jos verkko vaatii, todellinen takaportti lähteineen PT:lle). esto-v25 vientikansio _valmiit/juoksupeli-palatsi-esto-v25-vienti-20261102 (SHA256SUMS fe1976b75f9e), worktree poistettu. PK:lle polut 13.0x; JU:lle tausta-v100 + rakennukset-v97 + esto-v25 PT:n parikuittauksen jälkeen.
