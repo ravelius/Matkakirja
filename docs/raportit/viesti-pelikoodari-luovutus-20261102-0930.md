@@ -35,3 +35,11 @@ Edellinen: -20261102-0815 (PR 5947). Pysyvä kuittaus: tallenne PT:lle → SHA N
 - Havainto 218h-lokissa: "ESIKATSELU POIKKEUS ArgumentOutOfRangeException" myös 218g:ssä (ei uusi).
 - Worktreet: tausta-v99 = kapea-reitti-218, kivi-216 = tallenne-218h (tallenne-218f + f691d2e2d + pariovet), peitto-218 = eunukit-218
   (mergetty), kansiot-218 = lod-alkulento-218 (mergetty), korjaus-217 = rakennukset-v94-218.
+
+## LISÄYS 09.4x (luovutuksen jälkeen tulleet)
+- NS: tausta-v99 b6de5360f mergetty, **runko 218 = d85660f03**. Kapea reitti 4b107df7e rebase sen päälle (sama kanta b6de5360f).
+- PT: LAV:n **rakennukset-v95 kuitattu (JU vie)**, leveys 1,4 mukana (LAV b38254f1a) → kun JU kuittaa viennin: RakennusKansio
+  kielletty-rakennukset-v95 kapea-reitti-haaraan, eunukkitesti v95-jsonilla (ENSIMMÄISENÄ-kohta), salitallenne JU:n vuorolla → PT.
+- **Bugi 2 (LAV 09.4x):** t-portti-120:ssa (v94 lod0/1/2/törmäys) ei ole ristikkoa, eikä 5 m:n säteellä pisteestä (−83,7; 124) missään
+  paketissa → katto-solmun siirto ei auta. LAV tarvitsee PK:lta: kohdassa 1.44,3–1.45,4 (sk-218e-skenaario) kameran ~6 m säteellä
+  piirtyvien rendererien GameObject-/mesh-nimet, materiaalit ja Unity-sijainnit (Renderer.bounds kameran ympäriltä esikatseluajon lokiin).
