@@ -31,6 +31,11 @@ pehmeällä rajalla (26 %). Proto-worktree /Users/Shared/Claude/wt/proto-pelikoo
    kaappaukset/omistaja-20261102/1338-juoksu-latauskuva-mustat-reunat.png). Otsikon/leiman paikat ovat kuvan osuuksina → tarkista.
 4. **Todistus KK:lle ja PT:lle**: tallenne taso 1:n alusta (dronelento → lähtö → 60 s ohjaamatonta ja ohjattua juoksua) + latauskuva
    pienen iPadin kokoisena pysty ja vaaka.
+4b. **永寿宫 2b (LAV 14.4x, PT kuittasi 14.3x; JU vie):** kytke rakennukset-v103 (uusi ys-yongshougong, reitti S-N varaston
+   etuliitoksen kulmasta takaliitoksen kulmaan), tausta-v103, palatsi-esto-v28 (korvaavat v102/v102/v27; kuten 8c79ade80, testijuuri
+   juuri-yk + MK_*-muuttujat). LAV: etupihan puun kortit ovat reitin päällä → tarkista, että kaista avautuu niiden kohdalta
+   (KaistaRungot / lahipuut). Mitat ja reitti: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/sisatilat-2b/LUE.md.
+   Kytke heti kun JU:n vienti on _valmiit/:ssa (KK:n tehtävien lomaan; pieni).
 5. Salitallenne 储秀宫 ja 翊坤宫 (sk-sali.txt-mallilla, sali-218/aja-sali.zsh; uudet alku/maali reittien päistä) → PT.
 6. Bugi 2 (dougong-intercolumn, edellisen luovutuksen kohta 3) → korjaus tai rivi LAV:lle; pari PT:lle.
 7. Eunukkikorjaus, eunukkimäärät (12.13), Taso1ReittiPortiltaAukiolle03-siivous, kameratallenne (kamera-218/SEIS) JU:n vuorolla.
