@@ -32,11 +32,12 @@ Kunkin kansion LUE.md = mitat, erolista [A], reitti, tarkistus, ajojärjestys. U
 ## Bugi 2 (lähikoristeet, juna 218)
 - Pelin x on peilattu (itä = −X; JuoksuPalatsi.Pohjaan). lahipuut-v13 poisti VÄÄRÄN (itäisen) rakennuksen dougong-intercolumn-rivit.
 - lahipuut-v14 = v13 − LÄNTISEN rakennuksen rivit y 9,59 (etu z −7,67…−6,93, taka z −22,50…−21,75; 26 + 26) → _valmiit/juoksupeli-kk-lavastaja-lahipuut-v14-vienti-20261102
-  (809458bef99b). JU-pyyntö lähetetty 14.5x. Kysytty PK:lta: palautetaanko v13:n itäiset rivit (v15 = v14 + v12:n itäiset rivit x 66…89, z −2,3 / −17,2)?
+  (809458bef99b). PK vastasi: lahipuut-v15 = v14 + v13:n poistamat 52 itäistä riviä v12:sta → _valmiit/juoksupeli-kk-lavastaja-lahipuut-v15-vienti-20261102
+  (849fe603e028). JU:lle pyyntö (korvaa v14), PK:lle rivi 14.5x. VALMIS.
 
 ## JONO (PT 15.2x)
-1. ENSIN: PK:n lähikoristerivi (lahipuut-v14 / mahdollinen v15) — vastaa PK:n viestiin, tee v15 jos pyydetään.
-2. Varmista JU:n viennit: v104/v104/esto-v29, v105/v105/esto-v30, lahipuut-v14.
+1. (tehty) lahipuut-v15; varmista vain JU:n vienti.
+2. Varmista JU:n viennit: v104/v104/esto-v29, v105/v105/esto-v30, lahipuut-v15.
 3. 体元殿 (way/40631789, keskipiste −163,01; 343,25; 太极殿:n pohjoispuolella, sen takana 长春宫戏台) → sisatilat-2e.
 4. 长春宫 (way/40631798, −164,21; 373,73).
 5. 咸福宫 (way/40631832, −165,75; 424,46).
