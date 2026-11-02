@@ -3018,3 +3018,7 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - AUKI: 1) PT:n vastaus reitistä (kysytty 08.4x) ja PK:n leveydet; 2) leivonta + pelin kuvapari; 3) ulkopinnan viimeistely (kivijalka,
   etujulkisivun pylväät/ristikot, jos PT/omistaja haluaa vanhan ilmeen); 4) paketti rakennukset-v95 (v94 + n-*) JU:lle, SHA NS:lle; 5) 储秀宫 (vaihe 1b).
 - Bugi 2 (lisäys 233) odottaa PK:ta (PT 08.5x: PK palaa kohtaan 2).
+- PT 09.0x (lisäys 234:n jälkeen): reitti KUITATTU (valtaistuimen länsipuolelta, sermin takaa, takaovesta; PK tarkistaa leveydet, 1,4 m
+  oviaukossa kamera ei saa leikata, katto häivytetään Raamatun 2.177:n tapaan). Kuva n-v1/reitti-pohja.png. 214 v1 EI junaan vielä:
+  ulkopylväiden ja julkisivun muutos tarkistetaan omistajan 30.10. hyväksymää havainnekuvaa/julkisivua vasten; jos poikkeaa, ULKOKUORI
+  PYSYY ENTISENÄ (sisätila sen sisään). Seuraavaksi: sisäpinnat Codexin pinnoilla (shakkiruutu = paikkamerkki), leivonta, PK:n leveystarkistus.
