@@ -38,3 +38,5 @@ Edellinen viesti-lavastaja-luovutus-20261102-1707.md (lisäykset 261–262) on v
 - 20.3x PT:n korjauspyyntö tehty: pinnat.py kaistat() (friisi-v02 CLAMP; vanha pinnat-v112.py), sisa_c.py valtaistuimen osat (vanha sisa_c_v2a.py), kuori_c.py ovileikkaus 1 m kaistoiksi, leivo.zsh SOLU_UV 0,05 (musta pilari = UV1-pinoutuminen seinän kanssa). Uusi pari-c31.jpg PT:lle, ODOTTAA KUITTAUSTA → SEURAAVAKSI 3.
 - 20.3x PT KUITTASI c3. VIETY JU:lle: tausta-v109 (41c6b708b9a1), rakennukset-v113 (0aca39cec89c), esto v34 (896ea6b2870e, tavulleen v33); PK-rivi ja VS-pari lähetetty (skriptit c3-v1/tausta-v109.zsh, rakennukset-v113.zsh, esto-v34.zsh). → varmista vienti + kytkentä.
 - SEURAAVAKSI: takaoven sokkelin tummat nokareet oven länsipuolella (PT: seuraavaan erään), sitten 钟粹宫, 永和宫, 景阳宫.
+- 承乾宫 KYTKETTY: PK 6fc19c1bf (797/797, umpikujia 0). VS-pari lähetetty (jonossa), vastaus odottaa.
+- NOLLAUS 20.3x (konteksti 25 %): jatka kohdasta SEURAAVAKSI (nokareet: sokkelin hylly oven länsipuolella + kynnyksen etupinta, kuori_c/sisa_c; korjaus rakennukset-v114:ään 钟粹宫:n mukana).
