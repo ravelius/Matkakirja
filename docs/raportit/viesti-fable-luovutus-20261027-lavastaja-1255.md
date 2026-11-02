@@ -2896,3 +2896,18 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - Kehysmuunnos Unity → malli (likimääräinen, OrigoZ epävarma ±30 m): JuoksuPalatsi.Pohjaan; kanoninen kierto −2,0335° portin A ympäri.
   Paikannustyökalut muuriportti-218/: pystyleikkaus.py "x0,x1,dx" "z,..." glb… (pinnat pisteessä), kaikki_pysty.py x0 x1 z0 z1 glb… (pystypinnat).
 - PT KUITTASI (2.11. 04.1x): oviaukko LOD1/2:een LOD0:n mukaan → tausta-v95 junaan 218; PT välittää PK:lle (peittokartan yläraja 4,0).
+
+## LISÄYS 225 (2.11. 04.2x): JUNA 218 – HOLVI, KOLMIOAUKOT JA MUURIPORTTI VALMIIT → JU + NS + PT — ALOITA TÄSTÄ
+- kaiteeton-v5 = kielletty-c2-v33, SHA256SUMS 01c71494f787 (_valmiit/juoksupeli-kk-lavastaja-kaiteeton-v5-vienti-20261102). HOLVIN JUURISYY TARKENTUI:
+  peli (JuoksuValo.hlsl JuoksuLeivottuPeitto, VS 1.11.) antaa täyden taivastäytön leivotulle valolle, jonka luminanssi × _JuoksuLeivonta.y (0,75)
+  < 0,01…0,04 – ei vain RGB 0:lle. NOLLA_MIN ei siis riittänyt (tarkka RGB 0 -kuva: ei nollia ennenkään). Korjaus portaat-v93/valo_alaraja.py:
+  porttikäytävien (3 kpl, alue koodissa) leivotut tekselit vähintään luminanssi 0,06, sävy säilyy; 78 857 tekseliä (2 %), muu tavulleen sama.
+  Koko mallille EI: nostaisi 24 % tekseleistä ja tummentaisi pelissä räystäiden alustoja (täyttö peittyy). Kaiteeton-v7.zsh päivitetty.
+  Kuva bugit-217/vika14/holvi-alaraja-ennen-jalkeen.jpg (vasen c2-v32, oikea c2-v33; valokuva.py = pelin kynnys).
+- osamallit791-v9 SHA256SUMS 57aaf337f8ec (_valmiit/juoksupeli-osamallit791-v9-vienti-20261102), PK "osamallit791-v9/"; kuva osamallit791/v9/kylki-pari.jpg.
+- tausta-v95 SHA256SUMS 333e2353fd25 (_valmiit/juoksupeli-kk-lavastaja-tausta-v95-vienti-20261102): kk-tausta-1-2 LOD1/2 sai LOD0:n LÄPIKULKUOVEN
+  MOLEMPIIN seiniin (x ≈ −109,5 JA −122,8; LOD0:ssa ovi kummassakin), z 168,5…173,5, y < 4,0; muuriportti-218/ovi.py, tausta-v95.zsh;
+  lähde tausta-v89-lahde päivitetty (varmuus-muuriportti-v95/). Kuva muuriportti-218/kuvat95/ovi-pari.jpg (sarakkeet LOD0, LOD1, LOD2).
+- HUOM (ei korjattu): muissakin leivotuissa voi olla tekseleitä 0,01–0,04 (esim. osamallit791 V4_marmorikaide p05 0,024) → sama sininen täyttö
+  syvissä varjoissa. Ratkaisu on VS:n kynnys tai mallikohtainen alaraja → PT päättää.
+- SEURAAVAKSI: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
