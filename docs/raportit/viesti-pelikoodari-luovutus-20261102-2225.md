@@ -24,6 +24,11 @@ kärki **34bd7f7c3**. Uusi salirunko **pelikoodari/sali-218c = a7a46456a** (34bd
 - Levy: muut roolit kuluttavat; vapaa 18–19 Gi. aja-sk.zsh-raja (sali-218b ja tallenne-218t) 20 → 15 Gi. Vanhat leikkaamattomat
   sali-mp4:t (vanha runko) poistettu omasta kansiosta (~1,1 Gt); -v2-tiedostot jäivät.
 
+## TILA 22.35: yk (sali-218c, `sali-218b/20261102-222309-yk-v2.mp4`) tarkistettu arkilla
+- Maali-kortissa sama vika kuin cx:ssä: kamera Puyin selän takana, hattu kortin takana keskellä → Maali-korjaus koskee KAIKKIA saleja
+  (myös maali salin sisällä). Lisäksi sisäänmenossa ~1 s kamera punaisen pylvään/oven karmin vieressä (ruutu puoliksi punainen) –
+  ei koko ruudun punaista, mutta tarkista muistakin.
+
 ## KÄYNNISSÄ (JU:n ESIKATSELU linja 1, ei vapautettu)
 1. `sali-218b/ketju14.zsh` (→ ketju14.ulos): `RUNKO=pelikoodari/sali-218c ketju8r.zsh yk th tj ty cc xf ys` → `sali-218b/<aika>-<koodi>-v2.mp4`,
    sitten taso1b4 (66dc02d2d) → `tallenne-218t/<aika>-taso1b4.mp4`. (ketju13 kaatui LEVY-rajaan 22.22 cx:n jälkeen.)
