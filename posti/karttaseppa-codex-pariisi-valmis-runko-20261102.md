@@ -10,5 +10,7 @@ Aineisto: `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-valmis-runko-2026110
 - `tyylimalli-hyvaksytty-2029.png`: ainoa tyylimalli.
 
 Edellinen kansio `pariisi-isoisan-kartta-20261102/` ja sen mallit (1878) ovat vanhentuneet. Älä käytä niitä.
+LISÄYS 20.5x (PT, NUI): animointikerroksiin myös veneiden vanavesi läpinäkyvänä kuvana samassa tyylissä
+(yksi kutakin venettä kohden), suunnitelman kohdan 00.5 sillat, veneet, lintu ja pallo lisäksi.
 Toimitus `_review-pala00-koepala/` ja `nahtavyydet-piirretty.json` (LUE.md). Karttaseppä tarkistaa paikat ennen kuin
 pala näytetään omistajalle.
