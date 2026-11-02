@@ -15,8 +15,8 @@ Koko kulku: `C/lahitaso-20261101/MUISTIO.md` (merkinnät 12.4x ja 13.xx).
    KORVAA haamu-20261102:n, kuiva-ajo ok). Parit PT:lle `rengas2-3/pari-huiput-0…3.jpg` (12.4x).
 
 ## AVOIN (järjestyksessä)
-1. **PT:n kuittaus haamu2:sta** → JU vie haamu2 (JU:lle kerrottu: vasta PT:n kuittauksen jälkeen) → NUI vaihtaa TasoVersion
-   "haamu2-20261102" (PT välittää; aiemmin pyydetty haamu-20261102 / aukio-20261102 korvautuvat).
+1. **PT KUITTASI haamu2:n** (12.5x) → JU vie haamu2 (kuittaus välitetty JU:lle) → NUI vaihtaa TasoVersion "haamu2-20261102"
+   (PT välittää; haamu-20261102 / aukio-20261102 korvautuvat). Seuraaja: varmista JU:n vienti, ei muita toimia.
 2. Jäännökset (palojen omassa piirroksessa läpikuultavuus, kuten G r1c2): r06c09 3585,2787; r05c10 5066,1500 ja 4897,2215
    (koosteen px). Korjaus tarvittaessa haamu-gc.py:llä (ROI + ydin palalle, jolla puhdas piirros) → korjaa.py-ajoon
    (`rengas2-3/aja-korjaa.sh`, dumpit pitää ajaa uudelleen kokoa-h*.sh:lla, jos scratchpad on tyhjennetty) → uusi TasoVersio.
