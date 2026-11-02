@@ -1,0 +1,41 @@
+# Pelikoodari: luovutus 2.11.2026 klo 17.15 – juna 218
+
+Edellinen: -20261102-1517 (7e8657ba5): sen jono ja huomiot ovat voimassa, ellei alla toisin. Syy: konteksti pehmeällä rajalla.
+Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-v99, haara pelikoodari/kapea-reitti-218 (commitit paikallisia,
+ei originia), kärki **42dcf0b68**. Salirunko pelikoodari/sali-218b = **fc611d0bd** (kärki + pelikoodari/piirtajat-218, luotu
+`git merge-tree --write-tree` + `commit-tree`, ei checkoutia; päivitä samoin, jos kärki muuttuu).
+
+## Tehty tässä vuorossa (kaikki: SHA256SUMS täsmäsi, testit oikealla juurella 797/797, umpikujia 0 (+ sali 1), unity-tarkistus 0)
+- 99244c2b6 体元殿 + 长春宫戏台 (rakennukset-v106, tausta-v106, esto-v31): solmut 1721 → 1657. Esto-v31 vain vapauttaa 24 ruutua,
+  mutta sokkelo generoituu eri tavalla (kujia 95 → 150); ei suljettuja alueita. PT kuittasi.
+- 7dcdc05d2 rakennukset-v107 (戏台:n jalusta kiveä). 54fac919c 长春宫 (rakennukset-v108, tausta-v107, esto-v32): 1671 solmua.
+- 4520c653b 咸福宫 (rakennukset-v109, tausta-v108): 1680. 0e60a815a esto-v33 (tavulleen v32; PT pyysi, JU vei).
+- 38347d50f rakennukset-v110 (ikkunakehysten hajakolmiot). 42dcf0b68 rakennukset-v111 (salien pinnat 8 salissa).
+- **b9b9c5c58 VIKAKORJAUS tason 1 avaus**: keisari seisoo avauksessa vastaseinällä 9 s ja säännön abstrakti takaa-ajaja otti kiinni jo
+  kurkistuksessa (t 31,2) ennen ohjausta (tallenteet 15.49/16.03). Nyt JuoksuV4Saanto.AjajaPidossa (JuoksupeliNakyma.AvausKesken asettaa
+  kuten maailman TakaaAjajaPidossa). Pelin aikana seinällä kiinniotto ennallaan (opetuksen hidastus 0,25 → ~6 s aikaa). PT:lle kerrottu.
+- Bugi 2 -pari 218q vs 218r (lahipuut-v15) PT:lle: **PT KUITTASI** (korjaus-218/218q-vs-218r-portti.png).
+- Testijuuri (symlinkit _valmiit/:iin, kaikki versiot v105–v111):
+  /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-pelikoodari/ec80f6c4-f490-4fac-8d60-cee7a0701ca2/scratchpad/juuri-ty, ympäristö
+  MK_JUURI=<juuri-ty> MK_POHJA=kk-pohja-v1d-pk8 MK_RAKENNUKSET=kielletty-rakennukset-v111 MK_TAUSTA=kielletty-tausta-v108
+  MK_ESTO=palatsi-esto-v33 MK_OSAMALLIT=osamallit791-v10 MK_PUUT=kielletty-lahipuut-v15 ./kaanna.sh (Peli-testit/).
+- Worktreet pelikoodari-postilaatikko ja -luovutus-1455 poistettu (Postivahti/PT).
+
+## KÄYNNISSÄ: JU:n ESIKATSELU NYT linja 1 (JU 15.4x; ilmoita JU:lle "ESIKATSELU VAPAA", kun kaikki alla on ajettu)
+Ketjut (taustalla, odottavat toisiaan pgrep-silmukalla):
+1. proto-3d/_tyo/pelikoodari/tallenne-218t/ketju.zsh: 218r ✔ → taso 1 A+B (viallinen avaus, ÄLÄ käytä) ✔ → sali-218b/aja-salit.zsh:
+   cx ✔, yk ✔ (v110), ys (v110), th, tj, ty, cc, xf (v111, sali-218b luetaan kunkin ajon alussa).
+2. tallenne-218t/ketju2.zsh: taso 1 A+B uudelleen b9b9c5c58+:lla → videot `*-taso1a2.mp4`, `*-taso1b2.mp4` (B: oikea pyyhkäisy toistetaan
+   hyppy-jos-silmukalla, kunnes hyväksytään, sitten botti 1 + elinvoima 60 s).
+3. sali-218b/ketju3.zsh: cx, yk, ys uudelleen v111:llä (lokit aja-cx2.ulos jne.; videot `<aika>-cx.mp4`, uusin = v111).
+Jos ajot kuolivat nollauksessa: aja puuttuvat samoilla skripteillä taustalla (Monitorilla) ja rivi PT:lle.
+Salien alku/maali = LAV:n rakennukset-reitti S-N:n päät (paikka_pohja + pisteet[0]/[-1] x,z): sk-<koodi>.txt.
+
+## Jono
+1. **Tarkista ja lähetä**: taso1a2 (ohjaamaton: keisari ei saa jäädä kiinni ennen ohjausta 38,5 s; seinällä pidempään odottaessa
+   kiinniotto on sallittu) ja taso1b2 (ohjattu: oikea käännös hyväksytään, juoksu 60 s) → PT:lle polut, PT välittää KK:lle (KK tarkistaa
+   omistajan sanoja vasten ENNEN junaa). Arkki: `ffmpeg -i X -vf "fps=1/2,scale=320:-1,tile=6x4" -frames:v 1 arkki.jpg`.
+2. **Salitallenteet 8 kpl** (储秀宫 cx, 翊坤宫 yk, 永寿宫 ys, 体和殿 th, 太极殿 tj, 体元殿 ty, 长春宫 cc, 咸福宫 xf) v111:llä → PT:lle.
+3. Latauskuva: Codexin 3:4-kuva ei vielä postilaatikossa (origin/claude/postilaatikko kärki 47438c330).
+4. Edellisen luovutuksen kohta 4 (eunukkikorjaus, eunukkimäärät 12.13, Taso1ReittiPortiltaAukiolle03-siivous, kamera-218/SEIS).
+5. HUOMIO KK:lle (edellisestä): seinän opetus oikealle vie pohjoiseen p-kujaportille, poispäin maalista; vasen vaatisi kameran kaaren.
