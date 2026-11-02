@@ -36,3 +36,11 @@ Edellinen tiivis luovutus viesti-lavastaja-luovutus-20261102-1614.md (lisäykset
   (juhlasalin "Stone tile 0–4" (0,56–0,72, lämmin) "Floor tile":n sijaan), pienempi laatta (jaa 1,2 m quad 2 × 2:ksi). Vain olemassa olevat materiaalit.
   Tee tämä ennen 承乾宫:ta tai samassa erässä (aja.zsh kaikille 8 + 承乾宫), pari PT:lle.
 - v111 KYTKETTY: PK 42dcf0b68 (797/797); salitallenteet th…xf v111:llä, cx/yk/ys uudelleen lopuksi.
+
+## Lisäys 262 (17.5x)
+- JU vei v111 17.17 (578, 0 virhettä); VS: v111 pelin valossa OK.
+- SAUMAHUOMIO TEHTY, odottaa PT:n kuittausta: pinnat.py → Stone tile 0–4 (0,6 m, 1,2 m ruutu 2 × 2), sauma V4_kivireunus 0,5 cm KEHYKSENÄ samassa tasossa
+  (v111:n saumalevy laatan alla jakoi valokartan tekselit → tummat viivat/kolmiot). 8 salia leivottu 17.45; v111-pinnat talteen pinnat-v111.py, kuvat-v111/.
+  Pari salipinnat/salit-pinnat-v112-pari.jpg (kokoa_pari_v112.py). Kuittauksen jälkeen: `zsh salipinnat/rakennukset-v112.zsh` (pohja v111) → JU + PK (kielletty-rakennukset-v112/).
+- 承乾宫 aloitettu: sisatilat-3a/ (työkalut kopio 2a:sta, kehys_c/analysoi_c/kuori_c RAJA 承干宫:lle; LUE.md). Kuori taustan OMASTA hallista (tausta-v108 2-3, ei 1-3!):
+  halli 19,6 × 6,5 m (u 3,66–23,28, w 3,62–10,09), lattia 1,2, 5 jännettä ~3,9 m; suunnitelma 3 huonetta. Seuraavaksi: kuori_c.py-vakiot (KATTO_Y, OVI, SEINAT) + tiedostopari 2-3/2-4?.
