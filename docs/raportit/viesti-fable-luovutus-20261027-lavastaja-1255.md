@@ -3221,3 +3221,12 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - AUKI: 1) PT:n kuittaus → JU:lle rakennukset-v103 + tausta-v103 + esto-v28, PK:lle rivi kytkennästä (vasta kuittauksen jälkeen, PT);
   2) jos PK lähettää rivin lähikoristeen (dougong-intercolumn) väärästä sijoituksesta → korjaa ENSIN (PT 14.2x, bugi 2, juna 218);
   3) seuraava 体和殿 (25,7 × 12,5): analysoi_c.py + seinat_c.py tausta-v103:sta ensin (hallityyppi vaihtelee).
+
+## LISÄYS 250 (2.11. 14.4x): 永寿宫 KUITATTU (JU vie, PK:lle rivi); 体和殿 analysoitu — LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ
+- PT 14.3x kuittasi 永寿宫 2b:n. JU:lle lähetetty rakennukset-v103 (b07f21d87187), tausta-v103 (451f43567125) ja esto-v28 (f1523df574cc);
+  PK:lle kytkentärivi (jonossa, puukortit etupihalla → kaista avautuu?). Asemataulun tyolista.json päivitetty (Palatsin sisätilat).
+- 体和殿 (2c, PT: seuraavaksi): työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-2c/ — LUE.md:ssä mitat, vakioehdotukset ja askeleet;
+  tyokalut/ = 2b:n kopiot (SW/SE/POHJA/PAIKKA vaihdettu, muut vakiot EI vielä). Halli 6 jännettä, jalusta 0,33, länsiseinä puuttuu,
+  itäpuolen naapuriseinä u 26,2 → RAJA u1 26,0.
+- AUKI: 1) varmista JU:n vienti (v103/v103/esto-v28) ja PK:n kuittaus; 2) PK:n mahdollinen lähikoristerivi (dougong-intercolumn) ENSIN (PT 14.2x);
+  3) 体和殿: LUE.md:n askeleet 1–4 (erolista ja reitti selvitettävä ennen rakentamista).
