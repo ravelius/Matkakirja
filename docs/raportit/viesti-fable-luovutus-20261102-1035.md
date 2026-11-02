@@ -30,3 +30,9 @@ Syy: konteksti 27 % (pehmeä raja 25 %). `date` ennen aikaleimoja.
 ## ROOLIT
 - Nollautumassa/nollattu: NUI (luovutus PR 5962), PK (PR 5963), KS (PR 5967), Asemataulu (Boostin 10.59 jälkeen).
 - Levy: 34 Gi (raja 31) NS:n siivouksen jälkeen; seuraa.
+
+## LISÄYS 10.50
+- PR 5969 ja 5971 mergetty: junarivit vain juna.py:llä; tarkistin valvoo vain Juna N -rivejä (omistaja 10.39: TF-rivejä EI valvota);
+  koukku asennettu /Users/Shared/Claude/hooks/pt-taulu-muistutus.py (sama kuin main). TF 216 siivottu (24 kohtaa).
+- 10.48 omistaja hyväksyi piirrostyylisen tähden v2 (f84dfb5b4) peliin: KS kokoaa paketin _valmiit/pariisi-tahdet-20261102/,
+  NUI sijoittaa 9 tähteä (pyydetty molemmilta) → simu + kuva PT:lle → NS.
