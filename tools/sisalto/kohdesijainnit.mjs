@@ -5,6 +5,9 @@
  * Kohteen id = "<kaupunki>:<nimi>" (sama kuin nähtävyysjuttujen avain). Wiki-kohteille: fi- tai en-Wikipedian
  * artikkelin Wikidata-Q ja sen koordinaatti (P625); wiki-tyhjille nostokohteille: sama paikka kuin lähin wiki-kohde
  * (alle 150 m), muuten oma kartan piste. Tulos: data/kohdekartat-sijainnit.json (kaupunki kerrallaan päivittyy).
+ * Tunnisteet (data/kohdetunnisteet.json, tools/sisalto/kohdetunnisteet.mjs; KS 2.11.2026): käsin lukittu qid ohittaa wiki-haun,
+ * käsin lukittu OSM-kohde (osm "node/123" | "way/123") haetaan OSM API:sta (api/0.6, way: /full ja solmujen keskipiste; ei
+ * Overpassia, robots.txt), automaattinen qid (nimi+säde) antaa wikittömälle kohteelle Wikidatan pisteen.
  * Pyynnöt: yksi erä kerrallaan, User-Agent ja 1 s tauko (Wikimedian API-ohje).
  */
 import fs from 'node:fs';
@@ -14,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const UA = 'Matkakirja-sisaltokirjuri/1.0 (sami.reivinen@vvi.fi)';
 const TULOS = path.join(JUURI, 'data', 'kohdekartat-sijainnit.json');
+const TUNNISTEET = path.join(JUURI, 'data', 'kohdetunnisteet.json');
 const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function api(url) {
@@ -61,6 +65,20 @@ async function koordinaatit(qs) {
   return ulos;
 }
 
+async function osmPiste(osm) {
+  const [tyyppi, id] = osm.split('/');
+  if (tyyppi === 'node') {
+    const j = await api(`https://api.openstreetmap.org/api/0.6/node/${id}.json`);
+    const n = j.elements?.[0];
+    return n ? { lat: Number(n.lat.toFixed(5)), lon: Number(n.lon.toFixed(5)) } : null;
+  }
+  const j = await api(`https://api.openstreetmap.org/api/0.6/${tyyppi}/${id}/full.json`);
+  const solmut = (j.elements ?? []).filter((e) => e.type === 'node');
+  if (!solmut.length) return null;
+  const ka = (k) => solmut.reduce((s, n) => s + n[k], 0) / solmut.length;
+  return { lat: Number(ka('lat').toFixed(5)), lon: Number(ka('lon').toFixed(5)) };
+}
+
 const etaisyysM = (a, b) => {
   const R = 6371000, r = Math.PI / 180;
   const dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
@@ -74,6 +92,7 @@ const kaupungit = args.includes('--kaikki') ? Object.keys(KAUPUNKIKARTAT) : args
 if (!kaupungit.length) { console.error('Anna kaupunki-id:t tai --kaikki'); process.exit(2); }
 
 const tulos = fs.existsSync(TULOS) ? JSON.parse(fs.readFileSync(TULOS, 'utf8')) : {};
+const tunnisteet = fs.existsSync(TUNNISTEET) ? JSON.parse(fs.readFileSync(TUNNISTEET, 'utf8')) : {};
 for (const kid of kaupungit) {
   const kartta = KAUPUNKIKARTAT[kid];
   if (!kartta) { console.error('Ei kaupunkia:', kid); continue; }
@@ -82,20 +101,38 @@ for (const kid of kaupungit) {
   const fi = await qidit('fi', wikit);
   const en = await qidit('en', wikit.filter((w) => !fi.has(w)));
   const qMap = new Map([...en, ...fi]);
-  const koord = await koordinaatit([...new Set([...qMap.values()].map((x) => x.qid))]);
+  const tun = (k) => tunnisteet[`${kid}:${k.nimi}`];
+  const tunQ = kohteet.map(tun).filter((t) => t?.qid && !t.osm).map((t) => t.qid);
+  const koord = await koordinaatit([...new Set([...[...qMap.values()].map((x) => x.qid), ...tunQ])]);
+  const osm = new Map();
+  for (const t of kohteet.map(tun).filter((x) => x?.osm)) osm.set(t.osm, await osmPiste(t.osm));
   const rivit = kohteet.map((k) => {
     const id = `${kid}:${k.nimi}`;
     const kartanPiste = { lat: k.lat, lon: k.lon };
+    const t = tun(k);
+    const ero = (c) => Math.round(etaisyysM(kartanPiste, c));
+    // Käsin lukittu tunniste ensin (wiki-uudelleenohjaus tai Wikidatan piste voi olla väärä), sitten wiki, sitten automaattinen.
+    if (t?.osm && osm.get(t.osm)) {
+      const c = osm.get(t.osm);
+      return { id, nimi: k.nimi, qid: null, osm: t.osm, lat: c.lat, lon: c.lon, lahde: `osm ${t.osm} (${t.tapa}: ${t.huom ?? ''})`, kartanPiste, eroKartanPisteesta_m: ero(c) };
+    }
+    if (t?.qid && t.tapa === 'käsin' && koord.get(t.qid)) {
+      const c = koord.get(t.qid);
+      return { id, nimi: k.nimi, qid: t.qid, lat: c.lat, lon: c.lon, lahde: `wikidata ${t.qid} P625 (käsin: ${t.huom ?? ''})`, kartanPiste, eroKartanPisteesta_m: ero(c) };
+    }
     const q = k.wiki ? qMap.get(k.wiki) : null;
     const c = q ? koord.get(q.qid) : null;
     if (q && c) {
-      const ero = Math.round(etaisyysM(kartanPiste, c));
-      return { id, nimi: k.nimi, qid: q.qid, lat: c.lat, lon: c.lon, lahde: `wikidata ${q.qid} P625 (${q.kieli}.wikipedia: ${q.otsikko})`, kartanPiste, eroKartanPisteesta_m: ero };
+      return { id, nimi: k.nimi, qid: q.qid, lat: c.lat, lon: c.lon, lahde: `wikidata ${q.qid} P625 (${q.kieli}.wikipedia: ${q.otsikko})`, kartanPiste, eroKartanPisteesta_m: ero(c) };
+    }
+    if (t?.qid && koord.get(t.qid)) {
+      const c2 = koord.get(t.qid);
+      return { id, nimi: k.nimi, qid: t.qid, lat: c2.lat, lon: c2.lon, lahde: `wikidata ${t.qid} P625 (tunniste ${t.tapa}: ${t.wikidataNimi ?? ''})`, kartanPiste, eroKartanPisteesta_m: ero(c2) };
     }
     return { id, nimi: k.nimi, qid: q?.qid ?? null, lat: k.lat, lon: k.lon, lahde: k.wiki ? 'kartan piste (Wikidatassa ei koordinaattia / artikkelia ei löytynyt)' : 'kartan piste (nostokohde ilman wikiä)', kartanPiste, eroKartanPisteesta_m: 0 };
   });
   // Nostokohteet ilman omaa Wikidataa: sama paikka kuin lähin wiki-kohde (alle 150 m), jotta nosto istuu nähtävyyden kohdalle.
-  for (const r of rivit.filter((x) => x.qid === null)) {
+  for (const r of rivit.filter((x) => x.qid === null && !x.osm)) {
     let paras = null;
     for (const m of rivit.filter((x) => x.qid && x.lahde.startsWith('wikidata'))) {
       const d = etaisyysM(r.kartanPiste, { lat: m.lat, lon: m.lon });
@@ -105,7 +142,8 @@ for (const kid of kaupungit) {
   }
   tulos[kid] = rivit;
   const huom = rivit.filter((r) => r.eroKartanPisteesta_m > 300).length;
-  console.log(`${kid}: ${rivit.length} kohdetta, Wikidata-Q ${rivit.filter((r) => r.lahde.startsWith('wikidata')).length}, yli 300 m kartan pisteestä ${huom}`);
+  const tunnisteella = rivit.filter((r) => r.osm || / \((käsin|tunniste)/.test(r.lahde)).length;
+  console.log(`${kid}: ${rivit.length} kohdetta, Wikidata-Q ${rivit.filter((r) => r.lahde.startsWith('wikidata')).length}, tunnisteella ${tunnisteella}, yli 300 m kartan pisteestä ${huom}`);
 }
 fs.mkdirSync(path.dirname(TULOS), { recursive: true });
 fs.writeFileSync(TULOS, `${JSON.stringify(Object.fromEntries(Object.entries(tulos).sort()), null, 1)}\n`);
