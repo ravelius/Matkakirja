@@ -35,7 +35,10 @@ rajalla (Raamattu 7.37).
 2. **C (UUSI, PT 09.4x, Raamattu-loki "kadonneet ihmeet pyörivinä tähtinä" #5964)**: 9 pyörivää tähteä (KS:n Codex-kuvasarja,
    PNG-silmukka), kukin eri vaiheesta, pieni valohehku vain tähden ympärille; neljällä tähti nykyrakennuksen viereen, ★-kyltti pysyy;
    Kadonneet-kytkin oletus päällä. Odottaa KS:n kuvasarjaa. PiirrosKerros.Leikkeet-lista pysyy tyhjänä.
-3. Edellisen luovutuksen jono 2–6: B nostot piirrokselle, F Avauskortti pois, E saapuminen, G kioski + info, sujuvuus iPadilla.
+3. **G (PT 10.2x kuittasi)**: KS:n info + kioski -leikkeet piirrokseen: /Users/Shared/Claude/proto-3d/_valmiit/pariisi-info-kioski-20261102/
+   (nui-rivit.txt, info-kioski.json, leikkeet-20261102/, sijainnit.json) ja SAMAAN muutokseen TasoVersio = "aukio-20261102" (JU vie laatat).
+   Huom.: KS:n kadonneiden leikkeet ovat mitättömiä; tarkista nui-rivit.txt:stä, että lista on vain info + kioski.
+4. Edellisen luovutuksen jono 2–6 (G yllä): B nostot piirrokselle, F Avauskortti pois, E saapuminen, G kioski + info, sujuvuus iPadilla.
 
 Skriptit: scratchpad-kopiot kunkin todistuskansion kaanna-*.zsh ja *.txt; käännös ensin erikseen (proto-kaanna.sh ilman UDID:tä),
 sitten `SIMU_MUISTIRAJA=16 zsh proto-3d/tyokalut/simu-lukko.sh kaari natiivi-ui yhteinen-iPad13 -- zsh kaanna-x.zsh`.
