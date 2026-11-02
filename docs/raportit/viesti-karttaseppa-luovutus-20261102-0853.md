@@ -19,7 +19,7 @@ Koko kulku: `C/lahitaso-20261101/MUISTIO.md` (merkinnät 2.11. 08.40–08.53).
    `C/veneet-20261102/pari-seine-ennen-jalkeen.jpg`, `veneet-hillitty.jpg`. Kuittaus Codexille 257a3f691.
 
 ## AVOIN (järjestyksessä)
-1. **PT:n kuittaus veneiden paketille → JU vie.** TasoVersion vaihto vain samassa junassa NUI:n liikkuvien veneiden kanssa.
+1. **Veneiden laatat VIETY** (JU 08.56: piirroskartta/pariisi/veneet-20261102/ 54/54, julkinen SHA ok). TasoVersion vaihto vain samassa junassa NUI:n liikkuvien veneiden kanssa.
 2. **Ihmeet, kun Codex toimittaa** (`CX/pariisi-kadonneet-ihmeet/_review-20261102/`, 5 kohdetta): kartalla-<t>.png → PT (→ KK).
    Sijainti NUI:lle: kangas x = rajaus_x0 + vasen + leveys/2 (paikat.json), lat_kuva = 48.896857 − 0.071176·y/6744,
    lon = 2.272929 + 0.134148·x/9901; päivitä samalla sijainnit.json:n leike-rivit (alustavat). Leikkeet ämpäriin uuteen kansioon.
