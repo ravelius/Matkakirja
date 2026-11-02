@@ -33,3 +33,10 @@ Syy: konteksti 30 % (pehmeä raja). `date` ennen aikaleimoja.
 - Nollautumassa: PK (luovuttaa), KS (luovuttaa), JU (d0692a9e7) – kaikki pyydetty Postivahdilta.
 - Levy 36 Gi (ilmoitusraja 38, kriittinen 31); syy ei selvinnyt (worktreet ~1 Gt), seuraa.
 - Codex-posti: ei uutta 2f6b37032:n jälkeen.
+
+## LISÄYS 13.0x
+- NUI: tähdet bab2834c5 + info/kioski e100c991e + ydin 1fd576f02 + haamu2 d6331330e (natiivi-ui/piirros-tahdet-218) – PT pyysi
+  2 korjausta ennen kuittausta: Orsayn kaksi kylttiä päällekkäin; Temple-tornin kyltissä nimi laatan ulkopuolella. Uusi pari →
+  kuittaa NS:lle (merge) ja JU:lle (tähdet+leikkeet-PNG:t).
+- JU:lta pyydetty PK:lle ESIKATSELU NYT bugi 2:lle. PK:n jono muuten tyhjä (odottaa LAV:n 遵义门-liitosta).
+- Keskustelu tallennettu Paatoimittaja-2026-11-02-klo-1050-1250.md.
