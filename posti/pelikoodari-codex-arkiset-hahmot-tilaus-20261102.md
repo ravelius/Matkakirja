@@ -40,3 +40,13 @@ tunnistaa heti, kuka ei jahtaa. Kaikilla mustat kangaskengät TUMMILLA huopapohj
   kutsumäärät). **Vain claude/postilaatikko.**
 - Pelikoodari tarkistaa, vie ämpäriin (hahmot-v5/) ja toteuttaa reitit, säikähdyksen ja jäänteet nykyisen tallennepaketin ja
   eunukkikorjausten jälkeen; kuvat Keskustelukanavalle. Särkymisen ääni EI houkuttele jahtaajia (omistaja 21.05).
+
+## LISÄYS: aukioiden väki (OMISTAJAN PÄÄTÖS 2.11.2026 klo 21.17, KK) – samaan toimitukseen
+Suurten aukioiden arkiset hahmot (eivät jahtaa). Sama luuranko, leikkeiden nimet ja asujen erottuvuus kuin yllä.
+4. `lakaisija`: palatsin lakaisija, aikuinen mies n. 1,65 m, harmaa tai ruskea työasu, käärityt hihat; kantaa **isoa
+   bambuoksista sidottua luutaa** (pituus noin 1,8 m). Liikkeet: `sweep` (lakaisee paikallaan, silmukka), `walk` luuta olalla,
+   `startle` (luuta kaatuu maahan, tavara-solmu `tavara`) ja `startle_idle`. Tavara `tavara-luuta.glb` (ei jäännettä, luuta jää maahan).
+5. Vedenkantajalle (hahmo 3) lisäksi `fill` (2–3 s): kippaa ämpärit isoon vesiastiaan, ämpärit ylös olkapuussa ja takaisin.
+   Vesiastiat itse (suuret pronssiset tai rautaiset astiat, vihreä patina) tekee Lavastaja aukioiden esteiksi; tee `fill` niin,
+   että ämpärin reuna on noin 1,1 m korkeudella (astian reuna) ja hahmo seisoo astian vieressä.
+Kuvat ja SHA256SUMS kuten yllä; `lakaisija.glb` samaan kansioon `posti/arkiset-hahmot-20261102/`.
