@@ -34,3 +34,20 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla.
 3. Tarkista latauskuvat: ei mustia reunoja, poika ja otsikko kokonaan.
 4. Lähetä KK:lle polut (osa 2: 8 salia + B, osa 3: latauskuvat), kopio PT:lle ≤ 3 riviä. Sitten JU:lle "ESIKATSELU VAPAA".
 5. Edellisen luovutuksen jono 4–5 ja TILA 20.25:n havainto (botin ajossa "käänny vasemmalle" -ohje ~20 s suoralla kujalla).
+
+## TILA 21.25 (päivitys; tämä korvaa yllä olevan KÄYNNISSÄ-osion)
+- Kärki **7127ca0c3**: 钟粹宫 kytketty (rakennukset-v114, tausta-v110, esto-v35 = v34 tavulleen; 797/797, 1705 solmua; LAV kuitattu).
+- **409d7f494 (claude/postilaatikko)**: OMISTAJAN PÄÄTÖS 21.05 → arkiset hahmot tilattu Codexilta (ruokaeunukki, palvelijatar,
+  vedenkantaja + tavarat ja jäänteet; särkymisen ääni EI houkuttele jahtaajia). Toteutus VASTA tallennepaketin, eunukkikorjausten
+  ja ristikko-ovibugin jälkeen (KK). Video omistajalle taso 1:stä KK:n kautta. Worktree wt/pelikoodari-postilaatikko.
+- Levyraja: muut roolit kuluttavat levyä; aja-sk.zsh-raja laskettu 30 → 20 Gi (ajo tarvitsee < 3 Gt).
+- KK:lle lähetetty: osa 1 taso1a2, osa 2 cx-v2 (20261102-203937-cx-v2.mp4, OK) + latauskuvat ipad-lataus-2.png ja
+  iphone-lataus-2.png (latauskuva-218/, OK).
+- **iPad pysty -latauskuva EI onnistunut**: esikatselu-20261102-210012 kuvat näyttävät kartan, vaikka unity.log sanoo "latauskuva
+  näkyy" (isäntä 1032×1376). Selvitä (Kuva()-kooste pystyssä? kokeile --ikkuna tai iPad pysty simulla JU:n kautta).
+- **Salien maali**: alku ja maali ovat kujalla, ja botti oikaisi kujaa (yk 204900: 5 s) tai kiersi ulkokautta (ys 210522: kamera
+  seinissä). Maali nyt salin SISÄLLÄ takaoven edessä (reitin viimeinen y>0-piste): th tj ty cc xf ja ys; yk takaovella (piste 10).
+  Ajossa: b17z1sfox yk → `ketju8.zsh th tj ty cc xf` + taso1b4 (66dc02d2d) → `sali-218b/ketju11.zsh` (ys). Tarkista jokainen
+  arkilla: botti kulkee salin läpi, kamera ei seinissä, kierros näyttää valtaistuimen, Maali ~3 s. Jos maalia ei saavuteta salin
+  sisällä (silmukka 110 s loppuun), kokeile takaoven ulkopistettä tai `ui juoksupeli suosi`.
+- Sitten osa 3 KK:lle (loput salit + taso1b4 + iPad pysty), kopio PT:lle ≤ 3 riviä, ja JU:lle "ESIKATSELU VAPAA".
