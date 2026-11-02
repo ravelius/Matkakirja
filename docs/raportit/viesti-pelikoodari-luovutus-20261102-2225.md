@@ -50,3 +50,6 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla `nohup`illa ja 
 6. VS 23.2x: juoksupelin sade (linssiseppa2/sade-218 b65dbc092, Valopohja.AsetaJuoksuSade 0..1, QA `ui juoksupeli sade 1`): PK hyväksyi
    koukun avautuessa + Saatila.Muuttui → sade = Saa ∈ {Sade, Ukkonen} ? 1 : 0 (VS kirjoittaa). Tarkista kytkentä, kun VS ilmoittaa.
 7. xf (sali-218c, `sali-218b/20261102-231627-xf-v2.mp4`) kesto 58,7 s (muut 20–30 s): maali salin sisällä ei ehkä täyttynyt → tarkista; ohje: takaoven ulkopiste tai `ui juoksupeli suosi`.
+8. TILA 23.42: ketju14 valmis – kaikki 8 salia sali-218c:llä (cx 220906, yk 222309, th 223329, tj 224220, ty 225409, cc 230354, xf 231627, ys 232916;
+   `sali-218b/<aika>-<koodi>-v2.mp4`). taso1b4 EI ajettu: LEVY 13 Gi < 15 (koneen levy, muut roolit). JU:lle ESIKATSELU VAPAA 23.4x, PT:lle levyrivi.
+   Aja taso1b4 kun levyä on (`PROTO_LINJA=1 zsh tallenne-218t/aja-sk.zsh sk-taso1-b.txt taso1b4 66dc02d2d`), salit uudelleen Maali-korjauksen jälkeen.
