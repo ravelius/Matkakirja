@@ -29,3 +29,14 @@ Edellinen viesti-lavastaja-luovutus-20261102-2102.md on vain viite (rooli, tapa,
    PT:n jatkokohta: sokkelin juuressa musta viiva/rako maahan (永和宫 pohjois- ja länsiovi) → tarkista ja korjaa 景阳宫:n kanssa (voi vaatia y3:n uusinnan).
 3. Pronssit, kun Codex toimittaa: 太和殿 terassi (kilpikonna, kurki, aurinkokello, viljamitta, 18 suitsukeastiaa), leijonaparit portteihin (suurin Taihemen),
    vesiastiat aukioille (paikat PK:lle esteiksi; vedenkantajan fill-reuna 1,1 m).
+
+## LISÄYS 21.4x: PK EI KYTKENYT 永和宫 (796/797) — KORJAA ENSIN (ennen 景阳宫)
+- Testi OikeanPalatsinVerkkoEiKuleRakennuksenLapi (Peli-testit/Testit/JuoksuVerkkoRakennusTestit.cs, esim. wt/proto-pelikoodari-peitto-218): 2 väliä
+  rakennuksen läpi. Kierretyt (KanoninenKierto −2,0335° pisteen portit.A ympäri) → hallin kehys: (11,22; 6,17)→(13,72; 6,20) ja (13,68; 9,70)→(13,70; 6,20)
+  = oikotie VALTAISTUINLAVAN läpi (lava u 12,13–15,33, w 6,07–8,87).
+- Diagnoosi (todennäköinen): verkko avaa reitin ±1,2 m (VapaaPuoliLeveys) ja tekee luurangon; merkinta_y:n käytävät u 11,3 ja u 13,73 ovat vain 2,43 m
+  välein ja w 6,02 -käytävä hipoo lavan etureunaa → käytävät sulautuvat ja luuranko kulkee lavan läpi. 3b:ssä 2,52 / 4,93 m meni läpi.
+- Korjaus: väljennä sisäreittiä (esim. lava kapeammaksi tai syvyys 2,8 → 2,4 ja C04 mukana, U_KIERTO ~10,9–11,0, W_VALI-käytävä etelämmäs w ~5,2 lavan edestä),
+  tai kysy PK:lta verkon sääntö. Aja testi itse: MK_JUURI = kansio, jossa kk-pohja-v1d-pk8, kielletty-rakennukset-v116, kielletty-tausta-v111, osamallit791-v6,
+  palatsi-esto-v36 (+ MK_RAKENNUKSET/MK_TAUSTA/MK_ESTO/MK_OSAMALLIT nimet) → ./kaanna.sh OikeanPalatsinVerkkoEiKuleRakennuksenLapi (PK:n worktreessä tai kopioi testi).
+- Sitten uusi rakennukset-v116 (+ tarvittaessa esto v37) → JU + PK (PK nollautui, seuraaja: luovutus 4e3452453).
