@@ -18,7 +18,7 @@ Uudet lisäykset TÄHÄN tiedostoon.
 
 - 2e (LUE.md): PT 15.3x päätti, että reitti kulkee 戏台:n läpi 长春宫:n pihalle. Takaovi on u 12,55–14,35 (戏台:n keskipylväs on akselilla).
   戏台 on oma kehys kuori_c:ssä (valinta_x). Siinä on eteläovi ja pohjoissivun näyttämöaukko. PT:n korjaus 15.2x: näyttämön jalusta tehtiin kivestä
-  (V4_kujakivi_sokkeli ylä, V4_kivireunus sivut); lähikuva ty-v1/kuvat/lahikuva-nayttamo-ty1.png lähetetty PT:lle.
+  (V4_kujakivi_sokkeli kaikilla pinnoilla, v107); lähikuva ty-v1/kuvat/lahikuva-nayttamo-ty1.png lähetetty PT:lle.
 - Bugikorjaus 2e:ssä: _xlaatikko-tahot kiersivät sisäänpäin (mustat karmit ja lattia). Korjattu kiertämään ulos.
 - esto-ajon wrapper palautti exit 144, vaikka leivonta meni läpi ("1/1 läpi"); tarkista lokista, älä aja turhaan uudelleen.
 
