@@ -98,10 +98,10 @@ export const SYVENNYSPAIKAT = {
     },
     /*
      * Iliou Melathron / Ateenan numismaattinen museo, Panepistimiou-katu 12.
-     * Lähde: en-Wikipedia "Numismatic Museum, Athens" -koordinaatit
+     * Lähde: en-Wikipedia "Numismatic Museum, Athens" -koordinaatit; Wikidata Q1658537 ja OSM tarkistettu (KS 3.11.2026).
      */
     schliemann: {
-      lat: 37.9808, lon: 23.7328, symboli: 'historia', nimio: 'Iliou Melathron',
+      lat: 37.9778, lon: 23.7354, symboli: 'historia', nimio: 'Iliou Melathron',
     },
   },
   barcelona: {

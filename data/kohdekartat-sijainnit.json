@@ -1333,10 +1333,10 @@
    "lon": 58.21241,
    "lahde": "wikidata Q854672 P625 (käsin: Vanha Nisa (parttilaisten pääkaupunki, Unesco) sijaitsee Bagirin kylän vieressä; OSM way/102927391 'Köne Nusaý' 37.9513,58.2112 ja Wikidata 37.9511,58.2124 t…)",
    "kartanPiste": {
-    "lat": 37.96667,
-    "lon": 58.195
+    "lat": 37.95115,
+    "lon": 58.21241
    },
-   "eroKartanPisteesta_m": 2304
+   "eroKartanPisteesta_m": 0
   }
  ],
  "asmara": [
@@ -1627,10 +1627,10 @@
    "lon": 23.7354,
    "lahde": "wikidata Q1658537 P625 (käsin: Schliemannin Iliou Melathron on nyk. Kansallinen numismaattinen museo, Panepistimiou 12; OSM node/3844131091 (Νομισματικό Μουσείο) 37.97783,23.73539 = Wikida…)",
    "kartanPiste": {
-    "lat": 37.9808,
-    "lon": 23.7328
+    "lat": 37.9778,
+    "lon": 23.7354
    },
-   "eroKartanPisteesta_m": 404
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "ateena:Lykavittós",
@@ -2886,10 +2886,10 @@
    "lon": 13.39556,
    "lahde": "wikidata Q151963 P625 (fi.wikipedia: Museumsinsel)",
    "kartanPiste": {
-    "lat": 52.5169,
-    "lon": 13.401
+    "lat": 52.5214,
+    "lon": 13.3956
    },
-   "eroKartanPisteesta_m": 620
+   "eroKartanPisteesta_m": 3
   },
   {
    "id": "berliini:Tv-torni",
@@ -3652,10 +3652,10 @@
    "lon": 4.3525,
    "lahde": "wikidata Q1103761 P625 (en.wikipedia: Maison du Peuple, Brussels)",
    "kartanPiste": {
-    "lat": 50.839,
-    "lon": 4.348
+    "lat": 50.8411,
+    "lon": 4.3525
    },
-   "eroKartanPisteesta_m": 394
+   "eroKartanPisteesta_m": 1
   },
   {
    "id": "bryssel:Brysselin pörssi",
@@ -4035,10 +4035,10 @@
    "lon": 26.12327,
    "lahde": "wikidata Q18542351 P625 (en.wikipedia: Văcărești Monastery)",
    "kartanPiste": {
-    "lat": 44.404,
-    "lon": 26.117
+    "lat": 44.3959,
+    "lon": 26.1233
    },
-   "eroKartanPisteesta_m": 1032
+   "eroKartanPisteesta_m": 4
   },
   {
    "id": "bukarest:Romanian ateneum",
@@ -18234,10 +18234,10 @@
    "lon": 116.39694,
    "lahde": "wikidata Q9529545 P625 (käsin: Nanluoguxiang-kuja (OSM way/4922662, 39.9358,116.3969) kulkee Di'anmen East Streetin (39.9323) ja Gulou East Streetin välillä. Wikidata Q9529545 'street in B…)",
    "kartanPiste": {
-    "lat": 39.9425,
-    "lon": 116.3964
+    "lat": 39.9352,
+    "lon": 116.3969
    },
-   "eroKartanPisteesta_m": 815
+   "eroKartanPisteesta_m": 4
   },
   {
    "id": "peking:Rumpu- ja kellotorni",
@@ -18676,10 +18676,10 @@
    "lon": 30.40677,
    "lahde": "wikidata Q384167 P625 (en.wikipedia: Nyenschantz)",
    "kartanPiste": {
-    "lat": 59.9415,
-    "lon": 30.41
+    "lat": 59.9438,
+    "lon": 30.4068
    },
-   "eroKartanPisteesta_m": 310
+   "eroKartanPisteesta_m": 4
   },
   {
    "id": "pietari:Pietari-Paavalin linnoitus",
@@ -19987,10 +19987,10 @@
    "lon": 24.1263,
    "lahde": "wikidata Q1846204 P625 (en.wikipedia: Great Choral Synagogue (Riga))",
    "kartanPiste": {
-    "lat": 56.944,
-    "lon": 24.117
+    "lat": 56.9424,
+    "lon": 24.1263
    },
-   "eroKartanPisteesta_m": 591
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "riika:Vapaudenpatsas",
@@ -23430,10 +23430,10 @@
    "lon": 23.75977,
    "lahde": "wikidata Q15846380 P625 (fi.wikipedia: Finlaysonin tehdasalue)",
    "kartanPiste": {
-    "lat": 61.4996,
-    "lon": 23.753
+    "lat": 61.5017,
+    "lon": 23.7598
    },
-   "eroKartanPisteesta_m": 427
+   "eroKartanPisteesta_m": 3
   },
   {
    "id": "tampere:Museokeskus Vapriikki",
