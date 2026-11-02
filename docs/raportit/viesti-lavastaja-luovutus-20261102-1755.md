@@ -1,4 +1,4 @@
-# Lavastajan luovutus 2.11.2026 klo 18.05 (tiivis) — LUE TÄMÄ, ÄLÄ VANHOJA
+# Lavastajan luovutus 2.11.2026 klo 17.55 (tiivis) — LUE TÄMÄ, ÄLÄ VANHOJA
 
 Edellinen viesti-lavastaja-luovutus-20261102-1707.md (lisäykset 261–262) on vain viite. Uudet lisäykset TÄHÄN.
 
@@ -12,7 +12,7 @@ Edellinen viesti-lavastaja-luovutus-20261102-1707.md (lisäykset 261–262) on v
 | asia | tila |
 |---|---|
 | rakennukset-v112 (8 salin lattia: Stone tile 0,6 m, sauma V4_kivireunus 0,5 cm kehyksenä samassa tasossa) | PT kuittasi 17.5x; paketti 034076c69484, JU-pyyntö + PK-rivi 17.5x LÄHETETTY → varmista vienti ja kytkentä |
-| 承乾宫 c3-chengqiangong (vaihe 3a) | koottu ja leivottu (tark.jpg OK: ovet, sali, valtaistuin); uusinta SERMI_TAKA 1,5 ajossa 18.0x (c3-v1/kokoa.log) |
+| 承乾宫 c3-chengqiangong (vaihe 3a) | koottu ja leivottu (tark.jpg OK: ovet, sali, valtaistuin); uusinta SERMI_TAKA 1,5 ajossa 17.5x (c3-v1/kokoa.log) |
 
 - Pinnat: salipinnat/pinnat.py (v111-versio pinnat-v111.py). Syy v111:n tummiin saumoihin: saumalevy laatan alla jakoi valokartan tekselit.
   PT: 6 000 kolmiota/sali käy; jos LOD käytössä, saumakehys vain lod0:aan (nyt rakennukset-v11x kopioi salien lod0:n kaikkiin lod-tasoihin).
