@@ -3085,3 +3085,23 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - Hallin verkkosolmut (PK:n JUMI 12.24, salitallenne): n:n S-N on pihan ainoa reitti, päät pihan sisällä (S z 244, N z 282,3 y 1,0), lähin solmu 438 18 m lännessä
   → todennäköisesti yhteydetön saareke. Viesti PK:lle 12.3x: kun rasterin tila tiedossa, LAV tekee tarvittaessa liitosreitin (esim. "S-liitos" kuten siltojen L1/L2)
   rakennukset.json:iin – PK antaa tavoitepisteen pohjan kehyksessä. Ei vastausta vielä.
+
+## LISÄYS 239 (2.11. 13.xx): n-PIHAN LIITOS 1 (遵义门) VALMIS: tausta-v100 + rakennukset-v97 + esto-v25 → PT; LIITOS 2 ODOTTAA PT:N PAIKKAPÄÄTÖSTÄ — LUOVUTUS (konteksti 27 %) — ALOITA TÄSTÄ
+- PT 12.5x (PK:n JUMI): Yangxindianin piha suljettu saareke → 2 liitosta junaan 218. PT kuittasi v96:n (JU vie, kytkentä salitallenteen kanssa; JU:lle viesti 12.35, jonossa).
+- Analyysi: pohja.json (pk8) 遵义门 = rakennus 393 (x −79,7…−77,5, z 244,2…248,1, ovi W, tyyppi "yes" → ei Tunnelia), muurien 200/201 välissä;
+  taustan kk-tausta-1-3:ssa sen kohdalla umpinainen pikkutalo (ikkuna länsiseinässä). Verkon Lavastajan reitit avaavat kaistansa rasteriin
+  (myös eston yli, ei Ulko) → liitos tehty n:n rakennukset.json-reittinä, pohjaa ei muutettu. Yläkuvat scratchpadissa: kartta.py
+  (kopio liitokset-218/ alle kannattaa tehdä seuraavaksi; pohja + taustan esto-seinät + törmäysmallit + reitit).
+- Työkansio proto-3d/_tyo/linnanrakentaja/liitokset-218/: tyokalut/tausta_ovi.py (x-normaalisen seinän oviaukko, ylitys 1,4 m:n nauhoina ettei esto lue sitä
+  seinäksi, attribuutit interpoloitu), zunyimen-aukot.json (aukko z 245,2–247,0, y 0,35–3,0 molempiin seiniin), tausta-v100.zsh, rakennukset.json, rakennukset-v97.zsh.
+- VALMIIT: tausta-v100 (_valmiit/…-tausta-v100-vienti-20261102, SHA256SUMS 56b2ee85f78c; vain kk-tausta-1-3-lod0/1), rakennukset-v97 (SHA256SUMS 6df62affd108;
+  vain rakennukset.json: n:n reitti "liitos-zunyimen" leveys 1,4: S-N:n eteläpää (−118,17; 244,02) → (−104; 243,95) → (−89; 243,9) → (−89; 246,1) →
+  portti y 0,35 (−80,9…−76,9; 246,1) → kuja-123 (−75,9; 246,2), kiertää esipihan taustarakennukset).
+- ESTO-V25: liitokset-218/palatsi-esto-v25/esto.bin (PK:n PalatsiEstoLeivonta worktreessa /Users/Shared/Claude/wt/proto-lavastaja-esto-218 = b0ea927c8; pohja pk8 +
+  tausta-v100 + rakennukset-v97 + osasarja-v6): 152 874 ruutua, v23:een nähden 109 pois, 0 uutta (n-hallin alue v99:n poistosta + portti). Vientikansio tekemättä
+  (_valmiit/juoksupeli-palatsi-esto-v25-vienti-… LAHTEET + SHA kuten v23) → tee PT:n kuittauksen jälkeen; worktree poistetaan sen jälkeen (git worktree remove).
+- Kuvapari liitokset-218/pari-zunyimen.jpg (v99 umpinainen / v100 oviaukko, kamera esipihalta itään).
+- AUKI: 1) PT:n kuittaus (pari + esto-v25) → viennit JU:lle (tausta-v100, rakennukset-v97, esto-v25), PK kytkee ja ajaa salitallenteen;
+  2) LIITOS 2 (takapiha ulos): kysytty PT:ltä 12.5x – pohjan muurit 325 (pohjoinen z 293) ja 200 (itä x −80) ehjät, todellista takaporttia ei löytynyt;
+  suositus uusi 2,4 m portti muuriin 325 x ≈ −95 kujalle kuja-78 (z 296), vaihtoehto muuri 200 z ≈ 284 → 西一长街. Toteutus samalla tavalla: taustan seinät
+  (tausta_ovi.py tai poisto) + reitti n:n rakennukset.json:iin (takajalustan kaista N-pää (−119,1; 282,3) y 1,0) + uusi esto (v26) ja pari.
