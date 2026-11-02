@@ -26,9 +26,12 @@ alle (punap.py, juova.py, musta.py) → kirjoita uudelleen tarvittaessa; ne ovat
 - c47376e49: QA `valo salilampo k` (JuoksuValo.hlsl JuoksuSaliSisalla + JuoksuTaytto: salissa täyttö _JuoksuMaa:sta, ei ulkovarjon sävyä).
   salilampo1 (esikatselu-20261102-143715): EI VAIKUTUSTA (0,6 % pikseleistä) → täyttö on elävässä varjossa vain ~0,2 lattiasta.
 - bab15c4a6: sama kerroin lattian ympäristöheijastukseen (JuoksuLattia: ymp → _JuoksuMaa · 0,35 salissa); epäilty sinertävyyden lähde =
-  taivaan/kuution heijastus. salilampo2 (t0 0 | t1 .5 | t2 1 | j0 juovat pois; 04) AJOSSA 14.4x → tulos sali­lampo2.log.
-- Jatko: `python3 juova.py <esikatselu> t0 t1 t2` (muu = varjon väri; tavoite ~159/148/152). Jos ei vielä riitä: Maailma-varjostimen
-  salin lattia (juhlasali_floor) ei käytä Lattian heijastusta → katso pintatieto 04:ssä; tai jälkikäsittely. Oletus ValoKohteet.JuoksuSaliLampo
+  taivaan/kuution heijastus. salilampo2 (esikatselu-20261102-144323): EI VAIKUTUSTA (muu 159/160/173 → 160/162/173) → sinertävyys ei tule
+  täytöstä eikä Lattian heijastuksesta. Kaksi committia (c47376e49, bab15c4a6) ovat siis turhia; poista tai korvaa.
+- Jatko: selvitä ensin, mikä piirtää salin lattian 04:ssä (QA `valo pintatieto 4` keisarin sijainnissa -147.6 420.5: juhlasalin
+  juhlasali_floor Maailma-varjostimella vai sokkelon Lattia) ja mistä sininen tulee: leivottu atlas × varjotaso (_JuoksuLeivonta.z),
+  ympäristöheijastus Maailmassa tai jälkikäsittely (QA-vaihdoilla eristäen). Mittari juova.py (muu = varjon väri; tavoite ~159/148/152).
+  Oletus ValoKohteet.JuoksuSaliLampo
   (nyt 0) mittauksen mukaan, rebase runkoon 218 23b37d035, pari (ennen | nyt | havainne, sama rajaus) PT:lle kuittaukseen.
 
 ## Muuta
