@@ -3105,3 +3105,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   2) LIITOS 2 (takapiha ulos): kysytty PT:ltä 12.5x – pohjan muurit 325 (pohjoinen z 293) ja 200 (itä x −80) ehjät, todellista takaporttia ei löytynyt;
   suositus uusi 2,4 m portti muuriin 325 x ≈ −95 kujalle kuja-78 (z 296), vaihtoehto muuri 200 z ≈ 284 → 西一长街. Toteutus samalla tavalla: taustan seinät
   (tausta_ovi.py tai poisto) + reitti n:n rakennukset.json:iin (takajalustan kaista N-pää (−119,1; 282,3) y 1,0) + uusi esto (v26) ja pari.
+- JU 12.44: kielletty-rakennukset-v96/ viety (546, virheitä 0); kytkentä vasta PK:n Yangxindian-salitallenteen kuittauksen jälkeen (PT).
