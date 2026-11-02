@@ -47,3 +47,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-2102.md on vain viite (rooli, tapa,
 - Korjaus PK:lle: jatko vain vapaata pitkin (≤ 3,5 m), diff proto-3d/_tyo/linnanrakentaja/sisatilat-3c/pk-kapea-jatko.diff; Juoksu 151/151 läpi (juuri sisatilat-3c/pk-juuri,
   symlinkit v115/v111/v36 + r89:n pk8/osamallit-v6/lahipuut-v12; aja wt/proto-lavastaja-esto-2f/Peli-testit, nyt 7127ca0c3). Viesti PK:lle ja PT:lle 21.36. Data ennallaan.
 - Seuraavaksi 景阳宫 (kohta 2); varmista PK:n kytkentä.
+- 景阳宫 aloitettu: analyysi ja suunnitelma proto-3d/_tyo/linnanrakentaja/sisatilat-3d/LUE.md (kahden laatan rajalla 2-3/2-4, ei korotettua sokkelia, S-N läpi keskijänteestä).
