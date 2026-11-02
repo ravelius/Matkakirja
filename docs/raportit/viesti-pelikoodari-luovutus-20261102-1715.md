@@ -2,7 +2,7 @@
 
 Edellinen: -20261102-1517 (7e8657ba5): sen jono ja huomiot ovat voimassa, ellei alla toisin. Syy: konteksti pehmeällä rajalla.
 Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-v99, haara pelikoodari/kapea-reitti-218 (commitit paikallisia,
-ei originia), kärki **6f8d7b6ab** (42dcf0b68 + pystylatauskuva). Salirunko pelikoodari/sali-218b = **fc611d0bd** (kärki + pelikoodari/piirtajat-218, luotu
+ei originia), kärki **e53a17b0f** (v112 60e8b11aa + QA kaanna seina). Salirunko pelikoodari/sali-218b = **fc611d0bd** (kärki + pelikoodari/piirtajat-218, luotu
 `git merge-tree --write-tree` + `commit-tree`, ei checkoutia; päivitä samoin, jos kärki muuttuu).
 
 ## Tehty tässä vuorossa (kaikki: SHA256SUMS täsmäsi, testit oikealla juurella 797/797, umpikujia 0 (+ sali 1), unity-tarkistus 0)
@@ -42,10 +42,10 @@ Salien alku/maali = LAV:n rakennukset-reitti S-N:n päät (paikka_pohja + pistee
   seinällä odottaessa → uupui 28 s. Lähetetty PT:lle 18.3x.
 - **taso1b2 EPÄONNISTUI skenaarion ajoituksen takia** (20261102-180356-taso1b2.mp4, älä lähetä): `odota-peli 37` on Time.timea, mutta
   avauksen kello kulkee Tahti-kertoimella nopeammin → ohjaus siirtyi jo aiemmin ja keisari jäi kiinni ennen ensimmäistä `kaanna 1`:tä
-  (lokissa kiinni rivillä 5388, kaanna 5396). KORJAUS sk-taso1-b.txt: aloita kaanna-silmukka aikaisemmin (esim. `odota-peli 24` ja
-  60 × (kaanna 1; odota-peli 0.3; hyppy-jos kaannetty …)) TAI tarkista unity.logista toisen sekvenssin OhjausPelaajalle-aika ja aseta
-  odota-peli sen mukaan. Varmista ensin, ettei kaanna ennen seinää käännä keisaria avauksen aikana (Kaanna palauttaa "ei", jos ei aukkoa).
-  Aja ketju6:n (salit) jälkeen samalla JU-vuorolla; sitten PT:lle.
+  (lokissa kiinni rivillä 5388, kaanna 5396). **KORJATTU e53a17b0f**: QA `kaanna 1 seina` kääntää vain seinällä odottaessa;
+  sk-taso1-b.txt silmukka 15 s:sta. **tallenne-218t/ketju7.zsh käynnissä**: odottaa ketju6:n, ajaa taso1b3 → tarkista, että käännös
+  hyväksyttiin (unity.log `kaanna 1 seina → =juoksupeli`) ja keisari juoksee 60 s.
+- **PT 18.4x: A kuitattu; PT vie KK:lle YHTENÄ PAKETTINA A + ohjattu B (taso1b3) + 8 salia (v112) → lähetä kaikki polut PT:lle kerralla.**
 
 ## Jono
 1. **Tarkista ja lähetä**: taso1a2 (ohjaamaton: keisari ei saa jäädä kiinni ennen ohjausta 38,5 s; seinällä pidempään odottaessa
