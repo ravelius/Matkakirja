@@ -51,3 +51,5 @@ E saapuminen; G kioski + info; C kadonneiden leikkeet; H veneet. Mittaa sujuvuus
 ## PT 09.4x
 Eleet 629ff9da9 ja veneet 8ada386f3 kuitattu NS:lle, veneiden PNG-paketti JU:lle; veneiden pysähtyminen levossa ok. Tahti-haara vasta, kun
 aarre + kytkimet on todistettu. eleet-c.txt:n "kahden sormen ele kartalle" -odotus poistettu (PUUTE johtui odotuksesta, korkeudet laskivat).
+NS 09.5x: nipistys 629ff9da9 runkoon 218. Veneet eivät irtoa tahti-haarasta (Komennot.cs, PiirrosKerros.cs) → odottavat tahdin todistusta;
+JU vei veneiden PNG:t ämpäriin 09.22 (veneet-20261102/, laatat samassa kansiossa). Seuraajan 1. työ: tahti-haaran aarre + kytkimet simulla → PT.
