@@ -62,3 +62,8 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla.
    otsikkoa niin, että se näkyy kokonaan (iPhone OK). Sama tarkistus iPad pystylle (jonka kuva ei vielä onnistunut, ks. yllä).
    Latauskuvat vaaka + iPhone on jo näytetty omistajalle.
 4. Salit KK:lle vasta, kun kamera ei mene seinien sisään. Codex-tilaukseen lisätty 21.17 lakaisija + vedenkantajan fill (2a5910c5a).
+
+## TILA 21.45: 永和宫 (v115/v111/esto-v36) EI KYTKETTY
+SHA256SUMS OK (062cb1eb8058 / b72575462815 / 9b94569dbfe6; esto = v35), 1721 solmua, mutta 796/797: OikeanPalatsinVerkkoEiKuleRakennuksenLapi
+2 solmuväliä rakennuksen läpi (1155–1181 ja 1180–1181 noin (161–163, 381–385)). LAV:lle ilmoitettu; kytke korjattu versio (muokkaukset
+peruttu, kärki edelleen 7127ca0c3). Testijuuressa symlinkit v115/v111/v36 valmiina.
