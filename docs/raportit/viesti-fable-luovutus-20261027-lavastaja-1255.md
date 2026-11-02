@@ -3183,3 +3183,10 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   c-v2/: kokoa.zsh → valmistele.zsh → leivo.zsh (13.26–13.29) → kuvapari.zsh → pari-c2.jpg (edusta ok: tasainen punainen + aukko; pieniä tummia
   pystyviiruja seinässä aukon vasemmalla, ei estä). rakennukset-v99 uusittu (c-v2/rakennukset-v99.zsh): SHA256SUMS 1b8a9c365231; vanha fb659a865bc0 poistettu.
 - ODOTTAA PT:N KUITTAUSTA → JU: rakennukset-v99 + tausta-v101 (29abaa4c7a51) yhdessä; PK:lle reitti + materiaalit (lisäys 242 kohta 3); sitten esto-v26.
+
+## LISÄYS 246 (2.11. 13.4x): PT KUITTASI c-v2 → JU vie v99 + tausta-v101, PK kytkee (ilmoitettu); PYSTYVIIRUT KORJATTU → rakennukset-v100 PT:LLE — ALOITA TÄSTÄ
+- Viirujen syy: leivo_malli.py:n solu_uv1 (oletus SOLU_UV 1 m) antoi saman syvyyssolun samansuuntaisille pinnoille yhteiset UV1-tekselit → väliseinien
+  eteläpäädyt (w 1,51) jakoivat ulkoseinän (w 1,15) tekselit. Korjaus c-v3/leivo.zsh: SOLU_UV=0.3 (0,1 toi katon reunaan mustia viivoja; c-v3/pari-c3-solu01.jpg).
+  Tarkistin: sisatilat-1b/tyokalut/uv1_paallekkain.py (ulkoseinän tekselit, jotka muut kolmiot jakavat). sisa_katoton.py:n marginaalikokeilu peruttu (ei syy).
+- rakennukset-v100 = v99 + uusi c-chuxiugong lod0/1/2 (c-v3/rakennukset-v100.zsh): SHA256SUMS 6e2192d48ce4. Pari c-v3/pari-c3.jpg + kuvat/vertailu.png → PT 13.4x.
+- SEURAAVAKSI: PT:n kuittauksella JU:lle v100 (korvaa v99:n); sitten esto-v26 (pohja pk8 + tausta-v101 + rakennukset-v100 + osasarja-v6).
