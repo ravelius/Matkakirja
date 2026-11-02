@@ -214,6 +214,13 @@ Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä m
   millisekunteja lukuna (merkkijono normalisoidaan); puuttuva `ts` = "ei päivitysaikaa" (punainen, rivi PT:lle, ei siirtoa pitoon).
   PT:lle tulostuvat rivit `TYOLISTA VANHA|EI TS|PIDOSSA|TUPLA|LIIKAA|…` enintään kerran 6 tunnissa per rivi; Asemataulu välittää ne PT:lle.
   PT kirjoittaa rivin `ts`:n aina, kun se päivittää rivin.
+- TYÖLISTA.PY (omistaja 2.11.2026: "miten tuon työlistankin saisi jatkossa päivittymään automaattisesti?"):
+  `tools/asemataulu/tyolista.py` on PT:n ainoa suositeltu tapa kirjoittaa tyolista.json (kuten juna.py junariveille):
+  `lisaa "OTSIKKO" --teksti … --lisa …`, `tilanne "OTSIKKO" "teksti" [--edistys N] [--juna N]` ja
+  `valmis "OTSIKKO" "teksti" [--juna N [--juna-kohta …]]`. Komento lisää tilanteen eteen ("pp.kk. hh.mmx: …", vanha → "Aiempi: …"),
+  päivittää rivin ja ylätason `ts`:n, poistaa vahti-kentän ja kirjaa halutessa saman asian junaan (juna.py) yhdellä komennolla.
+  Koukku `tools/hooks/pt-taulu-muistutus.py` muistuttaa komennosta, kun Keskustelukanavan välittämässä viestissä on
+  "OMISTAJAN PÄÄTÖS|PYYNTÖ|OMISTAJA klo", ja listaa enintään 3 työn alla -riviä, joiden `ts` on yli 3 h vanha, sekä keskeneräiset rivit, joiden uusin tilanne sanoo valmis.
 - LAITTEET ennen rooleja: ruudut iPad, Blender, Unity-käännökset, Pilviajot, Simulaattorit,
   Codex-tilaukset ja Googlen musiikki (Lyria-ajot). Käytössä vihreä ja "Rooli: mitä", vapaa harmaa,
   prosessorin käyttö viitenä pienenä palkkina ja prosenttina. Otsikko näyttää käytössä olevat laitteet
