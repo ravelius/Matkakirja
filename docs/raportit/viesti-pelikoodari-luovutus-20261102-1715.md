@@ -29,9 +29,9 @@ TILA 17.55: valmiit sali-218b/: 20261102-171916-th.mp4 ja 20261102-173316-tj.mp4
 Levyraja (aja-sk.zsh: < 30 Gi → LEVY) katkaisi ty/cc/xf ja taso 1 -uusinnan 17.49; omien ajojen ruutukansiot poistettu → 39 Gi.
 **PT 17.5x: rakennukset-v112 (salien lattiat lämmin Stone tile) tulee LAV → JU.** ketju4 pysäytetty (ty kesken, lukko siivottu).
 **KÄYNNISSÄ tallenne-218t/ketju5.zsh** (taustalla): taso 1 A+B (taso1a2, taso1b2) b9b9c5c58+:lla, ~18.45 asti → tarkista ja PT:lle.
-**SEURAAVAKSI: kun _valmiit/juoksupeli-kk-lavastaja-rakennukset-v112-vienti-* on olemassa**: SHA256SUMS, RakennusKansio → v112
-(JuoksuSokkeloMaailma.Palatsi.cs), testit juuri-ty:llä (lisää symlinkki), commit, sali-218b uudelleen (merge-tree kuten yllä),
-päivitä sk-*.txt:n otsikkorivin SHA:t, ja aja KAIKKI 8 salia v112:lla (malli: sali-218b/ketju4.zsh:n aja()/siivoa(), PROTO_LINJA=1).
+**TEHTY 17.5x: rakennukset-v112 kytketty 60e8b11aa** (SHA 034076c69484, 797/797), sali-218b = **6f48431dc**.
+**KÄYNNISSÄ sali-218b/ketju6.zsh** (odottaa ketju5:n): KAIKKI 8 salia v112:lla → videot `<aika>-<koodi>.mp4` (uusimmat), lokit
+aja-<koodi>-v112.ulos; valmistuu arviolta ~21.15. Sitten 8 salia PT:lle ja JU:lle "ESIKATSELU VAPAA" (+ latauskuvat ennen sitä, jono 3).
 th/tj v111 (17.19/17.33) vain toiminnan tarkistukseen; omistajalle v112:n tallenteet. Lopuksi JU:lle "ESIKATSELU VAPAA".
 Vanhat taso1-a/-b (15.49/16.03) VIALLISIA, älä lähetä.
 Jos ajot kuolivat nollauksessa: aja puuttuvat samoilla skripteillä taustalla (Monitorilla) ja rivi PT:lle.
