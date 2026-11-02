@@ -21,9 +21,9 @@ KK:n suunnitelma: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskusteluka
 4. Forum des Halles = Q939893 (KYLTIT-NUI.md, sijainnit.json).
 
 ## AVOIN (järjestyksessä)
-1. **Tähti, kun Codex toimittaa** (`_review-tahti-20261102/`): SHA, arkki, silmukan sauma (001 vs 072) →
-   `python3 C/tahdet-20261102/esikatselu.py <review> <ulos.mp4>` (oletus Louvre–Halles, 4 tähteä, 2 kierrosta; testattu koetähdellä)
-   → video PT:lle (→ KK omistajalle). Vasta omistajan OK:n jälkeen: sarja + hehku uuteen kansioon V/:hen, tahdet nui-rivit NUI:lle.
+1. **Tähti TOIMITETTU** (Codex acb2831ee, `_review-tahti-20261102/`, SHA ok 81/81; kuitattu f3079c3dd). PT teki videon → KK omistajalle.
+   Omistajan vastauksen jälkeen: OK → sarja + hehku uuteen kansioon V/:hen ja C/tahdet-20261102/nui-rivit.txt (9 paikkaa, vaihe i·8) NUI:lle;
+   korjattavaa → tyylikorjaustilaus Codexille (omistajan sanat). Oma video tarvittaessa: C/tahdet-20261102/esikatselu.py <review> <ulos.mp4>.
 2. **Aukio-laatat VIETY** (JU 10.12, PT kuittasi: piirroskartta/pariisi/aukio-20261102/ 54/54, julkinen SHA ok). TasoVersion vaihto
    "aukio-20261102" samaan junaan NUI:n info+kioski-leikkeiden kanssa (rivit NUI:n seuraajalle Postivahdin aloitusviestissä).
 3. Postilaatikon worktree `/Users/Shared/Claude/wt/karttaseppa-postilaatikko-veneet` (claude/postilaatikko): pidä tähteen asti.
