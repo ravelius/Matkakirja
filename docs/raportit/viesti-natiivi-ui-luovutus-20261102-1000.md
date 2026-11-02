@@ -28,8 +28,10 @@ rajalla (Raamattu 7.37).
   eletilan korkeudesta (17,5 → 5,7 km olisi läpäissyt).
 
 ## SEURAAJAN JONO
-1. PT:n kuittaus tahti-h:n parille (lähti 10.1x); kuittaus → a9568fc20 + 586222bc5 merge-pyyntö NS:lle rungon bc82ac8e6 päälle
-   (tahti-haaran kaksi uutta committia; PT voi pyytää vihreän ytimen voimakkaammaksi).
+1. PT 10.1x kuittasi a9568fc20 + 586222bc5 → merge-pyyntö lähti NS:lle (tahti-haaran kärki 586222bc5 rungon bc82ac8e6 päälle).
+   **JATKOKOHTA (PT 10.1x)**: avatun aarrepisteen ydin kylläiseksi vihreäksi (Valopiste _Ydin 1: nyt keskus vaalennettu 35 % valkoiseen
+   ja hehku pehmeä → piirroksella vaalea), jotta auki/lukittu erottuu yhdellä silmäyksellä; ei kovakoodattuja värejä varjostimeen
+   (valovahti), Mathf.Lerp C#:ssa vaatii `// liikepoikkeus:`. Pari ympyröitynä PT:lle (sama kamera kuin tahti-h).
 2. **C (UUSI, PT 09.4x, Raamattu-loki "kadonneet ihmeet pyörivinä tähtinä" #5964)**: 9 pyörivää tähteä (KS:n Codex-kuvasarja,
    PNG-silmukka), kukin eri vaiheesta, pieni valohehku vain tähden ympärille; neljällä tähti nykyrakennuksen viereen, ★-kyltti pysyy;
    Kadonneet-kytkin oletus päällä. Odottaa KS:n kuvasarjaa. PiirrosKerros.Leikkeet-lista pysyy tyhjänä.
