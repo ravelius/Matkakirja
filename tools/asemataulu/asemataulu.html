@@ -836,21 +836,32 @@ section:not(.kiinni) .yhteenveto { display: none; }
     try { localStorage.setItem('odottaa-auki', odottaaAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
     piirra();
   });
-  // Päivitysnappi (omistaja 10.10. 16.4x): napautus lähettää Päätoimittajalle kommentin "Päivitä Asemataulu", ja se vie tuoreet tiedot heti.
-  $('paivitetty').addEventListener('click', function () {
-    var nappi = $('paivitetty');
-    if (pyyntoKesken || !window.claude || typeof window.claude.use !== 'function') return;
-    window.claude.use('comments').then(function (kom) {
-      if (!kom) { nappi.title = 'Päivitys ei ole käytettävissä tässä näkymässä'; return null; }
+  // Kommentti taulun julkaisseelle sessiolle (hoitaja, PT 2.11. 10.1x); Päivitä ja Boost herättävät samalla ketjulla.
+  function herata(nappi, teksti, ennen) {
+    if (!window.claude || typeof window.claude.use !== 'function') return Promise.resolve(null);
+    return window.claude.use('comments').then(function (kom) {
+      if (!kom) { nappi.title = 'Herätys ei ole käytettävissä tässä näkymässä'; return null; }
       return kom.canSendToClaude().then(function (tilaK) {
-        if (tilaK !== 'available') { nappi.title = tilaK === 'no_session' ? 'Päätoimittaja ei ole juuri nyt kuulolla' : 'Päivitys ei ole käytettävissä'; return null; }
+        if (tilaK !== 'available') { nappi.title = tilaK === 'no_session' ? 'Asemataulu ei ole juuri nyt kuulolla' : 'Herätys ei ole käytettävissä'; return null; }
         return kom.anchorFor(nappi).then(function (ankkuri) {
-          pyyntoKesken = Date.now(); piirra();
-          return kom.sendToClaude({ anchor: ankkuri, text: 'Päivitä Asemataulu' });
+          if (ennen) ennen();
+          return kom.sendToClaude({ anchor: ankkuri, text: teksti });
         });
       });
-    }).catch(function () { pyyntoKesken = 0; nappi.title = 'Päivitys epäonnistui, yritä hetken päästä'; piirra(); });
+    });
+  }
+  function kello(ms) {
+    var d = new Date(ms);
+    return d.getHours() + '.' + String(d.getMinutes()).padStart(2, '0');
+  }
+  // Päivitysnappi (omistaja 10.10. 16.4x): napautus lähettää kommentin "Päivitä Asemataulu", ja hoitaja vie tuoreet tiedot heti.
+  $('paivitetty').addEventListener('click', function () {
+    var nappi = $('paivitetty');
+    if (pyyntoKesken) return;
+    herata(nappi, 'Päivitä Asemataulu', function () { pyyntoKesken = Date.now(); piirra(); })
+      .catch(function () { pyyntoKesken = 0; nappi.title = 'Päivitys epäonnistui, yritä hetken päästä'; piirra(); });
   });
+  // Boost (omistaja 2.11. 10.03): päälle kytkeminen herättää hoitajan heti täyteen tarkistukseen, ei riipu kenenkään kierroksesta.
   $('boost').addEventListener('click', function () {
     if (!dbRef) return;
     var paalle = boostJaljella() === 0;
@@ -858,6 +869,10 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var uusi = { paalla: paalle, alkoi: alkoi, paattyy: paalle ? alkoi + BOOST_MS : Date.now() };
     tila.boost = uusi; piirra();
     dbRef.doc('talo/boost').set(uusi).catch(function () { $('boost').title = 'Boostia ei voitu tallentaa'; });
+    if (paalle) {
+      herata($('boost'), 'BOOST päällä klo ' + kello(alkoi) + '–' + kello(alkoi + BOOST_MS))
+        .catch(function () { $('boost').title = 'Boost tallennettu, herätys epäonnistui'; });
+    }
   });
   document.querySelectorAll('.taitto').forEach(function (b) {
     var s = $(b.dataset.osio), avain = 'kiinni-' + b.dataset.osio, k = false;

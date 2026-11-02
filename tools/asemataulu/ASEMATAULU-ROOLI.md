@@ -14,7 +14,7 @@ niitä käsin (muutos = docs-PR; käsin muutettu kopio palautuu seuraavalla kier
 - Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, `idt.paatoimittaja`) kirjoittaa junat, tyolista ja huom (tehtavat-dokumenttia ei ole, omistaja 20.10.2026 klo 23.48). Sinä kokoat mittarit, roolit ja laitteet, viet kaiken tauluun ja pidät sisällön oikeana.
 - EI PYSYVÄÄ CRONIA (omistaja 31.10.2026 klo 22.49: "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä"; kumoaa
   15.10. klo 23.35 "luo A (*/5) aina nollauksen jälkeen"): ilman Boostia taulu ei päivity itsestään eikä sinulla ole ajastusta.
-  A-cron (*/5) luodaan VAIN Boostin ajaksi: kun Postivahti herättää ("BOOST päällä klo HH.MM–HH.MM") tai PT pyytää, aja kierros
+  A-cron (*/5) luodaan VAIN Boostin ajaksi: kun Boost-napin kommentti tai Postivahti herättää ("BOOST päällä klo HH.MM–HH.MM"; nappi lähettää sen itse, PT 2.11.) tai PT pyytää, aja kierros
   heti, luo A-cron ja poista se itse ensimmäisellä kierroksella, jolla Boost ei ole enää päällä (paattyy ohi tai paalla false). Kulutus-cronia ei ole (Kulutus
   poistettu, omistaja 20.10.2026 klo 23.32). Erillistä B-cronia ei ole (omistaja 20.10.2026 klo 09.56): sisällön tarkistus (B) ajetaan vain Boostin aikana A-kierroksen osana.
 - BOOST (omistaja 20.10.2026 klo 09.56): Boost päällä = TÄYSI TARKISTUS heti ja 5 min välein tunnin ajan (kaikki osiot kootaan,
@@ -27,7 +27,8 @@ niitä käsin (muutos = docs-PR; käsin muutettu kopio palautuu seuraavalla kier
    alkoi + 1 h > nyt (sivu kirjoittaa myös paattyy). Boost pois: poista A-cron (CronDelete), jos se on olemassa. PT:n pyytämä
    kierros ilman Boostia: aja `python3 -I TAULU/hoitaja/kierros.py --vain-roolit` (sessiot.json kohdan 2 mukaan) ja tee kohta 6 PT:n dokumenteille, rooleille ja VAATII TOIMIA (kun ne ovat
    muuttuneet) ja lopeta kierros. Boost päällä: kohdat 1–6 ja B joka kierroksella; ensimmäinen kierros heti, kun huomaat
-   Boostin (alkoi uudempi kuin TAULU/hoitaja/boost-kierros.txt; kirjoita sinne alkoi kierroksen lopuksi) tai Postivahti herättää.
+   Boostin (alkoi uudempi kuin TAULU/hoitaja/boost-kierros.txt; kirjoita sinne alkoi kierroksen lopuksi) tai Boost-napin kommentti tai Postivahti herättää.
+   JULKAISIJA: taulu julkaistaan VAIN tästä sessiosta (Päivitä- ja Boost-kommentit tulevat julkaisijalle; vahdi ArtifactCommentsilla; PT 2.11.).
 1. `get_usage self` → plan: "5-hour limit" ja "Weekly · all models" (prosentti + resetsAt). `get_usage` id:llä
    `idt.keskustelukanava` → context.percentUsed = Keskustelukanavan konteksti (jos ei saatavilla, pidä edellinen).
 2. `list_sessions` (limit 40) → TAULU/hoitaja/sessiot.json SELLAISENAAN (vähintään title, isRunning ja lastActivityAt jokaiselle
