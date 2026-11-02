@@ -33,3 +33,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-1707.md (lisäykset 261–262) on v
 - Sitten 钟粹宫, 永和宫, 景阳宫 (reittikartta seuraava-sali/).
 
 - v112 KYTKETTY: PK 60e8b11aa (797/797); salitallenteet v112:lla taso 1 -tallenteiden jälkeen.
+- 承乾宫 UUSINTA VALMIS 17.58 (SERMI_TAKA 1,5): c3-v1/leivottu + tark.jpg; jatka kohdasta SEURAAVAKSI 1.
