@@ -2939,3 +2939,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - tausta-v97 SHA256SUMS cde04a6a15f4 (_valmiit/juoksupeli-kk-lavastaja-tausta-v97-vienti-20261102); vain kk-tausta-1-2-lod0/1/2 muuttuivat.
   EI mediaan ennen Pelikoodarin tallennetarkistusta. Lähdettä tausta-v89-lahde ei päivitetty (siinä ei katto-solmua).
 - HUOM: LOD2:n katto-longzongmen oli tyhjä (katto taustassa); nyt siinä vain seinän yläosa → LOD2:ssa seinä häipyy, katto ei. Kerrottu Pelikoodarille.
+
+## LISÄYS 229 (2.11. 05.2x): JONO 1 – PORTTIKÄYTÄVIEN ALARAJA POIS → KAITEETON-V6 (C2-V34) JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- PT:n jono (05.1x): 1) c2-alaraja pois, kun VS:n kynnys ca610fd07 on NS:n rungossa; NS vahvisti rungon 9b84bdfff (testit vihreät).
+- kaiteeton-v6 = kielletty-c2-v34 = c2-v33 ilman valo_alaraja.py:tä (kaiteeton-v7:n polvi.glb + valo_tayta.py), SHA256SUMS 73a1f7b74de6
+  (_valmiit/juoksupeli-kk-lavastaja-kaiteeton-v6-vienti-20261102, ajo leivonta-216/uusinta/kaiteeton-v8.zsh); vain a-meridiaaniportti muuttui.
+- Kuvapari pelin UUDELLA kynnyksellä: portaat-v93/valokuva_m.py (PEITTO 3: puuttuva = (1 − ram(l × 0,75)) × smoothstep(0,08, 0,3, RGBM-kerroin)),
+  bugit-217/vika14/holvi-pari-v34.zsh → holvi-v34-ennen-jalkeen.jpg (vasen c2-v33, oikea c2-v34; ylä s2, ala s3): ei sinistä täyttöä kummassakaan.
+- JONO jäljellä: 2) v97 LOD2 PK:n kanssa, jos PK pyytää. 3) 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
