@@ -47,3 +47,7 @@ E saapuminen; G kioski + info; C kadonneiden leikkeet; H veneet. Mittaa sujuvuus
    välimuistissa, isoisän tekstin aikana; uusi peli: lento yleisnäkymään, sitten erillinen zoom, omistaja 09.12) → video PT:lle.
 5. G kioski + info leikkeinä (KS), C kadonneiden leikkeet (KS täyttää PiirrosKerros.Leikkeet).
 6. Sujuvuusmittaus iPadilla jokaisesta erästä.
+
+## PT 09.4x
+Eleet 629ff9da9 ja veneet 8ada386f3 kuitattu NS:lle, veneiden PNG-paketti JU:lle; veneiden pysähtyminen levossa ok. Tahti-haara vasta, kun
+aarre + kytkimet on todistettu. eleet-c.txt:n "kahden sormen ele kartalle" -odotus poistettu (PUUTE johtui odotuksesta, korkeudet laskivat).
