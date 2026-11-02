@@ -2834,3 +2834,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   (_valmiit/…-kaiteeton-v4-vienti-<pvm>, LAHTEET + SHA256SUMS kuten v3) → tarkista b1570:n sauma (seinä y 1,60) korjaantuu → NS + PT.
   Tarkista myös tausta-v93 ja muurikate-v37 samasta viasta (agentti ei mitannut).
 - PT 2.11.: rakennukset-v93 kuitattu (raidat poissa). Kaiteeton-v4 (bugi 14) ESTÄÄ TF 217:N → seuraajan ensimmäinen työ.
+
+## LISÄYS 219 (2.11. 03.3x): BUGI 14 VALMIS → KAITEETON-V4 + MUURIKATE-V38 + TAUSTA-V94 NS:LLE — ALOITA TÄSTÄ
+- Sama nollatekselivika kuin vika 9. tyhjat.py ennen: kaiteettomat 23–68 %, muurikate-v26-pohja 12,9 %, tausta-v93 1–11 %.
+  Korjaus leivonta-216/uusinta/valo-tayta-217.zsh (portaat-v93/valo_tayta.py kaikkiin valo_rgbm-malleihin; tarkistus-<paketti>.txt).
+- NS:lle runkoon 217 (PK-kansiot vaihdettava): kaiteeton-v4 = kielletty-c2-v32 b5b90e1f42b5, muurikate-v38 6f8a4c281c88,
+  tausta-v94 (= v93 + täyttö) c693358ce5fe. Jäljellä vain kokonaan leipomattomat saaret (kaiteettomat 6–9 %, tausta ≤ 0,1 %).
+- Kuva PT:lle bugit-217/vika14/ennen-jalkeen-vika14.jpg (Meridiaaniportin sokkelin saumapisteet poissa).
+- SEURAAVAKSI: 214 sisätilojen mittakatselmus → 213 Wumenin kivijalka + terassit → porras-terassin kaiteen kolmioaukot.
