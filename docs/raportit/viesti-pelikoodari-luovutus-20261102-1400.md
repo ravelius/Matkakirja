@@ -55,7 +55,12 @@ lento ripeänä. PT päivittää 2.177:n.
   aja-kamera.zsh (sk-kamera.txt = sk-sali.txt, linja 1). Tehtiin taustaketjussa 218q:n perään (alkoi 13.39); jos sessio nollattiin kesken,
   aja uudelleen JU:n vuorolla. Pari PT:lle: sama kohta ennen (sali-218 video 36, 41–42, 47 s) vs jälkeen, tarkista "kamerasuoja veto" -rivit.
 
-## 3. Bugi 2 jälkeen (218q)
+## 3. Bugi 2 jälkeen (218q) – AJETTU 13.59–14.19, PARI PT:LLE 14.2x: EI KORJAANTUNUT
+- Pari korjaus-218/218p-vs-218q-104-105.5.png: ruudut identtiset (ajo deterministinen). lahipuut-v13 latautui (unity.log), mutta
+  "lahikoriste dougong-intercolumn(Clone)" piirtyy yhä: 117 riviä piirtäjälistassa molemmissa (218q: lokit/esikatselu-20261102-135937/
+  piirtajat.txt), kohta z −382,6, y 9,6. Ristikko on LÄHIKORISTE, ei lähipuu → v13 ei koske sitä; PT päättää (LAV/PK lähikoristeen sijoitus).
+- Kameratallenne PIDÄTETTY: kamera-218/SEIS-tiedosto (aja-kamera.zsh lopettaa heti); poista SEIS ja aja JU:n vuorolla.
+(Alkuperäinen ohje alla.)
 - Ajo PROTO_LINJA=1 zsh korjaus-218/aja-218q.zsh alkoi 13.39 (ensimmäinen yritys 13.32 pysähtyi levyrajaan 29 Gi). Tulos korjaus-218/
   aja-218q.ulos + *-218q.mp4. Pari PT:lle: 218p (20261102-125154-218p.mp4) vs 218q kohta 104–105,5 s (ffmpeg -ss), dougong-ristikko ei näy;
   "ESIKATSELU VAPAA" JU:lle. Jos ajo katkesi, aja uudelleen.
@@ -72,6 +77,8 @@ lento ripeänä. PT päivittää 2.177:n.
   LAV 13.5x: y-yikungong, kansiot "kielletty-rakennukset-v101/", "kielletty-tausta-v102/" (taustan halli pois), "palatsi-esto-v27/"; reitti S-N
   (leveys 1,4, lattia_y 0,54): työhuoneen eteläliitoksen kulma → etupiha → pääovi → valtaistuimen länsipuolelta → sermin takaa → takaovi →
   työhuoneen pohjoisliitoksen kulma (pisteet rakennukset.json:n y-yikungong-merkinnässä). Ei uusia materiaaleja.
+  JU 14.15 VIETY: rakennukset-v101 (8baeb9015b45), **tausta-v102** (d728125f84e1), **palatsi-esto-v27** (61212366d095); korvaavat v100/v101/v26.
+  LAV 14.1x: **kielletty-rakennukset-v102/** korvaa v101:n (储秀宫 c-v4: länsiseinä; reitit ja törmäys ennallaan); JU vie → kytke v102.
 - Taso1ReittiPortiltaAukiolle03-testin siivous (PT:n jono 3; f4d65d024 ohittaa jo puuttuvan juuren).
 - Salitallenteen PT-kuittaus → NS (runkoon kapea-reitti-218 = 53c8cdfa9 tai uudempi).
 
