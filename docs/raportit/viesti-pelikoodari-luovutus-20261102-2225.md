@@ -47,3 +47,5 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla `nohup`illa ja 
 3. Latauskuvat v2 VALMIIT ja tarkistettu: iPad vaaka `ipad-v2-lataus-2.png` (22.24) ja iPad pysty `ipad-pysty-v2-lataus-2.png` (22.25): otsikko ja poika kokonaan, ei mustia reunoja; ketju2 päättyi.
 4. Sitten osa 3 KK:lle (salit + taso1b4 + iPad pysty + iPad vaaka v2), kopio PT:lle ≤ 3 riviä, JU:lle "ESIKATSELU VAPAA".
 5. Sen jälkeen edellisten luovutusten jono (eunukkikorjaukset ja ristikko-ovibugi ennen arkisia hahmoja, 409d7f494 postilaatikossa).
+6. VS 23.2x: juoksupelin sade (linssiseppa2/sade-218 b65dbc092, Valopohja.AsetaJuoksuSade 0..1, QA `ui juoksupeli sade 1`): PK hyväksyi
+   koukun avautuessa + Saatila.Muuttui → sade = Saa ∈ {Sade, Ukkonen} ? 1 : 0 (VS kirjoittaa). Tarkista kytkentä, kun VS ilmoittaa.
