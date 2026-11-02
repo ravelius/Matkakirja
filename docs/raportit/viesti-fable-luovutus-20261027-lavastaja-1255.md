@@ -2931,3 +2931,11 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - tausta-v96 = v95 + kk-tausta-1-2-lod0 portaat, SHA256SUMS ab70086a15ad (_valmiit/juoksupeli-kk-lavastaja-tausta-v96-vienti-20261102,
   tausta-v96.zsh; lähde päivitetty, varmuus-nousu-v96/). PK "kielletty-tausta-v96/" (juna 218). Kuva pelistä: lokit/esikatselu-20261102-042313/b700.png.
 - SEURAAVAKSI: 214 sisätilat, kun Codex toimittaa + PT kuittaa. Konteksti 27 % → luovutus.
+
+## LISÄYS 228 (2.11. 05.2x): B2 PÄÄTYSEINÄT KATTO-SOLMUUN → TAUSTA-V97 PELIKOODARILLE — ALOITA TÄSTÄ
+- Pelikoodarin pyyntö (PT:n B2): Longzongmenin päätyseinien (x −110,2…−108,9 ja −123,4…−122,2, z 155,9…183,1) V4_red y ≥ 4,0 solmusta "tausta"
+  solmuun "katto-longzongmen" lod0/1/2:ssa, leikkaus y = 4,0 attribuutit interpoloiden (TEXCOORD_1 säilyy). Pinta-ala säilyy (tarkistettu), muut
+  materiaalit ennallaan. Nimi v97, koska v96 (bugi 12) oli jo viety. Työkalu muuriportti-218/paadyt_kattoon.py, ajo leivonta-216/uusinta/tausta-v97.zsh.
+- tausta-v97 SHA256SUMS cde04a6a15f4 (_valmiit/juoksupeli-kk-lavastaja-tausta-v97-vienti-20261102); vain kk-tausta-1-2-lod0/1/2 muuttuivat.
+  EI mediaan ennen Pelikoodarin tallennetarkistusta. Lähdettä tausta-v89-lahde ei päivitetty (siinä ei katto-solmua).
+- HUOM: LOD2:n katto-longzongmen oli tyhjä (katto taustassa); nyt siinä vain seinän yläosa → LOD2:ssa seinä häipyy, katto ei. Kerrottu Pelikoodarille.
