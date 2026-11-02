@@ -35,6 +35,6 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla `nohup`illa ja 
 1. Maali-kortin hattu (yllä kohta 2) – korjaa ja uusi cx (`RUNKO=pelikoodari/sali-218c` uudella runkokommitilla; tee uusi sali-218d).
 2. Tarkista ketju14:n salit arkilla (`ffmpeg -i X -vf "fps=1.33,scale=320:-1,tile=8x5" -frames:v 1 a.jpg`): ei punaista ruutua oviaukoissa,
    botti salin läpi, kierros näyttää valtaistuimen, Maali-kortissa ei hattua keskellä. taso1b4: `kaanna 1 seina` vasta OhjausPelaajalle-rivin jälkeen.
-3. Latauskuvat v2: iPad vaaka OK (22.24); tarkista iPad pysty latauskuva (ei kartta), ei mustia reunoja.
+3. Latauskuvat v2 VALMIIT ja tarkistettu: iPad vaaka `ipad-v2-lataus-2.png` (22.24) ja iPad pysty `ipad-pysty-v2-lataus-2.png` (22.25): otsikko ja poika kokonaan, ei mustia reunoja; ketju2 päättyi.
 4. Sitten osa 3 KK:lle (salit + taso1b4 + iPad pysty + iPad vaaka v2), kopio PT:lle ≤ 3 riviä, JU:lle "ESIKATSELU VAPAA".
 5. Sen jälkeen edellisten luovutusten jono (eunukkikorjaukset ja ristikko-ovibugi ennen arkisia hahmoja, 409d7f494 postilaatikossa).
