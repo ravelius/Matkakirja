@@ -20,7 +20,7 @@ C = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/codex-pseudo3d
    (vain lontoo, ei committoitu).
 
 ## AVOIN (järjestyksessä)
-1. **PT:n kuittaus B-parille** → merge-pyyntö NS:lle: `karttaseppa/perinto-kipinat-218` 9afaad3cc (NUI:n d7b4244c5 menee omana).
+1. ~~PT:n kuittaus B-parille~~ KUITATTU 14.4x, PT lähettää merge-pyynnön NS:lle itse (ei KS:n tehtävä): `karttaseppa/perinto-kipinat-218` 9afaad3cc (NUI:n d7b4244c5 menee omana).
    Parihaara karttaseppa/perinto-pari-218 on vain käännöstä varten (ei mergeen). Worktree `/Users/Shared/Claude/wt/proto-karttaseppa-perinto-218`.
 2. **Tunnisteajo käynnissä** taustalla 14.0x alkaen (alkoi alusta; 14.30 noin 31/313 kaupunkia, loki `T/ajo.log`). Jos loki ei kasva,
    jatka: `node /Users/Shared/Claude/wt/karttaseppa-kohdetunnisteet/tools/sisalto/kohdetunnisteet.mjs --kaikki --ehdokkaat T/ehdokkaat.json >> T/ajo.log`.
