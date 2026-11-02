@@ -18,7 +18,7 @@ kärki **34bd7f7c3**. Uusi salirunko **pelikoodari/sali-218c = a7a46456a** (34bd
      jättää kameran < 2 m:n päähän: kamera ylemmäs (vapaa korkeus) ja katse alas, tai kuva edestä. Kortin paikka = UI-pohja → PT:n kautta.
      Huom: cx:n maali on yhä kujalla (sk2-cx.txt vanha); muiden salien maali on salin sisällä, joten ne voivat olla kunnossa.
   3. VaakaOtsikko 1150 → 922 px, keskikohta 206,5 → 135,7 px (otsikon ja pään maskin alfoista laskettu: ei päällekkäisyyttä, vara ≥ 12 px).
-     Koekuva scratchpadissa näytti otsikon kokonaan hatun yllä.
+     **TARKISTETTU 22.24**: `latauskuva-218/ipad-v2-lataus-2.png` otsikko kokonaan hatun yllä, ei mustia reunoja (KK:lle valmis).
 - **iPad pysty -latauskuva**: ei koodivika. 21.00-ajossa Curl 28 (~87 s verkkoaikakatkaisu) → kuvat otettiin kartasta ennen kuvaa.
   Uusi skenaario `latauskuva-218/sk-lataus2.txt` (`oleta-uusi 180 latauskuva näkyy` ennen kuvia).
 - Levy: muut roolit kuluttavat; vapaa 18–19 Gi. aja-sk.zsh-raja (sali-218b ja tallenne-218t) 20 → 15 Gi. Vanhat leikkaamattomat
@@ -35,6 +35,6 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla `nohup`illa ja 
 1. Maali-kortin hattu (yllä kohta 2) – korjaa ja uusi cx (`RUNKO=pelikoodari/sali-218c` uudella runkokommitilla; tee uusi sali-218d).
 2. Tarkista ketju14:n salit arkilla (`ffmpeg -i X -vf "fps=1.33,scale=320:-1,tile=8x5" -frames:v 1 a.jpg`): ei punaista ruutua oviaukoissa,
    botti salin läpi, kierros näyttää valtaistuimen, Maali-kortissa ei hattua keskellä. taso1b4: `kaanna 1 seina` vasta OhjausPelaajalle-rivin jälkeen.
-3. Latauskuvat v2: iPad vaaka otsikko kokonaan, iPad pysty latauskuva (ei kartta), ei mustia reunoja.
+3. Latauskuvat v2: iPad vaaka OK (22.24); tarkista iPad pysty latauskuva (ei kartta), ei mustia reunoja.
 4. Sitten osa 3 KK:lle (salit + taso1b4 + iPad pysty + iPad vaaka v2), kopio PT:lle ≤ 3 riviä, JU:lle "ESIKATSELU VAPAA".
 5. Sen jälkeen edellisten luovutusten jono (eunukkikorjaukset ja ristikko-ovibugi ennen arkisia hahmoja, 409d7f494 postilaatikossa).
