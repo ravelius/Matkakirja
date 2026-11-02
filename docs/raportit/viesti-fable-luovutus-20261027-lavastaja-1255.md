@@ -3208,3 +3208,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - AUKI: 1) PT:n kuittaus c-v4 → JU:lle rakennukset-v102 (korvaa v101); 2) varmista JU:n viennit v101/tausta-v102/esto-v27; 3) seuraava sali PT:ltä
   (vaihe 2 jatkuu: sama tapa; 体和殿 tai 永寿宫 lähin; huom. taustan hallityypit vaihtelevat → analysoi_c.py + seinat_c.py ensin, länsiseinä puuttuu usein).
 - Esto-ajo: Matkakirja-proto worktree --detach juna-218 kärjestä (natiiviseppa/juna-218), kaanna.sh PalatsiEstoLeivonta (y-v1/esto-v27.zsh), worktree pois.
+- PT 14.1x: c-v4 KUITATTU → JU:lle rakennukset-v102 (korvaa v101) + PK-rivi lähetetty 14.1x. AUKI-kohta 1 tehty.
