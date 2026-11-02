@@ -2972,3 +2972,16 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
      jossa "ui juoksupeli elinvoima 100" ennen jokaista odota-peli-askelta (kuten bugit-217/sk-paikannus6.txt) ja mika 2.35:n kuvan
      (bugit-218d/14-15.jpg) muurin ja sokkelin saumaan (≈ 0,25 0,29 / 0,70 0,29 / 0,45 0,30). Aiempi 14-korjaus = valo_tayta (lisäys 219);
      jäänne todennäköisesti UV1-saaren reunan suodatusvuoto (leivottu kaista saumassa) → dilaatio tai sokkelin yläreunan tekselit.
+
+## LISÄYS 232 (2.11. 07.1x): BUGI 14 VALMIS → RAKENNUKSET-V94 JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- Mika-ajo 2 (bugit-218/aja2.zsh, sk-paikannus2.txt: elinvoima 100 joka askeleella, loki esikatselu-20261102-065030, mika2.txt): 2.35:n
+  pisteviiva = a-meridiaaniportti lod0 (rakennukset-v93) sokkelin 0,15 m vaakareunus y 1,60 (V4_kujakivi_sokkeli, normaali +y).
+- Syy: reunuksen UV1-saari valokartassa vain 0,7 tekseliä leveä → bilineaarinen näyte vuotaa naapurisaariin, osa reunuksista nollia
+  (peli: täysi taivastäyttö); kaukaa alle pikselin levyinen vaalea viiva = pisteviiva. Valo_tayta (lisäys 219) ei korjaa tätä.
+- Korjaus bugit-218/v14/reunus_uv1.py: reunuksen UV1 = sokkelin etupinnan UV1 kärjestä 0,10 m alas (yksi etupinnan kolmio per reunus,
+  1 tekseli sisään, nollat ohitetaan). Valokartta, geometria ja UV0 ennallaan. Vain a-meridiaaniportti-lod0 muuttui (40 kärkeä);
+  tausta-v98, kaiteeton-v6 ja muurikate-v38: ei reunuksia.
+- rakennukset-v94 SHA256SUMS dc517ef5e9c9 (_valmiit/juoksupeli-kk-lavastaja-rakennukset-v94-vienti-20261102, bugit-218/rakennukset-v94.zsh);
+  PK-kansio "kielletty-rakennukset-v94/". Kuvapari bugit-218/sauma-ennen-jalkeen.jpg (valokuva_m.py, pelin kynnys; vain valo, ei albedoa).
+- Sivuhuomio: etusokkeli x −39,7…−32,7 (malli) on valokartassa nollaa (päällekkäinen leipomaton saari), todennäköisesti piilossa; ei korjattu.
+- JONO jäljellä: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
