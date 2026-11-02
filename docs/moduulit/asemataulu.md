@@ -98,7 +98,14 @@ KIRJOITUSOHJE (sama kaikille tileille ja kirjoittajille; tarkistin valvoo, luku 
    19.10.2026 klo 19.20). Otsikot vain "Työn alla:" ja "Valmiina:" (lukittu: vain "Valmiina:"; TF: vain "Uutta (…):"). Ei "Korjatut:",
    "Odottaa valintaasi:" eikä muita. Kohdat ranskalaisin viivoin (–), rivinvaihdot säilyvät, kukin asia kerran.
 3. Ei ☑/☐/✅/✓-merkkejä (omistaja 19.10.2026 klo 19.20) eikä päivitysaikaa junarivillä (13.10.).
-4. JUNAKORTTI (omistaja 14.10.2026 klo 23.59): TF-kortissa vain yksi "Uutta:"-lista (pyydetyt muutokset ja muut uudistukset).
+4. JUNARIVIT KIRJOITETAAN VAIN KOMENNOLLA (omistaja 2.11.2026), käsin kirjoitus ja suorat ArtifactData-kirjoitukset junat-dokumenttiin kielletty:
+   `python3 -I tools/asemataulu/juna.py [--kansio <data/talo>] lisaa|valmis|lukitse|tf --juna N …` (lisaa = Työn alle; valmis = Työn alla → Valmiina,
+   teksti tai osa siitä; lukitse = vain Valmiina jää; tf = TF-rivi, `--aika HH.MM`). Komento muotoilee, poistaa kohdista ajat, päivittää ts:t
+   ja ajaa tarkistimen ennen tallennusta. Säännöt: avoimessa junassa "Työn alla:" ja "Valmiina:" (Valmiina saa olla tyhjä), lukitussa vain
+   "Valmiina:"; kohtarivillä ei päivämäärää, kellonaikaa eikä "klo":ta; kukin kohta kerran; kohta enintään 110 merkkiä; avoimen junan
+   Työn alla -kohdassa ei valmiin työn sanoja (viety, korjattu, kuitattu, valmis, hyväksyit). TF-rivin otsikon "Uutta (… klo HH.MM …):" aika
+   on sallittu. TF 217:sta alkaen tarkistetaan; vanhemmat TF-rivit ohitetaan. Koukku pt-taulu-muistutus.py ilmoittaa virheet PT:lle.
+5. JUNAKORTTI (omistaja 14.10.2026 klo 23.59): TF-kortissa vain yksi "Uutta:"-lista (pyydetyt muutokset ja muut uudistukset).
 
 | Kenttä | Pakollinen | Muoto | Käyttö |
 |---|---|---|---|
@@ -282,6 +289,7 @@ Tekstisäännöt (otsikot, johdanto, merkit, ei-pelin asiat) koskevat kolmea nä
 | otsikot (KAIKKI rivit, ei vain näkyvät): avoin Työn alla + Valmiina, lukittu vain Valmiina, TF vain yksi "Uutta (pp.kk. klo HH.MM; myös Macille):"; kukin asia kerran; ei valintamerkkejä | 18.10. (C5), 19.10. 19.48, 20.10. 09.56 |
 | Juna N: tilassa ei "Testaajilla"; Juna N, jota uudempi TF on, on TF-rivi | 20.10. 09.56 (206 ja 207 jäivät Juna-riveiksi) |
 | `--tf-lokit <julkaisija-tyokalut>`: juna, joka on lokin mukaan sisäisillä, on "TF N" ja otsikon aika = lokin SISAINEN-aika (kolme uusinta) | 20.10. 09.56, Boostin täysi tarkistus |
+| junarivin muoto (tarkista_muoto): avoimessa Työn alla + Valmiina, lukitussa Valmiina; kohdissa ei pp.kk.-päivämääriä, HH.MM-aikoja eikä "klo"; kukin kohta kerran; kohta ≤ 110 merkkiä; avoimen junan Työn alla ei valmiin työn sanoja; TF N < 217 ohitetaan; kirjoitus vain juna.py:llä (tests/asemataulu-juna-komento.test.mjs) | 2.11. |
 | eteneminen ilman nimeä = tyhjennetty (juna TF:ssä), ei tarkisteta | luku 5 |
 | teksti alkaa otsikolla (ei johdantoa); ei ☑/☐/✅/✓ | 19.10. 19.20 |
 | ei ei-pelin asioita (Raamattu, Asemataulu, tarkistin, tuotantopohja, työkalu) junarivin kohdissa | 19.10. 19.48 |

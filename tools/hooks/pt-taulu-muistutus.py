@@ -17,12 +17,14 @@ Ei koskaan estä mitään; virheessä hiljaa.
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 
-TILA = "/Users/Shared/Claude/hooks/.pt-taulu-tila.json"
+TILA = os.environ.get("PT_TAULU_TILA") or "/Users/Shared/Claude/hooks/.pt-taulu-tila.json"
 VALI = 600
-DATA = "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo"
+DATA = os.environ.get("PT_TAULU_DATA") or "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo"
+TARKISTIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "asemataulu", "tarkista-junat.py")
 JUNA = re.compile(r"KUITATTU|LUKITSE|OMISTAJA PYYSI|BUILD 1\d\d|TF 1\d\d|juna(an)? 1\d\d", re.I)
 IKKUNA = 1_000_000  # Opus 1 M (get_usage: contextWindow 1000000)
 LOPPU_TAVUT = 3_000_000  # viimeinen mallikutsu löytyy tallenteen lopusta
@@ -125,6 +127,22 @@ def taulumuistutus(d, tapahtuma, sessio):
     return None
 
 
+def junarivivahti(d, sessio):
+    """Junarivien muoto (omistaja 2.11.2026): ajaa tarkistimen paikalliselle talo-kansiolle ja ilmoittaa virheet
+    (enintään 3 riviä, kerran 5 min välein per sessio). Aikaraja 10 s; virheessä hiljaa."""
+    if not os.path.isdir(DATA) or not os.path.exists(TARKISTIN):
+        return None
+    try:
+        r = subprocess.run([sys.executable, "-I", TARKISTIN, "--kansio", DATA], capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    virheet = [x[7:] for x in r.stdout.splitlines() if x.startswith("VIRHE: ")]
+    if not virheet or not saa_muistuttaa("junarivit", sessio, 300):
+        return None
+    return ("JUNARIVIT VIRHEELLISET: %d virhettä, korjaa junat.json tools/asemataulu/juna.py:llä (ei käsin): %s"
+            % (len(virheet), " | ".join(v[:140] for v in virheet[:3])))
+
+
 def main():
     try:
         d = json.load(sys.stdin)
@@ -133,7 +151,7 @@ def main():
     tapahtuma = d.get("hook_event_name") or "PostToolUse"
     sessio = str(d.get("session_id") or "")
     tekstit = []
-    for osa in (kontekstivahti, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
+    for osa in (kontekstivahti, junarivivahti, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
         try:
             t = osa(d, sessio)
         except Exception:  # noqa: BLE001 — yksi osa ei saa kaataa toista

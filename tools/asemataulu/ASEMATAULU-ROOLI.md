@@ -67,6 +67,7 @@ niitä käsin (muutos = docs-PR; käsin muutettu kopio palautuu seuraavalla kier
    asiat seuraavalle riville, ei-pelin asiat (Raamattu, taulun ohje, työkalut) eivät kuulu junariveille.
 3. tyolista.json: keskeneräisen rivin "Työn alla" -kohta, joka on jo junassa tai TF:ssä, siirtyy osioon "Junassa N:". Viittaus vanhaan
    junaan päivitetään. Uusi omistajan pyyntö, josta PT on viestinyt, lisätään. Jos et ole varma, kysy PT:ltä yhdellä rivillä. Älä arvaa.
+3b. JUNARIVIT VAIN KOMENNOLLA (omistaja 2.11.2026): junat.json:n rivit kirjoitetaan vain `python3 -I tools/asemataulu/juna.py lisaa|valmis|lukitse|tf --juna N …`; käsin kirjoitus kielletty. Muoto: avoin juna "Työn alla:" + "Valmiina:", lukittu vain "Valmiina:"; kohdissa ei päivämääriä eikä kellonaikoja, kukin kohta kerran, enintään 110 merkkiä; Työn alla -kohdassa ei valmiin työn sanoja. Tarkistin hylkää loput (speksi luku 4 ja 10).
 4. Muokkaa tiedostoja aina väliaikaisen tiedoston ja os.replace-kutsun kautta, ja vie muutokset heti tauluun.
 
 ## Omistajan tyylilinjaukset (sitovat; tarkistin valvoo)

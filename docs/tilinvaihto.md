@@ -101,6 +101,7 @@ F/jonokierros-teksti.md (KK, Asemataulu), F/asemataulu/roolit.json ja data/talo/
 Lopuksi `bash tools/tyotavat/peili.sh` ja commit PT:n työhaaraan (worktree `tools/uusi-worktree.sh fable <aihe>`, ks. VOIMASSA OLEVA ARVO).
 
 ## 4. Asemataulu (tilikohtainen kopio)
+Junarivit kirjoitetaan vain `python3 -I tools/asemataulu/juna.py …` -komennolla (käsin ei), ja `python3 -I tools/asemataulu/tarkista-junat.py --kansio <data/talo>` valvoo muodon (docs/moduulit/asemataulu.md luvut 4 ja 10); säännöt ovat repossa, eivät session muistissa.
 Tee docs/moduulit/asemataulu.md:n luku 9 (ainoa speksi): osoite osoitekirjaan ("Asemataulu (tämän tilin taulu): …") ja
 F/asemataulu/osoitteet.md:hen (KÄYTÖSSÄ), `python3 -I tools/asemataulu/asemataulu.py`, julkaisu ja tyhjälle taululle batch komennon
 tulosteen mukaan; osoite jonokierroksen kohtaan 7, F/keskustelukanava/aloitus.md:n kohtaan 2, Postivahdille ja omistajalle yhdellä
