@@ -62,3 +62,13 @@ Salien alku/maali = LAV:n rakennukset-reitti S-N:n päät (paikka_pohja + pistee
 /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/: 20261102-182753-cx.mp4 (储秀宫), -184702-yk.mp4 (翊坤宫), -185946-ys.mp4 (永寿宫),
 -191119-th.mp4 (体和殿), -192310-tj.mp4 (太极殿), -193416-ty.mp4 (体元殿), -194533-cc.mp4 (长春宫), -195649-xf.mp4 (咸福宫).
 Taso1b3 (ketju7) ~20.30 → tarkista käännös → paketti PT:lle → latauskuvat (jono 3) → JU:lle "ESIKATSELU VAPAA".
+
+## TILA 20.25: taso1b3 EI KELPAA (älä lähetä) – SEURAAJAN ENSIMMÄINEN TYÖ
+- tallenne-218t/20261102-200558-taso1b3.mp4: `kaanna 1 seina` hyväksyttiin AVAUKSEN aikana (unity.log rivi 4393, ohjaus vasta 4942),
+  koska keisari odottaa seinällä jo 29,5 s:sta → kääntyi ennen ohjausta, kamera kävi seinän/katon sisällä (~26 s videolla).
+- KORJAUS (JuoksupeliNakyma.cs, case "kaanna"): `seina` vaatii myös, että avaus on ohi (avausT < 0f tai !m.TakaaAjajaPidossa), esim.
+  `if (o.Length > 2 && o[2] == "seina" && (avausT >= 0f || !(saanto is V4Kierros ks && ks.S.Odottaa))) return "ei (ei seinällä)";`
+  → tarkista.sh, commit, aja taso1b4 (tallenne-218t/ketju7.zsh mallina, nimi taso1b4) JU:n linjalla 1.
+- HAVAINTO (selvitä samalla): botti 1:n ajossa "käänny vasemmalle" -ohje näkyi ~20 s suoralla kujalla – todennäköisesti botin
+  käännökset eivät kuittaa opetusta (QA-artefakti), mutta varmista ettei ohje jää pelaajallekin päälle.
+- Sitten paketti PT:lle: taso1a2 (175105) + taso1b4 + 8 salia (yllä) → latauskuvat (jono 3) → JU:lle "ESIKATSELU VAPAA".
