@@ -67,3 +67,5 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla.
 SHA256SUMS OK (062cb1eb8058 / b72575462815 / 9b94569dbfe6; esto = v35), 1721 solmua, mutta 796/797: OikeanPalatsinVerkkoEiKuleRakennuksenLapi
 2 solmuväliä rakennuksen läpi (1155–1181 ja 1180–1181 noin (161–163, 381–385)). LAV:lle ilmoitettu; kytke korjattu versio (muokkaukset
 peruttu, kärki edelleen 7127ca0c3). Testijuuressa symlinkit v115/v111/v36 valmiina.
+**21.55 KORJATTU: 永和宫 kytketty dec9efec4** (LAV:n kapean reitin jatko vain vapaata pitkin pysyväksi JuoksuPalatsiVerkko.Pakotetut;
+797/797, 1719 solmua). Kärki nyt **dec9efec4**. yk uusittu 211411-yk-v2 (maali 12 s 60 m, katsomatta).
