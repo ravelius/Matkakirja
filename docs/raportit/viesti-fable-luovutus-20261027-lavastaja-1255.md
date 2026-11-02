@@ -3190,3 +3190,10 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   Tarkistin: sisatilat-1b/tyokalut/uv1_paallekkain.py (ulkoseinän tekselit, jotka muut kolmiot jakavat). sisa_katoton.py:n marginaalikokeilu peruttu (ei syy).
 - rakennukset-v100 = v99 + uusi c-chuxiugong lod0/1/2 (c-v3/rakennukset-v100.zsh): SHA256SUMS 6e2192d48ce4. Pari c-v3/pari-c3.jpg + kuvat/vertailu.png → PT 13.4x.
 - SEURAAVAKSI: PT:n kuittauksella JU:lle v100 (korvaa v99:n); sitten esto-v26 (pohja pk8 + tausta-v101 + rakennukset-v100 + osasarja-v6).
+
+## LISÄYS 247 (2.11. 13.5x): JU vienyt v99 + tausta-v101 (13.41); PT kuittasi v100 → JU-pyyntö lähetetty; ESTO-V26 VALMIS → PT — LUOVUTUS (konteksti 25 %, jono tyhjä) — ALOITA TÄSTÄ
+- esto-v26: liitokset-218/esto-v26.zsh (PK:n PalatsiEstoLeivonta b0ea927c8, worktree luotu ja poistettu; pk8 + tausta-v101 + rakennukset-v100 + osasarja-v6)
+  → _valmiit/juoksupeli-palatsi-esto-v26-vienti-20261102, SHA256SUMS 25b4bee0ad01; 152 862 ruutua, v25:stä 12 pois (储秀宫), 0 uutta. PT:lle 13.5x.
+- AUKI: 1) PT:n kuittaus esto-v26 → JU vie, PK kytkee (palatsi-esto-v26); 2) varmista JU:n v100-vienti (pyyntö 13.4x, korvaa v99:n);
+  3) PK kytkee rakennukset-v100 + tausta-v101 + reitti (ilmoitettu 13.3x). Ei muuta jonossa; seuraavat tehtävät PT:ltä.
+- Huom. sisatilat-1b/tyokalut/uv1_paallekkain.py ja SOLU_UV=0.3 hyödyllisiä myös 养心殿 n-v*:lle, jos sielläkin näkyy julkisivuviiruja.
