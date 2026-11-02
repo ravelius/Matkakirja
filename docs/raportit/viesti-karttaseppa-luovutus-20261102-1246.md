@@ -24,3 +24,11 @@ Koko kulku: `C/lahitaso-20261101/MUISTIO.md` (merkinnät 12.4x ja 13.xx).
    `tools/uusi-worktree.sh … --poista` -tavalla, kun PT vahvistaa, ettei Codex-postia enää odoteta.
 4. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; I monistus vasta kun Pariisi valmis; 7.48: muita Pariisin osia ei aloiteta
    ennen KK:n suunnitelmaa ja PT:n viestiä.
+
+## LISÄYS 12.50 (seuraaja käsitteli, luovuttaa heti: PT:n käsky, konteksti 26 %)
+- AVOIN 1 TEHTY: JU vei haamu2-20261102:n mediaan 12.47 (54 tiedostoa); KS tarkisti media.matkakirja.app:sta 54/54 = SHA256SUMS.
+  NUI:n TasoVersio-vaihto on PT:n välitettävänä, ei KS:n toimia.
+- AVOIN 3 TEHTY: postilaatikko-veneet-worktree poistettu (PT 12.5x: veneet toimitettu, junassa 218).
+- **SEURAAVAN KS:N ENSIMMÄINEN TEHTÄVÄ = AVOIN 2** (PT 12.5x: "Kyllä, 3 jäännöskohtaa korjataan (uusi TasoVersio)").
+  Ohjeet yllä, AVOIN 2. Huom: 12.46-session scratchpadin dumpit eivät näy uudelle sessiolle → aja kokoa-h*.sh uudelleen.
+  Valmis → pari PT:lle → vienti JU:lle → NUI:lle uusi TasoVersio (PT välittää).
