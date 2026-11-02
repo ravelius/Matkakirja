@@ -44,6 +44,13 @@ TYOLISTA_KIELLETYT_RE = re.compile(r"\((?:palautteesi|pyyntösi|päätöksesi)",
 TF_OTSIKKO_RE = re.compile(r"^Uutta \(\d{1,2}\.\d{1,2}\. klo \d{1,2}\.\d[\dx](?:; myös Macille(?: \d{1,2}\.\d[\dx])?)?\):$")
 # Juna N -rivin tila ei kerro testaajista; testaajilla oleva juna on "TF N" (206 ja 207 jäivät Juna-riveiksi 20.10.).
 TESTAAJILLA_RE = re.compile(r"testaaj", re.I)
+# Junarivin muoto (omistaja 2.11.2026): kohdissa ei päivämääriä eikä kellonaikoja, kukin asia kerran, lyhyt rivi,
+# avoimen junan Työn alla -kohdassa ei valmiin työn sanoja. Vanhat TF-rivit (N < TF_MUOTO_ALKAEN) ohitetaan.
+TF_MUOTO_ALKAEN = 217
+KOHTA_MAX = 110
+PVM_RE = re.compile(r"\d+\.\d+\.")
+AIKA_RE = re.compile(r"\b\d{1,2}\.\d[\dx]\b|\bklo\b", re.I)
+VALMIS_TYO_RE = re.compile(r"(?<!\w)(viety|korjattu|kuitattu|valmis|valmiiksi|hyväksyit)(?!\w)", re.I)
 SISAINEN_RE = re.compile(r"^SISAINEN \S+ completed success (\d{1,2})\.(\d{2})\s*$", re.M)
 
 
@@ -163,8 +170,45 @@ def tarkista_rivi(r, i, nakyva, virheet, varoitukset, lukitut=()):
             virheet.append("%s: osio '%s' esiintyy kahdesti" % (p, o))
         nahty.add(o)
         kohta_ryhma = o
+    tarkista_muoto(p, nimi, on_juna, lukittu, teksti, virheet)
     if on_juna and not nahty and len(teksti) > 0 and not teksti.strip().startswith("–"):
         varoitukset.append("%s: Juna N -rivin tekstissä ei ole 'Työn alla:'- eikä 'Valmiina:'-osiota" % p)
+
+
+def tarkista_muoto(p, nimi, on_juna, lukittu, teksti, virheet):
+    """Junarivin muoto (2.11.): osiot, ei aikoja, ei toistoa, lyhyet kohdat, ei valmiin työn sanoja Työn alla -kohdassa."""
+    nro_ = int(NIMI_RE.match(nimi).group(2))
+    if not on_juna and nro_ < TF_MUOTO_ALKAEN:
+        return
+    osiot, nykyinen, nahty = [], None, set()
+    for rivi in teksti.split("\n"):
+        r = rivi.strip()
+        if not r:
+            continue
+        if r.startswith(("–", "-", "•")):
+            osiot.append((nykyinen, r))
+            k = re.sub(r"\s+", " ", r.lstrip("–-• ").lower())
+            if k in nahty:
+                virheet.append("%s: sama kohta kahdesti: %s" % (p, k[:60]))
+            nahty.add(k)
+        elif r.endswith(":") or OTSIKKO_RE.match(r):
+            nykyinen = otsikon_perus(r)
+    osiot_nimet = {o for o in (otsikon_perus(x.strip()) for x in teksti.split("\n") if x.strip() and not x.strip().startswith(("–", "-", "•")))}
+    if on_juna:
+        vaaditut = ("valmiina",) if lukittu else ("työn alla", "valmiina")
+        for v in vaaditut:
+            if v not in osiot_nimet:
+                virheet.append("%s: %s junalta puuttuu osio '%s:' (Valmiina saa olla tyhjä, otsikko pitää olla)" % (p, "lukitulta" if lukittu else "avoimelta", v.capitalize()))
+    for osio, r in osiot:
+        kohta = r.lstrip("–-• ")
+        if PVM_RE.search(kohta):
+            virheet.append("%s: kohdassa päivämäärä (ei päivämääriä kohtiin): %s" % (p, kohta[:60]))
+        if AIKA_RE.search(kohta):
+            virheet.append("%s: kohdassa kellonaika tai 'klo' (ei aikoja kohtiin): %s" % (p, kohta[:60]))
+        if len(r) > KOHTA_MAX:
+            virheet.append("%s: kohta yli %d merkkiä (%d): %s" % (p, KOHTA_MAX, len(r), kohta[:50]))
+        if on_juna and not lukittu and osio == "työn alla" and VALMIS_TYO_RE.search(kohta):
+            virheet.append("%s: Työn alla -kohdassa valmiin työn sana (siirrä Valmiina-osioon): %s" % (p, kohta[:60]))
 
 
 def tarkista(junat, eteneminen=None, tf_lokit=None):

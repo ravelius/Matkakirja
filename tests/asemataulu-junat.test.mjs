@@ -245,3 +245,64 @@ test('--tf-lokit: lokin mukaan TF:ssä oleva Juna N hylätään, TF N oikealla a
   r = aja2();
   assert.equal(r.status, 0, r.stdout);
 });
+
+// Omistaja 2.11.2026: junarivien muoto (ei aikoja, osiot, kukin kohta kerran, lyhyt rivi, ei valmista työtä Työn alla -kohdassa)
+test('muoto: oikea avoin juna ja tyhjä Valmiina menevät läpi', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Työn alla:\n– skanneriin tiedot\n\nValmiina:';
+  assert.equal(aja(d).status, 0, aja(d).stdout);
+});
+
+test('muoto: avoimelta junalta puuttuva Työn alla tai Valmiina hylätään, lukitulta riittää Valmiina', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Työn alla:\n– a';
+  assert.match(aja(d).stdout, /puuttuu osio 'Valmiina:'/);
+  d.rivit[0].teksti = 'Valmiina:\n– a';
+  assert.match(aja(d).stdout, /puuttuu osio 'Työn alla:'/);
+  d.rivit[0].tila = 'Lukittu';
+  assert.equal(aja(d).status, 0, aja(d).stdout);
+});
+
+test('muoto: päivämäärä, kellonaika ja klo kohdassa hylätään', () => {
+  for (const kohta of ['2.11. korjaus', 'korjaus 2.11.', '10.03: asia', 'asia 9.5x', 'asia klo 10']) {
+    const d = hyva();
+    d.rivit[0].teksti = 'Työn alla:\n– ' + kohta + '\n\nValmiina:\n– b';
+    const r = aja(d);
+    assert.equal(r.status, 1, kohta);
+    assert.match(r.stdout, /päivämäärä|kellonaika/, kohta);
+  }
+});
+
+test('muoto: sama kohta kahdesti ja yli 110 merkin kohta hylätään', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Työn alla:\n– sama asia\n\nValmiina:\n– Sama asia';
+  assert.match(aja(d).stdout, /sama kohta kahdesti/);
+  d.rivit[0].teksti = 'Työn alla:\n– ' + 'x'.repeat(120) + '\n\nValmiina:';
+  assert.match(aja(d).stdout, /yli 110 merkkiä/);
+});
+
+test('muoto: valmiin työn sana avoimen junan Työn alla -kohdassa hylätään, Valmiina-osiossa sallitaan', () => {
+  for (const sana of ['viety palvelimelle', 'saumaviiva korjattu', 'kuitattu junaan', 'kaide valmis', 'hyväksyit sen']) {
+    const d = hyva();
+    d.rivit[0].teksti = 'Työn alla:\n– ' + sana + '\n\nValmiina:';
+    const r = aja(d);
+    assert.equal(r.status, 1, sana);
+    assert.match(r.stdout, /valmiin työn sana/, sana);
+    d.rivit[0].teksti = 'Työn alla:\n– a\n\nValmiina:\n– ' + sana;
+    assert.equal(aja(d).status, 0, sana);
+  }
+  const d = hyva();
+  d.rivit[0].teksti = 'Työn alla:\n– ensin korjataan eunukkien katoaminen\n\nValmiina:';
+  assert.equal(aja(d).status, 0, 'korjataan ei ole valmiin työn sana');
+});
+
+test('muoto: TF 217+ kohdat tarkistetaan, vanha TF ohitetaan, Uutta-otsikon aika sallitaan', () => {
+  const d = hyva();
+  d.rivit[0].nimi = 'Juna 218';
+  d.rivit[1] = { nimi: 'TF 217', tila: 'Testaajilla (TestFlight)', teksti: 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus' };
+  assert.equal(aja(d).status, 0, aja(d).stdout);
+  d.rivit[1].teksti = 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus 2.11. 04.07';
+  assert.equal(aja(d).status, 1);
+  d.rivit[1] = { nimi: 'TF 216', tila: 'Testaajilla (TestFlight)', teksti: 'Uutta (2.11. klo 04.07; myös Macille):\n– korjaus 2.11. 04.07' };
+  assert.equal(aja(d).status, 0, 'vanha TF-rivi ohitetaan');
+});
