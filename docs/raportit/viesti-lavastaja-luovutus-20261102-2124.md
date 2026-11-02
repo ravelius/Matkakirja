@@ -40,3 +40,10 @@ Edellinen viesti-lavastaja-luovutus-20261102-2102.md on vain viite (rooli, tapa,
   tai kysy PK:lta verkon sääntö. Aja testi itse: MK_JUURI = kansio, jossa kk-pohja-v1d-pk8, kielletty-rakennukset-v116, kielletty-tausta-v111, osamallit791-v6,
   palatsi-esto-v36 (+ MK_RAKENNUKSET/MK_TAUSTA/MK_ESTO/MK_OSAMALLIT nimet) → ./kaanna.sh OikeanPalatsinVerkkoEiKuleRakennuksenLapi (PK:n worktreessä tai kopioi testi).
 - Sitten uusi rakennukset-v116 (+ tarvittaessa esto v37) → JU + PK (PK nollautui, seuraaja: luovutus 4e3452453).
+
+## LISÄYS 21.36: 永和宫:n testihylkäys — juurisyy verkon säännössä, PK:lle
+- Pakotetut() jatkaa kapean reitin linjoja PakotettuJatko 3,5 m rasterista välittämättä: w 6,02 → itään ja u 13,73 → etelään leikkaavat lavalla, u 11,3 → pohjoisseinän läpi
+  takapihan linjaan (alle 1 m seinää, testi ei huomaa). Datalla ei kierrettävissä ilman ovimuutoksia.
+- Korjaus PK:lle: jatko vain vapaata pitkin (≤ 3,5 m), diff proto-3d/_tyo/linnanrakentaja/sisatilat-3c/pk-kapea-jatko.diff; Juoksu 151/151 läpi (juuri sisatilat-3c/pk-juuri,
+  symlinkit v115/v111/v36 + r89:n pk8/osamallit-v6/lahipuut-v12; aja wt/proto-lavastaja-esto-2f/Peli-testit, nyt 7127ca0c3). Viesti PK:lle ja PT:lle 21.36. Data ennallaan.
+- Seuraavaksi 景阳宫 (kohta 2); varmista PK:n kytkentä.
