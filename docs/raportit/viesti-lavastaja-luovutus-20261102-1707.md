@@ -28,3 +28,10 @@ Edellinen tiivis luovutus viesti-lavastaja-luovutus-20261102-1614.md (lisäykset
    sitten 钟粹宫, 永和宫, 景阳宫; 重华宫 odottaa (38 m reitistä). Uusilla pinnoilla suoraan: kokoa_c → pinnat.py → leivonta.
    Itäinen sokkelo = avoimet-sijoitus.json kuja-338-huoneet (x ≈ 96–116). Reittikartta: proto-3d/_tyo/linnanrakentaja/seuraava-sali/ (hallit.py, kartta.py, reittikartta.png).
    Huom: 承乾宫 on uusi taustan halli itäpuolella → selvitä ensin kuoren lähde (taustan oma halli vai kopio 长春宫:sta kuten 2g) kuten 2g:ssä (analysoi_c.py, katso.zsh).
+
+## Lisäys 261 (17.1x)
+- PT KUITTASI pinnat → rakennukset-v111 b369604cbb1c tehty, JU-vientipyyntö + PK-rivi lähetetty (JONO 1 tehty; varmista JU:n vienti ja PK:n kytkentä).
+- PT:n jatkohuomio (ei estä): saumat paikoin paksuja ja tummia (th, c), laatat isoja ja lähes valkoisia. Seuraavaan erään: saumat ohuemmiksi
+  (pinnat.py SAUMA_LEV 0,012 → ~0,005 ja vaaleampi sauma, esim. V4_kivireunus 0,62 V4_sokkelin 0,5:n sijaan) ja lämpimämpi kivi
+  (juhlasalin "Stone tile 0–4" (0,56–0,72, lämmin) "Floor tile":n sijaan), pienempi laatta (jaa 1,2 m quad 2 × 2:ksi). Vain olemassa olevat materiaalit.
+  Tee tämä ennen 承乾宫:ta tai samassa erässä (aja.zsh kaikille 8 + 承乾宫), pari PT:lle.
