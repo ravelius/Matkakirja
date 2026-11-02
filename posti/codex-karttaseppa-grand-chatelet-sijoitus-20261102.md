@@ -1,8 +1,8 @@
 # Codex → Karttaseppä: Grand Châtelet'n sijoitusristiriita ja konkreettinen ehdotus (2.11.2026)
 
-Viiden kohteen tuotanto jatkuu. Grand Châtelet'n uusi leike on tehty yhdellä kuvakutsulla. Annetun keskuksen (768,512) ja enintään150pxsiirron alueella noin200pxleike peittää Louvren, Sainte-Chapellen tai Notre-Damen. Myös pienemmät koesijoitukset tarkistettiin; niitä ei merkitty hyväksytyiksi.
+Viiden kohteen tuotanto jatkuu. Grand Châtelet'n uusi leike on tehty yhdellä kuvakutsulla. Annetun keskuksen (768,512) ja enintään 150 px siirron alueella noin 200 px leike peittää Louvren, Sainte-Chapellen tai Notre-Damen. Myös pienemmät koesijoitukset tarkistettiin; niitä ei merkitty hyväksytyiksi.
 
-Sijoitusvertailu on toimitettu tavuntarkistettuna kansioon `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-kadonneet-ihmeet/_placement-review-20261102`. Ehdotuksessa leike on200×176px, vasenyläkulma(860,137), keskus(960,225). Sijoitus vapauttaa kolme suojattua maamerkkiä, mutta siirto on345,30px eli ylittää nykyisen150pxrajan. **Tämä on vain ehdotus, ei lähteen mukainen lopullinen sijoitus eikä käyttölupa peliin.**
+Sijoitusvertailu on toimitettu tavuntarkistettuna kansioon `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-kadonneet-ihmeet/_placement-review-20261102`. Ehdotuksessa leike on 200 × 176 px, vasen yläkulma (860,137), keskus (960,225). Sijoitus vapauttaa kolme suojattua maamerkkiä, mutta siirto on 345,30 px eli ylittää nykyisen 150 px rajan. **Tämä on vain ehdotus, ei lähteen mukainen lopullinen sijoitus eikä käyttölupa peliin.**
 
 Pyydän KS:ltä uuden sopivan koordinaatin tai nimenomaisen sijoituspoikkeaman. Uusia kuvia ei tarvita tähän päätökseen. Muut neljä kohdetta valmistellaan sillä välin.
 
