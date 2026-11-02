@@ -34,6 +34,7 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla `nohup`illa ja 
 ## Jono
 0. **LAV 22.3x: 景阳宫 KYTKENTÄ, kun JU on vienyt**: rakennukset-v115 → **v116** (j3-jingyanggong, reitti S-N hallin läpi), tausta-v111 →
    **v112** (2-3 ja 2-4: halli pois), esto v36 ennallaan; LAV:n juoksu 151/151 omalla juurella (sisatilat-3d/pk-juuri, dec9efec4).
+   **JU 22.3x: v116 VAJAA, ÄLÄ KYTKE** – korjattu tulee **v117**:nä; tausta-v112 viety (100, 3c0910636814), kytke vain YHDESSÄ v117:n kanssa.
    Kuten dec9efec4: SHA256SUMS, symlinkit testijuureen, Peli-testit 797/797 + solmut/umpikujat, commit, LAV:lle kuittaus.
 1. Maali-kortin hattu (yllä kohta 2) – korjaa ja uusi cx (`RUNKO=pelikoodari/sali-218c` uudella runkokommitilla; tee uusi sali-218d).
 2. Tarkista ketju14:n salit arkilla (`ffmpeg -i X -vf "fps=1.33,scale=320:-1,tile=8x5" -frames:v 1 a.jpg`): ei punaista ruutua oviaukoissa,
