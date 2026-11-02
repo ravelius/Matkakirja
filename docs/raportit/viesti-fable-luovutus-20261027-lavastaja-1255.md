@@ -3057,3 +3057,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   2) edusta-kuvan "punainen viiva" = vaalea leivottu pystykaista etujulkisivun puuristikossa x ≈ 24 (väliseinä P2:n alku 0,2 m kuoren takana) –
   todennäköisesti UV1-solun valovuoto; korjausehdokas: P2/P1:n etupää irti kuoresta 0,3 m tai ristikon UV1 erilleen; 3) PK:n leveystarkistus (PT välittää);
   4) 储秀宫 (vaihe 1b); bugi 2 odottaa PK:ta.
+- PK 09.4x (PT:n päätös): n S-N "leveys": 1.4 (yksi kaista, PK 4b107df7e) – päivitetty n-v2/rakennukset.json; janat ennallaan.
