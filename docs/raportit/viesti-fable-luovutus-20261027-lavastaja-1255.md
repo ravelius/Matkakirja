@@ -3209,3 +3209,15 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   (vaihe 2 jatkuu: sama tapa; 体和殿 tai 永寿宫 lähin; huom. taustan hallityypit vaihtelevat → analysoi_c.py + seinat_c.py ensin, länsiseinä puuttuu usein).
 - Esto-ajo: Matkakirja-proto worktree --detach juna-218 kärjestä (natiiviseppa/juna-218), kaanna.sh PalatsiEstoLeivonta (y-v1/esto-v27.zsh), worktree pois.
 - PT 14.1x: c-v4 KUITATTU → JU:lle rakennukset-v102 (korvaa v101) + PK-rivi lähetetty 14.1x. AUKI-kohta 1 tehty.
+
+## LISÄYS 249 (2.11. 14.3x): 永寿宫 2b VALMIS → PT:n kuittausta
+- Nollauksen jälkeen: JU vei 翊坤宫:n (rakennukset-v101, tausta-v102, esto-v27) 14.15 ja rakennukset-v102:n (c-v4) 14.24 → lisäyksen 248 AUKI 1–2 tehty.
+- PT 14.2x: seuraava sali 永寿宫 (2b), sitten 体和殿. Työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-2b/ (LUE.md = mitat, EROLISTA, reitti, tulos;
+  tyokalut/ = 2a:n kopiot 2b-vakioin; ys-v1/). Taustan halli on 储秀宫:n tyyppiä (6 jännettä, keskussali 2), jalusta 0,56, länsiseinä puuttui → lisätty.
+  Uusi ys-yongshougong, paikka (−107,145; 327,20); reitti varaston (−125,8; 330) etelä-/pohjoisliitosten kulmista. Tunnusosat [A]: tavallinen sermi,
+  nimilaatta 令仪淑德, 宫训图 《班姬辞辇图》 -käärö itäväliseinällä.
+- Paketit: rakennukset-v103 b07f21d87187, tausta-v103 451f43567125, esto-v28 f1523df574cc (12 pois, 0 uutta; estokoodi b0ea927c8, juna-218 c7c3ffa2a,
+  worktree poistettu). Pari ys-v1/pari-ys1.jpg PT:lle 14.3x.
+- AUKI: 1) PT:n kuittaus → JU:lle rakennukset-v103 + tausta-v103 + esto-v28, PK:lle rivi kytkennästä (vasta kuittauksen jälkeen, PT);
+  2) jos PK lähettää rivin lähikoristeen (dougong-intercolumn) väärästä sijoituksesta → korjaa ENSIN (PT 14.2x, bugi 2, juna 218);
+  3) seuraava 体和殿 (25,7 × 12,5): analysoi_c.py + seinat_c.py tausta-v103:sta ensin (hallityyppi vaihtelee).
