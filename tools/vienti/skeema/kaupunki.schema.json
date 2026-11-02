@@ -58,6 +58,18 @@
       "properties": { "tasaus": { "type": "string" }, "dx": { "type": ["number", "null"] }, "dy": { "type": ["number", "null"] } },
       "required": ["tasaus", "dx", "dy"], "additionalProperties": false
     },
+    "keskusta": {
+      "type": ["object", "null"], "description": "Saapumiszoomauksen keskipiste asteina (data/kaupunkikeskustat.json, OSM-tarkistettu); null = kaupungin oma piste tai alue (skeema 1.68)",
+      "required": ["lat", "lon"],
+      "properties": { "lat": { "type": "number", "minimum": -90, "maximum": 90 }, "lon": { "type": "number", "minimum": -180, "maximum": 180 } },
+      "additionalProperties": false
+    },
+    "alue": {
+      "type": ["object", "null"], "description": "Alueen (alpit, lappi, islanti, kreeta, sisilia) koko rajaus asteina: p = pohjoinen, e = etelä, l = länsi, i = itä; muuten null (skeema 1.68)",
+      "required": ["p", "e", "l", "i"],
+      "properties": { "p": { "type": "number" }, "e": { "type": "number" }, "l": { "type": "number" }, "i": { "type": "number" } },
+      "additionalProperties": false
+    },
     "data": { "$ref": "arvo.schema.json", "description": "Laudan raakaolio sellaisenaan (x, y, la, lx, ly: laudan Miller-koordinaatit ja nimiön paikka; ambience, airport, start…). Pelin sisäinen muoto: natiivi ei nojaa siihen, ja kentät voivat muuttua ilman skeemaversion nostoa. Käytä päätason kenttiä." }
   },
   "additionalProperties": false
