@@ -30,3 +30,9 @@ Koko kulku: `C/lahitaso-20261101/MUISTIO.md` (merkinnät 2.11.).
    lon = 2.272929 + 0.134148·x/9901, koko metreinä = px (1 m/px). Leikkeet ämpäriin uuteen kansioon (NUI/NS päättää polun).
 3. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; muut kaupungit vasta tilauksesta; L:n siivous.
 Postilaatikon worktree: `/Users/Shared/Claude/wt/karttaseppa-postilaatikko-veneet` (claude/postilaatikko); poista, kun tilaukset kuitattu.
+
+## LISÄYS 08.4x (PT)
+Vertailukuviin (kartalla-<t>.png → PT → KK) **näkyviin ja merkittyinä kohdat, joissa leike peittää nykyisen maamerkin**:
+Palais d'Orsay ↔ Musée d'Orsay, Palais de l'Industrie ↔ Grand/Petit Palais, Trocadéron palatsi ↔ Palais de Chaillot,
+Les Hallesin hallit ↔ Forum des Halles. Tee jokaisesta pari: kartta ilman leikettä | leikkeen kanssa, sama rajaus, peitetty
+nykymaamerkki rajattuna. Omistaja päättää niiden perusteella kadonneet-kytkimen oletuksen (suurennuslasi › Kartta).
