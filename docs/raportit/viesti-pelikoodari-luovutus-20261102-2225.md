@@ -49,3 +49,4 @@ Jos ajot kuolivat: aja puuttuvat samoilla skripteillä taustalla `nohup`illa ja 
 5. Sen jälkeen edellisten luovutusten jono (eunukkikorjaukset ja ristikko-ovibugi ennen arkisia hahmoja, 409d7f494 postilaatikossa).
 6. VS 23.2x: juoksupelin sade (linssiseppa2/sade-218 b65dbc092, Valopohja.AsetaJuoksuSade 0..1, QA `ui juoksupeli sade 1`): PK hyväksyi
    koukun avautuessa + Saatila.Muuttui → sade = Saa ∈ {Sade, Ukkonen} ? 1 : 0 (VS kirjoittaa). Tarkista kytkentä, kun VS ilmoittaa.
+7. xf (sali-218c, `sali-218b/20261102-231627-xf-v2.mp4`) kesto 58,7 s (muut 20–30 s): maali salin sisällä ei ehkä täyttynyt → tarkista; ohje: takaoven ulkopiste tai `ui juoksupeli suosi`.
