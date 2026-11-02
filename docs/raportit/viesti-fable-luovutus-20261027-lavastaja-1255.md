@@ -2805,3 +2805,21 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   5 = h-zhongyoumen katto ei näy (pelin katonpiilotus vai malli?); 7 = t-portti-m216 katto; 8, 9, 6, 14, 15 tarvitsevat tarkemmat mika-pisteet.
 - SEURAAVAKSI: tarkenna mika-pisteet kuvista (lisää rivejä sk-paikannus.txt:hen, aja.zsh uudelleen), korjaa lähteissä, paketti → SHA NS:lle
   runkoon 217 + rivi PT:lle.
+
+## LISÄYS 217 (2.11. 02.5x): JUNAN 217 MALLIVIAT – 11, 7, 8, 6 RUNGOSSA; 9 AGENTILLA; 14 PAIKANNETTU; 15 HYLÄTTY — ALOITA TÄSTÄ
+Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, ajot 1–4, mika*.txt). U = leivonta-216/uusinta.
+- RUNGOSSA (NS d4776b8d7, testit vihreät): tausta-v93 9d89a20e1598 (= v92 + bugi 6: kevyiden LODien leijuvat yläkatot, 28 kattoa 10 palassa,
+  U/tausta-v93.zsh) ← tausta-v92 870424ac757b (bugi 11 lattiasauma kk-tausta-1-2 x −100, U/tausta-v92.zsh; bugi 7 = kk-tausta-1-1:n
+  gallerian katon kärjet x −71, U/portti-m216/saumakarjet.py; EI portin vika). osamallit791-v8 bf2ba913eb18 (bugi 8: porras-terassi.glb
+  ilman leivottua valoa → leivottu + V4_marmori; v8 lisäksi kuori-aukion-reunasiipi + porras-suora leivottu; osamallit791/v7.zsh, v8.zsh;
+  PK OsamallitKansio "osamallit791-v8/"). A/B (osasarja-valo 0) vahvisti: ei pelin vika.
+- 15 hylätty (PT): kuvan ulkopuolisten eunukkien varjot. 5 = PK.
+- 9 KESKEN: Opus-ali-agentti tekee rakennukset-v93 (t-portti-m216 lod0 runko portaat: siniset raidat, y 2,5 -taso; myös Meridiaaniportti).
+  Tulos: _valmiit/juoksupeli-kk-lavastaja-rakennukset-v93-vienti-<pvm>, U/rakennukset-v93.zsh, U/portaat-v93/. Jos agentin raportti ei
+  tullut ennen nollausta: tarkista kansio ja SHA, ennen/jälkeen-kuva → NS:lle runkoon 217 + rivi PT:lle.
+- 14 PAIKANNETTU (ajo 4, esikatselu-20261102-023401 b1570): valopisteet muurin ja sokkelin saumassa = a-meridiaaniportti LOD0 runko+palkit
+  (pelissä kaiteeton c2-v31: kielletty-c2-v31/a-meridiaaniportti-lod0-kaiteeton.glb), seinän alareuna y 1,60, x 1…24, z −365,4…−371
+  (sisäpiha-/aukkoseinät). TEE: selvitä rako seinän ja sokkelin välillä (kärjet y 1,60 vs sokkelin yläpinta), korjaa kaiteettomaan →
+  kaiteeton-v4 (U/kaiteeton-v6.zsh pohjana, kielletty-c2-v32) → NS + PT. Huom: bugi 9:n agentti voi raportoida saman portin.
+- Jonoon TF 217:n jälkeen (PT): porras-terassin kaiteen kyljen kolmioaukot; tausta-v92:n 18 palarajan matalat portaat (328 rakokohtaa,
+  ≤ 0,30 m); LOD2:n yksikerroksisten rakennusten leijuvat katot. Sitten 214 (sisätilojen mittakatselmus) ja 213 (Wumenin kivijalka).
