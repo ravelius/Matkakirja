@@ -43,3 +43,5 @@ Edellinen: -20261102-0815 (PR 5947). Pysyvä kuittaus: tallenne PT:lle → SHA N
 - **Bugi 2 (LAV 09.4x):** t-portti-120:ssa (v94 lod0/1/2/törmäys) ei ole ristikkoa, eikä 5 m:n säteellä pisteestä (−83,7; 124) missään
   paketissa → katto-solmun siirto ei auta. LAV tarvitsee PK:lta: kohdassa 1.44,3–1.45,4 (sk-218e-skenaario) kameran ~6 m säteellä
   piirtyvien rendererien GameObject-/mesh-nimet, materiaalit ja Unity-sijainnit (Renderer.bounds kameran ympäriltä esikatseluajon lokiin).
+- JU 09.35: **kielletty-rakennukset-v95 viety** (546 tiedostoa, virheitä 0). PT: v95 EI runkoon/junaan 218 ennen PK:n eunukkikorjausta
+  (214 v2 rakennukset.json) ja PT:n kuittausta.
