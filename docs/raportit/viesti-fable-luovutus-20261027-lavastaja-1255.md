@@ -3197,3 +3197,14 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - AUKI: 1) PT:n kuittaus esto-v26 → JU vie, PK kytkee (palatsi-esto-v26); 2) varmista JU:n v100-vienti (pyyntö 13.4x, korvaa v99:n);
   3) PK kytkee rakennukset-v100 + tausta-v101 + reitti (ilmoitettu 13.3x). Ei muuta jonossa; seuraavat tehtävät PT:ltä.
 - Huom. sisatilat-1b/tyokalut/uv1_paallekkain.py ja SOLU_UV=0.3 hyödyllisiä myös 养心殿 n-v*:lle, jos sielläkin näkyy julkisivuviiruja.
+
+## LISÄYS 248 (2.11. 14.1x): 翊坤宫 2a VALMIS JA KUITATTU (JU vie); 储秀宫 c-v4 (länsiseinä) → PT — LUOVUTUS (konteksti 26 %) — ALOITA TÄSTÄ
+- 翊坤宫 (vaihe 2a, PT kuittasi suunnitelman ja tuloksen): työkansio proto-3d/_tyo/linnanrakentaja/sisatilat-2a/ (LUE.md = mitat, lähteet, tarkistus, ajojärjestys;
+  tyokalut/ = 1b:n kopiot 2a-vakioin + iou_y.py + valokuva_v.py PIILOTA=katto; y-v1/). Uusi y-yikungong, paikka (−108,21; 378,76), jalusta 0,54 (jää taustaan),
+  7 jänteen kuori, pää-/takaovi u 13,83, reitti tyohuoneen etelä-/pohjoisliitosten kulmista. Riikinkukkosermi + 懋修内治 [A].
+  Paketit: rakennukset-v101 8baeb9015b45, tausta-v102 d728125f84e1, esto-v27 61212366d095 (17 pois, 0 uutta). JU-pyyntö ja PK-rivi lähetetty 14.0x.
+- 储秀宫 c-v4 (PT: kyllä): taustan hallista puuttui länsiseinä (vain törmäyksessä) → sisatilat-1b/tyokalut/sisa_c.py SEINA_H 4,7 lod0:aan, leivottu c-v4/,
+  pari c-v4/pari-c4.jpg. rakennukset-v102 = v101 + c-v4 (SHA256SUMS 55e43f4cedfc); törmäys tavulleen sama → esto-v27 pätee. PT:lle 14.1x.
+- AUKI: 1) PT:n kuittaus c-v4 → JU:lle rakennukset-v102 (korvaa v101); 2) varmista JU:n viennit v101/tausta-v102/esto-v27; 3) seuraava sali PT:ltä
+  (vaihe 2 jatkuu: sama tapa; 体和殿 tai 永寿宫 lähin; huom. taustan hallityypit vaihtelevat → analysoi_c.py + seinat_c.py ensin, länsiseinä puuttuu usein).
+- Esto-ajo: Matkakirja-proto worktree --detach juna-218 kärjestä (natiiviseppa/juna-218), kaanna.sh PalatsiEstoLeivonta (y-v1/esto-v27.zsh), worktree pois.
