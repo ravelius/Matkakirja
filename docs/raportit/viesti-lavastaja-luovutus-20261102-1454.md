@@ -41,3 +41,8 @@ Kunkin kansion LUE.md = mitat, erolista [A], reitti, tarkistus, ajojärjestys. U
 3. 体元殿 (way/40631789, keskipiste −163,01; 343,25; 太极殿:n pohjoispuolella, sen takana 长春宫戏台) → sisatilat-2e.
 4. 长春宫 (way/40631798, −164,21; 373,73).
 5. 咸福宫 (way/40631832, −165,75; 424,46).
+
+## LISÄYS 254 (2.11. 15.12) – 体元殿 2e + 长春宫戏台, pari PT:lle
+- JU vei 15.10: lahipuut-v15, rakennukset-v105, tausta-v105, esto-v30 (jono 1–2 tehty).
+- PT 15.3x: reitti 戏台:n läpi 长春宫:n pihalle, 戏台 samaan malliin. Kansio sisatilat-2e (LUE.md = mitat, toteutus, ajojärjestys), malli ty-tiyuandian,
+  pari ty-v1/pari-ty1.jpg → PT. Kuittauksen jälkeen tausta-v106, rakennukset-v106, esto-v31 (LUE.md:n lopussa).
