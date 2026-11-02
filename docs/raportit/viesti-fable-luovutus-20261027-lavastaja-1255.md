@@ -2881,3 +2881,17 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   sisältä askelmien ja kaiteen jalustan välit läpinäkyvät. osamallit791/kylki_sisa.py (käännetty kopio 3 mm sisemmäs, 4 kolmiota/glb) →
   osamallit791/v9/media (tehty, Workbench-pari vahvisti). Leivonta + paketti osamallit791/v9.zsh → osamallit791-v9 (juna 218) — AJA vasta
   TF 217:n jälkeen (ensin holvi kaiteeton-v7.zsh, LISÄYS 221): nohup zsh v9.zsh >> v9/ajo.log 2>&1 → SHA NS:lle (PK "osamallit791-v9/") + PT.
+
+## LISÄYS 224 (2.11. 04.0x): LUOVUTUS (konteksti 25 %) – MUURIPORTTI PAIKANNETTU, KORJAUS ALOITTAMATTA — ALOITA TÄSTÄ
+- JÄRJESTYS: 1) kun PT kertoo TF 217:n lähteneen: holvi kaiteeton-v7.zsh (LISÄYS 221) → sitten osamallit791/v9.zsh (LISÄYS 223; kuvapari
+  osamallit791/v9/kylki-pari.jpg) → SHA:t NS:lle + rivi PT:lle (juna 218). 2) muuriportti (alla). 3) 214 kun Codex toimittaa.
+- MUURIPORTTI (PT 03.5x, bugit 1–2, Unity x 115→101, z −561): taustapala kk-tausta-1-2 (tausta-v94), seinä mallikehyksessä x ≈ −109,5
+  (pinnat x −109,44…−109,67, normaali −x; itäpinta myös), ovi z 168,5…173,5. LOD0: oviaukko y 0,7…4,0 (kamanan alapinta 4,0). LOD1 ja LOD2:
+  seinä UMPINAINEN −1,3…8,53, ei ovea. 7,7 m = viereisen hallin (z 172…184, x −122…−108) katon alapinta. Kuva muuriportti-218/portti-lod01.jpg
+  (vasen LOD0, oikea LOD1; rivit: idästä, sisältä, ylhäältä). PT:lle lähetetty 04.0x: PK:n peittokartan aukon yläraja 4,0; LAV ehdotti oviaukkoa
+  LOD1/2:een (tausta-v95, juna 218), jos PT ei kiellä → tarkista PT:n vastaus.
+- TEE (jos PT ok): kk-tausta-1-2-lod1/lod2: seinäkolmiot pois laatikosta x −110…−109, z 168,5…173,5, y < 4,0 (leikkaa isot kolmiot: ne
+  kattavat z 156…183), lisää pielet + kamanan alapinta LOD0:n mukaan (attribuutit lähimmästä kolmiosta; mallit K/tyokalut/konsoli_pois.py,
+  kansi_raot_umpeen.py). Varmista portti_kuva.py:llä (Blender, -- <glb> <etuliite>) → paketti tausta-v95 → NS + PT.
+- Kehysmuunnos Unity → malli (likimääräinen, OrigoZ epävarma ±30 m): JuoksuPalatsi.Pohjaan; kanoninen kierto −2,0335° portin A ympäri.
+  Paikannustyökalut muuriportti-218/: pystyleikkaus.py "x0,x1,dx" "z,..." glb… (pinnat pisteessä), kaikki_pysty.py x0 x1 z0 z1 glb… (pystypinnat).
