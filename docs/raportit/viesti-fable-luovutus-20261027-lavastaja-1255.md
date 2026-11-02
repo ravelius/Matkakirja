@@ -2805,3 +2805,170 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   5 = h-zhongyoumen katto ei näy (pelin katonpiilotus vai malli?); 7 = t-portti-m216 katto; 8, 9, 6, 14, 15 tarvitsevat tarkemmat mika-pisteet.
 - SEURAAVAKSI: tarkenna mika-pisteet kuvista (lisää rivejä sk-paikannus.txt:hen, aja.zsh uudelleen), korjaa lähteissä, paketti → SHA NS:lle
   runkoon 217 + rivi PT:lle.
+
+## LISÄYS 217 (2.11. 02.5x): JUNAN 217 MALLIVIAT – 11, 7, 8, 6 RUNGOSSA; 9 AGENTILLA; 14 PAIKANNETTU; 15 HYLÄTTY — ALOITA TÄSTÄ
+Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, ajot 1–4, mika*.txt). U = leivonta-216/uusinta.
+- RUNGOSSA (NS d4776b8d7, testit vihreät): tausta-v93 9d89a20e1598 (= v92 + bugi 6: kevyiden LODien leijuvat yläkatot, 28 kattoa 10 palassa,
+  U/tausta-v93.zsh) ← tausta-v92 870424ac757b (bugi 11 lattiasauma kk-tausta-1-2 x −100, U/tausta-v92.zsh; bugi 7 = kk-tausta-1-1:n
+  gallerian katon kärjet x −71, U/portti-m216/saumakarjet.py; EI portin vika). osamallit791-v8 bf2ba913eb18 (bugi 8: porras-terassi.glb
+  ilman leivottua valoa → leivottu + V4_marmori; v8 lisäksi kuori-aukion-reunasiipi + porras-suora leivottu; osamallit791/v7.zsh, v8.zsh;
+  PK OsamallitKansio "osamallit791-v8/"). A/B (osasarja-valo 0) vahvisti: ei pelin vika.
+- 15 hylätty (PT): kuvan ulkopuolisten eunukkien varjot. 5 = PK.
+- 9 KESKEN: Opus-ali-agentti tekee rakennukset-v93 (t-portti-m216 lod0 runko portaat: siniset raidat, y 2,5 -taso; myös Meridiaaniportti).
+  Tulos: _valmiit/juoksupeli-kk-lavastaja-rakennukset-v93-vienti-<pvm>, U/rakennukset-v93.zsh, U/portaat-v93/. Jos agentin raportti ei
+  tullut ennen nollausta: tarkista kansio ja SHA, ennen/jälkeen-kuva → NS:lle runkoon 217 + rivi PT:lle.
+- 14 PAIKANNETTU (ajo 4, esikatselu-20261102-023401 b1570): valopisteet muurin ja sokkelin saumassa = a-meridiaaniportti LOD0 runko+palkit
+  (pelissä kaiteeton c2-v31: kielletty-c2-v31/a-meridiaaniportti-lod0-kaiteeton.glb), seinän alareuna y 1,60, x 1…24, z −365,4…−371
+  (sisäpiha-/aukkoseinät). TEE: selvitä rako seinän ja sokkelin välillä (kärjet y 1,60 vs sokkelin yläpinta), korjaa kaiteettomaan →
+  kaiteeton-v4 (U/kaiteeton-v6.zsh pohjana, kielletty-c2-v32) → NS + PT. Huom: bugi 9:n agentti voi raportoida saman portin.
+- Jonoon TF 217:n jälkeen (PT): porras-terassin kaiteen kyljen kolmioaukot; tausta-v92:n 18 palarajan matalat portaat (328 rakokohtaa,
+  ≤ 0,30 m); LOD2:n yksikerroksisten rakennusten leijuvat katot. Sitten 214 (sisätilojen mittakatselmus) ja 213 (Wumenin kivijalka).
+
+## LISÄYS 218 (2.11. 03.xx): BUGI 9 VALMIS → RAKENNUKSET-V93 NS:LLE; ENSIMMÄISEKSI BUGI 14 = KAITEETON-V4 (PT) — ALOITA TÄSTÄ
+- rakennukset-v93 SHA256SUMS f9657ba7cea6 (546, 561 Mt) NS:lle runkoon 217 (PK "kielletty-rakennukset-v93/"). Syy: valo_rgbm:n UV1-saarekkeissa
+  leipomattomia tekseleitä (nolla) → peli (JuoksuValo.hlsl) antaa täyden ympäristövalon = sininen raita. Korjaus U/portaat-v93/valo_tayta.py
+  (täyttää saarekkeen nollat saman saarekkeen valosta + 6 tekselin reuna; muu valo tavulleen sama), kaikki 136 lod0:aa, U/rakennukset-v93.zsh.
+  Kuva U/portaat-v93/ennen-jalkeen-vika9.jpg. Täysin leipomattomat saarekkeet jätetty (esim. g-jalustan marmori ~35 %).
+- ENSIMMÄISEKSI (PT): bugi 14 (LISÄYS 217) – todennäköisesti sama nollatekselivika: kaiteettomissa (c2-v31) a-meridiaaniportti (matalat
+  pinnat 79 % nollaa), f-taihemen, g-jalusta, kk-muurikate-v18-pohja. TEE: valo_tayta.py niille → kielletty-c2-v32 = kaiteeton-v4
+  (_valmiit/…-kaiteeton-v4-vienti-<pvm>, LAHTEET + SHA256SUMS kuten v3) → tarkista b1570:n sauma (seinä y 1,60) korjaantuu → NS + PT.
+  Tarkista myös tausta-v93 ja muurikate-v37 samasta viasta (agentti ei mitannut).
+- PT 2.11.: rakennukset-v93 kuitattu (raidat poissa). Kaiteeton-v4 (bugi 14) ESTÄÄ TF 217:N → seuraajan ensimmäinen työ.
+
+## LISÄYS 219 (2.11. 03.3x): BUGI 14 VALMIS → KAITEETON-V4 + MUURIKATE-V38 + TAUSTA-V94 NS:LLE — ALOITA TÄSTÄ
+- Sama nollatekselivika kuin vika 9. tyhjat.py ennen: kaiteettomat 23–68 %, muurikate-v26-pohja 12,9 %, tausta-v93 1–11 %.
+  Korjaus leivonta-216/uusinta/valo-tayta-217.zsh (portaat-v93/valo_tayta.py kaikkiin valo_rgbm-malleihin; tarkistus-<paketti>.txt).
+- NS:lle runkoon 217 (PK-kansiot vaihdettava): kaiteeton-v4 = kielletty-c2-v32 b5b90e1f42b5, muurikate-v38 6f8a4c281c88,
+  tausta-v94 (= v93 + täyttö) c693358ce5fe. Jäljellä vain kokonaan leipomattomat saaret (kaiteettomat 6–9 %, tausta ≤ 0,1 %).
+- Kuva PT:lle bugit-217/vika14/ennen-jalkeen-vika14.jpg (Meridiaaniportin sokkelin saumapisteet poissa).
+- SEURAAVAKSI: 214 sisätilojen mittakatselmus → 213 Wumenin kivijalka + terassit → porras-terassin kaiteen kolmioaukot.
+
+## LISÄYS 220 (2.11. 03.5x): 214 KUITATTU + CODEX-KORJAUSPYYNTÖ; 213 KYSYTTY PT:LTÄ; HOLVIN LEIVONTA JONOON — ALOITA TÄSTÄ
+- NS tilasi c2-v32 + muurikate-v38 + tausta-v94 (JU vie, PK vaihtaa kansiot junaan 217). PT kuittasi bugi 14:n.
+- 214 KUITATTU (PT): Codexin korjauspyyntö postilaatikossa 9fc5e0026 (posti/lavastaja-codex-sisatilat-vaihe1-korjaus-20261102.md;
+  储秀宫 hyväksytty, 养心殿 卷棚抱厦 vain keski- + länsijänteen edessä, itäjänne ulkotilaa, neliöpilarit 2/jänne, lähde DPM D1).
+  Worktree /Users/Shared/Claude/wt/lavastaja-sisatilat-korjaus (poista --poista, kun Codex toimittanut). Odottaa Codexia → mallinnus.
+- 213: todelliset kuvat proto-3d/_tyo/linnanrakentaja/wumen-213/ eivät tue havainnetta (seinät punaiset maahan asti, harmaa vyö
+  vain yläreunassa, ei terasseja); mallissa on jo 1,6 m kivijalka. Kysytty PT:ltä 03.5x (suositus: ei muutosta) → odottaa vastausta.
+- PT: TF 217:n jälkeen ENNEN muuta: Meridiaaniportin holvin (porttikäytävät) sisäpintojen oikea leivonta (laajat kokonaan
+  leipomattomat saaret: bugit-217/vika14/ennen-sauma.png). Sitten porras-terassin kaiteen kolmioaukot ym. (LISÄYS 217).
+
+## LISÄYS 221 (2.11. 03.5x): 213 SULJETTU; HOLVI VALMIINA AJOON TF 217:N JÄLKEEN; BUGI 12 SIJAINTI — ALOITA TÄSTÄ
+- 213 SULJETTU (PT): ei muutosta (todelliset kuvat + omistaja 20.10.).
+- HOLVI (TF 217:n jälkeen, PT): juurisyy = leivottu mutta hyvin tumma tekseli koodautui RGB 0:ksi = pelin puuttuva näyte → taivastäyttö.
+  Korjaus tehty kielletty-rakennukset/tyokalut/leivo_malli.py: NOLLA_MIN (oletus 1; leivotuille RGB ≥ 1,5/255). leivo_valo.py:ssä sama
+  koodaus (rivi 181, m_ min 1e-6) → tarkista/korjaa samoin, jos muurikatteen/taustan holveissa sama. Ajoskripti valmiina:
+  leivonta-216/uusinta/kaiteeton-v7.zsh → paketti kaiteeton-v5 (c2-v33). Käynnistetty 03.41 vahingossa TF-käännöksen aikana ja
+  pysäytetty heti (kaiteeton-v7/ulos voi sisältää keskeneräistä; ei valmis-leivonta-lippua) → aja uudelleen, kun TF 217 on lähtenyt:
+  zsh kaiteeton-v7.zsh >> ajo-kaiteeton-v7.log 2>&1. Sitten valokuva.py-pari (porttikäytävä, kamera 12 1.7 32 → 12 1.3 17.6, kuten
+  bugit-217/vika14/ennen-s2.png) PT:lle + SHA NS:lle.
+- BUGI 12 (PT, TF 217:n jälkeen): tasanteen etupinta ilman tekstuuria, video 1.10 (kuva lokit/bugit-juoksu-217-20261102/11_*). PK: vain
+  sijainti: Unityn juurikehys x ≈ 124–126, z ≈ −562 (Puyi (127, −562), kulku länteen), runko 6ba27bf5b. Mallia ei paikannettu →
+  etsi sijoituksista, mikä malli kattaa kohdan (tai mika-ajo), korjaa UV/materiaali.
+
+## LISÄYS 222 (2.11. 03.45): LUOVUTUS (konteksti 25 %) — ALOITA TÄSTÄ, sitten LISÄYS 221
+- NS: c2-v32 + muurikate-v38 + tausta-v94 junan 217 lukitussa rungossa 60bd5c356; TF 217 JU:lla. Uudet korjaukset junaan 218.
+- SEURAAJAN JÄRJESTYS: 1) kun PT/JU kertoo TF 217:n lähteneen (tai pgrep ei näytä Unityn rakennusajoa): holvi = zsh kaiteeton-v7.zsh
+  (LISÄYS 221) → kuvapari PT:lle + SHA NS:lle (juna 218); harkitse NOLLA_MIN myös leivo_valo.py:hyn. 2) bugi 12 (LISÄYS 221: mallia
+  ei löytynyt rakennukset-, osamallit791-, kaiteeton-, muurikate- eikä tausta-v89-lahde-jsoneista kohdasta (125, −562) ± 25 m →
+  mika-ajo pelissä, bugit-217/aja4.zsh + sk-paikannus-tiedosto pohjana). 3) Codexin 214-korjaus kun tulee → mallinnus.
+- Avoin worktree /Users/Shared/Claude/wt/lavastaja-sisatilat-korjaus (postilaatikko, pushattu).
+
+## LISÄYS 223 (2.11. 03.5x): BUGI 12 = PELIN PAIKKAMALLI (PK); KOLMIOAUKOT KORJATTU, LEIVONTA VALMIINA AJOON TF 217:N JÄLKEEN — ALOITA TÄSTÄ
+- BUGI 12: harmaanoliivi palkki (video 1.10) on pelin hyppyesteen harmaa paikkamalli (JuoksuV4Maailma.cs LuoEste: Lohko lev × 0,5 × 0,3 m), joka
+  jää, kun Codexin estemalli ei lataudu → PT:lle 03.5x (PK:n asia, ei lavastusta).
+- KOLMIOAUKOT: porras-terassi.glb ja porras-suora.glb (sama geometria): kylkiseinä marmori_kaide x = ±0,70 yksipuolinen, katsoo ulos → portaan
+  sisältä askelmien ja kaiteen jalustan välit läpinäkyvät. osamallit791/kylki_sisa.py (käännetty kopio 3 mm sisemmäs, 4 kolmiota/glb) →
+  osamallit791/v9/media (tehty, Workbench-pari vahvisti). Leivonta + paketti osamallit791/v9.zsh → osamallit791-v9 (juna 218) — AJA vasta
+  TF 217:n jälkeen (ensin holvi kaiteeton-v7.zsh, LISÄYS 221): nohup zsh v9.zsh >> v9/ajo.log 2>&1 → SHA NS:lle (PK "osamallit791-v9/") + PT.
+
+## LISÄYS 224 (2.11. 04.0x): LUOVUTUS (konteksti 25 %) – MUURIPORTTI PAIKANNETTU, KORJAUS ALOITTAMATTA — ALOITA TÄSTÄ
+- JÄRJESTYS: 1) kun PT kertoo TF 217:n lähteneen: holvi kaiteeton-v7.zsh (LISÄYS 221) → sitten osamallit791/v9.zsh (LISÄYS 223; kuvapari
+  osamallit791/v9/kylki-pari.jpg) → SHA:t NS:lle + rivi PT:lle (juna 218). 2) muuriportti (alla). 3) 214 kun Codex toimittaa.
+- MUURIPORTTI (PT 03.5x, bugit 1–2, Unity x 115→101, z −561): taustapala kk-tausta-1-2 (tausta-v94), seinä mallikehyksessä x ≈ −109,5
+  (pinnat x −109,44…−109,67, normaali −x; itäpinta myös), ovi z 168,5…173,5. LOD0: oviaukko y 0,7…4,0 (kamanan alapinta 4,0). LOD1 ja LOD2:
+  seinä UMPINAINEN −1,3…8,53, ei ovea. 7,7 m = viereisen hallin (z 172…184, x −122…−108) katon alapinta. Kuva muuriportti-218/portti-lod01.jpg
+  (vasen LOD0, oikea LOD1; rivit: idästä, sisältä, ylhäältä). PT:lle lähetetty 04.0x: PK:n peittokartan aukon yläraja 4,0; LAV ehdotti oviaukkoa
+  LOD1/2:een (tausta-v95, juna 218), jos PT ei kiellä → tarkista PT:n vastaus.
+- TEE (jos PT ok): kk-tausta-1-2-lod1/lod2: seinäkolmiot pois laatikosta x −110…−109, z 168,5…173,5, y < 4,0 (leikkaa isot kolmiot: ne
+  kattavat z 156…183), lisää pielet + kamanan alapinta LOD0:n mukaan (attribuutit lähimmästä kolmiosta; mallit K/tyokalut/konsoli_pois.py,
+  kansi_raot_umpeen.py). Varmista portti_kuva.py:llä (Blender, -- <glb> <etuliite>) → paketti tausta-v95 → NS + PT.
+- Kehysmuunnos Unity → malli (likimääräinen, OrigoZ epävarma ±30 m): JuoksuPalatsi.Pohjaan; kanoninen kierto −2,0335° portin A ympäri.
+  Paikannustyökalut muuriportti-218/: pystyleikkaus.py "x0,x1,dx" "z,..." glb… (pinnat pisteessä), kaikki_pysty.py x0 x1 z0 z1 glb… (pystypinnat).
+- PT KUITTASI (2.11. 04.1x): oviaukko LOD1/2:een LOD0:n mukaan → tausta-v95 junaan 218; PT välittää PK:lle (peittokartan yläraja 4,0).
+
+## LISÄYS 225 (2.11. 04.2x): JUNA 218 – HOLVI, KOLMIOAUKOT JA MUURIPORTTI VALMIIT → JU + NS + PT — ALOITA TÄSTÄ
+- kaiteeton-v5 = kielletty-c2-v33, SHA256SUMS 01c71494f787 (_valmiit/juoksupeli-kk-lavastaja-kaiteeton-v5-vienti-20261102). HOLVIN JUURISYY TARKENTUI:
+  peli (JuoksuValo.hlsl JuoksuLeivottuPeitto, VS 1.11.) antaa täyden taivastäytön leivotulle valolle, jonka luminanssi × _JuoksuLeivonta.y (0,75)
+  < 0,01…0,04 – ei vain RGB 0:lle. NOLLA_MIN ei siis riittänyt (tarkka RGB 0 -kuva: ei nollia ennenkään). Korjaus portaat-v93/valo_alaraja.py:
+  porttikäytävien (3 kpl, alue koodissa) leivotut tekselit vähintään luminanssi 0,06, sävy säilyy; 78 857 tekseliä (2 %), muu tavulleen sama.
+  Koko mallille EI: nostaisi 24 % tekseleistä ja tummentaisi pelissä räystäiden alustoja (täyttö peittyy). Kaiteeton-v7.zsh päivitetty.
+  Kuva bugit-217/vika14/holvi-alaraja-ennen-jalkeen.jpg (vasen c2-v32, oikea c2-v33; valokuva.py = pelin kynnys).
+- osamallit791-v9 SHA256SUMS 57aaf337f8ec (_valmiit/juoksupeli-osamallit791-v9-vienti-20261102), PK "osamallit791-v9/"; kuva osamallit791/v9/kylki-pari.jpg.
+- tausta-v95 SHA256SUMS 333e2353fd25 (_valmiit/juoksupeli-kk-lavastaja-tausta-v95-vienti-20261102): kk-tausta-1-2 LOD1/2 sai LOD0:n LÄPIKULKUOVEN
+  MOLEMPIIN seiniin (x ≈ −109,5 JA −122,8; LOD0:ssa ovi kummassakin), z 168,5…173,5, y < 4,0; muuriportti-218/ovi.py, tausta-v95.zsh;
+  lähde tausta-v89-lahde päivitetty (varmuus-muuriportti-v95/). Kuva muuriportti-218/kuvat95/ovi-pari.jpg (sarakkeet LOD0, LOD1, LOD2).
+- HUOM (ei korjattu): muissakin leivotuissa voi olla tekseleitä 0,01–0,04 (esim. osamallit791 V4_marmorikaide p05 0,024) → sama sininen täyttö
+  syvissä varjoissa. Ratkaisu on VS:n kynnys tai mallikohtainen alaraja → PT päättää.
+- SEURAAVAKSI: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 226 (2.11. 04.4x): PT KUITTASI JUNAN 218 ERÄN; BUGI 12 = LONGZONGMENIN PORTAAN NOUSUPINTA, KORJAUS VALMIINA, MIKA-AJO KÄYNNISSÄ — ALOITA TÄSTÄ
+- PT kuittasi kaiteeton-v5:n, osamallit791-v9:n ja tausta-v95:n junaan 218. Kynnys: PT antaa yleisen korjauksen VS:lle (puuttuva näyte erilleen
+  tummasta), EI mallikohtaisia alarajoja muualle.
+- BUGI 12 (PT: PK tarkisti, ei hyppyeste): kuva lokit/bugit-juoksu-217-20261102/11_1.10_*.jpg = yksi porras oviaukon edessä, päällinen kivetty,
+  nousupinta tasavärinen. Malli: kk-tausta-1-2-lod0 porras x −106,55…−105,4, z 168,5…173,5, y 0,2…0,45; päällinen V4_lattia (v89d), nousupinta
+  + päädyt V4_marmori (tasaväri, ei tekstuuria). LOD1/2:ssa porrasta ei ole. Korjaus muuriportti-218/nousu_kivi.py (6 kolmiota → V4_kivireunus,
+  UV0 × 4 ja u = pituus kuten reunakivissä; TEXCOORD_1 ennallaan), testattu: scratchpadissa, ei pakettia vielä.
+- MIKA-AJO (PT pyysi varmistuksen): bugit-217/aja5.zsh (sk-paikannus5.txt: 70 s, kuva b700 + 15 mika-pistettä) → mika5.txt; käynnistetty 04.3x,
+  odottaa konetta (toinen esikatselu ajossa). Jos mika osuu kk-tausta-1-2:een kohdassa: TEE paketti tausta-v96 = v95 + nousu_kivi.py lod0:aan
+  (kopioi tausta-v95.zsh pohjaksi; myös lähde tausta-v89-lahde, varmuus) → JU + NS (PK "kielletty-tausta-v96/") + PT. Jos ristiriita: rivi PT:lle.
+- Konteksti 25 % → luovutus tämän jälkeen.
+
+## LISÄYS 227 (2.11. 05.1x): BUGI 12 VALMIS → TAUSTA-V96 JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- Mika-ajo 6 (bugit-217/aja6.zsh, mika6.txt, loki esikatselu-20261102-045937; ajo 5:n mika-komennot jäivät käsittelemättä tallenteen loppuessa →
+  odota-peli jokaisen perään): osumat kk-tausta-1-2 lod0 lattia x −127…−119 (z ≈ 170) = LÄNSIOVEN puoli. Siellä peilikuvaporras x −126,6…−125,45
+  samalla viallla (V4_marmori-nousupinta). nousu_kivi.py korjaa molemmat (12 kolmiota).
+- tausta-v96 = v95 + kk-tausta-1-2-lod0 portaat, SHA256SUMS ab70086a15ad (_valmiit/juoksupeli-kk-lavastaja-tausta-v96-vienti-20261102,
+  tausta-v96.zsh; lähde päivitetty, varmuus-nousu-v96/). PK "kielletty-tausta-v96/" (juna 218). Kuva pelistä: lokit/esikatselu-20261102-042313/b700.png.
+- SEURAAVAKSI: 214 sisätilat, kun Codex toimittaa + PT kuittaa. Konteksti 27 % → luovutus.
+
+## LISÄYS 228 (2.11. 05.2x): B2 PÄÄTYSEINÄT KATTO-SOLMUUN → TAUSTA-V97 PELIKOODARILLE — ALOITA TÄSTÄ
+- Pelikoodarin pyyntö (PT:n B2): Longzongmenin päätyseinien (x −110,2…−108,9 ja −123,4…−122,2, z 155,9…183,1) V4_red y ≥ 4,0 solmusta "tausta"
+  solmuun "katto-longzongmen" lod0/1/2:ssa, leikkaus y = 4,0 attribuutit interpoloiden (TEXCOORD_1 säilyy). Pinta-ala säilyy (tarkistettu), muut
+  materiaalit ennallaan. Nimi v97, koska v96 (bugi 12) oli jo viety. Työkalu muuriportti-218/paadyt_kattoon.py, ajo leivonta-216/uusinta/tausta-v97.zsh.
+- tausta-v97 SHA256SUMS cde04a6a15f4 (_valmiit/juoksupeli-kk-lavastaja-tausta-v97-vienti-20261102); vain kk-tausta-1-2-lod0/1/2 muuttuivat.
+  EI mediaan ennen Pelikoodarin tallennetarkistusta. Lähdettä tausta-v89-lahde ei päivitetty (siinä ei katto-solmua).
+- HUOM: LOD2:n katto-longzongmen oli tyhjä (katto taustassa); nyt siinä vain seinän yläosa → LOD2:ssa seinä häipyy, katto ei. Kerrottu Pelikoodarille.
+
+## LISÄYS 229 (2.11. 05.2x): JONO 1 – PORTTIKÄYTÄVIEN ALARAJA POIS → KAITEETON-V6 (C2-V34) JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- PT:n jono (05.1x): 1) c2-alaraja pois, kun VS:n kynnys ca610fd07 on NS:n rungossa; NS vahvisti rungon 9b84bdfff (testit vihreät).
+- kaiteeton-v6 = kielletty-c2-v34 = c2-v33 ilman valo_alaraja.py:tä (kaiteeton-v7:n polvi.glb + valo_tayta.py), SHA256SUMS 73a1f7b74de6
+  (_valmiit/juoksupeli-kk-lavastaja-kaiteeton-v6-vienti-20261102, ajo leivonta-216/uusinta/kaiteeton-v8.zsh); vain a-meridiaaniportti muuttui.
+- Kuvapari pelin UUDELLA kynnyksellä: portaat-v93/valokuva_m.py (PEITTO 3: puuttuva = (1 − ram(l × 0,75)) × smoothstep(0,08, 0,3, RGBM-kerroin)),
+  bugit-217/vika14/holvi-pari-v34.zsh → holvi-v34-ennen-jalkeen.jpg (vasen c2-v33, oikea c2-v34; ylä s2, ala s3): ei sinistä täyttöä kummassakaan.
+- JONO jäljellä: 2) v97 LOD2 PK:n kanssa, jos PK pyytää. 3) 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 230 (2.11. 05.4x): V97:N PUNAVIIVA → PÄÄTYSEINIEN KANSI + LOD2:N KATTO → TAUSTA-V98 JU:LLE, NS:LLE JA PT:LLE — ALOITA TÄSTÄ
+- PT 05.3x (juna 218, bugikorjaus): v97:n päätyseinät katkeavat y = 4,0:aan ilman kantta → häivytetyn katon alla kamera näkee yksipuolisen
+  seinätason reunan punaviivana (PK:n video proto-3d/_tyo/pelikoodari/korjaus-218/20261102-051759-218c-porttihalli-58-70s.mp4, ~64 s).
+- muuriportti-218/kansi.py: taustan V4_red-päätyseinien yläreunan janoista vaakakansi V4_kujakivi_sokkeli_yla y = 4,01, 0,30 m HALLIN PUOLELLE,
+  0,02 m taakse (ensin kokeiltu 0,6 m ulos → reunus aukion julkisivuun, hylätty). UV0 sokkeli_yla-sovite (0,5 uv/m), LOD0 UV1 seinän yläreunasta.
+  + LOD2: taustan V4_palatsi_katto 20 + V4_teal 6 kolmiota → katto-longzongmenin tyhjiin primitiiveihin (kuten LOD1) = v97:n LOD2-huomio korjattu.
+- tausta-v98 SHA256SUMS 674d7b854977 (_valmiit/juoksupeli-kk-lavastaja-tausta-v98-vienti-20261102, leivonta-216/uusinta/tausta-v98.zsh); vain
+  kk-tausta-1-2-lod0/1/2 muuttuivat. Kuva muuriportti-218/kuvat98/kansi-pari.jpg (LOD0/LOD2 v97 vs v98 ylhäältä, katto piilossa).
+- JONO jäljellä: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 231 (2.11. 07.0x): PK 218d -BUGIT 3, 8, 14 – 8 VALMIS (OSAMALLIT791-V10), 3 = PELIN LOD (PK), 14 KESKEN — LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- PT 06.1x: PK:n bugit-218d (proto-3d/_tyo/pelikoodari/korjaus-218/bugit-218d/RAPORTTI.md) 3 → 8 → 14. Työkansio proto-3d/_tyo/linnanrakentaja/bugit-218.
+- Mika-ajo 1 (aja1.zsh, sk-paikannus1.txt, haara pelikoodari/tallenne-218d, loki esikatselu-20261102-062907, mika1.txt):
+  3) osuu "a-meridiaaniportti lod1 runko+palkit" (holvin laki y 5,40, seinä x ≈ 10,9 pohjassa) → peli näyttää alkulennossa LOD1:n, jossa
+     ei leivottua valoa (rakennukset-v93 lod1/lod2: UV1 EI). Syy: Palatsi.cs:1146 "LOD Puyin etäisyyden mukaan" – alkulennossa kamera on
+     holvissa kaukana Puyista. → PELIN korjaus (PK): alkulennon aikana LOD kameran (tai min(kamera, Puyi)) etäisyydestä. Ei mallikorjausta.
+  8) osuu osamalli "791-aukion-reunasiipi porras-terassi.glb" (leivottu valo latautuu: 1024², loki ok). Syy: tasavärinen V4_marmori,
+     askelmat 0,76 / nousut 0,71 → luiska. Korjaus bugit-218/nousut_tummaksi.py: nousupintojen valo × 0,55 (askelmat ennallaan) myös
+     porras-suora. osamallit791-v10 SHA256SUMS e427a1278d53 (_valmiit/juoksupeli-osamallit791-v10-vienti-20261102, bugit-218/osamallit791-v10.zsh);
+     PK OsamallitKansio "osamallit791-v10/". Kuva bugit-218/porras-ennen-jalkeen.jpg (valokuva_m.py, pelin kynnys).
+  14) EI paikannettu: ajon b1550 kohdalla botti oli jo kuollut (RIKOTUT ESINEET -ruutu) → rata poikkesi 218d:stä. SEURAAVAKSI: uusi ajo,
+     jossa "ui juoksupeli elinvoima 100" ennen jokaista odota-peli-askelta (kuten bugit-217/sk-paikannus6.txt) ja mika 2.35:n kuvan
+     (bugit-218d/14-15.jpg) muurin ja sokkelin saumaan (≈ 0,25 0,29 / 0,70 0,29 / 0,45 0,30). Aiempi 14-korjaus = valo_tayta (lisäys 219);
+     jäänne todennäköisesti UV1-saaren reunan suodatusvuoto (leivottu kaista saumassa) → dilaatio tai sokkelin yläreunan tekselit.
