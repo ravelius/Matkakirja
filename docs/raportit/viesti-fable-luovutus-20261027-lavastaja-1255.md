@@ -2811,3 +2811,12 @@ U = leivonta-216/uusinta, T = kielletty-rakennukset/tyokalut.
   itäseinä lisätty; 2b-tyyppinen sali [A]. Pari tj-v1/pari-tj1.jpg PT:lle 14.5x. Paketteja (tausta-v105, rakennukset-v105, esto-v30) EI vielä tehty.
 - AUKI: 1) PT:n kuittaus 2d → paketit (LUE.md:n ohje) → JU-pyyntö + PK-rivi; 2) varmista JU:n vienti v104/v104/esto-v29 (pyydetty 14.45); 3) PK:n lähikoristerivi
   ENSIN jos tulee; 4) seuraavaksi 体元殿 (way/40631789, keskipiste −163,01; 343,25; PT: "+体元殿"), sitten 长春宫 (way/40631798).
+
+## LISÄYS 253 (2.11. 15.0x): 太极殿 KUITATTU → paketit JU:lle; BUGI 2 lahipuut-v14 — LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- PT kuittasi 太极殿 2d:n. Paketit: rakennukset-v105 f4335f490ad0, tausta-v105 6ebd88f50f6c, esto-v30 cb8a7d60e3da (152 806 ruutua; juna-218 3a22dbaf2, estokoodi ennallaan,
+  worktree poistettu). JU-pyynnöt lähetetty, PK:lle kytkentärivi (jonossa).
+- BUGI 2 (PK 14.5x): v13 poisti ITÄISEN rakennuksen kannatinrivit, pelin x peilattu (itä = −X). lahipuut-v14 = v13 − läntiset dougong-intercolumn y 9,59 -rivit
+  (etu z −7,67…−6,93, taka z −22,50…−21,75; 26 + 26) → _valmiit/juoksupeli-kk-lavastaja-lahipuut-v14-vienti-20261102 (809458bef99b). JU-pyyntö lähetetty.
+  Kysytty PK:lta, palautetaanko v13:n itäiset rivit (v15 v12:n riveistä) — odottaa vastausta.
+- AUKI: 1) PK:n vastaus itäisistä riveistä → tarvittaessa lahipuut-v15; 2) varmista JU:n viennit (v104/v104/esto-v29, v105/v105/esto-v30, lahipuut-v14);
+  3) seuraavaksi 体元殿 (way/40631789, keskipiste −163,01; 343,25; tee sisatilat-2e 2d:n tyokaluista: analysoi_c + seinat_c ensin), sitten 长春宫.
