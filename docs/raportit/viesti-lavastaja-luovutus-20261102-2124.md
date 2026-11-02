@@ -48,3 +48,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-2102.md on vain viite (rooli, tapa,
   symlinkit v115/v111/v36 + r89:n pk8/osamallit-v6/lahipuut-v12; aja wt/proto-lavastaja-esto-2f/Peli-testit, nyt 7127ca0c3). Viesti PK:lle ja PT:lle 21.36. Data ennallaan.
 - Seuraavaksi 景阳宫 (kohta 2); varmista PK:n kytkentä.
 - 景阳宫 aloitettu: analyysi ja suunnitelma proto-3d/_tyo/linnanrakentaja/sisatilat-3d/LUE.md (kahden laatan rajalla 2-3/2-4, ei korotettua sokkelia, S-N läpi keskijänteestä).
+- 永和宫 VALMIS: JU vei 21.36, PK kytki dec9efec4 (kapean reitin jatko vapaata pitkin pysyvänä, 797/797). Esto-worktree nyt 7127ca0c3:ssa.
