@@ -56,7 +56,11 @@ on pehmeällä rajalla (Raamattu 7.37).
       (kokeilu Pariisissa); **saapumiszoomaus AINA kaupungin keskustaan**, jolloin lehtikioski näkyy;
    c) Pariisin valokuva ja nähtävyyskartta pois piirroskaupungista; turistiinfo + lehtikioski napautettavina (kaupunkilehti /
       turistiinfo-liite), kuvat KS/Codex. Sitten ihmeiden kuvat (leikkeet).
-6. Veneet Seinellä (OMISTAJAN PÄÄTÖS 08.17; KS:n reitti veneet-20261102/seine-reitti.json, Codexin palat odottavat; postilaatikko 7ad1059b5).
+6. Veneet Seinellä (OMISTAJAN PÄÄTÖS 08.17). KS 09.0x: VALMIINA proto-3d/_tyo/karttaseppa/pariisi-pohja/codex-pseudo3d/veneet-20261102/
+   natiivi-veneet/ (vene-1…4 + vanavesi.png RGBA, seine-reitti.json). Mittakaava 2 px = 1 kartan px (näkyvät 360×85, 340×85, 289×70,
+   120×41), keula itään, vanavesi perän taakse. Veneettömät laatat: _valmiit/pariisi-tasot-veneet-20261102-vienti-20261102 →
+   **TasoVersio "veneet-20261102" SAMASSA junassa kuin liikkuvat veneet** (muuten joki tyhjä; PT kuittaa JU:lle). Pohjana leikekerros
+   (PiirrosKerros.Leikkeet, RGBA, sama varjostin) tai KaupunkiPallot-mekanismi.
 
 ## Huomiot
 - Palais d'Orsay ja Orsayn taidemuseo samassa pisteessä → kohdan 4 ★-kyltti ratkaisee (kadonnut alle).
