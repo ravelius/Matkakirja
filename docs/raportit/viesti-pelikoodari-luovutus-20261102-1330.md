@@ -34,9 +34,17 @@ Haara **pelikoodari/kapea-reitti-218**: d85660f03 → … → b0ea927c8 (kapea r
 aja-218p ajettu 12.51–13.09 (linja 2): korjaus-218/piirtajat-218p.txt + 20261102-125154-218p.mp4 → LAV. LAV paikansi
 (dougong-intercolumn-kannattimet 104–105,5 s) ja korjaa itse; PK:lta ei tarvita muuta.
 
+## Bugi 2 JÄLKEEN (PT 13.2x, lisäys luovutuksen jälkeen)
+- LAV:n lahipuut-v13 (kannattimet pois) PT kuittasi, JU vie. Kytketty: **192cfb127** (kapea-reitti-218, LahipuutKansio v13) ja
+  sama cherry-pickinä **ce44722e7** haarassa **pelikoodari/bugi2-218** = piirtajat-218 + v13 (sama pohja kuin ennen-ajo 218p → reilu pari).
+- AJO EI VIELÄ TEHTY: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/korjaus-218/aja-218q.zsh JU:n ESIKATSELU NYT -viestillä
+  (linjalla 1: PROTO_LINJA=1 zsh aja-218q.zsh; aja-sk.zsh odottaa muiden Esikatselu.Aja-ajojen loppua), vasta kun JU on vienyt v13:n.
+- Sitten kuvapari ennen/jälkeen PT:lle: 218p-video (korjaus-218/20261102-125154-218p.mp4) vs 218q, kohta 104–105,5 s (sama kohta
+  videossa, ffmpeg -ss), tarkista ettei dougong-ristikko näy. Pari PT:lle (ei KK:lle), "ESIKATSELU VAPAA" JU:lle.
+
 ## Jono
 1. PT:n kuittaus salitallenteelle (yllä) → NS.
-2. Muuta ei jonossa.
+2. Bugi 2 jälkeen-ajo (yllä) JU:n vuorolla → kuvapari PT:lle.
 
 ## Huomiot
 - Worktree tausta-v99 on haarassa kapea-reitti-218 (f4d65d024); sali-218 vain tallennetta varten.
