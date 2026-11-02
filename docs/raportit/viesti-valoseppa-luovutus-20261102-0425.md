@@ -41,3 +41,6 @@ alaraja voidaan poistaa. Rivi PT:lle.
 ## Worktreet (proto-3d)
 - wt/proto-linssiseppa2-seinat218: linssiseppa2/seinat-218 (tämä erä).
 - wt/proto-linssiseppa2-vahti216 (kamera06-217, rungossa) ja wt/proto-linssiseppa2-varjo216 → poistettavissa. wt/proto-linssiseppa2-k17 jää.
+
+## LISÄYS 04.3x (PT)
+- 9fa1eee3e (taivas) KUITATTU → NS:lle junaan 218; seuraaja tarkistaa ancestryn NS:n vastauksesta.
