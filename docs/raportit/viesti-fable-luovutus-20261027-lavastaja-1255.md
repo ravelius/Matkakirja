@@ -2911,3 +2911,15 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - HUOM (ei korjattu): muissakin leivotuissa voi olla tekseleitä 0,01–0,04 (esim. osamallit791 V4_marmorikaide p05 0,024) → sama sininen täyttö
   syvissä varjoissa. Ratkaisu on VS:n kynnys tai mallikohtainen alaraja → PT päättää.
 - SEURAAVAKSI: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 226 (2.11. 04.4x): PT KUITTASI JUNAN 218 ERÄN; BUGI 12 = LONGZONGMENIN PORTAAN NOUSUPINTA, KORJAUS VALMIINA, MIKA-AJO KÄYNNISSÄ — ALOITA TÄSTÄ
+- PT kuittasi kaiteeton-v5:n, osamallit791-v9:n ja tausta-v95:n junaan 218. Kynnys: PT antaa yleisen korjauksen VS:lle (puuttuva näyte erilleen
+  tummasta), EI mallikohtaisia alarajoja muualle.
+- BUGI 12 (PT: PK tarkisti, ei hyppyeste): kuva lokit/bugit-juoksu-217-20261102/11_1.10_*.jpg = yksi porras oviaukon edessä, päällinen kivetty,
+  nousupinta tasavärinen. Malli: kk-tausta-1-2-lod0 porras x −106,55…−105,4, z 168,5…173,5, y 0,2…0,45; päällinen V4_lattia (v89d), nousupinta
+  + päädyt V4_marmori (tasaväri, ei tekstuuria). LOD1/2:ssa porrasta ei ole. Korjaus muuriportti-218/nousu_kivi.py (6 kolmiota → V4_kivireunus,
+  UV0 × 4 ja u = pituus kuten reunakivissä; TEXCOORD_1 ennallaan), testattu: scratchpadissa, ei pakettia vielä.
+- MIKA-AJO (PT pyysi varmistuksen): bugit-217/aja5.zsh (sk-paikannus5.txt: 70 s, kuva b700 + 15 mika-pistettä) → mika5.txt; käynnistetty 04.3x,
+  odottaa konetta (toinen esikatselu ajossa). Jos mika osuu kk-tausta-1-2:een kohdassa: TEE paketti tausta-v96 = v95 + nousu_kivi.py lod0:aan
+  (kopioi tausta-v95.zsh pohjaksi; myös lähde tausta-v89-lahde, varmuus) → JU + NS (PK "kielletty-tausta-v96/") + PT. Jos ristiriita: rivi PT:lle.
+- Konteksti 25 % → luovutus tämän jälkeen.
