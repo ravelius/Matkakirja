@@ -2833,3 +2833,4 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   pinnat 79 % nollaa), f-taihemen, g-jalusta, kk-muurikate-v18-pohja. TEE: valo_tayta.py niille → kielletty-c2-v32 = kaiteeton-v4
   (_valmiit/…-kaiteeton-v4-vienti-<pvm>, LAHTEET + SHA256SUMS kuten v3) → tarkista b1570:n sauma (seinä y 1,60) korjaantuu → NS + PT.
   Tarkista myös tausta-v93 ja muurikate-v37 samasta viasta (agentti ei mitannut).
+- PT 2.11.: rakennukset-v93 kuitattu (raidat poissa). Kaiteeton-v4 (bugi 14) ESTÄÄ TF 217:N → seuraajan ensimmäinen työ.
