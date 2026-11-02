@@ -19,4 +19,5 @@ Edellinen: viesti-natiivi-ui-luovutus-20261102-1537.md (PR 6004) – lue sen B-k
    (proto-3d/tyokalut/; ajo taustalle). Sitten todistusajo.sh (wt/proto-natiivi-ui-saapuminen/tyokalut/todistusajo/) simu-lukko.sh kaarella,
    skenaario proto-3d/tyokalut/natiivi-ui-ajot/piirros-nostot-b.txt, jälkeen = uusi app, ennen = runko (app-jako/natiivi-ui-palautus-1437 käy).
    Parit: scratchpadin parit.py-malli (ennen | jälkeen). Kuvapari PT:lle → omistajalle, sitten VUORO VAPAA JU:lle.
+**B:n TILA 15.56 (PT:n nollaus):** käännös linja 2 käynnissä (JU:n vuoro 15.52, loki proto-3d/lokit/kaannospalvelu/20261102-155254-natiivi-ui-piirros-nostot-218-l2.log, xcodebuild-vaihe; app → app-jako/natiivi-ui-piirros-nostot-b), haara puhdas c94645ac3 (pushattu natiivi-backup); todistusajo ja pari tekemättä, VUORO VAPAA JU:lle lähettämättä → seuraaja: tarkista lokin viimeinen rivi, aja todistus (jälkeen c94645ac3, ennen palautus-1437 ca51acb76), pari PT:lle, VUORO VAPAA.
 3. PELIT-välilehden 4 Codex-minikuvaa (tilaus f670c1140): B:n edelle, kun tulevat.
