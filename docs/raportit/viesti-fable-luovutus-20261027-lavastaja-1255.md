@@ -3072,3 +3072,16 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   3) Uudelleenleivonta n-v2/leivo.zsh, kuvapari n-v2/kuvapari-vari.zsh (valokuva_v.py) → PT; sitten rakennukset-v96 (kopioi rakennukset-v95.zsh, v95 → v96).
 - Bugi 2: PK kysyi 09.4x; vastattu: t-portissa ei ristikkoa → PK:lta rendererien nimet/materiaalit kameran läheltä kohdassa 1.44,3–1.45,4.
 - JU 09.35: kielletty-rakennukset-v95/ viety (546, virheitä 0). Junaan vasta PK:n eunukkikorjauksen jälkeen (v95:n rakennukset.json pudottaa eunukit nollaan – PK:n korjaus, PT kuittaa). tausta-v99 junan 218 rungossa (NS d85660f03).
+
+## LISÄYS 238 (2.11. 12.4x): rakennukset-v96 VALMIS (P2-valovuoto + kultatiililattia), PARI PT:LLE; HALLIN VERKKO PK:N KANSSA — ALOITA TÄSTÄ
+- Työkansio sisatilat-214/n-v3/ (kokoa.zsh, leivo.zsh, kuvapari-vari.zsh, rakennukset-v96.zsh; tausta-lahde → n-v2). Työkalumuutokset (varmuus *.ennen-v96):
+  sisatila_yangxindian_kuori.py: wall-väliseinien (P1, P2) etupää a0 ≥ Y0 + 0,3; lattia V4_jinzhuan (1,2 m leivontaruudukko ennallaan) + V4_jinzhuan_sauma
+  1,2 cm 0,64 m välein 2 mm lattian yllä (ei lod2:ssa). kokoa_n.py TAYDET = g-taihedianin materiaalit (0,085/0,082/0,078 r 0,35; sauma 0,028 r 0,8),
+  ei sidontaa pelissä (LattiaLaji → 0 = mallin väri × leivottu valo, kuten Taihedian).
+- Pari n-v3/pari-vari.jpg (vasen v95, oikea v3: edusta, sisa, valtaistuin) + n-v3/edusta-oikea.jpg. Ristikon kaista x≈1092–1104 (1200 px): v95 huippu 20 / tausta 9–13
+  → v3 enintään 15 / tausta 13–14 = tasoittunut, heikko vaaleampi alue näkyy yhä (jos PT haluaa pois: ristikon UV1-saari erilleen, lisäys 237 kohta 1).
+- VIENTI VALMIS: _valmiit/juoksupeli-kk-lavastaja-rakennukset-v96-vienti-20261102, 546 tiedostoa, SHA256SUMS c1d7b067e3bf; vain n-*-lod0/1/2/tormays + rakennukset.json
+  (vain huom-teksti) muuttuivat. JU:lle VASTA PT:n kuittauksen jälkeen; junaan PK:n eunukkikorjauksen jälkeen (kuten v95).
+- Hallin verkkosolmut (PK:n JUMI 12.24, salitallenne): n:n S-N on pihan ainoa reitti, päät pihan sisällä (S z 244, N z 282,3 y 1,0), lähin solmu 438 18 m lännessä
+  → todennäköisesti yhteydetön saareke. Viesti PK:lle 12.3x: kun rasterin tila tiedossa, LAV tekee tarvittaessa liitosreitin (esim. "S-liitos" kuten siltojen L1/L2)
+  rakennukset.json:iin – PK antaa tavoitepisteen pohjan kehyksessä. Ei vastausta vielä.
