@@ -28,3 +28,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-1755.md on vain viite. Uudet lisäy
 2. 永和宫 (sitten 景阳宫): seuraava-sali/hallit.py + reittikartta.png; tee sisatilat-3c/ 3b:n mallilla (kopioi tyokalut/*_z.py, uusi kehys: OSM-pohja → seinat_z.py-analyysi, laatat, jännemäärä,
    keskipylväs?, ikkunat → ovet; reitti lähimmistä kujaliitoksista, reittiesteet_z.py). Pohjana tausta-v110 ja rk = z-v1/rk + z3 leivottu.
 - 21.0x 钟粹宫 KYTKETTY: PK 7127ca0c3 (797/797, umpikujia 0). JU:n vientikuittaus odottaa.
+- 21.2x 永和宫 y-v1 (sisatilat-3c/, LUE.md): länsiovi + pohjoisovi (etelässä etuosa), 3 huonetta, reitti W-N; pari-y1.jpg PT:lle, odottaa kuittausta → tausta-v111, rakennukset-v115, esto v36.
