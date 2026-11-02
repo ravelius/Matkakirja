@@ -2957,3 +2957,18 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
 - tausta-v98 SHA256SUMS 674d7b854977 (_valmiit/juoksupeli-kk-lavastaja-tausta-v98-vienti-20261102, leivonta-216/uusinta/tausta-v98.zsh); vain
   kk-tausta-1-2-lod0/1/2 muuttuivat. Kuva muuriportti-218/kuvat98/kansi-pari.jpg (LOD0/LOD2 v97 vs v98 ylhäältä, katto piilossa).
 - JONO jäljellä: 214 sisätilat, kun Codex toimittaa (postilaatikko 9fc5e0026) + PT kuittaa.
+
+## LISÄYS 231 (2.11. 07.0x): PK 218d -BUGIT 3, 8, 14 – 8 VALMIS (OSAMALLIT791-V10), 3 = PELIN LOD (PK), 14 KESKEN — LUOVUTUS (konteksti 30 %) — ALOITA TÄSTÄ
+- PT 06.1x: PK:n bugit-218d (proto-3d/_tyo/pelikoodari/korjaus-218/bugit-218d/RAPORTTI.md) 3 → 8 → 14. Työkansio proto-3d/_tyo/linnanrakentaja/bugit-218.
+- Mika-ajo 1 (aja1.zsh, sk-paikannus1.txt, haara pelikoodari/tallenne-218d, loki esikatselu-20261102-062907, mika1.txt):
+  3) osuu "a-meridiaaniportti lod1 runko+palkit" (holvin laki y 5,40, seinä x ≈ 10,9 pohjassa) → peli näyttää alkulennossa LOD1:n, jossa
+     ei leivottua valoa (rakennukset-v93 lod1/lod2: UV1 EI). Syy: Palatsi.cs:1146 "LOD Puyin etäisyyden mukaan" – alkulennossa kamera on
+     holvissa kaukana Puyista. → PELIN korjaus (PK): alkulennon aikana LOD kameran (tai min(kamera, Puyi)) etäisyydestä. Ei mallikorjausta.
+  8) osuu osamalli "791-aukion-reunasiipi porras-terassi.glb" (leivottu valo latautuu: 1024², loki ok). Syy: tasavärinen V4_marmori,
+     askelmat 0,76 / nousut 0,71 → luiska. Korjaus bugit-218/nousut_tummaksi.py: nousupintojen valo × 0,55 (askelmat ennallaan) myös
+     porras-suora. osamallit791-v10 SHA256SUMS e427a1278d53 (_valmiit/juoksupeli-osamallit791-v10-vienti-20261102, bugit-218/osamallit791-v10.zsh);
+     PK OsamallitKansio "osamallit791-v10/". Kuva bugit-218/porras-ennen-jalkeen.jpg (valokuva_m.py, pelin kynnys).
+  14) EI paikannettu: ajon b1550 kohdalla botti oli jo kuollut (RIKOTUT ESINEET -ruutu) → rata poikkesi 218d:stä. SEURAAVAKSI: uusi ajo,
+     jossa "ui juoksupeli elinvoima 100" ennen jokaista odota-peli-askelta (kuten bugit-217/sk-paikannus6.txt) ja mika 2.35:n kuvan
+     (bugit-218d/14-15.jpg) muurin ja sokkelin saumaan (≈ 0,25 0,29 / 0,70 0,29 / 0,45 0,30). Aiempi 14-korjaus = valo_tayta (lisäys 219);
+     jäänne todennäköisesti UV1-saaren reunan suodatusvuoto (leivottu kaista saumassa) → dilaatio tai sokkelin yläreunan tekselit.
