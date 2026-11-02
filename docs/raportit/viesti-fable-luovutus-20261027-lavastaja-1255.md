@@ -3022,3 +3022,24 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   oviaukossa kamera ei saa leikata, katto häivytetään Raamatun 2.177:n tapaan). Kuva n-v1/reitti-pohja.png. 214 v1 EI junaan vielä:
   ulkopylväiden ja julkisivun muutos tarkistetaan omistajan 30.10. hyväksymää havainnekuvaa/julkisivua vasten; jos poikkeaa, ULKOKUORI
   PYSYY ENTISENÄ (sisätila sen sisään). Seuraavaksi: sisäpinnat Codexin pinnoilla (shakkiruutu = paikkamerkki), leivonta, PK:n leveystarkistus.
+
+## LISÄYS 235 (2.11. 09.2x): 214 YANGXINDIAN v2 – VANHA KUORI, SALI SISÄÄN, TAUSTAN HALLI POIS, LEIVOTTU — LUOVUTUS (konteksti 27 %) — ALOITA TÄSTÄ
+- PT 09.0x: kuori havainnetta vasten. Yangxindianille EI ole omistajan julkisivupiirrosta (30.10.: portti 06, sivuhallit, Taihemen, Taihedian);
+  v1 muutti ulkoasun (pylväät pois, seinät 36 × 15,6, ikkunat, friisi) → KUORI PYSYY v94:n mukaisena. Vanha kuori (pohjan kehys): sivuseinät
+  sisäpinta x 1,45 / 34,55, etu- ja takaseinä y 5,02–5,42 / 14,15–14,55, molemmissa 6,5 m keskiaukko x 14,75–21,25, kuisti avoin, ei sisäpylväitä.
+- sisatilat-214/tyokalut/sisatila_yangxindian_kuori.py (+ kokoa_n.py KUORI=1): Codexin sali x 0,75..35,25 / y 3,6..15,35 → kuoren sisäpinnat
+  (x × 0,959, y × 0,743), kalusteet todellisessa koossa; valtaistuinryhmä ja takakaapit takaseinään ankkuroituina (sermin takana 1,74 m kuten Codex),
+  itäkamarin ja länsipöydän ryhmät jäykkinä. Kuistia, ulkoseiniä, ikkunoita ja N1–N6:ta ei rakenneta. Nimilaatta sermin yläreunaan (pohjoisseinä = aukko).
+  PINNAT: väliseinät ja pylväät V4_red (peli: Codexin rappaus), lattia = vanha V4_lattia (Codexin kivilaatta), shakkiruutu ja S_* pois.
+- Tulos sisatilat-214/n-v2/ (kokoa.zsh): lod0/1/2/tormays (vanhat törmäyslaatikot + 58 uutta), rakennukset.json (reitti_n2.py: etuaukko →
+  valtaistuimen länsipuolelta, kapein pylväs–maljakko 2,07 m → sermin takaa 1,74 m → taka-aukko 6,5 m; leveys-kenttä 3,0 → PK tarkistaa).
+- LÖYDÖS + KORJAUS: kk-tausta-1-3 (myös pelin tausta-v98, lod0/1/2) sisältää OMAN matalan hallin n:n kohdalla (seinät ≤ 3,96, katto 1,9–3,6,
+  n:n lattia 1,55) → täyttää salin rinnan korkeudelta ja varjosti lattian mustaksi (myös v94:ssä). tyokalut/tausta_pois_n.py poistaa kolmiot,
+  joiden keskipiste on n:n jalustalla (u −17,8…18,2, w 4,0…22,2) ja y > 1,0 (lod0 886, lod1 136, lod2 28). Valmiit: n-v2/tausta-koe/ (v98 → v99-ehdokas);
+  tarkistus n-v2/yhdessa-jalkeen/yhdessa-ylhaalta.png (ulkopuolelta ei poistunut mitään).
+- LEIVONTA n-v2/leivo.zsh (aja_uusinta rak-rivi, TS = n-v2/tausta-lahde = tausta-v81-lahde + 1-3 korjattu, SISA_KATOTON maski sisa-maski.json:
+  kuoren sisäalue, "aurinko": false = uusi valinta sisa_katoton.py:ssä: toinen leivonta vain taivasvalolla, ei vinoja aurinkoläikkiä).
+  Tulos n-v2/leivottu/…-lod0.glb: lattia mediaani 0,18 (ennen 0), seinät 0,23. Kuvapari n-v2/pari-valo.jpg (valokuva_m.py, pelin kynnys), pari-ulko.jpg.
+- AUKI: 1) PT:n kuittaus v2:lle + PK:n leveystarkistus; 2) paketit: rakennukset-v95 (v94 + n-v2 lod0 leivottu + lod1/2/tormays + rakennukset.json)
+  ja tausta-v99 (v98 + n-v2/tausta-koe 1-3 lod0/1/2) → JU, SHA NS:lle; 3) pieni: mustia kaistoja lattian ja väliseinien saumassa (maskin reuna?),
+  lod1/2 leipomatta (vanha v94-käytäntö: vain lod0); 4) 储秀宫 (vaihe 1b); bugi 2 odottaa PK:ta.
