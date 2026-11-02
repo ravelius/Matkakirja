@@ -3172,3 +3172,14 @@ Työkansio proto-3d/_tyo/linnanrakentaja/bugit-217 (LUE.md = koko kirjanpito, aj
   Huom. sisäpuolella taustan seinätasot ovat myös sisäpinta (valtaistuin-kuvassa ennen: punainen seinä + tummat läikät) → leivonnan maski kattaa ne (runko-solmu).
 - tausta-v101 (29abaa4c7a51) on oikein (halli pois taustasta) → odottaa c-v2:ta, viedään yhdessä.
 - Bugi 2 (lisäys 243): A4-kannatinrivit pois reitin yltä – tekemättä.
+
+## LISÄYS 245 (2.11. 13.3x): BUGI 2 VIETY (lahipuut-v13); 储秀宫 c-v2 VALMIS → rakennukset-v99 uusittu, PARI PT:LLE — ALOITA TÄSTÄ
+- Bugi 2: peli käyttää PK:n lahipuut-v12:ta. Unity → pohja (PK:n paikat sovitettu): x = xU − 0,25, z = −(zU + 384,81). Kannatinrivit = rakennus x 66…89,
+  z −17,6…−1,9, vyö y 9,59 (etu- z ≈ −2,3 ja takarivi z ≈ −17,2; kamera kulki alitse ~3 m). K/tyokalut/bugi2_lahipuut_v13.py + aja_bugi2_v13.zsh →
+  _valmiit/juoksupeli-kk-lavastaja-lahipuut-v13-vienti-20261102 (52 kannatinta pois; SHA256SUMS 405e590ffaf3, ilman LAHTEET.md-riviä JU:n pyynnöstä).
+  JU VIENYT 13.28, PK:lle ilmoitettu (LahipuutKansio "kielletty-lahipuut-v13/"). Peilikuva rakennus x −91…−68 jätettiin (ei raportoitu reitillä).
+- 储秀宫 c-v2: sisatilat-1b/tyokalut/kuori_c.py v2 (vanha kuori_c_v1.py): ei peilauksia; oviaukko u 13,14…15,20 y 1,2…4,0 leikattu seinätasoihin
+  w 1,15 (etelä) ja w 11,87 (pohjoinen; seinat_c.py listaa tasot), pielet + kamana 0,36 m sisäänpäin, kynnys V4_kujakivi_sokkeli_yla. Törmäys tavulleen c-v1.
+  c-v2/: kokoa.zsh → valmistele.zsh → leivo.zsh (13.26–13.29) → kuvapari.zsh → pari-c2.jpg (edusta ok: tasainen punainen + aukko; pieniä tummia
+  pystyviiruja seinässä aukon vasemmalla, ei estä). rakennukset-v99 uusittu (c-v2/rakennukset-v99.zsh): SHA256SUMS 1b8a9c365231; vanha fb659a865bc0 poistettu.
+- ODOTTAA PT:N KUITTAUSTA → JU: rakennukset-v99 + tausta-v101 (29abaa4c7a51) yhdessä; PK:lle reitti + materiaalit (lisäys 242 kohta 3); sitten esto-v26.
