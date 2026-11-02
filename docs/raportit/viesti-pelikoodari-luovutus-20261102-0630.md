@@ -24,6 +24,24 @@ rivinä PT:lle (→ LAV). Pysyvä kuittaus: bugilistan korjaukset junaan 218, ku
 - Videoaika ↔ lokit: video 0 = tallenteen peliaika 212,76 s; avauksen kello ≈ video + 2,8 s (Tahti); ohjauksen jälkeen
   kameraväli-rivin t = s.Aika ≈ video − 25,1 s.
 
+## ETUSIJALLA (ennen kohtia 2 ja 3): EUNUKIT (OMISTAJAN PÄÄTÖS 2.11. 07.12 PT:n kautta, pysyvä kuittaus, tallenne PT:lle → SHA NS:lle)
+Määrittely (omistaja 07.09, sanatarkasti): "Eunukit juoksevat aina kohti, ne eivät ole koskaan pysähdyksissä ja niitä on yleensä vain
+yksi tai ei yhtään näkyvillä". KK:n "osa odottaa / muutama näkyvissä" PERUTTU. Paikannus (ali-agentti 07.2x, runko aa44b92a8, rivit
+JuoksuV4Maailma.cs = M, Peli/Juoksupeli/JuoksuV4.cs = V):
+- Seisojat = ennakon odottajahahmot: M:2748–2757 luo "Vartija odottaa" -hahmon jokaiselle ennakon paikalle (ennakko koko palatsi,
+  V:271), idle M:2904, näkyvät 70 m:iin (M:2786, solun keskipisteestä ~85 m). Laukaisu vain 13–19 m → seisovat näkyvissä.
+  VainPeili-odottajat (V:345) seisovat sivukujissa koko pelin myötäsuuntaan juostessa.
+- Edestä tuleva: lähtö V:2285 kun kontaktiin < 2,3 s (~12–13 m), ennen sitä näkyvissä Odottaa-tilassa (M:3887); Tulossa-tilassa
+  liikkuu vain sivuttain väylälleen 4 m/s (M:3929), Varoitus = kiinniottoasento paikallaan (JuoksuLiikkeet.cs:65).
+- "Ei nähty" -vartijat merkitään ohitetuiksi ennen kontaktia (V:2260), kompastuvat ja seisovat (M:3937–3941) kunnes jahti (M:3911).
+- Ei vähimmäisväliä eunukkien välillä. Kurkistaja (M:2471–2581) ja takaa-ajaja (M:276) käsikirjoitettuja → ennallaan.
+EHDOTUS (toteuta, tallenne): 1) odottajat piiloon: M:2786 VartijaRaja 70 → 0 (QA `ui juoksupeli kauko vartija 0` kokeiluun);
+2) reitin vartija näkyviin vasta liikkeellä: M:3887 SetActive(lahella && !(r.Loputon && (Tila == Odottaa || Tila == Ohitettu && s.S <
+KontaktiZ))); 3) edestä tuleva juoksee kohti: M:3927–3929 Tulossa/Varoitus sijainti VartijanPiste(r, KontaktiZ + ~3 m/s × aikaKontaktiin,
+vayla), Varoitus-animaatio run + catch; 4) laukaisu ennen näkyvyyttä: V:2285 +1,2 → +2,5 s, V:1732 SivuLahtoS 2,5 → 3,5; nähty-sääntö
+(V:2229, V:2255) pois tai NakyvyysS 0; 5) vähimmäisväli: V:2270/2285 Odottaa → Tulossa vain, jos kukaan muu ei ole Tulossa/Varoitus/
+Hyppy/jahtaa edellä (muuten ohitettu + piiloon). Testit (sh kaanna.sh Juoksu) ja tallenne 218-skenaariolla (taso 1 oletus!) JU:n vuorolla.
+
 ## Seuraava (PK:n oma)
 - **Kohta 2 toistuu satunnaisesti**: botin siemen vaihtuu ajoittain (218d 1097281515, 218e 1098785422). 218e 1.44,6–1.45,2 kamera
   ristikko-ovessa, Puyi pois 0,5 s. Molemmissa ajoissa "kamera rakennusmassassa" portilla x 81,5, z −516…−499 (Puyi katon alla,
