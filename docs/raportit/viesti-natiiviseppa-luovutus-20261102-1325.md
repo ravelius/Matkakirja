@@ -8,7 +8,9 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä ajoja eikä mergej
    "Kun piirros peittää näkymän, striimikarttaa ei piirretä eikä ladata sen alle, ja piirroksen ulkopuolinen tausta on
    mahdollisimman yksinkertainen. Valmis = 20 ms:n ruutuvahti läpi pienellä iPadilla. Koordinoi NUI:n kanssa (PiirrosKerros).
    Mittaus ennen/jälkeen PT:lle." NUI:lle lähti 13.1x ilmoitus (haara natiiviseppa/piirros-striimi-218, älä muokkaa
-   PiirrosKerros.cs:ää ennen ilmoitusta) – katso NUI:n vastaus ennen aloitusta. Analyysi ja suunnitelma alla (ANALYYSI).
+   PiirrosKerros.cs:ää ennen ilmoitusta). NUI VASTASI 13.3x: rakenna haaran natiivi-ui/piirros-tahdet-218 kärjen 38b32b860 päälle
+   (rungon 52ba93dea päällä: leikkeet info/kioski e100c991e, Tahdet.cs bab2834c5, TasoVersio haamu3 a24a6acd8; EI vielä PT:n
+   kuittaamaa junaan). NUI tekee siltaleikkeet + jonon veneiden päälle vasta NS:n ilmoituksen jälkeen NS:n haaran päälle. Analyysi ja suunnitelma alla (ANALYYSI).
 2. **Juna 218 jatkuu** (ei TF-tilausta). Lukitus kuten 217: tagi `natiiviseppa/runko-218-tf`, peili, TF-tilaus JU:lle "kaikille",
    rivi PT:lle kun testaajilla. Lukitus ja TF vain "OMISTAJA PYYSI JULKAISUA".
 3. **Odottavat junaan 218:** LAV rakennukset-v95 (JU vie omaan kansioon, EI runkoon ennen PK:n eunukkikorjausta + PT:n kuittausta:
