@@ -32,3 +32,4 @@ Edellinen viesti-lavastaja-luovutus-20261102-1755.md on vain viite. Uudet lisäy
 - 21.15 JU: 钟粹宫 z3 viety (v114 586, v110 100, v35 1; virheitä 0) → kohta 1 valmis.
 - 21.2x PT: 永和宫 rakenne kuitattu; sokkelikorjaus (itä/koillissokkeli taustaan, 1 m kaistat, kynnys sokkelin pintaan) leivonnassa → lähikuva PT:lle → v111/v115/v36 → JU + PK.
 - 21.2x OMISTAJAN PÄÄTÖS 21.17 (PT): pronssit tilattu Codexilta postilaatikkoon 9b79182b4 (posti/lavastaja-codex-palatsin-pronssit-tilaus-20261102.md); sijoitus 永和宫:n ja 景阳宫:n jälkeen, vesiastioiden paikat PK:lle.
+- 21.3x PT kuittasi sokkelin; JATKO (ei estä): sokkelin juuressa musta viiva/rako maahan (pohjois- ja länsiovi) → tarkista 景阳宫:n kanssa.
