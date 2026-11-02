@@ -196,6 +196,23 @@ def tyolistavanhat(d, sessio):
             f"{TYOLISTA_KOMENTO} tilanne \"OTSIKKO\" \"teksti\" [--juna N] tai valmis.")
 
 
+def odottavat_aamulla(d, sessio):
+    """Odottaa-rivit kerran päivässä aamulla (omistaja 2.11.2026 klo 11.59): ensimmäisellä tapahtumalla klo 6–12."""
+    nyt = time.localtime()
+    if not 6 <= nyt.tm_hour < 12:
+        return None
+    polku = os.path.join(DATA, "tyolista.json")
+    if not os.path.exists(polku):
+        return None
+    with open(polku, encoding="utf-8") as f:
+        tl = json.load(f)
+    odottavat = [r for r in tl.get("rivit") or [] if isinstance(r, dict) and str(r.get("tila", "")) == "pidossa"]
+    if not odottavat or not saa_muistuttaa("odottavat-" + time.strftime("%Y%m%d", nyt), sessio, vali=86400):
+        return None
+    return (f"TYÖLISTA (hook, kerran päivässä aamulla): käy {len(odottavat)} Odottaa-riviä läpi: valmiit valmiiksi, "
+            f"korvautuneet pois, jatkuvat Työn alle, muille tämän päivän tilanne ({TYOLISTA_KOMENTO} tilanne|valmis).")
+
+
 def main():
     try:
         d = json.load(sys.stdin)
@@ -204,7 +221,7 @@ def main():
     tapahtuma = d.get("hook_event_name") or "PostToolUse"
     sessio = str(d.get("session_id") or "")
     tekstit = []
-    for osa in (kontekstivahti, junarivivahti, tyolistavanhat, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
+    for osa in (kontekstivahti, junarivivahti, tyolistavanhat, odottavat_aamulla, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
         try:
             t = osa(d, sessio)
         except Exception:  # noqa: BLE001 — yksi osa ei saa kaataa toista

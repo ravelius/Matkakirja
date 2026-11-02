@@ -138,3 +138,11 @@ test('--juna: tuntematon juna hylätään, ja koko historia säilyy', () => {
   for (const t of ['a', 'b', 'c', 'd', 'e']) assert.equal(aja(k, 'tilanne', 'automaattisesti', t).status, 0);
   assert.equal(lue(k).rivit[0].tilanne.split('\n\nAiempi: ').length, 6);
 });
+
+test('koukku: Odottaa-rivit muistutetaan kerran päivässä aamulla (klo 6–12)', () => {
+  const k = uusi([{ otsikko: 'Odottava', edistys: 0, tila: 'pidossa', ts: Date.now() }]);
+  const t = koukku(k, '<cross-session-message>x</cross-session-message>', 'PostToolUse');
+  const h = new Date().getHours();
+  if (h >= 6 && h < 12) assert.match(t, /kerran päivässä aamulla[\s\S]*1 Odottaa-riviä/);
+  else assert.doesNotMatch(t, /kerran päivässä/);
+});
