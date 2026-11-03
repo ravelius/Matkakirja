@@ -25,9 +25,19 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä.
   Paattyi" (simussa ei tullut 120 s:ssa → jatkaa silti, VIKA-rivi; video kelpasi). VAIN_VIDEO=1 = ilman lepokuvia.
 - Komento: `VAIN_VIDEO=1 zsh proto-3d/tyokalut/simu-lukko.sh kaari natiiviseppa yhteinen-iPad13 -- zsh .../juna218/valitaso-video218.sh <kansio> proto-3d/lokit/natiiviseppa-app-218-sim-f1264eea9/Matkakirja3D.app` (vuoro JU:lta, ~5 min).
 
+## LISÄYS 07.25: OMISTAJAN PÄÄTÖS 07.22 (KK → PT) = ETUSIJA 1, KORVAA ZOOMIKOKEEN (Z10-pysähdys + ristihäivytys EI)
+- Omistaja: "Lataa jo siirtymän aikana ja silloin pelkkä sisään zoomattu kartta. Siinä ei voi kestää 30sek".
+- PT:n toteutusohje: esilataus alkaa SIIRRON ALUSTA, vain kohdekaupungin LOPULLINEN LÄHINÄKYMÄ (yksi taso; ei välitasoja eikä koko
+  1482 palan piirtoa); zoomaus välitasojen läpi peruskartalla ja päättyy valmiiseen lähinäkymään. Tavoite: tavallisella matkalla ei
+  odotusta eikä sumeaa loppukuvaa. Pohjana natiiviseppa/esilataus-218 2cf83b7c3 (työpuu wt/proto-natiiviseppa-esilataus); tämä ratkaisee
+  jonon Osa C:n (omistajan valinta tehty).
+- Mittaa kylmä Lontoo uudelleen → video KK:lle (tunnettua vikaa EI leikata, aikaleima viestiin) + rivi PT:lle. Junaan PT:n kuittauksella.
+- Muistivika: juna 218 riittää (TF 217:ää ei korjata erikseen).
+- Perussarjan 404 (alla) vaikuttaa beigeihin ruutuihin → mittaa JU:n palautuskuittauksen jälkeen.
+
 ## LISÄYS 07.15: PT:N UUSI ERÄ (ETUSIJA 1) + PERUSSARJAN 404
 - **KS:n arvio videosta:** sumeus johtuu kamerasta (1,5–8 s ruudulla 2–5 km → Z10 ~30× suurennettu), ei aineistosta; Z11–Z12-välitasoa EI.
-- **PT 07.1x:** kokeile KS:n ehdotusta: saapumiszoomi pysähtyy Z10:n 1:1-korkeuteen (~100–150 km ruudulla) + ristihäivytys
+- ~~PT 07.1x: kokeile KS:n ehdotusta~~ KORVATTU 07.25 (yllä):: saapumiszoomi pysähtyy Z10:n 1:1-korkeuteen (~100–150 km ruudulla) + ristihäivytys
   piirroskaupunkiin/elävään karttaan. Video nykyinen | uusi samasta kohdasta PT:lle JU:n vuorolla, VASTA perussarjan palautuksen jälkeen
   (beiget ruudut arvioidaan samalla). EI junaan ennen PT:n kuittausta. Uusi haara natiiviseppa/<aihe>-218 rungosta f1264eea9.
 - **Perussarja 2026-09-30-pohja-20261015 = 404 CDN:ssä** (laatat.json + laatat, NS tarkisti 07.14). Sekä uusi 2026-11-03-pohja-valitaso
@@ -36,7 +46,7 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä.
 
 ## JONO
 1. **KS:n arvio videosta** → tarvittaessa uusi sarja = uusi SileaUrl-kierros (kuten 747e44081).
-2. **Osa C (esilataus) ODOTTAA OMISTAJAN VALINTAA** (ennallaan; KK suosittaa (b) + taustaesilataus). Haara natiiviseppa/esilataus-218 2cf83b7c3.
+2. **Osa C (esilataus): omistaja valitsi 07.22, ks. LISÄYS 07.25.** Haara natiiviseppa/esilataus-218 2cf83b7c3.
 3. **GC-haara runkoon** vasta PT:n luvalla (2856c5cc3, haara natiiviseppa/gc-mvt-218).
 4. **Merget** (VS/NUI/KS) PT:n kuittausten mukaan (ehdokas-työpuussa `git merge --no-ff` + testit210-rinn.sh + peili).
    zsh-ansa: `$C:refs/...` → kirjoita `${C}:...`.
