@@ -1,0 +1,3 @@
+Counter({'PUUTE': 1, 'OK': 1})
+(73, 38, 'Musée Marmottan Monet', 'PUUTE piste')
+(0, 78, 'Pont Mirabeau', 'OK ala')

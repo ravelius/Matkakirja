@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-03T08:17:28.746044+00:00",
+  "tile": 8,
+  "imageSize": [
+    1536,
+    1024
+  ],
+  "lockedPixelDifferences": 0,
+  "lockedPixelCount": 436644,
+  "nativeSHA256": "f7c27f463012d5c3d139ab7f7737d327b37302b07fcb342a7b77f9b5c898c8dc",
+  "guideSHA256": "e985c69c16b572f943d9c7060b8c9b3124923fd629cbb144049258d7443525a0",
+  "maskSHA256": "ac764bf5eee8e4043d7e6afc218290de1f1461e1e2e619b583e758a2f0292e4d",
+  "finalSHA256": "5d65e87b9fdd6744fb53d69b63cb08c1a74baac19c3764b50c288f6608080c6d",
+  "technicalComposition": "lossless original artwork restored at locked pixels; no geometric warping"
+}
