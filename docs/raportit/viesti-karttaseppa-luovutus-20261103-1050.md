@@ -23,7 +23,11 @@ postilaatikon worktree `/Users/Shared/Claude/wt/karttaseppa-postilaatikko`. Venv
    välimuisti `E/ov-valimuisti`. Haara `karttaseppa/esittelypaikat-muut` (checkout), ajo kirjoittaa `data/esittelypaikat.json`.
 
 ## AVOIN (järjestyksessä)
-1. **Pariisin koonnin PT-palaute v2:sta.** Jäljellä: keskisarakkeen sävyraja x ≈ 2612 (pala05/09 punertavampi kuin lukittu
+1. **Pariisin koonti v3 ENNEN tasoja (PT 10.5x: v2 selvästi parempi, raidat pois ja kulma ok; EI vielä tasoihin).**
+   Tavoite: yleiskuvassa ei erotu palarajoja. (1) Länsisarakkeen punerrus (kulman alapuolinen pala04 ja Bois de
+   Boulognen itäpuoli, pala04/08) → palakohtainen värinsiirto naapurin mukaan; (2) keskisarakkeen raja x ≈ 2612.
+   Uusi yleiskuva PT:lle, vasta kuittauksen jälkeen tasot.
+   Aiempi tila v2:sta: Jäljellä: keskisarakkeen sävyraja x ≈ 2612 (pala05/09 punertavampi kuin lukittu
    pala06-kaista) ja länsireunan (04/08) punerrus lievenivät, eivät poistuneet; rivillä 870 ohut viiva vielä 1:1:ssä.
    Seuraava keino: palakohtainen sävysovitus ennen koontia (lukon puolen μ/σ → generoitu puoli, D ≈ 400) tai
    Lab-kylläisyyden sovitus. Sitten **tasot** (laaja 12 / väli 6 / kaupunki 2,5 m/px, ruudukko.json `tasot`, uusi
