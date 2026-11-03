@@ -30,6 +30,8 @@ Haara **linssiseppa2/pariisi-tyyli** (natiivi-backup), wt `/Users/Shared/Claude/
   atsimuutti, seinän sävyt valo/varjo) → tee ElavaVinotalot.Kulma, VarjoX/Y ja ElavaTyyli.SeinanVarit parametreiksi siitä. KS ilmoittaa arkista.
 - Kun KS:n kulmaohje + korttelipinnat + julkisivunauhat tulevat: VERSIOT (`codex-pinnat.py`), julkisivu pinnaksi seinäsävyjen tilalle
   (näytteistys seinän pituuden ja korkeuden mukaan), Kulma kulmaohjeen mukaan, TyyliVersio yv2, korttelikohtainen satunnaissiirto (riski 1).
+- NS osa C (raivaus) 20.0x: haara natiiviseppa/raivaus-218, VS pyysi pohjaksi 8e0660847 (koukku ennen ElavaVinotalot.Talo-kutsua,
+  raivattu ulkorengas reikineen pois; ElavaPariisi p5 → p6). YHDISTÄ, kun NS:n SHA tulee, ja aja Kartta-testit.
 - Avoimet: seinän korkeus kapeilla kaduilla (riski 2), muste on segmenteittäin (suorituskyky; mittaa iPadilla osa D:ssä), käännetty kartta (kohta 5).
 - Osa D: pari Codexin koko kartta | uusi koealue samasta rajauksesta kolmella zoomilla (omistajan 15.40-kuvien zoomit) → PT;
   iso iPad: vierityksen ruutuajat ja muisti ennen ja jälkeen.
