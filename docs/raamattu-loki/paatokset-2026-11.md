@@ -193,3 +193,7 @@ Omistaja: "Lataa jo siirtymän aikana ja silloin pelkkä sisään zoomattu kartt
 ## VIIMEISEN KEISARIN NOSTO PEKINGIIN (3.11.2026 klo 13.35)
 
 Omistaja 3.11.2026 klo 13.30 (KK:n kautta, sanatarkasti): "tee nosto pekingiin viimeisestä keisarista jossa usampi oikea kuva sekä myös havainnekuvia keisarista ja paikoista jossa hän asui. mielenkiintoinen historia hänelle. saa olle pidempi teksti. pelissä voisi olla myös linkki tähän nostoon valikossa ja lopetusruudussa." PT: poikkeus Vain Eurooppa- ja Peking-taukoon vain tämän noston osalta; Raamattu 2.200.
+
+## LAATTA- JA TEKSTUURIMUUTOKSET TARKISTETAAN OIKEALLA IPADILLA (3.11.2026 klo 15.14)
+
+Omistajan havainto 3.11.2026 klo 15.14 (KK:n kautta): "nyt isolla ipadilla näkyy simussa uusi kartta mutta se on sekaisin ja väärinpäin". Syy NS 252c190dc (ASTC-pakkaus vain laitteella, #if UNITY_IOS), simu ei näyttänyt vikaa. PT: laattojen, tekstuurien ja laitekohtaisen koodin (#if UNITY_IOS) muutos todistetaan iPad-kuvakaappauksella ennen yhdistelmää; simu ei riitä.
