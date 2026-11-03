@@ -7,6 +7,14 @@ EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajo
 ## YÖTYÖ (PT, omistaja 22.31 "Koita saada Pariisin kartta tehtyä kokonaan")
 Sijoita KK:n hyväksymät peliin sitä mukaa kuin KS/PT ilmoittaa. Pelikuvat JU:lta → PT → KK.
 
+## LISÄYS 23.50: ENSIN TÄMÄ (korvaa alla olevat kärjet ja järjestyksen)
+1. **Odota JU:n viestiä "Kartta-testit nyt"** (PT: väli, ei rinnalla; JU ajaa kartta-testit-portti.zsh:n L2:lla 95a:n jälkeen). Aja heti `sh Kartta-testit/kaanna.sh` kärjissä **a826acb03 ja 95a733ace** (worktree wt/proto-natiiviseppa-maskik4, nyt nahtavyydet-218). KUITTAA JU:lle heti, kun ajettu: JU jatkaa kuittauksella (muuten 5 min). Tulos PT:lle ja JU:lle.
+2. **Vasta tuloksen jälkeen yksi yhdistelmä-sha** (PT): koko-koe-218 (628d1a90a) + nahtavyydet-218 (a826acb03) + nimet natiivi-backup/karttaseppa/pariisi-nimet-220 4e929f038 (KS: NahtavyysRuudut korvasi kutsuni, 95a:n päällä). pariisi.json-riita: aja tee-esineet kaupunki-pariisi-koko.json, Animaatiot/pariisi.json ottaa a826acb03:n. Anna JU:lle: iso iPad, sk /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aluekuva-koko/sk-yhdistelma.txt (a94:n komennot + sillat + laajin zoom; riemukaari-kuvassa merkintä pilareista). Kerro JU:lle, että se korvaa 628d1a90a:n iPad-kierroksella.
+3. **Korjauslista** lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md (KK 23.42), NS:n kohdat: 1 ja 2 e4511ef87 (Riemukaari siirretty 2,3/32,6 z17 px, raivaus_lisa ympyrä 100 m; GP: raivaus_lisa ympyrät + eteläkaista), 5 a826acb03 (veneet-kapeat.py, alle 85 m uomissa sillat-väleihin). 3 S-C: KS:llä (pohjan tyhjä maa; päätelty koodista: RaivattuTalo on ainoa maskin käyttäjä; odottaa KS:n tasoa). 4 ND: katso 95a733ace:n kuvista. 10 nimet KS. 6–9 VS.
+4. **Riemukaari (PT):** kuva 336 m > ympyrä n. 240 m, pilarit jäävät ulos. EI uutta säätöä ennen kuvaa; PT näyttää KK:lle.
+5. c/d-kuvat, ND v4, Sainte-Chapelle ämpärissä (JU 23.39–23.44). 95a733ace iso iPad: muistiluku ja ruutuaika PT:lle (86 783 puuta EI saa nostaa muistia yli rajan; harvenna, jos nostaa).
+6. pid 66955 (Unity, /Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity67, 23.49): tämä sessio ei käynnistänyt; kerrottu PT:lle, selvitä tarvittaessa.
+
 ## LISÄYS 23.45 (korvaa alla olevat kärjet ja kohdan "90°/30° arkin tullessa": tehty)
 Kärjet: nahtavyydet-218 474d0b0de, koko-koe-218 628d1a90a (data 95a733ace:n päälle): 3 c, 8 d (11. = Beauvoir). JU: ajaa 628d1a90a, jos 95a733ace ei ehtinyt alkaa; iso iPad -ajo 95a733ace käynnissä, muistiluku PT:lle. Ämpäriin c/d pyydetty. Kartta-testit: JU:lta pyydetty "VAPAA"-vuoro; PT: ennen kuin mitään yhdistetään.
 
