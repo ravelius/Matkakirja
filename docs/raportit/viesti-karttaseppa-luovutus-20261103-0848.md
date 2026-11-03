@@ -38,3 +38,8 @@ Huom: Codex lähettää koostepostia samoista otoista (esim. 8fc7779cb, 907a93e1
    Tanska-pari PT:lle).
 3. Vanha 27.10. poltto: T7-arkistointi (N/arkistoi-vanha.zsh) vasta, jos levy < 50 Gi.
 4. Vanhat: NUI:n vastaus maamerkkien alojen muotoon; muut Pariisin osat vasta KK:n suunnitelman jälkeen.
+
+## LISÄYS klo 09.05 (luovutuksen jälkeen tehty)
+- pala15 v2 HYVÄKSYTTY (b864749f8) ja pala02 v2 HYVÄKSYTTY (6b66b566f) → `hyvaksytyt.json` = [2, 3, 5, 6, 7, 10, 11, 15].
+- pala09 v4 (7419e3ee9) palautettu 0fab21bac: raja y = 154 yhä näkyvä (mittari 2,16); Codexille ehdotettu inpaint-rajavyöhyke.
+- Jono (PT kuittasi): 09 v5 + 01 rinnakkain → 14/13/04 (koskettavat 09:ää) → 08 → 12 (4983f57f4).
