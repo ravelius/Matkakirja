@@ -35,3 +35,10 @@ kytkennän ensimmäisen erän jälkeen. Proto-haarat paikallisia (repo /Users/Sh
 3. Edellisen luovutuksen kohdat 1–7 ja lisäys 18.5x ennallaan (keisarin nosto: YKSI rivi KK:lle, kun JU:n iso-ajo a92302399+ näyttää
    noston iPadilla).
 4. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/Matkakirja-pelikoodari (mainin päällä; tämä tiedosto sen kärjessä).
+
+## Lisäys 19.1x
+- **PELIN NIMI (OMISTAJAN PÄÄTÖS 19.02, PT)** "Viimeisen keisarin karkumatka": proto **pelikoodari/karkumatka-nimi-218 3c02f62fe**
+  (NUI fd8fd6a76:n päällä; wt /Users/Shared/Claude/wt/proto-pelikoodari-karkumatka): loppukortin ja sääntökortin kapiteeli
+  ui.pelit.juoksupeli (ennen "Kielletty kaupunki"), viimeinen-keisari.json ingressi/osio 8. Latauskuva ennallaan. SHA JU:lle (jonossa) + PT:lle.
+- PT tiedoksi: LAV tekee lahipuut-v16:n; juoksupelin reittikerrokseen runkojen poisto reittikaistoilta ±3 m + kannatinpoistot →
+  Pelikoodari kytkee kerroksen, kun LAV lähettää (ei vielä saatu).
