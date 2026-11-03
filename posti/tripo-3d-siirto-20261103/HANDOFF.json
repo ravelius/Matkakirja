@@ -1,0 +1,37 @@
+{
+  "id": "owner-transfer-20261103-bronzes-characters",
+  "at": "2026-11-03T08:42:42.083864+00:00",
+  "ownerInstruction": "siirrä ne 3d tilaukset tripo 3d sessiolle",
+  "fromThread": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+  "toThread": "01a14ee0-3e23-72b2-82b1-510228c70b7d",
+  "status": "handoff-prepared-awaiting-target-intake",
+  "sourceProducerStopped": true,
+  "activeSourceJobs": [],
+  "directSessionMessageAvailable": false,
+  "targetIntakeVerified": false,
+  "work": [
+    {
+      "name": "Palatsin pronssit",
+      "source": "posti/lavastaja-codex-palatsin-pronssit-tilaus-20261102.md",
+      "sourceBlobSha": "8054d06d5663d6a3b60027214952e93e737f4f68",
+      "state": "delivered-receiver-accepted-followups-only",
+      "deliveryCommit": "644c30101491f52b6a51ea91d2d397223c4f3bcd",
+      "receiverReceiptCommit": "4d33570c2",
+      "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/palatsin-pronssit-20261103",
+      "next": "Read actual Lavastaja receipt; do not remake accepted9 models or2 collisions. Any later specifically requested3D fixes belong to Tripo."
+    },
+    {
+      "name": "Arkiset hahmot ja tavarat incl sweeper/fill",
+      "source": "posti/pelikoodari-codex-arkiset-hahmot-tilaus-20261102.md",
+      "sourceBlobSha": "e425440f1b169eee503162921ac65a518dea3964",
+      "state": "unfinished-local-candidates-not-delivered",
+      "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103",
+      "models": 4,
+      "propsAndRemains": 7,
+      "tripoCalls": 0,
+      "imageCalls": 0,
+      "next": "Review existing candidates; fix and visually verify water fill direction/pour height/real vat placement, then finish QA and canonical mailbox delivery with SHA256SUMS."
+    }
+  ],
+  "paris": "Remains image thread;15/15 technically delivered,last tile12 receiver review pending. No Tripo work on Paris."
+}
