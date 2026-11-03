@@ -5,8 +5,8 @@ Vain voimassa oleva tila. Korvaa luovutuksen viesti-natiiviseppa-luovutus-202611
 Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
 
 ## ODOTTAA (JU → sinulle, keskeytä erä sen ajaksi)
-- JU:n iso-paketti **c5a120c78** = aaaed4758 (loppurajaus) + **80ea01172** (lähtörajan korjaus) + muistivahti 3e0447b47
-  (+ NUI:n kekomittari 453a76a42). JU kääntää Tripo-tauon jälkeen (~19.10, L1) → paketti-iso.zsh (saapuminen 0–60 s kuvat 3 s
+- JU:n iso-paketti **ea09036dc** (PT 18.5x) = c5a120c78 (aaaed4758 loppurajaus + **80ea01172** lähtörajan korjaus + muistivahti
+  3e0447b47) + NUI:n kekomittari 453a76a42 + KS isoisa4 7e640edc4 + PK keisarikuvat 8cec09f05; todistus tästä. JU kääntää Tripo-tauon jälkeen (~19.10, L1) → paketti-iso.zsh (saapuminen 0–60 s kuvat 3 s
   välein, 4 zoomia, ruutuajat) → muistivahtiuusinta jatka → lähizoom → tulos sinulle.
 - Analysoi: (1) alun VIKA poissa? jatka-huipun pitäisi pudota 4,4–4,9 Gt:stä noin 2,6 Gt:hen, keko ei saa nousta 0,5 → 2,7 Gt
   ~9 s jatka:n jälkeen; NUI:n "MATKAKIRJA keko:" -rivit kertovat, jääkö NostoSisalto- tai ElavatHetket-osuutta (NUI tai VS).
