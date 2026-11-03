@@ -40,3 +40,4 @@ Rooli: Julkaisija (JU). Työkalut /Users/Shared/Claude/julkaisija-tyokalut/. Ede
 - **L2-jono NS:n jälkeen:** 1) NUI (local_43962c89) "KÄÄNNÖS NYT": PROTO_LINJA=2 proto-kaanna.sh 2d9ed2d93 + kuvat (~20 min, iPad13-simu),
   2) VS pim11 (bd3daf198, ~5 min) – tai L1:lle, jos se vapautuu ensin.
 - Viety 07.29/07.40: LAV palatsi-esto-v38 ja kielletty-rakennukset-v118 (vie-paketti.sh). PR:t 6093 ja 6100 mergetty (ei checkejä docs-poluilla).
+- **08.15 PK (PT hyväksynyt): 218y:n perään L1:lle** `PROTO_LINJA=1 zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218z/ketju-z.zsh xf th yk cx tj ty cc ys taso1b` (runko sali-218z 9cf0c1c2c). JU:n odotin taustalla – jos nollaus tappoi, käynnistä itse 218y:n jälkeen; ilmoita PK:lle alku ja valmis.
