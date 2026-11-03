@@ -37,3 +37,7 @@ Salirunko **pelikoodari/sali-218e = fd88a0dba** (1b80e7201 + 505fd53c1; merge-tr
 2. Arkiset hahmot heti, kun Codexin paketti tulee postilaatikkoon (ei vielä 02.00; tilaus 409d7f494 + 2a5910c5a).
 3. VS:n juoksupelin sade, kun VS ilmoittaa. 4. Siivoukset (Taso1ReittiPortiltaAukiolle03, kamera-218/SEIS).
 - 1b80e7201 on pelikoodi (ei vain QA): junaan vasta PT:n kuittauksella tallenteen jälkeen (tallenne PT:lle → SHA NS:lle).
+
+## Lisäys 02.02
+- JU antoi NYT linja 1: **ketju8s käynnissä 02.02** (nohup, tuloste sali-218b/ketju8s.ulos, ~70 min). Valmis → JU:lle "VAPAA linja 1".
+- taso1b5 (linja 2) jonossa JU:lla VS:n ajon jälkeen: kun JU antaa NYT:n, `nohup zsh .../tallenne-218t/ketju-taso1b5.zsh > .../tallenne-218t/ketju-taso1b5.ulos 2>&1 &`, valmis → "VAPAA linja 2".
