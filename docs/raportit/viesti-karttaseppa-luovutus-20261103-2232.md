@@ -30,7 +30,11 @@ Codex-posti: wt/karttaseppa-postilaatikko → `git fetch` + `git checkout --deta
    (pohja + maski + vesimaski + ohjekuva G:stä skaalattuna Y/ohje-nd-k4-g.py, suhteet OK/NAHTAVYYSALUE.md). OPPI ND k4:stä:
    Codex piirtää nähtävyyden hyvin, mutta ympäristö ja alfa eivät osu ruudukkoon → pyydä vain nähtävyys läpinäkyvällä taustalla
    ja leikkaa + istuta koodilla (Y/leikkaa-nd-k4.py), ei ympäristön uudelleenmaalausta.
-1. **ND k4: KK:n päätös** (PT:n kautta): käyttöön leikattuna vai laiva kokonaan (vaihtoehto Y/tarkistus-nd-k4/nd-k4-VAIHTOEHTO-
+   **PT 22.5x: KK hyväksyi ND k4:n "laiva kokonaan"** (suora rantaleikkaus hylätty): EI suoria leikkausreunoja rantaan.
+   Järjestys: Louvre, HdV, Oikeuspalatsi + Sainte-Chapelle, Saint-Jacques, sitten muut. Jokaisesta pari G:tä vasten PT:lle.
+   ND:n laiva kokonaan -taso TEHTY ja lähetetty NS:lle 22.5x: Y/tarkistus-nd-k4/laiva-kokonaan/nd-k4-laiva-kokonaan-savy.png
+   (`LAIVA_KOKONAAN=1 python Y/leikkaa-nd-k4.py ...`).
+1. ~~ND k4: KK:n päätös~~ RATKAISTU 22.5x (laiva kokonaan, NS:llä).  Vanha teksti:: käyttöön leikattuna vai laiva kokonaan (vaihtoehto Y/tarkistus-nd-k4/nd-k4-VAIHTOEHTO-
    laiva-kokonaan.jpg; leikkaus näkyy suorana reunana sivukanavan kohdalla). Hyväksynnän jälkeen taso NS:lle/VS:lle peliin.
 2. **A2 k4: VS:n k10-tulos** (JU). Jos katot/pihat vielä väärin: säädä Y/katot-2029-k4.py [voima] tai Y/pihat-tummiksi-k4.py [kerroin].
 3. **Taustaajot** (Monitor uudelleen): tasankoketju pid 65143 (Y:n sisar tasangot-poltto-20261103/ketju.sh; odottaa joutilasta ≥ 10 min,
