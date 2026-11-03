@@ -26,7 +26,8 @@ uusi tehtävä tuli juuri ennen rajaa eikä sitä aloitettu.
 1. **UUSI (PT 07.2x, OMISTAJAN PÄÄTÖS 07.22):** saapuminen = esilataus siirron aikana, vain kohteen lähinäkymä, zoomaus päättyy
    valmiiseen kuvaan, "ei voi kestää 30 sek". Ilmaisinkytkentä `PeliOhjain.SaapumisKarttaOdottaa(k, alkaa)` sovitetaan NS:n uuteen
    toteutukseen: ilmaisin (OLEMASSA OLEVA latausilmaisin, ei uutta UI:ta) näkyy vain poikkeustilanteessa (hidas verkko), ei tavallisella
-   matkalla. Sovi ensin NS:n kanssa rajapinta (NS:n haara/SHA, `Laattapalvelin.ValmiiksiKaupunki`; aiempi luonnos haarassa
+   matkalla. **Täsmennys 07.23 (omistaja, PT:n kautta): esilataus alkaa jo kohdekaupungin valinnasta nopanheiton jälkeen (ei
+   nappulan liikkeestä); ilmaisimen ajoitus sen mukaan.** Sovi ensin NS:n kanssa rajapinta (NS:n haara/SHA, `Laattapalvelin.ValmiiksiKaupunki`; aiempi luonnos haarassa
    natiiviseppa/esilataus-218 2cf83b7c3). Pari/video PT:lle (KK:lle ei suoraan). Käännös ja simu JU:n vuorolla.
 2. Video iPadilta (Lontoo, Bratislava, Pariisi; zoomaus, traileri, nostojen esiintulo), kun kohta 1 on rungossa → PT (ja KK PT:n kautta).
 3. Veneet joen keskiviivaa pitkin: odottaa KS:n Seinen venereittiä uuden Pariisin koonnin jälkeen (KS:n luovutus 00.25; palat 1–15
