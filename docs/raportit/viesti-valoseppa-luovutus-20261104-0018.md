@@ -12,3 +12,8 @@ Syy: konteksti 25 % (pehmeä raja, luonteva tauko). Edellinen: viesti-valoseppa-
 2. AUKI-lista: vaaleat täyttämättömät korttelit, Z13:n väri ja soikion reuna, hautausmaan reuna (KORJAUSLISTA k18), kadut mitattuna 2029:stä.
 3. Paikallinen koe: data pariisi-tyyli/k19/data-paikka (mvt13, mvt14). `ELAVA_KOE=<data> ELAVA_Z=17 ELAVA_ALUE=66384,45091,66391,45098 ELAVA_PINNAT=<wt>/Assets/StreamingAssets/ElavaKoealue sh <wt>/Kartta-testit/kaanna.sh ElavaKoe`; kokoa k12/paikallinen/kokoa.py; pari k15/pari.py; mittari k15/mittari.py. Vanha z-kuva pitää poistaa cs/:stä ennen uutta ajoa, ei pakollista.
 4. Tiedostot: ElavaTyyli.TeeTalotus (talojako), RantaJaPuistoAvoimiksi (täyttö), ElavaKoealue.KorttelinLaji, Valopohja.PiirrosTasaus.
+
+## LISÄYS 00.25: ohittaa yllä olevan SHA:n
+- **k20 = 8d1a79394** (KK 00.16 tehty). Tulos, mittarit ja AUKI: pariisi-tyyli/k20/TULOS.md. Ajo: k20/ajo.zsh on esikatselu, k20/sk-k20.txt komennot; laiteajo PT:n ja JU:n kautta (JU: iPadilla ensin NS f1fb45f10, sitten Tripo).
+- k19-esikatselu keskeytetty 00.13 ilman tuloksia.
+- Postivahti: nollaus vasta 35 %:n lähellä uudella LUOVUTUS VALMIS -rivillä.
