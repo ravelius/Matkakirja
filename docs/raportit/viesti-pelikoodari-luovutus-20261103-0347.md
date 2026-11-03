@@ -42,3 +42,9 @@ Rungot (merge-tree kärki + piirtajat-218 b51e69a8b): **sali-218l 4b66cc5d1** (+
 - käynnissä: L1 `RUNKO=pelikoodari/sali-218l … ketju8s.zsh yk cx th tj ty cc xf ys` (yk cx th valmiit), L2 taso1b8 (218m).
 - sen jälkeen: `RUNKO=pelikoodari/sali-218n zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/ketju8s.zsh yk cx` ja
   `zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/tallenne-218t/ketju-taso1b9.zsh`. (ketju-taso1b8 = 218m.)
+
+## Lisäys 03.5x (PT)
+PT katsoi arkit cx 033318 ja yk 032709: valtaistuinkierros ja loppukortti OK. Näkyvät viat (arkin rivi.sarake): cx 1.3 (oranssi
+kattotiili koko ruutu), 3.5–3.6 (sermin/seinän sisällä), 3.7 (pelkkää punaista seinää); yk 1.2 (kattotiilet lähikuvassa), 2.5–2.7
+(katon sisällä). Tarkista yk/cx rungolla 218n; jos yhä näkyvissä, ne ovat seuraava korjaus. HYVÄKSYMISEHTO: junaan (ja KK:lle) vasta,
+kun arkissa ei ole yhtään seinä- tai kattoruutua.
