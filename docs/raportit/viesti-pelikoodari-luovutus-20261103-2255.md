@@ -1,8 +1,8 @@
-# Pelikoodari: luovutus 3.11.2026 klo 23.00 – junat 218/219
+# Pelikoodari: luovutus 3.11.2026 klo 22.55 – junat 218/219
 
 Edellinen: -20261103-2235 (b6d560299), voimassa ellei alla toisin. Syy: kontekstiraja 26 % (7.37). Ei omia taustaketjuja.
 
-## Tehty 22.43–23.00
+## Tehty 22.43–22.55
 - **Työlista** (PT): eunukit ja kiinan tekstit "valmis, junassa 218", muistokuplat (8/8 esineellä kuva pelissä; toinen vaihe avoin), arkiset hahmot päivitetty.
 - **VEDEN KAATO proto pelikoodari/vesi-219 c865ea4d8** (86476dd60:n päällä, wt/proto-pelikoodari-vesi, lipun JuoksuPalvelijat.Paalla takana): JuoksuVesiastiat
   (LAV:n vesiastiat-pk.json koodissa; 8 astiaa kujien lähellä, 2 terassilla pois; hahmo 1,1 m astiasta kujan puolella, rasterista vapaa paikka), fill_right → fill_left →
