@@ -28,3 +28,14 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1535.md (sen jono 1–3 on yhä v
    (esim. Kuvasuurennos ei pidä täyttä kuvaa + FRA-esilatauksen rajaus) ja kysy PT:ltä, kenen alue esilataus on (ui nostot = NUI).
 3. Edellisen luovutuksen jono: keisarin nosto + versiorivi simulla 1087abf41:llä (ajo.zsh kansiossa nui-keisari-pariisi-c9ab58e88-20261103,
    odota JU:n SIMU NYT); keisari Pekingin kartalle (KS/PK); 1501-avoimet.
+
+## LISÄYS 16.4x (JU ja PT, ennen nollausta)
+- JU: yhdistelmä nyt 693cf437f (cb22f67c5 peruttu). L2 kääntää laitteelle 693cf437f ja heti perään 82e74784a
+  (appit proto-3d/lokit/julkaisija-laite-218-<sha>/Matkakirja3D.app). JU lähettää LAITE NYT (iso iPad 00008103-001819421413401E):
+  ota /tmp/matkakirja-ipad.lukko (mkdir + kuka), `xcrun devicectl device install app --device <U> <app>`, aja ensin 82e74784a,
+  sitten 693cf437f; jätä 693cf437f asennetuksi, poista lukko ja ilmoita JU:lle VAPAA. Komentorivit:
+  proto-3d/lokit/nui-kaatumistoisto-iso-cb1b5d9fc-20261103/komennot-693cf437f.txt.
+- PT 16.4x (UUSI TEHTÄVÄ, jonon kärkeen): pieneen ei erillistä asennusta. Mittaa isolla muistihuippu kohdenoston avauksessa ja
+  FRA-kuvien esilatauksessa ("ui nostot: kuvat esiladataan FRA (107 + 74)", MB ennen/jälkeen kuva-loki.txt:n muistiriveillä tai
+  konsolista) ja pienennä huippu selvästi pienen iPadin rajan alle (esim. esilataus pienempinä/vaiheittain, vapautus kun kuva kiinni).
+  Tulos PT:lle 3 riviä.
