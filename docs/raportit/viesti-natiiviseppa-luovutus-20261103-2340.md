@@ -7,6 +7,9 @@ EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajo
 ## YÖTYÖ (PT, omistaja 22.31 "Koita saada Pariisin kartta tehtyä kokonaan")
 Sijoita KK:n hyväksymät peliin sitä mukaa kuin KS/PT ilmoittaa. Pelikuvat JU:lta → PT → KK.
 
+## LISÄYS 23.45 (korvaa alla olevat kärjet ja kohdan "90°/30° arkin tullessa": tehty)
+Kärjet: nahtavyydet-218 474d0b0de, koko-koe-218 628d1a90a (data 95a733ace:n päälle): 3 c, 8 d (11. = Beauvoir). JU: ajaa 628d1a90a, jos 95a733ace ei ehtinyt alkaa; iso iPad -ajo 95a733ace käynnissä, muistiluku PT:lle. Ämpäriin c/d pyydetty. Kartta-testit: JU:lta pyydetty "VAPAA"-vuoro; PT: ennen kuin mitään yhdistetään.
+
 ## ENSIMMÄISENÄ
 1. **Kartta-testit EDELLEEN AJAMATTA** (PT: ennen kuittausta; kone on ollut varattu): `sh Kartta-testit/kaanna.sh` ensimmäisessä välissä kärjessä 95a733ace (koko-koe-218) ja 5f8b18b5c (nahtavyydet-218). Tulos PT:lle ja JU:lle. Viimeksi läpi 4819cd07b 603/603.
 2. **Koeajo 95a733ace JU-jonossa** (sk _tyo/natiiviseppa/aluekuva-koko/sk-sillat-v2.txt; korvasi 1750f3d00:n ja 159acdf0c:n; viesti JU:lle 23.39 toimitettu, JU:n kuittausta ei vielä tullut). Kuvat PT:lle "k11 koe". C# on kääntämätön: KaupunkiMerkit + PiirrosKerros.Esineet. Katso kuvista:
