@@ -27,3 +27,7 @@ K = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset
 3. Paketit _valmiit/juoksupeli-kk-lavastaja-{osasarja-v7,tausta-v115}-vienti-<pvm> (LAHTEET.md + SHA256SUMS) → JU-vienti + PK-kytkentärivi
    (OsasarjaKansio v7, tausta v115) → editoripari 01/02/03b PT:lle.
 4. Sitten rivi 52 kohta 3 (sokkeli ja reunakivet), järjestys 1 → 3 → 2 → 4 → 5; kohta 4 ensin PK:n kanssa.
+
+## LISÄYS 08.1x: PT KUITTASI kohdan 1
+PT: "kohta 1 (friisi, tausta v115 + osasarja v7) KUITATTU – vastaa havainnetta". Punainen rako (seuraavaksi-kohta 1) korjataan samaan pakettiin
+ILMAN uutta paria, ellei muoto muutu. Sitten järjestyksessä: leivonta → paketit → JU → editoripari → kohta 3.
