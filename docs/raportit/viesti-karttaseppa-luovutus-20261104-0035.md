@@ -48,7 +48,7 @@ PT katsoi kolmio-parit ja vei ne KK:lle; KK ei ole vielä hyväksynyt niitä. PT
 5. **PT:n kysymä:** täydet polut lähetetty PT:lle: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/sacre-coeur-k5/ ja .../louvre-k4/. Viesteissä aina täydet polut, ei Y/P-lyhenteitä.
 Vahti kuolee nollauksessa: käynnistä uudelleen. Sen 12 ensimmäistä TOIMITUS-riviä ovat vanhoja.
 
-## LISÄYS 4.11. klo 01.1x (uusi KS: lue tämä ensin; korvaa kaksi edellistä lisäystä)
+## LISÄYS 4.11. klo 01.08 (uusi KS: lue tämä ensin; korvaa kaksi edellistä lisäystä)
 Kaikki koosteita pelikuvan päällä, ei pelissä. **EI NS:lle ennen KK:ta.** PT:llä, odottaa KK:ta. Vahti: Monitor `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/vahti.zsh`; sen 13 ensimmäistä TOIMITUS-riviä ovat vanhoja.
 - **Sacré-Cœur k7** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/sacre-coeur-k7/ (082120a7194f; pari-ennen-jalkeen.jpg, lahikuva-aukio.jpg). Työkalu /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/sacre-coeur-kaari.py korvaa sacre-coeur-metsa.py:n: 323 puuta, sivuille 0,68 W, latvat ristin korkeudella, latvus 0,13 W, ei tummaa pohjaa, kerma-aukio ja soikiot pois. Aukio Codexilta 5d8333c90 → _review-sacre-coeur-aukio (leveys 374 px, Codexin QA ei läpäissyt) kavennettu koodilla 306 px:ään (KK:n "noin kirkon levyinen"), ja alle 8:n alfa poistettu. Kiven kuvio on karkeampi kuin 2029:ssä; KK arvioi.
 - **Louvre k5** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/louvre-k5/ (59b27f38a4ae; lahikuva.jpg): nahtavyys-nurmi.py pyöristää reunan, poistaa irtolaikut ja peittää keltaiset pilkut. 16 puuta ennallaan.
