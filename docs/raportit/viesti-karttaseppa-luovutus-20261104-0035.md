@@ -140,3 +140,10 @@ PT:llä, odottaa KK:ta; kaikki koosteita, ei NS:lle:
 
 ## LISÄYS PT 01.42 (uusin; TEKEMÄTTÄ)
 **Champ-de-Mars 15a:** Codexin posti posti/codex-karttaseppa-puutarha-champ-de-mars-20261104 (e8eef3abf). Oma QA "ei täysin läpäissyt": pääkäytävä liian leveä, nurmi tumma (185/161/91, tavoite 203/177/109), maski ei täysin täsmää. PT näki valkoisen ruudun länsisiiven kärjessä. KS arvioi: sovita koodilla (alfa maskista, nurmen sävy) tai pyydä uusi otto samaan tilaukseen; pari PT:lle → KK.
+
+## LISÄYS 4.11. klo 01.46 (uusin; lue ensin): KK:n uusi linja, korvaa aiemmat puutarhaohjeet
+Kaikki muotopuutarhat Codexilta; käsin hienosäätö näihin loppuu; Invalidit jäävät riveille.
+- **Tilaus 15d–f lähetetty (2154d7454):** Jardin des Plantes, Tuileries, Palais-Royal. Aineisto C/puutarha-*/; P/puutarha-tilaus.py ottaa nyt kohteet argumentteina. Näissä kolmessa puut ovat kuvassa (KK:n sisältö), 15a–c:ssä eivät.
+- **Kun kuvat tulevat:** poista puut-uudet.py:stä Tuileries, Plantes ja Palais-Royal (MUOD ja PR_K-rivit), ja ne kolme sekä Luxembourg puutarhapolut.py:stä. Vino rivi on MUOD Tuileries "poikki": 2, ja se poistuu samalla. Pari PT:lle → KK.
+- **Sirpaleet Louvren vieressä:** koosteen vika, ei pelissä (P/pr-kooste.py peitti Louvren seinää nurmella ja puilla, ja louvre-maski palautti vain osan). Pelikuva varmistaa.
+- **Avoinna:** 15a–c katsomatta (Champ-de-Mars: alfa ja nurmen sävy koodilla vai uusi otto; PT 01.42), Louvre-nimi Seinellä, kohta 9, jonomittari.
