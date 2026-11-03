@@ -29,3 +29,8 @@ Kaikki NS:n viestit olivat lähtiessä NS:n jonossa ("queued"); tarkista list_ev
 - Pariisin OSM-välimuistissa on vain wayt: isot aukiot ovat avoimia katupaloja saman nimen alla. Tunnettujen aukioiden nimet kannattaa tarkistaa generaattorin jälkeen.
 - Kannen maski: kiinteä väriviite ja suurin komponentti; kuvan keskimediaani osui väärin lyhyissä silloissa (a-2 leikkautui puoliksi). Tulos katsottava aina kuvasta.
 - Laskettu koordinaatti viestiin vasta mitattuna: kahdesti lähti viesti arviolla ja korjaus perässä (kyljen kärki, ND:n irtopala).
+
+## LISÄYS klo 23.34 (NS)
+- Sainte-Chapelle pelissä 48ba7cf88, sillat 53b34a340 (33 siltaa). **AVOIN 1 ratkesi:** yhdestoista silta on Simone de Beauvoir, 30°-listalla.
+- Koko Pariisin puut pelissä 159acdf0c. Aukiot ovat toistaiseksi pois datasta (VS/KK kiekot), joten esinepaikkojen aukioita ei nyt käytetä.
+- NS ei maininnut ND 0,8:aa tässä viestissä: varmista, että se ja raivausmaski on tehty tasosta 8589240ae981…. Pelikuvat JU:lta.
