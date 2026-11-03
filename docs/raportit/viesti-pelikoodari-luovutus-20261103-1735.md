@@ -33,6 +33,9 @@ Proto-haarat paikallisia; worktree /Users/Shared/Claude/wt/proto-pelikoodari-ys-
 0. ENSIN (PT 18.0x): Codex toimitti viimeisen keisarin 5 havainnekuvaa + lähteet (ee0eda022, origin/claude/postilaatikko
    posti/codex-pelikoodari-viimeinen-keisari-havainnekuvat-20261103/); PT kuittasi vastaanoton. Arvioi ja kytke Puyin nostoon
    (Raamattu 2.200; aiempi tilaus "Viimeisen keisarin nosto" 5345c2379). Tulos PT:lle.
+0b. LAV 18.0x (local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e): kun JU on vienyt paketit, koekytkentä LAV:n haaraan saumat-v1-219:n
+   (97ef79bd6) päälle: kielletty-rakennukset-v120 → v121 (vain kullattujen pronssien sävy; geometria ja esto-v38 ennallaan) ja
+   AvoimetKansio avoimet-v52 → avoimet-v54. SHA LAV:lle (ajaa editoriparin 04 + 06). Junaan vasta PT:n kuittauksella.
 1. al-tulokset: kohta 1 edellisestä luovutuksesta (grep "salin esteet", "salieste häivytetty"; ys 10–12,5 s, tj 4/8/10 s; salipaketti
    yhdellä rivillä PT:lle).
 2. am taso1b: tarkista 58,5–64,5 s (horisontti/hallit näkyvissä), ettei (a) 78–92 s ja vartija 95 s heikentyneet; Puyi aina ruudussa.
