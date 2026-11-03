@@ -1,0 +1,15 @@
+# Valosepän luovutus 4.11.2026 klo 01.18
+
+Syy: konteksti yli 25 %, luonteva tauko (k22 valmis). Edellinen: viesti-valoseppa-luovutus-20261104-0052.md (työkalut, polut, Tila-osio vanhentunut SHA:n osalta). Loki: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md.
+
+## Tila
+- **k22 = 73a87a30c** (linssiseppa2/pariisi-k17, natiivi-backup, wt /Users/Shared/Claude/wt/proto-linssiseppa2-koko17, p22, 611/611). = k21 804d491d1 + KK 00.58 kohdat 5–6. Ei laitteella, ei Unityssä. Lue ensin _tyo/linssiseppa2/pariisi-tyyli/k22/TULOS.md. Parit k22/v3/pari-gdn.jpg, pari-sl.jpg, porras-3x.jpg.
+- Laiteajoa ei ole JU:lla: lisäpalojen muisti ja kulu JU:n vuorolla PT:n kautta; k22/ajo.zsh valmiina, ei ajettu.
+- NS tekee etäisyyshäivytyksen samaan tiedostoon (ElavaKoealue): sovi NS:n kanssa, k22:ssa ElavaKoealue ei muuttunut.
+
+## Seuraavaksi
+1. Odota PT/KK:n kanta k21:een, k22:een ja kattosävyyn. Täyttöä ei aloiteta ennen hyväksyntää; laikkujen ja pystyraitojen korjaukset (k21/TULOS.md loppu) vasta KK:n jälkeen.
+2. Auki k22:sta: talojen sävyrajat ovat yhä 1,6 m:n ruudukossa (Savy ilman pehmennystä); Grand Palais'n reunan porras laitekuvasta; asemahallin ja katosten vaalea pinta on lisäykseni, KK arvioi.
+
+## Työkalut (k21-luovutuksen lisäksi)
+k22/aja-rata.zsh <tunnus> (Gare du Nord, Est, Saint-Lazare), k22/aja-merkit.zsh <tunnus> (ND, Tour, GP), k22/aja.zsh <tunnus> 17 15 13 (keskusta), k22/tyokalut/parit.py, rata-data.py, raivaus-txt.py. Raivaus paikallisajoon ELAVA_RAIVAUS=k22/raivaus.txt; päivitä, jos raivaus_versio muuttuu (nyt 2c5cbb). Uusi versio omaan kansioon k23/; p-versio nousee.
