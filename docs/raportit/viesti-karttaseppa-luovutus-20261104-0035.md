@@ -21,3 +21,12 @@ Kaikki ovat koosteita pelikuvan päällä, eivät pelissä. **Mitään ei ole vi
 - Puukuvan leveys ei ole latvus: latvus on 0,57 × leveys, joten latvusten koskettaminen vaatii 24–34 m:n kuvalla noin 13–14 m:n välin, eikä 22 m riitä.
 - Pelikuva ja kartta sovitetaan puista: pariisi.json:n paikat ↔ kuvan möykyt, ICP + homografia (pari.py). Sama sovitus sijoittaa nähtävyyskuvat tarkasti koosteeseen.
 - Rengas nurmilohkon ympärillä näyttää kirjaimelta: yhdistä vierekkäiset nurmet sulkemalla ja vie rivi vain ulkoreunalle.
+
+## LISÄYS klo 00.52 (KK 00.41; lue tämä ensin, korvaa puun värin ja koon)
+KK:n mitta 118/102/62 oli väärä, ja v2 kumottu. Lista: lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, osio "puupari 00.33".
+- **P/puukuva.py → P/puu-60-v3.png (21e2bc8bee13):** latvus 150/126/76, v1:stä, muotovarjo ja pehmeä varjo.
+- **P/puut-uudet.py → P/puut-uudet.json (58b75a9267ab):** 25 883 puuta, kuvan leveys 41–58 m (latvus 24–34 m). Metsä 18 971 (min. väli 19 m, väylinä vain ajotiet; mittari 161/140/87, 81/136/165 täyttyy koosteessa), muodolliset 257 (käsin MUOD-listasta: tasavälit ilman kohinaa, Invalidit nurmien ulkoreunoille, Luxembourg reunaa kiertäen), puistojen ryhmät 2–7 latvusta, kadut 1 228 (vain bulevardit ja rannat, ketjuista tasaväli, käytävässä yksi rivi).
+- **Parit:** P/kolmio-a95-silta-katu.jpg, P/kolmio-boulogne.jpg, P/kolmio-luxembourg.jpg (ennen | jälkeen | 2029; kooste.py, mittari.py). PT:llä, odottaa KK:ta; **EI NS:lle ennen KK:ta**. Hyväksynnän jälkeen v3 + json + sacre-coeur-k5 + louvre-k4 NS:lle, sitten muisti isolla iPadilla.
+- **Sacré-Cœur k5 3584699941fd, Louvre k4 c34399e782cc** (v3; käytä näitä, ei k4/k3:a).
+- **Heikkoudet:** Luxembourgissa rivi on ohut 2029:n paksuun puustoon verrattuna, ja nurmella on OSM-metsien puita (sulku). Luxembourgin länsireuna jää pantheon.png:n ulkopuolelle: isompi rajaus vaatii uuden kuvan (JU). Pelikuvan m/px: .012-ajo Macilla noin 0,716, iPad a95-silta-katu noin 0,72.
+- Vahti käynnissä tässä sessiossa; 30 min välein uudelleen.
