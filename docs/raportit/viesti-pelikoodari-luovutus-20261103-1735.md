@@ -36,5 +36,8 @@ Proto-haarat paikallisia; worktree /Users/Shared/Claude/wt/proto-pelikoodari-ys-
    Aikavastaavuus: videon s × 51,935 = kamera.txt-ruutu (tallenne 50 fps). Korjaa samaan junaan myös (2) ja selvitä (3) ennen KK-pakettia
    (PT: ei omistajalle ennen korjausta). Paketti kuten sali-218aj/kk-taso1b/, rivi PT:lle.
 3. am mp: ei kiveyskuvaa, ei massaa portilla (huom-*.txt), maalin näköala.
-4. Edellisen luovutuksen kohdat 4–7 ennallaan (Codex-toimitukset, Editor-työkalut kivi-216:een, taso1b musiikkirivit, checkout).
-5. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1735.
+4. UUSI (PT 17.3x, tuli luovutuksen jälkeen): Codexin elokuvaotsikot #1867–1868 toimitettu (c3a5c2e29,
+   posti/codex-pelikoodari-juoksupeli-elokuvatekstit-20261103/; kuitti bba783c3a). Arvioi ja kytke rivit + ~4 s häivytys; Codexin ehdotus
+   pehmeä vaalea usva tekstin taakse tummilla kattoalueilla – päätä itse. Tulos PT:lle.
+5. Edellisen luovutuksen kohdat 4–7 ennallaan (Codex-toimitukset, Editor-työkalut kivi-216:een, taso1b musiikkirivit, checkout).
+6. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1735.
