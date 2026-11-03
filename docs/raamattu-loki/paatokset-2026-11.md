@@ -213,3 +213,7 @@ KK välitti 19.35 sanatarkasti: "Tämä projekti on siis nyt tällainen uusi, mi
 ## KAUPUNKIKARTTOJEN RAKENNUSPERIAATE (3.11.2026 klo 20.51) (3.11.2026 klo 20.52)
 
 Omistajan kortti KK:ssa 'Rakennetaanko kaupunkikartat tällä periaatteella?' → 'Kyllä (Suositus)'. Kaupunkikartat KS:n RAKENNUSPERIAATE.md:n mukaan (proto-3d/_kirjasto/kartta-osat/): lukitaan pelaajan huomaama (5 kohtaa), oikaistaan muu (8 kohtaa). KK:n tarkennus: kaupunginosien luonne ensin automaattisesti kartta-aineistosta, ihminen vain korjaa. Mukana omistajan 20.20 (nähtävyydet maksimiliioiteltuina) ja 20.4x (nähtävyys saa kääntyä katsojaa kohti). Kirjattu 2.204:n loppuun.
+
+## NÄHTÄVYYS EI VEDEN PÄÄLLE (3.11.2026 klo 21.29–21.30) (3.11.2026 klo 21.30)
+
+Omistaja KK:n kortissa 'Onko Notre-Dame nyt tarpeeksi suuri?': "Ei se voi noin mennä veden päälle"; 21.30: "Ei se mene g versiossa kaanon. Katsokaa sieltä mallia". KK: G:ssä Notre-Dame seisoo saarella ja joki näkyy molemmin puolin; liioittelu korkeudessa ja julkisivussa. Kumoaa 20.4x-tulkinnan 'saa levitä joen päälle'. Kirjattu 2.204:n loppuun.
