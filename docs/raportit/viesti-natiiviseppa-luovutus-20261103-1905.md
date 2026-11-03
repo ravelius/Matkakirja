@@ -5,7 +5,8 @@ Vain voimassa oleva tila. Korvaa luovutuksen viesti-natiiviseppa-luovutus-202611
 Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
 
 ## ODOTTAA (JU → sinulle, mene erän edelle)
-- JU:n kaatumistodistus isosta paketista **ea09036dc** (PT: ei c5a120c78). Paketti = aaaed4758 loppurajaus + **80ea01172**
+- JU:n kaatumistodistus isosta paketista **a92302399** (PT 19.1x: JU:n uudelleenkäynnistys 18.50 jälkeen; aiemmin ea09036dc, ei c5a120c78).
+  Sisältö kuten ea09036dc: aaaed4758 loppurajaus + **80ea01172**
   lähtörajan korjaus + muistivahti 3e0447b47 + NUI:n kekomittari 453a76a42 + KS:n isoisa4 7e640edc4 + PK:n keisarikuvat 8cec09f05.
   JU: paketti-iso.zsh (saapuminen 0–60 s, kuvat 3 s välein, 4 zoomia, ruutuajat) → muistivahdin uusinta jatka → lähizoom → tulos sinulle.
 - Analysoi: (1) Onko alun VIKA poissa? Jatka-huipun pitäisi pudota 4,4–4,9 Gt:stä noin 2,6 Gt:hen, eikä keko saa nousta 0,5 → 2,7 Gt
@@ -46,7 +47,7 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9
 3. Moni kaupunki: kytkin on vain "koealue" tai tyhjä. Toiselle ElavaKoealueelle tarvitaan VS:ltä nimihaku (ElavaKoealue.Nimella).
 
 ## JONO
-0. ea09036dc-analyysi, kun JU:n tulos tulee. 1. Osa C/D:n avoimet (yllä). 2. Vanhan jonon kohdat ennallaan (354 ms PostLateUpdate →
+0. a92302399-analyysi, kun JU:n tulos tulee. 1. Osa C/D:n avoimet (yllä). 2. Vanhan jonon kohdat ennallaan (354 ms PostLateUpdate →
 xctrace; GC-haara vasta PT:n luvalla). Jos jono on tyhjä → "JONO TYHJÄ: Natiiviseppä" PT:lle.
 
 ## TILA
