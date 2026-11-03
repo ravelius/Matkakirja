@@ -277,7 +277,21 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (Karttaseppä 31.10.2026; omistaja 12.49, PT hyväksyi tekstit) tuovat monumentteihin omat korostukset kuten
  *        fokuskohteilla. Natiivi korostaa ne tekstissä kuten fokuskohteissa; vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.67';
+/*
+ *   1.68 kaupungit.keskusta { lat, lon } | null ja kaupungit.alue { p, e, l, i } | null (Karttaseppä 2.11.2026; omistaja 21.42,
+ *        suunnitelma 20261102-nostot-ja-zoomaus-kaikkiin osa B): saapumiszoomauksen OSM-tarkistettu keskipiste Euroopan
+ *        kaupungeille ja alueiden (alpit, lappi, islanti, kreeta, sisilia) rajaus nostojen ja kohteiden ulkorajasta.
+ *        Natiivi (PeliOhjain.SaapumisZoomaus, NUI) käyttää niitä; puuttuva = kaupungin piste. Lisäksi karttavalot.viuhka (valinnainen,
+ *        true = ei yksilöitävää paikkaa kaupungissa → kaupunkimerkin viuhka, osa D; data/nostopaikat.json siirtää muut keskustaan
+ *        kasatut nostot omille paikoilleen). Vanhat buildit ohittavat kentät.
+ */
+/*
+ *   1.69 kaupungit.esittelypaikat { <kuvan tiedostonimi>: { lat, lon, kohde } } | null (Karttaseppä 3.11.2026; omistaja 08.48 ja
+ *        09.28, KK:n suunnitelma 20261103-saapumisen-kuvat osa B): saapumisen esittelykuva nousee kartalta kohteensa kohdalta ja jää
+ *        sinne pieneksi kuvaksi. Avain = kuvan osoitteen tiedostonimi (trailerin avauskuvat/kansikuvat ja Pariisin C1–C4);
+ *        piste ≥ 25 m nostoista ja maalla (tools/sisalto/esittelypaikat.mjs). Puuttuva kuva = keskusta. Vanhat buildit ohittavat kentän.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.69';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

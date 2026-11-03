@@ -4988,8 +4988,8 @@ export const KAUPUNKIKARTAT = {
        * joka ei osu minkään entisen kohteen päälle, ja ne kaksi tulevat
        * tähän: `akropolis-museo` (23,7283 E / 37,9691 N —
        * js/packs/fokuskohteet-grc.js) ja syvennystarina
-       * `syvennys-ateena-schliemann` eli Iliou Melathron (23,7328 E /
-       * 37,9808 N — js/packs/syvennyspaikat.js).
+       * `syvennys-ateena-schliemann` eli Iliou Melathron (23,7354 E /
+       * 37,9778 N — js/packs/syvennyspaikat.js; Panepistimiou 12, Wikidata-piste tarkistettu, Karttaseppä 3.11.2026 (docs/raportit/kohdetunnisteet-20261102.md)).
        *
        * NELJÄ MUUTA JÄI POIS, ja syy on sama kuin Tuulten tornilla
        * alla: ne seisovat täsmälleen kartalla jo olevan kohteen päällä
@@ -5014,7 +5014,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Olympoksen Zeuksen temppeli', nosto: 'olympieion',
       },
       { nimi: 'Sýntagman aukio', tyyppi: 'aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
-      { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328, nosto: 'syvennys-ateena-schliemann' },
+      { nimi: 'Iliou Melathron', lat: 37.9778, lon: 23.7354, nosto: 'syvennys-ateena-schliemann' },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
       { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
       /*
@@ -5253,6 +5253,20 @@ export const KAUPUNKIKARTAT = {
   },
   pariisi: {
     polku: 'assets/kartat/pariisi-keskusta.png',
+    /*
+     * PIIRROSKARTTA (omistaja 31.10.2026: 19.40 G-tyyli "Hyvä. Tee nyt koko kaupunki noin.", 19.52 "Tehkää Pariisi
+     * valmiiksi"; PT). Koko Pariisi G-tyylisenä piirroksena kiinteästä kulmasta (pohjoinen ylös, kallistus 58,2°):
+     * maanpinnalla x on lineaarinen pituuspiirissä ja y leveyspiirissä, joten merkit asettuvat tavalliseen tapaan
+     * piirtoRajoista; kuvan pystysuunta on 0,85-kertainen (pystykerroin). Miniatyyrit piilossa (piirros näyttää
+     * rakennukset), nimiöt, napautus ja ihmetähdet jäävät (PT 20.5x). Pohja ja kokoaja: proto-3d/_tyo/karttaseppa/
+     * pariisi-pohja/ (Karttaseppä; 1.11.2026 Codexin 1 m/px -palat 97/97 + kerros-1m); natiivi levittää samat palat 3D-kartan päälle (PiirrosKerros.cs).
+     */
+    piirroskartta: {
+      polku: 'assets/kartat/pariisi-piirroskartta.webp',
+      piirtoRajat: { pohjoinen: 48.905348, etela: 48.801845, lansi: 2.221391, ita: 2.504519 },
+      pystykerroin: 0.85,
+      lahde: '© OpenStreetMap-tekijät (ODbL) · piirros: Matkakirja',
+    },
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     // Värikartta satelliitin tilalle (omistajan päätös 15.8.2026,
     // ks. berliini alla): sama juliste samalta piirtoRajat-alueelta.
@@ -6294,7 +6308,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'brandenburgin-portti',
       },
       { nimi: 'Checkpoint Charlie', lat: 52.5076, lon: 13.3904, wiki: 'Checkpoint Charlie' },
-      { nimi: 'Museosaari', lat: 52.5169, lon: 13.401, wiki: 'Museumsinsel' },
+      { nimi: 'Museosaari', lat: 52.5214, lon: 13.3956, wiki: 'Museumsinsel' },
       // KIINTEÄ (KK 31.10.2026): hajautus työnsi tornin Museosaaren ja Maailmankellon välistä Spreen väärälle rannalle
       // (~900 m); kiinteää kohdetta naapurit väistävät, ja torni pysyy Alexanderplatzilla (js/nahtavyydet.js hajautus).
       { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni', kiintea: true },
@@ -7224,7 +7238,7 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
         x: 20.625, y: 24.375, leveys: 16.25, korkeus: 15.54 },
       // Văcăreștin luostarin kainalo (PT 31.10.2026, kadonneet ihmeet; tools/piirra-kaupunkikartta.mjs bukarest).
-      { rajat: { pohjoinen: 44.4085, etela: 44.3995, lansi: 26.1107, ita: 26.1233 },
+      { rajat: { pohjoinen: 44.4004, etela: 44.3914, lansi: 26.117, ita: 26.1296 },
         x: 68, y: 68, leveys: 12, korkeus: 11.83 },
     ],
     /*
@@ -7247,7 +7261,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-vacaresti
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
-      { nimi: 'Văcărești-luostari', lat: 44.404, lon: 26.117, wiki: 'Văcărești Monastery', nosto: 'hahmotelma-vacaresti' },
+      { nimi: 'Văcărești-luostari', lat: 44.3959, lon: 26.1233, wiki: 'Văcărești Monastery', nosto: 'hahmotelma-vacaresti' },
       /*
        * Numerointi pohjoisesta etelään: ateneumilta vanhaankaupunkiin
        * ja siitä lounaaseen Parlamenttipalatsille. Antipan museo on
@@ -7529,7 +7543,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-nyenskans
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
-      { nimi: 'Nyenskans', lat: 59.9415, lon: 30.41, wiki: 'Nyenskans', nosto: 'hahmotelma-nyenskans' },
+      { nimi: 'Nyenskans', lat: 59.9438, lon: 30.4068, wiki: 'Nyenskans', nosto: 'hahmotelma-nyenskans' },
       /*
        * Numerointi pohjoisesta etelään. Tämä on pelin ainoa
        * kaupunkikartta, jolla kaikilla kuudella kohteella on
@@ -8137,7 +8151,7 @@ export const KAUPUNKIKARTAT = {
       // Torni seisoo niemen kärjessä: piste on siirretty muutaman
       // kymmenen metriä sisämaahan, jottei numeroympyrä istu vedessä.
       { nimi: 'Näsinneula', lat: 61.5052, lon: 23.7422, wiki: 'Näsinneula' },
-      { nimi: 'Finlaysonin tehdasalue', lat: 61.4996, lon: 23.753, wiki: 'Finlaysonin tehdasalue' },
+      { nimi: 'Finlaysonin tehdasalue', lat: 61.5017, lon: 23.7598, wiki: 'Finlaysonin tehdasalue' },
       { nimi: 'Museokeskus Vapriikki', lat: 61.50301, lon: 23.76036, wiki: 'Museokeskus Vapriikki' },
       {
         nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta',
@@ -8424,7 +8438,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-maison-du-peuple
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
-      { nimi: 'Maison du Peuple', lat: 50.839, lon: 4.348, wiki: 'Maison du Peuple, Brussels', nosto: 'hahmotelma-maison-du-peuple' },
+      { nimi: 'Maison du Peuple', lat: 50.8411, lon: 4.3525, wiki: 'Maison du Peuple, Brussels', nosto: 'hahmotelma-maison-du-peuple' },
       { nimi: 'Brysselin pörssi', lat: 50.84795, lon: 4.34916, wiki: 'Brysselin pörssi' },
       { nimi: 'Manneken Pis', lat: 50.84499, lon: 4.34999, wiki: 'Manneken Pis' },
       {
@@ -9098,7 +9112,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-gogolin-synagoga
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
-      { nimi: 'Gogolin kadun synagoga', lat: 56.944, lon: 24.117, wiki: 'Great Choral Synagogue (Riga)', nosto: 'hahmotelma-gogolin-synagoga' },
+      { nimi: 'Gogolin kadun synagoga', lat: 56.9424, lon: 24.1263, wiki: 'Great Choral Synagogue (Riga)', nosto: 'hahmotelma-gogolin-synagoga' },
       /*
        * NELJÄLLÄ KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
        * Kaksi ansaa kirjattu tähän, jotta niihin ei astuta uudelleen:
@@ -10050,7 +10064,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanha kesäpalatsi', lat: 40.008, lon: 116.298 },
       { nimi: 'Kesäpalatsi', lat: 39.9975, lon: 116.2689 },
       { nimi: 'Yonghe-temppeli', lat: 39.9469, lon: 116.4111 },
-      { nimi: 'Nanluoguxiang', lat: 39.9425, lon: 116.3964 },
+      { nimi: 'Nanluoguxiang', lat: 39.9352, lon: 116.3969 },
       { nimi: 'Rumpu- ja kellotorni', lat: 39.9402, lon: 116.3896 },
       { nimi: 'Jingshanin puisto', tyyppi: 'luonto', lat: 39.9236, lon: 116.3906 },
       { nimi: 'Kielletty kaupunki', lat: 39.9158, lon: 116.3908 },
@@ -20363,8 +20377,8 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       {
         nimi: 'Nisa',
-        lat: 37.96667,
-        lon: 58.195,
+        lat: 37.95115,
+        lon: 58.21241,
       },
     ],
   },
@@ -21908,9 +21922,9 @@ export function karttapiste(kartta, lat, lon) {
  * kapenevat pohjoiseen, joten venytys otetaan rajauksen
  * keskileveydeltä.
  */
-export function karttaKuvasuhde(rajat) {
+export function karttaKuvasuhde(rajat, pystykerroin = 1) {
   const venytys = 1 / Math.cos(((rajat.pohjoinen + rajat.etela) / 2) * (Math.PI / 180));
-  return (rajat.ita - rajat.lansi) / ((rajat.pohjoinen - rajat.etela) * venytys);
+  return (rajat.ita - rajat.lansi) / ((rajat.pohjoinen - rajat.etela) * venytys * pystykerroin);
 }
 
 export function ydinAla(kartta) {

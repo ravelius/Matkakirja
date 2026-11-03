@@ -47,15 +47,15 @@ const IPHONEN_YLAPALKKI = [
 ];
 
 export const LAITTEET = {
-  // PARITEETTI_IPHONE_UDID: toisen roolin oma simulaattori (Linssiseppä 25.9.: vain omiin simulaattoreihin).
+  // Yhteiset simut (omistaja 1.11.2026): yhteinen-iPhone18 / -iPad11 / -iPad13; vuoro proto-3d/tyokalut/simu-lukko.sh.
   iphone: {
-    udid: process.env.PARITEETTI_IPHONE_UDID || 'A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2', w: 402, h: 874, kierto: 'pysty',
+    udid: process.env.PARITEETTI_IPHONE_UDID || 'A885020B-772D-4452-BFC8-E9F422BBDD21', w: 402, h: 874, kierto: 'pysty',
     sallitut: IPHONEN_YLAPALKKI,
   },
   // PARITEETTI_VAAKA_UDID / PARITEETTI_IPAD11_UDID: toisen roolin omat simulaattorit (vaaka voi olla sama kuin iphone).
-  'iphone-vaaka': { udid: process.env.PARITEETTI_VAAKA_UDID || '993F8873-E2D9-4230-81CE-CBF9230D9B55', w: 874, h: 402, kierto: 'vaaka' },
-  ipad11: { udid: process.env.PARITEETTI_IPAD11_UDID || 'C1D5E34C-DFA8-4326-AD85-92B58A672AA7', w: 834, h: 1210, kierto: 'pysty' },
-  ipad13: { udid: '88939C12-2D15-4514-B107-DF6DAAABB227', w: 1032, h: 1376, kierto: 'pysty' },
+  'iphone-vaaka': { udid: process.env.PARITEETTI_VAAKA_UDID || 'A885020B-772D-4452-BFC8-E9F422BBDD21', w: 874, h: 402, kierto: 'vaaka' },
+  ipad11: { udid: process.env.PARITEETTI_IPAD11_UDID || 'F7513985-C8BC-4E97-8D29-9C9BD420E962', w: 834, h: 1210, kierto: 'pysty' },
+  ipad13: { udid: '00CF62C2-2FE6-4993-8475-5786CC40A7A3', w: 1032, h: 1376, kierto: 'pysty' },
 };
 const BUNDLE = 'app.matkakirja.proto3d';
 

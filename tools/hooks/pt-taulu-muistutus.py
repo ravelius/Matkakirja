@@ -11,18 +11,31 @@ Hook (vain Päätoimittajan checkout, Matkakirja-fable/.claude/settings.local.js
 - KONTEKSTIVAHTI (molemmat tapahtumat, myös roolien viestit): lukee session oman tallenteen viimeisen
   mallikutsun kontekstin ja muistuttaa 30/35/40 %:ssa (PT 30 pehmeä / 40 kova; KK 35 aloitus.md / 40 kortti).
   Viesti kertoo kummankin säännön, koska koukku ei tiedä roolia. Ei riipu Postivahdista.
+- KK:N VÄLITTÄMÄT OMISTAJAN PÄÄTÖKSET (2.11.2026): UserPromptSubmit-viesti KK:lta (from=KK:n id), jonka rivi alkaa
+  "OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA klo", muistuttaa kirjaamaan sen työlistaan tools/asemataulu/tyolista.py:llä
+  (omistaja puhuu vain Keskustelukanavan kautta, joten ennen näitä viestejä ei muistutettu lainkaan).
+- TYÖLISTAN AKTIIVISET VANHENTUNEET (molemmat tapahtumat): enintään 3 "työn alla" -riviä, joiden ts on yli 3 h mutta alle 48 h vanha.
 Muistutus enintään kerran 10 minuutissa per laji ja sessio (tila /Users/Shared/Claude/hooks/.pt-taulu-tila.json).
 Ei koskaan estä mitään; virheessä hiljaa.
 """
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 
-TILA = "/Users/Shared/Claude/hooks/.pt-taulu-tila.json"
+TILA = os.environ.get("PT_TAULU_TILA") or "/Users/Shared/Claude/hooks/.pt-taulu-tila.json"
 VALI = 600
-DATA = "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo"
+DATA = os.environ.get("PT_TAULU_DATA") or "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo"
+TARKISTIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "asemataulu", "tarkista-junat.py")
+if not os.path.exists(TARKISTIN):  # asennettu kopio /Users/Shared/Claude/hooks/ (KK 2.11.)
+    TARKISTIN = "/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tarkista-junat.py"
+# vain KK:n lähettämä viesti, jonka rivi alkaa päätöksellä tai pyynnöllä (KK 2.11. 12.1x: PT:n lainaus laukaisi muistutuksen KK:ssa)
+KK_ID = "local_37f7c945-e1a0-4638-90b8-93c389a36fbe"
+OMISTAJAN_VIESTI = re.compile(r"(?m)^\s*(OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA) klo")
+TYOLISTA_KOMENTO = "python3 -I tools/asemataulu/tyolista.py"
+VANHA_H = 3
 JUNA = re.compile(r"KUITATTU|LUKITSE|OMISTAJA PYYSI|BUILD 1\d\d|TF 1\d\d|juna(an)? 1\d\d", re.I)
 IKKUNA = 1_000_000  # Opus 1 M (get_usage: contextWindow 1000000)
 LOPPU_TAVUT = 3_000_000  # viimeinen mallikutsu löytyy tallenteen lopusta
@@ -110,6 +123,12 @@ def kontekstivahti(d, sessio):
 def taulumuistutus(d, tapahtuma, sessio):
     if tapahtuma == "UserPromptSubmit":
         p = str(d.get("prompt") or "")
+        if f'from="{KK_ID}"' in p and OMISTAJAN_VIESTI.search(p):
+            if saa_muistuttaa("omistaja-kk", sessio):
+                return ("ASEMATAULU (hook): Keskustelukanava välitti omistajan päätöksen tai pyynnön. Kirjaa se työlistaan "
+                        f"samassa vuorossa: {TYOLISTA_KOMENTO} lisaa \"OTSIKKO\" --teksti \"…\" --lisa \"…\" (uusi) tai "
+                        f"{TYOLISTA_KOMENTO} tilanne \"OTSIKKO\" \"teksti\" [--juna N] (olemassa oleva rivi); valmis: … valmis \"OTSIKKO\" \"teksti\".")
+            return None
         if not p.strip() or "cross-session-message" in p or p.lstrip().startswith(("JONOKIERROS", "<", "Another Claude session")):
             return None
         if saa_muistuttaa("omistaja", sessio):
@@ -125,6 +144,77 @@ def taulumuistutus(d, tapahtuma, sessio):
     return None
 
 
+def junarivivahti(d, sessio):
+    """Junarivien muoto (omistaja 2.11.2026): ajaa tarkistimen paikalliselle talo-kansiolle ja ilmoittaa virheet
+    (enintään 3 riviä, kerran 5 min välein per sessio). Aikaraja 10 s; virheessä hiljaa."""
+    if not os.path.isdir(DATA) or not os.path.exists(TARKISTIN):
+        return None
+    try:
+        r = subprocess.run([sys.executable, "-I", TARKISTIN, "--kansio", DATA], capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    virheet = [x[7:] for x in r.stdout.splitlines() if x.startswith("VIRHE: ")]
+    if not virheet or not saa_muistuttaa("junarivit", sessio, 300):
+        return None
+    return ("JUNARIVIT VIRHEELLISET: %d virhettä, korjaa junat.json tools/asemataulu/juna.py:llä (ei käsin): %s"
+            % (len(virheet), " | ".join(v[:140] for v in virheet[:3])))
+
+
+def tyolistavanhat(d, sessio):
+    """Yli 3 h päivittämättömät työn alla/kesken -rivit ja keskeneräiset rivit, joiden uusin tilanne sanoo valmis
+    (omistaja 2.11. 11.49: "Työlistassa on vielä vanhoja juttuja"); enintään 3 kumpaakin, kerran 10 min per sessio."""
+    polku = os.path.join(DATA, "tyolista.json")
+    if not os.path.exists(polku):
+        return None
+    with open(polku, encoding="utf-8") as f:
+        tl = json.load(f)
+    nyt = time.time() * 1000
+    vanhat = []
+    valmiit = []
+    for r in tl.get("rivit") or []:
+        if not isinstance(r, dict) or not re.search(r"työn alla|kesken|jonossa", str(r.get("tila", "")), re.I):
+            continue
+        uusin = str(r.get("tilanne", "")).split("\n")[0]
+        if re.search(r"\bvalmis\b|valmiina junassa|junassa 2\d\d \(TF", uusin, re.I) and not re.search(r"\bei valmis|kun .* valmis", uusin, re.I):
+            valmiit.append(str(r.get("otsikko", "?"))[:60])
+        ts = r.get("ts")
+        if isinstance(ts, str) and ts.strip().isdigit():
+            ts = int(ts)
+        if isinstance(ts, bool) or not isinstance(ts, (int, float)):
+            continue
+        ika_h = (nyt - ts) / 3_600_000
+        if ika_h > VANHA_H:
+            vanhat.append((ika_h, str(r.get("otsikko", "?"))[:60]))
+    if not (vanhat or valmiit) or not saa_muistuttaa("tyolista-vanha", sessio):
+        return None
+    vanhat.sort(reverse=True)
+    osat = []
+    if vanhat:
+        osat.append("työn alla -rivejä ilman tuoretta tilannetta: "
+                    + "; ".join("%s (%d h)" % (o, h) for h, o in vanhat[:3]))
+    if valmiit:
+        osat.append("tilanne sanoo valmis mutta tila ei: " + "; ".join(valmiit[:3]))
+    return (f"TYÖLISTA (hook): {'. '.join(osat)}. Päivitä: "
+            f"{TYOLISTA_KOMENTO} tilanne \"OTSIKKO\" \"teksti\" [--juna N] tai valmis.")
+
+
+def odottavat_aamulla(d, sessio):
+    """Odottaa-rivit kerran päivässä aamulla (omistaja 2.11.2026 klo 11.59): ensimmäisellä tapahtumalla klo 6–12."""
+    nyt = time.localtime()
+    if not 6 <= nyt.tm_hour < 12:
+        return None
+    polku = os.path.join(DATA, "tyolista.json")
+    if not os.path.exists(polku):
+        return None
+    with open(polku, encoding="utf-8") as f:
+        tl = json.load(f)
+    odottavat = [r for r in tl.get("rivit") or [] if isinstance(r, dict) and str(r.get("tila", "")) == "pidossa"]
+    if not odottavat or not saa_muistuttaa("odottavat-" + time.strftime("%Y%m%d", nyt), sessio, vali=86400):
+        return None
+    return (f"TYÖLISTA (hook, kerran päivässä aamulla): käy {len(odottavat)} Odottaa-riviä läpi: valmiit valmiiksi, "
+            f"korvautuneet pois, jatkuvat Työn alle, muille tämän päivän tilanne ({TYOLISTA_KOMENTO} tilanne|valmis).")
+
+
 def main():
     try:
         d = json.load(sys.stdin)
@@ -133,7 +223,7 @@ def main():
     tapahtuma = d.get("hook_event_name") or "PostToolUse"
     sessio = str(d.get("session_id") or "")
     tekstit = []
-    for osa in (kontekstivahti, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
+    for osa in (kontekstivahti, junarivivahti, tyolistavanhat, odottavat_aamulla, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
         try:
             t = osa(d, sessio)
         except Exception:  # noqa: BLE001 — yksi osa ei saa kaataa toista

@@ -18,7 +18,7 @@
   }
  },
  "maasto": {
-  "poltto": "2026-09-24-maailma",
+  "poltto": "2026-10-29-maailma",
   "available": [
    [{"startX":0,"startY":0,"endX":1,"endY":0}],
    [{"startX":0,"startY":0,"endX":3,"endY":1}],
@@ -35,34 +35,34 @@
    [{"startX":3709,"startY":2821,"endX":3731,"endY":2821},{"startX":3891,"startY":2821,"endX":4369,"endY":2821},{"startX":4619,"startY":2821,"endX":4710,"endY":2843},{"startX":4824,"startY":2821,"endX":5119,"endY":2866},{"startX":3936,"startY":2822,"endX":4369,"endY":2843},{"startX":3936,"startY":2844,"endX":4391,"endY":2866},{"startX":4414,"startY":2844,"endX":4437,"endY":2866},{"startX":4619,"startY":2844,"endX":4733,"endY":2866},{"startX":3527,"startY":2867,"endX":3527,"endY":2888},{"startX":3891,"startY":2867,"endX":4391,"endY":2867},{"startX":4414,"startY":2867,"endX":4460,"endY":2888},{"startX":4573,"startY":2867,"endX":5119,"endY":2888},{"startX":3891,"startY":2868,"endX":4073,"endY":2888},{"startX":4096,"startY":2868,"endX":4391,"endY":2888},{"startX":3527,"startY":2889,"endX":3549,"endY":2912},{"startX":3891,"startY":2889,"endX":4482,"endY":2889},{"startX":4551,"startY":2889,"endX":5119,"endY":2934},{"startX":3891,"startY":2890,"endX":4095,"endY":2911},{"startX":4232,"startY":2890,"endX":4482,"endY":2911},{"startX":3868,"startY":2912,"endX":4141,"endY":2934},{"startX":4232,"startY":2912,"endX":4505,"endY":2912},{"startX":4278,"startY":2913,"endX":4323,"endY":3002},{"startX":4369,"startY":2913,"endX":4505,"endY":2934},{"startX":3868,"startY":2935,"endX":4209,"endY":2958},{"startX":4369,"startY":2935,"endX":5119,"endY":2935},{"startX":4437,"startY":2936,"endX":5119,"endY":2957},{"startX":4369,"startY":2958,"endX":5119,"endY":2979},{"startX":3891,"startY":2959,"endX":4118,"endY":2979},{"startX":4164,"startY":2959,"endX":4209,"endY":2979},{"startX":3891,"startY":2980,"endX":4209,"endY":2980},{"startX":4346,"startY":2980,"endX":5119,"endY":2980},{"startX":3891,"startY":2981,"endX":4187,"endY":3002},{"startX":4346,"startY":2981,"endX":4505,"endY":3002},{"startX":4528,"startY":2981,"endX":5119,"endY":3002},{"startX":3868,"startY":3003,"endX":4187,"endY":3025},{"startX":4232,"startY":3003,"endX":4255,"endY":3025},{"startX":4278,"startY":3003,"endX":5119,"endY":3003},{"startX":4278,"startY":3004,"endX":4755,"endY":3025},{"startX":4846,"startY":3004,"endX":4915,"endY":3026},{"startX":5006,"startY":3004,"endX":5119,"endY":3025},{"startX":3868,"startY":3026,"endX":4755,"endY":3026},{"startX":4983,"startY":3026,"endX":5119,"endY":3048},{"startX":3868,"startY":3027,"endX":4414,"endY":3048},{"startX":4437,"startY":3027,"endX":4755,"endY":3048},{"startX":3868,"startY":3049,"endX":4778,"endY":3049},{"startX":4846,"startY":3049,"endX":4915,"endY":3071},{"startX":4937,"startY":3049,"endX":5119,"endY":3071},{"startX":4050,"startY":3050,"endX":4778,"endY":3071},{"startX":4050,"startY":3072,"endX":4801,"endY":3093},{"startX":4824,"startY":3072,"endX":5119,"endY":3093},{"startX":4027,"startY":3094,"endX":5119,"endY":3116},{"startX":3982,"startY":3117,"endX":5119,"endY":3139},{"startX":3959,"startY":3140,"endX":5119,"endY":3162},{"startX":3936,"startY":3163,"endX":5119,"endY":3163},{"startX":3936,"startY":3164,"endX":3982,"endY":3184},{"startX":4027,"startY":3164,"endX":5119,"endY":3184},{"startX":3936,"startY":3185,"endX":5119,"endY":3185},{"startX":3959,"startY":3186,"endX":5119,"endY":3230},{"startX":3845,"startY":3208,"endX":3936,"endY":3230},{"startX":3845,"startY":3231,"endX":5119,"endY":3231},{"startX":3845,"startY":3232,"endX":4141,"endY":3254},{"startX":4187,"startY":3232,"endX":5119,"endY":3276},{"startX":3845,"startY":3255,"endX":4118,"endY":3276},{"startX":3845,"startY":3277,"endX":4095,"endY":3299},{"startX":4255,"startY":3277,"endX":5119,"endY":3299},{"startX":3891,"startY":3300,"endX":4073,"endY":3322},{"startX":4278,"startY":3300,"endX":4460,"endY":3321},{"startX":4551,"startY":3300,"endX":5119,"endY":3344},{"startX":4278,"startY":3322,"endX":4482,"endY":3344},{"startX":4505,"startY":3322,"endX":4528,"endY":3344},{"startX":3913,"startY":3323,"endX":4050,"endY":3344},{"startX":3891,"startY":3345,"endX":4073,"endY":3367},{"startX":4232,"startY":3345,"endX":5119,"endY":3345},{"startX":4232,"startY":3346,"endX":4551,"endY":3366},{"startX":4573,"startY":3346,"endX":5119,"endY":3389},{"startX":4209,"startY":3367,"endX":4551,"endY":3389},{"startX":3913,"startY":3368,"endX":4050,"endY":3389},{"startX":3913,"startY":3390,"endX":4073,"endY":3390},{"startX":4187,"startY":3390,"endX":5119,"endY":3436},{"startX":3936,"startY":3391,"endX":4073,"endY":3412},{"startX":3936,"startY":3413,"endX":4095,"endY":3413},{"startX":4004,"startY":3414,"endX":4095,"endY":3436},{"startX":3913,"startY":3436,"endX":3959,"endY":3481},{"startX":4187,"startY":3437,"endX":4505,"endY":3457},{"startX":4551,"startY":3437,"endX":5119,"endY":3457},{"startX":4187,"startY":3458,"endX":5119,"endY":3481},{"startX":3549,"startY":3481,"endX":3731,"endY":3503},{"startX":4232,"startY":3482,"endX":5119,"endY":3504},{"startX":3527,"startY":3504,"endX":3822,"endY":3549},{"startX":4278,"startY":3505,"endX":5119,"endY":3527},{"startX":4323,"startY":3528,"endX":5119,"endY":3595},{"startX":3549,"startY":3550,"endX":3777,"endY":3572},{"startX":3527,"startY":3595,"endX":3549,"endY":3617},{"startX":4369,"startY":3596,"endX":5006,"endY":3618},{"startX":5051,"startY":3596,"endX":5119,"endY":3618},{"startX":3527,"startY":3618,"endX":3595,"endY":3639},{"startX":4414,"startY":3619,"endX":4960,"endY":3640},{"startX":3527,"startY":3640,"endX":3640,"endY":3686},{"startX":3868,"startY":3640,"endX":3913,"endY":3662},{"startX":4505,"startY":3641,"endX":4824,"endY":3663},{"startX":3868,"startY":3663,"endX":3959,"endY":3686},{"startX":4596,"startY":3664,"endX":4778,"endY":3686}]
   ],
   "keskitavut": {
-   "0": 3682,
-   "1": 2365,
-   "2": 1181,
-   "3": 774,
-   "4": 471,
-   "5": 387,
-   "6": 636,
-   "7": 3153,
-   "8": 4102,
-   "9": 4828,
-   "10": 5965,
-   "11": 6881,
-   "12": 8926
+   "0": 7189,
+   "1": 3620,
+   "2": 2206,
+   "3": 1135,
+   "4": 1001,
+   "5": 934,
+   "6": 1584,
+   "7": 5184,
+   "8": 7867,
+   "9": 8385,
+   "10": 6010,
+   "11": 7644,
+   "12": 9899
   },
   "purettu": {
-   "0": 8261,
-   "1": 4869,
-   "2": 2373,
-   "3": 1385,
-   "4": 749,
-   "5": 578,
-   "6": 1078,
-   "7": 6076,
-   "8": 8444,
-   "9": 10975,
-   "10": 13088,
-   "11": 14987,
-   "12": 19259
+   "0": 18309,
+   "1": 8709,
+   "2": 4805,
+   "3": 2350,
+   "4": 1808,
+   "5": 1651,
+   "6": 3034,
+   "7": 11292,
+   "8": 18799,
+   "9": 19225,
+   "10": 13207,
+   "11": 16736,
+   "12": 21809
   }
  },
  "media": {

@@ -7,8 +7,8 @@ docs/raamattu-loki/paatokset-2026-09.md ja -2026-10.md, otsikot "ASEMATAULU: …
 SPEKSI (19.10.)" ja "ASEMATAULU TARKENNUS: LUKITUN JUNAN RIVI").
 
 Ylläpitäjä: Päätoimittaja. Jokainen sivun, skriptin, ohjeen tai tietomuodon muutos tehdään docs-PR:llä kansioon tools/asemataulu/ ja
-tähän speksiin samana päivänä. Työkansio päivittyy mergen jälkeen itsestään seuraavalla 5 min kierroksella (luku 2, KIERROS);
-kenenkään ei tarvitse muistaa ajaa komentoa.
+tähän speksiin samana päivänä. Työkansio päivittyy mergen jälkeen itsestään seuraavalla Asemataulun kierroksella (luku 2, KIERROS; kierroksia vain Boostin aikana
+tai PT:n pyynnöstä, luku 8).
 
 ## 1. Tiedostot: koodi repossa, tila työkansiossa
 
@@ -98,7 +98,14 @@ KIRJOITUSOHJE (sama kaikille tileille ja kirjoittajille; tarkistin valvoo, luku 
    19.10.2026 klo 19.20). Otsikot vain "Työn alla:" ja "Valmiina:" (lukittu: vain "Valmiina:"; TF: vain "Uutta (…):"). Ei "Korjatut:",
    "Odottaa valintaasi:" eikä muita. Kohdat ranskalaisin viivoin (–), rivinvaihdot säilyvät, kukin asia kerran.
 3. Ei ☑/☐/✅/✓-merkkejä (omistaja 19.10.2026 klo 19.20) eikä päivitysaikaa junarivillä (13.10.).
-4. JUNAKORTTI (omistaja 14.10.2026 klo 23.59): TF-kortissa vain yksi "Uutta:"-lista (pyydetyt muutokset ja muut uudistukset).
+4. JUNARIVIT KIRJOITETAAN VAIN KOMENNOLLA (omistaja 2.11.2026), käsin kirjoitus ja suorat ArtifactData-kirjoitukset junat-dokumenttiin kielletty:
+   `python3 -I tools/asemataulu/juna.py [--kansio <data/talo>] lisaa|valmis|lukitse|tf --juna N …` (lisaa = Työn alle; valmis = Työn alla → Valmiina,
+   teksti tai osa siitä; lukitse = vain Valmiina jää; tf = TF-rivi, `--aika HH.MM`). Komento muotoilee, poistaa kohdista ajat, päivittää ts:t
+   ja ajaa tarkistimen ennen tallennusta. Säännöt: avoimessa junassa "Työn alla:" ja "Valmiina:" (Valmiina saa olla tyhjä), lukitussa vain
+   "Valmiina:"; kohtarivillä ei päivämäärää, kellonaikaa eikä "klo":ta; kukin kohta kerran; kohta enintään 110 merkkiä; avoimen junan
+   Työn alla -kohdassa ei valmiin työn sanoja (viety, korjattu, kuitattu, valmis, hyväksyit). TF-rivin otsikon "Uutta (… klo HH.MM …):" aika
+   on sallittu. TF 217:sta alkaen tarkistetaan; vanhemmat TF-rivit ohitetaan. Koukku pt-taulu-muistutus.py ilmoittaa virheet PT:lle.
+5. JUNAKORTTI (omistaja 14.10.2026 klo 23.59): TF-kortissa vain yksi "Uutta:"-lista (pyydetyt muutokset ja muut uudistukset).
 
 | Kenttä | Pakollinen | Muoto | Käyttö |
 |---|---|---|---|
@@ -207,6 +214,13 @@ Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä m
   millisekunteja lukuna (merkkijono normalisoidaan); puuttuva `ts` = "ei päivitysaikaa" (punainen, rivi PT:lle, ei siirtoa pitoon).
   PT:lle tulostuvat rivit `TYOLISTA VANHA|EI TS|PIDOSSA|TUPLA|LIIKAA|…` enintään kerran 6 tunnissa per rivi; Asemataulu välittää ne PT:lle.
   PT kirjoittaa rivin `ts`:n aina, kun se päivittää rivin.
+- TYÖLISTA.PY (omistaja 2.11.2026: "miten tuon työlistankin saisi jatkossa päivittymään automaattisesti?"):
+  `tools/asemataulu/tyolista.py` on PT:n ainoa suositeltu tapa kirjoittaa tyolista.json (kuten juna.py junariveille):
+  `lisaa "OTSIKKO" --teksti … --lisa …`, `tilanne "OTSIKKO" "teksti" [--edistys N] [--juna N]` ja
+  `valmis "OTSIKKO" "teksti" [--juna N [--juna-kohta …]]`. Komento lisää tilanteen eteen ("pp.kk. hh.mmx: …", vanha → "Aiempi: …"),
+  päivittää rivin ja ylätason `ts`:n, poistaa vahti-kentän ja kirjaa halutessa saman asian junaan (juna.py) yhdellä komennolla.
+  Koukku `tools/hooks/pt-taulu-muistutus.py` muistuttaa komennosta, kun Keskustelukanavan välittämässä viestissä on
+  "OMISTAJAN PÄÄTÖS|PYYNTÖ|OMISTAJA klo", ja listaa enintään 3 työn alla -riviä, joiden `ts` on yli 3 h vanha, sekä keskeneräiset rivit, joiden uusin tilanne sanoo valmis.
 - LAITTEET ennen rooleja: ruudut iPad, Blender, Unity-käännökset, Pilviajot, Simulaattorit,
   Codex-tilaukset ja Googlen musiikki (Lyria-ajot). Käytössä vihreä ja "Rooli: mitä", vapaa harmaa,
   prosessorin käyttö viitenä pienenä palkkina ja prosenttina. Otsikko näyttää käytössä olevat laitteet
@@ -225,25 +239,27 @@ Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä m
 
 ## 8. Päivitysrytmi
 
-- CRONIT (Asemataulu-sessio luo ne heti nollauksen jälkeen ilman uutta lupaa, omistaja 15.10.2026 klo 23.35): vain A `*/5`;
-  B-cronia ei ole (20.10.2026) eikä kulutus-cronia (Kulutus poistettu 20.10.2026 klo 23.32). Tarkat askeleet: ASEMATAULU-ROOLI.md.
+- EI PYSYVÄÄ CRONIA (omistaja 31.10.2026 klo 22.49: "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä. Nyt se ei
+  ole päällä"; palauttaa 14.10. klo 23.39 linjan "muulloin kierros A ja viennit tauolla" ja kumoaa 15.10. klo 23.35 pysyvän A-cronin):
+  Asemataulu luo A `*/5` -cronin vain Boostin ajaksi ja poistaa sen itse, kun Boost päättyy; B-cronia ei ole (20.10.2026) eikä kulutus-cronia (Kulutus poistettu 20.10.2026 klo 23.32). Tarkat askeleet: ASEMATAULU-ROOLI.md.
 - BOOST = TÄYSI TARKISTUS (omistaja 20.10.2026 klo 09.56; aiemmin 14.10. klo 22.34–23.39, Raamattu 7.39): "kun se painetaan päälle,
   sen pitäisi tarkistaa että kaikki osiot taulusta ovat ajantasalla ja pitää ne ajantasalla". Napin selite "Tarkista ja päivitä koko
-  taulu tunniksi". Nappi kirjoittaa `talo/boost` `{paalla, alkoi, paattyy}`; Asemataulun A-kierros (5 min) huomaa sen ja tekee heti
-  täyden tarkistuksen: mittarit, roolit, laitteet, junat TF-lokeja vasten ja työlista (B), sama 5 min välein
-  tunnin ajan. Postivahti herättää Asemataulun lisäksi `paattyy`-kentän perusteella. Boost sammuu itsestään tunnin kuluttua.
-- ILMAN BOOSTIA: Asemataulu ei kokoa eikä tarkista itse; se kokoaa vain roolikortit (`kierros.py --vain-roolit`, luku 6) ja vie
-  sessioiden omat kirjoitukset (PT junat, työlista, huom, VAATII TOIMIA) muuttuneina sekä synkka.py:n siivoamat toimi-dokumentit. Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
+  taulu tunniksi". Nappi kirjoittaa `talo/boost` `{paalla, alkoi, paattyy}`. BOOSTIN HUOMAAMINEN: Postivahti lukee `talo/boost`in joka
+  kierroksellaan (KIERROS.md) ja herättää Asemataulun kerran per Boost ("BOOST päällä klo HH.MM–HH.MM"); Asemataulu tekee heti
+  täyden tarkistuksen (mittarit, roolit, laitteet, junat TF-lokeja vasten ja työlista, B), luo A `*/5` -cronin ja toistaa saman
+  tunnin ajan. Boost sammuu itsestään tunnin kuluttua; ensimmäinen kierros sen jälkeen poistaa cronin.
+- ILMAN BOOSTIA taulu ei päivity itsestään: Asemataululla ei ole ajastusta. Sessiot kirjoittavat omat dokumenttinsa suoraan
+  tauluun (PT junat, työlista, huom ja VAATII TOIMIA ArtifactDatalla, `ts` mukana). PT:n pyynnöstä Asemataulu ajaa yhden kierroksen
+  (roolikortit `kierros.py --vain-roolit`, luku 6, ja synkka.py). Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
   itse kuten ennen. Raati ja Testaajat klo 08 ja kun uusi juna saapuu TF:ään.
 - PÄIVITYSNAPPI (omistaja 10.10.2026): oikean yläkulman nappi näyttää mittareiden iän (nyt, 5 min, 1 h 5 min; punainen yli 15 min).
   Napautus lähettää PT:n sessiolle kommentin "Päivitä Asemataulu"; PT ajaa `paivita.py`, vie tiedot batchilla (if_version) ja
   ratkaisee ketjun.
 - KATSOJAN SYKE: näkyvissä oleva sivu kirjoittaa `talo/katsoja.ts` 2 min välein ja esiin tullessaan; vienti ei riipu sykkeestä.
-- VIENTI JOKA KIERROKSELLA (20.10.2026: taulun otsikossa "päivitetty 22.39", vaikka tyolista.json oli 23.07): Asemataulun A-kierros
-  ajaa synkka.py:n PT:n dokumenteille (junat, tyolista, huom) myös ilman Boostia; PT:n oma suora kirjoitus ei
-  korvaa vientiä. Taulun aika on dokumentin `ts`, joten PT päivittää myös sen.
+- VIENTI (20.10.2026: taulun otsikossa "päivitetty 22.39", vaikka tyolista.json oli 23.07): Asemataulun kierros ajaa synkka.py:n
+  PT:n dokumenteille (junat, tyolista, huom); ilman Boostia PT kirjoittaa ne itse suoraan tauluun ja TILA-tiedostoon. Taulun aika on dokumentin `ts`, joten PT päivittää myös sen.
 - KONTEKSTIPALKIN TUOREUS (omistaja 21.10.2026 klo 01.13: taulu näytti KK:n 35 %, kun luku oli 29 %): `kk_konteksti` ja `pt_konteksti`
-  haetaan `get_usage`lla JOKA kierroksella, myös ilman Boostia, ja heti kun Postivahti ilmoittaa nollauksesta. Jos luku on yli 15 min vanha
+  haetaan `get_usage`lla jokaisella kierroksella ja heti kun Postivahti ilmoittaa nollauksesta. Jos luku on yli 15 min vanha
   tai session id on vaihtunut, vanhaa lukua ei viedä: kentät poistetaan mittarit-dokumentista, kunnes tuore luku on haettu (sivun "päivittyy"-näyttöä ei tehdä, PT 21.10.2026).
 - VANHENEMINEN: synkka.py ilmoittaa "VANHA|<doc>" (Asemataulu → PT "ASEMATAULU VANHA"), kun junat tai työlista on yli 45 min jäljessä
   viimeisimmästä tapahtumasta tai työlista yli 6 h päivällä.
@@ -280,6 +296,7 @@ Tekstisäännöt (otsikot, johdanto, merkit, ei-pelin asiat) koskevat kolmea nä
 | otsikot (KAIKKI rivit, ei vain näkyvät): avoin Työn alla + Valmiina, lukittu vain Valmiina, TF vain yksi "Uutta (pp.kk. klo HH.MM; myös Macille):"; kukin asia kerran; ei valintamerkkejä | 18.10. (C5), 19.10. 19.48, 20.10. 09.56 |
 | Juna N: tilassa ei "Testaajilla"; Juna N, jota uudempi TF on, on TF-rivi | 20.10. 09.56 (206 ja 207 jäivät Juna-riveiksi) |
 | `--tf-lokit <julkaisija-tyokalut>`: juna, joka on lokin mukaan sisäisillä, on "TF N" ja otsikon aika = lokin SISAINEN-aika (kolme uusinta) | 20.10. 09.56, Boostin täysi tarkistus |
+| junarivin muoto (tarkista_muoto): avoimessa Työn alla + Valmiina, lukitussa Valmiina; kohdissa ei pp.kk.-päivämääriä, HH.MM-aikoja eikä "klo"; kukin kohta kerran; kohta ≤ 110 merkkiä; avoimen junan Työn alla ei valmiin työn sanoja; TF N < 217 ohitetaan; kirjoitus vain juna.py:llä (tests/asemataulu-juna-komento.test.mjs) | 2.11. |
 | eteneminen ilman nimeä = tyhjennetty (juna TF:ssä), ei tarkisteta | luku 5 |
 | teksti alkaa otsikolla (ei johdantoa); ei ☑/☐/✅/✓ | 19.10. 19.20 |
 | ei ei-pelin asioita (Raamattu, Asemataulu, tarkistin, tuotantopohja, työkalu) junarivin kohdissa | 19.10. 19.48 |

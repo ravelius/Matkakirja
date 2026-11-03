@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Simulaattorien yösiivous joka yö klo 04.00 käyttäjänä koodaus (omistaja 1.11.2026; tools/levy/simu_yosiivous.py).
+     Asennus (omistaja, yksi rivi; kopioi skriptin ja plistin mainista ja ajaa kerran heti):
+     cp tools/levy/simu_yosiivous.py /Users/Shared/Claude/_levy/ && cp tools/levy/fi.matkakirja.simu-yosiivous.plist ~/Library/LaunchAgents/ && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/fi.matkakirja.simu-yosiivous.plist && launchctl kickstart gui/$(id -u)/fi.matkakirja.simu-yosiivous -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>fi.matkakirja.simu-yosiivous</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>-I</string>
+        <string>/Users/Shared/Claude/_levy/simu_yosiivous.py</string>
+        <string>--aja</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>4</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/Shared/Claude/_levy/simu-yosiivous-launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/Shared/Claude/_levy/simu-yosiivous-launchd.log</string>
+</dict>
+</plist>

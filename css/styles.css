@@ -18884,6 +18884,12 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * luokka .kohde-kevyt jää tunnisteeksi.
  */
 
+/* Piirroskartta (Pariisi, omistaja 31.10.2026 klo 19.52; PT 20.5x): rakennukset ovat jo piirroksessa, joten miniatyyri
+ * piiloon; laatikko jää napautusalaksi ja nimiön paikaksi, ihmetähti näkyy. */
+.kartta-piirroskartta .kohde-piirros-kuva {
+  visibility: hidden;
+}
+
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
   height: 100%;

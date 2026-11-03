@@ -48,6 +48,8 @@ KOODI = [
     ("syke.py", "syke.py"),
     ("elevenlabs.py", "elevenlabs.py"),
     ("tarkista-junat.py", "tarkista-junat.py"),
+    ("juna.py", "juna.py"),
+    ("tyolista.py", "tyolista.py"),
     ("hoitaja/kierros.py", "hoitaja/kierros.py"),
 ]
 SIEMEN = ["osoitteet.md"]  # + data/talo/*.json repon siemenkansiosta

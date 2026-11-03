@@ -34,7 +34,7 @@ done
 # Julkaisijan pysyvät työkalut (vahdit, merge, vienti, CDN); kertakäyttöiset ketju-/tf<N>-/merge-<PR>-skriptit eivät kuulu peiliin.
 for n in valoseppa-vahti.zsh valoseppa-vahti-kaynnista.zsh lukkovahti.zsh olavinlinna-vahti.zsh simu-muistivahti.zsh \
          merge-vihreana-sha.zsh odota-ja-mergea.zsh tarkista-cdn.zsh vie-indeksi-viimeisena.zsh vie-paketti-uusinta.zsh \
-         vie-paketti.sh cesium-tarkistus.zsh aanisivu-julkaise.zsh aanisivu-cf-luo.zsh; do
+         vie-paketti.sh cesium-tarkistus.zsh aanisivu-julkaise.zsh aanisivu-cf-luo.zsh nas-arkistoi-viedyt.zsh; do
   PARIT+=("$J/$n|$KOHDE/julkaisija/$n")
 done
 EROJA=0

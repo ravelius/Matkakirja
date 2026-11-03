@@ -45,10 +45,12 @@
   "1.64": "a7d69237b2a11d79",
   "1.65": "43301da4c1caa3be",
   "1.66": "f0a3305d04f89780",
-  "1.67": "32f04df5cff5f6ac"
+  "1.67": "32f04df5cff5f6ac",
+  "1.68": "8844dc7d886507a7",
+  "1.69": "1c7cd698b15b30bb"
  },
  "uusin": {
-  "skeemaversio": "1.67",
+  "skeemaversio": "1.69",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -206,18 +208,22 @@
     "takynosto",
     "tarkeys",
     "taso",
-    "tunnus"
+    "tunnus",
+    "viuhka"
    ],
    "kaupungit": [
     "aloitus",
+    "alue",
     "ambienssi",
     "asukkaat",
     "asukkaatAlue",
     "asukkaatLahde",
     "asukkaatVuosi",
     "data",
+    "esittelypaikat",
     "id",
     "intro",
+    "keskusta",
     "kielinayte",
     "korkeus",
     "lahtokohde",

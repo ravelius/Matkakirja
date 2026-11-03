@@ -57,6 +57,10 @@ export const VAATIMUKSET = {
   '1.66': ['kokoelma:kohdekartanPiirrokset', 'kohdekartanPiirrokset.kuva'],
   // Karttaseppä 31.10.2026: kadonneiden ihmeiden korostukset monumenteissa (omistaja 12.49, PT).
   '1.67': ['monumentit.korostukset'],
+  // Karttaseppä 2.11.2026: saapumiszoomauksen keskipisteet ja alueiden rajaukset.
+  '1.68': ['kaupungit.keskusta', 'kaupungit.alue', 'karttavalot.viuhka'],
+  // Karttaseppä 3.11.2026: saapumisen esittelykuvien paikat (KK:n suunnitelma 20261103-saapumisen-kuvat osa B).
+  '1.69': ['kaupungit.esittelypaikat'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

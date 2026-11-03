@@ -357,6 +357,19 @@ function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
  * uudessa näkymässä kartalta napauttamalla, aivan kuten kartalla on
  * aina voinut (avaaJuttu on merkissä kiinni, ei listassa).
  */
+/**
+ * Kohdekartan näkymä piirroskartan kanssa (Karttaseppä 31.10.2026, Pariisi): sama kartta, mutta kuva, piirtoRajat,
+ * pystykerroin ja lähde piirroskartasta; kainalot pois (piirros kattaa koko kaupungin). Ilman piirroskarttaa sama olio.
+ */
+function kohdekartanNakyma(kartta) {
+  const pk = kartta?.piirroskartta;
+  if (!pk) return kartta;
+  return {
+    ...kartta, varikartta: pk.polku, polku: pk.polku, piirtoRajat: pk.piirtoRajat, kainalot: undefined,
+    pystykerroin: pk.pystykerroin ?? 1, lahde: pk.lahde ?? kartta.lahde,
+  };
+}
+
 export function piirraKaupunkiKartta(ui, kohde, {
   cityId = null, esittely = true, selitelista = true, kuvagalleria = true,
   otsikko = true, zoomiNapit = true, opasteet = true, kokoruutuNappi = false,
@@ -374,7 +387,8 @@ export function piirraKaupunkiKartta(ui, kohde, {
     zoomiNapit = false; opasteet = false; kokoruutuNappi = false;
   }
   const kaupunkiId = cityId ?? ui.lehtitila.arrivalShownFor;
-  const kartta = KAUPUNKIKARTAT[kaupunkiId];
+  // Piirroskartta (Pariisi, omistaja 31.10.2026 klo 19.52): oma kuva, rajat ja pystykerroin; muuten sama kartta.
+  const kartta = kohdekartanNakyma(KAUPUNKIKARTAT[kaupunkiId]);
   if (!kartta) return;
   const lohko = html('div', 'kaupunkikartta');
   // OTSIKKO ON NYT "Nähtävyydet" (Raamattu, KARTTAUUDISTUKSEN
@@ -468,15 +482,17 @@ export function piirraKaupunkiKartta(ui, kohde, {
   const laajennettu = Boolean(kartta.piirtoRajat);
   if (laajennettu) {
     kehys.classList.add('kartta-laajennettu');
-    kehys.style.aspectRatio = String(karttaKuvasuhde(kartta.rajat));
+    kehys.style.aspectRatio = String(karttaKuvasuhde(kartta.rajat, kartta.pystykerroin));
     // Avauskortin kiinteä kaista rajaa kartan tällä suhteella (css/kaupunkinosto.css).
-    kehys.style.setProperty('--kartta-suhde', String(karttaKuvasuhde(kartta.rajat)));
+    kehys.style.setProperty('--kartta-suhde', String(karttaKuvasuhde(kartta.rajat, kartta.pystykerroin)));
     kotelo.classList.add('kartta-laajennettu');
-    kotelo.style.aspectRatio = String(karttaKuvasuhde(kartta.piirtoRajat));
+    kotelo.style.aspectRatio = String(karttaKuvasuhde(kartta.piirtoRajat, kartta.pystykerroin));
     kotelo.style.width = `${(10000 / ydin.leveys).toFixed(4)}%`;
     kotelo.style.left = `${((-ydin.x * 100) / ydin.leveys).toFixed(4)}%`;
     kotelo.style.top = `${((-ydin.y * 100) / ydin.korkeus).toFixed(4)}%`;
   }
+  // Miniatyyrit piiloon piirroskartalla (css/styles.css .kartta-piirroskartta); nimiöt, napautus ja tähdet jäävät.
+  if (kartta.piirroskartta) kehys.classList.add('kartta-piirroskartta');
   const kuva = document.createElement('img');
   kuva.alt = 'Kaupungin kartta';
   // Hiiren raahaus panoroi karttaa; ilman tätä selain aloittaisi
@@ -1025,7 +1041,8 @@ export function piirraKaupunkiKartta(ui, kohde, {
     if (ui.lehtitila.kulttuuriKuvaEl) ui.suljeKulttuuriKuva();
     else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit });
   });
-  hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
+  // Piirroskartalla merkit pysyvät piirretyn rakennuksen kohdalla (miniatyyrit piilossa, ei peittoa väistettävänä).
+  if (!kartta.piirroskartta) hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
   vaistaNumeroympyrat(kotelo, numeroympyrat);
   /*
    * Näkymävipu piirroksen ja värikartan välillä (omistajan tilaus

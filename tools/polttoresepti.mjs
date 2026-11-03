@@ -126,6 +126,43 @@ RESEPTITAULU['2026-09-26'] = Object.freeze({
    */
   deltaEdelliseen: Object.freeze({ resepti: '2026-09-25', laji: 'meri' }),
 });
+/*
+ * 2026-10-26 (omistaja 26.10.2026 klo 12.45 "Kyllä, korostetaan": matalat
+ * mäet, harjut ja laaksot näkyviin Tanskassa ja muilla tasangoilla, vuoret
+ * ennallaan): sama kuin tuotannon 2026-09-26, mutta lämpimään reliefiin
+ * lisätään tasankokorostus (maailmapiirto.js reliefi.tasanko). JSON
+ * yhdistyy reliefin oletuksiin, joten `{"tasanko":…}` = 'lammin' +
+ * korostus. Arvot GLO-90-kokeesta (Tanska ja Alpit, ero Alpeilla 0,04).
+ * Muutos koskee maata, ei merta, joten delta-polttoa edelliseen ei ole.
+ */
+export const TASANKO_2026_10_26 = Object.freeze({ kerroin: 4, k0: 0.02, pohjaM: 1500 });
+const { deltaEdelliseen: _d26, ...R26 } = RESEPTITAULU['2026-09-26'];
+RESEPTITAULU['2026-10-26'] = Object.freeze({
+  ...R26,
+  kuvaus: '2026-09-26 + tasankokorostus lämpimään reliefiin (omistaja 26.10.2026 klo 12.45)',
+  pohjaliput: R26.pohjaliput.map((l) => {
+    if (l === 'lammin') return JSON.stringify({ tasanko: TASANKO_2026_10_26 });
+    return l === '2026-09-26' ? '2026-10-26' : l;
+  }),
+});
+/*
+ * 2026-11-03 (PT 3.11.2026 kuittasi f5c016939): 2026-10-26:n korostus oli liian
+ * heikko (k0 0,02 vaimensi juuri Tanskan rinteet). k0 0,06 ja kerroin 8, ja
+ * seututavoite 0,05 (seudun keskikaltevuus × (1 + paino) ≤ 0,05), jotta Etelä-
+ * Suomen ja Smålannin kalliomaa ei rypisty. Kierros 3 (PT kuittasi b8968cf00):
+ * pohjaM 3000 ja maaM 400, jotta pintamallin metsät eivät täplitä z7:n
+ * Pohjois-Saksaa. Kokeet: proto-3d/_tyo/karttaseppa/
+ * tasangot-mäet-20261103/LUE.md. Maata, ei merta: ei deltaa.
+ */
+export const TASANKO_2026_11_03 = Object.freeze({ kerroin: 8, k0: 0.06, pohjaM: 3000, tavoite: 0.05, maaM: 400 });
+RESEPTITAULU['2026-11-03'] = Object.freeze({
+  ...RESEPTITAULU['2026-10-26'],
+  kuvaus: '2026-10-26, tasankokorostus vahvempana ja seututavoitteella (PT 3.11.2026)',
+  pohjaliput: RESEPTITAULU['2026-10-26'].pohjaliput.map((l) => {
+    if (l === JSON.stringify({ tasanko: TASANKO_2026_10_26 })) return JSON.stringify({ tasanko: TASANKO_2026_11_03 });
+    return l === '2026-10-26' ? '2026-11-03' : l;
+  }),
+});
 export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
 export function resepti(nimi) {

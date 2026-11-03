@@ -3392,3 +3392,15 @@ Omistaja (KK:n kortti, sanatarkasti): 'Tehdäänkö kontekstivahdille rivi, jonk
 ## TILINVAIHTO 31.10.2026 klo 22.3x (31.10.2026 klo 22.36)
 
 Päätililtä (org f04011ee, viikko 91 %) tilille org b408744a (tili c01e5d1e, vvi@vvi.fi). Vanhan tilin sessiot eivät näy tällä tilillä, joten nollaus samoina sessioina ei ollut mahdollinen: luotiin uudet KK (local_37f7c945), JU, NS, KS, VS, PK, NUI, LAV, Postivahti ja Asemataulu; PT local_5df52e10. Levossa olevat roolit merkitty osoitekirjaan ilman sessiota. Asemataulu: Qo5w6Wk4JSYRwYbyf2fJrm (tämän tilin vanha taulu päivitetty). Luovutus-PR:t 5750–5757 yhdistetty, kotikansiot mainiin (ohitettu posti, siirtoseppa, aanittaja, laitetestaaja).
+
+## ASEMATAULU: EI 5 MIN PÄIVITYSTÄ ILMAN BOOSTIA (31.10.2026 klo 22.51)
+
+OMISTAJAN PÄÄTÖS 31.10.2026 klo 22.49 (KK:n välittämä): "Asemataulu ei saa päivittyä 5min välein ilman että boost on päällä. Nyt se ei ole päällä". KK huomasi, että linja oli liukunut 14.10. klo 23.39 päätöksestä ("muulloin kierros A ja viennit tauolla"): 15.10. pysyvä A-cron ajoi */5 aina. PT:n toteutus: Asemataululla ei pysyvää cronia; A */5 luodaan vain Boostin ajaksi Postivahdin herätyksestä (KIERROS.md lukee talo/boostin) ja poistetaan, kun Boost päättyy; ilman Boostia sessiot kirjoittavat omat dokumenttinsa suoraan tauluun ja PT voi pyytää yksittäisen kierroksen. Muutettu: docs/moduulit/asemataulu.md luvut 0 ja 8, ASEMATAULU-ROOLI.md, Raamattu 7.39, docs/tilinvaihto.md.
+
+## PARIISI: CODEX MAALAA PERUSKARTAN ENSIN (KOE KAHDELLA PALALLA) (31.10.2026 klo 23.10)
+
+OMISTAJAN PÄÄTÖS 31.10.2026 klo 23.09 (KK:n kortti): omistaja kysyi "Onko Pariisin uuden kartan tekotapa järkevä?" ja "Osaisiko codex tehdä ilman liioittelua ensin peruskartan pseudo 3d:nä jonka päälle karikatyyrit laitetaan. Olisiko parempi näin?"; kortti "Kokeillaanko ensin sinun tapaasi kahdella vierekkäisellä palalla?" → "Kyllä (Suositus)". Codex maalaa kaksi vierekkäistä peruskarttapalaa ilman liioittelua; jos kadut, Seine ja reunat pysyvät, koko kaupunki tehdään näin, muuten Codex maalaa talot ja puut erillisinä kuvina ja koodi asettaa ne. PT: Karttaseppä tilaa (ohjekuvina v5:n geometria r3-c4 ja r3-c5 + G), saumatesti KS:llä; KS:n oma renderöinti v6 tauolle. Kokeen palat PT → KK G:n rinnalle ennen koko kaupunkia.
+
+## YÖLUPA: KK HYVÄKSYY OMISTAJAN PUOLESTA AAMUUN (omistaja 31.10.2026 klo 23.42) (31.10.2026 klo 23.42)
+
+Omistaja KK:lle: "Menen nukkumaan.Saat hyväksyä puolestani kaikki". KK hyväksyy aamuun asti omistajan puolesta, aina omistajan omia sanoja vasten (valon pari o3, Pariisin koepalat G:tä vasten, kortit). Roolien kysymykset KK:lle, ei odotusta aamuun. Rajat: ei ostoja, ei uusia pysyviä poistoja, ei asetuksia, avaimia eikä CLAUDE.md-tiedostoja, eikä jo päätettyä kumota. Juna 216 lähtee vain omistajan 21.08-ehdoilla (Pariisi valmis + valo hyväksytty). Omistajan Olavinlinna-poistoajo jatkuu (71/314 klo 23.42) → JU:n vahti, tulos KK:lle.
