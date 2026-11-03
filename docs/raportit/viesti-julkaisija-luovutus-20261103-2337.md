@@ -37,3 +37,7 @@ ODOTTAA NS:n SHA: iPad-todistus = a94:n sk-koko-nahtavyydet-v2-ju + laajin zoom 
 
 ## LISÄYS 23.44 (viimeinen)
 NS: silta-c/d viety. 628d1a90a (95a + c/d-sillat): seuraava iPad-kierros sillä, esikatselu tarvittaessa sk-sillat-v2. PT:n todistus odottaa NS:n yhdistelmä-SHA:ta (korjaukset + nimet). Tuloksia, joita ei vielä ole katsottu: ns-95a733ace, ns-95a-laite2, nui-laatat, ks-4e929f038, palvelijat v7, lav-parit, otsikko iPad + iPhone2, sali-vianhaku.
+
+## LISÄYS 23.46
+PT KÄSKY: Kartta-testit: kartta-testit-portti.zsh L2:lla 95a:n jälkeen. Kun lokissa "KARTTA-TESTIT NYT": viesti NS:lle "Kartta-testit nyt" (local_0f7f169f-2ceb-43d2-8fb4-223dda2c0870); NS:n kuittaus → touch kartta-testit-ok; muuten 5 min.
+LAV lisäys parien 01 + 05 vuorolle, runko 15d7274ad (esikatselu-skenaario): ui juoksupeli valo sijoita -115 215 -2.03; ui juoksupeli mika 0.27 0.10 / 0.75 0.95 / 0.67 0.09 → rivit LAV:lle (etuliite päätelty koodista, tarkista). Ei vielä jonossa.
