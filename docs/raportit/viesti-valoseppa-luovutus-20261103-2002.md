@@ -25,7 +25,9 @@ Esikatselu vain JU:n vuorolla (JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd aja
 ## TYÖN ALLA: osa B (PT 19.5x)
 Haara **linssiseppa2/pariisi-tyyli** (natiivi-backup), wt `/Users/Shared/Claude/wt/proto-linssiseppa2-k17`, HEAD 8e0660847.
 - SEURAAVAKSI: k5-tulos (sauma + vesi, kuvat myös NS:lle ja PT:lle JU:lta) ja k6-tulos (yläviisto Unityssä) → tarkista, parit PT:lle.
-- KS:ltä kysytty väliaikaiset korttelipinnat/julkisivunauha (ei vastausta 20.02); nyt kattopinnat v1 + yksiväriset seinät.
+- KS 20.0x: väliaikaisia yläviistopintoja EI ole; käytä katto-*-v1 (tila hylatty = vain koekäyttöön, ei vientiin) + yksiväristä julkisivua.
+  Kulmaohjetilaus 850208dab (pariisi-ylaviisto-20261103/TILAUS.md); arkin mukana tulee **kulmaohje.json** (korkeus_px_per_m, valon
+  atsimuutti, seinän sävyt valo/varjo) → tee ElavaVinotalot.Kulma, VarjoX/Y ja ElavaTyyli.SeinanVarit parametreiksi siitä. KS ilmoittaa arkista.
 - Kun KS:n kulmaohje + korttelipinnat + julkisivunauhat tulevat: VERSIOT (`codex-pinnat.py`), julkisivu pinnaksi seinäsävyjen tilalle
   (näytteistys seinän pituuden ja korkeuden mukaan), Kulma kulmaohjeen mukaan, TyyliVersio yv2, korttelikohtainen satunnaissiirto (riski 1).
 - Avoimet: seinän korkeus kapeilla kaduilla (riski 2), muste on segmenteittäin (suorituskyky; mittaa iPadilla osa D:ssä), käännetty kartta (kohta 5).
