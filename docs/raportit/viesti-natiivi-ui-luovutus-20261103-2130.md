@@ -20,6 +20,10 @@ Proto-repo: /Users/Shared/Claude/proto-3d/Matkakirja-proto, peili natiivi-backup
   PT: junalupa (723f738c0; JU:lle kerrottu kärki 7f0ccc451) seuraavalle kierrokselle. Web-puoli **PR 6216** (tyylikirja.json + styles.css).
 
 ## SEURAAJAN JONO
+0. **ENSIN (PT 3.11. 21.3x, luovutuksen jälkeen): Pariisin pystysauma lon 2,351** näkyy myös tavallisella elävällä kartalla ilman
+   koealuetta. VS:n k8: syy Cesiumin tasovalinta Z14-palarajalla 8298|8299 (ei piirros, ei yläviisto). Tiedot:
+   proto-3d/_tyo/linssiseppa2/pariisi-tyyli/k8/TULOS.md ja pari/a-b-c-sauma.png. Selvitä ja korjaa; laitetarkistus JU:n vuorolla, tulos PT:lle.
+   Cesium-asetusten historia: kysy NS:ltä.
 1. **4397cf20d-tulos** (JU): savu + muistivahti OK, salihyppy ys perillä (kuvat 40/60 s). VIKA → selvitä.
 2. **Kuvapari PARIISI Notre-Damen edessä** ennen 4397cf20d / jälkeen 7f0ccc451 (pyydetty JU:lta 21.2x) → PT:lle (PT vie KK:lle).
    Jos KK hylkää: palauta VarjoKuva/0,5 (7f0ccc451:n TraileriLiike-muutos) ja kysy PT:ltä.
