@@ -31,6 +31,9 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä.
   1482 palan piirtoa); zoomaus välitasojen läpi peruskartalla ja päättyy valmiiseen lähinäkymään. Tavoite: tavallisella matkalla ei
   odotusta eikä sumeaa loppukuvaa. Pohjana natiiviseppa/esilataus-218 2cf83b7c3 (työpuu wt/proto-natiiviseppa-esilataus); tämä ratkaisee
   jonon Osa C:n (omistajan valinta tehty).
+- **OMISTAJAN TÄSMENNYS 07.23:** "Siirtymällä tarkoitan kun pelaaja valitsee kohdekaupungin Nopan heiton jälkeen niin lataus alkaa
+  jo silloin" → esilataus käynnistyy KOHDEKAUPUNGIN VALINNASTA (nopanheiton jälkeen), ei nappulan liikkeestä. Mittaa aika
+  valinnasta perille, kylmä Lontoo.
 - Mittaa kylmä Lontoo uudelleen → video KK:lle (tunnettua vikaa EI leikata, aikaleima viestiin) + rivi PT:lle. Junaan PT:n kuittauksella.
 - Muistivika: juna 218 riittää (TF 217:ää ei korjata erikseen).
 - Perussarjan 404 (alla) vaikuttaa beigeihin ruutuihin → mittaa JU:n palautuskuittauksen jälkeen.
