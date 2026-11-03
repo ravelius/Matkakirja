@@ -1,5 +1,3 @@
-# Pala05 v2: korjattu 3.11.2026
+# Pala05 v3 – eteläranta korjattu
 
-Korvaa v1:n saumaehdokkaan. Seine kaartuu kaakkoon ja sen vesi jatkuu lukittuun pala06/10:n vesialueeseen. Saint-Lazaren etujulkisivu, katto ja itäpääty ovat nyt kokonaan lukon länsipuolella, itäreuna noin x1290. Kohteen havaittu etualapiste [1254,300].
-
-Lukittujen pikselien ero 0. Vastaanottajan uusi saumakatselmus vielä avoin; tätä ei merkitä hyväksytyksi ennen kuittausta.
+Korvaa v2:n. Seineä levennetty etelään lukitusrajan länsipuolella, alueella x1150–1306/y880–1024. Vesi jatkuu rajalle noin y912–1023, eikä vanha korttelikiila enää katkaise vesialuetta. Orsayn pohjoisrannan laituri ja aiemmin korjattu Saint-Lazare säilyvät. Uusi vastaanottajan saumakatselmus avoin.
