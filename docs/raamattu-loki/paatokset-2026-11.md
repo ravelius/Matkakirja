@@ -217,3 +217,7 @@ Omistajan kortti KK:ssa 'Rakennetaanko kaupunkikartat tällä periaatteella?' �
 ## NÄHTÄVYYS EI VEDEN PÄÄLLE (3.11.2026 klo 21.29–21.30) (3.11.2026 klo 21.30)
 
 Omistaja KK:n kortissa 'Onko Notre-Dame nyt tarpeeksi suuri?': "Ei se voi noin mennä veden päälle"; 21.30: "Ei se mene g versiossa kaanon. Katsokaa sieltä mallia". KK: G:ssä Notre-Dame seisoo saarella ja joki näkyy molemmin puolin; liioittelu korkeudessa ja julkisivussa. Kumoaa 20.4x-tulkinnan 'saa levitä joen päälle'. Kirjattu 2.204:n loppuun.
+
+## PUYIN TARINA EI KESKEN JUOKSUN (3.11.2026 klo 21.48–22.05) (3.11.2026 klo 22.05)
+
+Omistaja: "Juoksu pelin ei voi tulla kesken pelin mitään opetus kortteja"; kortilla tarkennus "Tarkoitin opetus korteilla puyin yms elämästä. Näin jonkin sellaisen edellisessä sessiossa" (kuva lokit/pk-keisari-kk2-7ac89ff33-2118/kk1-nosto-pelin-paalla.png); kortti 'Avautuuko Puyin tarina vain juoksun jälkeen?' → "Myös valikosta tauolla". Linja: Puyin tarinan kortit eivät tule juoksun aikana esiin itsestään, vain pelaajan valinnasta (☰ tauolla, lopetusruutu). 7ac89ff33 täyttää tämän, muutosta ei tehdä. KK:n ensimmäinen tulkinta (ohjainopetus pois, PR 6222) peruttu PR 6223:lla; 2.177 ennallaan. Kirjattu 2.200:aan.
