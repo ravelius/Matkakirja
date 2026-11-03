@@ -1,0 +1,461 @@
+[
+  {
+    "file": "aurinkokello.glb",
+    "triangles": 944,
+    "limit": 6000,
+    "boundsGltf": {
+      "min": [
+        -0.5559794306755066,
+        0.0,
+        -0.50763338804245
+      ],
+      "max": [
+        0.5559794306755066,
+        2.0,
+        0.50763338804245
+      ]
+    },
+    "dimensionsMeters": [
+      1.1119588613510132,
+      2.0,
+      1.0152667760849
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 1976644,
+    "sha256": "918ee7d4e01baf57878eee67e282dc035733aa1562db6acab162a28b4c162d50",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "kilpikonna.glb",
+    "triangles": 5970,
+    "limit": 6000,
+    "boundsGltf": {
+      "min": [
+        -0.8669212460517883,
+        0.0,
+        -1.0653496980667114
+      ],
+      "max": [
+        0.8663661479949951,
+        1.75,
+        1.2514656782150269
+      ]
+    },
+    "dimensionsMeters": [
+      1.7332873940467834,
+      1.75,
+      2.3168153762817383
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2159380,
+    "sha256": "e6e4a6b131b9bd9ad67a4122736ae732bc6c1458112b33c4cd07405d630949ff",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "kurki.glb",
+    "triangles": 2560,
+    "limit": 6000,
+    "boundsGltf": {
+      "min": [
+        -0.39984118938446045,
+        0.0,
+        -0.4248312711715698
+      ],
+      "max": [
+        0.39984118938446045,
+        2.0,
+        0.4248312711715698
+      ]
+    },
+    "dimensionsMeters": [
+      0.7996823787689209,
+      2.0,
+      0.8496625423431396
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2305148,
+    "sha256": "6ee0e62b6d9d8f0508650e7fc88754e5dd2d563348627cf82884d6f4bb161a80",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "leijona-naaras.glb",
+    "triangles": 9932,
+    "limit": 10000,
+    "boundsGltf": {
+      "min": [
+        -1.0439815521240234,
+        0.0,
+        -1.2731481790542603
+      ],
+      "max": [
+        1.0439815521240234,
+        4.400000095367432,
+        1.2731481790542603
+      ]
+    },
+    "dimensionsMeters": [
+      2.087963104248047,
+      4.400000095367432,
+      2.5462963581085205
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2432012,
+    "sha256": "d169fd89375a584816035a1d6278e2f83b17e67c8848288626deffe9260f0c70",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "leijona-uros.glb",
+    "triangles": 9954,
+    "limit": 10000,
+    "boundsGltf": {
+      "min": [
+        -1.0439815521240234,
+        0.0,
+        -1.2731481790542603
+      ],
+      "max": [
+        1.0439815521240234,
+        4.400000095367432,
+        1.2731481790542603
+      ]
+    },
+    "dimensionsMeters": [
+      2.087963104248047,
+      4.400000095367432,
+      2.5462963581085205
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2374400,
+    "sha256": "1618a6441cdb62de5d3150d78d523ca6910e60720be9b71356043874be394d51",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "suitsukeastia.glb",
+    "triangles": 1988,
+    "limit": 2500,
+    "boundsGltf": {
+      "min": [
+        -0.49867957830429077,
+        0.0,
+        -0.38181817531585693
+      ],
+      "max": [
+        0.49867957830429077,
+        1.399999976158142,
+        0.38181817531585693
+      ]
+    },
+    "dimensionsMeters": [
+      0.9973591566085815,
+      1.399999976158142,
+      0.7636363506317139
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2024848,
+    "sha256": "47228f0a24efbe0718468550fcbd95a1be4b9e315deeb15f645101a87355cb0f",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "vesiastia-pronssi-tormays.glb",
+    "triangles": 28,
+    "limit": 2500,
+    "boundsGltf": {
+      "min": [
+        -0.9100000262260437,
+        0.0,
+        -0.9100000262260437
+      ],
+      "max": [
+        0.9100000262260437,
+        1.100000023841858,
+        0.9100000262260437
+      ]
+    },
+    "dimensionsMeters": [
+      1.8200000524520874,
+      1.100000023841858,
+      1.8200000524520874
+    ],
+    "waterNode": false,
+    "materials": 1,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 1277200,
+    "sha256": "a315b9544e95eabde667da6890b144bf338683691fb987b128537a2a29848143",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "vesiastia-pronssi.glb",
+    "triangles": 2470,
+    "limit": 2500,
+    "boundsGltf": {
+      "min": [
+        -0.8774378299713135,
+        0.0,
+        -0.796156108379364
+      ],
+      "max": [
+        0.8774378299713135,
+        1.1000100374221802,
+        0.796156108379364
+      ]
+    },
+    "dimensionsMeters": [
+      1.754875659942627,
+      1.1000100374221802,
+      1.592312216758728
+    ],
+    "waterNode": true,
+    "materials": 3,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2080532,
+    "sha256": "a23165a9b2b5813440473578fa832a7c42292f495a5211fcfcd05c5ec7481b9d",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "vesiastia-rauta-tormays.glb",
+    "triangles": 28,
+    "limit": 2500,
+    "boundsGltf": {
+      "min": [
+        -0.9100000262260437,
+        0.0,
+        -0.9100000262260437
+      ],
+      "max": [
+        0.9100000262260437,
+        1.100000023841858,
+        0.9100000262260437
+      ]
+    },
+    "dimensionsMeters": [
+      1.8200000524520874,
+      1.100000023841858,
+      1.8200000524520874
+    ],
+    "waterNode": false,
+    "materials": 1,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 1277204,
+    "sha256": "8a7fc64e630810d4bb256e817edfbf1240672d69cb4c738f757d7de3a3c954c1",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "vesiastia-rauta.glb",
+    "triangles": 2470,
+    "limit": 2500,
+    "boundsGltf": {
+      "min": [
+        -0.8774378299713135,
+        0.0,
+        -0.796156108379364
+      ],
+      "max": [
+        0.8774378299713135,
+        1.1000100374221802,
+        0.796156108379364
+      ]
+    },
+    "dimensionsMeters": [
+      1.754875659942627,
+      1.1000100374221802,
+      1.592312216758728
+    ],
+    "waterNode": true,
+    "materials": 3,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 1974240,
+    "sha256": "561c6e6636425f2174337570f01fa070bc6471617d942e515a6995f31f849fac",
+    "technicalQA": "PASS"
+  },
+  {
+    "file": "viljamitta.glb",
+    "triangles": 1452,
+    "limit": 6000,
+    "boundsGltf": {
+      "min": [
+        -0.5240045785903931,
+        0.0,
+        -0.5240045785903931
+      ],
+      "max": [
+        0.5240045785903931,
+        2.0,
+        0.5240045785903931
+      ]
+    },
+    "dimensionsMeters": [
+      1.0480091571807861,
+      2.0,
+      1.0480091571807861
+    ],
+    "waterNode": false,
+    "materials": 2,
+    "textures": [
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      },
+      {
+        "size": [
+          1024,
+          1024
+        ],
+        "embedded": true
+      }
+    ],
+    "bytes": 2275588,
+    "sha256": "e40176cd6d885d6680b4232445ed14dc7774658abea389a81361333d865f9561",
+    "technicalQA": "PASS"
+  }
+]
