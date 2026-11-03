@@ -285,7 +285,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        true = ei yksilöitävää paikkaa kaupungissa → kaupunkimerkin viuhka, osa D; data/nostopaikat.json siirtää muut keskustaan
  *        kasatut nostot omille paikoilleen). Vanhat buildit ohittavat kentät.
  */
-export const SKEEMAVERSIO_TARKKA = '1.68';
+/*
+ *   1.69 kaupungit.esittelypaikat { <kuvan tiedostonimi>: { lat, lon, kohde } } | null (Karttaseppä 3.11.2026; omistaja 08.48 ja
+ *        09.28, KK:n suunnitelma 20261103-saapumisen-kuvat osa B): saapumisen esittelykuva nousee kartalta kohteensa kohdalta ja jää
+ *        sinne pieneksi kuvaksi. Avain = kuvan osoitteen tiedostonimi (trailerin avauskuvat/kansikuvat ja Pariisin C1–C4);
+ *        piste ≥ 25 m nostoista ja maalla (tools/sisalto/esittelypaikat.mjs). Puuttuva kuva = keskusta. Vanhat buildit ohittavat kentän.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.69';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

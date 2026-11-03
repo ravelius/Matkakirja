@@ -70,6 +70,14 @@
       "properties": { "p": { "type": "number" }, "e": { "type": "number" }, "l": { "type": "number" }, "i": { "type": "number" } },
       "additionalProperties": false
     },
+    "esittelypaikat": {
+      "type": ["object", "null"], "description": "Saapumisen esittelykuvien pisteet kartalla kuvan tiedostonimen mukaan (data/esittelypaikat.json); puuttuva kuva = keskusta; null = ei paikkoja (skeema 1.69)",
+      "additionalProperties": {
+        "type": "object", "required": ["lat", "lon", "kohde"],
+        "properties": { "lat": { "type": "number", "minimum": -90, "maximum": 90 }, "lon": { "type": "number", "minimum": -180, "maximum": 180 }, "kohde": { "type": "string" } },
+        "additionalProperties": false
+      }
+    },
     "data": { "$ref": "arvo.schema.json", "description": "Laudan raakaolio sellaisenaan (x, y, la, lx, ly: laudan Miller-koordinaatit ja nimiön paikka; ambience, airport, start…). Pelin sisäinen muoto: natiivi ei nojaa siihen, ja kentät voivat muuttua ilman skeemaversion nostoa. Käytä päätason kenttiä." }
   },
   "additionalProperties": false

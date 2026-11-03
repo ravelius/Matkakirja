@@ -1,0 +1,137 @@
+{
+ "_kuvaus": "Saapumisen esittelykuvien paikat (tools/sisalto/esittelypaikat.mjs; KK:n suunnitelma 20261103-saapumisen-kuvat.md osa B). Avain = kuvan tiedostonimi. kohdepiste = kohteen piste (lahde), piste = kartalla näytettävä kohta (≥ 25 m nostoista, maalla). paikaton = natiivi käyttää keskustaa (pieni kuva kaupunkimerkin viereen).",
+ "kaupungit": {
+  "lontoo": {
+   "hero-lontoo-tower-bridge.jpg": {
+    "kohde": "Tower Bridge",
+    "kohdepiste": [
+     51.50556,
+     -0.07528
+    ],
+    "lahde": "Wikidata Q83125",
+    "piste": [
+     51.505829,
+     -0.07528
+    ]
+   },
+   "hero-lontoo-westminster-thames.jpg": {
+    "kohde": "Westminsterin palatsi",
+    "kohdepiste": [
+     51.49944,
+     -0.12417
+    ],
+    "lahde": "Wikidata Q62408",
+    "piste": [
+     51.49944,
+     -0.12417
+    ]
+   },
+   "hero-lontoo-st-pauls.jpg": {
+    "kohde": "Pyhän Paavalin katedraali",
+    "kohdepiste": [
+     51.51378,
+     -0.09831
+    ],
+    "lahde": "Wikidata Q173882",
+    "piste": [
+     51.514049,
+     -0.09831
+    ]
+   }
+  },
+  "pariisi": {
+   "hero-pariisi-invalidit.jpg": {
+    "kohde": "Invalidien kirkko",
+    "kohdepiste": [
+     48.855,
+     2.31222
+    ],
+    "lahde": "Wikidata Q152109",
+    "piste": [
+     48.855,
+     2.31222
+    ]
+   },
+   "hero-pariisi-eiffel.jpg": {
+    "kohde": "Eiffel-torni",
+    "kohdepiste": [
+     48.8583,
+     2.29448
+    ],
+    "lahde": "Wikidata Q243",
+    "piste": [
+     48.858569,
+     2.29448
+    ]
+   },
+   "hero-pariisi-notre-dame.jpg": {
+    "kohde": "Notre-Dame",
+    "kohdepiste": [
+     48.853,
+     2.3498
+    ],
+    "lahde": "Wikidata Q2981",
+    "piste": [
+     48.853269,
+     2.3498
+    ]
+   },
+   "hero-pariisi-sacre-coeur.jpg": {
+    "kohde": "Sacré-Cœur",
+    "kohdepiste": [
+     48.88665,
+     2.34295
+    ],
+    "lahde": "Wikidata Q28785"
+   },
+   "pariisi-nykyintro-c1.jpg": {
+    "kohde": "Quai Voltaire (bukinistit)",
+    "kohdepiste": [
+     48.859,
+     2.33075
+    ],
+    "lahde": "Wikidata Q3090472",
+    "piste": [
+     48.859,
+     2.33075
+    ]
+   },
+   "pariisi-nykyintro-c2.jpg": {
+    "kohde": "Saint-Germain-des-Prés (Café de Flore)",
+    "kohdepiste": [
+     48.85389,
+     2.3325
+    ],
+    "lahde": "Wikidata Q1025686",
+    "piste": [
+     48.85389,
+     2.3325
+    ]
+   },
+   "pariisi-nykyintro-c3.jpg": {
+    "kohde": "Champs-Élysées",
+    "kohdepiste": [
+     48.86967,
+     2.30786
+    ],
+    "lahde": "Wikidata Q550",
+    "piste": [
+     48.86967,
+     2.30786
+    ]
+   },
+   "pariisi-nykyintro-c4.jpg": {
+    "kohde": "Cité (Guimardin metrokäynti)",
+    "kohdepiste": [
+     48.855325,
+     2.347542
+    ],
+    "lahde": "OSM node 264514896",
+    "piste": [
+     48.855325,
+     2.347542
+    ]
+   }
+  }
+ }
+}
