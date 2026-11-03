@@ -197,3 +197,7 @@ Omistaja 3.11.2026 klo 13.30 (KK:n kautta, sanatarkasti): "tee nosto pekingiin v
 ## LAATTA- JA TEKSTUURIMUUTOKSET TARKISTETAAN OIKEALLA IPADILLA (3.11.2026 klo 15.14)
 
 Omistajan havainto 3.11.2026 klo 15.14 (KK:n kautta): "nyt isolla ipadilla näkyy simussa uusi kartta mutta se on sekaisin ja väärinpäin". Syy NS 252c190dc (ASTC-pakkaus vain laitteella, #if UNITY_IOS), simu ei näyttänyt vikaa. PT: laattojen, tekstuurien ja laitekohtaisen koodin (#if UNITY_IOS) muutos todistetaan iPad-kuvakaappauksella ennen yhdistelmää; simu ei riitä.
+
+## TILINVAIHTO 3.11.2026 klo 16.5x (3.11.2026 klo 16.51)
+
+Tilille sami.reivinen@vvi.fi (org ddaee6a2): tämän tilin 29.10. sessiot tyhjennetty (self-clear) ja käytössä (PT local_8d8ebf72, KK local_d5f31591 + 9 roolia), ei arkistoitavaa; taulu R6VQFTUNq629zSzah719Uy; ohjeiden koe 10/10 (7.34 korjattu PR 6182); opit PR 6183; tilinvaihto-valmis 0 (PR 6184).
