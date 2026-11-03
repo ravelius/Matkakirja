@@ -49,3 +49,17 @@ JU peruutti k14-ajot (ei alkaneet) ja odottaa uutta SHA:ta. Montparnasse-kohta "
 - Väri: k16/pinta.py k6:sta, mittari 50/56/67, 10,9 (2029 49/57/66, 12,6) paikallinen × f. Julkisivut paletista, useampi korttelityyppi ja vaihtelu tekemättä; pinta on tasainen ja raidallinen.
 - Piirtoaika nousi: Z15 320 → 582 ms/pala paikallisesti (kuorma vaihteli, ei mitattu erikseen). Mittaa iPadilla.
 - SEURAAVAKSI: 1) c1832c0c2 ja 4e929f038 k18:aan: merge pysähtyi Esineet/pariisi.json-ristiriitaan, peruin sen; sovi NS:n kanssa tai ota NS:n tiedosto. 2) Kohta 8. 3) ajo JU:lle: KK:n komentotiedosto (lokit/esikatselu-20261103-232150 / julkaisija-tyokalut/sk-koko-nahtavyydet-v2-ju.txt) + laajin zoom, iso iPad myös 2,2961 ja 2,3071. k15/k16-ajo.zsh:t ovat vanhoja, älä aja. Pari PT:lle → KK.
+
+## LISÄYS 23.5x (2): KOVA RAJA 35 %. UUSIN JÄRJESTYS (PT, KK 23.50; ohittaa "SEURAAVAKSI"-listan)
+TEE TÄSSÄ JÄRJESTYKSESSÄ, kaikki samaan versioon, täyttöä ei aloiteta:
+1. **Julkisivureuna katujen varteen** (ei aloitettu KK:n mielestä; k14:n nauha on vain 3,5 m kerma kadun viivasta): vaalea reuna + musteviiva, paletti #ecd6b0–#c4aa82, vain katua kohti, ei kuparinoranssia.
+2. **Talot erillisiksi raitojen sijaan**: noin 15–30 px KK:n parissa (silmämääräinen), oma sävy ja musteviiva. Eri kokoisia taloja ja yksittäisiä isoja vaaleita kattoja. Katot #a58971 #bea78e #85684a; pihat pieniä ja tummia, renkaat pois (nyt vain polvi valoisuudessa, ei poistettu).
+3. **3–4 korttelilajia + satunnainen siirtymä** kortteleittain (nyt yksi pinta neljällä siirrolla).
+4. Kadut kapeammiksi (PT: 2029:n kadut kapeammat kuin k16:n; KK 23.29 pyysi leveämpiä, joten etsi väli ja mittaa 2029:stä).
+5. Kohdat 7 (korttelipinta Z13:lle, KK: selittänee laajimman zoomin), 8, 9.
+Lue lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md kokonaan. Mittarin lisäksi pari silmin: mittari ei yksin riitä (PT).
+
+- PT k18:sta: kokonaisuus tasaisen harmaanruskea Z15:llä, ei 2029:n lämmin; hautausmaan ruudukko selvästi muuta kirkkaampi: korjaa (HautaPolku/HautaVari, jakso).
+- Mittari k18: 50/56/67, hajonta 10,9 (2029 49/57/66, 12,6), pari k18/pari-sama-mittakaava-paikallinen.jpg. Pari on k16:n kanssa käytännössä sama (keskiero < 0,05), joten se EI todista k18:n muutoksia; hautausmaat ja kuplat näkyvät vain z15.jpg:ssä, jonka Z15-väriä ei ole mitattu.
+- **Täyttymisen hinta on KK:n arvioitava, ei valmis ratkaisu.** k17 → k18 täytti paikallisessa Z15:ssä 100 aluetta, yhteensä noin 250 000 m² (mittaus kuvien erosta, epätarkka). Suurimmat lat, lon: 38 700 m² 48,8374 2,3298; 13 800 m² 48,8470 2,3587; 10 700 m² 48,8626 2,3322; 8 500 m² 48,8452 2,3384; 7 500 m² 48,8365 2,3574; 7 300 m² 48,8510 2,3641; 7 200 m² 48,8453 2,3477; 7 200 m² 48,8412 2,3598; 7 200 m² 48,8391 2,3414; 6 400 m² 48,8433 2,3400. Paikkoja ei ole nimetty eikä katsottu: 48,8626 2,3322 on Louvren lähellä, tarkista raivaus. Kerro nämä KK:lle pari mukana.
+- NS:n yhdistelmä (ND 0,8 + sillat): annoin 8747255b5 (k16 + koko-koe, 607/607, 8000 m², ei k18:n täyttöä eikä hautausmaita), koska k18:n hinta on arvioimatta. Kamera `aja 48.8515 2.3385 0.005 2`. Tyyli kokeena; yhdistäminen vain omassa haarassa, ei NS:n haaroihin (PT). Tästä tulee laitetodistus f:lle: vertaa katuväriä.
