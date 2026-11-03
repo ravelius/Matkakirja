@@ -2,12 +2,12 @@
 
 Vain voimassa oleva tila. Korvaa luovutuksen -20261104-0102. Siitä yhä voimassa: Merge-sääntö, Päätökset 23.15–23.40, AVOIMET 5–7 (`git show 18e139be5:docs/raportit/viesti-natiiviseppa-luovutus-20261103-2340.md`). Id:t: /Users/Shared/Claude/osoitekirja.md.
 Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
-EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajon; vuoro JU:lta. JU aloitti 01.1x Tripo-jakson, jonka aikana ei Unity-ajoja: pyydä vuoro, älä oleta. Vuoroa EI ole vielä pyydetty kärjelle dadf845c6.
+EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajon; vuoro JU:lta. JU aloitti 01.1x Tripo-jakson, jonka aikana ei Unity-ajoja: pyydä vuoro, älä oleta. Vuoro pyydetty 01.2x kärjelle 98e21fda0 Tripon jälkeen; skenaario /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aluekuva-koko/sk-haivytys2.txt.
 
 ## ENSIN: etäisyyshäivytys (PT 00.59; omistaja 3.11. 15.3x; EI junaan)
 Tehty VS:n reunan 804d491d1 päälle, Painotiin ei koskettu (VS 4.11.: uusi VS jatkaa kohdista 5–6, ei koske reunaan).
 - **natiiviseppa/haivytys-218 kärki b264f241f**: cd75ccc42 (häivytys), 0dc6aad40 (PiirrosLahinTestit lukee muutetut rivit), b264f241f (hiusviivan korjaus).
-- **natiiviseppa/haivytys-koe-218 kärki dadf845c6** = yhdistelma-218 3c87e40a5 + haivytys-218. Tämä ajetaan seuraavaksi.
+- **natiiviseppa/haivytys-koe-218 kärki 98e21fda0** = yhdistelma-218 8b9f14c03 + haivytys-218. Tämä ajetaan seuraavaksi.
 - Tekotapa: tyyli on poltettu pohjan paloihin, joten polku `elava-tavallinen/` antaa koealueen palat ilman tyyliä (ElavaTyyli.MaskiTavallinen), muualla pohjan oman palan. KarttaKerrokset.AsetaTavallinenPeite: paikka 1, _overlayAlfa_1 = 1 − näkyvyys. Peite vain korkeuksilla 0,8 × täysi – 120 km ja 1,5°:n sisällä. Linssi ja lennon pinta väistävät peitteen, silloin tyyli ilman häivytystä.
 - Sääntö: ElavaKoealue.EtaisyysNakyvyys(osuus) = Smooth(0,45–1,0) koko Pariisin leveydestä (18,2 km). Täysi noin komennon 0,12:lla. Esineet (korkeusOsa) seuraavat samaa; ennen ne laskettiin vanhan piirroksen leveydestä. SaapumisenEnintaanKorkeusM jätetty vanhaan leveyteen.
 - **Nähty, koe 9dddd7adc** (lokit/esikatselu-20261104-010932, 640×480-pohja, ei iPad): b-0-30 näkymätön, c-0-21 lähes, d-0-17 väli, e-0-13 täysi, f-0-10 täysi, g-0-21-paluu kuten c, h-lansiraja reuna pehmeä. PT:lle kerrottu 01.1x.
@@ -15,7 +15,7 @@ Tehty VS:n reunan 804d491d1 päälle, Painotiin ei koskettu (VS 4.11.: uusi VS j
 
 ### PT 01.18 (kuvat viety KK:lle; sitoo)
 - e-0-13:n pystysaumaa EI oleteta pohjan (640×480) viaksi. Tarkista ajon jälkeen, kuten 0,17:ssä (d-0-17) näkyvä suorakaide.
-- Alman yhteydessä siirtyneet 12 siltaa ovat jo hyväksyttyjä: seuraavassa ajossa silta-kuvat, ja tarkista, voiko siirron rajata Almaan. NS:n arvio, ei tehty: voi, sillat-osm.py:ssä keskitys vain nimelle "Pont de l'Alma", tee-esineet molempiin kp:ihin (Merge-sääntö). Vanhat arvot: sillat-pariisi.json:n ajo ilman keskitystä.
+- Alman yhteydessä siirtyneet 12 siltaa ovat jo hyväksyttyjä: seuraavassa ajossa silta-kuvat, ja tarkista, voiko siirron rajata Almaan. TEHTY aebaa144c (yhdistelmä 8b9f14c03, koehaara 98e21fda0): sillat-osm.py KESKITA vain Alma; data-ero vain Alma 14,5 m.
 
 ### AVOINNA häivytyksessä
 1. **b264f241f ajamatta:** korjaa c:n, d:n ja g:n tumman hiusviivan (lat 48,923 = Z11-rivin raja; läpinäkyvän palan musta väri suodattui). Tarkista viiva poissa (c-0-21:n rivi noin 386/2064).
@@ -25,13 +25,13 @@ Tehty VS:n reunan 804d491d1 päälle, Painotiin ei koskettu (VS 4.11.: uusi VS j
 5. y-laajin (noin 62 % ruudusta) antaa laskettuna näkyvyyden noin 23 %; c-0-21 (57 %) näyttää lähes näkymättömältä. KK arvioi.
 
 ## KK:n lista (/Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, VIIMEINEN osio)
-- **Kohta 1 Alma, tehty, ei nähty pelissä:** 3729a6a0f (nahtavyydet-218), 3c87e40a5 (yhdistelmä). Pisin ylitys oli läntinen pyörätie, silta 15 m kadun vieressä. sillat-osm.py ottaa nyt keskipisteen ajoratojen väliin. Sama siirsi 12 muuta ylitystä 5–18 m (mm. Alexandre III 15 m, jonka KK jo hyväksyi; Concorde 9 m, National 18 m), kulmat ja pituudet ennallaan. Datavertailu näytti vain, että muutos on `lajit`-osassa. Katso y-silta-kuvat.
+- **Kohta 1 Alma, tehty, ei nähty pelissä:** 3729a6a0f (nahtavyydet-218), 3c87e40a5 (yhdistelmä). Pisin ylitys oli läntinen pyörätie, silta 15 m kadun vieressä. sillat-osm.py ottaa nyt keskipisteen ajoratojen väliin. Rajattu Almaan aebaa144c:ssa; 12 muuta siltaa ennallaan. Katso silta-kuvat.
 - **Kohdat 2–4 aloittamatta:** 2 ND:n kermalaikku ja irtosaarekkeet, 3 GP (0eb91d25e, kuva näkemättä), 4 Montparnassen juuri. Katso k21-pohjalla (haivytys-koe-218 sisältää sen), koska VS:n uusi pinta voi muuttaa kermalaikkuja. Nimet kohdalla 8 KS:n kanssa. Saumat uudelleen k20:stä.
 - KS:n Boulognen puudata, kun KK on valinnut latvuskoon. iPad vasta seuraavassa yhdistelmässä (PT).
 
 ## HAARAT (proto-repo, wt/proto-natiiviseppa-maskik4, peili natiivi-backup; worktree nyt haivytys-koe-218)
-- **natiiviseppa/yhdistelma-218 kärki 3c87e40a5** = f1fb45f10 + GP:n raivaus + sillat ajoratojen väliin. Koostumus: pohja 8747255b5 (VS k17 = k16 + 628d1a90a; 1. vanhempi 628d1a90a, sisältää 95a733ace:n) + nahtavyydet-218 + nimet 25f99d839. **EI junaan eikä ämpäriin ennen KK:ta.**
-- **natiiviseppa/nahtavyydet-218 kärki 3729a6a0f**: a826acb03 + 6fd420c8c (nappula Transparent+100) + e101c006e (Sacré-Cœur k3) + b6d478a40 (`veneet kohtaan i lat lon`) + Louvre k2 -data + GP.
+- **natiiviseppa/yhdistelma-218 kärki 8b9f14c03** = f1fb45f10 + GP:n raivaus + sillat ajoratojen väliin. Koostumus: pohja 8747255b5 (VS k17 = k16 + 628d1a90a; 1. vanhempi 628d1a90a, sisältää 95a733ace:n) + nahtavyydet-218 + nimet 25f99d839. **EI junaan eikä ämpäriin ennen KK:ta.**
+- **natiiviseppa/nahtavyydet-218 kärki aebaa144c**: a826acb03 + 6fd420c8c (nappula Transparent+100) + e101c006e (Sacré-Cœur k3) + b6d478a40 (`veneet kohtaan i lat lon`) + Louvre k2 -data + GP.
 - Korjaa aina nahtavyydet-218:aan ja mergaa yhdistelmään: pariisi.json riitelee, ratkaisu `python3 -I tee-esineet.py <TÄYSI POLKU>/kaupunki-pariisi-koko.json <checkout>` (ajo vaatii täyden polun). Nahtavyydet-218:aan k4vt-alue. Kp-muutos aina molempiin.
 - Kirjastossa koekäytössä (KK ei ole hyväksynyt, näkee pelissä): sacre-coeur-alue-v2, louvre-alue-v3; molemmat ämpärissä. Raivaus vanhasta alfasta: alue_kuva-kentät `raivaus_taso`, `raivaus_alue` (uusi tee-esineet.py:ssä).
 
