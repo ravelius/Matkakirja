@@ -1,0 +1,3 @@
+Counter({'OK': 2})
+(50, 62, 'Hôtel Hyatt Regency Paris Étoile', 'OK ala')
+(26, 30, 'Cimetière de Montmartre', 'OK piste')
