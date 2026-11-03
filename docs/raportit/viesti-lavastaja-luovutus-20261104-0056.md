@@ -50,3 +50,9 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 - Tulos pelissä (L/koeajo3/wumen-c-vasen.jpg, kuva wumen-edesta-v125c.png, 2752 px: x 0–650, y ≈ 735–770): oikea puoli puhdas, ei valkoista viivaa. Vasemmalla tumma juova yhä, kapeampi; lisäksi ohut valkoinen katkoviiva vasemmassa reunassa (x 0–150). Pieni tumma kohta näkyi jo v124:ssä, |y| < 0,5 pidensi sitä.
 - Syy näkemättä. Kokeita ei jatkettu arvaamalla. Seuraavaksi: tunnista.py pelin kameran arvoilla ei toimi (Wumen-ajossa ei testikameraa); aja kuva testikameralla 3.0 6.88 10 45, jolloin pikseli voidaan nimetä. Tarkista myös muut kuin V4_lattia-kerrokset ja UV1-valo tällä kaistalla (x −72…7, z −400…−397), sekä ruudun 1-0 rajalla olevat −0,68-kolmiot.
 - Jatkojärjestys (PT): juova → 5d:n pääty ja koristeet → sivuholvi ja pylväiden laikut.
+
+## LISÄYS 04.11. 01.10 (juova: syy löytyi, koe JU:lla)
+- Syy (mitattu, ei vielä nähty pelissä): kaistalla z −400…−397 on V4_lattia-pintakerros y ≈ −0,02 ja sen alla kerroksia y −0,4…−0,68. Edellinen tasaus nosti piilokerrokset pintaan: sama korkeus, eri UV1. Rajalla 0,1 kolmio (−25, −0,39)–(0, 0,07) leikkasi pinnan.
+- Korjaus wumen_sauma.py: V4_lattia-kolmiot, joiden alin kärki < −0,1, pois (lod0 ruudussa 1-0: 11 kpl; lod1–2: 0), |y| < 0,1 tasolle 0. RAJA-muuttuja poistettu. Ylhäältä mitattuna lod0:ssa ei reikiä (4 cm:n ruudukko); lod1–2:sta ei poistettu kolmioita. Päällekkäisyyttä jäi pieniä aloja x −75…−72 ja x 0…7, ei korjattu. Valkoisen katkoviivan syy ei selvillä.
+- Ruudut 1-0 ja 2-0 lod0–2 rakennettu v124:stä (kansi_pois → sokkeli_yla_uv → wumen_sauma) pakettiin ja koejuureen, SHA256SUMS 7707ff52969c. Paketoi-v125.zsh ei toista tätä.
+- Pyydetty JU:lta: sk L/sk-lav-v125-wumen-d.txt → L/koeajo3/wumen-edesta-v125d.png. Katso sama rajaus kuin c:ssä (2752 px: x 0–650, y ≈ 735–770): juova, valkoinen katkoviiva, oikean puolen viiva.
