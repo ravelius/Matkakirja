@@ -44,3 +44,9 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 - Juova, koe käynnissä: wumen_sauma.py:n raja nyt |y| < 0,1 (oli 0,5). Ruudut 1-0 ja 2-0 rakennettu uudelleen paketissa ja koejuuressa, SHA256SUMS 2c97aa9e8c3b (korvaa 53d8e8fec5c5). Pyydetty JU:lta yksi kuva: sk L/sk-lav-v125-wumen.txt → L/koeajo3/. Katso, onko juova poissa JA tuliko valkoinen viiva takaisin (ei vielä nähty). Paketoi-v125.zsh ei toista tätä rakennetta.
 - Jos juova jää: palauta vasemman reunan tilanne ja korjaa vain oikean puolen sauma x ≥ 7 (valkoinen viiva oli oikealla pisimmillään).
 - Pääty: aloittamatta. Lähtötieto: talo x −155,8…−135,5, harja z ≈ 243, lappeet päättyvät x −135,5:een, päätyseinä x −136; tarkista tunnista.py:llä ja talo.py:llä.
+
+## LISÄYS 04.11. 01.06 (juova EI korjattu; aloita tästä)
+- Paketti ja koejuuri nyt: 2-0 raja |y| < 0,1, 1-0 raja |y| < 0,8 (RAJA-ympäristömuuttuja, wumen_sauma.py). SHA256SUMS 5cc5d6bf5625, korvaa aiemmat. Paketoi-v125.zsh ei toista tätä: käytetty scratchpadin rakennetta, joten uudelleen rakentaessa aja kansi_pois → sokkeli_yla_uv → wumen_sauma näillä rajoilla.
+- Tulos pelissä (L/koeajo3/wumen-c-vasen.jpg, kuva wumen-edesta-v125c.png, 2752 px: x 0–650, y ≈ 735–770): oikea puoli puhdas, ei valkoista viivaa. Vasemmalla tumma juova yhä, kapeampi; lisäksi ohut valkoinen katkoviiva vasemmassa reunassa (x 0–150). Pieni tumma kohta näkyi jo v124:ssä, |y| < 0,5 pidensi sitä.
+- Syy näkemättä. Kokeita ei jatkettu arvaamalla. Seuraavaksi: tunnista.py pelin kameran arvoilla ei toimi (Wumen-ajossa ei testikameraa); aja kuva testikameralla 3.0 6.88 10 45, jolloin pikseli voidaan nimetä. Tarkista myös muut kuin V4_lattia-kerrokset ja UV1-valo tällä kaistalla (x −72…7, z −400…−397), sekä ruudun 1-0 rajalla olevat −0,68-kolmiot.
+- Jatkojärjestys (PT): juova → 5d:n pääty ja koristeet → sivuholvi ja pylväiden laikut.
