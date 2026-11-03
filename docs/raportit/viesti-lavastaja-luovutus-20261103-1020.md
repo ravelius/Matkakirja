@@ -30,3 +30,7 @@ Peli (kuja 02, kamera x −246,6 z 303 → z 325, oikea seinä = −x-puoli):
 Ehdotettu suunta (ei vielä PT:lle): taustan kivireunuksen kansi vaakaan + kapeampi (≈ 0,4 m) pystypintainen reunakivi, sokkelin kerrokset kuvasta
 (V4_kujakivi_sokkeli-tekstuuri / UV) ja yläreunan kansikivi suoraksi. Mittoja ja paikkoja ei muuteta; esto tarkistettava (kivireunus maan tasolla!).
 Järjestys PT:n mukaan 1 → 3 → 2 → 4 → 5, jokainen kohta erikseen pariksi PT:lle; kohta 4 ensin PK:n kanssa.
+
+## LISÄYS 10.17: PK KYTKI kohdan 1
+PK: osasarja-v7 + tausta-v115 kytketty proto pelikoodari/kapea-reitti-218 f7cd1b75a (paikallinen haara, worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-v99),
+SHA256SUMS täsmää, Peli-testit 803/803; junaan 218z-voittajan yhdistyksen mukana (JU vie paketit). EDITORIPARI 01/02/03b POHJAKSI f7cd1b75a → seuraava askel (JU:n vuorolla).
