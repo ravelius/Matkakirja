@@ -32,3 +32,8 @@ Kirjasto: `/Users/Shared/Claude/proto-3d/_kirjasto/kartta-osat/osakirjasto.py` (
 5. **Korttelipinta:** VS hyväksyi jaon (838397956, LISÄYS): VS vie k5:n peliin, tekee julkisivureunan + musteen ja lähettää pelikuvan KS:lle säätöä varten (Y/kortteli-k5.py voima, muste). PT:n viestissä k5 → k11 kesken.
 6. Taustaajot: tasankoketju (ketju.valmis / ketju.virhe; ranta-shardit etenevät) ja esittelypaikkasilmukka (ajo-muut.log 23.12: ok 123, Overpass 502 välillä, jatkaa). Jatkot: 2232-luovutuksen AVOIN 3 ja 19.40-luovutuksen AVOIN 4–5.
 7. Vanhat: v7/v8 iso-pari (JU), pitkät ruudut.
+
+## LISÄYS klo 23.14 (PT 23.11; korvaa TILA-taulukon ja AVOIN 4:n vastaavat)
+- **Kaikki 9 G-nähtävyyttä KK:n hyväksymiä:** Sacré-Cœur ja Opéra 23.01 (kirjastossa NS:llä); Grand Palais, Invalidit, Panthéon ja Montparnasse 23.09, viety NS:lle 23.14. Jonossa vielä: silta-pari KK:lla, Sainte-Chapelle Codexilla.
+- Jos KK pyytää pelikuvan jälkeen Montparnassen tummennusta harmaammaksi: savysovitus-työkalulla, ei uutta ottoa.
+- **Worktreet (PT, levy 67 Gi; nähtävyydet ensin):** poista `tools/uusi-worktree.sh --poista <nimi>`: karttaseppa-tasangot-maet kun tasankoketju on valmis (käytössä, pid 27864), karttaseppa-esittelypaikat kun silmukka 68441 on loppunut, karttaseppa-luovutus-1655 kun PR 6187 on yhdistetty, karttaseppa-luovutus-1815 kun PR 6233 on yhdistetty.
