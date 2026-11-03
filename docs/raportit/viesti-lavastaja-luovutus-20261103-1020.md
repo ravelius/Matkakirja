@@ -39,3 +39,7 @@ SHA256SUMS täsmää, Peli-testit 803/803; junaan 218z-voittajan yhdistyksen muk
 JU vei tausta-v115:n (100/100), mutta ämpärissä oli jo aiempi kielletty-osasarja-v7 (eri sisältö) → sama sisältö nimellä kielletty-osasarja-v8
 (K/osasarja-v8/, paketti _valmiit/juoksupeli-kk-lavastaja-osasarja-v8-vienti-20261103, SHA256SUMS ca12ae128e2e; v7-paketti → hylatty-…-nimi-varattu).
 JU:lle vientipyyntö ja PK:lle korjaus (OsasarjaKansio v7 → v8 kytkentään f7cd1b75a) lähetetty. Editoripari vasta PK:n v8-kytkennän päälle.
+
+## LISÄYS 10.19: PK KYTKI v8
+PK: OsasarjaKansio kielletty-osasarja-v8 (SHA256SUMS ca12ae128e2e täsmää), proto pelikoodari/kapea-reitti-218 8b303cc30 (= f7cd1b75a + v7→v8).
+EDITORIPARI 01/02/03b POHJAKSI 8b303cc30 (EI f7cd1b75a) JU:n vuorolla → PT:lle; tarkista samalla friisin rako lähikuvasta.
