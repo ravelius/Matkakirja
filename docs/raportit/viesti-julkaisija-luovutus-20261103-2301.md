@@ -44,3 +44,7 @@ Soikiopari (PT OK) | NUI sauma editori 3 ajoa (viimeinen esikatselu-20261103-223
 ## LISÄYS 23.05 (korvaa ristiriidassa olevat kohdat yllä)
 - VS k11 PERUTTU (ei alkanut). Linja 2: ns-7cac734dd → ns-f5b3c3361 korjatulla skenaariolla sk-koealue-elava-ju.txt (ui sulje + odota 50: Ranskan saapuminen vei kameran; 993075f27:n ja 7cac734dd:n nd-lahi ei kelpaa).
 - Terävyyskuva on d64f74a56 (vs-teravyys-d64f74a56.zsh, pid vs-teravyys.pid), ei 43df66241. PT kuittasi 993075f27:n nd-keski + nd-laaja. KATSO JOKAINEN KUVA ennen valmis-riviä (PT).
+
+## LISÄYS 23.10
+- Linja 2: f5b3c3361 → ns-9528c1d53-l2 ("k11 koe", EI JUNAAN, sk-koko-nahtavyydet-ju.txt) → kuvat PT:lle; katso kaikki. Eiffel + Riemukaari v1 viety.
+- Iso iPad, ei junaan: ns-9528-laite.zsh (PT): 9528c1d53 lähi, keski, laaja, sauma (NUI-kamera), sauma-2351 → täysikokoiset PT:lle; käännös terävyyskäännöksen jälkeen, iPad savu2:n jälkeen.
