@@ -34,3 +34,6 @@ VS:n k14 ja terävyys b9d044fb6 PERUTTU (PT: ei ennen KK:n vastausta); uusi SHA 
 
 ## LISÄYS 23.43 (PT)
 ODOTTAA NS:n SHA: iPad-todistus = a94:n sk-koko-nahtavyydet-v2-ju + laajin zoom + kohdat 2,2961 ja 2,3071 (proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md). 95a iPad ajetaan vain, jos ehtii ennen sitä (puiden muistiluku). Otsikko iPhone uusinta pk-otsikko-iphone2.zsh.
+
+## LISÄYS 23.44 (viimeinen)
+NS: silta-c/d viety. 628d1a90a (95a + c/d-sillat): seuraava iPad-kierros sillä, esikatselu tarvittaessa sk-sillat-v2. PT:n todistus odottaa NS:n yhdistelmä-SHA:ta (korjaukset + nimet). Tuloksia, joita ei vielä ole katsottu: ns-95a733ace, ns-95a-laite2, nui-laatat, ks-4e929f038, palvelijat v7, lav-parit, otsikko iPad + iPhone2, sali-vianhaku.
