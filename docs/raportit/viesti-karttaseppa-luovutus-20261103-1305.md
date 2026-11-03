@@ -34,3 +34,10 @@ N = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tasangot-poltto-20261103/`. 
    rivi PT:lle; kuoli → `zsh N/jatka.sh`. Levyä 34 Gi.
 4. Pariisi jatko (luovutus 20261102-2210 AVOIN 2): kylttisiirrot peliin (`P/kylttisiirrot-palaNN.json`), vasen yläkulma jää (PT 12.5x).
 5. Vanhat: 27.10. poltto T7-arkistointi vain jos levy < 50 Gi (PT:n luvalla); NUI:n maamerkkien alat.
+
+## LISÄYS 13.1x
+PT 13.0x: tasot ok; siltaleikkeistä vain oikeat sillat (01, 04–08, 12, 13, 15, 16, 18–23) ja lähin zoom ~3,5 km → **proto a635b51ad**
+(347711dd9:n päällä): Sillat 16, `IsoisaLahinLeveys = 1.05` lahig-tasolle, PalloKierto.MinKorkeus käyttää piirroksen arvoa sellaisenaan
+(ei enää min elävän kartan 0,625:n kanssa), testi päivitetty (Kartta-testit Piirros 5/5). JU vei paketin 13.01 (45/45) ja teki pienen
+iPadin yhdistelmän 221739243 (= 7c4ade934 + 347711dd9); JU:lle 13.1x: simu yhdistelmä + a635b51ad, uutta vientiä ei tarvita.
+AVOIN 1 (a) on siis tehty; (b) info/kioski jää. Seuraavaksi AVOIN 2 esittelypaikat.
