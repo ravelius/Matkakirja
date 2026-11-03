@@ -49,3 +49,6 @@ Proto-haarat paikallisia.
    hattumaskin päällekkäisyys alfoista (LatausRajausTestit). Esikatselut: esikatselu-latauskuva-vaaka/pysty.png (hyvät).
 5. Edellisen luovutuksen kohdat 4–7 ennallaan (Codex-toimitukset, Editor-työkalut kivi-216:een, taso1b musiikkirivit).
 6. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1825.
+
+## Lisäys
+- PT kuittasi keisarin havainnekuvat junaan; media-paketti + 8cec09f05 lähetetty JU:lle (PT:n viesti luovutuksen jälkeen). Tarkista viennin jälkeen media 200: https://media.matkakirja.app/julisteet/tuotanto/viimeinen-keisari-v1/viimeinen-keisari-a-valtaistuin.jpg
