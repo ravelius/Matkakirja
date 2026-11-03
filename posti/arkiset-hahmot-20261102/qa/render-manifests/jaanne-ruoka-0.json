@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "jaanne-ruoka": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "629b784b7817b570987b0b7a9c28b4e769a269b5dca674ec4f133c16811dfb7f",
+      "dependencies": {
+        "jaanne-ruoka": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "205b8b739291dd4c527b0e07292d956c045800b204153238bc28a4338ceea5f9",
+      "dependencies": {
+        "jaanne-ruoka": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

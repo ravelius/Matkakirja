@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "jaanne-posliini": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "a472c4ec99222ba47ca7089027336c0a8d99ae130d34bd57f2344d145b4009e6",
+      "dependencies": {
+        "jaanne-posliini": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "4e364c0c9a7ec27bf1da81e1e4a7477edaa11435d2919530820f579d5c175830",
+      "dependencies": {
+        "jaanne-posliini": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

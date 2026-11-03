@@ -1,0 +1,168 @@
+{
+  "status": "LOCAL_QA_COMPLETE_RECEIVER_GAME_QA_PENDING",
+  "updatedAt": "2026-11-03T16:36:09.021155+00:00",
+  "approvedSequenceCommit": "e75d9464d88239821ef21c51f6877d7498a8e3ae",
+  "acknowledgmentCommit": "e158d35fe4b20202d44dfd243ef5fc24207b73a5",
+  "characterSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+  "detachablePropSHA256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+  "sequence": [
+    "fill_right",
+    "fill_left",
+    "idle_after_fill"
+  ],
+  "durationsSeconds": {
+    "fill_right": 2.6,
+    "fill_left": 2.6
+  },
+  "fullWaterCarryClips": [
+    "idle",
+    "walk"
+  ],
+  "bothEmptyClips": [
+    "idle_after_fill",
+    "walk_after_fill"
+  ],
+  "waterNodeNames": [
+    "bucket-water-right",
+    "bucket-water-left"
+  ],
+  "fullWaterLocalYM": 0.241,
+  "waterStates": {
+    "fill_right-start": [
+      1,
+      1
+    ],
+    "fill_right-end": [
+      0,
+      1
+    ],
+    "fill_left-start": [
+      0,
+      1
+    ],
+    "fill_left-end": [
+      0,
+      0
+    ]
+  },
+  "vat": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/palatsin-pronssit-20261103/delivery/vesiastia-pronssi.glb",
+    "sha256": "a23165a9b2b5813440473578fa832a7c42292f495a5211fcfcd05c5ec7481b9d",
+    "centerFromCharacterM": [
+      0,
+      0,
+      1.1
+    ],
+    "rimHeightM": 1.1,
+    "characterForward": "+Z",
+    "characterUp": "+Y",
+    "characterRootMotion": false
+  },
+  "pouring": {
+    "fill_right": {
+      "marker": "bucket-pour-right",
+      "pourStartS": 1.08,
+      "pourEndS": 1.5,
+      "waterSurfaceEmptyAtS": 1.25,
+      "maxMarkerRadiusM": 0.6842143273515762,
+      "minimumMarkerYM": 1.1296565595701915,
+      "markerPeakM": [
+        -0.47600999974075153,
+        1.1305757848014353,
+        0.7023768148510713
+      ],
+      "minimumBodyVatEnvelopeClearanceM": 0.02237561591061188
+    },
+    "fill_left": {
+      "marker": "bucket-pour-left",
+      "pourStartS": 1.08,
+      "pourEndS": 1.5,
+      "waterSurfaceEmptyAtS": 1.25,
+      "maxMarkerRadiusM": 0.6842143273515762,
+      "minimumMarkerYM": 1.1296565595701915,
+      "markerPeakM": [
+        0.47600999974075153,
+        1.1305757848014353,
+        0.7023768148510713
+      ],
+      "minimumBodyVatEnvelopeClearanceM": 0.02237561591061188
+    }
+  },
+  "vfx": {
+    "openingNormalLocal": "+Y",
+    "gravityWorld": "-Y",
+    "originNodes": [
+      "bucket-pour-right",
+      "bucket-pour-left"
+    ],
+    "waterSurfaceAnimationIsFluidSimulation": false,
+    "separateStreamImplementedBy": "Pelikoodari",
+    "note": "Opening normal describes bucket orientation; do not use it as the stream velocity. Both pour streams run1.08–1.50s; animated surface reaches zero1.25s."
+  },
+  "release": {
+    "seconds": 0.4,
+    "equation": "standaloneParentWorld = characterTavaraWorld @ inverse(standaloneRootLocal)",
+    "verifiedCoordinateErrorM": 0.0,
+    "parentMatrixAtReleaseRowMajor": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.5560580362815628
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -0.01482035871996673
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "note": "Disable embedded tavara preview-drop tracks and hide embedded prop when runtime physics takes over; keep skeleton channels."
+  },
+  "seams": [
+    {
+      "from": "fill_right",
+      "to": "fill_left",
+      "TRSError": 2.8335644830512763e-08
+    },
+    {
+      "from": "fill_left",
+      "to": "idle_after_fill",
+      "TRSError": 2.8335644830512763e-08
+    }
+  ],
+  "notDelivered": true,
+  "limitations": [
+    "Shaded stills and hand/transition samples reviewed; remaining angular cuff edges disclosed in qa/FINAL-VISUAL-REVIEW.json.",
+    "241 sampled noncoplanar head/pole checks are inherited from unchanged fill-v6 poses through exact fill-v7 preservation; no universal self-contact claim.",
+    "Unity controller/blending,physics,VFX and game-lighting QA pending."
+  ],
+  "headPoleQA": {
+    "path": "qa/fill-v6/head-pole-qa.json",
+    "samplesPerClip": 241,
+    "status": "SAMPLED_NONCOPLANAR_HEAD_POLE_TEST_PASS",
+    "limitations": "241 samples per clip, non-coplanar surface crossings only. Does not prove all self contacts absent."
+  },
+  "correction": {
+    "previousCandidate": "fill-v5",
+    "previousCandidateRejected": true,
+    "reason": "21/79 sampled frames per pour had actual head/pole surface crossings.",
+    "changes": "Yoke moves backward .12m before lift; center rolls upward15deg around active bucket hook during pour; both buckets counterrotate. Head bows35deg with delayed return; shoulders shrug5deg during raised upright stage. Non-active hand follows pole curve.",
+    "approvedPeakPourPositionsPreserved": true,
+    "completeMarkerTrajectoryUnchanged": false
+  },
+  "stateAtPackaging": "NOT_YET_SENT",
+  "transitionCorrection": "qa/fill-v7/transition-qa.json"
+}

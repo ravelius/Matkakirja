@@ -1,0 +1,152 @@
+{
+  "at": "2026-11-03T16:33:42.053030+00:00",
+  "status": "LOCAL_VISUAL_REVIEW_COMPLETE_READY_FOR_RECEIVER_GAME_QA",
+  "reviewMethod": "Every selected source-hashed still was visually inspected with the local image viewer. No generated substitute previews. Water v7 complete 45-frame rerender inspected after exact v6 pose equivalence check. Other character and prop files inspected at their selected hashes.",
+  "selectedEvidence": [
+    {
+      "name": "ruokaeunukki",
+      "sourceSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/render-manifest.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/ruokaeunukki/7671c679f413/render-manifest.json"
+      ]
+    },
+    {
+      "name": "palvelijatar",
+      "sourceSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/render-manifest.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/palvelijatar/699819fb86f8/render-manifest.json"
+      ]
+    },
+    {
+      "name": "vedenkantaja",
+      "sourceSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/render-manifest.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/vedenkantaja/79ce9cdd3cf3/render-manifest.json"
+      ]
+    },
+    {
+      "name": "lakaisija",
+      "sourceSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/render-manifest.json",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/lakaisija/a146af9f7678/render-manifest.json"
+      ]
+    },
+    {
+      "name": "jaanne-posliini",
+      "sourceSHA256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-posliini/a766b45b5f7c/render-manifest.json"
+      ]
+    },
+    {
+      "name": "jaanne-ruoka",
+      "sourceSHA256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-ruoka/7ee55c92699f/render-manifest.json"
+      ]
+    },
+    {
+      "name": "jaanne-vesi",
+      "sourceSHA256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-vesi/3c93fd77fa32/render-manifest.json"
+      ]
+    },
+    {
+      "name": "tavara-ampari",
+      "sourceSHA256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ampari/16bc7a715bee/render-manifest.json"
+      ]
+    },
+    {
+      "name": "tavara-luuta",
+      "sourceSHA256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-luuta/7e726656a836/render-manifest.json"
+      ]
+    },
+    {
+      "name": "tavara-maljakko",
+      "sourceSHA256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-maljakko/67d209ec360b/render-manifest.json"
+      ]
+    },
+    {
+      "name": "tavara-ruokalaatikko",
+      "sourceSHA256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "manifests": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ruokalaatikko/12da3fa7452d/render-manifest.json"
+      ]
+    }
+  ],
+  "imagesVisuallyInspected": 121,
+  "result": "ACCEPT_FOR_HANDOFF_WITH_DOCUMENTED_LIMITS",
+  "findingsResolved": [
+    {
+      "name": "water-bucket-transition",
+      "old": "fill-v6",
+      "new": "fill-v7",
+      "evidence": "fill-v7/transition-qa.json",
+      "visual": "fill-after and all four walk-after stills now retain upright buckets after a preceding mid-pour pose."
+    },
+    {
+      "name": "food-coplanar-surfaces",
+      "old": "rest-models/jaanne-ruoka.glb",
+      "new": "food-remains-v2/jaanne-ruoka.glb",
+      "evidence": "food-remains-v2/geometry-qa.json",
+      "visual": "Black corner and overlap triangles absent in both current top and quarter views."
+    },
+    {
+      "name": "comparison-framing",
+      "new": "uncropped-framing-v2",
+      "visual": "All four current/reference pairs include full heads, feet and carried props."
+    }
+  ],
+  "checks": {
+    "fourCharacterAngles": true,
+    "fourPursuerComparisons": true,
+    "fourStartleSequences": true,
+    "handGripAndReleaseSamples": true,
+    "waterLiftPourReturnBothSides": true,
+    "headPoleVisualSamples": true,
+    "emptyAndAfterFillStates": true,
+    "sweepSamples": true,
+    "sevenPropsTopAndQuarter": true,
+    "silhouetteAndPaletteReadability": true
+  },
+  "knownLimits": [
+    {
+      "severity": "receiver-game-distance-review",
+      "finding": "Angular cuff edges and small wrist boundary gaps remain visible in close-ups, most obvious on the sweeper and raised water-carrier arms. They also appear mildly in whole-body views. Original body meshes were preserved by grip/transition corrections. Not certified for close-up cinematics.",
+      "requestedReceiverCheck": "Evaluate at the actual chase-camera distance before final art approval."
+    },
+    {
+      "severity": "approximate-contact",
+      "finding": "Open/supporting palm poses are approximate; maximum thumb-target residuals 22.35 mm sweeper,17.73 mm food carrier,10.8 mm maid. No complete self-intersection/contact guarantee."
+    },
+    {
+      "severity": "runtime-pending",
+      "finding": "Still samples and numeric clips are checked; actual Unity blending, controller transitions, colliders, physics, lighting and VFX were not run here."
+    },
+    {
+      "severity": "preview-only",
+      "finding": "A black lower floor strip in older sweeper/food/maid individual stills is a QA camera/floor artifact, absent in corrected comparisons. Models are not cropped. Water v7 still cameras were also corrected."
+    },
+    {
+      "severity": "simplified-props",
+      "finding": "Porcelain debris and vase interior are simplified for game distance. Food remains retain three red trays,three bowls and nine dumplings; 0.98 m footprint. No fragment simulation is baked in."
+    }
+  ],
+  "gameIntegrated": false,
+  "receiverAccepted": false,
+  "finalArtAccepted": false,
+  "newTripoCalls": 0,
+  "newImageGenerationCalls": 0,
+  "credits": 0
+}

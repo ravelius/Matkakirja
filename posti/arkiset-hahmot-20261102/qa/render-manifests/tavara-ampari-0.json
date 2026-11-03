@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "tavara-ampari": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "7c32e97691998c9dff68e24ab928daf3e8ffebf13be4e3893dae531c3a7216b8",
+      "dependencies": {
+        "tavara-ampari": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "a77f8f821d34cd73f4505f7a49c10e8ac4ffbfbf6b7047e7b0bf61635d0645df",
+      "dependencies": {
+        "tavara-ampari": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

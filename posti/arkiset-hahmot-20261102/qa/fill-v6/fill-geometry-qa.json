@@ -1,0 +1,4345 @@
+{
+  "status": "WORK_CANDIDATE_NOT_DELIVERED",
+  "sourceSHA256": "ffab700188b68666f5d84311818880999665262365f90aea10f1e4de9adf646a",
+  "candidateSHA256": "db78629ffc73ba762687675b2a00f7809a67c6058b4551a8814238c6adfa4dee",
+  "fullWaterLocalM": 0.241,
+  "contractCommit": "e75d9464d88239821ef21c51f6877d7498a8e3ae",
+  "clips": {
+    "fill_right": {
+      "maxIkReachExcessM": 0.0,
+      "minimumBodyVatEnvelopeClearanceM": 0.022375619931181423,
+      "minimumBucketVatClearanceBelowRimM": 0.26287276927302217,
+      "peak": {
+        "t": 1.3,
+        "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+        "bucketVatClearanceBelowRimM": [
+          null,
+          0.26287276927302217
+        ],
+        "pourMarkerM": [
+          -0.47600997364948505,
+          1.1305757995065044,
+          0.7023768247581124
+        ],
+        "openingAxis": [
+          0.6644630243886748,
+          -0.342020143325669,
+          0.6644630243886747
+        ],
+        "handTargetErrorsM": [
+          3.8037284185850804e-08,
+          4.257498102327718e-08
+        ],
+        "activeWaterScale": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "samples": [
+        {
+          "t": 0.0,
+          "bodyVatEnvelopeClearanceM": 0.07313921330295936,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8505903139375919,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.03333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.4476578789912024e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.06666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.0354989911933107e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.1,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            9.566755694353748e-09,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.13333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.3276666803766699,
+            0.32737150902810597
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.12954091648273144
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.4050482913349292e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.16666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.346926981021634,
+            0.34665859500628127
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.10758482899943135
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.0930856295978118e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.2,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.37210709985184653,
+            0.371872245814465
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.0790419152711412
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.8120132822678866e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.23333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.39743809990287793,
+            0.39723539179515477
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.05049900154285107
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.3760845767877845e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.26666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4167958763939219,
+            0.41706482160271574
+          ],
+          "pourMarkerM": [
+            -0.6021943140777823,
+            0.85355865874373,
+            0.028542914059550978
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.6531898630638674e-08,
+            2.5420550976491966e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.3,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4229891781855155,
+            0.42659532697185076
+          ],
+          "pourMarkerM": [
+            -0.5984492001971674,
+            0.8755745758700009,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.752248273097602e-08,
+            3.086954126409352e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.3333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.41997795640144453,
+            0.4296606143916737
+          ],
+          "pourMarkerM": [
+            -0.5916165115142134,
+            0.9157410200927392,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.698963636395585e-08,
+            4.029674858429472e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.36666666666666664,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.41595755604122187,
+            0.4338512640659391
+          ],
+          "pourMarkerM": [
+            -0.5823823757627733,
+            0.970024540946063,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.5024584344662554e-08,
+            5.070277019160836e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.4,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4112642681444738,
+            0.4388911874788506
+          ],
+          "pourMarkerM": [
+            -0.5714329206767005,
+            1.0343916879640913,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.1574702171279373e-08,
+            5.8915501963406664e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.43333333333333335,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4121468289803587,
+            0.4506501053217451
+          ],
+          "pourMarkerM": [
+            -0.5594542739898479,
+            1.104809010680942,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.8483721731100947e-08,
+            6.292198883864002e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.4666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4248429891066976,
+            0.47420567318064655
+          ],
+          "pourMarkerM": [
+            -0.5471325634360689,
+            1.1772430586307336,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.264514231708626e-08,
+            6.189757423747203e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.5,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4200071153951994,
+            0.4799891767641833
+          ],
+          "pourMarkerM": [
+            -0.5351539167492163,
+            1.2476603813475842,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.674941904636036e-08,
+            5.56815556610426e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.5333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4156731645180949,
+            0.48535066337724087
+          ],
+          "pourMarkerM": [
+            -0.5242044616631435,
+            1.3120275283656124,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.229732840899608e-08,
+            4.497619311745454e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.5666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.41801111620854625,
+            0.49553306126793784
+          ],
+          "pourMarkerM": [
+            -0.5149703259117034,
+            1.3663110492189365,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.306651918206663e-08,
+            3.198584041134066e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.6,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.5081376372287494,
+            1.4064774934416748,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.835842623571962e-08,
+            2.021255340008981e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.6333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.5043925233481343,
+            1.4284934105679457,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.301338636338089e-08,
+            1.3231057430754093e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.6666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.49954933578335076,
+            1.4314344681993176,
+            0.03593600416380323
+          ],
+          "openingAxis": [
+            -6.297094666828332e-18,
+            1.0,
+            -1.1093749406752877e-16
+          ],
+          "handTargetErrorsM": [
+            2.4137456994137847e-08,
+            1.1600383349962365e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.7,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.46047257655925244,
+            1.4314344681993176,
+            0.13847206724725386
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.734810382099132e-08,
+            1.2650388942206066e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.7333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.3741130212913617,
+            1.4314344681993174,
+            0.27040483936433
+          ],
+          "openingAxis": [
+            -2.162509173758578e-16,
+            1.0,
+            5.039193695833859e-17
+          ],
+          "handTargetErrorsM": [
+            3.2016924480668517e-08,
+            2.2169699851831984e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.7666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.270405371230234,
+            1.4314344681993179,
+            0.3669960469381784
+          ],
+          "openingAxis": [
+            2.0910001563243317e-16,
+            1.0,
+            -7.47060241133835e-17
+          ],
+          "handTargetErrorsM": [
+            2.9779035850159822e-08,
+            2.5151017484689137e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.8,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.8333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.8666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.9,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.9333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.9666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 1.0,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 1.0333333333333332,
+          "bodyVatEnvelopeClearanceM": 0.07313923746864015,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.23061296962997868,
+            1.4269376142326022,
+            0.41666631904591184
+          ],
+          "openingAxis": [
+            0.06587111009366813,
+            0.9956515423128997,
+            0.06587111009366779
+          ],
+          "handTargetErrorsM": [
+            3.8651059449402755e-08,
+            2.4157841540088896e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            0.9956515423128997
+          ]
+        },
+        {
+          "t": 1.0666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.07313923467044114,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.2644051625032864,
+            1.4034055769148712,
+            0.45366640713341755
+          ],
+          "openingAxis": [
+            0.23364857156666932,
+            0.9438308587928823,
+            0.2336485715666695
+          ],
+          "handTargetErrorsM": [
+            4.080226871789116e-08,
+            2.0287593231288e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            0.9438308587928823
+          ]
+        },
+        {
+          "t": 1.1,
+          "bodyVatEnvelopeClearanceM": 0.07313923030458802,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.31717020450051814,
+            1.3447446939776246,
+            0.4994812703993741
+          ],
+          "openingAxis": [
+            0.44230592640647143,
+            0.7802121089366827,
+            0.44230592640647115
+          ],
+          "handTargetErrorsM": [
+            3.452297015852896e-08,
+            8.533205832525695e-09
+          ],
+          "activeWaterScale": [
+            0.9617341746387136,
+            1.0,
+            0.7503566486313509
+          ]
+        },
+        {
+          "t": 1.1333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.07313922471834511,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.5288903281448338
+          ],
+          "pourMarkerM": [
+            -0.3773921702193248,
+            1.2510539656734965,
+            0.5497481917876302
+          ],
+          "openingAxis": [
+            0.6153848907606492,
+            0.4925473301592541,
+            0.6153848907606477
+          ],
+          "handTargetErrorsM": [
+            3.049259569934395e-08,
+            1.2577843764351712e-08
+          ],
+          "activeWaterScale": [
+            0.7664849869205665,
+            1.0,
+            0.3775301339148762
+          ]
+        },
+        {
+          "t": 1.1666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392185748504,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.41613843467013356
+          ],
+          "pourMarkerM": [
+            -0.4287845969205067,
+            1.144901799188523,
+            0.6048749915788868
+          ],
+          "openingAxis": [
+            0.699306006297293,
+            0.14812906235124776,
+            0.6993060062972934
+          ],
+          "handTargetErrorsM": [
+            2.918171175636133e-08,
+            2.3216797061450212e-08
+          ],
+          "activeWaterScale": [
+            0.48529600229172765,
+            1.0,
+            0.07188644178228276
+          ]
+        },
+        {
+          "t": 1.2,
+          "bodyVatEnvelopeClearanceM": 0.042939751736078224,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.3234566099632463
+          ],
+          "pourMarkerM": [
+            -0.46093084281673125,
+            1.1303216572916979,
+            0.6593996691019751
+          ],
+          "openingAxis": [
+            0.6992299902632174,
+            -0.14884502488495158,
+            0.6992299902632174
+          ],
+          "handTargetErrorsM": [
+            3.3951941084347855e-08,
+            3.520694246247642e-08
+          ],
+          "activeWaterScale": [
+            0.20863016486871622,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.2333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0243838622582615,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.2712422248588737
+          ],
+          "pourMarkerM": [
+            -0.4744702153565238,
+            1.1305346012753816,
+            0.6968042744498711
+          ],
+          "openingAxis": [
+            0.6701793011707473,
+            -0.318934802999892,
+            0.670179301170746
+          ],
+          "handTargetErrorsM": [
+            3.7514977443140213e-08,
+            4.1854045866662946e-08
+          ],
+          "activeWaterScale": [
+            0.02695041876804527,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.2666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.3,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.3333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.3666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.4,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.4333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.4666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.5,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.26287276927302217
+          ],
+          "pourMarkerM": [
+            -0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            3.8037284185850804e-08,
+            4.257498102327718e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.5333333333333332,
+          "bodyVatEnvelopeClearanceM": 0.03211946731754778,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.28857687643361496
+          ],
+          "pourMarkerM": [
+            -0.46966832947391673,
+            1.1304335993495445,
+            0.6815924547337431
+          ],
+          "openingAxis": [
+            0.6841028815577347,
+            -0.2529950491389253,
+            0.6841028815577347
+          ],
+          "handTargetErrorsM": [
+            3.6079827920439e-08,
+            3.95233405817167e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.5666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.06017127488217788,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.36691140690503565
+          ],
+          "pourMarkerM": [
+            -0.4474593583133734,
+            1.1302580619193396,
+            0.6330091449334735
+          ],
+          "openingAxis": [
+            0.7070532248799486,
+            -0.012307492584964911,
+            0.7070532248799491
+          ],
+          "handTargetErrorsM": [
+            3.134672617863159e-08,
+            2.891821902278277e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.6,
+          "bodyVatEnvelopeClearanceM": 0.07313922165861686,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            0.4747214760005831
+          ],
+          "pourMarkerM": [
+            -0.40509788321762064,
+            1.1975501437995817,
+            0.5767907147660377
+          ],
+          "openingAxis": [
+            0.6696996339120684,
+            0.32094360980721054,
+            0.6696996339120682
+          ],
+          "handTargetErrorsM": [
+            2.931740124786164e-08,
+            1.906141968492283e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.6333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392276317826,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.34737398480640136,
+            1.3013058699467295,
+            0.5240257260701943
+          ],
+          "openingAxis": [
+            0.5377535171905935,
+            0.6493399029000855,
+            0.5377535171905933
+          ],
+          "handTargetErrorsM": [
+            3.244932338163591e-08,
+            5.590402345405579e-09
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.6666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.07313923266721645,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.2889227517732693,
+            1.3790257189100308,
+            0.4759577326108878
+          ],
+          "openingAxis": [
+            0.3376030252720699,
+            0.8786628446988596,
+            0.33760302527207
+          ],
+          "handTargetErrorsM": [
+            3.590625025217295e-08,
+            1.5580074304197452e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.7,
+          "bodyVatEnvelopeClearanceM": 0.07313923627975483,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.24478622938611783,
+            1.4187151970982348,
+            0.4334233315787269
+          ],
+          "openingAxis": [
+            0.14024872608716865,
+            0.9801329448915858,
+            0.1402487260871688
+          ],
+          "handTargetErrorsM": [
+            4.130431177483655e-08,
+            2.2853454855271466e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.7333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.07313923821050938,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.22201533778566898,
+            1.4305035945747961,
+            0.4052502452914874
+          ],
+          "openingAxis": [
+            0.01729443685620051,
+            0.9997008577107723,
+            0.01729443685620052
+          ],
+          "handTargetErrorsM": [
+            2.9670049782994728e-08,
+            2.4834132586354e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.7666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.8,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.8333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.8666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.9,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.9333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.90128794305413e-08,
+            2.507003752000245e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.9666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.22729903452002415,
+            1.4314344681993179,
+            0.3960992087256717
+          ],
+          "openingAxis": [
+            2.0579289636851389e-16,
+            1.0,
+            -8.338519281366053e-17
+          ],
+          "handTargetErrorsM": [
+            2.912767350614257e-08,
+            2.5108097190911502e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.0,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.2821109050327706,
+            1.4314344681993179,
+            0.3581438326761695
+          ],
+          "openingAxis": [
+            4.199340099566667e-16,
+            1.0,
+            -1.4446679060243226e-16
+          ],
+          "handTargetErrorsM": [
+            3.519341387865282e-08,
+            2.5092450921003592e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.033333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.36091620394717644,
+            1.4314344681993174,
+            0.28536801553876157
+          ],
+          "openingAxis": [
+            -2.15414706206902e-16,
+            1.0,
+            5.38545348704018e-17
+          ],
+          "handTargetErrorsM": [
+            3.207435294858686e-08,
+            2.298245683545464e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.0666666666666664,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.4331926477707268,
+            1.4314344681993174,
+            0.18860290438437624
+          ],
+          "openingAxis": [
+            -2.1962647631911957e-16,
+            1.0,
+            3.268053665349517e-17
+          ],
+          "handTargetErrorsM": [
+            2.9268018719762703e-08,
+            1.6269382469423748e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.1,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.48061325290413526,
+            1.4314344681993176,
+            0.09238502192073066
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.576604862933443e-08,
+            1.0800000106032121e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.1333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.5014537566082644,
+            1.4314344681993179,
+            0.0290555254319438
+          ],
+          "openingAxis": [
+            2.220379766854427e-16,
+            1.0,
+            -1.7156589836079103e-18
+          ],
+          "handTargetErrorsM": [
+            2.3966842390402645e-08,
+            1.1877640967676783e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.1666666666666665,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            -0.505151037557909,
+            1.4240344310779134,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.1956984517355747e-08,
+            1.4655394561025132e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.2,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4177018816443361,
+            0.49593156416475126
+          ],
+          "pourMarkerM": [
+            -0.5141676708177176,
+            1.3710295140222732,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.3476433853389691e-08,
+            3.0690217325864836e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.2333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4177618769891731,
+            0.48274503894380594
+          ],
+          "pourMarkerM": [
+            -0.5295076572727166,
+            1.2808523174730684,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.4137457228327715e-08,
+            5.079136642230743e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.2666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4253443036372082,
+            0.47361762960571485
+          ],
+          "pourMarkerM": [
+            -0.5483606177250436,
+            1.1700238545385495,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3239178045412117e-08,
+            6.223544201221356e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.3,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.40977404050390187,
+            0.44052607165069846
+          ],
+          "pourMarkerM": [
+            -0.5679161729768362,
+            1.0550651383269682,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.0280847110869174e-08,
+            6.061424990553829e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.3333333333333335,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4172494787925227,
+            0.43249215898019533
+          ],
+          "pourMarkerM": [
+            -0.5853639438302322,
+            0.9524971819465737,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.5789615748057575e-08,
+            4.76824858802462e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.3666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.42065168215404936,
+            0.42475683044659696
+          ],
+          "pourMarkerM": [
+            -0.5978935510873687,
+            0.8788409985056205,
+            0.02209331336133155
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.727194020746451e-08,
+            3.1672780567526426e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.4,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4083205930831222,
+            0.40813123450738487
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.038285927880265316
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.544938595460726e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.433333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.3851197150189407,
+            0.3849015660007442
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.06435878176668411
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.062741445460072e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.466666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.35913439985993745,
+            0.35888247407943785
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.09372504877559831
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.2441257803565246e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.5,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.33620136964970926,
+            0.3359181934648938
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.1197979026620171
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.3648178644700589e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.533333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.32202778420812384,
+            0.3217245748457733
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.13599051718095087
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            9.295867500038715e-09,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.5666666666666664,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.345154189980825e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.6,
+          "bodyVatEnvelopeClearanceM": 0.07313921330295936,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            -0.6026946155503836,
+            0.8505903139375919,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "fill_left": {
+      "maxIkReachExcessM": 0.0,
+      "minimumBodyVatEnvelopeClearanceM": 0.022375619931181423,
+      "minimumBucketVatClearanceBelowRimM": 0.26295215324709886,
+      "peak": {
+        "t": 1.3,
+        "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+        "bucketVatClearanceBelowRimM": [
+          0.26295215324709886,
+          null
+        ],
+        "pourMarkerM": [
+          0.47600997364948505,
+          1.1305757995065044,
+          0.7023768247581124
+        ],
+        "openingAxis": [
+          -0.6644630243886748,
+          -0.342020143325669,
+          0.6644630243886747
+        ],
+        "handTargetErrorsM": [
+          5.1668645416317594e-08,
+          4.688758705342823e-08
+        ],
+        "activeWaterScale": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "samples": [
+        {
+          "t": 0.0,
+          "bodyVatEnvelopeClearanceM": 0.07313921330295936,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8505903139375919,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.03333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.510546641439639e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.06666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.6218967966625407e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.1,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.7921728083325668e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.13333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.3276666803766699,
+            0.32737150902810597
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.12954091648273144
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.990931686721837e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.16666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.346926981021634,
+            0.34665859500628127
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.10758482899943135
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            3.175920571504663e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.2,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.37210709985184653,
+            0.371872245814465
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.0790419152711412
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            3.364003619676604e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.23333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.39743809990287793,
+            0.39723539179515477
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.05049900154285107
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            3.57072448175805e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.26666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.41724476680587763,
+            0.4166180667810595
+          ],
+          "pourMarkerM": [
+            0.6021943140777823,
+            0.85355865874373,
+            0.028542914059550978
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.7031659724490765e-08,
+            3.6091301281843095e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.3,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4267738870497779,
+            0.42282865607907416
+          ],
+          "pourMarkerM": [
+            0.5984492001971674,
+            0.8755745758700009,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.9652930069208526e-08,
+            2.9517968475509553e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.3333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4298536040828962,
+            0.4198320348991733
+          ],
+          "pourMarkerM": [
+            0.5916165115142134,
+            0.9157410200927392,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3789693613384882e-08,
+            1.6578197673172455e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.36666666666666664,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4340636324273148,
+            0.4158314864764594
+          ],
+          "pourMarkerM": [
+            0.5823823757627733,
+            0.970024540946063,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.7464245193268162e-08,
+            2.9363110201423096e-09
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.4,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.43912635056004046,
+            0.4111619148133281
+          ],
+          "pourMarkerM": [
+            0.5714329206767005,
+            1.0343916879640913,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.8092739266352616e-08,
+            1.504819469991067e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.43333333333333335,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4506501053217451,
+            0.4121468289803587
+          ],
+          "pourMarkerM": [
+            0.5594542739898479,
+            1.104809010680942,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.4966766451303065e-08,
+            1.4198816927466357e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.4666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.47420567318064655,
+            0.4248429891066976
+          ],
+          "pourMarkerM": [
+            0.5471325634360689,
+            1.1772430586307336,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.2020248485399782e-08,
+            3.387605268733798e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.5,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4799891767641833,
+            0.4200071153951994
+          ],
+          "pourMarkerM": [
+            0.5351539167492163,
+            1.2476603813475842,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.4202656494489107e-08,
+            5.262038327109718e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.5333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.48535066337724087,
+            0.4156731645180949
+          ],
+          "pourMarkerM": [
+            0.5242044616631435,
+            1.3120275283656124,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.95725762606673e-08,
+            6.701982958083657e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.5666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4958063069693641,
+            0.41801111620854625
+          ],
+          "pourMarkerM": [
+            0.5149703259117034,
+            1.3663110492189365,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.3748876367829146e-08,
+            7.552672943019821e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.6,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.5081376372287494,
+            1.4064774934416748,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.5351897140191154e-08,
+            7.840395095887463e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.6333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.5043925233481343,
+            1.4284934105679457,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.539492855302942e-08,
+            7.814082546777328e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.6666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.49954933578335076,
+            1.4314344681993176,
+            0.035936004163803284
+          ],
+          "openingAxis": [
+            -6.297094666828332e-18,
+            1.0,
+            1.1093749406752877e-16
+          ],
+          "handTargetErrorsM": [
+            3.441632509893319e-08,
+            7.81911100537617e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.7,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.46047257655925244,
+            1.4314344681993176,
+            0.13847206724725386
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.769662188215011e-08,
+            7.836108831826972e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.7333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.3741130212913617,
+            1.4314344681993174,
+            0.27040483936433
+          ],
+          "openingAxis": [
+            2.162509173758578e-16,
+            1.0,
+            5.039193695833859e-17
+          ],
+          "handTargetErrorsM": [
+            1.7788229447865065e-08,
+            7.46746541934992e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.7666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.270405371230234,
+            1.4314344681993179,
+            0.3669960469381784
+          ],
+          "openingAxis": [
+            -2.0910001563243317e-16,
+            1.0,
+            -7.47060241133835e-17
+          ],
+          "handTargetErrorsM": [
+            2.088278998260307e-08,
+            6.779536479140585e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.8,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.8333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.8666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.9,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.9333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 0.9666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 1.0,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "t": 1.0333333333333332,
+          "bodyVatEnvelopeClearanceM": 0.07313923746864015,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.23061296962997868,
+            1.4269376142326022,
+            0.41666631904591184
+          ],
+          "openingAxis": [
+            -0.06587111009366813,
+            0.9956515423128997,
+            0.06587111009366779
+          ],
+          "handTargetErrorsM": [
+            2.3894335647255548e-08,
+            6.294027126309924e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            0.9956515423128997
+          ]
+        },
+        {
+          "t": 1.0666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.07313923467044114,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.2644051625032864,
+            1.4034055769148712,
+            0.45366640713341755
+          ],
+          "openingAxis": [
+            -0.23364857156666932,
+            0.9438308587928823,
+            0.2336485715666695
+          ],
+          "handTargetErrorsM": [
+            2.5445439234142795e-08,
+            6.518299628086108e-08
+          ],
+          "activeWaterScale": [
+            1.0,
+            1.0,
+            0.9438308587928823
+          ]
+        },
+        {
+          "t": 1.1,
+          "bodyVatEnvelopeClearanceM": 0.07313923030458802,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.31717020450051814,
+            1.3447446939776246,
+            0.4994812703993741
+          ],
+          "openingAxis": [
+            -0.44230592640647143,
+            0.7802121089366827,
+            0.44230592640647115
+          ],
+          "handTargetErrorsM": [
+            3.096085513424875e-08,
+            6.918236480413968e-08
+          ],
+          "activeWaterScale": [
+            0.9617341746387136,
+            1.0,
+            0.7503566486313509
+          ]
+        },
+        {
+          "t": 1.1333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.07313922471834511,
+          "bucketVatClearanceBelowRimM": [
+            0.5288555846374043,
+            null
+          ],
+          "pourMarkerM": [
+            0.3773921702193248,
+            1.2510539656734965,
+            0.5497481917876302
+          ],
+          "openingAxis": [
+            -0.6153848907606492,
+            0.4925473301592541,
+            0.6153848907606477
+          ],
+          "handTargetErrorsM": [
+            3.645002931618279e-08,
+            6.34248202663194e-08
+          ],
+          "activeWaterScale": [
+            0.7664849869205665,
+            1.0,
+            0.3775301339148762
+          ]
+        },
+        {
+          "t": 1.1666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392185748504,
+          "bucketVatClearanceBelowRimM": [
+            0.41613843467013356,
+            null
+          ],
+          "pourMarkerM": [
+            0.4287845969205067,
+            1.144901799188523,
+            0.6048749915788868
+          ],
+          "openingAxis": [
+            -0.699306006297293,
+            0.14812906235124776,
+            0.6993060062972934
+          ],
+          "handTargetErrorsM": [
+            4.23510481221415e-08,
+            4.5632241891981785e-08
+          ],
+          "activeWaterScale": [
+            0.48529600229172765,
+            1.0,
+            0.07188644178228276
+          ]
+        },
+        {
+          "t": 1.2,
+          "bodyVatEnvelopeClearanceM": 0.042939751736078224,
+          "bucketVatClearanceBelowRimM": [
+            0.3234566099632463,
+            null
+          ],
+          "pourMarkerM": [
+            0.46093084281673125,
+            1.1303216572916979,
+            0.6593996691019751
+          ],
+          "openingAxis": [
+            -0.6992299902632174,
+            -0.14884502488495158,
+            0.6992299902632174
+          ],
+          "handTargetErrorsM": [
+            4.868533668556872e-08,
+            4.480244238911423e-08
+          ],
+          "activeWaterScale": [
+            0.20863016486871622,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.2333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0243838622582615,
+          "bucketVatClearanceBelowRimM": [
+            0.27131659249900375,
+            null
+          ],
+          "pourMarkerM": [
+            0.4744702153565238,
+            1.1305346012753816,
+            0.6968042744498711
+          ],
+          "openingAxis": [
+            -0.6701793011707473,
+            -0.318934802999892,
+            0.670179301170746
+          ],
+          "handTargetErrorsM": [
+            5.136035037546734e-08,
+            4.658718819726791e-08
+          ],
+          "activeWaterScale": [
+            0.02695041876804527,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.2666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.3,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.3333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.3666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.4,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.4333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.4666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.5,
+          "bodyVatEnvelopeClearanceM": 0.022375619931181423,
+          "bucketVatClearanceBelowRimM": [
+            0.26295215324709886,
+            null
+          ],
+          "pourMarkerM": [
+            0.47600997364948505,
+            1.1305757995065044,
+            0.7023768247581124
+          ],
+          "openingAxis": [
+            -0.6644630243886748,
+            -0.342020143325669,
+            0.6644630243886747
+          ],
+          "handTargetErrorsM": [
+            5.1668645416317594e-08,
+            4.688758705342823e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.5333333333333332,
+          "bodyVatEnvelopeClearanceM": 0.03211946731754778,
+          "bucketVatClearanceBelowRimM": [
+            0.28857687643361496,
+            null
+          ],
+          "pourMarkerM": [
+            0.46966832947391673,
+            1.1304335993495445,
+            0.6815924547337431
+          ],
+          "openingAxis": [
+            -0.6841028815577347,
+            -0.2529950491389253,
+            0.6841028815577347
+          ],
+          "handTargetErrorsM": [
+            5.0400914501801854e-08,
+            4.581219138790487e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.5666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.06017127488217788,
+          "bucketVatClearanceBelowRimM": [
+            0.36691140690503565,
+            null
+          ],
+          "pourMarkerM": [
+            0.4474593583133734,
+            1.1302580619193396,
+            0.6330091449334735
+          ],
+          "openingAxis": [
+            -0.7070532248799486,
+            -0.012307492584964911,
+            0.7070532248799491
+          ],
+          "handTargetErrorsM": [
+            4.604739181236177e-08,
+            4.377719214735988e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.6,
+          "bodyVatEnvelopeClearanceM": 0.07313922165861686,
+          "bucketVatClearanceBelowRimM": [
+            0.4747201058117354,
+            null
+          ],
+          "pourMarkerM": [
+            0.40509788321762064,
+            1.1975501437995817,
+            0.5767907147660377
+          ],
+          "openingAxis": [
+            -0.6696996339120684,
+            0.32094360980721054,
+            0.6696996339120682
+          ],
+          "handTargetErrorsM": [
+            3.9115451318325845e-08,
+            5.502169027284794e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.6333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392276317826,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.34737398480640136,
+            1.3013058699467295,
+            0.5240257260701943
+          ],
+          "openingAxis": [
+            -0.5377535171905935,
+            0.6493399029000855,
+            0.5377535171905933
+          ],
+          "handTargetErrorsM": [
+            3.3860563567091785e-08,
+            6.843644229507663e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.6666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.07313923266721645,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.2889227517732693,
+            1.3790257189100308,
+            0.4759577326108878
+          ],
+          "openingAxis": [
+            -0.3376030252720699,
+            0.8786628446988596,
+            0.33760302527207
+          ],
+          "handTargetErrorsM": [
+            2.792127826110872e-08,
+            6.729332419048415e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.7,
+          "bodyVatEnvelopeClearanceM": 0.07313923627975483,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.24478622938611783,
+            1.4187151970982348,
+            0.4334233315787269
+          ],
+          "openingAxis": [
+            -0.14024872608716865,
+            0.9801329448915858,
+            0.1402487260871688
+          ],
+          "handTargetErrorsM": [
+            2.4172394468158603e-08,
+            6.373337676077255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.7333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.07313923821050938,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.22201533778566898,
+            1.4305035945747961,
+            0.4052502452914874
+          ],
+          "openingAxis": [
+            -0.01729443685620051,
+            0.9997008577107723,
+            0.01729443685620052
+          ],
+          "handTargetErrorsM": [
+            2.3951763769663637e-08,
+            6.255154455617306e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.7666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.8,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.8333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.8666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.9,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.9333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.21907809998977312,
+            1.4314344681993176,
+            0.40107517448618013
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.3993532354231077e-08,
+            6.242916208201255e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 1.9666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.22729903452002415,
+            1.4314344681993179,
+            0.3960992087256717
+          ],
+          "openingAxis": [
+            -2.0579289636851389e-16,
+            1.0,
+            -8.338519281366053e-17
+          ],
+          "handTargetErrorsM": [
+            2.3513034425175098e-08,
+            6.33854799255543e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.0,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.2821109050327706,
+            1.4314344681993179,
+            0.3581438326761695
+          ],
+          "openingAxis": [
+            -4.199340099566667e-16,
+            1.0,
+            -1.4446679060243226e-16
+          ],
+          "handTargetErrorsM": [
+            2.0173178399438088e-08,
+            6.882581367880522e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.033333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.36091620394717644,
+            1.4314344681993174,
+            0.28536801553876157
+          ],
+          "openingAxis": [
+            2.15414706206902e-16,
+            1.0,
+            5.38545348704018e-17
+          ],
+          "handTargetErrorsM": [
+            1.7450372211129504e-08,
+            7.407438077881475e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.0666666666666664,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.4331926477707268,
+            1.4314344681993174,
+            0.18860290438437624
+          ],
+          "openingAxis": [
+            2.1962647631911957e-16,
+            1.0,
+            3.268053665349517e-17
+          ],
+          "handTargetErrorsM": [
+            2.3479343258423897e-08,
+            7.753729756475394e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.1,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.48061325290413526,
+            1.4314344681993176,
+            0.09238502192073066
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.098097449034175e-08,
+            7.855723814151014e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.1333333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.5014537566082644,
+            1.4314344681993179,
+            0.0290555254319438
+          ],
+          "openingAxis": [
+            -2.220379766854427e-16,
+            1.0,
+            -1.7156589836079103e-18
+          ],
+          "handTargetErrorsM": [
+            3.481591773073066e-08,
+            7.810535310906026e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.1666666666666665,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            null,
+            null
+          ],
+          "pourMarkerM": [
+            0.505151037557909,
+            1.4240344310779134,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.5439570499506036e-08,
+            7.83271716326649e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.2,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4962060521889229,
+            0.4177018816443361
+          ],
+          "pourMarkerM": [
+            0.5141676708177176,
+            1.3710295140222732,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            3.4022060085781764e-08,
+            7.604444709877566e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.2333333333333334,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.48274503894380594,
+            0.4177618769891731
+          ],
+          "pourMarkerM": [
+            0.5295076572727166,
+            1.2808523174730684,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.681824211552661e-08,
+            6.049554795593014e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.2666666666666666,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.47361762960571485,
+            0.4253443036372082
+          ],
+          "pourMarkerM": [
+            0.5483606177250436,
+            1.1700238545385495,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.2127690898873423e-08,
+            3.1867614905106936e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.3,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4407685134067547,
+            0.4096793446466973
+          ],
+          "pourMarkerM": [
+            0.5679161729768362,
+            1.0550651383269682,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.7463896880324946e-08,
+            6.5216524955947865e-09
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.3333333333333335,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.43269828569157043,
+            0.41711698434915223
+          ],
+          "pourMarkerM": [
+            0.5853639438302322,
+            0.9524971819465737,
+            0.019760479066230935
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.6565732188256244e-08,
+            5.6374830601079366e-09
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.3666666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4249390439343561,
+            0.42048989269365866
+          ],
+          "pourMarkerM": [
+            0.5978935510873687,
+            0.8788409985056205,
+            0.02209331336133155
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            2.0026622436178167e-08,
+            2.8291581020886762e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.4,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.4083205930831222,
+            0.40813123450738487
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.038285927880265316
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            3.6495131248897206e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.433333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.3851197150189407,
+            0.3849015660007442
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.06435878176668411
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            3.43007681433584e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.466666666666667,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.35913439985993745,
+            0.35888247407943785
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.09372504877559831
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            3.163082844790491e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.5,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.33620136964970926,
+            0.3359181934648938
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.1197979026620171
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.922598859327944e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.533333333333333,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.32202778420812384,
+            0.3217245748457733
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.13599051718095087
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.6987011974057392e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.5666666666666664,
+          "bodyVatEnvelopeClearanceM": 0.0731392384690126,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8506176011123581,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.5322635508032906e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "t": 2.6,
+          "bodyVatEnvelopeClearanceM": 0.07313921330295936,
+          "bucketVatClearanceBelowRimM": [
+            0.31999033835195023,
+            0.31968420225988825
+          ],
+          "pourMarkerM": [
+            0.6026946155503836,
+            0.8505903139375919,
+            0.1383233514760515
+          ],
+          "openingAxis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "handTargetErrorsM": [
+            1.6665669332345188e-08,
+            2.4699605840155645e-08
+          ],
+          "activeWaterScale": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  },
+  "runtimeSeconds": 4.588442802429199,
+  "peakRSSBytes": 74268672
+}

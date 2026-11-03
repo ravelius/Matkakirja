@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "tavara-maljakko": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "44448dab0971c0c48aae65e8f2224cd1eabd509d0ec01271f392ab8d6c83d971",
+      "dependencies": {
+        "tavara-maljakko": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "ced1547cb0065df014b95ced37286842e55848411eb12195a9e0cebbcecb640d",
+      "dependencies": {
+        "tavara-maljakko": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

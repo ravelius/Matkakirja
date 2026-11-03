@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+    "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+    "renderRevision": "uncropped-framing-v2"
+  },
+  "renders": {
+    "comparison-front": {
+      "sha256": "3c8d3b37036c34d45866b25ab7646b28e7ec26f6ad7b2cc1e3943bceba110611",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "palvelijatar",
+      "comparisonRight": "eunukki-1-reference"
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

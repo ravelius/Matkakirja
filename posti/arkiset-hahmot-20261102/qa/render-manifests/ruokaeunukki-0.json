@@ -1,0 +1,125 @@
+{
+  "sourceSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+  "renders": {
+    "grip-quarter": {
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false,
+      "sha256": "0cec17f97e5b15e80bc2c4064c8f48551c446ee9cdde4957052847a708eb6d99"
+    },
+    "grip-other-side": {
+      "clip": "idle",
+      "seconds": 0,
+      "angle": -35,
+      "vat": false,
+      "sha256": "5b9cd9426ec898f9cb2958199a31a6f41f8be5f2c44e1e40a10de3a9fe0cd072"
+    },
+    "carry-front": {
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 0,
+      "vat": false,
+      "sha256": "a8562572344627519b1a37b66ef57685b8dc29abd0a075e119cef7830554dba0"
+    },
+    "carry-side": {
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 90,
+      "vat": false,
+      "sha256": "f455e02afa633c16f28fcf4173a3ef24900084476c550f09daeb2798dd19d236"
+    },
+    "carry-back": {
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 180,
+      "vat": false,
+      "sha256": "e4731ca675319316cd3af5ae687299212be29a44dc9a7fd6b5ea6f5f94f85584"
+    },
+    "carry-quarter": {
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false,
+      "sha256": "9cc26d975eddb5e5359eab364605d43875d603bbc2595a00c9d705d7c1f333a9"
+    },
+    "startle-0": {
+      "clip": "startle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false,
+      "sha256": "8e3bd72b1c2a67eb4d2f12cf4000fee1006b3fb1451df55b0d8ace9d013b77c5"
+    },
+    "startle-1": {
+      "clip": "startle",
+      "seconds": 0.2,
+      "angle": 35,
+      "vat": false,
+      "sha256": "6c363bb3bbf57d39746cac95bdc36c29a47e74904e72bd31a2ed620d25d1fa29"
+    },
+    "startle-2": {
+      "clip": "startle",
+      "seconds": 0.3,
+      "angle": 35,
+      "vat": false,
+      "sha256": "919b8f331cee0ccaf423455b74c5fd1d1c3891a543bfd7f44136d749a8202b4c"
+    },
+    "startle-3": {
+      "clip": "startle",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": false,
+      "sha256": "9de492d2aaf848e31b5b3cb8a458c04d39dbb0a0e2af02459d0d9acd3efd0c21"
+    },
+    "startle-4": {
+      "clip": "startle",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": false,
+      "sha256": "889b2d4f346b0e1248b6830675df637ef11318a4ba869ddc14ff618596cef2e3"
+    },
+    "startle-5": {
+      "clip": "startle",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": false,
+      "sha256": "9efb2c8d6f28ed0562747c760802e8df40f3d15d71ddc5bc7517fd368742fc55"
+    },
+    "walk-0": {
+      "clip": "walk",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false,
+      "sha256": "940ebe954a3aa5e416398a2310bedbdfcf5995bf3378bf96d1111122e5f86097"
+    },
+    "walk-1": {
+      "clip": "walk",
+      "seconds": 0.35,
+      "angle": 35,
+      "vat": false,
+      "sha256": "8813387fb0765f5d4ac592f8d125f9cb375c9a9a8b41c19e356194adc2771f34"
+    },
+    "walk-2": {
+      "clip": "walk",
+      "seconds": 0.7,
+      "angle": 35,
+      "vat": false,
+      "sha256": "ac0f79307e956ef724f1443b8936a10e595cfa2922a239ee0eca8568517341fe"
+    },
+    "walk-3": {
+      "clip": "walk",
+      "seconds": 1.05,
+      "angle": 35,
+      "vat": false,
+      "sha256": "a70719be43523f3f437e62d78c0ec74ef99da0a0235e08c434c9c2d3295f0d2f"
+    },
+    "empty": {
+      "clip": "startle_idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false,
+      "sha256": "8eaa908ac7a212da3d21684a430c56bfcd7822c7faee114fa46af3cb0cb7fc36"
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "tavara-ruokalaatikko": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "0b293d1a1bc4ca0b7d84776ccb0156a54f537a73db48bf5e3142fcfed2a4da24",
+      "dependencies": {
+        "tavara-ruokalaatikko": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "46fb06b36552b9ca21a595c6f8b589274ea0f8c880896a2db173007b9453ce0e",
+      "dependencies": {
+        "tavara-ruokalaatikko": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

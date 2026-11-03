@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "jaanne-vesi": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "b4f2ada286ddd30dd4f9abc9baf3f604d35354d86d05b4d795bf7143a8ecfa7f",
+      "dependencies": {
+        "jaanne-vesi": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "b0895c80dc10764a5e6012bb09b66721cf8fc6ae4eb0a58dd536224451577d83",
+      "dependencies": {
+        "jaanne-vesi": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

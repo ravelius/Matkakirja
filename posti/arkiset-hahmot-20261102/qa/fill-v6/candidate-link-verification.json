@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-03T10:57:41.203463+00:00",
+  "status": "CURRENT_CANDIDATE_AND_QA_HASH_LINKS_PASS",
+  "verifiedModels": [
+    "ruokaeunukki",
+    "palvelijatar",
+    "vedenkantaja",
+    "lakaisija",
+    "jaanne-posliini",
+    "jaanne-ruoka",
+    "jaanne-vesi",
+    "tavara-ampari",
+    "tavara-luuta",
+    "tavara-maljakko",
+    "tavara-ruokalaatikko"
+  ],
+  "total": 11,
+  "renderScriptsSyntaxChecked": 3,
+  "renderScriptsExecuted": 0,
+  "deliveryAllowed": false
+}

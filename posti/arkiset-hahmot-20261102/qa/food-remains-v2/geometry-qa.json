@@ -1,0 +1,19 @@
+{
+  "sourceSHA256": "a70c39072dacdfa496d729d517742937cb4add94625215e1d89c24b9d5a7f9cb",
+  "candidateSHA256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+  "sourcePreserved": true,
+  "triangles": 1728,
+  "dimensionsM_BlenderXYZ": [
+    0.9799998998641968,
+    0.9831247627735138,
+    0.08100000023841858
+  ],
+  "minimumTrayBoundingCircleClearanceM": 0.04991383398288013,
+  "trayFacesPerShell": 14,
+  "trayShells": 3,
+  "riceBowls": 3,
+  "dumplings": 9,
+  "change": "Watertight single-shell trays and nonoverlapping positions remove coplanar black triangles. Same palette/prop identity; no other asset changed.",
+  "visualReviewPending": true,
+  "credits": 0
+}

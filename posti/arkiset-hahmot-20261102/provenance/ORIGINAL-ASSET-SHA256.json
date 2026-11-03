@@ -1,0 +1,150 @@
+{
+  "output/arkiset-hahmot-20261103/build_assets.py": {
+    "sha256": "e3fca815c6ba4bbcf68026672fa56d0cefb29ca7e0f40a10a030d5709e1278f6",
+    "bytes": 21997
+  },
+  "output/arkiset-hahmot-20261103/animate_assets.py": {
+    "sha256": "142628d163d8f275f31ffcc267cbe19230a80180e5408daf18a8114e9552e103",
+    "bytes": 9780
+  },
+  "output/arkiset-hahmot-20261103/qa_assets.py": {
+    "sha256": "6b962c50bef48bdc31c32d2bdefe008a30d8199405e28dce6ce5cef3e059831e",
+    "bytes": 2118
+  },
+  "output/arkiset-hahmot-20261103/render_sequences.py": {
+    "sha256": "fbce98d1424982fa6d6d12191458bb1852bce5dbd285e33d318045f1ee501e1d",
+    "bytes": 3613
+  },
+  "output/arkiset-hahmot-20261103/sources/SOURCE-REFERENCES.json": {
+    "sha256": "7e7e08a6052d4ff8bef845c18b582261fc20005a864fb343a5217f62eba94b48",
+    "bytes": 1107
+  },
+  "output/arkiset-hahmot-20261103/qa-numeric.json": {
+    "sha256": "907d4496dd147f4bac6ddc2d3d27505ca967097d164e914a7eb1f6799c69245f",
+    "bytes": 9257
+  },
+  "output/arkiset-hahmot-20261103/qa-integration-contract.json": {
+    "sha256": "718683cf03c14d34636fb5132dcf9a73dae40be00b99fa84d953f5c16873fac3",
+    "bytes": 3198
+  },
+  "output/arkiset-hahmot-20261103/delivery/ruokaeunukki.glb": {
+    "sha256": "f5c3679232bb46a72fe51ea83c6e9b2b75035c66ea5a8e42186f78cc631f2877",
+    "bytes": 3615100
+  },
+  "output/arkiset-hahmot-20261103/delivery/vedenkantaja.glb": {
+    "sha256": "ffab700188b68666f5d84311818880999665262365f90aea10f1e4de9adf646a",
+    "bytes": 3993140
+  },
+  "output/arkiset-hahmot-20261103/delivery/lakaisija.glb": {
+    "sha256": "352f579ba5e65fe01b42c5b2776e14f762ac9c674805b5d0e51537f02af5f458",
+    "bytes": 3600492
+  },
+  "output/arkiset-hahmot-20261103/delivery/palvelijatar.glb": {
+    "sha256": "7f69335ddd4ca0a35d48606642b949d25744ff29e9306c107610b2b99a7ccc42",
+    "bytes": 3778648
+  },
+  "output/arkiset-hahmot-20261103/rest-models/tavara-ampari.glb": {
+    "sha256": "9026d76449d7a41c90d1fff19cb76ec5689f6d76c8b9a5805a1b51ae033b599b",
+    "bytes": 27536
+  },
+  "output/arkiset-hahmot-20261103/rest-models/jaanne-ruoka.glb": {
+    "sha256": "a70c39072dacdfa496d729d517742937cb4add94625215e1d89c24b9d5a7f9cb",
+    "bytes": 82952
+  },
+  "output/arkiset-hahmot-20261103/rest-models/tavara-ruokalaatikko.glb": {
+    "sha256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+    "bytes": 71968
+  },
+  "output/arkiset-hahmot-20261103/rest-models/ruokaeunukki.glb": {
+    "sha256": "7810f5623037b7983236d1821e5f58785227588e21d126e3832d38a763f2051f",
+    "bytes": 3034756
+  },
+  "output/arkiset-hahmot-20261103/rest-models/vedenkantaja.glb": {
+    "sha256": "a5dd5bc8223d9ce5ea903ffeebeaeb940ec0af6895ad9ccdb908f50b4bc17cfd",
+    "bytes": 3262228
+  },
+  "output/arkiset-hahmot-20261103/rest-models/lakaisija.glb": {
+    "sha256": "f2372b8a7adeb1f4ade7abb06550dd49ce74aa6f9d8a326f5776adb049993d39",
+    "bytes": 2896136
+  },
+  "output/arkiset-hahmot-20261103/rest-models/palvelijatar.glb": {
+    "sha256": "9ec8b6732e8eb181e92ccffbdc76a9387295b85df3610843561c9c6ed7d33b78",
+    "bytes": 3200528
+  },
+  "output/arkiset-hahmot-20261103/rest-models/jaanne-vesi.glb": {
+    "sha256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+    "bytes": 21884
+  },
+  "output/arkiset-hahmot-20261103/rest-models/jaanne-posliini.glb": {
+    "sha256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+    "bytes": 9868
+  },
+  "output/arkiset-hahmot-20261103/rest-models/tavara-maljakko.glb": {
+    "sha256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+    "bytes": 33644
+  },
+  "output/arkiset-hahmot-20261103/rest-models/tavara-luuta.glb": {
+    "sha256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+    "bytes": 13984
+  },
+  "output/arkiset-hahmot-20261103/rest-models/lakaisija.blend": {
+    "sha256": "20694c4007c186efdfa387b7cc77113f76b2a59434e2040b85322d44f3e1f8c6",
+    "bytes": 3010073
+  },
+  "output/arkiset-hahmot-20261103/rest-models/vedenkantaja.blend": {
+    "sha256": "dc6dc60ba2b64e7f84eb5db21791f2e48b06fa01512523a1efccc0e2b332ccae",
+    "bytes": 3383168
+  },
+  "output/arkiset-hahmot-20261103/rest-models/ruokaeunukki.blend": {
+    "sha256": "137d4e666bf0ebf584929b985ff459d62f499b0f54188a38ae3dd7026aa6b107",
+    "bytes": 3089566
+  },
+  "output/arkiset-hahmot-20261103/rest-models/palvelijatar.blend": {
+    "sha256": "35a6c738bf3eb892aeff4c86208f950bd3e995128d7fb9f62619a8d41b207df2",
+    "bytes": 3258293
+  },
+  "output/arkiset-hahmot-20261103/qa/props-contact.jpg": {
+    "sha256": "da11c1c23a3fa33966e944912b536985646d26b4eda09bb52e63be1405b65faf",
+    "bytes": 49351
+  },
+  "output/arkiset-hahmot-20261103/qa/lakaisija-startle-contact.jpg": {
+    "sha256": "3d5391d54fba4c3f8d3a384e99a9ecb5e8c6fdf746c71badb6affea42505411d",
+    "bytes": 48480
+  },
+  "output/arkiset-hahmot-20261103/qa/fill-contact.jpg": {
+    "sha256": "2a259df0e09fabdc0652d310787b5e7c796b26c0c577550cef73fc10c6a886d9",
+    "bytes": 61628
+  },
+  "output/arkiset-hahmot-20261103/qa/sweep-contact.jpg": {
+    "sha256": "d9504c38432be36062ce86231ba5a62305621dc9520e9519fcd4b9df4046ce30",
+    "bytes": 38746
+  },
+  "output/arkiset-hahmot-20261103/qa/ruokaeunukki-startle-contact.jpg": {
+    "sha256": "60b22917b6f6b8eaa8c7ebea7e879f55d9ed0827b7504ac513b9c157a6c97cd4",
+    "bytes": 54000
+  },
+  "output/arkiset-hahmot-20261103/qa/carry-contact.jpg": {
+    "sha256": "38d104853cfad6ac979fbfb0c602dffa7343927c24eb57e8b648aa8cd8e69d86",
+    "bytes": 95116
+  },
+  "output/arkiset-hahmot-20261103/qa/vedenkantaja-fill-contact.jpg": {
+    "sha256": "4a7b2841d14b650dee8faa65592ace7141b93ac3b397ca6b7ac41f2e15ca4748",
+    "bytes": 61819
+  },
+  "output/arkiset-hahmot-20261103/qa/vedenkantaja-startle-contact.jpg": {
+    "sha256": "c2de27dfa8c30d494a44f2133f73d52f8e3cb7baf32642ed1a480f2c1a1a1a8b",
+    "bytes": 53973
+  },
+  "output/arkiset-hahmot-20261103/qa/palvelijatar-startle-contact.jpg": {
+    "sha256": "e9502dd1a5f35a00fd57158a7ad5dc242cc8cb9eacea43dc8f8eb62adcea0a22",
+    "bytes": 48455
+  },
+  "output/arkiset-hahmot-20261103/qa/startle-contact.jpg": {
+    "sha256": "3ddc7d222dd39a2adde85dc66bf9f5f99f2bad3ba8b8cd7473570d7d866d34ac",
+    "bytes": 161188
+  },
+  "output/arkiset-hahmot-20261103/qa/asuvertailu-jahtaajaan.jpg": {
+    "sha256": "4b4dbc3a80f162d8ad12022052531c3a6ef4c70fa5964e7e7739f85e1b5b514a",
+    "bytes": 56028
+  }
+}

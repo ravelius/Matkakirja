@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+    "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+    "renderRevision": "uncropped-framing-v2"
+  },
+  "renders": {
+    "comparison-front": {
+      "sha256": "90e7449a860a28aa4a9564ca20fb84e55da7b16e10383c71a8c6436ef3357f42",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "ruokaeunukki",
+      "comparisonRight": "eunukki-1-reference"
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

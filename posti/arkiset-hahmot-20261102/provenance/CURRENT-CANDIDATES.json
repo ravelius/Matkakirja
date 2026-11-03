@@ -1,0 +1,115 @@
+{
+  "updatedAt": "2026-11-03T16:33:42.053030+00:00",
+  "status": "LOCAL_QA_COMPLETE_READY_FOR_RECEIVER_REVIEW",
+  "delivered": false,
+  "models": [
+    {
+      "name": "ruokaeunukki",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/ruokaeunukki.glb",
+      "sha256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "kind": "character",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/qa-carry-grip.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "palvelijatar",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/palvelijatar.glb",
+      "sha256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "kind": "character",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/qa-carry-grip.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "vedenkantaja",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/vedenkantaja.glb",
+      "sha256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "kind": "character",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS",
+      "previousRejectedCandidate": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v5/vedenkantaja.glb",
+        "sha256": "2d1b4dd7c2d7c06093e5c5bc0b61264b8d5523abef542a13050ea3759b84ca43",
+        "rejectionEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v5/head-pole-qa.json"
+      },
+      "headPoleQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/head-pole-qa.json",
+      "previousVisualFindingCandidate": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/vedenkantaja.glb",
+        "sha256": "db78629ffc73ba762687675b2a00f7809a67c6058b4551a8814238c6adfa4dee",
+        "finding": "Bucket rotations can persist in unkeyed non-fill clips."
+      },
+      "transitionQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/transition-qa.json"
+    },
+    {
+      "name": "lakaisija",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/lakaisija.glb",
+      "sha256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "kind": "character",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/qa-grip.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "jaanne-posliini",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/jaanne-posliini.glb",
+      "sha256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "jaanne-ruoka",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/food-remains-v2/jaanne-ruoka.glb",
+      "sha256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/food-remains-v2/geometry-qa.json",
+      "previousVisualFindingCandidate": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/jaanne-ruoka.glb",
+        "sha256": "a70c39072dacdfa496d729d517742937cb4add94625215e1d89c24b9d5a7f9cb",
+        "finding": "Coplanar overlapping tray corners and floors create black triangles."
+      },
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "jaanne-vesi",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/jaanne-vesi.glb",
+      "sha256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "tavara-ampari",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/tavara-ampari.glb",
+      "sha256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "tavara-luuta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/tavara-luuta.glb",
+      "sha256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "tavara-maljakko",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/tavara-maljakko.glb",
+      "sha256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    },
+    {
+      "name": "tavara-ruokalaatikko",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/tavara-ruokalaatikko.glb",
+      "sha256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "kind": "prop_or_remains",
+      "numericQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "validationStatus": "LOCAL_QA_COMPLETE_WITH_DOCUMENTED_LIMITS"
+    }
+  ],
+  "note": "Current candidate hashes below are the final local handoff set. Original numeric reports are retained; water v7 uses v6 tests plus exact preservation/equivalence and explicit reset test. Food-remains v2 supersedes the intersecting tray candidate. Receiver game QA/final art approval remains pending.",
+  "deliveryAllowed": true,
+  "finalVisualReview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/FINAL-VISUAL-REVIEW.json"
+}

@@ -1,0 +1,2739 @@
+{
+  "createdAt": "2026-11-03T16:36:09.021155+00:00",
+  "status": "LOCAL_QA_COMPLETE_READY_FOR_RECEIVER",
+  "sourceCandidateManifestSHA256": "f60e9124879f1a7ab5511844c77e592c7c4dc14c4ba66ca73f798dc5943676e1",
+  "models": [
+    {
+      "name": "ruokaeunukki",
+      "file": "ruokaeunukki.glb",
+      "sha256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "kind": "character",
+      "instancedTriangles": 18999,
+      "jointCounts": [
+        65
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "startle",
+        "startle_idle",
+        "walk_empty"
+      ],
+      "numericEvidence": [
+        "qa/carry-grip-v1/qa-carry-grip.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "palvelijatar",
+      "file": "palvelijatar.glb",
+      "sha256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "kind": "character",
+      "instancedTriangles": 19000,
+      "jointCounts": [
+        65
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "startle",
+        "startle_idle",
+        "walk_empty"
+      ],
+      "numericEvidence": [
+        "qa/carry-grip-v1/qa-carry-grip.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "vedenkantaja",
+      "file": "vedenkantaja.glb",
+      "sha256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "kind": "character",
+      "instancedTriangles": 16258,
+      "jointCounts": [
+        65
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "startle",
+        "startle_idle",
+        "walk_empty",
+        "fill_right",
+        "fill_left",
+        "idle_after_fill",
+        "walk_after_fill"
+      ],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json",
+        "qa/fill-v7/transition-qa.json",
+        "qa/fill-v6/head-pole-qa.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "lakaisija",
+      "file": "lakaisija.glb",
+      "sha256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "kind": "character",
+      "instancedTriangles": 15180,
+      "jointCounts": [
+        65
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "startle",
+        "startle_idle",
+        "walk_empty",
+        "sweep"
+      ],
+      "numericEvidence": [
+        "qa/grip-v1/qa-grip.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "jaanne-posliini",
+      "file": "jaanne-posliini.glb",
+      "sha256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 212,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "jaanne-ruoka",
+      "file": "jaanne-ruoka.glb",
+      "sha256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 1728,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/food-remains-v2/geometry-qa.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "jaanne-vesi",
+      "file": "jaanne-vesi.glb",
+      "sha256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 952,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "tavara-ampari",
+      "file": "tavara-ampari.glb",
+      "sha256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 1168,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "tavara-luuta",
+      "file": "tavara-luuta.glb",
+      "sha256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 564,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "tavara-maljakko",
+      "file": "tavara-maljakko.glb",
+      "sha256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 1640,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    },
+    {
+      "name": "tavara-ruokalaatikko",
+      "file": "tavara-ruokalaatikko.glb",
+      "sha256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "kind": "prop_or_remains",
+      "instancedTriangles": 1048,
+      "jointCounts": [],
+      "clips": [],
+      "numericEvidence": [
+        "qa/fill-v6/qa-numeric-current.json"
+      ],
+      "localVisualReviewed": true,
+      "receiverGameQAPending": true
+    }
+  ],
+  "visualEvidence": [
+    {
+      "file": "kuvat/ruokaeunukki/grip-quarter.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "0cec17f97e5b15e80bc2c4064c8f48551c446ee9cdde4957052847a708eb6d99",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/grip-other-side.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "5b9cd9426ec898f9cb2958199a31a6f41f8be5f2c44e1e40a10de3a9fe0cd072",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": -35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-front.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "a8562572344627519b1a37b66ef57685b8dc29abd0a075e119cef7830554dba0",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 0,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-side.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "f455e02afa633c16f28fcf4173a3ef24900084476c550f09daeb2798dd19d236",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 90,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-back.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "e4731ca675319316cd3af5ae687299212be29a44dc9a7fd6b5ea6f5f94f85584",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 180,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-quarter.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "9cc26d975eddb5e5359eab364605d43875d603bbc2595a00c9d705d7c1f333a9",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-0.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "8e3bd72b1c2a67eb4d2f12cf4000fee1006b3fb1451df55b0d8ace9d013b77c5",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-1.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "6c363bb3bbf57d39746cac95bdc36c29a47e74904e72bd31a2ed620d25d1fa29",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle",
+      "seconds": 0.2,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-2.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "919b8f331cee0ccaf423455b74c5fd1d1c3891a543bfd7f44136d749a8202b4c",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle",
+      "seconds": 0.3,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-3.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "9de492d2aaf848e31b5b3cb8a458c04d39dbb0a0e2af02459d0d9acd3efd0c21",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-4.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "889b2d4f346b0e1248b6830675df637ef11318a4ba869ddc14ff618596cef2e3",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-5.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "9efb2c8d6f28ed0562747c760802e8df40f3d15d71ddc5bc7517fd368742fc55",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-0.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "940ebe954a3aa5e416398a2310bedbdfcf5995bf3378bf96d1111122e5f86097",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "walk",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-1.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "8813387fb0765f5d4ac592f8d125f9cb375c9a9a8b41c19e356194adc2771f34",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "walk",
+      "seconds": 0.35,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-2.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "ac0f79307e956ef724f1443b8936a10e595cfa2922a239ee0eca8568517341fe",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "walk",
+      "seconds": 0.7,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-3.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "a70719be43523f3f437e62d78c0ec74ef99da0a0235e08c434c9c2d3295f0d2f",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "walk",
+      "seconds": 1.05,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/empty.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "8eaa908ac7a212da3d21684a430c56bfcd7822c7faee114fa46af3cb0cb7fc36",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52"
+      },
+      "clip": "startle_idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/ruokaeunukki/comparison-front.png",
+      "model": "ruokaeunukki",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "imageSHA256": "90e7449a860a28aa4a9564ca20fb84e55da7b16e10383c71a8c6436ef3357f42",
+      "dependencies": {
+        "ruokaeunukki": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "ruokaeunukki",
+      "comparisonRight": "eunukki-1-reference"
+    },
+    {
+      "file": "kuvat/palvelijatar/grip-quarter.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "d797b3f24e09836e1c89d5655c9893b6467331cf277c4d60d8e13f0ccb5cca27",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/grip-other-side.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "f0b90c819bfb32c0a4bc2c21812fd4cf1cc9c0bb635e1ae8bc728cb4f6a62327",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": -35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-front.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "823b0e3dcf3cefe48b3a44b810725811babbb7673f319322d3a57e13778eff71",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 0,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-side.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "fb3c4fa6548fcff31a156208061206962f36fe978eda38f3eba86ac143c4be90",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 90,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-back.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "069b49f978165ff28fe2d8c3647a2d0564866f8d58c565634f74e0ca3c58ac01",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 180,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-quarter.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "91100913b2f149c2f00265f5979ebbd1331667fad4096cca49f2c48abfaebef7",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-0.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "186eb0c08afc167b2a46c84b9e04b92fd2ff4bacaadc4da9293d410f1b9834c9",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-1.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "d0c4ef35b5019e08949e5cc4fec3390f7cd70cfb2ba7952f2e9ab4df85d68b7a",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle",
+      "seconds": 0.2,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-2.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "1a1d5f4aa81561c4823d8bb1c56e1f91e353c5fb25458359abcbc5bdbc87f371",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle",
+      "seconds": 0.3,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-3.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "2713685c823ca436f326fa8fe244cdde86f77096f1ad4ef251ee5bf1a214933c",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-4.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "bec4f94f0b8e157ebd3ac28b027c0103fcf3ddedefed126677eb96e8d38cfab3",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-5.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "7c02011d863c5f3ee41ea925046e68969fae0330b8d0e49704034e10fe835e5d",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-0.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "96515afb57a10fea118248fa0e1d48cbbd732edc99d05b9d14c41a04031745a4",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "walk",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-1.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "b74476a8946a0d89caa6463fecd859c482eacfe3c43a6960a0a8564b19248438",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "walk",
+      "seconds": 0.35,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-2.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "0e613f43e738626eafb616da9fcbf64ae7b2b42de254a7fafa193fe31ba8ca62",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "walk",
+      "seconds": 0.7,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-3.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "07814a1dbe1e8e1a539169a6441d5523048e96bd9b41449e454996a27061eb67",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "walk",
+      "seconds": 1.05,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/empty.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "98b395a3de6191b7c857195de61a550ae2ecac93c3ad8b38434bf153035ddf4e",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c"
+      },
+      "clip": "startle_idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/palvelijatar/comparison-front.png",
+      "model": "palvelijatar",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "imageSHA256": "3c8d3b37036c34d45866b25ab7646b28e7ec26f6ad7b2cc1e3943bceba110611",
+      "dependencies": {
+        "palvelijatar": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "palvelijatar",
+      "comparisonRight": "eunukki-1-reference"
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-peak-front.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "05b22ded7a187f0c9522388b47cd72a34ba9246ac34002ae3f133f29a9e5de77",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.3,
+      "angle": 20,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-peak-side.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "b9f8c8455f0dee6f0b68b70a1a13a4a245ad64db2292a5551e5d8c181ed8bb0e",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.3,
+      "angle": 90,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-peak-front.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "30890ff95621aecd47bee6d4d0b5d1ae4a6f617be3580dce9811ceb9033b6182",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.3,
+      "angle": 20,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-peak-side.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "d1f2605c2e7a3f6450b080605dc2eafe517a6da1e2c560d2fb8186701434cd51",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.3,
+      "angle": 90,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-front.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "cd9b4794da83748c58642e0876624972ded0916078d8d92ba4e1946e0be465da",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 0,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-side.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "b6bf8e27e90df703d440cb591da2363287d69325967521b7be5a1aae7b60a26f",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 90,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-back.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "4157aadde3fe79378d2f3795ecc4022d4551b084885f75e2d3648f29815dea68",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 180,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-quarter.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "cabdd6ced7b23b6cefcdb59b64c43bf76de4f1ac2819712b63fb8308f769bd9e",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-0.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "6e7ea2785357d3f20d9ccec1856bb08147254c6d1faeec71238a7829b941db56",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "startle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-1.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "56822f3846761364cbc27f36951756e5c59f46bc7c602ca69086fa2ff06ccf4a",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "startle",
+      "seconds": 0.2,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-2.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "88d8df7a5a03b58ff9444e7f0b75a5e19564fb24c45c85f4da37caf90e14ba71",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "startle",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-3.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "d282ea8fc4d778fb3d157fad9240389228c9d2ea0a98027575640f40acf825ae",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "startle",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-4.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "5d278ba165674b70f5a3a8660348d9169a4f1d558c4b35d25e2f6d12e808bc23",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "startle",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-0.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "2ebc5674f3b7a1379f4458b4112a976512ad59f79774d4553e8534a478092fd5",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-1.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "b107fd149510d9eb7c60a2017f73ac97041b9d5de277953a8de21679db53c71a",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk",
+      "seconds": 0.35,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-2.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "4b7aecd547496922632bdea0052d139f75e6083c02ca0eeccc4a6ef6cc4b0aa7",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk",
+      "seconds": 0.7,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-3.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "f936784a692c163ac328865ba3595d72ba86fab3afbf249b220c2552d3a8d1b1",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk",
+      "seconds": 1.05,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-0.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "5dca71433438af137d62fa5d8fba6b2e3649adb3dd4b1505fc64d66a12264fe8",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 0,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-1.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "53867ce0a231f53212fc8fd7002a16de830d9e08f3b045955aabae9cf1507d7b",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-2.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "817fe222e745157f66c7d8cb5a9770c790e2dba60a69719bb6b997c992ce44a6",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-3.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "f482b46addf28597fbe03c8478b71ecca820003ee60ca7805b31f343f34d3a50",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 0.8,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-4.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "1e43f454286e21371feb95edb637a6fefff55e05f1859078b3c056b8dc1b2752",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-5.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "08c2f758f76fcdfc73f0f5fcbab25f902d247d5d9f1af5b9e0d1427c5157cba7",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.3,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-6.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "1b3aa7ccb00c372d2351f2959a60a71d7d7596352d27c69d21fae029956bb5e3",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.75,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-7.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "3237bc52e4a4d878fdac1070cc2cba8dac84665443b504d2531cbe948d868032",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.95,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-8.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "7dfbdbf322dc94cdfb0fc0783d0f8528dc4e2283efccd6e097604f928c5e12d8",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 2.2,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-9.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "2b6eb69fc96c63e51fdd9de86c404e7cb1fd54c355faf1c3bb3142cc19421309",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 2.6,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-hands.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "027c9d68093b9125977ec38c7138039b023a205d8a482f855358ed769a576437",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_right",
+      "seconds": 1.3,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-0.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "83da107b0e9ad9ac7da31bbf47cc4117d740f3b1740df60e3f56fde52b433881",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 0,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-1.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "ebd7b3d8587ba86364db018e0250eac843ff5a1302248e48137c54705351b94a",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-2.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "b0273c74bbdcc92060dd6ec2b0cfcb69ff824eddc8805cf476c0daf0ef6f7307",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-3.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "b292525bb2886d5e027b933c39c66957ef44828563d2b6478bca47719d3092b3",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 0.8,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-4.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "76c55001e254d290205cff9871926eda49a4569f175f2b78d47ae82f0385bf25",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-5.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "3ef774508083ab6ec886f21da8a06ef4a84cff54136782c27a0d20bec6b13ce8",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.3,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-6.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "67671151f1dd64b195bd473f250ec5931f9599712608c4d986ff5277785f7fc8",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.75,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-7.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "5c10f2b3305bdff8bfb5cff18ee27996f4a30113af69a0c695d61d6c91d27f48",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.95,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-8.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "647e08ed4b7c7386434c59d1485b30e89c456b2a255627d5800c6ced744dcb47",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 2.2,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-9.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "e6676a03b52b3f20af73d157197dedeaf67893304e98b80a951ba53db20f78fe",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 2.6,
+      "angle": 35,
+      "vat": true
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-hands.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "2a01d61f0ecfa45100e32e78fe7a856329370510eb6f3434be77080dbee69701",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "fill_left",
+      "seconds": 1.3,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill-after.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "14b28dce0497f860a8f216f2e0f6d7196bafb2d32949a436296560b56170af1a",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "idle_after_fill",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/empty.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "325ab09a7c16a85a0973b08550fae89eb1de34cea2561e44cd0661b9a64dc153",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "startle_idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-0.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "d0ffb254df88e4cd8dc15be76a070307502eefd431ed553b372ee5e0a5210d51",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk_after_fill",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-1.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "2e703a0d3230c3457de37b72f82905dfd2547c5c924dd6bf986161e47a3cc89d",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk_after_fill",
+      "seconds": 0.35,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-2.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "72c36d2871e4c582905b0c9820f2ae53512d410d12fbc4c16d6c21c980417997",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk_after_fill",
+      "seconds": 0.7,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-3.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "8d768b753b34ed79e679572066a97ab39b1740e1d5e657b5b195dab5236f0f3f",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70"
+      },
+      "clip": "walk_after_fill",
+      "seconds": 1.05,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/vedenkantaja/comparison-front.png",
+      "model": "vedenkantaja",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "imageSHA256": "25eb5793a545db1cf52406aec02fe2e25c0c4bd2a44c47c08ae577e03fa3fa35",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "vedenkantaja",
+      "comparisonRight": "eunukki-1-reference"
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-front.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "1aad77e9394b7c67735c91e1c672b1e55c1a577c5f72f866d5d070ab1668e054",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 0.5,
+      "angle": 20,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-side.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "f3a064ae96b2946128f8e9b6e63bed20fb61d8d9769778b908f1f3a8f8d7e6a1",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 0.5,
+      "angle": 90,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/carry-front.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "ce0c1f867052155383ff2d26ccd8a97beff100b53779d0de6c9e4ec7d9f99468",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 0,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/carry-side.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "95d62643e38a3169f31cef10942bb5b9d52f3bc464e5839b8c0df6ccc71bdd47",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 90,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/carry-back.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "340e062679f4f6867ff21d7a3841c8d8cffc6ebad3c71fb281f91633b2885323",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 180,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/carry-quarter.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "f891ff5e59dfe99323bb551ab284a5868d4f2ae20ee96a379fc5b84970421164",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/startle-0.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "e689da1612084275b304249a0a20a671a132630ce27ece578ebf0fd34e9adf2a",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/startle-1.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "763a8d7a309cf13586406790eb5609c2582205a03e9987a8a16c34a1908851d1",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle",
+      "seconds": 0.2,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/startle-2.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "aa73ca3990da2fd44b5522fe478119ddbfa291b41c6cf9dd2a62c412910decfe",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle",
+      "seconds": 0.3,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/startle-3.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "498dae54f7eff22b2980aefbf6b4a6c009311c548606e2d218449cdf8c6da992",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle",
+      "seconds": 0.4,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/startle-4.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "7a601ff3e0b35023320041eadf4db2d9247a61b9ecfb640ba09c0b4931af364c",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle",
+      "seconds": 0.65,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/startle-5.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "de06e4b468716d038234b1fde17fe102e66a192e50080470bc0b00cd579d46fe",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/walk-0.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "51aaeddf732a40b24d17206cf0df62656f5428820f89c8ba75ffcc08c949cf5b",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "walk",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/walk-1.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "c0dfdf7883b8a39c05d328017da81e1af61ddc71e9d1ccc13d7d0ee7c900bd21",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "walk",
+      "seconds": 0.35,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/walk-2.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "ef8f72a44a64c478eba07be491428ed71b7289b08febf0c0bd19121b183ac615",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "walk",
+      "seconds": 0.7,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/walk-3.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "bc9d20251e714ef0ee33c0b4c87df1842c71f73ceb9d3c184acaed4acd9170a4",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "walk",
+      "seconds": 1.05,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-0.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "ba885e669ac0289fa229a6ddcaeddea4970a87fd2278d23bf658cd43a8f37b35",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-1.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "b91a8f7263584feaf77174abfc5f64aebac81dbe9c48bcb1cd5106f9b0d2c075",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 0.5,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-2.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "f9d2769c34f589d3c5c544e87e56b463b5f82f70cda14280b81345c0363fc877",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 1.0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-3.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "2b8d22007756b9d457be7bf2b86569f162cf3627759efa2775d3edb0c58da169",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 1.5,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-4.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "7e76abab99e731c61f3dda5046d4ad45806cde60f0d1a79cd466698a07d74616",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 2.0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-hands.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "30e704f8afc77a222ab375598a8a462f3f2577e66b97cbe43a3f271b86c3d883",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 0.5,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-hands-left.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "bd45dff3d86ff02c6142838034b91f0de0af8def41283011bdd56069868d30b9",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "sweep",
+      "seconds": 0.5,
+      "angle": -35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/empty.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "7263591cca6fd05372f3771d5025f8e92f1679fe73b43853504c704f1f9f9d3b",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb"
+      },
+      "clip": "startle_idle",
+      "seconds": 0,
+      "angle": 35,
+      "vat": false
+    },
+    {
+      "file": "kuvat/lakaisija/comparison-front.png",
+      "model": "lakaisija",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "imageSHA256": "96535874b2a2b2e539bc6cc008e321c54b9df26a8af704b6157e0e8fb1f3dc3c",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "lakaisija",
+      "comparisonRight": "eunukki-1-reference"
+    },
+    {
+      "file": "kuvat/jaanne-posliini/quarter.png",
+      "model": "jaanne-posliini",
+      "modelSHA256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+      "imageSHA256": "a472c4ec99222ba47ca7089027336c0a8d99ae130d34bd57f2344d145b4009e6",
+      "dependencies": {
+        "jaanne-posliini": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/jaanne-posliini/top.png",
+      "model": "jaanne-posliini",
+      "modelSHA256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+      "imageSHA256": "4e364c0c9a7ec27bf1da81e1e4a7477edaa11435d2919530820f579d5c175830",
+      "dependencies": {
+        "jaanne-posliini": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/jaanne-ruoka/quarter.png",
+      "model": "jaanne-ruoka",
+      "modelSHA256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+      "imageSHA256": "629b784b7817b570987b0b7a9c28b4e769a269b5dca674ec4f133c16811dfb7f",
+      "dependencies": {
+        "jaanne-ruoka": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/jaanne-ruoka/top.png",
+      "model": "jaanne-ruoka",
+      "modelSHA256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+      "imageSHA256": "205b8b739291dd4c527b0e07292d956c045800b204153238bc28a4338ceea5f9",
+      "dependencies": {
+        "jaanne-ruoka": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/jaanne-vesi/quarter.png",
+      "model": "jaanne-vesi",
+      "modelSHA256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+      "imageSHA256": "b4f2ada286ddd30dd4f9abc9baf3f604d35354d86d05b4d795bf7143a8ecfa7f",
+      "dependencies": {
+        "jaanne-vesi": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/jaanne-vesi/top.png",
+      "model": "jaanne-vesi",
+      "modelSHA256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+      "imageSHA256": "b0895c80dc10764a5e6012bb09b66721cf8fc6ae4eb0a58dd536224451577d83",
+      "dependencies": {
+        "jaanne-vesi": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-ampari/quarter.png",
+      "model": "tavara-ampari",
+      "modelSHA256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "imageSHA256": "7c32e97691998c9dff68e24ab928daf3e8ffebf13be4e3893dae531c3a7216b8",
+      "dependencies": {
+        "tavara-ampari": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-ampari/top.png",
+      "model": "tavara-ampari",
+      "modelSHA256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "imageSHA256": "a77f8f821d34cd73f4505f7a49c10e8ac4ffbfbf6b7047e7b0bf61635d0645df",
+      "dependencies": {
+        "tavara-ampari": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-luuta/quarter.png",
+      "model": "tavara-luuta",
+      "modelSHA256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "imageSHA256": "124192eb646549420c0a3fd0cda642b105a21ebc6ebb1526b78979a02cd14595",
+      "dependencies": {
+        "tavara-luuta": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-luuta/top.png",
+      "model": "tavara-luuta",
+      "modelSHA256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "imageSHA256": "11ddcfa61b27a4b7c91d5903a0a51b985e950df7d3e951902601456dd4816f66",
+      "dependencies": {
+        "tavara-luuta": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-maljakko/quarter.png",
+      "model": "tavara-maljakko",
+      "modelSHA256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "imageSHA256": "44448dab0971c0c48aae65e8f2224cd1eabd509d0ec01271f392ab8d6c83d971",
+      "dependencies": {
+        "tavara-maljakko": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-maljakko/top.png",
+      "model": "tavara-maljakko",
+      "modelSHA256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "imageSHA256": "ced1547cb0065df014b95ced37286842e55848411eb12195a9e0cebbcecb640d",
+      "dependencies": {
+        "tavara-maljakko": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-ruokalaatikko/quarter.png",
+      "model": "tavara-ruokalaatikko",
+      "modelSHA256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "imageSHA256": "0b293d1a1bc4ca0b7d84776ccb0156a54f537a73db48bf5e3142fcfed2a4da24",
+      "dependencies": {
+        "tavara-ruokalaatikko": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    {
+      "file": "kuvat/tavara-ruokalaatikko/top.png",
+      "model": "tavara-ruokalaatikko",
+      "modelSHA256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "imageSHA256": "46fb06b36552b9ca21a595c6f8b589274ea0f8c880896a2db173007b9453ce0e",
+      "dependencies": {
+        "tavara-ruokalaatikko": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  ],
+  "copiedEvidence": [
+    {
+      "file": "ruokaeunukki.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/ruokaeunukki.glb",
+      "sha256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "bytes": 3762852
+    },
+    {
+      "file": "palvelijatar.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/palvelijatar.glb",
+      "sha256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "bytes": 3926528
+    },
+    {
+      "file": "vedenkantaja.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/vedenkantaja.glb",
+      "sha256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "bytes": 4416484
+    },
+    {
+      "file": "lakaisija.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/lakaisija.glb",
+      "sha256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "bytes": 3809440
+    },
+    {
+      "file": "jaanne-posliini.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/jaanne-posliini.glb",
+      "sha256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+      "bytes": 9868
+    },
+    {
+      "file": "jaanne-ruoka.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/food-remains-v2/jaanne-ruoka.glb",
+      "sha256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8",
+      "bytes": 55300
+    },
+    {
+      "file": "jaanne-vesi.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/jaanne-vesi.glb",
+      "sha256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+      "bytes": 21884
+    },
+    {
+      "file": "tavara-ampari.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/tavara-ampari.glb",
+      "sha256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "bytes": 28932
+    },
+    {
+      "file": "tavara-luuta.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/tavara-luuta.glb",
+      "sha256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "bytes": 13984
+    },
+    {
+      "file": "tavara-maljakko.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/tavara-maljakko.glb",
+      "sha256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "bytes": 33644
+    },
+    {
+      "file": "tavara-ruokalaatikko.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/rest-models/tavara-ruokalaatikko.glb",
+      "sha256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "bytes": 71968
+    },
+    {
+      "file": "qa/carry-grip-v1/qa-carry-grip.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/qa-carry-grip.json",
+      "sha256": "9de2a9be5868d409184314c1eed715ad07a41267b1e2a7981c29b5af984d84d2",
+      "bytes": 3199
+    },
+    {
+      "file": "qa/fill-v6/candidate-link-verification.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/candidate-link-verification.json",
+      "sha256": "73f912e157272e0ae74d5d20f1a50da3dd3ac6ad4481264ac599ac5e67cb0cb3",
+      "bytes": 468
+    },
+    {
+      "file": "qa/fill-v6/fill-geometry-qa.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/fill-geometry-qa.json",
+      "sha256": "e07cea34ae23accf1a814805e564e6e575ccafba8a6c25fe8ce6d38e08b6b870",
+      "bytes": 108054
+    },
+    {
+      "file": "qa/fill-v6/head-pole-qa.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/head-pole-qa.json",
+      "sha256": "d943f0eeb5bb5b70f639f0e5b8b306db90b0741d337f7a42265c78b4a34ac826",
+      "bytes": 549
+    },
+    {
+      "file": "qa/fill-v6/qa-numeric-current.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/qa-numeric-current.json",
+      "sha256": "bcb0eeee8853c065f0891d6ecafacb0da11092b899dc0506d85177877ff9cb27",
+      "bytes": 10089
+    },
+    {
+      "file": "qa/fill-v6/source-preservation-verification.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v6/source-preservation-verification.json",
+      "sha256": "3fbfb6b54c9569b58da2c59d83bce2e64f2fcea251297d6185584831cd6ab905",
+      "bytes": 8262
+    },
+    {
+      "file": "qa/fill-v7/transition-qa.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/transition-qa.json",
+      "sha256": "b82b7566dc3f241b29da48ef2a607afe1f67d38afa688908bd21619686d72d1c",
+      "bytes": 3838
+    },
+    {
+      "file": "qa/food-remains-v2/geometry-qa.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/food-remains-v2/geometry-qa.json",
+      "sha256": "13fa5999c1e2418fa12820fc57b6c107f911c40ec212f5a09a705ab3af9d5669",
+      "bytes": 683
+    },
+    {
+      "file": "qa/grip-v1/qa-grip.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/qa-grip.json",
+      "sha256": "7ee2a5762b02cc18ce63b5fca520e848dc586c1897706a5a0e9421fbb68448f8",
+      "bytes": 1630
+    },
+    {
+      "file": "qa/FINAL-VISUAL-REVIEW.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/FINAL-VISUAL-REVIEW.json",
+      "sha256": "7e3444cd3add1b6e98c01240ee56058c3a1e6de108750e4052ef1a03d4fa46e0",
+      "bytes": 7920
+    },
+    {
+      "file": "provenance/CURRENT-CANDIDATES.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/CURRENT-CANDIDATES.json",
+      "sha256": "f60e9124879f1a7ab5511844c77e592c7c4dc14c4ba66ca73f798dc5943676e1",
+      "bytes": 7732
+    },
+    {
+      "file": "provenance/SOURCE-REFERENCES.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/sources/SOURCE-REFERENCES.json",
+      "sha256": "7e7e08a6052d4ff8bef845c18b582261fc20005a864fb343a5217f62eba94b48",
+      "bytes": 1107
+    },
+    {
+      "file": "provenance/ORIGINAL-ASSET-SHA256.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/3d-siirto-tripo-20261103/delivery/LOCAL-ASSET-SHA256.json",
+      "sha256": "2c76cc88d157ef41c6f4d91b2af7f7ebf036b17a437affced50ca12e48e04b4f",
+      "bytes": 6354
+    },
+    {
+      "file": "provenance/ORIGINAL-ORDER.md",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/3d-siirto-tripo-20261103/delivery/pelikoodari-codex-arkiset-hahmot-tilaus-20261102.md",
+      "sha256": "10644d324442157e19bb6583160567be38e232742c38019cea661b35cf600ee0",
+      "bytes": 5049
+    },
+    {
+      "file": "qa/render-manifests/ruokaeunukki-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/render-manifest.json",
+      "sha256": "1a02b7b061b1c7899e660476b70486f51ce24b469a87761072bde4316fed7657",
+      "bytes": 3432
+    },
+    {
+      "file": "kuvat/ruokaeunukki/grip-quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/grip-quarter.png",
+      "sha256": "0cec17f97e5b15e80bc2c4064c8f48551c446ee9cdde4957052847a708eb6d99",
+      "bytes": 434994
+    },
+    {
+      "file": "kuvat/ruokaeunukki/grip-other-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/grip-other-side.png",
+      "sha256": "5b9cd9426ec898f9cb2958199a31a6f41f8be5f2c44e1e40a10de3a9fe0cd072",
+      "bytes": 431853
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/carry-front.png",
+      "sha256": "a8562572344627519b1a37b66ef57685b8dc29abd0a075e119cef7830554dba0",
+      "bytes": 331835
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/carry-side.png",
+      "sha256": "f455e02afa633c16f28fcf4173a3ef24900084476c550f09daeb2798dd19d236",
+      "bytes": 325787
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-back.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/carry-back.png",
+      "sha256": "e4731ca675319316cd3af5ae687299212be29a44dc9a7fd6b5ea6f5f94f85584",
+      "bytes": 322969
+    },
+    {
+      "file": "kuvat/ruokaeunukki/carry-quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/carry-quarter.png",
+      "sha256": "9cc26d975eddb5e5359eab364605d43875d603bbc2595a00c9d705d7c1f333a9",
+      "bytes": 333223
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/startle-0.png",
+      "sha256": "8e3bd72b1c2a67eb4d2f12cf4000fee1006b3fb1451df55b0d8ace9d013b77c5",
+      "bytes": 333195
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/startle-1.png",
+      "sha256": "6c363bb3bbf57d39746cac95bdc36c29a47e74904e72bd31a2ed620d25d1fa29",
+      "bytes": 332929
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/startle-2.png",
+      "sha256": "919b8f331cee0ccaf423455b74c5fd1d1c3891a543bfd7f44136d749a8202b4c",
+      "bytes": 334218
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/startle-3.png",
+      "sha256": "9de492d2aaf848e31b5b3cb8a458c04d39dbb0a0e2af02459d0d9acd3efd0c21",
+      "bytes": 332095
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/startle-4.png",
+      "sha256": "889b2d4f346b0e1248b6830675df637ef11318a4ba869ddc14ff618596cef2e3",
+      "bytes": 337442
+    },
+    {
+      "file": "kuvat/ruokaeunukki/startle-5.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/startle-5.png",
+      "sha256": "9efb2c8d6f28ed0562747c760802e8df40f3d15d71ddc5bc7517fd368742fc55",
+      "bytes": 338323
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/walk-0.png",
+      "sha256": "940ebe954a3aa5e416398a2310bedbdfcf5995bf3378bf96d1111122e5f86097",
+      "bytes": 332310
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/walk-1.png",
+      "sha256": "8813387fb0765f5d4ac592f8d125f9cb375c9a9a8b41c19e356194adc2771f34",
+      "bytes": 332321
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/walk-2.png",
+      "sha256": "ac0f79307e956ef724f1443b8936a10e595cfa2922a239ee0eca8568517341fe",
+      "bytes": 333949
+    },
+    {
+      "file": "kuvat/ruokaeunukki/walk-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/walk-3.png",
+      "sha256": "a70719be43523f3f437e62d78c0ec74ef99da0a0235e08c434c9c2d3295f0d2f",
+      "bytes": 333206
+    },
+    {
+      "file": "kuvat/ruokaeunukki/empty.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/93d507f43e1a/empty.png",
+      "sha256": "8eaa908ac7a212da3d21684a430c56bfcd7822c7faee114fa46af3cb0cb7fc36",
+      "bytes": 326316
+    },
+    {
+      "file": "qa/render-manifests/ruokaeunukki-1.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/ruokaeunukki/7671c679f413/render-manifest.json",
+      "sha256": "31c4267f09ecba792718f851c5cf56418562662b8d923e741c2e4dfc80c58102",
+      "bytes": 799
+    },
+    {
+      "file": "kuvat/ruokaeunukki/comparison-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/ruokaeunukki/7671c679f413/comparison-front.png",
+      "sha256": "90e7449a860a28aa4a9564ca20fb84e55da7b16e10383c71a8c6436ef3357f42",
+      "bytes": 524955
+    },
+    {
+      "file": "qa/render-manifests/palvelijatar-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/render-manifest.json",
+      "sha256": "a3110cf9b231394ff908b8acacb7539d900a4a557896ea3badfc0ce93462d27f",
+      "bytes": 3432
+    },
+    {
+      "file": "kuvat/palvelijatar/grip-quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/grip-quarter.png",
+      "sha256": "d797b3f24e09836e1c89d5655c9893b6467331cf277c4d60d8e13f0ccb5cca27",
+      "bytes": 404797
+    },
+    {
+      "file": "kuvat/palvelijatar/grip-other-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/grip-other-side.png",
+      "sha256": "f0b90c819bfb32c0a4bc2c21812fd4cf1cc9c0bb635e1ae8bc728cb4f6a62327",
+      "bytes": 398589
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/carry-front.png",
+      "sha256": "823b0e3dcf3cefe48b3a44b810725811babbb7673f319322d3a57e13778eff71",
+      "bytes": 330647
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/carry-side.png",
+      "sha256": "fb3c4fa6548fcff31a156208061206962f36fe978eda38f3eba86ac143c4be90",
+      "bytes": 327496
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-back.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/carry-back.png",
+      "sha256": "069b49f978165ff28fe2d8c3647a2d0564866f8d58c565634f74e0ca3c58ac01",
+      "bytes": 324863
+    },
+    {
+      "file": "kuvat/palvelijatar/carry-quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/carry-quarter.png",
+      "sha256": "91100913b2f149c2f00265f5979ebbd1331667fad4096cca49f2c48abfaebef7",
+      "bytes": 331650
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/startle-0.png",
+      "sha256": "186eb0c08afc167b2a46c84b9e04b92fd2ff4bacaadc4da9293d410f1b9834c9",
+      "bytes": 331650
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/startle-1.png",
+      "sha256": "d0c4ef35b5019e08949e5cc4fec3390f7cd70cfb2ba7952f2e9ab4df85d68b7a",
+      "bytes": 331577
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/startle-2.png",
+      "sha256": "1a1d5f4aa81561c4823d8bb1c56e1f91e353c5fb25458359abcbc5bdbc87f371",
+      "bytes": 331862
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/startle-3.png",
+      "sha256": "2713685c823ca436f326fa8fe244cdde86f77096f1ad4ef251ee5bf1a214933c",
+      "bytes": 331859
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/startle-4.png",
+      "sha256": "bec4f94f0b8e157ebd3ac28b027c0103fcf3ddedefed126677eb96e8d38cfab3",
+      "bytes": 335744
+    },
+    {
+      "file": "kuvat/palvelijatar/startle-5.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/startle-5.png",
+      "sha256": "7c02011d863c5f3ee41ea925046e68969fae0330b8d0e49704034e10fe835e5d",
+      "bytes": 334508
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/walk-0.png",
+      "sha256": "96515afb57a10fea118248fa0e1d48cbbd732edc99d05b9d14c41a04031745a4",
+      "bytes": 330517
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/walk-1.png",
+      "sha256": "b74476a8946a0d89caa6463fecd859c482eacfe3c43a6960a0a8564b19248438",
+      "bytes": 330702
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/walk-2.png",
+      "sha256": "0e613f43e738626eafb616da9fcbf64ae7b2b42de254a7fafa193fe31ba8ca62",
+      "bytes": 332091
+    },
+    {
+      "file": "kuvat/palvelijatar/walk-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/walk-3.png",
+      "sha256": "07814a1dbe1e8e1a539169a6441d5523048e96bd9b41449e454996a27061eb67",
+      "bytes": 330506
+    },
+    {
+      "file": "kuvat/palvelijatar/empty.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/carry-grip-v1/rendered/4ba2066e801f/empty.png",
+      "sha256": "98b395a3de6191b7c857195de61a550ae2ecac93c3ad8b38434bf153035ddf4e",
+      "bytes": 331561
+    },
+    {
+      "file": "qa/render-manifests/palvelijatar-1.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/palvelijatar/699819fb86f8/render-manifest.json",
+      "sha256": "ff346daa592a507f6cb24aa73841a3ff3df0c13c1cef830836a6f0f02e5e5ffb",
+      "bytes": 799
+    },
+    {
+      "file": "kuvat/palvelijatar/comparison-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/palvelijatar/699819fb86f8/comparison-front.png",
+      "sha256": "3c8d3b37036c34d45866b25ab7646b28e7ec26f6ad7b2cc1e3943bceba110611",
+      "bytes": 519082
+    },
+    {
+      "file": "qa/render-manifests/vedenkantaja-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/render-manifest.json",
+      "sha256": "026fdc658256e867024c010caa7c1a866b4784b805db0ecf7e3017f395966b44",
+      "bytes": 9273
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-peak-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-peak-front.png",
+      "sha256": "05b22ded7a187f0c9522388b47cd72a34ba9246ac34002ae3f133f29a9e5de77",
+      "bytes": 412606
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-peak-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-peak-side.png",
+      "sha256": "b9f8c8455f0dee6f0b68b70a1a13a4a245ad64db2292a5551e5d8c181ed8bb0e",
+      "bytes": 400431
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-peak-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-peak-front.png",
+      "sha256": "30890ff95621aecd47bee6d4d0b5d1ae4a6f617be3580dce9811ceb9033b6182",
+      "bytes": 408176
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-peak-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-peak-side.png",
+      "sha256": "d1f2605c2e7a3f6450b080605dc2eafe517a6da1e2c560d2fb8186701434cd51",
+      "bytes": 400253
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/carry-front.png",
+      "sha256": "cd9b4794da83748c58642e0876624972ded0916078d8d92ba4e1946e0be465da",
+      "bytes": 372358
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/carry-side.png",
+      "sha256": "b6bf8e27e90df703d440cb591da2363287d69325967521b7be5a1aae7b60a26f",
+      "bytes": 345696
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-back.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/carry-back.png",
+      "sha256": "4157aadde3fe79378d2f3795ecc4022d4551b084885f75e2d3648f29815dea68",
+      "bytes": 373812
+    },
+    {
+      "file": "kuvat/vedenkantaja/carry-quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/carry-quarter.png",
+      "sha256": "cabdd6ced7b23b6cefcdb59b64c43bf76de4f1ac2819712b63fb8308f769bd9e",
+      "bytes": 376196
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/startle-0.png",
+      "sha256": "6e7ea2785357d3f20d9ccec1856bb08147254c6d1faeec71238a7829b941db56",
+      "bytes": 376196
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/startle-1.png",
+      "sha256": "56822f3846761364cbc27f36951756e5c59f46bc7c602ca69086fa2ff06ccf4a",
+      "bytes": 375634
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/startle-2.png",
+      "sha256": "88d8df7a5a03b58ff9444e7f0b75a5e19564fb24c45c85f4da37caf90e14ba71",
+      "bytes": 375781
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/startle-3.png",
+      "sha256": "d282ea8fc4d778fb3d157fad9240389228c9d2ea0a98027575640f40acf825ae",
+      "bytes": 379213
+    },
+    {
+      "file": "kuvat/vedenkantaja/startle-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/startle-4.png",
+      "sha256": "5d278ba165674b70f5a3a8660348d9169a4f1d558c4b35d25e2f6d12e808bc23",
+      "bytes": 369123
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-0.png",
+      "sha256": "2ebc5674f3b7a1379f4458b4112a976512ad59f79774d4553e8534a478092fd5",
+      "bytes": 373915
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-1.png",
+      "sha256": "b107fd149510d9eb7c60a2017f73ac97041b9d5de277953a8de21679db53c71a",
+      "bytes": 373688
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-2.png",
+      "sha256": "4b7aecd547496922632bdea0052d139f75e6083c02ca0eeccc4a6ef6cc4b0aa7",
+      "bytes": 376566
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-3.png",
+      "sha256": "f936784a692c163ac328865ba3595d72ba86fab3afbf249b220c2552d3a8d1b1",
+      "bytes": 376005
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-0.png",
+      "sha256": "5dca71433438af137d62fa5d8fba6b2e3649adb3dd4b1505fc64d66a12264fe8",
+      "bytes": 403137
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-1.png",
+      "sha256": "53867ce0a231f53212fc8fd7002a16de830d9e08f3b045955aabae9cf1507d7b",
+      "bytes": 405048
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-2.png",
+      "sha256": "817fe222e745157f66c7d8cb5a9770c790e2dba60a69719bb6b997c992ce44a6",
+      "bytes": 410506
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-3.png",
+      "sha256": "f482b46addf28597fbe03c8478b71ecca820003ee60ca7805b31f343f34d3a50",
+      "bytes": 412116
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-4.png",
+      "sha256": "1e43f454286e21371feb95edb637a6fefff55e05f1859078b3c056b8dc1b2752",
+      "bytes": 411832
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-5.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-5.png",
+      "sha256": "08c2f758f76fcdfc73f0f5fcbab25f902d247d5d9f1af5b9e0d1427c5157cba7",
+      "bytes": 407919
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-6.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-6.png",
+      "sha256": "1b3aa7ccb00c372d2351f2959a60a71d7d7596352d27c69d21fae029956bb5e3",
+      "bytes": 411782
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-7.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-7.png",
+      "sha256": "3237bc52e4a4d878fdac1070cc2cba8dac84665443b504d2531cbe948d868032",
+      "bytes": 411668
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-8.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-8.png",
+      "sha256": "7dfbdbf322dc94cdfb0fc0783d0f8528dc4e2283efccd6e097604f928c5e12d8",
+      "bytes": 410283
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-sequence-9.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-sequence-9.png",
+      "sha256": "2b6eb69fc96c63e51fdd9de86c404e7cb1fd54c355faf1c3bb3142cc19421309",
+      "bytes": 404150
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_right-hands.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_right-hands.png",
+      "sha256": "027c9d68093b9125977ec38c7138039b023a205d8a482f855358ed769a576437",
+      "bytes": 414257
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-0.png",
+      "sha256": "83da107b0e9ad9ac7da31bbf47cc4117d740f3b1740df60e3f56fde52b433881",
+      "bytes": 403137
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-1.png",
+      "sha256": "ebd7b3d8587ba86364db018e0250eac843ff5a1302248e48137c54705351b94a",
+      "bytes": 406654
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-2.png",
+      "sha256": "b0273c74bbdcc92060dd6ec2b0cfcb69ff824eddc8805cf476c0daf0ef6f7307",
+      "bytes": 410512
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-3.png",
+      "sha256": "b292525bb2886d5e027b933c39c66957ef44828563d2b6478bca47719d3092b3",
+      "bytes": 402817
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-4.png",
+      "sha256": "76c55001e254d290205cff9871926eda49a4569f175f2b78d47ae82f0385bf25",
+      "bytes": 400701
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-5.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-5.png",
+      "sha256": "3ef774508083ab6ec886f21da8a06ef4a84cff54136782c27a0d20bec6b13ce8",
+      "bytes": 398833
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-6.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-6.png",
+      "sha256": "67671151f1dd64b195bd473f250ec5931f9599712608c4d986ff5277785f7fc8",
+      "bytes": 402014
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-7.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-7.png",
+      "sha256": "5c10f2b3305bdff8bfb5cff18ee27996f4a30113af69a0c695d61d6c91d27f48",
+      "bytes": 400764
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-8.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-8.png",
+      "sha256": "647e08ed4b7c7386434c59d1485b30e89c456b2a255627d5800c6ced744dcb47",
+      "bytes": 410585
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-sequence-9.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-sequence-9.png",
+      "sha256": "e6676a03b52b3f20af73d157197dedeaf67893304e98b80a951ba53db20f78fe",
+      "bytes": 403768
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill_left-hands.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill_left-hands.png",
+      "sha256": "2a01d61f0ecfa45100e32e78fe7a856329370510eb6f3434be77080dbee69701",
+      "bytes": 395432
+    },
+    {
+      "file": "kuvat/vedenkantaja/fill-after.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/fill-after.png",
+      "sha256": "14b28dce0497f860a8f216f2e0f6d7196bafb2d32949a436296560b56170af1a",
+      "bytes": 376330
+    },
+    {
+      "file": "kuvat/vedenkantaja/empty.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/empty.png",
+      "sha256": "325ab09a7c16a85a0973b08550fae89eb1de34cea2561e44cd0661b9a64dc153",
+      "bytes": 356244
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-after-0.png",
+      "sha256": "d0ffb254df88e4cd8dc15be76a070307502eefd431ed553b372ee5e0a5210d51",
+      "bytes": 373956
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-after-1.png",
+      "sha256": "2e703a0d3230c3457de37b72f82905dfd2547c5c924dd6bf986161e47a3cc89d",
+      "bytes": 373688
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-after-2.png",
+      "sha256": "72c36d2871e4c582905b0c9820f2ae53512d410d12fbc4c16d6c21c980417997",
+      "bytes": 376346
+    },
+    {
+      "file": "kuvat/vedenkantaja/walk-after-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/fill-v7/rendered/76bfc58efb85/walk-after-3.png",
+      "sha256": "8d768b753b34ed79e679572066a97ab39b1740e1d5e657b5b195dab5236f0f3f",
+      "bytes": 376005
+    },
+    {
+      "file": "qa/render-manifests/vedenkantaja-1.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/vedenkantaja/79ce9cdd3cf3/render-manifest.json",
+      "sha256": "3fbc2cc9e8761960702bfc0d5ee8197b71687d79866e51d7df24d323e012b023",
+      "bytes": 799
+    },
+    {
+      "file": "kuvat/vedenkantaja/comparison-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/vedenkantaja/79ce9cdd3cf3/comparison-front.png",
+      "sha256": "25eb5793a545db1cf52406aec02fe2e25c0c4bd2a44c47c08ae577e03fa3fa35",
+      "bytes": 541517
+    },
+    {
+      "file": "qa/render-manifests/lakaisija-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/render-manifest.json",
+      "sha256": "9393210807a70f825169c4329479bdcf49b48749ad06778505b4e7a28393564d",
+      "bytes": 4780
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-front.png",
+      "sha256": "1aad77e9394b7c67735c91e1c672b1e55c1a577c5f72f866d5d070ab1668e054",
+      "bytes": 328578
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-side.png",
+      "sha256": "f3a064ae96b2946128f8e9b6e63bed20fb61d8d9769778b908f1f3a8f8d7e6a1",
+      "bytes": 325568
+    },
+    {
+      "file": "kuvat/lakaisija/carry-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/carry-front.png",
+      "sha256": "ce0c1f867052155383ff2d26ccd8a97beff100b53779d0de6c9e4ec7d9f99468",
+      "bytes": 335683
+    },
+    {
+      "file": "kuvat/lakaisija/carry-side.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/carry-side.png",
+      "sha256": "95d62643e38a3169f31cef10942bb5b9d52f3bc464e5839b8c0df6ccc71bdd47",
+      "bytes": 330034
+    },
+    {
+      "file": "kuvat/lakaisija/carry-back.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/carry-back.png",
+      "sha256": "340e062679f4f6867ff21d7a3841c8d8cffc6ebad3c71fb281f91633b2885323",
+      "bytes": 332358
+    },
+    {
+      "file": "kuvat/lakaisija/carry-quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/carry-quarter.png",
+      "sha256": "f891ff5e59dfe99323bb551ab284a5868d4f2ae20ee96a379fc5b84970421164",
+      "bytes": 337145
+    },
+    {
+      "file": "kuvat/lakaisija/startle-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/startle-0.png",
+      "sha256": "e689da1612084275b304249a0a20a671a132630ce27ece578ebf0fd34e9adf2a",
+      "bytes": 337303
+    },
+    {
+      "file": "kuvat/lakaisija/startle-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/startle-1.png",
+      "sha256": "763a8d7a309cf13586406790eb5609c2582205a03e9987a8a16c34a1908851d1",
+      "bytes": 336783
+    },
+    {
+      "file": "kuvat/lakaisija/startle-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/startle-2.png",
+      "sha256": "aa73ca3990da2fd44b5522fe478119ddbfa291b41c6cf9dd2a62c412910decfe",
+      "bytes": 336469
+    },
+    {
+      "file": "kuvat/lakaisija/startle-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/startle-3.png",
+      "sha256": "498dae54f7eff22b2980aefbf6b4a6c009311c548606e2d218449cdf8c6da992",
+      "bytes": 335951
+    },
+    {
+      "file": "kuvat/lakaisija/startle-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/startle-4.png",
+      "sha256": "7a601ff3e0b35023320041eadf4db2d9247a61b9ecfb640ba09c0b4931af364c",
+      "bytes": 340050
+    },
+    {
+      "file": "kuvat/lakaisija/startle-5.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/startle-5.png",
+      "sha256": "de06e4b468716d038234b1fde17fe102e66a192e50080470bc0b00cd579d46fe",
+      "bytes": 333398
+    },
+    {
+      "file": "kuvat/lakaisija/walk-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/walk-0.png",
+      "sha256": "51aaeddf732a40b24d17206cf0df62656f5428820f89c8ba75ffcc08c949cf5b",
+      "bytes": 335571
+    },
+    {
+      "file": "kuvat/lakaisija/walk-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/walk-1.png",
+      "sha256": "c0dfdf7883b8a39c05d328017da81e1af61ddc71e9d1ccc13d7d0ee7c900bd21",
+      "bytes": 336622
+    },
+    {
+      "file": "kuvat/lakaisija/walk-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/walk-2.png",
+      "sha256": "ef8f72a44a64c478eba07be491428ed71b7289b08febf0c0bd19121b183ac615",
+      "bytes": 337194
+    },
+    {
+      "file": "kuvat/lakaisija/walk-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/walk-3.png",
+      "sha256": "bc9d20251e714ef0ee33c0b4c87df1842c71f73ceb9d3c184acaed4acd9170a4",
+      "bytes": 337929
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-0.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-0.png",
+      "sha256": "ba885e669ac0289fa229a6ddcaeddea4970a87fd2278d23bf658cd43a8f37b35",
+      "bytes": 332256
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-1.png",
+      "sha256": "b91a8f7263584feaf77174abfc5f64aebac81dbe9c48bcb1cd5106f9b0d2c075",
+      "bytes": 331163
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-2.png",
+      "sha256": "f9d2769c34f589d3c5c544e87e56b463b5f82f70cda14280b81345c0363fc877",
+      "bytes": 331857
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-3.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-3.png",
+      "sha256": "2b8d22007756b9d457be7bf2b86569f162cf3627759efa2775d3edb0c58da169",
+      "bytes": 334042
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-4.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-4.png",
+      "sha256": "7e76abab99e731c61f3dda5046d4ad45806cde60f0d1a79cd466698a07d74616",
+      "bytes": 332616
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-hands.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-hands.png",
+      "sha256": "30e704f8afc77a222ab375598a8a462f3f2577e66b97cbe43a3f271b86c3d883",
+      "bytes": 361665
+    },
+    {
+      "file": "kuvat/lakaisija/sweep-hands-left.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/sweep-hands-left.png",
+      "sha256": "bd45dff3d86ff02c6142838034b91f0de0af8def41283011bdd56069868d30b9",
+      "bytes": 359001
+    },
+    {
+      "file": "kuvat/lakaisija/empty.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/grip-v1/rendered/0b1ef355383e/empty.png",
+      "sha256": "7263591cca6fd05372f3771d5025f8e92f1679fe73b43853504c704f1f9f9d3b",
+      "bytes": 326410
+    },
+    {
+      "file": "qa/render-manifests/lakaisija-1.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/lakaisija/a146af9f7678/render-manifest.json",
+      "sha256": "98efb1076bb2b1669f6e60ae6645443f42cc6def0714528cdb01537733b5b544",
+      "bytes": 790
+    },
+    {
+      "file": "kuvat/lakaisija/comparison-front.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/lakaisija/a146af9f7678/comparison-front.png",
+      "sha256": "96535874b2a2b2e539bc6cc008e321c54b9df26a8af704b6157e0e8fb1f3dc3c",
+      "bytes": 526494
+    },
+    {
+      "file": "qa/render-manifests/jaanne-posliini-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-posliini/a766b45b5f7c/render-manifest.json",
+      "sha256": "48b449e8cea51ff3f62bbd88bb138a0bdbe1be48b6791082c2a88f7e7337cbce",
+      "bytes": 770
+    },
+    {
+      "file": "kuvat/jaanne-posliini/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-posliini/a766b45b5f7c/quarter.png",
+      "sha256": "a472c4ec99222ba47ca7089027336c0a8d99ae130d34bd57f2344d145b4009e6",
+      "bytes": 290011
+    },
+    {
+      "file": "kuvat/jaanne-posliini/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-posliini/a766b45b5f7c/top.png",
+      "sha256": "4e364c0c9a7ec27bf1da81e1e4a7477edaa11435d2919530820f579d5c175830",
+      "bytes": 309953
+    },
+    {
+      "file": "qa/render-manifests/jaanne-ruoka-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-ruoka/7ee55c92699f/render-manifest.json",
+      "sha256": "b9f59f5a31319f1235028ded81d505acbbe889ca366fe536b9f2f9896e788101",
+      "bytes": 761
+    },
+    {
+      "file": "kuvat/jaanne-ruoka/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-ruoka/7ee55c92699f/quarter.png",
+      "sha256": "629b784b7817b570987b0b7a9c28b4e769a269b5dca674ec4f133c16811dfb7f",
+      "bytes": 324358
+    },
+    {
+      "file": "kuvat/jaanne-ruoka/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-ruoka/7ee55c92699f/top.png",
+      "sha256": "205b8b739291dd4c527b0e07292d956c045800b204153238bc28a4338ceea5f9",
+      "bytes": 379554
+    },
+    {
+      "file": "qa/render-manifests/jaanne-vesi-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-vesi/3c93fd77fa32/render-manifest.json",
+      "sha256": "e7b22591c80abd5980183a86c518f911101dfed768373e32c1ad3498a0789c6f",
+      "bytes": 758
+    },
+    {
+      "file": "kuvat/jaanne-vesi/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-vesi/3c93fd77fa32/quarter.png",
+      "sha256": "b4f2ada286ddd30dd4f9abc9baf3f604d35354d86d05b4d795bf7143a8ecfa7f",
+      "bytes": 328601
+    },
+    {
+      "file": "kuvat/jaanne-vesi/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/jaanne-vesi/3c93fd77fa32/top.png",
+      "sha256": "b0895c80dc10764a5e6012bb09b66721cf8fc6ae4eb0a58dd536224451577d83",
+      "bytes": 377845
+    },
+    {
+      "file": "qa/render-manifests/tavara-ampari-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ampari/16bc7a715bee/render-manifest.json",
+      "sha256": "cfe95253bea4b98fd91839eec36c70f72268d2cac8f9b612608b5fac0c2b1e64",
+      "bytes": 764
+    },
+    {
+      "file": "kuvat/tavara-ampari/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ampari/16bc7a715bee/quarter.png",
+      "sha256": "7c32e97691998c9dff68e24ab928daf3e8ffebf13be4e3893dae531c3a7216b8",
+      "bytes": 340484
+    },
+    {
+      "file": "kuvat/tavara-ampari/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ampari/16bc7a715bee/top.png",
+      "sha256": "a77f8f821d34cd73f4505f7a49c10e8ac4ffbfbf6b7047e7b0bf61635d0645df",
+      "bytes": 355036
+    },
+    {
+      "file": "qa/render-manifests/tavara-luuta-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-luuta/7e726656a836/render-manifest.json",
+      "sha256": "dd58e0b37969787f8c277d909f8e92e92257c4647e11e79dba1b19a88424a853",
+      "bytes": 761
+    },
+    {
+      "file": "kuvat/tavara-luuta/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-luuta/7e726656a836/quarter.png",
+      "sha256": "124192eb646549420c0a3fd0cda642b105a21ebc6ebb1526b78979a02cd14595",
+      "bytes": 293275
+    },
+    {
+      "file": "kuvat/tavara-luuta/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-luuta/7e726656a836/top.png",
+      "sha256": "11ddcfa61b27a4b7c91d5903a0a51b985e950df7d3e951902601456dd4816f66",
+      "bytes": 398438
+    },
+    {
+      "file": "qa/render-manifests/tavara-maljakko-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-maljakko/67d209ec360b/render-manifest.json",
+      "sha256": "eadab33dcc9fbbb3928c44736cb616c2359c642391bdc2e479176bc1e8c6fb48",
+      "bytes": 770
+    },
+    {
+      "file": "kuvat/tavara-maljakko/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-maljakko/67d209ec360b/quarter.png",
+      "sha256": "44448dab0971c0c48aae65e8f2224cd1eabd509d0ec01271f392ab8d6c83d971",
+      "bytes": 364180
+    },
+    {
+      "file": "kuvat/tavara-maljakko/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-maljakko/67d209ec360b/top.png",
+      "sha256": "ced1547cb0065df014b95ced37286842e55848411eb12195a9e0cebbcecb640d",
+      "bytes": 433596
+    },
+    {
+      "file": "qa/render-manifests/tavara-ruokalaatikko-0.json",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ruokalaatikko/12da3fa7452d/render-manifest.json",
+      "sha256": "06960dac651cb275f9064041456a5dd183e14b1a65a19a1c62120f815d44475c",
+      "bytes": 785
+    },
+    {
+      "file": "kuvat/tavara-ruokalaatikko/quarter.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ruokalaatikko/12da3fa7452d/quarter.png",
+      "sha256": "0b293d1a1bc4ca0b7d84776ccb0156a54f537a73db48bf5e3142fcfed2a4da24",
+      "bytes": 458739
+    },
+    {
+      "file": "kuvat/tavara-ruokalaatikko/top.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/arkiset-hahmot-20261103/work/package-preparation/supplementary-rendered/tavara-ruokalaatikko/12da3fa7452d/top.png",
+      "sha256": "46fb06b36552b9ca21a595c6f8b589274ea0f8c880896a2db173007b9453ce0e",
+      "bytes": 404089
+    }
+  ],
+  "publicationAllowed": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "stateAtPackaging": "NOT_YET_SENT",
+  "sourceMethod": "Transferred local Blender candidates; local grip,pour,transition and food-remains fixes. No newly generated Tripo assets.",
+  "costThisCorrectionBatch": {
+    "tripoCalls": 0,
+    "imageGenerationCalls": 0,
+    "credits": 0
+  },
+  "numericEvidenceScope": "Water v7 uses v6 water tests plus exact preservation/transition proof. Three other characters use own grip reports. Food-remains v2 has separate geometry proof. Older entries in raw v6 report do not apply to replaced hashes.",
+  "externalVatDependency": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/palatsin-pronssit-20261103/delivery/vesiastia-pronssi.glb",
+    "sha256": "a23165a9b2b5813440473578fa832a7c42292f495a5211fcfcd05c5ec7481b9d",
+    "centerFromCharacterM": [
+      0,
+      0,
+      1.1
+    ],
+    "rimHeightM": 1.1,
+    "characterForward": "+Z",
+    "characterUp": "+Y",
+    "characterRootMotion": false
+  }
+}

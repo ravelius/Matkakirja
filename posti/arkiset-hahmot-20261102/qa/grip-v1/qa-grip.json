@@ -1,0 +1,48 @@
+{
+  "idle": {
+    "durationS": 2.0,
+    "minBodyYM": -8.195424730744836e-08,
+    "minPropYM": 0.1719112015801983,
+    "loopTRSError": 3.263154024768511e-08
+  },
+  "walk": {
+    "durationS": 1.399999976158142,
+    "minBodyYM": -9.752935350366762e-05,
+    "minPropYM": 0.17149869055597586,
+    "loopTRSError": 3.263154024768511e-08
+  },
+  "startle": {
+    "durationS": 1.0,
+    "minBodyYM": -8.195424730744836e-08,
+    "minPropYM": -0.00011636336748847842,
+    "loopTRSError": null
+  },
+  "startle_idle": {
+    "durationS": 2.0,
+    "minBodyYM": -8.195424730744836e-08,
+    "minPropYM": null,
+    "loopTRSError": 2.788200159642429e-08
+  },
+  "walk_empty": {
+    "durationS": 1.399999976158142,
+    "minBodyYM": -9.752935350366762e-05,
+    "minPropYM": null,
+    "loopTRSError": 2.788200159642429e-08
+  },
+  "sweep": {
+    "durationS": 2.0,
+    "minBodyYM": -8.195424730744836e-08,
+    "minPropYM": 0.0008352556849180017,
+    "loopTRSError": 3.263154024768511e-08
+  },
+  "status": "NUMERIC_PASS_GEOMETRY_PREVIEW_READY_FINAL_SHADED_QA_PENDING",
+  "candidateSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+  "sourceSHA256": "352f579ba5e65fe01b42c5b2776e14f762ac9c674805b5d0e51537f02af5f458",
+  "sourceGeometrySkinAndBinaryPrefixUnchanged": true,
+  "nonArmFingerChannelsUnchanged": true,
+  "startleAfterReleaseUnchanged": true,
+  "thumbTargetResidualM": 0.022345262887011184,
+  "limits": "Contact is reviewed visually; thumb CCD residual is recorded, not claimed as exact shaft contact. No complete triangle-intersection certification.",
+  "runtimeSeconds": 4.765535831451416,
+  "peakRSSBytes": 163627008
+}

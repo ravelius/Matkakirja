@@ -1,0 +1,96 @@
+{
+  "ruokaeunukki": {
+    "idle": {
+      "durationS": 2.0,
+      "minBodyYM": -8.195424730744836e-08,
+      "minPropYM": 0.779394977135496,
+      "loopTRSError": 3.135409820664847e-08,
+      "samples": 121
+    },
+    "walk": {
+      "durationS": 1.399999976158142,
+      "minBodyYM": -9.75272438425082e-05,
+      "minPropYM": 0.781317467816617,
+      "loopTRSError": 3.135409820664847e-08,
+      "samples": 121
+    },
+    "startle": {
+      "durationS": 1.0,
+      "minBodyYM": -8.195424730744836e-08,
+      "minPropYM": -1.2851336918584533e-05,
+      "loopTRSError": null,
+      "samples": 121
+    },
+    "startle_idle": {
+      "durationS": 2.0,
+      "minBodyYM": -8.195424730744836e-08,
+      "minPropYM": null,
+      "loopTRSError": 2.788200159642429e-08,
+      "samples": 121
+    },
+    "walk_empty": {
+      "durationS": 1.399999976158142,
+      "minBodyYM": -9.75272438425082e-05,
+      "minPropYM": null,
+      "loopTRSError": 2.788200159642429e-08,
+      "samples": 121
+    },
+    "status": "NUMERIC_PASS_FINAL_SHADED_QA_PENDING",
+    "candidateSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+    "sourceSHA256": "f5c3679232bb46a72fe51ea83c6e9b2b75035c66ea5a8e42186f78cc631f2877",
+    "sourceGeometrySkinAndBinaryPrefixUnchanged": true,
+    "nonArmFingerChannelsUnchanged": true,
+    "propTracksAndReleaseTransformUnchanged": true,
+    "startleAfterReleaseUnchanged": true,
+    "thumbTargetResidualM": 0.017728280430063192
+  },
+  "palvelijatar": {
+    "idle": {
+      "durationS": 2.0,
+      "minBodyYM": -1.000307999252212e-07,
+      "minPropYM": 0.7927973084151745,
+      "loopTRSError": 2.9027243275692172e-08,
+      "samples": 121
+    },
+    "walk": {
+      "durationS": 1.399999976158142,
+      "minBodyYM": -9.892923221998032e-05,
+      "minPropYM": 0.7949092797935009,
+      "loopTRSError": 2.9027243275692172e-08,
+      "samples": 121
+    },
+    "startle": {
+      "durationS": 1.0,
+      "minBodyYM": -9.096839403563634e-08,
+      "minPropYM": -4.07658212357026e-06,
+      "loopTRSError": null,
+      "samples": 121
+    },
+    "startle_idle": {
+      "durationS": 2.0,
+      "minBodyYM": -1.000307999252212e-07,
+      "minPropYM": null,
+      "loopTRSError": 2.9510855870107378e-08,
+      "samples": 121
+    },
+    "walk_empty": {
+      "durationS": 1.399999976158142,
+      "minBodyYM": -9.892923221998032e-05,
+      "minPropYM": null,
+      "loopTRSError": 2.931475773237935e-08,
+      "samples": 121
+    },
+    "status": "NUMERIC_PASS_FINAL_SHADED_QA_PENDING",
+    "candidateSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+    "sourceSHA256": "7f69335ddd4ca0a35d48606642b949d25744ff29e9306c107610b2b99a7ccc42",
+    "sourceGeometrySkinAndBinaryPrefixUnchanged": true,
+    "nonArmFingerChannelsUnchanged": true,
+    "propTracksAndReleaseTransformUnchanged": true,
+    "startleAfterReleaseUnchanged": true,
+    "thumbTargetResidualM": 0.010836037377346288
+  },
+  "status": "NUMERIC_PASS_FINAL_SHADED_QA_PENDING",
+  "runtimeSeconds": 6.088638782501221,
+  "peakRSSBytes": 106790912,
+  "limits": "Visual contact review required; thumb target residuals are not exact surface-contact measures. No complete collision proof."
+}

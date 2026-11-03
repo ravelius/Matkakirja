@@ -1,0 +1,13 @@
+{
+  "status": "LOCAL_QA_COMPLETE_READY_FOR_RECEIVER",
+  "localVisualReviewed": true,
+  "localNumericEvidenceLinked": true,
+  "sourceHashMatchedImages": 121,
+  "deliveryToMailboxAllowed": true,
+  "publicationAllowed": false,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "finalArtAccepted": false,
+  "knownLimits": "qa/FINAL-VISUAL-REVIEW.json",
+  "byteVerifiedMailboxReceipt": "Written outside this immutable package after upload."
+}

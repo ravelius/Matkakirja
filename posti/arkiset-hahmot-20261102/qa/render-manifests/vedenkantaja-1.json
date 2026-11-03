@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+    "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+    "renderRevision": "uncropped-framing-v2"
+  },
+  "renders": {
+    "comparison-front": {
+      "sha256": "25eb5793a545db1cf52406aec02fe2e25c0c4bd2a44c47c08ae577e03fa3fa35",
+      "dependencies": {
+        "vedenkantaja": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "vedenkantaja",
+      "comparisonRight": "eunukki-1-reference"
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

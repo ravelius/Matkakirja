@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+    "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+    "renderRevision": "uncropped-framing-v2"
+  },
+  "renders": {
+    "comparison-front": {
+      "sha256": "96535874b2a2b2e539bc6cc008e321c54b9df26a8af704b6157e0e8fb1f3dc3c",
+      "dependencies": {
+        "lakaisija": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+        "eunukki-1-reference": "12db49ff4db4ee188e9b98e8f49fb49b515e461352068e57beca1be0bd3533b6",
+        "renderRevision": "uncropped-framing-v2"
+      },
+      "comparisonLeft": "lakaisija",
+      "comparisonRight": "eunukki-1-reference"
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

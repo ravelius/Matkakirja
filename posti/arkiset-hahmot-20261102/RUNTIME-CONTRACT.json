@@ -1,0 +1,339 @@
+{
+  "updatedAt": "2026-11-03T16:34:03.150250+00:00",
+  "status": "LOCAL_CONTRACT_AND_VISUAL_QA_COMPLETE_RECEIVER_RUNTIME_PENDING",
+  "currentCandidateManifestSHA256": "f60e9124879f1a7ab5511844c77e592c7c4dc14c4ba66ca73f798dc5943676e1",
+  "delivered": false,
+  "gameIntegrated": false,
+  "coordinates": {
+    "unit": "metre",
+    "up": "+Y",
+    "forward": "+Z",
+    "matrices": "row-major numeric arrays"
+  },
+  "releaseRule": {
+    "equation": "standaloneParentWorld = currentCharacterTavaraWorld @ inverse(standaloneRootLocal)",
+    "notes": [
+      "Use the live evaluated world transform at release, including scene placement and character scale. Listed matrices are reference values at identity character placement.",
+      "At0.40s hide the embedded tavara and disable its preview-drop animation channels when runtime physics takes over. Keep skeleton animation channels.",
+      "Startle_idle and walk_empty hide the embedded carried object. Vedenkantaja idle_after_fill/walk_after_fill retain buckets but with water surfaces empty.",
+      "The broom remains as a physical prop; it has no separate debris model. Breaking sound must not attract pursuers (owner order)."
+    ]
+  },
+  "characters": {
+    "ruokaeunukki": {
+      "modelFile": "ruokaeunukki.glb",
+      "modelSHA256": "93d507f43e1a6f20e96a4d275e2dbfdb8f2f559f32f7a4f823b0f36774a87a52",
+      "propFile": "tavara-ruokalaatikko.glb",
+      "propSHA256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+      "remainsFile": "jaanne-ruoka.glb",
+      "clips": {
+        "idle": 2.0,
+        "walk": 1.399999976158142,
+        "startle": 1.0,
+        "startle_idle": 2.0,
+        "walk_empty": 1.399999976158142
+      },
+      "propNode": "tavara",
+      "releaseSeconds": 0.4,
+      "releaseParentWorldMatrixRowMajorAtIdentityCharacterTransform": [
+        [
+          0.9880239367485046,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9880239367485046,
+          0.0,
+          0.783276824148416
+        ],
+        [
+          0.0,
+          0.0,
+          0.9880239367485046,
+          0.3161676526926236
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "standaloneRootLocalMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "releaseSurfaceVertexMaxBidirectionalDistanceM": 6.073115388360861e-08,
+      "comparedVertexCount": 1984,
+      "same65JointNamesAndOrder": true,
+      "droppedPropAbsentIn": [
+        "startle_idle",
+        "walk_empty"
+      ],
+      "remainsSHA256": "0adf188e57fdf3db401f358e7c43181f4af10a2dbcd07b3d5897856c114b07f8"
+    },
+    "palvelijatar": {
+      "modelFile": "palvelijatar.glb",
+      "modelSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+      "propFile": "tavara-maljakko.glb",
+      "propSHA256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+      "remainsFile": "jaanne-posliini.glb",
+      "clips": {
+        "idle": 2.0,
+        "walk": 1.399999976158142,
+        "startle": 1.0,
+        "startle_idle": 2.0,
+        "walk_empty": 1.399999976158142
+      },
+      "propNode": "tavara",
+      "releaseSeconds": 0.4,
+      "releaseParentWorldMatrixRowMajorAtIdentityCharacterTransform": [
+        [
+          0.96875,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.96875,
+          0.0,
+          0.7967268247157335
+        ],
+        [
+          0.0,
+          0.0,
+          0.96875,
+          0.2906250115483999
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "standaloneRootLocalMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "releaseSurfaceVertexMaxBidirectionalDistanceM": 0.0,
+      "comparedVertexCount": 912,
+      "same65JointNamesAndOrder": true,
+      "droppedPropAbsentIn": [
+        "startle_idle",
+        "walk_empty"
+      ],
+      "remainsSHA256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac"
+    },
+    "vedenkantaja": {
+      "modelFile": "vedenkantaja.glb",
+      "modelSHA256": "76bfc58efb85e9bd4a2ce256e699c7352399204145bac7eaf44418c77a104e70",
+      "propFile": "tavara-ampari.glb",
+      "propSHA256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+      "remainsFile": "jaanne-vesi.glb",
+      "clips": {
+        "idle": 2.0,
+        "walk": 1.399999976158142,
+        "startle": 1.0,
+        "startle_idle": 2.0,
+        "walk_empty": 1.399999976158142,
+        "fill_right": 2.5999999046325684,
+        "fill_left": 2.5999999046325684,
+        "idle_after_fill": 2.0,
+        "walk_after_fill": 1.399999976158142
+      },
+      "propNode": "tavara",
+      "releaseSeconds": 0.4,
+      "releaseParentWorldMatrixRowMajorAtIdentityCharacterTransform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.5560580362815628
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.01482035871996673
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "standaloneRootLocalMatrixRowMajor": [
+        [
+          0.9880239367485046,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9880239367485046,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9880239367485046,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "releaseSurfaceVertexMaxBidirectionalDistanceM": 3.2978856312482208e-09,
+      "comparedVertexCount": 674,
+      "same65JointNamesAndOrder": true,
+      "droppedPropAbsentIn": [
+        "startle_idle",
+        "walk_empty"
+      ],
+      "remainsSHA256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368"
+    },
+    "lakaisija": {
+      "modelFile": "lakaisija.glb",
+      "modelSHA256": "0b1ef355383e7b2110b1602c9c27cf311cd9d973bbffffbe369610c1571706bb",
+      "propFile": "tavara-luuta.glb",
+      "propSHA256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+      "remainsFile": null,
+      "clips": {
+        "idle": 2.0,
+        "walk": 1.399999976158142,
+        "startle": 1.0,
+        "startle_idle": 2.0,
+        "walk_empty": 1.399999976158142,
+        "sweep": 2.0
+      },
+      "propNode": "tavara",
+      "releaseSeconds": 0.4,
+      "releaseParentWorldMatrixRowMajorAtIdentityCharacterTransform": [
+        [
+          0.9880239367485046,
+          0.0,
+          0.0,
+          -0.2371257395194677
+        ],
+        [
+          0.0,
+          0.8093418315047556,
+          0.5667072430845939,
+          0.1984406129198959
+        ],
+        [
+          0.0,
+          -0.5667072430845939,
+          0.8093418315047556,
+          0.6916167439457901
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "standaloneRootLocalMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "releaseSurfaceVertexMaxBidirectionalDistanceM": 4.646853458243005e-08,
+      "comparedVertexCount": 330,
+      "same65JointNamesAndOrder": true,
+      "droppedPropAbsentIn": [
+        "startle_idle",
+        "walk_empty"
+      ]
+    }
+  },
+  "waterPourContractSource": "WATER-POUR-CONTRACT.json",
+  "waterPourContractSHA256": "9bcc09d071a38ad18b21dc965045c38f033ddd1c52b9d3a93ebf2396ac294142",
+  "limits": "Coordinate transfer verified at release; does not certify runtime physics, collider behavior, animation blending or final visual acceptance.",
+  "runtimeSeconds": 0.23384809494018555,
+  "peakRSSBytes": 87736320,
+  "visualReview": "qa/FINAL-VISUAL-REVIEW.json",
+  "stateAtPackaging": "NOT_YET_SENT"
+}

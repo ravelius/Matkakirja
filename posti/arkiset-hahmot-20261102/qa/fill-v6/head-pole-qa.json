@@ -1,0 +1,19 @@
+{
+  "candidateSHA256": "db78629ffc73ba762687675b2a00f7809a67c6058b4551a8814238c6adfa4dee",
+  "status": "SAMPLED_NONCOPLANAR_HEAD_POLE_TEST_PASS",
+  "clips": {
+    "fill_right": {
+      "samples": 241,
+      "framesWithIntersections": 0,
+      "hits": []
+    },
+    "fill_left": {
+      "samples": 241,
+      "framesWithIntersections": 0,
+      "hits": []
+    }
+  },
+  "limits": "241 samples per clip, non-coplanar surface crossings only. Does not prove all self contacts absent.",
+  "runtimeSeconds": 5.922371864318848,
+  "peakRSSBytes": 68190208
+}

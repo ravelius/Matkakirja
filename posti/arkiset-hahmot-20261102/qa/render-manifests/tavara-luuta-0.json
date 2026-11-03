@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "tavara-luuta": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59"
+  },
+  "renders": {
+    "quarter": {
+      "sha256": "124192eb646549420c0a3fd0cda642b105a21ebc6ebb1526b78979a02cd14595",
+      "dependencies": {
+        "tavara-luuta": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    },
+    "top": {
+      "sha256": "11ddcfa61b27a4b7c91d5903a0a51b985e950df7d3e951902601456dd4816f66",
+      "dependencies": {
+        "tavara-luuta": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59"
+      },
+      "comparisonLeft": null,
+      "comparisonRight": null
+    }
+  },
+  "status": "RENDER_COMPLETE_REVIEW_REQUIRED"
+}

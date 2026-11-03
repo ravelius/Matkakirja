@@ -1,0 +1,358 @@
+{
+  "ruokaeunukki": {
+    "sha256": "f5c3679232bb46a72fe51ea83c6e9b2b75035c66ea5a8e42186f78cc631f2877",
+    "triangles": 18999,
+    "jointCount": 65,
+    "clips": {
+      "idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -8.195424717344097e-08,
+        "minimumPropY": 0.779394977135496,
+        "endpointTRSError": 2.834994117240086e-08
+      },
+      "walk": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.75272438425082e-05,
+        "minimumPropY": 0.781317467816617,
+        "endpointTRSError": 2.834994117240086e-08
+      },
+      "startle": {
+        "durationS": 1.0,
+        "minimumBodyY": -8.195424717387465e-08,
+        "minimumPropY": -1.2097098998395395e-05,
+        "endpointTRSError": 0.6941697224974632
+      },
+      "startle_idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -8.195424717344097e-08,
+        "minimumPropY": null,
+        "endpointTRSError": 2.788200159642429e-08
+      },
+      "walk_empty": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.75272438425082e-05,
+        "minimumPropY": null,
+        "endpointTRSError": 2.788200159642429e-08
+      }
+    }
+  },
+  "palvelijatar": {
+    "sha256": "7f69335ddd4ca0a35d48606642b949d25744ff29e9306c107610b2b99a7ccc42",
+    "triangles": 19000,
+    "jointCount": 65,
+    "clips": {
+      "idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -9.393379220545953e-08,
+        "minimumPropY": 0.7927973084151745,
+        "endpointTRSError": 3.0590745381253726e-08
+      },
+      "walk": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.892923221998032e-05,
+        "minimumPropY": 0.7949092797935009,
+        "endpointTRSError": 3.0590745381253726e-08
+      },
+      "startle": {
+        "durationS": 1.0,
+        "minimumBodyY": -9.096839404897203e-08,
+        "minimumPropY": -3.868292108383242e-06,
+        "endpointTRSError": 0.7893955670297146
+      },
+      "startle_idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -9.393379220545953e-08,
+        "minimumPropY": null,
+        "endpointTRSError": 2.9510855870107378e-08
+      },
+      "walk_empty": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.892923221998032e-05,
+        "minimumPropY": null,
+        "endpointTRSError": 2.931475773237935e-08
+      }
+    }
+  },
+  "vedenkantaja": {
+    "sha256": "db78629ffc73ba762687675b2a00f7809a67c6058b4551a8814238c6adfa4dee",
+    "triangles": 16258,
+    "jointCount": 65,
+    "clips": {
+      "idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -7.17715932690207e-08,
+        "minimumPropY": 0.5522104637234264,
+        "endpointTRSError": 2.8335644830512763e-08
+      },
+      "walk": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.467434333264269e-05,
+        "minimumPropY": 0.5483200696287656,
+        "endpointTRSError": 2.8335644830512763e-08
+      },
+      "startle": {
+        "durationS": 1.0,
+        "minimumBodyY": -8.015223879563865e-08,
+        "minimumPropY": 1.521837897366929e-08,
+        "endpointTRSError": 1.0679809741164306
+      },
+      "startle_idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -7.17715932690207e-08,
+        "minimumPropY": null,
+        "endpointTRSError": 2.9498424480856045e-08
+      },
+      "walk_empty": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.467434333264269e-05,
+        "minimumPropY": null,
+        "endpointTRSError": 2.9498424480856045e-08
+      },
+      "fill_right": {
+        "durationS": 2.5999999046325684,
+        "minimumBodyY": -3.9597374505937486e-05,
+        "minimumPropY": 0.5541831293795916,
+        "endpointTRSError": 1.0
+      },
+      "fill_left": {
+        "durationS": 2.5999999046325684,
+        "minimumBodyY": -3.9597374505937486e-05,
+        "minimumPropY": 0.5541831293795916,
+        "endpointTRSError": 1.0
+      },
+      "idle_after_fill": {
+        "durationS": 2.0,
+        "minimumBodyY": -7.17715932690207e-08,
+        "minimumPropY": 0.5522104637234264,
+        "endpointTRSError": 2.8335644830512763e-08
+      },
+      "walk_after_fill": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.467434333264269e-05,
+        "minimumPropY": 0.5483200696287656,
+        "endpointTRSError": 2.8335644830512763e-08
+      }
+    },
+    "nonFillSkeletalTracksUnchanged": true,
+    "skinnedMeshDefinitionsUnchanged": true,
+    "sourceBinaryPrefixUnchanged": true,
+    "standaloneReleaseParentMatrixRowMajor": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.5560580362815628
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -0.01482035871996673
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "standaloneReleaseCoordinateErrorM": 0.0,
+    "sequenceSeams": [
+      {
+        "from": "fill_right",
+        "to": "fill_left",
+        "TRSError": 2.8335644830512763e-08
+      },
+      {
+        "from": "fill_left",
+        "to": "idle_after_fill",
+        "TRSError": 2.8335644830512763e-08
+      }
+    ],
+    "pouring": {
+      "fill_right": {
+        "marker": "bucket-pour-right",
+        "pourStartS": 1.08,
+        "pourEndS": 1.5,
+        "waterSurfaceEmptyAtS": 1.25,
+        "maxMarkerRadiusM": 0.6842143273515762,
+        "minimumMarkerYM": 1.1296565595701915,
+        "markerPeakM": [
+          -0.47600999974075153,
+          1.1305757848014353,
+          0.7023768148510713
+        ],
+        "minimumBodyVatEnvelopeClearanceM": 0.02237561591061188
+      },
+      "fill_left": {
+        "marker": "bucket-pour-left",
+        "pourStartS": 1.08,
+        "pourEndS": 1.5,
+        "waterSurfaceEmptyAtS": 1.25,
+        "maxMarkerRadiusM": 0.6842143273515762,
+        "minimumMarkerYM": 1.1296565595701915,
+        "markerPeakM": [
+          0.47600999974075153,
+          1.1305757848014353,
+          0.7023768148510713
+        ],
+        "minimumBodyVatEnvelopeClearanceM": 0.02237561591061188
+      }
+    },
+    "vatCenterFromCharacterM": [
+      0.0,
+      0.0,
+      1.1
+    ],
+    "vatSHA256": "a23165a9b2b5813440473578fa832a7c42292f495a5211fcfcd05c5ec7481b9d"
+  },
+  "lakaisija": {
+    "sha256": "352f579ba5e65fe01b42c5b2776e14f762ac9c674805b5d0e51537f02af5f458",
+    "triangles": 15180,
+    "jointCount": 65,
+    "clips": {
+      "idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -8.195424717344097e-08,
+        "minimumPropY": 0.1719112015801983,
+        "endpointTRSError": 2.7226505716626548e-08
+      },
+      "walk": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.752935350366762e-05,
+        "minimumPropY": 0.17149869055597586,
+        "endpointTRSError": 2.7226505716626548e-08
+      },
+      "startle": {
+        "durationS": 1.0,
+        "minimumBodyY": -8.195424717387465e-08,
+        "minimumPropY": -0.00011479086783652837,
+        "endpointTRSError": 1.2602667662309357
+      },
+      "startle_idle": {
+        "durationS": 2.0,
+        "minimumBodyY": -8.195424717344097e-08,
+        "minimumPropY": null,
+        "endpointTRSError": 2.788200159642429e-08
+      },
+      "walk_empty": {
+        "durationS": 1.399999976158142,
+        "minimumBodyY": -9.752935350366762e-05,
+        "minimumPropY": null,
+        "endpointTRSError": 2.788200159642429e-08
+      },
+      "sweep": {
+        "durationS": 2.0,
+        "minimumBodyY": -8.195424717344097e-08,
+        "minimumPropY": 0.0008352556849180017,
+        "endpointTRSError": 2.872674687015575e-08
+      }
+    }
+  },
+  "jaanne-posliini": {
+    "sha256": "9ef03b38ee138b4291b046a87723fad31197e0a43be4594c1ff5a6c3772fc5ac",
+    "triangles": 212,
+    "boundsMinM": [
+      -0.26132088899612427,
+      0.0,
+      -0.3308599293231964
+    ],
+    "boundsMaxM": [
+      0.26132088899612427,
+      0.03677687235176563,
+      0.3308599293231964
+    ]
+  },
+  "jaanne-ruoka": {
+    "sha256": "a70c39072dacdfa496d729d517742937cb4add94625215e1d89c24b9d5a7f9cb",
+    "triangles": 2112,
+    "boundsMinM": [
+      -0.4499999761986662,
+      0.0,
+      -0.41656236992184614
+    ],
+    "boundsMaxM": [
+      0.44999994199958643,
+      0.08900000154972076,
+      0.4165623970507291
+    ]
+  },
+  "jaanne-vesi": {
+    "sha256": "307f72aa0ad83afd24e75a3f16b333fba7a1ae8b8831d4feeb1116ba6db96368",
+    "triangles": 952,
+    "boundsMinM": [
+      -0.7273655235767365,
+      -2.98771293955058e-08,
+      -0.5087010264396667
+    ],
+    "boundsMaxM": [
+      0.7273655235767365,
+      0.32914726489408885,
+      0.508701040517993
+    ]
+  },
+  "tavara-ampari": {
+    "sha256": "256a6e56a653a788e9b0414eaf6187a228e7a91330f3c5973c2ec6c27b7766d7",
+    "triangles": 1168,
+    "boundsMinM": [
+      -0.7582481685513223,
+      0.0,
+      -0.14820359640135727
+    ],
+    "boundsMaxM": [
+      0.7582481685513223,
+      0.694580777594787,
+      0.14820359640135727
+    ]
+  },
+  "tavara-luuta": {
+    "sha256": "b4522b54f4fe95219dd2b97755618791601ec244abefc70de86c857ed8665a59",
+    "triangles": 564,
+    "boundsMinM": [
+      -0.11697221547365189,
+      0.0,
+      -0.048632919788360596
+    ],
+    "boundsMaxM": [
+      0.11697221547365189,
+      1.7932050228118896,
+      0.048632919788360596
+    ]
+  },
+  "tavara-maljakko": {
+    "sha256": "5a1170ea3e41143cc612e014dba0d44cf9a417c316251a7b6b4a15796e1af34d",
+    "triangles": 1640,
+    "boundsMinM": [
+      -0.14000000059604645,
+      0.0,
+      -0.14000000059604645
+    ],
+    "boundsMaxM": [
+      0.14000000059604645,
+      0.4300000071525574,
+      0.14000000059604645
+    ]
+  },
+  "tavara-ruokalaatikko": {
+    "sha256": "e37751d482964547909a16ea6da0be3ea940dccdadc3e3a143f1f3a865a8c3b5",
+    "triangles": 1048,
+    "boundsMinM": [
+      -0.21837928891181946,
+      -7.450580596923828e-09,
+      -0.12999999523162842
+    ],
+    "boundsMaxM": [
+      0.21837928891181946,
+      0.43299999833106995,
+      0.12999999523162842
+    ]
+  },
+  "status": "NUMERIC_AND_APPROVED_SEQUENCE_CONTRACT_PASS_VISUAL_REVIEW_PENDING",
+  "limits": "11 models tested. Character source preserved. Sampling/envelopes do not establish complete triangle intersection freedom or final visual QA."
+}
