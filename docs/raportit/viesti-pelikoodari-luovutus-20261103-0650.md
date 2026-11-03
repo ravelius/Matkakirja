@@ -47,3 +47,8 @@ peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
 4. th s 7 kapea ovi (114,2, -784,2): th-218v massassa 0 → poistunut; reunat 127 jäljellä.
 5. Ennallaan: ty s 13,4 räystäsnosto, ys 1.2 räystään parrut, seinähäivytys pois (omistaja 10.43), KK:n paketti vasta puhtaana.
 6. Havainnot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/salit-218l-havainnot.md (loppu).
+7. xf-218x (064724, 4e7874b8b) valmis: 2/89/113/42 (218v 0/94/94/64). Alun kuvat (sali-218x/xf-218x-alku-kooste.png) EI vielä katsottu.
+8. LAV 3.11. ~07.2x KYTKENTÄ (kun JU on vienyt): kielletty-rakennukset-v118 (v117 + 42 palatsin pronssia ryhminä pr-*, vanhat leijonat
+   pois f-taihemen/l-malleista) + palatsi-esto-v38 (+567 ruutua, korvaa v37); tausta v114 ja osamallit ennallaan; LAV:n juoksu 151/151.
+   Vesiastiat vedenkantajan täyttöpaikoiksi (10 kpl, reuna 1,1 m): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/pronssit-esi/vesiastiat-pk.json.
+   Järjestys: mittarikorjaus + 218x-taulukko ensin (PT), kytkentä samaan seuraavaan runkoon (218y) yk-korjauksen kanssa.
