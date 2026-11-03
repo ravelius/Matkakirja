@@ -34,4 +34,4 @@ kytkennän ensimmäisen erän jälkeen. Proto-haarat paikallisia (repo /Users/Sh
 2. Yhdistys: arkihahmot-218 → am-linjaan tai uuteen pakettiin vasta PT:n kuittauksen jälkeen (oletus pois, joten yhdistys on turvallinen).
 3. Edellisen luovutuksen kohdat 1–7 ja lisäys 18.5x ennallaan (keisarin nosto: YKSI rivi KK:lle, kun JU:n iso-ajo a92302399+ näyttää
    noston iPadilla).
-4. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1850 (tämä tiedosto sen kärjessä).
+4. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/Matkakirja-pelikoodari (mainin päällä; tämä tiedosto sen kärjessä).
