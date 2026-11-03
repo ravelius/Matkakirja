@@ -93,3 +93,18 @@ Seuraavaksi: Codex-tilaukset noiden kahden osalta PT:n kuittauksella, sitten LIS
 
 ## LISÄYS juuri ennen nollausta (lue ensin): PT 01.14 kuittasi
 Tilaa kaksi Codex-kuvaa, Champs-Élysées'n puutarhat ja Champ-de-Mars, 2029:n mallista; yksi otto kukin, vain nämä kaksi; tilaus claude/postilaatikko-haaraan. Muut puutarhat OSM-tasolla. Parit KK:lle PT:n kautta. ALOITTAMATTA.
+
+## LISÄYS 4.11. klo 01.29 (uusin; lue ensin; konteksti 25 %)
+Täydet polut: P = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104, Y = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103, C = /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyydet-20261103, N-haara = karttaseppa/pariisi-nimet-220 (wt/proto-karttaseppa-ruutu-218). Lista: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, lue osio "Sacré-Cœur k8 ja muotopuutarhat" (KK 01.19). Vahti: Monitor `zsh Y/vahti.zsh`; 13 ensimmäistä TOIMITUS-riviä vanhoja.
+**TEHTY**
+- **Codex-tilaus 15 lähetetty:** 15a Champ-de-Mars ja 15b Champs-Élysées e52adcf60, 15c Luxembourg 081ddd0f5 (KK 01.19 pyysi kolmannen; PT:n 01.14 "vain nämä kaksi" oli ennen sitä: kerro PT:lle, jos ei vielä tiedä). Aineisto C/puutarha-*/ (TILAUS.md, maski.png, ohje-kohde.png, alue.json); generaattori P/puutarha-tilaus.py. Litteä kuva suoraan ylhäältä, alfa = maski, ei puita. Kuvan paikka kartalla: alue.json (lajimuoto, ryhmä "puutarha").
+- **Kohta 5, jono:** koodin mukaan nimet 2995 < piirros 3050+ (Nimikerros.cs:375, PiirrosKerros.shader), eli ne jäisivät alle. Syy ei selvinnyt lukemalla: TMP, URP-renderöijät ja ElavaKerros eivät selitä sitä. Mittari ebe377352 N-haarassa: `nimet laske` tulostaa todelliset jonot (nimet, laatat, esineet). PT:lle pyydetty JU:n ajoon, odottaa lokiriviä. Huom: elava-katu on piilossa piirroksen päällä (Nimikerros.cs:657), joten selvitä myös, mikä luokka tuottaa kuvissa näkyvät kadunnimet; poltettuja nimiä laatoissa ei löytynyt pohjaskripteistä. Älä kytke ennen KK:ta.
+- **Kohta 7:** Y/korjaa-sillat-d.py → Y/tarkistus-sillat-d-v2/ (silta-d-*-v2.png, pari-d-kaide.png). PT:llä; ei kirjastossa eikä NS:llä ennen kuittausta.
+- **Kohta 8:** 76d11201a N-haarassa: Hyatt (Q3142395) pois Merkittavat.json:sta, ▲-huiput pois piirroksen näkyessä (Montagne Sainte-Geneviève). Kerro NS:lle sha; lisää Q3142395 merkittavat/siivoa.py:n POIS_MUUT-listaan, jos aineisto ajetaan uudelleen. Kääntämättä (JU:n vuorolla), eikä PT:lle vielä ilmoitettu: tee se ensin.
+**AVOIN (järjestyksessä)**
+1. **Invalidit (KK 01.19, EI):** kaksi suoraa tasavälistä riviä kummallekin esplanadin puolelle, ei poimintoja kartta-aineistosta (KATURIVIT pois, käsin viivat P/puut-uudet.py:hyn). Pois: kasa länsirivin keskellä, sisempi toinen rivi itäpuolella, eteläpään umpinainen poikkirivi.
+2. **Jardin des Plantes:** noin 25 puun kasa Rue Cuvierin itäpuolella: rivit tai ryhmät 3–6.
+3. **Luxembourg:** puusto myös pohjoisreunalle palatsin molemmin puolin (itä ja länsi jo oikein). Poista Luxembourg P/puutarhapolut.py:stä, kun 15c on hyväksytty.
+4. **Toimitus 15 (vahti ilmoittaa):** kuvat parina Tuileries'n (OSM-polut, KK:n suunta 01.19) rinnalla; jos tyyli eroaa, Tuileries samalla tavalla (KK). Champ-de-Marsin rivit tarvitsevat lähteen (nurmen reuna tai maski; KATURIVIT-nimet eivät löydy OSM-välimuistista).
+5. **Sacré-Cœur k8 hyväksytty koosteena (KK 01.19):** ei junaan ennen nimien väistöä ja pelikuvaa. Toteutus kohdan 01.2x suunnitelman mukaan (erilliset puut + väistöalue).
+6. **Kohta 9** (nimet puiden kohdalla) uudella puulla; Louvre-nimi Seinellä (NS 4b) edelleen tekemättä.
