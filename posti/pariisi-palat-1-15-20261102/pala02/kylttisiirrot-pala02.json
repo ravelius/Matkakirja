@@ -1,11 +1,11 @@
 {
-  "14": {
-    "nimi": "Sacré-Cœur",
+  "64": {
+    "nimi": "Place du Tertre",
     "piirretty_px": [
-      574,
-      790
+      427,
+      795
     ],
-    "ero_m": 114,
+    "ero_m": 108,
     "reason": "60-140m: source-authorized game-label shift; receiver applies"
   },
   "92": {
