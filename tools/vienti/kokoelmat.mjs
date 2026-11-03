@@ -28,6 +28,7 @@ import { ETUSIVUN_KOHTEET } from '../../js/ui-apurit.js';
 import { lueKorkeudet } from './korkeudet.mjs';
 import ASUKASLUVUT from './kaupunkien-asukkaat.json' with { type: 'json' };
 import KESKUSTAT from '../../data/kaupunkikeskustat.json' with { type: 'json' };
+import ESITTELYPAIKAT from '../../data/esittelypaikat.json' with { type: 'json' };
 import NOSTOPAIKAT from '../../data/nostopaikat.json' with { type: 'json' };
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
@@ -101,6 +102,11 @@ function lautaKokoelmat(ns) {
     asukkaatLahde: a?.asukkaat != null
       ? `Wikidata P1082 (CC0)${a.vuosi ? `, ${a.vuosi}` : ''}, ${a.wikidata}` : null,
   });
+  const esittelypaikat = (t) => {
+    const r = Object.entries(t ?? {}).filter(([, e]) => e.piste)
+      .map(([f, e]) => [f, { lat: e.piste[0], lon: e.piste[1], kohde: e.kohde }]);
+    return r.length ? Object.fromEntries(r) : null;
+  };
   const keskustatiedot = (k) => ({
     keskusta: k && !k.alue ? { lat: k.lat, lon: k.lon } : null,
     alue: k?.alue ? { p: k.rajaus.pohjoinen, e: k.rajaus.etela, l: k.rajaus.lansi, i: k.rajaus.ita } : null,
@@ -145,6 +151,9 @@ function lautaKokoelmat(ns) {
       // Skeema 1.68 (Karttaseppä 2.11.2026; omistaja 21.42, saapumiszoomaus kaikkiin Euroopan kaupunkeihin): OSM-tarkistettu
       // keskipiste (tools/sisalto/kaupunkikeskustat.mjs → data/kaupunkikeskustat.json) ja alueille rajaus { p, e, l, i }.
       ...keskustatiedot(KESKUSTAT[c.id]),
+      // Skeema 1.69 (Karttaseppä 3.11.2026; KK:n suunnitelma 20261103-saapumisen-kuvat osa B): esittelykuvien kartalla näytettävät
+      // pisteet tiedostonimen mukaan (tools/sisalto/esittelypaikat.mjs → data/esittelypaikat.json); paikaton kuva puuttuu.
+      esittelypaikat: esittelypaikat(ESITTELYPAIKAT.kaupungit[c.id]),
       data: c,
     };
   });
@@ -171,7 +180,7 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput, lahtokohde = alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET). tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). keskusta = { lat, lon } saapumiszoomauksen keskipiste (Euroopan kaupungit, OSM-tarkistettu; null = kaupungin piste), alue = { p, e, l, i } asteina koko alueen rajaus (alpit, lappi, islanti, kreeta, sisilia; muuten null). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput, lahtokohde = alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET). tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). keskusta = { lat, lon } saapumiszoomauksen keskipiste (Euroopan kaupungit, OSM-tarkistettu; null = kaupungin piste), alue = { p, e, l, i } asteina koko alueen rajaus (alpit, lappi, islanti, kreeta, sisilia; muuten null). esittelypaikat = { <kuvan tiedostonimi>: { lat, lon, kohde } } saapumisen esittelykuvien pisteet kartalla (trailerin kuvat ja Pariisin C1–C4; puuttuva kuva = keskusta; null = ei paikkoja). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
       'Kaupunkien väliset yhteydet: laji maa | sea (meri) | lento. askelia = laudan steps (lennolla null), via = taitepisteet laudan Miller-yksiköissä [[x, y], …] (tyhjä = suora viiva).',
