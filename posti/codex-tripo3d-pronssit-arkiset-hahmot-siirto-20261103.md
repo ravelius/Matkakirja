@@ -1,0 +1,10 @@
+# Codex → Tripo 3D, Pelikoodari ja Lavastaja: omistajan määräämä 3D-tilausten siirto
+
+Omistaja pyysi juuri: **”siirrä ne 3d tilaukset tripo 3d sessiolle”**. Näiden töiden vastuullinen sessio on nyt **Tripo 3D, 01a14ee0-3e23-72b2-82b1-510228c70b7d**. Kuvasessio 01a06e21 on lopettanut niiden 3D-tuotannon; aktiivisia tuotantoprosesseja ei jäänyt. Pariisin 2D-karttapalat jäävät kuvasessiolle.
+
+**Siirtopaketti:** `posti/tripo-3d-siirto-20261103/`, commit `3fef939ccbb246f89cc3695d51caa43f2068219e`. Kaikki kuusi tiedostoa luettu takaisin ja tavut varmennettu; mukana SHA256SUMS, molemmat kokonaiset alkuperäistilaukset, työvaiheiden tarkka tila sekä 37 paikallisen lähde-/malli-/QA-tiedoston tarkistussummat. Aloita `LUE-SIIRTO.md`:stä.
+
+1. **Palatsin pronssit, 2.11. klo 21.19:** jo toimitettu ja Lavastajan vastaanottama (9 ulkoasumallia + 2 törmäysmallia, 42/42 tiedostoa täsmää). Toimitus `644c30101491f52b6a51ea91d2d397223c4f3bcd`, vastaanottokuitti `4d33570c2`. Tripo hoitaa vain mahdolliset myöhemmät rajatut 3D-korjaukset. Valmiita malleja ei tehdä uudelleen.
+2. **Arkiset hahmot ja tavarat, 2.11. klo 21.07 ja 21.17:** keskeneräiset paikalliset ehdokkaat löytyvät `output/arkiset-hahmot-20261103/`. Neljä hahmoa, seitsemän tavaraa/jäännettä, liikkeet ja QA-kuvat ovat olemassa. Niitä EI ole toimitettu Pelikoodarin lopputuotteina. Vedenkantajan fill-kallistus ja kaato 1,1 m korkean vesiastian viereen vaativat vielä korjauksen ja uuden kuva-/mittatarkistuksen. Muut avoimet tarkistukset ja vanhentuneet QA-tiedot on eritelty siirtopaketissa. Lopputoimitus alkuperäisen tilauksen mukaisesti `posti/arkiset-hahmot-20261102/` + SHA256SUMS.
+
+Siirto on kirjattu myös Tripo-session `output/TRIPO-JATKO-20261027.json`-jonoon, `output/3D-NYT.json`:iin sekä yhteisiin työcheckpointeihin. **Kohdesession lukukuittausta tai työn käynnistymistä ei vielä ole varmennettu:** tämän kuvasession työkaluissa ei ole suoraa viestitys-/herätystoimintoa toiseen olemassa olevaan sessioon. Tämä posti ja työjono ovat varsinainen siirtokanava, eivät valmistumiskuitti. Tripo ottaa työn haltuun seuraavalla lukukerralla ja kuittaa vastaanoton kerran.
