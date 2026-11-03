@@ -39,6 +39,9 @@ reunassa, piilossa) ennen KK:ta. `python3 -I /Users/Shared/Claude/proto-3d/_tyo/
 - L2: VS pim4, sitten taso1b12 (218t).
 
 ## SEURAAVA
+0. **PT 05.2x (kuitattu lähtötaso, mittarijako oikein): ENSIN xf (massassa 61 @182,4 s, piilossa 248, 92 ruutua @182,8 s juhlasalin
+   räystään takana) – selvitä syy ennen pienempiä.** Loki /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261103-045946, video
+   sali-218b/20261103-045946-xf-v3.mp4. 218t:n taulukko PT:lle RINNAKKAIN 218r:n kanssa (per sali muutos): mittari-taulukko.py yk-218r yk cx-218r cx …
 1. ys-uusinnan (218r) rivi taulukko-218r.md:hen (ys-218r, jos ketju8t jo kopioi).
 2. 218t-sarjan valmistuttua sama taulukko → vertailu 218r vs 218t PT:lle. Tarkista erityisesti th alku (ovipalkki), ty s 14, cx s 14, tj s 24.
 3. Jos kulma/ristikkojulkisivu jää: räystäsnosto juuri ennen läpikulkuhallia (ty s 13,4: "räystäs kameran vieressä … 6,1 → 6,7") vie
