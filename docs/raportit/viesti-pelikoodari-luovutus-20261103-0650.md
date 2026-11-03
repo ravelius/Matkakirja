@@ -52,3 +52,15 @@ peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
    pois f-taihemen/l-malleista) + palatsi-esto-v38 (+567 ruutua, korvaa v37); tausta v114 ja osamallit ennallaan; LAV:n juoksu 151/151.
    Vesiastiat vedenkantajan täyttöpaikoiksi (10 kpl, reuna 1,1 m): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/pronssit-esi/vesiastiat-pk.json.
    Järjestys: mittarikorjaus + 218x-taulukko ensin (PT), kytkentä samaan seuraavaan runkoon (218y) yk-korjauksen kanssa.
+
+## Jatko 07.4x (PT: ei nollausta, jatka avoimista 1–2)
+- mittari-taulukko.py: kiinni → uudestaan -odotus pois (sarake "kiinni-odotus pois m/r/p/v"; vanha .ennen-kiinni). cx-218v reunat 570 → 110.
+- Taulukko 218r/218v/218x PT:lle: sali-218b/taulukko-218x.md. Summat massassa/reunassa/piilossa/vetoja 218r 264/≥499/596/792,
+  218v 190/863/466/901, 218x 259/925/517/899. **06aa319bc huononsi** (th 0 → 39 @ 148,3 s, yk 76 → 106 @ 234,3 + 240,2 s) eikä korjannut
+  xf:n alkua: kamera 1. ruudussa yhä (135,27, 4,25, -805,92) salin sisällä. Ehdotettu PT:lle: 06aa319bc pois, pohjaksi 218v + bf0e08217.
+- SEURAAVA: selvitä, mikä asettaa kameran 1. ruudun paikan `uudestaan`-komennon jälkeen (JuoksuV4Maailma rivi ~403 nollaus, alustettu,
+  droneAlussa, rivi ~2084 kPaikka = kohde): polkukamera-loki alkoi vasta t 0,10–0,15, joten 1. ruudun kohde ei kulje polkulohkon kautta
+  tai Tukossa(kohde) on silloin false. Lisää loki 1. ruutuun (kohde, AvausT, tunnelissa, katonAlitus, Tukossa) ennen uutta korjausta.
+- HUOM: checkout /Users/Shared/Claude/Matkakirja-pelikoodari oli 07.4x vaihdettu haaraan koti/Matkakirja-pelikoodari (origin/main);
+  palautettu koti/pelikoodari-20261103-0540:aan (PR 6085 auki).
+
