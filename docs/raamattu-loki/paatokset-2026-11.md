@@ -201,3 +201,7 @@ Omistajan havainto 3.11.2026 klo 15.14 (KK:n kautta): "nyt isolla ipadilla näky
 ## TILINVAIHTO 3.11.2026 klo 16.5x (3.11.2026 klo 16.51)
 
 Tilille sami.reivinen@vvi.fi (org ddaee6a2): tämän tilin 29.10. sessiot tyhjennetty (self-clear) ja käytössä (PT local_8d8ebf72, KK local_d5f31591 + 9 roolia), ei arkistoitavaa; taulu R6VQFTUNq629zSzah719Uy; ohjeiden koe 10/10 (7.34 korjattu PR 6182); opit PR 6183; tilinvaihto-valmis 0 (PR 6184).
+
+## PARIISIN KOEALUE STRIIMIKARTAN PÄÄLLE (omistaja 3.11.2026 klo 16.51) (3.11.2026 klo 16.52)
+
+Kortti 'Aloitetaanko Pariisin koealue uudella tavalla?' → 'Kyllä (Suositus)'. Piirroskaupunki rakennetaan striimikartan päälle esineinä (Codex: nähtävyydet, talotyypit, puut, sillat, veneet; kadut, liikenneympyrät, joki ja puistot koodilla oikeita katuja pitkin Codexin tyylinäytteillä; pohjakartta paperiseksi ja musteviivaiseksi). Koealue Notre-Dame + Louvre nykyisen piirroksen rinnalle. Ristiriita: Raamattu 2.204 '2,5 m/px koko kaupunkina' koskee nykyistä piirrosta; uusi tapa korvaa sen vasta, jos omistaja hyväksyy koealueen. Nykyisen piirroksen korjaukset jatkuvat.
