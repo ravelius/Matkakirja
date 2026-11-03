@@ -7,6 +7,9 @@ EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajo
 ## YÖTYÖ (PT, omistaja 22.31 "Koita saada Pariisin kartta tehtyä kokonaan")
 Sijoita KK:n hyväksymät peliin sitä mukaa kuin KS/PT ilmoittaa. Pelikuvat JU:lta → PT → KK.
 
+## LISÄYS 23.53 (PT, KK 23.50): yhdistelmään myös VS:n tyyli
+Iso iPad -ajo sisältää VS:n tyylin (täyttö ei vielä, vain koe), rajaus sama kuin VS:n parissa. VS:ltä pyydetty tuorein sha 23.53 (vastaus tulee tähän sessioon). Jos yhdistäminen viivästyy, kerro JU:lle ja PT:lle; älä pidätä ajoa VS:n vuoksi.
+
 ## LISÄYS 23.52: ENNEN YHDISTELMÄÄ (PT, JU; ei ehditty katsoa)
 Testimerkki 23.50 on hoidettu, kartta-testit-ok kosketettu 23.51. Ajo 95a733ace: /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261103-234105 (iPad-ajo käynnissä).
 a) **ArgumentOutOfRange 23.41.30 kohdassa ui sulje** (unity.log rivi 2046): PT: katso ennen yhdistelmää, onko syy NS:n koodissa (tarkista erityisesti 5f8b18b5c: KaupunkiMerkit, PiirrosKerros.Esineet).
