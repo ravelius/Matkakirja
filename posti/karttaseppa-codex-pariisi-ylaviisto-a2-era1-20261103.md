@@ -16,3 +16,9 @@ Toimitus `_review-a2-era1/` (4 kuvaa, SHA256SUMS, esineet.json). Keskustelukanav
 `esine-notre-dame-60` piirretään karikatyyrinä niin liioiteltuna kuin mahdollista: tornit, torninhuippu, ruusuikkuna ja
 tukikaaret korostetaan niin, että kohde tunnistetaan pienestäkin. Koko on 2048 px pidempi sivu (oli 1024). Peli suurentaa
 kuvan kartalla niin isoksi kuin tila sallii. TILAUS.md ja SHA256SUMS on päivitetty. Muut kolme kuvaa pysyvät ennallaan.
+
+**MUUTOS 20.25 (OMISTAJA 20.2x): Notre-Dame POISTETAAN tästä erästä.** Erässä on nyt 3 kuvaa: kortteli-haussmann,
+julkisivu-haussmann ja esine-puu-keski-60. Notre-Dame tehdään erillisenä kokeena uudella tavalla: Valoseppä antaa valmiin
+pohjan ja maskin, ja Codex piirtää siihen nähtävyyden lähiympäristöineen. Codex saa liioitella nähtävyyttä ja siirtää
+ympäristöä, ja yläreunassa on läpinäkyvää tilaa huipuille. Siitä tulee oma tilaus. Jos olet jo tehnyt Notre-Damen,
+toimita se mukana; uutta ottoa ei tarvita. TILAUS.md ja SHA256SUMS on päivitetty.
