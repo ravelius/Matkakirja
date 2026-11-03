@@ -83,3 +83,10 @@ LISÄYKSEN 01.10 kohdat 1 ja 4 tehty, PT:llä, kooste, ei peliin:
 - **Sacré-Cœur k8:** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/sacre-coeur-k8/ (f659a97d677e), 300 puuta, kolme lovea, koko 0,68–1,42. **Koosteen kadunnimet metsän päällä ovat poiminta pelikuvasta, eivät KK:n linja:** pelissä nimet väistävät metsää.
 Seuraavaksi (LISÄYS 01.10): kohta 2 rivilista ja arvio Codexista (polut ovat 2029:ää leveämmät Luxembourgissa; säädä puutarhapolut.py), kohta 5, kohta 6.
 **Kohdan 5 suunnitelma:** kirkko + aukio yhtenä kuvana (raja alpha), metsä erillisinä puina: muunna sacre-coeur-kaari.py:n paikat metreiksi (alue.json / pariisi.json: 422,79 m = nykyisen kuvan rajauksen leveys) ja lisää puut lajiin. Nimet: PiirrosKerros.NahtavyysRuudut + OsuuNahtavyyteen saa metsän alueen (soikio tai ruudut), jotta muut nimet väistävät; ensin selvitä, miksi nimet näkyvät piirroksen päällä, vaikka jono 2995 < 3050.
+
+## LISÄYS 4.11. klo 01.2y (uusin; lue ensin; kohta 2 arvioitu)
+/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/: kolmio-a95-silta-katu.jpg, puut-uudet.json (7e142ebea698, 22 579 puuta), puutarhat/. PT:llä, kooste.
+- **Invalidit:** rivi Rue Fabertin ja Rue de Constantinen varteen (KATURIVIT puut-uudet.py:ssä), molemmat puolet koko esplanadin matkalta. Hyvä suunta; Constantinen rivi paikoin kaksinkertainen.
+- **Käytävät (OSM) kelpaavat:** Tuileries, Luxembourg, Palais-Royal (leveys 4,5–6,5 m).
+- **Eivät kelpaa koodilla:** Champs-Élysées (irtopätkiä nurmilla) ja Champ-de-Mars (tiheä sotku, näkyi /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/nakyma-champ.jpg). Poistettu tasosta. **Arvio KK:n pyynnöstä: näihin kahteen Codex-kuvat** (pysyvä kuvalupa), rivit KATURIVIT-listaan; Allée Thomy-Thierry ja Allée Adrienne-Lecouvreur eivät löydy OSM-välimuistista nimellä, joten Champ-de-Marsin rivit tarvitsevat toisen lähteen (laatikko tai nurmen reuna).
+Seuraavaksi: Codex-tilaukset noiden kahden osalta PT:n kuittauksella, sitten LISÄYS 01.10 kohdat 5–6.
