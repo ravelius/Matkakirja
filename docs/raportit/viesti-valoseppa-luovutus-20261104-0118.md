@@ -30,3 +30,6 @@ Reuna: laske, että paino on 1,00 koko Pariisissa ja molemmissa metsissä (Vince
 - iPad-ajo: pyydä vuoro PT:ltä, kun pari on lähellä. Ehto täyttyy: piirtokulu tiedostoon (elava-kulu.txt; Unity-käännös ei vielä todistettu). k20-kuvat lokit/julkaisija-k20-iso-8d1a79394/, muisti 3537/4080, KK:n saumahuomiot KORJAUSLISTA.md viimeinen osio; samat komennot TULOS.md:ssä sk:hon.
 - Etäisyyshäivytys on NS:n: sovi ElavaKoealue.cs:stä; k22 ja k23 eivät muuta sitä. Suihkulähde ei nyt. Kohdat 5–6 ovat jo k22:ssa; sävyrajat yhä ruudukossa, koska niitä ei kysytty.
 - Korjaa seuraavassa commitissa: ElavaTyyli.cs:n kommentti "noin 3 m reunasta" on väärin; IsoSisaviivaRuutua 3 = noin 5 m (TULOS.md oikein).
+
+## LISÄYS: PT 01.19 (lähetetty ennen k23-riviäni)
+k22 hyvä, viety KK:lle hallin kanssa. Tee KK 01.04 kohdat 2 ja 3 (1, 4, 5 ovat k23:ssa), sitten Savy-ruudukon sävyrajat. Pari ensin 2029:ää vasten PT:lle. Laiteajoa ei vielä; se vaatii ms/pala-tiedostolokin (k23:ssa) ja KK 01.16:n saumakohdat + 2 komentoa sk:hon (k23/TULOS.md), täysi koko.
