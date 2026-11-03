@@ -114,3 +114,10 @@ Täydet polut: P = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-2
 - **d-kaide kuitattu (PT 01.25):** silta-d-*-v2.png kirjastossa (isoisa-2029/esine/), NS:lle seuraavaan yhdistelmään; lopullinen hyväksyntä pelikuvasta (y-silta-idan vs y-silta-neuf).
 - **Mittari ebe377352 on JU:lla (PT 01.24):** odota lokiriviä.
 - **Seuraavaksi:** AVOIN 1 Invalidit (PT vahvisti: käsin, ei Codexia) ja Palais-Royalin pari KK:lle PT:n kautta (KK ei ole nähnyt sitä): P/puutarhat/palais-royal.png koosteeseen 2029-rajauksen rinnalle.
+
+## LISÄYS 4.11. klo 01.36 (uusin; lue ensin; Postivahti: jatka, nollaus 35 %:n lähellä)
+PT:llä, odottaa KK:ta; kaikki koosteita, ei NS:lle:
+- **Invalidit (AVOIN 1 tehty):** käsin puut-uudet.py:ssä (INV_AKSELI, INV_RIVIT, INV_Y, INV_KADUT), KATURIVIT Fabert ja Constantine pois, kaikki muut puut pois esplanadilta. P/kolmio-a95-silta-katu.jpg (1d7a18baa5fc). Komento `pari.py <Esineet/pariisi.json> lokit/julkaisija-k11-koe-iso-95a733ace/a95-silta-katu.png 48.8637 2.3193 0.72 <ulos>`; kooste.py rajaus 60,600,720,900. **Sovitus (ICP) vaatii oikean keskipisteen:** väärä lat/lon sijoittaa puut väärin ilman virhettä. y-invalidit ei sovi, koska puupisteet puuttuvat.
+- **Palais-Royal:** P/kolmio-palais-royal.jpg (7311df7b1854, y-opera.png 48.8690 2.3320 0.72, rajaus käsin). Käytävät eivät juuri erotu, 2029 tiiviimpi; odottaa KK:ta.
+- **Puut:** P/puut-uudet.json 222df6b0c3ec, 22 571 puuta. Jardin des Plantes MUOD-listassa (rivit 16, 70; OSM-metsä pois; AVOIN 2 tehty, katsomatta) ja Luxembourgin pohjoisreuna (AVOIN 3 tehty, 19 puuta lisää, katsomatta). Molemmat katsotaan seuraavasta parista.
+- **Jäljellä:** toimitus 15 (vahti) ja sen pari Tuileries'n rinnalla, puutarhapolut.py:stä Luxembourg pois hyväksynnän jälkeen, jonomittarin lokirivi JU:lta, AVOIN 5–6.
