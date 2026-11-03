@@ -49,3 +49,13 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä eikä kä
 - Testit: `EI_PEILIA=1 nice -n 15 zsh /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna210/testit210-rinn.sh <työpuu>` (~5 min).
 - Release-laitekäännös (L1): `LAITE_KOPIO="/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity-b6" zsh .../juna210/laite210.sh <sha9> <nimi>`.
 - Muistikoe: `zsh .../juna218/muisti-koe218.sh <sha9>`. Pitkät ajot Bash run_in_background lokitiedostoon.
+
+## LISÄYS 12.0x (KORVAA JONON KOHDAT 0–2)
+- PT 12.0x KUITTASI: 9613f5ad7+ca505e175+299b767f4 junaan 218 (PT välittää JU:lle). **Merge tehty: natiiviseppa/juna-218 = 1420265d7**
+  (wt/proto-natiiviseppa-ehdokas). TESTIT KESKEN nollauksessa → aja heti: EI_PEILIA=1 testit210-rinn.sh wt/proto-natiiviseppa-ehdokas,
+  sitten `git -C wt/proto-natiiviseppa-ehdokas push natiivi-backup HEAD:refs/heads/peili/proto/natiiviseppa/juna-218` ja rivi JU:lle
+  "juna 218 runko 1420265d7 (lähtö/tulo), laitekäännös + iso iPad ennen omistajan Lontoota".
+- PT:n uusi työ 1: kylmä tulo isolla iPadilla terävä vasta 11,4 s (z16–z17) – TAVOITE TERÄVÄ HETI LASKEUTUESSA.
+- PT:n uusi työ 2: ruudukossa ISO-BRITANNIA-nimi + punainen tekstilaatikko vasemmassa alakulmassa jo Pariisin yllä (valinnasta
+  alkaen, esim. lokit/natiiviseppa-esilataus-kylma-299b767f4-20261103-1153/ruudut/lahto-1-3_5.jpg) – onko kehitysnäkymää
+  (simuajo ei laita kehittäjätilaa), näkyykö laitteella? Selvitys oli kesken (Explore-agentti), aloita alusta.
