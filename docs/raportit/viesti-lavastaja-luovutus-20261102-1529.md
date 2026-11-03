@@ -1,0 +1,60 @@
+# Lavastajan luovutus 2.11.2026 klo 15.29 (tiivis) — LUE TÄMÄ, ÄLÄ VANHOJA
+
+Edellinen tiivis luovutus viesti-lavastaja-luovutus-20261102-1454.md (lisäykset 253–254) ja vanha 344 kt:n tiedosto ovat vain viitteitä.
+Uudet lisäykset TÄHÄN tiedostoon.
+
+## Rooli ja tapa
+- Lavastaja: palatsin rakennukset, tausta, esto ja lähikoristeet. Työkansiot ovat /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/,
+  paketit /Users/Shared/Claude/proto-3d/_valmiit/. Viestit send_messagella id:llä (osoitekirja /Users/Shared/Claude/osoitekirja.md); PT:lle ≤ 3 riviä.
+- Kulku: PT nimeää salin → tee → kuvapari PT:lle (polku viestissä) → PT kuittaa → paketit → JU:lle vientipyyntö + PK:lle kytkentärivi.
+- Kotikansio koti/Matkakirja-linnanrakentaja, rebase origin/mainiin 15.1x (PT pyysi päivittämään).
+
+## Tehty tänään (sisätilat, vaihe 2)
+| sali | kansio | malli | paketit | tila |
+|---|---|---|---|---|
+| 体和殿 2c | sisatilat-2c/th-v1 | th-tihedian | rak v104, tausta v104, esto v29 | JU vienyt 14.56 |
+| 太极殿 2d | sisatilat-2d/tj-v1 | tj-taijidian | rak v105, tausta v105, esto v30 + lahipuut-v15 | JU vienyt 15.10 |
+| 体元殿 + 长春宫戏台 2e | sisatilat-2e/ty-v1 | ty-tiyuandian | tausta v106 31c91182fe01, rak v107 ab08c38329f5 (korvaa v106), esto v31 53eb934d4f0e | PT kuittasi, JU-pyyntö 15.35 |
+
+- 2e (LUE.md): PT 15.3x päätti, että reitti kulkee 戏台:n läpi 长春宫:n pihalle. Takaovi on u 12,55–14,35 (戏台:n keskipylväs on akselilla).
+  戏台 on oma kehys kuori_c:ssä (valinta_x). Siinä on eteläovi ja pohjoissivun näyttämöaukko. PT:n korjaus 15.2x: näyttämön jalusta tehtiin kivestä
+  (V4_kujakivi_sokkeli kaikilla pinnoilla, v107); lähikuva ty-v1/kuvat/lahikuva-nayttamo-ty1.png lähetetty PT:lle.
+- Bugikorjaus 2e:ssä: _xlaatikko-tahot kiersivät sisäänpäin (mustat karmit ja lattia). Korjattu kiertämään ulos.
+- esto-ajon wrapper palautti exit 144, vaikka leivonta meni läpi ("1/1 läpi"); tarkista lokista, älä aja turhaan uudelleen.
+
+## JONO
+1. Varmista JU:n vienti: tausta-v106, rakennukset-v107, esto-v31. v107 = 戏台:n jalustan sivut kiveä (PT 15.3x). Törmäysmalli on tavulleen v106:n, joten esto-v31 pätee.
+   Pelin harmaa piha 戏台:n edessä on taustan V4_lattia y 0, eli se on olemassa (PT kysyi).
+2. 长春宫 2f (way/40631798) — ALOITETTU, kansio sisatilat-2f (tyokalut = 2d:n kopio, vakiot asetettu; cc-v1 tyhjä):
+   - OSM SW (−177,38; 366,84) SE (−150,67; 367,6) NE (−151,04; 380,62) NW (−177,74; 379,87), PAIKKA (−164,21; 373,73), akseli +1,63°. Tausta-v106 1-3.
+   - Halli on 2d-tyyppiä: seinät u 1,16…23,48, w 1,16…11,87 (sisäp. 1,52/23,12/1,52/11,51), jalusta 0,53 (reunat w 0,13 / 12,90), 6 jännettä à 3,72,
+     akseli u 12,32. Länsiseinä on, itäseinä puuttuu, pohjoisseinässä ei ikkunoita. Ikkunat 9,59–11,33 / 13,31–15,05 → ovet 11,34–13,30 molempiin seiniin
+     (pohjoisen keskipylväs pois KESKI:llä kuten 2d). Friisi 3,84–4,14, katto ≥ 4,38 → KATTO_Y 4,2. Pylväiden yläpää 3,91 → KORKEUS 3,38, SEINA_H 4,45.
+   - Naapurit: länsi u −0,75 (RAJA u0 −0,4), pohjoisnaapurin seinät w 16,47 ja jalusta 15,8 → takapiha w 12,9…15,8. RAJA w1 14,0.
+   - KESKEN: kehys_c, kuori_c ja sisa_c on asetettu. TEKEMÄTTÄ: merkinta_c (reitti varasto-kaista2:n eteläliitoksen kulmasta (−145,825; 363,71)
+     länteen etupihalle, läpi hallin ja takapihalle, varasto-kaista2:n pohjoisliitoksen kulmaan (−146,464; 385,69); U_KIERTO = 8,60 + 0,72 = 9,32,
+     W_SERMI 11,51 − 0,75 = 10,76; versiot tausta-v107 / rakennukset-v108 / esto-v32), sisa-maski (kierto −1,63, alue uw PAIKKAan nähden), kokoa/valmistele/leivo/kuvapari
+     2e:n ty-v1-skripteistä (pohja = 2e ty-v1/tausta-lahde + rk), kartta_c:n T/R/alue, iou_y:n ajo.
+3. 咸福宫 (way/40631832, −165,75; 424,46).
+
+## Lisäys 255 (2.11. klo 15.5x)
+- JONO 1 tehty: PK kytki rakennukset-v107 (7dcdc05d2, SHA täsmää, 797/797); salitallenteiden runko sali-218b bb0deb72c.
+- JONO 2 长春宫 2f cc-v1: kokoa, valmistele, leivonta (15.43–15.46) ja kuvapari tehty; pari-cc1.jpg ja kartta-reitti.png PT:lle 15.5x, ODOTTAA KUITTAUSTA.
+  merkinta_c.py 2f: U_REITTI 12,32, U_KIERTO 9,32, W_SERMI 10,76, W_TAKA 14,4 (takapiha), portaat w −0,77/0,13 ja 12,90/13,80.
+  Paketit kuittauksen jälkeen: cc-v1/tausta-v107.zsh → rakennukset-v108.zsh → esto-v32.zsh (worktree proto-lavastaja-esto-2e) → JU-pyyntö + PK-rivi.
+
+## Lisäys 256 (2.11.)
+- 长春宫 2f KUITATTU (PT). Paketit: tausta-v107 cbbfa616d5b7, rakennukset-v108 ea9218625ae7, palatsi-esto-v32 fee400ebb176 (152 776 ruutua) → JU-pyyntö + PK-rivi lähetetty.
+  Esto ajettiin uudessa worktreessa /Users/Shared/Claude/wt/proto-lavastaja-esto-2f (5cba23158, detached; 2e:n worktree oli poistettu).
+- 咸福宫 2g: kansio sisatilat-2g (tyokalut = 2f:n kopio, kehys_c:ssä SW/SE/PAIKKA asetettu, muut vakiot KESKEN). Taustan halli on matala laatikko
+  (OSM 2,0 m: seinä 1,2 m, räystäs y 1,8, ei ikkunoita), katso xf-v1/katso.jpg. KYSYTTY PT:ltä: kuori cc-v1:n kuoresta 20,2 × 14,6 m:n pohjaan (5 jännettä à 3,5)
+  + taustan matala halli pois. Odottaa vastausta.
+
+## Lisäys 257 (2.11. klo 15.58)
+- 长春宫 2f: PK kytki 54fac919c (v108/v107/esto-v32), 797/797, umpikujia 0. JU vei 2e:n (v107 15.52).
+- 咸福宫 2g xf-v1 (PT: kuori cc-v1:stä, matala OSM-halli pois): tyokalut/siirra_cc.py siirtää 长春宫:n kuoren (tausta-v106 1-3, 2f:n valinta) 咸福宫:n
+  kehykseen: u paloittain 6 → 5 jännettä (2,83 / 2,83 / 6,00 / 2,83 / 2,83; keskusjänne valtaistuimelle ja 1,5 m:n kululle), w × 1,13, y − 0,01 → xf-v1/lahde/.
+  Koroke ja sermi 3,0 m (KAPEA), nimilaatta 2,8 m. Reitti juhlasalin etelä- → pohjoisliitokseen (merkinta_c 2g; W_TAKA 15,6, U_KIERTO 7,80, W_SERMI 12,17).
+  Puukortit etupihalla eivät estä: esto merkitsee vain janojen sulkemat ruudut, ja reittien kaistat kaiverretaan sen jälkeen.
+  Leivottu 15.53–15.56, pari-xf1.jpg PT:lle 15.58 → ODOTTAA KUITTAUSTA. Paketit: xf-v1/tausta-v108.zsh → rakennukset-v109.zsh → esto-v33.zsh
+  (HUOM: esto-v33.zsh käyttää worktreetä wt/proto-lavastaja-esto-2f).
