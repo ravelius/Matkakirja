@@ -48,3 +48,9 @@ Koko päivän jonoloki: julkaisija-tyokalut/jono-20261103-ilta.txt (viimeiset ri
 - Keskeytä vain oma puu (puu()-funktio), sitten orpo L2-lukko pois vain, jos lukon pid kuollut.
 - ipad-lukko.sh kaari ei odota oletuksena → IPAD_ODOTA=3600.
 - `ui jatka` kaupungissa vaientaa paikan puheen → luentatestit oikealla saapumisella.
+
+## LISÄYS 16.2x
+- Laite 44ecc31d1 KÄÄNNETTY 16.20 → NUI ottaa ison iPadin NS-vierityksen jälkeen itse (IPAD_ODOTA), jättää 693cf437f.
+- Laite 2212b570e L2:lla käynnissä 16.20 (laite-2212b570e.log). Perään automaattisesti (nohup ketju-koe2.zsh) laite **9b9695a7d** = 2212b570e + NS f4334cbfd
+  (häivytys ruudun leveyden mukaan; PT 16.2x kohta 2). Mitattava koe = 9b9695a7d (koe-mittaus-iso.zsh) → kuvat + konsoli (PiirrosKerros-osamerkinnät) PT/NS/KS.
+- NS luovutti (afbe75860); konsolin luku seuraavalle NS:lle.
