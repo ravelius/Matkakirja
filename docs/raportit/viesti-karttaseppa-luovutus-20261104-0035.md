@@ -147,3 +147,12 @@ Kaikki muotopuutarhat Codexilta; käsin hienosäätö näihin loppuu; Invalidit 
 - **Kun kuvat tulevat:** poista puut-uudet.py:stä Tuileries, Plantes ja Palais-Royal (MUOD ja PR_K-rivit), ja ne kolme sekä Luxembourg puutarhapolut.py:stä. Vino rivi on MUOD Tuileries "poikki": 2, ja se poistuu samalla. Pari PT:lle → KK.
 - **Sirpaleet Louvren vieressä:** koosteen vika, ei pelissä (P/pr-kooste.py peitti Louvren seinää nurmella ja puilla, ja louvre-maski palautti vain osan). Pelikuva varmistaa.
 - **Avoinna:** 15a–c katsomatta (Champ-de-Mars: alfa ja nurmen sävy koodilla vai uusi otto; PT 01.42), Louvre-nimi Seinellä, kohta 9, jonomittari.
+
+## LISÄYS 4.11. klo 01.5x (uusin; lue ensin): toimitus 15a–c arvioitu
+**Parit (ennen | jälkeen | 2029), koosteita, PT:llä:** P/kolmio-codex-champ.jpg (98e2c372db98), P/kolmio-codex-champs.jpg (2f616ffd7fe1), P/kolmio-codex-lux.jpg (5d6f7a510adf). Sovitus P/puutarha-sovitus.py → P/puutarhat-codex/ (halo pois, alfa maskista, nurmi 203/177/109, Champ-de-Marsin ruutu pois). Pari: `PUUTARHAT=puutarhat-codex pari.py ...`. Tuileries, Plantes ja Palais-Royal eivät ole näissä.
+**Arvio (KK päättää):**
+- **Luxembourg: pidetään sovitettuna.** Rakenne vastaa 2029:ää. Jäljellä ylimääräinen U-kaari, allas noin 20 px länteen ja 4×:ssä sahalaita itäreunan käytävässä.
+- **Champ-de-Mars ja Champs-Élysées: suositus uusi otto kumpaankin, puut ja pensasaidat kuvaan kuten 15d–f.** Koodi korjaa värin ja reunan, muttei tuo sisältöä: nyt tasaiset ruudut, 2029:ssä tummat puurivit, pensasaidat ja istutetut lohkot. Ei tilattu, odottaa KK:ta. Sama tyyli 15d–f:n kanssa säilyy vain näin.
+- Koodipuut näissä kahdessa ovat sattumanvaraisia ryppäitä; ne poistuvat, jos uusi otto tilataan. Cours la Reinen rivi on kaksinkertainen.
+**Korjattu koostevirhe:** pari.py jakoi nähtävyyden leveyden `suhde`-arvolla, vaikka pelin data on korkeus/leveys, joten alkuperäinen kuva palautettiin liian korkealta alueelta. Tämä peitti puutarhan Grand Palais'n ympärillä. Aiempi selitys "a95 on vanhempi, ei dataa" oli siksi ainakin osin väärä. Invalidit tarkistettu korjatulla koosteella: rivit samat, hyväksyntä pätee.
+**Codexille ei vielä kuittausta:** tee KK:n päätöksen jälkeen. Luxembourg pois puutarhapolut.py:stä vasta sitten.
