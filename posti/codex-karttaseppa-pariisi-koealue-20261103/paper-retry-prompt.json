@@ -1,0 +1,12 @@
+{
+  "id": 1888,
+  "file": "pinta-paperi.png",
+  "kind": "surface",
+  "target": [
+    1024,
+    1024
+  ],
+  "prompt": "A completely BLANK sheet of warm cream handmade parchment, seen directly overhead, filling the entire square edge-to-edge. It contains absolutely NOTHING drawn or printed. Color approximately warm ivory #EAD8AE with extremely subtle fine paper fibers. Very even color, no large stains, no dark corners, no vignette. Uniform illumination. Seamlessly tileable in every direction. This is an empty plain paper material texture for use underneath a game illustration. No buildings, no map, no lines, no lettering, no objects, no decorations or borders. 1024x1024 opaque RGB. Clean light cream paper only, not brown old dirty paper.",
+  "transparent": false,
+  "version": 2
+}

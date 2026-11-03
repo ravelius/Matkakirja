@@ -1,0 +1,21 @@
+{
+  "verifiedAt": "2026-11-03T16:39:31.258042+00:00",
+  "pngCount": 20,
+  "dimensionsAndModes": "PASS",
+  "alphaComposite": "PASS",
+  "anchors": "MANUAL_ESTIMATES_RECEIVER_ALIGNMENT_REQUIRED",
+  "roofSeamQA": "FAIL_STRICT_SEAMLESS",
+  "heldForRoofQualityCorrection": [
+    "pinta-katto-haussmann.png",
+    "pinta-katto-vanha.png",
+    "pinta-katto-julkinen.png",
+    "pinta-katto-matala.png"
+  ],
+  "readyForUnconditionalIntegration": false,
+  "sourceRequestedCalls": 20,
+  "actualCalls": 21,
+  "paperCalls": 2,
+  "ownerApproval": "pending-game-composite",
+  "gameIntegrated": false,
+  "published": false
+}

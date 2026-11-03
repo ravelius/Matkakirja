@@ -1,0 +1,281 @@
+{
+  "mode": "built-in-imagegen",
+  "jobs": [
+    {
+      "id": 1882,
+      "file": "pinta-katto-haussmann.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Dense field of Parisian six-storey Haussmann building ROOFS seen vertically overhead: small zinc-gray and muted blue-gray mansard roof strips with pale dormer marks and delicate sepia ridge strokes, narrow light interior courtyards scattered through the roofs. Hinted attached roof rows, no detailed standalone houses. Whole texture spans roughly800m, so hundreds of very small roof segments, not a handful of giant blocks. No streets between roof groups, only tiny courtyard voids in warm cream.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1883,
+      "file": "pinta-katto-vanha.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Dense old-city Marais/Cite narrow roofscape seen vertically overhead: small adjoining gabled and irregular tile roofs in muted reddish brown and dusty ochre, pale little inner courts. Restrained red-brown accents, not bright terracotta saturation. Fine sepia quick hatch marks and roof ridges, crowded small roofs, no individually detailed windows or perspective walls. Hundreds of small roof units, subtle varied orientations, no road-like gaps.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1884,
+      "file": "pinta-katto-julkinen.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Paris public-building roof fill seen directly overhead: somewhat larger connected pale limestone building wings and soft slate-gray roof planes around generous cream interior courtyards. Simple rectilinear ensembles hinted in same fine sepia hand, sparse roof hatching, no specific landmark or domes/towers. Buildings larger and courtyards more open than Haussmann roofs but still many small complexes across this800m-wide field. No streets separating them.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1885,
+      "file": "pinta-katto-matala.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Low-building Paris courtyard roof fill seen directly overhead: fewer small low roof wings in very pale warm gray and dusty beige around broad cream inner courtyards; delicate few sepia ridge strokes, lightly washed roofs, airy and materially lighter than dense Haussmann roofs, many little varied courtyard complexes. No streets or perimeter/lot boundary lines. Paper remains light, details softly irregular yet hand-drawn and legible.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1886,
+      "file": "pinta-vesi.png",
+      "kind": "surface",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Only Seine river WATER texture: muted pale gray-green wash and many delicate short sepia-gray gently undulating horizontal wave strokes. Match the approved map's river water, quiet fine cartographic hatching. Uniform subtle wave density, no ocean crests or foam, no banks, islands, objects, gradient or central feature. Entire square is the same calm water material.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1887,
+      "file": "pinta-nurmi.png",
+      "kind": "surface",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Only park GRASS texture: restrained soft olive-green transparent wash on warm cream paper with very subtle fine hand stipple and sparse tiny short grass strokes, gentle tonal mottling at low contrast. No trees, shrubs, paths, flower beds or individual grass blades rendered realistically; no borders or obvious patches. Entire square is uniform hand-colored map grass.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1888,
+      "file": "pinta-paperi.png",
+      "kind": "surface",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Produce ONE square 1024x1024 opaque RGB game-map FILL TEXTURE, seamlessly periodic on all four edges. Strict directly overhead plan view; no horizon, no perspective tilt, no raised miniature scene. Scale about0.8metres per final pixel. Use the attached approved drawing as the sole HANDWRITING and COLOR reference: warm cream parchment, sepia ink, restrained thin washes, understated hand-drawn detail, same pen everywhere. This is a material sample to be clipped into game polygons, NOT a complete city map. Absolutely NO streets, road network, block boundary outlines, park perimeter, riverbank, labels, text, frame, compass, landmarks, sky, balloons, birds, people, cars or boats. No lighting gradient, vignette, cast shadow or edge border. Fill edge-to-edge with evenly distributed fine detail. Matching left/right and top/bottom edges, organically varied pattern without a visible tile boundary. Only very quiet warm CREAM PAPER used for streets and squares in the approved map, a clean luminous old-cartographer parchment tone with extremely faint fibers and almost imperceptible grain. Not dirty, no stains, torn edges, shadows, burned edges, creases, ink, roads or markings. Entire square uniform unobtrusive light material, tileable without large spots.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1889,
+      "file": "musteviiva-naytteet.png",
+      "kind": "line",
+      "target": [
+        2048,
+        512
+      ],
+      "transparent": true,
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create a very wide 4:1 transparent RGBA game texture sheet, target2048x512, containing ONLY sepia ink line samples in the precise delicate hand-drawn pen character of the attached approved map. NO paper or color background: transparent alpha everywhere except strokes. Four evenly spaced horizontal rows, centered at y64,192,320,448 in the final2048x512 canvas. Row1 ultra thin1px stroke, row2 thin2px, row3 medium4px, row4 bold8px. In EACH ROW show three separate simple shapes: left column x64..600 one long mostly straight horizontal line, middle column x740..1300 one shallow smooth arc fitting within80pixels high, right column x1430..1984 one gentle angular kinked line. Natural tiny hand tremor, continuous crisp sepia stroke, no splatter, no sketch duplicates. Stroke thickness hierarchy clearly1:2:4:8, not calligraphic variable broad brush strokes. Keep rows separated with transparent space. Do not draw labels, numbers, captions, boxes, ruler, arrows, decorative symbols, map elements or drop shadows. This is a technical pen sample sheet, not a picture of a sheet. Entire strokes uncut within canvas."
+    },
+    {
+      "id": 1890,
+      "file": "esine-notre-dame.png",
+      "target": [
+        1024
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-notre-dame.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. Notre-Dame de Paris, whole cathedral including west facade's TWO square towers, long nave, slender crossing spire, transept, eastern curved apse and restrained flying-buttress suggestions. Second reference is the binding OSM FOOTPRINT shape and orientation, not an art style. On the ground plane its long axis slopes26degrees down toward the right (west at upperleft, east/apse lowerright); preserve that orientation in the image rather than rotating the building into a conventional postcard view. Ground proportions135m length by79m transept width; the twin towers MUST be at the upperleft western end and apse at lowerright eastern end. Architectural height projects upward on screen while ground plane stays northup. Muted pale stone and very light slate roof; keep details sparse like the map's landmarks. Target longest side1024px. Ground-base center around horizontal50%,vertical65%; preserve enough transparent space above towers.",
+      "transparent": true
+    },
+    {
+      "id": 1891,
+      "file": "esine-louvre.png",
+      "target": [
+        2048,
+        1024
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-louvre.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-louvre-pyramidi.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. Whole Louvre palace ensemble on a wide2048x1024 transparent canvas. IMPORTANT use reference2 OSM footprint for exact overall arrangement: closed square Cour Carree at EAST/RIGHT end, two very long parallel wings projecting WEST/LEFT from it, open at left. Several smaller courtyards in the wings as shown. Long ground axis slopes about26degrees DOWN from left to right, do not mirror it or turn it into a straight frontal elevation. Keep entire664x325m ground proportion, no giant square fantasy palace. The small glass pyramid sits in Cour Napoleon between the long wings, west of Cour Carree, about44mwest and15mnorth of footprint center, aligned to reference3 square. Roof pavilions are suggested at major junctions, NOT dozens of giant ornate towers; ordinary wings sparse fine linework. Thin light blue-gray roof wash, cream limestone, subtle ochre. Pale courtyard areas may be part of the object, exterior outside irregular footprint transparent. No separate pedestal, no streets or trees. Long wide coherent miniature drawn with same quick pen as approved map, not over-rendered.",
+      "transparent": true
+    },
+    {
+      "id": 1892,
+      "file": "esine-sainte-chapelle-oikeuspalatsi.png",
+      "target": [
+        1024
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-oikeuspalatsi.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-sainte-chapelle.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. One complete Palais de Justice block including Sainte-Chapelle and Conciergerie, on Ile de la Cite. Longest side1024. Second reference fixes the palace ground outline and courtyards: near-square irregular complex about221x212m, north-facing Conciergerie strip at BACK/TOP with its recognizable round towers, large court openings as shown, lower/southern irregular wings. Third reference is the slender Sainte-Chapelle church footprint; place this tall narrow chapel INSIDE the complex courtyard about39m EAST and41m SOUTH of the total complex ground-center, with delicate tall spire and dark slate steep roof. The chapel must be recognizable but not replace the whole palace with a giant cathedral. Whole complex viewed fromsouth45deg, northup, its principal longside toward northeast as in footprint, preserve all major courtyards and orientation. Fine sepia ink, faint pale stone wash, muted slate roofs, no dense ornament or millions of windows. External background transparent, interior courtyards pale cream. No river or island drawn.",
+      "transparent": true
+    },
+    {
+      "id": 1893,
+      "file": "esine-hotel-de-ville.png",
+      "target": [
+        1024
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-hotel-de-ville.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. Paris Hotel de Ville, complete Renaissance-revival city hall with its tall slate roofs, central clock/bell tower and two interior courtyard voids, no oversized fantasy spires. Longest side1024px. Reference2 is binding ground footprint with two courtyard openings: rectangular143.5x89.2m plan, long axis runs toward north-northeast at70degrees counterclockwise fromeast (image from lowerleft toward upperright). Keep this northup orientation, major entrance/long ornate facade faces WEST/LEFT where the plaza lies, not a front-on symmetric postcard facing bottom. A very small strip of pale plaza at WEST base is allowed, but no surrounding streets/city, no large ground rectangle or shadow. Architectural height projectsup while ground orientation follows reference. Same sparse pen/detail as approved map, restrained warm cream walls and gray roofs.",
+      "transparent": true
+    },
+    {
+      "id": 1894,
+      "file": "esine-tour-saint-jacques.png",
+      "target": [
+        512
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-tour-saint-jacques.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. One isolated Tour Saint-Jacques gothic square tower in a tiny olive-green park patch, longestside512px. Four corner pinnacles, flat/parapet upper platform, vertical buttress suggestions and just a few gothic opening strokes, no church attached. Tower's ground footprint13.3x12.2m, square rotated about21degrees clockwise fromscreenhorizontal as in reference2; its height clearly exceeds basewidth several times. Oblique south45degree view,northup. Sparse simple small round trees may surround the base without obscuring it, no big park or city background. Restrained stone ochre and gray wash, not intricate carvings. No circular sticker border or drop shadow.",
+      "transparent": true
+    },
+    {
+      "id": 1895,
+      "file": "esine-aukio-pieni.png",
+      "target": [
+        256
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. Small traffic-island/plaza CENTER only: a round patch of softly olive grass and ONE small round-canopied deciduous tree in its center, a very thin cream stone rim. View45degrees fromsouth so circle reads as gentle ellipse on ground, but map northup. No surrounding road, no cars, no road ring or square. Simple fine sepia strokes and pale washes, clear silhouette, target longestside256px. Entire tiny patch and tree fit transparent margin. Ground-center coincides with center of ellipse under trunk.",
+      "transparent": true
+    },
+    {
+      "id": 1896,
+      "file": "esine-aukio-keski.png",
+      "target": [
+        384
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. Medium Paris plaza CENTER only: one modest round stone fountain basin with a short two-tier fountain in center, few delicate gray-green water marks, faint cream paving rim. View45degrees fromsouth, ground circle becomes ellipse; northup. No surrounding road, square background or people. Fine quick sepia pen and thin watercolors, simplified understated historical stone fountain, longestside384px. Whole fountain uncut with transparent margin, no external shadow.",
+      "transparent": true
+    },
+    {
+      "id": 1897,
+      "file": "esine-aukio-iso.png",
+      "target": [
+        512
+      ],
+      "kind": "object",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. Large Paris plaza CENTER only: a generous round stone fountain pool and one small classical standing human statue on a low central pedestal. A few delicate water arcs, very subdued gray-green basin, warm cream stone, thin sepia outlines. View45degrees fromsouth, northup, ellipse ground footprint. No surrounding road, people, streets, city or square background. Restrained quick cartographer strokes, no intricate sculpture anatomy, entire object uncut, longestside512px, transparent margins and no outside cast shadow.",
+      "transparent": true
+    },
+    {
+      "id": 1898,
+      "file": "esine-puu-pieni.png",
+      "target": [
+        128
+      ],
+      "kind": "tree",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. One young small tree, compact rounded crown and slender short visible trunk. Match the small round deciduous park trees in the approved map: olive and muted sage wash with fine sepia stippling/leaf-cluster strokes, warm subdued palette, rounded but natural silhouette, NO autumn orange or bright saturated green. Oblique view fromsouth about45degrees,northup. Whole tree on transparent alpha with small soft modest own contact shadow directly UNDER trunk only; no paper ground patch, no outside rectangular shadow or sticker. No other trees, buildings, grass landscape or border. Delicate drawn map icon, not rendered3D nursery specimen, target longestside128px. Trunk contact ground anchor near horizontalcenter, near bottom of silhouette. OUTPUT ALPHA RULE: every pixel outside the tree silhouette and the small contact shadow immediately below its trunk must have alpha=0. Absolutely NO glowing halo, no vignette, no colored mist, no light aureole, no paper wash or background behind the tree. Use a compact clearly bounded cutout.",
+      "transparent": true
+    },
+    {
+      "id": 1899,
+      "file": "esine-puu-keski.png",
+      "target": [
+        192
+      ],
+      "kind": "tree",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. One medium mature tree, gently irregular round crown and visible brown trunk. Match the small round deciduous park trees in the approved map: olive and muted sage wash with fine sepia stippling/leaf-cluster strokes, warm subdued palette, rounded but natural silhouette, NO autumn orange or bright saturated green. Oblique view fromsouth about45degrees,northup. Whole tree on transparent alpha with small soft modest own contact shadow directly UNDER trunk only; no paper ground patch, no outside rectangular shadow or sticker. No other trees, buildings, grass landscape or border. Delicate drawn map icon, not rendered3D nursery specimen, target longestside192px. Trunk contact ground anchor near horizontalcenter, near bottom of silhouette. OUTPUT ALPHA RULE: every pixel outside the tree silhouette and the small contact shadow immediately below its trunk must have alpha=0. Absolutely NO glowing halo, no vignette, no colored mist, no light aureole, no paper wash or background behind the tree. Use a compact clearly bounded cutout.",
+      "transparent": true
+    },
+    {
+      "id": 1900,
+      "file": "esine-puu-iso.png",
+      "target": [
+        256
+      ],
+      "kind": "tree",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. One large mature tree with broad rounded multi-lobed canopy and stronger visible trunk. Match the small round deciduous park trees in the approved map: olive and muted sage wash with fine sepia stippling/leaf-cluster strokes, warm subdued palette, rounded but natural silhouette, NO autumn orange or bright saturated green. Oblique view fromsouth about45degrees,northup. Whole tree on transparent alpha with small soft modest own contact shadow directly UNDER trunk only; no paper ground patch, no outside rectangular shadow or sticker. No other trees, buildings, grass landscape or border. Delicate drawn map icon, not rendered3D nursery specimen, target longestside256px. Trunk contact ground anchor near horizontalcenter, near bottom of silhouette. OUTPUT ALPHA RULE: every pixel outside the tree silhouette and the small contact shadow immediately below its trunk must have alpha=0. Absolutely NO glowing halo, no vignette, no colored mist, no light aureole, no paper wash or background behind the tree. Use a compact clearly bounded cutout.",
+      "transparent": true
+    },
+    {
+      "id": 1901,
+      "file": "esine-puu-jattilainen.png",
+      "target": [
+        320
+      ],
+      "kind": "tree",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "prompt": "Create ONE isolated transparent RGBA game-map object, drawn in exactly the hand of the first reference (approved Paris20:29 style): fine slightly dark sepia ink, warm cream stone, a restrained gray-blue/olive thin watercolor wash, lightly hinted roofs and windows with economical uniform strokes, quiet late19th-century cartographer illustration. Not a photorealistic building, not a glossy3D miniature, not a sticker with thick outline, not an intricate architectural rendering. The same pen weight and few strokes as the ordinary little houses in the reference; recognition comes from shape, not ornate micro-detail. View obliquely from the SOUTH at about45degrees downward; NORTH at the TOP of the image. Entire subject must fit with small transparent margins, no cropping. No background paper rectangle, no sky, no surrounding city, no external cast shadow, text, labels, scale bars, north arrow, frame or watermark. One very old grand broad-crowned deciduous tree, spreading rounded crown and sturdy short trunk. Match the small round deciduous park trees in the approved map: olive and muted sage wash with fine sepia stippling/leaf-cluster strokes, warm subdued palette, rounded but natural silhouette, NO autumn orange or bright saturated green. Oblique view fromsouth about45degrees,northup. Whole tree on transparent alpha with small soft modest own contact shadow directly UNDER trunk only; no paper ground patch, no outside rectangular shadow or sticker. No other trees, buildings, grass landscape or border. Delicate drawn map icon, not rendered3D nursery specimen, target longestside320px. Trunk contact ground anchor near horizontalcenter, near bottom of silhouette. OUTPUT ALPHA RULE: every pixel outside the tree silhouette and the small contact shadow immediately below its trunk must have alpha=0. Absolutely NO glowing halo, no vignette, no colored mist, no light aureole, no paper wash or background behind the tree. Use a compact clearly bounded cutout.",
+      "transparent": true
+    }
+  ]
+}

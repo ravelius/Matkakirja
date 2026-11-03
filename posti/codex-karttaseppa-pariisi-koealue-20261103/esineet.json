@@ -1,0 +1,110 @@
+[
+  {
+    "tiedosto": "esine-notre-dame.png",
+    "leveys_px": 1024,
+    "korkeus_px": 792,
+    "ankkuri_px": [
+      553,
+      539
+    ]
+  },
+  {
+    "tiedosto": "esine-louvre.png",
+    "leveys_px": 2048,
+    "korkeus_px": 1024,
+    "ankkuri_px": [
+      1290,
+      645
+    ]
+  },
+  {
+    "tiedosto": "esine-sainte-chapelle-oikeuspalatsi.png",
+    "leveys_px": 1024,
+    "korkeus_px": 986,
+    "ankkuri_px": [
+      522,
+      577
+    ]
+  },
+  {
+    "tiedosto": "esine-hotel-de-ville.png",
+    "leveys_px": 931,
+    "korkeus_px": 1024,
+    "ankkuri_px": [
+      475,
+      614
+    ]
+  },
+  {
+    "tiedosto": "esine-tour-saint-jacques.png",
+    "leveys_px": 493,
+    "korkeus_px": 512,
+    "ankkuri_px": [
+      252,
+      413
+    ]
+  },
+  {
+    "tiedosto": "esine-aukio-pieni.png",
+    "leveys_px": 256,
+    "korkeus_px": 171,
+    "ankkuri_px": [
+      128,
+      102
+    ]
+  },
+  {
+    "tiedosto": "esine-aukio-keski.png",
+    "leveys_px": 384,
+    "korkeus_px": 256,
+    "ankkuri_px": [
+      192,
+      161
+    ]
+  },
+  {
+    "tiedosto": "esine-aukio-iso.png",
+    "leveys_px": 512,
+    "korkeus_px": 341,
+    "ankkuri_px": [
+      256,
+      201
+    ]
+  },
+  {
+    "tiedosto": "esine-puu-pieni.png",
+    "leveys_px": 128,
+    "korkeus_px": 124,
+    "ankkuri_px": [
+      64,
+      89
+    ]
+  },
+  {
+    "tiedosto": "esine-puu-keski.png",
+    "leveys_px": 192,
+    "korkeus_px": 192,
+    "ankkuri_px": [
+      96,
+      146
+    ]
+  },
+  {
+    "tiedosto": "esine-puu-iso.png",
+    "leveys_px": 256,
+    "korkeus_px": 248,
+    "ankkuri_px": [
+      125,
+      221
+    ]
+  },
+  {
+    "tiedosto": "esine-puu-jattilainen.png",
+    "leveys_px": 320,
+    "korkeus_px": 284,
+    "ankkuri_px": [
+      160,
+      241
+    ]
+  }
+]

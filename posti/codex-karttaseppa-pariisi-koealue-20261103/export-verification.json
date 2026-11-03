@@ -1,0 +1,556 @@
+[
+  {
+    "taskNumber": 1882,
+    "file": "pinta-katto-haussmann.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-katto-haussmann.png",
+    "sourceSHA256": "531e8c6a6a779889190a5fa1ca6a40b0bce79339b71ea294f97a65c5acc74355",
+    "sha256": "010dd28100ffba1a471c6ba1679e9f6e02ff0490a123793eea4f1562c6aed0e5",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        21.1748046875,
+        21.2109375,
+        19.90625
+      ],
+      "topBottom": [
+        22.7060546875,
+        23.3603515625,
+        20.6025390625
+      ]
+    }
+  },
+  {
+    "taskNumber": 1883,
+    "file": "pinta-katto-vanha.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-katto-vanha.png",
+    "sourceSHA256": "4f9bbfa8d9112ab614d7d1f5a4360d5ff90141a942c07889560d1efa332cace8",
+    "sha256": "89976d390d7c6c624e134a29b3fd710fdd084bebebfb009901f0e675495270c5",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        26.7080078125,
+        27.21484375,
+        23.083984375
+      ],
+      "topBottom": [
+        25.4150390625,
+        26.8837890625,
+        23.1650390625
+      ]
+    }
+  },
+  {
+    "taskNumber": 1884,
+    "file": "pinta-katto-julkinen.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-katto-julkinen.png",
+    "sourceSHA256": "c0445f5538db726bb1ae817c66d03d95cc2257a122ad6c52b3c2bc50882a2c2b",
+    "sha256": "058aa25daf358297d009d116d6f098aa856593f51a25212ee96ab023e82d66cb",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        16.3212890625,
+        17.931640625,
+        17.5302734375
+      ],
+      "topBottom": [
+        17.1533203125,
+        19.60546875,
+        19.275390625
+      ]
+    }
+  },
+  {
+    "taskNumber": 1885,
+    "file": "pinta-katto-matala.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-katto-matala.png",
+    "sourceSHA256": "da462b9414d5d1baa4ce1b5316911c6e715f690248917edc239fe8e1c88aa2d6",
+    "sha256": "6ddc7077b2da1054812f4db2d8250448ae1f9cca6400d40065637968037d9875",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        13.982421875,
+        16.466796875,
+        18.478515625
+      ],
+      "topBottom": [
+        13.119140625,
+        16.2783203125,
+        17.3642578125
+      ]
+    }
+  },
+  {
+    "taskNumber": 1886,
+    "file": "pinta-vesi.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-vesi.png",
+    "sourceSHA256": "1b359d205ce40b2f0736b320686d7105756e02f2915d16102a0c63e97116abe2",
+    "sha256": "856cb80bc42d4f8aed9b08d05df4fb2b926088550cf0840fe0f8ca471e8fb6df",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        13.1533203125,
+        13.5126953125,
+        13.5576171875
+      ],
+      "topBottom": [
+        19.716796875,
+        20.29296875,
+        19.6669921875
+      ]
+    }
+  },
+  {
+    "taskNumber": 1887,
+    "file": "pinta-nurmi.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-nurmi.png",
+    "sourceSHA256": "aacb856444a692988da8afaf8d13da383db495c2ae954a119612b3b9af8dedee",
+    "sha256": "b96553e81e83d486726c5927fb53ff0ac74d099eb9b202952cf059426c6076f2",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        8.423828125,
+        8.3642578125,
+        9.70703125
+      ],
+      "topBottom": [
+        10.1123046875,
+        10.5546875,
+        10.5546875
+      ]
+    }
+  },
+  {
+    "taskNumber": 1888,
+    "file": "pinta-paperi.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/pinta-paperi-v2.png",
+    "sourceSHA256": "426a81c241cba2dc4189cadf4dcf34c7f62b9412751f4f8e25392baa1492bb8a",
+    "sha256": "29db1f0411b33ed823c79f45f334c5e9d6dfa68c1ff17eb9c261a5626b412a37",
+    "technicalAction": "proportional size export",
+    "edgeRGBMeanAbsoluteDifference": {
+      "leftRight": [
+        1.892578125,
+        2.5751953125,
+        4.0703125
+      ],
+      "topBottom": [
+        2.40234375,
+        3.6328125,
+        4.1826171875
+      ]
+    }
+  },
+  {
+    "taskNumber": 1889,
+    "file": "musteviiva-naytteet.png",
+    "nativeSize": [
+      2172,
+      724
+    ],
+    "exportSize": [
+      2048,
+      512
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/musteviiva-naytteet.png",
+    "sourceSHA256": "dc55f32229de01c3c7c52af1e8eeb8b8c0ec1f66a5b552bae819d5d208bbf5f7",
+    "sha256": "2fd4812e58147cce6313fabca0ac653b02ce00e0fb0c3e204af1b0bec90a192a",
+    "technicalAction": "technical atlas packing of four generated rows; no stroke redraw; vertical widths preserved",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      55,
+      1,
+      2020,
+      512
+    ]
+  },
+  {
+    "taskNumber": 1890,
+    "file": "esine-notre-dame.png",
+    "nativeSize": [
+      1426,
+      1103
+    ],
+    "exportSize": [
+      1024,
+      792
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-notre-dame.png",
+    "sourceSHA256": "0d8e7eb50d8f6a652e9304b8621f1c5dc4516b05d59ff61a5d7dbe33654044de",
+    "sha256": "4932072f5e78948a76686b1539f812b6e84613478e99309c80e444a61ce05bd8",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      85,
+      42,
+      1003,
+      762
+    ]
+  },
+  {
+    "taskNumber": 1891,
+    "file": "esine-louvre.png",
+    "nativeSize": [
+      1774,
+      887
+    ],
+    "exportSize": [
+      2048,
+      1024
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-louvre.png",
+    "sourceSHA256": "67440e8b173325b7fb3e23a207ad21048e780f0b85d05974319b96b461c13999",
+    "sha256": "23c2cc3adee2ee0e8a7700e7aab47443ab6eb82d54930cfd3732d3d8d8b39e89",
+    "technicalAction": "proportional fit and transparent canvas padding",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      0,
+      8,
+      2032,
+      1024
+    ]
+  },
+  {
+    "taskNumber": 1892,
+    "file": "esine-sainte-chapelle-oikeuspalatsi.png",
+    "nativeSize": [
+      1278,
+      1230
+    ],
+    "exportSize": [
+      1024,
+      986
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-sainte-chapelle-oikeuspalatsi.png",
+    "sourceSHA256": "b867d62e2380d34988dc4fb7bcb934f1214f6dd988b04ce6ab437d81effc863c",
+    "sha256": "e35d35d4d600b0352efbcd208c0d0635dd85d7bec95046e824d86af0fcb16230",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      0,
+      7,
+      998,
+      986
+    ]
+  },
+  {
+    "taskNumber": 1893,
+    "file": "esine-hotel-de-ville.png",
+    "nativeSize": [
+      1196,
+      1315
+    ],
+    "exportSize": [
+      931,
+      1024
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-hotel-de-ville.png",
+    "sourceSHA256": "f3bc7825581a4a3f95ec2d8dbcc430feae4c4a4f6f19bd38ac1081479212305c",
+    "sha256": "061b41f28d8404eb94e356d1b48afa89ef18378c471e3f8a60f9d46b6906ef7f",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      1,
+      15,
+      903,
+      999
+    ]
+  },
+  {
+    "taskNumber": 1894,
+    "file": "esine-tour-saint-jacques.png",
+    "nativeSize": [
+      1230,
+      1278
+    ],
+    "exportSize": [
+      493,
+      512
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-tour-saint-jacques.png",
+    "sourceSHA256": "d81dda156bfd185d6ff362b9847845434bbf41103e1995425c626f72b716e692",
+    "sha256": "69505fc8463c69c8a620e67f981d9f9c0b883e8b7d7ef0c16774ca2bbc9c3270",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      89,
+      29,
+      482,
+      491
+    ]
+  },
+  {
+    "taskNumber": 1895,
+    "file": "esine-aukio-pieni.png",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "exportSize": [
+      256,
+      171
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-aukio-pieni.png",
+    "sourceSHA256": "ecbba70e86f45ca13a0e3d296fc91ff2dfbed7db07816f558e3cb5556c46b641",
+    "sha256": "5e83ef8979955b0c82767c1306ca730659ee45bd10306149cecfe66242ea5739",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      79,
+      37,
+      187,
+      159
+    ]
+  },
+  {
+    "taskNumber": 1896,
+    "file": "esine-aukio-keski.png",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "exportSize": [
+      384,
+      256
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-aukio-keski.png",
+    "sourceSHA256": "aac1734de7a80005ea2f40a803b592c6b11a178bd5f810a26fbf7beba823d1b7",
+    "sha256": "3d55b9c881195bce1188d82261ddd4009b021460c65fb5919d9aed71fc3630aa",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      60,
+      58,
+      321,
+      200
+    ]
+  },
+  {
+    "taskNumber": 1897,
+    "file": "esine-aukio-iso.png",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "exportSize": [
+      512,
+      341
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-aukio-iso.png",
+    "sourceSHA256": "6c9c66c0c9334bac7fed33b20d46ed049beb7906649a20b0e44d5ed7a8f1c3e7",
+    "sha256": "09918e7b56e564c98e99c51e89f97a45b6a6d3892b6371153253c9e480533124",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      0,
+      17,
+      483,
+      336
+    ]
+  },
+  {
+    "taskNumber": 1898,
+    "file": "esine-puu-pieni.png",
+    "nativeSize": [
+      1273,
+      1236
+    ],
+    "exportSize": [
+      128,
+      124
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-puu-pieni.png",
+    "sourceSHA256": "333f86dc45d9198a715c439b2f7879b2414d6899433675842a3dc65d7a958a52",
+    "sha256": "b87b516ca3b4a16a5f224849be68d610395bf7c24cdb515be10257ff456c3433",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      34,
+      35,
+      93,
+      95
+    ]
+  },
+  {
+    "taskNumber": 1899,
+    "file": "esine-puu-keski.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      192,
+      192
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-puu-keski.png",
+    "sourceSHA256": "6de829fab17a560b82bb2f4bf540e49e5cd86e9c2cba74279f6486af4a56fe24",
+    "sha256": "c01df49e649f079d129cf95a7cd87e506a512e37d71e9d83bb9fcd2979169264",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      27,
+      5,
+      167,
+      157
+    ]
+  },
+  {
+    "taskNumber": 1900,
+    "file": "esine-puu-iso.png",
+    "nativeSize": [
+      1274,
+      1234
+    ],
+    "exportSize": [
+      256,
+      248
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-puu-iso.png",
+    "sourceSHA256": "fd71e092b4e83001feadc77b50df301b679641b1aa7b3f4e86218ef1798b35df",
+    "sha256": "0d1e55db6f9ce1f154950b564238d9233890f54cf183ffa384601fa1faf1ad15",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      0,
+      20,
+      247,
+      240
+    ]
+  },
+  {
+    "taskNumber": 1901,
+    "file": "esine-puu-jattilainen.png",
+    "nativeSize": [
+      1330,
+      1182
+    ],
+    "exportSize": [
+      320,
+      284
+    ],
+    "mode": "RGBA",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-koealue-20261103/originals/esine-puu-jattilainen.png",
+    "sourceSHA256": "7fab0049b7591e0d75d45bd7b7c995869be2c75b1c5df9f0d2561de9b032451b",
+    "sha256": "3d2240a93d13e47907fbb6dc62bd46bd74e6ef6209fb9cc16830f84fa047d8c1",
+    "technicalAction": "proportional size export",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBBox": [
+      12,
+      8,
+      304,
+      272
+    ]
+  }
+]
