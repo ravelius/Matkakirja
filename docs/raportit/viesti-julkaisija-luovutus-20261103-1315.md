@@ -50,7 +50,7 @@ Rooli: Julkaisija (JU). Työkalut /Users/Shared/Claude/julkaisija-tyokalut/. Ede
 - **L1: NUI välisimu b39c1bc9a** (+ KS:n Pariisi/Big Ben -kuvat), alkoi 13.47 → VAPAA NUI:lta.
 - **Jono (ensimmäinen vapaa linja):** 1) VS k6 (`LINJA=<n> zsh …/linssiseppa2/kontakti218/ajo-k6-kaikki.zsh`, laite + Unity-pari, sitten
   iso iPad), 2) PK 218ae `PROTO_LINJA=<n> zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218ae/ketju-ae.zsh taso1b cc`
-  ja heti perään 218af `…/sali-218af/ketju-af.zsh ys tj cx ty xf` (PK tarkensi 13.5x: viisi salia) (JU ajaa itse, alku+valmis PK:lle local_91a1bc27-6870-46aa-9886-66fd33b68880),
+  ja heti perään 218af `…/sali-218af/ketju-af.zsh ys tj cx ty xf taso1b` (PK 14.0x: runko polku-218af 995d5d1cb, taso1b mukaan; ae ensin) (JU ajaa itse, alku+valmis PK:lle local_91a1bc27-6870-46aa-9886-66fd33b68880),
   3) LAV editoripari 02 (+06), kun PK on kytkenyt osasarja-v12 (LAV pyytää).
 - Iso iPad: runko 1420265d7; NS:n vieritysmittaus (~6 min, ei palautusta) ajetaan ipad-lukolla, kun vapaa.
 - Viety 13.15 jälkeen: LAV osasarja-v11 (13.17), osasarja-v12 (13.52, EI junaan). Levy: 23 isoa mp4:ää siirretty T7:lle
