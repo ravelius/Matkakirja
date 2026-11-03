@@ -205,3 +205,7 @@ Tilille sami.reivinen@vvi.fi (org ddaee6a2): tämän tilin 29.10. sessiot tyhjen
 ## PARIISIN KOEALUE STRIIMIKARTAN PÄÄLLE (omistaja 3.11.2026 klo 16.51) (3.11.2026 klo 16.52)
 
 Kortti 'Aloitetaanko Pariisin koealue uudella tavalla?' → 'Kyllä (Suositus)'. Piirroskaupunki rakennetaan striimikartan päälle esineinä (Codex: nähtävyydet, talotyypit, puut, sillat, veneet; kadut, liikenneympyrät, joki ja puistot koodilla oikeita katuja pitkin Codexin tyylinäytteillä; pohjakartta paperiseksi ja musteviivaiseksi). Koealue Notre-Dame + Louvre nykyisen piirroksen rinnalle. Ristiriita: Raamattu 2.204 '2,5 m/px koko kaupunkina' koskee nykyistä piirrosta; uusi tapa korvaa sen vasta, jos omistaja hyväksyy koealueen. Nykyisen piirroksen korjaukset jatkuvat.
+
+## UUSI KARTTA KK:N SUUNNITTELUVASTUULLE (3.11.2026 klo 19.35) (3.11.2026 klo 19.36)
+
+KK välitti 19.35 sanatarkasti: "Tämä projekti on siis nyt tällainen uusi, mikä tarkoittaa sitä, että sinun pitää ottaa vastuu sen suunnittelemisesta." Uuden kartan (Pariisi striimikartan päälle, yläviisto kulma, karikatyyrinähtävyydet, osakirjasto, elävä kartta, muut kaupungit) suunnittelu ja tekotavat KK:lla kuten juoksupelin ohjat; PT jakaa työt, junat, merget, Raamatun. Taustalla omistajan pyyntö 19.3x (yläviisto kulma kaikkiin elementteihin, nähtävyydet karikatyyreinä, lähelle Codexin koko karttaa) ja 19.33 (netin valmiit ratkaisut). Kirjattu 2.204:n loppuun.
