@@ -1,17 +1,24 @@
-# Natiivisepän luovutus 4.11.2026 klo 01.18 (konteksti 27 %, 7.37)
+# Natiivisepän luovutus 4.11.2026 klo 01.29 (konteksti 33 %, 7.37)
 
-Vain voimassa oleva tila. Korvaa luovutuksen -20261104-0102. Siitä yhä voimassa: Merge-sääntö, Päätökset 23.15–23.40, AVOIMET 5–7 (`git show 18e139be5:docs/raportit/viesti-natiiviseppa-luovutus-20261103-2340.md`). Id:t: /Users/Shared/Claude/osoitekirja.md.
+Vain voimassa oleva tila. Korvaa luovutukset -20261104-0102 ja -0118. Siitä yhä voimassa: Merge-sääntö, Päätökset 23.15–23.40, AVOIMET 5–7 (`git show 18e139be5:docs/raportit/viesti-natiiviseppa-luovutus-20261103-2340.md`). Id:t: /Users/Shared/Claude/osoitekirja.md.
 Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
 EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajon; vuoro JU:lta. JU aloitti 01.1x Tripo-jakson, jonka aikana ei Unity-ajoja: pyydä vuoro, älä oleta. Vuoro pyydetty 01.2x kärjelle 98e21fda0 Tripon jälkeen; skenaario /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aluekuva-koko/sk-haivytys2.txt.
 
+## HETI NOLLAUKSEN JÄLKEEN
+1. **Esikatselu 98e21fda0 (ennen vinjettiä) oli ajossa luovutushetkellä:** /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261104-012212. Kun `ESIKATSELU VALMIS` on ajo.log:ssa, RIVI JU:LLE (lupasin; linja 2 vapaa). Katso kuvat: e-0-13 (60 s), silta-alma, silta-alexandre, silta-concorde, nd-lahi, grand-palais, tour-jalka. c:n hiusviivan pitää olla poissa. Skenaario sk-haivytys2.txt.
+2. **Pyydä JU:lta vuoro kärjelle haivytys-koe-218 68ad57497** ja aja /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aluekuva-koko/sk-haivytys3.txt. Tarkista ensin, että varjostinkaavio kääntyy (ffa606443 generoitu uudelleen tee_tileset.py:llä, ajamatta). Lokirivi `nimet laske` KS:lle (JU:n pyyntö; ebe377352 poimittu koehaaraan, vain diagnostiikka).
+3. **KK 01.24** (KORJAUSLISTA.md, osio "NS + VS: reuna ja etäisyyshäivytys 9dddd7adc"): 0,30, 0,21 ja länsiraja hyväksytty suunnaksi. 0,17 EI: vinjetti ffa606443 tehty tätä varten; suoraa vyötä ei saa näkyä missään vaiheessa. 0,13 EI, jos iPadilla sama: pystysaumat 2,2852 ja 2,4609 (z11-palan rajoja), ulkona paksut kadut ja vihreä puuttuu. Korjaa 0,17 ENNEN iPad-ajoa. **iPad-todistus täysi koko:** `aja 48.857 2.347` skaaloilla 0,30, 0,21, 0,17, 0,15, 0,13, 0,11, 0,10 ja paluu 0,21, sekä `aja 48.86 2.223 0.05 2`; sillat Alman takia; muisti ja kulu samasta ajosta. Peruskartan pikkukatujen pystyraja noin 2,197 (h): KK katsoo iPadilta.
+4. **KS 01.3x seuraavaan yhdistelmään:** d-sillan vaalea kaide: kirjastossa isoisa-2029/esine/silta-d-{2,3,5}-kaarta-v2.png, koot kuten v1, vaihda vain polut (9 siltaa), molempiin kp:ihin. Hyväksyntä pelikuvasta y-silta-idan vs y-silta-neuf. Nimet: 76d11201a haarassa karttaseppa/pariisi-nimet-220 (Hyatt pois, ▲-huiput pois piirroksen päältä, kääntämättä): mergaa yhdistelmään; kattaa listan kohdan 8.
+
 ## ENSIN: etäisyyshäivytys (PT 00.59; omistaja 3.11. 15.3x; EI junaan)
 Tehty VS:n reunan 804d491d1 päälle, Painotiin ei koskettu (VS 4.11.: uusi VS jatkaa kohdista 5–6, ei koske reunaan).
-- **natiiviseppa/haivytys-218 kärki b264f241f**: cd75ccc42 (häivytys), 0dc6aad40 (PiirrosLahinTestit lukee muutetut rivit), b264f241f (hiusviivan korjaus).
-- **natiiviseppa/haivytys-koe-218 kärki 98e21fda0** = yhdistelma-218 8b9f14c03 + haivytys-218. Tämä ajetaan seuraavaksi.
+- **natiiviseppa/haivytys-218 kärki ffa606443**: cd75ccc42 (häivytys), 0dc6aad40 (PiirrosLahinTestit lukee muutetut rivit), b264f241f (hiusviivan korjaus), ffa606443 (vinjetti).
+- **natiiviseppa/haivytys-koe-218 kärki 68ad57497** = yhdistelma-218 8b9f14c03 + haivytys-218 + ebe377352. Tämä ajetaan seuraavaksi.
 - Tekotapa: tyyli on poltettu pohjan paloihin, joten polku `elava-tavallinen/` antaa koealueen palat ilman tyyliä (ElavaTyyli.MaskiTavallinen), muualla pohjan oman palan. KarttaKerrokset.AsetaTavallinenPeite: paikka 1, _overlayAlfa_1 = 1 − näkyvyys. Peite vain korkeuksilla 0,8 × täysi – 120 km ja 1,5°:n sisällä. Linssi ja lennon pinta väistävät peitteen, silloin tyyli ilman häivytystä.
+- Vinjetti ffa606443: paikan 1 peitto soikiosta (_haivytys, _haivytysReuna; w = 2; ElavaKoealue.VinjettiSade, reuna 1,7 × itä-länsi-puoliakseli), alfa 1. Laskettu: näkyvyys 0,12 keskusta 12 %, reuna 0; 0,5 keskusta 98 %, reuna 25 %; 1 täysi. Säätö: VinjettiReuna.
 - Sääntö: ElavaKoealue.EtaisyysNakyvyys(osuus) = Smooth(0,45–1,0) koko Pariisin leveydestä (18,2 km). Täysi noin komennon 0,12:lla. Esineet (korkeusOsa) seuraavat samaa; ennen ne laskettiin vanhan piirroksen leveydestä. SaapumisenEnintaanKorkeusM jätetty vanhaan leveyteen.
 - **Nähty, koe 9dddd7adc** (lokit/esikatselu-20261104-010932, 640×480-pohja, ei iPad): b-0-30 näkymätön, c-0-21 lähes, d-0-17 väli, e-0-13 täysi, f-0-10 täysi, g-0-21-paluu kuten c, h-lansiraja reuna pehmeä. PT:lle kerrottu 01.1x.
-- Kartta-testit 610/610 kärjessä ed9945330 (b264f241f ja Alman jälkeen ei ajettu).
+- Kartta-testit 610/610 kärjessä 68ad57497.
 
 ### PT 01.18 (kuvat viety KK:lle; sitoo)
 - e-0-13:n pystysaumaa EI oleteta pohjan (640×480) viaksi. Tarkista ajon jälkeen, kuten 0,17:ssä (d-0-17) näkyvä suorakaide.
