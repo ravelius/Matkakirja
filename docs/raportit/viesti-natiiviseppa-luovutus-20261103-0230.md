@@ -17,8 +17,16 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä. Rungon 5
   palauta työpuu haaraan natiiviseppa/esilataus-218 ennen osa C -työtä: `git -C … switch natiiviseppa/esilataus-218`).
 - **NUI:n merge** natiivi-ui/zoomaus-kaikkiin-218 82634eb4b runkoon (9a9515ea3; KK hyväksyi omistajan puolesta 01.50); JU:lle ilmoitettu.
 
+## PT 02.4x (luovutuksen jälkeen, sitova)
+- Korjaus a699e2e7e ja runko 55ce62126 KUITATTU. Beige jakso: linjaus = jokaisella tasolla näkyy sisältöä; tasojen 9–10 aukko (Thames ja
+  tiet puuttuvat kaaressa 0,8°) on POHJAN virhe → Karttasepän työ; Natiiviseppä auttaa KS:ää tasorajoissa (mitkä pohjan tasot Cesium
+  valitsee millä korkeudella: pohjan maximumLevel, KaupunkiRasteri Z10, SaapumisLaatat.Taso). ÄLÄ aikaista elävää karttaa äläkä nopeuta zoomausta.
+- "RANSKA" lepokuvissa: testin artefakti – peli alkoi Pariisista (uusi-peli 5 pariisi), matkaa ei tehty, kamera siirrettiin komennolla
+  `aja`; loki "nostot: näkyvissä FRA". Maa-nimi seuraa pelaajan maata. Videoissa matkan jälkeen "ISO-BRITANNIA" oikein. Vastattu PT:lle.
+- Sen jälkeen GC osa 3–4 (jonon kohta 3).
+
 ## JONO
-1. **Odottaa PT:n vastausta tyhjistä ruuduista** (kohta 3 yllä). Jos PT päättää linjauksen, toteuta ja tee uudet videot samalla
+1. **(Hoidettu: PT vastasi 02.4x, ks. yllä.) Tyhjät ruudut** (kohta 3 yllä). Jos PT päättää linjauksen, toteuta ja tee uudet videot samalla
    skriptillä (saapuminen-video-sim218.sh, UDID=F7513985-C8BC-4E97-8D29-9C9BD420E962 = yhteinen-iPad11, vuoro JU:lta).
    Lepokuvien skripti: proto-3d/lokit/natiiviseppa-saapuminen-video-sim-60cdaeee0/lepokuvat-valitaso.sh <kansio> (komento `aja lat lon kaari kesto`).
 2. **OSA C ODOTTAA OMISTAJAN VALINTAA (KK suosittaa aamulla (b) + taustaesilataus).** Haara natiiviseppa/esilataus-218
