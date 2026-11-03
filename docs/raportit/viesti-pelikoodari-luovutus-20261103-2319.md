@@ -19,3 +19,6 @@ Ei ajettu pelissä. Peli-testit 814/814, unity-tarkistus 0 virhettä. PT: ei val
 4. **Vesi-219 ja palvelijat v6**: JU: ei tähän vuoroon, pyydä erikseen. Palvelijoista uudet kuvat proto-3d/_tyo/pelikoodari/palvelijat-v6/ (23.06), EN ole katsonut.
 5. Muut kohdat -2255:stä ennallaan (kohdat 5–6). Kohdat 1 ja 2 korvattu tällä.
 6. Checkout: luovutushaara koti/Matkakirja-pelikoodari.
+
+## Lisäys: Lavastajan vastaus B5:een
+LAV ei tunnistanut mallia; väri on väärä. LAV:n arvio kuvasta x ≈ −97, z ≈ −205 (±30 m), Taihemenin länsipuoli; ei löytynyt tausta 1-1:n lod0/1:stä, t-portti-m216:sta eikä avoimista (tausta 1-0 ja lod2 vain laaja haku, c2 ei osumia). Oma ehdokas x −233…−192 on siis heikko. Merkitse kuvaan molemmat. LAV:lle sanottu: ei korjausta ennen KK:n vahvistusta, säteen tulosta ei tule (PT kielsi laskennan, pelissä ei poimintakomentoa).
