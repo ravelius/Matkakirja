@@ -1,0 +1,47 @@
+[
+  {
+    "tiedosto": "kortteli-haussmann.png",
+    "leveys_px": 1024,
+    "korkeus_px": 1024,
+    "m_per_px": 0.7874015748031495,
+    "ankkuri_px": [
+      512,
+      512
+    ],
+    "mittakaavan_tila": "Tilauksen tavoite, ei geometrisesti hyväksytty. Talojen leveydet ja kerrosluku poikkeavat."
+  },
+  {
+    "tiedosto": "julkisivu-haussmann.png",
+    "leveys_px": 2048,
+    "korkeus_px": 128,
+    "m_per_px": 0.19685039370078738,
+    "ankkuri_px": [
+      1024,
+      127
+    ],
+    "mittakaavan_tila": "Tilauksen tavoite; seinäkorkeus jää noin 80-86 pikseliin tavoitteen 102 sijasta."
+  },
+  {
+    "tiedosto": "esine-puu-keski-60.png",
+    "leveys_px": 192,
+    "korkeus_px": 192,
+    "m_per_px": null,
+    "ankkuri_px": [
+      92,
+      148
+    ],
+    "mittakaavan_tila": "Fyysisiä puumittoja ei annettu. Vastaanottaja määrittää sijoituskoon. Ankkuri rungon maakosketuksesta silmämääräisesti."
+  },
+  {
+    "tiedosto": "esine-notre-dame-60.png",
+    "leveys_px": 2048,
+    "korkeus_px": 1365,
+    "m_per_px": null,
+    "ankkuri_px": [
+      1100,
+      1080
+    ],
+    "mittakaavan_tila": "Perutun irrallisen kuvan aikaisempi tulos, vain arkisto/arvio. Ei fyysistä kalibrointia; ankkuri karkea maapohjan keskipiste. Ei uuden aluekokeen kuva.",
+    "tila": "Peruttu nykyisestä A2-tilauksesta; ennen peruutuksen vastaanottoa käynnistetty tulos toimitetaan lähteen pyynnöstä."
+  }
+]
