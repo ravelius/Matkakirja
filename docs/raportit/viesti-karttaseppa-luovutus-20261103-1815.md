@@ -24,9 +24,13 @@ P = `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-valmis-runko-20261102/`, p
 4. **LEVY:** worktree karttaseppa-tasangot-maet EI poistettu: tasankoketju (pid 26125) ajaa koodin siitä. PT: "poista ketjun jälkeen,
    ei siirtoa" → rivi PT:lle kun tehty.
 
+5. **Jälkilisäys 18.15 (PT 18.4x):** jäännös paikattu itse → v8 = v7 + `tarkistus/koonti/v8-paikkaus.py` (kaista x 2260–2500, y 1560–1598 v6:sta)
+   → TasoVersio **isoisa4-20261103**, proto **7e640edc4**; paketti **`_valmiit/pariisi-tasot-isoisa4-20261103-vienti-20261103`** (korvaa
+   isoisa3:n, KORVATTU.txt). Siltaleikkeet isoisa3 ja venereitti ennallaan. Pari lokit/karttaseppa-v7-pala17-20261103/pari-v7-v8-ylareuna.png.
+
 ## AVOIN (järjestyksessä)
-1. **v7 iso-pari:** JU:n vuorolla kuvapari isolla iPadilla (sama rajaus kuin JU:n pari-zoom-2-keski, proto-3d/lokit/julkaisija-koe-pari-6da58f32b/)
-   → PT. Jäännösvirhe pala17:n yläreunassa (Petit Palais puoliksi sumea, obeliskin juurella talo): PT päättää (pieni korjauspala tai jää).
+1. **v8 (isoisa4) iso-pari:** JU:n vuorolla kuvapari isolla iPadilla (sama rajaus kuin JU:n pari-zoom-2-keski, proto-3d/lokit/julkaisija-koe-pari-6da58f32b/)
+   → PT (jäännös korjattu isoisa4:ssä).
 2. **Koealueen Codex-toimitus** `_tyo/codex/pariisi-koealue-20261103/_review-koealue/`: tarkista SHA256SUMS, koot, alfa, saumattomuus
    (pinta 2 × 2), esineet.json ankkurit → pinnat VS:lle, esineet NUI:lle, rivi PT:lle.
 3. **Pitkät ruudut jatko:** seuraavan mittauksen Nimikerros-syyriveistä (Elavat/Lado/Piirra) suurin pois; tavoite < 33 ms.
