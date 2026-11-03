@@ -33,6 +33,7 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
    (`node tools/raamattu-kirjaa.mjs "TILINVAIHTO …"`) ja F/asemataulu/osoitteet.md:n taulukkoon; Postivahdille, kun se on luotu.
 
 ## 1. Kaikki sessiot nollataan heti aluksi (omistaja 30.10.2026 klo 19.22; Raamattu 7.37)
+SIIRTOPROMPTI (omistaja 3.11.2026 klo 16.31, pysyvä): "kirjautumisohjeita ei tarvitse, riittää pelkkä siirtoprompti. tärkeää että seuraava tili tyhjentää clear komennolla sessiot ja käyttää niitä samoja mikäli mahdollista tai jos luo uudet niin sitten arkistoi ne vanhat automaattisesti. puhdista itse alussa aina päätoimittajan mille välitän siirtopromptin" – omistajalle ei anneta kirjautumisohjeita; KK tyhjentää PT:n session (clear_session) ennen siirtopromptin antamista, ja uuden tilin PT tyhjentää ensin kaikki sessiot ja käyttää samoja id:itä, tai luo uudet ja arkistoi vanhat kysymättä.
 Omistaja: "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". Tämä on vaihdon ENSIMMÄINEN ASKEL heti tilin jälkeen
 (kohta 0) ja ennen sessioiden luontia: jokainen sessio, myös KK, PT ja Postivahti, aloittaa uudella tilillä puhtaalta pöydältä
 luovutuksensa ja ajantasaisten asetusten varassa (idleCompaction false, kohta 6). KK:n nollaukseen ei kysytä korttia (omistajan
