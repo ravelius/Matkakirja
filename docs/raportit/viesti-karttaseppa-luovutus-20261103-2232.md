@@ -23,6 +23,13 @@ Codex-posti: wt/karttaseppa-postilaatikko → `git fetch` + `git checkout --deta
 4. **21.54 molemmat taustaajot kuolivat** ilman virhettä (T7-symlinkki hetken katki) → uudelleen 22.0x.
 
 ## AVOIN (järjestyksessä)
+0. **YÖTYÖ ENSIN (PT 22.5x; omistaja 22.31 "Koita saada Pariisin kartta tehtyä kokonaan", KK hyväksyy yöllä):** tilaa Codexilta
+   HETI rinnakkain nähtävyysalueet ND k4:n tapaan, yksi tilaus per alue, tärkein ensin: Louvre, Hôtel de Ville, Oikeuspalatsi +
+   Sainte-Chapelle, Saint-Jacques, Eiffel, Sacré-Cœur, Panthéon, Riemukaari, Invalides, Opéra. Ohje: scratchpad/keskustelukanava/
+   suunnitelmat/20261103-pariisi-ylaviisto-ja-osakirjasto.md osio YÖ 3.–4.11. Mallina C/pariisi-nahtavyysalue-notre-dame-20261103/k4/
+   (pohja + maski + vesimaski + ohjekuva G:stä skaalattuna Y/ohje-nd-k4-g.py, suhteet OK/NAHTAVYYSALUE.md). OPPI ND k4:stä:
+   Codex piirtää nähtävyyden hyvin, mutta ympäristö ja alfa eivät osu ruudukkoon → pyydä vain nähtävyys läpinäkyvällä taustalla
+   ja leikkaa + istuta koodilla (Y/leikkaa-nd-k4.py), ei ympäristön uudelleenmaalausta.
 1. **ND k4: KK:n päätös** (PT:n kautta): käyttöön leikattuna vai laiva kokonaan (vaihtoehto Y/tarkistus-nd-k4/nd-k4-VAIHTOEHTO-
    laiva-kokonaan.jpg; leikkaus näkyy suorana reunana sivukanavan kohdalla). Hyväksynnän jälkeen taso NS:lle/VS:lle peliin.
 2. **A2 k4: VS:n k10-tulos** (JU). Jos katot/pihat vielä väärin: säädä Y/katot-2029-k4.py [voima] tai Y/pihat-tummiksi-k4.py [kerroin].
