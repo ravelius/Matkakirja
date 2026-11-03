@@ -11,3 +11,6 @@ Aineisto: `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-ylaviisto-a2-2026110
   ei katuja, puita, veneitä eikä tekstiä.
 
 Toimitus `_review-a2-k4/` (1 kuva `kortteli-haussmann-k4.png` TÄSMÄLLEEN 1254 × 1254 RGB, SHA256SUMS, QA-FI.md).
+
+**KORJAUS 3.11. klo 21.4x:** pohja vaihdettu Valoseppän lopulliseen versioon (3 682 taloa, mansardikatot, kattoikkunat
+vain etelälappeilla). Käytä kansion nykyistä `pohja-kortteli-k4-60.png`:tä (sha256 dd81be87…), SHA256SUMS päivitetty.
