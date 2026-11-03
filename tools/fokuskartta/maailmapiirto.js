@@ -1225,8 +1225,20 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       const T = RELIEFI.tasanko;
       const n = Math.max(1, Math.round(T.pohjaM / (dd * 111320)));
       const DD = dd * n;
-      const bx = (korkeus(lon + DD, lat) - korkeus(lon - DD, lat)) / (kx * n);
-      const by = (korkeus(lon, lat + DD) - korkeus(lon, lat - DD)) / (ky * n);
+      /*
+       * maaM (PT 3.11.: z7:n Pohjois-Saksaan tuli läiskiä): Copernicus on
+       * pintamalli, ja yksittäinen näyte osuu metsään tai taajamaan. Pohjan
+       * näyte = pienin korkeus viidestä pisteestä (keskus ja ±maaM metriä),
+       * eli lähin arvio maanpinnasta; mäki on leveämpi kuin maaM, metsäsaareke
+       * ei. null = entinen (yksi näyte).
+       */
+      const M = T.maaM ? T.maaM / (dd * 111320) * dd : 0;
+      const kT = !M ? korkeus : (x, y) => {
+        const mx = M / Math.cos((y * Math.PI) / 180);
+        return Math.min(korkeus(x, y), korkeus(x + mx, y), korkeus(x - mx, y), korkeus(x, y + M), korkeus(x, y - M));
+      };
+      const bx = (kT(lon + DD, lat) - kT(lon - DD, lat)) / (kx * n);
+      const by = (kT(lon, lat + DD) - kT(lon, lat - DD)) / (ky * n);
       if (Number.isFinite(bx) && Number.isFinite(by)) {
         const u = Math.hypot(bx, by) / T.k0;
         /*
@@ -1282,8 +1294,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           for (let i = 0; i < 8; i++) {
             const a = (i * Math.PI) / 4;
             const ox = S * Math.cos(a) / Math.cos((lat * Math.PI) / 180); const oy = S * Math.sin(a);
-            const gx = (korkeus(lon + ox + DD, lat + oy) - korkeus(lon + ox - DD, lat + oy)) / (kx * n);
-            const gy = (korkeus(lon + ox, lat + oy + DD) - korkeus(lon + ox, lat + oy - DD)) / (ky * n);
+            const gx = (kT(lon + ox + DD, lat + oy) - kT(lon + ox - DD, lat + oy)) / (kx * n);
+            const gy = (kT(lon + ox, lat + oy + DD) - kT(lon + ox, lat + oy - DD)) / (ky * n);
             if (Number.isFinite(gx) && Number.isFinite(gy)) { s += Math.hypot(gx, gy); k++; }
           }
           const wMax = Math.max(0, T.tavoite / Math.max(1e-4, s / k) - 1);
