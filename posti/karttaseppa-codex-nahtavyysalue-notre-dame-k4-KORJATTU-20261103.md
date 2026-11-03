@@ -12,3 +12,8 @@ Aineisto päivitetty: `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyy
   ja rannan päälle; muualla joki auki; ei veneitä. Rajaa alfa itse.
 
 Toimitus `_review-notre-dame-k4/` (1 kuva TÄSMÄLLEEN 1536 × 1024 RGBA, SHA256SUMS, huomiot.md + mitat px).
+
+**LISÄYS klo 22.4x (omistaja 22.14):** "Tuossa kirkko on levitetty takana olevan joen päälle mikä kannattaa sallia myös
+uuteen karttaan." Kuten G:ssä: julkisivu ja etuosa Citén maalla, ja runko, tornit ja katto saavat levitä TAKANA olevan
+pohjoishaaran ja -rannan päälle. Edessä ja sivuilla joki pysyy auki, eikä sitä katkaista. Maski laajennettu taakse
+(x 590–960, y 200–470), TILAUS.md ja SHA256SUMS päivitetty; käytä kansion nykyisiä tiedostoja.
