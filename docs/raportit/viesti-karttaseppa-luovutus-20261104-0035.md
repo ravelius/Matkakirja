@@ -66,3 +66,13 @@ Kaikki koosteita pelikuvan päällä, ei pelissä. **EI NS:lle ennen KK:ta.** PT
 ### Opit
 - Peruskartan puistot ovat tasaista nurmea: kaikki puutarhan rakenne on tullut puudatasta. Kun puut harvenevat, käytävät on piirrettävä erikseen.
 - Tarkista koosteen vika ensin täyskoon rajauksesta: pieni kuva peitti, mikä oli dataa ja mikä poiston jälkeä.
+
+## LISÄYS 4.11. klo 01.10: PT:n ja KK:n uudet käskyt (ALOITTAMATTA; lue tämä ensin, sitten LISÄYS 01.08)
+Lista: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, osiot "Iso iPad f1fb45f10" (kohdat 7–9) ja "Reunan soikio, k21, puut v3, Sacré-Cœur k6, Louvre k5". KK:n päätös koski v3-pareja, eikä hän ole vielä nähnyt 01.08:n koosteita (puutarhat, k7). Parit KK:lle PT:n kautta.
+**Hyväksytty:** puun väri, koko ja metsä; erilliset puut Sacré-Cœurille (RAKENNUSPERIAATE 4); Louvre k5 koosteena (pelikuva vielä). Muotopuutarhan syyn PT oikaisi samaan kuin 01.08:n selvitys. Codexin aukio kuitattu 2a2e90305.
+1. **Luxembourg:** paksu puusto vain itä- ja länsilaidalle, keskellä avoin muotopuutarha, allas ja polut. Nyt vyö kiertää kaikki reunat: rajaa `vyo` puut-uudet.py:ssä.
+2. **Tuileries, Champs-Élysées'n puutarhat, Invalidit, Champ-de-Mars:** käsin tehty rivilista 2029:n mukaan (MUOD), polut vaaleina viivoina ja altaat näkyviin (puutarhapolut.py tehty; arvioi, riittääkö). Jos ei riitä 2029:n tasolle, arvioi Codex-kuvat (pysyvä lupa). PT pyytää ratkaisun parina.
+3. **Ryppäät pois kortteleista:** tehty 01.08, tarkista kolmio-parista.
+4. **Sacré-Cœur k8:** latvusten kokoon lisää vaihtelua ja reunaan pari lovea (sacre-coeur-kaari.py). Sinappi katsotaan uudelleen uudella pinnalla.
+5. **Erillispuut + nimet:** selvitä, mutta älä kytke ennen KK:ta. KK:n linja: puut eivät peitä nimiä; muut nimet väistävät metsää kuten nähtävyyden kuvaa (4e929f038), joten kadunnimiä ei metsän päälle. Jos nimet viedään puiden yläpuolelle, koko kartalle.
+6. **Puulistan jälkeen:** kohta 7 d-sillan kaide (9 siltaa, sävytyökalulla, ei uutta ottoa); kohta 8 nimet NS:n kanssa ("Hôtel Hyatt Regency Paris Étoile" pois koko kaupungin nimistä, Montagne Sainte-Geneviève pieneksi tai pois); kohta 9 nimet puiden kohdalla uudella puulla. Rajaukseen ei kosketa; häivytys on VS:n ja NS:n.
