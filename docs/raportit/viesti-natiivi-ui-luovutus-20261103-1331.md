@@ -26,3 +26,10 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1222.md (+ LISÄYS 12.23). Syy: k
 3. Avoin tiedoksi: trailerin jälkeen kamera loittonee Iso-Britannian maan näkymään (~50 s, "GBR Molempiin 1576 km");
    ei NUI:n muutos, ei vielä kenenkään jonossa – kysy PT:ltä, jos KK huomauttaa.
 4. Vanhat: video iPadilta; veneet joen keskiviivaa; animaatiokuvien ämpärivienti PT:n luvalla; Codexin vana-otto.
+
+## LISÄYS 13.4x (JU/PT): simu yhdistelmälle b39c1bc9a – JONOSSA 1 (kärki)
+- b39c1bc9a = 0c103c3a9 + KS 4301f394a kyltit. JU antaa "KÄÄNNÖS NYT L<n>" (L1 LAV tai L2 NS vapautuessa).
+- Skripti valmiina: /Users/Shared/Claude/proto-3d/lokit/nui-ks-kyltit-b39c1bc9a-20261103/ajo.zsh (sis. ks-bigben.png ja
+  ks-pariisi.png KS:lle). Aja: `KAANNA_VAIN=1 zsh ajo.zsh <n> b39c1bc9a` taustalla → VAPAA JU:lle heti → simuosa
+  `SIMU_ODOTA=3600 SIMU_MUISTIRAJA=16 OHITA_KAANNOS=1 zsh /Users/Shared/Claude/proto-3d/tyokalut/simu-lukko.sh kaari Natiivi-UI
+  yhteinen-iPad13 -- zsh ajo.zsh <n> x` taustalla. Tulos PT:lle 3 riviä; ks-*.png-kuvien polku myös KS:lle (osoitekirja).
