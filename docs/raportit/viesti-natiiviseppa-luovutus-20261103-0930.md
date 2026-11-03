@@ -26,6 +26,17 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä. JU:n vuo
 - Testiskriptin "VIKA Pariisin intro ei päättynyt 120 s:ssa" toistui kaikissa kolmessa ajossa (myös 08.15-ajossa?) – video silti ok;
   selvitä, jos aikaa (intro pitempi tai odota-merkkijono muuttunut).
 
+## LISÄYS 09.35: PT 09.3x (KORVAA JONON KOHDAN 1)
+- **PT KUITTASI runko 8d18d7047** (saapuminen ilman tyhjää beigeä). JU kääntää sen isoon iPadiin omistajalle (omistaja 09.28: ei videoita,
+  katsoo iPadilta). **RT-lokirivi: ei korjausta.**
+- **Seuraava erä 1 (kun NUI:n A+C-koe on rungossa):** KK:n suunnitelma
+  /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261103-saapumisen-kuvat.md osa D – 20 ms ruutuvahti +
+  muistin mittaus isolla iPadilla Lontoossa ja Pariisissa (8 Gt:n raja; muisti-koe218.sh, iPad-vuoro ja ui-lokin tarkistus ensin).
+- **Siihen asti erä 2: striimikartan vieritys 60 ruutuun sekunnissa** (työlistan rivi, Natiiviseppä + Karttaseppä; sormea seuraava vieritys
+  ja zoom iPadilla ja iPhonella, myös lähimmällä zoomilla). Aloita aiemmasta tilasta: grep loki ja haarat "vieritys"/"60 fps"
+  (`node tools/loki-hae.mjs vieritys`), Pariisin vieritys osa 3 EI NYT (koskee piirrosta).
+- Kylmän tapauksen sumea loppu (7–8,5 s): ei toimia ennen PT:n/KK:n palautetta.
+
 ## JONO
 1. **PT:n/KK:n palaute videoista** → jos kylmän tapauksen loppusumeus (7–8,5 s) halutaan pois: vaihtoehto zoomaus alkaa vasta, kun z17
    on valmis TAI z17 kaikilla paikoilla heti valinnasta (ei vain zoomauksessa). Omistajan linja 07.22 "zoomaus ei odota" → kysy PT:ltä.
