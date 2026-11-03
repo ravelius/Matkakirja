@@ -24,4 +24,9 @@ Edellinen viesti-lavastaja-luovutus-20261102-2245.md on viite (rooli, tapa, työ
   esto v37 lopulliseksi + testaa.zsh → paketointi → JU + PK (rakennukset-v118 + esto v37) + vesiastioiden paikat PK:lle (vedenkantaja).
 
 ## SEURAAVAKSI
-1. Odota PT:n herätystä (pronssit). Jos jono muuten tyhjä: "JONO TYHJÄ: Lavastaja" PT:lle.
+0. ETUSIJALLA (PT 02.5x, ennen pronsseja): taso 1, heti kujaportti-3:n takana reitin poikki punainen umpimassa (peittokartta "huippu 8.4 ala 0.5",
+   maailma z −841…−843, x 126), keisari juoksee läpi, vika 26.10. lähtien. Selvitä massa (tausta-v112, muurikate-v37 vai osamalli?) ja korjaa reitti
+   ohi tai aukko massaan, jos portti johtaa läpi. Lähtötiedot: proto-3d/_tyo/pelikoodari/tallenne-218t/taso1b5-havainnot.md + kooste-jpg:t.
+   Huom: "maailma" = Unityn kehys (z peilattu, kierto) → pohja-kehykseen JuoksuPalatsi.Maailmaan-käänteisellä; kujaportti-3 paikka_pohja (−139,0; 444,5).
+   Valmis → PK (local_91a1bc27-6870-46aa-9886-66fd33b68880) uuden tallenteen ajoon JU:n vuorolla + rivi PT:lle.
+1. Pronssit, kun PT herättää. Jos jono muuten tyhjä: "JONO TYHJÄ: Lavastaja" PT:lle.
