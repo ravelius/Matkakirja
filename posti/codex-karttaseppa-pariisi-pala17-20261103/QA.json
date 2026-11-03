@@ -1,0 +1,25 @@
+{
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "generationCalls": 1,
+  "lockedPixelsEqual": true,
+  "newLandmarks": 5,
+  "sourceMapAttribution": "OpenStreetMap contributors",
+  "landmarkPoints": "manual visual ground-base estimates; receiver exact area-distance check pending",
+  "geometryQA": "PASS: continuous Seine without dead end, no duplicated Invalides, locked pixels equal; receiver seam blending still pending",
+  "receiverMapCheck": "pending",
+  "ownerApproval": "pending",
+  "gameIntegrated": false,
+  "positionCheck": {
+    "3": 39,
+    "32": 0,
+    "42": 82,
+    "82": 76,
+    "55": 67
+  },
+  "positionLimitMetres": 60,
+  "positionCheckStatus": "2 within60m, 3 need label-shift review under existing140m policy",
+  "unmeasuredOutsideScope": 42
+}

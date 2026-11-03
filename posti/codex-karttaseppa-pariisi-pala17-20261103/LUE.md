@@ -1,0 +1,3 @@
+Pala17, 1536 × 1024 RGB. Yksi otto. Vain maskin musta laatikko uusittu; valkoinen alue palautettu häviöttömästi ohjauksesta ja verrattu pikselilleen. Seine jatkuu läpi, väärä allas/umpikärki poistuu. © OpenStreetMap contributors.
+
+Viisi mitattua kohdetta: Orsay 39 m ja Bourbon 0 m; Rodin 82 m, Sainte-Clotilde 76 m, Matignon 67 m. Kolme viimeistä ylittävät 60 m tarkistusrajan mutta ovat alle projektin 140 m kylttisiirtorajan. Karttaseppä tarkistaa pohjapisteet, tekee sallitut kylttisiirrot ja sauman sovituksen ennen koontia. 42 laatikon ulkopuolista kohdetta jätettiin tarkoituksella mittaamatta; niitä ei piirretty uudelleen. Omistajan hyväksyntää tai peliin kytkentää ei merkitä tehdyksi.
