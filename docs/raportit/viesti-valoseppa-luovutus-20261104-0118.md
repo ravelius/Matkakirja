@@ -13,3 +13,13 @@ Syy: konteksti yli 25 %, luonteva tauko (k22 valmis). Edellinen: viesti-valosepp
 
 ## Työkalut (k21-luovutuksen lisäksi)
 k22/aja-rata.zsh <tunnus> (Gare du Nord, Est, Saint-Lazare), k22/aja-merkit.zsh <tunnus> (ND, Tour, GP), k22/aja.zsh <tunnus> 17 15 13 (keskusta), k22/tyokalut/parit.py, rata-data.py, raivaus-txt.py. Raivaus paikallisajoon ELAVA_RAIVAUS=k22/raivaus.txt; päivitä, jos raivaus_versio muuttuu (nyt 2c5cbb). Uusi versio omaan kansioon k23/; p-versio nousee.
+
+## LISÄYS: PT 01.05 (ohittaa Seuraavaksi-kohdan 1; viesti tuli k22:n jälkeen, kohdat 5–6 on jo tehty k22:ssa)
+KK:n päätökset: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, viimeinen osio. Ulkonäkö ohjaa, ei mittari. Tee k22:n päälle järjestyksessä:
+1. Sävyjen levitys pois, harmaavioletti pois, katon piirros ~0,55, rajaviiva ~0,45.
+2. Enintään 2 riviä kadusta + pihat.
+3. Keksitty iso katto vain alueelle, jossa ei ole datan taloja.
+4. Isot katot L 217–220, musteviiva + sisäviiva.
+5. #ecd6b0 takaisin, kerma saa nousta.
+iPad-ajo peruttu, kunnes pari on lähellä; vuoro pyydetään PT:ltä. Suihkulähde ei nyt.
+Reuna: laske, että paino on 1,00 koko Pariisissa ja molemmissa metsissä (Vincennesin itäreuna, Boulognen länsireuna), ja kerro tulos PT:lle.
