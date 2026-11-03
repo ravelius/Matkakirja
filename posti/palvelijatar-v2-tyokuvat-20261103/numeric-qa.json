@@ -1,0 +1,134 @@
+{
+  "status": "NUMERICAL_PASS_VISUAL_REVIEW_PENDING",
+  "checks": {
+    "nodesExact": true,
+    "skinsExact": true,
+    "animationsExact": true,
+    "imagesExact": true,
+    "texturesExact": true,
+    "samplersExact": true,
+    "scenesExact": true,
+    "animationAccessorBytesExact": true,
+    "inverseBindMatricesExact": true,
+    "sixtyFiveJointNamesOrder": true,
+    "fiveClipDurationsExact": true,
+    "propMeshesExact": true,
+    "propMaterialsExact": true,
+    "detachedVaseExact": true,
+    "allArraysFinite": true,
+    "triangleLimit": true,
+    "validIndices": true,
+    "validWeights": true,
+    "releaseMatrixExactAt040": true,
+    "unchangedOriginalBinaryPrefix": true,
+    "propTrajectoryExactAll305Samples": true,
+    "noFloorPenetrationOver2mm": true,
+    "finitePlausibleBodyHeight": true
+  },
+  "triangles": 19288,
+  "joints": 65,
+  "sourceSHA256": "4ba2066e801f096ef553ef036c833917493741dd0494fbec2acf1e7278b0f73c",
+  "candidateSHA256": "9079f363c1467e9ae7bb290b326f1859d79437f652a5217183fd722395de18f1",
+  "releaseMatrixAt040": [
+    [
+      0.96875,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.96875,
+      0.0,
+      0.7967268247157335
+    ],
+    [
+      0.0,
+      0.0,
+      0.96875,
+      0.2906250115483999
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "clipSamples": [
+    {
+      "clip": "idle",
+      "duration": 2.0,
+      "sampleCount": 61,
+      "floorMinMax": [
+        -2.4150531351237387e-08,
+        6.688475884679591e-08
+      ],
+      "heightMinMax": [
+        1.5845135074598344,
+        1.5885415535464258
+      ],
+      "maxPropWorldDifference": 0.0
+    },
+    {
+      "clip": "walk",
+      "duration": 1.399999976158142,
+      "sampleCount": 61,
+      "floorMinMax": [
+        -9.892923222009985e-05,
+        0.00014374177538007278
+      ],
+      "heightMinMax": [
+        1.5866254905708317,
+        1.6025092262841056
+      ],
+      "maxPropWorldDifference": 0.0
+    },
+    {
+      "clip": "startle",
+      "duration": 1.0,
+      "sampleCount": 61,
+      "floorMinMax": [
+        -9.096839576293303e-08,
+        6.688475884679591e-08
+      ],
+      "heightMinMax": [
+        1.5865280297899176,
+        1.5890927949851543
+      ],
+      "maxPropWorldDifference": 0.0
+    },
+    {
+      "clip": "startle_idle",
+      "duration": 2.0,
+      "sampleCount": 61,
+      "floorMinMax": [
+        -2.4150531351237387e-08,
+        6.688475884679591e-08
+      ],
+      "heightMinMax": [
+        1.5848683503172647,
+        1.588896396403856
+      ],
+      "maxPropWorldDifference": 0.0
+    },
+    {
+      "clip": "walk_empty",
+      "duration": 1.399999976158142,
+      "sampleCount": 61,
+      "floorMinMax": [
+        -9.892923222009985e-05,
+        0.00014374177538007278
+      ],
+      "heightMinMax": [
+        1.5866254905708317,
+        1.6025092262841056
+      ],
+      "maxPropWorldDifference": 0.0
+    }
+  ],
+  "seconds": 3.1546475840732455,
+  "peakRSSBytes": 71630848,
+  "visualReviewComplete": false,
+  "gameReadabilityAccepted": false
+}

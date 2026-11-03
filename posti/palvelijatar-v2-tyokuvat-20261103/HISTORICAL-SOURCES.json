@@ -1,0 +1,40 @@
+{
+  "reviewedAt": "2026-11-03T21:55:23.070148+00:00",
+  "exact1914ServantUniformConfirmed": false,
+  "interpretation": "Historically informed simplified game costume. The selected museum robes and period photograph depict Manchu women or court society, not a verified 1914 servant uniform. No modern shop, film or TV reference used.",
+  "records": [
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/69864",
+      "institution": "The Metropolitan Museum of Art",
+      "objectNumber": "47.136.1",
+      "title": "Manchu Woman's Informal Robe",
+      "museumDate": "late 19th–early 20th century",
+      "evidence": "Object record and front photograph read/viewed. Right overlap, standing collar, long loose body and decorative cuff bands inform the model; pattern is independently designed.",
+      "image": "met-47.136.1.jpg",
+      "imageSHA256": "2689e0a812e829e01db37f01c4609f767859c87c7ed44aef99ddfec8311161bc",
+      "rightsRecord": "Public Domain on museum object page",
+      "redistributeInModel": false
+    },
+    {
+      "url": "https://www.ngv.vic.gov.au/explore/collection/work/46687/",
+      "institution": "National Gallery of Victoria",
+      "objectNumber": "2034-D3",
+      "title": "Court lady’s informal robe (Changfu)",
+      "museumDate": "late 19th century",
+      "evidence": "Museum catalog describes pale green cloth, pink lining and white embroidered sleeve facings. Used for restrained color/facing treatment only; rank symbols and rich court ornament omitted.",
+      "imageViewed": false,
+      "redistributeInModel": false
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/72032/pg72032-images.html#illus20",
+      "title": "Daughters of a High Manchu Official of the Court",
+      "sourceType": "Period photographic plate in China under the Empress Dowager, original edition 1910; digitized from Internet Archive/American Libraries",
+      "evidence": "Photograph and its actual caption viewed. Crosswise hair/headdress silhouette, center part and flowers inform simplified hair arrangement. Full high-status fan-shaped headdress and extensive jewelry deliberately not reproduced. The book narrative is not used as historical evidence. Exact photograph date is not asserted.",
+      "image": "period-court-ladies.jpg",
+      "imageSHA256": "328a9cf7883c0a721808e2e405107dc902d4446053b3d22608d3a9eb8898a027",
+      "statusInference": "High-official daughters are not evidence of servant rank. Reduced hair roll and single flower are an art adaptation, not a documented uniform.",
+      "redistributeInModel": false
+    }
+  ],
+  "assetProvenance": "Owned v1 face/hands/rig/vase preserved. Geometry, hair, cloth shaping and flower/cuff decorations authored locally. No reference image becomes a texture; no new external generated asset."
+}
