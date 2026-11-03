@@ -76,3 +76,10 @@ Lista: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLIS
 4. **Sacré-Cœur k8:** latvusten kokoon lisää vaihtelua ja reunaan pari lovea (sacre-coeur-kaari.py). Sinappi katsotaan uudelleen uudella pinnalla.
 5. **Erillispuut + nimet:** selvitä, mutta älä kytke ennen KK:ta. KK:n linja: puut eivät peitä nimiä; muut nimet väistävät metsää kuten nähtävyyden kuvaa (4e929f038), joten kadunnimiä ei metsän päälle. Jos nimet viedään puiden yläpuolelle, koko kartalle.
 6. **Puulistan jälkeen:** kohta 7 d-sillan kaide (9 siltaa, sävytyökalulla, ei uutta ottoa); kohta 8 nimet NS:n kanssa ("Hôtel Hyatt Regency Paris Étoile" pois koko kaupungin nimistä, Montagne Sainte-Geneviève pieneksi tai pois); kohta 9 nimet puiden kohdalla uudella puulla. Rajaukseen ei kosketa; häivytys on VS:n ja NS:n.
+
+## LISÄYS 4.11. klo 01.2x (uusin; lue ensin)
+LISÄYKSEN 01.10 kohdat 1 ja 4 tehty, PT:llä, kooste, ei peliin:
+- **Luxembourg:** puusto itä- ja länsilaidalla, keskellä avoin puutarha ja polut. /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/kolmio-luxembourg.jpg (f5cf43628ec4), puut-uudet.json 4a5c78511665, 22 575 puuta.
+- **Sacré-Cœur k8:** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/sacre-coeur-k8/ (f659a97d677e), 300 puuta, kolme lovea, koko 0,68–1,42. **Koosteen kadunnimet metsän päällä ovat poiminta pelikuvasta, eivät KK:n linja:** pelissä nimet väistävät metsää.
+Seuraavaksi (LISÄYS 01.10): kohta 2 rivilista ja arvio Codexista (polut ovat 2029:ää leveämmät Luxembourgissa; säädä puutarhapolut.py), kohta 5, kohta 6.
+**Kohdan 5 suunnitelma:** kirkko + aukio yhtenä kuvana (raja alpha), metsä erillisinä puina: muunna sacre-coeur-kaari.py:n paikat metreiksi (alue.json / pariisi.json: 422,79 m = nykyisen kuvan rajauksen leveys) ja lisää puut lajiin. Nimet: PiirrosKerros.NahtavyysRuudut + OsuuNahtavyyteen saa metsän alueen (soikio tai ruudut), jotta muut nimet väistävät; ensin selvitä, miksi nimet näkyvät piirroksen päällä, vaikka jono 2995 < 3050.
