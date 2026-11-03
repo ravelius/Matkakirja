@@ -25,7 +25,7 @@ Y = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/`
 - Pelikuvan ja tason sovitus onnistuu suoraan kirkon väreistä (skaala + siirto), ks. sacre-coeur-puut.py.
 - Halutun rivin paikka nähtävyyden kohdalla: Paikka.omaKeski (Nimikerros), ei Kylttisiirrot, koska nimen korkeus vaihtelee tasoittain.
 
-## LISÄYS klo 00.10 (lue viimeisenä; korvaa AVOIMEN kohdat 1 ja 2)
+## LISÄYS klo 00.05 (lue viimeisenä; korvaa AVOIMEN kohdat 1 ja 2)
 - Postivahti: nollaus vasta lähellä 35 %:a; uusi LUOVUTUS VALMIS silloin.
 - **Louvren kiila tehty:** Y/nahtavyys-nurmi.py (Sacré-Cœurin työkalu yleistettynä) → Y/tarkistus-nahtavyydet/louvre-k2/ (5f8ffe6c902c…). Pari PT:llä, taso NS:llä (alue-v3, raivaus vanhasta v2-alfasta). Vasemman etupuolen keltainen jätetty.
 - **Sacré-Cœur k3 pelissä NS:n koekäytössä e101c006e** (alue-v2); ei vielä nähty pelikuvassa.
