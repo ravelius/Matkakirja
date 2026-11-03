@@ -4,6 +4,11 @@ Vain voimassa oleva tila. Edellinen: viesti-natiiviseppa-luovutus-20261103-0230.
 Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä. JU:lle VAPAA lähetetty 03.47.
 
 ## ETUSIJA (PT 3.11.): SAAPUMISEN MUISTITAPPO, MYÖS RELEASESSA
+**PT 03.5x (ETUSIJA 1 ennen kaikkea muuta):** (1) mittaa ENSIN pelkkä runko ilman esilatausta (55ce62126 tai junan 218
+nykyinen kärki) samalla skriptillä (`muisti-ab218.sh <runko> <runko+GC 3–5 eli 2856c5cc3>`): kaatuuko sekin, vai tuoko
+esilataus intron päälle? (2) poista intron ~1,3 Gt:n GPU-piikki (tekstuurit/RT:t striimaten tai pienemmiksi, vapauta ennen
+latausta), tavoite ≥ 25 % marginaali isolla. (3) tulos PT:lle 3 rivillä. Esilatausta EI runkoon ennen tätä.
+
 Mittaus Isolla iPadilla (iPad13,8, M1, jetsam-raja 5119 Mt), Lontoo → Pariisi bussilla, MuistiTarkka 250 ms:
 - A 16c732c8c (runko 55ce62126 + esilataus-218 2cf83b7c3, EI GC 3–5): kuoli 82 s = aloitusintron LOPPU
   ("esitys aloitusintro pariisi pois"): gfx 1723 → 3046 Mt 250 ms:ssa, fp 5140, signal 9. Varoitukset 63 s ja 82 s.
