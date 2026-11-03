@@ -21,6 +21,9 @@ muisti unity67-paivitysseuranta).
   tunnisteittain, heti kun footprint +48 Mt), T-rivit (tekstuurit tyypeittäin + suurimmat, kun +150 Mt 0,3 s:ssa), L-rivit (lokit).
   Katso hyppyhetki: grafiikka (RenderTexture/mesh/Cesium) vai internal/malloc (purkupuskurit: PiirrosKerros.PuraTaustalla Task.Run
   ilman rinnakkaisuusrajaa, 2048² RGBA8+mipit ~22 Mt natiivi + 22 Mt hallittu per pala; lähitaso 35 palaa alle 6 km).
+- **PT 17.1x VIHJE (vahvin)**: ElavaMvt.cs:5-9 MVT-purku = 1,9 / 2,6 Gt taustavarauksia Pariisin saapumisessa; oma korjaus
+  natiiviseppa/gc-mvt-218 (2856c5cc3) EI rungossa → JU:lta käännös 9b9695a7d (tai 44ecc31d1) + 2856c5cc3, sama toista.zsh-polku; jos
+  kaatuminen poistuu → JU:n iso-pakettiin. Lisäksi PiirrosKerros.PuraTaustalla Compress 74 + 196 ms (fps60/LOYDOS.md 3.11. 13.23).
 - Epäilyt (todistamatta, 6.16: mittaa ensin): PiirrosKerroksen rinnakkaiset taustapurut lähitasolla; ElavaKerros/valmiiksipiirto;
   LiikeLaatat varjoKohde (ei Create). Korjaus samaan JU:n iso-pakettiin (pohja 9b9695a7d). KuvaLoki.Muisti (UI/KuvaLoki.cs:52) =
   NUI:n ehdottama paikka uusille luokkariveille.
