@@ -108,3 +108,9 @@ Täydet polut: P = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-2
 4. **Toimitus 15 (vahti ilmoittaa):** kuvat parina Tuileries'n (OSM-polut, KK:n suunta 01.19) rinnalla; jos tyyli eroaa, Tuileries samalla tavalla (KK). Champ-de-Marsin rivit tarvitsevat lähteen (nurmen reuna tai maski; KATURIVIT-nimet eivät löydy OSM-välimuistista).
 5. **Sacré-Cœur k8 hyväksytty koosteena (KK 01.19):** ei junaan ennen nimien väistöä ja pelikuvaa. Toteutus kohdan 01.2x suunnitelman mukaan (erilliset puut + väistöalue).
 6. **Kohta 9** (nimet puiden kohdalla) uudella puulla; Louvre-nimi Seinellä (NS 4b) edelleen tekemättä.
+
+## LISÄYS 4.11. klo 01.3x (PT 01.20–01.25; lue ensin)
+- **Luxembourg (PT 01.24) on jo tehty:** 15c 081ddd0f5; PT tietää.
+- **d-kaide kuitattu (PT 01.25):** silta-d-*-v2.png kirjastossa (isoisa-2029/esine/), NS:lle seuraavaan yhdistelmään; lopullinen hyväksyntä pelikuvasta (y-silta-idan vs y-silta-neuf).
+- **Mittari ebe377352 on JU:lla (PT 01.24):** odota lokiriviä.
+- **Seuraavaksi:** AVOIN 1 Invalidit (PT vahvisti: käsin, ei Codexia) ja Palais-Royalin pari KK:lle PT:n kautta (KK ei ole nähnyt sitä): P/puutarhat/palais-royal.png koosteeseen 2029-rajauksen rinnalle.
