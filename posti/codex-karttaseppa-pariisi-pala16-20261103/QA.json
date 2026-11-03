@@ -1,0 +1,14 @@
+{
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "generationCalls": 1,
+  "lockedPixelsEqual": true,
+  "newLandmarks": 0,
+  "sourceMapAttribution": "OpenStreetMap contributors",
+  "geometryQA": "PASS visual: continuous Seine channels, bridges and dense urban blocks; locked pixels exactly retained",
+  "receiverMapCheck": "pending",
+  "ownerApproval": "pending",
+  "gameIntegrated": false
+}

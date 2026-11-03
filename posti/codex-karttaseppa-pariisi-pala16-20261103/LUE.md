@@ -1,0 +1,1 @@
+Pala16, 1536 × 1024 RGB. Yksi otto. Valkoisen maskin alue kopioitu ohjauksesta häviöttömästi omistajan luvalla; pikseliyhtäläisyys varmennettu. Ei uusia nähtävyyksiä; nro62 säilyy lukossa. © OpenStreetMap contributors. Karttasepän paikkatarkistus, saumaliukuma ja koonti ovat vastaanottajan seuraavat vaiheet.
