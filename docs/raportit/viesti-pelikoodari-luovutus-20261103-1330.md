@@ -32,6 +32,7 @@ Testit: bash Peli-testit/kaanna.sh (EI zsh) 804/804.
 1. ys-218ad valmis → katso video 6–8 s (kuva-arkki 5 fps: ffmpeg -ss 6.2 -t 1.6 … fps=5,tile=4x2) ja grep unity.log
    "katon raja". Jos ruoteet poissa → seuraava kohde. Jos ei → katso syylokista ala/huippu kamerapisteessä.
    mittari-taulukko.py tuntee -218ad.
+   JU 13.3x: ajo L1:llä NUI:n käännöksen jälkeen, loki /Users/Shared/Claude/julkaisija-tyokalut/l1-218ad-ys.log ("ys valmis").
 2. Seuraavat kohteet yksi kerrallaan, ajetaan vain korjattu sali: tj (4 s ristikko, 8 s seinäke), cx/th 4 s ristikko
    (todennäköisesti sama katon raja → aja cx tai th samalla haaralla), ty 11–13 s sivusiirron nykiminen, xf 6 s pilari.
 3. Kun kaikki korjattu: koko sarja kerran (ketju-ad.zsh yk cx tj ty th xf cc ys taso1b) → taulukko → PT + KK-paketti.
