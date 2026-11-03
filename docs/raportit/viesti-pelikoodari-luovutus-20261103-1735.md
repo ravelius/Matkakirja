@@ -30,6 +30,9 @@ Proto-haarat paikallisia; worktree /Users/Shared/Claude/wt/proto-pelikoodari-ys-
   `zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218am/ketju-am.zsh taso1b mp` (horisontti-218am, taso1b siemen 1217174437).
 
 ## SEURAAVA
+0. ENSIN (PT 18.0x): Codex toimitti viimeisen keisarin 5 havainnekuvaa + lähteet (ee0eda022, origin/claude/postilaatikko
+   posti/codex-pelikoodari-viimeinen-keisari-havainnekuvat-20261103/); PT kuittasi vastaanoton. Arvioi ja kytke Puyin nostoon
+   (Raamattu 2.200; aiempi tilaus "Viimeisen keisarin nosto" 5345c2379). Tulos PT:lle.
 1. al-tulokset: kohta 1 edellisestä luovutuksesta (grep "salin esteet", "salieste häivytetty"; ys 10–12,5 s, tj 4/8/10 s; salipaketti
    yhdellä rivillä PT:lle).
 2. am taso1b: tarkista 58,5–64,5 s (horisontti/hallit näkyvissä), ettei (a) 78–92 s ja vartija 95 s heikentyneet; Puyi aina ruudussa.
