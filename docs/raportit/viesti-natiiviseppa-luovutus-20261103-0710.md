@@ -25,6 +25,15 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä.
   Paattyi" (simussa ei tullut 120 s:ssa → jatkaa silti, VIKA-rivi; video kelpasi). VAIN_VIDEO=1 = ilman lepokuvia.
 - Komento: `VAIN_VIDEO=1 zsh proto-3d/tyokalut/simu-lukko.sh kaari natiiviseppa yhteinen-iPad13 -- zsh .../juna218/valitaso-video218.sh <kansio> proto-3d/lokit/natiiviseppa-app-218-sim-f1264eea9/Matkakirja3D.app` (vuoro JU:lta, ~5 min).
 
+## LISÄYS 07.15: PT:N UUSI ERÄ (ETUSIJA 1) + PERUSSARJAN 404
+- **KS:n arvio videosta:** sumeus johtuu kamerasta (1,5–8 s ruudulla 2–5 km → Z10 ~30× suurennettu), ei aineistosta; Z11–Z12-välitasoa EI.
+- **PT 07.1x:** kokeile KS:n ehdotusta: saapumiszoomi pysähtyy Z10:n 1:1-korkeuteen (~100–150 km ruudulla) + ristihäivytys
+  piirroskaupunkiin/elävään karttaan. Video nykyinen | uusi samasta kohdasta PT:lle JU:n vuorolla, VASTA perussarjan palautuksen jälkeen
+  (beiget ruudut arvioidaan samalla). EI junaan ennen PT:n kuittausta. Uusi haara natiiviseppa/<aihe>-218 rungosta f1264eea9.
+- **Perussarja 2026-09-30-pohja-20261015 = 404 CDN:ssä** (laatat.json + laatat, NS tarkisti 07.14). Sekä uusi 2026-11-03-pohja-valitaso
+  että TF 217:n 2026-10-26-pohja-20261027 ovat deltasarjoja sen päällä (Z6–Z9 bittikartta) → muuttumattomat palat eivät lataudu
+  (konsolissa "pohja-perus 0"). JU palauttaa PT:n pyynnöstä; PT:lle kerrottu, että koskee myös TF 217:ää. Odota JU:n kuittaus.
+
 ## JONO
 1. **KS:n arvio videosta** → tarvittaessa uusi sarja = uusi SileaUrl-kierros (kuten 747e44081).
 2. **Osa C (esilataus) ODOTTAA OMISTAJAN VALINTAA** (ennallaan; KK suosittaa (b) + taustaesilataus). Haara natiiviseppa/esilataus-218 2cf83b7c3.
