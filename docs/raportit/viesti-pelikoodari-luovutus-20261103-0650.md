@@ -19,6 +19,11 @@ peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
     −SaliSeinaVara 0,5). HUOM: koskee kaikkia saleja (sisäkamera alkaa ovella, ei räystään reunalla) → koko sarja tarpeen.
 - mittari-taulukko.py tuntee -218w ja -218x. sali-218x/ketju-x.zsh lukee myös taso-ajon juoksu-kansion.
 
+## PT 06.5x (SITOVA, lisäys)
+1. Mittari EI laske kiinni → uudestaan -odotuksen ruutuja peliin – korjaa ENNEN 218x-taulukkoa (muuten cx harhaa); PT:n hyväksyntä
+   saatu (avoin 3 alla on näin hyväksytty).
+2. yk s ~35: seuraava korjaus a31589350:n epäilyllä (runko 218y).
+
 ## Selvitetty (PT:n kysymys)
 - **cx reunassa 570 / vetoja 1046 = mittarin ajoitusartefakti, ei kameramuutos:** "kiinni TakaaAjaja 36 s" -jälkeinen odotus ennen
   `uudestaan` oli 218v:ssä ~30 s (218t ~5 s); kiinniruudut lasketaan peliin. 218v: reuna 96 ennen kiinniä → 556 uudestaan-hetkellä → 570.
@@ -38,7 +43,7 @@ peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
    ty-218r ty-218v ty-218x th-218r th-218v th-218x xf-218r xf-218v xf-218x cc-218r cc-218v cc-218x ys-218r ys-218v ys-218x` → taulukko-218x.md
    + PT:lle ≤ 3 riviä. Tarkista xf-218x ja th-218x v3 0–1 s kuvina (ffmpeg tile, kuten scratchpadissa): palkki/räystäs poissa?
 2. yk s 35: vahvista a31589350 vs 9655e4bae (kameraloki 218t/218v yk, OviAukonYla-loki) → korjaus seuraavaan runkoon (218y).
-3. cx: kiinni-jakso erilleen mittarissa (PT:n hyväksyntä ensin, koska muuttaa taulukon lukuja).
+3. cx: kiinni-jakso erilleen mittarissa – PT hyväksyi 06.5x, tehdään ennen taulukkoa (ks. PT 06.5x).
 4. th s 7 kapea ovi (114,2, -784,2): th-218v massassa 0 → poistunut; reunat 127 jäljellä.
 5. Ennallaan: ty s 13,4 räystäsnosto, ys 1.2 räystään parrut, seinähäivytys pois (omistaja 10.43), KK:n paketti vasta puhtaana.
 6. Havainnot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/salit-218l-havainnot.md (loppu).
