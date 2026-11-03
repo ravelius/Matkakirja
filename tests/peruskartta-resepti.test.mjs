@@ -481,3 +481,12 @@ test('resepti 2026-10-26 = 2026-09-26 + tasankokorostus lämpimään reliefiin, 
   const muut = (r) => r.pohjaliput.filter((_, j) => j !== i + 1 && j !== r.pohjaliput.indexOf('--reseptinimi') + 1);
   assert.deepEqual(muut(b), muut(a));
 });
+
+test('resepti 2026-11-03 = 2026-10-26, tasanko {8, 0,06, 1500, tavoite 0,05}', () => {
+  const a = RESEPTIT['2026-10-26']; const b = RESEPTIT['2026-11-03'];
+  const i = b.pohjaliput.indexOf('--reliefi-koe');
+  assert.deepEqual(JSON.parse(b.pohjaliput[i + 1]), { tasanko: { kerroin: 8, k0: 0.06, pohjaM: 1500, tavoite: 0.05 } });
+  assert.equal(b.pohjaliput[b.pohjaliput.indexOf('--reseptinimi') + 1], '2026-11-03');
+  assert.equal(b.pohjaliput.length, a.pohjaliput.length);
+  assert.equal(b.deltaEdelliseen, undefined);
+});

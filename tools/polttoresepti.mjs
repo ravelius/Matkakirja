@@ -145,6 +145,22 @@ RESEPTITAULU['2026-10-26'] = Object.freeze({
     return l === '2026-09-26' ? '2026-10-26' : l;
   }),
 });
+/*
+ * 2026-11-03 (PT 3.11.2026 kuittasi f5c016939): 2026-10-26:n korostus oli liian
+ * heikko (k0 0,02 vaimensi juuri Tanskan rinteet). k0 0,06 ja kerroin 8, ja
+ * seututavoite 0,05 (seudun keskikaltevuus × (1 + paino) ≤ 0,05), jotta Etelä-
+ * Suomen ja Smålannin kalliomaa ei rypisty. Kokeet: proto-3d/_tyo/karttaseppa/
+ * tasangot-mäet-20261103/LUE.md. Maata, ei merta: ei deltaa.
+ */
+export const TASANKO_2026_11_03 = Object.freeze({ kerroin: 8, k0: 0.06, pohjaM: 1500, tavoite: 0.05 });
+RESEPTITAULU['2026-11-03'] = Object.freeze({
+  ...RESEPTITAULU['2026-10-26'],
+  kuvaus: '2026-10-26, tasankokorostus vahvempana ja seututavoitteella (PT 3.11.2026)',
+  pohjaliput: RESEPTITAULU['2026-10-26'].pohjaliput.map((l) => {
+    if (l === JSON.stringify({ tasanko: TASANKO_2026_10_26 })) return JSON.stringify({ tasanko: TASANKO_2026_11_03 });
+    return l === '2026-10-26' ? '2026-11-03' : l;
+  }),
+});
 export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
 export function resepti(nimi) {
