@@ -1,0 +1,168 @@
+[
+  {
+    "taskNumber": 1909,
+    "file": "pinta-katto-haussmann.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "originalSHA256": "115db2953dc1a08a365223fc76bd9cf5eecf66779fac4aa0d12619f5ac472da5",
+    "sha256": "f5b6847b44561f451dba95b3a3e75e191bc08c09b452626d19e6e97cf0a00859",
+    "technicalConversion": "RGB size export",
+    "artisticPostprocessing": false,
+    "seams": {
+      "leftRightSeamMeanAbs": 15.211263020833334,
+      "horizontalInternalMeanAbs": 14.260119784029813,
+      "topBottomSeamMeanAbs": 15.9697265625,
+      "verticalInternalMeanAbs": 13.358096781830403
+    },
+    "previousSeams": {
+      "leftRightSeamMeanAbs": 20.763997395833332,
+      "horizontalInternalMeanAbs": 20.266397276698438,
+      "topBottomSeamMeanAbs": 22.222981770833332,
+      "verticalInternalMeanAbs": 18.338464979940536
+    }
+  },
+  {
+    "taskNumber": 1910,
+    "file": "pinta-katto-vanha.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "originalSHA256": "fa57a8b5413b8d784e5e21bff1863ca213142e1fab0d39c1fbe6afa2450d664b",
+    "sha256": "f2f71797c01a0ee27f0ab8fde80333f4873ece83209da6df0918c1004a4ddc5a",
+    "technicalConversion": "RGB size export",
+    "artisticPostprocessing": false,
+    "seams": {
+      "leftRightSeamMeanAbs": 22.221028645833332,
+      "horizontalInternalMeanAbs": 20.809490125549853,
+      "topBottomSeamMeanAbs": 28.8701171875,
+      "verticalInternalMeanAbs": 20.386439686685403
+    },
+    "previousSeams": {
+      "leftRightSeamMeanAbs": 25.6689453125,
+      "horizontalInternalMeanAbs": 26.100290645874065,
+      "topBottomSeamMeanAbs": 25.154622395833332,
+      "verticalInternalMeanAbs": 24.75360045770202
+    }
+  },
+  {
+    "taskNumber": 1911,
+    "file": "pinta-katto-julkinen.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "originalSHA256": "4e2544966b27cc86dcbab506fd43f78b155d63da4a0d2fd78182f4e10589be9e",
+    "sha256": "fb62dff5509fd7a24b9b650bdbe7f861926a5763d3c7e8a4304c53b3d2c0822d",
+    "technicalConversion": "RGB size export",
+    "artisticPostprocessing": false,
+    "seams": {
+      "leftRightSeamMeanAbs": 9.457356770833334,
+      "horizontalInternalMeanAbs": 14.006240263013197,
+      "topBottomSeamMeanAbs": 18.570963541666668,
+      "verticalInternalMeanAbs": 14.085035078608668
+    },
+    "previousSeams": {
+      "leftRightSeamMeanAbs": 17.261067708333332,
+      "horizontalInternalMeanAbs": 19.146756119664385,
+      "topBottomSeamMeanAbs": 18.678059895833332,
+      "verticalInternalMeanAbs": 18.801765449352395
+    }
+  },
+  {
+    "taskNumber": 1912,
+    "file": "pinta-katto-matala.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "originalSHA256": "4068481b188bf3dcf2b447090c1bee05c452b3d0c5227f48251cb29233b2f0e4",
+    "sha256": "f57e5b1d7c0f9f93fe0a566f99fda80bb7ffe0d034d04a01c0cf2adadba11c50",
+    "technicalConversion": "RGB size export",
+    "artisticPostprocessing": false,
+    "seams": {
+      "leftRightSeamMeanAbs": 11.614908854166666,
+      "horizontalInternalMeanAbs": 11.802908431594167,
+      "topBottomSeamMeanAbs": 13.2333984375,
+      "verticalInternalMeanAbs": 12.530063424059142
+    },
+    "previousSeams": {
+      "leftRightSeamMeanAbs": 16.309244791666668,
+      "horizontalInternalMeanAbs": 16.426181548346367,
+      "topBottomSeamMeanAbs": 15.587239583333334,
+      "verticalInternalMeanAbs": 15.895503675871618
+    }
+  },
+  {
+    "taskNumber": 1913,
+    "file": "pinta-vesi.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "originalSHA256": "9b10b6b1151867ccf90a0f420e7df9570097d96231873203e93f684accf4f7d6",
+    "sha256": "6346953d499faaf63f3cc7166af69cd1594196eb2f28927265647504683201d2",
+    "technicalConversion": "RGB size export",
+    "artisticPostprocessing": false,
+    "seams": {
+      "leftRightSeamMeanAbs": 7.544921875,
+      "horizontalInternalMeanAbs": 2.9933775761648747,
+      "topBottomSeamMeanAbs": 8.2265625,
+      "verticalInternalMeanAbs": 8.37021296635712
+    },
+    "previousSeams": {
+      "leftRightSeamMeanAbs": 13.407877604166666,
+      "horizontalInternalMeanAbs": 4.9784459387218964,
+      "topBottomSeamMeanAbs": 19.892252604166668,
+      "verticalInternalMeanAbs": 22.841722097486965
+    }
+  },
+  {
+    "taskNumber": 1914,
+    "file": "esine-louvre.png",
+    "nativeSize": [
+      1774,
+      887
+    ],
+    "exportSize": [
+      2048,
+      1024
+    ],
+    "mode": "RGBA",
+    "originalSHA256": "5359d72a3743f2057d9d4dfed46648b1080957d95e064cf2d97b134082dd6525",
+    "sha256": "2bb4f896d7298ef6bc3f806e06c4b687e9ca9c9647eb1d5161740a01c0e88719",
+    "technicalConversion": "proportional RGBA fit and transparent padding",
+    "artisticPostprocessing": false,
+    "alphaRange": [
+      0,
+      255
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "alphaBoundingBox": [
+    0,
+    3,
+    2030,
+    1024
+  ],
+  "emptyRegions": {
+    "cour_napoleon_clear": {
+      "bounds": [
+        700,
+        400,
+        850,
+        550
+      ],
+      "alphaRange": [
+        0,
+        1
+      ]
+    },
+    "cour_carree_clear": {
+      "bounds": [
+        1500,
+        600,
+        1700,
+        700
+      ],
+      "alphaRange": [
+        0,
+        1
+      ]
+    },
+    "outside_clear": {
+      "bounds": [
+        0,
+        0,
+        200,
+        400
+      ],
+      "alphaRange": [
+        0,
+        1
+      ]
+    }
+  },
+  "proposedGroundAnchor": [
+    1150,
+    580
+  ],
+  "anchorMethod": "Manual ground-centre estimate using pyramid as landmark; verify placement against OSM in game.",
+  "alphaAtLeast8BoundingBox": [
+    76,
+    23,
+    1935,
+    937
+  ],
+  "alphaNoiseNote": "Sampled empty regions contain alpha 0..1, not mathematically zero throughout; no visible courtyard haze in green-background test."
+}

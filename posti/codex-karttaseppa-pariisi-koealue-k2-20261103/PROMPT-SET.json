@@ -1,0 +1,92 @@
+{
+  "mode": "built-in-imagegen",
+  "intent": "complete-new-candidates",
+  "jobs": [
+    {
+      "id": 1909,
+      "file": "pinta-katto-haussmann.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Use case: stylized-concept. Generate ONE completely NEW square game-map ROOF-PLAN MATERIAL, opaque RGB, target1024x1024.\nCAMERA: exact orthographic VERTICAL OVERHEAD, looking straight down90degrees. Only horizontal roof planes and courtyard paving. ZERO visible walls, facades, perspective elevations, building sides or vertical window rows. This is a flat roof plan texture, NOT an oblique town illustration.\nSTYLE reference: attached approved2029map is ONLY a guide to the warm cream paper, fine sepia pen and thin muted roof washes. Do NOT copy its streets, trees, parks, landmarks or oblique buildings. Use the same economical cartographer strokes and light gray-blue/ochre washes, not photographic textures.\nTILING is the essential requirement: a periodic seamless repeat swatch, NOT a randomly cropped illustration. Left edge continues into right edge; top continues into bottom. Every roof ridge, roof outline and courtyard intersecting an edge has its EXACT matching continuation at the opposite edge at the same coordinate. Four corners meet continuously. Design the roof groups and cream gaps as an inherently repeating field. Equal detail, tone and spacing across the boundary and interior. No perimeter stroke, pale edge column, margin, straight seam or edge darkening. Fine paper grain has the same mean brightness across the whole tile.\nNO trees, shrubs, grass, gardens, green courtyards, roads, street network, perimeter lines, cars, people, boats, lettering, symbols or landmarks. Courtyards are plain light cream STONE/PAPER only, never green. Roofs densely fill the surface as a seamless building material to be clipped into polygons by the game. Physical texture coverage roughly819x819metres. SUBJECT: dense connected Paris Haussmann roof groups, zinc-gray mansard roofs seen ONLY as top-down sloping planes with tiny pale dormer roof caps and chimneys, compact rectangular pale stone courtyards. Many small roof units. Sepia fine roof ridges, restrained cool gray slate wash, warm cream courtyards. No facade window rows or vertical walls.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1910,
+      "file": "pinta-katto-vanha.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Use case: stylized-concept. Generate ONE completely NEW square game-map ROOF-PLAN MATERIAL, opaque RGB, target1024x1024.\nCAMERA: exact orthographic VERTICAL OVERHEAD, looking straight down90degrees. Only horizontal roof planes and courtyard paving. ZERO visible walls, facades, perspective elevations, building sides or vertical window rows. This is a flat roof plan texture, NOT an oblique town illustration.\nSTYLE reference: attached approved2029map is ONLY a guide to the warm cream paper, fine sepia pen and thin muted roof washes. Do NOT copy its streets, trees, parks, landmarks or oblique buildings. Use the same economical cartographer strokes and light gray-blue/ochre washes, not photographic textures.\nTILING is the essential requirement: a periodic seamless repeat swatch, NOT a randomly cropped illustration. Left edge continues into right edge; top continues into bottom. Every roof ridge, roof outline and courtyard intersecting an edge has its EXACT matching continuation at the opposite edge at the same coordinate. Four corners meet continuously. Design the roof groups and cream gaps as an inherently repeating field. Equal detail, tone and spacing across the boundary and interior. No perimeter stroke, pale edge column, margin, straight seam or edge darkening. Fine paper grain has the same mean brightness across the whole tile.\nNO trees, shrubs, grass, gardens, green courtyards, roads, street network, perimeter lines, cars, people, boats, lettering, symbols or landmarks. Courtyards are plain light cream STONE/PAPER only, never green. Roofs densely fill the surface as a seamless building material to be clipped into polygons by the game. Physical texture coverage roughly819x819metres. SUBJECT: very dense narrow old Paris/Marais roof groups, tiny irregular pitched roofs, weathered muted reddish-brown and pale ochre tile washes, fine sepia roof ridges and restrained short tile hatching, a few tiny irregular pale paved courtyards. Rust color extremely subdued, no bright red. All geometry strictly overhead, no facades, no vegetation. Seamlessly matching roof/courtyard edges.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1911,
+      "file": "pinta-katto-julkinen.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Use case: stylized-concept. Generate ONE completely NEW square game-map ROOF-PLAN MATERIAL, opaque RGB, target1024x1024.\nCAMERA: exact orthographic VERTICAL OVERHEAD, looking straight down90degrees. Only horizontal roof planes and courtyard paving. ZERO visible walls, facades, perspective elevations, building sides or vertical window rows. This is a flat roof plan texture, NOT an oblique town illustration.\nSTYLE reference: attached approved2029map is ONLY a guide to the warm cream paper, fine sepia pen and thin muted roof washes. Do NOT copy its streets, trees, parks, landmarks or oblique buildings. Use the same economical cartographer strokes and light gray-blue/ochre washes, not photographic textures.\nTILING is the essential requirement: a periodic seamless repeat swatch, NOT a randomly cropped illustration. Left edge continues into right edge; top continues into bottom. Every roof ridge, roof outline and courtyard intersecting an edge has its EXACT matching continuation at the opposite edge at the same coordinate. Four corners meet continuously. Design the roof groups and cream gaps as an inherently repeating field. Equal detail, tone and spacing across the boundary and interior. No perimeter stroke, pale edge column, margin, straight seam or edge darkening. Fine paper grain has the same mean brightness across the whole tile.\nNO trees, shrubs, grass, gardens, green courtyards, roads, street network, perimeter lines, cars, people, boats, lettering, symbols or landmarks. Courtyards are plain light cream STONE/PAPER only, never green. Roofs densely fill the surface as a seamless building material to be clipped into polygons by the game. Physical texture coverage roughly819x819metres. SUBJECT: larger Paris public-building roof complexes, rectangular and U-shaped slate roofs enclosing generous EMPTY pale limestone paved courtyards. Roof shapes broad and relatively simple, low density compared to old-town tile. Roof ridges and slate hatching only, neutral gray slate and very light warm stone. Every courtyard is entirely bare cream paving; absolutely no green dots, foliage or garden pattern. No visible walls or facades.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1912,
+      "file": "pinta-katto-matala.png",
+      "kind": "roof",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Use case: stylized-concept. Generate ONE completely NEW square game-map ROOF-PLAN MATERIAL, opaque RGB, target1024x1024.\nCAMERA: exact orthographic VERTICAL OVERHEAD, looking straight down90degrees. Only horizontal roof planes and courtyard paving. ZERO visible walls, facades, perspective elevations, building sides or vertical window rows. This is a flat roof plan texture, NOT an oblique town illustration.\nSTYLE reference: attached approved2029map is ONLY a guide to the warm cream paper, fine sepia pen and thin muted roof washes. Do NOT copy its streets, trees, parks, landmarks or oblique buildings. Use the same economical cartographer strokes and light gray-blue/ochre washes, not photographic textures.\nTILING is the essential requirement: a periodic seamless repeat swatch, NOT a randomly cropped illustration. Left edge continues into right edge; top continues into bottom. Every roof ridge, roof outline and courtyard intersecting an edge has its EXACT matching continuation at the opposite edge at the same coordinate. Four corners meet continuously. Design the roof groups and cream gaps as an inherently repeating field. Equal detail, tone and spacing across the boundary and interior. No perimeter stroke, pale edge column, margin, straight seam or edge darkening. Fine paper grain has the same mean brightness across the whole tile.\nNO trees, shrubs, grass, gardens, green courtyards, roads, street network, perimeter lines, cars, people, boats, lettering, symbols or landmarks. Courtyards are plain light cream STONE/PAPER only, never green. Roofs densely fill the surface as a seamless building material to be clipped into polygons by the game. Physical texture coverage roughly819x819metres. SUBJECT: low Paris ancillary buildings and workshops, small light gray and pale ochre roofs grouped around broad empty light cream paved courtyards, overall lighter with fewer roofs. Indicate low buildings ONLY through modest roof footprints, never through visible sidewalls. No vegetation of any kind; all open spaces are plain pale paving. Repeated roof groups and courtyard gaps must connect evenly through all four tile edges.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1913,
+      "file": "pinta-vesi.png",
+      "kind": "surface",
+      "target": [
+        1024,
+        1024
+      ],
+      "prompt": "Use case: stylized-concept. Generate ONE new seamless square1024x1024 RGB WATER MATERIAL tile, directly overhead. Match ONLY the quiet gray-green water wash and delicate sepia-gray short horizontal undulating strokes of the river in the attached approved drawing. No city or land: the entire square is water. A mathematically periodic texture repeating in both directions: each horizontal wave crossing the right border resumes at exactly the same height, thickness and tone at the left border; top/bottom patterns also connect. Edge pixels should differ from their wrapped neighbors just as little as any neighboring pixels inside. Uniform mean pale gray-green tone everywhere, including the very last row and column. No lighter rim, no frame, no border column, no dark seam, no vignette or lighting gradient. Distribute very fine low-contrast wave marks evenly over the entire surface; subdued paper-grain watercolor, not 3D water, no foam, no big wavy bands, no objects, boats, banks, islands, text or shadows. This is a genuinely edge-wrapped repeat, not a cropped patch of an illustration.",
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png"
+      ],
+      "transparent": false
+    },
+    {
+      "id": 1914,
+      "file": "esine-louvre.png",
+      "kind": "object",
+      "target": [
+        2048,
+        1024
+      ],
+      "transparent": true,
+      "refs": [
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/tyylimalli-hyvaksytty-2029.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-louvre.png",
+        "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-koealue-20261103/pohjat/pohja-louvre-pyramidi.png"
+      ],
+      "prompt": "Use case: stylized-concept. Draw a completely NEW full Louvre palace game-map object, wide2:1 canvas2048x1024 with genuinely transparent alpha. Image1 is the ONLY approved drawing style: fine sepia pen, pale warm cream limestone, understated blue-gray roofs, very light muted watercolor, economical uniform map strokes. Images2and3 are ground-plan/orientation references ONLY, do not copy their text/arrows/brown fill. Camera oblique from SOUTH45degrees, northUP; the long palace ground axis slopes about26degrees DOWN from left toward right. Entire palace must fit, both long western wings and eastern CourCarree, no cropped wing ends.\nGround geometry: two long parallel wings extend to WEST/LEFT from the closed square CourCarree at EAST/RIGHT. Preserve the small courts in the wings shown in the footprint. Whole ground proportion664x325m. The small glass pyramid is in CourNapoleon between the wings, just west/north of the complex ground center.\nCRITICAL CORRECTION: draw NO COURTYARD FLOOR AT ALL. All empty courtyard space, including CourNapoleon, CourCarree and smaller courts, must have alphaZERO right up to the sharply outlined building ground edges. The pyramid stands alone within the transparent CourNapoleon gap. Only the palace walls/roofs and pyramid are drawn. There must be NO cream paper ground fill anywhere, NO haze, NO gradient feathered courtyard edge, NO blur, NO outside cast shadow, NO glow, NO rectangular background or pedestal. Crisp natural antialiased building silhouettes, fully transparent all around and in the courtyard holes. No trees, roads, people, lettering, scale bar, north arrow, frame or watermark. Draw with same restrained ink and wash as approved map, no ornate over-detailed fantasy castle."
+    }
+  ]
+}

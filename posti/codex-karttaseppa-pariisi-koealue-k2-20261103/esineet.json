@@ -1,0 +1,11 @@
+[
+  {
+    "tiedosto": "esine-louvre.png",
+    "leveys_px": 2048,
+    "korkeus_px": 1024,
+    "ankkuri_px": [
+      1150,
+      580
+    ]
+  }
+]
