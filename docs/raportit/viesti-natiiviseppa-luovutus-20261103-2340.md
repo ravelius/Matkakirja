@@ -7,6 +7,9 @@ EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajo
 ## YÖTYÖ (PT, omistaja 22.31 "Koita saada Pariisin kartta tehtyä kokonaan")
 Sijoita KK:n hyväksymät peliin sitä mukaa kuin KS/PT ilmoittaa. Pelikuvat JU:lta → PT → KK.
 
+## LISÄYS 23.51: KARTTA-TESTIT AJETTU, älä odota merkkiä (kohta 1 alla tehty)
+a826acb03 603/603, 95a733ace 606/606; JU ja PT tietävät, kartta-testit-ok kosketettu. Aloita kohdasta 2: tee yhdistelmä, aja sen Kartta-testit (JU:n väli, ei rinnalla) ja anna sha JU:lle.
+
 ## LISÄYS 23.50: ENSIN TÄMÄ (korvaa alla olevat kärjet ja järjestyksen)
 1. **Odota JU:n viestiä "Kartta-testit nyt"** (PT: väli, ei rinnalla; JU ajaa kartta-testit-portti.zsh:n L2:lla 95a:n jälkeen). Aja heti `sh Kartta-testit/kaanna.sh` kärjissä **a826acb03 ja 95a733ace** (worktree wt/proto-natiiviseppa-maskik4, nyt nahtavyydet-218). KUITTAA JU:lle heti, kun ajettu: JU jatkaa kuittauksella (muuten 5 min). Tulos PT:lle ja JU:lle.
 2. **Vasta tuloksen jälkeen yksi yhdistelmä-sha** (PT): koko-koe-218 (628d1a90a) + nahtavyydet-218 (a826acb03) + nimet natiivi-backup/karttaseppa/pariisi-nimet-220 4e929f038 (KS: NahtavyysRuudut korvasi kutsuni, 95a:n päällä). pariisi.json-riita: aja tee-esineet kaupunki-pariisi-koko.json, Animaatiot/pariisi.json ottaa a826acb03:n. Anna JU:lle: iso iPad, sk /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aluekuva-koko/sk-yhdistelma.txt (a94:n komennot + sillat + laajin zoom; riemukaari-kuvassa merkintä pilareista). Kerro JU:lle, että se korvaa 628d1a90a:n iPad-kierroksella.
