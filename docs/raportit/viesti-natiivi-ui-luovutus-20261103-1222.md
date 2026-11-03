@@ -28,3 +28,10 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1059.md (+ LISÄYS 11.08). Syy: k
    NUI kytkee UiNakymatissa `Saapumistraileri.KarttaTerava = k => …`. Vastausta ei vielä tullut.
 3. Pieneen iPadiin vain PT:n luvalla (JU, yksi asennus).
 4. Vanhat: video iPadilta; veneet joen keskiviivaa; animaatiokuvien ämpärivienti PT:n luvalla; Codexin vana-otto.
+
+## LISÄYS 12.23 (jono 2 tehty)
+- NS:n rajapinta: `KarttaKerrokset.SaapumisTerava(string)` (ff04040e7, haara natiiviseppa/lahto-tulo-218; NS poisti oman
+  PeliOhjain-odotuksensa). Kytketty **c3f3e8ec8** (haara natiivi-ui/terava-kytkenta-218 = e9e815017 + ff04040e7 + UiNakymat-rivi,
+  peili natiivi-backup peili/proto/natiivi-ui/terava-kytkenta-218). Ei käänny ilman ff04040e7:ää → vain yhdistelmässä.
+- JU:lta pyydetty c3f3e8ec8 yhdistelmään; PT tietää. Simussa tarkista konsolista "kartta terävä N ms zoomauksesta" ja ettei
+  Tower Bridge nouse sumean kartan päälle (video nousu-lontoo).
