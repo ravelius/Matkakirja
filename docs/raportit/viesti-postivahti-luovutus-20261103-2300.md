@@ -25,6 +25,7 @@ Aloitusviestiin PT:n lisäohjeet: PK:lle kohdan 0A peruutus (c2eea58ea hylätty,
 - KIERROS.md: kontekstit yksi kerrallaan, ei rinnakkain.
 
 ## Seuraavaksi
+0. KS (local_7b57e35a-3a8e-4943-aba1-c960b9eb4671): luovutus 33e069bb4 (docs/raportit/viesti-karttaseppa-luovutus-20261103-2300.md haara karttaseppa/luovutus-20261103-2300), RC pois, kotikansio tehty (23.00); taustaajot pid 65143/68441 jatkavat omillaan (KS:n aiempi NOLLAA-vastaus voimassa). Kun isRunning=false → NOLLAUS-viesti → tyhjä → aloitusviesti (git -C /Users/Shared/Claude/Matkakirja-posti show 33e069bb4:docs/raportit/viesti-karttaseppa-luovutus-20261103-2300.md; mainitse: aja ensin vahti Y/vahti.zsh, Sacré-Cœur toimitettu; Raamattu 12.4) → RC true → rivi PT:lle "nollattu Karttaseppä (33e069bb4)".
 1. PK (local_d3bb1f78-e2ea-4089-8bae-d106bb1f9ff7): luovutus a9e1bc9e0 (docs/raportit/viesti-pelikoodari-luovutus-20261103-2255.md haara koti/Matkakirja-pelikoodari), RC pois, kotikansio tehty. Kun isRunning=false → NOLLAUS-viesti → tyhjä → aloitusviesti (git -C /Users/Shared/Claude/Matkakirja-pelikoodari show a9e1bc9e0:docs/raportit/viesti-pelikoodari-luovutus-20261103-2255.md; + Raamattu 12.4) → RC true → rivi PT:lle "nollattu Pelikoodari (a9e1bc9e0)".
 2. ScheduleWakeup-kierros 10 min (prompt: "Lue /Users/Shared/Claude/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan"): PT, KK, roolit yksi kerrallaan, levy (ilmoitus vain < 40 Gi), codex-odottaa.py (python3 -I tools/tyotavat/codex-odottaa.py), Codex-muisti.
 3. Lukematta 22.11 jälkeen: JU, VS, KS, LAV, NUI (nollattu 22.45), NS (nollattu 22.58).
