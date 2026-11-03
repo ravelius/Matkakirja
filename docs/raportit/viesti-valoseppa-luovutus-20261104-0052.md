@@ -19,3 +19,4 @@ Koodi: ElavaTyyli.Korttelikartta (täyttö), RantaAvoimeksi, SuljetutAvoimiksi, 
 - **k21 = f034786ce** (p21, 610/610; julkisivut #d8bf94 ja #c4aa82). Z17 kerma 21,3, L 124/156/218. Laitteella ei vielä ole p21:tä, joten p-versio ei noussut.
 - PT 00.50: kattoihin ei uutta kierrosta ennen KK:ta; laiteajoa ei JU:lle ennen KK:n kantaa. Saint-Sulpice oli oma mittausvirheeni: aukio on ehjä (k21/v7/ss.jpg). Soikion häivytys on minun, mukana k21:ssä.
 - Postivahti: nollaus vasta 35 %:n lähellä uudella LUOVUTUS VALMIS -rivillä.
+- PT 01.0x: laikkujen, pystyraitojen ja suihkulähteen syyt k21/TULOS.md (loppuosio); koodi ennallaan, korjaukset vasta KK:n kannan jälkeen. Ei laiteajoa.
