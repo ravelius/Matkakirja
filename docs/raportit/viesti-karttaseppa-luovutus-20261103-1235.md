@@ -33,3 +33,8 @@ N = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tasangot-poltto-20261103/`. 
    Levyä 34 Gi (vahti pysäyttää < 15 Gi).
 4. Big Ben: jos PT/KK haluaa toisen rajan (esim. vain kaupunkikartan Z12-portilla), vakio `KaupunkiPalloMitat.MaamerkkiPorttiEnnen`.
 5. Vanhat: 27.10. poltto T7-arkistointi vain jos levy < 50 Gi (nyt 34 Gi → harkitse, PT:n luvalla); NUI:n maamerkkien alat.
+
+## LISÄYS 12.50: Pariisi v4 PT:llä
+PT 12.4x: v3 saumat ja punerrus ok, mutta puistot harmaantuivat ja vesi haaleni → v4 (`pariisi-koko-rgba-v4.png`, pari
+`pariisi-v2-v4-pari.jpg` lähetetty PT:lle 12.50). Suoja `lab.suoja` (sävy + rungon maankäyttö palat/palaNN/runko.png); kokoa_pariisi.sh
+tuottaa nyt v4:n. LUE.md "v4". **AVOIN 1 koskee nyt v4:ää**: PT:n kuittaus → tasot v4:stä.
