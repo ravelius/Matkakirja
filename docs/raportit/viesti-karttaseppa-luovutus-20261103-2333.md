@@ -39,3 +39,7 @@ Kaikki NS:n viestit olivat lähtiessä NS:n jonossa ("queued"); tarkista list_ev
 - ND 0,8 pelissä 9ac73a6e4 (kirjasto esine/pariisi/notre-dame-alue v4, raivausmaski uudesta alfasta; pikselivertailu toimitettuun tasoon tehty). Edellisen lisäyksen ND-varmistus on hoidettu.
 - ketju.virhe.11031218 on tyhjä tiedosto klo 11.20:ltä: vanha, ei koske nykyistä ketjua. AVOIN 6:n huomio on hoidettu.
 - Postivahti: nollaus vasta lähellä 35 %:a; uusi LUOVUTUS VALMIS silloin.
+
+## LISÄYS klo 23.40 (KK 23.29, NS)
+- **Nimet nähtävyyksien alla:** natiivi-backup/karttaseppa/pariisi-nimet-220 4e929f038 (95a733acen päällä, sisältää nimiharvennuksen 042ab0c28; korvaa c1832c0c2:n). Worktree wt/proto-karttaseppa-ruutu-218 on tällä haaralla. EI käännetty täällä; JU:lta pyydetty ajo. Arvioi samalla AVOIN 3:n tiheys. Huomioi: rajauslaatikko on koko kuvan laatikko, ja merkittävän kohteen oma nimi piiloutuu samalla säännöllä (kerrottu PT:lle).
+- HdV:n vanha kuva poistettu pelistä (NS 6c283e719). Takaisin vain uudella aluekuvalla. Kaupungin merkki piiloon nähtävyyksien korkeudella (5f8b18b5c): ND:n kiekko oli NS:n mukaan tämä, tarkista pelikuvasta.
