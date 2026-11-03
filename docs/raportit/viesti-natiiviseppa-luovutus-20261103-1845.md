@@ -32,7 +32,7 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9
 Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261103-pariisi-striimikartan-paalle.md
 (kohdat Tekotapa 2 ja Osat C/D). Ei NUI:lle. VS tekee osan B (proto linssiseppa2/pariisi-tyyli 8e8b0f25b: ElavaPariisi.cs, kytkin
 `elavakartta pariisi 1|0`, ElavaPariisi.Paalla; vertailu VS:n sk-k1.txt: `karikatyyri pois` + `elavakartta pariisi 1`).
-VS:lle lähetetty 18.4x rajapintaehdotus (odota vastaus): (1) yhteinen kytkin ElavaPariisi.Paalla; VS lisää
+VS HYVÄKSYI 18.39 rajapinnan (ElavaPariisi.Sisalla(lat, lon) = 60b0ba903, natiivi-backup linssiseppa2/pariisi-tyyli, 8e8b0f25b:n päällä; pelkkä raja, Paalla erikseen; ElavaTyyli ei piirrä puusymboleja): (1) yhteinen kytkin ElavaPariisi.Paalla; VS lisää
 `ElavaPariisi.Sisalla(lat, lon)`, (2) esineet omana instanssikerroksena laattojen päällä, ei laattarasteriin, (3) puut vain
 esinekerroksessa (ElavaTyylin puut pois koealueella).
 
