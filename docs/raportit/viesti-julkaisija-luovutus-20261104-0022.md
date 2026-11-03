@@ -30,3 +30,9 @@ Linja 2: valmiiksi-kaannos-l2 (6aed10e25) ja vs-k20-laite (käännös). Sen jäl
 ## VALMIIT (lähetetty)
 95a esikatselu + iPad → PT + NS (muisti OK 3065 Mt; sillat kadusta vinossa, vene ei sillan alla) | laatat b116b65a5 → NUI | KS nimet + nd-keski-uusinta → KS | otsikko iPhone + iPad (pysty OK, vaaka vain latauskuva) → PK | palvelijat v7 → PK | sali-vianhaku 4397cf20d → NUI (reitti OK 4073, sali VIKA 4146) | Kartta-testit: NS kuittasi 95a 606/606 ja yhdistelmä 607/607.
 Viennit: sacre-coeur-alue-v2, louvre-alue-v3 (1 + 1, virheitä 0, vanhat ennallaan).
+
+## LISÄYS 00.46 (korvaa ristiriidassa olevat kohdat yllä)
+VALMIS: f1fb45f10 → PT + NS + VS (muisti OK 3417). lav-parit, lav-mika (kolmio-rivit.txt; kaikki osumat lattia), Wumen → LAV. Linjat 1 ja 2 tyhjät; UnityLockfile-tarkistus seuraavassa L2-ajossa.
+iPad nyt: vs-k20-laite 8d1a79394 (PT + VS; sk-k20; alkoi 00.44, odotus 1006 s, loki vs-k20-laite.log; k-*.png kansio julkaisija-k20-iso-8d1a79394). VS: kääntövirhe tälle ei tullut; kulusta ms/pala Z13, Z15, Z17 ja muisti lokista (kuva-loki). Sen jälkeen yo-ipad-mp-sali (9f8d), Tripo, otsikko 6aed (käännetty), palvelijat v8.
+6aed: iPad-ajo vaaka + pysty. PT 00.2x: k20 korvattu; ei täyttöä. Odottaa luovutuksen jälkeen VS:ltä mahdollinen uusi sha vasta PT:n pyynnöstä.
+v125-KOEAJO (PT: esikatselu file://, ei vientiä; iso iPad vasta KK:n hyväksymän parin jälkeen): Este, runko 15d7274ad hakee kielletty-tausta-v124/, v4juuri vaihtaa koko juuren. LAV:lta pyydetty koejuuri tai runko + sk (kuvat 1–4, viesti jonolokissa) → katot-v125/koeajo/, rivi LAV:lle. Aja L1:llä heti, kun tulee (linjat vapaat), ei Tripo-jakson aikana. Holvin kohta LAV:lta.
