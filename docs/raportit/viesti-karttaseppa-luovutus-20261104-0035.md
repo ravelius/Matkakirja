@@ -131,3 +131,9 @@ PT:llä, odottaa KK:ta; kaikki koosteita, ei NS:lle:
 
 ## LISÄYS juuri ennen nollausta (lue ensin)
 **Codex toimitti kaikki kolme 01.41:** /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyydet-20261103/puutarha-{champ-de-mars,champs-elysees,luxembourg}/_review-puutarha-*/ (ei vielä katsottu; lue huomiot.md, tarkista koko, alfa maskia vasten ja käytävät). Tee ensin: kuvat koosteeseen (alue.json, ryhmä "puutarha"; pari.py lukee P/puutarhat/lajit.json:n) Tuileries'n rinnalle ja pari KK:lle PT:n kautta; kuittaus Codexille claude/postilaatikko-haaraan vasta katsottuna. a95 (Tuileries ja Champs-Élysées) sopii; Champ-de-Mars tarkista `alku m/px`, tarvittaessa käsin kuten pr-kooste.py. Luxembourg pois puutarhapolut.py:stä hyväksynnän jälkeen. Champ-de-Marsin rivit käsin kuten Invalidit.
+
+## LISÄYS PT 01.37–01.41 (uusin; TEKEMÄTTÄ; lue ensin, sitten edellinen)
+1. **Jardin des Plantes (KK):** nykyiset rivit EI; 2029:ssä muotopuutarha, tiiviit rivit ja ruudut. Tilaa neljäs kuva samaan tilaukseen (15d, pysyvä kuvalupa, 1 otto) kuten Luxembourg: lisää P/puutarha-tilaus.py:n KOHTEET-listaan, aiemmat työt ja malli 2029:stä ensin. Käsin tehdyt rivit pois, kun kuva tulee.
+2. **Luxembourg:** KK arvioi kuvasta 15c: pari PT:lle (kuva on jo tullut).
+3. **Palais-Royal (PT 01.41):** tummia sirpaleita vasemmassa alakulmassa Louvren katon vieressä (P/pr-kooste.py:n louvre-maski) ja puut isot 2029:ään verrattuna: tarkista. **PT 01.37: vanhat puut pois myös pelistä;** uudet puut-uudet.json korvaa pariisi.json:n puulajin, joten varmista, ettei Palais-Royalin vanhoja rivejä jää muualta (toinen laji tai pelin vanhempi data).
+4. **Tuileries (PT 01.41):** keskellä vino puurivi poikki puutarhan (P/kolmio-tuileries.jpg). Tarkista 2029:stä; jos ei ole siellä, pois (MUOD "poikki": 2 tai kadun rivi).
