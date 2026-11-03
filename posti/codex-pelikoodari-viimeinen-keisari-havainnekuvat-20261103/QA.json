@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-11-03T15:48:52.752741+00:00",
+  "images": [
+    {
+      "file": "viimeinen-keisari-a-valtaistuin.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "outputSize": [
+        3000,
+        2000
+      ],
+      "export": "uniform Lanczos size conversion; not native 3000px detail",
+      "sha256": "5cfba8a41022b522bba91b818caa31bafd33b8e0ad2685efd42065f5ddf6dc24",
+      "visualQA": "PASS: photo appearance, required subject, no text/frame, historical references checked",
+      "ownerApproval": "pending",
+      "gameIntegrated": false
+    },
+    {
+      "file": "viimeinen-keisari-b-polkupyora.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "outputSize": [
+        3000,
+        2000
+      ],
+      "export": "uniform Lanczos size conversion; not native 3000px detail",
+      "sha256": "07f6926674109163f5c153be20b4b921960382f6cf659d68813c52cc509753a9",
+      "visualQA": "PASS: photo appearance, required subject, no text/frame, historical references checked",
+      "ownerApproval": "pending",
+      "gameIntegrated": false
+    },
+    {
+      "file": "viimeinen-keisari-c-yangxindian.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "outputSize": [
+        3000,
+        2000
+      ],
+      "export": "uniform Lanczos size conversion; not native 3000px detail",
+      "sha256": "4cd5e1290a4896acb6052d2a74afd4647bf4dea966b1baaac11b5a4b0a877f7b",
+      "visualQA": "PASS: photo appearance, required subject, no text/frame, historical references checked",
+      "ownerApproval": "pending",
+      "gameIntegrated": false
+    },
+    {
+      "file": "viimeinen-keisari-d-jingyuan.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "outputSize": [
+        3000,
+        2000
+      ],
+      "export": "uniform Lanczos size conversion; not native 3000px detail",
+      "sha256": "a8b52131c2c9eb1be6126c89c8ab05e5c9d7d8c9821c7024f5c8229d8968842c",
+      "visualQA": "PASS: photo appearance, required subject, no text/frame, historical references checked",
+      "ownerApproval": "pending",
+      "gameIntegrated": false
+    },
+    {
+      "file": "viimeinen-keisari-e-puutarhuri.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "outputSize": [
+        3000,
+        2000
+      ],
+      "export": "uniform Lanczos size conversion; not native 3000px detail",
+      "sha256": "d906c1fbca1acd62f5bf91c5cb53d6bf270b0ae2ba1cd1606a2a4e23fb3696c6",
+      "visualQA": "PASS: photo appearance, required subject, no text/frame, historical references checked",
+      "ownerApproval": "pending",
+      "gameIntegrated": false
+    }
+  ],
+  "generationCalls": 6,
+  "firstCandidates": 5,
+  "fullRegenerationCorrections": 1,
+  "correction": "c1 child on courtyard; c2 selected with child on steps",
+  "retryAuthority": "Owner standing direct permission for necessary image attempts; source quota history retained",
+  "archivalPhotographs": false,
+  "finalOwnerApproval": false,
+  "gameIntegrated": false,
+  "published": false
+}
