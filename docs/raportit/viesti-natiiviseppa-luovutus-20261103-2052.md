@@ -5,7 +5,15 @@ worktreet, simuketju, lukot, testit) on yhä voimassa: `git show afbe75860:docs/
 Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
 Omia taustaajoja ei ole. EI testejä eikä Kartta-testejä, kun `pgrep -fl "esikatselu.sh|Unity -batchmode"` näyttää ajon.
 
-## TILA: osa C (nähtävyyksien raivaus) VALMIS, kertoimet KK:n päätöksellä
+## LISÄYS 20.57: KK:n päätökset (PT 20.5x)
+- K4 YHDISTETTY väliaikaisena: **a1413d71c** natiiviseppa/k4-yhdistys-218 (wt/proto-natiiviseppa-raivaus) = VS:n
+  linssiseppa2/pariisi-tyyli 7e90b0bdd + d92b55063 (vain pariisi.json; Unity-testit ajamatta, esikatseluja käynnissä).
+  SHA PT:lle ja JU:lle 20.56. Auto-muunnelma 4381bf618 jää pois. Lopulliset pääkohteet nähtävyysalueina G:n koossa myöhemmin.
+- SEURAAVA ERÄ (osa C, KK): pääkohteissa raivaus = nähtävyysalueen maski (Codexin NAHTAVYYSALUE-kuvan peittävä alue);
+  Clipper2-raivaus (nykyinen raivaus_muoto) jää vain kirjaston pienille kohteille. Tee tee-esineet.py:hin maski-lähde
+  pääkohteille ja ElavaKoealue.AsetaRaivaus ottamaan maskin muodon; kerroin lasketaan samasta kuvasta.
+
+## TILA: osa C (nähtävyyksien raivaus) VALMIS, kertoimet: K4 valittu (yllä)
 - Raivaus + piirtojärjestys: VS yhdisti 60°:n (yv2) päälle = **8fc847bf4** (linssiseppa2/pariisi-tyyli). JU:n k6-pelikuvat 20.45
   /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261103-204005/ (p-* = koealue): talot pois nähtävyyksien alta, ei puolikkaita.
   Oma haara natiiviseppa/raivaus-218 (468d84515) on vanhentunut, ei yhdistetä.
@@ -28,7 +36,7 @@ Omia taustaajoja ei ole. EI testejä eikä Kartta-testejä, kun `pgrep -fl "esik
   samalla ajolla uudelle kuvalle; kertoimen pohjaleveys on vielä OSM:n itä–länsi-laajuus (käännetyllä kuvalla tarkista).
 
 ## AVOIMET
-1. KK:n päätös: auto vai K4 (vai jokin väliltä: kaupungin määrittelyssä esteet/kerroin_max/etusija, ei koodia). Valittu SHA → VS:lle.
+1. TEHTY 20.56: K4 a1413d71c (yllä). Seuraavaksi pääkohteiden maskiraivaus (LISÄYS 20.57).
 2. Moni kaupunki: toiselle ElavaKoealueelle KoealueenRaivaus-kutsu Laattapalvelin.Awakeen (nyt vain ElavaPariisi.Alue).
 3. Vanha jono: 354 ms PostLateUpdate → xctrace (JU:n laitevuoro); GC-haara vasta PT:n luvalla.
 
