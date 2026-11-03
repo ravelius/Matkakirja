@@ -37,3 +37,22 @@ Rooli: Julkaisija (JU). Työkalut /Users/Shared/Claude/julkaisija-tyokalut/. Ede
   kuka = sama ajo ja pid kuollut (julkaisija-tyokalut/l1-218ab-katkaisu-ja-218ac.zsh).
 - vie-paketti.sh "oli jo N" koko paketille = epäile nimitörmäystä: vertaa julkisen URL:n SHA paikalliseen, ei viedä → versio ylös.
 - proto-kaanna.sh "VIKA levy < 25 Gt" voi johtua hetkellisestä swapista; df uudelleen ennen siivousta.
+
+## LISÄYS 13.55 (nollaushetki) – korvaa yllä olevat "Käynnissä" ja "yhdistelmä"-osiot
+- **Pienen iPadin LOPULLINEN yhdistelmä eb2c92eb3** (wt /Users/Shared/Claude/wt/julkaisija-yhdistelma-218) = c660bbc50 + NUI 8afe28dfa
+  + KS 4301f394a + NS a9a04972c (loppurajaus) + NUI 374582ef4 (Pariisin 3 kuvaa) + NUI c6c7cfd85 (Sacré-Cœur). Kaikki ristiriidatta.
+- **L2: yhdistelmäsimu eb2c92eb3** (NS:n yhdistelma-simu.zsh, alkoi 13.49; NS nollautui kesken). Loki
+  /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-3d-selvittaja/6c64ef3b-5235-4e7f-aa15-5175a9938507/scratchpad/yhdistelma-eb2c92eb3.log,
+  valmis = "YHDISTELMÄSIMU VALMIS". JU:n vahti julkaisija-tyokalut/vahti-eb2c92eb3.zsh (kuolee nollauksessa → aja uudelleen).
+  **Tulos (videot/kuvat) → PT (local_5df52e10) → KK katsoo → PT:n ASENNA → pieni iPad** (laite-sha.sh eb2c92eb3 + devicectl
+  00008142-0019686E02F3801C; malli laite-218-1420265d7.zsh ASENNA=1). Jos ajo kuoli: orpo L2-lukko pois (kuka eb2c92eb3, pid kuollut) ja
+  aja `LINJA=2 zsh /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/lahto-tulo/yhdistelma-simu.zsh eb2c92eb3` (PT 14.1x: NUI saa sen, jos NS ei).
+- **L1: NUI välisimu b39c1bc9a** (+ KS:n Pariisi/Big Ben -kuvat), alkoi 13.47 → VAPAA NUI:lta.
+- **Jono (ensimmäinen vapaa linja):** 1) VS k6 (`LINJA=<n> zsh …/linssiseppa2/kontakti218/ajo-k6-kaikki.zsh`, laite + Unity-pari, sitten
+  iso iPad), 2) PK 218ae `PROTO_LINJA=<n> zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218ae/ketju-ae.zsh taso1b cc`
+  ja heti perään 218af `…/sali-218af/ketju-af.zsh ys tj cx` (JU ajaa itse, alku+valmis PK:lle local_91a1bc27-6870-46aa-9886-66fd33b68880),
+  3) LAV editoripari 02 (+06), kun PK on kytkenyt osasarja-v12 (LAV pyytää).
+- Iso iPad: runko 1420265d7; NS:n vieritysmittaus (~6 min, ei palautusta) ajetaan ipad-lukolla, kun vapaa.
+- Viety 13.15 jälkeen: LAV osasarja-v11 (13.17), osasarja-v12 (13.52, EI junaan). Levy: 23 isoa mp4:ää siirretty T7:lle
+  (/Volumes/T7 4TB/Matkakirja-lokit-arkisto/proto-3d-lokit/, skripti siirra-isot-mp4-t7.zsh) → 28 Gi; PK karsii _tyo/pelikoodari (PT).
+- PT kuittasi junaan 218: PK 5238f873c + c50c8c5ee (sivusuoja), 218ac. Juna käännetään vasta omistajan pyynnöstä.
