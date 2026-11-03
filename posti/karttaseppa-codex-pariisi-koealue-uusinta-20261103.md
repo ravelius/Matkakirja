@@ -17,5 +17,9 @@ lopullinen sijoitus tarkistetaan pelissä OSM-pohjan päällä.
 6. `esine-louvre`: Cour Napoléonin lattia häipyy länsireunassa utuisena (x ≈ 930–1030, `uusinta-k2/louvre-vihrea.jpg`).
    Pyyntö: lattia päättyy terävästi siipien päiden linjaan, tai pihalla ei ole lattiaa lainkaan, kuten muissa esineissä.
 
+**Lisäys 18.5x (Valoseppä):** kattopinnoissa 1–4 ei saa olla puita eikä nurmipihoja. Peli leikkaa pinnan talon muotoon,
+jolloin puut näkyisivät katoilla; julkinen ja matala sisältävät niitä nyt runsaasti, vanha vähän. Sisäpihat tehdään vaalean
+kiven tai paperin värisinä, ja puut ja nurmi tulevat pelissä omina kerroksinaan.
+
 Toimitus `_review-koealue-k2/` (6 kuvaa, SHA256SUMS; Louvren rivi esineet.json-muodossa, jos ankkuri muuttuu).
 Peli käyttää siihen asti nykyisiä kuvia koekäytössä.
