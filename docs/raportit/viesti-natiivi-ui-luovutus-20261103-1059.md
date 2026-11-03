@@ -27,3 +27,9 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1046.md (sen jono 1–3 tehty). S
    pallot panoroidessa ja liikkumisessa, reitit nopan jälkeen. Kuvaparit PT:lle, 3 riviä.
 2. PT:n kuittauksen jälkeen JU:lle: asennus PIENEEN iPadiin, KK katsoo ensin (PT 10.4x). Iso iPad (E) vasta PT:n kuittauksen jälkeen.
 3. Vanhat: video iPadilta; veneet joen keskiviivaa (KS:n Seinen reitti); animaatiokuvien ämpärivienti PT:n luvalla; Codexin vana-otto.
+
+## LISÄYS 11.08 (PT 11.0x: pallot + reitit kuitattu, kohdan 3 tulkinta ok; pieneen iPadiin yksi asennus vasta, kun KK 1–7 korjattu)
+- **749ce84be** (sama haara, peilissä): KK 4 otsikko lähtee viimeisen kuvan paluun aikana (Saapumistraileri kuvatOhi nousukokeessa);
+  KK 7 Development Console oletuksena pois (UiNakymat; testeille "ui konsoli paalle"). Nyt KK 1–7 koodattu, käännös tekemättä.
+- JU perui d7f906462-ajon (ei käännetty). JU:lta pyydetty simuvuoro 749ce84be:lle.
+- JONO 1 päivittyy: simu **749ce84be** (ei 40c4bbbc6) → simuvideo PT:lle. Vasta PT:n luvalla JU asentaa pieneen iPadiin (yksi asennus).
