@@ -26,3 +26,11 @@ tunnista.py (5d pelin testikameralla, pikselistä kolmio; oikein päin), nakyma.
 
 ## PIDOSSA ennallaan (edellinen luovutus)
 Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:lle Pariisin jälkeen), lod1-räystäs ja sali 04, oviaskelman kylki ja sokkelin vinot viivat (parit 01, 05), Baoding-lod1.
+
+## LISÄYS 4.11. (PT, pari ja Wumen katsottu, viety KK:lle; v125 EI vientiin) — SEURAAVAN TYÖLISTA
+1. 5d:n koristeet ja pääty.
+2. Wumenin lattian tumman juovan syy.
+3. Oikean sivuholvin sokkelin revitty reuna (ylempänä "nuolimainen kivikuvio").
+4. Holvin pylväiden laikut.
+5. 404:t: kielletty-osasarja-v13/pursotukset.glb ja kielletty-c2-v37/a5-marmorikaide-pylvas-lod1.glb: selvitä, onko vika. Baoding-lod1 ei ole vika (PT). Ylempi "tunnettu" koskee vain Baodingia; a5:tä ei ole selvitetty loppuun.
+6. Katso alkulennon kuvat 1–3 (koeajo2).
