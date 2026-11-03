@@ -29,7 +29,9 @@ N = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tasangot-poltto-20261103/`.
    <Merkittavat.json>` → proto: PiirrosKerros.TasoVersio uusi nimi + Tasot[lahig].alueet (rivi ~207) + Kylttisiirrot-taulukko; VeneVersio
    on oma kansio (ei muutu). Kuvapari PT:lle sama rajaus kuin JU:n pari-zoom-2-keski (proto-3d/lokit/julkaisija-koe-pari-6da58f32b/).
    PT 16.5x: "v6-liitos heti Codexin toimituksesta, TasoVersio, rivi PT:lle". Ämpärivienti JU:lla vie-paketti.sh (uusi kansio, 11.26).
-2. **Pitkät ruudut jatko:** seuraavan JU/NS-mittauksen syyriveistä Nimikerros.Elavat/Lado/Piirra → karsi suurimman varaukset
+2. **Pitkät ruudut jatko:** LISÄYS 17.0x (PT: karsi heti) proto **6cd9cf100** samaan haaraan → PT:lle rivi, JU:n pakettiin: Nimikerros saa
+   oman nimiönsä takaisin poolista ilman t.text-asetusta (omistajat-taulu, Rivi.vanhaTmp), merkittävän qid kerran, GameObject-nimi vain
+   editorissa; 0 virhettä, 599/599. Seuraavaksi: seuraavan JU/NS-mittauksen syyriveistä Nimikerros.Elavat/Lado/Piirra → karsi suurimman varaukset
    (epäilys LisaaElavat: 200 riviä/kehys, jokaisella Aluenimi + Paikat-sanakirja + merkkijonot). Tavoite < 33 ms.
 3. **Esittelypaikat** (ennallaan, luovutus 1630 AVOIN 3): silmukka pid 26124 (irrallinen), Overpass 502/fetch failed 16.4x.
    Valmis = E/silmukka.log "VALMIS" (log syntyy vasta ensimmäisen kierroksen jälkeen) → E/MUISTA.txt → worktree
