@@ -1,0 +1,29 @@
+{
+  "14": {
+    "nimi": "Sacré-Cœur",
+    "piirretty_px": [
+      574,
+      790
+    ],
+    "ero_m": 114,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "92": {
+    "nimi": "Hôpital Lariboisière",
+    "piirretty_px": [
+      853,
+      977
+    ],
+    "ero_m": 98,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "24": {
+    "nimi": "Gare du Nord",
+    "piirretty_px": [
+      907,
+      1057
+    ],
+    "ero_m": 96,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  }
+}
