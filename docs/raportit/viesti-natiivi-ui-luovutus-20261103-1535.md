@@ -26,3 +26,7 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1501.md.
    KS/PK:lta, ei tehty (Raamattu 2.200: Peking muuten kiinni). Codexin havainnekuvat a–e: lisää tiedosto-kenttään, kun tulevat.
 3. Avoimet 1501-luovutuksesta: GBR-loittonema (kysy PT:ltä, jos KK huomauttaa); video iPadilta; veneet joen keskiviivaa;
    animaatiokuvien ämpärivienti PT:n luvalla; Codexin vana-otto.
+
+## LISÄYS 15.4x (JU): YHDISTELMÄ 1087abf41 = c9ab58e88 + ASTC 6a7af2d9d + 6eeffaa57
+Simu tällä SHA:lla: `KAANNA_VAIN=1 zsh ajo.zsh <n> 1087abf41` (skripti kansiossa nui-keisari-pariisi-c9ab58e88-20261103, kansion nimi
+vanha). JU lähettää SIMU NYT, kun NS:n 1b-simu vapauttaa L2:n. JU:n koontiaika.txt-ehdotus peruttu: 6eeffaa57 kirjoittaa koottu.txt itse.
