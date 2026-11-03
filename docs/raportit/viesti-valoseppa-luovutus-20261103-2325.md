@@ -35,3 +35,6 @@ Esikatselu vain JU:n vuorolla (JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd). V
 - ElavaMaski.Peitto on 0/1, ei 0–255: raja `!= 0`, ei `>= 128`.
 - Wt:t: proto-linssiseppa2-k12b (f50d074a1, koe, ei junaan) poistettavissa, kun NS:n aukio-poisto on tehty. Koko Pariisi 135e03994 + Z11–12-massa 43df66241 pysyvät haarassa pariisi-katot KK:n hyväksyntään asti; huom. 43df66241 sisältää myös PienetAlueet-version, jolla on Z16–17:n palasauma, ja p11-pinnan: yhdistäessä ota k13:n versiot.
 - Sade (5ed5f95e2) odottaa äänen laitetarkistusta; rakettivideo tauolla.
+
+## LISÄYS 23.26: UUSI TEHTÄVÄ
+PT 23.26 (ohittaa epävarma-kohdan rajasta): raja on vielä oletus. Epäily: Z12-pala 2074 tai sen Z11-emo 1037 poikkeaa naapureistaan sävyltään tai tasoltaan. Mittaa k13-ajosta ruudun värit reunan molemmin puolin ja ota palapyynnöt lokista samalta ajolta, jotta tasopari todistuu; samasta ajosta on nähtävä pohjoiskaista. Korjaa vasta, kun syy on todistettu; tulos PT:lle yhdellä rivillä. Huom: k13:n kamerassa näkyy vain itäreuna (lon 2,373), ja lokissa ei ollut pyyntöjä viimeisen ajon jälkeen aiemmissa ajoissa. k13 alkoi JU:n L2:lla 23.26.
