@@ -1,0 +1,93 @@
+{
+  "measuredLandmarks": 24,
+  "allMeasuredWithin140m": true,
+  "unmeasuredMinorDetails": [
+    {
+      "nro": 12,
+      "nimi": "Sorbonne",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 31,
+      "nimi": "École des Beaux-Arts",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 41,
+      "nimi": "Musée Picasso",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 46,
+      "nimi": "Canal Saint-Martin",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 51,
+      "nimi": "Jardin des Plantes",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 59,
+      "nimi": "Musée Carnavalet",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 60,
+      "nimi": "Musée de Cluny",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 65,
+      "nimi": "Châtelet’n metroasema",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 70,
+      "nimi": "Hôtel-Dieu de Paris",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 71,
+      "nimi": "Théâtre du Châtelet",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 75,
+      "nimi": "Place du Châtelet",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 80,
+      "nimi": "Musée du Luxembourg",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 90,
+      "nimi": "Saint-Merrin kirkko",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 93,
+      "nimi": "Saint-Séverinin kirkko",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 94,
+      "nimi": "Fontaine des Innocents",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 95,
+      "nimi": "Hôtel de Soubise",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 96,
+      "nimi": "Hôtel de Sully",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    }
+  ],
+  "policySource": "posti/karttaseppa-codex-pariisi-palat-1-15-tilaus-20261102.md: Pienet kohteet saavat jäädä kortteleiksi.",
+  "receiverReview": "pending; targets never substituted for observations"
+}

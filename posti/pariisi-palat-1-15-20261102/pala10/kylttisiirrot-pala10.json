@@ -1,0 +1,65 @@
+{
+  "84": {
+    "nimi": "Place de l’Hôtel-de-Ville",
+    "piirretty_px": [
+      715,
+      151
+    ],
+    "ero_m": 138,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "97": {
+    "nimi": "Val-de-Grâcen kirkko",
+    "piirretty_px": [
+      523,
+      814
+    ],
+    "ero_m": 112,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "54": {
+    "nimi": "Gare d’Austerlitz",
+    "piirretty_px": [
+      1188,
+      811
+    ],
+    "ero_m": 104,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "28": {
+    "nimi": "Pariisin suurmoskeija",
+    "piirretty_px": [
+      861,
+      769
+    ],
+    "ero_m": 88,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "68": {
+    "nimi": "Tour Saint-Jacques",
+    "piirretty_px": [
+      666,
+      128
+    ],
+    "ero_m": 74,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "13": {
+    "nimi": "Sainte-Chapelle",
+    "piirretty_px": [
+      551,
+      225
+    ],
+    "ero_m": 64,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "39": {
+    "nimi": "Place des Vosges",
+    "piirretty_px": [
+      1162,
+      208
+    ],
+    "ero_m": 62,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  }
+}
