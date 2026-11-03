@@ -221,3 +221,7 @@ Omistaja KK:n kortissa 'Onko Notre-Dame nyt tarpeeksi suuri?': "Ei se voi noin m
 ## PUYIN TARINA EI KESKEN JUOKSUN (3.11.2026 klo 21.48–22.05) (3.11.2026 klo 22.05)
 
 Omistaja: "Juoksu pelin ei voi tulla kesken pelin mitään opetus kortteja"; kortilla tarkennus "Tarkoitin opetus korteilla puyin yms elämästä. Näin jonkin sellaisen edellisessä sessiossa" (kuva lokit/pk-keisari-kk2-7ac89ff33-2118/kk1-nosto-pelin-paalla.png); kortti 'Avautuuko Puyin tarina vain juoksun jälkeen?' → "Myös valikosta tauolla". Linja: Puyin tarinan kortit eivät tule juoksun aikana esiin itsestään, vain pelaajan valinnasta (☰ tauolla, lopetusruutu). 7ac89ff33 täyttää tämän, muutosta ei tehdä. KK:n ensimmäinen tulkinta (ohjainopetus pois, PR 6222) peruttu PR 6223:lla; 2.177 ennallaan. Kirjattu 2.200:aan.
+
+## OIKEA G-MALLI (3.11.2026 klo 22.09) (3.11.2026 klo 22.13)
+
+Omistaja (kuva docs/raportit/kaappaukset/omistaja-20261103/kk-2209-vaara-g-vertailu.png): "Tässä on väärä vertailu kuva oikealla. Oikea g versio on paljon liioitellumpi. Siinä kirkon tornit levenevät ylöspäin". G = pariisi-koko-kaupunki-G-tyyli.png (d0191a334), ei pariisi-laaja-g-v4.png. KS korjaa ND k4 -tilauksen, RAKENNUSPERIAATE.md:n, NAHTAVYYSALUE.md:n ja G-v4:stä mitatut kertoimet. Kirjattu 2.204:ään.
