@@ -14,3 +14,8 @@ Syy: konteksti 30 %, luonteva tauko (k21 PT:llä). Edellinen: viesti-valoseppa-l
 ## Työkalut
 `zsh k21/aja.zsh <tunnus> 17 15 13` (kuvat k21/<tunnus>/, data linkkeinä k19/data-paikka, cs/ vain k21:ssä). Mittari `k21/mittaus/mittari.py <kansio>` (venv tulivuoret), rantojen kuvat `k21/tyokalut/merkit.py <kansio> <kansio>`, aukiot `k21/mittaus/aukiot.py`, isot talot `k21/mittaus/isot.py k21/data-paikka`. Uusi versio omaan kansioon k22/; p-versio ElavaPariisi.cs:ssä nousee aina (nyt p21).
 Koodi: ElavaTyyli.Korttelikartta (täyttö), RantaAvoimeksi, SuljetutAvoimiksi, OnIsoKatto, KoealueKoostus (seinät ja maskit), ElavaKoealue.Painot (soikio).
+
+## LISÄYS 01.0x: ohittaa yllä olevan SHA:n ja mittarin
+- **k21 = f034786ce** (p21, 610/610; julkisivut #d8bf94 ja #c4aa82). Z17 kerma 21,3, L 124/156/218. Laitteella ei vielä ole p21:tä, joten p-versio ei noussut.
+- PT 00.50: kattoihin ei uutta kierrosta ennen KK:ta; laiteajoa ei JU:lle ennen KK:n kantaa. Saint-Sulpice oli oma mittausvirheeni: aukio on ehjä (k21/v7/ss.jpg). Soikion häivytys on minun, mukana k21:ssä.
+- Postivahti: nollaus vasta 35 %:n lähellä uudella LUOVUTUS VALMIS -rivillä.
