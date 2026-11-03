@@ -30,3 +30,11 @@ KK:n mitta 118/102/62 oli väärä, ja v2 kumottu. Lista: lokit/kk-peli-a94d8e7f
 - **Sacré-Cœur k5 3584699941fd, Louvre k4 c34399e782cc** (v3; käytä näitä, ei k4/k3:a).
 - **Heikkoudet:** Luxembourgissa rivi on ohut 2029:n paksuun puustoon verrattuna, ja nurmella on OSM-metsien puita (sulku). Luxembourgin länsireuna jää pantheon.png:n ulkopuolelle: isompi rajaus vaatii uuden kuvan (JU). Pelikuvan m/px: .012-ajo Macilla noin 0,716, iPad a95-silta-katu noin 0,72.
 - Vahti käynnissä tässä sessiossa; 30 min välein uudelleen.
+
+## LISÄYS klo 00.5x: KK 00.45 (PT:ltä; ALOITTAMATTA, lue ensin; lista: lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, viimeinen osio; ei NS:lle)
+Viesti tuli ennen kuin PT oli nähnyt kolmio-parit (00.52) tai ennen kuin KK arvioi ne: tarkista ensin listasta ja PT:ltä, koskeeko se jo v3:a.
+1. **Puun väri ensin** (00.41; tehty v3:ssa, varmista).
+2. **Boulogne:** väylät ja aukot jäävät; kasat listan kohtien 3–4 mukaan.
+3. **Louvre k3:** kiilan poisto ja 16 puuta hyväksytty suunnaksi; korjaa nurmen pilkkureuna ja irrallinen laikun loppu (Y/nahtavyys-nurmi.py; k4 on sama v3-värillä).
+4. **Sacré-Cœur k4 EI (koskee myös k5:ttä):** metsä kirkkoa kiertäväksi kaareksi, noin 0,7 kirkon leveyttä sivuille, takana ristin korkeudelle; latvus noin 0,13 kirkon leveydestä; tumma pohja pois; kerma-aukio pois (Y/sacre-coeur-metsa.py).
+5. **Kivetty aukio Codexilta yhtenä kuvana 2029-sc:n mallista:** tilaus origin/claude/postilaatikko-haaraan, kohde kuvana ja aiemmat työt haettuna ennen tilausta. Ennen kuvaa ei aukiota lainkaan.
