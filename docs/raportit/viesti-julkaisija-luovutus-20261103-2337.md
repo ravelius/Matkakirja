@@ -21,3 +21,10 @@ Iso iPad: pk-otsikko-ipad bf54a5c4f (alkoi 23.36, runko 693cf437f takaisin; kans
 ## VALMIIT (lähetetty)
 k12, k12b → VS | d64f74a56, a57c0b473 terävyys → VS + PT | koealue2, f5b3c3361, 9528c1d53, k11 iPad, a94d8e7fb → PT (kuitattu) | sauma-a2 → NUI | v123 → LAV.
 Viennit: sacre-coeur + opera + animaatiot-2029-20261103 (13), nd v3 + grand-palais + invalides + pantheon + montparnasse (5), sillat (6), sainte-chapelle (1), tausta-v124 (100; PT:n ehdot OK: 404, TF 217 60bd5c35 vakio v94).
+
+## LISÄYS 23.44 (korvaa ristiriidassa olevat kohdat yllä)
+Linja 2: a94-eiffel VALMIS (lähetetty) → ns-95a733ace (korvasi 159acdf0c, sk-sillat-v3-ju; → PT "k11 koe") → vs-k14 b9d044fb6 (→ VS) → ns-a94d8e7fb-loppu → nui-laatat → ks-4e929f038 (nimet, sk-ks-nimet-ju; polut KS:lle).
+Linja 1: lav-v124 → ns-95a-laite2 (PT:n iso iPad; käännös jatkuu vanhasta laite-iso.zsh-lapsesta, laite-95a733ace.log) → palvelijat v7 a79caa5a4 (odottaa lav + 95a-käännös) → lav-parit-v124 (editori 01 + 05, polut LAV:lle). Otsikko iPhone VIKA 23.42 (simu ei käynnistä sovellusta) → PK korjaa ja pyytää uudelleen; ei omaa uusintaa.
+Iso iPad: otsikko bf54a5c4f + ns-95a-laite2 (Montparnasse, ND + Louvre, silta + katu, vene Pont Royal, muisti; → PT täysikokoisina) → vs-teravyys-b9d044fb6 (odeon-kamera; → VS + PT) → nui-sali-vianhaku 4397cf20d (PT:n lupa; VIKA hyväksytty, EI toistoa; rivi "SALI-VIANHAKU VALMIS" NUI:lle; asennustodiste nui-sali-vianhaku-asennus.txt).
+Lupaukset: NS saa VAPAA-rivin Kartta-testeille (3 min), kun linjat tyhjenevät. NS:n c/d-sillat: uusi SHA erikseen. LAV v124-kuvat polku LAV:lle. "? options:" = devicectlin onnistumislistan viimeinen kohta (ei virhe).
+Viety lisäksi: notre-dame-alue-v4. Monitorit eivät siirry: uusi rooli katsoo lokit ketjujen nimillä.
