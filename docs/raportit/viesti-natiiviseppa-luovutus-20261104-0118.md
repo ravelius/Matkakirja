@@ -13,6 +13,10 @@ Tehty VS:n reunan 804d491d1 päälle, Painotiin ei koskettu (VS 4.11.: uusi VS j
 - **Nähty, koe 9dddd7adc** (lokit/esikatselu-20261104-010932, 640×480-pohja, ei iPad): b-0-30 näkymätön, c-0-21 lähes, d-0-17 väli, e-0-13 täysi, f-0-10 täysi, g-0-21-paluu kuten c, h-lansiraja reuna pehmeä. PT:lle kerrottu 01.1x.
 - Kartta-testit 610/610 kärjessä ed9945330 (b264f241f ja Alman jälkeen ei ajettu).
 
+### PT 01.18 (kuvat viety KK:lle; sitoo)
+- e-0-13:n pystysaumaa EI oleteta pohjan (640×480) viaksi. Tarkista ajon jälkeen, kuten 0,17:ssä (d-0-17) näkyvä suorakaide.
+- Alman yhteydessä siirtyneet 12 siltaa ovat jo hyväksyttyjä: seuraavassa ajossa silta-kuvat, ja tarkista, voiko siirron rajata Almaan. NS:n arvio, ei tehty: voi, sillat-osm.py:ssä keskitys vain nimelle "Pont de l'Alma", tee-esineet molempiin kp:ihin (Merge-sääntö). Vanhat arvot: sillat-pariisi.json:n ajo ilman keskitystä.
+
 ### AVOINNA häivytyksessä
 1. **b264f241f ajamatta:** korjaa c:n, d:n ja g:n tumman hiusviivan (lat 48,923 = Z11-rivin raja; läpinäkyvän palan musta väri suodattui). Tarkista viiva poissa (c-0-21:n rivi noin 386/2064).
 2. **Pystysauma e-0-13:ssa** (x noin 924/2752 ja oikealla): vasen puoli sumeampi taso, oikea tarkempi. Myös d:ssä tavallisella kartalla. EPÄILY 640×480 (Cesium valitsee tason pelin ruudusta) tai kahden kerroksen hitaampi lataus 35 s:ssa. EI todennettu: ratkeaa vain isolla iPadilla (PT päättää iPad-yhdistelmästä).
