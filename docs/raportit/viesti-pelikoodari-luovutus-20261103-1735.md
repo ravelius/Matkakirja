@@ -36,7 +36,15 @@ Proto-haarat paikallisia; worktree /Users/Shared/Claude/wt/proto-pelikoodari-ys-
    Aikavastaavuus: videon s × 51,935 = kamera.txt-ruutu (tallenne 50 fps). Korjaa samaan junaan myös (2) ja selvitä (3) ennen KK-pakettia
    (PT: ei omistajalle ennen korjausta). Paketti kuten sali-218aj/kk-taso1b/, rivi PT:lle.
 3. am mp: ei kiveyskuvaa, ei massaa portilla (huom-*.txt), maalin näköala.
-4. UUSI (PT 17.3x, tuli luovutuksen jälkeen): Codexin elokuvaotsikot #1867–1868 toimitettu (c3a5c2e29,
+4. LISÄYS 17.5x (PT: jatka 35 %:iin): ALKULENTO KYTKETTY proto horisontti-218am a592f6e28 (67fdba66c:n päällä): JuoksuAvausJuliste
+   Kerrokset MITAT.json "alkulento" -paikoilla yhdessä lohkossa ruudun keskellä (leveys 86 %, korkeus ≤ 42 %), ryhmät 0,4/1,0/1,6 s,
+   häivytys alkaa 4,0 s (KuvatNakyvissaS 4,8); usva PÄÄTETTY: soikea gaussi-usva (alfa 0,42) lohkon takana. Resources-kuvat tavuittain
+   Codexin. Unity-tarkistus 0 virhettä. JU:n am-ajo (taso1b, haaran kärki) näyttää sen → tarkista videon 0–5 s, sitten rivi PT:lle.
+   AUKI: LATAUSKUVA (rivi1 + latauskuva-viiva + rivi2, MITAT "latauskuva" 3000 × 625; vaakaan Codexin tiiviimmät rivivälit
+   previews.loadingLandscape.nativeRowOverrides: tausta 2560 × 1180, otsikko x 580 y 35 leveys 1400). Ehdotus: koosta kaksi PNG:tä
+   (perus + vaaka) → media-paketti JU:lle (media-vienti = julkaisu, PT:n kuittaus), sitten JuoksupeliNakyma.OtsikkoUrl + VaakaOtsikko
+   ({1400/2560, 1280/2560, (35 + korkeus/2)/1180}) ja pysty Osa(…) Codexin pysty-esikatselun mukaan (x 67 y 250 leveys 1120 / 2048).
+   Tarkista hattumaskin päällekkäisyys alfoista (LatausRajausTestit). Tilaus: Codexin elokuvaotsikot #1867–1868 toimitettu (c3a5c2e29,
    posti/codex-pelikoodari-juoksupeli-elokuvatekstit-20261103/; kuitti bba783c3a). Arvioi ja kytke rivit + ~4 s häivytys; Codexin ehdotus
    pehmeä vaalea usva tekstin taakse tummilla kattoalueilla – päätä itse. Tulos PT:lle.
 5. Edellisen luovutuksen kohdat 4–7 ennallaan (Codex-toimitukset, Editor-työkalut kivi-216:een, taso1b musiikkirivit, checkout).
