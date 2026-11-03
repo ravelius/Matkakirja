@@ -43,3 +43,21 @@ Huom: Codex lähettää koostepostia samoista otoista (esim. 8fc7779cb, 907a93e1
 - pala15 v2 HYVÄKSYTTY (b864749f8) ja pala02 v2 HYVÄKSYTTY (6b66b566f) → `hyvaksytyt.json` = [2, 3, 5, 6, 7, 10, 11, 15].
 - pala09 v4 (7419e3ee9) palautettu 0fab21bac: raja y = 154 yhä näkyvä (mittari 2,16); Codexille ehdotettu inpaint-rajavyöhyke.
 - Jono (PT kuittasi): 09 v5 + 01 rinnakkain → 14/13/04 (koskettavat 09:ää) → 08 → 12 (4983f57f4).
+
+## LISÄYS 2 klo 09.35
+- **pala01 HYVÄKSYTTY** (449675f61) → `hyvaksytyt.json` = [1, 2, 3, 5, 6, 7, 10, 11, 15].
+- **pala09:** v5 (491d0ba80, kuva 59a0d6ed…) palautettu 4bcbe2107: Champ de Mars ja ranta jatkuvat, mutta katko Eiffelin
+  alla johtuu pala05:n lukitusta korttelin yläosasta (pala09-koord. x ≈ 280–400, y ≈ 125–153). v6:lle tarkka ohje
+  (piirrä korttelin alaosa, muuta vain x 230–460, y 154–230). cc7566584 oli sama v5. **PT:n varasuunnitelma:** jos v6
+  katkeaa, avaa pala05:n lukko kapealta kaistalta (x 280–400) ja korjaa korttelin molemmat puolet yhdellä otolla; ei
+  seitsemättä kierrosta samalla lukolla. Jono 09 v6 → 14/13/04 → 08 → 12.
+- **Saumaliukuma sovittaa myös terävyyden** (oletus `terävyys=1`, PT kuittasi; `P/LUE.md` ja `P/SHA256SUMS` päivitetty).
+  01|05: yksityiskohta 19,5 → 14,0 (lukittu 10,8). Pari P/tarkistus/pala01/pari-teravyys-T0-T1.jpg.
+- **Tasankoketju (PT 09.3x):** poltto vaihe 1/5 noin 25 % klo 09.15 (N/1.log, arvio ~13 UTC). Kun ketju valmis →
+  delta → välitaso → VIENTI.md JU:lle (N/LUE.md "Ketjun jälkeen"); rivi PT:lle.
+- **UUSI ERÄ (PT 09.3x): saapumisen esittelykuvien paikat**, KK:n suunnitelma
+  `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261103-saapumisen-kuvat.md` osa B: jokaisen
+  kaupungin esittelykuville kohde ja koordinaatti (esim. Lontoo: Tower Bridge, parlamenttitalo, Pyhän Paavalin
+  katedraali); paikaton kuva → kaupungin keskusta (pieni kuva kaupunkimerkin viereen). Ensin Lontoo ja Pariisi, sitten loput.
+  Sisältökirjuri levossa → KS yksin. Lue suunnitelma kokonaan (luvut 3–4: UI-pohja = Avauskortin miniatyyri, porrastus kuten
+  nostot, ei päällekkäisyyttä 25 m) ja selvitä ensin, mistä esittelykuvat ja kaupunkien tiedot luetaan (grep muiden haarat).
