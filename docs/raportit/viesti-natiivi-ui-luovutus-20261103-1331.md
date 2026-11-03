@@ -33,3 +33,18 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1222.md (+ LISÄYS 12.23). Syy: k
   ks-pariisi.png KS:lle). Aja: `KAANNA_VAIN=1 zsh ajo.zsh <n> b39c1bc9a` taustalla → VAPAA JU:lle heti → simuosa
   `SIMU_ODOTA=3600 SIMU_MUISTIRAJA=16 OHITA_KAANNOS=1 zsh /Users/Shared/Claude/proto-3d/tyokalut/simu-lukko.sh kaari Natiivi-UI
   yhteinen-iPad13 -- zsh ajo.zsh <n> x` taustalla. Tulos PT:lle 3 riviä; ks-*.png-kuvien polku myös KS:lle (osoitekirja).
+
+## LISÄYS 13.5x (PT 13.5x, KK katsoi 0c103c3a9): Lontoo OK – UUSI KÄRKI: Pariisin loppurajaus (ennen simua b39c1bc9a)
+KK: paluussa Pariisiin kaksi Eiffel-kuvaa nousee vasemmasta reunasta (paluu-pariisi-pieni.mp4 8,3 ja 10,8 s, kansio
+lokit/nui-reitit-pikkukuvat-54897ab16-20261103) eikä Eiffel näy. Vaatimus: kolme ERI kohdetta näkyvillä paikoillaan eri suunnista
+(esim. Eiffel vas., Sacré-Cœur ylä, Notre-Dame). Commit → JU yhdistelmään b39c1bc9a:n päälle, rivi PT:lle, sitten YKSI yhteinen simu
+(sama ajo myös KS:n kuvat: KS:n lista /Users/Shared/Claude/proto-3d/lokit/karttaseppa-pariisi-bigben-0c103c3a9-20261103/ajo.zsh
+rivit 35–44, liitä ne skriptiin nui-ks-kyltit-b39c1bc9a-20261103/ajo.zsh omien ks-*-kuvien tilalle; polku KS:lle).
+Suunnitelma (proto-työpuu, haara natiivi-ui/saapumiskuvat-nousu-218, kärki 8afe28dfa):
+1. PeliOhjain.Keskusta.cs SaapumisZoomaus: piirroskaupunki palaa nyt heti (PiirrosKerros.Keskusta) ilman rajausta → anna
+   KohteidenRajaus myös piirroskaupungille (keskusta = piirroksen oma). PalloKierto.AjaKeskustaan ottaa max(lähitaso, rajaus).
+   Tarkista, ettei KytkeSaapumisKeskusta/-Korkeus muutu piirrokselle (ne palauttavat piirrokselle null/0 → esilataus ennallaan).
+2. Rajaus vain niistä paikoista, joiden kuvat tässä saapumisessa nousevat (traileri 3 + nykyintro), ei kaikista: nyt laatikko
+   kaikista kaupungin paikoista (vara-json Pariisi 7: Eiffel 2.294 … Notre-Dame 2.350; paketissa ehkä 15).
+3. Kuvavalinta: kaksi Eiffel-kuvaa = trailerin kuvalista (Saapumistraileri ~r. 215, SaapumisKuvat.Lahto). Valitse kolme eri
+   Kohde-kenttää (esittelypaikat.kohde); puuttuvat kuvat/paikat (Sacré-Cœur) KS:lta.
