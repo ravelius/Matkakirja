@@ -54,3 +54,14 @@ Koko päivän jonoloki: julkaisija-tyokalut/jono-20261103-ilta.txt (viimeiset ri
 - Laite 2212b570e L2:lla käynnissä 16.20 (laite-2212b570e.log). Perään automaattisesti (nohup ketju-koe2.zsh) laite **9b9695a7d** = 2212b570e + NS f4334cbfd
   (häivytys ruudun leveyden mukaan; PT 16.2x kohta 2). Mitattava koe = 9b9695a7d (koe-mittaus-iso.zsh) → kuvat + konsoli (PiirrosKerros-osamerkinnät) PT/NS/KS.
 - NS luovutti (afbe75860); konsolin luku seuraavalle NS:lle.
+
+## TILINVAIHTO 16.26 (PT/omistaja) – tila 16.26
+- Käynnissä (nohup, jatkuvat nollauksen yli): L2 laite 2212b570e (laite-2212b570e.log) → laite 9b9695a7d (ketju-koe2.zsh, laite-9b9695a7d.log).
+- Käynnissä tämän session taustalla (voivat katketa nollauksessa → tarkista ja aja uudelleen):
+  a) L1 PK 218ag: ys tj cx ty xf cc valmiit 16.22, taso1b kesken (proto-3d/lokit/julkaisija-ag-20261103.log). Jos kesken: aja vain taso1b
+     `PROTO_LINJA=1 zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218ag/ketju-ag.zsh taso1b` → PK + PT.
+  b) ISO: NS vieritys reunat on → pois (vieritys-6da-on.log / -pois.log). Jos "pois" puuttuu: `IPAD_ODOTA=3600 zsh .../ipad-lukko.sh kaari natiiviseppa --
+     zsh /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/fps60/vieritys-reunat.zsh 6da58f32b pois` → tulos NS:lle.
+- Pieni iPad VAPAA (NUI 16.24, cb1b5d9fc, omistajan tallennus palautettu). ISO: NUI odottaa lukkoa (44ecc31d1-mittaus), jättää 693cf437f.
+- Jonon järjestys: L1 = (PK taso1b) → VS sal11 → LAV saumat+pronssit → Tripo/Codex-jakso 17.00–18.00 (ei Unity/simu/käännös; ALKAA-rivi PT:lle).
+  L2 = 2212b570e → 9b9695a7d → NUI-simu (keisarin nosto + valikkokuva). ISO = NS vieritys → NUI 44ecc31d1 → JU koe-mittaus 9b9695a7d.
