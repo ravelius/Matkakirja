@@ -34,3 +34,8 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 4. Holvin pylväiden laikut.
 5. 404:t: kielletty-osasarja-v13/pursotukset.glb ja kielletty-c2-v37/a5-marmorikaide-pylvas-lod1.glb: selvitä, onko vika. Baoding-lod1 ei ole vika (PT). Ylempi "tunnettu" koskee vain Baodingia; a5:tä ei ole selvitetty loppuun.
 6. Katso alkulennon kuvat 1–3 (koeajo2).
+
+## LISÄYS 4.11. (Postivahti: ei nollausta vielä; työlistan kohdat 2, 5, 6)
+- Kohta 6: alkulento 1 ja 2 (koeajo2, L/koeajo2/alkulento-1-2.jpg) ja 3 (ykkösajo) katsottu pienennettynä: ei levyjä eikä harjan rakoja tällä tarkkuudella. Kuva 2 on enimmäkseen taivasta. Täydellä tarkkuudella ei katsottu.
+- Kohta 5: ei rikki. pursotukset.glb: Osasarja.cs:90 hakee sen valinnaisena, ja rivi 174 käyttää omaa pursotusta; tiedostoa ei ole luettelossa missään kansiossa, joten ei regressio. a5-marmorikaide-pylvas-lod1: Muurikate.cs Lod1Liite on valinnainen kuten Baodingilla, ja lod1 puuttuu kansiosta kuten Baodingilla; malli piirretään lod0:lla (ei mitattu).
+- Kohta 2 EI ratkennut. L/koeajo2/wumen-juova-kolme.jpg: juova tuli wumen_sauma.py:n jälkeen samalle kohdalle, jossa valkoiset palat olivat, joten syy on melkein varmasti korjaukseni. Ylin ja alin rivi ovat samaa rajausta; keskirivin (ykkösajo) kuva on eri kohdasta. Painuneet kolmiot 1-0:ssa ovat pitkiä (105,8 m²) ja vinoja (y −0,39 → 0,07), −0,68:n kolmioita sääntö ei nostanut. Hylätty: "kolmiot olivat piilossa y 0 -pinnan alla" (1-0:ssa 0/23 peitossa saman LODin V4_lattialla). Avoin: UV1-valo tasatussa kolmiossa vai −0,68-kolmioiden reuna. Ei korjattu.
