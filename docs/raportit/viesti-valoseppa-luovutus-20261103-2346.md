@@ -29,3 +29,12 @@ Esikatselu vain JU:n vuorolla (JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd). V
 - NUI: lon 2,351 -saumaa ei näy isolla iPadilla A2-pinnalla (iso-a2-9528c1d53); pieni iPad mittaamatta, b116b65a5 odottaa JU:n A/B-ajoa, NUI ilmoittaa.
 - Paikallinen koe: k14/paikallinen/data (4 Z14-palaa), `ELAVA_KOE=<data> ELAVA_Z=17 ELAVA_ALUE=66384,45091,66391,45098 ELAVA_PINNAT=<wt>/Assets/StreamingAssets/ElavaKoealue sh <wt>/Kartta-testit/kaanna.sh`; kokoa: k12/paikallinen/kokoa.py; pari: k15/pari.py.
 - Wt proto-linssiseppa2-k12b poistettavissa (aukio-poisto tehty).
+
+## LISÄYS 23.4x: UUSI TEHTÄVÄ (PT, KK 23.42; ohittaa "Seuraavaksi"-järjestyksen, ei aloitettu)
+Korjauslista /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md kohdat 6–9, kuvat suorat-saumat.png ja 2029-vs-laaja.png. Kaikki SAMAAN versioon väri- ja toistotyön kanssa. Todistus iPadilta, myös kohdat 2,2961 ja 2,3071.
+6. Suorat saumat KK:n silmämääräisen arvion mukaan z15-palojen rajoilla (2,2851, 2,2961, 2,3071, 2,3401; myös 2,285 ja 2,351): varmista ja etsi YHTEINEN syy, ei yksi kohta kerrallaan. Vertaa omaan tulokseen lon 2,373 Z14|Z13. Huom: nämä lon-arvot ovat koealueen ulkopuolella (koealue 2,329–2,363), paitsi 2,3401 ja 2,351, joten kuva a94d8e7fb on NS:n koko-koe, ei k15.
+7. Laajin zoom on suurin ero 2029:ään: sama pinta myös sille, ohuet kermanväriset kadut.
+8. Mäkivarjostus pois piirroskaupungin alueelta (Chaillot, Montmartre).
+9. Hautausmaat oliivinvärisiksi polkuruudukolla; tarkista muutkin. KS 23.4x hyväksyi: VS piirtää maan; rajat _tyo/karttaseppa/pariisi-koko-esinepaikat-20261103/hautausmaat.json (51, renkaat ENU), puut jo puut.json:ssa (NS 159acdf0c), hautakivet KS kysyy PT:ltä. Oliivi on KK:n uusi ohje; KS:lle sovittu "nurmipinta" tarkennettava.
+KS:n pinta k6: _tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-a2-k6/k6.png (sha256 ba2b80c247b9…, vain katon sävy k5:stä, ei nähty pelissä). KS pyytää k14:n tilalle ja saman parin. EI vielä kokeiltu: k15:n pinta.py sovittaa k5:n väreihin, joten vertaa k6 sellaisenaan × f | k6 pinta.py:n läpi, ja kerro KS:lle, hallitsevatko seinät 0,5 ja pihojen kehät.
+JU peruutti k14-ajot (ei alkaneet) ja odottaa uutta SHA:ta. Montparnasse-kohta "Seuraavaksi 2" on tämän kohdan 9 alla.
