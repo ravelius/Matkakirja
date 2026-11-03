@@ -31,3 +31,6 @@ Viety lisäksi: notre-dame-alue-v4. Monitorit eivät siirry: uusi rooli katsoo l
 
 ## LISÄYS 23.43
 VS:n k14 ja terävyys b9d044fb6 PERUTTU (PT: ei ennen KK:n vastausta); uusi SHA VS:ltä. Linja 2: 95a → laatat → KS. iPad: otsikko + 95a → sali-vianhaku.
+
+## LISÄYS 23.43 (PT)
+ODOTTAA NS:n SHA: iPad-todistus = a94:n sk-koko-nahtavyydet-v2-ju + laajin zoom + kohdat 2,2961 ja 2,3071 (proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md). 95a iPad ajetaan vain, jos ehtii ennen sitä (puiden muistiluku). Otsikko iPhone uusinta pk-otsikko-iphone2.zsh.
