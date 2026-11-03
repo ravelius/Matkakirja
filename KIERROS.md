@@ -82,3 +82,6 @@ Kerran vuorokaudessa yökierroksella (klo 02–05, ei hiljaisella tunnilla): `zs
 
 ## Ohjetarkistus (PT 20.10. 22.2x, omistajan päätös 22.24 C1)
 Kun PR #5072 on mainissa (tools/tarkista-ohjeet.sh löytyy origin/mainista): kerran tunnissa `git fetch origin` ja aja `bash tools/tarkista-ohjeet.sh` origin/mainin versiosta. Uudet löydökset yhtenä rivinä PT:lle; sama löydös vain kerran. Viestit varakanavalla (mcp__ccd_session_mgmt__send_message), jos SendMessage-raja on täynnä.
+
+## Katoamisvahti (PT 3.11. 16.5x, omistaja käski Codexin siivota levyä)
+Tänä iltana joka kierroksella: vertaa `ls -d /Users/Shared/Claude/wt/*` ja roolien `_tyo`/proto-3d-kansioita pohjaan (scratchpad/pohja.txt, otettu 3.11. ~17.0x). Jos kansio tai worktree katoaa → rivi PT:lle (PT siirtää vanhaa T7:lle symlinkein, symlink ei ole katoaminen).
