@@ -14,6 +14,14 @@ muisti unity67-paivitysseuranta).
 - Valmis = "TOISTO VALMIS" vuoro-1708.logissa → **JU:lle "VAPAA iso"** → analyysi.
 - Jos sessio nollattiin kesken: lukko vapautuu skriptin lopussa; tarkista `cat /tmp/matkakirja-ipad.lukko/kuka` ja vuoro-1708.log.
 
+## TOISTON TULOS 17.13 (44ecc31d1, lokit/natiiviseppa-muistihuippu-44ecc31d1-1708, PT:lle lähetetty)
+- EI kaatunut. Lähizoom fp 3131 → 3541 Mt: int+compressed +400 (CPU-varaukset), gfx +47 → ei RT/tekstuurit. Huippu 3820 Mt jo
+  jatketun pelin alussa (keko 1762 Mt, anon 1,6 Gt; keko laskee 518:aan).
+- PT 17.2x: b2a1d27b7 (= 44ecc31d1 + 2856c5cc3, JU käänsi, app lokit/julkaisija-laite-218-b2a1d27b7) VÄHINTÄÄN 2 toistoa:
+  JU:n LAITE NYT ISO → `ipad-lukko.sh kaari natiiviseppa -- zsh proto-3d/_tyo/natiiviseppa/muistihuippu/vuoro-b2a.zsh` (~13 min)
+  → vertaa fp-huiput/vapaa-minimi/keko → PT; kaatuminen poissa → 2856c5cc3 JU:n iso-pakettiin. Selvitä myös korkea pohja
+  (keko 1,76 Gt jatketun pelin alussa; L-rivit ~57 s: nostot esiladattu LUX/NLD/BEL) – tavoite selvä marginaali iOS:n rajaan.
+
 ## KIIRE: lähizoomin muistihyppy (PT 17.1x, NUI nollautui 17.06, NUI:n data nui-muistihuippu-b0753ecc0-20261103/tulos.md)
 - Isolla 44ecc31d1: oikea saapuminen Lontoo → Pariisi, kohdenosto (vapaa 843 Mt, palautui 1880), lähizoom → vapaa 1882 → 911 Mt
   sekunnissa, tekstuurit 919 / kuvat 120 / keko 485 / varattu 323 ENNALLAAN → signal 9. Jatketussa pelissä ilman saapumista lähizoom ok.
