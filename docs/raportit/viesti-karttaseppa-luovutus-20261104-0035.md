@@ -137,3 +137,6 @@ PT:llä, odottaa KK:ta; kaikki koosteita, ei NS:lle:
 2. **Luxembourg:** KK arvioi kuvasta 15c: pari PT:lle (kuva on jo tullut).
 3. **Palais-Royal (PT 01.41):** tummia sirpaleita vasemmassa alakulmassa Louvren katon vieressä (P/pr-kooste.py:n louvre-maski) ja puut isot 2029:ään verrattuna: tarkista. **PT 01.37: vanhat puut pois myös pelistä;** uudet puut-uudet.json korvaa pariisi.json:n puulajin, joten varmista, ettei Palais-Royalin vanhoja rivejä jää muualta (toinen laji tai pelin vanhempi data).
 4. **Tuileries (PT 01.41):** keskellä vino puurivi poikki puutarhan (P/kolmio-tuileries.jpg). Tarkista 2029:stä; jos ei ole siellä, pois (MUOD "poikki": 2 tai kadun rivi).
+
+## LISÄYS PT 01.42 (uusin; TEKEMÄTTÄ)
+**Champ-de-Mars 15a:** Codexin posti posti/codex-karttaseppa-puutarha-champ-de-mars-20261104 (e8eef3abf). Oma QA "ei täysin läpäissyt": pääkäytävä liian leveä, nurmi tumma (185/161/91, tavoite 203/177/109), maski ei täysin täsmää. PT näki valkoisen ruudun länsisiiven kärjessä. KS arvioi: sovita koodilla (alfa maskista, nurmen sävy) tai pyydä uusi otto samaan tilaukseen; pari PT:lle → KK.
