@@ -23,3 +23,9 @@ KK:n päätökset: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-2026110
 5. #ecd6b0 takaisin, kerma saa nousta.
 iPad-ajo peruttu, kunnes pari on lähellä; vuoro pyydetään PT:ltä. Suihkulähde ei nyt.
 Reuna: laske, että paino on 1,00 koko Pariisissa ja molemmissa metsissä (Vincennesin itäreuna, Boulognen länsireuna), ja kerro tulos PT:lle.
+
+## LISÄYS 01.3x: ohittaa yllä olevan SHA:n ja järjestyksen (PT 01.07, 01.08, 01.16; JU k20)
+- **k23 = cebe65c4b** (pariisi-k17, natiivi-backup, p23, 611/611). Lue ensin _tyo/linssiseppa2/pariisi-tyyli/k23/TULOS.md. KK 01.04: 1, 4, 5 tehty; **SEURAAVAKSI 2 (enintään 2 riviä + pihat) ja 3 (keksitty iso katto vain ilman datan taloja)**, sitten vaaleus parista katsoen ja pystyviiva 2,3071 (hypoteesi TULOS.md:ssä: palakohtainen avain TeeTalotuksessa). Uusi versio k24/.
+- Reunan lasku tehty ja viety PT:lle (k22/tyokalut/reuna-lasku.py): 1,00 Pariisissa ja metsissä, Vincennes tunnistettu sijainnista.
+- iPad-ajo: pyydä vuoro PT:ltä, kun pari on lähellä. Ehto täyttyy: piirtokulu tiedostoon (elava-kulu.txt; Unity-käännös ei vielä todistettu). k20-kuvat lokit/julkaisija-k20-iso-8d1a79394/, muisti 3537/4080, KK:n saumahuomiot KORJAUSLISTA.md viimeinen osio; samat komennot TULOS.md:ssä sk:hon.
+- Etäisyyshäivytys on NS:n: sovi ElavaKoealue.cs:stä; k22 ja k23 eivät muuta sitä. Suihkulähde ei nyt. Kohdat 5–6 ovat jo k22:ssa; sävyrajat yhä ruudukossa, koska niitä ei kysytty.
