@@ -22,7 +22,11 @@ postilaatikon worktree `/Users/Shared/Claude/wt/karttaseppa-postilaatikko`. Venv
    Vaduzin laaksonäkymä). Ajo käynnissä klo 10.10 alkaen (Overpass hidas, 502:t): 27/173 klo 10.48, loki `E/ajo-muut.log`,
    välimuisti `E/ov-valimuisti`. Haara `karttaseppa/esittelypaikat-muut` (checkout), ajo kirjoittaa `data/esittelypaikat.json`.
 
-## AVOIN (järjestyksessä)
+## AVOIN – PT:n JÄRJESTYS 10.5x (sitova): 1) Big Ben → commit + rivi PT:lle; 2) Pariisin koonti v3 → PT:lle;
+3) muut 58 kaupungin esittelypaikat → PR. Big Benin viesti PT:ltä: "Big Ben vain lähizoomilla (omistaja 10.38, ehto pieneen
+iPadiin)" – aiempi muotoilu 10.4x: "näkyy vain lähizoomilla (nyt myös kauempaa)"; tarkista ensin nostojen porrastuskoodi
+ja pienen iPadin ehto (grep muiden haarat), kysy PT:ltä yhdellä rivillä, jos suunta jää epäselväksi.
+Kohdat alla (numerointi vanha):
 1. **Pariisin koonti v3 ENNEN tasoja (PT 10.5x: v2 selvästi parempi, raidat pois ja kulma ok; EI vielä tasoihin).**
    Tavoite: yleiskuvassa ei erotu palarajoja. (1) Länsisarakkeen punerrus (kulman alapuolinen pala04 ja Bois de
    Boulognen itäpuoli, pala04/08) → palakohtainen värinsiirto naapurin mukaan; (2) keskisarakkeen raja x ≈ 2612.
