@@ -121,3 +121,10 @@ PT:llä, odottaa KK:ta; kaikki koosteita, ei NS:lle:
 - **Palais-Royal:** P/kolmio-palais-royal.jpg (7311df7b1854, y-opera.png 48.8690 2.3320 0.72, rajaus käsin). Käytävät eivät juuri erotu, 2029 tiiviimpi; odottaa KK:ta.
 - **Puut:** P/puut-uudet.json 222df6b0c3ec, 22 571 puuta. Jardin des Plantes MUOD-listassa (rivit 16, 70; OSM-metsä pois; AVOIN 2 tehty, katsomatta) ja Luxembourgin pohjoisreuna (AVOIN 3 tehty, 19 puuta lisää, katsomatta). Molemmat katsotaan seuraavasta parista.
 - **Jäljellä:** toimitus 15 (vahti) ja sen pari Tuileries'n rinnalla, puutarhapolut.py:stä Luxembourg pois hyväksynnän jälkeen, jonomittarin lokirivi JU:lta, AVOIN 5–6.
+
+## LISÄYS 4.11. klo 01.4x (uusin; lue ensin; konteksti 33 %, nollaus)
+**Hyväksytty:** Invalidit koosteena (KK 01.36; pelikuva vielä). d-kaide NS:llä (PT 01.25).
+**PT:llä, odottaa KK:ta (kaikki koosteita, ei NS:lle):** P/kolmio-palais-royal.jpg (eb9ca2c5f645), P/kolmio-tuileries.jpg (d749d94982a8), P/kolmio-pantheon.jpg (a95c52f1ada9; Plantes ja Luxembourgin pohjoisreuna, tehty ennen viimeisintä ajoa, mutta nämä kohdat eivät muuttuneet).
+- **Puut P/puut-uudet.json e50cd9c5150e, 22 529:** Palais-Royal käsin (PR_K, PR_U, PR_N puut-uudet.py:ssä, yksi rivi kummallekin sivulle, 16 puuta; MUOD rivit tyhjä). Kadun rivi pois, jos muodollisen rivi on alle 40 m:n päässä (koko kartta, 29 puuta; KK 01.36 Tuileries).
+- **Palais-Royalin kooste:** P/pr-kooste.py, käsin sovitus. **Opit:** pari.py:n ICP ei osunut y-opera.png:ssä (`alku m/px` 0,634, rajalla; 150/2044 osumaa), joten aiempi pari oli väärin. Tarkista aina `alku m/px` ≈ 0,72 ja osumat; kuvat, joissa ei ole samoja puita kuin pariisi.json:ssa, eivät sovi. Väliin tehty PUHDISTA-optio (pari.py) on jäänyt koodiin; ei käytössä.
+**Muu tila:** Codex 15a–c odottaa toimitusta; vahti (Monitor `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/vahti.zsh`) kuolee nollauksessa; 14 ensimmäistä riviä vanhoja, esittelysilmukka 68441 päättyi 01.4x. Jonomittari ebe377352 on JU:lla, odottaa lokiriviä. 76d11201a NS:llä tiedoksi. Seuraavaksi KK:n vastaukset, toimitus 15 ja AVOIN 5–6 (lisäys 01.29).
