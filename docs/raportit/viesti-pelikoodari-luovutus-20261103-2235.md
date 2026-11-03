@@ -34,3 +34,6 @@ Proto-haarat paikallisia (repo /Users/Shared/Claude/proto-3d/Matkakirja-proto). 
 5. Testiajo oikealla palatsilla: MK_JUURI=/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juuri-t114 MK_RAKENNUKSET=kielletty-rakennukset-v117
    MK_TAUSTA=kielletty-tausta-v114 MK_ESTO=palatsi-esto-v37 ./kaanna.sh (Peli-testit; 811/811 1ab6dfa38-pohjalla).
 6. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/Matkakirja-pelikoodari (tämä tiedosto sen kärjessä).
+
+## Lisäys 22.5x
+- LAV tausta-v122 → runko **088a6ca28** (saumat-v1-219 = 65282422e + v121 → v122; SHA256SUMS 49e4e2f069ef täsmää, vain kk-tausta-1-3-lod0 eroaa v119:stä). Runko-SHA JU:lle (vienti ensin) ja LAV:lle.
