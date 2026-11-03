@@ -64,3 +64,14 @@ peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
 - HUOM: checkout /Users/Shared/Claude/Matkakirja-pelikoodari oli 07.4x vaihdettu haaraan koti/Matkakirja-pelikoodari (origin/main);
   palautettu koti/pelikoodari-20261103-0540:aan (PR 6085 auki).
 
+## Jatko 08.0x – UUSIN TILA (korvaa yllä olevat runko- ja ajotiedot)
+- Proto kapea-reitti-218 kärki **61fc14d04**: d91bab3ce peruu 06aa319bc:n; 1a7c390e2 = juoksun alun napsautus (SYY: kohde kulkee
+  pohjajousen pohjaKohde läpi → vaikka suora lähennys alkoi t 0,10, kamera liukui 1,3 s salin seinän läpi; nyt s < PolkuSuoraAlkuS 0,5 s
+  ja suoran lähennyksen alkaessa kPaikka + pohjaKohde = kohde, alkuNapsautus) – HUOM: sama commit sisältää myös palatsi-esto-v38-vaihdon;
+  61fc14d04 = rakennukset-v118 (LAV 07.49, viety _valmiit/…-v118-vienti-20261103). Runko **pelikoodari/sali-218y cf40ca767**.
+  unity-tarkistus 0, peli-testit 803/803.
+- JU:lle pyydetty 08.0x: sali-218y/ketju-y.zsh xf th yk cx tj ty cc ys taso1b (taso1b:n kansio korjattu ketjussa).
+- mittari-taulukko.py tuntee -218y. Seuraavaksi taulukko 218r/218v/218y (sama komento, -218x → -218y) + xf/th alku kameralokista
+  (1. ruutu < 2 m keisarista eikä z < -803,3?) → PT:lle ≤ 3 riviä.
+- Ei tehty: vesiastiat vedenkantajan täyttöpaikoiksi (LAV: pronssit-esi/vesiastiat-pk.json), yk s ~35 (a31589350-epäily).
+
