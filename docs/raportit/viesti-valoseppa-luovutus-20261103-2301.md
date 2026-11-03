@@ -36,3 +36,15 @@ Ohje: Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261103-pariisi
 - Paikallinen koe: `ELAVA_KOE=<data> ELAVA_Z=15 ELAVA_PINNAT=<wt>/Assets/StreamingAssets/ElavaKoealue sh <wt>/Kartta-testit/kaanna.sh ElavaKoe`; data 2×2 Z14: $B/pariisi-tyyli/nahtavyysalue-notre-dame/data (kopioi, cs/ kirjoitetaan sinne). Z12:n 9 palaa: $B/pariisi-tyyli/k11/mvt12 (OpenFreeMap, robots.txt 403, ei kieltoa).
 - Sade (5ed5f95e2) odottaa äänen laitetarkistusta; rakettivideo tauolla.
 - Viestiraja: SendMessage toimi tässä sessiossa; varakanava mcp__ccd_session_mgmt__send_message.
+
+## LISÄYS klo 23.03: KK PALAUTTI k10:n (PT) – TÄMÄ OHITTAA YLLÄ OLEVAN k11-SUUNNITELMAN
+Koko Pariisin täyttö peliin vasta KK:n hyväksynnän jälkeen. k11 PERUTTU: $B/pariisi-tyyli/k11/ajo.zsh tyhjennetty omalta osaltani (vanha ajo-peruttu-43df66241.zsh), JU:lle peruutus lähetetty 23.0x, kuittausta ei vielä nähty; JU:n ketju vs-k11-l2.zsh (pid 11001) kuluu tyhjäksi. Älä käytä k11:n tai 135e03994:n pelikuvia uuden version todisteena.
+KK:n lista ja tila:
+1. Katot harmaansinisiksi, vain julkisivut lämpimiksi: EI PELISSÄ. KS:n k5 valmis 22.54: _tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-a2-k5/k5.png (1254², vertailu k5-vs-2029.jpg). **k5 EI ole k11:n pohjana** (k11 = oma p11 k4:stä): vie k5 pinnaksi uudella versiolla; p11-kontrastikoodia ei käytetä k5:n päällä. KS säätää pelikuvan jälkeen (katto-voima, muste).
+2. L-läiskät, pihat pieniksi ja tummiksi: OSITTAIN, vain paikallisesti: ElavaMaski.PienetAlueet (eed354fdd). Isot aukiot jäävät; tarkista pelikuvasta riittääkö. Tumma piha tulee k5:stä.
+3. Pystysauma: NUI:n A/B 3176be95f (PT: ei päällekkäin). Ei VS:n työ.
+4. Julkisivureuna katujen varteen + tumma musteviiva: EI ALOITETTU, VS:n työ (jako KS:n kanssa). Lähtökohta ElavaVinotalot.Talo (seinät vain etelään), talonReuna Z15:stä alfa 80, reunus/sivurata KoealueKoostuksessa.
+5. Harmaat kiekot: EI RATKAISTU. Oletus (ei todennettu): NS:n esineet: aukio-iso-v1.png 8 kpl, aukio-keski-v1.png 272 kpl, aukio-pieni-v1.png 88 kpl (Esineet/pariisi.json). Varmista esineet pois -kuvalla, sitten koko tai poisto NS:n kanssa.
+Terävyys: KK vaatii iso iPad, ei 640×480. Lokit k10/koko: Z16–17-pyyntöjä ei lainkaan, enintään Z15; voi selittää pehmeyden (ei todistettu). JU:n fb7ff2595-laitekuvat olivat päävalikkoa, ei päteviä. Laitekuva d64f74a56:sta pyydetty; JU:n aiempi viesti puhui eed354fdd:stä, varmista JU:lta. Uuden version SHA + komennot JU:lle: iso iPad on seuraavana savun ja sauman jälkeen.
+Seuraava versio: haaraudu d64f74a56:sta koealueen rajoin. Poimi eed354fdd:stä pihat (ei rajaa). Koko kaupungin tyhjän zoomin korjaus (Z11–Z12 massa, 43df66241) ja koko Pariisi (135e03994) pysyvät omina muutoksinaan haarassa linssiseppa2/pariisi-katot KK:n hyväksyntään asti (PT: omana muutoksenaan).
+Tulos: sama kolmen zoomin pari PT:lle → KK.
