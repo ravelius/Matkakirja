@@ -3,6 +3,8 @@
 Edellinen: -20261103-2106 (77780d892), voimassa ellei alla toisin. Syy: kontekstiraja 26 % (7.37). Proto-haarat paikallisia
 (repo /Users/Shared/Claude/proto-3d/Matkakirja-proto). Ei omia taustaketjuja (kaikki ajot JU:n linjoilla).
 
+JU 21.5x: palvelijat v5 L1-jonossa (LAV 219c → NS eb1749604 → v5, loki julkaisija-tyokalut/pk-palvelijat-v5.log), L2 jalki v3 + NUI sauma.
+
 ## Tehty 21.09–21.55
 - **KEISARI-KK VALMIS**: ajo 1 (lokit/pk-keisari-kk-7ac89ff33-2108) → KK:n 4 huomiota → ajo 2 (_tyo/pelikoodari/keisari-kk/aja-ipad-2.zsh,
   lokit/pk-keisari-kk2-7ac89ff33-2118, 17 kuvaa). **KK HYVÄKSYI 21.3x** ("kerron omistajalle, kun nosto on hänen iPadillaan"). Ei avoimia.
@@ -22,6 +24,19 @@ Edellinen: -20261103-2106 (77780d892), voimassa ellei alla toisin. Syy: kontekst
   `saikahda` ilman lajia, 150 + 60 yritystä, kaksi osumaa osuma1/osuma2). **AJOPYYNTÖ JU:lle 21.55** (runko c35e3d150 ennallaan).
 
 ## SEURAAVA
+0A. **ENSIN – OMISTAJAN PÄÄTÖS klo 21.48 (KK 21.5x, sanatarkasti): "Juoksu pelin ei voi tulla kesken pelin mitään opetus kortteja"**
+   KK:n tavoite: juoksun aikana ei yhtään opetusta, ei hidastusta eikä pysähdystä.
+   (1) JuoksuOpetus kokonaan pois näkyvistä: ei ohjetekstejä (käännös o/v, hyppy, liuku, kaista, heitto), tahti aina 1, ei sykkivää
+       peukalokohtaa (kumoaa omistajan 27.10. 08.29 hidastuksen ja 08.26 risteysohjeet; PT päivittää Raamatun 2.177).
+   (2) Opettavat kehotteet pois tekstikaistalta (JuoksuKierrokset.Kehote): "Puyi saa spurttiviitan: spurtti, korkea hyppy ja liito",
+       "Liito: hyppää reunalta!", "Kiinni! Napauta nopeasti". Viittakohtaus ja rimpuilumittari jäävät, ilman tekstiä.
+   (3) Ennalleen (tarinaa): alkukohtauksen huudot, eunukin "Teidän majesteettinne!", väistörepliikit (Huh, läheltä piti! / Hui! /
+       Melkein!) – varmista, että väistörepliikit toimivat opetuksen ollessa pois.
+   (4) Taso 1 helppo, esteet nykyisessä opetusjärjestyksessä.
+   (5) Ohjainkuva ennen juoksua: EI ennen KK:n kortin vastausta.
+   Todistus: automaattinen testi (botti taso 1 alusta tason 2 alkuun: 0 kehotetta, 0 hidastusta, väistörepliikit kuuluvat) → avoimeen
+   junaan. Kuittaa KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) commit + testin nimi. Työlistalla "Juoksupeli ilman opetuskortteja".
+   Huom: tason 1 skenaariot (sk3-taso1b ym.) käyttävät "kaanna 1 seina" ja opetus-kehotteita hyppy-jos-ehtoina → tarkista ennen ajoja.
 0. **JALKI v3** (JU ilmoittaa): python3 -I scratch-tyyppinen vaiheloki-analyysi (kamera y ja dx t 10,8–13,5) tai suoraan unity.log:
    "polkukamera alkaa … (nykysuunta)", kameraväli t 11,3–12,2 "tarve" ja korkeus (tavoite y ≤ ~3 m, x ≈ Puyi); ys: polkukamera alkaa
    4,61/9,73/12,39 ennallaan, ei uutta kamerahyppyä → PT:lle ≤ 3 riviä + video. Jos ei korjaantunut: kameraväli-rivin "muurit v/o" ja
