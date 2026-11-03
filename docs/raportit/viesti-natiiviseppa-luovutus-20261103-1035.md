@@ -60,3 +60,10 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä.
 - Pyyntöloki tasoittain: grep "elävä pyyntö" konsoli-video.txt (vain zoomauksen ajan + 1 s).
 - Release-laitekäännös: `LAITE_KOPIO="/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity-b6" zsh .../juna210/laite210.sh <sha9> runko-<sha9>`.
 - Muistikoe: `zsh .../juna218/muisti-koe218.sh <sha9>`. Pitkät ajot Bash run_in_background lokitiedostoon.
+
+## LISÄYS 10.40: PT 10.3x (KORVAA "TULO KORJATTU" -VÄITTEEN)
+- **9613f5ad7 EI junaan vielä.** Parannus (terävä ~7,5 s) näkyi vain ENNAKOIDUSSA videossa (…-video-9613f5ad7-…-1021). KYLMÄSSÄ
+  (…-kylma-9613f5ad7-…-1026/ruudut/tulo-6_5-9.jpg) ruudut 7,25–8,0 s yhä sumeaa beigeä, terävä vasta ~8,5 s = sama kuin ennen.
+- Seuraava vuoro: mittaa kylmän tulon terävyys numerona (Cesiumin näkyvien laattojen taso per 0,25 s ruutu, esim. pyyntöloki + valittujen
+  laattojen z-jakauma lokiin) ja selitä ero ennakoituun (kylmässä välitasot eivät ehdi 4 s:n matkassa: kylmä aikajana "valmiiksipiirto lontoo
+  279 palaa 16,5 s"). Junaan vasta yhdessä lähtökorjauksen kanssa, kun molemmat näkyvät ruudukossa.
