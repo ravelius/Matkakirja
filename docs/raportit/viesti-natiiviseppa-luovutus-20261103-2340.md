@@ -7,6 +7,13 @@ EI testejä, kun `pgrep -fl "[e]sikatselu.sh|[U]nity -batchmode"` näyttää ajo
 ## YÖTYÖ (PT, omistaja 22.31 "Koita saada Pariisin kartta tehtyä kokonaan")
 Sijoita KK:n hyväksymät peliin sitä mukaa kuin KS/PT ilmoittaa. Pelikuvat JU:lta → PT → KK.
 
+## LISÄYS 23.52: ENNEN YHDISTELMÄÄ (PT, JU; ei ehditty katsoa)
+Testimerkki 23.50 on hoidettu, kartta-testit-ok kosketettu 23.51. Ajo 95a733ace: /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261103-234105 (iPad-ajo käynnissä).
+a) **ArgumentOutOfRange 23.41.30 kohdassa ui sulje** (unity.log rivi 2046): PT: katso ennen yhdistelmää, onko syy NS:n koodissa (tarkista erityisesti 5f8b18b5c: KaupunkiMerkit, PiirrosKerros.Esineet).
+b) **Punainen merkki yhä ND:n tornin takana** nd-louvre.png (noin x 2250, y 1020) 5f8b18b5c:stä huolimatta: kaupunkimerkki-epäily ei siis riittänyt tai jäänne on muu (valintamerkki, rengas omassa juuressaan?). Selvitä seuraavasta kuvasta, tulos PT:lle.
+c) JU: siltojen suunta poikkeaa kadusta (silta-concorde: katu näkyy vedessä sillan vieressä). PT: arvio KS:ltä 628d1a90a:sta; älä säädä ennen sitä.
+d) JU: Boulognen puut vain teiden varsilla (puut-boulogne): tarkista, onko puistojen rajaus tai KS:n puut.json syy.
+
 ## LISÄYS 23.51: KARTTA-TESTIT AJETTU, älä odota merkkiä (kohta 1 alla tehty)
 a826acb03 603/603, 95a733ace 606/606; JU ja PT tietävät, kartta-testit-ok kosketettu. Aloita kohdasta 2: tee yhdistelmä, aja sen Kartta-testit (JU:n väli, ei rinnalla) ja anna sha JU:lle.
 
