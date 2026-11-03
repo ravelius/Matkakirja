@@ -53,3 +53,14 @@ KK:n kysymys (vastaa KK:lle PT:n kautta): alkulennossa portin jälkeen kamera ka
 4. ty 12–13 s, xf 6 s.
 5. Kun kaikki korjattu: koko sarja kerran → taulukko → PT + KK-paketti.
 6. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1340.
+
+## LISÄYS 13.5x
+- **Korokesijoitukset tehty**: LAV:n mitat /Users/Shared/Claude/proto-3d/lokit/lav-koroke-20261103/koroke-mitat.md → kaikki 7 sk3:a
+  sali-218ae:ssä: Puyi pöydän takareunan ja istuimen etureunan puoliväliin istuimen keskelle (cx: ei pöytää → istuimen etureuna − 0,4),
+  lattia = korokkeen yläpinta; kamerakierros z + 0,9, y = yläpinta + 0,9. cc: Puyi -165.32 375.57 y 0.93. JU:n jonossa oleva
+  ketju-ae taso1b cc (3. jonossa) todistaa siis korokkeen + kortin. Skripti: scratchpad/koroke.py (ei talteen; logiikka yllä).
+- **Levy karsittu** (PT 13.4x): _tyo/pelikoodari 15 Gt → 1,0 Gt (vanhojen salikansioiden mp4/png pois; 218ac/ad/ae ennallaan).
+- **Codex-tilaus 5345c2379**: Viimeisen keisarin nosto, 5 havainnekuvaa (a valtaistuin 1908, b polkupyörä, c Mielenrauhan halli,
+  d Jingyuan Tianjin, e puutarhuri) → toimitus posti/codex-pelikoodari-viimeinen-keisari-havainnekuvat-20261103/; kuittaus
+  täysikokoisena, sitten PT:lle (PT tekee tekstin ja Commons-kuvat). Linkit valikkoon/lopetuskorttiin MYÖHEMMIN NUI:n kanssa
+  (vasta pienen iPadin version ja kamerakorjausten jälkeen).
