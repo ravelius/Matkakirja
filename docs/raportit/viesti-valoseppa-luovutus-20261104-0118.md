@@ -33,3 +33,7 @@ Reuna: laske, että paino on 1,00 koko Pariisissa ja molemmissa metsissä (Vince
 
 ## LISÄYS: PT 01.19 (lähetetty ennen k23-riviäni)
 k22 hyvä, viety KK:lle hallin kanssa. Tee KK 01.04 kohdat 2 ja 3 (1, 4, 5 ovat k23:ssa), sitten Savy-ruudukon sävyrajat. Pari ensin 2029:ää vasten PT:lle. Laiteajoa ei vielä; se vaatii ms/pala-tiedostolokin (k23:ssa) ja KK 01.16:n saumakohdat + 2 komentoa sk:hon (k23/TULOS.md), täysi koko.
+
+## LISÄYS: PT:n 2 viestiä juuri ennen nollausta, EI tehty (ohittaa ristiriidassa yllä olevan)
+1. Vincennes: itäraja on juuri se, mitä KK kysyi, joten 2,4767–2,4899 ei saa jäädä oletukseksi. Varmista Bois de Vincennesin raja OSM:stä tai muusta aineistosta sallitulla rajapinnalla (yksi haku). Jos metsä ulottuu rajan yli, laajenna täysi alue sen yli; rivi PT:lle.
+2. KK 01.24 (KORJAUSLISTA.md, kaksi viimeistä osiota; lue): k22:n portaat suunnaksi ok. Ratapiha: KK oikaisee ohjeensa: 2029:ssä tiivis tumma raidenauha, ei kermakenttä (mediaani 124–187, k22 207). Hallit: periaate hyväksytty; väri L 211 (nyt 186), musteviiva ja harjaviivat, ei pintakuviota. Mukaan seuraavaan versioon kohtien 2–3 kanssa.
