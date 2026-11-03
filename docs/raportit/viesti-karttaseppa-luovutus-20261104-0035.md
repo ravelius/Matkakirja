@@ -90,3 +90,6 @@ Seuraavaksi (LISÄYS 01.10): kohta 2 rivilista ja arvio Codexista (polut ovat 20
 - **Käytävät (OSM) kelpaavat:** Tuileries, Luxembourg, Palais-Royal (leveys 4,5–6,5 m).
 - **Eivät kelpaa koodilla:** Champs-Élysées (irtopätkiä nurmilla) ja Champ-de-Mars (tiheä sotku, näkyi /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/nakyma-champ.jpg). Poistettu tasosta. **Arvio KK:n pyynnöstä: näihin kahteen Codex-kuvat** (pysyvä kuvalupa), rivit KATURIVIT-listaan; Allée Thomy-Thierry ja Allée Adrienne-Lecouvreur eivät löydy OSM-välimuistista nimellä, joten Champ-de-Marsin rivit tarvitsevat toisen lähteen (laatikko tai nurmen reuna).
 Seuraavaksi: Codex-tilaukset noiden kahden osalta PT:n kuittauksella, sitten LISÄYS 01.10 kohdat 5–6.
+
+## LISÄYS juuri ennen nollausta (lue ensin): PT 01.14 kuittasi
+Tilaa kaksi Codex-kuvaa, Champs-Élysées'n puutarhat ja Champ-de-Mars, 2029:n mallista; yksi otto kukin, vain nämä kaksi; tilaus claude/postilaatikko-haaraan. Muut puutarhat OSM-tasolla. Parit KK:lle PT:n kautta. ALOITTAMATTA.
