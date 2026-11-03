@@ -49,10 +49,9 @@ LAV poisti kujaportti-3:n takaisen massan (tausta v113/esto v37), mutta JU 02.4x
 tausta v114 / esto v38. Odota LAV:n ja JU:n VIETY-viestiä, kytke (TaustaKansio "kielletty-tausta-v114/", esto "palatsi-esto-v38/")
 ja pyydä JU:lta taso1-vuoro (ketju-taso1b5.zsh → b6, runko kytkennän sisältävä). Tarkista z −836…−846 kamera.txt:stä + kuvat.
 
-LISÄYS (LAV 04.0x): v114/v38:aa EI tule. LAV uusi tausta-v113:n PT:n pyynnöstä (SHA256SUMS 226dcef096fa): mukana poistetun
-rakennuksen 0,5 m:n jalusta maan tasoon (ei askelmaa reitillä) ja pohjoisen porttirakennuksen eteläseinän puuttuva kolmio.
-Esto v37 ennallaan. Kytkentä: TaustaKansio "kielletty-tausta-v113/", esto "palatsi-esto-v37/". Kytke vasta, kun JU vahvistaa
-UUSITUN v113:n viedyksi ämpäriin (tarkista SHA256SUMS 226dcef096fa); sitten taso1-vuoro JU:lta.
+LISÄYS 02.5x (LAV + JU, lopullinen): kytke TaustaKansio "kielletty-tausta-v114/" (EI v113; SHA256SUMS c8ff9e097cf4: poistetun
+rakennuksen jalusta maan tasossa + pohjoisen porttirakennuksen eteläseinän kolmio) ja esto "palatsi-esto-v37/" (viety, ei muutu).
+Kytke, kun JU on vahvistanut v114:n viedyksi ämpäriin; sitten taso1-vuoro JU:lta.
 
 ## Viestit
 - Viestiraja tuli vastaan 02.5x (LAV:n kuittaus ei mennyt; ei tärkeä). Seuraavat: varakanava mcp__ccd_session_mgmt__send_message.
