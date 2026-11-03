@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "coordinateConvention": "pixel top-left; x/y refer to tightly cropped layer within 3000px-wide lockup",
+  "compositions": {
+    "latauskuva": {
+      "width": 3000,
+      "height": 625,
+      "alignment": "center",
+      "nativeCanvas": [
+        2172,
+        724
+      ],
+      "nativeToDeliveryScale": 1.454898157129001,
+      "layers": [
+        {
+          "file": "latauskuva-otsikko-rivi1.png",
+          "text": "VIIMEINEN KEISARI",
+          "nativeBox": [
+            54,
+            162,
+            2116,
+            341
+          ],
+          "size": [
+            3000,
+            260
+          ],
+          "x": 0,
+          "y": 0,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "file": "latauskuva-viiva.png",
+          "text": "",
+          "nativeBox": [
+            265,
+            428,
+            1908,
+            434
+          ],
+          "size": [
+            2390,
+            9
+          ],
+          "x": 305,
+          "y": 387,
+          "alphaExtrema": [
+            1,
+            255
+          ]
+        },
+        {
+          "file": "latauskuva-otsikko-rivi2.png",
+          "text": "末代皇帝 · 北京",
+          "nativeBox": [
+            671,
+            499,
+            1504,
+            592
+          ],
+          "size": [
+            1212,
+            135
+          ],
+          "x": 894,
+          "y": 490,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "note": "Mechanical crop and proportional resampling from the original generated RGBA; 3000px is an export size, not additional native detail."
+    },
+    "alkulento": {
+      "width": 3000,
+      "height": 722,
+      "alignment": "center",
+      "nativeCanvas": [
+        2172,
+        724
+      ],
+      "nativeToDeliveryScale": 1.4734774066797642,
+      "layers": [
+        {
+          "file": "alkulento-otsikko-rivi1.png",
+          "text": "KIELLETTY KAUPUNKI",
+          "nativeBox": [
+            70,
+            150,
+            2106,
+            306
+          ],
+          "size": [
+            3000,
+            230
+          ],
+          "x": 0,
+          "y": 0,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "file": "alkulento-viiva.png",
+          "text": "",
+          "nativeBox": [
+            260,
+            382,
+            1912,
+            388
+          ],
+          "size": [
+            2434,
+            9
+          ],
+          "x": 283,
+          "y": 342,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "file": "alkulento-otsikko-rivi2.png",
+          "text": "紫禁城 · 北京",
+          "nativeBox": [
+            748,
+            446,
+            1428,
+            530
+          ],
+          "size": [
+            1002,
+            124
+          ],
+          "x": 999,
+          "y": 436,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "file": "alkulento-otsikko-rivi3.png",
+          "text": "1914",
+          "nativeBox": [
+            995,
+            580,
+            1181,
+            640
+          ],
+          "size": [
+            274,
+            88
+          ],
+          "x": 1363,
+          "y": 634,
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "note": "Mechanical crop and proportional resampling from the original generated RGBA; 3000px is an export size, not additional native detail."
+    }
+  },
+  "previews": {
+    "loadingLandscape": {
+      "background": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/delivery/latauskuva-vaaka.png",
+      "nativeTitlePosition": [
+        580,
+        35
+      ],
+      "nativeTitleWidth": 1400,
+      "nativeRowOverrides": {
+        "latauskuva-otsikko-rivi1.png": {
+          "x": 580,
+          "y": 35,
+          "width": 1400,
+          "height": 121
+        },
+        "latauskuva-viiva.png": {
+          "x": 722,
+          "y": 180,
+          "width": 1115,
+          "height": 4
+        },
+        "latauskuva-otsikko-rivi2.png": {
+          "x": 997,
+          "y": 205,
+          "width": 566,
+          "height": 63
+        }
+      },
+      "output": [
+        2732,
+        2048
+      ],
+      "occlusion": "Existing source-aligned head-hat-braid alpha above title; rows fitted into clear sky to retain every Chinese glyph",
+      "previewOnly": true
+    },
+    "loadingPortrait": {
+      "background": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-pysty-leveampi-1765-20261102/delivery/latauskuva-pysty-34.png",
+      "nativeTitlePosition": [
+        67,
+        250
+      ],
+      "nativeTitleWidth": 1120,
+      "output": [
+        2048,
+        2732
+      ],
+      "occlusion": "Source-pixel hat silhouette for preview only; runtime mask remains integrator responsibility",
+      "previewOnly": true
+    },
+    "flight-vaaka": {
+      "background": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/delivery/01-lahtokuja.png",
+      "output": [
+        2732,
+        2048
+      ],
+      "titlePosition": [
+        164,
+        734
+      ],
+      "titleWidth": 2404,
+      "centered": true,
+      "previewOnly": true
+    },
+    "flight-pysty": {
+      "background": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/delivery/01-lahtokuja.png",
+      "output": [
+        2048,
+        2732
+      ],
+      "titlePosition": [
+        123,
+        1149
+      ],
+      "titleWidth": 1802,
+      "centered": true,
+      "previewOnly": true
+    }
+  },
+  "runtimeInstructions": {
+    "opening": "Place each row rapidly in order; center entire lockup; fade the entire block after about four seconds. Timing is an instruction, not implemented in these PNGs.",
+    "loading": "Place text behind source-aligned hat mask. Existing karkuteillä stamp is unchanged and not included in this replacement."
+  },
+  "gameIntegrated": false,
+  "published": false
+}
