@@ -20,7 +20,9 @@ Edellinen: viesti-natiivi-ui-luovutus-20261103-1727.md (jono 1 ja 2 tehty täss�
   tarkista 0. JU:lle pyydetty 1 toisto mittaa.zsh-reitillä → lokit/nui-lahizoom-20261103/iso-453a76a42-1 (viesti jonossa 18.14).
 
 ## SEURAAJAN JONO
-1. Kekomittarin ajo: grep "MATKAKIRJA keko:" muisti-tarkka.log/konsoli.txt → mikä työ varaa ~1,2 Gt → korjaus (oma alue, jos NostoSisalto/Sisalto;
+1. PÄIVITYS 18.2x (PT): NS löysi saman hypyn syyksi oman EnnakoiLahto-esilatauksen (9613f5ad7, GBR 18,2 milj. palaa → keko +2,2 Gt),
+   korjaus 80ea01172 (proto-3d/lokit/natiiviseppa-muistihuippu-b2a1d27b7-1755/TULOS.md). JU:lta peruttu 453a76a42:n erillisajo; pyydetty 453a76a42
+   mukaan iso-paketin 4e396deaf + 80ea01172 todistusajoon. Kekomittarin ajo: grep "MATKAKIRJA keko:" muisti-tarkka.log/konsoli.txt → mikä työ varaa ~1,2 Gt → korjaus (oma alue, jos NostoSisalto/Sisalto;
    ElavatHetket = Valoseppä/LS, kerro). Jos rivejä ei tule, varaaja on muualla (pääsäie): seuraavaksi Esilataaja-joutilastehtävien nimetty mittaus.
    Tulos PT:lle; korjaus pakettiin JU:lle.
 2. D-todistus JU:lta (suora aloitus < 15 s); juoksupelin salit ys/tj/cx/ty/xf Testihypyt.Aloitukset-listaan, kun PK:n salikomento on junassa.
