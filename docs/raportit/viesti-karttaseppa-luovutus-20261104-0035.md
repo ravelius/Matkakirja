@@ -38,3 +38,12 @@ Viesti tuli ennen kuin PT oli nähnyt kolmio-parit (00.52) tai ennen kuin KK arv
 3. **Louvre k3:** kiilan poisto ja 16 puuta hyväksytty suunnaksi; korjaa nurmen pilkkureuna ja irrallinen laikun loppu (Y/nahtavyys-nurmi.py; k4 on sama v3-värillä).
 4. **Sacré-Cœur k4 EI (koskee myös k5:ttä):** metsä kirkkoa kiertäväksi kaareksi, noin 0,7 kirkon leveyttä sivuille, takana ristin korkeudelle; latvus noin 0,13 kirkon leveydestä; tumma pohja pois; kerma-aukio pois (Y/sacre-coeur-metsa.py).
 5. **Kivetty aukio Codexilta yhtenä kuvana 2029-sc:n mallista:** tilaus origin/claude/postilaatikko-haaraan, kohde kuvana ja aiemmat työt haettuna ennen tilausta. Ennen kuvaa ei aukiota lainkaan.
+
+## LISÄYS juuri ennen nollausta (PT ja NS; lue tämä ensin; ALOITTAMATTA; ei NS:lle ennen KK:ta)
+PT katsoi kolmio-parit ja vei ne KK:lle; KK ei ole vielä hyväksynyt niitä. PT:n jatkolista:
+1. **Tuileries, Champs-Élysées ja Invalidit:** muotopuutarhan piirros katoaa jälkeen-kuvassa (P/kolmio-a95-silta-katu.jpg). Selvitä syy ja palauta. Todennäköinen syy, tarkistamatta: P/pari.py:n vanhojen puiden poisto (`lisa`, valo-ehto ja lähimmän pikselin täyttö) pyyhkii polut ja piirroksen, eli vika olisi koosteessa, ei datassa. Varmista, ennen kuin kerrot syyn.
+2. **Luxembourg:** paksu puusto reunoille, ei ketjua; OSM-metsän puut pois nurmelta (nyt sulku tuo ne: rajaa metsät pois muodollisista puutarhoista).
+3. **Puut pois kadunnimien päältä ja yksittäiset ryppäät korttelien keskeltä.** Tarkista Boulognen paloittaiset metsäreunat.
+4. **NS:n löydökset (kuvat /Users/Shared/Claude/proto-3d/lokit/julkaisija-yhdistelma-iso-f1fb45f10, PT: samaan pariin):** (a) y-sacre-coeur: puut piirtyvät Sacré-Cœur-nimen päälle (esineet +60…+99, nimet alempana). (b) y-nd-louvre ja y-vene-pont-royal: Louvre-nimi osuu Seinelle (rajauslaatikon alle kaukana kuvasta). Nimet ovat KS:n; kerro NS:lle sha, jos korjaat. Tuplia ei näkynyt neljässä NS:n katsomassa kuvassa (nd-louvre, Riemukaari, S-C, Eiffel).
+5. **PT:n kysymä:** täydet polut lähetetty PT:lle: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/sacre-coeur-k5/ ja .../louvre-k4/. Viesteissä aina täydet polut, ei Y/P-lyhenteitä.
+Vahti kuolee nollauksessa: käynnistä uudelleen. Sen 12 ensimmäistä TOIMITUS-riviä ovat vanhoja.
