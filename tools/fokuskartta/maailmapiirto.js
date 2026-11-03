@@ -1155,6 +1155,17 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     valoVoima: reliefi.valoVoima ?? 0.55,
     varjoVoima: reliefi.varjoVoima ?? 0.85,
     rinne: reliefi.rinne ?? 0.35,
+    /*
+     * TASANKOKOROSTUS (omistaja 26.10.2026 klo 12.45 "Matalat mäet, harjut ja
+     * laaksot näkyviin Tanskassa ja muilla tasangoilla; vuoret ennallaan."):
+     * gradienttiin lisätään LAAJAN POHJAN (±pohjaM metriä) gradientti
+     * painolla (kerroin − 1) · exp(−(k/k0)²), k = laajan pohjan kaltevuus.
+     * Kilometrien mittakaavan muodot (moreeniselänteet, laaksot) korostuvat,
+     * mutta pintamallin metsänreunat ja rakennukset (satoja metrejä) eivät.
+     * Jyrkkä rinne (k ≫ k0) ennallaan. Viritys GLO-90:stä Tanskassa ja
+     * Alpeilla: { kerroin: 4, k0: 0.02, pohjaM: 1500 }. null = ennallaan.
+     */
+    tasanko: reliefi.tasanko ?? null,
     kohina: reliefi.kohina ?? 0.25,
     asteikko: reliefi.asteikko ?? [
       { m: 0, v: [238, 229, 194] },
@@ -1197,6 +1208,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     let dzdx = (korkeus(lon + dd, lat) - korkeus(lon - dd, lat)) / kx;
     let dzdy = (korkeus(lon, lat + dd) - korkeus(lon, lat - dd)) / ky;
     if (!Number.isFinite(dzdx) || !Number.isFinite(dzdy)) return { valo: 0, rinne: 0 };
+    const kLahi = Math.hypot(dzdx, dzdy);
     if (PINTA) {
       const DD = dd * PINTA.askel;
       const gx = (korkeus(lon + DD, lat) - korkeus(lon - DD, lat)) / (kx * PINTA.askel);
@@ -1207,6 +1219,89 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const w = t * t * (3 - 2 * t);
         dzdx = dzdx * (1 - w) + gx * w;
         dzdy = dzdy * (1 - w) + gy * w;
+      }
+    }
+    if (RELIEFI.tasanko) {
+      const T = RELIEFI.tasanko;
+      const n = Math.max(1, Math.round(T.pohjaM / (dd * 111320)));
+      const DD = dd * n;
+      /*
+       * maaM (PT 3.11.: z7:n Pohjois-Saksaan tuli läiskiä): Copernicus on
+       * pintamalli, ja yksittäinen näyte osuu metsään tai taajamaan. Pohjan
+       * näyte = pienin korkeus viidestä pisteestä (keskus ja ±maaM metriä),
+       * eli lähin arvio maanpinnasta; mäki on leveämpi kuin maaM, metsäsaareke
+       * ei. null = entinen (yksi näyte).
+       */
+      const M = T.maaM ? T.maaM / (dd * 111320) * dd : 0;
+      const kT = !M ? korkeus : (x, y) => {
+        const mx = M / Math.cos((y * Math.PI) / 180);
+        return Math.min(korkeus(x, y), korkeus(x + mx, y), korkeus(x - mx, y), korkeus(x, y + M), korkeus(x, y - M));
+      };
+      const bx = (kT(lon + DD, lat) - kT(lon - DD, lat)) / (kx * n);
+      const by = (kT(lon, lat + DD) - kT(lon, lat - DD)) / (ky * n);
+      if (Number.isFinite(bx) && Number.isFinite(by)) {
+        const u = Math.hypot(bx, by) / T.k0;
+        /*
+         * k1 (PT 3.11.2026: Etelä-Suomen ja Smålannin kallioalue rypistyi):
+         * lähirinne (pikselin väli) jyrkkä mutta laaja pohja loiva = kalliokumpareet
+         * ja pintamallin metsänreunat, ei mäkiä → korostus pois. null = entinen.
+         */
+        const v = T.k1 ? kLahi / T.k1 : 0;
+        let w = (T.kerroin - 1) * Math.exp(-u * u - v * v);
+        /*
+         * laaja (PT 3.11.): mäki = rinne jatkuu samansuuntaisena `laaja` kertaa
+         * leveämmällä pohjalla; kalliokumpareilla leveän pohjan gradientti
+         * kumoutuu. Paino × (leveän projektio pohjan gradientille / |pohja|²)²,
+         * rajattuna 0…1. null = entinen.
+         */
+        if (T.laaja && w > 0) {
+          const m = n * T.laaja; const DL = dd * m;
+          const lx = (korkeus(lon + DL, lat) - korkeus(lon - DL, lat)) / (kx * m);
+          const ly = (korkeus(lon, lat + DL) - korkeus(lon, lat - DL)) / (ky * m);
+          const b2 = bx * bx + by * by;
+          const c = Number.isFinite(lx) && Number.isFinite(ly) && b2 > 0
+            ? Math.min(1, Math.max(0, (lx * bx + ly * by) / b2)) : 0;
+          w *= c ** (T.laajaP ?? 2);
+        }
+        /*
+         * karheus R (PT 3.11.): kallio- ja kumparemaalla lähirinne on moninkertainen
+         * pohjan rinteeseen nähden, moreenimäellä ja peltomaalla lähes sama.
+         * Suhde r = lähirinteiden keskiarvo (5 pistettä ±n/2) / |pohja|; paino
+         * täysi kun r ≤ 1, pois kun r ≥ R, välissä smoothstep. null = entinen.
+         */
+        if (T.karheus && w > 0) {
+          const h = Math.max(1, Math.round(n / 2)) * dd;
+          let s = 0;
+          for (const [ox, oy] of [[0, 0], [h, 0], [-h, 0], [0, h], [0, -h]]) {
+            const gx = (korkeus(lon + ox + dd, lat + oy) - korkeus(lon + ox - dd, lat + oy)) / kx;
+            const gy = (korkeus(lon + ox, lat + oy + dd) - korkeus(lon + ox, lat + oy - dd)) / ky;
+            s += Number.isFinite(gx) && Number.isFinite(gy) ? Math.hypot(gx, gy) : 0;
+          }
+          const r = s / 5 / Math.max(1e-4, Math.hypot(bx, by));
+          const t = Math.min(1, Math.max(0, (T.karheus - r) / (T.karheus - 1)));
+          w *= t * t * (3 - 2 * t);
+        }
+        /*
+         * tavoite (PT 3.11.): ero tasangon ja kalliomaan välillä on mäkien
+         * TIHEYDESSÄ, ei yksittäisessä rinteessä. Seudun keskikaltevuus
+         * (|pohja| 9 pisteessä, kehä säde `seutuM`) ja kerroin rajataan niin,
+         * että korostettu keskikaltevuus ≤ tavoite: loiva seutu nousee
+         * tavoitetasolle, jo kumpuileva (Etelä-Suomi, Smålanti) ei rypisty.
+         */
+        if (T.tavoite && w > 0) {
+          const S = (T.seutuM ?? 6000) / (dd * 111320) * dd;
+          let s = Math.hypot(bx, by); let k = 1;
+          for (let i = 0; i < 8; i++) {
+            const a = (i * Math.PI) / 4;
+            const ox = S * Math.cos(a) / Math.cos((lat * Math.PI) / 180); const oy = S * Math.sin(a);
+            const gx = (kT(lon + ox + DD, lat + oy) - kT(lon + ox - DD, lat + oy)) / (kx * n);
+            const gy = (kT(lon + ox, lat + oy + DD) - kT(lon + ox, lat + oy - DD)) / (ky * n);
+            if (Number.isFinite(gx) && Number.isFinite(gy)) { s += Math.hypot(gx, gy); k++; }
+          }
+          const wMax = Math.max(0, T.tavoite / Math.max(1e-4, s / k) - 1);
+          w = Math.min(w, wMax);
+        }
+        dzdx += w * bx; dzdy += w * by;
       }
     }
     const z = RELIEFI.liioittelu;
