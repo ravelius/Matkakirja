@@ -28,3 +28,9 @@ Mitä tiedetään:
 - Alkulennon keltainen tasainen katto: EI korjausta ennen korjauspyyntöä (edellinen luovutus). Skriptit L/yangxin-kivetys/keltainen*.py.
 - Taihedianin marmori (peli 151/142/129, havainne 224/204/194, rajaukset eri kohdista) ja räystäsvyön sininen (ValoKohteet JuoksuPalatsiVyoSavy 0,15/0,55/2,4): PT: EI Valosepälle nyt, vie PT:lle Pariisin jälkeen. Tiedot L/seinat-erot-2/LAV-erot-2.md.
 - Taihedianin lod1-räystäs ja sali 04: LAV-erot-2:n kohdat 3 ja 6, arvioimatta.
+
+## LISÄYS klo 23.58 (Postivahti: ei nollausta vielä, 26 %; tämä korvaa ylempää ristiriitaisen)
+- SOKKELIN KYLKI: syy löytyi, ja se on kansi eikä kylki. V4_kujakivi_sokkeli_yla-kuva on 1024 × 51 ja tasoprojektiolla 0,5 uv/m kumpaankin suuntaan: poikittain vain 25 px/m → poikkiraidat. Korjaus valmis: L/katot-v125/sokkeli_yla_uv.py <glb> (kokeiltu vain ruudussa 1-3, tiedosto +0,5 Mt; UV-arvot tarkistettu tark.py:llä, EI nähty pelissä). Ei vielä pakettia: aja kaikille ruuduille ja LOD:eille samaan v125:een kattojen kanssa.
+- KATOT: "toinen lape puuttuu" EI selitä: katot_peili.py löysi ruuduista 1-3 ja 0-3 vain 1 peilattavan talon 48:sta. Älä aja sitä koko taustalle. "Taloista puuttuu kattolappeita" ylempänä on siis osoittamatta. Ylhäältä (ylhaalta.png, huom. x peilautuu: oikealla on länsi) katot peittävät suurimman osan, mutta punaista näkyy paikoin (mm. x ≈ −80, z ≈ 239).
+- Toimiva hypoteesi, EI todistettu: 5d:n "kattoton pääty" on oikea pääty, jonka katto näkyy päädyn suunnasta ohuena, koska räystäs ei ulotu päädyn yli; irtopalat ovat ainakin osin kauempien kattojen reunoja ja koristekortteja (V4_harjaelain/V4_chiwen), paaty-lahelta.png. Kohde varmistetaan ensin: mika-pisteet 5d:ssä pyydetty JU:lta Pariisin jälkeen.
+- 5d-mika: sijoita -100 244 -92.03, pisteet 0.51 0.12 (irtopala), 0.50 0.20 (pääty), 0.46 0.09 (irtopala). KOLMIO-rivi antaa mallin ja kärjet; korjaa vasta niiden perusteella.
