@@ -30,3 +30,8 @@ Syy: konteksti (pehmeä raja 28 %). Edellinen: viesti-valoseppa-luovutus-2026110
 
 ## Worktreet
 - wt/proto-linssiseppa2-kontakti218: linssiseppa2/kontakti-218 64b1db7e4 (puhdas). wt/proto-linssiseppa2-tulivuoret: pimennys-aito 53b918b3a.
+
+## LISÄYS 11.15: PT KUITTASI k3 64b1db7e4, valinta 0,8 × 1,3
+- Oletukset **836b12440** (KontaktiVoima 0,8, KontaktiPalloK 1,3) linssiseppa2/kontakti-218:ssa; koe-merge kontakti-218y **54d316302**.
+- SEURAAVAKSI (PT 11.1x, ennen junaa): GPU- ja ruutuhinta isolla iPadilla, fps ennen/jälkeen (`valo kontakti 0|1` samasta kohdasta,
+  salikohta py/pch + piha), JU:n vuorolla → PT. Vasta sitten junaan (haara linssiseppa2/kontakti-218).
