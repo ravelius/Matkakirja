@@ -40,3 +40,11 @@ Mitä tiedetään:
 - UUSI PT:ltä/PK:lta: lokit/pk-otsikko-219-bf54a5c4f-2336/pysty/ kuvat 15–17 (avauskuva-16: valkoinen viiva varjon kivetyksessä Wumenin edessä, kuvassa x 550–950, y 830–845 kun korkeus 1300) ja 18 (holvin säteittäinen pinta). Vastattu PT:lle: alueeltaan minun, ei esipiha eikä v124:n aiheuttama, syy näkemättä. Kuvassa 18 myös lattia on säteittäin sumea → voi olla liikesumeaa ja holvin tahkoja. Viiva: etsi taustasta/a-meridiaaniportista saumaa tai reunaa. Tarvitaan paikallaan oleva kuva Wumenin edestä Pariisin jälkeen (EI vielä pyydetty JU:lta, pyydä).
 - Samaan v125:een vain, jos viiva on taustassa; holvi on rakennuspaketissa.
 - Odotettavat JU:lta: parit 01 + 05 ja mika-ajot 5f + 5d (Pariisin jälkeen). Ei vientejä ilman PT:n kuittausta.
+
+## LISÄYS 4.11. klo 00.30 (mika ajettu, kohde EI selvinnyt)
+- JU: lokit/esikatselu-20261104-002501 (kuvat lav-mika-115-215.png, lav-mika-100-244.png; kolmio-rivit.txt; unity.log rivi 3423→). Kaikki KOLMIO-rivit = sokkelo lattia Quad y −4,5. Päätelmä (ei varmistettu koodista loppuun): mika laskee kolmiot vain luettavista verkoista, ja pelin mallit ladataan lukukelvottomina, joten se ei nimeä kattoa eikä hahmoa. Osumalista on bounding box -lista (16 lähintä riviä), ei todiste.
+- VAROITUS: mika-ajon kamera oli (−95,85, 8,42, 244,15) katse 0,55/−0,83/0 ja (−114,89, 4,55, 212,03) katse 0/−0,69/−0,73 eli jyrkästi alas, kun 5d-kuva 23.42 näyttää taivaan. Pisteeni 0.51 0.12 jne. on valittu 23.42-kuvista, joten ne eivät välttämättä osu samaan kohtaan. KATSO lav-mika-*.png ENSIN. Nyt en katsonut niitä.
+- 5f-hahmo: lähin koristeet.json-kohde on yli 15 m säteestä, eli ei lähikoriste, jos säde pätee (ks. varoitus). Yhä tunnistamatta.
+- Parit 4.11. 00.24: 01 oviaskelman sininen kylki ja 05 sokkelin vinot viivat yhä näkyvissä (L/seinat-erot-2/LAV-erot-2.md).
+- Wumen-kuvat JU:n jonossa → L/katot-v125/wumen/ (runko 15d7274ad, JU kertoo z:n).
+- SEURAAVA ASKEL: katso lav-mika-kuvat; jos kohde jää auki, nakyma.py pelin kameralla (F 850 on arvaus) tai JU-ajo, jossa mallit piilotetaan yksi kerrallaan (kysy PK:lta, onko piilotuskomentoa). Älä aja katot_peili.py:tä koko taustalle.
