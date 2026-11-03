@@ -47,3 +47,9 @@ Kaikki NS:n viestit olivat lähtiessä NS:n jonossa ("queued"); tarkista list_ev
 ## LISÄYS klo 23.42 (VS)
 - **Korttelipinta k6:** VS toi k14-parin (_tyo/linssiseppa2/pariisi-tyyli/k14/pari-sama-mittakaava-paikallinen.jpg): katot sinisemmät kuin 2029, väri KS:n. Y/kortteli-k6.py → Y/tarkistus-a2-k6/k6.png (ba2b80c247b9…), katto Lab 60/5,6/11,3. Viety VS:lle; odota parin k14 + k6. Korvaa AVOIN 5:n.
 - **Hautausmaat:** _tyo/karttaseppa/pariisi-koko-esinepaikat-20261103/hautausmaat.json (51 kpl, renkaat ENU). VS piirtää maan nurmipinnalla, puut ovat jo datassa. Hautakivistä kysytty PT:ltä: uusi Codex-osa vain, jos KK haluaa (oma suositus: katso ensin pelikuva).
+
+## LISÄYS klo 23.44 (PT, KK 23.42; lue viimeisenä, tämä on ajantasaisin)
+- Hautakiviä EI tilata nyt (PT): tilaus vain, jos alue näyttää pelikuvassa nurmen ja puiden jälkeen yhä tyhjältä.
+- **Nimet:** 4e929f038 viety NS:lle yhdistelmäkokeeseen ja JU kääntää sen linjalla 2 (kuvat nd-keski, Louvre + kadut, Eiffel + kadut; JU lähettää polut). Arvioi koko ja määrä näistä, pari PT:lle. Oman nimen päätös on KK:lla, ja se piiloutuu kokeessa samalla säännöllä.
+- KK:n korjauslista: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md (kohdat 1–5 NS, 6–9 VS, 10 nimet).
+- **ODOTTAA:** JU:n nimikuvat, VS:n pari k14 + k6, ND:n kiekko seuraavasta ajosta (lista kohta 4 on NS:llä). Vahti pitää käynnistää uudelleen.
