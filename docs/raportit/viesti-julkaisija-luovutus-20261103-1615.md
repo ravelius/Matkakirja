@@ -65,3 +65,4 @@ Koko päivän jonoloki: julkaisija-tyokalut/jono-20261103-ilta.txt (viimeiset ri
 - Pieni iPad VAPAA (NUI 16.24, cb1b5d9fc, omistajan tallennus palautettu). ISO: NUI odottaa lukkoa (44ecc31d1-mittaus), jättää 693cf437f.
 - Jonon järjestys: L1 = (PK taso1b) → VS sal11 → LAV saumat+pronssit → Tripo/Codex-jakso 17.00–18.00 (ei Unity/simu/käännös; ALKAA-rivi PT:lle).
   L2 = 2212b570e → 9b9695a7d → NUI-simu (keisarin nosto + valikkokuva). ISO = NS vieritys → NUI 44ecc31d1 → JU koe-mittaus 9b9695a7d.
+- 16.28 NUI pysäytti ison odotuksen (ei ajanut 44ecc31d1:tä, luovutus 6a43d66f3): JU:n seuraaja lähettää NUI:n seuraajalle LAITE NYT ISO (ajaa iso-ajo.zsh) NS-vierityksen jälkeen.
