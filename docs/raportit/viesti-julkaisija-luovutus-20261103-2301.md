@@ -40,3 +40,7 @@ Ohje: Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261103-pariisi
 ## Valmiit tällä vuorolla (lähetetty)
 Soikiopari (PT OK) | NUI sauma editori 3 ajoa (viimeinen esikatselu-20261103-223329) | NS eb1749604, 993075f27 | PK jalki v3, palvelijat v5 | VS k9, k10 (KK palautti)
 | LAV aukiokuvat 219c, v121, v122 | Viennit: tausta v121, v122, v123, notre-dame-alue-v2, puu-60-v1, louvre-alue-v1 + v2. NS:n 53bcfffb5 peruttu ajamatta.
+
+## LISÄYS 23.05 (korvaa ristiriidassa olevat kohdat yllä)
+- VS k11 PERUTTU (ei alkanut). Linja 2: ns-7cac734dd → ns-f5b3c3361 korjatulla skenaariolla sk-koealue-elava-ju.txt (ui sulje + odota 50: Ranskan saapuminen vei kameran; 993075f27:n ja 7cac734dd:n nd-lahi ei kelpaa).
+- Terävyyskuva on d64f74a56 (vs-teravyys-d64f74a56.zsh, pid vs-teravyys.pid), ei 43df66241. PT kuittasi 993075f27:n nd-keski + nd-laaja. KATSO JOKAINEN KUVA ennen valmis-riviä (PT).
