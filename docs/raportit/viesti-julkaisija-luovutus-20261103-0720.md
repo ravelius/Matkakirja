@@ -41,3 +41,16 @@ Rooli: Julkaisija (JU). Työkalut /Users/Shared/Claude/julkaisija-tyokalut/. Ede
   2) VS pim11 (bd3daf198, ~5 min) – tai L1:lle, jos se vapautuu ensin.
 - Viety 07.29/07.40: LAV palatsi-esto-v38 ja kielletty-rakennukset-v118 (vie-paketti.sh). PR:t 6093 ja 6100 mergetty (ei checkejä docs-poluilla).
 - **08.15 PK (PT hyväksynyt): 218y:n perään L1:lle** `PROTO_LINJA=1 zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218z/ketju-z.zsh xf th yk cx tj ty cc ys taso1b` (runko sali-218z 9cf0c1c2c). JU:n odotin taustalla – jos nollaus tappoi, käynnistä itse 218y:n jälkeen; ilmoita PK:lle alku ja valmis.
+
+## LISÄYS 09.55 (nollaushetki) – korvaa aiemmat käynnissä-osiot
+- **Iso iPad:** juna-218 runko **8d18d7047** (NS: esilataus + ilmaisin + nosto + loppubeige) asennettu 09.51 (PT:n etusija, omistaja KK 09.28
+  katsoo saapumiset iPadilta). Rivi KK:lle + PT:lle lähetetty. **EI muita asennuksia Isoon iPadiin**, ennen kuin PT/KK sanoo.
+  Käännösskripti julkaisija-tyokalut/laite-218-8d18d7047.zsh (L2-lukko + devicectl ipad-lukolla), app lokit/julkaisija-laite-218-8d18d7047/.
+- **L1: PK 218z-sarja** (`sali-218z/ketju-z.zsh xf th yk cx tj ty cc ys taso1b`, alkoi 09.02) → **perään 218aa** (JU:n odotin taustalla;
+  jos kuoli): `PROTO_LINJA=1 zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218aa/ketju-aa.zsh ty xf th yk cx tj cc ys taso1b`.
+  Alku + valmis-rivi PK:lle (local_91a1bc27). 218z:n voittaja junaan = PK/PT:n päätös, JU vain ajaa.
+- **L2: NUI nousukoe 618323429** (simu-lukko.sh kaari NUI yhteinen-iPad13 … nui-nousukoe-20261103/ajo.zsh, ~25 min) annettu 09.51 → VAPAA NUI:lta.
+- **LAV:** osasarja-v7 Blender-leivonta käynnissä 08.37 → (nice 15), VAPAA LAV:lta erikseen. Estotarkistus tehty (= esto-v38).
+- **VS:** valo218y (09.25) ja valo218y v2 b03eff6ef (09.33) valmiit; ei jonoa.
+- PR:t 6103 (LAV) ja 6107 (PT) mergetty; ei checkejä docs-poluilla.
+- OPPI: LAV:n lyhyet Blender-parit voi ajaa ilman vuoroa, kun kummallakaan linjalla ei ole tallennetta; tallenteiden aikana nice 15.
