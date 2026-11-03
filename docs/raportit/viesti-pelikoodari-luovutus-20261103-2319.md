@@ -22,3 +22,7 @@ Ei ajettu pelissä. Peli-testit 814/814, unity-tarkistus 0 virhettä. PT: ei val
 
 ## Lisäys: Lavastajan vastaus B5:een
 LAV ei tunnistanut mallia; väri on väärä. LAV:n arvio kuvasta x ≈ −97, z ≈ −205 (±30 m), Taihemenin länsipuoli; ei löytynyt tausta 1-1:n lod0/1:stä, t-portti-m216:sta eikä avoimista (tausta 1-0 ja lod2 vain laaja haku, c2 ei osumia). Oma ehdokas x −233…−192 on siis heikko. Merkitse kuvaan molemmat. LAV:lle sanottu: ei korjausta ennen KK:n vahvistusta, säteen tulosta ei tule (PT kielsi laskennan, pelissä ei poimintakomentoa).
+
+## Lisäys: JU:n korjauspyyntö – SEURAAVAN ISTUNNON ENSIMMÄINEN TYÖ, EI TEHTY
+JU: 878ac7755 jonossa: iPhone L1 lav-v123:n jälkeen, iso iPad NUI:n sauma-a2:n jälkeen (runko 693cf437f). Ennen iPad-vuoroa korjattava aja.zsh: `devicectl … --console` on ollut rikki (3.11. 20.20), konsoli.log jää tyhjäksi eikä B4:n rivejä "avauksen tekstit" ja "häipyvät" tule.
+Korjaus: skripti konsolittomaksi ja rivit peliltä tiedostoon, jonka skripti hakee Documentsista (tarkista ensin, päätyvätkö ne ui-lokiin; Debug.Log-rivit eivät todennäköisesti päädy). Jos pelikoodi muuttuu, SHA vaihtuu: kerro uusi SHA JU:lle ja päivitä aja.zsh. Skripti luetaan vasta vuorolla, joten sitä saa muokata suoraan. Samalla tarkista iPhone-osan konsoli (simctl, ei tämä vika).
