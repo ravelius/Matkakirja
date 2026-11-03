@@ -34,3 +34,8 @@ Kaikki NS:n viestit olivat lähtiessä NS:n jonossa ("queued"); tarkista list_ev
 - Sainte-Chapelle pelissä 48ba7cf88, sillat 53b34a340 (33 siltaa). **AVOIN 1 ratkesi:** yhdestoista silta on Simone de Beauvoir, 30°-listalla.
 - Koko Pariisin puut pelissä 159acdf0c. Aukiot ovat toistaiseksi pois datasta (VS/KK kiekot), joten esinepaikkojen aukioita ei nyt käytetä.
 - NS ei maininnut ND 0,8:aa tässä viestissä: varmista, että se ja raivausmaski on tehty tasosta 8589240ae981…. Pelikuvat JU:lta.
+
+## LISÄYS klo 23.34
+- ND 0,8 pelissä 9ac73a6e4 (kirjasto esine/pariisi/notre-dame-alue v4, raivausmaski uudesta alfasta; pikselivertailu toimitettuun tasoon tehty). Edellisen lisäyksen ND-varmistus on hoidettu.
+- ketju.virhe.11031218 on tyhjä tiedosto klo 11.20:ltä: vanha, ei koske nykyistä ketjua. AVOIN 6:n huomio on hoidettu.
+- Postivahti: nollaus vasta lähellä 35 %:a; uusi LUOVUTUS VALMIS silloin.
