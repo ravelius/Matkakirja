@@ -1,0 +1,6 @@
+Counter({'OK': 4, 'PUUTE': 1})
+(99, 73, 'Cinémathèque française', 'PUUTE ala')
+(15, 74, 'Nationin asema', 'OK piste')
+(4, 35, 'Opéra Bastille', 'OK ala')
+(0, 36, 'Gare de Lyon', 'OK ala')
+(0, 100, 'Maahanmuuton historian museo', 'OK ala')
