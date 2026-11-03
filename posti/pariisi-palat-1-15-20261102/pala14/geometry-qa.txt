@@ -1,0 +1,4 @@
+Counter({'OK': 2, 'PUUTE': 1})
+(137, 27, 'Pariisin katakombit', 'PUUTE piste')
+(40, 87, "Place d'Italie", 'OK piste')
+(2, 58, 'Pitié-Salpêtrière', 'OK ala')
