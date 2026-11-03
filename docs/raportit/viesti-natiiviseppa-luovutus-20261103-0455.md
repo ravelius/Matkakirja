@@ -35,7 +35,9 @@ muistikoe-kytkimet + korjaus; peili pushattu):
 1. **Ehdot 1 ja 3 yllä** (kuvapari → PT → merge junaan 218).
 2. **Osa C (esilataus) ODOTTAA OMISTAJAN VALINTAA** (ennallaan; KK suosittaa (b) + taustaesilataus). Haara natiiviseppa/esilataus-218
    2cf83b7c3 (työpuu wt/proto-natiiviseppa-esilataus). Esilataus EI ollut muistitapon syy – PT:lle kerrottu.
-3. **KS:n uusi pohjasarja** (tasot 9–10) → SileaUrl + offline.json kaupunkiRasteri + lepokuvat (lepokuvat-valitaso.sh, kaaret 1.5/0.8/0.4).
+3. **KS:n uusi pohjasarja VALMIS (KS 04.5x)**: julisteet/pallo/laatat/2026-11-03-pohja-valitaso/ (Z9 koko Eurooppa, Z10 kaupunkilaatikoissa,
+   saumaton). JU vie ämpäriin → JU:n kuittauksen jälkeen SileaUrl (KarttaKerrokset.cs) ja offline.json kaupunkiRasteri uuteen kansioon,
+   lepokuvat-valitaso.sh (kaaret 1.5/0.8/0.4) JU:n simuvuorolla, laitepari PT:lle. KS:n raportti docs/raportit/valitaso-eurooppa-20261103.md (PR 6079).
 4. **GC-haara runkoon** vasta PT:n luvalla (2856c5cc3, haara natiiviseppa/gc-mvt-218).
 5. **Merget** (VS/NUI/KS) PT:n kuittausten mukaan: `git merge-tree --write-tree runko haara` → commit-tree → update-ref.
    zsh-ansa: `$C:refs/...` ja `git show $c:polku` tulkitaan :r/:A-muuntimiksi → kirjoita `${C}:...`.
@@ -51,7 +53,7 @@ muistikoe-kytkimet + korjaus; peili pushattu):
   haamu3-20261102, LeikeVersio leikkeet-20261102, SiltaVersio leikkeet-sillat-20261102).
 - Nykäysvahti 4.24 on omistajan sitova sääntö; rajaa ei muuteta.
 - Laiteäpit: 08aa2aa61, 689cdc446 (Release, uusimmat), 16c732c8c, 390e3d9d9, 2cf83b7c3. PT: pidä 2 uusinta + käytössä.
-- Iso iPadissa nyt 689cdc446 (JU palauttaa uusimman rungon). Documents/muisti-tarkka.txt = "50" (VALI=50 kirjoittaa sen).
+- Iso iPadissa nyt 08aa2aa61 (= runko 55ce62126 + kytkimet; JU asensi 04.56). Documents/muisti-tarkka.txt = "50" (VALI=50 kirjoittaa sen).
 - Cron Unity-beeta "4 9 * * *" (python3 proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py; tyhjä = ei uutta) → luo uudelleen.
 - Worktreet: ÄLÄ poista ehdokas, -tyokalut, -varjo, -saapuminen, -gcmvt, -esilataus, -introkoe eikä T7-kopioita. Luovutusworktreet
   natiiviseppa-luovutus-20261103-{0120,0230,0350,0500} saa poistaa mergen jälkeen (`tools/uusi-worktree.sh --poista <nimi>`).
