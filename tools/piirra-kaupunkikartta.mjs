@@ -1005,10 +1005,10 @@ const KAUPUNGIT = {
         rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
         x: 20.625, y: 24.375, leveys: 16.25, suunta: '1 km pohjoiseen',
       },
-      // VĂCĂREȘTIN LUOSTARIN KAINALO (PT 31.10.2026, kadonneet ihmeet): luostarin paikka (44.404, 26.117) on rajauksen
+      // VĂCĂREȘTIN LUOSTARIN KAINALO (PT 31.10.2026, kadonneet ihmeet): luostarin paikka (44.3959, 26.1233; Wikidata, KS 3.11.2026) on rajauksen
       // kaakkoispuolella. Oikea alakulma ydinalassa, jossa ei kohteita.
       {
-        rajat: { pohjoinen: 44.4085, etela: 44.3995, lansi: 26.1107, ita: 26.1233 },
+        rajat: { pohjoinen: 44.4004, etela: 44.3914, lansi: 26.117, ita: 26.1296 },
         x: 68, y: 68, leveys: 12, suunta: '3 km kaakkoon',
       },
     ],
@@ -1105,7 +1105,7 @@ const KAUPUNGIT = {
     // Lisäksi Pietarissa ei ole tyhjää nurkkaa mihin ruutu sopisi.
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
-    // NYENSKANSIN KAINALO (PT 31.10.2026, kadonneet ihmeet): linnoitus Ohtan suulla (59.9415, 30.41) 5 km itään.
+    // NYENSKANSIN KAINALO (PT 31.10.2026, kadonneet ihmeet): linnoitus Ohtan suulla (59.9438, 30.4068; Wikidata, KS 3.11.2026) 5 km itään.
     // Ruutu ydinalan oikeaan laitaan, jossa ei kohteita (mitattu kohdepisteistä 31.10.2026).
     kainalot: [
       {

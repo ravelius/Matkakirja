@@ -215,7 +215,7 @@ export const MAASTOKOHTEET_SWE = [
       europe: { x: 587.5, y: 247.2 },
     },
     teksti: 'Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi '
-      + 'sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa '
+      + 'sen alle, ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa '
       + 'melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan '
       + 'yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo '
       + 'pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven '

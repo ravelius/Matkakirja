@@ -1,0 +1,127 @@
+{
+ "syvennys:helsinki-kantele": {
+  "tila": "viuhka",
+  "nimi": "Kantele",
+  "kaupunki": "helsinki",
+  "lahde": "nahtavyysjutut.js Kantele-teksti (soitin yleisesti, ei paikkaa)",
+  "perustelu": "Kantele on soitin eikä ole sidottu yhteen paikkaan Helsingissä, joten nosto kuuluu kaupunkimerkin viuhkaan."
+ },
+ "skandaali:koirapaivien-kuningas": {
+  "tila": "siirto",
+  "nimi": "Koirapäiväkuningas",
+  "kaupunki": "islanti",
+  "lat": 64.14732,
+  "lon": -21.93526,
+  "lahde": "Wikidata Q16427501 (Stjórnarráðið, hallituksen talo, Reykjavík) P625",
+  "perustelu": "Tapahtumapaikka on Stjórnarráðshúsið Reykjavíkissa; nykyinen piste on 5,6 km sen itäpuolella Islannin laudan ankkuripiste (piste asetettu tarkoituksella, ks. skandaalit.js), joten siirto vaatii päätöksen onko Islannilla oma kartta."
+ },
+ "kohde:hahmotelma-vesterport": {
+  "tila": "siirto",
+  "nimi": "Vesterport",
+  "kaupunki": "kobenhavn",
+  "lat": 55.6763,
+  "lon": 12.5691,
+  "lahde": "Wikidata Q3432909 (Vesterport, kaupunginportti, Kööpenhamina) P625",
+  "perustelu": "Wikidatan mukaan purettu Vesterport oli Rådhuspladsenin itälaidalla (Vestergade/Vesterbrogade), 195 m nykyisestä pisteestä itään."
+ },
+ "skandaali:alves-dos-reis-setelihuijaus": {
+  "tila": "siirto",
+  "nimi": "Alves dos Reis",
+  "kaupunki": "lissabon",
+  "lat": 38.7087,
+  "lon": -9.13817,
+  "lahde": "Wikidata Q378372 (Banco de Portugal) P625; en-Wikipedia 38.708729, -9.138148",
+  "perustelu": "Huijaus kohdistui Banco de Portugalin Lissabonin päärakennukseen Rua do Comércion varrella, ja nykyinen piste on noin 75 m sen länsipuolella."
+ },
+ "kohde:hahmotelma-ljubljana": {
+  "tila": "viuhka",
+  "nimi": "Ljubljana",
+  "kaupunki": "ljubljana",
+  "lahde": "nosto itse: js/packs/hahmotelma-svn.js (id hahmotelma-ljubljana, kuvissa linna ja Lohikäärmesilta, teksti koko kaupungin historiasta)",
+  "perustelu": "Nosto kertoo koko Ljubljanan historiasta (Emona, Iason, maanjäristykset) eikä yhdestä paikasta, joten se kuuluu kaupunkimerkin viuhkaan."
+ },
+ "kohde:hahmotelma-luxembourg": {
+  "tila": "viuhka",
+  "nimi": "Luxembourgin kaupunki",
+  "kaupunki": "luxemburg",
+  "lahde": "nosto itse: js/packs/hahmotelma-lux.js (id hahmotelma-luxembourg, kuvat Grund, Corniche, Adolphen silta)",
+  "perustelu": "Nosto esittelee koko Luxemburgin kaupunkia useilla eri kohteiden kuvilla, joten sillä ei ole yksittäistä paikkaa ja se kuuluu viuhkaan."
+ },
+ "skandaali:boheemikirjan-takavarikko": {
+  "tila": "siirto",
+  "nimi": "Boheemikirja",
+  "kaupunki": "oslo",
+  "lat": 59.91378,
+  "lon": 10.73933,
+  "lahde": "Wikidata Q181729 (Grand Café, Oslo) P625; Grand Hotel Q1542588 59.91373, 10.739572",
+  "perustelu": "Skandaalin paikaksi on kirjattu Grand Café Karl Johans gatella, ja se on noin 100 m nykyisestä pisteestä länteen."
+ },
+ "hetki:pietari-perustus-1703": {
+  "tila": "siirto",
+  "nimi": "Jänissaari 1703",
+  "kaupunki": "pietari",
+  "lat": 59.94972,
+  "lon": 30.31639,
+  "lahde": "Wikidata Q1588376 (Zayachy/Hare Island) P625; en-Wikipedia 59.95, 30.315",
+  "perustelu": "Pietari perustettiin Jänissaarelle 1703, ja nykyinen piste on noin 180 m saaren pisteestä länteen."
+ },
+ "kohde:hahmotelma-mustapaiden-talo": {
+  "tila": "siirto",
+  "nimi": "Riian Mustapäiden talo",
+  "kaupunki": "riika",
+  "lat": 56.94714,
+  "lon": 24.10692,
+  "lahde": "Wikidata Q74736 (House of the Blackheads, Riga) P625",
+  "perustelu": "Mustapäiden talo seisoo Raatihuoneentorin laidalla, ja nykyinen piste on noin 127 m sen eteläpuolella."
+ },
+ "syvennys:riika-balsami": {
+  "tila": "viuhka",
+  "nimi": "Musta balsami",
+  "kaupunki": "riika",
+  "lahde": "en-Wikipedia \"Riga Black Balsam\" (Q1539410): ei koordinaatteja eikä Kunzen apteekin osoitetta; js/packs/syvennyspaikat.js myöntää pisteen symboliseksi arvioksi",
+  "perustelu": "Kunzen apteekin tarkkaa paikkaa ei tunneta (nykyinen piste on vain arvio Mustapäiden talon kohdalla), joten juoma kuuluu Riian merkin viuhkaan."
+ },
+ "kohde:hahmotelma-antiikin-serdika": {
+  "tila": "siirto",
+  "nimi": "Antiikin Serdika",
+  "kaupunki": "sofia",
+  "lat": 42.69778,
+  "lon": 23.32306,
+  "lahde": "en-Wikipedia \"Serdica\" (Wikidata Q4067160)",
+  "perustelu": "Serdikan kaivausalue (Largo) keskustan alla"
+ },
+ "kohde:moskeijat": {
+  "tila": "siirto",
+  "nimi": "Sofian moskeijat",
+  "kaupunki": "sofia",
+  "lat": 42.69944,
+  "lon": 23.3225,
+  "lahde": "en-Wikipedia \"Banya Bashi Mosque\" (Wikidata Q790052)",
+  "perustelu": "ainoa jäljellä oleva seitsemästä moskeijasta, joista nosto kertoo"
+ },
+ "kohde:hahmotelma-klara-kloster": {
+  "tila": "siirto",
+  "nimi": "Klara kloster",
+  "kaupunki": "tukholma",
+  "lat": 59.3311,
+  "lon": 18.06142,
+  "lahde": "Wikidata Q7587608 \"St. Clare's Priory\" P625 59.33109722, 18.06142222 (vertailuksi en-Wikipedia \"Klara Church\" Q1540683: 59.33111, 18.06167)",
+  "perustelu": "Klarissaluostari seisoi nykyisen Klara kyrkan paikalla Norrmalmilla, noin 220 m nykyisestä pisteestä länteen."
+ },
+ "kohde:hahmotelma-royal-opera-house-valletta": {
+  "tila": "siirto",
+  "nimi": "Vallettan Royal Opera House",
+  "kaupunki": "valletta",
+  "lat": 35.89644,
+  "lon": 14.51034,
+  "lahde": "Wikidata Q576808 \"Royal Opera House\" P625 35.89644, 14.51034 (en-Wikipedia \"Royal Opera House, Valletta\": 35.8967, 14.5103)",
+  "perustelu": "Royal Opera House (nyk. Pjazza Teatru Rjal) on Kaupunginportin kupeessa Vallettan sisäänkäynnillä, noin 283 m nykyisestä pisteestä lounaaseen."
+ },
+ "kohde:hahmotelma-valletta": {
+  "tila": "viuhka",
+  "nimi": "Valletta",
+  "kaupunki": "valletta",
+  "lahde": "en-Wikipedia \"Valletta\" (Q23800) koordinaatit 35.89833, 14.5125 (kaupungin piste); nosto: js/packs/hahmotelma-mlt.js",
+  "perustelu": "Nosto kertoo koko kaupungin perustamisesta ja linnoituksista, ei yksittäisestä rakennuksesta, joten se kuuluu kaupunkimerkin viuhkaan."
+ }
+}

@@ -27,6 +27,8 @@ import { HALLINNON_PAIKAT } from '../../js/packs/laudan-paakaupungit.js';
 import { ETUSIVUN_KOHTEET } from '../../js/ui-apurit.js';
 import { lueKorkeudet } from './korkeudet.mjs';
 import ASUKASLUVUT from './kaupunkien-asukkaat.json' with { type: 'json' };
+import KESKUSTAT from '../../data/kaupunkikeskustat.json' with { type: 'json' };
+import NOSTOPAIKAT from '../../data/nostopaikat.json' with { type: 'json' };
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
@@ -40,7 +42,7 @@ import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
 import {
-  karttavaloKokoelma, piilotaKaksoisnimet, rajaaKarkaavatNimet, rikastaKohdekartat, takynostoKokoelma,
+  karttavaloKokoelma, piilotaKaksoisnimet, rajaaKarkaavatNimet, rikastaKohdekartat, sovitaNostopaikat, takynostoKokoelma,
 } from './karttavalot.mjs';
 import { rikastaElavaKartta } from './elava-kartta.mjs';
 import { reitti1873Kokoelma } from './reitit1873.mjs';
@@ -99,6 +101,10 @@ function lautaKokoelmat(ns) {
     asukkaatLahde: a?.asukkaat != null
       ? `Wikidata P1082 (CC0)${a.vuosi ? `, ${a.vuosi}` : ''}, ${a.wikidata}` : null,
   });
+  const keskustatiedot = (k) => ({
+    keskusta: k && !k.alue ? { lat: k.lat, lon: k.lon } : null,
+    alue: k?.alue ? { p: k.rajaus.pohjoinen, e: k.rajaus.etela, l: k.rajaus.lansi, i: k.rajaus.ita } : null,
+  });
   const kaupungit = P.cities.map((c) => {
     const tarkka = c.pallo ?? pallo[c.id];
     const arvio = tarkka ? null : laudaltaAsteiksi('maailmankartta', c.x, c.y);
@@ -136,6 +142,9 @@ function lautaKokoelmat(ns) {
       // (tools/vienti/hae-asukkaat.mjs, P1082, CC0). asukkaatAlue = luku
       // koskee saarta/valtiota (Sumatra, Angola), ei kaupunkia.
       ...asukastiedot(ASUKASLUVUT.kaupungit[c.id]),
+      // Skeema 1.68 (Karttaseppä 2.11.2026; omistaja 21.42, saapumiszoomaus kaikkiin Euroopan kaupunkeihin): OSM-tarkistettu
+      // keskipiste (tools/sisalto/kaupunkikeskustat.mjs → data/kaupunkikeskustat.json) ja alueille rajaus { p, e, l, i }.
+      ...keskustatiedot(KESKUSTAT[c.id]),
       data: c,
     };
   });
@@ -162,7 +171,7 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput, lahtokohde = alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET). tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput, lahtokohde = alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET). tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). keskusta = { lat, lon } saapumiszoomauksen keskipiste (Euroopan kaupungit, OSM-tarkistettu; null = kaupungin piste), alue = { p, e, l, i } asteina koko alueen rajaus (alpit, lappi, islanti, kreeta, sisilia; muuten null). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
       'Kaupunkien väliset yhteydet: laji maa | sea (meri) | lento. askelia = laudan steps (lennolla null), via = taitepisteet laudan Miller-yksiköissä [[x, y], …] (tyhjä = suora viiva).',
@@ -1096,6 +1105,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
+  // Skeema 1.68 (Karttaseppä 2.11.2026, suunnitelma osa D): keskustaan kasattujen nostojen omat paikat ja viuhka.
+  sovitaNostopaikat(kokoelmat.karttavalot.alkiot, NOSTOPAIKAT);
   // PT 10.10.2026 (Karttasepän tarkistus A2): ladonnan karkaama nimi (> 25 km tai toinen maa) omaan pisteeseensä ilman nimeä.
   rajaaKarkaavatNimet(kokoelmat.karttavalot.alkiot, kokoelmat.maarajat.alkiot);
   // PT 10.10.2026 (tarkistus B2): sama nimiö kahdesti alle 2 km:n päässä → vain yksi nimi.

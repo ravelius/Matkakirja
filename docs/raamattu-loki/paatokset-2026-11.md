@@ -137,3 +137,51 @@ Valosepän vertailu havainteeseen (esikatselu-20261102-135020/sali-pari.jpg): 04
 ## SATUNNAISET KORISTEET: VAIN SADE POIS; SAAPUMINEN: ZOOMAUS ENNEN INTROKUVIA (2.11.2026 klo 14.38)
 
 Omistaja 2.11.2026 klo 14.37 (kortti KK:ssa): 'Poistetaanko satunnaiset koristeet kartalta?' → 'Vain sade pois' (laiva, juna, lintuparvi ja kyyhky jäävät). Samana hetkenä pyyntö: kaupunkiin saavuttaessa ensin zoomaus peruskartalta kaupunkinäkymään, vasta sen jälkeen introkuvat noin 70 % kuva-alasta, kartta näkyy ympärillä (korvaa suunnitelman E-kohdan 'zoomaus kulkee introa pitkin'). iPadin aloituslogo mustalla taustalla puolet nykyisestä, iPhone ennallaan.
+
+## Pariisin piirros ilman metsiä (omistaja 2.11. 16.48) (2.11.2026 klo 16.49)
+
+Omistaja 16.48 (KK:n kortti, sanatarkasti): "metsiä ei tarvitse. tee uusi koekuva joka samaa tarkkuutta kuin max 15 kuvaa ilman metsiä". Piirretty Pariisi tehdään ilman Bois de Boulognea ja Bois de Vincennesia (laaja v4 -maski ilman metsiä). Koekuva tarkkuudella, jolla kaupunki mahtuu enintään 15 palaan (1536×1024); valinta omistajalta ennen tilauksia.
+
+## Magnific tilattu, käyttö MCP-yhdistimellä (omistaja 2.11. 16.59–17.01) (2.11.2026 klo 17.02)
+
+Omistaja 16.59 (KK:n kortti): "Kyllä, Magnific"; "Kyllä, hankin sen". 17.00: "yhdistetään se MCP:llä" (korvaa Chrome-reitin). 17.01: "nyt yhdistetty" (claude.ai Connectors → Magnific). Koe: Codex piirtää Pariisin uuden tyylin perustan 3 kuvan tarkkuudella, Karttaseppä suurentaa Magnific MCP:llä (Creative-tila, sama tyyliohje), pari KK:n kautta omistajalle. Raamattu 12.24 kohta 5.
+
+## Piirroskaupungit 2,5 m/px koko kaupunkina, Pariisi uudella tyylillä (omistaja 2.11. 17.06) (2.11.2026 klo 17.07)
+
+Omistaja 17.06 (KK:n kortti, sanatarkasti, nähtyään tarkkuus-2m-2_5m(-lahi) ja pari-nykyinen-koepala): "Valitaanko 15 kuvan tarkkuus Pariisille ja seuraaville kaupungeille?" → "Kyllä, 15 kuvaa (Suositus)"; "Tehdäänkö koko Pariisi uudella tyylillä?" → "Kyllä (Suositus)". Piirroskaupungit ~2,5 m/px koko kaupunkina (Pariisi ilman metsiä 15 palaa); korvaa 1.11. 13.54 (lähitaso ~1 m/px) ja 18.22 (lähitaso vain keskustaan). Pariisi kokonaan uudella tyylillä (Codexin koepala 16.39). Tekotapa (Codexin 15 palaa vai 3 kuvaa + Magnific) vasta Magnific-kokeen jälkeen, ei palatilauksia ennen sitä. Raamattu 2.204.
+
+## Magnific ei vielä tilattu (omistaja 2.11. 17.21) (2.11.2026 klo 17.22)
+
+KK 17.19: Magnific-yhdistin näkyy, mutta tunnus on Free-tilillä ja krediittejä on 0. Omistaja 17.21 (KK:lle): "en ole vielä tehnyt tilausta". Raamattu 12.24 kohta 5 korjattu: ei vielä tilattu; suurennus toimii vasta, kun omistaja tilaa samalla Magnific-tunnuksella. Omistajan 17.10-ehto ennallaan: Codexin perusta näytetään ensin.
+
+## Pariisi alusta isoisän ajan kartaksi (omistaja 2.11. 17.39–17.42) (2.11.2026 klo 17.42)
+
+Omistaja 17.39 (KK:n kortin vastaus, sanatarkasti): "Tuo ei näytä vielä vanhalle kartalle minun mielestä kartta pitäisi olla yksinkertaistettumpi eli kaikkia rakennuksia ei minun mielestä kannata piirtää"; 17.42: "pitää olla enemmän sen näköinen kuin jos se olisi piirretty isoisän aikaan. Nyt tuo näyttää liikaa siltä kuvalta, joka oli alkuperäinen kuva, eli pitää lähteä ihan nollasta liikenteeseen, mutta kuitenkin oikea karttapohja pitää säilyttää sillä tavalla, että tärkeimmät nähtävyydet ovat oikeissa paikoissa oikeilla etäisyyksillä, mutta vähemmän tärkeitä asioita voi minusta jättää piirtämättä. Mitä sinä olet mieltä?" Codexin 3 kuvan pohja hylätty; Magnific-pari, palatilaukset ja Magnific-tilaus pysäytetty. KK päivittää suunnitelmat/20261102-pariisi-uusi-tyyli.md ja tuo kortin. Raamattu 2.204 TYYLI.
+
+## Pariisin kartta: ensin ulkoasu ilman paikkavaatimuksia (omistaja 2.11. 19.14–19.17) (2.11.2026 klo 19.17)
+
+Omistaja 19.14 Codexille otosta E: "Ei hyvä. Tee ihan tyhjältä pohjalta. Anna jollekin toiselle sessiolle tehtäväksi." 19.17 (KK): "Voisi tehdä ensin ilman realismi vaateita että saisi visun kuntoon". Uusi Codex-sessio hakee ensin ulkoasun ilman paikka- ja etäisyysvaatimuksia; sovitus Karttasepän OSM-runkoon (2.204: nähtävyydet oikeilla paikoilla ja etäisyyksillä) vasta, kun omistaja on hyväksynyt tyylin. Tyylikokeet A–C (18.31) ja E hylätty.
+
+## Pariisin piirroksen tyyli hyväksytty (omistaja 2.11. 20.36) (2.11.2026 klo 20.40)
+
+Omistaja 20.36 Codexin 20.29 kuvan jälkeen (KK:n kautta, sanatarkasti): "Anna codexille ohjeet miten tehdä valmiiksi. Nyt tyyli hyvä. Animoidaan lopulliseen veneet ja lintuja ja ehkä kuumailmapallo tms". Hyväksytty kuva docs/raportit/kaappaukset/omistaja-20261102/2029-hyvaksytty-tyyli.png. Codexin ohje: suunnitelma 20261102-pariisi-uusi-tyyli.md kohta 00 (tyyli lukossa, paikat Karttasepän palarungoista, 2,5 m/px ja 15 palaa ilman metsiä, ensin yksi pala runko.png:n päälle omistajan hyväksyttäväksi, animaatioita varten sillat, veneet, lintu ja pallo erillisinä kerroksina). Animaatiot Natiivi-UI ja Karttaseppä.
+
+## JUOKSUPELIN ARKISET HAHMOT (2.11.2026 klo 21.06)
+
+Omistaja 2.11. klo 20.54: "Juoksupelissä voisi olla muitakin hahmoja, jotka eivät yritä ottaa keisaria kiinni, vaan toimittavat arkisia askareitaan. Heillä voisi olla myös kädessään tavaroita, jotka saattavat rikkoontua, jos keisari osuu heihin tai jos he säikähtävät keisaria." Kortti klo 21.05 (KK): aloitetaan kolmella hahmolla – Kyllä (suositus): ruokaa kantava eunukki lakatun ruokalaatikon kanssa (eri asu kuin jahtaajilla), palvelijatar posliinin tai teetarjottimen kanssa, vedenkantaja olkapuun ämpäreineen; säikähdys tai osuma pudottaa tavaran. Särkymisen ääni houkuttelee lähimmän jahtaajan – Ei. Toteuttaja Pelikoodari (juoksupeli KK:n ohjauksessa): Codex-tilaus heti, toteutus nykyisen paketin, eunukkikorjausten ja ristikko-ovien jälkeen; äänet Soundlysta; tietokortit PK tai Sisältökirjuri. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261102-juoksupeli-arkiset-hahmot.md.
+
+## JUOKSUPELIN AUKIOT JA VEISTOKSET (2.11.2026 klo 21.17)
+
+Omistaja 2.11. klo 21.0x: "Mitä muuta? Varsinkin suurilla palatsin aukioilla voisi olla. Ja onko siellä ollut jotain veistoksia? Itse ainakin muistan nähneeni valtavan kokoisen vihreän kilpikonnan kielletyssä kaupungissa." + "siis veistoksena." Kortti klo 21.17 (KK) "Mitkä lisätään palatsin aukioille ensin?" → kaikki neljä: terassin pronssit (Taihedianin pronssikilpikonna ja kurki, aurinkokello, viljamitta, suitsukeastiat), pronssileijonat porteille, vesiastiat ja lakaisijat, sade lohikäärmeenpäistä. Jako (PT): veistokset, leijonat ja vesiastiat Lavastajalle (mallit Codexilta, Tripo varalla) itäisen salirivin jälkeen; lakaisijat, vedenkantajat ja vesiastiat esteinä Pelikoodarille (KK suoraan); sade Valosepälle Sarytševin jälkeen; tietokortit PK, PT tarkistaa 1914. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261102-juoksupeli-arkiset-hahmot.md kohta 7.
+
+## NOSTOT JA SAAPUMISZOOMAUS KAIKKIIN EUROOPAN KAUPUNKEIHIN (2.11.2026 klo 22.08)
+
+Omistaja 2.11. klo 21.42: "Eurooppaan voi sijoittaa niitä nostoja kaikkiin kaupunkeihin. Samoin zoomauksen saavuttaessa voi tehdä kaikkiin. Ei haittaa jos ei ole piirros karttaa. Vaihdetaan niitä striimi karttojen tilalle sitä mukaan kun valmistuu". Raamattu: 2.204 saapumiszoomaus ja nostot oletukseksi kaikille Euroopan kaupungeille (striimikartta pohjana), 2.137 sisäisten nostojen kielto pois (kaupunki yhä yksi piste maan ja Euroopan näkymissä), 2.138 vain piirroksettomille. Jako (PT): NUI osat A (zoomaus), F (aloituskaupunki), E (nostot, D:n jälkeen); KS osat B (60 keskipistettä), D (paikattomien nostojen paikat, Sonnet-parvi), G yhdessä NUI:n kanssa; NS osa C (esilataus ja nykäysmittaus). Video (Lontoo, Bratislava, Pariisi) KK:lle, kun A–F samassa rungossa. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261102-nostot-ja-zoomaus-kaikkiin.md.
+
+## YÖVALTUUTUS 2.–3.11.: KK HYVÄKSYY OMISTAJAN PUOLESTA (2.11.2026 klo 22.25)
+
+Omistaja 2.11. klo 22.25 (KK:n kautta): "Menen nukkumaan. Saat hyväksyä puolestani kaikki". KK hyväksyy yön ajan omistajan puolesta sen, mikä muuten menisi omistajalle (Pariisin koko kaupunki, juoksupelin korjaukset ja salit, nostot ja zoomaus -video, kuvaparit, kysymykset suositusvaihtoehdolla) omistajan aiempia sanoja vasten; merkintä "KK:N HYVÄKSYNTÄ OMISTAJAN PUOLESTA klo …", aamulista scratchpad/keskustelukanava/yo-hyvaksynnat-20261102.md. Ei kuulu valtuutukseen (odottaa aamua): TF-julkaisu ja junan lukitus, ostot, asetukset, avaimet ja CLAUDE.md, poistot, uusi generointi yli 3 %:n kiintiön. Roolit lähettävät omistajalle menevät KK:lle kuten ennenkin.
+
+## KK:N YÖHYVÄKSYNNÄT 2.–3.11. (SAAPUMISODOTUS, LATAUSKUVAT, ZOOMAUS KAIKKIIN JUNAAN) (3.11.2026 klo 01.53)
+
+KK hyväksyi omistajan puolesta (valtuutus 2.11. klo 22.25): 23.29 saapumisodotus (a) pysyy (zoomaus alkaa vasta, kun tasot valmiina; omistajan 08.44-linja), NS tekee esilatauksen kohteen valinnasta ja taustaennakoinnin, ilmaisin vain myöhästyessä; jos kylmä odotus yleinen, video molemmista omistajalle aamulla (mitattu: kylmä 30 s, ennakoitu 0 s → videot tehty, KK suosittaa (b)). 01.50 juoksupelin iPad-latauskuvat vaaka+pysty hyväksytty; taso 1 ja 8 salia palautettu PK:lle (kamera seinän läpi, Puyi poissa kattonäkymästä). 01.50 zoomaus ja nostot kaikkiin Euroopan kaupunkeihin (NUI 82634eb4b) junaan 218. PT: pimennyksen varjon ulkonäkö 2024/2017 ISS-kuvasta, jos 12.8.2026:n kuvaa ei ole.

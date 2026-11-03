@@ -259,7 +259,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       + 'web karsii sen pääkartalta, js/fokuskohteet.js karsiKaupunkikartanNostot). lahizoom = näkyy vasta lähizoomissa (Ranskan '
       + 'pilotti, kohde.lahi). taso = webin nostotaso 1–3, tarkeys 0–3 (kaupunkivalolle kaupungit.tarkeys, muuten kohteen taso '
       + 'tai 1). kaupunki = valo on laudan kaupunki (fokuskohde), kaupunkiAvain = noston kaupunkijäsenyys (nostonKaupunkiAvain '
-      + 'tai kohdekartan kaupunki). Sama maastokohde voi olla usean maan valona (id ~2, ~3), kuten webissä maittain.',
+      + 'tai kohdekartan kaupunki). Sama maastokohde voi olla usean maan valona (id ~2, ~3), kuten webissä maittain. viuhka = true (valinnainen, skeema 1.68): nostolla ei ole omaa paikkaa kaupungissa, se avautuu kaupunkimerkin viuhkasta.',
     { kaupunki: 'kaupungit', kaupunkiAvain: 'kaupungit', kohdekartta: 'kohdekartat' }, rivit);
   return { kokoelma: k, haeKohde, luokittele: (t) => luokittele(t, kohdeIdt), ratkeamatta };
 }
@@ -275,6 +275,24 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
  * piilotetaan (nimio null; kortin nimi säilyy). Laajat luontokohteet (meri, joki, järvi, lahti, salmi)
  * ohi: niiden nimi kuuluu kauas datapisteestä.
  */
+/*
+ * NOSTOJEN OMAT PAIKAT KAUPUNGEISSA (Karttaseppä 2.11.2026; omistaja 21.42 "Eurooppaan voi sijoittaa niitä nostoja kaikkiin
+ * kaupunkeihin", suunnitelma 20261102-nostot-ja-zoomaus-kaikkiin osa D): data/nostopaikat.json, id → { tila, lat, lon, lahde,
+ * perustelu }. 'siirto' vie keskustan tuntumaan kasatun noston lähteistettyyn paikkaansa (ankkuri ja ladottu pois: merkki omaan
+ * pisteeseensä); 'viuhka' (skeema 1.68, valinnainen kenttä viuhka: true) = nostolla ei ole yksilöitävää paikkaa kaupungissa,
+ * joten se avautuu kaupunkimerkin viuhkasta (Raamattu 2.137). Tarkistus: tools/sisalto/tarkista-nostopaikat.mjs.
+ * Tuntematon id kaataa viennin.
+ */
+export function sovitaNostopaikat(valot, paikat) {
+  const idt = new Map(valot.map((v) => [v.id, v]));
+  for (const [id, p] of Object.entries(paikat)) {
+    const v = idt.get(id);
+    if (!v) throw new Error(`data/nostopaikat.json: tuntematon nosto ${id}`);
+    if (p.tila === 'siirto') { v.lat = p.lat; v.lon = p.lon; v.ankkuri = null; v.ladottu = null; } else if (p.tila === 'viuhka') v.viuhka = true;
+    else throw new Error(`data/nostopaikat.json: ${id} tila ${p.tila}`);
+  }
+}
+
 export const KARKAAVA_KM = 25;
 const LAAJAT_LAJIT = new Set(['meri', 'joki', 'jarvi', 'lahti', 'salmi']);
 

@@ -48,19 +48,30 @@ function lohko(b, cb) { // cb.solmut(id, lat, lon, tagit) cb.tiet(id, tagit, ref
     else if (f === 3 && cb.tiet) { let id = 0, ks = [], vs = [], refs = [];
       kentat(b, s, t, (g, w2, x, y) => { if (g === 1) id = x; else if (g === 2) ks = pakatut(b, x, y, (v) => v); else if (g === 3) vs = pakatut(b, x, y, (v) => v); else if (g === 8) { let r = 0; refs = pakatut(b, x, y, (v) => (r += zz(v))); } });
       cb.tiet(id, tg(ks, vs), refs); }
+    else if (f === 4 && cb.relaatiot) { let id = 0, ks = [], vs = [], mem = [], tyy = [], roo = [];
+      kentat(b, s, t, (g, w2, x, y) => { if (g === 1) id = x; else if (g === 2) ks = pakatut(b, x, y, (v) => v); else if (g === 3) vs = pakatut(b, x, y, (v) => v); else if (g === 8) roo = pakatut(b, x, y, (v) => v); else if (g === 9) { let r = 0; mem = pakatut(b, x, y, (v) => (r += zz(v))); } else if (g === 10) tyy = pakatut(b, x, y, (v) => v); });
+      cb.relaatiot(id, tg(ks, vs), mem.map((m, k) => ({ id: m, tyyppi: tyy[k], rooli: st[roo[k]] || '' }))); }
   });
 }
 
 // --- kierros 1: tiet ja tagatut solmut ---
 const sisaBB = (la, lo) => lo >= bb[0] && lo <= bb[2] && la >= bb[1] && la <= bb[3];
-const tiet = [], pisteet = [], tarve = new Set();
+const tiet = [], pisteet = [], tarve = new Set(), rels = [], jasenTiet = new Set();
 const VESI = (t) => t.name && (t.natural === 'water' || t.water || t.place === 'sea' || t.place === 'bay' || t.place === 'strait' || t.natural === 'bay' || t.natural === 'strait');
+// LS1 9.10. (pallon kaupunkiäänet v1, juna 173): kirkot (kellot), kahvilat (cafe, bar, pub), hallit (marketplace, shop=mall); piste = keskipiste
+const UUDET = (t) => t.amenity === 'place_of_worship' && t.religion === 'christian' ? 'kirkot' : ['cafe', 'bar', 'pub'].includes(t.amenity) ? 'kahvilat' : t.amenity === 'marketplace' || t.shop === 'mall' ? 'hallit' : null;
+const PISTEKERROS = new Set(['kirkot', 'kahvilat', 'hallit']);
 const luokka = (t) => t.route === 'ferry' ? 'lautat' : t.man_made === 'chimney' ? 'piiput' : t.attraction === 'big_wheel' ? 'maailmanpyorat'
-  : (t.place === 'square' || (t.highway === 'pedestrian' && t.area === 'yes')) ? 'aukiot' : t.amenity === 'fountain' ? 'suihkulahteet' : VESI(t) ? 'vesialueet' : null;
+  : (t.place === 'square' || (t.highway === 'pedestrian' && t.area === 'yes')) ? 'aukiot' : t.amenity === 'fountain' ? 'suihkulahteet' : UUDET(t) || (VESI(t) ? 'vesialueet' : null);
 let nL = 0;
 for (const b of lohkot(PBF)) { nL++;
-  lohko(b, { solmut: (id, la, lo, t) => { if (t && sisaBB(la, lo)) { const k = luokka(t); if (k) pisteet.push({ k, t, la, lo }); } },
-    tiet: (id, t, refs) => { const k = luokka(t); if (k) { tiet.push({ k, t, refs }); for (const r of refs) tarve.add(r); } } }); }
+  lohko(b, { solmut: (id, la, lo, t) => { if (t && sisaBB(la, lo)) { const k = luokka(t); if (k) pisteet.push({ k, t, la, lo, osm: 'node/' + id }); } },
+    tiet: (id, t, refs) => { const k = luokka(t); if (k) { tiet.push({ k, t, refs, osm: 'way/' + id }); for (const r of refs) tarve.add(r); } },
+    relaatiot: (id, t, mem) => { const k = UUDET(t); if (k && t.type === 'multipolygon') { const ww = mem.filter((m) => m.tyyppi === 1 && m.rooli !== 'inner').map((m) => m.id); rels.push({ k, t, ww, osm: 'relation/' + id }); for (const w of ww) jasenTiet.add(w); } } }); }
+// kierros 1b: relaatioiden jäsenteiden solmut
+const jasenRefs = new Map();
+if (rels.length) for (const b of lohkot(PBF)) lohko(b, { tiet: (id, t, refs) => { if (jasenTiet.has(id)) { jasenRefs.set(id, refs); for (const r of refs) tarve.add(r); } } });
+loki('relaatioita', rels.length, 'jäsenteitä', jasenRefs.size);
 loki('kierros 1:', nL, 'lohkoa,', tiet.length, 'tietä,', pisteet.length, 'pistettä, solmuja tarvitaan', tarve.size);
 // --- kierros 2: solmujen koordinaatit ---
 const koord = new Map();
@@ -75,9 +86,14 @@ for (const w of tiet) {
   const suljettu = w.refs[0] === w.refs[w.refs.length - 1];
   let osat = [pts];
   if (w.k === 'lautat') { osat = []; let cur = []; for (const q of pts) { if (sis(...q)) cur.push(q); else { if (cur.length >= 2) osat.push(cur); cur = []; } } if (cur.length >= 2) osat.push(cur); }
-  for (const o of osat) (kerrokset[w.k] ??= []).push({ ...(w.t.name ? { n: w.t.name } : {}), ...(suljettu && w.k !== 'lautat' ? { rengas: o } : { p: o }), tagit: Object.fromEntries(Object.entries(w.t).filter(([k]) => ['route', 'man_made', 'attraction', 'place', 'highway', 'amenity', 'natural', 'water', 'height', 'operator', 'duration', 'motor_vehicle', 'foot'].includes(k))) });
+  const kp = (q) => [r1(q.reduce((a2, v) => a2 + v[0], 0) / q.length), r1(q.reduce((a2, v) => a2 + v[1], 0) / q.length)];
+  for (const o of osat) (kerrokset[w.k] ??= []).push({ ...(w.t.name ? { n: w.t.name } : {}), ...(PISTEKERROS.has(w.k) ? { osm: w.osm, piste: kp(suljettu ? o.slice(0, -1) : o) } : {}), ...(suljettu && w.k !== 'lautat' ? { rengas: o } : { p: o }), tagit: Object.fromEntries(Object.entries(w.t).filter(([k]) => ['route', 'man_made', 'attraction', 'place', 'highway', 'amenity', 'natural', 'water', 'height', 'operator', 'duration', 'motor_vehicle', 'foot', 'religion', 'denomination', 'building', 'shop', 'cuisine', 'covered', 'indoor', 'opening_hours', 'wikidata', 'outdoor_seating', 'bells', 'church:type'].includes(k))) });
 }
-for (const q of pisteet) { const x = r1(eLon(q.lo)), y = r1(nLat(q.la)); if (!sis(x, y)) continue; (kerrokset[q.k] ??= []).push({ ...(q.t.name ? { n: q.t.name } : {}), piste: [x, y], ...(q.t.height ? { korkeus_m: q.t.height } : {}) }); }
+const PIDA_P = ['amenity', 'religion', 'denomination', 'building', 'shop', 'cuisine', 'covered', 'indoor', 'opening_hours', 'wikidata', 'outdoor_seating', 'bells', 'church:type', 'height'];
+for (const q of pisteet) { const x = r1(eLon(q.lo)), y = r1(nLat(q.la)); if (!sis(x, y)) continue; (kerrokset[q.k] ??= []).push({ ...(q.t.name ? { n: q.t.name } : {}), ...(q.osm ? { osm: q.osm } : {}), piste: [x, y], ...(q.t.height ? { korkeus_m: q.t.height } : {}), ...(PISTEKERROS.has(q.k) ? { tagit: Object.fromEntries(Object.entries(q.t).filter(([k]) => PIDA_P.includes(k))) } : {}) }); }
+for (const r of rels) { const q = r.ww.flatMap((w) => (jasenRefs.get(w) || []).map((n) => koord.get(n)).filter(Boolean)).map(([la, lo]) => [eLon(lo), nLat(la)]); if (q.length < 3) continue;
+  const x = r1(q.reduce((a2, v) => a2 + v[0], 0) / q.length), y = r1(q.reduce((a2, v) => a2 + v[1], 0) / q.length); if (!sis(x, y)) continue;
+  (kerrokset[r.k] ??= []).push({ ...(r.t.name ? { n: r.t.name } : {}), osm: r.osm, piste: [x, y], tagit: Object.fromEntries(Object.entries(r.t).filter(([k]) => PIDA_P.includes(k))) }); }
 const yht = Object.fromEntries(Object.entries(kerrokset).map(([k, v]) => [k, v.length]));
 fs.mkdirSync(ULOS, { recursive: true });
 fs.writeFileSync(path.join(ULOS, `kohteet-${NIMI}.json`), JSON.stringify({ kohde: NIMI, origo: { lat: lat0, lon: lon0, ellipsoidikorkeus_m: 0 }, sade_km: S / 1000,
