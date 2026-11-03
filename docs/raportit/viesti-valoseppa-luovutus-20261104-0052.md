@@ -20,3 +20,9 @@ Koodi: ElavaTyyli.Korttelikartta (täyttö), RantaAvoimeksi, SuljetutAvoimiksi, 
 - PT 00.50: kattoihin ei uutta kierrosta ennen KK:ta; laiteajoa ei JU:lle ennen KK:n kantaa. Saint-Sulpice oli oma mittausvirheeni: aukio on ehjä (k21/v7/ss.jpg). Soikion häivytys on minun, mukana k21:ssä.
 - Postivahti: nollaus vasta 35 %:n lähellä uudella LUOVUTUS VALMIS -rivillä.
 - PT 01.0x: laikkujen, pystyraitojen ja suihkulähteen syyt k21/TULOS.md (loppuosio); koodi ennallaan, korjaukset vasta KK:n kannan jälkeen. Ei laiteajoa.
+
+## LISÄYS 01.1x: UUSI ERÄ (PT 00.59, KK 00.58; lista KORJAUSLISTA.md viimeinen osio)
+- **k21 = 804d491d1** (610/610, p21): REUNA tehty, soikio pois, 1 200 m rajan ulkopuolelle, kulmat pyöreät (ElavaKoealue.ReunanPaino, ReunaKoskee). Ei laitteella. NS tekee etäisyyshäivytyksen samaan tiedostoon; NS:lle kerrottu.
+- **SEURAAVAKSI kohta 5 porrasreuna** (kerman ja talojen raja noin 4 px täydessä koossa: kuplat, ND, Montparnasse, sillan päät, ratapihat; f1fb45f10:n kuvat, ei k21). Selvitä täyttö vai raivaus. Epäilys: KorttelinPihat terävöittää 1,6 m:n ruudukkoa kertoimella k ((v − 127,5) · k), ja k21:ssä reuna jää yhä aukko- ja raivausalueille; k21 poisti portaat vain veden, puiston ja kadun rajoilta. Raivaus lukee maskia ruudukossa ms.
+- **Sitten kohta 6 ratapihat:** Gare du Nord, Gare de l'Est, Saint-Lazare ovat seepraraitaa (paksut tummat nauhat kermalla); malli y-silta-idan ja 2029. Epäily: rata/sivurata-viivat ja Poikkiviivat KoealueKoostuksessa (muste alfa 200 ja 120), raiteet Z ≥ 13. Paikallinen data ei kata Gare du Nordia eikä Saint-Lazarea; hae palat tai kysy.
+- Kattosävy ja kerma: KK:n kanta kesken; ei uutta kierrosta kattoihin. Laiteajo ei vielä JU:lle: lisäpalojen muisti ja kulu JU:n vuorolla PT:n kautta.
