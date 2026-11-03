@@ -225,3 +225,7 @@ Omistaja: "Juoksu pelin ei voi tulla kesken pelin mitään opetus kortteja"; kor
 ## OIKEA G-MALLI (3.11.2026 klo 22.09) (3.11.2026 klo 22.13)
 
 Omistaja (kuva docs/raportit/kaappaukset/omistaja-20261103/kk-2209-vaara-g-vertailu.png): "Tässä on väärä vertailu kuva oikealla. Oikea g versio on paljon liioitellumpi. Siinä kirkon tornit levenevät ylöspäin". G = pariisi-koko-kaupunki-G-tyyli.png (d0191a334), ei pariisi-laaja-g-v4.png. KS korjaa ND k4 -tilauksen, RAKENNUSPERIAATE.md:n, NAHTAVYYSALUE.md:n ja G-v4:stä mitatut kertoimet. Kirjattu 2.204:ään.
+
+## NÄHTÄVYYS SAA LEVITÄ TAKANA OLEVAN JOEN PÄÄLLE (3.11.2026 klo 22.14) (3.11.2026 klo 22.15)
+
+Omistaja oikeaa G:tä katsoessaan: "Tuossa kirkko on levitetty takana olevan joen päälle mikä kannattaa sallia myös uuteen karttaan." Tarkentaa 21.29-sääntöä: takana oleva joki ja ranta saa peittyä, edessä ja sivuilla joki auki ja kulku erottuu, ei katkaisua. Kirjattu 2.204:ään.
