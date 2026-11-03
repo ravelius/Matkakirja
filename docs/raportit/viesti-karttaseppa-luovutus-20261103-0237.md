@@ -29,6 +29,11 @@ P = `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-valmis-runko-20261102/`, p
      sha + kansio NS:lle (SileaUrl + offline.json kaupunkiRasteri, lepokuvat-valitaso.sh kaaret 1.5/0.8/0.4, simuvuoro JU:lta),
      pari (ennen | jälkeen, sama rajaus, laitteelta) PT:lle. Käännökset JU:n vuorolla. Selvitä myös, onko sama aukko muissa
      kaupungeissa (on: pohja on sama kaikkialla) → raportoi PT:lle.
+   - **LISÄYS 03.1x: PT KUITTASI Lontoon Z10-parin** (Thames ja tiet näkyvät, tyyli sopii pohjaan) ja käski jatkaa koko Eurooppaan
+     Z9–Z10 NS:n suosituksen mukaan. Ehdot: (1) ei rajattua neliön reunaa: tiet ja joet jatkuvat saumattomasti koko alueella;
+     (2) Z9:llä vain pääteiden ja suurten jokien tiheys (kaupunki ei saa muuttua ruskeaksi verkoksi), Z10:llä nykyinen tiheys;
+     (3) siirtymä Z11:n elävään karttaan ilman hyppyä. Pari (ennen | jälkeen, sama rajaus) Lontoosta ja yhdestä muusta kaupungista
+     PT:lle; käännös ja vienti JU:n vuorolla.
 2. **Pariisin palat 1–15**: tilaus Codexille 10a39d6b9, ei vielä generointeja (posti 67a53bb14 viimeisin). Seuraa postia; tarkistus
    `tarkista_ala.py`, kokoaminen ja muu kuten luovutuksessa 20261102-2210 AVOIN 2.
 3. **G (KS + NUI)** ja vanhat kohdat kuten edellisessä luovutuksessa (AVOIN 3–4).
