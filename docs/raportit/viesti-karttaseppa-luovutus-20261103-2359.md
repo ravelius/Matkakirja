@@ -24,3 +24,11 @@ Y = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/`
 - Pienet puut hajallaan keltaisella maalla näyttivät roskalta (k2): kadut pois maskista avauksella, alle nurmi, puut isompina (22–44 m). Kapea sädekehä ääriviivan vierestä erikseen mukaan.
 - Pelikuvan ja tason sovitus onnistuu suoraan kirkon väreistä (skaala + siirto), ks. sacre-coeur-puut.py.
 - Halutun rivin paikka nähtävyyden kohdalla: Paikka.omaKeski (Nimikerros), ei Kylttisiirrot, koska nimen korkeus vaihtelee tasoittain.
+
+## LISÄYS klo 00.10 (lue viimeisenä; korvaa AVOIMEN kohdat 1 ja 2)
+- Postivahti: nollaus vasta lähellä 35 %:a; uusi LUOVUTUS VALMIS silloin.
+- **Louvren kiila tehty:** Y/nahtavyys-nurmi.py (Sacré-Cœurin työkalu yleistettynä) → Y/tarkistus-nahtavyydet/louvre-k2/ (5f8ffe6c902c…). Pari PT:llä, taso NS:llä (alue-v3, raivaus vanhasta v2-alfasta). Vasemman etupuolen keltainen jätetty.
+- **Sacré-Cœur k3 pelissä NS:n koekäytössä e101c006e** (alue-v2); ei vielä nähty pelikuvassa.
+- **Metsätäyttö:** _tyo/karttaseppa/pariisi-koko-esinepaikat-20261103/metsat.py → metsat-harva.json (latvus 16–24 m, 55189d631b8c…) ja metsat-tihea.json (24–34 m, 87ad8205dc4b…). Kumpikin noin 13 700 puuta, samassa muodossa kuin puut.json; latvus on leveys metreinä. 10–14 m:n latvukset näkyivät pelkkinä pisteinä. Pari pari-boulogne-lahi.jpg PT:llä, suositus oikea (24–34 m). **ODOTTAA KK:n valintaa; vasta sitten NS:lle** (kerro: leveys latvus-kentästä, tarkista ruudunpäivitys). Vincennes jää todennäköisesti rajauksen ulkopuolelle (9,7 km², lähes kaikki Boulognea); tarkistamatta.
+- **Tuileries ja Invalidit (a95-silta-katu.png, PT:n kysymys):** kirjainmaiset lohkot ovat OSM:n todellinen puukuvio, eivät säännön tulosta: koodi ottaa puut sellaisinaan (Invalidit 915 yksittäistä, 0 riviä; Tuileries 1693, joista 668 rivipuita). Vastaus PT:llä. Mitä niille tehdään, on auki: jos KK ei halua kuviota, vaihtoehto on täyttää alueen sisus tai harventaa. Ei tehdä ennen KK:n kantaa.
+- **Nimet:** JU ajoi 4e929f038:n (lokit/esikatselu-20261103-235507: louvre-kadut, eiffel-kadut pätevät; nd-keski uusitaan). Käytä näitä vain koon ja määrän arvioon; säännön näkee vasta 25f99d839:stä NS:n yhdistelmässä. NS kertoo tuplista kuvan jälkeen.
