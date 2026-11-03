@@ -32,7 +32,7 @@ TARKISTIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 if not os.path.exists(TARKISTIN):  # asennettu kopio /Users/Shared/Claude/hooks/ (KK 2.11.)
     TARKISTIN = "/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tarkista-junat.py"
 # vain KK:n lähettämä viesti, jonka rivi alkaa päätöksellä tai pyynnöllä (KK 2.11. 12.1x: PT:n lainaus laukaisi muistutuksen KK:ssa)
-KK_ID = "local_37f7c945-e1a0-4638-90b8-93c389a36fbe"
+KK_IDT = ("local_d5f31591-21fa-4cb0-bab3-bcd3435d075a", "local_37f7c945-e1a0-4638-90b8-93c389a36fbe")  # sami.reivinen + vvi (PT 3.11.)
 OMISTAJAN_VIESTI = re.compile(r"(?m)^\s*(OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA) klo")
 TYOLISTA_KOMENTO = "python3 -I tools/asemataulu/tyolista.py"
 VANHA_H = 3
@@ -123,7 +123,7 @@ def kontekstivahti(d, sessio):
 def taulumuistutus(d, tapahtuma, sessio):
     if tapahtuma == "UserPromptSubmit":
         p = str(d.get("prompt") or "")
-        if f'from="{KK_ID}"' in p and OMISTAJAN_VIESTI.search(p):
+        if any(f'from="{k}"' in p for k in KK_IDT) and OMISTAJAN_VIESTI.search(p):
             if saa_muistuttaa("omistaja-kk", sessio):
                 return ("ASEMATAULU (hook): Keskustelukanava välitti omistajan päätöksen tai pyynnön. Kirjaa se työlistaan "
                         f"samassa vuorossa: {TYOLISTA_KOMENTO} lisaa \"OTSIKKO\" --teksti \"…\" --lisa \"…\" (uusi) tai "
