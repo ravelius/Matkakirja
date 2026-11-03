@@ -39,8 +39,16 @@ const TAULU = {
 // kangaspakkoja arkuilta itäseinän pinoihin. Repliikit ja Pulun reaktiot: Päätoimittaja 29.9.
 const HAHMOT = [
   {
-    id: 'hoitaja', henkilo: 'kirjuri-1500', paikka: pol(312, 3.95, 0.1), suunta: 312, peilattu: false,
+    // 5.10. (Final IK): 0,35 m lähemmäs pulpettia (3,95 → 4,30), jotta kädet ylettyvät kirjalle (ulottuma ~0,65 m).
+    id: 'hoitaja', henkilo: 'kirjuri-1500', paikka: pol(312, 4.3, 0.1), suunta: 312, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
+    // Final IK (Siirtosepän muoto 5.10.): tartu = FBBIK-käsiefektori kahvaan työleikkeen ajan. Paikka ja kierto glTF-
+    // lähdekoordinaateissa (sijoitus.mjs muuntaa); kierto = kämmenen kehys (kämmen −Y, sormet +Z). Laskettu pulpetti-
+    // reseptin kannesta (20°) ja kirjasta: oikea käsi kirjoittaa oikealle sivulle, vasen pitää vasenta sivua auki.
+    kadet: [
+      { tyyppi: 'tartu', esine: 'hoitajan-pulpetti', kasi: 'r', paikka: [-33.464, 1.153, -23.267], kierto: [0.071, 0.9, 0.159, -0.401], milloin: 'tyo', paino: 1 },
+      { tyyppi: 'tartu', esine: 'hoitajan-pulpetti', kasi: 'l', paikka: [-33.603, 1.129, -23.015], kierto: [0.071, 0.9, 0.159, -0.401], milloin: 'tyo', paino: 0.8 },
+    ],
     repliikit: [
       { id: 'hoitaja-1', aani: 'fatabuuri-hoitaja-1', teksti: 'Kolme viittaa, kaksi verkaröijyä, tusina tinakannuja. Kaikki kirjaan, muuten vouti kysyy.' },
       { id: 'hoitaja-2', aani: 'fatabuuri-hoitaja-2', teksti: 'Arkkuihin ei kosketa ilman lupaa – täällä on linnan arvokkain tavara.' },
@@ -134,7 +142,7 @@ const HYLLYT = [
 const P_ARKKU = pol(298, 4.85, Y);
 const LAMPPU = lok(P_ARKKU, 298 + 180, 0.28, Y + 0.56, 0.02);
 const KIRJANPITO = [
-  sein('pulpetti', 312, 4.85, { y: Y }),
+  sein('pulpetti', 312, 4.85, { y: Y, id: 'hoitajan-pulpetti' }),  // id: hoitajan kädet (Final IK)
   sein('arkku', 298, 4.85, { y: Y }),
   { resepti: 'kirja', paikka: lok(P_ARKKU, 298 + 180, -0.15, Y + 0.56, 0), suunta: 298 + 180 + 12 },
   { resepti: 'oljylamppu', paikka: LAMPPU, suunta: 0, sade: 0.07, korkeus: 0.1 },
