@@ -23,6 +23,20 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Ei keskeneräisiä mergejä. JU:n vuo
   "ennakko … leveys 1 yks"), ja maaseudun elävä kartta on sillä tasolla tyhjä. Oli jo 07.07-videossa; ei tämän muutoksen vika.
   Perussarja 2026-09-30-pohja-20261015 palautettu (JU 08.05), ei syy.
 
+## LISÄYS 08.20: PT 08.19 + KK 08.19 = ETUSIJA 1 (KORVAA JONON KOHDAT 1–2)
+- **PT:** esilataus bf15af5a6 KUITATTU logiikkana, mutta JUNAAN VASTA BEIGEN KORJAUKSEN KANSSA (omistaja: "ei sumeaa loppukuvaa").
+- **Jako (PT 08.19):** matkan beige 1,5–7 s = kamera jää lähtökaupungin lähikorkeudelle (KK: Siirtokoreografia.cs:272–306, maa- ja
+  bussimatkalla ennakkozoomi ei loitonna) → **NUI** tekee noston reitin korkeudelle (kamera-ajo, nostot 82634eb4b) TÄMÄN haaran päälle.
+  **NS:lle jää loppubeige 6–9 s** (kylmä video ruudut/loppu-6-11s.jpg: zoomauksen aikana 4,8–7,4 s ja vähän yli tyhjää beigeä ennen
+  karttaa; ennakoidussa videossa ~9 s Lontoo sumeana ennen traileria). Selvitä: pohjan palat vai välitaso (Z9–Z10 2026-11-03-pohja-valitaso)
+  vai elävän kartan z11–z16 pyydettäessä (zoomauksen aikana +323 piirtoa, ks. aikajana.txt) – Cesium näyttää piirtämättömän palan
+  paikalla vanhempaa; maaseudun elävä pala on lähes tyhjä. Hypoteesi: zoomaus alkaa NYT bussikameran lähikorkeudelta maaseudun yltä,
+  joten osa beigestä poistuu NUI:n noston myötä → mittaa NUI:n haaran päällä ennen omaa korjausta.
+- **KK:n tavoite:** siirron alussa kamera nousee korkeudelle, jolla reitti ja molemmat kaupungit näkyvät terävinä; perillä zoomaus
+  valmiiseen lähinäkymään; ruudulla ei koskaan tyhjää eikä sumeaa karttaa; esilataus valinnasta ennallaan.
+- **Lopuksi:** yhteinen kylmä Lontoo -video NUI:n kanssa (JU:n vuoro, esilataus-video218.sh KYLMA=1) → KK:lle beigen aikaleimat
+  leikkaamatta + rivi PT:lle. NUI:n ilmaisin (2d9ed2d93) samaan runkoon.
+
 ## JONO
 1. **PT:n kuittaus esilataus-valinta-218 (bf15af5a6) + NUI 2d9ed2d93 junaan** → merge ehdokas-työpuussa (`git merge --no-ff`,
    testit210-rinn.sh, peili). Jos PT haluaa kylmän tapauksen nopeammaksi: vaihtoehto kaikki piirtopaikat heti valinnasta (ei vain zoomauksessa).
