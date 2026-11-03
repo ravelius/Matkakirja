@@ -1,0 +1,702 @@
+{
+  "tila": "MITTAUSRAPORTTI_KALIBROINTI_EI_HYVAKSYTTY",
+  "kayttoon_hyvaksytty": false,
+  "katsojan_suunta": "Etelän puolelta kohti pohjoista; myös oikea sivuseinä näkyy. Tarkkaa kamera-atsimuuttia ei voi yksikäsitteisesti johtaa tästä piirroksesta.",
+  "kulma_vaakatasosta_astetta": null,
+  "maa_pystylyhennys": null,
+  "korkeus_px_per_m": null,
+  "maa_px_per_m": null,
+  "valon_atsimuutti_astetta": null,
+  "varjon_suunta_kuvassa": "Selitteen mukaan kaakkoon ja nuoli alas oikealle; tornin piirretty varjo osoittaa oikealle ylös. Yhteinen suunta ei varmennu.",
+  "varjon_pituus_per_korkeus": null,
+  "viivat_px": {
+    "kortteli": null,
+    "talo": null,
+    "katu": null,
+    "ranta": null
+  },
+  "seinan_savyt": {
+    "valo": "#fce1b8",
+    "varjo": "#eec898"
+  },
+  "katon_savyt": {
+    "haussmann": "#af9c8d",
+    "vanha": "#c8a274",
+    "julkinen": "#a1958b",
+    "matala": "#dabfa2"
+  },
+  "paperi_hex": "#fce5c5",
+  "muste_hex": "#8f653f",
+  "varjo_hex": "#caac8a",
+  "null_arvojen_syy": "Yhteiset koko arkkia kuvaavat kalibrointiluvut eivät ole tunnistettavissa: eri kohteilla on eri mittakaava ja osittain eri projektio. Null ei tarkoita nollaa. Älä tuo tätä tiedostoa pelin lopulliseksi asetukseksi. Kohdekohtaiset todelliset havainnot ovat alla.",
+  "lahteen_tavoitteet": {
+    "kuvakoko_px": [
+      2048,
+      1536
+    ],
+    "maa_px_per_m": 1.25,
+    "kuutio_m": [
+      20,
+      20,
+      20
+    ],
+    "talojen_korkeudet_m": [
+      20,
+      11,
+      5
+    ],
+    "kortteli_m": [
+      120,
+      80
+    ],
+    "viivanaytteet_px": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "yksi_yhteinen_kulma_ja_valo": true
+  },
+  "promptin_tavoitteet_eivat_mittauksia": {
+    "maa_pystylyhennys": 0.9,
+    "korkeus_px_per_m": 0.84,
+    "valo": "luode",
+    "varjo": "kaakko"
+  },
+  "mitattu_kuutiosta": {
+    "maa_px_per_m": 7.0718,
+    "korkeus_px_per_m": 8.2033,
+    "maa_pystylyhennys": 0.36,
+    "syvyyden_sivuviisto_suhde": 0.31,
+    "vastakkaisten_kattoreunojen_leveysero_prosenttia": 8.08,
+    "asin_pystylyhennys_astetta": 21.1,
+    "asin_tulkinta": "21,1° on vain laskennallinen ortografinen vastine pystysuhteelle; ei todennettu kamerakulma. Kuution sivuviisto ja korkeus eivät vastaa samaa fysikaalista ortografista kameraa."
+  },
+  "muut_mitatut_asteikot": {
+    "korttelin_leveydesta_maa_px_per_m": 5.6574,
+    "20m_mittajanasta_maa_px_per_m": 10.6785,
+    "talojen_mittaviivoista_korkeus_px_per_m": [
+      13.9315,
+      13.3727,
+      12.164
+    ]
+  },
+  "viivanaytteet_mitattu_px": [
+    {
+      "printedLabelPx": 1,
+      "boundsFinalPx": [
+        1358,
+        829,
+        1782,
+        872
+      ],
+      "medianHalfContrastWidthPx": 2.0,
+      "medianInkEquivalentWidthPx": 2.227,
+      "p10HalfContrast": 1,
+      "p90HalfContrast": 3
+    },
+    {
+      "printedLabelPx": 2,
+      "boundsFinalPx": [
+        1358,
+        888,
+        1782,
+        931
+      ],
+      "medianHalfContrastWidthPx": 5.0,
+      "medianInkEquivalentWidthPx": 5.555,
+      "p10HalfContrast": 4,
+      "p90HalfContrast": 6
+    },
+    {
+      "printedLabelPx": 4,
+      "boundsFinalPx": [
+        1358,
+        948,
+        1782,
+        991
+      ],
+      "medianHalfContrastWidthPx": 11.0,
+      "medianInkEquivalentWidthPx": 10.673,
+      "p10HalfContrast": 10,
+      "p90HalfContrast": 12
+    },
+    {
+      "printedLabelPx": 8,
+      "boundsFinalPx": [
+        1358,
+        1007,
+        1782,
+        1050
+      ],
+      "medianHalfContrastWidthPx": 20.0,
+      "medianInkEquivalentWidthPx": 19.314,
+      "p10HalfContrast": 18,
+      "p90HalfContrast": 21
+    }
+  ],
+  "viivarooleista": "Arkissa on neljä numeroitua näyteviivaa, mutta kortteli/talo/katu/ranta-roolijakoa ei ole kuvassa yksiselitteisesti merkitty. Mitattuja näytteitä ei kohdisteta rooleihin arvaamalla.",
+  "valo_havainnot": {
+    "selitteen_tarkoitus_atsimuutti": 315,
+    "nuolen_kulma_oikeasta_vaakasuunnasta_alaspain_astetta": 30.58,
+    "tornin_varjon_arvio_samasta_akselista_astetta": -26.22,
+    "valon_todellinen_atsimuutti_varmennettu": false,
+    "varjon_pituus_maametreina_varmennettu": false
+  },
+  "tyylimalli_vertailu": {
+    "tiedosto": "tyylimalli-hyvaksytty-2029.png",
+    "sha256": "1b39a3e6f8a24eecbf6d4ddce644eb51a311ac7df4d7b6d2bd63dbe6d73e5d3c",
+    "ainoa_tyylimalli": true,
+    "havainto": "Lämmin kermapaperi, seepiamuste, vaimeat harmaanruskeat katot ja oliivipuut ovat samaa suuntaa. Tyylimallissa näkyy paikoin myös sivuseiniä; sen rakennuksia on vapaan käden mittasuhteissa. Siitä ei saada yksiselitteistä fyysistä kamerakulmaa eikä px/m-arvoa ilman tunnettuja vertailumittoja. Arkin paletti ja detaljit jäävät Keskustelukanavan vertailuun.",
+    "kulma_mitattu_tyylimallista": false,
+    "omistajan_uusi_arkkihyvaksynta": false
+  },
+  "mittausmenetelma": {
+    "coordinateConvention": "x right, y down; positions measured on native 1448x1086 then mapped to 2048x1536 export",
+    "nativeToFinalScale": 1.4143646408839778,
+    "manualPointsNativePx": {
+      "cube_front_roof_left": [
+        107,
+        306
+      ],
+      "cube_front_roof_right": [
+        206,
+        306
+      ],
+      "cube_back_roof_left": [
+        142,
+        270
+      ],
+      "cube_back_roof_right": [
+        233,
+        270
+      ],
+      "cube_front_ground_left": [
+        106,
+        422
+      ],
+      "cube_front_ground_right": [
+        207,
+        422
+      ],
+      "cube_dimension_width_start": [
+        98,
+        450
+      ],
+      "cube_dimension_width_end": [
+        213,
+        450
+      ],
+      "cube_dimension_height_start": [
+        79,
+        297
+      ],
+      "cube_dimension_height_end": [
+        79,
+        425
+      ],
+      "scale_bar_0m": [
+        79,
+        518
+      ],
+      "scale_bar_20m": [
+        230,
+        518
+      ],
+      "house20_dimension_top": [
+        294,
+        233
+      ],
+      "house20_dimension_base": [
+        294,
+        430
+      ],
+      "house11_dimension_top": [
+        469,
+        326
+      ],
+      "house11_dimension_base": [
+        469,
+        430
+      ],
+      "house5_dimension_top": [
+        617,
+        387
+      ],
+      "house5_dimension_base": [
+        617,
+        430
+      ],
+      "house20_eaves": [
+        350,
+        276
+      ],
+      "house20_base": [
+        350,
+        430
+      ],
+      "house11_eaves": [
+        530,
+        353
+      ],
+      "house11_base": [
+        530,
+        430
+      ],
+      "house5_eaves": [
+        670,
+        397
+      ],
+      "house5_base": [
+        670,
+        430
+      ],
+      "block_dimension_width_start": [
+        799,
+        482
+      ],
+      "block_dimension_width_end": [
+        1279,
+        482
+      ],
+      "block_dimension_depth_start": [
+        1380,
+        176
+      ],
+      "block_dimension_depth_end": [
+        1356,
+        422
+      ],
+      "shadow_arrow_start": [
+        1159,
+        984
+      ],
+      "shadow_arrow_tip": [
+        1203,
+        1010
+      ],
+      "tower_shadow_start": [
+        633,
+        941
+      ],
+      "tower_shadow_tip": [
+        700,
+        908
+      ]
+    },
+    "manualPointsFinalPx": {
+      "cube_front_roof_left": [
+        151.34,
+        432.8
+      ],
+      "cube_front_roof_right": [
+        291.36,
+        432.8
+      ],
+      "cube_back_roof_left": [
+        200.84,
+        381.88
+      ],
+      "cube_back_roof_right": [
+        329.55,
+        381.88
+      ],
+      "cube_front_ground_left": [
+        149.92,
+        596.86
+      ],
+      "cube_front_ground_right": [
+        292.77,
+        596.86
+      ],
+      "cube_dimension_width_start": [
+        138.61,
+        636.46
+      ],
+      "cube_dimension_width_end": [
+        301.26,
+        636.46
+      ],
+      "cube_dimension_height_start": [
+        111.73,
+        420.07
+      ],
+      "cube_dimension_height_end": [
+        111.73,
+        601.1
+      ],
+      "scale_bar_0m": [
+        111.73,
+        732.64
+      ],
+      "scale_bar_20m": [
+        325.3,
+        732.64
+      ],
+      "house20_dimension_top": [
+        415.82,
+        329.55
+      ],
+      "house20_dimension_base": [
+        415.82,
+        608.18
+      ],
+      "house11_dimension_top": [
+        663.34,
+        461.08
+      ],
+      "house11_dimension_base": [
+        663.34,
+        608.18
+      ],
+      "house5_dimension_top": [
+        872.66,
+        547.36
+      ],
+      "house5_dimension_base": [
+        872.66,
+        608.18
+      ],
+      "house20_eaves": [
+        495.03,
+        390.36
+      ],
+      "house20_base": [
+        495.03,
+        608.18
+      ],
+      "house11_eaves": [
+        749.61,
+        499.27
+      ],
+      "house11_base": [
+        749.61,
+        608.18
+      ],
+      "house5_eaves": [
+        947.62,
+        561.5
+      ],
+      "house5_base": [
+        947.62,
+        608.18
+      ],
+      "block_dimension_width_start": [
+        1130.08,
+        681.72
+      ],
+      "block_dimension_width_end": [
+        1808.97,
+        681.72
+      ],
+      "block_dimension_depth_start": [
+        1951.82,
+        248.93
+      ],
+      "block_dimension_depth_end": [
+        1917.88,
+        596.86
+      ],
+      "shadow_arrow_start": [
+        1639.25,
+        1391.73
+      ],
+      "shadow_arrow_tip": [
+        1701.48,
+        1428.51
+      ],
+      "tower_shadow_start": [
+        895.29,
+        1330.92
+      ],
+      "tower_shadow_tip": [
+        990.06,
+        1284.24
+      ]
+    },
+    "cube": {
+      "nominalDimensionsMetres": [
+        20,
+        20,
+        20
+      ],
+      "frontWidthPx": 141.436,
+      "depthVerticalPx": 50.917,
+      "heightPx": 164.066,
+      "groundPxPerM": 7.0718,
+      "heightPxPerM": 8.2033,
+      "groundVerticalForeshortening": 0.36,
+      "depthHorizontalShearRatio": 0.31,
+      "frontRoofWidthNative": 99,
+      "backRoofWidthNative": 91,
+      "edgeWidthDriftPercent": 8.08,
+      "hypotheticalOrthographicElevationDegrees": 21.1,
+      "elevationIsActualCameraMeasurement": false,
+      "manualPointUncertaintyNativePx": 2
+    },
+    "houses": [
+      {
+        "labelledHeightM": 20,
+        "dimensionHeightPx": 278.63,
+        "labelBasedHeightPxPerM": 13.9315,
+        "visibleFacadeHeightPx": 217.82,
+        "facadeHeightPerLabelledMetre": 10.891,
+        "dimensionRefersToEaves": false,
+        "note": "Generated height witness reaches roof region, not the eaves; cannot treat as calibrated wall-height annotation."
+      },
+      {
+        "labelledHeightM": 11,
+        "dimensionHeightPx": 147.1,
+        "labelBasedHeightPxPerM": 13.3727,
+        "visibleFacadeHeightPx": 108.91,
+        "facadeHeightPerLabelledMetre": 9.9009,
+        "dimensionRefersToEaves": false,
+        "note": "Generated height witness reaches roof region, not the eaves; cannot treat as calibrated wall-height annotation."
+      },
+      {
+        "labelledHeightM": 5,
+        "dimensionHeightPx": 60.82,
+        "labelBasedHeightPxPerM": 12.164,
+        "visibleFacadeHeightPx": 46.68,
+        "facadeHeightPerLabelledMetre": 9.336,
+        "dimensionRefersToEaves": false,
+        "note": "Generated height witness reaches roof region, not the eaves; cannot treat as calibrated wall-height annotation."
+      }
+    ],
+    "block": {
+      "labelledSizeM": [
+        120,
+        80
+      ],
+      "widthPx": 678.89,
+      "labelBasedGroundPxPerM": 5.6574,
+      "depthDimensionVerticalPx": 347.93,
+      "dimensionBasedForeshortening": 0.7687,
+      "depthEndpointIncludesBuildingHeight": true,
+      "trueGroundForeshorteningVerified": false
+    },
+    "scaleBarLabelBasedPxPerM": 10.6785,
+    "strokes": [
+      {
+        "printedLabelPx": 1,
+        "boundsFinalPx": [
+          1358,
+          829,
+          1782,
+          872
+        ],
+        "medianHalfContrastWidthPx": 2.0,
+        "medianInkEquivalentWidthPx": 2.227,
+        "p10HalfContrast": 1,
+        "p90HalfContrast": 3
+      },
+      {
+        "printedLabelPx": 2,
+        "boundsFinalPx": [
+          1358,
+          888,
+          1782,
+          931
+        ],
+        "medianHalfContrastWidthPx": 5.0,
+        "medianInkEquivalentWidthPx": 5.555,
+        "p10HalfContrast": 4,
+        "p90HalfContrast": 6
+      },
+      {
+        "printedLabelPx": 4,
+        "boundsFinalPx": [
+          1358,
+          948,
+          1782,
+          991
+        ],
+        "medianHalfContrastWidthPx": 11.0,
+        "medianInkEquivalentWidthPx": 10.673,
+        "p10HalfContrast": 10,
+        "p90HalfContrast": 12
+      },
+      {
+        "printedLabelPx": 8,
+        "boundsFinalPx": [
+          1358,
+          1007,
+          1782,
+          1050
+        ],
+        "medianHalfContrastWidthPx": 20.0,
+        "medianInkEquivalentWidthPx": 19.314,
+        "p10HalfContrast": 18,
+        "p90HalfContrast": 21
+      }
+    ],
+    "colorSamples": {
+      "paper": {
+        "boundsFinalPx": [
+          1047,
+          849,
+          1103,
+          905
+        ],
+        "medianRGB": [
+          252,
+          229,
+          197
+        ],
+        "hex": "#fce5c5"
+      },
+      "wallLit": {
+        "boundsFinalPx": [
+          1230,
+          1124,
+          1344,
+          1167
+        ],
+        "medianRGB": [
+          252,
+          225,
+          184
+        ],
+        "hex": "#fce1b8"
+      },
+      "wallShadow": {
+        "boundsFinalPx": [
+          1443,
+          1124,
+          1556,
+          1167
+        ],
+        "medianRGB": [
+          238,
+          200,
+          152
+        ],
+        "hex": "#eec898"
+      },
+      "roofHaussmann": {
+        "boundsFinalPx": [
+          1216,
+          1245,
+          1301,
+          1287
+        ],
+        "medianRGB": [
+          175,
+          156,
+          141
+        ],
+        "hex": "#af9c8d"
+      },
+      "roofOld": {
+        "boundsFinalPx": [
+          1386,
+          1245,
+          1471,
+          1287
+        ],
+        "medianRGB": [
+          200,
+          162,
+          116
+        ],
+        "hex": "#c8a274"
+      },
+      "roofPublic": {
+        "boundsFinalPx": [
+          1556,
+          1245,
+          1641,
+          1287
+        ],
+        "medianRGB": [
+          161,
+          149,
+          139
+        ],
+        "hex": "#a1958b"
+      },
+      "roofLow": {
+        "boundsFinalPx": [
+          1726,
+          1245,
+          1810,
+          1287
+        ],
+        "medianRGB": [
+          218,
+          191,
+          162
+        ],
+        "hex": "#dabfa2"
+      },
+      "shadow": {
+        "boundsFinalPx": [
+          1761,
+          1400,
+          1796,
+          1414
+        ],
+        "medianRGB": [
+          202,
+          172,
+          138
+        ],
+        "hex": "#caac8a"
+      },
+      "ink": {
+        "boundsFinalPx": [
+          1429,
+          1023,
+          1683,
+          1034
+        ],
+        "medianRGB": [
+          143,
+          101,
+          63
+        ],
+        "hex": "#8f653f"
+      }
+    },
+    "method": "Manual landmark endpoints plus Pillow pixel statistics. Measurement points have approximately ±2 native pixels uncertainty. Stroke widths use per-column local-paper luminance and median solid ink reference, then median across columns. These are image measurements, not verified physical geometry."
+  },
+  "kuvan_vienti": {
+    "generatedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a8579d30-8b81-4a4f-a4fa-7f6d54178a1a.png",
+    "nativeSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "scaleX": 1.4143646408839778,
+    "scaleY": 1.4143646408839778,
+    "originalSHA256": "afcb72b69363ba99c2270bd857ac5958cca62b5e82b67c35af591e75f14d21de",
+    "exportSHA256": "20621775eacb00bb3cf754d93b0290f62386117e029d28cacbdf26d891d8d5f0",
+    "mode": "RGB",
+    "artisticPostprocessing": false,
+    "conversion": "Proportional 4:3 Lanczos size export and sRGB profile"
+  },
+  "lahde": {
+    "posti": "posti/karttaseppa-codex-pariisi-ylaviisto-kulmaohje-20261103.md",
+    "commit": "850208dabc6d2dcbb73727e4731c5908e6565e8a",
+    "blob": "f1c67897b97f0c53db8b8a993a81e483e42e79a5",
+    "TILAUS_SHA256": "3c7926d07cdcc4b1f4640fed6d08438495f0e78b396eeacbf8c47af1a661f30b"
+  },
+  "tuotanto": {
+    "tyokalu": "Codex built-in image_gen",
+    "generointikutsut": 1,
+    "yritykset": 1,
+    "taiteellinen_jalkikasittely": false,
+    "kokovienti": "1448×1086 → 2048×1536, sama 4:3-suhde, Lanczos/sRGB",
+    "prompt_SHA256": "a1c235a1043227cc7248d45e4fafc6ed80f4c9453b15a8b92c1d0541da01a21a"
+  },
+  "jatkotila": {
+    "Keskustelukanava_hyvaksynta": "odottaa",
+    "uudet_korttelit_julkisivut_nahtavyydet_puut_tilattu": false,
+    "vanhojen_kattopintojen_peruutus_voimassa": true,
+    "runtime_varmennettu": false,
+    "julkaisu_varmennettu": false
+  }
+}
