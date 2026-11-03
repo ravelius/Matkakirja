@@ -217,3 +217,7 @@ Omistajan kortti KK:ssa 'Rakennetaanko kaupunkikartat tällä periaatteella?' �
 ## NÄHTÄVYYS EI VEDEN PÄÄLLE (3.11.2026 klo 21.29–21.30) (3.11.2026 klo 21.30)
 
 Omistaja KK:n kortissa 'Onko Notre-Dame nyt tarpeeksi suuri?': "Ei se voi noin mennä veden päälle"; 21.30: "Ei se mene g versiossa kaanon. Katsokaa sieltä mallia". KK: G:ssä Notre-Dame seisoo saarella ja joki näkyy molemmin puolin; liioittelu korkeudessa ja julkisivussa. Kumoaa 20.4x-tulkinnan 'saa levitä joen päälle'. Kirjattu 2.204:n loppuun.
+
+## JUOKSUPELI: EI OPETUSTA KESKEN JUOKSUN (3.11.2026 klo 21.48) (3.11.2026 klo 21.53)
+
+KK välitti sanatarkasti: "Juoksu pelin ei voi tulla kesken pelin mitään opetus kortteja". JuoksuOpetus ja opettavat kehotteet pois, ei hidastusta; huudot ja väistörepliikit jäävät. Kumoaa 2.177:n ALKU JA OPETUS -kohdan opetus- ja hidastusohjeet (27.10. 08.26–08.29). Kortti ohjainkuvasta ennen juoksua auki. Kirjattu 2.177:ään.
