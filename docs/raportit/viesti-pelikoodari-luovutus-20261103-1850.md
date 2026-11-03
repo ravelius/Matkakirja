@@ -49,3 +49,6 @@ kytkentää (arkihahmot). Proto-haarat paikallisia (repo /Users/Shared/Claude/pr
 6. Postiskripti: /private/tmp/…/scratchpad/posti-pk.zsh ei säily → JU:n malli /Users/Shared/Claude/julkaisija-tyokalut/posti.zsh,
    oma wt /Users/Shared/Claude/wt/pelikoodari-postilaatikko.
 7. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1850.
+
+## Lisäys 18.5x
+- PT: omistaja 18.49 "Kelpaa" keisarin nostolle. Kun JU:n iso-ajo (paketti a92302399 tai uudempi, sis. 00686cbef) näyttää noston iPadilla → YKSI rivi KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) kuvapolun kanssa.
