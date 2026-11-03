@@ -1,0 +1,44 @@
+# Pelikoodari: luovutus 3.11.2026 klo 06.50 – juna 218
+
+Edellinen: -20261103-0605 (0141662ba) – voimassa, ellei alla toisin. Syy: konteksti (hook 26 %).
+Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-tausta-v99, haara pelikoodari/kapea-reitti-218 (paikallinen), kärki **06aa319bc**.
+Runko **pelikoodari/sali-218x 4e7874b8b** (= 06aa319bc + piirtajat-218 b51e69a8b, merge-tree + commit-tree). unity-tarkistus 0 virhettä,
+peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
+
+## PT:n linja (SITOVA, PT 06.5x)
+218x KOKO sarjana. Selvitä yk 76:n ja cx:n reunojen 570:n syy, korjaus samaan runkoon. Taulukko **218r / 218v / 218x** PT:lle (≤ 3 riviä + polku).
+
+## Tehty tässä vuorossa
+- Taulukko 218r/218t/218v valmis ja PT:lle: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/taulukko-218v.md
+  (massassa/piilossa 264/596 → 485/807 → 190/466; th 0, xf 0; taso1b-218v 7/59/0/27, eteläoven 1,8 m:n hyppy poissa).
+- xf/th:n alun ovipalkki (avoin 1): kaksi korjausta
+  - bf0e08217: polun ollessa lyhyt ja suoran paikan tukossa kamera suoraan lähemmäs (DroneNosto.PolkuSuoraMin 1,2 / PolkuSuoraVara 0,5),
+    1. ruudussa polkupaino suoraan. xf-218w (546572ce9) EI riittänyt: alussa sisäkamera ("sali 1.0").
+  - **06aa319bc (juurisyy):** JuoksuSokkeloMaailma.SaliKatonAlla vaati vain katon rajauksen (sisältää räystään) → keisari räystään alla 2 m
+    seinän ulkopuolella = "salissa" → sisäkamera vei kameran salin sisään seinän ja ovipalkin taakse. Nyt vaatii AvoimessaHuoneessa(puyi,
+    −SaliSeinaVara 0,5). HUOM: koskee kaikkia saleja (sisäkamera alkaa ovella, ei räystään reunalla) → koko sarja tarpeen.
+- mittari-taulukko.py tuntee -218w ja -218x. sali-218x/ketju-x.zsh lukee myös taso-ajon juoksu-kansion.
+
+## Selvitetty (PT:n kysymys)
+- **cx reunassa 570 / vetoja 1046 = mittarin ajoitusartefakti, ei kameramuutos:** "kiinni TakaaAjaja 36 s" -jälkeinen odotus ennen
+  `uudestaan` oli 218v:ssä ~30 s (218t ~5 s); kiinniruudut lasketaan peliin. 218v: reuna 96 ennen kiinniä → 556 uudestaan-hetkellä → 570.
+  Ehdotus: mittari-taulukko.py (tai pelin mittari) erottaa kiinni → uudestaan -jakson kuten maalikuvan. Ei tehty.
+- **yk 76 (218r 44):** 249,7 s (44) = s ~66 portin edusta (98,3, 4,1, -773,5), ruutu huippu 4,95 ala 0,54 = sama kuin 218r:n 239,7 s (44)
+  ja 218t:n 240,0 s (45) → vanha. UUSI 243,7 s (32) = s ~35 työhuoneen (halli 11) eteläpää: kamera (113,3, 3,7, -784,6), Puyi
+  (110,8, -784,4) länteen, ruudut "huoneessa huippu 3,95". 218t:ssä sama 234,2 s (61), 218r:ssä ei → tuli 218r→218t-muutoksista:
+  9655e4bae (polkukamera myös läpikulussa) tai **a31589350 (läpikulun katto avoimen oven aukosta, kamera oven yläreunan alle)** –
+  todennäköisin a31589350 (paikka työhuoneen end_door18:n vieressä, sarana (116,1, -784,5)). EI varmistettu eikä korjattu.
+
+## Ajot (JU)
+- L1: sali-218x/ketju-x.zsh xf th (alkoi ~06.47), sitten samalla linjalla ketju-x.zsh yk cx tj ty cc ys (pyydetty 06.49).
+- 218w-kansio: vain xf (061632); th 062341 kaatui alussa (exit 138, Unity Task-säie) – ei uusintaa.
+
+## Avoimet
+1. 218x-sarjan jälkeen: `cd sali-218b; python3 -I mittari-taulukko.py yk-218r yk-218v yk-218x cx-218r cx-218v cx-218x tj-218r tj-218v tj-218x
+   ty-218r ty-218v ty-218x th-218r th-218v th-218x xf-218r xf-218v xf-218x cc-218r cc-218v cc-218x ys-218r ys-218v ys-218x` → taulukko-218x.md
+   + PT:lle ≤ 3 riviä. Tarkista xf-218x ja th-218x v3 0–1 s kuvina (ffmpeg tile, kuten scratchpadissa): palkki/räystäs poissa?
+2. yk s 35: vahvista a31589350 vs 9655e4bae (kameraloki 218t/218v yk, OviAukonYla-loki) → korjaus seuraavaan runkoon (218y).
+3. cx: kiinni-jakso erilleen mittarissa (PT:n hyväksyntä ensin, koska muuttaa taulukon lukuja).
+4. th s 7 kapea ovi (114,2, -784,2): th-218v massassa 0 → poistunut; reunat 127 jäljellä.
+5. Ennallaan: ty s 13,4 räystäsnosto, ys 1.2 räystään parrut, seinähäivytys pois (omistaja 10.43), KK:n paketti vasta puhtaana.
+6. Havainnot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/salit-218l-havainnot.md (loppu).
