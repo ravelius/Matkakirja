@@ -27,3 +27,7 @@ Kuvista todennettu: nappula kuvien päällä, vene Pont Royalin alla kansi pää
 - KS:llä (kerrottu): puut piirtyvät nimien päälle, Louvre-nimi Seinellä. Tuplanimiä ei näkynyt 4 katsotussa kuvassa; kerro KS:lle, jos näkyy.
 - Tyhjät keltaiset läiskät korttelien tilalla laajasti (Eiffel, S-C, GP); kerrottu PT:lle, ei NS:n.
 - pid 66955 (Unity, proto-natiiviseppa-unity67, 3.11. 23.49): ei tämän roolin ajo, kerrottu PT:lle; tila tarkistamatta.
+
+## Vanhan luovutuksen lisäykset 23.51–23.53 (18a4d6341; luin ne vasta 00.5x, sain osoitteen 18e139be5)
+- c) JU: siltojen suunta poikkeaa kadusta (silta-concorde: katu näkyy vedessä sillan vieressä). PT: arvio KS:ltä, ei säätöä ennen sitä. **Tila tuntematon:** y-silta-concorde.png katsomatta, en tiedä, onko KS arvioinut. Kysy KS:ltä, ennen kuin säädät.
+- d) JU: Boulognen puut vain teiden varsilla (puut-boulogne). KS tuo uuden puudatan KK:n latvuskokovalinnan jälkeen; tarkista silloin, korjaako se tämän.
