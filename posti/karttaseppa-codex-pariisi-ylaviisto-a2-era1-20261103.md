@@ -11,3 +11,8 @@ Aineisto: `/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-ylaviisto-a2-2026110
   ja `kulmaohje-k1.png` (vain sävyt, muste, puut ja paperi).
 
 Toimitus `_review-a2-era1/` (4 kuvaa, SHA256SUMS, esineet.json). Keskustelukanava tarkistaa erän ennen kuin loput tilataan.
+
+**MUUTOS 20.20 (OMISTAJA):** "nähtävyyksien koot saa olla niin paljon liioiteltuja kuin vain mahdollista." Siksi
+`esine-notre-dame-60` piirretään karikatyyrinä niin liioiteltuna kuin mahdollista: tornit, torninhuippu, ruusuikkuna ja
+tukikaaret korostetaan niin, että kohde tunnistetaan pienestäkin. Koko on 2048 px pidempi sivu (oli 1024). Peli suurentaa
+kuvan kartalla niin isoksi kuin tila sallii. TILAUS.md ja SHA256SUMS on päivitetty. Muut kolme kuvaa pysyvät ennallaan.
