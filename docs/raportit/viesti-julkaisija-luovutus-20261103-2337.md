@@ -28,3 +28,6 @@ Linja 1: lav-v124 → ns-95a-laite2 (PT:n iso iPad; käännös jatkuu vanhasta l
 Iso iPad: otsikko bf54a5c4f + ns-95a-laite2 (Montparnasse, ND + Louvre, silta + katu, vene Pont Royal, muisti; → PT täysikokoisina) → vs-teravyys-b9d044fb6 (odeon-kamera; → VS + PT) → nui-sali-vianhaku 4397cf20d (PT:n lupa; VIKA hyväksytty, EI toistoa; rivi "SALI-VIANHAKU VALMIS" NUI:lle; asennustodiste nui-sali-vianhaku-asennus.txt).
 Lupaukset: NS saa VAPAA-rivin Kartta-testeille (3 min), kun linjat tyhjenevät. NS:n c/d-sillat: uusi SHA erikseen. LAV v124-kuvat polku LAV:lle. "? options:" = devicectlin onnistumislistan viimeinen kohta (ei virhe).
 Viety lisäksi: notre-dame-alue-v4. Monitorit eivät siirry: uusi rooli katsoo lokit ketjujen nimillä.
+
+## LISÄYS 23.43
+VS:n k14 ja terävyys b9d044fb6 PERUTTU (PT: ei ennen KK:n vastausta); uusi SHA VS:ltä. Linja 2: 95a → laatat → KS. iPad: otsikko + 95a → sali-vianhaku.
