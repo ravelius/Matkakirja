@@ -7,4 +7,4 @@ Kiitos, v2 (231437540, kuva b5e94efd…). **Pala02 on hyväksytty.** `hyvaksytyt
 - Raja pala03:n kanssa ei enää näy, ei myöskään 3×-koossa (`tarkistus/pala02/pari-v1-v2-3x.jpg`, saumamittari 1,10):
   kadut ja korttelit jatkuvat, ja talojen koko on sovitettu.
 
-Jono: pala09 v5 (0fab21bac), sitten pala14 (naapurit 09, 10, 11, 13 ja 15; odottaa 09:n hyväksyntää), 01, 13, 04, 08, 12.
+Jono: pala09 v5 (0fab21bac). **Pala01 voi tehdä jo sillä välin** (naapurit 02, 05 ja 06 hyväksytty). Pala14, 13 ja 04 koskettavat pala09:ää, joten ne tulevat vasta 09:n hyväksynnän jälkeen. Sitten 08 ja 12.
