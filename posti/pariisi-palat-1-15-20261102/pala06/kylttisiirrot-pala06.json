@@ -1,0 +1,47 @@
+{
+  "37": {
+    "nimi": "Arc de Triomphe du Carrousel",
+    "piirretty_px": [
+      210,
+      880
+    ],
+    "ero_m": 103,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "92": {
+    "nimi": "Hôpital Lariboisière",
+    "piirretty_px": [
+      853,
+      107
+    ],
+    "ero_m": 98,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "24": {
+    "nimi": "Gare du Nord",
+    "piirretty_px": [
+      907,
+      187
+    ],
+    "ero_m": 96,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "40": {
+    "nimi": "Gare de l’Est",
+    "piirretty_px": [
+      994,
+      313
+    ],
+    "ero_m": 82,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "68": {
+    "nimi": "Tour Saint-Jacques",
+    "piirretty_px": [
+      666,
+      998
+    ],
+    "ero_m": 74,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  }
+}

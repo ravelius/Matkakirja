@@ -1,0 +1,88 @@
+{
+  "measuredLandmarks": 18,
+  "allMeasuredWithin140m": true,
+  "unmeasuredMinorDetails": [
+    {
+      "nro": 17,
+      "nimi": "Musée des arts et métiers",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 20,
+      "nimi": "Forum des Halles",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 25,
+      "nimi": "Tuileries",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 41,
+      "nimi": "Musée Picasso",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 59,
+      "nimi": "Musée Carnavalet",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 65,
+      "nimi": "Châtelet’n metroasema",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 71,
+      "nimi": "Théâtre du Châtelet",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 72,
+      "nimi": "Place des Victoires",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 75,
+      "nimi": "Place du Châtelet",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 85,
+      "nimi": "Place du Carrousel",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 86,
+      "nimi": "Musée d’art et d’histoire du Judaïsme",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 88,
+      "nimi": "Musée des Arts Décoratifs",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 90,
+      "nimi": "Saint-Merrin kirkko",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 91,
+      "nimi": "Temple",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 94,
+      "nimi": "Fontaine des Innocents",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    },
+    {
+      "nro": 95,
+      "nimi": "Hôtel de Soubise",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    }
+  ],
+  "policySource": "posti/karttaseppa-codex-pariisi-palat-1-15-tilaus-20261102.md: Pienet kohteet saavat jäädä kortteleiksi.",
+  "receiverReview": "pending; targets never substituted for observations"
+}
