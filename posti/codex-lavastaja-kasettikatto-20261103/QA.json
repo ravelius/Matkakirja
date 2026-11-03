@@ -1,0 +1,31 @@
+{
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "outputSize": [
+    2048,
+    2048
+  ],
+  "leftRightEdgeMeanDifference": [
+    5.08642578125,
+    6.09375,
+    5.0322265625
+  ],
+  "topBottomEdgeMeanDifference": [
+    6.4013671875,
+    6.39599609375,
+    6.85595703125
+  ],
+  "note": "Natural painted grain is not byte-identical; inspect wrap continuity visually.",
+  "checkedAt": "2026-11-03T15:55:05.263422+00:00",
+  "visualOffset50": "PASS",
+  "visualRepeat3x3": "PASS",
+  "mode": "RGB",
+  "srgbProfileEmbedded": true,
+  "generationCalls": 1,
+  "normalMapIncluded": false,
+  "ownerApproval": "pending",
+  "gameIntegrated": false,
+  "published": false
+}

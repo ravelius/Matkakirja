@@ -1,0 +1,7 @@
+# Kasettikaton lähteet
+
+Tianhua-ruudut ovat pintakuvio, eivät yksittäinen suuri zaojing-kattokupoli. [Palatsimuseon rakennus- ja käsitteistökuvaus](https://www.dpm.org.cn/explore/building/236458.html) selittää ristikkäisten puulistojen väliin jäävät levyt ja niiden pyöreät lohikäärme-/kukkakuviot. Samalla sivulla käsitelty Yangxingdian on eri rakennus kuin Yangxindian; tätä lähdettä käytetään kattorakenteen ja kuvioaiheiden perustana, ei väitteenä yhden huoneen täsmällisestä kopiosta. [Mielenrauhan hallin museokuvaus](https://intl.dpm.org.cn/hallsinfo/372.html) tarkistettiin rakennuskontekstina.
+
+Värimalli on Lavastajan tilauksen havainne-04 ja sen ylärajaus: teal, indigo ja lämmin kulta. Niissä näkyvät palkkimaalaukset, eivät yksityiskohtaiset kasettiruudut. Tämän uuden kuvion ruudutus, vihreät rimat, lohikäärme/lootusvuorottelu ja pienet kulmakoristeet on tehty tilauksen mukaan; kyse on lähteisiin perustuvasta pelisovelluksesta, ei museon kattopinnan valokopiosta.
+
+Tasainen albedo, ei perspektiiviä tai valoon sidottuja heittovarjoja. 2 × 2 ruutua kuvatiedostossa. Yksi generointikutsu. Alkuperäinen 1254 × 1254; toimitus 2048 × 2048 on tekninen kokomuunnos, ei natiivisti suurempaa detaljia. sRGB RGB ilman alfaa. 50 % siirto ja 3 × 3 toisto tarkastettu silmämääräisesti: ristikko ja kuviot jatkuvat. Maalatun pinnan reunapikselit eivät ole bittitasolla identtiset; reunavärien mittaus on QA.json:ssa.
