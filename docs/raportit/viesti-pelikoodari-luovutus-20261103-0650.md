@@ -75,3 +75,20 @@ peli-testit 803/803 (bash Peli-testit/kaanna.sh – EI zsh).
   (1. ruutu < 2 m keisarista eikä z < -803,3?) → PT:lle ≤ 3 riviä.
 - Ei tehty: vesiastiat vedenkantajan täyttöpaikoiksi (LAV: pronssit-esi/vesiastiat-pk.json), yk s ~35 (a31589350-epäily).
 
+
+## Jatko 09.0x – UUSIN TILA (korvaa 08.0x:n runko- ja ajotiedot)
+- **yk s 35 juurisyy (ei a31589350 eikä 9655e4bae):** salin sisäkameran varakorkeus SaliKorkeus 3,4 + SaliKattoVara 0,5 = 3,9 m, kun katon
+  alapintaa ei saada peittokartasta (matalat salit: työhuone katto 3,5–4,0 m, juhlasalin räystäs 3,9). Kamera 3,9 m:ssä katossa kaikissa
+  ajoissa 218r:stä; a31589350:n oviraja vain hidasti nousua mittarin rajalle. Sama syy xf-218y:n alussa (piilossa 6+5) ja cx-218y:n
+  kiinniotossa (reunat 390). Korjaus proto **455c3446a** (kohteen yllä salin katto → kohde ≤ Huippu − 0,5 − 0,5, ≥ 1,6 m).
+  Runko **pelikoodari/sali-218z 9cf0c1c2c** (= 218y + 455c3446a). unity-tarkistus 0, peli-testit 803/803.
+- 218y valmis (JU 09.02). Taulukko 218v/218y PT:lle: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218b/taulukko-218y.md
+  (m/r/p/v 190/863/466/901 → 166/911/160/765; taso1b 7/59/0/27 → 0/13/0/14). xf-218y 1. ruutu keisarin takana (napsautus toimii).
+- mittari-taulukko.py: uusi sarake "reunassa (yläraja pois)" (seuraava yhteenveto uudestaan-hetken jälkeen; cx-218y 394 → 4). Tuntee -218z.
+- taso1b-video: aja-sk.zsh teki videon kansiosta taso1b, tallenne on juoksu → korjattu sali-218z/aja-sk.zsh; 218y:n taso1b leikattu käsin.
+- **JU ajaa nyt (alkoi 09.02, L1):** sali-218z/ketju-z.zsh xf th yk cx tj ty th cc ys taso1b. PT (08.1x): taulukko **218v/218y/218z** PT:lle
+  (`python3 -I mittari-taulukko.py yk-218v yk-218y yk-218z …` kaikki 8 salia + taso1b) ≤ 3 riviä + polku.
+- Avoin uusi: ty-218y s 58,6 tiyuandianin portti: räystäsnosto (JuoksuV4Maailma ~rivi 1617 "räystäs kameran vieressä") nostaa kameran
+  3,1 → 5,8 m räystään 4,1–4,3 läpi + KAMERAHYPPY 2,9 m (massassa 26+26). Liittyy avoimeen 5 (ty s 13,4 räystäsnosto). Ei korjattu.
+- Havainnot: sali-218b/salit-218l-havainnot.md (loppu). Ei tehty: vesiastiat täyttöpaikoiksi (vedenkantajaa ei vielä ole; arkiset hahmot
+  odottavat Codexia).
