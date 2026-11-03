@@ -1,0 +1,13 @@
+{
+  "measuredLandmarks": 23,
+  "allMeasuredWithin140m": true,
+  "unmeasuredMinorDetails": [
+    {
+      "nro": 25,
+      "nimi": "Tuileries",
+      "status": "not-independently-measured; retained as ordinary block/park detail under source small-object allowance"
+    }
+  ],
+  "policySource": "posti/karttaseppa-codex-pariisi-palat-1-15-tilaus-20261102.md: Pienet kohteet saavat jäädä kortteleiksi.",
+  "receiverReview": "pending; targets never substituted for observations"
+}

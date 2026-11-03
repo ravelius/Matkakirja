@@ -1,0 +1,65 @@
+{
+  "7": {
+    "nimi": "Élysée-palatsi",
+    "piirretty_px": [
+      1027,
+      574
+    ],
+    "ero_m": 117,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "81": {
+    "nimi": "Jeu de Paume",
+    "piirretty_px": [
+      1257,
+      728
+    ],
+    "ero_m": 111,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "37": {
+    "nimi": "Arc de Triomphe du Carrousel",
+    "piirretty_px": [
+      1516,
+      880
+    ],
+    "ero_m": 103,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "53": {
+    "nimi": "Palais de Chaillot",
+    "piirretty_px": [
+      224,
+      861
+    ],
+    "ero_m": 88,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "32": {
+    "nimi": "Palais Bourbon",
+    "piirretty_px": [
+      1030,
+      860
+    ],
+    "ero_m": 87,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "10": {
+    "nimi": "Place de la Concorde",
+    "piirretty_px": [
+      1168,
+      714
+    ],
+    "ero_m": 68,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "82": {
+    "nimi": "Sainte-Clotilde",
+    "piirretty_px": [
+      1090,
+      998
+    ],
+    "ero_m": 68,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  }
+}
