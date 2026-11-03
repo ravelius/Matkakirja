@@ -31,3 +31,7 @@ Testit: bash Peli-testit/kaanna.sh (EI zsh) 803/803; zsh tyokalut/tarkista.sh �
 3. Ei tehty: vesiastiat vedenkantajan täyttöpaikoiksi (LAV: pronssit-esi/vesiastiat-pk.json) – vedenkantajaa ei ole; arkiset hahmot
    odottavat Codexia (työlista). Ennallaan: ys 1.2 räystään parrut, seinähäivytys pois (omistaja 10.43), KK:n paketti vasta puhtaana.
 4. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-0540 (PR 6085 auki).
+
+## PT 10.0x (SITOVA)
+- PT 10.0x KUITTASI 218z voittajaksi; ehto taso1b-218z ≤ 218y (0/13/0/14) → yhdistä juna-218:n (8d18d7047) päälle → JU junaan + junarivi; 218-aa jatkuu sen päälle, jos ty paranee.
+- taso1b-218z ajossa 09.59 (JU L1); 218aa jonossa sen perään (JU 09.5x).
