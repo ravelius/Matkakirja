@@ -18,6 +18,8 @@ Syy: kontekstivahti 25 %. V = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/va
 1. **Välitason loppu**: NS vaihtaa SileaUrl + offline.json kaupunkiRasteri uuteen kansioon (viesti NS:lle 06.0x, jonossa), sitten
    saapumisvideo JU:n simuvuorolla. PT: tarkista NS:n kanssa videosta, ettei tyhjää välitasoa näy → rivi PT:lle. Jos NS kysyy
    pallo-z10.json:n sarjaa: tiedosto on ennallaan (laattajoukko sama), vain URL vaihtuu.
+   **LISÄYS 06.1x: NS vaihtoi SileaUrlin (runko juna-218 f1264eea9; offline.json ei muutu).** Jäljellä vain saapumisvideo +
+   lepokuvat JU:n simuvuorolla; NS lähettää polun → katso ja rivi PT:lle.
 2. **Pariisin palat 1–15**: tilaus Codexille 10a39d6b9, ei vielä generointeja. Seuraa postia; tarkistus `tarkista_ala.py`,
    kokoaminen kuten luovutuksessa 20261102-2210 AVOIN 2.
 3. **G (KS + NUI)** ja vanhat kohdat kuten luovutuksessa 20261103-0025 (AVOIN 3–4).
