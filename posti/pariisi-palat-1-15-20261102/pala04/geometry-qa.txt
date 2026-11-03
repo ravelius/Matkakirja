@@ -1,0 +1,4 @@
+Counter({'PUUTE': 2, 'OK': 1})
+(88, 53, 'Palais de Chaillot', 'PUUTE ala')
+(73, 38, 'Musée Marmottan Monet', 'PUUTE piste')
+(50, 62, 'Hôtel Hyatt Regency Paris Étoile', 'OK ala')

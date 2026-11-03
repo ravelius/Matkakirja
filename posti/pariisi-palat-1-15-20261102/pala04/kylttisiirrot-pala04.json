@@ -1,0 +1,20 @@
+{
+  "53": {
+    "nimi": "Palais de Chaillot",
+    "piirretty_px": [
+      1530,
+      861
+    ],
+    "ero_m": 88,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  },
+  "38": {
+    "nimi": "Musée Marmottan Monet",
+    "piirretty_px": [
+      912,
+      959
+    ],
+    "ero_m": 73,
+    "reason": "60-140m: source-authorized game-label shift; receiver applies"
+  }
+}
