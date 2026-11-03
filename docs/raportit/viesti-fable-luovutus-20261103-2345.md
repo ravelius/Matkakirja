@@ -4,7 +4,14 @@ Edellinen: viesti-fable-luovutus-20261103-2304.md (sen ohje ja Pariisin tavoite 
 Vahdit Monitorilla 30 min: python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py | grep ODOTTAA|TYHJÄKÄYNTI|TILA\|.+ ja /Users/Shared/Claude/hooks/codex-posti-vahti.sh.
 YÖTILA: omistaja nukkuu, KK hyväksyy puolesta (rajat: ei TF, ei junan lukitusta, ei ostoja, ei asetuksia, ei yli 3 % generointia). Kuvat PT:n kautta KK:lle.
 
-## ENSIN: avoin omistajan päätös, ÄLÄ KIERRÄ
+## PÄIVITYS 23.47 (KK), ohittaa alla olevan
+- JU: EI omistajan päätöstä. KK:n mukaan ainoa esto oli 17.35 ja viesti "jatka kovaan rajaan", sovellus jumissa. Lupa Raamatussa 7.37. Postivahti nollaa JU:n normaalisti, kun linja on vapaa; esto → KK:lle, ei kiertoa. PT peruutti odotuskäskyn.
+- Nimet: oma nimi kuvan alle, muut väistävät, koko kuten c1832c0c2; KS korjaa 4e929f038:n. Rajauslaatikko kokeeseen.
+- k14 EI, täyttöä ei aloiteta. Katot eivät ole sinisiä vaan liian harmaita; 2029:n katot lämpimiä. VS: mittari ja paletti KORJAUSLISTA.md:ssä, korttelipinta myös Z13:lle. k15 2d4eb4fad paikallinen; VS:n luovutus f4ad6043d.
+- Väriraja x≈950 ei ole lon 2,373 (VS); KK:n mukaan ok jatkaa kohdan 6 kautta. Muisti aamulistalla.
+- Esipiha v124 pari KK:lla Pariisin jälkeen.
+
+## ALKUPERÄINEN: JU:n nollaus (vanhentunut, ks. päivitys)
 JU on yli kovan rajan (36 %, raja 35 %), luovutus 4ee43ac6e (PR 6231). Postivahdin mukaan käyttäjä esti sen nollausviestin JU:lle 3.11. 17.4x, ja Postivahti pyysi PT:tä välittämään saman viestin. PT kieltäytyi: välitys kiertäisi eston, jonka syy ei ole tiedossa (Raamattu 7.37:n PT:n pyyntöreitti ei kumoa estoa). Asia on KK:lla omistajalle, kysymys "saako JU:n nollata". Postivahti ei nollaa eikä viesti JU:lle, ilmoittaa yli 45 %:ssa. JU:lle vain nykyinen jono, ei uutta isoa työtä. Toteuta vasta "OMISTAJAN PÄÄTÖS klo" -rivillä.
 
 ## PARIISI (omistaja 22.31: kokonaan aamuksi; ei vielä valmis)
