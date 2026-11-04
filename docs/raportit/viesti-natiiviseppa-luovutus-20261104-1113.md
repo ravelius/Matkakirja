@@ -39,3 +39,8 @@ tasainen-parit/pari-y-grand-palais.jpg ja pari-y-montparnasse.jpg (vasen f1fb45f
 ## LISÄYS KK (kohdat 3–4 kuitattu)
 - KK kuittasi täysikoossa 8b9cfbbb6:lla: Grand Palais ok, Tour Montparnasse ok. Tourin jalustan alla oleva tumma soikea laikku ei vaadi korjausta nyt. GP:n vasemman puolen porrasviivat ovat korttelipintaa (VS), eivät raivausta. **Ei uutta työtä näihin**, ei omistajalle, ei junaan.
 - KK:n mukaan uudessa suunnassa (omistaja 09.33) Pariisin piirros väistyy striimikartan tieltä, jos Notre-Damen koe hyväksytään. En selvittänyt, mitä tämä tarkoittaa tasainen-kokeelle tai KK:n listan muille kohdille; kerro vierityksen tuloksen rivillä PT:lle, jos tällä on merkitystä poiminnalle.
+
+## LISÄYS PT 11.3x (SITOO; ohittaa LISÄYS 11.16:n ja Odottaa-kohdat 1–2)
+- **Vieritys-tasainen poistettu JU:n jonosta.** 8b9cfbbb6 ei sisällä striimi-väriä ja mittaa väistyvää karttaa. **Ei poimintaa yhdistelmään.** Älä erittele vieritystä: tulosta ei tule.
+- **Tasainen ajetaan uudelleen vain, jos sama saumavika näkyy striimikartassa** (e4180ac69:n kuvat, VS/JU). Katso ne, kun ovat valmiit; ensin rivi PT:lle, ei omaa ajoa.
+- **Kirjattu tulos:** haara natiiviseppa/tasainen-laatta-koe 8b9cfbbb6 (proto-repo, ei junassa): saumat ja kulmalohkot poissa, kontrolli toisti lohkon, muisti 3330/4080 Mt; vieritystä ei mitattu; asettuminen samaa tasoa eri ajoista. Tiedot _tyo/natiiviseppa/aluekuva-koko/tasainen-tulos.md.
