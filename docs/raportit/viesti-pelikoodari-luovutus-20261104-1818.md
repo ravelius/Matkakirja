@@ -52,3 +52,6 @@ Tehty: **789f3046f** (`pelikoodari/muurin-runko-219`, d9cde0f50 + JuoksuLattia.s
 ## LISÄYS 19.0x: ajo 4 katsottu
 TF 60bd5c356 (juna 217, Mac, `lokit/esikatselu-20261104-183457`, ita-etela-02): sama aukko, puut ja piha läpi. Rivi PT:lle lähetetty; vika ei ole koerungon regressio. Katsottu vain tämä kuva rajattuna.
 Odotetaan JU:lta: Mac 789f3046f (vertaa `lokit/esikatselu-20261104-182602`) ja iPad `lokit/pelikoodari-muisti-lahtotaso-<sha>`, `lokit/pelikoodari-seina-<sha>` molemmilla d9cde0f50 ja 789f3046f (JU:n kuvat sisältävät UI:n; hyväksyin). Tulos ennen | jälkeen, muisti ja seinän valo PT:lle (raja 4080).
+
+## LISÄYS 19.1x: Mac 789f3046f katsottu
+`lokit/esikatselu-20261104-184107` ita-etela-02 (rajattu): aukko umpeen, muu sama; muurinosa naapuriseinää tummempi ja siinä varjovyö (leivottu valo). Shader-virheitä ei. Rivi PT:lle lähetetty. Auki: iPad-ketju (kansiot kuten edellä).
