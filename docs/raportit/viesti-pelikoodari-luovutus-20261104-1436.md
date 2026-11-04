@@ -29,3 +29,17 @@ Kala-allas ja kukkaruukku kelpaavat peliin. Väri pysyy; ruukun kaari korjattu m
 
 ## LISÄYS 14.5x: KK 14.52
 Kaivosuojat ilman ovea: sääntö nimestä 井, kärki **e66d866ba** (kartta v3 ja JuoksuOvet.json päivitetty, kääntämättä mutta vain dataa ja työkalu; kuvalistassa 14 ovea). Seuraava KK katsoo a26aca8f5:n arkin ja tuo palautteen. Muisti ja kierros JU:n vuorolla kuten kohdat 2–3, rungoksi e66d866ba.
+
+## LISÄYS 15.0x: KK 15.00, palaute arkista a26aca8f5 (SEURAAVA TYÖ, ei vielä omistajalle)
+**Koko palaute:** `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261104-juoksupeli-vapaa-maailma.md`, viimeinen osio. Lue se ensin. Yksi kierros säännöillä, ei rakennuskohtaisia korjauksia. Luvut koko joukosta ennen ja jälkeen.
+Lyhyesti: (1) ovi ei peitä ikkunaa puoliksi, (2) sama ovi (绥寿殿 4 m pois), (3) matala seinä ei ole seinä (弘义阁), (4) ovi ei roiku ilmassa (南薰殿, 斋宫), (5) edessä oltava tilaa (小房6), (6) hämärä pimeäksi huoneeksi, ei ruskeaksi tauluksi, (7) 乾清宫:n ja 坤宁宫:n täyte samalla pinnalla kuin seinä.
+Arkkiin samat 14 + 太和殿, 保和殿, 怡情书史 + viisi uutta arvottua, ovi näkyvissä joka kuvassa. Muisti yhdellä ajolla vasta tämän jälkeen.
+Lähtökohdat koodista (kärki e66d866ba), eivät ratkaisuja:
+- (1) `puhdas` hakee enintään 4 m tai 20 % sivusta ja palaa keskikohtaan, jos ei löydy. Pingfang 9 ja 绛雪轩 menevät tuohon paluuseen: laske, moniko ovi jää paluulle.
+- (2) `aukko`-haara antaa `lev` = aukon leveys (W + 0,15). Sama ovi = aina OVI_L, ja aukon loppu täytteenä kuten `aukko-leveä`; LEVEA_AUKKO-raja poistuu tai pienenee.
+- (3) `korkea_seina`: yhtenäinen pinta 2–3 m kelpaa seinäksi, joten kivinen terassi menee läpi. Raja: seinän yläreuna tai jatkuuko pinta ylös kattoon.
+- (4) `jalusta` ottaa oven tason, vaikka portaita ei ole. 南薰殿:lla `syv` 0,25. Etsi sääntö: ilman portaita ja ilman syvyyttä ovi maasta asti seinän pinnassa, tai portaat vaaditaan.
+- (5) ei tarkistusta oven edustan tilasta. `et`-kerros tai kävely 3–4 m:n matkalta `kynnys`-kohdasta; `nakyva`-sivun ja etusivun valinnassa.
+- (6) Ovet.cs: hämärä on yksi laatta, väri (0,20; 0,16; 0,13), ja saa pelin valot. Pimeä huone: tummempi, ilman auringon valoa, ehkä syvyys sisäpinnoilla; 乾清宫-kuva `ovi-乾清宫.png` vertailuun.
+- (7) `aukko-leveä`: täyte on `o.x` (kes + n × 0,33), eli edessä seinää. Seinän pinta saadaan viereisen seinän t:stä (`rv`, `tk`).
+Muista: `tarkastelu_kuvat.sh` JU:n vuorolla; arkki PIL-ruudukkona; `ovikuvat.py` tarvitsee varmistuksen, että ovi näkyy: 小房6 läpäisi näköyhteyden, koska kartan ja koerungon mallit eroavat (tausta-v124 vs c4a).
