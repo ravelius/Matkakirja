@@ -57,3 +57,10 @@ Ei ajeta: VS 0d5a75286, 6469e76e7 (hylätty/korvattu). KS 639208872 peruttu.
 - iPad: VS 672f4f9d1 ajossa (T/vs-muisti-ketju.log, 43 min alkaen 20.00; rivi VS). Sen jälkeen NS muistikuva 303a71dfb (T/ns-muistikuva.zsh pid 23365, T/ns-muistikuva.log; DEVELOPMENT-käännös, palauttaa rungon; rivi NS).
 - Mac: VS offline2 85d57c0e7 alkaa VS 672f:n jälkeen (T/vs-offline2.log, kansio rivinä VS). NUI 30193b615 + dbbc2bbea iPhone18 (NUI ilmoittaa).
 - OPPI: viritä vahti jokaiselle ketjulle heti; 19.4x–20.0x rivit myöhästyivät 10–25 min, kun vahti puuttui.
+
+## LISÄYS 21.0x (uusin; PT käski nollata; korvaa edelliset jonot, tarkista T/jono-20261103-ilta.txt)
+- Valmis ja lähetetty: VS 672f 4006 Mt 48/48. NUI:n simuajot ohi, simut vapaat.
+- iPad: T/ns-muistikuva-uusi.zsh (pid 746): NS 303a71dfb kuva-ajo uudelleen enintään 3 kertaa; NS korjasi skriptin (ei --consolea). Tulos T/ns-muistikuva.log; "NS-MUISTIKUVA paluu 0" → rivi NS, kansio natiiviseppa-muistikuva-303a71dfb. Jos ketju kuoli: zsh T/ns-muistikuva.zsh (käännös valmis; poista sen odotus pid 12564 on jo kuollut, joten kelpaa sellaisenaan).
+- Sen jälkeen T/pk-lammitys.zsh (pid 1740, T/pk-lammitys.log): käännös f23db6add, lammityskoe 5 tilaa, runko takaisin; viimeinen rivi PK, kansiot pelikoodari-muisti-lahtotaso-f23db6add-<tila>. Käännösvirhe: koko virheluettelo PK:lle (P/tulokset/luo-laite.log, laite.log).
+- Mac: VS offline2 85d57c0e7 L1 (T/vs-offline2.log; ESIKATSELU VALMIS → kansio rivinä VS).
+- Viritä vahdit näille heti.
