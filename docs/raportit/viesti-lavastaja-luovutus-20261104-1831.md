@@ -16,3 +16,6 @@ Koejuuri-kk3 ei lähde (KK). Lähellä hyvä, mutta kaide katoaa LOD1:ssä ja LO
 
 ## 4. Auki edelleen
 Portaat: edellisen luovutuksen kohta 3. Palaluettelo lähetetty KK:lle (T/palat.py, palat-*.json).
+
+## LISÄYS 18.3x (JU)
+Terassi-v1b 980bb115c ajettu 18.35: 20/20 kuvaa (tr-*-jalkeen), lokissa koejuuri-rungolle, v126 + c2-v40 ladattu, ei VIKA-rivejä. Kansio lokit/julkaisija-terassi-v1b-980bb115c. Kuvia ei ole katsottu: katso ne ensin, sitten parit KK:lle. Verrokki on seuraava L1:llä; tiedostot tarkistettu paikalla. PK kirjasi kaidepyynnön luovutukseensa 22e6b735e, ei aloittanut.
