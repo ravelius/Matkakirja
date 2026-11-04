@@ -46,3 +46,12 @@ PT:n rivi jonon kohdasta 1 (mikä komento, onko tarkoituksellinen, näkyykö ilm
 **Avoin 2:** raja ratkaistaan iPad-kuvasta, KK:n ok.
 
 **Seuraava kuva KK:lle, ei videota:** samat neljä (traileri 1, c1, c2, c5), yksi vaaka-asennossa ja yksi kohta, jossa kuva on juuri noussut ja piste näkyy. KK katsoo ja vie omistajalle. Vaaka-asento ja alkupaikka vain simulla, koska Mac sijoittaa nousupisteet väärin.
+
+## LISÄYS 2: viestit 13.58 (tulivat juuri ennen nollausta; ei toteutettu)
+**PT, KK:n sana 13.57 (korvaa jonon kohdan 3): koko lippu näkyy joka suunnassa.** Lyhyt tanko ei yksin riitä: 45°:ssa juuri on lähellä yläreunaa ja vain tanko näkyy.
+1. Yksi sääntö kaikille maille: juuri sellaiseen kohtaan maata, josta lippu mahtuu ruutuun kaikissa suunnissa nykyisellä koolla (omistaja 27.10.: lippu ei kasva). Tanko lyhyemmäksi vasta, jos paikka ei riitä.
+2. Tangon juuresta lähtee pitkä vaalea juova (z13-135 Pariisia kohti, z13-000 oikealle). Selvitä, onko se lipun varjo (Lipputanko: VarjoPituus, PaivitaVarjoVerkko); jos on, tee siitä lyhyt, pehmeä ja tumma kuin muut kartan varjot. Tulos rivinä PT:lle.
+3. Maamerkit mukaan seuraaviin kuviin ennen iPadia; niiden kääntö on yhä todistamatta. Ne eivät tulleet kuviin komennolla `aja`, joten selvitä näyttötapa (Maamerkit.Nayta, `symbolit maamerkit 1`).
+4. Tarkista myös kapea tai pieni maa, ei vain Ranska. Mac-kuvat neljästä suunnasta PT:lle JU:n vuorolla.
+
+**JU 13.5x: vertailuajon vuoro annettiin minulle juuri ennen nollausta; en käynnistänyt sitä.** Pyydä vuoro uudelleen (7f64cd657, L2, yhteinen-iPad13, SIMU_MUISTIRAJA=16). JU:lle on kerrottu, että lukko ja L2 jäivät vapaiksi.
