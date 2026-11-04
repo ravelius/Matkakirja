@@ -26,3 +26,4 @@ Haarat: arkihahmot-218 01e3bc89f, kuvarunko palvelijat-kuva-218 349e8f8db, lod-d
 
 ## Lisäys ennen nollausta: KK muurista (korvaa "Muurin todistus uudelleen" -kohdan ehdot)
 KK: tumma lohko poissa pelissä, ok; **ei vientiä vielä.** Seuraava todistus LAV:n uudella juurella (porras + toinen lohko): sama siemen ja kamera + **muurin eteen 100, 40 ja 10 m:stä** ja **mallitason vaihto tallenteesta.** Katso myös, näkyykö tunnelin kiila **217:n tallenteessa**. Tilaus: `_tyo/pelikoodari/muuri-koe/TULOS.md`, loppu. Ei tehty vielä mitään tästä.
+PT 06.2x: uusinta, kun LAV ilmoittaa juuren valmiiksi; juuressa mukana kaikki saman vian seinät. Ei vientiä.
