@@ -31,3 +31,10 @@ Runko 0d5a75286 hylätty. Uusi 6469e76e7 (linssiseppa2/porras-rajat, natiivi-bac
 ALPIT z11: yhtenäinen tumma sahalaitainen viiva palasi (alueet/k1/alpit-k8-k9-z11.png, vasen ennen, oikea nyt). Tässä koodissa vain admin 2 on yhtenäinen, joten se on valtionraja; maita ei tarkistettu datasta. KK:n "vain yhtenäinen tumma viiva saa lähteä" ja "rajat eivät saa puuttua" eivät toteudu yhtä aikaa ilman tyylipäätöstä: kysytty KK:lta, oma suositus valtionraja samaan ehjään katkoviivaan. Odota sanaa; muutos on yksi rivi ElavaTyyli.cs:n silmukassa (taso == 2) + versio.
 PT: e20/e21 tyhjentää välimuistin, ja d9c:n p-z15 eroaa rajusti 484:stä (NS selvittää, oletus kylmä tila). Kylmä ja lämmin eivät ole sama koe.
 OFFLINE, PT:N TEHTÄVÄ, TEKEMÄTTÄ, SEURAAVAN VUORON ENSIMMÄINEN TYÖ: koeajo Macilla tai simussa, jossa laattaosoite ei vastaa. Laite jää todistamatta, ja se sanotaan KK:lle. Mac-vuoro JU:lta. Huom. KaupunkiRasteri.Verkossa tulee Application.internetReachability:stä (Laattapalvelin.cs:1530), joten vastaamaton osoite testaa "wifi ilman internetiä" -polun, ei NotReachable-polkua; sano kumpi testattiin.
+
+## LISÄYS 3, ENSIMMÄINEN TYÖ (NS, KK:n pyynnöstä; tekemättä, koska konteksti 35 %)
+1. Yhdistä b2101b95e (natiivi-backup, natiiviseppa/maakuntarajat-katko = 35b6ee8b4 + 1) rungon 6469e76e7 päälle, wt k30, haara linssiseppa2/porras-rajat. Se muuttaa palan maakuntarajan värin ja jakson ja nostaa version e18:aan. Versioksi suurempi kuin kaikki: e22.
+2. NS:n tarkistus: boundary-silmukassa ei `Striimi ||`, ja Kerros-rivillä lukee `AluerajaMuste, AluerajaAlfa`. Testit läpi. Sama yhdistämisessä KK:n sana valtionrajan tyylistä, jos se on tullut.
+3. Päivitä sha tee-sk-porras-ipad.py:n otsikkoon, aja se, ja anna sha JU:lle (kansio julkaisija-porras-ipad-<sha>). JU:lle on sanottu: odota, älä aja 6469e76e7:ää.
+4. Kuvat KK:lle; rivi NS:lle, kun valmiit (se mittaa tummuuden: _tyo/natiiviseppa/maakuntarajat/mittaa.py).
+Sitten offline-koe (lisäys 2). JU perui 0d5a75286:n ennen käännöstä, mitään ei ajettu.
