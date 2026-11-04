@@ -50,3 +50,8 @@ Lue koko suunnitelma: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskuste
 
 ## LISÄYS 11.3x (KK): tarkennus kuitattu, kartoitus pohjaksi
 KK kuittasi tarkennuksen: jatka. Tarkistusten pohjaksi osa E: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261104-juoksupeli-poikkeuskartoitus.md` (uudelleenkäyttö: OikeaVerkko, PeittoKohtaDiag, SaliSolmuDiag, mika-luotaus, PELAAJA PIILOSSA, KAMERA MASSASSA, mittari-taulukko.py). Se on apulaisen raportti, ei todiste, enkä ole lukenut sitä; oikaise KK:lle rivillä, jos jokin on väärin. Ei korjauksia siitä, ensin lähtötilanne. Keisarin 1 771 solmun tarkistus kuuluu kuljettavuusmittariin, kun väreily ja pinnat toimivat.
+
+## LISÄYS 11.4x (PT): vapaa maailma, katot pysyvät
+PT välitti omistajan 11.42 (KK:n kautta, koko teksti työlistalla "Juoksupeli: vapaa maailma, katot pysyvät paikoillaan"): "pelissä ei kuulu olla yhtään reittiä vaan peli on vapaa maailma eikä maalia ole." ... "kattoja ei otettaisi enää pois vaan kamera lentäisi matalammalla talojen sisällä".
+**PT:** kamera-, katto- ja kulkuverkkokorjaukset seis KK:n suunnitelmaan asti. Tarkastelutila jatkuu. ☰-koe e65d4a4ef saa ajaa. Ei uutta lähitasoa eikä katon poistoa koskevaa työtä.
+**Vaikutus rakenteeseen (oma arvioni):** väreily, pinnat ja vapaa kamera eivät riipu reitistä. Pelikamerapisteet mittaavat nyt nykyistä kameraa, joka muuttuu, joten pidä kameran valinta yhdessä kohdassa ja lähtötilanne merkittynä rungolla. Kuljettavuusmittari ja "kuljettavat solmut" nojaavat kulkuverkkoon: lue KK:n suunnitelma ennen kuljettavuuden aloitusta ja tarkista pisteet sitä vasten. Viivoista ei paikkakohtaista korjausta tämän vuoksi, syyn nimeäminen riittää.
