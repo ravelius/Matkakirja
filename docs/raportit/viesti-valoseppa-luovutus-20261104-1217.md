@@ -42,3 +42,10 @@ Toteutus avoin: ElavaTyyli.cs rivit 309 (alfa: grass ei-Puisto 80) ja 534 (Pehme
 
 ## LISÄYS 4 (NS)
 NS: TasainenLaatta (runko ee2cca3b4) lisää oman kameransa, kun LiikeLaatat.Nyt == Paa. Muistijarrun jälkeen se voi olla päällä alle 70 km:ssä ja lisätä paloja. Ehdotin NS:lle porttiin `&& !LiikeLaatat.SiirtymaMuistiJarru`; NS:n tiedosto, tarkista yhteisajon rungosta. Koodista, ei ajettu.
+
+## LISÄYS 5 (PT, ensimmäinen työ nollauksen jälkeen)
+PT: muistiajoa odottaessa, ei iPadia, ei vientiä. Kumpaakaan ei ole aloitettu.
+1. Veneen reitti (KORJAUSLISTA 5): Île Saint-Louis'n oikaisu pois, reitti vedessä, d34cacd08:n päälle. Työkalut pariisi-tyyli/vesi/ (reitti.py, silta.py), data Resources/Animaatiot/pariisi.json. Mittari: reitti.py:n osuus vedessä (nyt 88,2 % tiedossa olevasta osasta, 889 pistettä datan ulkopuolella).
+2. Läiskät omaan committiin KK:n rajauksella (LISÄYS 3), paikalliset ennen ja jälkeen -kuvat. Vahvista PT:ltä poisto vai terävä reuna.
+NS: efe85dda7 (tasainen-striimi-2) lisäsi muistijarrun porttiin, ei ajettu.
+Wt k30 on striimi-vari-haarassa; vaihda striimi-vesi-haaraan kohtaa 1 varten ja siirrä se 7f64cd657:n päälle.
