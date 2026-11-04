@@ -29,3 +29,6 @@ Ovilista N/kulku/: ei lopullinen, kärki oli a26aca8f5; PT:lle kerrottu.
 
 ## 3. Viestit
 KK sai 15.17 tuloksen, korjauksen 120:stä. PT sai 15.2x ja 15.3x rivit. Sanoin KK:lle ja PT:lle, että jatkan; tästä nollauksesta ei ole erikseen kerrottu. PT odottaa yhä vastausta 弘义阁-palkista (edellisen luovutuksen kohta 3). Ovi: ei odoteta minulta.
+
+## LISÄYS 16.1x: JU valmis, koe-o tulos
+Levyn kuvat valmiit 16.03 (katsomatta). Koe-o valmis 16.07. Numerot M/LESHOU-PORTAAT.md loppu: katon viirut seuraavat uutta geometriaa tai pakkausta (tummuneita 16 → kokeessa 2, UV1 sama kuin vanhassa); askelmien läikät ainakin osin reseptistä tai kohtauksesta (marmori 13 kokeessa). Tummien tekseleiden kasvu ei selitä viiruja (kokeessa 58,1 %), PT:lle oikaistu. Koetta ei ole katsottu pelissä. Vertailu: N/o_kolmiot.py polku vaihtaen.
