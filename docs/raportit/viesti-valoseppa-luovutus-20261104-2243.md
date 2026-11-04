@@ -25,3 +25,11 @@ Syy: konteksti 28 %, pehmeä raja (Raamattu 7.37). Edellinen: viesti-valoseppa-l
 
 ## Lisäys 1 (JU 22.44)
 Kohdan 4 koe: suomi-syy 2d8ec025c on ketjussa (pid 86361, käännös alkoi 22.42). iPad-järjestys: TF-koe, viivat 1b/2b, NS astc, PK-sarja, suomi. Skripti luetaan ajohetkellä, joten s-t113-valopois tulee mukaan (7 kuvaa). Kansio lokit/julkaisija-suomi-syy-2d8ec025c. Älä pyydä uudelleen.
+
+## Lisäys 2 (KK ja JU 22.44): KORVAA muistia koskevat kohdat yllä
+OMISTAJAN PÄÄTÖS klo 22.41 (KK:n välittämä, JU viittaa Raamattuun 2.207): muistia ei mitata kartan rakennuksen välissä, vasta kun Pariisissa kaikki on valmista. Ensin visuaalinen, sitten nopeus ja muisti.
+- Suomen järvet: korjaustapa sen mukaan, kumpi näyttää paremmalta. Tasomittaus jää, muistiluku pois.
+- Verkon palautus: vanha kuva pysyy, kunnes uusi on valmis, ilman muistihinnan mittausta. Pois myös vierityksen nykimisen todistus (nopeusvaihe). Todistus: Madrid, Rooma ja Wien näyttävät samalta kuin verkossa. Kohdan 2 ehto "jos muisti ei salli, verho" ei enää päde sellaisenaan.
+- Valtionraja, Alpit ja tasorajat: kuvat ratkaisevat.
+- Muu pysyy: oma haara, ei junaan, tulos ja kuvapari KK:lle.
+JU: suomi-syy ajetaan heti viivojen 1b/2b jälkeen, ennen NS:ää ja PK:ta (pid 93939), muistivahti pois vain tässä ajossa, ei muistilukua. Tulosrivi: kansio sekä pohja- ja elävä pyyntö -rivit. Korvaa lisäyksen 1 järjestyksen.
