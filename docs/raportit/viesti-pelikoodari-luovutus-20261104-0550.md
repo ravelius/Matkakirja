@@ -21,3 +21,6 @@ Maljakon kantaja lähikaistalta; palvelija heti käännöksen jälkeen, kun 1,3 
 - Silta-koe: `_tyo/pelikoodari/muuri-koe/TULOS.md`, loppu. Sen alun "kaksi pintaa" on LAV:n mukaan väärin: yksi pinta, normaali väärinpäin.
 
 Haarat: arkihahmot-218 01e3bc89f, kuvarunko palvelijat-kuva-218 349e8f8db, lod-diag-218 a368fdf29, muuri-todistus-219 37f46a2da. Viestit KK:lle suoraan muuri-, kaide- ja vino alue -asioissa, be56 PT:n kautta.
+
+## Lisäys ennen nollausta: "PEITTO AJETTU" tuli, EI tulkittu
+JU 05.46: `_tyo/pelikoodari/peitto-be56/` kesto-ys.txt, kesto-xf.txt, ys.mp4, xf.mp4. Koneellinen tulos: ys 13 kierrosta, 31 peittoa, pisin 0,30 s; xf 7 kierrosta, 30 peittoa, pisin 0,94 s (esim. kierros 7: 0,88 s juoksuajassa 1,58–2,44). **Seuraava:** katso rajakuvat kesto-*-NN.jpg silmällä, koska luku voi erehtyä (ks. TULOS.md, 03.1x), ja rivi PT:lle. Tätä ei ole vielä kerrottu PT:lle. JU: oleskelu on ketjussa LOD:n jälkeen; muurin todistus alkoi L1:llä 05.46.
