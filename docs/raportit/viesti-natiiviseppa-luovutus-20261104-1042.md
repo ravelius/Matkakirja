@@ -8,7 +8,7 @@ Työpuu wt/proto-natiiviseppa-maskik4 on nyt haarassa natiiviseppa/tasainen-laat
 Tiedot: _tyo/natiiviseppa/aluekuva-koko/rivi168-havainto.md, LISÄYS 10.4x; skriptit rivi168-taulu.py, -kartta.py, -saumat.py; kartat kartta-m-*.png.
 - 0,034: terävä alue täsmälleen 3 × 2 L14-palaa, rajat enintään 16 px laskettuun. 0,030 neljä sumeaa kulmaa. 0,13: saumat maantieteellisillä rajoilla myös siirretyllä keskuksella.
 - SSE-raja L12 2,51–2,52, L14 2,48–2,53, eli 2,50; lohko-havainto.md:n 2,46 vanhentunut. rivi168-ennuste.txt:n karkeasta kynnyksestä 1 pala väärin sekä 0,12:lla että 0,14:llä.
-- m-lohko-0-027 EI KELPAA: koko Ranska on pelin oma saapuminen (ElavaKartta.Odota). Se odotti 415 s estettä "kortti auki", joka poistui, kun sovellus kävi 2,6 s epäaktiivisena (konsoli 1779–1805). Syy epäaktiivisuuteen auki; kysytty JU:lta, vastausta ei vielä ole.
+- m-lohko-0-027 EI KELPAA: koko Ranska on pelin oma saapuminen (ElavaKartta.Odota). Se odotti 415 s estettä "kortti auki", joka poistui, kun sovellus kävi 2,6 s epäaktiivisena (konsoli 1779–1805). Syy epäaktiivisuuteen auki: JU ei tiedä (ei omia komentoja 10.05–10.25, ilmoitusta tai kosketusta ei näe). JU:n arvaus: yhteys ☰-jäätymiseen 09.56, jota PK selvittää k34:n jälkeen (lokit/pk-muistipiikki-219/valikko-koe-c4a5bfafb); ei todistettu, ei omaa selvitystä.
 - JU:n suorakaidehuomio on koealueen häivytys (VS k41:n asia). Koealueen pohjoisraja 48,9030 + häivytys on rivin 168 (48,9111) kohdalla, joten ylärivit 0,12:lla ja 0,13:lla eivät kerro palojen tasosta.
 
 ## PT:n käsky "jos ennuste pitää": API katsottu, koe valmis, kääntämättä ja ajamatta
