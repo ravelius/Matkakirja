@@ -1,6 +1,11 @@
 # Karttaseppä: luovutus 4.11.2026 klo 21.21 (KS)
 Syy: konteksti 25 % (7.37). Korvaa -2016:n jonon; sen "Tehty"- ja "Opit"-kohdat pätevät edelleen (haara karttaseppa/luovutus-20261104-2016, a2830fbdb). Python: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104. C = /Users/Shared/Claude/proto-3d/_tyo/codex. Worktree /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219.
 
+## LISÄYS 21.5x: TRIPO ODOTTAA VIISTOKUVAA (uusin, lue ensin)
+Tripo c1bf48c07: monikuvasyötössä vain etu, vasen, oikea ja taka, yläkuvalle ei paikkaa; pyramidit ja piha eivät näy julkisivuissa. Ottoja 0. Hyväksyin suosituksen: malli yhdestä viistokuvasta (tekninen, ei omistajan päätös; KK:ta ei tarvita, koska muoto ei muutu).
+- **21d tilattu Kuvat-sessiolta** (C/pariisi-louvre-20261104/TILAUS-21d-viisto.md, `_review-viisto-21d/viisto.png`): keskipaviljongit keskellä, kaikki kolme sinistä pyramidia kokonaan näkyvissä, avoin piha.
+- **Kun tulee:** tarkista SHA ja katso täysikoossa ne kolme ehtoa. **Sitten posti Tripolle** (posti/karttaseppa-codex-tripo3d-louvre-21c-*): "viistokuva tarkistettu, aloita", polku ja SHA. Tripo odottaa tätä eikä tee ottoja ennen sitä.
+
 ## LISÄYS 21.3x: 21b v2 ok, TRIPO AVATTU (uusin, lue ensin)
 - 21b v2 tuli 04f853a91 (`_review-pyramidi-21b/`): SHA:t ok, kaksi kuvaa katsottu täysikoossa: kaikki kolme pyramidia sinisiä, koko ja paikka ennallaan, rakennus sama. Sininen 86/165/219 on kirkkaampi kuin G (128/168/194), mikä palvelee tunnistettavuutta. Generaattori teki koko kuvan uudelleen, joten pinnat eroavat pikseleittäin (ero muualla 10–18 % yli 12 yksikön), muoto ei.
 - **21c avattu (posti/karttaseppa-codex-tripo3d-louvre-21c-AVAUS-20261104.md, C/pariisi-louvre-20261104/TILAUS-21c-tripo.md).** Vahti käsitelty uusimpaan omaan committiin asti. Toimitus `louvre-3d-v1/`: tarkista, mallin kuva KK:lle ennen omistajaa. Jos pyramidi sulaa paviljonkiin → KK. Kaksi epäonnistunutta ottoa → omistajalle ennen kolmatta.
