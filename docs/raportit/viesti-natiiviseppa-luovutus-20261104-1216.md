@@ -23,3 +23,9 @@ Tiedot: _tyo/natiiviseppa/striimi-sauma/tulos.md, rajaus-*.png. tasainen-laatta-
 - **Ajo JU:lle vasta, kun VS:n sk-muisti-z10 on pitänyt alle 4080 Mt:n, ja PT:n sanalla.**
 - **Kallistus ≥ 3° z12–z14:llä on avoin vika, ei valmis:** kuvaa ei ole, portti ei korjaa. Ajoon lisätään `kallista`-kuvat 0,13, 0,26, 0,52 (15°, 45°), kokeen kanssa ja pois. Kerrottu PT:lle.
 - Lisämuisti ennallaan (siirtymässä Nyt = Varjo → korjaus kiinni; pahin noin 3860 / 4080, arvio). Tiedot: _tyo/natiiviseppa/striimi-sauma/tulos.md.
+
+## LISÄYS PT, nollauksen aikana (SITOO; ohittaa edellisen lisäyksen ehdotuksen)
+- **ee2cca3b4 kuitattu.** Kallistettu sauma kirjattu avoimeksi viaksi.
+- **SEURAAVA TYÖ: valmistele skripti.** Hyväksytty ajo: zoomit 0,13, 0,26, 0,52, kallistukset 15° ja 45°, koe päällä ja pois (`maasto tasainen pois`), muisti lokiin. Runko ee2cca3b4. Komento `kallista`: Komennot.cs:692 ja :713. Mallina lokit/julkaisija-striimi-iso-e4180ac69/laheta/komennot.txt. Tee se _tyo/natiiviseppa/striimi-sauma/:een, ei ajoa.
+- **Rivi JU:lle vasta PT:n sanalla, kun VS:n sk-muisti-z10 on pitänyt alle 4080 Mt:n.** Valmis skripti: rivi PT:lle.
+- **VS 12.2x:** kärki 7f64cd657, ei rivejä päällekkäin; yhdistelmää ei ole ajettu. VS kysyi, lukeeko TasainenLaatta kameroita siirtymässä: ei lue, gate on `LiikeLaatat.Nyt == Paa`, mutta lisää oman kameransa additionalCamerasiin. Muistivaroituksen jälkeen (SiirtymaMuistiJarru) siirtymässä ei ole varjoa, joten Nyt = Paa ja TasainenLaatta voi olla päällä alle 70 km:ssä. Kerro tämä VS:lle.
