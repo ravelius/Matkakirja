@@ -623,3 +623,10 @@ Omistaja: "oikein hyvä, ainoastaan lähempänä kameraa oleva torni on jostain 
 
 ## LISÄYS 4.11. klo 14.16 (uusin; lue ensin): lippukorjaus yhdistelmässä
 NUI:n 99eb9931e yhdistetty: karttaseppa/nd-kaanto-219 **c74d6ef93** (korvaa a64109412:n lisäyksessä 14.15). Kääntämättä ja ajamatta; ajetut kuvat ovat a64109412:sta. Muu kuten lisäyksessä 14.15.
+
+## LISÄYS 4.11. klo 15.13 (uusin; lue ensin): Notre-Damen aukio pelissä, KK:lla
+**OMISTAJA 14.48 (KK):** Codex piirtää edustan, jotta kirkko istuu paremmin. Tehty: tilaus 19d, otto /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-3d-20261104/_review-edusta-19d/edusta.png (9ae4c10b7632), kuitattu Codexille b5b932eef.
+**Haara:** karttaseppa/nd-kaanto-219 **7fcf0bf76** (kirkko 4a657ad60 + NUI:n lippu 99eb9931e). Korvaa aiemmat shat. Pohja: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd19d/ (kooste.py ottaa vain aukion alueen, muu valmis.png:stä; sitten nd19c-k55/reuna-maski-2.py), pohja.png 4ae907449c7b. Kirkkoa ei siirretty.
+**Ajettu ja katsottu, linja 2:** /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261104-150501/. Kuvat KK:lla; hän vie omistajalle. **Odota KK:n vastausta.**
+**Puutteet kerrottu KK:lle:** väri kaukaa (VS), joen liukumat viistosta viiruiset, vene taivaalla s-270:ssä (VS), kääntö kuvaamatta, iPad ajamatta.
+**Posti:** käsitelty b5b932eef asti.
