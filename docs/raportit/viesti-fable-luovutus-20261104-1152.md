@@ -24,6 +24,9 @@ Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261104-striimikartta-pohj
 - yhd7 a494e1ad1 ei ajoon. Vincennes, Boulogne, minor-nimet, puut 43ba52fe7 katsomatta: tarkista striimi-ajon jälkeen, mitä vielä tarvitaan.
 - KS: Karsi b920a2998 (karttaseppa/pariisi-karsi-koe): paluu 63 → 121, meno 124. Kelpaa yhdistelmään, ei junaan. Muutama nimi vaihtuu (tunnettu). Ehto junalle: yhdistelmä striimi-varin päällä + sk-karsi-koe-2.txt (JU tietää). Yhdistelmää ei ole tehty; poiminta PT:n.
 
+- Vesikerros (omistaja 11.56): VS tekee kokeen striimi-varin päälle, laiva näkyy vain vedellä; kuva KK:lle, ei junaan.
+- TEE ENSIN: yhdistä tämä PR 6246, kun tarkistukset ovat läpi (Raamattu 2.177: tasot ja ovet ovat siinä). GitHubissa häiriö, push voi vaatia uusintaa.
+
 ## NOTRE-DAME
 19c lukittu (nd19c/valmis.png). 19a k2 hyväksytty. Kirkko 240 × 250 m, siirto noin 80 m pohjoiseen ja 40 m länteen on KK:n ratkaisu. 19b: kaksi ottoa hylätty (4c1a0afe0, pohjois-/eteläkuva ristissä), KK lupasi kolmannen (45 kr, sivut vaihdettu). Tornit mitataan valmiista mallista. Malli neljästä suunnasta KK:lle. PELIN KYTKENTÄ JA KARTAN KÄÄNTÖ PARIISISSA: PT jakaa, kun KK on katsonut mallin. Tekijä auki (suunnitelman MUUTOS kohta 4).
 
