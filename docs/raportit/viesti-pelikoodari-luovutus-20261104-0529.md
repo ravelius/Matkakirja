@@ -59,3 +59,6 @@ Ajot vain JU:n vuorolla. Tulos rivinä PT:lle.
 - **Muurin todistus:** LAV:n malli valmis. Ajo `_tyo/pelikoodari/muuri-koe/todistus/aja.zsh` JU:lla, runko 37f46a2da (`pelikoodari/muuri-todistus-219`, worktree wt/proto-pelikoodari-muuri-todistus, ei junaan). **Rivi "MUURI AJETTU":** katso vanha.mp4 ja uusi.mp4 alusta loppuun, tarkista kansio-*.txt:n lokista, että malli tuli koejuurista, ja vertaa samat kohdat; KK:lle kuva. Sama kamera on oletus, ei todistettu: ei ole varmaa, että ajot etenevät ruudulleen samoin.
 - **Avoinna LAV:n listalta tarkistettavaksi todistuksessa:** lohkon yläreunan porras 3,78, sokkelin päät, LOD1–2-vaihtokohta (ei valoa).
 - **Odottaa:** "BE56 XF AJETTU" → luvut lokeista, rivi PT:lle.
+
+## Lisäys 05.47 (be56 ja xf valmiit)
+xf uusittu ilman kopioita: OK 3913 ja 3944 Mt; koko sarja rajan alla, rivi PT:lle lähetetty. Kuvat eivät todista salipaikkaa (xf 1/24, varasto 1/12), pitkää oleskelua ei mitattu, muisti-tarkka.log 0 tavua useimmissa ajoissa: `lokit/pk-muistipiikki-219/TULOS.md`, loppu. PT:n vastaus odottaa, tarvitaanko oma sali-ajo. **Seuraavaksi:** "MUURI AJETTU" ja "LOD AJETTU".
