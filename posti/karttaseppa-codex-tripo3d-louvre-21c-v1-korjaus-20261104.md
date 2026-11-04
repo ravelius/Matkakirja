@@ -15,3 +15,8 @@ v1 tarkistettu: SHA:t ok, mitat ja pyramidit ok, kaikki esikatselut katsottu. **
 
 ## Toimitus
 `louvre-3d-v1b/` samaan tapaan, sama mittajärjestelmä, kaikki 11 esikatselua uudelleen. Muita havaintoja (pohjoisen ja päätyjen sileys, kaaret läpi) viedään KK:lle; **älä muuta niitä nyt.** Uusi otto vain erillisellä tilauksella.
+
+## Lisäys KK 22.5x: sahalaita
+Tarkistettu täysikoossa: pitkien siipien ulkolappeella näkyy koillisesta katsottuna piikkirivi (`pelikulma-koillinen.png`, kattoikkunoiden taustat litteinä piikkeinä), lounaasta sama rivi kattoikkunoina. Jos saat piikit madallettua tai pyöristettyä **samasta verkosta ja ilman uutta ottoa**, tee se v1b:ssä; kattoikkunoiden yksityiskohdilla ei ole väliä (omistaja 21.24). Jos se ei onnistu ehjänä, älä viivytä v1b:tä: toimita mustien kolmioiden korjaus ja kerro `huomiot.md`:ssä, miksi sahalaita jäi.
+
+**Musta laikka tarkistetaan ensin:** v1b menee kartalle kokeena.
