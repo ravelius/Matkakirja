@@ -34,5 +34,5 @@ Järvien koe:
 - Aineistotulos riittää suunnaksi. Älä jää selittämään vöitä: kokeile suoraan pohjan z9–z10 vesi OSM:stä pienellä alueella (Keski-Suomi, Saimaa), ensin Macilla.
 - Tavoite: sama järvi joka korkeudella, ei suorakulmiota, ei haamulaikkuja, ei vöitä. Jos vöitä jää, selitä ne vasta sitten.
 - Pari KK:lle: nykyinen | koe samoista kohdista t105, t110, t113 ja t115, täysikoossa. Kerro, näkyykö ero kummallakin piirtotavalla.
-- Ei muistilukuja. Koko Euroopan poltto ja iPad-ajo vasta, kun pari kelpaa. Uusi poltto uuteen kansioon ja TasoVersioon; KK:n mukaan tähän ei tarvita mediavientiä.
+- Ei muistilukuja. Koko Euroopan poltto ja iPad-ajo vasta, kun pari kelpaa. Uusi poltto uuteen kansioon ja TasoVersioon. Mediavientiä ei tarvita kokeeseen eikä iPad-ajoon. Koko Euroopan poltto tuotteeseen tarvitsee sen, ja vienti on erillinen päätös, kun pari kelpaa (KK:n tarkennus 01.1x).
 Aineisto: striimi/jarvet/renkaat.npz (11 aluetta, sisältää Keski-Suomen ja Saimaan; alueet.json) ja pohja/<alue>/. jarvet.osm.pbf on poistettu T7:ltä: Euroopan polttoon suodatus uudelleen (suodata_vesi.py, noin 80 min). Hypoteesi kohdassa 2 jää kokeen jälkeen tarvittaessa.
