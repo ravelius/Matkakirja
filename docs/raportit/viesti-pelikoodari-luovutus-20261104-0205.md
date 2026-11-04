@@ -41,3 +41,10 @@ Ennallaan: -0142 "Muut" ja "Tarkista"-rivi (Cull Back, ruudukkokuvio malja2-120)
 1. kamera-219 (0d688683a, käynnissä L1:llä 02.18): katso kamera ja taivas, tulos PT:lle. Jos taivas näkyy pelaajan uudelleenaloituksessa: korjaa samaan shaan (huom. JuoksupeliNakyma.cs:1067 odottaa maailmaa ilman peittoa uudelleenaloituksessa; ensimmäisellä avauksella latauskuva peittää).
 2. Rivi JU:lle ja lopullinen sha: iPad-sarja pk-0d68-laite.zsh on PIDOSSA, kunnes annat rivin.
 3. v10-kuvat.
+
+## Lisäys 02.3x: kamera-219 valmis, taivas on vika (TULOS.md "Kamera-219")
+- **Kameran nollaus toimii:** 0/16 rakenteessa pelaajan tasolla; alku sama joka kerta. PT:llä.
+- **SEURAAVAKSI: taivaskorjaus samaan shaan (PT 02.1x), 0d688683a:n päälle, wt/proto-pelikoodari-muisti.** Syy: JuoksuV4Maailma.cs cullingMask 0, kunnes SisaltoValmis; JuoksupeliNakyma.cs:1067 odottaa. Ensimmäisellä avauksella latauskuva peittää, Uudestaan-metodissa (:704) ei mitään. Mac noin 1 s, iPad noin 2 s; esinekortti näkyy taivaan päällä (a7, a8).
+- **Suositus:** näytä Uudestaan-metodissa latauskuva uudelleen (sama reitti kuin avauksessa, JuoksupeliNakyma.cs:147–194 ja :1075–1092), ei maailmaa ilman esteitä (omistaja 20.10. 12.33 "mikään ei ilmesty yhtäkkiä"). Tarkista ensin: latauskuva on purettu ensimmäisen häivytyksen jälkeen (:1092), joten kuva pitää ladata uudelleen, ja gcVaihe ajaa roskienkeruun; muistihuippu kasvaa kuvan verran (mittaa). Piilota esinekortti peiton ajaksi. Kysy PT:ltä, jos muutos ei ole pieni.
+- Sitten: rivi PT:lle ja lopullinen sha JU:lle (iPad-sarja pk-0d68-laite.zsh, päivitä sha; sali 1+2 kuvilla ja 40 x uudestaan).
+- **Eri vika, listalla:** kamera katon palkistossa reitillä 2,85–4,12 s (b1, b8), PT:n kanta auki.
