@@ -1,0 +1,414 @@
+{
+  "checkedAt": "2026-11-04T19:14:18.709380+00:00",
+  "allSixViewsVisuallyReviewed": true,
+  "technicalPNGPass": true,
+  "nativeArtworkBytesPreserved": true,
+  "postEditedArtwork": false,
+  "generationCalls": 13,
+  "referenceReviewStatus": "ready-for-KK-and-owner-review-with-documented-deviations",
+  "strictSourceQAPass": false,
+  "exactMultiviewGeometryVerified": false,
+  "ownerApproved": false,
+  "receiverApproved": false,
+  "modelsStartedByThisThread": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "sideBaselineSpreadPx": 5,
+  "sideHeightSpreadPx": 7,
+  "views": [
+    {
+      "key": "pelikulma-otto01",
+      "view": "pelikulma",
+      "checkedAt": "2026-11-04T17:55:02.848612+00:00",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21a-2052-2057-20261104/originals/pelikulma-otto01.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6868adbe-9eb6-45de-9b9e-62bb09c5bd81.png",
+      "sha256": "b15769d3ea1653c3dde631571b24df83b9799d02fd62b083815c19194da79e85",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 2214410,
+      "approxForegroundBox": [
+        116,
+        73,
+        1396,
+        923
+      ],
+      "bboxMethod": "Difference from corner gray luminance >30; diagnostic only, pale glass/walls may be excluded.",
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "visualNotes": "K5:n suljettu nelisiipinen rakenne, kuusi paviljonkia ja kolme pyramidia näkyvät. Keskipaviljonkien huiput ovat kulmapaviljonkeja matalampia k5:n tapaan. Tämä porrastus sovitetaan ortografisiin näkymiin; 300 yksikköä käsitellään korkeimman kulmapaviljongin tavoitteena. Kuvan absoluuttista 60 asteen kulmaa tai 1,6 px/yksikköä ei ole geometrisesti varmennettu.",
+      "selectedForSeries": true,
+      "backgroundCornerSamples": [
+        [
+          226,
+          226,
+          225
+        ],
+        [
+          226,
+          226,
+          225
+        ],
+        [
+          226,
+          224,
+          224
+        ],
+        [
+          224,
+          224,
+          224
+        ],
+        [
+          228,
+          228,
+          227
+        ]
+      ],
+      "backgroundTopStripStdDev": [
+        0.5876893769336061,
+        0.5814936657108415,
+        0.5884558393210466
+      ],
+      "targetCanvas": [
+        1536,
+        1024
+      ],
+      "canvasPass": true,
+      "measuredWidthPx": 1280,
+      "measuredHeightPx": 850,
+      "measuredBottomY": 922
+    },
+    {
+      "key": "etela-otto02",
+      "view": "etela",
+      "checkedAt": "2026-11-04T19:04:02.127196+00:00",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21a-2052-2057-20261104/originals/etela-otto02.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2373ab03-4ac8-4744-ae66-06ae6742e4ea.png",
+      "sha256": "75960e87fc69f580c57770ccf2c8aba40340e343ee73dab6523dff122250eb64",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 1562287,
+      "approxForegroundBox": [
+        56,
+        392,
+        1481,
+        877
+      ],
+      "bboxMethod": "Difference from corner gray luminance >30; diagnostic only, pale glass/walls may be excluded.",
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "visualNotes": "Katsottu: suora ortografinen pitkä sivu, kolme paviljonkia ja porrastetut katot. Maaviiva noin 875–881 px; sarjan vastakkaiset sivut lähellä samaa mittakaavaa. Suunnitelman 1,6 px/yksikkö on likimääräinen. Taustassa lievää sävyrakeisuutta; pienet ikkuna- ja koriste-erot kirjataan. Tarkka 3D-geometria ei varmennettu.",
+      "selectedForSeries": true,
+      "backgroundCornerSamples": [
+        [
+          226,
+          227,
+          226
+        ],
+        [
+          228,
+          228,
+          226
+        ],
+        [
+          227,
+          226,
+          226
+        ],
+        [
+          226,
+          226,
+          226
+        ],
+        [
+          230,
+          230,
+          230
+        ]
+      ],
+      "backgroundTopStripStdDev": [
+        0.558606285174348,
+        0.5335183977346347,
+        0.5358432568441929
+      ],
+      "targetCanvas": [
+        1536,
+        1024
+      ],
+      "canvasPass": true,
+      "measuredWidthPx": 1425,
+      "measuredHeightPx": 485,
+      "measuredBottomY": 876,
+      "approxPxPerUnitFromWidth": 1.6569767441860466
+    },
+    {
+      "key": "pohjoinen-otto02",
+      "view": "pohjoinen",
+      "checkedAt": "2026-11-04T19:04:02.425042+00:00",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21a-2052-2057-20261104/originals/pohjoinen-otto02.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bc892966-50b4-45d6-8978-7702d3887595.png",
+      "sha256": "c883f37cb728322ebdb15de8c642ab1a4e2ecb022349f6dc199ec0ff284ea830",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 1589144,
+      "approxForegroundBox": [
+        57,
+        391,
+        1480,
+        882
+      ],
+      "bboxMethod": "Difference from corner gray luminance >30; diagnostic only, pale glass/walls may be excluded.",
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "visualNotes": "Katsottu: suora ortografinen pitkä sivu, kolme paviljonkia ja porrastetut katot. Maaviiva noin 875–881 px; sarjan vastakkaiset sivut lähellä samaa mittakaavaa. Suunnitelman 1,6 px/yksikkö on likimääräinen. Taustassa lievää sävyrakeisuutta; pienet ikkuna- ja koriste-erot kirjataan. Tarkka 3D-geometria ei varmennettu.",
+      "selectedForSeries": true,
+      "backgroundCornerSamples": [
+        [
+          227,
+          228,
+          227
+        ],
+        [
+          227,
+          228,
+          227
+        ],
+        [
+          227,
+          226,
+          226
+        ],
+        [
+          226,
+          226,
+          225
+        ],
+        [
+          230,
+          230,
+          230
+        ]
+      ],
+      "backgroundTopStripStdDev": [
+        0.5305788572266775,
+        0.534983769011375,
+        0.5274189161450707
+      ],
+      "targetCanvas": [
+        1536,
+        1024
+      ],
+      "canvasPass": true,
+      "measuredWidthPx": 1423,
+      "measuredHeightPx": 491,
+      "measuredBottomY": 881,
+      "approxPxPerUnitFromWidth": 1.6546511627906977
+    },
+    {
+      "key": "ita-otto03",
+      "view": "ita",
+      "checkedAt": "2026-11-04T19:13:04.370066+00:00",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21a-2052-2057-20261104/originals/ita-otto03.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6366968d-70b1-4b07-b0fc-21d8d4d64380.png",
+      "sha256": "47c513c6502e2cf420914ce86213fc8f90ec8f047246bbd9b10ac95a75bd4885",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 1322826,
+      "approxForegroundBox": [
+        472,
+        393,
+        1063,
+        878
+      ],
+      "bboxMethod": "Difference from corner gray luminance >30; diagnostic only, pale glass/walls may be excluded.",
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "visualNotes": "Katsottu: kapea suora päätysivu, kaksi kulmapaviljonkia; maaviiva ja kerroskorkeudet vastaavat pitkien sivujen sarjaa likimäärin. Lopullinen koko kirjataan QA:han. Pieniä ikkuna- ja savupiippueroja on; ei mittatarkka geometriatakuu.",
+      "selectedForSeries": true,
+      "backgroundCornerSamples": [
+        [
+          227,
+          228,
+          227
+        ],
+        [
+          226,
+          227,
+          225
+        ],
+        [
+          227,
+          226,
+          226
+        ],
+        [
+          225,
+          225,
+          224
+        ],
+        [
+          229,
+          229,
+          229
+        ]
+      ],
+      "backgroundTopStripStdDev": [
+        0.5264819194204299,
+        0.5536386607216933,
+        0.5492967738402244
+      ],
+      "targetCanvas": [
+        1536,
+        1024
+      ],
+      "canvasPass": true,
+      "measuredWidthPx": 591,
+      "measuredHeightPx": 485,
+      "measuredBottomY": 877,
+      "approxPxPerUnitFromWidth": 1.6416666666666666
+    },
+    {
+      "key": "lansi-otto03",
+      "view": "lansi",
+      "checkedAt": "2026-11-04T19:13:04.570752+00:00",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21a-2052-2057-20261104/originals/lansi-otto03.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-19c2bcee-8abb-431b-8910-8a2123eb0f54.png",
+      "sha256": "757ac1c5cafd43b5e5d31d870f81c3e0d850addead2fd382d3e7b8a6b6afe1d2",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 1305630,
+      "approxForegroundBox": [
+        464,
+        394,
+        1071,
+        878
+      ],
+      "bboxMethod": "Difference from corner gray luminance >30; diagnostic only, pale glass/walls may be excluded.",
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "visualNotes": "Katsottu: kapea suora päätysivu, kaksi kulmapaviljonkia; maaviiva ja kerroskorkeudet vastaavat pitkien sivujen sarjaa likimäärin. Lopullinen koko kirjataan QA:han. Pieniä ikkuna- ja savupiippueroja on; ei mittatarkka geometriatakuu.",
+      "selectedForSeries": true,
+      "backgroundCornerSamples": [
+        [
+          228,
+          228,
+          227
+        ],
+        [
+          228,
+          228,
+          227
+        ],
+        [
+          227,
+          225,
+          226
+        ],
+        [
+          226,
+          226,
+          225
+        ],
+        [
+          230,
+          229,
+          230
+        ]
+      ],
+      "backgroundTopStripStdDev": [
+        0.5602521415101976,
+        0.5301302721758103,
+        0.5323686141907007
+      ],
+      "targetCanvas": [
+        1536,
+        1024
+      ],
+      "canvasPass": true,
+      "measuredWidthPx": 607,
+      "measuredHeightPx": 484,
+      "measuredBottomY": 877,
+      "approxPxPerUnitFromWidth": 1.6861111111111111
+    },
+    {
+      "key": "ylhaalta-otto02",
+      "view": "ylhaalta",
+      "checkedAt": "2026-11-04T19:10:34.670326+00:00",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21a-2052-2057-20261104/originals/ylhaalta-otto02.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9f536420-21dd-44f7-b346-9cfb565fd1a7.png",
+      "sha256": "912bf29392faae416d162471257f04c9ce7c6ba5da08944ec7d65d92348b307e",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 1910776,
+      "approxForegroundBox": [
+        76,
+        217,
+        1459,
+        837
+      ],
+      "bboxMethod": "Difference from corner gray luminance >30; diagnostic only, pale glass/walls may be excluded.",
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "visualNotes": "Katsottu: oikea yläprojektio, neljä yhdistettyä siipeä, kuusi paviljonkia, yksi iso ja kaksi pientä pyramidia. Kattoikkunat suunnattu oikeille reunoille, ei vinoja julkisivuja. Suuntaa antava mittakaava; julkisivujen tarkkaa ikkuna- ja savupiippumäärää ei voi käyttää yhdenmukaisena geometriapiirustuksena.",
+      "selectedForSeries": true,
+      "backgroundCornerSamples": [
+        [
+          226,
+          226,
+          225
+        ],
+        [
+          226,
+          227,
+          225
+        ],
+        [
+          227,
+          226,
+          226
+        ],
+        [
+          226,
+          226,
+          225
+        ],
+        [
+          229,
+          229,
+          228
+        ]
+      ],
+      "backgroundTopStripStdDev": [
+        0.5324093025698673,
+        0.5621189895129356,
+        0.5696468669175676
+      ],
+      "targetCanvas": [
+        1536,
+        1024
+      ],
+      "canvasPass": true,
+      "measuredWidthPx": 1383,
+      "measuredHeightPx": 620,
+      "measuredBottomY": 836
+    }
+  ]
+}
