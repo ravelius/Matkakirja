@@ -42,3 +42,7 @@ Postivahti: 8b1d2dbae (NOLLAUS vain levossa) PR:ksi pyydetty, ei tarkistettu. NU
 - Kerroin KK:lle tf217-ajosta "todennäköisesti ei pelaajilla" ennen kuin ajo kattoi pihat; se piti perua. Tarkista kamerapolku ennen kuin luet nollaa.
 - Annoin luvan iPadin käynnistykseen, ja kaikki laiteajot seisoivat 20 min. Muistissa ipad-uudelleenkaynnistys-vaatii-koodin.
 - Roolien ref vaihtuu nollauksessa: käytä local_-id:tä.
+
+## LISÄYS 08.5x (korvaa ristiriitaiset kohdat)
+- Viivat: LAV ei löydä niitä taustan muutoksesta v90 → v115; ehdokas on piirto (varjostin tai valokartan näyte). Palautettu PK:lle, rivi KK:lle ja PT:lle.
+- k49: VS oikaisi, z14 | z15 -raja ei jyrkentynyt k49:ssä; ratapihan ero oli jo k48:ssa, kadut vain hieman kapeammat.
