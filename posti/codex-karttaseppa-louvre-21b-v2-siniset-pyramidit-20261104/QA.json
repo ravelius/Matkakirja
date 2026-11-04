@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-11-04T19:33:29.529872+00:00",
+  "sourceCommit": "23e398236bfd7dc5c51504f0764bbb23761e2f3e",
+  "sourceBlob": "6a367a4f36d79749e962b888c9604f55b8fcae66",
+  "generationCalls": 2,
+  "technicalPass": true,
+  "visualChangePass": true,
+  "nativeBytesPreserved": true,
+  "exactPixelPreservation": false,
+  "fourFacadesUnchanged": {
+    "etela": true,
+    "pohjoinen": true,
+    "ita": true,
+    "lansi": true
+  },
+  "views": [
+    {
+      "view": "pelikulma",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8b08495e-873a-4ee9-bc91-bf3cc8740f5a.png",
+      "sha256": "854ea9bd6af1bfb6211ff99e9eb023d78afe7a95f79d16e5426d2fbccdd093de",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "bluePyramidBoxes": [
+        [
+          511,
+          467,
+          595,
+          532
+        ],
+        [
+          641,
+          414,
+          884,
+          609
+        ],
+        [
+          923,
+          521,
+          1005,
+          591
+        ]
+      ],
+      "allThreeBlueOpaqueVisualPass": true,
+      "stoneAndRoofNotBlueVisualPass": true,
+      "largePyramidNotIntentionallyReduced": true,
+      "outsidePyramidMeanAbsChannelDifference": [
+        5.287178123848569,
+        5.5705883803100775,
+        6.711433995025482
+      ],
+      "outsidePyramidFractionDifferenceAbove12": 0.1264530942153408,
+      "exactPixelPreservation": false,
+      "modelAndOwnerApprovalPending": true
+    },
+    {
+      "view": "ylhaalta",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b4d1d5ed-8c7c-41ba-8269-9e5a614d365c.png",
+      "sha256": "5a650e2302065c8f6480c4fb9801133fb7b952b94f41feeeb2ac247ad6f1e108",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "nativeBytesPreserved": true,
+      "visualReviewed": true,
+      "bluePyramidBoxes": [
+        [
+          391,
+          488,
+          469,
+          568
+        ],
+        [
+          647,
+          408,
+          889,
+          647
+        ],
+        [
+          1066,
+          489,
+          1145,
+          568
+        ]
+      ],
+      "allThreeBlueOpaqueVisualPass": true,
+      "stoneAndRoofNotBlueVisualPass": true,
+      "largePyramidNotIntentionallyReduced": true,
+      "outsidePyramidMeanAbsChannelDifference": [
+        4.991437570264406,
+        5.170068589483842,
+        5.394379788311363
+      ],
+      "outsidePyramidFractionDifferenceAbove12": 0.08111393568702713,
+      "exactPixelPreservation": false,
+      "modelAndOwnerApprovalPending": true
+    }
+  ],
+  "ownerApproved": false,
+  "receiverApproved": false,
+  "modelsStarted": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
