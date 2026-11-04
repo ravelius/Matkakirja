@@ -35,3 +35,8 @@ Vanhat scratchpadit T7:llä: Claude-arkisto/valoseppa-scratchpadit-20261104 (127
 NS mitannut maakuntarajan tummuuden: _tyo/natiiviseppa/maakuntarajat/tulos.md, loppu; FIN ja ranska-italia mittaamatta.
 Seuraavaksi: offline2-kuvat (kun JU ilmoittaa; JU:n kansiorivi on saattanut tulla ennen nollausta, tarkista lokit/esikatselu-20261104-205240), sitten KK:n lista (lisäys 1): Suomi ensin.
 PT 21.0x: Postivahti ei voi nollata muita; rooli nollaa itsensä ja pyytää Postivahdilta aloitusviestin.
+
+## LISÄYS 3, 21.16 (OHITTAA MUUN JÄRJESTYKSEN: ensimmäinen työ, ennen Suomea)
+PT sanatarkasti: OMISTAJAN PYYNTÖ 21.08 ("Voiko nuo kaksi tehdä kytkimen taakse että voin kokeilla pelissä?"; kuvat 672f4f9d1: 1 = varjo, 2 = pois). Ensimmäinen työsi, ennen Suomen korjausta; kirjaa luovutukseen sanasta sanaan, jos nollaudut. Tavoite: omistaja vaihtaa pelissä kartan kahden piirtotavan välillä samassa kohdassa, näkee eron heti ilman uudelleenkäynnistystä ja voi zoomata ja kallistaa kummassakin. Kytkin kehittäjätilaan rattaan taakse, selkokieliset nimet. Koe, ei junaan ilman omistajan pyyntöä. Varjo vai pois on auki, kunnes omistaja on kokeillut. Koeversio JU:n vuorolla isolle iPadille; laitteen KK kysyy kortilla. Valmis → rivi KK:lle ja minulle.
+Tehty: fc3fcb0bd linssiseppa2/piirto-kytkin (natiivi-backup, wt k30). ☰ → Asetukset → Kartan piirtotapa (koe): 1 Tarkempi | 2 Tavallinen, selite. 614/614, Unity ja laite ajamatta. striimi/sk-piirto-kytkin.txt JU:lla (6 kuvaa, isolla iPadilla).
+Seuraavaksi: kuvat täysikoossa (kansio JU:lta), lokista "piirtotapa" ja "maasto siirtyma" -rivit; sitten rivi KK:lle ja PT:lle. Tavat eroavat vain tasoilla 8,5–10,5 alle 20°:n kallistuksessa (paluu alle 15°): kerro omistajalle.
