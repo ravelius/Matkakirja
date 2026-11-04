@@ -46,3 +46,7 @@ Valtionrajaan ei siis koske. Tarkistuslistan kohta 11 on sillä ratkaistu. AVOIN
 ## LISÄYS 5, RATKAISEE LISÄYS 4:N AVOIMEN (KK 18.3x)
 KK: "b2101b95e tulee mukaan samaan iPad-ajoon. Seuraava VS: yhdistä se 6469e76e7:n päälle, tarkista ettei viiva katoa ja anna uusi runko JU:lle. Vain yksi iPad-ajo. Jos yhdistäminen ei suju siististi, JU ajaa 6469e76e7:n ja viiva arvioidaan erikseen."
 Tee siis lisäys 3:n kohdat 1–4 ensimmäisenä. Valtionrajaan ei kosketa. JU odottaa shaa.
+
+## LISÄYS 6 (PT 18.3x; järjestys: e22, offline, tämä)
+E22: PT:n tiedot b2101b95e:stä _tyo/natiiviseppa/striimi-sauma/tulos.md, loppu; lue ennen yhdistämistä.
+Jonoon e22:n ja offline-kokeen jälkeen, PT sanatarkasti: "Notre-Damen pohja on iPadilla yhä harmaampi laikku striimiin nähden (kohta 3 väri, KS). Kuvat lokit/julkaisija-nd-ipad-92c47e215." Ei katsottu.
