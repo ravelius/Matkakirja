@@ -23,3 +23,6 @@ KK 05.46: be5632bdb ei junaan ennen tätä. `lokit/pk-muistipiikki-219/oleskelu-
 - Kerrottu KK:lle ja PT:lle: LOD, peitto, muuri, ys-oikaisu. Joki VS, kaide LAV; ei minun.
 
 Haarat: arkihahmot-218 01e3bc89f, kuvarunko palvelijat-kuva-218 349e8f8db, lod-diag-218 a368fdf29, muuri-todistus-219 37f46a2da, tallenne-be56 de60baf01. Viestit KK:lle suoraan muuri- ja peittoasioissa, be56 PT:n kautta.
+
+## Lisäys ennen nollausta: KK muurista (korvaa "Muurin todistus uudelleen" -kohdan ehdot)
+KK: tumma lohko poissa pelissä, ok; **ei vientiä vielä.** Seuraava todistus LAV:n uudella juurella (porras + toinen lohko): sama siemen ja kamera + **muurin eteen 100, 40 ja 10 m:stä** ja **mallitason vaihto tallenteesta.** Katso myös, näkyykö tunnelin kiila **217:n tallenteessa**. Tilaus: `_tyo/pelikoodari/muuri-koe/TULOS.md`, loppu. Ei tehty vielä mitään tästä.
