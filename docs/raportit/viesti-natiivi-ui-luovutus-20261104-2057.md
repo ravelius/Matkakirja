@@ -32,3 +32,19 @@ Edellinen: viesti-natiivi-ui-luovutus-20261104-1828.md (haara natiivi-ui/luovutu
 
 ## Levy
 Noin 54 Gt vapaana ennen viimeisiä poistoja.
+
+## LISÄYS 4.11. klo 21.0x: KK:N PALAUTE LIPUSTA (seuraajan ykköstyö, korvaa jonon kohdan 1 lipun osalta)
+KK: lippu 30193b615 ei vielä omistajalle, eikä mergeä (koe, ei junaan). Koko lippu ruudussa ja Norjan paikka kelpaavat. KK:n sanat sellaisinaan:
+
+1. VÄRI: suunnassa 135 punainen haalistuu vaaleanpunaiseksi (ipad-pysty-FRA-135, iphone-pysty-FRA-135, iphone-vaaka-NOR-135), ja suunnassa 045 sininen harmaantuu (oma rajauksesi). Tavoite: lipun värit näyttävät samoilta joka suunnassa; kartan kääntö ei saa muuttaa kankaan valoa.
+2. KOKO iPHONELLA: kolmannes ruudun korkeudesta on liikaa (omistaja 27.10. 13.25: "ei saa kasvaa", "ihan valtavan kokoinen"). Tavoite: lippu on merkki eikä kuvan pääosa, ja iPhonella se vie ruudusta suunnilleen saman osuuden kuin iPadilla.
+3. NIMI: tanko halkaisee Pariisin nimen myös iPhone-vaakassa suunnissa 000, 045 ja 225, ei vain pystyssä. Tavoite: tanko ja kangas eivät osu kohdekaupungin nimeen eivätkä nappulaan yhdessäkään neljästä suunnasta. Tarkista ensin, riittääkö kohdan 2 korjaus.
+4. MERKIT KANKAALLA: iphone-vaaka-FRA-135:ssä kaupunkipiste ja ratas piirtyvät kankaan päälle, iphone-pysty-FRA-225:ssä lintumerkki. Tavoite: kangas peittää kartan pienet merkit. Jos tämä on iso työ, kerro äläkä tee.
+5. LAITTEEN KÄÄNTÖ: aja iPad vaaka → pysty → vaaka samassa ajossa. Tavoite: koko lippu pysyy ruudussa. Korjaa, jos leikkautuu.
+
+Arviot: iPad pysty, Norja 045 paneelin alla kelpaa, KK kertoo omistajalle. Täysikoko ruudun keskellä (poikkeama 4.42:sta) on omistajan päätös: KK kysyy sen korjattujen kuvien kanssa, joten sitä ei muuteta nyt. Sama kuvasarja arkkeina KK:lle, kun korjaus on valmis. dbbc2bbea: KK:n vuoro ennallaan; tarkista, onko sen vastaus tullut erikseen.
+
+Lähtökohdat, ei todistettuja:
+- Kohta 2: lippu on kiinteä 120 pt (Lipputanko.KorkeusPt): iPadilla noin 9–12 % ruudun korkeudesta, iPhone-vaakassa 30 %. Saman osuuden tavoite on noin 40–50 pt; katso MinNakyvaPt 36 ja kangas pienenä. Pienempi lippu kasvattaa KiertoSadePt:n sädettä, joten kulma ja kuvat vaihtuvat: aja kaikki uudelleen.
+- Kohta 1: 91bf-ajosta lähtien kangas on ruudun oikealle (Lipputanko, liehunta "ruutu"), mutta valo tulee maailmasta. Etsi kankaan valon laskenta varjostimesta ennen korjausta.
+- Kohta 5: ks. jonon kohta 2 (km pienemmällä kahdesta asennosta). Ajo: skriptiin `ui kierto` samassa käynnistyksessä, atominen `laheta`.
