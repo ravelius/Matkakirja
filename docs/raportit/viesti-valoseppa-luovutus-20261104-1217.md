@@ -49,3 +49,6 @@ PT: muistiajoa odottaessa, ei iPadia, ei vientiä. Kumpaakaan ei ole aloitettu.
 2. Läiskät omaan committiin KK:n rajauksella (LISÄYS 3), paikalliset ennen ja jälkeen -kuvat. Vahvista PT:ltä poisto vai terävä reuna.
 NS: efe85dda7 (tasainen-striimi-2) lisäsi muistijarrun porttiin, ei ajettu.
 Wt k30 on striimi-vari-haarassa; vaihda striimi-vesi-haaraan kohtaa 1 varten ja siirrä se 7f64cd657:n päälle.
+
+## LISÄYS 6 (PT)
+Läiskät: ensimmäinen pari terävästä reunasta, ei poistosta. KK:n moite on sumeus, ja alueet ovat oikeaa sisältöä; poisto vain, jos KK sitä parin jälkeen pyytää. Korvaa LISÄYS 5:n kysymyksen.
