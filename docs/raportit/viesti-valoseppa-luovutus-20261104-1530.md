@@ -31,3 +31,7 @@ Sitten vastaus KK:lle (kohdat: mistä tummennus tulee, näkyykö iPadilla, koske
 2. Läiskät: ensin terävä reuna (luovutus -1217 LISÄYS 3, 6). Ajo vasta, kun muisti ja sauma on todistettu. KK:n sana tarvitaan pintaan (JONO 12.20).
 3. sk-striimi-loput.txt muistin jälkeen.
 Tummat katkoviivat ovat NS:llä (LISÄYS 12). Tieto NS:lle tarvittaessa: viivat ovat samat varjon kanssa ja ilman.
+
+## LISÄYS 1 (PT 15.3x, korvaa "Jono seuraavaksi" -järjestyksen; väri ja läiskät muistin ja sauman jälkeen)
+Tulos kuitattu: PT näki rajat parissa pari-vas-ala.png, viesti KK:lle. Muistikorjaus 484adb22f pysyy ennallaan; k60 OK JU:lta (3403 Mt), k45 auki.
+Järjestys: 1) k45. 2) 0°:n pari samalla koonnilla, varjo / pois, p-z10: striimi/sk-muisti-z10-k0.txt, JU:lle pyydetty k45:n jälkeen; kuvat täysikoossa samalla rajauksella kuin pari-vas-ala.png (40, 1264, 640, 1984) sekä koko p-z10; rivi PT:lle: ovatko rajat vanhat vai kallistuksen tuomat, näkyvätkö pelaajalla ylhäältä. 3) Rivi PT:lle: voiko pois-tilan tieverkon saada samaksi kuin varjon kanssa, jotta 20°:n vaihto ei näy tieverkon vaihtumisena; selvitä koodista, korjaa vasta KK:n sanalla. 4) Taivaanraidat s-180 ovat rungossa (KS:n vertailu de55495d2 ilman koetta: lokit/esikatselu-20261104-151845/s-180.png): syy 0°:n parin jälkeen, rivi PT:lle, ei korjausta ennen sitä. 5) striimi-vesin JU-ajo 0°:n parin jälkeen, koe, ei junaan; PT kuittasi veneen. Notre-Damen reitin PT vie KK:lle; älä muuta sitä. 6) Tummennuksen UI-kerros (sk-ui-kerros.txt) jonossa näiden jälkeen; JU:lle kerrottu.
