@@ -27,3 +27,6 @@ Haarat: arkihahmot-218 01e3bc89f, kuvarunko palvelijat-kuva-218 349e8f8db, lod-d
 ## Lisäys ennen nollausta: KK muurista (korvaa "Muurin todistus uudelleen" -kohdan ehdot)
 KK: tumma lohko poissa pelissä, ok; **ei vientiä vielä.** Seuraava todistus LAV:n uudella juurella (porras + toinen lohko): sama siemen ja kamera + **muurin eteen 100, 40 ja 10 m:stä** ja **mallitason vaihto tallenteesta.** Katso myös, näkyykö tunnelin kiila **217:n tallenteessa**. Tilaus: `_tyo/pelikoodari/muuri-koe/TULOS.md`, loppu. Ei tehty vielä mitään tästä.
 PT 06.2x: uusinta, kun LAV ilmoittaa juuren valmiiksi; juuressa mukana kaikki saman vian seinät. Ei vientiä.
+
+## Avoin kysymys LAV:lta (vastaamatta sisällöllisesti)
+`_tyo/linnanrakentaja/muuri/seinat/` koonti-01-10.jpg ja koonti-11-20.jpg, arvio KORJAUS.md:n lopussa. Seinien 01, 04, 09 sama vika epäilty, ei todistettu. LAV kysyy: kuvissa 01, 02, 08, 17 haalea kuvioitu lattia; onko tuttu pelin puolelta (materiaali tai tuore muutos)? En ole katsonut kuvia. Katso ne ja vertaa JuoksuLattia.shaderin tuoreisiin muutoksiin, vastaus LAV:lle (local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e).
