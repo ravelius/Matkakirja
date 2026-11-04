@@ -23,3 +23,8 @@ Joka uudestaan-komennon jälkeen noin 2 s pelkkä taivas (6/6, lokit 2cce; Juoks
 
 ## Muut
 Ennallaan: -0142 "Muut" ja "Tarkista"-rivi (Cull Back, ruudukkokuvio malja2-120). Otsikko 6aed10e25, palvelijatar v2, Vesi-219: JU:n vuoroilla. Komento: Peli-testit/unity-tarkistus.sh (sh), Peli-testit/kaanna.sh (bash).
+
+## Lisäys 02.1x (PT 02.0x ja 02.1x; korvaa yllä olevan vaiheen 3)
+- **Erillistä Releasea ei ole:** mittausreitti on jo Release-kokoonpano (laite-sha.sh). TULOS.md korjattu. App Store -käännöstä ei mitata.
+- **Taivas:** selvitä kamera-219-ajosta, näkyykö 2 s:n taivas pelaajan uudelleenaloituksessa. Jos näkyy, se on vika ja korjataan samaan shaan ennen iPad-mittauksia; rivi PT:lle.
+- **JU pitää iPad-sarjan** pk-0d68-laite.zsh, kunnes annan rivin; sen jälkeen lopullisella shalla (päivitä skriptin sha, jos taivaskorjaus tehdään).
