@@ -83,3 +83,4 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 - kiila_tayta.py nyt: nouseva ja laskeva yläreuna, 3 cm seinän taakse. Ruutu 1-3: 487 täyttöä, vain koejuuressa ja L/koe-kiila/; EI paketissa, eli koejuuri ≠ paketti tämän ruudun osalta (SHA256SUMS e0eb5409a814 ei kata tätä). Koko palatsi ja lod1–2 vasta PT:n kuittauksella.
 - Wumen: pari koeajo3/pari-wumen-v124-v125i.jpg; pieni läiskä ja ylhäältä näkyvät laikut x −1…7 auki (viimeksi nähty: päällekkäiset kolmiot 1-0/2-0, katkoviivoja, ei korjattu).
 - Lattian pystyviiva 5d:ssä (hahmon kohdalla) ennallaan kokeissa, näkyy jo koeajo2:ssa; ei kuulu tähän.
+- Sivuholvi, alku: a-meridiaaniportti-lod0: suurimmat punaisen ja sokkelin päällekkäisyydet ovat 15 cm:n välillä (sokkeli seinän edessä), eli ne eivät selitä välkettä. Alle 5 cm:n pareja en listannut erikseen. Rosoinen raja vaihtuu ajosta toiseen (f, g, i), joten tarkista seuraavaksi latausjärjestys/LOD tai osasarjan pinnat (ei tutkittu).
