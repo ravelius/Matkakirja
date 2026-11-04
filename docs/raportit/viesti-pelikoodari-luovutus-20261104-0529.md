@@ -46,3 +46,9 @@ Viimeisin luovutuskommitti on tämän lisäyksen kommitti, ei eeb0f915f.
 - Aloita `lokit/pk-muistipiikki-219/sali-be5632bdb-1-xf`. `muisti-tarkka.log` on 0 tavua, samoin molemmissa iso-vianhaku-9f8d2d13f-osissa; 4397cf20d:llä sama skripti antoi 768 kt. Vertaa muutoksia 4397cf20d..9f8d2d13f ja katso osan `vika/` sisältö, koska ilman lokia latausrivejä ei saada. Muistivahti.log on ehjä.
 - 4286 Mt ja ≥ 4146 Mt mitattiin ulkona, joten xf on ensimmäinen todellinen salin ylitys, ja piikki voi olla eri kuin ulkoreitin.
 Ajot vain JU:n vuorolla. Tulos rivinä PT:lle.
+
+## Lisäys 05.36 (nollauksen jälkeen; korvaa kohdan "salin xf-vian syy")
+- **xf-vian syy löytyi: mittausvirhe.** mittaa-sali.zsh antoi xf:lle `palatsi kopiot 1`, joten CPU-kopiot jäivät muistiin (noin 330–370 Mt). Kytkin poistettu. Mitat: `lokit/pk-muistipiikki-219/TULOS.md`, loppu. Kuitattu PT:lle.
+- **Seuraava rivi "BE56 XF AJETTU" (JU):** `pk-be56-xf.zsh`, tulokset `sali-be5632bdb-{2,3}-xf/`. Huippu 4394 Mt antaisi laskien 4030–4065 Mt, raja 4080; vain uusinta ratkaisee. Tulos PT:lle.
+- **Joki:** KK 05.32 hyväksyi VS:lle avoveden ja vaalean reunakiven; rivi PT:lle lähetetty, kuva KK:lle ennen kytkentää. Ei minun työni.
+- **Kaiteet:** KK odottaa silta-kokeen tulosta; rivi "SILTA AJETTU" (JU) ei ole vielä tullut.
