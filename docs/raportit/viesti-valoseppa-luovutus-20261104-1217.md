@@ -62,3 +62,8 @@ Suora hyppy z17:ään ei kallistanut (julkaisija-muisti-z10k-7f64cd657: 3619 Mt,
 
 ## LISÄYS 9 (JU, PT)
 PT: JU ajaa koko kaatuneen sarjan (7f64cd657, sitten c4a5bfafb), kallistusskripti vain varalla. JU:n silmämääräinen vertailu p-z10: tummat katkoviivat myös c4a5bfafb:ssä, eivät striimi-varista. Vaaleat suorakulmaiset ja tummemmat aluelaikut vain 7f64cd657:ssä, joten ne ovat ehdolla striimi-varin aiheuttamiksi; itse en ole verrannut (lokit/julkaisija-muisti-z10k-c4a5bfafb, p-z10.png). Tarkista täysikoossa samalla rajauksella.
+
+## LISÄYS 10 (KK 13.37, täydentää LISÄYS 2:n)
+Lämpöero k55:een näkyy myös Macilla: lokit/esikatselu-20261104-132846/y-0012.png (KS:n ajo, runko 1f082f3f1, sisältää 7f64cd657): striimi pelissä 174/144/108 | 234/204/156 | 168/162/132; k55:een sidottu pohjakuva nd19c-k55/valmis.png 174/144/120 | 234/210/168 | 168/168/144 (rakennus | katu | vesi). R ja G lähes samat, B noin 12 alempana. Näkyy Notre-Damen alueen rajana.
+Selvitä Macilla ilman iPad-vuoroa, muistin ja läiskien rinnalla: missä vaiheessa keltaisuus syntyy. Yksi rivi KK:lle ja KS:lle (KS:n id osoitekirjassa). Tavoite: peli vastaa k55:tä. Ei vientiä ilman paria KK:lle.
+Lähtökohta (oletus, ei mitattu): vertaa ensin levyn palaa e16/ (JPEG) ruudun väriin; ero niiden välillä on varjostimessa (patina), ero palan ja k55:n välillä on ElavaTyyli-koodissa tai JPEG:ssä.
