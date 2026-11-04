@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-04T21:11:58.129533+00:00",
+  "sha256": "538f0de707bf8a6d72023c25c07fe1000d1c0c3f4f09eccb93efd8da9c504901",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-dabba46c-1568-46d6-a19c-7b013385b55f.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "nativeMode": "RGB",
+  "generationCalls": 1,
+  "maxGenerationCalls": 1,
+  "nativeBytesPreserved": true,
+  "artworkPostprocessingApplied": false,
+  "canvasPass": true,
+  "outsideMask": {
+    "pixels": 1074935,
+    "meanAbsoluteRGBDifference": [
+      4.076382292882825,
+      4.476498578983845,
+      4.840197779400615
+    ],
+    "changedAnyChannelGreaterThan0": {
+      "pixels": 1068166,
+      "percent": 99.3703
+    },
+    "changedAnyChannelGreaterThan3": {
+      "pixels": 459399,
+      "percent": 42.7374
+    },
+    "changedAnyChannelGreaterThan12": {
+      "pixels": 96618,
+      "percent": 8.9883
+    },
+    "changedAnyChannelGreaterThan24": {
+      "pixels": 34644,
+      "percent": 3.2229
+    }
+  },
+  "outer16pxEdge": {
+    "pixels": 80896,
+    "meanAbsoluteRGBDifference": [
+      4.244981210443038,
+      4.553834553006329,
+      4.972680973101266
+    ],
+    "changedAnyChannelGreaterThan0": {
+      "pixels": 79996,
+      "percent": 98.8875
+    },
+    "changedAnyChannelGreaterThan3": {
+      "pixels": 40275,
+      "percent": 49.7861
+    },
+    "changedAnyChannelGreaterThan12": {
+      "pixels": 7666,
+      "percent": 9.4764
+    },
+    "changedAnyChannelGreaterThan24": {
+      "pixels": 2567,
+      "percent": 3.1732
+    }
+  },
+  "footprintPixels": 310440,
+  "buildingColoredFootprintPixelsHeuristic": 32400,
+  "buildingColoredFootprintPercentHeuristic": 10.4368,
+  "heuristicMethod": "R-G>8, G-B>10, R<205, G<180, inside source white footprint. Counts tan building-like colors, not a semantic classification.",
+  "outsidePixelExact": false,
+  "visualReviewed": true,
+  "qualityPass": false,
+  "visualReviewedAt": "2026-11-04T21:13:14.473116+00:00",
+  "qaComplete": true,
+  "strictSourceQAPass": false,
+  "footprintEntirelyClear": false,
+  "streetsFullyDetourOutsideFootprint": false,
+  "riverAndBridgesVisuallyRetainPosition": true,
+  "riverPixelsExact": false,
+  "styleTopDownPass": true,
+  "noStandingStructuresPass": true,
+  "noNewLandmarksPass": true,
+  "allSourcesUnchanged": true,
+  "deviations": [
+    "Within the blue footprint, tan building rows remain along the northern and eastern edges. Rue de Rivoli remains partly inside the footprint, instead of detouring wholly north of it.",
+    "Outside the permitted edit mask99.3703percent of pixels change at least one RGB level;8.9883percent change by more than12 in at least one channel. Therefore strict protected-area preservation FAILS.",
+    "The river and bridges retain their apparent position, but bank geometry and colors have small generated differences; no pixel-exact or seam-pass claim is made.",
+    "West lawn extends to the paving visually, but exact15-25m pavement margin and all road connections are not certified."
+  ]
+}
