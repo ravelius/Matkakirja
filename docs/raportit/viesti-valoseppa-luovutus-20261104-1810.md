@@ -50,3 +50,7 @@ Tee siis lisäys 3:n kohdat 1–4 ensimmäisenä. Valtionrajaan ei kosketa. JU o
 ## LISÄYS 6 (PT 18.3x; järjestys: e22, offline, tämä)
 E22: PT:n tiedot b2101b95e:stä _tyo/natiiviseppa/striimi-sauma/tulos.md, loppu; lue ennen yhdistämistä.
 Jonoon e22:n ja offline-kokeen jälkeen, PT sanatarkasti: "Notre-Damen pohja on iPadilla yhä harmaampi laikku striimiin nähden (kohta 3 väri, KS). Kuvat lokit/julkaisija-nd-ipad-92c47e215." Ei katsottu.
+
+## LISÄYS 7 (19.04)
+E22 TEHTY: 672f4f9d1 (linssiseppa2/porras-rajat, natiivi-backup) = 6469e76e7 + b2101b95e, e22, 613/613, Unity ja laite ajamatta. Boundary-silmukassa ei Striimi-ehtoa, Kerros-rivillä AluerajaMuste, AluerajaAlfa, valtionraja ennallaan. sk-porras-ipad.txt päivitetty, JU:lle lähetetty; kansio julkaisija-porras-ipad-672f4f9d1. Kun kuvat tulevat: tarkistuslista, kuvat KK:lle, rivi NS:lle.
+PT 19.01: omistaja piti kirkon valoa v4 (92c47e215) hyvänä. Pohjan harmaa laikku korjataan yhä, jonossa offline-kokeen jälkeen.
