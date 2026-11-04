@@ -28,3 +28,10 @@ Järjestys, KK sanatarkasti lyhennettynä:
 4. Tasojen rajat l-z12 ja h-z13-k45 sen jälkeen.
 Muisti 4006 Mt on lähellä rajaa: ilmoita, jos korjaus nostaa sitä. Macin kuva ei todista laattoja: todistus isolta iPadilta JU:n vuorolla. Kuvat KK:lle.
 Edelleen ensin: SEURAAVAKSI kohdat 1 ja 2 (17 kuvaa, offline2). Kohta 4 (ND-pohjan laikku) KK:n listan jälkeen, ellei PT sano muuta; kysy PT:ltä, jos järjestys vaikuttaa.
+
+## LISÄYS 2, 21.0x (OHITTAA SEURAAVAKSI-KOHDAN 1)
+17 kuvaa katsottu Sonnet-agentilla, 73 % ja rajaukset; tulos KK:lle lähetetty, ei muuta pois-suositusta. striimi/ipad-672/TULOS-17.md. En tarkistanut agentin havaintoja itse. Syy auki: kaksoisnimet t104 k19/k21, tumma merkki t104-k19-pois, pisteet merellä t86.
+Vanhat scratchpadit T7:llä: Claude-arkisto/valoseppa-scratchpadit-20261104 (127 kansiota). PT kuitattu.
+NS mitannut maakuntarajan tummuuden: _tyo/natiiviseppa/maakuntarajat/tulos.md, loppu; FIN ja ranska-italia mittaamatta.
+Seuraavaksi: offline2-kuvat (kun JU ilmoittaa; JU:n kansiorivi on saattanut tulla ennen nollausta, tarkista lokit/esikatselu-20261104-205240), sitten KK:n lista (lisäys 1): Suomi ensin.
+PT 21.0x: Postivahti ei voi nollata muita; rooli nollaa itsensä ja pyytää Postivahdilta aloitusviestin.
