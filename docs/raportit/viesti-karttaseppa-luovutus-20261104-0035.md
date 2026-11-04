@@ -643,3 +643,6 @@ NUI:n 99eb9931e yhdistetty: karttaseppa/nd-kaanto-219 **c74d6ef93** (korvaa a641
 **Odottaa:** omistajan vastaus aukioon KK:lta (7fcf0bf76). Ei iPad-vuoroa ennen sitä.
 **Vahti posti käynnistettävä uudelleen:** käsitelty b5b932eef asti.
 **Oppi:** tausta-ajo kuolee nollauksessa, joten ilmoita Postivahdille LUOVUTUS VALMIS vasta, kun oma ajo on loppunut.
+
+## LISÄYS 4.11. klo 15.4x (uusin; lue ensin): OMISTAJAN PÄÄTÖS 15.39, aukio hyväksytty
+**Kortti "Istuuko kirkko nyt hyvin aukiolle?" = Kyllä (kuvat esikatselu-20261104-150501, 7fcf0bf76). Puutteet hän näki.** Seuraavaksi iso iPad: neljä suuntaa, kallistettuna, kolme zoomia ja muisti, **kun PT avaa iPad-luvat**; kartan kääntö mukaan, tulos KK:lle. Ei muita nähtävyyksiä ennen omistajan korttia. Haara karttaseppa/nd-kaanto-219 7fcf0bf76. Skenaario tekemättä. Tämän lisäksi kipinät ja Pariisi-nimet edellisen lisäyksen mukaan.
