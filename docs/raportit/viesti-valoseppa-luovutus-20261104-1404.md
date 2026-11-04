@@ -70,3 +70,7 @@ JU mittaa e774647ee:llä kulmat 15 ja 7 tai 22. Uusi raja vasta niistä: lukua e
 
 ## LISÄYS 8 (JU)
 k15 e774647ee: 3656 Mt, 15,0°, varjovalinta + kerroin 4, 0 varoitusta, 5/5 uutta kuvaa, katsomatta (lokit/julkaisija-muisti-z10k15-e774647ee). p-z10 ja p-z10-90 tavulleen samat: tarkista, onko ruutu jäätynyt vai vain sama. k22 ajossa. Tähän asti: 15° ok, 29° yli.
+
+## LISÄYS 9 (JU: mittaussarja valmis, e774647ee, JU:n rivit)
+15° 3656 Mt, 22° 3850 Mt (0 varoitusta, varjo + kerroin 4), 29° 4091 Mt VIKA; 54° ilman varjoa 3422 Mt. Kuvat katsomatta (lokit/julkaisija-muisti-z10k22-e774647ee, -z10k15-).
+Ehdotus PT:n säännöstä (ei tehty): raja 22° (≥ 22° ei varjoa), hystereesi niin, ettei paluu nosta kulmaa yli 22°:n; 22° on suurin mitattu läpäisevä, varaa 230 Mt iPad13,8:lla. Pienemmällä laitteella ei mitattu. Seuraavaksi: SiirtymaKallistusRaja + testit, kuva 22°:sta täysikoossa, sha PT:lle ja JU:lle, LISÄYS 5.
