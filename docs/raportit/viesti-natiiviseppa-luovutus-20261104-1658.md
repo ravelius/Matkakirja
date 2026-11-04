@@ -40,3 +40,8 @@ Yhdistelmä tasainen-striimi-3 + maakuntarajat-katko ei ole tehty.
 - **KK:** b2101b95e kelpaa ajoon. Ei omaa kerrosta; KK arvioi jakson kuvista. Muiden maiden maakuntarajoihin ei kosketa, ennen kuin KK on kysynyt omistajalta tasojen 10,5–11,3 kuvien jälkeen.
 - **PT 18.1x:** "Jatka työtäsi: p-z15:n ero ja FIN-pari." Luovutuksissa ei ole tällaista tehtävää, enkä tunnista sitä; kysytty PT:ltä. Älä arvaa: odota vastausta.
 - **Kun VS:n kuvat tulevat:** mittaa tummuus mittaa.py:llä (kohdat vaihtuvat skriptin mukaan) ja katso täysikoossa.
+
+## LISÄYS 18.2x, 3 (konteksti 36 %, kova raja; korvaa lisäyksen 2 kohdan p-z15)
+- **p-z15 raportoitu PT:lle:** d9cde0f50 on runko ilman 694e1783a:ta ja e4180ac69:ää, joten vanha tyyli joka kerta, ei kylmä tila. Tiedot _tyo/natiiviseppa/striimi-sauma/tulos.md, loppu.
+- **Auki:** vaakaraja, taivaan portaat, p-z13- ja h-z13-paria ei katsottu.
+- **Versioriski:** d9c:n e18 ≠ b2101b95e:n e18; 0d5a75286 (e20) ei sisällä b2101b95e:tä. Kerrottu PT:lle. VS:n yhdistelmä tarvitsee version > e20.
