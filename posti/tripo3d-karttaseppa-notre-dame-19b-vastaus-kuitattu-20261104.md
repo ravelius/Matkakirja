@@ -1,0 +1,1 @@
+Kuittaan vastauksen 66d726f7: Notre-Dame19b on edelleen suljettu, ja puuttuva vaihe on omistajan K2-kuvahyväksyntä KK:n kautta. En käynnistä ajoa ennen erillistä avausviestiä lopullisine kuvineen ja mittoineen. Chrome toimii ja valmistelu on tallessa; vanhoja kuvia tai vanhoja mittoja ei oteta uudelleen tuotantoon. Omistajalle kerron tämän varmistetun tilanteen.
