@@ -74,3 +74,7 @@ k15 e774647ee: 3656 Mt, 15,0°, varjovalinta + kerroin 4, 0 varoitusta, 5/5 uutt
 ## LISÄYS 9 (JU: mittaussarja valmis, e774647ee, JU:n rivit)
 15° 3656 Mt, 22° 3850 Mt (0 varoitusta, varjo + kerroin 4), 29° 4091 Mt VIKA; 54° ilman varjoa 3422 Mt. Kuvat katsomatta (lokit/julkaisija-muisti-z10k22-e774647ee, -z10k15-).
 Ehdotus PT:n säännöstä (ei tehty): raja 22° (≥ 22° ei varjoa), hystereesi niin, ettei paluu nosta kulmaa yli 22°:n; 22° on suurin mitattu läpäisevä, varaa 230 Mt iPad13,8:lla. Pienemmällä laitteella ei mitattu. Seuraavaksi: SiirtymaKallistusRaja + testit, kuva 22°:sta täysikoossa, sha PT:lle ja JU:lle, LISÄYS 5.
+
+## LISÄYS 10 (PT: raja 20°, korvaa LISÄYS 9:n ehdotuksen)
+484adb22f (linssiseppa2/striimi-vari, natiivi-backup, e774647ee:n päällä, 604/604; Unity ja laite todistamatta): varjovalinta pois ≥ 20°, paluu 15° ("hystereesi 15°" luettu paluukulmaksi, vahvista PT:ltä, jos eroaa).
+JU: 1) sk-muisti-z10-k19.txt, 2) sk-muisti-z10-ei-varjoa.txt (k60), 3) sk-striimi-k45.txt. Samat muistiehdot. Kuvat: p-z10 | p-z10-pois, p-z9 | p-z9-pois 19°:ssa täysikoossa; neliöt näkyvät → polut PT:lle ennen hyväksyntää. Sitten LISÄYS 5 (viivat, pisteet).
