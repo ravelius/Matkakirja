@@ -21,3 +21,9 @@ Kysytty PT:ltä 06.08: mikä VS:n osa Sacré-Cœurissa on (metsä ja kuva ovat K
 
 ## Työkalut
 k38/aja.zsh <wt> <ulos> <z> [alue] (k23:n raivaus, sama kuin k36-z15.jpg:n pohja; HUOM aja-oma ilman oikeaa jsonia ajaa ilman raivausta, ja se näyttää erona Citéllä ja Les Hallesissa). k39/aja.zsh <wt> <arkki> <ulos> <z> <alue>, k39/parit.py, k39/koe-patch.py, k39/profiili.py. Arkit _tyo/codex/pariisi-materiaali-20261104/, KK:n kohdat lista rivit 408–413. Data: k22/data-lisa (7 palaa), k23/data-paikka (z13 + 4 z14-palaa).
+
+## LISÄYS 06.15 (SITOO, ohittaa ylemmän)
+- **k38 nyt ee3743d64** (p38b, 614/614; KK, PT 06.09): hallin viiva peitto 0,5, pari k38/pari-z15-3x-05.jpg katsottu. Seuraavaan yhdistelmään; z13 EI muutu (KK). k39 on yhä vanhan k38:n päällä.
+- **Louvren etelälaitaa ei hiota nyt** (PT 06.09): KS:n ja Codexin nähtävyyskoe (ND, Louvre) korvaa osin. Kohdasta 1 ja 4 pois; Cité ja École yhä katsotaan.
+- **Sacré-Cœur on KS:n** (PT 06.1x, jako oli PT:n virhe): VS:lle vain pohja kuvan ympärillä, kun yhd5:n y-montmartre näkyy.
+- Talot ja reunat kuten kohdissa 2–4; ei uutta yhdistelmää ilman käskyä.
