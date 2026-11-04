@@ -54,3 +54,7 @@ Jonoon e22:n ja offline-kokeen jälkeen, PT sanatarkasti: "Notre-Damen pohja on 
 ## LISÄYS 7 (19.04)
 E22 TEHTY: 672f4f9d1 (linssiseppa2/porras-rajat, natiivi-backup) = 6469e76e7 + b2101b95e, e22, 613/613, Unity ja laite ajamatta. Boundary-silmukassa ei Striimi-ehtoa, Kerros-rivillä AluerajaMuste, AluerajaAlfa, valtionraja ennallaan. sk-porras-ipad.txt päivitetty, JU:lle lähetetty; kansio julkaisija-porras-ipad-672f4f9d1. Kun kuvat tulevat: tarkistuslista, kuvat KK:lle, rivi NS:lle.
 PT 19.01: omistaja piti kirkon valoa v4 (92c47e215) hyvänä. Pohjan harmaa laikku korjataan yhä, jonossa offline-kokeen jälkeen.
+
+## LISÄYS 8 (19.28)
+Offline A 2d1084b18 ja B c968fe777 HYLÄTTY, oma vika: http-osoite kaatoi haut ("Insecure connection not allowed", insecureHttpOption 0). Lokin ArgumentOutOfRangeException on editorin hakutietokannasta, ei tästä.
+Uusi 85d57c0e7 (linssiseppa2/offline-koe2, natiivi-backup, wt k30 tässä haarassa): komento palvelin koeverkko 0 normaali, 1 https-osoite aikakatkeaa, 2 yhteys evätään + NotReachable Laattapalvelimessa (UI:n luvut ennallaan). 613/613, Unity kääntämättä. striimi/sk-offline2.txt, 18 kuvaa, JU:lla. Kuvissa n- verkossa, a- ei vastaa, b- ei verkkoa, p- verkko palasi; nähty ja näkemätön paikka. Tarkista lokista ensin, ettei Insecure-riviä ole ja että "Z10 vanhemmasta" ja virheet kasvavat. Sano KK:lle: Mac-simulointi, laite todistamatta.
