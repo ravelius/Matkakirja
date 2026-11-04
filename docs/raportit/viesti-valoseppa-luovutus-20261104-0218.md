@@ -2,6 +2,9 @@
 
 Syy: konteksti 32 %, kova raja 35 %. Edellinen: viesti-valoseppa-luovutus-20261104-0150.md (työkalut). Loki: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md.
 
+## PT 02.2x OHITTAA ALLA OLEVAN SHA:N
+Yhdistelmä: k26 057520875 + NS:n uusin **b70ee175a** (haamut ja z11; EI 3332c8e15), oma koehaara, SHA + sk (mukana k-laaja 0,08) JU:lle ja PT:lle viimeistään 03.30. Jos k27 on valmis ja parempi, ota se. b70ee175a:n yhdistyvyyttä ei ole kokeiltu.
+
 ## ENSIN: TAKARAJA 03.30 (PT 02.1x, ohittaa muun järjestyksen ja aloituksen "viimeinen aloitus 04.00" -kohdan)
 Viimeistään 03.30 JU:lle yhdistelmä-SHA: paras versio siihen mennessä (k26 057520875, jos parempi kuin k25 7967cf01c; k26 on paras oma arvioni) + NS:n häivytys 3332c8e15, sekä sk (mukana k-laaja 0,08). Yhdistä itse omaan koehaaraan, ratkaise Versio-törmäys uudella versiolla. Ei junaan. Rivi PT:lle ja JU:lle (id:t osoitekirjasta).
 Lisäksi KK 02.12 k26:een: pohjan puistot liian vihreitä (190/180/125; 2029 noin 196/170/106 seitsemässä puistossa). Ei yleistä vihreää. Lista KORJAUSLISTA.md, kaksi viimeistä osiota; EN ole lukenut niitä. Tee ennen 03.30, jos ehtii, muuten yhdistelmä ilman.
