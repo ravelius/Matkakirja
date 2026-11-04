@@ -33,3 +33,6 @@ PT: kelpaa, mutta marginaali on vain 25 Mt eikä ovimalli mallit-v1 ole mukana. 
 
 ## LISÄYS 18.2x: ajo 1 katsottu
 `lokit/tarkastelukuvat-77194ed87-181133`: runko paikallaan kaikissa 8 kuvassa (katsottu nanxun-kaukaa täysikokoisena, muut 7 arkista); nanxun-kaukaa sama kamera kuin ee9ed51b0. Syy todistettu tällä haaralla, rivi PT:lle lähetetty. Avoinna: koerunko ja TF 60bd5c356 (ajot 3, 4) ja ee9ed51b0-kontrollit (ajo 2): varma rivi PT:lle niiden jälkeen. Rakennuksen friisin vino katkaisu (南薰殿, punainen friisin edessä) jää ennalleen: oma vika, LAV. Seinä on korjauksella kirkkaampi kuin ennen naapurimuureissa? Katso vertailu leivotusta valosta; muisti (variantit) mitattava.
+
+## LISÄYS 18.3x: LAV:n pyyntö, TEKEMÄTTÄ (KK:n sana, PT:n osoitus; tuli kovalla rajalla)
+g-jalusta-etun yksinkertainen kaide jää malliin kaikilla LOD-tasoilla, mutta piilotetaan vain siellä, missä C2-kaide oikeasti piirtyy (ei LOD1:ssä eikä kaukana, missä C2 nyt puuttuu). Selvitä samalla, miksi C2 ei piirry kauas, vaikka `Muurikate.cs`:555–556 lupaa sen, ja miksi se palaa kaukana vaaleaksi. Tiedot ja parit: `_tyo/linnanrakentaja/muuri/KORJAUS.md` loppu, `muuri/yleinen/kk2/` (kartta-lod0.png, laatikot_pois.py = paloluokitus, parit/laatikot-*), kuvat juuresta koejuuri-kk2. Parit KK:lle. Järjestys: muurin rungon rivi PT:lle ensin; kysy PT:ltä, meneekö tämä ovikierroksen edelle.
