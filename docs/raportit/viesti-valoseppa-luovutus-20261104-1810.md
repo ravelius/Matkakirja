@@ -21,3 +21,7 @@ Syy: konteksti 30 % (Raamattu 7.37). Edellinen: viesti-valoseppa-luovutus-202611
 - Pallomalli (rajat-tasot/verkko.py) voi selittää reunat x 1889 ja 2116, laskettu vain yhdelle. Ei todistettu.
 - Pois-kuvista t86, t95, t100, t104 katsoin vain 73 %:n koossa. t86-O:n pyöreä kulma (x noin 2437, y noin 990 t90:ssä, ruudut 22,78) näkyy samalla maalla molemmista kameroista; maastoa vai rajaa, ei selvitetty.
 - python3 -I ei löydä numpyä tällä koneella: omat skriptit ajetaan ilman -I:tä omasta kansiosta.
+
+## LISÄYS 1 (KK 18.1x)
+KK: "38ec22a25 kuitattu suunnaksi, kuvat katson iPad-ajosta. Poltettujen rajojen poisto on ok vain, jos NS:n viivat kattavat kaikki rajat: lisää iPad-ajoon yksi valtionrajan kamera (Alpit, Ranska–Italia) ja kirjaa puuttuvat. Kirjaa uudet havainnot (kanava z13, punertavat läiskät, vaaleat viivat, sisäraita) iPad-kuvien tarkistuslistaan."
+Tehty: kamera ranska-italia (45,2, 6,9, korkeus 0,81) skriptiin, 39 kuvaa. Lista striimi/sk-porras-ipad-tarkistus.md: käy se läpi, kun kuvat tulevat. Koordinaatit omasta muistista (Rochemelon rajalla), ei datasta: jos raja ei ole kuvassa, kerro se. JU:lle kerrottu muutoksesta.
