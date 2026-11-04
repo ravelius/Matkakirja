@@ -1,0 +1,155 @@
+{
+  "checkedAt": "2026-11-04T20:04:05.458453+00:00",
+  "generationCalls": 17,
+  "callsByView": {
+    "pelikulma": 4,
+    "lansi": 4,
+    "ita": 2,
+    "etela": 4,
+    "pohjoinen": 3
+  },
+  "nativeBytesPreserved": true,
+  "technicalPass": true,
+  "visualReviewComplete": true,
+  "selected": [
+    {
+      "view": "pelikulma",
+      "key": "pelikulma-otto04",
+      "sha256": "6fc3acb802a80393c5d0be6ad086b83e805c609b876c0831786823145fb437f5",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "foregroundBox": [
+        244,
+        427,
+        759,
+        1352
+      ],
+      "bboxWidth": 515,
+      "bboxHeight": 925,
+      "baselineY": 1351,
+      "topY": 427,
+      "notes": "Katsottu: lopullinen 3/4-kuva, pelikulman alempi rajaus aiempaa lähempänä sivukuvien maaviivaa. Sama kappeli, puinen ovi, kolme pitkän sivun ikkunaa, ruusuikkuna ja harmaa katto. Tarkkaa 60 asteen kamerakulmaa tai samaa pikseligeometriaa ei varmenneta. Kolmiulotteinen katselukulma aiheuttaa huipun ja räystään eri kuvakorkeudet verrattuna suoriin sivuihin."
+    },
+    {
+      "view": "lansi",
+      "key": "lansi-otto04",
+      "sha256": "ae450facef5e69edf720240109f30cb10c2deadf0127bf0997e865e9af5b6606",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "foregroundBox": [
+        353,
+        391,
+        671,
+        1360
+      ],
+      "bboxWidth": 318,
+      "bboxHeight": 969,
+      "baselineY": 1359,
+      "topY": 391,
+      "notes": "Suora länsijulkisivu: ruusuikkuna, ruskea puinen pariovi, kaksi kulmatornia ja huippu. Maaviiva korjattu uudella kokonaisella otolla. Pienissä koristeissa on näkymäkohtaisia eroja."
+    },
+    {
+      "view": "ita",
+      "key": "ita-otto02",
+      "sha256": "4f50fa41fbc4ad66de820d85dd552cb30d3b7a40ef358ae6153e943362e892f9",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "foregroundBox": [
+        357,
+        395,
+        667,
+        1361
+      ],
+      "bboxWidth": 310,
+      "bboxHeight": 966,
+      "baselineY": 1360,
+      "topY": 395,
+      "notes": "Suora kuoripää: kolme tummaa suippoikkunaa, harmaa aumattu katto, ei ovea tai ruusuikkunaa. Näkymä on mallista päätelty, ei dokumentoitu historiallinen rekonstruktio."
+    },
+    {
+      "view": "etela",
+      "key": "etela-otto04",
+      "sha256": "b8edb4bc171ad54d679ffd28ca4f3e18aaa93307449d9c7d4b5d826b59281c3c",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "foregroundBox": [
+        237,
+        393,
+        786,
+        1358
+      ],
+      "bboxWidth": 549,
+      "bboxHeight": 965,
+      "baselineY": 1357,
+      "topY": 393,
+      "notes": "Suora eteläsivu: kolme ikkunajaksoa, neljä tukipilaria, huippu etupuoliskossa, kattokoristeet ja takaristi. Virheellinen sivuovi poistunut ja maaviiva korjattu."
+    },
+    {
+      "view": "pohjoinen",
+      "key": "pohjoinen-otto03",
+      "sha256": "ac063d9a2e19a603a7bfadcbd728ab50fb1eec6bcc36cb6453182c8ee3445090",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "foregroundBox": [
+        237,
+        394,
+        787,
+        1361
+      ],
+      "bboxWidth": 550,
+      "bboxHeight": 967,
+      "baselineY": 1360,
+      "topY": 394,
+      "notes": "Suora pohjoissivu: kolme ikkunajaksoa ja vastaavat tukipilarit; länsipää oikealla. Kattokoristeet ja takaristi korjattu vastaamaan sarjaa. Ei pääovea tai ruusuikkunaa pitkällä sivulla."
+    }
+  ],
+  "orthographicBaselineSpreadPx": 3,
+  "orthographicTopSpreadPx": 4,
+  "allFiveBaselineSpreadPx": 9,
+  "proposedDimensions": {
+    "width": 90,
+    "length": 170,
+    "eaves": 120,
+    "ridge": 190,
+    "crossTop": 320,
+    "ownerApproved": false,
+    "KKApproved": false
+  },
+  "measuredOrthoExtentScale": {
+    "lansi": 3.533,
+    "ita": 3.444,
+    "etela": 3.229,
+    "pohjoinen": 3.235
+  },
+  "exact3DGeometryVerified": false,
+  "exactCameraAngleVerified": false,
+  "exactPixelAlignmentVerified": false,
+  "strictSourceQAPass": false,
+  "deviations": [
+    "Pikselilleen yhtenevää geometriaa tai tarkkaa 60 asteen kamerakulmaa ei ole varmennettu.",
+    "Pienet ikkunakoristeet, huipun koristeet ja harjan koristeiden määrät vaihtelevat otosta toiseen.",
+    "Taustan vaaleanharmaassa on vähäistä generaattorin sävyvaihtelua.",
+    "Pelikulman maaviiva eroaa hieman neljän suoran sivun maaviivasta; kaikki mitat taulukossa.",
+    "Noin 3 px/yksikkö on ohjeellinen. Uloimmat tukipilarit ja koristeet suurentavat rajausleveyttä suhteessa rungon mitoitusehdotukseen."
+  ],
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "modelsStarted": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
