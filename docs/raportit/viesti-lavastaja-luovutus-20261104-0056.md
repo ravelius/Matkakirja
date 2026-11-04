@@ -84,3 +84,13 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 - Wumen: pari koeajo3/pari-wumen-v124-v125i.jpg; pieni läiskä ja ylhäältä näkyvät laikut x −1…7 auki (viimeksi nähty: päällekkäiset kolmiot 1-0/2-0, katkoviivoja, ei korjattu).
 - Lattian pystyviiva 5d:ssä (hahmon kohdalla) ennallaan kokeissa, näkyy jo koeajo2:ssa; ei kuulu tähän.
 - Sivuholvi, alku: a-meridiaaniportti-lod0: suurimmat punaisen ja sokkelin päällekkäisyydet ovat 15 cm:n välillä (sokkeli seinän edessä), eli ne eivät selitä välkettä. Alle 5 cm:n pareja en listannut erikseen. Rosoinen raja vaihtuu ajosta toiseen (f, g, i), joten tarkista seuraavaksi latausjärjestys/LOD tai osasarjan pinnat (ei tutkittu).
+
+## LISÄYS 04.11. 03.5x (LUOVUTUS; aloita tästä)
+- PT hyväksyi: 1) punainen kohta ja vihreät kiilat selvitys, 2) koko palatsi koeajoon, lod1–2 mukana. EI vientiä. Koeajo JU:n vuorolla Pariisin ja PK:n sarjan jälkeen. Pari samasta kulmasta + 3 muuta kohtaa PT:lle, ennen KK:ta.
+- Vihreät kiilat: nimetty tunnista.py:llä = V4_palatsi_friisi, 9 mm vinon seinäkolmion takana. Korjaus: friisin pystypinnat 2 cm ulospäin (kiila_tayta.py, lod0; lod1–2:ssa friisiä ei ole).
+- Punainen porras: todennäköinen syy, ei todistettu: täyttökolmion UV1 kolmion ulkopuolella (toinen valokartan kaavio). Korjaus: UV1 rajataan kolmion sisään.
+- Rakennettu kaikki 69 tiedostoa: L/koe-kiila-kaikki/ (loki L/kiila-kaikki.txt): täyttöjä lod0 3530, lod1 3150, lod2 1458; friisikärkiä lod0 29 768. Kopioitu koejuureen. EI paketissa: _valmiit-paketti ja SHA256SUMS e0eb5409a814 ovat ilman täyttöjä, koejuuri ≠ paketti.
+- Lod1–2 "tarkistettu" EI vielä: vain määrät, ei yhtään pelikuvaa; lod2:ssa testipiste on tyhjä myös ennen täyttöä. Täyttömäärät ovat isommat kuin kiilat-lod0.txt:n 2677, koska mukana ovat myös laskevat yläreunat. Alkulennon kuvat ovat ainoa kaukotarkistus.
+- Tilattu JU:lta: sk L/sk-lav-kiila-kaikki.txt → L/koeajo4/ (5d, wumen-edesta, wumen-sivuholvi, alkulento 1–3, *-kiila3.png). Vertaa koeajo2:n samannimisiin (botti siirtää kameraa Wumenissa; 5d testikameralla). Pari tee samasta rajauksesta, PT:lle ≤ 3 riviä.
+- Jos kelpaa: paketti uudelleen (v125 + kiila_tayta) vasta PT:n kuittauksella; huom. paketoi-v125.zsh ei toista wumen_sauma/wumen_valo/kiila-ketjua.
+- Sivuholvi ja pylväiden laikut sen jälkeen.
