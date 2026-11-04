@@ -36,3 +36,11 @@ Palvelijatar v2: edestä ja takaa KK:lle ennen kytkentää, kun Pariisi on pää
 z −526,8 ja −190,4: oviaukossa taivas katon paikalla ja violetit sivut tässä rungossa; todennäköisesti be56:n taivaskorjaus, ei tarkistettu be56-rungosta (tarkista peitto-be56:n yhteydessä).
 
 Tila: odottaa JU:ta.
+
+## Lisäys 04.38 (korvaa ristiriidassa olevat kohdat)
+- **v13 HYVÄKSYTTY** (KK; pysäytyskuva), ei säätöä tummuuteen.
+- **Sirpaleet v14 2eb260f77** katsottu, kuvat ja tulos KK:lla (`palvelijat-v14/`, HUOMIOT.md siellä); KK:n tuomio odottaa, koska palojen kohta kuviossa vaihtui. Välkkymistä ei näy 20 peräkkäisessä kuvassa, videona ei katsottu.
+- **Mätä omena: KK hylkäsi pinnan.** Codex-tilaus postilaatikko-haarassa 6d549e0b8 (`omena-mata-v2.glb`, uusi nimi). Koodi pois junahaarasta: arkihahmot-218 kärki **d70494795**; työ haarassa **pelikoodari/mata-omena-218** (7cfac9ee6). Kun Codex toimittaa: kytke uusi tiedosto, ota tummennus (MataPinta) pois, katso hehku (KK: erotuttava kivellä, hillitysti, ei kultana), kuva KK:lle, PT tiedoksi. Jos juna lähtee ennen, vanha malli pysyy.
+- **Palikkakuvio:** lod-diag ajettu, tulos `palvelijat-v12/HUOMIOT.md` lopussa, KK ja PT tietävät. kk-tausta-1-0 lod 1->0 kohdassa z −133,24, d keskipisteeseen, kamera lohkon sisällä. 217:ssä sama ehto (todettu), v94:n lohkojako avaamatta.
+- **Korjausehdokas cb8b1f06c** (haara pelikoodari/lod-diag-218; kärki a368fdf29 sisältää diagnostiikan, ei junaan sellaisenaan): LOD-KORJAUS ajossa L1:llä, `lod-korjaus/malja`, JU:n rivi "LOD-KORJAUS AJETTU". **Kun ajettu:** (1) malja2-120 ja tallenteen z −133…−130: onko kuvio poissa (rakeisuusmitta, ks. yllä; v14:n malja2-120 näyttää kuvion yhä); (2) `grep -a "LODDIAG tausta-lod0"`: yhtäaikaisten kk-taustan LOD0-lohkojen enimmäismäärä; vertailuluku pitää laskea lod-diag-lokista 81 vaihdosta; (3) mihin kohtiin vaihto siirtyi ja näkyykö rasteri kaukana; (4) tulos KK:lle, PT tiedoksi. Junaan vasta iPadin muistimittauksen ja PT:n kuittauksen jälkeen; iPad-vuoro odottaa Pariisin uusintaa. Ota junaan vain cb8b1f06c, ei diagnostiikkaa. 32 px:n ruudut yhä ilman selitystä; LOD1:n valoa ei ole tarkistettu.
+- **JU kertoi:** iPad-sarja (pk-be56-laite) odottaa PT:n lupaa, Pariisi uusitaan.
