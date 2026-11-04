@@ -27,3 +27,8 @@ Skenaario 120 s; palvelijoita Palvelijatar, Lakaisija, Ruokaeunukki, Vedenkantaj
 Mätä omena: Codex `omena-mata-v2.glb` (haara mata-omena-218; ks. -0405). Palvelijatar v2 edestä ja takaa KK:lle ennen kytkentää. Kengän yläreuna. be56: iPad-sarja PT:n luvalla (JU).
 
 Haarat: arkihahmot-218 kärki 01e3bc89f; kuvarunko palvelijat-kuva-218 349e8f8db.
+
+## Lisäys 05.07 (korvaa ristiriidassa olevat kohdat)
+- **TF 217 oikaistu KK:lle ja PT:lle:** palikkakuvio ja tumma laikukas muuri ovat myös 217:ssä (31d8e3ea6, `esikatselu-20261101-224822/juoksu` ruudut 6959–6974; kuva `lod-korjaus/tf217-palikkakuvio-ja-tumma-6949-6964-6974.png`). LOD0:ssa on valo_rgbm, LOD1:ssä ei (kk-tausta-1-0, tausta-v115).
+- **MUURI-KOE JU:n jonossa ennen OHITUSTA:** `muuri-koe/aja.zsh`, runko a368fdf29: muuri-v-01…24 elävät varjot pois, muuri-e-01…24 vertailuvalo (ei leivontaa, ei varjoja), 0,5 s välein noin z −170…−100. Kun MUURI AJETTU: etsi z −132 huom-*.txt:n paikkariveistä (pohjakoordinaatit) tai kuvista ja vertaa lod-korjaus-ruutuun 5735. Tummuus katoaa vain e-sarjassa → leivonnassa; tuo syy ja korjausehdotus KK:lle (PT tiedoksi). Leivonta on VS:n/LAV:n aluetta (`tausta-v118/leivo.zsh` malli): tilaa PT:n kautta, älä tee itse.
+- **Harmaa kaista:** ei vielä tunnistettu. kk-tausta-1-0 lod0:n pitkistä tasaisista pinnoista ei löytynyt suoraa vastinetta, joten voi olla eri lohkossa. Katso paikkariveistä pohjakoordinaatti ja etsi materiaali naapurilohkoista. KK:lle yksi rivi.
