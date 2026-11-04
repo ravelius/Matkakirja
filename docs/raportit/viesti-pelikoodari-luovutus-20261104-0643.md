@@ -20,3 +20,6 @@ Korvaa -0626:n kohdat "SEURAAVA TYÖ 1" ja "KK kohta 3"; muu -0626:sta voimassa 
 
 ## Lisäys 06.44: oleskelu katsottu
 OLESKELU AJETTU: luvut OK, mutta ei todista salia (juoksu päättyi taustalla, kuvat lopetusruutuja). mittaa-oleskelu.zsh korjattu sääntötauolla (testaamatta); uusinta JU:n yhdistelmärungolla. Tulokset TULOS.md, loppu. Kohta "SEURAAVA TYÖ 2" -0626:sta on tällä hoidettu. Kaikkiin tuloksiin merkitään runko (PT).
+
+## Lisäys 06.48: lähitason koe tehty
+PT 06.4x: KK:n riviä ei odoteta. Koe e89efadad (pelikoodari/ylitys-lahitaso-219, wt/proto-pelikoodari-ylitys), ajo peitto-reitti/ylitys/aja.zsh JU:n jonossa reittiajon perään, rivi "YLITYS AJETTU". Kun molemmat ajot ovat valmiit: vertaa kesto-uu ja kesto-sa kansioista peitto-reitti ja peitto-reitti/ylitys, tee ovi-ylitysten ruudut vierekkäin, lähetä PT:lle ja KK:lle ja merkitse runko. Viaksi näyttävä leikkausreuna → KK:lle ennen TF:ää. Yhdistelmärungon tullessa: oleskelu uudelleen, ja lähitaso tarvittaessa sen päälle.
