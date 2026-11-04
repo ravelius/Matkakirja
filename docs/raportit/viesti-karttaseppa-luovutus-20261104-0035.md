@@ -507,3 +507,4 @@ Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitet
 
 ## LISÄYS 4.11. klo 09.2x: c2-aineisto PT:ltä
 **PT 09.16:** c2 valmis, /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/pariisi-tyyli/k51/c2/ (koe-c2.diff). KK katsoo yhä. **19c lähtee vasta KK:n sanasta (OMISTAJAN PÄÄTÖS 09.13).** Sen jälkeen pohja.png samassa kehyksessä koe-c2.diff:llä tai VS:ltä, maski ja SHA256SUMS, ja lähetys kuvat-sessiolle.
+**VS 09.2x:** pohjakuvat k51/c2/z15.jpg ja z16.jpg (koko alue paikallisesta datasta, 48,836–48,894 / 2,307–2,373). Ohje k51/TULOS.md; koodi koe-c2.diff k49 873762394:n päälle, ELAVA_C=3; ei haarassa, ei pelikelpoinen. KK ei ole hyväksynyt ulkoasua.
