@@ -1,0 +1,56 @@
+{
+  "method": "Actual GLB CPU diffuse renderer; source baseColorTexture and target linear COLOR_0 read from files; same camera and illumination; no glow or engine shader",
+  "limitations": "No specular/PBR roughness simulation; receiver checks actual gameplay and glow",
+  "smallSizes": [
+    {
+      "name": "Herkkuomena",
+      "nominalModelHeightPixels": 30,
+      "canvasSize": [
+        38,
+        38
+      ]
+    },
+    {
+      "name": "M\u00e4t\u00e4 omena v2",
+      "nominalModelHeightPixels": 30,
+      "canvasSize": [
+        38,
+        38
+      ]
+    },
+    {
+      "name": "Herkkuomena",
+      "nominalModelHeightPixels": 48,
+      "canvasSize": [
+        56,
+        56
+      ]
+    },
+    {
+      "name": "M\u00e4t\u00e4 omena v2",
+      "nominalModelHeightPixels": 48,
+      "canvasSize": [
+        56,
+        56
+      ]
+    },
+    {
+      "name": "Herkkuomena",
+      "nominalModelHeightPixels": 60,
+      "canvasSize": [
+        68,
+        68
+      ]
+    },
+    {
+      "name": "M\u00e4t\u00e4 omena v2",
+      "nominalModelHeightPixels": 60,
+      "canvasSize": [
+        68,
+        68
+      ]
+    }
+  ],
+  "wallSeconds": 1.1077721118927002,
+  "peakRSSBytes": 71761920
+}

@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "sourceSHA256": "5363570f8528cb5e8adcaf30c5e911311d28a2cb67e502172457f1f1f87f35cd",
+  "modelSHA256": "8bd49658585d374beddc592e1eae99420069a9e6865a68239db53891c6baafac",
+  "bytes": 355424,
+  "geometryIntegrity": "ALL_ORIGINAL_BINARY_BYTES_PRESERVED",
+  "geometryChanged": false,
+  "stemGeometryAndMaterialUnchanged": true,
+  "leafGeometryUnchanged": true,
+  "nodeTransformsUnchanged": true,
+  "pivot": "ground; original unchanged",
+  "units": "metres",
+  "boundsMin": [
+    -0.06825000047683716,
+    0.0,
+    -0.0676390677690506
+  ],
+  "boundsMax": [
+    0.07175000011920929,
+    0.14084264636039734,
+    0.0676390677690506
+  ],
+  "dimensionsMetres": [
+    0.14000000059604645,
+    0.14084264636039734,
+    0.1352781355381012
+  ],
+  "triangles": 2376,
+  "parts": [
+    {
+      "part": "fruit",
+      "triangles": 2208,
+      "positionsNormalsUVIndicesByteIdentical": true
+    },
+    {
+      "part": "stem",
+      "triangles": 64,
+      "positionsNormalsUVIndicesByteIdentical": true
+    },
+    {
+      "part": "leaf",
+      "triangles": 104,
+      "positionsNormalsUVIndicesByteIdentical": true
+    }
+  ],
+  "addedGeometry": false,
+  "sourceImageRetainedButUnused": true,
+  "activeTextureBindings": 0,
+  "surface": "glTF linear COLOR_0 vertex colours multiplied by white PBR baseColorFactor; roughness 0.90; brown dry leaf; original stem",
+  "colorStats": {
+    "sRGBMin": [
+      0.2007295581971062,
+      0.13504463331566485,
+      0.06323326967510323
+    ],
+    "sRGBMax": [
+      0.6543949682827345,
+      0.46847299802385645,
+      0.20874630293349686
+    ],
+    "darkPatchVertexFraction": 0.24611610793131644
+  },
+  "gameSizeMetres": 0.22,
+  "gameScaleChanged": false,
+  "TripoJobs": [],
+  "credits": 0,
+  "renderMethod": "lightweight CPU orthographic actual-GLB geometry and colour; not Unity PBR or gameplay",
+  "receiverChecksPending": [
+    "PK integration with COLOR_0 retained",
+    "KK actual 30-60px gameplay readability",
+    "game glow with new material"
+  ],
+  "createdAt": "2026-11-04T02:33:19.165805+00:00",
+  "visualReview": {
+    "status": "PASS_LOCAL_PREVIEW",
+    "reviewedAt": "2026-11-04T02:34:49.175051+00:00",
+    "images": [
+      "omenat-rinnakkain.png",
+      "omena-mata-v2-neljalta-puolelta.png",
+      "omenat-30-48-60px.png"
+    ],
+    "observations": [
+      "Recognizable unchanged apple and stem silhouette",
+      "Brown rather than red base with dark patches on all four inspected sides",
+      "In preview, red and brown variants remain distinct at nominal30/48/60px",
+      "Large close-up patch edges follow vertex-colour interpolation; intended gameplay size30–60px"
+    ],
+    "gameplayAcceptance": false
+  }
+}

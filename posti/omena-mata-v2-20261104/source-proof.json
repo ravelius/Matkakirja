@@ -1,0 +1,13 @@
+{
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-omena-aarteet-20261019/kerattavat-v1/models/omena-herkullinen.glb",
+  "sha256": "5363570f8528cb5e8adcaf30c5e911311d28a2cb67e502172457f1f1f87f35cd",
+  "originalZipMemberVerified": true,
+  "originalReceiptCommit": "2ca016443795b5c150693fa8161cba6d13a1623f",
+  "publishedURL": "https://media.matkakirja.app/juoksupeli/maailma-v4/kerattavat/omena-herkullinen.glb",
+  "publishedURLRead": "HTTP403 observed by watcher; local original verified against original manifest and zip",
+  "orderCommit": "6d549e0b8a29f74f56c40c574de8ed6ea1b7c572",
+  "originalSourceUnchanged": true,
+  "originalManifest": "output/juoksupeli-omena-aarteet-20261019/kerattavat-v1/metadata/pickups.json",
+  "originalArchiveSHA256": "2f520c3ac4f720950ac7ed72945090ed3117e9c6a4ca9223a807e5be7b89d2aa",
+  "originalArchiveMember": "models/omena-herkullinen.glb"
+}
