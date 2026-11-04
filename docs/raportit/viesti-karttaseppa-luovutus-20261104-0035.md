@@ -263,3 +263,9 @@ PT:n pyyntö 15l:stä (sovita ja kooste PT:lle → KK) on jo tehty lisäyksessä
 - **proto-3d:ssä ei ole origin-remotea** (vain natiivi-backup): N-haaran sha:t kulkevat paikallisina; push origin ei toimi.
 - **Odottaa kuvia:** k33/3 Montmartre ja k33/5 r-0-21 / r-0-21-paluu; kysytty PT:ltä, kuvia ei löytynyt lokeista.
 - **Vahti:** Monitor `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/vahti.zsh | grep --line-buffered -E "TASANKO|ESITTELY|KUOLI|virhe|VIRHE"`, käynnissä tässä sessiossa. Tiedot OpenFreeMapista: robots.txt palautti 403, joten en tee lisää skriptattuja hakuja.
+
+## LISÄYS 4.11. klo 03.09 (uusin; lue ensin): 15l hyväksytty, sha annettu
+- **KK 03.07 hyväksyi Tuileries 15l:n.** 716c2add7, haara karttaseppa/pariisi-tuileries-15l (vanhempi 932078810; merge-tree: puhdas k34 f97382341:n päälle, ei ajettu), sha PT:llä ja VS:llä. Vain Tuileries-lajin kuva v1 → v2 ja nimipeite puutarhan alueella (tarkistettu vertailemalla); ei käännetty. Kuva kirjastossa: isoisa-2029/esine/pariisi/puutarha-tuileries-v2.png, JU vie.
+- **P/puutarhat-codex on nyt v2:lla** ja puutarha-sovitus.py:n ODOTTAA on tyhjä, joten kaikki seuraavat nimipeite- ja kerros-ajot käyttävät 15l:ää.
+- **Avoin, pelikuvasta:** vastarannan 5 puuta (lon 2,3206–2,3220, lat 48,862) 0,72:lta: jos näkyvät vedessä, rivi pois ilman uutta siirtokierrosta; jos pelin vesi on OSM:ää leveämpi, mittaus pelin veden mukaan koko Seinelle seuraavalla kierroksella (KORJAUSLISTA osio 15l). Lisäksi k33/3 Montmartre ja k33/5 r-0-21 / -paluu. PT tuo polun noin 05.30, ei omaa ajoa ennen sitä.
+- **N-haara** on edelleen karttaseppa/pariisi-nimet-220 (5fd4eb344, vain testi), 716c2add7 ei ole siinä.
