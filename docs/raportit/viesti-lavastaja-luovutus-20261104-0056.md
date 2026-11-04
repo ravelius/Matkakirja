@@ -97,3 +97,11 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 
 ## LISÄYS 04.11. 05.22 (koeajo4 mitätön, uusinta koeajo5)
 - koeajo4 on mitätön: sk-lav-kiila-kaikki.txt:ssä koejuuren polku oli katot-kiila3 (oma korvausvirheeni), joten palatsi ei latautunut; kuvissa 5d ja alkulento 3 on vain taivas/tyhjä maa. Älä käytä koeajo4/pari-*.jpg:tä. Polku korjattu; uusinta pyydetty JU:lta → L/koeajo5/. Kuvat kuten edellisessä lisäyksessä; rakenna parit koeajo2 vs. koeajo5 samoista rajauksista.
+
+## LISÄYS 04.11. (PT 05.4x, UUSI TILAUS; tee koeajo5:n katsomisen ja parien jälkeen; EN aloittanut, EN lukenut tiedostoja)
+Tiedot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/muuri-koe/TULOS.md ja pari-varjot-pois-vs-leivonta-pois.png. Kielletyn kaupungin kk-tausta-1-0 (tausta-v115) muurin tumma lohko on leivontavika, myös julkaistussa 217:ssä (PK:n mittaus). Omalle haaralle, ei vientiä:
+1. Muuriin aukion puolelle yksi pinta (normaali +z), leivonta sille puolelle, kaksoiskerros pois (z −367,1 / −367,3).
+2. Kivijalka naapurien tasoon 1,2 m ja näkyviin punaisen alle; harmaa 3,8 m:n lohko tarkistetaan mallista.
+3. Sama haku koko tausta-mallista: kaksipuoliset pinnat, joiden normaali osoittaa pelialueesta poispäin; LISTA PT:lle ennen muiden korjaamista.
+Leivonnan ajovuoro JU:lta. Jos leivontatyökalu on VS:n, pyydä suoraan. Todiste: sama kamerakohta ennen ja jälkeen (PK:n parissa kamerat 6,5 m eri kohdissa). Harmaa kaista on Kultaisen veden joki, ei kuulu tähän.
+Huom. PT kirjoitti "koeajo4:n jälkeen"; koeajo4 oli mitätön, uusinta on koeajo5.
