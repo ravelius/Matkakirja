@@ -18,3 +18,10 @@ Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9
 
 ## Ratkaistu
 Tie-ero 0,21 mennessä | paluu: tiet samat nimien ulkopuolella (k24, f5c1, yhd2; skripti tieero-021-paluu.py; nimet ja raiteet rajattu pois, 21–23 % kuvasta). Ero vain nimissä, KS:n. Ei tutkittavaa, ellei uusi ajo näytä eroa.
+
+## LISÄYS 05.06 (Postivahti: ei nollausta vielä; sävyero alustavasti, ei ratkaistu)
+**Sävyero (kohta 3): julkaistusta kartasta EI vielä tiedetä.** Ei ole kuvaa julkaistusta samasta kohdasta. Tarvitaan JU:n vuorolla: julkaistu versio, `aja 48.82 2.4609 0.05 2` ja rajausten 2–3 kohdat.
+- Raaka pohja ei näytä sitä: 2026-11-03-pohja-valitaso 10/518–519/351–352 ilman suorakulmioita; palarajalla 2,4609 ero yläpalassa 0,1–0,3, alapalassa 1,6–2,3 yksikköä (6 px kummaltakin puolelta).
+- todiste-015.png: reunat ovat pysty- ja vaakasuoria (rajaukset 3 ja 4). Hypoteesi, ei testattu: syntyy laitteella pohjan puhdistuksessa (ElavaTyyli.PoistaKarkeaRanta, PoistaKierros: 5 × 5 ympäristö, vanhemman pikselit suurennettuna), rajauksessa 4 palan reunalla. Tämä on ristiriidassa luovutuksen 03.25 kirjauksen "PoistaKierros ei selitä" kanssa; sen perustetta ei ole tallessa. Toinen ehdokas: vektorin aluetäytöt.
+- Testi ilman iPadia: aja puhdistus Pythonilla paloille 10/518/352 ja 10/519/352 (edellinen koeskripti ei säilynyt) ja vertaa rajauksiin. Pohja: https://media.matkakirja.app/julisteet/pallo/laatat/2026-11-03-pohja-valitaso/{z}/{x}/{y}.jpg (Rakennus.LaattaUrl).
+- Mittaus k-r-joinville, x 1366 (lon 2,4609): paperin askel 0–3,3, joten sauma ei näy koko kaistan keskiarvossa; ero on paikallinen.
