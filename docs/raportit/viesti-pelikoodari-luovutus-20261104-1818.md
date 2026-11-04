@@ -72,3 +72,7 @@ Tiedossa: näkyvät koerungossa `lokit/esikatselu-20261104-182602/ita-etela-02.p
 **Kk3:n kaide, seuraava työ:** kansio koeajosta e73f5790f (sk-kk3) tulee JU:lta, jonossa L1:llä. Vertaa `kk2/kuvat/tk-kaide-*-kk3` (LAV:n ajo ilman korjausta). Jos kaide palaa, syy todistettu: rivi PT:lle ja LAV:lle (LAV:lle luvattu tulos). Sitten vaaleus kaukana ja LAV:n pyyntö (kohta 18.3x); kk2-kuvissa näyttää, että kk2:n "kuvioitu" kaide on harmaa yksinkertainen kaide vaalean C2:n edessä, joten vaaleus on C2:n oma, tarkista lähempää. Älä vie 77194ed87:ää, vaan 789f3046f.
 **Ovet:** täyte kohdan 2.2 mukaan, ajo ja näyttö kohdan 3 mukaan.
 Konteksti 31 % pehmeän rajan yli: täytettä ei aloitettu tässä sessiossa.
+
+## LISÄYS 19.1x/2: PT muutti järjestyksen: muurin muistiero ennen kaidetta ja ovia. Ei uutta iPad-ajoa omin päin
+Lähetetty PT:lle 19.1x. Parista `muisti-tarkka.log` (kohdistus ALKU:sta): huippu 789 4130 Mt 119,7 s:ssa, d9c 4009 Mt 118,9 s:ssa, molemmat kohdassa "sokkelon variantit lämmitetty". Huipussa gfx 2110 / 2142, malloc 651 / 652, int 2152 / 2055, comp 874 / 895, purg 247 / 214; hyppy 228 / 146 Mt. 200 s: fp 3657 / 3685, joten ero ei jää pysyväksi (789:ssä lowMemory vapautti kuvia 14 Mt). 60 s: comp 104 / 0, eli ajojärjestys ei ole poissuljettu.
+Ei todistettu: varjostinmuunnelmien osuutta ei voi lukea lokista, esilämmitysrivi sama (53 varianttia). PT:n pyytämä toinen pari JU:lla ratkaisee hajonnan; sen jälkeen päätös. Jos muunnelmat todistuvat, kevennys kohdistetaan lämmitykseen. Skriptit `muistiero*.py` kopioitu `_tyo/pelikoodari/palat/tyokalut/`.
