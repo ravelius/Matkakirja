@@ -30,3 +30,6 @@ yhd5 8dee95d57 (15/15, OK 3517 Mt; PT, VS, KS; kooste katsottu, ei täysikoossa)
 - zsh-tappo TERMillä ei aja EXIT-trappia: esikatselu.sh:n lukko jää, mutta seuraava ajo purkaa kuolleen pid:n lukon itse; palauta() jää ajamatta, seuraava ajo hoitaa.
 - Uudelleenkäynnistyksen jälkeen laite voi vaatia avauksen: ajatta vain, jos omistaja on tavoitettavissa.
 - Vanha "AJETTU" lokissa päästää ketjun läpi (yhd5 lähti rivi 168:n mitättömästä ajosta): siirrä tai merkitse mitätön rivi.
+
+## LISÄYS 08.27 (PT 08.2x, KORVAA iPad-osat ylhäällä)
+Koerunko c4a5bfafb. T/pk-koe-c4a.zsh: käännös L2 käynnissä, odottaa laitetta (unavailable), sitten lentokuvat, sali 1, juoksu 2 x, uusinta-nappi, xf, 40 x; rivit PK + PT. Sen jälkeen rivi 168 + KS kierto, sitten k34. yhd6/yhd7 PYSÄYTETTY, VS:n rivin mukaan. Be28, 1d37 ja iPad 7ddd pois. Mac: ristiv90 käynnissä, sen jälkeen ei uusia ristiajoja. iPadia EI käynnistetä ilman omistajaa: vaatii koodin (PT).
