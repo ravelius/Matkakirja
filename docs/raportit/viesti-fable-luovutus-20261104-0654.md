@@ -33,3 +33,7 @@ Kohde on ulkomuuri, ei 1-0-seinä. 80 mallia: 4 kokeena onnistui (muuri/ulkomuur
 - Kokeen numeroa ei voi antaa kysymättä: k41 oli jo käytössä; kysy VS:ltä tai käytä seuraavaa.
 - Rooli, jolle annan kokeen pohjan, voi olla eri linjalla kuin juna: tarkista merge-base ennen kuin kirjoitat "todistaa junan".
 - Jaoin Sacré-Cœurin väärin ja annoin "koko 719": lue tekijä ja KK:n sanat ennen käskyä.
+
+## LISÄYS 06.5x (korvaa ristiriitaiset kohdat)
+- VS k44 e97f26bcc (linssiseppa2/pariisi-k44, 615/615, paikallinen, Unity ja laite todistamatta): arkki, k40-kadut, z15, k41 + k43, saumaton arkki. EI vielä katsottu eikä yhdistetty: kuvat _tyo/linssiseppa2/pariisi-tyyli/k44/. Seuraavaksi yhd7 = k44 + KS:n puut 43ba52fe7 + katunimet, JU:n vuorolle; laitekuva KK:lle, muisti ja vieritys. z14|z15 sävy ja z17 rantaporras auki.
+- KK: nähtävyydet ei omistajalle; otto 3 vain ND:stä (korttelit oikeasti, sävysovitus myös rakennukselle), viety KS:lle. Puut 43ba52fe7 ok yhd7:ään, puistot täydemmiksi pelikuvan jälkeen. Porras pois ok, ei omaa leivontaa; KK kertoo omistajalle ennen TF-pyyntöä. PK:n lähitaso yhdistelmärungolla, ei junaan ennen kuvaa.
