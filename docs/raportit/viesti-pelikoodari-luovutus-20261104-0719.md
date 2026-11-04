@@ -27,3 +27,16 @@ Korvaa -0651:n. Muu -0626:sta voimassa (muuri LAV:n juurella, ohitusajon kohdat)
 - **Junan koerunko on be28de835** (PT kuittasi). **Lähitason koe on 32100a96f** (`-koe2-ovi` = be28 + lähitaso), 827/827, tarkista.sh läpi. Korvaa 08b6eee65:n: lue kohdan 1 vertailu `eec900eb3 | 32100a96f`. uudestaan-nappi be28:lla.
 - **Musta aukko on uusi:** samasta kamerasta (125,62; 2,37; -811,40) 13 ajoa 3.11. 01.15–08.45 musta 0 % (viimeinen cf40ca767: tausta-v114, osasarja-v6), 349e8f8db 46,7 % (tausta-v115, osasarja-v8). 217:n tallenteessa 1.11. (esikatselu-20261101-232407, kuvat 200–300) ei aukkoa; itse TF:ää ei ajettu. Epäily v115 tai osasarja-v8, ei todistettu. Vertailu LAV:lla suoraan (PT 07.18). Eec:n ajosta rivi PT:lle.
 - **Kun eec:n reitti valmistuu:** sama kamerakuva `peitto-reitti/eec900eb3/` tallenteesta `lokit/esikatselu-*/av/` (ks. kansio.txt), rivi PT:lle.
+
+## Lisäys ennen nollausta: KK:n ja JU:n viestit (LUE, ei toisteta)
+**KK:**
+1. Musta aukko on junan este, jos se on rungossa. Tarkista sama paikka be28de835:ssä ja TF 217:ssä, sitten syy. Korjaa puuttuva maa, älä piilota aukkoa kameralla. Kuva samasta kohdasta ennen ja jälkeen KK:lle.
+2. Uudestaan: suunta on 2.177:n mukainen. Aja tarkistusajo ja mittaa lennon muisti uusintajuoksussa iPadilla. Kosketuksen ohitus mukaan ajoon. 40 × Uudestaan ajetaan lentoineen rungon todistuksessa.
+3. Sali: "Puyi näkyy" riittää. Katon poistohetki jää auki (2.177: samalla hetkellä, kun keisari menee sisään): todista ajosta, jossa katto on kuvassa ennen ovea, tai lokista.
+4. Sukellus: ok.
+KK odottaa lähitason kuvia, mutta nimesi rungon 08b6eee65: **kerro KK:lle, että vertailu on eec900eb3 | 32100a96f.**
+
+**JU:**
+- iPad-koerunko on PT:n käskyllä be28de835; tulokset sillä shalla.
+- JU lisäsi muistiajon `pk-mittaa-uusinta-nappi.zsh` (mittaa-uudestaan-mallilla; avaus 1, `uudestaan nappi` 6 x 60 s, alku ja maali pois). **Tarkista reitti ennen yhd5:n loppua, korjaa jos väärä.** Ei sisällä kosketuksen ohitusta eikä KK:n 40 ×:ää: tilaa ne erikseen.
+- Mac-ketju: eec900eb3 käynnissä, sitten 32100a96f, sitten uudestaan-nappi be28de835.
