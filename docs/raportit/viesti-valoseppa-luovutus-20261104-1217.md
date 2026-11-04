@@ -35,3 +35,7 @@ Muistivahti- ja kuvaloki ei kerro palojen valintaa: katso aina ensin "liikevalin
 KK: iPadin väri on hyväksyttyä k55:tä lämpimämpi. KK:n karkea mitta, eri rajaukset: z16 k55 202/179/143, iPad p-z16 213/182/135 (R−B 59 → 78); z14 k55 222/200/157, iPad p-z14 219/189/138 (65 → 81).
 Muistikorjauksen ja läiskien jälkeen, ei omaa iPad-ajoa: seuraavasta ajosta sama kortteli samalla zoomilla ylhäältä, iPad | k55. Jos ero pitää, selvitä syy ja korjaa niin, että iPad vastaa k55:tä. Pari KK:lle ilman tekstikaistaa, m/px kummallekin puolelle. Lisää ylhäältä otettu kuva sk-striimi-loput.txt:ään ennen sen ajoa (p-z15–z17 ovat kallistettuja). Syy mittaamatta; tarkista ensin varjostimen patina ja rinnevarjo, koska k55 on piirretty pelin ulkopuolella (oletus).
 JU 12.18: vieritys valmis, mitat KK:lla ja KK:n tarkistamat.
+
+## LISÄYS 3 (PT, KK:n sana)
+Läiskät: KK KYLLÄ seuraavaan väriversioon, kun muisti ja sauma on todistettu. Vain pienet ruoho- ja pensasalueet; metsät, kaupunkipuistot ja muu lukittu k55-pinta ennallaan. Valmistelu sallittu nyt, ei ajoa eikä vientiä ennen todistusta. KK:lle pari ennen ja jälkeen, sama kohta ja mittakaava (p-z17 Luxembourg), sekä koko kaupungin kuva, ettei z14–z15 muutu.
+Toteutus avoin: ElavaTyyli.cs rivit 309 (alfa: grass ei-Puisto 80) ja 534 (Pehmea, kun metsa ja alfa != 245). Pienet alueet vaativat oman peiton pinta-alarajalla, koska wood ja suuret grass-alueet pysyvät; vahvista PT:ltä, tarkoittaako KYLLÄ poistoa vai terävää reunaa. Oma koehaara 7f64cd657:n päälle; tyyliversio vaihtuu.
