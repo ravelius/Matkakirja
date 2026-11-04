@@ -22,3 +22,9 @@ Korjaus efe85dda7 (natiiviseppa/tasainen-striimi-2, etähaara ajan tasalla). Skr
 
 ## LISÄYS maakuntarajat (ohittaa Työ 1:n sha:n ja JU-kohdan)
 Mac-parit tulivat (lokit/esikatselu-20261104-152659 ja -153426, vierekkäin _tyo/natiiviseppa/maakuntarajat/parit/). Katsottu vain osa, lista ja löydökset tulos.md:n lopussa. **Kärki 35b6ee8b4** (c194bbf29 + leveyskatto 1,6). Seuraavaksi: JU:n uusi jälkeen-ajo kärjestä, katso loput kuvat (ranta, valtionraja, kallistetut, Suomi), selvitä karkean katkon jakso (70 vs. odotus 36 kuvapx) maakunta tila -riveistä, iPad-kuva, jos PT antaa vuoron. Sitten kuvat ja sha PT:lle.
+
+## LISÄYS PT:n kysymys (SEURAAVA TYÖ ENSIN; kova raja 35 %, ei aloitettu)
+PT: VS löysi k45:n h-z13:sta suoran vaakasauman veden yli (rivi 840–844, väri hyppää), kallistettuna, varjovalinta ei päällä. Kuvat _tyo/linssiseppa2/pariisi-tyyli/striimi/muisti-484adb22f/k45-h-z13-sauma-*.png. **Onko sama avoin vika kuin "kallistus ≥ 3° z12–z14, portti ei korjaa"? Selvitä, vastaa rivillä. Ei korjausta ennen vastausta.**
+- Kuvia ei ole katsottu, joten vastausta ei ole.
+- **sk-tasainen-kallistus ei sisällä Helsinkiä**, vain Pariisin 48.8530 2.3350, toisin kuin PT:n viestissä oletettiin. Kerrottu PT:lle ja ehdotettu lisäajoa: aja 60.1699 24.9384 0.26 2, kallista 45, sama kuva kokeen kanssa ja `maasto tasainen pois`.
+- Vertailu: katso, osuuko rivi 840–844 maastopalan rajaan (reunat.py olettaa suoran ylhäältä, ei käy kallistettuun). Veden yli sisältöero ei ole talot ja tiet, vaan väri, joten syy voi olla eri kuin z12–z14:n saumassa: älä oleta samaksi.
