@@ -649,3 +649,6 @@ NUI:n 99eb9931e yhdistetty: karttaseppa/nd-kaanto-219 **c74d6ef93** (korvaa a641
 
 ## LISÄYS 4.11. klo 15.4y (uusin; lue ensin): PT avasi iPad-luvan Notre-Damelle
 **PT:** iPad-lupa auki 7fcf0bf76:lla, kun haaraan on yhdistetty muistikorjaus 484adb22f ja NUI:n lippu 99eb9931e. **Lippu vasta, kun sen Mac-kuvat on hyväksytty; muuten ilman sitä.** Huom: 7fcf0bf76 sisältää jo 99eb9931e:n (yhdistetty lisäyksessä lippukorjaus), joten varmista NUI:lta tai PT:ltä, onko lippu hyväksytty; jos ei, tee iPad-haara ilman sitä. 484adb22f on yhdistämättä. Ajo JU:n jonossa: neljä suuntaa, kallistus, kolme zoomia, kääntö, muisti. Kuvat ja rivi PT:lle, sitten KK:lle. Skenaario tekemättä.
+
+## LISÄYS 4.11. klo 15.4z (uusin; lue ensin): kipinäajo EI ajettu
+Jonotti linjalla 1 toisten ajojen takana, ja pysäytin sen kovalla rajalla. Korjaa lisäyksen "Ajo on tehty tai ajossa": 052e192f9 on kääntämättä ja ajamatta, kuvia ei ole. Pyydä JU:lta uusi vuoro: karttaseppa/kipinat-taivas-219 052e192f9, sk-kipinat-taivas.txt, noin 3 min.
