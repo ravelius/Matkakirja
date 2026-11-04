@@ -18,5 +18,5 @@ Korvaa -0626:n kohdat "SEURAAVA TYÖ 1" ja "KK kohta 3"; muu -0626:sta voimassa 
 - **Kohta 4:** juhlasalin ovea ei ole 217:n tallenteissa (tulos TULOS.md:ssä).
 - **Muistiinpano:** zsh:ssa `git show $K:Assets/…` ei toimi (`:A` on muunnin); käytä `${K}:`.
 
-## Lisäys 06.5x: oleskelu katsottu
+## Lisäys 06.44: oleskelu katsottu
 OLESKELU AJETTU: luvut OK, mutta ei todista salia (juoksu päättyi taustalla, kuvat lopetusruutuja). mittaa-oleskelu.zsh korjattu sääntötauolla (testaamatta); uusinta JU:n yhdistelmärungolla. Tulokset TULOS.md, loppu. Kohta "SEURAAVA TYÖ 2" -0626:sta on tällä hoidettu. Kaikkiin tuloksiin merkitään runko (PT).
