@@ -28,7 +28,7 @@ Tarkistamatta: `ovikoe` tarkastelun jälkeen listan riviltä; aiemmin se ajettii
 Vanhat auki: `Täytteen` lisäksi 绛雪轩:n runko portaiden vieressä, ikkunoiden L-ristikko, LAV `koejuuri-jalustat`, 乾清宫:n paneelit, beige kouru, maan raidat PT:llä/LAV:lla.
 Viestit: PT local_8d8ebf72, JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KK local_d5f31591, LAV local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e, Postivahti local_1f31f830-9df5-41c1-8992-172e100af57f.
 
-## LISÄYS 18.0x: ajo tehty, tämä korvaa "Seuraavaksi"-kohdat 1–2
+## LISÄYS 17.5x: ajo tehty, tämä korvaa "Seuraavaksi"-kohdat 1–2
 Ajo ee9ed51b0, linja 2, 488 s (ei 1,5 h; runko Macilla): `lokit/tarkastelukuvat-ee9ed51b0-174658/`, `ovet-arkki.png` (22), `ovettomat-arkki.png` (18), `nanxun-*.png`. Loki: "ovet: mallit valmis, 236 ovea". Arkkityökalu oli scratchpadissa: tee uudelleen PIL:llä (5 saraketta, 640 × 480, Hiragino Sans GB). Katsottu: ovet-arkki puolikkaana, ovettomat 3/8:na, 南薰殿 ja nanxun-kaukaa täysikokoisina; **muita ei täysikokoisina: täytteen sauma ja karmin liitos arvioimatta**. Mittaukset ruutuajasta eivät mukana.
 Näkyy: malli toimii, lehdet aukeavat ulos, hämärässä ei viivaa arkin tarkkuudella, 东长房 ja 长春宫戏台 kunnossa.
 Korjattavat, järjestyksessä:
@@ -36,4 +36,4 @@ Korjattavat, järjestyksessä:
 2. **Ovettomien kamera:** `ovettomat_kuvat.py` ei tarkista näköyhteyttä: 碑亭, 御景亭, 东所, 1341826243, 房子11 näyttävät vain seinää tai lehteä. Käytä ovikuvat.py:n `nakyy`/`ei_puuta`. Arkista jo näkyy: 凝香亭, 玉翠亭, 碧螺亭, 耸秀亭 eivät ole avoimia paviljonkeja vaan suljettuja: "avoin 1,0" ei kelpaa perusteluksi. 延禧宫 ja 弘义阁: irrallinen valkoinen taso, syy tutkimatta.
 3. **崇楼2:** `ovi-崇楼2-maasta` on käytävän seinää. Kamera uudelleen.
 4. **南薰殿:** `nanxun-kaukaa`: friisi ja katos kelluvat kivijalan päällä ilman runkoa myös kaukaa, yli 60 m:n rajan tuntumassa ei selvitetty. Ei ovivika. Osa `seina-2m-t80` (55 polkua, muuri3). Vienti antaa rungon, peli ei: tutki `OsaMalli`/`InstanssiOsat`, ja laske ovet, joiden takana on vain tätä osaa. Rivi PT:lle lähetetty.
-Sen jälkeen uusi ajo → KK → omistajalle. Väliarkki KK:lla 18.0x.
+Sen jälkeen uusi ajo → KK → omistajalle. Väliarkki KK:lla 17.5x.
