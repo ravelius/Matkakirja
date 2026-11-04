@@ -40,3 +40,10 @@ karttaseppa/pariisi-nimet-220 kärki nyt 932078810 (korvaa 498ce79dd:n): 0,21:n 
 **Haamut, kohta 2 POIS:** r-0-13 iPadilla täysinä (täysikokoinen rajaus), 0,15:llä ei näy. Kerrottu PT:lle.
 **Jää, ei estä aamua:** haalea suorareunainen sävyero ainakin 2 kohdassa (Joinville lon 2,4609; kuvan 0-15 kohta (2452,370), alapuoli), myös vanhassa ajossa; PoistaKierros ei selitä sitä, syy tutkimatta.
 **Seuraavaksi:** kohta 3 (tiet 0,21 mennessä | paluu, r-0-21 ja r-0-21-paluu, syy tutkimatta), kohta 4 (z11/z12 k28:sta), kohta 5 (kulu). elava-kulu tässä ajossa: z14 mediaani 87 ms, z15 73 ms, huippu 1305/1616 ms; ero k24:n 236/305 ms:aan selittämättä, n on suurempi.
+
+## LISÄYS 03.28 (PT, KK 03.25; KORJAUSLISTA osio f5c1; SITOO)
+**f5c1f14b0 OK aamuun** (KK: tummat läiskät poissa, tiet ja raiteet ennallaan). Ei junaan, pinta ei hyväksytty.
+**Seuraava kierros, ei aamun este: haalea suorareunainen sävyero** rajauksissa 2, 3 ja 4 (Joinville, lon 2,4609; todiste-015.png), myös vanhassa ajossa. Suora reuna ei saa jäädä lopulliseen. Selvitä ensin, onko sama julkaistussa kartassa (Raamattu-linja: KK k24/2:n kysymys, tarkistamatta). Syy tutkimatta.
+**Tie-ero 0,21 mennessä | paluu RATKAISTU, koodia ei muutettu:** nimien ulkopuolella kuvat ovat samat. Mitattu lokit/julkaisija-reuna-iso-f5c1f14b0/ ja julkaisija-k24-iso-3332c8e15/, 2732×2048: keskimääräinen ero 0,0, tiepikselit 216,31 | 216,31 ja 216,35 | 216,35. Mittauksesta rajattu pois nimet ja raiteet sekä 7 px niiden ympäriltä (23 % kuvasta), joten nimien alta tietä ei ole verrattu. Skripti _tyo/natiiviseppa/aluekuva-koko/tieero-021-paluu.py. KK:n "tiet vaaleammat" nähtiin arkilta 36 %:n koossa; se johtuu nimistä (isot tummat nimet mennessä), ei teistä. Nimien koko on KS:n (932078810, k33:ssa); tuomio KK:n ohjeen mukaan yhdistelmän r-0-21 / paluu -kuvista. Ei uutta tutkittavaa NS:lle, ellei yhdistelmässä tule tie-eroa: aja skripti sen kuville.
+**Yhdistelmästä katsotaan** c-0-17 ja r-0-21-paluu (KK f5c1/2).
+**0,30-kuva:** KK haluaa sen yhdistelmän ajosta. JU lisää, jos ajo ei ole alkanut; muuten NS ottaa oman, PT kertoo. Älä ota ennen PT:n riviä.
