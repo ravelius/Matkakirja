@@ -28,3 +28,16 @@ Ennallaan: -0142 "Muut" ja "Tarkista"-rivi (Cull Back, ruudukkokuvio malja2-120)
 - **Erillistä Releasea ei ole:** mittausreitti on jo Release-kokoonpano (laite-sha.sh). TULOS.md korjattu. App Store -käännöstä ei mitata.
 - **Taivas:** selvitä kamera-219-ajosta, näkyykö 2 s:n taivas pelaajan uudelleenaloituksessa. Jos näkyy, se on vika ja korjataan samaan shaan ennen iPad-mittauksia; rivi PT:lle.
 - **JU pitää iPad-sarjan** pk-0d68-laite.zsh, kunnes annan rivin; sen jälkeen lopullisella shalla (päivitä skriptin sha, jos taivaskorjaus tehdään).
+
+## Lisäys 02.2x: palvelijat v10 (KK 02.15; korvaa "Palvelijat"-osion)
+- v9b + v9c ja huomiot PT:llä ja KK:lla (v9c/HUOMIOT.md). KK: **maljakko hyväksytty**; sirpaleet hyväksytty, kun erillään ja ohuemmat (koodi riittää, ei Codexia); lätäkön muoto, koko ja näkyvyys hyväksytty, väri EI; ämpärin sisus tummaa puuta.
+- **v10 65b83b74d** (pelikoodari/arkihahmot-218), kuvarunko ba669e5bb (palvelijat-kuva-218). Unity 0 virhettä, ajamatta. JU:n jonossa kamera-219:n jälkeen: `_tyo/pelikoodari/palvelijat-v10/aja.zsh`; kuvat v10/vesi ja v10/malja.
+- **Katso ja tuo KK:lle PT:n kautta sama juoksukuva ja lähikuva:** lätäkkö (tavoite: sisus noin 150/185/225, reuna kivi noin 0,7×, pilviheijastus noin 218/216/225, selkeä reuna; ulkonäkö ratkaisee, mittaa sisus PNG:stä), sirpaleet ohuet ja erillään, ämpärin sisus (kiekko suuaukolla: onko suunta oikea ja näkyykö?).
+- **Kengän rosoreuna:** Offset 0, -1 on arvaus, ei todennettu. Jos reuna säilyy ja syy ei ole pieni: listalle, ei estä (KK). Tarkista myös, ettei lätäkkö nyt välky kiveä vasten (z-fight), koska Offset muuttui.
+- **Palvelijatar v2 (KK kohta 5):** ei lopullista mallia; JU:n kuvausjakso Pariisin jälkeen; kuva edestä ja takaa KK:lle ennen kytkentää.
+- Junaan vasta korjausten jälkeen; PT päättää vuoron.
+
+## Jatko: järjestys
+1. kamera-219 (0d688683a, käynnissä L1:llä 02.18): katso kamera ja taivas, tulos PT:lle. Jos taivas näkyy pelaajan uudelleenaloituksessa: korjaa samaan shaan (huom. JuoksupeliNakyma.cs:1067 odottaa maailmaa ilman peittoa uudelleenaloituksessa; ensimmäisellä avauksella latauskuva peittää).
+2. Rivi JU:lle ja lopullinen sha: iPad-sarja pk-0d68-laite.zsh on PIDOSSA, kunnes annat rivin.
+3. v10-kuvat.
