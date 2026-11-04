@@ -26,3 +26,7 @@ Muistiinpano: malli piirtyy kaikkialla, etäisyysrajaa ei ole. Viestit: PT local
 
 ## LISÄYS JU 18.2x
 Muuriajot ketjussa L2:lla järjestyksessä 77194ed87, d9cde0f50, ee9ed51b0, TF 60bd5c356 (juna 217; julkaistu, ei runko-217-tf-haara). Alkavat 92c-käännöksen ja KS:n ND-puiden jälkeen. Kansiot tulevat JU:lta riviksi tälle sessiolle.
+
+## LISÄYS PT 18.2x: muistiajo (korvaa -1747:n "tulos KK:lle sellaisenaan")
+JU: 974f95213 lähtötaso 3975 Mt, ovet-esineet 4055 Mt (raja 4080; vertailu c4a5bfafb huippu 4068), 0 varoitusta. Kansiot `lokit/pelikoodari-muisti-lahtotaso-974f95213` ja `lokit/pelikoodari-muisti-ovet-esineet-974f95213`; kuvia ei ole katsottu.
+PT: kelpaa, mutta marginaali on vain 25 Mt eikä ovimalli mallit-v1 ole mukana. **Mittaa ovimalli samalla ajolla (JU:n vuoro) ja katso nämä kuvat, ennen kuin tulos näytetään KK:lle.** Mallit eivät ole ämpärissä: iPad tarvitsee juuren, ei vientiä ilman lupaa. Jos raja ylittyy, kevennys Tripon työkaluilla (omistaja 09.1x). Ota huomioon myös 77194ed87:n varianttimäärä, jos se tulee mukaan.
