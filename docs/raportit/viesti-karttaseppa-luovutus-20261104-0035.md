@@ -253,3 +253,7 @@ Täydet polut: P = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-2
 
 ## LISÄYS 4.11. klo 03.02 (uusin; lue ensin): toimitus 15l arvioitu
 /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/kolmio-tuileries-v2.jpg (4a0d4b573d73) PT:llä, odottaa KK:ta. Sovitettu kuva samassa kansiossa: tuileries-v2-sovitettu.png. **Aamun kerros 932078810 ei muutu:** puutarha-sovitus.py:n ODOTTAA pitää koodiversion, ja kirjaston kuvat täsmäävät tarkistettuna. Hyväksynnän jälkeen: tyhjennä ODOTTAA, aja sovitus, kerros.py ja nimipeite.py (uusi kuva puutarha-tuileries-v2.png), sha NS:lle tai VS:lle. Codexin kuittaus 15a–l yhä tekemättä, kuten edellisessä lisäyksessä. Muut avoimet: edellinen LISÄYS.
+
+## LISÄYS 4.11. klo 03.02 (uusin; lue ensin; PT:n viestit nollauksen hetkellä, TEKEMÄTTÄ)
+KK 03.01 (KORJAUSLISTA.md osio k33; ei aamun ehto): (1) "Hôtel Hyatt Regency Paris Étoile" pois TARKALLA nimellä, EI Hôtel-alulla (Hôtel de Ville ja Hôtel des Invalides säilyvät). Selvitetty: Q3142395 ja Hyatt eivät ole enää Merkittavat.json:ssa eikä muissa Assets/Matkakirja-json:eissa, joten nimi tulee elävästä kartasta (ElavaNimet, todennäköisesti poi tai place; ei varmistettu). Korjaa kohtaan ElavaNimet.EiKartanNimi tai poi-haaraan, testi ElavaKarttaTestit, sha VS:lle tai NS:lle. (2) Varmista pelikuvasta, että Montmartre näkyy huippusuodatuksen jälkeen. (3) Hystereesin tuomio r-0-21 / r-0-21-paluu-kuvista.
+PT:n pyyntö 15l:stä (sovita ja kooste PT:lle → KK) on jo tehty lisäyksessä edellä; ei aamun yhdistelmään.
