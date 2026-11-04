@@ -229,3 +229,15 @@ Omistaja (kuva docs/raportit/kaappaukset/omistaja-20261103/kk-2209-vaara-g-verta
 ## NÄHTÄVYYS SAA LEVITÄ TAKANA OLEVAN JOEN PÄÄLLE (3.11.2026 klo 22.14) (3.11.2026 klo 22.15)
 
 Omistaja oikeaa G:tä katsoessaan: "Tuossa kirkko on levitetty takana olevan joen päälle mikä kannattaa sallia myös uuteen karttaan." Tarkentaa 21.29-sääntöä: takana oleva joki ja ranta saa peittyä, edessä ja sivuilla joki auki ja kulku erottuu, ei katkaisua. Kirjattu 2.204:ään.
+
+## PIENET KADUT POIS MYÖS LÄHIKUVASTA (4.11.2026 klo 06.51)
+
+Omistajan kortti KK:ssa "Jätetäänkö pienet kadut pois myös lähikuvasta?" → "Pois (Suositus)"; selite "Vasen kuva: talot ehjinä, sivukadut ja niiden nimet puuttuvat." Kuva scratchpad/keskustelukanava/kuvat/pariisi-lahikuva-kadut-20261104.jpg (vasen = k40). Koe, ei pelikuva; muisti ja vieritys mittaamatta, kuva laitteelta KK:lle ennen hyväksyntää. Kirjattu RAKENNUSPERIAATE.md:hen (lukittu 1, oikaistaan 2) ja 2.204:ään.
+
+## JOKI JA RANNAT SAAVAT SIIRTYÄ KIRKON YMPÄRILLÄ (4.11.2026 klo 07.56)
+
+Omistaja klo 07.39: "Näyttää siltä että codexille annetaan liian pieni alue piirrettäväksi kun kirkko ei istu ollenkaan kuvaan". Omistajan kortti KK:ssa "Saako Codex siirtää jokea ja rantoja kirkon ympärillä?" → "Kyllä (Suositus)"; selite: kirkko seisoo saarella kuten 2029:ssä, mutta joki ei ole kirkon kohdalla täsmälleen oikeassa paikassa. KK:n välityksen mukaan vesisääntö 21.29/22.14 pysyy. Karttaseppä tilaa Notre-Damen oton 5: kirkko ja ympäristö samassa kuvassa koko kuva-alalta (KORJAUSLISTA). Kirjattu 2.204:ään.
+
+## NOTRE-DAMEN SUUNTA JA SAINT-LOUIS-SAARI (4.11.2026 klo 08.22)
+
+Omistajan kortit KK:ssa: "Onko tämä oikea suunta Notre-Damelle?" → "Kyllä (Suositus)"; "Palautetaanko Saint-Louis-saari?" → "Kyllä (Suositus)" (selite: saaren itäpää loppuu kirkon takaosan jälkeen puutarhaan, ja Saint-Louis on oikealla paikallaan; vaatii yhden uuden kuvan). Tekotapa KK:n mukaan: kirkko ja ympäristö samassa Codexin kuvassa, joki saa siirtyä alueella. Järjestys: otto 6 Karttasepälle, sovitus kartalle KK:lle ja omistajalle, vasta sitten iPad ja muut nähtävyydet (KORJAUSLISTA, viimeinen osio).
