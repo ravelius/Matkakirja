@@ -52,3 +52,10 @@ Ajot vain JU:n vuorolla. Tulos rivinä PT:lle.
 - **Seuraava rivi "BE56 XF AJETTU" (JU):** `pk-be56-xf.zsh`, tulokset `sali-be5632bdb-{2,3}-xf/`. Huippu 4394 Mt antaisi laskien 4030–4065 Mt, raja 4080; vain uusinta ratkaisee. Tulos PT:lle.
 - **Joki:** KK 05.32 hyväksyi VS:lle avoveden ja vaalean reunakiven; rivi PT:lle lähetetty, kuva KK:lle ennen kytkentää. Ei minun työni.
 - **Kaiteet:** KK odottaa silta-kokeen tulosta; rivi "SILTA AJETTU" (JU) ei ole vielä tullut.
+
+## Lisäys 05.44 (korvaa kaiteet- ja silta-osat)
+- **Silta katsottu, KK 05.41:** kaiteiden tumma yläpinta on leivontaa, lovet ovat mallissa; molemmat LAV:n tilaukseen PT:n kautta. LAV: kaiteen normaalit ovat ylös, eli ei muurin vika. Mitat `_tyo/pelikoodari/muuri-koe/TULOS.md`, loppu.
+- **Kirkas vino alue (KK 05.41):** ei omaa ajoa. Katso seuraavasta ohitusajosta sama aukio; jos näkyy yhä, vertaa 217:ään samasta kohdasta ja kerro KK:lle. Seuraava ohitusajo = lisäyksen 06.2x kohdat (maljakko lähikaistalla, käännöskohta), LOD-korjaus mukana.
+- **Muurin todistus:** LAV:n malli valmis. Ajo `_tyo/pelikoodari/muuri-koe/todistus/aja.zsh` JU:lla, runko 37f46a2da (`pelikoodari/muuri-todistus-219`, worktree wt/proto-pelikoodari-muuri-todistus, ei junaan). **Rivi "MUURI AJETTU":** katso vanha.mp4 ja uusi.mp4 alusta loppuun, tarkista kansio-*.txt:n lokista, että malli tuli koejuurista, ja vertaa samat kohdat; KK:lle kuva. Sama kamera on oletus, ei todistettu: ei ole varmaa, että ajot etenevät ruudulleen samoin.
+- **Avoinna LAV:n listalta tarkistettavaksi todistuksessa:** lohkon yläreunan porras 3,78, sokkelin päät, LOD1–2-vaihtokohta (ei valoa).
+- **Odottaa:** "BE56 XF AJETTU" → luvut lokeista, rivi PT:lle.
