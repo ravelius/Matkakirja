@@ -34,3 +34,9 @@ Kaukaa saapuessa kerroksen kytkeytyminen (120 km) ei testattu liikkeessä. Pysty
 
 ## LISÄYS 02.5x (KS)
 karttaseppa/pariisi-nimet-220 kärki nyt 932078810 (korvaa 498ce79dd:n): 0,21:n nimikoko, taso paikallaan hystereesillä 0, liikkeessä 0,12. Ajamatta; f5c1f14b0-ajossa ei näy, joten r-0-21 / paluu -kuvien nimiero EI kerro tästä. Tie-ero on NS:n.
+
+## LISÄYS 03.25 (SITOO, ohittaa HETI-kohdat 1 ja 2)
+**f5c1f14b0-todiste tehty, kohta 1 POIS:** lokit/julkaisija-reuna-iso-f5c1f14b0/ (valmis 03.23, muisti 3464/4080, varoituksia 0). Pari vanha | uusi _tyo/natiiviseppa/aluekuva-koko/todiste-015.png: viidessä kohdassa tummat läiskät poissa, tiet ennallaan. 0,15, 0,21 ja 0,13 täysikoossa, 0,30, 0,17 ja paluu puolikoossa. PT ja VS tietävät; VS yhdistää aamun kuvaan, JU ajaa viimeistään 04.00. Katso sen yhdistelmän kuvat, kun JU antaa kansion.
+**Haamut, kohta 2 POIS:** r-0-13 iPadilla täysinä (täysikokoinen rajaus), 0,15:llä ei näy. Kerrottu PT:lle.
+**Jää, ei estä aamua:** haalea suorareunainen sävyero ainakin 2 kohdassa (Joinville lon 2,4609; kuvan 0-15 kohta (2452,370), alapuoli), myös vanhassa ajossa; PoistaKierros ei selitä sitä, syy tutkimatta.
+**Seuraavaksi:** kohta 3 (tiet 0,21 mennessä | paluu, r-0-21 ja r-0-21-paluu, syy tutkimatta), kohta 4 (z11/z12 k28:sta), kohta 5 (kulu). elava-kulu tässä ajossa: z14 mediaani 87 ms, z15 73 ms, huippu 1305/1616 ms; ero k24:n 236/305 ms:aan selittämättä, n on suurempi.
