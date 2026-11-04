@@ -81,3 +81,6 @@ JU: 1) sk-muisti-z10-k19.txt, 2) sk-muisti-z10-ei-varjoa.txt (k60), 3) sk-striim
 
 ## LISÄYS 11 (JU)
 k19 484adb22f: 3678 Mt, 19,0°, varjo + kerroin 4, 0 varoitusta, 5/5 uutta kuvaa, katsomatta (lokit/julkaisija-muisti-z10k19-484adb22f). k60 ajossa. Muistiehto täyttyy tällä kulmalla; neliöparit katsomatta.
+
+## LISÄYS 12 (PT)
+Tummat katkoviivat siirtyivät NS:lle (omistajan pyyntö 15.08, maakuntarajat katkoviivaksi; KK: samat viivat). Poista LISÄYS 5:n kohta 2 omasta jonosta. VS:lle jäävät täysikokoiset kuvat ja neliöt sekä violetit pisteet.
