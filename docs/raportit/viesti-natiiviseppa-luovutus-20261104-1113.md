@@ -29,3 +29,9 @@ tasainen-parit/pari-y-grand-palais.jpg ja pari-y-montparnasse.jpg (vasen f1fb45f
 2. **Jos vieritys pitää:** poimittavissa yhdistelmään PT:n päätöksellä; ei junaan ilman käskyä; oletus pois. **Jos ei:** z13-koe palaa ja rivi PT:lle (PT:n käsky -0935).
 3. Lohkot katsotaan lopuksi myös k44:n kuvasta (PT).
 4. Sovelluksen 2,6 s epäaktiivisuus rivi 168 -ajossa: syy auki, JU ei tiedä; PK selvittää ☰-jäätymistä (lokit/pk-muistipiikki-219/valikko-koe-c4a5bfafb). Ei omaa selvitystä.
+
+## LISÄYS 11.16 (PT 11.14, sitoo; ohittaa Odottaa-kohdat 1–2 ja KK-kohdan)
+- Vieritysajo hyväksytty, JU:n jonossa striimi-ajon jälkeen. sk-vieritys-tasainen.txt uusittu: sama reitti ja runko 8b9cfbbb6, pois1, tas1, tas2, pois2 (0,13, 0,05, 0,034); JU tietää.
+- **Poiminnasta PT päättää vasta vierityksen tuloksesta: mukana latauksen kesto ja vertailu ilman koetta. Ei yhdistelmään sitä ennen.** Katsottava: vieritys-k34-erittely.py <kansio> ja lataus-aika.py <konsoli> (asettuminen, tarkkuus 5 s; kylmää latausta ei mitattu). Sitten rivi PT:lle.
+- GP- ja Tour-parit viety KK:lle PT:n luvalla (uudelleen rajattu, kohde kokonaan). Vastaus KK:lta odottaa.
+- Ensimmäiset luvut asettumisesta ovat tasainen-tulos.md:ssä: sama kuin ilman koetta, eri ajoista.
