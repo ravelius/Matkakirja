@@ -504,3 +504,6 @@ Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitet
 **Pohja-alue 19c:** luonnos A/nd-3d-pohja/TILAUS-19c-LUONNOS.md, jalanjälki A/nd-3d-pohja/jalanjalki.png, ei lähetetty. Lähetys vasta KK:n c2-katselun jälkeen; ennen sitä VS:ltä c2 suoraan ylhäältä samassa kehyksessä (VS:n k50-kuvat /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/pariisi-tyyli/k50/).
 **Seis yhä:** arkit ja korttelipinnat. Avoinna ennallaan: JU:n sk-nimet-kierto (Karsi vain, jos kierto todistuu), Vincennes- ja Boulogne-kuvat, minor-nimet 205c0e443 laitekuvaa; työlistan rivi "Notre-Damen 3D-koe".
 **Oppi:** Raamattu 7.15 voittaa pohjan luvun 2: Tripo ei vaadi määräkorttia. Kuva- ja 3D-tilaus erikseen kummallekin Codex-sessiolle.
+
+## LISÄYS 4.11. klo 09.2x: c2-aineisto PT:ltä
+**PT 09.16:** c2 valmis, /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/pariisi-tyyli/k51/c2/ (koe-c2.diff). KK katsoo yhä. **19c lähtee vasta KK:n sanasta (OMISTAJAN PÄÄTÖS 09.13).** Sen jälkeen pohja.png samassa kehyksessä koe-c2.diff:llä tai VS:ltä, maski ja SHA256SUMS, ja lähetys kuvat-sessiolle.
