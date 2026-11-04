@@ -28,3 +28,6 @@ Lontoo z15–z16 vain mitattu, kuvia ei katsottu kokonaan. Lähin zoom Pariisiss
 
 ## Työkalut
 pariisi-tyyli/striimi/ (p6–p8, vrt.py, ero.py, sk-striimi.txt, ajo/), pariisi-tyyli/vesi/ (p1–p3, reitti.py, silta.py <V> <S> <W> <kuvat> [kohta]). ELAVA_VESI=1 tuottaa cs/v<z>_<x>_<y>.pgm. Veneiden kuvat _tyo/natiivi-ui/animaatiot-20261102/.
+
+## LISÄYS 12.06 (PT)
+PT katsoi d34cacd08:n ja kuvan: leikkaus toimii, laitetodistus puuttuu, koe, ei junaan. JU-rivi (SEURAAVAKSI 2) lähetetään vasta e4180ac69-ajon jälkeen. Reittikorjaus (KORJAUSLISTA 5) tehdään nollauksen jälkeen, ei ennen: kohta 3 ei ole enää vain KK:n päätös.
