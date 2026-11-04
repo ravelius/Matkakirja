@@ -17,3 +17,9 @@ Python, jossa numpy ja PIL: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tuli
 3. Mittaamatta jää: vieritys, latauksen kesto, koko näkymän vaihto kerralla zoomatessa.
 
 Tiedot: _tyo/natiiviseppa/striimi-sauma/tulos.md, rajaus-*.png. tasainen-laatta-koe 8b9cfbbb6 jää koehaaraksi, ei poimintaa. KK:n listan kohta 2 (ND:n irtosaarekkeet) ei tehdä (PT 11.3x). Kohdat 3–4 kuitattu.
+
+## LISÄYS 12.2x (PT, sitoo; ohittaa kohdan Tila ja "Kun PT antaa sanan" -kohdan pohjan)
+- **Pohja nyt 7f64cd657 (VS). Korjaus ee2cca3b4, haara natiiviseppa/tasainen-striimi-2 (natiivi-backup), korvaa 03ba511b7:n.** Työpuu tässä haarassa, puhdas. tarkista 0 virhettä.
+- **Ajo JU:lle vasta, kun VS:n sk-muisti-z10 on pitänyt alle 4080 Mt:n, ja PT:n sanalla.**
+- **Kallistus ≥ 3° z12–z14:llä on avoin vika, ei valmis:** kuvaa ei ole, portti ei korjaa. Ajoon lisätään `kallista`-kuvat 0,13, 0,26, 0,52 (15°, 45°), kokeen kanssa ja pois. Kerrottu PT:lle.
+- Lisämuisti ennallaan (siirtymässä Nyt = Varjo → korjaus kiinni; pahin noin 3860 / 4080, arvio). Tiedot: _tyo/natiiviseppa/striimi-sauma/tulos.md.
