@@ -21,7 +21,7 @@ NotreDameKoe.cs → Nahtavyysalue.cs. Maaritys-taulukko (Alueet), alueella yksi 
 - **y-0012-puut on mitätön:** kuva on Ranskasta, koska sk-nahtavyysalue.txt:n ensimmäinen `aja` ei ehtinyt (poistin odotuksen). Skriptin vika, ei koodin.
 - POIKKEUS on Unityn Search-indeksi (SearchDatabase), ei meidän.
 - **Ei mitattu:** muistin vapautumista ei ole mitattu luvuin, usean mallin alue ei ole kokeiltu (Louvre/Sainte-Chapelle koettelevat), iPadia ei ajettu tällä koodilla.
-- KK:lle ja PT:lle ei ole vielä kerrottu Mac-tulosta: tämä kuuluu rivinä seuraavan mukana.
+- Mac-tulos on kerrottu PT:lle 20.1x; KK:lle ei erikseen, koska kuva ei muuttunut.
 
 ## Tehty: iPad 8be6819db
 lokit/julkaisija-nd-ipad-8be6819db, 12/12, 3264 Mt, 0 varoitusta. Taivaan vene poissa, k-013 ilman rajaa (Macin kuvien piirre, oletus pieni ruutu), mittakaava y-0012 0,994 (y-0036 epäluotettava). KK:lla ja PT:llä. ele-60, suorista ja loppu katsomatta. Veneen korjaus on koe; omistajan kuvaan vietävä pitää poimia omana muutoksenaan. Kukkiva Macilla vaimea, hieman harmaa.
