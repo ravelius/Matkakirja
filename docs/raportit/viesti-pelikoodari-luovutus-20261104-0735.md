@@ -34,3 +34,7 @@ Korvaa -0719:n, paitsi sen "Muistiinpanot". Syy: pehmeä raja 26 % (7.37). Ei om
 - `tarkista.sh` päivittää tyylikirjan kopion (3 tiedostoa): palauta `git restore`, ei committiin runkoon.
 - PT:lle enintään 3 riviä, viestit send_messagella id:llä. Tilin KK-id osoitekirjasta (local_d5f31591).
 - zsh ei pilko muuttujaa sanoiksi, ja `${(P)x}` sai komentotarkistuksen estämään koko rivin; vertailut skriptitiedostoon.
+
+## Lisäys: PT 07.3x (LUE, ei toisteta)
+- Aukko on junan este. Tutki syy ensin. Kun johtolanka pitää, kerro samalla rivillä PT:lle, voiko sama näkyä julkaistussa 217:ssä. 217:n koodilla ajettava `7ddd353e8 tf217` on jo pyydetty (kopiot vapautetaan).
+- **Älä korjaa pitämällä kaikkia kopioita muistissa:** raja 4080 Mt koskee rungon todistusta. Pelkän maan täytteen kopion pitäminen (3450 kolmiota) ei ole tämä, mutta kerro se PT:lle ja mittaa muisti, jos korjaus on se.
