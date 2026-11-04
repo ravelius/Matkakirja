@@ -5,7 +5,7 @@ Syy: konteksti yli pehmeän rajan (Raamattu 7.37). Edellinen: viesti-valoseppa-l
 ## Linja nyt
 - **KK 10.2x:** k55 lukittu. Ei uutta pohja.png:tä (19c lähti, Square Jean-XXIII on maskin sisällä). Peliin, ei junaa.
 - Tehtävät: (1) pelihaara k55:stä, ei koealuetta, Pariisin piirros pois, pienet kadut pois, ohuet katkoviivat pois. (2) z ≤ 10: halvin tapa ilman värihyppyä, varsinkin vedessä; mittaa kulu. (3) JU:n iso iPad vuorollaan: sama Pariisin kortteli z11–z17, vieritys, muisti, palan aika, lisäksi Lontoo ja Helsinki. Alppien oranssit laikut z13:lla: katso, näkyvätkö pelissä. Kuvat ja mitat KK:lle.
-- **Runko:** PT:ltä kysytty 10.24, vastausta ei tullut. Käytin koerunkoa c4a5bfafb oletuksena. Vahvista PT:ltä.
+- **Runko:** PT 10.25 vahvisti: c4a5bfafb. Valmis haara + sha ja testit JU:lle koejonoon, rivi PT:lle. Ei junaan. Rivi JU:lle vasta, kun z17:n raidat on korjattu (PT:lle kerrottu 10.3x).
 
 ## Tila
 Haara linssiseppa2/striimi-vari (694e1783a, natiivi-backup, wt /Users/Shared/Claude/wt/proto-linssiseppa2-k30). Kartta-testit 602/602. **Unity todistamatta: Laattapalvelin-muutoksia ei ole käännetty.**
