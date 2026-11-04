@@ -55,3 +55,8 @@ Odotetaan JU:lta: Mac 789f3046f (vertaa `lokit/esikatselu-20261104-182602`) ja i
 
 ## LISÄYS 19.1x: Mac 789f3046f katsottu
 `lokit/esikatselu-20261104-184107` ita-etela-02 (rajattu): aukko umpeen, muu sama; muurinosa naapuriseinää tummempi ja siinä varjovyö (leivottu valo). Shader-virheitä ei. Rivi PT:lle lähetetty. Auki: iPad-ketju (kansiot kuten edellä).
+
+## LISÄYS 19.2x: PT:n päätös ja uusi tilaus (TEKEMÄTTÄ, kova raja)
+PT (184107 täysikoossa): aukko umpeen, mutta uusi muuri selvästi vasenta naapuria tummempi, porras liitoksessa. **Silti junaan, jos iPadin muisti kestää; valo LAV:lle omana rivinä, ei estä.** Kun iPad-tulos tulee: rivi PT:lle ja valorivi LAV:lle (local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e).
+Uusi tilaus: taivaalla isoja oransseja lituskoita katon paloja, ylhäällä keskellä (ita-etela-02). Selvitä, ovatko ne TF 60bd5c356:ssa ja koerungossa, ja kumpi tekee korjauksen (PK vai LAV); rivi PT:lle.
+Tiedossa: näkyvät koerungossa `lokit/esikatselu-20261104-182602/ita-etela-02.png` ja 789f3046f:ssä, joten eivät johdu korjauksesta; ee9ed51b0:n `ita-etela-02-a`:ssa samantapainen pala (ei varmistettu samaksi). TF-kuvan (`183457`) kamera on matalampi, eikä rajaukseni näyttänyt taivasta: katso koko kuva, ja tarvittaessa JU:lle yksi kuva ylemmästä kulmasta (`valo testikamera`). Syy tutkimatta: selvitä, mikä malli ja LOD (lähin rakennus näkökulmassa, `ui juoksupeli mika x y`).
