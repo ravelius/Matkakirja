@@ -24,3 +24,9 @@ Cité z17: ei viuhkaraitoja; viirut = laivan vanavesi rannan yli. Suorat saumat 
 
 ## Oppi
 Muistivahti- ja kuvaloki ei kerro palojen valintaa: katso aina ensin "liikevalinta" ja kehysaikojen "valinta". muisti-tarkka.log loppuu noin 211 s:n kohdalla, joten kaatuminen jää sen ulkopuolelle pitkässä ajossa.
+
+## LISÄYS (PT, NS)
+- PT: JU ajaa sk-muisti-z10:n 7f64cd657:lla; c4a5bfafb-ajo pidetään, koska kerroin on myös junan rungossa. Selvitetään, kaatuuko juna samaan.
+- Kerroin 4 on TF 217:n rungossa (tagi natiiviseppa/runko-217-tf = 60bd5c356), juna-218:ssa ja c4a5bfafb:ssä; rivi lähetetty PT:lle. Viedyn koonnin vastaavuus tagiin ja kaatuminen 217:llä tarkistamatta.
+- NS: saumakorjaus 03ba511b7 (natiiviseppa/tasainen-striimi, e4180ac69 + 1): TasainenLaatta.cs ja Komennot.cs, ei päällekkäisiä rivejä 7f64cd657:n kanssa; yhteisajo PT:n päätöksellä. Kärki kerrottu NS:lle.
+- PT: läiskät seuraavaksi. Tee ensin paikallinen vertailu ilman Pehmea-kutsua, koska juuri on vain todennäköinen. Lukittuun pintaan ei muutosta ilman PT:n päätöstä.
