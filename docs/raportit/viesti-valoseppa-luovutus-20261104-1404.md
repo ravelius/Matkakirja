@@ -34,3 +34,9 @@ z14–z17, Cité ilman saumoja. p-z12, p-z13 suorakulmaiset tarkkuusrajat (NS). 
 e774647ee (linssiseppa2/striimi-vari, 7f64cd657:n päällä, natiivi-backup, 604/604; Unity ja laite todistamatta): kallistettuna ≥ 30° (hystereesi 25°) ei siirtymän varjovalintaa, jarru varalle.
 PT:n ehdot (JU, striimi/sk-muisti-z10-ei-varjoa.txt): 1) käytetty ≥ 30° eikä varjovalintariviä, 2) alle 4080 Mt ilman muistivaroitusta, 3) kuvat tästä ajosta (p-z10, p-z10-90), ei reikiä, mustaa tai saumaa. Jarrun laukeaminen ei riitä. Jos täyttyvät: sk-striimi-k45.txt samalla koonnilla.
 Oma lisäys, PT:n päätös: sk-muisti-z10-k29.txt, koska 25–29° varjo jää kertoimella 4 eikä kulmaa ole mitattu. Pelaajan menetys: Z9/Z10-neliöt voivat näkyä kallistettuna tasoilla 8,5–10,5 (päätelty, ei kuvaa).
+
+## LISÄYS 2 (PT, JU, KS)
+PT: järjestys ei-varjoa, k29, vasta sitten k45. k29:llä samat muistiehdot; jos ylittää, kulmaa alemmas, ei selitetä pois. z9–z10 kallistettuna täysikoossa, sama rajaus ennen ja jälkeen, ruudun alaosa itse. Jos neliöt näkyvät: kuvapolku PT:lle ennen hyväksyntää, PT vie KK:lle.
+Ennen | jälkeen saman kulman parina: sk-muisti-z10-k29.txt, p-z9 | p-z9-pois ja p-z10 | p-z10-pois (`maasto siirtyma pois`). Yli 30°:n ennen-kuvaa ei saa, koska VIKA tyhjentää jonon 10 s:ssa.
+JU:n "odota jäi kiinni" on muistivahti: VIKA tyhjentää komentojonon (MuistiVahti.PysaytaKomennot, Komennot.cs:249), ei vika. Sovellus elää.
+KS: a64109412 sk-nd-koe-3 ottaa `kuva` ja `kuva3d` samasta näkymästä; mittapalat poistettu. KK siirsi tummennushaun VS:lle: suhde 15/16 = UI-kerros, sitten kerroksittainen loki (UIDocument-nimi, alfa) on VS:n työ. iPad-mittaus on yhä auki.
