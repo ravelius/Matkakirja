@@ -18,3 +18,6 @@ Levyä vievät, voi poistaa myöhemmin omasta kansiosta: kohtaus.npz, komp.npz.
 
 ## Muuta
 Mallien valo (KORJAUS.md): 064 ja 073 punainen 0,00, syy auki. Omat väliaikaiset: /Users/Shared/Claude/wt/lavastaja-postilaatikko pidetään posteja varten.
+
+## LISÄYS 13.36 (korvaa kohdan "Avoinna 1")
+KK 13.29: ei Tripolle. Uusi kuvakierros tilattu 65f5df724, kansio _review-v2/, viesti posti/codex-lavastaja-juoksupeli-ovi-v2-*. Kuvat KK:lle → KK näyttää omistajalle → Tripo vasta omistajan hyväksynnällä. Ei useampaa kierrosta ilman KK:n sanaa.
