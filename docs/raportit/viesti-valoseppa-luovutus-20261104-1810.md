@@ -42,3 +42,7 @@ Sitten offline-koe (lisäys 2). JU perui 0d5a75286:n ennen käännöstä, mitä�
 ## LISÄYS 4 (KK 18.2x)
 KK: "ei. Valtionraja pysyy yhtenäisenä. Omistaja pyysi katkoviivaa vain maakuntarajoille ... Aiempi huomioni Alppien viivasta koski vain sitä, ettei se saa peittää NS:n viivaa; sitä se ei tee. Ei uutta runkoa tämän takia, JU ajaa 6469e76e7:n."
 Valtionrajaan ei siis koske. Tarkistuslistan kohta 11 on sillä ratkaistu. AVOIN: NS sanoi b2101b95e:n tulevan samaan ajoon KK:n pyynnöstä, ja JU odottaa siksi. KK:lta kysytty, kumpi pätee: jos vastaus on "ei b2101b95e:tä", kerro JU:lle heti, että ajaa 6469e76e7:n, ja ohita lisäys 3:n kohdat 1–3.
+
+## LISÄYS 5, RATKAISEE LISÄYS 4:N AVOIMEN (KK 18.3x)
+KK: "b2101b95e tulee mukaan samaan iPad-ajoon. Seuraava VS: yhdistä se 6469e76e7:n päälle, tarkista ettei viiva katoa ja anna uusi runko JU:lle. Vain yksi iPad-ajo. Jos yhdistäminen ei suju siististi, JU ajaa 6469e76e7:n ja viiva arvioidaan erikseen."
+Tee siis lisäys 3:n kohdat 1–4 ensimmäisenä. Valtionrajaan ei kosketa. JU odottaa shaa.
