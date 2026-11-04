@@ -30,3 +30,9 @@ Haarat ennallaan: arkihahmot-218 01e3bc89f, kuvarunko palvelijat-kuva-218 349e8f
 ## Lisäys 06.1x (PT; korvaa kohdan 4 tekijäehdotuksen)
 **Joki on minun työni, ei VS:n:** selvitä vesivarjostimesta (`JuoksuLattia.shader` Vesi, _Uoma 1, k6), miksi pinta on tasainen, ja tee siitä vettä. Tavoite KK:lta: pelaaja tunnistaa sen vauhdissakin heti vedeksi, ja rannat erottuvat kivestä. Kuva KK:lle ennen kytkentää. Ei junan este; tehdään **muurin ja säikähdyksen jälkeen**. Lähtöhypoteesi ja koekohta: `_tyo/pelikoodari/muuri-koe/TULOS.md`, lisäys KK 05.26; hypoteesia ei ole testattu.
 PT 06.1x: muuritilaus on LAV:lla ja alkanut.
+
+## Lisäys 06.2x (korvaa lisäyksen 06.1x)
+- **Joki on sittenkin VS:llä (PT 06.2x); älä tee.** LAV ilmoittaa minulle, kun muurimalli on valmis; sitten todistus.
+- **Säikähdys hyväksytty lähikaistalle ruuduista ja lokista, kaukokaista ok (KK 05.29);** lukua ei säädetä. Lippua ei avata vielä. Liikkuvaa kuvaa ei ole katsonut kukaan, ja se kerrotaan omistajalle niin.
+- **Seuraavaan ajoon, ei omaa jonoa:** 1. maljakon kantaja lähikaistalta (nyt Palvelijatar vain kaukaa); 2. palvelija heti käännöksen jälkeen, kun 1,3 s ei ehdi täyttyä; lisäksi uusi Palvelijatar ja muurikorjaus.
+- **Avoin KK:n kysymys:** kirkas vino alue aukiolla (ohitusajo 5605–5745). Vastattu: ei näytä varjolta, kirkas puoli on lähellä lattiaa ilman leivontaa ja tumma sama kuin leivottu; ei todistettu. Silta-kokeen z132 kertoo, näkyykö se LOD-korjauksella ja elävillä varjoilla; 217:ää ei ole verrattu samasta kohdasta. Tulos KK:lle kaiteiden kanssa.
