@@ -342,3 +342,7 @@ Kansio /Users/Shared/Claude/wt/proto-karttaseppa-ruutu-218 on nyt haarassa **kar
 
 ## LISÄYS 4.11. klo 05.38 (uusin; lue ensin): ND-kiilan pari PT:llä
 **9cffc695e** haarassa karttaseppa/pariisi-nd-kiila (lisäksi VS:n kävelyalue 4402673f3 poimittuna; kääntämättä, ei ajettu). Pari /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-nimet-yhd3/nd-pari-k37.jpg PT:llä, odottaa KK:ta; kooste VS:n paikallisesta pohjasta (k36/aja-oma.zsh; nd-kooste.py + nd-pari.py samassa kansiossa; 6 latlon-raivausta ei siirry). Kohta 4 puut nurmelle tekemättä. Ajoon vasta KK:n jälkeen; sha PT:lle.
+
+## LISÄYS 4.11. klo 05.38 (uusin; lue ensin; konteksti 33 %, nollaus)
+**Toimitus 15m tullut, ARVIOIMATTA:** /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyydet-20261103/puutarha-jardin-des-plantes-v3/_review-puutarha-jardin-des-plantes/. Tee: katso kulma ja muuttuneet pikselit edelliseen ottoon verrattuna; puutarha-sovitus.py:ssä KLOONI_ALUE pois, D-polku -v3-kansioon, VERSIO 4; sovitus, nimipeite.py, kerros.py + sacre-coeur-kerros.py + nd-kehä.py-järjestys tarkistaen (kerros.py säilyttää metsä-lajit ja raivauksen); laite-kuvat.txt v4; pari PT:lle. Haara karttaseppa/pariisi-nd-kiila, irrotettava commit. Sen jälkeen Codexin kuittaus.
+**Odottaa:** KK nd-pari-k37:stä, yhd4:n kuvat (r-0-21 nimet-lokilla, add5d4e21:n tarkistukset). Vahdit kuolevat nollauksessa: Monitor `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/vahti.zsh | grep --line-buffered -E "TASANKO|KUOLI|virhe|VIRHE"` (15m:n rivi on jo tullut).
