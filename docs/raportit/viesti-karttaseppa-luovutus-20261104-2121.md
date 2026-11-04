@@ -1,6 +1,11 @@
 # Karttaseppä: luovutus 4.11.2026 klo 21.21 (KS)
 Syy: konteksti 25 % (7.37). Korvaa -2016:n jonon; sen "Tehty"- ja "Opit"-kohdat pätevät edelleen (haara karttaseppa/luovutus-20261104-2016, a2830fbdb). Python: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104. C = /Users/Shared/Claude/proto-3d/_tyo/codex. Worktree /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219.
 
+## LISÄYS 21.3x: 21b v2 ok, TRIPO AVATTU (uusin, lue ensin)
+- 21b v2 tuli 04f853a91 (`_review-pyramidi-21b/`): SHA:t ok, kaksi kuvaa katsottu täysikoossa: kaikki kolme pyramidia sinisiä, koko ja paikka ennallaan, rakennus sama. Sininen 86/165/219 on kirkkaampi kuin G (128/168/194), mikä palvelee tunnistettavuutta. Generaattori teki koko kuvan uudelleen, joten pinnat eroavat pikseleittäin (ero muualla 10–18 % yli 12 yksikön), muoto ei.
+- **21c avattu (posti/karttaseppa-codex-tripo3d-louvre-21c-AVAUS-20261104.md, C/pariisi-louvre-20261104/TILAUS-21c-tripo.md).** Vahti käsitelty uusimpaan omaan committiin asti. Toimitus `louvre-3d-v1/`: tarkista, mallin kuva KK:lle ennen omistajaa. Jos pyramidi sulaa paviljonkiin → KK. Kaksi epäonnistunutta ottoa → omistajalle ennen kolmatta.
+- Seuraavaksi: 22a Codexilta, Louvren pohjan paikka kartta-aineistosta (kohta 5).
+
 ## LISÄYS 21.2x: OMISTAJA 21.24 KUMOAA PYRAMIDIN PIENENNYKSEN (lue ennen muuta)
 **Omistaja 21.24: "pyramidi saa olla suuri. Ja se kannattaa värittää siniseksi, koska se on kaikkein tunnistettavin asia. Ja kattoikkunoilla ei ole väliä."** KK: tavoite on, että sininen lasipyramidi tunnistetaan Louvreksi ensimmäisenä kartalta myös kaukaa, malliväreillä ja kirkon valossa; G:n pyramidi on sinisen mittari; **jos Tripo sulauttaa pyramidin paviljonkiin, vie se KK:lle.**
 - **21b v2 Codexilla (23e398236), korvaa c4eaedff6:n ja 98bd82be6:n:** `pelikulma.png` ja `ylhaalta.png`, pyramidit siniseksi, koko ennallaan, muu sama. Toimitus `_review-pyramidi-21b/`, mittari malli-G-pyramidi.jpg. Tarkista tämän mukaan: alla olevan kohdan 2 mitat ja kattoikkunat eivät enää päde.
