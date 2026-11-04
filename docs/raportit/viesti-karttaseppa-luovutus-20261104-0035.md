@@ -339,3 +339,6 @@ Kansio /Users/Shared/Claude/wt/proto-karttaseppa-ruutu-218 on nyt haarassa **kar
 - **Odottaa VS:ää (viesti lähetetty):** kävelyalueen 8 275 m² tekijä ja paikallisen z15/z16-kuvan komento. Jos VS ei tee, teen sen.
 - **Tekemättä:** pari 2029 | peli samassa mittakaavassa, m/px kummallekin, ND kokonaan kuvassa → PT → KK ennen ajoa. Paljastuvan nurmen puut, jos helppo (KK kohta 4).
 - **PT:** a382b7a9e seuraavaan ajoon ND-kiilan kanssa, y-montmartre pelikuvana, 300 puun muisti ja kulu mitataan siinä; laite-kuvat.txt ajan tasalla (sacre-coeur-alue-v3 ja plantes-v3 on). RER C: VS piilottaa radan, ei KS:n.
+
+## LISÄYS 4.11. klo 05.38 (uusin; lue ensin): ND-kiilan pari PT:llä
+**9cffc695e** haarassa karttaseppa/pariisi-nd-kiila (lisäksi VS:n kävelyalue 4402673f3 poimittuna; kääntämättä, ei ajettu). Pari /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-nimet-yhd3/nd-pari-k37.jpg PT:llä, odottaa KK:ta; kooste VS:n paikallisesta pohjasta (k36/aja-oma.zsh; nd-kooste.py + nd-pari.py samassa kansiossa; 6 latlon-raivausta ei siirry). Kohta 4 puut nurmelle tekemättä. Ajoon vasta KK:n jälkeen; sha PT:lle.
