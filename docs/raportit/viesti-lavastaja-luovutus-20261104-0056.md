@@ -71,3 +71,8 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 - Vakiovalo poistaa lattian paistetut varjot näiltä kolmioilta. Jos alueelle kuuluu oikea varjo, se katoaa. Vaihtoehto: uusi leivonta.
 - Sivuholvin punaisen ja harmaan raja vaihtuu ajosta toiseen (f ja g), JU näki myös keskioven pylväiden repaleisen rajan: epäily päällekkäisistä pinnoista, ei varmistettu. Tämä on listan seuraava kohde 5d:n jälkeen.
 - 5d:n kiilatäyttö yhä aloittamatta.
+
+## LISÄYS 04.11. 02.4x (LUOVUTUS, konteksti 25 %; seuraava aloittaa tästä)
+- Ensin: JU:n tilaus i (kuvat koeajo3/wumen-ylhaalta-v125i.png, wumen-edesta-v125i.png), odottaa L1:tä palvelijat v10:n jälkeen; JU ilmoittaa Lavastajalle. Katso kolme asiaa (edellinen lisäys), rivi PT:lle.
+- Sitten 5d: L/kiila_tayta.py sisään.glb ulos.glb lisää täyttökolmiot. Koe vain ruudulle 1-3 lod0: L/koe-kiila/kk-tausta-1-3-lod0.glb, 368 täyttöä; EI asennettu pakettiin eikä koejuureen eikä nähty pelissä. Geometria tarkistettu yhdestä päädystä (−135,6: uusi kolmio 6,1→7,4). Riski: täyttö on päädyssä 7,1–7,4 samassa tasossa kuin päätykolmio, ja räystään alla turhia täyttöjä. Koe: kopioi koejuureen vasta i:n jälkeen, tilaa 5d (kuten sk-lav-v125-koeajo.txt, testikamera) ja vertaa koeajo2/5d-v125.png:hen, tunnista.py:llä pikselit. Koko palatsiin (kiilat-lod0.txt, 2677 kpl) vasta PT:n kuittauksella; lod1–2 tarkistamatta.
+- Jonon loppu ennallaan: sivuholvi ja pylväiden laikut. v125 ei vientiin; koodi ei viittaa siihen.
