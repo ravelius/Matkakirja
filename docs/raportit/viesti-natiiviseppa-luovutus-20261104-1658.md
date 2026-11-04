@@ -24,3 +24,8 @@ Veden väriloikka z ≤ 11 | z ≥ 12 (ElavaTyyli.cs:490, :564). Korjaussuunta, 
 
 ## Huom
 Yhdistelmä tasainen-striimi-3 + maakuntarajat-katko ei ole tehty.
+
+## LISÄYS 18.1x (KK:n kysymys; vastattu KK:lle ja PT:lle, odottaa sanaa)
+- **Tasot:** karkea viiva tasoon 10,5 asti, sen yllä elävän palan viiva. 35b6ee8b4:ltä kuvat vain 10,41 ja 11,34, väli 10,5–11,3 todistamatta. VS:n t104 on arviolta taso 10,6, vanha runko.
+- **VS:n 38ec22a25 (`if (Striimi || ...) continue`) poistaa koko boundary-silmukan:** tasolta 10,5 ylöspäin ei maakunta- eikä valtionrajoja, myös katkoviivani. Yhdistelmää ei saa tehdä sellaisenaan; git voi yhdistää sen hiljaa (ei kokeiltu).
+- **Suositus, ei tehty:** ehdosta pois `Striimi ||`, ja JU:n iPad-kuvat tasoilta 10,5–11,3. Rivi JU:lle vain sanalla. Tiedot tulos.md:n loppu.
