@@ -475,3 +475,9 @@ Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitet
 **KK:** otto 5 oikea suunta, KK vie omistajalle kuvan ja kortin. **Ei hiontaa eikä tilausta ennen KK:n vastausta.** Tornit ok (muodon mittari G, omistaja 3.11. 22.09; 2029 vain sommitteluun ja väriin). Talot ja Sainte-Chapellen paikka ok.
 **Jos omistaja palauttaa Saint-Louisin:** uusi otto tästä kuvasta mallina: saaren itäpää loppuu kuoren jälkeen puutarhaan kuten 2029:ssä, Saint-Louis pohjan paikalla.
 **Leikkaus sen jälkeen:** saari ja joki rantakatuja pitkin, korttelit muualla pohjasta, joki ja katot väriltään yhteen; tavoite: saumaa ei huomaa.
+
+## LISÄYS 4.11. klo 08.2y (uusin; lue ensin): otto 6 tilattu (OMISTAJAN PÄÄTÖS 08.22, KK)
+**Omistaja 08.22:** otto 5 oikea suunta, Saint-Louis palautetaan. Lista /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, viimeinen KS-osio.
+**Tilaus 17f 52661a2e9** (claude/postilaatikko; posti/karttaseppa-codex-nd-otto6-20261104.md). Aineisto /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-alueet-20261104/notre-dame-otto6/ (malli-otto5.png, luonnos-paikat.png, pohja, sama maski). Työkalut A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104: A/luonnos6.py, A/tilaus6.py, A/kooste5.py mallina.
+**Vahti:** `until [ -f .../notre-dame-otto6/_review-notre-dame/SHA256SUMS ]` taustalla, kuolee nollauksessa: käynnistä uudelleen.
+**Kun toimitus tulee (KK):** sovita: saari ja joki rantakatuja pitkin, korttelit muualla pohjasta, joki ja katot väriltään yhteen, tavoite: saumaa ei huomaa. KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) Codexin kuva kokonaan, täysikoko sovitettuna, pari 2029 | nyt | sovitettu. KK vie omistajalle. Sen jälkeen pelikuva isolta iPadilta kolmella zoomilla ja muisti. Peliin, Louvreen ja muihin nähtävyyksiin ei ennen sitä. Vanhat vaikutukset (lisäys 08.03) koskevat yhä hyväksynnän jälkeistä työtä.
