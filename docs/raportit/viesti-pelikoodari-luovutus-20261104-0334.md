@@ -39,3 +39,10 @@ Tila: odottaa JU:n ajoja peitto-be56, pk-be56-laite ja palvelijat-v12.
 - **v13 63845cda6** (arkihahmot-218), kuvarunko **cfd520f2e**: KK:n "varjo katkeaa lätäkön reunaan, korjaa jos helppo, ei ehto". JuoksuMarka: multi_compile ja JuoksuVarjo; varjossa pinta × 0,65 (arvio kiven suhteesta, ei mitattu), kiilto × varjo. Valossa väri ennallaan koodin mukaan. Ei ajettu, varjostinkääntö ei todistettu. **JU:lla v12:n jälkeen:** `_tyo/pelikoodari/palvelijat-v13/aja.zsh 1` (vain vesi).
 - **Kun v13 ajettu:** vesi-160 sama rajaus kuin lahikuva-lammikko-vesi-160: varjo jatkuu reunan yli eikä näytä tummalta tarralta; mittaa valossa väri yhä noin 150/185/225 (hyväksytty), varjon tummuus vs kiven varjo (säädä 0,65). Jos väri muuttuu valossa tai varjo näyttää huonolta: 63845cda6 pois, koska se ei ole ehto. Hyväksytty lätäkkö ei saa huonontua.
 - v12 ajossa 03.33 alkaen, v13 sen perään.
+
+## Lisäys 03.39: KK mätä omena (seuraava oma työ SIRPALEIDEN JÄLKEEN; ei ole aloitettu)
+Oikaisu: kirjoitin KK:lle ja PT:lle "väistettävä". **Väärin: mätä omena on kerättävä** (omistaja 19.10. "kaksi eri kerättävää asiaa", KK:n viite JuoksuV4.cs:112). Varjo ok (KK).
+1. Korjaa JuoksuV4Maailma.Hehku.cs:n kommentti "sitä väistetään".
+2. JuoksuV4Maailma.cs LuoOmena: `if (!om.Mata) Hehku(...)` → pieni hehku myös mädälle omassa hillityssä sävyssä, ei kulta (omistaja 20.10. 17.17: kerättävien ympärille hehku, jotta ne tunnistaa heti).
+3. Malli omena-mata ei tunnistu omenaksi: herkkuomenan muoto + mätä pinta, **koko ennallaan** (0,22). KerattavaMallit (JuoksuV4Maailma.cs noin 3440). Codex-tilaus, jos koodilla ei tule omenan näköistä (Codex = grafiikka; tilaus postilaatikko-haaraan). **Ei kärpäsparvea.**
+4. Kuva KK:lle ennen junaa, PT tiedoksi.
