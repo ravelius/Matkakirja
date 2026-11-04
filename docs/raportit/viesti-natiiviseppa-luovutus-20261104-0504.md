@@ -34,3 +34,9 @@ Syy on ilmeisesti, että kumpikin pala puhdistetaan erikseen, eikä 5 × 5 -ikku
 
 ## LISÄYS 05.08 (PT 05.13)
 **Aamun kuva on yhd3 ff97c7f8c** (KK valitsi; ohittaa Tila-kohdan yhd2:n ja "PT päättää"). Ei junaan, pinta ei hyväksytty. Vieritysmittaus (kohta 4) on JU:n jonossa, iPad vapautettu; tulos JU:lta.
+
+## LISÄYS 05.09 (PT 05.18, 05.20; JU 05.12)
+- **Vieritysmittaus:** skenaario _tyo/natiiviseppa/fps60/sk-vieritys-k33.txt (0,15 / 0,13 / 0,05, koealue päällä ja pois, 8 liikettä kullakin; tiedostot mittaus-p*.txt), runko ff97c7f8c, iso iPad. Annettu JU:lle; vain Pariisi luotettava, koska kartta-osat on laitteella. Tulos JU:lta. Kohta 4.
+- **Komento `koealue osat-poista` 0360a46ab** (ff97c7f8c + 1, haara natiiviseppa/kartta-osat-poisto, natiivi-backup). Komennot on pois App Store -käännöksestä. Kartta-testit eivät kata tätä; Unityssä kääntämättä, ei ajettu. Seuraavaan yhdistelmään.
+- **Sävyero:** pyydetty JU:lta TF 217:n sha ja kuva 48.82 2.4609 0.05, vuoro aamun jälkeen. PT: kuvaan sidonta ja rajaukset 2–3 ennen koodimuutosta.
+- Työpuu wt/proto-natiiviseppa-maskik4 on nyt haarassa natiiviseppa/kartta-osat-poisto.
