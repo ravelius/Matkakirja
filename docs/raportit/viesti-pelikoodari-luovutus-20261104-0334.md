@@ -46,3 +46,11 @@ Oikaisu: kirjoitin KK:lle ja PT:lle "väistettävä". **Väärin: mätä omena o
 2. JuoksuV4Maailma.cs LuoOmena: `if (!om.Mata) Hehku(...)` → pieni hehku myös mädälle omassa hillityssä sävyssä, ei kulta (omistaja 20.10. 17.17: kerättävien ympärille hehku, jotta ne tunnistaa heti).
 3. Malli omena-mata ei tunnistu omenaksi: herkkuomenan muoto + mätä pinta, **koko ennallaan** (0,22). KerattavaMallit (JuoksuV4Maailma.cs noin 3440). Codex-tilaus, jos koodilla ei tule omenan näköistä (Codex = grafiikka; tilaus postilaatikko-haaraan). **Ei kärpäsparvea.**
 4. Kuva KK:lle ennen junaa, PT tiedoksi.
+
+## Lisäys 03.47: v12 ajettu, nollaus (34 %)
+JU 03.46: `_tyo/pelikoodari/palvelijat-v12/malja` (12 kuvaa, rc 0, virheitä 0). **Kuvia en ole itse katsonut.** v13 ajossa L1:llä.
+**SEURAAVAKSI järjestyksessä:**
+1. **Sirpaleet v12:** kohdan "Kun v12 ajettu" mukaan; kuvat suoraan KK:lle, PT tiedoksi.
+2. **Palikkakuvio TOISTUU (JU koonnista):** vain malja2-120, sama kuva kuin v11:ssä, muut 11 ei. KK: **syy ennen junaa.** Katso täysikoossa. Sama skenaario ja sama kohta kahdesti viittaa paikkaan tai hetkeen, ei satunnaiseen; ei ole vielä näyttö syystä. Ei ollut v10:ssä: vertaa v10:n ja v11:n rungon eroja (runko sisältää muutakin kuin varjostimet: 52831ac12..b4a516989 176 tiedostoa, vertaa ba669e5bb..b4a516989). Rivi KK:lle ja PT:lle.
+3. **v13:** kohdan "Kun v13 ajettu" mukaan.
+4. **Mätä omena** (lisäys 03.39), peitto-be56 ja pk-be56-laite Pariisin jälkeen.
