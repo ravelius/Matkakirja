@@ -26,3 +26,7 @@ Lähikaistalla särkyminen näkyy noin 0,5 s, kaukokaistalla ei säikähdystä; 
 Lokin aika ei vastaa suoraan ruutua: säikähdys 110,85 näkyy noin ruudussa 5605.
 
 Haarat ennallaan: arkihahmot-218 01e3bc89f, kuvarunko palvelijat-kuva-218 349e8f8db, lod-diag-218 a368fdf29 (junaan vain cb8b1f06c).
+
+## Lisäys 06.1x (PT; korvaa kohdan 4 tekijäehdotuksen)
+**Joki on minun työni, ei VS:n:** selvitä vesivarjostimesta (`JuoksuLattia.shader` Vesi, _Uoma 1, k6), miksi pinta on tasainen, ja tee siitä vettä. Tavoite KK:lta: pelaaja tunnistaa sen vauhdissakin heti vedeksi, ja rannat erottuvat kivestä. Kuva KK:lle ennen kytkentää. Ei junan este; tehdään **muurin ja säikähdyksen jälkeen**. Lähtöhypoteesi ja koekohta: `_tyo/pelikoodari/muuri-koe/TULOS.md`, lisäys KK 05.26; hypoteesia ei ole testattu.
+PT 06.1x: muuritilaus on LAV:lla ja alkanut.
