@@ -44,3 +44,18 @@ KK 15.58, tiivistettynä:
 - NÄYTTÖ: ensin Macilta k55:n kaista z10–z14 ennen | jälkeen KK:lle. Sitten iPad-vuoro PT:n järjestyksessä: varjo / pois p-z10:ssä ja tasoilla noin 8,6, 9,5 ja 10,4, kulmat 0°, 19° ja 21°, sama rajaus, koko kuvat täysikoossa, ruudukkomitta mukaan.
 - Lopuksi yksi suositus: pidetäänkö alle 20° varjo vai pois. Jos pois riittää, se poistaa vaihdon kokonaan.
 JU:n sarja sk-rajat-tasot.txt on nyt "ennen"-mitta tasoilta; aja sille KK:n ruudukkomitta, katso koko kuvat täysikoossa molemmista tiloista.
+
+## LISÄYS 2 (16.15; Postivahdin nollaus; KORVAA "Työn alla" -kohdan ja järjestyksen)
+KK:N SANA 16.06 (PT välitti sanatarkasti): "kyllä, vesi kuuluu porrastukseen, ja se tehdään ensin: h-z13:ssa on kolme eri merta, ja se on koko kuvan pahin vika. Sana: meri on samaa väriä joka tasolla, vain rannan tarkkuus saa vaihtua. Sama tavoite koskee kaikkia tasoja, joilla raja näkyy, ei vain 8,5–10,5; maa ja läiskät h-z13:ssa samaan työhön. Näyttö: Mac-kaistan rinnalle Helsinki ennen | jälkeen samalla rajauksella, sitten h-z13 iPadilta täysikoossa."
+KK 16.0x VS:lle, ENSIN: "Selvitä ensin, onko ulkopala lopputila vai yhä latautumassa: sama näkymä selvästi pidemmällä odotuksella ja kuvatasot lokista, koska korjaus riippuu tästä. Jos pala vain latautuu, tuo se erikseen esiin."
+PT: Lontoo kuuluu sanaan. PT odottaa riviä: sha ja tulos.
+
+Tulokset ja kuvat: muisti-484adb22f/TULOS.md (osio sk-striimi-loput), loput/. h-z13 ja l-z13 rajat 0,0879°:n ruudukossa (12 reunaa, ≤ 0,03 ruutua, 9 silmin). z15, z17 vain puolikoossa. NS:n vesianalyysi: _tyo/natiiviseppa/striimi-sauma/tulos.md.
+
+KESKEN 1, koe: JU:lla striimi/sk-lataus-h.txt (484adb22f, hakuloki päällä, h-z13 45/180/420 s, l-z13 45/180 s), sitten sk-rajat-tasot ("ennen"-mitta). Vertaa kuvat täysikoossa, kuvatasot "palvelin haku" -riveistä. Viite, ei tulos: muisti-tarkka.log: Pallo 873 +0-0 asettui 3,6 s:ssa ja pysyi 41 s kuvaan asti; kehysloki "paikallaan". Laskurien merkitystä ei varmistettu koodista. Tulos riviksi PT:lle ja KK:lle ennen korjauksen lukitsemista.
+KESKEN 2, koodi: 16496474b linssiseppa2/striimi-porras (natiivi-backup, 484adb22f + 1, wt k30 nyt tässä haarassa): VariPikseli v = SVesi, tasainenVesi aina Striimissä, z11:n häivytyspohjan vesi vektorista, e17. Testit Elava 33/33 ja Vari 8/8; koko sarjaa, Unityä ja laitetta ei ajettu, tulosta ei katsottu.
+Tekemättä: (a) z ≤ 10:n vesimaskissa aukkoja: ve-maski reikiä merellä, ei korjattu; ehdotus sulkeminen Varitassa, säde kokeilematta. Kaakon pala puuttui katsomatta. (b) Maa ja läiskät. (c) Testi: sama meri z10, z11, z12. (d) Tasokartta: vertaa h-z13.png porras/ennen/z10–13.png:iin 0,0879°:n soluittain.
+Mitat: Helsingin z10-pohjan meri ka 219,214,194, kun MeriOletus 205,206,198: siitä lämmin meri z ≤ 10:ssä (koodista ja mitasta; pelin kuvasta ei todistettu).
+Paikallinen kierros: pariisi-tyyli/porras/: data/helsinki (9 z10-palaa, MVT 11–13), aja.zsh <rakennuskansio> <tag>, kokoa.py <tag> (h-z13:n rajaus). ennen/ valmis, ei katsottu. Jälkeen: sh wt/Kartta-testit/kaanna.sh EiMitaanTesti, sitten zsh aja.zsh wt/Kartta-testit/rakennus jalkeen.
+
+JU:n muut: ui-kerros-ajo ei kelpaa (JU:n virhe, väärä Esikatselu.cs); uusinta iPad-jonon jälkeen, 15/16-vastaus KK:lle odottaa sitä. Vesi 5c870d62a Mac: lokit/esikatselu-20261104-154718, kuvat katsomatta, rivi PT:lle kesken.
