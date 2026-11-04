@@ -40,3 +40,9 @@ PT 06.1x: muuritilaus on LAV:lla ja alkanut.
 ## Lisäys ennen nollausta
 JU: be5632bdb iPad: sali 1 OK 3845 Mt, sali 2 OK 3878 Mt, **juhlasali xf VIKA 4153 Mt ≥ 4080 Mt** (vapaa 966 Mt, 05.29); ketju jatkaa (uudestaan 40 x), rivi "BE56 AJETTU" tulossa. Kansiot `lokit/pk-muistipiikki-219/sali-be5632bdb-{1,2,1-xf}/`. Ei vielä tulkittu eikä kerrottu PT:lle. **Seuraava:** katso `muisti-tarkka.log` (peitto, roskienkeruu kuvan alla) ja rivi PT:lle -0334:n ohjeen mukaan. Ei omaa ajoa.
 Viimeisin luovutuskommitti on tämän lisäyksen kommitti, ei eeb0f915f.
+
+## Lisäys: salin xf-vian syy on minun (NUI:n ehdotus, PT:lle kuitattu)
+**Ensimmäinen työ nollauksen jälkeen.** Hae syy be5632bdb:n ylitykseen 4153 Mt juhlasali xf:ssä (sali 1 ja 2 rajan alla). NUI:n mukaan, en ole tarkistanut:
+- Aloita `lokit/pk-muistipiikki-219/sali-be5632bdb-1-xf`. `muisti-tarkka.log` on 0 tavua, samoin molemmissa iso-vianhaku-9f8d2d13f-osissa; 4397cf20d:llä sama skripti antoi 768 kt. Vertaa muutoksia 4397cf20d..9f8d2d13f ja katso osan `vika/` sisältö, koska ilman lokia latausrivejä ei saada. Muistivahti.log on ehjä.
+- 4286 Mt ja ≥ 4146 Mt mitattiin ulkona, joten xf on ensimmäinen todellinen salin ylitys, ja piikki voi olla eri kuin ulkoreitin.
+Ajot vain JU:n vuorolla. Tulos rivinä PT:lle.
