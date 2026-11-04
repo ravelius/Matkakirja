@@ -40,3 +40,10 @@ PT: järjestys ei-varjoa, k29, vasta sitten k45. k29:llä samat muistiehdot; jos
 Ennen | jälkeen saman kulman parina: sk-muisti-z10-k29.txt, p-z9 | p-z9-pois ja p-z10 | p-z10-pois (`maasto siirtyma pois`). Yli 30°:n ennen-kuvaa ei saa, koska VIKA tyhjentää jonon 10 s:ssa.
 JU:n "odota jäi kiinni" on muistivahti: VIKA tyhjentää komentojonon (MuistiVahti.PysaytaKomennot, Komennot.cs:249), ei vika. Sovellus elää.
 KS: a64109412 sk-nd-koe-3 ottaa `kuva` ja `kuva3d` samasta näkymästä; mittapalat poistettu. KK siirsi tummennushaun VS:lle: suhde 15/16 = UI-kerros, sitten kerroksittainen loki (UIDocument-nimi, alfa) on VS:n työ. iPad-mittaus on yhä auki.
+
+## LISÄYS 3 (KS 14.1x: peite todistettu Mac-kuvassa)
+KS (lokit/esikatselu-20261104-140535, a64109412): y-0012 / y-0012-3d mediaani 0,9375 kaikissa kanavissa, p5–p95 0,934–0,941, 5,7 milj. pikseliä. Peite on UI-kerroksissa koko ruudulla. Kerros tuntematon. Mac-kuvan y-luvut ovat 15/16: käytä kuva3d:tä.
+Mitattu Mac 3D: 250/218/162 ja 178/149/121 (KS:n esimerkit, ei kohdennettu kadulle tai katolle). k55-tiedosto 234/210/168 ja 175/146/118.
+SEURAAVAKSI: Esikatselu.Kuva: kirjaa kerroksittain sortingOrder, juuren nimi ja alfa ruudun keskeltä (Editor/Esikatselu.cs:789–806), Mac-vuoro JU:lta. Koodihaku ei löytänyt: USS opacity/rgba 0,05–0,07 (vain Tyylikirjan --map-ink-06/07 ja iss-ohjaamo), PanelSettingsin clear (Esikatselu nollaa alfaan 0). --map-ink-06 on ruskea, ei musta, joten ei sovi neutraaliin kertoimeen.
+iPad: kerros on koko pelin UI, joten se voi olla myös laitteella, mutta kokoaminen on eri. Vihje, ei mittaus: 250/218/162 × 0,971 (1/16 lineaarisena) = 243/212/157 sopii p-z17:n katuun 240–245/210–215/156–161; eri näkymä ja eri zoom. Ratkaisee vasta laitekuva UI-kerros pois.
+ÄLÄ poista peitettä ilman KK:n sanaa.
