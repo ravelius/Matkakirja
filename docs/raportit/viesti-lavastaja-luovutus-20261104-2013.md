@@ -14,3 +14,5 @@ AUKI: vasemman hallin friisi kansi-kuvassa rikki, verrokissa ehjä; v115-kuvassa
 Tekemättä. Kolmio ja esimerkkipinnat: KORJAUS.md. Ensin kuvasta varmistus, ettei V4_teal-poisto vie oikeita räystäskoristeita; epäselvät jätetään ja kerrotaan PT:lle. Kk2r:ään vasta kuvien jälkeen. tunnista.py nimeää kuvan pikselin kolmion (testikamera: 262 0 -161 -2.03 3 6 0 60 170).
 
 Rivi työlistalle ja junaan: PT.
+
+Friisi, toisto (lokit -201007 kansi, -201220 verrokki; ensimmäinen -193814, -194014): molemmissa friisi yhtä lailla punaisen peitossa. Sama verrokkijuuri: friisi ehjä 19.41, peitossa 20.13. Friisi vaihtuu ajosta toiseen, ei tule kansi_pois.py:stä. Vaihtelun syy auki. Kaksi kierrosta, vain vasemman hallin rajaus katsottu.
