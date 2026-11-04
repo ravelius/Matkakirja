@@ -91,3 +91,9 @@ Ei todistettu: varjostinmuunnelmien osuutta ei voi lukea lokista, esilämmitysri
 **Scratchpadit:** vanhat pois, säilytettävä `T7 4TB/Claude-arkisto/pelikoodari-scratchpad-20261104` (ilman npz/npy/index/tasks); PT:lle rivi lähetetty. Vanhat ovityökalut (`ov`, `ovet`) ovat nyt siellä.
 
 **Korjaus:** 86e08b67b ei kääntynyt (GetInstanceID vanhentunut): koerunko on `f23db6add`, kansiot `lokit/pelikoodari-muisti-lahtotaso-f23db6add-<tila>`. JU:lle ilmoitettu, ajo `T/pk-lammitys.zsh` sha vaihdettuna.
+
+## LISÄYS 21.3x: LUE TÄMÄ ENSIN: lämmityskokeen tulos ja kevennys 314cf6a97
+f23db6add (iso iPad, kukin tila kerran; kansiot `lokit/pelikoodari-muisti-lahtotaso-f23db6add-<tila>`), huippu / gc huipussa / viim. 60 s: tavallinen 3905 / 531/801 / 3674; ei-lammitysta 3867 / 517/802 / 3667; kevyt 3840 / 543/597 / 3634; gc 3756 / 495/530 / 3653 (loki: 8 keruuta 306 ms, keko 764→521); gc-kevyt 3736 huippu jo ennen lämmitystä 116,9 s / 710/764 / 3621. Lennoissa 0 nykäystä, mutta juoksua ei pelattu, joten kevyen ensipiirtoriski testaamatta. Vertailu `f23db6add`-rivit: skripti scratchpadissa katoaa, luku tehty `muisti-tarkka.log`-riveistä N, U, L.
+**Luenta:** lämmitys ei ole piikin pääsyy (pois: −38 Mt; gfx −82, purg −19, malloc −34). Purg-porras 103→~200 tulee ilman lämmitystäkin. Sama 789-koodi 3905 vs aiemmat 4084–4130: hajonta jopa 225 Mt, joten yksittäiset ajot eivät todista. Varjostimen kevennys ei tarpeen tällä tiedolla.
+**Kevennys:** `314cf6a97` (`pelikoodari/muurin-runko-219` = 789f3046f + VapautaKeko ennen lämmitystä; ei kytkintä, ei junaan). Worktree tällä haaralla. Kevyt lämmitys jätetty pois.
+**Odottaa:** JU `_tyo/pelikoodari/muisti-ovet/hajontapari.zsh 789f3046f 314cf6a97` (2 kierrosta, kansiot `-h1`, `-h2`). Tulos riviksi PT:lle; junapäätös PT:llä. Sen jälkeen kk3:n kaide samaan pohjaan ja ovet (lisäykset 19.1x).
