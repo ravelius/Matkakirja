@@ -361,3 +361,10 @@ Kansio /Users/Shared/Claude/wt/proto-karttaseppa-ruutu-218 on nyt haarassa **kar
 
 ## LISÄYS 4.11. klo 05.47 (uusin; lue ensin): v5 yhd5-ajossa
 JU: yhd5-ajon ketju on nyt **8dee95d57**, kansio **julkaisija-yhd5-iso-8dee95d57** (korvaa kansion julkaisija-yhd5-iso-0891b0f1e), 28/28 kuvaa. Pelikuvista katso myös Plantes v5:n reuna ja käytävät; rosoisuus ja uusi otto päätetään niistä. JU lähettää rivin, kun ajettu.
+
+## LISÄYS 4.11. klo 05.54 (uusin; lue ensin): puut laajassa zoomissa ja nimien alla
+**e721d219e** (karttaseppa/pariisi-nd-kiila, 8dee95d57:n päällä, irrotettava; 616/616, Unity kääntämättä, ei ajettu, ei yhd5-ajossa, ei junaan). Korjaa yhd2/1, 3 ja 9.
+- **Syy yhd2/1:** puu-lajin korkeus_m oli 4000–7000 (mitattu pariisi.json:sta), joten puut häipyivät 0,05:een mennessä. Nyt 16600–17800 kuten nähtävyyksillä; P/kerros.py pitää arvon jatkossa. Boulogne 6 468 ja Vincennes 9 076 puuta ovat datassa.
+- **Syy yhd2/9:** Saint-Eustachen S katkeaa puuhun, ei Louvren reunaan (k-y-tuileries, a6c11c1d2; silmämääräinen).
+- **Jonot:** puu 2994, puutarha 2993, nimet 2995. Sacré-Cœurin metsä (ryhma "metsa") jää jonoon 3060+, koska etuosa on kirkon edessä. Väistö ja aukot jäävät; tämä muuttaa KK:n 02.15 "nimet väistävät, jonoa ei nosteta" -linjaa vain siten, että puut laskevat eivätkä nimet nouse.
+- **Tarkista pelikuvasta:** e-0-13, k-t-z15, y-tuileries, Boulogne ja Vincennes; 5–7 px:n latvusten ilme; kulu ja muisti 22 378 puusta laajassa zoomissa (mittaamatta). Jos laatat näkyvät (alfa > 0), puut jäävät niiden alle kuten puutarhat.
