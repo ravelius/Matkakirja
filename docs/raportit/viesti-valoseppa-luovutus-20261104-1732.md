@@ -31,3 +31,14 @@ JU:n ui-kerros-ajo uudelleen ja 15/16-vastaus KK:lle (luovutus -1530). Vesi 5c87
 
 ## LISÄYS 1 (JU 17.2x)
 sk-lataus-h 484adb22f valmis: huippu 3344 Mt, 0 varoitusta, 5/5. h-z13-45, -180 ja -420 ovat tavulleen samat (3d2b89ce7720), samoin l-z13-45 ja -180 (b7198d05afc4). Viittaa lopputilaan, ei latautumiseen, mutta sama tiedosto voi tulla myös jäätyneestä kuvasta: varmista konsoli.txt:n "palvelin haku" -riveiltä ja katso kuva täysikoossa ennen riviä PT:lle ja KK:lle. ND v3:n ajon JU ilmoitti tässä viestissä ajossa; kansio esikatselu-20261104-171846 oli jo valmis ja katsottu.
+
+## LISÄYS 2 (17.3x; KK:N SANA, sanatarkasti; lisää iPad-ajon edelle. Järjestys ND-valo ensin ei muutu)
+"j12 katsottu (kaista, alueet j12-z10-z11.png + rajaukset). Suunta kelpaa: meri yhtenäinen, Marne kapea. Omistajalle vasta iPad-kuvista. Järjestystä (ND-valo ensin) tämä ei muuta.
+Ennen iPad-ajoa samalle kierrokselle:
+1. Alpit: rinnevarjon terävyysero z10 | z11 on nyt pahin jäljellä oleva, koska se näkyy juuri tasorajana. Mittaa epäilys (PoistaKarkeaRantaa) ja korjaa.
+2. UUSI, Alpit z11: tumma sahalaitainen viiva vain z11:ssä (valtionraja?), ja tummissa rinteissä vaaleita täpliä, joita z10:ssä ei ole. Selvitä molemmat ja kerro, näkyvätkö ne pelissä vai vain väritysfunktiossa. Maakuntarajat ja valtionrajat ovat NS:n omat katkoviivat: tämä viiva ei saa tulla niiden päälle.
+3. UUSI, Lontoo z11: Thames vaihtuu keskustan itäpuolella kerralla leveästä tummareunaisesta ohueksi vaaleaksi viivaksi, ja z10:ssä suisto on selvästi leveämpi. "Tasainen" koskee vain väriä. Saman joen pitää jatkua ilman katkoa ja tasolta toiselle saman levyisenä, niin pitkälle kuin data sallii; kerro, mitä ei saa samaksi.
+4. Z10-koe: merisuodatus ja offline ensin, kuten sanoit.
+Sitten iPad-ajo KK:n listalla + NS:n paikat → yksi suositus varjo / pois → KK. Rajaa rivi, jos jokin näistä paisuu: tuo luku, älä hio."
+Tehty tästä: kohta 4 koodina 3a4f77b82 (KK:lle kerrottu; laitteella ajamatta). Kohdat 1–3: ei mitään. Vihjeet, ei kokeiltu: kohta 1 ajaa Piirra ilman PuhdasPohjaa ja vertaa; kohta 2 viiva = boundary-kerros Seepia (ElavaTyyli: valtioraja, alueraja), täplät tarkistettava PoistaKierroksesta; kohta 3 z11 pudottaa pienet polygonit (pienuussuodin "z <= 11 && class != ocean"), mikä katkaisee Thamesin.
+Lataus: konsoli.txt:ssä 1282 "palvelin haku" -riviä, viimeinen ennen "hakuloki pois" riveillä 4322 ja 5361; aikoja ja kuvatasoja ei luettu. ND v3 -rivi JU:lta käsitelty.
