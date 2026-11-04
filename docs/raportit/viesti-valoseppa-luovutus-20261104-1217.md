@@ -39,3 +39,6 @@ JU 12.18: vieritys valmis, mitat KK:lla ja KK:n tarkistamat.
 ## LISÄYS 3 (PT, KK:n sana)
 Läiskät: KK KYLLÄ seuraavaan väriversioon, kun muisti ja sauma on todistettu. Vain pienet ruoho- ja pensasalueet; metsät, kaupunkipuistot ja muu lukittu k55-pinta ennallaan. Valmistelu sallittu nyt, ei ajoa eikä vientiä ennen todistusta. KK:lle pari ennen ja jälkeen, sama kohta ja mittakaava (p-z17 Luxembourg), sekä koko kaupungin kuva, ettei z14–z15 muutu.
 Toteutus avoin: ElavaTyyli.cs rivit 309 (alfa: grass ei-Puisto 80) ja 534 (Pehmea, kun metsa ja alfa != 245). Pienet alueet vaativat oman peiton pinta-alarajalla, koska wood ja suuret grass-alueet pysyvät; vahvista PT:ltä, tarkoittaako KYLLÄ poistoa vai terävää reunaa. Oma koehaara 7f64cd657:n päälle; tyyliversio vaihtuu.
+
+## LISÄYS 4 (NS)
+NS: TasainenLaatta (runko ee2cca3b4) lisää oman kameransa, kun LiikeLaatat.Nyt == Paa. Muistijarrun jälkeen se voi olla päällä alle 70 km:ssä ja lisätä paloja. Ehdotin NS:lle porttiin `&& !LiikeLaatat.SiirtymaMuistiJarru`; NS:n tiedosto, tarkista yhteisajon rungosta. Koodista, ei ajettu.
