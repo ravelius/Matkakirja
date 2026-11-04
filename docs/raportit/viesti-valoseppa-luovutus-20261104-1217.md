@@ -1,4 +1,4 @@
-# Valosepän luovutus 4.11.2026 klo 12.25
+# Valosepän luovutus 4.11.2026 klo 12.17
 
 Syy: konteksti yli pehmeän rajan (Raamattu 7.37). Edellinen: viesti-valoseppa-luovutus-20261104-1205.md (Työkalut, opit, vesikerros). Loki: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md. Tulokset: pariisi-tyyli/striimi/TULOS.md (loppu).
 
