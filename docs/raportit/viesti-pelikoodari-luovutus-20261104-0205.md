@@ -48,3 +48,9 @@ Ennallaan: -0142 "Muut" ja "Tarkista"-rivi (Cull Back, ruudukkokuvio malja2-120)
 - **Suositus:** näytä Uudestaan-metodissa latauskuva uudelleen (sama reitti kuin avauksessa, JuoksupeliNakyma.cs:147–194 ja :1075–1092), ei maailmaa ilman esteitä (omistaja 20.10. 12.33 "mikään ei ilmesty yhtäkkiä"). Tarkista ensin: latauskuva on purettu ensimmäisen häivytyksen jälkeen (:1092), joten kuva pitää ladata uudelleen, ja gcVaihe ajaa roskienkeruun; muistihuippu kasvaa kuvan verran (mittaa). Piilota esinekortti peiton ajaksi. Kysy PT:ltä, jos muutos ei ole pieni.
 - Sitten: rivi PT:lle ja lopullinen sha JU:lle (iPad-sarja pk-0d68-laite.zsh, päivitä sha; sali 1+2 kuvilla ja 40 x uudestaan).
 - **Eri vika, listalla:** kamera katon palkistossa reitillä 2,85–4,12 s (b1, b8), PT:n kanta auki.
+
+## Lisäys PT 02.27 (SITOVA; ohittaa "Eri vika, listalla")
+- **Palkistovika (b1-4s, b8-4s) on junaa estävä VIKA:** palkisto täyttää ruudun, pelaaja ei näe yli sekuntiin. Korjaa samaan shaan. Selvitä myös, onko sama julkaistussa TF 217:ssä: rivi PT:lle (KK:n aamulista). Johtolanka: kamera-*.txt rivit 71–91 (massassa 1, katon alla 1, kamera 3,9 m): katso, kuuluvatko b-ajoihin. Koodi: JuoksuV4Maailma.cs "SALIN KATTO RAJAA" ja avoinSali (:1683, :2044–).
+- **Latauskuva peitoksi ok**, jos ensimmäinen kuva peiton jälkeen on oikea. **Todistus 8/8 uudelleen samalla Mac-kamera-ajolla** (kamera-219, päivitä sha), ei vain 1 s:n kohdalta. Latauskuva ei saa peittää palkistovikaa.
+- Tuloksen polku on proto-3d/lokit/pk-muistipiikki-219/TULOS.md (ei kamera-219-kansiossa): kerro PT:lle.
+- iPad-sarja pidossa uuteen shaan asti, sitten Pariisin (etusija) jälkeen.
