@@ -51,3 +51,9 @@ Ei ajeta: VS 0d5a75286, 6469e76e7 (hylätty/korvattu). KS 639208872 peruttu.
 - iPad: T/ipad-loppujono.zsh pid 12564: KS 8be6819db (rivi KS) → VS 672f4f9d1 (rivi VS). Tulokset T/vs-muisti-ketju.log.
 - Mac: L2 KS 48e4a5921 sk-nahtavyysalue (T/ks-nahtavyys.log, kansio julkaisija-nahtavyysalue-48e4a5921, rivi KS). LAV kansipari (T/lav-kansi.log, KANSIPARI AJETTU → LAV), sitten kk2r-pari (T/lav-kk2r-pari.log, KK2R-PARI AJETTU → LAV). NUI 91bf669af + dbbc2bbea (NUI ilmoittaa).
 - VS offline2 85d57c0e7: T/vs-offline2.zsh pid 27170 odottaa loppujonoa; L1, kansio rivinä VS (T/vs-offline2.log). A ja B perutut.
+
+## LISÄYS 20.2x (uusin; korvaa edelliset jonot, tarkista T/jono-20261103-ilta.txt)
+- Valmis ja lähetetty: KS 8be iPad, KS d45cad639 Mac, LAV kansipari + toisto, kk2r-pari.
+- iPad: VS 672f4f9d1 ajossa (T/vs-muisti-ketju.log, 43 min alkaen 20.00; rivi VS). Sen jälkeen NS muistikuva 303a71dfb (T/ns-muistikuva.zsh pid 23365, T/ns-muistikuva.log; DEVELOPMENT-käännös, palauttaa rungon; rivi NS).
+- Mac: VS offline2 85d57c0e7 alkaa VS 672f:n jälkeen (T/vs-offline2.log, kansio rivinä VS). NUI 30193b615 + dbbc2bbea iPhone18 (NUI ilmoittaa).
+- OPPI: viritä vahti jokaiselle ketjulle heti; 19.4x–20.0x rivit myöhästyivät 10–25 min, kun vahti puuttui.
