@@ -386,3 +386,9 @@ Omistaja 06.01 (PT 06.08): Pariisi jatkuu yhd3:n suunnalla, ei pinnan eikä juna
 - **Määrät:** 22 378 → 5 718 (0,26 ×). Ilman Boisia 6 458 → 3 139, koska puistoihin ja hautausmaille tuli ryhmiä; rivit puolittuvat. Kulu mittaamatta (KK kohta 6).
 - **Tilaus 18a–b a8dacbe2b:** C/puutarha-bois-{boulogne,vincennes}, työkalu P/bois/tilaus.py. Toimituksen tullessa: sovitus (alfa maskista, reiät näyttävät pohjan), kuva laji ryhmä puutarha + ilmesty_m 3000–5000 + nähtävyyksien korkeus_m, puut-laaja.py --ei-bois, pari Boulognesta PT:lle. Lähellä näkyvät koodipuut, joten kuva 3,6 m/px ei näy lähizoomissa.
 - **Ennen peliä:** kaksi kertaa ajettuna puut-laaja vaatii alkuperäisen pariisi.json:n; kerros.py poistaa lajit ja palauttaa yhden puulajin. Nimipeite on ennallaan lähipuiden mukaan.
+
+## LISÄYS 4.11. klo 06.37 (uusin; lue ensin; konteksti 26 %, nollaus): nähtävyyskoe yhdistetty
+**Toimitukset 17a–b tulleet, Codexin oma QA ei läpäissyt (maalaus maskin ulkopuolelle).** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/kooste.py <nimi>: maskin ulkopuoli pohjasta (0 px muutosta), reuna 6 px, kohdat alfa ≤ 0,9 pelkkä pohja (Louvre 5,4 %, maitoisia), rakennus viimeisenä. Tulokset uusi-<nimi>.png, pari-<nimi>.jpg, pari-1x1-<nimi>.jpg; PT:llä arvio "kelpaa kokeeseen", odottaa KK:ta.
+**Tekemättä:** savysovitus-2029.py (kohta 5), koodipuut koosteeseen, ND:n reunat täysikoossa, ND:n pieni talo tornien luoteispuolella Seinen rannalla tarkistettava, Codexin kuittaus vasta KK:n jälkeen. Kahden epäonnistumisen sääntö ei lauennut, jos KK hyväksyy yhdistämisen.
+**Peliin vasta KK:n jälkeen:** lisäys 06.18:n ohje (maaosa ryhmä puutarha, koodipuut maskista pois, nimipeite, uusi versio).
+**Vahti:** 18a–b kuoli nollauksessa: `until ls C/puutarha-bois-*/_review-*/SHA256SUMS` taustalle (C = /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyydet-20261103). Sitten lisäys 06.32.
