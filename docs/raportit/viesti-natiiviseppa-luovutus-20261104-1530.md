@@ -28,3 +28,6 @@ PT: VS löysi k45:n h-z13:sta suoran vaakasauman veden yli (rivi 840–844, vär
 - Kuvia ei ole katsottu, joten vastausta ei ole.
 - **sk-tasainen-kallistus ei sisällä Helsinkiä**, vain Pariisin 48.8530 2.3350, toisin kuin PT:n viestissä oletettiin. Kerrottu PT:lle ja ehdotettu lisäajoa: aja 60.1699 24.9384 0.26 2, kallista 45, sama kuva kokeen kanssa ja `maasto tasainen pois`.
 - Vertailu: katso, osuuko rivi 840–844 maastopalan rajaan (reunat.py olettaa suoran ylhäältä, ei käy kallistettuun). Veden yli sisältöero ei ole talot ja tiet, vaan väri, joten syy voi olla eri kuin z12–z14:n saumassa: älä oleta samaksi.
+
+## LISÄYS PT, iPad-vuoro maakuntarajoille (SITOO)
+iPad-vuoro kallistusajon jälkeen JU:n jonossa, ehdolla: ensin Mac-jälkeen-ajo 35b6ee8b4 ja kaikki katsomatta olevat kuvat katsottu (ranta, valtionraja, kallistetut, Suomi). Vuoro pyydetään JU:lta vasta sitten. Selvitä karkean katkon 70 px ennen iPadia, jos se löytyy koodista; muuten mittaa iPadilta. Tulokset ja parit PT:lle, PT vie KK:lle.
