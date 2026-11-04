@@ -46,3 +46,7 @@ Postivahti: 8b1d2dbae (NOLLAUS vain levossa) PR:ksi pyydetty, ei tarkistettu. NU
 ## LISÄYS 08.5x (korvaa ristiriitaiset kohdat)
 - Viivat: LAV ei löydä niitä taustan muutoksesta v90 → v115; ehdokas on piirto (varjostin tai valokartan näyte). Palautettu PK:lle, rivi KK:lle ja PT:lle.
 - k49: VS oikaisi, z14 | z15 -raja ei jyrkentynyt k49:ssä; ratapihan ero oli jo k48:ssa, kadut vain hieman kapeammat.
+- k49 873762394: KK 08.54 kuittasi kokeena JU:n zoomisarjaan yhd7:n tilalle, ei junaan; vaakarivit ratkaistaan laitekuvista, kuvat KK:lle ennen omistajaa.
+- Lähitaso 35b001311 (Mac): musta av 0,3 %, uu ja sa 0,0 %; ovi-ylityksessä 2 kuvassa leikkausreuna, ontto sisus ja irrallinen palanen (peitto-reitti/pari-lahitaso-uu.jpg). Ei junaan ilman KK:n päätöstä; viety KK:lle.
+- Muistikoe 1af126155 (pelikoodari/juna-218-koe2-kanavat-gc), ajamatta, JU:n sarjan jälkeen tarkalla muistilokilla.
+- LAV luovutti db3779dd9; sen kuvat JU:lla katsomatta.
