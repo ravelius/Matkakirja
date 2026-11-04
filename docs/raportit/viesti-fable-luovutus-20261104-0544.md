@@ -17,7 +17,7 @@ KK valitsi 05.02 **yhd3 ff97c7f8c** (lokit/julkaisija-yhd3-iso-ff97c7f8c/, 6 kuv
 5. **Palvelijalippu kiinni:** säikähdys 01e3bc89f hyväksytty lähikaistalle ruuduista; maljakko lähikaistalla, käännöskohta ja cb8b1f06c:n iPad-muisti ajamatta. Xf-syy PK:lla.
 6. **Joki (VS, ei junan este, Pariisin jälkeen):** avovesi (_Uoma 2) ja vaalea reunakivi, kuva KK:lle ennen kytkentää.
 7. **NS:** vieritysmittaus ja TF 217 -kuva (48.82 2.4609 0.05) JU:n jonossa; sävyeron ehdokas palakohtainen puhdistus (d76d0be15), ei koodimuutosta ennen pelikuvaa. Rivi 168 ja suora häivytys seuraavalle kierrokselle.
-8. **VS:** Louvren etelälaita OSM-kävelyalue 32 647 m²; korjausehdotus yhd5:n kuvista. Oikeuspalatsin katot jäävät (KK). k37 + 4402673f3 mukana yhd5:ssä. Austerlitzin reuna z ≤ 15 seuraavalle kierrokselle.
+8. **VS:** Louvren etelälaita OSM-kävelyalue 32 647 m²; korjausehdotus yhd5:n kuvista. Oikeuspalatsin katot jäävät (KK). k37 + 4402673f3 mukana yhd5:ssä. Austerlitzin reuna tehty: k38 6217915a0 (pariisi-k38, paikallinen, ei yhd5:ssä), seuraavaan yhdistelmään; pari _tyo/linssiseppa2/pariisi-tyyli/k38/pari-z15-3x.jpg katsomatta, vie KK:lle (z13 ennallaan, KK:n arvio).
 
 ## iPAD JA LEVY
 - Iso iPad vapaa JU:lle, jono JU:lla (xf, LOD, vieritys, yhd5, PK muuri, Tripo viimeisenä). Documents/kartta-osat on täynnä (79/79): kansio peittää ämpärin, uudet kuvat kopioitava ennen ajoa, ämpäripolkuja ei todisteta. **Poisto:** `koealue osat-poista` tulee rungossa yhd5:n mukana; rivi JU:lle vain, kun se on rungossa ja laitteella ajettu. Poisto ei omistajalle.
