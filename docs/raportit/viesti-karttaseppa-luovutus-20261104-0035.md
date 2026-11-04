@@ -368,3 +368,7 @@ JU: yhd5-ajon ketju on nyt **8dee95d57**, kansio **julkaisija-yhd5-iso-8dee95d57
 - **Syy yhd2/9:** Saint-Eustachen S katkeaa puuhun, ei Louvren reunaan (k-y-tuileries, a6c11c1d2; silmämääräinen).
 - **Jonot:** puu 2994, puutarha 2993, nimet 2995. Sacré-Cœurin metsä (ryhma "metsa") jää jonoon 3060+, koska etuosa on kirkon edessä. Väistö ja aukot jäävät; tämä muuttaa KK:n 02.15 "nimet väistävät, jonoa ei nosteta" -linjaa vain siten, että puut laskevat eivätkä nimet nouse.
 - **Tarkista pelikuvasta:** e-0-13, k-t-z15, y-tuileries, Boulogne ja Vincennes; 5–7 px:n latvusten ilme; kulu ja muisti 22 378 puusta laajassa zoomissa (mittaamatta). Jos laatat näkyvät (alfa > 0), puut jäävät niiden alle kuten puutarhat.
+
+## LISÄYS 4.11. klo 06.1x (uusin; lue ensin): laajan zoomin puut koosteena
+Omistaja 06.01 (PT 06.08): Pariisi jatkuu yhd3:n suunnalla, ei pinnan eikä junan hyväksyntää; KS:lle puut, nykyinen linja. /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/laaja-puut.py → laaja-puut.jpg (ennen | puilla | 2029, 5,4 m/px; yhd3 k-k-laaja, pelin oma 4,37 m/px maamerkeistä, jäännös enintään 12 px) ja laaja-puut-koko.png. Kooste e721d219e:n datasta; koosteessa nimet jäävät puiden alle, pelissä päälle. Rantarivit, Invalidien rivit ja Boulogne näkyvät.
+**Jää litteäksi:** puistojen keskustat ja hautausmaat (Monceau 30 puuta reunalla, Père-Lachaise 35, Montparnassen hautausmaa 14, Montmartren 0). Seuraavaksi KK:n kannan jälkeen ryhmät puistojen sisään (puut-uudet.py, ajojärjestys lisäyksissä 02.59 ja 05.26) ; hautausmaiden maa on VS:llä.
