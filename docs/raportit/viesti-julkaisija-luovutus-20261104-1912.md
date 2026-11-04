@@ -37,3 +37,11 @@ Ei ajeta: VS 0d5a75286, 6469e76e7 (hylätty/korvattu). KS 639208872 peruttu.
 - vs-muisti-z10k60 kaatuu heti, jos käännöstä ei ole: viritä vasta käännöksen jälkeen. VS:n ja KS:n sha vaihtuu usein: odottajan voi pysäyttää omalla pid:llä ennen käännöstä.
 - Tarkista pyytäjän skriptin olemassaolo ennen ketjutusta (verrokki ehti viestin jälkeen).
 - "VIKA laheta ui-komento" on usein harmiton: tarkista konsolista, menikö rivi perille.
+
+## LISÄYS 19.2x (uusin; tarkista T/jono-20261103-ilta.txt)
+- iPad: seinä 789 (pid 73155) kaatuu käynnistykseen error 22: VIKA 19.18 ja 19.24, enintään 4 yritystä. Jos kaikki epäonnistuvat, ketju jatkaa pari2:een (se yrittää myös 4 kertaa), runko takaisin: aja `zsh T/pk-seina.zsh 789f3046f` myöhemmin iPad-lukon sisällä tai T/pk-seina-789.zsh uudella odotus-pid:llä. Jos pari2:kin kaatuu, rivi PT:lle heti: iPadin uudelleenkäynnistys vaatii omistajan koodin.
+- iPad-loppujono on nyt pid 12564: pari2 → KS 8be6819db (ei 81ce72a05, KS vaihtoi) → VS 672f4f9d1. VS 672f on käännetty. Käännös T/kaanna-8be6819db.log.
+- Mac: L2 KS 8be6819db sk-nd-puut (T/ks-nd-puut5.zsh, kansio julkaisija-nd-puut-8be6819db; KS haluaa tämän ennen iPadia, rivi KS). 81ce:n Mac valmis ja lähetetty.
+- L1: LAV palat uudelleen (T/lav-palat.zsh pid 97252, rivi LAV), VS offline 2d1084b18 + c968fe777, NUI 91bf669af + dbbc2bbea. PK kk3 valmis ja lähetetty.
+- Blender: LAV kk2r-leivonta (T/lav-kk2r.zsh pid 95730, T/lav-kk2r.log). Rivi LAV, kun KK2R VALMIS. Ei toista Blenderiä rinnalle.
+- OPPI: kun pysäytät laitekäännöksen TERMillä, laite-sha:n trap ei vapauta linjalukkoa. Tarkista lukon pid; kuollut oma lukko saa poistaa.
