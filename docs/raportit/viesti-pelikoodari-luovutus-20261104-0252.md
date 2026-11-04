@@ -23,3 +23,15 @@ Katsottu, HUOMIOT.md ja kuvat PT:llä (02.52): `_tyo/pelikoodari/palvelijat-v10/
 Ennallaan -0205 ja -0142. Komento: Peli-testit/unity-tarkistus.sh (sh), Peli-testit/kaanna.sh (bash).
 
 Tila: odottaa JU:n kamera-be56-ajoa ja KK:n kantaa v10:een.
+
+## Lisäys 02.59: KK 02.55 palvelijat v11 (korvaa "Palvelijat v10" -osion)
+- KK hyväksyi: sirpaleiden muoto ja erillisyys, ämpärin sisus. Ei vielä: lätäkkö ("liukas vesilätäkkö", väri 150/185/225, ei tarrareunaa, pilviheijastus hillitympi), sirpaleiden kuvio ehjän maljakon mukaan. Kengän rosoinen reuna saa jäädä listalle.
+- **v11 52831ac12** (pelikoodari/arkihahmot-218), kuvarunko **b4a516989** (palvelijat-kuva-218). Vain varjostimia (Marka, Sirpale, Hahmo); ei ajettu eikä varjostinkääntöä ole todistettu. JU:n jonossa kamera-be56:n jälkeen: `_tyo/pelikoodari/palvelijat-v11/aja.zsh`, kuvat v11/vesi ja v11/malja.
+- **Katso ja tuo KK:lle PT:n kautta sama juoksukuva ja lähikuva kuin v10:ssä** (vesi-090, vesi-160, malja2-090, rajaukset kuten palvelijat-v10/):
+  1. Mittaa lätäkön sisus PNG:stä keskeltä (v10: 179/206/239; tavoite 150/185/225; _Sisus arvioitu laskemalla, voi vaatia säätöä). Ulkoreuna häipyy, ei rengasta, ei katkeamaa verkon reunaan (lyhin säde 0,92; märkä kivi rajattu 0,9:ään). Pilvi ei soikioina.
+  2. Kengän viirut (vesi-160, oikea kenkä, täysikoossa): syy on PÄÄTELTY, ei todennettu (kenkä maan tasossa, lätäkkö piirtyi päälle; toinen mahdollisuus: reikä kengän verkossa, silloin _Cull 0 ArkiHahmot-materiaaleille). Jono: kivi 2000, Marka 2001, Hahmo 2002.
+  3. **Hahmo-jono muuttui kaikille hahmoille (myös Puyi, vartijat):** tarkista, ettei mikään muutu: Puyi ja palvelijat kuvissa ehjät, lätäkkö näkyy kiven päällä kaikkialla (jos lattia piirtyy myöhemmin, lätäkkö katoaa).
+  4. Sirpaleet: pieniä oksia valkoisella (malja2-090); juoksuetäisyydellä kuvio saa haaleta, ei saa välkkyä.
+- **Palvelijatar v2:** kuvat edestä ja takaa KK:lle ennen kytkentää; JU:lle pyydetty Pariisin jälkeen (ALKAA-rivi; tarkistukset -0003 kohta 4). KK haluaa kuvat, kun Pariisi on päästänyt ajovuoron.
+
+Tila: odottaa JU:n ajoja kamera-be56 ja palvelijat-v11, sen jälkeen palvelijatar v2.
