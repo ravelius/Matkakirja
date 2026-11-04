@@ -29,3 +29,8 @@ z14–z17, Cité ilman saumoja. p-z12, p-z13 suorakulmaiset tarkkuusrajat (NS). 
 3. Veneen reitti (KORJAUSLISTA 5, LISÄYS 5): ei aloitettu. Lisäksi KK 13.59: s-270 (lokit/esikatselu-20261104-134710, noin 1747, 234) vene kelluu sumun päällä; tarkista täysikoossa. Sääntö: laiva vain vedellä. d34cacd08 siirrettävä 7f64cd657:n päälle.
 4. Läiskät: ensin terävä reuna (LISÄYS 3, 6), ei aloitettu. Ajo vasta, kun muisti ja sauma on todistettu.
 5. sk-striimi-loput.txt muistin jälkeen.
+
+## LISÄYS 1 (PT: suositus tehdään)
+e774647ee (linssiseppa2/striimi-vari, 7f64cd657:n päällä, natiivi-backup, 604/604; Unity ja laite todistamatta): kallistettuna ≥ 30° (hystereesi 25°) ei siirtymän varjovalintaa, jarru varalle.
+PT:n ehdot (JU, striimi/sk-muisti-z10-ei-varjoa.txt): 1) käytetty ≥ 30° eikä varjovalintariviä, 2) alle 4080 Mt ilman muistivaroitusta, 3) kuvat tästä ajosta (p-z10, p-z10-90), ei reikiä, mustaa tai saumaa. Jarrun laukeaminen ei riitä. Jos täyttyvät: sk-striimi-k45.txt samalla koonnilla.
+Oma lisäys, PT:n päätös: sk-muisti-z10-k29.txt, koska 25–29° varjo jää kertoimella 4 eikä kulmaa ole mitattu. Pelaajan menetys: Z9/Z10-neliöt voivat näkyä kallistettuna tasoilla 8,5–10,5 (päätelty, ei kuvaa).
