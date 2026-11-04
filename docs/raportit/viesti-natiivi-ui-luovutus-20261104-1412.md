@@ -41,3 +41,16 @@ Protossa ei ole origin-etäpäätä (vain natiivi-backup); haarat näkyvät kaik
 2. Nousukuvien ajo ja kuva KK:lle kuten kohta 1 yllä.
 3. **Lippu 99eb9931e PT kuitannut.** Mac-kuvat Ranskasta ja Norjasta PT:lle JA KK:lle JU:n vuorolla. KS:lle kerrottu sha (yhdistelmä 60c1e5614 ei sisällä sitä).
 4. Yhden rivin korjaus (este "esittely") odottaa edelleen KK:n sanaa. Sen jälkeen ajossa pitää näkyä, että C1 pysyy kaupungissa.
+
+## LISÄYS 2, 14.5x: KORVAA JONON, tämä on voimassa
+**C1:** KK:n sana 14.52 tuli: korjaus tehty, proto `natiivi-ui/nousu-pieni-219` **9d2b17f31** (HiljaisuudenEste: este "esittely"), Unity ajamatta. Vertailu 7f64cd657 ilman haaran muutoksia: elävä soi 8,6 s:n jälkeen kesken C1:n, joten nousu-haara ei ole syy (lokit/nui-vertailu-7f64cd657-20261104/konsoli.txt; PT:lle viety). Syy on rungossa c9ab58e88..7f64cd657 tai ajotavassa, haarukoimatta. Kerronta loppuu 0,7 s C1:n jälkeen ("liiku: esiin"), selvitä `Matkavalinta.cs:114`:n kutsuja.
+
+**Nousukuvat pysty kuvattu (3d7f5defb):** lokit/nui-nousu-35-3d7f5defb-20261104/pysty-*.png: kuva pisteen vieressä, 59 % leveydestä, 30–33 % korkeudesta. **vaaka-*.png EIVÄT OLE VAAKAKUVIA** (kääntökomento hylättiin kahdesti; samat kuin pysty), älä lähetä. Korjattu muoto on ui-komento.txt-rivi `ui kierto vaaka`, ajamatta. -noussut-kuvat osuvat kesken nousun; siirrä kuvat.py:ssä 0,75 s tarvittaessa. Kirjaimet lentävät hetken kuvan vierestä; lopullista nimeä alarivillä en nähnyt, katso se videosta.
+
+**JONO:**
+1. JU:n vuoro (JU antoi 14.3x kolmen ajon vuoron, kaksi käytetty; pyydä tarvittaessa uudelleen): `SIMU_MUISTIRAJA=16 zsh /Users/Shared/Claude/proto-3d/tyokalut/simu-lukko.sh kaari natiivi-ui yhteinen-iPad13 -- zsh /Users/Shared/Claude/proto-3d/lokit/nui-nousu-35-9d2b17f31-20261104/ajo.zsh`. Todiste PT:lle: elävä ei laukea kesken C1:n eikä `FRA Korkeuteen` -riviä tule C1:n jälkeen. Vaaka: tarkista konsolista, ettei "tuntematon komento", ja kuvan koko 2752×2064.
+2. Sen jälkeen kuva KK:lle (traileri 1, c1, c2, c5, yksi vaaka, yksi juuri noussut, osuudet molemmista asennoista).
+3. Mac 99eb9931e: sk-lippu2.txt + sk-lippu2-nor.txt, kuvat PT:lle ja KK:lle. Rivi JU:lle, kun lukko ja L2 vapaat.
+4. Haarukoi C1:n syy, jos PT pyytää.
+
+**Levy:** vanhat nui-*/app-kopiot siirretty T7:lle (/Volumes/T7 4TB/Claude-arkisto/nui-appit-20261104, 6,3 Gt, JU:n pyynnöstä). Kahdeksan puhdasta, rungossa olevaa omaa worktreetä poistettu (1437, animaatiot2, elava-kartta, halli, karttaui-porras, keisari, keisari-nimi, kiinni; haarat tallella). Raja 25 Gt.
