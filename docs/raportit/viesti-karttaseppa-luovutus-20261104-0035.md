@@ -349,3 +349,9 @@ Kansio /Users/Shared/Claude/wt/proto-karttaseppa-ruutu-218 on nyt haarassa **kar
 
 ## LISÄYS 4.11. klo 05.39 (uusin; lue ensin): yhd5 JU:lla
 **yhd5 = 0891b0f1e** (karttaseppa/pariisi-nd-kiila, mukana VS:n ratakorjaus; 616/616, Unity kääntämättä). KK hyväksyi ND-kiilan seuraavaan iPad-ajoon; ei aamuun, ei junaan; puut nurmelle myöhemmin. Skenaario /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-nimet-yhd3/sk-yhd5.txt, laite-kuvat.txt tarkistettu (28/28). Katso kuvista k8 (kirkon paikka, puiden järjestys, nimet), ND-kehä, rata Seinellä, Montmartre-nimi; muisti ja kulu 300 puusta. Toimitus 15m tee omana committina tämän päälle (edellinen lisäys).
+
+## LISÄYS 4.11. klo 05.43 (uusin; lue ensin): Plantes v4 commitissa, yhd5 kuvat odottaa
+- **23cf37ac0** (karttaseppa/pariisi-nd-kiila, yhd5:n päällä, irrotettava; ei yhd5-ajossa, ei junaan): Codexin 15m sovitettuna, kuva puutarha-jardin-des-plantes-v4.png fa79e8a00d68 kirjastossa, laite-kuvat.txt v4 (28/28). Muut viisi puutarhaa tavulleen ennallaan; pariisi.json:ssa muuttui vain kuvan polku; metsä-lajit ja raivaus säilyivät; nimipeite ajettu uudelleen.
+- **Toimituksen puute:** kuva ei täytä maskia (9 838 px, leveimmillään 11 px, luoteis- ja etelälaita), ja rako näytti tumman hehkuraidan. puutarha-sovitus.py peilaa -v3-toimituksissa raon sisäpuolelta. Codexin oma QA ei läpäissyt maskia eikä pikselisäilymistä: asettelu on silmämääräisesti sama, jälki uusi koko puutarhassa, joten kuva on ehdokas, kunnes KK on nähnyt.
+- **Pari:** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/pari-codex-plantes-v4.jpg (v3 | v4) PT:llä. **Codexin kuittaus vasta PT:n/KK:n vastauksen jälkeen.**
+- **JU 05.3x:** yhd5 0891b0f1e ketjussa vierityksen jälkeen, skenaario julkaisija-tyokalut/sk-yhd5-ju.txt, kansio julkaisija-yhd5-iso-0891b0f1e, muistivahti-tulos.txt; JU lähettää rivin, kun ajettu. Katso silloin lisäyksen 05.39 kohdat.
