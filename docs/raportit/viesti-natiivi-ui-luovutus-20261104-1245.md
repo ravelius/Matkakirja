@@ -15,7 +15,7 @@ Edellinen: viesti-natiivi-ui-luovutus-20261104-0532.md (haara natiivi-ui/luovutu
 2. **Sha, kuvat ja muistiarvio PT:lle (≤ 3 riviä).** Arvio vielä tekemättä: komento elavakartta rivit suunnittain, Mac ei kerro laitemuistia. Laskupohja: tasaisessa näkymässä 4:3-ruudun kääntö 360° kattaa ympyrän, jonka halkaisija on lävistäjä = 1,64 × ruudun ala, jos kaikki palat jäävät välimuistiin (katto: maximumCachedBytes); kallistus kasvattaa enemmän. Raja 4080 Mt. Tarkista tuloksista ennen kuin ilmoitat luvun.
 3. **iPad vain JU:n vuorolla, ja vasta kun 7f64cd657:n muistiajo on alle 4080 Mt** (lokit/julkaisija-muisti-z10-7f64cd657 oli 12.3x kesken). Neljä suuntaa, kallistus, kolme zoomia, muisti ja ruutuaika.
 4. **KS:** tuo kirkon ja pohja-alueen A haarassaan karttaseppa/nd-kirkko-219 (7f64cd657:n päällä, ei vielä pushattu); lupasi tiedostolistan ja sijainnin rivinä (noin 48,8530 N, 2,3499 E). Minun tiedostoni: KameraEleet.cs, PalloKierto.cs, PiirrosKerros.cs, PiirrosKerros.Animaatiot.cs, KameraEleetTestit.cs (KS tietää). Kirkko kääntötestiin, kun se on pelissä.
-5. **Keisarin :** JU ajaa seuraavassa yhdistelmä- tai kuva-ajossa (ei z10-kokeissa), rivi sinulle ja PT:lle; VIKA → selvitä.
+5. **Keisarin `ui tarina viimeinen-keisari`:** JU ajaa seuraavassa yhdistelmä- tai kuva-ajossa (ei z10-kokeissa), rivi sinulle ja PT:lle; VIKA → selvitä.
 6. Vanhat: salin xf-vika on PK:lla (30ec1ddd3), ei rinnalle. Soikiopari: jos KK hylkää, VarjoKuva/0,5 (7f0ccc451:n TraileriLiike) ja kysy PT:ltä. Elävä kartta vaihe 2 vasta suunnitelman jälkeen. TraileriLiike mk-traileri__varjo siivous kun koskee tiedostoon. `palatsi kopiot 1` Testihypyistä: kysy PK:lta muistityön jälkeen.
 
 ## Muuta
