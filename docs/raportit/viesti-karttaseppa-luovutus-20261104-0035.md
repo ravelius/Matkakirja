@@ -274,9 +274,16 @@ PT:n pyyntö 15l:stä (sovita ja kooste PT:lle → KK) on jo tehty lisäyksessä
 - **7a4b98e62, haara karttaseppa/pariisi-vesinimet** (vanhempi 50e24ec94), sha PT:llä ja VS:llä: vesi Pariisin 0,65-kertoimeen, embâcle pois tarkalla nimellä (ElavaNimet.EiVesiNimi), joki ennallaan. ElavaKarttaTestit 34/34; Unity kääntämättä; ei junaan. Ei ole N-haarassa.
 - **OSM (/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-pohja/osm):** embâcle = suihkulähde "L'embâcle" (artikkeli poistuu ValitseVesi:ssä), Bassin = natural=water. Port de l'Arsenal: way 4082329, name "Bassin de l'Arsenal", alt_name "Port de l'Arsenal". ValitseVesi ei päästä välilyönnillistä nimeä ilman name:fi:tä, joten luokka vesi on päätelty, ei palasta luettu. **Tarkista pelikuvasta k-laaja:** jos nimi on yhä iso, se tulee muuta reittiä.
 
-## LISÄYS 4.11. klo 04.13 (uusin; lue ensin): nähtävyydet puuttuivat a6c11c1d2-ajossa
+## LISÄYS 4.11. klo 04.11: nähtävyydet puuttuivat a6c11c1d2-ajossa
 Kuvat /Users/Shared/Claude/proto-3d/lokit/julkaisija-yhd-iso-a6c11c1d2/.
 - **Syy (koodista ja JU:n jonosta 03.09, ei laitteen lokista):** kun Documents/kartta-osat on olemassa, OsaKansio lukee kuvat vain sieltä (PiirrosKerros.Esineet.cs). Sinne vietiin vain puutarhat ja puu-v3, joten nähtävyydet ja sillat jäivät pois. Kerros ei ole syy. **Korjaus PT:llä:** JU vie kaikki 28 kuvaa listalta /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-20261104/laite-kuvat.txt, ei kääntöä. Lista on tehty a6c11c1d2:n pariisi.json:sta; pidä se ajan tasalla, jos kuvat vaihtuvat. Sillat d ovat datassa yhä v1: d-kaide v2 ei ole mukana (PT tietää).
 - **Tuileries 0,72:** vastarannan rivi on maalla, ei vedessä; rivi jää (näkyy 6 latvusta, listassa 5).
 - **Montmartre:** nimeä ei näy 0,012:lla eikä 0,05:llä; ei myöskään f1fb45f10:ssä ennen suodatusta (pienennetty kuva), joten suodatus ei ole todennäköinen syy. Syy auki, PT:ltä kysytty. Pariisi-pohjan OSM-välimuistissa ei ole name=Montmartre-kohdetta.
 - **r-0-21 / -paluu (k33/5)** vielä katsomatta: k-r-0-21.png ja k-r-0-21-paluu.png samassa kansiossa. Puutarhakuvat ja sillat katsottava uudelleen korjatusta ajosta.
+
+## LISÄYS 4.11. klo 04.12 (uusin; lue ensin; konteksti 25 %, nollaus)
+- **k33/5 katsottu (k-r-0-21 | k-r-0-21-paluu, a6c11c1d2):** nimien koko sama molemmissa (Pariisi, Seine, Marne). **Nimijoukko eroaa:** paluukuvassa on selvästi vähemmän nimiä (mm. Nanterre, Colombes, Gennevilliers, Drancy, Le Blanc-Mesnil puuttuvat), ja Saint-Denis on vaihtunut Saint-Denis'n basilikaksi. Syy auki; voi olla ladonnan hystereesi tai kuva otettu ennen asettumista. Kerrottu PT:lle.
+- **Odottaa PT:ltä:** korjatun ajon kuvat (nähtävyydet, sillat, nimet; Louvre-nimi, Palais-Royalin kiila, vesinimet k-laaja: Port de l'Arsenal) ja vastaus Montmartresta.
+- **Vahti kuolee nollauksessa:** Monitor `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/vahti.zsh | grep --line-buffered -E "TASANKO|KUOLI|virhe|VIRHE"`. Tasankoketju pid 65143 elossa 04.06, syva-z10-062 ja -064 ajossa.
+- **Haarat proto-3d:ssä:** wt/proto-karttaseppa-ruutu-218 on haarassa karttaseppa/pariisi-nimet-220 (5fd4eb344, vain Hyatt-testi); 15l karttaseppa/pariisi-tuileries-15l 716c2add7; vesinimet karttaseppa/pariisi-vesinimet 7a4b98e62.
+- **Muut avoimet:** edellisten lisäysten luettelot (Codexin kuittaus 15a–l, materiaaliarkkien arvio, Plantes kokonaan, Champs-Élysées'n maskiraja, Sacré-Cœur k8 erillispuina).
