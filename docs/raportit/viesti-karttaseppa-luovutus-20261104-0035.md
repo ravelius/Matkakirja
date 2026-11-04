@@ -452,3 +452,9 @@ KK 07.28, lista /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/K
 **Vahti:** `until [ -f .../notre-dame-otto5/_review-notre-dame/SHA256SUMS ]` taustalla, kuolee nollauksessa: käynnistä uudelleen.
 **Kun toimitus tulee (alue-notre-dame.png):** RAAKANA, vain ulkoreuna koodilla: maskin ulkopuoli A/nd5/pohja.png, reunassa häivytys 1–2 px, ei muuta. Pari 2029 | nyt | otto 5, 5,4 m/px (2029-rajaus BOX 640,700,960,910; nyt = A/nd5/pohja.png + kirkko-paikka.png) ja täysikoko KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a). Mittaa muutos rajan ulkopuolella. EI hiontaa ennen KK:ta. Sillat, nimet ja puut alueella vasta hyväksynnän jälkeen. Viesti samalla, seisooko kirkko saarella ja onko joki ehjä edessä ja sivuilla.
 **Länsikärki:** Pont Neufin länsipuolinen kärki on rajan ulkopuolella (pohjan puisto jää). Kysytty KK:lta; aineistossa Codex maalaa kärjen puistoksi joka tapauksessa.
+
+## LISÄYS 4.11. klo 08.03 (uusin; lue ensin): otto 5:n korjaus Codexille (KK 08.0x), 3accd3e7c
+Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitetty samaan kansioon (maski.png 513cec632577, TILAUS.md). Maski etelässä kuvan alareunaan: **Saint-Germain poistuu kehyksestä x:n 560 kohdalla (x 1000: y 1156),** joten itäpuolella raja on kehyksen alareuna. Kerrottu KK:lle. Reuna nyt katu 60,7 %, vesi 21,6 %, kortteli 17,7 % (alareuna 517 px).
+**Leikkausraja valitaan vasta kuvan tultua uusia katuja pitkin** (KK); raakaparissa edelleen vain ulkoreuna koodilla. Sainte-Chapelle Codexin kuvassa; jos epäonnistuu, hyväksytty kuva koodilla. Saint-Jacques-torni omana kuvanaan, koko sen alue on kirkon peitossa.
+**VASTA HYVÄKSYNNÄN JÄLKEEN (KK), ei työtä nyt:** kirkon leikkaus omaksi kerrokseksi (jonot: nimet 2995, kirkko 3060+), nimet ja nimipeite, 7 siltakuvaa, Seine-reitti (21/215 pistettä), 14 koodipuuta, ND:n raivausmaski ja raivaus_versio, Codexin kuittaus 17c–d.
+**Otto 4b jää vertailuksi; KK ei arvioi sitä.**
