@@ -402,4 +402,4 @@ Omistaja 06.01 (PT 06.08): Pariisi jatkuu yhd3:n suunnalla, ei pinnan eikä juna
 ## LISÄYS 4.11. klo 06.53 (uusin; lue ensin): pienten katujen nimet pois (omistaja 06.51, PT)
 **205c0e443** (karttaseppa/pariisi-minor-nimet, e721d219e:n päällä, irrotettava; 616/616, Unity kääntämättä, ei laitteella, ei junaan). ElavaNimet.PoistuvaKatu + Nimikerros: Pariisissa katu rank 3 (MVT class minor) ei tule nimeksi. Raja on sama kuin VS:n k40:ssä (`pa && c == "minor"`); nimet aiemmin vain z17:llä.
 **Liikkuvat:** Pariisin animaatiodatassa ei ole yhtään reittiä kaduilla (vain seine-reitti ja 4 venettä, parvi, pallo; esineissä ei varaa-lajeja), joten poistettavaa ei ole. Tarkistettu e721d219e:stä ja kaikista haaroista.
-**Odottaa:** pelikuva laitteelta KK:lle yhdessä VS:n katujen kanssa (JU:n vuoro, PT); hyväksyntää ei ole. Puiden nimipeite on laskettu vanhoilla nimillä: tarkista pelikuvasta aukot puissa.
+**Odottaa:** pelikuva laitteelta KK:lle yhdessä VS:n katujen kanssa (JU:n vuoro, PT); hyväksyntää ei ole. Nimipeite ja puiden nimiaukot eivät riipu pienistä kaduista (peite on latvukset, aukot puubulevardeilla).
