@@ -60,3 +60,7 @@ Hyväksyntä odottaa k29:ää ja k45:tä. Kuvat lokit/julkaisija-muisti-z10k60-e
 2. Mustat katkonaiset murtoviivat: näytä lähde. Onko "karkeat maakuntarajat" totta (oletus, ei todistettu); vertaa kuvaan ilman striimiä (esim. elävä kartta pois samassa näkymässä, JU-vuoro; aiempi kuva ennen e16:ta käy, jos sama kulma ja taso).
 3. Violetit pisteet taivaalla: mitä ne ovat (kaupunkimerkit?), kuka omistaa korjauksen (docs/vastuukartta.md). Lähtökohta: etsi 3D-merkit, jotka eivät katoa horisontin taakse. Näkyvät myös maassa, esim. p-z9 alaosa.
 Lisäksi: `sk-muisti-z10-k29.txt`:n tulos JU:lta, sitten parit p-z9 | p-z9-pois ja p-z10 | p-z10-pois täysikoossa samalla rajauksella; neliöt näkyvät → kuvapolku PT:lle ennen hyväksyntää.
+
+## LISÄYS 6 (JU 14.2x: k29 EI läpäissyt)
+e774647ee, 29,0°, kerroin 4: VIKA 4091 Mt 14.26.50, muistivaroitus, ei kaatumista (lokit/julkaisija-muisti-z10k29-e774647ee; JU:n rivi, lokia en lukenut). p-z10-90 vanha, -pois-kuvat puuttuvat. k45 ei ajeta, PT päättää.
+PT:n sääntö: k29:n ylitys → rajaa kulmaa alemmas, ei selitetä pois. ENSIN tämä: laske SiirtymaKallistusRaja, ja mittaa kulma JU:lla (arvoa ei tiedetä: 0° = 3756 Mt, 29° yli rajan). Hystereesi skaalattava samalla. Sitten sama muistiehto ja -pois-kuvat alhaalla, koska VIKA tyhjentää jonon: ota ennen-kuvat ylhäältä (0°) ja `maasto siirtyma pois` samassa ajossa.
