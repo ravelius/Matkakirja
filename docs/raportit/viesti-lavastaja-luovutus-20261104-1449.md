@@ -24,3 +24,6 @@ Tripo tilattu 801bcfa1d (posti/lavastaja-tripo3d-juoksupeli-ovi-mallit-20261104.
 
 ## Muuta
 Levy: M/irto/kohtaus.npz ja komp.npz, N/kulku/pinnat.npz (414 Mt) poistettavissa myöhemmin. Muu jono seis.
+
+## LISÄYS 15.1x: JU:n jalustat-ajo valmis
+JU 15.10: ennen 10, jälkeen 8 kuvaa, leivonta tehty, N/kuvat/, loki /Users/Shared/Claude/julkaisija-tyokalut/lav-jalustat.log. Katsomatta. Kohdan 2 "JU:n rivi tulee" on tällä hoidettu: katso kuvat itse.
