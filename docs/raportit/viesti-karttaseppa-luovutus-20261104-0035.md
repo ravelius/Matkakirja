@@ -620,3 +620,6 @@ Omistaja: "oikein hyvä, ainoastaan lähempänä kameraa oleva torni on jostain 
 **Vahti posti käynnistettävä uudelleen:** käsitelty 151d645c3 asti; viimeisimmät eivät koske KS:ää.
 **Muu odottaa kuten ennen:** Karsi b920a2998 yhdistelmässä, Vincennes, Boulogne, minor-nimet ja puut pelikuvista.
 **Oppi:** kun ajossa epäilee koko kuvaa, ota samasta näkymästä `kuva` ja `kuva3d`: se ratkaisee UI-kerroksen ilman mittapaloja. Mittapalat samassa jonossa kuin pohja jäävät sen alle. pgrep -f osuu omaan vahtikomentoon, jos hakujono on komentorivillä; ajon elossaolo ps:llä projektipolusta.
+
+## LISÄYS 4.11. klo 14.16 (uusin; lue ensin): lippukorjaus yhdistelmässä
+NUI:n 99eb9931e yhdistetty: karttaseppa/nd-kaanto-219 **c74d6ef93** (korvaa a64109412:n lisäyksessä 14.15). Kääntämättä ja ajamatta; ajetut kuvat ovat a64109412:sta. Muu kuten lisäyksessä 14.15.
