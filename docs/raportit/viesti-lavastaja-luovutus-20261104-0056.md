@@ -94,3 +94,6 @@ Alkulennon keltainen tasainen katto, Taihedianin marmori ja räystäsvyö (PT:ll
 - Tilattu JU:lta: sk L/sk-lav-kiila-kaikki.txt → L/koeajo4/ (5d, wumen-edesta, wumen-sivuholvi, alkulento 1–3, *-kiila3.png). Vertaa koeajo2:n samannimisiin (botti siirtää kameraa Wumenissa; 5d testikameralla). Pari tee samasta rajauksesta, PT:lle ≤ 3 riviä.
 - Jos kelpaa: paketti uudelleen (v125 + kiila_tayta) vasta PT:n kuittauksella; huom. paketoi-v125.zsh ei toista wumen_sauma/wumen_valo/kiila-ketjua.
 - Sivuholvi ja pylväiden laikut sen jälkeen.
+
+## LISÄYS 04.11. 05.3x (koeajo4 mitätön, uusinta koeajo5)
+- koeajo4 on mitätön: sk-lav-kiila-kaikki.txt:ssä koejuuren polku oli katot-kiila3 (oma korvausvirheeni), joten palatsi ei latautunut; kuvissa 5d ja alkulento 3 on vain taivas/tyhjä maa. Älä käytä koeajo4/pari-*.jpg:tä. Polku korjattu; uusinta pyydetty JU:lta → L/koeajo5/. Kuvat kuten edellisessä lisäyksessä; rakenna parit koeajo2 vs. koeajo5 samoista rajauksista.
