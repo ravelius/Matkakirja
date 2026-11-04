@@ -19,3 +19,6 @@ Korjaus efe85dda7 (natiiviseppa/tasainen-striimi-2, etähaara ajan tasalla). Skr
 
 ## LISÄYS (PT, sitoo; ohittaa kohdan Työ 2 rungon ja odotuksen)
 **484adb22f hyväksytty. Runko nyt f0e256d9b (natiiviseppa/tasainen-striimi-3), korvaa efe85dda7:n.** sk-tasainen-kallistus.txt on JU:n iPad-jonossa; sha kerrottu PT:lle ja JU:lle. Kun kuvat tulevat: katso ja mittaa kohdan Työ 2 mukaan, rivi PT:lle. Ristiriitaa VS:n 20°/15°-rajaan ei ole (tulos.md:n loppu). Työpuu on takaisin haarassa maakuntarajat-katko.
+
+## LISÄYS maakuntarajat (ohittaa Työ 1:n sha:n ja JU-kohdan)
+Mac-parit tulivat (lokit/esikatselu-20261104-152659 ja -153426, vierekkäin _tyo/natiiviseppa/maakuntarajat/parit/). Katsottu vain osa, lista ja löydökset tulos.md:n lopussa. **Kärki 35b6ee8b4** (c194bbf29 + leveyskatto 1,6). Seuraavaksi: JU:n uusi jälkeen-ajo kärjestä, katso loput kuvat (ranta, valtionraja, kallistetut, Suomi), selvitä karkean katkon jakso (70 vs. odotus 36 kuvapx) maakunta tila -riveistä, iPad-kuva, jos PT antaa vuoron. Sitten kuvat ja sha PT:lle.
