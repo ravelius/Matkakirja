@@ -322,3 +322,8 @@ Täydet polut: P = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-2
 ## LISÄYS 4.11. klo 05.27 (uusin; lue ensin; konteksti 25 %, nollaus)
 **Sacré-Cœur k8 erillispuina: ALOITTAMATTA,** vaikka PT:lle sanottiin "jatkan". Lähtötiedot: pelin kuva on sacre-coeur-alue-v2.png 328 × 340, paikat [-602,19, 2989,97, 517,45, 0]; k8 on /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/tarkistus-nahtavyydet/sacre-coeur-k8/sacre-coeur-taso.png 1536 × 1024, jossa kirkko, aukio ja 300 puuta yhdessä. Puiden paikat tulevat sacre-coeur-kaari.py:stä (paikat-lista; siemen 218), joten ne saa metreiksi samasta ajosta. Suunnitelma lisäyksessä 01.2x, KK 01.19: ei junaan ennen pelikuvaa. Kuvan rajan muuttuessa tarkista Montmartren lon 2,3346 (7e2abe756).
 **PT pyydetty:** `nimet` r-0-21-kuvien edelle. Pelikuvia add5d4e21:stä ei ole; kaikki sen tarkistukset odottavat ajoa. Python: `/opt/homebrew/opt/python@3.14/bin/python3` ilman -I:tä (numpy ei löydy -I:llä).
+
+## LISÄYS 4.11. klo 05.28 (uusin; lue ensin): Plantes Codexille, Postivahti ei nollannut
+- **PT kuittasi add5d4e21:n yhd4:ään** (VS yhdistää, JU ajaa `nimet`-komennolla). Kuvat PT:ltä.
+- **Plantes v3 on KS:n koodimuokkaus** (kerrottu PT:lle). Tilaus 15m 73bcf5cd5, kansio /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyydet-20261103/puutarha-jardin-des-plantes-v3/. Toimituksen tullessa: uusi kuvaversio v4 (VERSIO + KLOONI_ALUE pois puutarha-sovitus.py:stä, D-polku -v3:een), kerros.py, nimipeite.py, pari PT:lle. Vahti ei kuuntele tätä kansiota, jos sen polkua ei lisätä.
+- **Postivahti 05.2x:** nollaus vasta 33–35 %:n lähellä; jatka töitä.
