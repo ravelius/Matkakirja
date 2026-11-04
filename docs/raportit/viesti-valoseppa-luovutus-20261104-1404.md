@@ -47,3 +47,9 @@ Mitattu Mac 3D: 250/218/162 ja 178/149/121 (KS:n esimerkit, ei kohdennettu kadul
 SEURAAVAKSI: Esikatselu.Kuva: kirjaa kerroksittain sortingOrder, juuren nimi ja alfa ruudun keskeltä (Editor/Esikatselu.cs:789–806), Mac-vuoro JU:lta. Koodihaku ei löytänyt: USS opacity/rgba 0,05–0,07 (vain Tyylikirjan --map-ink-06/07 ja iss-ohjaamo), PanelSettingsin clear (Esikatselu nollaa alfaan 0). --map-ink-06 on ruskea, ei musta, joten ei sovi neutraaliin kertoimeen.
 iPad: kerros on koko pelin UI, joten se voi olla myös laitteella, mutta kokoaminen on eri. Vihje, ei mittaus: 250/218/162 × 0,971 (1/16 lineaarisena) = 243/212/157 sopii p-z17:n katuun 240–245/210–215/156–161; eri näkymä ja eri zoom. Ratkaisee vasta laitekuva UI-kerros pois.
 ÄLÄ poista peitettä ilman KK:n sanaa.
+
+## LISÄYS 4 (e774647ee, ei-varjoa, lokit/julkaisija-muisti-z10k60-e774647ee)
+Ehdot 1 ja 2 täyttyvät (omasta lokista): 53,3° / 54,0° / 54,0°, ei liikevalinta-rivejä, huippu 3422 Mt, 0 varoitusta.
+Ehto 3 osittain: p-z10-90 alaosa täysikoossa ja p-z9:n alaosan keskiosa täysikoossa: ei reikiä, mustaa eikä neliöitä. p-z10-90 yläosa puolikoossa: ei niitä. p-z10 ja muu p-z9 katsomatta.
+Uutta: violetteja pisteitä taivaalla horisontin yläpuolella (p-z10-90 yläosa). Samoja pisteitä näkyy myös maassa. Syy mittaamatta, ei tiedetä, liittyykö kallistukseen 54° vai tähän muutokseen. Tummat katkoviivat yhä näkyvät; ne ovat myös c4a:ssa.
+Vertailu ennen | jälkeen odottaa k29:ää (p-z9-pois, p-z10-pois). Korjausta ei raportoida todistetuksi ennen k29:ää ja k45:tä.
