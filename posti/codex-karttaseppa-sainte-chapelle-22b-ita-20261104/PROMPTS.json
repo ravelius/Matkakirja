@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "fullNewImageEachAttempt": true,
+  "selectedAttempt": 3,
+  "attempts": [
+    {
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sainte-chapelle-22a-2059-2063-20261104/delivery/ita.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sainte-chapelle-22a-2059-2063-20261104/delivery/etela.png"
+      ],
+      "prompt": "Generate one COMPLETE NEW corrected architectural illustration of the EAST elevation of this same Sainte-Chapelle miniature. Portrait RGB PNG exactly 1024x1536. Image 1 is the east-view composition and size reference; image 2 is the approved SOUTH view, used ONLY to match roof construction and the smaller roof-end cross. Output ONLY a single east elevation, straight-on orthographic.\n\nPreserve the first reference's scale and placement: entire building x357–667, highest cross y395, ground-contact baseline y1360; centered x512, large empty gray margins. Keep its three tall pointed windows, four slender buttresses and pinnacles, warm cream stone, brown ink, restrained neutral slate gray, fine drawn texture, flat light and pale gray background.\n\nCRITICAL ROOF CORRECTION: Above the three windows, the east WALL continues upward as a SOLID WARM-STONE TRIANGULAR GABLE all the way to the roof ridge. Triangle bottom at eaves y985, apex x512 y790. Replace the broad gray trapezoid roof face of image1 with this stone triangular wall. No hipped roof and no broad visible slate face; slate appears only as a narrow edge behind the stone gable. Place the SAME smaller golden-stone CROSS seen at the RIGHT end of image2 ON this gable apex: its top around y700, foot around y790. The existing tall central openwork spire remains visible BEHIND that gable and cross, reaching y395. There are two distinct centered crosses: the high spire cross and lower roof-end cross. Small stone quatrefoil ornament on the triangular gable is allowed. NO rose window and NO door on this eastern facade.\n\nNo other objects, no ground slab, ground shadow, text, annotation, border, diagram, crop, zoom or extra view. Preserve the old east view's canvas framing and overall width and height. Draw a fresh full image; do not produce a patch."
+    },
+    {
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fe4f8123-1af4-48ff-88dc-16511ed594a0.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sainte-chapelle-22a-2059-2063-20261104/delivery/etela.png"
+      ],
+      "prompt": "Generate a complete NEW EAST elevation of exactly this chapel, using image1 as the primary shape, scale and drawing reference, and image2 ONLY to match the small cross at the RIGHT END of its roof ridge. One isolated architectural drawing, RGB PNG 1024x1536, plain pale gray background, identical warm stone, brown ink, slate edge, flat lighting. Keep image1's three windows, triangular stone gable, four buttresses and pinnacles, high spire, small scale and generous empty margins. Straight-on orthographic east view. Building x357–667, baseline y1360, highest spire cross top y395, center x512; do not zoom.\n\nOne required dimensional correction to image1: the lower ROOF-END CROSS is currently too short and low. Its TOP must be y695 and its FOOT y795, exactly the vertical span of the RIGHT-END CROSS in image2. Enlarge this smaller cross upward so its span is 100px, with the horizontal arms around y720. Its shaft and rounded finials must match image2. The stone gable apex supports its foot at x512 y795. Keep the main high openwork spire behind it with highest cross y395. Two distinct crosses at y395 and y695. Roof-end cross is clearly in front of the spire.\n\nKeep the solid cream-stone triangular east gable, small quatrefoil ornament, narrow slate rim behind it, and three tall windows. NO broad slate roof face, NO hipped roof, NO rose window, NO doorway. Keep all other composition and style as reference1. No ground, shadow, scenery, text, labels, border or guides. Full new illustration, not a patch."
+    },
+    {
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b2c110cb-dea9-4b3d-9271-a32fa893fba8.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sainte-chapelle-22a-2059-2063-20261104/delivery/etela.png"
+      ],
+      "prompt": "Draw a fresh complete east elevation of this same miniature chapel, exactly1024x1536 RGB. Match image1 in every respect, but RAISE THE STONE TRIANGULAR GABLE APEX AND ITS SMALL CROSS BY20PIXELS. The small cross and its foot must both move UP20px together, with the stone gable triangle slightly taller. Do not change the high spire or building baseline. Image2's RIGHT-END ROOF CROSS is the height reference. The small cross top must align to image2 at y695 and its foot at y795 (currently about20px too low in image1). Keep its shape and size as image2, top y695, arms y719, base y795. The tall spire still reaches y395 behind it. Keep the three long windows and the eaves at y985. Building width311px, x356–667; baseliney1360; large pale gray blank margins. Straight-on east elevation, warm stone, brown fine ink, flat light, narrow gray slate edge behind SOLID STONE gable, small quatrefoil ornament. No door, no rose window, no hipped roof, no broad slate face, no other objects, text or guides. Render the whole image, never a patch or diagram. Do not zoom or change scale."
+    }
+  ]
+}

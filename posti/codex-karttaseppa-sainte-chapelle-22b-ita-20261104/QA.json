@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-04T21:08:00.582681+00:00",
+  "taskNumber": 2076,
+  "generationTool": "built-in image_gen",
+  "generationCalls": 3,
+  "selectedAttempt": "ita-otto03",
+  "sha256": "3afd06b801090cc2d6b3c6e2273eaf945874d1bf6e64c33829dd7e1e31320854",
+  "size": [
+    1024,
+    1536
+  ],
+  "mode": "RGB",
+  "nativeBytesPreserved": true,
+  "postprocessingApplied": false,
+  "canvasPass": true,
+  "warmStoneBBox": [
+    356,
+    394,
+    667,
+    1360
+  ],
+  "bboxMethod": "R-B>16 and R-G>4; pale gray background excluded. This is a color mask, not semantic segmentation.",
+  "warmStoneBaselineY": 1359,
+  "oldEastBaselineY": 1360,
+  "oldFiveViewFilesPreserved": true,
+  "unchangedFourViewSHA256": {
+    "pelikulma.png": "6fc3acb802a80393c5d0be6ad086b83e805c609b876c0831786823145fb437f5",
+    "lansi.png": "ae450facef5e69edf720240109f30cb10c2deadf0127bf0997e865e9af5b6606",
+    "etela.png": "b8edb4bc171ad54d679ffd28ca4f3e18aaa93307449d9c7d4b5d826b59281c3c",
+    "pohjoinen.png": "ac063d9a2e19a603a7bfadcbd728ab50fb1eec6bcc36cb6453182c8ee3445090"
+  },
+  "visualReviewed": true,
+  "visualCoreCorrectionPass": true,
+  "checks": {
+    "stoneTriangularGable": true,
+    "broadHippedSlateFaceRemoved": true,
+    "roofEndCrossPresentInFrontOfMainSpire": true,
+    "slateOnlyNarrowRim": true,
+    "threeTallWindows": true,
+    "noDoor": true,
+    "noRoseWindow": true,
+    "styleAndFramingMatch": true
+  },
+  "deviations": [
+    "The roof-end cross and gable apex remain about10-20px lower than the south-view reference, estimated from the aligned QA sheet. Exact equal height is NOT certified.",
+    "Generated ornament and gray background differ subtly from22a; this is a whole new generated candidate, not a pixel-preserving edit.",
+    "Warm-stone mask baseline is1px above the former east image."
+  ],
+  "strictSourceQAPass": false,
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
