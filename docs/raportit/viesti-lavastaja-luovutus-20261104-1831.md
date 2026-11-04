@@ -19,3 +19,6 @@ Portaat: edellisen luovutuksen kohta 3. Palaluettelo lähetetty KK:lle (T/palat.
 
 ## LISÄYS 18.3x (JU)
 Terassi-v1b 980bb115c ajettu 18.35: 20/20 kuvaa (tr-*-jalkeen), lokissa koejuuri-rungolle, v126 + c2-v40 ladattu, ei VIKA-rivejä. Kansio lokit/julkaisija-terassi-v1b-980bb115c. Kuvia ei ole katsottu: katso ne ensin, sitten parit KK:lle. Verrokki on seuraava L1:llä; tiedostot tarkistettu paikalla. PK kirjasi kaidepyynnön luovutukseensa 22e6b735e, ei aloittanut.
+
+## LISÄYS 18.4x: verrokki katsottu (m15ala, täysikoko; sauma/verrokki/pilkut-verrokki-kk2.png, ylhäällä verrokki, alhaalla kk2)
+Koejuuri-terassissa ei pilkkuja, ja ylempi tumma vyö on paikallaan, vaikka ajo on uusi. Ajojen välinen ero ei siis selitä pilkkuja: ne tulevat kk2:n muutoksista (rako_valo.py tai palkit_pois.py). Kumpi, ei tiedossa. m15yla katsomatta. Kk2 pysyy seis. Seuraava askel: kokeile kk2:ta vain toisella muutoksella, tai etsi, mikä pala on kameran kohdalla, ja vertaa sen valoa ennen ja jälkeen.
