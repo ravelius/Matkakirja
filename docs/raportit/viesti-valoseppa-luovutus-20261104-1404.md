@@ -67,3 +67,6 @@ PT:n sääntö: k29:n ylitys → rajaa kulmaa alemmas, ei selitetä pois. ENSIN 
 
 ## LISÄYS 7 (PT, tarkentaa LISÄYS 6:n)
 JU mittaa e774647ee:llä kulmat 15 ja 7 tai 22. Uusi raja vasta niistä: lukua ei arvata, raja varalla alimman ylittävän kulman alle. Kuva rajan kulmalta täysikoossa (Z9/Z10-neliöt, pelaajan menetys). Sitten LISÄYS 5:n kolme selvitystä.
+
+## LISÄYS 8 (JU)
+k15 e774647ee: 3656 Mt, 15,0°, varjovalinta + kerroin 4, 0 varoitusta, 5/5 uutta kuvaa, katsomatta (lokit/julkaisija-muisti-z10k15-e774647ee). p-z10 ja p-z10-90 tavulleen samat: tarkista, onko ruutu jäätynyt vai vain sama. k22 ajossa. Tähän asti: 15° ok, 29° yli.
