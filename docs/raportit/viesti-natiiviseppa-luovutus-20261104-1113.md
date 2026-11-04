@@ -35,3 +35,7 @@ tasainen-parit/pari-y-grand-palais.jpg ja pari-y-montparnasse.jpg (vasen f1fb45f
 - **Poiminnasta PT päättää vasta vierityksen tuloksesta: mukana latauksen kesto ja vertailu ilman koetta. Ei yhdistelmään sitä ennen.** Katsottava: vieritys-k34-erittely.py <kansio> ja lataus-aika.py <konsoli> (asettuminen, tarkkuus 5 s; kylmää latausta ei mitattu). Sitten rivi PT:lle.
 - GP- ja Tour-parit viety KK:lle PT:n luvalla (uudelleen rajattu, kohde kokonaan). Vastaus KK:lta odottaa.
 - Ensimmäiset luvut asettumisesta ovat tasainen-tulos.md:ssä: sama kuin ilman koetta, eri ajoista.
+
+## LISÄYS KK (kohdat 3–4 kuitattu)
+- KK kuittasi täysikoossa 8b9cfbbb6:lla: Grand Palais ok, Tour Montparnasse ok. Tourin jalustan alla oleva tumma soikea laikku ei vaadi korjausta nyt. GP:n vasemman puolen porrasviivat ovat korttelipintaa (VS), eivät raivausta. **Ei uutta työtä näihin**, ei omistajalle, ei junaan.
+- KK:n mukaan uudessa suunnassa (omistaja 09.33) Pariisin piirros väistyy striimikartan tieltä, jos Notre-Damen koe hyväksytään. En selvittänyt, mitä tämä tarkoittaa tasainen-kokeelle tai KK:n listan muille kohdille; kerro vierityksen tuloksen rivillä PT:lle, jos tällä on merkitystä poiminnalle.
