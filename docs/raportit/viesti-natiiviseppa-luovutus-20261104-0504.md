@@ -40,3 +40,6 @@ Syy on ilmeisesti, että kumpikin pala puhdistetaan erikseen, eikä 5 × 5 -ikku
 - **Komento `koealue osat-poista` 0360a46ab** (ff97c7f8c + 1, haara natiiviseppa/kartta-osat-poisto, natiivi-backup). Komennot on pois App Store -käännöksestä. Kartta-testit eivät kata tätä; Unityssä kääntämättä, ei ajettu. Seuraavaan yhdistelmään.
 - **Sävyero:** pyydetty JU:lta TF 217:n sha ja kuva 48.82 2.4609 0.05, vuoro aamun jälkeen. PT: kuvaan sidonta ja rajaukset 2–3 ennen koodimuutosta.
 - Työpuu wt/proto-natiiviseppa-maskik4 on nyt haarassa natiiviseppa/kartta-osat-poisto.
+
+## LISÄYS 06.08 (SITOO: omistaja 06.01, PT 06.08; ohittaa järjestyksen ylempänä)
+Pariisi jatkuu yhd3:n suunnalla; omistaja ei hyväksy pintaa eikä junaa. Seuraavaksi puut, talot, reunat, Sacré-Cœur ja nopeus. **NS:n järjestys: 1) vieritysmittaus JU:n jonosta (sk-vieritys-k33.txt, 0360a46ab:n runko ei tarvita: runko ff97c7f8c), 2) rivi 168, 3) suora häivytys.** Sävyero ja saumat näiden jälkeen; sävyero vasta TF 217 -kuvan jälkeen.
