@@ -31,3 +31,6 @@ Tie-ero 0,21 mennessä | paluu: tiet samat nimien ulkopuolella (k24, f5c1, yhd2;
 Syy on ilmeisesti, että kumpikin pala puhdistetaan erikseen, eikä 5 × 5 -ikkuna näe naapuria. Kahdesta kierroksesta ei ole hyötyä tähän. Rajauksia 2 ja 3 ei testattu: rajaus 2 on vino, joten ainakin se voi olla muuta (esim. vektorin aluetäyttö).
 **Julkaistu kartta yhä tarkistamatta.** Ei löytynyt haaraa, jonka tiedän julkaistuksi (natiivi-backup/master on 24.9.), eikä kuvaa samasta kohdasta. Tarvitaan JU:lta julkaistu sha tai kuva.
 **Korjausehdotus seuraavalle, ei tehty:** puhdistus naapurin reunapikselit mukana (vaatii vanhemman naapurit muistiin: mittaa kulu) tai askeleen tasaus palarajalla.
+
+## LISÄYS 05.08 (PT 05.13)
+**Aamun kuva on yhd3 ff97c7f8c** (KK valitsi; ohittaa Tila-kohdan yhd2:n ja "PT päättää"). Ei junaan, pinta ei hyväksytty. Vieritysmittaus (kohta 4) on JU:n jonossa, iPad vapautettu; tulos JU:lta.
