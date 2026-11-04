@@ -36,3 +36,7 @@ PT 06.1x: muuritilaus on LAV:lla ja alkanut.
 - **Säikähdys hyväksytty lähikaistalle ruuduista ja lokista, kaukokaista ok (KK 05.29);** lukua ei säädetä. Lippua ei avata vielä. Liikkuvaa kuvaa ei ole katsonut kukaan, ja se kerrotaan omistajalle niin.
 - **Seuraavaan ajoon, ei omaa jonoa:** 1. maljakon kantaja lähikaistalta (nyt Palvelijatar vain kaukaa); 2. palvelija heti käännöksen jälkeen, kun 1,3 s ei ehdi täyttyä; lisäksi uusi Palvelijatar ja muurikorjaus.
 - **Avoin KK:n kysymys:** kirkas vino alue aukiolla (ohitusajo 5605–5745). Vastattu: ei näytä varjolta, kirkas puoli on lähellä lattiaa ilman leivontaa ja tumma sama kuin leivottu; ei todistettu. Silta-kokeen z132 kertoo, näkyykö se LOD-korjauksella ja elävillä varjoilla; 217:ää ei ole verrattu samasta kohdasta. Tulos KK:lle kaiteiden kanssa.
+
+## Lisäys ennen nollausta
+JU: be5632bdb iPad: sali 1 OK 3845 Mt, sali 2 OK 3878 Mt, **juhlasali xf VIKA 4153 Mt ≥ 4080 Mt** (vapaa 966 Mt, 05.29); ketju jatkaa (uudestaan 40 x), rivi "BE56 AJETTU" tulossa. Kansiot `lokit/pk-muistipiikki-219/sali-be5632bdb-{1,2,1-xf}/`. Ei vielä tulkittu eikä kerrottu PT:lle. **Seuraava:** katso `muisti-tarkka.log` (peitto, roskienkeruu kuvan alla) ja rivi PT:lle -0334:n ohjeen mukaan. Ei omaa ajoa.
+Viimeisin luovutuskommitti on tämän lisäyksen kommitti, ei eeb0f915f.
