@@ -18,4 +18,6 @@ Syy: konteksti 26 %, pehmeä raja ja luonteva tauko (Raamattu 7.37). Edellinen: 
 - fin-kuvien korkeudet: fin-t105 = aja 0,85, fin-t110 = 0,635, fin-t113 = 0,54. Oletin ensin väärin; TULOS.md ja skripti korjattu.
 - Sovituksen ajo: suomi/ pohja ja mvt tallessa; sovitusskripti oli scratchpadissa, kopio suomi/suomi_vertaa2.py. Python: tulivuoret/venv.
 - robots.txt: OpenFreeMap antaa 403, sääntöjä ei saatu. Luin sen samassa komennossa TileJSON-haun kanssa (poikkeama muistisäännöstä, kerrottu PT:lle); palat haettu sen jälkeen, 36 kpl, vain mittaukseen.
+- PT 22.2x: robots.txt 403 ei ole lupa: EI uusia skriptattuja hakuja OpenFreeMapista; 36 palaa vain tähän mittaukseen, ei tuotteeseen (kirjattu TULOS.md:hen). Suomi: ei korjausta, ennen kuin tasot on todistettu ja koe katsottu.
+- JU 22.2x: viivat 1b/2b ketjussa TF-koemittauksen jälkeen (vahti pois vain niihin); Suomi-koe 2d8ec025c JU:n luovutuksessa viivojen jälkeen. Kansiot tulevat riveinä.
 - Asemataulua ei päivitetty: kokeet eivät ole junassa.
