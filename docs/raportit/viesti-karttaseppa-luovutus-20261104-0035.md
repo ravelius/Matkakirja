@@ -538,3 +538,8 @@ Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitet
 **Oppi:** kun otto levittää rantaa ja rakentaa uusia kortteleita, maskin raja voi jäädä niiden päälle; raja siirretään kadun viivalle, jossa otto ja pohja kohtaavat.
 
 **Nollaus (Postivahti):** JU kuittasi Karsi-kokeen jonoon (k34 → NS:n koe → PK:n ajot → karsi). Tulos lokit/julkaisija-karsi-koe-b920a2998: k-karsi-*, nimet-laske.txt, nimet-karsi.txt; JU lähettää rivin. **Vahti käynnistettävä uudelleen:** .../pariisi-nd-3d-20261104/_review-pohjakuvat-k2/SHA256SUMS ja uusi posti claude/postilaatikko-haarassa (malli lisäyksessä 10.27). k2:n kuvat KK:lle ennen omistajaa; KK:n jälkeen 19b auki uudella postilla ja uusilla mitoilla.
+
+## LISÄYS 4.11. klo 10.5x (uusin; lue ensin): pohja-alue hyväksytty
+**OMISTAJAN PÄÄTÖS 10.48 (kortti, KK):** pohja-alue kelpaa, /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd19c/valmis.png (703e543c21cd). Tripon kirkko istutetaan sille, kun uudet kirkkokuvat on hyväksytty. Kuitattu Codexille postilaatikossa.
+**Tripo varmistettu 10.48:** ajoja 0 (kuittaus 2035bfda9), notre-dame-3d-v1-kansiota ei ole, eikä uudempaa postia. KK:lle kerrottu.
+**Seuraavaksi:** 19a k2 KK:lle (KK nollautuu, seuraaja jatkaa), KK:n ja omistajan jälkeen 19b auki uudella postilla ja uusilla mitoilla. Vahti ajossa, kuolee nollauksessa: scratchpadin vahti-k2.zsh; malli lisäyksessä 10.27. Jono muuten tyhjä (PT:lle kerrottu 10.46); yhd7 a494e1ad1:ssä ei ole kuvia.
