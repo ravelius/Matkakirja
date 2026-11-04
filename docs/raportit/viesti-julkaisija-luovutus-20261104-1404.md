@@ -53,3 +53,7 @@ Ei muuta ajossa 14.04: L1 ja L2 vapaat, iPad vapaa, simu iPad13 vapaa.
 - 2/3 k29 ajossa 14.22 (suoraan vs-muisti-z10k60.zsh, ei ketjua; tulos rivinä T/vs-muisti-ketju.log, kansio julkaisija-muisti-z10k29-e774647ee, ehtona kulma 29° ja kuvat uudet). Rajan alla → 3/3 ESISARJA=0 SK_TIED=<striimi/>sk-striimi-k45.txt KANSIO_NIMI=julkaisija-striimi-k45-e774647ee zsh T/vs-muisti-z10k60.zsh 76391 e774647ee. Error 22: sama komento uudestaan.
 - Mac: L1 PK 218fdadfb (rivi kun vapaa). L2 + simu iPad13 annettu NUI:lle: vertailu 7f64cd657, nousukuvat 3d7f5defb, Mac 99eb9931e. lav-tausta leipoo (L1-kuvat perään), sitten automaattisesti lav-jalustat (T/lav-jalustat.log, rivi LAV:lle). Rivit "AJETTU" → LAV.
 - Vahti: ju-vahti listalla lav-tausta, lav-jalustat, vs-muisti-ketju; kun viritit uudelleen, tarkista myös lukot.
+
+## LISÄYS 14.35 (korvaa 14.22:n iPad-kohdan)
+- k29: VIKA 4091 Mt, 29°, kerroin 4; k45 ja sk-striimi-loput seis PT:n sanaan. Kerrottu VS + PT.
+- PT: kulmamittaus samalla koonnilla. k15 ajossa 14.31 (ESISARJA=0 SK_TIED=T/sk-muisti-z10-k15.txt KANSIO_NIMI=julkaisija-muisti-z10k15-e774647ee zsh T/vs-muisti-z10k60.zsh 76391 e774647ee; loki T/vs-muisti-ketju.log). Ylittää 4080 → k7, muuten k22 (skenaariot T/, kansio vastaavasti). Rivi VS + PT kummastakin: huippu, kulma, varjovalinta lokissa, varoitukset. Ajon pitää päästä z10:een, ja kuvat tästä ajosta (vertaa tiivisteet; VIKA tyhjentää jonon). Muita iPad-ajoja ei. "VIKA laheta ui-komento" ilman muuta on ollut harmiton: tarkista konsolista ui-rivit.
