@@ -21,3 +21,9 @@ Ovilista N/kulku/ ei lopullinen.
 
 ## 4. Levy
 15 vanhaa koejuurta ja koeajoa siirretty T7:lle symlinkein (/Volumes/T7 4TB/proto-arkisto/linnanrakentaja-katot-v125), kansio 16 → 5,9 Gi. koejuuri-ulkomuuri, -yleinen, -terassi, -jalustat paikallaan, koska niihin viitataan. PT sai rivin.
+
+## LISÄYS: KK:n sana raosta, palkeista ja laatikoista (saapui nollausta odottaessa; TEE ENSIN, ei aloitettu)
+1) Palkit ja rako seuraavalla kierroksella luovutuksen kohdan 2 ehdotuksen mukaan. Lisäksi rivi palaluettelo: missä muualla uudelleenleivonta tummensi valoa selvästi kaukana korokkeista (kuten 0,73 → 0,03), jotta sama vika ei jää muualle.
+2) Heti perään oma koe laatikoista. KK: ne eivät jää; kaide-lahi-rajaus.png:ssä ne ovat kuvan näkyvin vika, vaikka ovat vanhoja. Mittaa ensin päällekkäisyys. Sääntö: kohdalla, jossa linjalla on kaiverrettu C2-kaide, yksinkertainen kaide pois; missä C2:ta ei ole, yksinkertainen jää, jotta Taihedianin kaiteet eivät hajoa. Parit samoista kameroista kaide-lahi, kaide-kauko, terassi, taihemen, sekä LOD0 että LOD1. Oma commit, jotta se perutaan erikseen.
+Parit KK:lle. Terassin vienti vain omilla tiedostoilla: KK:n kyllä; JU:n järjestys: oma haara d9cde0f50:n päälle k60/k45-ajojen jälkeen, ensin paikallinen file://-juuri, ei ämpäriin ilman PK:n vahvistusta; JU lähettää rivin, kun haara on.
+PT kuittasi luovutuksen dadd8a3ad.
