@@ -28,3 +28,6 @@ PT 17.2x: alueet/data saa käyttää Mac-vertailuun, ei poistoa. Virhe (toinen k
 
 ## Jäljellä edellisistä
 JU:n ui-kerros-ajo uudelleen ja 15/16-vastaus KK:lle (luovutus -1530). Vesi 5c870d62a Mac: kuvat katsomatta, rivi PT:lle kesken. sk-rajat-tasot JU:lla sk-lataus-h:n jälkeen.
+
+## LISÄYS 1 (JU 17.2x)
+sk-lataus-h 484adb22f valmis: huippu 3344 Mt, 0 varoitusta, 5/5. h-z13-45, -180 ja -420 ovat tavulleen samat (3d2b89ce7720), samoin l-z13-45 ja -180 (b7198d05afc4). Viittaa lopputilaan, ei latautumiseen, mutta sama tiedosto voi tulla myös jäätyneestä kuvasta: varmista konsoli.txt:n "palvelin haku" -riveiltä ja katso kuva täysikoossa ennen riviä PT:lle ja KK:lle. ND v3:n ajon JU ilmoitti tässä viestissä ajossa; kansio esikatselu-20261104-171846 oli jo valmis ja katsottu.
