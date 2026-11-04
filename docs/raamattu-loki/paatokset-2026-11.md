@@ -205,3 +205,27 @@ Tilille sami.reivinen@vvi.fi (org ddaee6a2): tämän tilin 29.10. sessiot tyhjen
 ## PARIISIN KOEALUE STRIIMIKARTAN PÄÄLLE (omistaja 3.11.2026 klo 16.51) (3.11.2026 klo 16.52)
 
 Kortti 'Aloitetaanko Pariisin koealue uudella tavalla?' → 'Kyllä (Suositus)'. Piirroskaupunki rakennetaan striimikartan päälle esineinä (Codex: nähtävyydet, talotyypit, puut, sillat, veneet; kadut, liikenneympyrät, joki ja puistot koodilla oikeita katuja pitkin Codexin tyylinäytteillä; pohjakartta paperiseksi ja musteviivaiseksi). Koealue Notre-Dame + Louvre nykyisen piirroksen rinnalle. Ristiriita: Raamattu 2.204 '2,5 m/px koko kaupunkina' koskee nykyistä piirrosta; uusi tapa korvaa sen vasta, jos omistaja hyväksyy koealueen. Nykyisen piirroksen korjaukset jatkuvat.
+
+## UUSI KARTTA KK:N SUUNNITTELUVASTUULLE (3.11.2026 klo 19.35) (3.11.2026 klo 19.36)
+
+KK välitti 19.35 sanatarkasti: "Tämä projekti on siis nyt tällainen uusi, mikä tarkoittaa sitä, että sinun pitää ottaa vastuu sen suunnittelemisesta." Uuden kartan (Pariisi striimikartan päälle, yläviisto kulma, karikatyyrinähtävyydet, osakirjasto, elävä kartta, muut kaupungit) suunnittelu ja tekotavat KK:lla kuten juoksupelin ohjat; PT jakaa työt, junat, merget, Raamatun. Taustalla omistajan pyyntö 19.3x (yläviisto kulma kaikkiin elementteihin, nähtävyydet karikatyyreinä, lähelle Codexin koko karttaa) ja 19.33 (netin valmiit ratkaisut). Kirjattu 2.204:n loppuun.
+
+## KAUPUNKIKARTTOJEN RAKENNUSPERIAATE (3.11.2026 klo 20.51) (3.11.2026 klo 20.52)
+
+Omistajan kortti KK:ssa 'Rakennetaanko kaupunkikartat tällä periaatteella?' → 'Kyllä (Suositus)'. Kaupunkikartat KS:n RAKENNUSPERIAATE.md:n mukaan (proto-3d/_kirjasto/kartta-osat/): lukitaan pelaajan huomaama (5 kohtaa), oikaistaan muu (8 kohtaa). KK:n tarkennus: kaupunginosien luonne ensin automaattisesti kartta-aineistosta, ihminen vain korjaa. Mukana omistajan 20.20 (nähtävyydet maksimiliioiteltuina) ja 20.4x (nähtävyys saa kääntyä katsojaa kohti). Kirjattu 2.204:n loppuun.
+
+## NÄHTÄVYYS EI VEDEN PÄÄLLE (3.11.2026 klo 21.29–21.30) (3.11.2026 klo 21.30)
+
+Omistaja KK:n kortissa 'Onko Notre-Dame nyt tarpeeksi suuri?': "Ei se voi noin mennä veden päälle"; 21.30: "Ei se mene g versiossa kaanon. Katsokaa sieltä mallia". KK: G:ssä Notre-Dame seisoo saarella ja joki näkyy molemmin puolin; liioittelu korkeudessa ja julkisivussa. Kumoaa 20.4x-tulkinnan 'saa levitä joen päälle'. Kirjattu 2.204:n loppuun.
+
+## PUYIN TARINA EI KESKEN JUOKSUN (3.11.2026 klo 21.48–22.05) (3.11.2026 klo 22.05)
+
+Omistaja: "Juoksu pelin ei voi tulla kesken pelin mitään opetus kortteja"; kortilla tarkennus "Tarkoitin opetus korteilla puyin yms elämästä. Näin jonkin sellaisen edellisessä sessiossa" (kuva lokit/pk-keisari-kk2-7ac89ff33-2118/kk1-nosto-pelin-paalla.png); kortti 'Avautuuko Puyin tarina vain juoksun jälkeen?' → "Myös valikosta tauolla". Linja: Puyin tarinan kortit eivät tule juoksun aikana esiin itsestään, vain pelaajan valinnasta (☰ tauolla, lopetusruutu). 7ac89ff33 täyttää tämän, muutosta ei tehdä. KK:n ensimmäinen tulkinta (ohjainopetus pois, PR 6222) peruttu PR 6223:lla; 2.177 ennallaan. Kirjattu 2.200:aan.
+
+## OIKEA G-MALLI (3.11.2026 klo 22.09) (3.11.2026 klo 22.13)
+
+Omistaja (kuva docs/raportit/kaappaukset/omistaja-20261103/kk-2209-vaara-g-vertailu.png): "Tässä on väärä vertailu kuva oikealla. Oikea g versio on paljon liioitellumpi. Siinä kirkon tornit levenevät ylöspäin". G = pariisi-koko-kaupunki-G-tyyli.png (d0191a334), ei pariisi-laaja-g-v4.png. KS korjaa ND k4 -tilauksen, RAKENNUSPERIAATE.md:n, NAHTAVYYSALUE.md:n ja G-v4:stä mitatut kertoimet. Kirjattu 2.204:ään.
+
+## NÄHTÄVYYS SAA LEVITÄ TAKANA OLEVAN JOEN PÄÄLLE (3.11.2026 klo 22.14) (3.11.2026 klo 22.15)
+
+Omistaja oikeaa G:tä katsoessaan: "Tuossa kirkko on levitetty takana olevan joen päälle mikä kannattaa sallia myös uuteen karttaan." Tarkentaa 21.29-sääntöä: takana oleva joki ja ranta saa peittyä, edessä ja sivuilla joki auki ja kulku erottuu, ei katkaisua. Kirjattu 2.204:ään.
