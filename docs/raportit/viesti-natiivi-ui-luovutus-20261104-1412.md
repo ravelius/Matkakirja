@@ -29,3 +29,15 @@ Protossa ei ole origin-etäpäätä (vain natiivi-backup); haarat näkyvät kaik
 2. **KK:n sana loitonnuksesta** → yksi rivi HiljaisuudenEste-metodiin, samaan haaraan.
 3. **Lipun Mac-kuvat PT:lle JU:n vuorolla:** _tyo/natiivi-ui/kartan-kaanto/sk-lippu2.txt (Ranska) ja sk-lippu2-nor.txt (Norja). Tarkista Norjan keskipiste ja korkeus lokista (`saapuminen: NOR`) ja vaihda aja-rivi, oslo-tunnus varmistamatta. Maamerkit `symbolit maamerkit 1` mukana; niiden kääntö on yhä todistamatta. KS:lle tieto 99eb9931e:stä (yhdistelmähaara).
 4. **iPad (kääntö) ja vanhat kohdat:** 13.56-luovutuksen kohdat 4 ja 5 ennallaan.
+
+## LISÄYS 14.2x: PT:n korjaus, KORVAA kohdan 1 väitteet "sama 3.11." ja "vertailuajo peruttu" sekä jonon kohdan 2 pohjan
+**"Sama jo 3.11." oli väärin.** Vanhan rungon ajoa, jossa elävä laukeaa kesken C1:n, ei löytynyt. Ajot natiiviseppa-saapuminen-video-sim-* ja cb1b5d9fc laukeavat vasta C2:n jälkeen, 36–243 s:n kohdalla. PT:lle ja KK:lle korjattu.
+- Mekanismi on todistettu vain ajoista 801c1a8ee (esikatselu-20261104-132058) ja 176c41f2d: `liiku: esiin (kerronta ohi)` tulee 0,8 s C1:n jälkeen, jolloin "kortti auki" poistuu, 0,6 s:n päästä elävä soi ja kamera loitontaa.
+- Kymmenessä puheellisessa 3.11. ajossa "kortti auki" pysyy koko C1:n, esim. natiiviseppa-paluu-pariisi-c9ab58e88-20261103-1543.
+- Syy auki: nousu-haara (diff 7f64cd657..176c41f2d koskee vain UI/Pulu-tiedostoja) tai runko c9ab58e88..7f64cd657. Selvitä `Matkavalinta.cs:114`:n kutsuja ja mikä kerronnan lopettaa.
+
+**JONO, korvaa kohdat 1–3 järjestyksellä:**
+1. **Vertailuajo palautettu, ajetaan ensin:** `SIMU_MUISTIRAJA=16 zsh tyokalut/simu-lukko.sh kaari natiivi-ui yhteinen-iPad13 -- zsh /Users/Shared/Claude/proto-3d/lokit/nui-vertailu-7f64cd657-20261104/ajo.zsh` (JU:lta pyydetty). Tulos yhdellä rivillä PT:lle: laukeaako elävä ennen C2:ta. Laukeaa → runko, haarukoi c9ab58e88..7f64cd657. Ei laukea → oma haara.
+2. Nousukuvien ajo ja kuva KK:lle kuten kohta 1 yllä.
+3. **Lippu 99eb9931e PT kuitannut.** Mac-kuvat Ranskasta ja Norjasta PT:lle JA KK:lle JU:n vuorolla. KS:lle kerrottu sha (yhdistelmä 60c1e5614 ei sisällä sitä).
+4. Yhden rivin korjaus (este "esittely") odottaa edelleen KK:n sanaa. Sen jälkeen ajossa pitää näkyä, että C1 pysyy kaupungissa.
