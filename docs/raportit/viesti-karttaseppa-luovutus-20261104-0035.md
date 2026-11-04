@@ -576,3 +576,9 @@ Omistaja: "oikein hyvä, ainoastaan lähempänä kameraa oleva torni on jostain 
 **Vahti käynnistettävä uudelleen:** uusi posti claude/postilaatikko, käsitelty 006ff6d7d asti. KK:n kala-allas- ja kukkaruukkutilaukset eivät koske KS:ää.
 **Muu odottaa kuten ennen:** Karsi b920a2998 yhdistelmässä, Vincennes, Boulogne, minor-nimet ja puut pelikuvista.
 **Oppi:** Tripon atlaksen kulmassa on kolmioita, joiden UV on kasassa, ja niiden tumma väri on ikkunoissa oikea, joten korjaa vain rajatulta alueelta. Möykkykin oli osa tornin seinää: aukko suljetaan tornikohtaisesti, ei yhtenä viuhkana raon yli.
+
+## LISÄYS 4.11. klo 12.33 (uusin; lue ensin): v3 KK:lla, korvaa lisäyksen 12.27 "ODOTTAA"
+**KK 12.2x:** v2 (d175bffa1809) omistajalla kortilla; "enemmän" odottaa omistajan vastausta. **Ei mitään peliin ennen vastausta.**
+**v3 tehty KK:n tilauksesta:** /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v3/ (tee_v3.py v2:sta, kuvat_v3.py, rajaus.py), toimitus notre-dame-3d-v3/ (glb f1688e1636d9, 19 871 kolmiota, 3,9 Mt, työkalu OK, tornit 540/540, leveneminen 1,25/1,23). Pisteviiva ja sirpaleet korjattu, kuvat KK:lla. Lähikuvassa jäljellä: tumma ohut viiva kaistaleen reunassa, katto tasaväri ja kaksi pientä vihreää piikkiä; ei näy pelikoossa.
+**Jos omistaja sanoo "enemmän":** tee_v2.py SUHDE suuremmaksi (arg 1, nyt 1,30), sitten tee_v3.py uudelleen v2:n päälle. Suositus KK:lle: v3 korvaa v2:n.
+**Tripolle kuittaus yhä lähettämättä,** odottaa KK:n/omistajan vastausta. Vahti posti: käsitelty 006ff6d7d asti.
