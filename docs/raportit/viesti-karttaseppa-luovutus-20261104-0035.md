@@ -630,3 +630,8 @@ NUI:n 99eb9931e yhdistetty: karttaseppa/nd-kaanto-219 **c74d6ef93** (korvaa a641
 **Ajettu ja katsottu, linja 2:** /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261104-150501/. Kuvat KK:lla; hän vie omistajalle. **Odota KK:n vastausta.**
 **Puutteet kerrottu KK:lle:** väri kaukaa (VS), joen liukumat viistosta viiruiset, vene taivaalla s-270:ssä (VS), kääntö kuvaamatta, iPad ajamatta.
 **Posti:** käsitelty b5b932eef asti.
+
+## LISÄYS 4.11. klo 15.17 (uusin; lue ensin): KK:n sivutehtävät
+**KK:** aukio omistajalla, kortin vastaus tulee erikseen. Ei iPad-vuoroa ennen vastausta; iPad-luvat seis muistikorjauksen takia (PT). **Korjaus:** s-270 on katsottu idästä länteen, ei lännestä. KK lisäsi s-180:n taivaanraidat omistajan puutelistaan.
+**s-180:n raidat ilman koetta: ei todistettu.** Viimeisissä 60 esikatseluajossa ei ole etelään katsovaa kuvaa ilman koetta. NotreDameKoe.cs ei koske taivasta, mutta todistus vaatisi ajon ilman koetta samasta kulmasta (Mac-vuoro JU:lta). Asia PT:llä.
+**s-090:n kaksi Pariisi-nimeä (noin 500,705 ja 1940,1180):** molemmat samaa tyyliä, syy selvittämättä. Asia PT:llä; koe ei luo nimiä.
