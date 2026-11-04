@@ -34,3 +34,13 @@ Jos syy ei ratkea kuvista: seuraava askel on lokitus Cesiumin valituista paloist
 
 ## Jono rajojen jälkeen
 PT:n järjestys pysyy: väri ja läiskät vasta muistin ja sauman jälkeen. Läiskien terävä reuna: luovutus -1217 LISÄYS 3, 6. sk-striimi-loput.txt muistin jälkeen.
+
+## LISÄYS 1 (15.59; KK:n sana, korvaa "Työn alla" -kohdan suunnan)
+Oma virhe: "pois-tilassa ei rajoja" ja "eivät osu ruudukkoon" olivat väärin. Korjaus TULOS.md:n lopussa. Rajat osuvat 0,1758°:n ruudukkoon eli maaston geometriapalojen reunoihin (KK:n malli, mitat/g6.py; 5/9 x ja 3/3 y; x 50, 1041, 1889, 2116 selittämättä). Kuvataso seuraa geometriapalaa (KarttaKerrokset.cs:107). Kuvatasoja ei mitattu lokista. Älä käytä mitat/g5.py:n kalibrointia. KK:n kuvat ja ruudukko.py: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/kuvat/k0-20261104/ (mittaa terävyyssuhteen ruudukon viivan molemmin puolin).
+KK 15.58, tiivistettynä:
+- TAVOITE: tasoilla 8,5–10,5 pelaaja ei näe suoria rajoja eikä kartan vaihtumista kerralla. Yksi kartta joka kulmassa on ensisijainen.
+- SANA: tee tasoista vierekkäin samannäköiset. Metsät ja läiskät tulevat esiin vähitellen usean tason yli (12.2x:n sana pienistä ruoho- ja pensasalueista pysyy). Tiet lähentyvät väriltään ja leveydeltään z10–z12 (k55:n heikkous 6). Rinnevarjon terävyysero pienenee. Tekotapa on Valosepän. LISÄYS 2:n z11-muutos ja uusi tyyliversio sallittu. z14–z16 ei muutu. Muistikorjaus 484adb22f ei muutu.
+- k60:n "ei neliöitä" on samassa tilassa kuin pois: tarkista myös terävyys- ja tienväriportaista.
+- NÄYTTÖ: ensin Macilta k55:n kaista z10–z14 ennen | jälkeen KK:lle. Sitten iPad-vuoro PT:n järjestyksessä: varjo / pois p-z10:ssä ja tasoilla noin 8,6, 9,5 ja 10,4, kulmat 0°, 19° ja 21°, sama rajaus, koko kuvat täysikoossa, ruudukkomitta mukaan.
+- Lopuksi yksi suositus: pidetäänkö alle 20° varjo vai pois. Jos pois riittää, se poistaa vaihdon kokonaan.
+JU:n sarja sk-rajat-tasot.txt on nyt "ennen"-mitta tasoilta; aja sille KK:n ruudukkomitta, katso koko kuvat täysikoossa molemmista tiloista.
