@@ -30,3 +30,12 @@ Sellaisenaan iPad-sarjaan Pariisin jälkeen, ei oviaukon alitusta (2.177 pysyy),
 TF 217: rivi PT:llä, koodin mukaan sama palkistovika, ei mitattu. Komento: Peli-testit/unity-tarkistus.sh (sh), Peli-testit/kaanna.sh (bash). Muut ennallaan -0205 ja -0142.
 
 Tila: odottaa JU:n ajoja peitto-be56, pk-be56-laite ja palvelijat-v12.
+
+## Lisäys 03.37: KK 03.35 (korvaa ristiriidassa olevat kohdat)
+- **Lätäkkö HYVÄKSYTTY** v11:llä (KK; Mac). Listalla: kengän rosoinen yläreuna.
+- **Kuvat palvelijoista suoraan KK:lle, PT tiedoksi** (KK 03.35; koskee tätä palvelijaerää).
+- **vesi-090 selvitetty ja vastattu KK:lle ja PT:lle:** ruskea pallo = mätä omena 1,8 m:ssä (LuoOmena), varjo sen auringonvarjo (laskettu paikka täsmää, ei varjokoetta). Ei poistettu; KK päättää, jos korkeus tai varjo pitää muuttaa (koskee kaikkia omenoita).
+- **Palikkakuvio malja2-120:** KK: toistuvuus v12:sta; **jos toistuu, syy ennen junaa.** Sirpaleet odottavat v12:ta.
+- **v13 63845cda6** (arkihahmot-218), kuvarunko **cfd520f2e**: KK:n "varjo katkeaa lätäkön reunaan, korjaa jos helppo, ei ehto". JuoksuMarka: multi_compile ja JuoksuVarjo; varjossa pinta × 0,65 (arvio kiven suhteesta, ei mitattu), kiilto × varjo. Valossa väri ennallaan koodin mukaan. Ei ajettu, varjostinkääntö ei todistettu. **JU:lla v12:n jälkeen:** `_tyo/pelikoodari/palvelijat-v13/aja.zsh 1` (vain vesi).
+- **Kun v13 ajettu:** vesi-160 sama rajaus kuin lahikuva-lammikko-vesi-160: varjo jatkuu reunan yli eikä näytä tummalta tarralta; mittaa valossa väri yhä noin 150/185/225 (hyväksytty), varjon tummuus vs kiven varjo (säädä 0,65). Jos väri muuttuu valossa tai varjo näyttää huonolta: 63845cda6 pois, koska se ei ole ehto. Hyväksytty lätäkkö ei saa huonontua.
+- v12 ajossa 03.33 alkaen, v13 sen perään.
