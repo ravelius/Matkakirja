@@ -1,6 +1,10 @@
 # Karttaseppä: luovutus 4.11.2026 klo 21.21 (KS)
 Syy: konteksti 25 % (7.37). Korvaa -2016:n jonon; sen "Tehty"- ja "Opit"-kohdat pätevät edelleen (haara karttaseppa/luovutus-20261104-2016, a2830fbdb). Python: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104. C = /Users/Shared/Claude/proto-3d/_tyo/codex. Worktree /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219.
 
+## LISÄYS 22.0x: TRIPO KÄYNNISSÄ 21d:STÄ (uusin, lue ensin)
+21d tuli 86553a6fa, SHA ok, katsottu täysikoossa: keskipaviljongit keskellä, kaikki kolme pyramidia näkyvissä, piha avoin, sininen 121/161/183 (vaaleat 157/191/210) lähellä G:tä. **Huoli:** kamera noin 75°, pyramidit näyttävät lähes litteiltä ja harjat kaarevilta, ulkoseiniä näkyy vähän. Tripolle annettu pyramidien mitat ja lupa korvata ne yksinkertaisilla, jos litistyvät (posti karttaseppa-codex-tripo3d-louvre-21c-aloita). Vahti käsitelty aloita-postiin asti.
+**Toimitus `louvre-3d-v1/`:** tarkista neljä suuntaa julkisivuja vasten, pyramidit oikeasti kolmiulotteisina, piha auki, sininen. Pelikuva tai esikatselut KK:lle neljästä suunnasta ennen omistajaa. Sinisen lopullinen arvio kartalla kirkon valossa.
+
 ## LISÄYS 21.5y: OMISTAJA 21.49 SININEN VAIMEAMMAKSI (uusin)
 **Omistaja 21.49: "Sininen ei saa olla noin voimakas, jotta sopii karttaan".** KK: yhä selvästi sininen ja tunnistettavin asia, mutta samassa vaimeassa kartassa kuin kivi ja katto; mittari G:n 128/168/194; lopullinen arvio kartalla kirkon valossa, ei harmaalla pohjalla. Jos Tripo on käynnissä, älä aja uutta vain tämän takia: vaimenna väri mallin tekstuurista, jos se onnistuu ehjänä. **Pelikuva KK:lle ennen omistajaa.**
 Viety 21d:hen (posti karttaseppa-codex-kuvat-louvre-21d-sininen). Tarkista viistokuvan sininen tätä vasten. Tripo ei ole aloittanut.
