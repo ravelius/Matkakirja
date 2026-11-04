@@ -12,7 +12,8 @@
 #
 # Kaksi tapaa ajaa:
 # - käsin (workflow_dispatch): Natiivisepän valmis vienti Build/<vienti_kansio>;
-# - yöllä klo 04 Suomen aikaa (schedule, 01.00 UTC): Unity-vienti proton
+# - AJASTUS POIS 4.11.2026 (Raamattu 10.2); schedule-haarat jäävät, jos se palautetaan. Aiemmin
+#   yöllä klo 04 Suomen aikaa (schedule, 01.00 UTC): Unity-vienti proton
 #   masterista batchmodessa kansioon Build/yo ja sama arkistointi + lataus
 #   sisäiselle ryhmälle (omistaja hyväksyi 24.9.2026). Natiivisepän ehdot
 #   (vaihtoehto A): vienti ajetaan päätyökopiossa (ainoa Library), ja ajo
@@ -25,8 +26,7 @@
 name: proto-3d TestFlight
 
 on:
-  schedule:
-    - cron: '0 1 * * *'
+  # Ajastus pois 4.11.2026: TF vain omistajan pyynnöstä (Raamattu 10.2); yöajo olisi voinut viedä vanhan masterin sisäisille.
   workflow_dispatch:
     inputs:
       vienti_kansio:
