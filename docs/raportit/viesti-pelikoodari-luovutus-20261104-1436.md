@@ -26,3 +26,6 @@ Työkalut: `tyokalut/ovikuvat.py` (kynnys ei portailla, kamera sivuun jos edess�
 
 ## LISÄYS 14.4x: OMISTAJAN PÄÄTÖS 14.46 (KK:n välittämä)
 Kala-allas ja kukkaruukku kelpaavat peliin. Väri pysyy; ruukun kaari korjattu mallit-v1b:ssä (vaihdettu, kuvalistassa). Omistaja näki da29a4288:n arkin, ei uutta e94d66f4b:n ruukkua. Ovimalli: omistaja hyväksyi kuvat, Lavastaja tilaa Tripolta; laatikko jää sijoituskokeisiin siihen asti. Muisti iPadilla JU:n vuorolla kuten kohta 2: **seuraava työ, pyydä vuoro JU:lta.** Esineiden ämpärivienti vasta PK:n vahvistuksella (`media-vienti-muuttaa-julkaistua`).
+
+## LISÄYS 14.5x: KK 14.52
+Kaivosuojat ilman ovea: sääntö nimestä 井, kärki **e66d866ba** (kartta v3 ja JuoksuOvet.json päivitetty, kääntämättä mutta vain dataa ja työkalu; kuvalistassa 14 ovea). Seuraava KK katsoo a26aca8f5:n arkin ja tuo palautteen. Muisti ja kierros JU:n vuorolla kuten kohdat 2–3, rungoksi e66d866ba.
