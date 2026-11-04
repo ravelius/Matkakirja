@@ -78,3 +78,6 @@ Ehdotus PT:n säännöstä (ei tehty): raja 22° (≥ 22° ei varjoa), hysterees
 ## LISÄYS 10 (PT: raja 20°, korvaa LISÄYS 9:n ehdotuksen)
 484adb22f (linssiseppa2/striimi-vari, natiivi-backup, e774647ee:n päällä, 604/604; Unity ja laite todistamatta): varjovalinta pois ≥ 20°, paluu 15° ("hystereesi 15°" luettu paluukulmaksi, vahvista PT:ltä, jos eroaa).
 JU: 1) sk-muisti-z10-k19.txt, 2) sk-muisti-z10-ei-varjoa.txt (k60), 3) sk-striimi-k45.txt. Samat muistiehdot. Kuvat: p-z10 | p-z10-pois, p-z9 | p-z9-pois 19°:ssa täysikoossa; neliöt näkyvät → polut PT:lle ennen hyväksyntää. Sitten LISÄYS 5 (viivat, pisteet).
+
+## LISÄYS 11 (JU)
+k19 484adb22f: 3678 Mt, 19,0°, varjo + kerroin 4, 0 varoitusta, 5/5 uutta kuvaa, katsomatta (lokit/julkaisija-muisti-z10k19-484adb22f). k60 ajossa. Muistiehto täyttyy tällä kulmalla; neliöparit katsomatta.
