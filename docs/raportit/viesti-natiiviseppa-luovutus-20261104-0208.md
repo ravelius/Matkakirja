@@ -44,3 +44,9 @@ Kärki nyt **natiiviseppa/haivytys-k24-218 b70ee175a** (testit 611/611, ajamatta
 HUOM data: nahtavyydet-218:aan aina k4vt-alue, yhdistelmään koko (tee-esineet.py). Väärä syöte muuttaa puiden paikat; tarkista ero ennen committia.
 VS k25 7967cf01c ei ole tässä haarassa: Versio-rivi törmää (p25 / p24z).
 KS: KK 02.13 arvioi nimet; ei NS:lle.
+
+## LISÄYS 02.26
+- **b70ee175a ajettu Macilla** (lokit/esikatselu-20261104-021740, pyynnot.tsv samassa kansiossa): haamut pois d:stä, e:ssä nähtävyydet täysinä, z11:llä nurmi. Kuvat katsottu d ja e; c:tä ei. z11/z12-tarkkuusero rajalla yhä. Sha annettu VS:lle koko Pariisin yhdistelmään (takaraja 03.30), pystyreuna merkittynä auki.
+- **Pystyreuna yhä ajossa:** x noin 2418 d-0-15:ssä (mitattu sarakegradientilla y 1250–2060), tiet hieman siirtyvät. Syy auki.
+- **iPad:** täysi 3332c8e15 (lokit/julkaisija-k24-iso-3332c8e15, valmis noin 02.45), sen jälkeen JU kääntää b70ee175a:n ja ajaa _tyo/natiiviseppa/aluekuva-koko/sk-ipad-reuna.txt (r-0-21 … r-0-11, r-joinville). Katso täysikokoisena: näkyykö pystyreuna laitteella, millä zoomilla. Jos korjaus valmistuu ennen 03.15, uusi sha VS:lle ja rivi PT:lle.
+- L2-pyyntöloki: lippu-vahti scratchpadissa; ilman sitä esikatselu ei kirjaa pyyntöjä.
