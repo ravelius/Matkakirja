@@ -29,3 +29,20 @@ Edellinen: viesti-natiivi-ui-luovutus-20261104-1245.md. Proto-repo: /Users/Share
 ## Muuta
 - Liikevahti (tyokalut/tarkista.sh) vaatii TraileriLiikkeen uusiin liikeriveihin merkinnän `// liikepoikkeus:`. tarkista.sh muuttaa ajettaessa tyylikirjatiedostot worktreessä; palauta ne, älä committaa.
 - Peli alkaa skenaariossa siitä kaupungista, joka annetaan: Lontoon pelissä zoomi 0,26 on eri näkymä kuin Pariisin pelissä, eikä Ranskan lippu näy. sk-lippu.txt alkaa Pariisista.
+
+## LISÄYS: KK:n vastaus 13.56 (KK:n viesti tuli luovutuksen jälkeen; korvaa jonon kohdan 2, tee kohta 1 yhtä aikaa)
+**Toteuta nousukuvat: noin 35 % ja kuva pisteen viereen.** Mittari (omistaja 13.00): pelaaja näkee, mistä kuva aukeaa, ja tajuaa, että kuvat poimitaan kartalta.
+- Kuva ei peitä omaa pistettään eikä kaupungin nimeä (nyt PARIISI menee kuvan päälle).
+- Lähellä reunaa oleva piste asettaa kuvan ruudun sisälle.
+- Vanha pienenee pisteeseensä samalla, kun uusi nousee. Vaihtoväli 2,9 s pysyy.
+- **Mittaa molemmat asennot:** pystyssä kuva vie nyt noin 70–75 % ruudun leveydestä (0,75 × leveys, koska rajana on leveys). Kerro seuraavassa kuvassa kummankin asennon osuus leveydestä ja korkeudesta.
+
+**Avoin 1, yksi rivi KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a), älä muuta vielä:** selvitä lokista ja Raamatusta (`node tools/loki-hae.mjs`), onko maahan loitontaminen päätetty. Omistajan sanat ovat "Pariisin kartalla". Jos päätöstä ei ole, suositus on, että kamera pysyy kaupungissa, kunnes kuvat on nähty, ja KK vie sen omistajalle kuvan kanssa. Tarkista samalla:
+- c5 on mustavalkoinen isoisän kuva, jonka pitää nousta matkakirjasta ja palata sinne (3.11. 08.48).
+- c1:ssä tausta on lähes tyhjää paperia: onko se latausta, joka näkyisi pelaajalle?
+
+PT:n rivi jonon kohdasta 1 (mikä komento, onko tarkoituksellinen, näkyykö ilman muutosta) menee edelleen PT:lle.
+
+**Avoin 2:** raja ratkaistaan iPad-kuvasta, KK:n ok.
+
+**Seuraava kuva KK:lle, ei videota:** samat neljä (traileri 1, c1, c2, c5), yksi vaaka-asennossa ja yksi kohta, jossa kuva on juuri noussut ja piste näkyy. KK katsoo ja vie omistajalle. Vaaka-asento ja alkupaikka vain simulla, koska Mac sijoittaa nousupisteet väärin.
