@@ -25,3 +25,10 @@ Tulos `lokit/tarkastelukuvat-220983d61-*/`.
 2. Muisti iPadilla JU:n vuorolla: ovet + esineet, ei `palatsi kopiot 1`, vertailu ka 4000, huippu 4068 (c4a5bfafb), raja 4080. Lähtötaso ilman niitä ensin.
 3. Koko kierros kahdesti JU:n vuorolla (9e697f69f): väärin kierretyt -mittari, m15; sitten todistukset 1–4 (-1320).
 4. Osa C, Testinäkymän rivi, unity-tarkistuksen CS0152-selvitys: kuten -1320. Esineiden törmäys ja rikkoutuminen osaan C.
+
+## LISÄYS 13.47: ensimmäinen ajo tehty, korjaukset d81857c4b ajamatta
+Ajo 9e697f69f (kääntyi): `lokit/tarkastelukuvat-9e697f69f-133804/`, esineet-arkki.png, ovet-arkki-luonnos.png. **Esineet lähetetty KK:lle**: kaari näkyy, oksat ohuet, koko hyvä, mallit varjostamattomia ja kirkkaita (tarjosin sävyn säätöä, KK päättää); muisti mittaamatta.
+Ovet: yongshou, chuxiu ja yikun ovat aukossa portaiden päässä; hämärä toimii. KK:lle ei vielä: kerroin, että kolme korjausta on tulossa.
+Korjattu **d81857c4b** (haaran kärki, ajamatta): keskelle, portaat ja näkyvä sivu: matala este ei ole seinä, ovi sen päälle varsinaisen seinän eteen (zhai, leshou); portaat koko kävelystä; kuvien kamera ja keisari kartan korkeudelta (`keisari x z yaw y`, `kamera … abs`), koska terassilla MaanPinta on maa ja qianqing ja kunning kuvautuivat terassin alta. Kartta v2 ja lista `tyokalut/koekuvat-ovet-esineet-219.txt` päivitetty. 259 ovea: keskelle 207, näkyvä 32, aukko 11, portaat 7, aukko-iso 2; tasolla 1: 220.
+**Seuraavaksi:** JU:lta pyydetty uusi vuoro. Ajo (PROTO_LINJA JU:n vuorosta):
+`PROTO_LINJA=<n> zsh /Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu/tyokalut/tarkastelu_kuvat.sh d81857c4b /Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu/tyokalut/koekuvat-ovet-esineet-219.txt "ovikoe koe"`; lopuksi rivi JU:lle (linja vapaa). Katso: qianqing ja kunning (6,5 × 6 m:n täyte: jos näyttää isolta laatalta, leveälle aukolle tavallinen ovi seinän tasoon), zhai, leshou, keisari näkyy kaikissa. Arkki KK:lle. Sitten kohdat 2–4 yllä.
