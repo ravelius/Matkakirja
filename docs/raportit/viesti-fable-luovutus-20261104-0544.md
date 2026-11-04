@@ -33,3 +33,9 @@ Tehty: VS a37a5699f, PK 30ec1ddd3, NUI 6b8bb3318, JU 154744cdd, LAV 33aa385a4→
 - Aika aina date-komennosta, myös lyhyisiin riveihin.
 - Ennen kuin kirjoitat havainnon syyn, mittaa: "vaaleat suorakulmiot" y-montmartressa oli 0,0 %.
 - Rooli voi todeta oman VIKA-lukemansa mittausvirheeksi: älä kirjoita junapäätöstä ennen uusintaa.
+
+## LISÄYS 05.52 (korvaa ristiriitaiset kohdat)
+- yhd5:n sha on **8dee95d57** (0891b0f1e + Plantes v5, korvaa v4:n, kokeeksi, ei junaan), kansio lokit/julkaisija-yhd5-iso-8dee95d57.
+- be5632bdb: uusinta 3909–3944 Mt, 4153 ei toistunut, mutta Puyi salissa vain 1/24 ja 1/12 kuvista. KK 05.46: oma sali-ajo oleskelulla ennen junaa; ei omistajalle ennen sitä. pk-be56-oleskelu.zsh JU:lla LOD:n jälkeen (xf ja sali 1, 4 min). Tulos KK:lle, katso kuvat: Puyi salissa alussa, keskellä ja lopussa, muisti tasaantuu.
+- LAV: 141 seinää näkyy reitiltä, tummia 73 + muuri (laskettu, ei todistettu); 20 suurimman kuvat tilattu JU:lta, sinulle ja PK:lle. PK:n muurin todiste odottaa yhä.
+- KS:n nollaus jumissa (5d155e9ee), Postivahti uusii.
