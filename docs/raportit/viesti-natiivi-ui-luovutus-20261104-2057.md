@@ -48,3 +48,7 @@ Lähtökohdat, ei todistettuja:
 - Kohta 2: lippu on kiinteä 120 pt (Lipputanko.KorkeusPt): iPadilla noin 9–12 % ruudun korkeudesta, iPhone-vaakassa 30 %. Saman osuuden tavoite on noin 40–50 pt; katso MinNakyvaPt 36 ja kangas pienenä. Pienempi lippu kasvattaa KiertoSadePt:n sädettä, joten kulma ja kuvat vaihtuvat: aja kaikki uudelleen.
 - Kohta 1: 91bf-ajosta lähtien kangas on ruudun oikealle (Lipputanko, liehunta "ruutu"), mutta valo tulee maailmasta. Etsi kankaan valon laskenta varjostimesta ennen korjausta.
 - Kohta 5: ks. jonon kohta 2 (km pienemmällä kahdesta asennosta). Ajo: skriptiin `ui kierto` samassa käynnistyksessä, atominen `laheta`.
+
+## LISÄYS 2: KK:N SANA dbbc2bbea:STA (seuraajan toinen työ)
+KK sanasta sanaan: "dbbc2bbea kelpaa valtuutuksella (katsoin 4 kuvaa): haku, ☰ ja kortti jäävät näkyviin. Korjaa samalla c5:n lepopaikka: kuvan reuna ei saa jäädä Dynamic Islandin alle. Yksi simukuva c5:stä riittää. Sen jälkeen merge-pyyntö PT:lle, kuvaa ei tarvitse tuoda minulle. Ajoitusta ei voi arvioida tästä ajosta, kuten sanoit."
+Lähtökohta: c5 lepo -244,-39, koko 316×237, kuva vasemmalla noin 35 pt; Dynamic Island ulottuu noin 51 pt:iin (ajon iphone-vaaka-c5.png). Haara natiivi-ui/nousu-pieni-219, TraileriLiike.NousuLepo. Skripti lokit/nui-nousu-napit-dbbc2bbea-20261104/ajo.zsh; simuvuoro JU:lta; app-kopio on poistettu, joten poista käännöksen ohitus tai käännä uudelleen.
