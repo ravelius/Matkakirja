@@ -47,3 +47,6 @@ Lue koko suunnitelma: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskuste
 - `MikaKolmio` lukee vain luettavat verkot. Linja: JU:n "ESIKATSELU NYT" ennen ajoa.
 - zsh: `echo ==` ja `${(f)…}` kaatavat komentotarkistuksen; aja lyhyet komennot erikseen.
 - Ids: PT local_8d8ebf72, JU local_2a7d6c96, KK local_d5f31591, Postivahti local_1f31f830.
+
+## LISÄYS 11.3x (KK): tarkennus kuitattu, kartoitus pohjaksi
+KK kuittasi tarkennuksen: jatka. Tarkistusten pohjaksi osa E: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261104-juoksupeli-poikkeuskartoitus.md` (uudelleenkäyttö: OikeaVerkko, PeittoKohtaDiag, SaliSolmuDiag, mika-luotaus, PELAAJA PIILOSSA, KAMERA MASSASSA, mittari-taulukko.py). Se on apulaisen raportti, ei todiste, enkä ole lukenut sitä; oikaise KK:lle rivillä, jos jokin on väärin. Ei korjauksia siitä, ensin lähtötilanne. Keisarin 1 771 solmun tarkistus kuuluu kuljettavuusmittariin, kun väreily ja pinnat toimivat.
