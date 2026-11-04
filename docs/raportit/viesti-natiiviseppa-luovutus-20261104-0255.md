@@ -1,0 +1,33 @@
+# Natiivisepän luovutus 4.11.2026 klo 02.55 (konteksti 30 %, 7.37)
+
+Korvaa luovutuksen -20261104-0208 (myös sen LISÄYKSET). Siitä yhä voimassa vain KS-kohta ja "Sauman syy varmistettu". Luovutuksesta -0129 voimassa: KK:n lista, GP, f1fb45f10, Selvitetty, AVOIMET (`git show 97afe2e4c:docs/raportit/viesti-natiiviseppa-luovutus-20261104-0129.md`); HAARAT alla olevin muutoksin.
+Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
+Vuoro aina JU:lta. Skripti `zsh .../tyokalut/esikatselu.sh`; Kartta-testit `sh Kartta-testit/kaanna.sh`.
+
+## HETI NOLLAUKSEN JÄLKEEN (PT:n päätökset sitovat)
+1. **f5c1f14b0-todiste, tärkein. Odota kuvia** (JU, arviolta 03.32): /Users/Shared/Claude/proto-3d/lokit/julkaisija-reuna-iso-f5c1f14b0/ (skenaario _tyo/natiiviseppa/aluekuva-koko/sk-ipad-reuna.txt: r-0-30, 0-21, 0-17, 0-15, 0-13, 0-11, 0-21-paluu, joinville). Tee odotussilmukka Bashin taustalle, Monitor ei tarvita.
+   - Katso täysikoossa/rajauksina, EI vain Joinvillestä (KK 02.50): vertailu lokit/julkaisija-k24-iso-3332c8e15/k-h-0-15.png, läiskät siellä pikseleissä (x, y, kuva 2732×2048): (1295,70), (1603,130), (2452,370), (2411,1500), (2678,1070), sekä 0-17:n ja 0-21:n vastaavat; KK:n kuva k24-ipad-laiskat-0-15.png (lokit/kk-peli-a94d8e7fb-20261103/).
+   - Puhdas = suorareunaisia tummia läiskiä ei näy ja tiet eivät muutu muualla. **Rivi HETI PT:lle ja VS:lle** (PT 02.5x). Puhdas → VS yhdistää f5c1f14b0:n aamun kuvaan, JU ajaa viimeistään 04.00. Ei puhdas → läiskä näkyy aamulla, PT kertoo KK:lle.
+2. **Haamut 0,13 (KK k24 kohta 1):** korjaus 204104d31 on k28:ssa 984342737 ja k29:ssä 1a8f03720, ei uutta shaa (kerrottu PT:lle). Nähty vain Macilla. Katso iPadilta r-0-13 (Riemukaari, Eiffel, Louvre, Grand Palais, Garnier, Invalidit täysinä) ja r-0-15 (ei näy). Vian jäädessä sha VS:lle viimeistään 03.45. Syy jäljellä olevaan: korkeus_m-rajat PiirrosKerros.Esineet.cs:334, data nahtavyydet-218.
+3. **0,21 mennessä | paluu (KK kohta 3):** vertaa r-0-21 ja r-0-21-paluu. Nimet KS:llä (ValitseTaso-hystereesi, päätelty, kerrottu). Tiet vaaleammat paluulla: SYY AUKI, minun; ei tutkittu.
+4. **z11/z12-saumat:** katso k28:sta (lokit/julkaisija-reuna-iso-984342737/ tai julkaisija-k28-iso-984342737/), ei b70ee175a:sta.
+5. **Kulu (KK):** PT:lle kerrottu, että stilleistä ei näe; mittaa vierityksen sujuvuus k28:sta, kun JU antaa vuoron.
+
+## Päätökset
+- PT, KK 02.5x: häivytysvyö 0,13 ja länsiraja 1 200 m kelpaavat aamuun, ei muutosta.
+- Länsiraja: VS tekee seuraavalla kierroksella (ReunaM noin 2400, muisti mitattava). NS EI koske siihen. Ei KS:n eikä NS:n aamuun.
+- KK hyväksyi k24-pinnalla: saumat 48,8503 ja 2,3071, hiusviiva, Alma, vinjetti 0,30–0,15, muisti 3512/4080 Mt.
+
+## Tehty tässä sessiossa
+- **Ruskeat läiskät f5c1f14b0** (ElavaTyyli.PoistaKarkeaRanta = kaksi PoistaKierros-kierrosta, ElavaTyyliVersio e15, testi PuhdistusPoistaaLeveanTienJaReunanTien; 612/612). Syy: leveän tien risteyksessä ja palan reunalla ei 5 × 5 -ympäristössä ole vaaleaa pikseliä. Toistettu Pythonilla paloille 10/518/352 ja 519/352: yksi kierros jättää läiskän palan 519 reunaan, kaksi poistaa. Pelissä ajamatta. Julkaistusta kartasta (KK:n kysymys) ei tarkistettu.
+- **627562dad peruttu 3cb530e6b:** peite enintään Z10. Tein sen ennen iPad-kuvia; iPadilla tiet jatkuvat lon 2,4609:n yli ehjinä, joten pystyreuna oli näissä kuvissa vain Macin 640×480-ajossa, ja korjaus olisi sumentanut iPadin. Ei päätynyt yhdistelmään (VS). Älä tee uudelleen.
+- iPad 3332c8e15 katsottu: lokit/julkaisija-k24-iso-3332c8e15/NS-havainnot.md (9 täysikoossa, 9 puolikoossa, 27 ei).
+
+## HAARAT
+- **natiiviseppa/haivytys-k24-218 kärki f5c1f14b0** = b70ee175a + 627562dad + revertti + läiskät. Peilissä natiivi-backup. EI junaan eikä ämpäriin. Worktree wt/proto-natiiviseppa-maskik4.
+- VS: f5c1f14b0 yhdistyy k29:n kanssa ilman ristiriitoja (merge-tree, ei ajettu); ei k28:ssa eikä k29:ssä.
+- **KS seuraavaan yhdistelmään:** karttaseppa/pariisi-nimet-220 kärki 498ce79dd (korvaa -0129:n 76d11201a-kohdan; sha tarkistamatta, kääntämättä; ei tee mitään ilman Resources/Esineet/pariisi-nimipeite.bytes, joka tulee uusien puiden kanssa, KK ei ole valinnut). Puita ei viedä vielä. d-sillan kaide -0129:n kohta 4 yhä tekemättä.
+
+## KK:n lista, kohdat 2–4 (-0129): aloittamatta
+## Avoimet häivytyksessä
+Kaukaa saapuessa kerroksen kytkeytyminen (120 km) ei testattu liikkeessä. Pystyreunaa muilla näyttöko'oilla ei katsottu.
