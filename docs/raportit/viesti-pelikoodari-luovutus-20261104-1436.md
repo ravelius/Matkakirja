@@ -23,3 +23,6 @@ Löydös: etusivu hylkäsi seinän esteenä, jos pohja oli yli 1,5 m seinän sis
 
 ## Muistiinpanot
 Työkalut: `tyokalut/ovikuvat.py` (kynnys ei portailla, kamera sivuun jos edessä ei ole lattiaa). Uudelleenajo noin 30 s, pinnat välimuistista. Arkin teko scratchpadin ulkopuolelle ei tallessa: PIL-ruudukko kuvalistan järjestyksessä, 5 × 3, 640 × 480. Numpy kuoren python3:ssa, ei `-I`. Viestit: PT local_8d8ebf72, JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KK local_d5f31591, LAV local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e.
+
+## LISÄYS 14.4x: OMISTAJAN PÄÄTÖS 14.46 (KK:n välittämä)
+Kala-allas ja kukkaruukku kelpaavat peliin. Väri pysyy; ruukun kaari korjattu mallit-v1b:ssä (vaihdettu, kuvalistassa). Omistaja näki da29a4288:n arkin, ei uutta e94d66f4b:n ruukkua. Ovimalli: omistaja hyväksyi kuvat, Lavastaja tilaa Tripolta; laatikko jää sijoituskokeisiin siihen asti. Muisti iPadilla JU:n vuorolla kuten kohta 2: **seuraava työ, pyydä vuoro JU:lta.** Esineiden ämpärivienti vasta PK:n vahvistuksella (`media-vienti-muuttaa-julkaistua`).
