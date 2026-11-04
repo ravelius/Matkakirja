@@ -491,7 +491,7 @@ Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitet
 
 ## LISÄYS 4.11. klo 09.14 (uusin; lue ensin): otto 6 sovitettu, KK:lla
 **PT 09.00:** ei uusia Codexin kortteli- tai materiaalitilauksia eikä kortteliarkin k-versioita ennen omistajan päätöstä (kysymys 08.58, KK tekee suunnitelman). Muu työ ennallaan.
-**Otto 6 kooste:** A/kooste6.py (A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104) → A/uusi-notre-dame-otto6.png, A/taysi-notre-dame-otto6.jpg, A/pari-notre-dame-otto6.jpg. Lähetetty KK:lle (vvi@vvi.fi-tilillä local_37f7c945-e1a0-4638-90b8-93c389a36fbe) viat lueteltuna. Ei pelissä. **Ei hiontaa ennen KK:n vastausta.**
+**Otto 6 kooste:** A/kooste6.py (A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104) → A/uusi-notre-dame-otto6.png, A/taysi-notre-dame-otto6.jpg, A/pari-notre-dame-otto6.jpg. Lähetetty KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a; local_37f7c945 ei löydy tästä sessiosta) viat lueteltuna. Ei pelissä. **Ei hiontaa ennen KK:n vastausta.**
 **Seuraavaksi KK:n jälkeen:** pelikuva isolta iPadilta kolmella zoomilla ja muisti. Peliin, Louvreen ja muihin nähtävyyksiin vasta sen jälkeen. Vanhat vaikutukset: lisäys 08.03.
 **Avoimet viat:** kirkon edustan itäinen silta puuttuu (jalat x 900 ja 925), etelärannan silta x 340 ei osu kadun päähän, katot eri väriä saarella ja pohjassa (pohja kuuluu VS:n arkkiin, odotuksella), katkaistuilta kortteleilta puuttuu reunaviiva.
 **Oppi:** veden tunnistus onnistuu otoksessa pienellä paikallisella hajonnalla ja värillä; pehmeä häivytys tarvitsee rajan ulkopuolelle saman sisällön, muuten alle jäänyt kuva vuotaa viivana.
