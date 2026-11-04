@@ -1,0 +1,1106 @@
+{
+  "checkedAt": "2026-11-04T14:48:55.242845+00:00",
+  "qaComplete": true,
+  "technicalPass": true,
+  "strictSourceQAPass": false,
+  "reason": "Taustat ovat peittäviä ja sinisiä mutta eivät täsmälleen yksivärisiä. Suuntien tyven paikoissa ja latvusten muodoissa on pieniä eroja; täsmällistä samaa 3D-geometriaa ei ole varmennettu.",
+  "sourceScope": "Kuvaehdokkaat arvioitavaksi; ei 3D-malleja.",
+  "groups": [
+    {
+      "tree": "puu-1-iso-pyorea",
+      "taskNumber": 2034,
+      "directionalImages": 4,
+      "generationCalls": 4,
+      "attemptsPerView": 1,
+      "heightSpreadPx": 2,
+      "baseYSpreadPx": 1,
+      "baseXSpreadPx": 5.0,
+      "strictBackgroundPass": false,
+      "allViewsOpaque": true
+    },
+    {
+      "tree": "puu-2-pieni-vaalea",
+      "taskNumber": 2035,
+      "directionalImages": 4,
+      "generationCalls": 4,
+      "attemptsPerView": 1,
+      "heightSpreadPx": 4,
+      "baseYSpreadPx": 2,
+      "baseXSpreadPx": 2.0,
+      "strictBackgroundPass": false,
+      "allViewsOpaque": true
+    },
+    {
+      "tree": "puu-3-kukkiva",
+      "taskNumber": 2036,
+      "directionalImages": 4,
+      "generationCalls": 4,
+      "attemptsPerView": 1,
+      "heightSpreadPx": 4,
+      "baseYSpreadPx": 2,
+      "baseXSpreadPx": 6.0,
+      "strictBackgroundPass": false,
+      "allViewsOpaque": true
+    },
+    {
+      "tree": "puu-4-kapea-tumma",
+      "taskNumber": 2037,
+      "directionalImages": 4,
+      "generationCalls": 4,
+      "attemptsPerView": 1,
+      "heightSpreadPx": 3,
+      "baseYSpreadPx": 1,
+      "baseXSpreadPx": 1.5,
+      "strictBackgroundPass": false,
+      "allViewsOpaque": true
+    }
+  ],
+  "files": [
+    {
+      "image": "puu-1-iso-pyorea-edesta",
+      "checkedAt": "2026-11-04T14:29:46.092796+00:00",
+      "sha256": "c5040d77c841be22cd922164a9e2e4ebae5ef63a41c7dfda3d1eae5bdddf59b4",
+      "bytes": 1478766,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        124,
+        177,
+        214
+      ],
+      "approximateForegroundBox": [
+        171,
+        89,
+        1078,
+        1151
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0d299f2f-78de-4ef5-8abb-255019fe46bf.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:52.734247+00:00",
+      "foregroundBox": [
+        171,
+        88,
+        1078,
+        1150
+      ],
+      "trunkBaseX": 617.5,
+      "trunkBaseY": 1149,
+      "heightPixels": 1062,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          117,
+          127
+        ],
+        [
+          172,
+          181
+        ],
+        [
+          211,
+          220
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.6773868198802405,
+        0.6470334196094625,
+        0.6725898620265632
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-1-iso-pyorea-oikealta",
+      "checkedAt": "2026-11-04T14:35:41.707895+00:00",
+      "sha256": "ad5e9ff3a5ffc7258cc3a752e603e76606121e1ae9fe1cb35fe8848bf72ac563",
+      "bytes": 1352462,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        126,
+        179,
+        213
+      ],
+      "approximateForegroundBox": [
+        280,
+        91,
+        974,
+        1150
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7bd17232-8d22-4368-96bd-b432492dc00a.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:52.849743+00:00",
+      "foregroundBox": [
+        279,
+        90,
+        974,
+        1150
+      ],
+      "trunkBaseX": 613.0,
+      "trunkBaseY": 1149,
+      "heightPixels": 1060,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          119,
+          129
+        ],
+        [
+          174,
+          184
+        ],
+        [
+          211,
+          220
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7952096415555326,
+        0.7992589484240689,
+        0.7998965349022563
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-1-iso-pyorea-takaa",
+      "checkedAt": "2026-11-04T14:40:36.341612+00:00",
+      "sha256": "7495a90b95abadc5f2c556616c569206fc247d45844552be6058455249c589f7",
+      "bytes": 1397447,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        120,
+        176,
+        214
+      ],
+      "approximateForegroundBox": [
+        187,
+        88,
+        1063,
+        1149
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ea95cd87-5f74-4995-a075-7f8a65a3f961.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:52.948908+00:00",
+      "foregroundBox": [
+        186,
+        87,
+        1063,
+        1149
+      ],
+      "trunkBaseX": 618.0,
+      "trunkBaseY": 1148,
+      "heightPixels": 1062,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          113,
+          124
+        ],
+        [
+          171,
+          181
+        ],
+        [
+          211,
+          221
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7248808401115592,
+        0.6731518345321391,
+        0.7069368851044001
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-1-iso-pyorea-vasemmalta",
+      "checkedAt": "2026-11-04T14:44:57.537790+00:00",
+      "sha256": "acae21506141a10ed8883bd4aa2a995ce63fb8bbdfaaf6a41518301c6db461d6",
+      "bytes": 1386516,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        122,
+        176,
+        212
+      ],
+      "approximateForegroundBox": [
+        256,
+        89,
+        997,
+        1150
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ec4ca9c9-913f-43d9-baf2-fa61c2afee3d.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.054486+00:00",
+      "foregroundBox": [
+        256,
+        88,
+        998,
+        1150
+      ],
+      "trunkBaseX": 615.0,
+      "trunkBaseY": 1149,
+      "heightPixels": 1062,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          115,
+          125
+        ],
+        [
+          172,
+          181
+        ],
+        [
+          210,
+          219
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.795944248106806,
+        0.7255924303629414,
+        0.7483919110815742
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-2-pieni-vaalea-edesta",
+      "checkedAt": "2026-11-04T14:32:48.505562+00:00",
+      "sha256": "ccc7ae21302d734855cc58ed0050a11741814864563ac0b8b1f4432570c229e9",
+      "bytes": 1320647,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        123,
+        174,
+        209
+      ],
+      "approximateForegroundBox": [
+        358,
+        421,
+        901,
+        1101
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2afccd08-ba71-4efb-af61-5711c9e05894.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.113519+00:00",
+      "foregroundBox": [
+        358,
+        420,
+        901,
+        1101
+      ],
+      "trunkBaseX": 622.5,
+      "trunkBaseY": 1100,
+      "heightPixels": 681,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          116,
+          126
+        ],
+        [
+          170,
+          180
+        ],
+        [
+          207,
+          217
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7570336677195386,
+        0.7484765777883533,
+        0.6922252729824294
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-2-pieni-vaalea-oikealta",
+      "checkedAt": "2026-11-04T14:35:41.884548+00:00",
+      "sha256": "e82034b8afff2328e01a2e7192564de9a8b8cae3c0b8261a632395f1dd1240a0",
+      "bytes": 1286673,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        124,
+        176,
+        211
+      ],
+      "approximateForegroundBox": [
+        397,
+        421,
+        851,
+        1099
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bfcb1de8-08b0-45cb-a0b6-6e3879212499.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.172949+00:00",
+      "foregroundBox": [
+        397,
+        421,
+        851,
+        1099
+      ],
+      "trunkBaseX": 624.5,
+      "trunkBaseY": 1098,
+      "heightPixels": 678,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          118,
+          128
+        ],
+        [
+          172,
+          182
+        ],
+        [
+          209,
+          219
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7067624823672615,
+        0.6946504474049969,
+        0.7289916036836338
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-2-pieni-vaalea-takaa",
+      "checkedAt": "2026-11-04T14:40:37.324954+00:00",
+      "sha256": "2a2573a924fe7b95970c1fa04177f22d66f452de1a3cc9f06b4c115cf23872f5",
+      "bytes": 1304118,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        123,
+        177,
+        211
+      ],
+      "approximateForegroundBox": [
+        354,
+        419,
+        894,
+        1101
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-eee5cde1-e0dd-41b7-be2f-fed9867cda50.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.261235+00:00",
+      "foregroundBox": [
+        353,
+        419,
+        894,
+        1101
+      ],
+      "trunkBaseX": 623.5,
+      "trunkBaseY": 1100,
+      "heightPixels": 682,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          118,
+          130
+        ],
+        [
+          174,
+          183
+        ],
+        [
+          210,
+          219
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.701891122226635,
+        0.6769592683571691,
+        0.6465519637534914
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-2-pieni-vaalea-vasemmalta",
+      "checkedAt": "2026-11-04T14:45:02.318114+00:00",
+      "sha256": "d864c406fbd31c4291d64166f7889c25d78acc121d48a15345a9bcb985e88084",
+      "bytes": 1273261,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        125,
+        175,
+        208
+      ],
+      "approximateForegroundBox": [
+        396,
+        422,
+        832,
+        1101
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-351bc15a-955a-477e-a42e-d6b7505f9f2f.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.364735+00:00",
+      "foregroundBox": [
+        395,
+        422,
+        832,
+        1101
+      ],
+      "trunkBaseX": 623.0,
+      "trunkBaseY": 1100,
+      "heightPixels": 679,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          120,
+          130
+        ],
+        [
+          172,
+          181
+        ],
+        [
+          207,
+          216
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.6796097252560974,
+        0.6539214536293463,
+        0.6662011700881275
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-3-kukkiva-edesta",
+      "checkedAt": "2026-11-04T14:32:48.534594+00:00",
+      "sha256": "4150a773be9af97e76923e86f0ae83680cd82db780a76433ae7b3c6532761945",
+      "bytes": 1428414,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        125,
+        175,
+        209
+      ],
+      "approximateForegroundBox": [
+        231,
+        220,
+        1019,
+        1121
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5e4e9f18-658e-4952-b0f8-8963df066491.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.437561+00:00",
+      "foregroundBox": [
+        231,
+        220,
+        1019,
+        1121
+      ],
+      "trunkBaseX": 622.0,
+      "trunkBaseY": 1120,
+      "heightPixels": 901,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          118,
+          128
+        ],
+        [
+          172,
+          180
+        ],
+        [
+          208,
+          217
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7680854557491801,
+        0.7176973769215022,
+        0.6732396025935882
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-3-kukkiva-oikealta",
+      "checkedAt": "2026-11-04T14:37:36.428259+00:00",
+      "sha256": "313fdbf4501b53a811a92c87e0c9f5012dacbea88c80026f2975bc2711f3de9f",
+      "bytes": 1352794,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        125,
+        177,
+        211
+      ],
+      "approximateForegroundBox": [
+        331,
+        218,
+        948,
+        1122
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9435aad3-5d48-47d4-8f6a-c4cb8c082eeb.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.538745+00:00",
+      "foregroundBox": [
+        331,
+        218,
+        949,
+        1122
+      ],
+      "trunkBaseX": 616.5,
+      "trunkBaseY": 1121,
+      "heightPixels": 904,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          120,
+          130
+        ],
+        [
+          172,
+          182
+        ],
+        [
+          208,
+          218
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7584598545817433,
+        0.6912944604189009,
+        0.6964206747994428
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-3-kukkiva-takaa",
+      "checkedAt": "2026-11-04T14:42:25.279419+00:00",
+      "sha256": "0030d1e940ca291038e89b814217c6b0674ef94ab5f9ce5bf49aee6f95dad3b6",
+      "bytes": 1407440,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        123,
+        176,
+        211
+      ],
+      "approximateForegroundBox": [
+        236,
+        220,
+        1001,
+        1120
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0d058b0d-0782-4a5e-ab19-34a5386c73fd.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.608789+00:00",
+      "foregroundBox": [
+        235,
+        220,
+        1002,
+        1120
+      ],
+      "trunkBaseX": 622.5,
+      "trunkBaseY": 1119,
+      "heightPixels": 900,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          118,
+          129
+        ],
+        [
+          171,
+          181
+        ],
+        [
+          209,
+          218
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7292284245384522,
+        0.6760326381665438,
+        0.7026348117699105
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-3-kukkiva-vasemmalta",
+      "checkedAt": "2026-11-04T14:47:09.753670+00:00",
+      "sha256": "c5651a9182189657652a4c8fa6bc1a6b542fac296394f44dc5e334edd4f633e9",
+      "bytes": 1346413,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        122,
+        175,
+        209
+      ],
+      "approximateForegroundBox": [
+        305,
+        222,
+        954,
+        1122
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ba04fe66-181c-4edf-b026-af8d59c3a6ba.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.654637+00:00",
+      "foregroundBox": [
+        304,
+        222,
+        954,
+        1122
+      ],
+      "trunkBaseX": 620.0,
+      "trunkBaseY": 1121,
+      "heightPixels": 900,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          116,
+          127
+        ],
+        [
+          170,
+          181
+        ],
+        [
+          206,
+          217
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7240150864857613,
+        0.7077220856633056,
+        0.7358892259563421
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-4-kapea-tumma-edesta",
+      "checkedAt": "2026-11-04T14:32:48.759501+00:00",
+      "sha256": "68b123d85c35207a5fd677dda369d730676d701b0307548794e6fbf08679c749",
+      "bytes": 1339626,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        122,
+        174,
+        210
+      ],
+      "approximateForegroundBox": [
+        379,
+        58,
+        865,
+        1196
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-96a418cd-db5c-4b19-8101-8976c4e0ecd4.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.724252+00:00",
+      "foregroundBox": [
+        379,
+        58,
+        866,
+        1195
+      ],
+      "trunkBaseX": 622.5,
+      "trunkBaseY": 1194,
+      "heightPixels": 1137,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          116,
+          125
+        ],
+        [
+          170,
+          179
+        ],
+        [
+          208,
+          217
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.6912689382983676,
+        0.6159066564991762,
+        0.6161563330093218
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-4-kapea-tumma-oikealta",
+      "checkedAt": "2026-11-04T14:37:36.627331+00:00",
+      "sha256": "3e9d17d4f53a75653eb62e01b266b22f5fd6ccd77b4b73b3da64c9af5249d99e",
+      "bytes": 1290948,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        124,
+        176,
+        211
+      ],
+      "approximateForegroundBox": [
+        439,
+        58,
+        837,
+        1196
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a3c05c7e-56c9-4290-82d7-e72b7dfb9c04.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.800924+00:00",
+      "foregroundBox": [
+        439,
+        57,
+        837,
+        1196
+      ],
+      "trunkBaseX": 621.5,
+      "trunkBaseY": 1195,
+      "heightPixels": 1139,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          115,
+          125
+        ],
+        [
+          170,
+          180
+        ],
+        [
+          208,
+          217
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.7395607959446907,
+        0.723840953533219,
+        0.7227851405351059
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-4-kapea-tumma-takaa",
+      "checkedAt": "2026-11-04T14:42:29.908030+00:00",
+      "sha256": "bee5fa3cca96ef7b25208db1aac2e200262950d870fe47e7d31e5e7bf7c9bb06",
+      "bytes": 1324895,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        123,
+        177,
+        212
+      ],
+      "approximateForegroundBox": [
+        388,
+        59,
+        866,
+        1195
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-341bf395-fab2-4a3c-bc4c-687055b780d7.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.876813+00:00",
+      "foregroundBox": [
+        387,
+        59,
+        867,
+        1195
+      ],
+      "trunkBaseX": 623.0,
+      "trunkBaseY": 1194,
+      "heightPixels": 1136,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          117,
+          128
+        ],
+        [
+          173,
+          182
+        ],
+        [
+          210,
+          219
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.6829408444518794,
+        0.6304907628112444,
+        0.6294271134998097
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    },
+    {
+      "image": "puu-4-kapea-tumma-vasemmalta",
+      "checkedAt": "2026-11-04T14:47:10.054096+00:00",
+      "sha256": "5352e7f7ae8d021dcace17e4a91cfdb42e61ef683815bb745298eadb64c8e448",
+      "bytes": 1314333,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "cornerColor": [
+        121,
+        173,
+        209
+      ],
+      "approximateForegroundBox": [
+        425,
+        58,
+        827,
+        1196
+      ],
+      "bboxMethod": "Luminance difference >20 from top-left background, diagnostic only; pale low-contrast regions can be excluded.",
+      "nativeBytesPreserved": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8a5beefc-8886-4c09-a403-ccf7b4a28301.png",
+      "visualReviewed": true,
+      "visualReviewedAt": "2026-11-04T14:48:53.919655+00:00",
+      "foregroundBox": [
+        425,
+        57,
+        827,
+        1195
+      ],
+      "trunkBaseX": 622.0,
+      "trunkBaseY": 1194,
+      "heightPixels": 1138,
+      "maskMethod": "Blue background identified by B-R>20 and B-G>10; mask used only for QA, never applied to native delivery images.",
+      "backgroundCornerRanges": [
+        [
+          115,
+          125
+        ],
+        [
+          171,
+          180
+        ],
+        [
+          207,
+          218
+        ]
+      ],
+      "backgroundCornerStdDev": [
+        0.6412877086231229,
+        0.637335834982709,
+        0.6708245319571841
+      ],
+      "backgroundExactlyUniform": false,
+      "completeTreeVisible": true,
+      "groundOrCastShadowVisible": false,
+      "thickTrunkAndSolidCrownMasses": true,
+      "viewDirectionVisualPlausibility": true,
+      "exact3DConsistencyCertified": false,
+      "visualNotes": "Sama tunnistettava puutyyppi ja tyyli, sivukuvat kapeammat; lehtimassojen ja haarojen tarkkaa kolmiulotteista vastaavuutta ei voida todentaa näistä generoiduista kuvista. Taustassa näkyy hienoa sävyvaihtelua/tekstuuria."
+    }
+  ],
+  "montage": {
+    "path": "kooste.png",
+    "size": [
+      5016,
+      1354
+    ],
+    "nativePixelScale": 1,
+    "baseY": 1200,
+    "sourceTranslationsY": [
+      51,
+      100,
+      80,
+      6
+    ],
+    "method": "Pyydetty neljän puun etukuvien kooste; kaikki kokonaiset natiivikanvaasit kopioitu sellaisinaan 1:1, vain sijoittelu yhteiselle tyvilinjalle. Ei värimuutoksia, maskeja, puiden rajausta tai skaalausta.",
+    "exactWorldScaleCertified": false
+  },
+  "ownerApproved": false,
+  "receiverApproved": false,
+  "modelsStarted": false,
+  "runtimeIntegrated": false,
+  "published": false
+}

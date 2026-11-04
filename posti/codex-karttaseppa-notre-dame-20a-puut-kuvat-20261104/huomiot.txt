@@ -1,0 +1,11 @@
+Notre-Dame nd20a — neljä puuta, kuvat omistajan arvioitavaksi
+
+16 alkuperäistä PNG-kuvaa: neljä puuta, jokaisesta edestä, oikealta, takaa ja vasemmalta. Kaikki 1254 × 1254 RGB ja peittäviä. Yksi ehdokas per pyydetty suunta; sisäänrakennetulla ImageGen-työkalulla 16 kutsua yhteensä, neljä per puun kuvasarja, ei uusintoja. Lähteen yhden oton rajaus toteutettiin yhtenä neljän suunnan ehdokassarjana per puu. Kaikki alkuperäistavut säilytetty.
+
+Koosteessa järjestys vasemmalta: iso pyöreä, pieni vaalea, kukkiva, kapea tumma. Kokonaiset etukuvat on asetettu rinnakkain natiivissa 1:1-pikselimittakaavassa yhteiselle tyvilinjalle. Kooste on tekninen vertailutaulu, ei uusi generointi; puita ei uudelleenmaalattu, rajattu eikä skaalattu. Tarkkaa metripohjaista mittakaavaa ei ole tilattu tai varmennettu.
+
+QA: kuvat vastaavat pyydettyjä neljää puutyyppiä, rungot ovat paksut ja lehvästöt yhtenäisiä maalattuja massoja. Ei maata, ruukkuja tai heittovarjoa. Kukkien yksityiskohdat ovat maalattua pintaa; noin 1000 kolmion mallikelpoisuus on suunnittelutavoite, ei testattu 3D-tulos.
+
+POIKKEAMAT: sininen tausta on peittävä ja puusta erottuva, mutta generaattori lisäsi siihen hienoa sävyvaihtelua/tekstuuria. Se ei täytä täsmälleen yhtenäisen taustan ehtoa. Kuvissa on pieniä tyven kohdistus- ja latvuksen muotoeroja; tarkkaa samaa kolmiulotteista rakennetta kaikissa suunnissa ei ole varmennettu. QA.json sisältää kuvakohtaiset mittaukset. Tiukka kokonais-QA ei ole PASS. Tämä on arviointitoimitus poikkeamineen, ei väite hyväksytyistä mallisyötteistä. Natiiveja ei korjattu osittain.
+
+Omistajan ja vastaanottajan hyväksyntä ovat avoinna. Tripoa ei ole käytetty, malleja ei ole tehty, peli-integraatiota tai julkaisua ei ole tehty. Mallit vaativat omistajan kuvahyväksynnän ja erillisen nd20b-tilauksen.

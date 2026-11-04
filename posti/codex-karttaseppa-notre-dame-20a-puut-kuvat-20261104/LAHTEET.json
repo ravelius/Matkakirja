@@ -1,0 +1,42 @@
+{
+  "orderCommit": "1301f43850894963c75cd3565637717dc5e78599",
+  "orderBlob": "655fff0f3c201c7311f5f340b85642457f568a55",
+  "sourceVerification": {
+    "checkedAt": "2026-11-04T14:27:43.943176+00:00",
+    "allVerified": true,
+    "allImagesViewed": true,
+    "files": [
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-puut-20261104/TILAUS-20a-puut.md",
+        "sha256": "55ce304d8e2ffcb13af4bdaef69a1d7142eda5ebc972e0ebfe4f3fe193aae21c",
+        "bytes": 1934
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-puut-20261104/_input-20a/omistajan-kuva.jpg",
+        "sha256": "453e7a5096b32a3fb0a56decd4a5b2ed4430a3e5f39294b11134a70863cb7738",
+        "bytes": 444956
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-puut-20261104/_input-20a/puut-rajaus-kirkon-vierella.png",
+        "sha256": "d1382be768e23ec2cb309bf082219407b1f0c481b257d01857beae7f80826962",
+        "bytes": 159715
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-puut-20261104/_input-20a/puut-rajaus-puutarha.png",
+        "sha256": "77c32933c83b92bdd597f839bb18b4b555810a5a8462c8375e67210049c06a87",
+        "bytes": 392719
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-puut-20261104/_input-20a/tyylimalli-isoisa-2029.png",
+        "sha256": "1b39a3e6f8a24eecbf6d4ddce644eb51a311ac7df4d7b6d2bd63dbe6d73e5d3c",
+        "bytes": 4321887
+      }
+    ]
+  },
+  "tool": "built-in image_gen",
+  "generationCalls": 16,
+  "oneCandidatePerRequestedView": true,
+  "retryCalls": 0,
+  "modelCalls": 0,
+  "rawSourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/notre-dame-20a-puut-2034-2037-20261104/originals"
+}
