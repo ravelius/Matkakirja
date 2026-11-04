@@ -44,3 +44,7 @@ Selvitettävä järjestyksessä: (1) ajo 2 (ee9ed51b0, ita-etela-03-a): jos runk
 ## LISÄYS 18.5x: ajo 2 ja kumoaa 18.4x:n, lue tämä ensin
 **18.4x:n päätelmä oli väärä; älä tee sen listaa.** Vika ON koerungossa d9cde0f50 ilman tarkastelua: `lokit/esikatselu-20261104-182602/ita-etela-02.png` (katso yläosa rajattuna): friisi ja kate kelluvat, läpi näkyy puita. ita-etela-03:n punainen näkyy myös ee9ed51b0:ssa (`lokit/tarkastelukuvat-ee9ed51b0-183043`), joten se ei todista runko-osaa: siinä on muu malli. ee9ed51b0 ita-etela-02-a rei'illä, 77194ed87 ehjä (`lokit/tarkastelukuvat-77194ed87-181133`). PT tietää (18.5x). Syy Lattian instansointi voimassa; kohta 1 pätee.
 Auki: ajo 4 TF 60bd5c356 (JU antaa kansion; katso ita-etela-02 rajattuna), sitten varma rivi PT:lle. Korjauksen muisti (variantit) ja valo mittaamatta, korjausta ei ole ajettu koerungolla.
+
+## LISÄYS 18.5x/2: PT: vika estää junan
+PT katsoi ita-etela-02.png täysikoossa ja vahvisti. Tilaus: korjaus omana committina koerungon päälle, ei ovia; sha JU:lle: sama kamera ennen | jälkeen, seinän valo ja muisti isolla iPadilla; **TF-ajon tulos riviksi PT:lle**.
+Tehty: **789f3046f** (`pelikoodari/muurin-runko-219`, d9cde0f50 + JuoksuLattia.shader; proton repossa ei etärepoa), pyydetty JU:lta. Odotetaan: JU:n kansiot (Mac 789f3046f, iPad, TF 60bd5c356). Katso kuvat itse; lähetä PT:lle: TF-tulos, ennen|jälkeen, muisti verrattuna koerunkoon (raja 4080). Muuta ei tehdä ennen tätä.
