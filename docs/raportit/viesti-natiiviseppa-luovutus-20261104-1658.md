@@ -35,3 +35,8 @@ Yhdistelmä tasainen-striimi-3 + maakuntarajat-katko ei ole tehty.
 - **Ei onnistu yhdellä säännöllä:** z- ja z+1-palan välissä jakso kaksinkertainen (10 / 20 px). Poisto vaatisi viivan omaksi kerrokseksi palan päälle. Kerrottu KK:lle.
 - **Odottaa:** VS ottaa committin samaan ajoon, kuvat KK:lle. Ei junaan ennen PT:n koerunkoa.
 - **JU:n r-fin d9cde0f50:** ei vika. Kerros näyttää pelaajan maan (Komennot.cs:1387), ja listasta puuttui `maakunta maa FIN`. Tasolta 10,5 ylöspäin palan viiva näkyy kaikissa maissa; ero kerrottu KK:lle.
+
+## LISÄYS 18.2x, 2 (PT ja KK; konteksti 35 %)
+- **KK:** b2101b95e kelpaa ajoon. Ei omaa kerrosta; KK arvioi jakson kuvista. Muiden maiden maakuntarajoihin ei kosketa, ennen kuin KK on kysynyt omistajalta tasojen 10,5–11,3 kuvien jälkeen.
+- **PT 18.1x:** "Jatka työtäsi: p-z15:n ero ja FIN-pari." Luovutuksissa ei ole tällaista tehtävää, enkä tunnista sitä; kysytty PT:ltä. Älä arvaa: odota vastausta.
+- **Kun VS:n kuvat tulevat:** mittaa tummuus mittaa.py:llä (kohdat vaihtuvat skriptin mukaan) ja katso täysikoossa.
