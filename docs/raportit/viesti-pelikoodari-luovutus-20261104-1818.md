@@ -48,3 +48,7 @@ Auki: ajo 4 TF 60bd5c356 (JU antaa kansion; katso ita-etela-02 rajattuna), sitte
 ## LISÄYS 18.5x/2: PT: vika estää junan
 PT katsoi ita-etela-02.png täysikoossa ja vahvisti. Tilaus: korjaus omana committina koerungon päälle, ei ovia; sha JU:lle: sama kamera ennen | jälkeen, seinän valo ja muisti isolla iPadilla; **TF-ajon tulos riviksi PT:lle**.
 Tehty: **789f3046f** (`pelikoodari/muurin-runko-219`, d9cde0f50 + JuoksuLattia.shader; proton repossa ei etärepoa), pyydetty JU:lta. Odotetaan: JU:n kansiot (Mac 789f3046f, iPad, TF 60bd5c356). Katso kuvat itse; lähetä PT:lle: TF-tulos, ennen|jälkeen, muisti verrattuna koerunkoon (raja 4080). Muuta ei tehdä ennen tätä.
+
+## LISÄYS 19.0x: ajo 4 katsottu
+TF 60bd5c356 (juna 217, Mac, `lokit/esikatselu-20261104-183457`, ita-etela-02): sama aukko, puut ja piha läpi. Rivi PT:lle lähetetty; vika ei ole koerungon regressio. Katsottu vain tämä kuva rajattuna.
+Odotetaan JU:lta: Mac 789f3046f (vertaa `lokit/esikatselu-20261104-182602`) ja iPad `lokit/pelikoodari-muisti-lahtotaso-<sha>`, `lokit/pelikoodari-seina-<sha>` molemmilla d9cde0f50 ja 789f3046f (JU:n kuvat sisältävät UI:n; hyväksyin). Tulos ennen | jälkeen, muisti ja seinän valo PT:lle (raja 4080).
