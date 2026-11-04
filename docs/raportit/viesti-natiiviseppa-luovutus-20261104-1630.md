@@ -23,3 +23,9 @@ Sama mekanismi kuin avoin kallistusvika, mutta veden väriloikka on oma syynsä:
 
 ## Huom
 Mac-parit ajettiin k17:n (d64f74a56) Esikatselu.cs:llä (JU). Diffissä ei ruutu- tai pistekerroinrivejä (grep), joten 640×480-päätelmä pysyy. Yhdistelmä tasainen-striimi-3 + maakuntarajat-katko ei ole tehty.
+
+## LISÄYS PT ja KK 16.3x (SITOO; ohittaa Työ 2:n uusintaehdotuksen)
+- **Ei uusintaa, ei uusia ajoja kallistuksesta.** Portti odottaa, haara f0e256d9b säilyy, ei junaan. KK päättää VS:n iPad-parin jälkeen.
+- **Kameran syy selvitetty ja kerrottu PT:lle:** fyysinen kosketus iPadiin noin 16.13.47–16.15.40 (päätelty; tulos.md:n loppu). Riski: kortin sulkeutuminen alle 600 s:ssa saapumisesta ajaa kameran saapumisnäkymään.
+- **VS:lle kerrottu** tulos.md:n loppu, ettei reunatyötä tehdä kahdesti.
+- **Maakuntarajat ennallaan:** parit PT:lle JU:n iPad-ajon jälkeen.
