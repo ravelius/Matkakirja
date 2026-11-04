@@ -22,3 +22,6 @@ Syy: konteksti 28 %, pehmeä raja (Raamattu 7.37). Edellinen: viesti-valoseppa-l
 - Vertailussa ei ole laitekuvia muilta alueilta: se on pohja vs. OSM, ei pohja vs. laite. Sano tämä tuloksessa.
 - Vesimaski on väriraja: Alpeilla kallio voi näkyä vetenä. Tarkista pari-kuvista ennen lukujen välittämistä.
 - Asemataulua ei päivitetty: kokeet eivät ole junassa.
+
+## Lisäys 1 (JU 22.44)
+Kohdan 4 koe: suomi-syy 2d8ec025c on ketjussa (pid 86361, käännös alkoi 22.42). iPad-järjestys: TF-koe, viivat 1b/2b, NS astc, PK-sarja, suomi. Skripti luetaan ajohetkellä, joten s-t113-valopois tulee mukaan (7 kuvaa). Kansio lokit/julkaisija-suomi-syy-2d8ec025c. Älä pyydä uudelleen.
