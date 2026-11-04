@@ -64,3 +64,6 @@ Lisäksi: `sk-muisti-z10-k29.txt`:n tulos JU:lta, sitten parit p-z9 | p-z9-pois 
 ## LISÄYS 6 (JU 14.2x: k29 EI läpäissyt)
 e774647ee, 29,0°, kerroin 4: VIKA 4091 Mt 14.26.50, muistivaroitus, ei kaatumista (lokit/julkaisija-muisti-z10k29-e774647ee; JU:n rivi, lokia en lukenut). p-z10-90 vanha, -pois-kuvat puuttuvat. k45 ei ajeta, PT päättää.
 PT:n sääntö: k29:n ylitys → rajaa kulmaa alemmas, ei selitetä pois. ENSIN tämä: laske SiirtymaKallistusRaja, ja mittaa kulma JU:lla (arvoa ei tiedetä: 0° = 3756 Mt, 29° yli rajan). Hystereesi skaalattava samalla. Sitten sama muistiehto ja -pois-kuvat alhaalla, koska VIKA tyhjentää jonon: ota ennen-kuvat ylhäältä (0°) ja `maasto siirtyma pois` samassa ajossa.
+
+## LISÄYS 7 (PT, tarkentaa LISÄYS 6:n)
+JU mittaa e774647ee:llä kulmat 15 ja 7 tai 22. Uusi raja vasta niistä: lukua ei arvata, raja varalla alimman ylittävän kulman alle. Kuva rajan kulmalta täysikoossa (Z9/Z10-neliöt, pelaajan menetys). Sitten LISÄYS 5:n kolme selvitystä.
