@@ -54,3 +54,6 @@ Protossa ei ole origin-etäpäätä (vain natiivi-backup); haarat näkyvät kaik
 4. Haarukoi C1:n syy, jos PT pyytää.
 
 **Levy:** vanhat nui-*/app-kopiot siirretty T7:lle (/Volumes/T7 4TB/Claude-arkisto/nui-appit-20261104, 6,3 Gt, JU:n pyynnöstä). Kahdeksan puhdasta, rungossa olevaa omaa worktreetä poistettu (1437, animaatiot2, elava-kartta, halli, karttaui-porras, keisari, keisari-nimi, kiinni; haarat tallella). Raja 25 Gt.
+
+## LISÄYS 3 (PT 15.0x): C1:n syy kirjattu, ei haarukointia
+Syy (todennäköinen, ajolla todistamatta): 693cf437f (3.11. 15.47, Saapumisesitys.cs) vei C1–C4:n pois matkakirjakortista, joten kortti ei ilmeisesti enää pidä "kortti auki" -estettä esittelyn ajan. "Kerronta ohi" on vain trailerin puheen loppu. PT: haarukointia ei ajeta (jonon kohta 4 pois); jos 9d2b17f31:n todistusajossa C1–C4 pysyvät kaupungissa, asia on selvä.
