@@ -358,3 +358,6 @@ Kansio /Users/Shared/Claude/wt/proto-karttaseppa-ruutu-218 on nyt haarassa **kar
 
 ## LISÄYS 4.11. klo 05.46 (uusin; lue ensin): Plantes v5 korvaa v4:n
 **8dee95d57** (karttaseppa/pariisi-nd-kiila, 23cf37ac0:n päällä): KK 05.45: kokeeksi seuraavaan iPad-ajoon, ei lopullinen, ei junaan. Käytävät 248/207/163 → 244/214/170 (2029: 244/215/171), kuva puutarha-jardin-des-plantes-v5.png 340ed6948198, laite-kuvat.txt v5. Rosoinen reuna ja uusi otto päätetään pelikuvasta. Codexille kuitattu (kokeeseen, ei hyväksytty). JU:lta kysytty, ehtiikö yhd5-ajoon; ellei, seuraavaan. Tasankoketjun Monitor käynnissä.
+
+## LISÄYS 4.11. klo 05.47 (uusin; lue ensin): v5 yhd5-ajossa
+JU: yhd5-ajon ketju on nyt **8dee95d57**, kansio **julkaisija-yhd5-iso-8dee95d57** (korvaa kansion julkaisija-yhd5-iso-0891b0f1e), 28/28 kuvaa. Pelikuvista katso myös Plantes v5:n reuna ja käytävät; rosoisuus ja uusi otto päätetään niistä. JU lähettää rivin, kun ajettu.
