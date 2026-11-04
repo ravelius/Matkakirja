@@ -31,3 +31,6 @@ Vuoro aina JU:lta. Skripti `zsh .../tyokalut/esikatselu.sh`; Kartta-testit `sh K
 ## KK:n lista, kohdat 2–4 (-0129): aloittamatta
 ## Avoimet häivytyksessä
 Kaukaa saapuessa kerroksen kytkeytyminen (120 km) ei testattu liikkeessä. Pystyreunaa muilla näyttöko'oilla ei katsottu.
+
+## LISÄYS 02.5x (KS)
+karttaseppa/pariisi-nimet-220 kärki nyt 932078810 (korvaa 498ce79dd:n): 0,21:n nimikoko, taso paikallaan hystereesillä 0, liikkeessä 0,12. Ajamatta; f5c1f14b0-ajossa ei näy, joten r-0-21 / paluu -kuvien nimiero EI kerro tästä. Tie-ero on NS:n.
