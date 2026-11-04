@@ -17,3 +17,6 @@ Syy: konteksti 25 % (pehmeä raja, Raamattu 7.37). Edellinen: viesti-valoseppa-l
 
 ## Työkalut
 k39/aja.zsh <wt> <arkki> <ulos> <z> <alue> (kirjoittaa pinnat-kopion). k41/aja.zsh <wt> <ulos> [z] koko z13. k38/aja.zsh paikallinen z15. k42/parit.py, k42/kadut.py (katupituudet), k41/vesi.py (water-renkaat). Alueet: z17 66384,45091,66391,45098; z16 33192,22545,33195,22549; z15 16596,11272,16597,11274; z14 8298,5636,8298,5637. Mittakaavat 256 px/pala: z17 0,79, z16 1,57, z15 3,14, z14 6,3 m/px.
+
+## LISÄYS 06.32 (SITOO, ennen kohtaa 1; PT:n viesti tuli luovutuksen jälkeen, ei tehty)
+**PT: KK:n "VS: reuna k41" (KORJAUSLISTA, KK 06.26 ja 06.28):** k41 seuraavaan iPad-yhdistelmään, NS 8d66b5865 jää pois. **Tee ensin läikkä yhdellä säädöllä haaraan pariisi-k41 (wt on nyt haarassa k43-koe, vaihda), sha PT:lle.** Läikkä: länsireunan vihreä alue (k41/pari3-z13.jpg alakuva, x noin 530–610, y noin 1700–1760) häipyy oliivina joen taakse; esim. puistot häipyvät vyössä taloja nopeammin, tai raja kulkee alueen ohi. Ei omaa kierrosta. Lisäpalat käyvät, jos muistihuippu ≥ 300 Mt rajan alla eikä vierityksen ruutuaika huonone reunalla; muuten 1 200 / 450 m. Kuvat 0,13, 0,08 ja 0,05 (länsiraja) täysikoossa. Pohjoisreunan nauha on NS:n rivi 168. Portaat vasta tämän jälkeen, k43 uudesta k41:stä.
