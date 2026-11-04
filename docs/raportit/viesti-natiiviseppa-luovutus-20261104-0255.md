@@ -61,3 +61,13 @@ karttaseppa/pariisi-nimet-220 kärki nyt 932078810 (korvaa 498ce79dd:n): 0,21:n 
 
 ## LISÄYS 04.16 (PT: pinnan jono)
 ff97c7f8c: pinta Pallo.mat 2000, läpinäkymätön, joten puutarhat 2994 piirtyvät sen päälle (luettu tiedostoista, ei ajettu). Piirros 3050 on koodin kommentin mukaan pois koealueella; Karttataivas 3050 vain usvarajan yläpuolella. Varmistus JU:n e-0-13:sta. KS: tumma ruudukko Champ de Marsilla on pensasaidat, ei vika.
+
+## LISÄYS 05.01 (PT 05.03, KK 05.01; KORJAUSLISTA osio yhd2; seuraava kierros, ei aamun kuvaan)
+**yhd2 a6c11c1d2 hyväksytty aamun varmaksi kuvaksi; ei junaan, pinta ei hyväksytty.** Vieritysmittaus edelleen JU:n vuorolla, iPad pidossa Pariisille.
+**e-0-13: häivytys suora ylhäällä ja alhaalla, ylhäällä myös kova rivi noin 168; mittarina omistajan "vinjetoiden"** (lokit/julkaisija-yhd2-iso-a6c11c1d2/k-e-0-13.png). KK: lopulliseen ei näkyvää rajaa; sama perhe kuin pystysaumat 2,4609 ja 2,2415.
+- Suoruuden syy koodissa: ElavaKoealue.cs:144–148, etäisyys suorakaiteesta (ElavaPariisi.cs:21, 48,815–48,903 / 2,223–2,471), ReunaM 1 200 m. Häivytys on siksi suora kaikilla sivuilla. Laskettu: pohjoisvyö y noin 118–290 (6,98 m/px, tasainen kuva).
+- Rivi 168: reunaenergia 5,5 (y 152) → 10,8 (160) → 17,9 (168), sitten 14–17. Lat noin 48,9107; ei z11-, z12- eikä z13-rivi (48,9225, 48,8936). SYY AUKI. Alareuna: 30 (y 1732) → 9 (y 1820), ei hyppyä.
+- Pystysaumat yhd2:ssa ennallaan: x 2563 suhde 2,65–3,02, x 260 0,35–0,49.
+- KK 02.52: muoto ennen leveyttä, hidas aaltelu reunaan poistaa suoran linjan. Länsiraja ja ReunaM on sovittu VS:lle: sovi VS:n kanssa ennen kuin koskee ElavaKoealueeseen.
+**Puutarhat ja nimet:** yhd2:ssa puutarha katkaisee yhä Eiffel-tornin, Hôtel des Invaliden ja suurmoskeijan nimet, koska ajo on a6c11c1d2 ilman ff97c7f8c:tä. ff97c7f8c on näkemättä, KK tarkistaa yhd3:sta myös Luxembourgin palatsin ja Musée du Luxembourgin.
+**KK yhd2/1 (KS + NS):** puut häviävät laajoissa zoomeissa (täysinä 0,038, eivät 0,05:llä); tavoite 2029:n ilme, tapa ja kulu tekijöiltä.
