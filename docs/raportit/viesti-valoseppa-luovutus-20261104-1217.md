@@ -52,3 +52,7 @@ Wt k30 on striimi-vari-haarassa; vaihda striimi-vesi-haaraan kohtaa 1 varten ja 
 
 ## LISÄYS 6 (PT)
 Läiskät: ensimmäinen pari terävästä reunasta, ei poistosta. KK:n moite on sumeus, ja alueet ovat oikeaa sisältöä; poisto vain, jos KK sitä parin jälkeen pyytää. Korvaa LISÄYS 5:n kysymyksen.
+
+## LISÄYS 7: muistikorjaus EI ole todistettu
+JU:n sk-muisti-z10 7f64cd657:lla (huippu 3702 Mt, lokit/julkaisija-muisti-z10-7f64cd657) oli ylhäältä katsova: lokissa "kerroin 4", ei kallistusta. Se ei toistanut kaatumista eikä käyttänyt korjauksen haaraa; skriptini virhe. Uusi skripti striimi/sk-muisti-z10-kallistus.txt (lokista "kerroin N"). Sama rajoitus koskee c4a5bfafb-ajoa 13.04.
+p-z10: katkonaiset tummat kulmikkaat viivat myös otsikon yli (näkyvät jo kaatuneen ajon p-z9:ssä) ja suorakulmaiset laikut (tarkkuus vaihtuu palan rajalla). Syy mittaamatta; c4a5bfafb:n p-z10 kertoo, ovatko ne striimi-varista.
