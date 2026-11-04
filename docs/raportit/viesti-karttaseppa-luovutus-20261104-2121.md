@@ -5,6 +5,8 @@ Syy: konteksti 25 % (7.37). Korvaa -2016:n jonon; sen "Tehty"- ja "Opit"-kohdat 
 **Omistaja 21.49: "Sininen ei saa olla noin voimakas, jotta sopii karttaan".** KK: yhä selvästi sininen ja tunnistettavin asia, mutta samassa vaimeassa kartassa kuin kivi ja katto; mittari G:n 128/168/194; lopullinen arvio kartalla kirkon valossa, ei harmaalla pohjalla. Jos Tripo on käynnissä, älä aja uutta vain tämän takia: vaimenna väri mallin tekstuurista, jos se onnistuu ehjänä. **Pelikuva KK:lle ennen omistajaa.**
 Viety 21d:hen (posti karttaseppa-codex-kuvat-louvre-21d-sininen). Tarkista viistokuvan sininen tätä vasten. Tripo ei ole aloittanut.
 
+**KK 21.5x:** yksi viistokuva kelpaa, mutta Tripo arvaa taakse jäävät sivut. **Vertaa valmista mallia neljästä suunnasta julkisivukuviin ennen KK:ta ja kerro, jos jokin sivu poikkeaa. Pelikuvat neljästä suunnasta.**
+
 ## LISÄYS 21.5x: TRIPO ODOTTAA VIISTOKUVAA (uusin, lue ensin)
 Tripo c1bf48c07: monikuvasyötössä vain etu, vasen, oikea ja taka, yläkuvalle ei paikkaa; pyramidit ja piha eivät näy julkisivuissa. Ottoja 0. Hyväksyin suosituksen: malli yhdestä viistokuvasta (tekninen, ei omistajan päätös; KK:ta ei tarvita, koska muoto ei muutu).
 - **21d tilattu Kuvat-sessiolta** (C/pariisi-louvre-20261104/TILAUS-21d-viisto.md, `_review-viisto-21d/viisto.png`): keskipaviljongit keskellä, kaikki kolme sinistä pyramidia kokonaan näkyvissä, avoin piha.
