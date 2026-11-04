@@ -16,3 +16,6 @@ Python, jossa numpy ja PIL: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tuli
 
 ## Työ 2: muistijarrun kallistusajo (odottaa PT:n sanaa)
 Korjaus efe85dda7 (natiiviseppa/tasainen-striimi-2, etähaara ajan tasalla). Skripti _tyo/natiiviseppa/striimi-sauma/sk-tasainen-kallistus.txt: 12 kuvaa, 0° päällä ja pois, 15° ja 45° päällä. PT: VS:n 484adb22f on todistuksessa, PT kertoo, kun se on läpi. Rivi JU:lle vasta PT:n sanalla. Mitta: reunat.py <kansio> (0°-kuvat), muisti-kuvissa.py <kansio> k; kallistetut täysikoossa silmin. Kallistettu sauma on yhä avoin vika, portti ei korjaa sitä. Yhdistelmä tasainen-striimi-2 + maakuntarajat-katko ei ole tehty; tiedostot eivät mene päällekkäin (Laattapalvelin ei kummassakaan haarassa samalla rivillä: ei tarkistettu merge-treellä).
+
+## LISÄYS (PT, sitoo; ohittaa kohdan Työ 2 rungon ja odotuksen)
+**484adb22f hyväksytty. Runko nyt f0e256d9b (natiiviseppa/tasainen-striimi-3), korvaa efe85dda7:n.** sk-tasainen-kallistus.txt on JU:n iPad-jonossa; sha kerrottu PT:lle ja JU:lle. Kun kuvat tulevat: katso ja mittaa kohdan Työ 2 mukaan, rivi PT:lle. Ristiriitaa VS:n 20°/15°-rajaan ei ole (tulos.md:n loppu). Työpuu on takaisin haarassa maakuntarajat-katko.
