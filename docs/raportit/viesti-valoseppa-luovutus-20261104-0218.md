@@ -2,6 +2,10 @@
 
 Syy: konteksti 32 %, kova raja 35 %. Edellinen: viesti-valoseppa-luovutus-20261104-0150.md (työkalut). Loki: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md.
 
+## ENSIN: TAKARAJA 03.30 (PT 02.1x, ohittaa muun järjestyksen ja aloituksen "viimeinen aloitus 04.00" -kohdan)
+Viimeistään 03.30 JU:lle yhdistelmä-SHA: paras versio siihen mennessä (k26 057520875, jos parempi kuin k25 7967cf01c; k26 on paras oma arvioni) + NS:n häivytys 3332c8e15, sekä sk (mukana k-laaja 0,08). Yhdistä itse omaan koehaaraan, ratkaise Versio-törmäys uudella versiolla. Ei junaan. Rivi PT:lle ja JU:lle (id:t osoitekirjasta).
+Lisäksi KK 02.12 k26:een: pohjan puistot liian vihreitä (190/180/125; 2029 noin 196/170/106 seitsemässä puistossa). Ei yleistä vihreää. Lista KORJAUSLISTA.md, kaksi viimeistä osiota; EN ole lukenut niitä. Tee ennen 03.30, jos ehtii, muuten yhdistelmä ilman.
+
 ## Tila
 - **k26 = 057520875** (linssiseppa2/pariisi-k17, natiivi-backup, wt /Users/Shared/Claude/wt/proto-linssiseppa2-koko17, p26, 611/611). Lue ensin _tyo/linssiseppa2/pariisi-tyyli/k26/TULOS.md. Parit k26/pari-a-z13.jpg, pari-a-z15.jpg, pari-z17.jpg, pari-gdn.jpg. Ei laitteella, ei Unityssä. PT:llä; KK:n kanta odottaa.
 - KK:n lista: lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md, osio k25 (ja mahdollinen uudempi). Kohta 8 pyöreys: ei vielä.
