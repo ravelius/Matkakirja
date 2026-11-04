@@ -38,3 +38,10 @@ Ennallaan -1404:stä: Karsi yhdistelmään kun tehdään (sk-karsi-koe-2, KS); N
 - vs-muisti-z10k60:n ensimmäinen argumentti on odotettava pid, joten ketjun voi virittää valmiiksi. Jos edellinen kaatuu käynnistykseen, seuraaja ohittaa sen: aja kaatunut uudelleen.
 - `kuvaa n/n` ei kerro sisällöstä: vertaa tiivisteet parin kesken. Saman tiivisteen pari tarkoittaa, ettei vertailu näytä mitään.
 - Laitekansiot: 22 siirretty T7:lle (T/laite-t7.zsh, proto-lokit-arkisto); 693cf437f ja jonon rungot säilytettävä.
+
+## LISÄYS 17.3x (korvaa KÄYNNISSÄ-osan ja jonon järjestyksen; tarkista T/jono-20261103-ilta.txt)
+- iPadilla sk-rajat-tasot 484adb22f (pid 35381). L1 + simut: NUI 63383ba6e, rivi kun vapaa.
+- 974f95213-koonti oli SEKOITUS (oma d9c-yritys 17.17 vaihtoi unity67:n checkoutin kesken): siirretty lokit/julkaisija-laite-218-974f95213-SEKOITUS, ei ajettu. Käännösjärjestys: T/kaanna-vapaa.zsh d9cde0f50 → T/kaanna-974-perassa.zsh. Jos nollaus katkaisee, käynnistä järjestyksessä. Tarkista aina T/kaanna-<sha>.log:n KÄÄNNETTY-rivin sha ennen ajoa.
+- iPad-järjestys: rajat-tasot → valmiista ensin k60 + k45 d9cde0f50 tai PK 974f95213. k45:n skenaario on T/sk-striimi-k45-rajat.txt (PT: lisänä r-fra-z10, r-fin-z10, 19 kuvaa; katso rajat itse ja anna kuvat NS:lle vertailuun). PK:n tulos PK + PT.
+- Terassi-v1 (LAV, SHA 6bc8ca34dd4f): erillinen haara d9cde0f50:n päälle vasta k60/k45:n jälkeen, ei junaan, ei ämpäriin; ensin paikallinen file://-juuri, vienti uutena kansioversiona vasta PK:n vahvistuksella (PT).
+- PK nollautuu ja tekee KK:n 17.24 ovikorjaukset; pyytää uuden vuoron. VS ND-valo v1–v4 valmiit, sama POIKKEUS ArgumentOutOfRangeException ui sulje -rivin jälkeen joka ajossa (VS tietää v3:een asti).
