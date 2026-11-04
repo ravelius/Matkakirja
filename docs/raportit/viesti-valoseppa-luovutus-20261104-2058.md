@@ -18,3 +18,13 @@ Syy: konteksti 30 % (Raamattu 7.37). Edellinen: viesti-valoseppa-luovutus-202611
 - Oma virhe tällä vuorolla: väitin KK:lle, että kallistettuna ollaan aina pois-tilassa. Totta vain yli 20°:ssa. Varjo tulee voimaan viiveellä (loki rivit 4056 ja 5900).
 - Väite "en näe" vain täysikoosta tai rajauksesta, ja TULOS.md kertoo, missä koossa mikin kuva katsottiin.
 - SendMessage-raja täyttyi klo 20.57; KK:n viesti meni mcp__ccd_session_mgmt__send_messagella (Raamattu 12.20).
+
+## LISÄYS 1, RATKAISEE KOHDAN 3 (KK 4.11. 21.0x; tekemättä, koska luovutus on jo tehty)
+KK: suomi ensin, pois-suositus kelpaa ja menee omistajalle. ND v4 on jo näytetty, ei uudelleen. 19°:n uusintaa ei tarvita.
+Järjestys, KK sanatarkasti lyhennettynä:
+1. SUOMI: mittaa ensin syy (lopputila vai aineisto). Tavoite: järvi ei katkea suoraan reunaan, tarkka suorakulmio ei erotu, haamulaikut poissa, fin-t110 vähintään yhtä tarkka kuin kauempi fin-t105.
+2. VALTIONRAJA: viiva näkyy myös tummassa rinnevarjossa (ranska-italia, Alpit). Tarkista maat aineistosta.
+3. ALPIT: lähes mustat varjoalat vaaleammiksi, pinnanmuodot eivät saa kadota.
+4. Tasojen rajat l-z12 ja h-z13-k45 sen jälkeen.
+Muisti 4006 Mt on lähellä rajaa: ilmoita, jos korjaus nostaa sitä. Macin kuva ei todista laattoja: todistus isolta iPadilta JU:n vuorolla. Kuvat KK:lle.
+Edelleen ensin: SEURAAVAKSI kohdat 1 ja 2 (17 kuvaa, offline2). Kohta 4 (ND-pohjan laikku) KK:n listan jälkeen, ellei PT sano muuta; kysy PT:ltä, jos järjestys vaikuttaa.
