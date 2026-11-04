@@ -38,3 +38,5 @@ Korvaa -0719:n, paitsi sen "Muistiinpanot". Syy: pehmeä raja 26 % (7.37). Ei om
 ## Lisäys: PT 07.3x (LUE, ei toisteta)
 - Aukko on junan este. Tutki syy ensin. Kun johtolanka pitää, kerro samalla rivillä PT:lle, voiko sama näkyä julkaistussa 217:ssä. 217:n koodilla ajettava `7ddd353e8 tf217` on jo pyydetty (kopiot vapautetaan).
 - **Älä korjaa pitämällä kaikkia kopioita muistissa:** raja 4080 Mt koskee rungon todistusta. Pelkän maan täytteen kopion pitäminen (3450 kolmiota) ei ole tämä, mutta kerro se PT:lle ja mittaa muisti, jos korjaus on se.
+- **PT 07.3x:** järjestys: 3 rajausajoa ensin. Rajausten jälkeen rivi PT:lle: mitkä junan aiemmat todisteet (muisti ja kuvat) nojaavat `kopiot 1`:een, koska ne eivät silloin kuvaa oikeaa peliä. PT oikaisee KK:lle "musta on uusi" -väitteen.
+- **JU 07.3x:** 3 ajoa ketjussa heti eec900eb3:n jälkeen, ennen 32100a96f:ää; MUSTA AJETTU -rivit tulevat tänne. Laitekuvan tilaus odottaa rajausta.
