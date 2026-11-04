@@ -53,3 +53,10 @@ Ehdot 1 ja 2 täyttyvät (omasta lokista): 53,3° / 54,0° / 54,0°, ei liikeval
 Ehto 3 osittain: p-z10-90 alaosa täysikoossa ja p-z9:n alaosan keskiosa täysikoossa: ei reikiä, mustaa eikä neliöitä. p-z10-90 yläosa puolikoossa: ei niitä. p-z10 ja muu p-z9 katsomatta.
 Uutta: violetteja pisteitä taivaalla horisontin yläpuolella (p-z10-90 yläosa). Samoja pisteitä näkyy myös maassa. Syy mittaamatta, ei tiedetä, liittyykö kallistukseen 54° vai tähän muutokseen. Tummat katkoviivat yhä näkyvät; ne ovat myös c4a:ssa.
 Vertailu ennen | jälkeen odottaa k29:ää (p-z9-pois, p-z10-pois). Korjausta ei raportoida todistetuksi ennen k29:ää ja k45:tä.
+
+## LISÄYS 5 (PT, ENSIMMÄINEN TYÖ nollauksen jälkeen; ei korjausta ennen rivejä)
+Hyväksyntä odottaa k29:ää ja k45:tä. Kuvat lokit/julkaisija-muisti-z10k60-e774647ee. Rivi PT:lle kustakin:
+1. Katso p-z9, p-z10, p-z10-90 kokonaan täysikoossa (rajauksina): neliöt, reiät, musta. PT ei nähnyt neliöitä p-z10:ssä puolikoossa. LISÄYS 4 kattaa vain osan.
+2. Mustat katkonaiset murtoviivat: näytä lähde. Onko "karkeat maakuntarajat" totta (oletus, ei todistettu); vertaa kuvaan ilman striimiä (esim. elävä kartta pois samassa näkymässä, JU-vuoro; aiempi kuva ennen e16:ta käy, jos sama kulma ja taso).
+3. Violetit pisteet taivaalla: mitä ne ovat (kaupunkimerkit?), kuka omistaa korjauksen (docs/vastuukartta.md). Lähtökohta: etsi 3D-merkit, jotka eivät katoa horisontin taakse. Näkyvät myös maassa, esim. p-z9 alaosa.
+Lisäksi: `sk-muisti-z10-k29.txt`:n tulos JU:lta, sitten parit p-z9 | p-z9-pois ja p-z10 | p-z10-pois täysikoossa samalla rajauksella; neliöt näkyvät → kuvapolku PT:lle ennen hyväksyntää.
