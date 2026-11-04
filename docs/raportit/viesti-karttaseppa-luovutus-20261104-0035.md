@@ -327,3 +327,8 @@ Täydet polut: P = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-puut-2
 - **PT kuittasi add5d4e21:n yhd4:ään** (VS yhdistää, JU ajaa `nimet`-komennolla). Kuvat PT:ltä.
 - **Plantes v3 on KS:n koodimuokkaus** (kerrottu PT:lle). Tilaus 15m 73bcf5cd5, kansio /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nahtavyydet-20261103/puutarha-jardin-des-plantes-v3/. Toimituksen tullessa: uusi kuvaversio v4 (VERSIO + KLOONI_ALUE pois puutarha-sovitus.py:stä, D-polku -v3:een), kerros.py, nimipeite.py, pari PT:lle. Vahti ei kuuntele tätä kansiota, jos sen polkua ei lisätä.
 - **Postivahti 05.2x:** nollaus vasta 33–35 %:n lähellä; jatka töitä.
+
+## LISÄYS 4.11. klo 05.31 (uusin; lue ensin): Sacré-Cœur k8 tehty, korvaa 05.27:n "aloittamatta"
+- **a382b7a9e** (karttaseppa/pariisi-nimet-yhd3, add5d4e21:n päällä; kääntämättä, ei ajettu; sha PT:llä): /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/sacre-coeur-erillis.py → sacre-coeur-erillis/ (kuva v3 4635cf072df7, metsa.json), sacre-coeur-kerros.py lisää lajit (ryhma "metsa"; aja kerros.py:n jälkeen, sitten nimipeite.py, joka lukee metsa.json:n). Kirkko 1,578 m/px, sama paikka kuin v2 (sovitus väriero 19,6, varmista pelikuvasta). Raivauksesta jää paljaaksi 151 m². Kuvan länsiraja lon 2,3398, joten Montmartre 2,3346 riittää.
+- **Pelikuvasta:** y-montmartre: kirkon paikka, puiden järjestys kirkkoon nähden, keltainen kiila ja raita (KK 01.19), Sacré-Cœur-nimi aukion alla, Montmartre-nimi. Vanhat puu-lajin puut metsän sisällä jätetty.
+- **Vahti** toimitus 15m: Monitor käynnissä suodattimella jardin-des-plantes-v3 (lisäyksen 05.28 "ei kuuntele" oli väärin: vahti kattaa C/*/_review-*); tasankoketjun vahti erikseen. Molemmat kuolevat nollauksessa. Avoin: RER C:n rata (yhd2/7).
