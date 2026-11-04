@@ -27,3 +27,6 @@ Syy: konteksti 26 % (pehmeä raja, Raamattu 7.37). Edellinen: viesti-valoseppa-l
 
 ## Työkalut
 k47/aja.zsh <wt> <pinnat> <ulos> <z>; k51/c2/kuva2.py, k51/c2/kuva.py (rajaus 420,600,820,1000 z15, 2× z16, 2029 materiaali-2029.rgb 5,4 m/px eri paikasta), k49/vert.py. Python tulivuoret/venv.
+
+## LISÄYS 09.1x (KK 09.13)
+Omistaja hyväksyi kortilla Notre-Damen 3D-kokeen, joten litteä c2 on pohjan suunta. Kuva ja käännökset uudelle KK:lle lähetetty uudelleen (KK nollautui, sama id). Seuraava askel KK:n sanalla: puhdas pelihaara c2:sta tai ensin kujat ja viiva.
