@@ -22,3 +22,8 @@ Korvaa -0651:n. Muu -0626:sta voimassa (muuri LAV:n juurella, ohitusajon kohdat)
 ## Muistiinpanot
 - `tarkista.sh` päivittää tyylikirjan kopion (3 tiedostoa): palauta `git restore`, ei committiin runkoon.
 - PT:lle enintään 3 riviä, viestit send_messagella id:llä. Tilin KK-id osoitekirjasta (local_d5f31591).
+
+## Lisäys 07.2x (PT 07.18)
+- **Junan koerunko on be28de835** (PT kuittasi). **Lähitason koe on 32100a96f** (`-koe2-ovi` = be28 + lähitaso), 827/827, tarkista.sh läpi. Korvaa 08b6eee65:n: lue kohdan 1 vertailu `eec900eb3 | 32100a96f`. uudestaan-nappi be28:lla.
+- **Musta aukko on uusi:** samasta kamerasta (125,62; 2,37; -811,40) 13 ajoa 3.11. 01.15–08.45 musta 0 % (viimeinen cf40ca767: tausta-v114, osasarja-v6), 349e8f8db 46,7 % (tausta-v115, osasarja-v8). 217:n tallenteessa 1.11. (esikatselu-20261101-232407, kuvat 200–300) ei aukkoa; itse TF:ää ei ajettu. Epäily v115 tai osasarja-v8, ei todistettu. Vertailu LAV:lla suoraan (PT 07.18). Eec:n ajosta rivi PT:lle.
+- **Kun eec:n reitti valmistuu:** sama kamerakuva `peitto-reitti/eec900eb3/` tallenteesta `lokit/esikatselu-*/av/` (ks. kansio.txt), rivi PT:lle.
