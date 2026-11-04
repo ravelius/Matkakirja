@@ -429,3 +429,11 @@ Toimitus /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-alueet-20261104/notre-
 **Arvio:** lähes sama piirros, kivikaista ja rantaviiva ratkesivat koodilla, viidettä ottoa ei suositeltu. Viat: saaren sävy lämpimämpi kuin kaupunki (sovittamatta), katto sinivihreä silmään, Sainte-Chapelle hukkuu, pohjoisrannan kivikehän reuna pehmeä.
 **Odottaa KK:ta:** saaren sävysovitus koodilla ja Oikeuspalatsi pois (suositus). Ei omistajalle ennen KK:ta. Peliin vasta KK:n jälkeen lisäyksen 06.18 ohjeella (uusi versionumero).
 **Muut avoimet:** Boulogne-pari PT:llä ja KK:lla (kohta 18a), Vincennes odottaa JU:n kuvia lokit/julkaisija-yhd6-iso-e721d219e; minor-nimet 205c0e443 odottavat laitekuvaa; puut 43ba52fe7 yhd7:ään, puistot pelikuvan jälkeen. Codexin kuittaus 17c–d vasta KK:n päätöksen jälkeen.
+
+## LISÄYS 4.11. klo 07.40 (uusin; lue ensin): Notre-Damen otto 4 korjattu koodilla, KK:lla
+KK 07.28, lista /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md osio "KS: Notre-Dame otto 4". Ei uutta ottoa, Oikeuspalatsi pois. A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104. A/kooste4b.py → A/uusi-notre-dame-otto4b.png (4960d6b117db), A/pari-notre-dame-otto4b.jpg (4740c3a5c60e), A/pari-1x1-notre-dame-otto4b.jpg (41c1af6b802b), A/rakennus-savy-notre-dame-otto4b.png.
+**Uusi pohja:** A/pohja-notre-dame-ei-raivausta.png (aja-oma.zsh + A/pariisi-ilman-nd-raivausta.json, z17 66380,45082,66397,45095). **Peliin vietäessä ND:n raivausmaskia on kavennettava samaan,** muuten korttelit kuoren vieressä eivät näy. Peliin vasta KK:n jälkeen lisäyksen 06.18 ohjeella.
+**Mitat:** huippu 108/102/77 (H49 S29 V42; 2029 100/97/75 H53 S25 V39), katto 147/138/107 (H46 S27 V58; 2029 146/138/110 H47 S25 V57), saari 189/161/124 (ennen 201/163/117; pohja 184/162/129, 2029 188/159/123), ulkopuolinen muutos 0,0 %, vesi 0 px.
+**Kiila ei muuttunut:** tasainen kerma (242/214/166) on pohjan oma aukio, ei kiveä eikä raivausta: raivauksen poisto muutti näkyvästä kiilasta 0,0 %. Kerrottu KK:lle.
+**Pohjoisrannan kaista poistettu kokonaan:** 10 px:n kaista jäi irralliseksi möykyksi puun viereen. Pohja jatkuu seinään, kiveys alkaa kuoren jalasta.
+**Odottaa:** KK:n arvio, sitten omistajalle. Codexin kuittaus 17c–d vasta sen jälkeen.
