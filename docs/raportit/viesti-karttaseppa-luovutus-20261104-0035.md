@@ -646,3 +646,6 @@ NUI:n 99eb9931e yhdistetty: karttaseppa/nd-kaanto-219 **c74d6ef93** (korvaa a641
 
 ## LISÄYS 4.11. klo 15.4x (uusin; lue ensin): OMISTAJAN PÄÄTÖS 15.39, aukio hyväksytty
 **Kortti "Istuuko kirkko nyt hyvin aukiolle?" = Kyllä (kuvat esikatselu-20261104-150501, 7fcf0bf76). Puutteet hän näki.** Seuraavaksi iso iPad: neljä suuntaa, kallistettuna, kolme zoomia ja muisti, **kun PT avaa iPad-luvat**; kartan kääntö mukaan, tulos KK:lle. Ei muita nähtävyyksiä ennen omistajan korttia. Haara karttaseppa/nd-kaanto-219 7fcf0bf76. Skenaario tekemättä. Tämän lisäksi kipinät ja Pariisi-nimet edellisen lisäyksen mukaan.
+
+## LISÄYS 4.11. klo 15.4y (uusin; lue ensin): PT avasi iPad-luvan Notre-Damelle
+**PT:** iPad-lupa auki 7fcf0bf76:lla, kun haaraan on yhdistetty muistikorjaus 484adb22f ja NUI:n lippu 99eb9931e. **Lippu vasta, kun sen Mac-kuvat on hyväksytty; muuten ilman sitä.** Huom: 7fcf0bf76 sisältää jo 99eb9931e:n (yhdistetty lisäyksessä lippukorjaus), joten varmista NUI:lta tai PT:ltä, onko lippu hyväksytty; jos ei, tee iPad-haara ilman sitä. 484adb22f on yhdistämättä. Ajo JU:n jonossa: neljä suuntaa, kallistus, kolme zoomia, kääntö, muisti. Kuvat ja rivi PT:lle, sitten KK:lle. Skenaario tekemättä.
