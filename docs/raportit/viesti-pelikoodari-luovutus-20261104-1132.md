@@ -60,3 +60,6 @@ PT välitti omistajan 11.42 (KK:n kautta, koko teksti työlistalla "Juoksupeli: 
 Kortti "Tehdäänkö kamera ja keisarin kulku tällä koneen laskemalla kartalla?": "Kyllä (Suositus)". **Lue kokonaan:** `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261104-juoksupeli-vapaa-maailma.md` (en ole lukenut).
 **Järjestys:** A tarkastelutila (vapaa kamera, väreily, pinnat; pelikameran kierrokseen ei paljon aikaa, koska kamera vaihtuu; ei reittimittaria), B laskettu kartta kuvana KK:lle, sitten C–E taso 1. Vanha peli säilyy lipun takana. Jos malli on koodin kannalta jossain väärin, kerro KK:lle ennen B:tä. Kamera-, katto- ja verkkokorjaukset vanhaan seis.
 **Muuttaa yllä olevaa rakennetta:** kierroksen pääosa on vapaan kameran pisteet; kohdat 2 (pelikamera) ja 10 (kuljettavuus solmuista) eivät ole enää ensisijaisia, tarkista ne suunnitelmaa vasten. Työlistan rivi: "Juoksupeli: vapaa maailma, katot pysyvät paikoillaan".
+
+## LISÄYS 11.53 (KK, omistaja 11.53): tason 1 sisältö
+Sanat suunnitelman lopussa ("Tasot, omistaja 11.5x"). Taso 1 = omenat, heitto ja eunukkien väistö ulkona. Sisäesineet eivät kuulu tasolle 1; enintään 1–2 ulkoesinettä (odottaa korttia, KK:n ehdotus kala-allas ja kukkaruukku). Koskee vaihetta E. **Ei muuta tarkastelutilan järjestystä.**
