@@ -1,0 +1,92 @@
+{
+  "checkedAt": "2026-11-04T19:58:06.839574+00:00",
+  "key": "viisto-otto03",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21d-viisto-20261104/originals/viisto-otto03.png",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-83ff89f7-4a76-4b6e-90eb-f6a79641154e.png",
+  "sha256": "3347d55e006923d2e54485e87408bd8f0312ee8c9521f57fc28706828afa08da",
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "nativeBytesPreserved": true,
+  "visualReviewed": true,
+  "technicalPass": true,
+  "visualRequestPass": true,
+  "pavilionCount": 6,
+  "centerPavilionsOppositeAtWingMidpoints": true,
+  "allThreePyramidBaseQuadrilateralsVisible": true,
+  "apicesInsideProjectedBases": true,
+  "visiblePavingAroundAllPyramids": true,
+  "courtyardOpenWithInnerArcades": true,
+  "mutedBlueMeasurements": {
+    "large": {
+      "sampleBox": [
+        627,
+        432,
+        899,
+        646
+      ],
+      "bluePixelCount": 46642,
+      "meanBlueRGB": [
+        118.73,
+        151.96,
+        170.78
+      ],
+      "faceSamplePixelCount": 31387,
+      "meanLighterFaceRGB": [
+        147.32,
+        182.62,
+        202.01
+      ]
+    },
+    "smallLeft": {
+      "sampleBox": [
+        416,
+        473,
+        527,
+        566
+      ],
+      "bluePixelCount": 7927,
+      "meanBlueRGB": [
+        102.27,
+        135.56,
+        154.66
+      ],
+      "faceSamplePixelCount": 4497,
+      "meanLighterFaceRGB": [
+        138.16,
+        174.37,
+        194.89
+      ]
+    },
+    "smallRight": {
+      "sampleBox": [
+        997,
+        517,
+        1108,
+        611
+      ],
+      "bluePixelCount": 8272,
+      "meanBlueRGB": [
+        104.16,
+        137.05,
+        155.85
+      ],
+      "faceSamplePixelCount": 4729,
+      "meanLighterFaceRGB": [
+        140.25,
+        175.77,
+        195.95
+      ]
+    }
+  },
+  "colorMeasurementMethod": "Pyramid boxes; blue classified by B-R>22 and G-R>10, includes dark grid; lighter-face subset excludes dark grid and darkest faces. Not an exact color match claim.",
+  "cameraAnglePrompt": 75,
+  "cameraAngleMeasured": null,
+  "exact3DGeometryVerified": false,
+  "ownerApproved": false,
+  "receiverApproved": false,
+  "modelsStarted": false,
+  "notes": "Koko rakennus, kuusi paviljonkia, kolme suurikokoista vaimennettua sinistä pyramidia. Neljä pohjakulmaa ja sisäpuolelle projisoitu huippu kullakin näkyvät. Kameran ja rakennusosien tarkkoja 3D-mittoja ei voi varmentaa rasterikuvasta; reunataustassa vähäistä sävyvaihtelua."
+}
