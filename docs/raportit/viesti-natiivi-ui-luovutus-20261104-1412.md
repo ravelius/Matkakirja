@@ -1,0 +1,31 @@
+# Natiivi-UI: luovutus 4.11.2026 klo 14.12 (konteksti noin 28 %)
+
+Edellinen: viesti-natiivi-ui-luovutus-20261104-1356.md (siinä kääntö, raja, Avoin 2, iPad-ehto). Proto-repo: /Users/Shared/Claude/proto-3d/Matkakirja-proto.
+Protossa ei ole origin-etäpäätä (vain natiivi-backup); haarat näkyvät kaikille samasta reposta.
+
+## Tehty tässä vuorossa
+**1. C1:n loitonnus selvitetty, EI korjattu.** PT:lle ja KK:lle viety 14.0x.
+- Komento: `ElavaKartta.Odota` (Linssit/Unity/ElavaKartta.cs:1008). Lokissa "elävä: hiljaa … soi" ja `saapuminen: FRA Korkeuteen` samassa millisekunnissa (13:51:51.195).
+- Tarkoituksellinen 26.9. alkaen (Raamattu 4.19: elävän kartan saapumiskohtaus), mutta `HiljaisuudenEste` (rivi 965) ei tunne nykyintroa. Laukeaa kesken esittelyn, kun traileri edeltää esittelyä.
+- Ei 176c41f2d:stä eikä 7f64cd657:stä: sama 3.11. ajoissa (natiiviseppa-saapuminen-video-sim-60cdaeee0/konsoli-a.txt ja 7 muuta). Vertailuajo peruttu JU:lta. Haku: 8 ajoa kesken esittelyn, 148 vasta esittelyn jälkeen.
+- Korjaus yksi rivi: `if (Introesitys.JokinKaynnissa) return "esittely";` HiljaisuudenEste-metodiin. **Odottaa KK:n/omistajan sanaa** (suositus: kamera pysyy Pariisissa, kunnes kuvat on nähty). Elävä-kohtaus loitontaa silti esittelyn ja luennan jälkeen; se on eri päätös, omistajalle kerrottava.
+- C1:n "tyhjä paperi" on loitonnuksen välikuva (noin 1 s). C5 kunnossa (seepia, matkakirjasta ja takaisin). KK:lle kerrottu.
+
+**2. Nousukuvat, proto `natiivi-ui/nousu-pieni-219` 3d7f5defb** (wt/proto-natiivi-ui-nousu-pieni, KK 13.56).
+- TraileriTausta.NousuOsuus 0,59. TraileriLiike.NousuLepo palauttaa (paikka, kerroin): pisteen viereen 24 pt päähän, kokonaan ruudulle, alaraja 0,20 korkeudesta keskeltä; puoli, jolle kuva mahtuu suurimpana, tasan lähin. Kaupungin nimi siirtyy 0,27 korkeudesta alas (NousuNimiAlas).
+- Laskettu 4:3-kuvalla: iPad pysty 59 % leveydestä ja 33 % korkeudesta (ala 20 %), vaaka 59 % ja 59 % (ala 35 %); keskellä olevan pisteen kuva vaakana 44 % ja 44 %. Sääntö simuloitu Pythonilla: ei ruudun yli, ei pisteen päälle. Loki kirjaa osuudet.
+- iPhone vaaka: nimi voi jäädä kuvan alle noin 28 pt. Tiedossa, ei korjattu.
+- **Unity ajamatta.** tarkista.sh ok. Ajo valmiina: `SIMU_MUISTIRAJA=16 zsh tyokalut/simu-lukko.sh kaari natiivi-ui yhteinen-iPad13 -- zsh /Users/Shared/Claude/proto-3d/lokit/nui-nousu-35-3d7f5defb-20261104/ajo.zsh`. Vuoro pyydetty JU:lta, ei vielä tullut. Tuottaa pysty- ja vaakakuvat (traileri1, c1, c2, c5, kukin myös -noussut) ja osuudet-*.txt.
+
+**3. Lippu, proto `natiivi-ui/kartan-kaanto-219` 99eb9931e** (wt/proto-natiivi-ui-kaanto, KK 13.57).
+- Juova oli lipun oma varjo. Striimikartalla nyt 0,2 × korkeus, Karttaesineet.VarjoSavy ja VarjoPeitto, ei kankaan varjoa.
+- Paikka: Lippukulma.KiertoSadePt + Kartuscha.LipunYmpyra: koillisin paikka ympyrässä saapumisnäkymän keskeltä. Tabletilla pienempi kahdesta asennosta (302 pt), iPhone 103 pt. Lippu ja tanko ennallaan. Kaikki maat.
+- Lippukulma-testit 10/10 (`sh Linssit-testit/kaanna.sh Lippukulma`, ei zsh): FRA 300 km, NOR 279 km, HRV 150 km, LUX 17 km keskeltä. Unity ajamatta. PT:lle viety.
+- Rajaus: paikka lasketaan kerran maata kohti pelaajan kaupungin saapumisnäkymästä; kapealla ruudulla keskipisteen pituus riippuu kaupungista.
+- Mac-kuvissa lippu on selvästi suurempi kuin simussa (z13-000: yli 24 % korkeudesta, simu noin 7 %), syy lienee batch-ruutu; todista myös simulla.
+
+## SEURAAJAN JONO
+1. **Nousukuvien ajo JU:n vuorolla**, katso kuvat, ja seuraava kuva KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a): traileri 1, c1, c2, c5, yksi vaaka, yksi juuri noussut; ei videota; kerro kummankin asennon osuus leveydestä ja korkeudesta. Älä leikkaa loitonnusta pois: jos sana ei ole tullut, c2–c5 näkyvät Ranskan näkymässä, kerro se viestissä.
+2. **KK:n sana loitonnuksesta** → yksi rivi HiljaisuudenEste-metodiin, samaan haaraan.
+3. **Lipun Mac-kuvat PT:lle JU:n vuorolla:** _tyo/natiivi-ui/kartan-kaanto/sk-lippu2.txt (Ranska) ja sk-lippu2-nor.txt (Norja). Tarkista Norjan keskipiste ja korkeus lokista (`saapuminen: NOR`) ja vaihda aja-rivi, oslo-tunnus varmistamatta. Maamerkit `symbolit maamerkit 1` mukana; niiden kääntö on yhä todistamatta. KS:lle tieto 99eb9931e:stä (yhdistelmähaara).
+4. **iPad (kääntö) ja vanhat kohdat:** 13.56-luovutuksen kohdat 4 ja 5 ennallaan.
