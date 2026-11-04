@@ -1,6 +1,12 @@
 # Karttaseppä: luovutus 4.11.2026 klo 21.21 (KS)
 Syy: konteksti 25 % (7.37). Korvaa -2016:n jonon; sen "Tehty"- ja "Opit"-kohdat pätevät edelleen (haara karttaseppa/luovutus-20261104-2016, a2830fbdb). Python: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104. C = /Users/Shared/Claude/proto-3d/_tyo/codex. Worktree /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219.
 
+## LISÄYS 21.2x: OMISTAJA 21.24 KUMOAA PYRAMIDIN PIENENNYKSEN (lue ennen muuta)
+**Omistaja 21.24: "pyramidi saa olla suuri. Ja se kannattaa värittää siniseksi, koska se on kaikkein tunnistettavin asia. Ja kattoikkunoilla ei ole väliä."** KK: tavoite on, että sininen lasipyramidi tunnistetaan Louvreksi ensimmäisenä kartalta myös kaukaa, malliväreillä ja kirkon valossa; G:n pyramidi on sinisen mittari; **jos Tripo sulauttaa pyramidin paviljonkiin, vie se KK:lle.**
+- **21b v2 Codexilla (23e398236), korvaa c4eaedff6:n ja 98bd82be6:n:** `pelikulma.png` ja `ylhaalta.png`, pyramidit siniseksi, koko ennallaan, muu sama. Toimitus `_review-pyramidi-21b/`, mittari malli-G-pyramidi.jpg. Tarkista tämän mukaan: alla olevan kohdan 2 mitat ja kattoikkunat eivät enää päde.
+- 21c-luonnos on päivitetty tähän. Vahti käsitelty 23e398236 asti. Työlistassa rivi "Louvre 3D: sininen pyramidi".
+- **Sininen voi vaatia valoa/väriä:** kirkon valossa sinisen pitää näkyä kaukaa; katso pelikuvasta.
+
 ## Omistaja ja KK
 - **Omistaja 18.27:** Louvre ja Sainte-Chapelle seuraavaksi; lähekkäisille yhteinen pohja ja omat mallit (Raamattu 2.206). **19.03:** Louvre ja Sainte-Chapelle samalla valolla kuin kirkko ja mallin omilla väreillä.
 - **KK 21.1x (valtuutuksella):** Louvren muoto ja ehdotetut mitat kelpaavat (katsoi kuusi kuvaa, k5-parin, louvre-vs-G:n). **Tripo, kun 21b on tullut ja olet tarkistanut sen; tuo KK:lle vain, jos muoto muuttuu.** Iso pyramidi pienemmäksi G:n suhteeseen. Mallin kuva ja Louvren pohja KK:lle ennen omistajaa, kuten ND:ssä. KK kertoo omistajalle: **pysähdy, jos omistaja muuttaa jotain.**
