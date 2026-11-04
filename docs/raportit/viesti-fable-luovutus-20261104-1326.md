@@ -47,3 +47,13 @@ Vienti oli jäänyt: tyolista 243 → 244 vasta pyynnöstäni (13.1x, 25 riviä 
 - Älä hyväksy muistiajoa pelkästä huipusta: tarkista lokista, ajoiko korjauksen haara ja syntyikö kaatumisen ehto. Toista kaatunut sarja, älä lyhennä.
 - Luovutuksista puuttuu helposti käsky, joka on jonossa: tarkista sha:n sisältö ja lähetä seuraajalle uudelleen (NS e049881ab).
 - Kysy epäselvä prosenttiluku heti (70 %: pienempi vai koko).
+
+## LISÄYS 13.4x (korvaa TÄRKEIN AUKI -kohdan ajojen tilanteen)
+- Koko sarja 7f64cd657: 3756 Mt, 0 varoitusta, mutta 0° ja kerroin 4 (5 riviä, sama kuin kaatuneessa): EI todista korjausta. Sama haara ei kaatunut.
+- Erot kaatuneeseen e4180ac69:ään: p-z9 oli siinä kallistettu (ei skriptistä, lähde auki), ja ennakointi piirsi noin 1400 palaa tyhjältä levyltä; nyt 0 palaa, kaikki levyllä. Syy voi olla kallistus TAI kylmä levy. Kerroin ei ole todistettu.
+- JU: z10k60 (komento kallista 60): c4a5bfafb ENSIN, sitten 7f64cd657. c4a-sarja poistettu. Levyä ei tyhjennetä ilman PT:n sanaa. VS selvittää kallistuksen lähteen ja ennakoinnin osuuden.
+- c4a kaatuu z10k60:ssa ja 7f64 ei → kallistus ja korjaus todistettu. Kumpikaan ei kaada → kylmä levy seuraava koe, ja iPad-luvat seis.
+- NUI: Suorista OK 6834a6711; lippu yhä vino, 311eacd76 JU:lla. Nousukuvat: simuvuoro, 56 % jättää vain reunat, suositus simukuvasta.
+- KS: nimet 1f082f3f1; KK palautti: suorakaide (pohja 7 % tummempi, reuna ei kadulla). Väri odottaa VS:ää (pelin striimi k55:tä keltaisempi, sininen −12, Macillakin; KK). Varjo ja reuna saavat edetä.
+- LAV nollattu (55340c24a), odottaa Codexin ovikuvia v2 (b0f2a3978 aloitti) ja KK:n päätöstä irto-osista (muuri/irto/RAPORTTI.md, 388 paikkaa). Herätä LAV Codexin toimituksesta.
+- PK: matala kate estetty säännöllä 220983d61; ovikoe palasi PK:lle.
