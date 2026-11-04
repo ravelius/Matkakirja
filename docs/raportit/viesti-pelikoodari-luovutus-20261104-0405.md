@@ -1,4 +1,4 @@
-# Pelikoodari: luovutus 4.11.2026 klo 04.05 – palikkakuvion paikka löytyi, lod-diag ja v14 JU:lla
+# Pelikoodari: luovutus 4.11.2026 klo 04.01 – palikkakuvion paikka löytyi, lod-diag ja v14 JU:lla
 
 Edellinen: -20261104-0334 (lisäyksineen, 3e90cb658). Tämä korvaa sen palvelija-, palikka- ja omenaosat; kamera-be56-osa (peitto-be56, pk-be56-laite Pariisin jälkeen) on yhä voimassa sieltä. Syy: pehmeä raja 25 % (7.37). Ei omia taustaketjuja.
 Kuvat palvelijoista suoraan KK:lle, PT tiedoksi (KK 03.35). Tiedot: `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/palvelijat-v12/HUOMIOT.md`.
