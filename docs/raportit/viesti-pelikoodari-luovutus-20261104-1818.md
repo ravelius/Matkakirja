@@ -23,3 +23,6 @@ Kartta `_tyo/pelikoodari/kulkukartta/v9/` (loki v9.log), `JuoksuOvet.json` päiv
 ## 3. Seuraava ajo ja näyttö
 Täyte → `viat` → kamerat → `ovikuvat.py <v> <lista> 5 <osm...>` samat kuin 222-lista + uudet pienet ovet + 5 arvottua + ovettomat, lista `koekuvat-ovimalli-223.txt` (ensimmäinen rivi `! ui juoksupeli ovikoe juuri file:///Users/Shared/Claude/proto-3d/_tyo/codex/juoksupeli-ovi-20261104/mallit-v1/`, sitten ovikoe koe kuten 222:ssa). Ajo JU:n vuorolla (`PROTO_LINJA=<JU> zsh tyokalut/tarkastelu_kuvat.sh <sha> <lista>`, ~8 min). Katso kuvat täysikokoisina. Arkki PIL: 5 saraketta, 640 × 480, Hiragino Sans GB, nimi kuvaan → KK → omistajalle. Kerrottava: karmi sävytetty, ristikko aaltoilee, renkaat laikkuina, karmi leveämpi, lehdet peilikuvat. iPad muisti ja ruutuaika JU:n vuorolla. Sen jälkeen -1717:n järjestys (kierros, todistukset 1–4, osa C).
 Muistiinpano: malli piirtyy kaikkialla, etäisyysrajaa ei ole. Viestit: PT local_8d8ebf72, JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KK local_d5f31591, LAV local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e, Postivahti local_1f31f830-9df5-41c1-8992-172e100af57f.
+
+## LISÄYS JU 18.2x
+Muuriajot ketjussa L2:lla järjestyksessä 77194ed87, d9cde0f50, ee9ed51b0, TF 60bd5c356 (juna 217; julkaistu, ei runko-217-tf-haara). Alkavat 92c-käännöksen ja KS:n ND-puiden jälkeen. Kansiot tulevat JU:lta riviksi tälle sessiolle.
