@@ -19,3 +19,6 @@ Muurikorjauksen 789f3046f uusi muuriosa naapuria tummempi (lokit/esikatselu-2026
 
 ## LISÄYS 19.15: kaide (PK)
 PK: kk3:n puuttuva kaide = Lattia-varjostimen instansointi; e73f5790f palauttaa sen, myös LOD1-kameroilla (lokit/esikatselu-20261104-190238, 8 kuvaa, pari _tyo/pelikoodari/palat/kaidepari-e73f5790f.png). Vaalea kuvioton C2 lähellä jää, syy auki. Kk3 ei kelpaa ilman 789f3046f:n varjostinta. TEE: katso 8 kuvaa täysikoossa ennen päätöstä kk3:sta. KK:n aiempi päätös: kk3 ei lähde, yksinkertainen kaide jää ja piilotus vain siellä, missä C2 piirtyy (edellinen -1831 kohta 3); tämä tulos voi muuttaa sitä, joten kysy PT:ltä, ennen kuin kk3 otetaan takaisin.
+
+## LISÄYS 19.16: palat
+Ensimmäinen ajo pysähtyi 19.14: 15d7274ad:ssa ei ole komentoa "juoksupeli palvelijat". Rivi poistettu sk-palat.txt:stä, uusi vuoro pyydetty JU:lta (JU nollautuu, pyyntö seuraajalle). Muita sk:n rivejä tällä rungolla ei ole todennettu.
