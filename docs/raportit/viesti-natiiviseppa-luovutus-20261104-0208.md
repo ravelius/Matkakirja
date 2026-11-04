@@ -34,3 +34,13 @@ sk-ipad-k24.txt (otsikkorivillä lukee 794b96343, ajettiin 3332c8e15:llä), sk-z
 - Muisti häivytyskorkeuksilla: iPad-ajon tulos.
 - y-laajin laskettuna näkyvyys noin 23 %: KK arvioi.
 - KK:n lista, kohdat 2–4: aloittamatta (ks. -0129).
+
+## LISÄYS 02.18 (sitoo, ohittaa ristiriidassa edellä olevan)
+**KK 02.11 (KORJAUSLISTA, osio "NS: häivytys 794b96343"), PT 02.1x: jos korjaus valmis ennen 03.15, sha VS:lle koko Pariisin yhdistelmään (takaraja 03.30).** Vinjetti hyväksytty suunnaksi. EI:
+1. **Oikea pystyreuna** (d x noin 2420, c sama paikka; rajaus Joinville-le-Pont): tiet katkeavat ja siirtyvät, ei pelkkä tarkkuusero (lokit/esikatselu-20261104-015532/d-0-15.png). "Ei saa näkyä missään zoomissa." **SYY AUKI:** lon 2,4609 laskettu kuvasta; z10/z11 päätelty, koska lokissa oli samalta ajalta pyyntöjä kummaltakin tasolta. Z10 on esipoltettu, Z11 elävä tyyli; siirtymää ei selitetty. Mac valitsee tason 640×480-ruudusta (pallo.maximumScreenSpaceError, KarttaKerrokset.cs:113 `maasto sse`), joten iPadilla reuna voi olla eri zoomilla: katso ensin iPad-kuvat.
+2. **z11/z12-saumat e:ssä:** nurmi ja kadut korjattu; tarkkuusero rajalla yhä (z11 on suurennos). KK arvioi uudesta kuvasta.
+3. **Haamut: tehty:** korkeus_m [16600, 17800] (nahtavyydet-218 204104d31), laskettu 0,13 noin 16 km ja 0,15 noin 18,5 km. Ajamatta. Sääntötiedosto _tyo/natiiviseppa/esineet/saannot-isoisa-2029-60.json. Muutos korvaa kohdan "Haamut" (HETI, 3) yllä.
+Kärki nyt **natiiviseppa/haivytys-k24-218 b70ee175a** (testit 611/611, ajamatta; EI junaan). JU:lle pyyntö: L2 b70ee175a + sk-z11-todiste; iPad 3332c8e15 tai b70ee175a, JU kertoo, kumpi.
+HUOM data: nahtavyydet-218:aan aina k4vt-alue, yhdistelmään koko (tee-esineet.py). Väärä syöte muuttaa puiden paikat; tarkista ero ennen committia.
+VS k25 7967cf01c ei ole tässä haarassa: Versio-rivi törmää (p25 / p24z).
+KS: KK 02.13 arvioi nimet; ei NS:lle.
