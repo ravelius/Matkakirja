@@ -32,3 +32,8 @@ k21 peruttu. Iso paketti seis. v125 iso iPad vasta KK:n parin jälkeen. Mittari 
 
 ## VALMIIT (lähetetty)
 k24 3332c8e15 → PT + NS (OK 3512 Mt; k-laaja = KK:n y-laaja) | k28 984342737 iPad → PT + VS (OK 3230 Mt, lokit/julkaisija-k28-iso-984342737/, varakuva) | k28 ja k29 esikatselut → VS + PT | f5c1f14b0 reuna → NS + PT (OK 3464 Mt; NS: puhdas) | kamera-219 ja kamera-be56 → PK (taivas 0/48; palkissa b8-4s, b6-2s) | palvelijat v9c, v10 → PK | Wumen g, h, i, 5d-kiila → LAV.
+
+## LISÄYS 03.47 (korvaa edelliset L1-rivit)
+L1: pk-palvelijat-v13 (cfd520f2e, vain vesi, lätäkön varjo, KK; "palvelijat v13 AJETTU"; rivi PK:lle, kuvat palvelijat-v13/vesi). Muuta L1:llä ei ole ennen Pariisin jälkeistä jonoa.
+Valmiit lisää: palvelijat v11 ja v12 → PK (palikkakuvio vain malja2-120, kerrottu) | 5d-kiila2 → LAV.
+ju-vahti.zsh listat on karsittu: vs-yhd-laite, lav-5d-kiila2, palvelijat v12 ja v13. Viritä Monitor heti; "yhd-laite AJETTU" noin 04.10 on tärkein rivi (katso kaikki 32 kuvaa, täysikoko + polku PT:lle ja VS:lle, muisti).
