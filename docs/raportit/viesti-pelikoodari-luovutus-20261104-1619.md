@@ -37,3 +37,8 @@ Ilman ovea, näkyy tasolta 1 (17): 弘义阁, 崇楼2, 钦安殿, 西暖殿, 东
 ## Muistiinpanot
 Ajo: `PROTO_LINJA=1 zsh tyokalut/tarkastelu_kuvat.sh <sha> tyokalut/koekuvat-ovet-220.txt "ovikoe koe"`, vuoro JU:lta, rivi JU:lle valmiina. Uusi lista: skriptiin nimetyt osm:t ja `tyokalut/ovikuvat.py <v5> <ulos> 5 <osm...>`; se väistää nyt latvukset ja vaatii koko oven näkymisen. Arkki: PIL-ruudukko kuvalistan järjestyksessä, 5 sarakkeessa, 640 × 480, fontti `/System/Library/Fonts/Hiragino Sans GB.ttc`. Täysikokoiset kuvat ovat 2202 × 1651; väriraidat näkyivät vasta niistä.
 Viestit: PT local_8d8ebf72, JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KK local_d5f31591, LAV local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e.
+
+## LISÄYS 16.40: KK:n vastaus arkkiin ja tehty työ
+KK 16.2x (suunnitelman viimeinen osio): 006b9c194 kuitattu, arkki omistajalla. Ikkunan peitto 134 ovella ja alle 0,75 m:n kivijalka ilman portaita: kyllä. Tarkastelun listalle: ikkunoiden L-muotoinen ristikko. Muisti: yksi ajo JU:n vuorolla, ei odota sääntöjä.
+Proto **974f95213**, kartta `_tyo/pelikoodari/kulkukartta/v6/`, lista `tyokalut/koekuvat-ovet-221.txt` (18 kuvaa): rungot esteeksi (puut.json), ei runkoa 6 m oven edessä, seinää 0,5 m kummallekin puolelle, lehti enintään seinän pituinen, terassi ilman portaita, muut sivut samalla säännöllä, täytteen kierto (`Kierra`, Ovet.cs). **Ei käännetty eikä kuvia katsottu.** Vuoropyyntö JU:lle lähetetty: Mac-kuvat ja muistiajo samalla rungolla.
+Avoimet: 南薰殿 ei siirtynyt, kartan pinnat eivät näytä vastaavan kuvaa (syy selvittämättä). Kehyksen syy väärä kierto on oletus, kunnes kuvat vahvistavat. Ilman ovea näkyy 17: `tulos.json`, `ovet.ei_syyt`, kenttä `avoin`.
