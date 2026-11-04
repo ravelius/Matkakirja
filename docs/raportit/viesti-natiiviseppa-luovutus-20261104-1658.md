@@ -29,3 +29,9 @@ Yhdistelmä tasainen-striimi-3 + maakuntarajat-katko ei ole tehty.
 - **Tasot:** karkea viiva tasoon 10,5 asti, sen yllä elävän palan viiva. 35b6ee8b4:ltä kuvat vain 10,41 ja 11,34, väli 10,5–11,3 todistamatta. VS:n t104 on arviolta taso 10,6, vanha runko.
 - **VS:n 38ec22a25 (`if (Striimi || ...) continue`) poistaa koko boundary-silmukan:** tasolta 10,5 ylöspäin ei maakunta- eikä valtionrajoja, myös katkoviivani. Yhdistelmää ei saa tehdä sellaisenaan; git voi yhdistää sen hiljaa (ei kokeiltu).
 - **Suositus, ei tehty:** ehdosta pois `Striimi ||`, ja JU:n iPad-kuvat tasoilta 10,5–11,3. Rivi JU:lle vain sanalla. Tiedot tulos.md:n loppu.
+
+## LISÄYS 18.2x (KK 18.1x: sama väri ja jakso kynnyksen molemmin puolin; VS yhdistää ja poistaa `Striimi ||`)
+- **Tehty:** b2101b95e natiiviseppa/maakuntarajat-katko (35b6ee8b4 + 1): palan viiva muste 70,48,29, alfa 0,6, leveys 1,3, jakso 11 laattapx, e18. Laskettu, ei ajettu; odotus huippu z13 noin 77, z12 noin 59 (karkea 76). Mittari _tyo/natiiviseppa/maakuntarajat/mittaa.py.
+- **Ei onnistu yhdellä säännöllä:** z- ja z+1-palan välissä jakso kaksinkertainen (10 / 20 px). Poisto vaatisi viivan omaksi kerrokseksi palan päälle. Kerrottu KK:lle.
+- **Odottaa:** VS ottaa committin samaan ajoon, kuvat KK:lle. Ei junaan ennen PT:n koerunkoa.
+- **JU:n r-fin d9cde0f50:** ei vika. Kerros näyttää pelaajan maan (Komennot.cs:1387), ja listasta puuttui `maakunta maa FIN`. Tasolta 10,5 ylöspäin palan viiva näkyy kaikissa maissa; ero kerrottu KK:lle.
