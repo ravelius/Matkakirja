@@ -50,3 +50,6 @@ KS: KK 02.13 arvioi nimet; ei NS:lle.
 - **Pystyreuna yhä ajossa:** x noin 2418 d-0-15:ssä (mitattu sarakegradientilla y 1250–2060), tiet hieman siirtyvät. Syy auki.
 - **iPad:** täysi 3332c8e15 (lokit/julkaisija-k24-iso-3332c8e15, valmis noin 02.45), sen jälkeen JU kääntää b70ee175a:n ja ajaa _tyo/natiiviseppa/aluekuva-koko/sk-ipad-reuna.txt (r-0-21 … r-0-11, r-joinville). Katso täysikokoisena: näkyykö pystyreuna laitteella, millä zoomilla. Jos korjaus valmistuu ennen 03.15, uusi sha VS:lle ja rivi PT:lle.
 - L2-pyyntöloki: lippu-vahti scratchpadissa; ilman sitä esikatselu ei kirjaa pyyntöjä.
+
+## LISÄYS 02.27 (VS)
+b70ee175a on VS:n yhdistelmässä 984342737 (linssiseppa2/pariisi-k28-ns, Versio p28z), JU:lla. Pystyreunan korjaus: SHA VS:lle ja PT:lle, VS yhdistää, jos JU ei ole aloittanut. z ≤ 15 korttelimateriaali muuttui (2029), z11–12 samasta: katso z11/z12-sauma 984342737:stä, älä b70ee175a:sta.
