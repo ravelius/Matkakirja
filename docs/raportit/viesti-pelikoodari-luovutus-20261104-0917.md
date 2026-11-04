@@ -1,4 +1,4 @@
-# Pelikoodari: luovutus 4.11.2026 klo 09.11 – lähitaso pois (KK 09.00), c4a:n reittiajo JU:lla
+# Pelikoodari: luovutus 4.11.2026 klo 09.17 – lähitaso pois (KK 09.00), c4a:n reittiajo JU:lla
 
 Korvaa -0858:n kohdat "Odottaa 1" (ovikamera) ja "Ovikameran vika"; muu -0858:sta voimassa (rungot, JU:n iPad-sarja, 1af126155, viivat). Syy: Postivahdin nollaus. Polut kansiossa /Users/Shared/Claude/proto-3d/. Tulokset `lokit/pk-muistipiikki-219/TULOS.md`, lue 09.03 alkaen.
 
