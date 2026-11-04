@@ -24,3 +24,9 @@ Syy: konteksti 26 % (pehmeä raja, Raamattu 7.37). Edellinen: viesti-valoseppa-l
 
 ## Työkalut
 Kuten edellisessä; k46/aja.zsh <wt> <ulos> <z> [alue] (data k46/data, 12 z14-palaa), parit k46/parit2.py ja parit3.py, tasaus k46/tasaa.py <malli.rgb> <arkki.rgb> <ulos.rgb> (ennen-arkit k46/ennen/), numpy vain venvissä tulivuoret/venv.
+
+## LISÄYS 08.0x: PT:n käsky tuli luovutuksen jälkeen, EI aloitettu (korvaa Seuraavaksi-kohdat 1 ja 2)
+- **KK 08.00 kuittasi k46b:n kokeena** (katsoi vain pienennetyt parit): laikut poissa, arkki pysyy z15:lla, ei siirtoa z16:een. PT: katso z17 ja saumat itse täysikoossa. Katsottu tähän mennessä: z17-rajab.jpg täysikoossa (talot eivät katkea arkkirajalla); palarajakuvat raja-*.jpg ovat ennen tasausta, muoto sama. Saumoja ei ole katsottu k46b:n z16.jpg:stä, koska sitä ei ajettu uudelleen tasauksen jälkeen.
+- **Seuraava työ (PT 08.0x, KORJAUSLISTA.md viimeinen osio):** z15 on koko kaupungissa harmaanvioletti ja raidallinen, z14 ruskea, 2029 lämmin (KS: talot saaren kohdalla 188/159/123, R-B noin 65; **VS mittaa koko 2029:stä**). Vie väri kohti z14:ää ja 2029:ää koko z15–17:lle omassa koehaarassa k46b a0ee9fd92:n päälle. Parit z14 | z15 ja z17 KK:lle ja PT:lle. Raidat katsotaan värin jälkeen zoomisarjasta.
+- **Älä yhdistä itse:** yhd7 kootaan tämän jälkeen JU:n vuorolla, laitekuva z15 ja z17 KK:lle. Kerro PT:lle sha, kun väri on valmis.
+- Vinkki, ei kokeiltu: kaikki kolme arkkia ovat nyt samassa R-B:ssä (47–48), joten kerroin yhteen paikkaan riittää; kerroin 0,96/0,965/1,02 on peräisin 2029-arkista eikä sitä ole mitattu näille. Mittaa kartalta, ei arkista (k46/parit3.py).
