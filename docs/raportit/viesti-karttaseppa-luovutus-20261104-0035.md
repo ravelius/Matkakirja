@@ -481,3 +481,10 @@ Korjaus posti/karttaseppa-codex-nd-otto5-korjaus-20261104.md; aineisto päivitet
 **Tilaus 17f 52661a2e9** (claude/postilaatikko; posti/karttaseppa-codex-nd-otto6-20261104.md). Aineisto /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-alueet-20261104/notre-dame-otto6/ (malli-otto5.png, luonnos-paikat.png, pohja, sama maski). Työkalut A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104: A/luonnos6.py, A/tilaus6.py, A/kooste5.py mallina.
 **Vahti:** `until [ -f .../notre-dame-otto6/_review-notre-dame/SHA256SUMS ]` taustalla, kuolee nollauksessa: käynnistä uudelleen.
 **Kun toimitus tulee (KK):** sovita: saari ja joki rantakatuja pitkin, korttelit muualla pohjasta, joki ja katot väriltään yhteen, tavoite: saumaa ei huomaa. KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) Codexin kuva kokonaan, täysikoko sovitettuna, pari 2029 | nyt | sovitettu. KK vie omistajalle. Sen jälkeen pelikuva isolta iPadilta kolmella zoomilla ja muisti. Peliin, Louvreen ja muihin nähtävyyksiin ei ennen sitä. Vanhat vaikutukset (lisäys 08.03) koskevat yhä hyväksynnän jälkeistä työtä.
+
+## LISÄYS 4.11. klo 08.3x (uusin; lue ensin; konteksti yli 25 %, nollaus): Photoshop-kuvat tehty, otto 6 kesken
+**Omistajan pyyntö 08.25 (KK): tehty.** /Users/Shared/Claude/Photoshop-koe/nahtavyydet/: 14 kuvaa, ei peliin vaikutusta, KK:lla. A/photoshop-nahtavyydet.py (A = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104). VS tuo kartan. Ei uusia toimia, ellei KK pyydä.
+**Avoinna (ohjeet lisäyksissä 08.2y ja 08.15):**
+1. Otto 6 (17f 52661a2e9): **käynnistä vahti uudelleen** `until [ -f /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-alueet-20261104/notre-dame-otto6/_review-notre-dame/SHA256SUMS ]` taustalle. Toimituksesta sovitus rantakatuja pitkin KK:lle.
+2. JU ajaa /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sk-nimet-kierto.txt rivi 168:n perässä (julkaisija-rivi168-ff97c7f8c, nimet-laske.txt, k-kierto-*), JU lähettää rivin. Karsi-korjaus vain, jos kierto todistuu.
+3. Odottaa muualta: Vincennes- ja Boulogne-kuvat, minor-nimet 205c0e443 laitekuvaa.
