@@ -11,7 +11,7 @@ Syy: konteksti 26 %, pehmeä raja ja luonteva tauko (Raamattu 7.37). Edellinen: 
 ## SEURAAVAKSI
 1. KK:N SANA: tehdäänkö verkon palautus kokeena? Suositus: verkon palattua ja palojen korjauduttua yksi uudelleenlataus ilman käynnistystä, lähitason palat uusintaan, verhoehto muuten ennallaan. Odota sanaa; ei junaan. Auki: miksi 82/170 poistui listalta ilman paikkausta.
 2. JU:N SUOMI-KOE: sk-suomi-syy.txt (striimi/suomi/, 6 kuvaa, iso iPad, rungolla 2d8ec025c), JU:lle lähetetty, viesti oli jonossa 22.14. Kun kansio tulee: konsoli.txt:n rivit "pohja pyyntö" ja "elävä pyyntö" kuvakohtaisesti, muisti, paluukuvat. Selvitä, miksi lähempi fin-t110 näyttää möykkyä ja kauempi fin-t105 ei. Sitten korjaustapa KK:lle: z10 laitteella vai pohjan uudelleenpoltto (media-vienti = julkaisu; muisti 4006 Mt lähellä rajaa). Harmaat sumeat vyöt: syy auki.
-3. Viivat 1b ja 2b: odottavat yhä PT:n lupaa (luovutus -2200 kohta 1).
+3. VIIVAT 1b ja 2b (PT 22.1x): lupa annettu JU:lle, ajo TF-koemittauksen jälkeen. PT: kuvat ennen Suomen korjausta, kun ne tulevat, täysikoossa. Tulos riviksi KK:lle ja PT:lle (luovutus -2200 kohta 1).
 4. Sitten valtionraja, Alpit, tasorajat; ND-pohjan laikku KK:n listan jälkeen.
 
 ## Muistettavaa
