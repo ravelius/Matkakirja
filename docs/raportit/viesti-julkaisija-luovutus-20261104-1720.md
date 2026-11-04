@@ -45,3 +45,10 @@ Ennallaan -1404:stä: Karsi yhdistelmään kun tehdään (sk-karsi-koe-2, KS); N
 - iPad-järjestys: rajat-tasot → valmiista ensin k60 + k45 d9cde0f50 tai PK 974f95213. k45:n skenaario on T/sk-striimi-k45-rajat.txt (PT: lisänä r-fra-z10, r-fin-z10, 19 kuvaa; katso rajat itse ja anna kuvat NS:lle vertailuun). PK:n tulos PK + PT.
 - Terassi-v1 (LAV, SHA 6bc8ca34dd4f): erillinen haara d9cde0f50:n päälle vasta k60/k45:n jälkeen, ei junaan, ei ämpäriin; ensin paikallinen file://-juuri, vienti uutena kansioversiona vasta PK:n vahvistuksella (PT).
 - PK nollautuu ja tekee KK:n 17.24 ovikorjaukset; pyytää uuden vuoron. VS ND-valo v1–v4 valmiit, sama POIKKEUS ArgumentOutOfRangeException ui sulje -rivin jälkeen joka ajossa (VS tietää v3:een asti).
+
+## LISÄYS 17.5x (uusin; korvaa edellisten järjestykset; tarkista T/jono-20261103-ilta.txt)
+- Valmiit: rajat-tasot 3508 Mt → VS; k60 d9cde0f50 3337 Mt, 54°, ei varjovalintaa → PT.
+- Ajossa: iPad k45 + rajat d9cde0f50 (pid 72805, kansio julkaisija-striimi-k45-d9cde0f50). Lokissa "VIKA laheta ui-komento" 17.47: tarkista konsolista ui-rivit. Rivi PT: huippu, kulma (kuva todistaa), varoitukset, tiivisteet; katso r-fra-z10 ja r-fin-z10 itse, kuvat NS:lle (35b-kansio julkaisija-maakuntarajat-35b6ee8b4 vertailuun).
+- Mac: NUI 63383ba6e L1 + simut; LAV kk2 (T/lav-kk2.log, rivi "KK2 AJETTU" → LAV); PK ee9ed51b0 L2; 974-käännös odottaa vapaata linjaa (T/kaanna-974-perassa.zsh, T/kaanna-974f95213.log).
+- k45:n jälkeen iPad: PK 974f95213 (T/pk-muisti-974.zsh <pid>, tarkista kaannos.txt = 974f9521) → KS 92c47e215 sk-nd-ipad, kansio julkaisija-nd-ipad-92c47e215 (korvaa db3d2713e:n; käännös 974:n jälkeen, T/kaanna-vapaa.zsh; rivi KS).
+- k45:n jälkeen: terassi-v1-haara d9cde0f50:n päälle (LAV, ohje edellä), rivi LAV. ui-kerros 8fa059097 iPad-jonon jälkeen.
