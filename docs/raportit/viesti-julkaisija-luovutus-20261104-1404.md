@@ -62,3 +62,8 @@ Ei muuta ajossa 14.04: L1 ja L2 vapaat, iPad vapaa, simu iPad13 vapaa.
 - Kulmat e774647ee: 15° 3656, 22° 3850, 29° 4091 Mt VIKA, 54° ilman varjovalintaa 3422 Mt. Kerrottu VS + PT.
 - PT: VS tekee varjovalinta pois ≥ 20°, hystereesi 15°. iPad odottaa VS:n sha:ta, muita iPad-ajoja ei. Sillä käännös (LINJA=<vapaa> ASENNA=0 zsh T/laite-iso.zsh <sha>), sitten k19 (kopio T/sk-muisti-z10-k15.txt:stä kulmalla 19, kansio julkaisija-muisti-z10k19-<sha>), k60 (VS:n sk-muisti-z10-ei-varjoa tai uudempi, kansio z10k60-<sha>), lopuksi sk-striimi-k45 (kansio julkaisija-striimi-k45-<sha>). sk-striimi-loput seis k45:n jälkeiseen PT:n sanaan. Rivi jokaisesta VS + PT: huippu, kulma, varjovalinta, varoitukset, kuvien tiivisteet.
 - Mac: lav-jalustat ajossa (rivi LAV:lle), NUI:n vuoro L2 + simu voimassa (levy 22 Gt, NUI poistaa omat app-kopionsa).
+
+## LISÄYS 15.1x (uusin; korvaa aiemmat iPad- ja Mac-kohdat)
+- VS:n koonti 484adb22f, raja 20°, käännetty. k19 OK (3678 Mt, 19°, varjovalinta, 0 varoitusta) → VS, PT. k60 ajossa 15.11: ESISARJA=0 SK_TIED=<striimi/>sk-muisti-z10-ei-varjoa.txt KANSIO_NIMI=julkaisija-muisti-z10k60-484adb22f zsh T/vs-muisti-z10k60.zsh 76391 484adb22f; k60:ssä EI saa näkyä varjovalintaa. Sitten sama skripti: SK_TIED=<striimi/>sk-striimi-k45.txt KANSIO_NIMI=julkaisija-striimi-k45-484adb22f. Rivi jokaisesta VS + PT; sk-striimi-loput seis k45:n jälkeiseen PT:n sanaan.
+- Error 22: 12/12 myös 14.56–15.02, kolmas yritys meni läpi. Käynnistysvika: aja sama komento uudestaan.
+- Mac: L1, L2, simu vapaat. Valmiit: lav-tausta, lav-jalustat → LAV. NUI:n seuraaja pyytää: simu 9d2b17f31, Mac 99eb9931e. Tripo viimeisenä.
