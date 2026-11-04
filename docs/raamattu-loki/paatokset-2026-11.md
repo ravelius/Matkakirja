@@ -237,3 +237,7 @@ Omistajan kortti KK:ssa "Jätetäänkö pienet kadut pois myös lähikuvasta?" �
 ## JOKI JA RANNAT SAAVAT SIIRTYÄ KIRKON YMPÄRILLÄ (4.11.2026 klo 07.56)
 
 Omistaja klo 07.39: "Näyttää siltä että codexille annetaan liian pieni alue piirrettäväksi kun kirkko ei istu ollenkaan kuvaan". Omistajan kortti KK:ssa "Saako Codex siirtää jokea ja rantoja kirkon ympärillä?" → "Kyllä (Suositus)"; selite: kirkko seisoo saarella kuten 2029:ssä, mutta joki ei ole kirkon kohdalla täsmälleen oikeassa paikassa. KK:n välityksen mukaan vesisääntö 21.29/22.14 pysyy. Karttaseppä tilaa Notre-Damen oton 5: kirkko ja ympäristö samassa kuvassa koko kuva-alalta (KORJAUSLISTA). Kirjattu 2.204:ään.
+
+## NOTRE-DAMEN SUUNTA JA SAINT-LOUIS-SAARI (4.11.2026 klo 08.22)
+
+Omistajan kortit KK:ssa: "Onko tämä oikea suunta Notre-Damelle?" → "Kyllä (Suositus)"; "Palautetaanko Saint-Louis-saari?" → "Kyllä (Suositus)" (selite: saaren itäpää loppuu kirkon takaosan jälkeen puutarhaan, ja Saint-Louis on oikealla paikallaan; vaatii yhden uuden kuvan). Tekotapa KK:n mukaan: kirkko ja ympäristö samassa Codexin kuvassa, joki saa siirtyä alueella. Järjestys: otto 6 Karttasepälle, sovitus kartalle KK:lle ja omistajalle, vasta sitten iPad ja muut nähtävyydet (KORJAUSLISTA, viimeinen osio).
