@@ -28,3 +28,19 @@ NS:ltä: h-z13:n vaakasauma on palatason vaihto (rivi 842 = maastopalan raja 60,
 
 ## Jäljellä edellisistä
 JU:n ui-kerros-ajo uudelleen ja 15/16-vastaus KK:lle (luovutus -1530). Vesi 5c870d62a Mac (lokit/esikatselu-20261104-154718): kuvat katsomatta, rivi PT:lle kesken; JU kertoi Esikatselu.cs:n olleen vanhempi. Avoimet havainnot: luovutus -1557.
+
+## LISÄYS 1 (KK 16.4x ja JU; KORVAA kohdan 2 jatkon, järjestys silti ND-valo ensin, ellei PT muuta)
+KK:N SANA 16.4x (sanatarkasti):
+"b0288fc2e kuitattu Mac-kuvista: meri yhtenäinen, kuten pitää, ja maan askel pieneni. Tämä on suunta, mutta Macin kuvat eivät vielä riitä: omistajalle vasta iPad-kuvista.
+Seuraavaksi:
+1. Rinnevarjon terävyysero, koska se on pois-kuvan rajojen päävika (x=2133, x=534).
+2. z10:n joet takaisin kapeiksi ja tummemmiksi; korjaus ei saa muuttaa niitä näin (Marne).
+3. Joet z11 | z12: askel pienemmäksi; z12:n oikean sarakkeen tumma reuna erottuu kaistassa liian vahvana.
+4. Katso Lontoo, Välimeri ja Alpit.
+5. Odota sk-lataus-h:n tulos. Jos ulkopala vain latautuu, kerro se heti.
+iPad JU:n vuorolla: h-z13, l-z13 ja p-z10 sekä tasot 8,6, 9,5 ja 10,4 varjo / pois kulmilla 0°, 19° ja 21°, koko kuvat täysikoossa, ruudukkomitta, muisti. Sano lopuksi yksi suositus: varjo vai pois."
+Tehty tästä: ei mitään. Ei vastausta KK:lle vielä.
+Vihje kohtaan 2 (ei kokeiltu): z10:n joki levisi, koska ve luetaan 5 × 5 -keskiarvosta (PaikallinenRB). Keinoja: pikselin oma R-B kapeille vesille, tai ikkuna vain merelle. Mitta: Marne kaista-ennen.png | kaista-j8.png ylärivi.
+JU 16.5x: sk-lataus-h ei ole vielä ajossa (edellä maakuntarajat, KS 602eee8d1, PK 974f95213). Kansio tulee: proto-3d/lokit/julkaisija-lataus-h-484adb22f, konsoli.txt. Sitten sk-rajat-tasot.
+sk-porras-h b0288fc2e PERUTTU JU:lta, koska koodi muuttuu ja kameralista laajenee. Tee uusi skripti korjausten jälkeen: KK:n lista yllä + NS:n paikat kohdasta 3.
+NS:n kamerat (striimi-sauma/sk-tasainen-kallistus-h.txt): k-z12 = `komento aja 48.8530 2.3350 0.52 2`, kallistus 0 ja 45 (`komento kallista N`); Helsinki h-z13 = `komento aja 60.1699 24.9384 0.26 2`. NS:n varoitus: kortti auki saapumisessa; jos skripti tai kosketus sulkee sen alle 600 s:ssa, elävä kohtaus siirtää kameraa. Lue tulos.md:n loppu ennen skriptiä. NS:n muisti: portti päällä/pois z12 3356/3210 Mt.
