@@ -672,3 +672,7 @@ Jonotti linjalla 1 toisten ajojen takana, ja pysäytin sen kovalla rajalla. Korj
 **Odottaa:** nd20a Codexilla (posti ea2ee210b: aloitti), toimitus /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-nd-puut-20261104/_review-puut-20a/SHA256SUMS. ND-iPad 602eee8d1 JU:n jonossa: f0e → 35b → 602 (16.23); kansio julkaisija-laite-218-602eee8d1 on jo olemassa, mutta siinä on vain käännös, ei kuvia.
 **Vahti kuolee nollauksessa, käynnistä uudelleen:** Monitor: `git fetch origin claude/postilaatikko` (wt/karttaseppa-postilaatikko) 60 s välein, käsitelty ea2ee210b asti, ja `_review-puut-20a/SHA256SUMS`. Yksittäinen fetch-virhe on ohimenevä.
 **Oppi:** zsh:ssa `$T:Assets…` tulkitaan muuntimeksi `:A`; kirjoita `"${T}:Assets…"`. Cherry-pickin ristiriidassa HEAD on ensimmäinen puoli, eli järjestys on eri kuin merge-treessä, jossa annat oman shan ensin.
+
+## LISÄYS 4.11. klo 16.35 (uusin; lue ensin): PT:n päätös
+**Tasankopoltto ei käynnisty nyt (PT):** levy 49 Gi ja siirto T7:lle kesken. Jatkuu vain PT:n sanalla, ja tilantarve on mitattava ennen sitä (ei du:ta koko syvä-kansiosta: se ei valmistunut 6 minuutissa). Tila: pysähtyi levyvahtiin 14.14, syvä 23 %, 115/507 osaa, ketju.virhe olemassa.
+**Nimet 79186922b / ed711573d kuitattu kokeeksi (PT).**
