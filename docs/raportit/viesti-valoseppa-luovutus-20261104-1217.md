@@ -56,3 +56,6 @@ Läiskät: ensimmäinen pari terävästä reunasta, ei poistosta. KK:n moite on 
 ## LISÄYS 7: muistikorjaus EI ole todistettu
 JU:n sk-muisti-z10 7f64cd657:lla (huippu 3702 Mt, lokit/julkaisija-muisti-z10-7f64cd657) oli ylhäältä katsova: lokissa "kerroin 4", ei kallistusta. Se ei toistanut kaatumista eikä käyttänyt korjauksen haaraa; skriptini virhe. Uusi skripti striimi/sk-muisti-z10-kallistus.txt (lokista "kerroin N"). Sama rajoitus koskee c4a5bfafb-ajoa 13.04.
 p-z10: katkonaiset tummat kulmikkaat viivat myös otsikon yli (näkyvät jo kaatuneen ajon p-z9:ssä) ja suorakulmaiset laikut (tarkkuus vaihtuu palan rajalla). Syy mittaamatta; c4a5bfafb:n p-z10 kertoo, ovatko ne striimi-varista.
+
+## LISÄYS 8
+Suora hyppy z17:ään ei kallistanut (julkaisija-muisti-z10k-7f64cd657: 3619 Mt, kerroin 4). sk-muisti-z10-kallistus.txt uusittu: `komento kallista 60` + `komento kallistus` lokiin. JU ajaa 7f64cd657 ja c4a5bfafb, kansiot julkaisija-muisti-z10k60-<sha>. Kelvollinen vain, jos "käytetty" ≥ 30° z10:ssä. Odotus: c4a yli 4080 Mt ja kerroin 4, 7f64 alle ja kerroin 2. Jos c4a ei ylitä, syy on väärä tai osittainen; ÄLÄ raportoi korjausta todistetuksi. Kaatumisajon kallistuksen lähde on selvittämättä (ei komentoa skriptissä, näkyi p-z15:stä alkaen).
