@@ -13,6 +13,8 @@ Asemataulu R6VQFTUNq629zSzah719Uy, työlista kirjattu vuorossa. PR:t 6244 (72ef5
 - 11.42 + 11.49 vapaa maailma, ei reittejä eikä maalia, katot paikoillaan, kamera ja kulku koneen laskemasta kartasta. Raamattu 2.177 kirjattu (09cedb096). Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261104-juoksupeli-vapaa-maailma.md, kohdat A–F.
 - KK 09.21: Remote pois vasta nollauksessa: Raamattu 7.37 ja NOLLAUS.md (72ef5c827). Remote on PT:llä pois; palaa nollauksessa.
 
+- 11.53 tasojen sisältö ja 11.55 ovet auki kaikissa rakennuksissa, kala-allas ja kukkaruukku tason 1 rikkoutuviksi: 2.177:ssä. KK tilasi esineiden kuvat Codexilta. Sisätilojen seuraus odottaa LAV:n sädetestiä, ei jakoa.
+
 ## STRIIMIKARTTA (Pariisi: talot striimikartan muodoista)
 Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261104-striimikartta-pohjaksi.md, MUUTOS 1–3. Arkit ja korttelipinnat seis, Raamattuun (RAKENNUSPERIAATE 1, 2.204) vasta hyväksytystä kokeesta.
 - VS: pelihaara linssiseppa2/striimi-vari e4180ac69 rungolla c4a5bfafb: ei koealuetta, piirros pois, z17:n raidat korjattu, 603/603, Unity silloin todistamatta. iPad-ajo käynnissä 11.46 (lokit/julkaisija-striimi-iso-e4180ac69): Pariisi z11–z17, vieritys, muisti, Lontoo, Helsinki. Kuvat KK:lle, ei junaan.
