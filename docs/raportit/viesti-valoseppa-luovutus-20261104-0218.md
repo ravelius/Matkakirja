@@ -17,3 +17,6 @@ Vastattu PT:lle 02.0x: ei laatta- eikä vientivaihetta, laatat piirtyvät iPadil
 
 ## Työkalut
 k26/aja.zsh <tunnus> 17 15 13. k26/parit.py k26 <tunnus> (z13, z15, ankkuri Luxembourgin allas, 5,4 m/px; kuvaan m/px). pari-gdn: data k22/data-rata, ELAVA_ALUE=66384,45072,66399,45087, rajaus 1560,0 koko 1950×3023 → 852×1320. pari-z17: 2029 k23/pari.jpg:n vasemmasta, k z17.jpg rajaus 496,928 koko 1124×720 (eri mittakaava, merkitse m/px). Overpass kielletty; robots.txt erillisessä komennossa ennen hakua.
+
+## LISÄYS: NS (k24 + 3332c8e15, Mac 640×480, kuvaa ei vielä katsottu)
+z12:lla kermaisia alueita ratapihojen ja hallien kohdalla (esim. Noisy-le-Sec), ne katkeavat suoraan z11-palstarajalla 2,4609 ja puuttuvat z11:ltä. Kuva lokit/esikatselu-20261104-015532/e-0-13.png, x noin 2570, y noin 330–400. NS ei koske ratapihoihin; tämä on VS:n. HYPOTEESI koodista, ei todistettu: landuse-silmukka alkaa z ≥ 12, joten avoinM avaa ratapihan vasta z12:lla, ja k26:n raidenauha alkaa vasta z13:lla, joten z12:n piha jää kermaksi. Tarkista myös, koskeeko tämä koealueen ulkopuolta (2,4609 < 2,4710 + vyö).
