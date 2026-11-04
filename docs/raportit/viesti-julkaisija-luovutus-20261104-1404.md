@@ -57,3 +57,8 @@ Ei muuta ajossa 14.04: L1 ja L2 vapaat, iPad vapaa, simu iPad13 vapaa.
 ## LISÄYS 14.35 (korvaa 14.22:n iPad-kohdan)
 - k29: VIKA 4091 Mt, 29°, kerroin 4; k45 ja sk-striimi-loput seis PT:n sanaan. Kerrottu VS + PT.
 - PT: kulmamittaus samalla koonnilla. k15 ajossa 14.31 (ESISARJA=0 SK_TIED=T/sk-muisti-z10-k15.txt KANSIO_NIMI=julkaisija-muisti-z10k15-e774647ee zsh T/vs-muisti-z10k60.zsh 76391 e774647ee; loki T/vs-muisti-ketju.log). Ylittää 4080 → k7, muuten k22 (skenaariot T/, kansio vastaavasti). Rivi VS + PT kummastakin: huippu, kulma, varjovalinta lokissa, varoitukset. Ajon pitää päästä z10:een, ja kuvat tästä ajosta (vertaa tiivisteet; VIKA tyhjentää jonon). Muita iPad-ajoja ei. "VIKA laheta ui-komento" ilman muuta on ollut harmiton: tarkista konsolista ui-rivit.
+
+## LISÄYS 14.5x (korvaa aiemmat iPad-kohdat)
+- Kulmat e774647ee: 15° 3656, 22° 3850, 29° 4091 Mt VIKA, 54° ilman varjovalintaa 3422 Mt. Kerrottu VS + PT.
+- PT: VS tekee varjovalinta pois ≥ 20°, hystereesi 15°. iPad odottaa VS:n sha:ta, muita iPad-ajoja ei. Sillä käännös (LINJA=<vapaa> ASENNA=0 zsh T/laite-iso.zsh <sha>), sitten k19 (kopio T/sk-muisti-z10-k15.txt:stä kulmalla 19, kansio julkaisija-muisti-z10k19-<sha>), k60 (VS:n sk-muisti-z10-ei-varjoa tai uudempi, kansio z10k60-<sha>), lopuksi sk-striimi-k45 (kansio julkaisija-striimi-k45-<sha>). sk-striimi-loput seis k45:n jälkeiseen PT:n sanaan. Rivi jokaisesta VS + PT: huippu, kulma, varjovalinta, varoitukset, kuvien tiivisteet.
+- Mac: lav-jalustat ajossa (rivi LAV:lle), NUI:n vuoro L2 + simu voimassa (levy 22 Gt, NUI poistaa omat app-kopionsa).
