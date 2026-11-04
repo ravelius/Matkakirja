@@ -45,3 +45,9 @@ Ei ajeta: VS 0d5a75286, 6469e76e7 (hylätty/korvattu). KS 639208872 peruttu.
 - L1: LAV palat uudelleen (T/lav-palat.zsh pid 97252, rivi LAV), VS offline 2d1084b18 + c968fe777, NUI 91bf669af + dbbc2bbea. PK kk3 valmis ja lähetetty.
 - Blender: LAV kk2r-leivonta (T/lav-kk2r.zsh pid 95730, T/lav-kk2r.log). Rivi LAV, kun KK2R VALMIS. Ei toista Blenderiä rinnalle.
 - OPPI: kun pysäytät laitekäännöksen TERMillä, laite-sha:n trap ei vapauta linjalukkoa. Tarkista lukon pid; kuollut oma lukko saa poistaa.
+
+## LISÄYS 19.5x (uusin; korvaa edelliset jonot, tarkista T/jono-20261103-ilta.txt)
+- Valmis ja lähetetty: pari 2 (d9c 4003 OK; 789 VIKA 4122) → PT, PK. Seinä 789 PERUTTU (PK pyytää junakelpoisella rungolla). LAV palat, kk2r-leivonta, KS 8be Mac.
+- iPad: T/ipad-loppujono.zsh pid 12564: KS 8be6819db (rivi KS) → VS 672f4f9d1 (rivi VS). Tulokset T/vs-muisti-ketju.log.
+- Mac: L2 KS 48e4a5921 sk-nahtavyysalue (T/ks-nahtavyys.log, kansio julkaisija-nahtavyysalue-48e4a5921, rivi KS). LAV kansipari (T/lav-kansi.log, KANSIPARI AJETTU → LAV), sitten kk2r-pari (T/lav-kk2r-pari.log, KK2R-PARI AJETTU → LAV). NUI 91bf669af + dbbc2bbea (NUI ilmoittaa).
+- VS offline2 85d57c0e7: T/vs-offline2.zsh pid 27170 odottaa loppujonoa; L1, kansio rivinä VS (T/vs-offline2.log). A ja B perutut.
