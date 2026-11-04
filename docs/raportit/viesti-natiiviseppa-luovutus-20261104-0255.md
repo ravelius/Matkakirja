@@ -58,3 +58,6 @@ karttaseppa/pariisi-nimet-220 kärki nyt 932078810 (korvaa 498ce79dd:n): 0,21:n 
 
 ## LISÄYS 04.15 (PT 04.13, KK 04.12)
 **Puutarhat nimien alle ff97c7f8c** = a6c11c1d2 + 1 irrotettava commit, haara natiiviseppa/puutarha-nimien-alle-a6c (natiivi-backup), worktree wt/proto-natiiviseppa-maskik4. KarttaesineSaanto.EsineJono: ryhmä puutarha jonoon 2994, Nimikerros 2995 ennallaan, muut lajit ennallaan. Kartta-testit 613/613; Unityssä kääntämättä, kuvaa ei ole. Vaikutus vain pariisi.json:iin (ainoa esinedata, ainoa puutarha-ryhmä). Nimipeite voi yhä siirtää nimiä puutarhoista: katso e-0-13, kun JU antaa kansion. Ei junaan. PT:lle ja JU:lle kerrottu 04.15. Työpuu oli ennen haarassa natiiviseppa/haivytys-k24-218 (kärki f5c1f14b0).
+
+## LISÄYS 04.16 (PT: pinnan jono)
+ff97c7f8c: pinta Pallo.mat 2000, läpinäkymätön, joten puutarhat 2994 piirtyvät sen päälle (luettu tiedostoista, ei ajettu). Piirros 3050 on koodin kommentin mukaan pois koealueella; Karttataivas 3050 vain usvarajan yläpuolella. Varmistus JU:n e-0-13:sta. KS: tumma ruudukko Champ de Marsilla on pensasaidat, ei vika.
