@@ -19,7 +19,7 @@ Tiedot: _tyo/natiiviseppa/aluekuva-koko/tasainen-koe-havainto.md (ennuste kirjat
 - **Ei tarkistettu:** ei käännetty (ei omaa käännöstä, vuoro JU:lta). Mahdollinen sudenkuoppa: paikallinen siirto olettaa pääkameran mittakaavan 1.
 
 ## Odottaa
-1. **PT:n päätös ajon paikasta** (pyydetty klo 10.41, ehdotus k34:n jälkeen). Sitten JU: sk-tasainen-koe.txt runko 8b9cfbbb6. Kuvat t-keski-0-13/-12/-14, t-siirto-0-13, t-lohko-0-027/-030/-034, kontrolli t-lohko-0-034-pois.
+1. **PT hyväksyi ajon k34:n jälkeen, JU tietää.** Koe 8b9cfbbb6 kelpaa vain, jos kuvat pitävät eikä muisti ylitä 4080 Mt:n rajaa; muisti on ensimmäinen hylkäysperuste (PT). JU: sk-tasainen-koe.txt runko 8b9cfbbb6. k34 kaatui 10.34 error 22:een ja on jonossa PK:n c4a-lentojen ja valikko-kokeen jälkeen. Kuvat t-keski-0-13/-12/-14, t-siirto-0-13, t-lohko-0-027/-030/-034, kontrolli t-lohko-0-034-pois.
 2. **Katsottava:** rivi168-taulu.py ja -kartta.py uusille kuville (muuta nimet KUVAT-listaan), vertaa m-*-kuviin. Muisti (raja 4080 Mt), kuva-loki (montako piirtoa lisää). Vieritys vain, jos kuvat pitävät. Koko ruutu tarkentuu kerralla: katso, näkyykö lataus.
 3. **Jos pitää:** rivi PT:lle hinnasta; poimittavissa yhdistelmään. **Jos ei:** z13-koe palaa ja rivi PT:lle (PT:n käsky -0935).
 4. **Vieritys k34 ja palan piirtokulu** JU:lla, ajo alkoi noin 10.30 (8dee95d57): erittely -0935:n kohdan 2–3 mukaan, rivi PT:lle ja VS:lle. Ei korjausta ennen erittelyä.
