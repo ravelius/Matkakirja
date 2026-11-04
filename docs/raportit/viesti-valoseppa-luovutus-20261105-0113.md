@@ -27,3 +27,12 @@ Syy: konteksti 25 %, pehmeä raja (Raamattu 7.37). Edellinen: viesti-valoseppa-l
 - pura_vesi.py: OuterRingillä ei ole envelope()-metodia; korjattu ja testattu. vertaa_alueet.py: yhteinen alue x 583–587.
 - Skriptaamaton iPad-koe: JU ajaa ilman konsolia (--console antoi error 22), konsoli.txt koottu L-riveistä; kuva-loki.txt ja ui-loki.txt loppuvat varhain.
 - Asemataulua ei päivitetty: kokeet eivät ole junassa.
+
+## Lisäys 1 (KK 01.1x): KORVAA kohdan SEURAAVAKSI järjestyksen
+KK: omistaja haluaa ulkonäön ensin (22.41), järvet ovat kartan pahin näkyvä vika. Järjestys: 1) järvien korjauskoe, 2) valtionraja, Alpit, tasorajat, 3) verkon palautus, joka on yhä tehtävä ennen seuraavaa junaa. Verkon palautusta EI aloiteta vielä.
+Järvien koe:
+- Aineistotulos riittää suunnaksi. Älä jää selittämään vöitä: kokeile suoraan pohjan z9–z10 vesi OSM:stä pienellä alueella (Keski-Suomi, Saimaa), ensin Macilla.
+- Tavoite: sama järvi joka korkeudella, ei suorakulmiota, ei haamulaikkuja, ei vöitä. Jos vöitä jää, selitä ne vasta sitten.
+- Pari KK:lle: nykyinen | koe samoista kohdista t105, t110, t113 ja t115, täysikoossa. Kerro, näkyykö ero kummallakin piirtotavalla.
+- Ei muistilukuja. Koko Euroopan poltto ja iPad-ajo vasta, kun pari kelpaa. Uusi poltto uuteen kansioon ja TasoVersioon; KK:n mukaan tähän ei tarvita mediavientiä.
+Aineisto: striimi/jarvet/renkaat.npz (11 aluetta, sisältää Keski-Suomen ja Saimaan; alueet.json) ja pohja/<alue>/. jarvet.osm.pbf on poistettu T7:ltä: Euroopan polttoon suodatus uudelleen (suodata_vesi.py, noin 80 min). Hypoteesi kohdassa 2 jää kokeen jälkeen tarvittaessa.
