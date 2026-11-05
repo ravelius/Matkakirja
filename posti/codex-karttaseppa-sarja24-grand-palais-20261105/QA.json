@@ -1,0 +1,239 @@
+{
+  "taskNumber": 2092,
+  "site": "grand-palais",
+  "completedAt": "2026-11-05T14:49:04.260024+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Bounding rectangle of pixels with RGB max-min>10, excluding neutral backdrop; end coordinates exclusive. Main cornice visually identified on full-resolution QA crops, uncertainty3px. Dimensions include minor roof ornaments; not3D calibration.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "bbox": [
+        107,
+        319,
+        1429,
+        733
+      ],
+      "width": 1322,
+      "height": 414,
+      "groundY": 732,
+      "corniceY": 580,
+      "corniceHeightPx": 152,
+      "corniceMeasurementUncertaintyPx": 3,
+      "targetWidthHeightRatio": 3.533333333333333,
+      "actualWidthHeightRatio": 3.1932367149758454,
+      "ratioErrorPercent": -9.625375991249651,
+      "ratioPass5Percent": false
+    },
+    {
+      "view": "pohjoinen",
+      "bbox": [
+        180,
+        452,
+        1356,
+        825
+      ],
+      "width": 1176,
+      "height": 373,
+      "groundY": 824,
+      "corniceY": 692,
+      "corniceHeightPx": 132,
+      "corniceMeasurementUncertaintyPx": 3,
+      "targetWidthHeightRatio": 3.533333333333333,
+      "actualWidthHeightRatio": 3.1528150134048256,
+      "ratioErrorPercent": -10.769386413070968,
+      "ratioPass5Percent": false
+    },
+    {
+      "view": "ita",
+      "bbox": [
+        46,
+        409,
+        1491,
+        685
+      ],
+      "width": 1445,
+      "height": 276,
+      "groundY": 684,
+      "corniceY": 574,
+      "corniceHeightPx": 110,
+      "corniceMeasurementUncertaintyPx": 3,
+      "targetWidthHeightRatio": 5.333333333333333,
+      "actualWidthHeightRatio": 5.2355072463768115,
+      "ratioErrorPercent": -1.8342391304347783,
+      "ratioPass5Percent": true
+    },
+    {
+      "view": "lansi",
+      "bbox": [
+        46,
+        409,
+        1489,
+        685
+      ],
+      "width": 1443,
+      "height": 276,
+      "groundY": 684,
+      "corniceY": 574,
+      "corniceHeightPx": 110,
+      "corniceMeasurementUncertaintyPx": 3,
+      "targetWidthHeightRatio": 5.333333333333333,
+      "actualWidthHeightRatio": 5.228260869565218,
+      "ratioErrorPercent": -1.9701086956521618,
+      "ratioPass5Percent": true
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 11.689351481184948,
+      "pass5Percent": false
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 0.13850415512465375,
+      "pass5Percent": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 33.33333333333333,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 140,
+  "obliques": {
+    "southwest": {
+      "edgePoints": [
+        [
+          113,
+          530
+        ],
+        [
+          591,
+          976
+        ],
+        [
+          1425,
+          700
+        ]
+      ],
+      "method": "Approximate orthographic angle from product of two perpendicular ground-edge slopes; ideal sin(elevation)=sqrt(abs(m1*m2)). Beveled corners and generated perspective limit accuracy.",
+      "estimatedSinElevation": 0.5556802953050335,
+      "estimatedElevationDegrees": 33.75758462277828,
+      "uncertaintyDegreesApprox": 4,
+      "targetSin": 0.9063077870366499,
+      "pass": false
+    },
+    "northeast": {
+      "pass": false,
+      "reason": "Head-on facade view, not opposite corner; roof/courtyard layout changed. Corner-projection metric not valid."
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      639,
+      320,
+      897,
+      704
+    ],
+    "actualBBox": [
+      634,
+      323,
+      899,
+      725
+    ],
+    "exactFootprintPass": false,
+    "northUp": true,
+    "sourceDirectionConflict": "Table says89deg clockwise fromN, but image long edge is nearlyN-S. Followed authoritative footprint PNG."
+  },
+  "ground": {
+    "footprintPixels": 95912,
+    "grassLikePixels": 3102,
+    "notGrassFraction": 0.967657853031946,
+    "sourceFootprintBBox": [
+      639,
+      320,
+      897,
+      704
+    ],
+    "metresPerPixelApprox": 0.9992072927806909,
+    "coverageMetric": "Heuristic grass-color exclusion, not semantic proof of paving",
+    "pavingFullFootprintPass": false,
+    "pathSamples": [
+      {
+        "axis": "y",
+        "position": 1100,
+        "start": 529,
+        "end": 537,
+        "widthPx": 9,
+        "widthMetresApprox": 8.992865635026218,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 180,
+        "start": 800,
+        "end": 808,
+        "widthPx": 9,
+        "widthMetresApprox": 8.992865635026218,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 490,
+        "start": 901,
+        "end": 909,
+        "widthPx": 9,
+        "widthMetresApprox": 8.992865635026218,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 550,
+        "start": 534,
+        "end": 542,
+        "widthPx": 9,
+        "widthMetresApprox": 8.992865635026218,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      }
+    ],
+    "sourceParkLayoutPreserved": false,
+    "outsidePixelIdentityVerified": false,
+    "receiverMustCompositeMaskOnly": true
+  },
+  "visualIssues": [
+    "Opposite oblique changes building layout and is notcorner-on.",
+    "SW elevation below65degrees.",
+    "North/south width-height ratio and common scale fail.",
+    "Top footprint bounding box shifted and enlarged.",
+    "Ground paving does not cover entire supplied footprint; park divisions changed."
+  ],
+  "photoReceipt": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roof_of_Grand_Palais_(exterior)_PA00088877.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Roof_of_Grand_Palais_%28exterior%29_PA00088877.jpg",
+    "author": "Ibex73",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "photoDate": "2017-09-16",
+    "sourceRevision": "1277739435",
+    "sha256": "6ac8e0c56cddea47b360b6c4639611e84fbfaf2c0522c7a44adc82b8c5df9b58",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "modified": false,
+    "verifiedAt": "2026-11-05T14:18:05.400357+00:00"
+  },
+  "noAutomaticRetry": true
+}
