@@ -257,3 +257,7 @@ Vaihdetaanko tänään päätilille? = vaihdetaan nyt. Mihin asti päätiliä sa
 ## TILINVAIHTO PÄÄTILILLE (5.11.2026 klo 17.22)
 
 Omistaja 5.11. 17.05 ja 17.06: tilinvaihto päätilille org f04011ee, raja 92 %. Uusi PT local_cf5b4eca. Samat sessiot tyhjennettyinä (clear), viestillä 'kutsu clear_session self', list_events 0 tarkistettu: KK, Postivahti, Asemataulu, JU, NS, NUI, PK, VS, KS, LAV. Id:t paivita-idt.mjs:llä. Viikko 16 % vaihdon alussa. Löydös: Postivahdin kansio oli koti-haarassa, josta KIERROS.md ja NOLLAUS.md puuttuivat juuresta; Postivahti palasi haaraan postivahti (944e80bad). Pieni iPad 9e8c8ab1e ei ollut asentunut vaihdossa; JU:lle ensimmäiseksi työksi.
+
+## KK:N ID PÄÄTILILLÄ (5.11.2026 klo 17.34)
+
+Omistajan kortti 5.11. 17.32: KK:n id local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe lisätty ~/.claude/CLAUDE.md:hen päätilin riville (KK teki omistajan luvalla). Tilinvaihto valmis 17.34: tarkistus 0, ohjeiden koe 10/10.
