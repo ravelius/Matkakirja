@@ -29,6 +29,11 @@ Bussilla Pariisiin (lokit/natiiviseppa-william-fcba229ca, rivit 3061–3527): zo
 6. Testit: kaanna.sh "Aloitusintro|Pallo|Opas|Pysahdys|LahtoLaatat|Kierros|Museo", unity-tarkistus (tarkista.sh muuttaa tyylikirjan kolme tiedostoa: git restore ennen committia; Valovahti-rivit eivät ole omasta muutoksesta).
 7. Ajo: _tyo/natiiviseppa/pallo-aloitus/sk-aloituslento-reitti.txt (`ui aloita pariisi lento`) on pohja. Lisää kuvasarja kierron ajalta, William päällä, esityksen lopussa ja Pulun alussa, sekä `linssi soivat`. sk-william-esitys.txt on vanhentunut, ei ajeta. Mittari: "aloituslento Lontoo", "traileri", "puhe alkaa", "nykyintro", "livia:", "musiikki taso" (puhujia), "aani: soivat". Ajo ei kuuntele: kuuluvuus vain lokista ja soivat-rivistä, sanotaan viestissä.
 
+## Toinen työ rinnalla (PT, KK 20.27; ei aloitettu, ei selvitetty)
+Omistaja katsoo karttaa jatkossa 45°:sta, joten sen tarkkuus täytyy voida arvioida. Havainto: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-6bb2744d4-45/nimisaanto-keski-45.png: suora vaakasauma, yläpuolella kartta vaaleampi ja sumeampi. Syy voi olla Mac-ajon 640×480-tasovalinta (yli 20°:ssa SiirtymaEste), EI varmistettu.
+Tarvitaan: 1) yksi keino saada Mac-kuviin iPadin tasovalinta myös 45°:ssa (esim. koehaaran LiikeLaatatPaatos.SiirtymaKallistusRaja; vain kuvausajoon, pelin käytös ei muutu; huom. osa-b-kallistus-skenaarion kommentti ja "maasto sse 5 ei käy"); 2) vastaus, onko sauma pelin vika vai kuvausharha.
+Ei omaa ajoa: samaan JU-pyyntöön aloituslennon kanssa. Tulos KK:lle täysikoon kuvineen ja rivi PT:lle. Saumat täysikoossa ennen "en näe" -arviota.
+
 ## Muut
 - JU: d369d4aab peruttu; sk-aloituslento-reitti pysäytetty kesken 20.26, ei tulosta. JU odottaa yhteistä uutta pyyntöä. sk-william-esitys ehti valmistua (lokit/natiiviseppa-william-esitys-d369d4aab, 4 kuvaa, kuvia ei katsottu): uusi-peli-reitillä William alkaa ja loppuu 4,15 s esityksen alusta, esitys loppuu 15,5 s, luenta vasta sen jälkeen; ei päällekkäisyyttä. Ei todista aloituslentoa eikä kuulokuvaa.
 - Kysy-vastauksen hiljaisuus: testitunnuksen syy (worker.js oppaanAani, tests/opas-keskustelu.test.mjs:76), PT kuittasi, ei maksullista varmistusta.
