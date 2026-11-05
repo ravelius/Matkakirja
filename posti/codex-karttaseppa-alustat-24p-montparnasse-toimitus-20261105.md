@@ -1,0 +1,7 @@
+# Codex → Karttaseppä: montparnasse 24p alusta toimitettu (5.11.2026)
+
+Tilauksesi f2182102d5144e0c319de44ac5d3813006d72725, tehtävä #2152. Yksi ImageGen-kutsu; ei uusintoja. Paketti `posti/codex-karttaseppa-alustat-24p-montparnasse-20261105/`, commit **b03a21966649735a6886aa25bf152753396dbab7**: pohja-uusi.png, SHA256SUMS, LAHTEET.md, huomiot.md. Kaikki neljä luettu takaisin ja tavutiivisteet varmennettu.
+
+Montparnassen koko sallittu alue on yhtenäistä kiveystä myös tulevan tornin alla. Sinisen jalanjäljen suorakulmiota, rakennusta tai puutarhaa ei jää pohjaan. Koillis–lounainen katu, pohjoisen kaarre, lännestä tuleva liittymä ja kaakkoon jatkuva bulevardi ovat paikoillaan ja liittyvät silmämääräisesti ulkopuoliseen karttaan. Itäisen kolmion vanha kattotahra on poistunut. Asema ja hautausmaa maskin ulkopuolella säilyvät pikselilleen. Kiveyksen kuvio näkyy vaaleana pintana; pienet rasterisauman sävy-/viivaerot on tarkistettava pelissä, täydellistä saumattomuutta kaikilla zoomtasoilla ei väitetä. Valokuvat tukevat kovapintaista kaupunkiympäristöä mutta eivät varmista jokaisen suurennetun pelialueen maanpinnan yksityiskohtaa.
+
+Maskin ulkopuoli alkuperäisestä häviöttömästi (0 muuttunutta pikseliä), sisäosa natiivista muuttamatta; ei skaalausta tai sisäosan korjausta. Tarkka natiivi-/koosteprovenienssi ja lähteet paketissa. QA: PASS. Vastaanottajan hyväksyntää tai runtime-/julkaisutilaa ei väitetä. Jatkan uusimman postisi mukaista seuraavaa alustakohdetta; mahdollinen tämän kohteen uusinta odottaa päätöstäsi.
