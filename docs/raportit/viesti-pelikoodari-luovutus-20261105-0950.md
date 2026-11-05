@@ -47,3 +47,12 @@ Seuraavaksi: katso 233; jos ehjä, aja kaikki ovet samalta rungolta arkkia varte
 ## Lisäys 5.11. klo 10.2x: muistisarja
 789 s1 kelpaa (`muistivahti.log`: 10.04.48.8 komennot ohitettu (VIKA)). Huiput lokista: 789 4122–4130 Mt (3 ajoa, kaikissa VIKA ja vain 1 lento, toinen mittaamatta), d9c 4003–4009, 314 s1 3825. Tulos-tiedoston 4084 on vain ylitysrivi. JU kokoaa sarjan.
 Sarjan jälkeen `muisti-ovet/lahtotaso.zsh`: `odota_lento` odottaa turhaan 240 s VIKAn jälkeen ja kirjoittaa harhaanjohtavan rivin; `laheta` ei uusi lähetystä. Älä muokkaa sarjan aikana.
+
+## Lisäys 5.11. klo 10.2x: kartta v18, lista 234 JU:lla
+Runko `b70eb3e9a`, kartta v18 (`Resources/JuoksuOvet.json` = v18). Lista 234 JU:lla, 13 kuvaa; kansio tulee riviksi.
+Katsottu 233 (`lokit/tarkastelukuvat-430edc9d1-101448`), täysikoossa 6: 益寿斋 hyvä; 四执库:n piikki poissa; 东长房 hyvä; 储秀宫 hyvä; `ovi-益寿斋-edesta` kamera on rakennuksen sisällä, älä käytä. 重华宫 ja 体元殿: lehden alaosan peittää lattia, ja reunan yli näkyy punainen kaistale (kiila).
+Syy mitattu: oven y on 0,25 m:n ruudussa, oikea lattia kolmioista: 体元殿 y 0,25 / lattia 0,458, 重华宫 0,322, 四执库 0,356. 151/245 ovella ero yli 3 cm, suurin 0,41.
+Korjaus `tyokalut/ovi_y.py`: ajetaan `kulkukartta.py`:n jälkeen ja ennen `tayte_valo.py`:tä (y, syv, tkork, pn). v17 → v18: 160 ovea, sijainnit samat. 益寿斋 (`oma-ovi`) ei mukana: lehti 90°, muuten osuisi portaan pylväisiin. Jätetty: 金银器馆, 珍宝馆, 小房9, 浴德殿 (ei pintaa), 房子25 (kapea 0,25, nosto 0,34).
+Katsottava 234:stä: 重华宫, 体元殿 ja 四执库 ehjät? Nousseet ovet: 房子26, 皇极殿, 中正殿, 钟表馆, 武英殿, 永和宫: osuuko kamana räystääseen, näkyykö täytteen yläreuna. 储秀宫:n syv on nyt 0,1 (lehti 11°): katso.
+Riski: täytteen tkork alle 3: 上书房, 颐和轩, 丽景轩, 房子7, 公共厕所 (katso arkista).
+Jos ehjä: kaikki ovet samalta rungolta (lista JU:lle), arkki KK:lle (kohta 5, kerro myös v18 ja 益寿斋:n siirto). Muistisarjan rivit JU:lta eivät vaadi muuta.
