@@ -2,6 +2,9 @@
 
 Korvaa -2222:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Cron "4 9 * * *" unity-julkaisut.py uudelleen (7.41).
 
+## PT 23.2x (sitova)
+Yötila: omistaja nukkuu, kysymykset PT:lle, ei KK-kortteja. Ateenan kamera SULJETTU (KK, Raamattu 2.136): kärki c963641f5 ilman korjausta, älä palauta 37fa268e4:ää, ei käsitellä enää. Alkuosan ajastinvika korjataan yhä ennen junaa. Marais: jatka KK:n korjauksilla, sitten osa C; AAMULLA kuvat KK:lle omistajaa varten.
+
 ## SEURAAVA TYÖ: katso JU:n ajo 30e34cc9e
 Lokikansio natiiviseppa-marais-30e34cc9e, skenaario _tyo/natiiviseppa/marais/sk-marais-korjaus.txt, 3 kuvaa (k1 kauko, k2 keski-0, k3 keski-180). JU kertoo polun. Ei iPadia, ei junaan.
 
