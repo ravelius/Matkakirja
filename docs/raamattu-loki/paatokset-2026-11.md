@@ -413,3 +413,7 @@ jälkeen?", omin sanoin): "Tehdään ensin Pariisi loppuun": ei päätöstä kok
 ## OHJELMANA MUITA RAKENNUKSIA PARIISIIN (OMISTAJA 22.04, KK) (5.11.2026 klo 22.06)
 
 OMISTAJAN PYYNTÖ klo 22.04: "Tee muita rakennuksia sillä ohjelmalla  Pariisiin. Onnistuuko?" KK:n tavoite: Pariisi tuntuu täydemmältä oikeilla rakennuksilla oikeissa paikoissa, kun liioitellut nähtävyydet erottuvat niistä. KK kysyy laajuuden ja listan kortilla, sitten osat PT:lle jaettavaksi. VS jatkaa nyt vain kolmen kohteen vikoja. Aikaistaa Pariisissa sarjan suunnitelman kohdan "muut pienet kohteet nykyisiksi, kunnes luokat on päätetty"; muiden kaupunkien luokat ja Lontoo odottavat ennallaan. Muuttaa 2.213:a.
+
+## PARIISI: MYÖS TAVALLISET TALOT OHJELMALLA, ENSIMMÄINEN ERÄ (OMISTAJA 22.09, KK) (5.11.2026 klo 22.10)
+
+OMISTAJAN PÄÄTÖS klo 22.09 (kortti, pyynnöstä 22.04): "Tehdäänkö ohjelmalla vain nimettyjä rakennuksia vai myös tavallisia taloja?" = "Myös tavalliset talot"; selite "Kortteleita 3D:nä nähtävyysalueiden ulkopuolella"; KK suositti vain nimettyjä. "Kelpaako ensimmäinen erä?" = "Kelpaa (Suositus)": keskustan sillat, Madeleine, Palais Bourbon, Pompidou-keskus, Tour Saint-Jacques, Saint-Eustache, Saint-Sulpice. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261105-pariisi-rakennukset-ohjelmalla.md. A nimetyt: Valoseppä kolmen kohteen vikojen jälkeen. B talot: yksi neliökilometri kokeena Marais:sta, Karttaseppä varmistaa rajan alueisiin; kuva, KK, omistajalle ja kortti ennen koko Pariisia; lelumainen tai kadut peittävä = tyyli ensin. Ei junaan, sarja ei saa hidastua.
