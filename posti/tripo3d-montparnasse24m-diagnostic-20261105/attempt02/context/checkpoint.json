@@ -1,0 +1,130 @@
+{
+  "status": "ATTEMPT02_QA_FAIL_REPORT_PREPARATION",
+  "updatedAt": "2026-11-05T19:03:10.743313+00:00",
+  "creditsUsed": 90,
+  "sourceImagesUnmodified": true,
+  "intakePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/intake.json",
+  "noRetryOnRoofFailure": true,
+  "qualityAccepted": false,
+  "completedTripoJobs": [
+    {
+      "id": "b6158244-a091-442e-83a0-7df3b66790b9",
+      "attempt": 1,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T18:29:24.481711+00:00",
+      "estimatedCompletion": "2–5 minutes; observed14%",
+      "credits": 45,
+      "balanceBefore": 15780,
+      "balanceAfter": 15735,
+      "mapping": {
+        "Front": "etela.png",
+        "Back": "pohjoinen.png",
+        "Left": "lansi.png",
+        "Right": "lansi.png"
+      },
+      "duplicateSideImageAccepted": true,
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T18:31:09.948720+00:00",
+      "rawSHA256": "1ab785510e776900aa525e59df470d9f02ecf056fb94960e41ede4b53aa023f6",
+      "rawFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/raw/montparnasse24m-attempt01-raw.glb"
+    },
+    {
+      "id": "29e4477e-5acb-4d89-9841-0adabff44e65",
+      "attempt": 2,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T18:59:15.316091+00:00",
+      "estimatedCompletion": "2–5min; observed13%",
+      "credits": 45,
+      "balanceBefore": 15690,
+      "balanceAfter": 15645,
+      "authorization": "34bc5c032065466afcc9318c0ded22938f25fe52",
+      "mapping": {
+        "Front": "viisto-lounas.png",
+        "Back": "viisto-koillinen.png",
+        "Left": null,
+        "Right": null
+      },
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T19:01:02.175082+00:00",
+      "rawFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/raw/montparnasse24m-attempt02-raw.glb",
+      "rawSHA256": "ed17bcf7bb81f186843ac88f4476060dcf9a6ba9e712aa863e2323b05def070a"
+    }
+  ],
+  "activeTripoJobs": [],
+  "failure": {
+    "roof": "empty flat brown cap; pale rim and central ring absent",
+    "facade": "wood-grain brown broad ribs instead of dark bronze glass with thin dense vertical lines",
+    "depthWidth": 0.7469308443161228,
+    "depthWidthTarget": 0.63,
+    "depthWidthTolerance": 0.05,
+    "depthWidthDeviationPercent": 18.560451478749652,
+    "heightWidth": 3.3864794449540194,
+    "heightWidthTarget": 3.39,
+    "heightWidthDeviationPercent": -0.10385118129736526,
+    "decisionRequired": "Need decision on better source images/roof reference before any retry or retopology."
+  },
+  "diagnosticPackage": "diagnostic/attempt01",
+  "mailboxDraft": "mailbox/attempt01-report.md",
+  "retryOrRetopoAllowed": false,
+  "deliveryReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/mailbox/attempt01-delivery-receipt.json",
+  "nextAction": "Send diagnostic to Karttaseppa/KK; await decision before third attempt.",
+  "cancellation": {
+    "sourceCommit": "9ad1fc29d0355bc97dbb82b2a32e372bff4cc7c2",
+    "ackCommit": "181deae6e8d7349153b80ee7872de1d5976fee07",
+    "secondAttemptStarted": false,
+    "newJob": null,
+    "newCredits": 0,
+    "observedBalance": 15690,
+    "proof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt02-cancelled-before-generation.png"
+  },
+  "authorization2142": {
+    "commit": "34bc5c032065466afcc9318c0ded22938f25fe52",
+    "blob": "00c8b593e8006679bb58eb9c8dbf3b2a2d49f789",
+    "sourceReadFully": true,
+    "supersedesCancellation": true,
+    "attemptLimit": 2,
+    "sourceHashesVerified": true,
+    "noDuplicateEvidence": "Prior cancel log0jobs0credits; currentAssets newestSacre20:36 then Montattempt01 20:28; balance15690 unchanged.",
+    "mapping": {
+      "Front": "viisto-lounas.png",
+      "Back": "viisto-koillinen.png",
+      "Left": null,
+      "Right": null
+    }
+  },
+  "secondAttemptQA": {
+    "allSevenFullSizeViewed": true,
+    "roof": "ring and edge returned; roof better than first",
+    "facade": "dark wood-like panels and visibly wavy ridges; not convincing glass facade",
+    "ratios": {
+      "heightWidth": 1.7762761015800816,
+      "heightWidthTarget": 3.39,
+      "heightWidthDeviationPercent": -47.60247487964361,
+      "depthWidth": 0.4902918918304256,
+      "depthWidthTarget": 0.63,
+      "depthWidthDeviationPercent": -22.17589018564673
+    },
+    "rotationYDegrees": 85.75,
+    "uniformScale": 320.60396176927776,
+    "noNonUniformStretch": true,
+    "noRetopology": true
+  }
+}

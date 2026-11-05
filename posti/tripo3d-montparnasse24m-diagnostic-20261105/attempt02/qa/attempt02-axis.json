@@ -1,0 +1,31 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/raw/montparnasse24m-attempt02-raw.glb",
+  "vertexCount": 29539,
+  "searchStepDegrees": 0.25,
+  "method": "minimum exact XZ axis-aligned bounding-box area over rigid Y rotations",
+  "angleConvention": "xPrime=x*cos(a)+z*sin(a); zPrime=-x*sin(a)+z*cos(a)",
+  "selected": {
+    "rotationYDegrees": 85.75,
+    "widthX": 0.552083009277901,
+    "depthZ": 0.2706818230662965,
+    "area": 0.14943883543526934,
+    "longAxisOnX": true
+  },
+  "equivalentAmbiguity": "undirected principal axis: yaw and yaw+180 degrees are equivalent; area minimum also has a yaw+90-degree swapped-axis solution, rejected if that places the long dimension on Z.",
+  "minimumCandidates": [
+    {
+      "rotationYDegrees": 85.75,
+      "widthX": 0.552083009277901,
+      "depthZ": 0.2706818230662965,
+      "area": 0.14943883543526934,
+      "longAxisOnX": true
+    },
+    {
+      "rotationYDegrees": 175.75,
+      "widthX": 0.27068182306629657,
+      "depthZ": 0.552083009277901,
+      "area": 0.14943883543526937,
+      "longAxisOnX": false
+    }
+  ]
+}

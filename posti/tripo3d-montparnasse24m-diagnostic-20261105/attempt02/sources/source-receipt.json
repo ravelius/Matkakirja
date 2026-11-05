@@ -1,0 +1,29 @@
+{
+  "commit": "2bd4c4bd4025379013613f590537fd55d17464d1",
+  "files": [
+    {
+      "path": "posti/codex-karttaseppa-montparnasse-otto2-20261105/SHA256SUMS",
+      "blob": "cad3b76d22e85c83e8052bb3848ba24483c1c566",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/attempt02/SHA256SUMS",
+      "sha256": "4b89bfe51f828a59cc2e94d2ac4b069dfc1ab3dfbd315965dffac798787b3aea",
+      "bytes": 1272,
+      "readbackByteVerified": true
+    },
+    {
+      "path": "posti/codex-karttaseppa-montparnasse-otto2-20261105/viisto-koillinen.png",
+      "blob": "2aa688bac5fc6f717d25e9e63076cb1cd25bcdfd",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/attempt02/viisto-koillinen.png",
+      "sha256": "d79179b8f99407cf71c054ddb0642f3b4e1450b8079509ce5993c183aa3b8787",
+      "bytes": 1331978,
+      "readbackByteVerified": true
+    },
+    {
+      "path": "posti/codex-karttaseppa-montparnasse-otto2-20261105/viisto-lounas.png",
+      "blob": "27e3cf7d19e49b452b1930c3e5fa6285502c4bc1",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/attempt02/viisto-lounas.png",
+      "sha256": "90f6b8a6bd741529c4dfe70741dd7d82e5f0e2e00518c2725e20a33146329454",
+      "bytes": 1290771,
+      "readbackByteVerified": true
+    }
+  ]
+}
