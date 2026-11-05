@@ -27,3 +27,6 @@ C) Sen jälkeen jono, KORJAUS.md.
 
 ## Jonossa, ei aloitettu (KORJAUS.md; LAV ei ole tarkistanut)
 PK: konsoli, räystään alapinta, marmoriterassin nollatekselit; muurien ja porttien kiertosuunta + V4_gold-räystäs (KK: yksi yleinen korjaus generaattoriin, ei omaa ajoa, ei junaan); lähikoristeiden mitat h-zhongyoumen ja h-zhongzuomen; valkoinen viiva (13; -407) ja pystysauma; (-87,5; 302,5). S-rengas-itän harmaa vino levy. Vaakalevyt ilmassa x -420, pysty harmaa levy ja sälö x -60, puita ilman tyveä x 136 ja x 300.
+
+## Lisäys 20.1x: ND ensimmäinen ajo katsottu
+Muuri liian tumma (57/61/79, kuvat-kivi19). KIVI nyt [.45,.44,.42], paketti uudelleen rakennettu, toinen ajo pyydetty JU:lta aja21:n jälkeen (N/kuvat). Vaste ei ole lineaarinen, joten haarukoi. Nurmi hyvä. Aukion hajontamittaus puuttuu: mittaa puhtaalta alueelta. Polku rannalla kirkas, ei tilattu. KORJAUS.md:ssä.
