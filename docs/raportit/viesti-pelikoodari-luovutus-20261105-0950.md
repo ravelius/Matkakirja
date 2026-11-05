@@ -56,3 +56,8 @@ Korjaus `tyokalut/ovi_y.py`: ajetaan `kulkukartta.py`:n jälkeen ja ennen `tayte
 Katsottava 234:stä: 重华宫, 体元殿 ja 四执库 ehjät? Nousseet ovet: 房子26, 皇极殿, 中正殿, 钟表馆, 武英殿, 永和宫: osuuko kamana räystääseen, näkyykö täytteen yläreuna. 储秀宫:n syv on nyt 0,1 (lehti 11°): katso.
 Riski: täytteen tkork alle 3: 上书房, 颐和轩, 丽景轩, 房子7, 公共厕所 (katso arkista).
 Jos ehjä: kaikki ovet samalta rungolta (lista JU:lle), arkki KK:lle (kohta 5, kerro myös v18 ja 益寿斋:n siirto). Muistisarjan rivit JU:lta eivät vaadi muuta.
+
+## Lisäys 5.11. klo 10.31: 234 katsottu, lista 235 JU:lle
+`lokit/tarkastelukuvat-b70eb3e9a-102348`, 13/13 täysikoossa, runko `b70eb3e9a`, kartta v18. Kiila poissa: 重华宫, 体元殿. Ehjät: 四执库, 储秀宫 (lehti 11° seinän myötäisesti), 东长房, 西暖殿, 益寿斋. Nousseet ovet ehjät: 房子26, 皇极殿, 中正殿, 钟表馆, 武英殿, 永和宫: kamana ei osu räystääseen eikä täyte näy yli. Ei uusia ovivikoja. 房子26:n kuvassa jalustan vino reuna ja 皇极殿:n nauha ovat mallin, eivät ovien.
+Lista 235 (`f1be6b358`: vain listatiedosto kärkeen, koodi kuin `b70eb3e9a`): 51 ovea = 226:n 41, 234:n 13 ja 体元殿, 长春宫, 咸福宫, 钟粹宫, 上书房, 颐和轩, 丽景轩, 房子7, 公共厕所. Kamerat `ovikuvat.py` v18:lta; 234:n 13 sellaisenaan. 凝香亭 viimeisenä, koska se jää odottamaan pitkissä listoissa. Generaattori oli istunnon väliaikainen skripti; tulos on listatiedostossa.
+Seuraavaksi: JU:n rivi → riskiviisi (tkork alle 3) ja 绥寿殿, 长春宫戏台 (kamera siirtyi) täysikoossa, muut arkkina → `arkki.py <kansio> <etuliite> 3` → arkki KK:lle (kohta 5, v18, 益寿斋:n siirto).
