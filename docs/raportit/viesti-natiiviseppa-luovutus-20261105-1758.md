@@ -14,7 +14,7 @@ Saapuminen-porras-219 (379991bd6) EI ole tässä haarassa; 9e8c8ab1e ei sisäll�
 
 Odottaa:
 1. JU: ajo natiiviseppa-pallo-toisto-9e064504d, skenaario /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pallo-aloitus/sk-pallo-aloitus.txt, koko 2420,1668,0,40,2420,1580,2,1. Koko on oma arvio 11 tuuman iPadista, laitetta 00008142 ei tarkistettu. Skenaariota ei ole ajettu, voi kaatua odotuksiin.
-2. PT: Äänittäjällä ei ole sessiota tällä tilillä. Kysyin PT:ltä 17.5x, ja ehdotin nimeä opas/esittely-v1/aanet/pariisi-tervehdys.mp3 + kesto_s. Ei vielä vastausta.
+2. Valoseppä (local_3b36fe96-0199-4b17-9eb4-46a882ce7399; PT 17.5x: äänet tällä kertaa sillä, ei Äänittäjällä): pyyntö lähetetty, tiedosto opas/esittely-v1/aanet/pariisi-tervehdys.mp3, kesto_s tulee sieltä. Vienti vasta KK:n kuittauksella. PT: rakenna väliaikaisella kestolla, lähestyminen ei odota ääntä; jatka mittausta 9e064504d:n jälkeen.
 
 ## Mitä koodista nähtiin (EI mitattu; viat eivät ole vielä toistuneet)
 - Lähestyminen, kesto koodista: EsitysAvausIstunto soittaa avauksen pariisi-avaus.mp3 (kesto_s 18,8 datassa, opas/esittely-v1/pariisi.json), mahdollisen opastuksen, AvausLepoS 2,5 s, sitten Kaupunkikierros; lasku vähintään AvausSuoraS 24 s (OpasSilmukka, AsetaSuoraLasku), jos lähtö on avauskehyksestä; yli 2 km:stä AvausLaskuS 18 s. Kerronta alkaa PalloPuheEnnenS 5 s ennen saapumista. Lisäksi siirtoruutu (enintään 20 s) ja AvausTaukoS 2,3 s. Mahdollinen nykyintro (AloitaIntro, Pariisi) kuuluu ajasta, tarkista lokista, ajetaanko se tällä polulla. Paikalliset vakiot koskevat kaikkia kaupunkeja, joten muutos rajattava Pariisiin (omistaja puhui vain Pariisista).
