@@ -98,7 +98,8 @@ for (const k of readdirSync('/Users/Shared/Claude')) {
 tarkistettavat.add(join(homedir(), '.claude/CLAUDE.md'));
 for (const polku of tarkistettavat) {
   if (!existsSync(polku) || polku === OSOITEKIRJA) continue;
-  const teksti = readFileSync(polku, 'utf8');
+  // omistajan tilikohtaiset id:t ("local_… tilillä <tili>", ~/.claude/CLAUDE.md 3.11.2026 16.4x) ovat tarkoituksellisia
+  const teksti = readFileSync(polku, 'utf8').split('\n').filter((r) => !/local_[0-9a-f-]+ tilillä /.test(r)).join('\n');
   const taydet = (teksti.match(/local_[0-9a-f]{8}-[0-9a-f-]{27}/g) || []).filter((i) => !nykyiset.has(i));
   const lyh = (teksti.match(/local_[0-9a-f]{8}(?![0-9a-f-])/g) || []).filter((i) => !lyhyet.has(i));
   const vanhat = [...new Set([...taydet.map((i) => i.slice(0, 14)), ...lyh])];

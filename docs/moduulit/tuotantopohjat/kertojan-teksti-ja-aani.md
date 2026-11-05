@@ -19,6 +19,8 @@ Tämä pohja kattaa kaiken, minkä pelissä lukee ääneen kertoja (isoisä, Wil
 kertomukset, historiaosiot, selitteet, Pulun vastaukset ja kutsut. Se ei kata musiikkia, tehosteita eikä askelia
 (`aanipohja.md`; musiikki aina Lyrialla, Raamattu 5.15) eikä pelikytkentöjä (kytkijän oma työ).
 
+**Isoisän aiheet (omistaja 5.11.2026 klo 11.48; Raamattu 2.211):** uusissa kaupungeissa isoisän tekstit ja kuvat painottavat sitä, mitä ei enää ole. Kadonnut asia voi olla rakennus, poliittinen tilanne, tapakulttuuri, pukeutuminen tai muu sen ajan todellisuus. Jos se on rakennus, kuvan napautus vie kartan sen luo ja avaa kortin (Raamattu 2.210). Hyväksyttyjä tekstejä ei muuteta ilman omistajaa.
+
 ## 1. Tuotantoputki ja roolit
 
 ```
