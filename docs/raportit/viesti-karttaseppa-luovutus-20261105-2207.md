@@ -21,6 +21,10 @@ Syy: pehmeä raja 25 % (7.37), luonteva tauko, koska KK:n vastaus odottaa. **Voi
 ## VAHTIOSUMAT: valmiit (PT)
 Komennot 1272 ja Nahtavyysalue 447, 829 valopoikkeuksia, PT hyväksyi. Nahtavyysalue 554 kasvu Liikepohjalle (Sisaan), ei nähty ilmestymisessä. Muut liikepoikkeuksia. Nimikerros 654 ja PariisiKallistus 141 ovat merkittyinä minun haarassani; PT:n viimeinen sana: älä muuta. **Yhdistettäessä NUI:n jousi (natiivi-ui/liikevahti-219 cbc744e21) voittaa PariisiKallistuksen rivillä.** `UI/MalliKyltit.cs` 4 > 0 ei ole minun. Perustelut `_tyo/karttaseppa/vahtiosumat-perustelut-20261105.md`. PT pyysi kertomaan nykimisestä: pysäytyskuvista ei näe.
 
+## PÄIVITYS: KK:n päätökset ajosta (voittaa alla olevan)
+Invalidit kelpaa kokeena, ei junaan. Riemukaaren aukio kelpaa. Eiffel pysyy paikallaan, kiveys kelpaa, kunnes Codexin alusta tulee. Tilaukset postissa: Codex jatkaa alustoihin (Eiffel lisätty listan loppuun; Grand Palais pois), Tripolle Riemukaaren katto `riemukaari-3d-v2`.
+**Seuraava yhteinen ajo, ei omaa ajoa:** `_tyo/karttaseppa/sk-pariisi-yhteis-2.txt`, 6 kuvaa valmiina + Eiffel 45° omistajan kuvan kamerasta (kaikki neljä jalkaa kuvassa). **Puuttuu:** kuvan `omistaja-20261105/eiffel-maa-puuttuu-2132.png` polku, kysytty KK:lta. Lisää Eiffel-kuva skenaarioon ennen vuoropyyntöä. Yli 5 kuvaa, joten pyyntöön perustelu: KK:n lista ja sävyn kaksi tilaa. Pystysauma tummumisen jälkeen.
+
 ## TYÖJONO
 1. Sävyn kaksi pistettä seuraavaan ajoon. Ajot: pyyntöön rivi "ratkaisee" ja enintään noin 5 kuvaa (JU, omistaja 17.58), muuten JU palauttaa. Vuoro JU:lta; ajat itse: `PROTO_LINJA=2 ESIKATSELU_PISTEKERROIN=0.465 /bin/zsh tyokalut/esikatselu.sh <sha> <sk> ipad --batch`, lopuksi LUKKO VAPAA.
 2. **Katsepiste:** haara `karttaseppa/katsepiste-maa-219` (fb4379432), ei yhdistetä ilman omistajan sanaa. Suositus -2142:sta: ajohaara, jossa KatseNousu on komennolla kytkettävä; parit 45°, 75°, 85°. Aloittamatta.
