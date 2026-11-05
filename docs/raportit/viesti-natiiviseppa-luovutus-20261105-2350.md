@@ -28,7 +28,8 @@ Kartta-testit TaloAlue 5/5. Marais'n Resources-aineisto poistettu.
 - Suorituskyky isossa iPadissa kohta D, kerran kun Pariisi valmis.
 
 ## Tumma kartta (KS)
-KS 23.5x: syy todennäköisesti nähtävyysmallin maavarjo (Nahtavyysalue, jono 2994), korjaus 6f5229e61 karttaseppa/nahtavyydet-219, koeajo JU:n vuorolla, KS kertoo tuloksen. Älä lisää taloja varjon reitille. KS:lle kerrottu, että talot ovat samassa jonossa 2994; järjestys samassa jonossa on määrittelemätön.
+KS: syy todistettu: nähtävyysmallin maavarjo oli jopa 65 km leveä (lokit/esikatselu-20261105-234647). Korjaus e726bba9f (natiivi-backup, karttaseppa/nahtavyydet-219; Nahtavyysalue.AsetaMallinVarjo), ei junassa. Älä lisää taloja varjon reitille: TaloKerroksen KartanSavy ja _KarttaValo voi arvioida uudelleen, kun korjaus on haarassa.
+Talot jakavat jonon 2994 varjon kanssa, joten riski koskee enää mallin vieressä olevia taloja. KS ehdottaa siirtoa jonoon 2995, jos ne jäävät varjon alle. VAROITUS: 2995 on Nimikerros.jono, joten siirto voi peittää nimet (KK 22.4x: nimi kokonaan). Tarkista kuvalla ennen siirtoa.
 
 ## Ateena 388742104: katsottu, tulos KK:lla 23.5x
 Kamera pysyy Ateenassa ja Tukholmassa Pulun sarjan ajan (b3–b4 ero 0,00 %). Esityskuva ei putoa; PUUTE on skenaarion ajoitusvirhe. KK 23.50: kamera kelpaa, ei junaan. Kaksi näkyvää vikaa (Tukholma b5 ohjeteksti läpinäkyvänä kylttien päällä; Ateena b6 lipun yläpää ruudun yli) EI korjata nyt: omistajan 10.52 ja Raamattu 2.209, odottavat Pariisia, PT kirjaa työlistalle. Haara natiiviseppa/pariisi-aloitus-219, kärki 388742104, junaan vain PT:n kautta. Tila ei muutu ilman viestiä, joka mainitsee 388742104:n.
