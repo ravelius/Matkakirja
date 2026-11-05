@@ -8,7 +8,7 @@ Korvaa -1610:n jonon. Muu -1610, -1558, -1543, -1525 ja -1510 lisäyksineen pät
 3. Jos väritaso ei selitä tyhjää pohjaa tai Notre-Dame jää pieneksi: korjaa saman kuvasarjan perusteella.
 4. n-1km-85:n viat (-1558). NUI:n 098cf05cd ("etualan jättinimet") voi korjata jättinimen: katso ensin, ettei tehdä kahdesti.
 
-JU sanoi 16.1x "varitaso bd0e8e50e seuraava vapaa linja, JU ajaa itse". Korvasin sen 16.19:n viestillä (jonossa, perillemenoa ei tarkistettu). Jos kansio on natiiviseppa-varitaso-bd0e8e50e, JU ajoi vanhan: se todistaa väritason mutta ei introa, ja intro pitää pyytää erikseen.
+JU 16.2x: bd0e8e50e ehti käyntiin 16.18 ja pysäytettiin 16.19, kuvia ei tullut. Liiku seuraavana, sitten 52e3d2940 (vahvistettu JU:lle uudelleen). JU ajaa sha:n omassa puussaan, joten oman työpuun muutokset eivät vaikuta ajoon: "työpuuhun ei kosketa" alla ei ole tarpeen.
 
 ## Haara: natiiviseppa/saapuminen-porras-219 52e3d2940
 Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, peili natiivi-backup peili/proto/natiiviseppa/saapuminen-porras-219. Sisältää bd0e8e50e:n ja 52e3d2940:n. tarkista.sh 0 virhettä (tyylikirjan kolme tiedostoa palautettu), PalloLiikeTestit 15/15. Työpuuhun ei kosketa ennen ajon valmistumista. Liiku 99748962f on eri haarassa (kierto-koe), NUI:n kyltit-219:n uudet commitit eivät ole mukana: yhdistä ennen KK:n lopullista kuvaa.
