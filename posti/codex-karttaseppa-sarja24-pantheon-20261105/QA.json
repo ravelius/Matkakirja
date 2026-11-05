@@ -1,0 +1,351 @@
+{
+  "taskNumber": 2096,
+  "site": "pantheon",
+  "completedAt": "2026-11-05T16:21:20.374582+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohja-uusi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Manual checked silhouette bbox: max(RGB)-min(RGB)>10 OR min(RGB)<180, includes grey top cross. Main wall cornice y=648. Height to cross tip, 83m target. Edge uncertainty4px. No normalization of production images.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        144,
+        56,
+        1390,
+        945
+      ],
+      "widthPx": 1246,
+      "totalHeightPx": 889,
+      "groundY": 944,
+      "corniceY": 648,
+      "corniceHeightPx": 296,
+      "roofY": 56,
+      "roofHeightPx": 888,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.4031531531531531,
+      "targetRatio": 1.3493975903614457,
+      "ratioErrorPercent": 3.983671171171177,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 83
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        163,
+        55,
+        1412,
+        945
+      ],
+      "widthPx": 1249,
+      "totalHeightPx": 890,
+      "groundY": 944,
+      "corniceY": 648,
+      "corniceHeightPx": 296,
+      "roofY": 55,
+      "roofHeightPx": 889,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.4049493813273342,
+      "targetRatio": 1.3493975903614457,
+      "ratioErrorPercent": 4.116784509079241,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 83
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        277,
+        52,
+        1259,
+        945
+      ],
+      "widthPx": 982,
+      "totalHeightPx": 893,
+      "groundY": 944,
+      "corniceY": 648,
+      "corniceHeightPx": 296,
+      "roofY": 52,
+      "roofHeightPx": 892,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.100896860986547,
+      "targetRatio": 1.0240963855421688,
+      "ratioErrorPercent": 7.49934054339223,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 83
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        197,
+        24,
+        1339,
+        997
+      ],
+      "widthPx": 1142,
+      "totalHeightPx": 973,
+      "groundY": 996,
+      "corniceY": 648,
+      "corniceHeightPx": 348,
+      "roofY": 24,
+      "roofHeightPx": 972,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.1748971193415638,
+      "targetRatio": 1.0240963855421688,
+      "ratioErrorPercent": 14.725248123940936,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 83
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 0.24048096192384769,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 15.065913370998116,
+      "pass5Percent": false
+    }
+  ],
+  "corniceSpreadPercentOfMean": 16.828478964401295,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 52,
+  "obliques": {
+    "southwest": {
+      "roofEdgePoints": [
+        [
+          794,
+          585
+        ],
+        [
+          894,
+          690
+        ],
+        [
+          1138,
+          602
+        ]
+      ],
+      "measurementUncertaintyPixels": 4,
+      "uncertaintyDeg": 3,
+      "method": "Kahden rakennuksessa kohtisuoran, saman päälistatason reunavektorin kulmakertoimet; sin(elev)=sqrt(abs(m1*m2)). Kuvasta arvioitu, ei kamerametatietoa.",
+      "description": "Lounas näyttää länsiportiikin ja eteläisen pitkän sivun.",
+      "estimatedSinElevation": 0.6153767338713448,
+      "estimatedElevationDegrees": 37.97929954428616,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    },
+    "northeast": {
+      "roofEdgePoints": [
+        [
+          688,
+          567
+        ],
+        [
+          832,
+          698
+        ],
+        [
+          1146,
+          569
+        ]
+      ],
+      "measurementUncertaintyPixels": 4,
+      "uncertaintyDeg": 3,
+      "method": "Kahden rakennuksessa kohtisuoran, saman päälistatason reunavektorin kulmakertoimet; sin(elev)=sqrt(abs(m1*m2)). Kuvasta arvioitu, ei kamerametatietoa.",
+      "description": "Koillinen näyttää itäisen takaosan ja pohjoissivun; portiikki takana oikealla. Vastapuoli toteutuu visuaalisesti, mutta täsmälleen 180 asteen kameralukitusta ei voi varmentaa kuvapikseleistä.",
+      "exact180OppositionVerified": false,
+      "estimatedSinElevation": 0.6113422807959117,
+      "estimatedElevationDegrees": 37.68662201282911,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      624,
+      387,
+      912,
+      637
+    ],
+    "actualBBox": [
+      366,
+      228,
+      1099,
+      780
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": true,
+    "registrationRequired": true,
+    "orientationReview": "West portico to Rue Soufflot; 18 degrees clockwise from east long axis; north up",
+    "bboxWidthScale": 2.545138888888889,
+    "bboxHeightScale": 2.208
+  },
+  "ground": {
+    "footprintPixels": 44274,
+    "grassLikePixels": 0,
+    "grassLikeFraction": 0.0,
+    "coverageMetric": "Heuristic grass-color test only; not semantic proof of paving",
+    "metresPerPixelApprox": 0.9980669757253813,
+    "pathSamples": [
+      {
+        "axis": "x",
+        "position": 300,
+        "start": 659,
+        "end": 664,
+        "widthPx": 6,
+        "widthMetresApprox": 5.988401854352288,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": false
+      },
+      {
+        "axis": "y",
+        "position": 700,
+        "start": 357,
+        "end": 362,
+        "widthPx": 6,
+        "widthMetresApprox": 5.988401854352288,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": false
+      },
+      {
+        "axis": "x",
+        "position": 650,
+        "start": 684,
+        "end": 693,
+        "widthPx": 10,
+        "widthMetresApprox": 9.980669757253812,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      }
+    ],
+    "pavingFullFootprintPass": true,
+    "sourceParkLayoutPreserved": true,
+    "outsidePixelIdentityVerified": false,
+    "receiverMustCompositeMaskOnly": true,
+    "outsidePixelCount": 1418403,
+    "outsideChangedPixelCount": 1418372,
+    "pavingSemanticReview": "Entire footprint visually paved; no upright objects or building ghosts inside repair mask",
+    "parkLayoutReview": "Geographic layout visually retained; color and pixels differ",
+    "pathSampleCaveat": "Three samples only, pixel edge uncertainty +-2. Samples at 6m threshold are marginal, not proof all paths comply."
+  },
+  "visualIssues": [
+    "Yläkuva on pystysuora, mutta rakennus suurennettiin eikä se rekisteröidy jalanjäljen pikselikoordinaatteihin.",
+    "Viistojen laskettu korkeuskulma jää noin 38 asteeseen tavoitellun 65 asteen sijaan.",
+    "Länsijulkisivu on eri mittakaavassa ja maaviivalla. Itä–länsiparin leveys ja osa korkeus/leveystavoitteista ylittävät 5 prosentin toleranssin.",
+    "Viistot ja yläkuva pyöristävät itäisen takaosan; suorat sivut eivät säilytä tätä muotoa yhdenmukaisesti. Takasivun muodon aitoutta ei hyväksytä.",
+    "Lounaan portiikin katolle syntyi pyöreitä nuppeja, joita koillisessa tai sivukuvissa ei ole. Pieniä kattolaatikoita jäi ylä- ja viistokuviin.",
+    "Varsinaiset kuvat ovat ehjiä alkuperäisiä; diagnostinen toimitus ei ole geometriahyväksyntä eikä Tripo-syöte."
+  ],
+  "notes": "Toteutunut toimitus on yhden kierroksen diagnostinen arviointierä, QA FAIL. Kaikki 8 natiivia PNG:tä ovat 1536×1024 RGB; tuotantopikseleitä ei rajattu, skaalattu, korjattu tai uudelleenpakattu. Etelä/pohjoinen ovat pitkät 112 m julkisivut; itä/länsi lyhyet 85 m julkisivut. Kokokorkeus 83 m mitataan maaviivasta ylimpään ristiin, ei alemman harjan korkeuteen. Bbox-poiminta sisällyttää myös harmaan kärkiristin (värierotus >10 TAI vähimmäiskanava <180), ei vain kellertävää seinää. Yksinkertaistettu kivisaumoja, koristeita ja ikkuna-aukkoja; portiikin kuusi etupylvästä, kupolin korkea pylväsrumpu, lyhty ja kärkiristi säilyvät. Länsiportiikki on Rue Soufflot'n puolella. Suunta tarkistettiin lähdepostin #2116 jälkeen Rue Soufflot/Luxembourg- ja Bibliothèque Sainte-Geneviève/Rue d'Ulm -ankkureista; ensimmäisen yläkuvapromptin virheellinen ortokuvan portiikkiselite säilyy auditointihistoriassa, kuvaa ei uusittu. Maapohjan jälkikäsittelyä ei tehty; sen ulkopuoliset pikselit ovat muuttuneet, joten vain maskin sisäosa on tarkoitettu Karttasepän koostamiseen. Vasen Luxembourg-puisto säilyy maantieteellisesti silmämääräisesti, mutta ei pikselitarkkana. Polkunäytteet kattavat kolme kohtaa, eivät kaikkia polkuja; reunaepävarmuus ±2 px. Ei omistajahyväksyntää, vastaanottajan hyväksyntää, Tripo-toimitusta, R2-siirtoa, peli-integraatiota tai julkaisua. 8/8 kutsun kiintiö käytetty, ei automaattista uusintaa.",
+  "noAutomaticRetry": true,
+  "commonPixelsPerRealMetre": [
+    10.698795180722891,
+    10.710843373493976,
+    10.74698795180723,
+    11.710843373493976
+  ],
+  "commonScaleSpreadPercent": 9.228234001647902,
+  "commonScalePass5Percent": false,
+  "sourceGeometryPass": false
+}
