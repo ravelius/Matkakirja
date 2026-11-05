@@ -12,7 +12,14 @@ Ajo `lokit/esikatselu-20261105-234647` (76b9b0c38, L2, 208 s, 5/5 kuvaa). Riemuk
 - **Korjaus:** `Nahtavyysalue.AsetaMallinVarjo` laskee koon mallin mitoista juuren syvyydellä; kameran takana koko 0. Komento `maavarjot` kirjaa koot lokiin. Lippu VanhaVarjo poistettu e726bba9f:ssä, jota ei ole ajettu.
 - **iPad:** sama koodi, joten koskee sitäkin; iPadilla ei ole ajettu. NS:lle kerrottu (talot jonossa 2994, 22f6538a9: siirto 2995:een, jos jäävät varjon alle).
 
-## KK:LLA (viesti 23.52, päätös kesken)
+## KK:N PÄÄTÖKSET 23.52 (voittaa alla olevan "KK:LLA"-osan)
+- **Tummuus** kelpaa kokeena. KK näyttää parin omistajalle aamulla ensimmäisenä. Junaan vain PT:n kautta.
+- **Katto v3 EI kelpaa:** tilkut poissa, mutta katkoviiva näyttää viasta eikä kiveykseltä, ja kerrokset voivat väristä kameran kiertäessä. **Tee:** poista saumakerros kokonaan tai vie saumat mallin kuvaan; keskikohouma jää. Ei Tripolle. Kuva seuraavasta ajosta KK:lle.
+- **Opéra** kelpaa kokeena. Pystysauma ei ole alustan vika.
+- **Eiffel** kelpaa kokeena. Nurmi katsotaan korjattuna e726bba9f:stä seuraavasta ajosta; **Codexille saa kuitata, kun nurmi kelpaa** (KK:n sana kuvasta).
+- **Leijuminen:** jatka mittausta. Tavoite omistajan 21.28: rakennus näkyy kartan rajalla pohjansa päällä. **Kerro KK:lle, jos ratkaisu muuttaisi horisontin paikkaa:** omistaja 20.25 "Kauemmas", 21.30 "Horisontti on vähän turhan jyrkkä".
+
+## KK:LLA (viesti 23.52, vastattu yllä)
 1. **Riemukaaren katto v3:** tilkut poissa (`_tyo/karttaseppa/alustat-24p/riemukaari-katto-v3-rajaus-234647.png`). Syy oli kolme päällekkäistä kerrosta (Y 175,10 / 175,14 / 175,19). `sarja24-asennus/riemukaari-katto-kerrokset.py` laski kannen 173,96:een ja saumat 174,25–174,28:aan. Pinnalla hienoa katkoviivaa. **Tripolle EI mitään ennen KK:n sanaa** (Mallin hyväksyntä KK:lta).
 2. **Opéra vaaleassa kartassa:** `opera-45.png` ajokansiossa. Codexille kuitattu kokeena a2fdcdd3d (Invalidit, Panthéon, Grand Palais, Opéra). Eiffel, Sacré-Cœur, Montparnasse odottavat pelikuvaa.
 3. **Eiffelin nurmi:** `eiffel-45.png` 178,160,90, kartan Luxembourg 196,172,108: erottui, KK:n ehto täyttyi. `sarja24-asennus/eiffel-nurmi.py` + `asenna-24p.py` asennettu e726bba9f, **ei nähty pelissä**. Invalidit ja Grand Palais jäävät nykyisellään (KK).
@@ -27,7 +34,7 @@ Kuvat: `lokit/esikatselu-20261105-234647/pantheon-45.png` yläosa ja selvempi `l
 Eiffel korjatulla nurmella (`sk-pariisi-varjo.txt`:n kamera) + leijumisen koe. Skenaario sisältää `maavarjot vanha/uusi`-rivit; argumentti ei enää tee mitään, poista ne. Vertaa Eiffel `omistaja-20261105/eiffel-maa-puuttuu-2132.png`. Tarkista generoitu C# ennen vuoroa: komennon nimi `varjot` oli jo käytössä, ja ajo kaatui CS0152:een.
 
 ## TYÖJONO
-1. Leijuminen. 2. KK:n päätökset. 3. Pystysauma (PT, -2128 kohta 2; näkyy `opera-45.png` noin x 770–830 / 2000 px). 4. Sacré-Cœur pelissä (`sc-suunnitelma.md`) ja Montparnasse. Muu kuten -2207. **Yhdistettäessä:** NUI:n jousi (natiivi-ui/liikevahti-219 cbc744e21) voittaa PariisiKallistuksen rivillä. Kaikki kokeena, ei junaan.
+1. Katon saumat (KK, seuraavaan ajoon). 2. Leijuminen. 3. Pystysauma (PT, -2128 kohta 2; näkyy `opera-45.png` noin x 770–830 / 2000 px). 4. Sacré-Cœur pelissä (`sc-suunnitelma.md`) ja Montparnasse. Muu kuten -2207. **Yhdistettäessä:** NUI:n jousi (natiivi-ui/liikevahti-219 cbc744e21) voittaa PariisiKallistuksen rivillä. Kaikki kokeena, ei junaan.
 Opéran kuvan alareunassa näkyy Louvren katon reuna (malli on oikeassa paikassa kameran alla); ei tutkittu.
 
 ## Opit
