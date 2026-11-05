@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-05T16:33:01.316974+00:00",
+  "task": 2119,
+  "status": "WAITING_KARTTASEPPA_LEFT_RIGHT_CLARIFICATION",
+  "images": [
+    {
+      "file": "pohjoinen.png",
+      "sha256": "7822ec63064a16dd6e5a60aca28135b054ffd5238971d23e9287a32465f11c2e",
+      "bytes": 752970,
+      "hashMatchesOrder": true
+    },
+    {
+      "file": "etela.png",
+      "sha256": "9d41bcf189324ca1f054a5b33d8ed133640b444260aa651e2a5ec1757db7f577",
+      "bytes": 737875,
+      "hashMatchesOrder": true
+    },
+    {
+      "file": "ita.png",
+      "sha256": "a2feacc338dc873b5cd31e6514dfb9e20faadf12c3c19178025564a72a1b9752",
+      "bytes": 1065777,
+      "hashMatchesOrder": true
+    },
+    {
+      "file": "lansi.png",
+      "sha256": "4ffe4f78e2e35ce31c6b042457a298edb17caa7f49d4ff0e6b417812b2fcc936",
+      "bytes": 1015460,
+      "hashMatchesOrder": true
+    }
+  ],
+  "chromeConnected": true,
+  "balanceBefore": 16020,
+  "balanceAfter": 16020,
+  "newTripoJobs": [],
+  "creditsSpent": 0,
+  "sourceImagesUploaded": false,
+  "uiLabels": [
+    "Front",
+    "Left",
+    "Right",
+    "Back"
+  ],
+  "uiDefinitionOfLeftVerified": false,
+  "officialPagesChecked": [
+    "https://www.tripo3d.ai/product-doc/model-generation/multi-view-to-3d",
+    "https://docs.tripo3d.ai/model-generation/multiview-to-model-v3-0-v3-1.html",
+    "https://developers.tripo3d.ai/en/docs/generation-multiview-to-model/standard"
+  ],
+  "finding": "Docs specify view order and consistency, but do not explicitly define observer-left versus object-left. UI labels/icons alone not treated as sufficient proof. No generation to test this assumption.",
+  "priorEmpiricalEvidence": {
+    "path": "output/sainte-chapelle-22c-2082-20261105/checkpoint.json",
+    "finding": "Earlier attempt1 recorded Left input maps raw +X, Right raw -X, with front +Z. This suggests swapping east/west, but is not a new direct documentation/UI definition.",
+    "isGrandPalaisProductionSource": false
+  },
+  "ownerActionRequired": false,
+  "screenshot": "tripo-multiview-before-generation.png"
+}
