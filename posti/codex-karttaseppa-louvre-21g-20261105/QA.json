@@ -1,0 +1,201 @@
+{
+  "checkedAt": "2026-11-05T12:33:18.072271+00:00",
+  "generationCalls": 11,
+  "acceptedImages": 7,
+  "rejectedAttempts": [
+    "lansi-otto01",
+    "lansi-otto02",
+    "viisto-koillinen-otto01",
+    "ita-otto01"
+  ],
+  "canvasAllPass": true,
+  "allNativeBytesPreserved": true,
+  "visualTopologyPass": true,
+  "visualCrossViewPass": true,
+  "metric3DGeometryVerified": false,
+  "limitations": [
+    "Raster drawings are not calibrated renders. New pavilion dimensions are approximate, not a measured3Dmodel.",
+    "Central dome cap top varies about12px between orthographic views. Broad drawing and topology checked; receiver must review beforeTripo."
+  ],
+  "measurementMethod": "Bounding box of warm stone pixels r-b>25 and r-g>8, excluding neutralgraybackground/slateroofs; diagnostic not semantic segmentation.",
+  "images": {
+    "viisto-lounas": {
+      "sha256": "1d575399f5a3a56e431c312455df32830a2472945890b997095a0cde7f6fb41a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "viisto-lounas-otto01",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        84,
+        82,
+        1432,
+        933
+      ],
+      "baseline21fWarmStoneBBox": [
+        84,
+        82,
+        1432,
+        933
+      ],
+      "widthChangePercent": 0.0,
+      "groundY": 932,
+      "visualNotes": "Seitsemän paviljonkia: kuusi vanhaa + korkea kupolikattoinen keskellä oikeanpuoleista itäsiipeä; länsi avoin. Kolmen pyramidin koko ja sijainnit, pitkäsiipien rytmi ja vanha rajaus säilyvät. Korkeussuhde viistoprojektiossa sopii länsikuvaan; visuaalinen, ei metrinen 3D-varmennus."
+    },
+    "viisto-koillinen": {
+      "sha256": "c1118254b668a1d2b3c864b009a74256f0218bec665b585abb3739d452eb3e1a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "viisto-koillinen-otto02",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        56,
+        45,
+        1488,
+        949
+      ],
+      "baseline21fWarmStoneBBox": [
+        56,
+        45,
+        1488,
+        950
+      ],
+      "widthChangePercent": 0.0,
+      "groundY": 948,
+      "visualNotes": "Koillisen seitsemän paviljongin U-rakenne, kolme pyramidia ja vanha rajaus säilyvät; uusi kupoli itäsiiven keskellä vasemmalla. Kupoli korotettu, yksi kattoikkuna kummallakin näkyvällä sivulla. Viistoprojektio vain visuaalisesti tarkistettu: tarkkaa350-malliyksikön korkeutta ei voi todistaa rasterista."
+    },
+    "ylhaalta": {
+      "sha256": "fe7b08457c7697ef0daf19f34f05e85201fdbb0a0de734824599e9a2588e3103",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "ylhaalta-otto01",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        63,
+        196,
+        1489,
+        843
+      ],
+      "baseline21fWarmStoneBBox": [
+        63,
+        196,
+        1473,
+        843
+      ],
+      "widthChangePercent": 1.135,
+      "groundY": 842,
+      "visualNotes": "Suora pohjoinen ylös -yläkuva; vanhat6paviljonkia, U-rakenne ja3pyramidia säilyvät. Uusi kattopaviljonki oikeanpuoleisen itäsiiven keskellä, loiva ulkonema kumpaankin suuntaan. Kattokaarevuus ja1kattoikkuna/sivu vastaavat viistokuvien rakennetta."
+    },
+    "etela": {
+      "sha256": "45ee8638b76dcec8598933fd852119ee0a4149e8ce97af207107b8dd78d1e1a9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "etela-otto01",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        61,
+        336,
+        1475,
+        881
+      ],
+      "baseline21fWarmStoneBBox": [
+        61,
+        408,
+        1475,
+        881
+      ],
+      "widthChangePercent": 0.0,
+      "groundY": 880,
+      "visualNotes": "Eteläjulkisivun vanha leveys, kolme etualan paviljonkia, 9+9kaarta ja maaviiva säilyvät. Uusi itäpaviljongin kupolikatto nousee oikean kulmapaviljongin takaa, fyysinen peittyminen oikeansuuntainen. Huippu noin y337 vs lännen325; noin12px/2%korkeusero kirjataan."
+    },
+    "pohjoinen": {
+      "sha256": "278291972a107567f8299f454a11e5298b52adfe022a4319ce561dce9c186b28",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "pohjoinen-otto01",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        60,
+        329,
+        1476,
+        881
+      ],
+      "baseline21fWarmStoneBBox": [
+        61,
+        408,
+        1475,
+        881
+      ],
+      "widthChangePercent": 0.141,
+      "groundY": 880,
+      "visualNotes": "Pohjoisen julkisivu vastaa alkuperäistä; uusi keskikupoli on itäpuolella eli vasemman kulmapaviljongin takana. Katon huippu noin y330, maaviiva880 ja ikkunarytmi säilyvät."
+    },
+    "ita": {
+      "sha256": "4e8d75e30145f6df14464c9b71caab1ef095c26f5e31fd98f0648c7b54e808cf",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "ita-otto02",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        470,
+        324,
+        1066,
+        880
+      ],
+      "baseline21fWarmStoneBBox": [
+        471,
+        406,
+        1064,
+        881
+      ],
+      "widthChangePercent": 0.506,
+      "groundY": 879,
+      "visualNotes": "Itäpää on nyt samaa594pxmittakaavaa ja samalla maaviivalla kuin länsipää. Keskipaviljongin katto ja kerrosrakenne vastaavat länsikuvaa; keskikaari kokonaan näkyvissä, pyramidit oikein itäsiiven takana näkymättömissä."
+    },
+    "lansi": {
+      "sha256": "11030de1c2b6547d2f18de0cd791772d9aa8cda2bca4b25fac42315df388de12",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "selectedAttempt": "lansi-otto03",
+      "nativeBytesPreserved": true,
+      "warmStoneBBox": [
+        471,
+        324,
+        1065,
+        880
+      ],
+      "baseline21fWarmStoneBBox": [
+        471,
+        405,
+        1065,
+        881
+      ],
+      "widthChangePercent": 0.0,
+      "groundY": 879,
+      "visualNotes": "Länsinäkymän kompaktit vanhat kulmapaviljongit, pyramidin koko/paikka ja maaviiva säilyvät. Uusi keskipaviljonki korkein, huippu noin y325 (tavoite320), kaareva neliöpohjainen kupolikatto, tasainen huippu, yksi kattoikkuna, kolme kerrosta ja suuri keskikaari. Leveys noin220px sisältäen reunalistat vs nimellinen192; kirjataan likimääräiseksi."
+    }
+  },
+  "receiverApproved": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
