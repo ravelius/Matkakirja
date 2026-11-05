@@ -29,3 +29,9 @@ pid 58484 käynnissä 14.57. Monitor kuolee nollauksessa: aseta uudelleen. Muu -
 
 ## Sessiosta
 Remote päällä, Raamattu 7.47 luettu. Työlistaan ei tässä sessiossa kirjattu mitään; hook muistuttaa muista riveistä, jotka eivät ole minun.
+
+## Lisäys 14.5x: OMISTAJA KORVASI KALLISTUSOHJEEN (PT, sanasta sanaan)
+Omistaja 14.55: "ei haittaa jos kartta menee viivaksi koska siinä näkyy kuitenkin 3d rakennukset. voidaan jättää vaikka 5 asteen kulma maksimiksi. ja tehdään horisontti niin että liikaa kohteita ei näy kerralla".
+PT: "Kamera laskee 5°:n päähän vaakatasosta, kartta saa olla lähes viiva, ja 3D-rakennukset nousevat sen yläpuolelle. Horisontti tuodaan niin lähelle, että matalalta näkyy kerralla vain lähimmät kohteet. Sinä teet sekä käännön että horisontin; nimien häivytys (NUI) seuraa samaa horisonttia, joten anna NUI:lle etäisyysarvo. Vain Pariisi, ei iPad-ajoja eikä mittauksia. Mac-kuva matalalta Notre-Damen edestä suoraan KK:lle, kopio PT:lle (2.214). Järjestys ennallaan: JU:n ajot, viat, sitten tämä."
+Tämä kumoaa ylempänä: 90°:n, "maa ei viivaksi" -raon ja usvan 22 km:n. Ajo kallistus90 peruttu JU:lta, koska se näyttäisi kumotun version.
+Ehdotus jatkoksi haarasta ca88b1830 (varmistamatta): `PariisiKallistus.MaxKallistus` 85 ilman usvan kattoa; `UsvaVahintaanM` pois, tilalle `HorisonttiM` (usvan loppu silmästä, lähimmät kohteet: arvo katsotaan kuvasta, ei omistajan sanaa numerolle), joka lyhenee kallistuksen kasvaessa; NUI lukee saman arvon ja `Horisonttiusva.Peitto` seuraa sitä (`RuutuUsva` kelpaa). Katsepisteen nosto jää vain lähizoomiin, jossa Maastolle muuten pienentäisi kulmaa; rakoa voi pienentää. Skenaario: uusi, Notre-Dame matalalta edestä (kuvan suunta katedraalia kohti, 2.214), ei skenaario-kallistus90.txt. NUI:lle on kerrottu muutoksesta, etäisyysarvo lähetetään, kun se on koodissa.
