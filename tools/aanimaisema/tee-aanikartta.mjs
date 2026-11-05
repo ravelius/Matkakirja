@@ -12,21 +12,19 @@
  * lineaarinen vaimennus (1 − d / 300 m); kerros normalisoidaan kaupungin 95. persentiiliin ja leikataan 0–1:een.
  *
  * Käyttö: node tools/aanimaisema/tee-aanikartta.mjs --kaupunki pariisi --lat 48.8566 --lon 2.3522 --sade-km 6
- *         --ulos <vientipaketti>   (Overpass: yksi kysely kerrallaan, kohtelias tauko)
+ *         --ulos <vientipaketti>
+ * OSM-haku on pois käytöstä (Raamattu 2.183): työkalu kaatuu, kunnes haku tehdään Geofabrikin aineistosta.
  */
-import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { osmHakuPuuttuu } from '../osm-haku-kielletty.mjs';
 
 const arg = (n, o = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : o; };
-const UA = 'Matkakirja-aanikartta/1.0 (https://matkakirja.app; peli@matkakirja.app)';
-// Julkiset Overpass-palvelimet vuorotellen (overpass-api.de ruuhkautuu ja palauttaa 429/504).
-const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
-  'https://overpass.private.coffee/api/interpreter'];
 export const KERROKSET = ['liikenne_hiljainen', 'liikenne_vilkas', 'raitiovaunu', 'rautatie', 'satama', 'aallot', 'kanava',
   'puisto', 'suihkulahde', 'tori', 'kahvila', 'vakijoukko', 'kirkko'];
 const RUUTU_M = 100, SADE_M = 300;
 
-/** Overpass-suodattimet kerroksittain: [suodatin, paino]. */
+/** OSM-kohteet kerroksittain: [suodatin, paino]. */
 const LAHTEET = {
   liikenne_vilkas: [['way["highway"~"^(motorway|trunk|primary)(_link)?$"]', 1], ['way["highway"~"^secondary(_link)?$"]', 0.6]],
   liikenne_hiljainen: [['way["highway"~"^(tertiary|residential|unclassified)$"]', 0.5], ['way["highway"="living_street"]', 0.3]],
@@ -42,22 +40,6 @@ const LAHTEET = {
   vakijoukko: [['way["place"="square"]', 1], ['way["highway"="pedestrian"]', 0.8], ['node["tourism"="attraction"]', 1.5]],
   kirkko: [['node["amenity"="place_of_worship"]["religion"="christian"]', 1], ['way["amenity"="place_of_worship"]["religion"="christian"]', 1]],
 };
-
-const odota = (ms) => new Promise((r) => setTimeout(r, ms));
-async function overpass(kysely, valimuisti) {
-  if (valimuisti && existsSync(valimuisti)) return JSON.parse(readFileSync(valimuisti, 'utf8'));
-  for (let yritys = 0; yritys < 9; yritys += 1) {
-    const palvelin = OVERPASS[yritys % OVERPASS.length];
-    try {
-      const v = await fetch(palvelin, { method: 'POST', headers: { 'user-agent': UA, 'content-type': 'application/x-www-form-urlencoded' },
-        body: `data=${encodeURIComponent(kysely)}` });
-      if (v.ok) { const d = await v.json(); if (valimuisti) writeFileSync(valimuisti, JSON.stringify(d)); return d; }
-      console.error(`    Overpass ${new URL(palvelin).host} ${v.status}, uusi yritys`);
-    } catch (virhe) { console.error(`    Overpass ${new URL(palvelin).host} ${virhe.message}`); }
-    await odota(10000 * (Math.floor(yritys / OVERPASS.length) + 1));
-  }
-  throw new Error('Overpass ei vastannut');
-}
 
 const M_LAT = 111320;
 const mLon = (lat) => 111320 * Math.cos((lat * Math.PI) / 180);
@@ -89,9 +71,8 @@ function naytteet(e) {
   return pisteet;
 }
 
-export async function teeAanikartta({ kaupunki, lat, lon, sadeKm, valimuistiKansio = null, loki = console.log }) {
+export async function teeAanikartta({ kaupunki, lat, lon, sadeKm, loki = console.log }) {
   const dLat = (sadeKm * 1000) / M_LAT, dLon = (sadeKm * 1000) / mLon(lat);
-  const bbox = [lat - dLat, lon - dLon, lat + dLat, lon + dLon].map((x) => x.toFixed(5)).join(',');
   const askel = { lat: RUUTU_M / M_LAT, lon: RUUTU_M / mLon(lat) };
   const lounas = { lat: lat - dLat, lon: lon - dLon };
   const rivit = Math.ceil((2 * dLat) / askel.lat), sarakkeet = Math.ceil((2 * dLon) / askel.lon);
@@ -101,9 +82,7 @@ export async function teeAanikartta({ kaupunki, lat, lon, sadeKm, valimuistiKans
     const summa = new Float32Array(rivit * sarakkeet);
     let rantaviivaa = 0;
     for (const [suodatin, paino] of LAHTEET[kerros]) {
-      const kysely = `[out:json][timeout:180];(${suodatin}(${bbox}););out geom tags qt;`;
-      const avain = valimuistiKansio ? join(valimuistiKansio, `${kaupunki}-${kerros}-${Buffer.from(suodatin).toString('base64url').slice(0, 40)}.json`) : null;
-      const d = await overpass(kysely, avain);
+      const d = osmHakuPuuttuu('tee-aanikartta');
       let n = 0;
       for (const e of d.elements ?? []) {
         if (kerros === 'kirkko' && e.tags?.name) {
@@ -123,7 +102,6 @@ export async function teeAanikartta({ kaupunki, lat, lon, sadeKm, valimuistiKans
         }
       }
       loki(`  ${kaupunki} ${kerros}: ${(d.elements ?? []).length} kohdetta, ${n} näytettä (${suodatin.slice(0, 50)})`);
-      await odota(2000);
     }
     // Sisämaan kaupunki (Pariisi 7.10.): yksittäinen järvi- tai keinoranta normalisoituisi täysille aalloille → ilman
     // merenrantaviivaa kerros on nolla.
@@ -146,9 +124,7 @@ export async function teeAanikartta({ kaupunki, lat, lon, sadeKm, valimuistiKans
 if (import.meta.url === `file://${process.argv[1]}`) {
   const kaupunki = arg('kaupunki'); const ulos = arg('ulos');
   if (!kaupunki || !ulos) { console.error('käyttö: --kaupunki <id> --lat <lat> --lon <lon> --sade-km <km> --ulos <paketti>'); process.exit(1); }
-  const valimuisti = arg('valimuisti');
-  if (valimuisti) mkdirSync(valimuisti, { recursive: true });
-  const kartta = await teeAanikartta({ kaupunki, lat: Number(arg('lat')), lon: Number(arg('lon')), sadeKm: Number(arg('sade-km', '5')), valimuistiKansio: valimuisti });
+  const kartta = await teeAanikartta({ kaupunki, lat: Number(arg('lat')), lon: Number(arg('lon')), sadeKm: Number(arg('sade-km', '5'))});
   const kansio = join(ulos, 'aanet', 'aanikartta-v1');
   mkdirSync(kansio, { recursive: true });
   writeFileSync(join(kansio, `${kaupunki}.json`), JSON.stringify(kartta));

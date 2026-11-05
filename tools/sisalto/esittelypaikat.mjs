@@ -3,7 +3,7 @@
  * Saapumisen esittelykuvien paikat (KK:n suunnitelma 20261103-saapumisen-kuvat.md osa B; omistaja 3.11.2026 08.48 ja 09.28;
  * Karttaseppä 3.11.2026). Kuva nousee kartalta kohteensa kohdalta ja jää sinne pieneksi kuvaksi.
  *
- * Käyttö:  node tools/sisalto/esittelypaikat.mjs --vienti <vientipaketti> [--syote <tulos.json> …] [--valimuisti <kansio>]
+ * Käyttö:  node tools/sisalto/esittelypaikat.mjs --vienti <vientipaketti> [--syote <tulos.json> …]
  *            [--kirjoita]
  *
  * Esittelykuvat = Euroopan kaupungin saapumistrailerin kolme kuvaa (kaupunkilehden kansi.avauskuvat, puuttuessa kansikuvat;
@@ -14,12 +14,13 @@
  * tai { paikaton: true, syy } (natiivi: keskusta, pieni kuva kaupunkimerkin viereen). --syote tuo uudet kohteet
  * (Sonnet-parven muoto { kaupunki: { tiedosto: { kohde, lat, lon, lahde } | { paikaton, syy } } }); olemassa olevaa ei korvata.
  *
- * piste = kohdepiste, jos se täyttää ehdot, muuten lähin vapaa kohta 30–120 m:n kehillä (8 suuntaa):
- *   - kaupungin alueella: enintään 12 km keskustasta (alueilla rajauksen sisällä),
- *   - ei vedessä (OSM natural=water, waterway=riverbank, landuse=reservoir; Overpass is_in) ja katuja 150 m:n säteellä,
- *   - ei 25 m:n päällekkäisyyttä nostojen (karttavalot), kohdekartan kohteiden eikä muiden esittelykuvien kanssa
- *     (Kohdenostot 25 m, Raamattu 2.204).
- * Poikkeama → virhekoodi 1. --kirjoita tallentaa uudet kohteet ja pisteet.
+ * Tarkistus: olemassa oleva piste on kaupungin alueella (enintään 12 km keskustasta, alueilla rajauksen sisällä) eikä
+ * 25 m:n päässä nostoista (karttavalot), kohdekartan kohteista eikä muista esittelykuvista (Kohdenostot 25 m, Raamattu 2.204).
+ *
+ * UUSIA PISTEITÄ EI LASKETA: veden ja katujen tarkistus haki Overpassista, joka on kielletty (Raamattu 2.183). Kohde ilman
+ * pistettä tai liian lähellä toista on poikkeama; uusi tarkistus tehdään Geofabrikin aineistosta, kun työkalua tarvitaan.
+ *
+ * Poikkeama → virhekoodi 1. --kirjoita tallentaa uudet kohteet ja tarkistetut pisteet.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -27,9 +28,6 @@ import { fileURLToPath } from 'node:url';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const DATA = path.join(JUURI, 'data', 'esittelypaikat.json');
-const UA = 'Matkakirja-karttaseppa/1.0';
-const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
-  'https://overpass.private.coffee/api/interpreter'];
 const PARIISIN_INTRO = [1, 2, 3, 4].map((n) => `pariisi-nykyintro-c${n}.jpg`);
 // Pariisin aloituslento (Raamattu 2.210; KK:n suunnitelma 20261105-pariisin-aloituslento.md osa C): nähtävyyksien kuvat, joita
 // kansi.avauskuvat ei sisällä, isoisän luentakuvat (ottopaikka Tuileries'n puutarha) ja Pulun kuva.
@@ -37,16 +35,12 @@ const PARIISIN_LENTO = ['hero-pariisi-riemukaari.jpg', 'hero-pariisi-sacre-coeur
   'matkakirja-pariisi-i1-r20260914-tarina-v1.jpg', 'matkakirja-pariisi-i2-r20260914-tarina-v1.jpg',
   'matkakirja-pariisi-p1-r20260914-tarina-v1.jpg'];
 const VALI_M = 25;
-const KEHAT_M = [30, 45, 60, 80, 100, 120];
-const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const args = process.argv.slice(2);
 const arvot = (lippu) => args.flatMap((a, i) => (a === lippu ? [args[i + 1]] : []));
 const VIENTI = arvot('--vienti')[0];
-const VALIMUISTI = arvot('--valimuisti')[0];
 const KIRJOITA = args.includes('--kirjoita');
 if (!VIENTI) { console.error('Anna --vienti <vientipaketti>'); process.exit(2); }
-if (VALIMUISTI) fs.mkdirSync(VALIMUISTI, { recursive: true });
 
 const etaisyysM = (a, b) => {
   const R = 6371000, r = Math.PI / 180;
@@ -54,43 +48,6 @@ const etaisyysM = (a, b) => {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
 };
-const siirra = (p, m, suunta) => ({
-  lat: +(p.lat + (m * Math.cos(suunta)) / 111320).toFixed(6),
-  lon: +(p.lon + (m * Math.sin(suunta)) / (111320 * Math.cos((p.lat * Math.PI) / 180))).toFixed(6),
-});
-
-async function overpass(kysely, avain) {
-  const tiedosto = VALIMUISTI ? path.join(VALIMUISTI, `${avain.replace(/[^a-z0-9.-]/gi, '_')}.json`) : null;
-  if (tiedosto && fs.existsSync(tiedosto)) return JSON.parse(fs.readFileSync(tiedosto, 'utf8'));
-  for (let yritys = 0; yritys < 9; yritys += 1) {
-    const palvelin = OVERPASS[yritys % OVERPASS.length];
-    try {
-      const r = await fetch(palvelin, { method: 'POST', headers: { 'User-Agent': UA, 'content-type': 'application/x-www-form-urlencoded' },
-        body: `data=${encodeURIComponent(kysely)}` });
-      if (r.ok) {
-        const d = await r.json();
-        if (tiedosto) fs.writeFileSync(tiedosto, JSON.stringify(d));
-        await tauko(2000);
-        return d;
-      }
-      console.error(`  ${new URL(palvelin).host} ${r.status}`);
-    } catch (virhe) { console.error(`  ${new URL(palvelin).host} ${virhe.message}`); }
-    await tauko(5000 * (Math.floor(yritys / OVERPASS.length) + 1));
-  }
-  throw new Error('Overpass ei vastannut');
-}
-
-async function maalla(p) {
-  const c = `${p.lat.toFixed(6)},${p.lon.toFixed(6)}`;
-  const d = await overpass(`[out:json][timeout:60];
-is_in(${c})->.a;
-(area.a[natural=water];area.a[waterway=riverbank];area.a[landuse=reservoir];);out tags;
-way(around:150,${c})[highway];out count;`, `ep-${c}`);
-  const vedet = d.elements.filter((e) => e.type === 'area').map((e) => e.tags?.name ?? e.tags?.natural ?? e.tags?.waterway);
-  const kadut = Number(d.elements.find((e) => e.type === 'count')?.tags?.ways ?? 0);
-  return { ok: !vedet.length && kadut > 0, syy: vedet.length ? `vedessä (${vedet.join(', ')})` : kadut ? null : 'ei katuja 150 m:n säteellä' };
-}
-
 const lue = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const data = fs.existsSync(DATA) ? lue(DATA) : { kaupungit: {} };
 const keskustat = lue(path.join(JUURI, 'data', 'kaupunkikeskustat.json'));
@@ -140,23 +97,16 @@ for (const [kid, lista] of kuvat) {
     if (e.paikaton) { paikattomia += 1; console.log(`–     ${kid} ${tiedosto}: paikaton (${e.syy ?? '?'})`); continue; }
     const kohde = { lat: e.kohdepiste[0], lon: e.kohdepiste[1] };
     if (!alueella(kohde)) { virhe(`${kid} ${tiedosto} ${e.kohde}: kaupungin alueen ulkopuolella`); continue; }
-    const vapaa = (p) => [...muut, ...omat].every((n) => etaisyysM(p, n) >= VALI_M);
-    const ehdokkaat = [kohde, ...KEHAT_M.flatMap((m) => [0, 2, 4, 6, 1, 3, 5, 7].map((s) => siirra(kohde, m, (s * Math.PI) / 4)))];
-    const vanha = e.piste ? { lat: e.piste[0], lon: e.piste[1] } : null;
-    let piste = null, syy = null;
-    for (const p of vanha ? [vanha, ...ehdokkaat] : ehdokkaat) {
-      if (!vapaa(p) || !alueella(p)) { syy = syy ?? 'päällekkäin tai alueen ulkopuolella'; continue; }
-      const m = await maalla(p);
-      if (m.ok) { piste = p; break; }
-      syy = syy ?? m.syy;
-    }
-    if (!piste) { virhe(`${kid} ${tiedosto} ${e.kohde}: ei vapaata pistettä (${syy})`); continue; }
-    e.piste = [piste.lat, piste.lon];
+    if (!e.piste) { virhe(`${kid} ${tiedosto} ${e.kohde}: ei pistettä, uusi piste vaatii veden ja katujen tarkistuksen (haku pois käytöstä, Raamattu 2.183)`); continue; }
+    const piste = { lat: e.piste[0], lon: e.piste[1] };
+    if (!alueella(piste)) { virhe(`${kid} ${tiedosto} ${e.kohde}: piste kaupungin alueen ulkopuolella`); continue; }
+    const lahin = [...muut, ...omat].find((n) => etaisyysM(piste, n) < VALI_M);
+    if (lahin) { virhe(`${kid} ${tiedosto} ${e.kohde}: piste alle ${VALI_M} m:n päässä kohteesta ${lahin.nimi}`); continue; }
     omat.push({ nimi: e.kohde, ...piste });
     paikallisia += 1;
     const d = Math.round(etaisyysM(piste, kohde));
     if (d) siirrettyja += 1;
-    console.log(`ok    ${kid} ${tiedosto} ${e.kohde}${d ? ` (piste ${d} m kohteesta${syy ? `: ${syy}` : ''})` : ''}`);
+    console.log(`ok    ${kid} ${tiedosto} ${e.kohde}${d ? ` (piste ${d} m kohteesta)` : ''}`);
   }
 }
 const ylimaaraiset = Object.entries(data.kaupungit).flatMap(([kid, t]) => Object.keys(t).filter((f) => !kuvat.get(kid)?.includes(f))
