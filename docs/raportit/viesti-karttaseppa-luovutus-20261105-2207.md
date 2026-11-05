@@ -29,6 +29,8 @@ Komennot 1272 ja Nahtavyysalue 447, 829 valopoikkeuksia, PT hyväksyi. Nahtavyys
 5. Pois jääneet kuvat tarpeen mukaan: horisontti 75° ja 85°, Eiffel 45°, Riemukaari 45°, Invalidit etelästä.
 6. **Pont Neufin nimi** (omistaja 21.49): `_tyo/karttaseppa/jono-pont-neuf-nimi.md`. Vasta kun VS:n kohteet ovat samassa haarassa ja sarjan työt tehty, ei omaa ajoa. Grand Palais ennallaan.
 
+7. **Marais'n koe (omistaja 22.09, PT, Raamattu 2.213):** NS tekee 1 km²:n kokeen tavallisista taloista ohjelmalla Ateenan jälkeen. Karttasepälle vain: varmista NS:lle raja alueisiin v7, kun se kysyy. Sarja ei saa hidastua.
+
 ## Opit
 - Viimeisen komennon jälkeen tarvitaan `odota`, muuten ajo päättyy ennen sen käsittelyä.
 - Viestit ristesivät PT:n kanssa: kärki muuttui neljästi samoista riveistä. Kysy, jos vastuu vaihtuu kesken, tai odota yksi viesti ennen kuin palautat.
