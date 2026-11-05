@@ -1,0 +1,248 @@
+{
+  "checkedAt": "2026-11-05T13:01:32.161858+00:00",
+  "taskNumber": 2091,
+  "generationCalls": 8,
+  "oneRoundOnly": true,
+  "qaComplete": true,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "status": "diagnostic-review-batch-with-explicit-failures",
+  "files": [
+    {
+      "view": "viisto-lounas",
+      "file": "viisto-lounas.png",
+      "sha256": "afd6a050d1f09b355093b1f04a5f51567f52e8275b912b910ff4ec18401530e3",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3cdba091-73af-4136-bdd9-03984591cd8d.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Valittu yhden kierroksen arviointierään, EI täysiQA-PASS: tunnistettavaEiffel, isotavoimetristikot ja3tasoa; kameran korkeus näyttää pyydettyä60–75astetta matalammalta, takajalka peittyy. Ylä-/alareunamarginaali jää pieneksi. Ei uusintaa tässä rajatussa erässä.",
+      "warmStructureRasterBBox": [
+        480,
+        19,
+        1047,
+        1004
+      ]
+    },
+    {
+      "view": "viisto-koillinen",
+      "file": "viisto-koillinen.png",
+      "sha256": "d0151452cc663507f5910f225a6d8f0b197f05f57c2efd01f9d8cb93fcfc1e7f",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-477c00d0-0790-4808-8b2d-04924476ea59.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Arviointierään: sama materiaalikieli ja kolmikerroksinenEiffel; koillisen katselukulma hieman korkeampi kuin lounaan mutta jää visuaalisesti60–75astetta matalammaksi. Kuvakulmien täydellistä vastaavuutta ei hyväksytä. Takaosan jalka peittyy. Yksiotto, eiuusintaa.",
+      "warmStructureRasterBBox": [
+        468,
+        20,
+        1066,
+        1000
+      ]
+    },
+    {
+      "view": "ylhaalta",
+      "file": "ylhaalta.png",
+      "sha256": "fe597175b9a40915fe994a4dbbf57e9ebe6923654089d141d89d318d5d6dca17",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-57639a3e-c984-43d4-9ec8-24907531dfa4.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Arviointierään, QA-HYLKÄYS: aito yläprojektio mutta jalanjälki liian suuri ja siirtynyt vasemmalle/alaspäin. Neljän jalan ja tasanteiden kierto ei ole keskenään sama (tasanteet45astetta väärin suhteessa jalkojen neliöön). Ei valmisTripo-syötteeksi. Yksiotto, eiuusintaa.",
+      "warmStructureRasterBBox": [
+        284,
+        93,
+        776,
+        589
+      ]
+    },
+    {
+      "view": "etela",
+      "file": "etela.png",
+      "sha256": "884514c9b06efd4c8e877974fe06e9ea47859d252233ea2f36a96c70db6084c4",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-37213771-0bb4-4343-8413-24cbf1c0b212.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Arviointierän eteläjulkisivu: vaakasuora ortografinen vaikutelma, tasanteet sivusta,3näkyvääjalkapistettä nelikulmaisessa diagonaaliprojektiossa. Generaattori valitsi suuremman rajauksen kuin kehotteen sisäinen tavoite; lähde ei määritä tarkkaa y880-arvoa. Käytetään tämän kuvan todellista maaviivaa ja kokoa muiden julkisivujen vertailuna.",
+      "warmStructureRasterBBox": [
+        460,
+        20,
+        1076,
+        974
+      ]
+    },
+    {
+      "view": "pohjoinen",
+      "file": "pohjoinen.png",
+      "sha256": "f4649a90ab5fa2f878aa7c07e16cdeb20543e4bdce21d45def8e2b69d8471d7b",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-60e8968f-bdfe-40f9-b2b8-0b4f32a0a6f4.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Pohjoisen ortojulkisivu vastaa etelän kokoa, maaviivaa, tasanteita ja nelitahoisen tornin siluettia. Ristikoissa on piirroskohtaisia pieniä eroja; ei kalibroitua3Dmallia. Valittu arviointierään.",
+      "warmStructureRasterBBox": [
+        460,
+        20,
+        1076,
+        973
+      ]
+    },
+    {
+      "view": "ita",
+      "file": "ita.png",
+      "sha256": "ef95b52d1e4706ef40a90539eb8b5711e4508a7bd0a129c7e204ea4ca2f1769e",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-80d732fb-d145-4a33-b4fe-9ec4f6e9278b.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Itäjulkisivun koko/maaviiva/tasanteet vastaavat etelä-pohjoinen-kuvia. Avointa ristikkorakennetta yksinkertaistettu, ristikon pienten yksityiskohtien identtisyys ei toteudu kaikissa suunnissa. Arviointierä.",
+      "warmStructureRasterBBox": [
+        460,
+        20,
+        1076,
+        973
+      ]
+    },
+    {
+      "view": "lansi",
+      "file": "lansi.png",
+      "sha256": "55ceb7c8f3b86e68b2a4928dfe476d1791b0168e3328cba48b860b4ae4258122",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2e6632c1-38ff-42b2-87c2-95303fac8e63.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Lännen ortojulkisivu vastaa etelän/pohjoisen/idän kokoa, maaviivaa ja tasanteiden sijoittelua. Ristikon pieniä piirroseroja jää eri kuvien välille. Yhden kierroksen arviointikuva.",
+      "warmStructureRasterBBox": [
+        459,
+        20,
+        1076,
+        973
+      ]
+    },
+    {
+      "view": "pohja-uusi",
+      "file": "pohja-uusi.png",
+      "sha256": "2a319bf972e8290d4f8366b62ef0d0ebd60531dc35aa8e8d2af928f568a331d0",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f508c776-e781-4e2d-bac6-48158dc03b46.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "notes": "Valittu arviointitoimitukseen, ei täyttä QA-hyväksyntää. Tasainen tyhjä kiveys ja vaihteleva oliivinvihreä nurmi; ei pystyrakenteita työalueella. Kiveys näyttää hieman lähteen jalanjälkeä pienemmältä ja siirtyneeltä. Generaattori muutti myös maskin ulkopuolisia pikseleitä; alkuperäisen taustan säilyminen ei toteudu natiivikuvassa. Tarkat erot QA.json:ssa. Koneen maskaus kuuluu vastaanottajalle, ei tehty täällä."
+    }
+  ],
+  "nativeOutputIntegrityPass": true,
+  "sourceInputs": {
+    "checkedAt": "2026-11-05T12:38:10.603634+00:00",
+    "files": [
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/TILAUS-24-sarja.md",
+        "sha256": "debc3099dd6e4c38c5faa2777f7f8a69def6a45473c28f029eb82a78c3167365"
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/eiffel/jalanjalki.png",
+        "sha256": "5ac73bd204514a7653e39086e758a138d61910414c178cafdff03f676dc537c9"
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/eiffel/maski.png",
+        "sha256": "4eabeef1a04a16e31d50ec221f4bec8f5c0e367e37781b194f7b87b83504df9b"
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/eiffel/ohje.png",
+        "sha256": "8466909bf1f45683201908f29894f2f5d4b8d0eac0340e96389d1d6becef6177"
+      },
+      {
+        "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/eiffel/pyyhitty.png",
+        "sha256": "97583a140013d0187f8f8655cbe60e6a02ffa0922ae7de7c4a0249dbe53e300a"
+      }
+    ],
+    "allVerified": true
+  },
+  "geometry": {
+    "metric3DGeometryVerified": false,
+    "obliqueCameraAnglePass": false,
+    "obliqueFinding": "Molemmat viistokuvat näyttävät pyydettyä 60–75 asteen korkeaa kulmaa matalammilta. Keskinäinen kulma ei ole sama. Kamerakulmaa ei ole mitattu kalibroidusta 3D-mallista.",
+    "topFootprintPass": false,
+    "sourceTopFootprintBBox": [
+      369,
+      125,
+      757,
+      512
+    ],
+    "topFinding": "Yläkuvan jalanjälki on liian suuri ja siirtynyt. Tasanteiden neliöt ovat noin 45 astetta eri kierrossa kuin jalkojen muodostama neliö.",
+    "elevationScale": "Neljä vaakajulkisivua näyttävät samankokoisilta ja maaviiva on noin y=974. Tarkka 3D-vastaavuus ja piiloon jäävät rakenteet eivät ole varmennettuja.",
+    "crossViewDetailIdentityPass": false,
+    "detailFinding": "Suurissa tasanteissa ja siluetissa on yhtenäinen perusrakenne; ristikoiden pienet yksityiskohdat vaihtelevat erillisten generointien välillä.",
+    "bboxMethod": "Warm structure raster threshold r-b>12 and r-g>4; [left,top,rightExclusive,bottomExclusive]. Diagnostic pixel extent, not calibrated silhouette or 3D measurement."
+  },
+  "ground": {
+    "qualityPass": false,
+    "outsideMaskPixelIdentityPass": false,
+    "outsideMaskPixels": 1230663,
+    "outsideMaskChangedPixels": 1230375,
+    "outsideMaskChangedPercent": 99.9766,
+    "outsideMaskMaxChannelDifferenceOver16Pixels": 116519,
+    "footprintVisualEstimateVertices": [
+      [
+        562,
+        151
+      ],
+      [
+        740,
+        325
+      ],
+      [
+        562,
+        507
+      ],
+      [
+        386,
+        334
+      ]
+    ],
+    "footprintVisualEstimateIoU": 0.8449,
+    "footprintVisualEstimateSourceCoverage": 0.8449,
+    "footprintEstimateMethod": "Kiveyksen sisäreunan kulmat arvioitu silmämääräisesti alkuperäisestä 1536x1024-kuvasta, noin +/-5 px. Arvio ei korvaa vastaanottajan sijaintitarkistusta.",
+    "footprintFinding": "Kiveys on lähteen valkoista jalanjälkeä hieman pienempi; pohjoinen kärki on liian etelässä. Kiveys ei kata koko vaadittua jalanjälkeä.",
+    "visualPass": [
+      "Työalueella ei tornia eikä muita pystyrakenteita",
+      "Tasainen vaalea kiveys ja vaihteleva oliivinvihreä nurmi",
+      "Ei tekstiä tai ohjevärimerkintöjä työalueella"
+    ],
+    "unverified": [
+      "Jokaisen kadunsuun liittyminen polkuun ja polkujen 6–12 metrin leveys",
+      "Lähteestä pyyhittyjen tai näkymättömien aiempien polkujen säilyminen"
+    ],
+    "receiverCompositingRequired": true,
+    "productionCompositingPerformed": false,
+    "note": "Lähde määrää vastaanottajan käyttämään vain maskin sisäosan. Koko natiivikuva sisältää ulkopuolisia muutoksia eikä sitä saa korvata kokonaisena karttapohjaan."
+  },
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
