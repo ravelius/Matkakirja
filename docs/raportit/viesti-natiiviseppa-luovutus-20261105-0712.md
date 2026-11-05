@@ -3,10 +3,22 @@
 Korvaa luovutuksen -2243. Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta). Vuoro aina JU:lta.
 Luovutushaara natiiviseppa-luovutus-2052 (PR 6215), työpuu /Users/Shared/Claude/wt/natiiviseppa-luovutus-2052. Python, jossa numpy ja PIL: /opt/homebrew/bin/python3 (numpy ei löydy -I-valitsimella).
 
-## LISÄYS 5.11. 11.00: LUE ENSIN, korvaa alla olevat TYÖ 2:n ja "ei kosketa" -kohdat
+## LISÄYS 5.11. 12.0x: LUE ENSIMMÄISENÄ, nämä ovat auki
+**1) Pariisin aloituslento, osa B (Raamattu 2.210):** kamera, palat ja korkeusraja ennen kaaren lukitsemista; NUI hoitaa ajoituksen; D2:n kartan siirto tarvittaessa. Suunnitelma /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261105-pariisin-aloituslento.md. Ei iPad-ajoja eikä muistimittausta ennen valmista (2.207, 2.209).
+- **Pohja julkaisija/pariisi-219 99035b765** (kääntyy, JU; runko 0a353e6d0 + ebc8ce01e + 694e1783a + e4180ac69; Striimi päällä, Pariisin piirros pois). PT: VS 9afad1ef6 ei tule mukaan, koska se toisi Euroopan korjaukset oletuksena. Osa B tämän päälle.
+- Laskelma ja toteutusehdotus: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aloituslento/osa-b.md (korkeus noin 6,6–7,9 km suoralla katseella, ei ajettu). Kaarta ei ole lukittu.
+- Odottaa: JU:n Mac-vuoro kuviin (pyydetty). Kuvista kaaren korkeus, kallistus ja se, näkyvätkö talot. Sitten koodi omaan haaraan.
+
+**2) T7 → NAS 2. erä, osa 2 (Karttaseppä, 36 kohdetta, 328,7 Gi):** kopiointi alkoi 11.31 (kopioi.py /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/t7-nas-2era/, lukko /tmp/matkakirja-t7-nas-2era.lukko). Luettelo docs/raportit/t7-nas-2era-osa2-luettelo-20261105.txt tässä haarassa.
+- Tarkista ensin, onko ajo käynnissä: jos lukko on olemassa, odota. Jos ei ole ja tasmays.json:n kohteita ei ole 36 tai ok ei ole true: aja `nice -n 15 python3 -I .../t7-nas-2era/kopioi.py` taustalle; se jatkaa turvallisesti.
+- Täsmäyksen jälkeen pyydä PT:ltä poistolupa rivillä: kohteet, tiedostot, Gi, erot. Mitään ei poisteta ennen sitä. Poistotyökalu: kopioi osa1/poista.py osa2:een ja vaihda luettelo, lähteiden määrä 36, SALLITUT Matkakirja-karttaseppaan ja poikkeukset pois; korjattu tyhjän kansion vertailu on jo siinä. Osa 1:n tiedot: osa1/.
+- Osa 1 valmis: 2493 lähdettä ja 2400 linkkiä poistettu, T7 138 → 330 Gi. Jäivät T7:lle (PT): _valmiit/olavinlinna-blender-v26 ja proto-lokit/olavinlinna-tila.txt linkkeineen.
+- Eivät kuulu erään (PT): tunnistamaton 100,8 Gi ja Soniss 130,6 Gi, ei ratkaista tänään.
+
+## LISÄYS 5.11. 11.00: korvaa alla olevat TYÖ 2:n ja "ei kosketa" -kohdat
 **Tämä sessio on Natiiviseppä, vaikka kansio on Matkakirja-3d-selvittaja** (osoitekirja). Omistaja 10.38, 10.52 ja 10.55 (Raamattu 2.208 ja 2.209):
 - SEIS, kunnes juoksupeli ja Pariisi ovat valmiit: muistin kevennys, testinäkymän ja muistivahdin jatkotyöt, elävä kartta, maakuntarajat ja mäet, nostot ja zoomaus muihin kaupunkeihin. Juoksupelissä ja Pariisin kartassa ei iPad-ajoja, muistimittauksia eikä toistosarjoja.
-- JATKUU VAIN: levytilan vapautus (T7 → NAS 2. erä roolien vahvistusten mukaan; T7:llä 138 Gi, sisäisellä 129 Gi). PT 11.1x: Pariisin kartta on VS:llä, zoom ja reunat eivät ole enää minun työni. Tunnistamaton 100,8 Gi (ehdokkaat-ei-tunnistettu.tsv) ja Soniss 130,6 Gi jäävät paikoilleen, tilaa on riittävästi, ei ratkaista tänään.
+- JATKUU: levytilan vapautus (T7 → NAS 2. erä roolien vahvistusten mukaan) ja 12.0x:n lisäyksen aloituslento. PT 11.1x: Pariisin kartta on VS:llä, zoom ja reunat eivät ole enää minun työni. Tunnistamaton 100,8 Gi (ehdokkaat-ei-tunnistettu.tsv) ja Soniss 130,6 Gi jäävät paikoilleen, tilaa on riittävästi, ei ratkaista tänään.
 Keskeneräisen tila:
 - ASTC-koe 9ca48d7a2 (natiiviseppa/normaali-astc-koe) on pushattu. JU pysäytti ajon 10.43: ei tuloksia eikä kuvapareja, ei käynnistetä uudelleen. Tuotantoreittiä ei toteuteta.
 - Pariisin zoom ja reunat 3ab522752 ovat iPad-ajossa 3332c8e15 (häivytys 0,30–0,15 ok). KK:n 4.11. 02.50 lista (haamut 0,13:lla, tummat läiskät, länsiraja, nimet) on kerrottu VS:lle; en tee näille mitään.
