@@ -80,3 +80,11 @@ Seuraavaksi: 227:n kuvat täysikoossa, sitten koko arkki KK:lle (uudet arkit 226
 Tutkimatta: 四执库:n ja 重华宫:n ohut piikki tai kiila lehden alareunassa, 房子11:n maalaatan reuna oven edessä. 弘义阁:lla ei ovea (matala 4560, portaat 594, puu 230, ei_tilaa 102, räystäs 12 yritystä).
 Seuraavaksi: odota KK:n palaute. Ei junaan. Konteksti yli pehmeän rajan: luovutus ja nollaus palautteen jälkeen.
 Korjattu KK:lle: v13:ssa yksi pari alle 8 m: 房子11–房子8 6,4 m (uusi ovi, ei väistänyt; syy tutkimatta). 西暖殿 täysikoossa vain rungolta 380664d56.
+
+## LISÄYS 09.21: KK:n palaute arkista v13, kartta v14 (6769380b3), lista 228 JU:lla
+KK: arkki kelpaa, vie omistajalle vikoineen. Jatka täytettä, ei junaan. Ei uusia ovettomien yrityksiä (9) ennen omistajan vastausta. Seuraava arkki KK:lle, kun kohdat 1 ja 2 tehty.
+Kohta 1: 绥寿殿, 益寿斋, 永和宫: täyte oli kujan tukkona, koska kahden seinän väli (W ≤ 6,5) luettiin aukoksi. Nyt ei takaseinää eikä kattoa 8 m:n matkalla = ei aukko. Vain nämä 3 ovea siirtyivät (ero13.py). Katottomuusehto säästi 乾清宫:n, 坤宁宫:n, 宁寿宫:n ja 珍宝馆:n; niiden aukot jätetty, vaikka täyte on niilläkin osuus 0 (katso kuvista). Ilman valoa 3: 南库, 军机处 (kk-tausta-1-2 ainoa leivomaton 24:stä), 益寿斋 (seinä ei ladatuissa malleissa, epäily osasarjan muuri x noin −140, tarkistamatta; sama seinä 绥寿殿:lla). Rivi PT:lle lähetetty, LAV:lta kysytty hinta.
+Kohta 3 tehty: LAV:lle paikat, PT tiedoksi.
+KATSOTTAVA: lista 228, kansio JU:lta. Onko ovi muurissa uskottava: jos ei, palaa katsomaan.
+Kohta 2 tekemättä: 浴德殿 vaalea kaista ja pystyviiva, 四执库 piikki, 重华宫 kiila, 皇极殿 ikkuna. Lisäksi 房子11–房子8 6,4 m.
+Työkalut `_tyo/pelikoodari/tayte/8cd/`: ero13.py (vaihda vertailukartta), mat.py, seinat.py, alue2.py x0 x1 z0 z1, profiili.py. Tilan tila.npz on v7-pinnoista (ero- ja jälkiajot).
