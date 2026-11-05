@@ -20,7 +20,12 @@ Tullut 2f70a6b6d, SHA täsmää, ulkopuoli 0 muuttunutta, pari KK:lla (`alustat-
 Kun tummumiselle on testattava selitys tai katto korjattu: Riemukaari 45° + Eiffel 45° + kokeen vaatimat kuvat.
 **KK 23.3x (viesti lähetetty ennen ajon tuloksia):** ei kuittausta Codexille eikä Tripolle ennen päätöstä pelikuvista. Kaikki 45°:sta (omistaja 20.09) ja alusta myös ylhäältä, jos mahtuu samaan ajoon; kerroin 0,465. KK katsoo: 1) Opéran ja Montparnassen kiveyskuvio: erottuuko alue laattana (sävyero enintään noin 11/255); 2) Grand Palais'n nurmi kartan puiston rinnalla; 3) Invalidien nurmi ja alapuutarhat; 4) Riemukaaren katto: sävy, ruudukon epätasaiset ruudut ja terävät viivat rungon pehmeän pinnan rinnalla. Eiffel ja Sacré-Cœur, kun ne ovat pelissä. **Opéra on nähty vain tummana, joten se on ajettava uudelleen tai tummuus korjattava ennen KK:n arviota.** Ylhäältä otettuja kuvia ei ole vielä otettu.
 
+## KK JA PT 23.3x (saapui nollauksen aikana; ei vielä vastattu)
+- **KK:** Eiffelin pari kelpaa kokeeksi. **Korjaus ennen seuraavaa ajoa: nurmi lähemmäs kartan puistojen väriä (Eiffel, Grand Palais, Invalidit) koneellisesti, kuvio säilyy, ei uutta generointia.** KK:n mittaus Eiffelistä: kartan puisto 195,175,117, uusi nurmi 194,177,106; ero on keltaisuudessa, ja iso alue erottuu laattana. Sama korjaus vähentää lounaisreunan kiilaa. Jos ei riitä, kerro KK:lle ennen uutta Codex-tilausta. Korjatut seuraavassa ajossa samasta kulmasta, jotta ero näkyy. Tee `sarja24-asennus/`:iin (lähteet `alustat-24p/uudet/`), älä muuta asennettua kuvaa toista kertaa kertoimella.
+- **PT tummuuteen:** NS mittasi Marais'n ajosta 1a03b85fc saman ilmiön: kartta ×0,75 (sRGB) vain kuvassa m2, muut viisi normaaleja, talot samat. Kuvat `lokit/natiiviseppa-marais-1a03b85fc/` (m2-keski-0 vs m1-kauko-0). NS toimittaa arvot seuraavasta ajostaan. Epäile kartan omaa näytettä tai tasoa, ei valoa: syy voi rajautua ilman uutta ajoa.
+
 ## TYÖJONO
+0. Nurmen väri (KK, ennen seuraavaa ajoa).
 1. Tummuus (PT ja KK vaativat). 2. Katto. 3. Pystysauma. 4. Sacré-Cœur pelissä ja Montparnasse. Muu kuten -2207.
 
 ## Opit
