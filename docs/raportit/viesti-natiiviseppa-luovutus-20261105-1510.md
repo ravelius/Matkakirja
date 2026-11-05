@@ -47,3 +47,6 @@ pid 58484 käynnissä 15.09, lokissa vain ALOITUS 13.28. Monitor kuolee nollauks
 
 ## Sessiosta
 Remote päällä, Raamattu 7.47 luettu. Zsh: `$S:A` tulkitaan muuttujan muunnokseksi, joten käytä `${S}:polku` tai kirjoita sha suoraan.
+
+## Lisäys 15.1x: NUI
+NUI poimi 8de7fb360, ca88b1830 ja a88c8f846 haaraansa natiivi-ui/kyltit-219 (KS:n kärjen päällä), nimet f3f259ad4 (`Horisonttiusva.SyvyysPeitto`, `PalloKierto.UsvaPeitto`). Kerro NUI:lle, jos kenttien RuutuAlkuM/RuutuLoppuM yksikkö (m) tai sha muuttuu, myös kun 2,5 km:n arvo vaihtuu uuteen committiin. NUI jätti PalloKierto.cs:n konfliktissa `|| Kiertaa` pois, koska KS:n pohjassa sitä ei ole: kun haara yhdistyy kierron sisältävään runkoon, ehto pitää palauttaa (rivi `double kaytetty = math.clamp(vapaaKuvaus || Kiertaa ? ...`), muuten kierron kallistus rajoittuu.
