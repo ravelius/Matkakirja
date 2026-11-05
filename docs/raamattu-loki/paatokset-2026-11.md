@@ -391,3 +391,7 @@ OMISTAJAN PYYNTÖ klo 21.32: "Eifelin alta puuttuu maa."; kuva docs/raportit/kaa
 Grand Châtelet'n kyltti pisteen yläpuolelle: KK 21.30 NUI:lle "Grand Châtelet 45°:ssa, kuten suunnittelit", ei omistajan sana; koskee vain tätä kohdetta, ei muita kylttejä eikä sääntöä; KK katsoo tuloksen. Syy mitattu: törmäys malliin vasemmalla 45°:ssa.
 
 Eiffelin siirto 70 m (KS 024338c23): koe, ei junaan eikä hyväksytty; KK päättää, kun KS tuo syyn, vaihtoehdon ja kuvat molemmista. Omistajan sana on vain "Eifelin alta puuttuu maa", ei siirtoa.
+
+## OHJELMAKOHTEET OIKEISSA MITOISSA, ENSIN PARIISI LOPPUUN (OMISTAJA 21.49, KK) (5.11.2026 klo 21.5x)
+
+OMISTAJAN PÄÄTÖS klo 21.49: "Missä koossa nämä kolme kohdetta jäävät Pariisiin?" = "Oikeissa mitoissa (Suositus)"; selite: "Vain tärkeimmät nähtävyydet on liioiteltu, ja viat korjataan". "Kokeillaanko Lontoota tällä tavalla Pariisin jälkeen?" = omin sanoin: "Tehdään ensin Pariisi loppuun". Kuvat scratchpad/keskustelukanava/kuvat/ohjelmakohteet-cffdccab9/ (cffdccab9). KK:n tulkinta: kolme kohdetta jäävät, Valoseppä korjaa viat; Lontoon kokeesta ei päätöstä, osat A–F odottavat, 2.210:n sama toteutus pysyy, KK kysyy uudelleen, kun Pariisi on valmis. Raamattu 2.213.
