@@ -1,5 +1,16 @@
 # Valosepän luovutus 6.11.2026 klo 00.25
 
+## LISÄYS 00.3x: ENSIN TÄMÄ (korvaa alta TILAN ajotiedon ja SEURAAVAKSI-kohdat 1–3)
+Ajo e7c639217 TEHTY: 226 s, exit 0, lokit/esikatselu-20261106-002433, LUKKO VAPAA ilmoitettu JU:lle. Kuvat katsottu; viat ja kuvapolut lähetetty KK:lle, kopio PT:lle. Älä aja tätä sha:ta uudelleen.
+Todistettu: Unity kääntää; bdc211ab8 toimii (Ohjelmakohteet ≤ 17 ms ruudussa, ennen 59–63); Pont Neuf -nimi kokonaan; pystyseinä poissa; Madeleine paikallaan, 23 verkkoa, 88 334 kolmiota.
+Koodi nyt 1af8879d6 (haara linssiseppa2/ohjelmakohteet, natiivi-backup). EI AJETTU: (a) lasku alkaa sillan leveydestä, ei OSM:n levenevästä päästä, koska pää näytti nuolelta (Carrousel, Pont Neuf; Pont Neufilla laskun kanssa `Paa` leikkaa rantamuurin varren levyiseksi). (b) kaikki Ohjelmakohteet jonoon 2994, varjo 2993, koska Madeleine katkaisi kadun nimen (m-sivu).
+Geometriatestit läpi. Pont Neufin nuolikorjausta ei katsottu edes offline-kuvasta (kuva on tehty, /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa-2/ae2744ba-715b-4443-bdc0-69e4825e41a7/scratchpad/off/pn/pn-pohj-k45-30.png; voi kadota, tee uusi `esikatsele.py`:llä).
+AUKI: tummat pisteet Pont Neufin ja Carrouselin kaiteessa jäivät, vaikka Pont Neufin sisäpinta lisättiin; arvio syystä oli väärä tai riittämätön. Lyhyimmät laskut katsomatta. Kärjen väri mitattu tummasta kartasta, kartan kirkkaus vaihtelee.
+KK:n päätöstä odottaa: Pont Neufin yhdysosa saarella (14 m seinät). KK:lle sanottu, että jatkan Palais Bourboniin, ellei se sano muuta. Lue KK:n vastaus ensin, jos sellainen on tullut.
+SEURAAVAKSI: kohta 4 (Palais Bourbon). Seuraava JU-ajo todistaa myös 1af8879d6:n: lisää kuvat p-et, p-pn2 ja m-sivu skenaarioon `sk-madeleine.txt` pohjalta.
+
+## TILA ENNEN AJOA 00.25
+
 Korvaa luovutuksen -2356. Syy nollaukseen: konteksti pehmeällä rajalla.
 
 ## TILA
