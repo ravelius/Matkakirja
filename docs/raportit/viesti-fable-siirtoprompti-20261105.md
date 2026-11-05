@@ -22,7 +22,7 @@ Aloitusviesti kullekin: "Olet <Rooli> (<malli, effort>). Tili vaihtui. Aja git f
 |---|---|---|
 | Postivahti | Matkakirja-posti/docs/raportit/viesti-postivahti-luovutus-20261105-1710.md (levyllä) | kierros; KIERROS.md id:t |
 | Asemataulu | – | taulu tämän tilin osoitteeseen; mittarit (viikko ja levy jäivät vanhoiksi) |
-| Julkaisija | julkaisija-luovutus-20261105-1706, d0e50c49e | jono: vuorottelu juoksupeli / Pariisin 3D-rakennukset; LAV:n aja13 uudelleen, jos kuoli |
+| Julkaisija | julkaisija-luovutus-20261105-1706, d0e50c49e | ENSIN: pieni iPad 9e8c8ab1e, luvattu omistajalle (KK:n sana, 2.214; vain asennus). Tarkista kansio julkaisija-laite-218-9e8c8ab1e ja tee, jos vanha ajo kuoli vaihdossa. Sitten jono: vuorottelu juoksupeli / Pariisin 3D-rakennukset; LAV:n aja13 uudelleen, jos kuoli |
 | Karttaseppä | karttaseppa/luovutus-20261105-1706, 3d2b2b5cb | Grand Palais otto 2 ja muut kuusi Codexilta; ND-torneja EI suoristeta (2.215) |
 | Natiivi-UI | natiivi-ui/luovutus-20261105-1704, 5d5c94a72 | kylttien paikanvaihto; Auki 1–3 KK:n sanalla |
 | Pelikoodari | pelikoodari-luovutus-20261105-1706, c372aade5 | proto 4c4cf9d8d:n katselu |
@@ -32,4 +32,5 @@ Aloitusviesti kullekin: "Olet <Rooli> (<malli, effort>). Tili vaihtui. Aja git f
 | Linssiseppä, Projektiseppä, Työkaluseppä, Sisältökirjuri, Äänittäjä, Laitetestaaja | – | levossa, ei sessiota |
 
 ## 3. Irralliset ajot vanhalla tilillä
+PR 6286 (tämä luovutus): jos se on yhä auki, merge heti, kun tarkistukset ovat läpi.
 Mac jatkaa ajoja tilistä riippumatta, jos prosessi ei kuole session mukana: LAV aja13 (L1, JU:n mukaan kuolee session mukana) ja PK 4c4cf9d8d (L2, pid 76844). Tarkista lokit ennen uudelleenajoa.
