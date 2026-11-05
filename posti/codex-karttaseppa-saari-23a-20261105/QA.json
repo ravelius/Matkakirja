@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-05T07:32:30.808772+00:00",
+  "sha256": "cc3c93a088935cb011ff5e2de8540bf860e2a3f0a84cbc6596d96dcb90f0e96f",
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "canvasPass": true,
+  "generationCalls": 1,
+  "preflightInvocationRejectedBeforeGeneration": true,
+  "originalBytesPreserved": true,
+  "postprocessingApplied": false,
+  "outsideIsland": {
+    "pixels": 1311260,
+    "changedAny": 1311024,
+    "changedOver12": 154674,
+    "meanAbsRGB": [
+      5.439630584323475,
+      6.219205191952779,
+      6.277629913213246
+    ],
+    "changedAnyPercent": 99.982
+  },
+  "lockedSquares": {
+    "pixels": 54667,
+    "changedAny": 54660,
+    "changedOver12": 3149,
+    "meanAbsRGB": [
+      4.934677227577881,
+      5.2469680062926445,
+      5.439460734995518
+    ],
+    "changedAnyPercent": 99.9872
+  },
+  "island": {
+    "pixels": 261604,
+    "changedAny": 261597,
+    "changedOver12": 120288,
+    "meanAbsRGB": [
+      22.80098928150946,
+      21.19521108239935,
+      30.497110135930644
+    ],
+    "changedAnyPercent": 99.9973
+  },
+  "churchInteriorOliveCandidatePixels": 1007,
+  "churchInteriorPixels": 72131,
+  "oliveHeuristic": "R<215,145<G<210,B<165,G-B>28,R-G<30; 5px eroded church guide polygon intersect island; visual QA separate",
+  "visualReviewed": true,
+  "semanticCorePass": false,
+  "exactRegistrationPass": false,
+  "qualityPass": false,
+  "bridgeCountInOrder": 6,
+  "visuallyIdentifiableIslandBridgeEnds": 5,
+  "bridgeLandingApproximateXY": [
+    [
+      216,
+      293
+    ],
+    [
+      182,
+      347
+    ],
+    [
+      598,
+      394
+    ],
+    [
+      731,
+      439
+    ],
+    [
+      462,
+      637
+    ]
+  ],
+  "notes": [
+    "Nurmi, polut ja rantakiveys; ei havaittuja pystyobjekteja/varjoja/tekstiä saaressa.",
+    "Kirkon paikka on tyhjää kiveystä. Alueen reuna poikkeaa ohjepolygonista hieman; tarkka peitto tarkistettava maskikoostamisessa.",
+    "Lukittujen aukioiden kiveyksen rasteri ja reunat eivät pysyneet pikselilleen; Karttasepän lähteen mukainen takaisinliimaus vielä tekemättä.",
+    "Viisi saaren sillanpäätä tunnistettavissa lähtökuvasta, kaikkiin näkyy polkuliittymä ehdokkaassa; lähteen kuutta ei varmennettu.",
+    "Rantaviiva on silmämääräisesti lähellä pohjaa mutta pikselitarkkaa sijaintia ei hyväksytty. Ulkopuolen muutokset poistuvat vastaanottajan saari-maskilla, ei vielä koostettu.",
+    "Kirkon ohjepolygonin sisällä nurmisävyä noin1007px eli1.40% viiden pikselin sisennetystä tarkistusalueesta. Nurmi osuu erityisesti etelä/itäreunan kapeaan kaistaan: kirkon täysi vapaa peitto ei täysin läpäise."
+  ],
+  "flatParkContentPass": true
+}
