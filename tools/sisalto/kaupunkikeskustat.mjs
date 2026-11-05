@@ -21,7 +21,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
-const UA = 'Matkakirja-karttaseppa/1.0 (sami.reivinen@vvi.fi)';
+const UA = 'Matkakirja-karttaseppa/1.0 (https://matkakirja.app; peli)';
 const TULOS = path.join(JUURI, 'data', 'kaupunkikeskustat.json');
 // Julkiset Overpass-palvelimet vuorotellen kuten tools/kartta/tee-tiet.mjs (overpass-api.de ruuhkautuu ja palauttaa 502/504).
 const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',

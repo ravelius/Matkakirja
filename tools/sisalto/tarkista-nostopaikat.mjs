@@ -16,7 +16,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
-const UA = 'Matkakirja-karttaseppa/1.0 (sami.reivinen@vvi.fi)';
+const UA = 'Matkakirja-karttaseppa/1.0 (https://matkakirja.app; peli)';
 const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
   'https://overpass.private.coffee/api/interpreter'];
 const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
