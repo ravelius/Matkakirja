@@ -16698,7 +16698,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/tampere/20261012-full/intro-tampere-4-v1.png',
+          ampari: 'saapumisintro/tampere/20261012-full/tampere-4-finlayson-arki-intro-v1.png',
           lyhyt: 'Tampereen vanhat tiilitehtaat nousivat Tammerkosken rannalle 1800-luvulla.',
           selite: 'Skotlantilainen James Finlayson perusti Tammerkosken rannalle '
             + 'puuvillatehtaan 1820, ja sen Plevna-rakennuksessa syttyi 1882 '
@@ -16711,7 +16711,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/tampere/20261012-full/intro-tampere-5-v1.png',
+          ampari: 'saapumisintro/tampere/20261012-full/tampere-5-pyynikki-pyhajarvi-intro-v1.png',
           lyhyt: 'Pyynikinharjua pidetään maailman korkeimpana soraharjuna.',
           selite: 'Harju kohoaa noin 80 metriä Pyhäjärven pinnan yläpuolelle ja jatkuu '
             + 'lännessä Pispalanharjuna.',
@@ -16735,7 +16735,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/tampere/20261012-full/intro-tampere-7-v1.png',
+          ampari: 'saapumisintro/tampere/20261012-full/tampere-7-tiilikortteli-ilta-intro-v1.png',
           lyhyt: 'Tampere on Pyhäjärven ja Näsijärven välisellä kannaksella.',
           selite: 'Tampere perustettiin Kustaa III:n päätöksellä, ja täydet kaupunkioikeudet '
             + 'se sai 1. lokakuuta 1779.',
@@ -20655,7 +20655,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-intro-4-v3.png',
+          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png',
           lyhyt: 'Cotrocenin kukkulalle Șerban Cantacuzino perusti luostarin vuonna 1679.',
           selite: 'Kuningas Carol I rakennutti luostarin alueelle palatsin, jonka '
             + 'rakentaminen alkoi 1888. Palatsin ympäristö kehittyi asuinalueeksi.',
@@ -20667,7 +20667,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-intro-5-v1.png',
+          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png',
           lyhyt: 'Cișmigiu on Bukarestin vanhin julkinen puisto.',
           selite: 'Nimi cișmigiu tulee turkin kielestä ja tarkoittaa julkisten kaivojen '
             + 'hoitajaa, joka asui aikoinaan puiston alueella.',
@@ -20691,7 +20691,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-intro-7-v1.png',
+          ampari: 'saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png',
           lyhyt: 'Dâmbovița kanavoitiin Bukarestin kohdalla 1800-luvun lopulla tulvien '
             + 'torjumiseksi.',
           selite: 'Joen kaupunkiosuus kanavoitiin 1880-luvun alussa tulvien torjumiseksi ja '
@@ -26284,7 +26284,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/tromso/20261012-full/intro-tromssa-4-v1.png',
+          ampari: 'saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png',
           lyhyt: 'Tromssan keskustassa on puutaloja jo 1700-luvun lopulta.',
           selite: 'Keskustan vanhin dokumentoitu talo on Skansenissa, ja se rakennettiin '
             + '1700-luvun lopulla tulliasemaksi.',
@@ -26296,7 +26296,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/tromso/20261012-full/intro-tromssa-5-v1.png',
+          ampari: 'saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png',
           lyhyt: 'Prestvannet on Tromssan saarella sijaitseva, padolla laajennettu järvi.',
           selite: 'Järvi padottiin vuonna 1867 Tromssan juomavesivarastoksi.',
           lahde: 'Matkakirjan havainnekuva',
@@ -26320,7 +26320,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/tromso/20261012-full/intro-tromssa-7-v1.png',
+          ampari: 'saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png',
           lyhyt: 'Tromssa sai kaupunkioikeudet kesäkuussa 1794.',
           selite: 'Kuningas Christian VII myönsi kaupunkioikeudet sen jälkeen, kun Bergenin '
             + 'kauppamonopoli Pohjois-Norjassa oli lakkautettu 1789.',
@@ -27432,7 +27432,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/lapland/20261012-full/intro-lappi-4-v1.png',
+          ampari: 'saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png',
           lyhyt: 'Inarin kylässä sijaitsevat saamelaismuseo Siida ja '
             + 'saamelaiskulttuurikeskus Sajos.',
           selite: 'Inari on pinta-alaltaan Suomen suurin kunta: sen laajuus on noin 17 300 '
@@ -27445,7 +27445,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/lapland/20261012-full/intro-lappi-5-v1.png',
+          ampari: 'saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png',
           lyhyt: 'Inarijärvi on Suomen kolmanneksi suurin järvi.',
           selite: 'Inarijärven pinta-ala on yli tuhat neliökilometriä, ja järvessä on yli '
             + 'kolme tuhatta saarta.',
@@ -27470,7 +27470,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/lapland/20261012-full/intro-lappi-7-v1.png',
+          ampari: 'saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png',
           lyhyt: 'Ivalojoen kultalöydöt houkuttelivat kullanhuuhtojia Lappiin 1870-luvulla.',
           selite: 'Ivalojoesta löydettiin kultaa 1868, ja 1870-luvulla joella huuhdottiin '
             + 'kultaa vilkkaasti.',
@@ -29923,7 +29923,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-intro-4.png',
+          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png',
           lyhyt: 'Dubrovnikin vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta '
             + '1979.',
           selite: 'Vuoden 1667 maanjäristys vaurioitti kaupunkia pahoin, mutta siellä on yhä '
@@ -29937,7 +29937,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-intro-5.png',
+          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png',
           lyhyt: 'Lokrum on mäntyjen ja tammien peittämä luonnonsuojelualue 600 metrin '
             + 'päässä Dubrovnikista.',
           selite: 'Saarella kasvaa aleppomäntyä ja kivitammea. Lokrumille pääsee veneellä '
@@ -29950,7 +29950,7 @@ export const KULTTUURI_KATEGORIAT = {
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
            */
-          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-intro-7.png',
+          ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png',
           lyhyt: 'Dubrovnikin ylimykset rakennuttivat rannikolle yli 200 kesähuvilaa '
             + '1400–1700-luvuilla.',
           selite: 'Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan '
