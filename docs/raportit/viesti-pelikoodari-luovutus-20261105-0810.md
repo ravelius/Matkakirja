@@ -55,3 +55,14 @@ Sävy a c1d985643 kuten edellä; kärki 4373fd9fe ei sisällä sitä.
 Epäonnistuneet käsikamerat: 御景亭-etela (puut edessä), 房子11-etela (pelkkä seinä, lattia tumma). Yritä toisesta suunnasta.
 ovi-凝香亭: mittaus aikakatkaistu 120 s, sama kamerarivi toimi 8cdda6041:ssä; syy auki. `tarkastelu_kuvat.sh` tulostaa nyt VIKA, jos lokissa on PUUTE.
 KK:lle 08.5x lähetetty tila; arkki vasta kun A ja B valmiit. Seuraavaksi: A:n loput, 西暖殿, B4:n irto-osat.
+
+## LISÄYS 09.02: omistaja 08.33 "Kelpaa" ovien ulkonäöstä; korjaukset 380664d56 (kartta v12), kuvat JU:lla
+Omistajan kortti KK:n kautta: ulkonäkö kelpaa, kun viat on korjattu; jatka; seuraava arkki KK:lle → omistajalle; ei junaan.
+Lista 226 (41 ovea, runko 380664d56) pyydetty JU:lta. Kansio tulee riviksi. Sitten arkki: `_tyo/pelikoodari/tayte/arkki.py <kansio> <etuliite> 3`.
+西暖殿: ovi oli 1,4 m ulkoseinän (z 399,75) takana mallin sisäkujassa ja portaat seinän läpi, koska porrastarkistus astui 0,5 m (seinä 0,25 m). Askel nyt V. Viimeisenä keinona `nakyva(..., kierros=1)`: seuraava tason 1 alue seinän takana. Uudet ovet samalla: 房子11, 如意馆; kuvista katsottava. Muut kartan ovet samat kuin v11 (kaikki_ero.py), paitsi 长春宫戏台.
+长春宫戏台: pylväs oven keskellä; W > 6,5:n aukossa ovi lähimpään väliin.
+四执库 ja muut kapeat jalustat: lehden kulma `Asin((syv − 0,17 − 0,1) / pit)`, ettei lehti ulotu jalustan ohi; alaraja 20° ennallaan, joten syv 0,5 (26 ovea) voi yhä ylittää noin 8 cm. Koodi käännetty vasta tässä ajossa.
+Täyte: 永和宫 ja 平房15 saivat leivotun seinän mediaanin 8 m:n säteeltä (tasainen). 南库, 军机处, 绥寿殿, 益寿斋: alueella ei leivottua V4_red:iä, joten ilman valoa, kunnes malli leivotaan (ei minun).
+延禧宫: malli on kivirakennus (tyyppi ruins), ovi seinässä; ei muutettu, kerro KK:lle.
+弘义阁 (B4): y 0,81 -laatat EIVÄT ole LAV:n irto-listalla `linnanrakentaja/muuri/irto/lista.csv`; viereinen y 1,74 (ruutu 1-1, x −93…−90,5) on. Yleinen korjaus ei siis listan mukaan kata niitä. KK:lle vastaamatta.
+Yhä auki: 浴德殿:n vasen kaista ja pystyviiva, 皇极殿:n ikkuna (viat 1), 御景亭 ei ovea.
