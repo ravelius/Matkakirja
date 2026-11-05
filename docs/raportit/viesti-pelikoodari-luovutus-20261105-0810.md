@@ -101,3 +101,8 @@ KATSOTTAVA: lista 229. Kohta 2 yhä tekemättä (ks. 09.21) ilman 益寿斋:n os
 
 ## LISÄYS 09.3x: LAV:n vastaus ovikohdista
 kk-tausta-1-2:n valo_rgbm puuttuu vahingossa (v95:ssä on, v96:sta ei; syy todistamatta), leivonta LAV:n levykorjauksen ajossa (PT:n päätös). 房子26 on irto-listalla; 房子11:stä y 0,37 ja 0,35 ovat, y 0,31 ja y 0 eivät; 弘义阁 y 0,81 (68 m²) ei ole. LAV ei löytänyt 弘义阁:lta V4_marmoria vaakapintana, joten aiempi havainto on epävarma. LAV katsoo ensin, poistaako levykorjaus nämä. Ei tehtävää minulle ennen sitä; 弘义阁 (B4) yhä vastaamatta KK:lle.
+
+## LISÄYS 09.37: ajo 734ab83ef katsottu (7/7 täysikoossa), kartta v16 8b0f8f9e1, lista 230 JU:lla
+`lokit/tarkastelukuvat-734ab83ef-093144`.
+Hyvät: 永和宫 ehjällä seinällä, 长春宫, 钟粹宫. 绥寿殿: täyte ilman valoa näkyy vaaleana suorakaiteena (ei uusi vika, malli tyohuone.glb ilman leivontaa). 体元殿, 咸福宫: avattu vasen lehti ikkunan edessä; ikkuna ei ole täytteen alla. Lehden kulma ei ota sitä huomioon; ei korjattu. 长春宫, 咸福宫: tasaisen harmaat portaat vs. mallin kuvioidut (sama kuin aiemmin; ei uusi).
+益寿斋 v15 (aukko-lehti) huono: mallin oma ovi, sen ruskeat lehdet oven takana ja kaman yli näkyy läpi. Siksi lehti-aukko nyt ohi; kartta v16: vain 益寿斋 siirtyi 12,2 m (x −134,47, z 385,8, nx −1), keskelle-peitto, täyte 7,45 × 3,45 m ilman valoa. KATSOTTAVA: lista 230. Jos suuri valoton täyte näkyy huonosti, ratkaise ennen arkkia (paikka tai ei ovea; KK:n linjaus: ei uusia ovettomia ilman vastausta).
