@@ -32,3 +32,6 @@ Näkyi korjautuneen: kasauma pieni, Les Hallesin kyltti esillä, pallo pois torn
 - PT: kun erä kootaan pienelle iPadille, JU:lle "KaytettyRaja() ja || Kiertaa palautetaan, kun lento-haara yhdistyy" (be9b73bc7). JU:lle kerrottu 15.45.
 - Älä yhdistä lento-haaraa suoraan (52 committia, ristiriita Laattapalvelin.Elava.cs:ssä). Yhdistämisestä päättää PT.
 - zsh: `"${K}:polku"`, ei `$K:polku`; `====`-rivit echossa kaatavat komennon, käytä `'---'`.
+
+## Lisäys 16.3x, KK 16.2x
+Kärki on nyt ed6c66eaf (tarkista.sh 0, pohjavahti ok, ajamatta), JU:n jonossa. Nostokyltti häipyy 3D-mallin rajauslaatikon kohdalta (Les Halles Louvren ja Bastilji Notre-Damen päällä), sama koskee Grand Châtelet'tä (Auki 3). Rajauslaatikko on mallia väljempi, joten katso kuvasta, häviääkö kallistettuna liian moni kyltti mallin vierestä; jos häviää, käytä tiukempaa rajaa. KK odottaa Macin kuvaa tästä: katso kyltit-louvre-lansi ja kyltit-louvre-viisto, vie kuva KK:lle.
