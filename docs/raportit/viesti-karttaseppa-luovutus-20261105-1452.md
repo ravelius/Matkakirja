@@ -1,6 +1,13 @@
 # Karttaseppä: luovutus 5.11.2026 klo 14.52 (KS)
 Syy: konteksti 30 % (7.37). **Lue tämä, sitten -1407 (karttaseppa/luovutus-20261105-1407) ja -1350.** Tämä voittaa ristiriidassa. Python: /opt/homebrew/opt/python@3.14/bin/python3. Proto-worktree W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup (EI origin), kärki 8b19d7de1.
 
+## KK 14.5x, uusin: tämä täsmentää KORJAUKSEN kohdelistan
+KK: "lista ei täsmää, koska kuvassa näkyy muitakin kohteita." Omistajan oma kuva 14.52 ("Tässä näkyy"): `docs/raportit/kaappaukset/omistaja-20261105/pieni-ipad-pienet-3d-kohteet-1452.png` (pieni iPad; hae KK:n haarasta tai kysy polku, jos ei ole tässä checkoutissa). Katso se ensin.
+- **Poistoon kuvasta:** vaaka + kaari nappulan alla, pieni värillinen Notre-Dame pyöreän kuvan vieressä (iso nimi "Notre-Dame" sen vieressä), Place des Vosgesin pienoismalli, pieni torni, "!!"-merkit oikealla alhaalla, laiva Seinellä.
+- **ÄLÄ POISTA ennen omistajan vastausta (KK kysyy nyt):** kadonneiden ihmeiden kuvat Grand Châtelet, Temple-torni, Bastilji, Les Hallesin hallit (omistaja 2.11. 08.31, 08.42).
+- **Tee:** piirtopolku ja pelin toiminta kohde kohteelta: mitä napautus avaa; mukana myös turistiinfo ja lehtikioski (2.11. 08.40). Lista ja Mac-kuva KK:lle **ilman piilotettua ui-kerrosta**.
+- **Louvren museo:** KK kertoo seurauksen omistajalle. KK hyväksyi suosituksen: napautus uuteen Louvreen avaa museon. Pyramidin poisto odottaa silti KK:n sanaa (8b19d7de1 palautti sen).
+
 ## KORJAUS 14.5x (KK, omistaja 14.51): ENSIMMÄINEN TYÖ, voittaa alla olevan
 **Lista KK:lle oli väärä.** Kirjoitin KK:lle "muita 3D-kohteita ei tässä haarassa Pariisissa ole" koodin luvun perusteella, mutta omistaja näki niitä pienellä iPadilla (MK kehitys 661377bbb, juuri tämän haaran rakennus). Ali-agentin päätelmä "Symbolimallit on oletuksena pois" ei siis riitä, eivätkä Oikeuspalatsi, Hôtel de Ville ja Saint-Jacques ole kohteita: ne olivat KK:n arvaus.
 - **Omistajan sanat 14.44:** "pienellä ipadilla näkyi notre damen vieressä pieniä 3d kohteita, ne varmaan poistuvat kaikki? ei jätetä muita 3d kohteita näkyviin kuin nämä uudet juuri tekeillä olevat."
