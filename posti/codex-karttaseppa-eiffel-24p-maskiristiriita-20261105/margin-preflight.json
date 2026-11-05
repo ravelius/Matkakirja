@@ -1,0 +1,70 @@
+{
+  "method": "Minimum Euclidean pixel distance between inner mask boundary and footprint boundary; raster 8-neighbour boundaries. Metres estimated from source game footprint 300x300m area / binary footprint pixels, not separately georeferenced.",
+  "footprintWhitePixels": 75005,
+  "estimatedMetresPerPixel": 1.0954086019988056,
+  "minimumBoundaryDistancePx": 17.69180601295413,
+  "estimatedMinimumMarginMetres": 19.379756491484148,
+  "nearestFootprintPixel": [
+    518,
+    466
+  ],
+  "nearestMaskBoundaryPixel": [
+    505,
+    478
+  ],
+  "allFootprintInsideMask": true,
+  "requiredMarginMetres": 35,
+  "estimatedMarginPass": false,
+  "actualRuntimeLegPositionsVerified": false,
+  "source": "TILAUS-24-sarja.md: Eiffel game footprint 300x300m; no 70m shift applied.",
+  "footprintCornerMargins": {
+    "north": {
+      "pixel": [
+        559,
+        125
+      ],
+      "closestMaskPixel": [
+        527,
+        94
+      ],
+      "distancePx": 44.553338819890925,
+      "estimatedMetres": 48.80411059107583
+    },
+    "east": {
+      "pixel": [
+        756,
+        315
+      ],
+      "closestMaskPixel": [
+        768,
+        297
+      ],
+      "distancePx": 21.633307652783937,
+      "estimatedMetres": 23.697311292546114
+    },
+    "south": {
+      "pixel": [
+        566,
+        511
+      ],
+      "closestMaskPixel": [
+        554,
+        526
+      ],
+      "distancePx": 19.209372712298546,
+      "estimatedMetres": 21.042112108052955
+    },
+    "west": {
+      "pixel": [
+        369,
+        321
+      ],
+      "closestMaskPixel": [
+        341,
+        297
+      ],
+      "distancePx": 36.87817782917155,
+      "estimatedMetres": 40.396673220116156
+    }
+  }
+}
