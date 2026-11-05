@@ -30,7 +30,7 @@ Täydentää -1837:ää, -1822:ta ja -1744:ää; lue ne kokonaan. Proto `pelikoo
 2. Muurin syy (kohta 1), materiaalikartalla ilman ajoa.
 3. Pisteet (kohta 2), varjostimen luku ilman ajoa.
 4. -1837:n `boordi-2`:n seinä z = 277,35: uusi `boordi-2.png` on nyt saatavilla.
-5. LAV ei ole vielä kuitannut terassia; konsoli ja räystäs jonossa aiemmin.
+5. LAV ei ole vielä kuitannut terassia; konsoli ja räystäs jonossa aiemmin. **Kun leivonta on valmis, kerro VS:lle, näkyykö viiva vielä** (VS 19.0x: varjostin pysyy ennallaan siihen asti; jos rgb = 0 -tekseleitä jää, VS tekee tunnistuksen). `valo puuttuva 0` oli vain koe: lista palautti arvon 1:een ajon aikana, ja koodin oletus on `true`.
 
 ## 5. Työkalut
 Scratchpad `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-pelikoodari/555acf86-27cf-4dab-ac7f-6616ca47de59/scratchpad/`: `viiva_lue.py` (lukee myös UV0, UV1 ja COLOR), `viiva.py` (säteet + UV), `kartta3.py` (valokartta kameran näkymästä), `valo3.py` (hyllyt tekseleinä), `valo4.py` (pelikuva vs atlas), `raita.py` (pintojen määrä säteillä), `nollat.py` (atlasten nollatekselit), `kaide-pari.png`. Muut työkalut -1837:ssä. Kuvapisteet ovat 2000 × 1500 -näytössä, tiedoston kuva on 2202 × 1651.
