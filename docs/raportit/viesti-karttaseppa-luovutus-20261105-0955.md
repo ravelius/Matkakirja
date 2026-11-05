@@ -3,7 +3,7 @@ Syy: konteksti 35 % (7.37). **Lue tämä, sitten -0940 (4846eff8c, haara karttas
 
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla: kirjoita vahti.zsh uudelleen (fetch origin claude/postilaatikko 60 s välein, /Users/Shared/Claude/wt/karttaseppa-postilaatikko), käsitelty cdf197d7f asti.
-2. Saariajot JU:lta käynnistyksen jälkeen: f9e5cf79d (kansio on jo olemassa), b2ce1653f, 626a3a68b → lokit/julkaisija-saari2-626a3a68b. Jos JU:n rivi on tullut, katso kuvat täysikoossa ja vie KK:lle kuten -0940:ssä. Parit: saari-pohja/parit.py.
+2. **Saariajot valmiit 10.02 (JU: exit 0, 7/7 kuvaa, ei PUUTE-rivejä; kuvia ei ole katsottu):** kone /Users/Shared/Claude/proto-3d/lokit/julkaisija-saari-f9e5cf79d, Codex /Users/Shared/Claude/proto-3d/lokit/julkaisija-saari-b2ce1653f, ennen /Users/Shared/Claude/proto-3d/lokit/julkaisija-saari2-626a3a68b. Katso kuvat täysikoossa ja vie KK:lle kuten -0940:ssä. Parit: saari-pohja/parit.py.
 
 ## Muuttunut -0940:n jälkeen
 - **PT 09.50:** sarjan tilaukset seis, kunnes omistaja on nähnyt tavan (Raamattu 2.206, LÄHIALUE PUHTAAKSI).
