@@ -22,6 +22,15 @@ Työkansio D = /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet.
 - Tour Saint-Jacques: KK on katsonut offline-kuvan, EI hyväksyntää. Päätös tehdään pelikuvista tsj-pohj ja tsj-et.
 - Uusi kuvalista sk-maa.txt käy KK:lle. Ajovuoroa ei ole pyydetty JU:lta.
 
+## AJO sk-maa, haara linssiseppa2/ajo-maa 0c25527b2 (KK:n pyyntö 01.4x, JU 01.46)
+Kääntyi, 0 virhettä. Kuvat ja loki /Users/Shared/Claude/proto-3d/lokit/valoseppa-maa-0c25527b2, rajaukset D/kuvat/maa-rajaukset. Lokin POIKKEUS on Unity-editorin oma hakuindeksi (SearchDatabase), ei pelikoodi. Katsottu 2752×2064-kuvista ja rajauksista.
+Yhdestäkään ei näy rakoa maahan eikä uppoamista. Tarkkuus noin 2 px/m: alle metrin virhe ei näy, ja muodon mukaista varjoa en erota, joten kosketus ei näy varjosta.
+- Palais Bourbon (pb-etu, pb-piha): seisoo.
+- Concorde (pb-etu): eteläpää haalistuu maalle, sivut jäävät teräväksi kiilaksi (x 1365, y 1290–1355). Pohjoispää jatkuu Palais Bourbonin portaille, Quai Anatole Francea ei näy välissä.
+- Pont Royal (p-roy): päät maassa, mutta silta seisoo korkeilla jaloilla: pilarin näkyvä pituus noin 40 px, aukon leveys noin 28 px (x 1305–1445, y 965–1005). Syytä ei mitattu; Kansi 11,5 m.
+- Pont Neuf, oikean rannan pää (p-pn-oik): laskee kadulle, ei uppoa. Sivussa sahalaita (x 1390–1440, y 720–950).
+- Tour Saint-Jacques (tsj-pohj, tsj-et): seisoo keskellä puistoa, mutta vain noin 23 × 100 px (x 1365–1388, y 885–985). Muoto ei ratkea näistä. Viereisten suurennettujen mallien rinnalla näyttää tikulta.
+
 ## SUOJATARKISTUS (Raamattu 11.8, tehty 6.11. 01.30)
 Lähde fr.wikipedia, kuolinvuodet myös Wikidatasta. Vuosi = rakennusaika. Résalin kuolema on muistista, ei lähteestä. Hakematta jääneitä koskeva ratkaisu on "tarkistamatta, epäselvä".
 
