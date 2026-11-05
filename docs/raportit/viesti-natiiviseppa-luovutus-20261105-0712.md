@@ -6,11 +6,11 @@ Luovutushaara natiiviseppa-luovutus-2052 (PR 6215), työpuu /Users/Shared/Claude
 ## LISÄYS 5.11. 11.00: LUE ENSIN, korvaa alla olevat TYÖ 2:n ja "ei kosketa" -kohdat
 **Tämä sessio on Natiiviseppä, vaikka kansio on Matkakirja-3d-selvittaja** (osoitekirja). Omistaja 10.38, 10.52 ja 10.55 (Raamattu 2.208 ja 2.209):
 - SEIS, kunnes juoksupeli ja Pariisi ovat valmiit: muistin kevennys, testinäkymän ja muistivahdin jatkotyöt, elävä kartta, maakuntarajat ja mäet, nostot ja zoomaus muihin kaupunkeihin. Juoksupelissä ja Pariisin kartassa ei iPad-ajoja, muistimittauksia eikä toistosarjoja.
-- JATKUU: levytilan vapautus (T7 → NAS 2. erä, omistavien roolien vahvistus ensin; T7:llä 138 Gi) ja Pariisin piirroksen zoom ja reunat, jos ne ovat auki.
+- JATKUU VAIN: levytilan vapautus (T7 → NAS 2. erä roolien vahvistusten mukaan; T7:llä 138 Gi, sisäisellä 129 Gi). PT 11.1x: Pariisin kartta on VS:llä, zoom ja reunat eivät ole enää minun työni. Tunnistamaton 100,8 Gi (ehdokkaat-ei-tunnistettu.tsv) ja Soniss 130,6 Gi jäävät paikoilleen, tilaa on riittävästi, ei ratkaista tänään.
 Keskeneräisen tila:
 - ASTC-koe 9ca48d7a2 (natiiviseppa/normaali-astc-koe) on pushattu. JU pysäytti ajon 10.43: ei tuloksia eikä kuvapareja, ei käynnistetä uudelleen. Tuotantoreittiä ei toteuteta.
-- Pariisin zoom ja reunat 3ab522752 ovat iPad-ajossa 3332c8e15 (häivytys 0,30–0,15 ok). KK:n 4.11. 02.50 listasta (haamut 0,13:lla, tummat läiskät, länsiraja, nimet) en löytänyt korjausta, ja kysymys on PT:llä: koskeeko lista yhä nykyistä Pariisia?
-- wt-siivous 11.00: 20 worktreetä pois (puhtaat ja pushatut, ilman --forcea), myös proto-natiiviseppa-muistikuva ja -ehdokas; haarat tallella. Jäljellä -pariisi ja -tyokalut (jaettu polku, ALA-POISTA) sekä T7:n Unity-linkit. Vanhat skriptit juna190, juna199 ja juna213 viittaavat -ehdokas-polkuun.
+- Pariisin zoom ja reunat 3ab522752 ovat iPad-ajossa 3332c8e15 (häivytys 0,30–0,15 ok). KK:n 4.11. 02.50 lista (haamut 0,13:lla, tummat läiskät, länsiraja, nimet) on kerrottu VS:lle; en tee näille mitään.
+- wt-siivous 11.00: 21 worktreetä pois (puhtaat ja pushatut, ilman --forcea), myös proto-natiiviseppa-muistikuva, -ehdokas ja -pariisi; haarat tallella. Jäljellä -tyokalut (jaettu polku, ALA-POISTA) sekä T7:n Unity-linkit. Vanhat skriptit juna190, juna199 ja juna213 viittaavat -ehdokas-polkuun.
 - 2. erän kartoitus: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/t7-nas-2era/.
 
 ## TYÖ 1: T7 → NAS 1. erä VALMIS 5.11. 10.0x, ei jatkotoimia (lisäys tähän luovutukseen)
