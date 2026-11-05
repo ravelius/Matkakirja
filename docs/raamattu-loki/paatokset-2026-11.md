@@ -381,3 +381,11 @@ KK:n päätöksiä omistajan 19.28:n ja 20.13:n Kelpaa-sanoja vasten, ei omistaj
 ## EIFFEL SAA NÄKYÄ KARTAN RAJALLA (OMISTAJA 21.28, KK) (5.11.2026 klo 21.2x)
 
 OMISTAJAN PÄÄTÖS klo 21.28: "Saako Eiffel näkyä horisontissa näin selvästi?" = "Kelpaa (Suositus)"; kortissa: "Rakennukset näkyvät selvästi kartan rajalla." Kuvat scratchpad/keskustelukanava/kuvat/horisontti-7875c668d/ (7875c668d, Mac). KK: tarkentaa 19.30:n sanoja: rakennus saa seistä kartan rajalla pohjansa päällä; leijuminen ei kelpaa. Raamattu 2.215. Kartan tummuminen ja pystysauma yhä auki Karttasepällä.
+
+## HORISONTTI PEHMEÄMMÄKSI JA EIFFELIN MAA (OMISTAJA 21.30, 21.32, KK) (5.11.2026 klo 21.4x)
+
+OMISTAJAN PYYNTÖ klo 21.30: "Horisontti on vähän turhan jyrkkä"; kuva docs/raportit/kaappaukset/omistaja-20261105/horisontti-jyrkka-2130.png (NUI 7551a76cc:n Tuileries 45°, ilman KS:n horisonttikorjausta). KK:n tavoite ja tulkinta: kartta häipyy taivaaseen pidemmällä ja pehmeämmällä matkalla, ei kapeana kaistana; koskee myös 45°:ta. 21.28:n Kelpaa pysyy.
+
+OMISTAJAN PYYNTÖ klo 21.32: "Eifelin alta puuttuu maa."; kuva docs/raportit/kaappaukset/omistaja-20261105/eiffel-maa-puuttuu-2132.png. KK:n tavoite: tornin kaikki neljä jalkaa seisovat yhtenäisellä maalla, joka jatkuu kartaksi. Raamattu 2.215. Karttaseppä tekee; kuva → KK → omistaja.
+
+Grand Châtelet'n kyltti pisteen yläpuolelle: NUI:n kertoma KK:n sana ("kuten suunnittelit"), syy mitattu: törmäys malliin vasemmalla 45°:ssa. PT ei ole varmistanut sanaa KK:lta.
