@@ -5,12 +5,12 @@ Korvaa -2137:n. Työhaara proto-repossa: natiivi-ui/kyltit-219, kärki e4b376546
 ## Tila: ei omaa jonoa
 Erä valmis ja KK kuittasi e4b376546:n omistajan 21.07:n sanoihin (2.204, "Pyöreä kuva"). PT katsoi kuvat 21.51. EI junaan: junalupaa ei ole, koska tarkista.sh:n vahtiosumat ovat auki (poikkeus koski vain Mac-ajoja). Lista: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/vahtiosumat-20261105.md, PT jakaa. Koko tarkista.sh on ajamatta e4b376546:lle; käännös 0 virhettä.
 
-Odotat: PT:n sanaa kohdista 1 ja 2 alla. Jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
+Ei odottavaa työtä: PT:lle on jo mennyt "JONO TYHJÄ: Natiivi-UI"; aloituksessa rivi uudelleen, ellei uutta tullut.
 
 ## Avoin
-1. Esittelykuva jää pois hitaalla latauksella (Introesitys.Kuva, ehto oma != kuvaNro): KK päätti korjata. Tavoite (KK): jokainen esittelykuva näkyy esityksessä ja jää kartalle myös hitaalla latauksella, eikä esitys pysähdy niin, että pelaaja huomaa. Työ kuuluu NS:n haaraan natiiviseppa/pariisi-aloitus-219, joka muuttaa samat neljä tiedostoa (Introesitys, Saapumisesitys, Saapumistraileri, SaapumisKuvat). KK:n ohje: siinä tapauksessa rivi PT:lle eikä omaa korjausta. Rivi lähetetty 21.53, ei vastausta. ÄLÄ korjaa itse ilman PT:n käskyä. Ei omaa ajoa, seuraavaan yhteiseen, ei junaan (KK).
+1. Esittelykuva jää pois hitaalla latauksella (Introesitys.Kuva, ehto oma != kuvaNro): KK päätti korjata. Tavoite (KK): jokainen esittelykuva näkyy esityksessä ja jää kartalle myös hitaalla latauksella, eikä esitys pysähdy niin, että pelaaja huomaa. Työ kuuluu NS:n haaraan natiiviseppa/pariisi-aloitus-219, joka muuttaa samat neljä tiedostoa (Introesitys, Saapumisesitys, Saapumistraileri, SaapumisKuvat). KK:n ohje: siinä tapauksessa rivi PT:lle eikä omaa korjausta. PT 21.5x: siirretty NS:lle, ET korjaa sitä.
    Näyttö: ajo e4b376546: "kuva c1 0.4 s", ensimmäinen näkynyt c2; "esitys pois (4 kuvaa)", 3 saapumiskuvaa kartalla (49cdc5cc3:ssa 4). Latausaikaa ei mitattu. NS:n haarassa uuden pelin Pariisi menee esilatauksen kautta (Saapumistraileri, EsilatausKattoMs), uudelleenkäynti ja muut kaupungit Introesitys.Kuva:n kautta.
-2. Yhdistyskoe e4b376546 + natiiviseppa/pariisi-aloitus-219: törmäys Nimikerros.cs:ssä; SaapumisKuvat.cs yhdistyy. Kerrottu PT:lle.
+2. Yhdistyskoe e4b376546 + natiiviseppa/pariisi-aloitus-219: törmäys Nimikerros.cs:ssä; SaapumisKuvat.cs yhdistyy. PT: törmäys ratkaistaan vasta, kun haarat yhdistetään.
 3. Tuileries'n merkki ja kyltti ovat 45°:ssa Louvren seinän päällä (kyltit18-chatelet-45). KK kertoi omistajalle. ÄLÄ siirrä ilman sanaa.
 
 ## Tehty tässä vuorossa
