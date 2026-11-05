@@ -28,3 +28,11 @@ Ei nähty edelleen: sivulta tuleva eunukki, esineen rikkoutuminen (`rikotut []`,
 
 ## OPIT
 Testi, joka mittaa matkaa `S`:llä, ei näe paikallaan juoksemista: botti kertyi 240 m kuudessa metrissä. Tahtitestissä mitataan nyt ympärikäännöksiä. Vino seinä tekee rajatarkasta tilanmittauksesta arvan: etsi kohta, josta pääsee, älä vaadi tilaa juuri pysähdyspisteestä. Tarkista skriptin suoritusoikeus tai käytä tulkkia ennen kuin kerrot käynnistäneesi: JU sai turhan vuoron.
+
+## LISÄYS klo 14.3x: kohdan 3 ajot 1 tehty, älä aja uudelleen. Vuoroa ei ole auki; pyydä uusi JU:lta
+Katsottu: `lokit/esikatselu-20261105-141545` (85e25c213, arkki `_tyo/pelikoodari/vapaa-1/arkki-d0.jpg`, 40 kuvaa arkkina) ja `lokit/tarkastelukuvat-85e25c213-142338` (kaksi kuvaa täysikoossa).
+- **颐和轩:n ovi kelpaa:** portaiden yläpäässä ikkunoiden välissä, lehdet auki, ei toisia portaita. Sama tumma kiila vasemman ikkunan alla kuin ennen (LAV:n perhe).
+- **Tasku korjautui:** 173 s, s 1196, ei kiinniottoa, ei maakuvia, keisari kuvassa e13:sta alkaen kaikissa katsotuissa.
+- **Botti kiersi 60 s yhtä korttelia** (pohja x −92…−102, z 293–298, kuvat e24–e46). Käännökset ovat kunnossa: tämä on botin arvonta (hajautus samasta paikasta antaa saman käännöksen), ei pelin vika. Ei korjattu. Eunukkeja ei tullut tässä ajossa, joten **sivulta tulevaa ei ole vieläkään nähty**; käytä toista siementä tai pakota kohtaus.
+- **Avoin, seuraava selvitys: e11 ja e12 (peliaika noin 5–8 s) näyttävät seinää ilman keisaria, ja numero "2" näkyy vasta e13:ssa.** Toistuu kummassakin ajossa. Kuvat ovat avauksen lopusta, jossa `AvausT` ≥ 0 ajaa vanhaa asentoa: vanha avaus on tehty vanhalle reitille, ja keisari kääntyy nyt ovelta kujalle. Korjaus todennäköisesti `vapaaOhjaa`:n ehtoon (`JuoksuV4Maailma.cs` noin rivi 2649) tai avauksen viimeiseen osaan; lue ensin aikajana, älä oleta. Omistajalle tämä näkyisi joka pelin alussa, joten korjattava ennen riviä KK:lle.
+- Poikkeus `ArgumentOutOfRangeException` toistuu ennen juoksua; pino puuttuu lokista, kohta auki.
