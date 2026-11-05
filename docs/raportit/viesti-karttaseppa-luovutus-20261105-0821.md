@@ -11,7 +11,7 @@ Omistaja: Pariisin muut kohteet yhtenä sarjana, omat värit, sama valo kuin Not
 - **B:** yksi Codex-tilaus koko sarjasta, valmis pohja (oppi: oikean rakennuksen vertailu, Left/Right, mitat, ei maata). **Pysähtyy ennen Tripoa:** arkit KK:lle (oikea rakennus | Codexin kuva | alue kartalla). Tripoa ei ennen KK:n ja omistajan arkkia (C). C–H PT jakaa B:n jälkeen.
 - Kun Codex kulkee yöllä, kerro PT:lle, mitä seuraavaksi tarvitaan, jottei ketju seiso.
 - **Kohteet:** Grand Palais, Invalides, Tour Montparnasse, Opéra, Panthéon, Riemukaari, Sacré-Cœur (mäki malliin, 18.27). Montparnasse: yksinkertainen, kokeile yhdellä kuvalla vähemmän.
-- **Eiffel, ristiriita:** PT:n viesti sanoo "ei ennen KK:n korttia", suunnitelman loppu "omistaja 08.19–08.20 Kyllä, kahdeksan kohdetta". Kysyin PT:ltä (ei vastausta ennen luovutusta). A:han mukaan, B:hen vasta PT:n vahvistuksella.
+- **Eiffel kuuluu sarjaan** (KK välitti omistajan 08.19–08.20: oma 3D-malli kartalle, 2.92 koskee vain Googlen 3D-kartan näkymiä), kahdeksan kohdetta. KK: mittari on Louvren hyväksytty alue; kerro KK:lle, jos A:ssa on kohde, joka ei sovi tähän tapaan.
 
 ## Lähtöaineisto F:lle (katsottu, ei vielä käytetty)
 - Paikat ja G-suhteet: Y/tee-nahtavyystilaukset.py (K: id, nimi, G-bbox, kuvaus; koko = G × 2,4), Y/tarkistus-nahtavyydet/<id>/<id>-alue.json (ankkuri_latlon, z17_px_origo), TILANNE-nahtavyydet.md (skaalat).
