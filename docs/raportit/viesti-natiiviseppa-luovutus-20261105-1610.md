@@ -1,4 +1,4 @@
-# Natiivisepän luovutus 5.11.2026 klo 16.12 (konteksti yli 25 %, pehmeä raja, 7.37)
+# Natiivisepän luovutus 5.11.2026 klo 16.10 (konteksti yli 25 %, pehmeä raja, 7.37)
 
 Korvaa -1558:n jonon. Muu -1558, -1543, -1525 ja -1510 lisäyksineen pätevät. Sessio on Natiiviseppä, kansio Matkakirja-3d-selvittaja. Vuoro aina JU:lta. Lue Raamattu 7.47:n rivi. Remote päälle, T7-Monitor uudelleen (pid 58484, kopioi.log vain ALOITUS 13.28; ei poistoja ennen PT:n lupaa).
 
