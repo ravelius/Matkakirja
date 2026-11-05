@@ -7,6 +7,8 @@ Kortti: "Saako aloittava pelaaja Pariisiin uuden aloituslennon vanhan intron til
 KK: koskee vain Pariisia, muut aloituskaupungit 2.161:n mukaan. Toteuta yhdessä KK 20.15:n linjan kanssa: William trailerin päällä, ei isoisän puheen päällä, 2.210 ennallaan. Tarkista Macilla kerran oikeaa aloituslennon reittiä, ruutusarja ja loki → KK. Kerro KK:lle, soiko intron nopea kappale tässä kulussa. Ei iPadia, ei junaa.
 PT 20.2x: aloituskaupungissa ei ole isoisän puhetta (PT:n tulkinta 2.161 kohta 2, KK:lla tarkistettavana), joten kierron loppu sidotaan muuhun kuin luentaan; ajoitus omalla harkinnalla, ellei KK sano toisin. Ei erillistä ajoa: kaikki yhteen JU-pyyntöön, kun koodi on valmis (JU odotti nollausta). Tulos KK:lle ja rivi PT:lle. Kuvat katsotaan itse ennen lähetystä.
 
+KK:N LISÄ (KK:n tulkinta, ohittaa alla olevan kohtien 3 ja 5 ajoitusarvion): aloittavalla pelaajalla Pariisissa 2.161:n kohdat 2 ja 3 pysyvät: ei isoisän puhetta, Pulu aloittaa suoraan. Kierto hiipuu pehmeästi Pulun aloituksen alkupuolella (ei esityksen lopussa). Isoisän Tuileries-kuva ei nouse tällä reitillä (C5/isoisän kuva pois sarjasta). Viisi nähtävyyskuvaa nousee kuten 2.210:ssä.
+
 ## Haarat: tärkein löydös
 - natiiviseppa/pallo-aloitus-219, kärki d369d4aab, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, puhdas, peili natiivi-backup peili/proto/natiiviseppa/pallo-aloitus-219. Testit 533/533, unity-tarkistus 0. EI nähty ajossa. PT kuittasi tiedoksi; "ei valmis ennen kuin nähty ajossa".
   - b5205fa87 peruttu (79b90f39c): AloitusintroTulossa-ehtoa EI poisteta, koska se palauttaisi sumean intron muille saapumisille.
