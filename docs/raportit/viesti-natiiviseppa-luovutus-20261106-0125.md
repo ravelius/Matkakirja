@@ -15,6 +15,8 @@ Kun ajo on valmis, kansiossa lokit/natiiviseppa-pariisi-vyo-14486a929:
 - PT:n kysymys 01.1x vastattu: intro 9bb4e3476 ajettu ja nähty Macilla, on pariisi-aloitus-219:ssä, iPadilla ei; erillistä kirjausta nimen takaisesta tummennuksesta ei löytynyt, kuvia en katsonut sitä varten.
 - c5-2dfb96273 korvaa c3:n aamun kuvissa (KK 00.4x); talorintama aamulla kortilla: älä muuta alueita tai maskeja.
 
+- KK:n 11.8-kysymys vastattu 01.2x: tee-palat.py ei suodata suojattuja, Pompidou way/55503397 paloissa, Tour Montparnasse vain maskin vuoksi pois. Lista `selvitys-c5/suojatut-paloissa.json`, skripti `suojatut-paloissa.py` (ei muuta paloja). Omistaja päättää aamulla; älä muuta paloja tämän takia.
+
 ## Vyö ja kamera: `_tyo/natiiviseppa/pariisi-talot/selvitys-c5-raja.md` (kohta "Kamera", lisätty 01.2x), skriptit `selvitys-c5/kamera-c4.py`, `siluetti-c4.py`
 - Kamera sidottu c4:ään: suunta 0,5°, rulla 0,5°, kallistus 45,3°, E -514,5 N -834,3 U 1087,4 m ND-pohjan keskipisteestä ja pohjan tasosta (Sovita(90) = 180 m). Pahin virhe 13 px, keskimäärin 5. Täsmää skenaarioon: E-ero ajopisteeseen 0,8 m. Laskettu oletuksella fov 50 pysty, pääpiste keskellä.
 - Korvaa -0055:n johtolangan: vyön länsireuna EI ole palan raja. Talot ylittävät palarajan lon 2,34009 itään noin 40–100 px, ja palan 16597_11273 länsiosa näyttää piirtyvän (silmämääräinen, ajo varmistaa).
