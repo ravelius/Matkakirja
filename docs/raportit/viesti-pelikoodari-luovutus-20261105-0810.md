@@ -91,3 +91,10 @@ Työkalut `_tyo/pelikoodari/tayte/8cd/`: ero13.py (vaihda vertailukartta), mat.p
 
 ## LISÄYS 09.22: PT:n päätös leivonnasta
 PT: kk-tausta-1-2-lod0 leivotaan vasta LAV:n levykorjauksen jälkeen, koska korjaus muuttaa taustan geometriaa; LAV kertoo hinnan ja tekee sen korjauksen ajossa. Ei omaa ajoa nyt. 南库 ja 军机处 ilman valoa siihen asti. 益寿斋: tarkista osasarjan muuri kohdan 2 yhteydessä; ilman valoa siihen asti.
+
+## LISÄYS 09.32: ajo 6769380b3 katsottu; ikkunatarkistuksen vika korjattu 734ab83ef (kartta v15), lista 229 JU:lla
+`lokit/tarkastelukuvat-6769380b3-092155`, kaikki 3 täysikoossa. Ei kuja enää, mutta ei uskottava: ovet peittivät ikkunoita (永和宫:n, 益寿斋:n ja 绥寿殿:n ikkuna näkyi kamanan yli), 永和宫 lisäksi 1,35 m:n syvennyksen vieressä.
+Syy: `pinnat()` otti ikkunakolmiot talteen ennen mallin siirtoa, joten Ik:ssa oli vain jo maailmassa olevien mallien (tausta, muurikate) ikkunat oikeilla paikoilla; siirrettyjen mallien ikkunat kasaantuivat origon ympärille (x −53…57, z −90…37). Nyt ikkunat siirretään mallin mukana; `--ikkunat` laskee vain Ik:n, pinnat yhä v7:stä.
+Vaikutus v14 → v15: 7 ovea, muut samat (`8cd/ero15.py v14 v15`). 永和宫 25,5 m (nakyva, x 157,5), 益寿斋 7,3 m (aukko-lehti, katso), 体元殿 2,8, 长春宫 1,8, 咸福宫 1,5; 钟粹宫 ja 绥寿殿 paikallaan, täyte lisätty. Parit alle 8 m yhä 房子11–房子8.
+Korjaus aiempaan: `mat.py` ja `seinat.py` katsovat kolmioita ennen siirtoa, joten ne näkevät vain taustan. "益寿斋:n seinä ei ladatuissa malleissa, epäily osasarja" oli väärin: ikkunat ovat mallissa varasto.glb, 绥寿殿:n tyohuone.glb, 永和宫:n y3-yonghegong-lod0.glb (mat3-mittaus); osasarjassa ei kolmioita 5 m:n sisällä. Valo v15:ssä: ilman 南库, 军机处, 绥寿殿 (tayte_valo.py lukee maailmassa, ei tästä viasta).
+KATSOTTAVA: lista 229. Kohta 2 yhä tekemättä (ks. 09.21) ilman 益寿斋:n osasarjatarkistusta.
