@@ -2,6 +2,9 @@
 
 Työkansio A = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot. Loki: muuri/KORJAUS.md (6.11. 00.1x ja 00.2x). Ei vientejä, ei junaan. Lattia25:n vientiehto (KORJAUS 5.11. 22.3x) pysyy; ks. -2230.
 
+## Seuraajan järjestys (PT 00.2x, sitova)
+1) a1:n tumman pinnan syy, 2) 7 aukkoa, 3) lisäysten kohdetarkistus. Ei vientiä.
+
 ## Tehtävä ja rajaus
 KK 5.11. 22.1x: aukot suljetaan, ulkoa näkyy umpinainen rakennus; viesti vain oikean oven kohdalla.
 Uusin rajaus (KK PK:n kautta 6.11.): **29 aukkoa pois** (portit, keskiakselin päärakennukset, Yanxigong), rajaviesti jää niihin. PT:n viesti "kaikki 41" on tätä vanhempi; eron kerroin PT:lle, kuittausta ei ole tullut.
