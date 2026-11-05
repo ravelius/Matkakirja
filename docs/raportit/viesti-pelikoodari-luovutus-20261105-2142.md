@@ -4,7 +4,13 @@ Täydentää -2112:ta; sen kohdat 1 ja 4 ovat tässä korvattu, muut pätevät. 
 
 7.47: tässä sessiossa luettu periaatteet, 7.4, 7.23–7.25, 9.1–9.3, 9.5, luku 6 kokonaan; luvuista 2, 4 ja 12 vain 2.9, 2.177, 2.201, 2.208, 2.209, 4.1 ja komentosäännöt.
 
-## 1. Seuraavaksi: ajo jonossa
+## 0. Lisäys: ajo tehty, tämä korvaa kohdan 1
+`lokit/esikatselu-20261105-214330`, `7293ed891`, L2, 341 s, 9 kuvaa, L2 ilmoitettu vapaaksi JU:lle. **Varjostin ja koodi kääntyivät ja toimivat.** Katsottu q1, q4, q5, q7; **katsomatta q2, q3, q6.** Viety KK:lle: suositus sisäänpäin, mutta lehden pinta kuntoon; KK:n vastausta ei ole tullut.
+- **Avoimia viatkuvista (kaikki KK:lla):** sisäänpäin lehti on tumma laskettu pinta ilman Tripon ristikkoa ja renkaita; kaksi oranssia läikkää samassa ruudun kohdassa (noin 280, 1050 ja 1720, 1050 / 2000 × 1500) kaikissa katsotuissa kuvissa, ei ajon 212358 kuvissa, syy ei tiedossa, **selvitä ensin**: q5:ssä läikkä näkyy lehden päällä, joten se on ruudun tasolla, ei ovessa (päätelty); seinälaikut q1:ssä ja q7:ssä, ei selvitetty; karmin tumma suorakaide.
+- **Ympärikäännös ei tullut:** `kaanna 1` kahdesti → "ei (ei aukkoa tai seinä)", paikka eteni suoraan. y1, y2 katsomatta, eivät kerro siitä. Ympärikäännös vaatii eri komennon tai hetken: lue `kaanna`-koodi (`JuoksupeliNakyma.cs` noin rivi 2155) ennen uutta ajoa.
+- **Uuden säännön ajotodiste on yhä tekemättä** (kohta 3).
+
+## 1. Ajon valmistelu (tehty, ks. kohta 0)
 - **JU:lle pyydetty** `dc38e2ddc`, sk-q, 9 kuvaa, jonossa toisena NUI:n jälkeen. **Kärki on nyt `7293ed891`**, ja `ajo-skq.sh` ajaa sen: kerro JU:lle sha, kun vuoro tulee.
 - "ESIKATSELU NYT" jälkeen: `zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/vapaa-1/ajo-skq.sh <linja>`, sitten LUKKO VAPAA, kesto, kuvamäärä JU:lle.
 - **`dc38e2ddc`:tä ja `7293ed891`:tä ei ole käännetty Unityssä.** Varjostin ja C# kääntyvät ensi kerran tässä ajossa; Peli-testit kääntävät vain `Peli`-kansion, eivät `Scripts`:iä eikä `UI`:ta.
