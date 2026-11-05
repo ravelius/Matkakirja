@@ -12,6 +12,7 @@ Täydentää -2215:tä; sen kohdat 0, 0b ja 0c ovat tässä korvattu, muut päte
 
 ## 1. Odottaa muita
 - **KK:** kaistaleet (−147,7; 244,3) ja (−186,5; 497,6) (3 m syviä, pitkä sivu auki). Oma suositus: kuisteiksi, rajaviesti jää. Vastaus LAV:lle.
+- **Lisäys 00.0x, korvaa kaistaleet ja 321:n tilan:** KK vahvisti 51 tilaa; kaksi kaistaletta jää kuisteiksi. 321 kohtaa luokiteltu kartasta KK:n pyynnöstä: ehdotus 8 tilaa ja 13 aukkoa lisää, 5 epäselvää, 4:llä ovi todennäköisesti aukolla, 233 ei tilaa (raportin kohta "321 talon pohjalla"). **Odottaa KK:n päätöstä; LAV ei odota.** Jos KK hyväksyy, vie lisäys LAV:lle.
 - **LAV:** seinät. Viesti 00.0x oli jonossa, ei vielä luettu lähetyshetkellä. LAV:n nollaus oli tulossa; tarkista, että lista `docs/raportit/viesti-pelikoodari-aukot-20261105.md` päätyi sen aloitukseen. LAV kertoo vientiversion.
 
 ## 2. Kun seinät tulevat

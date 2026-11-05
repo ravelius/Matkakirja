@@ -1,0 +1,6767 @@
+[
+{
+"alue": 1,
+"x": -381.2,
+"z": 483.4,
+"kohtia": 1,
+"aukko_max": 43.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-381.2,
+483.4,
+43.3
+]
+],
+"ala": 57,
+"lev": 1.1,
+"avoin": 0.52,
+"tayt": 0.13,
+"reika": 240,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 4,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 2,
+"x": -374.8,
+"z": 446.5,
+"kohtia": 1,
+"aukko_max": 18.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-374.8,
+446.5,
+18.3
+]
+],
+"ala": 32,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.18,
+"reika": 118,
+"akate": 0.94,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 3,
+"x": -370.5,
+"z": 459.3,
+"kohtia": 1,
+"aukko_max": 27.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-370.5,
+459.3,
+27.3
+]
+],
+"ala": 17,
+"lev": 0.7,
+"avoin": 0.56,
+"tayt": 0.1,
+"reika": 0,
+"akate": 0.87,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 4,
+"x": -376.4,
+"z": 436.2,
+"kohtia": 1,
+"aukko_max": 18.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-376.4,
+436.2,
+18.05
+]
+],
+"ala": 35,
+"lev": 1.0,
+"avoin": 0.4,
+"tayt": 0.16,
+"reika": 165,
+"akate": 0.85,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 5,
+"x": -371.6,
+"z": 509.4,
+"kohtia": 1,
+"aukko_max": 24.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-371.6,
+509.4,
+24.3
+]
+],
+"ala": 31,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.14,
+"reika": 173,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 6,
+"x": -370.3,
+"z": 478.8,
+"kohtia": 1,
+"aukko_max": 14.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-370.3,
+478.8,
+14.8
+]
+],
+"ala": 26,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.2,
+"reika": 94,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 8,
+"x": -371.5,
+"z": 248.2,
+"kohtia": 1,
+"aukko_max": 4.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-371.5,
+248.2,
+4.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 9,
+"x": -371.9,
+"z": 366.0,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-371.9,
+366.0,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 10,
+"x": -372.4,
+"z": 313.8,
+"kohtia": 1,
+"aukko_max": 1.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-372.4,
+313.8,
+1.8
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 11,
+"x": -365.2,
+"z": 366.2,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-365.2,
+366.2,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 13,
+"x": -363.8,
+"z": 248.5,
+"kohtia": 1,
+"aukko_max": 3.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-363.8,
+248.5,
+3.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 14,
+"x": -362.5,
+"z": 483.6,
+"kohtia": 1,
+"aukko_max": 44.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-362.5,
+483.6,
+44.05
+]
+],
+"ala": 33,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.08,
+"reika": 0,
+"akate": 0.98,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 18,
+"x": -355.9,
+"z": 248.8,
+"kohtia": 1,
+"aukko_max": 2.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-355.9,
+248.8,
+2.8
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 21,
+"x": -348.6,
+"z": -203.2,
+"kohtia": 1,
+"aukko_max": 73.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-348.6,
+-203.2,
+73.8
+]
+],
+"ala": 101,
+"lev": 1.0,
+"avoin": 0.51,
+"tayt": 0.11,
+"reika": 709,
+"akate": 0.92,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 22,
+"x": -352.2,
+"z": -164.8,
+"kohtia": 1,
+"aukko_max": 4.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-352.2,
+-164.8,
+4.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 28,
+"x": -339.1,
+"z": 2.2,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-339.1,
+2.2,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 34,
+"x": -310.7,
+"z": -236.2,
+"kohtia": 1,
+"aukko_max": 19.8,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-310.7,
+-236.2,
+19.8
+]
+],
+"ala": 48,
+"lev": 4.0,
+"avoin": 0.5,
+"tayt": 0.25,
+"reika": 115,
+"akate": 0.71,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 35,
+"x": -314.6,
+"z": -226.0,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-314.6,
+-226.0,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.1,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 36,
+"x": -302.7,
+"z": 540.2,
+"kohtia": 1,
+"aukko_max": 24.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-302.7,
+540.2,
+24.8
+]
+],
+"ala": 62,
+"lev": 1.5,
+"avoin": 0.5,
+"tayt": 0.13,
+"reika": 261,
+"akate": 0.9,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 37,
+"x": -306.8,
+"z": -185.9,
+"kohtia": 1,
+"aukko_max": 10.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-306.8,
+-185.9,
+10.55
+]
+],
+"ala": 11,
+"lev": 0.7,
+"avoin": 0.66,
+"tayt": 0.2,
+"reika": 40,
+"akate": 0.85,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 38,
+"x": -292.4,
+"z": -197.1,
+"kohtia": 1,
+"aukko_max": 33.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-292.4,
+-197.1,
+33.3
+]
+],
+"ala": 29,
+"lev": 1.0,
+"avoin": 0.67,
+"tayt": 0.13,
+"reika": 163,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 39,
+"x": -293.3,
+"z": -174.4,
+"kohtia": 1,
+"aukko_max": 30.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-293.3,
+-174.4,
+30.05
+]
+],
+"ala": 39,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.16,
+"reika": 172,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 40,
+"x": -290.8,
+"z": 535.4,
+"kohtia": 1,
+"aukko_max": 19.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-290.8,
+535.4,
+19.3
+]
+],
+"ala": 10,
+"lev": 0.5,
+"avoin": 0.56,
+"tayt": 0.11,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 41,
+"x": -290.1,
+"z": 528.9,
+"kohtia": 1,
+"aukko_max": 19.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-290.1,
+528.9,
+19.3
+]
+],
+"ala": 8,
+"lev": 0.5,
+"avoin": 0.7,
+"tayt": 0.14,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 42,
+"x": -286.5,
+"z": -158.1,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-286.5,
+-158.1,
+20.05
+]
+],
+"ala": 14,
+"lev": 0.7,
+"avoin": 0.7,
+"tayt": 0.11,
+"reika": 0,
+"akate": 0.92,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 44,
+"x": -281.4,
+"z": -185.4,
+"kohtia": 1,
+"aukko_max": 11.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-281.4,
+-185.4,
+11.3
+]
+],
+"ala": 13,
+"lev": 1.0,
+"avoin": 0.62,
+"tayt": 0.2,
+"reika": 46,
+"akate": 0.77,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 46,
+"x": -272.4,
+"z": -226.4,
+"kohtia": 2,
+"aukko_max": 5.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-279.8,
+-227.1,
+4.8
+],
+[
+-272.4,
+-226.4,
+5.55
+]
+],
+"ala": 27,
+"lev": 4.0,
+"avoin": 0.45,
+"tayt": 0.62,
+"reika": 0,
+"akate": 0.04,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 47,
+"x": -277.8,
+"z": 549.8,
+"kohtia": 1,
+"aukko_max": 1.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-277.8,
+549.8,
+1.55
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 48,
+"x": -272.9,
+"z": 550.0,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-272.9,
+550.0,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 45,
+"x": -269.7,
+"z": -242.5,
+"kohtia": 1,
+"aukko_max": 5.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-269.7,
+-242.5,
+5.8
+]
+],
+"ala": 33,
+"lev": 1.0,
+"avoin": 0.05,
+"tayt": 0.2,
+"reika": 130,
+"akate": 1.0,
+"atalo": 0.83,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 49,
+"x": -267.9,
+"z": 550.2,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-267.9,
+550.2,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 50,
+"x": -266.1,
+"z": 528.8,
+"kohtia": 1,
+"aukko_max": 1.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-266.1,
+528.8,
+1.8
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 51,
+"x": -263.0,
+"z": 550.5,
+"kohtia": 1,
+"aukko_max": 1.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-263.0,
+550.5,
+1.55
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 53,
+"x": -258.6,
+"z": -226.0,
+"kohtia": 1,
+"aukko_max": 39.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-258.6,
+-226.0,
+39.55
+]
+],
+"ala": 42,
+"lev": 0.7,
+"avoin": 0.54,
+"tayt": 0.14,
+"reika": 220,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 55,
+"x": -258.1,
+"z": 550.8,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-258.1,
+550.8,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 56,
+"x": -242.4,
+"z": 501.9,
+"kohtia": 1,
+"aukko_max": 33.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-242.4,
+501.9,
+33.05
+]
+],
+"ala": 27,
+"lev": 1.0,
+"avoin": 0.58,
+"tayt": 0.09,
+"reika": 0,
+"akate": 0.94,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 57,
+"x": -254.6,
+"z": -175.3,
+"kohtia": 1,
+"aukko_max": 9.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-254.6,
+-175.3,
+9.05
+]
+],
+"ala": 13,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.21,
+"reika": 0,
+"akate": 0.92,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 58,
+"x": -254.2,
+"z": 474.1,
+"kohtia": 1,
+"aukko_max": 12.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-254.2,
+474.1,
+12.8
+]
+],
+"ala": 17,
+"lev": 0.7,
+"avoin": 0.52,
+"tayt": 0.24,
+"reika": 52,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 59,
+"x": -254.1,
+"z": 486.8,
+"kohtia": 1,
+"aukko_max": 12.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-254.1,
+486.8,
+12.8
+]
+],
+"ala": 13,
+"lev": 0.7,
+"avoin": 0.64,
+"tayt": 0.19,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 60,
+"x": -253.1,
+"z": 551.0,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-253.1,
+551.0,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 62,
+"x": -247.0,
+"z": -230.0,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-247.0,
+-230.0,
+3.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.47,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 64,
+"x": -239.7,
+"z": -230.8,
+"kohtia": 1,
+"aukko_max": 44.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-239.7,
+-230.8,
+44.05
+]
+],
+"ala": 38,
+"lev": 1.1,
+"avoin": 0.5,
+"tayt": 0.09,
+"reika": 0,
+"akate": 0.97,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 65,
+"x": -241.8,
+"z": -185.1,
+"kohtia": 1,
+"aukko_max": 13.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-241.8,
+-185.1,
+13.8
+]
+],
+"ala": 20,
+"lev": 1.0,
+"avoin": 0.36,
+"tayt": 0.18,
+"reika": 84,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 66,
+"x": -228.5,
+"z": 548.5,
+"kohtia": 1,
+"aukko_max": 37.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-228.5,
+548.5,
+37.8
+]
+],
+"ala": 45,
+"lev": 1.0,
+"avoin": 0.54,
+"tayt": 0.13,
+"reika": 0,
+"akate": 0.99,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 68,
+"x": -241.6,
+"z": 464.8,
+"kohtia": 1,
+"aukko_max": 4.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-241.6,
+464.8,
+4.8
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 67,
+"x": -238.9,
+"z": 347.3,
+"kohtia": 1,
+"aukko_max": 10.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-238.9,
+347.3,
+10.3
+]
+],
+"ala": 15,
+"lev": 1.5,
+"avoin": 0.36,
+"tayt": 0.24,
+"reika": 42,
+"akate": 0.72,
+"atalo": 0.67,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 69,
+"x": -237.8,
+"z": 305.7,
+"kohtia": 1,
+"aukko_max": 11.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-237.8,
+305.7,
+11.8
+]
+],
+"ala": 15,
+"lev": 0.7,
+"avoin": 0.59,
+"tayt": 0.18,
+"reika": 62,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 70,
+"x": -241.0,
+"z": -143.5,
+"kohtia": 1,
+"aukko_max": 5.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-241.0,
+-143.5,
+5.05
+]
+],
+"ala": 14,
+"lev": 1.0,
+"avoin": 0.1,
+"tayt": 0.18,
+"reika": 0,
+"akate": 1.0,
+"atalo": 0.99,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 71,
+"x": -236.8,
+"z": -133.9,
+"kohtia": 1,
+"aukko_max": 7.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-236.8,
+-133.9,
+7.55
+]
+],
+"ala": 9,
+"lev": 1.0,
+"avoin": 0.23,
+"tayt": 0.48,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 73,
+"x": -233.2,
+"z": 378.0,
+"kohtia": 2,
+"aukko_max": 12.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-233.2,
+378.0,
+12.55
+],
+[
+-219.0,
+385.2,
+1.55
+]
+],
+"ala": 28,
+"lev": 1.1,
+"avoin": 0.32,
+"tayt": 0.15,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 74,
+"x": -231.0,
+"z": -168.8,
+"kohtia": 1,
+"aukko_max": 2.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-231.0,
+-168.8,
+2.55
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 75,
+"x": -224.8,
+"z": 389.7,
+"kohtia": 2,
+"aukko_max": 5.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-231.8,
+389.1,
+1.3
+],
+[
+-224.8,
+389.7,
+5.05
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.29,
+"tayt": 0.75,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 76,
+"x": -231.5,
+"z": -176.5,
+"kohtia": 1,
+"aukko_max": 4.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-231.5,
+-176.5,
+4.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 78,
+"x": -231.2,
+"z": -185.0,
+"kohtia": 1,
+"aukko_max": 6.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-231.2,
+-185.0,
+6.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 79,
+"x": -229.5,
+"z": 465.0,
+"kohtia": 1,
+"aukko_max": 3.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-229.5,
+465.0,
+3.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 80,
+"x": -227.8,
+"z": -220.5,
+"kohtia": 1,
+"aukko_max": 5.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-227.8,
+-220.5,
+5.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 81,
+"x": -225.2,
+"z": -168.5,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-225.2,
+-168.5,
+6.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 72,
+"x": -225.8,
+"z": 423.8,
+"kohtia": 1,
+"aukko_max": 1.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-225.8,
+423.8,
+1.55
+]
+],
+"ala": 10,
+"lev": 1.0,
+"avoin": 0.02,
+"tayt": 0.1,
+"reika": 0,
+"akate": 1.0,
+"atalo": 0.89,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 82,
+"x": -220.6,
+"z": 417.5,
+"kohtia": 1,
+"aukko_max": 9.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-220.6,
+417.5,
+9.55
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.15,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 83,
+"x": -208.6,
+"z": -219.9,
+"kohtia": 1,
+"aukko_max": 31.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-208.6,
+-219.9,
+31.8
+]
+],
+"ala": 9,
+"lev": 0.5,
+"avoin": 0.87,
+"tayt": 0.29,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 84,
+"x": -222.4,
+"z": 424.0,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-222.4,
+424.0,
+4.3
+]
+],
+"ala": 2,
+"lev": 1.0,
+"avoin": 0.58,
+"tayt": 0.69,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 86,
+"x": -218.6,
+"z": 502.6,
+"kohtia": 1,
+"aukko_max": 10.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-218.6,
+502.6,
+10.3
+]
+],
+"ala": 9,
+"lev": 0.7,
+"avoin": 0.66,
+"tayt": 0.14,
+"reika": 0,
+"akate": 0.87,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 87,
+"x": -217.6,
+"z": -168.2,
+"kohtia": 1,
+"aukko_max": 7.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-217.6,
+-168.2,
+7.3
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 88,
+"x": -210.0,
+"z": -168.0,
+"kohtia": 1,
+"aukko_max": 7.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-210.0,
+-168.0,
+7.55
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 89,
+"x": -210.2,
+"z": 307.0,
+"kohtia": 1,
+"aukko_max": 13.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-210.2,
+307.0,
+13.05
+]
+],
+"ala": 18,
+"lev": 0.7,
+"avoin": 0.52,
+"tayt": 0.23,
+"reika": 59,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 91,
+"x": -198.2,
+"z": 506.3,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-198.2,
+506.3,
+21.55
+]
+],
+"ala": 14,
+"lev": 0.7,
+"avoin": 0.66,
+"tayt": 0.12,
+"reika": 0,
+"akate": 0.99,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 92,
+"x": -199.3,
+"z": 546.4,
+"kohtia": 1,
+"aukko_max": 22.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-199.3,
+546.4,
+22.8
+]
+],
+"ala": 15,
+"lev": 0.7,
+"avoin": 0.6,
+"tayt": 0.09,
+"reika": 0,
+"akate": 0.93,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 93,
+"x": -200.6,
+"z": -167.7,
+"kohtia": 1,
+"aukko_max": 11.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-200.6,
+-167.7,
+11.8
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 97,
+"x": -200.5,
+"z": -147.1,
+"kohtia": 1,
+"aukko_max": 14.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-200.5,
+-147.1,
+14.8
+]
+],
+"ala": 8,
+"lev": 0.7,
+"avoin": 0.62,
+"tayt": 0.11,
+"reika": 0,
+"akate": 0.86,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 98,
+"x": -197.5,
+"z": -155.3,
+"kohtia": 1,
+"aukko_max": 6.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-197.5,
+-155.3,
+6.05
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.78,
+"tayt": 0.64,
+"reika": 0,
+"akate": 0.11,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 101,
+"x": -194.9,
+"z": 501.8,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-194.9,
+501.8,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 100,
+"x": -195.5,
+"z": -143.4,
+"kohtia": 1,
+"aukko_max": 4.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-195.5,
+-143.4,
+4.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.89,
+"tayt": 0.38,
+"reika": 0,
+"akate": 0.89,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 102,
+"x": -195.2,
+"z": -151.4,
+"kohtia": 1,
+"aukko_max": 3.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-195.2,
+-151.4,
+3.8
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 104,
+"x": -189.1,
+"z": -165.4,
+"kohtia": 1,
+"aukko_max": 14.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-189.1,
+-165.4,
+14.55
+]
+],
+"ala": 18,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.18,
+"reika": 0,
+"akate": 0.9,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 105,
+"x": -194.0,
+"z": -198.9,
+"kohtia": 1,
+"aukko_max": 8.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-194.0,
+-198.9,
+8.3
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 106,
+"x": -193.8,
+"z": -206.8,
+"kohtia": 1,
+"aukko_max": 8.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-193.8,
+-206.8,
+8.05
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 107,
+"x": -193.5,
+"z": -214.9,
+"kohtia": 1,
+"aukko_max": 7.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-193.5,
+-214.9,
+7.8
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 108,
+"x": -183.5,
+"z": 551.5,
+"kohtia": 1,
+"aukko_max": 12.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-183.5,
+551.5,
+12.3
+]
+],
+"ala": 6,
+"lev": 1.0,
+"avoin": 0.66,
+"tayt": 0.14,
+"reika": 0,
+"akate": 0.86,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 109,
+"x": -186.6,
+"z": -207.4,
+"kohtia": 2,
+"aukko_max": 24.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-186.3,
+-247.0,
+11.8
+],
+[
+-186.6,
+-207.4,
+24.55
+]
+],
+"ala": 48,
+"lev": 1.1,
+"avoin": 0.35,
+"tayt": 0.08,
+"reika": 0,
+"akate": 0.99,
+"atalo": 0.97,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 112,
+"x": -162.9,
+"z": 337.5,
+"kohtia": 6,
+"aukko_max": 22.8,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-184.4,
+350.0,
+4.8
+],
+[
+-175.8,
+338.2,
+3.8
+],
+[
+-162.9,
+337.5,
+22.8
+],
+[
+-150.2,
+340.8,
+3.55
+],
+[
+-141.8,
+386.0,
+4.05
+],
+[
+-141.2,
+363.5,
+4.05
+]
+],
+"ala": 1358,
+"lev": 10.6,
+"avoin": 0.04,
+"tayt": 0.44,
+"reika": 623,
+"akate": 0.41,
+"atalo": 0.4,
+"ovia": 6,
+"paatos": "epaselva"
+},
+{
+"alue": 117,
+"x": -179.0,
+"z": -52.2,
+"kohtia": 2,
+"aukko_max": 51.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-179.0,
+-52.2,
+51.55
+],
+[
+-172.5,
+-41.4,
+7.3
+]
+],
+"ala": 52,
+"lev": 4.0,
+"avoin": 0.58,
+"tayt": 0.11,
+"reika": 0,
+"akate": 0.51,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 121,
+"x": -171.5,
+"z": -68.0,
+"kohtia": 2,
+"aukko_max": 18.8,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-176.3,
+-87.5,
+9.55
+],
+[
+-171.5,
+-68.0,
+18.8
+]
+],
+"ala": 45,
+"lev": 2.0,
+"avoin": 0.41,
+"tayt": 0.17,
+"reika": 0,
+"akate": 0.55,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 122,
+"x": -163.5,
+"z": 441.4,
+"kohtia": 1,
+"aukko_max": 26.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-163.5,
+441.4,
+26.05
+]
+],
+"ala": 177,
+"lev": 6.5,
+"avoin": 0.28,
+"tayt": 0.72,
+"reika": 0,
+"akate": 0.87,
+"atalo": 0.99,
+"ovia": 1,
+"paatos": "siirtyy"
+},
+{
+"alue": 123,
+"x": -164.0,
+"z": 330.2,
+"kohtia": 3,
+"aukko_max": 3.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+-175.8,
+325.4,
+1.8
+],
+[
+-164.0,
+330.2,
+3.05
+],
+[
+-163.6,
+317.2,
+2.8
+]
+],
+"ala": 88,
+"lev": 5.1,
+"avoin": 0.03,
+"tayt": 0.28,
+"reika": 14,
+"akate": 1.0,
+"atalo": 0.99,
+"ovia": 1,
+"paatos": "ovi-aukolla"
+},
+{
+"alue": 124,
+"x": -166.0,
+"z": 431.6,
+"kohtia": 2,
+"aukko_max": 3.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-166.0,
+431.6,
+3.05
+],
+[
+-165.8,
+417.0,
+3.05
+]
+],
+"ala": 98,
+"lev": 5.0,
+"avoin": 0.03,
+"tayt": 0.32,
+"reika": 195,
+"akate": 0.87,
+"atalo": 0.98,
+"ovia": 0,
+"paatos": "epaselva"
+},
+{
+"alue": 126,
+"x": -136.7,
+"z": 551.3,
+"kohtia": 1,
+"aukko_max": 71.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-136.7,
+551.3,
+71.05
+]
+],
+"ala": 38,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.07,
+"reika": 0,
+"akate": 0.97,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 132,
+"x": -134.5,
+"z": 221.1,
+"kohtia": 1,
+"aukko_max": 56.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-134.5,
+221.1,
+56.05
+]
+],
+"ala": 40,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.07,
+"reika": 0,
+"akate": 0.95,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 133,
+"x": -153.8,
+"z": 482.1,
+"kohtia": 3,
+"aukko_max": 12.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-153.8,
+482.1,
+12.05
+],
+[
+-150.0,
+477.0,
+2.05
+],
+[
+-147.7,
+482.9,
+11.8
+]
+],
+"ala": 13,
+"lev": 0.7,
+"avoin": 0.56,
+"tayt": 0.16,
+"reika": 62,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 135,
+"x": -153.5,
+"z": -52.1,
+"kohtia": 1,
+"aukko_max": 2.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-153.5,
+-52.1,
+2.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 138,
+"x": -150.1,
+"z": 318.2,
+"kohtia": 2,
+"aukko_max": 4.3,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-152.2,
+330.8,
+2.05
+],
+[
+-150.1,
+318.2,
+4.3
+]
+],
+"ala": 19,
+"lev": 2.5,
+"avoin": 0.22,
+"tayt": 0.36,
+"reika": 0,
+"akate": 0.13,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 142,
+"x": -147.9,
+"z": -34.6,
+"kohtia": 1,
+"aukko_max": 9.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-147.9,
+-34.6,
+9.05
+]
+],
+"ala": 27,
+"lev": 3.5,
+"avoin": 0.65,
+"tayt": 0.88,
+"reika": 0,
+"akate": 0.14,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 143,
+"x": -144.4,
+"z": 287.9,
+"kohtia": 2,
+"aukko_max": 18.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-144.4,
+287.9,
+18.55
+],
+[
+-133.4,
+285.2,
+9.05
+]
+],
+"ala": 129,
+"lev": 7.4,
+"avoin": 0.39,
+"tayt": 0.73,
+"reika": 0,
+"akate": 0.92,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "siirtyy"
+},
+{
+"alue": 144,
+"x": -137.5,
+"z": 493.4,
+"kohtia": 1,
+"aukko_max": 22.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-137.5,
+493.4,
+22.55
+]
+],
+"ala": 27,
+"lev": 1.0,
+"avoin": 0.57,
+"tayt": 0.14,
+"reika": 151,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 145,
+"x": -137.4,
+"z": 501.5,
+"kohtia": 1,
+"aukko_max": 22.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-137.4,
+501.5,
+22.3
+]
+],
+"ala": 13,
+"lev": 1.0,
+"avoin": 0.57,
+"tayt": 0.15,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 146,
+"x": -137.6,
+"z": 509.0,
+"kohtia": 1,
+"aukko_max": 21.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-137.6,
+509.0,
+21.3
+]
+],
+"ala": 12,
+"lev": 1.0,
+"avoin": 0.49,
+"tayt": 0.46,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 147,
+"x": -147.5,
+"z": 471.3,
+"kohtia": 3,
+"aukko_max": 10.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-147.5,
+471.3,
+10.55
+],
+[
+-126.8,
+476.7,
+2.05
+],
+[
+-126.5,
+467.5,
+1.55
+]
+],
+"ala": 24,
+"lev": 1.0,
+"avoin": 0.17,
+"tayt": 0.11,
+"reika": 0,
+"akate": 1.0,
+"atalo": 0.98,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 149,
+"x": -135.9,
+"z": 465.2,
+"kohtia": 1,
+"aukko_max": 10.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-135.9,
+465.2,
+10.8
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.66,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 156,
+"x": -126.0,
+"z": 482.1,
+"kohtia": 1,
+"aukko_max": 11.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-126.0,
+482.1,
+11.8
+]
+],
+"ala": 7,
+"lev": 0.7,
+"avoin": 0.68,
+"tayt": 0.09,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 157,
+"x": -96.3,
+"z": 218.6,
+"kohtia": 1,
+"aukko_max": 46.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-96.3,
+218.6,
+46.05
+]
+],
+"ala": 33,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.07,
+"reika": 0,
+"akate": 0.21,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 158,
+"x": -123.8,
+"z": 547.8,
+"kohtia": 1,
+"aukko_max": 2.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-123.8,
+547.8,
+2.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.58,
+"tayt": 0.86,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 159,
+"x": -113.1,
+"z": 443.2,
+"kohtia": 1,
+"aukko_max": 27.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-113.1,
+443.2,
+27.05
+]
+],
+"ala": 174,
+"lev": 6.0,
+"avoin": 0.25,
+"tayt": 0.68,
+"reika": 0,
+"akate": 0.9,
+"atalo": 0.99,
+"ovia": 1,
+"paatos": "siirtyy"
+},
+{
+"alue": 160,
+"x": -117.5,
+"z": 436.7,
+"kohtia": 2,
+"aukko_max": 12.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-117.5,
+436.7,
+12.05
+],
+[
+-117.0,
+423.7,
+12.05
+]
+],
+"ala": 26,
+"lev": 1.1,
+"avoin": 0.33,
+"tayt": 0.17,
+"reika": 0,
+"akate": 0.66,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 161,
+"x": -108.1,
+"z": 396.1,
+"kohtia": 4,
+"aukko_max": 26.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-108.1,
+396.1,
+26.55
+],
+[
+-121.2,
+407.5,
+2.05
+],
+[
+-109.8,
+407.7,
+16.05
+],
+[
+-97.2,
+406.1,
+6.55
+]
+],
+"ala": 115,
+"lev": 6.5,
+"avoin": 0.34,
+"tayt": 0.35,
+"reika": 0,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "epaselva"
+},
+{
+"alue": 162,
+"x": -121.1,
+"z": 372.4,
+"kohtia": 2,
+"aukko_max": 3.3,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-121.1,
+372.4,
+3.3
+],
+[
+-120.6,
+384.8,
+1.8
+]
+],
+"ala": 15,
+"lev": 2.0,
+"avoin": 0.18,
+"tayt": 0.55,
+"reika": 0,
+"akate": 0.12,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 163,
+"x": -105.4,
+"z": 339.6,
+"kohtia": 5,
+"aukko_max": 25.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-120.8,
+341.0,
+3.55
+],
+[
+-105.4,
+339.6,
+25.55
+],
+[
+-107.6,
+351.4,
+24.8
+],
+[
+-95.2,
+345.5,
+2.55
+],
+[
+-95.2,
+351.1,
+2.3
+]
+],
+"ala": 260,
+"lev": 9.5,
+"avoin": 0.32,
+"tayt": 0.75,
+"reika": 0,
+"akate": 0.94,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "siirtyy"
+},
+{
+"alue": 164,
+"x": -120.4,
+"z": 320.2,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-120.4,
+320.2,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 166,
+"x": -118.5,
+"z": 320.2,
+"kohtia": 2,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-118.9,
+333.2,
+1.8
+],
+[
+-118.5,
+320.2,
+2.05
+]
+],
+"ala": 14,
+"lev": 1.5,
+"avoin": 0.08,
+"tayt": 0.61,
+"reika": 0,
+"akate": 0.16,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 170,
+"x": -98.4,
+"z": 207.7,
+"kohtia": 1,
+"aukko_max": 34.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-98.4,
+207.7,
+34.8
+]
+],
+"ala": 57,
+"lev": 1.0,
+"avoin": 0.51,
+"tayt": 0.14,
+"reika": 316,
+"akate": 0.97,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 171,
+"x": -100.2,
+"z": 199.3,
+"kohtia": 1,
+"aukko_max": 28.55,
+"luokka": "sivu-auki",
+"myos172": false,
+"kohdat": [
+[
+-100.2,
+199.3,
+28.55
+]
+],
+"ala": 286,
+"lev": 8.4,
+"avoin": 0.32,
+"tayt": 0.88,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "siirtyy"
+},
+{
+"alue": 172,
+"x": -110.5,
+"z": 436.9,
+"kohtia": 2,
+"aukko_max": 3.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+-110.5,
+436.9,
+3.05
+],
+[
+-110.0,
+424.0,
+3.05
+]
+],
+"ala": 51,
+"lev": 5.2,
+"avoin": 0.08,
+"tayt": 0.56,
+"reika": 19,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ovi-aukolla"
+},
+{
+"alue": 165,
+"x": -108.0,
+"z": 385.2,
+"kohtia": 2,
+"aukko_max": 3.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+-108.0,
+385.2,
+3.05
+],
+[
+-107.8,
+372.2,
+3.05
+]
+],
+"ala": 116,
+"lev": 5.2,
+"avoin": 0.03,
+"tayt": 0.34,
+"reika": 14,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ovi-aukolla"
+},
+{
+"alue": 175,
+"x": -101.0,
+"z": 435.1,
+"kohtia": 1,
+"aukko_max": 12.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-101.0,
+435.1,
+12.3
+]
+],
+"ala": 15,
+"lev": 1.1,
+"avoin": 0.5,
+"tayt": 0.13,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 177,
+"x": -102.9,
+"z": 424.1,
+"kohtia": 1,
+"aukko_max": 12.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-102.9,
+424.1,
+12.05
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.51,
+"tayt": 0.86,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 167,
+"x": -94.0,
+"z": 329.5,
+"kohtia": 3,
+"aukko_max": 4.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+-106.6,
+333.7,
+3.3
+],
+[
+-106.2,
+320.7,
+3.05
+],
+[
+-94.0,
+329.5,
+4.05
+]
+],
+"ala": 92,
+"lev": 5.2,
+"avoin": 0.05,
+"tayt": 0.28,
+"reika": 14,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ovi-aukolla"
+},
+{
+"alue": 178,
+"x": -102.3,
+"z": 288.4,
+"kohtia": 2,
+"aukko_max": 16.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-102.3,
+288.4,
+16.05
+],
+[
+-94.3,
+283.4,
+10.55
+]
+],
+"ala": 20,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.13,
+"reika": 0,
+"akate": 0.95,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 183,
+"x": -88.8,
+"z": 550.0,
+"kohtia": 1,
+"aukko_max": 21.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-88.8,
+550.0,
+21.3
+]
+],
+"ala": 10,
+"lev": 0.5,
+"avoin": 0.62,
+"tayt": 0.1,
+"reika": 0,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 185,
+"x": -98.5,
+"z": 447.0,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-98.5,
+447.0,
+3.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.53,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 187,
+"x": -97.8,
+"z": 425.5,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-97.8,
+425.5,
+2.05
+]
+],
+"ala": 1,
+"lev": 1.0,
+"avoin": 0.45,
+"tayt": 0.93,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 189,
+"x": -97.8,
+"z": 426.9,
+"kohtia": 1,
+"aukko_max": 1.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-97.8,
+426.9,
+1.8
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 181,
+"x": -94.5,
+"z": -20.8,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+-94.5,
+-20.8,
+3.05
+]
+],
+"ala": 14,
+"lev": 2.5,
+"avoin": 0.15,
+"tayt": 0.93,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "siirtyy"
+},
+{
+"alue": 182,
+"x": -94.3,
+"z": -15.9,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+-94.3,
+-15.9,
+6.55
+]
+],
+"ala": 36,
+"lev": 6.0,
+"avoin": 0.26,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "siirtyy"
+},
+{
+"alue": 168,
+"x": -94.5,
+"z": 495.4,
+"kohtia": 1,
+"aukko_max": 5.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-94.5,
+495.4,
+5.8
+]
+],
+"ala": 54,
+"lev": 1.5,
+"avoin": 0.04,
+"tayt": 0.14,
+"reika": 0,
+"akate": 1.0,
+"atalo": 0.91,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 190,
+"x": -94.2,
+"z": 141.6,
+"kohtia": 1,
+"aukko_max": 4.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-94.2,
+141.6,
+4.8
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.67,
+"tayt": 0.75,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 193,
+"x": -89.7,
+"z": 537.5,
+"kohtia": 1,
+"aukko_max": 11.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-89.7,
+537.5,
+11.05
+]
+],
+"ala": 6,
+"lev": 1.0,
+"avoin": 0.56,
+"tayt": 0.48,
+"reika": 0,
+"akate": 0.87,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 194,
+"x": -83.9,
+"z": 507.6,
+"kohtia": 1,
+"aukko_max": 5.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-83.9,
+507.6,
+5.3
+]
+],
+"ala": 4,
+"lev": 0.5,
+"avoin": 0.94,
+"tayt": 0.21,
+"reika": 0,
+"akate": 0.77,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 195,
+"x": -84.1,
+"z": 434.5,
+"kohtia": 3,
+"aukko_max": 13.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-84.1,
+434.5,
+13.05
+],
+[
+-82.8,
+428.5,
+2.05
+],
+[
+-74.1,
+429.0,
+4.3
+]
+],
+"ala": 42,
+"lev": 1.1,
+"avoin": 0.13,
+"tayt": 0.13,
+"reika": 0,
+"akate": 0.99,
+"atalo": 0.78,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 197,
+"x": -72.7,
+"z": 509.3,
+"kohtia": 1,
+"aukko_max": 19.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-72.7,
+509.3,
+19.05
+]
+],
+"ala": 28,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.16,
+"reika": 0,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 198,
+"x": -80.5,
+"z": 555.1,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-80.5,
+555.1,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 201,
+"x": -73.3,
+"z": 489.1,
+"kohtia": 1,
+"aukko_max": 9.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-73.3,
+489.1,
+9.8
+]
+],
+"ala": 4,
+"lev": 0.5,
+"avoin": 0.83,
+"tayt": 0.1,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 202,
+"x": -76.2,
+"z": 495.6,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-76.2,
+495.6,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 203,
+"x": -72.2,
+"z": 459.8,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-72.2,
+459.8,
+3.05
+]
+],
+"ala": 2,
+"lev": 1.0,
+"avoin": 0.6,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.41,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 206,
+"x": -70.1,
+"z": -212.1,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-70.1,
+-212.1,
+3.05
+]
+],
+"ala": 1,
+"lev": 1.0,
+"avoin": 0.69,
+"tayt": 0.67,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 210,
+"x": -66.3,
+"z": 203.9,
+"kohtia": 1,
+"aukko_max": 5.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-66.3,
+203.9,
+5.05
+]
+],
+"ala": 3,
+"lev": 0.5,
+"avoin": 0.9,
+"tayt": 0.18,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 213,
+"x": -48.2,
+"z": 510.8,
+"kohtia": 1,
+"aukko_max": 18.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-48.2,
+510.8,
+18.55
+]
+],
+"ala": 23,
+"lev": 1.0,
+"avoin": 0.59,
+"tayt": 0.14,
+"reika": 122,
+"akate": 0.95,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 215,
+"x": -49.6,
+"z": 462.5,
+"kohtia": 1,
+"aukko_max": 1.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-49.6,
+462.5,
+1.55
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 0.75,
+"tayt": 0.67,
+"reika": 0,
+"akate": 0.75,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 216,
+"x": -47.1,
+"z": 463.7,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-47.1,
+463.7,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.88,
+"tayt": 0.57,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 217,
+"x": -46.9,
+"z": 458.3,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-46.9,
+458.3,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.78,
+"tayt": 0.64,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 208,
+"x": -37.2,
+"z": 209.0,
+"kohtia": 2,
+"aukko_max": 18.05,
+"luokka": "osin-taivas",
+"myos172": true,
+"kohdat": [
+[
+-37.2,
+209.0,
+18.05
+],
+[
+-33.2,
+221.1,
+10.05
+]
+],
+"ala": 235,
+"lev": 9.3,
+"avoin": 0.41,
+"tayt": 0.2,
+"reika": 0,
+"akate": 0.56,
+"atalo": 0.84,
+"ovia": 1,
+"paatos": "jo-listalla"
+},
+{
+"alue": 219,
+"x": -44.2,
+"z": 460.2,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-44.2,
+460.2,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 0.83,
+"tayt": 0.6,
+"reika": 0,
+"akate": 0.83,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 220,
+"x": -41.6,
+"z": 392.2,
+"kohtia": 1,
+"aukko_max": 11.8,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-41.6,
+392.2,
+11.8
+]
+],
+"ala": 26,
+"lev": 2.5,
+"avoin": 0.59,
+"tayt": 0.96,
+"reika": 0,
+"akate": 0.04,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 222,
+"x": -40.2,
+"z": 319.6,
+"kohtia": 2,
+"aukko_max": 4.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+-39.9,
+331.7,
+3.05
+],
+[
+-40.2,
+319.6,
+4.55
+]
+],
+"ala": 24,
+"lev": 2.0,
+"avoin": 0.28,
+"tayt": 0.73,
+"reika": 0,
+"akate": 0.51,
+"atalo": 0.98,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 230,
+"x": -28.2,
+"z": 136.0,
+"kohtia": 1,
+"aukko_max": 5.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-28.2,
+136.0,
+5.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 233,
+"x": -22.0,
+"z": 136.2,
+"kohtia": 1,
+"aukko_max": 7.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-22.0,
+136.2,
+7.05
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 236,
+"x": -2.6,
+"z": 77.2,
+"kohtia": 1,
+"aukko_max": 27.55,
+"luokka": "aukko",
+"myos172": true,
+"kohdat": [
+[
+-2.6,
+77.2,
+27.55
+]
+],
+"ala": 737,
+"lev": 20.7,
+"avoin": 0.1,
+"tayt": 0.8,
+"reika": 100,
+"akate": 0.96,
+"atalo": 0.83,
+"ovia": 1,
+"paatos": "jo-listalla"
+},
+{
+"alue": 237,
+"x": -13.2,
+"z": 136.5,
+"kohtia": 1,
+"aukko_max": 3.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+-13.2,
+136.5,
+3.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 224,
+"x": 0.8,
+"z": 330.4,
+"kohtia": 2,
+"aukko_max": 24.05,
+"luokka": "aukko",
+"myos172": true,
+"kohdat": [
+[
+0.8,
+330.4,
+24.05
+],
+[
+-9.0,
+302.8,
+2.8
+]
+],
+"ala": 1313,
+"lev": 20.2,
+"avoin": 0.08,
+"tayt": 0.81,
+"reika": 158,
+"akate": 1.0,
+"atalo": 0.95,
+"ovia": 1,
+"paatos": "jo-listalla"
+},
+{
+"alue": 241,
+"x": 14.0,
+"z": 212.0,
+"kohtia": 2,
+"aukko_max": 10.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+13.6,
+223.0,
+9.8
+],
+[
+14.0,
+212.0,
+10.05
+]
+],
+"ala": 104,
+"lev": 9.5,
+"avoin": 0.46,
+"tayt": 0.95,
+"reika": 0,
+"akate": 0.04,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 243,
+"x": 11.3,
+"z": 392.8,
+"kohtia": 1,
+"aukko_max": 11.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+11.3,
+392.8,
+11.8
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.81,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 245,
+"x": 13.5,
+"z": 328.4,
+"kohtia": 1,
+"aukko_max": 11.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+13.5,
+328.4,
+11.55
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.84,
+"reika": 0,
+"akate": 0.79,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 246,
+"x": 22.5,
+"z": 123.6,
+"kohtia": 1,
+"aukko_max": 33.05,
+"luokka": "kuisti",
+"myos172": false,
+"kohdat": [
+[
+22.5,
+123.6,
+33.05
+]
+],
+"ala": 21,
+"lev": 2.5,
+"avoin": 0.72,
+"tayt": 0.2,
+"reika": 0,
+"akate": 1.0,
+"atalo": 0.52,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 247,
+"x": 34.3,
+"z": 513.0,
+"kohtia": 1,
+"aukko_max": 19.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+34.3,
+513.0,
+19.05
+]
+],
+"ala": 20,
+"lev": 1.0,
+"avoin": 0.58,
+"tayt": 0.15,
+"reika": 0,
+"akate": 0.95,
+"atalo": 0.97,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 254,
+"x": 30.1,
+"z": 502.6,
+"kohtia": 1,
+"aukko_max": 11.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+30.1,
+502.6,
+11.3
+]
+],
+"ala": 3,
+"lev": 0.5,
+"avoin": 0.93,
+"tayt": 0.54,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 255,
+"x": 34.9,
+"z": 492.3,
+"kohtia": 1,
+"aukko_max": 10.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+34.9,
+492.3,
+10.05
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.63,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 256,
+"x": 30.5,
+"z": 495.4,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+30.5,
+495.4,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 257,
+"x": 34.2,
+"z": 464.5,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+34.2,
+464.5,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 259,
+"x": 36.3,
+"z": -219.8,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+36.3,
+-219.8,
+3.05
+]
+],
+"ala": 48,
+"lev": 2.5,
+"avoin": 0.05,
+"tayt": 0.83,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "siirtyy"
+},
+{
+"alue": 260,
+"x": 37.1,
+"z": 440.4,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+37.1,
+440.4,
+3.3
+]
+],
+"ala": 55,
+"lev": 4.0,
+"avoin": 0.03,
+"tayt": 0.16,
+"reika": 0,
+"akate": 0.55,
+"atalo": 0.39,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 261,
+"x": 39.1,
+"z": 501.5,
+"kohtia": 1,
+"aukko_max": 15.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+39.1,
+501.5,
+15.55
+]
+],
+"ala": 5,
+"lev": 0.5,
+"avoin": 0.71,
+"tayt": 0.47,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 263,
+"x": 45.8,
+"z": 513.3,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+45.8,
+513.3,
+6.55
+]
+],
+"ala": 7,
+"lev": 2.0,
+"avoin": 0.76,
+"tayt": 0.3,
+"reika": 0,
+"akate": 0.93,
+"atalo": 0.52,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 262,
+"x": 43.4,
+"z": 435.0,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+43.4,
+435.0,
+1.3
+]
+],
+"ala": 7,
+"lev": 1.0,
+"avoin": 0.04,
+"tayt": 0.58,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 265,
+"x": 56.2,
+"z": 494.5,
+"kohtia": 1,
+"aukko_max": 11.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+56.2,
+494.5,
+11.55
+]
+],
+"ala": 12,
+"lev": 1.0,
+"avoin": 0.64,
+"tayt": 0.15,
+"reika": 0,
+"akate": 0.79,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 266,
+"x": 57.0,
+"z": 471.8,
+"kohtia": 1,
+"aukko_max": 10.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+57.0,
+471.8,
+10.55
+]
+],
+"ala": 13,
+"lev": 0.7,
+"avoin": 0.65,
+"tayt": 0.17,
+"reika": 57,
+"akate": 0.95,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 269,
+"x": 64.6,
+"z": 514.9,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+64.6,
+514.9,
+20.05
+]
+],
+"ala": 23,
+"lev": 1.0,
+"avoin": 0.56,
+"tayt": 0.16,
+"reika": 110,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 270,
+"x": 62.8,
+"z": 504.1,
+"kohtia": 1,
+"aukko_max": 18.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+62.8,
+504.1,
+18.55
+]
+],
+"ala": 17,
+"lev": 0.7,
+"avoin": 0.61,
+"tayt": 0.13,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 272,
+"x": 66.0,
+"z": 482.5,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+66.0,
+482.5,
+21.55
+]
+],
+"ala": 29,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.14,
+"reika": 159,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 276,
+"x": 58.2,
+"z": 488.5,
+"kohtia": 1,
+"aukko_max": 2.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+58.2,
+488.5,
+2.55
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.58,
+"tayt": 0.86,
+"reika": 0,
+"akate": 0.42,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 281,
+"x": 91.0,
+"z": 436.2,
+"kohtia": 2,
+"aukko_max": 4.05,
+"luokka": "osin-taivas",
+"myos172": true,
+"kohdat": [
+[
+63.2,
+433.1,
+2.8
+],
+[
+91.0,
+436.2,
+4.05
+]
+],
+"ala": 232,
+"lev": 4.6,
+"avoin": 0.31,
+"tayt": 0.49,
+"reika": 84,
+"akate": 0.91,
+"atalo": 0.86,
+"ovia": 1,
+"paatos": "jo-listalla"
+},
+{
+"alue": 287,
+"x": 79.8,
+"z": 494.1,
+"kohtia": 1,
+"aukko_max": 16.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+79.8,
+494.1,
+16.05
+]
+],
+"ala": 29,
+"lev": 1.0,
+"avoin": 0.46,
+"tayt": 0.18,
+"reika": 64,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 288,
+"x": 85.3,
+"z": 468.9,
+"kohtia": 3,
+"aukko_max": 8.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+74.2,
+468.5,
+7.55
+],
+[
+85.3,
+468.9,
+8.05
+],
+[
+82.6,
+476.8,
+5.8
+]
+],
+"ala": 20,
+"lev": 1.0,
+"avoin": 0.43,
+"tayt": 0.13,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 289,
+"x": 109.1,
+"z": 565.2,
+"kohtia": 2,
+"aukko_max": 86.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+109.1,
+565.2,
+86.8
+],
+[
+103.4,
+558.6,
+23.8
+]
+],
+"ala": 66,
+"lev": 1.1,
+"avoin": 0.52,
+"tayt": 0.07,
+"reika": 0,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 295,
+"x": 81.5,
+"z": 148.6,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+81.5,
+148.6,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.93,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 298,
+"x": 84.9,
+"z": 158.2,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+84.9,
+158.2,
+3.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 0.56,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 299,
+"x": 90.8,
+"z": 505.1,
+"kohtia": 1,
+"aukko_max": 18.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+90.8,
+505.1,
+18.05
+]
+],
+"ala": 16,
+"lev": 0.7,
+"avoin": 0.63,
+"tayt": 0.13,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 300,
+"x": 84.0,
+"z": 514.8,
+"kohtia": 1,
+"aukko_max": 4.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+84.0,
+514.8,
+4.55
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.52,
+"tayt": 0.97,
+"reika": 0,
+"akate": 0.52,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 301,
+"x": 84.2,
+"z": 152.2,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+84.2,
+152.2,
+2.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.42,
+"tayt": 0.34,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 303,
+"x": 96.6,
+"z": 484.5,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+96.6,
+484.5,
+21.55
+]
+],
+"ala": 28,
+"lev": 1.0,
+"avoin": 0.54,
+"tayt": 0.14,
+"reika": 0,
+"akate": 0.93,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 304,
+"x": 96.9,
+"z": 516.1,
+"kohtia": 1,
+"aukko_max": 15.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+96.9,
+516.1,
+15.55
+]
+],
+"ala": 14,
+"lev": 0.7,
+"avoin": 0.62,
+"tayt": 0.13,
+"reika": 0,
+"akate": 0.75,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 280,
+"x": 92.8,
+"z": 384.1,
+"kohtia": 1,
+"aukko_max": 3.8,
+"luokka": "osin-taivas",
+"myos172": true,
+"kohdat": [
+[
+92.8,
+384.1,
+3.8
+]
+],
+"ala": 312,
+"lev": 7.2,
+"avoin": 0.35,
+"tayt": 0.55,
+"reika": 65,
+"akate": 0.92,
+"atalo": 0.75,
+"ovia": 1,
+"paatos": "jo-listalla"
+},
+{
+"alue": 310,
+"x": 99.4,
+"z": 158.3,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+99.4,
+158.3,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.93,
+"tayt": 0.3,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 311,
+"x": 99.6,
+"z": 152.2,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+99.6,
+152.2,
+3.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.93,
+"tayt": 0.31,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 314,
+"x": 108.8,
+"z": 495.5,
+"kohtia": 1,
+"aukko_max": 16.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+108.8,
+495.5,
+16.05
+]
+],
+"ala": 29,
+"lev": 1.0,
+"avoin": 0.49,
+"tayt": 0.17,
+"reika": 129,
+"akate": 0.89,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 315,
+"x": 108.3,
+"z": 473.1,
+"kohtia": 1,
+"aukko_max": 16.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+108.3,
+473.1,
+16.05
+]
+],
+"ala": 100,
+"lev": 5.0,
+"avoin": 0.38,
+"tayt": 0.64,
+"reika": 0,
+"akate": 0.78,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "epaselva"
+},
+{
+"alue": 324,
+"x": 123.2,
+"z": 294.1,
+"kohtia": 1,
+"aukko_max": 21.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+123.2,
+294.1,
+21.05
+]
+],
+"ala": 35,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.16,
+"reika": 166,
+"akate": 0.97,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 325,
+"x": 122.8,
+"z": 517.4,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+122.8,
+517.4,
+20.05
+]
+],
+"ala": 22,
+"lev": 1.0,
+"avoin": 0.61,
+"tayt": 0.15,
+"reika": 110,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 326,
+"x": 125.1,
+"z": 485.3,
+"kohtia": 2,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+125.1,
+485.3,
+21.55
+],
+[
+115.6,
+480.1,
+4.8
+]
+],
+"ala": 28,
+"lev": 1.0,
+"avoin": 0.53,
+"tayt": 0.14,
+"reika": 0,
+"akate": 0.9,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 327,
+"x": 123.2,
+"z": 506.6,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+123.2,
+506.6,
+20.05
+]
+],
+"ala": 20,
+"lev": 0.7,
+"avoin": 0.64,
+"tayt": 0.14,
+"reika": 109,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 329,
+"x": 129.2,
+"z": 463.2,
+"kohtia": 2,
+"aukko_max": 26.05,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+129.2,
+463.2,
+26.05
+],
+[
+133.4,
+453.6,
+25.05
+]
+],
+"ala": 108,
+"lev": 2.5,
+"avoin": 0.27,
+"tayt": 0.37,
+"reika": 111,
+"akate": 0.84,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 330,
+"x": 121.6,
+"z": 408.3,
+"kohtia": 3,
+"aukko_max": 8.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+121.0,
+384.8,
+3.55
+],
+[
+121.6,
+408.3,
+8.55
+],
+[
+123.5,
+379.5,
+4.05
+]
+],
+"ala": 505,
+"lev": 11.0,
+"avoin": 0.07,
+"tayt": 0.54,
+"reika": 3,
+"akate": 0.49,
+"atalo": 0.5,
+"ovia": 1,
+"paatos": "epaselva"
+},
+{
+"alue": 331,
+"x": 130.6,
+"z": 443.5,
+"kohtia": 4,
+"aukko_max": 21.8,
+"luokka": "kuisti",
+"myos172": true,
+"kohdat": [
+[
+130.6,
+443.5,
+21.8
+],
+[
+123.2,
+432.1,
+6.05
+],
+[
+133.5,
+430.5,
+18.05
+],
+[
+143.2,
+440.6,
+6.3
+]
+],
+"ala": 156,
+"lev": 4.5,
+"avoin": 0.37,
+"tayt": 0.48,
+"reika": 15,
+"akate": 0.98,
+"atalo": 0.97,
+"ovia": 1,
+"paatos": "jo-listalla"
+},
+{
+"alue": 333,
+"x": 137.4,
+"z": 411.4,
+"kohtia": 1,
+"aukko_max": 21.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+137.4,
+411.4,
+21.05
+]
+],
+"ala": 12,
+"lev": 1.0,
+"avoin": 0.56,
+"tayt": 0.12,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 334,
+"x": 126.1,
+"z": 559.5,
+"kohtia": 1,
+"aukko_max": 2.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+126.1,
+559.5,
+2.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 335,
+"x": 139.5,
+"z": 374.5,
+"kohtia": 2,
+"aukko_max": 10.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+129.9,
+374.2,
+9.3
+],
+[
+139.5,
+374.5,
+10.55
+]
+],
+"ala": 8,
+"lev": 0.5,
+"avoin": 0.55,
+"tayt": 0.59,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 336,
+"x": 133.2,
+"z": 493.3,
+"kohtia": 1,
+"aukko_max": 11.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+133.2,
+493.3,
+11.3
+]
+],
+"ala": 14,
+"lev": 1.0,
+"avoin": 0.41,
+"tayt": 0.14,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 337,
+"x": 138.5,
+"z": 478.6,
+"kohtia": 2,
+"aukko_max": 15.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+138.5,
+478.6,
+15.8
+],
+[
+143.1,
+469.2,
+6.8
+]
+],
+"ala": 27,
+"lev": 1.0,
+"avoin": 0.33,
+"tayt": 0.16,
+"reika": 68,
+"akate": 0.7,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 339,
+"x": 136.9,
+"z": 560.0,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+136.9,
+560.0,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 340,
+"x": 143.4,
+"z": 499.1,
+"kohtia": 1,
+"aukko_max": 10.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+143.4,
+499.1,
+10.05
+]
+],
+"ala": 6,
+"lev": 0.7,
+"avoin": 0.69,
+"tayt": 0.09,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 343,
+"x": 145.4,
+"z": 560.4,
+"kohtia": 1,
+"aukko_max": 11.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+145.4,
+560.4,
+11.3
+]
+],
+"ala": 3,
+"lev": 0.5,
+"avoin": 0.95,
+"tayt": 0.52,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 344,
+"x": 151.3,
+"z": 517.9,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+151.3,
+517.9,
+20.05
+]
+],
+"ala": 20,
+"lev": 0.7,
+"avoin": 0.64,
+"tayt": 0.14,
+"reika": 109,
+"akate": 0.69,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 345,
+"x": 152.2,
+"z": 485.9,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+152.2,
+485.9,
+21.55
+]
+],
+"ala": 34,
+"lev": 1.0,
+"avoin": 0.54,
+"tayt": 0.16,
+"reika": 158,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 346,
+"x": 151.9,
+"z": 507.9,
+"kohtia": 1,
+"aukko_max": 19.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+151.9,
+507.9,
+19.8
+]
+],
+"ala": 24,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.17,
+"reika": 109,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 347,
+"x": 145.5,
+"z": 472.2,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+145.5,
+472.2,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 353,
+"x": 161.5,
+"z": 561.1,
+"kohtia": 4,
+"aukko_max": 22.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+161.5,
+561.1,
+22.05
+],
+[
+167.5,
+568.8,
+11.05
+],
+[
+185.9,
+569.6,
+17.8
+],
+[
+186.4,
+562.1,
+17.8
+]
+],
+"ala": 42,
+"lev": 1.1,
+"avoin": 0.43,
+"tayt": 0.1,
+"reika": 115,
+"akate": 0.95,
+"atalo": 0.99,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 354,
+"x": 162.2,
+"z": -334.9,
+"kohtia": 1,
+"aukko_max": 18.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+162.2,
+-334.9,
+18.05
+]
+],
+"ala": 49,
+"lev": 1.4,
+"avoin": 0.53,
+"tayt": 0.18,
+"reika": 201,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 355,
+"x": 164.8,
+"z": 497.8,
+"kohtia": 1,
+"aukko_max": 15.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+164.8,
+497.8,
+15.8
+]
+],
+"ala": 28,
+"lev": 1.1,
+"avoin": 0.45,
+"tayt": 0.17,
+"reika": 63,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 356,
+"x": 163.5,
+"z": 475.9,
+"kohtia": 2,
+"aukko_max": 15.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+163.5,
+475.9,
+15.05
+],
+[
+173.7,
+474.7,
+11.3
+]
+],
+"ala": 28,
+"lev": 1.0,
+"avoin": 0.48,
+"tayt": 0.15,
+"reika": 69,
+"akate": 0.69,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 358,
+"x": 178.2,
+"z": 390.6,
+"kohtia": 1,
+"aukko_max": 22.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+178.2,
+390.6,
+22.05
+]
+],
+"ala": 29,
+"lev": 1.0,
+"avoin": 0.54,
+"tayt": 0.16,
+"reika": 146,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 359,
+"x": 178.8,
+"z": 373.3,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+178.8,
+373.3,
+21.55
+]
+],
+"ala": 27,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.14,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 361,
+"x": 180.0,
+"z": 324.9,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+180.0,
+324.9,
+21.55
+]
+],
+"ala": 30,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.15,
+"reika": 153,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 362,
+"x": 181.4,
+"z": 487.4,
+"kohtia": 1,
+"aukko_max": 21.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+181.4,
+487.4,
+21.55
+]
+],
+"ala": 32,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.15,
+"reika": 0,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 363,
+"x": 180.5,
+"z": 508.9,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+180.5,
+508.9,
+20.05
+]
+],
+"ala": 20,
+"lev": 0.7,
+"avoin": 0.63,
+"tayt": 0.14,
+"reika": 109,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 364,
+"x": 180.4,
+"z": 519.4,
+"kohtia": 1,
+"aukko_max": 20.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+180.4,
+519.4,
+20.05
+]
+],
+"ala": 24,
+"lev": 1.0,
+"avoin": 0.56,
+"tayt": 0.16,
+"reika": 110,
+"akate": 0.91,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 367,
+"x": 191.2,
+"z": 476.2,
+"kohtia": 1,
+"aukko_max": 12.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+191.2,
+476.2,
+12.55
+]
+],
+"ala": 15,
+"lev": 1.0,
+"avoin": 0.7,
+"tayt": 0.15,
+"reika": 73,
+"akate": 0.83,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 368,
+"x": 191.4,
+"z": 497.8,
+"kohtia": 1,
+"aukko_max": 11.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+191.4,
+497.8,
+11.55
+]
+],
+"ala": 13,
+"lev": 1.0,
+"avoin": 0.61,
+"tayt": 0.16,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 371,
+"x": 209.1,
+"z": 334.4,
+"kohtia": 1,
+"aukko_max": 30.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+209.1,
+334.4,
+30.8
+]
+],
+"ala": 21,
+"lev": 1.0,
+"avoin": 0.54,
+"tayt": 0.07,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 372,
+"x": 201.4,
+"z": 322.6,
+"kohtia": 1,
+"aukko_max": 9.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+201.4,
+322.6,
+9.8
+]
+],
+"ala": 4,
+"lev": 0.5,
+"avoin": 0.55,
+"tayt": 0.6,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 349,
+"x": 203.8,
+"z": 172.9,
+"kohtia": 1,
+"aukko_max": 5.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+203.8,
+172.9,
+5.3
+]
+],
+"ala": 61,
+"lev": 1.0,
+"avoin": 0.02,
+"tayt": 0.09,
+"reika": 0,
+"akate": 0.92,
+"atalo": 0.97,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 375,
+"x": 217.2,
+"z": 502.1,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+217.2,
+502.1,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 376,
+"x": 217.5,
+"z": 498.5,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+217.5,
+498.5,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.6,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 377,
+"x": 233.2,
+"z": 525.2,
+"kohtia": 1,
+"aukko_max": 32.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+233.2,
+525.2,
+32.3
+]
+],
+"ala": 21,
+"lev": 1.0,
+"avoin": 0.56,
+"tayt": 0.08,
+"reika": 0,
+"akate": 0.43,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 378,
+"x": 221.9,
+"z": 491.1,
+"kohtia": 1,
+"aukko_max": 14.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+221.9,
+491.1,
+14.3
+]
+],
+"ala": 18,
+"lev": 1.0,
+"avoin": 0.48,
+"tayt": 0.17,
+"reika": 49,
+"akate": 0.93,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 379,
+"x": 223.3,
+"z": 466.4,
+"kohtia": 1,
+"aukko_max": 12.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+223.3,
+466.4,
+12.55
+]
+],
+"ala": 17,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.14,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 380,
+"x": 222.1,
+"z": 478.6,
+"kohtia": 1,
+"aukko_max": 5.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+222.1,
+478.6,
+5.8
+]
+],
+"ala": 3,
+"lev": 1.0,
+"avoin": 0.54,
+"tayt": 0.87,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 381,
+"x": 221.1,
+"z": 401.8,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+221.1,
+401.8,
+3.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.76,
+"tayt": 0.38,
+"reika": 0,
+"akate": 0.71,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 382,
+"x": 221.2,
+"z": 397.0,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+221.2,
+397.0,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 0.83,
+"tayt": 0.6,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 383,
+"x": 226.3,
+"z": 447.4,
+"kohtia": 1,
+"aukko_max": 15.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+226.3,
+447.4,
+15.05
+]
+],
+"ala": 21,
+"lev": 1.0,
+"avoin": 0.55,
+"tayt": 0.15,
+"reika": 107,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 384,
+"x": 223.8,
+"z": 138.4,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+223.8,
+138.4,
+6.55
+]
+],
+"ala": 5,
+"lev": 0.5,
+"avoin": 0.78,
+"tayt": 0.19,
+"reika": 0,
+"akate": 0.78,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 385,
+"x": 221.9,
+"z": 392.2,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+221.9,
+392.2,
+1.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.33,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 386,
+"x": 228.1,
+"z": 380.1,
+"kohtia": 1,
+"aukko_max": 13.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+228.1,
+380.1,
+13.55
+]
+],
+"ala": 26,
+"lev": 1.0,
+"avoin": 0.5,
+"tayt": 0.19,
+"reika": 80,
+"akate": 0.84,
+"atalo": 1.0,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 387,
+"x": 224.0,
+"z": 392.4,
+"kohtia": 1,
+"aukko_max": 1.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+224.0,
+392.4,
+1.55
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 388,
+"x": 225.6,
+"z": 392.5,
+"kohtia": 1,
+"aukko_max": 2.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+225.6,
+392.5,
+2.8
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 389,
+"x": 226.0,
+"z": 402.5,
+"kohtia": 1,
+"aukko_max": 1.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+226.0,
+402.5,
+1.8
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.56,
+"tayt": 0.75,
+"reika": 0,
+"akate": 0.56,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 391,
+"x": 226.2,
+"z": 398.0,
+"kohtia": 1,
+"aukko_max": 4.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+226.2,
+398.0,
+4.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 392,
+"x": 242.7,
+"z": 442.9,
+"kohtia": 2,
+"aukko_max": 29.05,
+"luokka": "osin-taivas",
+"myos172": true,
+"kohdat": [
+[
+242.7,
+442.9,
+29.05
+],
+[
+245.3,
+428.1,
+5.3
+]
+],
+"ala": 147,
+"lev": 5.1,
+"avoin": 0.36,
+"tayt": 0.21,
+"reika": 2,
+"akate": 0.86,
+"atalo": 0.31,
+"ovia": 2,
+"paatos": "jo-listalla"
+},
+{
+"alue": 393,
+"x": 239.1,
+"z": 394.1,
+"kohtia": 1,
+"aukko_max": 15.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+239.1,
+394.1,
+15.05
+]
+],
+"ala": 13,
+"lev": 1.0,
+"avoin": 0.62,
+"tayt": 0.12,
+"reika": 0,
+"akate": 0.86,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 394,
+"x": 239.6,
+"z": 465.5,
+"kohtia": 1,
+"aukko_max": 17.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+239.6,
+465.5,
+17.3
+]
+],
+"ala": 23,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.13,
+"reika": 0,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 395,
+"x": 233.4,
+"z": 482.5,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+233.4,
+482.5,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 366,
+"x": 255.5,
+"z": -324.1,
+"kohtia": 2,
+"aukko_max": 39.05,
+"luokka": "aukko",
+"myos172": false,
+"kohdat": [
+[
+255.5,
+-324.1,
+39.05
+],
+[
+248.4,
+-339.1,
+23.8
+]
+],
+"ala": 199,
+"lev": 2.0,
+"avoin": 0.13,
+"tayt": 0.11,
+"reika": 616,
+"akate": 0.96,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 396,
+"x": 238.6,
+"z": 454.6,
+"kohtia": 1,
+"aukko_max": 5.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+238.6,
+454.6,
+5.05
+]
+],
+"ala": 5,
+"lev": 0.7,
+"avoin": 0.73,
+"tayt": 0.28,
+"reika": 0,
+"akate": 0.67,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 398,
+"x": 239.6,
+"z": 475.8,
+"kohtia": 1,
+"aukko_max": 1.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+239.6,
+475.8,
+1.55
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 0.67,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 399,
+"x": 240.5,
+"z": 482.8,
+"kohtia": 1,
+"aukko_max": 2.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+240.5,
+482.8,
+2.05
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 400,
+"x": 241.6,
+"z": 476.8,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+241.6,
+476.8,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 403,
+"x": 243.9,
+"z": 473.4,
+"kohtia": 1,
+"aukko_max": 1.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+243.9,
+473.4,
+1.3
+]
+],
+"ala": 0,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 0.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 405,
+"x": 248.5,
+"z": 379.6,
+"kohtia": 2,
+"aukko_max": 12.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+248.5,
+379.6,
+12.55
+],
+[
+265.0,
+374.8,
+10.55
+]
+],
+"ala": 130,
+"lev": 6.9,
+"avoin": 0.25,
+"tayt": 0.31,
+"reika": 84,
+"akate": 0.27,
+"atalo": 0.24,
+"ovia": 2,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 406,
+"x": 247.5,
+"z": 483.0,
+"kohtia": 1,
+"aukko_max": 3.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+247.5,
+483.0,
+3.05
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 1.0,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 409,
+"x": 259.0,
+"z": 519.1,
+"kohtia": 1,
+"aukko_max": 4.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+259.0,
+519.1,
+4.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.71,
+"tayt": 0.75,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 410,
+"x": 258.6,
+"z": 388.5,
+"kohtia": 1,
+"aukko_max": 3.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+258.6,
+388.5,
+3.3
+]
+],
+"ala": 1,
+"lev": 0.5,
+"avoin": 0.62,
+"tayt": 0.8,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 411,
+"x": 259.0,
+"z": 512.3,
+"kohtia": 1,
+"aukko_max": 4.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+259.0,
+512.3,
+4.05
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.58,
+"tayt": 1.0,
+"reika": 0,
+"akate": 1.0,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 412,
+"x": 274.7,
+"z": 507.4,
+"kohtia": 1,
+"aukko_max": 32.05,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+274.7,
+507.4,
+32.05
+]
+],
+"ala": 47,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.13,
+"reika": 267,
+"akate": 0.92,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 414,
+"x": 270.8,
+"z": 570.5,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+270.8,
+570.5,
+6.55
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.68,
+"tayt": 0.74,
+"reika": 0,
+"akate": 0.71,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 418,
+"x": 277.2,
+"z": 567.0,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+277.2,
+567.0,
+6.55
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.66,
+"tayt": 0.76,
+"reika": 0,
+"akate": 0.77,
+"atalo": 1.0,
+"ovia": 0,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 420,
+"x": 299.1,
+"z": 522.0,
+"kohtia": 2,
+"aukko_max": 16.55,
+"luokka": "osin-taivas",
+"myos172": false,
+"kohdat": [
+[
+299.1,
+522.0,
+16.55
+],
+[
+298.5,
+529.6,
+16.05
+]
+],
+"ala": 45,
+"lev": 4.5,
+"avoin": 0.54,
+"tayt": 0.25,
+"reika": 0,
+"akate": 0.88,
+"atalo": 0.39,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 422,
+"x": 296.9,
+"z": 380.3,
+"kohtia": 1,
+"aukko_max": 17.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+296.9,
+380.3,
+17.8
+]
+],
+"ala": 14,
+"lev": 0.7,
+"avoin": 0.68,
+"tayt": 0.1,
+"reika": 0,
+"akate": 0.93,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 397,
+"x": 313.8,
+"z": 231.2,
+"kohtia": 2,
+"aukko_max": 26.55,
+"luokka": "osin-taivas",
+"myos172": true,
+"kohdat": [
+[
+313.8,
+231.2,
+26.55
+],
+[
+317.6,
+337.8,
+10.8
+]
+],
+"ala": 4828,
+"lev": 28.0,
+"avoin": 0.03,
+"tayt": 0.42,
+"reika": 1799,
+"akate": 0.18,
+"atalo": 0.09,
+"ovia": 4,
+"paatos": "jo-listalla"
+},
+{
+"alue": 423,
+"x": 326.3,
+"z": -355.4,
+"kohtia": 1,
+"aukko_max": 48.3,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+326.3,
+-355.4,
+48.3
+]
+],
+"ala": 110,
+"lev": 1.5,
+"avoin": 0.51,
+"tayt": 0.14,
+"reika": 563,
+"akate": 0.94,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 424,
+"x": 320.6,
+"z": 525.4,
+"kohtia": 1,
+"aukko_max": 26.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+320.6,
+525.4,
+26.8
+]
+],
+"ala": 31,
+"lev": 1.0,
+"avoin": 0.56,
+"tayt": 0.14,
+"reika": 178,
+"akate": 0.65,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 425,
+"x": 318.3,
+"z": 435.7,
+"kohtia": 1,
+"aukko_max": 18.8,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+318.3,
+435.7,
+18.8
+]
+],
+"ala": 33,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.17,
+"reika": 153,
+"akate": 0.81,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 426,
+"x": 314.8,
+"z": 569.8,
+"kohtia": 1,
+"aukko_max": 6.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+314.8,
+569.8,
+6.55
+]
+],
+"ala": 2,
+"lev": 0.5,
+"avoin": 0.66,
+"tayt": 0.76,
+"reika": 0,
+"akate": 0.71,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+},
+{
+"alue": 436,
+"x": 344.5,
+"z": 95.0,
+"kohtia": 1,
+"aukko_max": 22.55,
+"luokka": "pieni",
+"myos172": false,
+"kohdat": [
+[
+344.5,
+95.0,
+22.55
+]
+],
+"ala": 28,
+"lev": 1.0,
+"avoin": 0.52,
+"tayt": 0.13,
+"reika": 0,
+"akate": 0.87,
+"atalo": 1.0,
+"ovia": 1,
+"paatos": "ei-tilaa"
+}
+]

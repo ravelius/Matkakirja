@@ -55,6 +55,47 @@ Peruste: suorakulmainen tila, jonka muilla sivuilla on seinä ja yksi sivu auki.
 
 **Rajaviesti (KK 00.00, PT 00.0x):** `35140432d` jää kohtiin, joissa keisari pysähtyy ilman seinää, ei poistoa, ei junaan. Kun seinät tulevat, kartta ja rajat ajetaan uudelleen (`tyokalut/kulkukartta-rajat.py`), joten suljetut aukot putoavat rajoilta itsestään.
 
+## Lisäys 6.11.: 321 talon pohjalla olevaa kohtaa (KK)
+
+**Ehdotus: suljettaviin siirtyisi vielä 8 tilaa (13 aukkoa), ja 5 tilaa on epäselviä.** KK ei ole vielä päättänyt näistä; LAV ei odota. Vain kartasta v19, ei peliajoa.
+
+321 kohtaa on 258 alueella. 8 aluetta kuuluu jo edelliseen tarkasteluun. Kaikki aukko- ja osin taivasta -luokan alueet sekä sivu-auki-ehdokas katsottu ylhäältä; pienistä katsottu 12 pisimmän aukon aluetta.
+
+### Siirtyvät
+
+| x | z | Suurin aukko m | Aukkoja | Ala m² | Katettu | Avointa | Ovia 3 m |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| −100,2 | 199,3 | 28,55 | 1 | 286 | 100 % | 32 % | 1 |
+| −105,4 | 339,6 | 25,55 | 5 | 260 | 94 % | 32 % | 1 |
+| −163,5 | 441,4 | 26,05 | 1 | 177 | 87 % | 28 % | 1 |
+| −113,1 | 443,2 | 27,05 | 1 | 174 | 90 % | 25 % | 1 |
+| −144,4 | 287,9 | 18,55 | 2 | 129 | 92 % | 39 % | 1 |
+| 36,3 | −219,8 | 3,05 | 1 | 48 | 100 % | 5 % | 0 |
+| −94,3 | −15,9 | 6,55 | 1 | 36 | 100 % | 26 % | 0 |
+| −94,5 | −20,8 | 3,05 | 1 | 14 | 100 % | 15 % | 0 |
+
+### Epäselvät, KK ratkaisee
+
+| x | z | Suurin aukko m | Aukkoja | Ala m² | Katettu | Avointa | Ovia 3 m |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| −162,9 | 337,5 | 22,8 | 6 | 1358 | 41 % | 4 % | 6 |
+| 121,6 | 408,3 | 8,55 | 3 | 505 | 49 % | 7 % | 1 |
+| −108,1 | 396,1 | 26,55 | 4 | 115 | 91 % | 34 % | 1 |
+| 108,3 | 473,1 | 16,05 | 1 | 100 | 78 % | 38 % | 2 |
+| −166,0 | 431,6 | 3,05 | 2 | 98 | 87 % | 3 % | 0 |
+
+- (−162,9; 337,5) ja (121,6; 408,3) ovat suuria yhtenäisiä alueita, joissa on paljon taivasta: yksi seinä ei ratkaise niitä.
+- (−108,1; 396,1) ja (108,3; 473,1): sisätila, joka yhdistyy kapeaan reunaan, joten aukko voi olla reunan pituus.
+- (−166,0; 431,6): samanmuotoinen kuin alla olevat ovelliset, mutta ovea ei ole 3 m:n sisällä. Voi olla ovisäännön ohittama aukko.
+
+### Ei toimia
+
+- 4 tilalla aukko on 3,05 m ja ovi 3 m:n sisällä, joten ovi on todennäköisesti aukolla (päätelty): (−108,0; 385,2); (−94,0; 329,5); (−164,0; 330,2); (−110,5; 436,9).
+- 217 pientä aluetta (239 kohtaa, ala mediaani 7 m²): kapeita reunoja umpinaisen talon ympärillä. Talo itse on umpinainen, joten takana on seinä. Katsotuista 12:sta kaikki olivat tätä; muita ei katsottu.
+- 14 osin taivasta -aluetta, (255,5; −324,1) ja (22,5; 123,6): reunoja tai avoimia kaistaleita.
+
+Kaikki alueet: `viesti-pelikoodari-aukot-talot-20261106.json`, kenttä `paatos`.
+
 ## Aukko (41)
 
 | x | z | Suurin aukko m | Aukkoja | Ala m² | Avointa | Ovia 3 m |
