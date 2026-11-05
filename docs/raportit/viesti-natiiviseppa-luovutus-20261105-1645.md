@@ -20,7 +20,7 @@ Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, peili natiivi-backup 
 - Lokista katsottava: "väritaso: kohdemaa FRA lähdössä", "väritaso: FRA" heti lähdössä, pallo % ja laatat lähdössä ja laskun alussa. Riski ennallaan: katkos voi siirtyä lähtöön.
 - Portaat 5282b9fc4 voivat olla turhat: vertaa `komento maasto saapumisennakko pois` -ajoon ennen poistoa (ei nyt, linjaus).
 - Sumeus ja portaikkoinen etuala auki. Oletus, EI varmistettu: lähdekuva 2,5 m/px kovin reunoin suurenee etualalla. Lokissa kuvat "pelin ruutu 640×480".
-- n-1km-85 vanhasta ajosta: Notre-Damen tornit levenevät ylöspäin ja näyttävät liian korkeilta. Epäilen mallia, ei varmistettu; kuuluu 3D-työhön (Karttaseppä).
+- Notre-Damen tornit EIVÄT ole vika (KK 16.5x): leveneminen ja korkeus ovat omistajan pyytämää liioittelua (3.11. 22.11, 4.11. 10.22, hyväksytty 4.11. 11.25), mittari on G-kuva, ei oikea rakennus. Mitattu: tornipari levenee mallissa 15–19 %, pelissä +15 %, joten kamera ei vääristä mallia. Ei suoristuskoetta.
 
 ## Liiku 99748962f katsottu (l2 kuvana, l0, l4, l5 vain numeroin), EI vielä kerrottu kuvana KK:lle
 PUUTE 0. l2-ranska: reitit ja renkaat ruudussa, rengas ei PARIISI-nimen päällä. l4-paluu-valmis eroaa l0-lepo:sta 1,3 % kuva-alasta, l5 on sama näkymä kuin l2. Kuvia l1, l3, l4, l5 ei ole katsottu silmin. Merellä raidoitus näkyy l2:ssa yhä (vasen yläosa): iPad-vertailu EI tehty. Lippu on Ranskan koillisrajalla, KK:n mukaan odottaa Pariisia. Haaraa ei yhdistetty.
