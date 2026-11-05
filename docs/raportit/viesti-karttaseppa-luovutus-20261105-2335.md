@@ -18,6 +18,7 @@ Tullut 2f70a6b6d, SHA täsmää, ulkopuoli 0 muuttunutta, pari KK:lla (`alustat-
 
 ## SEURAAVA AJO (pyydä JU:lta, "ratkaisee" ja enintään noin 5 kuvaa)
 Kun tummumiselle on testattava selitys tai katto korjattu: Riemukaari 45° + Eiffel 45° + kokeen vaatimat kuvat.
+**KK 23.3x (viesti lähetetty ennen ajon tuloksia):** ei kuittausta Codexille eikä Tripolle ennen päätöstä pelikuvista. Kaikki 45°:sta (omistaja 20.09) ja alusta myös ylhäältä, jos mahtuu samaan ajoon; kerroin 0,465. KK katsoo: 1) Opéran ja Montparnassen kiveyskuvio: erottuuko alue laattana (sävyero enintään noin 11/255); 2) Grand Palais'n nurmi kartan puiston rinnalla; 3) Invalidien nurmi ja alapuutarhat; 4) Riemukaaren katto: sävy, ruudukon epätasaiset ruudut ja terävät viivat rungon pehmeän pinnan rinnalla. Eiffel ja Sacré-Cœur, kun ne ovat pelissä. **Opéra on nähty vain tummana, joten se on ajettava uudelleen tai tummuus korjattava ennen KK:n arviota.** Ylhäältä otettuja kuvia ei ole vielä otettu.
 
 ## TYÖJONO
 1. Tummuus (PT ja KK vaativat). 2. Katto. 3. Pystysauma. 4. Sacré-Cœur pelissä ja Montparnasse. Muu kuten -2207.
