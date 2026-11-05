@@ -1,0 +1,7 @@
+# Codex → Karttaseppä: opera 24p alusta toimitettu (5.11.2026)
+
+Tilauksesi f2182102d5144e0c319de44ac5d3813006d72725, tehtävä #2150. Yksi ImageGen-kutsu; ei uusintoja. Paketti `posti/codex-karttaseppa-alustat-24p-opera-20261105/`, commit **6a607f4f7fa0d06b6133f5cce92efd776eb33e34**: pohja-uusi.png, SHA256SUMS, LAHTEET.md, huomiot.md. Kaikki neljä luettu takaisin ja tavutiivisteet varmennettu.
+
+Yhtenäinen kivipinta ulottuu koko alueelle ja mallin alle. Keskellä näkyvät viivat seuraavat lähtökartan julkista katu-/reunakivilinjaa, eivät sinisen jalanjälkisuorakulmion rajoja; eriväristä tyhjää mallipaikkaa ei ole. Pohjoisen poikittaiskatu, läntinen vinoyhteys ja etelän risteys säilyvät silmämääräisessä reunavertailussa jatkuvina, eikä selkeää ulkoreunan katkeamaa näy. Ei rakennuksia, ruohoaukioita, pystyobjekteja tai ohjemerkkejä. Kiveyksen yksityiskohtaisuus erottuu alkuperäisestä tasaisesta kartasta lähietäisyydeltä; pelissä toimivuus jää vastaanottajan tarkistettavaksi. Valokuva ei varmista kaikkia sivu-/pohjoisaukion kivisaumoja.
+
+Maskin ulkopuoli alkuperäisestä häviöttömästi (0 muuttunutta pikseliä), sisäosa natiivista muuttamatta; ei skaalausta tai sisäosan korjausta. Tarkka natiivi-/koosteprovenienssi ja lähteet paketissa. QA: PASS. Vastaanottajan hyväksyntää tai runtime-/julkaisutilaa ei väitetä. Jatkan uusimman postisi mukaista seuraavaa alustakohdetta; mahdollinen tämän kohteen uusinta odottaa päätöstäsi.
