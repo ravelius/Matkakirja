@@ -1,0 +1,432 @@
+{
+  "taskNumber": 2127,
+  "site": "sacre-coeur-otto2",
+  "checkedAt": "2026-11-05T17:56:05.223456+00:00",
+  "generationToolCalls": 8,
+  "nativeImagesProduced": 7,
+  "preGenerationValidationFailures": 1,
+  "nativeFormatRetries": 0,
+  "qaRetries": 0,
+  "qualityPass": false,
+  "productionPixelsPostprocessed": false,
+  "allSevenNative1536x1024RGB": true,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "95bd2a6238f9c252bbc968d13e9bb3d89b152b74da0e14431f67fe898a781896",
+      "originalBytesIdentical": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "a87c9436aabee2bac6d71c98df275d6b28c462c2a8fb5462651681890014f6a4",
+      "originalBytesIdentical": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "74f69ef6f853a0726c8e181db171ff04c54d727894c54226388950e26ad3d0af",
+      "originalBytesIdentical": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "647148574656666c0b5cce9cb4d5f2d6f85679f76e8275fc18da5f644711fe88",
+      "originalBytesIdentical": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "8329cdb4950d5bfd86de5e8f67e7d762a31e7a19cb76cbd58c89b898358038af",
+      "originalBytesIdentical": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "ab74c3e08c63b9d7604a6bc6b316310cf4cd792623abfb2093ff5157ad45b520",
+      "originalBytesIdentical": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "20f3963d4f26ac7174f6766cb07c55a4dbb4b47437ee498b62c14c8236ab2c05",
+      "originalBytesIdentical": true
+    }
+  ],
+  "measurementMethod": "Native visual coordinates and chroma bbox, no production resizing. Widths exclude terrace/stairs for church body but include its solid entrance projections. Hill uses whole silhouette width. Datum uncertainties stated; north occluded dome tip null. Pixel coordinate origins top-left.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "hillBoundsX": [
+        84,
+        1453
+      ],
+      "churchBoundsX": [
+        510,
+        1027
+      ],
+      "groundY": 998,
+      "visibleGrassSummitY": 717,
+      "churchFloorY": 679,
+      "churchFloorUncertaintyPx": 12,
+      "churchFloorStatus": "Estimated porch threshold partly occluded by front terrace balustrade; not a surveyed slab elevation.",
+      "domeTipY": 25,
+      "towerTipY": null,
+      "domeTipStatus": "visible",
+      "towerTipStatus": "occluded by central dome",
+      "lowerDrumCorniceY": 437,
+      "lowerDrumCorniceStatus": "Visible left/right lower edge of central arched-window drum band; center behind front gable.",
+      "lowerDrumCorniceUncertaintyPx": 4,
+      "upperDrumRingY": 369,
+      "hillWidthPx": 1369,
+      "churchWidthPx": 517,
+      "hillWidthTargetPx": 600,
+      "churchWidthTargetPx": 300,
+      "hillHorizontalPixelsPerMetre": 6.845,
+      "churchHorizontalPixelsPerMetre": 5.17,
+      "visibleGrassRisePx": 281,
+      "churchFloorAboveMapPx": 319,
+      "highestVisiblePointY": 25,
+      "measurementUncertaintyPx": 4,
+      "highestVisibleHeightAboveMapPx": 973,
+      "upperRingAboveMapPx": 629,
+      "upperRingAboveChurchFloorPx": 310,
+      "hillHeightMetresUsingItsOwnWidth": 41.051862673484294,
+      "lowerCorniceAboveMapPx": 561,
+      "lowerCorniceAboveChurchFloorPx": 242,
+      "domeHeightAboveChurchFloorPx": 654,
+      "domeHeightAboveMapPx": 973,
+      "towerHeightAboveChurchFloorPx": null,
+      "churchWidthHeightRatio": 0.790519877675841,
+      "briefRealWidthHeightRatio": 0.6024096385542169,
+      "ratioErrorAgainstBriefPercent": 31.226299694189596,
+      "ratioAgainstBriefWithin7Percent": false,
+      "hillRiseMetresUsingDomeHeight": 73.0428134556575
+    },
+    {
+      "view": "pohjoinen",
+      "hillBoundsX": [
+        88,
+        1448
+      ],
+      "churchBoundsX": [
+        503,
+        1033
+      ],
+      "groundY": 997,
+      "visibleGrassSummitY": 748,
+      "churchFloorY": 754,
+      "churchFloorUncertaintyPx": 4,
+      "churchFloorStatus": "Visible rear campanile/apse foot at grass contact.",
+      "domeTipY": null,
+      "towerTipY": 17,
+      "domeTipStatus": "occluded by foreground axial campanile; not measurable",
+      "towerTipStatus": "visible",
+      "lowerDrumCorniceY": null,
+      "lowerDrumCorniceStatus": "Lower moulding mostly cut off by pitched side roofs and campanile. No reliable complete same-part measurement.",
+      "lowerDrumCorniceEstimatedY": 450,
+      "lowerDrumCorniceEstimateUncertaintyPx": 8,
+      "lowerDrumCorniceEstimateIsVerifiedMeasurement": false,
+      "upperDrumRingY": 391,
+      "hillWidthPx": 1360,
+      "churchWidthPx": 530,
+      "hillWidthTargetPx": 600,
+      "churchWidthTargetPx": 300,
+      "hillHorizontalPixelsPerMetre": 6.8,
+      "churchHorizontalPixelsPerMetre": 5.3,
+      "visibleGrassRisePx": 249,
+      "churchFloorAboveMapPx": 243,
+      "highestVisiblePointY": 17,
+      "measurementUncertaintyPx": 4,
+      "highestVisibleHeightAboveMapPx": 980,
+      "upperRingAboveMapPx": 606,
+      "upperRingAboveChurchFloorPx": 363,
+      "hillHeightMetresUsingItsOwnWidth": 36.61764705882353,
+      "lowerCorniceAboveMapPx": null,
+      "lowerCorniceAboveChurchFloorPx": null,
+      "domeHeightAboveChurchFloorPx": null,
+      "domeHeightAboveMapPx": null,
+      "towerHeightAboveChurchFloorPx": 737,
+      "churchWidthHeightRatio": null,
+      "briefRealWidthHeightRatio": 0.6024096385542169,
+      "ratioErrorAgainstBriefPercent": null,
+      "ratioAgainstBriefWithin7Percent": null,
+      "hillRiseMetresUsingDomeHeight": null
+    },
+    {
+      "view": "ita",
+      "hillBoundsX": [
+        23,
+        1518
+      ],
+      "churchBoundsX": [
+        471,
+        1288
+      ],
+      "groundY": 974,
+      "visibleGrassSummitY": 722,
+      "churchFloorY": 722,
+      "churchFloorUncertaintyPx": 4,
+      "churchFloorStatus": "Visible long stone plinth/grass contact; entry porch included, terrace excluded.",
+      "domeTipY": 76,
+      "towerTipY": 63,
+      "domeTipStatus": "visible",
+      "towerTipStatus": "visible",
+      "lowerDrumCorniceY": 488,
+      "lowerDrumCorniceStatus": "Lower edge of central dome arched-window drum band, above nave roof.",
+      "lowerDrumCorniceUncertaintyPx": 4,
+      "upperDrumRingY": 416,
+      "hillWidthPx": 1495,
+      "churchWidthPx": 817,
+      "hillWidthTargetPx": 1260,
+      "churchWidthTargetPx": 600,
+      "hillHorizontalPixelsPerMetre": 3.5595238095238093,
+      "churchHorizontalPixelsPerMetre": 4.085,
+      "visibleGrassRisePx": 252,
+      "churchFloorAboveMapPx": 252,
+      "highestVisiblePointY": 63,
+      "measurementUncertaintyPx": 4,
+      "highestVisibleHeightAboveMapPx": 911,
+      "upperRingAboveMapPx": 558,
+      "upperRingAboveChurchFloorPx": 306,
+      "hillHeightMetresUsingItsOwnWidth": 70.79598662207358,
+      "lowerCorniceAboveMapPx": 486,
+      "lowerCorniceAboveChurchFloorPx": 234,
+      "domeHeightAboveChurchFloorPx": 646,
+      "domeHeightAboveMapPx": 898,
+      "towerHeightAboveChurchFloorPx": 659,
+      "churchWidthHeightRatio": 1.2647058823529411,
+      "briefRealWidthHeightRatio": 1.1566265060240963,
+      "ratioErrorAgainstBriefPercent": 9.344362745098046,
+      "ratioAgainstBriefWithin7Percent": false,
+      "hillRiseMetresUsingDomeHeight": 66.3157894736842,
+      "towerToDomeRatioErrorPercent": 0.797950759251087
+    },
+    {
+      "view": "lansi",
+      "hillBoundsX": [
+        25,
+        1512
+      ],
+      "churchBoundsX": [
+        280,
+        1081
+      ],
+      "groundY": 974,
+      "visibleGrassSummitY": 722,
+      "churchFloorY": 722,
+      "churchFloorUncertaintyPx": 4,
+      "churchFloorStatus": "Visible long stone plinth/grass contact; entry porch included, terrace excluded.",
+      "domeTipY": 70,
+      "towerTipY": 66,
+      "domeTipStatus": "visible",
+      "towerTipStatus": "visible",
+      "lowerDrumCorniceY": 488,
+      "lowerDrumCorniceStatus": "Lower edge of central dome arched-window drum band, above nave roof.",
+      "lowerDrumCorniceUncertaintyPx": 4,
+      "upperDrumRingY": 416,
+      "hillWidthPx": 1487,
+      "churchWidthPx": 801,
+      "hillWidthTargetPx": 1260,
+      "churchWidthTargetPx": 600,
+      "hillHorizontalPixelsPerMetre": 3.5404761904761903,
+      "churchHorizontalPixelsPerMetre": 4.005,
+      "visibleGrassRisePx": 252,
+      "churchFloorAboveMapPx": 252,
+      "highestVisiblePointY": 66,
+      "measurementUncertaintyPx": 4,
+      "highestVisibleHeightAboveMapPx": 908,
+      "upperRingAboveMapPx": 558,
+      "upperRingAboveChurchFloorPx": 306,
+      "hillHeightMetresUsingItsOwnWidth": 71.1768661735037,
+      "lowerCorniceAboveMapPx": 486,
+      "lowerCorniceAboveChurchFloorPx": 234,
+      "domeHeightAboveChurchFloorPx": 652,
+      "domeHeightAboveMapPx": 904,
+      "towerHeightAboveChurchFloorPx": 656,
+      "churchWidthHeightRatio": 1.228527607361963,
+      "briefRealWidthHeightRatio": 1.1566265060240963,
+      "ratioErrorAgainstBriefPercent": 6.2164493865030535,
+      "ratioAgainstBriefWithin7Percent": true,
+      "hillRiseMetresUsingDomeHeight": 65.70552147239263,
+      "towerToDomeRatioErrorPercent": -0.5842827928717487
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "hillWidthPxDifferencePercent": 0.659582264565775,
+      "hillWidthPxPass5Percent": true,
+      "churchWidthPxDifferencePercent": 2.483285577841452,
+      "churchWidthPxPass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "hillWidthPxDifferencePercent": 0.5365526492287056,
+      "hillWidthPxPass5Percent": true,
+      "churchWidthPxDifferencePercent": 1.9777503090234856,
+      "churchWidthPxPass5Percent": true
+    }
+  ],
+  "sharedScaleHillSpreadPercent": 63.717017296193,
+  "sharedScaleChurchSpreadPercent": 27.90948275862069,
+  "groundLineSpreadPx": 24,
+  "highestVisibleHeightSpreadPercent": 7.635206786850477,
+  "highestVisibleHeightPass5Percent": false,
+  "domeHeightAboveMapVisibleOnlySpreadPercent": 8.108108108108109,
+  "allFourDomeHeightsVerified": false,
+  "lowerCorniceLabel": "Suuren keskikupolin alemman kaari-ikkunarummun alalistan alareuna",
+  "lowerCorniceAllFourVerified": false,
+  "upperRingLabel": "Saman kaari-ikkunarummun yläreunan, pienen hammastuslistan alareuna",
+  "upperRingAboveMapSpreadPercent": 12.079965971926839,
+  "upperRingAboveChurchFloorSpreadPercent": 17.7431906614786,
+  "visibleGrassRiseSpreadPercent": 12.379110251450678,
+  "top": {
+    "colorBbox": [
+      518,
+      23,
+      1018,
+      1000
+    ],
+    "grassBbox": [
+      518,
+      24,
+      1017,
+      998
+    ],
+    "silhouetteArea": 412172,
+    "silhouetteCentroid": [
+      767.3340086177615,
+      531.9006361421931
+    ],
+    "principalAxisClockwiseEast": 89.98770754747194,
+    "outsideFootprintPixels": 327844,
+    "insideFootprintPixels": 84328,
+    "sourceFootprintPixels": 84328,
+    "segmentation": "maxRGB-minRGB>12 with per-row silhouette gap filling, uncertainty2px",
+    "sourceBBox": [
+      652,
+      294,
+      884,
+      730
+    ],
+    "sourceAngleDegrees": 85.69302577990584,
+    "actualToTargetSilhouetteAreaRatio": 4.88772412484584,
+    "outsidePercentOfActualSilhouette": 79.54058014615258,
+    "strict90DegreeOrthographic": false,
+    "footprintPass": false,
+    "shapeIssue": "Capsule/rounded mound instead of original rotated rectangular footprint; facades/drum sides/retaining arches visible."
+  },
+  "obliques": {
+    "viisto-lounas": {
+      "objectColorBBox": [
+        364,
+        12,
+        1137,
+        1014
+      ],
+      "grassBBox": [
+        365,
+        70,
+        1136,
+        1014
+      ],
+      "estimatedElevationDegrees": null,
+      "sin65Verified": false,
+      "reason": "No pair of long unobscured perpendicular basal edges at one elevation: curved mound and terrace obscure them. Do not infer angle from prompt or treat roof eaves at different heights as ground. Projection looks lower than target but no trustworthy angle measurement is claimed."
+    },
+    "viisto-koillinen": {
+      "objectColorBBox": [
+        302,
+        15,
+        1194,
+        1012
+      ],
+      "grassBBox": [
+        303,
+        91,
+        1194,
+        1011
+      ],
+      "basalProxyFeature": "Two adjacent edges of north campanile rectangular foot/plinth, nominally same horizontal plane. Local visual proxy, not a surveyed whole-building plane.",
+      "basalProxyPoints": [
+        [
+          781,
+          699
+        ],
+        [
+          810,
+          754
+        ],
+        [
+          934,
+          731
+        ]
+      ],
+      "estimatedSinElevation": 0.5931102387277162,
+      "estimatedElevationDegrees": 36.37803222977007,
+      "targetSin": 0.9063077870366499,
+      "targetDegrees": 65,
+      "endpointUncertaintyPx": 4,
+      "estimatedAngleUncertaintyDegrees": 8,
+      "pass65Degrees": false
+    },
+    "oppositeViewVisual": {
+      "frontRearCorrectlyChanges": true,
+      "exact180DegreeGeometryVerified": false,
+      "reason": "NE exposes rear apse and axial tower while south terrace is far; exact180degrees and equal scale are not established because plan/projection vary."
+    }
+  },
+  "visualIssues": [
+    "Yläkuva ei ole90° ja annettu jalanjälki ylittyy; mäki pyöristyy kapseliksi.",
+    "Sivukuvien S/N ja E/W mittakaavat poikkeavat toisistaan; natiiveja ei normalisoida.",
+    "Pohjoisessa kupolin kärki peittyy; tornin kärki ei korvaa kupolimittausta.",
+    "Kupolirummun alalista pohjoisessa osittain peittynyt, tiukka mitta null; y450±8 on vain erillinen arvio.",
+    "Etelän kirkon lattia/porraskynnys on osin kaiteen takana ja datumilla±12px epävarmuus.",
+    "Mäen näkyvä nurmiharja, kirkon lattiataso ja etuterassin tukimuurin alareuna ovat eri asiat.",
+    "Viistokuvissa mäen nousu ei vastaa selvästi sivukuvia; hill contour and church placement vary across projections.",
+    "Itä/länsikuvissa eteläratsastajat piirtyvät kaksi päällekkäin sivuprofiiliin; syvyyspeitto ei ole oikean rakennuksen mukainen.",
+    "Pohjoisessa kirkon sivuilla näkyy pieniä terassimuurin ulokkeita, vaikka muiden sivujen piti olla pelkkää nurmiluiskaa."
+  ],
+  "dimensionSourceStatus": "96x50m retained as commissioning ratio target, not independently verified surveyed outer dimensions.83m real dome supported by prior two institutional sources,84m campanile by basilica.420x200x60m mound and200x100x170m church are24k game dimensions.",
+  "ownerApproved": false,
+  "receiverApproved": false,
+  "readyForTripo": false,
+  "runtimeIntegrated": false,
+  "published": false
+}

@@ -1,0 +1,106 @@
+{
+  "modelUnits": "metres",
+  "directionClockwiseFromEastDegrees": 86,
+  "footprintSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24k-sacre-coeur-2127-20261105/source/jalanjalki.png",
+  "footprintPixels": 84328,
+  "footprintBbox": [
+    652,
+    294,
+    884,
+    730
+  ],
+  "footprintCentroidPx": [
+    767.5,
+    511.5
+  ],
+  "footprintPrincipalLongAxisClockwiseFromEastDegrees": 85.69302577990584,
+  "topPixelsPerMetreEstimatedFromArea": 1.0019504787686675,
+  "hill": {
+    "lengthNS": 420,
+    "widthEW": 200,
+    "summitHeight": 60,
+    "noVerticalEdgeWall": true,
+    "noBaseSlab": true
+  },
+  "church": {
+    "lengthNS": 200,
+    "widthEW": 100,
+    "floorZ": 60,
+    "domeHeightAboveFloor": 170,
+    "domeHeightAboveMap": 230,
+    "centerNorthOffset": 60,
+    "churchCenterTopPx": [
+      762.9852047257957,
+      451.5527417933967
+    ],
+    "footprintLocalNorthBounds": [
+      -40,
+      160
+    ],
+    "footprintLocalEastBounds": [
+      -50,
+      50
+    ],
+    "campanileHeightAboveFloor": 172.04819277108433,
+    "campanileOnLongitudinalAxis": true,
+    "front": "south",
+    "targetLengthHeightRatio": 1.1764705882352942,
+    "targetWidthHeightRatio": 0.5882352941176471,
+    "briefRatio96over83": 1.1566265060240963,
+    "briefRatio50over83": 0.6024096385542169,
+    "ratioLengthDeviationPercent": 1.71568627450982,
+    "ratioWidthDeviationPercent": -2.352941176470591,
+    "ratioTolerancePercent": 7
+  },
+  "southStairsWidth": 30,
+  "sideViews": {
+    "pixelsPerMetre": 3,
+    "groundY": 900,
+    "churchFloorY": 720,
+    "domeTipY": 210,
+    "campanileTipY": 203.85542168674704,
+    "southNorthHillWidthPx": 600,
+    "eastWestHillWidthPx": 1260,
+    "southNorthHillBoundsX": [
+      468,
+      1068
+    ],
+    "eastWestHillBoundsX": [
+      138,
+      1398
+    ],
+    "southNorthChurchWidthPx": 300,
+    "eastWestChurchWidthPx": 600,
+    "southNorthChurchBoundsX": [
+      618,
+      918
+    ],
+    "eastChurchBoundsX": [
+      648,
+      1248
+    ],
+    "westChurchBoundsX": [
+      288,
+      888
+    ],
+    "eastStairsPosition": "left (south)",
+    "westStairsPosition": "right (south)"
+  },
+  "obliqueViews": {
+    "elevationDegrees": 65,
+    "sinForeshorteningTarget": 0.9063077870366499,
+    "azimuthsBuildingLocal": {
+      "SW": 225,
+      "NE": 45
+    },
+    "azimuthDifferenceDegrees": 180,
+    "pixelsPerMetre": 2.1,
+    "footprintProjectedWidthPx": 920.6530291048848,
+    "footprintProjectedDepthPx": 834.3950094366367,
+    "canvasCenter": [
+      768,
+      512
+    ]
+  },
+  "surveyCaveat": "96x50 is the commissioning design target, not independently verified survey dimensions; 83m height supported by two independent primary/institutional sources in prior-source-research.md. 170m church/60m mound are deliberate model dimensions from24k."
+}
