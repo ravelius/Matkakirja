@@ -34,3 +34,21 @@ Ennen: lokit/natiiviseppa-pallo-google-6fc1cda8b/g1-saapui.png. Jälkeen: lokit/
 
 ## Odottaa
 PT: latausruudun hinta. Sitten ääni Valosepältä. Ei omaa ajoa ilman JU:n vuoroa.
+
+## Lisäys 19.0x: mistä aika koostuu (PT, lokista, ei uutta ajoa)
+KORJAUS: yllä olevan taulukon sarakkeet "siirtymä valmis", "lähtö" ja "perillä alusta" ovat Unityn käynnistyksestä laskettua aikaa (Time.unscaledTime), eivät pelaajan odotusta. Otsikko "perillä alusta" johti harhaan. Pelaaja valitsee Pariisin noin t = 23 s; sitä ennen on ajon alku (Unity, uusi peli, kartta, skenaarion odota 10 ja odota 3). Oikean pelin käynnistystä nämä ajot eivät mittaa.
+
+Valinnasta (siirtymä alkaa), s:
+| vaihe | google-6fc1cda8b | esilataus2-d12a5d046 |
+| yleiskuvan laatat ≥ 95 % (latausruutu) | 7,9 | 6,7 |
+| Notre-Damen esilataus (latausruutu) | 0,6 | 9,1 |
+| latausruutu yhteensä | 8,5 | 15,8 |
+| avaustauko 2,3 s + esitys | 2,3 | 2,4 |
+| lasku | 12,9 | 8,7 |
+| perillä valinnasta | 23,8 | 26,9 |
+
+Ehdotukset, ei toteutettu eikä mitattu:
+1. Avaustauko pois tervehdyslaskusta: 2,3 s lyhyempi, ei lataushintaa, koska lasku ei odota sitä. Tauko on omistajan vanha päätös "ei hätiköityä alkua" (AvausTaukoS), mutta tervehdys alkaa nyt heti.
+2. Notre-Damen esilataus rinnan yleiskuvan kanssa eikä sen jälkeen: säästö arvio, enintään osa 9,1 s:sta.
+3. Latausruutu yleiskuvan rajalla ja lasku heti: noin 7 + 13 = 20 s perille, laskua ei lyhennetä; tämä kumoaisi PT:n pitämän 8,7 s:n.
+Mac, Google, yksi mittaus, 640×480-valinta, tyhjä välimuisti; iPadin luvut voivat olla pidempiä.
