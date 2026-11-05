@@ -106,3 +106,9 @@ kk-tausta-1-2:n valo_rgbm puuttuu vahingossa (v95:ssä on, v96:sta ei; syy todis
 `lokit/tarkastelukuvat-734ab83ef-093144`.
 Hyvät: 永和宫 ehjällä seinällä, 长春宫, 钟粹宫. 绥寿殿: täyte ilman valoa näkyy vaaleana suorakaiteena (ei uusi vika, malli tyohuone.glb ilman leivontaa). 体元殿, 咸福宫: avattu vasen lehti ikkunan edessä; ikkuna ei ole täytteen alla. Lehden kulma ei ota sitä huomioon; ei korjattu. 长春宫, 咸福宫: tasaisen harmaat portaat vs. mallin kuvioidut (sama kuin aiemmin; ei uusi).
 益寿斋 v15 (aukko-lehti) huono: mallin oma ovi, sen ruskeat lehdet oven takana ja kaman yli näkyy läpi. Siksi lehti-aukko nyt ohi; kartta v16: vain 益寿斋 siirtyi 12,2 m (x −134,47, z 385,8, nx −1), keskelle-peitto, täyte 7,45 × 3,45 m ilman valoa. KATSOTTAVA: lista 230. Jos suuri valoton täyte näkyy huonosti, ratkaise ennen arkkia (paikka tai ei ovea; KK:n linjaus: ei uusia ovettomia ilman vastausta).
+
+## LISÄYS 09.39: omistajan ja KK:n linjaukset
+Omistaja 09.35: 东所, 1341826243, 弘义阁, 碑亭, 碧螺亭, 玉翠亭, 四神祠, 御景亭, 广播室 saavat jäädä ilman ovea, ei enää yrityksiä (työlistassa). 益寿斋:lle ovettomuus ei kuulu tähän.
+房子11–房子8 6,4 m: toinen kierros kokeili molempia samankokoisina (ajettu kartalla v16, pinnat v15): kumpikaan ei löydä paikkaa. KK: jätä näin ja kerro seuraavan arkin yhteydessä.
+西暖殿: KK pyysi täysikokoisen kuvan uusimmalta rungolta ennen arkkia, lista 231.
+PT: jos leivontapyyntö 绥寿殿 + 3 tulee, kerro kohteet, LAV:n hinta ja näkyvä vika ilman leivontaa.
