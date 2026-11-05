@@ -28,3 +28,12 @@ Levy 61 Gi (sääntö 100). T7 99 % täynnä, 66 Gi: siirrot T7:lle eivät enä�
 - Oma virhe: yöllä seurasin kuittauksia enkä antanut seuraavaa työtä: talo seisoi 23.14-06.49, ja kirjoitin, ettei yötyö odota mitään. Jono tyhjä tai rooli hiljaa → jaa työ heti.
 - Oma virhe: sanoin 789:n nostavan muistia toistuvasti kahden parin perusteella ja kuvasin 60bd:n kaatumisen julkaistun TF:n kaatumisena, vaikka se oli kehityskäännös.
 - Oma virhe: PT:n rivi "VIKA" oli JU:n luvuissa vanha laitetiedosto: tarkista lokista, ei tulosriviltä.
+
+## LISÄYS 06.5x (korvaa kohdan ODOTTAA OMISTAJALTA)
+- 06.52 kytkin-TF: "Kyllä". TF 218 käynnissä 06.53 (a5323cf4e, proto_ref a5323cf4e36f, vain sisäinen), JU ajaa. JU:n rivi KK:lle ja sinulle, kun versio on sisäisillä. Ulkoista ajoa tai vanhennusta ei tehdä.
+- 06.52 iPadin uudelleenkäynnistys: "Ei nyt". PK-sarja ja NS 9ca48d7a2 odottavat; roolit eivät käynnistä iPadia. Kerro JU:lle, jos tilanne muuttuu.
+- Kaikki roolit kuitanneet: PK kaide ja ovet; LAV kk2r; NUI lippu; KS Louvre v1b JU:n Mac-jonossa; JU pysyvä taukolippu T/valovahti-tauko.
+- NS: tuotantoreitti (kohta2-astc/tuotantoreitti.md): suunta ok, päätös kokeen jälkeen, 70 Mt:n lisä silloin KK:lle. Sille annettu T7 -> NAS: ensin luettelo ja NAS:n tila sinulle; ei poistoja.
+- AVOIN: Raamattu 10.2 sanoo PT:n välittävän julkaisupyynnön JU:lle, mutta koneen CLAUDE.md hyväksyy päätöksen vain KK:lta; JU odotti KK:n suoran rivin. Yhdenmukaista 10.2 omana kohtanaan; CLAUDE.md vain omistajan viestillä.
+- Omistajalle kerrottava: TF-yöajon ajastus poistui, vaikka hän hyväksyi sen 24.9. (KK:lle kerrottu).
+- Oma nollaus: Remote pois ennen clearia; clear kieltäytyy, jos jonossa on viesti. Tämä on tehty, jos luet tätä.
