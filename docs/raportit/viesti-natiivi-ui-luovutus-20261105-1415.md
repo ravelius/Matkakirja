@@ -33,3 +33,10 @@ lokit/esikatselu-20261105-140514 (Lontoo → Pariisi), -140022 (uusi peli), -141
 - Lippu SEIS (omistaja 12.17). Oletus 2 s (Pulun kuva) on oma, omistajan sanaa ei ole.
 - Faktat: louvre.fr (pyramidi 29.3.1989), Wikipedia (Riemukaari 1806–1836; virallisen sivuston historiasivu ei auennut).
 - Ei auki olevia ajoja.
+
+## Lisäys 14.2x (viestit luovutuksen jälkeen; nämä voittavat edellä olevan)
+- Haara viety: natiivi-backup peili/proto/natiivi-ui/pariisi-lento-219 = 9fd4cfdc8 (PT:n käsky). Vie uudet commitit samoin.
+- KK: viisi kuvaa, Pulun kehys ja raketin kyltti kelpaavat kuvina. Soikio pysyy (hyväksytty pohja). Seuraava kuva, kun tummuminen ja nimen poisto on ajettu; LIIKE RUUTUSARJANA KK:lle yhdessä NS:n kierron kanssa, kun se on samassa rungossa.
+- PT: kolme kohtaa ok. Testikytkimen puuttuvaa Pulun kuvaa ei korjata erikseen.
+- JU: aja3 jonossa. Uusi NUI kuittaa JU:lle "NUI valmis", muuten linja menee muille. Vahvista linja ennen ajoa.
+- NS (6655127dd, natiiviseppa/pariisi-kierto-219): kierto 38 s zoomauksen alusta, 10,4°/s, loppuu itsestään; KiertoHiivu() on ilman parametreja, joten kohta 2 kytketään tällä kutsulla (Saapumistraileri.Ohita ja Saapumisesityksen Ohita). Luento alkaa Mac-ajossa noin 25,5 s zoomauksen alusta (traileri alkaa zoomauksen 4 s:n kohdalla NS:n tiedon mukaan, isoisän kuva 21,5 s trailerin alusta); NS:lle kerrottu.
