@@ -22,7 +22,8 @@ Työkalut ja kertaskriptit: `_tyo/pelikoodari/tayte/`.
 
 ## 3. Kaide
 Sävykoe 7aca77c66 (`pelikoodari/kaide-savy-koe`): `_tyo/pelikoodari/kaide/kuvat`, ajo `lokit/esikatselu-20261105-075837` (poikkeusrivi on Unityn SearchDatabase, ei meidän). Kuvio palaa molemmilla, suositus a (0,42 0,50 0,62). Parit `kaide/pari-{lahi,kauko,terassi}-a.png`, rajaus `kaide/raja-lahi-ab.png`. Katsottu täysikoossa lahi a ja b, verrokki, kauko a, terassi b, taihemen a; kauko b, terassi a, taihemen b katsomatta.
-**PT:n päätös auki:** sävy pelin haaraan ja näytetäänkö KK:lle. PT ja LAV saivat rivin. Solmuittainen piilotus peruttu (PT).
+**PT 08.1x, päätös:** "a hyväksytty pelin haaraan." "Haaleus: kaukokuvassa ja terassilta kaide jää lähes lattian väriseksi, joten kirjaa se avoimeksi; ei uutta sävykierrosta nyt. KK:lle ei näytetä, koska omistaja ei ole pyytänyt näitä kuvia; kaide menee junan tarkistukseen." PT katsoi parit pienennettyinä eikä arvioinut 25 m:n rajaa. **Avoin: haaleus** kaukana ja terassilta.
+**TEKEMÄTTÄ:** sävy a vakiona (ei QA-kytkimen takana) omaksi committiksi pelin haaraan, kun JU:n ajo on valmis ja worktreen haaran saa vaihtaa. Haara on tulkintani: kaiteen korjaus on `pelikoodari/muurin-runko-219`:n (314cf6a97) varjostimessa, joten sävy sinne; koe 7aca77c66 on vain lähde. Ei junaan ennen omistajan pyyntöä. Solmuittainen piilotus peruttu (PT).
 **Kaide ei ole valmis:** LOD2 mittaamatta. Lisää seuraavaan kaide-ajoon kamera, jossa g-jalusta on LOD2:lla (raja `Lod2 * LodKerroin`, varmista `valo lodtieto`-rivillä lokista), katso täysikoossa. Kk3-juuri tarvitsee rungon, jossa v124 (e73f5790f:n päällä).
 
 ## 4. Sen jälkeen
