@@ -3,8 +3,8 @@
 Korvaa -1842:n. Työhaara proto-repossa: `natiivi-ui/kyltit-219`, kärki b34cec7ed, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, ei committaamatonta. Peili: natiivi-backup, peili/proto/natiivi-ui/kyltit-219 (sama kärki). Haaraa ei ole Matkakirja-repon originissa.
 
 ## Ensin
-1. Odota JU:n rivi ajosta b34cec7ed (kansio tulee muotoa /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-b34cec7ed). Ohjelma sk-pariisi-kyltit-7.txt, 2 kuvaa: keski ja tuileries. Pyyntö oli jonossa JU:lla klo 19.1x; jos riviä ei tule, tarkista JU:lta. Ei omaa ajoa (10.5).
-2. Katso kuvat täysikoossa KK:n kahta kysymystä vasten (alla). Tulos KK:lle ja lyhyt rivi PT:lle.
+1. Ajo b34cec7ed on jo tehty ja katsottu täysikoossa, tulos KK:lla ja PT:llä: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-b34cec7ed. Grand Châtelet'n kyltti palasi. Pont Neuf puuttuu yhä tuileries-kuvasta näkyvän kyltin vieressä; karttanimet vaihtuivat osin (PARIISI itäpuolelle, Hôtel Matignon hipoo merkkiä), syy mittaamatta.
+2. Odota KK:n sana. Suositus KK:lle: kelpaa näin. Ei omaa ajoa (10.5). Jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
 3. Viestit: `mcp__ccd_session_mgmt__send_message` session id:llä. KK:n viestit menevät jonoon, kun sillä on vuoro kesken; se on normaalia.
 
 ## KK:n käsky 19.1x (omat sanat lyhennettynä; 23485f753 muuten kelpaa, KK näyttää omistajalle)
