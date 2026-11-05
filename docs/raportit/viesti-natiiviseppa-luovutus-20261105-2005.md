@@ -14,6 +14,10 @@ Testit kaanna.sh "Pallo|Opas|Pysahdys|LahtoLaatat|Kierros|Museo|Aloitusintro" 53
 - william2 ("ui nousukoe pois" vain tässä ajossa): "William alkaa" v2-osoitteesta, klippi 3,9 s (tiedosto 3,801 s), loppui 3,96 s kuvien alusta. Lyhyys on odotettu, ei vika.
 Ei todennettu: kuulokuva (ajo ei kuuntele; soivat-rivi ja lokit vain osoittavat lähteen).
 
+## SEURAAVA TYÖ (PT 20.03)
+Selvitä, miksi "Mikä tämä rakennus on?" vastaa ilman ääntä (Raamattu 5.22). Ensin lokista ja koodista, ei omaa ajoa: lokit/natiiviseppa-pallo-lauseet2-fcba229ca/unity.log (rivit noin 3901–3974: "opas: kysy-vastaus Ei (2.6 s)", "opas: kappale tekstinä (ei ääntä vastauksessa)"), OpasSovitin.cs (KysyWorkerilta, Soita, "kappale tekstinä"). Rivi PT:lle tuloksesta.
+William ja NousuKoe: PT vei KK:lle 20.03; ei muutoksia ennen vastausta. PT kuittasi äänet lokeista; kuulokuva ei kuulu kuittaukseen.
+
 ## ODOTTAA PT:N SANAA (kerrottu 20.0x)
 1. William ei laukea oletuskulussa: AloitusintroTulossa vaatii alkulennon tai !NousuKoe tai ettei SaapumisZoomausta ole (PeliOhjain.Aloitusintro.cs:22); NousuKoe = true (TraileriLiike.cs:182). 250 viime ajon unity.log:ssa 0 riviä "aloitusintro tulossa", ainoa on william2. Omistajan "kaikki äänet peliin" ei siis kata Williamia, ellei PT toisin päätä. Ei muutettu.
 2. "opas kysy Mikä tämä rakennus on?": kysy-vastaus Ei (2,6 s) ja "kappale tekstinä (ei ääntä vastauksessa)". Syy selvittämättä. Ei muutettu.
