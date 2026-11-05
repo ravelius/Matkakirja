@@ -21,6 +21,7 @@ LISTA=$T/valoseppa-haarat.txt
 LOKI=$T/valoseppa-vahti.log
 TILA=$P/lokit/valoseppa-tila.txt
 TAUKO=/tmp/matkakirja-valovahti-tauko
+TAUKO2=$T/valovahti-tauko  # JU 5.11.: /tmp-lippu katosi yöllä 4.–5.11. (syy auki); tämä säilyy /tmp:n siivouksessa
 SIMULIPPU=/tmp/matkakirja-valovahti-simu.nyt
 VAKIO=${VALOVAHTI_VAKIO:-$(sed -n 's/^vakio=//p' $LISTA 2>/dev/null | head -1)}
 HILJAISUUS=120
@@ -84,7 +85,7 @@ while true; do
   (( ${#jono} )) || continue
   kohta=${jono[1]}; h=${kohta%%=*}; s=${kohta#*=}
   (( $(date +%s) - ${muuttui[$h]:-0} < HILJAISUUS )) && { tila "muutos $h=$s, odottaa ${HILJAISUUS} s hiljaisuutta"; continue; }
-  [[ -e $TAUKO ]] && { tila "tauko: $(cat $TAUKO 2>/dev/null) – jonossa ${#jono}"; continue; }
+  [[ -e $TAUKO || -e $TAUKO2 ]] && { tila "tauko: $(cat $TAUKO $TAUKO2 2>/dev/null) – jonossa ${#jono}"; continue; }
   L=$(vapaa_linja) || { tila "odottaa vapaata käännöslinjaa – jonossa ${#jono} ($h=$s)"; continue; }
   jono=(${jono[2,-1]}); merkitse $h $s
   K=$P/lokit/valoseppa-auto-$(date +%m%d-%H%M)-${h:t}
