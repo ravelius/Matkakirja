@@ -16,6 +16,15 @@ Kuvat ja KK:n käsky:
 3. **KK:lle:** sama ovi ja kamera sisään ja ulos, q1 ja q7, katsottuina täysikoossa, ei leikkauksia. KK vie kortin omistajalle vasta niiden jälkeen. q1:n karmi ja seinä: KK kertoo omistajalle, älä korjaa. Ei mittauksia eikä junaan.
 - **Peukalokohdat:** ei vika (KK kuitannut, kohta 1 pois). x 14 % ja 86 %, y 70 %, `Peukalokohta`. Syy puuttumiselle ajossa 212358 on päätelty lämmitykseksi, ei mitattu.
 
+**Lisäys 22.1x: `sk-s` käynnissä L1:llä, JU antoi vuoron.** Tuloste `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-pelikoodari/1c8f51a9-6803-454d-a6bd-47a4a1524352/scratchpad/ajo-sks.log`. Jos seuraaja aloittaa ennen sen loppua, tarkista `lokit/esikatselu-*` ja LUKKO VAPAA JU:lle (linja 1).
+
+## 0b. KK:n päätös 22.1x (sitova, muuttaa kohtaa 2)
+**Seinä kujan kohdalle: aukot suljetaan** (linja kuten omistajan 4.11. 13.00 "suljetut pihat kiinni"; kohde: ulkoa näkyy umpinainen rakennus, ei kuja, ja pelaaja saa viestin **vain oikean oven kohdalla**). Jos rakennukselta puuttuu sen jälkeen ovi, sama ovi samalla säännöllä, ei uutta sääntöä.
+1. **Lista koneella:** montako yhtä avointa katettua aukkoa näkyy tason 1 kulkualueelta; luku ja lista KK:lle; sama korjaus kaikkiin. Lähtötieto `kosketukset.json`: 172 kohtaa ei ole talon pohjalla (rajaa näistä oikeat aukot, kuistit erikseen; 321 talon pohjalla ei ole tätä tapausta ilman tarkistusta).
+2. **Seinät LAV:lle ohjeena, ei omaa mallia.**
+3. **Kuva sama kamera ennen ja jälkeen KK:lle täysikoossa katsottuna** (ennen: ajon 220320 `x1-kuja-pohjoisesta.png`; sama kamera sk-r:ssä). Ei junaan, ei erillistä ajoa pelkästään tähän.
+- **Ristiriita selvitettävä PT:n kanssa heti:** PT hyväksyi 22.0x rajaviestin (kohta 2), KK nyt "viesti vain oikean oven kohdalla". KK:n päätös on uudempi ja omistajan kanavalta: **älä vie rajaviestiä mihinkään ilman KK:n ja PT:n kuittausta**, ja kerro PT:lle, että `35140432d`:n rajaviesti todennäköisesti poistuu, kun seinät ovat paikallaan. Ei ole vielä kerrottu.
+
 ## 1. Lehden pinta (`af4a8fc82`)
 `Resources/JuoksuOviLehti.png` 512×1024 on leivottu `mallit-v1/ovi-lehti-vasen.glb`:n etupinnasta (Codexin kuva ennallaan, ei uutta grafiikkaa), työkalu scratchpadissa `leivo-lehti.py`. Bake katsottu: sama ristikko ja rengas. Sijoitus varjostimessa u 0 sarana, 1 keskisauma. Kuva tulee sovelluksen mukana, ei mediasta.
 
