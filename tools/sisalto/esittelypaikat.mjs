@@ -7,7 +7,7 @@
  *            [--kirjoita]
  *
  * Esittelykuvat = Euroopan kaupungin saapumistrailerin kolme kuvaa (kaupunkilehden kansi.avauskuvat, puuttuessa kansikuvat;
- * natiivin Saapumistraileri.Kuvia = 3) ja Pariisin esittelyn C1–C4 (KaupunkiIntro.KuvaUrl; C5 nousee matkakirjasta).
+ * natiivin Saapumistraileri.Kuvia = 3), Pariisin esittelyn C1–C4 (KaupunkiIntro.KuvaUrl) ja Pariisin aloituslennon kuvat (PARIISIN_LENTO).
  * Avain = kuvan osoitteen tiedostonimi (natiivi: Path.GetFileName(osoite)).
  *
  * data/esittelypaikat.json: kaupungit.<id>.<tiedosto> = { kohde, kohdepiste: [lat, lon], lahde, piste: [lat, lon] }
@@ -27,10 +27,15 @@ import { fileURLToPath } from 'node:url';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const DATA = path.join(JUURI, 'data', 'esittelypaikat.json');
-const UA = 'Matkakirja-karttaseppa/1.0 (sami.reivinen@vvi.fi)';
+const UA = 'Matkakirja-karttaseppa/1.0';
 const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
   'https://overpass.private.coffee/api/interpreter'];
 const PARIISIN_INTRO = [1, 2, 3, 4].map((n) => `pariisi-nykyintro-c${n}.jpg`);
+// Pariisin aloituslento (Raamattu 2.210; KK:n suunnitelma 20261105-pariisin-aloituslento.md osa C): nähtävyyksien kuvat, joita
+// kansi.avauskuvat ei sisällä, isoisän luentakuvat (ottopaikka Tuileries'n puutarha) ja Pulun kuva.
+const PARIISIN_LENTO = ['hero-pariisi-riemukaari.jpg', 'hero-pariisi-sacre-coeur.jpg', 'hero-pariisi-louvre.jpg',
+  'matkakirja-pariisi-i1-r20260914-tarina-v1.jpg', 'matkakirja-pariisi-i2-r20260914-tarina-v1.jpg',
+  'matkakirja-pariisi-p1-r20260914-tarina-v1.jpg'];
 const VALI_M = 25;
 const KEHAT_M = [30, 45, 60, 80, 100, 120];
 const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -102,7 +107,7 @@ for (const c of kaupungit) {
   const lista = (kansi.avauskuvat?.length ? kansi.avauskuvat : kansi.kansikuvat ?? []).slice(0, 3);
   kuvat.set(c.id, lista.map((k) => path.basename(new URL(k.url ?? `https://x/${k.arvo}`).pathname)));
 }
-kuvat.set('pariisi', [...(kuvat.get('pariisi') ?? []), ...PARIISIN_INTRO]);
+kuvat.set('pariisi', [...new Set([...(kuvat.get('pariisi') ?? []), ...PARIISIN_INTRO, ...PARIISIN_LENTO])]);
 
 for (const s of arvot('--syote')) {
   for (const [kid, t] of Object.entries(lue(s))) {
