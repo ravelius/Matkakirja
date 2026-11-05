@@ -39,3 +39,9 @@ Remote päällä; Raamattu 7.47 luettu, työlista päivitetty klo 14.31 (rivi Pa
 
 ## Lisäys 14.4x
 Runko on nyt natiivi-ui/pariisi-lento-219 d5850ff4e (NUI, sisältää 2c9ca58a6:n, viisi kuvaa ja KiertoHiivun; merge-base varmistettu), ei 45abf3d41. Ajo JU:n jonossa NUI:n puolesta, sen kuvissa ruutusarjan ainekset: katso ennen omaa ajoa.
+
+## Lisäys 14.4x (2)
+- Ajo 1 valmis, lokit/natiiviseppa-jaa-f446775c8: j135 Pariisin yllä, FRA 1351.9 km vain ennen zoomausta. KK:lle ja PT:lle kerrottu.
+- Vika 2: j045 2 nimeä, j075 8. Sacré-Cœur, Louvre, Palais Garnier, Panthéon: syy "nosto" sekä j030:ssa, j045:ssä että j075:ssä; Grand Palais, Invalides: "taso". Nostojen nimet ovat ui-kerroksessa, jonka `ui lentopiilo` piilottaa: osa vian kuvasta voi olla testin tuottama. Miksi Parc Monceau ym. palaavat vasta luennan jälkeen, on auki.
+- KK 14.41: "luennan jälkeen Pariisin yllä avaa Liiku-valinta ja loitonna; näkyvätkö kohdekaupungit ja löytääkö pelaaja seuraavan paikan. Kuvat KK:lle; jos pelaaja jää ilman suuntaa, kerro se samassa rivissä."
+- Ajo 3 pyydetty JU:lta: skenaario-liiku-pariisi.txt, d5850ff4e, ei lentopiiloa, `komento aja`-loitonnukset kaari 2 ja 8 (arvio, tarkista kuvista). Ajo 2 skenaario-piirros-matka kesken 14.41.
