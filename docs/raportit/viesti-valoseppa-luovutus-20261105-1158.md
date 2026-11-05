@@ -33,3 +33,6 @@ Pariisin kartan saumojen syy löytyi, korjaus on tekemättä. Lue ensin _tyo/lin
 
 ## Muuta
 Worktree k30 on haarassa linssiseppa2/pariisi-saumat (9afad1ef6, natiivi-backup). jarvet-koe on tallessa natiivi-backupissa. Vanhat scratchpadit: /Volumes/T7 4TB/koodaus/valoseppa-scratchpadit-20261105.
+
+## Lisäys (PT, tuli luovutuksen jälkeen; omistaja 13.24, Raamattu 2.214, PR 6278)
+Pariisin kuvat nyt heti KK:lle: näkyvä Pariisin askel valmis → Macin kuva (polku + yksi rivi) suoraan KK:lle local_d5f31591-21fa-4cb0-bab3-bcd3435d075a, kopio PT:lle. Ei selitekaistaa, ei iPad-ajoja eikä mittauksia (2.209). Mac-ajot JU:n vuorolla.
