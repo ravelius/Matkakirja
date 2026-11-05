@@ -2,8 +2,11 @@
 
 Korvaa -2154:n. Haara natiivi-ui/luovutus-20261105-2248. Lue sen lisäksi -2002 (kontrasti ja nappien kuvapari).
 
-## Tila: ei omaa jonoa
-Vahtiosumaerä valmis, PT kuittasi 22.4x lukujen perusteella (kuvia ei ole katsonut). Junaan vain PT:n kautta. e4b376546 odottaa yhä VS:n ja KS:n osumien varmistusta. Aloituksessa rivi "JONO TYHJÄ: Natiivi-UI", ellei uutta tullut.
+## Seuraava työ (PT 22.47): kipsipäille kyltti
+Omistaja 11.53: "Sama sääntö muihin tuleviin kohteisiin (kipsipäät, Olavinlinna, ISS-raketti)"; kyltti samalla zoomtasolla kuin muut nähtävyydet (työlistan rivi, PT:n lainaus; kohtaa 11.56 ei löytynyt hausta). Kipsipäät ovat UI/Erikoisnostot.cs:ssä, joka ei käytä KarttaKylttiä; malli: d62c02edd (KaupunkiPallot, NostotKartalla) ja sama portti (KarttaKyltti.LahiPortti). Työ haaraan natiivi-ui/kyltit-219 (worktree proto-natiivi-ui-kyltit-219). Ei junaan. Kuva KK:lle, ajo JU:lta.
+
+## Tila
+Vahtiosumaerä valmis, PT kuittasi 22.4x lukujen perusteella (kuvia ei ole katsonut). Junaan vain PT:n kautta. e4b376546 odottaa yhä VS:n ja KS:n osumien varmistusta. Älä lähetä "JONO TYHJÄ": jonossa on kipsipäät.
 
 ## Vahtiosumat (proto-repo, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-liikevahti, ei committaamatonta)
 - natiivi-ui/liikevahti-219 cbc744e21 (pohja 098cf05cd): PariisiKallistus.Sileana → Liikepohja.Jousi (τ 0,2 s; pitkä ruutu askelina), Nimikerros-poikkeus. PT: jousi voittaa Karttasepän merkinnän (fbb5ba2e3) yhdistettäessä, Nimikerros identtinen. Törmää PariisiKallistuksessa haaroihin nahtavyydet-219, katsepiste-maa-219 ja ohjelmakohteet (vierekkäiset vakiot).
@@ -19,7 +22,7 @@ Vahtiosumaerä valmis, PT kuittasi 22.4x lukujen perusteella (kuvia ei ole katso
 4. Tuileries'n merkki ja kyltti 45°:ssa Louvren seinän päällä (kyltit18-chatelet-45). KK kertoi omistajalle. ÄLÄ siirrä ilman sanaa.
 
 ## Työlistan rivi "Erikoiskohteiden kyltit" (pyysi PT 22.4x)
-Tila: pallo ja Olavinlinna ja raketti tehty (d62c02edd, 520706177, Orsay ede32e764), kaikki kyltit-219:ssä kärjellä e4b376546, ei junassa. Odottaa junalupaa (VS:n ja KS:n osumat). Kipsipäät: Erikoisnostot.cs ei käytä KarttaKylttiä e4b376546:ssa eikä d62c02edd koskenut niitä; rivin otsikko mainitsee ne, omistajan 11.53:n ja 11.56:n sanoja en lukenut tässä vuorossa, joten PT tarkistaa, kuuluvatko ne. Työlista päivittämättä; rivit kirjaa PT.
+Tila: pallo ja Olavinlinna ja raketti tehty (d62c02edd, 520706177, Orsay ede32e764), kaikki kyltit-219:ssä kärjellä e4b376546, ei junassa. Odottaa junalupaa (VS:n ja KS:n osumat). Kipsipäät puuttuvat ja kuuluvat sääntöön (PT 22.47): ks. Seuraava työ. Työlista päivittämättä; rivit kirjaa PT.
 
 ## Muu avoin (ennallaan -2154:stä)
 - Leikkeiden koodi ja kuvat (LeikeKuva, LeikePuoli, LeikeTunnistuu, Resources) jäävät, kunnes omistaja hyväksyy muodon: siivous vasta sitten (SEIS 21.04).
