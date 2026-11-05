@@ -8,7 +8,7 @@ Tee ilman ajoa, jos KK ei sano muuta:
 1. Katso `selvitys-c5/m5-erotus-rajaus.png` (punainen = kartan talo talot pois -kuvassa, mutta vaalea maa talot päällä -kuvassa; 26 239 px) täysikoossa ja m5-laki- ja m5-ei-rajaus rinnakkain. Puuttuuko kartan omia taloja mäellä oikeasti, vai onko kyse 3D-talon vaikutuksesta tai kynnyksestä? Kerroin KK:lle tämän varmistamatta. Tulos KK:lle.
 2. Katso m1 ja m3 täysikoossa (vain pienennettyinä katsottu). Arvioi c5:n muut viat uudelleen (KK:n pyyntö). Rivi KK:lle, viat nimettyinä.
 3. KK:n johtolanka: maasto on pinnan malli (KS: Louvre 146, Opéra 140, Tuileries 70), joten lisä voi vaihdella puistojen ja korttelien välillä. Ei eritelty. Samasta ajosta, ei omaa ajoa.
-4. Jos KK hyväksyy suunnan: korjaus on vain ajohaarassa natiiviseppa/ajo-pariisi-maa2, EI haarassa natiiviseppa/marais-talot. Poimi sinne vasta sanalla.
+4. LISÄYS PT 02.1x: korjaus on nyt talohaarassa omana committina: natiiviseppa/marais-talot 132a15b7d (61bd1c678 + 64820ec1a poimittuna; ajohaaran muu sisältö ei mukana). Paikallinen, ei viety, ei käännetty tässä pohjassa, ei ajoa, ei junaan. Auki: mäen laki noin 22 m ylhäällä ja m5:n puuttuvat kartan talot; ei kolmatta kaavaa yöllä; aamun kuvat m4 ja m1 (KK).
 
 ## Tulos
 Syy: `TaloKerros.cs:239` nosti talot kaavalla 2 × (maa + 55), mutta kartta on noin 85 m alempana. Vyö ja Quai de Contin talot olivat sama vika: talo piirtyi noin 90 px pohjaansa ylemmäs. Palat olivat ladattuja ja piirrettyjä. Sovita tuli sarjassa 22f6538a9. Yksityiskohdat: `_tyo/natiiviseppa/pariisi-talot/selvitys-c5-raja.md`, kohta Ratkaisu ja päivitykset.
