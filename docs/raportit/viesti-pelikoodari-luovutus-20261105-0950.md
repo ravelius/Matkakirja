@@ -43,3 +43,7 @@ Hypoteesi: 重华宫:n kiila on lehti jalustan päälle ulottuvan laatan alla (e
 皇极殿: `viat` ikkuna on vain mittari: ikkuna on oven vieressä, ei edessä; kuva ehjä, ei korjausta. Kuvassa (`380664d56`) koristenauha repeytyy oikealla ylhäällä: malli, ei ovi, kerro KK:lle arkin mukana.
 浴德殿: vaalea kaista on täytteen ylävasen kulma; ei korjattu, kerro arkin mukana. Samassa kuvassa lattialaatan vino reuna: ei ovi.
 Seuraavaksi: katso 233; jos ehjä, aja kaikki ovet samalta rungolta arkkia varten (lista JU:lle), arkki KK:lle (kohta 5).
+
+## Lisäys 5.11. klo 10.2x: muistisarja
+789 s1 kelpaa (`muistivahti.log`: 10.04.48.8 komennot ohitettu (VIKA)). Huiput lokista: 789 4122–4130 Mt (3 ajoa, kaikissa VIKA ja vain 1 lento, toinen mittaamatta), d9c 4003–4009, 314 s1 3825. Tulos-tiedoston 4084 on vain ylitysrivi. JU kokoaa sarjan.
+Sarjan jälkeen `muisti-ovet/lahtotaso.zsh`: `odota_lento` odottaa turhaan 240 s VIKAn jälkeen ja kirjoittaa harhaanjohtavan rivin; `laheta` ei uusi lähetystä. Älä muokkaa sarjan aikana.
