@@ -1,10 +1,14 @@
 # Pelikoodari: luovutus 5.11.2026 klo 21.12 (konteksti 28 %): sivulta tuleva vartija nähty, -2044:n botti-päätelmä kumottu, kynnysviestin ajo valmiina
 
-Täydentää -2044:ää ja korvaa sen kohdan 2 ja kohdan 4.1. Proto-worktree `/Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu`, haara `pelikoodari/tarkastelu-219`, kärki `354452847` (etäpää `natiivi-backup`, ei `origin`). Ei ajoa käynnissä, L1 ilmoitettu JU:lle vapaaksi 21.0x. Ei junaan. **Taso 1 on yhä pääasia.**
+Täydentää -2044:ää ja korvaa sen kohdan 2 ja kohdan 4.1. Proto-worktree `/Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu`, haara `pelikoodari/tarkastelu-219`, kärki `354452847` (etäpää `natiivi-backup`, ei `origin`). Ei ajoa käynnissä, L1 ilmoitettu JU:lle vapaaksi 21.1x. Ei junaan. **Taso 1 on yhä pääasia.**
 
 7.47: Raamattua ei luettu tässä sessiossa, vain -2044 sekä hakuja muista luovutuksista.
 
 ## 1. Seuraava askel: kynnysviesti
+**Lisäys 21.1x: ensimmäinen ajo epäonnistui.** `lokit/esikatselu-20261105-211204` (`354452847`, 242 s, L1 vapautettu): `354452847` kääntyi ja `ajajapito` toimi, mutta 4 ensimmäistä `kaanna`-riviä vastasi "ei (ei seinällä tai avaus kesken)": avaus kesti tässä ajossa kauemmin kuin `odota-peli 21`. Viides kääntyi väärään suuntaan, joten keisari ei päässyt ovelle (s 47,5). Kuvia `k1`, `k2` ei katsottu, ne eivät kerro kynnysviestistä. **Korjattu `sk-p.txt`:ään:** ensimmäistä käännöstä ennen `odota-peli 45` (seinällä saa odottaa, takaa-ajaja pidossa). Korjausta ei ole ajettu. **Seuraavaksi:** kohdan 1 ajo uudelleen samalla shalla, JU:n vuorolla. Jos myöhemmät `kaanna`-rivit antavat "ei", kasvata odotuksia, ne ovat mitattu aika + 0,5 s.
+
+**Lisäys 21.1x: lehtimuutos viety KK:lle** PT:n pyynnöstä, kuvat `ovi-颐和轩.png` ja `e27.png`, ei leikkauksia, mukana se, että lehti peittää noin puolet viereisestä ikkunasta ja kamera voi yhä mennä lehden sisään (ei korjattu). KK:n vastausta ei ole tullut. Kohdan 5 "auki"-rivi on tältä osin hoidettu; ämpärivientiä ei tarvitse tarkistaa (PT 21.1x: ei junassa).
+
 1. Pyydä JU:lta vuoro: `354452847` (uusi käännös, QA-rivi), noin 5 min, 2 kuvaa. Aja vasta "ESIKATSELU NYT" -viestin jälkeen: `zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/vapaa-1/ajo-skp.sh <linja>`. Ilmoita JU:lle LUKKO VAPAA, kesto, kuvamäärä.
 2. `sk-p.txt`: siemen 1, ei bottia, `eunukit 0`, uusi `ajajapito 1`, käännökset `1 1 1 1 -1 1 -1` odotuksilla (mitattu aika + 0,5 s), kuvat `k1-kynnys`, `k2-kynnys`. Odotettu loppu reitillä s 124,5, (176,2; 811,9), kun `kaanna`-rivit eivät anna "ei".
 3. **Tarkista:** `ui juoksupeli kaanna` -vastaukset lokista. Jos yksi antaa "ei", ajoitus karkasi: polku oli laskettu ilman pelin palatsia (`LuoVapaa(1, k, null, …)`). `NaytaHuuto` ei kirjoita lokiin, joten viesti nähdään vain kuvasta; kynnysviestin teksti: `ui.juoksupeli.kynnys`. Vaatii `r.Kartta != null` ja `Odottaa` (`JuoksupeliNakyma.cs` `KynnysViesti`).
