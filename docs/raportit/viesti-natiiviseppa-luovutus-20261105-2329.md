@@ -8,16 +8,12 @@ TEHTY: 388742104 palautti 37fa268e4:n yhdellä commitilla (natiiviseppa/pariisi-
 AJO PYYDETTY JU:lta: Ateena (5 kuvaa), Tukholma (5), esityskuva 30fdefd98 (3), Mac, lokit natiiviseppa-ateena-, -tukholma- ja -esityskuva-388742104. Kun valmis: mittarit skenaarioiden alussa, kuvat täysikokoisina, tulos KK:lle katsottuina, ei junaan.
 Marais ei keskeydy tästä. Aamulla Marais'n kuvat KK:lle omistajaa varten (KK nollautui: seuraava KK).
 
-## SEURAAVA TYÖ: katso JU:n ajo 30e34cc9e
-Lokikansio natiiviseppa-marais-30e34cc9e, skenaario _tyo/natiiviseppa/marais/sk-marais-korjaus.txt, 3 kuvaa (k1 kauko, k2 keski-0, k3 keski-180). JU kertoo polun. Ei iPadia, ei junaan.
-
-KUN LOKI TULEE:
-1. `grep "MATKAKIRJA talot\|Shader\|shader" unity.log`: varjostinvirheet ja `talot tila` -arvot kolmesta kohdasta.
-2. Katso kuvat täysikokoisina. Mittaa sävy: /opt/homebrew/bin/python3 _tyo/natiiviseppa/marais/savy.py <kansio> (kuvien nimet skriptissä; numpy ja PIL löytyvät ilman -I:tä).
-3. Sävy: seuraavatko talot karttaa? Tumma kartta ei välttämättä toistu; jos toistuu ja talot eivät seuraa, syy ei ole valossa eikä tummennusglobaaleissa, ja `talot tila` todistaa sen. Kerro arvot KS:lle joka tapauksessa (KS:n yötumma Riemukaari, luovutus karttaseppa/luovutus-20261105-2207).
-4. Nimet: Hôtel de Soubise ja République kokonaan. Tarkista, ettei jono 2994 tuonut muuta talojen päälle: PiirrosKerros (3050, ZTest Always) voi piirtyä talojen päälle, jos KaannettyStriimi on tosi (PiirrosKerros.cs:406). Katso k3.
-5. Reuna: talot painuvat litteiksi, väri lähellä kartan taloja, ei laattaa eikä tyhjiä tontteja maskin kohdalla.
-6. Kuvat KK:lle VAIN katsottuina, rivi PT:lle. Sitten osa C.
+## SEURAAVA TYÖ: Ateena-ajojen tulos, sitten osa C
+Ajo natiiviseppa-marais-30e34cc9e (k1, k2, k3) katsottu täysikokoisina, tulos KK:lla ja PT:llä:
+- Nimet KUNNOSSA: Hôtel de Soubise ja République kokonaan. PiirrosKerros ei näy talojen päällä k3:ssa.
+- Reuna KUNNOSSA: talot painuvat kartan taloiksi, ei laattaa eikä tyhjiä tontteja. Litteät katot ovat hieman tummempia ja terävämpiä kuin Macin karkea kartta (rajaus k3 alareuna). Väriä voi hienosäätää; terävyysero arvioidaan vasta iPad-tasoisella kartalla.
+- Sävy EI RATKENNUT: k2 toisti tumman kartan samassa kohdassa (m2): kadut 179/153/116, muut 238/206/159; talot pysyvät. `talot tila` tumman kuvan kohdalla (unity.log 2985): valon suhde 1,000, tummuus, keilat, radiohämärä, _aurinko, _pohjaSavy kaikki 0. Eli talojen lisäämä reitti on oikein mutta ei ole tumman kartan syy. Toistuu kahdessa ajossa samassa järjestyksessä: toinen `aja`-kohde, noin 45 s saapumisesta; 15 s myöhemmin (suunta 180) kartta on taas normaali. Kerrottu KS:lle. EI ratkaista itse (KK). Kun KS löytää syyn: jos se on kartan vika, korjaus poistaa eron; jos sen pitää jäädä, lisää sama reitti TaloKerros.shaderiin.
+Seuraavaksi: JU:n Ateena-, Tukholma- ja esityskuva-ajot, sitten osa C. Kuvat k1–k3 KK:lla.
 
 ## KK:N PÄÄTÖS 22.4x (omistajan valtuutuksella "Saat hyväksyä puolestani kaikki"; sanat 22.09 "Myös tavalliset talot")
 Marais hyväksytty jatkoon. Ennen koko Pariisia korjataan, ja kuvat KK:lle katsottuina:
