@@ -4,7 +4,7 @@ Korvaa -1825:n ja -1815:n. Työhaara proto-repossa: `natiivi-ui/kyltit-219`, kä
 
 ## Ensin
 1. Kuittaa JU:lle "NUI valmis". Ei NUI:n ajoja jonossa.
-2. Odota KK:n vastausta kohtiin Auki 1-3. Älä korjaa niitä ennen sanaa. Oma suositus KK:lle: 1 ja 2 korjataan, 3 selvitetään ensin.
+2. Tee KK:n käskyt (kohta "KK:n käskyt" alla). Ei omaa ajoa: pushattu SHA JU:lle seuraavan Pariisin ajon yhteyteen, rivi "mitä tämä ratkaisee" (10.5).
 3. Viestit: SendMessage pysähtyi viestirajaan 18.3x, joten käytä `mcp__ccd_session_mgmt__send_message` (CLAUDE.md, Raamattu 12.20).
 
 ## Tehty (ajo 6ea480e73, katsottu täysikoossa, KK:lla ja PT:llä)
@@ -13,18 +13,17 @@ Kansio: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-6ea480e73.
 - 2174c6785 nimen väistö pyöreän merkin kohdalta pois (KK lopullinen). PT: "Älä peru tätä ilman KK:n uutta sanaa."
 - 086f0ca91 ja 344b2dd82 kaupungin oma piste ei piirry sen kohdekartalla (KaupunkiMerkit.LahikartanKaupunki = Kohdenostot.Kaupunki). Yleinen sääntö, koskee kaikkia kohdekartan kaupunkeja. Piilossa oleva piste ei ota napautusta (näkyvä nimi ottaa) eikä vie nimiltä paikkaa. Valittava, korostettu ja renkaallinen piste jää. Läiskä oli tämä piste; kuvassa poissa.
 - 6ea480e73 Les Hallesin kyltti kiinteästi pisteen oikealla (StriimiKyltinKyljet). Chatelet-kuvassa väli Louvren kylttiin on selvä, mutta tuileries-kuvassa kyltit ovat lähes kulmittain, väli muutama piste: Louvren kyltti liikkuu mallin mukana. KK:lle kerrottu; suositus: katsotaan ensin, riittääkö väli.
-- PT hyväksyi hintakyltin ja 3D-kyltin ratkaisut: hintakyltti väistää yhä nimiöitä, kylttejä ja malleja narun pään viereen (KK 16.2x), pyöreä merkki ei siirrä sitä.
+- Nykyinen koodi: hintakyltti väistää yhä nimiöitä, kylttejä ja malleja narun pään viereen; KK:n käsky 1 poistaa tämän.
 - Kylttien pysyvyys: kyltit-keski ja kyltit-keski-lahempi, nähtävyyskyltit samalla puolella kahdella zoomtasolla. Liikkeen aikana ei todistettu.
-- Ohjelma: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-pariisi-kyltit-5.txt (6 kuvaa, 2 kyselyä). Rengaskyselyn voi poistaa.
+- Ohjelma: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-pariisi-kyltit-5.txt (6 kuvaa, 2 kyselyä). Molemmat kyselyt (läiskä ja rengas) voi poistaa.
 
-## Auki (kuva kyltit-keski-lahempi, odottaa KK:ta)
-1. Hintakyltti peittää osan nimestä Pompidou-keskus, ja sen paikka narun päähän nähden vaihtuu zoomatessa (keski: alla, lähempi: vasemmalla).
-2. Grand Châtelet'n kyltti peittää nappulan yläosan.
-3. Les Hallesin kyltti ei näy kummassakaan keski-kuvassa, vain chatelet-kuvassa. Syy selvittämättä (törmäys vai zoomraja).
+## KK:n käskyt 5.11. 18.4x (6ea480e73 näytetty omistajalle: läiskä pois, kyltit samalla puolella, Les Halles irti)
+1. Hintakyltti pysyy aina samassa paikassa narun päässä, ei väistöä. Korvaa KK:n 16.2x:n ja PT:n viestin "hintakyltin väistö narun pään viereen jää". Koodi: KaupunkiPallot.cs, kylttiPaikat-silmukka ja HintakylttiVapaa. Päätä, häipyykö kyltti törmätessä vai pysyykö näkyvissä; KK:n sana on "aina samassa paikassa", joten kysy KK:lta, jos tämä jää epäselväksi.
+2. Grand Châtelet saa oman kiinteän sivun, jolta kyltti ei peitä nappulaa. Kyltti on nyt oikealla ja peittää nappulan yläosan kyltit-keski-lahempi-kuvassa. Koodi: NostotKartalla.cs, KyltinPerusKylki; huomaa, että kadonnut kuvallinen kohde lukee PiirrosKyljet-taulukkoa eikä StriimiKyltinKyljet-taulukkoa.
+3. Les Hallesin kyltin puuttuminen keski-kuvista: selvitä lokista tai koodista ilman ajoa. Jos syy on tavallinen törmäyshäivytys Louvren kylttiin, se saa jäädä; rivi tuloksesta KK:lle. Ei vielä selvitetty.
+Saavat jäädä (KK): kuvamerkki Notre-Damen pohjoispuolella ja harmaa rengas.
 
 ## Muut havainnot, syy ei tiedossa
-- Kuvamerkki Notre-Damen pohjoispuolella puiden välissä näkyy ajossa 6ea480e73 ja 6ff3ef451, ei ajossa 2174c6785. KK:lle kerrottu.
-- Pieni harmaa rengas (chatelet 1305,475 / 2000x1500; myös tuileries ja orsay Louvren länsipäässä): kysely löysi vain Louvren pohjan rajauslaatikon, joten todennäköisesti osa karttakuvaa, ei varmistettu.
 - Quai Voltaire -nimi puuttuu orsay-kuvasta ajoissa 2174c6785 ja 6ea480e73, vaikka näkyy chatelet-kuvassa. KK:lle kerrottu.
 - Pulu koskettaa kuvamerkkiä kyltit-tuileries-kuvassa. KK:lle kerrottu.
 - Tuileries'n leike: KS tekee tiiviin kuvan; älä tee omaa kokoa koodiin.
