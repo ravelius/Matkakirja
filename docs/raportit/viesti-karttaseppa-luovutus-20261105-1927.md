@@ -35,3 +35,6 @@ Asennus: kupoli kartan px (706, 802), leveys 363 m, rakennus 543–858 × 561–
 - Laatan vaara: katso ensimmäisestä peliajosta jokaisen uuden pohjan rantatiet ja reunat.
 - Vertaa ensin kartan omaan pohjaan. Tilausluvun kumpikin puoli voi olla väärin: tarkista, mistä luku tuli.
 - Pihat eivät näy sivukuvista: pihallisille Tripon syöte viistoista.
+
+## Lisäys: PT 19.3x
+Usvan mittari: kohde ja maapohja samalla usvatasolla kuin kartta. Kun ajo on katsottu, rivi PT:lle: commit ja kuvapari (`grand-palais-asennus/peli-etela.png` vs. `usva-eiffel-270`); kuvat myös KK:lle. Jos häivytys vaatii kartan usvakoodin muutosta, sovi suoraan NS:n kanssa (local_c7344e20-fba8-433d-ba8e-184a325037ef). Nyt kartan usvakoodi on ennallaan.
