@@ -7,6 +7,11 @@ Syy: konteksti yli 35 % (7.37). **Tämä voittaa ristiriidassa; aiempi -1927 (18
 3. **Esikatselu:** `PROTO_LINJA=<JU:n linja> ESIKATSELU_PISTEKERROIN=0.465 /bin/zsh <W>/tyokalut/esikatselu.sh <sha> <skenaario> ipad --batch`. `/bin/zsh` on pakollinen, koska skriptiltä puuttuu suoritusoikeus: ilman sitä ajo kaatuu ja poistuu silti koodilla 0. Vuoro aina JU:lta, lopuksi "LUKKO VAPAA" + kesto + kuvamäärä. Tarkista lokista pistekerroin.
 4. **Kuvat (omistaja 20.09):** kartan kuvissa ylhäältä otetun lisäksi noin 45° samasta kohteesta. Yli 20°:ssa Macin tarkkuustaso ei vastaa iPadia, mainitse se.
 
+## ENSIMMÄISET TYÖT (vahti on merkinnyt tämän postin käsitellyksi, joten se ei ilmoita siitä uudelleen)
+1. **Opéra 24j, Tripo odottaa päätöstä (posti a8f7c919c, liite `posti/tripo3d-opera24j-kaksi-ottoa-20261105/`).** Kaksi ottoa, molemmat alle tilausluvun: otto 1 pituus 222 m, W/L 0,593 (−12,6 %), H/L 0,385 (−12,5 %), otto 2 W/L 0,601, H/L 0,380 ja kultalyhdyssä reikä, 3 mustaa pikseliä. Tripo pitää ottoa 1 parempana. Kuvia en katsonut. Tee: katso täysikoossa oikeaa rakennusta vasten, ja **tarkista, mistä tilausluvut tulivat, ennen kuin päätät** (opit -1927:ssä; muistinvarainen lukuni oikeasta on W/L noin 0,72 ja H/L noin 0,32: varmista lähteestä). Vastaa Tripolle postilaatikkoon: raaka kelpaa poikkeamin vai tarkennus. Kolmatta ottoa ei tule ilman päätöstäsi.
+2. **Kuittaa Tripolle Riemukaari ja Panthéon (posti 15e045334):** raakamallit hyväksytty ja asennettu. Tripo odottaa arviota.
+3. Invalidit 24l on Tripolla käynnissä: etelän pihajako näyttää syötteessä 3/4, mutta sitova yläkuva on 4/6. Tripo raportoi ristiriidan.
+
 ## Tehty
 - **Usva valmis 56dfe057f.** Ajo `lokit/esikatselu-20261105-201500`. Eiffel poissa, Grand Palais selkeä myös matalalla. Malli häipyy nyt `Horisonttiusva.KylttiNakyvyys`-käyrällä. Pari PT:llä, kuvat KK:lla. Kartan usvakoodi ennallaan. Louvre 90°:n matalakuvaa (`usva-matala-90`) en katsonut täysikoossa: katso se seuraavalla katselulla.
 - **Riemukaari 24g, Panthéon 24i kartalla** (asennus `_tyo/karttaseppa/sarja24-asennus/asenna.py`, pohjat `korjaa-pohjat.py`). Sävy Louvren `Savy` 1,26/1,33/1,15, koska atlas on kirkas. Kuvat KK:lla.
@@ -19,7 +24,7 @@ Syy: konteksti yli 35 % (7.37). **Tämä voittaa ristiriidassa; aiempi -1927 (18
 - **Panthéonin pohja näkyy suorakulmiona** ja peittää vieressä olevia kortteleita. Riemukaaren vasemmalla puolella on pieni vaalea laikku. Suositus KK:lle: yksi pohjakierros, ei uutta mallia. Tee, ellei omistaja halua toisin: käytä jalanjäljen lähelle rajattua alfaa (lähtöpohjat `riemukaari/pohja-siisti.png` ja `sarja24-opera-pantheon-montparnasse/pantheon/pohja-siisti.png`, sitten `korjaa-pohjat.py`).
 
 ## Odotetaan
-- **Tripo:** Opéra (Suunta noin -16, `opera/pohja-siisti.png`, kupoli ja näyttämötorni 15–20 % korkealla), Invalidit (pohja `invalides-asennus/pohja-siisti.png`, kupoli px 706,802, Suunta noin 4,1, korjaa `alue.json` ja jalanjälki), Montparnasse (Suunta noin -51, `montparnasse/pohja-siisti.png`, tarkista katto). Pohjat omalla alfallaan. Mene `korjaa-pohjat.py`:n kautta (lisää id), jotta irtolaikut lähtevät ja kiveys vastaa katua.
+- **Tripo:** Opéran asennus päätöksen jälkeen (Suunta noin -16, `opera/pohja-siisti.png`), Invalidit (pohja `invalides-asennus/pohja-siisti.png`, kupoli px 706,802, Suunta noin 4,1, korjaa `alue.json` ja jalanjälki), Montparnasse (Suunta noin -51, `montparnasse/pohja-siisti.png`, tarkista katto). Pohjat omalla alfallaan. Mene `korjaa-pohjat.py`:n kautta (lisää id), jotta irtolaikut lähtevät ja kiveys vastaa katua.
 - Aiemmat avoimet -1927:stä: Tuileries'n leike NUI:lla, Eiffelin kyltin napautus, ND:n, Louvren ja Eiffelin pohjien usva tarkistettu tässä vain Eiffelin ja Louvren osalta 45°:ssa, Vrain-Lucasin ja Louvren kyltit 3D:n jälkeen. Hook toistaa työlistan rivejä, joita en tiedä omikseni: PT kuittaa.
 
 ## Opit
