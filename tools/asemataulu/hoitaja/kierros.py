@@ -132,7 +132,7 @@ def main():
     a = a.parse_args()
     ts = int(time.time() * 1000)
     if not a.vain_roolit:
-        puuttuu = [k for k in ("viikko", "h5", "pt", "levy", "muisti", "prosessori", "viikko_reset", "h5_reset") if getattr(a, k) is None]
+        puuttuu = [k for k in ("viikko", "pt", "levy", "muisti", "prosessori", "viikko_reset") if getattr(a, k) is None]
         if puuttuu:
             raise SystemExit("puuttuu: " + ", ".join("--" + k.replace("_", "-") for k in puuttuu) + " (tai --vain-roolit)")
         mittarit(a, ts)
@@ -150,13 +150,15 @@ def mittarit(a, ts):
     if a.levy < 100: levy["lisa"] = "alle 100 Gi"
     laatat = [
      {"nimi": "Viikko", "palkki": True, "prosentti": int(a.viikko), "arvo": "%d %%" % a.viikko, "nollautuu": a.viikko_reset},
-     {"nimi": "5 tuntia", "palkki": True, "prosentti": int(a.h5), "nollautuu": a.h5_reset},
      levy,
      {"nimi": "Muisti", "arvo": "%d %%" % a.muisti},
      {"nimi": "Prosessori", "arvo": "%d %%" % a.prosessori},
      {"nimi": "Raati", "arvo": vanha.get("Raati", {}).get("arvo", "–")},
      {"nimi": "Testaajat", "arvo": vanha.get("Testaajat", {}).get("arvo", "–")},
     ]
+    # 5 tunnin ikkuna puuttuu get_usagesta (5.11.2026: vain Weekly-ikkunat): laatta jätetään pois eikä kierros kaadu (aiemmin --h5 pakollinen → mittarit eivät vieneet)
+    if a.h5 is not None and a.h5_reset:
+        laatat.insert(1, {"nimi": "5 tuntia", "palkki": True, "prosentti": int(a.h5), "nollautuu": a.h5_reset})
     m = {"laatat": laatat, "pt_konteksti": int(a.pt), "ts": ts}
     if a.kk is not None: m["kk_konteksti"] = int(a.kk)
     kirjoita(os.path.join(H, "mittarit.json"), m)

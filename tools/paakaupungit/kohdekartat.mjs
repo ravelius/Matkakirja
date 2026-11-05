@@ -15,7 +15,7 @@
 // --vain id,id rajaa --piirra-vaiheen nimettyihin kaupunkeihin (kohdekartat-mac.json kirjoitetaan silti koko erälle).
 // Tulos <data>/<erä>/kohdekartat-mac.json; kytke-pilvisisalto.mjs käyttää sen rajat ja polun.
 // --piirra lisää PIIRRÄ-kaupungit tools/piirra-kaupunkikartta.mjs:n KAUPUNGIT-tauluun ja piirtää ne
-// (Overpass, 6 s tauko välissä). Katso kuvat silmin ja aja tarkista-karttapisteet kytkennän jälkeen.
+// (6 s tauko välissä; piirtäjän OSM-haku on pois käytöstä, Raamattu 2.183, joten piirto kaatuu toistaiseksi selkeään viestiin). Katso kuvat silmin ja aja tarkista-karttapisteet kytkennän jälkeen.
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
