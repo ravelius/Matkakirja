@@ -43,3 +43,7 @@ KK vie kuvat omistajalle: "kyltit näyttävät hyviltä: vaalea nähtävyyksille
 3. hor-2: etualan jättinimet Croulebarbe ja Les Gobelins pois.
 4. kyltti-2: nimet Pyramide ja Mont Chalais 102 m näkyvät edelleen.
 Seuraava ajo mallihaaran päällä, kuvat KK:lle. Selvitä KK:lta tai KS:ltä, mikä haara ja sha on mallihaara, jos se ei selviä luovutuksista. Jos JU:n jonossa oleva ajo f29bbd0b5 ei vielä ole alkanut, päivitä haara ensin ja kerro JU:lle.
+
+## Lisäys, PT ja JU 15.3x
+- PT: kun erä kootaan pienelle iPadille, kerro JU:lle: "KaytettyRaja() ja || Kiertaa palautetaan, kun lento-haara yhdistyy." Sama on commit-viestissä be9b73bc7.
+- JU: kyltit (törmäyskorjaus) on jonossa NS:n saapumisajon jälkeen; linja tulee viestillä.
