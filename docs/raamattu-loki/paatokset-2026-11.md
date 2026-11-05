@@ -297,3 +297,7 @@ PT 5.11.: Pariisin tervehdyslaskusta poistetaan avaustauko 2,3 s (vain Pariisi):
 ## OMISTAJAN PAATOS KLO 19.03: SACRE-COEUR UUSI OTTO (5.11.2026 klo 19.04)
 
 Kortti KK:n kautta (arkki scratchpad/keskustelukanava/kuvat/sarja24/sacre-coeur-arkki.jpg): Sacré-Cœur 'Uusi otto'. KS:n arkista puuttui 2.206:n mäki; lisätty ottoon 2 ja kerrottu omistajalle, reunaa ei ole kokeiltu karttaa vasten. Perillä KS:llä.
+
+## OMISTAJAN PAATOS KLO 19.14: INVALIDIT KELPAA (5.11.2026 klo 19.14)
+
+Kortti KK:n kautta (arkki scratchpad/keskustelukanava/kuvat/sarja24/invalides-arkki.jpg): Invalidit 'Kelpaa', ei kolmatta ottoa. Perillä KS:llä. Omistajalle näytetty samalla NUI:n 23485f753 (kuvat/kyltit-23485f753/). KK antoi NUI:lle seuraavaan ajoon: kadonneella kuvalla aina kyltti, piilotettu kyltti ei vie nimeltä paikkaa.
