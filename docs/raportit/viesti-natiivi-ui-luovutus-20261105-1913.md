@@ -3,9 +3,17 @@
 Korvaa -1842:n. Työhaara proto-repossa: `natiivi-ui/kyltit-219`, kärki b34cec7ed, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, ei committaamatonta. Peili: natiivi-backup, peili/proto/natiivi-ui/kyltit-219 (sama kärki). Haaraa ei ole Matkakirja-repon originissa.
 
 ## Ensin
-1. Ajo b34cec7ed on jo tehty ja katsottu täysikoossa, tulos KK:lla ja PT:llä: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-b34cec7ed. Grand Châtelet'n kyltti palasi. Pont Neuf puuttuu yhä tuileries-kuvasta näkyvän kyltin vieressä; karttanimet vaihtuivat osin (PARIISI itäpuolelle, Hôtel Matignon hipoo merkkiä), syy mittaamatta.
-2. Odota KK:n sana. Suositus KK:lle: kelpaa näin. Ei omaa ajoa (10.5). Jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
-3. Viestit: `mcp__ccd_session_mgmt__send_message` session id:llä. KK:n viestit menevät jonoon, kun sillä on vuoro kesken; se on normaalia.
+KK hyväksyi b34cec7ed:n, ja Pont Neuf saa väistyä tällä kameralla (KK 19.2x). Kuvat: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-b34cec7ed. Viestit: `mcp__ccd_session_mgmt__send_message` session id:llä.
+
+## PT:n työ 19.2x, tekemättä (ei uutta ajoa ennen JU:n vuoroa)
+PT: pyöreitä kuvamerkkejä ilman kylttiä näkyy yhä, px 2000-leveässä kuvassa: keski 434,423 · 810,690 · 840,816 · 1088,781; tuileries 1007,1057 · 1094,1439 · 1836,1332. Selvitä koodista ja lokista, mitä kohteita ne ovat ja onko kyltti törmäyksen takia piilossa. Omistajan 15.01 linja: pyöreät merkit jäävät ja napautus kylttiin. Samalla syy Pont Neufin puuttumiseen ja karttanimien vaihtumiseen (Hôtel Matignon hipoo merkkiä), jos sama. Tulos rivillä PT:lle: kohteet, syy, korjaus tai "näin kuuluu".
+
+Tähän asti (ei varmistettu):
+- Ne eivät ole piirros-pariisi.json:n kohdenostoja: lähin keski-kuvan neljästä on 76 px päässä. Kalibrointi keski-kuvassa: x = 1056 + (lon - 2.3422) * 18362, y = 750 - (lat - 48.8566) * 27900 (Panthéon ja Eiffel). Sillä pisteet ovat noin 48.8683/2.3083, 48.8588/2.3288, 48.8542/2.3304, 48.8555/2.3439.
+- Törmäys ei ole ilmeinen syy: NostotKartalla.KuvatKylttienMukaan häivyttää m.Kuvan kyltin törmätessä, ja eiKuvaa (rivi noin 2180) estää m.Kuvan ilman kylttiä. Selvitä siis, mikä elementti ne ovat. Ehdokas: Symboli kuvamerkillä, kun PariisinKyltti on epätosi (rivit 567 ja 2062: s.Kaupunkimerkki, !OnPariisissa). Data on NostoKerros, ei kohdenostot.
+- KK sanoi jo 6ea480e73:n kohdalla: kuvamerkki Notre-Damen pohjoispuolella saa jäädä; se on todennäköisesti 1088,781.
+- Työkalut: rivien 580-583 merkkilista (Id, Piste, PIILO) ja `ui kohdassa x y` lokiin seuraavalla JU:n ajolla. DrawMesh-piirto ei näy kyselyssä.
+- Karttanimien vaihtuminen: todennäköisesti b34cec7ed, koska KeraaRuudut tiukkeni ja piilossa oleva kyltti ei enää ole este. Pont Neuf näyttää väistyvän näkyvää Grand Châtelet'n kylttiä.
 
 ## KK:n käsky 19.1x (omat sanat lyhennettynä; 23485f753 muuten kelpaa, KK näyttää omistajalle)
 "Kadonneen aarteen kuvalla on aina kyltti vieressä (omistaja 14.57, 2.215), joten tuileries-kuvan yksinäinen Grand Châtelet ei jää näin. Jos syy on Louvren suorakaide ruudulla, käytä rakennuksen oikeaa ääriviivaa." "Piilotettu kyltti ei saa viedä nimeltä paikkaa."
