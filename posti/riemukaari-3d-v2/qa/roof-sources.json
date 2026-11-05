@@ -1,0 +1,59 @@
+{
+  "project": "riemukaari-katto-v2-2156-20261105",
+  "reviewedAt": "2026-11-05",
+  "scope": "Two freely licensed photographic references. Modern original downloaded unchanged locally; historical original retained in prior image project. Photographs were not projected as model textures.",
+  "references": [
+    {
+      "title": "Roof of the Arc de Triomphe, Paris 12 June 2014.jpg",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Roof_of_the_Arc_de_Triomphe,_Paris_12_June_2014.jpg",
+      "directOriginalImage": "https://upload.wikimedia.org/wikipedia/commons/5/59/Roof_of_the_Arc_de_Triomphe%2C_Paris_12_June_2014.jpg",
+      "creator": "Connie Ma",
+      "date": "2014-06-12",
+      "source": "Own work; file page links to Flickr source and marks the transfer as reviewed by FlickreviewR.",
+      "license": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "verifiedOnCommonsFilePage": true
+      },
+      "dimensions": [
+        4272,
+        2848
+      ],
+      "visualInspection": "Warm-gray rectangular stone slabs, narrow joints, shallow level changes, a low perimeter stone edge with modern metal railing, and a small simple raised stone roof structure. Its precise entry shape and placement are not established by this one photograph.",
+      "roofUse": "Good material and paving-module reference; clear restrained stair/exit pavilion and terrace edge. Do not copy modern railings or visitor/access equipment into the historic roof model.",
+      "localCopy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/references/roof-2014-connie-ma.jpg",
+      "localSHA256": "cb9842da81998e546f9f3051ccb0f552aa8b44b0787a901e840cd593d1af6252"
+    },
+    {
+      "title": "Aerial view of the Arc de Triomphe, Paris, France, ca. 1900.jpg",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Arc_de_Triomphe,_Paris,_France,_ca._1900.jpg",
+      "directOriginalImage": "https://upload.wikimedia.org/wikipedia/commons/d/db/Aerial_view_of_the_Arc_de_Triomphe%2C_Paris%2C_France%2C_ca._1900.jpg",
+      "creator": "Unknown author",
+      "date": "circa 1900",
+      "collection": "State Library Victoria",
+      "license": {
+        "name": "Public domain (PD-old; Public Domain Mark on Commons)",
+        "url": "https://commons.wikimedia.org/wiki/Template:PD-old",
+        "verifiedOnCommonsFilePage": true
+      },
+      "dimensions": [
+        4337,
+        3087
+      ],
+      "existingLocalCopy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alustat-24p-riemukaari-2139-20261105/source/ilmakuva-1900.jpg",
+      "visualInspection": "Original file inspected. High oblique aerial view shows the whole roof as a simple pale rectangular terrace with a continuous perimeter edge/parapet and a very small raised block around the central roof area. Fine paving and exact stair-housing geometry are not resolved clearly in this old, soft image.",
+      "roofUse": "Strong overall footprint and roof-edge/top-oblique reference; use the 2014 terrace photo for paving and pavilion detail. It is not a measured orthographic plan."
+    }
+  ],
+  "synthesis": {
+    "supportedRoofLayout": [
+      "A broad, flat rectangular terrace over the arch body.",
+      "Pale warm-gray stone slab paving in large rectangular panels with narrow joints.",
+      "A restrained low perimeter edge; the contemporary safety railing is not evidence for historic railing geometry.",
+      "A small low roof structure is suggested by the historical aerial. The model uses a deliberately simplified low access block, not a surveyed reconstruction.",
+      "No evidence in these sources for added chimneys, decorative rooftop ornaments, or multiple large housings."
+    ],
+    "measurementCaveat": "Photos support visual arrangement only; neither source is an orthographic survey or a basis for exact dimensions."
+  },
+  "rootReviewNote": "Removed helper claim of an arched stair opening: not independently established in root visual review. Model doorway is a simplified rectangular detail."
+}

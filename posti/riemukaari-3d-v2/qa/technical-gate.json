@@ -1,0 +1,179 @@
+[
+ {
+  "kansio": "output/riemukaari-katto-v2-2156-20261105/delivery/riemukaari-3d-v2",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "riemukaari.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "riemukaari.glb",
+     "tyyppi": "esine",
+     "kolmiot": 39106,
+     "piirrot": 6,
+     "materiaalit": 6,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -94,
+       0,
+       -50.546
+      ],
+      "max": [
+       94,
+       180.302,
+       50.546
+      ],
+      "koko": [
+       188,
+       180.302,
+       101.092
+      ]
+     }
+    },
+    "polku": "riemukaari.glb"
+   },
+   {
+    "nimi": "v1-viisto-45.png",
+    "polku": "esikatselu/v1-viisto-45.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v1-ylhaalta.png",
+    "polku": "esikatselu/v1-ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-etela.png",
+    "polku": "esikatselu/v2-etela.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-hole-front.png",
+    "polku": "esikatselu/v2-hole-front.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "v2-hole-left.png",
+    "polku": "esikatselu/v2-hole-left.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "v2-ita.png",
+    "polku": "esikatselu/v2-ita.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-lansi.png",
+    "polku": "esikatselu/v2-lansi.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-pohjoinen.png",
+    "polku": "esikatselu/v2-pohjoinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-vastaviisto-45.png",
+    "polku": "esikatselu/v2-vastaviisto-45.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-viisto-45.png",
+    "polku": "esikatselu/v2-viisto-45.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   },
+   {
+    "nimi": "v2-ylhaalta.png",
+    "polku": "esikatselu/v2-ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1000
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: riemukaari.glb ?"
+  ]
+ }
+]

@@ -1,0 +1,22 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/sources/riemukaari-v1.glb",
+  "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/work/riemukaari-v2.glb",
+  "method": "All indexed triangles from all six primitives; same fixed orthographic masks as v1 #2130. Compare unchanged ray coverage within each opening.",
+  "tests": {
+    "front": {
+      "maskPixels": 58912,
+      "sourceClearFraction": 1.0,
+      "v2ClearFraction": 1.0,
+      "changedPixelsWithinMask": 0,
+      "passes90Percent": true
+    },
+    "left": {
+      "maskPixels": 27678,
+      "sourceClearFraction": 0.9998554808873473,
+      "v2ClearFraction": 0.9998554808873473,
+      "changedPixelsWithinMask": 0,
+      "passes90Percent": true
+    }
+  },
+  "pass": true
+}

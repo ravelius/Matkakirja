@@ -1,0 +1,422 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/sources/riemukaari-v1.glb",
+  "sourceSHA256": "87e4a6156fe90c0c3f704dbce0fc5e4b2c5320416403b228d72f729955abdbec",
+  "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/work/riemukaari-v2.glb",
+  "candidateSHA256": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d",
+  "cutY": 174.0,
+  "preservation": {
+    "sourceWhollyBelowCutTriangleCount": 36425,
+    "candidatePrimaryPrimitiveTriangles": 36800,
+    "belowTriangleIndexTriplesExactAndInOriginalOrder": true,
+    "sourceVertexAttributeArraysExactPrefix": {
+      "POSITION": {
+        "sourceRows": 28170,
+        "candidateRows": 28682,
+        "allSourceVertexRowsExactPrefix": true,
+        "sourceDtype": "float32",
+        "candidateDtype": "float32"
+      },
+      "NORMAL": {
+        "sourceRows": 28170,
+        "candidateRows": 28682,
+        "allSourceVertexRowsExactPrefix": true,
+        "sourceDtype": "float32",
+        "candidateDtype": "float32"
+      },
+      "TEXCOORD_0": {
+        "sourceRows": 28170,
+        "candidateRows": 28682,
+        "allSourceVertexRowsExactPrefix": true,
+        "sourceDtype": "float32",
+        "candidateDtype": "float32"
+      }
+    },
+    "whollyBelowTriangleSharedAttributesExact": {
+      "POSITION": true,
+      "NORMAL": true,
+      "TEXCOORD_0": true
+    },
+    "allWhollyBelowTriangleGeometryAndAttributesExact": true,
+    "nodesExactlyEqual": true,
+    "sourceMaterialsExactPrefix": true,
+    "sourceEmbeddedImagePayloadsExact": true,
+    "sourceBinaryBufferPreservedAsExactPrefix": true,
+    "imagesSource": [
+      {
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_2",
+        "mimeType": "image/png",
+        "bytes": 2148288,
+        "sha256": "5edf33cea9f25688ce589142c437d9b6f1594874ce002b713bd80a09cccdc698"
+      },
+      {
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_0",
+        "mimeType": "image/jpeg",
+        "bytes": 1121391,
+        "sha256": "36ff5bbe9322fff096d68c63fd53417e7b389ad06e60754069360e87695e567e"
+      },
+      {
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_1",
+        "mimeType": "image/jpeg",
+        "bytes": 872684,
+        "sha256": "3f175b84ef9ee2067a97c51052e328edba9c73aa7193a5e781a177e842ea8cac"
+      }
+    ],
+    "imagesCandidate": [
+      {
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_2",
+        "mimeType": "image/png",
+        "bytes": 2148288,
+        "sha256": "5edf33cea9f25688ce589142c437d9b6f1594874ce002b713bd80a09cccdc698"
+      },
+      {
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_0",
+        "mimeType": "image/jpeg",
+        "bytes": 1121391,
+        "sha256": "36ff5bbe9322fff096d68c63fd53417e7b389ad06e60754069360e87695e567e"
+      },
+      {
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_1",
+        "mimeType": "image/jpeg",
+        "bytes": 872684,
+        "sha256": "3f175b84ef9ee2067a97c51052e328edba9c73aa7193a5e781a177e842ea8cac"
+      }
+    ]
+  },
+  "counts": {
+    "sourceMeshCount": 1,
+    "candidateMeshCount": 1,
+    "sourcePrimitiveCount": 1,
+    "candidatePrimitiveCount": 6,
+    "sourceTriangles": 37648,
+    "candidateTriangles": 39106,
+    "sourceUsedVertices": 28170,
+    "candidateUsedVertices": 32377
+  },
+  "actualUsedVertexBounds": {
+    "source": {
+      "usedBounds": [
+        [
+          -94.0,
+          0.0,
+          -50.54585647583008
+        ],
+        [
+          94.0,
+          180.3017578125,
+          50.54585647583008
+        ]
+      ],
+      "usedVertices": 28170,
+      "triangles": 37648,
+      "degenerateTriangles": 0,
+      "primitives": [
+        {
+          "mesh": 0,
+          "primitive": 0,
+          "vertices": 28170,
+          "usedVertices": 28170,
+          "triangles": 37648,
+          "unusedVertices": 0,
+          "usedBounds": [
+            [
+              -94.0,
+              0.0,
+              -50.54585647583008
+            ],
+            [
+              94.0,
+              180.3017578125,
+              50.54585647583008
+            ]
+          ],
+          "degenerateTriangles": 0
+        }
+      ]
+    },
+    "candidate": {
+      "usedBounds": [
+        [
+          -94.0,
+          0.0,
+          -50.54585647583008
+        ],
+        [
+          94.0,
+          180.3017578125,
+          50.54585647583008
+        ]
+      ],
+      "usedVertices": 32377,
+      "triangles": 39106,
+      "degenerateTriangles": 0,
+      "primitives": [
+        {
+          "mesh": 0,
+          "primitive": 0,
+          "vertices": 28682,
+          "usedVertices": 27765,
+          "triangles": 36800,
+          "unusedVertices": 917,
+          "usedBounds": [
+            [
+              -94.0,
+              0.0,
+              -50.54585647583008
+            ],
+            [
+              94.0,
+              174.0,
+              50.54585647583008
+            ]
+          ],
+          "degenerateTriangles": 0
+        },
+        {
+          "mesh": 0,
+          "primitive": 1,
+          "vertices": 2376,
+          "usedVertices": 2376,
+          "triangles": 1188,
+          "unusedVertices": 0,
+          "usedBounds": [
+            [
+              -84.0199966430664,
+              173.9600067138672,
+              -40.56999969482422
+            ],
+            [
+              84.0199966430664,
+              180.3017578125,
+              40.56999969482422
+            ]
+          ],
+          "degenerateTriangles": 0
+        },
+        {
+          "mesh": 0,
+          "primitive": 2,
+          "vertices": 2160,
+          "usedVertices": 2160,
+          "triangles": 1080,
+          "unusedVertices": 0,
+          "usedBounds": [
+            [
+              -81.7300033569336,
+              175.19000244140625,
+              -38.279998779296875
+            ],
+            [
+              81.7300033569336,
+              175.33999633789062,
+              38.279998779296875
+            ]
+          ],
+          "degenerateTriangles": 0
+        },
+        {
+          "mesh": 0,
+          "primitive": 3,
+          "vertices": 24,
+          "usedVertices": 24,
+          "triangles": 12,
+          "unusedVertices": 0,
+          "usedBounds": [
+            [
+              -82.25,
+              175.10000610351562,
+              -38.79999923706055
+            ],
+            [
+              82.25,
+              175.13499450683594,
+              38.79999923706055
+            ]
+          ],
+          "degenerateTriangles": 0
+        },
+        {
+          "mesh": 0,
+          "primitive": 4,
+          "vertices": 48,
+          "usedVertices": 48,
+          "triangles": 24,
+          "unusedVertices": 0,
+          "usedBounds": [
+            [
+              -14.0,
+              177.85000610351562,
+              -8.0
+            ],
+            [
+              14.0,
+              179.4499969482422,
+              8.0
+            ]
+          ],
+          "degenerateTriangles": 0
+        },
+        {
+          "mesh": 0,
+          "primitive": 5,
+          "vertices": 4,
+          "usedVertices": 4,
+          "triangles": 2,
+          "unusedVertices": 0,
+          "usedBounds": [
+            [
+              -2.0999999046325684,
+              175.1999969482422,
+              7.010000228881836
+            ],
+            [
+              2.0999999046325684,
+              177.60000610351562,
+              7.010000228881836
+            ]
+          ],
+          "degenerateTriangles": 0
+        }
+      ]
+    }
+  },
+  "newPrimitiveGeometryQuality": [
+    {
+      "triangles": 1188,
+      "zeroAreaTrianglesCrossNormLE1e-10": 0,
+      "areaSum": 38345.52324453901,
+      "normalWindingDotMin": 1.0,
+      "normalWindingDotMedian": 1.0,
+      "oppositeToStoredVertexNormalsDotLT0": 0,
+      "nearOrthogonalDotAbsLT0_1": 0,
+      "primitive": 1,
+      "material": 1,
+      "bounds": [
+        [
+          -84.0199966430664,
+          173.9600067138672,
+          -40.56999969482422
+        ],
+        [
+          84.0199966430664,
+          180.3017578125,
+          40.56999969482422
+        ]
+      ],
+      "trianglesWithAnyVertexYBelow174": 10,
+      "trianglesWhollyBelow174": 2
+    },
+    {
+      "triangles": 1080,
+      "zeroAreaTrianglesCrossNormLE1e-10": 0,
+      "areaSum": 11824.292857523722,
+      "normalWindingDotMin": 1.0,
+      "normalWindingDotMedian": 1.0,
+      "oppositeToStoredVertexNormalsDotLT0": 0,
+      "nearOrthogonalDotAbsLT0_1": 0,
+      "primitive": 2,
+      "material": 2,
+      "bounds": [
+        [
+          -81.7300033569336,
+          175.19000244140625,
+          -38.279998779296875
+        ],
+        [
+          81.7300033569336,
+          175.33999633789062,
+          38.279998779296875
+        ]
+      ],
+      "trianglesWithAnyVertexYBelow174": 0,
+      "trianglesWhollyBelow174": 0
+    },
+    {
+      "triangles": 12,
+      "zeroAreaTrianglesCrossNormLE1e-10": 0,
+      "areaSum": 25547.34088276676,
+      "normalWindingDotMin": 1.0,
+      "normalWindingDotMedian": 1.0,
+      "oppositeToStoredVertexNormalsDotLT0": 0,
+      "nearOrthogonalDotAbsLT0_1": 0,
+      "primitive": 3,
+      "material": 3,
+      "bounds": [
+        [
+          -82.25,
+          175.10000610351562,
+          -38.79999923706055
+        ],
+        [
+          82.25,
+          175.13499450683594,
+          38.79999923706055
+        ]
+      ],
+      "trianglesWithAnyVertexYBelow174": 0,
+      "trianglesWhollyBelow174": 0
+    },
+    {
+      "triangles": 24,
+      "zeroAreaTrianglesCrossNormLE1e-10": 0,
+      "areaSum": 1571.5987548828125,
+      "normalWindingDotMin": 1.0,
+      "normalWindingDotMedian": 1.0,
+      "oppositeToStoredVertexNormalsDotLT0": 0,
+      "nearOrthogonalDotAbsLT0_1": 0,
+      "primitive": 4,
+      "material": 4,
+      "bounds": [
+        [
+          -14.0,
+          177.85000610351562,
+          -8.0
+        ],
+        [
+          14.0,
+          179.4499969482422,
+          8.0
+        ]
+      ],
+      "trianglesWithAnyVertexYBelow174": 0,
+      "trianglesWhollyBelow174": 0
+    },
+    {
+      "triangles": 2,
+      "zeroAreaTrianglesCrossNormLE1e-10": 0,
+      "areaSum": 10.08003799438302,
+      "normalWindingDotMin": 1.0,
+      "normalWindingDotMedian": 1.0,
+      "oppositeToStoredVertexNormalsDotLT0": 0,
+      "nearOrthogonalDotAbsLT0_1": 0,
+      "primitive": 5,
+      "material": 5,
+      "bounds": [
+        [
+          -2.0999999046325684,
+          175.1999969482422,
+          7.010000228881836
+        ],
+        [
+          2.0999999046325684,
+          177.60000610351562,
+          7.010000228881836
+        ]
+      ],
+      "trianglesWithAnyVertexYBelow174": 0,
+      "trianglesWhollyBelow174": 0
+    }
+  ],
+  "candidatePrimaryPrimitiveGeometryQuality": {
+    "triangles": 36800,
+    "zeroAreaTrianglesCrossNormLE1e-10": 0,
+    "areaSum": 148911.72092058448,
+    "normalWindingDotMin": -0.9939922803069957,
+    "normalWindingDotMedian": 0.9136574733083378,
+    "oppositeToStoredVertexNormalsDotLT0": 343,
+    "nearOrthogonalDotAbsLT0_1": 198
+  },
+  "caveats": [
+    "Exact preservation comparison applies to source primitive triangles wholly at/below Y=174; added roof primitives are separately reported for any overlap below cut.",
+    "Used-vertex bounds include all primitives and node translation; candidate/source node arrays are checked exactly."
+  ]
+}

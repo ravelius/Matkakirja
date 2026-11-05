@@ -1,0 +1,154 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/work/riemukaari-v2.glb",
+  "bytes": 6886336,
+  "meshes": 1,
+  "primitives": 6,
+  "materials": 6,
+  "referencedMaterials": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "skins": 0,
+  "animations": 0,
+  "vertices": 33294,
+  "triangles": 39106,
+  "positionsFinite": true,
+  "bounds": [
+    [
+      -94.0,
+      0.0,
+      -50.54585647583008
+    ],
+    [
+      94.0,
+      180.3017578125,
+      50.54585647583008
+    ]
+  ],
+  "indexRangeValid": true,
+  "allMaterialsOpaque": true,
+  "uvZeroThresholdCross2DAbs": 1e-12,
+  "uvZeroTriangles": 17,
+  "uvZero3DArea": 1.747970741604271,
+  "surface3DArea": 226210.55669829116,
+  "uvZero3DAreaFraction": 7.727184650960525e-06,
+  "imageDimensions": [
+    {
+      "index": 0,
+      "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_2",
+      "mimeType": "image/png",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_0",
+      "mimeType": "image/jpeg",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_1",
+      "mimeType": "image/jpeg",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "primitiveReports": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "mode": 4,
+      "vertices": 28682,
+      "triangles": 36800,
+      "material": 0,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 17,
+      "uvZero3DArea": 1.747970741604271,
+      "surface3DArea": 148911.72092058448
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "mode": 4,
+      "vertices": 2376,
+      "triangles": 1188,
+      "material": 1,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 0,
+      "uvZero3DArea": 0.0,
+      "surface3DArea": 38345.52324453901
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "mode": 4,
+      "vertices": 2160,
+      "triangles": 1080,
+      "material": 2,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 0,
+      "uvZero3DArea": 0.0,
+      "surface3DArea": 11824.292857523722
+    },
+    {
+      "mesh": 0,
+      "primitive": 3,
+      "mode": 4,
+      "vertices": 24,
+      "triangles": 12,
+      "material": 3,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 0,
+      "uvZero3DArea": 0.0,
+      "surface3DArea": 25547.34088276676
+    },
+    {
+      "mesh": 0,
+      "primitive": 4,
+      "mode": 4,
+      "vertices": 48,
+      "triangles": 24,
+      "material": 4,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 0,
+      "uvZero3DArea": 0.0,
+      "surface3DArea": 1571.5987548828125
+    },
+    {
+      "mesh": 0,
+      "primitive": 5,
+      "mode": 4,
+      "vertices": 4,
+      "triangles": 2,
+      "material": 5,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 0,
+      "uvZero3DArea": 0.0,
+      "surface3DArea": 10.08003799438302
+    }
+  ]
+}

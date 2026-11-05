@@ -1,0 +1,58 @@
+[
+  {
+    "view": "ylhaalta",
+    "yaw": 0,
+    "pitch": 90,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-ylhaalta.png"
+  },
+  {
+    "view": "viisto-45",
+    "yaw": 225,
+    "pitch": 45,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-viisto-45.png"
+  },
+  {
+    "view": "vastaviisto-45",
+    "yaw": 45,
+    "pitch": 45,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-vastaviisto-45.png"
+  },
+  {
+    "view": "ita",
+    "yaw": 0,
+    "pitch": 0,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-ita.png"
+  },
+  {
+    "view": "lansi",
+    "yaw": 180,
+    "pitch": 0,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-lansi.png"
+  },
+  {
+    "view": "pohjoinen",
+    "yaw": 90,
+    "pitch": 0,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-pohjoinen.png"
+  },
+  {
+    "view": "etela",
+    "yaw": 270,
+    "pitch": 0,
+    "size": 1000,
+    "blackPixelsRGBlt16": 0,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/qa/v2-etela.png"
+  }
+]

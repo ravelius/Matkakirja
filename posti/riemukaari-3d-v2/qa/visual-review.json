@@ -1,0 +1,22 @@
+{
+  "reviewedAt": "2026-11-05T20:30:48.327365+00:00",
+  "candidateSHA256": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d",
+  "reviewedFullSize": [
+    "v2-ylhaalta.png",
+    "v2-viisto-45.png",
+    "v2-vastaviisto-45.png",
+    "v2-ita.png",
+    "v2-lansi.png",
+    "v2-pohjoinen.png",
+    "v2-etela.png"
+  ],
+  "comparedWithSource": "v1-ylhaalta.png and v1-viisto-45.png, same CPU renderer/camera",
+  "result": "PASS_LOCAL_ROOF_REPAIR",
+  "observations": [
+    "Roof now has distinct rectangular paving and low continuous straight rim instead of rippled cap.",
+    "No missing roof face or detached rim observed across the seven views.",
+    "Lower facade reliefs and openings visibly retained; geometry and attribute comparison independently passes.",
+    "Small coping joints are intentional; distant-game anti-aliasing and PBR color remain receiver checks."
+  ],
+  "limits": "CPU shading, no Unity render or receiver acceptance. Photographic interpretation is simplified, not an exact roof survey."
+}

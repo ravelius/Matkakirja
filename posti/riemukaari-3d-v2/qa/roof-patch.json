@@ -1,0 +1,22 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/sources/riemukaari-v1.glb",
+  "sourceSHA256": "87e4a6156fe90c0c3f704dbce0fc5e4b2c5320416403b228d72f729955abdbec",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-katto-v2-2156-20261105/work/riemukaari-v2.glb",
+  "outputSHA256": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d",
+  "roofCutY": 174.0,
+  "sourceMaxY": 180.3017578125,
+  "originalTriangles": 37648,
+  "fullyUnchangedSourceTriangles": 36425,
+  "removedRoofTriangles": 967,
+  "clippedBoundaryTriangles": 256,
+  "retainedAndClippedTriangles": 36800,
+  "addedRoofTriangles": 2306,
+  "totalTriangles": 39106,
+  "allOriginalVertexAttributesPreserved": true,
+  "belowCutTrianglesPreservedExactly": true,
+  "sourceTexturesBytePreserved": true,
+  "nodeTransformPreserved": true,
+  "credits": 0,
+  "newGeneration": false,
+  "note": "New roof elements are simplified based on photographs; not a surveyed roof plan. All facade/arch triangles wholly at/below Y174 retained without changes."
+}

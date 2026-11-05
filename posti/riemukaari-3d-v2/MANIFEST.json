@@ -1,0 +1,136 @@
+{
+  "task": 2156,
+  "asset": "Riemukaari24g",
+  "version": 2,
+  "type": "static-building",
+  "status": "LOCAL_QA_PASSED_RECEIVER_GAME_TRIAL_PENDING",
+  "createdAt": "2026-11-05T20:30:02.406906+00:00",
+  "modelSHA256": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d",
+  "sourceSHA256": "87e4a6156fe90c0c3f704dbce0fc5e4b2c5320416403b228d72f729955abdbec",
+  "creditsSpent": 0,
+  "newTripoJobs": [],
+  "imageGenerations": 0,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "bytes": 2190,
+      "sha256": "bfb1db0ae4e62717c53b9233a072155655162aede9b66a5c0966d7ca7cab422a"
+    },
+    {
+      "path": "TILAUS.md",
+      "bytes": 1189,
+      "sha256": "3f4b77bfd763def8a64b161baf5feb8520fbd9bc9eb3179da40258acf04f0965"
+    },
+    {
+      "path": "esikatselu/v1-viisto-45.png",
+      "bytes": 553658,
+      "sha256": "958e585399f6ceaf480a7d23c92241db2ef7e79525584ab8f62a68f6fd4d359a"
+    },
+    {
+      "path": "esikatselu/v1-ylhaalta.png",
+      "bytes": 180271,
+      "sha256": "81d39c4278bf6d6dfdba110a5eeb24412c6b387941bed7e570a0befb27a6e619"
+    },
+    {
+      "path": "esikatselu/v2-etela.png",
+      "bytes": 412885,
+      "sha256": "7cfa29a2fbb3cdc814b478a2e8870f9a8ac0797bd97577b981af530d6d297de8"
+    },
+    {
+      "path": "esikatselu/v2-hole-front.png",
+      "bytes": 5014,
+      "sha256": "9c2f77977d5a71c09da8b148492aa8e3fbb4d1268e6b9650fcf2ace341ea5cf5"
+    },
+    {
+      "path": "esikatselu/v2-hole-left.png",
+      "bytes": 5038,
+      "sha256": "072850fe7c4b78edc481f949d3b8dc1d0bda54e99093542ad25decd0c0ab2e7f"
+    },
+    {
+      "path": "esikatselu/v2-ita.png",
+      "bytes": 743115,
+      "sha256": "b1366f75fd39a2bec4d9a24b7e736ec0a813ca3fbfc74fd98a7434064747c4e1"
+    },
+    {
+      "path": "esikatselu/v2-lansi.png",
+      "bytes": 702374,
+      "sha256": "4a4bc4b498891bbd0d3255f950a093a8f7e22cb5385a60923e454de71b616696"
+    },
+    {
+      "path": "esikatselu/v2-pohjoinen.png",
+      "bytes": 412574,
+      "sha256": "83b41dcfd928b6404f6086e3cbb56bcc28d0258637791d06eaf39c76f600a014"
+    },
+    {
+      "path": "esikatselu/v2-vastaviisto-45.png",
+      "bytes": 525992,
+      "sha256": "e0e8f787cb21ffec3b1887e00269b175232a4c8e8f56f8ebb889e6670561e57f"
+    },
+    {
+      "path": "esikatselu/v2-viisto-45.png",
+      "bytes": 512625,
+      "sha256": "22c0e9c090880cb262990e10e97c0fda8badb05f53e68490c03d7b2db9313100"
+    },
+    {
+      "path": "esikatselu/v2-ylhaalta.png",
+      "bytes": 101935,
+      "sha256": "5d70eeb8f721996d868459aa5228277132ae2100c0dc148660976c78bedb824c"
+    },
+    {
+      "path": "huomiot.md",
+      "bytes": 3145,
+      "sha256": "c7917e1c4a9418fbdfed9c40aad5e1edd6435abda4b9101db5fbd84dada0a03d"
+    },
+    {
+      "path": "qa/independent-preservation.json",
+      "bytes": 11384,
+      "sha256": "74f879832f0c74fd119d266b53072612f0c7b7d59e8659dd10fc56035283996e"
+    },
+    {
+      "path": "qa/normal-source-comparison.json",
+      "bytes": 173,
+      "sha256": "b644f2cb162aec80f7ce0a81386cbabcd304a1581fac81a769d788d44323d1ed"
+    },
+    {
+      "path": "qa/numeric-v2.json",
+      "bytes": 3321,
+      "sha256": "075713f465207e3d613e9e3e22e8b9968a1ddac508d374a2ae59fbc6d9bc4669"
+    },
+    {
+      "path": "qa/opening-preservation.json",
+      "bytes": 860,
+      "sha256": "a34120d7d0fad5ca8e7266f120cd93448e46ad95764cd30d0bdabc5b3cf961d8"
+    },
+    {
+      "path": "qa/roof-patch.json",
+      "bytes": 1115,
+      "sha256": "734b876f457cb7f86b60e3630ad85bdee36b86c47728d84d742660e353c7b77c"
+    },
+    {
+      "path": "qa/roof-sources.json",
+      "bytes": 4144,
+      "sha256": "ee1a84d3e8e499bf815067b5bcc34b69664f137d40b0fe0f76c54a55a19a1046"
+    },
+    {
+      "path": "qa/technical-gate.json",
+      "bytes": 3184,
+      "sha256": "74dd1504fa49248035783d2ea7a498b262046f4344cae18b2d07288cb37430eb"
+    },
+    {
+      "path": "qa/v2-previews.json",
+      "bytes": 1702,
+      "sha256": "2f05ff1ab41e3b9c76dde30a17d810407e3ceb7e58acfcb62656f056a6fb431a"
+    },
+    {
+      "path": "qa/visual-review.json",
+      "bytes": 1024,
+      "sha256": "46e7d9eed8f44786bfaf010be18cca11cebca0de543a52656dd6223a12beacbc"
+    },
+    {
+      "path": "riemukaari.glb",
+      "bytes": 6886336,
+      "sha256": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d"
+    }
+  ],
+  "technicalGate": "PASS"
+}
