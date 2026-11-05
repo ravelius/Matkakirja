@@ -2,6 +2,17 @@
 
 Korvaa -2030:n. Työhaara proto-repossa: natiivi-ui/kyltit-219, kärki 6b6d53a49, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, ei committaamatonta. Peili natiivi-backup, peili/proto/natiivi-ui/kyltit-219. Ei omaa ajoa käynnissä. Ei junaan ennen KK:n sanaa.
 
+## UUSIN, ENSIMMÄINEN TYÖ: OMISTAJAN PÄÄTÖS klo 21.07 (KK:n välittämä, kortti "Pyöreä kuva")
+Viidelle (Tuileries, Grand Châtelet, Temple-torni, Galerie des Machines, Bastilji): leikattu kuva pois, sama pyöreä merkki kuin muilla (kuvana kohteen oma nostoruudun kuva), tumma tähtikyltti viereen, napautus kuten ennen. Neljä pelkän kyltin kohdetta (Orsay, Palais de l'Industrie, Trocadéro, Les Halles) ennallaan. Kuvat ylhäältä ja 45° kertoimella 0.465 KK:lle, rivi PT:lle. Ei junaan. Korvaa alla olevan "pelkkä kyltti" -tavoitteen.
+Aloittamatta, kyltit-219:ssä ei committaamatonta. Lähtökohdat (ei kokeiltu):
+- Kohdenostot.VainKyltti takaisin pelkkään "kyltti" (6b6d53a49 laajensi sen), Piirros pysyy null leikkeelle.
+- NostotKartalla.Hae: kohdeKyltti tarvitsee leike-kohteet, muuten ruutu ei ole minimerkin kokoinen. Tarkista myös PariisinKyltti (rivi 572, ehto LeikeTunnistuu). Kylki: rivillä noin 2245 kadonnutKyltti && !VainKyltti antaa PiirrosKyljet tai "oikea".
+- eiKuvaa laskee itsestään, kun VainKyltti on false: AsetaKuva(m, SaapumisKuvat.NostonKuva(id)), joka käyttää Kohdenostot.Kuva(id) eli Juttu.Kuvat[0]. VARMISTA, että viidellä on Juttu ja kuva: en ehtinyt, ja kadonneilla nosto on "hahmotelma-…", joten kuvan voi joutua hakemaan noston tiedoista (KaupunkiNostot.ValoLinkista, Nostokortti). Jos kuvaa ei ole, rivi PT:lle.
+- AsetaKuvanPaikka laittaa kuvan kyltin oikealle puolelle. Tuileries'n kyltti on "vasen", joten kuva tulee pisteen kohdalle Louvren reunaan: katso, jääkö se mallin päälle, ja katso samalla, näkyykö kyltti chatelet-45:ssä (ks. AVOIN VIKA).
+- Skripti pohjaksi _tyo/natiivi-ui/sk-pariisi-kyltit-13.txt; ajo JU:lta. Lento ja napautus uudelleen; b0bc70e7b pitää kohteen kyltissä.
+- Parvis jatkuu samassa ajossa (ks. seuraava kohta).
+- Tämä checkout oli vaihtunut haaraan koti/Matkakirja-natiivi-ui (klo 21.1x); luovutushaaraa ei tarvitse palauttaa siihen.
+
 ## LUE ENSIN: SEIS kuvien poistolle (OMISTAJAN PÄÄTÖS klo 21.04, KK:n välittämä)
 "Kuvat pitää olla kadonneista aarteista" (20.51: "Näitä mini rakennuksia ei saa olla"). Pikkurakennuksen tilalle tulee kuva ja viereen tähtikyltti. Muoto tulee KK:lta kortin jälkeen: älä tee kuvia ennen sitä, äläkä siivoa leikkeiden koodia tai kuvia. Tämä kumoaa alla olevan tavoitteen "pelkkä kyltti" ja "AVOIN VIKA" -kohdan kiireen: kyltin paikka ratkaistaan vasta kuvan muodon kanssa. 6b6d53a49 on haarassa, mutta se ei ole lopputulos; älä vie sitä KK:lle tuloksena äläkä junaan. b0bc70e7b (lennon kohde) tarkistetaan samalla.
 Jatkuu heti: Parvis Notre-Dame -nimi (selvitä, miksi se ei näy aukiolla, nimet etsi; KK: aukiolle tai ei näy). Tulos KK:lle ja rivi PT:lle omana eränään.
