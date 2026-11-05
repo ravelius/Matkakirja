@@ -5,6 +5,10 @@ Korvaa -1855:n tilan. Sessio on Natiiviseppä, kansio Matkakirja-3d-selvittaja. 
 ## Tila
 Haara natiiviseppa/pallo-aloitus-219, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, peili natiivi-backup peili/proto/natiiviseppa/pallo-aloitus-219. Kärki d1867a55a. Työpuu puhdas. Ei junaan, ei iPad-ajoja. Ajoja ei jonossa.
 
+## SEURAAVA TYÖ, PT 19.2x (omistaja 19.23: "laita kaikki äänet peliin, kuuntelen siellä")
+Kun Valoseppä toimittaa osoitecommitin tähän sessioon: poimi se haaraan natiiviseppa/pallo-aloitus-219 d1867a55a:n päälle; aja kaanna.sh ja unity-tarkistus; pyydä JU:lta Mac-ajo, ja todista äänipolku puhe.py:llä (_tyo/natiiviseppa/pallo-aloitus/). Sitten rivi PT:lle: commit, testit. JU asentaa PIENELLE iPadille; ei junaan, ei isoa iPadia, ei muita mittauksia.
+Tilanne 19.2x: osoitecommitia ei löytynyt haaroista, ja opas/esittely-v1/aanet/pariisi-tervehdys.mp3 sekä .ajat.json palauttavat 404. Ääni on 404 myös ajossa d1867a55a, joten koko ääniketju on tekstipolulla, kunnes vienti on tehty.
+
 ## Odottaa
 PT:n vastausta d1867a55a:n pariin (viesti jonossa 19.24, ei kuitattu). PT oli hyväksynyt 520cae03f:n ja perunut sen napeista, joten hyväksyntää ei ole tällä hetkellä. Ääni odottaa KK:n kuittausta ja Valosepän vientiä; sen jälkeen puhe.py.
 
