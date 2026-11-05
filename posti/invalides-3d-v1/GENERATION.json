@@ -1,0 +1,82 @@
+{
+  "task": 2146,
+  "originalOrder": 2114,
+  "attempts": [
+    {
+      "id": "a49050a0-61e6-434e-84f5-b3e56e5b65a3",
+      "attempt": 1,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T18:15:15.142224+00:00",
+      "estimatedCompletion": "2-5 minutes, observed17%",
+      "credits": 45,
+      "balanceBefore": 15825,
+      "balanceAfter": 15780,
+      "mapping": {
+        "Front": "viisto-lounas.png",
+        "Back": "viisto-koillinen.png",
+        "Left": null,
+        "Right": null
+      },
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T18:26:52.024037+00:00"
+    },
+    {
+      "id": "2293c6b6-55bb-4f8e-be66-c38019021f84",
+      "attempt": 2,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T19:27:07+00:00",
+      "estimatedCompletion": "2-5 minutes, then 7-view QA",
+      "credits": 45,
+      "balanceBefore": 15645,
+      "balanceAfter": 15600,
+      "mapping": {
+        "Front": "viisto-lounas.png",
+        "Back": "viisto-koillinen.png",
+        "Left": null,
+        "Right": null
+      },
+      "sourceCommit": "a8e271271a83b7268aee3c764c8189d7861b863b",
+      "sourceReceipt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/attempt02/source-receipt.json",
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T19:29:57+00:00",
+      "raw": "raw/invalidit24l-attempt02-raw.glb",
+      "rawSHA256": "e52c616dda6a18aa17a669b4c3f5424dab0da5e81a6f119f3755384d295ee24a"
+    }
+  ],
+  "retopology": {
+    "parentJobId": "2293c6b6-55bb-4f8e-be66-c38019021f84",
+    "separateJobIdExposed": false,
+    "exportConversionId": "c3f031cb-4190-4913-9657-e4cc8b1fe1f8",
+    "status": "COMPLETED_DOWNLOADED",
+    "startedApproxUTC": "2026-11-05T19:48:00Z",
+    "completedVerifiedAt": "2026-11-05T19:57:11.718887+00:00",
+    "credits": 5,
+    "balanceBefore": 15600,
+    "balanceAfter": 15595,
+    "targetTriangles": 28000,
+    "actualTriangles": 28009,
+    "SmartMesh": false,
+    "topology": "Triangle",
+    "quality": "UV_AND_COLOR_REGRESSION_USE_RAW_PRIMARY"
+  },
+  "creditsUsed": 95,
+  "preparedAt": "2026-11-05T19:59:46.403308+00:00"
+}

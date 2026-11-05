@@ -1,0 +1,673 @@
+{
+  "models": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/work/attempt02-diagnostic-yaw0.glb",
+      "sha256": "55c1dbc6df0ea1b53964cb5c5ff6da83962f8de3e981e78538246d9c55702d16",
+      "images": [
+        {
+          "index": 0,
+          "sha256": "c2926b5413b1a5403dd06233b415d4633671f08a9f6c2b428156cd309fbc9101",
+          "bytes": 1790060,
+          "mimeType": "image/png"
+        },
+        {
+          "index": 1,
+          "sha256": "ffe4baad87dd48b8e210d38745c9754168439b883ad9be711ed72b5febfbf389",
+          "bytes": 1137504,
+          "mimeType": "image/jpeg"
+        },
+        {
+          "index": 2,
+          "sha256": "70955bad3d71a5b2cff8c1d86d4e6e51089bfa2775a59b859fd48f694c620b61",
+          "bytes": 548613,
+          "mimeType": "image/jpeg"
+        }
+      ],
+      "materials": [
+        {
+          "name": "tripo_mat_b59f2058-086d-412a-b761-7d731dd19fec",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/work/attempt02-light.glb",
+      "sha256": "1ac9ea24c9eb7a5114b8ed8d2fa6012bb4a074a742f2601fea440c3d8b902ddb",
+      "images": [
+        {
+          "index": 0,
+          "sha256": "9eb51effce9f26c86829952168d7ba9fabc3f08b94975544ad30644da613c547",
+          "bytes": 114348,
+          "mimeType": "image/jpeg"
+        },
+        {
+          "index": 1,
+          "sha256": "07934bf281ae75e534518d911191ef2dd25da56a9bcc88de473350ba58d201e9",
+          "bytes": 639585,
+          "mimeType": "image/jpeg"
+        },
+        {
+          "index": 2,
+          "sha256": "c081f341b8788a3f86344d8230c7554b2b0f17b69a62884806e139a0a6bbbc67",
+          "bytes": 1277221,
+          "mimeType": "image/png"
+        }
+      ],
+      "materials": [
+        {
+          "doubleSided": true,
+          "name": "tripo_mat_c3f031cb-4190-4913-9657-e4cc8b1fe1f8",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ]
+    }
+  ],
+  "localNormalization": [
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/raw/invalidit24l-attempt02-raw.glb",
+      "embeddedImagesByteIdenticalAfterLocalNormalization": true,
+      "uvArrayIdenticalAfterLocalNormalization": true
+    },
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/raw/invalidit24l-attempt02-light.glb",
+      "embeddedImagesByteIdenticalAfterLocalNormalization": true,
+      "uvArrayIdenticalAfterLocalNormalization": true
+    }
+  ],
+  "tripoRetopoEmbeddedImageHashesIdentical": false,
+  "method": "Matched XZ highest triangle hit; barycentric UV and bilinear unlit base-color sampling in 0..255 sRGB byte values. Finite samples, not whole-surface proof. Geometry/UV correspondence can affect deltas. No game/PBR lighting simulated.",
+  "samples": [
+    {
+      "name": "NW1",
+      "xz": [
+        -101.34741170247395,
+        -141.3529689534505
+      ],
+      "raw": {
+        "y": 5.227891462374169,
+        "unlitBaseColorRGB": [
+          229.0,
+          197.6014862060547,
+          154.79702758789062
+        ]
+      },
+      "light": {
+        "y": 5.164921314012638,
+        "unlitBaseColorRGB": [
+          229.0,
+          198.0,
+          154.0
+        ]
+      },
+      "deltaRGB": [
+        0.0,
+        0.3985137939453125,
+        -0.797027587890625
+      ]
+    },
+    {
+      "name": "NW2",
+      "xz": [
+        -101.34741170247395,
+        -64.0088916015625
+      ],
+      "raw": {
+        "y": 5.3260928940459,
+        "unlitBaseColorRGB": [
+          227.24168395996094,
+          195.24168395996094,
+          154.24168395996094
+        ]
+      },
+      "light": {
+        "y": 5.253125366011581,
+        "unlitBaseColorRGB": [
+          227.0,
+          195.0,
+          154.0
+        ]
+      },
+      "deltaRGB": [
+        -0.2416839599609375,
+        -0.2416839599609375,
+        -0.2416839599609375
+      ]
+    },
+    {
+      "name": "NE1",
+      "xz": [
+        98.68037455240885,
+        -141.3529689534505
+      ],
+      "raw": {
+        "y": 5.233255013302155,
+        "unlitBaseColorRGB": [
+          230.7249755859375,
+          198.7249755859375,
+          157.7249755859375
+        ]
+      },
+      "light": {
+        "y": 5.16771088725969,
+        "unlitBaseColorRGB": [
+          228.01495361328125,
+          196.01495361328125,
+          155.01495361328125
+        ]
+      },
+      "deltaRGB": [
+        -2.71002197265625,
+        -2.71002197265625,
+        -2.71002197265625
+      ]
+    },
+    {
+      "name": "NE2",
+      "xz": [
+        98.68037455240885,
+        -64.0088916015625
+      ],
+      "raw": {
+        "y": 5.324030918919985,
+        "unlitBaseColorRGB": [
+          230.438720703125,
+          197.438720703125,
+          154.438720703125
+        ]
+      },
+      "light": {
+        "y": 5.2754661706027655,
+        "unlitBaseColorRGB": [
+          229.0,
+          198.0,
+          154.0
+        ]
+      },
+      "deltaRGB": [
+        -1.438720703125,
+        0.561279296875,
+        -0.438720703125
+      ]
+    },
+    {
+      "name": "SW1",
+      "xz": [
+        -134.95207979329427,
+        5.334074300130208
+      ],
+      "raw": {
+        "y": 5.487300954674451,
+        "unlitBaseColorRGB": [
+          228.0,
+          196.0,
+          155.0
+        ]
+      },
+      "light": {
+        "y": 5.414353804473021,
+        "unlitBaseColorRGB": [
+          228.0,
+          196.0,
+          155.0
+        ]
+      },
+      "deltaRGB": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "SW2",
+      "xz": [
+        -82.1447442220052,
+        5.334074300130208
+      ],
+      "raw": {
+        "y": 5.493548241918537,
+        "unlitBaseColorRGB": [
+          231.04281616210938,
+          199.04281616210938,
+          158.04281616210938
+        ]
+      },
+      "light": {
+        "y": 5.420588309880793,
+        "unlitBaseColorRGB": [
+          230.88510131835938,
+          198.88510131835938,
+          157.88510131835938
+        ]
+      },
+      "deltaRGB": [
+        -0.15771484375,
+        -0.15771484375,
+        -0.15771484375
+      ]
+    },
+    {
+      "name": "SW3",
+      "xz": [
+        -134.95207979329427,
+        77.34407735188802
+      ],
+      "raw": {
+        "y": 5.495864557773379,
+        "unlitBaseColorRGB": [
+          228.30081176757812,
+          196.30081176757812,
+          155.30081176757812
+        ]
+      },
+      "light": {
+        "y": 5.421213092329776,
+        "unlitBaseColorRGB": [
+          226.79664611816406,
+          194.79664611816406,
+          153.79664611816406
+        ]
+      },
+      "deltaRGB": [
+        -1.5041656494140625,
+        -1.5041656494140625,
+        -1.5041656494140625
+      ]
+    },
+    {
+      "name": "SW4",
+      "xz": [
+        -82.1447442220052,
+        77.34407735188802
+      ],
+      "raw": {
+        "y": 5.495224760457088,
+        "unlitBaseColorRGB": [
+          228.41830444335938,
+          196.41830444335938,
+          155.41830444335938
+        ]
+      },
+      "light": {
+        "y": 5.43677455728328,
+        "unlitBaseColorRGB": [
+          227.3225860595703,
+          195.3225860595703,
+          154.3225860595703
+        ]
+      },
+      "deltaRGB": [
+        -1.0957183837890625,
+        -1.0957183837890625,
+        -1.0957183837890625
+      ]
+    },
+    {
+      "name": "SE1",
+      "xz": [
+        80.01111450195312,
+        5.334074300130208
+      ],
+      "raw": {
+        "y": 5.491253173067961,
+        "unlitBaseColorRGB": [
+          231.9998016357422,
+          198.9998016357422,
+          155.9998016357422
+        ]
+      },
+      "light": {
+        "y": 5.398964072085485,
+        "unlitBaseColorRGB": [
+          231.0,
+          198.0,
+          155.0
+        ]
+      },
+      "deltaRGB": [
+        -0.9998016357421875,
+        -0.9998016357421875,
+        -0.9998016357421875
+      ]
+    },
+    {
+      "name": "SE2",
+      "xz": [
+        136.0188946533203,
+        5.334074300130208
+      ],
+      "raw": {
+        "y": 5.495533257790601,
+        "unlitBaseColorRGB": [
+          227.160888671875,
+          195.160888671875,
+          154.160888671875
+        ]
+      },
+      "light": {
+        "y": 5.403724400082979,
+        "unlitBaseColorRGB": [
+          228.82188415527344,
+          196.82188415527344,
+          155.82188415527344
+        ]
+      },
+      "deltaRGB": [
+        1.6609954833984375,
+        1.6609954833984375,
+        1.6609954833984375
+      ]
+    },
+    {
+      "name": "SE3",
+      "xz": [
+        80.01111450195312,
+        54.94096529134114
+      ],
+      "raw": {
+        "y": 5.4967614111239405,
+        "unlitBaseColorRGB": [
+          231.5144500732422,
+          198.5144500732422,
+          157.5144500732422
+        ]
+      },
+      "light": {
+        "y": 5.428302522260113,
+        "unlitBaseColorRGB": [
+          229.9337615966797,
+          196.9337615966797,
+          155.9337615966797
+        ]
+      },
+      "deltaRGB": [
+        -1.5806884765625,
+        -1.5806884765625,
+        -1.5806884765625
+      ]
+    },
+    {
+      "name": "SE4",
+      "xz": [
+        136.0188946533203,
+        54.94096529134114
+      ],
+      "raw": {
+        "y": 5.498487949371338,
+        "unlitBaseColorRGB": [
+          228.2278594970703,
+          197.2278594970703,
+          153.2278594970703
+        ]
+      },
+      "light": {
+        "y": 5.468336553235188,
+        "unlitBaseColorRGB": [
+          228.0,
+          196.0,
+          155.0
+        ]
+      },
+      "deltaRGB": [
+        -0.2278594970703125,
+        -1.2278594970703125,
+        1.7721405029296875
+      ]
+    },
+    {
+      "name": "SE5",
+      "xz": [
+        80.01111450195312,
+        99.21378198242186
+      ],
+      "raw": {
+        "y": 5.506609538393757,
+        "unlitBaseColorRGB": [
+          223.6087646484375,
+          191.6087646484375,
+          152.6087646484375
+        ]
+      },
+      "light": {
+        "y": 5.433668102741507,
+        "unlitBaseColorRGB": [
+          222.79246520996094,
+          190.79246520996094,
+          151.79246520996094
+        ]
+      },
+      "deltaRGB": [
+        -0.8162994384765625,
+        -0.8162994384765625,
+        -0.8162994384765625
+      ]
+    },
+    {
+      "name": "SE6",
+      "xz": [
+        136.0188946533203,
+        99.21378198242186
+      ],
+      "raw": {
+        "y": 5.522700835639186,
+        "unlitBaseColorRGB": [
+          224.9200439453125,
+          192.9200439453125,
+          151.9200439453125
+        ]
+      },
+      "light": {
+        "y": 5.4528213404125925,
+        "unlitBaseColorRGB": [
+          225.0,
+          193.0,
+          152.0
+        ]
+      },
+      "deltaRGB": [
+        0.0799560546875,
+        0.0799560546875,
+        0.0799560546875
+      ]
+    },
+    {
+      "name": "north-roof",
+      "xz": [
+        0,
+        -180
+      ],
+      "raw": {
+        "y": 43.74155487639935,
+        "unlitBaseColorRGB": [
+          77.18274688720703,
+          77.18274688720703,
+          79.18274688720703
+        ]
+      },
+      "light": {
+        "y": 43.638322529829516,
+        "unlitBaseColorRGB": [
+          78.0,
+          78.0,
+          80.0
+        ]
+      },
+      "deltaRGB": [
+        0.8172531127929688,
+        0.8172531127929688,
+        0.8172531127929688
+      ]
+    },
+    {
+      "name": "church-roof",
+      "xz": [
+        0,
+        20
+      ],
+      "raw": {
+        "y": 53.296516583729094,
+        "unlitBaseColorRGB": [
+          82.49856567382812,
+          83.49856567382812,
+          85.57280731201172
+        ]
+      },
+      "light": {
+        "y": 53.17781850718006,
+        "unlitBaseColorRGB": [
+          82.0,
+          82.0,
+          84.0
+        ]
+      },
+      "deltaRGB": [
+        -0.498565673828125,
+        -1.498565673828125,
+        -1.5728073120117188
+      ]
+    },
+    {
+      "name": "west-roof",
+      "xz": [
+        -140,
+        -100
+      ],
+      "raw": {
+        "y": 26.272649605174777,
+        "unlitBaseColorRGB": [
+          92.88070678710938,
+          88.88070678710938,
+          86.31011199951172
+        ]
+      },
+      "light": {
+        "y": 26.286266275437242,
+        "unlitBaseColorRGB": [
+          89.3096694946289,
+          89.3096694946289,
+          91.3096694946289
+        ]
+      },
+      "deltaRGB": [
+        -3.5710372924804688,
+        0.42896270751953125,
+        4.9995574951171875
+      ]
+    },
+    {
+      "name": "east-roof",
+      "xz": [
+        140,
+        -100
+      ],
+      "raw": {
+        "y": 23.49227878725111,
+        "unlitBaseColorRGB": [
+          197.985595703125,
+          172.3675537109375,
+          145.61134338378906
+        ]
+      },
+      "light": {
+        "y": 23.410666452119635,
+        "unlitBaseColorRGB": [
+          113.76094055175781,
+          101.15349578857422,
+          92.05622100830078
+        ]
+      },
+      "deltaRGB": [
+        -84.22465515136719,
+        -71.21405792236328,
+        -53.55512237548828
+      ]
+    },
+    {
+      "name": "gold-dome",
+      "xz": [
+        0,
+        105
+      ],
+      "raw": {
+        "y": 113.1919286302504,
+        "unlitBaseColorRGB": [
+          201.2139434814453,
+          152.06130981445312,
+          60.27737045288086
+        ]
+      },
+      "light": {
+        "y": 113.16071201917266,
+        "unlitBaseColorRGB": [
+          197.55442810058594,
+          156.94671630859375,
+          56.918670654296875
+        ]
+      },
+      "deltaRGB": [
+        -3.659515380859375,
+        4.885406494140625,
+        -3.3586997985839844
+      ]
+    }
+  ],
+  "meanSignedDeltaRGB": [
+    -5.272012810958059,
+    -3.9060110794870475,
+    -3.13150365729081
+  ],
+  "meanAbsoluteDeltaRGB": [
+    5.541297511050575,
+    4.83573391563014,
+    4.113598672967208
+  ],
+  "maxAbsoluteChannelDelta": 84.22465515136719,
+  "conclusion": "Tripo retopology rebaked texture assets and introduced UV/black-pixel regressions. Keep original normalized GLB primary; light GLB for comparison only. No local texture edits."
+}

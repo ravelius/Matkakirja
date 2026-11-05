@@ -1,0 +1,748 @@
+{
+  "model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/work/attempt02-diagnostic-yaw0.glb",
+  "modelSHA256": "55c1dbc6df0ea1b53964cb5c5ff6da83962f8de3e981e78538246d9c55702d16",
+  "method": "For each XZ point, test barycentric coverage by every non-degenerate projected GLB triangle (same geometric vertical-ray interpretation as the root QA). Starting from the nine confirmed no-hit points, scan outward in 0.25m increments and bisect first hit to <=0.01m. This measures first projected mesh boundary along sampled sections, not an exact opening polygon.",
+  "recomputedSame23RaySamples": [
+    {
+      "name": "honor-360-150",
+      "sourceTopPixel": [
+        360,
+        150
+      ],
+      "xz": [
+        -21.336297200520832,
+        -133.3518575032552
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-360-200",
+      "sourceTopPixel": [
+        360,
+        200
+      ],
+      "xz": [
+        -21.336297200520832,
+        -106.68148600260416
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-360-260",
+      "sourceTopPixel": [
+        360,
+        260
+      ],
+      "xz": [
+        -21.336297200520832,
+        -74.67704020182292
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-400-150",
+      "sourceTopPixel": [
+        400,
+        150
+      ],
+      "xz": [
+        0.0,
+        -133.3518575032552
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-400-200",
+      "sourceTopPixel": [
+        400,
+        200
+      ],
+      "xz": [
+        0.0,
+        -106.68148600260416
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-400-260",
+      "sourceTopPixel": [
+        400,
+        260
+      ],
+      "xz": [
+        0.0,
+        -74.67704020182292
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-440-150",
+      "sourceTopPixel": [
+        440,
+        150
+      ],
+      "xz": [
+        21.336297200520832,
+        -133.3518575032552
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-440-200",
+      "sourceTopPixel": [
+        440,
+        200
+      ],
+      "xz": [
+        21.336297200520832,
+        -106.68148600260416
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-440-260",
+      "sourceTopPixel": [
+        440,
+        260
+      ],
+      "xz": [
+        21.336297200520832,
+        -74.67704020182292
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "NW1",
+      "sourceTopPixel": [
+        210,
+        135
+      ],
+      "xz": [
+        -101.34741170247395,
+        -141.3529689534505
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.227891462374169
+    },
+    {
+      "name": "NW2",
+      "sourceTopPixel": [
+        210,
+        280
+      ],
+      "xz": [
+        -101.34741170247395,
+        -64.0088916015625
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.3260928940459
+    },
+    {
+      "name": "NE1",
+      "sourceTopPixel": [
+        585,
+        135
+      ],
+      "xz": [
+        98.68037455240885,
+        -141.3529689534505
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.233255013302155
+    },
+    {
+      "name": "NE2",
+      "sourceTopPixel": [
+        585,
+        280
+      ],
+      "xz": [
+        98.68037455240885,
+        -64.0088916015625
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.324030918919985
+    },
+    {
+      "name": "SW1",
+      "sourceTopPixel": [
+        147,
+        410
+      ],
+      "xz": [
+        -134.95207979329427,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.487300954674451
+    },
+    {
+      "name": "SW2",
+      "sourceTopPixel": [
+        246,
+        410
+      ],
+      "xz": [
+        -82.1447442220052,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.493548241918537
+    },
+    {
+      "name": "SW3",
+      "sourceTopPixel": [
+        147,
+        545
+      ],
+      "xz": [
+        -134.95207979329427,
+        77.34407735188802
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.495864557773379
+    },
+    {
+      "name": "SW4",
+      "sourceTopPixel": [
+        246,
+        545
+      ],
+      "xz": [
+        -82.1447442220052,
+        77.34407735188802
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.495224760457088
+    },
+    {
+      "name": "SE1",
+      "sourceTopPixel": [
+        550,
+        410
+      ],
+      "xz": [
+        80.01111450195312,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.491253173067961
+    },
+    {
+      "name": "SE2",
+      "sourceTopPixel": [
+        655,
+        410
+      ],
+      "xz": [
+        136.0188946533203,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.495533257790601
+    },
+    {
+      "name": "SE3",
+      "sourceTopPixel": [
+        550,
+        503
+      ],
+      "xz": [
+        80.01111450195312,
+        54.94096529134114
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.4967614111239405
+    },
+    {
+      "name": "SE4",
+      "sourceTopPixel": [
+        655,
+        503
+      ],
+      "xz": [
+        136.0188946533203,
+        54.94096529134114
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.498487949371338
+    },
+    {
+      "name": "SE5",
+      "sourceTopPixel": [
+        550,
+        586
+      ],
+      "xz": [
+        80.01111450195312,
+        99.21378198242186
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.506609538393757
+    },
+    {
+      "name": "SE6",
+      "sourceTopPixel": [
+        655,
+        586
+      ],
+      "xz": [
+        136.0188946533203,
+        99.21378198242186
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.522700835639186
+    }
+  ],
+  "opening": {
+    "confirmedEmptyRayCount": 9,
+    "fixedRaySetCount": 23,
+    "centerXZ": [
+      0.0,
+      -106.68148600260416
+    ],
+    "xCrossSections": [
+      {
+        "fixedZ": -133.351858,
+        "west": {
+          "edge": [
+            -37.640625,
+            -133.351858
+          ],
+          "distanceFromStartM": 37.640625,
+          "bracketM": [
+            37.6328125,
+            37.640625
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 2.797520325104155,
+            "max": 2.8539619077324314
+          }
+        },
+        "east": {
+          "edge": [
+            37.015625,
+            -133.351858
+          ],
+          "distanceFromStartM": 37.015625,
+          "bracketM": [
+            37.0078125,
+            37.015625
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 2.8706868323134263,
+            "max": 3.315086150180277
+          }
+        }
+      },
+      {
+        "fixedZ": -106.681486,
+        "west": {
+          "edge": [
+            -37.625,
+            -106.681486
+          ],
+          "distanceFromStartM": 37.625,
+          "bracketM": [
+            37.6171875,
+            37.625
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.1532981930697535,
+            "max": 3.235293565705169
+          }
+        },
+        "east": {
+          "edge": [
+            37.0859375,
+            -106.681486
+          ],
+          "distanceFromStartM": 37.0859375,
+          "bracketM": [
+            37.078125,
+            37.0859375
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 2.8234521311317287,
+            "max": 2.849187884906289
+          }
+        }
+      },
+      {
+        "fixedZ": -74.67704,
+        "west": {
+          "edge": [
+            -37.5546875,
+            -74.67704
+          ],
+          "distanceFromStartM": 37.5546875,
+          "bracketM": [
+            37.546875,
+            37.5546875
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.0492623070381546,
+            "max": 3.0508278509858098
+          }
+        },
+        "east": {
+          "edge": [
+            37.046875,
+            -74.67704
+          ],
+          "distanceFromStartM": 37.046875,
+          "bracketM": [
+            37.0390625,
+            37.046875
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.191920330529624,
+            "max": 3.391234880874579
+          }
+        }
+      }
+    ],
+    "zCrossSections": [
+      {
+        "fixedX": -21.336297,
+        "north": {
+          "edge": [
+            -21.336297,
+            -148.95492350260417
+          ],
+          "distanceFromStartM": 42.2734375,
+          "bracketM": [
+            42.265625,
+            42.2734375
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 2.627667199271257,
+            "max": 2.6583449192776705
+          }
+        },
+        "south": {
+          "edge": [
+            -21.336297,
+            -58.28304850260416
+          ],
+          "distanceFromStartM": 48.3984375,
+          "bracketM": [
+            48.390625,
+            48.3984375
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.459326624689711,
+            "max": 3.463868693547878
+          }
+        }
+      },
+      {
+        "fixedX": 0.0,
+        "north": {
+          "edge": [
+            0.0,
+            -148.80648600260417
+          ],
+          "distanceFromStartM": 42.125,
+          "bracketM": [
+            42.1171875,
+            42.125
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.574909164245801,
+            "max": 3.592411245203772
+          }
+        },
+        "south": {
+          "edge": [
+            0.0,
+            -57.84554850260416
+          ],
+          "distanceFromStartM": 48.8359375,
+          "bracketM": [
+            48.828125,
+            48.8359375
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 2.3592194629011756,
+            "max": 2.468436770284855
+          }
+        }
+      },
+      {
+        "fixedX": 21.336297,
+        "north": {
+          "edge": [
+            21.336297,
+            -148.66586100260417
+          ],
+          "distanceFromStartM": 41.984375,
+          "bracketM": [
+            41.9765625,
+            41.984375
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.0340790301390483,
+            "max": 3.0766005662445535
+          }
+        },
+        "south": {
+          "edge": [
+            21.336297,
+            -58.27523600260416
+          ],
+          "distanceFromStartM": 48.40625,
+          "bracketM": [
+            48.3984375,
+            48.40625
+          ],
+          "bracketWidthM": 0.0078125,
+          "surfaceYAtFirstHitM": {
+            "min": 3.040660357067697,
+            "max": 3.177895652279849
+          }
+        }
+      }
+    ],
+    "accuracyToleranceM": 0.01,
+    "coarseScanStepM": 0.25,
+    "polygonClaim": false
+  },
+  "smallCourtyardFloorSamples": {
+    "count": 14,
+    "rangeM": [
+      5.227891462374169,
+      5.522700835639186
+    ],
+    "medianM": 5.494386501187813,
+    "candidateYMatchingSmallCourtyardsMinus0_05M": 5.444386501187813
+  },
+  "perimeterBandSamples": [
+    {
+      "fromCrossSection": {
+        "fixedZ": -133.351858,
+        "side": "west"
+      },
+      "sampleXZ": [
+        -39.640625,
+        -133.351858
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2614189638925604,
+        4.153023155223551
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedZ": -133.351858,
+        "side": "east"
+      },
+      "sampleXZ": [
+        39.015625,
+        -133.351858
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.297615094319758,
+        4.108111346271184
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedZ": -106.681486,
+        "side": "west"
+      },
+      "sampleXZ": [
+        -39.625,
+        -106.681486
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.262280881313983,
+        4.226728916168213
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedZ": -106.681486,
+        "side": "east"
+      },
+      "sampleXZ": [
+        39.0859375,
+        -106.681486
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2591716072128953,
+        4.149695816411436
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedZ": -74.67704,
+        "side": "west"
+      },
+      "sampleXZ": [
+        -39.5546875,
+        -74.67704
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2921231811734275,
+        4.0464214151680284
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedZ": -74.67704,
+        "side": "east"
+      },
+      "sampleXZ": [
+        39.046875,
+        -74.67704
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2629830837249756,
+        4.214394471024499
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedX": -21.336297,
+        "side": "north"
+      },
+      "sampleXZ": [
+        -21.336297,
+        -150.95492350260417
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2675889971055825,
+        4.137861800583223
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedX": -21.336297,
+        "side": "south"
+      },
+      "sampleXZ": [
+        -21.336297,
+        -56.28304850260416
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.268907430367283,
+        4.232309314464383
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedX": 0.0,
+        "side": "north"
+      },
+      "sampleXZ": [
+        0.0,
+        -150.80648600260417
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2681832647283384,
+        4.210966280926602
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedX": 0.0,
+        "side": "south"
+      },
+      "sampleXZ": [
+        0.0,
+        -55.84554850260416
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2578222583935985,
+        4.226001233589542
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedX": 21.336297,
+        "side": "north"
+      },
+      "sampleXZ": [
+        21.336297,
+        -150.66586100260417
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.2770122532616286,
+        4.232713061121942
+      ]
+    },
+    {
+      "fromCrossSection": {
+        "fixedX": 21.336297,
+        "side": "south"
+      },
+      "sampleXZ": [
+        21.336297,
+        -56.27523600260416
+      ],
+      "outsideOpeningOffsetM": 2.0,
+      "intersectionCount": 2,
+      "heightRangeM": [
+        2.262983083724975,
+        4.225765427770151
+      ]
+    }
+  ],
+  "perimeterBandSampleHeightRangeM": [
+    2.2578222583935985,
+    4.232713061121942
+  ],
+  "heightCaveat": "Candidate floor elevation derived from small-courtyard pavers is substantially above sampled projected perimeter-band triangles; validate against game geometry before use.",
+  "suggestedRectangularGameFloor": {
+    "xMin": -39.640625,
+    "xMax": 39.0859375,
+    "zMin": -150.95492350260417,
+    "zMax": -55.84554850260416,
+    "ySuggested": 5.444386501187813,
+    "overlapUnderPerimeterM": 2.0,
+    "status": "game-side suggestion only; do not add to GLB; validate against edge samples and requester intent"
+  }
+}

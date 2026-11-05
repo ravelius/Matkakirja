@@ -1,0 +1,307 @@
+{
+  "modelSHA256": "55c1dbc6df0ea1b53964cb5c5ff6da83962f8de3e981e78538246d9c55702d16",
+  "method": "Vertical rays at selected 800x800 top-view pixels; barycentric XZ intersections with actual GLB triangles; no face culling. HighestY null means no geometry at that XZ, not merely a white texture. Finite samples only.",
+  "samples": [
+    {
+      "name": "honor-360-150",
+      "sourceTopPixel": [
+        360,
+        150
+      ],
+      "xz": [
+        -21.336297200520832,
+        -133.3518575032552
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-360-200",
+      "sourceTopPixel": [
+        360,
+        200
+      ],
+      "xz": [
+        -21.336297200520832,
+        -106.68148600260416
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-360-260",
+      "sourceTopPixel": [
+        360,
+        260
+      ],
+      "xz": [
+        -21.336297200520832,
+        -74.67704020182292
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-400-150",
+      "sourceTopPixel": [
+        400,
+        150
+      ],
+      "xz": [
+        0.0,
+        -133.3518575032552
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-400-200",
+      "sourceTopPixel": [
+        400,
+        200
+      ],
+      "xz": [
+        0.0,
+        -106.68148600260416
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-400-260",
+      "sourceTopPixel": [
+        400,
+        260
+      ],
+      "xz": [
+        0.0,
+        -74.67704020182292
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-440-150",
+      "sourceTopPixel": [
+        440,
+        150
+      ],
+      "xz": [
+        21.336297200520832,
+        -133.3518575032552
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-440-200",
+      "sourceTopPixel": [
+        440,
+        200
+      ],
+      "xz": [
+        21.336297200520832,
+        -106.68148600260416
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "honor-440-260",
+      "sourceTopPixel": [
+        440,
+        260
+      ],
+      "xz": [
+        21.336297200520832,
+        -74.67704020182292
+      ],
+      "triangleIntersections": 0,
+      "highestY": null
+    },
+    {
+      "name": "NW1",
+      "sourceTopPixel": [
+        210,
+        135
+      ],
+      "xz": [
+        -101.34741170247395,
+        -141.3529689534505
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.227891462374168
+    },
+    {
+      "name": "NW2",
+      "sourceTopPixel": [
+        210,
+        280
+      ],
+      "xz": [
+        -101.34741170247395,
+        -64.0088916015625
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.3260928940459
+    },
+    {
+      "name": "NE1",
+      "sourceTopPixel": [
+        585,
+        135
+      ],
+      "xz": [
+        98.68037455240885,
+        -141.3529689534505
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.233255013302154
+    },
+    {
+      "name": "NE2",
+      "sourceTopPixel": [
+        585,
+        280
+      ],
+      "xz": [
+        98.68037455240885,
+        -64.0088916015625
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.324030918919986
+    },
+    {
+      "name": "SW1",
+      "sourceTopPixel": [
+        147,
+        410
+      ],
+      "xz": [
+        -134.95207979329427,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.487300954674451
+    },
+    {
+      "name": "SW2",
+      "sourceTopPixel": [
+        246,
+        410
+      ],
+      "xz": [
+        -82.1447442220052,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.493548241918537
+    },
+    {
+      "name": "SW3",
+      "sourceTopPixel": [
+        147,
+        545
+      ],
+      "xz": [
+        -134.95207979329427,
+        77.34407735188802
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.495864557773379
+    },
+    {
+      "name": "SW4",
+      "sourceTopPixel": [
+        246,
+        545
+      ],
+      "xz": [
+        -82.1447442220052,
+        77.34407735188802
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.495224760457088
+    },
+    {
+      "name": "SE1",
+      "sourceTopPixel": [
+        550,
+        410
+      ],
+      "xz": [
+        80.01111450195312,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.491253173067961
+    },
+    {
+      "name": "SE2",
+      "sourceTopPixel": [
+        655,
+        410
+      ],
+      "xz": [
+        136.0188946533203,
+        5.334074300130208
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.495533257790601
+    },
+    {
+      "name": "SE3",
+      "sourceTopPixel": [
+        550,
+        503
+      ],
+      "xz": [
+        80.01111450195312,
+        54.94096529134114
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.4967614111239405
+    },
+    {
+      "name": "SE4",
+      "sourceTopPixel": [
+        655,
+        503
+      ],
+      "xz": [
+        136.0188946533203,
+        54.94096529134114
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.498487949371338
+    },
+    {
+      "name": "SE5",
+      "sourceTopPixel": [
+        550,
+        586
+      ],
+      "xz": [
+        80.01111450195312,
+        99.21378198242186
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.506609538393757
+    },
+    {
+      "name": "SE6",
+      "sourceTopPixel": [
+        655,
+        586
+      ],
+      "xz": [
+        136.0188946533203,
+        99.21378198242186
+      ],
+      "triangleIntersections": 2,
+      "highestY": 5.522700835639186
+    }
+  ],
+  "honorCourtEmptySamples": 9,
+  "smallCourtFloorSamples": 14
+}

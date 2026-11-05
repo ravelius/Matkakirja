@@ -1,0 +1,313 @@
+[
+ {
+  "kansio": "output/invalidit-24l-20261105/delivery/invalides-3d-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "invalides.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "invalides.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 44766,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -181.5,
+       0,
+       -200.028
+      ],
+      "max": [
+       181.5,
+       142.792,
+       200.028
+      ],
+      "koko": [
+       363,
+       142.792,
+       400.056
+      ]
+     }
+    },
+    "polku": "invalides.glb"
+   },
+   {
+    "nimi": "invalides-kevyt.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "invalides-kevyt.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 28009,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "512×512 jpg",
+      "2048×2048 jpg",
+      "1024×1024 png"
+     ],
+     "rajat": {
+      "min": [
+       -181.5,
+       0,
+       -200.097
+      ],
+      "max": [
+       181.5,
+       142.767,
+       200.097
+      ],
+      "koko": [
+       363,
+       142.767,
+       400.193
+      ]
+     }
+    },
+    "polku": "vertailu/invalides-kevyt.glb"
+   },
+   {
+    "nimi": "kevyt-etela.png",
+    "polku": "esikatselu/kevyt-etela.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-ita.png",
+    "polku": "esikatselu/kevyt-ita.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-koillinen.png",
+    "polku": "esikatselu/kevyt-koillinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-lansi.png",
+    "polku": "esikatselu/kevyt-lansi.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-lounas.png",
+    "polku": "esikatselu/kevyt-lounas.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-pohjoinen.png",
+    "polku": "esikatselu/kevyt-pohjoinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-ylhaalta.png",
+    "polku": "esikatselu/kevyt-ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "pelikulma-koillinen.png",
+    "polku": "esikatselu/pelikulma-koillinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "pelikulma-lounas.png",
+    "polku": "esikatselu/pelikulma-lounas.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-etela.png",
+    "polku": "esikatselu/raaka-etela.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-ita.png",
+    "polku": "esikatselu/raaka-ita.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-koillinen.png",
+    "polku": "esikatselu/raaka-koillinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-lansi.png",
+    "polku": "esikatselu/raaka-lansi.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-lounas.png",
+    "polku": "esikatselu/raaka-lounas.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-pohjoinen.png",
+    "polku": "esikatselu/raaka-pohjoinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-ylhaalta.png",
+    "polku": "esikatselu/raaka-ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "ylhaalta.png",
+    "polku": "esikatselu/ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "viisto-koillinen.png",
+    "polku": "lahteet/viisto-koillinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1536,
+     "h": 1024
+    }
+   },
+   {
+    "nimi": "viisto-lounas.png",
+    "polku": "lahteet/viisto-lounas.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1536,
+     "h": 1024
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: muut: ei liikettä"
+  ]
+ }
+]
