@@ -27,3 +27,14 @@ JU:n viesti sanoi 2 ruuturiviä; todellisuudessa 3392 (t 193–317). PUUTE aloit
 ## Muuta
 Omistaja 17.58 (Raamattu 10.5, sitova): jokainen Mac-ajo ratkaisee yhden kysymyksen; pyynnössä rivi "mitä tämä ratkaisee", enintään noin 5 kuvaa, ei verrokkia, jos vanha kuva kelpaa, ei ajoa, jos testi tai loki riittää.
 EsitysAla ja AsetaJatkaPaikka lukevat lepoarvoa OpasSovitin.KoriKompassiNormin kautta; kori keinuu nyt nappien alla, kuvassa tarkistettava, ettei rivi näytä irralliselta.
+
+## LISÄYS 18.3x: ajo tuli, korvaa kohdat "Odottaa 1 ja 3" ja "Seuraavaksi"
+Ajo lokit/natiiviseppa-pallo-korjaus-7d719ae76 (PUUTE 0). Analyysi: python3 -I _tyo/natiiviseppa/pallo-aloitus/korjaus.py <unity.log>; kiihtyvyys.py <unity.log> 33.19 45.89.
+- Napit: 0 → 48 → 24 rivin ilmestyessä (yksi ruutu 48:ssa, tämä jää korjaamatta), sen jälkeen 24 koko ajon, vaikka kompassi keinui 0,838–0,95. Kuvissa rivi samalla korkeudella.
+- Kartta: alaraja ei vaihtunut kertaakaan; kerronnassa suurin kallistuksen muutos 0,03° ruudussa, yli 0,1°:n hyppyjä 0 (ennen 18). Lennolla enintään 0,14°.
+- Kiihtyvyys MITATTU 81,2 m/s², huippunopeus 160 m/s, suunta 30 → 62° (32°, enintään 5,6 °/s), ei isoa suunnanmuutosta. PT 18.3x hyväksyi tämän ajoon vain tälle laskulle.
+- AVOIN 1: perillä 12,7 s, ei 8,5: saapumisportti 4,2 s (tasanne). Portti odottaa laattoja; Macin luku, iPadilla mittaamatta.
+- AVOIN 2: ylimääräiset lauseet. t+0,0 "Tehdään yhdessä pieni kierros." (Silta(Aloitus) Kaupunkikierroksessa; vain tekstipolulla, äänipolulla silta.isPlaying estää), t+6,0 "Kohta ollaan siellä." (laukaisija ei löytynyt; katso OpasSovitin.cs noin 2591 ja Silta-kutsut), ensimmäinen kerronnan tekstitys t+8,3. Tavoite oli kerronta ilman taukoa, ja PT:n sanatarkka tervehdys on vain se yksi lause: poista molemmat tältä lennolta ja mittaa, milloin kerronnan ÄÄNI alkaa (tekstitysaika ei todista sitä).
+- Valkoiset rakennukset näkyvät sekä ennen- että jälkeen-kuvissa (Mac-ajo, pohja 9e8c8ab1e), eivät tule tästä erästä; syytä ei selvitetty.
+- PT 18.3x: lasku 8,5 s ja kerronta 6,0 s hyväksytty ajoon; vain Pariisin pallokierros; raja 10 m/s² ei muutu muualla; väliaikainen 6 s, viennin jälkeen kesto tiedostosta (koodi lukee klipin pituuden itse). Ei junaan.
+Seuraavaksi: AVOIN 2 korjaus + testi, sitten uusi ajo, pyyntöön "mitä tämä ratkaisee" ja kuvamäärä (10.5), skenaariota ei muokata ajon aikana. Parin vanhat kuvat eivät ole samasta hetkestä: vanha a3 16 s saapumisen jälkeen, a4 jo lähdössä Louvreen.
