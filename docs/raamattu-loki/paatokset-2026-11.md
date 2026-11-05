@@ -369,3 +369,7 @@ OMISTAJAN PÄÄTÖS klo 21.02: "Saako aloituskaupungissa olla isoisän luento?" 
 ## KUVAT KADONNEISTA AARTEISTA (OMISTAJA 21.04, KK) (5.11.2026 klo 21.0x)
 
 OMISTAJAN PÄÄTÖS klo 21.04: "Kuvat pitää olla kadonneista aarteista" (jatkaa 20.51:n sanoja "Näitä mini rakennuksia ei saa olla"). KK: tulkinta "kaikki viisi pois" oli liian laaja; pikkurakennuksen tilalle tulee kuva, tähtikyltti viereen (14.57:n sanat). Raamattu 2.215. Kuvan muodon KK kysyy kortilla; NUI seis siihen asti, KK kertoi NUI:lle suoraan. Muut kaupungit: KK:n mukaan jo päätetty (2.204, 2.215), ei korttia; 2.204:n leikattu kuva päivitetään, kun muoto on selvä.
+
+## KADONNEEN AARTEEN KUVA ON PYÖREÄ (OMISTAJA 21.07, KK) (5.11.2026 klo 21.1x)
+
+OMISTAJAN PÄÄTÖS klo 21.07: "Millainen kuva kadonneella aarteella on pikkurakennuksen tilalla?" = "Pyöreä kuva (Suositus)"; kortissa: "Sama merkki kuin muilla kohteilla, vieressä tähtikyltti." Raamattu 2.215 ja 2.204. Neljä pelkän kyltin kohdetta ennallaan (2.11. klo 08.42). KK välitti NUI:lle suoraan.
