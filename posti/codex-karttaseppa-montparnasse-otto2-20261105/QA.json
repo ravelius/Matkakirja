@@ -1,0 +1,363 @@
+{
+  "taskNumber": 2124,
+  "site": "montparnasse-otto2",
+  "completedAt": "2026-11-05T17:24:26.668084+00:00",
+  "generationCalls": 7,
+  "selectedImageCount": 7,
+  "selectedAttemptKeys": [
+    "viisto-lounas-otto01",
+    "viisto-koillinen-otto01",
+    "ylhaalta-otto01",
+    "etela-otto01",
+    "pohjoinen-otto01",
+    "ita-otto01",
+    "lansi-otto01"
+  ],
+  "unselectedAttemptKeys": [],
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "viisto-lounas",
+      "selectedAttemptKey": "viisto-lounas-otto01",
+      "sha256": "90f6b8a6bd741529c4dfe70741dd7d82e5f0e2e00518c2725e20a33146329454",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "selectedAttemptKey": "viisto-koillinen-otto01",
+      "sha256": "d79179b8f99407cf71c054ddb0642f3b4e1450b8079509ce5993c183aa3b8787",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    },
+    {
+      "view": "ylhaalta",
+      "selectedAttemptKey": "ylhaalta-otto01",
+      "sha256": "522a76714573118bd5a920c8c0405aeb91a9f46b2080ea7b7e028104adb2255b",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    },
+    {
+      "view": "etela",
+      "selectedAttemptKey": "etela-otto01",
+      "sha256": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    },
+    {
+      "view": "pohjoinen",
+      "selectedAttemptKey": "pohjoinen-otto01",
+      "sha256": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    },
+    {
+      "view": "ita",
+      "selectedAttemptKey": "ita-otto01",
+      "sha256": "70244dca230d6db4900185722cecf410e4e2594f869f5154e58a34b8d9c23d42",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    },
+    {
+      "view": "lansi",
+      "selectedAttemptKey": "lansi-otto01",
+      "sha256": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true,
+      "nativeHashVerified": true
+    }
+  ],
+  "allSevenNative1536x1024RGB": true,
+  "allSelectedNativeHashesVerified": true,
+  "productionPixelsPostprocessed": false,
+  "heightDatum": "210 m from ground to highest building level, no antennas",
+  "sideMeasurementMethod": "Silhouette bbox: max(RGB)-min(RGB)>10 OR min(RGB)<180, or explicit bboxOverrides. Manual cornice/highest-level datum; uncertainty 4px. Height ratio uses 210m to highest level, without antennas. No normalization of production PNGs.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        649,
+        105,
+        885,
+        921
+      ],
+      "bboxMethod": "tone/color threshold",
+      "widthPx": 236,
+      "totalHeightPx": 816,
+      "groundY": 920,
+      "corniceY": 111,
+      "corniceHeightPx": 809,
+      "roofY": 105,
+      "roofHeightPx": 815,
+      "highestLevelY": 105,
+      "heightToHighestLevelPx": 815,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.28957055214723926,
+      "targetRatio": 0.29523809523809524,
+      "ratioErrorPercent": -1.9196516920641282,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 210
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        649,
+        104,
+        885,
+        921
+      ],
+      "bboxMethod": "tone/color threshold",
+      "widthPx": 236,
+      "totalHeightPx": 817,
+      "groundY": 920,
+      "corniceY": 111,
+      "corniceHeightPx": 809,
+      "roofY": 104,
+      "roofHeightPx": 816,
+      "highestLevelY": 104,
+      "heightToHighestLevelPx": 816,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.28921568627450983,
+      "targetRatio": 0.29523809523809524,
+      "ratioErrorPercent": -2.0398481973434412,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 210
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        702,
+        105,
+        834,
+        921
+      ],
+      "bboxMethod": "tone/color threshold",
+      "widthPx": 132,
+      "totalHeightPx": 816,
+      "groundY": 920,
+      "corniceY": 112,
+      "corniceHeightPx": 808,
+      "roofY": 105,
+      "roofHeightPx": 815,
+      "highestLevelY": 105,
+      "heightToHighestLevelPx": 815,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.1619631901840491,
+      "targetRatio": 0.18571428571428572,
+      "ratioErrorPercent": -12.78905143935819,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 210
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        690,
+        104,
+        846,
+        921
+      ],
+      "bboxMethod": "tone/color threshold",
+      "widthPx": 156,
+      "totalHeightPx": 817,
+      "groundY": 920,
+      "corniceY": 111,
+      "corniceHeightPx": 809,
+      "roofY": 104,
+      "roofHeightPx": 816,
+      "highestLevelY": 104,
+      "heightToHighestLevelPx": 816,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.19117647058823528,
+      "targetRatio": 0.18571428571428572,
+      "ratioErrorPercent": 2.941176470588225,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 210
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 0.0,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 16.666666666666664,
+      "pass5Percent": false
+    }
+  ],
+  "corniceSpreadPercentOfMean": 0.12364760432766615,
+  "corniceAgreement5Percent": true,
+  "baselinePixelSpread": 0,
+  "commonPixelsPerRealMetre": [
+    3.880952380952381,
+    3.8857142857142857,
+    3.880952380952381,
+    3.8857142857142857
+  ],
+  "commonScaleSpreadPercent": 0.12262415695892047,
+  "commonScalePass5Percent": true,
+  "obliques": {
+    "viisto-lounas": {
+      "targetElevationDegrees": 65,
+      "passTarget": false,
+      "calibrated": false,
+      "estimatedElevationDegrees": 58.3,
+      "uncertaintyDegrees": 10,
+      "roofEdgeSegments": [
+        [
+          [
+            655,
+            250
+          ],
+          [
+            800,
+            110
+          ]
+        ],
+        [
+          [
+            647,
+            362
+          ],
+          [
+            691,
+            395
+          ]
+        ]
+      ],
+      "method": "Straight-middle tangent proxy: asin(sqrt(abs(m1*m2))). Roof edges are curved, so not exact; 65 degrees not verified.",
+      "cameraSide": "south-west requested; long side right, short end left"
+    },
+    "viisto-koillinen": {
+      "targetElevationDegrees": 65,
+      "passTarget": false,
+      "calibrated": false,
+      "estimatedElevationDegrees": 60.7,
+      "uncertaintyDegrees": 10,
+      "roofEdgeSegments": [
+        [
+          [
+            777,
+            140
+          ],
+          [
+            912,
+            295
+          ]
+        ],
+        [
+          [
+            852,
+            445
+          ],
+          [
+            920,
+            400
+          ]
+        ]
+      ],
+      "method": "Same approximate tangent proxy, curved edge uncertainty; 65 degrees not verified.",
+      "oppositeCameraVerified": false,
+      "cameraSide": "north-east requested; long side left, short end right, but symmetric roof has no unique opposite-face marker"
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      668,
+      408,
+      868,
+      616
+    ],
+    "actualBBox": [
+      672,
+      405,
+      860,
+      608
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": true,
+    "maskContainment": {
+      "bbox": [
+        672,
+        405,
+        860,
+        608
+      ],
+      "pixels": 21692,
+      "footPixels": 19900,
+      "outsidePixels": 3076,
+      "outsidePercent": 14.18034298358842,
+      "maskCoverage": 93.54773869346734,
+      "method": "Building silhouette: maxRGB-minRGB>10 OR minRGB<180; source footprint pixels>0. Red is footprint boundary, blue is building outside."
+    }
+  },
+  "visualIssues": [
+    "Tummentunut, hieman pronssiin vivahtava lasi ja ohuet pystylinjat toteutuvat; paksut vaaleat rivat/kerrosnauhat poistuivat. Kerrosviivoja näkyy silti tummana hentona ruudukkona.",
+    "Idän kapea sivu on liian kapea suhteessa 210 m korkeuteen ja lännen sivuun; lopulliset prosentit taulukossa.",
+    "Yläkuvan 21692 torni-pikselistä 3076 (14,18 %) on lähteen jalanjäljen ulkopuolella. Jalanjäljestä peittyy 93,55 %. Pelkkä lähellä oleva bbox ei siis tarkoita maskiin osumista.",
+    "Kapeat päädyt pyöristyivät liikaa etenkin yläkuvassa. Pitkien sivujen haluttu loiva kuperuus ei erotu yhtä selvästi kuin liian pyöreät päädyt.",
+    "Viistojen 65° ja täsmällinen vastakkaisuus eivät ole kalibroidusti varmennettuja; katon kaarevuus rajoittaa viivakulmamittausta.",
+    "Harmaassa taustassa on hyvin hentoa paperimaista vaihtelua; se ei ole täysin tasainen väri."
+  ],
+  "notes": "Seitsemän uutta kokonaista generointia, ei koon korjausyrityksiä eikä uutta maapohjaa. 24h:n 210 m mitataan ylimpään tasoon ilman antenneja, pitkä sivu 62 m ja kapea 39 m. Pohjois- ja eteläsivut vastaavat luodetta/kaakkoa, kapeat koillista/lounasta; suunta 129° säilytetty. Kaikissa neljässä sivussa mitattu sama yläparapetin ALAREUNA (ei kerrosviivaa); yläreuna mitataan erikseen ylimpänä tasona. Kaarevan idän parapetin keskikohdan mitta ±4 px. Oikea 210 m korkeus kahdesta riippumattomasta ensisijaisesta lähteestä; 62×39 m tilaajan mitat. 177×111 m mallijalanjälkeä ei muutettu. Omistaja hyväksyi otto1:n massan, katon, suunnan ja jalanjäljen, mutta tämä uusi sarja odottaa arviota. Vanhaa hyväksyntää ei siirretä uusille pikseleille. Ei Tripo-siirtoa, runtime-kytkentää tai pelijulkaisua. Maapohjana Karttasepän oma pohja, ei tämän erän tuotantoa. Kolmas laatuyritys vaatii uuden omistajapäätöksen.",
+  "noAutomaticRetry": true
+}
