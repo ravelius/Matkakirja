@@ -11,6 +11,8 @@ Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, puhdas. Repo /Users/S
 - 648e932ac: Äänimuistivahti, TervehdysJaLasku perusteltu (vika haaran 7d719ae76:sta; JU:n runko 94f7eb0e4 2/2).
 - 30fdefd98: PT:n siirtämä: esityksen hidas kuva ei putoa. EsitysKuvaJono (Ydin/Kierros): järjestys, seuraava vähintään 1 s myöhässä tulleen jälkeen, Introesitys.OdotaKuvia: loppu odottaa enintään 6 s (omat arviot). Yli 6 s:n latauksella viimeinen voi jäädä pois; kerrottu PT:lle. Ei ajettu. PT: "ei omaa ajoa, seuraavaan yhteiseen".
 Testit kärjessä: Linssit 2248/2248, unity-tarkistus 0, kielivahti ok. Kartta LiikeLaatat ei ajettu (Karttaan ei koskettu).
+Esityskuva: 6 s:n raja kelpaa (KK, PT); yli 6 s myöhästyneen kuvan ilmestymistä kartalle ei tehty, koska se vaatisi erillistä työtä esityksen sulkeuduttua.
+
 
 ## Avoimet
 1. Ateena: kamera siirtyy lähinäkymästä koko Kreikan näkymään noin 1 s Pulun alusta (unity.log rivi 2706 "saapuminen: GRC Molempiin", b2 vs b3). Pariisin ajossa ei samassa kohdassa. Syy todentamatta; laukaisija on PalloKierto.SaapuminenAlkaa, kutsujaa ei löydetty. Kerrottu KK:lle (viesti oli jonossa 21.4x). Vanhassa kulussa arvio: sama tapahtui luennan jälkeen (muisti esikatselu-uusi-peli-palauttaa-kameran, Pariisi), nyt luentaa ei ole; ei todennettu Ateenalle.
