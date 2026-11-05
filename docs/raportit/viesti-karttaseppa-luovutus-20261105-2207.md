@@ -23,7 +23,8 @@ Komennot 1272 ja Nahtavyysalue 447, 829 valopoikkeuksia, PT hyväksyi. Nahtavyys
 
 ## PÄIVITYS: KK:n päätökset ajosta (voittaa alla olevan)
 Invalidit kelpaa kokeena, ei junaan. Riemukaaren aukio kelpaa. Eiffel pysyy paikallaan, kiveys kelpaa, kunnes Codexin alusta tulee. Tilaukset postissa: Codex jatkaa alustoihin (Eiffel lisätty listan loppuun; Grand Palais pois), Tripolle Riemukaaren katto `riemukaari-3d-v2`.
-**Seuraava yhteinen ajo, ei omaa ajoa:** `_tyo/karttaseppa/sk-pariisi-yhteis-2.txt`, 6 kuvaa valmiina + Eiffel 45° omistajan kuvan kamerasta (kaikki neljä jalkaa kuvassa). **Puuttuu:** kuvan `omistaja-20261105/eiffel-maa-puuttuu-2132.png` polku, kysytty KK:lta. Lisää Eiffel-kuva skenaarioon ennen vuoropyyntöä. Yli 5 kuvaa, joten pyyntöön perustelu: KK:n lista ja sävyn kaksi tilaa. Pystysauma tummumisen jälkeen.
+**Seuraava yhteinen ajo, ei omaa ajoa:** `_tyo/karttaseppa/sk-pariisi-yhteis-2.txt`, 7 kuvaa, kärki 93d41db55, vuoro pyydetty JU:lta perusteluineen. Tuloksista parit KK:lle; Eiffelin vanha pari `Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261105/eiffel-maa-puuttuu-2132.png`. Pystysauma tummumisen jälkeen.
+**Grand Palais (KK kysyi syytä, vastattu):** suositus lisätä Codexin listalle; odottaa KK:n sanaa.
 
 ## TYÖJONO
 1. Sävyn kaksi pistettä seuraavaan ajoon. Ajot: pyyntöön rivi "ratkaisee" ja enintään noin 5 kuvaa (JU, omistaja 17.58), muuten JU palauttaa. Vuoro JU:lta; ajat itse: `PROTO_LINJA=2 ESIKATSELU_PISTEKERROIN=0.465 /bin/zsh tyokalut/esikatselu.sh <sha> <sk> ipad --batch`, lopuksi LUKKO VAPAA.
