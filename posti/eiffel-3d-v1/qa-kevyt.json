@@ -1,0 +1,166 @@
+{
+  "source": "output/eiffel-24c-2108-20261105/raw/eiffel24c-attempt02-retopo.glb",
+  "sourceSHA256": "50690dc949096ce9d9f33034f4b3e7e8ca83ee15ea8c817f0907e05bbde4e66d",
+  "outputSHA256": "c8d2347ee3107b96cbde41e41e69219898a20a71fb1467d9fd2ae4ba115b3c59",
+  "uniformScale": 813.1351683500609,
+  "originOffset": [
+    -9.918212890625e-05,
+    0.0,
+    -1.52587890625e-05
+  ],
+  "bounds": [
+    [
+      -150.0,
+      0.0,
+      -148.65379080557278
+    ],
+    [
+      150.0,
+      795.5165779713822,
+      148.65379080557278
+    ]
+  ],
+  "dimensions": [
+    300.0,
+    795.5165779713822,
+    297.30758161114557
+  ],
+  "operation": "Uniform positive scale plus base centering only; normals, UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/work/attempt2-light.glb",
+    "bytes": 3669448,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 35805,
+    "triangles": 28098,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -150.0,
+        0.0,
+        -148.65379333496094
+      ],
+      [
+        150.0,
+        795.5166015625,
+        148.65379333496094
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 158,
+    "uvZero3DArea": 815.9413598372364,
+    "surface3DArea": 514236.1402739753,
+    "uvZero3DAreaFraction": 0.0015867055928867975,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_a7bb97de-670c-4213-83ad-4c0d71a5658f_2",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_a7bb97de-670c-4213-83ad-4c0d71a5658f_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_a7bb97de-670c-4213-83ad-4c0d71a5658f_1",
+        "mimeType": "image/png",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 35805,
+        "triangles": 28098,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 158,
+        "uvZero3DArea": 815.9413598372364,
+        "surface3DArea": 514236.1402739753
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-south.png",
+      "blackPixelsRGBAllBelow16": 31,
+      "size": [
+        1100,
+        1100
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-north.png",
+      "blackPixelsRGBAllBelow16": 65,
+      "size": [
+        1100,
+        1100
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-east.png",
+      "blackPixelsRGBAllBelow16": 1,
+      "size": [
+        1100,
+        1100
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-west.png",
+      "blackPixelsRGBAllBelow16": 46,
+      "size": [
+        1100,
+        1100
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-top.png",
+      "blackPixelsRGBAllBelow16": 6,
+      "size": [
+        1100,
+        1100
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-sw.png",
+      "blackPixelsRGBAllBelow16": 4,
+      "size": [
+        1100,
+        1100
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/qa/attempt2-light-ne.png",
+      "blackPixelsRGBAllBelow16": 2,
+      "size": [
+        1100,
+        1100
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "reviewType": "Read-only attempt2 geometric ratio measurement; no GLB changes.",
+  "sourceGLB": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eiffel-24c-2108-20261105/work/attempt2-raw.glb",
+  "triangles": 97184,
+  "bounds_m": {
+    "x": [
+      -150.0,
+      150.0
+    ],
+    "y": [
+      0.0,
+      794.7625122070312
+    ],
+    "z": [
+      -148.6679229736328,
+      148.6679229736328
+    ]
+  },
+  "baseAndHeight": {
+    "baseWidthX_m": 300.0,
+    "baseWidthZ_m": 297.3358459472656,
+    "meanBaseWidth_m": 298.6679229736328,
+    "height_m": 794.7625122070312,
+    "baseToHeightRatio": 0.3757951820654463,
+    "targetRatio": 0.38,
+    "relativeError": -0.011065310354088642,
+    "relativeTolerance": 0.05,
+    "impliedHeightFor300mBase_m": 789.4736842105264
+  },
+  "platforms": [
+    {
+      "name": "platform1-lower",
+      "observedYCenter_m": 139,
+      "levelYAreaWeighted_m": 139.73857187769332,
+      "heightRatio": 0.17582431195659137,
+      "targetHeightRatio": 0.17,
+      "heightRelativeError": 0.03426065856818447,
+      "widthBand_m": [
+        193.6598892211914,
+        192.7863006591797
+      ],
+      "widthBandHalfHeight_m": 5,
+      "widthRatioOfMeanBase": 0.6469496054895851,
+      "targetWidthRatioOfBase": 0.52,
+      "widthRelativeError": 0.2441338567107406,
+      "upwardHorizontalSurfaceTriangles": 1296,
+      "horizontalSurfaceArea_m2": 35331.61232379652,
+      "surfaceTriangleBounds_m": {
+        "x": 193.06512451171875,
+        "z": 192.2658920288086
+      }
+    },
+    {
+      "name": "platform2-middle",
+      "observedYCenter_m": 272,
+      "levelYAreaWeighted_m": 272.2763314119368,
+      "heightRatio": 0.3425882917600551,
+      "targetHeightRatio": 0.35,
+      "heightRelativeError": -0.021176309256985312,
+      "widthBand_m": [
+        115.5528450012207,
+        116.37063980102539
+      ],
+      "widthBandHalfHeight_m": 5,
+      "widthRatioOfMeanBase": 0.3882631293195837,
+      "targetWidthRatioOfBase": 0.32,
+      "widthRelativeError": 0.21332227912369897,
+      "upwardHorizontalSurfaceTriangles": 570,
+      "horizontalSurfaceArea_m2": 10127.834035722974,
+      "surfaceTriangleBounds_m": {
+        "x": 115.05718994140625,
+        "z": 115.06958770751953
+      }
+    },
+    {
+      "name": "platform3-upper",
+      "observedYCenter_m": 671,
+      "levelYAreaWeighted_m": 670.8481837798602,
+      "heightRatio": 0.8440863446326063,
+      "targetHeightRatio": 0.84,
+      "heightRelativeError": 0.004864695991198067,
+      "widthBand_m": [
+        42.3619384765625,
+        42.33405876159668
+      ],
+      "widthBandHalfHeight_m": 5,
+      "widthRatioOfMeanBase": 0.1417895775262688,
+      "targetWidthRatioOfBase": 0.14,
+      "widthRelativeError": 0.012782696616205663,
+      "upwardHorizontalSurfaceTriangles": 13,
+      "horizontalSurfaceArea_m2": 74.16490182118004,
+      "surfaceTriangleBounds_m": {
+        "x": 33.67115592956543,
+        "z": 33.71297550201416
+      }
+    }
+  ],
+  "additionalRingCandidate": {
+    "centerY_m": 610.0,
+    "heightRatio": 0.7675248777223382,
+    "crossSectionBandHalfHeight_m": 5,
+    "outerBandDimensions_m": [
+      46.92804145812988,
+      48.862600326538086
+    ],
+    "widthRatioOfBase": 0.16036312308155806,
+    "classification": "lower narrow ring/shoulder; not counted as platform3 because the broad upper viewing-deck horizontal surface is near Y671m, matching the source platform near 84% height"
+  },
+  "sourceElevationPixelComparison": {
+    "image": "sources/eiffel/pohjoinen.png, 1536x1024",
+    "method": "Same approximate pixel-row silhouette spans as attempt1; base row990, first platform row830, second row650, top platform row180; image-space only, not calibrated orthographic dimensions.",
+    "measured": {
+      "base_px": 350,
+      "platform1_px": 222,
+      "platform1_ratio": 0.6342857142857142,
+      "platform2_px": 120,
+      "platform2_ratio": 0.34285714285714286,
+      "platform3_px": 44,
+      "platform3_ratio": 0.12571428571428572
+    },
+    "writtenTargets": {
+      "platform1": 0.52,
+      "platform2": 0.32,
+      "platform3": 0.14
+    },
+    "note": "Source north elevation itself depicts platform1 about .634B and platform2 about .343B, materially wider than written .52/.32. Attempt2 follows those source-image widths. Platform3 raster estimate .126B; attempt2 measured width including perimeter is about .142B."
+  },
+  "visualFourLegsAndArch": "Four separate corner feet and the large lower arch are visible in top/front renders; repeated front elevations support four-sided arches. The elevated antenna tip is present in attempt2. This is a bounded form observation, not topology certification.",
+  "interpretation": "Base/height and all three measured platform heights are within 5% relative tolerance. Platform1 and platform2 widths exceed written ratios, consistent with the north-source raster rather than the written targets. Platform3 is measured at the upper viewing deck near 84.4% height; the separate lower ring near 76.6% is not substituted for it.",
+  "relativeTolerance": 0.05
+}

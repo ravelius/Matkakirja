@@ -1,0 +1,131 @@
+{
+  "task": 2108,
+  "correctionTask": 2109,
+  "state": "REVIEW_REQUIRED_PLATFORM_WIDTHS_OUTSIDE_SPEC",
+  "primary": "eiffel.glb",
+  "primaryIsRetopo": false,
+  "retopoDegraded": true,
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "gameIntegrated": false,
+  "previewsInspectedFullSize": true,
+  "generationAttempts": 2,
+  "creditsSpent": 95,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "sha256": "d952c763c3185b7e40301a1fc95bf6899a21e7ddf383e412346b29d4dd10c797",
+      "bytes": 1727
+    },
+    {
+      "path": "eiffel-kevyt.glb",
+      "sha256": "c8d2347ee3107b96cbde41e41e69219898a20a71fb1467d9fd2ae4ba115b3c59",
+      "bytes": 3669448,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "eiffel.glb",
+      "sha256": "127b12625598e05a672abd36c86dcad13f0aa7da08becb7f4a6731ad7fbb4a73",
+      "bytes": 6821068,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "esikatselu/kevyt-etela.png",
+      "sha256": "9d16526e41c69cf3b64aad16b8e1a8a825c85365af0c660c35d55230d27db2cc",
+      "bytes": 160295
+    },
+    {
+      "path": "esikatselu/kevyt-ita.png",
+      "sha256": "a37b750533649dcec9fa95ccfc003c066754d622abb8f63080667a8a78a1de7a",
+      "bytes": 151016
+    },
+    {
+      "path": "esikatselu/kevyt-lansi.png",
+      "sha256": "a0207258f1a59b034730e9a446bc6bffbb830b4aa17d8cbd00177847bdfcacdd",
+      "bytes": 158143
+    },
+    {
+      "path": "esikatselu/kevyt-pelikulma-koillinen.png",
+      "sha256": "53fa0edb0a626d93c305444faff448f139d050306ea42fbbf662e90653cd0ac3",
+      "bytes": 354278
+    },
+    {
+      "path": "esikatselu/kevyt-pelikulma-lounas.png",
+      "sha256": "2408c240d739f7caeea85a81a7384525468d865a25d19fcee8c996617c5ecac2",
+      "bytes": 372073
+    },
+    {
+      "path": "esikatselu/kevyt-pohjoinen.png",
+      "sha256": "9bf623ca3ff2752bad401e869307dbac36108e20ab0c09e0d772cd6d4e60e5f5",
+      "bytes": 149330
+    },
+    {
+      "path": "esikatselu/kevyt-ylhaalta.png",
+      "sha256": "ec68f50a40ff494221432f517581b28dff65feb82bb4f299bb55cb7cb1ed8fda",
+      "bytes": 725435
+    },
+    {
+      "path": "esikatselu/pelikulma-koillinen.png",
+      "sha256": "877fadf6f90fa5ddfff1bcf19e69709708528b723e9b96f9a9fd9e2a1a982a3c",
+      "bytes": 368995
+    },
+    {
+      "path": "esikatselu/pelikulma-lounas.png",
+      "sha256": "d83ded8be7ed931211c9d6bbe00e442bcacba1350da0cf9516b8a5586b0c6863",
+      "bytes": 386547
+    },
+    {
+      "path": "esikatselu/raaka-etela.png",
+      "sha256": "b4f51f29b94bf92782c47e03fa65784a494796e0c221206dcd081b82e16d463e",
+      "bytes": 164262
+    },
+    {
+      "path": "esikatselu/raaka-ita.png",
+      "sha256": "2fb383e3c6c0889450f0404cf07f78352b3cf7147a6426ae7cc88905b881a998",
+      "bytes": 153465
+    },
+    {
+      "path": "esikatselu/raaka-lansi.png",
+      "sha256": "c0750b7d3635a9b49cd9813d584b006c38e450fc56d8fad563caffcb41bbf477",
+      "bytes": 161811
+    },
+    {
+      "path": "esikatselu/raaka-pohjoinen.png",
+      "sha256": "e9f11e23593a2c11a00314273179e7b3652d6365cf60e49f6ce9ba2a335e1b53",
+      "bytes": 152433
+    },
+    {
+      "path": "esikatselu/ylhaalta.png",
+      "sha256": "15993da6e0a3820518eac11799cbed30e700999486c9372e18cd75a9001db9fc",
+      "bytes": 795027
+    },
+    {
+      "path": "huomiot.md",
+      "sha256": "3a35e3641e9c22078696836f4c292765b00c4ac1806c1d0531866e2701f4b41d",
+      "bytes": 6389
+    },
+    {
+      "path": "mitatut-suhteet.json",
+      "sha256": "c876a0db7d260514778bf74a16dba8d29e4960c18578487be4a5c04cf5933af0",
+      "bytes": 5046
+    },
+    {
+      "path": "qa-kevyt.json",
+      "sha256": "4c4de97133158bb1021f83fc93dd79575502e2880cd108662117eb7d57ebe30f",
+      "bytes": 4267
+    },
+    {
+      "path": "qa-raaka.json",
+      "sha256": "2fde78510c9a772adaadcfd7d3ee7ea137d8789286df98d62ce2888d058304e8",
+      "bytes": 4230
+    },
+    {
+      "path": "technical-check.json",
+      "sha256": "06ab41432270a253054eaa07cf90dc945433ccbbf905c16950eff82c17268eba",
+      "bytes": 4674
+    }
+  ],
+  "technicalCheckPassed": true
+}
