@@ -33,3 +33,6 @@ Huom: oma ensiväitteeni "syy on botti" oli väärä, ja oikaisin sen. Keisari k
 
 ## OPIT
 Ennen kuin syytät testityökalua, lue, mitä peli tekee ilman sitä: botin osuus näytti selitykseltä, mutta reitin oma pakotettu käännös löytyi vasta koodista. Uusi testi löysi kaksi omaa virhettä ennen kuin mitään ajettiin: kartta kuljetetaan pelin kehyksessä (lähtö ja kierto), muuten kaikki on seinää, ja takaa-ajaja pidetään avauksessa pidossa kuten pelissä. Koordinaatit: loki = Unity, reitti = (Unity x, −Unity z), kartta = pohja; `paikka Puyi pohja` antaa parin.
+
+## LISÄYS klo 15.14: kohdan 2 ajo 1 on KÄYNNISSÄ, älä käynnistä uudelleen
+JU antoi L2:n, ja ajo käynnistyi taustalla ennen nollausta (`PROTO_LINJA=2`, `4c4d6f297`, `sk-e.txt`). Seuraa lokia `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/vapaa-1/aja-e.log`; viimeinen rivi on "ESIKATSELU VALMIS <s> s <kansio>" tai "VIKA". Kun ajo on valmis, kerro heti rivillä JU:lle ja jatka kohdasta 2.2.
