@@ -71,3 +71,7 @@ Edellisen lisäyksen "3 glb:tä puuttui" ei ollut wifin syytä: samat kolme tied
 
 ## Lisäys 5.11. klo 10.5x: PT:n käsky, 3 × 404 selvitetty (vain luku), rivi PT:lle
 Valinnaisia hakuja kaikilla rungoilla: `LataaSarjanMalli` hakee `-lod1.glb`:n (puuttuu → LOD0 kaikilla etäisyyksillä), `Osasarja.cs` hakee `pursotukset.glb`:n (puuttuu → oma pursotus, 977 kpl lokissa). Puuttuvat myös 217:stä (`natiiviseppa/runko-217-tf`, oletettu TF:n rungoksi; c2-v32, osasarja-v6) ja 218:sta (`a5323cf4e`; c2-v34, osasarja-v8); pursotukset.glb puuttuu osasarjoista v1–v9. A3 4485 ja A5 3247 kolmiota, A5 499 kpl Meridiaaniportin LOD0:n mukana. Ei tarkistettu kuvasta. Ei vaikuta wifi-uusintaan.
+
+## Lisäys 5.11.: OMISTAJAN PÄÄTÖS 10.38: muistimittaukset seis
+Kortti KK:n kautta, "Kyllä (Suositus)": muistisarja seis, wifi-tarkistusta ei tarvita, uusia muistiajoja ei tehdä, ennen kuin pelin ensimmäinen taso on valmis tai julkaisua valmistellaan. Ovimallin ja esineiden muisti mitataan silloin, ja kevennys tehdään tarvittaessa silloin. Ovien korjaukset jatkuvat.
+Kumoaa tästä tiedostosta ja -0810:n kohdasta 4 muistisarjaan, juoksuihin ja `sarja-wifi.zsh`:ään liittyvät tehtävät; skriptissä on EI AJETA -rivi. JU:lle sanottu: pois ketjusta. Seuraavaksi vain: lista 235 → arkki KK:lle.
