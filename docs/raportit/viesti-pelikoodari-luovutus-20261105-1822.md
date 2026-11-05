@@ -14,13 +14,22 @@ Jokainen Mac-ajo ratkaisee yhden kysymyksen. Pyynnössä JU:lle on rivi "mitä t
 - **Todistus 2:** `tarkastelu piilota p-kujaportti-3` (37 pintaa): takapinta 0,010 → 0,125, väärin kierretty 0 → 0,024, tyhjä 0. KK:lle viety.
 - **Todistus 1** täyttyi lähtötasossa; pisteet valittiin väreilyluvuista, nauha näkyi vasta kuvista.
 
-## 2. Seuraavaksi, järjestyksessä
-1. **Sininen laikku:** `boordi-3` (`rajaukset.jpg`, oikea rajaus): sininen friisilaikku räystään ruskeassa alapinnassa. Vanhaa kuvaa samasta kulmasta ei ole, joten ei tiedetä, onko se `Offset`-säännön sivuvaikutus (kaltevuuskerroin kasvaa vinossa katseessa) vai vanha vika. Selvitä ensin geometriasta, onko friisi räystään takana lähellä. Jos on, kokeile `Offset 0, -1` tai pienempää kerrointa. Älä sano KK:lle korjausta valmiiksi ennen tätä.
-2. **Marmorikaiteet (KK:n B):** vareily-4 0,033 ja laatta-m15 0,028; tumma viiva ja ohut raidoitus. Selvitä syy kuten boordeissa, uusinta vain muutamaan pisteeseen.
-3. **muuri ja portti:** siirretty listalle (`muuri -340,1; 119,9`, `portti 13,19; -392`), ei vielä ajettu. Mukaan seuraavaan koko listan ajoon. Alkuperäinen `muuri` (-368,6; 120,1) on `JuoksuKierros.json`:ssa kuljettava, mutta kuvassa oli pelkkää takapintaa: kuuluu kartan tarkistukseen.
-4. **Sali (KK):** `takapinta`-pisteen sali (-163,6; 320,5) on kartassa kuljettava, vaikka keisari pysähtyy kynnykselle (omistaja 4.11. 12.48). Korjaa kartta tason 1 työssä.
-5. **Ilmakuva (KK:n C, myöhemmin):** vaaleanpunaiset liuskat Meridiaaniportin edessä ja vallihaudan reunalla, sileä kirkkaankeltainen katto Taihedianin länsipuolella. Syy ei tiedossa; rivi KK:lle, jos selviää. Ei ajoa tämän takia.
-6. **Massassa:** `Massassa` lukee vain peittokarttaa, `SarjatPeittoon = false`, joten sarjamallit puuttuvat. `KameraMassassa` käyttää samaa. Tämä on poikkeuskartoituksen ehdotus 1; ei muutettu. Ei varmistettu, että juuri muuri on sarjamalli.
+## 2. Seuraavaksi: KK:n järjestys 5.11. 18.2x
+Taso 1 (-1744 kohta 3) on pääasia; nämä kulkevat pieninä sen rinnalla. KK katsoi parin täysikoossa ja näytti sen omistajalle: boordi-1 ja boordi-2 korjaantuivat, nauha on kokonainen.
+
+1. **Sininen laikku:** `boordi-3` (`rajaukset.jpg`, oikea rajaus): sininen friisilaikku räystään ruskeassa alapinnassa. Vanhaa kuvaa samasta kulmasta ei ole, joten ei tiedetä, onko se `Offset`-säännön sivuvaikutus (kaltevuuskerroin kasvaa vinossa katseessa) vai vanha vika. Selvitä ensin geometriasta, onko friisi räystään takana lähellä. Jos on, kokeile `Offset 0, -1` tai pienempää kerrointa. **Korjaus ei ole valmis ennen tätä.**
+2. **UUSI: turkoosit laatikot ja siniset U-viivat (KK):** kujan seinistä työntyy turkooseja laatikoita, ja seinässä on ohuita sinisiä U-viivoja (boordi-1 ja boordi-2, näkyvät myös ennen korjausta, joten eivät johdu `f25ccb55a`:sta). Selvitä, mitä ne ovat ja tulevatko ne seinän läpi. Jos syy on sama, korjaa yleisellä säännöllä, ei paikkana. Ei vielä tutkittu.
+3. **Marmorikaiteet (KK:n B):** vareily-4 0,033 ja laatta-m15 0,028; tumma viiva ja ohut raidoitus. Selvitä syy kuten boordeissa.
+
+**Yksi ajo näille** (omistaja 17.51 ja 17.57): samat 5 pistettä (`boordi-1`, `boordi-2`, `boordi-3`, `havainne-02`, `havainne-04`) + siirretyt `muuri` (-340,1; 119,9) ja `portti` (13,19; -392), ei koko listaa. `tyokalut/koekuvat-tarkastelu-boordi.txt`: pois `todistus` ja `todistus-piilossa` (täyttyi), mukaan `muuri` ja `portti`. Kaiteiden pisteet vareily-4 ja laatta-m15 eivät kuulu näihin 7:ään: kaiteiden korjausta ei voi todeta tästä ajosta ilman niitä, joten kysymys KK:lla (rivi 18.2x).
+
+**Ennen muuri- ja porttipisteiden ajoa omistajalle ei sanota, että seinät ovat kunnossa.**
+
+4. **Massassa, `SarjatPeittoon` ja sali: tason 1 osaan C** (-1320 kohta 3: liike ja kamera kartalta, pysähtyminen seinään, muuriin ja kynnykselle), koska sama kartta ohjaa pelikameraa.
+   - `Massassa` lukee vain peittokarttaa, `SarjatPeittoon = false`, joten sarjamallit puuttuvat. `KameraMassassa` käyttää samaa. Tämä on poikkeuskartoituksen ehdotus 1; ei muutettu. **Varmista, puuttuuko juuri muuri** (ei varmistettu, että se on sarjamalli). Alkuperäinen `muuri` (-368,6; 120,1) on `JuoksuKierros.json`:ssa kuljettava, mutta kuvassa oli pelkkää takapintaa.
+   - **Sali:** `takapinta`-pisteen sali (-163,6; 320,5) on kartassa kuljettava, vaikka keisari pysähtyy kynnykselle (omistaja 4.11. 12.48). Sama tarkistus, korjaa kartta.
+
+**Ilmakuvan viat odottavat (KK:n C):** vaaleanpunaiset liuskat Meridiaaniportin edessä ja vallihaudan reunalla, sileä kirkkaankeltainen katto Taihedianin länsipuolella. Syy ei tiedossa. Ei ajoa tämän takia.
 
 ## 3. Katselu `fb9811afd` (`lokit/esikatselu-20261105-174557`, arkeista; ei täysikokoisina paitsi e23, e26, e27, e28)
 - **Kiinniotto laukeaa** (repliikki, kehote, rimpuilu), mutta k02:ssa eunukin selkä peittää keisarin kokonaan.
