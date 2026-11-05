@@ -30,7 +30,7 @@ Bussilla Pariisiin (lokit/natiiviseppa-william-fcba229ca, rivit 3061–3527): zo
 7. Ajo: _tyo/natiiviseppa/pallo-aloitus/sk-aloituslento-reitti.txt (`ui aloita pariisi lento`) on pohja. Lisää kuvasarja kierron ajalta, William päällä, esityksen lopussa ja Pulun alussa, sekä `linssi soivat`. sk-william-esitys.txt on vanhentunut, ei ajeta. Mittari: "aloituslento Lontoo", "traileri", "puhe alkaa", "nykyintro", "livia:", "musiikki taso" (puhujia), "aani: soivat". Ajo ei kuuntele: kuuluvuus vain lokista ja soivat-rivistä, sanotaan viestissä.
 
 ## Muut
-- JU: ajo peruttu 20.25 (d369d4aab); aiempi william3 pysäytetty ennen Unityä, ei tuloksia. Uusi pyyntö vain yksi.
+- JU: d369d4aab peruttu; sk-aloituslento-reitti pysäytetty kesken 20.26, ei tulosta. JU odottaa yhteistä uutta pyyntöä. sk-william-esitys ehti valmistua (lokit/natiiviseppa-william-esitys-d369d4aab, 4 kuvaa, kuvia ei katsottu): uusi-peli-reitillä William alkaa ja loppuu 4,15 s esityksen alusta, esitys loppuu 15,5 s, luenta vasta sen jälkeen; ei päällekkäisyyttä. Ei todista aloituslentoa eikä kuulokuvaa.
 - Kysy-vastauksen hiljaisuus: testitunnuksen syy (worker.js oppaanAani, tests/opas-keskustelu.test.mjs:76), PT kuittasi, ei maksullista varmistusta.
 - Kontrasti ja musta kartta ovat NUI:lla (PT 20.11). Liiku-rivi kirjattu PT:lle.
 - -2005:n "Avoinna edelleen" pätee: latausajan vaihtelu, haamu, iPad-näkemättömät.
