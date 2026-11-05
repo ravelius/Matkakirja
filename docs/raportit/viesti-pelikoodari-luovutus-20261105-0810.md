@@ -88,3 +88,6 @@ Kohta 3 tehty: LAV:lle paikat, PT tiedoksi.
 KATSOTTAVA: lista 228, kansio JU:lta. Onko ovi muurissa uskottava: jos ei, palaa katsomaan.
 Kohta 2 tekemättä: 浴德殿 vaalea kaista ja pystyviiva, 四执库 piikki, 重华宫 kiila, 皇极殿 ikkuna. Lisäksi 房子11–房子8 6,4 m.
 Työkalut `_tyo/pelikoodari/tayte/8cd/`: ero13.py (vaihda vertailukartta), mat.py, seinat.py, alue2.py x0 x1 z0 z1, profiili.py. Tilan tila.npz on v7-pinnoista (ero- ja jälkiajot).
+
+## LISÄYS 09.22: PT:n päätös leivonnasta
+PT: kk-tausta-1-2-lod0 leivotaan vasta LAV:n levykorjauksen jälkeen, koska korjaus muuttaa taustan geometriaa; LAV kertoo hinnan ja tekee sen korjauksen ajossa. Ei omaa ajoa nyt. 南库 ja 军机处 ilman valoa siihen asti. 益寿斋: tarkista osasarjan muuri kohdan 2 yhteydessä; ilman valoa siihen asti.
