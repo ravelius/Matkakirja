@@ -7,8 +7,15 @@ Täydentää -1925:tä, -1858:aa, -1822:ta ja -1744:ää; niiden avoimet kohdat 
 ## 0. Lisäys: PT:n kuittaus (viesti "20.02", kello näytti 19.5x)
 PT kuittasi `93cc59596` (k1, k2 täysikoossa, loki) ja **sen sijaan, mitä kohdassa 2 sanotaan "ei junaan", korjaus menee junaan 219 nyt**. Omena v3:n vienti sallittu.
 - **Juna:** JU:lle viety `pelikoodari/eunukki-peili-219` `7de953bc9`: yksi rivi a5323cf4e:n päällä, ilman lokiriviä ja ilman `fb9811afd`:n paluuta reitille. Tehty ilman työkopiota, joten **ei omaa `unity-tarkistusta`**: sama lauseke kääntyi tarkastelu-haarassa. Jos JU ei kuittaa, tarkista jonosta.
-- **Omena:** `_valmiit/omena-mata-v3-vienti-20261105` (1 glb, SHA = Codexin toimitus) JU:lla. Ennen vientiä `kerattavat/omena-mata-v3.glb` 404 ja `omena-mata.glb` 200, 420 676 tavua, 19.10. **Kun JU kertoo viedyksi:** tarkista, että v3 on 200 ja vanhan koko ja aika ennallaan, ja kerro PT:lle. Junan 219 koodi hakee yhä vanhaa nimeä; uusi nimi on vain tarkastelu-haarassa (`73f708b88`) ja kulkee tason 1 mukana.
+- **Omena:** `_valmiit/omena-mata-v3-vienti-20261105` (1 glb, SHA = Codexin toimitus) JU:lla. Ennen vientiä `kerattavat/omena-mata-v3.glb` 404 ja `omena-mata.glb` 200, 420 676 tavua, 19.10. **Viety ja tarkistettu 19.54:** v3 200, 157 168 tavua, SHA täsmää; vanha ennallaan, PT:lle kerrottu. Junan 219 koodi hakee yhä vanhaa nimeä; uusi nimi on vain tarkastelu-haarassa (`73f708b88`) ja kulkee tason 1 mukana.
 - **Hehkun ja "mädän" arvion vie PT KK:lle.** Sitten jatka tasoa 1 (kohta 6).
+
+**Lisäys KK 19.53 (korvaa kohdan 3 arvion):** omena ei mene vielä omistajalle: pinta näytti kullanväriseltä palkinnolta. Ohje 4.11.: ruskea, läikikäs; hehku pieni ja hillitty, ei kullanvärinen.
+- **Syy, mitattu kuvasta ja tekstuurista:** väri tulee tekstuurista (okra, ka. 135, 95, 42), ja pelin valo kirkastaa sen (184, 123, 58). Suhde R/G pysyy (1,42 → 1,50), joten hehku ei selitä väriä; hehkua ei kokeiltu pois päältä.
+- **Korjaus `1bf2fa8d6` (kärki):** `MataPinta` (0,64; 0,60; 0,66) kerrotaan mallin materiaaleihin, arvio n. (118, 74, 38). **Laskettu, ei nähty.** GLB ei muutu. **Lähikuva seuraavan tason 1 ajon mukana KK:lle** (ei omaa ajoa); `oleta-uusi`-kuva tai `tarkastelu mata 0.9`. Jos hehku näyttää vielä kullalta, säädä `HehkuMata`.
+- **Leijuvat osat (KK: ratkaisevaa on, näkyvätkö ne pelikamerasta):** ei omaa ajoa. Lisää seuraavaan ajoon pelikameran piste kaiteen läheltä, esim. `tarkastelu keisari` + pelikameran `Korkeus`/`Etaisyys`, ja `mika`. Korkeuskulma 26 m:stä on noin 21°, joten näkyminen on mahdollista (laskettu, ei nähty).
+- **Portti:** KK:n lisäys (4.11. 08.50:n viivat, pystysauma x 1140, y 830–930) viety LAV:lle. LAV: koristeet ja viiva jonossa, ei aloitettu.
+- **Seuraava ajo = tason 1 ajo:** kokoa omena, leijuvat osat, rikkoutuminen ja sivulta tuleva samaan.
 
 ## 1. Viittausvahvistukset (PT:n pyyntö, tehty)
 - **20 aarrekuvaa:** paketti `_valmiit/aarrekuvat-paikallis-10-vienti-20261105` on sama kuin main (0 eroa). Julkaistu luettelo `sisalto/1/v993` viittaa kaikkiin, ja ennen vientiä kaikki olivat ämpärissä 404. JU vei; tarkistin kaksi polkua (200). Eheysvartijan tulos on JU:lla.
