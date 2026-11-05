@@ -23,7 +23,7 @@ PASS koskee vain näitä neljää suhdetta, ei koko kuvan hyväksyntää. Tasant
 
 Viistotasanteen lävistäjäsuhteet ovat noin **0,724 (lounas)** ja **0,850 (koillinen)** tavoitteen 0,906 sijaan. Johdetut kulmat noin 46°/58°; takakulma peittyy ja se on päätelty kolmesta näkyvästä kulmasta, joten tämä ei ole kalibroitu kameramittaus. Kulmat eivät vastaa pyydettyä yhteistä 65° kulmaa.
 
-Yläkuvan tasannerotaatio korjaantui. Jalanjälki on lähellä mutta ei pikselintarkka: lähde-bbox [368,125,757,512], rakennuksen mitattu bbox [375,131,749,511]. Koordinaattien oikea/alaraja on poissulkeva.
+Yläkuvan tasannerotaatio korjaantui. Jalanjälki on lähellä mutta ei pikselintarkka: lähde-bbox [369,125,757,512], rakennuksen mitattu bbox [375,131,749,511]. Koordinaattien oikea/alaraja on poissulkeva.
 
 Maapohjan käytävät ovat nyt suorat ja symmetriset. Kiveyksen arvioitu peitto on noin 99,16 %; 630/75005 reunapikseliä luokittuu nurmen kaltaiseksi, joten täyttä peittoa ei varmisteta. Neljän käytäväleikkausnäytteen leveydet 12–14 px vastaavat lähteen 300 m neliöjalanjäljestä johdetulla mittakaavalla noin 13,1–15,3 m, hieman tavoitetta leveämpinä. Arviovirhe noin ±2 px. Vastaanottaja käyttää vain maskin sisäosan; ulkopuolisia pikselimuutoksia on edelleen.
 
