@@ -1,0 +1,44 @@
+# T7 → NAS 2. erä, osa 2: Karttaseppä (PT 5.11.2026; Raamattu 12.9 ja 12.19). Natiiviseppä. Vain tämän luettelon kohteet siirretään.
+# Jäävät T7:lle (Karttaseppä): venv-kartta, .metadata_never_index, kierrostarkistus-20261015. Palautuslista NAS:lla: karttaseppa/t7/LUE-ENSIN.txt.
+
+## LÄHTEET 36 (lähde -> kohde NAS:lla)
+/Volumes/T7 4TB/Matkakirja-karttaseppa/vuoristo-mapterhorn -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/vuoristo-mapterhorn
+/Volumes/T7 4TB/Matkakirja-karttaseppa/worldcover-taso4 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/worldcover-taso4
+/Volumes/T7 4TB/Matkakirja-karttaseppa/iss-maailma-s2 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/iss-maailma-s2
+/Volumes/T7 4TB/Matkakirja-karttaseppa/vesimaski -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/vesimaski
+/Volumes/T7 4TB/Matkakirja-karttaseppa/latvus-chm -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/latvus-chm
+/Volumes/T7 4TB/Matkakirja-karttaseppa/iss-eurooppa-s2 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/iss-eurooppa-s2
+/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/tekoalypinnat
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260927y-syva -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260927y-syva
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-syva -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-syva
+/Volumes/T7 4TB/Matkakirja-karttaseppa/geoglows -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/geoglows
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260927y -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260927y
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ruudukko-20261015 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ruudukko-20261015
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-delta -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-delta
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-pallo-ulos -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-pallo-ulos
+/Volumes/T7 4TB/Matkakirja-karttaseppa/bmng -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/bmng
+/Volumes/T7 4TB/Matkakirja-karttaseppa/maapallon-vuosi-2024 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/maapallon-vuosi-2024
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-vanha -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-vanha
+/Volumes/T7 4TB/Matkakirja-karttaseppa/bmng-2026-09-28 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/bmng-2026-09-28
+/Volumes/T7 4TB/Matkakirja-karttaseppa/kerma-2026-09-27 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/kerma-2026-09-27
+/Volumes/T7 4TB/Matkakirja-karttaseppa/isd-pilvet -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/isd-pilvet
+/Volumes/T7 4TB/Matkakirja-karttaseppa/iss-s2-indeksi -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/iss-s2-indeksi
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-rae -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-rae
+/Volumes/T7 4TB/Matkakirja-karttaseppa/iss-kuvauspaikat -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/iss-kuvauspaikat
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-vanha-syva -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-vanha-syva
+/Volumes/T7 4TB/Matkakirja-karttaseppa/kiinan-dynastiat -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/kiinan-dynastiat
+/Volumes/T7 4TB/Matkakirja-karttaseppa/natural-earth-10m -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/natural-earth-10m
+/Volumes/T7 4TB/Matkakirja-karttaseppa/_tyo -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/_tyo
+/Volumes/T7 4TB/Matkakirja-karttaseppa/pilvet-metar -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/pilvet-metar
+/Volumes/T7 4TB/Matkakirja-karttaseppa/maasto-20261016-normaalit -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/maasto-20261016-normaalit
+/Volumes/T7 4TB/Matkakirja-karttaseppa/peking -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/peking
+/Volumes/T7 4TB/Matkakirja-karttaseppa/vertailu -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/vertailu
+/Volumes/T7 4TB/Matkakirja-karttaseppa/vanha-kerma-20260930-p060 -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/vanha-kerma-20260930-p060
+/Volumes/T7 4TB/Matkakirja-karttaseppa/pyoriminen -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/pyoriminen
+/Volumes/T7 4TB/Matkakirja-karttaseppa/tarkistus -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/tarkistus
+/Volumes/T7 4TB/Matkakirja-karttaseppa/.DS_Store -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/.DS_Store
+/Volumes/T7 4TB/Matkakirja-karttaseppa/ajo-20260930-rae-syva -> /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/karttaseppa/t7/ajo-20260930-rae-syva
+
+## PROTO-3D-LINKIT 0
+
+## LINKIT KOHTEIDEN SISÄLLE 0
