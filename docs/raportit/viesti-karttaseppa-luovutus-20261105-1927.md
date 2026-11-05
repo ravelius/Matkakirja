@@ -1,5 +1,5 @@
 # Karttaseppä: luovutus 5.11.2026 klo 19.27 (KS)
-Syy: konteksti 26 % (7.37), tauko omistajan ja Tripon odotuksessa. **Lue tämä; Invalidien tausta -1911:stä (kärki 7c7dea0d3), Panthéon -1900:sta (8e7eb1201), Riemukaaren maapohja -1834:stä (7ab3a6399).** Tämä voittaa ristiriidassa. W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki 0906b3c15. Python /opt/homebrew/opt/python@3.14/bin/python3.
+Syy: konteksti 26 % (7.37), tauko omistajan ja Tripon odotuksessa. **Lue tämä; Invalidien tausta -1911:stä (kärki 7c7dea0d3), Panthéon -1900:sta (8e7eb1201), Riemukaaren maapohja -1834:stä (7ab3a6399).** Tämä voittaa ristiriidassa. W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki 3b253ee87. Python /opt/homebrew/opt/python@3.14/bin/python3.
 
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh`.
@@ -8,6 +8,9 @@ Syy: konteksti 26 % (7.37), tauko omistajan ja Tripon odotuksessa. **Lue tämä;
 ## Valmis tässä vuorossa
 - **Grand Palais:** lähiajo 0906b3c15 katsottu, suunta oikein ja rantatie ehjä. Kuvat `grand-palais-asennus/peli-etela.png` ja `peli-ita.png` KK:lla, tunnettu usvavika kerrottu. Ei muuta tehtävää.
 - **Sarjan koot ovat tarkoituksella suurempia kuin oikeat:** `nahtavyyssarja/LUE.md` rivi 14 (Louvren hyväksytty suhde). `koko_m` voittaa `oikea_m`:n. Älä hälytä, vaikka malli on kartan rakennusta noin 30–100 % suurempi.
+
+## Usva: omistajan pyyntö 19.30, koodi tehty, ajamatta
+"Horisontissa näkyy eiffel vaikka ei ehkä pitäisi." Tehty 3b253ee87 (kärki): `Nahtavyysalue.PaivitaUsva` laskee peiton mallin jalasta kyltin kaavalla, `NotreDameKirkko.shader` häivyttää usvan väriin ja viimeisen neljänneksen pisteyttäen, `NotreDamePohja.shader` seuraa ruudun usvaa pikseleittäin, maavarjo pois peitossa 0,6. **Kääntämättä ja ajamatta.** KK: ajo vain, kun se on muutenkin tarpeen: **liitä `sk-pariisi-usva-eiffel.txt` seuraavaan malliajoon,** katso täysikoossa (myös pisteytys ja se, ettei kirkas malli katoa liian aikaisin) ja kuva KK:lle.
 
 ## Riemukaari 24g: otto 2 valittu (posti e1980ef06)
 Otin kantaa Tripon postiin 51d99ee30. H/W 0,98 ja D/W 0,54 hyväksytty, koska oikea kaari on noin 1,10 ja 0,50 ja tilauksen 0,90 tuli kuvista. Tripo avaa kapeat kaaret paikallisesti, siistii jalustan ja ajaa aukkotestin uudelleen. Ei kolmatta generointia. KK:lle kerrottu, että malli on omistajan kuvaa korkeampi.
