@@ -277,3 +277,7 @@ Oikaisee klo 18.18:n kirjauksen: PT perui väistön poiston, koska KK on päätt
 ## PARIISIN PALLOKIERROS: NOPEA LASKU, RAJA 10 M/S2 EI SITO TATA LASKUA (5.11.2026 klo 18.21)
 
 NS 7d719ae76 (ei vielä nähty ajossa): lasku 8,5 s (tervehdys väliaik. 6 s + 2,5 s liuku), kerronta alkaa 6,0 s, huippu 159 m/s, kiihtyvyys laskettu noin 80 m/s² (ei mitattu), TF 168:n raja 10. PT hyväksyi ajoon omistajan 17.52 tavoitteen perusteella ('pallo laskee nopeasti Notre-Damen luo lyhyen tervehdyksen aikana'): avaus pois, opastus 1. pysähdyksen jälkeen, vain Pariisin pallokierroksessa. Raja 10 m/s² pysyy muualla; kiihtyvyys mitataan ajon lokista, ja NS kertoo ison suunnanmuutoksen. Omistaja ei ole nähnyt tätä; pari PT:lle, ei junaan.
+
+## NIMET PYSYVAT PYOREAN MERKIN KOHDALLA (2.215), RIEMUKAARI KELPAA (5.11.2026 klo 18.22)
+
+KK PT:lle omistajan päätösviestissä klo 18.21: 'NUI:n nimen väistö pois, nimet pysyvät (ei omistajan päätös, ylimääräinen).' Korvaa klo 18.20:n kirjauksen väistöstä, joka perustui NUI:n välittämään KK:n aiempaan sanaan. OMISTAJAN PÄÄTÖS klo 18.21 (kortti 'Kelpaako Riemukaari malliksi?' = 'Kelpaa (Suositus)'): Riemukaari kelpaa. Kerrottu ennen korttia: 20 % leveämpi, suuri kaari kapeampi, kapeille sivuille Wagramin puoli, kaaret auki, ei puistorengasta, aukion rengastien yli. KS tilaa.
