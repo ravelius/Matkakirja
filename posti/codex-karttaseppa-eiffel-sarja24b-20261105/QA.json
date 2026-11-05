@@ -1,0 +1,671 @@
+{
+  "taskNumber": 2104,
+  "checkedAt": "2026-11-05T13:36:30.729361+00:00",
+  "qaComplete": true,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "generationCalls": 8,
+  "oneCallPerView": true,
+  "nativeIntegrityPass": true,
+  "files": [
+    {
+      "file": "viisto-lounas.png",
+      "sha256": "dedb30b85e21cc07fc72586d78ca939e262a348157b858015505b573b1c0a0be",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-659dece2-9d20-40ac-b77c-6216e2de8b1e.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Yhden kierroksen arviointiehdokas. Isot avoimet ristikot ja kolme näkyvää jalkaa. Ensimmäisen tasanteen sivukulmat noin(577,572),(958,572), etukulma(767,710); takakulma peittyy ja johdettu noin(768,434). Lävistäjäsuhde arviolta276/381=0.72, joten65asteen tavoite ei täyty; ei uusintaa.",
+      "warmStructureBBox": [
+        450,
+        12,
+        1085,
+        1013
+      ]
+    },
+    {
+      "file": "viisto-koillinen.png",
+      "sha256": "5a2a5b11763e3b13ae9f6766668111e03b515372db61291348be13cf996a4dfc",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-705bbd59-b544-492b-a1fc-df32684d1acf.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Arviointiehdokas. Ensimmäisen tasanteen sivukulmat noin(577,525),(958,525), etukulma(768,687), takakulma rakenteen takana ja johdettu(768,363). Suhde324/381≈0.85, lähempänä tavoitetta mutta eri kuin lounaan0.72; 65asteen kulma ei täsmällisesti toteudu. Ei uusintaa.",
+      "warmStructureBBox": [
+        450,
+        21,
+        1086,
+        985
+      ]
+    },
+    {
+      "file": "ylhaalta.png",
+      "sha256": "67983d542f5154cc501fc2cc7ff1bdb3904df03321a01ecc7e14f7cc5f0fc691",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e15a2898-f7d5-4e5e-8a4b-4425eba993f6.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Tasanteiden kierto korjaantui samaan suuntaan jalkaneliön kanssa. Yläprojektio ja sijoitus lähellä lähdettä; tarkka jalanjäljen koko ja pikseliosuma mitataan ennen toimitusta. Ei vielä väitetä pikselintarkaksi.",
+      "warmStructureBBox": [
+        375,
+        131,
+        749,
+        511
+      ]
+    },
+    {
+      "file": "etela.png",
+      "sha256": "657ab82f6eedc4c9be479d8806b002d13a394726a12d9a75b7b74c3a9c3c3d15",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a205036e-9040-4dfd-9eaa-2cc1b4178304.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Kaksi jalkaa ja yksi kaari korjaantuivat, ei keskijalkaa. Kuva kuitenkin piirretty pyydettyä suuremmaksi/leveille jaloille. H noin984px, W noin490px; tasanteiden y noin779/578/150 ja maaviiva1010. Tarkat normalisoidut mittapoikkeamat toimitus-QA:ssa. Ei uusintaa.",
+      "warmStructureBBox": [
+        522,
+        24,
+        1014,
+        1011
+      ]
+    },
+    {
+      "file": "pohjoinen.png",
+      "sha256": "3065ee5e81a304c711a00b80dc7c611486772207223ff5fdc7392101efdae06b",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0f331676-00f0-4147-a4a0-4ec24314ed2d.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Suora sivu, kaksi jalkaa ja yksi kaari. Kokonaisleveys/korkeus ja tasannekorkeudet näyttävät osuvan5%rajaan: kärki~51,maaviiva~998,leveys~351,tasanteet~831/660/190. Tasanneleveyksissä eroja; kirjataan erikseen. Tämä on uusien seuraavien sivujen mittakaavareferenssi, ei korvaa eteläkuvaa.",
+      "warmStructureBBox": [
+        593,
+        45,
+        943,
+        998
+      ]
+    },
+    {
+      "file": "ita.png",
+      "sha256": "cea2b3868848df62b4c30a6d38031aa3c8f822ff0a25539ca62975a27cb71fa7",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ca26334d-cadd-4905-9049-a6c15f94a5bc.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Kaksi jalkaa, yksi kaari; pohjoisen kapea mittakaava ja maaviiva säilyvät. Tasannekorkeuksien ja leveyden suhde tarkistetaan numeerisesti, kaikkien yksityiskohtien3Dvastaavuutta ei väitetä.",
+      "warmStructureBBox": [
+        592,
+        43,
+        944,
+        997
+      ]
+    },
+    {
+      "file": "lansi.png",
+      "sha256": "f49a5680feb601a3d488a5fe6ac577614f62b51f703e45918a0a87c8a3514d49",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-aacdcb3f-77bc-4e18-abae-7fc373a42f48.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Lännessä kaksi jalkaa ja yksi kaari, pohjoisen/idän mittakaava ja maaviiva säilyvät. Pienissä ristikkoyksityiskohdissa vaihtelua. Kaikkien neljän kuvan yhteinen mittakaava ei täyty eteläkuvan suuren leveyden vuoksi.",
+      "warmStructureBBox": [
+        593,
+        42,
+        943,
+        997
+      ]
+    },
+    {
+      "file": "pohja-uusi.png",
+      "sha256": "21522af951ad716de5c18a1eef53f246eeec2a3e4ccc453f6a32476c4e77598e",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4ba547c9-77e0-4ef1-b8b6-5da1d91aa0c3.png",
+      "nativeBytesUnchanged": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Suorat symmetriset pitkittäis- ja poikittaiskäytävät korjaantuivat. Kiveys ulottuu silmämääräisesti lähes kokojalanjäljelle, tarkka maskipeitto mitataan. Nurmi vaihteleva eikä työalueella pystyosia. Käytävien leveys ja rajaliittymät tarkistetaan."
+    }
+  ],
+  "sourceManifest": {
+    "checkedAt": "2026-11-05T13:16:32.344525+00:00",
+    "files": [
+      {
+        "path": "TILAUS-24-sarja.md",
+        "sha256": "f39862ff23e66bf5432cbacaa752871c3ee69801a3e87814d8018940dea500ff"
+      },
+      {
+        "path": "TILAUS-24b-eiffel-otto2.md",
+        "sha256": "ef07917cc23cc82530d43170b3db2b8c1cd9718b4eb0fa1b8dc6a6e4e1420317"
+      },
+      {
+        "path": "eiffel/jalanjalki.png",
+        "sha256": "5ac73bd204514a7653e39086e758a138d61910414c178cafdff03f676dc537c9"
+      },
+      {
+        "path": "eiffel/maski.png",
+        "sha256": "4eabeef1a04a16e31d50ec221f4bec8f5c0e367e37781b194f7b87b83504df9b"
+      },
+      {
+        "path": "eiffel/ohje.png",
+        "sha256": "8466909bf1f45683201908f29894f2f5d4b8d0eac0340e96389d1d6becef6177"
+      },
+      {
+        "path": "eiffel/pyyhitty.png",
+        "sha256": "97583a140013d0187f8f8655cbe60e6a02ffa0922ae7de7c4a0249dbe53e300a"
+      },
+      {
+        "path": "grand-palais/jalanjalki.png",
+        "sha256": "9b0f23dd4c9b54672796263beea665fc23455580bc0798105c1f816c0e2761f2"
+      },
+      {
+        "path": "grand-palais/maski.png",
+        "sha256": "46f99a194968af5d9537d1ad32f19a15204051c10ca1490481ac0463e6b276f9"
+      },
+      {
+        "path": "grand-palais/ohje.png",
+        "sha256": "18f2fb2119a03735d0872edf0d05455e82c724bba6a2f0f9d0a9b8d5f7b52c9f"
+      },
+      {
+        "path": "grand-palais/pyyhitty.png",
+        "sha256": "f09b4b1e1802a7bb8e81078e4b0a71ebdc059c853ba3d30ab309c402aa73918f"
+      },
+      {
+        "path": "invalides/jalanjalki.png",
+        "sha256": "7f6cc89fd04428ff5f7f85665e15bac75524bebbf0fff285c266c97fc074f930"
+      },
+      {
+        "path": "invalides/maski.png",
+        "sha256": "9252692d5169fc4dc67b12238eb7eeac341ad79fb9b13eb38c9ad49fabfcdba0"
+      },
+      {
+        "path": "invalides/ohje.png",
+        "sha256": "ef9e72fb03a8a21de7789440e967b870fb1084accc515c6635b9a2e8f39cf3cd"
+      },
+      {
+        "path": "invalides/pyyhitty.png",
+        "sha256": "54757169e8401d5376ab07df1db9fc87ba3f7948e8961c00c219a5721c0b3290"
+      },
+      {
+        "path": "montparnasse/jalanjalki.png",
+        "sha256": "5f2bfdf08b61aa0fa765138c8c109ad4eaa8bb63670663c44abb97984b292ace"
+      },
+      {
+        "path": "montparnasse/maski.png",
+        "sha256": "1709e358f43dcc4a95ddd93ecf00a1cb59d56da3efef0160f9d3b44751b251d9"
+      },
+      {
+        "path": "montparnasse/ohje.png",
+        "sha256": "2ce6e2fdddb2de7b28258356b56eff6246809b95883a5adfa003c28ea81baede"
+      },
+      {
+        "path": "montparnasse/pyyhitty.png",
+        "sha256": "5baaff40630cd8336e45af9606c6ceb7fd47261df00d2c5978bdba1139a2d1e7"
+      },
+      {
+        "path": "opera/jalanjalki.png",
+        "sha256": "4848f4a41db0c773e5a93cbc464bb0fa08d340d3b5809aca0b2b1426291fc2df"
+      },
+      {
+        "path": "opera/maski.png",
+        "sha256": "113b8fcf2db8d8f79bed5826bf6180bf2feff0d1441b1d9af0cd9e85e0ae6de0"
+      },
+      {
+        "path": "opera/ohje.png",
+        "sha256": "a6e279c47bf77e4c667124bb051240255c03aa797184afb6296e40455a2d390d"
+      },
+      {
+        "path": "opera/pyyhitty.png",
+        "sha256": "d97de721010a47062a2ff9aa7ea2d4463a9fb995ba18867ef578468b9bf8ee66"
+      },
+      {
+        "path": "pantheon/jalanjalki.png",
+        "sha256": "0fbedc530e8c69b5d98987d98b5c76cea7a5a6351caf9ffc38afd9bad77b1699"
+      },
+      {
+        "path": "pantheon/maski.png",
+        "sha256": "665dc0ea717f692fb725d9092554209a4cd425ade87b5689e262f99f2e4b32de"
+      },
+      {
+        "path": "pantheon/ohje.png",
+        "sha256": "4f1ce17025c94b9bd35f02d32ea555b038ac0ad449a9c6801e294a0226b9538c"
+      },
+      {
+        "path": "pantheon/pyyhitty.png",
+        "sha256": "e78953ee7257b2386cc68873f5ece128abf3044ec367492b4ecead40ce001451"
+      },
+      {
+        "path": "riemukaari/jalanjalki.png",
+        "sha256": "a2c50822ba8cc72099149f484824cdae3cf6cf89b32cdf644e018d4795de69b5"
+      },
+      {
+        "path": "riemukaari/maski.png",
+        "sha256": "bc5d5abe1c0d21d7cfac446f805cdb3dc8796dbad3eb1b1ea90c7b61b75006c7"
+      },
+      {
+        "path": "riemukaari/ohje.png",
+        "sha256": "1136a10d57df1b3d352c52ad8bd660747e531029240117457613abd4c2b6deb0"
+      },
+      {
+        "path": "riemukaari/pyyhitty.png",
+        "sha256": "1cd5d56fdd080bd0bd191719030d0fda165f5d1272774283e0dd5869fbf1729f"
+      },
+      {
+        "path": "sacre-coeur/jalanjalki.png",
+        "sha256": "3f6281b52dc42c3d2c5500ef5612bc39b47eb78887f7ecb2a1d718b469f88cf0"
+      },
+      {
+        "path": "sacre-coeur/maski.png",
+        "sha256": "ccf3e984522b2fdedb92796a9f70ac0b515927656d544e8c9efbb32cf436d71a"
+      },
+      {
+        "path": "sacre-coeur/ohje.png",
+        "sha256": "439f3da6071e938e164ce899c5d8c4b5620ff15d756c9b6d81fa16381dde7c2a"
+      },
+      {
+        "path": "sacre-coeur/pyyhitty.png",
+        "sha256": "c033f0d61020e2b9043ded1a10127acfecfeae4091ec6bbdff50dfe18ebe3f67"
+      }
+    ],
+    "allVerified": true
+  },
+  "measurementMethod": "Bounding box: RGB r-b>8 and r-g>2 against neutral grey; right/bottom exclusive. Floors are manually selected walking-deck lines, +/-3px. Measurements are normalized to actual tower height, not the requested framing. Pixel measurements do not prove a shared 3D model.",
+  "sourceRatios": {
+    "height": 330,
+    "baseWidth": 125,
+    "floorHeights": [
+      57,
+      115,
+      276
+    ],
+    "approxFloorWidths": [
+      65,
+      40,
+      18
+    ],
+    "toleranceRelativePercent": 5
+  },
+  "sides": {
+    "etela": {
+      "bbox": [
+        522,
+        24,
+        1014,
+        1011
+      ],
+      "heightPx": 987,
+      "baseWidthPx": 492,
+      "groundLineY": 1011,
+      "floorY": [
+        778,
+        578,
+        149
+      ],
+      "floorHeightPx": [
+        233,
+        433,
+        862
+      ],
+      "floorWidthPx": [
+        288,
+        164,
+        60
+      ],
+      "normalizedTo900Px": {
+        "baseWidth": 448.63,
+        "floorHeights": [
+          212.46,
+          394.83,
+          786.02
+        ],
+        "floorWidths": [
+          262.61,
+          149.54,
+          54.71
+        ]
+      },
+      "baseAndFloorHeightRelativeErrorsPercent": [
+        31.6,
+        36.67,
+        25.89,
+        4.42
+      ],
+      "baseAndFloorHeightsWithin5Percent": false,
+      "approxFloorWidthRelativeErrorsPercent": [
+        48.14,
+        37.08,
+        11.45
+      ],
+      "twoVisibleFeetOneArch": true
+    },
+    "pohjoinen": {
+      "bbox": [
+        593,
+        45,
+        943,
+        998
+      ],
+      "heightPx": 953,
+      "baseWidthPx": 350,
+      "groundLineY": 998,
+      "floorY": [
+        829,
+        660,
+        190
+      ],
+      "floorHeightPx": [
+        169,
+        338,
+        808
+      ],
+      "floorWidthPx": [
+        220,
+        121,
+        44
+      ],
+      "normalizedTo900Px": {
+        "baseWidth": 330.54,
+        "floorHeights": [
+          159.6,
+          319.2,
+          763.06
+        ],
+        "floorWidths": [
+          207.76,
+          114.27,
+          41.55
+        ]
+      },
+      "baseAndFloorHeightRelativeErrorsPercent": [
+        -3.04,
+        2.67,
+        1.77,
+        1.37
+      ],
+      "baseAndFloorHeightsWithin5Percent": true,
+      "approxFloorWidthRelativeErrorsPercent": [
+        17.2,
+        4.75,
+        -15.36
+      ],
+      "twoVisibleFeetOneArch": true
+    },
+    "ita": {
+      "bbox": [
+        592,
+        43,
+        944,
+        997
+      ],
+      "heightPx": 954,
+      "baseWidthPx": 352,
+      "groundLineY": 997,
+      "floorY": [
+        829,
+        659,
+        190
+      ],
+      "floorHeightPx": [
+        168,
+        338,
+        807
+      ],
+      "floorWidthPx": [
+        221,
+        121,
+        45
+      ],
+      "normalizedTo900Px": {
+        "baseWidth": 332.08,
+        "floorHeights": [
+          158.49,
+          318.87,
+          761.32
+        ],
+        "floorWidths": [
+          208.49,
+          114.15,
+          42.45
+        ]
+      },
+      "baseAndFloorHeightRelativeErrorsPercent": [
+        -2.59,
+        1.95,
+        1.67,
+        1.14
+      ],
+      "baseAndFloorHeightsWithin5Percent": true,
+      "approxFloorWidthRelativeErrorsPercent": [
+        17.61,
+        4.64,
+        -13.52
+      ],
+      "twoVisibleFeetOneArch": true
+    },
+    "lansi": {
+      "bbox": [
+        593,
+        42,
+        943,
+        997
+      ],
+      "heightPx": 955,
+      "baseWidthPx": 350,
+      "groundLineY": 997,
+      "floorY": [
+        829,
+        660,
+        190
+      ],
+      "floorHeightPx": [
+        168,
+        337,
+        807
+      ],
+      "floorWidthPx": [
+        219,
+        120,
+        44
+      ],
+      "normalizedTo900Px": {
+        "baseWidth": 329.84,
+        "floorHeights": [
+          158.32,
+          317.59,
+          760.52
+        ],
+        "floorWidths": [
+          206.39,
+          113.09,
+          41.47
+        ]
+      },
+      "baseAndFloorHeightRelativeErrorsPercent": [
+        -3.25,
+        1.85,
+        1.26,
+        1.04
+      ],
+      "baseAndFloorHeightsWithin5Percent": true,
+      "approxFloorWidthRelativeErrorsPercent": [
+        16.42,
+        3.66,
+        -15.53
+      ],
+      "twoVisibleFeetOneArch": true
+    }
+  },
+  "obliques": {
+    "viisto-lounas": {
+      "visibleCorners": [
+        [
+          577,
+          572
+        ],
+        [
+          958,
+          572
+        ],
+        [
+          767,
+          710
+        ]
+      ],
+      "inferredHiddenRearCorner": [
+        768,
+        434
+      ],
+      "horizontalDiagonalPx": 381,
+      "inferredVerticalDiagonalPx": 276.0,
+      "ratio": 0.7244,
+      "targetRatio": 0.9063,
+      "inferredAngleDegrees": 46.4,
+      "cameraCalibrated": false,
+      "method": "Three visible top-deck corners read manually +/-5px; hidden rear corner inferred as a parallelogram. Angle is a diagnostic estimate, not calibrated geometry."
+    },
+    "viisto-koillinen": {
+      "visibleCorners": [
+        [
+          577,
+          525
+        ],
+        [
+          958,
+          525
+        ],
+        [
+          768,
+          687
+        ]
+      ],
+      "inferredHiddenRearCorner": [
+        768,
+        363
+      ],
+      "horizontalDiagonalPx": 381,
+      "inferredVerticalDiagonalPx": 324.0,
+      "ratio": 0.8504,
+      "targetRatio": 0.9063,
+      "inferredAngleDegrees": 58.3,
+      "cameraCalibrated": false,
+      "method": "Three visible top-deck corners read manually +/-5px; hidden rear corner inferred as a parallelogram. Angle is a diagnostic estimate, not calibrated geometry."
+    }
+  },
+  "top": {
+    "sourceFootprintBBox": [
+      369,
+      125,
+      757,
+      512
+    ],
+    "actualWarmStructureBBox": [
+      375,
+      131,
+      749,
+      511
+    ],
+    "deckRotationAlignedWithFeet": true,
+    "exactFootprintPass": false,
+    "note": "Rotation and location improved, but raster footprint is smaller and not pixel-exact."
+  },
+  "ground": {
+    "formalStraightSymmetricPathsPass": true,
+    "uprightObjectsInWorkAreaObserved": false,
+    "sourceFootprintPixels": 75005,
+    "grassLikePixelsInsideRequiredPaving": 630,
+    "estimatedPavingCoveragePercent": 99.16,
+    "coverageMethod": "Heuristic grass classifier inside binary footprint: blue<140 and green-blue>50; includes uncertain antialiased edge pixels, not proof of total exact paving coverage.",
+    "pavingFullCoverageVerified": false,
+    "pathSamples": [
+      {
+        "sample": "NE",
+        "center": [
+          950,
+          548
+        ],
+        "perpendicularDirection": [
+          1,
+          -1
+        ],
+        "pixelWidth": 12,
+        "approxMetres": 13.14,
+        "metresPerPixelAssumption": 1.0954086019988056
+      },
+      {
+        "sample": "SW",
+        "center": [
+          790,
+          740
+        ],
+        "perpendicularDirection": [
+          1,
+          -1
+        ],
+        "pixelWidth": 13,
+        "approxMetres": 14.24,
+        "metresPerPixelAssumption": 1.0954086019988056
+      },
+      {
+        "sample": "cross1",
+        "center": [
+          760,
+          526
+        ],
+        "perpendicularDirection": [
+          1,
+          1
+        ],
+        "pixelWidth": 14,
+        "approxMetres": 15.34,
+        "metresPerPixelAssumption": 1.0954086019988056
+      },
+      {
+        "sample": "cross2",
+        "center": [
+          942,
+          712
+        ],
+        "perpendicularDirection": [
+          1,
+          1
+        ],
+        "pixelWidth": 14,
+        "approxMetres": 15.34,
+        "metresPerPixelAssumption": 1.0954086019988056
+      }
+    ],
+    "pathSampleMethod": "Nearest contiguous pale-color run along manually placed perpendicular cross-section. Assumes source footprint is the requested 300m square; m/px=300/sqrt(mask area). Approximate raster widths, +/-2px.",
+    "pathWidth6to12mVerified": false,
+    "outsideMaskPixels": 1230663,
+    "outsideMaskChangedPixels": 1230598,
+    "outsideMaskOver16ChannelDifferencePixels": 118147,
+    "outsideExactIdentity": false,
+    "receiverMustCompositeInsideMask": true,
+    "productionPixelEditsPerformed": false,
+    "allStreetMouthConnectionsVerified": false
+  },
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
