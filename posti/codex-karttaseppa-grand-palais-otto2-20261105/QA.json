@@ -1,0 +1,319 @@
+{
+  "taskNumber": 2111,
+  "site": "grand-palais-otto2",
+  "completedAt": "2026-11-05T15:38:48.787583+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohja-uusi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10; explicit bboxOverrides if stated. Manual main cornice and roof-glass datum on native QA strips, uncertainty4px. Ratios measured to main roof separate from decorative tip. No normalization of production images.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        191,
+        316,
+        1365,
+        904
+      ],
+      "widthPx": 1174,
+      "totalHeightPx": 588,
+      "groundY": 903,
+      "corniceY": 705,
+      "corniceHeightPx": 198,
+      "roofY": 528,
+      "roofHeightPx": 375,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 3.1306666666666665,
+      "targetRatio": 3.533333333333333,
+      "ratioErrorPercent": -11.396226415094347,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 62.5
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        182,
+        315,
+        1332,
+        904
+      ],
+      "widthPx": 1150,
+      "totalHeightPx": 589,
+      "groundY": 903,
+      "corniceY": 705,
+      "corniceHeightPx": 198,
+      "roofY": 528,
+      "roofHeightPx": 375,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 3.066666666666667,
+      "targetRatio": 3.533333333333333,
+      "ratioErrorPercent": -13.207547169811306,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 62.5
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        42,
+        350,
+        1496,
+        862
+      ],
+      "widthPx": 1454,
+      "totalHeightPx": 512,
+      "groundY": 861,
+      "corniceY": 705,
+      "corniceHeightPx": 156,
+      "roofY": 529,
+      "roofHeightPx": 332,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 4.379518072289157,
+      "targetRatio": 5.333333333333333,
+      "ratioErrorPercent": -17.884036144578307,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 62.5
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        41,
+        350,
+        1496,
+        861
+      ],
+      "widthPx": 1455,
+      "totalHeightPx": 511,
+      "groundY": 860,
+      "corniceY": 705,
+      "corniceHeightPx": 155,
+      "roofY": 528,
+      "roofHeightPx": 332,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 4.382530120481928,
+      "targetRatio": 5.333333333333333,
+      "ratioErrorPercent": -17.82756024096386,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 62.5
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 2.0654044750430294,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 0.06875214850464077,
+      "pass5Percent": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 24.328147100424328,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 43,
+  "obliques": {
+    "southwest": {
+      "roofEdgePoints": [
+        [
+          785,
+          252
+        ],
+        [
+          1007,
+          155
+        ],
+        [
+          1187,
+          349
+        ]
+      ],
+      "measurementMethod": "Orthogonal straight roof-edge slope proxy, not a calibrated ground plane; ground corners partly rounded/occluded",
+      "targetElevation": 65,
+      "uncertaintyDegreesApprox": 5,
+      "estimatedSinElevation": 0.6862367819644476,
+      "estimatedElevationDegrees": 43.33295083123369,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    },
+    "northeast": {
+      "pass": false,
+      "reason": "East branch appears front-right rather than expected front-left for stipulated NE camera. Exact180degree counterpart not verified."
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      639,
+      320,
+      897,
+      704
+    ],
+    "actualBBox": [
+      622,
+      309,
+      990,
+      839
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": true
+  },
+  "ground": {
+    "footprintPixels": 95912,
+    "grassLikePixels": 20013,
+    "grassLikeFraction": 0.208660021686546,
+    "coverageMetric": "Heuristic grass-color test only; not semantic proof of paving",
+    "metresPerPixelApprox": 0.9992072927806909,
+    "pathSamples": [
+      {
+        "axis": "x",
+        "position": 500,
+        "start": 620,
+        "end": 625,
+        "widthPx": 6,
+        "widthMetresApprox": 5.995243756684145,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": false
+      },
+      {
+        "axis": "y",
+        "position": 950,
+        "start": 552,
+        "end": 560,
+        "widthPx": 9,
+        "widthMetresApprox": 8.992865635026218,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 700,
+        "start": 335,
+        "end": 340,
+        "widthPx": 6,
+        "widthMetresApprox": 5.995243756684145,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": false
+      },
+      {
+        "axis": "x",
+        "position": 400,
+        "start": 890,
+        "end": 894,
+        "widthPx": 5,
+        "widthMetresApprox": 4.9960364639034545,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": false
+      }
+    ],
+    "pavingFullFootprintPass": false,
+    "sourceParkLayoutPreserved": false,
+    "outsidePixelIdentityVerified": false,
+    "receiverMustCompositeMaskOnly": true
+  },
+  "visualIssues": [
+    "Common real scale and45m dome ratio fail despite opposite-width pairs agreeing",
+    "SW roof-edge projection shallower than65degrees; NE orientation unverified",
+    "Top registration enlarged and shifted",
+    "Ground paving shrunk inside full required footprint and park paths changed"
+  ],
+  "notes": "T-pohja, pyöristetyt päädyn lasiholvit, yksi matala kupoli ja kärki säilyvät tässä erässä paremmin. Itä- ja länsijulkisivut eroteltu: idässä poikkilaivan pääty, lännessä jatkuva pylvässivu ja keskisisäänkäynti. Kärki on lyhty, masto ja yksinkertainen lippulevy; lähdekuvan mittaus noin62.5m suhteutettuna45m-holviin, ei tarkka rakennusmittaus. Palais de la Decouverte ja itäpihat jätetty tilauksen mukaan pois. Mittakaava,65asteen kuvakulma ja yläkuvan rekisteröinti eivät täytä sopimusta. Maapohjan kiveys on lähdejalanjälkeä pienempi ja itäpuiston polku yksinkertaistui. Uusi yläkuva on noin368x530px eikä258x384px lähderajaus. Ei tuotannon skaalausta/rajausta tai jälkipaikkausta. Seuraava uusi otto vaatii erillisen lähteen; tämän erän8kutsua käytetty.",
+  "noAutomaticRetry": true
+}
