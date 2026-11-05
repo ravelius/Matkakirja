@@ -1,0 +1,453 @@
+{
+  "taskNumber": 2098,
+  "site": "sacre-coeur",
+  "completedAt": "2026-11-05T16:44:11.595080+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohja-uusi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10; explicit verified bounding boxes. Manual lower cornice edge of the large central dome arched drum, uncertainty4px; north partly occluded but both side edges visible. Height is measured to main dome lantern top (83m), not to northern campanile. No normalization of production pixels.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        413,
+        33,
+        1123,
+        989
+      ],
+      "widthPx": 710,
+      "totalHeightPx": 956,
+      "groundY": 988,
+      "corniceY": 558,
+      "corniceHeightPx": 430,
+      "roofY": 33,
+      "roofHeightPx": 955,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.743455497382199,
+      "targetRatio": 0.6024096385542169,
+      "ratioErrorPercent": 23.413612565445007,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 84
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        413,
+        30,
+        1123,
+        989
+      ],
+      "widthPx": 710,
+      "totalHeightPx": 959,
+      "groundY": 988,
+      "corniceY": 510,
+      "corniceHeightPx": 478,
+      "roofY": 30,
+      "roofHeightPx": 958,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.7411273486430062,
+      "targetRatio": 0.6024096385542169,
+      "ratioErrorPercent": 23.027139874739035,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 84
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        77,
+        34,
+        1496,
+        982
+      ],
+      "widthPx": 1419,
+      "totalHeightPx": 948,
+      "groundY": 981,
+      "corniceY": 609,
+      "corniceHeightPx": 372,
+      "roofY": 34,
+      "roofHeightPx": 947,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.498416050686378,
+      "targetRatio": 1.1566265060240963,
+      "ratioErrorPercent": 29.550554382259776,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 84
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        82,
+        33,
+        1459,
+        982
+      ],
+      "widthPx": 1377,
+      "totalHeightPx": 949,
+      "groundY": 981,
+      "corniceY": 610,
+      "corniceHeightPx": 371,
+      "roofY": 33,
+      "roofHeightPx": 948,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.4525316455696202,
+      "targetRatio": 1.1566265060240963,
+      "ratioErrorPercent": 25.583465189873422,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 84
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 0.0,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 3.004291845493562,
+      "pass5Percent": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 25.923682616596,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 7,
+  "obliques": {
+    "viisto-lounas": {
+      "method": "Manually selected basal edge proxy: west long-edge / south-front base, adjacent edges assumed orthogonal; no surveyed plane, geometry is stylized. Elevation uncertainty about5degrees.",
+      "oppositeDirectionPlausible": true,
+      "estimatedSinElevation": 0.6510052439806032,
+      "estimatedElevationDegrees": 40.617435905040765,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false,
+      "basalEdgePoints": [
+        [
+          442,
+          493
+        ],
+        [
+          746,
+          958
+        ],
+        [
+          1060,
+          871
+        ]
+      ],
+      "uncertaintyDegrees": 5,
+      "oppositeAzimuthExactly180Verified": false
+    },
+    "viisto-koillinen": {
+      "method": "Manually selected adjacent basal edges of north campanile square plinth; same-plane/orthogonality approximate, not calibrated full footprint. Elevation uncertainty about5degrees.",
+      "oppositeDirectionPlausible": true,
+      "estimatedSinElevation": 0.6225728063646904,
+      "estimatedElevationDegrees": 38.50425880865353,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false,
+      "basalEdgePoints": [
+        [
+          914,
+          895
+        ],
+        [
+          985,
+          966
+        ],
+        [
+          1114,
+          916
+        ]
+      ],
+      "uncertaintyDegrees": 5,
+      "oppositeAzimuthExactly180Verified": false
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      652,
+      294,
+      884,
+      730
+    ],
+    "actualBBox": [
+      617,
+      181,
+      919,
+      840
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": false
+  },
+  "ground": {
+    "footprintPixels": 84328,
+    "grassLikePixels": 0,
+    "grassLikeFraction": 0.0,
+    "coverageMetric": "Heuristic grass-color test only; not semantic proof of paving",
+    "metresPerPixelApprox": 0.9980533181928667,
+    "pathSamples": [
+      {
+        "axis": "x",
+        "position": 350,
+        "start": 597,
+        "end": 603,
+        "description": "west path between northern entrances",
+        "widthPx": 7,
+        "widthMetresApprox": 6.986373227350067,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 600,
+        "start": 639,
+        "end": 645,
+        "description": "west longitudinal path",
+        "widthPx": 7,
+        "widthMetresApprox": 6.986373227350067,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 400,
+        "start": 880,
+        "end": 887,
+        "description": "east longitudinal path",
+        "widthPx": 8,
+        "widthMetresApprox": 7.9844265455429335,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 750,
+        "start": 279,
+        "end": 286,
+        "description": "north cross path",
+        "widthPx": 8,
+        "widthMetresApprox": 7.9844265455429335,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      }
+    ],
+    "pavingFullFootprintPass": true,
+    "sourceParkLayoutPreserved": false,
+    "outsidePixelIdentityVerified": true,
+    "receiverMustCompositeMaskOnly": true,
+    "outsidePixelIdentityPass": false,
+    "outsidePixels": 1399813,
+    "outsideChangedPixels": 1399225,
+    "outsideMeanAbsoluteChannelDifference": 5.850858412278402,
+    "footprintVisualPavingCheck": true,
+    "parkRuleConflictResolution": "Mandatory420x200m game footprint replaces original park wherever overlapping; all preservation claims restricted to nonoverlap, also not pixel exact."
+  },
+  "visualIssues": [
+    "Top is an oblique elevation-like view, not90degree orthographic; facades and drum sides visible, no source footprint registration.",
+    "Campanile shifts from northwest/off-axis position in top/obliques to axial north in north elevation. Its north-elevation height is well below main dome despite84mvs83m sources.",
+    "East elevation incorrectly rotates/unfolds SOUTH front gable and three-arch porch into side-image plane; west has approximately correct edge-on front. East and west topology therefore differ.",
+    "SW apse roof looks like open curved shell; NE/north closed apse roof differs. Rear geometry insufficiently sourcefaithful.",
+    "Main dome narrower/height proportions simplified, small turrets and horses simplified; no text, groundshadow, vegetation or people on building views. Overall white/ivory stone real colors with slightly warm watercolor.",
+    "Ground paving visually covers whole required footprint; source park changes inside footprint are mandated, and other park shapes are reinterpreted. Outside pixels must be masked by receiver."
+  ],
+  "notes": "Arviointierä, ei Tripo-valmis. Kahdeksan kutsua, ei yhtään uusintaa. Rakennuksen pää- ja sivumittojen taulukko96×50m on tilauksen suunnittelumittari, ei lähdevarmennettu todellinen ulkomitta; muualla esiintyvä85×35m on erillinen vertailu, mittausrajaus avoin. Kupoli83m varmistettu kahdesta lähteestä. Päälistamittari on keskimmäisen suuren kupolin alemman kaari-ikkunallisen rummun alalistan reuna; N:n alaosa peittyy kellotorniin, mutta reuna näkyy sivuilla. Maaviiva on sokkelin alin raja. Kupolin lanterneiden yläreunat mitattu erikseen pohjoisesta campanilesta. Suuntaparit vastaavat etelä/pohjoinen ja itä/länsi, mutta idän eteläjulkisivun projektio on virheellinen. Yläkuvan väärä kulma ja campanilen paikkavaihtelu ovat myös itsenäisiä hylkäysperusteita. Kupolien ja tornin koko/paikat verrattiin lähdekuviin. Pienet ristit ja veistoksen yksityiskohdat poistettu/simplifioitu 3D-mallin kestävyyden vuoksi. Maapohja on tasainen, ilman pystyobjekteja. Jalanjäljen kiveys syrjäyttää sen sisällä olevat alkuperäiset puistot ensisijaisen ohjeen mukaan; muu puistomuoto ei ole pikselintarkka. Ulkopuolinen kartta näyttää samalta rakenteelta, mutta vasta tavutesti ratkaisee pikselisamuuden. Kone liimaa vain maskin sisäosan.",
+  "noAutomaticRetry": true,
+  "dimensionSourceStatus": {
+    "height83m": "verified by France.fr and ArtCultureFoi; corroborated on-site lighting contractor",
+    "briefEnvelope96x50m": "unverified as real outer dimensions; retained as order design target",
+    "publishedAlternative85x35m": "school/tourism literature, not independently measured; compare separately",
+    "campanile84m": "basilica official source; distinct from central dome"
+  },
+  "alternative85x35Ratios": [
+    {
+      "view": "etela",
+      "widthM": 35,
+      "heightM": 83,
+      "errorPercent": 76.3051608077786,
+      "sourceBoundaryUncertain": true
+    },
+    {
+      "view": "pohjoinen",
+      "widthM": 35,
+      "heightM": 83,
+      "errorPercent": 75.7530569639129,
+      "sourceBoundaryUncertain": true
+    },
+    {
+      "view": "ita",
+      "widthM": 85,
+      "heightM": 83,
+      "errorPercent": 46.31592024349336,
+      "sourceBoundaryUncertain": true
+    },
+    {
+      "view": "lansi",
+      "widthM": 85,
+      "heightM": 83,
+      "errorPercent": 41.83544303797466,
+      "sourceBoundaryUncertain": true
+    }
+  ],
+  "campanileElevationChecks": [
+    {
+      "view": "pohjoinen",
+      "topY": 146,
+      "groundY": 988,
+      "domeTopY": 30,
+      "heightRatioToDome": 0.8789144050104384,
+      "target84over83": 1.0120481927710843,
+      "deviationPercent": -13.154886171587632,
+      "uncertaintyPx": 4
+    },
+    {
+      "view": "ita",
+      "topY": 41,
+      "groundY": 981,
+      "domeTopY": 34,
+      "heightRatioToDome": 0.9926082365364308,
+      "target84over83": 1.0120481927710843,
+      "deviationPercent": -1.9208528184240903,
+      "uncertaintyPx": 4
+    },
+    {
+      "view": "lansi",
+      "topY": 39,
+      "groundY": 981,
+      "domeTopY": 33,
+      "heightRatioToDome": 0.9936708860759493,
+      "target84over83": 1.0120481927710843,
+      "deviationPercent": -1.8158529234478582,
+      "uncertaintyPx": 4
+    }
+  ],
+  "centralDomeCorniceLabel": "Suuren keskikupolin alemman kaari-ikkunarummun alalistan alareuna; ei etupäädyn, taka-apsiksen eikä sivusiiven räystäs.",
+  "secondSharedCorniceCheck": {
+    "physicalFeature": "Upper edge/lower face of the continuous cornice immediately ABOVE the large central dome lower arched window drum. Same ring in all four elevations; north edges visible beside campanile.",
+    "measurements": [
+      {
+        "view": "etela",
+        "upperRingY": 446,
+        "heightFromGroundPx": 542,
+        "uncertaintyPx": 4
+      },
+      {
+        "view": "pohjoinen",
+        "upperRingY": 403,
+        "heightFromGroundPx": 585,
+        "uncertaintyPx": 4
+      },
+      {
+        "view": "ita",
+        "upperRingY": 468,
+        "heightFromGroundPx": 513,
+        "uncertaintyPx": 4
+      },
+      {
+        "view": "lansi",
+        "upperRingY": 468,
+        "heightFromGroundPx": 513,
+        "uncertaintyPx": 4
+      }
+    ],
+    "heightSpreadPercentOfMean": 13.376683697166744,
+    "pass5Percent": false,
+    "verifiedFromNativeCrops": true
+  }
+}
