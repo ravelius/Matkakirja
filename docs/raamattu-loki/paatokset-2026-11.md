@@ -395,3 +395,17 @@ Eiffelin siirto 70 m (KS 024338c23): koe, ei junaan eikä hyväksytty; KK päät
 ## OHJELMAKOHTEET OIKEISSA MITOISSA, ENSIN PARIISI LOPPUUN (OMISTAJA 21.49, KK) (5.11.2026 klo 21.5x)
 
 OMISTAJAN PÄÄTÖS klo 21.49: "Missä koossa nämä kolme kohdetta jäävät Pariisiin?" = "Oikeissa mitoissa (Suositus)"; selite: "Vain tärkeimmät nähtävyydet on liioiteltu, ja viat korjataan". "Kokeillaanko Lontoota tällä tavalla Pariisin jälkeen?" = omin sanoin: "Tehdään ensin Pariisi loppuun". Kuvat scratchpad/keskustelukanava/kuvat/ohjelmakohteet-cffdccab9/ (cffdccab9). KK:n tulkinta: kolme kohdetta jäävät, Valoseppä korjaa viat; Lontoon kokeesta ei päätöstä, osat A–F odottavat, 2.210:n sama toteutus pysyy, KK kysyy uudelleen, kun Pariisi on valmis. Raamattu 2.213.
+
+## 2.213 TIIVISTETTY: AIEMPI SANAMUOTO (PT, RAAMATUN KOKORAJA) (5.11.2026 klo 21.59)
+
+Raamatun 2.213 tiivistetty voimassa olevaan linjaukseen (koko yli 450 kt). Sisältö ei muutu. Aiempi sanamuoto: 2.213 OHJELMANA TEHDYT LISÄKOHTEET ENNEN LONTOON KOETTA (SITOVA, omistaja 5.11.2026 klo
+12.57, kortit: "Kokeillaanko Lontoota tällä tavalla heti Pariisin jälkeen?" → "Kokeillaan ensin Pariisin lisäkohteilla"; "Milloin Pariisiin lisätään ohjelmana tehtyjä kohteita?" → "Sarjan jälkeen";
+suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261105-kaupungit-avoimesta-datasta.md, MUUTOS 1; lähtökohtana Tiny Warsawin ja Tiny Praguen rakennustapa, omistaja 12.50): JÄRJESTYS: 1) Pariisin
+kahdeksan nähtävyyden sarja kartalle; tästä ei töitä ennen sitä. 2) KK katsoo koodin nykyiset ohjelmamallit (Erikoismallit, Maamerkit) lähtötasoksi; PT jakaa tekijän. 3) 2–3 lisäkohdetta ohjelmana,
+kuten sillat ja Hôtel de Ville: oikeat mitat, ei Tripoa eikä tavallisia taloja; Macin kuvat neljästä suunnasta Tripon nähtävyyden rinnalla → KK katsoo → omistajalle kuva ja kortti Lontoosta. JÄRJESTYS
+MUUTETTU (omistaja 5.11.2026 klo 20.44, kortti "Milloin ohjelmana tehtyjen kohteiden kokeilu aloitetaan?" → "Nyt rinnakkain"; kortissa: "2–3 kohdetta, ja kuvat Tripon mallien rinnalle."): kohdan 3
+kokeilu alkaa nyt sarjan rinnalla eikä sen jälkeen; kumoaa kortin "Sarjan jälkeen" ja kohdan 1 "tästä ei töitä ennen sitä". KOKO (omistaja 5.11.2026 klo 21.49, kortti "Missä koossa nämä kolme kohdetta
+jäävät Pariisiin?" → "Oikeissa mitoissa"; selite: "Vain tärkeimmät nähtävyydet on liioiteltu, ja viat korjataan"; kuvat scratchpad/keskustelukanava/kuvat/ohjelmakohteet-cffdccab9/, cffdccab9): Hôtel
+de Ville, Pont Neuf ja Pont Alexandre III jäävät Pariisiin oikeissa mitoissa, ja Valoseppä korjaa viat (KK:n tulkinta). LONTOO (sama kortti, kysymys "Kokeillaanko Lontoota tällä tavalla Pariisin
+jälkeen?", omin sanoin): "Tehdään ensin Pariisi loppuun": ei päätöstä kokeesta; KK kysyy uudelleen, kun Pariisi on valmis (KK:n tulkinta). RAJAUS: Lontoon kokeen osat A–F odottavat korttia, ja 2.210:n
+"sama toteutus Lontooseen" pysyy siihen asti.
