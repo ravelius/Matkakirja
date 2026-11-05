@@ -68,3 +68,6 @@ KK: iso iPad ilman wifiä noin 09.49–10.3x. Lokeista: 8/9 lentoa ilman verkkoa
 
 ## Korjaus 5.11. klo 10.4x (JU, tarkistettu lokista)
 Edellisen lisäyksen "3 glb:tä puuttui" ei ollut wifin syytä: samat kolme tiedostoa antavat verkkoajossakin (d9c s3) 404. Ilman verkkoa puuttui noin 640 latausta (789 s2: 641 Curl-riviä, d9c s3: 0): esilataaja, luettelot, mikseri, äänet, isoisa.json, kartan palat. Palatsimallit rakentuivat molemmissa. +164 Mt on yhä yksi mittaus, ja syy on näissä latauksissa, ei palatsimalleissa (ei todennettu tarkemmin). 404:t avoimia, kerrottu PT:lle.
+
+## Lisäys 5.11. klo 10.5x: PT:n käsky, 3 × 404 selvitetty (vain luku), rivi PT:lle
+Valinnaisia hakuja kaikilla rungoilla: `LataaSarjanMalli` hakee `-lod1.glb`:n (puuttuu → LOD0 kaikilla etäisyyksillä), `Osasarja.cs` hakee `pursotukset.glb`:n (puuttuu → oma pursotus, 977 kpl lokissa). Puuttuvat myös 217:stä (`natiiviseppa/runko-217-tf`, oletettu TF:n rungoksi; c2-v32, osasarja-v6) ja 218:sta (`a5323cf4e`; c2-v34, osasarja-v8); pursotukset.glb puuttuu osasarjoista v1–v9. A3 4485 ja A5 3247 kolmiota, A5 499 kpl Meridiaaniportin LOD0:n mukana. Ei tarkistettu kuvasta. Ei vaikuta wifi-uusintaan.
