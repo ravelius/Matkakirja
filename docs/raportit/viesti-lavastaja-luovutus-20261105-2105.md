@@ -31,3 +31,8 @@ Aukot x<475 (5702, 13052) ja x 475:n raja (8, 141) samat kuin lattia21:ssä: tau
 
 ## Jonossa, ei aloitettu (KORJAUS.md; LAV ei ole tarkistanut)
 PK: konsoli, räystään alapinta, marmoriterassin nollatekselit; muurien ja porttien kiertosuunta + V4_gold-räystäs (KK: yksi yleinen korjaus generaattoriin, ei omaa ajoa, ei junaan); lähikoristeiden mitat h-zhongyoumen ja h-zhongzuomen; valkoinen viiva (13; -407) ja pystysauma; (-87,5; 302,5). S-rengas-itän harmaa vino levy. Vaakalevyt ilmassa x -420, pysty harmaa levy ja sälö x -60, puita ilman tyveä x 136 ja x 300.
+
+## Lisäys 21.06: PT:n käsky (sitova)
+Ei omaa lattia21-vertailuajoa. 24c:n kuvat lasketaan vain, jos todistetaan lokista tai verkon tunnisteesta, että ne ovat 24c:n verkosta. Selvitä koodista, miksi juuren vaihto ei ladannut verkkoa (ei vielä katsottu; unity.logissa toinen `palatsi mallit` + `v4 7` eivät tuota uutta "ulkorengas 24 palaa" -riviä).
+Todiste 24b:lle kuvat24b-koe/unity.log: rivi 2587 juuri 24b, rivi 3674 ainoa renkaan lataus ("ladattu 588 glb:tä"), rivi 4948 kuva z 630; lisäksi ero lattia23:n kuvaan 24 % lattian pikseleistä. Se on päättely lokin järjestyksestä, ei verkon tunniste. Ajoon 24c: yksi juuri per ajo, ja sama lokiketju tuloksessa; tunniste (tiedoston sha tai lokiin verkon kolmiomäärä) olisi vahvempi, jos koodi antaa sen ilman muutosta.
+Lattia21 mallista (tark24-tulos.txt): z 630:n vika-alue länsi 1848 kohtaa, sama luku kuin lattia23:ssa; karkea tarkan päällä vyöhykkeellä 21: 0, 23: 1337. Eli tark24:n askelluku ei erota 21:tä ja 23:a tällä alueella. Lattia21:n ulkonäkö z 630:ssa on yhä kuvaamatta.
