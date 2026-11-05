@@ -353,3 +353,7 @@ OMISTAJAN PÄÄTÖS klo 20.25: "Siirretäänkö Pariisin horisonttia kauemmas?" 
 ## RAKENNUSTEN ALUSTAT CODEXILTA (OMISTAJA NOIN 20.3x, KK) (5.11.2026 klo 20.4x)
 
 OMISTAJAN PYYNTÖ noin klo 20.3x, käsitelty 20.41 (date; tarkka aika ei tiedossa, tiedostonimen 2031 on KK:n arvaus): "Tuo ympyrä pitäisi piirtää codexilla myös samoin muiden rakennusten alustat vai ovatko ne vielä tulossa?" Kuva docs/raportit/kaappaukset/omistaja-20261105/riemukaari-ympyra-2031.png. Tavoite ja rajaus ovat KK:n: koko aukio Codexilta, sama sarjan muille malleille alueilla v7, reuna katuja ja rantoja pitkin. Raamattu 2.215, tarkentaa 2.206:ta.
+
+## OHJELMANA TEHDYT KOHTEET NYT RINNAKKAIN (OMISTAJA 20.44, KK) (5.11.2026 klo 20.4x)
+
+OMISTAJAN PÄÄTÖS klo 20.44: "Milloin ohjelmana tehtyjen kohteiden kokeilu aloitetaan?" = "Nyt rinnakkain (Suositus)"; kortissa: "2–3 kohdetta, ja kuvat Tripon mallien rinnalle." Muuttaa 2.213:n järjestyksen. KK:n tavoite: 2–3 Pariisin kohdetta, kuten sillat ja Hôtel de Ville, oikein mitoin ilman Tripoa eikä tavallisia taloja; omistaja näkee neljästä suunnasta ja 45°:sta Tripon nähtävyyden rinnalla, mikä ero on. Lontoon osat A–F odottavat yhä korttia. Tekijä Valoseppä (PT).
