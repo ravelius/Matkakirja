@@ -1,0 +1,275 @@
+{
+  "taskNumber": 2093,
+  "site": "invalides",
+  "completedAt": "2026-11-05T15:15:45.743834+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "allEightNative1536x1024RGB": false,
+  "nativeCanvasFailures": [
+    {
+      "view": "etela",
+      "actual": [
+        2172,
+        724
+      ],
+      "required": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10, exclusive end. Main continuous wing stone eave selected visually on native QA crops; uncertainty4px. Different native canvases are not normalized or resampled. Raw width comparison exposes common-scale failure, not calibrated3D dimensions.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        2172,
+        724
+      ],
+      "bbox": [
+        37,
+        60,
+        2136,
+        664
+      ],
+      "width": 2099,
+      "height": 604,
+      "groundY": 663,
+      "corniceY": 566,
+      "corniceHeightPx": 97,
+      "corniceMeasurementUncertaintyPx": 4,
+      "targetWidthHeightRatio": 2.392523364485981,
+      "actualWidthHeightRatio": 3.475165562913907,
+      "ratioErrorPercent": 45.25106063741722,
+      "ratioPass5Percent": false
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        29,
+        265,
+        1506,
+        782
+      ],
+      "width": 1477,
+      "height": 517,
+      "groundY": 781,
+      "corniceY": 635,
+      "corniceHeightPx": 146,
+      "corniceMeasurementUncertaintyPx": 4,
+      "targetWidthHeightRatio": 2.392523364485981,
+      "actualWidthHeightRatio": 2.8568665377176017,
+      "ratioErrorPercent": 19.408093568665397,
+      "ratioPass5Percent": false
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        34,
+        241,
+        1504,
+        807
+      ],
+      "width": 1470,
+      "height": 566,
+      "groundY": 806,
+      "corniceY": 669,
+      "corniceHeightPx": 137,
+      "corniceMeasurementUncertaintyPx": 4,
+      "targetWidthHeightRatio": 2.560747663551402,
+      "actualWidthHeightRatio": 2.597173144876325,
+      "ratioErrorPercent": 1.4224549276520948,
+      "ratioPass5Percent": true
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        43,
+        239,
+        1504,
+        807
+      ],
+      "width": 1461,
+      "height": 568,
+      "groundY": 806,
+      "corniceY": 670,
+      "corniceHeightPx": 136,
+      "corniceMeasurementUncertaintyPx": 4,
+      "targetWidthHeightRatio": 2.560747663551402,
+      "actualWidthHeightRatio": 2.5721830985915495,
+      "ratioErrorPercent": 0.446566258867076,
+      "ratioPass5Percent": true
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "rawNativeWidthDifferencePercent": 34.78747203579418,
+      "pass5Percent": false,
+      "nativeCanvasMatches": false
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "rawNativeWidthDifferencePercent": 0.6141248720573182,
+      "pass5Percent": true,
+      "nativeCanvasMatches": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 37.98449612403101,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 143,
+  "obliques": {
+    "southwest": {
+      "passTarget": false,
+      "reason": "Head-on long axis, no southwest corner. Corner metric cannot be validly measured."
+    },
+    "northeast": {
+      "edgePoints": [
+        [
+          156,
+          493
+        ],
+        [
+          768,
+          1018
+        ],
+        [
+          1380,
+          493
+        ]
+      ],
+      "estimatedSinElevation": 0.8578431372549019,
+      "estimatedElevationDegrees": 59.07526621910945,
+      "uncertaintyDegreesApprox": 4,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false,
+      "reason": "Approximate outer-edge slope metric only; interior axes are bent/nonorthogonal and layout changes. Not a valid coherent opposite view."
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      587,
+      530,
+      926,
+      890
+    ],
+    "actualBBox": [
+      581,
+      530,
+      936,
+      932
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": false,
+    "northUp": true,
+    "reason": "Facade walls and dome side remain visible; object extends south of authoritative footprint."
+  },
+  "ground": {
+    "footprintPixels": 106767,
+    "grassLikePixels": 2402,
+    "grassLikeFraction": 0.022497588206093645,
+    "coverageMetric": "Heuristic grass color within footprint, not semantic paving proof",
+    "metresPerPixelApprox": 1.1485519814805087,
+    "pathSamples": [
+      {
+        "axis": "y",
+        "position": 550,
+        "start": 694,
+        "end": 702,
+        "widthPx": 9,
+        "widthMetresApprox": 10.336967833324579,
+        "uncertaintyPx": 2,
+        "diagonalCrossSection": false,
+        "measurementNote": "Approximately perpendicular pale-path color run",
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 950,
+        "start": 711,
+        "end": 719,
+        "widthPx": 9,
+        "widthMetresApprox": 10.336967833324579,
+        "uncertaintyPx": 2,
+        "diagonalCrossSection": true,
+        "measurementNote": "Pixel-axis cross section; diagonal sample is an upper bound to perpendicular width",
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 900,
+        "start": 690,
+        "end": 698,
+        "widthPx": 9,
+        "widthMetresApprox": 10.336967833324579,
+        "uncertaintyPx": 2,
+        "diagonalCrossSection": false,
+        "measurementNote": "Approximately perpendicular pale-path color run",
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 500,
+        "start": 728,
+        "end": 735,
+        "widthPx": 8,
+        "widthMetresApprox": 9.18841585184407,
+        "uncertaintyPx": 2,
+        "diagonalCrossSection": false,
+        "measurementNote": "Approximately perpendicular pale-path color run",
+        "pass6to12mApprox": true
+      }
+    ],
+    "pavingFullFootprintPass": false,
+    "sourceParkLayoutPreserved": false,
+    "outsidePixelIdentityVerified": false,
+    "receiverMustCompositeMaskOnly": true,
+    "reason": "Northern grass panels retain block-shaped color ghosts; exact source park geometry not demonstrated."
+  },
+  "visualIssues": [
+    "South native size2172x724 fails required1536x1024",
+    "South/north ratio and common scale fail",
+    "SW notcorner view; NE architecture changes",
+    "Top is not true overhead and exceeds footprint",
+    "Ground retains blocklike tonal traces in north park"
+  ],
+  "photoReceipt": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Invalides_aerial_view.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Invalides_aerial_view.jpg",
+    "author": "Eric Gaba (Wikimedia Commons user Sting)",
+    "selectedLicense": "CC BY-SA3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "photoDate": "2002-08",
+    "currentOriginalUpload": "2016-08-15 (Alonso de Mendoza color adjustment)",
+    "locallyModified": false,
+    "sha256": "be26db0e706c70f52a9feb49a30533ccfd5cc3b8fc5a153b4e9b073d90c159f9",
+    "dimensions": [
+      586,
+      800
+    ],
+    "verifiedAt": "2026-11-05T14:52:00.474161+00:00"
+  },
+  "noAutomaticRetry": true,
+  "correction2112": "Read during completion. Already-started Invalides allowed to finish. Direction now clarified as clockwise from east; PNG footprint was followed."
+}
