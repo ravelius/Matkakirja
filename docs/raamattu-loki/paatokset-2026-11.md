@@ -313,3 +313,7 @@ OMISTAJAN PÄÄTÖS klo 19.23 KK:n kautta: "laita kaikki äänet peliin, kuuntel
 ## TF, KUN PARIISI ON VALMIS; ÄÄNET KUUNNELLAAN SIITÄ (OMISTAJA 19.26, KK) (5.11.2026 klo 19.26)
 
 OMISTAJAN PÄÄTÖS klo 19.26 KK:n kautta: "ipad on jo kotona. vielä ei tarvitse julkaista TF, julkaiset TF kun pariisi valmis". KK:n tulkinta, kerrottu omistajalle: pieni iPad on kotona, joten asennus perutaan; ei TF:ää nyt; omistaja kuuntelee äänet Pariisin TF:stä; VS:n vienti ja koodi jatkavat kohti sitä. KK vahvistaa kortilla ennen TF:ää ja kertoo silloin KERROTTAVAT-listan.
+
+## MONTPARNASSE OTTO 2 KELPAA (OMISTAJA 19.28, KK) (5.11.2026 klo 19.28)
+
+OMISTAJAN PÄÄTÖS klo 19.28 kortilla, arkki scratchpad/keskustelukanava/kuvat/sarja24/montparnasse-otto2-arkki.jpg: Montparnasse otto 2 "Kelpaa". Perillä Karttasepällä.
