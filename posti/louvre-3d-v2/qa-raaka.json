@@ -1,0 +1,79 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21h-2103-20261105/delivery/louvre-3d-v2/louvre.glb",
+  "bytes": 4531036,
+  "meshes": 1,
+  "primitives": 1,
+  "materials": 1,
+  "referencedMaterials": [
+    0
+  ],
+  "skins": 0,
+  "animations": 0,
+  "vertices": 31978,
+  "triangles": 46673,
+  "positionsFinite": true,
+  "bounds": [
+    [
+      -430.0,
+      0.0,
+      -180.0
+    ],
+    [
+      430.0,
+      350.0,
+      180.0
+    ]
+  ],
+  "indexRangeValid": true,
+  "allMaterialsOpaque": true,
+  "uvZeroThresholdCross2DAbs": 1e-12,
+  "uvZeroTriangles": 13,
+  "uvZero3DArea": 27.132321767067005,
+  "surface3DArea": 1758397.5702642135,
+  "uvZero3DAreaFraction": 1.543014061546397e-05,
+  "imageDimensions": [
+    {
+      "index": 0,
+      "name": "tripo_image_f4590651-9e62-4a42-9136-33aa57ec42b4_2",
+      "mimeType": "image/png",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_f4590651-9e62-4a42-9136-33aa57ec42b4_0",
+      "mimeType": "image/jpeg",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_f4590651-9e62-4a42-9136-33aa57ec42b4_1",
+      "mimeType": "image/jpeg",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "primitiveReports": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "mode": 4,
+      "vertices": 31978,
+      "triangles": 46673,
+      "material": 0,
+      "opaque": true,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "uvZeroTriangles": 13,
+      "uvZero3DArea": 27.132321767067005,
+      "surface3DArea": 1758397.5702642135
+    }
+  ]
+}

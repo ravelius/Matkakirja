@@ -1,0 +1,136 @@
+{
+  "task": 2103,
+  "continuationTask": 2105,
+  "state": "READY_FOR_RECEIVER_REVIEW_WITH_DEVIATIONS",
+  "liike": "ei liikettä",
+  "primary": "louvre.glb",
+  "primaryIsRetopo": false,
+  "retopoRejected": true,
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "gameIntegrated": false,
+  "previewsInspectedFullSize": true,
+  "creditsSpent": 190,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "sha256": "5fcc7815a1c6679c12c15d869d84a004c51a1d82bec439de44dd65892a20cb1c",
+      "bytes": 1725
+    },
+    {
+      "path": "esikatselu/kevyt-etela.png",
+      "sha256": "3ea6159dad3d620d08079ca843139cef7478b95e579298b953ed82e33d975e18",
+      "bytes": 303869
+    },
+    {
+      "path": "esikatselu/kevyt-ita.png",
+      "sha256": "2d8405edb35f6728d6d3a83c6f559ae2af6e57a789d6361e2caba77be7afb8d3",
+      "bytes": 515179
+    },
+    {
+      "path": "esikatselu/kevyt-lansi.png",
+      "sha256": "10106682f847df2923a7ef07f43051564184d54443c8e779898d50554d7e122b",
+      "bytes": 566992
+    },
+    {
+      "path": "esikatselu/kevyt-pelikulma-koillinen.png",
+      "sha256": "8f2f26e5df248152113aed3a738c07154ee114cffc847e0a4c214a71f43336b1",
+      "bytes": 642534
+    },
+    {
+      "path": "esikatselu/kevyt-pelikulma-lounas.png",
+      "sha256": "8661220bea99e7067de87d409c7d3c088ffad3b4bf52045ad5eeb90307ee5428",
+      "bytes": 704137
+    },
+    {
+      "path": "esikatselu/kevyt-pohjoinen.png",
+      "sha256": "4138f20411233f265afa8b7c18266761f9c77f0363cebda9bd9899cd8dbe4178",
+      "bytes": 279860
+    },
+    {
+      "path": "esikatselu/kevyt-ylhaalta.png",
+      "sha256": "5ad1a9bc245a8a22ea81f2a145487eff335622ae5c7975ee95d89603c52f6500",
+      "bytes": 379105
+    },
+    {
+      "path": "esikatselu/pelikulma-koillinen.png",
+      "sha256": "1eaa34d0e0421da7e84129c2762439836dd569ed0b6c4b7b9d155a964103f310",
+      "bytes": 624169
+    },
+    {
+      "path": "esikatselu/pelikulma-lounas.png",
+      "sha256": "1ed2e726ce20ff5ae1687ff015e11ced73c15588d4983b832d5febc5279e8e00",
+      "bytes": 686983
+    },
+    {
+      "path": "esikatselu/raaka-etela.png",
+      "sha256": "f9295c665d924fe7e7126a3372ad20d5584f7f748b7f968484162ae9822695e0",
+      "bytes": 302280
+    },
+    {
+      "path": "esikatselu/raaka-ita.png",
+      "sha256": "a04774bbc7ee0bc7322892985ea2ef353093f6ccf9fa4c96fb41d1b3119239a4",
+      "bytes": 518596
+    },
+    {
+      "path": "esikatselu/raaka-lansi.png",
+      "sha256": "bdd2a40b123a6d5be2ec1f3561ac0dd1089199a8370ab5669d4e7aaccb3d20c6",
+      "bytes": 572060
+    },
+    {
+      "path": "esikatselu/raaka-pohjoinen.png",
+      "sha256": "c554826619dd3bb632ad4365a27af5a0d49c77f0fdd6a30885b8fcf3cb85a485",
+      "bytes": 272906
+    },
+    {
+      "path": "esikatselu/ylhaalta.png",
+      "sha256": "787492a8989d1e782fd32a5aa0d74748cc95a4e7ff070d27b5ce7e625d709333",
+      "bytes": 368789
+    },
+    {
+      "path": "huomiot.md",
+      "sha256": "324b0717fac44d9794a010e4a7c046371c794142a42ec97661fe8e283eaca70e",
+      "bytes": 4954
+    },
+    {
+      "path": "korkeudet-ja-arkadit.json",
+      "sha256": "211bd85245efb65e5d3ab9e6d7cb688af9f0f97b2c4d2f6d909b9f6960d7a937",
+      "bytes": 19919
+    },
+    {
+      "path": "louvre-kevyt-uv-virhe.glb",
+      "sha256": "11071721301450ff741a328371bc5271b9a5db770e70ed5741007da231aab5fc",
+      "bytes": 3099712,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "louvre.glb",
+      "sha256": "3ed4f5fa3f4834db25ef917a798a0064cad093aac87815f879d5e0d02e2cb859",
+      "bytes": 4531036,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "normalization-and-preview-qa.json",
+      "sha256": "2a61d30bdd000946669a39dc1d12a67a41eb0cbfee47cc607d7103c645a03a91",
+      "bytes": 3973
+    },
+    {
+      "path": "qa-kevyt.json",
+      "sha256": "099d4e7694f0f161d543a8fac5a0f10742da7bf92978977fa15d4fe094a2b97a",
+      "bytes": 1686
+    },
+    {
+      "path": "qa-raaka.json",
+      "sha256": "2b8c8cb55c71ade3045817d01ecd51a09f3d17c8fbaadbc24a8ac04c2e2b5a1e",
+      "bytes": 1675
+    },
+    {
+      "path": "technical-check.json",
+      "sha256": "e4e74f77606be8d09251fbf7542e9c00d5f24626fb4f140a8e6d9b2ea16b5539",
+      "bytes": 4612
+    }
+  ],
+  "technicalCheckPassed": true
+}

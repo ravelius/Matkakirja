@@ -1,0 +1,815 @@
+{
+  "scope": "Read-only numeric geometry spot-check of attempt04 raw GLB; not a full topology or delivery QA.",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21h-2103-20261105/raw/louvre21h-attempt04-raw.glb",
+  "triangles": 46673,
+  "rawBounds": [
+    [
+      -0.4896393418312073,
+      0.0,
+      -0.32051095366477966
+    ],
+    [
+      0.4896393418312073,
+      0.30194091796875,
+      0.32051095366477966
+    ]
+  ],
+  "requestedGlobalScale": {
+    "xExtent": 860,
+    "zExtent": 360,
+    "maxY": 350,
+    "factorsXYZ": [
+      878.197406262002,
+      1159.1671720234485,
+      561.6032710952551
+    ]
+  },
+  "pavilionHeightRois": [
+    {
+      "name": "NW corner",
+      "roiRawXZCenter": [
+        -0.44,
+        -0.28
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1212,
+      "peakRawY": 0.230560302734375,
+      "peakScaledY": 267.25793410147566,
+      "referenceTarget": 295,
+      "deltaFromReference": -27.742065898524345
+    },
+    {
+      "name": "SW corner",
+      "roiRawXZCenter": [
+        -0.44,
+        0.28
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1397,
+      "peakRawY": 0.23058319091796875,
+      "peakScaledY": 267.28446533252475,
+      "referenceTarget": 295,
+      "deltaFromReference": -27.715534667475254
+    },
+    {
+      "name": "NE corner",
+      "roiRawXZCenter": [
+        0.44,
+        -0.28
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1164,
+      "peakRawY": 0.2324981689453125,
+      "peakScaledY": 269.5042449969678,
+      "referenceTarget": 295,
+      "deltaFromReference": -25.495755003032173
+    },
+    {
+      "name": "SE corner",
+      "roiRawXZCenter": [
+        0.44,
+        0.28
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1502,
+      "peakRawY": 0.2324981689453125,
+      "peakScaledY": 269.5042449969678,
+      "referenceTarget": 295,
+      "deltaFromReference": -25.495755003032173
+    },
+    {
+      "name": "north long-side center",
+      "roiRawXZCenter": [
+        0,
+        -0.28
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1455,
+      "peakRawY": 0.21102523803710938,
+      "peakScaledY": 244.61352840105113,
+      "referenceTarget": 240,
+      "deltaFromReference": 4.613528401051127
+    },
+    {
+      "name": "south long-side center",
+      "roiRawXZCenter": [
+        0,
+        0.28
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1368,
+      "peakRawY": 0.21102523803710938,
+      "peakScaledY": 244.61352840105113,
+      "referenceTarget": 240,
+      "deltaFromReference": 4.613528401051127
+    },
+    {
+      "name": "east center",
+      "roiRawXZCenter": [
+        0.44,
+        0
+      ],
+      "roiHalfWidthRaw": 0.075,
+      "vertices": 1388,
+      "peakRawY": 0.30194091796875,
+      "peakScaledY": 350.0,
+      "referenceTarget": 350,
+      "deltaFromReference": 0.0
+    }
+  ],
+  "ordinaryLongWingRoofBands": {
+    "method": "Six x stations outside pavilion ROIs; eave max vertices in |z|=.194-.206, ridge max vertices in |z|=.205-.221. Approximate source-coordinate bands, not fitted roof planes.",
+    "samples": [
+      {
+        "stationRawX": -0.3,
+        "side": "north",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.9377147766323,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 145.7404740246614
+      },
+      {
+        "stationRawX": -0.3,
+        "side": "south",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.52648069537094,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 147.19969173236305
+      },
+      {
+        "stationRawX": -0.22,
+        "side": "north",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.81832423691125,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 143.9098190822721
+      },
+      {
+        "stationRawX": -0.22,
+        "side": "south",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.72104305639782,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 141.3075475035375
+      },
+      {
+        "stationRawX": -0.15,
+        "side": "north",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.63260561956741,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 147.27265261774812
+      },
+      {
+        "stationRawX": -0.15,
+        "side": "south",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.53090256721245,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 137.67940165757025
+      },
+      {
+        "stationRawX": 0.15,
+        "side": "north",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.92444916110774,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 147.22622296341217
+      },
+      {
+        "stationRawX": 0.15,
+        "side": "south",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 112.76657570244592,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 146.0013644633111
+      },
+      {
+        "stationRawX": 0.22,
+        "side": "north",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.7387305437639,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 147.14441833434404
+      },
+      {
+        "stationRawX": 0.22,
+        "side": "south",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 113.02746614109562,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 144.09995957145745
+      },
+      {
+        "stationRawX": 0.3,
+        "side": "north",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.76968364665454,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 147.1245199110572
+      },
+      {
+        "stationRawX": 0.3,
+        "side": "south",
+        "eaveBandRawAbsZ": [
+          0.194,
+          0.206
+        ],
+        "eavePeakScaledY": 114.34076207802708,
+        "ridgeBandRawAbsZ": [
+          0.205,
+          0.221
+        ],
+        "ridgePeakScaledY": 127.55331514048919
+      }
+    ],
+    "eaveScaledYRange": [
+      112.76657570244592,
+      114.9377147766323
+    ],
+    "eaveScaledYMedian": 114.67682433798262,
+    "ridgeScaledYRange": [
+      127.55331514048919,
+      147.27265261774812
+    ],
+    "ridgeScaledYMedian": 145.87091924398624,
+    "referenceEave": 120,
+    "referenceRidge": 160,
+    "note": "After one global anisotropic scale, ordinary wing eaves sample near 113-115 and roof ridges near 128-147; local section/band selection affects the sampled maximum."
+  },
+  "facadeRaycasts": {
+    "method": "Vectorized Moller-Trumbore intersections with indexed GLB triangles; merge shared-edge duplicate t values within 2e-4 raw units. Rays start in courtyard and point out through one facade, not across the whole building. Long-wing rays at raw y=.02; east connector rays at raw y=.04. Clear ray means no triangle intersects that sampled line; solid-pier crossings are expected. Local arcade openings need not create a corridor through the building. This is a small spot-check, not a topology proof.",
+    "rays": [
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": -0.32,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.2053444535347014,
+          0.2146495816701077,
+          0.2943713906552149,
+          0.30446418664309344
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": -0.32,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.20475648591256887,
+          0.21470994555256312,
+          0.29469891273660426,
+          0.3042683006204931
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": -0.27,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": -0.27,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": -0.22,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 5,
+        "distancesRaw": [
+          0.07216735460470584,
+          0.20862463610782642,
+          0.21090082449171682,
+          0.298647426371117,
+          0.30076258782072823
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": -0.22,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 5,
+        "distancesRaw": [
+          0.005699436645678954,
+          0.20783627704755156,
+          0.21159030143279073,
+          0.29832091914528125,
+          0.30106013775173823
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": -0.17,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": -0.17,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": -0.12,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": -0.12,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": 0.12,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": 0.12,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": 0.17,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": 0.17,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": 0.22,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 5,
+        "distancesRaw": [
+          0.0719583981995436,
+          0.2079058449342963,
+          0.21232045442190173,
+          0.2978288094540616,
+          0.3014773756146718
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": 0.22,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 5,
+        "distancesRaw": [
+          0.005442147307111684,
+          0.20943694360063594,
+          0.21089172783157742,
+          0.2980049483343197,
+          0.3007845015362736
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": 0.27,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": 0.27,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "long-wing",
+        "side": "north",
+        "rawX": 0.32,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.20467633968906515,
+          0.21447953647219736,
+          0.29457282112835614,
+          0.3042207581647939
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "long-wing",
+        "side": "south",
+        "rawX": 0.32,
+        "rawY": 0.02,
+        "scaledY": 23.18334344046897,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.20474272566137733,
+          0.21465151201653634,
+          0.29458237167267803,
+          0.304219832993137
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": -0.18,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": -0.16,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.36983206098393395,
+          0.3795330443495062,
+          0.46392569276116424,
+          0.47422144890274753
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": -0.14,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": -0.12,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.3722169928425886,
+          0.3768795429405605,
+          0.46611063408069325,
+          0.4716888231279139
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": -0.1,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": 0.1,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": 0.12,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.3720155314438681,
+          0.37682587645829896,
+          0.4655889819135977,
+          0.47205279550270174
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": 0.14,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": 0.16,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 4,
+        "distancesRaw": [
+          0.3695342206479445,
+          0.379511635860974,
+          0.4644861434621319,
+          0.47421499823822105
+        ],
+        "interpretation": "pier_or_wall_crossing"
+      },
+      {
+        "facade": "east-connector",
+        "rawZ": 0.18,
+        "rawY": 0.04,
+        "scaledY": 46.36668688093794,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distinctSurfaceCrossings": 0,
+        "distancesRaw": [],
+        "interpretation": "clear_sampled_opening"
+      }
+    ]
+  }
+}

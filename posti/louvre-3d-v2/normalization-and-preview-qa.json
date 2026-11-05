@@ -1,0 +1,145 @@
+{
+  "raaka": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21h-2103-20261105/raw/louvre21h-attempt04-raw.glb",
+    "inputSHA256": "afb5516c7dae69e98db4eb1d07196472c4d6216569420dafea0ffae7a87221c7",
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21h-2103-20261105/delivery/louvre-3d-v2/louvre.glb",
+    "outputSHA256": "3ed4f5fa3f4834db25ef917a798a0064cad093aac87815f879d5e0d02e2cb859",
+    "offset": [
+      -0.0003814399242401123,
+      0.0,
+      -0.0001678466796875
+    ],
+    "scaleXYZ": [
+      878.197406262002,
+      1159.1671720234485,
+      561.6032710952551
+    ],
+    "bounds": [
+      [
+        -430.0,
+        0.0,
+        -180.0
+      ],
+      [
+        430.0,
+        350.0,
+        180.0
+      ]
+    ],
+    "dimensions": [
+      860.0,
+      350.0,
+      360.0
+    ],
+    "operation": "Positive affine scale plus centering; topology, UV and images unchanged; normals/tangents transformed.",
+    "previews": [
+      {
+        "path": "esikatselu/raaka-etela.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/raaka-pohjoinen.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/raaka-ita.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/raaka-lansi.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/ylhaalta.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/pelikulma-lounas.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/pelikulma-koillinen.png",
+        "blackPixelsRGBAllBelow16": 1,
+        "pixels": 1210000
+      }
+    ]
+  },
+  "kevyt": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21h-2103-20261105/raw/louvre21h-attempt04-retopo28k.glb",
+    "inputSHA256": "44e3e114e6cfd7332a70a332f76173667a198296892369954c7803830dd42bdc",
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21h-2103-20261105/delivery/louvre-3d-v2/louvre-kevyt-uv-virhe.glb",
+    "outputSHA256": "11071721301450ff741a328371bc5271b9a5db770e70ed5741007da231aab5fc",
+    "offset": [
+      -0.0003814399242401123,
+      0.0,
+      -6.103515625e-05
+    ],
+    "scaleXYZ": [
+      878.197406262002,
+      1160.8097165991903,
+      561.416281338465
+    ],
+    "bounds": [
+      [
+        -430.0,
+        0.0,
+        -180.0
+      ],
+      [
+        430.0,
+        350.0,
+        180.0
+      ]
+    ],
+    "dimensions": [
+      860.0,
+      350.0,
+      360.0
+    ],
+    "operation": "Positive affine scale plus centering; topology, UV and images unchanged; normals/tangents transformed.",
+    "previews": [
+      {
+        "path": "esikatselu/kevyt-etela.png",
+        "blackPixelsRGBAllBelow16": 708,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/kevyt-pohjoinen.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/kevyt-ita.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/kevyt-lansi.png",
+        "blackPixelsRGBAllBelow16": 0,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/kevyt-ylhaalta.png",
+        "blackPixelsRGBAllBelow16": 333,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/kevyt-pelikulma-lounas.png",
+        "blackPixelsRGBAllBelow16": 1718,
+        "pixels": 1210000
+      },
+      {
+        "path": "esikatselu/kevyt-pelikulma-koillinen.png",
+        "blackPixelsRGBAllBelow16": 7,
+        "pixels": 1210000
+      }
+    ]
+  },
+  "primary": "louvre.glb (normalized raw), because Tripo retopology damaged UVs"
+}
