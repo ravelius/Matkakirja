@@ -24,7 +24,14 @@ Otto 1 hylätty (0cc7ad898). **Otto 2 tilattu KK:n sanalla, TILAUS-24e, posti 48
 **Rajaus, KK vahvisti:** 2.210 koskee vain aloituslennon valokuvaa (kortti 11.26 kysyi noususta): kuva ei nouse, pyöreä merkki jää. 3D-malli ja maapohja jatkuvat sarjassa (2.206, 2.215). Tarkista kytkettäessä, miltä pyöreä merkki näyttää mallin kohdalla (Merkittavat.json Q188977, 48.855 2.3125).
 
 ## Commons: API seis (PT 17.5x)
-Skriptattu `/w/api.php` on seis, koska robots kieltää `/w/`. Tiedostosivut ja kuvat vain sallituilta poluilta; robots ensin erillisellä komennolla; muuten omistaja lataa käsin tai lähde jää. Codexille 7f4172bc4; se raportoi aiemmat haut kohteittain. PT:ltä auki: koskeeko linjaus Wikidataa ja Wikipediaa (merkittavat/hae.py, kerrokset, esittelypaikat-20261103/hae.py). Älä aja niitä ennen vastausta.
+Skriptattu `/w/api.php` on seis, koska robots kieltää `/w/`. Tiedostosivut ja kuvat vain sallituilta poluilta; robots ensin erillisellä komennolla; muuten omistaja lataa käsin tai lähde jää. Codexille 7f4172bc4; se raportoi aiemmat haut kohteittain.
+**PT 18.0x: sama kielto on Wikidatassa ja Wikipediassa (PT luki robots.txt:t). Uudet skriptihaut ovat seis kaikista kolmesta, kunnes omistaja päättää KK:n kautta. Vanhaa aineistoa, Merkittavat.json mukaan lukien, ei poisteta eikä muuteta sillä välin.**
+Skriptit `_tyo/karttaseppa/`-kansiossa, ÄLÄ AJA:
+- Commons: `isoisan-kartta-20261102/tyokalut/haku.py`
+- Wikidata: `kerrokset/unesco18.py`, `kerrokset/maailmanperinto.py`, `kerrokset/eurooppa-perinto.py`, `merkittavat/hae.py`, `paakaupungit-3d-198/skriptit/haku.py`, `paakaupungit-3d-20261016/skriptit/haku.py`
+- en.wikipedia: `esittelypaikat-20261103/hae.py`
+- `api.php` mainittu, kohdetta ei selvitetty: `merkittavat/kaupungit.py`, `merkittavat/suomeksi.py`, `tietokortit/linkita.py`; myös `paakaupungit-pilvi-20261013/e04/TILANNE.md` mainitsee sen
+Lista on grepillä tehty, eikä siitä näe, milloin skripti on ajettu.
 
 ## Muiden kohteiden suuntatarkistus
 Posti ae84ac494 kertoi Codexille: Opéra etelään, Panthéon länteen, Sacré-Cœur etelään, Riemukaaren kaaret Champs-Élysées'n akselilla, Invalidien kupoli etelässä. **Tarkista jokaisesta toimituksesta oikeaa kuvaa ja `pyyhitty.png`:n katuja vasten.** Väärä suunta ei yleensä vaadi uutta ottoa, jos muoto on symmetrinen. Epäsymmetrisessä uudesta otosta päättää KK.
