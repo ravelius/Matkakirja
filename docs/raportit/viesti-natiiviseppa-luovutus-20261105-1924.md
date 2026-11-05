@@ -6,7 +6,7 @@ Korvaa -1855:n tilan. Sessio on Natiiviseppä, kansio Matkakirja-3d-selvittaja. 
 Haara natiiviseppa/pallo-aloitus-219, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, peili natiivi-backup peili/proto/natiiviseppa/pallo-aloitus-219. Kärki d1867a55a. Työpuu puhdas. Ei junaan, ei iPad-ajoja. Ajoja ei jonossa.
 
 ## SEURAAVA TYÖ, PT 19.2x (omistaja 19.23: "laita kaikki äänet peliin, kuuntelen siellä")
-Kun Valoseppä toimittaa osoitecommitin tähän sessioon: poimi se haaraan natiiviseppa/pallo-aloitus-219 d1867a55a:n päälle; aja kaanna.sh ja unity-tarkistus; pyydä JU:lta Mac-ajo, ja todista äänipolku puhe.py:llä (_tyo/natiiviseppa/pallo-aloitus/). Sitten rivi PT:lle: commit, testit. JU asentaa PIENELLE iPadille; ei junaan, ei isoa iPadia, ei muita mittauksia.
+Kun Valoseppä toimittaa osoitecommitin tähän sessioon: poimi se haaraan natiiviseppa/pallo-aloitus-219 d1867a55a:n päälle; aja kaanna.sh ja unity-tarkistus; pyydä JU:lta Mac-ajo, ja todista äänipolku puhe.py:llä (_tyo/natiiviseppa/pallo-aloitus/). Sitten rivi PT:lle: commit, testit. PT 19.3x (omistaja 19.26): pienen iPadin asennus peruttu; versio jää haaraan ja menee Pariisin TF:ään. Ei iPadia, ei junaa nyt, ei muita mittauksia. Latausajan vaihtelu (15,71 vs 20,0 s) jää auki (PT 19.2x). PT kuittasi d1867a55a:n.
 Tilanne 19.2x: osoitecommitia ei löytynyt haaroista, ja opas/esittely-v1/aanet/pariisi-tervehdys.mp3 sekä .ajat.json palauttavat 404. Ääni on 404 myös ajossa d1867a55a, joten koko ääniketju on tekstipolulla, kunnes vienti on tehty.
 
 ## Odottaa
