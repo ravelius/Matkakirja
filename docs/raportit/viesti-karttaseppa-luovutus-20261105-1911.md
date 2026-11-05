@@ -1,5 +1,5 @@
 # Karttaseppä: luovutus 5.11.2026 klo 19.11 (KS)
-Syy: konteksti 26 % (7.37), tauko omistajan, Julkaisijan, Tripon ja Codexin odotuksessa. **Lue tämä; -1900 (8e7eb1201) vain Montparnassen ja Panthéonin kohdat, -1834:n (7ab3a6399) Riemukaari.** Tämä voittaa ristiriidassa. W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki d5d2b9169. Python /opt/homebrew/opt/python@3.14/bin/python3.
+Syy: konteksti 26 % (7.37), tauko omistajan, Julkaisijan, Tripon ja Codexin odotuksessa. **Lue tämä; -1900 (8e7eb1201) vain Montparnassen ja Panthéonin kohdat, -1834:n (7ab3a6399) Riemukaari.** Tämä voittaa ristiriidassa. W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki 0906b3c15. Python /opt/homebrew/opt/python@3.14/bin/python3.
 
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh`.
@@ -8,7 +8,9 @@ Syy: konteksti 26 % (7.37), tauko omistajan, Julkaisijan, Tripon ja Codexin odot
 ## Grand Palais: asennettu, ajo Julkaisijalla
 - Hyväksytty Tripolle (posti d05c680ac), raaka `grand-palais.glb`, ei toista ottoa. Leveys 0,42 oli virheeni, koska luin sen yläkuvasta; sivukuvat antavat noin 0,35.
 - Asennettu d5d2b9169, skripti `_tyo/karttaseppa/grand-palais-asennus/asenna.py`. **Suunta -0,9:** Front (+Z, GlbLukijan jälkeen -Z) etelään ja poikkisiipi länteen. Laskettu säännöstä etuosan atsimuutti = 180 + Suunta, jonka Notre-Dame vahvistaa (112 → 292°).
-- Ajo pyydetty 19.0x: `_tyo/karttaseppa/sk-pariisi-grand-palais.txt`, 5 kuvaa. **Peliajoa ei vielä ole, joten suuntaa ei ole nähty.** Kun kuvat tulevat: katso täysikoossa, kuva KK:lle (luvattu omistajalle).
+- Ajo d5d2b9169 katsottu (`lokit/julkaisija-grand-palais-d5d2b9169/`): **suunta oikein,** poikkisiipi lännessä, pääjulkisivu idässä. Vika: vaalea laatta katkaisi rantatien; korjattu 0906b3c15 (`grand-palais-asennus/korjaa-rantatie.py`).
+- **Lähikuva-ajo pyydetty JU:lta (0906b3c15, `sk-pariisi-grand-palais-lahi.txt`, 4 kuvaa). Kun kuvat tulevat: katso täysikoossa, kuva KK:lle (luvattu omistajalle).** Kuvaa ei ole vielä lähetetty. Ensimmäinen ajo oli liian kaukaa.
+- Sama laatan vaara muissa mallien pohjissa: katso rantatiet ja reunat ensimmäisestä ajosta.
 
 ## Invalidit otto 2 (#2114): KK:lla, suositus kelpaa
 Arkki ja vertailu `_tyo/karttaseppa/sarja24-opera-pantheon-montparnasse/invalides/` (`arkki-omistajalle.jpg`, `pohja-vertailu.jpg`, `kartalla.png`, `tee-arkki.py`). Kuvat `_review-sarja-24/invalides-otto2/`. Codex antoi itse QA FAIL. Pihat ja J-siipi vastaavat kuitenkin kartan pohjaa, ja pihamäärä 3/4 oli tilauksessani väärin. Viat kerrottu KK:lle: kupoli noin 10 % matala, pohjoissiipi noin 10 % leveä, koillisen viisto lähes pohjoisesta.
