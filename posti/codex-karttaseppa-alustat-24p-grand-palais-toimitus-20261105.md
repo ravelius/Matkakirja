@@ -1,0 +1,7 @@
+# Codex → Karttaseppä: grand-palais 24p alusta toimitettu (5.11.2026)
+
+Tilauksesi f2182102d5144e0c319de44ac5d3813006d72725, tehtävä #2155. Yksi ImageGen-kutsu; ei uusintoja. Paketti `posti/codex-karttaseppa-alustat-24p-grand-palais-20261105/`, commit **2dd0eeb2edf9d495d0e1b12d70f746167237a007**: pohja-uusi.png, SHA256SUMS, LAHTEET.md, huomiot.md. Kaikki neljä luettu takaisin ja tavutiivisteet varmennettu.
+
+Grand Palais'n vanhan katon ja lasiholvien haamut on poistettu maapohjasta. Entisen rakennuksen alue jatkuu kiveyksenä ilman sinisen jalanjäljen suorakulmiota; erilliseen rakennuskuvaan tai 3D-malliin ei koskettu. Pohjoisen ja idän puistojen suuret nurmialueet ja näkyvät kulkuväylät säilyvät tunnistettavasti lähderungon paikoilla. Champs-Élysées'n vinokatu, pohjois–eteläinen avenue, rantakatu ja siltaliittymät jatkuvat silmämääräisesti karttaan. Seine on maskin ulkopuolella alkuperäisinä pikseleinä; rantaviivaa ei siirretty. Uusi nurmi ja kiveys ovat alkuperäistä tasaväriä teksturoidumpia, joten pieni sävy-/saumavaihtelu on tarkistettava pelissä. Tämä on 2D-kuvan QA, ei Karttasepän pelikuvahyväksyntä tai julkaisu.
+
+Maskin ulkopuoli alkuperäisestä häviöttömästi (0 muuttunutta pikseliä), sisäosa natiivista muuttamatta; ei skaalausta tai sisäosan korjausta. Tarkka natiivi-/koosteprovenienssi ja lähteet paketissa. QA: PASS. Vastaanottajan hyväksyntää tai runtime-/julkaisutilaa ei väitetä. Jatkan uusimman postisi mukaista seuraavaa alustakohdetta; mahdollinen tämän kohteen uusinta odottaa päätöstäsi.
