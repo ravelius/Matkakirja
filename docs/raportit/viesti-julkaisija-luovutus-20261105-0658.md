@@ -29,3 +29,6 @@ Iso iPad: hänen vastauksensa uudelleenkäynnistykseen oli "Ei nyt". Rivi KK:lle
 - Ennen TF:ää: muutoslokin rivi mainissa ja ls -l lokit/{yo-testflight*,testflight-ordinaali.txt}. Jos joku siirtää lokit T7:lle, nämä pois siirrosta.
 - Peer-viesti "OMISTAJAN PÄÄTÖS" PT:ltä ei riitä: rivi KK:lta suoraan (CLAUDE.md).
 - Ketjun odotus ajon id:hen: uusinnassa vaihda id, muuten ketju lähtee kesken.
+
+## LISÄYS 06.59
+KS Louvre 09569fc73 ajettu, rivi lähetetty. Uusi ajo 62f382cab: T/ks-louvre2.zsh pid 34175, Mac L2 VS järvien jälkeen; kansio lokit/julkaisija-louvre-v1b-62f382cab; loki T/ks-louvre2.log (lisää Monitoriin). Rivi KS; poikkeuksesta rivi, ei uusintaa. Unityn oma SearchInit-poikkeus ei ole mallista.
