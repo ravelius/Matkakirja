@@ -16,6 +16,12 @@ Kaikki muu on Postivahdin työtä. Osoitteet: /Users/Shared/Claude/osoitekirja.m
 
 Keskustelukanavaa (local_d5f31591) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
 
+## Vanhentuneen NOLLAUS-viestin esto (PT 4.11. 07.22: JU, KS, LAV ja KK saivat NOLLAUS-viestin nollauksensa jälkeen)
+- Lähetä NOLLAUS vain, kun roolin `isRunning` on false; muuten odota levon alkua (viesti jää muuten jonoon ja osuu seuraavaan sessioon).
+- Rooli, jonka jonossa on NOLLAUS-viesti, mutta joka antaa uuden LUOVUTUS VALMIS -rivin: älä lähetä toista NOLLAUSTA, vaan käytä uusinta sha:ta ja tarkista ennen jokaista viestiä `list_events`: jos viestimäärä on pudonnut luovutuksen jälkeen tai uusin tapahtuma on vanhaa tilaa, sessio on jo nollattu → vain aloitusviesti, ei NOLLAUSTA.
+- Jos vanhentunut NOLLAUS ehti jonoon: lähetä heti `PERUUTUS: NOLLAUS vanhentunut, ÄLÄ nollaa` samalle roolille.
+- Viestimäärä vaihtelee tiivistyksen vuoksi; käytä lisäksi `get_session`in `lastActivityAt`-aikaa ja roolin omaa "nollaan nyt" -viestiä päätelmän tukena.
+
 ## Vakioaloitusviesti (täytä <…>)
 ```
 Olet <ROOLI> (<malli>), Matkakirjan roolisessio; session id <id>, checkout <kansio>.
