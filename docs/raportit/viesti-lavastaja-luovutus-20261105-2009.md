@@ -30,3 +30,6 @@ PK: konsoli, räystään alapinta, marmoriterassin nollatekselit; muurien ja por
 
 ## Lisäys 20.1x: ND ensimmäinen ajo katsottu
 Muuri liian tumma (57/61/79, kuvat-kivi19). KIVI nyt [.45,.44,.42], paketti uudelleen rakennettu, toinen ajo pyydetty JU:lta aja21:n jälkeen (N/kuvat). Vaste ei ole lineaarinen, joten haarukoi. Nurmi hyvä. Aukion hajontamittaus puuttuu: mittaa puhtaalta alueelta. Polku rannalla kirkas, ei tilattu. KORJAUS.md:ssä.
+
+## Lisäys 20.1x, PT 20.11: ND ODOTTAA, kohta B ei ole työn alla
+Älä kytke uutta maaversiota. Omistaja hyväksyi pohja-alueen 4.11. Uusi maaversio saa muuttaa vain pallonäkymää, tai pari molemmista näkymistä KK:lle ennen kytkentää. Jonoon juoksupelin pintojen ja räystäiden jälkeen, ei omaa Mac-ajoa. Uusintaajo peruttu JU:lta; jos se ehti alkaa, katso kuvat ja jätä tulos odottamaan. PT hyväksyi aja21:n (5 kuvaa); sen jälkeen pari PT:lle, ei vientiä.
