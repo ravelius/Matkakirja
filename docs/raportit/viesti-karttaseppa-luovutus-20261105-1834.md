@@ -3,7 +3,7 @@ Syy: konteksti 30 % (7.37), tauko Tripon ja CI:n odotuksessa. **Lue tämä, sitt
 
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (käsitelty-kohta tilassa).
-2. **KIIREELLISIN, Tripo odottaa vastausta:** posti 2c3c5335b (18.33), Grand Palais 24f #2119 pyytää Left/Right-varmistusta ennen krediittejä; krediittejä ei ole käytetty. Lue `posti/grand-palais24f-preflight-20261105/` ja vastaa postilaatikkoon. Sama kysymys koskee 24g:tä vain nimellisesti, koska Riemukaaren Left ja Right ovat sama kuva.
+2. **Grand Palais 24f:** Tripo kysyi Left/Right-tulkintaa (2c3c5335b), vastasin 969b2d6f4: Left = lansi, Right = ita, Sainte-Chapellen kokeen perusteella; poikkisiipi tarkistetaan −X:n puolelta raakamallista. Kun malli tulee, katso tämä ensin (huomiot.md).
 3. **PR 6301** (https://github.com/ravelius/Matkakirja/pull/6301, haara karttaseppa-overpass-esto, SHA 63b61c06a): katso CI. PT odottaa riviä: SHA, testin tulos, vihreä PR. Sisältää PR 6297:n commitin (3731d10e3), joten 6297 mergetään ensin. Oma ajo 5713 testiä, 5694 läpi, 0 kaatui, 19 ohitettu. Merge PT:n linjan mukaan, ei omin päin ennen sen sanaa.
 4. **Kolme Codexin toimitusta odottaa katsomista:** Opéra #2095 (903646dc7, b9b2e6397, d96ad4913), Panthéon #2096 (eee35c88f, 24f0ed31a), Montparnasse #2094 (8d7c6401c, 56071e528). Sama kierto kuin -1817: täysikoossa, ilmansuunta oikeaa kuvaa ja katuja vasten, pohja-uusi kartan päällä, arkki KK:lle ennen Tripoa. Katso myös 12f03e8a2: Codex kuittasi Grand Palais 24f:n (#2119).
 
