@@ -3,7 +3,7 @@
 Täydentää luovutusta -1438 (lue se loppuun asti lisäyksineen, sen vika 1:n ja vika 2:n tiedot pätevät). Sessio on Natiiviseppä, kansio Matkakirja-3d-selvittaja. Vuoro aina JU:lta. Raamatun kohtaa 2.215 ei 14.48 löytynyt origin/mainista; omistajan sanat ovat -1438:n lisäyksessä 4.
 
 ## 90° kallistus: koodi valmis, EI nähty ajossa
-Haara **natiiviseppa/kallistus-90-219 ca88b1830** (pohja runko d5850ff4e), työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto. Paikallinen, ei pushattu. Testit `Kartta-testit/kaanna.sh PariisiKallistus` 9/9, Karttavalo 19/19, tarkistus 0 virhettä. tarkista.sh muuttaa kolme tyylikirjatiedostoa: git restore.
+Haara **natiiviseppa/kallistus-90-219 ca88b1830** (pohja runko d5850ff4e), työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto. Peili natiivi-backup peili/proto/natiiviseppa/kallistus-90-219. Testit `Kartta-testit/kaanna.sh PariisiKallistus` 9/9, Karttavalo 19/19, tarkistus 0 virhettä. tarkista.sh muuttaa kolme tyylikirjatiedostoa: git restore.
 - Uusi `PariisiKallistus.cs` (puhdas laskenta). Alue: täysi 14 km:iin keskustasta ja 25 km:n etäisyyteen, nolla 30 km:ssä ja 60 km:ssä; raja liukuu muun kartan rajaan, joten hyppyä ei pitäisi tulla.
 - `PalloKierto.LaskeAsento`: raon alittuessa Pariisissa kallistus ei pienene, vaan katsepiste ja silmä nousevat yhdessä. Rako 100 m tai 5 % etäisyydestä (6,6 km → 330 m). Maastonäyte pehmennetty 0,4 s:n aikavakiolla, jotta silmä ei hypi. Ennen ensimmäistä näytettä maasto on 0, joten silmä voi hetken olla liian matalalla: katso kuvista.
 - `Aurinko`: sumun raja vaakatasossa vähintään 22 km, alku 60 % lopusta (siirtymä 55–85°). Horisonttiusva.Sumu ei kelpaa 90°:ssa (malli olettaa silmän maahan).
