@@ -5,6 +5,15 @@ Korvaa -1842:n. Työhaara proto-repossa: `natiivi-ui/kyltit-219`, kärki b34cec7
 ## Ensin
 KK hyväksyi b34cec7ed:n, ja Pont Neuf saa väistyä tällä kameralla (KK 19.2x). Kuvat: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-b34cec7ed. Viestit: `mcp__ccd_session_mgmt__send_message` session id:llä.
 
+## ENSIN: OMISTAJAN PYYNTÖ klo 19.23 (KK:n viesti, tee ennen PT:n työtä)
+Omistaja: "nimikyltit pitää olla pienemmällä, näkyvät vasta kun mennään lähemmäs rakennusta"
+KK:n tulkinta, kerrottu omistajalle: molemmat. Koskee vaaleita ja tummia kylttejä sekä pallon kylttiä (2.212: sama taso kuin muilla).
+- KOKO: selvästi pienempi, kiinteä koko säilyy (2.11. "kiinteän kokoisia"), teksti luettava puhelimella.
+- MILLOIN: kaupungin keskustaa katsottaessa ei kylttejä, vain rakennukset ja kartan nimet. Kyltit ilmestyvät pehmeästi, kun ollaan rakennuksen lähellä, noin chatelet-kuvan tasolla (0.012). Etsi yksi yksinkertainen sääntö, ja kerro KK:lle, jos taso kannattaa olla muualla.
+- SEURAUKSET: naru ei saa päättyä tyhjään: se näkyy vain kyltin kanssa, tai sano parempi tapa. Kadonneen kuva pysyy kyltin parina, joten pelkän kyltin kohteet eivät näy kaukaa (kerrottu). Pyöreät merkit jäävät (15.01).
+- Ei iPad-ajoa. Yksi lyhyt Mac-ajo JU:lta: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-pariisi-kyltit-8.txt (keski, keski-lahempi, chatelet). Sitten kuvat KK:lle täysikoossa katsottuina.
+Mistä aloittaa (koodia ei vielä muutettu): 3D- ja hintakyltin portti KarttaKyltti.Portti (KaupunkiPalloMitat.MaamerkkiLahella). Nostokyltit: NostotKartalla.KylttienTormays ja KyltinTaysiPt = 14f; niillä ei ole tätä porttia, joten sääntö pitää yhdistää yhteen paikkaan. Naru: etsi KaupunkiPallot.cs:stä pallon köysi ja sido se kyltin näkyvyyteen. Uudet koot tyylikirjan kautta (4.1, 4.3).
+
 ## PT:n työ 19.2x, tekemättä (ei uutta ajoa ennen JU:n vuoroa)
 PT: pyöreitä kuvamerkkejä ilman kylttiä näkyy yhä, px 2000-leveässä kuvassa: keski 434,423 · 810,690 · 840,816 · 1088,781; tuileries 1007,1057 · 1094,1439 · 1836,1332. Selvitä koodista ja lokista, mitä kohteita ne ovat ja onko kyltti törmäyksen takia piilossa. Omistajan 15.01 linja: pyöreät merkit jäävät ja napautus kylttiin. Samalla syy Pont Neufin puuttumiseen ja karttanimien vaihtumiseen (Hôtel Matignon hipoo merkkiä), jos sama. Tulos rivillä PT:lle: kohteet, syy, korjaus tai "näin kuuluu".
 
