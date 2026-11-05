@@ -3,10 +3,15 @@
 Korvaa luovutuksen -2243. Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta). Vuoro aina JU:lta.
 Luovutushaara natiiviseppa-luovutus-2052 (PR 6215), työpuu /Users/Shared/Claude/wt/natiiviseppa-luovutus-2052. Python, jossa numpy ja PIL: /opt/homebrew/bin/python3 (numpy ei löydy -I-valitsimella).
 
-## TYÖ 1: T7 → NAS, odottaa PT:n sanaa (PT 5.11. 06.5x: "Älä poista mitään; ei aktiivisia kansioita")
-Luettelo PT:llä: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/t7-nas-kartoitus-20261105.md. Mitään ei ole siirretty. Vain luku -kartoitus: t7-koot.tsv on scratchpadissa, joka häviää; tiedoston luvut riittävät.
-T7 62 Gi vapaana (99 %), NAS 5,6 Ti (90 %). Suositus 1. erä noin 140 Gi: proto-lokit-arkisto yli 14 vrk 96, arkisto 30, proto-3d-lokit-arkisto 14.
-**Kysytty PT:ltä:** nimeääkö 1. erän ja rikkoutuvien proto-3d-linkkien poiston (12.9, 12.19). Ei aloiteta ennen vastausta. Kansion siirtää sen omistava rooli (12.19).
+## TYÖ 1, TEE ENSIN: T7 → NAS 1. erä, PT:n nimeäminen tullut, työ aloittamatta
+**PT sanasta sanaan (5.11.):**
+"PT: 12.9:n ja 12.19:n mukainen nimeäminen, T7 → NAS 1. erä (kartoitus: proto-3d/_tyo/natiiviseppa/t7-nas-kartoitus-20261105.md). Tee seuraavalla vuorollasi; jos nollaat nyt, kirjaa tämä luovutukseen sanasta sanaan.
+NIMETYT, noin 123 Gi: koodaus/proto-lokit-arkisto yli 14 vrk (96 Gi, 998 kansiota), proto-3d-lokit-arkisto (14 Gi), arkisto/lokit (13 Gi). EI nyt: arkisto/valoseppa (17 Gi), jonka VS vahvistaa ensin. Muut ehdokkaat kuuluvat omistaville rooleille, eivätkä ne ole tässä erässä.
+JÄRJESTYS: 1) Tee nimiluettelo kansioista ja niihin osoittavista proto-3d-linkeistä committiin. 2) Pienennä ja kopioi raporttien viittaamat kuvat docs/raportit/kuvat/-kansioon. 3) Kopioi NAS:lle Matkakirja-arkisto/lokit/-kansioon ja vertaa tiedostot ja koot, ei päällekkäin yöajon siirra_t7.py:n kanssa. 4) Vasta täsmäyksen jälkeen poista luettelon lähteet ja luettelon linkit (vain luettelosta, ei kuviolla); tähän saat PT:n luvan, muuta et poista oman työtilasi ulkopuolelta. Eroista seis ja rivi minulle. Lopuksi rivi: vapaana ennen ja jälkeen."
+
+Lähtötila 5.11. 07.1x: T7 62 Gi vapaana (99 %), NAS 5,6 Ti (90 %, NFS /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/). Mitään ei ole siirretty.
+Huomioita: 998 kansiota on mitattu kansion muutosajasta 14–30 vrk; luettelo jäädytetään kerran, koska kansiot vanhenevat rajan yli. Linkit: proto-3d/lokit, _tyo, _valmiit ja juuri, yksi taso; tarkista syvemmät ennen luetteloa. Pitkä kopiointi taustalle omaan prosessiryhmään (12.9), nice 15.
+Kartoitustiedosto ja muut ehdokkaat: t7-nas-kartoitus-20261105.md. Muista erät eivät kuulu tähän.
 
 ## TYÖ 2: muistin kevennys kohta 2, juoksupeli (omistaja 20.15; suunnitelma /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261104-muistin-kevennys.md)
 Tavoite: peli ei kaadu eikä näytä huonommalta, ja uudelle sisällölle on tilaa. Raja 4080 Mt pysyy. Ei junaan ilman omistajan pyyntöä. **PT: "säästö mitataan iPadilla ennen kuin sitä kutsutaan säästöksi."**
