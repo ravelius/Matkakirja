@@ -321,3 +321,7 @@ OMISTAJAN PÄÄTÖS klo 19.28 kortilla, arkki scratchpad/keskustelukanava/kuvat/
 ## 3D-KOHTEET EIVÄT SAA NÄKYÄ HORISONTIN TAKANA (OMISTAJA 19.30, KK) (5.11.2026 klo 19.31)
 
 Omistajan pyyntö klo 19.30, kuva docs/raportit/kaappaukset/omistaja-20261105/eiffel-horisontissa-1928.png (Grand Palais'n pelikuva 0906b3c15): "Horisontissa näkyy eiffel vaikka ei ehkä pitäisi". KK:n tavoite: horisontin takana ei näy mitään: nähtävyys ja sen maapohja häipyvät usvaan yhtä aikaa kartan kanssa, eikä usvan yläpuolella leiju rakennuksia tai maapaloja. Yksi sääntö kaikille 3D-kohteille (2.215). Sama tunnettu vika kuin Louvressa ja Notre-Damessa. KK antoi Karttasepälle suoraan.
+
+## MAC-KUVIEN PISTEKERROIN PARIISIN KARTALLA (KK 19.50) (5.11.2026 klo 19.52)
+
+KK:n havainto klo 19.50: Mac-kuvien kartan nimet ovat noin 2 kertaa iPadia suuremmat, kun esikatselu.sh käyttää oletuskerrointa 1 (70 julkaisija-ajoa, mm. kaikki kylttiajot). PT tarkisti lokeista: esim. esikatselu-20261105-160023 kerroin 0.465, julkaisija-pariisi-kyltit-84a2f3d83 kerroin 1. Sama kerroin ohjaa koodissa nimi- ja kerrostasoja (Screen.height / Pistekerroin); poikkeamaa tasoissa ei ole mitattu. Raamattu 10.5: Pariisin kartan Mac-ajot kertoimella 0.465. Kertoimella 1 tehdyt koko- ja tasoarviot eivät päde iPadiin; merkkien poisto mallien päältä (84a2f3d83) katsotaan uudelleen NUI:n seuraavasta ajosta.
