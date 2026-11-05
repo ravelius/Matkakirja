@@ -338,6 +338,14 @@ OMISTAJAN PYYNTÖ klo 20.09: "Näytä kuvia mieluusti myös 45 asteen tms kulmas
 
 KK: William-intro soi myös NousuKoe päällä (omistaja 19.23 "laita kaikki äänet peliin, kuuntelen siellä"; 17.5x "kaupunki intron 'pariiisi' ... pitää generoida uusiksi"). Notre-Damen pohja-alue on omistajan hyväksymä (kortti 4.11. "Kelpaa"): uusi maaversio ei muuta piirroskartan ulkoasua ilman hänen katsomaansa paria, vain pallonäkymään tai pari molemmista KK:lle ennen kytkentää; LAV:n jonossa juoksupelin pintojen ja räystäiden jälkeen, ei omaa Mac-ajoa (omistaja 17.40).
 
+## ALOITTAVA PELAAJA SAA PARIISIN ALOITUSLENNON (OMISTAJA 20.20, KK) (5.11.2026 klo 20.2x)
+
+OMISTAJAN PÄÄTÖS klo 20.20: "Saako aloittava pelaaja Pariisiin uuden aloituslennon vanhan intron tilalle?" = "Kyllä (Suositus)"; kortissa: "Kamera kiertää, kuvat nousevat kartalta ja William sanoo nimen ja iskulauseen." Raamattu 2.161 ja 2.210. Muut aloituskaupungit ennallaan (KK:n tulkinta). KK:n tulkinnat klo 20.2x (ei omistajan sanoja; KK kertoo omistajalle kuvien kanssa): 2.161:n kohdat 2 ja 3 pysyvät, päätös koskee vain introa; kierto hiipuu pehmeästi Pulun aloituksen alkupuolella; isoisän Tuileries-kuva ei nouse aloittavalle pelaajalle.
+
 ## NIMISÄÄNNÖN TARKENNUS (KK) (5.11.2026 klo 20.18)
 
 KK:n sanamuoto: "kirjaimet eivät jää pyöreän merkin, 3D-kohteen, kyltin eivätkä puiden alle; nimi siirtyy viereen, ja jos vapaata paikkaa ei löydy, nimi ei näy (määrä nähdään seuraavasta ajosta, ei vielä hyväksytty). Pohja piirtyy nimien alle, joten se ei kuulu sääntöön; pallo jää ulos, koska liikkuu. KK:n linjaus, ei omistajan sana." NUI:n toteutus 6bb2744d4, ei vielä nähty pelissä.
+
+## PARIISIN HORISONTTI KAUEMMAS (OMISTAJA 20.25, KK) (5.11.2026 klo 20.2x)
+
+OMISTAJAN PÄÄTÖS klo 20.25: "Siirretäänkö Pariisin horisonttia kauemmas?" = "Kauemmas (Suositus)"; kortissa: "Matalassa kulmassa noin kaksi kertaa kauemmas, ja saat uuden kuvan." Sanat 20.23: "Miksi horisontti tulee näin aikaisin?"; kuva docs/raportit/kaappaukset/omistaja-20261105/horisontti-aikaisin-2023.png. KK:n tavoite: matalalta kaupunki jatkuu katsotun rakennuksen takana, mutta koko Pariisi ei näy kerralla (14.55 pysyy); 19.30:n sääntö pysyy. Raamattu 2.215.
