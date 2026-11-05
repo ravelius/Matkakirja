@@ -1,0 +1,109 @@
+{
+  "project": "montparnasse-24m-2131-20261105",
+  "stage": "source preflight only; no generation or external action",
+  "sourceOrder": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/TILAUS-24m-montparnasse-tripo.md",
+    "sha256": "c0abc7ed8aedd29eecd2c311eb30aea059ef219b8241b52b937a35f562fa3584"
+  },
+  "tripodMapping": {
+    "Front": "etela.png",
+    "Back": "pohjoinen.png",
+    "Left": "lansi.png",
+    "Right": "lansi.png",
+    "eastImage": "ita.png is explicitly excluded; absent from copied Tripo input folder",
+    "sameImageTwice": "required intentional input; confirm Tripo accepts duplication before credits"
+  },
+  "inputDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/tripo-syote",
+  "manifest": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/tripo-syote/SHA256SUMS",
+    "sha256": "9151114a1d51ca0ebb60a49ee5c7c9726965a915639ebb3ce2290a2620f8001a",
+    "allEntriesVerified": true,
+    "entries": [
+      {
+        "name": "etela.png",
+        "expectedSha256": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+        "actualSha256": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "pohjoinen.png",
+        "expectedSha256": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+        "actualSha256": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "lansi.png",
+        "expectedSha256": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+        "actualSha256": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "mitat.json",
+        "expectedSha256": "33ba76da8e197a2ed44540ae836c947097690c018bd0aa595e3126739a275cdd",
+        "actualSha256": "33ba76da8e197a2ed44540ae836c947097690c018bd0aa595e3126739a275cdd",
+        "exists": true,
+        "matches": true
+      }
+    ]
+  },
+  "files": [
+    {
+      "name": "etela.png",
+      "role": "Front +Z, wide side, southeast",
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/montparnasse/tripo-syote/etela.png",
+      "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/tripo-syote/etela.png",
+      "sourceSha256": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+      "copySha256": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+      "match": true
+    },
+    {
+      "name": "pohjoinen.png",
+      "role": "Back -Z, wide side, northwest",
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/montparnasse/tripo-syote/pohjoinen.png",
+      "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/tripo-syote/pohjoinen.png",
+      "sourceSha256": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+      "copySha256": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+      "match": true
+    },
+    {
+      "name": "lansi.png",
+      "role": "Left and Right, same narrow west image",
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/montparnasse/tripo-syote/lansi.png",
+      "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/tripo-syote/lansi.png",
+      "sourceSha256": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+      "copySha256": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+      "match": true
+    },
+    {
+      "name": "mitat.json",
+      "role": "source dimensions metadata",
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/montparnasse/tripo-syote/mitat.json",
+      "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/sources/tripo-syote/mitat.json",
+      "sourceSha256": "33ba76da8e197a2ed44540ae836c947097690c018bd0aa595e3126739a275cdd",
+      "copySha256": "33ba76da8e197a2ed44540ae836c947097690c018bd0aa595e3126739a275cdd",
+      "match": true
+    }
+  ],
+  "visualSourceReview": {
+    "reviewOnlyRoofReferencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24h-montparnasse-2124-20261105/delivery/ylhaalta.png",
+    "sha256": "522a76714573118bd5a920c8c0405aeb91a9f46b2080ea7b7e028104adb2255b",
+    "roofReferenceAppearance": "Top view shows a dark charcoal/bronze roof deck, thin pale outer perimeter/rim, and a small centered pale ring around a dark center. Roof is a significant top-down feature.",
+    "inputViewFindings": [
+      "etela and pohjoinen show the broad faces and thin roof edge; lansi is narrow face. All input views show dark brown/bronze glass with dense fine vertical lines.",
+      "The top cap is almost edge-on in all side inputs; its full plan shape and target roof details cannot be inferred from these three inputs."
+    ],
+    "risks": [
+      "Inspect top view of raw model immediately: ensure dark deck, light border/ring and clean plan shape. If empty or visually messy, report screenshot; order says do not regenerate.",
+      "Beware generated broad light ribs, strong horizontal bands, blue glass, stone-colored panels, or antenna/ground/mall clutter.",
+      "Repeated lansi.png for both Left and Right is mandatory; if Tripo rejects it, stop before credits.",
+      "The east.png side is about 13% too narrow and explicitly forbidden."
+    ]
+  },
+  "scopeNotes": [
+    "Reviewed source views and existing approved review top; review top remains referenced in its delivery folder and was not copied into the Tripo input directory.",
+    "Intake queue remains 24g → 24i → 24j → 24l → 24m; do not start until prior jobs complete."
+  ]
+}

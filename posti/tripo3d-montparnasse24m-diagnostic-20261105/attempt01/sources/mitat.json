@@ -1,0 +1,32 @@
+{
+ "etela": {
+  "koko": [
+   1536,
+   1024
+  ],
+  "leveys_px": 236,
+  "korkeus_px": 815,
+  "maaviiva_y": 920,
+  "sha": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb"
+ },
+ "pohjoinen": {
+  "koko": [
+   1536,
+   1024
+  ],
+  "leveys_px": 236,
+  "korkeus_px": 816,
+  "maaviiva_y": 920,
+  "sha": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8"
+ },
+ "lansi": {
+  "koko": [
+   1536,
+   1024
+  ],
+  "leveys_px": 156,
+  "korkeus_px": 816,
+  "maaviiva_y": 920,
+  "sha": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297"
+ }
+}

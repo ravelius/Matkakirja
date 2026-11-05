@@ -1,0 +1,167 @@
+{
+  "rotationYDegrees": 0.0,
+  "source": "output/montparnasse-24m-2131-20261105/raw/montparnasse24m-attempt01-raw.glb",
+  "sourceSHA256": "1ab785510e776900aa525e59df470d9f02ecf056fb94960e41ede4b53aa023f6",
+  "outputSHA256": "6f22324d829b19eb0003ddeff256ac4b28afb61aa3ffe7a554d683bc2ebc47e3",
+  "uniformScale": 611.1950474872054,
+  "originOffset": [
+    2.288818359375e-05,
+    0.0,
+    -0.0010910071432590485
+  ],
+  "bounds": [
+    [
+      -88.5,
+      0.0,
+      -66.10337972197686
+    ],
+    [
+      88.5,
+      599.4068617568614,
+      66.10337972197686
+    ]
+  ],
+  "dimensions": [
+    177.0,
+    599.4068617568614,
+    132.20675944395373
+  ],
+  "montparnassetion": "Rigid Y-axis rotation and uniform positive scale plus base centering; UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/work/attempt01-raw.glb",
+    "bytes": 4775992,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 29416,
+    "triangles": 41081,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -88.5,
+        0.0,
+        -66.10337829589844
+      ],
+      [
+        88.5,
+        599.4068603515625,
+        66.10337829589844
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 75,
+    "uvZero3DArea": 14.501474868445653,
+    "surface3DArea": 379471.24225506844,
+    "uvZero3DAreaFraction": 3.821495084125038e-05,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_9837fa5a-2c6b-47a6-a82a-90cc6e36bbac_2",
+        "mimeType": "image/png",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_9837fa5a-2c6b-47a6-a82a-90cc6e36bbac_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_9837fa5a-2c6b-47a6-a82a-90cc6e36bbac_1",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 29416,
+        "triangles": 41081,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 75,
+        "uvZero3DArea": 14.501474868445653,
+        "surface3DArea": 379471.24225506844
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-etela.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-pohjoinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-lansi.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-ita.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-ylhaalta.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-lounas.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/qa/attempt01-raw-koillinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    }
+  ]
+}

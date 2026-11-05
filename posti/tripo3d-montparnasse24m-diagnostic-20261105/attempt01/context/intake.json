@@ -1,0 +1,66 @@
+{
+  "project": "montparnasse-24m-2131-20261105",
+  "stage": "intake-only; no generation or external action performed",
+  "sourceOrder": {
+    "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/TILAUS-24m-montparnasse-tripo.md",
+    "copiedTo": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/TILAUS-24m-montparnasse-tripo.md",
+    "sha256": "c0abc7ed8aedd29eecd2c311eb30aea059ef219b8241b52b937a35f562fa3584",
+    "copiedSha256": "c0abc7ed8aedd29eecd2c311eb30aea059ef219b8241b52b937a35f562fa3584"
+  },
+  "authorization": "Owner approved 2026-11-05 19:28 after seeing the sheet; persistent Tripo permission, one model, no train.",
+  "ledger": {
+    "taskNumber": 2131,
+    "title": "Montparnasse24m Tripo-malli",
+    "sourceCommit": "f5fe06ac930e77859cc0f71a1aa4d93c014f3634",
+    "sourceBlobSha": "395c3a7c4852b3e993a8dba4f946274f0098d4db",
+    "ownerThreadId": "01a14ee0-3e23-72b2-82b1-510228c70b7d",
+    "status": "routed-queued-after-invalides",
+    "routingSucceeded": true
+  },
+  "queue": "24g → 24i → 24j → 24l → 24m.",
+  "sources": {
+    "directory": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/montparnasse/tripo-syote",
+    "manifest": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/montparnasse/tripo-syote/SHA256SUMS",
+    "manifestSha256": "9151114a1d51ca0ebb60a49ee5c7c9726965a915639ebb3ce2290a2620f8001a",
+    "inputs": [
+      {
+        "name": "etela.png",
+        "sha256Expected": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+        "sha256Actual": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "pohjoinen.png",
+        "sha256Expected": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+        "sha256Actual": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "lansi.png",
+        "sha256Expected": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+        "sha256Actual": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "mitat.json",
+        "sha256Expected": "33ba76da8e197a2ed44540ae836c947097690c018bd0aa595e3126739a275cdd",
+        "sha256Actual": "33ba76da8e197a2ed44540ae836c947097690c018bd0aa595e3126739a275cdd",
+        "exists": true,
+        "matches": true
+      }
+    ],
+    "excludedInput": "ita.png (about 13% too narrow); do not use."
+  },
+  "constraints": [
+    "Tripod inputs: Front etela.png, Back pohjoinen.png, Left and Right both lansi.png. If Tripo will not accept the same image twice, stop before credits and report.",
+    "Ratios (±5%): width 177m, depth/width .63, height/width 3.39 (62×39×210m), measured to top level without antennas. Uniform scale only.",
+    "Silhouette: gently convex long sides, rounded narrow ends; same footprint shape over full height.",
+    "Dark slightly bronze glass with thin dense vertical lines; no broad pale ribs or horizontal bands, no blue or stone look. Roof must be checked immediately in raw model: dark deck, light rim and ring. If empty/messy, do not regenerate; report with image.",
+    "Building only; no antenna, ground, mall, trees, people, scaffolds or paving. GLB embedded, no Draco, <=15MB, <=300 primitives, <=100k triangles; one material target, texture <=2048. UV-zero area and black preview checks if retopology occurs.",
+    "Two failed attempts require owner message before third."
+  ],
+  "nextStep": "Start only after 24g, 24i, 24j and 24l are complete; then preflight the exact three source images and duplicated lansi input before credits."
+}

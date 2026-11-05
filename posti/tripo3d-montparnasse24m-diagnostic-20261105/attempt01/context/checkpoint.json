@@ -1,0 +1,57 @@
+{
+  "status": "ATTEMPT01_FAIL_WAITING_KARTTASEPPA_DECISION",
+  "updatedAt": "2026-11-05",
+  "creditsUsed": 45,
+  "sourceImagesUnmodified": true,
+  "intakePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/intake.json",
+  "noRetryOnRoofFailure": true,
+  "qualityAccepted": false,
+  "completedTripoJobs": [
+    {
+      "id": "b6158244-a091-442e-83a0-7df3b66790b9",
+      "attempt": 1,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T18:29:24.481711+00:00",
+      "estimatedCompletion": "2–5 minutes; observed14%",
+      "credits": 45,
+      "balanceBefore": 15780,
+      "balanceAfter": 15735,
+      "mapping": {
+        "Front": "etela.png",
+        "Back": "pohjoinen.png",
+        "Left": "lansi.png",
+        "Right": "lansi.png"
+      },
+      "duplicateSideImageAccepted": true,
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T18:31:09.948720+00:00",
+      "rawSHA256": "1ab785510e776900aa525e59df470d9f02ecf056fb94960e41ede4b53aa023f6",
+      "rawFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/montparnasse-24m-2131-20261105/raw/montparnasse24m-attempt01-raw.glb"
+    }
+  ],
+  "activeTripoJobs": [],
+  "failure": {
+    "roof": "empty flat brown cap; pale rim and central ring absent",
+    "facade": "wood-grain brown broad ribs instead of dark bronze glass with thin dense vertical lines",
+    "depthWidth": 0.7469308443161228,
+    "depthWidthTarget": 0.63,
+    "depthWidthTolerance": 0.05,
+    "depthWidthDeviationPercent": 18.560451478749652,
+    "heightWidth": 3.3864794449540194,
+    "heightWidthTarget": 3.39,
+    "heightWidthDeviationPercent": -0.10385118129736526,
+    "decisionRequired": "Need decision on better source images/roof reference before any retry or retopology."
+  },
+  "diagnosticPackage": "diagnostic/attempt01",
+  "mailboxDraft": "mailbox/attempt01-report.md",
+  "retryOrRetopoAllowed": false
+}
