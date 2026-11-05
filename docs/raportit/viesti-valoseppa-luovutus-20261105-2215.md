@@ -1,0 +1,36 @@
+# Valosepän luovutus 5.11.2026 klo 22.15
+
+Korvaa luovutuksen -2203. OMISTAJAN PÄÄTÖS 21.49 ja KK:n tavoite ovat -2155:ssä (git show e8785dc8c:docs/raportit/viesti-valoseppa-luovutus-20261105-2155.md). Syy nollaukseen: konteksti 28 %, uusi iso työ alkamassa.
+
+## TILA
+Koodi a48428884, haara `linssiseppa2/ohjelmakohteet`, viety natiivi-backupiin (etä on `natiivi-backup`, ei origin; älä työnnä seurantahaaraan karttaseppa/nahtavyydet-219), worktree /Users/Shared/Claude/wt/proto-linssiseppa2-k30. Ei junaan. Testit läpi: Mitat, Reunakivi, Ajoradan, Holvit (`sh .../ohjelmakohteet/aja-geometria.sh`, muut: `<dotnet> rak/G.dll <suodatin>`; aja `sh`:lla, ei zsh:lla). Korjausta EI ole nähty ajossa. KK ei ole saanut kuvia.
+
+JU:lle on pyydetty vuoro 22.1x (a48428884, sk-korjaukset.txt). Odota riviä "ESIKATSELU NYT" ja linjaa.
+
+## AJO f2c1e8017 (L2, 244 s; lokit/esikatselu-20261105-220459; LUKKO VAPAA ilmoitettu)
+Näkyi: Hôtel de Villen ikkunoissa ei mustaa, kummastakin suunnasta kelvollinen. Notre-Dame, puut ja Louvre kunnossa; KS: pyramidit eivät ole mustia. Kaiteen läpi tulleet mustat viivat poissa (f2c1e8017 toimi).
+Vikana, korjattu a48428884:ssä:
+- Pont Alexandre III: mustat katkot kannella sen reunakiven kohdalla, joka on kameraan päin. Syy: ajoradan ja jalkakäytävän välissä 12 cm:n avoin rako, josta näkyy kannen alle. Lisätty pystypinta (`Reunakivi`).
+- Pont Neuf: tumma katkoviiva kannen poikki päiden kohdalla. Syy: päätyseinä nousi 15 cm ajoradan yli. Nyt `PaatySeinat`.
+- Pont Alexandre III:n teräs 0x3C4146 → 0x565E60, koska kaari näytti seepiakartalla lähes mustalta. Omaa harkintaa, EI pyydetty: kerro KK:lle, kun viet kuvat.
+Ei arvioitu: liike. Kierto alkaa 0,7–1,1 s peliaikaa komennon jälkeen, joten 1,2 s:n tallenteessa kamera ei ehtinyt liikkua. Skripti on nyt: kolme tallennetta (liike-pa3, liike-hdv, liike-pn), `kierra 20 2`, `odota-peli 3.6`. Vanhassa sijainnissa 0.012 kumpikaan kohde ei näkynyt kuvassa, joten nyt kukin kohde lähietäisyydeltä.
+
+## SEURAAVAKSI (järjestyksessä)
+1. Vuorolla aja taustalla: `PROTO_LINJA=<linja> ESIKATSELU_PISTEKERROIN=0.465 zsh /Users/Shared/Claude/wt/proto-linssiseppa2-k30/tyokalut/esikatselu.sh a48428884 /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet/sk-korjaukset.txt`. Heti lopuksi JU:lle LUKKO VAPAA, linja, kesto, kuvamäärä. Ajokansio on tulosteen viimeisellä rivillä.
+2. Katso: `python3 -I .../ohjelmakohteet/arkki-rajaa.py arkki <ajo> <kohde>`, `raja <ajo> <nimi> cx cy lev kork kerroin <kohde>`, `liike <kansio> cx cy lev kork kerroin askel sarakkeet <kohde>`, `ero <kansio>` (ruutujen ero). Rajaa kohde arkin mukaan; kohteet noin (1360, 940) täysikoossa, Pont Neuf pn-0:ssa (1354, 1065) ja pn-118:ssa (1466, 941). Pienet viat näkyvät vasta ×6–×8.
+3. Liike: kamera.txt:n paikan on muututtava jokaisessa tallenteessa. Rajaa kohde peräkkäisistä ruuduista. `ero` Pont Alexandre III:n paikallaan olevassa kohdassa näytti 0,01–0,05, kun kamera ei liiku (pulut ym.); liikkeessä vertaa kuvia, ei lukuja. Älä sano valmiiksi ilman nähtyä liikettä.
+4. Kelpo kuvat KK:lle (local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe), rivi PT:lle: mitä, sha, polku. Kerro näkyvät viat: Pont Neufin pään seinä on terävä kiila (rantamuuri, OSM-muoto), Pont Alexandre III:n nimi sillan päällä (KS tietää), kartan tyhjä kiila loitolla (KS tietää).
+5. UUSI TYÖ, omistajan 22.09 kortti, PT:n välittämä, osa A: kolmen kohteen vikojen jälkeen erä ohjelmalla: keskustan sillat ensin, sitten Madeleine, Palais Bourbon, Pompidou-keskus, Tour Saint-Jacques, Saint-Eustache, Saint-Sulpice. Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261105-pariisi-rakennukset-ohjelmalla.md. Ennen kutakin oikean rakennuksen vapaat kuvat ja tarkistus, ettei liioiteltu nähtävyys peitä kohdetta. Kuvat erissä KK:lle. Yksi kysymys per ajo, nähtävyyssarja ei saa hidastua, ei junaan. Osat B–D eivät ole sinun, ellei PT jaa.
+
+## Lähtökohdat osalle A (ei vielä aloitettu)
+- Työkalut kansiossa /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet/: hae.mjs (OSM PBF, /Volumes/T7 4TB/Matkakirja-karttaseppa/vesimaski/lahteet/ile-de-france-latest.osm.pbf; vaihda `alueet`), lahteet.py ja kuvat.py (Wikimedian rajapinta, peräkkäin, 429:llä odotus, Raamattu 2.183), sovita.py, esikatsele.py (OBJ offline-esikatselu).
+- Kohteet lisätään: OhjelmaKohteet.cs `kohteet`-taulukko (Lat, Lon, Akseli, SiirtoX/Z, Tee) ja funktio OhjelmaKohdeGeometria.cs:ään. Yhteinen kansi: `Paakansi` + `PaatySeinat`, sillä ne sulkevat nyt raot.
+- Peitto: liioitellut mallit ovat Nahtavyysalue.cs:n `Mallit`-riveillä (lat, lon, X, Y, Suunta, Skaala). Notre-Dame on hyvin korkea: Pont Neuf peittyi osin kuvassa pn-118 ja Hôtel de Ville hdv-270:ssa. Nämä kuvat ovat oikea peittotesti: mittaa etäisyys ja kohteen korkeus, ja kerro peittyvä kohde KK:lle ennen rakentamista.
+- Malleissa on jalanjälki ja koko: tarkista muiden haarat ennen isoa erää (muistisääntö).
+- Kolmioraja testissä 40 000 per kohde.
+
+## MUUTA
+- PT:lle kerrottu 22.1x: 9be47cc74 on KS:n haarassa poimintana df2c647bf, shader identtinen, ei toimia. Tämä rivi on viestijonossa, tarkista list_events, jos PT kysyy.
+- KS:lle kerrottu tyhjä kiila ja nimi, ei vastausta odoteta.
+- Seuraamattomat .claude/settings.local.json.ennen-kevennysta ja waveletNoiseTile.bin: en koskenut.
+- Työlistahookin rivit (Louvren pohja, Sainte-Chapelle, sisätilat) eivät ole Valosepän.
