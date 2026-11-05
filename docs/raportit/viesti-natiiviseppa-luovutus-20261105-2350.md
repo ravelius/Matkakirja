@@ -2,8 +2,13 @@
 
 Korvaa -2329:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Cron "4 9 * * *" unity-julkaisut.py uudelleen (7.41). Yötila: omistaja nukkuu, kysymykset PT:lle.
 
-## SEURAAVA TYÖ: osan C ajon tulos
-Ajo `natiiviseppa-pariisi-c1-22f6538a9` pyydetty JU:lta sarjan ja Ateena-ajojen jälkeen. Skenaario `/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/sk-pariisi-c1.txt`, kuvat c1–c4, ei ole vielä nähty ajossa eikä käännetty Unityssä.
+## SEURAAVA TYÖ: ajon c2 tulos (LISÄYS 23.58, ohittaa alla olevat c1-kohdat)
+Ajo `natiiviseppa-pariisi-c1-22f6538a9` katsottu täysikokoisina, tulos KK:lla ja PT:llä. Kunnossa: c1 kadut, nimet ja palasaumat; c3 rinne; c4 alueraja. Viat: c2 kaariraja kaukana (talot kirkkaina usvaisen kartan edessä); c3 tumma kartta (KS, tunnettu); c3 Sacré-Cœurin alue tyhjänä ilman mallia; c1 Macin karkean kartan sumeat laikut talojen välissä, joten maskin poisto kelpaa vain Macilla ja ratkeaa iPad-tasoisella kartalla (ei nyt), ÄLÄ poista maskikoodia vielä.
+Korjaus 36af6bb13 (natiiviseppa/marais-talot, peilissä): usva pikseleittäin Horisonttiusva.hlsl:llä, UlkoSade 1700–2600, ReunaKaista 400–1000, loppu pisteittäin. Testit 5/5. EI nähty.
+Ajo `natiiviseppa-pariisi-c2-da2ab0af5` pyydetty JU:lta (PT:n yksi lupa KÄYTETTY): paikallinen ajohaara natiiviseppa/ajo-pariisi-c2 = 36af6bb13 + e726bba9f, ei viedä. Samat 4 paikkaa. Kun valmis: kuvat täysikokoisina, hävisikö kaari, onko sävy ehjä, sitten sävyvertailu kohdan m2 kanssa ja katsotut kuvat KK:lle aamuun. Toinen ajo vaatii PT:n sanan.
+
+## Ajo c1 (taustaa)
+Skenaario `/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/sk-pariisi-c1.txt`, kuvat c1–c4.
 KK 23.38: Marais kelpaa, koko Pariisi paloina vain lähellä. Ei junaan, ei iPadia, sarja ei saa hidastua. Tumma kartta on KS:llä, ei odoteta. Seuraava kuva Macilta KK:lle, kun osasta C on näytettävää. KK näyttää omistajalle aamulla k3, k2 ja m2 viat kerrottuina; omistaja voi yhä pysäyttää.
 
 Kun ajo valmis, kuvat täysikokoisina:
