@@ -10,6 +10,8 @@ PT kuittasi `93cc59596` (k1, k2 täysikoossa, loki) ja **sen sijaan, mitä kohda
 - **Omena:** `_valmiit/omena-mata-v3-vienti-20261105` (1 glb, SHA = Codexin toimitus) JU:lla. Ennen vientiä `kerattavat/omena-mata-v3.glb` 404 ja `omena-mata.glb` 200, 420 676 tavua, 19.10. **Viety ja tarkistettu 19.54:** v3 200, 157 168 tavua, SHA täsmää; vanha ennallaan, PT:lle kerrottu. Junan 219 koodi hakee yhä vanhaa nimeä; uusi nimi on vain tarkastelu-haarassa (`73f708b88`) ja kulkee tason 1 mukana.
 - **Hehkun ja "mädän" arvion vie PT KK:lle.** Sitten jatka tasoa 1 (kohta 6).
 
+**PT peruutti omenan vientiluvan KK:n arvion jälkeen; uusi lupa vasta KK:n hyväksymästä lähikuvasta.** Tiedosto oli jo viety 19.53, PT:lle kerrottu, ei poistettu (PT: älä poista). Ei uusia vientejä ilman lupaa. `93cc59596`:n korjaus junaan pysyy voimassa, JU kirjasi `7de953bc9`:n junaan 219; ei käännöstä nyt (omistaja 19.26).
+
 **Lisäys KK 19.53 (korvaa kohdan 3 arvion):** omena ei mene vielä omistajalle: pinta näytti kullanväriseltä palkinnolta. Ohje 4.11.: ruskea, läikikäs; hehku pieni ja hillitty, ei kullanvärinen.
 - **Syy, mitattu kuvasta ja tekstuurista:** väri tulee tekstuurista (okra, ka. 135, 95, 42), ja pelin valo kirkastaa sen (184, 123, 58). Suhde R/G pysyy (1,42 → 1,50), joten hehku ei selitä väriä; hehkua ei kokeiltu pois päältä.
 - **Korjaus `1bf2fa8d6` (kärki):** `MataPinta` (0,64; 0,60; 0,66) kerrotaan mallin materiaaleihin, arvio n. (118, 74, 38). **Laskettu, ei nähty.** GLB ei muutu. **Lähikuva seuraavan tason 1 ajon mukana KK:lle** (ei omaa ajoa); `oleta-uusi`-kuva tai `tarkastelu mata 0.9`. Jos hehku näyttää vielä kullalta, säädä `HehkuMata`.
