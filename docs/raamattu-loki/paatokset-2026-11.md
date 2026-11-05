@@ -241,3 +241,15 @@ Omistaja klo 07.39: "Näyttää siltä että codexille annetaan liian pieni alue
 ## NOTRE-DAMEN SUUNTA JA SAINT-LOUIS-SAARI (4.11.2026 klo 08.22)
 
 Omistajan kortit KK:ssa: "Onko tämä oikea suunta Notre-Damelle?" → "Kyllä (Suositus)"; "Palautetaanko Saint-Louis-saari?" → "Kyllä (Suositus)" (selite: saaren itäpää loppuu kirkon takaosan jälkeen puutarhaan, ja Saint-Louis on oikealla paikallaan; vaatii yhden uuden kuvan). Tekotapa KK:n mukaan: kirkko ja ympäristö samassa Codexin kuvassa, joki saa siirtyä alueella. Järjestys: otto 6 Karttasepälle, sovitus kartalle KK:lle ja omistajalle, vasta sitten iPad ja muut nähtävyydet (KORJAUSLISTA, viimeinen osio).
+
+## PARIISI: EIFFEL ILMAN KOLMATTA KIERROSTA, LINTUPARVET JÄÄVÄT (omistaja 5.11. klo 16.10, kortit KK:ssa) (5.11.2026 klo 16.30)
+
+Tehdäänkö Eiffelin malli ilman kolmatta kierrosta? = Tehdään (Suositus). Saavatko lintuparvet jäädä Pariisin kartalle? = Jäävät (Suositus). KK:n välitys; aika korjattu 16.03:sta 16.10:een.
+
+## PARIISI: VAIN 3D-RAKENNUKSET, METSÄ ENNALLEEN (omistaja 5.11. klo 16.41, kortti KK:ssa) (5.11.2026 klo 16.42)
+
+Kortti: heikennetäänkö metsä puoleen Pariisin alueella. Omistaja: jää ennalleen ja edelleen keskitytään vain pariisin 3d rakennuksiin. KK:n tavoite: Mac-vuorot ja työ ensin Eiffelille ja sarjan seitsemälle, sitten niiden kylteille; VS:n laikku-, metsä- ja saumakokeet seis.
+
+## TILINVAIHTO PÄÄTILILLE (omistaja 5.11. klo 17.05 ja 17.06, kortit KK:ssa) (5.11.2026 klo 17.07)
+
+Vaihdetaanko tänään päätilille? = vaihdetaan nyt. Mihin asti päätiliä saa käyttää? = 92 % (Suositus).
