@@ -21,6 +21,18 @@ Syy: pehmeä raja 25 % (7.37), luonteva tauko, koska KK:n vastaus odottaa. **Voi
 ## VAHTIOSUMAT: valmiit (PT)
 Komennot 1272 ja Nahtavyysalue 447, 829 valopoikkeuksia, PT hyväksyi. Nahtavyysalue 554 kasvu Liikepohjalle (Sisaan), ei nähty ilmestymisessä. Muut liikepoikkeuksia. Nimikerros 654 ja PariisiKallistus 141 ovat merkittyinä minun haarassani; PT:n viimeinen sana: älä muuta. **Yhdistettäessä NUI:n jousi (natiivi-ui/liikevahti-219 cbc744e21) voittaa PariisiKallistuksen rivillä.** `UI/MalliKyltit.cs` 4 > 0 ei ole minun. Perustelut `_tyo/karttaseppa/vahtiosumat-perustelut-20261105.md`. PT pyysi kertomaan nykimisestä: pysäytyskuvista ei näe.
 
+## PÄIVITYS 22.2x: AJO 22.14 (lokit/esikatselu-20261105-221413, 93d41db55, 7 kuvaa): voittaa kaiken alla olevan sävystä
+Kerrottu KK:lle, LUKKO VAPAA lähetetty, Grand Palais lisätty Codexille (f2182102d), NS:lle vastattu Marais'n raja (ND:n pohja osuu lounaisosaan; vapaa lat 48.8600–48.8690).
+- **UUSI PÄÄVIKA: `riemukaari-45.png`: koko kartta lähes yötumma, malli ei, nimillä vaalea reuna.** Ensimmäisessä ajossa Riemukaari ylhäältä oli normaali. Syy todistamatta.
+- **GP 75° ei enää tummu:** talo 158/tie 199, vanha savy-1 117/185 (`scratchpad`-mittaus: huiput kartan alaneljänneksestä; koko neljänneksen mediaani riippuu talojen osuudesta, joten vanhat 120,5/168-luvut olivat osin sisältöä). Ero on yhä aito 117 vs 158. Tiheys-korjaus tuli ajojen väliin, mutta yhteyttä ei ole todistettu.
+- **Globaalit nollia molemmissa kohdissa, mutta ei mitattu tummana hetkenä.** Epäily: valokeilan hämäryys kohteeseen saavuttaessa (`_keilaHamaryys`), ei todistettu.
+- **SEURAAVAKSI:** 2 kuvan koe: toista Riemukaari 45° samassa järjestyksessä (Invalidit etelästä ensin) ja aja `globaalit`, `valokeila tila`, `valo tila` juuri ennen kuvaa ja kuvan jälkeen, lopussa `odota 5`. Pyyntöön "ratkaisee" (JU). Pystysauma tämän jälkeen.
+- **Täysikoossa katsomatta (vain kooste):** hor-75, hor-85 (Louvren alla tumma laikku), invalidit-45-etela. Katso ennen hyväksyntää.
+- **Eiffel 45°:** neljä jalkaa kuvassa. Kiveyksen läpi kaksi harmaata läiskää jalkojen välissä, länsikulma läpikuultava rannassa. Tarkista Codexin Eiffel-alustasta.
+- **Tripo:** katon korjaus v2 aloitettu (97535000d). Riemukaaren aukion KK:n hyväksyntä perustui ylhäältä otettuun kuvaan.
+- **PT pyysi** rivin Louvren isosta pohjasta ja Sainte-Chapellen pohjasta: lähetetty.
+- **Pont Alexandre III:n nimi** ja kartan tyhjä kiila (VS): `_tyo/karttaseppa/jono-pont-neuf-nimi.md`.
+
 ## PÄIVITYS: KK:n päätökset ajosta (voittaa alla olevan)
 Invalidit kelpaa kokeena, ei junaan. Riemukaaren aukio kelpaa. Eiffel pysyy paikallaan, kiveys kelpaa, kunnes Codexin alusta tulee. Tilaukset postissa: Codex jatkaa alustoihin (Eiffel lisätty listan loppuun; Grand Palais pois), Tripolle Riemukaaren katto `riemukaari-3d-v2`.
 **Seuraava yhteinen ajo, ei omaa ajoa:** `_tyo/karttaseppa/sk-pariisi-yhteis-2.txt`, 7 kuvaa, kärki 93d41db55, vuoro pyydetty JU:lta perusteluineen. Tuloksista parit KK:lle; Eiffelin vanha pari `Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261105/eiffel-maa-puuttuu-2132.png`. Pystysauma tummumisen jälkeen.
