@@ -82,7 +82,11 @@
      48.88665,
      2.34295
     ],
-    "lahde": "Wikidata Q28785"
+    "lahde": "Wikidata Q28785",
+    "piste": [
+     48.88665,
+     2.34336
+    ]
    },
    "pariisi-nykyintro-c1.jpg": {
     "kohde": "Quai Voltaire (bukinistit)",
@@ -130,6 +134,66 @@
     "piste": [
      48.855325,
      2.347542
+    ]
+   },
+   "hero-pariisi-riemukaari.jpg": {
+    "kohde": "Riemukaari",
+    "kohdepiste": [
+     48.87378,
+     2.29504
+    ],
+    "lahde": "Wikidata Q64436",
+    "piste": [
+     48.874049,
+     2.29504
+    ]
+   },
+   "hero-pariisi-louvre.jpg": {
+    "kohde": "Louvre (lasipyramidi, Napoleonin piha)",
+    "kohdepiste": [
+     48.861,
+     2.335861
+    ],
+    "lahde": "Wikidata Q13397",
+    "piste": [
+     48.861269,
+     2.335861
+    ]
+   },
+   "matkakirja-pariisi-i1-r20260914-tarina-v1.jpg": {
+    "kohde": "Tuileries'n puutarha (keskikäytävä, isoisän kuva)",
+    "kohdepiste": [
+     48.86248,
+     2.33053
+    ],
+    "lahde": "OSM Jardin des Tuileries; akseli Grand Bassin Octogonal – Grand Bassin Rond; kuvasta: noin 150 m palatsin julkisivusta",
+    "piste": [
+     48.86248,
+     2.33053
+    ]
+   },
+   "matkakirja-pariisi-i2-r20260914-tarina-v1.jpg": {
+    "kohde": "Tuileries'n puutarha (puiden alla, isoisän kuva)",
+    "kohdepiste": [
+     48.86355,
+     2.3296
+    ],
+    "lahde": "OSM Jardin des Tuileries; kuvasta: akselin pohjoispuolella, palatsi oikealla, noin 260 m",
+    "piste": [
+     48.86355,
+     2.3296
+    ]
+   },
+   "matkakirja-pariisi-p1-r20260914-tarina-v1.jpg": {
+    "kohde": "Tuileries'n puutarha (Grand Couvert, Pulun kuva)",
+    "kohdepiste": [
+     48.86449,
+     2.32641
+    ],
+    "lahde": "OSM Jardin des Tuileries; kuvasta: soratie puurivien välissä",
+    "piste": [
+     48.86449,
+     2.32641
     ]
    }
   }
