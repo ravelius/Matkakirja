@@ -2,11 +2,13 @@
 
 L = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/yleinen/lattiakoe. Loki: muuri/KORJAUS.md (22.0x, 22.1x, 22.2x, 22.3x). Ei vientejä.
 
-## Odottaa PT:n päätöstä
-Lattia25, x 500:n ulkoalue. PT:lle lähti 22.28 vaihtoehdot:
-- A: ulkoalue jää, riski kirjattuna, ja lennon ruutu katsotaan ennen vientiä (suositukseni).
-- B: tarkkojen poisto ja kenttä x 500:n ulkopuolelle, iso muutos.
-aja25d oli PT:n sanoin viimeinen ajo tästä asiasta: ÄLÄ pyydä uutta ajoa äläkä korjaa ilman PT:n sanaa. B vain PT:n sanalla. Ei vientiä, ei kuittausta kokonaisena.
+## SEURAAVAKSI (PT 22.3x, sitova)
+Seinät aukkoihin (KK PK:n kautta). Etsi tausta: node tools/loki-hae.mjs ja KORJAUS.md; jos tehtävän rajaus ei löydy, yksi rivi PT:lle. Ei vientiä.
+
+## Päätös lattia25:stä (PT 22.3x): A
+Ulkoalue x > 500 jää, B:tä ei tehdä, ei lisää ajoja tästä asiasta nyt. A on riskipäätös, ei todiste.
+VIENTIEHTO (KORJAUS.md 22.3x): ennen vientiä lennon ruutu kellon ollessa käynnissä (t > 0 lokista), sokkeli -40,6, kaista x -450...-470 ja x -500 katsottu. Näkyvä vika kumoaa A:n: vaihtoehdot PT:lle. Ajon pohja L/sk-vientiehto-pohja.txt (ei ajettu; `taso 0`, ei `saannot`).
+Puut d-portti-kauko-3x:ssä: rivi PT:lle lähetetty; ei lattia25:n tekemiä mallin perusteella, syy selvittämättä, ei korjausta ilman PT:n sanaa.
 
 ## Mitä on todettu
 - Itä z -185 (rajaukset25/b-ita-saha.png, b-ita-sauma-ala.png): x 500 askel noin 4 cm ja x noin 508 tarkan palan reuna noin 12 cm. UV ehjä, syy korkeus. Vanha: x > 500 samat arvot lattia21:ssä. Koko ulkoalue: itä enintään 25 cm, länsi 13 cm (ulkoreuna.py).
