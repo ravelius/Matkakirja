@@ -1,0 +1,104 @@
+{
+  "task": 2122,
+  "status": "TWO_CANDIDATES_REVIEW_REQUIRED",
+  "createdAt": "2026-11-05T16:37:57.533204+00:00",
+  "sourceCommit": "ac25f9aba3b672c9a8610dcc62b3be8282b3560b",
+  "sourceBlob": "d7a3d91f6b2e0c26f00aae0468b30f4e4199b5cc",
+  "orderSHA256": "7525167eda47392c46df1be03d6beb869bbdb2ce88f92461e3de8c9f9dbcc02e",
+  "sourceHashesVerified": [
+    {
+      "file": "ita.png",
+      "sha256": "fb5085eed883187937d4f77bf166275574f34326c6577d2bd15322e8070bbcf1"
+    },
+    {
+      "file": "lansi.png",
+      "sha256": "8f0538319fe5083bd31459099d96d1c83cd358909223c65eee56f80c5f5b8bda"
+    },
+    {
+      "file": "pohjoinen.png",
+      "sha256": "4ae8756af28181ac8cc5309241be184ffa46a924c9b4458d5efd1252e19e9598"
+    }
+  ],
+  "inputMapping": {
+    "front": "ita.png",
+    "back": "lansi.png",
+    "left": "pohjoinen.png",
+    "right": "pohjoinen.png"
+  },
+  "beforeCredits": "Verify Tripo accepts same north image in both side slots",
+  "scope": "One model, 2 failed attempts before requester response; genuine intersecting vaulted openings; no gameplay changes",
+  "tripoJobs": [
+    {
+      "id": "b14be7b1-ed4e-40f7-86ed-b6e37e12b005",
+      "attempt": 1,
+      "startedObservedAt": "2026-11-05T17:02:33.427136+00:00",
+      "etaUISeconds": 149,
+      "settings": {
+        "model": "H3.1",
+        "ultra": true,
+        "topology": "triangle",
+        "targetTriangles": 50000,
+        "textureSize": 2048,
+        "PBR": true,
+        "removeLighting": true,
+        "parts": false,
+        "8K": false
+      },
+      "credits": 45,
+      "balanceBefore": 15970,
+      "balanceAfter": 15925,
+      "status": "COMPLETE_DOWNLOADED"
+    },
+    {
+      "id": "b14be7b1-ed4e-40f7-86ed-b6e37e12b005",
+      "attempt": 2,
+      "type": "Free Retry in same workspace; original preserved locally",
+      "startedObservedAt": "2026-11-05T17:07:46.346746+00:00",
+      "etaUISeconds": 76,
+      "settings": "unchanged approved multiview H3.1 Ultra Triangle50k2K PBR RemoveLighting",
+      "credits": 0,
+      "balanceBefore": 15925,
+      "balanceAfter": 15925,
+      "status": "COMPLETE_DOWNLOADED",
+      "finishedObservedAt": "2026-11-05T17:19:15.482750+00:00",
+      "rawSHA256": "50f2bc53a7ed99b26db8681edf7e1415bdc9db913763236724727921b292f552"
+    }
+  ],
+  "creditsSpent": 45,
+  "generationStarted": true,
+  "delivered": false,
+  "ownerActionRequired": false,
+  "intakeAck": {
+    "at": "2026-11-05T16:43:32.370279+00:00",
+    "commit": "af99a5029fdcc778edfdc22739532d279257a3d3",
+    "path": "posti/tripo3d-karttaseppa-24f-suunta-24g-vastaanotto-20261105.md",
+    "blob": "520e259de9c61e34061cccfac248dadf2c1e9208",
+    "sha256": "99e7d1a620b7a4d277b715524c05eccdea30f7b7ad3ebc715d1d750dfd1bc2c1",
+    "readbackByteVerified": true,
+    "isAssetDelivery": false
+  },
+  "updatedAt": "2026-11-05T17:19:15.482750+00:00",
+  "duplicateSideImageAccepted": true,
+  "rawFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/raw/riemukaari24g-attempt01-raw.glb",
+  "rawSHA256": "917e3fe7e6ab363a39340538a3bdefee909447a31af90619e9fe94578f1af97d",
+  "attempt01Disposition": {
+    "status": "NOT_ACCEPTED_RATIOS",
+    "width": 188,
+    "height": 184.0816026210742,
+    "depth": 102.46344319746325,
+    "heightRelativeError": 0.08795273416710536,
+    "depthRelativeError": 0.11228227526555856,
+    "mainArch": "Fixed mask 99.4653% clear background",
+    "sideArch": "5.1122% clear background, blocked"
+  },
+  "nextAction": "Report both attempts to Karttaseppa; no third. Local arch cutting permitted after exterior choice.",
+  "attempt02Disposition": {
+    "status": "NOT_ACCEPTED_RATIOS_AND_CLOSED_SIDE",
+    "heightOverWidth": 0.9797120601572888,
+    "depthOverWidth": 0.5377218774024476,
+    "mainArchBackgroundFraction": 1.0,
+    "sideArchBackgroundFraction": 0.056442285449919034,
+    "allSevenPreviewsReviewedFullSize": true,
+    "blackRGBlt16PixelsAllViews": 0
+  }
+}

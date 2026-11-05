@@ -1,0 +1,79 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-raw.glb",
+  "method": "Orthographic all-triangle projected coverage; pixel is background only if no mesh triangle covers its ray. Fixed, order-derived masks. Flat opaque geometry and constant background rendered to PNG; background RGB counted within the unchanged masks. No source texture/alpha reliance.",
+  "mesh": {
+    "vertices": 31676,
+    "triangles": 43591,
+    "boundsMinXYZ_m": [
+      -94.0,
+      0.0,
+      -50.54585647583008
+    ],
+    "boundsMaxXYZ_m": [
+      94.0,
+      184.1858673095703,
+      50.54585647583008
+    ],
+    "dimensionsXYZ_m": [
+      188.0,
+      184.1858673095703,
+      101.09171295166016
+    ]
+  },
+  "ratios": {
+    "widthX_over188": 1.0,
+    "depthZ_overWidthX": 0.5377218774024476,
+    "heightY_overWidthX": 0.9797120601572888,
+    "targets": {
+      "width_m": 188,
+      "depth_over_width": 0.49,
+      "height_over_width": 0.9
+    }
+  },
+  "supportDatum": {
+    "globalMinY_m": 0.0,
+    "robustVertexY_0_5percentile_m": 3.930760383605957,
+    "medianY_ofLowest1percentVertices_m": 3.930760383605957,
+    "lowest1percentVertexCount": 346,
+    "note": "All three reported; robust estimates are descriptive and do not replace the global minimum."
+  },
+  "openingCoverage": {
+    "front_large": {
+      "view": "front",
+      "fixedOpeningWidth_m": 42.488,
+      "fixedOpeningHeight_m": 106.032,
+      "maskPixels": 56856,
+      "geometryCoveredPixels": 0,
+      "backgroundPixels": 56856,
+      "flatImage": "output/riemukaari-24g-2122-20261105/qa/attempt02-hole-test-front-flat.png",
+      "backgroundRGB": [
+        48,
+        160,
+        230
+      ],
+      "backgroundFraction": 1.0,
+      "targetMinimum": 0.9,
+      "passes90Percent": true,
+      "maskDefinition": "fixed order dimensions, centered at facade datum; straight jambs and semicircular crown, no fitted/shrunk mask"
+    },
+    "left_narrow": {
+      "view": "left",
+      "fixedOpeningWidth_m": 28.012,
+      "fixedOpeningHeight_m": 72.944,
+      "maskPixels": 25938,
+      "geometryCoveredPixels": 24474,
+      "backgroundPixels": 1464,
+      "flatImage": "output/riemukaari-24g-2122-20261105/qa/attempt02-hole-test-left-flat.png",
+      "backgroundRGB": [
+        48,
+        160,
+        230
+      ],
+      "backgroundFraction": 0.056442285449919034,
+      "targetMinimum": 0.9,
+      "passes90Percent": false,
+      "maskDefinition": "fixed order dimensions, centered at facade datum; straight jambs and semicircular crown, no fitted/shrunk mask"
+    }
+  },
+  "limits": "Flat-color orthographic image test backed by all-triangle ray coverage; source materials are not used. Through-view opposite walls and intrados are included as occlusion. A low score proves blocked orthographic rays inside the fixed mask, but does not identify the blocking surface."
+}
