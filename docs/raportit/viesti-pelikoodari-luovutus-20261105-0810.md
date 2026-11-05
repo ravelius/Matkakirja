@@ -56,7 +56,7 @@ Epäonnistuneet käsikamerat: 御景亭-etela (puut edessä), 房子11-etela (pe
 ovi-凝香亭: mittaus aikakatkaistu 120 s, sama kamerarivi toimi 8cdda6041:ssä; syy auki. `tarkastelu_kuvat.sh` tulostaa nyt VIKA, jos lokissa on PUUTE.
 KK:lle 08.5x lähetetty tila; arkki vasta kun A ja B valmiit. Seuraavaksi: A:n loput, 西暖殿, B4:n irto-osat.
 
-## LISÄYS 09.02: omistaja 08.33 "Kelpaa" ovien ulkonäöstä; korjaukset 380664d56 (kartta v12), kuvat JU:lla
+## LISÄYS 09.02: omistaja 08.52 "Kelpaa" ovien ulkonäöstä; korjaukset 380664d56 (kartta v12), kuvat JU:lla
 Omistajan kortti KK:n kautta: ulkonäkö kelpaa, kun viat on korjattu; jatka; seuraava arkki KK:lle → omistajalle; ei junaan.
 Lista 226 (41 ovea, runko 380664d56) pyydetty JU:lta. Kansio tulee riviksi. Sitten arkki: `_tyo/pelikoodari/tayte/arkki.py <kansio> <etuliite> 3`.
 西暖殿: ovi oli 1,4 m ulkoseinän (z 399,75) takana mallin sisäkujassa ja portaat seinän läpi, koska porrastarkistus astui 0,5 m (seinä 0,25 m). Askel nyt V. Viimeisenä keinona `nakyva(..., kierros=1)`: seuraava tason 1 alue seinän takana. Uudet ovet samalla: 房子11, 如意馆; kuvista katsottava. Muut kartan ovet samat kuin v11 (kaikki_ero.py), paitsi 长春宫戏台.
