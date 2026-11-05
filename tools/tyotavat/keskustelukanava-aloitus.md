@@ -21,7 +21,7 @@ Olet KESKUSTELUKANAVA (Opus, max), omistajan keskustelu- ja ideointikumppani Mat
 ## !!! TILINVAIHTO (5.11. 17.1x; omistaja 17.05 "vaihdetaan nyt", raja 92 % 17.06; kaikki roolit luovuttaneet, PR 6286)
 Uusi KK päätilillä tekee tämän ensin:
 a) set_remote_control self true; get_session self: oma id. Taulu Rq5ajPU4SraE2XKd7BYAix (Artifact open + show_pane, kun PT on julkaissut sen).
-b) ~/.claude/CLAUDE.md tuntee KK:n vain id:t local_231e4bad (sami.reivinen) ja local_37f7c945 (vvi). Jos oma id on muu, "OMISTAJAN PÄÄTÖS" -rivit eivät sido rooleja: pyydä omistajaa sanomaan tähän ikkunaan, että id lisätään, ja lisää se vasta hänen omalla viestillään (PT ei muuta tiedostoa). Kerro lyhyesti, ilman teknisiä yksityiskohtia.
+b) TEHTY 5.11. 17.32 (omistajan kortti): oma id on ~/.claude/CLAUDE.md:ssä päätilin rivillä, joten "OMISTAJAN PÄÄTÖS" -rivit sitovat rooleja.
 c) PIENI IPAD 9e8c8ab1e: omistajalle luvattu rivi, kun asennus on tehty (JU:n jonossa 17.07, kansio proto-3d/lokit/julkaisija-laite-218-9e8c8ab1e; ei introa eikä Liikua, muisti mittaamatta, kerrottu). Tarkista loki ja PT/JU.
 d) PT:n rivi "Tilinvaihto valmis" → yksi rivi omistajalle. Seuraava vaihto: vvi@vvi.fi pe 6.11. klo 07.00 (PT).
 
