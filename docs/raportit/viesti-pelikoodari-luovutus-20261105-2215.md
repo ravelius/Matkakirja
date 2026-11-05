@@ -16,7 +16,7 @@ Kuvat ja KK:n käsky:
 3. **KK:lle:** sama ovi ja kamera sisään ja ulos, q1 ja q7, katsottuina täysikoossa, ei leikkauksia. KK vie kortin omistajalle vasta niiden jälkeen. q1:n karmi ja seinä: KK kertoo omistajalle, älä korjaa. Ei mittauksia eikä junaan.
 - **Peukalokohdat:** ei vika (KK kuitannut, kohta 1 pois). x 14 % ja 86 %, y 70 %, `Peukalokohta`. Syy puuttumiselle ajossa 212358 on päätelty lämmitykseksi, ei mitattu.
 
-**Lisäys 22.1x: `sk-s` käynnissä L1:llä, JU antoi vuoron.** Tuloste `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-pelikoodari/1c8f51a9-6803-454d-a6bd-47a4a1524352/scratchpad/ajo-sks.log`. Jos seuraaja aloittaa ennen sen loppua, tarkista `lokit/esikatselu-*` ja LUKKO VAPAA JU:lle (linja 1).
+**Lisäys 22.2x: `sk-s` AJETTU, älä aja uudelleen, kuvat KATSOMATTA.** `lokit/esikatselu-20261105-221417`, `35140432d`, L1, 469 s, 6 kuvaa, LUKKO VAPAA ilmoitettu JU:lle. Unity-koodi ja varjostin kääntyivät (0 virhettä), kaikki `kaanna`-rivit onnistuivat, ovikomennot menivät läpi. **Seuraaja: ensimmäinen työ on katsoa o1–o6 täysikoossa** ja tehdä alla olevat kohdat 1–3: näkyykö ristikko ja rengas sisäänpäin (o1, o3, o6), o5 laikkujen alkuperästä, sitten kuvat KK:lle. Loki kertoo vain, että ajo meni läpi: se ei kerro, näkyykö lehti oikein.
 
 ## 0b. KK:n päätös 22.1x (sitova, muuttaa kohtaa 2)
 **Seinä kujan kohdalle: aukot suljetaan** (linja kuten omistajan 4.11. 13.00 "suljetut pihat kiinni"; kohde: ulkoa näkyy umpinainen rakennus, ei kuja, ja pelaaja saa viestin **vain oikean oven kohdalla**). Jos rakennukselta puuttuu sen jälkeen ovi, sama ovi samalla säännöllä, ei uutta sääntöä.
