@@ -381,3 +381,39 @@ KK:n päätöksiä omistajan 19.28:n ja 20.13:n Kelpaa-sanoja vasten, ei omistaj
 ## EIFFEL SAA NÄKYÄ KARTAN RAJALLA (OMISTAJA 21.28, KK) (5.11.2026 klo 21.2x)
 
 OMISTAJAN PÄÄTÖS klo 21.28: "Saako Eiffel näkyä horisontissa näin selvästi?" = "Kelpaa (Suositus)"; kortissa: "Rakennukset näkyvät selvästi kartan rajalla." Kuvat scratchpad/keskustelukanava/kuvat/horisontti-7875c668d/ (7875c668d, Mac). KK: tarkentaa 19.30:n sanoja: rakennus saa seistä kartan rajalla pohjansa päällä; leijuminen ei kelpaa. Raamattu 2.215. Kartan tummuminen ja pystysauma yhä auki Karttasepällä.
+
+## HORISONTTI PEHMEÄMMÄKSI JA EIFFELIN MAA (OMISTAJA 21.30, 21.32, KK) (5.11.2026 klo 21.4x)
+
+OMISTAJAN PYYNTÖ klo 21.30: "Horisontti on vähän turhan jyrkkä"; kuva docs/raportit/kaappaukset/omistaja-20261105/horisontti-jyrkka-2130.png (NUI 7551a76cc:n Tuileries 45°, ilman KS:n horisonttikorjausta). KK:n tavoite ja tulkinta: kartta häipyy taivaaseen pidemmällä ja pehmeämmällä matkalla, ei kapeana kaistana; koskee myös 45°:ta. 21.28:n Kelpaa pysyy.
+
+OMISTAJAN PYYNTÖ klo 21.32: "Eifelin alta puuttuu maa."; kuva docs/raportit/kaappaukset/omistaja-20261105/eiffel-maa-puuttuu-2132.png. KK:n tavoite: tornin kaikki neljä jalkaa seisovat yhtenäisellä maalla, joka jatkuu kartaksi. Raamattu 2.215. Karttaseppä tekee; kuva → KK → omistaja.
+
+Grand Châtelet'n kyltti pisteen yläpuolelle: KK 21.30 NUI:lle "Grand Châtelet 45°:ssa, kuten suunnittelit", ei omistajan sana; koskee vain tätä kohdetta, ei muita kylttejä eikä sääntöä; KK katsoo tuloksen. Syy mitattu: törmäys malliin vasemmalla 45°:ssa.
+
+Eiffelin siirto 70 m (KS 024338c23): koe, ei junaan eikä hyväksytty; KK päättää, kun KS tuo syyn, vaihtoehdon ja kuvat molemmista. Omistajan sana on vain "Eifelin alta puuttuu maa", ei siirtoa.
+
+## OHJELMAKOHTEET OIKEISSA MITOISSA, ENSIN PARIISI LOPPUUN (OMISTAJA 21.49, KK) (5.11.2026 klo 21.5x)
+
+OMISTAJAN PÄÄTÖS klo 21.49: "Missä koossa nämä kolme kohdetta jäävät Pariisiin?" = "Oikeissa mitoissa (Suositus)"; selite: "Vain tärkeimmät nähtävyydet on liioiteltu, ja viat korjataan". "Kokeillaanko Lontoota tällä tavalla Pariisin jälkeen?" = omin sanoin: "Tehdään ensin Pariisi loppuun". Kuvat scratchpad/keskustelukanava/kuvat/ohjelmakohteet-cffdccab9/ (cffdccab9). KK:n tulkinta: kolme kohdetta jäävät, Valoseppä korjaa viat; Lontoon kokeesta ei päätöstä, osat A–F odottavat, 2.210:n sama toteutus pysyy, KK kysyy uudelleen, kun Pariisi on valmis. Raamattu 2.213.
+
+## 2.213 TIIVISTETTY: AIEMPI SANAMUOTO (PT, RAAMATUN KOKORAJA) (5.11.2026 klo 21.59)
+
+Raamatun 2.213 tiivistetty voimassa olevaan linjaukseen (koko yli 450 kt). Sisältö ei muutu. Aiempi sanamuoto: 2.213 OHJELMANA TEHDYT LISÄKOHTEET ENNEN LONTOON KOETTA (SITOVA, omistaja 5.11.2026 klo
+12.57, kortit: "Kokeillaanko Lontoota tällä tavalla heti Pariisin jälkeen?" → "Kokeillaan ensin Pariisin lisäkohteilla"; "Milloin Pariisiin lisätään ohjelmana tehtyjä kohteita?" → "Sarjan jälkeen";
+suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261105-kaupungit-avoimesta-datasta.md, MUUTOS 1; lähtökohtana Tiny Warsawin ja Tiny Praguen rakennustapa, omistaja 12.50): JÄRJESTYS: 1) Pariisin
+kahdeksan nähtävyyden sarja kartalle; tästä ei töitä ennen sitä. 2) KK katsoo koodin nykyiset ohjelmamallit (Erikoismallit, Maamerkit) lähtötasoksi; PT jakaa tekijän. 3) 2–3 lisäkohdetta ohjelmana,
+kuten sillat ja Hôtel de Ville: oikeat mitat, ei Tripoa eikä tavallisia taloja; Macin kuvat neljästä suunnasta Tripon nähtävyyden rinnalla → KK katsoo → omistajalle kuva ja kortti Lontoosta. JÄRJESTYS
+MUUTETTU (omistaja 5.11.2026 klo 20.44, kortti "Milloin ohjelmana tehtyjen kohteiden kokeilu aloitetaan?" → "Nyt rinnakkain"; kortissa: "2–3 kohdetta, ja kuvat Tripon mallien rinnalle."): kohdan 3
+kokeilu alkaa nyt sarjan rinnalla eikä sen jälkeen; kumoaa kortin "Sarjan jälkeen" ja kohdan 1 "tästä ei töitä ennen sitä". KOKO (omistaja 5.11.2026 klo 21.49, kortti "Missä koossa nämä kolme kohdetta
+jäävät Pariisiin?" → "Oikeissa mitoissa"; selite: "Vain tärkeimmät nähtävyydet on liioiteltu, ja viat korjataan"; kuvat scratchpad/keskustelukanava/kuvat/ohjelmakohteet-cffdccab9/, cffdccab9): Hôtel
+de Ville, Pont Neuf ja Pont Alexandre III jäävät Pariisiin oikeissa mitoissa, ja Valoseppä korjaa viat (KK:n tulkinta). LONTOO (sama kortti, kysymys "Kokeillaanko Lontoota tällä tavalla Pariisin
+jälkeen?", omin sanoin): "Tehdään ensin Pariisi loppuun": ei päätöstä kokeesta; KK kysyy uudelleen, kun Pariisi on valmis (KK:n tulkinta). RAJAUS: Lontoon kokeen osat A–F odottavat korttia, ja 2.210:n
+"sama toteutus Lontooseen" pysyy siihen asti.
+
+## OHJELMANA MUITA RAKENNUKSIA PARIISIIN (OMISTAJA 22.04, KK) (5.11.2026 klo 22.06)
+
+OMISTAJAN PYYNTÖ klo 22.04: "Tee muita rakennuksia sillä ohjelmalla  Pariisiin. Onnistuuko?" KK:n tavoite: Pariisi tuntuu täydemmältä oikeilla rakennuksilla oikeissa paikoissa, kun liioitellut nähtävyydet erottuvat niistä. KK kysyy laajuuden ja listan kortilla, sitten osat PT:lle jaettavaksi. VS jatkaa nyt vain kolmen kohteen vikoja. Aikaistaa Pariisissa sarjan suunnitelman kohdan "muut pienet kohteet nykyisiksi, kunnes luokat on päätetty"; muiden kaupunkien luokat ja Lontoo odottavat ennallaan. Muuttaa 2.213:a.
+
+## PARIISI: MYÖS TAVALLISET TALOT OHJELMALLA, ENSIMMÄINEN ERÄ (OMISTAJA 22.09, KK) (5.11.2026 klo 22.10)
+
+OMISTAJAN PÄÄTÖS klo 22.09 (kortti, pyynnöstä 22.04): "Tehdäänkö ohjelmalla vain nimettyjä rakennuksia vai myös tavallisia taloja?" = "Myös tavalliset talot"; selite "Kortteleita 3D:nä nähtävyysalueiden ulkopuolella"; KK suositti vain nimettyjä. "Kelpaako ensimmäinen erä?" = "Kelpaa (Suositus)": keskustan sillat, Madeleine, Palais Bourbon, Pompidou-keskus, Tour Saint-Jacques, Saint-Eustache, Saint-Sulpice. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261105-pariisi-rakennukset-ohjelmalla.md. A nimetyt: Valoseppä kolmen kohteen vikojen jälkeen. B talot: yksi neliökilometri kokeena Marais:sta, Karttaseppä varmistaa rajan alueisiin; kuva, KK, omistajalle ja kortti ennen koko Pariisia; lelumainen tai kadut peittävä = tyyli ensin. Ei junaan, sarja ei saa hidastua.
