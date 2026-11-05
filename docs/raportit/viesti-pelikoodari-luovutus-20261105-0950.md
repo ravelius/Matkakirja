@@ -77,3 +77,10 @@ Kortti KK:n kautta, "Kyllä (Suositus)": muistisarja seis, wifi-tarkistusta ei t
 Kumoaa tästä tiedostosta ja -0810:n kohdasta 4 muistisarjaan, juoksuihin ja `sarja-wifi.zsh`:ään liittyvät tehtävät; skriptissä on EI AJETA -rivi. JU:lle sanottu: pois ketjusta. Seuraavaksi vain: lista 235 → arkki KK:lle.
 
 Myöhempää mittausta varten (KK): luvut ja verkkohavainto ovat kohdissa "klo 10.38" ja "Korjaus 10.4x". +164 Mt on yksi mittaus (d9c s3, ainoa verkkolento); 3 mallin 404 ei johdu verkosta. Mittaa silloin verkossa ja tarkista konsolista, ettei `Cannot resolve destination host` -rivejä ole. Kansiot `lokit/pelikoodari-muisti-lahtotaso-*` jäävät. PT: 404-asialla ei enää kiirettä.
+
+## Lisäys 5.11. klo 10.45: lista 235 katsottu, arkki KK:lle, lista 236 JU:lle
+`lokit/tarkastelukuvat-f1be6b358-103126`, 49/51. Arkit `_tyo/pelikoodari/tayte/8cd/arkki-f1b-{1,2,3,4}.png`. Täysikoossa 上书房, 颐和轩, 丽景轩, 房子7, 公共厕所, 绥寿殿, 长春宫戏台: ei uusia ovivikoja. Riskiviisi (tkork alle 3) ehjä: täytteen yläreuna ei näy.
+咸福宫 ja 耸秀亭: mittauksen aikaraja 120 s (`TarkasteluKesken`, työkalu, ei ovi; 凝香亭 onnistui nyt). Lista 236 JU:lla; katso täysikoossa ja kerro KK:lle.
+Havainnot KK:lle lähetetty: 丽景轩:n puu 2 m edessä ja 2,5 m sivussa (kartan sääntö sallii, kulku vapaa), 绥寿殿:n vieressä mallin oma puuovi, 上书房:lla ohut vaalea piikki maassa (ei tutkittu).
+Työkaluvika, ei korjattu: `ovikuvat.py`:n PUUT lukee taustan puut.json:n (3574 puuta), kun kartta ja peli käyttävät `kielletty-lahipuut-v15`:n listaa (4931). Vain kameran valinta, ei ovien paikat. 房子7:n lähin ovi 房子9 8,5 m; alle 8 m:n parit yhä vain 房子11–房子8.
+Seuraavaksi: KK:n palaute arkista, lista 236. Konteksti yli pehmeän rajan (28 %): luovutus ja nollaus niiden jälkeen.
