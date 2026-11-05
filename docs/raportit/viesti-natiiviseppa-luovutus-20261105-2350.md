@@ -1,0 +1,37 @@
+# Natiivisepän luovutus 5.11.2026 klo 23.50 (konteksti 30 %, 7.37)
+
+Korvaa -2329:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Cron "4 9 * * *" unity-julkaisut.py uudelleen (7.41). Yötila: omistaja nukkuu, kysymykset PT:lle.
+
+## SEURAAVA TYÖ: osan C ajon tulos
+Ajo `natiiviseppa-pariisi-c1-22f6538a9` pyydetty JU:lta sarjan ja Ateena-ajojen jälkeen. Skenaario `/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/sk-pariisi-c1.txt`, kuvat c1–c4, ei ole vielä nähty ajossa eikä käännetty Unityssä.
+KK 23.38: Marais kelpaa, koko Pariisi paloina vain lähellä. Ei junaan, ei iPadia, sarja ei saa hidastua. Tumma kartta on KS:llä, ei odoteta. Seuraava kuva Macilta KK:lle, kun osasta C on näytettävää. KK näyttää omistajalle aamulla k3, k2 ja m2 viat kerrottuina; omistaja voi yhä pysäyttää.
+
+Kun ajo valmis, kuvat täysikokoisina:
+- c1 lähellä Marais: näkyykö kartan oma talo 3D-talojen alta? Ei → poista maski kokonaan (`TaloAlue.Maski`, `RengasPois`, `PalaOsuu`, ElavaTyyli:n ja Laattapalvelin.Elava:n rivit). Kyllä → maski takaisin koko alueelle, mutta ladatun alueen ulkopuolelle ei saa jäädä tyhjiä tontteja.
+- c2 kaukaa: näkyykö rengas tai raja, kun talot painuvat litteiksi? Säde `TaloAlue.SisaSade`, kaista `ReunaKaista` 500 m.
+- c3 Montmartre: leijuuko tai uppoaako talo? Maa = `Sovita(alt_sol + 55)`, kerroin 2 leivottu tee-palat.py:ssä; pohja normaalin w:ssä 1 m:n tarkkuudella.
+- c4 Louvren ja ND:n alueraja: talot loppuvat kokonaisina, ei aukkoa.
+- `grep "MATKAKIRJA talot\|hader" unity.log`: "talot tila" kertoo palat ja Mt:t.
+
+## Tehty 22f6538a9 (natiiviseppa/marais-talot, työpuu wt/proto-natiiviseppa-marais, peili natiivi-backup peili/proto/natiiviseppa/marais-talot)
+Kartta-testit TaloAlue 5/5. Marais'n Resources-aineisto poistettu.
+- Aineisto `_tyo/natiiviseppa/pariisi-talot/`: `hae-osm.mjs` (Geofabrik T7:ltä), `hae-ign-koko.py` (WFS, robots.txt 404, 208 408 kohdetta), `tee-palat.py`, `tarkista-palat.py`. Tulos `palat/`: 219 palaa z15, 126 024 taloa, 360 Mt, keskim. 1,6 Mt, suurin 4,6 Mt, 0 virhettä. Palat EIVÄT ole haarassa eikä ämpärissä: Media-vienti = julkaisu, ei viedä ennen lupaa. ODbL tarkistettava ennen julkaisua.
+- Kerralla ladattuna 71–134 Mt säteellä 2–2,8 km (laskettu tiedostokoista; muistia ei mitata, omistaja 4.11. 22.41).
+- `TaloKerros`: palat vain lähellä, yksi kerrallaan taustasäikeellä, vapautus kauempana. Komento `talot kansio <polku>` (oletus persistentDataPath/talopalat). Näkyy kaarilla 0,035–0,055, joten aloituslennon korkeudella ei lataudu mitään.
+- Varjostin: kerroin = aineiston raja × etäisyys kameran kohdasta × nousu; täysin litteänä clip, jolloin näkyy kartan oma talo. Jono 2994.
+- Pois keskipisteestä: v7-maskit (10 aluetta, 2 951 taloa), Hôtel de Ville, building=roof/ruins ym., alle 8 m².
+
+## Auki osasta C
+- VS:n ensimmäisen erän kohteet (Madeleine, Palais Bourbon, Pompidou, Tour Saint-Jacques, Saint-Eustache, Saint-Sulpice) lisättävä tee-palat.py:n OHJELMA-listaan vasta, kun ne ovat pelissä; muuten tilalle jäisi litteä talo.
+- Temple-torni (piirrostähti 48.865195, 2.360455): tarkistamatta, peittävätkö talot sen.
+- Maanpinnan kerroin leivottu oletukseen 2; komento `korkeus` ei siirrä talojen pohjia suhteessa.
+- Suorituskyky isossa iPadissa kohta D, kerran kun Pariisi valmis.
+
+## Tumma kartta (KS)
+KS 23.5x: syy todennäköisesti nähtävyysmallin maavarjo (Nahtavyysalue, jono 2994), korjaus 6f5229e61 karttaseppa/nahtavyydet-219, koeajo JU:n vuorolla, KS kertoo tuloksen. Älä lisää taloja varjon reitille. KS:lle kerrottu, että talot ovat samassa jonossa 2994; järjestys samassa jonossa on määrittelemätön.
+
+## Ateena 388742104: katsottu, tulos KK:lla 23.5x
+Kamera pysyy Ateenassa ja Tukholmassa Pulun sarjan ajan (b3–b4 ero 0,00 %). Esityskuva ei putoa; PUUTE on skenaarion ajoitusvirhe. Kaksi näkyvää vikaa odottaa KK:n sanaa: Tukholma b5 ohjeteksti läpinäkyvänä kylttien päällä; Ateena b6 lipun yläpää ruudun yli. Haara natiiviseppa/pariisi-aloitus-219, kärki 388742104, junaan vain PT:n kautta. Tila ei muutu ilman viestiä, joka mainitsee 388742104:n.
+
+## Työtapa
+kaanna.sh sh:lla, ei zsh:lla. zsh:ssa `echo ==` on virhe. Peili: `git push natiivi-backup HEAD:refs/heads/peili/proto/natiiviseppa/marais-talot`. tee-palat.py ajetaan python3.14:llä ilman -I:tä (numpy, PIL); noin 3 min. JU palauttaa pyynnön ilman ratkaisee-riviä tai yli noin 5 kuvalla ilman perustelua.
