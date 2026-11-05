@@ -1,0 +1,125 @@
+{
+  "status": "REVIEW_CANDIDATE_DIMENSIONS_NOT_ACCEPTED",
+  "task": 2119,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "sha256": "5d0e310364691a045d4c99eabf61ef3acf5e77112e7624da568e5621f852bc29",
+      "bytes": 1157
+    },
+    {
+      "path": "checkpoint.json",
+      "sha256": "c0d56c4d15d7cbcc918b701d4045b706994ef6bd8019f4afd7d09960f8a123c0",
+      "bytes": 5078
+    },
+    {
+      "path": "esikatselu/kevyt-etela.png",
+      "sha256": "87aa0a3ae2aaddcf89e9d3b6936974d868ae6a6f912f610c57c9a1f8925f9cd9",
+      "bytes": 236182
+    },
+    {
+      "path": "esikatselu/kevyt-ita.png",
+      "sha256": "d0e8c108c96b243c7d2994f0af7c5eabe84a48fd51c6b4639035c1d8fa169f05",
+      "bytes": 178421
+    },
+    {
+      "path": "esikatselu/kevyt-lansi.png",
+      "sha256": "83cb30a3677ba8d8319d4dd00ed075e62c53bf78d3402ba9fd0c3cf2a05a1f91",
+      "bytes": 169989
+    },
+    {
+      "path": "esikatselu/kevyt-pelikulma-koillinen.png",
+      "sha256": "ab6ea14c61d4e3fcae8fc8ff37902fe03c1c726faf089bc7013c75cb8d2f29df",
+      "bytes": 577885
+    },
+    {
+      "path": "esikatselu/kevyt-pelikulma-lounas.png",
+      "sha256": "08e33d8631d066ded699e7984636f92bf6fa2b39b33f9e1d5722091a27b77657",
+      "bytes": 559755
+    },
+    {
+      "path": "esikatselu/kevyt-pohjoinen.png",
+      "sha256": "e9469a58f2fbbf503bc3eb840883f2a9670702c1f22a11390a4d4fa368aa69aa",
+      "bytes": 245690
+    },
+    {
+      "path": "esikatselu/kevyt-ylhaalta.png",
+      "sha256": "4ff4225f78031c4cde7b5b08d2a5f118d86d7e566f939c36781ac1fb22c3137d",
+      "bytes": 456598
+    },
+    {
+      "path": "esikatselu/pelikulma-koillinen.png",
+      "sha256": "13467548561406cb73fa890b82bae6fb884c560d43468ae4906eb513e6b5fb45",
+      "bytes": 620404
+    },
+    {
+      "path": "esikatselu/pelikulma-lounas.png",
+      "sha256": "6b9e2e44299f3af97d14d3051646e9d0adb1f8dbdb18cb95808528f2672bac36",
+      "bytes": 602055
+    },
+    {
+      "path": "esikatselu/raaka-etela.png",
+      "sha256": "bd06eeefd39a748b0dda2fea9ba9a51f9915e1ebfcc3197695e273472f501c8b",
+      "bytes": 249845
+    },
+    {
+      "path": "esikatselu/raaka-ita.png",
+      "sha256": "97ed440541f476e22d8afcffb0ba2f1481cfc39c3962732f1c5eb91f7da223db",
+      "bytes": 185272
+    },
+    {
+      "path": "esikatselu/raaka-lansi.png",
+      "sha256": "e9a58bd6edd7ed2952895f722a5c1d8387a10fbb14a531c6c43ae097ee9f544d",
+      "bytes": 176510
+    },
+    {
+      "path": "esikatselu/raaka-pohjoinen.png",
+      "sha256": "ccb5f9e121ed61e97226e1d5ce91c0fe1aef65ef1e0bb545be97bb8ce9d8b057",
+      "bytes": 263512
+    },
+    {
+      "path": "esikatselu/ylhaalta.png",
+      "sha256": "1e9fd2488f0f908577561bd10cc23734b1aa5b1f564858474cefba2b993fa641",
+      "bytes": 496949
+    },
+    {
+      "path": "grand-palais-kevyt.glb",
+      "sha256": "07b6f770957d98600de764d0fe349b1f3240cfeeea44eda46e26a3dfc19539ca",
+      "bytes": 3003416,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "grand-palais.glb",
+      "sha256": "1fbe175fc71f32c268a1412090ba8e72fe45e7eb55e7891c359e224db3a2ce4a",
+      "bytes": 5628124,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "huomiot.md",
+      "sha256": "df8da46108c6fefe59fa32ec1fdeae6351cb6edb78c5f62c95164a8a7954f54d",
+      "bytes": 4926
+    },
+    {
+      "path": "qa-kevyt.json",
+      "sha256": "079fb1a0ba38a256fafacbfda9652d4e0084de0e2e23f76a600c32aee23a872d",
+      "bytes": 4345
+    },
+    {
+      "path": "qa-raaka.json",
+      "sha256": "053fa37642ddd2b19b7f34cea92978ba8f6efb5e32adce790eb03d6dff343bfd",
+      "bytes": 4335
+    },
+    {
+      "path": "qa-riippumaton.json",
+      "sha256": "7a0b92f9f0a788d81bad57871474d8b2ff51b72ddb8c62bad86a8aa127b5f49b",
+      "bytes": 14222
+    },
+    {
+      "path": "qa-tekninen-portti.json",
+      "sha256": "4bd59d697a54363985f58985e119badc3ea339dbc9b3819328f71f47faa1aec8",
+      "bytes": 4646
+    }
+  ]
+}

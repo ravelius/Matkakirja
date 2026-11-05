@@ -1,0 +1,166 @@
+{
+  "source": "output/grand-palais-24f-2119-20261105/raw/grand-palais24f-attempt01-light.glb",
+  "sourceSHA256": "492e2843846ea2dcd2c9cdefe620bb8c35b238db0361f273895058d238fc9764",
+  "outputSHA256": "07b6f770957d98600de764d0fe349b1f3240cfeeea44eda46e26a3dfc19539ca",
+  "uniformScale": 388.1011870084696,
+  "originOffset": [
+    -0.0004882961511611938,
+    0.0,
+    -0.0003661811351776123
+  ],
+  "bounds": [
+    [
+      -125.7823292248559,
+      0.0,
+      -190.0
+    ],
+    [
+      125.7823292248559,
+      131.21273804545075,
+      190.0
+    ]
+  ],
+  "dimensions": [
+    251.5646584497118,
+    131.21273804545075,
+    380.0
+  ],
+  "operation": "Uniform positive scale plus base centering only; normals, UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/work/attempt01-light.glb",
+    "bytes": 3003416,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 20973,
+    "triangles": 28005,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -125.7823257446289,
+        0.0,
+        -190.0
+      ],
+      [
+        125.7823257446289,
+        131.21273803710938,
+        190.0
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 41,
+    "uvZero3DArea": 97.05765999611474,
+    "surface3DArea": 271536.94362167676,
+    "uvZero3DAreaFraction": 0.0003574381397300468,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_f115517a-a847-4401-aa03-1520b8d62623_2",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_f115517a-a847-4401-aa03-1520b8d62623_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_f115517a-a847-4401-aa03-1520b8d62623_1",
+        "mimeType": "image/png",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 20973,
+        "triangles": 28005,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 41,
+        "uvZero3DArea": 97.05765999611474,
+        "surface3DArea": 271536.94362167676
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-pohjoinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-etela.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-lansi.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-ita.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-ylhaalta.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-lounas.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/qa/attempt01-light-koillinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    }
+  ]
+}

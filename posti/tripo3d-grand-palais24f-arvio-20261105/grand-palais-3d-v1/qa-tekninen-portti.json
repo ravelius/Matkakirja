@@ -1,0 +1,253 @@
+[
+ {
+  "kansio": "output/grand-palais-24f-2119-20261105/delivery/grand-palais-3d-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "grand-palais-kevyt.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "grand-palais-kevyt.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 28005,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "512×512 jpg",
+      "2048×2048 jpg",
+      "1024×1024 png"
+     ],
+     "rajat": {
+      "min": [
+       -125.782,
+       0,
+       -190
+      ],
+      "max": [
+       125.782,
+       131.213,
+       190
+      ],
+      "koko": [
+       251.565,
+       131.213,
+       380
+      ]
+     }
+    },
+    "polku": "grand-palais-kevyt.glb"
+   },
+   {
+    "nimi": "grand-palais.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "grand-palais.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 46987,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -125.77,
+       0,
+       -190
+      ],
+      "max": [
+       125.77,
+       131.219,
+       190
+      ],
+      "koko": [
+       251.541,
+       131.219,
+       380
+      ]
+     }
+    },
+    "polku": "grand-palais.glb"
+   },
+   {
+    "nimi": "kevyt-etela.png",
+    "polku": "esikatselu/kevyt-etela.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-ita.png",
+    "polku": "esikatselu/kevyt-ita.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-lansi.png",
+    "polku": "esikatselu/kevyt-lansi.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-pelikulma-koillinen.png",
+    "polku": "esikatselu/kevyt-pelikulma-koillinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-pelikulma-lounas.png",
+    "polku": "esikatselu/kevyt-pelikulma-lounas.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-pohjoinen.png",
+    "polku": "esikatselu/kevyt-pohjoinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "kevyt-ylhaalta.png",
+    "polku": "esikatselu/kevyt-ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "pelikulma-koillinen.png",
+    "polku": "esikatselu/pelikulma-koillinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "pelikulma-lounas.png",
+    "polku": "esikatselu/pelikulma-lounas.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-etela.png",
+    "polku": "esikatselu/raaka-etela.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-ita.png",
+    "polku": "esikatselu/raaka-ita.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-lansi.png",
+    "polku": "esikatselu/raaka-lansi.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "raaka-pohjoinen.png",
+    "polku": "esikatselu/raaka-pohjoinen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   },
+   {
+    "nimi": "ylhaalta.png",
+    "polku": "esikatselu/ylhaalta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 800,
+     "h": 800
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: grand-palais-kevyt.glb ei liikettä, grand-palais.glb ei liikettä; muut: ei liikettä"
+  ]
+ }
+]

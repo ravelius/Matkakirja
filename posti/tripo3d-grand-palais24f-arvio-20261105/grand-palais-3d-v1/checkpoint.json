@@ -1,0 +1,132 @@
+{
+  "task": 2119,
+  "status": "REVIEW_REQUIRED_DIMENSION_VARIANCE",
+  "startedAt": "2026-11-05T16:20:45.101271+00:00",
+  "sourceCommit": "af9af5c7f5f668203b612fdfce0871b60f74de03",
+  "sourceBlob": "e96e6a191b0bf7c295fbbe99647af41b097626ad",
+  "orderSHA256": "9bbf5149b839687f33302c4fee09c75f813b9e74fd3725e185d19b75823759c9",
+  "scope": "One Grand Palais 24f model from approved uniform-scale images; no third failed attempt without Karttaseppa response",
+  "nextAction": "Tripo retopology target28000, compare UV and tip to raw",
+  "tripoJobs": [
+    "08694d0e-27dc-46fe-bd49-2ad88eae3f81"
+  ],
+  "creditsSpent": 50,
+  "generationStarted": true,
+  "delivered": false,
+  "ownerActionRequired": false,
+  "ackCommit": "12f03e8a2fe8625a8662ec7625896dfd0be664cc",
+  "ackBlob": "7cce1755ef34dfc8b0c46ef2774bd95fef73ab88",
+  "ackReadbackByteVerified": true,
+  "updatedAt": "2026-11-05T17:02:33.427136+00:00",
+  "sourceHashesVerified": true,
+  "sourceImagesVisuallyReviewed": true,
+  "orientationVerified": true,
+  "blocker": null,
+  "blockerReport": {
+    "at": "2026-11-05T16:34:09.285547+00:00",
+    "commit": "2c3c5335bb559f9d5a93dc1c82e22ca66fbcbc05",
+    "tree": "55b04948144ea010c5aa7d4927adab8307cba940",
+    "files": 3,
+    "readbackByteVerified": true,
+    "treePathsVerified": true,
+    "reportPath": "posti/tripo3d-karttaseppa-grand-palais24f-suunta-ennen-generointia-20261105.md",
+    "isAssetDelivery": false,
+    "recipientAcknowledged": false
+  },
+  "proposedMapping": {
+    "front": "pohjoinen.png",
+    "back": "etela.png",
+    "left": "lansi.png",
+    "right": "ita.png"
+  },
+  "proposalBasis": "Empirical Sainte-Chapelle earlier result; pending Karttaseppa acceptance",
+  "orientationGateResolved": true,
+  "orientationApproval": {
+    "commit": "969b2d6f4ab575f01eeaf52223d60d7d4dd2e447",
+    "blob": "79116228221fb4f116376eccc0ab38781e9572e7",
+    "path": "posti/karttaseppa-tripo3d-grand-palais-24f-suunta-20261105.md"
+  },
+  "inputMapping": {
+    "front": "pohjoinen.png",
+    "back": "etela.png",
+    "left": "lansi.png",
+    "right": "ita.png"
+  },
+  "orientationAck": {
+    "at": "2026-11-05T16:43:32.370279+00:00",
+    "commit": "af99a5029fdcc778edfdc22739532d279257a3d3",
+    "path": "posti/tripo3d-karttaseppa-24f-suunta-24g-vastaanotto-20261105.md",
+    "blob": "520e259de9c61e34061cccfac248dadf2c1e9208",
+    "sha256": "99e7d1a620b7a4d277b715524c05eccdea30f7b7ad3ebc715d1d750dfd1bc2c1",
+    "readbackByteVerified": true,
+    "isAssetDelivery": false
+  },
+  "initialCreditBalance": 16020,
+  "attempts": [
+    {
+      "attempt": 1,
+      "submittedAt": "2026-11-05T16:44:08.161661+00:00",
+      "expectedCompletion": "2026-11-05T16:49:08.161661+00:00",
+      "status": "RAW_QA",
+      "expectedCredits": 45,
+      "sourceMapping": {
+        "front": "pohjoinen.png",
+        "back": "etela.png",
+        "left": "lansi.png",
+        "right": "ita.png"
+      },
+      "settings": {
+        "model": "H3.1 HD",
+        "ultraMesh": true,
+        "texture": "2K",
+        "removeLighting": true,
+        "pbr": true,
+        "topology": "Triangle",
+        "targetPolycount": 50000,
+        "parts": false,
+        "8K": false,
+        "multiView": true
+      },
+      "jobId": "08694d0e-27dc-46fe-bd49-2ad88eae3f81",
+      "credits": 45,
+      "confirmedAt": "2026-11-05T16:44:55.837490+00:00",
+      "rawFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/raw/grand-palais24f-attempt01-raw.glb",
+      "rawSHA256": "75363ec2d39d1c4a199e5a226cd55250ed4541627d68b857c29cc57ce908dc67",
+      "rawBytes": 5628224,
+      "rawTrianglesUI": 46987,
+      "finishedAt": "2026-11-05T16:46:59.836984+00:00",
+      "visualQA": {
+        "wing": "-X, verified raw top and front",
+        "TFootprint": true,
+        "singleWing": true,
+        "domeAtIntersection": true,
+        "lanternMastFlagPresent": true,
+        "allSevenPreviewsReviewedFullSize": true,
+        "majorDimensions": [
+          251.54097063312193,
+          131.21865999959823,
+          380.0
+        ],
+        "note": "Main roof level and nave width pending independent measurement"
+      }
+    }
+  ],
+  "activeTripoJobs": [],
+  "creditBalanceAfter": 15970,
+  "retopo": {
+    "status": "DOWNLOADED_QA_PENDING",
+    "parentJobId": "08694d0e-27dc-46fe-bd49-2ad88eae3f81",
+    "separateJobId": "not exposed in UI",
+    "targetTriangles": 28000,
+    "actualUiTriangles": 28005,
+    "credits": 5,
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/raw/grand-palais24f-attempt01-light.glb",
+    "sha256": "492e2843846ea2dcd2c9cdefe620bb8c35b238db0361f273895058d238fc9764",
+    "bytes": 3003516,
+    "downloadedAt": "2026-11-05T16:49:43.512179+00:00",
+    "smartMeshSubmitted": false
+  },
+  "qualityAccepted": false,
+  "independentQA": "qa/independent-raw.json",
+  "remainingQuestion": "Nave width .34581L vs approximate order .42L (-17.66%); roof datum .1868L nave / .23417L central dome. Ask Karttaseppa before new input or local deformation; existing first model is review candidate."
+}

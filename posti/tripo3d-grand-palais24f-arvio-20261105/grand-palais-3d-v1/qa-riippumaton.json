@@ -1,0 +1,558 @@
+{
+  "reviewType": "Independent lightweight geometry/UV measurement of raw GP attempt; no edits and no acceptance decision.",
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-palais-24f-2119-20261105/work/attempt01-raw.glb",
+  "sha256": "1fbe175fc71f32c268a1412090ba8e72fe45e7eb55e7891c359e224db3a2ce4a",
+  "mesh": {
+    "vertices": 31860,
+    "triangles": 46987,
+    "primitiveMode": 4,
+    "materials": 1,
+    "skins": 0,
+    "animations": 0,
+    "positionsFinite": true,
+    "indexRangeValid": true,
+    "bounds": {
+      "min": [
+        -125.7704849243164,
+        0.0,
+        -190.0
+      ],
+      "max": [
+        125.7704849243164,
+        131.21865844726562,
+        190.0
+      ],
+      "dimensions": [
+        251.5409698486328,
+        131.21865844726562,
+        380.0
+      ]
+    }
+  },
+  "ratiosAgainstOrder": {
+    "lengthZ_m": 380.0,
+    "overallWidthX_m": 251.5409698486328,
+    "overallHeightY_m": 131.21865844726562,
+    "overallWidthRatio_X_over_Z": 0.6619499206542969,
+    "targetOverallWidthRatio": 0.66,
+    "overallWidthRelativeError": 0.002954425233783164,
+    "tipRatio_H_over_Z": 0.34531225907175167,
+    "targetTipRatio": 0.34,
+    "tipRelativeError": 0.015624291387504841,
+    "targetRelativeTolerance": 0.07
+  },
+  "mainNaveWidth": {
+    "method": "At six Z sections outside the transverse wing (Z=±100,±120,±140m), take the full X span of all section vertices within ±5m; report median. This is an outer geometry width, not a roof-only hand measurement.",
+    "samples": [
+      {
+        "zCenter_m": -140,
+        "halfBand_m": 5.0,
+        "vertices": 337,
+        "xWidth_m": 132.60886001586914,
+        "xBounds_m": [
+          -16.751705169677734,
+          115.8571548461914
+        ],
+        "sectionTopY_m": 71.70191192626953
+      },
+      {
+        "zCenter_m": -120,
+        "halfBand_m": 5.0,
+        "vertices": 417,
+        "xWidth_m": 131.07209587097168,
+        "xBounds_m": [
+          -16.399351119995117,
+          114.67274475097656
+        ],
+        "sectionTopY_m": 71.1607894897461
+      },
+      {
+        "zCenter_m": -100,
+        "halfBand_m": 5.0,
+        "vertices": 495,
+        "xWidth_m": 131.5650978088379,
+        "xBounds_m": [
+          -16.797603607177734,
+          114.76749420166016
+        ],
+        "sectionTopY_m": 70.69702911376953
+      },
+      {
+        "zCenter_m": 100,
+        "halfBand_m": 5.0,
+        "vertices": 457,
+        "xWidth_m": 131.25124168395996,
+        "xBounds_m": [
+          -16.4837703704834,
+          114.76747131347656
+        ],
+        "sectionTopY_m": 70.81028747558594
+      },
+      {
+        "zCenter_m": 120,
+        "halfBand_m": 5.0,
+        "vertices": 497,
+        "xWidth_m": 131.23643684387207,
+        "xBounds_m": [
+          -16.409746170043945,
+          114.82669067382812
+        ],
+        "sectionTopY_m": 69.46192932128906
+      },
+      {
+        "zCenter_m": 140,
+        "halfBand_m": 5.0,
+        "vertices": 371,
+        "xWidth_m": 131.68354606628418,
+        "xBounds_m": [
+          -16.122533798217773,
+          115.5610122680664
+        ],
+        "sectionTopY_m": 71.66970825195312
+      }
+    ],
+    "medianWidth_m": 131.40816974639893,
+    "widthRatioToLengthZ": 0.3458109730168393,
+    "targetRatio": 0.42,
+    "targetWidth_m": 159.6,
+    "relativeError": -0.17664054043609695,
+    "tolerance": 0.07
+  },
+  "mainRoofReadings": {
+    "method": "Do not conflate the long nave roof with the higher central domed glass roof. Long-roof reading is the median maximum Y in the six nave sections above. Central-roof reading is the highest occupied 1m Y band in the central X/Z box with at least 15 vertices and both plan spans >=40m; this selects the broad roof envelope before the narrow lantern/mast.",
+    "longNaveSectionTopY_m": 70.98553848266602,
+    "longNaveRatioToZ": 0.1868040486385948,
+    "centralBroadRoofEnvelopeTopY_m": 88.98328399658203,
+    "centralBroadRoofRatioToZ": 0.23416653683311062,
+    "targetRatioToZ": 0.22,
+    "targetY_m": 83.6,
+    "note": "These are two distinct geometric landmarks. The central broad envelope is the closer candidate for the order's .22 roof datum; the longitudinal nave crown is reported separately rather than substituted.",
+    "centralEnvelopeBins": [
+      {
+        "yBand_m": [
+          70,
+          71
+        ],
+        "vertices": 118,
+        "spanX_m": 108.26529894769192,
+        "spanZ_m": 105.95561599731445,
+        "maxY_m": 70.99534606933594
+      },
+      {
+        "yBand_m": [
+          71,
+          72
+        ],
+        "vertices": 88,
+        "spanX_m": 105.7197605073452,
+        "spanZ_m": 104.75345230102539,
+        "maxY_m": 71.98579406738281
+      },
+      {
+        "yBand_m": [
+          72,
+          73
+        ],
+        "vertices": 186,
+        "spanX_m": 109.86218500137329,
+        "spanZ_m": 101.14698791503906,
+        "maxY_m": 72.99623107910156
+      },
+      {
+        "yBand_m": [
+          73,
+          74
+        ],
+        "vertices": 116,
+        "spanX_m": 109.60239494591951,
+        "spanZ_m": 101.22397232055664,
+        "maxY_m": 73.99851989746094
+      },
+      {
+        "yBand_m": [
+          74,
+          75
+        ],
+        "vertices": 134,
+        "spanX_m": 105.87384520471096,
+        "spanZ_m": 99.89745712280273,
+        "maxY_m": 74.89495086669922
+      },
+      {
+        "yBand_m": [
+          75,
+          76
+        ],
+        "vertices": 149,
+        "spanX_m": 107.77394187450409,
+        "spanZ_m": 98.71306610107422,
+        "maxY_m": 75.97126770019531
+      },
+      {
+        "yBand_m": [
+          76,
+          77
+        ],
+        "vertices": 355,
+        "spanX_m": 108.85535049438477,
+        "spanZ_m": 98.63015747070312,
+        "maxY_m": 76.99724578857422
+      },
+      {
+        "yBand_m": [
+          77,
+          78
+        ],
+        "vertices": 124,
+        "spanX_m": 107.50459051132202,
+        "spanZ_m": 100.02774047851562,
+        "maxY_m": 77.98177337646484
+      },
+      {
+        "yBand_m": [
+          78,
+          79
+        ],
+        "vertices": 120,
+        "spanX_m": 106.41365504264832,
+        "spanZ_m": 98.02019500732422,
+        "maxY_m": 78.99887084960938
+      },
+      {
+        "yBand_m": [
+          79,
+          80
+        ],
+        "vertices": 69,
+        "spanX_m": 85.34498739242554,
+        "spanZ_m": 92.86513137817383,
+        "maxY_m": 79.85163116455078
+      },
+      {
+        "yBand_m": [
+          80,
+          81
+        ],
+        "vertices": 85,
+        "spanX_m": 98.74028372764587,
+        "spanZ_m": 95.11843872070312,
+        "maxY_m": 80.98420715332031
+      },
+      {
+        "yBand_m": [
+          81,
+          82
+        ],
+        "vertices": 93,
+        "spanX_m": 97.36619925498962,
+        "spanZ_m": 94.86971282958984,
+        "maxY_m": 81.7185287475586
+      },
+      {
+        "yBand_m": [
+          82,
+          83
+        ],
+        "vertices": 64,
+        "spanX_m": 68.87010908126831,
+        "spanZ_m": 83.02877044677734,
+        "maxY_m": 82.99766540527344
+      },
+      {
+        "yBand_m": [
+          83,
+          84
+        ],
+        "vertices": 68,
+        "spanX_m": 96.437180519104,
+        "spanZ_m": 92.51573944091797,
+        "maxY_m": 83.98367309570312
+      },
+      {
+        "yBand_m": [
+          84,
+          85
+        ],
+        "vertices": 73,
+        "spanX_m": 95.83536529541016,
+        "spanZ_m": 90.45194244384766,
+        "maxY_m": 84.96968078613281
+      },
+      {
+        "yBand_m": [
+          85,
+          86
+        ],
+        "vertices": 17,
+        "spanX_m": 94.29898595809937,
+        "spanZ_m": 88.54507064819336,
+        "maxY_m": 85.96160888671875
+      },
+      {
+        "yBand_m": [
+          86,
+          87
+        ],
+        "vertices": 33,
+        "spanX_m": 89.65617418289185,
+        "spanZ_m": 86.69742202758789,
+        "maxY_m": 86.99942779541016
+      },
+      {
+        "yBand_m": [
+          87,
+          88
+        ],
+        "vertices": 35,
+        "spanX_m": 90.75322723388672,
+        "spanZ_m": 83.60616302490234,
+        "maxY_m": 87.89956665039062
+      },
+      {
+        "yBand_m": [
+          88,
+          89
+        ],
+        "vertices": 33,
+        "spanX_m": 87.18079233169556,
+        "spanZ_m": 88.97145080566406,
+        "maxY_m": 88.98328399658203
+      }
+    ]
+  },
+  "tFootprint": {
+    "method": "Compare X bounds in the central Z slice with long-nave slices; positive-X nave segment is the baseline, while the transverse wing expands toward -X.",
+    "crossSectionAtZ0_m": [
+      -125.50989532470703,
+      123.63858032226562
+    ],
+    "medianLongNaveXBounds_m": [
+      -16.446758270263672,
+      114.79709243774414
+    ],
+    "visualDirectionNote": "Raw-coordinate section supports the requested transverse-wing extension toward -X; axis/front direction should still be verified in final delivery views."
+  },
+  "uv": {
+    "bounds": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "strictZeroThreshold": 1e-12,
+    "strictZeroTriangles": 14,
+    "strictZero3DArea_m2": 1.4175470015844271,
+    "nearZeroThreshold": 1e-08,
+    "nearZeroTriangles": 14,
+    "nearZero3DArea_m2": 1.4175470015844271,
+    "surfaceArea_m2": 272348.95938425756,
+    "strictZeroAreaFraction": 5.204892299898264e-06
+  },
+  "topology": {
+    "weldTolerance_m": 0.0001,
+    "indexConnectedComponentCount": 774,
+    "weldedConnectedComponentCount": 1,
+    "boundaryEdgesAfterWeld": 13,
+    "nonmanifoldEdgesAfterWeld": 25,
+    "degenerateTrianglesBelow1e-8m2": 0,
+    "upperAssemblyIndexComponentsAbove75PercentHeight": [
+      {
+        "component": 21,
+        "vertices": 13,
+        "bounds": {
+          "min": [
+            48.69623947143555,
+            116.02884674072266,
+            -0.21858447790145874
+          ],
+          "max": [
+            61.150108337402344,
+            131.21865844726562,
+            0.6181453466415405
+          ],
+          "dimensions": [
+            12.453868865966797,
+            15.189811706542969,
+            0.8367298245429993
+          ]
+        }
+      },
+      {
+        "component": 61,
+        "vertices": 14,
+        "bounds": {
+          "min": [
+            48.71992874145508,
+            121.8797378540039,
+            -0.08996690064668655
+          ],
+          "max": [
+            61.150108337402344,
+            131.21865844726562,
+            1.0995362997055054
+          ],
+          "dimensions": [
+            12.430179595947266,
+            9.338920593261719,
+            1.189503200352192
+          ]
+        }
+      },
+      {
+        "component": 180,
+        "vertices": 13,
+        "bounds": {
+          "min": [
+            46.67093276977539,
+            111.04256439208984,
+            -0.6037203073501587
+          ],
+          "max": [
+            51.130165100097656,
+            131.21273803710938,
+            2.8227319717407227
+          ],
+          "dimensions": [
+            4.459232330322266,
+            20.17017364501953,
+            3.4264522790908813
+          ]
+        }
+      },
+      {
+        "component": 233,
+        "vertices": 25,
+        "bounds": {
+          "min": [
+            45.35921859741211,
+            103.75559997558594,
+            -3.7241742610931396
+          ],
+          "max": [
+            52.93635940551758,
+            116.63880920410156,
+            2.3117778301239014
+          ],
+          "dimensions": [
+            7.577140808105469,
+            12.883209228515625,
+            6.035952091217041
+          ]
+        }
+      },
+      {
+        "component": 16065,
+        "vertices": 73,
+        "bounds": {
+          "min": [
+            37.397151947021484,
+            86.97573852539062,
+            -3.980297327041626
+          ],
+          "max": [
+            60.705963134765625,
+            111.54000854492188,
+            11.895722389221191
+          ],
+          "dimensions": [
+            23.30881118774414,
+            24.56427001953125,
+            15.876019716262817
+          ]
+        }
+      },
+      {
+        "component": 15886,
+        "vertices": 60,
+        "bounds": {
+          "min": [
+            37.397151947021484,
+            87.01571655273438,
+            -11.184356689453125
+          ],
+          "max": [
+            60.705963134765625,
+            104.86892700195312,
+            4.318580150604248
+          ],
+          "dimensions": [
+            23.30881118774414,
+            17.85321044921875,
+            15.502936840057373
+          ]
+        }
+      }
+    ],
+    "upperAssemblyCoincidentCoordinateContacts": [
+      {
+        "indexComponents": [
+          21,
+          61
+        ],
+        "coincidentWeldVertices": 8
+      },
+      {
+        "indexComponents": [
+          21,
+          180
+        ],
+        "coincidentWeldVertices": 4
+      },
+      {
+        "indexComponents": [
+          21,
+          233
+        ],
+        "coincidentWeldVertices": 2
+      },
+      {
+        "indexComponents": [
+          61,
+          180
+        ],
+        "coincidentWeldVertices": 2
+      },
+      {
+        "indexComponents": [
+          180,
+          233
+        ],
+        "coincidentWeldVertices": 8
+      },
+      {
+        "indexComponents": [
+          180,
+          16065
+        ],
+        "coincidentWeldVertices": 1
+      },
+      {
+        "indexComponents": [
+          233,
+          15886
+        ],
+        "coincidentWeldVertices": 3
+      },
+      {
+        "indexComponents": [
+          233,
+          16065
+        ],
+        "coincidentWeldVertices": 11
+      },
+      {
+        "indexComponents": [
+          15886,
+          16065
+        ],
+        "coincidentWeldVertices": 19
+      }
+    ],
+    "mastFlagAttachmentFinding": "Upper mast/flag candidate pieces are separate index-connected components, but inspected upper pieces share exact world-space coordinates (0m separation) after 1e-4m welding. This supports physical contact; the mesh is not index-welded at every seam, so treat this as coordinate-contact evidence, not a watertight/manifold proof."
+  },
+  "scopeLimit": "No image render, retopo, or delivery acceptance performed. Geometry-derived roof semantics remain ambiguous; both requested roof readings are retained."
+}
