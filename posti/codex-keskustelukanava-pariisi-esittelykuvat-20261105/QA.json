@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-11-05T10:31:49.306755+00:00",
+  "reviewType": "visual-photographic-series-and-major-architecture",
+  "qualityPass": true,
+  "visualReviewCompleted": true,
+  "exactSculpturalDetailsCertified": false,
+  "geometricSurveyAccuracyCertified": false,
+  "images": [
+    {
+      "name": "louvre",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-esittelykuvat-2086-2087-20261105/originals/louvre-otto01.png",
+      "originalSha256": "2ba8a1c281bde82620f4a38793c0492b80fa8f304da127068aa9defe89fa91c6",
+      "jpg": "hero-pariisi-louvre.jpg",
+      "sha256": "eb9b822b42ebf179e9c4513171b0ffdcbeb6560f6162efdd82cf2793c156ed22",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1240142,
+      "jpegQuality": 98,
+      "subsampling": 0,
+      "resized": false,
+      "retouched": false,
+      "generationCalls": 1
+    },
+    {
+      "name": "riemukaari",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-esittelykuvat-2086-2087-20261105/originals/riemukaari-otto02.png",
+      "originalSha256": "796b1e642fcc42339b96254c478f48e4e5a2f62c1e8ae6d09d83d809b85271e4",
+      "jpg": "hero-pariisi-riemukaari.jpg",
+      "sha256": "848fdb222ce201d1d398ae2bfb856a452da048f7f8013629b677bf921f5b904f",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1222047,
+      "jpegQuality": 98,
+      "subsampling": 0,
+      "resized": false,
+      "retouched": false,
+      "generationCalls": 2
+    }
+  ],
+  "referenceFetch": [
+    {
+      "name": "eiffel",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-pariisi-eiffel.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 669060,
+      "sha256": "7ee5ba9f1ef48778d549dac1209804b014fc568608f1ebbafa98a55fcfac3f8b",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-esittelykuvat-2086-2087-20261105/references/hero-pariisi-eiffel.jpg"
+    },
+    {
+      "name": "notre-dame",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-pariisi-notre-dame.jpg",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 700603,
+      "sha256": "4948c2341b33242d79f1251c399aba956903910191790e372950832a3ad056ec",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-esittelykuvat-2086-2087-20261105/references/hero-pariisi-notre-dame.jpg"
+    },
+    {
+      "name": "sacre-coeur",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-pariisi-sacre-coeur.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 697515,
+      "sha256": "f8ee6a7e1cd7ca72292b038c5d8fc76e58ef70f909f61518c4ba7306edbe4ba4",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-esittelykuvat-2086-2087-20261105/references/hero-pariisi-sacre-coeur.jpg"
+    }
+  ],
+  "architectureSources": [
+    {
+      "file": "arc-official.jpg",
+      "url": "https://www.paris-arc-de-triomphe.fr/var/cmn_inter/storage/images/_aliases/header_dropdown_image_mobile/9/7/9/4/120364979-1-fre-FR/60d9975c48c7-Arc-de-triomphe-Jour-800x800.jpg",
+      "sha256": "95094e566f0e143a8420162afcbf9fe6d4489f94e1e5b25e7f0228b02a0517e8",
+      "bytes": 365630
+    },
+    {
+      "file": "louvre-official-overview.jpg",
+      "url": "https://api-www.louvre.fr/sites/default/files/2021-02/vue-de-la-pyramide-du-louvre-1.jpg",
+      "sha256": "9d4073978645f686d2ec4c5bf606aab8958fd9ea4909e436a420f53a707c8205",
+      "bytes": 1197147
+    }
+  ],
+  "louvre": {
+    "completeMainPyramid": true,
+    "palaceWingsVisibleBothSides": true,
+    "elevatedObliqueView": true,
+    "photographicSurfaces": true
+  },
+  "riemukaari": {
+    "wholeMonumentVisible": true,
+    "elevatedFrontalAxis": true,
+    "correctMajorReliefPlacement": true,
+    "photographicSurfaces": true
+  },
+  "common": {
+    "naturalLateAfternoonSeriesMatch": true,
+    "noIdentifiableFacesObserved": true,
+    "noLogosObservedInSelectedImages": true,
+    "noReadableSignageObserved": true
+  },
+  "recipientApproved": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "published": false
+}
