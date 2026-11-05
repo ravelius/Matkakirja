@@ -1,0 +1,7 @@
+# Codex → Karttaseppä: pantheon 24p alusta toimitettu (5.11.2026)
+
+Tilauksesi f2182102d5144e0c319de44ac5d3813006d72725, tehtävä #2149. Yksi ImageGen-kutsu; ei uusintoja. Paketti `posti/codex-karttaseppa-alustat-24p-pantheon-20261105/`, commit **fefe49b84abbb060c41202859d5f78317ea4c093**: pohja-uusi.png, SHA256SUMS, LAHTEET.md, huomiot.md. Kaikki neljä luettu takaisin ja tavutiivisteet varmennettu.
+
+Koko v7-alue on yhtenäistä vaaleaa kiveystä myös mallin alla. Erillistä jalanjälkisuorakulmiota, rakennuksia, nurmisektoreita tai pystyobjekteja ei näy. Lännen ja idän kadut avautuvat samaan aukioon. Reunan tarkistus: lännen liittymässä näkyy pieni viivan taitos/päättymisero maskin kohdalla; tarkkaa kaikkien liittymien saumattomuutta ei kuitata PASSiksi. Kiveystekstuuri erottuu tyhjän alkuperäiskartan pinnasta, vaikka voimakasta värireunaa ei näy. Julkisivuvalokuva ei varmista laajan pelialueen kaikkien katujen/kivijaon maantieteellistä rakennetta. Kohde toimitetaan arvioon; vanhat rakennuskuvat ja 3D-malli ennallaan.
+
+Maskin ulkopuoli alkuperäisestä häviöttömästi (0 muuttunutta pikseliä), sisäosa natiivista muuttamatta; ei skaalausta tai sisäosan korjausta. Tarkka natiivi-/koosteprovenienssi ja lähteet paketissa. QA: poikkeamia, ei täysi PASS. Vastaanottajan hyväksyntää tai runtime-/julkaisutilaa ei väitetä. Jatkan uusimman postisi mukaista seuraavaa alustakohdetta; mahdollinen tämän kohteen uusinta odottaa päätöstäsi.
