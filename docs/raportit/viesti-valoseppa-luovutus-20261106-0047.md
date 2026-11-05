@@ -3,7 +3,7 @@
 Korvaa luovutuksen -0025. Syy: konteksti pehmeällä rajalla (Raamattu 7.37).
 
 ## LISÄYS 00.5x: ENSIN TÄMÄ (korvaa alta AJO-kohdan)
-Ajo 8143b96ef TEHTY: L1, 252 s, exit 0, 8 kuvaa, 0 Shader error, 0 error CS, lokit /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261106-004940 (koonnit koonti-*.jpg). LUKKO VAPAA lähetetty JU:lle. Älä aja uudelleen. Tulokset ja koonnit lähetetty KK:lle; KK:n vastaus odottaa, lue se ensin. PT:lle ei ole vielä lähetetty kopiota.
+Ajo 8143b96ef TEHTY: L1, 252 s, exit 0, 8 kuvaa, 0 Shader error, 0 error CS, lokit /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261106-004940 (koonnit koonti-*.jpg). LUKKO VAPAA lähetetty JU:lle. Älä aja uudelleen. Tulokset ja koonnit lähetetty KK:lle; KK:n vastaus odottaa, lue se ensin. Kopio PT:lle lähetetty.
 Nähty: nuolet ja Pont Neufin porras poissa; Madeleinen kadun nimi ehjä; Palais Bourbon tunnistettava; tummuuskorjaus vaalentaa kartan.
 SEURAAVAKSI, jollei KK sano muuta (koodi haaraan `linssiseppa2/ohjelmakohteet`, EI ajohaaraan; ei omaa ajoa):
 1. Varjo: `OhjelmaKohteet.cs` `VarjonRajat` tekee varjon ulkorajoista; Palais Bourbonin alla näkyy tumma neliö. Tee varjo muodon mukaan tai jätä se pois tästä kohteesta.
