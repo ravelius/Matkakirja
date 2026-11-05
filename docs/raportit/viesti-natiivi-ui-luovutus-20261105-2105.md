@@ -2,6 +2,10 @@
 
 Korvaa -2030:n. Työhaara proto-repossa: natiivi-ui/kyltit-219, kärki 6b6d53a49, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, ei committaamatonta. Peili natiivi-backup, peili/proto/natiivi-ui/kyltit-219. Ei omaa ajoa käynnissä. Ei junaan ennen KK:n sanaa.
 
+## LUE ENSIN: SEIS kuvien poistolle (OMISTAJAN PÄÄTÖS klo 21.04, KK:n välittämä)
+"Kuvat pitää olla kadonneista aarteista" (20.51: "Näitä mini rakennuksia ei saa olla"). Pikkurakennuksen tilalle tulee kuva ja viereen tähtikyltti. Muoto tulee KK:lta kortin jälkeen: älä tee kuvia ennen sitä, äläkä siivoa leikkeiden koodia tai kuvia. Tämä kumoaa alla olevan tavoitteen "pelkkä kyltti" ja "AVOIN VIKA" -kohdan kiireen: kyltin paikka ratkaistaan vasta kuvan muodon kanssa. 6b6d53a49 on haarassa, mutta se ei ole lopputulos; älä vie sitä KK:lle tuloksena äläkä junaan. b0bc70e7b (lennon kohde) tarkistetaan samalla.
+Jatkuu heti: Parvis Notre-Dame -nimi (selvitä, miksi se ei näy aukiolla, nimet etsi; KK: aukiolle tai ei näy). Tulos KK:lle ja rivi PT:lle omana eränään.
+
 ## Ensin: PT:n käsky (omistaja 20.51, KK)
 Viisi kadonneiden pientä rakennuskuvaa pois kartalta, tumma tähtikyltti jää, napautus ja 2.210:n Tuileries-lento kylttiin. Parvis-nimi aukiolle tai ei näy. Tulos täysikoossa katsottuna KK:lle (local_231e4bad), rivi PT:lle. tarkista.sh jäi valovahtiin kesken: mainitse se, älä kirjoita "läpi". "Näitä = kaikki viisi" on KK:n tulkinta, ja KK kertoo sen omistajalle.
 
