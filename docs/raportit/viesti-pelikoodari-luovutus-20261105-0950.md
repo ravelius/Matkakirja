@@ -84,3 +84,6 @@ Myöhempää mittausta varten (KK): luvut ja verkkohavainto ovat kohdissa "klo 1
 Havainnot KK:lle lähetetty: 丽景轩:n puu 2 m edessä ja 2,5 m sivussa (kartan sääntö sallii, kulku vapaa), 绥寿殿:n vieressä mallin oma puuovi, 上书房:lla ohut vaalea piikki maassa (ei tutkittu).
 Työkaluvika, ei korjattu: `ovikuvat.py`:n PUUT lukee taustan puut.json:n (3574 puuta), kun kartta ja peli käyttävät `kielletty-lahipuut-v15`:n listaa (4931). Vain kameran valinta, ei ovien paikat. 房子7:n lähin ovi 房子9 8,5 m; alle 8 m:n parit yhä vain 房子11–房子8.
 Seuraavaksi: KK:n palaute arkista, lista 236. Konteksti yli pehmeän rajan (28 %): luovutus ja nollaus niiden jälkeen.
+
+## Lisäys 5.11. klo 10.47: lista 236 katsottu
+`lokit/tarkastelukuvat-35b16efa9-104305`, 2/2 täysikoossa: 咸福宫 ehjä (lehti ikkunan edessä, harmaat portaat, ei uusi), 耸秀亭 ehjä (maan kiilalaatta ja kivikaista mallista, irto-listaa ei tarkistettu). KK:lle lähetetty, arkki 51/51. Seuraavaksi vain KK:n palaute; sitten luovutus ja nollaus.
