@@ -16,7 +16,44 @@ Lähtötieto: kartan v19 172 rajakohtaa, jotka eivät ole talon pohjalla ja ovat
 - Mitattu kartasta, ei pelistä. Ylhäältä katsottu 12 satunnaista kustakin ensimmäisen luokittelun ryhmästä ja 12 lähimpänä 30 %:n rajaa kummaltakin puolelta. Pelikuvia on vain kujalta (ajo 220320, x1–x4).
 - **Raja on arvio:** 16 aluetta on välillä 20–40 %. Kuisteiksi jäi tiloja, joilta puuttuu koko yksi sivu, esimerkiksi (−275,8; −128,1) 300 m², aukko 24,55 m, ja suuri sali (1,5; 0,9) 2 494 m², aukko 70,8 m. Aukoissa on mukana myös pitkiä katettuja rakoja talojen välissä, esimerkiksi (−1,8; −365,0).
 - 321 talon pohjalla olevaa kohtaa ei tarkistettu, kuten KK rajasi. Ovien lukumäärä kertoo vain 3 m:n säteen: talolla voi olla ovi kauempana.
-- Rajaviesti `35140432d` ei kuulu tähän. Jos vain aukot suljetaan, kuisteilla ja muilla ryhmillä pysähdys jää ilman viestiä, ellei rajaviesti jää niihin: KK ja PT päättävät.
+- Rajaviesti: katso lisäys alla.
+
+## Lisäys 6.11.: tilat, joilta puuttuu koko sivu (KK 00.00)
+
+KK: tila, jolta puuttuu koko sivu, ei ole kuisti. Kaikki 34 kuistialuetta katsottu ylhäältä. **Suljettaviin siirtyy 10 tilaa ja 14 aukkoa, joten yhteensä 51 tilaa ja 76 aukkoa.**
+
+Peruste: suorakulmainen tila, jonka muilla sivuilla on seinä ja yksi sivu auki. Mitattu kartasta, ei pelistä.
+
+| x | z | Suurin aukko m | Aukkoja | Ala m² | Avointa | Ovia 3 m |
+|---:|---:|---:|---:|---:|---:|---:|
+| 1,5 | 0,9 | 70,8 | 5 | 2494 | 31 % | 1 |
+| −275,8 | −128,1 | 24,55 | 1 | 300 | 33 % | 0 |
+| 206,2 | 436,1 | 13,3 | 1 | 102 | 50 % | 0 |
+| 163,8 | 434,8 | 12,8 | 1 | 91 | 51 % | 0 |
+| 204,7 | 517,0 | 14,8 | 1 | 51 | 51 % | 0 |
+| 155,1 | 399,4 | 10,8 | 1 | 48 | 36 % | 0 |
+| −185,9 | 481,2 | 9,05 | 1 | 39 | 33 % | 0 |
+| −247,0 | −173,5 | 5,55 | 1 | 20 | 31 % | 0 |
+| −69,8 | 426,3 | 5,05 | 1 | 13 | 53 % | 0 |
+| −81,1 | 240,4 | 5,3 | 1 | 11 | 41 % | 0 |
+
+**Sali (1,5; 0,9) on eri tapaus:** alueesta 96 % on `pohja.json`:n talon pohjalla, ja sillä on ovi 3 m:n sisällä; muut 9 eivät ole pohjalla. 70,8 m on kulkualueeseen koskevan reunan pituus, ei välttämättä yksi aukko. Siksi 321 talon pohjalla olevan kohdan joukossa voi olla samanlaisia tiloja; niitä ei ole tarkistettu.
+
+**Rajalla, KK ratkaisee:** kapeat katetut kaistaleet, joissa pitkä sivu on auki ja syvyys noin 3 m: voivat olla oikeita kuisteja.
+
+| x | z | Suurin aukko m | Aukkoja | Ala m² | Avointa | Ovia 3 m |
+|---:|---:|---:|---:|---:|---:|---:|
+| −147,7 | 244,3 | 20,3 | 1 | 65 | 51 % | 0 |
+| −186,5 | 497,6 | 17,8 | 1 | 46 | 45 % | 0 |
+
+**Eivät siirry (22 aluetta):**
+- 2 kehää talon ympärillä, (184,2; 454,0) ja (143,5; 432,7): oikeita kuisteja.
+- 1 läpikulku kahden umpinaisen massan välissä, (−139,0; 442,1).
+- 19 vinoreunaista katon alaa ilman seinälinjaa (kiilat, esim. (180,2; −36,3), (279,1; −129,8)): eivät ole tiloja, joten seinästä ei ole apua. Rajaviesti jää niihin. Miksi kate on vino, on selvittämättä.
+
+**Tarkistettava ensimmäisistä 41:stä:** (125,0; 338,8), 336 m², näyttää ylhäältä katon alalta talon ympärillä eikä suljetulta tilalta. LAV: katso malli ennen seinää.
+
+**Rajaviesti (KK 00.00, PT 00.0x):** `35140432d` jää kohtiin, joissa keisari pysähtyy ilman seinää, ei poistoa, ei junaan. Kun seinät tulevat, kartta ja rajat ajetaan uudelleen (`tyokalut/kulkukartta-rajat.py`), joten suljetut aukot putoavat rajoilta itsestään.
 
 ## Aukko (41)
 
