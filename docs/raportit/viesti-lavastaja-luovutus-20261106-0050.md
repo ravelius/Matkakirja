@@ -20,7 +20,7 @@ Pohja: -0020 (git show df9ca99cc:docs/raportit/viesti-lavastaja-luovutus-2026110
 
 ## Avoimet
 1. **Oven leveys (PK:n viesti, ei tarkistettu itse):** 8 kohdan ovet ovat huone-*-mallien omia lehtiä 2,40 × 2,65; uutta ovea ei tarvita. Täyte 1,32 m, lehti 2,40 m: noin 1,0–1,1 m jää lehden taakse ilman täytettä, esim. (−142,2; 420,1): täyte z 420,04–421,36, lehti z 419,02–421,42. Kehon mahtumista ei ole mitattu: jatka täyte oven levyiseksi tai todista.
-2. **Rajaus:** 29 pois (KK PK:n kautta); PT:n "kaikki 41" on tätä vanhempi; PT ei ole kuitannut eroa.
+2. **Rajaus kuitattu (PT 00.5x):** KK:n päätös pätee: 29 aukkoa pois (portit, keskiakseli, Yanxigong), rajaviesti jää niihin. "Kaikki 41" on vanhentunut. Suljetaan 33 + enintään 27 lisäyksistä.
 3. **Friisi puuttuu täytteistä** (a5, 154,5); täyte jatkuu lattiaan jalustan ohi.
 4. **Lisäysten kohdetarkistus tekemättä:** 10 + 8 tilaa, lista viesti-pelikoodari-aukot-20261105.md. Ei saa sulkea kaistaleita (−147,7; 244,3), (−186,5; 497,6). Eivät listalla (−162,9; 337,5), (121,6; 408,3). Katso (−108,1; 396,1), (108,3; 473,1), (−166,0; 431,6), sali (1,5; 0,9), ja PK:n pyynnöstä (125,0; 338,8) ennen seinää.
 5. (325,1; 564,0):n viereen jää kartalla 3,8 m rajaa (325,0; 563,4), katon alaa seinän edessä: PK kartan ajossa.
