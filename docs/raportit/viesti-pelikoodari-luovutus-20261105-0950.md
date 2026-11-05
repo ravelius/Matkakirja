@@ -33,3 +33,13 @@ LAV: 房子26 irto-listalla; 房子11:stä y 0,37 ja 0,35 ovat, y 0,31 ja y 0 ei
 Kaide: sävy a `c1d985643` haarassa `pelikoodari/muurin-runko-219` (ei käännetty); avoimet haaleus ja LOD2 (-0810 kohta 3).
 Sen jälkeen PT:n järjestys: tk-taihemen-lod0:n syy (-0810 kohta 4).
 Tutkimatta: 凝香亭:n mittaus jää odottamaan pitkissä listoissa (`TarkasteluKesken`), 延禧宫 kivirakennus (kerro KK:lle), 房子11:n maalaatan reuna.
+
+## Lisäys 5.11. klo 10.13
+Runko `430edc9d1`, kartta v17 (`Resources/JuoksuOvet.json` = v17; vain 益寿斋 siirtyi). Lista 233 JU:lla (korvaa 232:n, jos ei alkanut); kansio tulee riviksi.
+Katsottu: 230 ja 231 täysikoossa (runko `5d9b1552d`). 西暖殿 ehjä. 益寿斋 v16: täyte kelpaa, mutta oma kivijalan pylväs (z 385,0–385,3, 0,25 m) oli aukon edessä ja oikea lehti meni sen läpi. Mallissa on oma keskiovi portaineen z 382,44–385,12; lehdet eivät ole pinnoissa, eikä kivijalka näy niissä, joten kone ei löytänyt sitä.
+Korjaus `22933732f`: 益寿斋 käsin omille portaille (`oma-ovi`, x −134,36, z 383,78, täyte 3,6 × 3,45, tsy 0,2). Malli on tällä sivulla huone-tyohuone, ei varasto.glb. Ei valoa yhä.
+Korjaus `430edc9d1`: 四执库:n piikki oli lehden kulma jalustan reunan yli: lehden paksuus 0,117 puuttui. Marginaali 0,25 → 0,35 ja alaraja 15° → 11°. Vaikuttaa 105 oveen, joilla syv ≤ 1. Lista 233 katsoo 四执库, 重华宫, 储秀宫, 东长房, 体元殿, 益寿斋 × 2.
+Hypoteesi: 重华宫:n kiila on lehti jalustan päälle ulottuvan laatan alla (ei mitattu); katso, katoaako 233:ssa.
+皇极殿: `viat` ikkuna on vain mittari: ikkuna on oven vieressä, ei edessä; kuva ehjä, ei korjausta. Kuvassa (`380664d56`) koristenauha repeytyy oikealla ylhäällä: malli, ei ovi, kerro KK:lle arkin mukana.
+浴德殿: vaalea kaista on täytteen ylävasen kulma; ei korjattu, kerro arkin mukana. Samassa kuvassa lattialaatan vino reuna: ei ovi.
+Seuraavaksi: katso 233; jos ehjä, aja kaikki ovet samalta rungolta arkkia varten (lista JU:lle), arkki KK:lle (kohta 5).
