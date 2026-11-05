@@ -1,0 +1,328 @@
+{
+  "taskNumber": 2094,
+  "site": "montparnasse",
+  "completedAt": "2026-11-05T16:27:24.286693+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohja-uusi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10; explicit bboxOverrides if stated. Manual main cornice and tower-top datum on native QA strips, uncertainty4px. Ratios measured to highest tower slab, without antennas. No normalization of production images.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        631,
+        97,
+        905,
+        939
+      ],
+      "widthPx": 274,
+      "totalHeightPx": 842,
+      "groundY": 938,
+      "corniceY": 122,
+      "corniceHeightPx": 816,
+      "roofY": 97,
+      "roofHeightPx": 841,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.3258026159334126,
+      "targetRatio": 0.29523809523809524,
+      "ratioErrorPercent": 10.352498945188128,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 210
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        631,
+        97,
+        905,
+        939
+      ],
+      "widthPx": 274,
+      "totalHeightPx": 842,
+      "groundY": 938,
+      "corniceY": 122,
+      "corniceHeightPx": 816,
+      "roofY": 97,
+      "roofHeightPx": 841,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.3258026159334126,
+      "targetRatio": 0.29523809523809524,
+      "ratioErrorPercent": 10.352498945188128,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 210
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        675,
+        99,
+        862,
+        940
+      ],
+      "widthPx": 187,
+      "totalHeightPx": 841,
+      "groundY": 939,
+      "corniceY": 125,
+      "corniceHeightPx": 814,
+      "roofY": 99,
+      "roofHeightPx": 840,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.2226190476190476,
+      "targetRatio": 0.18571428571428572,
+      "ratioErrorPercent": 19.87179487179487,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 210
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        680,
+        98,
+        856,
+        939
+      ],
+      "widthPx": 176,
+      "totalHeightPx": 841,
+      "groundY": 938,
+      "corniceY": 122,
+      "corniceHeightPx": 816,
+      "roofY": 98,
+      "roofHeightPx": 840,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.20952380952380953,
+      "targetRatio": 0.18571428571428572,
+      "ratioErrorPercent": 12.82051282051282,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 210
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 0.0,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 6.0606060606060606,
+      "pass5Percent": false
+    }
+  ],
+  "corniceSpreadPercentOfMean": 0.2452483139178418,
+  "corniceAgreement5Percent": true,
+  "baselinePixelSpread": 1,
+  "obliques": {
+    "southwest": {
+      "roofEdgePoints": [
+        [
+          642,
+          236
+        ],
+        [
+          814,
+          68
+        ],
+        [
+          915,
+          133
+        ]
+      ],
+      "measurementMethod": "Approximate slopes of straight middle sections of rounded observation-deck edges, extrapolated to common corner; not calibrated ground measurement. Rounded corners/convex facades increase uncertainty.",
+      "uncertaintyDegreesApprox": 8,
+      "targetElevation": 65,
+      "estimatedSinElevation": 0.7928415626689104,
+      "estimatedElevationDegrees": 52.45185855345535,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    },
+    "northeast": {
+      "roofEdgePoints": [
+        [
+          700,
+          65
+        ],
+        [
+          885,
+          229
+        ],
+        [
+          794,
+          301
+        ]
+      ],
+      "measurementMethod": "Approximate inner roof-deck straight-edge slopes; rounded facade means this is a diagnostic proxy only. Absolute 180degree camera correspondence not independently verified.",
+      "uncertaintyDegreesApprox": 8,
+      "targetElevation": 65,
+      "estimatedSinElevation": 0.8374938217061075,
+      "estimatedElevationDegrees": 56.876411983108774,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      668,
+      408,
+      868,
+      616
+    ],
+    "actualBBox": [
+      672,
+      401,
+      861,
+      609
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": true
+  },
+  "ground": {
+    "footprintPixels": 19900,
+    "grassLikePixels": 898,
+    "grassLikeFraction": 0.04512562814070352,
+    "coverageMetric": "Heuristic grass-color test only; not semantic proof of paving",
+    "metresPerPixelApprox": 0.9936228822650996,
+    "pathSamples": [
+      {
+        "axis": "x",
+        "position": 375,
+        "start": 853,
+        "end": 862,
+        "widthPx": 10,
+        "widthMetresApprox": 9.936228822650996,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 925,
+        "start": 531,
+        "end": 539,
+        "widthPx": 9,
+        "widthMetresApprox": 8.942605940385898,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 665,
+        "start": 576,
+        "end": 585,
+        "widthPx": 10,
+        "widthMetresApprox": 9.936228822650996,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      }
+    ],
+    "pavingFullFootprintPass": false,
+    "sourceParkLayoutPreserved": true,
+    "outsidePixelIdentityVerified": false,
+    "receiverMustCompositeMaskOnly": true
+  },
+  "visualIssues": [
+    "Real width/height ratios too wide despite near matching heights",
+    "East/west opposite-width difference exceeds5percent",
+    "Rounded oblique roof proxy does not verify65degree camera or exact180degree counterpart",
+    "Top footprint registration differs slightly; ground footprint coverage checked separately"
+  ],
+  "notes": "Tunnistettava tumma, pyöristetty ja kapeapäätyinen torni sekä yksinkertaistettu helikopterikansi säilyvät. Pienet antennit ja kattoasennukset sekä viereinen ostoskeskus on jätetty pois tilauksen mukaan. Sivut ovat suorassa ortografiassa ilman näkyvää kattotasoa. Julkisivun tiheä kerrosjako on tyylitelty; kaikkien 59 kerroksen lukumäärää ei väitetä varmennetuksi. Etelä/pohjoinen ovat lähes identtiset; itä/länsi eroavat leveydeltään ja pilariasettelultaan. Kuvia ei ole skaalattu eikä normalisoitu. Viistojen pyöristetty pohja ja katon reunat estävät tarkan 65asteen kalibroinnin; roof-edge-proxy on vain varoitus, ei tarkka kameramittaus. Yläkuvan katon pienet ulkonemat sekä maapohjan muutaman pikselin siirtymä suhteessa maskiin tarkistetaan erillisellä maskiluvulla. Pohjassa ei ole pystyrakenteita; polkunäytteet akselisuunnassa voivat yliarvioida vinoa polkua. Natiivien8kutsun erä toimitetaan diagnostisena, ei käyttöhyväksyntänä.",
+  "noAutomaticRetry": true
+}
