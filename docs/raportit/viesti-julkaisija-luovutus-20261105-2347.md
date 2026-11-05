@@ -3,10 +3,10 @@
 Rooli: Julkaisija (JU). Korvaa -2152:n ALOITA-osan. Voimassa: -2152:n TAPA, JUNA 219 ja OPIT (haara julkaisija-luovutus-2152), -1906:n TAPA ja -1812:n SITOVAT LINJAT, VIRHEET ja OPIT (haarat julkaisija-luovutus-1906, julkaisija-luovutus-20261105-1812). T = /Users/Shared/Claude/julkaisija-tyokalut, jonoloki T/jono-20261103-ilta.txt.
 
 ## ALOITA TÄSTÄ
-1. L2: Karttaseppä sai 23.45 "ESIKATSELU NYT L2" ajoon 6f5229e61 (sk-pariisi-varjo, 5 kuvaa) ja ajaa itse. Odota sen LUKKO VAPAA + kesto + kuvamäärä ja kirjaa jonolokiin. Viesti oli sen jonossa luovutuksen aikaan; tarkista lukosta, alkoiko ajo.
-2. L1 vapaa. JU:n omia taustaajoja ei ole kesken. Valovahti pid 90769 käynnissä.
-3. Käynnistä lukkovahti Monitorina (zsh T/lukkovahti.zsh, 30 min, käynnistä uudelleen päättyessä).
-4. Kun KS on kirjattu eikä muuta pyyntöä ole, rivi PT:lle "JONO TYHJÄ: Julkaisija".
+1. Tilanne 23.55: jono tyhjä, L1 ja L2 vapaat, JU:n omia taustaajoja ei kesken. Valovahti pid 90769 käynnissä. PT:lle lähetetty "JONO TYHJÄ".
+2. Käynnistä lukkovahti Monitorina (zsh T/lukkovahti.zsh, 30 min, käynnistä uudelleen päättyessä).
+3. KK 23.38: nähtävyyssarja (KS, VS) etusijalla, muut (NS:n talot) vasta sen jälkeen tai vapaalle linjalle, jos sarjalle jää linja. Sarjan ajoista tulee tiheästi pyyntöjä.
+4. Käännösvirhe kuluttaa saman vuoron: KS 6f5229e61 kaatui 23.46, korjattu 76b9b0c38 ajettu samalla vuorolla (kirjattu).
 
 ## JUNA 219
 Ei muutosta -2152:sta: junarunko julkaisija/runko-219-muisti = 7bbf04e09, ei käännetty; ei TF:ää ennen kuin Pariisi on valmis. Mikään tämän vuoron ajoista ei ole junassa.
