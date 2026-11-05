@@ -2,7 +2,13 @@
 
 Korvaa -2202:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Cron "4 9 * * *" unity-julkaisut.py uudelleen (7.41).
 
-## SEURAAVA TYÖ: Marais'n koe (PT:n osa B, "aloita heti"; omistaja 22.09 "Myös tavalliset talot")
+## SEURAAVA TYÖ: odota JU:n Marais-ajoa (päivitetty 22.3x, konteksti 32 %)
+KOODI VALMIS: natiiviseppa/marais-talot 1a03b85fc, työpuu wt/proto-natiiviseppa-marais, peili peili/proto/natiiviseppa/marais-talot, ei junassa. TaloKerros.cs, TaloAlue.cs, Resources/TaloKerros.shader, Resources/MaraisKoe/talot.bytes; ElavaTyyli jättää alueen talot pois z16-paloilta (polkuun -talot1); komento talot 0|1. Rakentaja _tyo/natiiviseppa/marais/tee-talot.py <kansio> <ulos>; mittarit.json samassa.
+MITTARIT: 1667 taloa, 177 002 kärkeä, 92 547 kolmiota, 5,1 Mt/km²; koko Pariisi noin 550 Mt, jos kaikki olisi ladattu kerralla (179 000 taloa; laskelma, ei laiteajoa; iso iPad 3781 Mt, raja 4080). Osa C lataisi paloina vain lähellä. Korkeudet: IGN 1645, levels 8, oletus 14.
+AJO PYYDETTY JU:lta 22.3x: sk-marais.txt, 6 kuvaa (m1 kauko, m2–m5 keski neljä suuntaa, m6 lähi), JU ajaa ja kertoo lokikansion. Sarjan ajot ensin.
+KUN LOKI TULEE: tarkista unity.log "MATKAKIRJA talot: luotu", varjostinvirheet (varjostin ei ole vielä kääntynyt kertaakaan), pistekerroin 0.465. Katso kuvat täysikokoisina. Mittarit: talot eivät katkea tien alla; kartan talot eivät näy alta (m6); kadut ja nimet näkyvät; reuna näkyy kokeessa ja kerrotaan (ratkaisu osa C). Lelumainen tai kadut peittävä → PYSÄHDY, tyyli ensin, ei koko Pariisia. Tulos: 6 kuvaa + muistilaskelma KK:lle, rivi PT:lle. Jos 45° ei vastaa iPadia, `maasto siirtyma` -komennot ovat haarassa (Komennot.cs:890), ja 08a0ec8ea ei ole mukana. Ei maavarjoja, usva yhdestä ankkurista: mainitse, jos näkyy.
+
+## Marais'n tausta
 Suunnitelma: Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261105-pariisi-rakennukset-ohjelmalla.md (osa B), Raamattu 2.213.
 Yksi km² ohjelman tekemiä taloja, omaan haaraan, ei junaan. Kartan omat talot eivät näy alta; muisti lasketaan km²:ltä ilman laiteajoa. Mac-kuva kolmelta etäisyydeltä, 45° ja neljä suuntaa → KK, rivi PT:lle. Lelumainen tai kadut peittävä: PYSÄHDY, tyyli ensin, ei koko Pariisia. ODbL: kirjaa huomio (tarkistettava ennen julkaisua).
 
