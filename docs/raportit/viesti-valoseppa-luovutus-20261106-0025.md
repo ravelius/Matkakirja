@@ -1,5 +1,8 @@
 # Valosepän luovutus 6.11.2026 klo 00.25
 
+## LISÄYS 00.4x (PT): KUVAUSKOMENTO
+Kärki nyt 0f380637f: komento `maasto siirtyma kallistus` poimittu 08a0ec8ea:sta (vain Komennot.cs ja LiikeLaatatPaatos.cs), oma commit, EI AJETTU eikä käännetty; ei omaa ajoa, tulee seuraavaan ajoon. Skenaariot sk-madeleine, sk-liike, sk-sillat, sk-korjaukset ja sk-ohjelmakohteet käyttävät komentoa, mutta se puuttui haarasta: kaikki tähänastiset kuvat, myös e7c639217, otettu kallistettuna Macin tasoilla, ei laitteen. Seuraavaa ajoa käytettäessä `aja` sha 0f380637f tai uudempi. Rivi PT:lle lähetetty.
+
 ## LISÄYS 00.3x: ENSIN TÄMÄ (korvaa alta TILAN ajotiedon ja SEURAAVAKSI-kohdat 1–3)
 Ajo e7c639217 TEHTY: 226 s, exit 0, lokit/esikatselu-20261106-002433, LUKKO VAPAA ilmoitettu JU:lle. Kuvat katsottu; viat ja kuvapolut lähetetty KK:lle, kopio PT:lle. Älä aja tätä sha:ta uudelleen.
 Todistettu: Unity kääntää; bdc211ab8 toimii (Ohjelmakohteet ≤ 17 ms ruudussa, ennen 59–63); Pont Neuf -nimi kokonaan; pystyseinä poissa; Madeleine paikallaan, 23 verkkoa, 88 334 kolmiota.
