@@ -33,3 +33,7 @@ Ovimallin muisti iPadilla mittaamatta (PT 18.2x): raja 4080.
 
 ## Scratchpadit
 Vanhat poistettu, kopio `T7 4TB/Claude-arkisto/pelikoodari-scratchpad-20261105`; PT:lle rivi lähetetty.
+
+## LISÄYS 08.15: kuvat katsottu, KK:lle lähetetty, sävy committina
+Kohta 1 tehty: `lokit/tarkastelukuvat-8cdda6041-080843`; 重华宫 ja 浴德殿 täysikoossa, muut arkeista `_tyo/pelikoodari/tayte/8cd/arkki-8cd-{1,2,3}.png`, rajaukset `8cd/raja-{c,y}.png`. 重华宫:n pätkät poissa. **浴德殿 ei korjattu:** täyte yhä seinää vaaleampi, teräväreunainen laatta, syy auki. KK:lle lähetetty 08.1x (jonossa, ei vahvistusta luetuksi): arkit, muutokset, täyte, viat ja ovettomat syineen. 1341826243:lle ei ole syytä `tulos.json`:ssa. Odota KK:n vastausta ennen täytteen jatkoa.
+Kohta 3: sävy a committina c1d985643 haarassa `pelikoodari/muurin-runko-219`; QA-kytkin jäi, oletus on a. Ei käännetty tällä haaralla, ei junassa. Worktree palautettu `pelikoodari/tarkastelu-219`:ään. LOD2 ja haaleus yhä avoimia.
