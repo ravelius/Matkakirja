@@ -19,6 +19,7 @@ KK:n 14.0x-tehtävän kohdat 1–4 tehty ja raportoitu KK:lle 14.27, kopio PT:ll
 lokit/natiiviseppa-kierto4-c0217caf9: s01–s44, loppu, kuvaväli noin 1,4 s. Arkit _tyo/natiiviseppa/aloituslento/kierto4-arkit/. Skenaario _tyo/natiiviseppa/aloituslento/skenaario-kierto4.txt. Katsottu: kaikki arkeilta; täysikoossa rajaukset s24 (oikea ala) ja s26 (keskusta), ei saumaa; muita ei täysikoossa. Liikkeen tuntumaa ei voi arvioida pysäytyskuvista.
 
 ## Ensimmäinen työ: viat kuvissa (KK:lle kerrottu "korjaan 1:n seuraavaksi, ellet sano muuta"; lue KK:n vastaus ensin)
+PT 14.3x: "piirros puuttuu 3–11 s ja nimet pois 38–58 s: selvitä kumpikin ja korjaa, jos ne eivät ole vain Mac-ajon vikoja. Tulokset 2.214:n reittiä."
 1. **Piirros puuttuu s03–s09 (3–11 s):** vain nimet tasaisella pohjalla, terävä vasta s10 (12 s). Edellisen ajon k00 samanlainen. Hypoteesi, ei varmistettu: ElavaEsilataus.Lahinakyma kattaa vain loppurajauksen (PeliOhjain.Esilataus.cs:103), kierron keskipiste ja 6,6 km on sen ulkopuolella. Lisäksi kuvaus tekee 0,8 s:n ruutuja, joten Macin aika voi olla pidempi kuin laitteella. Selvitä lokista, mikä piirrostaso ja milloin saapui; toista vika ennen korjausta (9.7). Ei muistilukuja (2.207, 2.209).
 2. **Nimet katoavat s28:ssa (38 s), kun kierto pysähtyy, ja palautuvat s43:ssa (noin luennan lopussa) eri joukkona.** Vertailu natiiviseppa-aloituslento-b2-99035b765/k66-t00-s000: levossa nimet näkyvät, sama joukko kuin s43. Vain "Col de la Chapelle" pysyy. Syy auki, Nimikerroksesta ei löytynyt luentasääntöä; epäilty on nimien vaihto ajon ja levon välillä tai ui lentopiilo. Tarkista myös ilman lentopiiloa.
 3. Päällekkäiset nimet (Grand Palais / Place de la Concorde, Temple / Musée): -1408:n "kartan nimet".
@@ -28,7 +29,7 @@ Kamera palaa Ranskan näkymään pelaajan polullakin, ensimmäisellä saapumisel
 HiljaisuudenEste ei katso kiertoa: jos luento ei soi (kertoja pois), kohtaus voi katkaista kierron. Ei korjattu, elävä kartta on seis ilman sanaa.
 
 ## Avoinna
-- LAITTEELLA: SiirtymaEste kytkee saumakorjauksen pois kierron aikana, päätös PT:llä (pyydetty uudelleen 14.27). Ei Macin kuvia todisteeksi laitteesta.
+- LAITTEELLA, PT:N PÄÄTÖS 14.3x: "kallistus pysyy 30°:ssa, eikä kiertoa lasketa alle 20°:n nyt. Laitteen saumat ja muistiraja ratkaistaan Pariisin loppumittauksessa (2.207): siellä kokeillaan koekytkimet (siirtymä kamera-ajossa, raja 90). Jos ne eivät mahdu, varatapa on alle 20°. Siihen asti kytkimet pysyvät vain koehaarassa." KK:lle kerrottu: pienellä iPadilla kierrossa voi näkyä sauma. Ei Macin kuvia todisteeksi laitteesta.
 - Esilataus kierron alueelta: kohta 1. Saapumisesityksen Ohita ja sormi trailerin peitteen läpi: NUI. Nähtävyydet rakennuksina: kuten -1348. Louvren pyramidi: työlista.
 - JU:n viestien "T/ns-kierto4.log" ja "T/ns-kierto5.log" eivät löytyneet haussa; ajo silti valmistui ja 45 kuvaa on tallella.
 
