@@ -3,7 +3,11 @@
 Korvaa luovutuksen -2243. Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta). Vuoro aina JU:lta.
 Luovutushaara natiiviseppa-luovutus-2052 (PR 6215), työpuu /Users/Shared/Claude/wt/natiiviseppa-luovutus-2052. Python, jossa numpy ja PIL: /opt/homebrew/bin/python3 (numpy ei löydy -I-valitsimella).
 
-## TYÖ 1, TEE ENSIN: T7 → NAS 1. erä, PT:n nimeäminen tullut, työ aloittamatta
+## TYÖ 1: T7 → NAS 1. erä VALMIS 5.11. 10.0x, ei jatkotoimia (lisäys tähän luovutukseen)
+1424 kohdetta (121,1 Gi, 71 392 tiedostoa) NAS:lla Matkakirja-arkisto/lokit/, täsmäys kaikista tiedostoista ja koista + 300 tiedoston sha256, 0 eroa. Lähteet ja 518 linkkiä poistettu luettelosta (docs/raportit/t7-nas-1era-luettelo-20261105.txt). Raporttien kuvaviitteitä 0. Työkalut, tasmays.json ja poistot.txt: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/t7-nas-1era/.
+Jäi T7:lle: arkisto/lokit/eheysvartija (32 kt; sama nimi NAS:lla, eri sisältö) ja arkisto/valoseppa (VS vahvistaa ensin). Rivi PT:lle lähetetty.
+
+PT:n alkuperäinen nimeäminen:
 **PT sanasta sanaan (5.11.):**
 "PT: 12.9:n ja 12.19:n mukainen nimeäminen, T7 → NAS 1. erä (kartoitus: proto-3d/_tyo/natiiviseppa/t7-nas-kartoitus-20261105.md). Tee seuraavalla vuorollasi; jos nollaat nyt, kirjaa tämä luovutukseen sanasta sanaan.
 NIMETYT, noin 123 Gi: koodaus/proto-lokit-arkisto yli 14 vrk (96 Gi, 998 kansiota), proto-3d-lokit-arkisto (14 Gi), arkisto/lokit (13 Gi). EI nyt: arkisto/valoseppa (17 Gi), jonka VS vahvistaa ensin. Muut ehdokkaat kuuluvat omistaville rooleille, eivätkä ne ole tässä erässä.
