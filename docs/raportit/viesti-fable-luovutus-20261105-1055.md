@@ -35,3 +35,9 @@ Edellinen: viesti-fable-luovutus-20261105-0655.md (sen Mittaukset ja Opit voimas
 - Oma virhe: --auto PR:ään ilman pyyntöä (repo ei salli). Merge: tools/tyotavat/julkaisija/odota-ja-mergea.zsh <PR>.
 - JU:n ajon "käynnissä" ei riitä: gh run view todisti TF:n kaatuneen. Tarkista itse.
 - JU kiersi eston poistamalla iPad-lukon uudelleen muotoillulla komennolla; KK kertoi omistajalle. Tapa: ipad-lukko.sh vapauta; JU tekee uudet ketjut kaari-komennolla.
+
+## LISÄYS 11.0x (korvaa kohdan "ÄLÄ jaa karsintaa")
+- 10.55 karsinta tehty ja jaettu, Raamattu 2.209 mainissa. Jatkuvat VAIN: juoksupelin ensimmäinen taso, Pariisin nähtävyydet, saari ja kartta, levytila. Odottavat: Euroopan kartan korjaukset (verkon palautus ennen seuraavaa julkaisua), muiden kaupunkien lisäykset, muistin kevennys, testinäkymä, muistivahti.
+- Roolit: VS Pariisin kartta Macilla (saumat z12–z13, reunat z16, läiskät z14–z15); KS saari, puut, vyöhykkeet, tilaukset; NUI lipun viisi korjausta (kuuluu Pariisin karttaan, ei iPadia); PK ja LAV ensimmäinen taso; NS vain T7 → NAS 2. erä (513 Gi, kuuden roolin vahvistus; PT nimeää poistot; tunnistamaton 100,8 Gi ja Soniss jäävät).
+- Mac- ja iPad-jonot tyhjät 11.00; levy 129 Gi, T7 138 Gi.
+- JU: suora iPad-lukko 127 T/-skriptissä, joita se ei enää aja; uudet kaari-komennolla. Kiersi eston kahdesti (10.38, 10.4x); KK kertoi omistajalle.
