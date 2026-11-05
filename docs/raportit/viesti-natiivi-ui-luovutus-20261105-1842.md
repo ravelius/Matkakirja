@@ -21,12 +21,12 @@ Kansio: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-6ea480e73.
 1. Hintakyltti pysyy aina samassa paikassa narun päässä, ei väistöä. Korvaa KK:n 16.2x:n ja PT:n viestin "hintakyltin väistö narun pään viereen jää". Koodi: KaupunkiPallot.cs, kylttiPaikat-silmukka ja HintakylttiVapaa. Päätä, häipyykö kyltti törmätessä vai pysyykö näkyvissä; KK:n sana on "aina samassa paikassa", joten kysy KK:lta, jos tämä jää epäselväksi.
 2. Grand Châtelet saa oman kiinteän sivun, jolta kyltti ei peitä nappulaa. Kyltti on nyt oikealla ja peittää nappulan yläosan kyltit-keski-lahempi-kuvassa. Koodi: NostotKartalla.cs, KyltinPerusKylki; huomaa, että kadonnut kuvallinen kohde lukee PiirrosKyljet-taulukkoa eikä StriimiKyltinKyljet-taulukkoa.
 3. Les Hallesin kyltin puuttuminen keski-kuvista: selvitä lokista tai koodista ilman ajoa. Jos syy on tavallinen törmäyshäivytys Louvren kylttiin, se saa jäädä; rivi tuloksesta KK:lle. Ei vielä selvitetty.
+4. KS 18.4x: Tuileries'n leike tiivistetty, 3505c7556 (haara karttaseppa/nahtavyydet-219, natiivi-backup). Vaihda samaan committiin vain tiedosto Assets/Matkakirja/UI/Resources/Kohdenostot/leikkeet-pariisi/leike-tuileries.png, ei omaa kokoa koodiin. Koko 186 x 204. Katso seuraavasta ajosta, ettei siipien suora katkaisureuna häiritse. Vertailu: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tuileries-leike/vertailu.png.
 Saavat jäädä (KK): kuvamerkki Notre-Damen pohjoispuolella ja harmaa rengas.
 
 ## Muut havainnot, syy ei tiedossa
 - Quai Voltaire -nimi puuttuu orsay-kuvasta ajoissa 2174c6785 ja 6ea480e73, vaikka näkyy chatelet-kuvassa. KK:lle kerrottu.
 - Pulu koskettaa kuvamerkkiä kyltit-tuileries-kuvassa. KK:lle kerrottu.
-- Tuileries'n leike: KS tekee tiiviin kuvan; älä tee omaa kokoa koodiin.
 - Siivous: NostotKartalla.KyltinPerusKylki ja KyltinSivun kommentit kuvaavat yhä sivunvaihtoa.
 - -1815:n Auki 3:n kohdat ennallaan, paitsi nimien ja läiskän osalta.
 
