@@ -1,5 +1,13 @@
 # Valosepän luovutus 5.11.2026 klo 22.15
 
+## LISÄYS 22.25: TÄMÄ KORVAA KOHDAT "SEURAAVAKSI" 1–4
+Ajo a48428884 tehty (L2, 305 s, lokit/esikatselu-20261105-221905, LUKKO VAPAA ilmoitettu). Paikallaan olevat kuvat on katsottu ja viety KK:lle ja riviksi PT:lle: kuvat/2213-a48428884/. Mustat katkot ja katkoviiva ovat poissa, joten koodia ei tarvitse muuttaa tämän takia. Pieniä vikoja on kerrottu KK:lle.
+LIIKE YHÄ NÄKEMÄTTÄ: `kierra 20 2` ei liikuttanut kameraa lähietäisyydellä (kamera.txt yksi paikka, ruudut samat, vaikka komento näkyy lokissa). Syytä ei selvitetty; 0.012:ssa `kierra 40 1` liikutti (ajo f2c1e8017), joten mahdollisesti KameraEleet.Paata hylkää hitaan kierron. Skripti on nyt: `aja` noin 170 m, 1,6 s, sitten `kierra 40 1`. JU:lta on pyydetty vuoro 22.25, sha sama a48428884.
+Seuraavaksi:
+1. Vuorolla aja: sama komento kuin alla, sha a48428884. LUKKO VAPAA heti.
+2. Tarkista, että kamera.txt:n paikka muuttuu. Rajaa kohde peräkkäisistä ruuduista (`liike`) ja katso. Älä sano valmiiksi ilman nähtyä liikettä, ja kerro KK:lle ja PT:lle, jos taas epäonnistuu. Jos välkkyy, korjaa samalla tavalla kuin kansien raot.
+3. Tulos KK:lle: välkkyykö. Sitten osa A (kohta 5 alla).
+
 Korvaa luovutuksen -2203. OMISTAJAN PÄÄTÖS 21.49 ja KK:n tavoite ovat -2155:ssä (git show e8785dc8c:docs/raportit/viesti-valoseppa-luovutus-20261105-2155.md). Syy nollaukseen: konteksti 28 %, uusi iso työ alkamassa.
 
 ## TILA
