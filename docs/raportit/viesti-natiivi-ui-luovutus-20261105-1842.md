@@ -12,7 +12,7 @@ Kansio: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-6ea480e73.
 - 4daf2c152 3D-kyltti: kiinteä sivu, häipyy kun oma paikka on varattu tai ruudun ulkopuolella (MalliKyltit). Lisäksi kysely `ui kohdassa x y` (0-1, origo vasen ylä): UI-elementit ja 3D-piirtäjät lokiin; DrawMesh-piirto ei näy listassa.
 - 2174c6785 nimen väistö pyöreän merkin kohdalta pois (KK lopullinen). PT: "Älä peru tätä ilman KK:n uutta sanaa."
 - 086f0ca91 ja 344b2dd82 kaupungin oma piste ei piirry sen kohdekartalla (KaupunkiMerkit.LahikartanKaupunki = Kohdenostot.Kaupunki). Yleinen sääntö, koskee kaikkia kohdekartan kaupunkeja. Piilossa oleva piste ei ota napautusta (näkyvä nimi ottaa) eikä vie nimiltä paikkaa. Valittava, korostettu ja renkaallinen piste jää. Läiskä oli tämä piste; kuvassa poissa.
-- 6ea480e73 Les Hallesin kyltti kiinteästi pisteen oikealla (StriimiKyltinKyljet); ei koske Louvren kylttiä.
+- 6ea480e73 Les Hallesin kyltti kiinteästi pisteen oikealla (StriimiKyltinKyljet). Chatelet-kuvassa väli Louvren kylttiin on selvä, mutta tuileries-kuvassa kyltit ovat lähes kulmittain, väli muutama piste: Louvren kyltti liikkuu mallin mukana. KK:lle kerrottu; suositus: katsotaan ensin, riittääkö väli.
 - PT hyväksyi hintakyltin ja 3D-kyltin ratkaisut: hintakyltti väistää yhä nimiöitä, kylttejä ja malleja narun pään viereen (KK 16.2x), pyöreä merkki ei siirrä sitä.
 - Kylttien pysyvyys: kyltit-keski ja kyltit-keski-lahempi, nähtävyyskyltit samalla puolella kahdella zoomtasolla. Liikkeen aikana ei todistettu.
 - Ohjelma: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-pariisi-kyltit-5.txt (6 kuvaa, 2 kyselyä). Rengaskyselyn voi poistaa.
@@ -25,8 +25,8 @@ Kansio: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-6ea480e73.
 ## Muut havainnot, syy ei tiedossa
 - Kuvamerkki Notre-Damen pohjoispuolella puiden välissä näkyy ajossa 6ea480e73 ja 6ff3ef451, ei ajossa 2174c6785. KK:lle kerrottu.
 - Pieni harmaa rengas (chatelet 1305,475 / 2000x1500; myös tuileries ja orsay Louvren länsipäässä): kysely löysi vain Louvren pohjan rajauslaatikon, joten todennäköisesti osa karttakuvaa, ei varmistettu.
-- Quai Voltaire -nimi puuttui orsay-kuvasta ajossa 2174c6785; ei tarkistettu ajossa 6ea480e73.
-- Kuvia kyltit-tuileries, kyltit-louvre-viisto ja kyltit-orsay ei avattu ajosta 6ea480e73; ne katsottiin ajosta 2174c6785. KK:lle ilmoitetut kolme kuvaa ovat chatelet, keski ja keski-lahempi. Avaa loput ennen kuin sanot niistä mitään.
+- Quai Voltaire -nimi puuttuu orsay-kuvasta ajoissa 2174c6785 ja 6ea480e73, vaikka näkyy chatelet-kuvassa. KK:lle kerrottu.
+- Pulu koskettaa kuvamerkkiä kyltit-tuileries-kuvassa. KK:lle kerrottu.
 - Tuileries'n leike: KS tekee tiiviin kuvan; älä tee omaa kokoa koodiin.
 - Siivous: NostotKartalla.KyltinPerusKylki ja KyltinSivun kommentit kuvaavat yhä sivunvaihtoa.
 - -1815:n Auki 3:n kohdat ennallaan, paitsi nimien ja läiskän osalta.
