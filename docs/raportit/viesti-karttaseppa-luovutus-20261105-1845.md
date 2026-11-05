@@ -6,7 +6,7 @@ Syy: konteksti 25 % (7.37), tauko omistajan sanan ja Tripon odotuksessa. **Lue t
 2. Tarkista viestit molemmista kanavista: **KK:n sana kolmesta arkista** ja **PT:n sana PR 6301:n mergestä**. Molemmat lähetetty 18.3x–18.4x, kumpikaan ei ollut vielä vastannut.
 
 ## PR 6301: vihreä, PT:llä
-SHA 63b61c06a, CI testit ja reitti SUCCESS, CLEAN. Rivi PT:lle lähetetty 18.3x. Sisältää 6297:n commitin (3731d10e3). Merge vain PT:n sanalla; sen jälkeen worktree pois: `tools/uusi-worktree.sh --poista karttaseppa-overpass-pois`.
+SHA 63b61c06a, CI testit ja reitti SUCCESS, CLEAN. Rivi PT:lle lähetetty 18.3x. Sisältää 6297:n commitin (3731d10e3). **VALMIS: PT yhdisti 6301:n ja sulki 6297:n, kierros 2.183 kuitattu.** Worktreen poisto: katso `git worktree list | grep overpass`; jos rivi on vielä, `tools/uusi-worktree.sh --poista karttaseppa-overpass-pois`.
 
 ## Opéra, Panthéon, Montparnasse: arkit KK:lla, odottaa omistajan sanaa
 Kansio `_tyo/karttaseppa/sarja24-opera-pantheon-montparnasse/<kohde>/`: `arkki-omistajalle.jpg`, `kartalla.png`, `pohja-siisti.png`. Skripti `tee-arkit.py`. Kaikki kuvat katsottu täysikoossa, ilmansuunnat tarkistettu oikeaa kuvaa ja karttaa vasten: kaikki kolme oikein. Kuvat `_tyo/codex/pariisi-sarja-20261105/_review-sarja-24/<kohde>/`.
