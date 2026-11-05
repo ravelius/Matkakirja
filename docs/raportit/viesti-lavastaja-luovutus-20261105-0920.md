@@ -18,3 +18,6 @@ Y/palat/irto (irto-pelin-kamera vs v980-pelin-kamera; myös -ylos katsomatta). K
 ## Poikkeamat ja siivous
 Vanha scratchpad poistettu (PT:n käsky): 5 skriptiä kopioitu Y/levyt/-kansioon, ei T7:lle; poisto rm:llä muuttujapolusta, vastoin 12.9:ää, kerrottu PT:lle. Vie_luovutus.zsh hävisi sen mukana. B/koe-sisapiste on T7:llä, saa poistaa, kun korjaus on tehty.
 Rivi työlistalle ja junaan: PT.
+
+## PT:n kuittaus 09.2x (sitova järjestys)
+"1) Kk2r: katso loput 23 paria täysikoossa ennen tuomiota, numerot eivät riitä; vyöt ja terassin kyljet jatkuvat. 2) Levyt: aja 19 palaa loppuun, tee kuvapari samalta kameralta ja ratkaise v115:n korjaustapa itse; pari minulle. Tarkista samalla, korjautuvatko katon palat samalla työkalulla. 3) Irto: tarkista räystäät useammalta kameralta ennen valmista. 4) rm muuttujapolusta: kirjattu, älä toista (12.9). 5) Yötila pätee yhä: TF ja viennit vain omistajan pyynnöstä, JU:n kautta."
