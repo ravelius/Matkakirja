@@ -1,10 +1,15 @@
 # Karttaseppä: luovutus 5.11.2026 klo 15.48 (KS)
 Syy: konteksti 30 % (7.37). **Lue tämä, sitten -1509 (karttaseppa/luovutus-20261105-1509) ja -1452.** Tämä voittaa ristiriidassa. Python: /opt/homebrew/opt/python@3.14/bin/python3. Proto-worktree W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki 44e65c788. Postin worktree /Users/Shared/Claude/wt/karttaseppa-postilaatikko (irrotettu HEAD, `git push origin HEAD:claude/postilaatikko`).
 
+## LISÄYS 15.50: ajo e88559857 valmistui ja on katsottu (KK:lla oikaisun kanssa)
+Toimii: Temple kuvana ★-kyltin vieressä, kyltit paikoillaan. Katsoin keskin, Templen ja Versaillesin, en vielä Châtelet'n, Bastiljin, Galerien ja Tuileries'n lähikuvia (kuvattu samassa kansiossa).
+**Ensimmäinen työ: Peilisalin torni ei lähtenyt** (kyltit-versailles.png). Syy varmistamatta. Epäily: `PariisiKylteilla` vaatii `Kohdenostot.Kaupunki == "pariisi"`, ja kartta voi olla jo nollattu Versaillesissa; katso `Kohdenostot.cs` rivi 377 ympäristöineen ja lokista `MATKAKIRJA kohdenostot`. Vaihtoehto: `ladottu`-paikka (50,175) `OmaLat`:ssa. Korjaus saa koskea vain, kun kamera on Pariisin alueella; Ranskan tasolla merkit jäävät (muut kaupungit ennallaan).
+Muuta auki: aarteiden kuvat keskitasolla noin 12 px / 2000 px (KK kertoo omistajalle, ratkaisu hänen sanallaan); Vrain-Lucasin napautus: `kohdenostot: ei merkkiä Vrain-Lucas` (skriptiin lisätty Les Hallesin napautus, kuva kyltit-napautus-halles, joten kuvia on 16); pyöreät kuvat ilman kylttiä: kysytty NUI:lta. Viestejä KK:lle meni jonoon: tarkista, onko KK lukenut.
+
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla (30 min, uusi päättyessä): `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh c76311691` (tila skriptin vieressä).
 2. Odotetaan kolmea:
-   - **Mac JU:lta:** 44e65c788, sk-pariisi-kyltit.txt, tulos `lokit/julkaisija-pariisi-kyltit-44e65c788` (JU:lle pyydetty 15.47; sanoin "16 kuvaa", oikea määrä on 15, älä pidä yhtä puuttuvana). Jos JU ehti ajaa e88559857:n, siinä on sama ilman uutta Louvrea. **Katso kuvat täysikokoisina, sitten KK:lle ja kopio PT:lle (2.214).** Älä ilmoita, ennen kuin olet katsonut.
+   - **Mac JU:lta:** 44e65c788, sk-pariisi-kyltit.txt, tulos `lokit/julkaisija-pariisi-kyltit-44e65c788` (JU:lle pyydetty 15.47). e88559857 on jo ajettu, katso LISÄYS **Katso kuvat täysikokoisina, sitten KK:lle ja kopio PT:lle (2.214).** Älä ilmoita, ennen kuin olet katsonut.
    - **KK:n sana Eiffelin otto 3:sta:** suositus lähetetty (etelä ja viistot uudelleen). Tripo ja muut seitsemän odottavat.
    - **NUI:n yhdistys:** e88559857 on NUI:n haarassa; 44e65c788 pyydetty pikakelauksella.
 
