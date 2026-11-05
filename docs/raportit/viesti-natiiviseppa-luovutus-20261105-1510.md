@@ -57,3 +57,8 @@ Lontoon tekstikortti jää Pariisin saapumiskuvien ja nimen alle p09 asti: KK:ll
 
 ## Lisäys 15.1x: PT:n päätös vika 1:stä
 PT: "loppumittauksen yhteydessä, ei erillistä ajoa (2.209)." Jos omistaja näkee tyhjän kartan pienellä iPadilla, se tulee KK:n kautta ja ohittaa tämän. Listaa ei ollut, joten perustin sen: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/loppumittaus-pariisi.md (vika 1, lyhyt lähtö, muisti, saumakorjaus, Napakalotti). Vika 1:stä ei enää koodityötä ennen sitä.
+
+## Lisäys 15.1x: KK 15.12, UUSI TYÖ, ei aloitettu (konteksti yli 30 %)
+KK sanasta sanaan: "katsottu. Tavoite: pelaaja ei näe Pariisiin tullessa tyhjää pohjaa, lähti hän miten nopeasti tahansa: karkeampi kartta pysyy näkyvissä, kunnes tarkka on valmis. Korjaa tämä, älä odota iPadia. Samassa ajossa: Lontoon kortti ja nimi ISO-BRITANNIA poistuvat ennen Pariisin kuvia, ja tarkista, tummuuko kartta PARIISI-otsikon aikana (p07, p09) rungossa, jossa on NUI:n korjaus. Kuvat KK:lle."
+Tämä korvaa edellä sanotun "ei koodityötä ennen loppumittausta" koodin osalta; laitteella katsominen jää loppumittaukseen (PT:lle kerrottu 15.1x). Järjestys: Notre-Dame-kuvat (ajo valmis tai tulossa), Liiku-loitonnus ja tämä samaan ajoon, jos ne yhdistyvät rungon päälle.
+Alku: kun tarkka pala puuttuu, näkyykö vanhempi pala? Etsi striimikartan palojen näyttö (matkaseuranta: "pallo NN %", p03:ssa sumea joki on pohjan alin taso). Tyhjä pohja = hiekanvärinen, joten selvitä ensin, jääkö vanhempi taso pois vai onko sitä edes ladattu (7,21 s: pallo 36 %, 2 laattaa). PARIISI-otsikon tummuus: p06-p09 tässä koehaarassa ilman NUI:n kuvia; katso rungolla d5850ff4e tai uudemmalla.
