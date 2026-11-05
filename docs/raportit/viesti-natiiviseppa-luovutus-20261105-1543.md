@@ -36,3 +36,7 @@ pid 58484 käynnissä 15.36 (2 h 7 min). Monitor kuolee nollauksessa: aseta uude
 
 ## Työpuut
 wt/proto-natiiviseppa-kierto jää 461a0241e:hen, ajo on valmis, joten sen saa ottaa käyttöön. Koehaara f446775c8 ei enää ole työpuussa, haara säilyy.
+
+## Lisäys 15.4x: PT
+PT kirjasi 60°:n 2.210:een minun arvonani (korvaa PT:n 30°-päätöksen). PT sanasta sanaan: "Saumakorjauksen ratkaisu pysyy loppumittauksessa, ja alle 20°:n varatapa ei enää käy tähän: kerro se KK:lle kuvan yhteydessä. Tyhjä pohja jatkuu sinulla."
+Muista siis intron kuvarivissä KK:lle: alle 20°:n varatapa ei enää käy, saumakorjauksen ratkaisu loppumittauksessa.
