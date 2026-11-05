@@ -36,3 +36,6 @@ pid 58484 käynnissä 14.38 (1 h 9 min). Monitoria ei ole tässä sessiossa: ase
 
 ## Sessiosta
 Remote päällä; Raamattu 7.47 luettu, työlista päivitetty klo 14.31 (rivi Pariisi uudelleen striimikartan päälle osista). Hook: rivillä ei tuoretta tilannetta, päivitä, kun ajo on katsottu.
+
+## Lisäys 14.4x
+Runko on nyt natiivi-ui/pariisi-lento-219 d5850ff4e (NUI, sisältää 2c9ca58a6:n, viisi kuvaa ja KiertoHiivun; merge-base varmistettu), ei 45abf3d41. Ajo JU:n jonossa NUI:n puolesta, sen kuvissa ruutusarjan ainekset: katso ennen omaa ajoa.
