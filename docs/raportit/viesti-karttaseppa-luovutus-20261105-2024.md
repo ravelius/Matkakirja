@@ -1,5 +1,5 @@
 # Karttaseppä: luovutus 5.11.2026 klo 20.24 (KS)
-Syy: konteksti yli 35 % (7.37). **Tämä voittaa ristiriidassa; aiempi -1927 (18c486dee) kertoo taustan.** W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki 56dfe057f. Python /opt/homebrew/opt/python@3.14/bin/python3.
+Syy: konteksti yli 35 % (7.37). **Tämä voittaa ristiriidassa; aiempi -1927 (18c486dee) kertoo taustan.** W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup, kärki fd711e501. Python /opt/homebrew/opt/python@3.14/bin/python3.
 
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh`.
@@ -20,8 +20,10 @@ Syy: konteksti yli 35 % (7.37). **Tämä voittaa ristiriidassa; aiempi -1927 (18
 - **Eurooppa:** `kyltit-eurooppa-taysi.png` ilman mustaa pohjaa pakotetulla täydellä kerroksella. PT tietää.
 - **ND:n maa lennossa:** LAV:n mallin maa (v6k29, maa_v9f), ei sävytys eikä VS:n pohja (`nd-pallopohja-selvitys-20261105.md`). KK siirsi sen LAV:n jonoon. Pohja-alue on omistajan hyväksymä, joten sitä ei muuteta ilman paria.
 
-## Avoinna (KK:lle kerrottu, odottaa sanaa)
-- **Panthéonin pohja näkyy suorakulmiona** ja peittää vieressä olevia kortteleita. Riemukaaren vasemmalla puolella on pieni vaalea laikku. Suositus KK:lle: yksi pohjakierros, ei uutta mallia. Tee, ellei omistaja halua toisin: käytä jalanjäljen lähelle rajattua alfaa (lähtöpohjat `riemukaari/pohja-siisti.png` ja `sarja24-opera-pantheon-montparnasse/pantheon/pohja-siisti.png`, sitten `korjaa-pohjat.py`).
+## Lisäys: PT:n pyyntö, tehty ja ajettu
+- **Kärki fd711e501.** Panthéonin ja Riemukaaren pohjat rajattu mallin jalanjälkeen (`sarja24-asennus/rajaa-pohja.py`). Ajo `lokit/esikatselu-20261105-202248`, kooste `kooste-pohjat.png`. Suorakulmio ja laikku poissa, kuvat KK:lla, rivi PT:llä, lukko vapaa JU:lle. Ei vientiä.
+- **Uudet mallit:** aja ensin `korjaa-pohjat.py` ja sitten `rajaa-pohja.py` (lisää id ja Suunta kummankin listaan). Grand Palais ja muut laajemmat pohjat eivät kuulu tähän.
+- Usvapari KK:lla. Omistajalle ei ole muuta avointa pohjista.
 
 ## Odotetaan
 - **Tripo:** Opéran asennus päätöksen jälkeen (Suunta noin -16, `opera/pohja-siisti.png`), Invalidit (pohja `invalides-asennus/pohja-siisti.png`, kupoli px 706,802, Suunta noin 4,1, korjaa `alue.json` ja jalanjälki), Montparnasse (Suunta noin -51, `montparnasse/pohja-siisti.png`, tarkista katto). Pohjat omalla alfallaan. Mene `korjaa-pohjat.py`:n kautta (lisää id), jotta irtolaikut lähtevät ja kiveys vastaa katua.
