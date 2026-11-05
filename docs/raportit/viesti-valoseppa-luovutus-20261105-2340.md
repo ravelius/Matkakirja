@@ -1,5 +1,9 @@
 # Valosepän luovutus 5.11.2026 klo 23.40
 
+## LISÄYS 23.46: ENSIN TÄMÄ
+Ajo 9cb6435e4 on TEHTY (L2, 274 s, exit 0, lokit/esikatselu-20261105-234043, proto-3d:ssä; 6 kuvaa ja liike-pa3 251 ruutua, LUKKO VAPAA ilmoitettu JU:lle). Unity kääntyi: "ohjelmakohteet: luotu, 22 verkkoa, 74690 kolmiota". Ruutuja EI ole katsottu. ÄLÄ pyydä uutta vuoroa äläkä aja kohtaa 1: aloita SEURAAVAKSI-kohdasta 2 tästä kansiosta.
+Kohta 4 mitattu: lataus Ohjelmakohteet 63 ms ja 59 ms (ennen 22 ms), sama ruutu sisältää NotreDameKoe 101–162 ms. Raja-arvo 60 ms ylittyy niukasti: tee LuoOsat yksi kohde per ruutu vasta, kun kuvat on katsottu. "Luotu" esiintyy tässä ajossa 2 kertaa.
+
 Korvaa luovutuksen -2215. Syy nollaukseen: konteksti pehmeällä rajalla 25 %.
 
 ## TILA
