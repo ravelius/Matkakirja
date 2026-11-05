@@ -4,6 +4,12 @@ Täydentää -1925:tä, -1858:aa, -1822:ta ja -1744:ää; niiden avoimet kohdat 
 
 7.47: tässä sessiossa luettu periaatteet, 7.4, 7.23–7.25, 9.1–9.3, 9.5 ja 10.5. Luvut 2 (fokusmoodi, linssit), 4 (UI-POHJAT), 6 ja luvun 12 komentosäännöt lukematta: lue seuraavalla aloituksella.
 
+## 0. Lisäys: PT:n kuittaus (viesti "20.02", kello näytti 19.5x)
+PT kuittasi `93cc59596` (k1, k2 täysikoossa, loki) ja **sen sijaan, mitä kohdassa 2 sanotaan "ei junaan", korjaus menee junaan 219 nyt**. Omena v3:n vienti sallittu.
+- **Juna:** JU:lle viety `pelikoodari/eunukki-peili-219` `7de953bc9`: yksi rivi a5323cf4e:n päällä, ilman lokiriviä ja ilman `fb9811afd`:n paluuta reitille. Tehty ilman työkopiota, joten **ei omaa `unity-tarkistusta`**: sama lauseke kääntyi tarkastelu-haarassa. Jos JU ei kuittaa, tarkista jonosta.
+- **Omena:** `_valmiit/omena-mata-v3-vienti-20261105` (1 glb, SHA = Codexin toimitus) JU:lla. Ennen vientiä `kerattavat/omena-mata-v3.glb` 404 ja `omena-mata.glb` 200, 420 676 tavua, 19.10. **Kun JU kertoo viedyksi:** tarkista, että v3 on 200 ja vanhan koko ja aika ennallaan, ja kerro PT:lle. Junan 219 koodi hakee yhä vanhaa nimeä; uusi nimi on vain tarkastelu-haarassa (`73f708b88`) ja kulkee tason 1 mukana.
+- **Hehkun ja "mädän" arvion vie PT KK:lle.** Sitten jatka tasoa 1 (kohta 6).
+
 ## 1. Viittausvahvistukset (PT:n pyyntö, tehty)
 - **20 aarrekuvaa:** paketti `_valmiit/aarrekuvat-paikallis-10-vienti-20261105` on sama kuin main (0 eroa). Julkaistu luettelo `sisalto/1/v993` viittaa kaikkiin, ja ennen vientiä kaikki olivat ämpärissä 404. JU vei; tarkistin kaksi polkua (200). Eheysvartijan tulos on JU:lla.
 - **Äänet:** VS vei ne 19.30–19.33 ennen vahvistustani (omistaja 19.23, `b720cd2f2`). Paketin kaikki polut ovat uusia kansioita, paitsi `kieli.json` juuressa (ei viittauksia tarkistettu, vain paketin oma tiedosto). TF 217/218:n osoitteet (`siltalauseet-v4`, `kuittaukset-v2`, `nimet-v3`, `kaupunki-intro-v1`) ennallaan, aikaleimat lokakuulta. TF 217/218 eivät viittaa `pariisi-tervehdys`-sanaan tarkistamissani tiedostoissa (OpasSovitin, KaupunkiIntro). VS ja PT tietävät.
