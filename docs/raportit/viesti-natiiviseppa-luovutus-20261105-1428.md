@@ -3,7 +3,7 @@
 Korvaa luovutuksen -1408 kohdat "Ensimmäinen työ", "Haarat" ja "Ajot ja kuvat". Sen "Opittua", "T7 → NAS", ja -1348:n T7-ohje, "Ei kosketa ilman sanaa" sekä PT:n sana 2.214 pätevät. Sessio on Natiiviseppä, kansio Matkakirja-3d-selvittaja. Vuoro aina JU:lta.
 
 ## Tila
-KK:n 14.0x-tehtävän kohdat 1–4 tehty ja raportoitu KK:lle 14.27, kopio PT:lle. KK ei ole vielä vastannut. KK:n sana "Liike ruutusarjana KK:lle ennen lukitusta" on täytetty, lukitus odottaa KK:ta.
+KK:n 14.0x-tehtävän kohdat 1–4 tehty ja raportoitu KK:lle 14.27, kopio PT:lle. KK vastasi 14.3x (alla). KK:n sana "Liike ruutusarjana KK:lle ennen lukitusta" on täytetty, lukitus odottaa KK:ta.
 
 ## Haarat
 - **natiiviseppa/pariisi-kierto-219 6655127dd** (pohja 99035b765), työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto. Paikallinen, ei pushattu. NUI odottaa tätä samaan runkoon, ja NUI kytkee Ohitat KiertoHiivu()-kutsulla; NUI:n haara natiivi-backup peili/proto/natiivi-ui/pariisi-lento-219 9fd4cfdc8.
@@ -19,6 +19,7 @@ KK:n 14.0x-tehtävän kohdat 1–4 tehty ja raportoitu KK:lle 14.27, kopio PT:ll
 lokit/natiiviseppa-kierto4-c0217caf9: s01–s44, loppu, kuvaväli noin 1,4 s. Arkit _tyo/natiiviseppa/aloituslento/kierto4-arkit/. Skenaario _tyo/natiiviseppa/aloituslento/skenaario-kierto4.txt. Katsottu: kaikki arkeilta; täysikoossa rajaukset s24 (oikea ala) ja s26 (keskusta), ei saumaa; muita ei täysikoossa. Liikkeen tuntumaa ei voi arvioida pysäytyskuvista.
 
 ## Ensimmäinen työ: viat kuvissa (KK:lle kerrottu "korjaan 1:n seuraavaksi, ellet sano muuta"; lue KK:n vastaus ensin)
+KK 14.3x, sanasta sanaan: "täysi kierros 10,4°/s kelpaa toistaiseksi; omistaja arvioi liikkeen, kun näkee sen laitteella. Korjaa nyt vika 1 (piirros puuttuu 3–11 s) ja 2 (nimet katoavat kierron pysähtyessä). Kierto ja NUI:n viisi kuvaa samaan runkoon: sopikaa NUI:n kanssa, JU kääntää. Sen jälkeen ruutusarja KK:lle: tässä ajossa oli vielä vanhat kuvat ja tumma kartta. Ranskan näkymästä kysyn omistajalta."
 PT 14.3x: "piirros puuttuu 3–11 s ja nimet pois 38–58 s: selvitä kumpikin ja korjaa, jos ne eivät ole vain Mac-ajon vikoja. Tulokset 2.214:n reittiä."
 1. **Piirros puuttuu s03–s09 (3–11 s):** vain nimet tasaisella pohjalla, terävä vasta s10 (12 s). Edellisen ajon k00 samanlainen. Hypoteesi, ei varmistettu: ElavaEsilataus.Lahinakyma kattaa vain loppurajauksen (PeliOhjain.Esilataus.cs:103), kierron keskipiste ja 6,6 km on sen ulkopuolella. Lisäksi kuvaus tekee 0,8 s:n ruutuja, joten Macin aika voi olla pidempi kuin laitteella. Selvitä lokista, mikä piirrostaso ja milloin saapui; toista vika ennen korjausta (9.7). Ei muistilukuja (2.207, 2.209).
 2. **Nimet katoavat s28:ssa (38 s), kun kierto pysähtyy, ja palautuvat s43:ssa (noin luennan lopussa) eri joukkona.** Vertailu natiiviseppa-aloituslento-b2-99035b765/k66-t00-s000: levossa nimet näkyvät, sama joukko kuin s43. Vain "Col de la Chapelle" pysyy. Syy auki, Nimikerroksesta ei löytynyt luentasääntöä; epäilty on nimien vaihto ajon ja levon välillä tai ui lentopiilo. Tarkista myös ilman lentopiiloa.
