@@ -1,0 +1,339 @@
+{
+  "taskNumber": 2095,
+  "site": "opera",
+  "completedAt": "2026-11-05T16:15:38.673395+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohja-uusi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10; explicit bboxOverrides if stated. Manual stage-tower cornice above oculi and stage-tower roof-ridge datum on native QA strips, uncertainty4px. Ratios measured to main roof separate from decorative tip. No normalization of production images.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        191,
+        127,
+        1346,
+        922
+      ],
+      "widthPx": 1155,
+      "totalHeightPx": 795,
+      "groundY": 921,
+      "corniceY": 306,
+      "corniceHeightPx": 615,
+      "roofY": 161,
+      "roofHeightPx": 760,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.519736842105263,
+      "targetRatio": 1.8035714285714286,
+      "ratioErrorPercent": -15.737363210005217,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 56,
+      "widthPixelsPerMetre": 11.435643564356436,
+      "heightPixelsPerMetre": 13.571428571428571
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        213,
+        257,
+        1322,
+        935
+      ],
+      "widthPx": 1109,
+      "totalHeightPx": 678,
+      "groundY": 934,
+      "corniceY": 435,
+      "corniceHeightPx": 499,
+      "roofY": 291,
+      "roofHeightPx": 643,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.7247278382581648,
+      "targetRatio": 1.8035714285714286,
+      "ratioErrorPercent": -4.371525799547305,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 56,
+      "widthPixelsPerMetre": 10.98019801980198,
+      "heightPixelsPerMetre": 11.482142857142858
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        83,
+        350,
+        1450,
+        878
+      ],
+      "widthPx": 1367,
+      "totalHeightPx": 528,
+      "groundY": 877,
+      "corniceY": 463,
+      "corniceHeightPx": 414,
+      "roofY": 374,
+      "roofHeightPx": 503,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 2.7176938369781314,
+      "targetRatio": 2.6607142857142856,
+      "ratioErrorPercent": 2.14151333609085,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 56,
+      "widthPixelsPerMetre": 9.174496644295303,
+      "heightPixelsPerMetre": 8.982142857142858
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        79,
+        369,
+        1441,
+        877
+      ],
+      "widthPx": 1362,
+      "totalHeightPx": 508,
+      "groundY": 876,
+      "corniceY": 475,
+      "corniceHeightPx": 401,
+      "roofY": 383,
+      "roofHeightPx": 493,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 2.762677484787018,
+      "targetRatio": 2.6607142857142856,
+      "ratioErrorPercent": 3.8321739248812214,
+      "ratioPass5Percent": true,
+      "totalHeightApproxTargetM": 56,
+      "widthPixelsPerMetre": 9.140939597315436,
+      "heightPixelsPerMetre": 8.803571428571429
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 4.063604240282685,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 0.36643459142543056,
+      "pass5Percent": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 44.37532400207361,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 58,
+  "obliques": {
+    "southwest": {
+      "roofEdgePoints": [
+        [
+          346,
+          246
+        ],
+        [
+          686,
+          737
+        ],
+        [
+          1202,
+          622
+        ]
+      ],
+      "method": "Two approximately perpendicular roof-terrace edges treated as horizontal coplanar directions; true ground is occluded. Orthographic proxy sqrt(abs(slope1*slope2)), not calibrated camera solve.",
+      "uncertaintyDegreesApprox": 5,
+      "reason": "Visible side walls are too tall for 65 degrees; proxy below target. Not a certified footprint measurement.",
+      "estimatedSinElevation": 0.5673164242436476,
+      "estimatedElevationDegrees": 34.56330306031418,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    },
+    "northeast": {
+      "roofEdgePoints": [
+        [
+          719,
+          765
+        ],
+        [
+          837,
+          780
+        ],
+        [
+          1188,
+          169
+        ]
+      ],
+      "method": "Two perpendicular rear/side cornice directions used as coplanar horizontal proxy. Some cornice heights may differ; not calibrated ground solve.",
+      "uncertaintyDegreesApprox": 5,
+      "reason": "Opposite rear/east view is correct, but camera is much lower than 65 degrees and metric agreement with southwest is unverified.",
+      "estimatedSinElevation": 0.4704047221664923,
+      "estimatedElevationDegrees": 28.060571131877097,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      664,
+      384,
+      872,
+      640
+    ],
+    "actualBBox": [
+      480,
+      82,
+      1055,
+      953
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": true,
+    "rotationEstimateDegreesClockwiseFromEast": 80,
+    "rotationTargetDegreesClockwiseFromEast": 74,
+    "rotationEstimateUncertaintyDegrees": 4
+  },
+  "ground": {
+    "footprintPixels": 34000,
+    "grassLikePixels": 920,
+    "grassLikeFraction": 0.027058823529411764,
+    "coverageMetric": "Heuristic grass-color test only; not semantic proof of paving",
+    "metresPerPixelApprox": 0.9929457067083719,
+    "pathSamples": [
+      {
+        "axis": "x",
+        "position": 560,
+        "start": 659,
+        "end": 669,
+        "description": "Western curved path cross-section",
+        "widthPx": 11,
+        "widthMetresApprox": 10.922402773792092,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 520,
+        "start": 882,
+        "end": 892,
+        "description": "Eastern curved path cross-section",
+        "widthPx": 11,
+        "widthMetresApprox": 10.922402773792092,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      }
+    ],
+    "pavingFullFootprintPass": false,
+    "sourceParkLayoutPreserved": null,
+    "outsidePixelIdentityVerified": false,
+    "receiverMustCompositeMaskOnly": true,
+    "sourceParkLayoutAssessment": "No pre-existing lawn park inside cleared target area. New lawn layout is generated; exact street/edge alignment not verified."
+  },
+  "visualIssues": [
+    "Southern rotundas float about190px above the main ground level; side views are not a shared zero-degree orthographic set.",
+    "North-south height scale differs strongly. Same physical stage-tower cornice varies across all4views.",
+    "East flytower shows a triangular gable on the long side, unlike source roofplan and west image. Topology is not consistent.",
+    "East and west rotundas shift north of the auditorium dome axis; same-building condition fails.",
+    "Top image is too large and shifted relative to jalanjalki.png. Approximate long-axis80deg versus target74deg, manual estimate only.",
+    "Small rooflights remain in top image. Stone roof caps are retained; roof-ridge ratio excludes caps.",
+    "Oblique views do not achieve65degree elevation; actual footprint compressed factor is not directly recoverable because the ground is hidden.",
+    "Background is a neutral gray gradient rather than perfectly flat gray; no cast shadows or external scenery.",
+    "Ground image changes pixels outside edit mask; receiver must composite mask-only. Inside-mask street/path exactness requires receiver overlay review."
+  ],
+  "notes": "Koko erä on DIAGNOSTIIKKA, ei valmis Tripo-syöte. Katon harjan korkeus56m on tilauksen ja Yetim–Kavraz2021:n likimääräinen tavoite. Mittaus jätetään erilleen pienestä kivisestä harjakorokkeesta. Yhteinen listapiste on näyttämötornin päälista pyöreiden aukkojen yläpuolella, ei matalien siipien erikorkuinen lista. Etelän ja pohjoisen kapeiden sivujen suhdeportti sekä kaikkien sivujen mittakaavan yhtenäisyys eivät läpäise. Itäkuvassa kattopääty on väärin ja rotundien akseli siirtyy. Kolme vihreää kupolia, eteläjulkisivun kultaiset kulmaryhmät ja korkea näyttämötorni tunnistuvat; pieniä yksityiskohtia yksinkertaistettiin, mutta yläkuvaan jäi kattoikkunoita. Pohjoisen ylös -periaate ja eteläinen pääjulkisivu ovat oikeat, tarkka yläkuvan kierto/koko ei. Maapohjassa lähdealueella ei ollut säilytettävää nurmipuistoa; ympäröivät puistot ovat maskin ulkopuolella. Rakennuksen paikka on kiveystä, mutta kattavuus ja rajan kadut tarkastettava maskissa.8/8kutsua, ei uusintaa eikä tuotantokuvien skaalausta, leikkausta tai pikselimuokkausta.",
+  "noAutomaticRetry": true,
+  "widthScaleSpreadPercentOfMean": 22.535055019454628,
+  "sideScaleAgreement5Percent": false
+}
