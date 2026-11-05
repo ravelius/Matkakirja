@@ -1,0 +1,110 @@
+{
+  "task": 2113,
+  "state": "LOCAL_QA_PASS_AWAITING_DELIVERY",
+  "primary": "omena-mata-v3.glb",
+  "createdAt": "2026-11-05T16:19:26.815240+00:00",
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "sha256": "3af0be61afba2b5d624923e2529e5acfc19dfa63a22d9d88954689c878d3a29b",
+      "bytes": 875
+    },
+    {
+      "path": "QA.json",
+      "sha256": "6ba0a46b97befa2088f367fb460d491f8d8ed01668800a2e096c4fd8c0312090",
+      "bytes": 4629
+    },
+    {
+      "path": "README.md",
+      "sha256": "29c0634a36eff43f0178e00708ec0faeff998f98dca773d41702ccb6f6044ec0",
+      "bytes": 1767
+    },
+    {
+      "path": "herkku-30px.png",
+      "sha256": "beaa8c06b146e94bf54638c9d375edec1bbf7f7be00ef84ea4a83c03daa6b751",
+      "bytes": 1929
+    },
+    {
+      "path": "herkku-48px.png",
+      "sha256": "bbbdb3bbd20b62ee0446a2412ce511cc7d439682309cc3ebc3a512783ff1d0e6",
+      "bytes": 3603
+    },
+    {
+      "path": "herkku-60px.png",
+      "sha256": "44149124828854312889d3a4ddf5338e01e8566c2fb92337efa4ebe28541dedc",
+      "bytes": 4948
+    },
+    {
+      "path": "herkkuomena-edesta.png",
+      "sha256": "ef6221e1a3f791f526941efe8e8ae74441fbff864d04ec09638d700b41a64732",
+      "bytes": 143165
+    },
+    {
+      "path": "mata-30px.png",
+      "sha256": "9dcb41c5b799ddf5d7cfc3223785ffe0d2dc48370d30c460890bc0a8e913c65f",
+      "bytes": 2103
+    },
+    {
+      "path": "mata-48px.png",
+      "sha256": "fd52abb3213d095f5855e7d61b89ba7800ec6885d0f39236376bcdda09528f7f",
+      "bytes": 3860
+    },
+    {
+      "path": "mata-60px.png",
+      "sha256": "054f29270292fa15ade0224e40cf95d8af4b43abebac4dbcf736d51f4d0881cc",
+      "bytes": 5241
+    },
+    {
+      "path": "omena-mata-v3-edesta.png",
+      "sha256": "3edaa3ebcf85b6f76e7f5da48a92764a61945d9f2bc68f5856c0d70516b5be08",
+      "bytes": 85658
+    },
+    {
+      "path": "omena-mata-v3-neljalta-puolelta.png",
+      "sha256": "b8b284a51b87470639c7bd39dbf653fc30df5e701585809a48bc3721bd3d2fab",
+      "bytes": 260028
+    },
+    {
+      "path": "omena-mata-v3.glb",
+      "sha256": "46a40d16115498759db78fb438a85d56cf81254405c749df0ff2c233efde4ae2",
+      "bytes": 157168,
+      "tyyppi": "esine",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "omenat-30-48-60px.png",
+      "sha256": "7ce419bf9a064f5a740d41a3be0fdcaf015100016ef5cc444e56f1c3d4299910",
+      "bytes": 84990
+    },
+    {
+      "path": "omenat-rinnakkain.png",
+      "sha256": "b09a656e21903d0be2c93c22f2862fc95859c9713c25f2ecca6a3131aa956a53",
+      "bytes": 244183
+    },
+    {
+      "path": "preview-method.json",
+      "sha256": "19ebbba8e72e8ac58a5a3c6952ade0f7607a17d7b40cedbe90534deee894aeff",
+      "bytes": 1638
+    },
+    {
+      "path": "technical-check.json",
+      "sha256": "c5dc75e1423d06785c28dc87c9a39eeacdaedd3e6fcfc513cca3fbe24d01e653",
+      "bytes": 3374
+    },
+    {
+      "path": "uv-independent.json",
+      "sha256": "2f098a9776174a47ef121d9fc33c5fece7157edfe8442f790d8a3cba50b75358",
+      "bytes": 4248
+    },
+    {
+      "path": "v2-v3-pintavertailu.png",
+      "sha256": "a512782539271194fc9da10b4af6a791a848a0116e0036cd2fc7d2417955d020",
+      "bytes": 163765
+    }
+  ],
+  "geometryPreserved": true,
+  "visualQAPassed": true,
+  "gameIntegrated": false,
+  "published": false,
+  "creditsSpent": 0
+}

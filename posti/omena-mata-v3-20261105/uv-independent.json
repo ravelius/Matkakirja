@@ -1,0 +1,126 @@
+{
+  "task": "#2113 independent, read-only UV and color-bake conflict audit of the v2 apple source copy.",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/omena-mata-v3-20261105/sources/omena-mata-v2.glb",
+  "sourceSHA256": "8bd49658585d374beddc592e1eae99420069a9e6865a68239db53891c6baafac",
+  "v2DeliverySHA256": "8bd49658585d374beddc592e1eae99420069a9e6865a68239db53891c6baafac",
+  "sourceCopyMatchesV2Delivery": true,
+  "scope": "Fruit primitive only: it carries TEXCOORD_0 and COLOR_0. Stem and leaf are separate meshes/materials and have no UV attribute. No GLB or image was edited.",
+  "structure": {
+    "fruitVertices": 1223,
+    "fruitTriangles": 2208,
+    "indicesValid": true,
+    "positionFinite": true,
+    "COLOR_0Finite": true,
+    "activeTextureBindings": 0,
+    "retainedImages": 1
+  },
+  "uv": {
+    "bounds": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "allUVInUnitSquare": true,
+    "triangleAreaDefinition": "absolute 2D UV cross product / 2",
+    "zeroOrDegenerateTrianglesThreshold": 1e-12,
+    "zeroOrDegenerateTriangles": 0,
+    "nearDegenerateTrianglesThreshold": 1e-08,
+    "nearDegenerateTriangles": 0,
+    "triangleAreaMinMax": [
+      0.000434026949935884,
+      0.0004340288125810332
+    ],
+    "sumTriangleUVArea": 0.9583333227783442
+  },
+  "interiorOverlapAudit": {
+    "method": "64x64 UV AABB spatial bins generate candidate pairs; convex triangle clipping computes actual intersection polygon area for every candidate pair, including pairs sharing mesh vertex indices.",
+    "candidateFacePairs": 17782,
+    "positiveInteriorOverlapThresholdUVArea": 1e-12,
+    "positiveInteriorOverlapPairs": 0,
+    "overlapAreaSum": 0.0,
+    "overlapPairs": [],
+    "geometricallyDistinctTriangleInteriorOverlaps": 0,
+    "conclusion": "No positive-area UV triangle interior overlap was found, including across shared-index pairs. No competing COLOR_0 values need to occupy the same texel interior; bake to baseColorTexture can retain the existing UVs."
+  },
+  "seamColorContinuity": {
+    "positionGrouping": "round object-space positions to 1e-7 m cells",
+    "coincidentPositionGroups": 25,
+    "UVSplitGroups": 25,
+    "verticesInUVSplitGroups": 142,
+    "maxLinearCOLOR0ChannelDeltaAcrossUVSplitPositionGroups": 0.0,
+    "evidence": "All sampled coincident-position UV seam groups have identical COLOR_0 values; no seam-side color conflict was found.",
+    "uvSplitGroupExamples": [
+      {
+        "vertexCount": 48,
+        "uvRange": [
+          0.9791666464880109,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 48,
+        "uvRange": [
+          0.9791666464880109,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 2,
+        "uvRange": [
+          1.0,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 2,
+        "uvRange": [
+          1.0,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 2,
+        "uvRange": [
+          1.0,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 2,
+        "uvRange": [
+          1.0,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 2,
+        "uvRange": [
+          1.0,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      },
+      {
+        "vertexCount": 2,
+        "uvRange": [
+          1.0,
+          0.0
+        ],
+        "maxLinearColorChannelDelta": 0.0
+      }
+    ]
+  },
+  "bakeConstraint": "Keep POSITION, NORMAL, TEXCOORD_0, indices and node transforms byte/value-identical; bake only COLOR_0 appearance into the baseColorTexture. Since no UV interior overlaps were found, no UV-changing workaround is indicated. Add conventional edge padding/dilation during raster bake to reduce filtering bleed; this does not alter UVs or geometry.",
+  "limits": "Source-side audit only; a future baked GLB still needs byte/value equivalence checks for geometry, UVs and indices, plus image inspection and seam/pool preview QA."
+}

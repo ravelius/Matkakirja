@@ -1,0 +1,63 @@
+{
+  "method": "Actual GLB CPU diffuse orthographic renders. Exact glTF sRGB decoding before bilinear texture interpolation, linear vertex colours for v2 reference, exact linear-to-sRGB output. Same light/camera. No game shader/glow or PBR specular simulation.",
+  "sourceV2AppearanceComparison": [
+    {
+      "angle": "Edestä",
+      "foregroundMeanAbsRGB8": 0.18105173090408455,
+      "foregroundP99AbsRGB8": 1.0,
+      "maxAbsRGB8": 5.0
+    },
+    {
+      "angle": "Sivulta",
+      "foregroundMeanAbsRGB8": 0.1813596028773318,
+      "foregroundP99AbsRGB8": 1.0,
+      "maxAbsRGB8": 5.0
+    },
+    {
+      "angle": "Takaa",
+      "foregroundMeanAbsRGB8": 0.17611395438083904,
+      "foregroundP99AbsRGB8": 1.0,
+      "maxAbsRGB8": 3.0
+    },
+    {
+      "angle": "Toiselta sivulta",
+      "foregroundMeanAbsRGB8": 0.1810760126963932,
+      "foregroundP99AbsRGB8": 1.0,
+      "maxAbsRGB8": 4.0
+    }
+  ],
+  "smallSizes": [
+    {
+      "model": "Herkkuomena",
+      "nominalModelHeight": 30,
+      "canvasSize": 38
+    },
+    {
+      "model": "Mätä omena v3 – tekstuuri",
+      "nominalModelHeight": 30,
+      "canvasSize": 38
+    },
+    {
+      "model": "Herkkuomena",
+      "nominalModelHeight": 48,
+      "canvasSize": 56
+    },
+    {
+      "model": "Mätä omena v3 – tekstuuri",
+      "nominalModelHeight": 48,
+      "canvasSize": 56
+    },
+    {
+      "model": "Herkkuomena",
+      "nominalModelHeight": 60,
+      "canvasSize": 68
+    },
+    {
+      "model": "Mätä omena v3 – tekstuuri",
+      "nominalModelHeight": 60,
+      "canvasSize": 68
+    }
+  ],
+  "wallSeconds": 1.7724800109863281,
+  "peakRSSBytes": 126615552
+}

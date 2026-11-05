@@ -1,0 +1,190 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/omena-mata-v3-20261105/delivery",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "omena-mata-v3.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "omena-mata-v3.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 2376,
+     "piirrot": 3,
+     "materiaalit": 3,
+     "solmut": 4,
+     "kuvat": [
+      "512×512 png"
+     ],
+     "rajat": {
+      "min": [
+       -0.068,
+       0,
+       -0.068
+      ],
+      "max": [
+       0.072,
+       0.141,
+       0.068
+      ],
+      "koko": [
+       0.14,
+       0.141,
+       0.135
+      ]
+     }
+    },
+    "polku": "omena-mata-v3.glb"
+   },
+   {
+    "nimi": "herkku-30px.png",
+    "polku": "herkku-30px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 38,
+     "h": 38
+    }
+   },
+   {
+    "nimi": "herkku-48px.png",
+    "polku": "herkku-48px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 56,
+     "h": 56
+    }
+   },
+   {
+    "nimi": "herkku-60px.png",
+    "polku": "herkku-60px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 68,
+     "h": 68
+    }
+   },
+   {
+    "nimi": "herkkuomena-edesta.png",
+    "polku": "herkkuomena-edesta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 600,
+     "h": 600
+    }
+   },
+   {
+    "nimi": "mata-30px.png",
+    "polku": "mata-30px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 38,
+     "h": 38
+    }
+   },
+   {
+    "nimi": "mata-48px.png",
+    "polku": "mata-48px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 56,
+     "h": 56
+    }
+   },
+   {
+    "nimi": "mata-60px.png",
+    "polku": "mata-60px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 68,
+     "h": 68
+    }
+   },
+   {
+    "nimi": "omena-mata-v3-edesta.png",
+    "polku": "omena-mata-v3-edesta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 600,
+     "h": 600
+    }
+   },
+   {
+    "nimi": "omena-mata-v3-neljalta-puolelta.png",
+    "polku": "omena-mata-v3-neljalta-puolelta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 960,
+     "h": 1092
+    }
+   },
+   {
+    "nimi": "omenat-30-48-60px.png",
+    "polku": "omenat-30-48-60px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1000,
+     "h": 1040
+    }
+   },
+   {
+    "nimi": "omenat-rinnakkain.png",
+    "polku": "omenat-rinnakkain.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1200,
+     "h": 666
+    }
+   },
+   {
+    "nimi": "v2-v3-pintavertailu.png",
+    "polku": "v2-v3-pintavertailu.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1200,
+     "h": 666
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: omena-mata-v3.glb ei liikettä"
+  ]
+ }
+]

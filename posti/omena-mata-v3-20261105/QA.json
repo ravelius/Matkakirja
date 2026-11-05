@@ -1,0 +1,141 @@
+{
+  "status": "PASS_NUMERIC",
+  "sourceV2SHA256": "8bd49658585d374beddc592e1eae99420069a9e6865a68239db53891c6baafac",
+  "modelSHA256": "46a40d16115498759db78fb438a85d56cf81254405c749df0ff2c233efde4ae2",
+  "bytes": 157168,
+  "triangles": 2376,
+  "dimensionsMetres": [
+    0.14000000059604645,
+    0.14084264636039734,
+    0.1352781355381012
+  ],
+  "boundsMin": [
+    -0.06825000047683716,
+    0.0,
+    -0.0676390677690506
+  ],
+  "boundsMax": [
+    0.07175000011920929,
+    0.14084264636039734,
+    0.0676390677690506
+  ],
+  "parts": [
+    {
+      "part": "fruit",
+      "triangles": 2208,
+      "geometryAttributesByteIdentical": true,
+      "attributeSHA256": {
+        "POSITION": "e02d9112556b4189cc0c1b7a25c46d473931a5624f8d010b08a23e9975f8efb5",
+        "NORMAL": "10f54f14c417cee9e076804c340c48ac01652bae6f4ba182e24d3c68884aaf3d",
+        "TEXCOORD_0": "1b2e051d92b326fc0cd265c200f3977cfcd5afa4750128c9edd2fe83b0f6ea68",
+        "indices": "992067da5fbd5c60081e15dc92d933eb3758138d1cef0ebf0d867199c7804c97"
+      }
+    },
+    {
+      "part": "stem",
+      "triangles": 64,
+      "geometryAttributesByteIdentical": true,
+      "attributeSHA256": {
+        "POSITION": "d6136a867096fd49dae9636a93cf97709bf9a5299ea7d05101f7e69784046eeb",
+        "NORMAL": "2b76ad2a9ce2c7fb116245c10b6519d20ac21a1a91b9d38ea365a2f463eb6678",
+        "indices": "eb99a2c477e9f458a092ee00115479a64dbecb9264d9c53ec0a384c5fbe63b37"
+      }
+    },
+    {
+      "part": "leaf",
+      "triangles": 104,
+      "geometryAttributesByteIdentical": true,
+      "attributeSHA256": {
+        "POSITION": "0dde7af974886d418a7f20a992ec0a99b0ea5a3cf854b7cb254964410b2b2ec3",
+        "NORMAL": "66c602e3e7f74632f0eda3ddbc1ef67f7d894a454acc27a98cc823179890e41c",
+        "indices": "7f892f934e2a0388c9fb0833d31630fb03f2b8b9222219b5027ae5f74b0317c5"
+      }
+    }
+  ],
+  "nodeTransformsByteEquivalent": true,
+  "stemAndDryLeafGeometryAndMaterialsUnchanged": true,
+  "COLOR_0Attributes": 0,
+  "fruitBaseColorFactor": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "originalRedImageBytesPresent": false,
+  "imageCount": 1,
+  "embeddedTexture": {
+    "width": 512,
+    "height": 512,
+    "bytes": 97630,
+    "mimeType": "image/png",
+    "sha256": "63edba104cf275c66da930c7ea999461accf07718863390ea30cffb1cbce3412",
+    "colorSpace": "sRGB",
+    "wrapS": "REPEAT",
+    "wrapT": "CLAMP_TO_EDGE"
+  },
+  "bakeMethod": "Barycentric interpolation of source linear COLOR_0 on unchanged UV, exact linear-to-sRGB encoding; bilinear GPU decoding semantics used for numeric comparison",
+  "resolutionTrials": [
+    {
+      "resolution": 128,
+      "coveredTexels": 15680,
+      "paddedUncoveredTexels": 704,
+      "paddingSteps": 2,
+      "uncoveredAfterPadding": 0,
+      "multiCoveredTexels": 0,
+      "conflictingTexels": 0,
+      "maximumLinearConflict": 0.0,
+      "sampleCount": 99360,
+      "sRGB8MeanAbsError": 0.5272499971263162,
+      "sRGB8P99AbsError": 5.41692718275892,
+      "sRGB8MaxAbsError": 25.137892524401664
+    },
+    {
+      "resolution": 256,
+      "coveredTexels": 62784,
+      "paddedUncoveredTexels": 2752,
+      "paddingSteps": 2,
+      "uncoveredAfterPadding": 0,
+      "multiCoveredTexels": 0,
+      "conflictingTexels": 0,
+      "maximumLinearConflict": 0.0,
+      "sampleCount": 99360,
+      "sRGB8MeanAbsError": 0.3085349920910161,
+      "sRGB8P99AbsError": 2.7169228470382105,
+      "sRGB8MaxAbsError": 13.973023349849381
+    },
+    {
+      "resolution": 512,
+      "coveredTexels": 251200,
+      "paddedUncoveredTexels": 10944,
+      "paddingSteps": 5,
+      "uncoveredAfterPadding": 0,
+      "multiCoveredTexels": 0,
+      "conflictingTexels": 0,
+      "maximumLinearConflict": 0.0,
+      "sampleCount": 99360,
+      "sRGB8MeanAbsError": 0.24115725514802175,
+      "sRGB8P99AbsError": 1.3829424702749509,
+      "sRGB8MaxAbsError": 7.465024632616002
+    }
+  ],
+  "chosenResolution": {
+    "resolution": 512,
+    "coveredTexels": 251200,
+    "paddedUncoveredTexels": 10944,
+    "paddingSteps": 5,
+    "uncoveredAfterPadding": 0,
+    "multiCoveredTexels": 0,
+    "conflictingTexels": 0,
+    "maximumLinearConflict": 0.0,
+    "sampleCount": 99360,
+    "sRGB8MeanAbsError": 0.24115725514802175,
+    "sRGB8P99AbsError": 1.3829424702749509,
+    "sRGB8MaxAbsError": 7.465024632616002
+  },
+  "uvOverlapResolution": "No conflicting raster coverage. Shared boundaries produce identical colours. Independent geometric overlap review separate. U wraps at original seam; V clamps at poles. No UV or topology modifications.",
+  "sourcePreserved": true,
+  "credits": 0,
+  "tripoJobs": [],
+  "gameplayAcceptance": false,
+  "createdAt": "2026-11-05T16:11:14.145319+00:00"
+}
