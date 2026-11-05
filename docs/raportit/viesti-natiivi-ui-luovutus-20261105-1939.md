@@ -1,6 +1,9 @@
 # Natiivi-UI: luovutus 5.11.2026 klo 19.39 (konteksti 28 %)
 
-Korvaa -1913:n. Työhaara proto-repossa: `natiivi-ui/kyltit-219`, kärki 690f5e141, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, ei committaamatonta. Peili: natiivi-backup, peili/proto/natiivi-ui/kyltit-219 (sama kärki). Ei omaa ajoa käynnissä.
+Korvaa -1913:n. Työhaara proto-repossa: `natiivi-ui/kyltit-219`, kärki 84a2f3d83, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, ei committaamatonta. Peili: natiivi-backup, peili/proto/natiivi-ui/kyltit-219 (sama kärki). Ei omaa ajoa käynnissä.
+
+## Päivitys 19.4x (PT): 84a2f3d83, ajettu ja katsottu, viety PT:lle ja KK:lle
+690f5e141 aiheutti kaksi vikaa, molemmat korjattu: pyöreä merkki 3D-rakennuksen päällä (nyt NostotKartalla.KylttiOsuuMalliin myös portin ollessa kiinni) ja nimi Sainte-Chapelle sivussa (MalliKyltit: näkyvän rakennuksen nimi pysyy pois). Kuvat: /Users/Shared/Claude/proto-3d/lokit/julkaisija-pariisi-kyltit-84a2f3d83. Keskustassa 12 pyöreää. Kohta 3 alla on hoidettu; KK:lta odotetaan kohtia 1, 2, 4. Chatelet-tasoa ei ajettu uudelleen (korjaus koskee vain kiinni olevaa porttia).
 
 ## Ensin
 Odota KK:n vastausta viestiin 19.3x (jonossa, kun luovutus tehtiin). Älä muuta koodia ennen sitä. Viestit: `mcp__ccd_session_mgmt__send_message` session id:llä. Pyynnössä JU:lle aina rivi "mitä tämä ratkaisee" (10.5, JU huomautti).
@@ -9,7 +12,7 @@ KK:lle viety, kuvat katsottu täysikoossa: /Users/Shared/Claude/proto-3d/lokit/j
 
 KK:n ratkaistavana:
 1. Naru kaukana: pidin sen maan ja Euroopan näkymissä ennallaan. Suositus: näin. Vaihtoehto: pois kaikkialta (poista `|| !p.LahiAuki`, KaupunkiPallot.cs).
-2. Keskustassa 15 pyöreää merkkiä (11 kohteen kuvaa, 4 saapumiskuvaa), osa nimen päällä: Sorbonne, Pariisi, Sainte-Chapelle.
+2. Keskustassa 12 pyöreää merkkiä, osa nimen päällä: Sorbonne, Pariisi (lähempänä Saint-Germain-des-Prés'n luostari).
 3. Keskustassa nimi "Sainte-Chapelle" rakennuksen länsipuolella; Louvrella ja Notre-Damella ei karttanimeä. Syy mittaamatta. Korjataan vain KK:n pyynnöstä.
 4. Hintakyltti lähes kiinni nimessä Pompidou-keskus (chatelet). Hintakyltti ei väistä (2.215), ei muutettu.
 
