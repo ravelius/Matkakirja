@@ -1,4 +1,4 @@
-# Pelikoodari: luovutus 6.11.2026 klo 00.10: ovipari KK:lla, 51 tilaa LAV:lla, odotan seiniä
+# Pelikoodari: luovutus 6.11.2026 klo 00.04: ovipari KK:lla, 51 tilaa LAV:lla, odotan seiniä
 
 Täydentää -2215:tä; sen kohdat 0, 0b ja 0c ovat tässä korvattu, muut pätevät. Proto-worktree `/Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu`, haara `pelikoodari/tarkastelu-219`, kärki yhä `35140432d`: tässä sessiossa ei muutettu pelikoodia eikä ajettu Unityä. Ei junaan. **Taso 1 on yhä pääasia.**
 
