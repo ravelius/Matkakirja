@@ -8,7 +8,7 @@ Korvaa -1801:n. Ei vientejä. L = /Users/Shared/Claude/proto-3d/_tyo/linnanraken
 
 ## PT:n käsky (18.2x), auki
 Sauma rengas|tausta z noin 675 korjataan ennen vientiä, ensin mallista. Kaksi harmaata poikkiviivaa selvitetään; jos eri vika, kerrotaan erikseen.
-PT sai 18.31 suosituksen (jatkopäätöstä ei vielä luettu; tarkista list_events tai posti): lattia17 = lattia15, renkaan kolmiot leikataan z 675:een ja reuna y 0:aan, vanhaa kerrosta ei poisteta.
+PT:N PÄÄTÖS 18.3x, SEURAAVA TYÖ: lattia17 = lattia15 + renkaan kolmiot leikataan z 675:een, vanha kerros jää. Tarkista ensin mallista, onko väriero ja katkeavat laattarivit yhä jäljellä; ajo vasta sitten JU:n vuorolla, noin 5 kuvaa ja rivi "mitä tämä ratkaisee". Lähempi harmaa viiva on erillinen kohta, ei samaan arvaukseen. Ei vientiä.
 
 ## Tiedossa
 - Sauma: rengas ja tausta limittyvät z 661–675, ja rengas on 6–50 cm päällä. Pisteiden lasku (lattia16) jätti katkoviivan ja laattarivin katkot. Taustan lattia päättyy z 675:een, palarajat vain 670:een.
