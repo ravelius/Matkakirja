@@ -1,7 +1,15 @@
 # Karttaseppä: luovutus 5.11.2026 klo 14.52 (KS)
 Syy: konteksti 30 % (7.37). **Lue tämä, sitten -1407 (karttaseppa/luovutus-20261105-1407) ja -1350.** Tämä voittaa ristiriidassa. Python: /opt/homebrew/opt/python@3.14/bin/python3. Proto-worktree W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219, haara karttaseppa/nahtavyydet-219, etäpää natiivi-backup (EI origin), kärki 8b19d7de1.
 
-## KK 14.5x, uusin: tämä täsmentää KORJAUKSEN kohdelistan
+## OMISTAJA 14.55, uusin: tämä voittaa alla olevat
+Kortti "Jäävätkö kadonneiden ihmeiden piirrokset kartalle?" = **"mitään pieniä malleja ei saa jäädä."**
+KK:n tavoite: Pariisin kartalla ei ole yhtään pientä mallia tai leikattua pientä kuvaa.
+- **Myös pois kuvina:** Grand Châtelet, Temple-torni, Bastilji, Tuileries, Galerie des Machines ja Les Halles; kumoaa Pariisissa 2.11. 08.31:n. Alla oleva "ÄLÄ POISTA" ei enää päde.
+- **Jää:** kadonneet ihmeet tähdellisenä nimikylttinä, joka avaa nostoruudun (2.11. 08.42:n tapa). Kuumailmapallo ja nappula.
+- **Pelin tehtävä:** jos pienellä mallilla on tehtävä, se siirtyy kylttiin. Jos ei voi siirtyä, rivi KK:lle ennen poistoa. Koskee myös turistiinfoa, lehtikioskia ja Louvren museota.
+- **Lopuksi:** Mac-kuva KK:lle ilman piilotettua ui-kerrosta.
+
+## KK 14.5x: tämä täsmentää KORJAUKSEN kohdelistan
 KK: "lista ei täsmää, koska kuvassa näkyy muitakin kohteita." Omistajan oma kuva 14.52 ("Tässä näkyy"): `docs/raportit/kaappaukset/omistaja-20261105/pieni-ipad-pienet-3d-kohteet-1452.png` (pieni iPad; hae KK:n haarasta tai kysy polku, jos ei ole tässä checkoutissa). Katso se ensin.
 - **Poistoon kuvasta:** vaaka + kaari nappulan alla, pieni värillinen Notre-Dame pyöreän kuvan vieressä (iso nimi "Notre-Dame" sen vieressä), Place des Vosgesin pienoismalli, pieni torni, "!!"-merkit oikealla alhaalla, laiva Seinellä.
 - **ÄLÄ POISTA ennen omistajan vastausta (KK kysyy nyt):** kadonneiden ihmeiden kuvat Grand Châtelet, Temple-torni, Bastilji, Les Hallesin hallit (omistaja 2.11. 08.31, 08.42).
