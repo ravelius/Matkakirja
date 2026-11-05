@@ -2,8 +2,11 @@
 
 Korvaa -2222:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Cron "4 9 * * *" unity-julkaisut.py uudelleen (7.41).
 
-## PT 23.2x (sitova)
-Yötila: omistaja nukkuu, kysymykset PT:lle, ei KK-kortteja. Ateenan kamera SULJETTU (KK, Raamattu 2.136): kärki c963641f5 ilman korjausta, älä palauta 37fa268e4:ää, ei käsitellä enää. Alkuosan ajastinvika korjataan yhä ennen junaa. Marais: jatka KK:n korjauksilla, sitten osa C; AAMULLA kuvat KK:lle omistajaa varten.
+## PT JA KK 23.3x (sitova; AINOA VOIMASSA OLEVA Ateenan kamerasta)
+Yötila: omistaja nukkuu, kysymykset PT:lle. Ateenan kamera PIDETÄÄN (omistaja 21.02 poisti vain luennan, Raamattu 2.136 pitää muun). Aiemmat "suljettu, älä palauta" -viestit ja tämän luovutuksen alkuversio ovat vanhentuneita.
+TEHTY: 388742104 palautti 37fa268e4:n yhdellä commitilla (natiiviseppa/pariisi-aloitus-219, työpuu wt/proto-natiiviseppa-kierto, peilissä), mukana Alkuosan ajastinkorjaus; Linssit 2249/2249; SHA kerrottu PT:lle. Tila ei muutu ilman viestiä, joka mainitsee 388742104:n.
+AJO PYYDETTY JU:lta: Ateena (5 kuvaa), Tukholma (5), esityskuva 30fdefd98 (3), Mac, lokit natiiviseppa-ateena-, -tukholma- ja -esityskuva-388742104. Kun valmis: mittarit skenaarioiden alussa, kuvat täysikokoisina, tulos KK:lle katsottuina, ei junaan.
+Marais ei keskeydy tästä. Aamulla Marais'n kuvat KK:lle omistajaa varten (KK nollautui: seuraava KK).
 
 ## SEURAAVA TYÖ: katso JU:n ajo 30e34cc9e
 Lokikansio natiiviseppa-marais-30e34cc9e, skenaario _tyo/natiiviseppa/marais/sk-marais-korjaus.txt, 3 kuvaa (k1 kauko, k2 keski-0, k3 keski-180). JU kertoo polun. Ei iPadia, ei junaan.
@@ -22,7 +25,7 @@ Marais hyväksytty jatkoon. Ennen koko Pariisia korjataan, ja kuvat KK:lle katso
 2. Nimet: nimi näkyy kokonaan tai ei ollenkaan.
 3. Reuna: alue ei saa erottua laattana. Häivytys kaukana litteään karttaan; nähtävyysalueen rajalla talot loppuvat siististi.
 Sitten koko Pariisi paloina vain lähellä (osa C); 550 Mt kerralla ei käy. MUISTIA EI MITATA (omistaja 4.11. 22.41). Ei iPadia, ei junaan, sarja ei saa hidastua. Pienin kuvalista, JU:n vuorolla.
-Ateenan kamera: ei muutosta, omistaja ei pyytänyt; aloitushaaran kärki ilman korjausta on oikein. KK:n sana on siis saatu, tämä korvaa -2222:n "KK:n sana odottaa".
+Ateena: KK oikaisi tämän, katso ylin luku.
 
 ## Tehty 30e34cc9e (natiiviseppa/marais-talot, työpuu wt/proto-natiiviseppa-marais, peili natiivi-backup peili/proto/natiiviseppa/marais-talot)
 Testit TaloAlue 4/4. EI nähty ajossa, varjostin muuttui.
@@ -45,8 +48,7 @@ Mittarit: 5,1 Mt/km², 1667 taloa/km², noin 550 Mt jos kaikki kerralla (179 000
 7. Kuvat: pienin lista, JU:n vuorolla, "ratkaisee"-rivi. KK:lle katsottuina.
 
 ## Haara natiiviseppa/pariisi-aloitus-219
-Kärki c963641f5, peilissä, puhdas, ei junassa, junaan vain PT:n kautta. Työpuu wt/proto-natiiviseppa-kierto. 30fdefd98:n esityskuva menee seuraavaan yhteiseen ajoon, ei omaa ajoa. Skenaariot _tyo/natiiviseppa/pariisi-aloitus/.
-**ENNEN JUNAA KORJATTAVA (PT):** LivianPaljastus.Alkuosa jättää ajastimen päälle, jos sarja on jo kuultu (`if (!sarja) return;`, pitäisi olla `{ Lopeta(); return; }`): SarjaKaynnissa jää todeksi ja aarrelaskuri voi jäädä odottamaan. Korjaus oli 37fa268e4:ssä, joka on poissa haarasta. Korjaa erikseen ilman kameraa, kun juna lähestyy.
+Kärki 388742104, peilissä, ei junassa, junaan vain PT:n kautta. Skenaariot _tyo/natiiviseppa/pariisi-aloitus/. Alkuosan ajastinvika on korjattu tässä kärjessä.
 
 ## Avoimet
 Avoimet 2 (vahdit) ei NS:lle; pystysauma KS:llä. NUI:n e4b376546 ja aloitushaara törmäävät Nimikerros.cs:ssä (PT tietää). KK:lle ja PT:lle kerrottu ajon tila 23.2x.
