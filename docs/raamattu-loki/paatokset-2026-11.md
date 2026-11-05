@@ -269,3 +269,7 @@ KS ilmoitti itse (KK:n kautta 5.11.): 1) Overpass 5.11. klo 11.59-12.03, kuusi k
 ## KYLTIT HAIPYVAT USVAAN KUTEN NIMET (2.215) (5.11.2026 klo 18.18)
 
 KK 5.11. klo 18.06: 'Häivytä ne kuten nimet'. Omistajan 14.44 sanat koskivat nimiä, ulotus kyltteihin on KK:n (NUI:n selvitys). Nimen väistö pyöreästä merkistä oli NUI:n oma ratkaisu, ei päätös: PT määräsi sen poistettavaksi ennen ajoa (poisto NUI:lla, ei vielä tehty), jotta Hôtel Matignon ja Hôpital Lariboisière jäävät kartalle.
+
+## NIMI VAISTYY PYOREAN MERKIN KOHDALTA (2.215), OIKAISUT (5.11.2026 klo 18.20)
+
+Oikaisee klo 18.18:n kirjauksen: PT perui väistön poiston, koska KK on päättänyt: '26c7ffcfc:n linja sopii: merkki jää ja nimi väistyy sen kohdalta' (NUI:n välittämä). Hôtel Matignon ja Hôpital Lariboisière voivat kadota keski-kuvasta. Oikaisee klo 18.15:n kirjauksen: sähköposti oli kymmenessä skriptissä ja kahdessa mainin työkalussa, ei viidessä (KS, KK). Rivitarkistus ei ollut täysin puhdas: Tuileries'n paikkojen i1, i2 ja p1 lähde 'OSM Jardin des Tuileries', alkuperä epäselvä; PT: korvataan Geofabrikista tai Wikidatasta, muut paikat jäävät. Overpass yhä yhdeksässä mainin työkalussa; PT: KS estää yhdellä testillä.
