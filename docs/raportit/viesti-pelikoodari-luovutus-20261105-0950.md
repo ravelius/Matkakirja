@@ -1,0 +1,35 @@
+# Pelikoodari: luovutus 5.11.2026 klo 09.50 – ovien kartta v16, kuvat JU:lla
+
+Korvaa -20261105-0810:n tilan; sieltä tausta tarvittaessa (täyte, kaide kohta 3, muistisarja kohta 4). Ei junaan mitään ennen omistajan pyyntöä; omistajalle vain KK:n kautta. Merkitse jokaiseen tulokseen runko.
+Proto-worktree `/Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu`, haara `pelikoodari/tarkastelu-219`, kärki `5d9b1552d` (myös `natiivi-backup`issa). Polut `/Users/Shared/Claude/proto-3d/`. Python `/opt/homebrew/bin/python3` ilman -I. Työkalut `_tyo/pelikoodari/tayte/8cd/`.
+Viestit send_messagella: PT local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31, JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KK local_d5f31591-21fa-4cb0-bab3-bcd3435d075a, LAV local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e, Postivahti local_1f31f830-9df5-41c1-8992-172e100af57f.
+
+## 1. Seuraavaksi
+PT 09.50: käynnistys tehty, iPad taas JU:n vuorolla. Muistisarja menee JU:n iPad-jonoon (ks. -0810 kohta 4).
+1. JU:n ajot: 230 (runko `8b0f8f9e1`, 益寿斋) ja 231 (`5d9b1552d`, 西暖殿). Kansio tulee JU:lta riviksi (`lokit/tarkastelukuvat-<sha>-*`). JU kertoi, ettei kumpikaan alkanut ennen käynnistystä; jos riviä ei tule, kysy JU:lta. Älä vaihda worktreen haaraa ajon aikana.
+2. Katso molemmat täysikoossa. 西暖殿 on KK:n pyyntö ennen arkkia.
+3. 益寿斋: uusi paikka x −134,47, z 385,8, nx −1, keskelle-peitto, täyte 7,45 × 3,45 m ilman valoa (malli varasto.glb). Jos näkyy huonosti, ratkaise ennen arkkia. Ovettomaksi jättäminen vaatii omistajan vastauksen.
+4. Kohta 2 (KK): 浴德殿 vaalea kaista ja pystyviiva, 四执库 piikki lehden alareunassa, 重华宫 kiila, 皇极殿 ikkuna. Konteksti ratkaisee määrän; yksi ajo kerrallaan JU:lta.
+5. Arkki KK:lle: `_tyo/pelikoodari/tayte/arkki.py <kansio> <etuliite> 3`. Merkitse rungot, kuten v13:n arkissa. Mukaan viestiin: 房子11–房子8 6,4 m (ei voi siirtää samankokoisena, ajettu), 体元殿:n ja 咸福宫:n avattu lehti ikkunan edessä, 绥寿殿:n valoton täyte, ikkunakorjaus (alla), 弘义阁 (B4) vastaus.
+
+## 2. Kartta
+v16 (`_tyo/pelikoodari/kulkukartta/v16`, `Resources/JuoksuOvet.json` = v16). Pinnat v15:ssä: S v7:stä, Ik laskettu uudelleen (`kulkukartta.py <kansio> <osasarja> --ikkunat`). Uudelleenajo: linkki pinnat.npz v15:stä, `kulkukartta.py <v> x`, `tayte_valo.py <v>`, kopioi ovet.json käsin. Erot: `8cd/ero15.py vA vB`.
+Korjaus `734ab83ef`: `pinnat()` keräsi ikkunat ennen mallin siirtoa, joten Ik:ssä oli oikeilla paikoilla vain tausta ja muurikate. Ovien vaikutus v14 → v15: 7 ovea (永和宫 25,5 m, 益寿斋, 体元殿, 长春宫, 咸福宫; 钟粹宫 ja 绥寿殿 saivat täytteen). Korjaus `8b0f8f9e1`: W ≤ 6,5:n aukkoa, jossa on mallin oma lehti, ei enää käytetä (益寿斋:lla ruskeat lehdet näkyivät ja kaman yli läpi).
+Mittarivaroitus: `mat.py` ja `seinat.py` katsovat kolmioita ennen siirtoa, joten ne näkevät vain taustan. Käytä mallien tarkistukseen s.siirra-käärettä (`8cd/`-kansiossa ei vielä valmista; malli: `pinnat()`:n `siirra`).
+Ajo 734ab83ef katsottu (`lokit/tarkastelukuvat-734ab83ef-093144`, 7/7 täysikoossa): 永和宫, 长春宫, 钟粹宫 hyvät; 绥寿殿 valoton täyte näkyy vaaleana suorakaiteena; 体元殿, 咸福宫 lehti ikkunan edessä (ei korjattu); 长春宫, 咸福宫 tasaisen harmaat portaat (ei uusi).
+
+## 3. Valo ja leivonta
+Ilman valoa v16: 南库, 军机处, 绥寿殿, 益寿斋. 南库 ja 军机处: `kk-tausta-1-2` (mitattu V4_red maailmassa, ei valo_rgbm:ää). PT: leivotaan vasta LAV:n levykorjauksen jälkeen, ei omaa ajoa. LAV: valo puuttuu vahingossa v96:sta alkaen, leivottu pala jo `kk2r/leivottu`.
+绥寿殿: seinä `tyohuone.glb`, ei valo_rgbm:ää eikä UV1:tä (7158 kolmiota 4 m:n sisällä, mitattu). 益寿斋: ikkunat `varasto.glb`:ssä; seinä pääteltynä sama, ei mitattu erikseen.
+PT: jos tuot leivontapyynnön 绥寿殿 + 3, kerro kohteet, hinta LAV:lta ja mitä vika näyttää pelissä ilman leivontaa.
+
+## 4. Omistajan ja KK:n linjaukset
+Omistaja 09.35: 东所, 1341826243, 弘义阁, 碑亭, 碧螺亭, 玉翠亭, 四神祠, 御景亭, 广播室 saavat jäädä ilman ovea, ei enää yrityksiä (työlistassa "Juoksupelin ovet: yhdeksän rakennusta ilman ovea").
+Omistaja 08.52 "Kelpaa" ovien ulkonäöstä, kun viat on korjattu. Seuraava arkki KK:lle → omistajalle. Ei junaan.
+KK: 房子11–房子8: siirrä samankokoisena, jos mahdollista; muuten jätä ja kerro arkin yhteydessä. Toinen kierros ajettu: kumpikaan ei löydä paikkaa (molemmat None; `8cd`:ssä ei ajoskriptiä, tulos kartalla v16, pinnat v15).
+
+## 5. Muut avoimet
+LAV: 房子26 irto-listalla; 房子11:stä y 0,37 ja 0,35 ovat, y 0,31 ja y 0 eivät; 弘义阁 y 0,81 (68 m²) ei ole, V4_marmoria ei löytynyt vaakapintana, joten havaintoni on epävarma. LAV katsoo ensin, poistaako levykorjaus nämä; ei tehtävää minulle ennen sitä.
+Kaide: sävy a `c1d985643` haarassa `pelikoodari/muurin-runko-219` (ei käännetty); avoimet haaleus ja LOD2 (-0810 kohta 3).
+Sen jälkeen PT:n järjestys: tk-taihemen-lod0:n syy (-0810 kohta 4).
+Tutkimatta: 凝香亭:n mittaus jää odottamaan pitkissä listoissa (`TarkasteluKesken`), 延禧宫 kivirakennus (kerro KK:lle), 房子11:n maalaatan reuna.
