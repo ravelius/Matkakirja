@@ -1,0 +1,369 @@
+{
+  "taskNumber": 2097,
+  "site": "riemukaari",
+  "completedAt": "2026-11-05T16:10:09.378598+00:00",
+  "generationCalls": 8,
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "nativeImages": [
+    {
+      "view": "ylhaalta",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-lounas",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "etela",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohjoinen",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "ita",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "lansi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    },
+    {
+      "view": "pohja-uusi",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "requiredCanvasPass": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "productionPixelsPostprocessed": false,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10; explicit bboxOverrides if stated. Manual main cornice and top-roof datum on native QA strips, uncertainty4px. Ratios measured to main roof separate from decorative tip. No normalization of production images.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        485,
+        59,
+        1051,
+        956
+      ],
+      "widthPx": 566,
+      "totalHeightPx": 897,
+      "groundY": 955,
+      "corniceY": 213,
+      "corniceHeightPx": 742,
+      "roofY": 59,
+      "roofHeightPx": 896,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.6316964285714286,
+      "targetRatio": 0.4483245861929754,
+      "ratioErrorPercent": 40.901580690808515,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 49.54
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        526,
+        60,
+        1010,
+        955
+      ],
+      "widthPx": 484,
+      "totalHeightPx": 895,
+      "groundY": 954,
+      "corniceY": 213,
+      "corniceHeightPx": 741,
+      "roofY": 60,
+      "roofHeightPx": 894,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 0.5413870246085011,
+      "targetRatio": 0.4483245861929754,
+      "ratioErrorPercent": 20.757826200383356,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 49.54
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        257,
+        54,
+        1279,
+        970
+      ],
+      "widthPx": 1022,
+      "totalHeightPx": 916,
+      "groundY": 969,
+      "corniceY": 205,
+      "corniceHeightPx": 764,
+      "roofY": 54,
+      "roofHeightPx": 915,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.1169398907103825,
+      "targetRatio": 0.9047234557932984,
+      "ratioErrorPercent": 23.456497514039153,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 49.54
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "bbox": [
+        256,
+        54,
+        1280,
+        969
+      ],
+      "widthPx": 1024,
+      "totalHeightPx": 915,
+      "groundY": 968,
+      "corniceY": 205,
+      "corniceHeightPx": 763,
+      "roofY": 54,
+      "roofHeightPx": 914,
+      "measurementUncertaintyPx": 4,
+      "widthRoofHeightRatio": 1.1203501094091903,
+      "targetRatio": 0.9047234557932984,
+      "ratioErrorPercent": 23.833432441167535,
+      "ratioPass5Percent": false,
+      "totalHeightApproxTargetM": 49.54
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 15.619047619047619,
+      "pass5Percent": false
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 0.19550342130987292,
+      "pass5Percent": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 3.0564784053156147,
+  "corniceAgreement5Percent": true,
+  "baselinePixelSpread": 15,
+  "obliques": {
+    "southwest": {
+      "roofEdgePoints": [
+        [
+          384,
+          271
+        ],
+        [
+          980,
+          25
+        ],
+        [
+          1153,
+          148
+        ]
+      ],
+      "measurementMethod": "Two consecutive perpendicular outer roof edges, manually selected ±3px; roof plane proxy, not surveyed ground plane",
+      "uncertaintyDegrees": 3,
+      "pass": false,
+      "estimatedSinElevation": 0.5417188250462353,
+      "estimatedElevationDegrees": 32.80072354007534,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    },
+    "northeast": {
+      "roofEdgePoints": [
+        [
+          383,
+          271
+        ],
+        [
+          980,
+          24
+        ],
+        [
+          1153,
+          148
+        ]
+      ],
+      "measurementMethod": "Same roof edge proxy asSW, symmetricoutline;180degreeopposite not independentlyconfirmed",
+      "uncertaintyDegrees": 3,
+      "pass": false,
+      "estimatedSinElevation": 0.544564218730153,
+      "estimatedElevationDegrees": 32.99488889515085,
+      "targetSin": 0.9063077870366499,
+      "passTarget": false
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      681,
+      404,
+      855,
+      620
+    ],
+    "actualBBox": [
+      595,
+      263,
+      946,
+      720
+    ],
+    "exactFootprintPass": false,
+    "orthographic90Pass": true
+  },
+  "ground": {
+    "footprintPixels": 19626,
+    "grassLikePixels": 385,
+    "grassLikeFraction": 0.019616834810965045,
+    "coverageMetric": "Heuristic grass-color test only; not semantic proof of paving",
+    "metresPerPixelApprox": 0.993302754332739,
+    "pathSamples": [
+      {
+        "axis": "x",
+        "position": 370,
+        "start": 749,
+        "end": 756,
+        "widthPx": 8,
+        "widthMetresApprox": 7.946422034661912,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "y",
+        "position": 890,
+        "start": 492,
+        "end": 499,
+        "widthPx": 8,
+        "widthMetresApprox": 7.946422034661912,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      },
+      {
+        "axis": "x",
+        "position": 650,
+        "start": 774,
+        "end": 781,
+        "widthPx": 8,
+        "widthMetresApprox": 7.946422034661912,
+        "uncertaintyPx": 2,
+        "pass6to12mApprox": true
+      }
+    ],
+    "pavingFullFootprintPass": false,
+    "sourceParkLayoutPreserved": false,
+    "outsidePixelIdentityVerified": true,
+    "receiverMustCompositeMaskOnly": true,
+    "outsidePixelIdentityPass": false,
+    "outsidePixelCount": 1484751,
+    "outsideChangedPixels": 1484573,
+    "outsideMeanAbsoluteChannelDifference": 6.353398650682842
+  },
+  "visualIssues": [
+    "SW/NE roof edge camera proxy about33degrees instead65",
+    "Top footprint too large and shifted",
+    "Side ratio and opposite narrow width fail5percent",
+    "South narrow facade wrongly includesfrontsculptures",
+    "Narrow side recesses look like closed doors",
+    "Small detailed sculpture insteadsimplemasses",
+    "Ground inner-ring path changed; outsidecomposite required"
+  ],
+  "notes": "Lähde- ja ilmansuuntakorjaus #2116 otettu huomioon ennen sivukuvia. Nimeäminen: S=Kléber/SSW ja N=Wagram/NNE ovat kapeat päät; E=Champs-Élysées/ESE ja W=Grande-Armée/WNW ovat suuret kaaret. Katto on180°symmetrinen: viistojen täsmällistä vastakkaisuutta ei voi todentaa pelkästä siluetista; veistosryhmät vaihtuvat, mutta lännen/idän kuva-aiheiden täydellistä veistoshistoriallista vastaavuutta ei hyväksytä. Lounaan promptissa oli ristiriitainen kaakkoinen pääjulkisivumainintaSWkameralle; tämä jää diagnostiikkaan. Molemmat viistot jäävät selvästi65°kulmasta. Yläkuva on ortografinen, mutta koko on noin kaksinkertainen ja sijainti siirtynyt: ei rekisteröintihyväksyntää. Etelän kapealle sivulle tuli virheellisesti pääsivun suuret veistosryhmät; pohjoisessa niitä ei ole. S/N-aukot näyttävät paneeliovilta, vaikka niiden piti olla tummia tyhjiä syvennyksiä. Suuret pääaukot E/W ovat tyhjiä tummia syvennyksiä. Kaikki neljä sivua ovat vaakasuoria ortografisia mutta leveys/korkeussuhde ei vastaa varmennettua rakennusrunkoa. Veistokset ovat liian yksityiskohtaisia tavoiteltuun yksinkertaistukseen. Yksinkertaistettu: nimet ja kaiverrusteksti pois, pieni kattokalusto pois, paksu yhtenäinen kattoparapetti. Runko44,82×22,21×49,54m varmennettiinCMN/CND3D+kaupunginlähteistä; tilauksen51×28×50m poikkeama kirjataan myös vaihtoehtoisena suhteena, jotta lähteen ero ei katoa. Maapohja on tasainen, sisäpuolen aavekorttelit poistettu, kaksitoista liittymäpolkua on näkyvissä ja lännen ulkopuoliset puistot säilyvät visuaalisesti. Alkuperäisen keskisen ympyrän sisärengas vaihtui suuremmaksi kiertopoluksi rakennuksenkiveyksen ympärille; tarkkaa sisäpolkusamuutta ei väitetä. Maskin ulkopuolta ei ole yhdistetty tai jälkikäsitelty: vastaanottajan täytyy leikata vain maskin sisäosa. Ei uusia yrityksiä; koko erä diagnostiseen arviointiin, ei omistajahyväksyntä eikäTripo-lupa.",
+  "noAutomaticRetry": true,
+  "briefDimensionAlternative": [
+    {
+      "view": "etela",
+      "briefRealWidthM": 28,
+      "briefHeightM": 50,
+      "targetRatio": 0.56,
+      "ratioErrorPercent": 12.802933673469386,
+      "pass5Percent": false
+    },
+    {
+      "view": "pohjoinen",
+      "briefRealWidthM": 28,
+      "briefHeightM": 50,
+      "targetRatio": 0.56,
+      "ratioErrorPercent": -3.323745605624817,
+      "pass5Percent": true
+    },
+    {
+      "view": "ita",
+      "briefRealWidthM": 51,
+      "briefHeightM": 50,
+      "targetRatio": 1.02,
+      "ratioErrorPercent": 9.503910853959074,
+      "pass5Percent": false
+    },
+    {
+      "view": "lansi",
+      "briefRealWidthM": 51,
+      "briefHeightM": 50,
+      "targetRatio": 1.02,
+      "ratioErrorPercent": 9.838246020508844,
+      "pass5Percent": false
+    }
+  ]
+}
