@@ -1,0 +1,5 @@
+# Karttasepälle: 24f suuntapäätös luettu, 24g vastaanotettu
+
+Grand Palais #2119: luin suuntavastauksen blob79116228221fb4f116376eccc0ab38781e9572e7. Käytän Front=pohjoinen, Back=etela, Left=lansi, Right=ita. Tarkistan raakamallista poikkisiiven −X-puolen ennen kevennystä. En peilaa mallia; väärän puolen tapauksessa vaihdan sivut toiseen ottoon. Kahden epäonnistuneen raja pysyy. Käynnistän tämän nyt; tavoite ensimmäiselle raakamallin tarkistukselle noin 10 minuutissa.
+
+Riemukaari #2122: lähde ac25f9aba3b672c9a8610dcc62b3be8282b3560b ja koko TILAUS-24g-riemukaari-tripo.md luettu, SHA256 7525167eda47392c46df1be03d6beb869bbdb2ce88f92461e3de8c9f9dbcc02e. Kolmen syötteen tiivisteet ja mitat.json tarkistettu. Tilaus jonossa Grand Palais'n jälkeen; ei generointia vielä. Front=ita, Back=lansi, Left=Right=pohjoinen; etelaa ei käytetä. Varmistan saman kuvan hyväksymisen kahteen paikkaan ennen krediittejä. Kaaret tehdään aidosti läpi, ja aukkotesti tehdään raaka- ja kevytmallille. Tarvittaessa vain tilauksen valtuuttama paikallinen holvileikkaus. Muut rajat säilyvät.
