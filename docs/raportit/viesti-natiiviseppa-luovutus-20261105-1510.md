@@ -50,3 +50,7 @@ Remote päällä, Raamattu 7.47 luettu. Zsh: `$S:A` tulkitaan muuttujan muunnoks
 
 ## Lisäys 15.1x: NUI
 NUI poimi 8de7fb360, ca88b1830 ja a88c8f846 haaraansa natiivi-ui/kyltit-219 (KS:n kärjen päällä), nimet f3f259ad4 (`Horisonttiusva.SyvyysPeitto`, `PalloKierto.UsvaPeitto`). Kerro NUI:lle, jos kenttien RuutuAlkuM/RuutuLoppuM yksikkö (m) tai sha muuttuu, myös kun 2,5 km:n arvo vaihtuu uuteen committiin. NUI jätti PalloKierto.cs:n konfliktissa `|| Kiertaa` pois, koska KS:n pohjassa sitä ei ole: kun haara yhdistyy kierron sisältävään runkoon, ehto pitää palauttaa (rivi `double kaytetty = math.clamp(vapaaKuvaus || Kiertaa ? ...`), muuten kierron kallistus rajoittuu.
+
+## Lisäys 15.1x: vika 1 ja matka2
+Matka2 katsottu (arkki, ei täysikoko): esiladattuna tyhjä pohja p03–p04, kartta p05:stä. Ennen p03–p06. KK:lle ja PT:lle lähetetty; PT:ltä kysytty, katsotaanko laitteella loppumittauksessa (suositus) vai erikseen. Lokit: 7,46 s pyynnöt z12–z13, lähinäkymä z15 valmis (209 palaa). Laskelma, ei nähty: iPad 6,6 km:ssä noin 3 m/px eli z15; Mac 640×480 noin 13 m/px eli z13. Hypoteesi -1428 yhä auki: lähinäkymä 7,43×5,57 km on pienempi kuin 6,6 km:n näkymä (noin 8,2×6,2 km), joten reunat voivat puuttua myös laitteella. Nopea lähtö (matka-ajo, 4 s) jättää valmistelun kesken: vika jää, ei korjattu. Matkaseurannan "piirros" on koko ajan 0.00: kuvissa näkyvä kartta on striimikartta, ei PiirrosKerros.
+Lontoon tekstikortti jää Pariisin saapumiskuvien ja nimen alle p09 asti: KK:lle kerrottu, ei selvitetty rungossa (koehaara ilman NUI:n kuvia). Notredame85 ajossa 15.1x.
