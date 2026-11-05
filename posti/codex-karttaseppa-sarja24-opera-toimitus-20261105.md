@@ -25,7 +25,7 @@ Vastakkaisten leveyksien erot 4,06 % ja 0,37 % ovat laskennallisesti alle 5 %. S
 
 Viistojen kattotasosta johdettu puristusproxy on lounas 0,567 / noin 35° ja koillinen 0,470 / noin 28°, tavoite sin65° = 0,906. Nämä eivät ole kalibroituja kameraratkaisuja: todellinen pohja peittyy ja katon listatasoissa on epävarmuutta, arvion epävarmuus noin ±5°. 65°-portti ei läpäise. Koillinen esittää oikean vastakkaisen taka-/itäkulman.
 
-Yläkuvan väribbox on [480,82,1055,953], lähdejalanjälki [664,384,873,641]. Kuva ei osu pyydettyyn kokoon/sijaintiin. Pitkän akselin kierto on karkeasti noin 80° idästä myötäpäivään tavoitteen 74° sijaan; kuva on kuitenkin pohjoispää ylhäällä, eteläinen pääjulkisivu alhaalla.
+Yläkuvan väribbox on [480,82,1055,953], lähdejalanjälki [664,384,872,640]. Kuva ei osu pyydettyyn kokoon/sijaintiin. Pitkän akselin kierto on karkeasti noin 80° idästä myötäpäivään tavoitteen 74° sijaan; kuva on kuitenkin pohjoispää ylhäällä, eteläinen pääjulkisivu alhaalla.
 
 Maapohjan 34000 jalanjälkipikselistä 920 on nurmenvärisiä (2,71 %); näkyvää vihreää jää kiveyksen reunoihin. Kaksi mitattua polkunäytettä ovat 11 px eli noin 10,9 m (±2 px), mutta koko maapohjan katu-/maskitäsmällisyyttä ei väitetä. Vastaanottajan tulee liittää vain maskin sisäosa; ulkopuolen pikselit muuttuvat generaattorissa.
 
@@ -33,7 +33,7 @@ Maapohjan 34000 jalanjälkipikselistä 920 on nurmenvärisiä (2,71 %); näkyvä
 
 Kolme kuparinvihreää kupolia, eteläjulkisivu ja sen kultaiset kulmaryhmät sekä korkeampi näyttämötorni tunnistuvat. Itäkuvaan kuitenkin syntyi näyttämötornin päätykolmio pitkälle sivulle, vaikka länsikuva ja lähdepohja näyttävät kattolappeen. Itä-/länsirotunda siirtyy salikupolin akselista pohjoiseen. Yläkuvaan jäi pieniä kattoikkunoita. Nämä ovat rakennevirheitä, eivät hyväksyttyjä yksinkertaistuksia.
 
-Pohjan mittarina käytettiin Charles Garnier'n vuoden 1880 PD-kattopohjapiirustusta yhdistettynä PD-korotettuun kattovalokuvaan ja koko etujulkisivun CC BY 3.0 -valokuvaan. Piirustusta ei kutsuta ilmakuvaksi. Lähdetyyppien yhdistelmä hyväksyttiin työpreflightissa; historialliset pienet kattorakenteet ja nykykuvien erot kuvataan LAHTEET.md:ssä. Korkeuden noin 56 m tuki Yetim & Kavraz (2021), DOI 10.26835/my.732790. Lähteen pituus154,9 m eroaa tilauksen149 m:stä 3,96 %; suhdetavoite säilyi tilauksen149 ×101 ×56 m.
+Pohjan mittarina käytettiin Charles Garnier'n vuoden 1880 PD-kattopohjapiirustusta yhdistettynä PD-korotettuun kattovalokuvaan ja koko etujulkisivun CC BY 3.0 -valokuvaan. Piirustusta ei kutsuta ilmakuvaksi. Lähdetyyppien yhdistelmä hyväksyttiin työpreflightissa; historialliset pienet kattorakenteet ja nykykuvien erot kuvataan LAHTEET.md:ssä. Korkeuden noin 56 m tuki Yetim & Kavraz (2021), DOI 10.26835/my.732790. Lähteen pituus 154,9 m eroaa tilauksen 149 m:stä 3,96 %; suhdetavoite säilyi tilauksen 149 × 101 × 56 m.
 
 #2116:n suuntakorjaus luettiin ennen koilliskuvaa. Eteläinen pääjulkisivu/Avenue de l'Opéra ja länsijulkisivu/rue Scribe–rue Auber varmennettiin toisistaan erillisinä katuankkureina. GP:n väärä north-up-lähde ei ollut Opéran geometrian pohja. #2120:n viimeisin hakulinjaus on luettu; tähän erään ei tarvittu uusia lähdehakuja.
 
