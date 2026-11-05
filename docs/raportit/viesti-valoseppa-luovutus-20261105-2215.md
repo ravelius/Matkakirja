@@ -1,5 +1,9 @@
 # Valosepän luovutus 5.11.2026 klo 22.15
 
+## LISÄYS 22.37: ENSIN TÄMÄ
+Ajo 7da270ac5 on TEHTY (L2, 172 s, lokit/esikatselu-20261105-223303, 251 ja 331 ruutua, LUKKO VAPAA ilmoitettu). Ruutuja EI ole katsottu, koska konteksti täyttyi. ÄLÄ pyydä uutta vuoroa, vaan aloita lisäyksen 22.33 kohdasta 2 tästä kansiosta: pa3 kierrossa on ruudut noin 205–216, rajaus noin (710, 533). Sitten kohta 3 ja osa A.
+Lokissa "ohjelmakohteet: luotu" on 3 kertaa yhdessä ajossa. Tallenteissa kohteet latautuvat uudelleen; en selvittänyt, onko se haitaksi. Katso osan A alussa, koska muisti ja lataus kasvavat kohteiden myötä.
+
 ## LISÄYS 22.33: TÄMÄ KORVAA LISÄYKSEN 22.25 JA KOHDAT 1–4
 Liike katsottu ajosta a48428884 (L2, noin 186 s, lokit/esikatselu-20261105-222704, LUKKO VAPAA ilmoitettu). Tulos KK:lla ja PT:llä. Pinnat pysyvät; ohuet osat nakuttavat 1376-kokoisessa ruudussa, kuten Notre-Damekin. Yksi selvä vika: musta pikseli Pont Alexandre III:n pään kannella ruuduissa 208–210 (kierto).
 Koodi nyt 7da270ac5 (natiivi-backup): aluslaatta kannen ja pään sauman alle. Syy on PÄÄTELTY (T-liitos saumassa), ei todettu. Testit läpi: Mitat, Reunakivi, Ajoradan, Holvit. Ei nähty ajossa.
