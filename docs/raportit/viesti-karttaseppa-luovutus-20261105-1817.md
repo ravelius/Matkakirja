@@ -35,6 +35,9 @@ Omistajalle kerrottu KK:n kautta: noin 20 % leveämpi suhteessa, Kléberin sivu 
 ## Odotetaan Codexilta
 Montparnasse, Opéra, Panthéon, sitten Sacré-Cœur ja Invalidien otto 2. Sama kierto: täysikoossa, ilmansuunta oikeaa kuvaa ja katuja vasten (-1756), arkki KK:lle ennen Tripoa. **Katso aina pohja-uusi kartan päällä:** Codex keksi puiston Riemukaarelle ja jätti suorakaiteen Grand Palais'lle. Jos maapohja poikkeaa todellisesta, tee pohja kartasta (riemukaari/tee-arkki.py, grand-palais-otto2/siisti-pohja.py). Invalidit: -1756:n rajaus.
 
+## Tuileries'n leike (NUI 18.1x, KK 18.06)
+KK: kyltit-tuileries näyttää "ohuen suikaleen kyltin päässä Louvren reunalla, ei tunnistu palatsiksi". NUI: syy on `leike-tuileries.png`:n muoto, pitkä vino siipi 268×400; yhteisessä 59 pt:n koossa jää suikale. Tee tiivis leike samasta palatsista (esim. keskipaviljonki siipineen), ei omaa kokoa koodiin, ja kerro NUI:lle. NUI ei muuttanut kuvaa koodissa. Omistajan linja on Pariisin 3D-rakennukset ensin (16.41), joten tee tämä, kun sarjan toimituksia ei ole katsottavana.
+
 ## Muu auki (ennallaan -1756:sta)
 Pieni iPad JU:lla. ND:n tornit: ei tehdä. Eiffelin kyltin napautus testaamatta, ND:n ja Louvren pohjat eivät häivy usvaan, Vrain-Lucasin ja Louvren kyltit 3D:n jälkeen.
 
