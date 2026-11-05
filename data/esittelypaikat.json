@@ -163,37 +163,37 @@
    "matkakirja-pariisi-i1-r20260914-tarina-v1.jpg": {
     "kohde": "Tuileries'n puutarha (keskikäytävä, isoisän kuva)",
     "kohdepiste": [
-     48.86248,
-     2.33053
+     48.863002,
+     2.328881
     ],
-    "lahde": "OSM Jardin des Tuileries; akseli Grand Bassin Octogonal – Grand Bassin Rond; kuvasta: noin 150 m palatsin julkisivusta",
+    "lahde": "Geofabrik ile-de-france-latest.osm.pbf (ladattu 8.10.2026), OSM way 54568947 Allée Centrale, Grand Bassin Rondin länsipuoli; kuvasta: noin 150 m palatsin julkisivusta (palatsin kohta = Avenue du Général Lemonnier; piste 175 m, koska 150 m osuu altaaseen)",
     "piste": [
-     48.86248,
-     2.33053
+     48.863002,
+     2.328881
     ]
    },
    "matkakirja-pariisi-i2-r20260914-tarina-v1.jpg": {
     "kohde": "Tuileries'n puutarha (puiden alla, isoisän kuva)",
     "kohdepiste": [
-     48.86355,
-     2.3296
+     48.863879,
+     2.328141
     ],
-    "lahde": "OSM Jardin des Tuileries; kuvasta: akselin pohjoispuolella, palatsi oikealla, noin 260 m",
+    "lahde": "Geofabrik ile-de-france-latest.osm.pbf (ladattu 8.10.2026), OSM way 14882430 Allée sous couvert nord; kuvasta: akselin pohjoispuolella, palatsi oikealla, noin 260 m (piste 266 m)",
     "piste": [
-     48.86355,
-     2.3296
+     48.863879,
+     2.328141
     ]
    },
    "matkakirja-pariisi-p1-r20260914-tarina-v1.jpg": {
     "kohde": "Tuileries'n puutarha (Grand Couvert, Pulun kuva)",
     "kohdepiste": [
-     48.86449,
-     2.32641
+     48.864381,
+     2.326559
     ],
-    "lahde": "OSM Jardin des Tuileries; kuvasta: soratie puurivien välissä",
+    "lahde": "Geofabrik ile-de-france-latest.osm.pbf (ladattu 8.10.2026), OSM way 14882430 Allée sous couvert nord; kuvasta: soratie puurivien välissä",
     "piste": [
-     48.86449,
-     2.32641
+     48.864381,
+     2.326559
     ]
    }
   }

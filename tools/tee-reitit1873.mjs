@@ -3,10 +3,12 @@
 // docs/raportit/elava-kartta-suunnitelma-20260926.md kohta 5: laiva lipuu 1873-reittiä,
 // junan savu nousee 1873-radalta). Siirtosepän skeema 1.46 lukee tuloksen:
 //
-//   node tools/tee-reitit1873.mjs <ne_10m_admin_0_countries.geojson> [--ohm <välimuisti.json>]
+//   node tools/tee-reitit1873.mjs <ne_10m_admin_0_countries.geojson>
 //     → tools/vienti/reitit1873.json.gz  { lahteet: [...], reitit: [...] }
 //
-// RAUTATIET: OpenHistoricalMap (CC0), Overpass-kysely: radat (railway=rail ja myöhemmin
+// OSM-haku on pois käytöstä (Raamattu 2.183): työkalu kaatuu, kunnes haku tehdään ladatusta OHM-aineistosta (ei Overpassia).
+//
+// RAUTATIET: OpenHistoricalMap (CC0): radat (railway=rail ja myöhemmin
 // hylätyt), joiden start_date ≤ 1873 ja end_date puuttuu tai ≥ 1873. OHM:n kattavuus
 // vaihtelee: Brittein saaret, Benelux, Saksa, Italia, Skandinavia ja Venäjä hyvin; Ranskan
 // pääradoilla on usein nykyaikainen start_date (Pariisin säteet puuttuvat) — tunnettu aukko,
@@ -18,12 +20,13 @@
 // LAIVAT: aikakauden höyrylaivalinjat satamajärjestyksinä (julkiset tosiasiat, lähteet
 // kentässä), reititetty merta pitkin A*:llä 0,05°:n ruudukossa (maa = NE admin-0; maan
 // yli pääsee kalliisti, jotta kapeat salmet ja Suezin kanava toimivat), harvennus 0,05°.
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { maamaski } from './maarajat-maamaa.mjs';
 import { harvenna } from './vienti/maarajat.mjs';
+import { osmHakuPuuttuu } from './osm-haku-kielletty.mjs';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 export const ULOS = join(TAMA, 'vienti', 'reitit1873.json.gz');
@@ -166,21 +169,6 @@ export function laivareitit(maski) {
 
 /* ------------------------------------------------------------ rautatiet */
 
-export const OHM_KYSELY = `[out:json][timeout:300][bbox:27,-11,66,45];
-way["railway"~"^(rail|abandoned|disused|razed|dismantled)$"]["start_date"][!"service"](if: t["start_date"] < "1874" && (!is_tag("end_date") || t["end_date"] >= "1873"));
-out tags geom;`;
-
-export async function haeOhm(valimuisti) {
-  if (valimuisti && existsSync(valimuisti)) return JSON.parse(readFileSync(valimuisti, 'utf8'));
-  const v = await fetch('https://overpass-api.openhistoricalmap.org/api/interpreter', {
-    method: 'POST', body: new URLSearchParams({ data: OHM_KYSELY }), headers: { 'User-Agent': 'Matkakirja-karttaseppa/1.0 (1873-rautatiet)' },
-  });
-  if (!v.ok) throw new Error(`OHM Overpass ${v.status}`);
-  const teksti = await v.text();
-  if (valimuisti) writeFileSync(valimuisti, teksti);
-  return JSON.parse(teksti);
-}
-
 const vuosi = (s) => { const m = String(s ?? '').match(/\d{4}/); return m ? Number(m[0]) : null; };
 
 export function rautatiet(ohm) {
@@ -205,11 +193,12 @@ export function rautatiet(ohm) {
 
 if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   const argv = process.argv.slice(2);
-  const nePolku = argv[0]; const i = argv.indexOf('--ohm'); const valimuisti = i >= 0 ? argv[i + 1] : null;
-  if (!nePolku) { console.error('Käyttö: node tools/tee-reitit1873.mjs <ne_10m_admin_0_countries.geojson> [--ohm <välimuisti.json>]'); process.exit(1); }
+  const nePolku = argv[0];
+  if (!nePolku) { console.error('Käyttö: node tools/tee-reitit1873.mjs <ne_10m_admin_0_countries.geojson>'); process.exit(1); }
+  const ohm = osmHakuPuuttuu('tee-reitit1873');
   const maski = maamaski(JSON.parse(readFileSync(nePolku, 'utf8')));
   const laivat = laivareitit(maski);
-  const radat = [...rautatiet(await haeOhm(valimuisti)), ...TAYDENNYKSET.map((r) => ({ ...r, laji: 'rautatie', lisenssi: OMA_LISENSSI }))];
+  const radat = [...rautatiet(ohm), ...TAYDENNYKSET.map((r) => ({ ...r, laji: 'rautatie', lisenssi: OMA_LISENSSI }))];
   const tulos = { lahteet: LAHTEET, reitit: [...laivat, ...radat] };
   writeFileSync(ULOS, gzipSync(JSON.stringify(tulos), { level: 9 }));
   const pisteita = tulos.reitit.reduce((s, r) => s + r.viivat.reduce((t, v) => t + v.length, 0), 0);

@@ -253,3 +253,127 @@ Kortti: heikennetäänkö metsä puoleen Pariisin alueella. Omistaja: jää enna
 ## TILINVAIHTO PÄÄTILILLE (omistaja 5.11. klo 17.05 ja 17.06, kortit KK:ssa) (5.11.2026 klo 17.07)
 
 Vaihdetaanko tänään päätilille? = vaihdetaan nyt. Mihin asti päätiliä saa käyttää? = 92 % (Suositus).
+
+## TILINVAIHTO PÄÄTILILLE (5.11.2026 klo 17.22)
+
+Omistaja 5.11. 17.05 ja 17.06: tilinvaihto päätilille org f04011ee, raja 92 %. Uusi PT local_cf5b4eca. Samat sessiot tyhjennettyinä (clear), viestillä 'kutsu clear_session self', list_events 0 tarkistettu: KK, Postivahti, Asemataulu, JU, NS, NUI, PK, VS, KS, LAV. Id:t paivita-idt.mjs:llä. Viikko 16 % vaihdon alussa. Löydös: Postivahdin kansio oli koti-haarassa, josta KIERROS.md ja NOLLAUS.md puuttuivat juuresta; Postivahti palasi haaraan postivahti (944e80bad). Pieni iPad 9e8c8ab1e ei ollut asentunut vaihdossa; JU:lle ensimmäiseksi työksi.
+
+## KK:N ID PÄÄTILILLÄ (5.11.2026 klo 17.34)
+
+Omistajan kortti 5.11. 17.32: KK:n id local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe lisätty ~/.claude/CLAUDE.md:hen päätilin riville (KK teki omistajan luvalla). Tilinvaihto valmis 17.34: tarkistus 0, ohjeiden koe 10/10.
+
+## OVERPASS-POIKKEAMA 2.183: ESITTELYPAIKAT JAAVAT (5.11.2026 klo 18.15)
+
+KS ilmoitti itse (KK:n kautta 5.11.): 1) Overpass 5.11. klo 11.59-12.03, kuusi kyselya kiellon jalkeen (esittelypaikat.mjs, aloituslennon paikat, PR 6273); 2) omistajan sahkoposti tunnisteessa viidessa vanhassa Wikimedia-skriptissa (ajot 16.10.-3.11., paatelty paivayksista). Omistajalle kerrottu ilman korttia (KK). PT:n paatos: paikkoja ei ajeta uudelleen, jos KS:n rivitarkistus on puhdas; hylatty piste ratkaistaan Geofabrikin aineistosta. Valimuisti jaa kayttamatta ja poistamatta. KS estaa Overpassin koodissa kaikista skripteista (3731d10e3 jatti kaupunkikeskustat.mjs:n ja tarkista-nostopaikat.mjs:n auki) ja poistaa sahkopostin. Saanto 2.183 ei muutu.
+
+## KYLTIT HAIPYVAT USVAAN KUTEN NIMET (2.215) (5.11.2026 klo 18.18)
+
+KK 5.11. klo 18.06: 'Häivytä ne kuten nimet'. Omistajan 14.44 sanat koskivat nimiä, ulotus kyltteihin on KK:n (NUI:n selvitys). Nimen väistö pyöreästä merkistä oli NUI:n oma ratkaisu, ei päätös: PT määräsi sen poistettavaksi ennen ajoa (poisto NUI:lla, ei vielä tehty), jotta Hôtel Matignon ja Hôpital Lariboisière jäävät kartalle.
+
+## NIMI VAISTYY PYOREAN MERKIN KOHDALTA (2.215), OIKAISUT (5.11.2026 klo 18.20)
+
+Oikaisee klo 18.18:n kirjauksen: PT perui väistön poiston, koska KK on päättänyt: '26c7ffcfc:n linja sopii: merkki jää ja nimi väistyy sen kohdalta' (NUI:n välittämä). Hôtel Matignon ja Hôpital Lariboisière voivat kadota keski-kuvasta. Oikaisee klo 18.15:n kirjauksen: sähköposti oli kymmenessä skriptissä ja kahdessa mainin työkalussa, ei viidessä (KS, KK). Rivitarkistus ei ollut täysin puhdas: Tuileries'n paikkojen i1, i2 ja p1 lähde 'OSM Jardin des Tuileries', alkuperä epäselvä; PT: korvataan Geofabrikista tai Wikidatasta, muut paikat jäävät. Overpass yhä yhdeksässä mainin työkalussa; PT: KS estää yhdellä testillä.
+
+## PARIISIN PALLOKIERROS: NOPEA LASKU, RAJA 10 M/S2 EI SITO TATA LASKUA (5.11.2026 klo 18.21)
+
+NS 7d719ae76 (ei vielä nähty ajossa): lasku 8,5 s (tervehdys väliaik. 6 s + 2,5 s liuku), kerronta alkaa 6,0 s, huippu 159 m/s, kiihtyvyys laskettu noin 80 m/s² (ei mitattu), TF 168:n raja 10. PT hyväksyi ajoon omistajan 17.52 tavoitteen perusteella ('pallo laskee nopeasti Notre-Damen luo lyhyen tervehdyksen aikana'): avaus pois, opastus 1. pysähdyksen jälkeen, vain Pariisin pallokierroksessa. Raja 10 m/s² pysyy muualla; kiihtyvyys mitataan ajon lokista, ja NS kertoo ison suunnanmuutoksen. Omistaja ei ole nähnyt tätä; pari PT:lle, ei junaan.
+
+## NIMET PYSYVAT PYOREAN MERKIN KOHDALLA (2.215), RIEMUKAARI KELPAA (5.11.2026 klo 18.22)
+
+KK PT:lle omistajan päätösviestissä klo 18.21: 'NUI:n nimen väistö pois, nimet pysyvät (ei omistajan päätös, ylimääräinen).' Korvaa klo 18.20:n kirjauksen väistöstä, joka perustui NUI:n välittämään KK:n aiempaan sanaan. OMISTAJAN PÄÄTÖS klo 18.21 (kortti 'Kelpaako Riemukaari malliksi?' = 'Kelpaa (Suositus)'): Riemukaari kelpaa. Kerrottu ennen korttia: 20 % leveämpi, suuri kaari kapeampi, kapeille sivuille Wagramin puoli, kaaret auki, ei puistorengasta, aukion rengastien yli. KS tilaa.
+
+## OMISTAJAN PAATOS KLO 18.52: SARJAN ARKIT (5.11.2026 klo 18.52)
+
+Kortit KK:n kautta: Opéra 'Kelpaa', Panthéon 'Kelpaa', Montparnasse 'Uusi otto'. KS jatkaa -1845-suosituksensa mukaan; Opéran jatketut tornit KK katsoo ennen Tripoa. Omistajalle kerrottu: Montparnassen viereen jää kartan rakennuksia (asema, noin 6 m). Kuvat scratchpad/keskustelukanava/kuvat/sarja24/.
+
+## HINTAKYLTTI EI VAISTA (2.215) (5.11.2026 klo 18.53)
+
+KK:n käsky 18.4x, NUI:n välittämä (23485f753, ajamatta): hintakyltti ei väistä eikä katoa, ja sen kohdalle osuva nähtävyyskyltti häipyy. Kumoaa KS:n 5.11. linjan 'nähtävyyskyltti voittaa' ja KK:n 16.2x:n väistön narun pään viereen. Les Halles jää pois keski-kuvista törmäyksen takia (Louvren kyltti).
+
+## PARIISIN PALLOLASKU: AVAUSTAUKO POIS (5.11.2026 klo 18.56)
+
+PT 5.11.: Pariisin tervehdyslaskusta poistetaan avaustauko 2,3 s (vain Pariisi): omistajan 17.52 'pelaaja lähtee heti' menee vanhan 'ei hätiköityä alkua' edelle tässä kohdassa. Mittaus d12a5d046 (Mac, Google, yksi ajo): valinnasta perille 26,9 s, latausruutu 15,8 s (yleiskuva 6,7 + esilataus 9,1), tauko 2,4 s, lasku 8,7 s; ennen 23,8 s. Oikean pelin käynnistystä ei mitattu. Valkoiset rakennukset automaattiajon kuvissa ovat Ion-varadataa (CesiumKaupunki.cs:452); kaupunkikuvaa arvioivat ajot komennolla 'linssi kaupunki google 1'.
+
+## OMISTAJAN PAATOS KLO 19.03: SACRE-COEUR UUSI OTTO (5.11.2026 klo 19.04)
+
+Kortti KK:n kautta (arkki scratchpad/keskustelukanava/kuvat/sarja24/sacre-coeur-arkki.jpg): Sacré-Cœur 'Uusi otto'. KS:n arkista puuttui 2.206:n mäki; lisätty ottoon 2 ja kerrottu omistajalle, reunaa ei ole kokeiltu karttaa vasten. Perillä KS:llä.
+
+## OMISTAJAN PAATOS KLO 19.14: INVALIDIT KELPAA (5.11.2026 klo 19.14)
+
+Kortti KK:n kautta (arkki scratchpad/keskustelukanava/kuvat/sarja24/invalides-arkki.jpg): Invalidit 'Kelpaa', ei kolmatta ottoa. Perillä KS:llä. Omistajalle näytetty samalla NUI:n 23485f753 (kuvat/kyltit-23485f753/). KK antoi NUI:lle seuraavaan ajoon: kadonneella kuvalla aina kyltti, piilotettu kyltti ei vie nimeltä paikkaa.
+
+## PARIISIN NIMIKYLTIT PIENEMMIKSI JA NÄKYVIIN VASTA LÄHELLÄ (OMISTAJA 19.23, KK) (5.11.2026 klo 19.23)
+
+Omistajan pyyntö klo 19.23 KK:n kautta: "nimikyltit pitää olla pienemmällä, näkyvät vasta kun mennään lähemmäs rakennusta". KK:n tavoite: kaukaa kartta on puhdas ja rakennukset puhuvat puolestaan; kun lähestytään, pieni kiinteän kokoinen kyltti ilmestyy pehmeästi. Pyöreät merkit jäävät (15.01). Muuttaa Raamatun 2.215:n kyltit ja 2.212:n tason: pallon kyltti seuraa samaa tasoa. KK antoi työn Natiivi-UI:lle suoraan.
+
+## KAIKKI ÄÄNET PELIIN, OMISTAJA KUUNTELEE PELISSÄ (OMISTAJA 19.23, KK) (5.11.2026 klo 19.25)
+
+OMISTAJAN PÄÄTÖS klo 19.23 KK:n kautta: "laita kaikki äänet peliin, kuuntelen siellä". 223 lausetta ja tervehdys. PT:n suositus KK:lle: pieni iPad, uusi kehitysversio NS:n haarasta nappikorjauksen d1867a55a mittauksen jälkeen (lupa omistaja 13.28), ei TF eikä juna; uudet ääniosoitteet vaativat koodimuutoksen, joten nykyisessä versiossa ne eivät kuulu.
+
+## TF, KUN PARIISI ON VALMIS; ÄÄNET KUUNNELLAAN SIITÄ (OMISTAJA 19.26, KK) (5.11.2026 klo 19.26)
+
+OMISTAJAN PÄÄTÖS klo 19.26 KK:n kautta: "ipad on jo kotona. vielä ei tarvitse julkaista TF, julkaiset TF kun pariisi valmis". KK:n tulkinta, kerrottu omistajalle: pieni iPad on kotona, joten asennus perutaan; ei TF:ää nyt; omistaja kuuntelee äänet Pariisin TF:stä; VS:n vienti ja koodi jatkavat kohti sitä. KK vahvistaa kortilla ennen TF:ää ja kertoo silloin KERROTTAVAT-listan.
+
+## MONTPARNASSE OTTO 2 KELPAA (OMISTAJA 19.28, KK) (5.11.2026 klo 19.28)
+
+OMISTAJAN PÄÄTÖS klo 19.28 kortilla, arkki scratchpad/keskustelukanava/kuvat/sarja24/montparnasse-otto2-arkki.jpg: Montparnasse otto 2 "Kelpaa". Perillä Karttasepällä.
+
+## 3D-KOHTEET EIVÄT SAA NÄKYÄ HORISONTIN TAKANA (OMISTAJA 19.30, KK) (5.11.2026 klo 19.31)
+
+Omistajan pyyntö klo 19.30, kuva docs/raportit/kaappaukset/omistaja-20261105/eiffel-horisontissa-1928.png (Grand Palais'n pelikuva 0906b3c15): "Horisontissa näkyy eiffel vaikka ei ehkä pitäisi". KK:n tavoite: horisontin takana ei näy mitään: nähtävyys ja sen maapohja häipyvät usvaan yhtä aikaa kartan kanssa, eikä usvan yläpuolella leiju rakennuksia tai maapaloja. Yksi sääntö kaikille 3D-kohteille (2.215). Sama tunnettu vika kuin Louvressa ja Notre-Damessa. KK antoi Karttasepälle suoraan.
+
+## MAC-KUVIEN PISTEKERROIN PARIISIN KARTALLA (KK 19.50) (5.11.2026 klo 19.52)
+
+KK:n havainto klo 19.50: Mac-kuvien kartan nimet ovat noin 2 kertaa iPadia suuremmat, kun esikatselu.sh käyttää oletuskerrointa 1 (70 julkaisija-ajoa, mm. kaikki kylttiajot). PT tarkisti lokeista: esim. esikatselu-20261105-160023 kerroin 0.465, julkaisija-pariisi-kyltit-84a2f3d83 kerroin 1. Sama kerroin ohjaa koodissa nimi- ja kerrostasoja (Screen.height / Pistekerroin); poikkeamaa tasoissa ei ole mitattu. Raamattu 10.5: Pariisin kartan Mac-ajot kertoimella 0.465. Kertoimella 1 tehdyt koko- ja tasoarviot eivät päde iPadiin; merkkien poisto mallien päältä (84a2f3d83) katsotaan uudelleen NUI:n seuraavasta ajosta.
+
+## NIMIKYLTIT KELPAAVAT; NIMI EI JÄÄ MERKIN ALLE (OMISTAJA 20.08, KK 19.59) (5.11.2026 klo 20.09)
+
+OMISTAJAN PÄÄTÖS klo 20.08 kortilla KK:n kautta: "Kelpaavatko nimikylttien koko ja näkymisen etäisyys?" = "Kelpaa (Suositus)". Kuvat scratchpad/keskustelukanava/kuvat/kyltit-013655981/ (kerroin 0.465). Pehmeää ilmestymistä ei nähty, joten se katsotaan pelistä.
+
+KK klo 19.59 (ei omistajan sana) kumoaa 2.215:n linjauksen NIMI JA PYÖREÄ MERKKI: kirjaimet eivät jää merkin eivätkä 3D-kohteen pohjan tai puiden alle, yksi yleinen sääntö NUI:lla. Euroopan tason musta pohja (013655981): NUI selvittää, omistajalle kerrottu; NS:n ja NUI:n arvio on kuvausvika, ei todistettu.
+
+## KARTAN KUVAT MYÖS 45°:STA; WILLIAM-INTRO SOI; ND:N POHJA (OMISTAJA 20.09, KK) (5.11.2026 klo 20.11)
+
+OMISTAJAN PYYNTÖ klo 20.09: "Näytä kuvia mieluusti myös 45 asteen tms kulmasta sillä karttaa katsotaan jatkossa enemmän noin". Raamattu 10.5.
+
+KK: William-intro soi myös NousuKoe päällä (omistaja 19.23 "laita kaikki äänet peliin, kuuntelen siellä"; 17.5x "kaupunki intron 'pariiisi' ... pitää generoida uusiksi"). Notre-Damen pohja-alue on omistajan hyväksymä (kortti 4.11. "Kelpaa"): uusi maaversio ei muuta piirroskartan ulkoasua ilman hänen katsomaansa paria, vain pallonäkymään tai pari molemmista KK:lle ennen kytkentää; LAV:n jonossa juoksupelin pintojen ja räystäiden jälkeen, ei omaa Mac-ajoa (omistaja 17.40).
+
+## ALOITTAVA PELAAJA SAA PARIISIN ALOITUSLENNON (OMISTAJA 20.20, KK) (5.11.2026 klo 20.2x)
+
+OMISTAJAN PÄÄTÖS klo 20.20: "Saako aloittava pelaaja Pariisiin uuden aloituslennon vanhan intron tilalle?" = "Kyllä (Suositus)"; kortissa: "Kamera kiertää, kuvat nousevat kartalta ja William sanoo nimen ja iskulauseen." Raamattu 2.161 ja 2.210. Muut aloituskaupungit ennallaan (KK:n tulkinta). KK:n tulkinnat klo 20.2x (ei omistajan sanoja; KK kertoo omistajalle kuvien kanssa): 2.161:n kohdat 2 ja 3 pysyvät, päätös koskee vain introa; kierto hiipuu pehmeästi Pulun aloituksen alkupuolella; isoisän Tuileries-kuva ei nouse aloittavalle pelaajalle.
+
+## NIMISÄÄNNÖN TARKENNUS (KK) (5.11.2026 klo 20.18)
+
+KK:n sanamuoto: "kirjaimet eivät jää pyöreän merkin, 3D-kohteen, kyltin eivätkä puiden alle; nimi siirtyy viereen, ja jos vapaata paikkaa ei löydy, nimi ei näy (määrä nähdään seuraavasta ajosta, ei vielä hyväksytty). Pohja piirtyy nimien alle, joten se ei kuulu sääntöön; pallo jää ulos, koska liikkuu. KK:n linjaus, ei omistajan sana." NUI:n toteutus 6bb2744d4, ei vielä nähty pelissä.
+
+## PARIISIN HORISONTTI KAUEMMAS (OMISTAJA 20.25, KK) (5.11.2026 klo 20.2x)
+
+OMISTAJAN PÄÄTÖS klo 20.25: "Siirretäänkö Pariisin horisonttia kauemmas?" = "Kauemmas (Suositus)"; kortissa: "Matalassa kulmassa noin kaksi kertaa kauemmas, ja saat uuden kuvan." Sanat 20.23: "Miksi horisontti tulee näin aikaisin?"; kuva docs/raportit/kaappaukset/omistaja-20261105/horisontti-aikaisin-2023.png. KK:n tavoite: matalalta kaupunki jatkuu katsotun rakennuksen takana, mutta koko Pariisi ei näy kerralla (14.55 pysyy); 19.30:n sääntö pysyy. Raamattu 2.215.
+
+## RAKENNUSTEN ALUSTAT CODEXILTA (OMISTAJA NOIN 20.3x, KK) (5.11.2026 klo 20.4x)
+
+OMISTAJAN PYYNTÖ noin klo 20.3x, käsitelty 20.41 (date; tarkka aika ei tiedossa, tiedostonimen 2031 on KK:n arvaus): "Tuo ympyrä pitäisi piirtää codexilla myös samoin muiden rakennusten alustat vai ovatko ne vielä tulossa?" Kuva docs/raportit/kaappaukset/omistaja-20261105/riemukaari-ympyra-2031.png. Tavoite ja rajaus ovat KK:n: koko aukio Codexilta, sama sarjan muille malleille alueilla v7, reuna katuja ja rantoja pitkin. Raamattu 2.215, tarkentaa 2.206:ta.
+
+## OHJELMANA TEHDYT KOHTEET NYT RINNAKKAIN (OMISTAJA 20.44, KK) (5.11.2026 klo 20.4x)
+
+OMISTAJAN PÄÄTÖS klo 20.44: "Milloin ohjelmana tehtyjen kohteiden kokeilu aloitetaan?" = "Nyt rinnakkain (Suositus)"; kortissa: "2–3 kohdetta, ja kuvat Tripon mallien rinnalle." Muuttaa 2.213:n järjestyksen. KK:n tavoite: 2–3 Pariisin kohdetta, kuten sillat ja Hôtel de Ville, oikein mitoin ilman Tripoa eikä tavallisia taloja; omistaja näkee neljästä suunnasta ja 45°:sta Tripon nähtävyyden rinnalla, mikä ero on. Lontoon osat A–F odottavat yhä korttia. Tekijä Valoseppä (PT).
+
+## EI MINIRAKENNUKSIA PARIISIN KARTALLA (OMISTAJA 20.51, KK) (5.11.2026 klo 20.5x)
+
+OMISTAJAN PÄÄTÖS klo 20.51: "Näitä mini rakennuksia ei saa olla"; kuva docs/raportit/kaappaukset/omistaja-20261105/mini-rakennus-tuileries-2051.png (b7e7a1de0:n ajosta). KK:n tavoite ja tulkinta: kaikki viisi leikattua kuvaa pois, tumma tähtikyltti jää, napautus ja Tuileries-lento kylttiin; kumoaa 2.215:n 14.57:n kuvat. PT: muiden kaupunkien kuvat (2.204) jäävät ratkaisematta. Tekijä NUI.
+
+## EI LUENTOA ALOITUSKAUPUNGISSA (OMISTAJA 21.02, KK) (5.11.2026 klo 21.0x)
+
+OMISTAJAN PÄÄTÖS klo 21.02: "Saako aloituskaupungissa olla isoisän luento?" = "Ei luentoa (Suositus)"; kortissa: "Pulu aloittaa heti, kuten päätit 15.10." Sanat 15.10. klo 17.12 pysyvät. Raamattu 2.161 ja 2.210. Tausta: unen poisto 17.10. oli palauttanut luennan aloituskaupunkeihin. KK kertoi omistajalle, ettei Pariisista aloittava näe Tuileries-kuvan nousua aloituksessa. KK välitti NS:lle suoraan: kohta 2 kaikkiin aloituskaupunkeihin.
+
+## KUVAT KADONNEISTA AARTEISTA (OMISTAJA 21.04, KK) (5.11.2026 klo 21.0x)
+
+OMISTAJAN PÄÄTÖS klo 21.04: "Kuvat pitää olla kadonneista aarteista" (jatkaa 20.51:n sanoja "Näitä mini rakennuksia ei saa olla"). KK: tulkinta "kaikki viisi pois" oli liian laaja; pikkurakennuksen tilalle tulee kuva, tähtikyltti viereen (14.57:n sanat). Raamattu 2.215. Kuvan muodon KK kysyy kortilla; NUI seis siihen asti, KK kertoi NUI:lle suoraan. Muut kaupungit: KK:n mukaan jo päätetty (2.204, 2.215), ei korttia; 2.204:n leikattu kuva päivitetään, kun muoto on selvä.
+
+## KADONNEEN AARTEEN KUVA ON PYÖREÄ (OMISTAJA 21.07, KK) (5.11.2026 klo 21.1x)
+
+OMISTAJAN PÄÄTÖS klo 21.07: "Millainen kuva kadonneella aarteella on pikkurakennuksen tilalla?" = "Pyöreä kuva (Suositus)"; kortissa: "Sama merkki kuin muilla kohteilla, vieressä tähtikyltti." Raamattu 2.215 ja 2.204. Neljä pelkän kyltin kohdetta ennallaan (2.11. klo 08.42). KK välitti NUI:lle suoraan.
+
+## MONTPARNASSE, SACRÉ-CŒUR JA INVALIDIT: KK:N PÄÄTÖKSET (KK, 5.11.2026 klo 21.1x)
+
+KK:n päätöksiä omistajan 19.28:n ja 20.13:n Kelpaa-sanoja vasten, ei omistajan sanoja. Montparnasse: kaksi Tripo-ottoa epäonnistui, ei kolmatta; Karttaseppä rakentaa mitoista, julkisivu ja katto Codexilta kuvina. Sacré-Cœur: kirkko otosta 1, mäki erikseen pelissä, koska Tripo ei tuottanut sitä. Invalidit 24o Tripolle sellaisina. Horisontti: 7875c668d korjasi katoamiset; Karttaseppä selvittää kartan tummumisen eräissä kulmissa ja kokeilee katsepistettä maan tasolle kuvapareilla omistajalle. Muiden kaupunkien kysymys ratkesi 21.07:n kirjauksella (2.204, 2.215).

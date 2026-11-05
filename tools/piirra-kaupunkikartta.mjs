@@ -61,6 +61,7 @@ import { execFileSync } from 'node:child_process';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { avaaChromium } from './selain.mjs';
+import { osmHakuPuuttuu } from './osm-haku-kielletty.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -1449,7 +1450,7 @@ const KAUPUNGIT = {
     // archaeological_site -alueita, eikä piirtotyökalu pyytänyt niitä
     // lainkaan. Karnakin ulkomuuri näkyi vain siksi, että se on erikseen
     // way-viiva. Arkeologisten alueiden taso lisättiin kyselyyn
-    // (way["historic"~"^(ruins|archaeological_site)$"], ks. haeOverpass)
+    // (way["historic"~"^(ruins|archaeological_site)$"], ks. vanha kysely git-historiassa)
     // ja rauniokaupunki-lippu v930:ssa, ja tässä ne otetaan käyttöön:
     // nyt molemmat temppelipiirit piirtyvät omina laikkuinaan reunoineen.
     //
@@ -2153,7 +2154,7 @@ const KAUPUNGIT = {
     //   building           2682 way
     // Aineistoa on siis runsaasti, mutta Rusafan vanhan puolen kujat on
     // merkitty pääosin service- ja footway-teiksi eikä residentialiksi.
-    // Vakiokysely jättää servicen pois (ks. haeOverpass), joten kaksi
+    // Vakiokysely jättää servicen pois (ks. vanha kysely git-historiassa), joten kaksi
     // kolmasosaa kaduista jäi hakematta. Sama korjaus kuin Vilnassa.
     //
     // OPETUS: pieni elementtimäärä ei todista, että kaupunki on
@@ -2759,12 +2760,7 @@ const KAUPUNGIT = {
      * OSM:ssä tavallisia katuja, ja koeajo lipuilla teki kuvasta
      * rakeisen ilman että yksikään kohde olisi erottunut paremmin.
      *
-     * OVERPASSIN PÄÄPALVELIMET EIVÄT VASTANNEET tämän työn aikana
-     * (overpass-api.de ja overpass.kumi.systems aikakatkaisivat),
-     * ja kartta piirrettiin peilipalvelimella:
-     *   NODE_USE_ENV_PROXY=1 \
-     *   OVERPASS_PALVELIMET=https://maps.mail.ru/osm/tools/overpass/api/interpreter \
-     *     node tools/piirra-kaupunkikartta.mjs mandalay
+     * Kartta piirrettiin vuonna 2026 Overpassin peilipalvelimella, kun päälaitos ja vakiopeili aikakatkaisivat.
      * Peili palautti 8 024 elementtiä eli saman aineiston kuin
      * päälaitos olisi palauttanut.
      */
@@ -2946,13 +2942,7 @@ const KAUPUNGIT = {
      * ruudussa eli tiheämpi kuin Mandalayn 8 024 elementtiä
      * 8,9 × 8,9 kilometrissä); sama ratkaisu kuin Mandalayssa.
      *
-     * OVERPASSIN PÄÄPALVELIMET EIVÄT VASTANNEET tämän työn aikana
-     * (overpass-api.de ja overpass.kumi.systems antoivat vuorotellen
-     * 500:n ja 502:n), ja kartta piirrettiin peilipalvelimella
-     * Mandalayn tapaan:
-     *   NODE_USE_ENV_PROXY=1 \
-     *   OVERPASS_PALVELIMET=https://maps.mail.ru/osm/tools/overpass/api/interpreter \
-     *     node tools/piirra-kaupunkikartta.mjs jakarta
+     * Kartta piirrettiin Overpassin peilipalvelimella, kun päälaitos ja vakiopeili antoivat vuorotellen 500:n ja 502:n.
      */
     rajat: { pohjoinen: -6.1222, etela: -6.147, lansi: 106.7997, ita: 106.8232 },
     palvelutiet: true,
@@ -6837,157 +6827,6 @@ const PALETTI = VARINAYTE ? PALETIT.vari : PALETIT.paperi;
 const {
   VESI, VESIREUNA, PUISTO, RATA, PAPERI, MUURI, RAUNIO, RAUNIOREUNA,
 } = PALETTI;
-/*
- * Kaksi palvelinta samaan aineistoon: päälaitos overpass-api.de ja
- * Kumin ylläpitämä peili. 15.8.2026 päälaitos katkoi Kööpenhaminan
- * laajaa vastausta ECONNRESETillä viidesti peräkkäin — yksi palvelin
- * ei siis riitä, vaan uusintayritys kiertää listaa.
- */
-/*
- * KOLMAS PALVELIN ANNETAAN YMPÄRISTÖMUUTTUJALLA, ei kovakoodattuna.
- * 20.8.2026 MOLEMMAT vakiopalvelimet olivat pitkään alhaalla samaan
- * aikaan (kymmenen yritystä: viisi ECONNRESETiä, kaksi 502:ta, kaksi
- * 500:aa), eikä Persepoliksen karttaa saanut piirrettyä lainkaan.
- * Julkisia peilejä on muitakin, mutta ne vaihtuvat ja niiden aineisto
- * voi olla rajattu — osa peileistä sisältää vain oman maansa (kokeiltu:
- * overpass.osm.ch vastaa 200:lla mutta palauttaa Iranista tyhjän
- * listan). Peiliä ei siksi kirjata pysyväksi riippuvuudeksi vaan
- * annetaan ajokohtaisesti:
- *
- *   OVERPASS_PALVELIMET=https://peili.example/api/interpreter \
- *     node tools/piirra-kaupunkikartta.mjs persepolis
- *
- * Useampi peili erotetaan pilkulla. Ilman muuttujaa lista on entinen.
- */
-const OVERPASS_PALVELIMET = (process.env.OVERPASS_PALVELIMET || [
-  'https://overpass-api.de/api/interpreter',
-  'https://overpass.kumi.systems/api/interpreter',
-].join(',')).split(',').map((s) => s.trim()).filter(Boolean);
-
-async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false, palvelin = OVERPASS_PALVELIMET[0]) {
-  const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
-  /*
-   * PALVELUTIET VAIN PYYDETTÄESSÄ (`palvelutiet: true`).
-   *
-   * Useimmissa kaupungeissa `service` on pysäköintialueiden ja
-   * pihojen ajolinjoja, ja niiden piirtäminen tekee kartasta
-   * roskaisen. Vilnan vanhassakaupungissa se on päinvastoin: kujat
-   * ON MERKITTY service-teiksi (1509 kpl), kun tavallisia katuja on
-   * 189, joten ilman niitä koko vanhakaupunki jää tyhjäksi paperiksi.
-   * Lippu on siksi kaupunkikohtainen eikä oletus.
-   */
-  /*
-   * HUOM: KADUT on sekä KYSELYN että PIIRRON lähde. Kun palvelutie
-   * lisättiin tauluun omaksi luokakseen, kysely alkoi hakea
-   * service-teitä JOKAISEEN kaupunkiin, vaikka lippu oli tarkoitettu
-   * valinnaiseksi — Tallinnan koeajossa se toi 1526 ylimääräistä
-   * elementtiä ja siroitti kuvaan ohuita kujia kaikkialle. Luokka
-   * suodatetaan siksi pois kyselystä, ellei kaupunki sitä pyydä;
-   * silloin sen piirtokerros jää tyhjäksi eikä mitään piirry.
-   */
-  const JALKA = ['footway', 'path'];
-  const luokat = KADUT
-    .flatMap((k) => k.luokat)
-    .filter((l) => l !== 'service' || palvelutiet)
-    .filter((l) => !JALKA.includes(l) || jalkakaydat)
-    .join('|');
-  const kysely = `[out:json][timeout:120];(
-    way["highway"~"^(${luokat})$"]${alue};
-    way["waterway"~"^(river|canal)$"]${alue};
-    way["natural"~"^(water|coastline)$"]${alue};
-    /*
-     * Metsäiset rinteet eivät ole OSM:ssä puistoja vaan luontoa, joten
-     * ilman tätä riviä ne jäävät paperin värisiksi.
-     *
-     * TÄMÄ EI RIITÄ ISOILLE KUKKULOILLE. Ateenan Lykavittós on
-     * relaatio (natural=wood + landuse=forest), ja kysely hakee
-     * relaatioista vain vedet — kukkula jää siksi yhä piirtymättä.
-     *
-     * ÄLÄ KORJAA SITÄ LISÄÄMÄLLÄ metsärelaatioita tähän kyselyyn.
-     * Relaatiohaara kokoaa jäsenpolut VESIMONIKULMIOKSI eikä katso
-     * merkintöjä, koska se voi luottaa siihen että kysely hakee vain
-     * vesirelaatioita. Metsärelaatio täyttyisi siis sinisenä. Jos
-     * kukkulat halutaan, relaatiohaaraan pitää ensin lisätä
-     * tagitarkistus. Ks. kokoaKerrokset().
-     */
-    way["natural"~"^(wood|scrub)$"]${alue};
-    way["leisure"~"^(park|garden)$"]${alue};
-    way["landuse"~"^(forest|grass|recreation_ground|cemetery)$"]${alue};
-    way["railway"="rail"]${alue};
-    /*
-     * KAUPUNGINMUURI. Muurikaupungeissa muuri on kartan tärkein viiva
-     * eikä koriste: Dubrovnikin vanhastakaupungista piirtyi ilman sitä
-     * vain Stradun ja satama, koska kujat ovat OSM:ssä portaita eikä
-     * katuja. Muurin kanssa kuvassa on se, mistä kaupunki tunnetaan.
-     *
-     * Piirretään omana ohuena viivanaan (ks. kerrokset.muurit), ei
-     * katuna: muuri ei ole reitti, ja katuna se saisi kadun paksuuden
-     * ja sekoittuisi katuverkkoon.
-     */
-    way["barrier"="city_wall"]${alue};
-    way["historic"="citywalls"]${alue};
-    /*
-     * ARKEOLOGISET ALUEET. Antiikin kohteet ovat OSM:ssä omalla
-     * merkinnällään eivätkä rakennuksina: Karnakin pylvässalit,
-     * Luxorin temppelin piha ja agorat ovat historic=ruins tai
-     * historic=archaeological_site. Ilman tätä riviä ne eivät ole
-     * kartalla millään tavalla.
-     */
-    way["historic"~"^(ruins|archaeological_site)$"]${alue};
-    /*
-     * Isot järvet ja lahdet ovat OSM:ssä monikulmiorelaatioita, ja
-     * niiden jäsenpoluilla ei ole omia merkintöjä — pelkkä
-     * way["natural"="water"] ei siis löydä niitä lainkaan. Tukholmassa
-     * se tarkoitti, että Riddarfjärden puuttui kartalta kokonaan.
-     */
-    relation["natural"="water"]${alue};
-  );out geom;`;
-  const vastaus = await fetch(palvelin, {
-    method: 'POST',
-    headers: { 'User-Agent': 'matkakirja/1.0 (opetuspeli)' },
-    // Rivinvaihdot pois: Overpass vastaa monirivisille 406.
-    body: new URLSearchParams({ data: kysely.replace(/\s+/g, ' ') }),
-    signal: AbortSignal.timeout(180000),
-  });
-  if (!vastaus.ok) throw new Error(`Overpass ${vastaus.status}`);
-  return (await vastaus.json()).elements ?? [];
-}
-
-/*
- * Overpass on julkinen ja ruuhkainen: se vastaa 429:llä liian tiheään
- * ajettuun kyselyyn ja 504:llä silloin kun se on itse kuormittunut.
- * Kumpikin on ohimenevä, mutta ilman uusintaa ne kaatavat koko ajon —
- * ja koska aineisto haetaan ennen piirtoa, hukkaan menee myös se
- * minuutti, jonka kysely ehti kestää. Kolme yritystä kasvavalla
- * odotuksella riitti kaikkiin tässä kohdattuihin katkoihin.
- *
- * VIISI YRITYSTÄ 15.8.2026 ALKAEN. Reunuksellisen kartan kysely
- * kattaa 2,6-kertaisen alan (laajennus 1,6 molempiin suuntiin), ja
- * Lontoon ajo katkesi kolmesti peräkkäin ECONNRESETiin kesken
- * vastauksen — ei siis 429:ään vaan pitkän vastauksen katkeamiseen.
- * Neljäs yritys meni läpi.
- */
-/*
- * KYMMENEN YRITYSTÄ 20.8.2026 ALKAEN. Lehtityön apuskriptien oppi
- * (docs/arkisto/lehtityon-apuskriptit.md): kuusi yritystä ei riittänyt
- * konttiympäristön yhteyskatkoihin, kymmenen kasvavalla odotuksella
- * riitti kaikkiin. Medinan ajo kaatui viidellä yrityksellä kahdesti
- * peräkkäin (500 + ECONNRESET), kymmenellä meni läpi.
- */
-async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 10) {
-  for (let i = 1; ; i++) {
-    const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
-    try {
-      return await haeOverpass(rajat, palvelutiet, jalkakaydat, palvelin);
-    } catch (virhe) {
-      if (i >= yrityksia) throw virhe;
-      const odotus = 15000 * i;
-      console.log(`  ${virhe.message} — uusi yritys ${odotus / 1000} s kuluttua…`);
-      await new Promise((r) => setTimeout(r, odotus));
-    }
-  }
-}
-
 const avain = (p) => `${p.lat.toFixed(7)},${p.lon.toFixed(7)}`;
 
 /** Monikulmion pinta-ala asteneliöinä (kenkänauhakaava). */
@@ -7752,58 +7591,15 @@ if (!KAUPUNGIT[kaupunki]) {
   console.error(`Anna kaupunki: ${Object.keys(KAUPUNGIT).join(', ')}`);
   process.exit(1);
 }
-console.log('Haetaan OpenStreetMap-aineisto (Overpass)…');
-const elementit = await haeOverpassSitkeasti(
-  // Haku koskee koko piirrettävää alaa, myös reunusta — muuten
-  // laajennetun kartan laidoille jäisi tyhjää paperia.
-  piirretytRajat(KAUPUNGIT[kaupunki]),
-  KAUPUNGIT[kaupunki].palvelutiet ?? false,
-  KAUPUNGIT[kaupunki].jalkakaydat ?? false,
-);
-console.log(`${elementit.length} elementtiä.`);
 /*
- * Kainalot haetaan omina kyselyinään ja TAUON TAKAA: Overpass
- * rate-limittaa peräkkäiset ajot, ja kolmen kaupungin erässä se
- * kaatoi ajon kerran jo ilman kainaloita.
+ * OVERPASS-HAKU POISTETTU (Raamattu 2.183). Vanha kysely on git-historiassa (git log -S haeOverpassSitkeasti).
+ * Korvaavan haun Geofabrikin aineistosta pitää antaa:
+ *   - elementit: koko piirrettävä ala, myös reunus (piirretytRajat), KADUT-luokat; service vain palvelutiet-lipulla ja
+ *     footway/path vain jalkakaydat-lipulla,
+ *   - kainaloAineistot: sama kainalo.rajat-alueelta, yksi lista per kainalo,
+ *   - rantaLaaja: meriHaku-kaupungeille { viivat, rajat }: natural=coastline piirtoalaa laajemmalta alueelta (ks. kokoaKerrokset).
  */
-const kainaloAineistot = [];
-for (const [i, kainalo] of (KAUPUNGIT[kaupunki].kainalot ?? []).entries()) {
-  await new Promise((r) => setTimeout(r, 4000));
-  console.log(`Haetaan kainalo ${i + 1}…`);
-  const osat = await haeOverpassSitkeasti(kainalo.rajat);
-  console.log(`  ${osat.length} elementtiä.`);
-  kainaloAineistot.push(osat);
-}
-/*
- * MERIHAKU: `meriHaku: <asteita>` hakee rantaviivan (natural=coastline)
- * piirtoalaa sen verran laajemmalta alueelta joka suuntaan, ja meri
- * täytetään siinä laatikossa (ks. kokoaKerrokset). Tukholma 11.10.2026.
- */
-let rantaLaaja = null;
-if (KAUPUNGIT[kaupunki].meriHaku) {
-  const r0 = piirretytRajat(KAUPUNGIT[kaupunki]);
-  const m = KAUPUNGIT[kaupunki].meriHaku;
-  const laaja = { pohjoinen: r0.pohjoinen + m, etela: r0.etela - m, lansi: r0.lansi - m * 2, ita: r0.ita + m * 2 };
-  await new Promise((r) => setTimeout(r, 4000));
-  console.log('Haetaan rantaviiva laajemmalta alueelta (meriHaku)…');
-  const kysely = `[out:json][timeout:120];way["natural"="coastline"](${laaja.etela},${laaja.lansi},${laaja.pohjoinen},${laaja.ita});out geom;`;
-  let viivat = null;
-  for (let i = 1; !viivat; i++) {
-    const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
-    try {
-      const v = await fetch(palvelin, { method: 'POST', headers: { 'User-Agent': 'matkakirja/1.0 (opetuspeli)' },
-        body: new URLSearchParams({ data: kysely }), signal: AbortSignal.timeout(180000) });
-      if (!v.ok) throw new Error(`Overpass ${v.status}`);
-      viivat = ((await v.json()).elements ?? []).filter((e) => e.geometry?.length).map((e) => e.geometry);
-    } catch (virhe) {
-      if (i >= 10) throw virhe;
-      console.log(`  ${virhe.message} — uusi yritys ${15 * i} s kuluttua…`);
-      await new Promise((r) => setTimeout(r, 15000 * i));
-    }
-  }
-  console.log(`  ${viivat.length} rantaviivaa.`);
-  rantaLaaja = { viivat, rajat: laaja };
-}
+const { elementit, kainaloAineistot, rantaLaaja } = osmHakuPuuttuu('piirra-kaupunkikartta');
 const svg = piirra(kaupunki, elementit, kainaloAineistot, rantaLaaja);
 mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
 /*
