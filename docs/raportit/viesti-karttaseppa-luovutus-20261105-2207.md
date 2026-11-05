@@ -30,6 +30,7 @@ Kerrottu KK:lle, LUKKO VAPAA lähetetty, Grand Palais lisätty Codexille (f21821
 - **Täysikoossa katsomatta (vain kooste):** hor-75, hor-85 (Louvren alla tumma laikku), invalidit-45-etela. Katso ennen hyväksyntää.
 - **Eiffel 45°:** neljä jalkaa kuvassa. Kiveyksen läpi kaksi harmaata läiskää jalkojen välissä, länsikulma läpikuultava rannassa. Tarkista Codexin Eiffel-alustasta.
 - **Tripo:** katon korjaus v2 aloitettu (97535000d). Riemukaaren aukion KK:n hyväksyntä perustui ylhäältä otettuun kuvaan.
+- **Codexin Panthéon 24p tullut (PT 22.2x; fefe49b84, d7d675afc):** yksi ehdokas, lähteiden rajoitukset QA-raportissa. Vastaanotto ja tulos KK:lle sinulle, avaamatta. Asennus `sarja24-asennus/asenna-24p.py`.
 - **PT pyysi** rivin Louvren isosta pohjasta ja Sainte-Chapellen pohjasta: lähetetty.
 - **Pont Alexandre III:n nimi** ja kartan tyhjä kiila (VS): `_tyo/karttaseppa/jono-pont-neuf-nimi.md`.
 
