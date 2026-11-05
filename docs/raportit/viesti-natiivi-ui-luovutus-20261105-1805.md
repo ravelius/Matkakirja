@@ -6,7 +6,7 @@ Omistaja 16.41: vain Pariisin 3D-rakennukset. Omistaja 17.58 (Raamattu 10.5): jo
 
 ## Ensin
 1. Kuittaa JU:lle (id osoitekirjasta) "NUI valmis". Ei NUI:n ajoja jonossa.
-2. PT:n ja KK:n vastaus parista 6ff3ef451 on auki. Lue tulleet viestit; vika palaa minulle, muuten omistajalle menee PT:n kautta.
+2. PT hyväksyi 6ff3ef451:n 5.11. (katsoi keski- ja louvre-ennen-kuvat); kuvat ovat KK:lla omistajaa varten. Omistajan palaute tulee PT:n tai KK:n kautta. Ei muuta jonossa.
 
 ## Tehty (ajo lokit/julkaisija-pariisi-kyltit-6ff3ef451, 0 error CS)
 - 8ea217b61: 3D-kylteillä kiinteä sivu datasta (Malli.KylttiSivu: Louvre oikealla, Sainte-Chapelle vasemmalla, muut alla), ei muistia edellisestä kehyksestä. PT hyväksyi, KK vahvisti tulkinnan "paikka riippui reitistä".
@@ -15,7 +15,8 @@ Omistaja 16.41: vain Pariisin 3D-rakennukset. Omistaja 17.58 (Raamattu 10.5): jo
 - Katsottu tästä ajosta: keski, katukuva-ennen, louvre-ylhaalta, louvre-ennen täysikoossa näytettyinä (2000 px), katukuva-suuri pienenä. Muita 17 kuvaa ei katsottu; ajo 8ea217b61:stä viisto, louvre-lansi, louvre-viisto ja nd.
 
 ## Auki
-1. "Merkin päälle" -haara on todistamatta: yhdessäkään katsotussa kuvassa ei ollut ei-tilaa-tapausta. Jos todistus tarvitaan, yksi kamera ja 1–2 kuvaa, ei koko ohjelmaa.
+0. KK:n sääntö pyöreistä merkeistä poikkeaa linjasta "kiinteä kyltti ei siirry" (omistaja 2.11. 08.14): kyltti vaihtaa sivua pyöreän merkin kohdalla. PT:lle kerrottu lokia varten.
+1. "Merkin päälle" -haaraa ei ole nähty kuvissa: yhdessäkään katsotussa kuvassa ei ollut ei-tilaa-tapausta. Jos todistus tarvitaan, yksi kamera ja 1–2 kuvaa, ei koko ohjelmaa.
 2. Liikkeessä kyltin sivu voi hypätä, kun oma sivu on varattu tai vapautuu; pyöreiden merkkien rajat ovat edellisestä kehyksestä. Liikettä ei ole katsottu.
 3. Auki 1:n nimet: Saint-Germain-des-Présin kuva nimen päällä, Metroaseman kuva Hôpital Lariboisière -nimen vieressä. Nimet eivät ole kylttejä, joten KK:n sääntö ei koske niitä; ei muutettu. Sanottu PT:lle.
 4. Hintakyltti väistää kylttejä, malleja ja pyöreitä merkkejä, ei nimiä (Auki 2). Pompidou on nyt vapaa näissä neljässä kuvassa, mutta nimi voi jäädä alle, jos kaikki edeltävät paikat ovat varattuja.
