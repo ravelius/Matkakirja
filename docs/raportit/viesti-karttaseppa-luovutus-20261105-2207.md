@@ -21,6 +21,10 @@ Syy: pehmeä raja 25 % (7.37), luonteva tauko, koska KK:n vastaus odottaa. **Voi
 ## VAHTIOSUMAT: valmiit (PT)
 Komennot 1272 ja Nahtavyysalue 447, 829 valopoikkeuksia, PT hyväksyi. Nahtavyysalue 554 kasvu Liikepohjalle (Sisaan), ei nähty ilmestymisessä. Muut liikepoikkeuksia. Nimikerros 654 ja PariisiKallistus 141 ovat merkittyinä minun haarassani; PT:n viimeinen sana: älä muuta. **Yhdistettäessä NUI:n jousi (natiivi-ui/liikevahti-219 cbc744e21) voittaa PariisiKallistuksen rivillä.** `UI/MalliKyltit.cs` 4 > 0 ei ole minun. Perustelut `_tyo/karttaseppa/vahtiosumat-perustelut-20261105.md`. PT pyysi kertomaan nykimisestä: pysäytyskuvista ei näe.
 
+## SEURAAJA, ENSIMMÄISEKSI (PT 22.3x)
+1. **Eiffel 24p:** Codex ei generoinut, koska reunavara 19 m < 35 m (463c0f918, ae2babebe). Anna laajennettu maski tai jalkojen koordinaatit.
+2. **Vastaanotettavat, tulos KK:lle:** Panthéon, Opéra, Invalidit, Montparnasse, Sacré-Cœur 24p ja Riemukaaren katto #2156 (uusin posti ae2babebe). Avaamatta.
+
 ## PÄIVITYS 22.2x: AJO 22.14 (lokit/esikatselu-20261105-221413, 93d41db55, 7 kuvaa): voittaa kaiken alla olevan sävystä
 Kerrottu KK:lle, LUKKO VAPAA lähetetty, Grand Palais lisätty Codexille (f2182102d), NS:lle vastattu Marais'n raja (ND:n pohja osuu lounaisosaan; vapaa lat 48.8600–48.8690).
 - **UUSI PÄÄVIKA: `riemukaari-45.png`: koko kartta lähes yötumma, malli ei, nimillä vaalea reuna.** Ensimmäisessä ajossa Riemukaari ylhäältä oli normaali. Syy todistamatta.
