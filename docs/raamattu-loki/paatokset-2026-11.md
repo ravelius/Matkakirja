@@ -377,3 +377,7 @@ OMISTAJAN PÄÄTÖS klo 21.07: "Millainen kuva kadonneella aarteella on pikkurak
 ## MONTPARNASSE, SACRÉ-CŒUR JA INVALIDIT: KK:N PÄÄTÖKSET (KK, 5.11.2026 klo 21.1x)
 
 KK:n päätöksiä omistajan 19.28:n ja 20.13:n Kelpaa-sanoja vasten, ei omistajan sanoja. Montparnasse: kaksi Tripo-ottoa epäonnistui, ei kolmatta; Karttaseppä rakentaa mitoista, julkisivu ja katto Codexilta kuvina. Sacré-Cœur: kirkko otosta 1, mäki erikseen pelissä, koska Tripo ei tuottanut sitä. Invalidit 24o Tripolle sellaisina. Horisontti: 7875c668d korjasi katoamiset; Karttaseppä selvittää kartan tummumisen eräissä kulmissa ja kokeilee katsepistettä maan tasolle kuvapareilla omistajalle. Muiden kaupunkien kysymys ratkesi 21.07:n kirjauksella (2.204, 2.215).
+
+## EIFFEL SAA NÄKYÄ KARTAN RAJALLA (OMISTAJA 21.28, KK) (5.11.2026 klo 21.2x)
+
+OMISTAJAN PÄÄTÖS klo 21.28: "Saako Eiffel näkyä horisontissa näin selvästi?" = "Kelpaa (Suositus)"; kortissa: "Rakennukset näkyvät selvästi kartan rajalla." Kuvat scratchpad/keskustelukanava/kuvat/horisontti-7875c668d/ (7875c668d, Mac). KK: tarkentaa 19.30:n sanoja: rakennus saa seistä kartan rajalla pohjansa päällä; leijuminen ei kelpaa. Raamattu 2.215. Kartan tummuminen ja pystysauma yhä auki Karttasepällä.
