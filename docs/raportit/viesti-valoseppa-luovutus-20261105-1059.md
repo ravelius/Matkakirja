@@ -18,3 +18,6 @@ Syy: konteksti 26 %, pehmeä raja (Raamattu 7.37). Edellinen: viesti-valoseppa-t
 3. Vyöhykkeiden pyyhintä elävästä palasta vain, jos KS tai KK sitä pyytää (MUUTOS 1: kone pyyhkii; KS tekee saaren kuvapohjalla, tapa KK:n valinnassa).
 Avoin: työlistan rivin teksti (1870-luvun kartta, korttelit alueina) on vanhempi kuin omistajan 4.11. 09.33 striimikartta, ja lukittu k55 on sen pohja. Tulkintani: työ on striimikartan viimeistely Pariisissa. Varmista KK:lta, jos kuva vaatii muuta.
 Muistettavaa: JU:n tiedotus tulee viestinä; ei omaa Unity-ajoa ilman JU:n vuoroa. Python numpy:n kanssa ilman -I (/opt/homebrew/bin/python3).
+
+## Lisäys (KK 10.55, tuli luovutuksen jälkeen)
+OMISTAJAN PÄÄTÖS 10.55 kirjattu työlistalle. KK: 10.43:n järjestys ja -1045:n askeleet kumottu; ei järvipareja, ei iPad-ajoja eikä mittauksia. Pari oli jo lähtenyt KK:lle 10.46, joten siihen ei tarvita vastausta. Koe on haarassa linssiseppa2/jarvet-koe (d82f7e5ce, natiivi-backup). KK: seuraava työ tulee PT:ltä; PT:n käsky Pariisin kartasta on tämän luovutuksen pohja.
