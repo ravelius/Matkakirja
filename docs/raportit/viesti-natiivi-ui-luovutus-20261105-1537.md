@@ -35,3 +35,11 @@ Törmäyskorjaus `NostotKartalla.KylttienTormays` (joka kehys, ajamatta): kiinte
 ## Huomiot
 - Älä yhdistä KS:n ja lento-haaraa suoraan (52 committia, ristiriita Laattapalvelin.Elava.cs:ssä). Yhdistämisestä päättää PT, kun Pariisi kootaan. Vanha natiivi-ui/pariisi-lento-219 d5850ff4e: huippusuodatus ei ole kylttihaarassa.
 - zsh: `"${K}:polku"`, ei `$K:polku`; rg:n olematon glob kaataa koko komennon.
+
+## Lisäys, KK 15.35 (ei vielä tehty)
+KK vie kuvat omistajalle: "kyltit näyttävät hyviltä: vaalea nähtävyyksille ja tumma tähtikyltti kadonneille", ja kysyy tummasta.
+1. kyltti-5: Kuumailmapallon kyltti näkyy haamuna Notre-Damen tornin kohdalla, ja pallo menee tornin läpi. Ks. edellä KarttaKyltti, joka ei ole törmäyslistalla.
+2. Temple-torni ja Grand Châtelet näkyvät tähtenä ilman kuvaa, vaikka kuvat jäävät (omistaja 14.57). Tarkista KS:n kanssa. Lokissa: "kuva ei latautunut" pariisi-grand-chatelet.webp, pariisi-galerie-des-machines.webp, pariisi-tuileries.webp.
+3. hor-2: etualan jättinimet Croulebarbe ja Les Gobelins pois.
+4. kyltti-2: nimet Pyramide ja Mont Chalais 102 m näkyvät edelleen.
+Seuraava ajo mallihaaran päällä, kuvat KK:lle. Selvitä KK:lta tai KS:ltä, mikä haara ja sha on mallihaara, jos se ei selviä luovutuksista. Jos JU:n jonossa oleva ajo f29bbd0b5 ei vielä ole alkanut, päivitä haara ensin ja kerro JU:lle.
