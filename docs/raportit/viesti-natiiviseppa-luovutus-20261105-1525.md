@@ -28,3 +28,14 @@ Kallistus toimii (loki 85,0°), mutta "rakennusten pitää nousta" ei täyty: No
 
 ## T7 → NAS 2. erä
 pid 58484 käynnissä 15.25. Monitor kuolee nollauksessa: aseta uudelleen. Muu -1348:n mukaan; ei poistoja ennen PT:n lupaa.
+
+## Lisäys 15.27: omistaja ja KK 15.18, UUSI TYÖ, EI aloitettu (konteksti yli 25 %). Tämä menee jonon kärkeen
+Omistaja sanasta sanaan: "pariisin introssa kartta saa olla aika sivusta (ei suoraan ylhäältäpäin) jotta 3d rakennukset näkyvät hyvin. pariisin nimen takana ei saa olla tummennusta"
+KK:n tavoite: "koko aloituslennon ajan (kierto ja luenta) kartta on selvästi kallistettuna, ja uudet 3D-rakennukset seisovat näkyvästi kartalla. PARIISI-nimi on kartan päällä ilman tummennusta, ja luettavuus hoidetaan nimen omalla reunalla tai varjolla. Korvaa KK:n 15.12-kysymyksen "tummuuko otsikon aikana". Aja mallihaaran päällä, ruutusarja KK:lle."
+KK 85°:sta: "Rakenna kallistus mallihaaran (nahtavyydet-219) päälle ennen seuraavaa ajoa. Tarkista sitten n-1km-85:n viat: jättinimi "embâcle" etualalla (nimi ei saa kasvaa etualalla), maastokohouma peittää Seinen, portaikkoinen etuala ja kolmio. Rakennusta ei voi arvioida ilman mallia; omistajalle vasta, kun Notre-Dame seisoo kuvassa."
+Työlistassa rivi "Pariisin intro: kartta sivusta, ei tummennusta nimen takana".
+
+Varmistettu git-komennoilla: karttaseppa/nahtavyydet-219 8d0cf457e sisältää 661377bbb:n ja Nahtavyysalue-tiedostot (2 osumaa); 461a0241e ei sisällä (0), ei myöskään a88c8f846 (KK). 15.16:n arvioni "Notre-Dame ei nouse" johtui siis mallien puuttumisesta rungosta, ei kallistuksesta.
+
+Seuraavan ensimmäinen työ: yhdistä mallihaara, a88c8f846 (85°) ja 461a0241e (saapuminen) yhdeksi ajettavaksi haaraksi; yhdistystä ei ole kokeiltu. Sitten aloituslennon kallistus ja nimen tummennus (tummennuksen koodia en etsinyt; alku NUI:n kuvat ja `AjaKeskustaanKiertaen`/`SaapumisKierto`). Sovi NUI:n kanssa, jos tummennus on sen haarassa. -1510:n huomio: NUI:n kyltit-haarassa PalloKierto `|| Kiertaa` jäi pois, palauta yhdistettäessä.
+JU:n ajo 461a0241e on jonossa ja saa jäädä: se kertoo tyhjän pohjan ja Lontoon kortin tilan, mutta ei rakennuksista. Tummuutta ei enää katsota siitä.
