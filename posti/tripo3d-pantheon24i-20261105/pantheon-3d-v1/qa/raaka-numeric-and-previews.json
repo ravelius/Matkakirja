@@ -1,0 +1,166 @@
+{
+  "source": "output/pantheon-24i-2125-20261105/raw/pantheon24i-attempt01-raw.glb",
+  "sourceSHA256": "7dce1629a8fcbb2380f7ebb6b8641dacc2d5d33eb5c706a6ed7a3b1805c5c0dc",
+  "outputSHA256": "8e51cca49dfadc5c94e00ee247eac1e28d58847f6ffa8bacffa4e11d8ee7c428",
+  "uniformScale": 245.6096488846238,
+  "originOffset": [
+    0.0001983940601348877,
+    0.0,
+    0.0001983940601348877
+  ],
+  "bounds": [
+    [
+      -93.87629782598316,
+      0.0,
+      -120.5
+    ],
+    [
+      93.87629782598316,
+      170.1458444116504,
+      120.5
+    ]
+  ],
+  "dimensions": [
+    187.75259565196632,
+    170.1458444116504,
+    241.0
+  ],
+  "operation": "Uniform positive scale plus base centering only; normals, UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/work/attempt01-raw.glb",
+    "bytes": 4707436,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 29675,
+    "triangles": 41920,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -93.87629699707031,
+        0.0,
+        -120.5
+      ],
+      [
+        93.87629699707031,
+        170.14584350585938,
+        120.5
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 29,
+    "uvZero3DArea": 3.6933882536426643,
+    "surface3DArea": 159531.87633914067,
+    "uvZero3DAreaFraction": 2.3151412359690918e-05,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_982393f7-8659-45bb-b5a1-8b2f31a3698e_2",
+        "mimeType": "image/png",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_982393f7-8659-45bb-b5a1-8b2f31a3698e_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_982393f7-8659-45bb-b5a1-8b2f31a3698e_1",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 29675,
+        "triangles": 41920,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 29,
+        "uvZero3DArea": 3.6933882536426643,
+        "surface3DArea": 159531.87633914067
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-lansi.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-ita.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-etela.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-pohjoinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-ylhaalta.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-lounas.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pantheon-24i-2125-20261105/qa/attempt01-raw-koillinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    }
+  ]
+}

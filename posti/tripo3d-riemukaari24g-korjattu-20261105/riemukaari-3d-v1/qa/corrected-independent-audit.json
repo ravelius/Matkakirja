@@ -1,0 +1,408 @@
+{
+  "reviewType": "Independent numeric/UV audit and visual review of attempt02 corrected variants; models unchanged.",
+  "numericMethod": "Existing tools/numeric_qa.py read-only accessor-based audit; UV-zero threshold abs(2D UV cross product)<=1e-12; 3D area is triangle cross-product area. Additional UV range/interior proxy computed from meshkit accessors.",
+  "variants": {
+    "rawSource": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-raw.glb",
+      "sha256": "0c4b77f53105adabd9cd185aa6e944bb9ae2095913769fa1ebe974c516d8b13f",
+      "triangles": 43591,
+      "vertices": 31676,
+      "primitives": 1,
+      "materials": 1,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "opaque": true,
+      "bounds": [
+        [
+          -94.0,
+          0.0,
+          -50.54585647583008
+        ],
+        [
+          94.0,
+          184.1858673095703,
+          50.54585647583008
+        ]
+      ],
+      "uvZeroTriangles": 20,
+      "uvZero3DArea_m2": 3.162422093376572,
+      "surface3DArea_m2": 174661.2197733124,
+      "uvZeroAreaFraction": 1.8106034627955684e-05,
+      "uvZeroAreaPercent": 0.0018106034627955684,
+      "images": [
+        {
+          "index": 0,
+          "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_2",
+          "mimeType": "image/png",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "index": 1,
+          "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_0",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "index": 2,
+          "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_1",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    },
+    "rawCorrected": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-raw-corrected.glb",
+      "sha256": "5fc444eac20410251955295b643bdde3662bffaee44e13dffe8f7d49a21d1b67",
+      "triangles": 37648,
+      "vertices": 28170,
+      "primitives": 1,
+      "materials": 1,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "opaque": true,
+      "bounds": [
+        [
+          -94.0,
+          0.0,
+          -50.54585647583008
+        ],
+        [
+          94.0,
+          180.3017578125,
+          50.54585647583008
+        ]
+      ],
+      "uvZeroTriangles": 18,
+      "uvZero3DArea_m2": 2.493583197062586,
+      "surface3DArea_m2": 164954.75816985156,
+      "uvZeroAreaFraction": 1.511677034799432e-05,
+      "uvZeroAreaPercent": 0.001511677034799432,
+      "images": [
+        {
+          "index": 0,
+          "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_2",
+          "mimeType": "image/png",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "index": 1,
+          "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_0",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "index": 2,
+          "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_1",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "triangleDeltaVsSource": -5943,
+      "vertexDeltaVsSource": -3506,
+      "surfaceAreaDeltaVsSource_m2": -9706.461603460833
+    },
+    "lightSource": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-light.glb",
+      "sha256": "2f229e1c806c23e27e8904cd6cb75530c11b558bdea6298132c68af133a8a8cd",
+      "triangles": 28005,
+      "vertices": 22390,
+      "primitives": 1,
+      "materials": 1,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "opaque": true,
+      "bounds": [
+        [
+          -94.0,
+          0.0,
+          -50.48305130004883
+        ],
+        [
+          94.0,
+          184.16848754882812,
+          50.48305130004883
+        ]
+      ],
+      "uvZeroTriangles": 45,
+      "uvZero3DArea_m2": 55.873828951916124,
+      "surface3DArea_m2": 174262.47812052665,
+      "uvZeroAreaFraction": 0.000320630290321429,
+      "uvZeroAreaPercent": 0.0320630290321429,
+      "images": [
+        {
+          "index": 0,
+          "name": "tripo_image_cca80813-421c-47da-bacc-9e030bb26082_2",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "name": "tripo_image_cca80813-421c-47da-bacc-9e030bb26082_0",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "index": 2,
+          "name": "tripo_image_cca80813-421c-47da-bacc-9e030bb26082_1",
+          "mimeType": "image/png",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "lightCorrected": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-light-corrected.glb",
+      "sha256": "af6269ac778c9da40090ae85d9f1d2ce86c6bd50bc4a33af44cfb2d54394c7f1",
+      "triangles": 24857,
+      "vertices": 20180,
+      "primitives": 1,
+      "materials": 1,
+      "positionsFinite": true,
+      "indexRangeValid": true,
+      "opaque": true,
+      "bounds": [
+        [
+          -94.0,
+          0.0,
+          -50.48305130004883
+        ],
+        [
+          94.0,
+          180.2670135498047,
+          50.48305130004883
+        ]
+      ],
+      "uvZeroTriangles": 40,
+      "uvZero3DArea_m2": 53.8805917529628,
+      "surface3DArea_m2": 164642.1072725749,
+      "uvZeroAreaFraction": 0.0003272588807659042,
+      "uvZeroAreaPercent": 0.03272588807659042,
+      "images": [
+        {
+          "index": 0,
+          "name": "tripo_image_cca80813-421c-47da-bacc-9e030bb26082_2",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "name": "tripo_image_cca80813-421c-47da-bacc-9e030bb26082_0",
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "index": 2,
+          "name": "tripo_image_cca80813-421c-47da-bacc-9e030bb26082_1",
+          "mimeType": "image/png",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "triangleDeltaVsSource": -3148,
+      "vertexDeltaVsSource": -2210,
+      "surfaceAreaDeltaVsSource_m2": -9620.370847951737
+    }
+  },
+  "uvDetail": {
+    "rawSource": {
+      "uvFiniteVertices": 31676,
+      "uvVertexCount": 31676,
+      "uvBounds": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "uvValuesInUnitSquare": true,
+      "crossPassageInteriorProxy": {
+        "triangles": 3143,
+        "surfaceArea_m2": 8190.80925497817,
+        "uvZeroTriangles": 2,
+        "uvZero3DArea_m2": 0.041607715779939346,
+        "uvCoordinatesFiniteForAllVertices": true,
+        "uvBoundsOfVerticesUsed": [
+          [
+            0.0,
+            0.001220703125
+          ],
+          [
+            1.0,
+            0.998779296875
+          ]
+        ],
+        "selection": "triangle centroids |Z|<15m, 0<Y<77m, 22<|X|<92m and geometric normal |Nx|<0.35; a conservative geometric proxy, not exact face lineage"
+      }
+    },
+    "rawCorrected": {
+      "uvFiniteVertices": 28170,
+      "uvVertexCount": 28170,
+      "uvBounds": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "uvValuesInUnitSquare": true,
+      "crossPassageInteriorProxy": {
+        "triangles": 1198,
+        "surfaceArea_m2": 5020.10219351078,
+        "uvZeroTriangles": 0,
+        "uvZero3DArea_m2": 0.0,
+        "uvCoordinatesFiniteForAllVertices": true,
+        "uvBoundsOfVerticesUsed": [
+          [
+            0.01025390625,
+            0.009765625
+          ],
+          [
+            0.9049405455589294,
+            0.998779296875
+          ]
+        ],
+        "selection": "triangle centroids |Z|<15m, 0<Y<77m, 22<|X|<92m and geometric normal |Nx|<0.35; a conservative geometric proxy, not exact face lineage"
+      }
+    },
+    "lightSource": {
+      "uvFiniteVertices": 22390,
+      "uvVertexCount": 22390,
+      "uvBounds": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "uvValuesInUnitSquare": true,
+      "crossPassageInteriorProxy": {
+        "triangles": 1830,
+        "surfaceArea_m2": 8272.470247992784,
+        "uvZeroTriangles": 1,
+        "uvZero3DArea_m2": 0.036783842482976524,
+        "uvCoordinatesFiniteForAllVertices": true,
+        "uvBoundsOfVerticesUsed": [
+          [
+            0.0,
+            0.001220703125
+          ],
+          [
+            0.99951171875,
+            0.998779296875
+          ]
+        ],
+        "selection": "triangle centroids |Z|<15m, 0<Y<77m, 22<|X|<92m and geometric normal |Nx|<0.35; a conservative geometric proxy, not exact face lineage"
+      }
+    },
+    "lightCorrected": {
+      "uvFiniteVertices": 20180,
+      "uvVertexCount": 20180,
+      "uvBounds": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "uvValuesInUnitSquare": true,
+      "crossPassageInteriorProxy": {
+        "triangles": 1020,
+        "surfaceArea_m2": 5029.427016069112,
+        "uvZeroTriangles": 0,
+        "uvZero3DArea_m2": 0.0,
+        "uvCoordinatesFiniteForAllVertices": true,
+        "uvBoundsOfVerticesUsed": [
+          [
+            0.00634765625,
+            0.009765625
+          ],
+          [
+            0.90494304895401,
+            0.998779296875
+          ]
+        ],
+        "selection": "triangle centroids |Z|<15m, 0<Y<77m, 22<|X|<92m and geometric normal |Nx|<0.35; a conservative geometric proxy, not exact face lineage"
+      }
+    }
+  },
+  "visualInspection": {
+    "imagesInspected": [
+      "attempt02-corrected-raw-ita.png",
+      "attempt02-corrected-raw-lansi.png",
+      "attempt02-corrected-raw-pohjoinen.png",
+      "attempt02-corrected-raw-etela.png",
+      "attempt02-corrected-raw-ylhaalta.png"
+    ],
+    "observations": [
+      "Both wide facades and both narrow facades show open archways in the orthographic previews; no door panel remains visible in the opening.",
+      "Main arch mouldings/pilasters appear substantially intact. Lower side-pier areas show diagonal/shaded patches; top view retains uneven triangular/shaded texture areas. These are visual artifacts, but images alone do not establish whether they came from Boolean UVs or pre-existing texture/geometry.",
+      "Corrected raw preview JSON reports zero fully-black pixels in the five inspected orthos."
+    ],
+    "correctedRawBlackPixels": {
+      "ita": 0,
+      "lansi": 0,
+      "pohjoinen": 0,
+      "etela": 0,
+      "ylhaalta": 0
+    },
+    "correctedLightBlackPixels": {
+      "ita": 80,
+      "lansi": 0,
+      "pohjoinen": 32,
+      "etela": 0,
+      "ylhaalta": 0
+    }
+  },
+  "recommendation": "Prefer corrected raw for the principal model. It preserves the two open passages and has much smaller global UV-zero 3D area (2.494 m2 vs corrected light 53.881 m2); the selected new-interior geometric proxy has no UV-zero triangles in either corrected version. Corrected light has visible black pixels in some orthos and materially higher UV-zero area. No additional aperture geometry correction is indicated by these checks; review the noted shading patches in full-size exports before final delivery.",
+  "limits": [
+    "The proxy region is geometric, not exact face lineage; the Boolean operation re-triangulated/re-indexed the mesh.",
+    "No texture pixel bake, overlap test, or final game-runtime import was performed.",
+    "Corrected bounds show top Y reduced by about 3.9m from source; this audit records it but does not attribute the change without source face correspondence."
+  ]
+}

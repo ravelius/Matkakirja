@@ -1,0 +1,81 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-corrected-light.glb",
+  "method": "Orthographic all-triangle projected coverage; pixel is background only if no mesh triangle covers its ray. Masks exactly match model-fitted cutter dimensions allowed in #2130. Flat opaque geometry and constant background rendered to PNG; background RGB counted within the unchanged masks. No source texture/alpha reliance.",
+  "mesh": {
+    "vertices": 20180,
+    "triangles": 24857,
+    "boundsMinXYZ_m": [
+      -94.0,
+      0.0,
+      -50.48305130004883
+    ],
+    "boundsMaxXYZ_m": [
+      94.0,
+      180.2670135498047,
+      50.48305130004883
+    ],
+    "dimensionsXYZ_m": [
+      188.0,
+      180.2670135498047,
+      100.96610260009766
+    ]
+  },
+  "ratios": {
+    "widthX_over188": 1.0,
+    "depthZ_overWidthX": 0.537053737234562,
+    "heightY_overWidthX": 0.958867093350025,
+    "targets": {
+      "width_m": 188,
+      "depth_over_width": 0.54,
+      "height_over_width": 0.98
+    }
+  },
+  "supportDatum": {
+    "globalMinY_m": 0.0,
+    "robustVertexY_0_5percentile_m": 0.02436971664428711,
+    "medianY_ofLowest1percentVertices_m": 0.024460554122924805,
+    "lowest1percentVertexCount": 208,
+    "note": "All three reported; robust estimates are descriptive and do not replace the global minimum."
+  },
+  "openingCoverage": {
+    "front_large": {
+      "view": "front",
+      "fixedOpeningWidth_m": 44.0,
+      "fixedOpeningHeight_m": 106.0,
+      "maskCenterHorizontal_m": 0.14,
+      "maskPixels": 58912,
+      "geometryCoveredPixels": 0,
+      "backgroundPixels": 58912,
+      "flatImage": "output/riemukaari-24g-2122-20261105/qa/corrected-light-holes-2130-front-flat.png",
+      "backgroundRGB": [
+        48,
+        160,
+        230
+      ],
+      "backgroundFraction": 1.0,
+      "targetMinimum": 0.9,
+      "passes90Percent": true,
+      "maskDefinition": "Model-frame-fitted cutter dimensions approved in #2130; identical mask and cutter dimensions, semicircular crown; no shrink after measurement"
+    },
+    "left_narrow": {
+      "view": "left",
+      "fixedOpeningWidth_m": 30.0,
+      "fixedOpeningHeight_m": 72.5,
+      "maskCenterHorizontal_m": 0.0,
+      "maskPixels": 27678,
+      "geometryCoveredPixels": 6,
+      "backgroundPixels": 27672,
+      "flatImage": "output/riemukaari-24g-2122-20261105/qa/corrected-light-holes-2130-left-flat.png",
+      "backgroundRGB": [
+        48,
+        160,
+        230
+      ],
+      "backgroundFraction": 0.999783221331021,
+      "targetMinimum": 0.9,
+      "passes90Percent": true,
+      "maskDefinition": "Model-frame-fitted cutter dimensions approved in #2130; identical mask and cutter dimensions, semicircular crown; no shrink after measurement"
+    }
+  },
+  "limits": "Flat-color orthographic image test backed by all-triangle ray coverage; source materials are not used. Through-view opposite walls and intrados are included as occlusion. A low score proves blocked orthographic rays inside the fixed mask, but does not identify the blocking surface."
+}

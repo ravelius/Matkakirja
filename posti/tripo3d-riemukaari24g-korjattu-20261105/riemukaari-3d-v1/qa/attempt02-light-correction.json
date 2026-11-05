@@ -1,0 +1,48 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-light-baseclean.glb",
+  "sourceSHA256": "84468a06b9099740e0cfcaccec2c0678a8a8a96e9905dcc564f8dee6d70d5af6",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-light-corrected.glb",
+  "outputSHA256": "af6269ac778c9da40090ae85d9f1d2ce86c6bd50bc4a33af44cfb2d54394c7f1",
+  "originalFaces": 27976,
+  "outputFaces": 24857,
+  "removedLowerComponents": [],
+  "realBaseOriginalY_m": 3.901479482650757,
+  "cuts": [
+    {
+      "axisBlender": "Y",
+      "width_m": 44,
+      "heightFromBase_m": 106,
+      "baseOriginalY_m": 3.901479482650757,
+      "center_m": 0.14,
+      "semicircularCrownRadius_m": 22.0,
+      "extentEachDirection_m": 65
+    },
+    {
+      "axisBlender": "X",
+      "width_m": 30,
+      "heightFromBase_m": 72.5,
+      "baseOriginalY_m": 3.901479482650757,
+      "center_m": 0,
+      "semicircularCrownRadius_m": 15.0,
+      "extentEachDirection_m": 104
+    }
+  ],
+  "interiorFacesBeforeTriangulate": 106,
+  "interiorUVPatchCenter": [
+    0.7832845449447632,
+    0.3707682490348816
+  ],
+  "UVPatchSpan": 0.006,
+  "boundsBlenderXYZ": [
+    [
+      -94.0,
+      -50.48305130004883,
+      0.0
+    ],
+    [
+      94.0,
+      50.48305130004883,
+      180.2670135498047
+    ]
+  ]
+}

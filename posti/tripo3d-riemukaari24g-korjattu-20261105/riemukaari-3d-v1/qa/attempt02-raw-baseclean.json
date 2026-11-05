@@ -1,0 +1,41 @@
+{
+  "source": "output/riemukaari-24g-2122-20261105/work/attempt02-raw.glb",
+  "sourceSHA256": "0c4b77f53105adabd9cd185aa6e944bb9ae2095913769fa1ebe974c516d8b13f",
+  "output": "output/riemukaari-24g-2122-20261105/work/attempt02-raw-baseclean.glb",
+  "outputSHA256": "0b868348a82e5e852fc94f47e77578d25c4da1780442ff0478687992f0c389bb",
+  "removedComponents": [
+    {
+      "component": 904,
+      "vertices": 18,
+      "faces": 18,
+      "boundsMin": [
+        -51.601436614990234,
+        0.0,
+        -33.73514938354492
+      ],
+      "boundsMax": [
+        -43.96736526489258,
+        3.9365923404693604,
+        -25.72491455078125
+      ]
+    },
+    {
+      "component": 916,
+      "vertices": 34,
+      "faces": 47,
+      "boundsMin": [
+        -51.776397705078125,
+        0.0,
+        -34.796573638916016
+      ],
+      "boundsMax": [
+        -44.07234191894531,
+        3.965752363204956,
+        -24.02488899230957
+      ]
+    }
+  ],
+  "facesRemoved": 65,
+  "remainingMinY": 3.8841044902801514,
+  "sourceAttributesPreserved": true
+}

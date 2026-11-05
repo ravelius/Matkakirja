@@ -1,0 +1,171 @@
+{
+  "source": "output/riemukaari-24g-2122-20261105/work/attempt02-raw-corrected.glb",
+  "sourceSHA256": "5fc444eac20410251955295b643bdde3662bffaee44e13dffe8f7d49a21d1b67",
+  "outputSHA256": "87e4a6156fe90c0c3f704dbce0fc5e4b2c5320416403b228d72f729955abdbec",
+  "uniformScale": 1.0,
+  "originOffset": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "bounds": [
+    [
+      -94.0,
+      0.0,
+      -50.54585647583008
+    ],
+    [
+      94.0,
+      180.3017578125,
+      50.54585647583008
+    ]
+  ],
+  "dimensions": [
+    188.0,
+    180.3017578125,
+    101.09171295166016
+  ],
+  "operation": "Uniform positive scale plus base centering only; normals, UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/work/attempt02-corrected-raw.glb",
+    "bytes": 5271540,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 28170,
+    "triangles": 37648,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -94.0,
+        0.0,
+        -50.54585647583008
+      ],
+      [
+        94.0,
+        180.3017578125,
+        50.54585647583008
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 18,
+    "uvZero3DArea": 2.493583197062586,
+    "surface3DArea": 164954.75816985156,
+    "uvZero3DAreaFraction": 1.511677034799432e-05,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_2",
+        "mimeType": "image/png",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_93c38da0-74e6-4d38-9ce7-26fb95dda70c_1",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 28170,
+        "triangles": 37648,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 18,
+        "uvZero3DArea": 2.493583197062586,
+        "surface3DArea": 164954.75816985156
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-ita.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-lansi.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-pohjoinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-etela.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-ylhaalta.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-lounas.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ],
+      "yawDegrees": 225,
+      "pitchDegrees": 60
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/riemukaari-24g-2122-20261105/qa/attempt02-corrected-raw-koillinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ],
+      "yawDegrees": 45,
+      "pitchDegrees": 60
+    }
+  ],
+  "cameraGeography": "Front/East+Z, North+X; SW yaw225, NEyaw45"
+}
