@@ -305,3 +305,7 @@ Kortti KK:n kautta (arkki scratchpad/keskustelukanava/kuvat/sarja24/invalides-ar
 ## PARIISIN NIMIKYLTIT PIENEMMIKSI JA NÄKYVIIN VASTA LÄHELLÄ (OMISTAJA 19.23, KK) (5.11.2026 klo 19.23)
 
 Omistajan pyyntö klo 19.23 KK:n kautta: "nimikyltit pitää olla pienemmällä, näkyvät vasta kun mennään lähemmäs rakennusta". KK:n tavoite: kaukaa kartta on puhdas ja rakennukset puhuvat puolestaan; kun lähestytään, pieni kiinteän kokoinen kyltti ilmestyy pehmeästi. Pyöreät merkit jäävät (15.01). Muuttaa Raamatun 2.215:n kyltit ja 2.212:n tason: pallon kyltti seuraa samaa tasoa. KK antoi työn Natiivi-UI:lle suoraan.
+
+## KAIKKI ÄÄNET PELIIN, OMISTAJA KUUNTELEE PELISSÄ (OMISTAJA 19.23, KK) (5.11.2026 klo 19.25)
+
+OMISTAJAN PÄÄTÖS klo 19.23 KK:n kautta: "laita kaikki äänet peliin, kuuntelen siellä". 223 lausetta ja tervehdys. PT:n suositus KK:lle: pieni iPad, uusi kehitysversio NS:n haarasta nappikorjauksen d1867a55a mittauksen jälkeen (lupa omistaja 13.28), ei TF eikä juna; uudet ääniosoitteet vaativat koodimuutoksen, joten nykyisessä versiossa ne eivät kuulu.
