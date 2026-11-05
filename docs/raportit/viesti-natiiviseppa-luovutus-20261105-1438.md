@@ -50,3 +50,10 @@ Runko on nyt natiivi-ui/pariisi-lento-219 d5850ff4e (NUI, sisältää 2c9ca58a6:
 Ajo 2 lokit/natiiviseppa-matka-f446775c8 (Lontoo → Pariisi, oikea matka; PUUTE vain Lontoon intron odotuksen aikaraja, ei vaikutusta). VIKA TOISTUU: p03–p06 hiekanvärinen pohja, piirros vasta p07:stä (arkki scratchpadissa, tee uudelleen p01–p14:stä). Ei siis pelkkä kylmän testipolun vika.
 Ehdot, jotka voivat liioitella: valinnasta zoomaukseen vain 4,1 s; Lontoossa ennakointi ehti Edinburghiin (109 s), Pariisin palat jäivät kesken. "zoomaus alkaa: lähinäkymä KESKEN", "valmiiksipiirto pariisi 49 palaa (levyllä jo 160) 18,9 s; lähinäkymä 7,43 × 5,57 km z15". Lähinäkymä valmis 14,8 s zoomauksen alusta.
 Hypoteesi korjaukseksi, varmistamatta: esilataus piirtää z15:n, kierron 6,6 km:ssä Mac pyytää z13:a. Laitteella taso on toinen (Mac 640×480), joten tasoa ei saa päätellä Macista. Tarkista ensin, mitä pelaaja näkee, kun Pariisi on ehditty esiladata: pidempi odotus Lontoossa ennen matkaa (sama skenaario, odota 8 → noin 120 s).
+
+## Lisäys 14.4x (4): UUSI TYÖ, PT 14.4x, ei aloitettu (konteksti 30 %)
+PT sanasta sanaan: "uusi työ, omistaja 14.44: "kartta saisi kääntyä enemmän, aina 90 asteen kulmaan asti". Pelaaja voi kallistaa Pariisin karttaa vaakatasoon asti ja katsoa uusia 3D-kohteita samalta tasolta. Maa ei saa kadota viivaksi, eikä kamera saa mennä pinnan alle. Korvaa 24.9.:n rajan 85–88°. Rajaus: vain Pariisi. Ei iPad-ajoja eikä mittauksia; muisti mitataan kerran valmiina (2.209), ja laajan näkymän muistiriski kuuluu samaan mittaukseen, kuten kierron saumakorjauskin. Horisontin nimet tekee NUI, sovi rajapinta sen kanssa. Mac-kuva suoraan KK:lle, kopio PT:lle (2.214)."
+Työn pohjaksi runko natiivi-ui/pariisi-lento-219 d5850ff4e, ellei PT toisin sano.
+
+## Odottaa seuraavaa sessiota
+Järjestys: 1) JU:n ajo natiiviseppa-liiku-d5850ff4e → kuvat ja rivi KK:lle (KK 14.41, ks. lisäys 2). 2) ajo natiiviseppa-matka2-f446775c8 (skenaario-piirros-matka2.txt, 150 s Lontoossa) → vika 1:n päätös. Vaihda polku, jos JU käytti eri kansiota. 3) vika 2. 4) 90° kallistus. PT voi muuttaa järjestystä.
