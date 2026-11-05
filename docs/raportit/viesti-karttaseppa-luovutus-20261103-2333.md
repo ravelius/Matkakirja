@@ -1,0 +1,55 @@
+# Karttaseppä: luovutus 3.11.2026 klo 23.33 (KS)
+Edellinen: docs/raportit/viesti-karttaseppa-luovutus-20261103-2315.md (tällä haaralla, PR 6233; Y, R ja taustaajojen selitykset sieltä). Tämä korvaa sen TILA- ja AVOIN-listat. Syy: konteksti 25 % (7.37).
+Y = `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/pariisi-ylaviisto-20261103/` (python `/opt/homebrew/opt/python@3.14/bin/python3`). Tilataulukko Y/TILANNE-nahtavyydet.md on ajan tasalla.
+**Aja heti vahti:** `Monitor` komennolla `zsh Y/vahti.zsh` (kaikki jo tulleet toimitukset on käsitelty; 30 min välein uudelleen).
+
+## TILA
+| Kohde | Tila |
+|---|---|
+| 9 G-nähtävyyttä | KK:n hyväksymiä; pelissä NS:llä (7ee81d262, koeajo a94d8e7fb) |
+| Sainte-Chapelle | KK 23.21 hyväksyi. Kivi lämmitetty ND:n sävyyn Y/lammita-kivi.py. Taso + alue.json viestitty NS:lle; KK katsoo JU:n pelikuvasta |
+| Notre-Dame | KK 23.26: 0,8 × julkisivun vasemman alakulman ympäri, kulma 48.853538, 2.346718. Y/nd-skaala-08.py → Y/tarkistus-nd-k4/skaala-08/ (sha256 8589240ae981…, irtopala poistettu, puut jäivät). Viestitty NS:lle; raivausmaski pitää tehdä tästä tasosta |
+| Sillat a, b | Kirjastossa esine/silta-{a,b}-{2,3,6}-kaarta (Y/korjaa-sillat.py) |
+| Sillat c (90°), d (30°) | KK 23.31 hyväksyi. Kirjastossa esine/silta-c-{lyhyt,keski,pitka}, esine/silta-d-{2,3,5}-kaarta, data/sillat-kannet v2 (Y/leikkaa-silta-arkki-2.py, Y/korjaa-sillat-c.py, Y/yhdista-sillat.py). NS:lle ilmoitettu; KK katsoo kannen leveyden pelikuvasta (d noin 11 px, muut 16–18 px) |
+| Koko Pariisin puut ja esinepaikat | Valmis, NS:lle viestitty: _tyo/karttaseppa/pariisi-koko-esinepaikat-20261103/ (data/pariisi/esinepaikat, data/pariisi/puut). Isot aukiot katupalojen kuorista |
+
+Kaikki NS:n viestit olivat lähtiessä NS:n jonossa ("queued"); tarkista list_events, jos NS ei kuittaa.
+
+## AVOIN (järjestyksessä)
+1. **Yhdestoista silta:** PT puhuu 11 sillasta, tilauksen lista on 10 (90° Alexandre III, Invalides, Alma; 30° Sully, Austerlitz, Charles de Gaulle, Bercy, Tolbiac, National, Saint-Louis). PT:ltä pyydetty kertomaan NS:lle.
+2. **Pelikuvan arviot:** ND 0,8, Sainte-Chapellen sävy, siltojen leveys ja 30°:n kapeampi kansi. Tiedossa olevia pieniä: d-5:n neljäs kaari osin umpinainen, a/b:n kylkeen jää leikkauksesta 11–15 px kärki.
+3. **Nimet:** natiivi-backup/karttaseppa/pariisi-nimet-219 c1832c0c2 JU:lla; odota kuvat, arvioi tiheys ja koko kohdasta esikatselu-20261103-225548/nd-keski.png, pari PT:lle (ohje 2315-luovutuksen AVOIN 2).
+4. **ND:n kiekko** (nd-keski.png ~1810, 545): NS 23.2x: ei aukio eikä ND:n taso, piirtyy HdV:n ja ND:n alle, kaupunkimerkkiä ei suljettu pois. Katso koeajon kuvasta. ND:n pieneneminen voi muuttaa tilanteen.
+5. **Korttelipinta k5:** pelissä VS:n k12:ssa (_tyo/linssiseppa2/pariisi-tyyli/k12/TULOS.md). Peli on k5:tä lämpimämpi, syy selvittämättä. ÄLÄ säädä ennen VS:n isoa iPad-kuvaa (a57c0b473); VS tuo sen.
+6. **Taustaajot:** tasankoketju pid 65143 ja esittelypaikkasilmukka pid 68441 käynnissä 23.3x. HUOM: tasangot-poltto-20261103/ketju.virhe.11031218 on olemassa, en tutkinut (vanha aikaleima 12.18). Jatkot: 2232-luovutuksen AVOIN 3 ja 19.40-luovutuksen AVOIN 4–5.
+7. **Worktree-poistot (PT):** 2315-luovutuksen LISÄYS; PR:t 6187 ja 6233 auki, tasankoketju ja silmukka kesken, joten mitään ei voi vielä poistaa.
+8. Vanhat: v7/v8 iso-pari (JU), pitkät ruudut.
+
+## Opit
+- Pariisin OSM-välimuistissa on vain wayt: isot aukiot ovat avoimia katupaloja saman nimen alla. Tunnettujen aukioiden nimet kannattaa tarkistaa generaattorin jälkeen.
+- Kannen maski: kiinteä väriviite ja suurin komponentti; kuvan keskimediaani osui väärin lyhyissä silloissa (a-2 leikkautui puoliksi). Tulos katsottava aina kuvasta.
+- Laskettu koordinaatti viestiin vasta mitattuna: kahdesti lähti viesti arviolla ja korjaus perässä (kyljen kärki, ND:n irtopala).
+
+## LISÄYS klo 23.34 (NS)
+- Sainte-Chapelle pelissä 48ba7cf88, sillat 53b34a340 (33 siltaa). **AVOIN 1 ratkesi:** yhdestoista silta on Simone de Beauvoir, 30°-listalla.
+- Koko Pariisin puut pelissä 159acdf0c. Aukiot ovat toistaiseksi pois datasta (VS/KK kiekot), joten esinepaikkojen aukioita ei nyt käytetä.
+- NS ei maininnut ND 0,8:aa tässä viestissä: varmista, että se ja raivausmaski on tehty tasosta 8589240ae981…. Pelikuvat JU:lta.
+
+## LISÄYS klo 23.34
+- ND 0,8 pelissä 9ac73a6e4 (kirjasto esine/pariisi/notre-dame-alue v4, raivausmaski uudesta alfasta; pikselivertailu toimitettuun tasoon tehty). Edellisen lisäyksen ND-varmistus on hoidettu.
+- ketju.virhe.11031218 on tyhjä tiedosto klo 11.20:ltä: vanha, ei koske nykyistä ketjua. AVOIN 6:n huomio on hoidettu.
+- Postivahti: nollaus vasta lähellä 35 %:a; uusi LUOVUTUS VALMIS silloin.
+
+## LISÄYS klo 23.40 (KK 23.29, NS)
+- **Nimet nähtävyyksien alla:** natiivi-backup/karttaseppa/pariisi-nimet-220 4e929f038 (95a733acen päällä, sisältää nimiharvennuksen 042ab0c28; korvaa c1832c0c2:n). Worktree wt/proto-karttaseppa-ruutu-218 on tällä haaralla. EI käännetty täällä; JU:lta pyydetty ajo. Arvioi samalla AVOIN 3:n tiheys. Huomioi: rajauslaatikko on koko kuvan laatikko, ja merkittävän kohteen oma nimi piiloutuu samalla säännöllä (kerrottu PT:lle).
+- HdV:n vanha kuva poistettu pelistä (NS 6c283e719). Takaisin vain uudella aluekuvalla. Kaupungin merkki piiloon nähtävyyksien korkeudella (5f8b18b5c): ND:n kiekko oli NS:n mukaan tämä, tarkista pelikuvasta.
+
+## LISÄYS klo 23.42 (VS)
+- **Korttelipinta k6:** VS toi k14-parin (_tyo/linssiseppa2/pariisi-tyyli/k14/pari-sama-mittakaava-paikallinen.jpg): katot sinisemmät kuin 2029, väri KS:n. Y/kortteli-k6.py → Y/tarkistus-a2-k6/k6.png (ba2b80c247b9…), katto Lab 60/5,6/11,3. Viety VS:lle; odota parin k14 + k6. Korvaa AVOIN 5:n.
+- **Hautausmaat:** _tyo/karttaseppa/pariisi-koko-esinepaikat-20261103/hautausmaat.json (51 kpl, renkaat ENU). VS piirtää maan nurmipinnalla, puut ovat jo datassa. Hautakivistä kysytty PT:ltä: uusi Codex-osa vain, jos KK haluaa (oma suositus: katso ensin pelikuva).
+
+## LISÄYS klo 23.44 (PT, KK 23.42; lue viimeisenä, tämä on ajantasaisin)
+- Hautakiviä EI tilata nyt (PT): tilaus vain, jos alue näyttää pelikuvassa nurmen ja puiden jälkeen yhä tyhjältä.
+- **Nimet:** 4e929f038 viety NS:lle yhdistelmäkokeeseen ja JU kääntää sen linjalla 2 (kuvat nd-keski, Louvre + kadut, Eiffel + kadut; JU lähettää polut). Arvioi koko ja määrä näistä, pari PT:lle. Oman nimen päätös on KK:lla, ja se piiloutuu kokeessa samalla säännöllä.
+- KK:n korjauslista: /Users/Shared/Claude/proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md (kohdat 1–5 NS, 6–9 VS, 10 nimet).
+- **ODOTTAA:** JU:n nimikuvat, VS:n pari k14 + k6, ND:n kiekko seuraavasta ajosta (lista kohta 4 on NS:llä). Vahti pitää käynnistää uudelleen.
