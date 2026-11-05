@@ -18,3 +18,13 @@ PK:n kohdat eivät korjaudu levyillä: 房子26 ja 弘义阁 ennallaan, 房子11
 
 ## Poikkeamat
 glb_tiivista.py korjattu (valo*-kuva jää, jos UV1 on). Leivonta 20 palalle eikä 1-2:lle; PT:lle kerrottu 09.5x, sen vastausta ei ollut vielä tätä kirjoittaessa.
+
+## Lisäys 10.03 (PT:n kuittaus: katso itse h05, kaide-kauko ja ylempi tumma vyö ennen kk2r:n valmista)
+KK2R EI OLE VALMIS. Itse katsottu täysikoossa (rajaukset 1:1; kaide-kauko koko kuva):
+- Ylempi tumma vyö (m15ala, oikea kylki): verrokissa ylähylly tumma, kk2r:ssä vaalea ja konsolit erottuvat. Sama muutos kuin KORJAUS.md:n kohta "ylempi tumma vyö vaalenee"; näyttää paremmalta, mutta syy yhä auki.
+- UUSI samassa kuvassa: kk2r:ssä tumma kaistale liilan vyön alareunassa ja selvästi enemmän hienoa pistekuviota viivan alla (myös tummat ruudut vasemmalla). Verrokissa pisteitä on vain vähän oikeassa reunassa. PT luokitteli pilkut 4.11. vanhaksi viaksi, mutta tässä niitä on enemmän. Syy auki.
+- kaide-kauko: valkoisia pilkkuja lattian muutamassa kivessä näkyy kk2r:ssä, verrokissa selvästi vähemmän. Agentin havainto pitää. Vähäinen, syy auki (epäily: valo_polvi/valotaso, ei todistettu).
+- h05: pieni tumma läikkä kk2r:ssä valoisalla lattialla (rajaus 1:1 x 365-445, y 195-210 kohdasta 800,640), verrokissa ei. Syy auki; voi olla irtoesineen varjo, ei todistettu.
+- 110ala: friisin alareuna sahalaitainen koko leveydeltä seinää vasten. Verrokissa seinä peittää friisin suurimmaksi osaksi, joten vikaa ei siellä näe. Syy auki.
+- m15yla: terassi x 1060-1280, y 190-300 eri muotoinen, verrokissa korotettu laatta; ei selvitetty kumpi on oikein.
+VIENTIEHTO: kk2r:ää ja levykorjausta ei viedä erikseen. Ne on yhdistettävä samaan pakettiin ja yhdistelmästä katsottava pari ennen vientiä; lisäksi yötila (viennit vain omistajan pyynnöstä JU:n kautta) ja PT:n lupa.
