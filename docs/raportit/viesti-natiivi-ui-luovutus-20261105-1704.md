@@ -6,7 +6,7 @@ Omistaja 16.41 (PT): "keskitytään vain pariisin 3d rakennuksiin". Jatka vain k
 
 ## Ensin
 1. Kuittaa JU:lle (local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd) "NUI valmis". JU:lla ei ole NUI:n ajoja jonossa.
-2. Odota KK:n ja PT:n vastausta kuviin. Älä korjaa alla olevia kohtia ennen sanaa, ellei PT tai KK pyydä.
+2. Auki-kohdat 1–3 odottavat KK:n sanaa (PT 17.0x). Älä korjaa niitä ennen sitä.
 
 ## Tehty
 - Ajo 5263cacb5 ja ajo 1c5c26667 (lokit/julkaisija-pariisi-kyltit-1c5c26667, 22 kuvaa, PUUTE 0, 0 error CS). Molemmat viety KK:lle, kopio PT:lle.
@@ -24,7 +24,7 @@ Omistaja 16.41 (PT): "keskitytään vain pariisin 3d rakennuksiin". Jatka vain k
 2. Hintakyltti peittää Pompidou-keskus-nimen (keski, katukuva-ennen, louvre-ennen). Nimi jää alle, koska hintakyltti väistää vain kylttejä.
 3. Ilman kylttiä: Grand Châtelet (viisto), Temple-torni ja Bastilji (louvre-lansi). Kiinteä kyltti ei siirry (omistaja 2.11. 08.14).
 4. Vrain-Lucas todistamatta: `ui kohdenostot napauta Vrain-Lucas` → "ei merkkiä", molemmissa ajoissa. KS:n osa; kuva kyltit-napautus ei näytä sitä.
-5. tarkista.sh: exit 1 valovahdista (Komennot.cs vari 5 > 4, Nahtavyysalue.cs vari 2 > 0, NotreDameKirkko.shader varjostin 4 > 0). Ei NUI:n commiteista; ohje vie poikkeuksen PT:lle, kerrottu PT:lle.
+5. tarkista.sh: exit 1 valovahdista (Komennot.cs vari 5 > 4, Nahtavyysalue.cs vari 2 > 0, NotreDameKirkko.shader varjostin 4 > 0). Ei NUI:n commiteista. PT 17.0x: ei poikkeusta nyt; tulee ND-kokeen muutoksista, jotka eivät ole junassa, ja PT ratkaisee sen, kun koe viedään junaan.
 6. -1642:n Auki 2 ja 3: kaukaiset kyltit matalalta, Sacré-Cœur usvassa, leikkeet kaukaa, kylttien pysty- ja kursiivi-ero, `komento nimet etsi Pariisi`.
 
 ## Huomiot
