@@ -2,10 +2,10 @@
 /*
  * Euroopan kaupunkien keskipisteet saapumiszoomaukselle (omistaja 2.11.2026 klo 21.42: zoomaus ja nostot kaikkiin
  * Euroopan kaupunkeihin; KK:n suunnitelma 20261102-nostot-ja-zoomaus-kaikkiin.md, osa B).
- * Käyttö:  node tools/sisalto/kaupunkikeskustat.mjs --vienti <vientipaketti> [--valimuisti <kansio>]
+ * Käyttö:  node tools/sisalto/kaupunkikeskustat.mjs --vienti <vientipaketti>
+ * OSM-haku on pois käytöstä (Raamattu 2.183): työkalu kaatuu, kunnes haku tehdään Geofabrikin aineistosta.
  *
- * Lähtöpiste = kaupungin pallopiste (PALLON_KAUPUNKIPISTEET, Wikidata P625). Jokainen tarkistetaan OpenStreetMapista
- * (Overpass-rajapinta, yksi kysely kerrallaan, User-Agent ja tauko):
+ * Lähtöpiste = kaupungin pallopiste (PALLON_KAUPUNKIPISTEET, Wikidata P625). Jokainen tarkistetaan OpenStreetMapista:
  *   - kaupungin place-solmu (wikidata=Q; muuten lähin place=city/town 5 km:n säteellä) ja sen etäisyys pisteestä,
  *   - onko piste vesialueen sisällä (natural=water, waterway=riverbank, landuse=reservoir),
  *   - katuja 100 m:n säteellä (meri ja puistot jäävät kiinni),
@@ -19,13 +19,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { osmHakuPuuttuu } from '../osm-haku-kielletty.mjs';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const UA = 'Matkakirja-karttaseppa/1.0 (https://matkakirja.app; peli)';
 const TULOS = path.join(JUURI, 'data', 'kaupunkikeskustat.json');
-// Julkiset Overpass-palvelimet vuorotellen kuten tools/kartta/tee-tiet.mjs (overpass-api.de ruuhkautuu ja palauttaa 502/504).
-const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
-  'https://overpass.private.coffee/api/interpreter'];
 const RAJA_M = 700;
 const ALUEET = new Set(['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia']);
 const ALUEEN_JASEN = {
@@ -71,9 +69,6 @@ const KASIN = {
 };
 
 const args = process.argv.slice(2);
-const vi = args.indexOf('--valimuisti');
-const VALIMUISTI = vi >= 0 ? args[vi + 1] : null;
-if (VALIMUISTI) fs.mkdirSync(VALIMUISTI, { recursive: true });
 const ve = args.indexOf('--vienti');
 if (ve < 0) { console.error('Anna --vienti <vientipaketti> (node tools/vienti/vie-sisalto.mjs --ulos …)'); process.exit(2); }
 const lueKokoelma = (nimi) => JSON.parse(fs.readFileSync(path.join(args[ve + 1], 'kokoelmat', `${nimi}.json`), 'utf8')).alkiot;
@@ -88,25 +83,6 @@ async function haeJson(url, init = {}) {
     await tauko(10000 * (i + 1));
   }
   throw new Error(`Ei vastausta: ${url}`);
-}
-
-async function overpass(kysely, avain) {
-  const tiedosto = VALIMUISTI ? path.join(VALIMUISTI, `${avain}.json`) : null;
-  if (tiedosto && fs.existsSync(tiedosto)) return JSON.parse(fs.readFileSync(tiedosto, 'utf8'));
-  let d = null;
-  for (let yritys = 0; !d && yritys < 9; yritys += 1) {
-    const palvelin = OVERPASS[yritys % OVERPASS.length];
-    try {
-      const r = await fetch(palvelin, { method: 'POST', headers: { 'User-Agent': UA, 'content-type': 'application/x-www-form-urlencoded' },
-        body: `data=${encodeURIComponent(kysely)}` });
-      if (r.ok) d = await r.json(); else console.error(`  ${new URL(palvelin).host} ${r.status}`);
-    } catch (virhe) { console.error(`  ${new URL(palvelin).host} ${virhe.message}`); }
-    if (!d) await tauko(5000 * (Math.floor(yritys / OVERPASS.length) + 1));
-  }
-  if (!d) throw new Error('Overpass ei vastannut');
-  if (tiedosto) fs.writeFileSync(tiedosto, JSON.stringify(d));
-  await tauko(3000);
-  return d;
 }
 
 async function qidit(otsikot) {
@@ -133,17 +109,6 @@ const etaisyysM = (a, b) => {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
 };
-
-function kysely(p, qid) {
-  const c = `${p.lat},${p.lon}`;
-  return `[out:json][timeout:90];
-node(around:15000,${c})[place~"^(city|town)$"]["wikidata"="${qid}"];out;
-node(around:5000,${c})[place~"^(city|town)$"][name];out;
-is_in(${c})->.a;
-(area.a[natural=water];area.a[waterway=riverbank];area.a[landuse=reservoir];);out tags;
-way(around:100,${c})[highway];out count;
-nwr(around:300,${c})[place=square][name];out center tags;`;
-}
 
 const { MAAILMANKARTTA: P } = await import(path.join(JUURI, 'js/packs/maailmankartta.js'));
 const { PALLON_KAUPUNKIPISTEET: PP } = await import(path.join(JUURI, 'js/packs/maailmankartta-pallopisteet.js'));
@@ -184,8 +149,10 @@ for (const c of eurooppa) {
     continue;
   }
   const qid = q.get(c.wiki) ?? null;
-  const d = await overpass(kysely(piste, qid ?? 'Q0'), c.id);
-  // Overpass palauttaa osat järjestyksessä; eritellään tyypin ja tunnisteiden mukaan.
+  // Tarvitaan pisteen ympäriltä: place=city/town (wikidata=qid 15 km, nimetyt 5 km), vesialueet, joiden sisällä piste on
+  // (natural=water, waterway=riverbank, landuse=reservoir), katujen määrä 100 m:n säteellä ja nimetyt aukiot 300 m:n säteellä.
+  const d = osmHakuPuuttuu('kaupunkikeskustat');
+  // Eritellään tyypin ja tunnisteiden mukaan.
   const solmut = d.elements.filter((e) => e.type === 'node' && e.tags?.place && ['city', 'town'].includes(e.tags.place));
   const omaSolmu = solmut.find((e) => e.tags.wikidata === qid)
     ?? solmut.sort((a, b) => etaisyysM(piste, a) - etaisyysM(piste, b))[0] ?? null;

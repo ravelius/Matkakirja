@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /*
  * Nostojen omien paikkojen koneellinen tarkistus (suunnitelma 20261102-nostot-ja-zoomaus-kaikkiin osa D; Karttaseppä 2.11.2026).
- * Käyttö:  node tools/sisalto/tarkista-nostopaikat.mjs --vienti <vientipaketti> [--valimuisti <kansio>]
+ * Käyttö:  node tools/sisalto/tarkista-nostopaikat.mjs --vienti <vientipaketti>
+ * OSM-haku on pois käytöstä (Raamattu 2.183): työkalu kaatuu, kunnes haku tehdään Geofabrikin aineistosta.
  *
  * data/nostopaikat.json:n jokaiselle 'siirto'-paikalle:
  *   - kaupungin alueella: enintään 12 km kaupungin keskipisteestä (data/kaupunkikeskustat.json; alueilla rajauksen sisällä),
- *   - ei vedessä: OpenStreetMapin vesialue (natural=water, waterway=riverbank, landuse=reservoir; Overpass is_in) ja katuja
+ *   - ei vedessä: OpenStreetMapin vesialue (natural=water, waterway=riverbank, landuse=reservoir) ja katuja
  *     150 m:n säteellä (meri),
  *   - ei 25 m:n päällekkäisyyttä saman kaupungin muiden nostojen eikä kohdekartan kohteiden kanssa (Kohdenostot.cs:30).
  * Vientipaketti ajetaan ensin (node tools/vienti/vie-sisalto.mjs --ulos …): se sisältää jo siirretyt pisteet.
@@ -14,19 +15,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { osmHakuPuuttuu } from '../osm-haku-kielletty.mjs';
 
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
-const UA = 'Matkakirja-karttaseppa/1.0 (https://matkakirja.app; peli)';
-const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
-  'https://overpass.private.coffee/api/interpreter'];
-const tauko = (ms) => new Promise((r) => setTimeout(r, ms));
-
 const args = process.argv.slice(2);
 const arvo = (lippu) => { const i = args.indexOf(lippu); return i >= 0 ? args[i + 1] : null; };
 const VIENTI = arvo('--vienti');
-const VALIMUISTI = arvo('--valimuisti');
 if (!VIENTI) { console.error('Anna --vienti <vientipaketti>'); process.exit(2); }
-if (VALIMUISTI) fs.mkdirSync(VALIMUISTI, { recursive: true });
 
 const etaisyysM = (a, b) => {
   const R = 6371000, r = Math.PI / 180;
@@ -34,27 +29,6 @@ const etaisyysM = (a, b) => {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
 };
-
-async function overpass(kysely, avain) {
-  const tiedosto = VALIMUISTI ? path.join(VALIMUISTI, `${avain.replace(/[^a-z0-9-]/gi, '_')}.json`) : null;
-  if (tiedosto && fs.existsSync(tiedosto)) return JSON.parse(fs.readFileSync(tiedosto, 'utf8'));
-  for (let yritys = 0; yritys < 9; yritys += 1) {
-    const palvelin = OVERPASS[yritys % OVERPASS.length];
-    try {
-      const r = await fetch(palvelin, { method: 'POST', headers: { 'User-Agent': UA, 'content-type': 'application/x-www-form-urlencoded' },
-        body: `data=${encodeURIComponent(kysely)}` });
-      if (r.ok) {
-        const d = await r.json();
-        if (tiedosto) fs.writeFileSync(tiedosto, JSON.stringify(d));
-        await tauko(3000);
-        return d;
-      }
-      console.error(`  ${new URL(palvelin).host} ${r.status}`);
-    } catch (virhe) { console.error(`  ${new URL(palvelin).host} ${virhe.message}`); }
-    await tauko(5000 * (Math.floor(yritys / OVERPASS.length) + 1));
-  }
-  throw new Error('Overpass ei vastannut');
-}
 
 const lue = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const paikat = lue(path.join(JUURI, 'data', 'nostopaikat.json'));
@@ -82,11 +56,8 @@ for (const [id, p] of Object.entries(paikat)) {
     const m = etaisyysM(p, n);
     if (m < 25) syyt.push(`päällekkäin: ${n.nimi} ${Math.round(m)} m`);
   }
-  const c = `${p.lat},${p.lon}`;
-  const d = await overpass(`[out:json][timeout:60];
-is_in(${c})->.a;
-(area.a[natural=water];area.a[waterway=riverbank];area.a[landuse=reservoir];);out tags;
-way(around:150,${c})[highway];out count;`, id);
+  // Tarvitaan: vesialueet, joiden sisällä piste on, ja katujen määrä 150 m:n säteellä.
+  const d = osmHakuPuuttuu('tarkista-nostopaikat');
   const vedet = d.elements.filter((e) => e.type === 'area').map((e) => e.tags?.name ?? e.tags?.natural ?? e.tags?.waterway);
   const kadut = Number(d.elements.find((e) => e.type === 'count')?.tags?.ways ?? 0);
   if (vedet.length) syyt.push(`vedessä (${vedet.join(', ')})`);

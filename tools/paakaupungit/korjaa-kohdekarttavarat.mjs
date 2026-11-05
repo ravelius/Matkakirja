@@ -6,7 +6,7 @@
 // Jokaiselle kartalle: kohteet maakartat.js:stä (kaupunkikartanKohteet), uusi rajaus korjaaVarat()-funktiolla. Muuttunut
 // rajaus kirjoitetaan sekä tools/piirra-kaupunkikartta.mjs:n KAUPUNGIT-tauluun että js/packs/maakartat.js:n
 // KAUPUNKIKARTAT-riville (rajat + piirtoRajat, jos kartalla on laajennus). --piirra piirtää kartan (ja värikartan, jos
-// kartalla on varikartta-kenttä) Overpassista 6 s:n tauoin. --mac päivittää myös <erä>/kohdekartat-mac.json:n rajat,
+// kartalla on varikartta-kenttä) 6 s:n tauoin (piirtäjän OSM-haku on pois käytöstä, Raamattu 2.183: piirto kaatuu toistaiseksi selkeään viestiin). --mac päivittää myös <erä>/kohdekartat-mac.json:n rajat,
 // jotta kytke-pilvisisalto.mjs:n uusinta ei palauta vanhoja. Aja lopuksi tarkista-kohdekarttavarat.mjs iphone|ipad --pk.
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
