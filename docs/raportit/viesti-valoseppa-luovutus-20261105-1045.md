@@ -1,4 +1,4 @@
-# Valosepän luovutus 5.11.2026 klo 10.45
+# Valosepän luovutus 5.11.2026 klo 10.41 (tiedostonimessä 1045)
 
 Syy: konteksti 34 %, pehmeä raja (Raamattu 7.37). Edellinen: viesti-valoseppa-luovutus-20261105-0940.md, lisäys 2 (syy, runko ja tuotteen tarpeet). Loki: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md. Wt k30 on haarassa linssiseppa2/jarvet-koe (d82f7e5ce, puhdas, natiivi-backup).
 
