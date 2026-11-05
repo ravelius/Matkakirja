@@ -66,3 +66,11 @@ Täyte: 永和宫 ja 平房15 saivat leivotun seinän mediaanin 8 m:n säteeltä
 延禧宫: malli on kivirakennus (tyyppi ruins), ovi seinässä; ei muutettu, kerro KK:lle.
 弘义阁 (B4): y 0,81 -laatat EIVÄT ole LAV:n irto-listalla `linnanrakentaja/muuri/irto/lista.csv`; viereinen y 1,74 (ruutu 1-1, x −93…−90,5) on. Yleinen korjaus ei siis listan mukaan kata niitä. KK:lle vastaamatta.
 Yhä auki: 浴德殿:n vasen kaista ja pystyviiva, 皇极殿:n ikkuna (viat 1), 御景亭 ei ovea.
+
+## LISÄYS 09.12: ajo 380664d56 katsottu, korjaukset 405d9d716 (kartta v13), lista 227 JU:lla
+`lokit/tarkastelukuvat-380664d56-090152`, arkit `_tyo/pelikoodari/tayte/8cd/arkki-380-{1,2,3}.png` (40/41, 凝香亭 puuttuu). Täysikoossa 四执库, 房子11, 长春宫戏台, 房子26, 西暖殿; muut arkkina.
+西暖殿 ja 如意馆 ehjät kuvassa. 四执库: lehti yli jalustan yhä. Mitta: jalusta 0,52, kartan syv 0,75. Nyt marginaali 0,25 ja alaraja 15° (oli 0,1 ja 20°). 长春宫戏台: ovi y 0 ja lehdet 90° jalustan läpi; nyt leveässä aukossa ovi jalustan päälle (y 0,25, syv 1,0). v12 → v13: vain tämä ovi muuttui.
+房子11: kamera liian lähellä kuvassa, 227:ssä käsin yaw 178.
+凝香亭: mittaus jää odottamaan pitkissä listoissa (223 ok, 224 ja 226 aikaraja, 225 ok), odotus on `TarkasteluKesken` (lodHaivytettavat tai OsasarjaAtlasKesken); syy auki. Työkalun asia, ei oven.
+房子26: maan kiilamainen laatta leikkaa kivijalan (LAV:n irto-asia, ei ovi).
+Seuraavaksi: 227:n kuvat täysikoossa, sitten koko arkki KK:lle (uudet arkit 226 + 227:n vaihdetut kuvat). Konteksti 25 %: luovutus ja nollaus arkin jälkeen.
