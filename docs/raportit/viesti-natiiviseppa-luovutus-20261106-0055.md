@@ -4,10 +4,12 @@ Korvaa -0030:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Yötila: 
 
 ## SEURAAVA TYÖ
 1. Liiku 99748962f (PT 00.5x, jonon loppuun, sarjaa hidastamatta): kuvia ei ole lähetetty KK:lle, ja meren vertailu on tekemättä. Kuvat lokit/natiiviseppa-liiku-99748962f (ajettu 5.11. 16.41). Mitä katsotaan: luovutus -1610 kohta 4. Meren ruudukko kanaalilla: vertaa samaan kohtaan iPadin vanhaa kuvaa ennen vastausta KK:lle, ei uutta iPad-ajoa (luovutus -1510). Kuva KK:lle, kopio PT:lle.
-2. Odota PT:n sanaa ajosta, joka kirjaa ladatut palat lokiin (kohta "Vyö"). Ei ajoa ilman sanaa.
+2. Vyö: PT 00.5x antoi luvan YHTEEN ajoon (ladatut palat tunnuksineen lokiin, sama paikka kuin c4, 1–2 kuvaa), JU:n vuorolla sarjan jälkeen, ei junaan. Selvitä samalla, mistä 3D-talot ilman palakärkiä tulevat: "kartan omat talot eivät näy alta" on omistajan ehto. Ei korjausta ennen riviä KK:lle. Rivi KK:lle, kopio PT:lle (sama osoite, PT nollautui välissä).
+   Ennen ajoa, ilman ajoa (KK: kameran koordinaateilla, ei silmämääräisillä pisteillä): laske kamera H-c4.npy:stä (fov 50°, pääpiste keskellä), piirrä palojen oikeat verkot korkeuksineen c4:n päälle. Pala on Sovita(maaM + MaaLisays), pohja Sovita(90) (TaloKerros.cs:222, Nahtavyysalue.cs:503); korkeusero siirtää kuvassa pisteitä etelään, joten nykyiset kärkipisteet (tasoprojektio) ovat suuntaa antavia. Tarkista myös, osuvatko c1:n vyö ja c3:n suorat reunat palarajoille.
 
 ## Tila
-- c5-2dfb96273 katsottu, tulos KK:lla ja PT:llä: laikut poissa iPadin kaltaisilla tasoilla (Mac), raja ja vyö näkyvät selvemmin. Suositus: c5 korvaa c3:n aamun kuvissa. KK päättää (PT 00.5x).
+- KK 00.4x: c5-2dfb96273 korvaa c3:n aamun kuvissa; kelpaa kokeena, ei junaan. Rajaa ei pehmennetä. Talorintama menee omistajalle aamulla kortilla: älä muuta alueita tai maskeja. KK lisäsi omistajalle kerrottaviin: kaukaisimmat talot pisteinä, heikompana kuin c3:ssa (c2 oikea yläosa).
+- KK:lle kerrottu 00.5x: vyön syy ei varma, palan raja paras johtolanka; ajo tulossa.
 - Maskit sacre-coeur ja montparnasse jäävät. Maskikoodiin ei koskettu. KS:n kuittaus kumoavaan viestiin on tarkistamatta.
 
 ## Vyö ja raja (`_tyo/natiiviseppa/pariisi-talot/selvitys-c5-raja.md`, skriptit `selvitys-c5/`)
