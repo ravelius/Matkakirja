@@ -1,0 +1,91 @@
+{
+  "project": "sacre-coeur-24n-2132-20261105",
+  "stage": "intake-only; no generation or external action",
+  "sourceOrder": {
+    "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/TILAUS-24n-sacre-coeur-tripo.md",
+    "copiedTo": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/TILAUS-24n-sacre-coeur-tripo.md",
+    "sha256": "1e3117c91e9bff174597207d41acd92a9500d6d453290a05062cea4f55d5536a",
+    "copiedSha256": "1e3117c91e9bff174597207d41acd92a9500d6d453290a05062cea4f55d5536a"
+  },
+  "incomingOrder": {
+    "repository": "ravelius/Matkakirja",
+    "path": "posti/karttaseppa-tripo3d-sacre-coeur-24n-20261105.md",
+    "commit": "886baba49203a3445132457c1599ea9abc967a9c",
+    "blobSha": "29e46df65de59a8d9fa57bd6577ca4b3c39a711b",
+    "readVia": "GitHub fetch_file API at the supplied commit; blob SHA matched."
+  },
+  "ledgerReference": {
+    "taskNumber": 2132,
+    "title": "Sacré-Cœur24n Tripo-malli",
+    "status": "routed-queued-after-montparnasse",
+    "ownerThreadId": "01a14ee0-3e23-72b2-82b1-510228c70b7d",
+    "routingSucceeded": true
+  },
+  "authorization": "Owner approved 2026-11-05 20:13 after seeing the sheet; persistent Tripo permission, one model, no train. Owner accepts that hill may be rounder in 3D.",
+  "queue": "After Opéra 24j, Invalidit 24l, and Montparnasse 24m; this order is queued after Montparnasse.",
+  "sources": {
+    "directory": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/sacre-coeur/tripo-syote",
+    "copiedDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/sources/tripo-syote",
+    "manifestPath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/sacre-coeur/tripo-syote/SHA256SUMS",
+    "manifestCopySha256": "34756b1725958d72dbf940ba94554df08a5c81c743d396d469ec2274d5f75265",
+    "allFourImagesAndManifestVerified": true,
+    "inputs": [
+      {
+        "name": "etela.png",
+        "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/sacre-coeur/tripo-syote/etela.png",
+        "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/etela.png",
+        "sha256Expected": "647148574656666c0b5cce9cb4d5f2d6f85679f76e8275fc18da5f644711fe88",
+        "sha256Source": "647148574656666c0b5cce9cb4d5f2d6f85679f76e8275fc18da5f644711fe88",
+        "sha256Copied": "647148574656666c0b5cce9cb4d5f2d6f85679f76e8275fc18da5f644711fe88",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "pohjoinen.png",
+        "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/sacre-coeur/tripo-syote/pohjoinen.png",
+        "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/pohjoinen.png",
+        "sha256Expected": "8329cdb4950d5bfd86de5e8f67e7d762a31e7a19cb76cbd58c89b898358038af",
+        "sha256Source": "8329cdb4950d5bfd86de5e8f67e7d762a31e7a19cb76cbd58c89b898358038af",
+        "sha256Copied": "8329cdb4950d5bfd86de5e8f67e7d762a31e7a19cb76cbd58c89b898358038af",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "ita.png",
+        "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/sacre-coeur/tripo-syote/ita.png",
+        "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/ita.png",
+        "sha256Expected": "ab74c3e08c63b9d7604a6bc6b316310cf4cd792623abfb2093ff5157ad45b520",
+        "sha256Source": "ab74c3e08c63b9d7604a6bc6b316310cf4cd792623abfb2093ff5157ad45b520",
+        "sha256Copied": "ab74c3e08c63b9d7604a6bc6b316310cf4cd792623abfb2093ff5157ad45b520",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "lansi.png",
+        "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/sacre-coeur/tripo-syote/lansi.png",
+        "copiedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/lansi.png",
+        "sha256Expected": "20f3963d4f26ac7174f6766cb07c55a4dbb4b47437ee498b62c14c8236ab2c05",
+        "sha256Source": "20f3963d4f26ac7174f6766cb07c55a4dbb4b47437ee498b62c14c8236ab2c05",
+        "sha256Copied": "20f3963d4f26ac7174f6766cb07c55a4dbb4b47437ee498b62c14c8236ab2c05",
+        "exists": true,
+        "matches": true
+      }
+    ]
+  },
+  "tripoMapping": {
+    "Front": "etela.png",
+    "Back": "pohjoinen.png",
+    "Left": "ita.png",
+    "Right": "lansi.png"
+  },
+  "hardConstraints": [
+    "Do not rescale or edit the four source images. South/north views are about 1.9x the east/west view scale by design; do not flatten/stretch the hill to reconcile them.",
+    "Hill target 420×200m; church about 200×100m; dome top 230m above ground. Hill long axis Z. Uniform model scale only, applied; origin at hill footprint center and minimum Y=0.",
+    "Hill edge must taper to terrain level, with no slab or vertical wall; hill and church remain one piece. Measure hill and church ratios in model. If hill is rounder than 0.86 or church wider than the hill, stop and report with an image before another attempt.",
+    "Keep main pointed dome, four smaller domes, north bell tower on axis, south terrace with three arches and south stairs. Inspect domes/roof from raw immediately.",
+    "No trees, people, scaffolding, streets, or paving beyond the hill. GLB embedded, no Draco, <=15MB, <=300 primitives, <=100k triangles; one material target, texture <=2048. UV-zero 3D area and black pixels if retopology is used.",
+    "After two failed attempts, message owner before a third."
+  ],
+  "specialScaleNote": "SN1.9×EW is preserved as source-view scale provenance: south/north images are about 1.9 times larger than east/west. No image edits/scaling authorized.",
+  "nextStep": "Wait until 24j, 24l and 24m are complete; then confirm source-image mapping and do the raw hill taper/roof/dome checks."
+}

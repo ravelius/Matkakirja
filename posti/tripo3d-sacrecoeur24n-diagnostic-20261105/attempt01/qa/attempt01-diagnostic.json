@@ -1,0 +1,167 @@
+{
+  "rotationYDegrees": 0.0,
+  "source": "output/sacre-coeur-24n-2132-20261105/raw/sacrecoeur24n-attempt01-raw.glb",
+  "sourceSHA256": "438c324d4ffcc934b20f4e2ba5f164b98d572c820ddb61a2c5674307cd86b290",
+  "outputSHA256": "70d10540ece86859ec0e473dfa0cf217a04a47c0d164279082de5b58ae98a34f",
+  "uniformScale": 428.56657197744926,
+  "originOffset": [
+    1.5243887901306152e-05,
+    0.0,
+    -0.0002593994140625
+  ],
+  "bounds": [
+    [
+      -89.51795411443159,
+      0.0,
+      -210.0
+    ],
+    [
+      89.51795411443159,
+      294.4171783991809,
+      210.0
+    ]
+  ],
+  "dimensions": [
+    179.03590822886318,
+    294.4171783991809,
+    420.0
+  ],
+  "sacre-coeurtion": "Rigid Y-axis rotation and uniform positive scale plus base centering; UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/work/attempt01-diagnostic.glb",
+    "bytes": 5123124,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 35616,
+    "triangles": 46727,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -89.51795196533203,
+        0.0,
+        -210.0
+      ],
+      [
+        89.51795196533203,
+        294.41717529296875,
+        210.0
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 7,
+    "uvZero3DArea": 1.0168010455498984,
+    "surface3DArea": 263481.74291732407,
+    "uvZero3DAreaFraction": 3.85909488183761e-06,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_a0a27c5f-06cf-413b-9875-a97954993a5c_2",
+        "mimeType": "image/png",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_a0a27c5f-06cf-413b-9875-a97954993a5c_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_a0a27c5f-06cf-413b-9875-a97954993a5c_1",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 35616,
+        "triangles": 46727,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 7,
+        "uvZero3DArea": 1.0168010455498984,
+        "surface3DArea": 263481.74291732407
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-etela.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-pohjoinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-lansi.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-ita.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-ylhaalta.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-lounas.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/qa/attempt01-diagnostic-koillinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    }
+  ]
+}

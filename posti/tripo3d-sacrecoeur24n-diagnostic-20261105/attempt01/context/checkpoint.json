@@ -1,0 +1,49 @@
+{
+  "status": "RAW_DIAGNOSTIC_MISSING_HILL",
+  "updatedAt": "2026-11-05T18:37:57.574600+00:00",
+  "creditsUsed": 45,
+  "sourceImagesUnmodified": true,
+  "intakePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/intake.json",
+  "qualityAccepted": false,
+  "completedTripoJobs": [
+    {
+      "id": "c2a08b86-f39d-4195-9679-e500c2703e21",
+      "attempt": 1,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T18:37:57.574600+00:00",
+      "estimatedCompletion": "2–5 minutes; observed20%",
+      "credits": 45,
+      "balanceBefore": 15735,
+      "balanceAfter": 15690,
+      "mapping": {
+        "Front": "etela.png",
+        "Back": "pohjoinen.png",
+        "Left": "ita.png",
+        "Right": "lansi.png"
+      },
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T18:40:13.018087+00:00",
+      "rawSHA256": "438c324d4ffcc934b20f4e2ba5f164b98d572c820ddb61a2c5674307cd86b290",
+      "rawFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sacre-coeur-24n-2132-20261105/raw/sacrecoeur24n-attempt01-raw.glb"
+    }
+  ],
+  "activeTripoJobs": [],
+  "normalizationNote": "Diagnostic Z extent420 only; hill absent, not a valid delivery scale",
+  "failure": {
+    "hill": "green hill completely absent in all seven full-size previews",
+    "churchAndSteps": "church and stairs appear detached rather than one piece with the hill",
+    "decisionRequired": "Need Karttaseppä corrected input or background-processing direction before any retry/retopology."
+  },
+  "diagnosticPackage": "diagnostic/attempt01",
+  "mailboxDraft": "mailbox/attempt01-report.md",
+  "retryOrRetopoAllowed": false
+}
