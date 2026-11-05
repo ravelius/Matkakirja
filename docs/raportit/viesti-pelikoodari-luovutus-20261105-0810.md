@@ -98,3 +98,6 @@ Syy: `pinnat()` otti ikkunakolmiot talteen ennen mallin siirtoa, joten Ik:ssa ol
 Vaikutus v14 → v15: 7 ovea, muut samat (`8cd/ero15.py v14 v15`). 永和宫 25,5 m (nakyva, x 157,5), 益寿斋 7,3 m (aukko-lehti, katso), 体元殿 2,8, 长春宫 1,8, 咸福宫 1,5; 钟粹宫 ja 绥寿殿 paikallaan, täyte lisätty. Parit alle 8 m yhä 房子11–房子8.
 Korjaus aiempaan: `mat.py` ja `seinat.py` katsovat kolmioita ennen siirtoa, joten ne näkevät vain taustan. "益寿斋:n seinä ei ladatuissa malleissa, epäily osasarja" oli väärin: ikkunat ovat mallissa varasto.glb, 绥寿殿:n tyohuone.glb, 永和宫:n y3-yonghegong-lod0.glb (mat3-mittaus); osasarjassa ei kolmioita 5 m:n sisällä. Valo v15:ssä: ilman 南库, 军机处, 绥寿殿 (tayte_valo.py lukee maailmassa, ei tästä viasta).
 KATSOTTAVA: lista 229. Kohta 2 yhä tekemättä (ks. 09.21) ilman 益寿斋:n osasarjatarkistusta.
+
+## LISÄYS 09.3x: LAV:n vastaus ovikohdista
+kk-tausta-1-2:n valo_rgbm puuttuu vahingossa (v95:ssä on, v96:sta ei; syy todistamatta), leivonta LAV:n levykorjauksen ajossa (PT:n päätös). 房子26 on irto-listalla; 房子11:stä y 0,37 ja 0,35 ovat, y 0,31 ja y 0 eivät; 弘义阁 y 0,81 (68 m²) ei ole. LAV ei löytänyt 弘义阁:lta V4_marmoria vaakapintana, joten aiempi havainto on epävarma. LAV katsoo ensin, poistaako levykorjaus nämä. Ei tehtävää minulle ennen sitä; 弘义阁 (B4) yhä vastaamatta KK:lle.
