@@ -2,6 +2,17 @@
 
 Korvaa luovutuksen -0025. Syy: konteksti pehmeällä rajalla (Raamattu 7.37).
 
+## LISÄYS 00.5x: ENSIN TÄMÄ (korvaa alta AJO-kohdan)
+Ajo 8143b96ef TEHTY: L1, 252 s, exit 0, 8 kuvaa, 0 Shader error, 0 error CS, lokit /Users/Shared/Claude/proto-3d/lokit/esikatselu-20261106-004940 (koonnit koonti-*.jpg). LUKKO VAPAA lähetetty JU:lle. Älä aja uudelleen. Tulokset ja koonnit lähetetty KK:lle; KK:n vastaus odottaa, lue se ensin. PT:lle ei ole vielä lähetetty kopiota.
+Nähty: nuolet ja Pont Neufin porras poissa; Madeleinen kadun nimi ehjä; Palais Bourbon tunnistettava; tummuuskorjaus vaalentaa kartan.
+SEURAAVAKSI, jollei KK sano muuta (koodi haaraan `linssiseppa2/ohjelmakohteet`, EI ajohaaraan; ei omaa ajoa):
+1. Varjo: `OhjelmaKohteet.cs` `VarjonRajat` tekee varjon ulkorajoista; Palais Bourbonin alla näkyy tumma neliö. Tee varjo muodon mukaan tai jätä se pois tästä kohteesta.
+2. Kärjen väri: `KatuKartta` 0x92866D mitattu tummasta kartasta. Nyt kärki 153,137,106, katu 218,200,160 (p-pn-ylha, yksi mittauskohta Pont Neufilta). Arvio noin 0xD0BE98; mittaa useammasta kohdasta ennen muutosta.
+3. Lähikuva: `aja ... 0.0012` ei tuonut kameraa lähemmäs (`KorkeusKaarelle`, raja selvittämättä). Madeleinen lähikuva jäi rajaukseksi; KK:lle kerrottu.
+4. Notre-Damen pää näkyi vain pienenä, ei arvioitu tarkemmin.
+5. Sitten Pompidou.
+Seuraavaa ajoa varten ajohaara tehdään uudelleen: ohjelmakohteet + e726bba9f (`git merge-tree --write-tree`, `git commit-tree`, `git branch -f`), ei viedä. JU vaatii pyyntöön rivin "mitä tämä ratkaisee" ja perustelun, jos kuvia on yli 5.
+
 ## TILA
 Koodi c22a5e0bc, haara `linssiseppa2/ohjelmakohteet`, viety natiivi-backupiin (ei origin), worktree /Users/Shared/Claude/wt/proto-linssiseppa2-k30. Ei junaan. Geometriatestit 5/5 läpi; Unityssä EI käännetty eikä ajettu. Sisältää 1af8879d6:n ja kuvauskomennon 0f380637f.
 KK 00.3x: Madeleine ja siltojen päät kelpaavat kokeena, ei junaan. Ei omaa ajoa: näytetään seuraavassa ajossa. Kaide: ei enempää aikaa; KK kertoo pisteet aamulla vikana, syy auki. KK kertoo 14 m:n seinät omistajalle aamulla.
