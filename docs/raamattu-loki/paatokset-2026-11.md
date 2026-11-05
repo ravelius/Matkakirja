@@ -293,3 +293,7 @@ KK:n käsky 18.4x, NUI:n välittämä (23485f753, ajamatta): hintakyltti ei väi
 ## PARIISIN PALLOLASKU: AVAUSTAUKO POIS (5.11.2026 klo 18.56)
 
 PT 5.11.: Pariisin tervehdyslaskusta poistetaan avaustauko 2,3 s (vain Pariisi): omistajan 17.52 'pelaaja lähtee heti' menee vanhan 'ei hätiköityä alkua' edelle tässä kohdassa. Mittaus d12a5d046 (Mac, Google, yksi ajo): valinnasta perille 26,9 s, latausruutu 15,8 s (yleiskuva 6,7 + esilataus 9,1), tauko 2,4 s, lasku 8,7 s; ennen 23,8 s. Oikean pelin käynnistystä ei mitattu. Valkoiset rakennukset automaattiajon kuvissa ovat Ion-varadataa (CesiumKaupunki.cs:452); kaupunkikuvaa arvioivat ajot komennolla 'linssi kaupunki google 1'.
+
+## OMISTAJAN PAATOS KLO 19.03: SACRE-COEUR UUSI OTTO (5.11.2026 klo 19.04)
+
+Kortti KK:n kautta (arkki scratchpad/keskustelukanava/kuvat/sarja24/sacre-coeur-arkki.jpg): Sacré-Cœur 'Uusi otto'. KS:n arkista puuttui 2.206:n mäki; lisätty ottoon 2 ja kerrottu omistajalle, reunaa ei ole kokeiltu karttaa vasten. Perillä KS:llä.
