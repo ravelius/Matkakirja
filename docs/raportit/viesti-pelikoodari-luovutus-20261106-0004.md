@@ -13,6 +13,8 @@ Täydentää -2215:tä; sen kohdat 0, 0b ja 0c ovat tässä korvattu, muut päte
 ## 1. Odottaa muita
 - **KK:** kaistaleet (−147,7; 244,3) ja (−186,5; 497,6) (3 m syviä, pitkä sivu auki). Oma suositus: kuisteiksi, rajaviesti jää. Vastaus LAV:lle.
 - **Lisäys 00.0x, korvaa kaistaleet ja 321:n tilan:** KK vahvisti 51 tilaa; kaksi kaistaletta jää kuisteiksi. 321 kohtaa luokiteltu kartasta KK:n pyynnöstä: ehdotus 8 tilaa ja 13 aukkoa lisää, 5 epäselvää, 4:llä ovi todennäköisesti aukolla, 233 ei tilaa (raportin kohta "321 talon pohjalla"). **Odottaa KK:n päätöstä; LAV ei odota.** Jos KK hyväksyy, vie lisäys LAV:lle.
+- **Lisäys 00.1x, korvaa edellisen ja kohdan 0.3 luvun:** KK hyväksyi: **59 tilaa, 89 aukkoa**; (−162,9; 337,5) ja (121,6; 408,3) eivät listalle; (−108,1; 396,1), (108,3; 473,1) ja (−166,0; 431,6) LAV katsoo mallista (jos viimeinen on oviaukko, sama ovi samalla säännöllä). Ei lisätarkastelua ilman uutta syytä. PT ja LAV tietävät.
+- **Auki KK:lla:** LAV:n kysymys 62 aukon joukon 29:stä (porttitunnelit 8, keskiakseli 16, Yanxigong 5); suositukseni: ei suljeta, rajaviesti jää. KK:n 59-viesti ei ota tähän kantaa. Myös lisäysten kohdetarkistus ennen seinää on kysytty. LAV tekee koejuuren 33:lle, ei vientiä. Ovet alle 3 m täytteestä: (−133,0; 383,6), (−13,9; 373,2), (−12,5; 301,3), (−188,8; 416,0); LAV kertoo, jos seinä peittää oven.
 - **LAV:** seinät. Viesti 00.0x oli jonossa, ei vielä luettu lähetyshetkellä. LAV:n nollaus oli tulossa; tarkista, että lista `docs/raportit/viesti-pelikoodari-aukot-20261105.md` päätyi sen aloitukseen. LAV kertoo vientiversion.
 
 ## 2. Kun seinät tulevat
