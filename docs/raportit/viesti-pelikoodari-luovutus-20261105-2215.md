@@ -25,6 +25,9 @@ Kuvat ja KK:n käsky:
 3. **Kuva sama kamera ennen ja jälkeen KK:lle täysikoossa katsottuna** (ennen: ajon 220320 `x1-kuja-pohjoisesta.png`; sama kamera sk-r:ssä). Ei junaan, ei erillistä ajoa pelkästään tähän.
 - **Ristiriita selvitettävä PT:n kanssa heti:** PT hyväksyi 22.0x rajaviestin (kohta 2), KK nyt "viesti vain oikean oven kohdalla". KK:n päätös on uudempi ja omistajan kanavalta: **älä vie rajaviestiä mihinkään ilman KK:n ja PT:n kuittausta**, ja kerro PT:lle, että `35140432d`:n rajaviesti todennäköisesti poistuu, kun seinät ovat paikallaan. Ei ole vielä kerrottu.
 
+## 0c. Tarkastelutilan 20 pisteen tarkistus (PT 23.5x, tekemättä)
+Työlistan rivi "Juoksupelin tarkastelutila" (omistaja 17.51). Tilaa ei tarkistettu tässä sessiossa, vain haettu: lista -1752 kohta 1; yksi ajo 5 + 2 pisteelle -1822; portti -1925. **Tee oviparin jälkeen:** lue -1752 ja -1822, käy läpi 20 pistettä (tehty, nähty vai auki), kirjaa rivi PT:lle ja työlistalle. Ei ajoa pelkästään tätä varten; omistajan linja 17.51 ja 17.57: yleinen korjaus.
+
 ## 1. Lehden pinta (`af4a8fc82`)
 `Resources/JuoksuOviLehti.png` 512×1024 on leivottu `mallit-v1/ovi-lehti-vasen.glb`:n etupinnasta (Codexin kuva ennallaan, ei uutta grafiikkaa), työkalu scratchpadissa `leivo-lehti.py`. Bake katsottu: sama ristikko ja rengas. Sijoitus varjostimessa u 0 sarana, 1 keskisauma. Kuva tulee sovelluksen mukana, ei mediasta.
 
