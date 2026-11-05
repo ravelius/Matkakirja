@@ -31,7 +31,7 @@ Kartta-testit TaloAlue 5/5. Marais'n Resources-aineisto poistettu.
 KS 23.5x: syy todennäköisesti nähtävyysmallin maavarjo (Nahtavyysalue, jono 2994), korjaus 6f5229e61 karttaseppa/nahtavyydet-219, koeajo JU:n vuorolla, KS kertoo tuloksen. Älä lisää taloja varjon reitille. KS:lle kerrottu, että talot ovat samassa jonossa 2994; järjestys samassa jonossa on määrittelemätön.
 
 ## Ateena 388742104: katsottu, tulos KK:lla 23.5x
-Kamera pysyy Ateenassa ja Tukholmassa Pulun sarjan ajan (b3–b4 ero 0,00 %). Esityskuva ei putoa; PUUTE on skenaarion ajoitusvirhe. Kaksi näkyvää vikaa odottaa KK:n sanaa: Tukholma b5 ohjeteksti läpinäkyvänä kylttien päällä; Ateena b6 lipun yläpää ruudun yli. Haara natiiviseppa/pariisi-aloitus-219, kärki 388742104, junaan vain PT:n kautta. Tila ei muutu ilman viestiä, joka mainitsee 388742104:n.
+Kamera pysyy Ateenassa ja Tukholmassa Pulun sarjan ajan (b3–b4 ero 0,00 %). Esityskuva ei putoa; PUUTE on skenaarion ajoitusvirhe. KK 23.50: kamera kelpaa, ei junaan. Kaksi näkyvää vikaa (Tukholma b5 ohjeteksti läpinäkyvänä kylttien päällä; Ateena b6 lipun yläpää ruudun yli) EI korjata nyt: omistajan 10.52 ja Raamattu 2.209, odottavat Pariisia, PT kirjaa työlistalle. Haara natiiviseppa/pariisi-aloitus-219, kärki 388742104, junaan vain PT:n kautta. Tila ei muutu ilman viestiä, joka mainitsee 388742104:n.
 
 ## Työtapa
 kaanna.sh sh:lla, ei zsh:lla. zsh:ssa `echo ==` on virhe. Peili: `git push natiivi-backup HEAD:refs/heads/peili/proto/natiiviseppa/marais-talot`. tee-palat.py ajetaan python3.14:llä ilman -I:tä (numpy, PIL); noin 3 min. JU palauttaa pyynnön ilman ratkaisee-riviä tai yli noin 5 kuvalla ilman perustelua.
