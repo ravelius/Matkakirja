@@ -3,7 +3,7 @@ Syy: konteksti 26 % (7.37), tauko omistajan ja Tripon odotuksessa. **Lue tämä;
 
 ## ENSIN
 1. Remote päälle. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh`.
-2. Tarkista viestit: **KK:n sana Montparnassesta.**
+2. Tarkista viestit ja posti: seuraavaksi tulevat Tripon mallit ja Codexin Sacré-Cœur.
 
 ## Valmis tässä vuorossa
 - **Grand Palais:** lähiajo 0906b3c15 katsottu, suunta oikein ja rantatie ehjä. Kuvat `grand-palais-asennus/peli-etela.png` ja `peli-ita.png` KK:lla, tunnettu usvavika kerrottu. Ei muuta tehtävää.
@@ -13,9 +13,10 @@ Syy: konteksti 26 % (7.37), tauko omistajan ja Tripon odotuksessa. **Lue tämä;
 Otin kantaa Tripon postiin 51d99ee30. H/W 0,98 ja D/W 0,54 hyväksytty, koska oikea kaari on noin 1,10 ja 0,50 ja tilauksen 0,90 tuli kuvista. Tripo avaa kapeat kaaret paikallisesti, siistii jalustan ja ajaa aukkotestin uudelleen. Ei kolmatta generointia. KK:lle kerrottu, että malli on omistajan kuvaa korkeampi.
 Odotetaan `riemukaari-3d-v1/`. Asennus: `riemukaari/pohja-siisti.png` omalla alfallaan. Kuva pelistä KK:lle.
 
-## Montparnasse otto 2 (24h): KK:lla, suositus kelpaa
-Arkki `sarja24-opera-pantheon-montparnasse/montparnasse/arkki-omistajalle.jpg`, kuvat `_review-sarja-24/montparnasse-otto2/`, huomiot postissa da5a8a8f2. `tee-arkit.py` lukee nyt otto 2:n. Codexin QA FAIL: koillinen 12,8 % kapea, viistot kalibroimatta. Viat kerrottu KK:lle.
-**Jos omistaja sanoo kelpaa:** tilaus Tripolle, Raamatun ja 24g-tilauksen pohjalla. Syöte: Front `etela`, Back `pohjoinen`, Left ja Right **molemmat `lansi`**, koska `ita` on kapea. Mittakaava tilauksesta 62 × 39 × 210 m suhteina, pelikoko 177 × 111 m, jolloin korkeus noin 600 m, ellei tilausta 24 / LUE.md:tä lue toisin: **tarkista korkeus ensin** ja kerro se KK:lle. Suunta 129,4 alue.json:sta; laske Suunta Grand Palais'n säännöllä (etuosan atsimuutti = 180 + Suunta). Pohja `montparnasse/pohja-siisti.png` omalla alfallaan.
+## Montparnasse 24m: omistaja 19.28 "Kelpaa", Tripolta tilattu (posti f5fe06ac9, 19.30)
+Tilaus `_tyo/codex/pariisi-sarja-20261105/TILAUS-24m-montparnasse-tripo.md`, syöte `montparnasse/tripo-syote/` (Front `etela`, Back `pohjoinen`, Left ja Right `lansi`). Odotetaan `montparnasse-3d-v1/`, viimeisenä jonossa. Akselit: etela +Z, leveys 177 m X:llä, korkeus noin 600 m (sama suhde kuin Eiffelin 795 m, KK:lle kerrottu).
+Asennus: **Suunta noin -51** (etuosan atsimuutti 129° = 180 + Suunta), pohja `sarja24-opera-pantheon-montparnasse/montparnasse/pohja-siisti.png` omalla alfallaan. Tarkista katto, koska sivukuvat eivät näytä sitä. Kuva pelistä KK:lle. Omistajalle kerrottu: väri ei hehku kullalle, päädyt oikeaa pyöreämmät, viereen jää kartan rakennuksia.
+**Grand Palais'n kyltti:** tulee Kylttikohteista itsestään (KK:lle kerrottu 19.30), mutta sitä ei ole nähty pelissä, koska ajo piilotti käyttöliittymän. Katso seuraavassa ajossa ilman `ui lentopiilo`:a. OMISTAJA 19.23: kyltit pienempinä ja vasta lähellä, NUI tekee; sama sääntö uusille kohteille.
 
 ## Invalidit 24l: Tripolla, maapohja valmis
 Pohja **`_tyo/karttaseppa/invalides-asennus/pohja-siisti.png`, käytä omaa alfaa, älä maski.png:tä** (`tee-pohja.py`, tarkistus `tarkistus.jpg`, `kartalla.png`, katsottu kartan päällä, ei pelissä). Esplanadin laikut nurmeksi, kiveys rakennuksen alle, itäreuna Boulevard des Invalidesin länsireunaan, joten oikea tie ja korttelit jäävät kartasta. Pelissä tarkista länsireunan porras (x 540, y 688) ja eteläsiiven kohta (x 752).
