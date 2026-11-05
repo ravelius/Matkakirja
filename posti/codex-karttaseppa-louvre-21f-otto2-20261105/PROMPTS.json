@@ -1,0 +1,333 @@
+{
+  "tool": "built-in image_gen",
+  "wholeImageGenerations": true,
+  "allAttempts": [
+    {
+      "key": "viisto-lounas-otto01",
+      "view": "viisto-lounas",
+      "status": "superseded-after-cross-view-QA",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-louvre-20261104/_review-viisto-21d/viisto.png",
+          "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-louvre-20261104/ohje-21f-pohja.png"
+        ],
+        "prompt": "Generate one COMPLETE NEW Louvre miniature illustration, PNG RGB exactly1536x1024. This is the SOUTHWEST high oblique master view, roughly65–70degrees above horizontal, showing the south exterior along the foreground and north courtyard wall behind, west at the LEFT. Image1 is the approved scale, stone drawing, muted gray-blue pyramid color and camera reference. Image2 is a LAYOUT DIAGRAM ONLY: its western LEFT wing is removed; never copy its pasted pixels or bright blue.\n\nMake exactly this change to image1 architecture: REMOVE THE ENTIRE LEFT SHORT WEST WING between its two corner pavilions. The palace now forms a three-sided U, completely open to the LEFT/WEST. KEEP ALL SIX PAVILIONS: four corners plus one middle pavilion on each long side. North and south wings each terminate at a western corner pavilion; finish the now-visible pavilion end walls with normal deep windows/arches. No exposed cut surfaces. The courtyard pavement extends continuously to the straight western line through both corner pavilions' western walls. NO wall, gate, fence, threshold, archway or step across the open west. The large pyramid is directly visible through that opening.\n\nSIMPLIFY ALL ROOFS: the connecting wings have clean continuous dark gray slate slopes and perfectly straight ridges, NO dormers, chimneys, finials, urns, spikes or ridge ornaments. Each of the six pavilions retains a steep identifiable mansard roof with a smooth flat top, no corner urns or spikes, at most one broad dormer per face. Keep the original big recessed windows and dark recessed ground-level arcades, emphatic brown linework and warm cream limestone. Arcades are dark recesses, not transparent holes.\n\nMaintain the original footprint860long x360wide, corner pavilion height~295, middle pavilion~240, wing ridge~160,eaves~120. Keep the LARGE AND TWO SMALL PYRAMIDS at exactly the same positions and relative base sizes as image1, but draw them as genuine four-sided pyramid volumes with straight edges, not flat diamonds. Same muted smoky blue-gray as image1; no saturated cyan. Courtyard and all3pyramid bases visible in this high view. Eastern right wing remains connected. North exterior is finished with the same windows and arcades as south.\n\nSame restrained ink illustration, warm stone, flat even light, plain pale gray background as image1. Center the entire palace with comfortable margins; no cropping. No cast shadows, outside ground slab, park, trees, people, other buildings, text, compass, frame, Carrousel arch, annotations or guide marks. One new full image, not a patch."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4e3ed54c-3477-482c-9dfe-220a8ef182d0.png",
+      "sha256": "d029a1410cb2c33e0837d3bce9500eeae522a7332e8abaf39ea6265ce8f6942d"
+    },
+    {
+      "key": "viisto-koillinen-otto01",
+      "view": "viisto-koillinen",
+      "status": "superseded-after-cross-view-QA",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4e3ed54c-3477-482c-9dfe-220a8ef182d0.png",
+          "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-louvre-20261104/ohje-21f-pohja.png"
+        ],
+        "prompt": "Generate one NEW full architectural illustration of the EXACT SAME three-sided Louvre miniature as image1, seen from the OPPOSITE DIAGONAL: HIGH NORTHEAST VIEW, about65–70degrees down, landscape1536x1024 RGB. Orbit camera180degrees around the model. The long NORTH EXTERIOR faces the foreground, the short CLOSED EAST EXTERIOR is on the LEFT, and the completely OPEN WEST END is on the RIGHT. The south courtyard-facing long wall is behind the pyramids. Preserve all proportions, six pavilion locations, wing lengths, roof heights, courtyard paving and the exact3pyramid relative sizes and positions. Image2 is only the north-up layout diagram showing the western opening; do not copy its vivid blue or old roof ornaments.\n\nExactly six pavilions: four corners and one midpoint of each long wing. NO seventh pavilion on east short wing. Northeast/northwest corner pavilions on the front north side, southeast/southwest behind. Full continuous east short wing connects left corner pavilions. No western connecting wing on the right: no fence, wall, threshold, gate or arch across the open pavement. Finish pavilion end walls normally with large recessed windows and arches. The NORTH EXTERIOR must have the same deep windows, dark recessed ground arcades and cream stone ornament as the SOUTH exterior in image1, never blank.\n\nCopy image1's clean dark slate wing roofs, perfectly straight ridges, no chimneys/dormers/spikes. Six steep mansard pavilion roofs with smooth flat tops and at mostone broad dormer on each visible face, no urns or finials. Keep the same muted smoky BLUE-GRAY glass pyramid colors and dark lattice, one big and two small pyramids aligned through the courtyard. Show pyramids over the walls with this high view; true pointed pyramid volumes with straight edges. Preserve relative base sizes. Footprint860x360, cornerheight~295,middle~240,wingridge~160,eaves~120.\n\nSame hand-drawn warm cream limestone and brown ink, strong readable windows and arcades, flat even lighting, pale gray empty background. Fit whole building centered with margins. No external ground, cast shadows, vegetation, people, other buildings, Carrousel arch, words, labels, border, or guides. One full new image; same building, only the camera changes."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b0b2edff-6a3f-4f3b-8391-897d0e279286.png",
+      "sha256": "9d4616b16fd15f863f95c123bbb20aaf1f66877d38062811e8893d21b12d16ac"
+    },
+    {
+      "key": "ylhaalta-otto01",
+      "view": "ylhaalta",
+      "status": "selected",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-louvre-20261104/ohje-21f-pohja.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4e3ed54c-3477-482c-9dfe-220a8ef182d0.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b0b2edff-6a3f-4f3b-8391-897d0e279286.png"
+        ],
+        "prompt": "Generate a complete NEW directly overhead plan-view illustration of the SAME open-west Louvre miniature in references2and3,1536x1024 RGB. True90degree downward orthographic view: no facades or wall elevations. North is UP, west LEFT. Reference1 is layout only; references2and3 are the newly established building, clean roofs, pale gray background, warm cream stone, dark slate, and MUTED GRAY-BLUE pyramid palette. Do NOT copy reference1's bright blue or roof clutter.\n\nKeep reference1's exact footprint proportions and object locations: two long parallel north/south wings and connecting short east/right wing; NO west/left wing. Exactly6pavilions, one at each corner and one at the middle of each long north/south wing. The left two pavilions remain with a fully OPEN gap between. Continuous pale stone courtyard paving fills that gap all the way to the straight western line of their western walls; no wall, gate, threshold, fence, step or arch. Preserve the one big centered square pyramid and two small square pyramids, aligned left-center-right at the same size and position as reference1; colors and dark glass lattice from reference2, not bright cyan. Show all four triangular faces meeting at each pyramid center.\n\nRoof footprints and architecture are exactly those in references2and3: clean uninterrupted dark slate wing slopes with ONE straight ridge, no dormers or chimneys on connecting wings. The6steep mansard pavilion roofs have smooth flat rectangular tops, no corner urns, finials, spikes, turrets or roof ornaments; at mostone broad dormer per side. Draw the roofs with the same fine slate texture and cream stone edges as reference2. Do not add towers or a center pavilion on the east short wing.\n\nLarge centered architectural plan on plain light gray, comfortable margins, full building uncropped. Existing reference1overall placement roughly x80–1456,y224–832. Muted warm cream masonry, brown ink, clean legible outlines, subtle drawn texture, flat uniform illumination. No cast shadows, outside ground, scenery, trees, people, captions, labels, frame or compass. Same building and3pyramids, only a precise overhead viewpoint; fresh full illustration."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2618d7d2-c9f2-4c6a-89bc-fbf024b6e0d4.png",
+      "sha256": "061b64659452929fa18cf3ad86be81c551c5e1e0411c0bac5a27d716ca374d97"
+    },
+    {
+      "key": "etela-otto01",
+      "view": "etela",
+      "status": "rejected-QA",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4e3ed54c-3477-482c-9dfe-220a8ef182d0.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2618d7d2-c9f2-4c6a-89bc-fbf024b6e0d4.png"
+        ],
+        "prompt": "Create a full NEW exact SOUTH ELEVATION of the same Louvre miniature in reference1, with reference2 as its top-down layout. One image RGB PNG1536x1024. Camera at ground level, perfectly straight-on orthographic, absolutely NO perspective or aerial view. Only the long south exterior, not a scene. WEST is LEFT, EAST RIGHT.\n\nMANDATORY SCALE/PLACEMENT: architectural units are860long and295maximum high, drawn at1.6px/unit. Entire elevation width1376px from x80to1456, baseline y880. Highest corner pavilion flat roof tops y408 (472px high), middle pavilion top y496 (384px high). Wing eaves y688, wing roof ridge y624. Keep large EMPTY PALE GRAY margin from y0to408 and belowy880. Do not enlarge the image to fill the canvas.\n\nThere are THREE visible pavilion masses along this south facade: tall west corner at left, lower central pavilion at midpoint, equally tall east corner at right. Other north-side pavilions hidden directly behind them. Match reference1's south FOREGROUND facade exactly: cream stone, three strong vertical window bays on pavilions, central arched ground entrance, same horizontal stories. Between left/middle and middle/right pavilions: each wing section has NINE large evenly-spaced dark recessed ground arcades, with corresponding upper windows aligned above, no transparent openings. Keep the same broad brown ink edges and warm stone detail. No blank walls.\n\nRoofs exactly as the new master: two long uninterrupted dark neutral slate slopes, straight ridges, NO wing dormers, chimneys, urns or spikes. Pavilion mansard roofs are steep with smooth flat tops, at mostone broad dormer on each visible front face, no finials. Large recesses and clear shape divisions for3D reference, no hairline clutter. Ground line perfectly level, all3pavilions sit on it.\n\nThe plan is open at west, but from this straight south view the palace wall hides the courtyard pyramids (their height110is below wing ridge160). Do NOT invent visible floating pyramids or a west cross-wing. No ground, base slab, shadows, vegetation, people, other buildings, text, labels, guides, border or compass. Same illustration style, same stone/roof colors as reference1, flat lighting and uniform pale gray background. Fresh full image."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-890fdba3-09ac-4979-b608-e09b8fcf5fb0.png",
+      "sha256": "d334db3d5b0e9b0bdd9ff588e49e974d67e0792e297fd6f7d023fecda9fb20bb"
+    },
+    {
+      "key": "etela-otto02",
+      "view": "etela",
+      "status": "selected",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/south-placement-guide.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-890fdba3-09ac-4979-b608-e09b8fcf5fb0.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4e3ed54c-3477-482c-9dfe-220a8ef182d0.png"
+        ],
+        "prompt": "Make one COMPLETE NEW SOUTH ORTHOGRAPHIC ELEVATION of this Louvre,1536x1024 RGB. Image1 is a TECHNICAL SIZE GUIDE ONLY: copy its exact building outline, locations, width and height, NOT its crude flat drawing. Image2 is the finished stone/ink/roof STYLE; its building is too short and too high on the canvas, so DO NOT copy its scale. Image3 is the master architecture.\n\nRender a detailed but readable finished version of image1's proportions in image2's warm cream-stone/brown-ink style. Overall x80–1456,ground line y880,top of left and right corner pavilion roofs y408; middle pavilion topy496. Keep the very large blank gray upper margin and bottom144px blank. Draw NINE deep dark ground-floor arcades in EACH long connecting wing section, exactly like9openings in each section of guide1, and matching windows above. Corners and center have3window bays. Dark arcades are solid shaded recesses, not transparent.\n\nKeep the mansard roof forms and a single broad front dormer on each pavilion from image2. All6pavilions exist in plan but only3south ones visible. Corner roofs tall, central lower. Connecting roofs plain dark slate, straight continuous ridges, no dormers/chimneys/spikes/urns anywhere. Camera horizontal ground-level, no perspective, no visible roof top surfaces, no aerial view. No pyramids visible above these taller wings, no extra towers. Flat lighting, pale gray background, no shadows,ground,slab,text,diagrams,measurements or frame. Use the guide's accurate taller proportions and baseline. Full finished new architectural illustration, not a patch."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b5fd4cb1-4466-4ecf-9ee1-b94f12d85689.png",
+      "sha256": "2aff39b7d0d02dc0da7f8dc8f4929d4534a037ea36933d49f8f2c14f8b564053"
+    },
+    {
+      "key": "pohjoinen-otto01",
+      "view": "pohjoinen",
+      "status": "selected",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b5fd4cb1-4466-4ecf-9ee1-b94f12d85689.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b0b2edff-6a3f-4f3b-8391-897d0e279286.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2618d7d2-c9f2-4c6a-89bc-fbf024b6e0d4.png"
+        ],
+        "prompt": "Draw a NEW full NORTH ELEVATION of this SAME Louvre,1536x1024 RGB. Image1 is the finished SOUTH elevation and exact required size/style/baseline; image2 shows the NORTH foreground facade from above; image3 confirms the plan. NORTH is equally finished and has exactly the same windows, recessed arcades and dark roof as SOUTH. The north elevation is effectively the corresponding symmetrical opposite facade: east at LEFT and west at RIGHT. Preserve the exact shape and proportions of image1.\n\nStrict ground-level straight-on orthographic, no perspective, no visible roof top planes, no courtyard. Same3visible pavilion masses: two tall corner pavilions and one lower middle. The other3are aligned behind and hidden. Copy image1's exact bounding/framing: corner topy408,center topy496,baseliney880; width about1400px centeredx768,large empty gray upper margin. Same wing ridgey624,eavesy688. Do not shrink or vertically recenter.\n\nEach wing section between a corner and central pavilion has exactly NINE deep dark round-arched ground recesses and aligned windows above, as image1. Same3window bays per pavilion, same stories, large clear brown outlines and warm cream stone. ALL walls have complete windows/arcades, no blank north facade. Keep clean uninterrupted dark slate wing roofs with straight ridges, no wing dormers/chimneys/spikes. Steep pavilion mansards with smooth flat top and at mostone large front dormer, no urns or finials.\n\nOpen west remains part of the plan but is hidden by this long-side elevation. Pyramids are hidden below the taller wing roof; do not add them floating. No other structures,ground,shadow,trees,people,text,measurements,border or guides. Same flat light and pale gray background. Generate the entire image anew, not a patch or a copied file."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a1805fcb-c905-41cd-ad5b-92e14b6eca92.png",
+      "sha256": "850a8b1b6fe89c2547b247e9674cf5f949f2a9e35a6291ca9e8c7b1729e7b20f"
+    },
+    {
+      "key": "ita-otto01",
+      "view": "ita",
+      "status": "rejected-QA",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/east-placement-guide.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b5fd4cb1-4466-4ecf-9ee1-b94f12d85689.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b0b2edff-6a3f-4f3b-8391-897d0e279286.png"
+        ],
+        "prompt": "Produce one COMPLETE NEW EAST END ELEVATION of the same open-west Louvre,1536x1024 RGB. Image1 is a precise size/placement GUIDE ONLY, not a style. Image2 is the finished south facade for stone, roof, windows and exact vertical scale; image3 shows the closed eastern end on its LEFT. Draw the EAST OUTER wall, horizontal straight-on orthographic, no perspective. This eastern end is CLOSED and connects the north and south corners. NO central pavilion on this short wing.\n\nFollow guide1 placement: two tall corner pavilions, x480–656 and x880–1056, topy408,baseliney880; a low connecting eastern wing between them, roofridgey624,eavesy688. Overall width576px, not full-canvas width; centerx768. Leave large blank gray margins on all sides. Same vertical scale as image2 (1.6px/unit): top408,bottom880. Do not enlarge.\n\nFinish both visible corner pavilion faces just like image2: warm cream stone,3window bays, same horizontal stories, one arched entrance, large recessed details and brown ink. Between them is the CLOSED eastern short facade with FIVE large dark recessed ground arcades and aligned windows above. Not transparent holes. Keep uninterrupted dark slate wing roof, straight ridge, no dormers/chimneys; corner mansards steep with smooth flat top and at mostone broad front dormer, no urns,spikes or finials. Upper rooftop surfaces are NOT visible in ground-level orthographic view.\n\nPyramids are hidden behind the taller eastern wall; do not show them floating. Exactly2visible corner pavilions, other pavilions aligned behind and hidden. Same flat illumination and uniform pale gray background. No outside ground,slab,cast shadow,scenery,people,text,guide marks,border or compass. Fresh complete finished illustration, not a patch. Match guide1's scale with image2's refined artwork."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-58b4beec-80ff-4c7b-8450-ed9b0aa0fcc4.png",
+      "sha256": "81eb3a18539253b9a2d350e8530ff66b0a756cc9f87021aad07573553cc4270f"
+    },
+    {
+      "key": "ita-otto02",
+      "view": "ita",
+      "status": "selected",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/east-placement-guide.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-58b4beec-80ff-4c7b-8450-ed9b0aa0fcc4.png"
+        ],
+        "prompt": "Draw a NEW finished EAST elevation using image1's EXACT SILHOUETTE and image2's detailed stone/ink style. The previous image2 is much TOO WIDE. Reduce the entire building's horizontal width by about21percent WITHOUT reducing its HEIGHT. This requires narrower pavilion faces and a shorter connecting wing, not shrinking everything. Match guide1: leftmostx480,rightmostx1056,total576px,top408,baseline880. These are the dominant requirements. Side margins480px. Full canvas1536x1024 RGB.\n\nKeep2corner pavilions and5recessed arches between them. EACH PAVILION width176px, not210px; clear connecting section224px. Both corner roof topsy408,body bottomy880; wingridge624,eaves688. Same mansard roofs, single broad front dormer, cream limestone, deep windows and dark ground arcades, brown ink from image2, but fit all into guide1's narrower outline. No extra center pavilion. No aerial perspective or visible horizontal roof top surface. No roof spikes/chimneys/wing dormers, no transparent arches. Uniform pale gray background, flat light, no shadow,ground,text,guide marks or border. A whole fresh illustrated elevation, same tall height, significantly NARROWER width as guide1."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2078df12-73a2-41eb-bd8c-6cb7be963e93.png",
+      "sha256": "35159c939ca3a558e32d3b607c6304990b2e0a0ee4d0f12fafe232803e991a41"
+    },
+    {
+      "key": "lansi-otto01",
+      "view": "lansi",
+      "status": "rejected-QA",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/west-placement-guide.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2078df12-73a2-41eb-bd8c-6cb7be963e93.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4e3ed54c-3477-482c-9dfe-220a8ef182d0.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2618d7d2-c9f2-4c6a-89bc-fbf024b6e0d4.png"
+        ],
+        "prompt": "Generate one COMPLETE NEW WEST ELEVATION of this SAME Louvre,1536x1024 RGB. Strictly straight-on fromWEST at horizontal ground level, orthographic NO perspective. Image1 is a schematic positioning and occlusion GUIDE, not art. Image2 is the finished EAST elevation: use its exact2pavilion shapes, vertical scale, warm cream/brown ink/dark slate and pale gray background. Image3and4 show the actual U plan OPEN toward the WEST.\n\nMOST IMPORTANT: there is NO western cross-wing between the two foreground corner pavilions. We see straight into the open courtyard and see the LARGE BLUE-GRAY PYRAMID IN FRONT OF the FAR EAST INNER WALL. The near western gap must NOT have a wall, fence, gate, threshold or arch. The low wall visible in the distance is ONLY the existing eastern inner facade, BEHIND the pyramid; don't create an additional near wall.\n\nKeep two tall western corner pavilions on the left and right, aroundx480–656 andx880–1056, with completely finished3-bay faces likeimage2. Smooth mansard topy408,basey880; same scale and placement asimage2, narrow building about590pxwide centeredx768, large empty margins. The north and south middle pavilions and east corners align behind these near corner masses and are hidden, not new central towers.\n\nBig glass pyramid centeredx768,groundbasey880,apexy704,basewidthabout232px. Its color is the muted smoky blue-gray inimage3; strong dark diagonal lattice and straight triangle edges. It must be visibly IN FRONT OF the far east wall. The small WEST pyramid is in front of it along the same viewing axis, centeredx768,basewidthabout77px,apexy824; it overlaps only the lower center of the large pyramid. The other small EAST pyramid is hidden behind the large one. Do NOT move small pyramids sideways or draw3side-by-side from this west projection. Preserve real shared3D placements.\n\nBehind the big pyramid show the existing eastern short-wing inner facade/roof at ridgey624,eavesy688; same5dark arcade recesses as east wall but mostly occluded by pyramid. All arches dark solid recesses, not transparent. Foreground pavilion faces have large deep windows and no blank cut surfaces. Plain dark slate roofs, no wing dormers/chimneys/spikes, at mostone large front dormer on each pavilion. No visible rooftop horizontal planes, no aerial perspective, no ground slab or vertical pavement lip, no shadow,trees,people,otherbuildings,text,border or guides. Flat lighting, same drawing style asimage2. Full new illustration."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a606b8fe-b6d1-488a-b488-69833b46c2aa.png",
+      "sha256": "d68f5f0e9f94526908a819b6f583b16a40a3a720b0c6c7e656ccaeed23c12110"
+    },
+    {
+      "key": "lansi-otto02",
+      "view": "lansi",
+      "status": "rejected-QA",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2078df12-73a2-41eb-bd8c-6cb7be963e93.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/west-placement-guide.png"
+        ],
+        "prompt": "Make a NEW full WEST elevation at EXACTLY the same scale, proportions and image placement as reference1.1536x1024 RGB. Retain reference1's TWO pavilion masses with topsy405andbaseliney880, same narrow widthx471–1065, same huge gray margins. DO NOT ZOOM, ENLARGE OR RECENTER. The entire result should have exactly reference1's framing. Reference2 is only the diagram of what must be visible through the open west.\n\nWe now look fromWEST. The two pavilions are the west-end corners. There is NO front cross-wing between them. The connecting wall seen between them belongs to the DISTANT EAST side, at the BACK of the courtyard. Put the large muted gray-blue pyramid visibly IN FRONT OF this far wall, centeredx768. Draw its triangular projection base232pxwide at y880,top y704, with straight edges and thin dark diagonal glass lattice. The small western pyramid appears in front of the large one, centered on the same axis,base77pxwide,top824,bottom880. Rear small pyramid hidden. Do not add pyramids at the sides. Do not enlarge them beyond these dimensions. There is NO wall/gate/fence/threshold IN FRONT of the pyramids.\n\nKeep the pavilion architecture, warm cream stone, deep windows/arcades, clean slate roofs and brown ink ofreference1. The far eastern wall is reference1's lower connecting wing but now BEHIND the pyramids. No roof spikes/chimneys/wing dormers or new central tower. Ground-level straight-on orthographic, no perspective or visible roof tops. Uniform gray,flat light,no shadows,groundslab,text,border or guides. A complete fresh image, not a patch. Small building with reference1's exact scale and empty margins."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-909f063d-2437-4b94-b705-e150e021718c.png",
+      "sha256": "f757d98013a2a6166d9dcfefba3aef5f81164af08b6065922a93d38333c52d48"
+    },
+    {
+      "key": "lansi-otto03",
+      "view": "lansi",
+      "status": "selected",
+      "prompt": {
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-909f063d-2437-4b94-b705-e150e021718c.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2078df12-73a2-41eb-bd8c-6cb7be963e93.png"
+        ],
+        "prompt": "Create a COMPLETE NEW WEST elevation nearly identical to image1,1536x1024 RGB, exactly the same framing, building size, pavilion topsy405andbaseliney880. Correct ONE geometry inconsistency: the dark slate roof of the BACKGROUND EAST WING between the two towers is too low in image1. Its upper horizontal RIDGE must be RAISED fromy647to y624, matching the same east-wing ridge in image2. The lower eaves stayy688. Thus this background roof's visible dark slate band must be64pxhigh, not40pxhigh. Reproduce image2's connecting roof profile at the same coordinates, while retaining image1's visible pyramids IN FRONT of that far wall.\n\nEverything else matches image1: open western foreground, two finished corner pavilions at x471–665 andx871–1065, large blue-gray lattice pyramid centeredx768,top704,basey880,width232; small front pyramid centeredx768,top824,base77; third hidden. NO western connecting wall in front of pyramids. Same warm cream stone/brown ink, deep windows, plain dark roofs, one dormer per pavilion,no spikes or chimneys. Ground-level orthographic, no perspective. Large gray blank margins. No changes to size,placement,pyramid colors,groundline or pavilion shapes. Flat light,no shadow,groundslab,text,border or guide. Full new drawing, not a patch."
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f25bf4e0-2aec-40b3-a4d5-c6c369db8b35.png",
+      "sha256": "ac224440353056b90e7fe2d301d6680c5a27e85e1a6a4261b897403bab28f265"
+    },
+    {
+      "key": "viisto-lounas-otto02",
+      "view": "viisto-lounas",
+      "status": "rejected-QA",
+      "prompt": {
+        "prompt": "Use case: stylized-concept. Generate one COMPLETE NEW corrected illustration of the SAME Louvre U-shaped building. Exact1536x1024 RGB. Not a composite, not a patch. Reference1 is the southwest high-oblique COMPOSITION MASTER. References2 and3 are the AUTHORITATIVE facade designs of this SAME building:2=south long facade,3=east short facade.\nKeep reference1 camera, framing, U footprint, openWEST on left, east connector on right, SIX pavilions only, courtyard boundaries and all THREE pyramids' base positions, sizes, muted blue-gray color and paving absolutely unchanged. Southwest high angle60–75degrees, front long facade is SOUTH. Do not mirror/rotate, no west wing. Large pyramid same footprint, two smallflanking alonglongaxis. All three bases visible. Plainlightgray background, no exteriorground,shadow,trees,people,text,frames.\nONLY correct facade agreement with orthographic references2/3: Each pavilion has central dark ground arch, with SOLID STONE RECESSED PANELS immediately flanking it on ground floor (not dark windows there), and TWO complete rows of three dark rectangular windows ABOVE that ground level, plus short attic windows directly under roof cornice. In reference1 the extra middle window row is missing/shortened: depict the full facade design from2 at the oblique angle. Keep sixpavilions with cornerheights295units, middle240,wingridge160,eave120; complex860x360. All pavilion sides use this design including exposed westends. \nEach LONG wing between corner andmiddlepavilion has EXACTLY NINE equal groundarcades, NINE windows aligned directly above them, and NINE small atticwindows at eave; same on NORTH exterior/interior. Dark recesses, not actual throughholes. East short connector has FIVE groundarcades with thewindowlayoutofref3.\nRoofs unchangedinarchitecture: uninterrupted darkslate wingroofs andstraight ridge, no dormers or chimneys on connectingwings; steepmansardpavilions flattopped,maxONE largecentraldormerperroofside,no finials,urns,spikes. Samewarmstone,browninkdrawing,lineweight,flatlight. Preserve the illustration's scale and composition; if increased facade visibility is necessary, use the space under their roofcornices rather than enlarge the sixroofs or close the courtyard. The facades should be reconcilable with refs2/3 in3D; do not simplify away a floor or vary arcade counts. One finished image only.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/etela-otto02.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ita-otto02.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-79672474-47bd-4f08-9b39-039245700fa6.png",
+      "sha256": "5f16efd3bc061839fa9e140c20f0e42ad7112eb3d9273069455f755dcae13280"
+    },
+    {
+      "key": "viisto-lounas-otto03",
+      "view": "viisto-lounas",
+      "status": "selected",
+      "prompt": {
+        "prompt": "Generate one COMPLETE NEW Louvre illustration,1536x1024RGB. Reference1 is the visual master to reproduce in full, same camera,crop,colors,open U-shaped building, sixpavilions,threepyramids,pyramidpositions/sizes,and courtyard. Reference2 is the correct south elevation for the arcade COUNT and facade layout.\nOne targeted correction to ref1: the long wing corridors have EXTRA halfarches at their ends. Remove the extra end bays by redistributing the arcade spacing. Each wing section between a corner pavilion and central pavilion has NINE arches TOTAL including all end bays, not nine fullarches plus partialarches. EIGHT freestanding interior pillars separate exactly NINE openings, with a full-width opening at each end meeting the pavilion wall directly. Above them exactly NINE large windows and NINE atticwindows, one centered above EACH arch, including thefirst/last. No arch with no corresponding window and no halfarch squeezed beside a pavilion. TWO long segments on the south foreground, TWO on the northbackground: everysegment has NINE total. Total SOUTH ground arches21=9+centralpavilionarch+9+twocornerpavilionarches. Pavilion centralarch counts are SEPARATE from wingnine.\nKeep pavilion groundflanking SOLID STONE PANELS and two fullwindowrows+attic fromref1,matchingref2. Do not restore dark groundflankingwindows. Allothergeometryunchanged: short eastconnectoronright, westcompletelyopenleft, all6pavilions, same3mutedbluegraypyramids(allbasesvisible), simplecleandarkwingroofs(nochimneys,dormers), steepflattoppedpavilionroofs max1centraldormerperroofside,no finials or spires. High southwestoblique60–75degrees, palegraybackground,no outsideground,castshadows,people,trees,text. Warmstonedrawing/brownink like references, no stylisticchange. This is a whole-image redraw, not a croppedpatch. One finalimage only.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto02.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/etela-otto02.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a2892815-9e8d-4158-b063-17f02800d4b7.png",
+      "sha256": "ce6f39dc4e16df292cc96091685425fe741eea9a5fe168c5d63a960642c0fb62"
+    },
+    {
+      "key": "viisto-koillinen-otto02",
+      "view": "viisto-koillinen",
+      "status": "rejected-QA",
+      "prompt": {
+        "prompt": "Use case:stylized-concept. One COMPLETE NEW corrected image of the SAME Louvre building,1536x1024RGB, palegraybackground. Reference1 is the NORTHEAST CAMERA/FRAMING target. Reference2 is the authoritative final SOUTHWEST MASTER of the same3Dobject. Reference3 is the exact NORTH facade. Reference4 the EAST facade.\nMake reference1's opposite-side high obliqueNE view with facade details corrected to agree withrefs2/3/4. Keepcameraandlayoutofref1: closedshortEASTwing onLEFT; WEST completelyOPENonRIGHT; NORTH longexterior inFOREGROUND and SOUTH interior atback. Sixpavilions ONLY, fourcorner+twomidlongside. THREE pyramids sameexactlayout,basesize andmutedbluegraycolorasref2: largecenter,twosmallflankingalonglongaxis. Allpyramidsvisibleoversides. Courtpavingflat,no frontwallsclosingopenwest,nooutsideground.\nFacades: Each longwing section has EXACTLY NINE groundarches TOTAL including all endbays; EIGHT freestanding interiorpillars divide these NINE openings. No additionalhalfarch at eitherend. NINE largewindows andNINEsmallatticwindows alignedoneaboveeacharch. Matchref3's9+9 wingsections, onfrontNORTHexterior andbackSOUTHinterior. Do not omit a bay or addpartialarches besidepavilions.\nEach pavilion: centraldarkgroundarch withSOLIDSTONErecessedPANELSflankingit(no darkgroundsidewindows), TWO fullrows ofTHREE rectangularwindows aboveground, smallatticwindows underroofcornice, exactlyasrefs2/3. Onecentralroof-dormer pervisiblemansardside. Eastconnector FIVEgroundarcades,upperwindowslikeref4.\nKeepdimensions860long,360wide,cornerheight295,mid240,wingridge160,eave120; sameproportionsnotflattenedfacades. Roofs simpledarkslateunbrokenslopes/straightridge onwings, NOdormersorchimneys onconnectingwings;steepmansardsflatopped,NOspikes/finials/urns. Warmcreamlimestone,browninkandthinwatercolor,samehandasref2,flatlighting. Allopeningsdarkrecesses,nottransparentholes. Noexternalground,shadow,trees,people,boats,archmonument,text,labels,frames. Do not mirror ref2: show genuinelyoppositeNEfaces arrangedasref1. One final wholeimage only.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-koillinen-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto03.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/pohjoinen-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ita-otto02.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-05a42eff-64cf-4b6e-9427-f0763fbcc7a4.png",
+      "sha256": "76f3d74909a6184c36fb8c69f73bd15e06b47eaf87f9c48c343240a9dd6f7ff0"
+    },
+    {
+      "key": "viisto-koillinen-otto03",
+      "view": "viisto-koillinen",
+      "status": "rejected-QA",
+      "prompt": {
+        "prompt": "Create one new complete illustration of the Louvre U-shaped building for a multiview3D reference set.1536x1024RGB,plainpalegraybackground,warmcreamstone,brownink,thindrawing. This is a brandnew NORTHEAST highoblique view of the building already defined by the references. It must be the SAME building, not an approximated redesign.\nImage1=AUTHORITATIVE NORTH FACADE. Image2=the samebuilding fromtheSOUTHWEST,usedfor3Dfootprint,pyramids,roofsandstyle. Image3=EAST facade. Draw image1 as the foreground facade in highoblique fromNORTHEAST. Keep its exact window/arch pattern! Rotate the building relative to image2 so the SHORT CLOSED EASTconnector is onLEFT andtheWESTOPENCOURTYARD is onRIGHT; long NORTHexterioracrossBOTTOMforeground, longSOUTHinterioracrossTOPbackground. Elevation60–75degrees so courtyard and all3pyramidbases visible. Sixpavilions=4corners+2middlelongside, nootherpavilions, noWESTwing.\nNORTH facade, as inimage1: LEFTcornerpavilion, NINE-arch wing, MIDDLEpavilion, NINE-arch wing, RIGHTcornerpavilion. Each wing has9equalarches TOTAL,8separatingpiers,9windows DIRECTLYabove,9smallatticwindows. No hiddenextraendhalfarches; no eighth instead ofninth.\nPavilionfacades asimage1: GROUND centralarch flankedbyTWO SOLID STONE recessedpanels, then a FULLrowofTHREE windows on FIRST floor, a secondFULLrowofTHREE windows on SECOND floor, then a shortatticrow belowcornice. TWOfullwindowrows ABOVEGROUND, not justone. Do notturngroundstonepanelsintodarkwindows. Same on allsixpavilions. The tallmansardroofstartsaboveallthesefloors. Onecentraldormerperroofside,flattop,nospikes/urns/chimneys/finials. Longwingroofsstraightuninterrupted,darkslate,nodormers.\nSOUTHcourtyardfacade atback has same9+9arches andpavilionfloors asimage2. EASTshortconnectorleftmatchesimage3:5archesanditswindowlayout. Wholecomplex860longx360wide,cornerheight295,middle240,wingridge160,eave120; preservearchitecturalratios whenprojecting.\nThreePYRAMIDS: samebaseareasandlocationsasimage2: largeatcourtcenter, twoverysmallsymmetricallyflankingalongLONGaxis. Mutedbluegrayglass. FlatwarmstonecourtpavingextendsallthewaytothecompletelyOPENWESTedge onRIGHT. No wall/fence/threshold there. All3pyramidsvisibleoverroofs fromhighangle. Nottransparentarches;darkrecessesonly. No groundoutsidepaving,no shadows,no trees,people,boats,text,arrows,labels,border. Everyrequestedfloorandninearcadebaymustremainpresentatthisviewingangle. Do not copy image2's southwest camera. One finishednewimageonly.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/pohjoinen-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto03.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ita-otto02.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-053d9b17-be46-4eee-86d6-f06e102d93d8.png",
+      "sha256": "6226efd47199dd58ff44239a9a6a83ad80791af3696db3517fc4619fcad9869e"
+    },
+    {
+      "key": "viisto-koillinen-otto04",
+      "view": "viisto-koillinen",
+      "status": "rejected-QA",
+      "prompt": {
+        "prompt": "Use case:stylized-concept. Make one COMPLETE NEW architectural multiview illustration1536x1024RGB of the EXACT SAME U-shaped Louvre as allfourreferenceimages, photographed/drawn from HIGH NORTHEAST OUTSIDE the complex. True physical camera: azimuth halfway betweenNORTH andEAST, elevation70degrees downward. This angle must show BOTH NORTH EXTERIOR and EAST EXTERIOR prominently. Not a mirrored southwest view. Do not show the inside WEST-facing face of the eastwing: fromnortheast the EASTOUTERwallfacesviewer, its INNERwallfacesaway andisoccluded. The camera is outside the CLOSED EASTend, lookingtowardtheOPEN WESTend in thedistance.\nRefs:1 NORTHstraightfacade,2 EASTstraightfacade,3 authoritative TOPPLAN northup(leftWESTisopen,rightEASTclosed),4 southwestillustration STYLE/master. No referencehasauthoritytochangeanother'sgeometry.\nOrient composition so closedEASTshortwing is onLEFT andVISIBLE near/frontleft, longNORTHoutside is alonglower/rightforeground, OPENWEST atfar/right. Drawrealisticorthographic/weakperspectivearchitecturalprojection, with BOTH visibleouterfacades. Highangle leaves all3pyramidsvisible in thecourt. Fitwholebuilding, nozoomcrop.\nExactlySIXpavilions:4corners+centerofeachlongN/Swing. Every longN/Swing has2segments betweenpavs; EXACTLYNINEarches persegment TOTAL(noextrahalfarches),8separatingpiers,9fullwindowsaboveand9smallatticwindows. BothN exterior andS interior samecount. EASTshortexterior between2cornerpavs hasEXACTLY5groundarches andTHREElargeupperwindows+3smallatticwindows asref2.\nPavilions SAME asref1/ref2: groundcentraldarkarch withtwoSOLIDSTONEpanelssides(noflankingdarkgroundwindows); TWO fullwindowrowsABOVEground, eachTHREErectangularwindows; smallatticrowunderroofcornice. Flat-toppedsteepmansards, maxONEdormerperroofside,nochimneys,spikes,finials,urns. Straightdarkslateconnectingwingroofs,nodormers. Darkarcadesarerecesses,nottransparent.\nRatios860longx360wide,cornerheight295,mid240,wingridge160,eave120. All3pyramidswithsizes/locations/colorasrefs3/4: largesquarecenter,2smallalonglongaxis;mutedbluegrayglass, NOTbrightblue. Courtpavingonly,continuesintotheopenWESTend,noWESTwall,fence,gate,threshold; straightedgelevelwithWcornerpavs. Samewarmcreamlime/browninkflatlight,palegraybackground,nooutsideground,no shadows,trees,people,boats,text,labels,frame. Do not invent extra wingtower or reduce9arcades to8. One completedwholeimage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/pohjoinen-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ita-otto02.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ylhaalta-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto03.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-74bc1459-594e-4092-b3e2-d36a1a50809b.png",
+      "sha256": "6c9a91992565dff667820f65de3e221321402ae208a5e9f5c31ce9ce544309dc"
+    },
+    {
+      "key": "viisto-koillinen-otto05",
+      "view": "viisto-koillinen",
+      "status": "rejected-QA",
+      "prompt": {
+        "prompt": "Create one COMPLETE NEW corrected version of reference1,1536x1024RGB. Keep its exact northeast camera, U-shaped Louvre footprint, sixpavilions, east exterior wall onleft, openwestonright, threepyramidswithsamesizes/positions/colors,roofs,paving,palegraybackground,inkstyle andframing. This is a wholeimagegeneration,notapatch.\nCorrect ONLY the following discrepancies, usingref2(northstraightfacade) andref3(finalSWmaster) asgroundtruth:\nA. The FRONT longwall facingviewer is theNORTH exterior. Inref1its LEFT wingsegment betweenleftcornerandmiddlepavilion hasTENarches, andRIGHTsegment betweenmiddleandrightcornerhasEIGHTarches. BothmusthaveNINE. Redistributeexistingsegmentinto9equalbays: removeonefromLEFT10→9, addoneonRIGHT8→9. Exactly8interiorpiers dividing9darkarches persegment, 9matchinglargewindowsabove and9smallatticwindows. No extrahalfarches bypavilion.\nB. The BACKthreepavilions lack a floor. AddtheSECOND fullrowofTHREEdarkrectangularwindows ABOVEthefirstfullwindowrow. Pavilionfacade frombottomup: centralgroundarchbetween2solidstonepanels; firstrow3windows; secondrow3windows; shortatticrow;roof. All6pavilionsmustmatchref2/3 inthisrespect, includingback3. Keepflatoppedmansardroofandonecentraldormerperside. Do notmakegroundflankingpanelswindows.\nKeepbacklongwings9+9arches(theyarealreadycorrect), eastshortexterior5archesand3upperwindows(theyarealreadycorrect). Keep6pavilions, exactsame3pyramids, sameopenwest. Do not changecameraorcrop,pyramidlayout,roofheights/colors. Nooutsideground,castshadow,trees,people,text,labels,guidecolors,additionalobjects. Uniformwarmstone,brownink,flatlight. Onecompletefinishedimageonly.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-koillinen-otto04.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/pohjoinen-otto01.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto03.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8fb5e714-1664-4418-b0b7-2898903904da.png",
+      "sha256": "6da1ba2808f68e648cb2f4c336f3569c926de309c88814c5784f9daab80390c4"
+    },
+    {
+      "key": "viisto-koillinen-otto06",
+      "view": "viisto-koillinen",
+      "status": "selected",
+      "prompt": {
+        "prompt": "Generate a complete new1536x1024RGB illustration matching reference1, with ONE correction only. This is the Louvre multiview matching task. Keep entirecamera,composition,style,footprint,6pavilions,3pyramids,paving,roofs,allotherfacades,andgraybackgroundexactlyasreference1.\nCorrect the long NORTH facade segment in the LOWER LEFT FOREGROUND, between the nearest bottom-left corner pavilion and middle foreground pavilion (approximately x470–850). It currently has ELEVEN arches. Rebuild that segment with exactly NINE larger arches, each about22% wider. Use reference2's LEFT wingsegment as the direct template: NINE openings separated byEIGHT internalpiers. One window aboveeacharch. NINE tallwindows andNINE shortatticwindows. Ninebays can be counted as three groups ofthree, with uniformspacing and NO architecturalgap between groups. TotalNINE, notELEVEN, notTEN. Do not leave partialarches by eitherpavilion. Bothforefrontlongsegments will then have the SAME numberofbays,NINEandNINE.\nEverything ELSE stays asref1: otherwingsegmentsalready9,shortEASTwall5, sixpavilionswithtwofullwindowrowsabovethegroundarchesandgroundflankingSTONEpanels,fullroofdetails,mutedbluegraypyramidsatthesamepositions,samehighNEviewwithEexteriorleftandNexteriorforeground,openWESTright. Noaddedornaments,objects,text,shadowsoroutsideground. OnefinishedFULLimage,notacrop.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-koillinen-otto05.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/pohjoinen-otto01.png"
+        ],
+        "transparent_background": false
+      },
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f6cb34be-4a81-46ba-a8fe-92a9c0cc757c.png",
+      "sha256": "02a9887cb17c7ead4110d17f8da59eb72f17b5d465940d3d5e25ba619ecd506e"
+    }
+  ],
+  "selected": {
+    "viisto-lounas": {
+      "key": "viisto-lounas-otto03",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-lounas-otto03.png",
+      "sha256": "ce6f39dc4e16df292cc96091685425fe741eea9a5fe168c5d63a960642c0fb62",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/viisto-lounas-otto03.json"
+    },
+    "viisto-koillinen": {
+      "key": "viisto-koillinen-otto06",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/viisto-koillinen-otto06.png",
+      "sha256": "02a9887cb17c7ead4110d17f8da59eb72f17b5d465940d3d5e25ba619ecd506e",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/viisto-koillinen-otto06.json"
+    },
+    "ylhaalta": {
+      "key": "ylhaalta-otto01",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ylhaalta-otto01.png",
+      "sha256": "061b64659452929fa18cf3ad86be81c551c5e1e0411c0bac5a27d716ca374d97",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/ylhaalta-otto01.json"
+    },
+    "etela": {
+      "key": "etela-otto02",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/etela-otto02.png",
+      "sha256": "2aff39b7d0d02dc0da7f8dc8f4929d4534a037ea36933d49f8f2c14f8b564053",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/etela-otto02.json"
+    },
+    "pohjoinen": {
+      "key": "pohjoinen-otto01",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/pohjoinen-otto01.png",
+      "sha256": "850a8b1b6fe89c2547b247e9674cf5f949f2a9e35a6291ca9e8c7b1729e7b20f",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/pohjoinen-otto01.json"
+    },
+    "ita": {
+      "key": "ita-otto02",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/ita-otto02.png",
+      "sha256": "35159c939ca3a558e32d3b607c6304990b2e0a0ee4d0f12fafe232803e991a41",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/ita-otto02.json"
+    },
+    "lansi": {
+      "key": "lansi-otto03",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/originals/lansi-otto03.png",
+      "sha256": "ac224440353056b90e7fe2d301d6680c5a27e85e1a6a4261b897403bab28f265",
+      "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/louvre-21f-otto2-20261105/qa/lansi-otto03.json"
+    }
+  }
+}

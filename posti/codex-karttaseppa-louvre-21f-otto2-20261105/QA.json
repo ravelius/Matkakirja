@@ -1,0 +1,164 @@
+{
+  "checkedAt": "2026-11-05T07:52:01.432835+00:00",
+  "taskNumber": 2083,
+  "generationCalls": 18,
+  "selectedCount": 7,
+  "allNativeRGB1536x1024": true,
+  "nativeBytesPreserved": true,
+  "postprocessingApplied": false,
+  "oldDeliveryFilesUnchanged": 31,
+  "sourceFilesStillVerified": 11,
+  "visualCorePass": true,
+  "crossViewFacadeReviewPass": true,
+  "exactGeometricCalibrationVerified": false,
+  "qualityPass": true,
+  "selected": [
+    {
+      "view": "viisto-lounas",
+      "key": "viisto-lounas-otto03",
+      "sha256": "ce6f39dc4e16df292cc96091685425fe741eea9a5fe168c5d63a960642c0fb62",
+      "warmStoneBBox": [
+        84,
+        82,
+        1433,
+        933
+      ]
+    },
+    {
+      "view": "viisto-koillinen",
+      "key": "viisto-koillinen-otto06",
+      "sha256": "02a9887cb17c7ead4110d17f8da59eb72f17b5d465940d3d5e25ba619ecd506e",
+      "warmStoneBBox": [
+        56,
+        45,
+        1488,
+        950
+      ]
+    },
+    {
+      "view": "ylhaalta",
+      "key": "ylhaalta-otto01",
+      "sha256": "061b64659452929fa18cf3ad86be81c551c5e1e0411c0bac5a27d716ca374d97",
+      "warmStoneBBox": [
+        63,
+        195,
+        1473,
+        844
+      ]
+    },
+    {
+      "view": "etela",
+      "key": "etela-otto02",
+      "sha256": "2aff39b7d0d02dc0da7f8dc8f4929d4534a037ea36933d49f8f2c14f8b564053",
+      "warmStoneBBox": [
+        61,
+        408,
+        1476,
+        882
+      ]
+    },
+    {
+      "view": "pohjoinen",
+      "key": "pohjoinen-otto01",
+      "sha256": "850a8b1b6fe89c2547b247e9674cf5f949f2a9e35a6291ca9e8c7b1729e7b20f",
+      "warmStoneBBox": [
+        60,
+        408,
+        1476,
+        881
+      ]
+    },
+    {
+      "view": "ita",
+      "key": "ita-otto02",
+      "sha256": "35159c939ca3a558e32d3b607c6304990b2e0a0ee4d0f12fafe232803e991a41",
+      "warmStoneBBox": [
+        471,
+        405,
+        1065,
+        881
+      ]
+    },
+    {
+      "view": "lansi",
+      "key": "lansi-otto03",
+      "sha256": "ac224440353056b90e7fe2d301d6680c5a27e85e1a6a4261b897403bab28f265",
+      "warmStoneBBox": [
+        470,
+        405,
+        1065,
+        881
+      ]
+    }
+  ],
+  "orthographicColorBBoxMeasurements": [
+    {
+      "view": "etela",
+      "widthPx": 1415,
+      "heightPx": 474,
+      "baselineY": 881,
+      "topY": 408,
+      "expectedApproxWidthPx": 1376,
+      "widthDeviationPercent": 2.83,
+      "expectedApproxCornerHeightPx": 472,
+      "heightDeviationPercent": 0.42
+    },
+    {
+      "view": "pohjoinen",
+      "widthPx": 1416,
+      "heightPx": 473,
+      "baselineY": 880,
+      "topY": 408,
+      "expectedApproxWidthPx": 1376,
+      "widthDeviationPercent": 2.91,
+      "expectedApproxCornerHeightPx": 472,
+      "heightDeviationPercent": 0.21
+    },
+    {
+      "view": "ita",
+      "widthPx": 594,
+      "heightPx": 476,
+      "baselineY": 880,
+      "topY": 405,
+      "expectedApproxWidthPx": 576,
+      "widthDeviationPercent": 3.12,
+      "expectedApproxCornerHeightPx": 472,
+      "heightDeviationPercent": 0.85
+    },
+    {
+      "view": "lansi",
+      "widthPx": 595,
+      "heightPx": 476,
+      "baselineY": 880,
+      "topY": 405,
+      "expectedApproxWidthPx": 576,
+      "widthDeviationPercent": 3.3,
+      "expectedApproxCornerHeightPx": 472,
+      "heightDeviationPercent": 0.85
+    }
+  ],
+  "measurementLimit": "Warm stone mask includes cornices and ink edges; excludes gray roofs and blue glass. Proxy bounding box, not calibrated3Dgeometry. Source scale is approximate.",
+  "visualChecklist": {
+    "westWingAbsent": true,
+    "westPavingContinuesToOpenEdge": true,
+    "sixPavilions": true,
+    "northExteriorDetailed": true,
+    "threeMutedBlueGrayPyramids": true,
+    "pyramidRelativeLayoutRetained": true,
+    "simpleWingRoofs": true,
+    "pavilionFlatTopsNoSpikes": true,
+    "longWingSectionsNineArcades": true,
+    "pavilionTwoUpperWindowRowsAndGroundStonePanels": true,
+    "NEshowsEastAndNorthExterior": true,
+    "noExteriorGroundOrSceneObjects": true
+  },
+  "receiverApproved": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "published": false,
+  "limitations": [
+    "Erilliset generoidut2D-näkymät, ei kalibroidusta3D-mallista renderöity kuvasarja. Projektion, kattokaltevuuksien ja piiloon jäävien pintojen täsmällinen metrinen yhtäpitävyys ei varmennettu.",
+    "Pyramidien kolme sijaintia, keskinäinen kokohierarkia ja hillitty väri tarkistettu visuaalisesti. Tarkkoja3D-pohja-aloja ei voida todentaa ilman kamerakalibrointia.",
+    "Julkisivujen sama noin1,6px/yksikkö: värirajauksen leveys poikkeaa nimellismitasta noin3% ja maaviiva1px. Mittaus sisältää koristeprofiileja."
+  ]
+}
