@@ -1,0 +1,57 @@
+{
+  "status": "FIRST_RAW_SHAPE_FAIL_DIAGNOSTIC_PREPARATION",
+  "updatedAt": "2026-11-05T18:26:52.024037+00:00",
+  "intakePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/intake.json",
+  "orderSHA256": "17cd2342662f864eb09692aa8ed993d2f2175893c173c993ffabfb95d38c8132",
+  "creditsUsed": 45,
+  "sourceImagesUnmodified": true,
+  "knownInputMismatch": "Oblique3/4courtyards versus bindingtop4/6; test actual result, no auto retry on courtyard failure",
+  "qualityAccepted": false,
+  "completedTripoJobs": [
+    {
+      "id": "a49050a0-61e6-434e-84f5-b3e56e5b65a3",
+      "attempt": 1,
+      "status": "COMPLETED_DOWNLOADED",
+      "startedObservedAt": "2026-11-05T18:15:15.142224+00:00",
+      "estimatedCompletion": "2-5 minutes, observed17%",
+      "credits": 45,
+      "balanceBefore": 15825,
+      "balanceAfter": 15780,
+      "mapping": {
+        "Front": "viisto-lounas.png",
+        "Back": "viisto-koillinen.png",
+        "Left": null,
+        "Right": null
+      },
+      "settings": {
+        "model": "H3.1 Ultra",
+        "target": 50000,
+        "topology": "Triangle",
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "finishedObservedAt": "2026-11-05T18:26:52.024037+00:00"
+    }
+  ],
+  "activeTripoJobs": [],
+  "rootVisualQA": {
+    "allSevenFullSizeReviewed": true,
+    "courtyards": {
+      "southwest": 3,
+      "southeast": 6,
+      "north": 5,
+      "expectedTotal": 15,
+      "observedTotal": 14
+    },
+    "openCourtyardFloorsVisible": true,
+    "domeSouth": true,
+    "jWingSoutheast": true,
+    "heightRatio": 0.4363234232782369,
+    "targetHeightRatio": 0.37,
+    "result": "FAIL",
+    "noRetryBeforeRequesterResponse": true
+  }
+}

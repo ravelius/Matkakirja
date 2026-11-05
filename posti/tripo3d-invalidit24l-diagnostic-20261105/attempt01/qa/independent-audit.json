@@ -1,0 +1,220 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/work/attempt01-diagnostic-yaw0.glb",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/work/attempt01-diagnostic-yaw0.glb",
+    "bytes": 4699040,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 29829,
+    "triangles": 46494,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -181.5,
+        0.0,
+        -204.70364379882812
+      ],
+      [
+        181.5,
+        158.38540649414062,
+        204.70364379882812
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 7,
+    "uvZero3DArea": 2.3019579875571305,
+    "surface3DArea": 388851.43243933114,
+    "uvZero3DAreaFraction": 5.919890723088139e-06,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_9de326fe-f2ab-4777-a7cd-c016247e6dc1_2",
+        "mimeType": "image/png",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_9de326fe-f2ab-4777-a7cd-c016247e6dc1_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_9de326fe-f2ab-4777-a7cd-c016247e6dc1_1",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 29829,
+        "triangles": 46494,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 7,
+        "uvZero3DArea": 2.3019579875571305,
+        "surface3DArea": 388851.43243933114
+      }
+    ]
+  },
+  "courtyardRayMethod": "Rasterize all GLB triangles orthographically in X/Z at 800 px and retain maximum interpolated Y per pixel; fixed cell-center samples. The top-preview color and visual courtyard region connectivity are auxiliary; sample rays prove only surface coverage, not roof-opening separation.",
+  "courtyardCountsByVisualTopReview": {
+    "southwest": 3,
+    "southeast": 6,
+    "northHonorAndSmall": 5,
+    "required": {
+      "southwest": 4,
+      "southeast": 6,
+      "northHonorAndSmall": 5
+    }
+  },
+  "raySamples": {
+    "north_honor": {
+      "imageRGB": [
+        180,
+        160,
+        134
+      ],
+      "rayY_m": 2.742
+    },
+    "north_small_NW": {
+      "imageRGB": [
+        183,
+        161,
+        133
+      ],
+      "rayY_m": 5.656
+    },
+    "north_small_SW": {
+      "imageRGB": [
+        182,
+        161,
+        135
+      ],
+      "rayY_m": 5.653
+    },
+    "north_small_NE": {
+      "imageRGB": [
+        185,
+        164,
+        136
+      ],
+      "rayY_m": 5.656
+    },
+    "north_small_SE": {
+      "imageRGB": [
+        187,
+        166,
+        140
+      ],
+      "rayY_m": 5.656
+    },
+    "SW_upper_west": {
+      "imageRGB": [
+        178,
+        157,
+        131
+      ],
+      "rayY_m": 5.657
+    },
+    "SW_upper_east": {
+      "imageRGB": [
+        187,
+        166,
+        140
+      ],
+      "rayY_m": 5.656
+    },
+    "SW_lower_west": {
+      "imageRGB": [
+        183,
+        162,
+        136
+      ],
+      "rayY_m": 5.655
+    },
+    "SW_lower_east": {
+      "imageRGB": [
+        182,
+        161,
+        135
+      ],
+      "rayY_m": 5.653
+    },
+    "SE_west_1": {
+      "imageRGB": [
+        185,
+        166,
+        139
+      ],
+      "rayY_m": 5.655
+    },
+    "SE_west_2": {
+      "imageRGB": [
+        183,
+        162,
+        136
+      ],
+      "rayY_m": 5.656
+    },
+    "SE_west_3": {
+      "imageRGB": [
+        180,
+        158,
+        133
+      ],
+      "rayY_m": 5.665
+    },
+    "SE_east_1": {
+      "imageRGB": [
+        187,
+        166,
+        140
+      ],
+      "rayY_m": 5.66
+    },
+    "SE_east_2": {
+      "imageRGB": [
+        183,
+        162,
+        136
+      ],
+      "rayY_m": 5.656
+    },
+    "SE_east_3": {
+      "imageRGB": [
+        180,
+        159,
+        131
+      ],
+      "rayY_m": 5.663
+    }
+  },
+  "uncertainties": [
+    "Ray samples confirm visible floor geometry at centers, but do not by themselves prove each roof opening is a separate courtyard; southwest count of 3 comes from connected visible floor regions in the existing 800px top view and independent reviewer visual assessment.",
+    "North and east counts are consistent with the order; only southwest has the binding discrepancy."
+  ],
+  "result": "Geometry/index/finite/opaque/UV checks pass mechanically; courtyard layout FAIL at southwest (3 visible regions vs required 4); dimensions H/W 0.4363 vs 0.37 ±7% (upper bound 0.3959), so dimensional ratio also FAIL."
+}

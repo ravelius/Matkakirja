@@ -1,0 +1,56 @@
+{
+  "project": "invalidit-24l-20261105",
+  "preparedAt": "2026-11-05",
+  "stage": "intake-only; no Tripo generation or external routing performed",
+  "sourceOrder": {
+    "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/TILAUS-24l-invalidit-tripo.md",
+    "copiedTo": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/TILAUS-24l-invalidit-tripo.md",
+    "sha256": "17cd2342662f864eb09692aa8ed993d2f2175893c173c993ffabfb95d38c8132",
+    "copiedSha256": "17cd2342662f864eb09692aa8ed993d2f2175893c173c993ffabfb95d38c8132"
+  },
+  "authorization": "Owner approved (5 Nov 2026, 19:14), persistent Tripo authorization, one model; no train.",
+  "queue": "After Riemukaari 24g, Panthéon 24i, and Opéra 24j. Keep Sacré-Cœur with the image session; it is excluded here.",
+  "ledger": {
+    "relatedTaskNumber": 2114,
+    "relatedTitle": "Invalidit otto2 jonon viimeiseksi",
+    "relatedStatus": "delivered-diagnostic-awaiting-karttaseppa-decision",
+    "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+    "routing": "No separate ledger entry/routing located for Tripo order 24l; #2114 is the prior image diagnostic, not this Tripo task."
+  },
+  "limits": [
+    "Inputs only viisto-lounas.png (Front) and viisto-koillinen.png (Back); Left/Right blank. Do not use side images as inputs or use north image dimensions for footprint.",
+    "Immediately check open courtyards, south dome end, J-wing southeast (+X,+Z), and north wing as one piece before retopology; if courtyard fills or images are not accepted together, stop before next attempt and report.",
+    "Courtyard count/location from review top image governs: west/south 4, east 6, north court plus 2+2 small courtyards. Ignore prior 24e counts 3 and 4.",
+    "Dimensions: east-west width 363 m; length/width 1.13; height/width 0.37; wings about 0.09; ±7% allowed. Axis +Y up, south dome +Z, north wing -Z, east +X, J-wing +X/+Z.",
+    "Only building and courtyard floors; no exterior landscaping. GLB embedded, no Draco, <=15 MB, <=300 primitives, <=100k triangles; one material target, texture <=2048. Check open courtyards, UV-zero triangles and black preview pixels.",
+    "Two failed attempts require owner message before third."
+  ],
+  "sources": {
+    "directory": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/invalides/tripo-syote",
+    "manifest": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/invalides/tripo-syote/SHA256SUMS",
+    "manifestSHA256": "9a3fd89c5e6d83825cd87787d827fa8bc807e9b969918b121d3b9b9d2eeb3241",
+    "inputs": [
+      {
+        "name": "viisto-lounas.png",
+        "sha256Expected": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623",
+        "sha256Actual": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "viisto-koillinen.png",
+        "sha256Expected": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b",
+        "sha256Actual": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b",
+        "exists": true,
+        "matches": true
+      }
+    ]
+  },
+  "nextStep": "After queue dependencies, verify the two input hashes and preflight courtyard geometry immediately in raw model; no production/routing action was taken in this intake task.",
+  "ackReceipt": {
+    "at": "2026-11-05T17:22:34.847285+00:00",
+    "commit": "51d99ee305a640e6d25e340c32adb9e2e9613a0d",
+    "path": "posti/tripo3d-karttaseppa-riemukaari24g-kaksi-ottoa-24f-24j-24l-kuittaus-20261105.md",
+    "readbackByteVerified": true
+  }
+}

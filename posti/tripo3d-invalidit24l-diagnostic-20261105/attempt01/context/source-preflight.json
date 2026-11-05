@@ -1,0 +1,79 @@
+{
+  "project": "invalidit-24l-20261105",
+  "stage": "source preflight only; no generated or modified source images; no model or external action",
+  "inputCopy": {
+    "sourceDirectory": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/invalides/tripo-syote",
+    "destinationDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/tripo-syote",
+    "manifest": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/tripo-syote/SHA256SUMS",
+      "exists": true,
+      "sha256": "9a3fd89c5e6d83825cd87787d827fa8bc807e9b969918b121d3b9b9d2eeb3241"
+    },
+    "files": [
+      {
+        "file": "viisto-lounas.png",
+        "expected": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623",
+        "actual": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623",
+        "match": true
+      },
+      {
+        "file": "viisto-koillinen.png",
+        "expected": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b",
+        "actual": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b",
+        "match": true
+      }
+    ],
+    "allManifestFilesVerified": true
+  },
+  "reviewOnlyCopy": {
+    "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/delivery",
+    "destinationDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/review-only",
+    "files": [
+      {
+        "role": "review-only",
+        "name": "ylhaalta.png",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/review-only/ylhaalta.png",
+        "exists": true,
+        "sha256": "80644f0d5f6714edfcb7edf58bab87ba9e5c2c31d477c3076e8ce3d9b9c25811"
+      },
+      {
+        "role": "review-only",
+        "name": "viisto-lounas.png",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/review-only/viisto-lounas.png",
+        "exists": true,
+        "sha256": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623"
+      },
+      {
+        "role": "review-only",
+        "name": "viisto-koillinen.png",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/review-only/viisto-koillinen.png",
+        "exists": true,
+        "sha256": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b"
+      }
+    ],
+    "provenance": "Existing approved 24e delivery artifacts; byte-identical oblique images also exist as Tripo inputs but remain separately labeled review-only here."
+  },
+  "courtyardLayoutVisual": {
+    "reference": "sources/review-only/ylhaalta.png",
+    "visibleCounts": {
+      "southWestWing": 4,
+      "southEastWing": 6,
+      "northHonorCourtyard": 1,
+      "northSmallCourtyards": 4,
+      "northSmallCourtyardSplit": "2 west + 2 east",
+      "totalCourtyards": 15
+    },
+    "evidence": "Top orthographic view visibly shows four light-floored courtyard rectangles in the southwest wing (2x2), six in the southeast wing (2x3), the larger northern honor courtyard, plus two small northern courts on each side. The southeast J-shaped extension is visibly attached to the east/south wing.",
+    "caveats": [
+      "Counts are from a visual read of the approved top reference, not pixel segmentation or mesh geometry.",
+      "Keep the order axis convention when assigning cardinal labels: south dome toward +Z, north wing toward -Z, east +X, J-wing +X/+Z.",
+      "Courtyard floors are light beige filled surfaces within open-to-sky roof gaps; do not interpret them as holes through the ground slab."
+    ]
+  },
+  "workflowBoundary": "Only the two named perspective inputs go to Tripo. The top and perspective review copies are not Tripo inputs. The order explicitly excludes side images and north-elevation dimensions from footprint definition.",
+  "rootReview": {
+    "allThreeReferenceImagesViewed": true,
+    "inputDiscrepancy": "Both approved oblique inputs visibly show southwest3 and southeast4 courtyard regions, whereas binding top reference shows4 and6. Do not silently substitute top as input. Generation must be tested against top15 total and reported if mismatch.",
+    "noInputModification": true
+  }
+}
