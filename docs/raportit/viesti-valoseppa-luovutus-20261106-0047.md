@@ -7,16 +7,17 @@ Koodi c22a5e0bc, haara `linssiseppa2/ohjelmakohteet`, viety natiivi-backupiin (e
 KK 00.3x: Madeleine ja siltojen päät kelpaavat kokeena, ei junaan. Ei omaa ajoa: näytetään seuraavassa ajossa. Kaide: ei enempää aikaa; KK kertoo pisteet aamulla vikana, syy auki. KK kertoo 14 m:n seinät omistajalle aamulla.
 ÄLÄ säädä laskun kärjen väriä tumman kartan mittauksesta, ennen kuin KS:n tummuuskorjaus on mukana (haarassa ei ole; m-sivu ja p-et tummia). KK ehdotti korjausta PT:lle ajohaaroihin.
 
-## AJO
-JU:lta pyydetty 00.47: c22a5e0bc, `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet/sk-palais.txt`, 13 kuvaa (JU:lle sanottu ensin 14, korjattu). Odota JU:n ESIKATSELU NYT ja linja. Aja taustalla:
-`PROTO_LINJA=<linja> ESIKATSELU_PISTEKERROIN=0.465 zsh /Users/Shared/Claude/wt/proto-linssiseppa2-k30/tyokalut/esikatselu.sh c22a5e0bc /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet/sk-palais.txt`
-Heti lopuksi JU:lle LUKKO VAPAA, linja, kesto, kuvamäärä.
-Katso kuvat täysikoossa ja lähetä KK:lle (kopio PT:lle) nämä:
-1. Nuolikorjaus: p-car, p-pn, p-marie, p-tour, p-nd (lyhyet päät: menevätkö talon päälle, ovatko jyrkkiä).
-2. Madeleine: m-sivu (kadun nimi ehjänä), m-lahi, m-katto.
-3. Pont Neuf: p-pn-ylha ja p-et (porras poissa?).
-4. Palais Bourbon: pb-etu, pb-piha, pb-lahi.
-Jos Unity ei käännä, syy on OhjelmaKohdeRakennukset.cs:n Pb-osa.
+## AJO (korjattu 00.5x, korvaa aiemman pyynnön)
+PT 00.5x: seuraava ajo kertakäyttöisestä ajohaarasta, jossa KS:n tummuuskorjaus. Tehty: 8143b96ef, paikallinen haara `linssiseppa2/ajo-palais-tummuus` (c22a5e0bc + e726bba9f), yhdistyi ilman ristiriitoja, kääntöä ei kokeiltu. EI VIEDÄ, ei junaan. Ohjelmakohteiden haara ennallaan c22a5e0bc:ssä: uusi koodi sinne, ei ajohaaraan. Värit arvioidaan vasta tästä ajosta.
+JU palautti ensimmäisen pyynnön (rivi "mitä tämä ratkaisee" puuttui, yli 5 kuvaa). Uusi pyyntö perusteluineen lähetetty; nähtävyyssarja menee ensin (KK 23.38). Odota ESIKATSELU NYT ja linja. Aja taustalla:
+`PROTO_LINJA=<linja> ESIKATSELU_PISTEKERROIN=0.465 zsh /Users/Shared/Claude/wt/proto-linssiseppa2-k30/tyokalut/esikatselu.sh 8143b96ef /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet/sk-palais.txt`
+Heti lopuksi JU:lle LUKKO VAPAA, linja, kesto, kuvamäärä. Jos kääntö kaatuu, katso ensin yhdistyneet KS:n tiedostot ja OhjelmaKohdeRakennukset.cs:n Pb-osa.
+Katso 8 kuvaa täysikoossa ja lähetä KK:lle (kopio PT:lle):
+1. Palais Bourbon: pb-etu, pb-piha.
+2. Madeleine: m-sivu (kadun nimi), m-lahi (pylväät, veistokset, katto).
+3. Pont Neuf: p-pn-ylha, p-et (porras poissa? p-et:ssä myös Notre-Damen pää).
+4. Nuolikorjaus: p-car, p-ita (Marie ja Tournelle: menevätkö päät talon päälle, ovatko jyrkkiä).
+KK pyysi saman ajon näyttämään nämä kaikki; muista myös kertoa, jos jokin päätytarkistus jää yhdestä kuvasta epäselväksi.
 
 ## PONT NEUFIN PORRAS (vastattu KK:lle 00.4x)
 Vika, ei oikea muoto: e7c639217:ssa yhdysosa alkoi OSM:n rantamuurin kolmiokulmasta (z 22 m, kansi 10,4 m), kansi leveni noin 11,6 m itään. 1af8879d6 poisti sen koodista; ylhäältä otetussa offline-kuvassa jää noin 1,5 m:n siirtymä saaren eteläreunaan, koska varret eivät ole samalla linjalla. Kartalla ei vielä nähty.
