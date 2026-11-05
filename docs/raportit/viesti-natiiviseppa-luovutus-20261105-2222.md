@@ -29,12 +29,13 @@ Reuna (4.11. 09.27 "ei rajaa") näkyy kokeessa; kerro KK:lle, ratkaisu kuuluu os
 ### Ajo
 Vuoro JU:lta; pyynnössä "mitä tämä ratkaisee" ja kuvalista. Pienin kuvalista: kolme etäisyyttä yhdestä suunnasta + kolme muuta suuntaa keskietäisyydeltä = 6 kuvaa, perustelu: PT:n käsky. Malli: _tyo/linssiseppa2/ohjelmakohteet/sk-ohjelmakohteet.txt (`komento aja lat lon kaari 2`, `komento suunta`, `komento kallista 45`, `maasto siirtyma 5 0 30`, `maasto siirtyma kallistus 90`). `PROTO_LINJA=2 ESIKATSELU_PISTEKERROIN=0.465 /bin/zsh tyokalut/esikatselu.sh <sha> <sk> ipad --batch`, lopuksi LUKKO VAPAA. Sarjan ajot ensin.
 
-## Ateenan kamera: EI TYÖTÄ (PT/KK 22.1x, Raamattu 2.136: muut kaupungit ennallaan)
-Havainto: df7cc3e0c:n jälkeen luenta ei peitä Pulun sarjaa, joten elävän kartan maakohtaus (ElavaKartta.Odota → AjaSaapumisnakymaan) ajaa kameran koko maan näkymään 1. repliikissä (unity.log 2696–2708). Korjaus tehtiin ja kumottiin: 37fa268e4, kumous a6a254be7. Ero 30fdefd98:aan nolla. Älä korjaa ilman omistajan sanaa.
-Tiedoksi PT:lle kerrottu: LivianPaljastus.Alkuosa jättää ajastimen päälle, jos sarja on jo kuultu; aarrelaskuri voi jäädä odottamaan. Ei työtä.
+## Ateenan kamera: KK:n vastaus odottaa (PT:n viimeinen sana 22.2x: 37fa268e4 PYSYY, viestit ristesivät)
+Syy: df7cc3e0c:n jälkeen luenta ei peitä Pulun sarjaa, joten elävän kartan maakohtaus (ElavaKartta.Odota → AjaSaapumisnakymaan) ajoi kameran koko maan näkymään 1. repliikissä (unity.log 2696–2708). Korjaus 37fa268e4: sarja esteeksi, Alkuosa nollaa tilan myös ilman sarjaa, testi. Linssit 2249/2249, ei ajettu.
+Historia: PT:n SEIS → kumous a6a254be7 → PT: "älä kumoa" → palautus 19b43a9ff. Sisältö = 37fa268e4.
+PT kysyy KK:lta. Ateena + Tukholma -ajo perutaan, kunnes KK vastaa; ei ajoa ennen sitä. Korjauksen jälkeen maakohtaus lähtee edelleen Pulun loputtua (kysymys KK:lle, jos PT ei sitä jo kysynyt).
 
 ## Haara natiiviseppa/pariisi-aloitus-219
-Kärki a6a254be7, peilissä, puhdas, ei junassa, junaan vain PT:n kautta. Työpuu wt/proto-natiiviseppa-kierto. 30fdefd98:n esityskuva menee seuraavaan yhteiseen ajoon, ei omaa ajoa. JU:n pyyntö peruttu. Skenaariot _tyo/natiiviseppa/pariisi-aloitus/: sk-esityskuva.txt (Lontoo → Pariisi, koska aloituskaupungissa ei esitystä) voi käyttää yhteisessä ajossa; sk-aloitus-ateena.txt ja -tukholma.txt ovat kumotun kameran mukaisia, ei käyttöön.
+Kärki 19b43a9ff, peilissä, puhdas, ei junassa, junaan vain PT:n kautta. Työpuu wt/proto-natiiviseppa-kierto. 30fdefd98:n esityskuva menee seuraavaan yhteiseen ajoon, ei omaa ajoa. JU:n pyyntö peruttu. Skenaariot _tyo/natiiviseppa/pariisi-aloitus/: sk-aloitus-ateena.txt, -tukholma.txt (7 kuvaa, JU palautti: karsi enintään noin 5:een ja lisää ratkaisee-rivi, jos ajo tulee), sk-esityskuva.txt (Lontoo → Pariisi; yhteiseen ajoon).
 
 ## Avoimet
 Avoimet 2 (vahdit) ei NS:lle; pystysauma KS:llä (PT 22.1x). NUI:n e4b376546 ja aloitushaara törmäävät Nimikerros.cs:ssä (PT tietää).
