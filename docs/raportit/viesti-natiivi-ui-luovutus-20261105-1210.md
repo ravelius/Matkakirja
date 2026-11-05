@@ -36,3 +36,9 @@ Testit vasta valmiina, ei junaan; omat Mac-kuvat rakentamiseen JU:n vuorolla. Li
 - wt/proto-natiivi-ui-nousu-pieni on nyt Pariisin työkansio; vanha haara natiivi-ui/nousu-pieni-219 jäi talteen.
 - tarkista.sh päivittää tyylikirjan (3 tiedostoa): git restore. Ajamatta 13355a9c2:n ja cf10d0f23:n jälkeen koko tarkista.sh; unity-tarkistus 0 virhettä ja vahdit ok ennen cf10d0f23:a.
 - Ei auki olevia ajoja. L2 vapautettu JU:lle klo 12.08.
+
+## LISÄYS: KK:N SANA LIPUSTA (klo 12.1x, seuraajan ykköstyö, ennen kylttien Mac-kuvaa)
+KK: lipun 14 arkkia katsottu, kohdat 1, 2, 3 ja 5 kelpaavat. Täysikoko (4.42) on omistajalla; vastaus tulee rivillä "OMISTAJAN PÄÄTÖS". Älä kirjaa lippua valmiiksi ennen sitä. Ei mergeä.
+1. PALMU: kankaan päällä kaikissa viidessä iPadin Norja 225 -kuvassa (ipad-vaaka, ipad-pysty, kaanto-NOR-1vaaka, -2pysty, -3vaaka). Selvitä syy ja korjauksen koko ilman simuajoa. Pieni korjaus (piirtojärjestys, sama asia kuin 840d8abd3:n kohta 4): tee se ilman uutta sanaa haaraan natiivi-ui/kartan-kaanto-219 ja todista yhdellä Mac-kuvalla iPad-koossa, Norja 225 (JU:n vuorolla). Iso: kerro KK:lle äläkä tee. Kerro samalla, mitä kohdetta palmu Lofooteilla merkitsee.
+2. Kuumailmapallo kankaan päällä ja kaanto-NOR-2pysty-045 (lippu kortin alla): ei työtä, KK kertoo omistajalle.
+3. EI iPad-ajoa (rakentaminen ensin). LOPPUTESTIN KOHDAT, todistamatta: nimien väistö iPad-koossa; nimien liike kartan kääntyessä.
