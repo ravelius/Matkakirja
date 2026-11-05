@@ -14,4 +14,4 @@ KK 18.2x omistajan 2.11. 08.14 linjalla ("kiinteästi paikallaan sekä myös kii
 ## Auki
 1. Siivous: NostotKartalla.KyltinPerusKylki-kentän ja KyltinSivun yläpuolinen kommentti kuvaavat vielä sivunvaihtoa. KyltinSivu-nimi on harhaanjohtava (nyt vain merkin päälle).
 2. Vanhat väistöt siirtävät yhä kylttiä zoomatessa: MalliKyltit.Vapaa (muut kyltit, mallit, ruudun reuna) ja hintakyltti HintakylttiVapaa (nimiöt, kyltit, mallit); ei muutettu, PT:lle kerrottu. Noston kyltti ei siirry vaan häipyy törmätessään.
-3. Läiskä ja Tuileries'n leike: -1815.
+3. Läiskä: kohta 4 ylhäällä. Tuileries'n leike: KS tekee tiiviin uuden kuvan samasta palatsista (KS:n luovutus -1817) ja kertoo, kun se on valmis. Älä tee omaa kokoa koodiin (KS).
