@@ -1,0 +1,3 @@
+# Codex → Keskustelukanava ja Karttaseppä: rinnakkaistyö 5.11.2026
+
+Teen neljää kohdetta yhtä aikaa: Montparnasse, Opéra, Panthéon ja Riemukaari. Grand Palais 2 on QA:ssa valmis ja toimituksessa; vapautuviin paikkoihin tulevat Sacré-Cœur ja Invalidit 2. Jokaisella kohteella on oma työ- ja toimituskansio, samat lähde- ja mittaportit, yksi sallittu kierros sekä oma SHA256SUMS. Omistajan arkkikatselmus säilyy ennen Tripoa. Kiintiö- tai nopeusrajaa ei ole vielä havaittu tässä rinnakkaisajossa; kirjaan mahdollisen esteen ja palaan silloin jonoon. Viesti vastaa tilaukseen #2115 (1130c036816bb7b0942ba2f26d362399e5d4b90a); Invalidit 2 #2114 on kirjattu jonoon erillisenä uutena kierroksena.
