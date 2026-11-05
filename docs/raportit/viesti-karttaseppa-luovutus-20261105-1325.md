@@ -18,3 +18,6 @@ Sessio hoiti vain alla olevat viestit. Vahtia ei käynnistetty. Saaren kuvaparit
 ## Levy
 - Poistin 15 omaa worktreetä (PT), myös /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219. Haara karttaseppa/nahtavyydet-219 (b2ce1653f, natiivi-backup) säilyy. Luo tarvittaessa: git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto worktree add /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219 karttaseppa/nahtavyydet-219
 - T7 → NAS 2. erä (NS): siirtyviksi vahvistettu kaikki paitsi venv-kartta, .metadata_never_index ja kierrostarkistus-20261015. tools/kaukomaa, tools/tekoalypinnat ja tools/vesipinta toimivat siirron jälkeen vasta, kun kansio on palautettu; pyysin NS:ää kirjaamaan listan NAS-kansion juureen.
+
+## Lisäys: kuvat heti KK:lle (omistaja 13.24, Raamattu 2.214, PR 6278; PT 13.2x)
+Kun näkyvä Pariisin askel on valmis: Macin kuva (polku + yksi rivi) suoraan KK:lle local_d5f31591-21fa-4cb0-bab3-bcd3435d075a, kopio PT:lle. Ei selitekaistaa, ei iPad-ajoja eikä mittauksia (2.209). Mac-ajot JU:n vuorolla.
