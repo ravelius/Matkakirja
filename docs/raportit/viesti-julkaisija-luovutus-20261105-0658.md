@@ -32,3 +32,7 @@ Iso iPad: hänen vastauksensa uudelleenkäynnistykseen oli "Ei nyt". Rivi KK:lle
 
 ## LISÄYS 06.59
 KS Louvre 09569fc73 ajettu, rivi lähetetty. Uusi ajo 62f382cab: T/ks-louvre2.zsh pid 34175, Mac L2 VS järvien jälkeen; kansio lokit/julkaisija-louvre-v1b-62f382cab; loki T/ks-louvre2.log (lisää Monitoriin). Rivi KS; poikkeuksesta rivi, ei uusintaa. Unityn oma SearchInit-poikkeus ei ole mallista.
+
+## JONOTTAMATTA, SEURAAJALLE (tullut 06.59)
+- PK: zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kaide/aja.zsh (7aca77c66, koejuuri-kk3, 8 kuvaa, ~12 min, kansio kuvat/; ei vientiä). Lue skripti ensin. Rivi PK, viimeinen rivi "SAVY n/8". Mac-linjalle TF:n ja jonon mukaan.
+- NUI simuvuoro: lippu 840d8abd3 (natiivi-ui/kartan-kaanto-219), käännös + yhteinen-iPad13 ja yhteinen-iPhone18, ~45 min, proto-3d/lokit/nui-lippu-840d8abd3-20261105/ajo.zsh. Heti perään c5 (dbbc2bbea:n jatko, käännös + iPhone18, ~15 min). Sano NUI:lle "SIMULAATTORI NYT" ja linja. Id:t osoitekirjasta.
