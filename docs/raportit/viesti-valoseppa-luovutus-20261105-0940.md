@@ -36,3 +36,17 @@ SEURAAVAKSI:
 2. Korjaa koe sen mukaan: koepolttoon z<=8 ja tarvittaessa kerma. Koepohja-komento ottaa nyt mukaan kaikki pohjan polun tasot, jos palat ovat kansiossa; kerma vaatii oman polun. Uusi Mac-vuoro JU:lta.
 3. Parin voi lähettää KK:lle vasta, kun se täyttää KK:n ehdot tai kun tulos on selvä. Jos KK kysyy aiemmin: koe ei vielä korjaa, koska kartassa on toinen vanhoja järviä piirtävä lähde; syy varmistetaan.
 Muistettavaa: koepohjan palvelemat palat puuttuvat hakulokista (paluu ennen lokiriviä). Mac ja iPad eroavat: Macin nyk1-t113:ssa on sileät möykyt, iPadin s-t113:ssa z11-sekoitus. Pelkkä Mac ei riitä lopulliseen päätökseen.
+
+## Lisäys 2 (10.1x): KORVAA lisäyksen 1 SEURAAVAKSI-kohdat
+SYY VARMISTUI KOKEELLA: vanhat tummat järvet tulivat hunnusta (kerma p060 _maailma z<=8, alfa 153 maalla, 0 z8-pohjan vedessä). Kun pohjan z6-z10 ja hunnun z6-z8 reiät tulevat samasta OSM-vedestä (jarvet/koe2), t113:n ja t115:n suorakulmio, oranssit laikut, haamut ja vyöt katosivat tavalla 1 Macilla (928242911 koe1; parit jarvet/parit2/). Katsottu pienennettynä t105, t113, t115; täysikoossa vain t115:n rajaus. t110, s110 ja s113 katsomatta.
+Täysikoossa jäi kaksi vikaa: vaaleat ääriviivalliset laikut ja suorat katkot palarajoilla. Hypoteesi: vektorista puuttuu pieniä järviä z<=12, ja Piirra muuttaa pohjan veden maaksi. Koe d82f7e5ce (komento koepohja asettaa ElavaTyyli.PohjanVesiPysyy, elävä versio -koepohja2).
+Auki:
+- koe2 928242911: huntu puuttui, maa oranssi, t105 jäi Ranskaan, 29 Curl-aikakatkaisua (koe1:ssä 0). Syy varmistamatta. Uusinta koe2b käynnissä. "ei sarjaa" -rivi on kaikissa ajoissa, joten se ei kerro vikaa.
+- nyk1 t105 oli lataamatta: uusinta nyk1b.
+- koe1 t105: koealueen reuna näkyy kuvan kulmissa (vanhat järvet). Alue ei kata t105:n koko näkymää.
+JU:n jonossa: 928242911 koe2b ja nyk1b, sitten d82f7e5ce koe1 ja koe2.
+SEURAAVAKSI:
+1. Katso d82f7e5ce:n kuvat täysikoossa nyk-kuvia vasten (nyk1b, nyk2). Rakenna parit parit.py:n mallilla (se on scratchpadissa: kaksi kuvaa, koe oikealla, ylärivi tapa 1).
+2. Kerro KK:lle tulos ja lähetä pari: t105, t110, t113, t115 täysikoossa, näkyykö ero kummallakin tavalla, koealueen reuna mainiten. Ei Euroopan polttoa (PT 09.50).
+3. Sen jälkeen verkon palautus (PT 09.50; luovutus -2243 kohta 2 ja lisäys 2). KK:n aiempi järjestys oli valtionraja, Alpit ja tasorajat ennen sitä: kysy KK:lta, jos ristiriita ei ole ratkennut.
+Tuotteeseen tarvitaan myöhemmin: pohja z6-z10 ja kerma z<=8 koko Euroopasta, päätös PohjanVesiPysyy-ehdosta, mediavienti. Hunnun kerma on maakohtainen sarja (FRA ym. + _maailma): kaikki tarkistettava. Omistajan lupa ja tila ensin.
