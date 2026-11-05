@@ -7,13 +7,13 @@ Suunnitelma: Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261105-
 Yksi km² ohjelman tekemiä taloja, omaan haaraan, ei junaan. Kartan omat talot eivät näy alta; muisti lasketaan km²:ltä ilman laiteajoa. Mac-kuva kolmelta etäisyydeltä, 45° ja neljä suuntaa → KK, rivi PT:lle. Lelumainen tai kadut peittävä: PYSÄHDY, tyyli ensin, ei koko Pariisia. ODbL: kirjaa huomio (tarkistettava ennen julkaisua).
 
 Tila: työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-marais, haara natiiviseppa/marais-talot, kohdasta a48428884 (VS:n ohjelmakohteet), ei omia committeja. 08a0ec8ea EI ole mukana: `maasto siirtyma` -komennot (10.5) vaativat sen tai sitä vastaavan yhdistämisen.
-KS:ltä kysytty klo 22.1x: osuuko laatikko alueisiin v7. Vastaus tulee viestinä; ennen sitä laatikko on oletus. HUOM. ND-alueen pohja ulottuu kuvana lon 2.3595 asti, mutta alfa 0 maskin ulkopuolella.
+KS:N VASTAUS: alkuperäinen laatikko osuu Notre-Damen pohjaan (noin 62 % yhteisestä kohdasta). VAPAA: lat 48.8600–48.8690, lon 2.3545–2.3681. KS ei tarkistanut ohjelmakohteita; Hôtel de Ville (48.8563) jää laatikon ulkopuolelle eteläpuolelle, samaan kuvaan keskietäisyydeltä.
 
 ### Valmiina: _tyo/natiiviseppa/marais/
-hae-osm.mjs → osm.json (Geofabrik-ote T7:ltä; 2244 tietä + 700 relaatiota; Overpass /api/ on robots.txt:ssä kielletty, ei käytetä). hae-ign.py → ign.json (BD TOPO, Licence Ouverte, 4067 kohdetta; hauteur 3901:llä, p50 17,5 m, p90 21,3 m; altitude_min/max_toit katolle; data.geopf.fr:llä ei robots-rajausta). Molemmat varalla 48.8545–48.8665, 2.3525–2.3701. OSM:ssä height vain 1:llä, levels 1415:llä.
+hae-osm.mjs → osm.json (Geofabrik-ote T7:ltä; 2244 tietä + 700 relaatiota; Overpass /api/ on robots.txt:ssä kielletty, ei käytetä). hae-ign.py → ign.json (BD TOPO, Licence Ouverte, 4067 kohdetta; hauteur 3901:llä, p50 17,5 m, p90 21,3 m; altitude_min/max_toit katolle; data.geopf.fr:llä ei robots-rajausta). Molemmat varalla 48.8545–48.8665, 2.3525–2.3701: EI KATA UUTTA LAATIKKOA, aja uudelleen rajoilla 48.8585–48.8705, 2.3525–2.3701 (molempien skriptien vakiot). OSM:ssä height vain 1:llä, levels 1415:llä.
 
 ### Rakenne (päätetty, koodi kirjoittamatta)
-Koealue: lat 48.8560–48.8650, lon 2.3545–2.3681; talo mukaan keskipisteestä. Python: /opt/homebrew/bin/python3, numpy on, shapely EI ole (älä asenna; oma earcut noin 60 riviä).
+Koealue: lat 48.8600–48.8690, lon 2.3545–2.3681 (KS); talo mukaan keskipisteestä. Python: /opt/homebrew/bin/python3, numpy on, shapely EI ole (älä asenna; oma earcut noin 60 riviä).
 1. tee-talot.py: ääriviivat OSM:stä (samat tiet kuin kartalla, siksi ei BD TOPOn ääriviivoja). Korkeus: IGN-monikulmio keskipisteen alla, muuten lähin 15 m:n sisällä, muuten levels × 3,2, muuten 15 m. Seinä = hauteur (sol–gouttière); katon nousu altitude_max_toit − min_toit, rajattu 1–6 m. Relaatiot: ulko- ja sisärenkaat yhteen ketjuttamalla.
 2. Yhteiset seinät pois: reuna, joka on naapurilla (samat solmut pyöristettynä), piirretään vain naapurin korkeuden yläpuolelta; muuten kolmioista menee moni piiloon. Peräkkäiset samansuuntaiset seinät yhdeksi (< 4°). Ei Douglas-Peuckeria: rikkoisi yhteiset solmut.
 3. Mansardikatto: reunakohtainen sisennys d = min(2,2 m; 0,35 × 2A/P), naapuria vasten d = 0 (ei uria rivitalojen väliin). Kärki = sisennettyjen viivojen leikkaus. Rengas itseään leikkaava tai ala ≤ 0 → tasakatto.
@@ -29,13 +29,14 @@ Reuna (4.11. 09.27 "ei rajaa") näkyy kokeessa; kerro KK:lle, ratkaisu kuuluu os
 ### Ajo
 Vuoro JU:lta; pyynnössä "mitä tämä ratkaisee" ja kuvalista. Pienin kuvalista: kolme etäisyyttä yhdestä suunnasta + kolme muuta suuntaa keskietäisyydeltä = 6 kuvaa, perustelu: PT:n käsky. Malli: _tyo/linssiseppa2/ohjelmakohteet/sk-ohjelmakohteet.txt (`komento aja lat lon kaari 2`, `komento suunta`, `komento kallista 45`, `maasto siirtyma 5 0 30`, `maasto siirtyma kallistus 90`). `PROTO_LINJA=2 ESIKATSELU_PISTEKERROIN=0.465 /bin/zsh tyokalut/esikatselu.sh <sha> <sk> ipad --batch`, lopuksi LUKKO VAPAA. Sarjan ajot ensin.
 
-## Ateenan kamera: KK:n vastaus odottaa (PT:n viimeinen sana 22.2x: 37fa268e4 PYSYY, viestit ristesivät)
-Syy: df7cc3e0c:n jälkeen luenta ei peitä Pulun sarjaa, joten elävän kartan maakohtaus (ElavaKartta.Odota → AjaSaapumisnakymaan) ajoi kameran koko maan näkymään 1. repliikissä (unity.log 2696–2708). Korjaus 37fa268e4: sarja esteeksi, Alkuosa nollaa tilan myös ilman sarjaa, testi. Linssit 2249/2249, ei ajettu.
-Historia: PT:n SEIS → kumous a6a254be7 → PT: "älä kumoa" → palautus 19b43a9ff. Sisältö = 37fa268e4.
-PT kysyy KK:lta. Ateena + Tukholma -ajo perutaan, kunnes KK vastaa; ei ajoa ennen sitä. Korjauksen jälkeen maakohtaus lähtee edelleen Pulun loputtua (kysymys KK:lle, jos PT ei sitä jo kysynyt).
+## Ateenan kamera: KK:n sana odottaa, kamera EI ole haarassa
+PT:n viimeinen sana 22.3x: tila = a6a254be7:n sisältö. Viesti "älä kumoa" on vanhentunut. Palauta 37fa268e4 vain uudella PT:n viestillä, joka mainitsee a6a254be7:n.
+Syy (lokista): df7cc3e0c:n jälkeen luenta ei peitä Pulun sarjaa, joten elävän kartan maakohtaus (ElavaKartta.Odota → AjaSaapumisnakymaan) ajaa kameran koko maan näkymään 1. repliikissä (unity.log 2696–2708). Korjaus olisi 37fa268e4 (sarja esteeksi, testi; Linssit 2249/2249, ei ajettu).
+Commitit: 37fa268e4 korjaus, a6a254be7 kumous, 19b43a9ff palautus (ristennyt viesti), c963641f5 kumous taas. Ei ajoa Ateenasta eikä Tukholmasta.
+**ENNEN JUNAA KORJATTAVA (PT):** LivianPaljastus.Alkuosa jättää ajastimen päälle, jos sarja on jo kuultu (`if (!sarja) return;`, pitäisi olla `{ Lopeta(); return; }`): SarjaKaynnissa jää todeksi ja aarrelaskuri voi jäädä odottamaan. Korjaus sisältyi 37fa268e4:ään, joten se on nyt pois haarasta.
 
 ## Haara natiiviseppa/pariisi-aloitus-219
-Kärki 19b43a9ff, peilissä, puhdas, ei junassa, junaan vain PT:n kautta. Työpuu wt/proto-natiiviseppa-kierto. 30fdefd98:n esityskuva menee seuraavaan yhteiseen ajoon, ei omaa ajoa. JU:n pyyntö peruttu. Skenaariot _tyo/natiiviseppa/pariisi-aloitus/: sk-aloitus-ateena.txt, -tukholma.txt (7 kuvaa, JU palautti: karsi enintään noin 5:een ja lisää ratkaisee-rivi, jos ajo tulee), sk-esityskuva.txt (Lontoo → Pariisi; yhteiseen ajoon).
+Kärki c963641f5, peilissä, puhdas, ei junassa, junaan vain PT:n kautta. Työpuu wt/proto-natiiviseppa-kierto. 30fdefd98:n esityskuva menee seuraavaan yhteiseen ajoon, ei omaa ajoa. JU:n pyyntö peruttu. Skenaariot _tyo/natiiviseppa/pariisi-aloitus/: sk-esityskuva.txt (Lontoo → Pariisi; yhteiseen ajoon); sk-aloitus-ateena.txt ja -tukholma.txt vain, jos kamera palaa (7 kuvaa, JU palautti: karsi noin 5:een, lisää ratkaisee-rivi).
 
 ## Avoimet
 Avoimet 2 (vahdit) ei NS:lle; pystysauma KS:llä (PT 22.1x). NUI:n e4b376546 ja aloitushaara törmäävät Nimikerros.cs:ssä (PT tietää).
