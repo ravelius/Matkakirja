@@ -325,3 +325,15 @@ Omistajan pyyntö klo 19.30, kuva docs/raportit/kaappaukset/omistaja-20261105/ei
 ## MAC-KUVIEN PISTEKERROIN PARIISIN KARTALLA (KK 19.50) (5.11.2026 klo 19.52)
 
 KK:n havainto klo 19.50: Mac-kuvien kartan nimet ovat noin 2 kertaa iPadia suuremmat, kun esikatselu.sh käyttää oletuskerrointa 1 (70 julkaisija-ajoa, mm. kaikki kylttiajot). PT tarkisti lokeista: esim. esikatselu-20261105-160023 kerroin 0.465, julkaisija-pariisi-kyltit-84a2f3d83 kerroin 1. Sama kerroin ohjaa koodissa nimi- ja kerrostasoja (Screen.height / Pistekerroin); poikkeamaa tasoissa ei ole mitattu. Raamattu 10.5: Pariisin kartan Mac-ajot kertoimella 0.465. Kertoimella 1 tehdyt koko- ja tasoarviot eivät päde iPadiin; merkkien poisto mallien päältä (84a2f3d83) katsotaan uudelleen NUI:n seuraavasta ajosta.
+
+## NIMIKYLTIT KELPAAVAT; NIMI EI JÄÄ MERKIN ALLE (OMISTAJA 20.08, KK 19.59) (5.11.2026 klo 20.09)
+
+OMISTAJAN PÄÄTÖS klo 20.08 kortilla KK:n kautta: "Kelpaavatko nimikylttien koko ja näkymisen etäisyys?" = "Kelpaa (Suositus)". Kuvat scratchpad/keskustelukanava/kuvat/kyltit-013655981/ (kerroin 0.465). Pehmeää ilmestymistä ei nähty, joten se katsotaan pelistä.
+
+KK klo 19.59 (ei omistajan sana) kumoaa 2.215:n linjauksen NIMI JA PYÖREÄ MERKKI: kirjaimet eivät jää merkin eivätkä 3D-kohteen pohjan tai puiden alle, yksi yleinen sääntö NUI:lla. Euroopan tason musta pohja (013655981): NUI selvittää, omistajalle kerrottu; NS:n ja NUI:n arvio on kuvausvika, ei todistettu.
+
+## KARTAN KUVAT MYÖS 45°:STA; WILLIAM-INTRO SOI; ND:N POHJA (OMISTAJA 20.09, KK) (5.11.2026 klo 20.11)
+
+OMISTAJAN PYYNTÖ klo 20.09: "Näytä kuvia mieluusti myös 45 asteen tms kulmasta sillä karttaa katsotaan jatkossa enemmän noin". Raamattu 10.5.
+
+KK: William-intro soi myös NousuKoe päällä (omistaja 19.23 "laita kaikki äänet peliin, kuuntelen siellä"; 17.5x "kaupunki intron 'pariiisi' ... pitää generoida uusiksi"). Notre-Damen pohja-alue on omistajan hyväksymä (kortti 4.11. "Kelpaa"): uusi maaversio ei muuta piirroskartan ulkoasua ilman hänen katsomaansa paria, vain pallonäkymään tai pari molemmista KK:lle ennen kytkentää; LAV:n jonossa juoksupelin pintojen ja räystäiden jälkeen, ei omaa Mac-ajoa (omistaja 17.40).
