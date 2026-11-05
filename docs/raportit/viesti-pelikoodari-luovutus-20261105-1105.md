@@ -41,5 +41,7 @@ Maan viat (raidat, piikit, kiilat) viety LAV:lle riviksi 10.5x; syytä ei mitatt
 ## 5. Säilyvät -1050:stä
 Muistimittaukset seis; luvut ja `lahtotaso.zsh`-korjaus -1050 kohta 3. 404:t -1050 kohta 4. Kaide (sävy a, haaleus, LOD2) ja tk-taihemen-lod0: ei tason 1 rakentamisen este, omistajan 10.52:n mukaan odottavat. 9 ovetonta saa jäädä.
 
+**PT 11.0x: OMISTAJA 10.55:** pois muistin keventäminen sekä testinäkymän ja muistivahdin jatkotyöt. Jatkuu tason 1 rakentaminen; ei iPad-ajoja eikä toistosarjoja (Raamattu 2.209). Epäselvät työt rivinä KK:lle, älä karsi niitä itse. Siksi `lahtotaso.zsh`-korjaus ja Testinäkymän rivi `juoksupeli-tarkastelu` (-1320 kohta 4) eivät ole työlistallasi.
+
 ## OPIT
 Keho vaatii varan myös eteenpäin: pysähtymispaikka 0,25 m seinästä esti sivukäännöksen, koska sivun tilatarkistus osui seinään. Odottaminen seinällä ei ole turvallista testissä: takaa-ajaja saavuttaa, ja `Seis` selittää "ei käännöstä".
