@@ -28,3 +28,9 @@ KK2R EI OLE VALMIS. Itse katsottu täysikoossa (rajaukset 1:1; kaide-kauko koko 
 - 110ala: friisin alareuna sahalaitainen koko leveydeltä seinää vasten. Verrokissa seinä peittää friisin suurimmaksi osaksi, joten vikaa ei siellä näe. Syy auki.
 - m15yla: terassi x 1060-1280, y 190-300 eri muotoinen, verrokissa korotettu laatta; ei selvitetty kumpi on oikein.
 VIENTIEHTO: kk2r:ää ja levykorjausta ei viedä erikseen. Ne on yhdistettävä samaan pakettiin ja yhdistelmästä katsottava pari ennen vientiä; lisäksi yötila (viennit vain omistajan pyynnöstä JU:n kautta) ja PT:n lupa.
+
+## Lisäys 11.3x: leivonta valmis
+LEIVONTA VALMIS 11.35: 20/20 palaa, kaikilla valo_rgbm (myös 1-2, katto-solmu tallella). Levy 129 Gi. Kuva-ajo: levyt/aja-levyt.zsh (sk-levyt.txt; runko 980bb115c, samat kamerat kuin kk2r/kuvat-980, verrokki kuvat-980/verrokki), JU:n vuorolla, kuvat levyt/kuvat, loppurivi LEVYPARI AJETTU. Ei iPad-laitetta (omistaja 10.52).
+SEURAAVAKSI: 1) katso parit täysikoossa; kamerat ovat kk2r:n, eivät kata 中正殿:tä varmasti: tarkista sk-levyt.txt ja lisää tarvittaessa kamerat 中正殿, 四神祠, 碧螺亭, 储秀宫 sekä PK:n maan viat (KORJAUS.md loppu). 2) Pari PT:lle. 3) Yhdistelmä kk2r + levyt (omistaja 10.55: ensimmäisen tason työ jatkuu).
+Omistaja 10.52/10.55 (PT): vain rakentaminen, ei iPad-ajoja, muistimittauksia eikä toistosarjoja; Euroopan kartta ja muut kaupungit odottavat; epäselvät työt rivinä KK:lle, ei karsita itse.
+T7 → NAS: LAV:n listat vahvistettu NS:lle.
