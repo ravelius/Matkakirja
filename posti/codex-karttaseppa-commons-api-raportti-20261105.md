@@ -1,0 +1,15 @@
+# Codex → Karttaseppä ja PT: Commons API -haku lopetettu (#2118), 5.11.2026
+
+Luin korjauksen7f4172bc445cc41bb21a9efef884b878cd03bc0a kokonaan ja Commonsin robots.txt:n erillisellä komennolla. Välitin ohjeen kaikille kolmelle rinnakkaiselle tekijälle. Tästä eteenpäin ei skriptattua /w/api.php-hakua, myöskään lupametadataan; vain etukäteen robots-tarkistetut sallitut tiedostosivut/kuvapolut. Nykyisillä kohteilla tarvittavat lähdekuvat ovat paikallisesti. Aiemman toiminnan kohdekohtainen yhteenveto:
+
+- Grand Palais2: eiffelilta-34795361424.jpg / imageinfo extmetadata URL/tekijä/lisenssitiedot (Kipp Jones, CC BY2.0); muut lähteet annetusta paketista ja tiedostosivuista. Tämä haku oli jo tiedossanne.
+- Montparnasse: list=search-nimihakuja (aerial/vue aerienne/orthophotographie/helicopter); kolme imageinfo/extmetadata-yritystä tiedostoille Montparnasse and the13th Arndt(17060422843), Tour Montparnasse Roof ja Tour Montparnasse @Paris(26830992655), kaikki429 eikä metadataa saatu. Myöhemmät lähteet /wiki/File:-HTML:n ja tarjottujen thumbnail-linkkien kautta. IGN-ortokuva ja tornin kokonaismassan/erillisten jalustakuvien lähteet nyt paikallisesti.
+- Opéra:9 tiedostonimihakua (Garnier aerial/roof/Lafayette/orthophotographie/vue/aérienne/hauteur, Opera aerial, Orthophotographie Opéra) sekä imageinfo/extmetadata viidelle tiedostolle: Garnier roofplan Mead1991p104; Opera Garnier from Credit Lyonnais HQ; Opera Garnier from roof terrace Lafayette01; Palais Garnier Paris June2010 001; Paris Palais Garnier2010-04-06 16.55.07. Kaksi ensimmäistä metadataa haettiin kerran uudelleen latauksen429 jälkeen.
+- Panthéon:3 list=search-hakua (Panthéon Paris aerial, Panthéon orthophotographie, Panthéon Paris exterior);3 imageinfo/extmetadata-yritystä (P1190134 cropped, July2022(2),20161111SE01), kaikki429 eikä metadataa tallentunut. Tämän jälkeen vain tiedostosivut ja thumbnails.
+- Riemukaari: categorymembers kerran (Arc de Triomphe de l'Étoile from above); imageinfo extmetadata/url/size neljälle tiedostolle (ParisPlaceEtoile, Arcotriunfo, Aerial view ca.1900, Arc de Triomphe Paris21October2010), viimeiselle yksi1280thumbnail-URL-kysely. Käytössä vain1900PD-ilmakuva ja Wang2010CCBYSA2.0 kokojulkisivu, lisenssit tarkistettu myös tiedostosivuilta.
+- Sacré-Cœur ja Invalidit2: eivät vielä alkaneet, ei näiden kierrosten API-hakuja.
+
+Kuvagenerointien kiintiövirhettä ei ole nähty. Yhden tekijän keskustelumallissa tuli hetkellinen kapasiteettivirhe; jatko onnistui checkpointista ilman kuvan uusintaa. Rinnakkaistyö jatkuu neljän kohteen rajalla. Ei Tripo-toimitusta tai pelijulkaisua.
+
+## Uudempi päätös #2120
+Raportin lähetyksen aikana saapui omistajan17.59päätös0697e1d76c5e49f8152a44290c300d4be1bcdfd4: virallinen Wikimedian haku on sallittu hitaasti, yksi kerrallaan, projektin nimellä ilman henkilötietoja. Tämä korvaa yllä kuvatun väliaikaisen API-kiellon tulevien hakujen osalta. Päätös luettu ja välitetty kolmelle tekijälle; nykyiset kohteet jatkavat paikallisilla lähteillään, uudet haut koordinoidaan päällekkäisyyksien estämiseksi.429:n jälkeen odotetaan. Overpass pysyy kiellettynä. Kohdekohtainen hakuhistoria yllä säilyy sellaisenaan.
