@@ -74,3 +74,8 @@ Yhä auki: 浴德殿:n vasen kaista ja pystyviiva, 皇极殿:n ikkuna (viat 1), 
 凝香亭: mittaus jää odottamaan pitkissä listoissa (223 ok, 224 ja 226 aikaraja, 225 ok), odotus on `TarkasteluKesken` (lodHaivytettavat tai OsasarjaAtlasKesken); syy auki. Työkalun asia, ei oven.
 房子26: maan kiilamainen laatta leikkaa kivijalan (LAV:n irto-asia, ei ovi).
 Seuraavaksi: 227:n kuvat täysikoossa, sitten koko arkki KK:lle (uudet arkit 226 + 227:n vaihdetut kuvat). Konteksti 25 %: luovutus ja nollaus arkin jälkeen.
+
+## LISÄYS 09.16: ajo 405d9d716 katsottu, arkki KK:lle
+`lokit/tarkastelukuvat-405d9d716-091159` (7/7). Täysikoossa 四执库, 长春宫戏台, 房子11, 凝香亭, 重华宫. Arkit `_tyo/pelikoodari/tayte/8cd/arkki-v13-s-{1,2,3}.png`: 7 ovea rungosta 405d9d716, 34 rungosta 380664d56 (lehtikulma eroaa kapeilla jalustoilla). KK:lle lähetetty 09.16.
+Tutkimatta: 四执库:n ja 重华宫:n ohut piikki tai kiila lehden alareunassa, 房子11:n maalaatan reuna oven edessä. 弘义阁:lla ei ovea (matala 4560, portaat 594, puu 230, ei_tilaa 102, räystäs 12 yritystä).
+Seuraavaksi: odota KK:n palaute. Ei junaan. Konteksti yli pehmeän rajan: luovutus ja nollaus palautteen jälkeen.
