@@ -52,3 +52,14 @@ Ehdotukset, ei toteutettu eikä mitattu:
 2. Notre-Damen esilataus rinnan yleiskuvan kanssa eikä sen jälkeen: säästö arvio, enintään osa 9,1 s:sta.
 3. Latausruutu yleiskuvan rajalla ja lasku heti: noin 7 + 13 = 20 s perille, laskua ei lyhennetä; tämä kumoaisi PT:n pitämän 8,7 s:n.
 Mac, Google, yksi mittaus, 640×480-valinta, tyhjä välimuisti; iPadin luvut voivat olla pidempiä.
+
+## Lisäys 19.1x: kärki 265fa7a20, TÄMÄ ENSIN
+PT 19.1x: avaustauko pois tervehdyslaskusta (vain Pariisi), esilataus rinnan yleiskuvan kanssa, yksi ajo noin 3 kuvaa, aika valinnasta, pari PT:lle, ei junaan, ei iPadia. Tehty 265fa7a20 natiiviseppa/pallo-aloitus-219: testit 521/521 (koko sarjaa ei ajettu), unity-tarkistus 0 virhettä.
+
+Ajo natiiviseppa-pallo-nopea-265fa7a20 EI KELPAA: t = 24,9 s Google palautti HTTP 429 (root.json, Cesium ionin jaettu minuuttiraja; syy koodista riippumaton, ei varmistettu), kartta vaihtui Ioniin (lokissa "kaupunki: data Ion"), kuvissa ei Notre-Damea eikä rakennuksia. Sen 20,03 s valinnasta ei ole tulos. Älä lähetä paria siitä.
+
+JU:lta pyydetty uusinta natiiviseppa-pallo-nopea2-265fa7a20, sama skenaario _tyo/natiiviseppa/pallo-aloitus/sk-pallo-nopea.txt, 2 min päästä (viesti oli JU:n jonossa, ei kuitattu). Kun JU kertoo valmiin:
+1. grep "kaupunki: data Ion\|HTTP 429" unity.log. Jos Ion, ajo ei kelpaa: kerro PT:lle, älä aja kolmatta kysymättä (Google-kiintiö).
+2. python3 -I _tyo/natiiviseppa/pallo-aloitus/valinta.py unity.log. Vertailu valinnasta: d12a5d046 latausruutu 15,8 s, lähtö 18,16 s, perillä 26,86 s; 6fc1cda8b latausruutu 8,5 s, perillä 23,8 s. Arvio tauon poistosta 24,6 s; rinnakkaisen säästö mittaamatta.
+3. Katso a1-lahto, g1-saapui ja g2-4s täysikokoisina. Hylätyn ajon a1:ssä latauskuvan häivytys näkyy yhä lähdössä (PARIISI-teksti, palkki, Cesium-logo, pallon haamu): lasku alkaa häivytyksen alla. Se johtuu tauon poistosta eikä Googlesta, joten kerro se PT:lle, jos näkyy myös uusinnassa.
+4. Pari PT:lle: lokit/natiiviseppa-pallo-esilataus2-d12a5d046/g1-saapui.png → uusinnan g1-saapui.png; luvut valinnasta; ≤ 3 riviä. Lennossa kuva a1 voi pidentää aikaa ruudun verran (suurin ruutu valinta.py:ssä).
