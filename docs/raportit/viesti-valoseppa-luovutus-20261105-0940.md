@@ -22,3 +22,17 @@ Syy: PT 09.38, omistaja käynnistää ohjelman uudelleen. Edellinen: viesti-valo
 - BackReferenceWriter kirjoittaa välitiedoston sisäiselle levylle (/private/var/folders/.../T/tmp*/back_writer.osm.pbf), ei kohdekansioon: 480 Mt 10 miljoonaa kohdetta kohden. Keskeytetyn ajon kansio poistettu.
 - Skriptit ovat _tyo:ssa, eivät gitissä. Levyllä ne säilyvät käynnistyksen yli.
 - Asemataulua ei päivitetty: koe ei ole junassa.
+
+## Lisäys 1 (09.5x): Mac-kuvat katsottu osin. KORVAA SEURAAVAKSI-kohdat 1 ja 2
+Parit: pariisi-tyyli/striimi/jarvet/parit/pari-<t105|t110|t113|t115|s110|s113>.png (ylärivi tapa 1, alarivi tapa 2; vasen nykyinen, oikea koe) ja -pieni.jpg. Katsottu vain t113 ja t115 pienennettyinä. Muut katsomatta, täysikoossa ei yhtään.
+TULOS: PARI EI KELPAA, EI LÄHETETTY KK:LLE.
+- Koepohja oli käytössä (unity.log koe1 ja koe2), mutta koe näyttää nykyistä sekavammalta kummallakin tavalla: vanhat järvimuodot jäävät tummina, niiden päälle tulee oranssi maa, ja uudet järvet näkyvät haaleina haamuina.
+- Tapa 2: t105, t110, t113, s110 ja s113 ovat täysin samat kuin nykyisessä (ero 0,00). Vain t115 eroaa (6,66). Tapa 1: ero 2,07-12,82.
+- Hakuloki Suomesta: tapa 2 nykyinen z6 4, z7 12, z8 20, z9 9; koe sama ilman z9:ää. Tapa 1 nykyinen z9 45, z10 101. Koepohjan palvelemat palat eivät näy lokissa. Luvut koskevat koko ajoa. Tulkinta: tapa 2 ei näissä kuvissa yllä z9-z10:een, joten järvet tulevat z8:sta tai alempaa.
+- Väri: kuvien tumma vesi on oliivinharmaa (mitattu aiemmin 176,172,139), pohjan vesi 203,204,191. Haalea haamu sopii pohjan veteen, joten tummat muodot näyttävät tulevan muualta.
+HYPOTEESI, EI TESTATTU: tummat muodot tulevat toisesta tasosta, joko pohjan z<=8:sta tai kermatasosta julisteet/pallo/kerma/2026-10-27-p060/_maailma (Varitaso.cs; haettu 101 kertaa koe2:ssa). Tämä voi selittää myös vyöt (TULOS.md: vaalea kun pohja on maata, tumma kun pohja on vettä). Oranssin maan syy on auki.
+SEURAAVAKSI:
+1. Katso, mitä z8- ja kerma-palat sisältävät Keski-Suomessa (pala suoraan levyltä tai ämpäristä, ei ajoa). Etsi Varitaso.cs:stä ja varjostimesta, miten kerma sekoitetaan pohjaan. Kevyt koe: kerma pois näkyvistä samassa näkymässä.
+2. Korjaa koe sen mukaan: koepolttoon z<=8 ja tarvittaessa kerma. Koepohja-komento ottaa nyt mukaan kaikki pohjan polun tasot, jos palat ovat kansiossa; kerma vaatii oman polun. Uusi Mac-vuoro JU:lta.
+3. Parin voi lähettää KK:lle vasta, kun se täyttää KK:n ehdot tai kun tulos on selvä. Jos KK kysyy aiemmin: koe ei vielä korjaa, koska kartassa on toinen vanhoja järviä piirtävä lähde; syy varmistetaan.
+Muistettavaa: koepohjan palvelemat palat puuttuvat hakulokista (paluu ennen lokiriviä). Mac ja iPad eroavat: Macin nyk1-t113:ssa on sileät möykyt, iPadin s-t113:ssa z11-sekoitus. Pelkkä Mac ei riitä lopulliseen päätökseen.
