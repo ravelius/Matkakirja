@@ -285,3 +285,7 @@ KK PT:lle omistajan päätösviestissä klo 18.21: 'NUI:n nimen väistö pois, n
 ## OMISTAJAN PAATOS KLO 18.52: SARJAN ARKIT (5.11.2026 klo 18.52)
 
 Kortit KK:n kautta: Opéra 'Kelpaa', Panthéon 'Kelpaa', Montparnasse 'Uusi otto'. KS jatkaa -1845-suosituksensa mukaan; Opéran jatketut tornit KK katsoo ennen Tripoa. Omistajalle kerrottu: Montparnassen viereen jää kartan rakennuksia (asema, noin 6 m). Kuvat scratchpad/keskustelukanava/kuvat/sarja24/.
+
+## HINTAKYLTTI EI VAISTA (2.215) (5.11.2026 klo 18.53)
+
+KK:n käsky 18.4x, NUI:n välittämä (23485f753, ajamatta): hintakyltti ei väistä eikä katoa, ja sen kohdalle osuva nähtävyyskyltti häipyy. Kumoaa KS:n 5.11. linjan 'nähtävyyskyltti voittaa' ja KK:n 16.2x:n väistön narun pään viereen. Les Halles jää pois keski-kuvista törmäyksen takia (Louvren kyltti).
