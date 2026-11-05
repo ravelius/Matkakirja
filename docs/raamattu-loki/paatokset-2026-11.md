@@ -249,3 +249,7 @@ Tehdäänkö Eiffelin malli ilman kolmatta kierrosta? = Tehdään (Suositus). Sa
 ## PARIISI: VAIN 3D-RAKENNUKSET, METSÄ ENNALLEEN (omistaja 5.11. klo 16.41, kortti KK:ssa) (5.11.2026 klo 16.42)
 
 Kortti: heikennetäänkö metsä puoleen Pariisin alueella. Omistaja: jää ennalleen ja edelleen keskitytään vain pariisin 3d rakennuksiin. KK:n tavoite: Mac-vuorot ja työ ensin Eiffelille ja sarjan seitsemälle, sitten niiden kylteille; VS:n laikku-, metsä- ja saumakokeet seis.
+
+## TILINVAIHTO PÄÄTILILLE (omistaja 5.11. klo 17.05 ja 17.06, kortit KK:ssa) (5.11.2026 klo 17.07)
+
+Vaihdetaanko tänään päätilille? = vaihdetaan nyt. Mihin asti päätiliä saa käyttää? = 92 % (Suositus).
