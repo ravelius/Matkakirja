@@ -21,3 +21,9 @@ Muistettavaa: JU:n tiedotus tulee viestinä; ei omaa Unity-ajoa ilman JU:n vuoro
 
 ## Lisäys (KK 10.55, tuli luovutuksen jälkeen)
 OMISTAJAN PÄÄTÖS 10.55 kirjattu työlistalle. KK: 10.43:n järjestys ja -1045:n askeleet kumottu; ei järvipareja, ei iPad-ajoja eikä mittauksia. Pari oli jo lähtenyt KK:lle 10.46, joten siihen ei tarvita vastausta. Koe on haarassa linssiseppa2/jarvet-koe (d82f7e5ce, natiivi-backup). KK: seuraava työ tulee PT:ltä; PT:n käsky Pariisin kartasta on tämän luovutuksen pohja.
+
+## Lisäys 2 (tuli nollauksen aikana): KORVAA "KS:n vastaus odottaa"
+TIEDOSTOJAKO VOIMASSA (KS). VS: Kartta/Elava*.cs (myös ElavaPariisi.cs), Laattapalvelin*.cs, LiikeLaatat*.cs, Varitaso.cs, ElavaKarttaTestit, LiikeLaatatPaatosTestit, Kartta/Resources/NotreDameKirkko.shader. KS: Nahtavyysalue.cs, NotreDameKoe.cs, Resources/NotreDameKoe/**, Nimikerros.cs, PiirrosKerros.Animaatiot.cs, saari-pohja.png, kävelyalueet. Komennot.cs: molemmat pieninä lisäyksinä, SHA toiselle heti.
+KERRO KS:LLE RIVILLÄ ENNEN: NotreDameKirkko.shaderin muutos; elävän kartan värien muutos saaren ympärillä (saaren pohja on sovitettu niihin); ElavaTyyli.Striimi-kentän muutos (Nahtavyysalue.cs lukee sen). KS ei tarvitse VS:ltä mitään pyyhintään: se tehdään KS:n pohjakuvista.
+KS kysyi, mitä kartan töitä VS:lle on annettu: vastattu viestillä.
+JU 10.56: raja-ajo pysäytetty, 5/12 kuvaa lokit/esikatselu-20261105-105121 (keskeneräinen). Valosepän vahti pysäytetty: uudet commitit eivät käynnistä ajoja, joten pyydä ajot JU:lta viestillä. Tikkaiden kuittausta ei ole vielä tullut: varmista JU:lta.
