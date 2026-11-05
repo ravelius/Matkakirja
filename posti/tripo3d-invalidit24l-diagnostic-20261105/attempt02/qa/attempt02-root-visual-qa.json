@@ -1,0 +1,52 @@
+{
+  "reviewedAt": "2026-11-05T19:32:27.094719+00:00",
+  "allSevenFullSizeReviewed": true,
+  "modelSHA256": "55c1dbc6df0ea1b53964cb5c5ff6da83962f8de3e981e78538246d9c55702d16",
+  "courtyards": {
+    "southwest": 4,
+    "southeast": 6,
+    "north": {
+      "honor": 1,
+      "northwestSmall": 2,
+      "northeastSmall": 2
+    },
+    "total": 15,
+    "layoutCountPass": true,
+    "southwestDividerVisible": true
+  },
+  "allCourtsOpenAbove": true,
+  "floors": {
+    "smallCourtsCentersVerified": 14,
+    "honorCourtCentralHole": true,
+    "honorCourtEmptyRaySamples": 9,
+    "honorCourtSampleTotal": 9,
+    "rayEvidence": "attempt02-courtyard-rays.json",
+    "floorRequirementPass": false
+  },
+  "axes": {
+    "dome": "+Z",
+    "north": "-Z",
+    "jWing": "+X,+Z",
+    "pass": true
+  },
+  "goldDomeLanternCrossPreserved": true,
+  "dimensions": [
+    363.0,
+    142.79236594824897,
+    400.05556966585425
+  ],
+  "heightWidthRatio": 0.393367399306471,
+  "lengthWidthRatio": 1.1020814591345847,
+  "lengthTarget": 1.13,
+  "lengthRelativeError": -0.02470667333222587,
+  "uniformScale": 408.5588515513837,
+  "rotationYDegrees": 0,
+  "geometryEdit": "only rigid/uniform scale and base centering; no stretch, no floor repair",
+  "observations": [
+    "Pale stone, grey roof, golden dome recognizable",
+    "Some courtyard floor triangulation tonal seams remain, but no threshold-black pixels in7views",
+    "Honor court has central through-hole confirmed by actual mesh rays, not white texture"
+  ],
+  "result": "FAIL_REQUIRED_HONOR_COURT_FLOOR; correct courtyard count and placement; REQUESTER_DECISION_PENDING",
+  "next": "Send diagnostic with7views andraw; propose simple local/game floor completion to requester. No third attempt, retopo, final delivery or installation before decision."
+}

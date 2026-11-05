@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "a8e271271a83b7268aee3c764c8189d7861b863b",
+  "files": [
+    {
+      "path": "posti/codex-karttaseppa-invalides-24o-20261105/SHA256SUMS",
+      "blob": "d028c7a960b3e287f48bf22cf6df97ede28c0aae",
+      "sha256": "b88b9652497b3d19a7761c6cb08afc1226ef25d61aa67908287ef3e63a8c53ce",
+      "bytes": 248,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/attempt02/SHA256SUMS",
+      "readbackByteVerified": true
+    },
+    {
+      "path": "posti/codex-karttaseppa-invalides-24o-20261105/huomiot.md",
+      "blob": "d467c79999cac1e1ca6063b19f2cc101c9fca396",
+      "sha256": "a1e7dc7f2f97a8c18c905bb88d8a569003eeee705f7cefd3eb8b7f410e69800e",
+      "bytes": 2749,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/attempt02/huomiot.md",
+      "readbackByteVerified": true
+    },
+    {
+      "path": "posti/codex-karttaseppa-invalides-24o-20261105/viisto-koillinen.png",
+      "blob": "27eb472222a9424241d5d512c069703853754dc3",
+      "sha256": "3c56a2819d2490b271062331731b63340a73a94cfd74d71b374c9f0e2530f5ea",
+      "bytes": 2062124,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/attempt02/viisto-koillinen.png",
+      "readbackByteVerified": true
+    },
+    {
+      "path": "posti/codex-karttaseppa-invalides-24o-20261105/viisto-lounas.png",
+      "blob": "4dcad1358d094da98d65a51f14fff6a198bfc4e7",
+      "sha256": "5b35c05bbb75e02cb2440d3cdd8b7a41ae5051970d995c28fc3e7270dc04128b",
+      "bytes": 2172554,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/invalidit-24l-20261105/sources/attempt02/viisto-lounas.png",
+      "readbackByteVerified": true
+    }
+  ],
+  "manifestPassed": true
+}
