@@ -3,7 +3,7 @@
 Korvaa -1758:n tilan ja suunnitelman; sen vikakuvaus ja PT:n sanat pätevät yhä. Sessio on Natiiviseppä, kansio Matkakirja-3d-selvittaja. Remote päälle. Tarkista cron "4 9 * * *" unity-julkaisut.py (nollaus vie sen; tilinvaihto.md kohta 2).
 
 ## Tila
-Haara natiiviseppa/pallo-aloitus-219, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, peili natiivi-backup peili/proto/natiiviseppa/pallo-aloitus-219. Kärki 7d719ae76. Ei junaan, ei iPad-ajoja.
+Haara natiiviseppa/pallo-aloitus-219, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, peili natiivi-backup peili/proto/natiiviseppa/pallo-aloitus-219. Kärki a1dbaf1a1 (JU:n ajo 7d719ae76; ero vain tervehdyksen sana-ajat, ääntä ei vielä viety). Ei junaan, ei iPad-ajoja.
 - 0a35ad964: napit ja kameran alaraja korin lepoasennosta (PalloKori.KompassiLepoNorm), PaivitaKatse pehmentää vaiheen ja alarajan vaihdon; ruutulokiin komplepo ja alas.
 - 7d719ae76: Pariisissa tervehdys avauksen tilalle (OpasSovitin.TervehdysJaLasku), OpasSilmukka.TervehdysLasku: lasku = tervehdys + TervehdysLiukuS 2,5 s, kerronta heti tervehdyksen jälkeen. Opastus siirtyy 1. pysähdyksen jälkeen. Muut kaupungit ennallaan.
 Testit: kaanna.sh "Pallo|Opas|Pysahdys|LahtoLaatat|Kierros|Museo" 519/519. Linssit-testit/unity-tarkistus.sh 0 virhettä (aja suoraan, ei zsh:lla: zsh ei jaa muuttujia ja väittää Peli ei kääntynyt). Koko testisarjaa ei ajettu. Testit ovat ytimen tasolla; kumpaakaan korjausta EI ole nähty pelissä.
@@ -16,7 +16,7 @@ JU:n viesti sanoi 2 ruuturiviä; todellisuudessa 3392 (t 193–317). PUUTE aloit
 
 ## Odottaa
 1. JU: ajo natiiviseppa-pallo-korjaus-7d719ae76, skenaario /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pallo-aloitus/sk-pallo-korjaus.txt, sama koko. Skenaario on ajamaton.
-2. Valoseppä: opas/esittely-v1/aanet/pariisi-tervehdys.mp3. Koodi hakee EsittelyJuuri + "esittely-v1/aanet/pariisi-tervehdys.mp3" (polku juuren alla tarkistettava vientiin), 3 s aikaraja, puuttuessa teksti lukuajan verran.
+2. Valoseppä: ääni valmis, kesto_s 5,911, otto ei vielä omistajalla; opas/esittely-v1/aanet/pariisi-tervehdys.mp3 + .ajat.json, vienti vasta KK:n kuittauksella. Koodi hakee ne (3 s aikaraja), puuttuessa teksti lukuajan verran, joten JU:n ajo kulkee tekstipolkua eikä todista ääntä.
 3. PT: 18.19 kerrottu laskun nopeus. Ytimen testi: lasku 8,5 s, kerronta 6,0 s, huippu 159 m/s, kääntö 7,9 °/s. Kiihtyvyyttä ei mitattu; karkea laskelma noin 80 m/s² vs. TF 168:n raja 10 (AvausJaEnsimmainenLento koskee yhä muiden 24 s:n lentoa). Omistaja valitti aiemmin 37 m/s²:sta "melkein seinään", joten tämä on pari-arvion päätarkistus. Säätö: TervehdysLiukuS.
 
 ## Seuraavaksi, kun ajo tulee
@@ -25,4 +25,5 @@ JU:n viesti sanoi 2 ruuturiviä; todellisuudessa 3392 (t 193–317). PUUTE aloit
 3. Kuvat täysikoossa, sitten pari PT:lle: a2–a4 ennen (9e064504d) ja jälkeen. Jos uusi lokin aika ei täsmää, ei valmis-riviä.
 
 ## Muuta
+Omistaja 17.58 (Raamattu 10.5, sitova): jokainen Mac-ajo ratkaisee yhden kysymyksen; pyynnössä rivi "mitä tämä ratkaisee", enintään noin 5 kuvaa, ei verrokkia, jos vanha kuva kelpaa, ei ajoa, jos testi tai loki riittää.
 EsitysAla ja AsetaJatkaPaikka lukevat lepoarvoa OpasSovitin.KoriKompassiNormin kautta; kori keinuu nyt nappien alla, kuvassa tarkistettava, ettei rivi näytä irralliselta.
