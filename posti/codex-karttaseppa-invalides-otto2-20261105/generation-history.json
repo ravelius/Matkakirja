@@ -1,0 +1,179 @@
+{
+  "taskNumber": 2114,
+  "toolSubmissions": 9,
+  "producedImages": 8,
+  "failedInputSubmissions": 1,
+  "attempts": [
+    {
+      "key": "ylhaalta-otto01",
+      "status": "input-validation-error-no-output",
+      "startedAt": "2026-11-05T16:31:55.187601+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/ylhaalta-otto01.json",
+      "error": "HTTP400 invalid_image_file",
+      "failedAt": "2026-11-05T16:33:38.592788+00:00",
+      "nativeImageProduced": false,
+      "technicalResubmissionAuthorized": true,
+      "authorization": "Root confirmed correction of input HTTP400 with0candidate is technical fulfillment under owner standing authorization"
+    },
+    {
+      "key": "ylhaalta-otto01-resubmit01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:36:18.080716+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/ylhaalta-otto01-resubmit01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:38:23.305582+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-3ff069f9-d041-4a22-a632-d833ecb4fa91.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/ylhaalta-otto01-resubmit01.png",
+      "sha256": "80644f0d5f6714edfcb7edf58bab87ba9e5c2c31d477c3076e8ce3d9b9c25811",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Natiivikoko oikea. Pohjoinen suuri piha ja neljä sivupihaa oikein; eteläosan pihoja liikaa (lännessä4 ja idässä6) ja U-siipi typistyy. Yläkuvan rakennus jatkuu jalanjälkeä etelämmäs. Ei uusintaa laadun perusteella; erot kirjataan.",
+      "reviewedAt": "2026-11-05T16:38:23.664950+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "viisto-lounas-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:38:24.007562+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/viisto-lounas-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:40:13.182903+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-36e0d218-b677-4945-8a70-eb5de019290d.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/viisto-lounas-otto01.png",
+      "sha256": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Lounaiseksi pyydetty näkymä on aiempaa jyrkempi. Lännessä kolme pihaa toteutui, idässä edelleen kuusi eikä neljä. Eteläisen U-siiven avoin tila säilyi. Kulman ilmansuunta, kamerakulma ja korkeus mitataan erikseen; ei QA-hyväksyntää.",
+      "reviewedAt": "2026-11-05T16:40:13.520807+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "viisto-koillinen-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:40:13.898493+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/viisto-koillinen-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:42:03.907079+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-e69d1741-aee0-407e-abac-138f8d49f6ba.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/viisto-koillinen-otto01.png",
+      "sha256": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Pohjoisen vastapuoli on nyt oikea: pääportti edessä ja kupoli takana; eteläpihojen3/4määrä toteutuu. Kamera on kuitenkin lähes suoraan pohjoisesta eikä kulma edellä, joten täsmällinen vastakulma ei toteudu. Tuotannon mittaportit vielä auki.",
+      "reviewedAt": "2026-11-05T16:42:04.233751+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "etela-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:42:04.572473+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/etela-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:44:11.476592+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-4cb7d527-f44c-48a5-8e7d-d8f7925f03c3.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/etela-otto01.png",
+      "sha256": "f3539df5ccc0a74b65df44722a249f51dde30e5e41fcda199e02b8aee71b4414",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Eteläjulkisivun kupoli ja sivusiivet tunnistuvat, erillinen U-siipi oikealla. Native1536×1024. Pyydetty mittakaava/koordinaatit eivät toteutuneet; etusiipi on eri maaviivalla ja kattorivejä näkyy vaakakameran sijaan. Mittausta ei vielä hyväksytty.",
+      "reviewedAt": "2026-11-05T16:44:11.925456+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "pohjoinen-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:44:12.334533+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/pohjoinen-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:46:04.205002+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-cb324c69-321c-4d6c-95e7-e368dd98eb08.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/pohjoinen-otto01.png",
+      "sha256": "7251089e2af983475d3c272ad1b35148a3d2e1e8bb6a8186f9623386e293fe9b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Pohjoinen pitkä porttijulkisivu ja takana oleva kupoli oikein; etelän kupolin mittakaava säilyy likimain. Maaviiva ja siiven listakorkeus kuitenkin poikkeavat. TakavasemmanU-siiven näkyvyys tuo lievän perspektiivin.",
+      "reviewedAt": "2026-11-05T16:46:04.557703+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "ita-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:46:04.906841+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/ita-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:47:38.442718+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-b8ef63e5-3131-4090-959c-ba610f7f4c4e.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/ita-otto01.png",
+      "sha256": "31da9bf9e9a2c1caff4706aaa1c242fecf652ba920574842f92cca5e86e11fa2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Itä: kupoli vasemmalla ja U-siipi etuvasemmalla kuten eteläpuolella, yksi maaviiva lähes toteutuu. Dome/wing-mittakaava ja pyydetyt pikselisijainnit eivät vastaa kaikilta osin muita sivuja. Kattopinnat näkyvät vaakakamerassa liikaa.",
+      "reviewedAt": "2026-11-05T16:47:38.839686+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "lansi-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:47:39.200232+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/lansi-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:49:29.526974+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-b20e5038-0442-4cfa-a0fb-4802e1be0356.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/lansi-otto01.png",
+      "sha256": "93219903b3f462a7ba71c8fcfdc90306e8cabc917538fcdb536083516a20ba7d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Länsi on itäkuvan vastasivu, kupoli eteläpäässä oikealla. Nativekoko oikein. E/Wmaaviiva likimain sama; eri kupolikorkeus ja alasiiven syvyys/peittyminen tarvitsevat mittauksen. Ei automaattista uusintaa.",
+      "reviewedAt": "2026-11-05T16:49:29.884921+00:00",
+      "selectionIsQualityApproval": false
+    },
+    {
+      "key": "pohja-uusi-otto01",
+      "status": "selected-for-diagnostic-review",
+      "startedAt": "2026-11-05T16:49:30.214695+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/prompts/pohja-uusi-otto01.json",
+      "nativeCanvasRequirementPass": true,
+      "nativeCanvasFailureReason": null,
+      "completedAt": "2026-11-05T16:54:48.606974+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac64-4175-7330-88f5-4d27d472c9c2/exec-c889cf8c-05c9-45a5-8adc-23cfe7fccfb6.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/sarja24e-invalides-2114-20261105/originals/pohja-uusi-otto01.png",
+      "sha256": "32b87d9e065df99fa61a40c5ca7b6c263ae3a49e1a3c45ac5d8ee5285b332ddd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "visualNotes": "Kahden pohjoispuiston vaaleat haamulaikut poistuivat, mutta puiston kulmamuoto muuttui myös sallitun korjausalueen ulkopuolella. Diagnostiikkaan, ei tuotantohyväksyntää.",
+      "reviewedAt": "2026-11-05T16:54:49.030961+00:00",
+      "selectionIsQualityApproval": false
+    }
+  ]
+}

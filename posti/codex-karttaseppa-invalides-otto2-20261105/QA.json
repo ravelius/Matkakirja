@@ -1,0 +1,318 @@
+{
+  "taskNumber": 2114,
+  "site": "invalides-otto2",
+  "completedAt": "2026-11-05T16:59:48.237566+00:00",
+  "qualityPass": false,
+  "readyForTripo": false,
+  "ownerApproved": false,
+  "receiverApproved": false,
+  "generationCalls": 9,
+  "producedImages": 8,
+  "failedInputSubmissions": 1,
+  "technicalResubmission": {
+    "error": "HTTP400 invalid_image_file",
+    "candidateCount": 0,
+    "authorized": true,
+    "originalSourceRetained": true,
+    "referenceReplacedWithOfficialCommonsThumbnail": true
+  },
+  "noQualityRetries": true,
+  "productionPixelsPostprocessed": false,
+  "nativeImages": [
+    {
+      "view": "viisto-lounas",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "dc09f57a2d36293b989699c8dc1562bbc9024f6b0ff1cf3b686a190218ac2623",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "viisto-koillinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "466656056f9f1b58f9671993e4d42798b9588ff45dde2c64e72a0ff66dd7805b",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "ylhaalta",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "80644f0d5f6714edfcb7edf58bab87ba9e5c2c31d477c3076e8ce3d9b9c25811",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "etela",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "f3539df5ccc0a74b65df44722a249f51dde30e5e41fcda199e02b8aee71b4414",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "pohjoinen",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "7251089e2af983475d3c272ad1b35148a3d2e1e8bb6a8186f9623386e293fe9b",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "ita",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "31da9bf9e9a2c1caff4706aaa1c242fecf652ba920574842f92cca5e86e11fa2",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "lansi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "93219903b3f462a7ba71c8fcfdc90306e8cabc917538fcdb536083516a20ba7d",
+      "unchangedNativePixels": true
+    },
+    {
+      "view": "pohja-uusi",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "32b87d9e065df99fa61a40c5ca7b6c263ae3a49e1a3c45ac5d8ee5285b332ddd",
+      "unchangedNativePixels": true
+    }
+  ],
+  "allEightNative1536x1024RGB": true,
+  "sideMeasurementMethod": "Color bbox max(RGB)-min(RGB)>10; manually read main ground datum and top cornice of long low wings, uncertainty +/-4px. Golden cross tip included in 107m height. South foreground U-wing bottom kept separately. No normalization.",
+  "sideViews": [
+    {
+      "view": "etela",
+      "bbox": [
+        42,
+        346,
+        1498,
+        918
+      ],
+      "widthPx": 1456,
+      "coloredHeightPx": 572,
+      "coloredBottomY": 917,
+      "mainGroundY": 883,
+      "tipY": 346,
+      "heightToTipPx": 537,
+      "lowWingCorniceY": 786,
+      "corniceHeightPx": 97,
+      "lowWingRidgeY": 748,
+      "lowWingRidgeHeightPx": 135,
+      "widthHeightRatio": 2.711359404096834,
+      "targetRatio": 2.392523364485981,
+      "ratioErrorPercent": 13.326350093109873,
+      "ratioPass5Percent": false,
+      "manualDatumUncertaintyPx": 4,
+      "horizontalPixelsPerMetre": 5.6875,
+      "verticalPixelsPerMetre": 5.018691588785047
+    },
+    {
+      "view": "pohjoinen",
+      "bbox": [
+        44,
+        345,
+        1492,
+        896
+      ],
+      "widthPx": 1448,
+      "coloredHeightPx": 551,
+      "coloredBottomY": 895,
+      "mainGroundY": 895,
+      "tipY": 345,
+      "heightToTipPx": 550,
+      "lowWingCorniceY": 775,
+      "corniceHeightPx": 120,
+      "lowWingRidgeY": 731,
+      "lowWingRidgeHeightPx": 164,
+      "widthHeightRatio": 2.632727272727273,
+      "targetRatio": 2.392523364485981,
+      "ratioErrorPercent": 10.039772727272744,
+      "ratioPass5Percent": false,
+      "manualDatumUncertaintyPx": 4,
+      "horizontalPixelsPerMetre": 5.65625,
+      "verticalPixelsPerMetre": 5.140186915887851
+    },
+    {
+      "view": "ita",
+      "bbox": [
+        48,
+        388,
+        1491,
+        889
+      ],
+      "widthPx": 1443,
+      "coloredHeightPx": 501,
+      "coloredBottomY": 888,
+      "mainGroundY": 888,
+      "tipY": 388,
+      "heightToTipPx": 500,
+      "lowWingCorniceY": 779,
+      "corniceHeightPx": 109,
+      "lowWingRidgeY": 748,
+      "lowWingRidgeHeightPx": 140,
+      "widthHeightRatio": 2.886,
+      "targetRatio": 2.560747663551402,
+      "ratioErrorPercent": 12.701459854014608,
+      "ratioPass5Percent": false,
+      "manualDatumUncertaintyPx": 4,
+      "horizontalPixelsPerMetre": 5.266423357664234,
+      "verticalPixelsPerMetre": 4.672897196261682
+    },
+    {
+      "view": "lansi",
+      "bbox": [
+        37,
+        371,
+        1496,
+        889
+      ],
+      "widthPx": 1459,
+      "coloredHeightPx": 518,
+      "coloredBottomY": 888,
+      "mainGroundY": 888,
+      "tipY": 371,
+      "heightToTipPx": 517,
+      "lowWingCorniceY": 775,
+      "corniceHeightPx": 113,
+      "lowWingRidgeY": 744,
+      "lowWingRidgeHeightPx": 144,
+      "widthHeightRatio": 2.8220502901353965,
+      "targetRatio": 2.560747663551402,
+      "ratioErrorPercent": 10.20415366587133,
+      "ratioPass5Percent": false,
+      "manualDatumUncertaintyPx": 4,
+      "horizontalPixelsPerMetre": 5.324817518248175,
+      "verticalPixelsPerMetre": 4.831775700934579
+    }
+  ],
+  "oppositePairs": [
+    {
+      "views": [
+        "etela",
+        "pohjoinen"
+      ],
+      "widthDifferencePercent": 0.5509641873278237,
+      "pass5Percent": true
+    },
+    {
+      "views": [
+        "ita",
+        "lansi"
+      ],
+      "widthDifferencePercent": 1.1026878015161956,
+      "pass5Percent": true
+    }
+  ],
+  "corniceSpreadPercentOfMean": 20.956719817767656,
+  "corniceAgreement5Percent": false,
+  "baselinePixelSpread": 12,
+  "sameBaselinePass": false,
+  "southUWingGroundOffsetPx": 34,
+  "obliques": {
+    "viisto-lounas": {
+      "targetElevationDegrees": 65,
+      "targetSinElevation": 0.9063077870366499,
+      "actualElevationDegrees": null,
+      "elevationVerified": false,
+      "cornerAzimuthVerified": false,
+      "reason": "Front/south view dominates. Roof line directions and wall verticals do not establish a consistent orthographic projection; an exact elevation cannot be measured reliably. Do not infer 65 degrees from the prompt.",
+      "courtsSouthWest": 3,
+      "courtsSouthEast": 6,
+      "targetCourtsSouthEast": 4
+    },
+    "viisto-koillinen": {
+      "targetElevationDegrees": 65,
+      "targetSinElevation": 0.9063077870366499,
+      "actualElevationDegrees": null,
+      "elevationVerified": false,
+      "oppositeCornerPass": false,
+      "reason": "Nearly straight north-facing view, not the opposite diagonal corner. Orthogonal edge projection is degenerate and not a calibrated 65-degree measurement.",
+      "courtsSouthWest": 3,
+      "courtsSouthEast": 4
+    }
+  },
+  "top": {
+    "sourceBBox": [
+      587,
+      530,
+      926,
+      890
+    ],
+    "actualColorBBox": [
+      561,
+      528,
+      955,
+      976
+    ],
+    "actualColorPixels": 90262,
+    "colorPixelsOutsideFootprint": 15014,
+    "exactFootprintPass": false,
+    "orthographic90Pass": false,
+    "note": "Thin vertical facade edges remain; not pure roof-only 90-degree projection."
+  },
+  "ground": {
+    "allowedCorrectionRectanglesInclusive": [
+      [
+        650,
+        70,
+        700,
+        145
+      ],
+      [
+        810,
+        45,
+        865,
+        185
+      ]
+    ],
+    "footprintPixels": 106767,
+    "grassLikePixels": 2464,
+    "grassLikeFraction": 0.0230782919816048,
+    "grassMethod": "Heuristic color test; not semantic proof",
+    "sourceParkLayoutPreserved": false,
+    "outsideTwoCorrectionRegionsPixels": 1561092,
+    "outsideTwoCorrectionRegionsChangedPixels": 1556495,
+    "outsideTwoCorrectionRegionsChangedPercent": 99.7055266441696,
+    "outsideTwoCorrectionRegionsMeanAbsoluteChannelDifference": 4.792686145339288,
+    "outsideMaskPixels": 1274686,
+    "outsideMaskChangedPixels": 1270576,
+    "outsidePixelIdentityPass": false,
+    "ghostPatchesRemovedVisual": true,
+    "visualGeometryFailure": "Northwest park northeast notch removed outside authorized patches",
+    "receiverMustNotUseAsApprovedReplacement": true
+  },
+  "visualIssues": [
+    "Yläkuvan etelälännessä neljä pihaa kolmen sijaan ja eteläidässä kuusi neljän sijaan. Lounaassa itäpihoja kuusi, pohjoisen vastakuvassa oikeat 3/4. Osien lukumäärä ei siis pysy samana.",
+    "Yläkuvan U-siipi muuttuu L/J-muotoiseksi ja ulottuu jalanjäljen etelärajan yli. Myös länsireuna ylittää jalanjäljen.",
+    "Koilliseksi nimetty kuva näyttää pohjoispään lähes suoraan, ei täsmällistä vastakulmaa. Viistojen 65 asteen projektio ei ole varmennettavissa.",
+    "Kaikkien neljän sivun leveys/korkeus ylittää 5 prosentin toleranssin. Vastakkaisleveyksien portti yksin läpäisee.",
+    "Alasiipien päälistojen korkeus maasta vaihtelee yli 5 prosenttia. Etelässä etummainen U-siipi seisoo 34 pikseliä pääkirkkoa alempana kuvassa.",
+    "Sivukuvissa näkyy kattopintoja ja U-siipien syvyyttä; vaakasuora ortografinen kamera ei toteudu puhtaasti.",
+    "Maapohjan vaaleat laikut poistuvat, mutta luoteispuiston koilliskulman sisennys täyttyy sallitun korjausalueen ulkopuolella. Puiston muoto ei säily.",
+    "Tuotantokuvia ei rajattu, skaalattu, maalattu tai yhdistelty jälkikäteen. Viat säilytetään diagnostiikassa."
+  ],
+  "deliveryClass": "diagnostic-not-approved"
+}
