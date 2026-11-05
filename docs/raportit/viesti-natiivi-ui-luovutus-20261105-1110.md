@@ -33,3 +33,12 @@ KK 10.58 omistajan 10.52 ja 10.55 päätösten jälkeen: "lippu jatkuu, koska ka
 - tarkista.sh päivittää tyylikirjan (3 tiedostoa): git restore.
 - Levy 91 Gi (sääntö 100). wt:stä poistui 12 kansiota; jäljellä aloitukset (3 muutosta, ei omaa ratkaisua tehty), kaanto, nousu-pieni, postilaatikko. T7 → NAS 2. erä: NS:lle kuitattu, kaikki saa siirtää.
 - Tehty 08.xx–11.10, ei auki olevia ajoja.
+
+## LISÄYS klo 11.35 (korvaa "Seuraajan työ" -kohdan 1): c87a77c16 AJETTU, KOHTA 3 EI VIELÄ KELPAA
+Ajo valmis, kuvat proto-3d/lokit/nui-lippu-c87a77c16-20261105/ (16 kuvaa, arkki/ 4 arkkia). JU:lle kerrottu; simu ja linja vapaat. Katsottu: iphone-vaaka-FRA ja iphone-pysty-FRA; NOR-arkit katsomatta.
+- iPhone vaaka FRA: lippu Alsacessa (48,16 / 7,27), kaikki 4 suuntaa ilman osumaa nimeen tai nappulaan. Kelpaa.
+- **iPhone pysty FRA suunta 225: kangas osuu yhä PARIISI-nimen P-kirjaimeen** ja on kuumailmapallon vieressä (iphone-pysty-FRA-225.png, lippu 48,12 / 4,50, jalka noin 110 pt nappulasta). 000, 045 ja 135 kelpaavat. Ei KK:lle kelpaavana.
+- Syy: KohteestaPt (117 pt) ei ota mukaan kankaan leveyttä nimeä kohti. Nimi on tässä suunnassa nappulan vasemmalla, ulottuu 90 pt.
+- Laskettu: täysi varmuus lipun paikasta vaatisi noin 148 pt (√((90 + 36)² + (48 + 30)²)). Se vie vaaka-iPhonella lipun 466 km:n päähän Pariisista, 432 km:n ympyrän ulkopuolelle tai Savoijiin, eli pois maan oikeasta yläkulmasta (omistaja 29.9.). Ei suositella sellaisenaan.
+- Suositus seuraajalle: tarkista ensin kaupunkinimen ladonta (nimi vaihtaa puolta suunnan mukaan: KaupunkiMerkit/Nimikerros, Karttapisteet.NimiEsteet-tapa). Jos ladonnalle voi antaa lipun ruutualueen (Lipputanko.RuutuAlue) esteeksi, nimi väistää lippua ja paikka pysyy kulmassa. Muuten kasvata vain pystyn vaatimusta. Pysy KK:n rajauksessa (viisi korjausta). Yksi käännös + iPhone riittää, JU:lta vuoro.
+- Sen jälkeen "Seuraajan työ" kohdat 2 ja 3: iPhone uudesta ajosta, iPad ja kääntö 8be86170b:stä (katso iPad-arkit täysikokoisina: jos ladontaa muutetaan, kerro KK:lle, että iPad on ajettu ennen sitä, tai pyydä vuoro iPad-simulle).
