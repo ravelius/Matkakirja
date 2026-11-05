@@ -16,7 +16,7 @@ Liitä `_tyo/karttaseppa/sk-seuraavaan-ajoon-kk-0028.txt` seuraavan ajon loppuun
 - Pari KK:lle: katto v5 | v6 (`lokit/karttaseppa-katto-v5-08e783b96/riemukaari-v5.png`), Eiffel kortti | nyt.
 
 ## TYÖJONO
-1. Sacré-Cœur pelissä (`sarja24-asennus/sc-suunnitelma.md`), sitten Montparnasse. 2. KK:n ja omistajan sana tasaisesta. Muu kuten -0012.
+1. Sacré-Cœur pelissä (`sarja24-asennus/sc-suunnitelma.md`), sitten Montparnasse. **Kun asennat näiden alueet: kerro NS:lle (local_c7344e20-fba8-433d-ba8e-184a325037ef)**, koska se on poistanut sacre-coeur- ja montparnasse-maskit talojen paloista; maskit palautetaan ja kohteiden rivit otetaan pois OHJELMA-listasta tee-palat.py:ssä, muuten alueelle jää tavallisia taloja. 2. KK:n ja omistajan sana tasaisesta. Muu kuten -0012.
 
 ## Ajot ja kuvat
 `lokit/karttaseppa-tasainen-3834ea09b` (12 kuvaa), `lokit/karttaseppa-katto-v5-08e783b96`; parit `_tyo/karttaseppa/parit-3834ea09b/`. Tripolle ei mitään ilman KK:n sanaa.
