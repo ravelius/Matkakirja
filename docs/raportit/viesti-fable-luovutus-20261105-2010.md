@@ -8,14 +8,16 @@ Edellinen: viesti-fable-luovutus-20261105-1941.md (opit voimassa).
 - KK 19.55: puhe- ja T-napin kuvake vaaleaksi, myös AUTO-pilleri (627a664c4, PR 6307 yhdistetään vihreänä).
 - KK 19.50, Raamattu 10.5 (PR 6308 yhdistetty): Pariisin kartan Mac-ajot ESIKATSELU_PISTEKERROIN=0.465.
 
+- Omistaja 20.09: kartan Mac-kuvat myös noin 45°:sta (Raamattu 10.5); NUI:lle KK, JU:lle ja KS:lle PT.
+
 ## ROOLIT
 | Rooli | Tila | Auki, tarkista |
 |---|---|---|
 | NUI | Nollaus lähetetty | Nimisääntö (uusi, ei koodia vielä); Euroopan musta pohja: varmistuskuva `pallo kerros pakota taysi` KS:n usva-ajossa. 627a664c4 poimitaan yksin runkoon, muu kyltit-219 ei vielä junassa. Nappien kuvapari seuraavasta pallon ajosta. |
-| NS | Nollattu | William-intro ei soi oletuskulussa (NousuKoe), päätös KK:lla, suositukseni: soi. "Mikä tämä rakennus on?" ilman ääntä, selvitys luovutuksessa -2005. |
+| NS | Nollattu | William-intro soi myös NousuKoe päällä (KK:n Kyllä, käsky annettu 20.11). "Mikä tämä rakennus on?" oli testitunnuksen syy, ei pelin; maksullista varmistusta ei tilattu. Rivi Liiku loitontaa pyydetty. |
 | KS | Usva 3b253ee87 JU:n jonossa | Pari PT:lle täysikoossa, kertoimella 0.465, mukana kuva kyltit-eurooppa-taysi. Riemukaari, Pantheon, Sacré-Cœur arvioitavana. |
-| PK | Nollattu | Varmista rivi: 93cc59596 (eunukki) JU:lle junaan 219; JU:n luovutuksessa sitä ei näkynyt. Vika on myös TF 217/218:ssa; KK ei ollut kertonut tätä omistajalle. omena-mata-v3 on ämpärissä (minun luvallani ennen perumista), ei viittauksia; väri koodissa 1bf2fa8d6, junaan vasta KK:n hyväksymästä lähikuvasta. |
-| LAV | lattia20 ei vientiä | Mittaa lattian sävyn muutos (kellertävästä harmaampaan, ei ilmoitettu); x 475:n sauma, rinne, PUUTE 1. ND:n uusi maaversio ajossa JU:lla, pari PT:lle; uusi nimi, ei vientiä ennen PK:n vahvistusta ja lupaa. |
+| PK | Nollattu | Eunukki on JU:lla 7de953bc9 (93cc59596:n korjaus); JU varmistaa junahaaran ennen nollausta, rivi PT:lle. Vika on myös TF 217/218:ssa; KK ei ollut kertonut tätä omistajalle. omena-mata-v3 on ämpärissä (minun luvallani ennen perumista), ei viittauksia; väri koodissa 1bf2fa8d6, junaan vasta KK:n hyväksymästä lähikuvasta. |
+| LAV | lattia20 ei vientiä | Mittaa lattian sävyn muutos (kellertävästä harmaampaan, ei ilmoitettu); x 475:n sauma, rinne, PUUTE 1. Lattia21 aja21 JU:lla: sävy (oma virhe, korjattu), x 475, rinne. ND:n maa: omistajan hyväksymä pohja-alue, ei kytkentää; vain pallonäkymään tai pari molemmista KK:lle; jonossa juoksupelin pintojen ja räystäiden jälkeen, ei omaa ajoa. Perutin ND-ajon, jos se ei ollut alkanut. |
 | JU | Nollaus lähetetty, idle | Luovutus -1953b. Jonossa KS usva. |
 
 ## AUKI PT:LLÄ

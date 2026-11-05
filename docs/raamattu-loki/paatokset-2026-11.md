@@ -331,3 +331,9 @@ KK:n havainto klo 19.50: Mac-kuvien kartan nimet ovat noin 2 kertaa iPadia suure
 OMISTAJAN PÄÄTÖS klo 20.08 kortilla KK:n kautta: "Kelpaavatko nimikylttien koko ja näkymisen etäisyys?" = "Kelpaa (Suositus)". Kuvat scratchpad/keskustelukanava/kuvat/kyltit-013655981/ (kerroin 0.465). Pehmeää ilmestymistä ei nähty, joten se katsotaan pelistä.
 
 KK klo 19.59 (ei omistajan sana) kumoaa 2.215:n linjauksen NIMI JA PYÖREÄ MERKKI: kirjaimet eivät jää merkin eivätkä 3D-kohteen pohjan tai puiden alle, yksi yleinen sääntö NUI:lla. Euroopan tason musta pohja (013655981): NUI selvittää, omistajalle kerrottu; NS:n ja NUI:n arvio on kuvausvika, ei todistettu.
+
+## KARTAN KUVAT MYÖS 45°:STA; WILLIAM-INTRO SOI; ND:N POHJA (OMISTAJA 20.09, KK) (5.11.2026 klo 20.11)
+
+OMISTAJAN PYYNTÖ klo 20.09: "Näytä kuvia mieluusti myös 45 asteen tms kulmasta sillä karttaa katsotaan jatkossa enemmän noin". Raamattu 10.5.
+
+KK: William-intro soi myös NousuKoe päällä (omistaja 19.23 "laita kaikki äänet peliin, kuuntelen siellä"; 17.5x "kaupunki intron 'pariiisi' ... pitää generoida uusiksi"). Notre-Damen pohja-alue on omistajan hyväksymä (kortti 4.11. "Kelpaa"): uusi maaversio ei muuta piirroskartan ulkoasua ilman hänen katsomaansa paria, vain pallonäkymään tai pari molemmista KK:lle ennen kytkentää; LAV:n jonossa juoksupelin pintojen ja räystäiden jälkeen, ei omaa Mac-ajoa (omistaja 17.40).
