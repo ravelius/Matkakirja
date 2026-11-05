@@ -1,0 +1,166 @@
+{
+  "source": "output/opera-24j-20261105/raw/opera24j-attempt02-raw.glb",
+  "sourceSHA256": "92bb4e5fd723764ee6063dec2b046f20800ac927e4747ba9e126b05f16caa38b",
+  "outputSHA256": "252ac668bf956fc9b9720d815e1f36108662bde454cd8983768001bec1073935",
+  "uniformScale": 225.7967879685041,
+  "originOffset": [
+    0.00048828125,
+    0.0,
+    -0.0006866604089736938
+  ],
+  "bounds": [
+    [
+      -66.66132651708936,
+      0.0,
+      -111.0
+    ],
+    [
+      66.66132651708936,
+      84.44640004132134,
+      111.0
+    ]
+  ],
+  "dimensions": [
+    133.32265303417873,
+    84.44640004132134,
+    222.0
+  ],
+  "operation": "Uniform positive scale plus base centering only; normals, UV, topology and embedded textures preserved",
+  "numeric": {
+    "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/work/attempt02-raw.glb",
+    "bytes": 5676972,
+    "meshes": 1,
+    "primitives": 1,
+    "materials": 1,
+    "referencedMaterials": [
+      0
+    ],
+    "skins": 0,
+    "animations": 0,
+    "vertices": 35288,
+    "triangles": 45716,
+    "positionsFinite": true,
+    "bounds": [
+      [
+        -66.66132354736328,
+        0.0,
+        -111.0
+      ],
+      [
+        66.66132354736328,
+        84.44640350341797,
+        111.0
+      ]
+    ],
+    "indexRangeValid": true,
+    "allMaterialsOpaque": true,
+    "uvZeroThresholdCross2DAbs": 1e-12,
+    "uvZeroTriangles": 11,
+    "uvZero3DArea": 1.0357666174388767,
+    "surface3DArea": 108657.83030145433,
+    "uvZero3DAreaFraction": 9.532369775517351e-06,
+    "imageDimensions": [
+      {
+        "index": 0,
+        "name": "tripo_image_38d31880-7b09-4767-8ef4-945fb9b9e6d4_2",
+        "mimeType": "image/png",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 1,
+        "name": "tripo_image_38d31880-7b09-4767-8ef4-945fb9b9e6d4_0",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "index": 2,
+        "name": "tripo_image_38d31880-7b09-4767-8ef4-945fb9b9e6d4_1",
+        "mimeType": "image/jpeg",
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    ],
+    "primitiveReports": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "mode": 4,
+        "vertices": 35288,
+        "triangles": 45716,
+        "material": 0,
+        "opaque": true,
+        "positionsFinite": true,
+        "indexRangeValid": true,
+        "uvZeroTriangles": 11,
+        "uvZero3DArea": 1.0357666174388767,
+        "surface3DArea": 108657.83030145433
+      }
+    ]
+  },
+  "previews": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-etela.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-pohjoinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-lansi.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-ita.png",
+      "blackPixelsRGBAllBelow16": 3,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-ylhaalta.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-lounas.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/qa/attempt02-raw-koillinen.png",
+      "blackPixelsRGBAllBelow16": 0,
+      "size": [
+        800,
+        800
+      ]
+    }
+  ]
+}

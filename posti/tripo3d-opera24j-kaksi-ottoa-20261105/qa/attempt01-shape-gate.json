@@ -1,0 +1,13 @@
+{
+  "frontPlusZ": true,
+  "stageTowerBehindDome": true,
+  "sideTowerSolidBases": true,
+  "allSevenFullsizeReviewed": true,
+  "widthRatio": 0.592863162325981,
+  "heightRatio": 0.3850828152026709,
+  "widthRelativeError": -0.12557055704132603,
+  "heightRelativeError": -0.12481178363029344,
+  "tolerance": 0.07,
+  "shapeStatus": "FAIL_RATIOS",
+  "retryReason": "Width and height relative to length both below -7% tolerance; no anisotropic scale allowed"
+}

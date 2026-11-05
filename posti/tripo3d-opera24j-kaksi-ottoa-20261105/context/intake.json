@@ -1,0 +1,71 @@
+{
+  "project": "opera-24j-20261105",
+  "preparedAt": "2026-11-05",
+  "stage": "intake-only; no Tripo generation or external routing performed",
+  "sourceOrder": {
+    "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/TILAUS-24j-opera-tripo.md",
+    "copiedTo": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/TILAUS-24j-opera-tripo.md",
+    "sha256": "b08422c0d83ae7c0fd13998fb42b62517cc360d82073320421a5f3520eb74e9c",
+    "copiedSha256": "b08422c0d83ae7c0fd13998fb42b62517cc360d82073320421a5f3520eb74e9c"
+  },
+  "authorization": "Owner approved (5 Nov 2026, 18:52), persistent Tripo authorization, one model; no train.",
+  "queue": "After Grand Palais 24f, Arc de Triomphe 24g and Panthéon 24i are complete.",
+  "ledger": {
+    "taskNumber": 2128,
+    "title": "Opera24j Tripo-malli",
+    "status": "routed-to-active-owner-queued",
+    "ownerThreadId": "01a14ee0-3e23-72b2-82b1-510228c70b7d",
+    "relatedImageTask": 2095,
+    "route": "active owner thread; not another chat"
+  },
+  "limits": [
+    "Front etela.png (+Z); Back pohjoinen.png; Left lansi-peilattu.png; Right lansi.png. If mirrored image rejected by Tripo, stop before credits and report.",
+    "Confirm main facade at Front/+Z and stage tower behind dome before any retopology; swap Left/Right and retry if facade duplicated or wrong-end. Do not mirror model.",
+    "Dimensions: length 222 m, width/length 0.678, height/length 0.44 (source range 0.41–0.47); ±7% allowed.",
+    "Keep green main and two side domes, golden roof-corner statuary, facade columns/arches/cornice; side-tower extensions are solid wall.",
+    "Only building; GLB embedded, no Draco, <=15 MB, <=300 primitives, <=100k triangles; one material target, texture <=2048. UV/black-pixel checks for raw/light if retopo is needed.",
+    "Two failed attempts require owner message before third."
+  ],
+  "sources": {
+    "directory": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/opera/tripo-syote",
+    "manifest": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/opera/tripo-syote/SHA256SUMS",
+    "manifestSHA256": "349932db3332cd7a05b6e03c260efc116b7a572d67d44c42703467b4f44573b3",
+    "inputs": [
+      {
+        "name": "etela.png",
+        "sha256Expected": "233730947f39ba510ed17c2c0384ac1378a083ccb516b3c6dfd6ac7e3e87bdca",
+        "sha256Actual": "233730947f39ba510ed17c2c0384ac1378a083ccb516b3c6dfd6ac7e3e87bdca",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "pohjoinen.png",
+        "sha256Expected": "3df2bc457ebf64f891e1547c44b316250e3151d499b6ca3c72ee286897053a76",
+        "sha256Actual": "3df2bc457ebf64f891e1547c44b316250e3151d499b6ca3c72ee286897053a76",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "lansi.png",
+        "sha256Expected": "76b44720888186ed89e84e96bda3ee738924e6df3b92158db78089ac762c52d6",
+        "sha256Actual": "76b44720888186ed89e84e96bda3ee738924e6df3b92158db78089ac762c52d6",
+        "exists": true,
+        "matches": true
+      },
+      {
+        "name": "lansi-peilattu.png",
+        "sha256Expected": "804dd10a837c7c5b5092bd3c6f6784b5671f0e0ceaaf8a4d66125eefcc3b2acf",
+        "sha256Actual": "804dd10a837c7c5b5092bd3c6f6784b5671f0e0ceaaf8a4d66125eefcc3b2acf",
+        "exists": true,
+        "matches": true
+      }
+    ]
+  },
+  "nextStep": "After dependencies, preflight source files/hashes and Tripo acceptance of mirrored Left input before credits; then one authorized model attempt.",
+  "ackReceipt": {
+    "at": "2026-11-05T17:22:34.847285+00:00",
+    "commit": "51d99ee305a640e6d25e340c32adb9e2e9613a0d",
+    "path": "posti/tripo3d-karttaseppa-riemukaari24g-kaksi-ottoa-24f-24j-24l-kuittaus-20261105.md",
+    "readbackByteVerified": true
+  }
+}

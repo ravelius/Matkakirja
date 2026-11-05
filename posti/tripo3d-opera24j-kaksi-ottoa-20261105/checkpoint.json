@@ -1,0 +1,67 @@
+{
+  "task": 2128,
+  "status": "TWO_ATTEMPTS_FAIL_AWAITING_REQUESTER",
+  "updatedAt": "2026-11-05T18:13:23.928021+00:00",
+  "fullOrderRead": true,
+  "sourceOrderSHA256": "b08422c0d83ae7c0fd13998fb42b62517cc360d82073320421a5f3520eb74e9c",
+  "sourceCommit": "2aac98a31f2b7e74e82750d3764481e272339098",
+  "sourceBlob": "4ecc4012ba87bac2599f2b34f0b320047b1c0121",
+  "sourcesHashVerified": true,
+  "sourceImagesFullSizeReviewed": true,
+  "mirroredLeftAcceptedByUI": true,
+  "tripoJobs": [
+    {
+      "id": "d64a7426-0dfe-45b4-a450-45afb43b401d",
+      "attempt": 1,
+      "status": "RUNNING",
+      "startedObservedAt": "2026-11-05T17:58:35.795002+00:00",
+      "estimatedCompletion": "2–5 minutes after start, observed25%",
+      "credits": 45,
+      "balanceBefore": 15870,
+      "balanceAfter": 15825,
+      "settings": {
+        "model": "H3.1 Ultra",
+        "topology": "Triangle",
+        "target": 50000,
+        "texture": 2048,
+        "PBR": true,
+        "RemoveLighting": true,
+        "Parts": false,
+        "8K": false
+      },
+      "mapping": {
+        "Front": "etela.png",
+        "Left": "lansi-peilattu.png",
+        "Right": "lansi.png",
+        "Back": "pohjoinen.png"
+      }
+    }
+  ],
+  "activeTripoJobs": [],
+  "creditsSpent": 45,
+  "delivered": false,
+  "ownerActionRequired": false,
+  "nextAction": "Download raw; verify Front+Z facade and stage tower behind dome and ratios before retopo.",
+  "rawDownload": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/opera-24j-20261105/raw/opera24j-attempt01-raw.glb",
+    "sha256": "7d087bf100845a7e9eab1ca47eba8122691f52a4cf467f38507414541a57a69e",
+    "bytes": 5284048
+  },
+  "failedAttempts": 2,
+  "attempt01ShapeGate": {
+    "frontPlusZ": true,
+    "stageTowerBehindDome": true,
+    "sideTowerSolidBases": true,
+    "allSevenFullsizeReviewed": true,
+    "widthRatio": 0.592863162325981,
+    "heightRatio": 0.3850828152026709,
+    "widthRelativeError": -0.12557055704132603,
+    "heightRelativeError": -0.12481178363029344,
+    "tolerance": 0.07,
+    "shapeStatus": "FAIL_RATIOS",
+    "retryReason": "Width and height relative to length both below -7% tolerance; no anisotropic scale allowed"
+  },
+  "noThirdGenerationWithoutRequesterDecision": true,
+  "qualityAccepted": false,
+  "nextStep": "Send both raw diagnostics; no third generation before requester decision. Continue Invalidit and Montparnasse."
+}
