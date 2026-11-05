@@ -75,3 +75,5 @@ Valinnaisia hakuja kaikilla rungoilla: `LataaSarjanMalli` hakee `-lod1.glb`:n (p
 ## Lisäys 5.11.: OMISTAJAN PÄÄTÖS 10.38: muistimittaukset seis
 Kortti KK:n kautta, "Kyllä (Suositus)": muistisarja seis, wifi-tarkistusta ei tarvita, uusia muistiajoja ei tehdä, ennen kuin pelin ensimmäinen taso on valmis tai julkaisua valmistellaan. Ovimallin ja esineiden muisti mitataan silloin, ja kevennys tehdään tarvittaessa silloin. Ovien korjaukset jatkuvat.
 Kumoaa tästä tiedostosta ja -0810:n kohdasta 4 muistisarjaan, juoksuihin ja `sarja-wifi.zsh`:ään liittyvät tehtävät; skriptissä on EI AJETA -rivi. JU:lle sanottu: pois ketjusta. Seuraavaksi vain: lista 235 → arkki KK:lle.
+
+Myöhempää mittausta varten (KK): luvut ja verkkohavainto ovat kohdissa "klo 10.38" ja "Korjaus 10.4x". +164 Mt on yksi mittaus (d9c s3, ainoa verkkolento); 3 mallin 404 ei johdu verkosta. Mittaa silloin verkossa ja tarkista konsolista, ettei `Cannot resolve destination host` -rivejä ole. Kansiot `lokit/pelikoodari-muisti-lahtotaso-*` jäävät. PT: 404-asialla ei enää kiirettä.
