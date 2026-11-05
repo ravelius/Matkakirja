@@ -112,3 +112,7 @@ Omistaja 09.35: 东所, 1341826243, 弘义阁, 碑亭, 碧螺亭, 玉翠亭, 四
 房子11–房子8 6,4 m: toinen kierros kokeili molempia samankokoisina (ajettu kartalla v16, pinnat v15): kumpikaan ei löydä paikkaa. KK: jätä näin ja kerro seuraavan arkin yhteydessä.
 西暖殿: KK pyysi täysikokoisen kuvan uusimmalta rungolta ennen arkkia, lista 231.
 PT: jos leivontapyyntö 绥寿殿 + 3 tulee, kerro kohteet, LAV:n hinta ja näkyvä vika ilman leivontaa.
+
+## LISÄYS 09.40: tila ennen ohjelman uudelleenkäynnistystä (PT 09.38)
+Odottaa: JU:n ajot 230 (`8b0f8f9e1`, 益寿斋) ja 231 (`5d9b1552d`, 西暖殿), kansiot `lokit/tarkastelukuvat-<sha>-*`. Kartta v16. Ei omia ajoja käynnissä.
+Herättyä: 1) katso molemmat täysikoossa; 2) 益寿斋:n 7,45 m:n valoton täyte: jos huono, ratkaise ennen arkkia ja tarvittaessa leivontapyyntö PT:lle (kohteet, LAV:n hinta, näkyvä vika; tyohuone.glb ja varasto.glb eivät kuulu tausta-1-2:n leivontaan); 3) kohta 2: 浴德殿, 四执库, 重华宫, 皇极殿; 4) arkki KK:lle, mukana 房子11–房子8 ja 体元殿:n ja 咸福宫:n lehti ikkunan edessä.
