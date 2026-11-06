@@ -665,3 +665,7 @@ jos se riittää. Tornien mittari G-kuva ja omistajan tilaus 1,25. Nykyinen pysy
 eikä menetä tornien liioittelua.
 
 Pont d'Iéna: näytetty, eteläpää pyöreä kerrottu; KS korjaa tai palaa, jos korjaus ei ole pieni.
+
+## TÄRINÄKOE KOLMENA KÄYNNISTYKSENÄ (KK 21.08, EI OMISTAJAN SANA) (6.11.2026 klo 21.09)
+
+KK 6.11.2026 klo 21.08, NS:n ehdotuksesta: omistajan 20.58 "Yksi uusi ajo" tehdään kolmena käynnistyksenä: A1, B ja A2 omissaan, muistivahti päällä, ilman uudelleenluontia ja piikin sallimista; ensin yksi Mac-ajo, lukitus, sitten iPad JU:n jonon loppuun. Korvaa 20.58-kirjauksen "piikki saa tulla". Syy (NS): samassa käynnistyksessä VIKA pysäyttää komennot käynnistyksen loppuun, ja iOS-varoitus muuttaa laattavalinnan B:lle ja A2:lle; korjaus vaatisi koodimuutoksen. Omistaja ei ole vielä kuullut tavan muutosta: seuraava KK kertoo sen hänelle.
