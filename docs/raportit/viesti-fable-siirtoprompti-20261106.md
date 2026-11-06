@@ -26,7 +26,7 @@ Aloitusviesti kullekin: "Olet <Rooli> (<malli, effort>). Tili vaihtui. Aja git f
 | Pelikoodari | pelikoodari-luovutus-20261106-1825, b05af232b | lepo, kunnes kartta valmis LAV:lta; tilaraportti alle 10 kt |
 | Valoseppä | linssiseppa2/luovutus-20261106-1826, cbb3c907b | ajo 28: varjot ja lähiympäristön lista KK:lle; usvakoe (omistaja 18.20); tilaraportti alle 10 kt |
 | Karttaseppä | karttaseppa/luovutus-20261106-1826, 6872e0731 (Y 92ea0a945) | ajon 29 tulokset KK:lle |
-| Lavastaja | lavastaja/luovutus-20261106-1305, 96b29dcfa | ENSIN: ketju 1-2 kaatui, katto_takaisin.py puuttuu polusta `_tyo/linnanrakentaja/leivonta-216/muuri/yleinen/`; 0531d1c4e levylle ja uusi ajo JU:lle. Ei vientiä |
+| Lavastaja | lavastaja/luovutus-20261106-1305, 2b66dad4c | ENSIN: tarkista JU:lta, ehtikö perutun ajoluvan ajo 1-2 + 3c alkaa; polku korjattu levyllä, uusi ajo JU:lle tarvittaessa. Ei vientiä |
 | Linssiseppä, Projektiseppä, Työkaluseppä, Sisältökirjuri, Äänittäjä, Laitetestaaja | – | levossa, ei sessiota |
 
 ## 3. Tämän tilin sessiot (osoitekirja 31.10.; tarkista, että ovat elossa)
