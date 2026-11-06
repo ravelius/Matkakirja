@@ -17,3 +17,8 @@ KOKO KOEJUURI: koejuuri-levyt7k (tee_levyt7k.py): sama sääntö kaikille paloil
 
 ## 7.11. 23.54 PT: lisäkamerat 7p/7k: j3-alkup-kamera, B-takakulma uudesta paikasta (-86,5; 2; 431,5). Itäpääty EI kuvattavissa: x 258,6 on seinän x 258,1-259,1 sisällä (mittaa27.py), joten sitä ei voi nähdä mistään kamerasta.
 Juova, yritys 1 (mittaa28.py, kuvat-levyt7r): sivun 3-1 kirkkaus L p50 151 / 151 / 147 / 145 kulmissa 5 / 20 / 32 / 41 astetta, eli vaaleus on kiven oma väri, ei kulman vika. Vaihtelu p10-p90 18 / 27 / 29 / 24: 5 asteessa noin kolmanneksen pienempi. Kulma-mip siis osittain tuettu, ei todistettu.
+
+## 07.11. 00.02 kuvat-levyt7p ja 7k katsottu; pari kuvat-pari-levyt7k (2 rajausta täysikoossa, muut arkilla pienennettynä). Ei leivontaa, karttaa, vientiä.
+KORJAANTUI: kohta-0-2 (täysikoossa), B-takakulma (täysikoossa), kohta-0-3 ja j3-paaty-lansi (arkilla): vaakajuovainen kuva -> kivet ja saumat. A-koko, C-koko1: ei muutosta näkyvissä pienennettynä. Kohta-1-1 ja 1-4: kamera ei osunut kiveen, ei näytä mitään.
+LAIKKU: näkyy B-takakulmassa myös takaa, vaalea violetti kaista jalustan päällä, reuna kaareva pilarin ympäri; sama 7p:ssä ja 7k:ssa. Syy auki, aamun kysymys KK:lla.
+JUOVA, yritys 2: aja-levyt7z.zsh: sama kamera ja 5 asteen kulma, kuvakulma 20 ja 10 astetta. Jos kivi ja saumat erottuvat, syy on pikselikoko ja kulma; jos eivät, kulma-mip kumoutuu.

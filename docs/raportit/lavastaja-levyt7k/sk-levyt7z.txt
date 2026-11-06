@@ -1,0 +1,28 @@
+# LAV 7.11.: juova 3-1: sama 5 asteen kulma, kapea kuvakulma (mip-koe, yritys 2). Ei vientiä.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+ui kierto vaaka
+odota 12
+ui juoksupeli palatsi mallit file:///Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/katot-v125/koejuuri-levyt7/
+ui juoksupeli vapaa 1
+ui juoksupeli botti 0
+ui juoksupeli palatsi kopiot 1
+ui juoksupeli eunukit 0
+ui juoksupeli ajajapito 1
+ui juoksupeli v4
+oleta 240 palatsi v2: peittokartta -- palatsi ladattu
+odota-maailma 180 100
+ui juoksupeli avaus nyt 1
+ui juoksupeli tarkastelu kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot/k-tarkastelu
+ui juoksupeli tarkastelu keisari pois
+ui juoksupeli tarkastelu kamera 321.4 3.9 339 0 50 80
+oleta 120 juoksupeli tarkastelu: alku
+ui juoksupeli tarkastelu kamera 245.3 2.5 -111.7 -96 40 20
+odota 3
+kuva j3-juova-zoom-20
+ui juoksupeli tarkastelu kamera 245.3 2.5 -111.7 -96 40 10
+odota 3
+kuva j3-juova-zoom-10
+ui juoksupeli ajajapito 0
+ui juoksupeli pois
+odota 2
