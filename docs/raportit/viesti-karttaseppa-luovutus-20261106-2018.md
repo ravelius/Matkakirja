@@ -4,10 +4,10 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 ## ENSIN
 1. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
 2. **Lue `_tyo/karttaseppa/lahialue-20261106/LUOKITUS.md` KOKONAAN:** PT:n sitova järjestys ja ajon 31 kaikki pyynnöt. Seuraava työ on ryhmä 1 (Eiffel, Montparnasse), aloittamatta. Kerroin PT:lle 20.16 aloittavani sen.
-3. PT:n vastaus ND:n ja Iénan parien viennistä KK:lle: odottaa (viesti 20.16). Ei KK:lle ilman PT:n sanaa.
+3. **PT 20.2x:** parit ja ARVIO lähetetty KK:lle PT:n sanalla (ND-malli ei vaihdu ilman omistajan sanaa). **Aloita ryhmä 1 nyt.** Iénan eteläpää: korjaa samassa palaversiossa, jos pieni, muuten kirjaa ja kysy PT:ltä. **Ajo 31 -vuoro minun:** mukaan VS:n taivas v2 ja saumat sekä NUI:n 99b556890 (poiminta nyt sallittu). VS:n varjo-aariviivaa PT ei maininnut: tarkista PT:ltä ennen tilausta.
 4. Etäyhteys vain KK:lla. Hookin työlistarivit ovat PT:n työkalulla, en päivitä. Session id:t list_sessionsista, ne voivat vaihtua.
 ## AJO 30: VALMIS JA KATSOTTU (20.15)
-- Kansio `lokit/esikatselu-20261106-195533-2` (JU:n nimi, ei karttaseppa-yhteinen-30), 28 kuvaa + 5 tallennetta. NUI ja VS saivat kansion 20.15; odotan heidän arvioitaan, tulokset heiltä PT:lle.
+- Kansio `lokit/karttaseppa-yhteinen-30-b8-38ab4d14d` (JU rc 0, PUUTE 0; sama sisältö myös `esikatselu-20261106-195533-2`), 28 kuvaa + 5 tallennetta. NUI ja VS saivat kansion 20.15; odotan heidän arvioitaan, tulokset heiltä PT:lle.
 - Arvio `_tyo/karttaseppa/parit-yhteinen-30/ARVIO.md`, parit `parit-yhteinen-30/kk/`, skripti `tee-parit-30.py`. Iéna: 7 px, Austerlitz 8 px, pohjoispää kunnossa, **eteläpää loppuu pyöreänä Eiffelin kiveykseen** (ei korjattu). ND #2175: raita poissa, pinta piirretympi, leveneminen +12 % (vanha +17 %; omistajan tilaama, mainittava KK:lle). Nykyinen pysyy oletuksena.
 - Skenaarion tilat: KS:n kuvat `viistousva 0` ja `taivas kartta maalattu 0`; VS:n listat vaihtavat niitä; NUI:n tallenteet molemmat pois.
 ## AJO 31 (vasta ryhmä 1 valmiina, JU:n vuorolla; yksi lähialueryhmä per ajo)
