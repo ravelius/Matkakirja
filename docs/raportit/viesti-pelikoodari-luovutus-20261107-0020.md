@@ -61,3 +61,6 @@ KK katsoi kaikki 7 kuvaa: näyttää Lontoolta, ei lelumainen, koodipuut käyvä
 - Paikat: St Paul's 51.51378 -0.098322 akseli 6,9, x -85,4…71, z ±46,6; Tower Bridge 51.5055175 -0.0753695 akseli 67,3, SiirtoZ -0,7, x -157…163, z ±28,5. Big Ben SiirtoX -1,2, SiirtoZ -1,45, pyyhittävä alue ei muutu.
 - Yhdistä `pelikoodari/lontoo-b` (2fcf9008d, Lontoon paikat) ja Valosepän haara ennen seuraavaa ajoa: kumpikin on haarautunut 200433217:stä tai sen jälkeen.
 - **Tarkennus Valoseppä (ajo c1):** Tower Bridgen kohdalla näyttää olevan OSM-taloja (laiturit, tornien katto, raita kannen alla talon värisinä; päätelty kuvasta, way-tunnuksia ei haettu). Tarkista alue 51.5055175 -0.0753695, akseli 67,3, x -157…163, z ±28,5 ja poista ne St Paul'sin lisäksi. Valosepän kärki nyt `e031ce161`: yhdistä sen päälle. Kansio Valosepälle.
+
+## 11. Lisäys 00.5x: palat-d3 TEHTY
+`palat-d3` valmis (`a/siisti-d3.json`: d2 + St Paul's 2 ja Tower Bridge 9 OSM-taloa, `a/laatikko-talot.py`; akseli on idästä vastapäivään). Kansio lähetetty Valosepälle ja PT:lle, joten kohdan 10 ensimmäinen työ on tehty. Käytä jatkossa `siisti-d3.json`:ia. Laiturin kioski way/1475208014, Engine Rooms ja Tower Hotel jäivät, koska ovat vain osin laatikossa.
