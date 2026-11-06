@@ -37,3 +37,6 @@ Vienti vasta, kun tummat kolmiot, ohut viiva r--265:ssä ja kävely on katsottu.
 - Kaikki palat -glob poimii symlinkit, ja `cp` niiden läpi kirjoittaisi vientipakettiin. Tarkista -L.
 - Palan 1-2 leivonnassa katto ensin takaisin (muuri/yleinen/katto_takaisin.py).
 - Työkansion haara voi vaihtua alta: tarkista `git branch --show-current` ennen committia. Tämä tiedosto on vain haaralla lavastaja/luovutus-20261106-1305.
+
+## Lisäys 18.2x
+19/20 palaa valmiina 18.26. leivo_levyt3_1-2.zsh kaatui ensimmäisellä kerralla polkuun (Q, $L = leivonta-216); korjattu täydeksi poluksi, syötteet tarkistettu, JU ajaa 1-2:n ja 3c:n. Data ei muuttunut kaatumisessa.
