@@ -616,3 +616,22 @@ Omistaja 6.11.2026 klo 19.08 (KK): kovat varjot (ajo 28, 0ca5f68f6) "Kelpaavat (
 ## SAUMAT JA LAIKUT PURETTU (omistaja 19.57) (6.11.2026 klo 19.58)
 
 Omistaja 6.11.2026 klo 19.57 (KK): "Tämän voi purkaa : Linjauksesi mukaan pysähdyksissä: Pariisin saumat ja laikut." KK:n kapea tulkinta katsauksesta 19.48: 5.11. 16.41:n seis poistuu vain saumoilta ja laikuilta. Metsän heikennys jää ennalleen, 3D-rakennukset kärjessä, rakentaminen ensin, ei iPad-mittauksia; mäkien varjostukseen sana ei ota kantaa. Tavoite: Pariisin kartalla ei näy reunaa tai laikkua, jossa kartan pala selvästi vaihtuu toiseen. Kuvat etenemisestä KK:lle heti (13.24). Raamattu 2.215.
+
+## PARIISI VALMIS: RAJA HYVÄKSYTTY, KYMMENEN KOHTAA (omistaja, KK:n kortti) (6.11.2026 klo 20.29)
+
+KK:n kortti 6.11.2026 klo 20.27: "Kelpaako tämä lista Pariisin valmiin rajaksi: kymmenen kohtaa tehdään, palikat ja uudet kohteet jäävät pois?" = "Kelpaa (Suositus)".
+
+ENNEN KORTTIA PARIISI VALMIS: 1. Lähiympäristöt. 2. Kovat varjot (kevyempi muoto, Sacré-Cœurin varjo). 3. Taivas v2 pelikuvana, päätös omistajalle. 4. Usva: Louvren kulma, kaikki samaan usvaan. 5.
+Saumat ja laikut; metsä ennallaan, jos korjaus vaatii metsää, kysymys omistajalle. 6. Kevyt Notre-Dame arvioitavaksi (#2175), Riemukaaren korjaukset Codexilla. 7. Seine: litteät pois ja ohuet sillat
+kokeena, koko joki katsottava, Pont d'Iéna. 8. Kyltit ja nimet: välke ja nimien käytös liikkeessä. 9. Tärinä: iPad-ajo; jos origo auttaa, korjaus iso, päätös omistajalle. 10. Saapuminen ja pallo:
+intro, aloituslento, Liiku, pallon korjaukset Macilla ja erillään.
+
+LOPUKSI: kokeet yhteen, koko Pariisi kuvina, viat listana, kortti Pariisi valmis. Sen jälkeen ennen TF:ää iPad-testit ja muisti kerran (2.209), verkon palautus (2.209), kohdemaan lippu (4.42). TF:n
+jälkeen Lontoo.
+
+JÄÄ POIS: rakennuspalikat (iPad-mittaus odottaa, nykyiset talot pysyvät); uudet nähtävyydet (muiden mallien kevennys Codexilla ei estä valmista); metsän heikennys, Louvren iso pohja; koko kartan työt
+2.209:n mukaan (muut Euroopan korjaukset, maakuntarajat, mäet, elävä kartta, muiden kaupunkien lisäykset); juoksupeli (KK:n tulkinta: TF odottaa vain Pariisia, tila ja viat kerrotaan ennen
+TF-korttia).
+
+SEURAUS: aloituslennon uudet kuvat (13.46: Eiffel, Riemukaari, Sacré-Cœur, Notre-Dame, Louvre) eivät enää seiso 5.11. 16.41:n takia; NUI kytkee ne vuorollaan, kokeena. TF vasta, kun koko Pariisi on
+näytetty ja omistaja on vahvistanut kortilla "Pariisi valmis". Tavoite: pelaaja näkee yhden yhtenäisen Pariisin saapumisesta kartan rakennuksiin, ilman selviä vikoja, ja testiversio voi lähteä.
