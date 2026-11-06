@@ -1,5 +1,15 @@
 # Valosepän luovutus 6.11.2026 klo 07.02
 
+## LISÄYS 07.1x: TÄMÄ KUMOAA ALEMMAN, MISSÄ NE EROAVAT
+KK:n ja PT:n viestit tulivat luovutuksen jälkeen. Järjestys: 1) palautus (TEHTY) 2) sillat 3) Saint-Eustache ja Saint-Sulpice 4) Pompidou; ohessa nimien tiedot NUI:lle. Seuraavaa ei tarvitse kysyä. Kaikki seuraavaan yhteiseen ajoon JU:lla, EI omaa ajoa.
+TEHTY: kuusi siltaa takaisin 5d9a966c1 (natiivi-backup, testit 16/16; 18 siltaa). OMISTAJAN PÄÄTÖS 06.58 "Palautetaan", 11.8:n poikkeuksia, App Store -listalla. Ajamatta. Niiden pilarit ja kaaret ovat vanhoja arvioita; Pont des Arts ja Senghor ovat kevyen liikenteen siltoja.
+ÄLÄ aja `maa/pinta.py kirjoita`: se lisää kentät toiseen kertaan, ja Sullyn pohjoisvarren MaaB meni 31,1:stä 39,0:aan (palautin 31,1; kumpi on oikein, ei selvitetty). Uusien siltojen arvot ovat nyt tiedostossa.
+TASAINEN KARTTA: omistaja hyväksyi 06.58, EI vielä oletus. Vastuu KS, koe `karttaseppa/ajo-tasainen-talot` (0f138c5de); oletukseksi vasta, kun talot, nimet ja merkit ovat samassa maassa ja Sacré-Cœur on tarkistettu. KK: katso sillat ja kohteet tasaisella kartalla, älä hio kallistusta. PT: KYSY MAAN ARVOT KS:LTÄ ennen kuin lukitset siltojen tai Pompidoun korkeuksia. Käyttöönoton tila PT:ltä.
+SILLAT (KK, kp-con ja kp-roy): kivisilta. Suora, leveä pilari nousee vedestä ilman rakoa, kaari alkaa pilarin yläosasta, seinä on yhtä pintaa kannen reunaan asti, ei nauhaa piikkien päällä. Pää jatkuu kadusta ilman sivukiilaa. Viirujen ja pisteiden syy selväksi. Tuo pari oikea silta | peli (Pont Royal, Concorde), mittana oikeat pilarit ja kaaret. Koodi OhjelmaKohdeSillat.cs (KiviKaari), SiltaTumma; `git grep` omalla rivillä viirujen syylle.
+SAINT-EUSTACHE: kartan ruskea kuvio ei saa näkyä mallin alta; kerro KK:lle, mitä se on. SAINT-SULPICE: katon sininen lähemmäs tummaa liusketta ja portaiden rakeet pois, jos pieni. Hyväksyntä on omistajan; yövaltuus päättyi 06.43.
+AJOON UUDELLEEN ILMAN HELMAA (KK): pb-etu, pb-piha, Madeleine, Pont Neuf, Tour Saint-Jacques, Hôtel de Ville. Kokoa uusi lista `D/sk-maa5.txt`: vanhat kulmat listoista sk-palais, sk-madeleine, sk-maa ja sk-maa4; älä muuta listaa ajon aikana. Lisää Pompidou, jos se ehtii.
+UUSI TYÖ NUI + VS (PT): nimet kulkevat ohjelmakohteiden yli (Saint-Sulpice, Saint-Eustache, Madeleine, Palais Bourbon; lähtökohta 1af8879d6). Tavoite: nimi kokonaan tai ei ollenkaan, ei rakennuksen yli, sama väistö kuin malleilla. NUI vetää väistön, VS antaa kohteiden tiedot ja jalanjäljet (Lat, Lon, Akseli ja verkon rajat kohteittain; Natiivi-UI:n id osoitekirjasta). KK vie nimet PT:lle, älä ratkaise niitä yksin.
+
 Korvaa luovutuksen -0300 kohdat AJO ja SEURAAVAKSI. Muut pätevät: -0300 TEHTY: SAINT-SULPICE; -0235 KK 02.5x, SYY JA KORJAUS; -0221 SAINT-EUSTACHE; -0157 Pont Neuf ja AUKI AAMULLA; -0135 SUOJATARKISTUS; -0115 maa ja mittarit (paitsi helma). Syy: konteksti pehmeällä rajalla (Raamattu 7.37).
 
 ## TILA
