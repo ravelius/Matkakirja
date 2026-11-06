@@ -29,7 +29,7 @@ Katso koko kuvat ensin.
 - **Sillat, selvitetty koodista ja aineistosta, ei koodimuutosta, tulos KK:lla 17.2x:** Passerelle Simone de Beauvoir on datassa class=path, ja ElavaTyyli.cs:473 (k52, omistajan 06.51) jättää polut pois. Austerlitzin ratasilta on subclass=subway brunnel=bridge, ja rivi 472 (k52) jättää metroviivat pois; sen kansi class=bridge on alue, ja rivi 463 ohittaa kaikki transportation-alueet. Kumpikaan ei ole KeskustanSillat-listassa (18 riviä). Korjaus koskettaisi omistajan k52-linjausta: odota KK:n sanaa. Ehdotus: silta veden yllä ohuena viivana, vain Pariisin palat päätteellä.
 - **Codex, korjatut mallit:** ennallaan -1657:stä. Omistajan viat on viety kuittauksilla ac1ce57a0 ja 542155d12 (PT); seuraava versio tuontiporttiin, pari KK:lle.
 - **PT:** koti-haaran tiedostot, ajo 25:n vuoro.
-- **NUI:** kyltti-rivien sijainti lähetetty 17.1x (rivit 3316, 3318, 4374, 4376). Hoidettu.
+- **NUI, AJOON 26 (PT:n sanalla, kokeena, ei junaan):** ajo 25 oli jo käynnissä, kun pyyntö tuli, joten se ei ole siinä. Ennen ajoa 26 poimi Y:hen f0384fdbe (natiivi-backup natiivi-ui/kyltti-diag, kääntämättä, suoraan 10c8060de:n päällä) ja liitä skenaarion alkuun alustusten jälkeen `_tyo/karttaseppa/lisa-kyltit-nui-2.txt` (korvaa lisa-kyltit-nui.txt:n). Älä poimi ajon 25 aikana. Ajon jälkeen lokin polku ja kyltti-rivien numerot NUI:lle (local_a3754ed8-f155-43b5-9095-b51e9e29ff53); käännösvirhe heti NUI:lle, ei omaa korjausta. Ajo 26 voi olla sama kuin e23-koe.
 
 ## OPIT
 - Pelikuvan iso-kuvien mittakaava: aja-komennon kolmas luku ei skaalaudu suoraan (0,0006 ylhäältä noin 0,9 m/px, 0,0015 noin 0,68 m/px). Mittaa tunnetuista kohteista, älä oleta.
