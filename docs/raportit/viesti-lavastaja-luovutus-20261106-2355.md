@@ -5,10 +5,9 @@ A = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot. Loki: muuri/
 ## Yön sääntö (omistaja 23.07)
 Vika, joka ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa pois tai edellinen toimiva tilalle, rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön.
 
-## TEE ENSIN: JU:n ajo 7z (päivitetty 7.11. 00.02)
-7p ja 7k tehty, pari kuvat-pari-levyt7k on PT:llä. JU kuittaa tälle sessiolle: A/aja-levyt7z.zsh, kuvat A/kuvat-levyt7z (j3-juova-zoom-20, -10): juovan yritys 2, sama 5 asteen kulma, kapea kuvakulma. Jos kivi ja saumat erottuvat, syy on pikselikoko ja kulma; jos eivät, kulma-mip kumoutuu. Katso täysikoossa ja lähetä rivi PT:lle. Tämä oli viimeinen yritys: jos ei ratkea, se sanotaan PT:lle eikä jatketa.
+## Juova: yritys 2 tehty (7z), rivi PT:lle lähetetty: kiven oma väri + 5 asteen kulma, ei korjausta. Ei enempää yrityksiä yöllä.
 
-## Myös JU:lla: ajo 7m (PT 7.11.)
+## TEE ENSIN, JU:lla: ajo 7m (PT 7.11.)
 A/aja-levyt7m.zsh, kuvat A/kuvat-levyt7m. Arvioi pystysaumat täysikoossa: näyttävätkö oikeilta pelin korkeudelta, kun ne ovat tasavälein ja voimakkaat? Kohta 1-4 on nyt kuvattu oikein; kohta 1-1 ei näy mistään (mittaa29). Koko muuria ei saa sanoa korjatuksi ennen tätä. Rivi PT:lle. PT kuittasi 7p|7k:n kokeena. Laikku ja leivonta KK:n aamuun.
 
 ## Tila
