@@ -528,3 +528,7 @@ Omistaja 6.11.2026 klo 15.55 (KK): kortti "Viedäänkö Notre-Damen ja Riemukaar
 ## PEUKALORENKAAT EIVÄT VIELÄ KELPAA (6.11.2026 klo 16.00)
 
 Omistaja 6.11.2026 klo 15.58 (KK): kortti "Kelpaavatko peukalorenkaat?" (PK 76840f429) = "Ei vielä"; syy ei vielä tiedossa, KK kysyi omistajalta. PK: ei lisäajoa eikä muutoksia ennen hänen sanojaan.
+
+## PEUKALORENKAAT LUONNOKSEN SUUNTAAN (omistaja 16.05) (6.11.2026 klo 16.05)
+
+Omistajan kortti KK:n kautta klo 16.05: "Tehdäänkö peukalorenkaat tämän luonnoksen suuntaan?" = "Tähän suuntaan (Suositus)". Kumoaa 15.58:n "ei vielä". Toteuttaa Pelikoodari; luonnos KK:n kansiossa scratchpad/keskustelukanava/kuvat/renkaat-luonnos-20261106/.
