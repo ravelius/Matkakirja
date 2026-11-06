@@ -747,3 +747,7 @@ KK 7.11.2026 klo 00.25 omistajan valtuutuksella, kokeena, ei junaan: Lontoo D1 k
 ## KK:N PAATOS VALTUUTUKSELLA: BIG BEN OIKEASSA KOOSSA (7.11.2026 klo 00.45)
 
 KK klo 00.45 omistajan valtuutuksella, kokeena, ei junaan: Big Ben oikeassa koossa, ei liioittelua. Muoto ja katto erottuvat. Ajoon c2 lisäksi koko ruudun kuva lähimmältä etäisyydeltä; KK odottaa c2:n kolme paria palat-d3:n jälkeen.
+
+## KK:N PAATOS VALTUUTUKSELLA: PALAT V18 KELPAAVAT KOKEENA (7.11.2026 klo 00.59)
+
+KK klo 00.58 omistajan valtuutuksella, kokeena, ei junaan: palat v18 kelpaavat (ajo 39; kojut poissa Invalideilta ja Opéralta, Grand Palais v13 | v17 katsottu).
