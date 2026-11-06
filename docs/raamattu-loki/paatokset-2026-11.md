@@ -520,3 +520,7 @@ Omistaja KK:lle: "saat hyväksyä puolestani kaiken, olen kuvaamassa". Rajat KK:
 ## VALTUUS KK:LLE PÄÄTTYI (6.11.2026 klo 15.51)
 
 Omistaja 6.11.2026 klo 15.51 (KK): kortti "Jatkuuko valtuus hyväksyä puolestasi?" = "Päättyy nyt (Suositus)". Klo 14.29:n valtuus päättyi; roolien kuvat ja mallit taas omistajan korteilla KK:n kautta. Valtuudella tehdyt hyväksynnät: scratchpad/keskustelukanava/paiva-hyvaksynnat-20261106.md.
+
+## KEVYIDEN MALLIEN VIAT CODEXILLE (6.11.2026 klo 15.57)
+
+Omistaja 6.11.2026 klo 15.55 (KK): kortti "Viedäänkö Notre-Damen ja Riemukaaren viat Codexille?" = "Viedään (Suositus)". Nykyiset mallit pysyvät, koe ei junaan. Viat: scratchpad/keskustelukanava/kevyet-mallit-viat-20261106.md; kuittaus 2 ja korjauspyyntö postilaatikkohaarassa.
