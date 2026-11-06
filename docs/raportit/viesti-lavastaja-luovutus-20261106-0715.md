@@ -6,7 +6,7 @@ Pohja: -0218 (git show 561e3b313:docs/raportit/viesti-lavastaja-luovutus-2026110
 Koodi 35140432d hakee juuresta rakennukset-v118, c2-v34, muurikate-v37 ja kulmatorni-v1c. lattia25-juurissa on v126 ja c2-v40, joten kuvat-koe...kuvat-c tehtiin ilman näitä. PT:n sääntö: koejuuri-ajon yhteenvetoon rivi "404: N tiedostoa" ENNEN kuvien katsomista (aja-aukot4.zsh tulostaa sen). Lista 80 ajosta: A/lokit-404-lista.txt; PT sanoi, ettei selvitystä tarvita enempää.
 
 ## Tila
-`koejuuri-aukot4` = lattia25 + 33 täytettä (suunnitelma4.json) + paketit T7:n arkistosta (rakenna3.py). Ajo kuvat-d, L1, 35140432d, 5 kuvaa, katsottu 2000 px:n koossa, ei täysikokoisina. 404: 5 tiedostoa (A/kuvat-d/404.txt ei synny vanhasta ajosta, lista KORJAUS.md:ssä), rakennukset, katteet ja tornit latautuivat.
+`koejuuri-aukot4` = lattia25 + 33 täytettä (suunnitelma4.json) + paketit T7:n arkistosta (rakenna3.py). Ajo kuvat-d, L1, 35140432d, 5 kuvaa, katsottu 2000 px:n koossa, ei täysikokoisina. 404: 5 tiedostoa (A/kuvat-d/404.txt), rakennukset, katteet ja tornit latautuivat.
 - (325,1; 564,0): matala on oikein, jalusta peittää, pihaa ei näy. PT hyväksyi matalan kuvaan asti; tulos kerrottu PT:lle. Jää: harmaa sumea kaista muurin takana ja oikealla, punainen pystyviiva täytteen oikeassa päässä.
 - (-251,8; -126,9): punainen kaista EI ole täyte vaan lattia25:n oma V4_red, pala 1-1, x -260...-238, y 4,0-5,21, z noin -124,3, 2,5 m täytteen edessä. Täytteen yläpää on nyt 4,43. Kaistan kolmioita ei ole tutkittu. Täytteen omaa friisiä ei ole kuvasta arvioitu: kuvasta aiemmin luettu "friisi jatkuu" on todistamatta.
 - (-155,6; 283,2): näyttää väärältä: friisi ohut, kahtena rivinä, keskellä seinää, punaista 0,75 m sen yläpuolella. Yläpään lasku avaisi arvion mukaan raon räystään alle: ei tehty.
