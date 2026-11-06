@@ -34,7 +34,7 @@ Lukulista: luku 2 kohdat 2.0, 2.1–2.27, 2.59–2.71 ja 2.177:n alku, luku 4 ko
 - **Junaan `ae161fdb6`:** haara `pelikoodari/renkaat-juna-219` rungon `d092f48cc` päällä, worktree `/Users/Shared/Claude/wt/proto-pelikoodari-renkaat-juna`, ei pushattu. Yhdistää seitsemän committia; `Peukalokohta.cs` ja `ohjainopetus.uss` samat kuin nähdyssä `36aa43ed3`:ssa, `JuoksupeliNakyma.cs`:n loput eroavat rungon takia. `unity-tarkistus` (sh) 0 virhettä, pohjavahti ja tyylikirja-tarkistus ok. Ei omaa peliajoa tästä SHA:sta. SHA PT:llä 17.2x.
 - **Web:** kohta 2.4 tehty, PR https://github.com/ravelius/Matkakirja/pull/6368 (`384b57e74`), odottaa CI:tä ja yhdistämistä. Proton tyylikirjakopio jätettiin generoimatta, koska rungosta puuttuu myös karttapaletti v2; seuraava generointi tuo sen.
 - **`unity-tarkistus.sh` ajetaan sh:lla:** zsh-ajo antaa väärän "0 virhettä", jos vanhat DLL:t ovat paikalla. Aiemmat zsh-ajot eivät siis todista kääntymistä; peliajot ovat toimineet.
-- **PT kuittasi `ae161fdb6`:n junaan 219; JU yhdistää.** `unity-tarkistus` korjattu `a458e4e5c` (saman haaran kärki), SHA PT:llä. Sama aukko `Linssit-testit/unity-tarkistus.sh:71`: odottaa PT:n sanaa.
+- **PT kuittasi `ae161fdb6`:n junaan 219; JU yhdistää.** `unity-tarkistus` korjattu `a458e4e5c` (Peli-testit) ja `603d4213a` (Linssit-testit, haaran kärki): eivät kuulu renkaiden kuittaukseen, JU poimii erikseen (viesti lähetetty). Aja sh:lla: zsh-ajo epäonnistuu nyt näkyvästi.
 - **KESKEN: PR 6368:** PT käski yhdistää itse vihreänä, punaisena rivi PT:lle. `testit` oli 17.2x kesken. Katso tila `get_status`:lla seuraavalla vuorolla.
 - **Taso 1 on taas pääasia.** Auki: seuraavan juoksupelin ajon mukana kohta 2.3, kartta odottaa LAV:n sanaa.
 
