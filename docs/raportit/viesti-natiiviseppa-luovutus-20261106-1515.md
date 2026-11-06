@@ -4,6 +4,9 @@ Korvaa -1440:n Tila- ja SEURAAVA TYÖ -kohdat. -1440:n "Kerrottu, ei NS:n työt�
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Remote Controlia en kytkenyt tässä sessiossa, koska työkalu vaatii omistajan pyynnön.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, V = P/valmis-jalki2. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, peili natiivi-backup.
 
+## LISÄYS 15.1x (korvaa SEURAAVA TYÖ:n kohdan 1)
+Mac-11b katsottu, koestus kelpaa, sarakkeet täsmäävät. Mitattu Macilla: kameran |p| 6 366 210 m, eli origo on maan keskipisteessä ja float-askel 0,5 m kahdella akselilla. r4:n kameran nykäys p95 0,50 m float | 0,05 m lasku. Heitto 1 800 m:n pisteelle y p95 0,17 px ruudulla 640×480; iPadilla ei mitattu. PT:llä ja KK:lla, mukana tieto laitteelle jäävistä kansioista. iPad 4 2bfb126b0 pyydetty JU:lta iPad 3b:n jälkeen, lokit natiiviseppa-tarina-ipad4-2bfb126b0. Vetojen nimet korjattu: veto-sivu (liike pohjoiseen, molemmat karkeat akselit) ja veto-eteen (liike itään), koska kamera katsoo itään. Mac-11b:n csv:issä nimet ovat vielä veto-ita-2 (sivu) ja veto-poh-2 (eteen).
+
 ## Tila
 - Haara natiiviseppa/palikka-koe 2bfb126b0 (peilissä), työpuu puhdas. Mittari: 4d81046e3 + eräajokorjaus 2bfb126b0. Tyyppitarkistus 0 virhettä (V/tyyppitarkistus.zsh tarkistaa V:n kopion PalikkaKerros.cs:stä; se on nyt sama kuin työpuussa).
 - Komennot: palikat jalki <nimi> <s> (piirretty kamera piirron alussa: paikka, kierto, näkymämatriisi, katsepiste, renderScale, varjo, kutsut, kolmiot), palikat ero <nimi> <s> (kuvaero 1024×768 ruudun keskeltä), palikat sarja <nimi> <s> (sama + JPG:t Documents/palikkasarja-<nimi>), palikat varjot 0|1. Lukijat V/jalki2.py ja V/sarja.py, ajamatta oikealla datalla.
