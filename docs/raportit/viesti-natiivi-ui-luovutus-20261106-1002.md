@@ -45,3 +45,8 @@ Runko addae63f2 on b8:ssa. Kokeilin vain merge-tree:llä: alapiste-219 + runko =
 
 ## Yhä avoinna (-0915)
 Tuileries'n kuva Louvren kulmassa (KK kelpuutti kokeena); kyltti RANSKA-otsikon ja Liiku-napin alla ei kuvassa; aaripisteet 38 × kärkimäärä ja KS:n Sovita/Lisays-kysymys katsomatta; Metroasema haalea sc-80:ssä tutkimatta. Mittarin viat: ei nyt. Sivuvaikutus f473d4d86: pyöreä kuva häipyy rajalla 0,5 (myös kyltittömällä), ei tarkistettu erikseen.
+
+## LISÄYS 10.0x: PT:n sana
+PT: suositus hyväksytty, kierrettä ei korjata ennen Karsin keston mittausta. Lontoo ja Jyväskylä KS:n seuraavaan yhteiseen ajoon, enintään 2 kuvaa perustellen, ei omaa ajoa. 37907cb54 samaan ajoon, ei junaan.
+Uusi kärki 1b6525afe (alapiste-219, peili): karsinnan lokirivillä "kesto X ms" ilman mittauksen osuutta. Testit 662/662, unity-tarkistus 0 virhettä, ajamatta. KS:lle kerrottu kärki ja kaupungit.
+Seuraavasta ajosta: grep karsinta: kesto mediaani ja suurin, ero km, usvan edessä Lontoossa ja Jyväskylässä, "nimet etsi" kahdesti samalta kameralta, nd-raja hintakyltti. Sitten päätös kierteestä PT:lle.
