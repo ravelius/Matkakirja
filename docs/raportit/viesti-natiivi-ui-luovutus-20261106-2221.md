@@ -56,3 +56,20 @@ c (sama testireitti kuin 356eb0101): 5/5, 233 ms, kartta täynnä. Testireitti e
 SYY MITATTU: ajossa 356eb0101 kaksi kartan pientä kuvaa (pantheon ja notre-dame @54x54) varasivat kuvajonon molemmat paikat 9,16 s:ksi, ja Eiffel ja Riemukaari odottivat niiden takana 8,43 s. c:ssä yksikään lataus ei kestänyt yli 2 s (paitsi alun tripoli). Miksi lataus jumitti 9,16 s, ei mitattu. Vika 1 ajossa 6:sta. Tyhjän pohjan syytä ajossa 356eb0101 ei mitattu.
 PT:lle kerrottu, ehdotus odottaa sanaa: trailerin kuville oma paikka kuvajonossa (Kuvat.Vuoro), ettei pieni kuva tuki niitä. Korjaus vain PT:n sanalla, kokeena; todennus vaatii keinotekoisen jumin, koska vika ei toistu itsestään. Havainnekuva-korjaus (kohta 2) tehdään samalla.
 Laskeutuessa ja perille tullessa d z3:ssa näkyy tasoraja sumean ja tarkemman välillä oikealla alhaalla; kuuluu kartan puolelle, kerrottu PT:lle.
+
+## PÄIVITYS 2 (uusin): KORVAA EDELLISEN "ehdotus odottaa sanaa". LUE TÄMÄ ENSIN.
+PT antoi sanan. Korjaus tehty kokeena, ei junaan: haara natiivi-ui/aloituslento-mittaus-219, proto-repo, 51f9fad72 (Kuvat.HaeKiireella, Saapumistraileri, `ui kuvajumi`, Pulu.uss). Tulokset: tulos-nui.md, viimeinen luku; PT:lle kerrottu.
+Todennettu: jumi 12 s ilman korjausta vika toistuu (0/5), korjauksella 5/5 ennen vuoroa (lokit/nui-aloitus-jumi-vertailu, -korjaus).
+
+SEURAAVA TEHTÄVÄ, kun JU kuittaa lokit/nui-aloitus-kk-2 (51f9fad72):
+1. Katso täysikoossa k12-riemukaari-iso ja k13-louvre-iso: Havainnekuva-merkintä vaalealla paperilla, tumma teksti, keskellä kuvan alla, luettava. Ensimmäinen versio oli tumma tumman päällä. Jos ei kelpaa: korjaa Pulu.uss (.mk-nosto__lahde.mk-traileri__lahde), uusi ajo.
+2. Katso k01-k11: viisi kuvaa järjestyksessä Eiffel, Riemukaari, Sacré-Cœur, Notre-Dame, Louvre.
+3. PT:n käsky: "kuvat lentoalkuineen KK:lle (omistajalle luvattu korjattu intro), sha minulle". Lähetä KK:lle (local_37f7c945-e1a0-4638-90b8-93c389a36fbe) lokikansio ja lyhyt kuvaus; PT:lle 51f9fad72 3 rivinä. Älä leikkaa tunnettua vikaa: kerro KK:lle samassa viestissä k01:n suorakaiteet ja laskeutumisen sumea kartta (k05) sekä se, ettei laitteella ole mitattu.
+
+AUKI, kirjattu PT:lle:
+- Tyhjän pohjan ja vinon reunan syy ajossa 356eb0101 ei ole mitattu; ei toistunut 9 muussa ajossa. Rivit "mittaus lento" kertovat kartan valmiuden ensimmäiseen kuvaan asti.
+- k01 (lennon alku, 2 s): pallolla isot tasaiset vaaleat suorakaiteet Euroopan ja Afrikan päällä; syy mittaamatta, kartan puolta. Ei ole sinun korjattavasi ilman PT:n sanaa.
+- Jumin 9,16 s:n syy ei tiedossa (kaksi @54x54-kuvaa ajossa 356eb0101). Pääsäie seisoi 5,8 s ajossa jumi-korjaus, ei toistunut ajossa kk.
+- Oikea laite ja kylmä kartan levyvälimuisti: ei mitattu.
+Testikomento `ui kuvajumi` ja mittausrivit on poistettava, jos korjaus viedään junaan; poiminta vain PT:n sanalla.
+Kyltit: KS ajaa listan -34 ajossa 34 ja kertoo lokikansion; kohta 3 pätee. Ajon arvio tehdään kyltit33.py:llä (lokit/nui-tahtikyltit-20261106/).
