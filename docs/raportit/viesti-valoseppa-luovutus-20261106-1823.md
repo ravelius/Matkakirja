@@ -54,3 +54,7 @@ Kovat varjot menevät ajoon 28, koska ajo 27 on käynnissä. Y on edennyt 162912
 ## PT:N EHDOT KOVILLE VARJOILLE
 PT 18.0x: koe kelpaa. Ennen junaa arvio yksinkertaistetusta ääriviivasta (PT hyväksyi suunnitelman; Eiffelin aukkojen menetys mainittava; kolmiomäärä laskematta) ja mitattu luku iPadilla, koska muisti on Pariisin avoin riski. Hinta kerrotaan KK:lle kuvien yhteydessä. PT: ei uutta luovutusta ennen 35 %:a.
 Kovat varjot ajossa 28: KS yhdistää 0ca5f68f6:n mergellä Y:hen (162912f91 tai uudempi).
+
+## LISÄYS: AJO 28 VALMIS, KUVAT KATSOMATTA
+KS: `/Users/Shared/Claude/proto-3d/lokit/karttaseppa-yhteinen-28-b8-33ea85e3b`, Y 33ea85e3b (sisältää 0ca5f68f6), 23 kuvaa kv-*. Shader error 0. Kumpikaan ei ole vielä arvioinut kuvia. Tee "AJON JÄLKEEN" -kohdan 2–3 kohdan 0 rinnalla: tähän ei tarvita uutta ajoa.
+Maavarjot lokista (kolmioita): Notre-Dame 9857, Sainte-Chapelle 15167, Louvre 24028, Eiffel 48528, Grand Palais 27048, Riemukaari 17564, Panthéon 22007, Opéra 25569, Invalidit 24552, Sacré-Cœur 20740, Montparnasse 1594. Tyhjä nimi =11834 on Sacré-Cœurin mäki (Nimi = ""), ei vika.
