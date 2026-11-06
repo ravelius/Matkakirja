@@ -1,0 +1,298 @@
+{
+  "task": 2172,
+  "type": "static-building",
+  "status": "LOCAL_V3_QA_PASS_PENDING_GAME_COMPARISON",
+  "bytes": 2060064,
+  "sha256": "f2f7384309d606cb15c0bc9d00d4e4b0eca10d78ff8cd6f54abb62cee0e5cfd3",
+  "triangles": 916,
+  "vertices": 2748,
+  "materials": 1,
+  "dimensions": [
+    188.0,
+    180.3017578125,
+    101.09171295166016
+  ],
+  "boundsMin": [
+    -94.0,
+    0.0,
+    -50.54585647583008
+  ],
+  "boundsMax": [
+    94.0,
+    180.3017578125,
+    50.54585647583008
+  ],
+  "degenerateTriangles": 0,
+  "finiteAttributes": true,
+  "validIndices": true,
+  "opaqueMaterials": true,
+  "textures": [
+    {
+      "name": "albedo-2048",
+      "mimeType": "image/jpeg",
+      "size": [
+        2048,
+        2048
+      ],
+      "embeddedBytes": 853958
+    },
+    {
+      "name": "normal-1024",
+      "mimeType": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "embeddedBytes": 1105440,
+      "normalLengthMinMaxMean": [
+        0.9942162614970368,
+        1.0062702306084796,
+        1.0001503797701352
+      ]
+    }
+  ],
+  "lowCrossingRaysPassed": 43,
+  "lowCrossingRaysTotal": 43,
+  "missingSpandrelRegression": [
+    {
+      "from": [
+        0,
+        80,
+        0
+      ],
+      "to": [
+        -80,
+        80,
+        0
+      ],
+      "v2Hits": 0,
+      "v3Hits": 2,
+      "expectation": "solid wall above curved side vault; fixes rectangular see-through to remote facade"
+    },
+    {
+      "from": [
+        0,
+        80,
+        0
+      ],
+      "to": [
+        80,
+        80,
+        0
+      ],
+      "v2Hits": 0,
+      "v3Hits": 2,
+      "expectation": "solid wall above curved side vault; fixes rectangular see-through to remote facade"
+    }
+  ],
+  "cameraDependentOpeningComparison": [
+    {
+      "yaw": 0,
+      "height": 35.0,
+      "originalClearWidth": 48.666666666666664,
+      "v2ClearWidth": 44.0,
+      "v3ClearWidth": 48.666666666666664,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 0,
+      "height": 75.0,
+      "originalClearWidth": 48.333333333333336,
+      "v2ClearWidth": 44.0,
+      "v3ClearWidth": 48.666666666666664,
+      "v3MinusOriginal": 0.3333333333333286
+    },
+    {
+      "yaw": 0,
+      "height": 95.0,
+      "originalClearWidth": 43.0,
+      "v2ClearWidth": 38.0,
+      "v3ClearWidth": 44.0,
+      "v3MinusOriginal": 1.0
+    },
+    {
+      "yaw": 10,
+      "height": 35.0,
+      "originalClearWidth": 34.333333333333336,
+      "v2ClearWidth": 28.666666666666668,
+      "v3ClearWidth": 34.666666666666664,
+      "v3MinusOriginal": 0.3333333333333286
+    },
+    {
+      "yaw": 10,
+      "height": 75.0,
+      "originalClearWidth": 34.333333333333336,
+      "v2ClearWidth": 28.666666666666668,
+      "v3ClearWidth": 34.666666666666664,
+      "v3MinusOriginal": 0.3333333333333286
+    },
+    {
+      "yaw": 10,
+      "height": 95.0,
+      "originalClearWidth": 29.0,
+      "v2ClearWidth": 22.666666666666668,
+      "v3ClearWidth": 29.333333333333332,
+      "v3MinusOriginal": 0.33333333333333215
+    },
+    {
+      "yaw": 20,
+      "height": 35.0,
+      "originalClearWidth": 19.0,
+      "v2ClearWidth": 12.0,
+      "v3ClearWidth": 19.333333333333332,
+      "v3MinusOriginal": 0.33333333333333215
+    },
+    {
+      "yaw": 20,
+      "height": 75.0,
+      "originalClearWidth": 19.0,
+      "v2ClearWidth": 12.0,
+      "v3ClearWidth": 19.333333333333332,
+      "v3MinusOriginal": 0.33333333333333215
+    },
+    {
+      "yaw": 20,
+      "height": 95.0,
+      "originalClearWidth": 13.666666666666666,
+      "v2ClearWidth": 6.666666666666667,
+      "v3ClearWidth": 14.0,
+      "v3MinusOriginal": 0.3333333333333339
+    },
+    {
+      "yaw": 25,
+      "height": 35.0,
+      "originalClearWidth": 11.0,
+      "v2ClearWidth": 4.0,
+      "v3ClearWidth": 11.333333333333334,
+      "v3MinusOriginal": 0.3333333333333339
+    },
+    {
+      "yaw": 25,
+      "height": 75.0,
+      "originalClearWidth": 11.0,
+      "v2ClearWidth": 4.0,
+      "v3ClearWidth": 11.333333333333334,
+      "v3MinusOriginal": 0.3333333333333339
+    },
+    {
+      "yaw": 25,
+      "height": 95.0,
+      "originalClearWidth": 6.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 6.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 35,
+      "height": 35.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 35,
+      "height": 75.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 35,
+      "height": 95.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 45,
+      "height": 35.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 45,
+      "height": 75.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 45,
+      "height": 95.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 90,
+      "height": 35.0,
+      "originalClearWidth": 30.0,
+      "v2ClearWidth": 30.0,
+      "v3ClearWidth": 30.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 90,
+      "height": 75.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 90,
+      "height": 95.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    }
+  ],
+  "visibleCoplanarOverlapRisk": [
+    {
+      "yaw": 20,
+      "pitch": 90,
+      "v2VisibleCoplanarPixels": 2390,
+      "v3VisibleCoplanarPixels": 0
+    },
+    {
+      "yaw": 20,
+      "pitch": 45,
+      "v2VisibleCoplanarPixels": 1872,
+      "v3VisibleCoplanarPixels": 0
+    },
+    {
+      "yaw": 20,
+      "pitch": 5,
+      "v2VisibleCoplanarPixels": 1328,
+      "v3VisibleCoplanarPixels": 0
+    }
+  ],
+  "method": "Full all-triangle opaque projected coverage, three horizontal slices; no texture/background-color classification. 3 pixels per model unit. Independent segment intersections for inner-spandrel regression.",
+  "preview": "Local one-thread CPU triangle z-buffer, final embedded albedo and geometry normals. Engine light/tone map/shadows/tangent normal and mip behaviour not simulated.",
+  "visualReview": {
+    "status": "PASS_LOCAL_FINAL_GLB_CPU_PREVIEWS_REVIEWED",
+    "files": [
+      "preview-ylhaalta.jpg",
+      "preview-45.jpg",
+      "preview-5.jpg",
+      "preview-5-taka.jpg",
+      "vertailu-alkuperainen-v2-v3.jpg",
+      "vertailu-holvi-25-5.jpg"
+    ],
+    "findings": [
+      "Real curved, darker deep intrados; continuous sky visible through large arch.",
+      "Rectangular far-facade exposure removed by actual spandrel geometry.",
+      "No roof grid, visible coplanar depth collisions or isolated pale wall stripe in CPU images.",
+      "Original-game aperture widths matched across oblique viewpoints."
+    ],
+    "limit": "Target-engine test and owner acceptance remain open."
+  }
+}

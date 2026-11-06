@@ -1,0 +1,251 @@
+{
+  "task": 2172,
+  "baseline": "v2 #2169",
+  "output": "riemukaari-lod-v3-2172.glb",
+  "sourceSHA256": "99a3d4eefe0e1ee2699f9560e6347bc061a72c1f3b0d3bbcad33e2a499cd4db0",
+  "outputSHA256": "f2f7384309d606cb15c0bc9d00d4e4b0eca10d78ff8cd6f54abb62cee0e5cfd3",
+  "shape": {
+    "largeArchWidth": [
+      44,
+      49
+    ],
+    "largeArchSpring": [
+      84,
+      84
+    ],
+    "largeArchCrown": [
+      106,
+      108.5
+    ],
+    "mainBodyDepth": [
+      85,
+      79
+    ],
+    "sideArchWidth": [
+      30,
+      30
+    ],
+    "sideArchCrown": [
+      72.5,
+      72.5
+    ],
+    "overallDimensionsUnchanged": true,
+    "missingInnerSpandrel": "added actual curved wall above side-vault ceiling; closes rectangular void exposing remote small-arch facade",
+    "cornices": "replaced four overlapping boxes per course with continuous rectangular ring, no overlapping ring corners",
+    "archCrownFills": "removed overlapping fill boxes; arch rings extend to attic directly",
+    "roofParapet": "continuous ring replaces four overlapping beams"
+  },
+  "surface": {
+    "interior": "joint-free pale warm stone, smooth height/depth darkening toward curved ceiling, non-constant UV",
+    "facades": "v2 approved artwork retained with 4px edge-color extrusion against sampling slivers; sculpture contrast retained",
+    "roof": "grid-free pale warm stone retained; parapet and pavilion avoid interior gradient UV patch"
+  },
+  "triangles": [
+    1128,
+    916
+  ],
+  "vertices": [
+    3384,
+    2748
+  ],
+  "bytes": [
+    2092292,
+    2060064
+  ],
+  "openingWidthComparison": [
+    {
+      "yaw": 0,
+      "height": 35.0,
+      "originalClearWidth": 48.666666666666664,
+      "v2ClearWidth": 44.0,
+      "v3ClearWidth": 48.666666666666664,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 0,
+      "height": 75.0,
+      "originalClearWidth": 48.333333333333336,
+      "v2ClearWidth": 44.0,
+      "v3ClearWidth": 48.666666666666664,
+      "v3MinusOriginal": 0.3333333333333286
+    },
+    {
+      "yaw": 0,
+      "height": 95.0,
+      "originalClearWidth": 43.0,
+      "v2ClearWidth": 38.0,
+      "v3ClearWidth": 44.0,
+      "v3MinusOriginal": 1.0
+    },
+    {
+      "yaw": 10,
+      "height": 35.0,
+      "originalClearWidth": 34.333333333333336,
+      "v2ClearWidth": 28.666666666666668,
+      "v3ClearWidth": 34.666666666666664,
+      "v3MinusOriginal": 0.3333333333333286
+    },
+    {
+      "yaw": 10,
+      "height": 75.0,
+      "originalClearWidth": 34.333333333333336,
+      "v2ClearWidth": 28.666666666666668,
+      "v3ClearWidth": 34.666666666666664,
+      "v3MinusOriginal": 0.3333333333333286
+    },
+    {
+      "yaw": 10,
+      "height": 95.0,
+      "originalClearWidth": 29.0,
+      "v2ClearWidth": 22.666666666666668,
+      "v3ClearWidth": 29.333333333333332,
+      "v3MinusOriginal": 0.33333333333333215
+    },
+    {
+      "yaw": 20,
+      "height": 35.0,
+      "originalClearWidth": 19.0,
+      "v2ClearWidth": 12.0,
+      "v3ClearWidth": 19.333333333333332,
+      "v3MinusOriginal": 0.33333333333333215
+    },
+    {
+      "yaw": 20,
+      "height": 75.0,
+      "originalClearWidth": 19.0,
+      "v2ClearWidth": 12.0,
+      "v3ClearWidth": 19.333333333333332,
+      "v3MinusOriginal": 0.33333333333333215
+    },
+    {
+      "yaw": 20,
+      "height": 95.0,
+      "originalClearWidth": 13.666666666666666,
+      "v2ClearWidth": 6.666666666666667,
+      "v3ClearWidth": 14.0,
+      "v3MinusOriginal": 0.3333333333333339
+    },
+    {
+      "yaw": 25,
+      "height": 35.0,
+      "originalClearWidth": 11.0,
+      "v2ClearWidth": 4.0,
+      "v3ClearWidth": 11.333333333333334,
+      "v3MinusOriginal": 0.3333333333333339
+    },
+    {
+      "yaw": 25,
+      "height": 75.0,
+      "originalClearWidth": 11.0,
+      "v2ClearWidth": 4.0,
+      "v3ClearWidth": 11.333333333333334,
+      "v3MinusOriginal": 0.3333333333333339
+    },
+    {
+      "yaw": 25,
+      "height": 95.0,
+      "originalClearWidth": 6.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 6.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 35,
+      "height": 35.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 35,
+      "height": 75.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 35,
+      "height": 95.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 45,
+      "height": 35.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 45,
+      "height": 75.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 45,
+      "height": 95.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 90,
+      "height": 35.0,
+      "originalClearWidth": 30.0,
+      "v2ClearWidth": 30.0,
+      "v3ClearWidth": 30.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 90,
+      "height": 75.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    },
+    {
+      "yaw": 90,
+      "height": 95.0,
+      "originalClearWidth": 0.0,
+      "v2ClearWidth": 0.0,
+      "v3ClearWidth": 0.0,
+      "v3MinusOriginal": 0.0
+    }
+  ],
+  "coplanarOverlapRisk": [
+    {
+      "yaw": 20,
+      "pitch": 90,
+      "v2VisibleCoplanarPixels": 2390,
+      "v3VisibleCoplanarPixels": 0
+    },
+    {
+      "yaw": 20,
+      "pitch": 45,
+      "v2VisibleCoplanarPixels": 1872,
+      "v3VisibleCoplanarPixels": 0
+    },
+    {
+      "yaw": 20,
+      "pitch": 5,
+      "v2VisibleCoplanarPixels": 1328,
+      "v3VisibleCoplanarPixels": 0
+    }
+  ],
+  "notClaimed": "Receiver engine comparison, owner acceptance, game integration, build, release.",
+  "horizontalPlanarUnion": {
+    "report": "horizontal-union.json",
+    "areaPreservedOnEveryPlane": true,
+    "reason": "Remove visible coplanar contact-cap overlaps, including roof pavilion and roof/body contacts."
+  }
+}

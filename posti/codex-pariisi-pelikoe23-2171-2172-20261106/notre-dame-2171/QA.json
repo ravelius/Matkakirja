@@ -1,0 +1,126 @@
+{
+  "sourceModels": [
+    "f1688e1636d92db0bcfa38e462daf10baa33e7080398546f742ce0c8ef3ac0fe",
+    "d727752ce39f5349776565240fd33748a52cfef1df63d480fd576e9a8ed7eaa0",
+    "6c2ae40768d5ce08dd4c744bd5f5ba3ddf57e97c861e808168964ae303655e3b"
+  ],
+  "triangles": [
+    19871,
+    3161,
+    4015
+  ],
+  "bytes": [
+    3902720,
+    2997960,
+    2350972
+  ],
+  "originalAndV3Bounds": [
+    [
+      [
+        -120.0,
+        0.0,
+        -140.0663299560547
+      ],
+      [
+        120.1204833984375,
+        620.0,
+        140.4324188232422
+      ]
+    ],
+    [
+      [
+        -120.0,
+        0.0,
+        -140.06631469726562
+      ],
+      [
+        120.0,
+        620.0,
+        139.0
+      ]
+    ]
+  ],
+  "eastTopView": {
+    "roi": "world z -142..40, x -121..121 (640px, orthographic top)",
+    "v2": {
+      "overlap": 0.7505917222101264,
+      "incorrectGround": 34883,
+      "excessRoof": 628
+    },
+    "v3": {
+      "overlap": 0.9849739623541962,
+      "incorrectGround": 1408,
+      "excessRoof": 733
+    }
+  },
+  "medianLuminanceVariationAlongLancetBeforeAfter": {
+    "front5": [
+      1709.9930081852826,
+      0.0
+    ],
+    "rear5": [
+      2078.6912819781396,
+      0.0
+    ]
+  },
+  "portalDepthsV2V3": [
+    [
+      [
+        116.0,
+        115.99999999999999,
+        116.0
+      ],
+      [
+        116.0,
+        115.99999999999999,
+        116.0
+      ]
+    ],
+    [
+      [
+        116.0,
+        115.99999999999999,
+        116.0
+      ],
+      [
+        116.0,
+        115.99999999999999,
+        116.0
+      ]
+    ]
+  ],
+  "primitives": [
+    {
+      "node": 0,
+      "primitive": 0,
+      "vertices": 7440,
+      "triangles": 4015,
+      "indicesValid": true,
+      "finiteUV": true,
+      "hasUV": true,
+      "material": 0,
+      "textured": true
+    }
+  ],
+  "textures": [
+    {
+      "sha256": "ec7eaaf6504c8ac8d6c443bbaf1205edafeb38ea0689c417d9efcaee97c1ab8c",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 1101958
+    },
+    {
+      "sha256": "5e7393b08bcde1b53e084b0d9dd9c8dd02d22ea5ca5738374ab290e8283e30c2",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mimeType": "image/png",
+      "bytes": 865903
+    }
+  ],
+  "scope": "Local mesh and CPU camera verification. Game palette, renderer and runtime acceptance are verified separately."
+}

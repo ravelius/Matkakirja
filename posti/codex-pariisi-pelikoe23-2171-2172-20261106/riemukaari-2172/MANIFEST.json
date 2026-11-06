@@ -1,0 +1,29 @@
+{
+  "task": 2172,
+  "type": "static-building",
+  "localQA": "PASS",
+  "nextStep": "Karttaseppä → KK → omistaja, samojen kuvakulmien pelikoe",
+  "coordinates": "Alkuperäisessä koordinaatistossa, +Y ylös",
+  "asset": "riemukaari-lod-v3-2172.glb",
+  "sha256": "f2f7384309d606cb15c0bc9d00d4e4b0eca10d78ff8cd6f54abb62cee0e5cfd3",
+  "bytes": 2060064,
+  "triangles": 916,
+  "materials": 1,
+  "colorTexture": [
+    2048,
+    2048
+  ],
+  "normalTexture": [
+    1024,
+    1024
+  ],
+  "comparisons": [
+    "vertailu-alkuperainen-v2-v3.jpg",
+    "vertailu-holvi-25-5.jpg"
+  ],
+  "quality": "qa-results.json",
+  "sources": "SOURCE-INVENTORY.json",
+  "checksums": "SHA256SUMS",
+  "startedAt": "2026-11-06T15:05:46.226158+00:00",
+  "newPaidJobs": 0
+}

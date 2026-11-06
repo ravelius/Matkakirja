@@ -1,0 +1,28 @@
+{
+  "task": 2171,
+  "type": "static-building",
+  "localQA": "PASS",
+  "nextStep": "Karttaseppä → KK → omistaja, samojen kuvakulmien pelikoe",
+  "coordinates": "Alkuperäisessä koordinaatistossa, +Y ylös",
+  "asset": "notre-dame-2171.glb",
+  "sha256": "6c2ae40768d5ce08dd4c744bd5f5ba3ddf57e97c861e808168964ae303655e3b",
+  "bytes": 2350972,
+  "triangles": 4015,
+  "materials": 1,
+  "colorTexture": [
+    2048,
+    2048
+  ],
+  "normalTexture": [
+    1024,
+    1024
+  ],
+  "comparisons": [
+    "Notre-Dame-2171-vertailu.jpg"
+  ],
+  "quality": "QA.json",
+  "sources": "SOURCE-INVENTORY.json",
+  "checksums": "SHA256SUMS",
+  "startedAt": "2026-11-06T15:05:46.225834+00:00",
+  "newPaidJobs": 0
+}
