@@ -4,8 +4,13 @@ Korvaa -1515:n Tilan ja SEURAAVA TYÖ:n. -1515:n Opit ja Huomiot pätevät, samo
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Remote Controliin ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, V = P/valmis-jalki2, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, peili natiivi-backup.
 
+## LISÄYS 16.1x (PT)
+- PT hyväksyi 4b:n ja sen jälkeen 3c:n JU:n vuorolla. JU kirjasi molemmat luovutukseensa, seuraaja ajaa nollauksen jälkeen, eli 4b alkaa myöhemmin kuin 16.18.
+- Laiterajoitusta EI kirjata syyksi ennen todistusta. Tärinä pysyy auki kameran jälkeen asti.
+- KK:lle GPU- ja muistitulos vasta, kun 3c on katsottu, ellei kortin ehto (1200 m) täyty aiemmin. KK:lla on jo väliviesti 16.1x, jossa GPU-tulos ("viittaa laitteen rajoitukseen, ei todistettu"), ja aiempi muistiluku: älä toista niitä, vaan korjaa tarvittaessa lopullisessa.
+
 ## Tila
-- JU:lla, tulos tulee viestinä tälle session-id:lle (pyydetty 16.1x; viesti oli JU:n jonossa, tarkista list_events vain, jos mitään ei kuulu):
+- JU:lla, tulos tulee viestinä tälle session-id:lle (kuitattu 16.1x):
   1. IPAD 4B 2bfb126b0: V/ajopyynto-ipad-4b.md, vain osa 1, aikaisintaan 16.18, lokit L/natiiviseppa-tarina-ipad4b-2bfb126b0, 3 kuvasarjaa sarjat/-kansioon.
   2. IPAD 3C 190448df6: P/ajopyynto-ipad-3c.md, vähintään 10 min 4b:n jälkeen, tallessa oleva käännös, lokit L/natiiviseppa-palikka-ipad3c-190448df6. Indeksi P/indeksi-r4-1200/indeksi.txt (16 palaa, 42 Mt, 7 korvauspalaa mukana). YKSI ajo, vahti päällä.
 - Haara natiiviseppa/palikka-koe 2bfb126b0 (peilissä), työpuu puhdas. Ei korjauksia ennen tuloksia (PT 14.5x).
