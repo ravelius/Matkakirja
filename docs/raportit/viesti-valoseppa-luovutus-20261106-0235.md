@@ -8,6 +8,7 @@ D = /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet.
 
 ## AJO: EI OMAA AJOA
 Sha ja `D/sk-maa3.txt` (6 kuvaa: p-roy, p-lp, p-con, se-et, se-la, pohj) annettu JU:lle 02.3x yhteiseen Pariisin ajoon. Uusi oma pyyntö palautetaan, ellei PT tai KK sitä erikseen pyydä. Älä muuta listaa ajon aikana. Kun JU ilmoittaa kansion: katso täysikoossa, viat nimettyinä KK:lle (`local_231e4bad`, osoitekirja; CLAUDE.md:n `local_d5f31591` antaa "session not found"), rivi PT:lle.
+JU 02.3x: kirjattu seuraavaan yhteiseen ajoon (ei vielä pyydetty, edellinen 4c63d8662 valmistui 02.34; koeyhdistys puhdas). JU ilmoittaa kansion. Jos KK odottaa kuvia heti, JU ajaa PT:n sanalla; älä pyydä sitä oma-aloitteisesti.
 Ajo 0d317ab6f on KK:lla. PT hyväksyi sen jälkikäteen JU:n välittämänä. KK ei hyväksynyt sitä etukäteen; se on kerrottu.
 
 ## KK 02.5x: PÄÄTÖKSET AJOSTA 0d317ab6f
