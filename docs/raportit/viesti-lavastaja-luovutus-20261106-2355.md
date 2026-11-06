@@ -8,6 +8,9 @@ Vika, joka ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa po
 ## TEE ENSIN: JU:n ajo 7z (päivitetty 7.11. 00.02)
 7p ja 7k tehty, pari kuvat-pari-levyt7k on PT:llä. JU kuittaa tälle sessiolle: A/aja-levyt7z.zsh, kuvat A/kuvat-levyt7z (j3-juova-zoom-20, -10): juovan yritys 2, sama 5 asteen kulma, kapea kuvakulma. Jos kivi ja saumat erottuvat, syy on pikselikoko ja kulma; jos eivät, kulma-mip kumoutuu. Katso täysikoossa ja lähetä rivi PT:lle. Tämä oli viimeinen yritys: jos ei ratkea, se sanotaan PT:lle eikä jatketa.
 
+## Myös JU:lla: ajo 7m (PT 7.11.)
+A/aja-levyt7m.zsh, kuvat A/kuvat-levyt7m. Arvioi pystysaumat täysikoossa: näyttävätkö oikeilta pelin korkeudelta, kun ne ovat tasavälein ja voimakkaat? Kohta 1-4 on nyt kuvattu oikein; kohta 1-1 ei näy mistään (mittaa29). Koko muuria ei saa sanoa korjatuksi ennen tätä. Rivi PT:lle. PT kuittasi 7p|7k:n kokeena. Laikku ja leivonta KK:n aamuun.
+
 ## Tila
 - koejuuri-levyt7u (2 jalustaa, 12 kolmiota): korjaus näkyy täysikoossa, PT kuittasi.
 - koejuuri-levyt7k: sama sääntö kaikille paloille: kivireunus-sivu, jolla u ei etene (du/L <= 0,9, L >= 0,5 m) -> u = metrit pituussuuntaan. 6 596 kolmiota, 4 711 m2 (aiempi 3 514 m2 oli tiukempi raja du/L < 0,1). Vain lod0, PT:n kuittaama. Pari 7p|7k: korjaus näkyy, kohdissa 1-1 ja 1-4 kamera ei osunut kiveen. PT:n kuittaus parista puuttuu; ei vientiä ilman sanaa.

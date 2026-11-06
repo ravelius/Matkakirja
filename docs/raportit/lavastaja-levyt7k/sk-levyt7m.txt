@@ -1,0 +1,40 @@
+# LAV 7.11.: levyt7k: pystysaumat pelin korkeudelta, kohta 1-4 oikein. Ei vientiä.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+ui kierto vaaka
+odota 12
+ui juoksupeli palatsi mallit file:///Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/katot-v125/koejuuri-levyt7k/
+ui juoksupeli vapaa 1
+ui juoksupeli botti 0
+ui juoksupeli palatsi kopiot 1
+ui juoksupeli eunukit 0
+ui juoksupeli ajajapito 1
+ui juoksupeli v4
+oleta 240 palatsi v2: peittokartta -- palatsi ladattu
+odota-maailma 180 100
+ui juoksupeli avaus nyt 1
+ui juoksupeli tarkastelu kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot/k-tarkastelu
+ui juoksupeli tarkastelu keisari pois
+ui juoksupeli tarkastelu kamera 321.4 3.9 339 0 50 80
+oleta 120 juoksupeli tarkastelu: alku
+ui juoksupeli tarkastelu kamera -90.5 1.5 501 -90 10 80
+odota 3
+kuva kohta-1-4-suoraan
+ui juoksupeli tarkastelu kamera -116.5 1.5 492 4 12 80
+odota 3
+kuva kohta-1-4-kuja
+ui juoksupeli tarkastelu kamera -367 3 -7 60 20 80
+odota 3
+kuva peli-0-2
+ui juoksupeli tarkastelu kamera -367 3 -22 30 15 80
+odota 3
+kuva peli-0-2-kauempaa
+ui juoksupeli tarkastelu kamera -83.8 4 419.7 -30 15 80
+odota 3
+kuva peli-B
+ui juoksupeli tarkastelu kamera 262 4 -75 -141 15 80
+odota 3
+kuva peli-A
+ui juoksupeli ajajapito 0
+ui juoksupeli pois
+odota 2

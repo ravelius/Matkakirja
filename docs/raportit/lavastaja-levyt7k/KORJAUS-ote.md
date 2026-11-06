@@ -22,3 +22,5 @@ Juova, yritys 1 (mittaa28.py, kuvat-levyt7r): sivun 3-1 kirkkaus L p50 151 / 151
 KORJAANTUI: kohta-0-2 (täysikoossa), B-takakulma (täysikoossa), kohta-0-3 ja j3-paaty-lansi (arkilla): vaakajuovainen kuva -> kivet ja saumat. A-koko, C-koko1: ei muutosta näkyvissä pienennettynä. Kohta-1-1 ja 1-4: kamera ei osunut kiveen, ei näytä mitään.
 LAIKKU: näkyy B-takakulmassa myös takaa, vaalea violetti kaista jalustan päällä, reuna kaareva pilarin ympäri; sama 7p:ssä ja 7k:ssa. Syy auki, aamun kysymys KK:lla.
 JUOVA, yritys 2: aja-levyt7z.zsh: sama kamera ja 5 asteen kulma, kuvakulma 20 ja 10 astetta. Jos kivi ja saumat erottuvat, syy on pikselikoko ja kulma; jos eivät, kulma-mip kumoutuu.
+
+## 07.11. 00.03 PT: pystysaumat pelikameralta, 1-1 ja 1-4 kuvattava (mittaa29.py). Kohta 1-1: sivu x -228,35 on 15 cm:n raossa toista kiveä vasten, ei näy mistään kamerasta. Kohta 1-4: edellinen kamera seinän sisällä; uudet kamerat. Ajo aja-levyt7m.zsh (koejuuri-levyt7k, 6 kuvaa), vuoro JU:lta.
