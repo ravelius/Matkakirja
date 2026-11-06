@@ -60,3 +60,6 @@ Remote Control ei päällä: työkalu vain omistajan omasta pyynnöstä. Postiva
 
 ## Odottaa, aloittamatta
 Tappien lasku vaakapuhelimelle kokeena omaan committiin, kun UI-sarja on yhdistetty (-1306, PT 13.1x): OpasValikko.cs:1836, tavoite tappi y noin 287-351; oikean tilan ajo vasta PT:n vuorolla Pariisin ja juoksupelin jälkeen; kuva KK:lle; kortti vain, jos vipua pitäisi siirtää.
+
+## Lisäys 15.1x (JU)
+Kaatokoe, pysty x3 ja 7 varausta ajossa L1:llä. Rivit /Users/Shared/Claude/julkaisija-tyokalut/nui-61cbc.log (varaus, rc, kesto, VIKA, rinnakkaiset L2-ajot). Runko yhä d092f48cc. JU lähettää rivin, kun valmis.
