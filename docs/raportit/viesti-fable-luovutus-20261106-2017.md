@@ -3,7 +3,7 @@
 Korvaa -1902:n AJOSSA-listan; sen OPIT ja HUOM voimassa, samoin -1830:n OPIT, OMISTAJAN PÄÄTÖKSET ja JUNARUNKO -1458. Id:t osoitekirjassa. Taulu Qo5w6Wk4JSYRwYbyf2fJrm.
 
 ## ALOITUKSESSA
-- Monitorit: `python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py` ja `/Users/Shared/Claude/hooks/codex-posti-vahti.sh` (30 min). Ei jonokierros-cronia. Etäyhteys vain KK:lla.
+- Monitorit: `python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py` ja `/Users/Shared/Claude/hooks/codex-posti-vahti.sh` (30 min). Ei jonokierros-cronia. Etäyhteys päälle myös PT:lle (omistaja 21.32), myös nollauksen jälkeen: set_remote_control self true.
 
 ## OMISTAJAN PÄÄTÖKSET TÄLLÄ VUOROLLA (lokissa)
 - 19.08 kovat varjot 0ca5f68f6 kelpaavat, kokeena, ei junaan; viat korjataan (PR 6386).

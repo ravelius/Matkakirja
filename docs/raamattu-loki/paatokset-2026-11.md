@@ -677,3 +677,7 @@ Omistaja 6.11.2026 klo 21.2x (KK): "Tärinä ei voi liittyä muistiin tai suorit
 KK:n kortti klo 21.30: "Perutaanko jonossa oleva Pariisin kartan tärinäajo, joka mittaisi tärinän rakennusten kohdalla?" = "Perutaan (Suositus)". Korvaa 20.58:n "Yksi uusi ajo" ja KK:n 21.08:n kolmen käynnistyksen tavan.
 
 Omistajalle kerrottu: tärinä jää peliin, määrä rakennusten kohdalla jää mittaamatta, isoa korjausta ei nyt tehdä, kohta 9 poistuu Pariisin valmis -listalta (KK päivitti listan; 20.27:n kymmenestä kohdasta jää yhdeksän). JU ja NS saivat tiedon suoraan KK:lta.
+
+## REMOTE CONTROL MYÖS PÄÄTOIMITTAJALLE (omistaja, KK) (6.11.2026 klo 21.39)
+
+Omistaja 6.11.2026 klo 21.32 (KK:n välittämä): "Laita remote päälle myös päätoimittajalle". Korvaa 16.08:n "etäyhteys vain KK:lla". KK kytki etäyhteyden päälle PT:lle (tila on, PT tarkisti). PT pitää sen päällä, myös nollauksen jälkeen. Postivahti ja roolit eivät kytke sitä.
