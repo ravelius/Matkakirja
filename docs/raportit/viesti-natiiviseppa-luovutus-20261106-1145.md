@@ -11,3 +11,8 @@ Korvaa -1140:n SEURAAVA TYÖ -kohdat 1 ja 2 (ajopyyntö). Muu -1140 pätee (haar
 2. PALIKKAKOE: JU ajaa skenaarion /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe/sk-mac-1.txt (L2, b8, 2aa245334, 0.465). JU palautti aiemman ajopyynnön, koska aja-komennon kolmas luku on kaari eikä metrejä; ajopyynto-mac-1.md on vanhentunut, skenaario on voimassa. Skenaariota ei ole ajettu.
    - Tuloksesta eteenpäin kuten -1140 kohta 2: loki, kuvat täysikokoisina, KK ensin, sitten iPad.
    - Omistaja (PT 11.4x, kirjattu suunnitelma.md:hen): nopeusmittaus isolla iPadilla riittää, pieni vain kahteen rinnakkaiseen ajoon. Kirjasto alkaa Euroopasta ja moskeijasta.
+
+## LISÄYS 11.5x: KS:n vastaus (tuli ennen nollausta)
+- Palais-Royal: relation/3300400, building=palace, height 30, 14 336 m², bbox lat 48.86277–48.86426, lon 2.33576–2.33808. Eteläosan rajaa KK ei antanut: etelä alkaa 48.86277:stä; puolivälin leveys noin 48.8635 on KS:n oma lasku bboxista, ei KK:n sana. Kysy KK:lta vain, jos tarkempi raja tarvitaan. Kamera: pr-rivoli, aja 48.86370 2.33655 0.003 2, suunta 200. Louvren pohja: NotreDameKoe/louvre-pohja-talot3, alfa talomaskin mukaan (_tyo/karttaseppa/louvre-talomaski); jos maskia pitää muuttaa alueella, kerro KS:lle.
+- Puiston 6 palaa: KS:n tiedon mukaan jäävät v10:ssä (KK). Oma kysymykseni KK:lle ristiriidasta on silti avoin: katso vastaus.
+- Forumin litteät: rivin neljä neliötä ovat way/626410287–290 (building=roof, 0,5 m), minun suodattamani, kartan piirtämiä. Kartan korjaus on KK:lla, älä muuta niiden takia mitään.
