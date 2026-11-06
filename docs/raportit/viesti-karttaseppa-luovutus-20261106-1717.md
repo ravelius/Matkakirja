@@ -25,7 +25,8 @@ Katso koko kuvat ensin.
 
 ## ODOTTAA
 - **TEE AJON 25 JÄLKEEN (PT:n sana, KK 17.07 pyysi):** ElavaTyyliVersio takaisin e23:ksi ja katettu vesi (520f58ad8) vain Pariisin paloille päätteellä, kuten -vene2; ei koko maailman uudelleenpiirtoa (omistajalle luvattu rajaus 16.46). Koe, ei junaan ennen omistajalle luvattua kuvaa. Pääte tulee myös pelin palojen polkuun: ajon 25 kansio on vielä e24-vene2. Muiden kaupunkien katettu vesi jää vanhoihin paloihin, määrä on laskematta; lasku vasta, jos joku kaupunki piirretään uudelleen (PT).
-- **KK:** ajon 24 parit; havainto Bercyn alakulman sillasta (ilmeisesti Simone-de-Beauvoir, nimi päätelty) ja Austerlitzin ratasillasta, jotka näkyvät ilmakuvassa mutta eivät rajatussa pelikuvassa. Kysyin, tutkinko; älä tutki ilman sanaa.
+- **KK 17.18:** ajo 24 näytetään omistajalle; ajon 25 pari ja tulokset KK:lle. 8b6e10803 kuuluu päätökseen 16.46, ei junaan.
+- **Sillat, selvitetty koodista ja aineistosta, ei koodimuutosta, tulos KK:lla 17.2x:** Passerelle Simone de Beauvoir on datassa class=path, ja ElavaTyyli.cs:473 (k52, omistajan 06.51) jättää polut pois. Austerlitzin ratasilta on subclass=subway brunnel=bridge, ja rivi 472 (k52) jättää metroviivat pois; sen kansi class=bridge on alue, ja rivi 463 ohittaa kaikki transportation-alueet. Kumpikaan ei ole KeskustanSillat-listassa (18 riviä). Korjaus koskettaisi omistajan k52-linjausta: odota KK:n sanaa. Ehdotus: silta veden yllä ohuena viivana, vain Pariisin palat päätteellä.
 - **Codex, korjatut mallit:** ennallaan -1657:stä. Omistajan viat on viety kuittauksilla ac1ce57a0 ja 542155d12 (PT); seuraava versio tuontiporttiin, pari KK:lle.
 - **PT:** koti-haaran tiedostot, ajo 25:n vuoro.
 - **NUI:** kyltti-rivien sijainti lähetetty 17.1x (rivit 3316, 3318, 4374, 4376). Hoidettu.
