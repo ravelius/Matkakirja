@@ -11,8 +11,13 @@ Yön sääntö (omistaja 23.07): vika ei ratkea kahdella yrityksellä tai noin 3
 - Kolo: 12-17 cm rako, x -228,54..-228,37 kohdassa z -258, esto.bin vapaa, massassa 0. Ei korjattu.
 - Koko muuria EI saa sanoa korjatuksi: 1-1:n kivisivu ei näy kuvissa.
 
+## TEE ENSIN: PT 00.4x (sanatarkasti)
+"Pari 7m|7n katsottu kokonaisena, pienkivikaista poissa; 7n kuitattu kokeena, ei vientiä. Korjaus muutti muutakin kuin kaistan: oikean terassin reunakivi näkyy nyt pidemmältä ja päättyy avoimeen päätyyn keskelle lattiaa (parin oikealla noin 1680; 405), jota 7m:ssä ei näkynyt. Älä kirjaa kulmaa ehjäksi, ennen kuin olet mitannut, onko pääty pelin muu osa vai paljastuiko se korjauksesta. Ei toimi = kolmio takaisin ja rivi KK:lle. Seuraava LAV tekee yhdellä ajolla, enintään 2 yritystä: (1) tuo pääty täysikoossa, (2) 1-1:n kivisivu näkyviin yläviistosta z -261,5..-256,5; jos sivua ei saa näkyviin kahdella yrityksellä, kirjaa '1-1 kuvaamatta' ja muuri jää korjaamatta-sanalle. Vuoro JU:lta; koejuuri 7n, ei leivontaa, karttaa, vientiä eikä kolon korjausta."
+Lähtökohdat: pari on kahden kuvan rinnakkain (oikea puoli 7n), mittaa ensin kuvasta kuvat-levyt7n/peli-0-2-kauempaa.png; kamera -367 3 -22 30 15 80. Osoitteen "parin oikealla" koordinaatistoa ei ole varmistettu. Kolo-kuvien kamerat eivät näyttäneet 1-1:n sivua: kolo-paasta (-228,9 2 -262 3 30 80) on liian lähellä, kolo-sivulta (-230,5 2,2 -259 90 40 50) seinä x -229,2 peittää. Tee uusi aja-levyt7x.zsh aja-levyt7n.zsh:n mallilla, juuri 7n.
+Rivi KK:lle aamun koontiin lähetetty (risti, raita, kolo, sivulöydökset, lod1/2). Lod1/2 ennallaan: kaista voi palata kauempaa.
+
 ## Avoinna (ei ilman PT:n sanaa)
-Odottaa PT:n seuraavaa työtä. Sivulöydökset: irtolaatta tausta 3-1 (259; -80,9), kivijalan kansi venynyt peli-A:n seinässä, sahalaita ulkomuurin kivijalassa kaista-lahella-kuvassa (syy mittaamatta). Vanhat: laikku B, kiila ja raita (valokartta), PK:n kävely uudella kartalla ennen vientiä.
+Sivulöydökset: irtolaatta tausta 3-1 (259; -80,9), kivijalan kansi venynyt peli-A:n seinässä, sahalaita ulkomuurin kivijalassa kaista-lahella-kuvassa (syy mittaamatta). Vanhat: laikku B, kiila ja raita (valokartta), PK:n kävely uudella kartalla ennen vientiä.
 
 ## Työkalut
 A/maailma-7k.npz + maailma-7k.json (pelin ladonta) ja osasarja-v8-z.npy: säteet mittaa38.py. VARO: pelkkä tausta-lod0 ei riitä, osasarjassa on kujaseinät. Suodata kolmion rajoilla, ei keskipisteellä. Osasarjan z on käännetty, joten sen normaalit näkyvät väärin päin. Pikseliä vastaava säde: sade() mittaa38:ssa; kuva 2000 px:n koordinaateissa. Ajo: A/aja-levyt7n.zsh, sha 35140432d, vuoro JU:lta. numpy/scipy: /opt/homebrew/bin/python3 ilman -I:tä.
