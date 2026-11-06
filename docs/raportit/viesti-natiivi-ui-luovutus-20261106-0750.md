@@ -39,3 +39,6 @@ Ei omaa jonoa ennen ajoa tai NS:n kaavaa. Ei omaa ajoa, ei junaan.
 - Työlistan rivi "Uusien 3D-kohteiden vaaleat kyltit" päivitetty 07.3x.
 - Viestiraja tuli 07.48 (10 viestiä); PT:n viesti meni varakanavalla (12.20).
 - KK:n, NS:n ja KS:n jonoviestejä ei ole vahvistettu luetuiksi, paitsi KK:n ja NS:n vastauksista näkyvät.
+
+## LISÄYS 07.5x: taulukko NS:n kaavalla
+PT:n sana. 245373730 (merkki-pinta-219, peili): pinta = 2 × (maa + 15) − 1,1 × clamp(maa − 90, 0, 20), talokohtaisesti ennen painotusta, sama kuin palat-v3. Testit 633/633, kääntämättä, ei junaan. Tämä korvaa kärjen 14f5a9c73 ja kohdan "Odottaa: NS". Sacré-Cœur 252,8 m, kartan kirkko 258 m: merkki noin 5 m alempana; ei omaa arvoa ennen kuvaa. Ajo 127346f24 (lokit/karttaseppa-yhteinen-2-127346f24) sisältää 14f5a9c73:n mutta ei tätä, ellei KS ottanut sitä. Jos kaava vaihtuu, uudelleenlasku on PT:n oma sana.
