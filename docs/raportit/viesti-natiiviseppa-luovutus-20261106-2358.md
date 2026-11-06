@@ -1,6 +1,4 @@
-# Natiivisepän luovutus 6.11.2026 klo 23.33
-
-KORJAUS 23.35, VOITTAA ALLA OLEVAN: "enintään 0,7 s" oli väärin (PT:lle kerrottu). Ajo g +2 s: beige 13 %, laskuri 0, koska laskuri ei näe puuttuvia laattoja; ajo h +5 s puhdas. Uusi mittari "peitto" 2cba21a3e (haara natiiviseppa/aloitus-tyhjat). JU:lla: Mac sk-aloitus-tyhjat-i, kansio L/natiiviseppa-aloitus-tyhjat-i-2cba21a3e, sitten iPad kylmä samalla shalla, kansio L/natiiviseppa-aloitus-ipad-kylma-2cba21a3e (ei tallennetta: konsolikäyttäjä samireivinen). Luvut: "laattamittari: ... peitto X %" verhon lähdöstä, kunnes peitto 100 %; tämä on kesto. Tarkista i:stä, että peitto on uskottava (noin 13 % aukkoa g:n hetkellä). Peitto ei tarkista rasteria: se on laskurin sarakkeessa. Tulos PT:lle ja KK:lle. Liiku-ehdokkaat cdcd533ab L2:lla KS 36:n ja iPadin jälkeen.
+# Natiivisepän luovutus 6.11.2026 klo 23.58
 
 KORVAA KAIKKI VANHEMMAT LUOVUTUKSET, viittausketjua ei ole. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364.
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
@@ -11,30 +9,27 @@ Viestit: mcp__ccd_session_mgmt__send_message session-id:llä.
 - 23.07: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa pois tai edellinen toimiva tilalle. Sitten rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön.
 - 23.22: yöllä vain Pariisi, Lontoo ja juoksupeli; tukityö vain, kun se palvelee niitä. Muu seis, ei uutta. Jos muuta on auki, rivi PT:lle. PT: Liiku kuuluu Pariisiin.
 
-## ODOTTAA JU:TA, ÄLÄ TILAA UUDELLEEN (kaikki tilattu 23.3x asti)
-1. Aloitus-tyhjät i (2cba21a3e), ks. korjaus. g ja h katsottu.
-2. iPad, iso, kylmä välimuisti, 2 ajoa (2cba21a3e): pyyntö A/ajopyynto-ipad-kylma.md, JU:lla. KK:N SANA 23.29 omistajan valtuutuksella. Kansiot L/natiiviseppa-aloitus-ipad-kylma-2cba21a3e/ajo1, ajo2. Yksi kysymys: NÄKYYKÖ TYHJÄ PALLO VERHON LÄHDÖN JÄLKEEN JA KAUANKO. Lokista "laattapalvelin: KYLMÄ välimuisti" (ilman sitä ajo ei kelpaa), "aloitusverho: pois", laattamittari-rivit, katso kuvat ja tallenne. TULOS KK:LLE KOONTIIN päätöstä varten, tiivis rivi PT:lle. Rajaus kerrotaan: Cesiumin omaa pyyntövälimuistia lippu ei tyhjennä (portti vaihtelee, joten ei luultavasti osu; mittaamatta).
-3. Liiku cdcd533ab: skenaario _tyo/natiiviseppa/liiku/sk-liiku-ehdokkaat.txt, kansio L/natiiviseppa-liiku-ehdokkaat-cdcd533ab. PT:n yksi mittaus: miksi ehdokkaat 89 → 81 ja miksi kyltit vaihtavat paikkaa. Katso lokista "mallikyltti: ... sivu a → b" ja vertaa "nimet ehdokkaat" ja "nimet hylatyt" rivit ennen ja jälkeen (diff; syy hylättyjen riviltä). Tee pari l0 | l6 kuten pari-l0-l6.jpg, kyltit täysikoossa; pari PT:lle. Ei ratkea yön säännön rajassa (noin 00.00): rivi KK:lle pari mukana ja seuraavaan. Tyyppitarkistus kattoi vain Kartta-kansion; JU ilmoittaa käännösvirheen.
-4. KS:n ajo 36 (0c544d4ef, oleelliset nimet): KS lähettää kansion; KATSO ENSIMMÄISEN AJON KUVAT oletusnäkymästä. Ajon 35 kn-opera-45-kadut.png on otettu kytkimellä nimirajaus 0, joten se ei kerro oletuksesta. Vertailu 12 kpl L/natiiviseppa-oleelliset-nimet-98180b82d. Kartta-välilehden rivi vasta omistajan päätöksellä.
+## TYÖ NYT: KARSI (PT 23.58, SANA: KORJAA, KOKEENA, EI JUNAAN). Yön raja: kaksi yritystä tai noin 30 min (alkoi 23.58), sitten rivi PT:lle (vika, kokeiltu, suositus).
+Tavoite: seisovalla kameralla ei karsita kierroksittain, ja Liikun paluun jälkeen samat nimet ovat näkyvissä. Mittari: karsintoja 150 s:ssa ("nimet: karsittu"), nimet ennen ja jälkeen Liikun, kuva samasta kohdasta. SELVITÄ ENSIN, MIKSI RAJA TÄYTTYY ILMAN LIIKUA. Älä osu NUI:n nimiriviin c8a71c1cd (natiivi-ui/kartta-nimirivi: Sisaltokerrokset.cs, SisaltokerroksetSilta.cs, Linssivalitsin.Kartta.cs, UiKomennot, UiPalvelut) etkä nimioletukseen 0c544d4ef.
+Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto-koe, haara natiiviseppa/liiku-nimet-koe, kärki 89d0b58ca (lokirivi Karsissa), peili natiivi-backup. Tyyppitarkistus: kopioi O/tyyppitarkistus-tyopuu.zsh omaan scratchpadiin, korvaa rivit W= ja S=. Ajot JU:lta. Skenaario-pohja _tyo/natiiviseppa/liiku/sk-liiku-nappi2.txt tai sk-liiku-ehdokkaat.txt.
+MITATTU ajossa L/natiiviseppa-liiku-nappi-89d0b58ca: 70 karsintaa 150 s:ssa, joka kerta noin 1000-1200 riviä, eläviä 3000 / raja 4000 (ElavaEnintaan), alkaa ennen ensimmäistä kerrontaa, ei vaadi Liikua; kaupungissa rajakulma 0,0-0,1° alapisteestä, Liikun aikana 1,5-5,7°. Kartta/Nimikerros.cs: Karsi ja LisaaElavat; ElavaNimet.Unohda.
+HYPOTEESI, MITTAAMATTA: elävät kadut täyttävät rajan (Elavia laskee vain LisaaElavat-rivit, merkittävät eivät; kadut ovat rivejä, vaikka kerros on pois: syy "kerros"). Karsi poistaa kaukaisimmat luokasta riippumatta, myös näkyvät; Unohda vapauttaa niiden nimet ja palat; ElavaNimetLahelta (z Ensimmainen-DataMax, säde 2) hakee ne heti uudelleen = kierre. Ajon ehdokkaat-cdcd533ab kadonneet nimet (Bastille, Le Kremlin-Bicêtre, Rotonde de la Villette ym.) ovat yli 5 km alapisteestä, mikä sopii tähän.
+ENSIN: lisää Karsi-riville poistetut ja jäljellä olevat luokittain (kadut / muut), tai laske koodista ja lokista ilman ajoa, ja vahvista kumpi täyttää rajan.
+SUUNTA, JOS VAHVISTUU: (1) kerroksella piilossa olevat karsitaan ensin; (2) piilossa olevien karsinta ei vapauta nimiä eikä paloja, joten ne eivät tule takaisin; kun kerros kytketään päälle (c8a71c1cd:n rivi), ne on saatava takaisin: lue rajapinta, älä muuta NUI:n tiedostoja; (3) ikkunan sisällä olevia paloja ei vapauteta. Varo: jos kadut ovat päällä ja ikkuna ylittyy, ikkunaan jääneet nimet eivät saa kadota pysyvästi panoroitaessa; koeta kytkimellä nimirajaus 0.
 
-## ALOITUS-TYHJÄT: TULOS (A/tulos.md; PT kuittasi syyn, EI "ei korjausta")
-Haara natiiviseppa/aloitus-tyhjat 7d0e0e5a1, peili natiivi-backup, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto. Mittari `pallo laatat tila|vahti|piilota etu|taka|pois`.
-- Beige = Pohjapallo (ajo e t01: kaikki laatat piilossa, 228,207,166). Kaaret ja raidat = takapuolen laatat (ajo d näkyvät, e eivät); että ne ovat helmoja, on päätelmä. Musta kiekko kuuluu Pohjapallon piirtoon, syy mittaamatta. Valkoinen = etulaatta ilman rasteria.
-- Kesto ilman kaappausta (ajo f): verho lähti t 11,75, viimeksi ilman rasteria t 11,86, 10 etulaattaa t 12,28, 16 t 12,48; enintään noin 0,7 s verhon lähdöstä, häivytys 0,5 s. Lentoa painettiin t 11,41 verhon alla. Laskuri ei näe kokonaan puuttuvaa laattaa.
-- k01a ja k01e: kaappaus pysäyttää pelin, laatat saavat kymmenesosan ruuduista.
-- Auki: NUI:n ajojen sävy 215,195,157 (6 % tummempi), syy mittaamatta.
-- PT 23.28: "0,7 s tyhjää on pelaajalle näkyvä". Skenaariomuutos vain testiin, ei saa peittää vikaa kuvilta. Korjausehdotus iPad-tuloksen jälkeen: verho odottaa katon jälkeen z1-rastereita, rajattuna. Päätös KK:lta.
-- Laitelokit lämpimällä: verho lähti aina pallo 100 %. Vanhat *-kylma-* iPad-ajot eivät käyttäneet lippua.
+## ODOTTAA JU:TA, ÄLÄ TILAA UUDELLEEN
+Liiku-nappi2 89d0b58ca: L/natiiviseppa-liiku-nappi2-89d0b58ca, 2 kuvaa, JU kuittaa. Katso "napauta (690, 980)" -rivit ja "ui puu mk-liiku". Ajossa nappi napautus 3 sai 7 s perumisen jälkeen "ei osumaa UI:ssa → pallolle", vaikka Liiku näkyy kuvassa n3 (napautukset 1 ja 2 osuivat). PT: jos napautus ei oikeasti osu näkyvään nappiin, se on oma vikansa ja menee samaan raporttiin Karsin kanssa. Syy auki (koodista: Pick palaa null; VaistaLiiku on ainoa pickingMode-muutos Matkavalinnassa, Kartuscha.AukiMuuttui ajaa sen; tarkistamatta). Napautusta ennen kerrontaa ei saatu testattua: kerronta alkoi kortin alla ennen ui sulje -komentoa.
 
-## LIIKU: TILA
-Haara natiiviseppa/liiku-nimet-koe cdcd533ab (a7c4d3cf3 + 98180b82d + 0c544d4ef poimittuina + kyltti), peili natiivi-backup, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto-koe. Koe voimassa, EI valmis (PT). Ajossa 33675ffe2 nimiä 28 ennen, 23 paluun jälkeen, ei tasoitu 60 s:ssa; puuttuu town 3 (Levallois-Perret), joki 1, nähtävyys 1. Pari L/natiiviseppa-liiku-nimitaso-pitka-33675ffe2/pari-l0-l6.jpg.
-KYLTIN SYY KOODISTA (UI/MalliKyltit.cs): sivu on historiasta riippuva "edellinen sivu ensin"; Eiffel oikea → alla, Louvre alla → oikea. cdcd533ab muistaa sivut Liikun alussa ja tarjoaa niitä ensin paluun ajan. Mittaamatta, kunnes kohta 3 on katsottu.
-PIDÄ liiku-lento AJAN TASALLA natiivi-ui/aloituslento-kuvat-219:n kanssa; kärki 23.1x 356eb0101.
+## VALMIS TÄNÄ YÖNÄ (ei toisteta)
+- ALOITUKSEN BEIGE: KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA 23.50: EI KORJAUSTA PELIIN, VERHO-EHDOTUS POIS. Syy mitattu: Macin esikatselusta puuttuu laattapaketti; 7b6caba3a (haara natiiviseppa/aloitus-paketti, vain koe) beige 13,4 % → 0,1 %. iPad kylmä: verho 3,7 s, pallo 100 %, lennolla ei aukkoja lokissa (ei kuvaa pallosta). Kaikki A/tulos.md, KK ja PT tietävät. Peiton notkahdus Macilla ei näy beigenä; meren suorareunaiset sävypalat (ajot i, j; k02) ovat erillinen asia, VS PT:n kautta.
+- KYLTIT: PT kuittasi parista (cdcd533ab, L/natiiviseppa-liiku-ehdokkaat-cdcd533ab/pari-l0-l6.jpg). Yksi ajo. Tiedot _tyo/natiiviseppa/liiku/ehdokkaat-tulos.md. cdcd533ab on koe, ei valmis.
+- KS 36 (217a40fb6, 0c544d4ef): Opéra, Eiffel, Montparnasse katsottu oletuksella, kaupunginosia ja pieniä vesiä ei näy; KK tietää. Kartta-välilehden rivi vasta omistajan päätöksellä.
+- Nappi palasi kerronnan jälkeen ajossa 89d0b58ca. Ajon cdcd533ab piilossa pysyminen: komento `ui liiku` ohitti näkyvyyden.
+- PIDÄ liiku-lento AJAN TASALLA natiivi-ui/aloituslento-kuvat-219:n kanssa.
 
 ## Valmiit, odottavat muita
 - OSM-skriptit (PT): marais/ ja pariisi-talot/hae-osm.mjs sekä palikkakoe/hae-palikat.mjs lukevat T7:n planeettaa; PT:lle kerrottu, ei sha:ta, ei ajettu.
 - MERI: älä korjaa, menee VS:lle PT:n kautta. C1 ja D2 odottavat omistajaa, älä kysy uudelleen. Tärinä: omistaja perui 21.30.
-- Havainto, ei vielä kerrottu: k02-kuvassa (nui-aloitus-kk) koneen alla tumma neliö merellä. Syy tuntematon.
 - Työpuita wt/-kansiossa yli rajan: kerro PT:lle ennen poistoja. proto-natiiviseppa-kierto = aloitus-tyhjat, -kierto-koe = liiku.
 - Jonon jälkeen: "JONO TYHJÄ: Natiiviseppä" PT:lle.
 
@@ -50,6 +45,8 @@ PIDÄ liiku-lento AJAN TASALLA natiivi-ui/aloituslento-kuvat-219:n kanssa; kärk
 - NS:n työpuita wt/-kansiossa yli rajan (8/3): kerro PT:lle ennen poistoja.
 
 ## Opit
+- LOKIN ENSIMMÄINEN OTTEEN JÄRJESTYS: tarkista esikatselun lokista, tuliko napautus ennen vai jälkeen kerrontaa; oleta-ehto voi täyttyä heti, jos rivi on jo lokissa. oleta-uusi vain uusille.
+- MAC-ESIKATSELUSTA PUUTTUU LAATTAPAKETTI: aloituslennon kuvat Macilla eivät kerro pelaajan näkymästä.
 - PIENENNÖS HARHAUTTAA: JU, PT ja koko kuvan katselu näkivät värieron, jota täysikokoisissa rajauksissa ja pikselierossa ei ole. Mittaa erokuvalla ja rajaa ennen selityksiä.
 - LUE KONSOLI AJAN YMPÄRILTÄ ENNEN KUIN NIMEÄT KOKEEN ESTEEN: pohjoiskäännös näytti origon viaksi, mutta sama rivi kertoi saapumisesta. Verrokki toisesta ajosta ratkaisi sen ilman uutta ajoa.
 - Projisointi toimii ilman ajoa: palikkajalki-*.csv:n m00-m23 on worldToCamera; H/projisoi-kallistus.py. Kuvan rata-aika 2 s jäljen alusta (jakso 20 s), kalibroi ensin A-kuvalla.
