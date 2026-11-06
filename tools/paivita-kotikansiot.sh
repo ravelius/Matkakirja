@@ -31,7 +31,7 @@ for k in /Users/Shared/Claude/Matkakirja-*(/); do
   [[ -e $k/.git ]] || continue
   n=${k:t}
   (( ${#VAIN} == 0 || ${VAIN[(Ie)$n]} )) || continue
-  if (( ${OHITA[(Ie)$n]} )); then print -r -- "OHITETTU|$n"; continue; fi
+  if (( ${OHITA[(Ie)$n]} )) || [[ "$n" == Matkakirja-posti ]]; then print -r -- "OHITETTU|$n"; continue; fi  # posti aina: tilinvaihto.md 1.5
   if ! git -C $k fetch -q origin 2>/dev/null; then print -r -- "JÄLJESSÄ|$n|?|fetch epäonnistui"; continue; fi
   jalj=$(git -C $k rev-list --count HEAD..origin/main)
   if (( jalj == 0 )); then print -r -- "AJAN TASALLA|$n"; continue; fi

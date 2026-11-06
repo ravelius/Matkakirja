@@ -56,7 +56,7 @@ ohjeet koko sen eliniäksi. Siksi kotikansiot päivitetään vanhan tilin roolie
    PT ei poista eikä palauta toisen roolin tiedostoja. Lepäävän roolin likainen kansio ohitetaan (`--ohita kansio`) ja kirjataan.
 3. `zsh tools/paivita-kotikansiot.sh --aja --uusi-haara` vasta, kun kansion sessio on pysähtynyt (haara vaihtuu koti/<kansio>:ksi;
    vanha haara säilyy, mitään ei poisteta). Kuiva-ajo uudelleen: kaikki AJAN TASALLA tai kirjattu ohitus.
-   POIKKEUS Matkakirja-posti (26.10.): KIERROS.md ja NOLLAUS.md ovat vain haarassa postivahti, joten sitä ei vaihdeta koti-haaraan:
+   POIKKEUS Matkakirja-posti (26.10.; työkalu ohittaa sen itse 6.11. alkaen): KIERROS.md ja NOLLAUS.md ovat vain haarassa postivahti, joten sitä ei vaihdeta koti-haaraan:
    Postivahti mergeää origin/mainin omaan haaraansa ja pushaa; ajossa `--ohita Matkakirja-posti`.
 4. Jokaisen uuden roolin aloitusviestissä ensimmäinen työ: tuotannonohjauksen osio 0 ja oma LUE ALOITTAESSA -rivi
    (`node tools/raamattu-luku.mjs 7.47`) ennen muuta työtä.
@@ -119,7 +119,7 @@ Taulukon viimeinen sarake. Cronit ovat session-only (CronCreate): ne kuolevat se
 aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tunnin sisällä.
 
 ## 6. Sallinnat, Remote Control, hookit
-- `set_remote_control self true` vain KK:lle; muille ei (omistaja 6.11.2026 klo 16.08, Raamattu 7.9).
+- `set_remote_control self true` vain KK:lle; muille ei (omistaja 6.11.2026 klo 16.08, Raamattu 7.9). Sovellus kytkee etäyhteyden itse nollatun session käynnistyessä (todettu 6.11.2026): aloitusviestien jälkeen PT lukee `list_sessions` ja kytkee sen pois roolilta (`set_remote_control <id> false`), KK:lle se jää.
 - Sallinnat: projektin .claude/settings.json (gitissä) + PT:n .claude/settings.local.json. Gitissä oleva settings.local.json on vanha
   (vain aws/source/python3 -); Macin versiossa lisäksi Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*),
   mcp__ccd_session_mgmt__set_session_effort sekä PostToolUse- ja UserPromptSubmit-hookit pt-taulu-muistutus.py:lle. Älä checkouttaa
