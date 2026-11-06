@@ -1,0 +1,931 @@
+{
+  "inputSHA256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+  "outputSHA256": "ac56b8290a291b0df403cdf8c310ab27d68da893e3d2c02151763329e5ab5156",
+  "triangles": 6687,
+  "vertices": 12649,
+  "bytes": 2751968,
+  "distinctStoneFacesWithSameUV": 6659,
+  "sharedColorAndNormalImageSHA256": [
+    "6c38235f276fddc55487762e84e33cc40d65415f5977db231f8504aedff7a9fd",
+    "b959d0eae58a45578809b907ee3936f288ca68912e0760fb0764e0a8bcd030f8"
+  ],
+  "baseThroughY260Exact": true,
+  "materialsAndIndexBufferRetained": true,
+  "vertexYsAndZsUnchanged": true,
+  "overallHeight": 620.0,
+  "towerHeights": [
+    540,
+    540
+  ],
+  "triangleOrientationsVerified": true,
+  "profiles": {
+    "baseline": {
+      "300.1": [
+        {
+          "inner": 19.996666641089753,
+          "outer": 110.00266666666667,
+          "width": 90.00600002557692
+        },
+        {
+          "inner": 19.996666641089753,
+          "outer": 110.00266666666667,
+          "width": 90.00600002557692
+        }
+      ],
+      "325": [
+        {
+          "inner": 19.166660272438108,
+          "outer": 110.66666666666667,
+          "width": 91.50000639422856
+        },
+        {
+          "inner": 19.166660272438108,
+          "outer": 110.66666666666667,
+          "width": 91.50000639422856
+        }
+      ],
+      "350": [
+        {
+          "inner": 18.333320544876216,
+          "outer": 111.33333333333333,
+          "width": 93.00001278845711
+        },
+        {
+          "inner": 18.333320544876216,
+          "outer": 111.33333333333333,
+          "width": 93.00001278845711
+        }
+      ],
+      "375": [
+        {
+          "inner": 17.499980817314324,
+          "outer": 112.0,
+          "width": 94.50001918268568
+        },
+        {
+          "inner": 17.499980817314324,
+          "outer": 112.0,
+          "width": 94.50001918268568
+        }
+      ],
+      "400": [
+        {
+          "inner": 16.66664108975243,
+          "outer": 112.66666666666667,
+          "width": 96.00002557691424
+        },
+        {
+          "inner": 16.66664108975243,
+          "outer": 112.66666666666667,
+          "width": 96.00002557691424
+        }
+      ],
+      "425": [
+        {
+          "inner": 15.833301362190538,
+          "outer": 113.33333333333333,
+          "width": 97.50003197114279
+        },
+        {
+          "inner": 15.833301362190538,
+          "outer": 113.33333333333333,
+          "width": 97.50003197114279
+        }
+      ],
+      "450.1": [
+        {
+          "inner": 14.991379310344826,
+          "outer": 114.01034482758621,
+          "width": 99.01896551724138
+        },
+        {
+          "inner": 14.991379310344826,
+          "outer": 114.01034482758621,
+          "width": 99.01896551724138
+        }
+      ],
+      "475": [
+        {
+          "inner": 12.844827586206897,
+          "outer": 116.58620689655173,
+          "width": 103.74137931034483
+        },
+        {
+          "inner": 12.844827586206897,
+          "outer": 116.58620689655173,
+          "width": 103.74137931034483
+        }
+      ],
+      "507.95": [
+        {
+          "inner": 10.004310344827587,
+          "outer": 119.9948275862069,
+          "width": 109.99051724137931
+        },
+        {
+          "inner": 10.004310344827587,
+          "outer": 119.9948275862069,
+          "width": 109.99051724137931
+        }
+      ]
+    },
+    "revised": {
+      "300.1": [
+        {
+          "inner": 20.40223436865188,
+          "outer": 111.51222328694662,
+          "width": 91.10998891829475
+        },
+        {
+          "inner": 20.40223436865188,
+          "outer": 111.51222328694662,
+          "width": 91.10998891829475
+        }
+      ],
+      "325": [
+        {
+          "inner": 20.95868714893137,
+          "outer": 114.55582173665364,
+          "width": 93.59713458772227
+        },
+        {
+          "inner": 20.95868714893137,
+          "outer": 114.55582173665364,
+          "width": 93.59713458772227
+        }
+      ],
+      "350": [
+        {
+          "inner": 21.51737467933247,
+          "outer": 117.6116434733073,
+          "width": 96.09426879397483
+        },
+        {
+          "inner": 21.51737467933247,
+          "outer": 117.6116434733073,
+          "width": 96.09426879397483
+        }
+      ],
+      "375": [
+        {
+          "inner": 22.07606220973357,
+          "outer": 120.66746520996094,
+          "width": 98.59140300022736
+        },
+        {
+          "inner": 22.07606220973357,
+          "outer": 120.66746520996094,
+          "width": 98.59140300022736
+        }
+      ],
+      "400": [
+        {
+          "inner": 22.63474974013467,
+          "outer": 123.72328694661458,
+          "width": 101.08853720647991
+        },
+        {
+          "inner": 22.63474974013467,
+          "outer": 123.72328694661458,
+          "width": 101.08853720647991
+        }
+      ],
+      "425": [
+        {
+          "inner": 23.193437270535767,
+          "outer": 126.77910868326823,
+          "width": 103.58567141273247
+        },
+        {
+          "inner": 23.193437270535767,
+          "outer": 126.77910868326823,
+          "width": 103.58567141273247
+        }
+      ],
+      "450.1": [
+        {
+          "inner": 23.75452742741026,
+          "outer": 129.85072600266028,
+          "width": 106.09619857525001
+        },
+        {
+          "inner": 23.75452742741026,
+          "outer": 129.85072600266028,
+          "width": 106.09619857525001
+        }
+      ],
+      "475": [
+        {
+          "inner": 24.342336588892444,
+          "outer": 133.78382610452587,
+          "width": 109.44148951563344
+        },
+        {
+          "inner": 24.342336588892444,
+          "outer": 133.78382610452587,
+          "width": 109.44148951563344
+        }
+      ],
+      "507.95": [
+        {
+          "inner": 25.1201804391269,
+          "outer": 138.98847061683392,
+          "width": 113.86829017770702
+        },
+        {
+          "inner": 25.1201804391269,
+          "outer": 138.98847061683392,
+          "width": 113.86829017770702
+        }
+      ]
+    }
+  },
+  "metrology": {
+    "status": "PASS local silhouette geometry; awaiting actual next-game image",
+    "camera": "camera-fixed-principal.json",
+    "script": "fit_camera.py",
+    "baseline_sha256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "candidate_sha256": "ac56b8290a291b0df403cdf8c310ab27d68da893e3d2c02151763329e5ab5156",
+    "fit": {
+      "edge_observations": 52,
+      "free_parameters": 6,
+      "residual_degrees_of_freedom": 46,
+      "rms_edge_pixels": 0.31849236502313877,
+      "max_abs_edge_pixels": 0.7076824802793453,
+      "principal_point_fixed": [
+        1376,
+        1032
+      ],
+      "rows": [
+        200,
+        220,
+        240,
+        260,
+        280,
+        300,
+        320,
+        340,
+        360,
+        380,
+        400,
+        420,
+        440,
+        460,
+        480,
+        500,
+        520,
+        540,
+        560,
+        580,
+        600,
+        640,
+        680,
+        720,
+        760,
+        800
+      ]
+    },
+    "baseline_actual_top_over_base": 1.1174698795180722,
+    "baseline_mesh_top_over_base": 1.11754661416199,
+    "candidate_top_over_base": 1.2500000538968645,
+    "actual_ajo30_commands": {
+      "nd5": [
+        "kallista 85",
+        "aja 48.8530 2.3499 0.003 2",
+        "suunta 90"
+      ],
+      "nd45": [
+        "kallista 45",
+        "aja 48.8530 2.3499 0.004 2",
+        "suunta 90"
+      ]
+    },
+    "G_reference_direction": "Each bell tower wall splays outward progressively upward. This is visible all along bell stage, with further cornice overhang. G is illustrated oblique view, so no direct pixel target is inferred from it; 1.25 is explicit owner target.",
+    "limitations": [
+      "Camera is fitted approximation, not actual Unity exported matrix. 52 silhouette observations constrain 6 camera parameters and give46 residual degrees of freedom; exact parameter uniqueness is not guaranteed.",
+      "Raster threshold40 and integer pixel edges imply subpixel fit accuracy should not be interpreted as subpixel physical certainty.",
+      "Triangle union ignores material alpha; baseline/candidate opaque GLB. No Unity sky, fog, map occlusion or custom shader is reproduced.",
+      "y840+ excluded due foreground/skyline occlusion; lower support rows640..800 restricted to x1000..1600 to exclude Sainte-Chapelle.",
+      "Native frontal ratio and camera image ratio differ due perspective and yaw; target comparison uses fitted actual-image y200/y500."
+    ]
+  },
+  "colors": [
+    {
+      "factor": [
+        1.725,
+        1.754,
+        1.252
+      ],
+      "scale": 1.0,
+      "sampling": "Same sunny-side shader for hue isolation. Camera views show real variation by surface orientation.",
+      "samples": {
+        "roof": {
+          "medianShaderSRGB": [
+            161.74591571157356,
+            157.4716446513575,
+            103.93372443906884
+          ],
+          "medianHue": 104.2384862609689,
+          "medianL": 0.688151406951067
+        },
+        "oldFleche": {
+          "medianShaderSRGB": [
+            190.83841829380214,
+            154.69973779028982,
+            93.68182140153628
+          ],
+          "medianHue": 79.78372406830209,
+          "medianL": 0.7093894716190875
+        },
+        "newFleche": {
+          "medianShaderSRGB": [
+            160.33078311925533,
+            156.09092423844464,
+            102.80830088610614
+          ],
+          "medianHue": 104.25522361911797,
+          "medianL": 0.6836829520077317
+        }
+      },
+      "hueErrorDegreesBefore": 24.454762192666806,
+      "hueErrorDegreesAfter": 0.01673735814907218,
+      "gamutFraction": 0.0,
+      "gateLimit": 0.002
+    },
+    {
+      "factor": [
+        1.46625,
+        1.4909,
+        1.0642
+      ],
+      "scale": 0.85,
+      "sampling": "Same sunny-side shader for hue isolation. Camera views show real variation by surface orientation.",
+      "samples": {
+        "roof": {
+          "medianShaderSRGB": [
+            150.23742662925102,
+            146.24301075231284,
+            96.21045186649312
+          ],
+          "medianHue": 104.23848626096893,
+          "medianL": 0.6518639701795408
+        },
+        "oldFleche": {
+          "medianShaderSRGB": [
+            177.4251160801967,
+            143.65259273266506,
+            86.62978566983858
+          ],
+          "medianHue": 79.78372406830219,
+          "medianL": 0.6719821142588568
+        },
+        "newFleche": {
+          "medianShaderSRGB": [
+            148.9149489447302,
+            144.95269213160446,
+            95.15871470595674
+          ],
+          "medianHue": 104.25522361911806,
+          "medianL": 0.6476311447424227
+        }
+      },
+      "hueErrorDegreesBefore": 24.45476219266675,
+      "hueErrorDegreesAfter": 0.016737358149129022,
+      "gamutFraction": 0.0,
+      "gateLimit": 0.002
+    }
+  ],
+  "trial": 30,
+  "GReference": {
+    "path": "posti/karttaseppa-codex-pariisi-nd-05m-koepala-20261101/G-referenssi-owner-style-G-confirmed.jpg",
+    "commit": "072306e0eb92786e6f577c5ba7ddcac74f633007",
+    "blobSha": "1289746568e058675724623dd221892bb5f25299",
+    "sha256": "cd4f7c7c9b37bdc164da494545fd58c3c06127dddc9f7e730a319267e7e3775f"
+  },
+  "cameraCalibration": {
+    "baseline": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/notre-dame-2175-pelikoe26-20261106/delivery/notre-dame-2175.glb",
+    "image": "/Users/Shared/Claude/proto-3d/lokit/esikatselu-20261106-195533-2/nd-5-uusi.png",
+    "parameters": {
+      "azimuth_deg": 21.843078268542683,
+      "elevation_deg": 5.388667765819491,
+      "distance_native": 1714.3943703917962,
+      "pixels_per_native_at_center": 1.3445744142271958,
+      "offset_right_native": 85.10421538726283,
+      "offset_up_native": -343.3534665401068
+    },
+    "vector": [
+      21.843078268542683,
+      5.388667765819491,
+      1714.3943703917962,
+      1.3445744142271958,
+      85.10421538726283,
+      -343.3534665401068
+    ],
+    "fit_rows": [
+      200,
+      220,
+      240,
+      260,
+      280,
+      300,
+      320,
+      340,
+      360,
+      380,
+      400,
+      420,
+      440,
+      460,
+      480,
+      500,
+      520,
+      540,
+      560,
+      580,
+      600,
+      640,
+      680,
+      720,
+      760,
+      800
+    ],
+    "actual_edges": [
+      [
+        1020,
+        1391
+      ],
+      [
+        1023,
+        1389
+      ],
+      [
+        1026,
+        1386
+      ],
+      [
+        1029,
+        1384
+      ],
+      [
+        1031,
+        1382
+      ],
+      [
+        1033,
+        1381
+      ],
+      [
+        1033,
+        1380
+      ],
+      [
+        1034,
+        1380
+      ],
+      [
+        1035,
+        1379
+      ],
+      [
+        1036,
+        1378
+      ],
+      [
+        1037,
+        1377
+      ],
+      [
+        1038,
+        1377
+      ],
+      [
+        1039,
+        1376
+      ],
+      [
+        1040,
+        1375
+      ],
+      [
+        1041,
+        1375
+      ],
+      [
+        1042,
+        1374
+      ],
+      [
+        1042,
+        1371
+      ],
+      [
+        1041,
+        1368
+      ],
+      [
+        1038,
+        1368
+      ],
+      [
+        1038,
+        1368
+      ],
+      [
+        1039,
+        1368
+      ],
+      [
+        1039,
+        1387
+      ],
+      [
+        1040,
+        1421
+      ],
+      [
+        1041,
+        1460
+      ],
+      [
+        1041,
+        1464
+      ],
+      [
+        1041,
+        1467
+      ]
+    ],
+    "projected_edges": [
+      [
+        1020.4297333279361,
+        1391.4848815884486
+      ],
+      [
+        1023.1334571747229,
+        1389.096282034364
+      ],
+      [
+        1025.8371810215099,
+        1386.7076824802793
+      ],
+      [
+        1028.5409048682966,
+        1384.3190829261946
+      ],
+      [
+        1031.2446287150835,
+        1381.93048337211
+      ],
+      [
+        1032.3991467650228,
+        1381.020053200714
+      ],
+      [
+        1033.3233813239408,
+        1380.2889438242682
+      ],
+      [
+        1034.2476158828586,
+        1379.5578344478222
+      ],
+      [
+        1035.1718504417765,
+        1378.8267250713764
+      ],
+      [
+        1036.0960850006943,
+        1378.0956156949305
+      ],
+      [
+        1037.020319559612,
+        1377.3645063184847
+      ],
+      [
+        1037.94455411853,
+        1376.6333969420389
+      ],
+      [
+        1038.8687886774478,
+        1375.9022875655928
+      ],
+      [
+        1039.7930232363658,
+        1375.171178189147
+      ],
+      [
+        1040.7172577952836,
+        1374.4400688127012
+      ],
+      [
+        1041.6414923542013,
+        1373.6680436929605
+      ],
+      [
+        1041.4540677907203,
+        1370.5835726877863
+      ],
+      [
+        1041.2229102126746,
+        1367.4991016826123
+      ],
+      [
+        1038.1441184589944,
+        1368.1701502439353
+      ],
+      [
+        1038.4153870666462,
+        1368.1764369257942
+      ],
+      [
+        1038.6866556742978,
+        1368.1827236076533
+      ],
+      [
+        1039.4786087390924,
+        1386.797903437665
+      ],
+      [
+        1040.020744145873,
+        1421.139119462952
+      ],
+      [
+        1040.5628795526538,
+        1460.3821481310872
+      ],
+      [
+        1041.1050149594346,
+        1463.7310840468024
+      ],
+      [
+        1041.399341750814,
+        1466.897169080102
+      ]
+    ],
+    "rms_edge_px": 0.31849236502313877,
+    "max_abs_edge_px": 0.7076824802793453,
+    "limits": "Rigid perspective approximation with 6 free extrinsic/scale parameters and fixed actual principal point (1376,1032) fitted to visible silhouette y200..800 (x1000..1600), no texture/fog/Unity globe transforms. Not uniquely identifiable; lower rows x<1000 excluded to avoid Sainte Chapelle overlap. Exact Ajo30 bearing90 and requested tilt85 constrain qualitative pose. +Z native GLB west."
+  },
+  "geometryRecipe": {
+    "sha256": "ac56b8290a291b0df403cdf8c310ab27d68da893e3d2c02151763329e5ab5156",
+    "sourceSHA256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "vertices": 12649,
+    "triangles": 6687,
+    "bytes": 2751968,
+    "towerVerticesChanged": 4216,
+    "protectedMeshVertices": 8433,
+    "yBase": 260,
+    "yBelfryBase": 300,
+    "yTerrace": 508,
+    "bothTowerPinaclesY": [
+      540,
+      540
+    ],
+    "spireY": 620,
+    "upperOuter": 138.9963610122341,
+    "bottomOuter": 111.5,
+    "bottomInner": 20.4,
+    "upperInner": 25.121361012234104,
+    "rows": [
+      200.0,
+      240.0,
+      280.0,
+      320.0,
+      360.0,
+      400.0,
+      440.0,
+      480.0,
+      500.0
+    ],
+    "originalCameraWidths": [
+      371.0551482605125,
+      360.87050145876947,
+      350.68585465702654,
+      346.96556250032745,
+      343.6548746295998,
+      340.34418675887264,
+      337.033498888145,
+      333.7228110174176,
+      332.0265513387592
+    ],
+    "revisedCameraWidths": [
+      419.87732163602334,
+      405.79616466601715,
+      391.7150076960113,
+      381.3649090339554,
+      371.2687008921296,
+      361.17249275030395,
+      351.0762846084783,
+      340.98007646665246,
+      335.9018428255738
+    ],
+    "fullBodyCrossSections": [
+      {
+        "y": 260.0,
+        "leftRightBodyWidth": 58.0,
+        "pairOutsideWidth": 220.0,
+        "centralGap": 104.0
+      },
+      {
+        "y": 300.0,
+        "leftRightBodyWidth": 91.1,
+        "pairOutsideWidth": 222.99999999999997,
+        "centralGap": 40.8
+      },
+      {
+        "y": 450.0,
+        "leftRightBodyWidth": 106.08276819493881,
+        "pairOutsideWidth": 259.66986902725006,
+        "centralGap": 47.50433263737243
+      },
+      {
+        "y": 508.0,
+        "leftRightBodyWidth": 113.875,
+        "pairOutsideWidth": 277.9927220244682,
+        "centralGap": 50.24272202446821
+      }
+    ]
+  },
+  "flecheVerification": {
+    "selectedTriangles": 28,
+    "shaftTriangles": 12,
+    "roofCollarTriangles": 16,
+    "selectedVertices": 60,
+    "triangleIds": [
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730
+    ],
+    "vertexIds": [
+      5242,
+      5243,
+      5475,
+      5476,
+      5513,
+      5515,
+      5517,
+      5519,
+      5947,
+      5948,
+      5949,
+      5950,
+      5951,
+      5952,
+      5953,
+      5954,
+      6229,
+      6230,
+      6231,
+      6232,
+      6233,
+      6234,
+      6235,
+      6236,
+      6284,
+      6288,
+      6308,
+      6309,
+      6316,
+      6317,
+      6318,
+      6319,
+      6320,
+      6321,
+      6326,
+      6329,
+      6370,
+      6371,
+      6372,
+      6373,
+      6374,
+      6375,
+      6376,
+      6377,
+      6654,
+      6655,
+      6656,
+      6657,
+      6664,
+      6665,
+      6666,
+      6667,
+      7019,
+      7021,
+      7023,
+      7025,
+      7054,
+      7055,
+      7339,
+      7340
+    ],
+    "bounds": [
+      [
+        -22.5,
+        282.0,
+        -48.5
+      ],
+      [
+        22.5,
+        620.0,
+        -3.5
+      ]
+    ],
+    "stoneDrumExcluded": "y181..278 and coping y278..282; collar starts y282",
+    "sharedVerticesWithUnselected": 0,
+    "splitRequired": false,
+    "sagePatchPixels": [
+      1492,
+      848,
+      300,
+      300
+    ],
+    "atlasPixels": 2048,
+    "chartComponents": 16,
+    "outsideUVsExactlyUnchanged": true,
+    "textureEdits": false,
+    "geometryEdits": false,
+    "normalEdits": false,
+    "detail": "Subdued existing sage-roof albedo/normal seams; brown drawn imagery replaced.",
+    "inputSHA256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "sourceReference": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/paletti-v2/notre-dame.bytes",
+    "colorMeanBefore": [
+      0.5377872806425608,
+      0.4304966642961971,
+      0.29059876531745704
+    ],
+    "colorMeanAfter": [
+      0.4338483338022345,
+      0.4338483338022345,
+      0.33188755556584537
+    ],
+    "tints": [
+      {
+        "factor": [
+          1.725,
+          1.754,
+          1.252
+        ],
+        "beforeSRGBlinearApprox": [
+          0.9276830591084173,
+          0.7550911491755297,
+          0.3638296541774562
+        ],
+        "afterSRGBlinearApprox": [
+          0.7483883758088545,
+          0.7609699774891193,
+          0.4155232195684384
+        ]
+      },
+      {
+        "factor": [
+          1.46625,
+          1.4909,
+          1.0642
+        ],
+        "beforeSRGBlinearApprox": [
+          0.7885306002421547,
+          0.6418274767992002,
+          0.3092552060508378
+        ],
+        "afterSRGBlinearApprox": [
+          0.6361301194375263,
+          0.6468244808657514,
+          0.35319473663317263
+        ]
+      }
+    ],
+    "visualLimit": "CPU diffuse, bilinear albedo. No game PBR/normal or display matching. Source reference / #2175 / UV-only under both requested multipliers.",
+    "feedbackReviewed": [
+      "nd-45.jpg",
+      "nd-5-taka.jpg",
+      "nd-5.jpg",
+      "nd-yla.jpg"
+    ],
+    "recipeOwnership": "output/pariisi-lod-korjaukset-2168-2169-20261106/notre-dame/revise.py:196 plus output/notre-dame-kartta-syvyys-20261106/geom/proxy-depth.json central-spire."
+  },
+  "renderLimit": "Local CPU comparison; front projection fitted from the #2175 trial screenshot. Diffuse shading and normals approximated, no Unity map, perspective match in front only, no game fog. Receiver runs the actual game."
+}

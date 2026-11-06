@@ -1,0 +1,9 @@
+# Karttasepälle ja Päätoimittajalle – Notre-Dame #2184 ajon 30 jälkeen
+
+Luin omistajan 20.58 päätöksen sekä ajon 30 neljä pelikuvaa ja G-viitteen. Korjattu GLB, manifesti, lähde- ja oikeusinventaario, vertailukuva, QA ja SHA-summat ovat uudessa kansiossa `posti/codex-notre-dame-2184-pelikoe30-20261106/`. GLB:n SHA-256 on `ac56b8290a291b0df403cdf8c310ab27d68da893e3d2c02151763329e5ab5156`.
+
+**Tornit.** Levennys alkaa julkisivun säilytetyn tyven yläpuolelta ja jatkuu koko kellotornirungon matkalla. Ajon 30 etukuvan siluettiin sovitetun kameran samoilla riveillä (y=200 ja y=500) edellinen malli on 371,1 / 332,0 = 1,1175 ja uusi 419,9 / 335,9 = 1,2500. Väliriveilläkin leveys kasvaa tasaisesti. Yksittäisen tornirungon leveys nousee noin 91,1 → 113,9 malliyksikköön ja vapaa keskisola säilyy. Molempien tornien huiput ovat korkeudella 540, keskitorni 620. Korkeus ja kaikki syvyyskoordinaatit säilytettiin. Tyvi korkeuteen 260, portaalit ja ruusuikkuna täsmäävät #2175:een. Leveämpi yläosa on tarkoituksellinen. Säilyttäkää sama maantieteellinen sijoitus, korkeus ja kamerat.
+
+**Flèche.** Metalliselle huipulle ja sen alimmalle metallilappeelle (28 kolmiota) otettiin väri ja pintareliefi mallin omasta vihreästä katosta. Kivisen jalustan tekstuurikoordinaatit ja molemmat upotetut atlas-kuvat ovat tavulleen entiset. Kiven värikarttaa ei säädetty.
+
+**Seuraava koe.** Käyttäkää saman ajon 30 ylä-, 45°- ja 5°-etu- ja takakameroita. Mukana on paikallinen vertailu samalla sävyllä (1,725 / 1,754 / 1,252) sekä kauttaaltaan 15 % pienemmillä kertoimilla (1,46625 / 1,49090 / 1,06420). Molemmat läpäisivät paikallisen palettitarkistuksen ja flèche pysyy katon vihreän sävyisenä. Kiven himmennys valitaan pelissä teidän kokeellanne. Pyydän pelikuvaa myös Sainte-Chapellen rinnalta omistajalle. Kuitatkaa SHA ja kokeen tulos erikseen. Nykyinen Notre-Dame pysyy pelissä omistajan päätökseen asti; ei julkaisua eikä buildia.

@@ -1,0 +1,36 @@
+{
+  "task": 2184,
+  "type": "static-building",
+  "label": "Notre-Dame, G-tornit ja katonvihreä flèche",
+  "file": "notre-dame-2184.glb",
+  "sha256": "ac56b8290a291b0df403cdf8c310ab27d68da893e3d2c02151763329e5ab5156",
+  "bytes": 2751968,
+  "triangles": 6687,
+  "vertices": 12649,
+  "materials": 1,
+  "textureSizes": {
+    "color": 2048,
+    "normal": 1024
+  },
+  "newTripoJobs": [],
+  "cost": 0,
+  "productionStartedAt": "2026-11-06T19:06:11.530524+00:00",
+  "for": "Karttaseppä / owner game trial, existing game model pending decision",
+  "fullWidthRatioCalibratedFront": 1.2500000538968645,
+  "preview": "Notre-Dame-2184-vertailu.jpg",
+  "qa": "QA.json",
+  "sources": "SOURCE-INVENTORY.json",
+  "checksums": "SHA256SUMS",
+  "requestedGameMultipliers": [
+    [
+      1.725,
+      1.754,
+      1.252
+    ],
+    [
+      1.46625,
+      1.4909,
+      1.0642
+    ]
+  ]
+}
