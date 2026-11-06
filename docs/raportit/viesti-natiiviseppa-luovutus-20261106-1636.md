@@ -4,6 +4,10 @@ Korvaa -1611:n Tilan ja SEURAAVA TYÖ:n. -1611:n Linjaukset, Mitattu ja Opit pä
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Remote Controliin ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, nyt haarassa natiiviseppa/origo-koe, peili natiivi-backup.
 
+## LISÄYS 16.3x (PT, KK:n tarkennus)
+- Origokokeen tulos SUORAAN KK:lle, ei vain yhtenä rivinä PT:n kautta. KK on jo kertonut 4b:n tuloksen omistajalle: älä toista sitä.
+- Kyltit NUI:lle vasta kokeen jälkeen. Viesti NUI:lle ehti lähteä ennen tarkennusta; ei toimia. Kokeen jälkeen ei tarvitse lähettää uudelleen, ellei tulos muuta sitä.
+
 ## Tila
 - iPad 4b luettu: D/tulos.md, skriptit D/hyppy2.py (hyppy2.txt), kyltti2.py, kaanna.py. PT:llä ja KK:lla. Lukukorjaus (akselivirhe) lähetetty molemmille. KK:lla pätkät D/patka-*.gif.
 - PT 16.3x: KYLLÄ yksi origokoe omassa koehaarassa, JU:n vuorolla 3c:n jälkeen. EI junaan eikä oletukseksi. KK:lle yksi rivi kokeesta vasta sen jälkeen.
