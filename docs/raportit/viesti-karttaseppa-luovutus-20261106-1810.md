@@ -12,7 +12,7 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 - **Ajo 29:** NUI:n viides kuva `lisa-kyltti-halles.txt` (ajo 28 alkoi 18.06 ilman sitä, 31 kuvaa).
 - Rivi PT:lle, päivitä `laikka-vesi-20261106/syy.md`, jos raidasta tulee uutta.
 ## RAITA (`laikka-vesi-20261106/syy.md`, parit `parit-yhteinen-27/kk/raita-*`)
-Syy todennettu ajossa 27: Notre-Damen pohjakuvan `pohja-ranta.png` punertavat pikselit. Koekuva `pohja-ranta-vesi1` (162912f91) poistaa ne, oletus yhä vanha; kokonaisuus KK:lla. Heikko veden sävyn vaihto siniharmaasta oliiviin jää, ei korjattu.
+Syy todennettu ajossa 27: Notre-Damen pohjakuvan `pohja-ranta.png` punertavat pikselit. Koekuva `pohja-ranta-vesi1` (162912f91) poistaa ne; PT katsoi raita-yla:n ja kuittasi 18.1x: tee siitä Notre-Damen oletus kokeen haarassa ajoon 29, ei junaan (Nahtavyysalue.cs Pohja). Heikko veden sävyn vaihto siniharmaasta oliiviin jää, ei korjattu.
 ## TEE AJON 28 JÄLKEEN (OMISTAJAN PÄÄTÖS 18.09, ei ennen ajon loppua; ajoon 29, kokeena, ei junaan)
 1. **Riemukaari #2172 "Kelpaa (Suositus)":** korvaa nykyisen kokeessa: Nahtavyysalue.cs:n Riemukaaren Tiedosto ja sävy lod3-20261106:een (sävy 1.010 0.926 0.643, sama `koemalli`:n kanssa, tarkista `tee-lod-v3.py`). Kuitattu Codexille 741e22033.
 2. **Notre-Dame #2171 "Ei vielä (Suositus)":** nykyinen pysyy. Kuitattu c69dc6088; vahti ilmoittaa seuraavan toimituksen.
