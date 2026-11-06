@@ -27,3 +27,21 @@ Saint-Sulpice, Saint-Eustache, Madeleine, Palais Bourbon: nimi kokonaan tai ei o
 - KK:n osoite local_231e4bad. Viestit kulkivat SendMessagella; jonotetut eivät ole varmasti luettuja.
 - Lukulista 7.47: luvut 4 ja 6 yhä lukematta.
 - LOPPUTESTIT siirtyy: iPadin muisti, kun Pariisi valmis (2.209).
+
+## LISÄYS 07.2x (tämä korvaa ylempänä olevan "odottaa KK:ta"; kärki 0be5ac89e; KS:lle ilmoitettava uusi kärki, ks. Ensin)
+Tehty: mäki esteeksi (KK:n kyllä) 0be5ac89e, KeraaNimiEsteet: nimettömät mallit, vain nimille. KK:n sanat: "nimi kokonaan tai ei ollenkaan; naapurien nimet säilyvät, kyltit eivät muutu, eikä nimi vilku kameran liikkuessa. Tuo nui-m3:n kamerasta pari seuraavasta yhteisestä ajosta, ja katso samalla Pont Neuf." Vilkkuminen on katsomatta: ValitsePaikka-hystereesi koskee vain väistyviä nimiä.
+
+### ENSIN: korkeustaulukko supistettuna (KK kyllä 07.1x, korvaa 02.41:n koko alueen taulukon)
+KK:n sanat: "Tavoite: merkit ja nimet näkyvät heti paikallaan, eivät koskaan 0 m:ssä, eikä tasaisen alueen ja Montmartren rajalla näy hyppyä. KS:n kaava on sama lähde kuin kartalla. Montmartrella merkit ja talot eivät saa näkyvästi erota toisistaan. Reunan viive mitataan yhteisestä ajosta (mediaani ja suurin), ei omaa ajoa eikä junaan. Jos nimi tai merkki ilmestyy näkyvällä alueella myöhässä, taulukkoa laajennetaan eikä viivettä hyväksytä. Tuo pari ja luvut minulle."
+Suunnitelma (aloittamatta, data katsottu vain otsikoista):
+- Data: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/tee-palat.py, ign/*.json (altitude_minimale_sol), T['maa'] rivit 122–177. Talot: Sovita(maa + 15), joten taulukkoon raaka maa + 15, jotta merkit ja talot täsmäävät.
+- Alue: Montmartren reikä 48.8867, 2.3431, säde 1400 m (700 + 700) + vähintään yksi ruutu reunaa; MaanPintaRuudukko-kulmat, noin 460 arvoa. Pieni puhdas C#-luokka (short[]), lisää kaanna.sh:n LAHTEET-listaan, testit MaanPintaTestit.cs:ään. Täyttö naapureista, missä ei taloja (hautausmaa).
+- MaanPinta.Hae: TasaOsuus >= 1 → vakio (tehty); muuten, jos tasaus on päällä (TasaOsuus keskustassa > 0) ja kaikki neljä kulmaa taulukossa → Piirretty(lat, lon, taulukko) ilman kyselyä ja näkyy heti; muuten Cesium kuten nyt. Tasaus pois = täsmälleen nykyinen.
+- Ei koskaan 0 m: Paivita-metodin epäonnistunut näyte ja KaikkiNollaan tallentavat nyt 0.0. Vaihda vara-arvoon raaka 45 m (Sovita = 90 = tasainen, ei hyppyä) ja korjaa lokiteksti "jää 0 m:iin".
+- Tarkista kuvasta mäen laki (KK:n vanha ehto). Reunan 10–14 km viive: mediaani ja suurin lokista ("MATKAKIRJA maanpinta"), myöhässä → laajenna taulukkoa.
+
+### PT 07.1x: testikuva samaan korjaukseen (ei uusi työ)
+/Users/Shared/Claude/proto-3d/lokit/karttaseppa-pariisi-mp-e263b4b73/puut-ylhaalta.png: pyöreä merkki peittää "Saint-Germain-des-Prés'n luostari" -nimen alun, "Pompidou-keskus" jää pallon hintakyltin alle, "Place Dauphine" katkeaa puuhun. Tarkista, onko 0a5232aec ("embâcle") seuraavassa ajossa. Selvitä, miksi Peittaa ei estä näitä, vaikka puut, kyltit ja pyöreät ovat sen listoilla (kuvaa ei katsottu, ajo ei ehkä sisällä väistöä). Pallo Pompidou-nimen päällä: KK 19.59 "pallo jää ulos, ei muuteta" -0225:ssä; tarkista KK:lta ristiriita PT:n sanan kanssa.
+
+### Järjestys
+Ilmoita kärki KS:lle ja JU:lle → taulukko → PT:n kuva → kyltin häipyminen → Tuileries. Tuo KK:lle pari nui-m3:n kamerasta, Pont Neuf ja luvut seuraavasta yhteisestä ajosta.
