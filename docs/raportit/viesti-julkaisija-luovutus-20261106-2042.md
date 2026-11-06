@@ -12,7 +12,7 @@ Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claud
 4. TF: EI lähde ennen KK:n korttia "Pariisi valmis" PT:n kautta (omistaja 17.33). Etäyhteys vain KK:lla.
 
 ## TILA
-- Junarunko julkaisija/runko-219-muisti = 603d4213a natiivi-backupissa, ei käännetty. NUI-yhdistelmä 1104d0994 = 603d4213a + 13dab1aac, haara natiivi-backup/julkaisija/nui-yhdistelma-1104d0994, ei rungossa; rungon kärkeen vasta PT:n junakuittauksella. Laitekäännös lokit/julkaisija-laite-218-1104d0994 on tallella.
+- Junarunko julkaisija/runko-219-muisti = 1104d0994 natiivi-backupissa (603d4213a + NUI 13dab1aac, PT:n kuittaus NUI:n kautta, vienti 20.5x), ei käännetty junakäännöksenä; E seurannassa. Runko ei ole natiivi-backup/masterissa: huomioi juna koottaessa. 166378891 ei mukana. iPad-skriptien RUNKO osoittaa yhä d092f48cc:n käännökseen. Laitekäännös lokit/julkaisija-laite-218-1104d0994 on tallella.
 - iPadin indeksi: tyhjä (0 palaa) NS:n ajojen jäljiltä, ei 16 palaa.
 - Valoseppa-vahti pyörii taukolipulla.
 
