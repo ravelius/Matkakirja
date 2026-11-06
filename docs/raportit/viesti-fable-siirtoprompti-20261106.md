@@ -16,13 +16,15 @@ Omistaja vaihtaa tilin kotoa näytön jaolla ja avaa uuden istunnon kansiossa /U
 ## 2. Roolit
 Aloitusviesti kullekin: "Olet <Rooli> (<malli, effort>). Tili vaihtui. Aja git fetch origin. ENNEN MUUTA lue tuotannonohjauksen osio 0 (git show origin/main:docs/tuotanto/tuotannonohjaus.md) ja oma LUE ALOITTAESSA -rivisi (`node tools/raamattu-luku.mjs 7.47`), sitten oma uusin luovutuksesi (alla) KOKONAAN ja jatka sen jonosta. Viestit PT:lle send_messagella uudella id:llä <PT:n id>. Jos sait vanhoja PT:n viestejä, ne on jo tehty."
 
+Taulukon sha voi vanheta: varmista roolin uusin ennen aloitusviestiä: `git log --remotes=origin --since=1.day --format='%ci %h %D' -- 'docs/raportit/viesti-<rooli>-luovutus-*' | head -3`.
+
 | Rooli | Uusin luovutus (haara, sha) | Ensimmäinen työ |
 |---|---|---|
 | Postivahti | Matkakirja-posti/docs/raportit/, uusin viesti-postivahti-luovutus-* (levyllä) | kierros; KIERROS.md id:t |
 | Asemataulu | – | taulu tämän tilin osoitteeseen; mittarit, työlista, junat kerran |
 | Julkaisija | julkaisija-luovutus-1825, 5628e769e | ENSIN odottimet; origokoe iPad 5 kerran; KS:n ajo 29 tulos KS:lle; NUI:n yhdistelmä ja piilo-palautus. LAV:n 1-2 leivottu, 3c pysäytetty: ajetaan LAV:n rivistä |
 | Natiiviseppä | natiiviseppa-luovutus-1826, d785ac047 | origokokeen tulos; tilaraportti alle 10 kt |
-| Natiivi-UI | natiivi-ui/luovutus-20261106-1826, c4f6f3fe9 | yhdistelmän tulos; kyltit vain ajon 29 ja välkkeen jälkeen; tilaraportti alle 10 kt |
+| Natiivi-UI | natiivi-ui/luovutus-20261106-1826, 69b2a4c2c | yhdistelmän tulos; kyltit: Les Halles täyttyi, auki rakenne (31b1e5a7a, käännös) ja välke; tilaraportti alle 10 kt |
 | Pelikoodari | pelikoodari-luovutus-20261106-1825, b05af232b | lepo, kunnes kartta valmis LAV:lta; tilaraportti alle 10 kt |
 | Valoseppä | linssiseppa2/luovutus-20261106-1826, cbb3c907b | ajo 28: varjot ja lähiympäristön lista KK:lle; usvakoe (omistaja 18.20); tilaraportti alle 10 kt |
 | Karttaseppä | karttaseppa/luovutus-20261106-1826, 2bbb0c757 (Y 92ea0a945) | ajo 29 valmis ja jaettu; odota KK:n sanaa pareista |
