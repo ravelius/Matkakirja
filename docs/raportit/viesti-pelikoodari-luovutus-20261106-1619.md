@@ -35,8 +35,9 @@ Lukulista: luku 2 kohdat 2.0, 2.1–2.27, 2.59–2.71 ja 2.177:n alku, luku 4 ko
 - **Web:** kohta 2.4 tehty, PR https://github.com/ravelius/Matkakirja/pull/6368 (`384b57e74`), odottaa CI:tä ja yhdistämistä. Proton tyylikirjakopio jätettiin generoimatta, koska rungosta puuttuu myös karttapaletti v2; seuraava generointi tuo sen.
 - **`unity-tarkistus.sh` ajetaan sh:lla:** zsh-ajo antaa väärän "0 virhettä", jos vanhat DLL:t ovat paikalla. Aiemmat zsh-ajot eivät siis todista kääntymistä; peliajot ovat toimineet.
 - **PT kuittasi `ae161fdb6`:n junaan 219; JU yhdistää.** `unity-tarkistus` korjattu `a458e4e5c` (Peli-testit) ja `603d4213a` (Linssit-testit, haaran kärki): eivät kuulu renkaiden kuittaukseen, JU poimii erikseen (viesti lähetetty). Aja sh:lla: zsh-ajo epäonnistuu nyt näkyvästi.
-- **KESKEN: PR 6368:** PT käski yhdistää itse vihreänä, punaisena rivi PT:lle. `testit` oli 17.2x kesken. Katso tila `get_status`:lla seuraavalla vuorolla.
-- **Taso 1 on taas pääasia.** Auki: seuraavan juoksupelin ajon mukana kohta 2.3, kartta odottaa LAV:n sanaa.
+- **Web valmis:** PR 6368 yhdistetty mainiin (`71d9e97f9`), PT:n sanalla.
+- **Runko:** JU pikakelasi rungon `603d4213a`:een (`ae161fdb6`, `a458e4e5c`, `603d4213a`). Väliaikaiset worktreet `proto-pelikoodari-renkaat-juna` ja `pelikoodari-ohjainopetus` poistettu.
+- **LEPO (PT):** kartta odottaa LAV:n leivontaa, ei uutta erää. **Taso 1 on yhä pääasia.** Auki: seuraavan juoksupelin ajon mukana kohta 2.3, kartta odottaa LAV:n sanaa.
 
 ## 1. Tehty
 - **OMISTAJAN PÄÄTÖS 16.05 (KK), `8dfc13aaf`:** ulkorengas (leveys 140 pt, viiva 7, keskilinja 133), varjo 11 pt, sisällä nykyinen 64 pt:n rengas. Vasemmalla piste 14 pt (varjo 18), oikealla neljä kulmanuolta luonnoksen mitoin (`Peukalokohta.Merkki`, `Nuolet`). Kaikki ryhmässä `mk-peukalokohta__ohjain`, joka näkyy vain normaalitilassa. Rimpuilu ennallaan. `unity-tarkistus` 0 virhettä, pohjavahti ok. `Peli-testit` ajettu `292afcef2`:ssa 867/867; renkaan jälkeen ei uudelleen, muutos on vain UI:ssa, jota testit eivät käännä.
