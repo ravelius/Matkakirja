@@ -717,3 +717,7 @@ Omistaja 6.11.2026 klo 23.22 (KK:n välittämä): "Sinun pitää myös valvoa et
 ## RYHMÄ 2 KOKEENA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.27)
 
 KK 6.11.2026 klo 23.26 omistajan valtuutuksella: ryhmä 2 v13 ja 25 m:n raja kelpaavat kokeena, irtotalot pois. Opéran pari omistajalle aamulla, koska raja koettelee 5.11. klo 08.52:n sanaa. Ajon 35 varjot: peili poissa; Sacré-Cœurin varjo istuu, Invalidien varjoa ei juuri näy, VS arvioi.
+
+## INVALIDIEN VARJO ENNALLEEN, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.37)
+
+KK 6.11.2026 klo 23.36 omistajan valtuutuksella: Invalidien varjo jää ennalleen, kokeena, ei junaan (VS:n suositus). Täydentää 23.27:n kohtaa "VS arvioi", ei korvaa omistajan päätöstä. Peruste: ajot 28 ja 35 rinnakkain lähes samat, ja omistajalle kerrottiin "varjo näkyy heikosti" ennen hänen sanaansa "Kelpaavat". Kuva ja selitys aamun koontiin.
