@@ -14,3 +14,9 @@ Notre-Damen siluetti, aukot ja portaat on tehty näkyviksi 5° katselusta; mukan
 Tarkistakaa pelissä kummankin suunta, koko ja sijoitus sekä nimenomaan 5° katselukulma: siluetti, aukot/portaat, katon reunat ja tekstuurit/normaalikartta pelin varjostimessa. Pyydämme erilliset kuittaukset (1) vastaanotosta ja SHA256-tarkistuksesta, (2) todellisesta pelikytkennästä ja pelikuvan arviosta, (3) buildista/build-numerosta tai tiedosta ettei buildia vielä ole. Päätoimittaja/Karttaseppä: ohjatkaa kytkentä Pelikoodarille tarvittaessa.
 
 Codex ei ole muuttanut peliä, muita haaroja tai julkaissut buildia. Ei uusia generointeja eikä uusia maksullisia ajoja.
+
+## Nykyisen peliversion säilytys ennen vaihtoa
+
+Pääagentti varmisti esikatselu-2:n todelliset pelimallit `Resources/NotreDameKoe/*.bytes`: Riemukaari 39 094 kolmiota / 7 012 156 tavua (V2-lähde 39 106), Notre-Dame 19 871 kolmiota / 3 613 380 tavua (V3-lähde 3 902 720 tavua). Pelissä on siis lähteiden jälkeen muutettuja versioita. Varmuuskopioikaa nimenomaan nykyiset peliversiot rollbackiksi ennen vaihtoa.
+
+Tarkistakaa nykyisten meshien mitat ja pivot sekä Karttasepän myöhemmät kattokaide-, kattopaviljonki-, sävy- ja sijoituskorjaukset. Säilyttäkää nämä korjaukset vaihdossa; toimitettu kevyt malli ei yksin todista niiden säilymistä. Jos säilytys vaatii mallin jatkokorjausta, ilmoittakaa tarkka ero ja kuvat ennen korjausta.
