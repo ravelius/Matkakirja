@@ -608,3 +608,7 @@ Kokeen vastaus 9 nojasi 12.17:n vanhaan lauseeseen (omistaja 5.10.: simulaattori
 ## OMISTAJAN PÄÄTÖKSET 6.11. 18.49 (KK) (6.11.2026 klo 18.50)
 
 Tili vvi@vvi.fi: raja 99 % (Suositus): rivi 99 %:ssa, ei keventämistä eikä pysäytystä; Raamattu 12.21. Eiffelin reuna (ajo 28) Kelpaa (Suositus): saa avoimeen junaan; KK:n viestin sha 33ea85e3b on ajon 28 kärki eli mittausrivi 'ei junaan', ei itse korjaus; junaan vain Eiffelin reunan korjaus. Maalattu taivas #2178 Kokeillaan (Suositus): väliversio pelikokeeseen PT:n kautta; KK sopii muodon Valosepän kanssa ja tilaa Codexilta koko kierroksen.
+
+## KOVAT VARJOT KELPAAVAT KOKEENA (omistaja 19.08) (6.11.2026 klo 19.09)
+
+Omistaja 6.11.2026 klo 19.08 (KK): kovat varjot (ajo 28, 0ca5f68f6) "Kelpaavat (Suositus)", kokeena, ei junaan; viat kerrottu, korjataan. Hinta kerrottu arviona, ei iPadilta. Lähiympäristön lista (_tyo/linssiseppa2/kovat-varjot/ajo28/LISTA.md) rivin Nähtävyyksien lähialue puhtaaksi (omistaja 5.11. 08.52) alle, Karttaseppä; PT:n järjestys 19.09: talot kiinni nähtävyydessä, pinnat, yksittäiset. Valoseppä: varjon viat, ääriviivat, yksi iPad-mittaus; junaan vasta mitatulla luvulla ja omistajan sanalla.
