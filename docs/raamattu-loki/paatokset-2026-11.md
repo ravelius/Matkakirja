@@ -612,3 +612,7 @@ Tili vvi@vvi.fi: raja 99 % (Suositus): rivi 99 %:ssa, ei keventämistä eikä py
 ## KOVAT VARJOT KELPAAVAT KOKEENA (omistaja 19.08) (6.11.2026 klo 19.09)
 
 Omistaja 6.11.2026 klo 19.08 (KK): kovat varjot (ajo 28, 0ca5f68f6) "Kelpaavat (Suositus)", kokeena, ei junaan; viat kerrottu, korjataan. Hinta kerrottu arviona, ei iPadilta. Lähiympäristön lista (_tyo/linssiseppa2/kovat-varjot/ajo28/LISTA.md) rivin Nähtävyyksien lähialue puhtaaksi (omistaja 5.11. 08.52) alle, Karttaseppä; PT:n järjestys 19.09: talot kiinni nähtävyydessä, pinnat, yksittäiset. Valoseppä: varjon viat, ääriviivat, yksi iPad-mittaus; junaan vasta mitatulla luvulla ja omistajan sanalla.
+
+## SAUMAT JA LAIKUT PURETTU (omistaja 19.57) (6.11.2026 klo 19.58)
+
+Omistaja 6.11.2026 klo 19.57 (KK): "Tämän voi purkaa : Linjauksesi mukaan pysähdyksissä: Pariisin saumat ja laikut." KK:n kapea tulkinta katsauksesta 19.48: 5.11. 16.41:n seis poistuu vain saumoilta ja laikuilta. Metsän heikennys jää ennalleen, 3D-rakennukset kärjessä, rakentaminen ensin, ei iPad-mittauksia; mäkien varjostukseen sana ei ota kantaa. Tavoite: Pariisin kartalla ei näy reunaa tai laikkua, jossa kartan pala selvästi vaihtuu toiseen. Kuvat etenemisestä KK:lle heti (13.24). Raamattu 2.215.
