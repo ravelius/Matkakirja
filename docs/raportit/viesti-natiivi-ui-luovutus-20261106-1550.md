@@ -59,5 +59,8 @@ Kun jäljellä on vain D:
 Remote Control ei päällä: vain omistajan pyynnöstä.
 Hook listasi työlistalta rivit "Concorden aukio kokeena" ja "Nähtävyyksien lähialue puhtaaksi". En tunnistanut niitä omikseni, en päivittänyt.
 
+## Lisäys 15.5x: KS PT:n pyynnöstä, ei omaa ajoa, tutkimatta
+Temple-tornin ja Bastiljin tähtikyltit näkyvät ajon 19 kuvassa, mutta eivät ajon 18 kuvassa samalta kameralta (kallista 45, aja 48.8600 2.3700 0.003 2, suunta 0). KS: koodiero 18→19 on katettu vesi, koepaletin poisto ja Pompidoun siksak; 19:ssä kamera on heti alun jälkeen, 18:ssa skenaarion lopussa. Pari (vasen 18, oikea 19): proto-3d/_tyo/karttaseppa/parit-yhteinen-19/pari-rl-vesi.jpg. Katso pari täysikoossa, vastaa KS:lle (local_ddd980b0-2760-4c5d-a0c8-d65ad1ecb757) ja kerro, mitä pitää tehdä. Älä tee koodia ennen kuin syy on selvä.
+
 ## Odottaa, aloittamatta
 Tappien lasku vaakapuhelimelle (-1510:n kohta "Odottaa"): vasta, kun UI-sarja on yhdistetty.
