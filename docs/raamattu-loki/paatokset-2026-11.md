@@ -496,3 +496,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: peukalokohdat 'vain alussa j
 ## PIENENNETTY TRIPO-PUU RAKENNUSPALIKKAKOKEESEEN (OMISTAJA 6.11.2026 KLO 12.42) (6.11.2026 klo 12.4x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Otetaanko pienennetty Tripo-puu rakennuspalikkakokeen seuraavaan kuvapariin pallopuun tilalle?' = 'Otetaan (Suositus)'. Omistaja kysyi ensin: 'onko puiden tekemiseen vielä eri vaihtoehdot kokeilussa vai onko tuo jo lukittu malli joka näkyy viimeisimmässä kuvassa?'; KK kertoi, ettei ole lukittu. Kokemus: seuraavassa parissa oikean puun näköinen puu pallon sijaan; nykyiset neljä puuta kevennettynä, ei uusia Tripo-ottoja. Tekijä VS (PT), NS kytkee kokeeseen. KK: puiden pienennys ei enää odota koetta.
+
+## NIMIKYLTTIEN KOKO JA NÄKYMISEN ETÄISYYS KELPAAVAT (OMISTAJA 5.11.2026 KLO 20.08; KIRJATTU JÄLKIKÄTEEN) (6.11.2026 klo 12.56)
+
+OMISTAJAN KORTTI KK:ssa, sanatarkasti: 'Kelpaavatko nimikylttien koko ja näkymisen etäisyys?' = 'Kelpaa (Suositus)'. Pyyntö, johon kortti vastasi (klo 19.23): 'nimikyltit pitää olla pienemmällä, näkyvät vasta kun mennään lähemmäs rakennusta'. Lähde: keskustelut/Keskustelukanava-2026-11-05-klo-1944-2044.md rivit 82–86 (PT tarkisti). Kuvat: kuvat/kyltit-013655981/. Rajaus: kortti koskee kuvia, ei pelin liikettä. Nimien katoaminen ja kulku rakennusten yli jatkuu erikseen Natiivi-UI:lla, työlistarivi 'Pariisin nimet: katoaminen ja rakennusten yli kulku'.
