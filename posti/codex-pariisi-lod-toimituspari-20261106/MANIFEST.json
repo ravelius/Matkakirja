@@ -1,0 +1,43 @@
+{
+  "ownerRelease": "Owner explicitly authorized sending both revised models on 2026-11-06; supersedes source checkpoint hold",
+  "sourceCheckpoint": "output/PARIISI-LOD-JATKO-20261106.json",
+  "assets": [
+    {
+      "replaces": "Notre-Dame V3",
+      "triangles": 1446,
+      "bytes": 2960932,
+      "files": [
+        {
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lod-toimituspari-20261106/notre-dame-syvyys.glb",
+          "path": "posti/codex-pariisi-lod-toimituspari-20261106/notre-dame-syvyys.glb",
+          "sha256": "5e82845b21865dbe7824658f97a61af0c815172d524f1f2776a2ba298cb7629c"
+        },
+        {
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lod-toimituspari-20261106/notre-dame-syvyys-vertailu.jpg",
+          "path": "posti/codex-pariisi-lod-toimituspari-20261106/notre-dame-syvyys-vertailu.jpg",
+          "sha256": "fd430c19ab1b31a851b9d0a1a167bbff4ef2c7fd285d1485e46db670cdf5eff5"
+        }
+      ]
+    },
+    {
+      "replaces": "Riemukaari V2",
+      "triangles": 1128,
+      "bytes": 2237000,
+      "files": [
+        {
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lod-toimituspari-20261106/riemukaari-kevyt.glb",
+          "path": "posti/codex-pariisi-lod-toimituspari-20261106/riemukaari-kevyt.glb",
+          "sha256": "9b2866f00e4ec482e468d29f6f02668a3f2b404d47156b18e8dfe093c6162142"
+        },
+        {
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-lod-toimituspari-20261106/riemukaari-kevyt-vertailu.jpg",
+          "path": "posti/codex-pariisi-lod-toimituspari-20261106/riemukaari-kevyt-vertailu.jpg",
+          "sha256": "99bb729f7ed99f054b155a1cfe327c7dde6e72db9c02f200dc508e6abe85ff1e"
+        }
+      ]
+    }
+  ],
+  "receiverAcceptanceVerified": false,
+  "gameIntegratedVerified": false,
+  "buildVerified": false
+}
