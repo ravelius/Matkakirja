@@ -17,6 +17,11 @@ Pohja: -1233:n Tila, Avoin, Opetukset ja kohdat 2-6 pätevät (haara lavastaja/l
 7. PT:ltä kysytty: riittääkö pari2 ehdoksi, koska 84872eaa9:ssä ei ole tarkastelukameraa. Ei vastausta.
 8. Taihedian pohjoisesta (kuvat-friisi1/ovi-taihedian-pohjoinen): sali näkyy, 4 kolmion kohdasta ei väitettä, ei mitattu. Kohta 5 -1233:sta tehty kuvan osalta.
 
+## LISÄYS, PT 12.5x (korvaa kohdan 6-7)
+PT: pari2 ei riitä: 35140432d:ssä ei ole räystäskorjauksia. Koehaara lavastaja/raystas-koe-ei-junaan = b0f94ac0a (35140432d + 1c83110f0, 12d947396, a309d43de, 84872eaa9, ei ristiriitoja, ei junaan, ei pushattu, ei käännetty). Ajo A/aja-pari3.zsh <linja> b0f94ac0a, kuvat A/kuvat-pari3 (s--275p8-on, -pois), JU:lla pari2:n tilalle. Kohdan 3 kansio on siis kuvat-pari3.
+Pari1:n seinä: kameran paikka sama kuin saumat1:ssä (räystäs ja kuja samassa kohdassa), joten kyse ei ole kameran suunnasta. Päätelty, ei todistettu: pelitilassa pelaajan ympärillä häipyvä rakennus (loki "häipyy rakennuksen mukana"; tarkastelu pitää katot paikoillaan). Jos seinä puuttuu pari3:ssa, kyse on koodista, ja pari on uusittava.
+PT: friisi2 täysikoossa itse, sitten yksi rivi ja polku PT:lle. 1,5 cm:n korjaus ei ole kuitattu ennen sitä. Vienti odottaa KK:n ehtoa ja PK:n viittauksia.
+
 ## Seuraajan järjestys
 1. Lue Raamattu 7.47.
 2. Kun FRIISI2 AJETTU: tarkista 404, rajaa viisi liitosta täysikoossa, vertaa kuvat-friisi1:een (scratchpad-skripti katosi: rajaus 450-900 x 380-540 2000 px:n asteikolla f--151:lle). Katso myös, ettei 1 cm taaempi punainen näytä portaalta tai raolta, ja jalka: se siirtyi täytteen mukana, sitä ei mitattu. Tulos PT:lle; (-151,5):n rivi kiinni, jos porras on poissa.
