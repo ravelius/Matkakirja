@@ -67,7 +67,7 @@ Kaava (15.10.2026 alkaen ensisijainen): `start_session` (initiation user_asked, 
 jos osascript ei saa ohjata appia, omistaja sallii Järjestelmäasetukset › Tietosuoja ja suojaus › Käyttöapu (Claude/Pääte).
 Osascriptissä valikkojen nimet suomeksi (`click menu item "Uusi istunto" of menu "Tiedosto"`); malli valitaan luonnoksessa ennen
 ensimmäistä viestiä. Järjestys per sessio: luonti → `set_session_model` (jos väärä) → `set_session_effort` → `set_session_title`
-"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti → `set_remote_control`.
+"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti (etäyhteys vain KK:lle, Raamattu 7.9).
 Lupatila: ohitustila (bypassPermissions) kaikille paitsi Äänittäjä auto (sessiotiedostot 14.10.). Roolien aloitusviestin
 lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 
@@ -119,7 +119,7 @@ Taulukon viimeinen sarake. Cronit ovat session-only (CronCreate): ne kuolevat se
 aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tunnin sisällä.
 
 ## 6. Sallinnat, Remote Control, hookit
-- `set_remote_control <id> true` kaikille paitsi lepäävät.
+- `set_remote_control self true` vain KK:lle; muille ei (omistaja 6.11.2026 klo 16.08, Raamattu 7.9).
 - Sallinnat: projektin .claude/settings.json (gitissä) + PT:n .claude/settings.local.json. Gitissä oleva settings.local.json on vanha
   (vain aws/source/python3 -); Macin versiossa lisäksi Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*),
   mcp__ccd_session_mgmt__set_session_effort sekä PostToolUse- ja UserPromptSubmit-hookit pt-taulu-muistutus.py:lle. Älä checkouttaa
