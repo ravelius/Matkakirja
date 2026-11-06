@@ -1,0 +1,32 @@
+# Natiivi-UI: luovutus 7.11.2026 klo 00.26 (konteksti yli 25 %, pehmeä raja)
+
+Itsenäinen: korvaa kaikki aiemmat. Oma id local_43962c89-fc14-4098-9dd7-6153133ffcea. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364, NS local_99130238-aa54-4a29-bcc9-7a023584944b.
+Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, etäpää natiivi-backup (ei origin). Worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, nyt haarassa natiivi-ui/kuvapallo-nimi. Ei omia ajoja käynnissä.
+YÖN SÄÄNTÖ (omistaja 23.07, PT): kaksi yritystä tai noin 30 min per kohta, sitten kokeen osa pois tai edellinen toimiva tilalle, rivi KK:lle (vika, kokeiltu, suositus) ja seuraavaan. Yöllä vain Pariisi, Lontoo, juoksupeli. Kaikki kokeena, ei junaan.
+
+## Odottaa: JU:n viisi ajoa (kuittaus tulee viestinä tähän id:hen)
+L1:llä Pariisin ja Lontoon ajojen jälkeen (viimeksi odotti KS 38:aa, alkoi 00.15); ei aikaisteta. Kansiot lokit/. Skenaariot _tyo/natiivi-ui/.
+- nui-yksi-k01f, nui-yksi-k05, nui-yksi-k04, nui-nimi-tallenne: 6d12054b0 (natiivi-ui/aloituslento-paketti)
+- nui-kuvapallo-nimi: 36fe37f6a (natiivi-ui/kuvapallo-nimi = 6d12054b0 + kyltti)
+Tarkista jokaisesta rivi "laattapalvelin: paketti".
+
+## PT:n neljä kohtaa (tulos KK:lle, sha PT:lle; KK:lle kuvat ja aika, viat leikkaamatta)
+1) Vino raja terävän ja sumean välillä (kk-sarjan k01f, k05): näkyykö pelaajalle? Vertaa lokit/nui-aloitus-kk-paketti-8ac8d2a70/k01f ja k05 kuviin nui-yksi-k01f/v-k01f ja nui-yksi-k05/v-k05. Ei näy = ei korjausta, syy kuvasarjan hidastus (NS). Näkyy = laattojen latauksen vika: KYSY PT:ltä siirto NS:lle, älä korjaa itse. Rajaus: Mac, ei iPad. Kohdistus: v-k01f = lento +5 s (kk-sarjassa juuri ennen kaarrosta t 5,41, silmä 44 km); v-k05 = zoomaus +4,3 s (korkeus 4 km). Tarkista lokista, että kuva osui samaan kohtaan.
+2) k04: PARIISI-nimi hyvin iso, osin ruudun ulkona. Nimikerros (Assets/Matkakirja/Kartta/Nimikerros.cs): maahan painettu suurkaupungin nimi, kasvaa syöksyssä (654 km → 4 km 3,7 s:ssa). Sääntö "vain kokonaan ruudulla" rivillä 689, sen jälkeen häivytys haiveS:n mukaan (rivi 959 Piirra). Katso v-k04 ja nui-nimi-tallenne (50 fps, peliaika; kertoo nimen koosta ja kestosta, ei latauksesta): kauanko nimi näkyy ruudun ylittävänä. Video: tyokalut/tallenne-video.sh. Korjausehdotus, jos näkyy: nimi pois syöksyn ajaksi (vrt. OtsikkoVaistaa rivi 955, d31fc8676) tai nopeampi häivytys. Ei vielä kokeiltu.
+3) k12–k13 pehmeä kuva: SYY LÖYTYI. Eräajossa Screen 640×480, Kuvat.HaeSivulla(Max(Screen)) → 640×427 (kk-lokissa "kartan pieni kuva ladattu 640×427"). Vanhat iPad-lokit 2048×1536. Eli Mac-kuvien ominaisuus, ei korjausta peliin. 6d12054b0 lataa editorissa vähintään 2752 px (vain koehaara). Varmista v-k12 ja v-k13 (nui-yksi-k04), vertaa k07 ja k10; lokista "ladattu".
+4) Champs-Élysées'n kuvapallo ilman nimikylttiä (KK 00.22; kuva _tyo/karttaseppa/parit-yhteinen-37/kk/grand-palais-45.jpg kohta 1000,633): SYY: pallo on katukuva pariisi-nykyintro-c3.jpg. Raamattu 2.210: neljä katukuvaa ja Invalidit jäävät pieninä kartalle, eikä niillä ole nostoa; SaapumisKuvat piirsi vain pallon. Korjaus 36fe37f6a, 1. yritys, käännös 0 virhettä, AJAMATTA: Pieni.Kyltti esittelypaikan kohteesta (sulkeet pois: Quai Voltaire, Saint-Germain-des-Prés, Champs-Élysées, Cité, Invalidien kirkko), vaalea kyltti pallon vasemmalla, sama mittakaava kuin kylteillä (KyltinMittakaavaNyt), ei napautusta. Pulun kuvat ilman. Arvioi nui-kuvapallo-nimi: n-yleis, n-champs-45, n-cite-45. Tiedossa olevat riskit, katso kuvista: ei väistä muita kylttejä; Invalidien kirkko tuplaa "Hôtel des Invalides"; "Cité" on epäselvä metrokäynnille. Kuvien ja nimien ristiriita → kerro KK:lle, tekstit ovat omistajan linjan alla.
+
+## Valmiit
+- Intro laattapaketin kanssa 8ac8d2a70, kuvat lokit/nui-aloitus-kk-paketti-8ac8d2a70, KK ja PT saivat; PT: kelpaa kokeena. Tästä lähtien kaikki intron Mac-kuvat haarasta natiivi-ui/aloituslento-paketti (paketti: kaksi riviä Laattapalvelin.cs:ssä, luetaan lokit/julkaisija-laite-218-2cba21a3e/; jos kansio siivotaan, paketti puuttuu). JU tarkistaa koodista ja rivin ajon jälkeen.
+- Galerie: PT 00.1x: f29ff0335 pidetään kokeena, ei toista korjausta; gr-8-p:n 0,24 s jää. Tulos lokit/nui-tahtikyltit-20261106/tulos-nui.md, arkki37.jpg.
+- kk-* ajossa 37 ovat VS:n katkoskuvat, eivät minun.
+- Muut kokeet ennallaan: intro 51f9fad72, nimirivi c8a71c1cd (natiivi-ui/kartta-nimirivi), molemmat KK:lla; poiminta vain PT:n sanalla. Junaan vietäessä pois: `ui kuvajumi`, mittausrivit, kyltti-ui-lokirivi ae497b124, paketin ja 2752 px:n koehaararivit.
+
+## Avoinna, ei minun ilman PT:n sanaa
+Tyhjä pohja ja vino reuna ajossa 356eb0101; jumin 9,16 s; kylmä levyvälimuisti; Invalidit `ui kohdenostot kyltti` ei merkkiä; NS:n Liiku 43a2fa300; tappien lasku vaakapuhelimelle UI-sarjan jälkeen. Havaintoja, ei korjattu: piiloelementin suodin; Livian ohjeteksti sumean kartan päällä; suurennuslasin haalea neliö; Lopeta kierros ja Linssit lähes samassa; Saapumiskortti, Latauspalkki, KaupunkiKortti, Ponnahdus tarkistamatta; k03 palikkainen meri (VS/KS, ei minun).
+
+## Opit
+- zsh: muuttuja ei pilkkoudu sanoiksi: `$a`-silmukassa `${=a}`. --include=*.cs lainausmerkkeihin; käytä git grep.
+- Kaappaus pysäyttää pelin; kuvasarja ei kerro kestosta eikä latauksesta. Yksi kuva per ajo, tallenne vain logiikkaan.
+- is-ancestor epäonnistuu poiminnalla: kerro JU:lle patch-id tai git grep.
+- Peli-testit/unity-tarkistus.sh sh:lla, 0 virhettä noin 1 min. Viestit send_messagella id:llä, PT:lle enintään 3 riviä. Jos jono tyhjenee: rivi PT:lle "JONO TYHJÄ: Natiivi-UI". Etäyhteys vain KK:lla ja PT:llä: älä kytke. Hookin työlistarivit eivät ole minun.
