@@ -30,3 +30,13 @@ Tyhjä pohja ja vino reuna ajossa 356eb0101; jumin 9,16 s; kylmä levyvälimuist
 - Kaappaus pysäyttää pelin; kuvasarja ei kerro kestosta eikä latauksesta. Yksi kuva per ajo, tallenne vain logiikkaan.
 - is-ancestor epäonnistuu poiminnalla: kerro JU:lle patch-id tai git grep.
 - Peli-testit/unity-tarkistus.sh sh:lla, 0 virhettä noin 1 min. Viestit send_messagella id:llä, PT:lle enintään 3 riviä. Jos jono tyhjenee: rivi PT:lle "JONO TYHJÄ: Natiivi-UI". Etäyhteys vain KK:lla ja PT:llä: älä kytke. Hookin työlistarivit eivät ole minun.
+
+## PÄIVITYS 7.11. 01.0x: VOITTAA YLLÄ OLEVAT
+Ajot nui-yksi-k01f, -k05, -k04, nimi-tallenne valmiit ja katsottu; KK ja PT saivat k05:n ja k12–k13:n tuloksen. Worktree nyt haarassa natiivi-ui/nimi-syoksy.
+Odottaa JU:lta (L1, Pariisin ja Lontoon jälkeen): nui-kuvapallo-nimi (36fe37f6a), nui-nimi-tallenne-2 ja nui-yksi-k01f-2 (molemmat 1596d5e32, sisältää kuvapallon).
+- Kohta 1, k05: VALMIS, ei näy: v-k05 tasainen, ei vinoa rajaa. Ei korjausta.
+- Kohta 1, k01f: 2. yritys. 1. kuva osui liian aikaisin (kello 06.06, k01f 07.03), siinä ei rajaa, mutta eri kohta. sk-yksi-k01f-2 = lento +6,8 s. Vertaa kelloa 07.03 ja k01f:ää; jos raja näkyy: laattojen lataus → kysy PT:ltä siirto NS:lle. Jos kello ei osu tai raja ei näy: rivi KK:lle, ei kolmatta yritystä.
+- Kohta 2, k04: VIKA ON TODELLINEN. v-k04 osui liian myöhään (11 km), mutta tallenteessa PARIISI ylittää ruudun leveyden kuvat noin 94–108 (0,3 s) ja katoaa kuvaan 109 mennessä. Koe 1596d5e32 (1. yritys, käännös 0 virhettä, ajamatta): suurkaupungin nimi häipyy, kun leveys yli 45 % ruudusta (Nimikerros.cs rivi 690). Arvioi nui-nimi-tallenne-2 samoilla kuvilla (python-mittaus: tummat pikselit kuvissa 70–124; arkki 15 kuvan välein): ei saa ylittää ruutua. Huomaa, että sääntö koskee kaikkia suurkaupunkeja myös levossa.
+- Kohta 3: VALMIS: v-k12, v-k13 terävät, ladattu 1536×1024 (lähdekuvan koko); pehmeys oli Macin 640 px:n ominaisuus. Ei korjausta peliin.
+- Kohta 4: ajamatta, kuten yllä.
+- POIKKEUS ArgumentOutOfRangeException odota-tila-rivillä on myös kk-sarjassa; ajot jatkuvat; syy selvittämättä, ei kuulu näihin.
