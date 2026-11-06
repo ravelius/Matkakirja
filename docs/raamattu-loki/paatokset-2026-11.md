@@ -580,3 +580,11 @@ Omistaja 6.11.2026 klo 17.32 (KK): "nähtävyyksille pitää tehdä pienet kovat
 ## TF KUN PARIISI VALMIS, SITTEN LONTOO ILMAN TRIPOA (omistaja 17.33) (6.11.2026 klo 17.35)
 
 Omistaja 6.11.2026 klo 17.33 (KK): "lähden kotiin. julkaise TF kun pariisi valmis ja siirry sitten tekemään lontoota. sen voisi tehdä ensin kokonaan ilman tripoa ja kokeilla kuinka hyvän siitä saa sillä tavalla ja kuinka nopeasti se menee." KK:n kapea tulkinta (kerrotaan omistajalle): TF ei lähde ennen KK:n korttia "Pariisi valmis" (lupaus 5.11. 19.2x). Lontoolle ei töitä ennen KK:n suunnitelmaa; aika kirjataan aloituksesta; ei Tripo-tilauksia Lontoolle. Korvaa 5.11. 11.15 "sama toteutus lontoolle kuin pariisiin" kokeen osalta. Omistaja lähti Macilta 17.33.
+
+## TILINVAIHTO KOTOA (omistaja 17.36) (6.11.2026 klo 17.37)
+
+Omistaja 6.11.2026 klo 17.36 (KK): kortti tilinvaihdosta = "Vaihdan kotoa (Suositus)": hän vaihtaa näytön jaolla, kun KK tuo siirtoviestin. Työt jatkuvat; 90 %:ssa luovutukset ja siirtoprompti (vvi@vvi.fi) KK:lle. Tilin raja kysytään kortilla siirtoviestin kanssa.
+
+## TAIVAS: YKSI CODEX-LUONNOS (omistaja 17.36) (6.11.2026 klo 17.37)
+
+Omistaja 6.11.2026 klo 17.36 (KK): kortti taivaasta = "Teetetään (Suositus)": yksi Codex-luonnos, KK tilasi postilla 9398634e5. Ei pelityötä ennen omistajan sanaa.
