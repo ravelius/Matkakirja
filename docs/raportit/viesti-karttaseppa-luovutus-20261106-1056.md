@@ -12,7 +12,7 @@ Lue suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukana
 - VS:lle rajat lähetetty 10.5x, VS tuo sha:n.
 
 **Seuraavat työt:**
-1. **Tyylikirja mainiin:** tyylikirja.json on AINOA LÄHDE main-repossa. Sama lohko PR:llä main-repoon: skripti /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-karttaseppa/8ebf53aa-feca-41df-bfde-609a58071f19/scratchpad/paletti-v2-lohko.py (vaihtaa vain karttapaletti-lohkon, koska json.dump muotoilisi koko tiedoston uudelleen). Ota se talteen ennen kuin scratchpad häviää, tai kopioi lohko W:stä.
+1. **Tyylikirja mainiin:** tyylikirja.json on AINOA LÄHDE main-repossa. Sama lohko PR:llä main-repoon: skripti /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/karttapaletti-v2/paletti-v2-lohko.py (vaihtaa vain karttapaletti-lohkon, koska json.dump muotoilisi koko tiedoston uudelleen). Main-repossa sama: `python3 paletti-v2-lohko.py tyylikirja/tyylikirja.json`, eikä `node tools/tyylikirja.mjs`:ää tarvita, koska lohko ei generoi muuttujia (tarkista).
 2. **Kohteet:** aja `muunna` mallit, joiden portti ei mene läpi. Savy tiedostosta Nahtavyysalue.cs: oletus (1,75 1,85 1,6) notre-dame, eiffel, grand-palais, opera, invalides, montparnasse; 1,26 1,33 1,15 louvre, riemukaari, pantheon, sacre-coeur; 1,2 1,35 1,3 sainte-chapelle; puut 0,68 0,62 0,56 ja haalistus 0,35.
    Portti ei mennyt läpi: **opera 4,05 %, invalides 0,91 %, sacre-coeur 0,49 %, notre-dame ja sainte-chapelle** (uusin mitta ilman Savya tai Savyllä alla). Läpi: louvre, eiffel, grand-palais, riemukaari, pantheon, montparnasse, puu-1. Pohjat tarkistamatta työkalulla (`--ei-valoa`); albedomitan mukaan vain invalides-pohja 2,55 % yli 0,10.
    Notre-Dame 6,70 % ja Sainte-Chapelle 5,92 %: ylitys tulee lähes kokonaan tummista pikseleistä (L alle 0,26), jotka sääntö nostaa musteen tasolle. Suunnitelman riski: ikkunoiden ja katon yksityiskohdat voivat latistua, **katso kuvasta**.
@@ -28,7 +28,7 @@ Lue suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukana
 Forumin litteä ruskea alue = Canopée way/630511331 (building=roof) puuttuu NS:n paloista; kartan building-taso peittää 99 % sen muodosta (mvt14-pala 5.11., ei ajon oma). Kartan muutosta ei tarvita, jos katto tulee paloihin. NS suosittelee v10:een vain kattoa; perui 6 palan poiston, koska ne ovat myös kartan rakennuksia ja jättäisivät litteän jäljen. KK päättää, NS tuo sha:n. **Pidä palat-v9 ajoissa siihen asti.** 48 muuta isoa building=roof-kohdetta: tarkistamatta.
 
 ## ODOTTAA VASTAUSTA
-KK: rantarivin puut, Palais-Royal'n aukio, Tuileries'n nurmiraita, kattokortti v4/v6, Forum. NS: sha. VS: palettireitin sha; co-yla, co-ob kuitattu (Concorden vesi ei korjattavaa).
+KK: rantarivin puut, Palais-Royal'n aukio, Tuileries'n nurmiraita, kattokortti v4/v6, Forum. NS: sha. VS: palettireitin sha. Concorden vedestä VS kuittasi "ei korjattavaa"; co-yla:n Louvren puuttuminen on W f743d99ad:n todistettavana seuraavassa ajossa.
 
 ## Oppi
 Mittaa ensin, onko ongelmaa: suunnitelma oletti monen kohteen ylittävän rajan, mutta ruudulla selvä ylitys oli yksi kohde. json.dump tyylikirjaan muotoilee koko tiedoston uudelleen: vaihda vain lohko tekstinä ja katso git diff --stat.
