@@ -5,8 +5,7 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 1. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
 2. **Ajo 31 tilattu JU:lta 20.38, ei vielä valmis:** loki `lokit/karttaseppa-yhteinen-31-b8-08f5ea7bf` (voi olla `esikatselu-*-N`, katso `ajo.log`). Skenaario `sk-pariisi-yhteinen-31.txt`, 66 kuvaa + 25 tallennetta; kokoaja `parit-yhteinen-31/tee-skenaario.py <sha> varjo`. Odota JU:n viestiä.
 3. **Kun ajo on valmis:** katso kuvat täysikokoisina, tee parit `parit-yhteinen-31/kk/` (`r1-eiffel-*-nyt | -uusi`, sama `r1-mp-*`, ilman selitekaistaa; malli `parit-yhteinen-30/tee-parit-30.py`). Ryhmän 1 parit **PT:lle ennen KK:ta**. Sitten kansio VS:lle (av-*, mc-*, se-*, sf-*; kerro: taivas v2 9af846cec, maalattu kytkin päällä mc- ja saumoissa) ja NUI:lle (kyltti-kerronta: kuvan pitää tulla ennen lokin riviä "ui liiku: esiin", muuten ajo ei todista; kyltti31-*; 'UI-kello peliajassa' lokissa).
-4. **Jos VS:n varjostin 3d6e35696 kaataa käännöksen tai kuvat:** PT:n sana: ota pois, aja muu, rivi VS:lle ja PT:lle. Varjostin ajamatta.
-5. Sen jälkeen ryhmä 2 (LUOKITUS.md): yksi lähialueryhmä per ajo. VS lähettää myöhemmin sillan pään liu'un ja Palais Bourbonin kameran.
+4. **Jos VS:n varjostin 3d6e35696 kaataa käännöksen tai kuvat:** PT:n sana: ota pois, aja muu, rivi VS:lle ja PT:lle. Varjostin ajamatta. Sen jälkeen ryhmä 2 (LUOKITUS.md): yksi lähialueryhmä per ajo. VS lähettää myöhemmin sillan pään liu'un ja Palais Bourbonin kameran.
 6. Etäyhteys vain KK:lla. Hookin työlistarivit ovat PT:n työkalulla, en päivitä. Session id:t osoitekirjasta.
 ## RYHMÄ 1: TEHTY, AJAMATTA (`lahialue-20261106/ryhma1/RYHMA1.md`)
 - **TDF EI ole etujalan kortteli** (kerrottu PT:lle): se on jo maskin alla, paloissa ei mitään. Kortteli = way/69034126, 120, 173, 153, 149: asuintaloja 34–57 m jalanjäljestä, malli 2,4× oikea. LUOKITUS.md:n Eiffel-rivi vanhentunut, korjattu merkinnällä.
@@ -16,8 +15,7 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 - Iéna d8af34b86 (-pariisi4): eteläpää 25 m pidemmäksi pohjan alle (läpinäkymätön noin 15 m aineiston päästä). Kuva `silta-iena-etela`, sama kamera kuin ajon 30 silta-iena-paa; vain Y:ssä, kuten pohjoispääkin.
 ## AJO 31:N SISÄLTÖ (Y)
 VS f9fb1893d (taivas v2 + saumat), VS 3d6e35696 (varjo, PT: kyllä), NUI 99b556890 poimittu f143ec2e5, NUI 166378891 poimittu 76a04625f (**jää pois, kun Y kootaan junaan**, kuten 33ea85e3b). Järjestys: NUI liike ja kerronta, ryhmä 1, Iéna, varjo, taivas, saumat, `ui lentopiilo pois`, viistousva ja taivas 0, kyltti-31 viimeisenä. Saumat-lista palauttaa portaat, kallistuksen ja kerroksen.
-## AJO 30: KATSOTTU
-Kansio `lokit/karttaseppa-yhteinen-30-b8-38ab4d14d`, arvio `parit-yhteinen-30/ARVIO.md`. Parit KK:lla PT:n sanalla; ND-malli ei vaihdu ilman omistajan sanaa. NUI:n ja VS:n arviot heiltä PT:lle.
+Ajo 30 katsottu: kansio `lokit/karttaseppa-yhteinen-30-b8-38ab4d14d`, arvio `parit-yhteinen-30/ARVIO.md`. Parit KK:lla PT:n sanalla; ND-malli ei vaihdu ilman omistajan sanaa. NUI:n ja VS:n arviot heiltä PT:lle.
 ## LÄHIALUEEN HUOMIOT
 - Pompidou ja Saint-Sulpice: kartta ei tue poistoa, vain puut. TDF:n varmistus kuvasta ennen kuin sanon sen (PT); Grand Palais: mittaa verkko ennen KK:ta. Mittaustyökalut `lahialue-20261106/` (etaisyydet.py, hae-orto.py, rajaa-kaikki.py). `kv-*`-kuvat ajossa 28.
 - Pystysauma 2,3291: vastattu VS:lle 20.0x (mitattu reunaero, ei kuvatodistetta, Montmartren reunassa voi näkyä).
