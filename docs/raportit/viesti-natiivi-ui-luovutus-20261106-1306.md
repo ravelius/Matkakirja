@@ -49,3 +49,7 @@ Testilipuilla: vapaa lento vipu [74,103 88×176] × tappi [74,177 64×64]; keske
 552e635da kääntymättä. Vipu ja tappi oikeassa vapaassa lennossa; lista ja tappi oikeassa keskeytyksessä. Ohitan vaihtelun syy. Radion muste. Mac-koot ja täysi sarja.
 
 Kuvat vain PT:lle; E:n kuvat on jo viety KK:lle.
+
+## PT 13.1x kohtaan E (sellaisenaan, menee KK:n ajoituksen edelle)
+"KK 13.09 pallon ohjaimista: ei omistajalle nyt, vipu pysyy. Laske tapit vain vaakapuhelimella kokeena; oikean tilan ajo vasta PT:n vuorolla, Pariisin ja juoksupelin jälkeen. Kuva KK:lle, kortti vain, jos vipua pitäisi siirtää. Kirjaa luovutukseen, jos et ehdi."
+Ei ehditty: tappien lasku aloittamatta.
