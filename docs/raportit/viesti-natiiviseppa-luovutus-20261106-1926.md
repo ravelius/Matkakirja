@@ -1,4 +1,11 @@
-# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 22.27 (kohta 10 tehty, meri VS:lle PT:n kautta)
+# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty ilta (UUSI TYÖ: oleelliset nimet, aloittamatta)
+
+## ENSIMMÄINEN TYÖ, PT:n viesti ennen nollausta, ALOITTAMATTA
+PT: uusi työ, omistajan pyyntö, kokeena, ei junaan. Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261106-kartan-oleelliset-nimet.md, osat 1 ja 2. Lue se ensin.
+1) Kadut (elava-katu) oletuksena pois omalla tilalla ja uudella avaimella, muut nimet ennallaan (Sisaltokerrokset, Nimikerros).
+2) Vertailukuva testikytkimellä samoista kameroista: nykyinen | kadut pois | kadut, kaupunginosat, kylät ja pienet vedet pois. Pariisi lähellä, 45°, laaja näkymä, maaseutu kerran. Lyhyt Mac-ajo JU:lta, ei iPadia.
+Commit ja lista KS:lle seuraavaan yhteiseen ajoon; kuvat suoraan KK:lle, sha PT:lle. Kartta-välilehden riviä ei tehdä ennen omistajan päätöstä. Liiku odottaa ennallaan. Tarkista muiden haarat ensin.
+Oppi: kamera viedään Pariisiin vasta "saapuminen: FRA":n jälkeen tai lentopohjalla; ks. alla Pohja. Yhteisellä pohjalla uusi peli ajaa kameran Ranskaan noin 50 s:n kohdalla.
 
 ## Tila 22.24, KORVAA ALLA OLEVAT TILAT JA SEURAAVAT TYÖT
 - PT 21.4x, Pariisi valmis -listan kohta 10: kaksi työlistan riviä. Vain Mac, lyhyet ajot, kokeena, ei junaan, ei iPad-ajoja. Aloituslento on NUI:lla, älä koske.
