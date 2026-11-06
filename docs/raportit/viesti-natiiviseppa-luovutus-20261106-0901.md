@@ -3,10 +3,11 @@
 Korvaa -0839:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Luo ensin cron "4 9 * * *" uudelleen (Raamattu 7.41; proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py): ajastus kuolee sessionnollauksessa. Tämän päivän 09-tarkistusta ei ajettu.
 
 ## SEURAAVA TYÖ
-0. ENSIN, PT 09.0x (ehto "aito pieni kohde ei madallu" ei täyty; ennen v5:n ajoa, ilman omaa ajoa; tulos KK:lle ja PT:lle):
-   - Nimetyt madaltuneet läpi yksitellen, ei vain listana (palat-v5-nd-ranta.muutokset.json, kentät nimi, ennen, nyt; 59 kpl). Octroi de Neuilly way/81203962 15 → 3,5 m on aito kohde (PT). Sellaiset oikeaan korkeuteen tai pois säännöstä. Katso myös nimettömät erikoislajit (civic, government, public).
-   - 223 ylös noussutta: onko uusi pylväs. Suurin way/73112440 ja rinnakkaiset way/73113705, way/73117340 (noin 10 m², 15 → 36,2 m, 48.8956 2.4079) sekä height-merkityt way/78534896, way/78535883 (noin 9 m², 3 → 15 m). Tarkista, onko talo kiinni tornissa vai irrallaan; irrallinen on pylväs.
-   - Muutos koodiin tarkoittaa UUTTA kansiota (esim. palat-v6-nd-ranta), koska KS:llä on v5:n polku. KS:lle sanottu 09.0x: älä aja v5:llä ennen seuraajan sanaa. Kerro uusi kansio KS:lle.
+0. TEHTY 09.06 (PT:n pyyntö, yksi korjauskierros, käytetty): voimassa on palat-v6-nd-ranta, EI v5. tee-palat.py sha bf7204d495d41be8, 0 virhettä, ero v5:een kolmessa palassa (15_16591_11268, 15_16601_11273, 15_16603_11268); v5:n koodi tee-palat-v5-nd-ranta.py.kopio. Kansio ja sha KS:llä ja JU:lla; tulos KK:lla ja PT:llä. Tarkistus selvitys-yhteinen/v5-kohteet.py, OSM-tiedoista, ei kuvista.
+   - Korjattu: Octroi de Neuilly way/81203962 6 m (arvio, ei mitattu), way/73119876 pysyy 4,4 m:ssä (irrallinen pylväs), amenity=place_of_worship säännön ulkopuolelle (way/878120243). Nousseita 222; 36,2 m (way/73112440 ym.) on kiinni tornissa, irrallisia ≥ 2 m:n nousuja ei jäänyt.
+   - KK:lla epäselvinä: way/78407203, way/78406933, way/1046176585, way/1046176584; mahdolliset kuopat way/62296316, way/73428071, way/255652333; height-merkityt way/78534896, way/78535883. Eivät pysäytä ajoa. Katso ajon kuvista.
+   - AJO: Y b160104b7 alkoi JU:lla 09.02 v5:llä ennen PT:n sanaa "ajoa Y ei v5:llä". JU pysäyttää vain PT:n sanalla, tarkista tilanne. Uusi ajo v6:lla KS:n pyynnöstä. KK 08.59: tasainen oletukseksi samassa ajossa.
+   - Alla oleva palat-v5-kappale pätee v6:een näitä korjauksia lukuun ottamatta (luvut mitattu v5:stä). Seuraava koodimuutos uuteen kansioon.
 1. Tarkista viestit: KK:lta ja PT:ltä voi tulla vastaus v5:een (tasakattojen hinta, pylväät, kuopat).
 2. Arvioi ajo 4: `/Users/Shared/Claude/proto-3d/lokit/karttaseppa-yhteinen-4-0b4d74011` (KS:n viesti 08.5x; v4:n ajo, EI v5).
    - sc-80: läikkä täysikoossa x 1485–1685, y 1840–1955, vertaa ajoon 127346f24 (KS ei verrannut). Read pienentää yli 2000 px:n kuvat: rajaa ensin. Seinän väri ja rinteiden sivuvaikutukset.
