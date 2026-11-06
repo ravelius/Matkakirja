@@ -26,6 +26,8 @@ Näkyvin vika vanhassa kuvassa `lokit/esikatselu-20261105-211044/sauma-45-laaja.
 5.11. läiskien syy oli rinnevalo: se on rajattu pois. Jos jäljelle jäävä laikku on sitä, rivi PT:lle.
 Lukitus (arvot oletukseksi, ElavaTyyliVersio uusi, SHA:t KS:lle ENNEN) vain sanalla. KS auttaa kartan tasoissa.
 
+KS 20.0x, pystysauma 2,3291°: maastopalojen reunat eroavat x-rajalla 4149 enintään 9,5 m (kertoimella 19 m), samoin 2,2852° (7 m) ja 2,3730° (9,5 m); mitattu ämpärin 2026-10-29-maailma-paloista. Maaston z12:ssa on 8192 saraketta, siksi raja on sama kuin web-kartan z13. Yhteys kuvaan epävarma (sauma arviolta 2,330, noin 30 px sivussa). Suoraa korjausta ei tehty. Tasainen kartta on oletuksena Y:ssä (1303df5fc: 10 km / 14 km / 90 m), joten reunaeron pitäisi kadota säteen sisällä, mutta samalta kameralta ei ole todistusta. Montmartren reiän liukuvyöhykkeellä (noin 1 km keskipisteestä) se voi yhä näkyä: katso. Sf-/se-45-laaja kertoo tämän. KS kirjasi saumat-y:n listan loppuun seuraavaan ajoon, johon mahtuu.
+
 ## 4. KOVAT VARJOT: ÄÄRIVIIVA AJOON 31, KUVAT SEN JÄLKEEN
 Omistaja 19.08: kelpaavat kokeena. KK 19.15 antoi luvan ja rajan yli 4 m². `3d6e35696`, `linssiseppa2/varjo-aariviiva`, työkopio k17, 38ab4d14d:n päällä. Testit 11/11, unity-tarkistus 0. VARJOSTINTA EI OLE AJETTU. KS kuittasi ajoon 31.
 Lista `sk-varjo-aariviiva.txt`, kuvat `av-*`; parit ajon 28 `kv-*` samalla rajauksella (kv-eiffel, -sacre-coeur, -notre-dame, -sainte-chapelle, -grand-palais). KK haluaa mukaan: kaikkien kohteiden kolmiot 233 265 → 1 467 (mallien varjot, tiedostot 27 kt; puut, pyramidit, ohjelmakohteet yhä ajossa). Eiffel 48 477 → 279, 5,1 kt, 28 aukkoa, 89 % aukkojen alasta. Keskusta on umpinainen jo mallissa.
