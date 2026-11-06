@@ -600,3 +600,7 @@ Omistaja 6.11.2026 klo 18.23 (KK): "Paras olisi noiden kahden väliltä. Tehdä�
 ## TILINVAIHTO vvi@vvi.fi 6.11. (6.11.2026 klo 18.45)
 
 Omistajan siirtoprompti 6.11. Uusi tili vvi@vvi.fi (org b408744a, koodaustili, viikko 0 % klo 18.39). Tämän tilin sessiot tyhjennetty ja käytössä, taulu Qo5w6Wk4JSYRwYbyf2fJrm. Todettu: kotikansioajo 5.11. 21.07 vei Postivahdin kansion koti-haaraan ja KIERROS.md, NOLLAUS.md ja codex-odottaa.py katosivat juuresta; palautettu main-peilistä ja työkalu ohittaa Matkakirja-postin. Sovellus kytkee etäyhteyden itse käynnistyvälle sessiolle; PT kytki pois 9 roolilta, KK:lle jää (omistaja 6.11. 16.08). KS, VS ja PK jäivät kotikansiossa jälkeen omien tiedostojen takia; CLAUDE.md sama kuin mainissa.
+
+## OHJEIDEN KOE 6.11.: 12.17:n vanha simulaattorirajaus pois (6.11.2026 klo 18.48)
+
+Kokeen vastaus 9 nojasi 12.17:n vanhaan lauseeseen (omistaja 5.10.: simulaattoria vain vian toistoon), jonka 9.11 SIMU HARVOIN (omistaja 20.10.) korvasi. Vanha lause poistettu ja 12.17 viittaa kohtaan 9.11 (Raamattu 7.45, 14.2).
