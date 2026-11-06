@@ -1,0 +1,2808 @@
+{
+  "schema": "matkakirja-source-inventory-1",
+  "kieli": "fi",
+  "paivays": "2026-11-06",
+  "tyo": "#2167 — vain lähdetietojen dokumentointi",
+  "kohdepaketti": "posti/codex-pariisi-lod-toimituspari-20261106/",
+  "rajat": "Tämä dokumentti yksilöi kaksi jo toimitettua kokeellista mallia sekä niiden todennettavissa olevan lähdeketjun. Ei uusia generointeja, mallimuutoksia, peliasennusta, hyväksyntää, julkaisua tai lisenssin myöntämistä. Tiedostopolut ovat todistusaineiston sijainteja, eivät väite että ne kaikki sisältyvät postipakettiin.",
+  "menetelma": "Paikalliset tuotantolokit, lähdetekstit, generaattorikoodi ja alkuperäiset PNG/GLB-tavut luettiin. SHA256 ja Git blob SHA1 laskettiin nykyisistä tavuista. Aiemmissa toimituskuiteissa olevat repository-tiedot merkitään aiemmaksi tarkistukseksi, ei uudeksi verkkovarmennukseksi. Oikeustiedot ovat lähdelokien attribuutioita, eivät tämän dokumentin uusi oikeudellinen ratkaisu.",
+  "mallit": [
+    {
+      "nimi": "Notre-Dame / syvyysmalli",
+      "lopullinen_tiedosto": "notre-dame-syvyys.glb",
+      "tekijat_ja_tyokalut": [
+        {
+          "tekija": "Codex",
+          "tyo": "19a K2 -kuvien kokonaiset ImageGen-generoinnit, Tripo H3.1 + retopology, alkuperäisen 3D v1:n mitoitus, 499-kolmion LOD ja 1446-kolmion syvyysmalli",
+          "tyokalut": [
+            "OpenAI ImageGen",
+            "Tripo H3.1 / omistajan Tripo Max -tili Chrome-UI:ssa aiemman lokin mukaan",
+            "Tripo native Retopology",
+            "Python",
+            "NumPy",
+            "Pillow",
+            "SciPy / gaussian_filter",
+            "paikallinen CPU-rasterointi"
+          ]
+        },
+        {
+          "tekija": "Karttaseppä (Claude)",
+          "tyo": "Tripo v1 → V2 → V3 paikalliset geometrian ja tekstuurin korjaukset; lähde- ja tavoitetilaukset, pelisovituksen vastuu erikseen",
+          "todiste": "V2/V3 LAHTEET.md, huomiot.md ja tee_v2.py/tee_v3.py"
+        }
+      ],
+      "oikeudet": {
+        "lisenssi": "Projektikäytön peruste: mallikohtainen lähdeketju ja palveluehdot; koko GLB:lle ei ole määritetty avointa jakelulisenssiä.",
+        "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+        "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus.",
+        "kayttooikeuden_peruste": "Ks. palveluehdot_ja_kayttooikeus ja mallin omat, nimetyt kuvalähteet."
+      },
+      "suora_lod_input": {
+        "glb": "499-kolmion notre-dame-karttakoe.glb, SHA256 bdd020d8207ed67bb348fe6d81dcda1f589ed9ad443db1d95ef8c09fd7e29ff1",
+        "raskas_esiaste": "Karttasepän notre-dame-3d-v3/notre-dame.glb, SHA256 f1688e1636d92db0bcfa38e462daf10baa33e7080398546f742ce0c8ef3ac0fe",
+        "selitys": "Syvyysmallin build_depth.py lukee 499-mallin GLB:n ja vanhan atlasasettelun. Albedo sisältää suoraan K2-kuvista projisoituja pintoja sekä peittyvillä/kuvaamattomilla pinnoilla V3:sta leivottua materiaalia. Normal map on aiempaa mapia ja kuvan luminanssipiirteitä yhdistävä johdos, ei uusi fyysisesti mitattu reliefi."
+      },
+      "versioketju": [
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/raw/notre-dame-k2-attempt03-raw.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 5238728,
+          "sha256": "1bfd0479b27f8de35814d646f63d8a17b8734fa37c2ff1d9bea73c742c7ec253",
+          "git_blob_sha1_laskettu": "b1e8f30edc640cebcf6cca61596c4a96dc1b9da0",
+          "vaihe": "Tripo H3.1 otto 3; neljä K2-PNG:tä; job cb47518e-f93c-4d81-85ce-9a91014e6978"
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/raw/notre-dame-k2-attempt03-retopo20k.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2920912,
+          "sha256": "2ec3cac2836811b6dd8c7c7cc975fc8efedec7cef4c90e66a07799e13b35edcb",
+          "git_blob_sha1_laskettu": "16daf1faa1cdd6aae507ba0a2f2cafd5205de9e0",
+          "vaihe": "Tripo Retopology Triangle 20k, sama työtila"
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/delivery/notre-dame-3d-v1/notre-dame.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2921020,
+          "sha256": "719d7cf10dc210ed17d936e57dbc979b81b6b3c73c08dcce5d0972f8f47544c0",
+          "git_blob_sha1_laskettu": "49d002d6f2d1365d44ee910de9175ed5b24c0d6e",
+          "vaihe": "Codex: NumPy-mitoitus ja tornikorkeuksien tasaus, alkuperäinen v1; toimitettu ZIPissä be3edd0bbf21554221a9fbecca83aa35a8e36aac",
+          "repo": {
+            "commit": "be3edd0bbf21554221a9fbecca83aa35a8e36aac",
+            "zip_polku": "posti/notre-dame-3d-v1-20261104/notre-dame-3d-v1.zip",
+            "zip_blob": "115d14263c2bee12f9fc151aaf26e0bbf8dbe0b0",
+            "zip_sha256": "1827395817ed687270027f67187863c03355994eaca5631e79903623b3ae9cb6",
+            "glb_sijainti_zipissa": "notre-dame.glb",
+            "varmennuksen_taso": "GLB on toimitus-ZIPissä; yksittäisen GLB:n repo-blobia ei väitetä. Paikallinen v1 GLB:n SHA256 vastaa manifestia."
+          }
+        },
+        {
+          "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v2/notre-dame-3d-v2/notre-dame.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 3693172,
+          "sha256": "d175bffa18099088dc29d005bf7f158dcfdf09d463c9367ae236c1db65a08dc2",
+          "git_blob_sha1_laskettu": "6b5a3406f146c1fd570c8f3a00a5d09248036525",
+          "vaihe": "Karttaseppä / Claude: V2 tornien levennys ylöspäin, risteyskohdan möykyn ja huipun tumman UV-läikän poisto, tornikattojen kiviväri; ei uutta generointia"
+        },
+        {
+          "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v3/notre-dame-3d-v3/notre-dame.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 3902720,
+          "sha256": "f1688e1636d92db0bcfa38e462daf10baa33e7080398546f742ce0c8ef3ac0fe",
+          "git_blob_sha1_laskettu": "162f994e4cf8ec1fa3bb12398a2049655d4a1a96",
+          "vaihe": "Karttaseppä / Claude: V3 pohjoistornin pisteviivan ja 33 tumman tekselin korjaus sekä tornien väliin yksinkertainen harjakatto (25 sirpaletta pois, 6 kolmiota); tämä on LOD:n raskas vertailulähde"
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-v3-bittikarttakoe-20261106/notre-dame-karttakoe.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2469248,
+          "sha256": "bdd020d8207ed67bb348fe6d81dcda1f589ed9ad443db1d95ef8c09fd7e29ff1",
+          "git_blob_sha1_laskettu": "c4e4aa77ace91757845c502410386efa562d1d41",
+          "vaihe": "Codex: koodilla tehty 499-kolmion arkkitehtuurikuori, V3:sta leivottu atlas, neljän K2-kuvan suora pintakohtainen värisiirto; peittyneet/kuvaamattomat pinnat perivät V3:n"
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-kartta-syvyys-20261106/notre-dame-syvyys.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2960932,
+          "sha256": "5e82845b21865dbe7824658f97a61af0c815172d524f1f2776a2ba298cb7629c",
+          "git_blob_sha1_laskettu": "5ee0b48bc0977aa58e0e238b816eacf7854bbeb0",
+          "vaihe": "Codex: 1446-kolmion syvyysmalli, oikeat aukot ja portaalisyvennykset/kaiteet, 499-mallin rekisteröity atlas, valaistuksen rauhoitus ja normal mapin säätö; lopullinen toimitettu pari"
+        }
+      ],
+      "alkuperaiset_tripo_syotteet_ja_suorat_2d_lahteet": [
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/sources/k2-approved/lansi.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1682046,
+          "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+          "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+          "kuvakoko": [
+            1024,
+            1536
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Notre-Dame Tripo-oton 3 syöte",
+            "Suora 2D-värilähde 499-kolmion LOD-atlakseen; syvyysmalli perii tämän atlaksen"
+          ],
+          "tekija": "Codex / sisäänrakennettu OpenAI ImageGen, Matkakirja-projektin työ",
+          "versio": "19a K2 / lansi-v2",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/lansi-v2.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 1682046,
+            "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+            "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+            "kuvakoko": [
+              1024,
+              1536
+            ],
+            "kuvamuoto": "PNG"
+          },
+          "alkuperaisen_tavut_samat": true,
+          "generointipyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/lansi-v2.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2703,
+            "sha256": "694aa3c62cb6e7bb2d8a4765128f1e46615fd347e43a85eb625d76d87e54ad82",
+            "git_blob_sha1_laskettu": "bea97bb9c53a78e882e301509d128e80dd40c227"
+          },
+          "repo": {
+            "repository": "ravelius/Matkakirja",
+            "commit": "5d5fe232ebdce603050c0544cae6e0b8983945ad",
+            "polku": "posti/codex-karttaseppa-notre-dame-19a-k2-pohjakuvat-20261104/lansi.png",
+            "blob": "d764fd419c66f2f6a38c29f46c961a285db103de",
+            "varmennuksen_taso": "Blob-tunniste laskettu tässä paikallisista tavuista; aiempi delivery-receipt.json kirjaa saman SHA256:n ja byteReadbackVerified=true. Ei uutta verkkolukua tässä dokumentointiosassa."
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/sources/k2-approved/ita.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1639099,
+          "sha256": "67c3abc867efc13f1dd518106baaabeb4a1c867d4d66657e2dbe6d493fef8dc8",
+          "git_blob_sha1_laskettu": "a965e6180650ecc6a59a6b1fe6696696a4838263",
+          "kuvakoko": [
+            1024,
+            1536
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Notre-Dame Tripo-oton 3 syöte",
+            "Suora 2D-värilähde 499-kolmion LOD-atlakseen; syvyysmalli perii tämän atlaksen"
+          ],
+          "tekija": "Codex / sisäänrakennettu OpenAI ImageGen, Matkakirja-projektin työ",
+          "versio": "19a K2 / ita-v1",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/ita-v1.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 1639099,
+            "sha256": "67c3abc867efc13f1dd518106baaabeb4a1c867d4d66657e2dbe6d493fef8dc8",
+            "git_blob_sha1_laskettu": "a965e6180650ecc6a59a6b1fe6696696a4838263",
+            "kuvakoko": [
+              1024,
+              1536
+            ],
+            "kuvamuoto": "PNG"
+          },
+          "alkuperaisen_tavut_samat": true,
+          "generointipyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/ita-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3086,
+            "sha256": "ce891fe845c5a00d1c8592ea17cd57448fbe4cad982055328127f2c907d160c6",
+            "git_blob_sha1_laskettu": "11213a338df1ef77fc8583c7d0a401264b5f12a2"
+          },
+          "repo": {
+            "repository": "ravelius/Matkakirja",
+            "commit": "5d5fe232ebdce603050c0544cae6e0b8983945ad",
+            "polku": "posti/codex-karttaseppa-notre-dame-19a-k2-pohjakuvat-20261104/ita.png",
+            "blob": "a965e6180650ecc6a59a6b1fe6696696a4838263",
+            "varmennuksen_taso": "Blob-tunniste laskettu tässä paikallisista tavuista; aiempi delivery-receipt.json kirjaa saman SHA256:n ja byteReadbackVerified=true. Ei uutta verkkolukua tässä dokumentointiosassa."
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/sources/k2-approved/etela.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1495312,
+          "sha256": "67b76735053ed15a53edce3bc0a73c7f569e345475a46374cdc1252c63ce8184",
+          "git_blob_sha1_laskettu": "93b4a9a093086e43841f78e646c54a305ddaa849",
+          "kuvakoko": [
+            1024,
+            1536
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Notre-Dame Tripo-oton 3 syöte",
+            "Suora 2D-värilähde 499-kolmion LOD-atlakseen; syvyysmalli perii tämän atlaksen"
+          ],
+          "tekija": "Codex / sisäänrakennettu OpenAI ImageGen, Matkakirja-projektin työ",
+          "versio": "19a K2 / etela-v1",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/etela-v1.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 1495312,
+            "sha256": "67b76735053ed15a53edce3bc0a73c7f569e345475a46374cdc1252c63ce8184",
+            "git_blob_sha1_laskettu": "93b4a9a093086e43841f78e646c54a305ddaa849",
+            "kuvakoko": [
+              1024,
+              1536
+            ],
+            "kuvamuoto": "PNG"
+          },
+          "alkuperaisen_tavut_samat": true,
+          "generointipyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/etela-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3251,
+            "sha256": "78ee2bcfdb9a86446117cdfe3c5d0a0cf6e9d95efd96680094036d0029bb2373",
+            "git_blob_sha1_laskettu": "2f75aeb64d8431990319f03fff17e75e390b180c"
+          },
+          "repo": {
+            "repository": "ravelius/Matkakirja",
+            "commit": "5d5fe232ebdce603050c0544cae6e0b8983945ad",
+            "polku": "posti/codex-karttaseppa-notre-dame-19a-k2-pohjakuvat-20261104/etela.png",
+            "blob": "93b4a9a093086e43841f78e646c54a305ddaa849",
+            "varmennuksen_taso": "Blob-tunniste laskettu tässä paikallisista tavuista; aiempi delivery-receipt.json kirjaa saman SHA256:n ja byteReadbackVerified=true. Ei uutta verkkolukua tässä dokumentointiosassa."
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-3d-19b-20261104/sources/k2-approved/pohjoinen.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1499896,
+          "sha256": "20bd7b5ba6ee8b14073a6b9d676e710458dc48cc765da03caffbecd55f8318a2",
+          "git_blob_sha1_laskettu": "ee387ad657a6a01f28aa42b9b6acfd89b60016e6",
+          "kuvakoko": [
+            1024,
+            1536
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Notre-Dame Tripo-oton 3 syöte",
+            "Suora 2D-värilähde 499-kolmion LOD-atlakseen; syvyysmalli perii tämän atlaksen"
+          ],
+          "tekija": "Codex / sisäänrakennettu OpenAI ImageGen, Matkakirja-projektin työ",
+          "versio": "19a K2 / pohjoinen-v3",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pohjoinen-v3.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 1499896,
+            "sha256": "20bd7b5ba6ee8b14073a6b9d676e710458dc48cc765da03caffbecd55f8318a2",
+            "git_blob_sha1_laskettu": "ee387ad657a6a01f28aa42b9b6acfd89b60016e6",
+            "kuvakoko": [
+              1024,
+              1536
+            ],
+            "kuvamuoto": "PNG"
+          },
+          "alkuperaisen_tavut_samat": true,
+          "generointipyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/pohjoinen-v3.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3603,
+            "sha256": "4eaaa821cd8c34a6c61aa8eac656c135e042c972e2b7472a6dd6666e517983a4",
+            "git_blob_sha1_laskettu": "60e53907b3b84658601974cc0bb6294abfbee4b2"
+          },
+          "repo": {
+            "repository": "ravelius/Matkakirja",
+            "commit": "5d5fe232ebdce603050c0544cae6e0b8983945ad",
+            "polku": "posti/codex-karttaseppa-notre-dame-19a-k2-pohjakuvat-20261104/pohjoinen.png",
+            "blob": "ee387ad657a6a01f28aa42b9b6acfd89b60016e6",
+            "varmennuksen_taso": "Blob-tunniste laskettu tässä paikallisista tavuista; aiempi delivery-receipt.json kirjaa saman SHA256:n ja byteReadbackVerified=true. Ei uutta verkkolukua tässä dokumentointiosassa."
+          }
+        }
+      ],
+      "tripo_syotepaikat_valitussa_otossa": {
+        "Front": "lansi.png",
+        "Left": "etela.png",
+        "Right": "pohjoinen.png",
+        "Back": "ita.png",
+        "pelikulma": "ei Tripo-syöte; kuva on kuitenkin aiempien K2-generointien viite"
+      },
+      "imagegen_generointien_viitegraafi": [
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/etela-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3251,
+            "sha256": "78ee2bcfdb9a86446117cdfe3c5d0a0cf6e9d95efd96680094036d0029bb2373",
+            "git_blob_sha1_laskettu": "2f75aeb64d8431990319f03fff17e75e390b180c"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-etela-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9039,
+              "sha256": "c4252ed75241991d7fd92c989bfce695f46da6683395be924b21affc2ca3acd1",
+              "git_blob_sha1_laskettu": "5649f248da462d4011c7f2eb286b230cb7f663ff",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pohjoinen-v3.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1499896,
+              "sha256": "20bd7b5ba6ee8b14073a6b9d676e710458dc48cc765da03caffbecd55f8318a2",
+              "git_blob_sha1_laskettu": "ee387ad657a6a01f28aa42b9b6acfd89b60016e6",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/lansi-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1682046,
+              "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+              "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/ita-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3086,
+            "sha256": "ce891fe845c5a00d1c8592ea17cd57448fbe4cad982055328127f2c907d160c6",
+            "git_blob_sha1_laskettu": "11213a338df1ef77fc8583c7d0a401264b5f12a2"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-ita-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9646,
+              "sha256": "824d372e801fed49c538ea6da4786deb658469cdd04981004f54ca9877feaa1d",
+              "git_blob_sha1_laskettu": "6bca47b824380b60ac9b506e7cb60a1b6a1bd1eb",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/lansi-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1682046,
+              "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+              "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pohjoinen-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1485496,
+              "sha256": "dccd58b15e21405042b2a9c1ddf3f503c22bef04956ff3100a2ea276a736e16f",
+              "git_blob_sha1_laskettu": "7238134bba6f08e16d12ecd77c036edf518b3c04",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/lansi-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3114,
+            "sha256": "aa933f3e7709c2375f987b519789748fec66ef5c3fe439465a4c332a56dfff9f",
+            "git_blob_sha1_laskettu": "7d70160701acafc1fcb31eee320b400e536e1baa"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-lansi-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9079,
+              "sha256": "4611a3f00c4015a9096f98bd83da2361527f3a80e759b136bfa3e00405bdaf4b",
+              "git_blob_sha1_laskettu": "895ae9f226412c3a526ecd1c9a83835dba916fe7",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pelikulma-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1761785,
+              "sha256": "7c4356fb289a6edbc5630fa9649674d0a06f7636708599f2efa433b1e775a259",
+              "git_blob_sha1_laskettu": "6d99f908c1c794639f4df92e2ffbcf75e92422a8",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/19a-lansi.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1762661,
+              "sha256": "6ed3b62b16bdeea64cc3a3bb389d581b136ac1c56e149fe3efdb7e0e404123c9",
+              "git_blob_sha1_laskettu": "f661cddb7ee40b9b82f86405dd8c383c7e02e6fc",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/lansi-v2.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2703,
+            "sha256": "694aa3c62cb6e7bb2d8a4765128f1e46615fd347e43a85eb625d76d87e54ad82",
+            "git_blob_sha1_laskettu": "bea97bb9c53a78e882e301509d128e80dd40c227"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-lansi-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9079,
+              "sha256": "4611a3f00c4015a9096f98bd83da2361527f3a80e759b136bfa3e00405bdaf4b",
+              "git_blob_sha1_laskettu": "895ae9f226412c3a526ecd1c9a83835dba916fe7",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pelikulma-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1761785,
+              "sha256": "7c4356fb289a6edbc5630fa9649674d0a06f7636708599f2efa433b1e775a259",
+              "git_blob_sha1_laskettu": "6d99f908c1c794639f4df92e2ffbcf75e92422a8",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/pelikulma-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3959,
+            "sha256": "4c9e115c0068f201e3c8b98596eb0b10bab6acd3034b19581e23862b51af6322",
+            "git_blob_sha1_laskettu": "ac69507902118bdb48d324a4a38a7780b12bace8"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-pelikulma.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 15016,
+              "sha256": "93c85a2479db73430c6407ebc664ab0b436f9ea39a1c659fdb4af638ca640b0d",
+              "git_blob_sha1_laskettu": "f12a8340b6b093a7eb923e822d4c0b6d26dd1af5",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-G-kirkko.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 836244,
+              "sha256": "643db4de9d86831f45313b4a8cb16cc984a51006ec25619b8b8463220699d3d1",
+              "git_blob_sha1_laskettu": "3d024e58fbf75a9871cff237b4b04f17f43ca2c5",
+              "kuvakoko": [
+                780,
+                630
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/19a-lansi.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1762661,
+              "sha256": "6ed3b62b16bdeea64cc3a3bb389d581b136ac1c56e149fe3efdb7e0e404123c9",
+              "git_blob_sha1_laskettu": "f661cddb7ee40b9b82f86405dd8c383c7e02e6fc",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-2029-kirkko.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 982235,
+              "sha256": "c156ce180cc9759e48f4e62163a72267077965187579eff7eebe68e5cb50cea4",
+              "git_blob_sha1_laskettu": "c5f690ebad3495f88b065deeef80c8c4c6a259b0",
+              "kuvakoko": [
+                960,
+                630
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/pelikulma-v2.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3188,
+            "sha256": "805408f0f7077b31428511c25a5ec3d3df59bbcd960a5506187543d8e0bdd33a",
+            "git_blob_sha1_laskettu": "4093049f0c2e83592506d0a2f4549b896d2fd109"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-pelikulma.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 15016,
+              "sha256": "93c85a2479db73430c6407ebc664ab0b436f9ea39a1c659fdb4af638ca640b0d",
+              "git_blob_sha1_laskettu": "f12a8340b6b093a7eb923e822d4c0b6d26dd1af5",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pelikulma-v1.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1855301,
+              "sha256": "c83e37545a046c2d20514ce20ebadb76e2a99372fe54186a568749632a934a3a",
+              "git_blob_sha1_laskettu": "7f54519becce75547ad1b7496ee6b3e8ea516627",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/pohjoinen-v1.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3075,
+            "sha256": "b392cba1f170d3ef70b1ed2b34c04f0a87a99b37c41e8fe42d3d3c87bbe3d4ce",
+            "git_blob_sha1_laskettu": "2f4067a2f4e3318bd070a15a1642ec3f2ed0793c"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-pohjoinen-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9036,
+              "sha256": "9b38057de591b4a54799afa24acfec87820089d50fb62d3941090052cf49e646",
+              "git_blob_sha1_laskettu": "c077b89f5363225a41f0b545f9524621474674fb",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/lansi-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1682046,
+              "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+              "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/pelikulma-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1761785,
+              "sha256": "7c4356fb289a6edbc5630fa9649674d0a06f7636708599f2efa433b1e775a259",
+              "git_blob_sha1_laskettu": "6d99f908c1c794639f4df92e2ffbcf75e92422a8",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/pohjoinen-v2.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2840,
+            "sha256": "d8a1565a8f8c9f2a69667b46da0a5145dbe5047ef8fdf8a603408c115b91f6b2",
+            "git_blob_sha1_laskettu": "8efb9d54a6ebe6d5357042d2439e0d7db1ac7dc8"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-pohjoinen-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9036,
+              "sha256": "9b38057de591b4a54799afa24acfec87820089d50fb62d3941090052cf49e646",
+              "git_blob_sha1_laskettu": "c077b89f5363225a41f0b545f9524621474674fb",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/lansi-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1682046,
+              "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+              "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/prompts/pohjoinen-v3.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3603,
+            "sha256": "4eaaa821cd8c34a6c61aa8eac656c135e042c972e2b7472a6dd6666e517983a4",
+            "git_blob_sha1_laskettu": "60e53907b3b84658601974cc0bb6294abfbee4b2"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/references/geometry-pohjoinen-baseline1425.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 9036,
+              "sha256": "9b38057de591b4a54799afa24acfec87820089d50fb62d3941090052cf49e646",
+              "git_blob_sha1_laskettu": "c077b89f5363225a41f0b545f9524621474674fb",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/originals/lansi-v2.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1682046,
+              "sha256": "b51cece35da16b76b8ee1a5f7188a302537bcfe9a0a86833a95e49e7a6bd82ca",
+              "git_blob_sha1_laskettu": "d764fd419c66f2f6a38c29f46c961a285db103de",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        }
+      ],
+      "aiemman_19a_erilliset_commons_viitteet": [
+        {
+          "nimi": "Cathédrale Notre-Dame (exterior).401 - Paris.jpg",
+          "tekija_lokin_mukaan": "Fernando Losada Rodríguez (Drow male). Päiväys: 2017-04-12.",
+          "lahde_lokin_mukaan": "[Cathédrale Notre-Dame (exterior).401 - Paris.jpg](https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Notre-Dame_(exterior).401_-_Paris.jpg).",
+          "lisenssi_lokin_mukaan": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).",
+          "kaytto_lokin_mukaan": "Pohjoisen sivukäytävän ikkunat ja tukikaaret; rakenteen katselu, ei koko sivun mittakuva.",
+          "tarkistustaso": "Aiemman 19a:n lähdeloki; K2-loki sanoo nimenomaisesti ettei näitä annettu K2-generoinnin viitteiksi eikä tarkistettu siinä uudelleen. Tässä verrattiin paikallisen tiedoston SHA256; verkkosivun lisenssiä ei tarkistettu uudelleen.",
+          "koko_lahdemerkinta": "Cathédrale Notre-Dame (exterior).401 - Paris.jpg\n\n- Tekijä: Fernando Losada Rodríguez (Drow male). Päiväys: 2017-04-12.\n- Lähde: [Cathédrale Notre-Dame (exterior).401 - Paris.jpg](https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Notre-Dame_(exterior).401_-_Paris.jpg).\n- Lisenssi: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).\n- Käyttö: Pohjoisen sivukäytävän ikkunat ja tukikaaret; rakenteen katselu, ei koko sivun mittakuva.\n- Työkopio: `commons-north.jpg`, SHA256 `41a592dcff2100a962804bdcaa17a1e65a69122580d55f2df499a203732a67ac`.\n",
+          "paikallinen_alkuperainen": {
+            "paikallinen_polku": "output/notre-dame-3d-pohjakuvat-2005-20261104/references/commons-north.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 4359151,
+            "sha256": "41a592dcff2100a962804bdcaa17a1e65a69122580d55f2df499a203732a67ac",
+            "git_blob_sha1_laskettu": "8dd6a9806728775373907b629e84489409fb045f",
+            "kuvakoko": [
+              4608,
+              2592
+            ],
+            "kuvamuoto": "JPEG"
+          }
+        },
+        {
+          "nimi": "Notre-Dame-Paris-eastside.jpg",
+          "tekija_lokin_mukaan": "Senior Airman Sarah Gregory / U.S. Air Force. Päiväys: 2006.",
+          "lahde_lokin_mukaan": "[Notre-Dame-Paris-eastside.jpg](https://commons.wikimedia.org/wiki/File:Notre-Dame-Paris-eastside.jpg).",
+          "lisenssi_lokin_mukaan": "[PD-USGov-Military-Air Force](https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Air_Force).",
+          "kaytto_lokin_mukaan": "Kuoripäädyn ja tukikaarien rakenne. Etualan suihkulähdettä ja ympäristöä ei kopioitu.",
+          "tarkistustaso": "Aiemman 19a:n lähdeloki; K2-loki sanoo nimenomaisesti ettei näitä annettu K2-generoinnin viitteiksi eikä tarkistettu siinä uudelleen. Tässä verrattiin paikallisen tiedoston SHA256; verkkosivun lisenssiä ei tarkistettu uudelleen.",
+          "koko_lahdemerkinta": "Notre-Dame-Paris-eastside.jpg\n\n- Tekijä: Senior Airman Sarah Gregory / U.S. Air Force. Päiväys: 2006.\n- Lähde: [Notre-Dame-Paris-eastside.jpg](https://commons.wikimedia.org/wiki/File:Notre-Dame-Paris-eastside.jpg).\n- Lisenssi: [PD-USGov-Military-Air Force](https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Air_Force).\n- Käyttö: Kuoripäädyn ja tukikaarien rakenne. Etualan suihkulähdettä ja ympäristöä ei kopioitu.\n- Työkopio: `commons-east.jpg`, SHA256 `6370aa267c7f660546954c644f65387c7124984d712adc17a84f9d4f399428dd`.\n",
+          "paikallinen_alkuperainen": {
+            "paikallinen_polku": "output/notre-dame-3d-pohjakuvat-2005-20261104/references/commons-east.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3399412,
+            "sha256": "6370aa267c7f660546954c644f65387c7124984d712adc17a84f9d4f399428dd",
+            "git_blob_sha1_laskettu": "fce70dfa01a566baffc1aa2c2d425fcfd8fe9478",
+            "kuvakoko": [
+              1932,
+              2576
+            ],
+            "kuvamuoto": "JPEG"
+          }
+        },
+        {
+          "nimi": "Pignon.transept.Notre.Dame.Paris.png",
+          "tekija_lokin_mukaan": "Eugène Viollet-le-Duc. Päiväys: 1856.",
+          "lahde_lokin_mukaan": "[Pignon.transept.Notre.Dame.Paris.png](https://commons.wikimedia.org/wiki/File:Pignon.transept.Notre.Dame.Paris.png).",
+          "lisenssi_lokin_mukaan": "[PD-old-100-expired / PD-US](https://creativecommons.org/publicdomain/mark/1.0/).",
+          "kaytto_lokin_mukaan": "Eteläisen ristilaivan ruusuikkunan ja päädyn rakenne.",
+          "tarkistustaso": "Aiemman 19a:n lähdeloki; K2-loki sanoo nimenomaisesti ettei näitä annettu K2-generoinnin viitteiksi eikä tarkistettu siinä uudelleen. Tässä verrattiin paikallisen tiedoston SHA256; verkkosivun lisenssiä ei tarkistettu uudelleen.",
+          "koko_lahdemerkinta": "Pignon.transept.Notre.Dame.Paris.png\n\n- Tekijä: Eugène Viollet-le-Duc. Päiväys: 1856.\n- Lähde: [Pignon.transept.Notre.Dame.Paris.png](https://commons.wikimedia.org/wiki/File:Pignon.transept.Notre.Dame.Paris.png).\n- Lisenssi: [PD-old-100-expired / PD-US](https://creativecommons.org/publicdomain/mark/1.0/).\n- Käyttö: Eteläisen ristilaivan ruusuikkunan ja päädyn rakenne.\n- Työkopio: `commons-south-transept.png`, SHA256 `825aa3f298cfff552d18ce00a9c45fefb8a8398d0fb2b2cec8d8073e605238fb`.\n",
+          "paikallinen_alkuperainen": {
+            "paikallinen_polku": "output/notre-dame-3d-pohjakuvat-2005-20261104/references/commons-south-transept.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 202632,
+            "sha256": "825aa3f298cfff552d18ce00a9c45fefb8a8398d0fb2b2cec8d8073e605238fb",
+            "git_blob_sha1_laskettu": "864dcf7b22641ec0e65dbe87743909bad8c055d8",
+            "kuvakoko": [
+              642,
+              747
+            ],
+            "kuvamuoto": "PNG"
+          }
+        },
+        {
+          "nimi": "Paris 4e - Cathédrale Notre-Dame de Paris - Toit - Apôtres et évangélistes, depuis la tour sud.jpg",
+          "tekija_lokin_mukaan": "Romainbehar. Päiväys: 2025-10-13.",
+          "lahde_lokin_mukaan": "[Paris 4e - Cathédrale Notre-Dame de Paris - Toit - Apôtres et évangélistes, depuis la tour sud.jpg](https://commons.wikimedia.org/wiki/File:Paris_4e_-_Cath%C3%A9drale_Notre-Dame_de_Paris_-_Toit_-_Ap%C3%B4tres_et_%C3%A9vang%C3%A9listes,_depuis_la_tour_sud.jpg).",
+          "lisenssi_lokin_mukaan": "[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).",
+          "kaytto_lokin_mukaan": "Kunnostetun katon, risteyksen ja huipun juuren tarkistus. Värit tilauksen tyylimallista.",
+          "tarkistustaso": "Aiemman 19a:n lähdeloki; K2-loki sanoo nimenomaisesti ettei näitä annettu K2-generoinnin viitteiksi eikä tarkistettu siinä uudelleen. Tässä verrattiin paikallisen tiedoston SHA256; verkkosivun lisenssiä ei tarkistettu uudelleen.",
+          "koko_lahdemerkinta": "Paris 4e - Cathédrale Notre-Dame de Paris - Toit - Apôtres et évangélistes, depuis la tour sud.jpg\n\n- Tekijä: Romainbehar. Päiväys: 2025-10-13.\n- Lähde: [Paris 4e - Cathédrale Notre-Dame de Paris - Toit - Apôtres et évangélistes, depuis la tour sud.jpg](https://commons.wikimedia.org/wiki/File:Paris_4e_-_Cath%C3%A9drale_Notre-Dame_de_Paris_-_Toit_-_Ap%C3%B4tres_et_%C3%A9vang%C3%A9listes,_depuis_la_tour_sud.jpg).\n- Lisenssi: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).\n- Käyttö: Kunnostetun katon, risteyksen ja huipun juuren tarkistus. Värit tilauksen tyylimallista.\n- Työkopio: `commons-roof-2025.jpg`, SHA256 `dae4efc1ff38fc9e4609cc5012ca9f73b759dbcdf469df334e70e0f57113d0ca`.\n",
+          "paikallinen_alkuperainen": {
+            "paikallinen_polku": "output/notre-dame-3d-pohjakuvat-2005-20261104/references/commons-roof-2025.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 8771846,
+            "sha256": "dae4efc1ff38fc9e4609cc5012ca9f73b759dbcdf469df334e70e0f57113d0ca",
+            "git_blob_sha1_laskettu": "08ca648ea97bf9b83c62a097c45c6dc0e3d2fd81",
+            "kuvakoko": [
+              6030,
+              4014
+            ],
+            "kuvamuoto": "JPEG"
+          }
+        },
+        {
+          "nimi": "Notre-Dame-Paris east 2.jpg",
+          "tekija_lokin_mukaan": "Lusitana. Päiväys: 2004-04.",
+          "lahde_lokin_mukaan": "[Notre-Dame-Paris east 2.jpg](https://commons.wikimedia.org/wiki/File:Notre-Dame-Paris_east_2.jpg).",
+          "lisenssi_lokin_mukaan": "[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).",
+          "kaytto_lokin_mukaan": "Kuoripäädyn monikulmaisuus, ikkunat ja säteittäiset tukikaaret. Kuva on lähikuva, ei koko kirkon mittakuva.",
+          "tarkistustaso": "Aiemman 19a:n lähdeloki; K2-loki sanoo nimenomaisesti ettei näitä annettu K2-generoinnin viitteiksi eikä tarkistettu siinä uudelleen. Tässä verrattiin paikallisen tiedoston SHA256; verkkosivun lisenssiä ei tarkistettu uudelleen.",
+          "koko_lahdemerkinta": "Notre-Dame-Paris east 2.jpg\n\n- Tekijä: Lusitana. Päiväys: 2004-04.\n- Lähde: [Notre-Dame-Paris east 2.jpg](https://commons.wikimedia.org/wiki/File:Notre-Dame-Paris_east_2.jpg).\n- Lisenssi: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).\n- Käyttö: Kuoripäädyn monikulmaisuus, ikkunat ja säteittäiset tukikaaret. Kuva on lähikuva, ei koko kirkon mittakuva.\n- Työkopio: `commons-east-full.jpg`, SHA256 `b29d8f2a7611de18b9c7f2c5ca21071956e71750ba9110b05e295a1d5fd0457d`.\n",
+          "paikallinen_alkuperainen": {
+            "paikallinen_polku": "output/notre-dame-3d-pohjakuvat-2005-20261104/references/commons-east-full.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 810362,
+            "sha256": "b29d8f2a7611de18b9c7f2c5ca21071956e71750ba9110b05e295a1d5fd0457d",
+            "git_blob_sha1_laskettu": "86a9234adc23a32e7c793772b06d8b4d89b5e4cc",
+            "kuvakoko": [
+              1134,
+              800
+            ],
+            "kuvamuoto": "JPEG"
+          }
+        },
+        {
+          "nimi": "North facade of Notre-Dame de Paris.jpg",
+          "tekija_lokin_mukaan": "Aliva Sahoo. Päiväys: 2026-07-24.",
+          "lahde_lokin_mukaan": "[North facade of Notre-Dame de Paris.jpg](https://commons.wikimedia.org/wiki/File:North_facade_of_Notre-Dame_de_Paris.jpg).",
+          "lisenssi_lokin_mukaan": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).",
+          "kaytto_lokin_mukaan": "Pohjoisen ristilaivan ruusuikkuna ja portaalin reliefijako. Valokuvan perspektiiviä, ympäristöä ja rakennustelineitä ei käytetty.",
+          "tarkistustaso": "Aiemman 19a:n lähdeloki; K2-loki sanoo nimenomaisesti ettei näitä annettu K2-generoinnin viitteiksi eikä tarkistettu siinä uudelleen. Tässä verrattiin paikallisen tiedoston SHA256; verkkosivun lisenssiä ei tarkistettu uudelleen.",
+          "koko_lahdemerkinta": "North facade of Notre-Dame de Paris.jpg\n\n- Tekijä: Aliva Sahoo. Päiväys: 2026-07-24.\n- Lähde: [North facade of Notre-Dame de Paris.jpg](https://commons.wikimedia.org/wiki/File:North_facade_of_Notre-Dame_de_Paris.jpg).\n- Lisenssi: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).\n- Käyttö: Pohjoisen ristilaivan ruusuikkuna ja portaalin reliefijako. Valokuvan perspektiiviä, ympäristöä ja rakennustelineitä ei käytetty.\n- Työkopio: `commons-north-transept.jpg`, SHA256 `bcfedd05ce3183f6429b1d0b330397a0e541f9040dbb0ec73b6ee35ae93ff1c3`.\n",
+          "paikallinen_alkuperainen": {
+            "paikallinen_polku": "output/notre-dame-3d-pohjakuvat-2005-20261104/references/commons-north-transept.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 9284942,
+            "sha256": "bcfedd05ce3183f6429b1d0b330397a0e541f9040dbb0ec73b6ee35ae93ff1c3",
+            "git_blob_sha1_laskettu": "d4777d886f8879a158b05785367a449858708db8",
+            "kuvakoko": [
+              3068,
+              4088
+            ],
+            "kuvamuoto": "JPEG"
+          }
+        }
+      ],
+      "tilaajan_tyyli_ja_variviitteet": [
+        {
+          "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-G-kirkko.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 836244,
+          "sha256": "643db4de9d86831f45313b4a8cb16cc984a51006ec25619b8b8463220699d3d1",
+          "git_blob_sha1_laskettu": "3d024e58fbf75a9871cff237b4b04f17f43ca2c5",
+          "kuvakoko": [
+            780,
+            630
+          ],
+          "kuvamuoto": "PNG",
+          "tekija": "Codex / ImageGen: koko kaupungin alkuperäinen G-kuva; Karttaseppä / Claude: rajaus ja 3× suurennos",
+          "oikeudet": "Sama periytyvä lähde- ja ehtoketju kuin G-kaupungin kuvalla; rajaus ei myönnä uusia oikeuksia.",
+          "alkupera": {
+            "lahde": {
+              "paikallinen_polku": "output/pariisi-koko-kaupunki-20261031/final/pariisi-koko-kaupunki-G-tyyli.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4365837,
+              "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+              "git_blob_sha1_laskettu": "8c08167deaf4a2c7b70bffc7c021df1b42284480",
+              "kuvakoko": [
+                1672,
+                941
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "rajaus_xyxy": [
+              950,
+              370,
+              1210,
+              580
+            ],
+            "uusi_koko": [
+              780,
+              630
+            ],
+            "uudelleenmuodostetun_png_sha256": "643db4de9d86831f45313b4a8cb16cc984a51006ec25619b8b8463220699d3d1",
+            "menetelma": "Pillow RGB, crop, mahdollinen LANCZOS-resize; PNG muodostettiin vain muistissa, ei muutoksia lähteisiin.",
+            "tasmaa_lahdeviitteeseen": true
+          },
+          "muunnosskripti": {
+            "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/tilaus5.py",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 6434,
+            "sha256": "62f01669527c96ab453b0fd0d0e65249881a72c0b01c89d9f6d5e2cb98a137bf",
+            "git_blob_sha1_laskettu": "4a78b722b5290dbea53ebf7b4768824c5301fda0"
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-G-koko-kaupunki.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 4365837,
+          "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+          "git_blob_sha1_laskettu": "8c08167deaf4a2c7b70bffc7c021df1b42284480",
+          "kuvakoko": [
+            1672,
+            941
+          ],
+          "kuvamuoto": "PNG",
+          "tekija": "Codex / OpenAI ImageGen, Pariisi-koko-kaupunki 31.10.2026",
+          "oikeudet": "ImageGen-tuotantohistoria todennettu. Ei itsenäistä CC-lisenssiä; palveluehdot ja lähteet huomioitava. G-kaupungin SOURCES.json sisältää OpenStreetMap contributors / ODbL 1.0 -attribuution sekä aiemman G-tyylikuvan, paikkapisteet ja muut aineistorajat.",
+          "versio": "whole-city-v1 / G-tyyli, sama kokonainen PNG",
+          "alkupera": {
+            "paikallinen_polku": "output/pariisi-koko-kaupunki-20261031/final/pariisi-koko-kaupunki-G-tyyli.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 4365837,
+            "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+            "git_blob_sha1_laskettu": "8c08167deaf4a2c7b70bffc7c021df1b42284480",
+            "kuvakoko": [
+              1672,
+              941
+            ],
+            "kuvamuoto": "PNG"
+          },
+          "alkuperan_loki": {
+            "paikallinen_polku": "output/pariisi-koko-kaupunki-20261031/checkpoint.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2178,
+            "sha256": "7b32fd97181df72cb82085304a60bf7b2df158cddb1b46d524869ad44ba00f27",
+            "git_blob_sha1_laskettu": "932f7a775410e6060e49b061ae8cfd2c435496d5"
+          },
+          "repo": {
+            "commit": "d0191a334dd0b7d3598708d0ace02dc8fad7a78a",
+            "lahdekuitti": {
+              "paikallinen_polku": "output/pariisi-koko-kaupunki-20261031/mailbox/delivery-receipt.json",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 6396,
+              "sha256": "3370eabfc3f98e11af44b10032b33d547ea9026c6add492a00b9e512ecf565ff",
+              "git_blob_sha1_laskettu": "e617c5845b0bcbbd34298a334903467183319ed3"
+            }
+          },
+          "lahdehistorian_tiedosto": {
+            "paikallinen_polku": "output/pariisi-koko-kaupunki-20261031/delivery/SOURCES.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 4229,
+            "sha256": "6e754237784b0fd45fe7907f28937c412ba1a054fb4197405d782c89df10f663",
+            "git_blob_sha1_laskettu": "4f81216225e94c6c71fb8cf70f05ee6854578523"
+          },
+          "lahdehistorian_sisalto": {
+            "ownerApproval": {
+              "source": "direct-owner",
+              "quote": "Hyvä. Tee nyt koko kaupunki noin",
+              "observedAt": "2026-10-31T17:35:21.544519+00:00",
+              "approvedStyle": "G",
+              "approvedImageSHA256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62",
+              "scope": "Full Paris including both Bois; same G style; large main landmarks only; no red accents",
+              "tilePhaseAuthorized": true
+            },
+            "styleReference": {
+              "file": "../pariisi-piirroskartta-versiot-20261031/final/pariisi-piirroskartta-G-ilman-punaisia-korostuksia.png",
+              "sha256": "7c4eac4765da39e6b0bef24ec5eeaf9cdff8bd3e05e0770796bfd6b7dc432d62"
+            },
+            "OSMRelation": 7444,
+            "OSMSource": "https://api.openstreetmap.org/api/0.6/relation/7444/full",
+            "OSMBoundarySHA256": "47a0ea2c17e001bb06545a625f033dc5c6a64395761cfd72e86326c5d16ca387",
+            "landmarkAnchors": [
+              {
+                "name": "Arc de Triomphe",
+                "lon": 2.29502778,
+                "lat": 48.87377778,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Centre Pompidou",
+                "lon": 2.352245,
+                "lat": 48.86064194,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Eiffel Tower",
+                "lon": 2.2945,
+                "lat": 48.85822222,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Les Invalides",
+                "lon": 2.3125,
+                "lat": 48.855,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Louvre",
+                "lon": 2.3358,
+                "lat": 48.8611,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Notre-Dame de Paris",
+                "lon": 2.35,
+                "lat": 48.85305556,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Palais Garnier",
+                "lon": 2.33166667,
+                "lat": 48.87194444,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Panthéon",
+                "lon": 2.34583333,
+                "lat": 48.84611111,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Sainte-Chapelle",
+                "lon": 2.345,
+                "lat": 48.85527778,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Tour Montparnasse",
+                "lon": 2.322,
+                "lat": 48.8421,
+                "source": "Wikipedia GeoData"
+              },
+              {
+                "name": "Bois de Boulogne",
+                "lon": 2.2508333333333,
+                "lat": 48.864722222222,
+                "source": "Wikidata Q209626"
+              },
+              {
+                "name": "Bois de Vincennes",
+                "lon": 2.4330555555555557,
+                "lat": 48.82805555555556,
+                "source": "Wikidata Q271639"
+              },
+              {
+                "name": "Grand Palais",
+                "lon": 2.3125,
+                "lat": 48.866111,
+                "source": "Wikidata Q457318"
+              },
+              {
+                "name": "Jardin du Luxembourg",
+                "lon": 2.337222222222222,
+                "lat": 48.846944444444446,
+                "source": "Wikidata Q309458"
+              },
+              {
+                "name": "Parc de la Villette",
+                "lon": 2.39056,
+                "lat": 48.89306,
+                "source": "Wikidata Q246448"
+              },
+              {
+                "name": "Place de la Bastille",
+                "lon": 2.3691111111111,
+                "lat": 48.853138888889,
+                "source": "Wikidata Q778784"
+              },
+              {
+                "name": "Père Lachaise Cemetery",
+                "lon": 2.3941666666666666,
+                "lat": 48.861111111111114,
+                "source": "Wikidata Q311"
+              },
+              {
+                "name": "Sacré-Cœur, Paris",
+                "lon": 2.34295,
+                "lat": 48.88665,
+                "source": "Wikidata Q28785"
+              }
+            ],
+            "layout": {
+              "bbox": [
+                2.219,
+                48.809,
+                2.476,
+                48.909
+              ],
+              "actualCityBoundaryOSMRelation": 7444,
+              "dimensions": [
+                2400,
+                1400
+              ],
+              "projection": "x=E-.23N;y=-.61N-.06E",
+              "scale": 0.10382181879032641,
+              "worldLo": [
+                -10691.394284294858,
+                -3959.9328570575008
+              ],
+              "worldHi": [
+                10691.394284295007,
+                3959.9328570579855
+              ],
+              "mapCenterPixel": [
+                1200.0,
+                730.0
+              ],
+              "note": "Boundary and landmark anchors verified; Seine reference partial; no full-city building footprints available in this reference"
+            },
+            "attribution": "© OpenStreetMap contributors · https://www.openstreetmap.org/copyright · ODbL 1.0",
+            "googleImageryUsed": false,
+            "dataLimit": "Full-city streets/building footprints were not supplied as a locked production base; broad Overpass fetch failed. Shape and landmark anchors guide the illustration; they do not certify raster ground geometry."
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-2029-kirkko.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 982235,
+          "sha256": "c156ce180cc9759e48f4e62163a72267077965187579eff7eebe68e5cb50cea4",
+          "git_blob_sha1_laskettu": "c5f690ebad3495f88b065deeef80c8c4c6a259b0",
+          "kuvakoko": [
+            960,
+            630
+          ],
+          "kuvamuoto": "PNG",
+          "tekija": "Karttaseppä / Claude: rajaus ja 3× suurennos; täyden 2029-tyylikuvan alkuperäinen tuottaja/tili avoin",
+          "oikeudet": "Täyskuva ja muunnos nyt yksilöity, mutta alkuperäisen täyskuvan generointi-/kuvauslähde ja oikeuksien ketju eivät varmistu näistä todisteista.",
+          "alkupera": {
+            "lahde": {
+              "paikallinen_polku": "/Users/Shared/Claude/Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261102/2029-hyvaksytty-tyyli.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4321887,
+              "sha256": "1b39a3e6f8a24eecbf6d4ddce644eb51a311ac7df4d7b6d2bd63dbe6d73e5d3c",
+              "git_blob_sha1_laskettu": "be6a330ba8002254f083568198032cfee22bb380",
+              "kuvakoko": [
+                1024,
+                1536
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "rajaus_xyxy": [
+              640,
+              700,
+              960,
+              910
+            ],
+            "uusi_koko": [
+              960,
+              630
+            ],
+            "uudelleenmuodostetun_png_sha256": "c156ce180cc9759e48f4e62163a72267077965187579eff7eebe68e5cb50cea4",
+            "menetelma": "Pillow RGB, crop, mahdollinen LANCZOS-resize; PNG muodostettiin vain muistissa, ei muutoksia lähteisiin.",
+            "tasmaa_lahdeviitteeseen": true
+          },
+          "muunnosskripti": {
+            "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/tilaus5.py",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 6434,
+            "sha256": "62f01669527c96ab453b0fd0d0e65249881a72c0b01c89d9f6d5e2cb98a137bf",
+            "git_blob_sha1_laskettu": "4a78b722b5290dbea53ebf7b4768824c5301fda0"
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-otto5-kirkko.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 830076,
+          "sha256": "2b2c74f07e3bf9fc9a5c00b7841b066b21a3e94aa2e3b465a19cf5abe080cded",
+          "git_blob_sha1_laskettu": "4aef5219e3021d8b061cbb320c987554e7795f6b",
+          "kuvakoko": [
+            550,
+            660
+          ],
+          "kuvamuoto": "PNG",
+          "tekija": "Codex / OpenAI ImageGen: alue-notre-dame.png; Karttaseppä / Claude: kirkon rajaus",
+          "oikeudet": "ImageGen-tuotanto ja siitä rajaus todennettu; tämän sarjan muissa viitteissä ovat mm. 2029-tyylikuva ja tilaajan karttapohjat. Pelkkä tuottamishistoria ei ratkaise periytyvien viitteiden oikeuksia.",
+          "alkupera": {
+            "lahde": {
+              "paikallinen_polku": "output/pariisi-notre-dame-2002-20261104/notre-dame-otto5/delivery/alue-notre-dame.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4136298,
+              "sha256": "52354ad6bc09b21d1046049b78468a00bfe641cb0bff361f3ef5e38207615265",
+              "git_blob_sha1_laskettu": "00759d73b8c2138dff087506ec0e16bde605920f",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "rajaus_xyxy": [
+              560,
+              130,
+              1110,
+              790
+            ],
+            "uusi_koko": null,
+            "uudelleenmuodostetun_png_sha256": "2b2c74f07e3bf9fc9a5c00b7841b066b21a3e94aa2e3b465a19cf5abe080cded",
+            "menetelma": "Pillow RGB, crop, mahdollinen LANCZOS-resize; PNG muodostettiin vain muistissa, ei muutoksia lähteisiin.",
+            "tasmaa_lahdeviitteeseen": true
+          },
+          "muunnosskripti": {
+            "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/tilaus-nd-3d.py",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 7520,
+            "sha256": "b7637c306aedb191926f3c2327523afc60831257b3aacb8847e812c356cc2cfd",
+            "git_blob_sha1_laskettu": "32e0a9375769651c7b954dc8e0ac9d2db2467a6d"
+          },
+          "generointipyynto": {
+            "paikallinen_polku": "output/pariisi-notre-dame-2002-20261104/notre-dame-otto5/prompt.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 4992,
+            "sha256": "8096071129ca7472d93fc10b185de5ce437500afdc71178644d44e229f8e5d2b",
+            "git_blob_sha1_laskettu": "466a8d70dae4b12ab6367166287b5cef32aa4deb"
+          },
+          "generoinnin_natiivit": [
+            {
+              "paikallinen_polku": "output/pariisi-notre-dame-2002-20261104/notre-dame-otto5/originals/exec-8097e937-e42d-4e05-97ea-bd72f8d78c8f.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4136298,
+              "sha256": "52354ad6bc09b21d1046049b78468a00bfe641cb0bff361f3ef5e38207615265",
+              "git_blob_sha1_laskettu": "00759d73b8c2138dff087506ec0e16bde605920f",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "repo_kuitti": {
+            "time": "2026-11-04T06:10:14.501180+00:00",
+            "commit": "57c99f035e791c72bf43cac2ffc22ca1260b50d6",
+            "remoteHeadVerified": "57c99f035e791c72bf43cac2ffc22ca1260b50d6",
+            "branch": "claude/postilaatikko",
+            "prefix": "posti/codex-karttaseppa-notre-dame-17e-otto5-20261104",
+            "fileCount": 3,
+            "bytes": 4140272,
+            "sha256": {
+              "SHA256SUMS": "9fe617004f26d2c33521bffbfb9d2943706f255f40412cdc78d157a42edd56ce",
+              "alue-notre-dame.png": "52354ad6bc09b21d1046049b78468a00bfe641cb0bff361f3ef5e38207615265",
+              "huomiot.md": "74fa66061988e5c68f18246cd1ff168554c56c7453429a34b5c083a80dc26797"
+            },
+            "byteReadbackVerified": true,
+            "url": "https://github.com/ravelius/Matkakirja/tree/57c99f035e791c72bf43cac2ffc22ca1260b50d6/posti/codex-karttaseppa-notre-dame-17e-otto5-20261104"
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/malli-otto6-kirkko.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 798987,
+          "sha256": "dbc1ccad817d3f67c056a6dbc511345e8676dc897bcc162bb974500b7af0bdd2",
+          "git_blob_sha1_laskettu": "d7ca6edf8af6a665cfce199041bf96377eca6f1c",
+          "kuvakoko": [
+            550,
+            660
+          ],
+          "kuvamuoto": "PNG",
+          "tekija": "Codex / OpenAI ImageGen: alue-notre-dame.png; Karttaseppä / Claude: kirkon rajaus",
+          "oikeudet": "ImageGen-tuotanto ja siitä rajaus todennettu; tämän sarjan muissa viitteissä ovat mm. 2029-tyylikuva ja tilaajan karttapohjat. Pelkkä tuottamishistoria ei ratkaise periytyvien viitteiden oikeuksia.",
+          "alkupera": {
+            "lahde": {
+              "paikallinen_polku": "output/pariisi-notre-dame-2004-20261104/notre-dame-otto6/delivery/alue-notre-dame.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4004533,
+              "sha256": "a16c63100be65668f699521644b0851f916feb559a74e62a60a670a09e4f1c51",
+              "git_blob_sha1_laskettu": "c8a797e7b984081556ae97547341eac21cd40d11",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "rajaus_xyxy": [
+              560,
+              130,
+              1110,
+              790
+            ],
+            "uusi_koko": null,
+            "uudelleenmuodostetun_png_sha256": "dbc1ccad817d3f67c056a6dbc511345e8676dc897bcc162bb974500b7af0bdd2",
+            "menetelma": "Pillow RGB, crop, mahdollinen LANCZOS-resize; PNG muodostettiin vain muistissa, ei muutoksia lähteisiin.",
+            "tasmaa_lahdeviitteeseen": true
+          },
+          "muunnosskripti": {
+            "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/tilaus-nd-3d.py",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 7520,
+            "sha256": "b7637c306aedb191926f3c2327523afc60831257b3aacb8847e812c356cc2cfd",
+            "git_blob_sha1_laskettu": "32e0a9375769651c7b954dc8e0ac9d2db2467a6d"
+          },
+          "generointipyynto": {
+            "paikallinen_polku": "output/pariisi-notre-dame-2004-20261104/notre-dame-otto6/prompt.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 5371,
+            "sha256": "23cb67ffd4db2bb91ebbe9402b5141ae9c00989085bd0ad1cae1de39f926fd3b",
+            "git_blob_sha1_laskettu": "6879664bd9b031230ef92678084dd59dd55706a2"
+          },
+          "generoinnin_natiivit": [
+            {
+              "paikallinen_polku": "output/pariisi-notre-dame-2004-20261104/notre-dame-otto6/originals/exec-8dfe3b72-d354-4ad7-a78c-2fd042bc3791.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4004533,
+              "sha256": "a16c63100be65668f699521644b0851f916feb559a74e62a60a670a09e4f1c51",
+              "git_blob_sha1_laskettu": "c8a797e7b984081556ae97547341eac21cd40d11",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "repo_kuitti": {
+            "time": "2026-11-04T06:35:39.840019+00:00",
+            "commit": "8eb70b34227261f0581fbbd41b9dc4851cb4cf4a",
+            "remoteHeadVerified": "8eb70b34227261f0581fbbd41b9dc4851cb4cf4a",
+            "branch": "claude/postilaatikko",
+            "prefix": "posti/codex-karttaseppa-notre-dame-17f-otto6-20261104",
+            "fileCount": 3,
+            "bytes": 4007711,
+            "sha256": {
+              "SHA256SUMS": "1928bce1f4c314d4b2b7f3990f73aa8daf55d99479ac39ed5af15db8c757452c",
+              "alue-notre-dame.png": "a16c63100be65668f699521644b0851f916feb559a74e62a60a670a09e4f1c51",
+              "huomiot.md": "ddc0fd706c76a1d7f171def8b0f6e3b6b8dba8c1674b432fb45f717948bca525"
+            },
+            "byteReadbackVerified": true,
+            "url": "https://github.com/ravelius/Matkakirja/tree/8eb70b34227261f0581fbbd41b9dc4851cb4cf4a/posti/codex-karttaseppa-notre-dame-17f-otto6-20261104"
+          }
+        },
+        {
+          "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/source/isoisa-2029-paletti-v1.json",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 615,
+          "sha256": "3e29b04dd738830e8450599918c0572edb3503ec12a1bd9e55ea1f60d002767f",
+          "git_blob_sha1_laskettu": "cd986327bbc3699c4d30fff06bd6cf29a4e58985",
+          "tekija": "Tilaajan Matkakirja-aineistoksi toimittama; alkuperäisen kuvan tekijä/palvelu/tili ei tämän tiedoston tai tilauksen perusteella varmistu",
+          "oikeudet": "Ei itsenäistä lisenssitodistusta; nimi tai omistajan hyväksyntä ei osoita tekijänoikeuden omistusta."
+        }
+      ],
+      "avoimet": [
+        "Tilaajan G-kuvien sekä otto5/otto6-kuvien tuotanto- ja rajausketju on nyt todennettu tavuilla ja skripteillä. Avoimeksi jää erityisesti täyden 2029-hyvaksytty-tyyli.png:n alkuperäinen tuottaja, palvelu/tili ja oikeusketju sekä vanhempien kartta-/tyyliviitteiden mahdolliset periytyvät ehdot. Näitä ei pidä kutsua tuntemattomiksi G/otto5/otto6-generoinneiksi.",
+        "Aiemman 19a:n Commons-tutkimuksen CC BY-SA -lähteet pidetään historiassa. K2-loki ei anna lupaa poistaa niitä eikä perustetta väittää koko lopputuote CC BY-SA:ksi tai täysin lähteistä riippumattomaksi.",
+        "V2 ja V3 ovat paikallisesti tavuilla tarkistettuja. Niiden yksittäisen GLB:n varmaa repository-commit/blob-sidosta ei löytynyt tässä; paikallinen blob SHA1 ei yksin todista että blob on tallennettu repoon.",
+        "Omistaja hyväksyi V3-johdoksen peliin kokeiltavaksi 4.11. klo 12.38 (checkpoint closureReceipt 95d0cf53d8089d9f08ebd60d8a2375c441e18a36 / c7ba622fa3829b71194709234e195681aa62f231); tämä ei ole 6.11. uuden syvyys-LOD:n lopullinen hyväksyntä.",
+        "K2:n pelikuvageneroinnin varhainen viite 19a-lansi.png on aiemman 19a-sarjan kuva: vaikka Commons-kuvia ei annettu suoraan K2:lle, viiteketju voi välittää aiemman sarjan vaikutusta. Historiallisia lähteitä ei siksi merkitä varmasti vaikutuksettomiksi."
+      ]
+    },
+    {
+      "nimi": "Riemukaari / kevyt malli",
+      "lopullinen_tiedosto": "riemukaari-kevyt.glb",
+      "tekijat_ja_tyokalut": [
+        {
+          "tekija": "Codex",
+          "tyo": "#2097 kokonaiset ImageGen-kuvat; 24g Tripo H3.1 Ultra, raskaan oton 2 jälkityö ja holvien Blender-korjaus; V2 katon korjaus; parametrinen LOD ja tekstuurit",
+          "tyokalut": [
+            "OpenAI ImageGen",
+            "Tripo H3.1 Ultra / omistajan Tripo Max -tili aiemman lokin mukaan",
+            "Tripo Retopology vertailuehdokkaalle",
+            "Blender (vain aiempi v1-holvileikkaus)",
+            "Python",
+            "NumPy",
+            "Pillow",
+            "CPU-esikatselu"
+          ]
+        },
+        {
+          "tekija": "Karttaseppä (Claude)",
+          "tyo": "#2097 kuvien normalisointi yhtenäiselle mittakaavalle ja maaviivalle tee-syote.py:llä; mittasuhteiden valinta/tilaus. Normalisoidut PNG:t eivät ole ImageGenin muokkaamattomia natiiveja."
+        }
+      ],
+      "oikeudet": {
+        "lisenssi": "Projektikäytön peruste: mallikohtainen lähdeketju ja palveluehdot; koko GLB:lle ei ole määritetty avointa jakelulisenssiä.",
+        "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+        "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus.",
+        "kayttooikeuden_peruste": "Ks. palveluehdot_ja_kayttooikeus ja mallin omat, nimetyt kuvalähteet."
+      },
+      "suora_lod_input": {
+        "V2_GLBetappi": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d; verhokäyrän, mittakaavan, pivotin, porraslistojen ja katon vertailu",
+        "kolme_kuvaa": "ita/lansi/pohjoinen normalisoidut 24g-syötteet; näistä LOD-julkisivu-atlas",
+        "geometria": "build_light_arc.py rakentaa parametrisen neljän nurkkapilarin ja risteävien holvien kevyen geometrian. V2:n kolmioita ei pidä kutsua kaiken LOD-geometrian alkuperäksi. V2 itse periytyy Tripo-v1:stä ja sisältää vain katon uudemman paikalliskorjauksen.",
+        "katto_ja_sisapinnat": "Koodilla deterministisesti maalattu kalkkikivilaatoitus ja limisaumainen sisäkivi, ei ladattu valokuvatekstuuri. Julkisivun ja kivisaumojen luminanssista johdettu normaali."
+      },
+      "versioketju": [
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/raw/riemukaari24g-attempt02-raw.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 5419496,
+          "sha256": "50f2bc53a7ed99b26db8681edf7e1415bdc9db913763236724727921b292f552",
+          "git_blob_sha1_laskettu": "fba95614a02ccfbccc951287e5d09c3877214344",
+          "vaihe": "Tripo H3.1 Ultra / Free Retry otto 2, job b14be7b1-ed4e-40f7-86ed-b6e37e12b005; valittu raskas alkuperä"
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/raw/riemukaari24g-attempt02-light.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 3140428,
+          "sha256": "11ffba96055105cf1f1074bf8d9ff54dff54bb56659eed68e05f4bf6a259a38d",
+          "git_blob_sha1_laskettu": "994b9c6803a58b40bd27950bfa87c3816f1fef80",
+          "vaihe": "Tripon retopology-vertailu; ei toimitetun v1:n geometrian lähtö (kevennetty sivuaukko/UV arvioitiin erikseen)"
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/delivery/riemukaari-3d-v1/riemukaari.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 5271540,
+          "sha256": "87e4a6156fe90c0c3f704dbce0fc5e4b2c5320416403b228d72f729955abdbec",
+          "git_blob_sha1_laskettu": "324840d08b0d81a6a46fd7450ad527532c01728d",
+          "vaihe": "Codex: raskaan oton 2 uniform scale, Blenderin ristikkäiset holvileikkaukset ja jalustan irtopalojen poisto #2130; V1",
+          "repo": {
+            "commit": "15e0453349fcd483de13c3908dc3543c13138e41",
+            "polku": "posti/tripo3d-riemukaari24g-korjattu-20261105/riemukaari-3d-v1/riemukaari.glb",
+            "blob": "324840d08b0d81a6a46fd7450ad527532c01728d",
+            "varmennuksen_taso": "Aiempi v1-read-receipt.json ja LAHTEET.md; paikallinen hash tarkistettu nyt"
+          }
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-katto-v2-2156-20261105/delivery/riemukaari-3d-v2/riemukaari.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 6886336,
+          "sha256": "ce29395f050263f682db676328c0da59f680f11b56020ebf6f3444ce67fb385d",
+          "git_blob_sha1_laskettu": "2fb74e5c3adf61534bae0588a4828c49166ba68d",
+          "vaihe": "Codex: vain katon paikallinen V2-korjaus Python/NumPy; alkuperäinen 36425 kolmion alageometria säilytettiin. Ei kaikkien geometriaosien alkulähde.",
+          "repo": {
+            "commit": "1fadb64914c0f6ed893b45da0d234a37a4ba6bcb",
+            "polku": "posti/riemukaari-3d-v2/riemukaari.glb",
+            "blob": "2fb74e5c3adf61534bae0588a4828c49166ba68d",
+            "varmennuksen_taso": "Aiempi final-delivery-receipt.json, readbackByteVerified=true; paikallinen hash tarkistettu nyt"
+          }
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-bittikartta-20261106/riemukaari-kevyt.glb",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2237000,
+          "sha256": "9b2866f00e4ec482e468d29f6f02668a3f2b404d47156b18e8dfe093c6162142",
+          "git_blob_sha1_laskettu": "5a4f196f0488a50e5ade920b65492df16760c5c3",
+          "vaihe": "Codex: uusi parametrinen 1128-kolmion kevyt runko, oikeasti risteävät holviaukot; V2 mitattu verhokäyrä ja porraslistaprofiili; kolme normalisoitua ImageGen-kuvaa julkisivu-atlakseen; koodilla maalattu kattolaatta ja sisäkivi sekä niistä johdettu normaali"
+        }
+      ],
+      "alkuperaiset_tripo_syotteet_ja_suorat_2d_lahteet": [
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/tripo-syote/ita.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1871089,
+          "sha256": "fb5085eed883187937d4f77bf166275574f34326c6577d2bd15322e8070bbcf1",
+          "git_blob_sha1_laskettu": "11b1669de93538030ca5e69c688aa9c53b6f6354",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Riemukaari 24g Tripo-syöte",
+            "Suora julkisivutekstuurin kuvalähde kevyt-LOD:ssa"
+          ],
+          "tekija": "Alkuperäinen Codex / OpenAI ImageGen; syöteversion normalisointi Karttaseppä (Claude)",
+          "versio": "24g / tripo-syote, EI muokkaamaton ImageGen-natiivi",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "normalisointi": {
+            "tyokalu": {
+              "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/riemukaari/tee-syote.py",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1917,
+              "sha256": "9825790231959024033956cd97691b99073188b71ef3a2c737573b2399d43447",
+              "git_blob_sha1_laskettu": "0baefbc0a9d8e8a5d80198b8bed14dd34ac1e7d2"
+            },
+            "toimi": "Pillow LANCZOS, tasainen skaala QA:n maaviivan ja päälistan korkeuden erotuksesta, keskitys 1536×1024-kankaalle ja maaviiva y=970. Myös kertoimella 1 uudelleentallennus/keskitys muuttaa PNG-tavuja.",
+            "mittaloki": {
+              "skaala": 1.0,
+              "leveys": 1022,
+              "korkeus": 916,
+              "aukko_leveys": 231,
+              "aukko_korkeus": 576,
+              "sha": "fb5085eed883187937d4f77bf166275574f34326c6577d2bd15322e8070bbcf1"
+            }
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/ita.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2013157,
+            "sha256": "6a7020d4917828be3329febebe16c628e2f008c3054e6c30346676aa253af479",
+            "git_blob_sha1_laskettu": "2c34040d95506b059e9c439ff56eb2172ffe3c30",
+            "kuvakoko": [
+              1536,
+              1024
+            ],
+            "kuvamuoto": "PNG",
+            "tekija": "Codex / ImageGen",
+            "versio": "Sarja24 #2097 / ita-otto01",
+            "repo": {
+              "commit": "904cb8a8efe564359fa304b570d9a34051eae4bf",
+              "polku": "posti/codex-karttaseppa-sarja24-riemukaari-20261105/ita.png"
+            }
+          },
+          "generointipyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/ita-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2812,
+            "sha256": "c44ed551f13106422f21d9f9b26f0e866ff4e3735ab8f8311003eb8c22b52cd8",
+            "git_blob_sha1_laskettu": "00e9031d93047a50bcd2c79a984a94a8cbad70b5"
+          },
+          "normalisoidun_syotteen_repo_blob": null,
+          "normalisoidun_syotteen_repo_huomio": "Tilauksessa ac25f9aba3b672c9a8610dcc62b3be8282b3560b / d7a3d91f6b2e0c26f00aae0468b30f4e4199b5cc nimetty paikalliseksi liitteeksi ja SHA256 yksilöity. Tälle normalisoidulle PNG:lle ei löytynyt toimituscommitin/blobin varmaa sidosta.",
+          "alkuperaisen_imagegen_tuloksen_sidonta": {
+            "originals_kopio": {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/originals/ita-otto01.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2013157,
+              "sha256": "6a7020d4917828be3329febebe16c628e2f008c3054e6c30346676aa253af479",
+              "git_blob_sha1_laskettu": "2c34040d95506b059e9c439ff56eb2172ffe3c30",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "natiivi_exec_tiedosto": {
+              "paikallinen_polku": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac65-7b39-7861-a447-9647077c800d/exec-f338eb6e-421e-4b9d-ad3f-0587dcbf532d.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2013157,
+              "sha256": "6a7020d4917828be3329febebe16c628e2f008c3054e6c30346676aa253af479",
+              "git_blob_sha1_laskettu": "2c34040d95506b059e9c439ff56eb2172ffe3c30",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "toimitus_sama_SHA256_kuin_loki": true,
+            "generointi_aika_UTC": "2026-11-05T16:03:23.215109+00:00",
+            "todiste": {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/state.json",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 12832,
+              "sha256": "84b917b5f99b0677252db687e76662f4bc440070064857da37998f51628c0baa",
+              "git_blob_sha1_laskettu": "46babd4cf3f3059628f6c77791228471eedaf596"
+            }
+          }
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/tripo-syote/lansi.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1815686,
+          "sha256": "8f0538319fe5083bd31459099d96d1c83cd358909223c65eee56f80c5f5b8bda",
+          "git_blob_sha1_laskettu": "82c921ae35126a818c8d760648f0478c0cdd2206",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Riemukaari 24g Tripo-syöte",
+            "Suora julkisivutekstuurin kuvalähde kevyt-LOD:ssa"
+          ],
+          "tekija": "Alkuperäinen Codex / OpenAI ImageGen; syöteversion normalisointi Karttaseppä (Claude)",
+          "versio": "24g / tripo-syote, EI muokkaamaton ImageGen-natiivi",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "normalisointi": {
+            "tyokalu": {
+              "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/riemukaari/tee-syote.py",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1917,
+              "sha256": "9825790231959024033956cd97691b99073188b71ef3a2c737573b2399d43447",
+              "git_blob_sha1_laskettu": "0baefbc0a9d8e8a5d80198b8bed14dd34ac1e7d2"
+            },
+            "toimi": "Pillow LANCZOS, tasainen skaala QA:n maaviivan ja päälistan korkeuden erotuksesta, keskitys 1536×1024-kankaalle ja maaviiva y=970. Myös kertoimella 1 uudelleentallennus/keskitys muuttaa PNG-tavuja.",
+            "mittaloki": {
+              "skaala": 1.0013,
+              "leveys": 1025,
+              "korkeus": 916,
+              "aukko_leveys": 230,
+              "aukko_korkeus": 576,
+              "sha": "8f0538319fe5083bd31459099d96d1c83cd358909223c65eee56f80c5f5b8bda"
+            }
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/lansi.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 1947941,
+            "sha256": "42d289d74c97189f34338b50ba3f63672375fe8b3afec1f3125dde50364de831",
+            "git_blob_sha1_laskettu": "dd2664169aa9331f6813aee13a970042684c68a9",
+            "kuvakoko": [
+              1536,
+              1024
+            ],
+            "kuvamuoto": "PNG",
+            "tekija": "Codex / ImageGen",
+            "versio": "Sarja24 #2097 / lansi-otto01",
+            "repo": {
+              "commit": "904cb8a8efe564359fa304b570d9a34051eae4bf",
+              "polku": "posti/codex-karttaseppa-sarja24-riemukaari-20261105/lansi.png"
+            }
+          },
+          "generointipyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/lansi-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2787,
+            "sha256": "c32867aa19c3e76bbc4d9e09b377d01ee8e549dd47d23332a314e883a8b018ba",
+            "git_blob_sha1_laskettu": "6633da21d0264633a67f1e3e6e887bb8435bea4c"
+          },
+          "normalisoidun_syotteen_repo_blob": null,
+          "normalisoidun_syotteen_repo_huomio": "Tilauksessa ac25f9aba3b672c9a8610dcc62b3be8282b3560b / d7a3d91f6b2e0c26f00aae0468b30f4e4199b5cc nimetty paikalliseksi liitteeksi ja SHA256 yksilöity. Tälle normalisoidulle PNG:lle ei löytynyt toimituscommitin/blobin varmaa sidosta.",
+          "alkuperaisen_imagegen_tuloksen_sidonta": {
+            "originals_kopio": {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/originals/lansi-otto01.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1947941,
+              "sha256": "42d289d74c97189f34338b50ba3f63672375fe8b3afec1f3125dde50364de831",
+              "git_blob_sha1_laskettu": "dd2664169aa9331f6813aee13a970042684c68a9",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "natiivi_exec_tiedosto": {
+              "paikallinen_polku": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac65-7b39-7861-a447-9647077c800d/exec-68f781aa-e5d4-49b9-9a20-0970c15f0f5b.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1947941,
+              "sha256": "42d289d74c97189f34338b50ba3f63672375fe8b3afec1f3125dde50364de831",
+              "git_blob_sha1_laskettu": "dd2664169aa9331f6813aee13a970042684c68a9",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "toimitus_sama_SHA256_kuin_loki": true,
+            "generointi_aika_UTC": "2026-11-05T16:05:39.663817+00:00",
+            "todiste": {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/state.json",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 12832,
+              "sha256": "84b917b5f99b0677252db687e76662f4bc440070064857da37998f51628c0baa",
+              "git_blob_sha1_laskettu": "46babd4cf3f3059628f6c77791228471eedaf596"
+            }
+          }
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/tripo-syote/pohjoinen.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1340273,
+          "sha256": "4ae8756af28181ac8cc5309241be184ffa46a924c9b4458d5efd1252e19e9598",
+          "git_blob_sha1_laskettu": "f4e0cc9ca1d24a53cc9541e0ad529169a1a8b18b",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "roolit": [
+            "Riemukaari 24g Tripo-syöte",
+            "Suora julkisivutekstuurin kuvalähde kevyt-LOD:ssa"
+          ],
+          "tekija": "Alkuperäinen Codex / OpenAI ImageGen; syöteversion normalisointi Karttaseppä (Claude)",
+          "versio": "24g / tripo-syote, EI muokkaamaton ImageGen-natiivi",
+          "oikeudet": {
+            "lisenssi": null,
+            "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+            "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+          },
+          "normalisointi": {
+            "tyokalu": {
+              "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/riemukaari/tee-syote.py",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1917,
+              "sha256": "9825790231959024033956cd97691b99073188b71ef3a2c737573b2399d43447",
+              "git_blob_sha1_laskettu": "0baefbc0a9d8e8a5d80198b8bed14dd34ac1e7d2"
+            },
+            "toimi": "Pillow LANCZOS, tasainen skaala QA:n maaviivan ja päälistan korkeuden erotuksesta, keskitys 1536×1024-kankaalle ja maaviiva y=970. Myös kertoimella 1 uudelleentallennus/keskitys muuttaa PNG-tavuja.",
+            "mittaloki": {
+              "skaala": 1.031,
+              "leveys": 499,
+              "korkeus": 923,
+              "aukko_leveys": 152,
+              "aukko_korkeus": 397,
+              "sha": "4ae8756af28181ac8cc5309241be184ffa46a924c9b4458d5efd1252e19e9598"
+            }
+          },
+          "alkuperainen_imagegen_png": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/pohjoinen.png",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 1484765,
+            "sha256": "4711d695a2a671df4932ad68e65a2a55354f124d3d65c8d11d8ad5cf9ae86bfd",
+            "git_blob_sha1_laskettu": "f1c9871fe55858bad3ba2e7f954bdab4359311b3",
+            "kuvakoko": [
+              1536,
+              1024
+            ],
+            "kuvamuoto": "PNG",
+            "tekija": "Codex / ImageGen",
+            "versio": "Sarja24 #2097 / pohjoinen-otto01",
+            "repo": {
+              "commit": "904cb8a8efe564359fa304b570d9a34051eae4bf",
+              "polku": "posti/codex-karttaseppa-sarja24-riemukaari-20261105/pohjoinen.png"
+            }
+          },
+          "generointipyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/pohjoinen-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2975,
+            "sha256": "997a51c10578ec8efae5c3e29acd5c1e121ed3a673a6572c8bbbed47ea17e8a6",
+            "git_blob_sha1_laskettu": "f922c17df74ebadfcd2f6a252c6287ef5255fac8"
+          },
+          "normalisoidun_syotteen_repo_blob": null,
+          "normalisoidun_syotteen_repo_huomio": "Tilauksessa ac25f9aba3b672c9a8610dcc62b3be8282b3560b / d7a3d91f6b2e0c26f00aae0468b30f4e4199b5cc nimetty paikalliseksi liitteeksi ja SHA256 yksilöity. Tälle normalisoidulle PNG:lle ei löytynyt toimituscommitin/blobin varmaa sidosta.",
+          "alkuperaisen_imagegen_tuloksen_sidonta": {
+            "originals_kopio": {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/originals/pohjoinen-otto01.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1484765,
+              "sha256": "4711d695a2a671df4932ad68e65a2a55354f124d3d65c8d11d8ad5cf9ae86bfd",
+              "git_blob_sha1_laskettu": "f1c9871fe55858bad3ba2e7f954bdab4359311b3",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "natiivi_exec_tiedosto": {
+              "paikallinen_polku": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1ac65-7b39-7861-a447-9647077c800d/exec-a8b9a406-e3f5-4897-bb71-0c07df62dda4.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1484765,
+              "sha256": "4711d695a2a671df4932ad68e65a2a55354f124d3d65c8d11d8ad5cf9ae86bfd",
+              "git_blob_sha1_laskettu": "f1c9871fe55858bad3ba2e7f954bdab4359311b3",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            "toimitus_sama_SHA256_kuin_loki": true,
+            "generointi_aika_UTC": "2026-11-05T16:02:08.516254+00:00",
+            "todiste": {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/state.json",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 12832,
+              "sha256": "84b917b5f99b0677252db687e76662f4bc440070064857da37998f51628c0baa",
+              "git_blob_sha1_laskettu": "46babd4cf3f3059628f6c77791228471eedaf596"
+            }
+          }
+        }
+      ],
+      "tripo_syotepaikat": {
+        "Front": "ita.png",
+        "Back": "lansi.png",
+        "Left": "pohjoinen.png",
+        "Right": "pohjoinen.png",
+        "etela": "nimenomaisesti kielletty; väärät suuret patsasryhmät ja leveyspoikkeama"
+      },
+      "imagegen_generointien_viitegraafi": [
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/etela-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2939,
+            "sha256": "935632fae9aa46de97cb78d526120619ebb41755993bd25a86b47ce72395be05",
+            "git_blob_sha1_laskettu": "16fb37cc26d7d265b558853b6a75821790471e23"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/viisto-lounas.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2053297,
+              "sha256": "a520d1da5256556e2dada6ff15c553b73bd39ad10797ec83b711e71c2d4af7d6",
+              "git_blob_sha1_laskettu": "1b923bd4273cd369d9ed8a52706e3dc874edc336",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/ylhaalta.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1202625,
+              "sha256": "901fb7a64222a12b96b0aecfbdbfe06f0a7bde9b4ea9bfda076a4910cd4a7832",
+              "git_blob_sha1_laskettu": "53fb90b8bc221d76ef0f39e628bff23e404fb9e9",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/oikea.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 279542,
+              "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+              "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+              "kuvakoko": [
+                1280,
+                967
+              ],
+              "kuvamuoto": "JPEG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/ita-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2812,
+            "sha256": "c44ed551f13106422f21d9f9b26f0e866ff4e3735ab8f8311003eb8c22b52cd8",
+            "git_blob_sha1_laskettu": "00e9031d93047a50bcd2c79a984a94a8cbad70b5"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/pohjoinen.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1484765,
+              "sha256": "4711d695a2a671df4932ad68e65a2a55354f124d3d65c8d11d8ad5cf9ae86bfd",
+              "git_blob_sha1_laskettu": "f1c9871fe55858bad3ba2e7f954bdab4359311b3",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/viisto-lounas.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2053297,
+              "sha256": "a520d1da5256556e2dada6ff15c553b73bd39ad10797ec83b711e71c2d4af7d6",
+              "git_blob_sha1_laskettu": "1b923bd4273cd369d9ed8a52706e3dc874edc336",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/oikea.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 279542,
+              "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+              "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+              "kuvakoko": [
+                1280,
+                967
+              ],
+              "kuvamuoto": "JPEG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/lansi-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2787,
+            "sha256": "c32867aa19c3e76bbc4d9e09b377d01ee8e549dd47d23332a314e883a8b018ba",
+            "git_blob_sha1_laskettu": "6633da21d0264633a67f1e3e6e887bb8435bea4c"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/ita.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2013157,
+              "sha256": "6a7020d4917828be3329febebe16c628e2f008c3054e6c30346676aa253af479",
+              "git_blob_sha1_laskettu": "2c34040d95506b059e9c439ff56eb2172ffe3c30",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/viisto-koillinen.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1972914,
+              "sha256": "6198d1b49e5cecbd42fc2a53727f78444d97346c106889c88a29902f2ff22123",
+              "git_blob_sha1_laskettu": "4cc466a7239a76693ec59efd89e9ffd25ddc3789",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/pohjoinen.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1484765,
+              "sha256": "4711d695a2a671df4932ad68e65a2a55354f124d3d65c8d11d8ad5cf9ae86bfd",
+              "git_blob_sha1_laskettu": "f1c9871fe55858bad3ba2e7f954bdab4359311b3",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/pohjoinen-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2975,
+            "sha256": "997a51c10578ec8efae5c3e29acd5c1e121ed3a673a6572c8bbbed47ea17e8a6",
+            "git_blob_sha1_laskettu": "f922c17df74ebadfcd2f6a252c6287ef5255fac8"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/etela.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1662931,
+              "sha256": "b9e1fe4f16f97e92cf3036691271501bb29f875400ea328bddfe974536940745",
+              "git_blob_sha1_laskettu": "a1cb7fc502615384eb2601312f2906651ea53ced",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/viisto-koillinen.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1972914,
+              "sha256": "6198d1b49e5cecbd42fc2a53727f78444d97346c106889c88a29902f2ff22123",
+              "git_blob_sha1_laskettu": "4cc466a7239a76693ec59efd89e9ffd25ddc3789",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/source/photos/ilmakuva-1900.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4884968,
+              "sha256": "4f3bc90f2eed29a95993af6ab6ef8cc378576d6dd20446e4c6cbea79ed0784eb",
+              "git_blob_sha1_laskettu": "8dbaa586f88fc4fd7769d03d3aa3b2cdd6f2d0a0",
+              "kuvakoko": [
+                4337,
+                3087
+              ],
+              "kuvamuoto": "JPEG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/viisto-koillinen-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 2953,
+            "sha256": "17bdfef3f66d400a16dfe840fc1c71e72a0e78acb68fada0bdd8ef6556182d1e",
+            "git_blob_sha1_laskettu": "7257444ecdfa397cde77fd108c0a913a934bc265"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/viisto-lounas.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2053297,
+              "sha256": "a520d1da5256556e2dada6ff15c553b73bd39ad10797ec83b711e71c2d4af7d6",
+              "git_blob_sha1_laskettu": "1b923bd4273cd369d9ed8a52706e3dc874edc336",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/ylhaalta.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1202625,
+              "sha256": "901fb7a64222a12b96b0aecfbdbfe06f0a7bde9b4ea9bfda076a4910cd4a7832",
+              "git_blob_sha1_laskettu": "53fb90b8bc221d76ef0f39e628bff23e404fb9e9",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/oikea.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 279542,
+              "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+              "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+              "kuvakoko": [
+                1280,
+                967
+              ],
+              "kuvamuoto": "JPEG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/source/photos/ilmakuva-1900.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4884968,
+              "sha256": "4f3bc90f2eed29a95993af6ab6ef8cc378576d6dd20446e4c6cbea79ed0784eb",
+              "git_blob_sha1_laskettu": "8dbaa586f88fc4fd7769d03d3aa3b2cdd6f2d0a0",
+              "kuvakoko": [
+                4337,
+                3087
+              ],
+              "kuvamuoto": "JPEG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/viisto-lounas-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3139,
+            "sha256": "1e6a9c27c35336fdcff9ab07991316bbbecbea5449aca15dcaee0e0f47436e87",
+            "git_blob_sha1_laskettu": "a37706a6412b38e087a24a4d8ca1c552fa88517b"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/ylhaalta.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 1202625,
+              "sha256": "901fb7a64222a12b96b0aecfbdbfe06f0a7bde9b4ea9bfda076a4910cd4a7832",
+              "git_blob_sha1_laskettu": "53fb90b8bc221d76ef0f39e628bff23e404fb9e9",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/oikea.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 279542,
+              "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+              "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+              "kuvakoko": [
+                1280,
+                967
+              ],
+              "kuvamuoto": "JPEG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/source/photos/ilmakuva-1900.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4884968,
+              "sha256": "4f3bc90f2eed29a95993af6ab6ef8cc378576d6dd20446e4c6cbea79ed0784eb",
+              "git_blob_sha1_laskettu": "8dbaa586f88fc4fd7769d03d3aa3b2cdd6f2d0a0",
+              "kuvakoko": [
+                4337,
+                3087
+              ],
+              "kuvamuoto": "JPEG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24d-grand-palais-2111-20261105/delivery/viisto-lounas.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2364487,
+              "sha256": "f0e8cf336d5a37c3ad6299550077d2b0b997c0659da416d0769b0e7efd54a8c2",
+              "git_blob_sha1_laskettu": "d8665c6577de4951ee0705485cd22be688e39cb8",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        },
+        {
+          "pyynto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/prompts/ylhaalta-otto01.json",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 3004,
+            "sha256": "6e564f8d80f56efdd73783d406a7cca3533941174ed4b3fdf627ab66d913d35c",
+            "git_blob_sha1_laskettu": "c4063a39cbff8f6dfca12700e264aa764945fe2e"
+          },
+          "viitteet": [
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/source/jalanjalki.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2746,
+              "sha256": "a2c50822ba8cc72099149f484824cdae3cf6cf89b32cdf644e018d4795de69b5",
+              "git_blob_sha1_laskettu": "4b727af9e8782235baffe38498b493751c68ad36",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/source/photos/ilmakuva-1900.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 4884968,
+              "sha256": "4f3bc90f2eed29a95993af6ab6ef8cc378576d6dd20446e4c6cbea79ed0784eb",
+              "git_blob_sha1_laskettu": "8dbaa586f88fc4fd7769d03d3aa3b2cdd6f2d0a0",
+              "kuvakoko": [
+                4337,
+                3087
+              ],
+              "kuvamuoto": "JPEG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/oikea.jpg",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 279542,
+              "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+              "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+              "kuvakoko": [
+                1280,
+                967
+              ],
+              "kuvamuoto": "JPEG"
+            },
+            {
+              "paikallinen_polku": "output/sarja24d-grand-palais-2111-20261105/delivery/viisto-lounas.png",
+              "tiedosto_olemassa_tarkistuksessa": true,
+              "tavut": 2364487,
+              "sha256": "f0e8cf336d5a37c3ad6299550077d2b0b997c0659da416d0769b0e7efd54a8c2",
+              "git_blob_sha1_laskettu": "d8665c6577de4951ee0705485cd22be688e39cb8",
+              "kuvakoko": [
+                1536,
+                1024
+              ],
+              "kuvamuoto": "PNG"
+            }
+          ],
+          "tausta_lapinakyva": false,
+          "rajat": "Viite on syötetty ImageGenille tämän arkistoidun pyynnön mukaan. Tämä ei osoita pikselien kopiointia eikä anna oikeuksia viitteeseen. Myös hylätyt varhaiset otot voivat vaikuttaa myöhempään kuvaan viitteenä."
+        }
+      ],
+      "ulkopuoliset_valokuvaviitteet": [
+        {
+          "nimi": "Arc de Triomphe, Paris 21 October 2010.jpg",
+          "tekija": "Jiuguang Wang",
+          "paivays": "2010-10-21",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssi_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe,_Paris_21_October_2010.jpg",
+          "tiedosto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/oikea.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 279542,
+            "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+            "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+            "kuvakoko": [
+              1280,
+              967
+            ],
+            "kuvamuoto": "JPEG"
+          },
+          "kaytto": "ImageGen-kuvien valokuvaviite. Wikimedia 1280×967-esikatselu, ei palvelimen täysikokoinen originaali; paikallisesti muuttamaton. Ei suora LOD-tekstuurikuva.",
+          "todiste": "output/sarja24-riemukaari-2097-20261105/delivery/LAHTEET.md + prompts/*.json"
+        },
+        {
+          "nimi": "Aerial view of the Arc de Triomphe, Paris, France, ca. 1900.jpg",
+          "tekija": "Tuntematon kuvaaja",
+          "kokoelma": "State Library Victoria, H92.350/467",
+          "paivays": "noin 1900",
+          "lisenssi": "Public domain / PD-old; Commons Public Domain Mark alkuperäisen lähdelokin mukaan",
+          "lisenssi_url": "https://commons.wikimedia.org/wiki/Template:PD-old",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Arc_de_Triomphe,_Paris,_France,_ca._1900.jpg",
+          "tiedosto": {
+            "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/source/photos/ilmakuva-1900.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 4884968,
+            "sha256": "4f3bc90f2eed29a95993af6ab6ef8cc378576d6dd20446e4c6cbea79ed0784eb",
+            "git_blob_sha1_laskettu": "8dbaa586f88fc4fd7769d03d3aa3b2cdd6f2d0a0",
+            "kuvakoko": [
+              4337,
+              3087
+            ],
+            "kuvamuoto": "JPEG"
+          },
+          "kaytto": "ImageGenin muotoviite ja myöhemmin katon V2 laadullinen tarkistus; ei mitattu ortokuva eikä suora LOD-tekstuurikuva."
+        },
+        {
+          "nimi": "Roof of the Arc de Triomphe, Paris 12 June 2014.jpg",
+          "tekija": "Connie Ma",
+          "paivays": "2014-06-12",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssi_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Roof_of_the_Arc_de_Triomphe,_Paris_12_June_2014.jpg",
+          "tiedosto": {
+            "paikallinen_polku": "output/riemukaari-katto-v2-2156-20261105/references/roof-2014-connie-ma.jpg",
+            "tiedosto_olemassa_tarkistuksessa": true,
+            "tavut": 4071963,
+            "sha256": "cb9842da81998e546f9f3051ccb0f552aa8b44b0787a901e840cd593d1af6252",
+            "git_blob_sha1_laskettu": "5507df430f82f7eec33c7c5eab03d94909864506",
+            "kuvakoko": [
+              4272,
+              2848
+            ],
+            "kuvamuoto": "JPEG"
+          },
+          "kaytto": "Vain katon V2 materiaalin/saumojen/matalan reunuksen ja pienen kattorakenteen laadullinen vertailu. Kuvaa ei projisoitu V2:n tai LOD:n tekstuuriin. Kevyen mallin kattolaatoitus luodaan deterministisesti koodilla.",
+          "todiste": "output/riemukaari-katto-v2-2156-20261105/delivery/riemukaari-3d-v2/qa/roof-sources.json"
+        }
+      ],
+      "periytynyt_tyyliviite": {
+        "paikallinen_polku": "output/sarja24d-grand-palais-2111-20261105/delivery/viisto-lounas.png",
+        "tiedosto_olemassa_tarkistuksessa": true,
+        "tavut": 2364487,
+        "sha256": "f0e8cf336d5a37c3ad6299550077d2b0b997c0659da416d0769b0e7efd54a8c2",
+        "git_blob_sha1_laskettu": "d8665c6577de4951ee0705485cd22be688e39cb8",
+        "kuvakoko": [
+          1536,
+          1024
+        ],
+        "kuvamuoto": "PNG",
+        "rooli": "Riemukaaren alkuperäisten ImageGen-kuvien piirrosjäljen ja tasaisen valon viite; ei Riemukaaren muoto eikä suora LOD-input",
+        "tekija": "Codex / ImageGen",
+        "oikeudet": {
+          "lisenssi": null,
+          "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+          "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+        },
+        "lahdehistoria": {
+          "paikallinen_polku": "output/sarja24d-grand-palais-2111-20261105/delivery/LAHTEET.md",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 3201,
+          "sha256": "59e70c379b3d9282f1bee2716e9a1d7e323d96afd8df8ae9eb398cec1cf33435",
+          "git_blob_sha1_laskettu": "13c083fe25ec4025f353c418883fb1d6b54c05be"
+        },
+        "lahdehistorian_teksti": "# Grand Palais otto2 #2111 — lähteet ennen ensimmäistä kuvaa\n\nTILAUS-24d ja päivitetty TILAUS-24 luettu kokonaan. Lähdeposti0ba602a8f6df1c6c11c374a9ae1edde7a2342582, blob b363177f0c644037492687b46f3481eee278f88e.43 manifestiliitettä SHA256-varmennettu; source/verification.json. Suunta idästä myötäpäivään; toimitettu jalanjälki ja Karttasepän pohjois-ylös-kuva määräävät kuvan asennon. Työjärjestys yläkuva ensin, sitten lounas ja muut. Vanha #2092 säilyy erillään.\n\nKorkeus45m ja pitkä nef240m: OPPIC https://www.oppic.fr/rubrique112.html . Väri samassa lähteessä vert reseda pale.159m kokonaisleveys,97m länsiosa ja100m sivuosan leveys tulevat24d:stä. Ei erillistä uutta rakennusmittausta. Korkea kärki sisällytetään nyt, ei lasketa45m-lasikupoliksi. Julkisivukuvan natiivi922x692: keskiviivan likimääräinen maataso y530±15, lasikupolin/lyhdyn liitos y260±5, korkein lipun/mastonkohta y155±3. Näiden projektiokorkeuksien suhde375/270=1.389;45m:iin suhteutettu kärjen yläkohta noin62.5m, käytännön suuntaa-antava tavoite noin62m. Perspektiivi, kupolin syvyys ja osin peittyvä maataso rajoittavat tarkkuutta: ei väite todellisesta sentintarkasta korkeudesta. Viistokuvissa ja sivuissa sama rakennus, ei45m koko kärjen korkeutena.\n\nValokuvat vain muodon tarkistukseen/viitteeksi, ei pelin rasteriin liimattaviksi:\n- oikea.jpg / julkisivu-churchill.jpg: Simdaperce, August2008, CC BY-SA3.0 https://creativecommons.org/licenses/by-sa/3.0/ . https://commons.wikimedia.org/wiki/File:Paris_75008_Avenue_Winston-Churchill_Grand_Palais.jpg .922x692 alkuperäinen, ei muutettu.\n- ylakuva-orto-2018.jpg ja ylakuva-pohjoinen-ylos.jpg: IGN,2018, Licence Ouverte1.0 https://www.etalab.gouv.fr/licence-ouverte-open-licence/ . https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018_-_Grand_Palais_01.jpg . Karttasepän1920px pienennös; jälkimmäinen lisäksi hänen90asteen myötäpäiväkäännöksensä. Tätä ei merkitä CC-lisenssiksi; nimenomaisesti tilauksen antama avoimen lisenssin lähde.\n- eiffelilta-2014.jpg: Dennis G. Jarvis (archer10),22June2014, CC BY-SA2.0 https://creativecommons.org/licenses/by-sa/2.0/ . https://commons.wikimedia.org/wiki/File:Paris,_Grand_Palais_from_the_Eiffel_Tower,_June_2014.jpg . Karttasepän1920px pienennös.\n- eiffelilta-34795361424.jpg: Kipp Jones,19June2017, CC BY2.0 https://creativecommons.org/licenses/by/2.0/ . https://commons.wikimedia.org/wiki/File:Grand_Palais_from_the_Eiffel_Tower_(34795361424).jpg . Tekijä/lupa tarkistettu Commonsin imageinfo API:sta, kun selainhaku ei avannut sivua. Karttasepän1920px pienennös.\n- ilmasta-P1180998.jpg: David Monniaux,21May2011, CC BY-SA3.0 https://creativecommons.org/licenses/by-sa/3.0/ . https://commons.wikimedia.org/wiki/File:Grand_Palais_Petit_Palais_Elysee_P1180998.jpg . Karttasepän1920px pienennös.\n\nTarkistettu T-muoto: pyöreäpäinen pitkä lasilaiva, itään suljettu poikkilaiva, matala keskikupoli. Palais de la Decouverte -rotunda ja itäpihat jätetään24d:n mukaisesti pois. Julkisivun länsi/itä-nimi seuraa toimitettua piirtoasentoa, ei valokuvan kameran nimeä. Tilapäinen valkoinen teltta/telineet jätetään pois.\n",
+        "raja": "Sisältää Grand Palais -sivupolun avoimet valokuvalähteet (Simdaperce CC BY-SA3.0, IGN Licence Ouverte1.0, Dennis G. Jarvis CC BY-SA2.0, Kipp Jones CC BY2.0, David Monniaux CC BY-SA3.0). Niitä ei pidä merkitä Riemukaaren suoriksi Tripo- tai LOD-inputeiksi."
+      },
+      "ei_kaytetyt_valokuvat": [
+        {
+          "nimi": "ParisPlaceEtoile.jpg",
+          "tekija": "Gérard Janot",
+          "lisenssi": "CC BY-SA 3.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:ParisPlaceEtoile.jpg",
+          "tila": "Aiemman lähdelokin mukaan ei tuotantoviitteenä; rakennus liian pieni"
+        },
+        {
+          "nimi": "Arcotriunfo.jpg",
+          "tekija": "Cyberkaos",
+          "lisenssi": "CC BY-SA 3.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Arcotriunfo.jpg",
+          "tila": "Aiemman lähdelokin mukaan ei tuotantoviitteenä; rakennus liian pieni"
+        }
+      ],
+      "tarkistuskuvat_eivat_tripo_syotteita": [
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/review-only/viisto-lounas.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2053297,
+          "sha256": "a520d1da5256556e2dada6ff15c553b73bd39ad10797ec83b711e71c2d4af7d6",
+          "git_blob_sha1_laskettu": "1b923bd4273cd369d9ed8a52706e3dc874edc336",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "rooli": "Tarkistus, ei Tripo-syöte. Generointihistoriassa saman aiheen kuvat voivat silti olla aiempien ImageGen-kuvien referenssejä."
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/review-only/viisto-koillinen.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1972914,
+          "sha256": "6198d1b49e5cecbd42fc2a53727f78444d97346c106889c88a29902f2ff22123",
+          "git_blob_sha1_laskettu": "4cc466a7239a76693ec59efd89e9ffd25ddc3789",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "rooli": "Tarkistus, ei Tripo-syöte. Generointihistoriassa saman aiheen kuvat voivat silti olla aiempien ImageGen-kuvien referenssejä."
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/review-only/ylhaalta.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1202625,
+          "sha256": "901fb7a64222a12b96b0aecfbdbfe06f0a7bde9b4ea9bfda076a4910cd4a7832",
+          "git_blob_sha1_laskettu": "53fb90b8bc221d76ef0f39e628bff23e404fb9e9",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "rooli": "Tarkistus, ei Tripo-syöte. Generointihistoriassa saman aiheen kuvat voivat silti olla aiempien ImageGen-kuvien referenssejä."
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/review-only/oikea.jpg",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 279542,
+          "sha256": "ba2846db05f991edffd56628b1faee4f792d1d328e49598c74030de1a04f8248",
+          "git_blob_sha1_laskettu": "8c4c3eb35a654abe389c92c0f6677a0d724a3d5c",
+          "kuvakoko": [
+            1280,
+            967
+          ],
+          "kuvamuoto": "JPEG",
+          "rooli": "Tarkistus, ei Tripo-syöte. Generointihistoriassa saman aiheen kuvat voivat silti olla aiempien ImageGen-kuvien referenssejä."
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/review-only/jalanjalki.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 2746,
+          "sha256": "a2c50822ba8cc72099149f484824cdae3cf6cf89b32cdf644e018d4795de69b5",
+          "git_blob_sha1_laskettu": "4b727af9e8782235baffe38498b493751c68ad36",
+          "kuvakoko": [
+            1536,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "rooli": "Tarkistus, ei Tripo-syöte. Generointihistoriassa saman aiheen kuvat voivat silti olla aiempien ImageGen-kuvien referenssejä."
+        }
+      ],
+      "avoimet": [
+        "Koko LOD:n lisenssiä tai tekijänoikeuden omistusta ei ratkaise normalisointi, mallin tekninen toimitus tai Tripo-tilauksen nimi.",
+        "Valokuvien tekijät/lisenssit yllä ovat aiemman lähdetarkistuksen tuloksia. Uusi oikeudellinen soveltuvuusarvio ja mahdollisen johdannaisen share-alike/attribuutioarvio on erillinen; kuvaa generointireferenssinä käyttäminen ei itsessään ratkaise sitä.",
+        "Historiallinen kattovalokuva ja 2014 katto ovat laadullisia viitteitä, eivät historiallisesti tai metrillisesti tarkan kattorakenteen todistus.",
+        "24g:n aiempi vastaanottaja ilmoitti v1:n hyväksytyksi/asennetuksi; LOD-kevyt on eri tavujono ja tarvitsee oman pelikokeen ja päätöksen."
+      ],
+      "paikalliset_johdetut_tekstuurit": [
+        {
+          "paikallinen_polku": "output/riemukaari-bittikartta-20261106/albedo-2048.jpg",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 881181,
+          "sha256": "99b5248a115a6b9c10f7157e127039a140c93c29c432cc3de90498e167fbcbcc",
+          "git_blob_sha1_laskettu": "b35bed9f26e688a98f9e7e10f806114f6fbc11d8",
+          "kuvakoko": [
+            2048,
+            2048
+          ],
+          "kuvamuoto": "JPEG",
+          "rooli": "Codexin kuvasyötteistä/koodista johdettu, lopulliseen GLB:hen upotettu"
+        },
+        {
+          "paikallinen_polku": "output/riemukaari-bittikartta-20261106/normal-1024.png",
+          "tiedosto_olemassa_tarkistuksessa": true,
+          "tavut": 1232225,
+          "sha256": "f90758b155a25d111123883c4719d35fde7d216aee3b657416aa114fc90d19fb",
+          "git_blob_sha1_laskettu": "dd278db0a9261e92770df2b9a15781dbfd893158",
+          "kuvakoko": [
+            1024,
+            1024
+          ],
+          "kuvamuoto": "PNG",
+          "rooli": "Codexin kuvasyötteistä/koodista johdettu, lopulliseen GLB:hen upotettu"
+        }
+      ]
+    }
+  ],
+  "lopulliset_tiedostot": [
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/notre-dame-syvyys.glb",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2960932,
+      "sha256": "5e82845b21865dbe7824658f97a61af0c815172d524f1f2776a2ba298cb7629c",
+      "git_blob_sha1_laskettu": "5ee0b48bc0977aa58e0e238b816eacf7854bbeb0",
+      "repo": {
+        "repository": "ravelius/Matkakirja",
+        "haara": "claude/postilaatikko",
+        "commit": "090c134f8091cda60fee4853801925616aee6775",
+        "polku": "posti/codex-pariisi-lod-toimituspari-20261106/notre-dame-syvyys.glb",
+        "blob": "5ee0b48bc0977aa58e0e238b816eacf7854bbeb0",
+        "aiempi_tavukohtainen_verifiointi": true
+      },
+      "sama_sha256_kuin_toimituksessa": true
+    },
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/riemukaari-kevyt.glb",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2237000,
+      "sha256": "9b2866f00e4ec482e468d29f6f02668a3f2b404d47156b18e8dfe093c6162142",
+      "git_blob_sha1_laskettu": "5a4f196f0488a50e5ade920b65492df16760c5c3",
+      "repo": {
+        "repository": "ravelius/Matkakirja",
+        "haara": "claude/postilaatikko",
+        "commit": "090c134f8091cda60fee4853801925616aee6775",
+        "polku": "posti/codex-pariisi-lod-toimituspari-20261106/riemukaari-kevyt.glb",
+        "blob": "5a4f196f0488a50e5ade920b65492df16760c5c3",
+        "aiempi_tavukohtainen_verifiointi": true
+      },
+      "sama_sha256_kuin_toimituksessa": true
+    },
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/notre-dame-syvyys-vertailu.jpg",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 132790,
+      "sha256": "fd430c19ab1b31a851b9d0a1a167bbff4ef2c7fd285d1485e46db670cdf5eff5",
+      "git_blob_sha1_laskettu": "ac176a5c513526ca4eb1032d1bcd8ae5cc9167cd",
+      "kuvakoko": [
+        1040,
+        548
+      ],
+      "kuvamuoto": "JPEG",
+      "repo": {
+        "repository": "ravelius/Matkakirja",
+        "haara": "claude/postilaatikko",
+        "commit": "090c134f8091cda60fee4853801925616aee6775",
+        "polku": "posti/codex-pariisi-lod-toimituspari-20261106/notre-dame-syvyys-vertailu.jpg",
+        "blob": "ac176a5c513526ca4eb1032d1bcd8ae5cc9167cd",
+        "aiempi_tavukohtainen_verifiointi": true
+      },
+      "sama_sha256_kuin_toimituksessa": true
+    },
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/riemukaari-kevyt-vertailu.jpg",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 442016,
+      "sha256": "99bb729f7ed99f054b155a1cfe327c7dde6e72db9c02f200dc508e6abe85ff1e",
+      "git_blob_sha1_laskettu": "e3430d7b69140530b19571bc6ac8399fbd73bf74",
+      "kuvakoko": [
+        1440,
+        1540
+      ],
+      "kuvamuoto": "JPEG",
+      "repo": {
+        "repository": "ravelius/Matkakirja",
+        "haara": "claude/postilaatikko",
+        "commit": "090c134f8091cda60fee4853801925616aee6775",
+        "polku": "posti/codex-pariisi-lod-toimituspari-20261106/riemukaari-kevyt-vertailu.jpg",
+        "blob": "e3430d7b69140530b19571bc6ac8399fbd73bf74",
+        "aiempi_tavukohtainen_verifiointi": true
+      },
+      "sama_sha256_kuin_toimituksessa": true
+    }
+  ],
+  "yhteiset_oikeusrajat": {
+    "lisenssi": "Projektikäytön peruste: mallikohtainen lähdeketju ja palveluehdot; koko GLB:lle ei ole määritetty avointa jakelulisenssiä.",
+    "tila": "Ei aseteta omaa CC-lisenssiä eikä päätellä omistusta. Aiempi toimitus viittaa omistajan palvelutilaukseen; tämä ei yksin vahvista tietyn tilin ehtoja, oikeuksien siirtymistä tai julkaisulupaa. Ks. tämän inventaarion palveluehdot_ja_kayttooikeus.",
+    "attribuutio": "Tekijät ja lähdekohtaiset lisenssit säilytetään alla; lopputuotteen oikeudellinen lisenssi ja mahdolliset jatkotoimet erillinen tarkistus."
+  },
+  "kuittaukset_ja_soveltuvuus": {
+    "vastaanotto": "Kuittaus 1 vastaanotettu; SHA256 täsmäsi aiemman vastaanottajan ilmoituksen mukaan.",
+    "kuittaus_2_pelikuvan_arvio": "Vastaanotettu 314a2bb6. Suunta, koko ja paikka täsmäävät. Notre-Damen etuosa hyväksyttävä kokeessa, mutta takaosa, katot ja tornin aukkojen syvyys vaativat työtä. Riemukaari kelpaa jatkokokeeseen värien ja kattoruudukon korjauksen jälkeen.",
+    "kuittaus_3_build": "Ajo 18 e83a2d314 on pelikoe. Mallit eivät kuulu junaan eikä julkaistua buildia ole.",
+    "juna": "Kokeita; eivät kuulu junaan. Lähetyslupa ei ole lopullinen pelihyväksyntä tai julkaisu.",
+    "tekninen_laatu": "LOD-lokit ja paikalliset QA-esikatselut ovat erillinen asia kuin vastaanottajan kohdepelin materiaali-/kamera-/suorituskykytesti.",
+    "kuittaus_commit": "e13f1ca8a16796cb3a9712f3ee44641a3ae8fdab",
+    "lahdepyynto_commit": "079e5364266f50118b2da277cbeccde692e5e0de",
+    "lahdepyynto_blob": "c5ad4db7e049d0331a17139186a77a72e8d180a9"
+  },
+  "todisteet": [
+    {
+      "paikallinen_polku": "output/notre-dame-3d-19b-20261104/checkpoint.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 22672,
+      "sha256": "7fd919934c44a69e095a3cb3126bd55e45c287a6c677645d9bdf1765e388d691",
+      "git_blob_sha1_laskettu": "a26d2e74b36601077c0bc146a4ae6eaa3bbad725"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-3d-19b-20261104/work/k2-approved-intake.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1326,
+      "sha256": "302761b3c158cba6da619330e495ac1beed006dea1e04f8c63e5f9521729a32e",
+      "git_blob_sha1_laskettu": "7c5b218bd0c0359ddd1043a13e785aaf7fba7a80"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-3d-19b-20261104/mailbox/delivery-receipt.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2530,
+      "sha256": "4e1c93a955887fe8f55baea4aa7c4607bb3dff703e42642c23dcc424f2727e57",
+      "git_blob_sha1_laskettu": "0ab691dad324d3347685a753d40fc0d288ec2e43"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-3d-19b-20261104/sources/k2-approved/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 7436,
+      "sha256": "dc1aa6c982d91825362c61e21cf4f11a981055aa8b8579952e62474b8467936a",
+      "git_blob_sha1_laskettu": "01a7eb7c59e5321c0755e7dc857ddb485abd5a65"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/state.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 5369,
+      "sha256": "5d6091763d02a33ee778405c5d9ed04a6d08f70e2a9678520c956399a885955c",
+      "git_blob_sha1_laskettu": "655c8d99a5d5f5e7058410674214f808c131ec73"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/delivery-receipt.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1222,
+      "sha256": "de98793e0bf4e100958747a456fc7f518216368d74e95ccb497206ccad04743e",
+      "git_blob_sha1_laskettu": "eeb6702db1bc6d3cc163ea789d9b71c49cc5994c"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-19a-k2-2009-20261104/delivery/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 7436,
+      "sha256": "dc1aa6c982d91825362c61e21cf4f11a981055aa8b8579952e62474b8467936a",
+      "git_blob_sha1_laskettu": "01a7eb7c59e5321c0755e7dc857ddb485abd5a65"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-v3-bittikarttakoe-20261106/bake_proxy.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 15072,
+      "sha256": "11cb638fc2bd6a66b0c7bec393f417bcf67291bcc55b597ea2df8cd170967337",
+      "git_blob_sha1_laskettu": "0e2b351268c023762231013be575e7726cf61bee"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-v3-bittikarttakoe-20261106/siirra_2d.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 6029,
+      "sha256": "6b8dfd47b8f682f3adf1fdff7ae168b645b1c90a91cc89aeb3df8e4c69c7902b",
+      "git_blob_sha1_laskettu": "2a21a4be10f8f70cdd4fee57b10963554bc60aec"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-v3-bittikarttakoe-20261106/bake.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 40638,
+      "sha256": "e26d866b717b3eed67bc89e89cc4fd9125befa522a394ee41b600cdf4899ef51",
+      "git_blob_sha1_laskettu": "7946338b5c561102280d401536c32101a1a43fbc"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-v3-bittikarttakoe-20261106/qa/2d-lahtokuvat.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1948,
+      "sha256": "4e28f351f0a20ee6ea67adf9b4af74e5124f0028295ea2c3dcba3b4e17f61b46",
+      "git_blob_sha1_laskettu": "a97528c48e5d87b06102ea8d9316dda656e3ab31"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-kartta-syvyys-20261106/build_depth.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 12154,
+      "sha256": "35d936ecf0593c2fe412aafca6716948df22bff665e3e306af20b23438505626",
+      "git_blob_sha1_laskettu": "1b22c12c53f2d38f32a136af6f68da0aa6218617"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-kartta-syvyys-20261106/geom/proxy-depth.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 644298,
+      "sha256": "9edfd2d7e5a2e24b4f5147613dc68d722add077601e0d0e4bdf1d9cc59c14393",
+      "git_blob_sha1_laskettu": "6a5375b0ce05737da8814afd64e9d0de621e7048"
+    },
+    {
+      "paikallinen_polku": "output/notre-dame-kartta-syvyys-20261106/qa/build.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 985,
+      "sha256": "00d75c78e6c906fe3121d3cc93fde1afb03ca051430036edc1e53a98493b2e87",
+      "git_blob_sha1_laskettu": "dc8e6199515b8cdfa7b1c82a3cdec54971d193f9"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-24g-2122-20261105/checkpoint.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 5781,
+      "sha256": "10ba43eb35138a931937e572af88e76e5ea0e74273720ef764cab84e92b89b89",
+      "git_blob_sha1_laskettu": "6f386653d5eedecf544ed33529afd6d367f70fe4"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-24g-2122-20261105/sources/order.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 5617,
+      "sha256": "7525167eda47392c46df1be03d6beb869bbdb2ce88f92461e3de8c9f9dbcc02e",
+      "git_blob_sha1_laskettu": "1f7122d7e2dd91697e2d3c5c7d5105660bc1b388"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-24g-2122-20261105/delivery/riemukaari-3d-v1/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 981,
+      "sha256": "cc7664ab4df5c99935e6606176f4c844e46445215eef44c2dc2667bd9049cbc2",
+      "git_blob_sha1_laskettu": "6c0b3f2ca6416de89a78c6dbf0f9ac8df7e45c91"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-katto-v2-2156-20261105/checkpoint.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1849,
+      "sha256": "5ff97077f019cb85185f7659f84e35f5a7094c9d6a9041eaea61398128e8a495",
+      "git_blob_sha1_laskettu": "91349e1598fd8733bbe5ec1ef3941ca1784dc9a6"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-katto-v2-2156-20261105/mailbox/final-delivery-receipt.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 12379,
+      "sha256": "305cc444a0dd7d94d9f81488470d3adabc8f393ff1a9be7a20360d6c55fb7bd2",
+      "git_blob_sha1_laskettu": "bb74a622fbc743646fdf84b803aaf2b443f81cd7"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-katto-v2-2156-20261105/delivery/riemukaari-3d-v2/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2190,
+      "sha256": "bfb1db0ae4e62717c53b9233a072155655162aede9b66a5c0966d7ca7cab422a",
+      "git_blob_sha1_laskettu": "b363bfb4167e7736275469bc9c403a8f04a87799"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-katto-v2-2156-20261105/delivery/riemukaari-3d-v2/qa/roof-sources.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 4144,
+      "sha256": "ee1a84d3e8e499bf815067b5bcc34b69664f137d40b0fe0f76c54a55a19a1046",
+      "git_blob_sha1_laskettu": "a5429e3932d4cbf0f5e61448bc7b67353c5c69da"
+    },
+    {
+      "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 5872,
+      "sha256": "8c17b4c599f789fb9f0e76c6f2b7eb6e704095b4fa9699d3f8b151c20c342d26",
+      "git_blob_sha1_laskettu": "b8572e5000c3cebb56e91d5ac57b758a896e2cdb"
+    },
+    {
+      "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/delivery-receipt.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2098,
+      "sha256": "dcf8f93214098911c526f2b2796c1dcb67ab0407b6aee1cd26df21fa2e72a2df",
+      "git_blob_sha1_laskettu": "cbdb0d69517694c10c06b294777f05bda83ebeb1"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-bittikartta-20261106/build_light_arc.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 19651,
+      "sha256": "3b57a25aa3d7e73b3a37d5ac9342e727bea7074ae3ac4be75df1c7a8e8aba6a4",
+      "git_blob_sha1_laskettu": "c5b3293f0e2debc1141548c35bc43f64d41d285c"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-bittikartta-20261106/make_lod_geometry.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2093,
+      "sha256": "df5094e50f0e8f2a6c015d053ad1e64a28a472a0957d77758040cf8cd859ca51",
+      "git_blob_sha1_laskettu": "ffd24fc9ab1512198a554aa0599f6f8105dec04f"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-bittikartta-20261106/build-facts.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 16805,
+      "sha256": "440a468e73294d76d0cd52d98aaeb2c433705b691ce6c0f7d3e33682750ef99c",
+      "git_blob_sha1_laskettu": "04de722056d604893441356c505380ad5473e1f1"
+    },
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/delivery-receipt.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 3396,
+      "sha256": "03226ecf3214b24a8e295f51d166dbcc238f0989ad05d1c9bcf8f1401a441156",
+      "git_blob_sha1_laskettu": "15d18b8a2122c601ec96ef36c93a3859774139fa"
+    },
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/uploaded-blobs.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 2937,
+      "sha256": "6ee3ac77d3162e5f6bc3b01f9f3768089ac1f283314aa61a9f27757bc26dfd21",
+      "git_blob_sha1_laskettu": "1dd9e77b703e72c3be275a94455511e6b8e1d328"
+    },
+    {
+      "paikallinen_polku": "output/pariisi-lod-toimituspari-20261106/vastaanotto-kuitattu.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 857,
+      "sha256": "92112c032b026c0d385b2594c439d5447c30ca849690dd8bb620948c5b15bb0d",
+      "git_blob_sha1_laskettu": "5930a4b833d47407b225ec0da81718836c0f1a20"
+    },
+    {
+      "paikallinen_polku": "output/fable-mailbox-work-orders/intake-20261106-1343.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1280,
+      "sha256": "cfe73e256dd0b1f51f27aaa0c84bb9b81b6071ce1d21e37cb04e34903b1fd120",
+      "git_blob_sha1_laskettu": "33ed13760037f3975fd45f32341a27aca98e91e5"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v2/tee_v2.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 8608,
+      "sha256": "fef0b07e8f7a090cf84b7ce4739c7a8d61c72ba88d5c323eba09e694dfe356c7",
+      "git_blob_sha1_laskettu": "c333a2e729da2dbc2657c4e33fb3228b16b0099b"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v2/notre-dame-3d-v2/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 175,
+      "sha256": "71cb6f7dd8b780c13a69da29956b6cd271c6e2e9e1ec7d88625d0b875ca56ed4",
+      "git_blob_sha1_laskettu": "1bd4f2c1437aa88b8dcaeb53129bff719d486242"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v2/notre-dame-3d-v2/huomiot.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 533,
+      "sha256": "d4a1202ccd508056cfe6283dc67fa8dd1436b07f74c3b5f257be2ce25ccd6670",
+      "git_blob_sha1_laskettu": "5608505fc3227022f537113b37eefd22eac48cfb"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v3/tee_v3.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 4306,
+      "sha256": "5c86e996e0cfe17b37927038d7d016b0a7fe06b27e371b0199f3fcccb66fd2b4",
+      "git_blob_sha1_laskettu": "386e6173e3d80320b151d9e038037ffff576fbcd"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v3/notre-dame-3d-v3/LAHTEET.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 131,
+      "sha256": "1966dc193d1ef0e9daff29620f038b4c4b676e7d50c4719e24bed9616f00ff9d",
+      "git_blob_sha1_laskettu": "b5d02a56ee7e9dd798720af0ac996b31e2d220ca"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/nd-19b-v3/notre-dame-3d-v3/huomiot.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 369,
+      "sha256": "94b1ed179e700fc3b2ed54ff9f31baa107361ca49819ba3a56d675b49400b191",
+      "git_blob_sha1_laskettu": "b4cebf1bda0381485284b336763d7e901567cee6"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/riemukaari/tee-syote.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1917,
+      "sha256": "9825790231959024033956cd97691b99073188b71ef3a2c737573b2399d43447",
+      "git_blob_sha1_laskettu": "0baefbc0a9d8e8a5d80198b8bed14dd34ac1e7d2"
+    },
+    {
+      "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/state.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 12832,
+      "sha256": "84b917b5f99b0677252db687e76662f4bc440070064857da37998f51628c0baa",
+      "git_blob_sha1_laskettu": "46babd4cf3f3059628f6c77791228471eedaf596"
+    },
+    {
+      "paikallinen_polku": "output/sarja24-riemukaari-2097-20261105/owner-acceptance.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 1514,
+      "sha256": "3272f686cb697bb9002702ddc54396186d85b18094861eb211d829d1f1bb3b1d",
+      "git_blob_sha1_laskettu": "d9ed4d8244a114df4806d465b8f05cc244c0979f"
+    },
+    {
+      "paikallinen_polku": "output/riemukaari-24g-2122-20261105/delivery/riemukaari-3d-v1/huomiot.md",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 3481,
+      "sha256": "7c4315e448cd1f748ecff8a0bfd407fe72b4fce2a54f910204dfe076d57ece58",
+      "git_blob_sha1_laskettu": "cb32d21dacc0819e0a5c8f91279e9d05eb38aff0"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/tilaus5.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 6434,
+      "sha256": "62f01669527c96ab453b0fd0d0e65249881a72c0b01c89d9f6d5e2cb98a137bf",
+      "git_blob_sha1_laskettu": "4a78b722b5290dbea53ebf7b4768824c5301fda0"
+    },
+    {
+      "paikallinen_polku": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/pariisi-alueet-20261104/tilaus-nd-3d.py",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 7520,
+      "sha256": "b7637c306aedb191926f3c2327523afc60831257b3aacb8847e812c356cc2cfd",
+      "git_blob_sha1_laskettu": "32e0a9375769651c7b954dc8e0ac9d2db2467a6d"
+    },
+    {
+      "paikallinen_polku": "output/pariisi-koko-kaupunki-20261031/delivery/SOURCES.json",
+      "tiedosto_olemassa_tarkistuksessa": true,
+      "tavut": 4229,
+      "sha256": "6e754237784b0fd45fe7907f28937c412ba1a054fb4197405d782c89df10f663",
+      "git_blob_sha1_laskettu": "4f81216225e94c6c71fb8cf70f05ee6854578523"
+    }
+  ],
+  "toimituspohja": {
+    "paikallinen_polku": "output/notre-dame-3d-19b-20261104/sources/codex-3d-toimitus.md",
+    "tiedosto_olemassa_tarkistuksessa": true,
+    "tavut": 20134,
+    "sha256": "cb13426ac08176002e3c3367446a5e4edba1bc3a6be9e02423527062fb474778",
+    "git_blob_sha1_laskettu": "81153020e723da605d59254688ea2b5ae369c474",
+    "repo_blob": "81153020e723da605d59254688ea2b5ae369c474",
+    "vaatimus": "Luku 7: tekijä, työkalu, lisenssi, lähdekuvat ja niiden oikeudet. Hyväksyntä ja pelikytkentä erillisinä vaiheina."
+  },
+  "todetut_havainnot": [
+    "Kaikkien neljän toimitetun GLB/JPG-tiedoston SHA256 vastaa parin aiempaa toimituskuittia.",
+    "K2-natiivit ja Notre-Dame-oton 3 syötekopiot ovat SHA256-tasolla samat.",
+    "Riemukaaren kolmen normalisoidun syötteen SHA256 eroaa #2097 ImageGen-natiivista; normalisointikoodi ja mittaloki löytyivät.",
+    "Kuvakoosteet approved-input-views.jpg ja elevations-overview.jpg avattiin: Riemukaaressa kaksi leveää ja yksi kapea julkisivu, Notre-Damessa neljä kuvallista elevatiota. Tämä ei korvaa pelin näkymä- tai oikeusarviota.",
+    "Syvyysmallin qa/build.json:n vanha LOCAL OWNER REVIEW ONLY -merkintä on tuotantovaiheen tilanne. Myöhempi parin toimituskuitti osoittaa lähetyksen; se ei tee pelihyväksynnästä valmista."
+  ],
+  "palveluehdot_ja_kayttooikeus": {
+    "tarkistettu": "2026-11-06",
+    "soveltamisala": "Matkakirja-projektin dokumentoitu tuotantoketju ja käyttöoikeuden peruste. Ulkopuoliset valokuvat, rakenneviitteet ja tyylikuvat on eroteltu mallikohtaisesti.",
+    "tripo": {
+      "tili": "Projektin 3D-toimitusohje kirjaa omistajan maksaman Tripo Max -tilauksen olleen voimassa tuotantoaikana (arvio 18.11.2026 asti). Näyttö perustuu projektin tilauskirjaukseen.",
+      "tilausnaytto": {
+        "polku": "docs/moduulit/tuotantopohjat/codex-3d-toimitus.md",
+        "gitBlob": "81153020e723da605d59254688ea2b5ae369c474",
+        "url": "https://github.com/ravelius/Matkakirja/blob/3aa3b69c869cc854ab101a1b58130edff98da614/docs/moduulit/tuotantopohjat/codex-3d-toimitus.md"
+      },
+      "ehtoperuste": "Käyttöehtojen 5.2.2 ja kaupallisen käytön ohjeen mukaan maksullinen käyttäjä voi yleensä käyttää, muokata ja jaella luomiaan malleja myös kaupallisesti, jos ehdot ja syöteaineistojen oikeudet täyttyvät.",
+      "ehdot": "https://www.tripo3d.ai/terms",
+      "kaupallinen_kaytto": "https://www.tripo3d.ai/help/privacy-policy/how-to-use-tripo-models-commercially",
+      "tarkistettava_ennen_kaupallista_julkaisua": "Hinnoittelu- ja krediittiohjeen Licensing-taulukossa täysi kaupallinen oikeus ja omistus on liitetty Private-tilaan. Tallennetuissa Notre-Damen, Riemukaaren ja Grand Palais’n generointipaneeleissa lukee Sharing Only. Tämä kuvaa paneelin asetusta tarkistushetkellä. Lopullisen mallin oma näkyvyys ja tämän asetuksen vaikutus kaupalliseen julkaisuun on varmistettava palvelun tiedoista tai kirjallisella vahvistuksella. Dokumentoija ei ole muuttanut näkyvyyttä.",
+      "taulukko": "https://www.tripo3d.ai/product-doc/getting-started/pricing-credits",
+      "nakyvyysvaihtoehdot": "https://www.tripo3d.ai/help/credit/how-do-i-set-asset-visibility-share-or-delete-assets",
+      "arkistoidut_paneelit": [
+        {
+          "polku": "output/notre-dame-3d-19b-20261104/qa/tripo-attempt03-inputs.jpg",
+          "sha256": "ac526d40b104452e24f1175468e0b8d7bdb883ba4d52ce203dafddd144ce0b37"
+        },
+        {
+          "polku": "output/riemukaari-24g-2122-20261105/qa/input-preflight.png",
+          "sha256": "4379dded2053a4a377be503bac54f9921832ceb6e9e937311923a4181b8776f8"
+        },
+        {
+          "polku": "output/grand-palais-24f-2119-20261105/qa/attempt01-tripo-result.png",
+          "sha256": "25337250fa5957877f64b2e7da649623439acb723f4d4e1a06fbb72664d1f336"
+        }
+      ],
+      "soveltuminen": "Koskee Tripo-peräistä aineistoa. Montparnassen rakennettu geometria ja sen alkuperäinen JPEG-atlas on dokumentoitu erikseen."
+    },
+    "openai_kuvat": {
+      "tekijakirjaus": "Matkakirja-projekti / Codex tuotti nimetyt kuvitukset ImageGenillä. Tekijärooli kuvaa tuotantotyötä.",
+      "sopimusperuste": "Asiakkaan ja OpenAI:n välillä käyttäjä säilyttää syötteen oikeutensa ja saa palveluntarjoajan mahdolliset oikeudet tuotokseen sovellettavan lain sallimissa rajoissa. Asiakkaan on voitava käyttää omia syötteitään. Sovellettava yksityis- tai yritystilin sopimus määräytyy käytetyn tilin perusteella.",
+      "yksityistili_Eurooppa": "https://openai.com/policies/eu-terms-of-use/",
+      "yritystili_kohta_4": "https://openai.com/policies/services-agreement/"
+    },
+    "lopputiedostojen_lisenssimerkinta": "Projektikohtainen käyttö omistajan Matkakirja-projektissa dokumentoitujen palveluehtojen ja syötekohtaisten oikeuksien puitteissa. Tälle dokumentaatiolle tai mallien kokonaisuudelle ei ole osoitettu erillistä avoimen uudelleenjakelun lisenssiä.",
+    "ulkopuoliset_viitteet": "Säilytä alkuperäisen kuvan tekijä, lähdesivu, lisenssi ja tieto tehdystä muutoksesta. Mallikohtainen käyttötapa erottaa suoraan tekstuuriin siirretyt projektikuvat, generoinnin rakenneviitteet ja pelkät tarkistuskuvat. Jos tunnistettavaa suojattua ilmaisua välittyy lopputuotteeseen, selvitä siihen soveltuvat tekijämaininta- ja mahdolliset ShareAlike-ehdot ennen julkaisua.",
+    "omistajan_paatos": "Notre-Dame ja Riemukaari ovat kokeessa. Kuittaus e13f1ca8 vahvistaa tiedostojen vastaanoton. Kuittaus 2 (314a2bb6) kirjaa peliajon 18 havainnot, korjaustyön ja omistajan avoimen julkaisupäätöksen."
+  },
+  "tila_paatokselle": {
+    "omistaja": "Matkakirja-projektin omistaja; julkaisupäätös avoin",
+    "pyynto": 2167,
+    "lahdepostin_commit": "079e5364266f50118b2da277cbeccde692e5e0de",
+    "malliparin_toimitus": "090c134f8091cda60fee4853801925616aee6775",
+    "vastaanottokuittaus": "e13f1ca8a16796cb3a9712f3ee44641a3ae8fdab",
+    "pelikuva": "Kuittaus 2 saatu. Ajo 18, e83a2d314. Mallit ovat vain kokeessa ja nykyiset mallit pysyvät pelissä.",
+    "kuittaus2_commit": "314a2bb6ba96c0a6ba40da233730123186d82802"
+  }
+}

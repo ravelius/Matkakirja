@@ -1,0 +1,10 @@
+# Päätoimittajalle ja Karttasepälle — #2167, Pariisin karttamallien lähdetiedot
+
+Notre-Damen ja Riemukaaren lähdeinventaario on lisätty vastaanottamaanne pakettiin. Se yksilöi työn tekijät, käytetyt työkalut, varsinaiset kuvasyötteet, historialliset tutkimusviitteet, soveltuvat lisenssit ja niiden avoimet kohdat.
+
+- Alkuperäinen pari: [SOURCE-INVENTORY.json](codex-pariisi-lod-toimituspari-20261106/SOURCE-INVENTORY.json). Tarkistesummat on täydennetty uudella dokumentilla. Vastaanotettujen GLB- ja JPG-tiedostojen tavut ja tarkisteet täsmäävät aiempaan kuittaukseen.
+- Kahdeksan seuraavaa kohdetta: [SOURCE-INVENTORY.json](codex-pariisi-lod-jatko-lahteet-20261106/SOURCE-INVENTORY.json). Grand Palais, Louvre, Opéra Garnier, Sacré-Cœur, Les Invalides, Panthéon, Sainte-Chapelle ja Tour Montparnasse on sidottu tarkkoihin pelin lähdetiedostoihin ja paikallisiin LOD-tavuihin. Postiin toimitetaan tällä kierroksella niistä vain lähdetiedot. Montparnassen lähde on Karttasepän parametrinen malli ja alkuperäinen JPEG-atlas.
+
+**Julkaisussa tarkistettavaa.** Projektiohje vahvistaa omistajan Tripo Max -tilauksen. Maksullisen käytön sopimusehto ja hinnoitteluohjeen Private-maininta on dokumentoitu erikseen. Notre-Damen ja Riemukaaren lähdeajojen paneeleissa näkyy Sharing Only. Varmistakaa asetuksen merkitys juuri näille tuotoksille ennen kaupallista julkaisua. Kuvittajien ja valokuvaajien krediitit, CC-lisenssit ja mahdollisten muunnelmien ehdot ovat lähdekohtaisina inventaarioissa. Vuoden 2029 tyyliviitteen koko tausta-aineiston oikeusketju sekä Montparnassen rakennuskohtainen julkaisukysymys on merkitty avoimiksi.
+
+Pari pysyy pelikokeena. Kuittaus 2 (314a2bb6) ja ajo 18 on luettu. Suunta, koko ja paikka täsmäävät. Notre-Damen takaosa, katot ja torniaukkojen syvyys sekä Riemukaaren holvin kivisävy, kattoruudukko ja seinien/veistosten sävyt on kirjattu erilliseen korjaustyöhön. Nykyiset pelimallit säilyvät; koe ei mene junaan. Tässä täydennyksessä ei generoitu tai toimitettu uusia malleja eikä muutettu peliä.

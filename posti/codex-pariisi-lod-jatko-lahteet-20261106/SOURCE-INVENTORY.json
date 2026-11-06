@@ -1,0 +1,1885 @@
+{
+  "formaatti": "Matkakirja / SOURCE-INVENTORY 1",
+  "toimeksianto": 2167,
+  "päivä": "2026-11-06",
+  "rajaus": "Kahdeksan paikallista LOD-versiota. Tämä postitoimitus sisältää niistä lähdetiedot; mallibinäärit ovat paikallisessa paketissa.",
+  "palveluehdot_ja_kayttooikeus": {
+    "tarkistettu": "2026-11-06",
+    "soveltamisala": "Matkakirja-projektin dokumentoitu tuotantoketju ja käyttöoikeuden peruste. Ulkopuoliset valokuvat, rakenneviitteet ja tyylikuvat on eroteltu mallikohtaisesti.",
+    "tripo": {
+      "tili": "Projektin 3D-toimitusohje kirjaa omistajan maksaman Tripo Max -tilauksen olleen voimassa tuotantoaikana (arvio 18.11.2026 asti). Näyttö perustuu projektin tilauskirjaukseen.",
+      "tilausnaytto": {
+        "polku": "docs/moduulit/tuotantopohjat/codex-3d-toimitus.md",
+        "gitBlob": "81153020e723da605d59254688ea2b5ae369c474",
+        "url": "https://github.com/ravelius/Matkakirja/blob/3aa3b69c869cc854ab101a1b58130edff98da614/docs/moduulit/tuotantopohjat/codex-3d-toimitus.md"
+      },
+      "ehtoperuste": "Käyttöehtojen 5.2.2 ja kaupallisen käytön ohjeen mukaan maksullinen käyttäjä voi yleensä käyttää, muokata ja jaella luomiaan malleja myös kaupallisesti, jos ehdot ja syöteaineistojen oikeudet täyttyvät.",
+      "ehdot": "https://www.tripo3d.ai/terms",
+      "kaupallinen_kaytto": "https://www.tripo3d.ai/help/privacy-policy/how-to-use-tripo-models-commercially",
+      "tarkistettava_ennen_kaupallista_julkaisua": "Hinnoittelu- ja krediittiohjeen Licensing-taulukossa täysi kaupallinen oikeus ja omistus on liitetty Private-tilaan. Tallennetuissa Notre-Damen, Riemukaaren ja Grand Palais’n generointipaneeleissa lukee Sharing Only. Tämä kuvaa paneelin asetusta tarkistushetkellä. Lopullisen mallin oma näkyvyys ja tämän asetuksen vaikutus kaupalliseen julkaisuun on varmistettava palvelun tiedoista tai kirjallisella vahvistuksella. Dokumentoija ei ole muuttanut näkyvyyttä.",
+      "taulukko": "https://www.tripo3d.ai/product-doc/getting-started/pricing-credits",
+      "nakyvyysvaihtoehdot": "https://www.tripo3d.ai/help/credit/how-do-i-set-asset-visibility-share-or-delete-assets",
+      "arkistoidut_paneelit": [
+        {
+          "polku": "output/notre-dame-3d-19b-20261104/qa/tripo-attempt03-inputs.jpg",
+          "sha256": "ac526d40b104452e24f1175468e0b8d7bdb883ba4d52ce203dafddd144ce0b37"
+        },
+        {
+          "polku": "output/riemukaari-24g-2122-20261105/qa/input-preflight.png",
+          "sha256": "4379dded2053a4a377be503bac54f9921832ceb6e9e937311923a4181b8776f8"
+        },
+        {
+          "polku": "output/grand-palais-24f-2119-20261105/qa/attempt01-tripo-result.png",
+          "sha256": "25337250fa5957877f64b2e7da649623439acb723f4d4e1a06fbb72664d1f336"
+        }
+      ],
+      "soveltuminen": "Koskee Tripo-peräistä aineistoa. Montparnassen rakennettu geometria ja sen alkuperäinen JPEG-atlas on dokumentoitu erikseen."
+    },
+    "openai_kuvat": {
+      "tekijakirjaus": "Matkakirja-projekti / Codex tuotti nimetyt kuvitukset ImageGenillä. Tekijärooli kuvaa tuotantotyötä.",
+      "sopimusperuste": "Asiakkaan ja OpenAI:n välillä käyttäjä säilyttää syötteen oikeutensa ja saa palveluntarjoajan mahdolliset oikeudet tuotokseen sovellettavan lain sallimissa rajoissa. Asiakkaan on voitava käyttää omia syötteitään. Sovellettava yksityis- tai yritystilin sopimus määräytyy käytetyn tilin perusteella.",
+      "yksityistili_Eurooppa": "https://openai.com/policies/eu-terms-of-use/",
+      "yritystili_kohta_4": "https://openai.com/policies/services-agreement/"
+    },
+    "lopputiedostojen_lisenssimerkinta": "Projektikohtainen käyttö omistajan Matkakirja-projektissa dokumentoitujen palveluehtojen ja syötekohtaisten oikeuksien puitteissa. Tälle dokumentaatiolle tai mallien kokonaisuudelle ei ole osoitettu erillistä avoimen uudelleenjakelun lisenssiä.",
+    "ulkopuoliset_viitteet": "Säilytä alkuperäisen kuvan tekijä, lähdesivu, lisenssi ja tieto tehdystä muutoksesta. Mallikohtainen käyttötapa erottaa suoraan tekstuuriin siirretyt projektikuvat, generoinnin rakenneviitteet ja pelkät tarkistuskuvat. Jos tunnistettavaa suojattua ilmaisua välittyy lopputuotteeseen, selvitä siihen soveltuvat tekijämaininta- ja mahdolliset ShareAlike-ehdot ennen julkaisua.",
+    "omistajan_paatos": "Notre-Dame ja Riemukaari ovat kokeessa. Kuittaus e13f1ca8 vahvistaa tiedostojen vastaanoton. Kuittaus 2 (314a2bb6) kirjaa peliajon 18 havainnot, korjaustyön ja omistajan avoimen julkaisupäätöksen."
+  },
+  "mallit": [
+    {
+      "slug": "grand-palais",
+      "malli": "Grand Palais",
+      "tiedosto": "grand-palais-lod.glb",
+      "sha256": "4df87cf8dc87a1ee157d3a373caa6bb2c1db3c553270e0de9f89e4a61e8e43a3",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/grand-palais.bytes",
+        "sha256": "1fbe175fc71f32c268a1412090ba8e72fe45e7eb55e7891c359e224db3a2ce4a",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "grand-palais",
+        "nimi": "Grand Palais",
+        "tehtava": 2167,
+        "scope": "Pelkkä jälkikäteinen dokumentointi; olemassa olevia mallibytejä ei muutettu.",
+        "oikea_otto": 1,
+        "tripo_tyo": "08694d0e-27dc-46fe-bd49-2ad88eae3f81",
+        "tripo_url": "https://studio.tripo3d.ai/workspace/generate/08694d0e-27dc-46fe-bd49-2ad88eae3f81",
+        "tekija_ja_tyokaluketju": "Codex image_gen 24d otto2 → Karttasepän luvallinen yhteismittakaava/maaviiva syötekuville → Codex / Tripo Studio H3.1 HD UltraMesh, neljä sivua → Python/NumPy yhtenäisskaalaus/pivot → Karttaseppä asenna.py kopioi pää-GLB:n sellaisenaan .bytes-tiedostoksi. Tripo Retopology -sivutulos ei ole tämän LOD:n lähde.",
+        "tripo_lahdekuvat": [
+          {
+            "polku": "output/grand-palais-24f-2119-20261105/sources/tripo-syote/pohjoinen.png",
+            "sha256": "7822ec63064a16dd6e5a60aca28135b054ffd5238971d23e9287a32465f11c2e",
+            "tavut": 752970,
+            "nimi": "pohjoinen.png",
+            "tripo_paikka": "front",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24d-grand-palais-2111-20261105/delivery/pohjoinen.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/grand-palais-24f-2119-20261105/sources/tripo-syote/etela.png",
+            "sha256": "9d41bcf189324ca1f054a5b33d8ed133640b444260aa651e2a5ec1757db7f577",
+            "tavut": 737875,
+            "nimi": "etela.png",
+            "tripo_paikka": "back",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24d-grand-palais-2111-20261105/delivery/etela.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/grand-palais-24f-2119-20261105/sources/tripo-syote/lansi.png",
+            "sha256": "4ffe4f78e2e35ce31c6b042457a298edb17caa7f49d4ff0e6b417812b2fcc936",
+            "tavut": 1015460,
+            "nimi": "lansi.png",
+            "tripo_paikka": "left",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24d-grand-palais-2111-20261105/delivery/lansi.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/grand-palais-24f-2119-20261105/sources/tripo-syote/ita.png",
+            "sha256": "a2feacc338dc873b5cd31e6514dfb9e20faadf12c3c19178025564a72a1b9752",
+            "tavut": 1065777,
+            "nimi": "ita.png",
+            "tripo_paikka": "right",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24d-grand-palais-2111-20261105/delivery/ita.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          }
+        ],
+        "lahdekuvien_2d_viitteet": [
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/source/lahteet-otto2/julkisivu-churchill.jpg",
+            "sha256": "75e5c4c1fa969114cc92f03d978b72024b824417232b6f4de063a4a224fb02d8",
+            "tavut": 113709,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Simdaperce",
+            "lisenssi": "CC BY-SA 3.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Paris_75008_Avenue_Winston-Churchill_Grand_Palais.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/source/lahteet-otto2/ilmasta-P1180998.jpg",
+            "sha256": "dc595f4e83a29abb603f9f60cd9a3a0976184aaec9948710296393f7be1bce7d",
+            "tavut": 1323811,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "David Monniaux",
+            "lisenssi": "CC BY-SA 3.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Grand_Palais_Petit_Palais_Elysee_P1180998.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/source/lahteet-otto2/eiffelilta-2014.jpg",
+            "sha256": "6df9eec2c8190d7cac8c98e66cb81a136a94db1d4b8f38599247a2c0985d496d",
+            "tavut": 1221311,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Dennis G. Jarvis (archer10)",
+            "lisenssi": "CC BY-SA 2.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Paris,_Grand_Palais_from_the_Eiffel_Tower,_June_2014.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/source/lahteet-otto2/ylakuva-orto-2018.jpg",
+            "sha256": "38f5b652716234d345a085588461b4e34926cbf82047ba8f458f101ae3a74adf",
+            "tavut": 858153,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "IGN",
+            "lisenssi": "Licence Ouverte 1.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018_-_Grand_Palais_01.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/source/lahteet-otto2/eiffelilta-34795361424.jpg",
+            "sha256": "20a12e5e6ae05f1490205476f71302532adb065103dcee7419074138f0fd67f1",
+            "tavut": 914214,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Kipp Jones",
+            "lisenssi": "CC BY 2.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Grand_Palais_from_the_Eiffel_Tower_(34795361424).jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/source/lahteet-otto2/ylakuva-pohjoinen-ylos.jpg",
+            "sha256": "a85f3a1cf5db678396c5ca1bedc92798ef85b1c205d76944f2c8ddf4918e6001",
+            "tavut": 1004179,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "IGN; Karttasepän 90 asteen käännös",
+            "lisenssi": "Licence Ouverte 1.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018_-_Grand_Palais_01.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          }
+        ],
+        "lahdeasiakirjat": [
+          {
+            "polku": "output/grand-palais-24f-2119-20261105/delivery/grand-palais-3d-v1/LAHTEET.md",
+            "sha256": "5d0e310364691a045d4c99eabf61ef3acf5e77112e7624da568e5621f852bc29",
+            "tavut": 1157,
+            "teksti": "# Lähteet\n\nOmistajan hyväksymät Grand Palais24f oton2 kuvat; Karttasepän tilaus #2119, commit af9af5c7f5f668203b612fdfce0871b60f74de03, blob e96e6a191b0bf7c295fbbe99647af41b097626ad. Paikallinen koko tilaus SHA256 9bbf5149b839687f33302c4fee09c75f813b9e74fd3725e185d19b75823759c9. Suuntavastaus 79116228221fb4f116376eccc0ab38781e9572e7. Kuvien oikeuslähde tilaaja; Tripo-mallin käyttö omistajan palvelutilin ehtojen mukaan, ei väitettä CC-lisenssistä.\n\nTyökalut: Tripo Studio H3.1 HD ja sen Retopology; paikallinen Python/NumPy yhtenäisskaalaus ja CPU-esikatselu. Ei uusia asennuksia. Vain syötekansion neljä sivukuvaa generoinnissa. Viistot, oikea.jpg, yläkuva ja jalanjälki vain tarkistuslähteitä. Yläkuvan suurentunutta/siirtynyttä mallia ei käytetty mittamallina; viistokulmat eivät ole tilattujen60°previewiden kulmia.\n\netela.png: 9d41bcf189324ca1f054a5b33d8ed133640b444260aa651e2a5ec1757db7f577\n\nita.png: a2feacc338dc873b5cd31e6514dfb9e20faadf12c3c19178025564a72a1b9752\n\nlansi.png: 4ffe4f78e2e35ce31c6b042457a298edb17caa7f49d4ff0e6b417812b2fcc936\n\npohjoinen.png: 7822ec63064a16dd6e5a60aca28135b054ffd5238971d23e9287a32465f11c2e\n\n"
+          },
+          {
+            "polku": "output/sarja24d-grand-palais-2111-20261105/delivery/LAHTEET.md",
+            "sha256": "59e70c379b3d9282f1bee2716e9a1d7e323d96afd8df8ae9eb398cec1cf33435",
+            "tavut": 3201,
+            "teksti": "# Grand Palais otto2 #2111 — lähteet ennen ensimmäistä kuvaa\n\nTILAUS-24d ja päivitetty TILAUS-24 luettu kokonaan. Lähdeposti0ba602a8f6df1c6c11c374a9ae1edde7a2342582, blob b363177f0c644037492687b46f3481eee278f88e.43 manifestiliitettä SHA256-varmennettu; source/verification.json. Suunta idästä myötäpäivään; toimitettu jalanjälki ja Karttasepän pohjois-ylös-kuva määräävät kuvan asennon. Työjärjestys yläkuva ensin, sitten lounas ja muut. Vanha #2092 säilyy erillään.\n\nKorkeus45m ja pitkä nef240m: OPPIC https://www.oppic.fr/rubrique112.html . Väri samassa lähteessä vert reseda pale.159m kokonaisleveys,97m länsiosa ja100m sivuosan leveys tulevat24d:stä. Ei erillistä uutta rakennusmittausta. Korkea kärki sisällytetään nyt, ei lasketa45m-lasikupoliksi. Julkisivukuvan natiivi922x692: keskiviivan likimääräinen maataso y530±15, lasikupolin/lyhdyn liitos y260±5, korkein lipun/mastonkohta y155±3. Näiden projektiokorkeuksien suhde375/270=1.389;45m:iin suhteutettu kärjen yläkohta noin62.5m, käytännön suuntaa-antava tavoite noin62m. Perspektiivi, kupolin syvyys ja osin peittyvä maataso rajoittavat tarkkuutta: ei väite todellisesta sentintarkasta korkeudesta. Viistokuvissa ja sivuissa sama rakennus, ei45m koko kärjen korkeutena.\n\nValokuvat vain muodon tarkistukseen/viitteeksi, ei pelin rasteriin liimattaviksi:\n- oikea.jpg / julkisivu-churchill.jpg: Simdaperce, August2008, CC BY-SA3.0 https://creativecommons.org/licenses/by-sa/3.0/ . https://commons.wikimedia.org/wiki/File:Paris_75008_Avenue_Winston-Churchill_Grand_Palais.jpg .922x692 alkuperäinen, ei muutettu.\n- ylakuva-orto-2018.jpg ja ylakuva-pohjoinen-ylos.jpg: IGN,2018, Licence Ouverte1.0 https://www.etalab.gouv.fr/licence-ouverte-open-licence/ . https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018_-_Grand_Palais_01.jpg . Karttasepän1920px pienennös; jälkimmäinen lisäksi hänen90asteen myötäpäiväkäännöksensä. Tätä ei merkitä CC-lisenssiksi; nimenomaisesti tilauksen antama avoimen lisenssin lähde.\n- eiffelilta-2014.jpg: Dennis G. Jarvis (archer10),22June2014, CC BY-SA2.0 https://creativecommons.org/licenses/by-sa/2.0/ . https://commons.wikimedia.org/wiki/File:Paris,_Grand_Palais_from_the_Eiffel_Tower,_June_2014.jpg . Karttasepän1920px pienennös.\n- eiffelilta-34795361424.jpg: Kipp Jones,19June2017, CC BY2.0 https://creativecommons.org/licenses/by/2.0/ . https://commons.wikimedia.org/wiki/File:Grand_Palais_from_the_Eiffel_Tower_(34795361424).jpg . Tekijä/lupa tarkistettu Commonsin imageinfo API:sta, kun selainhaku ei avannut sivua. Karttasepän1920px pienennös.\n- ilmasta-P1180998.jpg: David Monniaux,21May2011, CC BY-SA3.0 https://creativecommons.org/licenses/by-sa/3.0/ . https://commons.wikimedia.org/wiki/File:Grand_Palais_Petit_Palais_Elysee_P1180998.jpg . Karttasepän1920px pienennös.\n\nTarkistettu T-muoto: pyöreäpäinen pitkä lasilaiva, itään suljettu poikkilaiva, matala keskikupoli. Palais de la Decouverte -rotunda ja itäpihat jätetään24d:n mukaisesti pois. Julkisivun länsi/itä-nimi seuraa toimitettua piirtoasentoa, ei valokuvan kameran nimeä. Tilapäinen valkoinen teltta/telineet jätetään pois.\n"
+          }
+        ],
+        "checkpoint": {
+          "polku": "output/grand-palais-24f-2119-20261105/checkpoint.json",
+          "sha256": "8e1efaf51643398f28a62f34b5a05dd422779fbf110f7c249f5b81ca5cf81a64",
+          "tavut": 5906
+        },
+        "alkuperainen_tripo_glb": {
+          "polku": "output/grand-palais-24f-2119-20261105/raw/grand-palais24f-attempt01-raw.glb",
+          "sha256": "75363ec2d39d1c4a199e5a226cd55250ed4541627d68b857c29cc57ce908dc67",
+          "tavut": 5628224
+        },
+        "valivaiheen_glb": [
+          {
+            "polku": "output/grand-palais-24f-2119-20261105/delivery/grand-palais-3d-v1/grand-palais.glb",
+            "sha256": "1fbe175fc71f32c268a1412090ba8e72fe45e7eb55e7891c359e224db3a2ce4a",
+            "tavut": 5628124
+          }
+        ],
+        "karttasepan_skriptit": [
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/grand-palais-asennus/asenna.py",
+            "sha256": "96a23f91770a99b4ce9c9ca6a2c2407b2d327c28da38e1395b3509ff9a7baf3f",
+            "tavut": 3303
+          }
+        ],
+        "lod_lahde": {
+          "polku": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/grand-palais.bytes",
+          "sha256": "1fbe175fc71f32c268a1412090ba8e72fe45e7eb55e7891c359e224db3a2ce4a",
+          "tavut": 5628124
+        },
+        "lod_tulos": {
+          "polku": "output/pariisi-maamerkit-lod-20261106/grand-palais/grand-palais-lod.glb",
+          "sha256": "4df87cf8dc87a1ee157d3a373caa6bb2c1db3c553270e0de9f89e4a61e8e43a3",
+          "tavut": 3302960
+        },
+        "lod_ketju": {
+          "tekija": "Codex",
+          "tyokalut": "Paikallinen Blender bpy DECIMATE/COLLAPSE, Python/NumPy ja paikallinen C++ BVH-siirto; säilytetään lähteen tekstuurit, korjataan UV-saumat; ei uutta Tripo- eikä 2D-generointia tässä LOD-ajossa.",
+          "skriptit": [
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/continue_ordered.py",
+              "sha256": "d789fe1837050e767a15c46d4f375ab0e346da1af25c4e4d7951972b10e0cd12",
+              "tavut": 3629
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/shell.py",
+              "sha256": "86ff625b13f7b7b5635963ec0f34ae0dcf0132224b0576eff97e24fa19e303a0",
+              "tavut": 7002
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/mend_uv.py",
+              "sha256": "775b587f0bd296e44d55ca6e6da6b9038bb7ab0c999ac6cd7b119b027e9f851a",
+              "tavut": 3131
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer.py",
+              "sha256": "aa59f67d24ca5a5f73d6d55d55a6cdfb780b228fc3c05d1c0be4fdf5f807f661",
+              "tavut": 19427
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer_bvh.cpp",
+              "sha256": "6016c621baa474a9a45865296491d4e7ce73f7ec484ff1db66e557c2b1838d1e",
+              "tavut": 5329
+            }
+          ],
+          "kolmiot_ennen": 46987,
+          "kolmiot_jalkeen": 4799
+        },
+        "kayttolisenssi": {
+          "lahdekuvat": "AI-tuotokset ja alla nimetyt alkuperäisviitteet käsiteltävä erikseen. LAHTEET säilyttää valokuvien nimet, tekijät ja lisenssit; CC-lähteiden attribuutiot ja mahdolliset share-alike-ehdot säilytettävä soveltuvin osin.",
+          "tripo_malli": "Tripo-palvelutilin soveltuvat ehdot; generointihetken tilin lisenssitasosta tai kyseisen tuotoksen kaupallisen käytön ehdoista ei tässä inventaariossa ole tilikohtaista ehtotodistetta. Krediittimäärä tai työn tekninen nimi ei todista lisenssitasoa. Ei CC-lisenssiväitettä.",
+          "lopullinen_pelijulkaisu": "Lähdekuvien käyttö ja mallin kokeeseen vastaanotto eivät muodosta lopullista pelijulkaisulupaa. Omistajan pelikuvahyväksyntä, vastaanotto, kohdelaitetesti ja julkaisupäätös erillisiä."
+        },
+        "todentaminen": {
+          "lahde_SHA_tasmaa": true,
+          "tulos_SHA_tasmaa": true,
+          "aineistorajaus": "Tässä lähdeinventaario dokumentoi paikallisen aineiston, ei uudelleentarkista Commonsin tai Tripo-palvelun nykyisiä verkkosivuja."
+        },
+        "lahdekuvien_metatiedostot": []
+      }
+    },
+    {
+      "slug": "louvre",
+      "malli": "Louvre",
+      "tiedosto": "louvre-lod.glb",
+      "sha256": "2b5cfb3def362d2827695e32fbf18c8e6ec25ba1b1a134d1cf62e197a218302b",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/louvre.bytes",
+        "sha256": "3ed4f5fa3f4834db25ef917a798a0064cad093aac87815f879d5e0d02e2cb859",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "louvre",
+        "nimi": "Louvre",
+        "tehtava": 2167,
+        "scope": "Pelkkä jälkikäteinen dokumentointi; olemassa olevia mallibytejä ei muutettu.",
+        "oikea_otto": 4,
+        "tripo_tyo": "f244dd29-afb7-47a0-9b50-3a81326390ef",
+        "tripo_url": "https://studio.tripo3d.ai/workspace/generate/f244dd29-afb7-47a0-9b50-3a81326390ef",
+        "tekija_ja_tyokaluketju": "Codex image_gen 21f otto2 → 21g itäpään korjaus → 21h otto4 kahdesta viistokuvasta (#2105 vapautti aiemman comparison-only-rajan) / Tripo H3.1 HD UltraMesh 2K → Python akselikohtainen pelimittaskaalaus ja pivot. Lähde-GLB on toimituksen ehjä raaka, ei UV-rikkoinen Tripo-retopo.",
+        "tripo_lahdekuvat": [
+          {
+            "polku": "output/louvre-21h-2103-20261105/sources/_review-otto3-21g/viisto-lounas.png",
+            "sha256": "1d575399f5a3a56e431c312455df32830a2472945890b997095a0cde7f6fb41a",
+            "tavut": 1968441,
+            "nimi": "viisto-lounas.png",
+            "tripo_paikka": "front",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/louvre-21g-2090-20261105/delivery/viisto-lounas.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/louvre-21h-2103-20261105/sources/_review-otto3-21g/viisto-koillinen.png",
+            "sha256": "c1118254b668a1d2b3c864b009a74256f0218bec665b585abb3739d452eb3e1a",
+            "tavut": 2021166,
+            "nimi": "viisto-koillinen.png",
+            "tripo_paikka": "back",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/louvre-21g-2090-20261105/delivery/viisto-koillinen.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          }
+        ],
+        "lahdekuvien_2d_viitteet": [
+          {
+            "polku": "output/louvre-21g-2090-20261105/source/vertailu-21g-itapaa.jpg",
+            "sha256": "8176cbe2f44f55c925d2946fb4305c65eff4094f57f776b18b9c4c4746be73a4",
+            "tavut": 804101,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Karttasepän vertailukooste; vasen Matthias Kabel, keskellä Codexin AI-esittely, oikealla projektin AI-piirros",
+            "lisenssi": "Valokuva CC BY-SA 3.0; AI-osien erillistä CC-lisenssiä ei osoitettu",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Louvre_Paris_from_top.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          }
+        ],
+        "lahdeasiakirjat": [
+          {
+            "polku": "output/louvre-21h-2103-20261105/delivery/louvre-3d-v2/LAHTEET.md",
+            "sha256": "5fcc7815a1c6679c12c15d869d84a004c51a1d82bec439de44dd65892a20cb1c",
+            "tavut": 1725,
+            "teksti": "# Lähteet — Louvre21h\n\nOmistajan hyväksymät21g-kuvat; Karttasepän21h-tilaus ja #2105-jatko. Vain näitä käytettiin. Ei vanhoja 3D-malleja tai kuvia tuotantosyötteenä.\n\n- Tilauscommit44e9c6123fa92f5e6519e2c9f830f7b8cf434fa8, posti/karttaseppa-codex-tripo3d-louvre-21h-AVAUS-20261105.md.\n- Viistosyytevaltuutuscommit a401a94c3713c096189c84d384737e6b1db080cb, posti/karttaseppa-tripo3d-louvre21h-otto3-20261105.md.\n- Otto4 pääsyötteet: Front=viisto-lounas.png, Back=viisto-koillinen.png, Left/Right tyhjinä.\n- TripoH3.1HD,UltraMesh,2K,PBR,RemoveLighting,Triangle50000; AI Complete pois; eiParts/8K.\n- Tripo-kevennysTriangle28000, SmartMeshpois,5krediittiä.\n- Generointi ja retopo samassa työssä https://studio.tripo3d.ai/workspace/generate/f244dd29-afb7-47a0-9b50-3a81326390ef\n- Paikallinen jatko: vain akselikohtainen pelimittoihin skaalaus ja pivot; lähdeverkko/UV/kuvat säilytetty. Ei riggausta eikä videoita.\n\n## Lähdekuvien SHA256\n\n45ee8638b76dcec8598933fd852119ee0a4149e8ce97af207107b8dd78d1e1a9  etela.png\n4e8d75e30145f6df14464c9b71caab1ef095c26f5e31fd98f0648c7b54e808cf  ita.png\n11030de1c2b6547d2f18de0cd791772d9aa8cda2bca4b25fac42315df388de12  lansi.png\n278291972a107567f8299f454a11e5298b52adfe022a4319ce561dce9c186b28  pohjoinen.png\nc1118254b668a1d2b3c864b009a74256f0218bec665b585abb3739d452eb3e1a  viisto-koillinen.png\n1d575399f5a3a56e431c312455df32830a2472945890b997095a0cde7f6fb41a  viisto-lounas.png\nfe7b08457c7697ef0daf19f34f05e85201fdbb0a0de734824599e9a2588e3103  ylhaalta.png\n\n## Raakalataukset\n\nafb5516c7dae69e98db4eb1d07196472c4d6216569420dafea0ffae7a87221c7  louvre21h-attempt04-raw.glb\n44e3e114e6cfd7332a70a332f76173667a198296892369954c7803830dd42bdc  louvre21h-attempt04-retopo28k.glb\n"
+          },
+          {
+            "polku": "output/louvre-21g-2090-20261105/delivery/LAHTEET.md",
+            "sha256": "b05ba5dc56bd1e98658a1e583af4457048f657f7452e473628470bf0b7e02ca5",
+            "tavut": 1562,
+            "teksti": "# Lähteet — Louvre21g\n\n- Nykyinen korjattu lähdeposti: posti/karttaseppa-codex-kuvat-louvre-21g-20261105.md, commit4743c4ca830e9c719d106cc548af185fdd20d852, blob5aeb232269c0b8551963392f0f99c43c33cc66f1. Alkuperäinen tilaus d9d2588ecd5b80c7e0c0c807810966a410c988dc säilyy historiassa.\n- TILAUS-21g-itapaa.md SHA25695632cab9805b7f98a1db3e70e4b85b3da07d8cb32ec02c0a677a69f1274dc48.\n- Korjattu 14.07 vertailu-21g-itapaa.jpg SHA2568176cbe2f44f55c925d2946fb4305c65eff4094f57f776b18b9c4c4746be73a4; vanhaa virheellistä vertailukuvaa ei käytetty.\n- Vertailun vasen aito valokuva: Matthias Kabel, CC BY-SA3.0, https://commons.wikimedia.org/wiki/File:Louvre_Paris_from_top.jpg . Attribuutio Karttasepän lähdetiedostosta /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/louvre-oikea/LAHTEET.md. Muotovertailu, ei pikselien kopiointia eikä Googlen laattoja.\n- Vertailun keskimmäinen AI-esittelykuva: /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-esittelykuvat-20261105/hero-pariisi-louvre.jpg. Vain uuden keskipaviljongin siluetti ja koostumus; sen valoa/ihmisiä/patsaita/altaita ei siirretty.\n- Seitsemän 21f-lähtökuvaa: /Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-louvre-20261104/_review-otto2-21f/. Koko lähtömanifesti tarkistettu tavutasolla ennen työtä; tarkistus output/louvre-21g-2090-20261105/source/verification.json.\n- Työkalu: Codexin sisäinen image_gen. Kaikki toimitettavat rakennuskuvat ovat uusia AI-kuvituksia, eivät valokuvia. Alkuperäiset generointitavut säilytetty.\n"
+          },
+          {
+            "polku": "output/louvre-21f-otto2-20261105/delivery/LAHTEET.md",
+            "sha256": "b0fc20ad84433e9ea05662db98c11490282e32260b6ba8de082e7b6ffe95a140",
+            "tavut": 1776,
+            "teksti": "# Louvre21f: lähteet\n\nTilaus #2083, posti/karttaseppa-codex-kuvat-louvre-21f-20261105.md; commit54477121dd423e1293360975dbaece7375f2374f; blob8de86d47fc4201bfa59e71b2c36a7547af02a7e6.\n\nKäytettiin vain omistajan/Karttasepän antamia aiempia Louvre21a/21b/21d-kuvia, asetteluohjetta, paikallista työohjetta ja itse tämän tilauksen aikana generoituja näkymiä. Ei Google-laattoja, uusia verkkokuvia tai ulkoisia arkkitehtuurilähteitä. Aiemmat31toimitustiedostoa säilyivät tavuilleen.\n\nVarmennetut lähdemanifestin tiedostot:\n- TILAUS-21a-kuvat.md: `132f4f9aa81cdcf58a737f028c83392e77f0bbd0e1875bc36e6aea893235a98c`\n- malli-louvre-k5.png: `59b27f38a4aea82abf367ceba51dbfffab298e2dcd8849e595cd437fee2d6ab6`\n- malli-louvre-k5-lahi.jpg: `e475c988c91108c611cf6a14d0b064e2c69d5605ad384d90ca111cb6730293d7`\n- malli-G-koko-kaupunki.png: `692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde`\n- isoisa-2029-paletti-v1.json: `3e29b04dd738830e8450599918c0572edb3503ec12a1bd9e55ea1f60d002767f`\n- malli-G-pyramidi.jpg: `1e5a922eacc597f407904dadb0da18dd7a5f8f062ab763e2faa5eede916bb55b`\n- TILAUS-21b-ylhaalta.md: `07c41d8bec9b124d894e6fb51e6d21c91e15434ead8c162e19baf71a40d348f2`\n- TILAUS-21c-tripo.md: `6c0e87c580e9b9ab6b942647c15c22ef6f0a0bc51eec76f7146a0275bb188c35`\n- TILAUS-21d-viisto.md: `5340923e19b3795ec0444dd5c086d755bc958f5f43b0d640b58e9ee9dedd0868`\n- TILAUS-21f-otto2.md: `59c510645998b41bb7781f9a25b21e127bdd9bd1e3986eb0b54da15dc1d161ae`\n- ohje-21f-pohja.png: `0b7da1c4c8a1d973aa9ae3b98372342884bc0c06a6c7facbdc3efc160f5b34a7`\n\nKäytetyt yksinkertaiset pikselipaikoituksen ohjekaaviot ovat teknisiä mittaohjeita, eivät tuotantokuvien osia. Valittuihin kuviin ei tehty koostamista, skaalausta tai pikselikorjauksia. Kaikki18kehoteversiota PROMPTS.jsonissa.\n"
+          }
+        ],
+        "checkpoint": {
+          "polku": "output/louvre-21h-2103-20261105/checkpoint.json",
+          "sha256": "83ff3a04eae90108caadc2068ea58fcff62bab96408d92689cd98961a8c0759a",
+          "tavut": 9828
+        },
+        "alkuperainen_tripo_glb": {
+          "polku": "output/louvre-21h-2103-20261105/raw/louvre21h-attempt04-raw.glb",
+          "sha256": "afb5516c7dae69e98db4eb1d07196472c4d6216569420dafea0ffae7a87221c7",
+          "tavut": 4531188
+        },
+        "valivaiheen_glb": [
+          {
+            "polku": "output/louvre-21h-2103-20261105/delivery/louvre-3d-v2/louvre.glb",
+            "sha256": "3ed4f5fa3f4834db25ef917a798a0064cad093aac87815f879d5e0d02e2cb859",
+            "tavut": 4531036
+          }
+        ],
+        "karttasepan_skriptit": [
+          {
+            "polku": "output/louvre-21h-2103-20261105/tools/normalize_and_preview.py",
+            "sha256": "38df1fbf3a3076ec8560677eff5f1b6b89919d441a77836c248550711d30d6c6",
+            "tavut": 3453
+          }
+        ],
+        "lod_lahde": {
+          "polku": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/louvre.bytes",
+          "sha256": "3ed4f5fa3f4834db25ef917a798a0064cad093aac87815f879d5e0d02e2cb859",
+          "tavut": 4531036
+        },
+        "lod_tulos": {
+          "polku": "output/pariisi-maamerkit-lod-20261106/louvre/louvre-lod.glb",
+          "sha256": "2b5cfb3def362d2827695e32fbf18c8e6ec25ba1b1a134d1cf62e197a218302b",
+          "tavut": 3471572
+        },
+        "lod_ketju": {
+          "tekija": "Codex",
+          "tyokalut": "Paikallinen Blender bpy DECIMATE/COLLAPSE, Python/NumPy ja paikallinen C++ BVH-siirto; säilytetään lähteen tekstuurit, korjataan UV-saumat; ei uutta Tripo- eikä 2D-generointia tässä LOD-ajossa.",
+          "skriptit": [
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/continue_ordered.py",
+              "sha256": "d789fe1837050e767a15c46d4f375ab0e346da1af25c4e4d7951972b10e0cd12",
+              "tavut": 3629
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/shell.py",
+              "sha256": "86ff625b13f7b7b5635963ec0f34ae0dcf0132224b0576eff97e24fa19e303a0",
+              "tavut": 7002
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/mend_uv.py",
+              "sha256": "775b587f0bd296e44d55ca6e6da6b9038bb7ab0c999ac6cd7b119b027e9f851a",
+              "tavut": 3131
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer.py",
+              "sha256": "aa59f67d24ca5a5f73d6d55d55a6cdfb780b228fc3c05d1c0be4fdf5f807f661",
+              "tavut": 19427
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer_bvh.cpp",
+              "sha256": "6016c621baa474a9a45865296491d4e7ce73f7ec484ff1db66e557c2b1838d1e",
+              "tavut": 5329
+            }
+          ],
+          "kolmiot_ennen": 46673,
+          "kolmiot_jalkeen": 6099
+        },
+        "kayttolisenssi": {
+          "lahdekuvat": "AI-tuotokset ja alla nimetyt alkuperäisviitteet käsiteltävä erikseen. LAHTEET säilyttää valokuvien nimet, tekijät ja lisenssit; CC-lähteiden attribuutiot ja mahdolliset share-alike-ehdot säilytettävä soveltuvin osin.",
+          "tripo_malli": "Tripo-palvelutilin soveltuvat ehdot; generointihetken tilin lisenssitasosta tai kyseisen tuotoksen kaupallisen käytön ehdoista ei tässä inventaariossa ole tilikohtaista ehtotodistetta. Krediittimäärä tai työn tekninen nimi ei todista lisenssitasoa. Ei CC-lisenssiväitettä.",
+          "lopullinen_pelijulkaisu": "Lähdekuvien käyttö ja mallin kokeeseen vastaanotto eivät muodosta lopullista pelijulkaisulupaa. Omistajan pelikuvahyväksyntä, vastaanotto, kohdelaitetesti ja julkaisupäätös erillisiä."
+        },
+        "todentaminen": {
+          "lahde_SHA_tasmaa": true,
+          "tulos_SHA_tasmaa": true,
+          "aineistorajaus": "Tässä lähdeinventaario dokumentoi paikallisen aineiston, ei uudelleentarkista Commonsin tai Tripo-palvelun nykyisiä verkkosivuja."
+        },
+        "lahdekuvien_metatiedostot": []
+      }
+    },
+    {
+      "slug": "opera",
+      "malli": "Opéra Garnier",
+      "tiedosto": "opera-lod.glb",
+      "sha256": "25d8838b82bade27a65811b88bc6264eb31e94f871dbef5b3e70c3820df3b03a",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/opera.bytes",
+        "sha256": "019f90f75b6c2b26ea4ba9d8e839f985cac43c97e74516edaca26b521a3bd55f",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "opera",
+        "nimi": "Opéra Garnier",
+        "tehtava": 2167,
+        "scope": "Pelkkä jälkikäteinen dokumentointi; olemassa olevia mallibytejä ei muutettu.",
+        "oikea_otto": 1,
+        "tripo_tyo": "d64a7426-0dfe-45b4-a450-45afb43b401d",
+        "tripo_url": "https://studio.tripo3d.ai/workspace/generate/d64a7426-0dfe-45b4-a450-45afb43b401d",
+        "tekija_ja_tyokaluketju": "Codex image_gen 24 / #2095 → Karttaseppä tee-syotteet.py: yhteinen skaala/maaviiva, etelän sivurotundien kivirungon jatko ja lännen peilaus itäsyötteeksi → Codex Tripo H3.1 Ultra 24j otto1, ei otto2 → diagnostinen peliskaalaus → Karttaseppä: otto1 kokeeseen, etukaton perusvärikuvan vaalea laatta harmaaksi saman mallin kattopikseleistä opera-etukatto.py:llä; geometria ja normaalit ennallaan.",
+        "tripo_lahdekuvat": [
+          {
+            "polku": "output/opera-24j-20261105/sources/tripo-syote/etela.png",
+            "sha256": "233730947f39ba510ed17c2c0384ac1378a083ccb516b3c6dfd6ac7e3e87bdca",
+            "tavut": 1291770,
+            "nimi": "etela.png",
+            "tripo_paikka": "Front",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24-opera-2095-20261105/delivery/etela.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/opera-24j-20261105/sources/tripo-syote/lansi-peilattu.png",
+            "sha256": "804dd10a837c7c5b5092bd3c6f6784b5671f0e0ceaaf8a4d66125eefcc3b2acf",
+            "tavut": 1470156,
+            "nimi": "lansi-peilattu.png",
+            "tripo_paikka": "Left",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24-opera-2095-20261105/delivery/lansi-peilattu.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/opera-24j-20261105/sources/tripo-syote/lansi.png",
+            "sha256": "76b44720888186ed89e84e96bda3ee738924e6df3b92158db78089ac762c52d6",
+            "tavut": 1470503,
+            "nimi": "lansi.png",
+            "tripo_paikka": "Right",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24-opera-2095-20261105/delivery/lansi.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/opera-24j-20261105/sources/tripo-syote/pohjoinen.png",
+            "sha256": "3df2bc457ebf64f891e1547c44b316250e3151d499b6ca3c72ee286897053a76",
+            "tavut": 1201864,
+            "nimi": "pohjoinen.png",
+            "tripo_paikka": "Back",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24-opera-2095-20261105/delivery/pohjoinen.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          }
+        ],
+        "lahdekuvien_2d_viitteet": [
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/aerial.jpg",
+            "sha256": "e41eac568e836835e69168962bef0914c7208a2ebe83f2171ded0cf684f15cfc",
+            "tavut": 2128478,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Tangopaso",
+            "lisenssi": "Public domain",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Opera_Garnier_from_Credit_Lyonnais_HQ.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/roofplan.jpg",
+            "sha256": "1eeb2500673555e17a0200130cd6ae5eb41af00f222fdc92d38d8361274071e1",
+            "tavut": 712720,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Charles Garnier / Rebout ja Bordet",
+            "lisenssi": "Public domain Commons-merkinnän mukaan",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Palais_Garnier_plan_of_the_roof_-_Mead_1991_p104.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/roofview.jpg",
+            "sha256": "7995342a9c73e9db66ffb6b4ffeb62a8cac6a71727700f643d34c4bded90a204",
+            "tavut": 2168363,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Jumilla",
+            "lisenssi": "CC BY 2.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Opera_Garnier_from_the_roof_terrace_of_Lafayette_01.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/whole.jpg",
+            "sha256": "c9a0487d39d53c89b840ff2076ca13984b5198997b0eec668c92f017ae5726f7",
+            "tavut": 1838545,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "King of Hearts",
+            "lisenssi": "CC BY-SA 4.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Palais_Garnier_Paris_June_2010_001.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/front.jpg",
+            "sha256": "79f29386e60cfa8c24cbf84dfb9eb8eefb1c0ef968bfa3ebdf1f0bd41e3d849a",
+            "tavut": 5845994,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Alexander Hoernigk",
+            "lisenssi": "CC BY 3.0; lähdedokumentti erottaa BY-SA 4.0 boilerplaten varsinaisesta Licensing-osiosta",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Paris_Palais_Garnier_2010-04-06_16.55.07.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          }
+        ],
+        "lahdeasiakirjat": [
+          {
+            "polku": "output/sarja24-opera-2095-20261105/delivery/LAHTEET.md",
+            "sha256": "9834460386119c56eef822129bf810a42bac62af6fe051cc22f0fd56679d7b17",
+            "tavut": 5201,
+            "teksti": "# Opéra Garnier – lähteet ja käyttö\n\nTILAUS-24, 24d, vapautus #2107 ja rinnakkaistyö #2115 luettu. Kaikki 37 manifestin tiedostoa varmennettu (source/verification.json). Suunta 74° idästä myötäpäivään; jalanjalki.png määrää karttaruudukon.\n\n## Pohja ja kuvat\n- Pohjan mittari: Charles Garnier (arkkitehti), Rebout ja Bordet (kaiverrus), Le Nouvel Opéra 1876–1880, folio I plate 16; julkaisu1880. Wikimedia Commonsin Public domain -merkintä. https://commons.wikimedia.org/wiki/File:Palais_Garnier_plan_of_the_roof_-_Mead_1991_p104.jpg . Tämä on kattopohjapiirustus, EI ilmavalokuva. Se kuvaa suorakulmaisen takaosan, suuren salikupolin sen eteläpuolella, kaksi pienempää sivurotundaa ja eteläisen foyer/julkisivulohkon. Muotojen sijainti varmistettu korotetuista valokuvista. Pienet tekniset kattorakenteet nykykuvissa eivät kuulu malliin.\n- Korotettu valokuva kaakosta: Tangopaso 25.11.2010, Public domain. https://commons.wikimedia.org/wiki/File:Opera_Garnier_from_Credit_Lyonnais_HQ.jpg . Kuvassa näkyvät salin vihreä kupoli, korkea näyttämötorni ja sivurotunda; alaosa peittyy naapuritaloihin. Ei yksinään pohjan mittari.\n- Takaosan ja katon lisätuki: King of Hearts 22.6.2010, CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; https://commons.wikimedia.org/wiki/File:Palais_Garnier_Paris_June_2010_001.jpg . Kuva pohjoisesta Galeries Lafayettelta.\n- Takaosan laajempi kattoterassikuva: Jumilla 19.9.2013, CC BY2.0 https://creativecommons.org/licenses/by/2.0/ ; https://commons.wikimedia.org/wiki/File:Opera_Garnier_from_the_roof_terrace_of_Lafayette_01.jpg . Osa rakennuksesta kuvan ulkopuolella, käytetty vain tukena.\n- Toimituksen oikea.jpg: © Alexander Hoernigk (via Wikimedia Commons), 6.4.2010. CC BY3.0 https://creativecommons.org/licenses/by/3.0/ (tiedoston varsinainen Licensing-osio ja API vahvistavat CC BY3.0; yleisessä tekijän boilerplatessa myös BY-SA4.0-maininta). https://commons.wikimedia.org/wiki/File:Paris_Palais_Garnier_2010-04-06_16.55.07.jpg . Koko etujulkisivu näkyvissä. Alkuperäinen JPEG kopioitu muuttamatta.\n- Jokaisen ladatun kuvan API-metadata source/*-metadata.json. Kuvia ei rajattu, väritetty tai kierretty tiedostoina. Generoidut johdannaiset ovat kokonaan uusia piirroskuvia, eivät valokuvien suoria muokkauksia. Valokuvan esikatselu arkissa skaalattu; alkuperäinen oikea.jpg säilyy muuttumattomana. Käytettyjen CC-lähteiden attribuutiot säilytettävä.\n\n## Mitat ja korkeus\nYetim & Kavraz, Journal of Architecture and Life 6(1),2021, DOI10.26835/my.732790, s.22: korkeus noin56m maanpinnasta, pituus154,9m ja leveys101,2m sivupaviljongeista. Artikkeli käyttää arkkitehtonisten piirustusten suhteuttamista. https://dergipark.org.tr/tr/download/article-file/1089180 . Lähde tukee tilauksen56m-korkeutta, ei uutta tarkemittausväitettä. Tilauksen pituus149m eroaa artikkelin154,9m:stä3,96%; leveys101m vastaa101,2m:ä. Tuotannon suhdetavoite pysyy Karttasepän149×101×56m, poikkeama kirjattu. Apollon veistos ei ole kattoharjan mittapiste. Kattokuva ja arkkitehdin kattopiirustus tarkistettu: korkeampi näyttämötorni on salikupolin pohjoispuolella. Lisäluvut73,6/74m esiintyvät maanalaisen näyttämökoneiston sisältävissä kuvauksissa eivätkä tarkoita maanpäällisen kattotason korkeutta; niitä ei käytetty.\n\n## Piirrosjälki\nSarjan Grand Palais2-viistokuva vain yhtenäisen muste/vesivärijäljen, tasaisen valon ja taustan viitteeksi, ei Opéran muodon lähde. Lähdekuvien vaalea kalkkikivi, harmaat sinkkikatot, vihreä kupari ja hillitty kulta säilyvät. Pienet kattopiikit ja savupiiput pois; kolme pääkupolia ja korkea näyttämötorni säilyvät.\n\n## Ilmansuuntien lisävarmennus #2116 (ennen koilliskuvaa)\nKarttasepän ae84ac494024640ab4c13491a6686a6053391cf1 luettu kokonaan. Opéran suunta varmennettu kahdella katuankkurilla: (1) eteläinen pääjulkisivu avautuu Avenue de l'Opéralle, vahvistus rakennuksen omistajan restaurointiseloste https://www.operadeparis.fr/actualites/restauration-de-la-facade-principale-du-palais-garnier ; (2) länsijulkisivu on rue Scribe/rue Auberin puolella, Musée Carnavalet'n kuvailu https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/facade-laterale-de-l-opera . Kartan pyyhitty.png: eteläisen vinon aukion jatke lähtee kohti etelä-kaakkoa, länsireunan katu ja luoteesta tuleva Auber-linja ovat samalla puolella kuin arkkitehdin länsipaviljonki. Kattopiirustus sijoitettu siten, että pääjulkisivu on eteläpäässä (16° vastapäivään piirustuksen pystyakselista, pitkä akseli74° myötäpäivään idästä). Jo tehdyissä ylä- ja lounaiskuvissa pääjulkisivu on etelässä;180°-korjausta ei tarvita. Lounaan katseen nimisuunta arvioidaan kulmanäkymän topologiasta erikseen. GrandPalais-lähteen virhettä ei siirretty Opéran pohjaan.\n\n## Hakukäytännön viimeisin tila\n\n#2120, commit 0697e1d76c5e49f8152a44290c300d4be1bcdfd4, luettu. Se korvaa aiemman API-rajoituksen hitaalla ja projektin nimellä tunnistetulla virallisella haulla, yksi haku kerrallaan koko tiimissä. Tähän Opéra-erään ei haettu uusia lähteitä korjauksen jälkeen; tuotanto käytti jo ladattuja lähteitä.\n"
+          },
+          {
+            "polku": "output/opera-24j-20261105/diagnostic/two-attempts/LAHTEET.md",
+            "sha256": "68354c65aba0f00cc142bed83138fa434add2b08eeede7af33034bf4a02f2c2b",
+            "tavut": 1464,
+            "teksti": "# Lähteet ja jäljitettävyys\n\n- Tilaus: `context/TILAUS-24j-opera-tripo.md` (SHA256 `b08422c0d83ae7c0fd13998fb42b62517cc360d82073320421a5f3520eb74e9c`).\n- Intake: `context/intake.json`; omistajan hyväksyntä ja jono ovat sen mukaiset. Lähdekuvat on tilauksen mukaisesti varmennettu ennen generointia; diagnostinen paketti ei kopioi niitä uudelleen.\n- Syötemanifesti: `output/opera-24j-20261105/sources/tripo-syote/SHA256SUMS`.\n- Lähdekuvat: `etela.png` SHA256 `233730947f39ba510ed17c2c0384ac1378a083ccb516b3c6dfd6ac7e3e87bdca`; `pohjoinen.png` `3df2bc457ebf64f891e1547c44b316250e3151d499b6ca3c72ee286897053a76`; `lansi.png` `76b44720888186ed89e84e96bda3ee738924e6df3b92158db78089ac762c52d6`; `lansi-peilattu.png` `804dd10a837c7c5b5092bd3c6f6784b5671f0e0ceaaf8a4d66125eefcc3b2acf`.\n- Raakamallit: `work/attempt01-raw.glb` ja `work/attempt02-raw.glb`, kopioitu työtilan `output/opera-24j-20261105/work/`-tiedostoista. SHA:t löytyvät mukana olevasta `SHA256SUMS`-tiedostosta.\n- Seitsemän ortoesikatselua kummastakin otosta ja alkuperäiset numeeriset QA JSONit on kopioitu `previews/` ja `qa/`-kansioihin. Otto 1:n shape-gate on `qa/attempt01-shape-gate.json`.\n- Ottojen mitat ja UV-luvut ovat attempt-kohtaisissa QA JSONeissa; tämän paketin `huomiot.md` kokoaa oleelliset vertailut.\n- Ei vanhoja malleja, review-sarjan sivukuvia tai kuvamuunnoksia käytetty diagnostisten mittausten lähteenä.\n"
+          }
+        ],
+        "checkpoint": {
+          "polku": "output/opera-24j-20261105/checkpoint.json",
+          "sha256": "adf472e066e07eb586bce0d8794e0fb6475f8d5476691a55ca99cfc15fa90459",
+          "tavut": 2847
+        },
+        "alkuperainen_tripo_glb": {
+          "polku": "output/opera-24j-20261105/raw/opera24j-attempt01-raw.glb",
+          "sha256": "7d087bf100845a7e9eab1ca47eba8122691f52a4cf467f38507414541a57a69e",
+          "tavut": 5284048
+        },
+        "valivaiheen_glb": [
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/opera.glb",
+            "sha256": "0ad6a21aeaa42a615e2ad10678e863defe76bed7504b1887fe61ffaebb2b2e2f",
+            "tavut": 5283932
+          }
+        ],
+        "karttasepan_skriptit": [
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-opera-pantheon-montparnasse/tee-syotteet.py",
+            "sha256": "5862d2aa7179638b515816a73e4c0c50f1956e36ca4ccb6a5b1c2dd5b5b70db2",
+            "tavut": 5000
+          },
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/asenna.py",
+            "sha256": "c7b5f5bb967fb96c8efaa42b5806959ebbf1f395bd12d2dc90965cf5537ed289",
+            "tavut": 3724
+          },
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/opera-etukatto.py",
+            "sha256": "69f7beed852a9c99ceecc14c17dbd31c8f89d5becf72df7745cd5e086fad7d65",
+            "tavut": 10491
+          }
+        ],
+        "lod_lahde": {
+          "polku": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/opera.bytes",
+          "sha256": "019f90f75b6c2b26ea4ba9d8e839f985cac43c97e74516edaca26b521a3bd55f",
+          "tavut": 5535820
+        },
+        "lod_tulos": {
+          "polku": "output/pariisi-maamerkit-lod-20261106/opera/opera-lod.glb",
+          "sha256": "25d8838b82bade27a65811b88bc6264eb31e94f871dbef5b3e70c3820df3b03a",
+          "tavut": 3614780
+        },
+        "lod_ketju": {
+          "tekija": "Codex",
+          "tyokalut": "Paikallinen Blender bpy DECIMATE/COLLAPSE, Python/NumPy ja paikallinen C++ BVH-siirto; säilytetään lähteen tekstuurit, korjataan UV-saumat; ei uutta Tripo- eikä 2D-generointia tässä LOD-ajossa.",
+          "skriptit": [
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/continue_ordered.py",
+              "sha256": "d789fe1837050e767a15c46d4f375ab0e346da1af25c4e4d7951972b10e0cd12",
+              "tavut": 3629
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/shell.py",
+              "sha256": "86ff625b13f7b7b5635963ec0f34ae0dcf0132224b0576eff97e24fa19e303a0",
+              "tavut": 7002
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/mend_uv.py",
+              "sha256": "775b587f0bd296e44d55ca6e6da6b9038bb7ab0c999ac6cd7b119b027e9f851a",
+              "tavut": 3131
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer.py",
+              "sha256": "aa59f67d24ca5a5f73d6d55d55a6cdfb780b228fc3c05d1c0be4fdf5f807f661",
+              "tavut": 19427
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer_bvh.cpp",
+              "sha256": "6016c621baa474a9a45865296491d4e7ce73f7ec484ff1db66e557c2b1838d1e",
+              "tavut": 5329
+            }
+          ],
+          "kolmiot_ennen": 45008,
+          "kolmiot_jalkeen": 6250
+        },
+        "kayttolisenssi": {
+          "lahdekuvat": "AI-tuotokset ja alla nimetyt alkuperäisviitteet käsiteltävä erikseen. LAHTEET säilyttää valokuvien nimet, tekijät ja lisenssit; CC-lähteiden attribuutiot ja mahdolliset share-alike-ehdot säilytettävä soveltuvin osin.",
+          "tripo_malli": "Tripo-palvelutilin soveltuvat ehdot; generointihetken tilin lisenssitasosta tai kyseisen tuotoksen kaupallisen käytön ehdoista ei tässä inventaariossa ole tilikohtaista ehtotodistetta. Krediittimäärä tai työn tekninen nimi ei todista lisenssitasoa. Ei CC-lisenssiväitettä.",
+          "lopullinen_pelijulkaisu": "Lähdekuvien käyttö ja mallin kokeeseen vastaanotto eivät muodosta lopullista pelijulkaisulupaa. Omistajan pelikuvahyväksyntä, vastaanotto, kohdelaitetesti ja julkaisupäätös erillisiä."
+        },
+        "todentaminen": {
+          "lahde_SHA_tasmaa": true,
+          "tulos_SHA_tasmaa": true,
+          "aineistorajaus": "Tässä lähdeinventaario dokumentoi paikallisen aineiston, ei uudelleentarkista Commonsin tai Tripo-palvelun nykyisiä verkkosivuja."
+        },
+        "lahdekuvien_metatiedostot": [
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/whole-metadata.json",
+            "sha256": "886b6003026fd08a2009f4d43e3bbdedb596492472900960adcfead0f3fe8e81",
+            "tiedot": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Palais_Garnier_Paris_June_2010_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Palais_Garnier_Paris_June_2010_001.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=89825696",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-05-03 20:07:24",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Palais Garnier Paris June 2010 001",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Nikon D40|Uploaded with pattypan|Self-published work|Files with coordinates missing SDC location of creation (48° N, 2° E)|Opéra Garnier from Galeries Lafayette",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "48.873400",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "2.332000",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<a href=\"https://en.wikipedia.org/wiki/Palais_Garnier\" class=\"extiw\" title=\"w:Palais Garnier\">Palais Garnier</a> as seen from the <a href=\"https://en.wikipedia.org/wiki/Galeries_Lafayette\" class=\"extiw\" title=\"w:Galeries Lafayette\">Galeries Lafayette</a>, <a href=\"//commons.wikimedia.org/wiki/Paris\" title=\"Paris\">Paris</a>, <a href=\"//commons.wikimedia.org/wiki/France\" title=\"France\">France</a>.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-06-22 17:51",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:King_of_Hearts\" title=\"User:King of Hearts\">King of Hearts</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/roofplan-metadata.json",
+            "sha256": "f49c6905c8a68caa0c3708a4da09c88e044899e47246bdd831c3c73b4e617718",
+            "tiedot": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Palais_Garnier_plan_of_the_roof_-_Mead_1991_p104.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Palais_Garnier_plan_of_the_roof_-_Mead_1991_p104.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16968878",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2011-10-13 00:02:31",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Palais Garnier plan of the roof - Mead 1991 p104",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD Old|CC-PD-Mark|Drawings of roofs|Roofs in Paris in art|1880s architectural drawings|Le Nouvel Opéra de Paris|Plans of the Opéra Garnier by Charles Garnier",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Roof plan of the Paris Opera's <a href=\"https://en.wikipedia.org/wiki/Palais_Garnier\" class=\"extiw\" title=\"en:Palais Garnier\">Palais Garnier</a>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1880",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "User scan of Mead, Christopher Curtis (1991). <i>Charles Garnier's Paris Opéra: Architectural Empathy and the Renaissance of French Classicism</i>, p. 104. New York: The Architectural History Foundation. Cambridge, Massachusetts: The MIT Press. <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span> <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/9780262132756\" title=\"Special:BookSources/9780262132756\">9780262132756</a>. Original: Garnier, <i>Le Nouvel Opéra</i> (1876–1880), folio I, plate 16.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/Charles_Garnier\" class=\"mw-redirect\" title=\"Charles Garnier\">Charles Garnier</a> (1825–1898), architect<br>Rebout, engraver<br>Bordet, engraver",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/aerial-metadata.json",
+            "sha256": "2d78aa495afda8e97cd8694238035afb0926069984c1a819f133f460de2f6f5a",
+            "tiedot": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Opera_Garnier_from_Credit_Lyonnais_HQ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Opera_Garnier_from_Credit_Lyonnais_HQ.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=14983077",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-11-06 18:29:42",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Opera Garnier from Credit Lyonnais HQ",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|PD-self|Remote views of Opéra Garnier|Files with coordinates missing SDC location of creation (48° N, 2° E)|Roof of Credit Lyonnais HQ",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "48.870914",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "2.336161",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "The Opera Garnier seen from the roofs of the Crédit Lyonnais HQ, 19 Bd des Italiens Paris 2nd arr.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-11-25",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tangopaso\" title=\"User:Tangopaso\">Tangopaso</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/front-metadata.json",
+            "sha256": "0558020bb28f1aa63e695c67d89c75124012fcf1ebd080ef2fe3a2d9720a2e26",
+            "tiedot": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Paris_Palais_Garnier_2010-04-06_16.55.07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Paris_Palais_Garnier_2010-04-06_16.55.07.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=48031324",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-04-07 06:58:38",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Paris Palais Garnier 2010-04-06 16.55.07",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files by User:Alexander Hoernigk from de.wikipedia|Self-published work|Principal facade of the Opéra Garnier|Files with coordinates missing SDC location of creation (48° N, 2° E)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "48.871208",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "2.332083",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Paris Palais Garnier (Opernhaus/Musikakademie)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-04-06 16:55:07",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Alexander_Hoernigk\" title=\"User:Alexander Hoernigk\">Alexander Hoernigk</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          },
+          {
+            "polku": "output/sarja24-opera-2095-20261105/source/roofview-metadata.json",
+            "sha256": "b4d850dd13c5051c2ae1b1a66dc689c377f9d53cb259ec66e160fa7349d2c23e",
+            "tiedot": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Opera_Garnier_from_the_roof_terrace_of_Lafayette_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Opera_Garnier_from_the_roof_terrace_of_Lafayette_01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=28793072",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-10-01 03:28:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Opera Garnier from the roof terrace of Lafayette 01",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Panasonic Lumix DMC-GH1|Flickr images reviewed by File Upload Bot (Magnus Manske)|Opéra Garnier from Galeries Lafayette",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Opera Garnier from the roof terrace of Lafayette.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2013-09-19 11:27",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/jumilla/9879036846/\">from the roof terrace of Lafayettes</a>\n</p>\n<ul><li>Uploaded by <a href=\"//commons.wikimedia.org/wiki/User:Paris_17\" class=\"mw-redirect\" title=\"User:Paris 17\">Paris 17</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/70363447@N03\">Jumilla</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "slug": "sacre-coeur",
+      "malli": "Sacré-Cœur",
+      "tiedosto": "sacre-coeur-lod.glb",
+      "sha256": "b2ce14291958b0c0cf61b03846267a8720fabaf83cd716117d55b99e3567017b",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/sacre-coeur.bytes",
+        "sha256": "15c625936bfbe189f773bf7fda502bd12ff1453bd05822e53318eb032c0428e6",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "sacre-coeur",
+        "nimi": "Sacré-Cœur",
+        "tehtava": 2167,
+        "scope": "Pelkkä jälkikäteinen dokumentointi; olemassa olevia mallibytejä ei muutettu.",
+        "oikea_otto": 1,
+        "tripo_tyo": "c2a08b86-f39d-4195-9679-e500c2703e21",
+        "tripo_url": "https://studio.tripo3d.ai/workspace/generate/c2a08b86-f39d-4195-9679-e500c2703e21",
+        "tekija_ja_tyokaluketju": "Codex image_gen 24k otto2 → 24n neljä hyväksyttyä syötekuvaa (etelä/pohjoinen noin 1,9× itä/länsi; kuvia ei normalisoitu 3D-työssä) → Codex Tripo H3.1 Ultra otto1 → diagnostinen pituus420 skaalaus → tilaaja hyväksyi vain kirkon, mäki erillinen → Karttaseppä sc-muokkaa.py lämmittää terassin lattiaa ja poistaa Tripon porrasgeometrian → sc-asenna.py kopioi muokatun kirkon. Erillinen mäki ja koodatut portaat eivät sisälly LOD:iin.",
+        "tripo_lahdekuvat": [
+          {
+            "polku": "output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/etela.png",
+            "sha256": "647148574656666c0b5cce9cb4d5f2d6f85679f76e8275fc18da5f644711fe88",
+            "tavut": 1756785,
+            "nimi": "etela.png",
+            "tripo_paikka": "Front",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24k-sacre-coeur-2127-20261105/delivery/etela.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/pohjoinen.png",
+            "sha256": "8329cdb4950d5bfd86de5e8f67e7d762a31e7a19cb76cbd58c89b898358038af",
+            "tavut": 1676328,
+            "nimi": "pohjoinen.png",
+            "tripo_paikka": "Back",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24k-sacre-coeur-2127-20261105/delivery/pohjoinen.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/ita.png",
+            "sha256": "ab74c3e08c63b9d7604a6bc6b316310cf4cd792623abfb2093ff5157ad45b520",
+            "tavut": 1830196,
+            "nimi": "ita.png",
+            "tripo_paikka": "Left",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24k-sacre-coeur-2127-20261105/delivery/ita.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          },
+          {
+            "polku": "output/sacre-coeur-24n-2132-20261105/sources/tripo-syote/lansi.png",
+            "sha256": "20f3963d4f26ac7174f6766cb07c55a4dbb4b47437ee498b62c14c8236ab2c05",
+            "tavut": 1787244,
+            "nimi": "lansi.png",
+            "tripo_paikka": "Right",
+            "tekija": "Codex / OpenAI image_gen; Opéran ja Grand Palais’n syötenormalisointi Karttaseppä",
+            "lahto": "output/sarja24k-sacre-coeur-2127-20261105/delivery/lansi.png",
+            "oikeudet": "Projektin AI-kuvitus tilaajan/omistajan toimittamassa ja hyväksymässä aineistossa. Julkista CC-lisenssiä ei osoitettu. Palveluehtojen ja mahdollisten johdannaisoikeuksien tulkinta erillinen."
+          }
+        ],
+        "lahdekuvien_2d_viitteet": [
+          {
+            "polku": "output/sarja24k-sacre-coeur-2127-20261105/source/photos/kokonainen-2006.jpg",
+            "sha256": "481bfc1b2870bdd5b5a9a61f7836aa936cd6d649aed893352fe1f595701f6468",
+            "tavut": 734664,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Yelles",
+            "lisenssi": "CC BY-SA 3.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Paris_75018_Basilique_du_Sacr%C3%A9-C%C5%93ur_south_facade_stairs_square_2006.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24k-sacre-coeur-2127-20261105/source/photos/ilmakuva-2015.jpg",
+            "sha256": "00a4092821df85e6223b58a5c72ad7e4928d2ce0127b36d0fb7fc9b84316878c",
+            "tavut": 863903,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Campus France",
+            "lisenssi": "CC0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Montmartre_and_Sacr%C3%A9-C%C5%93ur,_Paris_1_July_2015.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          },
+          {
+            "polku": "output/sarja24k-sacre-coeur-2127-20261105/source/photos/ilmakuva.jpg",
+            "sha256": "44d702b893b5bda7deb53d8b8982f014272ed936a7154100590879b342e06ff5",
+            "tavut": 249089,
+            "rooli": "2D-muoto-/tyyli-/mittaviite; yksilöllinen tekijä ja oikeus alla säilytetyssä LAHTEET-tekstissä, jos dokumentoitu. Pelkkä paikallinen kuva ei osoita julkaisulupaa.",
+            "tekija": "Learn From. Build More.",
+            "lisenssi": "CC BY-SA 2.0",
+            "alkulahde": "https://commons.wikimedia.org/wiki/File:Basilica_of_the_Sacred_Heart_of_Paris,_commonly_known_as_Sacr%C3%A9-C%C5%93ur_Basilica,_aerial_photograph.jpg",
+            "oikeustiedon_perusta": "Paikallisen LAHTEET.md:n dokumentoima tieto, ei uusi verkkovarmennus."
+          }
+        ],
+        "lahdeasiakirjat": [
+          {
+            "polku": "output/sarja24k-sacre-coeur-2127-20261105/delivery/LAHTEET.md",
+            "sha256": "9cf4c90c651f4eec0dcad3ef7ac77c92104752dc578125a82148ea387901a4ab",
+            "tavut": 11517,
+            "teksti": "# Sacré-Cœur24k /#2127 — lähteet\n\n# Sacré-Cœur 24k / #2127 — ennakkotarkistus\n\nTilaus ja lähdeposti on luettu kokonaan. Tämä on vain valmistelu: 0 kuvaa generoitu. Tuotanto odottaa rootin erillistä ilmoitusta Montparnasse 24h:n valmistumisesta. Valmistelu ei ohita tilausjärjestystä.\n\n## Varmennettu lähde\n\nPosti `posti/karttaseppa-codex-sacre-coeur-24k-20261105.md`, commit `2aac98a31f2b7e74e82750d3764481e272339098`, blob `7011b6ea69cfa7e3c68593e1430288f670232101`. Git-blob ja paikallisen kopion SHA256 varmennettu.\n\n`TILAUS-24k-sacre-coeur-otto2.md`: SHA256 `647b6c079e589ee6366f4b30eed682bed82630040a57cdd8b9865644bf7c77ff`. Myös ajantasaiset TILAUS-24 ja 24d sekä neljä Sacré-Cœurin karttaviitettä täsmäävät S/SHA256SUMS-manifestiin: yhteensä seitsemän tiedostoa. Tarkat polut ja tiivisteet ovat `source/verification.json`:ssa.\n\nKolme aiemmin luvallisesti ladattua Commons-kuvaa katsottu uudelleen ja kopioitu muuttamatta:\n- `ilmakuva.jpg`: Learn From. Build More., CC BY-SA 2.0; koko pohjan mittari.\n- `kokonainen-2006.jpg`: Yelles, CC BY-SA 3.0; eteläjulkisivu, suipot kupolit, kaareva terassi, kolmikaarinen tukimuuri ja portaat. Kopio vastaa lisäksi #2098:n toimitetun `oikea.jpg`:n SHA256:ta.\n- `ilmakuva-2015.jpg`: Campus France, CC0; kirkon koko profiili, suipot kupolit ja kellotorni. Lähteen mainitsema alue x610–1230/y610–1100 näkyy alkuperäisessä 1920×1440-kuvassa. Tuotantoviitteenä käytetään koko muuttamatonta valokuvaa.\n\nCommonsin täydet tekijä-, lisenssi- ja sivulinkit metatiedostoissa ja `source/prior-source-research.md`:ssä. Uusia lähdehakuja tai latauksia ei tehty. Wikimedia-vuoroa ei tarvita, Overpassia ei käytetty. GP2:n lounaiskuva katsottu: vain muste-/vesiväri-/valoviite, ei muoto tai kivisävy.\n\n## Geometria\n\nMäen jalanjälki 420 × 200 m; korkeus 60 m. Kirkon suunnittelumitat 200 × 100 × 170 m, keskipiste 60 m jalanjäljen keskeltä pohjoiseen. Kirkon pohja on N=-40…160 m, E=-50…50 m. Kupolin korkeus karttamaan tasolta 230 m. Kellotorni samalla pohjois-eteläakselilla pohjoispäässä; korkeus kirkon lattiasta noin 172 m säilyttää lähteen 84/83-korkeussuhteen.\n\nSivukuvissa 3 px/m: maaviiva y900, tasanne y720, pääkupolin kärki y210, kellotornin kärki noin y204. Itä/länsi: mäki 1260 px, kirkko 600 px; etelä/pohjoinen: mäki 600 px, kirkko 300 px. Etelän portaat noin 90 px leveät. Mäen koko ja kirkon koko mitataan erikseen. Kirkon korkeutta mitattaessa 60 m mäkeä ei lasketa kirkon korkeuteen.\n\nYläkuvan originaalijalanjälki: bbox [652,294,884,730], keskipiste [767.5,511.5], pääakselin pikselimittaus 85.693° myötäpäivään idästä, yhdenmukainen tilauksen pyöristetyn 86°:n kanssa. Jalanjälkeä ei suurenneta. Mäen ja kirkon sijainti varmistetaan tätä vasten; julkisivuja ei saa näkyä yläkuvassa.\n\nKirkon julkisivun eteläsuunta on varmistettu Square Louise Michelin portaisiin ja puistoon; länsipuolen Saint-Pierre de Montmartre toimii toisena riippumattomana maamerkkinä. Suuntaa ei päätellä pelkän valokuvan yläreunasta. GP:n aiempaa väärää suuntatekstiä ei käytetä tähän kohteeseen.\n\nViistoissa sama 2.1 px/m, kulma 65° horisontista, SW/NE vastakulmat 180°. Mäen vaakaprojektion tavoite noin 921 × 834 px. Geometrisen pohjatason litistymä mitataan näkyvistä vastinepisteistä, tavoite sin65° = 0.9063; kuvauksen tekstistä ei päätellä toteutunutta kulmaa.\n\n## Ristiriidat ja rajaukset\n\n1. Oikean kirkon kupolin 83 m on aiemmin varmennettu kahdesta riippumattomasta institutionaalisesta lähteestä; campanilen 84 m basilikan omasta lähteestä. Sen sijaan 96 × 50 m:n todellista ulkomittaa ei saatu riippumattomasti varmennetuksi. Uusi tilaus nimeää sen oikeaksi kooksi, mutta se ei yksin muuta sitä lähdevarmennetuksi mittaukseksi. Käytetään tilauksen suhdetavoitteena ja säilytetään tämä rajaus raportissa. Pelimallin 170 m ja mäen 60 m ovat tilausmittoja, eivät todellisen Montmartren mittoja.\n2. Suunniteltu 200/170 poikkeaa tilauksen 96/83-suhteesta +1.716 %, ja 100/170 suhteesta 50/83 −2.353 %. Molemmat alittavat uuden 7 % rajan. Kirkon osien keskinäisiä muotoja ei venytetä eri näkymissä.\n3. 60 m korkea tasanne ja 100 m leveä kirkko 200 m leveällä mäellä jättävät sivulle enintään noin 50 m nousumatkan. Täysin loiva rinne joka kohdassa ei siten geometrisesti toteudu (keskimääräinen nousukulma noin 50° jo ilman aukion lisäleveyttä). Säilytetään tilatut päämitat ja pehmeä, maantasoon oheneva ulkoreuna; ei pystyseinää tai paksua levyä. Mahdollinen jyrkkyys kirjataan todellisesta tuotoksesta, mäkeä ei poisteta eikä mittatoleranssia piiloteta.\n4. Yksi laadullinen otto per seitsemän näkymää. 24k sisältää poikkeuksen: jos natiivikoko on väärä, kuva tehdään uudelleen ennen toimitusta, sitä ei rajata. Mahdollinen kokotekninen lisäkutsu kirjataan erikseen; tämä ei oikeuta automaattisia mitta-/muoto-QA-uusintoja. Nyt kutsuja on nolla.\n\n## Seitsemän kuvan suunnitelma\n\nJärjestys: `ylhaalta`, `viisto-lounas`, `viisto-koillinen`, `etela`, `pohjoinen`, `ita`, `lansi`. Ei `pohja-uusi.png`:tä. Kunkin prompti on valmiina `prompts/`-kansiossa; uusi aiempi näkymä annetaan seuraavien viitteeksi. Vanhan #2098:n virheellisiä rakennuskuvia ei käytetä uuden mäkigeometrian mallina.\n\nQA-suunnitelma: `qa/plan.json`. Erityistarkistukset ovat natiivikoko/RGB, alkuperäisten tavujen säilyminen, jalanjälki ja akseli, 90° yläkuva, viistokulmat, kirkon ja mäen erilliset mittasuhteet, yhteinen maaviiva, sama fyysinen kupolirummun alalista ja ylärenkaan rinnakkaismittaus, campanilen akseli/korkeus, itä/länsikuvan todellinen sivuprojektio, valkoinen kivi, suipot kupolit sekä mäen ohuet reunat ja etelän portaat. Peittyvää listaa ei keksitä mitatuksi.\n\nToimitus tehdään vasta tuotannon ja QA:n jälkeen omaan `_review-sarja-24/sacre-coeur-otto2/`-kansioon ja claude/postilaatikko-haaraan SHA256SUMS:n kanssa. Omistaja näkee arkin ennen Tripoa. Vastaanotto, omistajahyväksyntä, Tripo, runtime ja julkaisu säilyvät erillisinä tiloina. Shared R/statea tai aiemman kierroksen tuotantokuvia ei muuteta.\n\n\n## Alkuperäinen lähdetutkimus (#2098)\n\n# Sacré-Cœur #2098: lähde-ennakkotarkistus\n\nTILAUS-24 ja ajantasainen 24d luettu kokonaan 5.11.2026. Kuusi kohteen lähdetiedostoa täsmää SHA256SUMS-manifestiin (verification.json). #2115 sallii rinnakkaistyön; #2116:n suuntakorjaus luettu ennen ensimmäistä ottoa. #2120 sallii Wikimedia-API:n hitaasti ja tunnistautuen. Tämä kohde käytti varattua yksinomaista hakuvuoroa; kaksi peräkkäistä imageinfoa sisältävää hakua, viisi kuvalatausta, ei 429:ää. User-Agent Matkakirja-reference-check/1.0, ei henkilötietoja. Commonsin robots.txt luettu ensin. Vuoro vapautettu juurelle ennen tuotantoa; ei Overpassia.\n\n## Suunta: kaksi erillistä maamerkkiä\n\nCommonsin ilmakuvaa verrattiin Karttasepän pohjoisyläiseen pyyhitty/ohje-kuvaan. 1) Square Louise Michelin puistokolmio ja porrastettu akseli ovat pääsisäänkäynnin eteläpuolella; eteläjulkisivun Yelles2006-valokuva näyttää tämän yhteyden. 2) Saint-Pierre de Montmartren pitkä matala kirkko ja sen vierustie tunnistuvat basilikasta länteen sekä ilmassa että CampusFrancen2015-länsiprofiilissa. Lisäksi pohjoispään kellotorni ja sen takainen rue du Chevalier-de-la-Barre erottuvat. Ei päätelmää pelkästään ilmakuvan yläreunasta eikä varjojen oletetusta kellonajasta.\n\nSquare-lähde: https://www.paris.fr/lieux/square-louise-michel-1762 ; basilikan takasisäänkäynti35rueChevalier: https://www.sacre-coeur-montmartre.com/infos-et-visites/informations-pratiques/horaires-et-acces/ ; rakennuksen/aukion suojelu ja pohjoisgalleria: https://pop.culture.gouv.fr/notice/merimee/PA75180004 . Karttasepän #2116 vahvistaa nimenomaisesti eteläjulkisivun. Pitkä akseli86° myötäpäivään idästä; jalanjälki ratkaisee pelisijainnin.\n\n## Mitat ja epävarmuus\n\nKupoli83m: Ranskan kansallinen matkailutoimisto https://www.france.fr/fr/article/sacre-coeur/ ja hiippakunnan kulttuurijärjestö https://artculturefoi.paris/portfolio/basilique-du-sacre-coeur-de-montmartre/ ilmoittavat saman. Basilikan oma sivu https://www.sacre-coeur-montmartre.com/decouvrir/patrimoine-et-art-sacre/lentree-et-sa-facade/ ilmoittaa campanilen84m; tätä verrataan kuvassa83m-kupoliin, mutta84m-luku on yhden ensisijaisen lähteen tieto. Työmaalla toimiva valaisinasentaja vahvistaa kupolin83m: https://andrelm.fr/entretien-eclairage-basilique-du-sacre-coeur/ .\n\nTilaustaulukon96×50m ei saanut riippumatonta mitattua vahvistusta. Julkaisuissa esiintyy85×35m (mm. https://sites.ac-nancy-metz.fr/eco-solgne/IMG/pdf/La_basilique_du_sacre_coeur.pdf , koululaisaineisto, ei mittaustutkimus). Mahdollinen eri rajaus (koko kirkko/keskirunko/apsis) jää avoimeksi. Tässä ei väitetä96×50m:ä lähdevarmennetuksi todelliseksi ulkomitaksi: käytetään tilauksen suunnittelumittarina, rinnalla85×35m-vertailu. Korkeus83m varmennettu. Pelin420×200m-jalanjälkeä ei muuteta. Kuvallinen vertailu säilytetään; ei väärää tarkkuushyväksyntää.\n\n## Kuvalliset lähteet\n\nilmakuva.jpg: Learn From. Build More.,16.5.2011, CC BY-SA2.0. https://commons.wikimedia.org/wiki/File:Basilica_of_the_Sacred_Heart_of_Paris,_commonly_known_as_Sacr%C3%A9-C%C5%93ur_Basilica,_aerial_photograph.jpg ; https://creativecommons.org/licenses/by-sa/2.0/ . Alkuperäinen664×731, yläilmakuva, katon ja koko pohjan muotomittari; ei ortorektifioitu mittaus. Metadata ilmakuva-source.json.\n\nkokonainen-2006.jpg: Yelles,2006, CC BY-SA3.0. https://commons.wikimedia.org/wiki/File:Paris_75018_Basilique_du_Sacr%C3%A9-C%C5%93ur_south_facade_stairs_square_2006.jpg ; https://creativecommons.org/licenses/by-sa/3.0/ . Alkuperäinen1200×1792, koko eteläjulkisivu ja kupolit. Osa jalkalistasta portaan kaiteen takana. Tästä muuttamaton oikea.jpg toimitukseen.\n\nilmakuva-2015.jpg: Campus France,1.7.2015, CC0. https://commons.wikimedia.org/wiki/File:Montmartre_and_Sacr%C3%A9-C%C5%93ur,_Paris_1_July_2015.jpg ; http://creativecommons.org/publicdomain/zero/1.0/ . Commons1920×1440-johdannainen, koko länsiprofiili ja erillinen pohjoistornin korkeus näkyvät; ympäristö osin peittää alinta sokkelia.\n\njulkisivu.jpg: Taxiarchos228,10.10.2010, CC BY3.0. https://commons.wikimedia.org/wiki/File:Paris_-_Sacr%C3%A9-C%C5%93ur.jpg ; https://creativecommons.org/licenses/by/3.0/ . Commons1280px-johdannainen, eteläosan muototuki; lämmin iltavalo ei värimalli.\n\nkokonainen-2012.jpg: Freepenguin,10.11.2012, CC BY-SA3.0. https://commons.wikimedia.org/wiki/File:Basilique_du_Sacr%C3%A9-C%C5%93ur,_Paris_10_November_2012_005.jpg . Lähihakukuva leikkautuu: ei koko rakennuksen mittari eikä tuotannon viite. Kaikkien Commons-metatiedot tallennettu erikseen; kuvapikseleitä ei muokattu.\n\nPiirrostyylin ainoa tuki tämän kierroksen yhteensopivuudelle: paikallinen GrandPalais2 viisto-lounas.png, vain muste/vesiväri/valo, ei rakennuksen geometria. Kaikki tuotannon viitteet katsottu ennen imagegen-kutsua.\n\n\n## Toteutunut kierros\n\nMontparnasse24h toimitettiin ennen aloitusta: artifact da5a8a8f2614cbb78b012b67557bbab0e791d07b, raportti90dc7d10070f5f93f069b610c2b016ed24248428. Nyt7kuvaa on tuotettu. Ennakkotarkistuksen maininta0kutsusta kuvaa vain valmisteluhetkeä. Kahdeksasta työkalukutsusta yksi hylättiin ennen generointia, koska viitteitä oli6(enintään5). Kaikki7palautunutta kuvaa olivat heti RGB1536×1024; kokouusintoja tai QA-uusintoja ei tehty.\n"
+          },
+          {
+            "polku": "output/sarja24-sacre-coeur-2098-20261105/delivery/LAHTEET.md",
+            "sha256": "6be8b5516bc6490e0da574bd94b65c9c2861f7312fa94627f66f687dea7420de",
+            "tavut": 4851,
+            "teksti": "# Sacré-Cœur #2098: lähde-ennakkotarkistus\n\nTILAUS-24 ja ajantasainen 24d luettu kokonaan 5.11.2026. Kuusi kohteen lähdetiedostoa täsmää SHA256SUMS-manifestiin (verification.json). #2115 sallii rinnakkaistyön; #2116:n suuntakorjaus luettu ennen ensimmäistä ottoa. #2120 sallii Wikimedia-API:n hitaasti ja tunnistautuen. Tämä kohde käytti varattua yksinomaista hakuvuoroa; kaksi peräkkäistä imageinfoa sisältävää hakua, viisi kuvalatausta, ei 429:ää. User-Agent Matkakirja-reference-check/1.0, ei henkilötietoja. Commonsin robots.txt luettu ensin. Vuoro vapautettu juurelle ennen tuotantoa; ei Overpassia.\n\n## Suunta: kaksi erillistä maamerkkiä\n\nCommonsin ilmakuvaa verrattiin Karttasepän pohjoisyläiseen pyyhitty/ohje-kuvaan. 1) Square Louise Michelin puistokolmio ja porrastettu akseli ovat pääsisäänkäynnin eteläpuolella; eteläjulkisivun Yelles2006-valokuva näyttää tämän yhteyden. 2) Saint-Pierre de Montmartren pitkä matala kirkko ja sen vierustie tunnistuvat basilikasta länteen sekä ilmassa että CampusFrancen2015-länsiprofiilissa. Lisäksi pohjoispään kellotorni ja sen takainen rue du Chevalier-de-la-Barre erottuvat. Ei päätelmää pelkästään ilmakuvan yläreunasta eikä varjojen oletetusta kellonajasta.\n\nSquare-lähde: https://www.paris.fr/lieux/square-louise-michel-1762 ; basilikan takasisäänkäynti35rueChevalier: https://www.sacre-coeur-montmartre.com/infos-et-visites/informations-pratiques/horaires-et-acces/ ; rakennuksen/aukion suojelu ja pohjoisgalleria: https://pop.culture.gouv.fr/notice/merimee/PA75180004 . Karttasepän #2116 vahvistaa nimenomaisesti eteläjulkisivun. Pitkä akseli86° myötäpäivään idästä; jalanjälki ratkaisee pelisijainnin.\n\n## Mitat ja epävarmuus\n\nKupoli83m: Ranskan kansallinen matkailutoimisto https://www.france.fr/fr/article/sacre-coeur/ ja hiippakunnan kulttuurijärjestö https://artculturefoi.paris/portfolio/basilique-du-sacre-coeur-de-montmartre/ ilmoittavat saman. Basilikan oma sivu https://www.sacre-coeur-montmartre.com/decouvrir/patrimoine-et-art-sacre/lentree-et-sa-facade/ ilmoittaa campanilen84m; tätä verrataan kuvassa83m-kupoliin, mutta84m-luku on yhden ensisijaisen lähteen tieto. Työmaalla toimiva valaisinasentaja vahvistaa kupolin83m: https://andrelm.fr/entretien-eclairage-basilique-du-sacre-coeur/ .\n\nTilaustaulukon96×50m ei saanut riippumatonta mitattua vahvistusta. Julkaisuissa esiintyy85×35m (mm. https://sites.ac-nancy-metz.fr/eco-solgne/IMG/pdf/La_basilique_du_sacre_coeur.pdf , koululaisaineisto, ei mittaustutkimus). Mahdollinen eri rajaus (koko kirkko/keskirunko/apsis) jää avoimeksi. Tässä ei väitetä96×50m:ä lähdevarmennetuksi todelliseksi ulkomitaksi: käytetään tilauksen suunnittelumittarina, rinnalla85×35m-vertailu. Korkeus83m varmennettu. Pelin420×200m-jalanjälkeä ei muuteta. Kuvallinen vertailu säilytetään; ei väärää tarkkuushyväksyntää.\n\n## Kuvalliset lähteet\n\nilmakuva.jpg: Learn From. Build More.,16.5.2011, CC BY-SA2.0. https://commons.wikimedia.org/wiki/File:Basilica_of_the_Sacred_Heart_of_Paris,_commonly_known_as_Sacr%C3%A9-C%C5%93ur_Basilica,_aerial_photograph.jpg ; https://creativecommons.org/licenses/by-sa/2.0/ . Alkuperäinen664×731, yläilmakuva, katon ja koko pohjan muotomittari; ei ortorektifioitu mittaus. Metadata ilmakuva-source.json.\n\nkokonainen-2006.jpg: Yelles,2006, CC BY-SA3.0. https://commons.wikimedia.org/wiki/File:Paris_75018_Basilique_du_Sacr%C3%A9-C%C5%93ur_south_facade_stairs_square_2006.jpg ; https://creativecommons.org/licenses/by-sa/3.0/ . Alkuperäinen1200×1792, koko eteläjulkisivu ja kupolit. Osa jalkalistasta portaan kaiteen takana. Tästä muuttamaton oikea.jpg toimitukseen.\n\nilmakuva-2015.jpg: Campus France,1.7.2015, CC0. https://commons.wikimedia.org/wiki/File:Montmartre_and_Sacr%C3%A9-C%C5%93ur,_Paris_1_July_2015.jpg ; http://creativecommons.org/publicdomain/zero/1.0/ . Commons1920×1440-johdannainen, koko länsiprofiili ja erillinen pohjoistornin korkeus näkyvät; ympäristö osin peittää alinta sokkelia.\n\njulkisivu.jpg: Taxiarchos228,10.10.2010, CC BY3.0. https://commons.wikimedia.org/wiki/File:Paris_-_Sacr%C3%A9-C%C5%93ur.jpg ; https://creativecommons.org/licenses/by/3.0/ . Commons1280px-johdannainen, eteläosan muototuki; lämmin iltavalo ei värimalli.\n\nkokonainen-2012.jpg: Freepenguin,10.11.2012, CC BY-SA3.0. https://commons.wikimedia.org/wiki/File:Basilique_du_Sacr%C3%A9-C%C5%93ur,_Paris_10_November_2012_005.jpg . Lähihakukuva leikkautuu: ei koko rakennuksen mittari eikä tuotannon viite. Kaikkien Commons-metatiedot tallennettu erikseen; kuvapikseleitä ei muokattu.\n\nPiirrostyylin ainoa tuki tämän kierroksen yhteensopivuudelle: paikallinen GrandPalais2 viisto-lounas.png, vain muste/vesiväri/valo, ei rakennuksen geometria. Kaikki tuotannon viitteet katsottu ennen imagegen-kutsua.\n"
+          }
+        ],
+        "checkpoint": {
+          "polku": "output/sacre-coeur-24n-2132-20261105/checkpoint.json",
+          "sha256": "891aa373c2ae3995ec9619339617951019355f1c221eba7b7586c06ec3f5582a",
+          "tavut": 2438
+        },
+        "alkuperainen_tripo_glb": {
+          "polku": "output/sacre-coeur-24n-2132-20261105/raw/sacrecoeur24n-attempt01-raw.glb",
+          "sha256": "438c324d4ffcc934b20f4e2ba5f164b98d572c820ddb61a2c5674307cd86b290",
+          "tavut": 5123224
+        },
+        "valivaiheen_glb": [
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/sc-otto1/attempt01-diagnostic.glb",
+            "sha256": "70d10540ece86859ec0e473dfa0cf217a04a47c0d164279082de5b58ae98a34f",
+            "tavut": 5123124
+          },
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/sc-otto1/sacre-coeur-muokattu.glb",
+            "sha256": "15c625936bfbe189f773bf7fda502bd12ff1453bd05822e53318eb032c0428e6",
+            "tavut": 5041436
+          }
+        ],
+        "karttasepan_skriptit": [
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/sc-muokkaa.py",
+            "sha256": "7a505c252f1cda0f6f9bb30b1e0b8b2110b31efe886569c880e5d962caf4e933",
+            "tavut": 3924
+          },
+          {
+            "polku": "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/sc-asenna.py",
+            "sha256": "24cd5ede0bfd075fd14df7597c82f529568f65214d5ba54bf71dcf660ad158ea",
+            "tavut": 2228
+          }
+        ],
+        "lod_lahde": {
+          "polku": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/sacre-coeur.bytes",
+          "sha256": "15c625936bfbe189f773bf7fda502bd12ff1453bd05822e53318eb032c0428e6",
+          "tavut": 5041436
+        },
+        "lod_tulos": {
+          "polku": "output/pariisi-maamerkit-lod-20261106/sacre-coeur/sacre-coeur-lod.glb",
+          "sha256": "b2ce14291958b0c0cf61b03846267a8720fabaf83cd716117d55b99e3567017b",
+          "tavut": 3973656
+        },
+        "lod_ketju": {
+          "tekija": "Codex",
+          "tyokalut": "Paikallinen Blender bpy DECIMATE/COLLAPSE, Python/NumPy ja paikallinen C++ BVH-siirto; säilytetään lähteen tekstuurit, korjataan UV-saumat; ei uutta Tripo- eikä 2D-generointia tässä LOD-ajossa.",
+          "skriptit": [
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/continue_ordered.py",
+              "sha256": "d789fe1837050e767a15c46d4f375ab0e346da1af25c4e4d7951972b10e0cd12",
+              "tavut": 3629
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/shell.py",
+              "sha256": "86ff625b13f7b7b5635963ec0f34ae0dcf0132224b0576eff97e24fa19e303a0",
+              "tavut": 7002
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/mend_uv.py",
+              "sha256": "775b587f0bd296e44d55ca6e6da6b9038bb7ab0c999ac6cd7b119b027e9f851a",
+              "tavut": 3131
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer.py",
+              "sha256": "aa59f67d24ca5a5f73d6d55d55a6cdfb780b228fc3c05d1c0be4fdf5f807f661",
+              "tavut": 19427
+            },
+            {
+              "polku": "output/pariisi-maamerkit-lod-20261106/tools/transfer_bvh.cpp",
+              "sha256": "6016c621baa474a9a45865296491d4e7ce73f7ec484ff1db66e557c2b1838d1e",
+              "tavut": 5329
+            }
+          ],
+          "kolmiot_ennen": 44891,
+          "kolmiot_jalkeen": 9087
+        },
+        "kayttolisenssi": {
+          "lahdekuvat": "AI-tuotokset ja alla nimetyt alkuperäisviitteet käsiteltävä erikseen. LAHTEET säilyttää valokuvien nimet, tekijät ja lisenssit; CC-lähteiden attribuutiot ja mahdolliset share-alike-ehdot säilytettävä soveltuvin osin.",
+          "tripo_malli": "Tripo-palvelutilin soveltuvat ehdot; generointihetken tilin lisenssitasosta tai kyseisen tuotoksen kaupallisen käytön ehdoista ei tässä inventaariossa ole tilikohtaista ehtotodistetta. Krediittimäärä tai työn tekninen nimi ei todista lisenssitasoa. Ei CC-lisenssiväitettä.",
+          "lopullinen_pelijulkaisu": "Lähdekuvien käyttö ja mallin kokeeseen vastaanotto eivät muodosta lopullista pelijulkaisulupaa. Omistajan pelikuvahyväksyntä, vastaanotto, kohdelaitetesti ja julkaisupäätös erillisiä."
+        },
+        "todentaminen": {
+          "lahde_SHA_tasmaa": true,
+          "tulos_SHA_tasmaa": true,
+          "aineistorajaus": "Tässä lähdeinventaario dokumentoi paikallisen aineiston, ei uudelleentarkista Commonsin tai Tripo-palvelun nykyisiä verkkosivuja."
+        },
+        "lahdekuvien_metatiedostot": []
+      }
+    },
+    {
+      "slug": "invalides",
+      "malli": "Les Invalides",
+      "tiedosto": "invalides-lod.glb",
+      "sha256": "3f7a69be1a009080b6e9cb02896ba9d3c72e8af10818aba52370c585a44996ba",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/invalides.bytes",
+        "sha256": "cba4b97e9a42119bfe54bbae773144bfa4aea27ea552b898106352de63294052",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "invalides",
+        "nimi": "Les Invalides",
+        "tekija": "Codex / Matkakirja-projekti teki työvaiheiden kuvitukset, ohjasi Tripoa ja teki LOD-version. Karttasepän toimitetut pelimuokkaukset on eritelty tuotantoketjussa.",
+        "materiaali": [
+          {
+            "name": "tripo_mat_b59f2058-086d-412a-b761-7d731dd19fec",
+            "normalTexture": {
+              "index": 0
+            },
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 1
+              },
+              "metallicRoughnessTexture": {
+                "index": 2
+              }
+            }
+          }
+        ],
+        "upotetutLahdekuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/png",
+            "sha256": "c2926b5413b1a5403dd06233b415d4633671f08a9f6c2b428156cd309fbc9101",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 1,
+            "mimeType": "image/jpeg",
+            "sha256": "ffe4baad87dd48b8e210d38745c9754168439b883ad9be711ed72b5febfbf389",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 2,
+            "mimeType": "image/jpeg",
+            "sha256": "70955bad3d71a5b2cff8c1d86d4e6e51089bfa2775a59b859fd48f694c620b61",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          }
+        ],
+        "upotetutLodKuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/jpeg",
+            "sha256": "cfab062c187481e11b5804ab9feabde5e437d9283f6ff35db76ea8791178ebea",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 1,
+            "mimeType": "image/png",
+            "sha256": "7aff2f8b843e1367b18b9d68f5eeee104a281476788e37e7c134db0ba6771b8e",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "index": 2,
+            "mimeType": "image/png",
+            "sha256": "bc623acf1732d57c59acdea0660c17902f9c5af1db8db84c4c6e93260c527dc7",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          }
+        ],
+        "todennus": "Lähde-.bytes ja LOD-GLB luettu paikallisesti, SHA256 laskettu uudelleen; materiaalit ja upotettujen kuvien tavut luettu GLB:stä 6.11.2026. queue.json ja PAKETTI.json vastaavat.",
+        "lodTyokalut": "Blender shell.py + mend_uv.py + transfer.py; paikallinen geometria- ja tekstuurisiirto. Montparnasse: montparnasse.py säilyttää alkuperäisen JPEG:n tavut ja materiaalin.",
+        "yleinenOikeustila": "Projektin oma tuotantoketju ei itsessään ole lisenssi. Ei tässä väitettä mallin CC- tai PD-lisenssistä. Palveluehdot ja mahdollisten valokuvamuunnelmien velvoitteet tarkistettava erikseen.",
+        "evidence": [
+          "output/fable-mailbox-work-orders/intake-20261106-1343.json",
+          "output/sainte-chapelle-22c-2082-20261105/sources/codex-3d-toimitus.md",
+          "output/pariisi-maamerkit-lod-20261106/queue.json",
+          "output/pariisi-maamerkit-lod-20261106/PAKETTI.json",
+          "output/invalidit-24l-20261105/checkpoint.json",
+          "output/invalidit-24l-20261105/delivery/invalides-3d-v1/LAHTEET.md",
+          "output/invalides-24o-2133-20261105/state.json",
+          "output/sarja24-invalides-2093-20261105/delivery/LAHTEET.md",
+          "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/invalidit-lattia.py",
+          "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/asenna-invalidit.py"
+        ],
+        "tyokalut": "Tripo H3.1 Ultra; raaka otto 2, yhtenäinen mittakaava/pohjakeskitys. Karttasepän invalidit-lattia.py lisää 4 kärkeä ja 2 lattian kolmiota mallin omalla tasaisella tekstuurinäytteellä. Kuvat säilyvät tavuilleen.",
+        "jobId": "2293c6b6-55bb-4f8e-be66-c38019021f84",
+        "sourceCommit": "a8e271271a83b7268aee3c764c8189d7861b863b",
+        "deliveryCommit": "bea4809123b8420bdb22e70b3fcf0729fe2b8a58",
+        "rawSHA256": "e52c616dda6a18aa17a669b4c3f5424dab0da5e81a6f119f3755384d295ee24a",
+        "deliveredGLBSHA256": "55c1dbc6df0ea1b53964cb5c5ff6da83962f8de3e981e78538246d9c55702d16",
+        "lahdekuvat": [
+          {
+            "path": "output/invalides-24o-2133-20261105/delivery/viisto-lounas.png",
+            "sha256": "5b35c05bbb75e02cb2440d3cdd8b7a41ae5051970d995c28fc3e7270dc04128b"
+          },
+          {
+            "path": "output/invalides-24o-2133-20261105/delivery/viisto-koillinen.png",
+            "sha256": "3c56a2819d2490b271062331731b63340a73a94cfd74d71b374c9f0e2530f5ea"
+          }
+        ],
+        "kuvaketju": "Codex image_gen #2133 / 24o: kaksi viistokuvaa. Käyttö Tripo Front=lounas, Back=koillinen. Aiemman #2093 valokuvaviite: Eric Gaba/Sting, Invalides aerial view.jpg, elokuu 2002; Commonsin Alonso de Mendozan 15.8.2016 värikorjausversio, CC BY-SA 3.0. Ei väitettä valokuvan suorasta upottamisesta malliin.",
+        "valokuvaLahteet": [
+          {
+            "tekija": "Eric Gaba (Sting); värikorjaus Alonso de Mendoza",
+            "url": "https://commons.wikimedia.org/wiki/File:Invalides_aerial_view.jpg",
+            "lisenssi": "CC BY-SA 3.0"
+          }
+        ],
+        "avoimet": [
+          "Valokuvasta johdetun kuvituksen ja Tripo-tekstuurin mahdollinen ShareAlike-ketju ja attribuutio varmistettava ennen julkaisemista.",
+          "Tripo-retopo on vertailutoimitus; tämän lähde ei ole retopo."
+        ]
+      }
+    },
+    {
+      "slug": "pantheon",
+      "malli": "Panthéon",
+      "tiedosto": "pantheon-lod.glb",
+      "sha256": "948ac0b7ed7666a6aa80c583b77fee58841faf871d9ce86f679ae84b87ebee0c",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/pantheon.bytes",
+        "sha256": "8e51cca49dfadc5c94e00ee247eac1e28d58847f6ffa8bacffa4e11d8ee7c428",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "pantheon",
+        "nimi": "Panthéon",
+        "tekija": "Codex / Matkakirja-projekti teki työvaiheiden kuvitukset, ohjasi Tripoa ja teki LOD-version. Karttasepän toimitetut pelimuokkaukset on eritelty tuotantoketjussa.",
+        "materiaali": [
+          {
+            "name": "tripo_mat_982393f7-8659-45bb-b5a1-8b2f31a3698e",
+            "normalTexture": {
+              "index": 0
+            },
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 1
+              },
+              "metallicRoughnessTexture": {
+                "index": 2
+              }
+            }
+          }
+        ],
+        "upotetutLahdekuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/png",
+            "sha256": "f9fc32188fb03ae8741e825b359751dfc4410a55ddb49cbfa4a49250a4846764",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 1,
+            "mimeType": "image/jpeg",
+            "sha256": "028c47aaf2d4ca10a551fbc1b67c36a6446730555e4735820a14994341ed2fdd",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 2,
+            "mimeType": "image/jpeg",
+            "sha256": "d3574931ee49d92ea4ddfbcd1d41be96589877f8ec5c73d23da494273297f1a1",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          }
+        ],
+        "upotetutLodKuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/jpeg",
+            "sha256": "263557955ea6c135a40590235cea0cb3e9e6d75ae90601be2a1a1091732e2c77",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 1,
+            "mimeType": "image/png",
+            "sha256": "91f1144bfba61782e101c07a36e91fc7575b176cabb42386f0ec2fb84967f9b2",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "index": 2,
+            "mimeType": "image/png",
+            "sha256": "31be24b45cdbeee92ecffc790d1a920867009e3bc5baa1f20a31e4a493859060",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          }
+        ],
+        "todennus": "Lähde-.bytes ja LOD-GLB luettu paikallisesti, SHA256 laskettu uudelleen; materiaalit ja upotettujen kuvien tavut luettu GLB:stä 6.11.2026. queue.json ja PAKETTI.json vastaavat.",
+        "lodTyokalut": "Blender shell.py + mend_uv.py + transfer.py; paikallinen geometria- ja tekstuurisiirto. Montparnasse: montparnasse.py säilyttää alkuperäisen JPEG:n tavut ja materiaalin.",
+        "yleinenOikeustila": "Projektin oma tuotantoketju ei itsessään ole lisenssi. Ei tässä väitettä mallin CC- tai PD-lisenssistä. Palveluehdot ja mahdollisten valokuvamuunnelmien velvoitteet tarkistettava erikseen.",
+        "evidence": [
+          "output/fable-mailbox-work-orders/intake-20261106-1343.json",
+          "output/sainte-chapelle-22c-2082-20261105/sources/codex-3d-toimitus.md",
+          "output/pariisi-maamerkit-lod-20261106/queue.json",
+          "output/pariisi-maamerkit-lod-20261106/PAKETTI.json",
+          "output/pantheon-24i-2125-20261105/checkpoint.json",
+          "output/pantheon-24i-2125-20261105/delivery/pantheon-3d-v1/LAHTEET.md",
+          "output/sarja24-pantheon-2096-20261105/delivery/LAHTEET.md",
+          "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/asenna.py"
+        ],
+        "tyokalut": "Tripo H3.1 Ultra; raaka otto 1 ja paikallinen yhtenäinen mitoitus/pohjakeskitys. Karttasepän asenna.py kopioi GLB:n tavut .bytes-tiedostoksi ja erottaa normaalikartan mallin omasta PNG:stä.",
+        "jobId": "dc66c23e-448a-4f4c-a7e7-2889a96b2bdf",
+        "sourceCommit": "d24a07705ad231be177501bade0397fb4346f63f",
+        "deliveryCommit": "15e0453349fcd483de13c3908dc3543c13138e41",
+        "deliveredGLBSHA256": "8e51cca49dfadc5c94e00ee247eac1e28d58847f6ffa8bacffa4e11d8ee7c428",
+        "lahdekuvat": [
+          {
+            "file": "lansi.png",
+            "sha256": "7f4945b3d7435bbe18f9aa6313f4396b475e8048e4296883e8e96ed3ddd4b94d"
+          },
+          {
+            "file": "ita.png",
+            "sha256": "efdd05049882cb50a73357ff6c47ffe38826faae1986c15cc863924a7479af23"
+          },
+          {
+            "file": "etela.png",
+            "sha256": "640be3fd04b9bf38832a0590e817743a20d40cdc5383a8b295cf8f76e158993a"
+          },
+          {
+            "file": "pohjoinen.png",
+            "sha256": "f9b369b041eb2ff7e46d63e9dced0705eeec3c04b2cb9866e09cd2be953f2e18"
+          }
+        ],
+        "kuvaketju": "Codex image_gen #2096: neljä ortokuvaa. Front=länsi, Back=itä, Left=etelä, Right=pohjoinen. Valokuvia käytettiin kuvituksen muodon/materiaalin viitteinä; GLB-tekstuuri on Tripon tuottama.",
+        "valokuvaLahteet": [
+          {
+            "tekija": "Michal Osmenda",
+            "url": "https://commons.wikimedia.org/wiki/File:Panth%C3%A9on,_Paris_15_August_2011.jpg",
+            "lisenssi": "CC BY-SA 2.0"
+          },
+          {
+            "tekija": "David Monniaux",
+            "url": "https://commons.wikimedia.org/wiki/File:Aerial_photographs_of_Paris_P1190134_cropped.jpg",
+            "lisenssi": "CC BY-SA 3.0"
+          },
+          {
+            "tekija": "IGN",
+            "url": "https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018_-_Place_du_Panth%C3%A9on_01.jpg",
+            "lisenssi": "Licence Ouverte 1.0"
+          },
+          {
+            "tekija": "Immanuelle",
+            "url": "https://commons.wikimedia.org/wiki/File:Panth%C3%A9on_de_Paris_Exterior-1.jpg",
+            "lisenssi": "CC BY 4.0"
+          },
+          {
+            "tekija": "Mbzt",
+            "url": "https://commons.wikimedia.org/wiki/File:F6362_Paris_5e_Pantheon_facade_rwk.jpg",
+            "lisenssi": "CC BY 4.0"
+          }
+        ],
+        "avoimet": [
+          "Kuvituksen lähdemuistio ehdottaa CC BY-SA 4.0 -yhteensopivaa jakoa, jos kuvitus tulkitaan valokuvamuunnelmaksi; tämä ei yksin ratkaise Tripo-mallin lisenssiä."
+        ]
+      }
+    },
+    {
+      "slug": "sainte-chapelle",
+      "malli": "Sainte-Chapelle",
+      "tiedosto": "sainte-chapelle-lod.glb",
+      "sha256": "3f2188334df97c0da9ca80f3c898ab86108b82dcf12d7a95210f37e6ec2d33ca",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/sainte-chapelle.bytes",
+        "sha256": "d2c3be39d622b121028ce5e0dc153dd090115e5259cffd23745b85b0b647995a",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Matkakirja-projektin Tripo Max -tuotos ja paikallinen johdannainen. Käyttö palvelu- ja syötekohtaisten ehtojen mukaan. Erillinen kaupallinen julkaisuhyväksyntä avoin.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "sainte-chapelle",
+        "nimi": "Sainte-Chapelle",
+        "tekija": "Codex / Matkakirja-projekti teki työvaiheiden kuvitukset, ohjasi Tripoa ja teki LOD-version. Karttasepän toimitetut pelimuokkaukset on eritelty tuotantoketjussa.",
+        "materiaali": [
+          {
+            "doubleSided": true,
+            "name": "tripo_mat_0dd494a4-2b91-4ad4-b17e-68208130850c",
+            "normalTexture": {
+              "index": 0
+            },
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 1
+              },
+              "metallicRoughnessTexture": {
+                "index": 2
+              }
+            },
+            "alphaMode": "OPAQUE"
+          }
+        ],
+        "upotetutLahdekuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/jpeg",
+            "sha256": "2c15896c80593b1722ef61ec7f99832d14985f153686ee4e17137f64250d2797",
+            "dimensions": [
+              512,
+              512
+            ]
+          },
+          {
+            "index": 1,
+            "mimeType": "image/jpeg",
+            "sha256": "6f7c29946511c15f7168efd0b82e1527370927838d0cd5066c8fe05b4eeaeed0",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 2,
+            "mimeType": "image/png",
+            "sha256": "322102a88bc344622a5e5de31609bcd23fa3d033e516d251b617bbd7ff8720e4",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          }
+        ],
+        "upotetutLodKuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/jpeg",
+            "sha256": "cf31c96aafcdc84f5beed6f5836285a379fcf855874e28b138cd41490b146b3b",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "index": 1,
+            "mimeType": "image/png",
+            "sha256": "e37564759ff0301c2ce936254a5f14d068ee1ceca135a0788ba72261707b9281",
+            "dimensions": [
+              512,
+              512
+            ]
+          },
+          {
+            "index": 2,
+            "mimeType": "image/png",
+            "sha256": "44bcc79131326becc67b66cf943b5b3024dcc00a8621a39c1fbc0701663196c9",
+            "dimensions": [
+              512,
+              512
+            ]
+          }
+        ],
+        "todennus": "Lähde-.bytes ja LOD-GLB luettu paikallisesti, SHA256 laskettu uudelleen; materiaalit ja upotettujen kuvien tavut luettu GLB:stä 6.11.2026. queue.json ja PAKETTI.json vastaavat.",
+        "lodTyokalut": "Blender shell.py + mend_uv.py + transfer.py; paikallinen geometria- ja tekstuurisiirto. Montparnasse: montparnasse.py säilyttää alkuperäisen JPEG:n tavut ja materiaalin.",
+        "yleinenOikeustila": "Projektin oma tuotantoketju ei itsessään ole lisenssi. Ei tässä väitettä mallin CC- tai PD-lisenssistä. Palveluehdot ja mahdollisten valokuvamuunnelmien velvoitteet tarkistettava erikseen.",
+        "evidence": [
+          "output/fable-mailbox-work-orders/intake-20261106-1343.json",
+          "output/sainte-chapelle-22c-2082-20261105/sources/codex-3d-toimitus.md",
+          "output/pariisi-maamerkit-lod-20261106/queue.json",
+          "output/pariisi-maamerkit-lod-20261106/PAKETTI.json",
+          "output/sainte-chapelle-22c-2082-20261105/checkpoint.json",
+          "output/sainte-chapelle-22c-2082-20261105/delivery/sainte-chapelle-3d-v1/LAHTEET.md",
+          "output/sainte-chapelle-22a-2059-2063-20261104/delivery/LAHTEET.md",
+          "output/sainte-chapelle-22b-ita-20261104/delivery/LAHTEET.md"
+        ],
+        "tyokalut": "Codex; Tripo Studio H3.1 Multi-view, Ultra ja retopologia 28k otosta 2; paikallinen mitoitus, UV-, katto-/ikkuna-atlas- ja geometriakorjaus. Toimituksen kaikki upotetut kuvat samat kuin otto2-retopossa.",
+        "jobId": "62381391-b420-43bb-9e52-68d4c6fb62ca",
+        "sourceCommit": "7555488f5cfeafc24763993001c051ef0626b5ed",
+        "deliveryCommit": "0a96f9596d26696df94ca198e735c0c0384ea0f1",
+        "rawSHA256": "49d4870908e203c920f146b611179632f21a62ae50909b1c866e95bb77a7d595",
+        "retopoSHA256": "e5ad0fea2fd1abff06ea4d4b763c1b697f5cb85c2146fd76c522b7ac13286987",
+        "deliveredGLBSHA256": "d2c3be39d622b121028ce5e0dc153dd090115e5259cffd23745b85b0b647995a",
+        "lahdekuvat": [
+          {
+            "path": "output/sainte-chapelle-22c-2082-20261105/sources/_review-ita-22b/ita.png",
+            "sha256": "3afd06b801090cc2d6b3c6e2273eaf945874d1bf6e64c33829dd7e1e31320854"
+          },
+          {
+            "path": "output/sainte-chapelle-22c-2082-20261105/sources/_review-pohjakuvat/lansi.png",
+            "sha256": "ae450facef5e69edf720240109f30cb10c2deadf0127bf0997e865e9af5b6606"
+          },
+          {
+            "path": "output/sainte-chapelle-22c-2082-20261105/sources/_review-pohjakuvat/etela.png",
+            "sha256": "b8edb4bc171ad54d679ffd28ca4f3e18aaa93307449d9c7d4b5d826b59281c3c"
+          },
+          {
+            "path": "output/sainte-chapelle-22c-2082-20261105/sources/_review-pohjakuvat/pohjoinen.png",
+            "sha256": "ac063d9a2e19a603a7bfadcbd728ab50fb1eec6bcc36cb6453182c8ee3445090"
+          }
+        ],
+        "kuvaketju": "Codex image_gen 22a:n hyväksytyt länsi/etelä/pohjoinen ja 22b:n korjattu itä. 22a lähteinä tilaajan malli-sainte-chapelle.png, malli-sainte-chapelle-lahi.jpg, malli-G-koko-kaupunki.png, malli-G-kirkko.png ja paletti. LAHTEET kertoo ettei käytetty ulkopuolisia valokuvia, Commons-kuvia eikä Google-laattoja.",
+        "valokuvaLahteet": [],
+        "avoimet": [
+          "Mallikuvien välitön alkuperä ja kahden rajauksen yhteys on varmennettu. Projektin aiempien kuvitusten periytyvät lähde- ja kartta-aineiston ehdot säilyvät."
+        ],
+        "22a_mallikuvien_todennettu_alkuperä": [
+          {
+            "polku": "output/sainte-chapelle-22a-2059-2063-20261104/source/malli-sainte-chapelle.png",
+            "sha256": "63ab9e5c3efe7457803fd559ce1a0d6f2f1bf076e1c1062ae23fb6ef8e46885b",
+            "tekija": "Codex / Matkakirja, ImageGen, tilaus #1971",
+            "tavuilleen_sama_kuin": {
+              "polku": "output/pariisi-nahtavyydet-1955-1964-20261103/sainte-chapelle/delivery/nahtavyys-sainte-chapelle.png",
+              "sha256": "63ab9e5c3efe7457803fd559ce1a0d6f2f1bf076e1c1062ae23fb6ef8e46885b"
+            },
+            "toimitus": "0b8b46204fc4fc1c7a4b260bc10c7418353a54da"
+          },
+          {
+            "polku": "output/sainte-chapelle-22a-2059-2063-20261104/source/malli-sainte-chapelle-lahi.jpg",
+            "sha256": "f9a4f9f190b74d6419a84047cc350510ccf29837c08c3f1036681f8a41f5b6e7",
+            "johtaminen": "Edellisen kuvan rajaus (660,680,880,960), tausta RGB 225/222/215, nelinkertainen Lanczos-suurennos. JPEG:n tavut toistettiin alkuperäisillä kvantisointitauluilla ja alinäytteistyksellä."
+          },
+          {
+            "polku": "output/sainte-chapelle-22a-2059-2063-20261104/source/malli-G-koko-kaupunki.png",
+            "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+            "tekija": "Codex / Matkakirja, G-tyylinen Pariisin koko kaupungin karttakuvitus",
+            "tavuilleen_sama_kuin": {
+              "polku": "output/pariisi-koko-kaupunki-20261031/final/pariisi-koko-kaupunki-G-tyyli.png",
+              "sha256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde"
+            },
+            "toimitus": "d0191a334dd0b7d3598708d0ace02dc8fad7a78a",
+            "karttatietojen_attribuutio": "© OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+          },
+          {
+            "polku": "output/sainte-chapelle-22a-2059-2063-20261104/source/malli-G-kirkko.png",
+            "sha256": "643db4de9d86831f45313b4a8cb16cc984a51006ec25619b8b8463220699d3d1",
+            "johtaminen": "G-kaupunkikuvan rajaus (950,370,1210,580), kolminkertainen Lanczos-suurennos. RGB-pikselit varmennettu identtisiksi."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "montparnasse",
+      "malli": "Tour Montparnasse",
+      "tiedosto": "montparnasse-lod.glb",
+      "sha256": "92da88396bcc0ff5515450934e9fd27e3949dbc2ef40a51051e53b84fe8c8689",
+      "valiton_lahde": {
+        "tiedosto": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu-2/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/montparnasse.bytes",
+        "sha256": "38623b5d5cfb0f71e07ebd2dd32d05b5fca23156e1a05f91aae11329478a4457",
+        "merkitys": "Asennetusta esikatseluprojektista luettu binaarinen glTF-malli."
+      },
+      "lod_tekijä": "Codex / omistajan Matkakirja-projekti",
+      "lisenssiperuste": "Karttasepän projektigeometria, alkuperäinen JPEG-atlas ja dokumentoidut kuvalähteet. Erillistä avointa mallilisenssiä ei ole osoitettu.",
+      "tuotanto_ja_kuvalahtien_naytto": {
+        "slug": "montparnasse",
+        "nimi": "Tour Montparnasse",
+        "tekija": "Karttaseppä teki parametrisen rakennuksen ja JPEG-atlaksen; Codex teki ja tarkisti LOD-version.",
+        "materiaali": [
+          {
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0,
+              "roughnessFactor": 1
+            }
+          }
+        ],
+        "upotetutLahdekuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/jpeg",
+            "sha256": "52ab2e37c1b0dbdc7aed70fefc30ee54d8ca7a991e89a2aa98b24c38d5861f01",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          }
+        ],
+        "upotetutLodKuvat": [
+          {
+            "index": 0,
+            "mimeType": "image/jpeg",
+            "sha256": "52ab2e37c1b0dbdc7aed70fefc30ee54d8ca7a991e89a2aa98b24c38d5861f01",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          }
+        ],
+        "todennus": "Lähde-.bytes ja LOD-GLB luettu paikallisesti, SHA256 laskettu uudelleen; materiaalit ja upotettujen kuvien tavut luettu GLB:stä 6.11.2026. queue.json ja PAKETTI.json vastaavat.",
+        "lodTyokalut": "Blender shell.py + mend_uv.py + transfer.py; paikallinen geometria- ja tekstuurisiirto. Montparnasse: montparnasse.py säilyttää alkuperäisen JPEG:n tavut ja materiaalin.",
+        "yleinenOikeustila": "Projektin oma tuotantoketju ei itsessään ole lisenssi. Ei tässä väitettä mallin CC- tai PD-lisenssistä. Palveluehdot ja mahdollisten valokuvamuunnelmien velvoitteet tarkistettava erikseen.",
+        "evidence": [
+          "output/fable-mailbox-work-orders/intake-20261106-1343.json",
+          "output/sainte-chapelle-22c-2082-20261105/sources/codex-3d-toimitus.md",
+          "output/pariisi-maamerkit-lod-20261106/queue.json",
+          "output/pariisi-maamerkit-lod-20261106/PAKETTI.json",
+          "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/mp-torni.py",
+          "/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sarja24-asennus/mp-asenna.py",
+          "output/pariisi-maamerkit-lod-20261106/tools/montparnasse.py",
+          "output/pariisi-maamerkit-lod-20261106/montparnasse/montparnasse-build.json",
+          "output/sarja24h-montparnasse-2124-20261105/delivery/LAHTEET.md",
+          "output/sarja24h-montparnasse-2124-20261105/completion-checkpoint.json",
+          "/Users/Shared/Claude/Matkakirja-karttaseppa/docs/raportit/viesti-karttaseppa-luovutus-20261106-0709.md"
+        ],
+        "tyokalut": "Karttaseppä mp-torni.py (Python/NumPy/SciPy/Pillow), mp-asenna.py. Parametrinen kaareva 177 × 111 × 600 peliyksikön torni ja katto; ei Tripoa tässä lähtömallissa. LOD montparnasse.py vähentää kehän pisteitä alkuperäisiä attribuutteja ja JPEG-tavuja säilyttäen.",
+        "jobId": null,
+        "sourceCommit": null,
+        "rakennusCommit": "e263b4b73 (ensimmäinen parametrinen rakennus, raportin mukaan); 5a021aafc katon korjaus. Nykyisen .bytes:n täyttä täsmäcommitia ei tässä varmennettu.",
+        "lahdekuvat": [
+          {
+            "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/_review-sarja-24/montparnasse-otto2/etela.png",
+            "sha256": "6247df0838163d5ab718e975a515cbba4d1834adcc4941c1f8df4693c0672beb"
+          },
+          {
+            "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/_review-sarja-24/montparnasse-otto2/pohjoinen.png",
+            "sha256": "bb0e2a594067619fc107b0ff854d65b13d08a689002295c0e5611870f42c84e8"
+          },
+          {
+            "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/_review-sarja-24/montparnasse-otto2/lansi.png",
+            "sha256": "2332dcd9a53a24c93a9b1a35276009b18aeb0bcfb3ecd15d7d6d1e0d5258e297"
+          },
+          {
+            "path": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-sarja-20261105/_review-sarja-24/montparnasse-otto2/ylhaalta.png",
+            "sha256": "522a76714573118bd5a920c8c0405aeb91a9f46b2080ea7b7e028104adb2255b"
+          }
+        ],
+        "kuvaketju": "Codexin #2124 / 24h otto2, toimituscommit da5a8a8f2614cbb78b012b67557bbab0e791d07b. Nykyisen mp-torni.py:n julkisivu lasketaan parametrisista väreistä, kiillosta ja pystylinjoista; etelä/pohjoinen/länsi-kuvista käytetään rajauksen kokoa. Värien viite oikea.jpg (Steven Strehl). Katon kuvasisältö ylhaalta.png:stä suoristettuna, reunaa täyttäen ja pehmentäen. 1024px atlas pakataan JPEG quality92/subsampling0. Tämä JPEG, SHA52ab..., on lähtö-.bytes:n alkuperäinen upotettu atlas, ei alkuperäinen kameravalokuva. Hylättyjen Tripo 24m ottojen geometriaa ei käytetä.",
+        "valokuvaLahteet": [
+          {
+            "tekija": "Steven Strehl",
+            "url": "https://commons.wikimedia.org/wiki/File:Tour_montparnasse_view_arc.jpg",
+            "lisenssi": "CC BY-SA 3.0"
+          },
+          {
+            "tekija": "IGN",
+            "url": "https://commons.wikimedia.org/wiki/File:Paris_-_Orthophotographie_-_2018_-_Gare_de_Paris-Montparnasse_01.jpg",
+            "lisenssi": "Licence Ouverte 1.0"
+          },
+          {
+            "tekija": "Guilhem Vellut",
+            "url": "https://commons.wikimedia.org/wiki/File:Tour_Montparnasse_@_Paris_(26830992655).jpg",
+            "lisenssi": "CC BY 2.0"
+          },
+          {
+            "tekija": "Guilhem Vellut",
+            "url": "https://commons.wikimedia.org/wiki/File:Tour_Montparnasse_@_Paris_(23379715554).jpg",
+            "lisenssi": "CC BY 2.0"
+          },
+          {
+            "tekija": "Guilhem Vellut",
+            "url": "https://commons.wikimedia.org/wiki/File:Tour_Montparnasse_@_Paris_(23379718584).jpg",
+            "lisenssi": "CC BY 2.0"
+          },
+          {
+            "tekija": "FiP",
+            "url": "https://commons.wikimedia.org/wiki/File:Montparnasse.jpg",
+            "lisenssi": "CC BY-SA 3.0"
+          }
+        ],
+        "avoimet": [
+          "Nykyskriptin ja asennetun JPEG:n tuotantohetken täysi commit-kytkentä puuttuu; generator, topologia ja kuvan SHA osoittavat parametriseen ketjuun, mutta skriptiä ei ajettu mallin uudelleenluomiseksi tässä dokumentointityössä.",
+          "Rakennuskohteen oikeuskysymys kirjattu Karttasepän raportissa Raamattu 11.8:n poikkeukseksi, mahdollinen poistotarve ennen App Storea; hyväksyntä ei ratkaise oikeutta.",
+          "Kattokuvan valokuvareferenssien mahdolliset attribuutio-/ShareAlike-vaatimukset varmistettava."
+        ]
+      }
+    }
+  ]
+}
