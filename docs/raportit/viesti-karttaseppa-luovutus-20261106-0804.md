@@ -21,7 +21,7 @@ NS ja KK kysyivät. Kiekko = `NotreDameKoe/pohja.png`: muoto täsmää alfaan, l
 ## SEURAAVA YHTEINEN AJO
 Y:n kärki a6a4e806a (+ NUI 245373730, Montmartren taulukko NS:n kaavalla; merge-tree puhdas, ei käännetty). Pohjaksi `sk-pariisi-yhteinen-2.txt`, karsi VS:n jo katsotut.
 - **Mäen laen merkit** sc-80:ssä ja sc-45:ssä (ehto tasaiselle; 127346f24 ei todista niitä).
-- **NS 08.03:** Madeleine, Palais Bourbon ja Saint-Sulpice viistosta talot päällä: tässä ajossa ne kuvattiin ennen `talot 1`:tä.
+- **NS 08.03:** Madeleine, Palais Bourbon ja Saint-Sulpice viistosta talot päällä: tässä ajossa ne kuvattiin ennen `talot 1`:tä. NUI 08.0x sama: Madeleine ja Palais Bourbon `karttatasa 1`:n jälkeen, jotta nimet nähdään tasaisella kartalla; ei omaa ajoa.
 - Mahdollinen tasainen oletuksena ja ND:n rajaus, jos KK sanoo.
 - Yli 5 kuvasta perustelu ajopyyntöön. Älä yhdistä Y:hen ajon aikana: JU ottaa kärjen ajon alkaessa.
 
