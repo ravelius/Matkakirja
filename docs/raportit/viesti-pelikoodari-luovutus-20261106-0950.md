@@ -16,6 +16,9 @@ Lukulista: periaatteet ja yhteiset kohdat luettu; luvusta 2 kohdat 2.177 ja 2.20
 4. **LAV:n lista:** kun lista on valmis, kartta ja rajat uudelleen (-0004 kohta 2.1). Tukko raossa muuttaa karttaa samoin kuin seinä. Koko tason tarkastelu odottaa LAV:n vientiä. PK vahvistaa viittaukset ennen vientiä.
 5. **Raportin heikot kohdat:** yksi rako mitattu per tasku, kaikkien rakojen luettelointi ei onnistunut (seinän vierusta on yhtä kapeaa kuin rako). 127 m²:n käytävän 0,75 m:n portti noin (-92,9; 335) on katsomatta kuvasta. Kolmessa kohdassa ristiriita LAV:n kuvien kanssa, LAV ottaa uudet.
 
+6. **Unity b8 (NS, JU 09.47):** junarunko on b8:ssa (`julkaisija/runko-219-muisti` `addae63f2`). Yhdistä runko protoon, kun jatkat työtä; b7-haara kääntyy b7:llä siihen asti. Älä vertaa b7- ja b8-kuvia ilman merkintää. Tätä ei ole vielä tehty.
+7. **LAV 09.5x:** kuvat-n tukee listaa: (-107,6) seinä 0,43 m linjan takana, (-100,2) avoin, (-163,5) ja (-113,1) sama pääte. Lista ei ole vielä lopullinen (kuvat-o, -p ja kolme kameraa tulossa). Karttaa ei ajeta, ennen kuin LAV kertoo.
+
 ## 3. Työkalut
 `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/lisaykset-20261106/`: `arkki2-1.png`, `arkki2-2.png`, `arkki2.py`, `nakyvyys.py` (säde linjasta: kuljettava vai seinä, etäisyydet), `portit2.py` (pullonkaula pääalueeseen, huom. nauha ylittää seinät, käytä vain portin paikkaan), `leivo-lehti.py`. numpy ja scipy vain `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python`:ssa.
 
