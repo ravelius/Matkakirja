@@ -556,3 +556,7 @@ Omistaja 6.11.2026 klo 16.53 (KK): kortti "Kelpaako Codexin korjattu Notre-Dame 
 ## PALIKOIDEN IPAD-MITTAUS ODOTTAA (omistaja 17.05) (6.11.2026 klo 17.06)
 
 Omistaja 6.11.2026 klo 17.05 (KK): kortti "Rakennuspalikoiden iPad-mittaus pysähtyi muistivahdin varmuusrajaan, joten korvaamisen hinta jäi mittaamatta. Miten jatketaan?" = "Mittaus odottaa (Suositus)". Nykyiset talot ja vahti pysyvät. Mittaus uusitaan, kun Pariisi on valmis ja muistia on kevennetty; Macin kuvat jatkuvat. Hylätyt: yksi ajo rajan yli, kevennys nyt. Ei uusia palikka-ajoja iPadilla. Tieto: 4 080 Mt on 80 % noin 5 100 Mt:n kaatorajasta (Raamattu 9.4), vara 44-66 Mt koskee varmuusrajaa, loppumittauksessa raja voi ylittyä ilman palikoitakin.
+
+## OFF PARIS SEINE LÄHTEE (omistaja 17.08) (6.11.2026 klo 17.08)
+
+Omistaja 6.11.2026 klo 17.08 (KK): kortti "Lähteekö Seinen kelluva hotelli Off Paris Seine kartalta muiden litteiden muotojen mukana?" = "Lähtee (Suositus)". Tarkentaa päätöstä 16.46 (SEINEN LITTEÄT MUODOT POIS); KS:llä (6a037d9bc, ajo 24).
