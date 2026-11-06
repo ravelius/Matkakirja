@@ -2,6 +2,9 @@
 
 Korvaa -0816:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Luo ensin cron "4 9 * * *" uudelleen (Raamattu 7.41; proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py): edellisen session ajastus kuoli sen mukana.
 
+## OMISTAJAN PÄÄTÖS klo 08.40 (KK:n välittämä)
+"Otetaanko Notre-Damen rantakoe käyttöön?" → "Otetaan käyttöön". Talot rantaversiosta palat-v4-nd-ranta seuraavaan yhteiseen ajoon; PT jakaa loput. KS:lle kerrottu 08.4x. Tästä eteenpäin rantaversio on perusta: mahdollinen palat-v5 tehdään korvaus.json-argumentilla (selvitys-yhteinen/nd-ranta/korvaus.json). Kohdan "palat-v4" sana oletus ja "koe" on tältä osin vanhentunut. Rannat tarkistetaan silti ajon 4 kuvista.
+
 ## SEURAAVA TYÖ
 Odota KS:n kansiota lokit/karttaseppa-yhteinen-4-* (sk-pariisi-yhteinen-4, kärki 0b4d74011, JU:lla, ei vielä alkanut 08.38). KS antaa kansion katsottuaan kuvat. Ei omaa ajoa, ei junaan, ei iPadia. Kun se tulee:
 1. sc-80: läikkä täysikoossa x 1485–1685, y 1840–1955, vertaa samaan kohtaan ajossa 127346f24. Read pienentää yli 2000 px:n kuvat: rajaa ensin. Tarkista myös, näkyykö seinä oikealla värillä ja näkyykö rinteiden lisäyksestä sivuvaikutuksia.
