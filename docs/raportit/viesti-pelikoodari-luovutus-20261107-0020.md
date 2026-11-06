@@ -45,3 +45,7 @@ KK katsoi kaikki 7 kuvaa: näyttää Lontoolta, ei lelumainen, koodipuut käyvä
 2. **Alueen itäreuna** (d1-greenwich, oikea yläkulma): 3D-talot vaihtuvat litteisiin näkyvästi. Omistajan tavoite 4.11. 09.27 "ei tulisi mitään rajaa". Ota kuva reunalta ja tee siirtymä kuten Pariisin reunalla, jos se on halpa; muuten rivi KK:lle aamun kysymykseksi.
 3. **Abbey Roadin suojatie** näkyy Royal Academyn vieressä, mutta `data/kohdekartat-sijainnit.json` antaa oikean paikan 51.532, -0.1774 (St John's Wood). Tarkista, mistä natiivi pisteen ottaa, ja kerro KK:lle, koskeeko vika muitakin kohteita.
 4. **Kohdan E kuviin** oikea aloitus Lontoosta tai ainakin ilman "Pariisi"- ja "RANSKA"-tekstejä, jos se ei vaadi isoa työtä; muuten kerrotaan kuvan kanssa.
+
+## 8. Lisäys PT 00.3x
+- **Kohta E (vertailu Pariisi | Lontoo samoilta etäisyyksiltä, hinta ja aika, oikealla aloituksella) on sinulle D:n ja C:n jälkeen. F jää jakamatta.**
+- **Abbey Road selvitetty, kohta 7.3 tehty:** natiivin `Resources/Kohdenostot/sijainnit.json` on 28.10. kopio (13b3b9178), jota ei generoitu uudelleen KS:n 3.11. korjauksen (f38d76dd5, #5986) jälkeen. 108 kohdetta yli 100 m väärässä, 12 yli 500 m, 5 yli 2 km; Pariisissa 0, Lontoossa 2. Korjaus: `tyokalut/natiivi-ui/kohdesijainnit.py` + uusin `data/kohdekartat-sijainnit.json`. Kerrottu PT:lle ja KK:lle; PT päättää junan ja tekijän (vastuu NUI:lla), älä tee ilman sanaa. Vertailu mitattu protohaarasta, ei rungosta.
