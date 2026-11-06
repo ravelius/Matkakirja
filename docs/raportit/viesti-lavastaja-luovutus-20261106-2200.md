@@ -20,3 +20,8 @@ maailma_talteen.py (koko maailma npz, osasarja-v8.bin), kamerat5.py (kameraehdok
 
 ## Opetukset
 Kuiva-ajo mitattuna ensin myös jälkivaiheille; yhden palan aika ennen koko ajoa. Näkyvyys säteellä koko maailmaa vasten, ei vain taustaa. Jätetty päällekkäisyys tuottaa z-taistelun leivonnan jälkeen.
+
+## PT:n sana levyt7 (6.11. 22.0x, sanatarkasti) — TEE TÄMÄ ENSIN
+PT (katsottu arkki-1 ja rajaus-B-koko2): levyt6 on selvä parannus, harmaa saha poissa, A ja C ehjät. EI leivontaa vielä: B:n reunakivi on rikki näkyvästi, ja leivonta jouduttaisiin tekemään uudelleen. SANA levyt7: vain B:n reunakivi ja yläpinta sekä jäännös 3; syy mitattuna ensin, ei uutta laajaa puhdistusta. 325 T-reunaa vain, jos mittaus yhdistää ne näihin. Kuvat samalla rajauksella JU:n vuorolla, parit minulle; ei vientiä, ei karttaa. Jos syytä ei saa kiinni yhdellä kierroksella, rivi minulle: päätän leivonnan silloin.
+
+Aloituspisteet: B x -99..-80, z 422..438: A/mittaa8.py (pinnat listoittain), kamera B-koko2 (-83,8 4 419,7 -30 15 80), rajaus parit6.py:n RJ. Uudessa listassa (-92; 425), (-88; 431) vain lattia 0,0; levyt6:ssa mitattava, mitkä kolmiot (materiaali, y, ala < 0,5 m2 vai ehto alempana) jäivät jaanteet6:n ulkopuolelle, myös kivireunuksen sivut. Jäännös 3: kamera (245,3 2,5 -111,7 -90 15 80); pisteviivan paikka lattialle kuvasta, sitten kolmiot ja kaikki pinnat koko maailmasta (maailma_talteen.py + säde); maailma.npz oli scratchpadissa, aja uudelleen tarvittaessa. Tee levyt7 levyt6:n päälle omaan kansioon, aja-levyt6.zsh mallina.
