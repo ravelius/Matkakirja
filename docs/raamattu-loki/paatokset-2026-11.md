@@ -592,3 +592,7 @@ Omistaja 6.11.2026 klo 17.36 (KK): kortti taivaasta = "Teetetään (Suositus)": 
 ## RIEMUKAARI KOKEENA, NOTRE-DAME EI VIELÄ, PONT D'IÉNA KAISTANA (omistaja 18.09) (6.11.2026 klo 18.09)
 
 Omistaja 6.11.2026 klo 18.09 (KK, kortti): Riemukaari #2172 = "Kelpaa (Suositus)": nykyisen tilalle kokeena, ei junaan. Notre-Dame #2171 = "Ei vielä (Suositus)": nykyinen pysyy, viat Codexille (KS). Pont d'Iéna = "Vaalea kaista (Suositus)": kokeillaan ajosillan tapaista kaistaa, kuva KK:lle. Tarkentaa päätöstä 17.24 Iénan osalta.
+
+## TILINVAIHTO ALKAA (omistaja 18.23) (6.11.2026 klo 18.28)
+
+Omistaja 6.11.2026 klo 18.23 (KK): "Paras olisi noiden kahden väliltä. Tehdään tilisiirto jo nyt tämän muutoksen jälken". KK:n tulkinta: muutos = taivaan väliversion kuvaluonnos, pelikoe uudelle tilille. Tilinvaihto vvi@vvi.fi alkoi heti, ei 90 %:ssa; viikko 88 % 18.26. Siirtoprompti viesti-fable-siirtoprompti-20261106.md, luovutus -1830.
