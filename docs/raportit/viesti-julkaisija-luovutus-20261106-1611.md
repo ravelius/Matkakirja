@@ -7,8 +7,11 @@ Syy: konteksti 26 %, pehmeä raja, luonteva tauko.
 ## ALOITA TÄSTÄ
 1. Tarkista `ps`, lukot, jonolokin loppu. Levy 53 Gi.
 2. AJOSSA: L2 PK sk-w 8dfc13aaf x2 (ipad, iphone-vaaka), PK ajaa itse (esikatselu 16.09). Kun PK ilmoittaa LUKKO VAPAA, kirjaa jonolokiin kesto, kuvat ja kansio. L1 ja iPad vapaat, jono muuten tyhjä.
-3. ODOTTAA NS:N PÄÄTÖSTÄ (local_c7344e20-fba8-433d-ba8e-184a325037ef): iPad 4:n uusinta, osa 1 vai koko. Ks. VIRHEET. Skripti T/ns-tarina-ipad4-ajo.zsh on korjattu kuittausodotuksella, ei vielä ajettu. Ennen uusintaa: jos NS haluaa vain osan 1, poista osa 2; siirrä vanha kansio lokit/natiiviseppa-tarina-ipad4-2bfb126b0 NS:n sanalla tai vaihda kansion nimi; käännös on valmis, joten aja suoraan `IPAD_ODOTA=3600 zsh /Users/Shared/Claude/wt/julkaisija-pariisi-219/tyokalut/ipad-lukko.sh kaari julkaisija -- zsh T/ns-tarina-ipad4-ajo.zsh`. Jonolokiin rivi; lopuksi runko d092f48cc palaa trapilla. Monitori: T/ns-tarina-ipad4.log.
-4. iPad 3b: EI AJETA ilman PT:n sanaa (NS).
+3. NS:N PÄÄTÖS 16.1x (local_c7344e20-fba8-433d-ba8e-184a325037ef), EI ALOITETTU, skriptit kirjoittamatta. Vain osa 1, osaa 2 ei ajeta uudelleen.
+   - iPad 4b: ohje V/ajopyynto-ipad-4b.md (V = P/_tyo/natiiviseppa/palikkakoe/valmis-jalki2, varmista; LUE KOKO), aikaisintaan 16.18, kansio lokit/natiiviseppa-tarina-ipad4b-2bfb126b0. Jäljet 4/4, vedot uusilla nimillä, tyhjä indeksi jää paikalleen, 3 kuvasarjaa noudetaan kansioon sarjat/. Käännös on valmis. Pohja T/ns-tarina-ipad4-ajo.zsh (k() odottaa kuittausta, ei vielä ajettu; vaihda kaikki tunnisteet, nimet ja osat; poista 3b:n noudot) ja T/ns-tarina-ipad4.zsh. Ajo `IPAD_ODOTA=3600 zsh /Users/Shared/Claude/wt/julkaisija-pariisi-219/tyokalut/ipad-lukko.sh kaari julkaisija -- zsh <ajo>`. Keskeytysehdot: testaa myös, että jälki alkaa (rivi "palikat: jalki <nimi> alkaa"), muuten seis heti.
+   - iPad 3c: ohje P/ajopyynto-ipad-3c.md (polku NS:n viestistä, varmista; LUE KOKO), vähintään 10 min 4b:n jälkeen, tallessa oleva käännös lokit/julkaisija-laite-218-190448df6, kansio lokit/natiiviseppa-palikka-ipad3c-190448df6. Ennen käynnistystä indeksi-r4-1200/indeksi.txt laitteelle; lokissa pitää näkyä "talot: 16 palaa kansiossa". VIKA keskeyttää, EI uusintaa: ylitys on tulos, tulos NS:lle. NS: "1200 m:n ajo PT:n sanalla": varmista PT:ltä, että sana on annettu, ennen 3c:tä (lupaa ei oteta välitettynä).
+   - Lopuksi runko d092f48cc takaisin (trap). Monitori heti alkuun, jonolokiin rivit.
+4. iPad 3b: EI AJETA (korvautuu 3c:llä NS:n mukaan, varmista ohjeesta).
 5. valoseppa-vahti pid 90769 saa pyöriä taukolipulla. Monitorit eivät selviä nollauksesta.
 
 ## TILA
