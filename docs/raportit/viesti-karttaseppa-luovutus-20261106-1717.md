@@ -8,7 +8,7 @@ Syy: konteksti 25 %:n pehmeällä rajalla, luonteva tauko, kun ajo 25 odottaa vu
 
 ## AJON 24 TULOS (AJETTU 17.06, JU: 12/12 kuvaa, 0 virhettä)
 Lähetetty KK:lle ja PT:lle 17.1x, kuvat `_tyo/karttaseppa/parit-yhteinen-24/kk/`. KK:n viesti oli jonossa; vastausta ei vielä ole.
-- **Isot poissa:** uimala, Annette K, Off Paris Seine, way/787079304. Off Paris Seinen KK-kysymys on yhä auki; jos se jää, lisää poikkeus keskipisteen mukaan ja nosta pääte.
+- **Isot poissa:** uimala, Annette K, Off Paris Seine, way/787079304. **OMISTAJAN PÄÄTÖS 17.08 (KK:n viesti kokonaan):** "Lähteekö Seinen kelluva hotelli Off Paris Seine kartalta muiden litteiden muotojen mukana?" = "Lähtee (Suositus)". Ei poikkeusta. Ajo 24 ennallaan.
 - **Kaksi jäi korkeusehdon takia, korjattu ajamatta:** asuntolaiva way/443008334 (517 m², h=4, Quai d'Austerlitz, 48.84346,2.36681), building=boat way/400842891 (926 ja 889 m², h=6, Port de la Bourdonnais, 48.86039,2.2935). Y 8b6e10803: VeneMaxKorkeus 6, pääte -vene2, testit ElavaKartta + TaloAlue 38/38. Pienet h=3 (41 m²) ja h=4 (11 m²) 48.8606,2.2939 lähtevät mukana, ilmakuvasta katsomatta. h=40 (48.83891,2.37506) jää, tunnistamatta. Luvut: `laikka-vesi-20261106/poistuvat.txt` (vain 48/63 palaa).
 - **Haalea raita, SYY AUKI:** omistajalle luvattu selvitys on kesken. Kirjattu `laikka-vesi-20261106/syy.md`.
   - Raita on renkaan kohdalla 48.85360,2.35589 (raita-yla, kuvan keskipiste 1376,1032; noin 47 × 25 px).
@@ -24,7 +24,8 @@ Katso koko kuvat ensin.
 3. Rivi PT:lle ja KK:lle, päivitä syy.md.
 
 ## ODOTTAA
-- **KK:** Off Paris Seine; ajon 24 parit; havainto Bercyn alakulman sillasta (ilmeisesti Simone-de-Beauvoir, nimi päätelty) ja Austerlitzin ratasillasta, jotka näkyvät ilmakuvassa mutta eivät rajatussa pelikuvassa. Kysyin, tutkinko; älä tutki ilman sanaa.
+- **KK 17.07:** e24:n koko maailman uudelleenpiirto ei kuulu päätökseen 16.46; paikallinen tapa tarjotaan PT:lle erikseen (tarjottu 17.2x, odottaa PT:n sanaa).
+- **KK:** ajon 24 parit; havainto Bercyn alakulman sillasta (ilmeisesti Simone-de-Beauvoir, nimi päätelty) ja Austerlitzin ratasillasta, jotka näkyvät ilmakuvassa mutta eivät rajatussa pelikuvassa. Kysyin, tutkinko; älä tutki ilman sanaa.
 - **Codex, korjatut mallit:** ennallaan -1657:stä. Omistajan viat on viety kuittauksilla ac1ce57a0 ja 542155d12 (PT); seuraava versio tuontiporttiin, pari KK:lle.
 - **PT:** koti-haaran tiedostot, ajo 25:n vuoro.
 - **NUI:** kyltti-rivien sijainti lähetetty 17.1x (rivit 3316, 3318, 4374, 4376). Hoidettu.
