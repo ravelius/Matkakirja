@@ -20,6 +20,18 @@ Friisi 7 seinään -rivi on siis pois listalta.
 3. -0939:n kohdat 5-6: friisien saumat, paljaan taustan näkyvyys (54,8), (154,7), kaista (-251,8) v115- ja v124-juurissa, pari PT:lle, yksi vienti.
 4. PK:lle rivi, kun juuri on valmis: hän ajaa kartan ja rajat uudelleen; 2 pätkää pois (KK); rakennuksilla kolme porttia; rakennukset-v127 viitteenä, RakennusKansio v118 -> v127 hänen vahvistuksellaan; v126:n terassi ei ole v127:ssä, joten PK:n kanssa sovittava, kumman päälle lopullinen tehdään.
 5. Taihedianin 4 kolmiota: jos seuraavaan omaan ajoon tulee muutenkin paikka, kamera pohjoisesta (esim. 8 10,4 14, yaw noin -135) ja pitch positiivinen alas, ks. Opetukset. Ei erillistä ajoa.
+6. VS:n pyyntö (PT:n kautta, 6.11. 12.3x): lisää seuraavaan omaan listaan, ei omaa ajoa varten, nämä rivit järjestyksessä kameran `ui juoksupeli tarkastelu kamera -269.4 2.2 -126.8 -95 -8 80` jälkeen. Pidä tämä kamera listan ensimmäisenä kuten sk-saumat1:ssä, koska oleta-rivi odottaa tarkastelun alkua:
+   ```
+   oleta 120 juoksupeli tarkastelu: alku
+   odota 3
+   kuva s--275p8-on
+   ui juoksupeli valo raystasliuku 0
+   odota 3
+   kuva s--275p8-pois
+   ui juoksupeli valo raystasliuku 1
+   odota 3
+   ```
+   Kun ajettu: kerro kuvakansio VS:lle (local_3b36fe96-0199-4b17-9eb4-46a882ce7399). VS lukee parin ja antaa tuloksen LAV:lle ja PT:lle. Seiniä ei muuteta tummien porrasalojen takia ennen sitä.
 
 ## Avoin, ei selvitetty
 - Uusien seinien tummat porrasmaiset alat: s--275p8 (uusi seinä), s--185p9, s--81p1. Muoto muistuttaa räystäsliu'un tummaa suorakaidetta ja Baohedianin oven tummaa pystykaistaa, mutta sitä ei ole todistettu. Tarkista VS:n liu'un kanssa, ennen kuin nimeät sen.
