@@ -32,3 +32,6 @@ iPadin hinta (arvio, ei laitemittaus), `$D/varjotilasto.py`, malleista laskettu:
 Ajo 26 ja Louvre: -1736 kohta 2 (KS lähettää kansion ja sha:n). Kovat varjot tulevat vasta seuraavassa yhteisessä ajossa, joten Louvren usvan tulos ja varjot eivät ole samassa kuvassa.
 Worktreet: k17 on nyt haarassa kovat-varjot (`raystas-jalusta` on natiivi-backupissa 84872eaa9), k30 usva-jalka.
 `tarkista.sh` muuttaa tyylikirjan generoidut tiedostot: `git restore` ennen committia, `git add` polulla.
+
+## LISÄYS KS:LTÄ 18.0x
+Kovat varjot menevät ajoon 28, koska ajo 27 on käynnissä. Y on edennyt 162912f91:een, ja KS yhdistää mergellä (koeyhdistys ilman ristiriitoja). KS lähettää kansion ja sha:n ajon jälkeen. Louvre db0a42148 on ajossa 26 tai 27: katso, kumpaan se meni (KS:n luovutus -1738, kohta ENSIN 2).
