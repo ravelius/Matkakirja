@@ -28,8 +28,9 @@ Katso sv-kuvista: Invalidit (ei varjoa molemmin puolin; onko varjo silti heikko)
 Läpikäynti: ääriviivatiedosto vain 12 mallilla; 10 kohteella ei ole, joten ääriviiva ei koske niitä. Louvre-180 ja -yla katsomatta. Parit: `parit-av-keski/`, `parit-av-20/`. ND:n kolmiot 150 → 221 (Y): odotettua, KS:lle kerrottu; Y:n versiota ei katsottu erikseen.
 Kolmiot 234 648 → 1 447 laskettu, ei mitattu. Junaan vain mitatulla luvulla ja omistajan sanalla; ennen junaa testi, joka vertaa ääriviivaa pelin lukemaan malliin. Aloittamatta (järjestys KK:lta): rosoisuus; mallin valo kääntyy kameran mukana, varjo ei.
 
-## 4. USVA: VALMIS PT:LLÄ, ODOTTAA PÄÄTÖSTÄ `_tyo/linssiseppa2/usva-kauas-ajo34b/ARVIO.md`
-Omistaja 22.17 ja 22.18. Ajo 34b, a64444662, haara `linssiseppa2/usva-kauas`. Suositus a (1,5/12 km). b:ssä maa loppuu 75°:ssä viivaan, syy selvittämättä. 45° nyt = b (0,00). Muisti mittaamatta; iPad vain luvalla. Ei junaan ilman sanaa. La Défensen tornit läpikuultavat 85°:ssä, syy tutkimatta.
+## 4. USVA: OMISTAJA 22.54 VALITSI a, OLETUS KOKEESSA 074dc595e (`_tyo/linssiseppa2/usva-kauas-ajo34b/ARVIO.md`)
+Pariisin kokeeseen, EI junaan. Haara `linssiseppa2/usva-kauas` (k31, natiivi-backup), testit 21/21, unity-tarkistus 0 virhettä. Kulmat 55° ja alle täsmälleen ennallaan testillä; pelikuva puuttuu: `_tyo/linssiseppa2/sk-usva-a-45.txt` (ua-45-louvre-entinen, ua-45-louvre-a, ua-85-oletus) KS:lle seuraavaan ajoon. Kun tulee: vertaa Louvre-pari pikseleittäin (omistajan 20.58 Louvre 45° pitää pysyä; rivi-45 oli vain nyt | b) ja katso ua-85, että oletus kytkeytyy. Tulos PT:lle.
+AUKI (PT): 65°:n yläreunan vyö, kaukaisen kaupungin raidoitus, La Défensen läpikuultavat tornit 85°:ssä, maan viivan syy (75°, b ja avoin), muisti (iPad vain luvalla).
 
 ## 5. MERI, JONOSSA SAUMOJEN JÄLKEEN (PT), ei aloitettu
 Meren ruudukko näkyy Ranskan tasolla Kanaalilla ja Keltienmerellä, `/Users/Shared/Claude/proto-3d/lokit/natiiviseppa-liiku-lento-a68c82983/l2-ranska.png`, täysikoossa. Merikorjaus 5b9eb8cb4 ei ole yhteisessä pohjassa (ei 43a2fa300:ssa eikä ajossa 33), on merkitty kesken ja koskee tasoja z10–z13, joten ei välttämättä auta tällä tasolla. Mittaa ensin, kuuluuko tämä siihen, sitten rivi PT:lle: syy ja esitys.
