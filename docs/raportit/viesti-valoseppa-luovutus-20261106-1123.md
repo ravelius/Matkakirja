@@ -20,16 +20,16 @@ Tarkista kuvista, nämä ovat auki:
 2. Leijuminen: tornin yläosa on lähempänä katseen suunnassa kuin jalka (Eiffel 20°:ssa noin 110 m, laskettu), joten huippu häipyy vähän jalan jälkeen. En tiedä, näkyykö se.
 3. Katsottu kohde on usvassa: 85°:ssa 25–32 % (ennen malli 0 %, kartta 11–15 %, laskettu 0,6:lla). 45°:ssa en laskenut lukua 2,75:llä: 2,25:llä 3 %, 3,5:llä 27 %. Aja `scratchpad`-laskelma uudelleen tai mittaa kuvasta. Jos vaalenema on liikaa, säädä vakioita ja kerro KK:lle pareissa.
 4. Maavarjot: Mallien ja ohjelmakohteiden varjo katoaa kynnyksellä `VarjoUsvaRaja` 0,6 eikä häivy pikseleittäin. Puun varjo on eri materiaalilla (`SarjaVarjoMateriaali`), sen usvaa en katsonut. Voi näkyä ponnahduksena.
-5. Puiden erikoismallit ja Symbolimalli jäivät ruudun usvaan: ne eivät ole käskyn listalla. Erottuuko Pariisissa, katso kuvasta.
+5. Erikoismallit (Symbolimalli.shader) jäivät ruudun usvaan: ne eivät ole käskyn listalla. Erottuuko Pariisissa, katso kuvasta.
 6. Metal-varianttitarkistus (9.1) ajamatta.
 7. Jos varjostin ei käänny, ensimmäinen epäilty on `MixFogColor` tai Fog.hlsl-include, ne on kopioitu TaloKerroksesta.
 
-Parit nykyinen | uusi KK:lle, täysikoossa katsottuina. Nykyinen tarvitsee saman listan ajon ilman 61a6f5321:tä: pyysin KS:ltä, vastausta ei vielä ole. Puiden pienennystä ei tehdä (PT: odottaa koetta).
+Parit nykyinen | uusi KK:lle, täysikoossa katsottuina. KS 11.2x: ajo 9 = 5f44adef2 + sk-usva.txt (nykyinen), heti perään ajo 10 = 61a6f5321 + sama lista (uusi). KS kertoo kansiot, kun ne on katsottu. Y ei liiku ennen ajo 8:n loppua. Ajo 8:n pb-etu on vanhalta d4d10bdb6:lta eikä todista lippupäätöstä; abd7d1dd8 tulee ajoon 9. Puiden pienennystä ei tehdä (PT: odottaa koetta).
 
 ## SEURAAVAKSI
 1. Kuvat5 loppuun (-1105:n RAYSTAS5), sitten sha 35f849838, polku ja AUKI-kohdat PT:lle ja LAV:lle. Odottaa jo, ei vaadi ajoa.
-2. KS:n vastaus nykyisen ajosta. Usvakuvat, kun KS ilmoittaa, sitten parit KK:lle.
-3. Siltakuvat ja palettikuvat, kun KS ilmoittaa (KS: ajo 8 ajetaan kärjellä 1347410ca, abd7d1dd8 seuraavaan).
+2. Usvakuvat ajoista 9 ja 10, kun KS ilmoittaa, sitten parit KK:lle.
+3. Siltakuvat ja palettikuvat, kun KS ilmoittaa (ajo 8 kärjellä 1347410ca; `pb-etu` KK:lle vasta ajosta 9).
 4. Pompidoun muodot KK:n järjestyksellä.
 
 ## MUUTA
