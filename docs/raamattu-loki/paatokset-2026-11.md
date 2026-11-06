@@ -681,3 +681,11 @@ Omistajalle kerrottu: tärinä jää peliin, määrä rakennusten kohdalla jää
 ## REMOTE CONTROL MYÖS PÄÄTOIMITTAJALLE (omistaja, KK) (6.11.2026 klo 21.39)
 
 Omistaja 6.11.2026 klo 21.32 (KK:n välittämä): "Laita remote päälle myös päätoimittajalle". Korvaa 16.08:n "etäyhteys vain KK:lla". KK kytki etäyhteyden päälle PT:lle (tila on, PT tarkisti). PT pitää sen päällä, myös nollauksen jälkeen. Postivahti ja roolit eivät kytke sitä.
+
+## MAALATTU TAIVAS PARIISIIN KOKEENA, PALETIN POIKKEUS (6.11.2026 klo 22.15)
+
+Omistaja 6.11.2026 klo 22.15, kortti "Kelpaako maalattu taivas (lähettämäni pelikuvat) Pariisiin kokeena?" = "Kelpaa (Suositus)": kokeena vain Pariisissa, ei junaan, vaalea pinkki saa jäädä. Kuvat: scratchpad/keskustelukanava/kuvat/taivas-ajo31/. Taivaan väri on tällä päätöksellä poikkeus peruskartan paletista, vain Pariisissa (Raamattu 4.40). Välitti KK.
+
+## NOTRE-DAME #2184 JA EIFFELIN LÄHIALUE KOKEENA (6.11.2026 klo 22.20)
+
+Omistaja 6.11.2026 klo 22.20, kortit: korjattu Notre-Dame #2184 "Kyllä, kivi 85 % (Suositus)" kokeena nykyisen tilalle, ei junaan; Eiffelin ja Montparnassen lähialue, myös Monoprixin poisto, "Kelpaa (Suositus)" kokeena, ei junaan. Omistajalle näytetty kuvat/ajo32-20261106/: intro (alku viallinen, korjattu kuva luvattu NUI:lta) ja saumat (koe ei poistanut rajaa). Välitti KK.
