@@ -50,3 +50,5 @@ Lontoo C:n koodi EI odota ajoa 37: aloita heti nollauksen jälkeen. Ajo 37 menee
 USVA ja KATKOS arvioitu tässä sessiossa, tulokset PT:llä ja KK:lla (arviot `usva-kauas-ajo34b/ARVIO-ajo35.md`, `kadun-katkos/ARVIO.md`). Niitä ei tehdä uudelleen.
 TEKEMÄTTÄ, ENSIN: pc-etela, pc-pohjoinen (Palais Bourbon) ja pv-concorde, pv-royal (sillan valo). Kohta 1 kertoo vertailut. `sillan-paa-rajaukset.py` ei ole kansiossa `sillan-paa-ajo34/`: etsi `_tyo/linssiseppa2`:sta tai rajaa samat kohdat `concorde.png`:n ja `royal.png`:n mukaan. Sen jälkeen Lontoo C.
 SendMessage on tästä sessiosta keskeytetty 10 viestin rajalla: varakanava `mcp__ccd_session_mgmt__send_message` (CLAUDE.md, Raamattu 12.20).
+
+## LISÄYS 7.11.: SILLAN VALO arvioitu (`sillan-paa-ajo34/ARVIO.md`, pari `sillan-paa-ajo37/parit.png`), tulos PT:llä; ei tehdä uudelleen. Ajosta 37 tekemättä enää vain Palais Bourbon pc-etela ja pc-pohjoinen, sitten Lontoo C.
