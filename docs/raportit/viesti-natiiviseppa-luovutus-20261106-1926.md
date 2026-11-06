@@ -1,13 +1,14 @@
-# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 22.24 (kohta 10 tehty, meren ruudukko PT:n sanalla)
+# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 22.27 (kohta 10 tehty, meri VS:lle PT:n kautta)
 
 ## Tila 22.24, KORVAA ALLA OLEVAT TILAT JA SEURAAVAT TYÖT
 - PT 21.4x, Pariisi valmis -listan kohta 10: kaksi työlistan riviä. Vain Mac, lyhyet ajot, kokeena, ei junaan, ei iPad-ajoja. Aloituslento on NUI:lla, älä koske.
 - LIIKU TOIMII MACILLA: natiiviseppa/liiku-lento a68c82983 (natiivi-backup) = NUI:n natiivi-ui/aloituslento-kuvat-219 356eb0101 + Liiku. Kuvat /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-liiku-lento-a68c82983 (l0-l5): loitonnus Ranskan tasolle, peruminen takaisin 6,0 km:iin, renkaat eivät PARIISI-nimen päällä. Kerrottu PT:lle ja KK:lle 22.2x, työlista päivitetty. KK:n arvio auki.
+- PT 22.2x: meri menee VS:lle PT:n kautta, ÄLÄ KORJAA. a68c82983 pysyy kokeena, ei junaan. Liikun ajo jää odottamaan NUI:n lentoa (c ja d). iPad-tarkistusta ei nyt tarvita. PIDÄ natiiviseppa/liiku-lento AJAN TASALLA natiivi-ui/aloituslento-kuvat-219:n kanssa: kun NUI:n kärki muuttuu, poimi Liiku uudelle kärjelle, unity-tarkistus sh:lla, peiliin.
 - MEREN RUUDUKKO näkyy yhä täysikoossa (l2-ranska, Kanaali ja Keltienmeri). Ei korjattu. VS:n 5b9eb8cb4 ("meri yhdeksi väriksi") ei ole tässä haarassa; ei tiedetä, poistaako se ruudukon. iPad katsomatta. PT:lle esitetty: viedäänkö VS:lle? SANA AUKI; ÄLÄ KORJAA ITSE ILMAN SANAA.
 - INTRO TARKISTETTU, EI KOODIMUUTOSTA: NUI:n ajo /Users/Shared/Claude/proto-3d/lokit/nui-aloituslento-kuvat-356eb0101: kallistus 60° koko lennon, PARIISI ilman tummennusta. Kerrottu. NUI:lle kerrottu ajon viat: alussa pohjakartta tyhjä noin 8 s, Eiffelin ja Riemukaaren kuvat eivät näy; syy auki, NUI arvioi.
 - Pohja: Liiku poimiutuu ilman ristiriitoja myös yhteiselle (natiiviseppa/liiku-yhteinen 43a2fa300 pohjalla 092fee5bb), mutta siellä peli vie kameran itse Ranskaan ("saapuminen: FRA") ennen Liikua, koska lento puuttuu. Sen kaksi ajoa (lokit natiiviseppa-liiku-yhteinen-*) EIVÄT ole tulos. Vanha 99748962f on haarassa liiku-loitonnus-219. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto-koe on haarassa liiku-lento.
 - Skenaario P2 = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/liiku/sk-liiku-lento.txt. Lokin teksti on nyt "zoomaus pariisi alkaa", ei "zoomaus alkaa pariisi". unity-tarkistus sh:lla 0 virhettä.
-- SEURAAVA TYÖ: odota PT:n sanaa merestä ja KK:n arviota. Muuten rivi PT:lle "JONO TYHJÄ: Natiiviseppä".
+- SEURAAVA TYÖ: tarkista NUI:n haaran kärki aloittaessa (22.27 356eb0101 tai uudempi, vertaa) ja pidä haara ajan tasalla. KK:n arvio auki. Muuta jonoa ei ole: rivi PT:lle "JONO TYHJÄ: Natiiviseppä".
 - Cron luodaan uudelleen ("4 9 * * *").
 
 ## Tila 21.31, KORVAA KAIKKI ALLA OLEVAT RAKENNUSTÄRINÄN TILAT JA SEURAAVAT TYÖT
