@@ -564,3 +564,7 @@ Omistaja 6.11.2026 klo 17.08 (KK): kortti "Lähteekö Seinen kelluva hotelli Off
 ## PEUKALORENKAAT LÄPIKUULTAVINA JUNAAN (omistaja 17.16) (6.11.2026 klo 17.17)
 
 Omistaja 6.11.2026 klo 17.16 (KK): kortti "Kelpaavatko juoksupelin ohjausrenkaat näin läpikuultavina?" = "Kelpaavat (Suositus)": renkaat menevät avoimeen junaan tällä läpikuultavuudella. PK 36aa43ed3, kuvat scratchpad/keskustelukanava/kuvat/renkaat-36aa43ed3/; junan SHA tulee PK:lta. Omistajalle kerrottu: vaalealla pohjalla heikoin, punaisella punertava vivahde, iPhonella koko ennallaan, häivytys liikkeessä ja oikea laite näkemättä.
+
+## SEINEN KÄVELY- JA METROSILLAT OHUINA VIIVOINA (omistaja 17.24) (6.11.2026 klo 17.24)
+
+Omistaja 6.11.2026 klo 17.24 (KK): kortti "Piirretäänkö Seinen yli kulkevat kävely- ja metrosillat Pariisin kartalle ohuina viivoina?" = "Piirretään (Suositus)". Selite: vain veden yllä olevat sillat tulevat ohuina viivoina, pienet kadut pysyvät poissa, ja kuva näytetään ennen junaa. Syy: kartan linjaus k52 (Passerelle Simone de Beauvoir, Austerlitzin ratasilta; muita ei laskettu). Kokeena, KS:llä; ei junaan ennen kuvaa KK:lle ja omistajalle. Pienet kadut (kortti 4.11. 06.51) pysyvät muuten poissa.
