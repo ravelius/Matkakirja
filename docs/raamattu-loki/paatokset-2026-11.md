@@ -689,3 +689,7 @@ Omistaja 6.11.2026 klo 22.15, kortti "Kelpaako maalattu taivas (lähettämäni p
 ## NOTRE-DAME #2184 JA EIFFELIN LÄHIALUE KOKEENA (6.11.2026 klo 22.20)
 
 Omistaja 6.11.2026 klo 22.20, kortit: korjattu Notre-Dame #2184 "Kyllä, kivi 85 % (Suositus)" kokeena nykyisen tilalle, ei junaan; Eiffelin ja Montparnassen lähialue, myös Monoprixin poisto, "Kelpaa (Suositus)" kokeena, ei junaan. Omistajalle näytetty kuvat/ajo32-20261106/: intro (alku viallinen, korjattu kuva luvattu NUI:lta) ja saumat (koe ei poistanut rajaa). Välitti KK.
+
+## USVA KAUEMMAS PARIISIN KOKEESEEN (6.11.2026 klo 22.55)
+
+Omistaja 6.11.2026 klo 22.54, kortti "Otetaanko oikean yläkulman usva Pariisin kokeeseen?" = "Oikea ylä kokeeseen (Suositus)" (a: usvakauas 1,5 km / 12 km; kokeena, ei junaan). Kuvat kuvat/usva-ajo34b/. Tavoite: usva tulee kauempaa ja hitaammin, ei näytä sumulta. Omistajalle kerrottu 65°:n vyö, raidoitus, La Défense, maan viivan syy selvittämättä ja muisti mittaamatta. Välitti KK.
