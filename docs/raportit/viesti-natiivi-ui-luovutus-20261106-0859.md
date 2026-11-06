@@ -44,3 +44,8 @@ Järjestys (9.1: vika toistetaan ennen korjausta; 6.16: mitataan ennen korjausta
 - Mittarin viat (kello pysähtyy vasta uudessa ladonnassa, rivikatto 500): ei korjata nyt, KK 08.15. Mitataan lopuksi.
 - Pallo saa olla nimen päällä: älä kysy.
 - Ei omaa ajoa, ei junaan.
+
+## LISÄYS 09.0x: KK:n kysymykset ajosta 0b4d74011 (vastaus PT:lle lähetetty)
+1. Katoavatko nimet pelaajalta? Koodin mukaan kyllä, mutta pelaajan eleellä ei ole kokeiltu. Kuvien välissä on vain kameran siirtoja (aja, kallista, suunta) ja talojen vaihto; "nimet etsi" vain lukee. Karsi laukeaa aina, kun uusia nimiä tulee (Nimikerros.cs:1292), eikä se riipu komennoista. Nimet palasivat ajossa noin 3,5 min myöhemmin (puut-ylhaalta 08.49). Paluun viive ja sen syy mitataan samalla lokirivillä: lisää siihen, milloin karsittu nimi palaa. Oletus, ei todistettu: palaa vasta, kun pala pyydetään uudelleen (ElavaNimetPalasta).
+2. Opéran kyltti: seurausta omasta cff6a5ab3:stani. Kyltti sai opasiteetin mallin usvasta, ja kamera pysähtyi usvan liukuun, joten laatikko ja teksti jäivät haaleiksi. Malli ei näy kuvassa co-45. 106521496 (sama haara, peili): kyltti joko täysi tai poissa, raja 0,5 / paluu 0,7, häivytys USS-siirtymästä. Testit 660/660, KÄÄNTÄMÄTTÄ. Katso seuraavasta ajosta co-45, co-ob, ss-talot ja nd-raja: Opéra poissa tai täysi, ei vilku liikkeessä.
+   ORSAY EI KORJAANTUNUT TÄLLÄ: en avannut p-con-kuvaa. Orsayn taidemuseo ei ole MalliKyltit-kohde kuvan perusteella (pyöreä kuva, ei mallia), joten se kulkee muuta polkua. Selvitä polku ja sama sääntö sinne; älä väitä korjatuksi ennen kuvaa.
