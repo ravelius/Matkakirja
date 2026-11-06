@@ -759,3 +759,7 @@ KK klo 01.02 omistajan valtuutuksella, kokeena, ei junaan: kuvapallojen nimikylt
 ## KK:N PAATOS VALTUUTUKSELLA: LONTOO C KELPAA KOKEENA (7.11.2026 klo 01.20)
 
 KK klo 01.19 omistajan valtuutuksella, kokeena, ei junaan: Lontoo C kelpaa. VS jatkaa loput sarjana, Abbeyn muoto kahdella yrityksellä, joen katkos PK:lla.
+
+## KK:N PAATOS VALTUUTUKSELLA: SUMEA ALUE SAAPUMISESSA PARIISIIN ON VIKA (7.11.2026 klo 01.35)
+
+KK klo 01.34 omistajan valtuutuksella, kumoaa KK:n 01.13 sanan k01f ei korjausta, joka perustui Macin kuvaan: iPad-kuvan nelio-2.png sumea alue on näkyvä vika saapumisessa Pariisiin. Jos syy on korjattavissa ilman koko maailman laattoja, NS saa kaksi yritystä kokeena, tulos iPad-kuvana; muuten syy ja kuva aamun kysymykseksi. Tavoite: kartta on lennon aikana yhtä terävä koko näkymässä, tiet jatkuvat, ja Seine on yksi joki.
