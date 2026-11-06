@@ -32,7 +32,8 @@ Friisi 7 seinään -rivi on siis pois listalta.
    odota 3
    ```
    Kun ajettu: kerro kuvakansio VS:lle (local_3b36fe96-0199-4b17-9eb4-46a882ce7399). VS lukee parin ja antaa tuloksen LAV:lle ja PT:lle. Seiniä ei muuteta tummien porrasalojen takia ennen sitä.
-   PÄIVITYS PT 12.4x: pari on vientiehto, ajo koodilla 84872eaa9 (korvaa a309d43de:n), omana ajona. Sha:ssa ei ole tarkastelu-komentoa, joten yllä olevat rivit eivät toimi: A/sk-pari1.txt käyttää samaa kameraa komennoilla `valo sijoita -269.4 -126.8 -95` + `valo testikamera 2.2 0 -8 80`, ajo A/aja-pari1.zsh, kuvat A/kuvat-pari1. Pyydetty JU:lta, ei katsottu.
+   PÄIVITYS PT 12.4x: pari on vientiehto, ajo koodilla 84872eaa9 (korvaa a309d43de:n), omana ajona. Sha:ssa ei ole tarkastelu-komentoa, joten yllä olevat rivit eivät toimi: A/sk-pari1.txt käyttää samaa kameraa komennoilla `valo sijoita -269.4 -126.8 -95` + `valo testikamera 2.2 0 -8 80`, ajo A/aja-pari1.zsh, kuvat A/kuvat-pari1. Ajettu, katsottu: EI KELPAA. Kuvassa kujan oikea seinä puuttuu (räystäs ja friisi leijuvat, alla tumma pinta ja aukio), syy auki, ja vasemman seinän tummaa porrasta ei näy kummassakaan. Ei vertaudu kuvat-saumat1:een. Uusi lista A/sk-pari2.txt, VS:n alkuperäiset rivit koodilla 35140432d, kuvat A/kuvat-pari2, JU:lla; PT:n sana kysytty, riittääkö tämä ehdoksi.
+   FRIISIT: porras näkyy f--151:ssä; syy 1,5 cm:n tasoero (mitattu kaikista 5). tee_aukot15.py, koejuuri-ovi2: friisi -0,034, punainen -0,044. kuvat-friisi2 JU:lla, ei katsottu. KORJAUS.md loppu.
 
 ## Avoin, ei selvitetty
 - Uusien seinien tummat porrasmaiset alat: s--275p8 (uusi seinä), s--185p9, s--81p1. Muoto muistuttaa räystäsliu'un tummaa suorakaidetta ja Baohedianin oven tummaa pystykaistaa, mutta sitä ei ole todistettu. Tarkista VS:n liu'un kanssa, ennen kuin nimeät sen.
