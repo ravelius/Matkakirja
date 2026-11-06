@@ -492,3 +492,7 @@ OMISTAJAN OIKAISU KK:n välityksellä, sanatarkasti: 'pieni iPad on myös studio
 ## PEUKALOKOHDAT VAIN ALUSSA, PALETTI KUUTEEN MALLIIN, SACRÉ-CŒURIN NURMI (OMISTAJA 6.11.2026 KLO 11.39) (6.11.2026 klo 11.4x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: peukalokohdat 'vain alussa ja silloin ne voisivat olla pyöreät ympyräviivat, jotka näkyvät silloin selkeämmin'; paletti kuuteen malliin 'Otetaan (Suositus)'; Sacré-Cœurin mäen nurmi kartan nurmen väriin 'Viedään (Suositus)'. KK: peukalopäätös kumoaa 21.10. klo 08.58:n ja 11.22:n tavallisen tilan osalta; kokemus: selvä rengas alussa, ensimmäisen ohjauksen jälkeen puhdas kuva; opetuksen syke ja rimpuilun hehku ennallaan. Tekijät: peukalot PK; nurmi KS, kokeena. Kuvat KK:n kansioissa peukalo-c9db47578 ja yhteinen-8-b8-1347410ca.
+
+## PIENENNETTY TRIPO-PUU RAKENNUSPALIKKAKOKEESEEN (OMISTAJA 6.11.2026 KLO 12.42) (6.11.2026 klo 12.4x)
+
+OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Otetaanko pienennetty Tripo-puu rakennuspalikkakokeen seuraavaan kuvapariin pallopuun tilalle?' = 'Otetaan (Suositus)'. Omistaja kysyi ensin: 'onko puiden tekemiseen vielä eri vaihtoehdot kokeilussa vai onko tuo jo lukittu malli joka näkyy viimeisimmässä kuvassa?'; KK kertoi, ettei ole lukittu. Kokemus: seuraavassa parissa oikean puun näköinen puu pallon sijaan; nykyiset neljä puuta kevennettynä, ei uusia Tripo-ottoja. Tekijä VS (PT), NS kytkee kokeeseen. KK: puiden pienennys ei enää odota koetta.
