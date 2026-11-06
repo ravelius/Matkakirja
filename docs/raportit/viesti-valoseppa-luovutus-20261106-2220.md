@@ -8,7 +8,8 @@ Järjestys (PT): SAUMAT → SILLAN PÄÄ + PALAIS BOURBON → ÄÄRIVIIVAT → i
 - Omistaja 22.15 (KK): taivas v2 #2182 kelpaa kokeena vain Pariisissa, ei junaan, vaalea pinkki saa jäädä. Ei uutta taivastyötä. KK kuittaa Codexille.
 - PT: syy kelpaa, g1 ja g2 saa ajaa. Arvioi täysikoossa, tasonimet päätellyiksi. Varakeinon kulu kysytään vasta g:n jälkeen, kuvapari ja arvio mukana.
 - Kotikansion 85 tiedostoa: kaikki docs/raportit-luovutuksia, HEAD 9b98b5c23 on etäpalvelimella; työpuussa vain 2 seuraamatonta. Ei hukkumisvaaraa. Kerrottu PT:lle.
-- Eiffel ratkaistu: "kevyt muoto vie aukot" ei pidä paikkaansa, katso kohta 3.
+- Eiffel ratkaistu: "kevyt muoto vie aukot" ei pidä paikkaansa, katso kohta 3. HUOM (PT): älä sano "malli umpinainen". Jalan X-ristikko on näkyvissä, ja sen välistä näkyy maa; umpinainen on maassa oleva varjo ja mallin siluetti.
+- USVA, UUSI (omistaja 22.17 ja 22.18, KK): usva alkaa kauempaa ja voimistuu hitaasti pitkällä matkalla, ei sumun näköinen; taivas oli hyvä; kulmat 85, 75, 65, 45° ennallaan. Koe a64444662, haara `linssiseppa2/usva-kauas`, testit 20/20, unity-tarkistus 0 virhettä. Lista `_tyo/linssiseppa2/sk-usva-kauas.txt` (14 kuvaa). Nykyinen raja mitattu koodista: usva alkaa 0,6 × kameran etäisyys ja loppuu enintään 5 km katsepisteen takana (`PariisiKallistus.KartanSumu`). Variantit a 1,5/12 km ja b 3/25 km. uk-*-avoin paljastaa, mitä usva peittää. Kuvan kanssa KK:lle PT:n kautta: paljastuuko saumakuvien vaakaraja, rajoittaako lataus. Muistia ei voi mitata Macilla, iPad vaatii luvan (omistajan 19.57). Älä oleta rajaa ilman mittausta.
 - PT: loput 20 ääriviivakohdetta katsotaan. Parit ovat jo ajoissa 31 (av-*) ja 28 (kv-*); sk-pariisi-yhteinen-33:ssa ei ole av-kuvia, joten uutta ajoa ei tarvita.
 
 ## ODOTTAA KS:N AJOA (lähetetty KS:lle 22.15, 3D-rakennusten ajojen jälkeen)
@@ -29,10 +30,10 @@ Komento `silta paa <0,05–1>` (1 = nykyinen), verkot uudelleen `ohjelmakohteet 
 Palais Bourbon: harjakatto `Liuske` `OhjelmaKohdeRakennukset.cs:238-240`, kommentin mukaan tarkoituksella harmaa (a/viite/Palais Bourbon-6, -0). Syy mitattava pb-kuvista ennen korjausta.
 
 ## 3. ÄÄRIVIIVAT: ARVIO `_tyo/linssiseppa2/kovat-varjot/aariviiva-arvio-ajo31.md`, PT:llä
-3d6e35696, `linssiseppa2/varjo-aariviiva`, k17. Sacré-Cœur selvä parannus. Eiffel: sama pitkä rako, pienet täplät pois, ristikkokuviota ei kummassakaan (raja-eiffel-ristikko.png). 20 kohdetta katsomatta. Kolmiot 233 265 → 1 467 laskettu, ei mitattu. Junaan vain mitatulla luvulla ja omistajan sanalla. Työkalu `_tyo/linssiseppa2/kovat-varjot/tee-aariviivat.py <työpuu> --kuvat <kansio>`. Aloittamatta (järjestys KK:lta): rosoisuus; Louvren ja Invalidien heikko varjo; mallin valo kääntyy kameran mukana, varjo ei.
+3d6e35696, `linssiseppa2/varjo-aariviiva`, k17. Sacré-Cœur selvä parannus. Eiffel: sama pitkä rako, pienet täplät pois, maassa olevassa varjossa ei ristikkokuviota kummassakaan (raja-eiffel-ristikko.png). 20 kohdetta katsomatta. Kolmiot 233 265 → 1 467 laskettu, ei mitattu. Junaan vain mitatulla luvulla ja omistajan sanalla. Työkalu `_tyo/linssiseppa2/kovat-varjot/tee-aariviivat.py <työpuu> --kuvat <kansio>`. Aloittamatta (järjestys KK:lta): rosoisuus; Louvren ja Invalidien heikko varjo; mallin valo kääntyy kameran mukana, varjo ei.
 
 ## 4. VANHAT
-Usvakoe: omistaja 20.58 kelpaa kokeena, ei lisätyötä (b3bff978f). Taivas v2 #2182: valmis kokeena (omistaja 22.15), ei lisätyötä. Pont d'Iéna vaalea kaista on omistajan päätös 18.09; kävely- ja metrosillat ohuina 17.24.
+Usvakoe b3bff978f (45°): omistaja 20.58 kelpaa kokeena, ei junaan. Matalien kulmien usva: katso LISÄYS. Taivas v2 #2182: valmis kokeena (omistaja 22.15), ei lisätyötä. Pont d'Iéna vaalea kaista on omistajan päätös 18.09; kävely- ja metrosillat ohuina 17.24.
 Jonon lopussa: `git show origin/linssiseppa2/luovutus-20261106-1826:docs/raportit/viesti-valoseppa-luovutus-20261106-1826.md` kohta 6 (lippu, paletti, räystäs, Puu-3, siltakuvat), `us-nd-85`:n tummat merkit. Tausta `_tyo/karttaseppa/lahialue-20261106/LUOKITUS.md`.
 
 ## TEKNIIKKA
