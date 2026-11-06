@@ -701,3 +701,7 @@ Omistaja 6.11.2026 klo 22.58, sanatarkasti: "Pidä huoli että sessiot etenevät
 ## OLEELLISET NIMET, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.02)
 
 KK 6.11.2026 klo 23.00 omistajan valtuutuksella (22.58 "saat päättää kaikesta puolestani"): nimet oletuksena pois: kadut, kaupunginosat (suburb, quarter, neighbourhood) ja pienet vedet; kylät ja hamletit jäävät; kokeena, ei junaan. Korvaa NS:n suosituksen "vain kadut". Kartta-välilehden rivi NUI:lle. Suunnitelma suunnitelmat/20261106-kartan-oleelliset-nimet.md.
+
+## YÖN SÄÄNTÖ: JUMI EI PYSÄYTÄ (6.11.2026 klo 23.08)
+
+Omistaja 6.11.2026 klo 23.07 (KK:n välittämä): "Jos tulee ongelma ja se ei meinaa ratketa niin ei kannata jäädä korjaamaan liian pitkään vaan jatkaa eteenpäin ja kysyä aamulla minulta mitä tehdään." KK:n tavoite: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa, kokeen osa pois tai edellinen toimiva tilalle, rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön. KK kokoaa kysymykset aamuun. PT välitti roolit 23.08.
