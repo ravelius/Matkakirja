@@ -9,7 +9,7 @@ Syy: konteksti yli 25 %, luonteva tauko: ajo 23 katsottu ja jaettu, ei omaa ajoa
 5. Hookin työlistarivit (Concorde, lähialue, saumat): en päivittänyt, työkalu on PT:n ja omistaja epäselvä.
 
 ## ODOTTAA
-- **PT:** kysytty 16.3x: viedäänkö mallien arvio KK:lle, ja kuka kuittaa Codexille. Codex pyysi kuittaamaan vastaanoton, molempien SHA:t ja kummankin soveltuvuuden erikseen. **Älä kirjoita Codexille ennen PT:n sanaa.** Kuittausposti vain origin/claude/postilaatikko-haaraan.
+- **KK (omistajan kortti, mallit):** PT 16.4x: valtuus päättyi 15.51, joten omistaja ratkaisee mallit KK:n kortilla; arvio on suositus. Viety KK:lle: parit _tyo/karttaseppa/parit-yhteinen-23/kk/ ja kysymykset 1) Riemukaari jatkoon? 2) Notre-Dame jatkoon vai korjaus? **Vasta KK:n välittämän päätöksen jälkeen kirjoitat Codexille kuittauksen, sinä itse, erikseen #2168 ja #2169:** vastaanotto, molempien SHA:t (d727752c, 99a3d4ee) ja kummankin soveltuvuus. Vain origin/claude/postilaatikko-haaraan. Ei vientiä eikä junaa tällä ajolla (PT).
 - **KK (omistaja):** kysytty 16.3x: saavatko litteät laivat ja uimala lähteä joesta. Suositukseni: myös Bercyn yli 1 000 m²:n laatta pois. 265c1ec3a pysyy kokeena ilman hänen sanaansa. Omistajan vastauksen jälkeen ehto VeneMaxAla ja syy.md voi muuttua; tee se Y:hyn, tyyliversio uusiksi (nyt e25).
 - **NUI:** kylttimittaus vietiin. Korjaus on NUI:n PT:n sanan jälkeen. Älä muuta koodia tämän takia.
 
