@@ -21,7 +21,8 @@ Kansio `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/louvre-talomaski/`: tee-m
 4. Tarkista kuvista: katoaako itäpään haalea reuna, peittävätkö talot porrasreunaiset korttelit (po-la x 1200–1500, y 1300–1600). Jos eivät, korjaus on KS:n.
 
 ## KK:N VASTAUKSET 09.3x (viety)
-- **Laivat:** ehto "yksi suodatin, eikä muuta muutu" ei täyty, joten jätetty ja kerrottu KK:lle. Rakennuskerroksessa ei ole lajia (ElavaTyyli.cs:150); suodatin olisi keskipiste vedessä + Pariisi, vaatii tyyliversion e16 → e17, poistaisi myös uimalan ja ravintolalaivat. Tee vain KK:n sanalla. Se, että laivat ovat tässä kerroksessa, on päätelty koodista ja väristä.
+**KK kuittasi:** laivat jäävät, suodatinta ei tehdä; taivas poistettu listalta. co-45:n hahmo: jos näkyy seuraavassa ajossa, kerro KK:lle kohde, kun se on varmistettu.
+- **Laivat:** ehto "yksi suodatin, eikä muuta muutu" ei täyty. Rakennuskerroksessa ei ole lajia (ElavaTyyli.cs:150); suodatin olisi keskipiste vedessä + Pariisi, vaatisi tyyliversion e16 → e17 ja poistaisi myös uimalan ja ravintolalaivat. Se, että laivat ovat tässä kerroksessa, on päätelty koodista ja väristä.
 - **Taivaan vaakaraja:** peruttu, väite oli väärä. Riviero ilman UI:ta 2,3–3,0 / 765; rivin 96 ero oli nimipalkki. po-la:n 7,65 rivillä 496 on katsomatta kuvasta. Älä toista väitettä.
 - **co-45 hahmo x 1000–1350, y 150–340:** häipyvä 3D-kohde, pilkut = NotreDameKirkko.shader:74 kohinaleikkaus. Opéra todennäköisin, Madeleine ei poissuljettu, ei projisoitu kuvaan.
 
