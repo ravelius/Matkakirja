@@ -5,6 +5,8 @@ A = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot. Loki: muuri/
 ## ENSIMMÄINEN TYÖ (PT 18.3x)
 Pyydä JU:lta tilinvaihdon jälkeen: zsh A/leivo_levyt3_1-2.zsh, sitten zsh A/aja-levyt3c.zsh 1 35140432d. Kaatumisen syy (polku $L/muuri/yleinen, $L = leivonta-216) on korjattu levyllä, syötteet tarkistettu, leivontaa ei ole ajettu. 19/20 valmis. Tarkista ensin A/levyt3-leivottu/kk-tausta-1-2-lod0.glb ja JU:lta, ettei ajo ehtinyt alkaa: lupa annettiin ja peruttiin 18.3x. Jos ajo kaatui kesken, katto voi olla palassa taustassa; katto_takaisin takaisin ei tee silloin mitään ja lista on A/katto-longzongmen-levyt3.json.
 
+PÄIVITYS 18.29 (korvaa edellisen kappaleen pyynnön palasta 1-2): peruutus tuli liian myöhään, 1-2 alkoi 18.27. leivo_levyt3_1-2.zsh (pid 37488) käy yhä itsenäisesti, ketjun emo pysäytetty, joten 3c ei lähde. Katso /Users/Shared/Claude/julkaisija-tyokalut/lav-levyt3-12-3c.log tai A/levyt3-leivottu/kk-tausta-1-2.log: onko LEIVONTA VALMIS ja EROTA 1041/1041. Katto on taustassa, kunnes EROTA on ohi. Pyydä JU:lta sitten vain zsh A/aja-levyt3c.zsh 1 35140432d.
+
 ## Mistä on kyse
 Kielletyn kaupungin taustapaloissa on reikiä ja vanhan korkeuden lattialevyjä. Täytteet: koejuuri-levyt2 (185 reikää). Jäänteet: koejuuri-levyt3 = levyt2 ilman vanhoja levyjä. Juuri: proto-3d/_tyo/linnanrakentaja/katot-v125/koejuuri-levyt3.
 
