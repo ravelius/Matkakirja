@@ -20,6 +20,9 @@ EI VIELÄ TODISTETTU:
 NUI:n lento-1 (lokit/nui-aloituslento-kuvat-356eb0101/lento-1-eiffel.png): matalalla Pariisissa karkea rasteri, ei koko pallon aukkoja. Kuvan perusteella ei sama tila; syytä ei ole mitattu tässä.
 SEURAAVAKSI: katso c, tee toistettava aukko, kerro syy ja kuva PT:lle varmuustasot mainiten. Korjausehdotus vasta sitten.
 
+## TOINEN TYÖ, PT aloitus-tyhjien jälkeen: Liikun paluun nimiero (Liiku odottaa tätä)
+PT kuittasi a7c4d3cf3:n kokeena: taso palaa, mutta oikealta puuttuu etäisiä nimiä, ero ei ole nolla. Katujen poisto ei ratkaise: muita kuin katuja 29 paluun jälkeen, 49 ennen Liikua (117-88, 232-183). Mittaa syy tai saman parin ero uudella nimioletuksella (0c544d4ef); pari PT:lle. Mittaamatta myös, tasoittuuko ero pidemmällä odotuksella kuin 6 s.
+
 ## Valmiit, odottavat muita
 - OLEELLISET NIMET: 0c544d4ef haarassa natiiviseppa/oleelliset-nimet (98180b82d:n päällä). KK:n päätös omistajan valtuutuksella 23.00: oletuksena pois kadut, kaupunginosat ja pienet vedet; kylät ja hamletit jäävät. Avaimet matkakirja-kerros-kadut ja matkakirja-kerros-pikkunimet. Kokeena, ei junaan. KS poimi: Y 1282a6327 seuraavaan ajoon. KS:n ajossa 35 on vielä vain 98180b82d. 0c544d4ef:ää EI ole ajettu; katso ensimmäisen ajon kuvat. Vertailukuvat 12 kpl lokit/natiiviseppa-oleelliset-nimet-98180b82d. Kartta-välilehden rivi vasta omistajan päätöksellä. KS lähettää ajon 35 lokikansion.
 - LIIKUN PALUU: a7c4d3cf3 haarassa natiiviseppa/liiku-lento, koe, ei junaan. Nimitaso mitattu: ennen 15 → 7 → 14, korjaus 15 → 7 → 15. Pari lokit/natiiviseppa-liiku-nimitaso-a7c4d3cf3/pari-l0-l4.jpg, kerrottu PT:lle. EI IDENTTINEN: nimiä 6 s paluun jälkeen 117, ennen Liikua 232 (kadut 88 ja 183), syy mittaamatta. Vain Mac. Skenaario _tyo/natiiviseppa/liiku/sk-liiku-nimitaso.txt.
