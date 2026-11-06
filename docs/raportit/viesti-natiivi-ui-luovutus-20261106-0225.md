@@ -35,7 +35,8 @@ Tarkistettu ilman ajoa, kerrottu KK:lle:
 
 ## TYÖJÄRJESTYS (KK, kyllä korkeustaulukolle; korvaa alla olevan odotuksen ja etujonon)
 KK:n sanat: "kyllä, valmis korkeustaulukko kokeena samaan haaraan, ei omaa ajoa, ei junaan. Seuraava vuoro tekee sen ensimmäisenä, ja Cesium-kyselyt jäävät pois. Ehdot: kartan alueen ulkopuolella ei 0 m:ä eikä näkyvää hyppyä rajalla (laajenna tai käytä reunan arvoa); mäen laki tarkistetaan kuvasta. Sen jälkeen leikatut kuvat, nimet nurmen ja sillan alla sekä kyltin häipyminen. Kuva yhteisen ajon mukana."
-1) Korkeustaulukko. 2) Leikatut kuvat (KK:n vastaus 21.07 vs 2.215 tarkistettava viesteistä). 3) Nimet nurmen ja sillan alla (selvitys KK:lle ennen korjausta). 4) Kyltin häipyminen.
+(Leikatut kuvat poistettu listalta KK:n myöhemmällä viestillä, ks. kohta 2.)
+1) Korkeustaulukko. 2) Tuileries'n pyöreä kuva: nui-m4:ssä Louvren seinällä, vaikka 7551a76cc:n tavoite oli pisteen ja kyltin välissä (KK). EI leikattuja kuvia: KK: kortti 21.07 "Pyöreä kuva" on voimassa ja 7551a76cc on oikein, poistettu listalta. 3) Nimet nurmen ja sillan alla (selvitys KK:lle ennen korjausta). 4) Kyltin häipyminen.
 
 ## TAUSTA: KORKEUSTAULUKKO (KK ja PT 03.0x; ei korjausta ennen sanaa, ei omaa ajoa, ei junaan)
 KK:n sanat: "merkit ja nimet ovat paikallaan heti saapuessa, ilman odotusta ja ilman lisälatauksia". Viety KK:lle ja PT:lle: suositus korkeustaulukko samasta lähteestä kuin talojen palat. Tämä KORVAA alla olevan viiveen korjauksen (etujono), jos KK sanoo kyllä.
@@ -44,7 +45,7 @@ Tekotapa: skripti lukee _tyo/natiiviseppa/pariisi-talot/tee-palat.py:n IGN-datan
 Kyltin häivytys (alla) on KK:n hyväksymä, ei riipu tästä.
 
 ## KK:N LISTA (nui-m4 ja nui-m3 katsottu; samaan haaraan, ei omaa ajoa; SELVITYS KK:LLE ENNEN KORJAUSTA)
-1) Kadonneiden leikatut kuvat puuttuvat: nui-m4:ssä Grand Châtelet on kyltti + pyöreä kuva, vanhassa m4:ssä (64820ec1a) leikattu kuva + kyltti. KK: "2.215 sanoo leikattuina kuvina. Selvitä syy, älä oleta viivettä." Johtolanka: commit 7551a76cc (ks. Kohdenostot.cs:44), tarkista 2.215:n sanat ja omistajan päätöksen aika.
+1) POISTETTU, ei vika (kortti 21.07 voimassa, ks. työjärjestys). Alkuperäinen: Kadonneiden leikatut kuvat puuttuvat: nui-m4:ssä Grand Châtelet on kyltti + pyöreä kuva, vanhassa m4:ssä (64820ec1a) leikattu kuva + kyltti. KK: "2.215 sanoo leikattuina kuvina. Selvitä syy, älä oleta viivettä." Johtolanka: commit 7551a76cc (ks. Kohdenostot.cs:44), tarkista 2.215:n sanat ja omistajan päätöksen aika.
 2) Nimet katkeavat Sacré-Cœurin nurmen alle (Place Saint-…, Rue des Trois Fr…, Rue Gabriell…, …vingstone; nui-m3) ja Pont Neuf sillan alle (nui-m4). KK: "nimi kokonaan tai ei ollenkaan." Tausta: mallit piirtyvät jonossa 3080 nimien (2995) päälle; väistö Nahtavyysalue.Peittaa (kutsu Nimikerros.cs). Selvitä, miksi väistö ei koske näitä (malli ja sillat OhjelmaKohteissa?).
 
 ## AJON TULOS (lokit/karttaseppa-pariisi-sc4-4c63d8662, kuvat nui-m4 ja nui-m3; sis. 9e2d0edba; kääntyi, 0 virhettä; kerrottu KK:lle ja PT:lle)
