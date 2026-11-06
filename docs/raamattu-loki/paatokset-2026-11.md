@@ -739,3 +739,7 @@ KK 6.11.2026 klo 23.51 omistajan valtuutuksella: Lontoo B kelpaa, jatketaan C:he
 KK 7.11.2026 klo 00.22 omistajan valtuutuksella, kokeena, ei junaan: Invalidit v16 kelpaa. Ero v13|v16 mallin ympärillä on vain koju, joka vaihtoi puolta (64954996 pois, 64955038 tuli nimen viereen). Seuraavaan palaversioon, ajoa 38 viivästyttämättä: Invalidien 68568749, 103202696, 103202709, 1272602675 ja 64955038 pois sekä Opéran aukion lounaiskulman pieni koju, jos nimetön. Opéran kauppa 69226766 jää. Grand Palais v13 -kuvat ajoon 38 parina aamuun, jos eivät viivästytä. NUI: Champs-Élysées-n kuvapallo on ilman nimikylttiä (ajot 35 ja 37).
 
 Lontoon kohdan D1 aika 22.59–00.14 (PK 200433217, 275 Mt).
+
+## PALAT V17 JA LONTOO D1 KELPAAVAT, KK:N PÄÄTÖKSET VALTUUTUKSELLA (7.11.2026 klo 00.35)
+
+KK 7.11.2026 klo 00.25 omistajan valtuutuksella, kokeena, ei junaan: Lontoo D1 kelpaa, jatketaan; puistot koneella, kuva ja siirtymä alueen reunalle, Abbey Roadin paikka, oikea aloitus E:n kuviin. KK klo 00.34 samoin: palat v17 kelpaavat (Riemukaari, Sacré-Cœur ja Concorde 45° parina katsottu; 70° ja ylhäältä katsomatta). KS jatkaa ajolla 39; Grand Palais v13 | v18 aamun koontiin; 25 m:n raja jää omistajan kortille.
