@@ -27,6 +27,12 @@ Kylttikorjaus b3cdf8d6b (natiivi-ui/kyltti-lepo) kulkee Y:n (karttaseppa/ajo-yht
 PT kuittasi: poiminta Y:hyn ajoon 31 KS:n kautta, ei junaan. Ajon 28 kuvan 1 puuttuva Liiku ei ollut vika: nappi on piilossa kerronnan ajan. Käännöstarkistus 0 virhettä, ajamatta.
 Todennus ajosta 31: pyysin KS:ltä kuvan kyltti-kerronta, lisäystä ei ole vahvistettu. Odotus: kuva ennen riviä "ui liiku: esiin", Bastilji näkyy Liikun kohdalla, esteissä ei Liikua, Bastilji piiloon vasta esiin-rivin jälkeen. Kuva esiin-rivin jälkeen = ajo ei todista.
 
+## Jonossa (PT 20.29, omistaja hyväksyi 20.27 Pariisi valmis -listan)
+Aloituslennon uudet kuvat (13.46: Eiffel, Riemukaari, Sacré-Cœur, Notre-Dame, Louvre) kytketään vuorollasi, kokeena, ei junaan. iPad-uusinta ja välke ensin. Kuvat proto-3d/_tyo/codex/pariisi-esittelykuvat-20261105/. Uusia nähtävyyksiä ei lisätä. Ei aloitettu.
+
+## Päivitys kohtaan Odottaa 1
+PT antoi sanan 166378891:lle ajoon 31 (sana KS:lle mennyt). Rajaus: vaikutus vain tallenteeseen, lista kaikkien kuva-rivien jälkeen (KS:lle sanottu), ei junaan. Tarkista ajon 31 skenaariosta, että järjestys pitää.
+
 ## Odottaa, aloittamatta
 Tappien lasku vaakapuhelimelle: vasta, kun UI-sarja on yhdistetty.
 
