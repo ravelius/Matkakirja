@@ -7,8 +7,8 @@ Vika, joka ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa po
 
 ## Juova: yritys 2 tehty (7z), rivi PT:lle lähetetty: kiven oma väri + 5 asteen kulma, ei korjausta. Ei enempää yrityksiä yöllä.
 
-## TEE ENSIN, JU:lla: ajo 7m (PT 7.11.)
-A/aja-levyt7m.zsh, kuvat A/kuvat-levyt7m. Arvioi pystysaumat täysikoossa: näyttävätkö oikeilta pelin korkeudelta, kun ne ovat tasavälein ja voimakkaat? Kohta 1-4 on nyt kuvattu oikein; kohta 1-1 ei näy mistään (mittaa29). Koko muuria ei saa sanoa korjatuksi ennen tätä. Rivi PT:lle. PT kuittasi 7p|7k:n kokeena. Laikku ja leivonta KK:n aamuun.
+## Päivitys 7.11. (7m tehty, rivi PT:lle lähetetty)
+Saumat ovat ohuita pelin korkeudelta, kuten koskemattomissa kivissä; 1-4 korjattu suoralta kameralta. Kohta 1-1: ei reikää, kolo 5 m, 12-17 cm, pohja lattia (mittaa31), kuvaamatta; näkyvyys ja pääsy auki, PT:n sana odottaa. Koejuurta 7k ei ole viety. Sivuhuomiot KORJAUS.md:n lopussa. Jono muuten tyhjä: laikku, leivonta ja koeleivonnan UV-saaret KK:n aamuun.
 
 ## Tila
 - koejuuri-levyt7u (2 jalustaa, 12 kolmiota): korjaus näkyy täysikoossa, PT kuittasi.

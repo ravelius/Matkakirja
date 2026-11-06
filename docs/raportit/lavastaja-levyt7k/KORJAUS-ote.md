@@ -24,3 +24,11 @@ LAIKKU: näkyy B-takakulmassa myös takaa, vaalea violetti kaista jalustan pää
 JUOVA, yritys 2: aja-levyt7z.zsh: sama kamera ja 5 asteen kulma, kuvakulma 20 ja 10 astetta. Jos kivi ja saumat erottuvat, syy on pikselikoko ja kulma; jos eivät, kulma-mip kumoutuu.
 
 ## 07.11. 00.03 PT: pystysaumat pelikameralta, 1-1 ja 1-4 kuvattava (mittaa29.py). Kohta 1-1: sivu x -228,35 on 15 cm:n raossa toista kiveä vasten, ei näy mistään kamerasta. Kohta 1-4: edellinen kamera seinän sisällä; uudet kamerat. Ajo aja-levyt7m.zsh (koejuuri-levyt7k, 6 kuvaa), vuoro JU:lta.
+
+## 07.11. 00.11 JUOVA, yritys 2, kuvat-levyt7z katsottu (zoom 20 täysikoossa pienennettynä, zoom 10 rajaus). Sama 5 asteen kulma, 2-8 x pienempi pikseli: kivikuva näkyy pituussuuntaan venyneenä, ja sauma erottuu ohuena viivana yläpäässä; lattia vieressä terävä. Tulkinta: kuva on olemassa, ja jyrkkä kulma litistää sen; kulma-mip ei ole pääsyy eikä sitä voi sulkea kokonaan pois. Vaaleus on kiven oma väri (yritys 1). Ei geometria-, UV- eikä valokarttavikaa. Ei korjausta. Sivulöydös: 7z:ssä näkyvät kiila ja raita (valokartta), tunnettu.
+
+## 07.11. 00.12 OIKAISU kohta 1-1 (mittaa30.py, z -258): "ei näy mistään" oli väärin; sitä ei mitattu ylhäältä. Kivien välissä x noin -228,54..-228,27 ei ole vaakapintaa ollenkaan, ei lattiaakaan; sivut x -228,5 ja -228,35 ovat vastakkain, ja korkeampi sivu (y 0,24-0,55) voi näkyä yläviistosta. Oma vika: kapea rako ilman pohjaa, tällä poikkileikkauksella. Pituutta ei mitattu, ei kuvattu, ei korjattu.
+
+## 07.11. 00.13 OIKAISU 2 kohta 1-1 (mittaa31.py, kaikki palat): reikää ei ole. Edellinen mittaus luki vain palan 1-1; lattia y 0 tulee palasta 1-0. Rako on kolo: z noin -261,5..-256,5, noin 5 m, leveys 12-17 cm, pohja lattia y 0, reunat y 0,24 ja 0,55. Ajo 7m oli jo käynnissä, joten kolosta ei ole kuvaa; näkyvyys ja pääsy pelaajalle ei mitattu. Ei korjattu.
+
+## 07.11. 00.13 kuvat-levyt7m katsottu (6 kuvaa arkilla, rajaus täysikoossa peli-0-2). Kohta-1-4-suoraan: kivet ja saumat, korjaus näkyy. Kohta-1-4-kuja: kamera liian lähellä seinää, ei tietoa. Kohta 1-1 kuvaamatta. Sivuhuomiot, alkuperä mittaamatta: peli-B pilarissa tumma ristiviiva; peli-0-2-kauempaa vaalea pienkiviraita; peli-A valkoinen raita muurin vierellä.
