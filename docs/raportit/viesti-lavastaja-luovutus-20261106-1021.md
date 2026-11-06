@@ -12,7 +12,8 @@ Uusin juuri `koejuuri-aukot11` = aukot10 + tukot. `koejuuri-aukot10` = aukot9 + 
 - TUKOT: portteja ei ollut yksi vaan KOLME per rakennus: seinät loppuvat noin 1-1,4 m ennen toista seinää. (206): lounas, kaakko, koillinen. (163): luode, lounas, kaakko. (204): luode, kaakko, koillinen. Nähty kuvissa 6; (206) koillinen, (163) luode, (204) luode vain mittauksesta (mittaa11.py). aukot11:ssä 12 jatkopalaa (seinä jatkuu omassa tasossaan kulmaan). Friisi 6:ssa, 6:ssa ei, koska seinälläkään ei ollut. KUVIA EI KATSOTTU.
 
 ## JU:lla, L1, 35140432d, b7 (viesti lähetetty, kuittaus tulee sinulle tai Postivahdin kautta)
-- aja-aukot10u: kuvat-u, vientiehdon tarkistukset: u--144p4-sisalta, -pohjoinen, u--133p4, u--113p1-vika, u--95p2-vika. Kamerat käsin arkista.
+- 10.2x: JU nollautui; 11a ja 11b ajossa, JU:n seuraaja ilmoittaa. Tarkista kansiot, jos riviä ei tule.
+- aja-aukot10u AJETTU 10.20 (exit 0, 404: 5, katsomatta): kuvat-u, vientiehdon tarkistukset: u--144p4-sisalta, -pohjoinen, u--133p4, u--113p1-vika, u--95p2-vika. Kamerat käsin arkista.
 - aja-aukot11a: kuvat-va (5 tukkoa). aja-aukot11b: kuvat-vb (3 näkemätöntä kulmaa, (204) kaakko, (-100,2) itäsauma).
 
 ## Seuraajan järjestys
