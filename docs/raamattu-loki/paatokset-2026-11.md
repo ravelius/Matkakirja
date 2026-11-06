@@ -488,3 +488,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Rakennuspalikkakirjaston ko
 ## PIENI IPAD ON STUDIOLLA, ISO ON RAJOITTAVA (OMISTAJA 6.11.2026 KLO 11.2x) (6.11.2026 klo 11.3x)
 
 OMISTAJAN OIKAISU KK:n välityksellä, sanatarkasti: 'pieni iPad on myös studiolla, olen siis yleensä paikalla aina virkan aikaan ja silloin myös pieni iPad yleensä käytettävissä, jos siitä on apua. mutta teknisesti se on uudempi joten jos pyörii isolla ipadilla niin pyörii varmasti myös pienellä. sitä voi lähinnä käyttää jos on tarve ajaa kahdella yhtä aikaa.' KK: kumoaa 5.11. klo 19.26:n tulkinnan 'pieni kotona' ja käsityksen, että pieni olisi rajoittava laite. Palikkakokeen nopeusmittaus isolla riittää; pieni kahteen rinnakkaiseen ajoon. Raamattu 9.11. PT: 9.13:n muistirajaa (iso hälyttää pienen rajalla) ei tällä muutettu, vaikka perustelu saattaa muuttua; ei tarkistettu.
+
+## PEUKALOKOHDAT VAIN ALUSSA, PALETTI KUUTEEN MALLIIN, SACRÉ-CŒURIN NURMI (OMISTAJA 6.11.2026 KLO 11.39) (6.11.2026 klo 11.4x)
+
+OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: peukalokohdat 'vain alussa ja silloin ne voisivat olla pyöreät ympyräviivat, jotka näkyvät silloin selkeämmin'; paletti kuuteen malliin 'Otetaan (Suositus)'; Sacré-Cœurin mäen nurmi kartan nurmen väriin 'Viedään (Suositus)'. KK: peukalopäätös kumoaa 21.10. klo 08.58:n ja 11.22:n tavallisen tilan osalta; kokemus: selvä rengas alussa, ensimmäisen ohjauksen jälkeen puhdas kuva; opetuksen syke ja rimpuilun hehku ennallaan. Tekijät: peukalot PK; nurmi KS, kokeena. Kuvat KK:n kansioissa peukalo-c9db47578 ja yhteinen-8-b8-1347410ca.
