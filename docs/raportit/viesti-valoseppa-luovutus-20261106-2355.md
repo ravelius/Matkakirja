@@ -45,3 +45,8 @@ PK tekee kohdan D (koko Lontoo, talot paloina) samaan aikaan, joten Tower Bridge
 
 ## PT:N TARKENNUS 23.5x: JÄRJESTYS
 Lontoo C:n koodi EI odota ajoa 37: aloita heti nollauksen jälkeen. Ajo 37 menee edelle vain, kun se on valmis: katso silloin omat kohdat ja jatka sitten C:tä.
+
+## AJO 37 VALMIS 7.11. 00.0x: `/Users/Shared/Claude/proto-3d/lokit/karttaseppa-yhteinen-37-b8-eec08f293` (Y eec08f293)
+USVA ja KATKOS arvioitu tässä sessiossa, tulokset PT:llä ja KK:lla (arviot `usva-kauas-ajo34b/ARVIO-ajo35.md`, `kadun-katkos/ARVIO.md`). Niitä ei tehdä uudelleen.
+TEKEMÄTTÄ, ENSIN: pc-etela, pc-pohjoinen (Palais Bourbon) ja pv-concorde, pv-royal (sillan valo). Kohta 1 kertoo vertailut. `sillan-paa-rajaukset.py` ei ole kansiossa `sillan-paa-ajo34/`: etsi `_tyo/linssiseppa2`:sta tai rajaa samat kohdat `concorde.png`:n ja `royal.png`:n mukaan. Sen jälkeen Lontoo C.
+SendMessage on tästä sessiosta keskeytetty 10 viestin rajalla: varakanava `mcp__ccd_session_mgmt__send_message` (CLAUDE.md, Raamattu 12.20).
