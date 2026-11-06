@@ -462,3 +462,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Louvren ympärillä on litt
 ## PARIISIN TALOJEN UUDET KATOT KOKEENA (OMISTAJA 6.11.2026 KLO 09.30) (6.11.2026 klo 09.3x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Kelpaavatko Pariisin talojen uudet katot kokeena, vaikka noin 17 700 taloa saa tasakaton, myös osa kirkoista?' = 'Kelpaa kokeena (Suositus)'. Palat-v6 jää, ei junaan. Omistajalle kerrottu myös pienten talojen sääntö PT:n sanana; hän ei pysäyttänyt sitä, mutta ei erikseen hyväksynytkään. Kuvat scratchpad/keskustelukanava/kuvat/yhteinen-5-c0bfef077/.
+
+## UNITY-BEETA 6000.7.0b8 KÄYTTÖÖN (OMISTAJA 6.11.2026 KLO 09.32) (6.11.2026 klo 09.3x)
+
+OMISTAJAN PYYNTÖ KK:n välityksellä, sanatarkasti: 'ota unityn uusin beta käyttöön mahd. pian. mitä siinä on uutta?'. KK:n tavoite: pelin ajot ja haarat kulkevat b8:lla heti, kun addae63f2:n käännös, tarkistus ja testit ovat läpi ja yksi lyhyt Mac-kuvasarja näyttää samalta kuin b7:llä; käynnissä olevia ajoja ei pysäytetä. PT:n tulkinta ristiriidasta 6.3 (iPadin muistiajo beetan testikäännöksessä) ja 2.209 (ei iPad-ajoja eikä muistimittauksia juoksupelissä ja Pariisissa ennen valmista): uudempi 2.209 ja tämä pyyntö voittavat tällä kertaa; b8:n muistia ei mitata ennen loppumittausta, ja se on mitattava iPadilla ennen seuraavaa TestFlightiä. KK kertoo riskin omistajalle. 6.3:n App Store -ehto (vain lopullinen versio) ja K63 ennallaan.
