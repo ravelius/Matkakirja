@@ -44,3 +44,10 @@ Odottaa JU:lta (L1, Pariisin ja Lontoon jälkeen): nui-kuvapallo-nimi (36fe37f6a
 ## PÄIVITYS 2, 7.11. 01.0x: VOITTAA YLLÄ OLEVAT
 Kohta 4 VALMIS kokeena: nui-kuvapallo-nimi katsottu, tulos KK:lla, sha PT:llä; viat (ei väistöä, tupla, pieni kaukaa, "Cité") kerrottu; odottaa KK:n sanaa, ei toista yritystä ilman sitä.
 Jäljellä JU:lta vain nui-nimi-tallenne-2 ja nui-yksi-k01f-2 (1596d5e32, L1 NS:n laitekäännöksen jälkeen).
+
+## PÄIVITYS 3, 7.11. 01.05: VOITTAA YLLÄ OLEVAT
+KK:n päätös omistajan valtuutuksella 01.02 (kuvapallo, koe, ei junaan). Tehty 7ffd6ab5f (natiivi-ui/kuvapallo-nimi-2; 1596d5e32 + kartan nimipäätös 98180b82d, 0c544d4ef, c8a71c1cd poimintana + tämä); worktree tässä haarassa; käännös 0 virhettä, AJAMATTA, ajo nui-kuvapallo-nimi-2 JU:lla kahden 1596d5e32-ajon jälkeen.
+1) Kyltin teksti: sulkeiden sisältö tai koko nimi: Bukinistit, Café de Flore, Guimardin metrokäynti, Champs-Élysées, Invalidien kirkko.
+2) Väistö: kyltti vasemmalle, oikealle tai piiloon nähtävyyden kyltin ja pallon mukaan (NostotKartalla.NahtavyysAlla); oma pallo piiloon, jos se osuu nähtävyyteen; palaa vasta 0,3 s vapaana. Pienempi koko kaukaa saa jäädä (KK). 3 riviä: `ui saapumiskuva kyltit` lokiin.
+3) Napautus: nähtävyyden kyltti avaa jutun; näillä viidellä ei ole juttua, joten kyltti avaa kuvan kuten pallo. Pieni muutos. KERRO TÄMÄ KK:LLE. Testattu vain lähetetyllä napautuksella `ui saapumiskuva kyltti <teksti>`, ei oikealla kosketuksella.
+Arvio: kuvat n2-yleis, n2-champs-45, n2-cite-45, n2-napautus → KK:lle (kuvat ja aika, viat leikkaamatta), sha PT:lle. Sama kaksi yrityksen sääntö.
