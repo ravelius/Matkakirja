@@ -64,3 +64,7 @@ Selvitä ensin kerros: se piirtää versaalin PARIISI puoliläpinäkyvänä, kok
 ## PÄIVITYS 5, 7.11. 01.2x (PT): VOITTAA YLLÄ OLEVAT
 Meren tumma suorakaide EI ole työsi: PT vie kuvan KK:n aamun koontiin, meri seis yöllä. Avoin kysymys PT:lle on suljettu.
 k04:n 2. yritys on VIIMEINEN (yön sääntö). Jos se ei auta: rivi KK:lle (vika, kokeiltu, suositus), ei kolmatta yritystä.
+
+## PÄIVITYS 6, 7.11. 01.2x (KK:n päätös omistajan valtuutuksella 01.13): VOITTAA YLLÄ OLEVAT
+Kuvapallot 7ffd6ab5f kelpaavat kokeena: ei enempää työtä näihin viiteen yöllä. Kartan pienet nimet pallon alla KK kertoo omistajalle aamulla. k01f: ei korjausta, ei kolmatta yritystä. Meri ei kuulu sinulle.
+AINOA JÄLJELLÄ OLEVA TYÖ: k04:n 2. yritys, yön viimeinen. Jos ei ratkea: kuva ja syy KK:lle aamun kysymykseksi. Sen jälkeen rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
