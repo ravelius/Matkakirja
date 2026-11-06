@@ -635,3 +635,7 @@ TF-korttia).
 
 SEURAUS: aloituslennon uudet kuvat (13.46: Eiffel, Riemukaari, Sacré-Cœur, Notre-Dame, Louvre) eivät enää seiso 5.11. 16.41:n takia; NUI kytkee ne vuorollaan, kokeena. TF vasta, kun koko Pariisi on
 näytetty ja omistaja on vahvistanut kortilla "Pariisi valmis". Tavoite: pelaaja näkee yhden yhtenäisen Pariisin saapumisesta kartan rakennuksiin, ilman selviä vikoja, ja testiversio voi lähteä.
+
+## RAAMATTU 2.215 TIIVISTETTY, KOKORAJA: LAINAUKSET SIIRRETTY LOKIIN (PT) (6.11.2026 klo 20.36)
+
+Raamattu ylitti testin kokorajan 450 kt (main punainen). Sisältö ei muutu; sanatarkat lainaukset siirretty 2.215:stä tähän. Omistaja 5.11.2026 klo 14.55: "ei haittaa jos kartta menee viivaksi koska siinä näkyy kuitenkin 3d rakennukset. voidaan jättää vaikka 5 asteen kulma maksimiksi. ja tehdään horisontti niin että liikaa kohteita ei näy kerralla". Omistajan tarkoittamat pienet kohteet 14.51: kaaret, vaaka, pieni torni, pylväs ja laiva Notre-Damen vieressä. Omistaja 14.55 (kortti): "mitään pieniä malleja ei saa jäädä." Omistaja 14.57: "kadonneet aarteet voisi näkyä myös kuvina mutta kuvan vieressä voisi olla erilainen kyltti jossa tähti tai erilainen taustaväri josta tunnistaa että on kadonnut aarre"; "leikattuina kuvina" korvattu 21.07:n pyöreällä kuvalla.
