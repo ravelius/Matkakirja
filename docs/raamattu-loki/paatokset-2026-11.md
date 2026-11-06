@@ -729,3 +729,7 @@ KK 6.11.2026 klo 23.47 omistajan valtuutuksella: Jeu de Paume ja Orangerie palaa
 ## ALOITUSLENNON AUKKO: EI KORJAUSTA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.50)
 
 KK 6.11.2026 klo 23.50 omistajan valtuutuksella: aloituslennon aukkoon ei korjausta, verho-ehdotus pois. Peruste: iPad kylmällä välimuistilla (2cba21a3e, 2 ajoa) verho lähti 3,7 s, peitto 100 % koko lennon lokissa; kuvaa pallosta ei ole. Macin 4,3 s:n aukon syy (esikatselusta puuttuu laattapaketti) on päätelmä; NS ajaa vuorollaan yhden Mac-ajon paketin kanssa, jotta se mitataan ja introlle saadaan kuva.
+
+## LONTOO B KELPAA, JATKETAAN C:HEN, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.52)
+
+KK 6.11.2026 klo 23.51 omistajan valtuutuksella: Lontoo B kelpaa, jatketaan C:hen (Big Ben, Tower Bridge, St Paul's), kokeena, ei junaan. Aika B: 22.59–23.46 (02bae0746). Lisäksi lähimmän etäisyyden kuva, Abbeyn väri, Big Benin näkyvyys ja parit oikean rakennuksen kanssa. PT jakaa C:n tekijän.
