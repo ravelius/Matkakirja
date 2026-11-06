@@ -25,3 +25,16 @@ X:t kahden jännevälin ja kerroksen kokoisia (oikeassa yksi): yhden ruudun X ol
 
 ## SEURAAVAKSI
 1. KS:n seuraava ajo: usva (-1310 kohta 1) ja Pompidou-pari. 2. LAV:n s--185p9 ja s--81p1. 3. Siltakuvat ja palettikuvat -1105:n mukaan. 4. Lippu (-1153) KK:n sanaa.
+
+## LISÄYS LUOVUTUKSEN JÄLKEEN: TEE ENSIN
+**KS odottaa vastausta (ei vastattu, Postivahti käski nollautua heti):** "Kuittaatko Eiffelin, ja korjaatko kohdan 4 ennen seuraavaa ajoa? Ajan seuraavaksi 85b-siltakameran ja ND:n samassa ajossa, kun sanot." Vastaa KS:lle ensimmäiseksi (`local_ddd980b0`).
+
+Ajo 16 (897a461de, 9/9, shader error 0), kuvat `_tyo/karttaseppa/parit-yhteinen-16/`, täysikoot `lokit/karttaseppa-yhteinen-16-b8-897a461de`. KS:n tulokset, en ole itse katsonut muuta kuin yhden rajauksen:
+- us-eiffel-75: suurin ero riveillä 200/400/600, ajot 12 → 15 → 16: 6/5/12 → 9/5/7 → 1/0/0. Haamu poissa.
+- us-eiffel-85b: ennallaan (suurin ero 29), torni taivasta tummempi. Kohdan 1 erillinen kysymys KK:lle pätee.
+- po-ita pääty liukenee kuten ajossa 15; pr-pohjoisen täysikokoja KS ei rajannut.
+- UUSI VIKA: us-nd-85 ja us-kauko-85: Notre-Damen julkisivun alaosa on läpikuultava, puu näkyy portaalin läpi, jalassa tumma kaista; puut selvästi mallia tummempia. Ajossa 10 näin ei ollut; ajoissa 11–15 ei näitä kuvia. Näin itse `rajaus-nd85-juuri-ajo10-ajo16.jpg`:ssä saman: yläosa peittävä, alaosa läpinäkyvä samalla etäisyydellä.
+- Epäilys, ei mitattu: läpinäkyvyys tuli db7bc0d30:ssa, ja alaosan suurempi usva näkyy nyt läpinäkyvyytenä. Syytä ei selvitetty; c3c1597ce ei ole poissuljettu. Katso `NotreDameKirkko.shader` ja `NotreDameKirkkoYhteinen.hlsl` haarasta `linssiseppa2/usva` (`Nakyva`). Koodia ei muutettu. Puiden tummuutta ei tutkittu.
+- Kamerat: sk-usva.txt:n vanhat eivät kelpaa (us-eiffel-85: Louvre peittää; us-silta-85: Notre-Dame). Korvaavat 85b-kamerat ajossa 10; siltakamera 48.8569 2.3421 0.008, suunta 113. Ajosta 16 siltojen häivytystä ei voi arvioida.
+
+**KK 13.2x, korjaa edellä sanotun päädyistä:** "pidä päätyjen ristikko mukana, koska se on oikeassa rakennuksessa; ratkaisen sen lopullisesti pelin parista. Kerron omistajalle parin yhteydessä X:ien koon, portaiden kulman, siksakin madaltumisen ja kyltin piilotuksen, joten kirjaa ne parin viestiin." Eli f26fed3af jää, ja nämä neljä kuuluvat parin viestiin.
