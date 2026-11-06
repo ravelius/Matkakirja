@@ -743,3 +743,7 @@ Lontoon kohdan D1 aika 22.59–00.14 (PK 200433217, 275 Mt).
 ## PALAT V17 JA LONTOO D1 KELPAAVAT, KK:N PÄÄTÖKSET VALTUUTUKSELLA (7.11.2026 klo 00.35)
 
 KK 7.11.2026 klo 00.25 omistajan valtuutuksella, kokeena, ei junaan: Lontoo D1 kelpaa, jatketaan; puistot koneella, kuva ja siirtymä alueen reunalle, Abbey Roadin paikka, oikea aloitus E:n kuviin. KK klo 00.34 samoin: palat v17 kelpaavat (Riemukaari, Sacré-Cœur ja Concorde 45° parina katsottu; 70° ja ylhäältä katsomatta). KS jatkaa ajolla 39; Grand Palais v13 | v18 aamun koontiin; 25 m:n raja jää omistajan kortille.
+
+## KK:N PAATOS VALTUUTUKSELLA: BIG BEN OIKEASSA KOOSSA (7.11.2026 klo 00.45)
+
+KK klo 00.45 omistajan valtuutuksella, kokeena, ei junaan: Big Ben oikeassa koossa, ei liioittelua. Muoto ja katto erottuvat. Ajoon c2 lisäksi koko ruudun kuva lähimmältä etäisyydeltä; KK odottaa c2:n kolme paria palat-d3:n jälkeen.
