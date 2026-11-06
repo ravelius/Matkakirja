@@ -1,0 +1,250 @@
+{
+  "notre-dame": {
+    "verified": true,
+    "raysAt5": {
+      "notre-dame-syvyys.glb": {
+        "west-left": 667,
+        "west-right": 667,
+        "side": 589,
+        "portal-depths": [
+          [
+            116.0,
+            115.99999999999999,
+            116.0
+          ],
+          [
+            116.0,
+            115.99999999999999,
+            116.0
+          ]
+        ]
+      },
+      "notre-dame-lod-v2.glb": {
+        "west-left": 235,
+        "west-right": 235,
+        "side": 589,
+        "portal-depths": [
+          [
+            116.0,
+            115.99999999999999,
+            116.0
+          ],
+          [
+            116.0,
+            115.99999999999999,
+            116.0
+          ]
+        ]
+      }
+    },
+    "extentsAfter": [
+      [
+        -120.0,
+        0.0,
+        -140.1026611328125
+      ],
+      [
+        120.0,
+        620.0,
+        139.0
+      ]
+    ],
+    "maxBoundsChangeFromTrial18": 0.1026611328125,
+    "triangles": [
+      19871,
+      1446,
+      3161
+    ],
+    "modelBytes": [
+      3902720,
+      2960932,
+      2997960
+    ],
+    "sha256": "d727752ce39f5349776565240fd33748a52cfef1df63d480fd576e9a8ed7eaa0",
+    "silhouetteOverlapTop": [
+      0.7754842491166566,
+      0.8389031800858215
+    ],
+    "topology": "Finite vertex, UV, tangent and nonzero triangle area checked. All three portal depths matched. Two belfries and lateral shafts admit unobstructed rays at 5 degrees."
+  },
+  "riemukaari": {
+    "task": 2169,
+    "status": "LOCAL_TEXTURE_REPAIR_QA_PASS_AWAITING_SAME_CAMERA_GAME_COMPARISON",
+    "sourceSHA256": "9b2866f00e4ec482e468d29f6f02668a3f2b404d47156b18e8dfe093c6162142",
+    "outputSHA256": "99a3d4eefe0e1ee2699f9560e6347bc061a72c1f3b0d3bbcad33e2a499cd4db0",
+    "geometry": {
+      "changed": false,
+      "trianglesBefore": 1128,
+      "trianglesAfter": 1128,
+      "verticesBefore": 3384,
+      "verticesAfter": 3384,
+      "materialsBefore": 1,
+      "materialsAfter": 1,
+      "dimensionsDelta": [
+        0,
+        0,
+        0
+      ],
+      "roofOutlineDelta": 0,
+      "nonImageBufferViewsByteIdentical": true,
+      "crossingRaysPassed": 43,
+      "crossingRaysTotal": 43
+    },
+    "size": {
+      "beforeBytes": 2237000,
+      "afterBytes": 2092292,
+      "deltaBytes": -144708,
+      "deltaPercent": -6.4688421993741585
+    },
+    "textureChanges": {
+      "wallChromaMultiplier": 0.56,
+      "reliefMidFrequencyGain": 0.58,
+      "reliefFineFrequencyGain": 0.12,
+      "roofNoGrid": true,
+      "roofBaseRGB": [
+        226,
+        216,
+        197
+      ],
+      "interiorBaseRGB": [
+        234,
+        221,
+        199
+      ],
+      "normalSculptureXYMultiplier": 1.65,
+      "normalScaleBefore": 0.65,
+      "normalScaleAfter": 0.85
+    },
+    "measuredDecodedFinalGLB": {
+      "roofMeanRGBBefore": [
+        176.39736938476562,
+        173.12135314941406,
+        161.96875
+      ],
+      "roofMeanRGBAfter": [
+        226.62330627441406,
+        215.9987335205078,
+        199.0992889404297
+      ],
+      "interiorMeanRGBBefore": [
+        185.90882873535156,
+        178.9659881591797,
+        162.9779815673828
+      ],
+      "interiorMeanRGBAfter": [
+        231.4396514892578,
+        219.58181762695312,
+        197.89195251464844
+      ],
+      "roofRGBStdAfter": [
+        0.45763978362083435,
+        0.26495635509490967,
+        1.134865164756775
+      ],
+      "roofNormalXYMaxAbs": 0.0039215686274509665,
+      "sculptureMidFrequencyRMS": [
+        {
+          "rect": [
+            42,
+            554,
+            307,
+            839
+          ],
+          "before": 27.7922267000214,
+          "after": 41.70662277524737
+        },
+        {
+          "rect": [
+            720,
+            554,
+            994,
+            839
+          ],
+          "before": 28.35549057171842,
+          "after": 42.76163417008159
+        },
+        {
+          "rect": [
+            1066,
+            554,
+            1331,
+            839
+          ],
+          "before": 29.901238296072794,
+          "after": 44.391525175959714
+        },
+        {
+          "rect": [
+            1744,
+            554,
+            2018,
+            839
+          ],
+          "before": 27.194507667519574,
+          "after": 40.296589954890386
+        }
+      ]
+    },
+    "sculpture4xMipRMS": [
+      {
+        "rect": [
+          42,
+          554,
+          307,
+          839
+        ],
+        "beforeRMS": 20.520551725212645,
+        "afterRMS": 30.163005014955385,
+        "ratio": 1.4698924969885439
+      },
+      {
+        "rect": [
+          720,
+          554,
+          994,
+          839
+        ],
+        "beforeRMS": 21.02057301716877,
+        "afterRMS": 31.050882064690292,
+        "ratio": 1.4771662998591506
+      },
+      {
+        "rect": [
+          1066,
+          554,
+          1331,
+          839
+        ],
+        "beforeRMS": 23.20524412010129,
+        "afterRMS": 33.638290251776176,
+        "ratio": 1.4495986371734557
+      },
+      {
+        "rect": [
+          1744,
+          554,
+          2018,
+          839
+        ],
+        "beforeRMS": 20.851501254509103,
+        "afterRMS": 29.916425771526168,
+        "ratio": 1.4347372597479902
+      }
+    ],
+    "unchanged": [
+      "POSITION",
+      "NORMAL",
+      "TEXCOORD_0",
+      "indices",
+      "nodes",
+      "meshes",
+      "accessors",
+      "scene and scale/pivot",
+      "opaque alpha mode",
+      "double-sided material",
+      "2048 albedo and 1024 normal texture dimensions"
+    ],
+    "acceptanceBoundary": "Local deliverable with CPU QA complete. Receiver same-camera engine comparison, game integration and owner acceptance remain unverified."
+  },
+  "scope": "Samat paikalliset ortografiset kamerat ennen/jälkeen. Karttasepän uusi pelikoe on erillinen."
+}

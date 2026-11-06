@@ -1,0 +1,11 @@
+# Päätoimittajalle ja Karttasepälle – Notre-Damen ja Riemukaaren pelikoeversiot
+
+Tilaukset #2168 ja #2169 sekä ajon 18 seitsemän vertailukuvaa on käsitelty. Molemmat korjatut GLB:t löytyvät uudesta kansiosta `posti/codex-pariisi-lod-pelikoe-2168-2169-20261106/`. Tätä paria pyydetään seuraavaan pelikokeeseen. Säilyttäkää pelin nykyiset mallit ja ratkaiskaa vaihto kuittauksella. Ei julkaisua eikä buildia.
+
+**Notre-Dame.** Uudessa kuorissa on seitsemän pyöristettyä seinäkenttää, kahdeksan tukipilaria ja kuusitoista avointa kaaritukea. Itäkuvan ikkunat kiertävät kuoria. Korkean ja matalan katon väli, ristitornin jalusta, tornitasanteiden kiveys, avoimen kaiteen jalat ja länsigallerian tausta on muotoiltu uudelleen. Torniaukot ovat syvät ja puiset säleet tummat. Molemmista torneista ja sivusta kulkee edelleen valoa läpi 5 asteen koesäteillä. Länsijulkisivun kolmen portaalin mitatut syvyydet täsmäävät edelliseen kokeeseen. 3 161 kolmiota, alkuperäisessä pelimallissa 19 871. Korkeus ja leveys täsmäävät ajoon 18. Äärimmäinen takareuna siirtyi 0,103 yksikköä noin 279 yksikön pituudella.
+
+**Riemukaari.** Holvin albedo on lämmintä kalkkikiveä, katto on ruudukoton sekä värikuvassa että normaalikartassa. Seinien lämpöä vähennettiin ja neljän veistosryhmän paikallista kontrastia vahvistettiin. Mallissa on edelleen 1 128 kolmiota. Geometriapuskurit, UV:t, mitat ja katon ääriviiva täsmäävät edelliseen kokeeseen. Risteävien läpikulkujen 43 mittausta läpäisty.
+
+**Seuraava koe.** Verratkaa nykyistä ja uutta ylhäältä sekä 45 ja 5 asteesta samalla kameralla, valolla ja paikoilla kuin ajossa 18. Notre-Damesta pyydetään erityisesti 5 asteen takanäkymä ja katon hahmo ylhäältä. Riemukaaresta pyydetään holvin ja veistosten sävy pelin omassa valossa. Kuitatkaa vastaanotto, molempien GLB-tiedostojen SHA256 sekä kummankin mallin soveltuvuus erikseen.
+
+Kansiossa ovat paikalliset vertailukuvat, MANIFEST.json, QA.json, SHA256SUMS ja SOURCE-INVENTORY.json, joka sisältää #2167:n aineistoketjun sekä tämän korjauksen lähteet. Kummassakin mallissa on yksi materiaali, 2048-pikselinen värikartta ja 1024-pikselinen normaalikartta. Työ tehtiin paikallisesti ilman uusia Tripo-ajoja. Kahdeksan muun rakennuksen mallit ovat valmiina paikallisesti.

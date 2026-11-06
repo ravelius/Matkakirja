@@ -1,0 +1,39 @@
+{
+  "version": "Pelikokeen 18 jälkeinen korjaus 1",
+  "sovittu_kaytto": "Vain kartan pelikoe. Uusi versio vanhojen rinnalle. Odottaa Karttasepän vertailua ja päätöstä.",
+  "models": [
+    {
+      "task": 2168,
+      "name": "Notre-Dame",
+      "asset": "notre-dame-lod-v2.glb",
+      "sha256": "d727752ce39f5349776565240fd33748a52cfef1df63d480fd576e9a8ed7eaa0",
+      "bytes": 2997960,
+      "triangles": 3161,
+      "originalTriangles": 19871,
+      "preview": "Notre-Dame-pelikokeen-korjaus.jpg",
+      "changes": "Pyöristetty kuori, kaksikerroksiset kaarituet, tornitasanteet, katot, tuettu länsigalleria ja tummemmat puiset säleet.",
+      "start": "2026-11-06T14:02:49.347220+00:00"
+    },
+    {
+      "task": 2169,
+      "name": "Riemukaari",
+      "asset": "riemukaari-kevyt-2169.glb",
+      "sha256": "99a3d4eefe0e1ee2699f9560e6347bc061a72c1f3b0d3bbcad33e2a499cd4db0",
+      "bytes": 2092292,
+      "triangles": 1128,
+      "originalTriangles": 39106,
+      "preview": "vertailu-ylhaalta-45-5.jpg",
+      "changes": "Kivisävy holviin, ruudukko poistettu, seinien väri ja veistosryhmien kuvakontrasti korjattu.",
+      "start": "2026-11-06T14:02:49.347534+00:00"
+    }
+  ],
+  "inventory": "SOURCE-INVENTORY.json",
+  "quality": "QA.json",
+  "tripoJobs": [],
+  "newCharges": 0,
+  "textureSizesPx": {
+    "color": 2048,
+    "normal": 1024
+  },
+  "sourcesPreserved": true
+}
