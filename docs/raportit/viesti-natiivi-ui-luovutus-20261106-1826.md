@@ -6,8 +6,10 @@ Ei omia ajoja käynnissä. Ei uusia ajoja tilinvaihdon aikana. Ei koodia ennen t
 ## 1. Kylttikorjaus: kuittauspyyntö PT:llä, Les Halles auki
 b3cdf8d6b (natiivi-ui/kyltti-lepo, peilissä natiivi-backup, KS:n 31b1e5a7a:n päällä). Sama muutos kuin Y:n 218aea51e. Levossa ei paluuvaraa. Ei junassa.
 - Tehty: ajo 26 Bastilji näkyy molemmilla reiteillä; KK 17.58 "pari kelpaa"; ajo 28 liikkuva todennus: 6 siirtoa, 6 vaihtoa, ei vaihtoja levossa ilman siirtoa, lopussa näkyy.
-- PT:n vastausta pyyntöön ei ollut 18.26 (viesti jonossa 18.2x). Tarkista list_eventsillä.
-- Junaan vaatii 31b1e5a7a:n, joka ei ole rungossa 603d4213a eikä ui-sarjassa. b3cdf8d6b on kääntämättä omana. Kerrottu PT:lle.
+- PT 18.3x: EI kuittausta vielä. Kuittausta pyydetään ajon 29 jälkeen uudelta PT:ltä. Ehdot, kaikki kolme ennen junaa:
+  1. Riippuvuus ja käännös: b3cdf8d6b vaatii 31b1e5a7a:n, joka ei ole rungossa 603d4213a eikä ui-sarjassa, ja b3cdf8d6b on omana kääntämätön.
+  2. Les Hallesin mittaus (alla) tehty.
+  3. Välke nähty videolla tai ruutusarjalla: 30 vaihtoa ja väli 1 ruutu nopeissa lennoissa (ajo 28) voi näkyä välkkeenä. Lokista lukeminen ei riitä. Keinoa ei ole sovittu eikä tilattu.
 - Temple (PT): jätetään näin, usvaa ei muuteta. Kerrottu KK:lle.
 
 Les Hallesin hallit (PT: kuuluu kuittauksen ehtoihin): näkyy ajossa 20, ei ajossa 26, sama kamera po2-ita. Ei f0384fdbe:stä (koodista luettu). Usvaraja on laskelma, ei mittaus: näkyvyys noin 0,69, raja 0,7, marginaali noin 0,01.
@@ -27,7 +29,7 @@ natiivi-ui/ui-sarja-219 13dab1aac (worktree wt/proto-natiivi-ui-vesinimi, peilis
 Tappien lasku vaakapuhelimelle: vasta, kun UI-sarja on yhdistetty.
 
 ## Havainnot, ei korjattu
-- Ajo 28, muut kyltit: 30 vaihtoa nopeissa lennoissa, väli jopa 1 ruutu, kaikki liikkeessä. Korjaus ei muuta niitä (käytös 31b1e5a7a:n). Näkyvyyttä silmälle ei mitattu. Kerrottu PT:lle.
+- Ajo 28, muut kyltit: 30 vaihtoa nopeissa lennoissa, väli jopa 1 ruutu, kaikki liikkeessä. Korjaus ei muuta niitä (käytös 31b1e5a7a:n). Näkyvyyttä silmälle ei mitattu: kuittausehto 3.
 - Ajo 28, kuva 1: Liiku-tekstiä ei näy, vaikka este on lukemassa. Syytä ei selvitetty. EI kerrottu PT:lle.
 - Katujen nimet eroavat samalla kameralla samassa ajossa. Syytä ei mitattu.
 - E: yli 10 s:n vian syy tuntematon, tuli ainakin kahdesti (14.41 pysty, 61cbc0856 vaaka). Toistossa rinnakkaisia enintään 1, joten kovaa kuormaa ei mitattu.
