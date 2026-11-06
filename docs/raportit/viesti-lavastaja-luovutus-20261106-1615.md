@@ -25,3 +25,6 @@ zsh A/leivo_levyt3.zsh (ei argumentteja = 20 palaa, 3 kuja-/aukiopalaa ovat syml
 - UV-tiheys ei kerro laattakokoa kuvassa: j-0-4:ssä UV/m 1,0 näytti samalta kuin ympäristö. Älä päättele laattakokoa siitä.
 - Kaikki palat -glob poimii myös symlinkit, ja `cp` niiden läpi kirjoittaisi vientipakettiin. Tarkista -L ennen kopiointia. Laske ennen kuin kerrot luvun: 23 tiedostoa, 20 palaa.
 - Sanaa pyytävä rivi send_messagella, ei omaan ikkunaan (PT 14.0x).
+
+## PT:n sana (saatu luovutuksen jälkeen)
+Leivonta 20 palaa JU:lla, ei vientiä. JU:n seuraaja varmistaa järjestyksen iPad-mittausten kanssa. Kun leivonta on katsottu, pyydä kävely- ja törmäystarkistus suoraan PK:lta (renkaat ensin): kerro lattian lasku 0,3-0,7 m ja tarkat palat (kaikki 20: kk-tausta-0-0...3-4; kolmiot tiedostossa A/jaanteet.json ja säännössä A/tee_levyt3.py). Vienti vasta, kun tummat kolmiot, ohut viiva r--265:ssä ja kävely on katsottu.
