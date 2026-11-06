@@ -1,11 +1,12 @@
-# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 19.38 (Mac-14 valmis, lepo, odottaa KK:n sanaa)
+# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 19.45 (KK kyllä, Mac-15 JU:lla, iPad-ajo tilaamatta)
 
 KORVAA KAIKKI VANHEMMAT LUOVUTUKSET, viittausketjua ei ole. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. Session id osoitekirjasta; PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7.
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, haara natiiviseppa/origo-koe d907286cb, peili natiivi-backup. P:n skriptit ja tulokset ovat haaran ulkopuolella.
 
-## Tila 19.38
-- LEPO (PT 19.37). Mac-14 valmis, tulos H/mac14-tulos.md, kuvat H/mac14-kuvat. Ei ajoja käynnissä. Työpuuhun ei tehty muutoksia.
+## Tila 19.45
+- MAC-15 PYYDETTY JU:LTA 19.41 (H/ajopyynto-mac-15.md, H/sk-mac-15.txt, lokit L/natiiviseppa-rakennustarina-mac15-d907286cb, 8 kuvaa t15-*). Kuvia ei vielä tullut. iPad-ajoa EI ole tilattu. Työpuuhun ei tehty muutoksia.
+- Mac-14 valmis, tulos H/mac14-tulos.md, kuvat H/mac14-kuvat.
 - Mac-14: esineet poistettuna ennen origon siirtoa ja luotuna sen jälkeen pystyssä ja paikoillaan (0 px, Pantheon 1 px). Vain seisova kamera, Mac. b:ssä kadunnimet katoavat ja 3 valokuvamerkkiä lisää, syy auki; kartan pohja sama (PT katsonut p-luxembourg.png:n), b:n kartta noin 0,4 px eri kohdassa. JU:n ja PT:n väri- ja tasohavainnot eivät toteutuneet täysikoossa. iPad 5 r4:n tulos pysyy.
 - Korjattu raporttiin: Nimikerros ei ole varmasti kunnossa origolla (selvitys-tulos.md).
 - MAC-SELVITYS VALMIS ILMAN AJOJA, kerrottu PT:lle ja KK:lle 19.25. Raportti H/selvitys-tulos.md, kuva H/m-b-ennuste-vanha-asento.png, työkalut H/projisoi-kallistus.py ja H/kartoita.py, kartoitus H/kartoitus.txt.
@@ -26,10 +27,14 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - KK 12.42: katot EI NYT. Puiden väri ja suhde kelpaavat (omistaja 14.28). 43 palikkasiltaa jää. v6 ee847e1a0e1788df kokeena, ei junaan.
 
 ## SEURAAVA TYÖ, järjestyksessä
-1. ODOTA KK:N SANAA (PT 19.37): PT kysyi KK:lta yhtä iPad-ajoa rakennusten tärinästä. ÄLÄ PYYDÄ AJOA ennen sanaa. Ajoehdotus selvitys-tulos.md luku 4: esineet 0 → origo → esineet 1, r4 A1, B, A2, muistivahti päällä, 0 palaa. Float-pyöristyshypoteesia EI jatketa (PT 19.37).
+1. RAKENNUSTÄRINÄKOE, KK 19.37 KYLLÄ (PT:n kautta): yksi iPad-ajo JU:n jonon lopussa. Yksi kysymys: pieneneekö tärinä, kun rakennukset ja sillat ovat kuvassa? Ehdot lukittu: H/rakennustarina-ehdot.md, lue ensin. Järjestys esineet 0, origo, esineet 1; muistivahti, 0 palaa; keskeytys mistä tahansa syystä = EI TULOSTA, ei uusintaa. 17.05 pysyy: ei C1:tä, D2:ta eikä toteutusta. Float-pyöristyshypoteesia EI jatketa.
+   a) Kun JU palauttaa Mac-15:n: katso 8 kuvaa täysikoossa ja piirrä 9 mittaruutua (hyppy2.py RUUDUT, 1024x768-kuvassa; Macilla kerroin 2,6875). Ehto: rakennus ja silta ruudussa kaikissa vaiheissa ja vähintään yhdessä mittaruudussa koko ikkunan ajan. Lukitse ESINERUUDUT ehtoihin (myös kyltti tai merkki vain A:ssa tai B:ssä = ruutu pois). Mac-14:ssä b:stä katosi katukylttejä ja tuli 3 merkkiä lisää; m-a1:ssä Sainte-Chapellen kyltti osuu lähelle ruutua (704,384).
+   b) Rata ei kelpaa: iPad-ajoa EI ajeta, rivi PT:lle.
+   c) Rata kelpaa: kirjoita H/ajopyynto-ipad-rakennustarina.md iPad 5:n pyynnön mallilla (P/valmis-origo/ajopyynto-ipad-5.md), tilaus JU:n jonon loppuun. Tyhjä indeksi, talot 0, uudet nimet t5-a1, t5-b, t5-a2. Vain r4, ei vetoja. A1: rata r4, odota 40 s, rata r4 uudelleen, odota 22 s, jalki + sarja 3 s heti. B: esineet 0, odota 5, origo, odota 5, esineet 1, odota rivit "koe luotu" 10 alueelle ja "ohjelmakohteet: luotu", rata r4 uudelleen, odota 22 s, jalki + sarja. A2 sama, origo pois. Sama 22 s kaikissa, jotta pituusasteet osuvat päällekkäin. Odotusriveissä vain tunnus, ei lukuja (desimaalipilkku keskeytti iPad 5:n ajon 1).
+   d) Analyysi P/valmis-origo/analysoi-ipad5.py, hyppy2-ruuduittain.py ja patkat-ipad5.py mallilla. Tulos pätkineen KK:lle, rivi PT:lle, myös "ei tulosta". Ei omistajalle ilman KK:n arviota.
 2. C1 ja D2 ODOTTAVAT (PT 19.1x): ne vaativat palikka-ajoja iPadilla, ja mittaus uusitaan, kun Pariisi on valmis ja muistia on kevennetty (omistaja 17.05). Älä kysy niitä uudelleen. C1: GameObject + LOD Group (ei koodattu) + DOTS-tuki varjostimeen + Keep All + static batching pois + peittokarsinta pois; Forward-kopio pois listalta, RD vaatii Forward+:n. D2: B2 + forceMeshLod vs erilliset verkot. Tutkimus 20261106-rakennuspalikat-tutkimus.md, osa E.
-3. Origokoe pysyy suljettuna: ei uusia origo-ajoja iPadilla ilman kohdan 1 sanaa.
-4. "JONO TYHJÄ: Natiiviseppä" lähetetty PT:lle 19.33.
+3. Origokoe pysyy suljettuna: ei uusia origo-ajoja iPadilla muuta kuin kohdan 1 yksi ajo.
+4. Kohdan 1 jälkeen "JONO TYHJÄ: Natiiviseppä" PT:lle.
 
 ## Mitattu, pysyvä
 - Tärinä: iPad 4 A0, 0 palaa, thermal 0: GPU 13 → 29 ms noin 3 min:n kohdalla, huippu 37, 10 min:n tauon jälkeen 11,6; kolmiot ennallaan; seisova kamera kuvaero 0,000. Syy auki. Muistipiikki t 20 s: 3660 (0 palaa) | 4039 (3b); iPad 3b VIKA 4106 ≥ 4080, huippu 4220. Skriptit P/selvitys-muisti-3b/.
