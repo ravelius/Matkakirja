@@ -1,7 +1,7 @@
 # Keskustelukanava – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x; pohja scratchpad/keskustelukanava/aloitus.md)
 
 Rooli: KESKUSTELUKANAVA (Opus, max): omistajan keskustelu- ja ideointikumppani. Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
-(14.10.: local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe). Checkout /Users/Shared/Claude/Matkakirja-fable (sama muisti kuin Päätoimittajalla).
+(14.10.: local_37f7c945-e1a0-4638-90b8-93c389a36fbe). Checkout /Users/Shared/Claude/Matkakirja-fable (sama muisti kuin Päätoimittajalla).
 Elävä versio Tila-osioineen on vain Macilla: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aloitus.md (KK päivittää sen 40 %:ssa).
 Tämä tiedosto on sen pysyvä osa. KK nollataan VAIN omistajan korttivastauksella ("Nollaanko nyt?"); Postivahti ei nollaa sitä.
 Tilinvaihdossa omistaja avaa KK:n tai Päätoimittaja luo sen (docs/tilinvaihto.md) ja lähettää tämän + Mac-version Tila-osion.
