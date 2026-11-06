@@ -552,3 +552,7 @@ Omistaja 6.11.2026 klo 16.46 (KK): kortti "Saavatko Seinen litteät punertavat m
 ## KEVYET MALLIT EI VIELÄ (omistaja 16.53) (6.11.2026 klo 16.54)
 
 Omistaja 6.11.2026 klo 16.53 (KK): kortti "Kelpaako Codexin korjattu Notre-Dame nykyisen tilalle kokeena?" = "Ei vielä (Suositus)": nykyinen pysyy; katon hahmo ylhäältä, irralliset tuet ja tornien vaaleat tikkaat viedään Codexille (#2168). Kortti "Kelpaako Codexin korjattu Riemukaari nykyisen tilalle kokeena?" = omat sanat "riemukaaren sisäosa ei näytä oikealle"; KK:n tulkinta, hänelle kerrottu: ei vielä, nykyinen pysyy, sisäosa Codexille (#2169). Seuraava versio: KS:n pari, KK, omistaja.
+
+## PALIKOIDEN IPAD-MITTAUS ODOTTAA (omistaja 17.05) (6.11.2026 klo 17.06)
+
+Omistaja 6.11.2026 klo 17.05 (KK): kortti "Rakennuspalikoiden iPad-mittaus pysähtyi muistivahdin varmuusrajaan, joten korvaamisen hinta jäi mittaamatta. Miten jatketaan?" = "Mittaus odottaa (Suositus)". Nykyiset talot ja vahti pysyvät. Mittaus uusitaan, kun Pariisi on valmis ja muistia on kevennetty; Macin kuvat jatkuvat. Hylätyt: yksi ajo rajan yli, kevennys nyt. Ei uusia palikka-ajoja iPadilla. Tieto: 4 080 Mt on 80 % noin 5 100 Mt:n kaatorajasta (Raamattu 9.4), vara 44-66 Mt koskee varmuusrajaa, loppumittauksessa raja voi ylittyä ilman palikoitakin.
