@@ -29,6 +29,13 @@ Lukulista: luku 2 kohdat 2.0, 2.1–2.27, 2.59–2.71 ja 2.177:n alku, luku 4 ko
 - **Kuvat KK:lla 17.1x.** KK näyttää omistajalle; **tämä ei ole hyväksyntä. SHA PT:lle vasta omistajan sanan jälkeen.** Sitten poiminta seitsemästä commitista yhdeksi (kohta 0c), `unity-tarkistus`, pohjavahti ja kohta 2.4 (webin OHJAINOPETUS-rivit).
 - L2 vapautettu JU:lle, ei ajoa käynnissä.
 
+## 0e. Lisäys 17.2x, viimeisin tila, korvaa kohdat 0, 0b, 0c ja 0d junan osalta
+**OMISTAJAN PÄÄTÖS 17.16 (KK): renkaat kelpaavat tällä läpikuultavuudella ja menevät avoimeen junaan.**
+- **Junaan `ae161fdb6`:** haara `pelikoodari/renkaat-juna-219` rungon `d092f48cc` päällä, worktree `/Users/Shared/Claude/wt/proto-pelikoodari-renkaat-juna`, ei pushattu. Yhdistää seitsemän committia; `Peukalokohta.cs` ja `ohjainopetus.uss` samat kuin nähdyssä `36aa43ed3`:ssa, `JuoksupeliNakyma.cs`:n loput eroavat rungon takia. `unity-tarkistus` (sh) 0 virhettä, pohjavahti ja tyylikirja-tarkistus ok. Ei omaa peliajoa tästä SHA:sta. SHA PT:llä 17.2x.
+- **Web:** kohta 2.4 tehty, PR https://github.com/ravelius/Matkakirja/pull/6368 (`384b57e74`), odottaa CI:tä ja yhdistämistä. Proton tyylikirjakopio jätettiin generoimatta, koska rungosta puuttuu myös karttapaletti v2; seuraava generointi tuo sen.
+- **`unity-tarkistus.sh` ajetaan sh:lla:** zsh-ajo antaa väärän "0 virhettä", jos vanhat DLL:t ovat paikalla. Aiemmat zsh-ajot eivät siis todista kääntymistä; peliajot ovat toimineet.
+- **Taso 1 on taas pääasia.** Auki: seuraavan juoksupelin ajon mukana kohta 2.3, kartta odottaa LAV:n sanaa.
+
 ## 1. Tehty
 - **OMISTAJAN PÄÄTÖS 16.05 (KK), `8dfc13aaf`:** ulkorengas (leveys 140 pt, viiva 7, keskilinja 133), varjo 11 pt, sisällä nykyinen 64 pt:n rengas. Vasemmalla piste 14 pt (varjo 18), oikealla neljä kulmanuolta luonnoksen mitoin (`Peukalokohta.Merkki`, `Nuolet`). Kaikki ryhmässä `mk-peukalokohta__ohjain`, joka näkyy vain normaalitilassa. Rimpuilu ennallaan. `unity-tarkistus` 0 virhettä, pohjavahti ok. `Peli-testit` ajettu `292afcef2`:ssa 867/867; renkaan jälkeen ei uudelleen, muutos on vain UI:ssa, jota testit eivät käännä.
 - **KK 16.09:** vasen pysyy pisteenä, ei nuolia (spurtti toimii vain viitan kanssa). Omistajalle kerrotaan, etteivät renkaat näytä kaikkea ohjausta.
