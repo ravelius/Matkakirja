@@ -1,0 +1,49 @@
+# LAV 6.11.: reunakiven sivu suoraan ja kulman muutos; pari levyt7 / levyt7u. Ei vientiä.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+ui kierto vaaka
+odota 12
+ui juoksupeli palatsi mallit file:///Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/katot-v125/koejuuri-levyt7/
+ui juoksupeli vapaa 1
+ui juoksupeli botti 0
+ui juoksupeli palatsi kopiot 1
+ui juoksupeli eunukit 0
+ui juoksupeli ajajapito 1
+ui juoksupeli v4
+oleta 240 palatsi v2: peittokartta -- palatsi ladattu
+odota-maailma 180 100
+ui juoksupeli avaus nyt 1
+ui juoksupeli tarkastelu kansio /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot/k-tarkastelu
+ui juoksupeli tarkastelu keisari pois
+ui juoksupeli tarkastelu kamera 321.4 3.9 339 0 50 80
+oleta 120 juoksupeli tarkastelu: alku
+ui juoksupeli tarkastelu kamera 247 1.2 -108.5 180 10
+odota 3
+kuva j3-kiven-sivu-kaukaa
+ui juoksupeli tarkastelu kamera 243.2 0.7 -110.3 180 8
+odota 3
+kuva j3-kiven-sivu-lahelta
+ui juoksupeli tarkastelu kamera 245.3 2.5 -111.7 -90 15
+odota 3
+kuva j3-alkup-kamera
+ui juoksupeli tarkastelu kamera 245.3 2.5 -110.7 -90 15
+odota 3
+kuva j3-kamera-1m-sivuun
+ui juoksupeli tarkastelu kamera 245.3 2.5 -109.7 -90 15
+odota 3
+kuva j3-kamera-2m-sivuun
+ui juoksupeli tarkastelu kamera 262 1.2 -114.5 -90 10
+odota 3
+kuva j3-paaty-ita
+ui juoksupeli tarkastelu kamera 238 1.2 -115 90 10
+odota 3
+kuva j3-paaty-lansi
+ui juoksupeli tarkastelu kamera -84.7 1.2 421.5 0 10
+odota 3
+kuva B-etusivu
+ui juoksupeli tarkastelu kamera -84.8 1.2 431.8 180 10
+odota 3
+kuva B-takasivu
+ui juoksupeli ajajapito 0
+ui juoksupeli pois
+odota 2
