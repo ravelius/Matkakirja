@@ -2,6 +2,12 @@
 
 Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claude/proto-3d, jonoloki T/jono-20261103-ilta.txt. Korvaa aiemmat luovutukset; tämä riittää ilman niitä.
 
+## PÄIVITYS 18.30 (voittaa alla olevan kohdan 2)
+- Pid:t 73037 ja 4456 päättyneet. 12 palaa valmiit 18.26, 19/20. KS 29 92ea0a945 valmis 18.29, 4/4, viety KS:lle.
+- Ajossa vain 37488 (ppid 1): leivo_levyt3_1-2.zsh, alkoi 18.27, 5-10 min. Älä pysäytä kesken: katto on taustassa, kunnes EROTA-vaihe on ohi. Tarkista rivi "LEIVONTA VALMIS kk-tausta-1-2" tai VIKA lokista T/lav-levyt3-12-3c.log ja kuittaa EROTA-rivi LAV:lle ja PT:lle (LAV:n peruutus PT:n sanalla tuli ajon jo alettua).
+- 3c EI lähde: pysäytin ketjun emon. Aja `zsh P/_tyo/linnanrakentaja/muuri/aukot/aja-levyt3c.zsh 1 35140432d` vasta LAV:n seuraajan pyynnöstä, ja kuittaa LEVYT3C AJETTU, polku, 404-määrä.
+- Origokoe (kohta 3a) ei enää odota leivontaa, vain PT:n sanaa vaihdon valmistumisesta.
+
 ## ALOITA TÄSTÄ
 1. `ps`-tarkistus: pid:t 73037 ja 4456 (molemmat ppid 1). Viritä odotin: edellisen session odottimet eivät selviä nollauksesta. Lokit alla.
 2. AJOSSA, irrotettuna:
