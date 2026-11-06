@@ -49,3 +49,9 @@ KK katsoi kaikki 7 kuvaa: näyttää Lontoolta, ei lelumainen, koodipuut käyvä
 ## 8. Lisäys PT 00.3x
 - **Kohta E (vertailu Pariisi | Lontoo samoilta etäisyyksiltä, hinta ja aika, oikealla aloituksella) on sinulle D:n ja C:n jälkeen. F jää jakamatta.**
 - **Abbey Road selvitetty, kohta 7.3 tehty:** natiivin `Resources/Kohdenostot/sijainnit.json` on 28.10. kopio (13b3b9178), jota ei generoitu uudelleen KS:n 3.11. korjauksen (f38d76dd5, #5986) jälkeen. 108 kohdetta yli 100 m väärässä, 12 yli 500 m, 5 yli 2 km; Pariisissa 0, Lontoossa 2. Korjaus: `tyokalut/natiivi-ui/kohdesijainnit.py` + uusin `data/kohdekartat-sijainnit.json`. Kerrottu PT:lle ja KK:lle; PT päättää junan ja tekijän (vastuu NUI:lla), älä tee ilman sanaa. Vertailu mitattu protohaarasta, ei rungosta.
+
+## 9. Lisäys 00.4x: Lontoon paikat päivitetty kokeeseen
+- PT:n käskystä `2fcf9008d` (proton uusi kärki, natiivi-backup, ei junaan): `sijainnit.json`:ssa vain `lontoo:*` uusimmasta datasta (5 paikkaa muuttui, 6 uutta, Thamesin vuorovesi pois). **Abbey Road nyt 51.53206, -0.17737; tarkista kuvasta seuraavassa ajossa** (PT:n ehto, ei vielä nähty). Skenaarioon kuva St John's Woodista, esim. `aja 51.5320 -0.1774 0.02 2`; huom. kohde on talojen rajauksen (51.535) reunalla.
+- Generaattoria ei voinut ajaa sellaisenaan: koko ajo muutti 859 paikkaa (myös Pariisi: Pasteur 1862 siirtyy, 8 uutta, Tuileriain rauniot pois). PT:n ehto oli Pariisi ennallaan, joska rajattu Lontooseen ja kerrottu PT:lle.
+- Kaikkien kaupunkien korjaus ja juna: PT vie KK:lle aamulla, vastuu NUI:lla.
+- Jatka kohdista 3 ja 7 (puistot, itäreuna, aloitus Lontoosta).
