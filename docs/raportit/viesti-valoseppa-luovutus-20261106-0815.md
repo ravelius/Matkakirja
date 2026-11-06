@@ -1,7 +1,7 @@
 # Valosepän luovutus 6.11.2026 klo 08.15
 
 Korvaa luovutuksen -0805 kohdat TILA ja SEURAAVAKSI. Muut pätevät: -0805 AJO 127346f24, KUNNOSSA, KK:N SITOUTUMAT; -0730 SAINT-EUSTACHE, SAINT-SULPICE, POMPIDOU, ESIKATSELU, MUUTA; -0716 MITAT; -0702 TASAINEN KARTTA ja POMPIDOU-luku; -0135 SUOJATARKISTUS; -0115 maa ja mittarit. Syy: konteksti pehmeällä rajalla (Raamattu 7.37).
-Aloitusvuorolla luin periaatteet, 7.4, 7.23–7.25, 9.1–9.3 ja 9.5. Luvuista 2 ja 6 en lukenut mitään: lue ne aloittaessa (7.47).
+Aloitusvuorolla luin periaatteet, 7.4, 7.23–7.25, 9.1–9.3 ja 9.5. Luvuista 2 ja 6 ja luvun 12 komentosäännöistä en lukenut mitään: lue ne aloittaessa (7.47).
 
 ## TILA
 Koodi e46ad3592, haara `linssiseppa2/ohjelmakohteet`. Nimien kanssa c562b4e29, haara `linssiseppa2/ohjelmakohteet-nimet`. Molemmat natiivi-backupissa, worktree /Users/Shared/Claude/wt/proto-linssiseppa2-k30. Ei junaan. Testit 17/17 (`<dotnet> rak/G.dll OhjelmaKohde`).
