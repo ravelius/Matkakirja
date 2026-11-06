@@ -425,3 +425,7 @@ KK: Pompidou ja Tour Montparnasse olivat KK:n suunnitelmissa, vaikka ovat Ranska
 ## RAAMATTU 2.215: KADONNEET AARTEET PYOREINA KUVINA (KK 6.11.2026) (6.11.2026 klo 02.42)
 
 KK pyysi: kohdassa luki yhä 'jäävät leikattuina kuvina (2.11. klo 08.31 pysyy)', vaikka omistajan kortti 5.11. klo 21.07 on 'Pyöreä kuva' (7551a76cc). KK ja NUI luulivat pyöreää kuvaa vian takia. Korjattu uudempaan: 'jäävät pyöreinä kuvina (21.07)'. Faktakorjaus, ei uusi sääntö.
+
+## RAAMATTU 11.8: MONTPARNASSE, POMPIDOU JA TALOKERROS POIKKEUKSINA; JUOKSUPELIN OVET (OMISTAJA 6.11.2026 KLO 06.55) (6.11.2026 klo 06.56)
+
+OMISTAJAN KORTIT KK:n välityksellä, sanatarkasti: 'Tehdäänkö Tour Montparnasse poikkeuksena kuten Louvren pyramidi?' = 'Tehdään (Suositus)'. 'Tehdäänkö Pompidou-keskus poikkeuksena?' = 'Tehdään' (KK suositti: Ei tehdä). 'Poistetaanko tunnetusti suojatut talot Pariisin talokerroksesta?' = 'Jätetään laatikoina' (KK suositti: Poistetaan). 'Aukeavatko juoksupelin ovet sisäänpäin?' = 'Sisäänpäin (Suositus)'. KK kertoi riskin ennen korttia: voi joutua pois ennen App Storea, joten kaikki kolme tarkistuslistalle ja 11.8:n poikkeuksiin. Kuudesta poistetusta sillasta KK kysyy erikseen; ei palautusta ennen vastausta. PT tiivisti tilan vuoksi 11.8:n kaksi lausetta (kaupunkilista lyhennetty), oikaisi 11.10:n Pompidou-esimerkin ja poisti 2.215:stä lauseen 'Pieni iPad päivitetään, kun nämä ovat kasassa (2.214)', koska se on ristiriidassa saman kohdan uudemman omistajan linjauksen 5.11. klo 19.26 kanssa ('pienelle iPadille ei asenneta').
