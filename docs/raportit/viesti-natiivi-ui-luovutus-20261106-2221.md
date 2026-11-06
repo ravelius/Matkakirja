@@ -73,3 +73,7 @@ AUKI, kirjattu PT:lle:
 - Oikea laite ja kylmä kartan levyvälimuisti: ei mitattu.
 Testikomento `ui kuvajumi` ja mittausrivit on poistettava, jos korjaus viedään junaan; poiminta vain PT:n sanalla.
 Kyltit: KS ajaa listan -34 ajossa 34 ja kertoo lokikansion; kohta 3 pätee. Ajon arvio tehdään kyltit33.py:llä (lokit/nui-tahtikyltit-20261106/).
+
+## PÄIVITYS 3: PT k01:stä
+PT: suorakaiteet ovat iso vika pelaajan ensimmäisessä näkymässä; PT kysyy syyn NS:ltä, sinä et korjaa karttaa. KK:lle menevissä kuvissa alku on mukana ja vika kerrotaan viestissä, ei leikata. AIKALEIMA: näkyvät, kauanko suorakaiteet ovat ruudussa.
+Skenaario sk-aloitus-kk.txt muutettu: k01a-k01f peräkkäin heti lennon alusta. Laske aika unity.logista: "ESIKATSELU kuva k01x" rivin edeltävä "mittaus lento: t ... (+x s)". Kuvaväli on noin 1-2 s (kuvakaappaus pysäyttää pelin), joten kesto on arvio. Ei ole kuvatallenne.
