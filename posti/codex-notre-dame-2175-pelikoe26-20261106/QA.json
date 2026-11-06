@@ -1,0 +1,632 @@
+{
+  "geometry": {
+    "file": "notre-dame-2175-exact-palette.glb",
+    "sha256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "triangles": 6687,
+    "vertices": 12649,
+    "drawCalls": 1,
+    "textures": [
+      {
+        "sha256": "6c38235f276fddc55487762e84e33cc40d65415f5977db231f8504aedff7a9fd",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mimeType": "image/jpeg",
+        "bytes": 1132309
+      },
+      {
+        "sha256": "b959d0eae58a45578809b907ee3936f288ca68912e0760fb0764e0a8bcd030f8",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mimeType": "image/png",
+        "bytes": 970203
+      }
+    ],
+    "bounds": [
+      [
+        -120.0,
+        0.0,
+        -140.0663299560547
+      ],
+      [
+        120.0,
+        620.0,
+        139.0
+      ]
+    ],
+    "portalRaysBeforeAfter": [
+      [
+        [
+          116.0,
+          115.99999999999999,
+          116.0
+        ],
+        [
+          116.0,
+          115.99999999999999,
+          116.0
+        ]
+      ],
+      [
+        [
+          116.0,
+          115.99999999999999,
+          116.0
+        ],
+        [
+          116.0,
+          115.99999999999999,
+          116.0
+        ]
+      ]
+    ],
+    "eastButtressDepthErrors": {
+      "5/165": {
+        "previous": {
+          "jointPixels": 10188,
+          "absentPixels": 60,
+          "depthErrorMedian": 0.9254913330078125,
+          "depthErrorP90": 2.4096603393554688,
+          "fullSilhouetteIoU": 0.9626684846443855
+        },
+        "revised": {
+          "jointPixels": 10232,
+          "absentPixels": 16,
+          "depthErrorMedian": 0.6395530700683594,
+          "depthErrorP90": 0.792694091796875,
+          "fullSilhouetteIoU": 0.9707472698269868
+        }
+      },
+      "15/135": {
+        "previous": {
+          "jointPixels": 9749,
+          "absentPixels": 132,
+          "depthErrorMedian": 0.81146240234375,
+          "depthErrorP90": 2.807018995285034,
+          "fullSilhouetteIoU": 0.966125611875568
+        },
+        "revised": {
+          "jointPixels": 9823,
+          "absentPixels": 58,
+          "depthErrorMedian": 0.5117340087890625,
+          "depthErrorP90": 1.0387306213378906,
+          "fullSilhouetteIoU": 0.9719254737377592
+        }
+      },
+      "25/195": {
+        "previous": {
+          "jointPixels": 10356,
+          "absentPixels": 40,
+          "depthErrorMedian": 0.9031486511230469,
+          "depthErrorP90": 2.61236572265625,
+          "fullSilhouetteIoU": 0.9707978432445105
+        },
+        "revised": {
+          "jointPixels": 10389,
+          "absentPixels": 7,
+          "depthErrorMedian": 0.6357269287109375,
+          "depthErrorP90": 0.9146407842636108,
+          "fullSilhouetteIoU": 0.9758001136071837
+        }
+      },
+      "90/0": {
+        "previous": {
+          "jointPixels": 25924,
+          "absentPixels": 968,
+          "depthErrorMedian": 0.441802978515625,
+          "depthErrorP90": 21.107295989990234,
+          "fullSilhouetteIoU": 0.9796803106465598
+        },
+        "revised": {
+          "jointPixels": 26476,
+          "absentPixels": 416,
+          "depthErrorMedian": 0.18634033203125,
+          "depthErrorP90": 2.094287872314453,
+          "fullSilhouetteIoU": 0.9814619247688439
+        }
+      },
+      "45/35": {
+        "previous": {
+          "jointPixels": 3415,
+          "absentPixels": 205,
+          "depthErrorMedian": 1.2862396240234375,
+          "depthErrorP90": 3.547917127609253,
+          "fullSilhouetteIoU": 0.9698253212528463
+        },
+        "revised": {
+          "jointPixels": 3561,
+          "absentPixels": 59,
+          "depthErrorMedian": 0.60491943359375,
+          "depthErrorP90": 1.0913772583007812,
+          "fullSilhouetteIoU": 0.970787495053423
+        }
+      }
+    },
+    "sourceGLB": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/paletti-v2/notre-dame.bytes",
+    "sourceSHA256": "097f32a26a5f1a80045154ed6b26d33a061b4f71d665ec5a15e820d32502a8d3",
+    "scope": "Same-camera ray/depth checks, physical mesh, CPU only. Karttaseppä tests game separately."
+  },
+  "towerChanges": {
+    "removedTriangles": 456,
+    "newTriangles": 2060,
+    "inputTriangles": 4015,
+    "outputTriangles": 5619,
+    "groups": {
+      "tower-deck": 8,
+      "tower-stone": 1720,
+      "tower-return": 248,
+      "tower-wall--1": 42,
+      "tower-wall-+1": 42
+    },
+    "tileSizes": {
+      "tower-stone": [
+        96,
+        96
+      ],
+      "tower-return": [
+        96,
+        96
+      ],
+      "tower-deck": [
+        192,
+        192
+      ],
+      "tower-wall--1": [
+        94,
+        384
+      ],
+      "tower-wall-+1": [
+        94,
+        384
+      ]
+    },
+    "minArea": 1.3200000000000474,
+    "newBounds": [
+      [
+        -120.0,
+        0.0,
+        41.0
+      ],
+      [
+        120.0,
+        540.0,
+        139.0
+      ]
+    ],
+    "protectedBelfryTriangles": 400,
+    "protectedWestFrontTriangles": 304
+  },
+  "rightAndLeftTowerBases": {
+    "tower-plinth--1": {
+      "rawDepthRange": [
+        105.16551495879975,
+        111.51828837848836
+      ],
+      "maxNewSetback": 4.108427362270376,
+      "raysFromSource": 21308,
+      "triangles": 112
+    },
+    "tower-plinth-1": {
+      "rawDepthRange": [
+        105.60376734139969,
+        112.04599097766423
+      ],
+      "maxNewSetback": 3.7833418786089226,
+      "raysFromSource": 21307,
+      "triangles": 112
+    }
+  },
+  "roofData": {
+    "deckValidReferenceTexels": 27422,
+    "deckTexels": 36864,
+    "roofNormalTexels": 28950,
+    "atlasSource": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/paletti-v2/notre-dame.bytes",
+    "sourceSHA256": "097f32a26a5f1a80045154ed6b26d33a061b4f71d665ec5a15e820d32502a8d3"
+  },
+  "paletteValidationOfDeliveredBytes": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/notre-dame-2175-pelikoe26-20261106/work/notre-dame-2175.glb",
+    "source_sha256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "current": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/paletti-v2/notre-dame.bytes",
+    "current_sha256": "097f32a26a5f1a80045154ed6b26d33a061b4f71d665ec5a15e820d32502a8d3",
+    "exact_tool": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/tyokalut/karttapaletti.py",
+    "exact_tool_sha256": "a5fe65ff73f8877256658c675158d3dffd6522cabf7b352e6dab0b65ac1bb99c",
+    "style_sha256": "948bf500adaf86f7a78f25ce0e04e6b6d6c2aab9fc493f068fd3edc575cd00b5",
+    "source_median": [
+      155.0,
+      122.0,
+      89.0
+    ],
+    "current_median": [
+      154.0,
+      119.0,
+      79.0
+    ],
+    "before_multiplier": [
+      1.7252544306670365,
+      1.7535841348733339,
+      1.2522669415655179
+    ],
+    "before": {
+      "osuus": 0.0,
+      "tyhja": 0.0,
+      "Cp99": 0.09820746033742972,
+      "Cmax": 0.10483716185633571,
+      "Lp1": 0.43258033731445644,
+      "Lp99": 0.9051480083924232,
+      "yli_savyt": []
+    },
+    "changed_fraction": 0,
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/notre-dame-2175-pelikoe26-20261106/work/delivered/notre-dame-2175-exact-palette.glb",
+    "output_sha256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "final_median": [
+      155.0,
+      122.0,
+      89.0
+    ],
+    "final_multiplier": [
+      1.7252544306670365,
+      1.7535841348733339,
+      1.2522669415655179
+    ],
+    "after": {
+      "osuus": 0.0,
+      "tyhja": 0.0,
+      "Cp99": 0.09820746033742972,
+      "Cmax": 0.10483716185633571,
+      "Lp1": 0.43258033731445644,
+      "Lp99": 0.9051480083924232,
+      "yli_savyt": []
+    },
+    "palette_pass": true,
+    "note": "Local palette gate only; game visual acceptance remains untested"
+  },
+  "actualPaletteBaselineReplay": {
+    "source": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/codex-lod-20261106/saapunut-v3/notre-dame-2171/notre-dame-2171.glb",
+    "source_sha256": "6c2ae40768d5ce08dd4c744bd5f5ba3ddf57e97c861e808168964ae303655e3b",
+    "current": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/Assets/Matkakirja/Kartta/Resources/NotreDameKoe/paletti-v2/notre-dame.bytes",
+    "current_sha256": "097f32a26a5f1a80045154ed6b26d33a061b4f71d665ec5a15e820d32502a8d3",
+    "exact_tool": "/Users/Shared/Claude/wt/proto-karttaseppa-yhteinen/tyokalut/karttapaletti.py",
+    "exact_tool_sha256": "a5fe65ff73f8877256658c675158d3dffd6522cabf7b352e6dab0b65ac1bb99c",
+    "style_sha256": "948bf500adaf86f7a78f25ce0e04e6b6d6c2aab9fc493f068fd3edc575cd00b5",
+    "source_median": [
+      196.0,
+      164.0,
+      123.0
+    ],
+    "current_median": [
+      154.0,
+      119.0,
+      79.0
+    ],
+    "before_multiplier": [
+      1.0244364779399768,
+      0.919299838825441,
+      0.6315964287969124
+    ],
+    "before": {
+      "osuus": 0.0558770422259447,
+      "tyhja": 0.0,
+      "Cp99": 0.1116371256841786,
+      "Cmax": 0.12434168859993029,
+      "Lp1": 0.46405300725471027,
+      "Lp99": 0.8828293017866918,
+      "yli_savyt": [
+        65.43463519472726,
+        68.93876229311178,
+        72.05908564407082
+      ]
+    },
+    "changed_fraction": 0.3678903579711914,
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/notre-dame-2175-pelikoe26-20261106/work/palette/replay2171/notre-dame-2171-exact-palette.glb",
+    "output_sha256": "2a8674295c7497efab004f97a1ffc5ef08a2b96917bc9ec48f65b14b76d18868",
+    "final_median": [
+      196.0,
+      164.0,
+      126.0
+    ],
+    "final_multiplier": [
+      1.0244364779399768,
+      0.919299838825441,
+      0.5996057878034785
+    ],
+    "after": {
+      "osuus": 3.0914626396739995e-05,
+      "tyhja": 0.0,
+      "Cp99": 0.10222539019001271,
+      "Cmax": 0.10867848568595449,
+      "Lp1": 0.46417560914562717,
+      "Lp99": 0.8823653068585939,
+      "yli_savyt": [
+        64.74702742550413,
+        68.60462012543715,
+        74.37134800764996
+      ]
+    },
+    "palette_pass": true,
+    "note": "Local palette gate only; game visual acceptance remains untested"
+  },
+  "sameCameraCpu": {
+    "candidate_sha256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+    "size": 520,
+    "views": {
+      "top": {
+        "trial2171": {
+          "silhouette_iou": 0.980692334673394,
+          "regions": {
+            "stone": {
+              "pixels": 112872,
+              "median_rgb": [
+                234.0,
+                194.0,
+                128.0
+              ],
+              "current_median_rgb": [
+                234.0,
+                199.0,
+                143.0
+              ],
+              "mean_oklab_distance": 0.08665563958068867,
+              "median_delta_L": -0.051591879818222997
+            },
+            "roof": {
+              "pixels": 55061,
+              "median_rgb": [
+                131.0,
+                119.0,
+                71.0
+              ],
+              "current_median_rgb": [
+                147.0,
+                145.0,
+                100.0
+              ],
+              "mean_oklab_distance": 0.09588159358071173,
+              "median_delta_L": -0.0951132787450849
+            }
+          }
+        },
+        "candidate": {
+          "silhouette_iou": 0.9822135666735,
+          "regions": {
+            "stone": {
+              "pixels": 109171,
+              "median_rgb": [
+                240.0,
+                209.0,
+                144.0
+              ],
+              "current_median_rgb": [
+                236.0,
+                201.0,
+                145.0
+              ],
+              "mean_oklab_distance": 0.051287604073515736,
+              "median_delta_L": -0.007338722974899126
+            },
+            "roof": {
+              "pixels": 57131,
+              "median_rgb": [
+                153.0,
+                149.0,
+                99.0
+              ],
+              "current_median_rgb": [
+                147.0,
+                145.0,
+                100.0
+              ],
+              "mean_oklab_distance": 0.03260188528202403,
+              "median_delta_L": 0.010242767718372292
+            }
+          }
+        }
+      },
+      "front5": {
+        "trial2171": {
+          "silhouette_iou": 0.9497375558284196,
+          "regions": {
+            "stone": {
+              "pixels": 68863,
+              "median_rgb": [
+                183.0,
+                141.0,
+                89.0
+              ],
+              "current_median_rgb": [
+                183.0,
+                148.0,
+                102.0
+              ],
+              "mean_oklab_distance": 0.12224238140651576,
+              "median_delta_L": -0.02650419697524442
+            },
+            "roof": {
+              "pixels": 196,
+              "median_rgb": [
+                147.0,
+                130.0,
+                76.0
+              ],
+              "current_median_rgb": [
+                137.0,
+                132.0,
+                89.0
+              ],
+              "mean_oklab_distance": 0.053326286512628975,
+              "median_delta_L": -0.003712718466794551
+            }
+          }
+        },
+        "candidate": {
+          "silhouette_iou": 0.9555009004650162,
+          "regions": {
+            "stone": {
+              "pixels": 69781,
+              "median_rgb": [
+                195.0,
+                157.0,
+                104.0
+              ],
+              "current_median_rgb": [
+                183.0,
+                148.0,
+                102.0
+              ],
+              "mean_oklab_distance": 0.12291385291561546,
+              "median_delta_L": -0.0017853442175516099
+            }
+          }
+        }
+      },
+      "rear5": {
+        "trial2171": {
+          "silhouette_iou": 0.9558484007367247,
+          "regions": {
+            "stone": {
+              "pixels": 67375,
+              "median_rgb": [
+                180.0,
+                139.0,
+                87.0
+              ],
+              "current_median_rgb": [
+                182.0,
+                148.0,
+                102.0
+              ],
+              "mean_oklab_distance": 0.10879811811907387,
+              "median_delta_L": -0.03377490486154
+            },
+            "roof": {
+              "pixels": 3783,
+              "median_rgb": [
+                137.0,
+                125.0,
+                75.0
+              ],
+              "current_median_rgb": [
+                164.0,
+                162.0,
+                112.0
+              ],
+              "mean_oklab_distance": 0.1099831621870696,
+              "median_delta_L": -0.11280574649449093
+            }
+          }
+        },
+        "candidate": {
+          "silhouette_iou": 0.9624250568534215,
+          "regions": {
+            "stone": {
+              "pixels": 68032,
+              "median_rgb": [
+                178.0,
+                142.0,
+                91.0
+              ],
+              "current_median_rgb": [
+                182.0,
+                148.0,
+                102.0
+              ],
+              "mean_oklab_distance": 0.09294600181437587,
+              "median_delta_L": -0.025548951282171523
+            },
+            "roof": {
+              "pixels": 3706,
+              "median_rgb": [
+                165.0,
+                160.0,
+                106.0
+              ],
+              "current_median_rgb": [
+                165.0,
+                163.0,
+                113.0
+              ],
+              "mean_oklab_distance": 0.0351718507995036,
+              "median_delta_L": -0.006408370101505967
+            }
+          }
+        }
+      },
+      "front45": {
+        "trial2171": {
+          "silhouette_iou": 0.9696418689224444,
+          "regions": {
+            "stone": {
+              "pixels": 82660,
+              "median_rgb": [
+                173.0,
+                137.0,
+                86.0
+              ],
+              "current_median_rgb": [
+                190.0,
+                155.0,
+                108.0
+              ],
+              "mean_oklab_distance": 0.13353629402217065,
+              "median_delta_L": -0.04766236816364705
+            },
+            "roof": {
+              "pixels": 1665,
+              "median_rgb": [
+                145.0,
+                133.0,
+                79.0
+              ],
+              "current_median_rgb": [
+                175.0,
+                173.0,
+                119.0
+              ],
+              "mean_oklab_distance": 0.1237856977635925,
+              "median_delta_L": -0.12580446867692896
+            }
+          }
+        },
+        "candidate": {
+          "silhouette_iou": 0.971247766025605,
+          "regions": {
+            "stone": {
+              "pixels": 82867,
+              "median_rgb": [
+                185.0,
+                148.0,
+                97.0
+              ],
+              "current_median_rgb": [
+                191.0,
+                155.0,
+                108.0
+              ],
+              "mean_oklab_distance": 0.12431041345670295,
+              "median_delta_L": -0.016257280122238815
+            },
+            "roof": {
+              "pixels": 1728,
+              "median_rgb": [
+                175.0,
+                171.0,
+                113.0
+              ],
+              "current_median_rgb": [
+                175.0,
+                173.0,
+                119.0
+              ],
+              "mean_oklab_distance": 0.028967102670689922,
+              "median_delta_L": -0.004651741557373079
+            }
+          }
+        }
+      }
+    },
+    "limitation": "CPU approximation; common orthographic cameras; actual albedo+linear tint+hemisphere+sun+Neutral and cotangent normal maps; bilinear sampling, no game fog/perspective/mips/map background."
+  },
+  "methodLimit": "Colours are a CPU approximation of the project shader using the actual imported material maps and multipliers. The Unity map, fog, perspective and mip selection are decided in the receiver game trial."
+}

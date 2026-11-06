@@ -1,0 +1,29 @@
+{
+  "task": 2175,
+  "type": "static-building",
+  "file": "notre-dame-2175.glb",
+  "sha256": "7f7e40310a6e86946ed9b5cb81154a3f9712ba124175622e2837ec74efc1cf98",
+  "bytes": 2751696,
+  "triangles": 6687,
+  "sourceGameTriangles": 19871,
+  "vertexCount": 12649,
+  "materials": 1,
+  "textures": {
+    "color": 2048,
+    "normal": 1024
+  },
+  "state": "DELIVERY_FOR_KARTTASEPPA_GAME_TRIAL",
+  "scope": "Notre-Dame only, current game model held pending KK/owner review",
+  "paletteGainForDeliveredGLB": [
+    1.7252544306670365,
+    1.7535841348733339,
+    1.2522669415655179
+  ],
+  "paletteGateAlreadyPasses": true,
+  "verifiedGameConversionByteChanges": 0,
+  "sources": "SOURCE-INVENTORY.json",
+  "qa": "QA.json",
+  "preview": "Notre-Dame-2175-vertailu.jpg",
+  "start": "2026-11-06T16:15:46.387707+00:00",
+  "paidJobs": []
+}
