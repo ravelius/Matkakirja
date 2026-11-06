@@ -51,3 +51,12 @@ KK:n päätös omistajan valtuutuksella 01.02 (kuvapallo, koe, ei junaan). Tehty
 2) Väistö: kyltti vasemmalle, oikealle tai piiloon nähtävyyden kyltin ja pallon mukaan (NostotKartalla.NahtavyysAlla); oma pallo piiloon, jos se osuu nähtävyyteen; palaa vasta 0,3 s vapaana. Pienempi koko kaukaa saa jäädä (KK). 3 riviä: `ui saapumiskuva kyltit` lokiin.
 3) Napautus: nähtävyyden kyltti avaa jutun; näillä viidellä ei ole juttua, joten kyltti avaa kuvan kuten pallo. Pieni muutos. KERRO TÄMÄ KK:LLE. Testattu vain lähetetyllä napautuksella `ui saapumiskuva kyltti <teksti>`, ei oikealla kosketuksella.
 Arvio: kuvat n2-yleis, n2-champs-45, n2-cite-45, n2-napautus → KK:lle (kuvat ja aika, viat leikkaamatta), sha PT:lle. Sama kaksi yrityksen sääntö.
+
+## PÄIVITYS 4, 7.11. 01.1x: VOITTAA YLLÄ OLEVAT
+Kaikki JU:n ajot valmiit ja katsottu, tulokset KK:lla ja PT:llä. Ei ajoja jonossa.
+- Kohdat k05, k12–k13: valmiit. k01f: valmis, 2 yritystä, raja ei näy kuvassa kello 07.17, ei korjausta.
+- Kuvapallo 7ffd6ab5f: valmis kokeena, odottaa KK:n sanaa. Jää: Café de Flore'n pallo kartan nimen päällä.
+- AVOIN KYSYMYS PT:lle: tumma suorakaide merellä (nui-yksi-k01f-2/v-k01f.png), kenelle. Odota vastausta, älä korjaa itse.
+## SEURAAVA TYÖ: k04, iso PARIISI, 2. ja viimeinen yritys
+1. yritys 1596d5e32 EI AUTTANUT: tummien pikselien käyrä lähes sama (nui-nimi-tallenne vs -2, kuvat 70–124; mittaus scratchpadin nimi2.py: tummat < 125 ja x-laajuus, rivit 90...h-140). Nimi ei siis ole r.suurkaupunki-rivi Nimikerroksessa, eikä sääntö "kokonaan ruudulla" koske sitä. Poista 1596d5e32:n rivi (Nimikerros.cs) 2. yrityksessä.
+Selvitä ensin kerros: se piirtää versaalin PARIISI puoliläpinäkyvänä, koko kasvaa kameran laskiessa ja katoaa noin kuvaan 109 (tallenne, 50 fps). Ehdokkaat: Nimikerroksen muu luokka (rivin syy: Nimikerros.cs rivi 872 tuloste, komento `nimet`), KaupunkiMerkit, Merkittavat.cs:61, PiirrosKerros tai UiNakymat.cs:476 OtsikkoVaistaa (otsikko saapuessa, d31fc8676). Jos se on tarkoituksellinen otsikko, älä poista: rajoita niin, ettei ylitä ruutua, tai kysy KK:lta. Käytä `git log -S` ja haku "versaali/Otsikko". Korjaus haaraan 7ffd6ab5f:n päälle, JU:n vuorolla sk-nimi-tallenne.txt, kansio lokit/nui-nimi-tallenne-3; rivi "laattapalvelin: paketti". Jumi: rivi KK:lle ja JONO TYHJÄ PT:lle.
