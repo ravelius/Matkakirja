@@ -647,3 +647,21 @@ KK:n kortti 6.11.2026 klo 20.41: "Tehdäänkö Lontoon nähtävyydet ensin pelk�
 Omistaja 17.33: "julkaise TF kun pariisi valmis ja siirry sitten tekemään lontoota. sen voisi tehdä ensin kokonaan ilman tripoa ja kokeilla kuinka hyvän siitä saa sillä tavalla ja kuinka nopeasti se menee."
 
 Suunnitelma: KK:n scratchpad/keskustelukanava/suunnitelmat/20261106-lontoo-ilman-tripoa.md (korvaa kaupungit-avoimesta-datasta.md:n osat A-F). Ei roolien työtä ennen TF:ää. PT kirjaa ajan ensimmäisestä työstä alkaen. Tavoite: pelaaja näkee oikean Lontoon omilla paikoillaan ilman saumoja, ja omistaja voi Pariisin rinnalla päättää, kumpi tapa kannattaa muille kaupungeille.
+
+## TÄRINÄKOE VIELÄ KERRAN, LOUVREN KULMAN USVA, KEVYT NOTRE-DAME (omistaja 20.58, KK:n kortit) (6.11.2026 klo 20.59)
+
+KK:n kortit 6.11.2026 klo 20.58.
+
+1) "Ajetaanko tärinäkoe vielä kerran niin, ettei hetkellinen muistipiikki pysäytä ajoa?" = "Yksi uusi ajo (Suositus)". Korvaa KK:n 19.37:n "keskeytys = ei uusintaa" vain tämän yhden ajon osalta. NS
+kirjoittaa ehdot ja lukitsee ne ennen ajoa: piikki saa tulla vain esineiden uudelleenluonnissa; muisti takaisin alle 4 080 Mt ennen sarjan alkua; VIKA tai varoitus sarjan aikana, kaatuminen tai muu
+keskeytys = EI TULOSTA, ei enää uusintaa. Samat kolme ikkunaa ja tulossääntö. Omistajalle kerrottu riski: sovellus voi kaatua. Jos ajo ei onnistu ilman koodimuutosta tai NS näkee esteen, rivi KK:lle
+ennen ajoa. JU:n jonon loppuun. Tavoite: tiedämme, tärisevätkö rakennukset vähemmän, ennen kuin isosta korjauksesta päätetään.
+
+2) "Kelpaako Louvren 45 asteen kulma kokeena näin vähäisellä usvalla?" = "Kelpaa (Suositus)". VS b3bff978f, koe, ei junaan. Omistajalle kerrottu: paljon pieniä nimiä yläreunassa, Opéran kyltti
+painikkeiden alla, usva palaa nopeasti 60–70°, lataussäde mittaamatta.
+
+3) "Viedäänkö kevyt Notre-Dame eteenpäin kolmella korjauksella: kivi himmeämmäksi, fleche vihreäksi ja tornit leveämmiksi?" = "Korjataan (Suositus)". KS: viat Codexille ja kiven sävy pelin puolelta,
+jos se riittää. Tornien mittari G-kuva ja omistajan tilaus 1,25. Nykyinen pysyy, kunnes omistaja on nähnyt korjatun ja se kelpaa. Tavoite: kevyt Notre-Dame istuu kartalle Sainte-Chapellen rinnalla
+eikä menetä tornien liioittelua.
+
+Pont d'Iéna: näytetty, eteläpää pyöreä kerrottu; KS korjaa tai palaa, jos korjaus ei ole pieni.
