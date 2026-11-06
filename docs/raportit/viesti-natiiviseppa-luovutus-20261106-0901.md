@@ -3,6 +3,10 @@
 Korvaa -0839:n. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja. Luo ensin cron "4 9 * * *" uudelleen (Raamattu 7.41; proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py): ajastus kuolee sessionnollauksessa. Tämän päivän 09-tarkistusta ei ajettu.
 
 ## SEURAAVA TYÖ
+0. ENSIN, PT 09.0x (ehto "aito pieni kohde ei madallu" ei täyty; ennen v5:n ajoa, ilman omaa ajoa; tulos KK:lle ja PT:lle):
+   - Nimetyt madaltuneet läpi yksitellen, ei vain listana (palat-v5-nd-ranta.muutokset.json, kentät nimi, ennen, nyt; 59 kpl). Octroi de Neuilly way/81203962 15 → 3,5 m on aito kohde (PT). Sellaiset oikeaan korkeuteen tai pois säännöstä. Katso myös nimettömät erikoislajit (civic, government, public).
+   - 223 ylös noussutta: onko uusi pylväs. Suurin way/73112440 ja rinnakkaiset way/73113705, way/73117340 (noin 10 m², 15 → 36,2 m, 48.8956 2.4079) sekä height-merkityt way/78534896, way/78535883 (noin 9 m², 3 → 15 m). Tarkista, onko talo kiinni tornissa vai irrallaan; irrallinen on pylväs.
+   - Muutos koodiin tarkoittaa UUTTA kansiota (esim. palat-v6-nd-ranta), koska KS:llä on v5:n polku. KS:lle sanottu 09.0x: älä aja v5:llä ennen seuraajan sanaa. Kerro uusi kansio KS:lle.
 1. Tarkista viestit: KK:lta ja PT:ltä voi tulla vastaus v5:een (tasakattojen hinta, pylväät, kuopat).
 2. Arvioi ajo 4: `/Users/Shared/Claude/proto-3d/lokit/karttaseppa-yhteinen-4-0b4d74011` (KS:n viesti 08.5x; v4:n ajo, EI v5).
    - sc-80: läikkä täysikoossa x 1485–1685, y 1840–1955, vertaa ajoon 127346f24 (KS ei verrannut). Read pienentää yli 2000 px:n kuvat: rajaa ensin. Seinän väri ja rinteiden sivuvaikutukset.
