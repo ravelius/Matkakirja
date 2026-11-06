@@ -544,3 +544,7 @@ Omistaja 6.11.2026 klo 16.08 (KK): kortti "Riittääkö Pompidoun siksak tällai
 ## PEUKALORENKAAT KELPAAVAT (omistaja 16.20) (6.11.2026 klo 16.21)
 
 Omistaja 6.11.2026 klo 16.20 (KK): kortti "Kelpaavatko peukalorenkaat näin?" (PK 8dfc13aaf, kuvat esikatselu-20261106-160909 ja -161433) = "Kelpaavat (Suositus)". Avoimeen junaan, kun iPhonen 10 pt:n turva-aluesiirto on tehty; PK:lle kerrottu. Näkemättä, omistajalle kerrottu: häivytys liikkeessä, oikea laite.
+
+## SEINEN LITTEÄT MUODOT POIS (omistaja 16.46) (6.11.2026 klo 16.47)
+
+Omistaja 6.11.2026 klo 16.46 (KK): kortti "Saavatko Seinen litteät punertavat muodot lähteä kartalta, myös Bercyn suurempi, sijainnista päätellen uimala?" = "Kaikki pois (Suositus)". Selite: laivat, uimala ja muut isot litteät muodot lähtevät joesta; Karttaseppä katsoo isot kuvista ensin, ettei oikea rakennus lähde. Tavoite: Seine näyttää vain vedeltä. Kuva KK:lle ja omistajalle ennen junaa. Kumoaa 09.3x:n "litteät muodot jäävät". Auki ja omistajalle kerrottu: haalea raita (syy auki), koko jokea ei kuvattu, 15/63 palaa laskematta, koko maailman uudelleenpiirto selvitetään paikalliseksi kuten -sillat1.
