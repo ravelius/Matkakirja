@@ -484,3 +484,7 @@ OMISTAJAN PYYNTÖ klo 10.47 kortilla 'Miten kevyt puumalli tehdään?', sanatark
 ## PALIKKAKIRJASTO: EUROOPPA JA MOSKEIJA ENSIN (OMISTAJA 6.11.2026 KLO 11.22) (6.11.2026 klo 11.2x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Rakennuspalikkakirjaston kokeen jälkeen: mistä palikoista kirjasto aloitetaan?' = 'Eurooppa ja moskeija (Suositus)'. Muut maanosat lisätään samaan kirjastoon, kun niiden vuoro tulee. Ei ostoja nyt (KK:n suositus kerrottu, ostokielto ennallaan). Koe etenee KK:n suunnitelman 20261106-rakennuspalikat-tutkimus.md osan E mukaan, tekijä NS, haara natiiviseppa/palikka-koe, ei junaan. KK:n tulkinta 10.47:n pyynnöstä: koe saa käyttää isoa iPadia nopeuteen poikkeuksena 2.209:ään, koska Mac käyttää eri piirtotapaa; omistajalle kerrottu. Muistimittauksia ei ajeta.
+
+## PIENI IPAD ON STUDIOLLA, ISO ON RAJOITTAVA (OMISTAJA 6.11.2026 KLO 11.2x) (6.11.2026 klo 11.3x)
+
+OMISTAJAN OIKAISU KK:n välityksellä, sanatarkasti: 'pieni iPad on myös studiolla, olen siis yleensä paikalla aina virkan aikaan ja silloin myös pieni iPad yleensä käytettävissä, jos siitä on apua. mutta teknisesti se on uudempi joten jos pyörii isolla ipadilla niin pyörii varmasti myös pienellä. sitä voi lähinnä käyttää jos on tarve ajaa kahdella yhtä aikaa.' KK: kumoaa 5.11. klo 19.26:n tulkinnan 'pieni kotona' ja käsityksen, että pieni olisi rajoittava laite. Palikkakokeen nopeusmittaus isolla riittää; pieni kahteen rinnakkaiseen ajoon. Raamattu 9.11. PT: 9.13:n muistirajaa (iso hälyttää pienen rajalla) ei tällä muutettu, vaikka perustelu saattaa muuttua; ei tarkistettu.
