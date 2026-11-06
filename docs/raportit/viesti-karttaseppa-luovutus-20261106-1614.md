@@ -3,7 +3,7 @@ Syy: konteksti yli 25 %, luonteva tauko: laikka tehty, ei omaa ajoa käynnissä.
 
 ## ENSIN
 1. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
-2. Ei avointa ajoa. Odotat Codexin korjattuja kevyitä malleja tai uusia tilauksia. Viesti Temple- ja Bastilji-syystä ja laikkaehdon tiukennuksesta on PT:llä.
+2. **UUSI POSTI, KÄSITTELEMÄTTÄ: a81cf72dc klo 16.14, Notre-Damen ja Riemukaaren korjatut pelikoeversiot #2168 ja #2169.** Vahti merkitsi sen luetuksi, joten se ei ilmoita uudelleen. Tee tämä ensin: lue `git show a81cf72dc` postilaatikkohaarasta, aja tuontiportti (kohta Kevyet mallit) ja tilaa ajo 23 mallien parilla ja lisällä lisa-23.txt. Ei avointa ajoa. Viesti Temple- ja Bastilji-syystä ja laikkaehdon tiukennuksesta on PT:llä.
 3. Etäyhteys on nyt vain KK:lla (Raamattu 7.9, PT): älä kytke sitä itsellesi.
 4. Hookin työlistarivit (Concorde, lähialue, saumat): en päivittänyt, työkalu on PT:n ja omistaja epäselvä.
 
