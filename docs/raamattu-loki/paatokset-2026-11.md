@@ -454,3 +454,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Otetaanko Notre-Damen ranta
 ## CONCORDEN AUKIO KOKEENA ILMAN MALLIN OMAA MAATA (OMISTAJA 6.11.2026 KLO 09.07) (6.11.2026 klo 09.0x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Kelpaako Concorden aukio kokeena ilman mallin omaa maata?' = 'Kelpaa kokeena (Suositus)'. KK:n tavoite: obeliski, suihkulähteet ja pylväät kartan päällä ilman harmaata maata; ei junaan; muisti mittaamatta; Lähteet-rivi, jos jää peliin. Kuvat scratchpad/keskustelukanava/kuvat/yhteinen-4-0b4d74011/. PT välitti Valosepälle seuraavaan yhteiseen ajoon.
+
+## LOUVREN YMPÄRILLE KORTTELIT JA TALOT KOKEENA (OMISTAJA 6.11.2026 KLO 09.20) (6.11.2026 klo 09.2x)
+
+OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Louvren ympärillä on litteä alue, koska hyväksymällesi alueelle ei ole vielä maalausta. Kokeillaanko sen tilalle kortteleita ja taloja, kuten Notre-Damella?' = 'Kokeillaan (Suositus)'. Kokeena, ei junaan, seuraavaan yhteiseen ajoon. Kumoaa 5.11. klo 08.11:n ison alueen v2:n vain kokeen ajaksi; Codexin pohjaa ei tilata sen aikana. KS tekee maskin, NS uuden kansion. Omistajalle kerrottu: tunnetut voivat näkyä tavallisina taloina, talot voivat osua malliin pohjoissivulla, enintään 942 taloa lisää.
