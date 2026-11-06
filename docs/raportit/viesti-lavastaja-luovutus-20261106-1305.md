@@ -21,8 +21,13 @@ Pohja: -1251:n ja -1233:n Opetukset ja Työkalut pätevät (samassa haarassa). T
 ## LISÄYS 13.0x: pari3 ajettu (korvaa kohdan 1 pari3-osan)
 kuvat-pari3 valmis, 404: 4 tuttua, "tarkastelu: alku" lokissa. Oikea seinä on kuvassa, joten pari1:n puuttuva seinä ei toistu. Katsottu vain 800 px:n koossa: tummaa porrasta ei erotu kummassakaan, ei täysikoossa arvioitu, ei väitettä. Kansio kerrottu VS:lle; tulos tulee VS:ltä LAV:lle ja PT:lle.
 
+## LISÄYS 13.1x: pisteet1 ajettu (35140432d, koejuuri-ovi3, 404: 4 tuttua, 12/12)
+Katsottu 800 px:n arkilla (kuvat-pisteet1/arkki-reiat.png), ei täysikoossa, 4 kuvaa 12:sta. Muut 8 katsomatta.
+- r--109-227, r--380-517, r--265--248: tumman laattalattian keskellä terävä, kolmion muotoinen vaalea pienkiveysala, jossa varjot katkeavat reunaan. Muoto sopii poistettuihin kolmioihin; alla näkyy jokin muu pinta, pelaaja ei näe tyhjää. Mikä pinta se on, ei selvitetty. Julkaistun v125:n kuvaa samasta kohdasta ei ole, joten vertailua ei ole. PT:lle kerrottu: suunta korjata levyt-askeleen säännöstä, täysikokoiset ensin.
+- p--95p2-345p5: vaalea ala oikealla poissa, joten kolmion palautus toimi. Silti jäljellä vasemman reunan kiila ja oikealla pieni harmaa kiila: KK:n "rikkinäiset lattiapalaset" ei ole kokonaan poissa. Vanhoja pintoja (samat kuin v115), mutta ehto on auki.
+
 ## Seuraajan järjestys
-1. Lue Raamattu 7.47.
+1. Lue Raamattu 7.47. Kohta 3 alla: pisteet1 on jo ajettu, katso täysikoossa ja loput 8.
 2. VS:n tulos parista 3 tuli (TULOS: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/raystas/TULOS-pari3.md): s--275p8:n porras poissa on- ja pois-kuvista täysikoossa, seinää ei muuteta tämän takia. VS:n päätelmä, ei erikseen todistettu: porras oli liu'un jälki ennen räystäscommitteja. PT:n ehdon mukaan lopullinen kuva otetaan siis b8-rungosta ennen vientiä; varmista PT:ltä, koska VS:n korjaus on jo junassa. Ei katettu: s--185p9 ja s--81p1: ota VS:n pyynnöstä seuraavaan omaan listaan koodilla b0f94ac0a (ei omaa ajoa) ja kerro kansio VS:lle. f--151 on oma friisikohta. Kysymys `v4 7`:stä auki.
    PT 13.1x: porrasalojen vientiehto täyttyi vasta s--275p8:lla (pari3, b7). Koko ehto täyttyy vasta, kun s--185p9 ja s--81p1 on katsottu samalla koodilla b0f94ac0a: seuraavaan listaan, ei omaa ajoa. Jos jokin näyttää yhä porrasalan, kerro PT:lle ja VS:lle. Kamerat: sk-saumat1.txt (-186.7 1.7 478.9 6 -8 80 ja -79.9 1.7 243.5 -168 -8 80).
 3. PISTEET1 AJETTU: tarkista 404. Katso r--109-227, r--380-517, r--265--248 täysikoossa: näkyykö reikä? Kuvissa kamera 3,5 m pinnan yläpuolella, katse alas (pitch 50), ei tarkistettu, että kamera on avoimessa. Katso p--95p2-345p5: korjaus. Katso muut 8 kuvaa KK:n pisteistä (ehto -1233).
