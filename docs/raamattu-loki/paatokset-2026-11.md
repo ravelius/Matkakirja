@@ -669,3 +669,11 @@ Pont d'Iéna: näytetty, eteläpää pyöreä kerrottu; KS korjaa tai palaa, jos
 ## TÄRINÄKOE KOLMENA KÄYNNISTYKSENÄ (KK 21.08, EI OMISTAJAN SANA) (6.11.2026 klo 21.09)
 
 KK 6.11.2026 klo 21.08, NS:n ehdotuksesta: omistajan 20.58 "Yksi uusi ajo" tehdään kolmena käynnistyksenä: A1, B ja A2 omissaan, muistivahti päällä, ilman uudelleenluontia ja piikin sallimista; ensin yksi Mac-ajo, lukitus, sitten iPad JU:n jonon loppuun. Korvaa 20.58-kirjauksen "piikki saa tulla". Syy (NS): samassa käynnistyksessä VIKA pysäyttää komennot käynnistyksen loppuun, ja iOS-varoitus muuttaa laattavalinnan B:lle ja A2:lle; korjaus vaatisi koodimuutoksen. Omistaja ei ole vielä kuullut tavan muutosta: seuraava KK kertoo sen hänelle.
+
+## TÄRINÄKOE PERUTTU, TÄRINÄ POIS PARIISI VALMIS -LISTALTA (omistaja, KK:n kortti) (6.11.2026 klo 21.30)
+
+Omistaja 6.11.2026 klo 21.2x (KK): "Tärinä ei voi liittyä muistiin tai suoritus kykyyn. Se on joku muu syy. Sen näkee tärinästä." ja "Siihen ei kannata liikaa käyttää aikaa koska en usko että se näkyy jos kartta on korkeammalla. Onko Lontoo jo aloitettu?"
+
+KK:n kortti klo 21.30: "Perutaanko jonossa oleva Pariisin kartan tärinäajo, joka mittaisi tärinän rakennusten kohdalla?" = "Perutaan (Suositus)". Korvaa 20.58:n "Yksi uusi ajo" ja KK:n 21.08:n kolmen käynnistyksen tavan.
+
+Omistajalle kerrottu: tärinä jää peliin, määrä rakennusten kohdalla jää mittaamatta, isoa korjausta ei nyt tehdä, kohta 9 poistuu Pariisin valmis -listalta (KK päivitti listan; 20.27:n kymmenestä kohdasta jää yhdeksän). JU ja NS saivat tiedon suoraan KK:lta.
