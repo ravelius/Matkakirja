@@ -38,3 +38,10 @@ Rajat (PT): ei Tripoa, ei Codexia, ei junaa eikä TF:ää, ei ostoja, ei poistoj
 - **Tarkista "Abbey Roadin suojatie" -pallon koordinaatit:** kuvissa se on Trafalgarin pohjoispuolella, ei Regent's Parkin takana, missä oikea suojatie on (PT:n hypoteesi kuvasta). Sama tarkistus muille kohteille, jos syy on yhteinen.
 - Jatka nimettyjen pyyhintää nollauksen jälkeen; koordinoi C:n paikat Valosepän kanssa.
 - 275 Mt kirjataan muistimittaukseen kohdassa F.
+
+## 7. KK:N PÄÄTÖS 00.25 (omistajan valtuutuksella; kokeena, ei junaan): D1 kelpaa, jatka tällä tavalla
+KK katsoi kaikki 7 kuvaa: näyttää Lontoolta, ei lelumainen, koodipuut käyvät. Aamun kysymystä Shardista ei tarvita. Tiedossa olevia vikoja ei leikata kuvista. Seuraavaan ajoon:
+1. **Harvat puistot** (Hyde Park, Kensington Gardens, Greenwich) täydennetään koneella puistoalueiden sisään, ei veteen, teille eikä taloihin. Tavoite: puisto näyttää metsäiseltä kuin oikeassa kaupungissa, ei kaljulta kentältä. Yösääntö: kaksi yritystä tai noin 30 min. Korvaa kohdan 3 ehdon "jos KK haluaa".
+2. **Alueen itäreuna** (d1-greenwich, oikea yläkulma): 3D-talot vaihtuvat litteisiin näkyvästi. Omistajan tavoite 4.11. 09.27 "ei tulisi mitään rajaa". Ota kuva reunalta ja tee siirtymä kuten Pariisin reunalla, jos se on halpa; muuten rivi KK:lle aamun kysymykseksi.
+3. **Abbey Roadin suojatie** näkyy Royal Academyn vieressä, mutta `data/kohdekartat-sijainnit.json` antaa oikean paikan 51.532, -0.1774 (St John's Wood). Tarkista, mistä natiivi pisteen ottaa, ja kerro KK:lle, koskeeko vika muitakin kohteita.
+4. **Kohdan E kuviin** oikea aloitus Lontoosta tai ainakin ilman "Pariisi"- ja "RANSKA"-tekstejä, jos se ei vaadi isoa työtä; muuten kerrotaan kuvan kanssa.
