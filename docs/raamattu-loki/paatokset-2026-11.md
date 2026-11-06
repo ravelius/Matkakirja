@@ -572,3 +572,11 @@ Omistaja 6.11.2026 klo 17.24 (KK): kortti "Piirretäänkö Seinen yli kulkevat k
 ## PÄÄTILIN RAJA 92 % VAHVISTETTU (omistaja 17.30) (6.11.2026 klo 17.32)
 
 Omistaja 6.11.2026 klo 17.30 (KK): "tämän tilin voi käyttää 92% asti". Vahvistaa Raamatun 12.21, ei sääntömuutosta. KK antaa 85 %:n TOIMI-listan; vaihto tilille vvi@vvi.fi, siirtoviesti KK:n kautta 90 %:n luovutusten jälkeen.
+
+## NÄHTÄVYYKSILLE PIENET KOVAT VARJOT (omistaja 17.32) (6.11.2026 klo 17.35)
+
+Omistaja 6.11.2026 klo 17.32 (KK): "nähtävyyksille pitää tehdä pienet kovat varjot jotta istuvat paremmin karttaan. toki osassa lähiympäristö vaatii myös korjaamista." KK:n tavoite: nähtävyys seisoo kartalla kuin painetussa kuvakartassa: pieni terävärajainen varjo maassa samaan suuntaan kaikilla, väri kartan paletista, ei sumeaa läikkää. Korvaa 4.11. suunnitelman pehmeän varjon. Lähiympäristön viat kohteittain kuvin KK:lle.
+
+## TF KUN PARIISI VALMIS, SITTEN LONTOO ILMAN TRIPOA (omistaja 17.33) (6.11.2026 klo 17.35)
+
+Omistaja 6.11.2026 klo 17.33 (KK): "lähden kotiin. julkaise TF kun pariisi valmis ja siirry sitten tekemään lontoota. sen voisi tehdä ensin kokonaan ilman tripoa ja kokeilla kuinka hyvän siitä saa sillä tavalla ja kuinka nopeasti se menee." KK:n kapea tulkinta (kerrotaan omistajalle): TF ei lähde ennen KK:n korttia "Pariisi valmis" (lupaus 5.11. 19.2x). Lontoolle ei töitä ennen KK:n suunnitelmaa; aika kirjataan aloituksesta; ei Tripo-tilauksia Lontoolle. Korvaa 5.11. 11.15 "sama toteutus lontoolle kuin pariisiin" kokeen osalta. Omistaja lähti Macilta 17.33.
