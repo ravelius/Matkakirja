@@ -36,3 +36,9 @@ Rosoisuus; mallin valo kääntyy kameran mukana, varjo ei; 65°:n yläreunan vy�
 
 ## TEKNIIKKA
 zsh: `"${C}:refs/..."`, `$Y:A` on muokkain. Python + PIL `/opt/homebrew/bin/python3`; numpy, cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`. `unity-tarkistus.sh` on `Linssit-testit/`:ssä, aja `sh ./unity-tarkistus.sh`. Commons: `/w/api.php` omistajan luvalla (Raamattu 2.183), peräkkäin, 10 s väli, `robots.txt` erillisessä komennossa ensin. Seuraamattomat `.claude/settings.local.json.ennen-kevennysta` ja `waveletNoiseTile.bin`: ei koskettu. Kotihaara on jäljessä (HEAD 9b98b5c23): luovutus plumbingilla (väliaikainen GIT_INDEX_FILE, read-tree origin/main, hash-object, update-index, write-tree, commit-tree, push). Kuvat täysikoossa rajauksina.
+
+## LISÄYS 23.5x: PK:N VIESTI LONTOO C:STÄ (Pelikoodari local_91a1bc27)
+Pohja vahvistettu: etä natiivi-backup, haara `pelikoodari/lontoo-b`, kärki 02bae0746; k32 on sen päällä. Kohdelista: `kohdelista.md` kohdat 2-3 ja 7; ensin kolme, loput yhtenä sarjana.
+Kuvalista `_tyo/pelikoodari/lontoo/sk-b1.txt`, palat `palat-b1`. KK:n lähin kuva: talojen kohdalta `aja … 0.006`. Taivas ennalleen. `OhjelmaKohteet.LontooKoe` piilottaa pelin 2D-Big Benin saman pisteen päältä.
+Abbeyn akseli -5,1° on arvio: tarkista kuvasta. Big Ben -10,2° palatsin 79,8°:sta.
+PK tekee kohdan D (koko Lontoo, talot paloina) samaan aikaan, joten Tower Bridgen ja St Paul'sin talot tulevat sieltä; kysy valmistumista häneltä. `siisti-b.json` poistaa nyt Elizabeth Towerin ja Abbeyn OSM-talot; D poistaa kaikkien 15 kohteen OSM-talot. KERRO PK:LLE, jos nimettyjen paikka tai pyyhittävä alue muuttuu.
