@@ -639,3 +639,11 @@ näytetty ja omistaja on vahvistanut kortilla "Pariisi valmis". Tavoite: pelaaja
 ## RAAMATTU 2.215 TIIVISTETTY, KOKORAJA: LAINAUKSET SIIRRETTY LOKIIN (PT) (6.11.2026 klo 20.36)
 
 Raamattu ylitti testin kokorajan 450 kt (main punainen). Sisältö ei muutu; sanatarkat lainaukset siirretty 2.215:stä tähän. Omistaja 5.11.2026 klo 14.55: "ei haittaa jos kartta menee viivaksi koska siinä näkyy kuitenkin 3d rakennukset. voidaan jättää vaikka 5 asteen kulma maksimiksi. ja tehdään horisontti niin että liikaa kohteita ei näy kerralla". Omistajan tarkoittamat pienet kohteet 14.51: kaaret, vaaka, pieni torni, pylväs ja laiva Notre-Damen vieressä. Omistaja 14.55 (kortti): "mitään pieniä malleja ei saa jäädä." Omistaja 14.57: "kadonneet aarteet voisi näkyä myös kuvina mutta kuvan vieressä voisi olla erilainen kyltti jossa tähti tai erilainen taustaväri josta tunnistaa että on kadonnut aarre"; "leikattuina kuvina" korvattu 21.07:n pyöreällä kuvalla.
+
+## LONTOO ENSIN VAIN KOODILLA, ODOTTAA TF:ÄÄ (omistaja, KK:n kortti) (6.11.2026 klo 20.44)
+
+KK:n kortti 6.11.2026 klo 20.41: "Tehdäänkö Lontoon nähtävyydet ensin pelkällä koodilla ilman Codexin kuvia ja malleja?" = "Ensin vain koodilla (Suositus)". Korvaa 2.213:n "KK kysyy uudelleen, kun Pariisi on valmis"; 17.33:n sanat pysyvät. Jos tärkeä kohde jää heikoksi, se tuodaan erikseen omistajalle.
+
+Omistaja 17.33: "julkaise TF kun pariisi valmis ja siirry sitten tekemään lontoota. sen voisi tehdä ensin kokonaan ilman tripoa ja kokeilla kuinka hyvän siitä saa sillä tavalla ja kuinka nopeasti se menee."
+
+Suunnitelma: KK:n scratchpad/keskustelukanava/suunnitelmat/20261106-lontoo-ilman-tripoa.md (korvaa kaupungit-avoimesta-datasta.md:n osat A-F). Ei roolien työtä ennen TF:ää. PT kirjaa ajan ensimmäisestä työstä alkaen. Tavoite: pelaaja näkee oikean Lontoon omilla paikoillaan ilman saumoja, ja omistaja voi Pariisin rinnalla päättää, kumpi tapa kannattaa muille kaupungeille.
