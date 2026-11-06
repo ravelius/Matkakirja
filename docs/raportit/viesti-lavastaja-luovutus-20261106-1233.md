@@ -32,6 +32,7 @@ Friisi 7 seinään -rivi on siis pois listalta.
    odota 3
    ```
    Kun ajettu: kerro kuvakansio VS:lle (local_3b36fe96-0199-4b17-9eb4-46a882ce7399). VS lukee parin ja antaa tuloksen LAV:lle ja PT:lle. Seiniä ei muuteta tummien porrasalojen takia ennen sitä.
+   PÄIVITYS PT 12.4x: pari on vientiehto, ajo koodilla 84872eaa9 (korvaa a309d43de:n), omana ajona. Sha:ssa ei ole tarkastelu-komentoa, joten yllä olevat rivit eivät toimi: A/sk-pari1.txt käyttää samaa kameraa komennoilla `valo sijoita -269.4 -126.8 -95` + `valo testikamera 2.2 0 -8 80`, ajo A/aja-pari1.zsh, kuvat A/kuvat-pari1. Pyydetty JU:lta, ei katsottu.
 
 ## Avoin, ei selvitetty
 - Uusien seinien tummat porrasmaiset alat: s--275p8 (uusi seinä), s--185p9, s--81p1. Muoto muistuttaa räystäsliu'un tummaa suorakaidetta ja Baohedianin oven tummaa pystykaistaa, mutta sitä ei ole todistettu. Tarkista VS:n liu'un kanssa, ennen kuin nimeät sen.
