@@ -508,3 +508,11 @@ OMISTAJAN KORTIT KK:n välityksellä, sanatarkasti (kuvat/puut-tripo-mac6): 'Mik
 ## TRIPO-PUIDEN VÄRI JA SUHDE KELPAAVAT (OMISTAJA 6.11.2026 KLO 14.28) (6.11.2026 klo 14.3x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti (kuvat/puut-tripo-mac9): 'Kelpaavatko puiden väri ja suhde nyt?' = 'Kelpaavat (Suositus)'. Väri ja puiden suhde jäävät Mac-8:n ja Mac-9:n tasolle; koe, ei junaan. Kerrottu samalla: laatta, puut ja tolpat vedessä, Pont Neufin tolpat ja vaalea raita, tolppien katkoviiva; NS korjaa v6:een ennen iPad 3:a. iPad-hinta ja lähin puutaso mittaamatta.
+
+## KEVYET MALLIT KOKEENA PELIIN (omistaja 6.11. 15.03, KK:n kautta) (6.11.2026 klo 15.13)
+
+Omistaja: "codexilta tulee riemukaari ja notredame jotka voi vielä peliin ja kokeilla miltä näyttää". Codexin paketti posti/codex-pariisi-lod-toimituspari-20261106 (090c134f8, 3875473dc): Notre-Dame 1 446 ja Riemukaari 1 128 kolmiota, PT tarkisti SHA:t ja kolmiomäärät. Kokeena, ei junaan; nykyiset pelimallit säilyvät palautusta varten; KS tekee parin nykyinen | uusi ylhäältä, 45° ja 5°. Codexin ohjeessa "korvatkaa", toimitaan omistajan sanan mukaan. Kuittaukset 1 ja 3 postissa e13f1ca8a.
+
+## OMISTAJAN VALTUUS KK:LLE KUVAUKSEN AJAKSI (omistaja 6.11. 14.29) (6.11.2026 klo 15.13)
+
+Omistaja KK:lle: "saat hyväksyä puolestani kaiken, olen kuvaamassa". Rajat KK:n kirjaamana kuten yövaltuudessa: vain omistajan aiempia sanoja vasten; ei TF-julkaisua, junan lukitusta, ostoja, asetuksia, avaimia, CLAUDE.md-muutoksia, poistoja eikä suuria ääniajoja; nollaus vain omistajan sanalla. Voimassa, kunnes omistaja palaa keskusteluun tai sanoo toisin. Kirjaukset scratchpad/keskustelukanava/paiva-hyvaksynnat-20261106.md.
