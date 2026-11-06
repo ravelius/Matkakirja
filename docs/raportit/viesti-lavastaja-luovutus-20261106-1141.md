@@ -46,3 +46,4 @@ mittaa13.py (friisi ja punainen seitsemän seinän ympärillä). kirjoita_tee13.
 
 ## Lisäys 11.4x, Valoseppä
 PT kuittasi räystäsliu'un arvolla 0,25: "Valosepän rivi 11.2x" -varaus poistuu. Käytä b8-haaraa 8ca0f78fc (natiivi-backup linssiseppa2/raystas-pehmea-b8; kääntämättä). Friisin porras x noin 650 on PT:n mukaan listallasi; kuvaa tai paikkaa ei kerrottu, kysy VS:ltä. Vastasin VS:lle kameraehdotuksen korkeasta hallista ja räystäättömästä seinästä, mittaamatta räystäiden puuttumista.
+KORJAUS edelliseen: junaan kelpaava haara on a309d43de (natiivi-backup linssiseppa2/raystas-runko; runko fcce6131f + räystään 3 commitia, kääntämättä, ei ajettu). Se korvaa 8ca0f78fc:n, joka toi 72 tiedostoa juoksupelin koodia ja kelpaa vain koekäyttöön (PT). Juoksupelin vienti ratkaistaan erikseen PK:n ja LAV:n kesken (PT).
