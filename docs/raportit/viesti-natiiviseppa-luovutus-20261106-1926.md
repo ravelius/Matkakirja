@@ -1,11 +1,13 @@
-# Natiivisepän luovutus 6.11.2026 klo 19.26 (konteksti 27 %, Mac-selvitys valmis)
+# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 19.38 (Mac-14 valmis, lepo, odottaa KK:n sanaa)
 
 KORVAA KAIKKI VANHEMMAT LUOVUTUKSET, viittausketjua ei ole. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. Session id osoitekirjasta; PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7.
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, haara natiiviseppa/origo-koe d907286cb, peili natiivi-backup. P:n skriptit ja tulokset ovat haaran ulkopuolella.
 
-## Tila 19.26
-- Mac-14 pyydetty JU:lta, ei vielä ajossa. Ei muita ajoja. Työpuuhun ei tehty muutoksia.
+## Tila 19.38
+- LEPO (PT 19.37). Mac-14 valmis, tulos H/mac14-tulos.md, kuvat H/mac14-kuvat. Ei ajoja käynnissä. Työpuuhun ei tehty muutoksia.
+- Mac-14: esineet poistettuna ennen origon siirtoa ja luotuna sen jälkeen pystyssä ja paikoillaan (0 px, Pantheon 1 px). Vain seisova kamera, Mac. b:ssä kadunnimet katoavat ja 3 valokuvamerkkiä lisää, syy auki; kartan pohja sama (PT katsonut p-luxembourg.png:n), b:n kartta noin 0,4 px eri kohdassa. JU:n ja PT:n väri- ja tasohavainnot eivät toteutuneet täysikoossa. iPad 5 r4:n tulos pysyy.
+- Korjattu raporttiin: Nimikerros ei ole varmasti kunnossa origolla (selvitys-tulos.md).
 - MAC-SELVITYS VALMIS ILMAN AJOJA, kerrottu PT:lle ja KK:lle 19.25. Raportti H/selvitys-tulos.md, kuva H/m-b-ennuste-vanha-asento.png, työkalut H/projisoi-kallistus.py ja H/kartoita.py, kartoitus H/kartoitus.txt.
 - Kallistus: OhjelmaKohteet saa paikan uudelleen (PaivitaMaa), asento jää vanhaksi (LuoSeuraava), 41,1° itään. Mitattu projisoimalla, silmämääräinen päällekkäisyys, ei pikselilukuja.
 - Katoaminen: Nahtavyysalue (ankkuri, perus kerran LuoOsat) jää noin 6 400 km pois. Todisteet koodi ja kuvat, ei ajonaikaista lukemaa. Korjaus: Mac-12:ssa Louvre ja Notre-Dame puuttuvat, eivät kallistu.
@@ -24,10 +26,10 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - KK 12.42: katot EI NYT. Puiden väri ja suhde kelpaavat (omistaja 14.28). 43 palikkasiltaa jää. v6 ee847e1a0e1788df kokeena, ei junaan.
 
 ## SEURAAVA TYÖ, järjestyksessä
-1. MAC-14 JONOSSA JU:LLA (PT 19.2x: "Kyllä: yksi Mac-tarkistus (a1, b, a2, seisovat rakennukset) JU:n vuorolla, ei koodimuutosta, pari koko kohteena"). Pyydetty 19.27: H/ajopyynto-mac-14.md, H/sk-mac-14.txt, lokit L/natiiviseppa-origo-mac14-d907286cb, kuvat o14-a1, o14-b, o14-a2. Katso kuvat täysikoossa: ovatko Louvre, Notre-Dame, sillat ja puut pystyssä ja samoilla paikoilla kaikissa kolmessa. Rivi tuloksesta PT:lle ja KK:lle. iPad-ajoa EI: origokoe sulkeutui 17.08 sanan mukaan, PT kysyy KK:lta vasta Mac-tuloksen jälkeen. Ei toteutusta.
+1. ODOTA KK:N SANAA (PT 19.37): PT kysyi KK:lta yhtä iPad-ajoa rakennusten tärinästä. ÄLÄ PYYDÄ AJOA ennen sanaa. Ajoehdotus selvitys-tulos.md luku 4: esineet 0 → origo → esineet 1, r4 A1, B, A2, muistivahti päällä, 0 palaa. Float-pyöristyshypoteesia EI jatketa (PT 19.37).
 2. C1 ja D2 ODOTTAVAT (PT 19.1x): ne vaativat palikka-ajoja iPadilla, ja mittaus uusitaan, kun Pariisi on valmis ja muistia on kevennetty (omistaja 17.05). Älä kysy niitä uudelleen. C1: GameObject + LOD Group (ei koodattu) + DOTS-tuki varjostimeen + Keep All + static batching pois + peittokarsinta pois; Forward-kopio pois listalta, RD vaatii Forward+:n. D2: B2 + forceMeshLod vs erilliset verkot. Tutkimus 20261106-rakennuspalikat-tutkimus.md, osa E.
-3. Origokoe pysyy suljettuna: ei uusia origo-ajoja iPadilla.
-4. Mac-14:n jälkeen "JONO TYHJÄ: Natiiviseppä" PT:lle.
+3. Origokoe pysyy suljettuna: ei uusia origo-ajoja iPadilla ilman kohdan 1 sanaa.
+4. "JONO TYHJÄ: Natiiviseppä" lähetetty PT:lle 19.33.
 
 ## Mitattu, pysyvä
 - Tärinä: iPad 4 A0, 0 palaa, thermal 0: GPU 13 → 29 ms noin 3 min:n kohdalla, huippu 37, 10 min:n tauon jälkeen 11,6; kolmiot ennallaan; seisova kamera kuvaero 0,000. Syy auki. Muistipiikki t 20 s: 3660 (0 palaa) | 4039 (3b); iPad 3b VIKA 4106 ≥ 4080, huippu 4220. Skriptit P/selvitys-muisti-3b/.
@@ -41,6 +43,7 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - NS:n työpuita wt/-kansiossa yli rajan (8/3): kerro PT:lle ennen poistoja.
 
 ## Opit
+- PIENENNÖS HARHAUTTAA: JU, PT ja koko kuvan katselu näkivät värieron, jota täysikokoisissa rajauksissa ja pikselierossa ei ole. Mittaa erokuvalla ja rajaa ennen selityksiä.
 - LUE KONSOLI AJAN YMPÄRILTÄ ENNEN KUIN NIMEÄT KOKEEN ESTEEN: pohjoiskäännös näytti origon viaksi, mutta sama rivi kertoi saapumisesta. Verrokki toisesta ajosta ratkaisi sen ilman uutta ajoa.
 - Projisointi toimii ilman ajoa: palikkajalki-*.csv:n m00-m23 on worldToCamera; H/projisoi-kallistus.py. Kuvan rata-aika 2 s jäljen alusta (jakso 20 s), kalibroi ensin A-kuvalla.
 - KATSO B-KUVA TÄYSIKOOSSA ENNEN LUPAA: Mac-12:n luvut läpäisivät kaiken. Origon siirto ajon aikana kallistaa nähtävyydet ja sillat ja vie puut; palautus korjaa, syy selvittämättä.
