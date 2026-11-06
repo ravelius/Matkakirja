@@ -6,7 +6,9 @@ Korvaa luovutuksen -0157 kohdat TILA, SEURAAVA AJO ja SEURAAVAKSI. Muut -0157:n 
 Koodi 9a1d041a5, haara `linssiseppa2/ohjelmakohteet`, natiivi-backupissa, worktree /Users/Shared/Claude/wt/proto-linssiseppa2-k30. Ei junaan. Testit 15/15 (`<dotnet> rak/G.dll OhjelmaKohde`). d48b1b220 (sillat) ja 9a1d041a5 (Saint-Eustache) EI käännetty Unityssä eikä ajettu.
 D = /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet.
 
-## AJO: PYYDETTY JU:LTA 02.20, EI VIELÄ VUOROA
+## AJO: JU AJAA, LÄHTI L1:LLÄ 02.20
+Kansio /Users/Shared/Claude/proto-3d/lokit/valoseppa-maa2-0d317ab6f. Älä muuta sk-maa2.txt:ää ajon aikana (JU). Kääntövirheestä JU lähettää rivin.
+VIRHE, KORJATTU JU:LLE: pyynnössäni luki "KK 01.5x hyväksyi ajon". KK sanoi vain: korjaukset seuraavaan ajoon, EI OMAA AJOA, Saint-Eustache voi tulla samaan ajoon. JU hyväksyi 9 kuvaa väitteen perusteella; jatko on JU:n päätös, ja PT:lle kerrottu. Tarkista JU:n vastaus ennen kuin oletat ajon valmistuvan.
 Ajohaara `linssiseppa2/ajo-maa2` 0d317ab6f (paikallinen, ei viedä). Lista `D/sk-maa2.txt`, 9 kuvaa: p-roy, p-lp, p-cha, p-con, se-et, se-ka, se-la, tsj-lahi-pohj, tsj-lahi-et. Kun kuvat tulevat: katso täysikoossa, viat nimettyinä KK:lle, rivi PT:lle. `suunta`-arvot se-kuvissa ovat päätelty Tour Saint-Jacquesin kuvanimistä; tarkista, että kuva näyttää sen, mitä nimi väittää. `lahinleveys 5` -varaukset: -0157.
 Tarkista KK:n id tilin mukaan: CLAUDE.md ja osoitekirja antavat eri id:n; tämä sessio on tilillä sami.reivinen@vvi.fi.
 
