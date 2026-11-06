@@ -20,7 +20,7 @@ Aloitusviesti kullekin: "Olet <Rooli> (<malli, effort>). Tili vaihtui. Aja git f
 |---|---|---|
 | Postivahti | Matkakirja-posti/docs/raportit/, uusin viesti-postivahti-luovutus-* (levyllä) | kierros; KIERROS.md id:t |
 | Asemataulu | – | taulu tämän tilin osoitteeseen; mittarit, työlista, junat kerran |
-| Julkaisija | julkaisija-luovutus-1825, 936bc8beb | ENSIN odottimet; origokoe iPad 5 kerran; KS:n ajo 29 tulos KS:lle; NUI:n yhdistelmä ja piilo-palautus. LAV:n ketju 1-2 kaatui 18.26 |
+| Julkaisija | julkaisija-luovutus-1825, 5628e769e | ENSIN odottimet; origokoe iPad 5 kerran; KS:n ajo 29 tulos KS:lle; NUI:n yhdistelmä ja piilo-palautus. LAV:n 1-2 leivottu, 3c pysäytetty: ajetaan LAV:n rivistä |
 | Natiiviseppä | natiiviseppa-luovutus-1826, d785ac047 | origokokeen tulos; tilaraportti alle 10 kt |
 | Natiivi-UI | natiivi-ui/luovutus-20261106-1826, c4f6f3fe9 | yhdistelmän tulos; kyltit vain ajon 29 ja välkkeen jälkeen; tilaraportti alle 10 kt |
 | Pelikoodari | pelikoodari-luovutus-20261106-1825, b05af232b | lepo, kunnes kartta valmis LAV:lta; tilaraportti alle 10 kt |
@@ -33,4 +33,4 @@ Aloitusviesti kullekin: "Olet <Rooli> (<malli, effort>). Tili vaihtui. Aja git f
 PT local_5df52e10-10e4-4b72-9554-0049db300dfe; KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe; JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7; NS local_99130238-aa54-4a29-bcc9-7a023584944b; NUI local_43962c89-fc14-4098-9dd7-6153133ffcea; PK local_91a1bc27-6870-46aa-9886-66fd33b68880; VS local_fa464945-e15d-4f98-aaad-00877a60f63a; KS local_740947d7-aa79-4b1e-948e-1b7dfc734364; LAV local_16f6f272-61c6-43cf-8ad2-1f6020bb8bfd; Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b; Asemataulu local_54e2130a-2e0b-4bf3-8301-57448d1e48a5.
 
 ## 4. Irralliset ajot
-Mac jatkaa tilistä riippumatta: KS ajo 29 (pid 34953, 92ea0a945). Lue lokit ennen uudelleenajoa. LAV:n leivonnan loput 12 valmis 18.26.
+Mac jatkaa tilistä riippumatta: KS ajo 29 (pid 34939, 92ea0a945). Lue lokit ennen uudelleenajoa. LAV:n leivonnan loput 12 valmis 18.26, kk-tausta-1-2 (pid 37488) 18.30; 3c estetty.
