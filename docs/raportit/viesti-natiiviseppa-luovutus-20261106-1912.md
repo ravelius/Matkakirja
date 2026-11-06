@@ -8,8 +8,8 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - Ei omia ajoja käynnissä. JU palautti iPadiin rungon d092f48c.
 - ORIGOKOE SULJETTU: ORIGO AUTTAA. Raportti O/origokoe-tulos.md, kerrottu KK:lle ja PT:lle 19.1x. Uusinta 18.59-19.06, L/natiiviseppa-origo-ipad5-d907286cb, rajattu aineisto O/analyysi-ipad5 (luvut analyysi-ipad5.txt), pätkät O/kuvat-ipad5/patka-*.gif. r4-jäännös A1 1,152 | B 0,240 | A2 1,252 px. Kuviollisissa ruuduissa 1,0-1,35 | 0,03-0,08 | 1,0-1,27. Float-nykäys p95 0,500 | 0,054 | 0,500 m. Muisti 3730/4080, thermal 0.
 - Ajo 1 (18.44-18.49) keskeytyi JU:n skriptiin (pistedesimaali, laite antoi pilkun). Ei aineistoa: L/...-keskeytys1-ei-aineistoa, O/ipad5-tulos.md. PT antoi yhden uusinnan; uutta ajoa ei ole lupaa tehdä.
-- Rajaukset, älä pudota näitä: liikettä ei ole arvioitu silmällä (KK katsoo pätkät); esineet piilossa kokeessa; yksi ajo; sarjat eri radan kohdista (A2 ei mene B:n kanssa päällekkäin); vedot eivät sama reitti. Kameran hyppy selittää vain 11-17 %, loppu selvittämättä: ei nimetä syytä ilman mittausta.
-- PT:n vastaus odottaa 19.1x-kysymykseeni: tehdäänkö C1 ja D2 nyt vai odottavatko ne omistajan 17.05 -linjausta, ja haluaako PT toteutusehdotuksen origosta. Tarkista viestit ennen muuta.
+- Rajaukset, älä pudota näitä: NS ei ole arvioinut liikettä silmällä (KK katsoi r4-kuvat, PT 19.1x); esineet piilossa kokeessa; yksi ajo; sarjat eri radan kohdista (A2 ei mene B:n kanssa päällekkäin); vedot eivät sama reitti. Kameran hyppy selittää vain 11-17 %, loppu selvittämättä: ei nimetä syytä ilman mittausta.
+- PT on vastannut, katso SEURAAVA TYÖ. Tämä korvaa PT:n edellisen viestin "tee luovutus ja lepää", jonka hän itse korjasi.
 
 ## Toteutuksen esteet, ei korjattu
 - Mac-12: origon siirto kallistaa nähtävyydet ja sillat ja vie puut (O/mac12-tulos.md). Syy auki.
@@ -23,9 +23,11 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - KK 12.42: katot EI NYT. Puiden väri ja suhde kelpaavat (omistaja 14.28). 43 palikkasiltaa jää. v6 ee847e1a0e1788df kokeena, ei junaan.
 
 ## SEURAAVA TYÖ, järjestyksessä
-1. PT:n sana C1:stä, D2:sta ja toteutusehdotuksesta. Toteutusehdotus vain PT:n pyynnöstä. Sano siinä rajaukset ja esteet edellä.
-2. C1 ja D2 tarvitsevat iPad-mittauksia, joten omistajan 17.05 pysäyttänee ne. C1: GameObject + LOD Group (ei koodattu) + DOTS-tuki varjostimeen + Keep All + static batching pois + peittokarsinta pois; Forward-kopio pois listalta, RD vaatii Forward+:n. D2: B2 + forceMeshLod vs erilliset verkot. Tutkimus 20261106-rakennuspalikat-tutkimus.md, osa E.
-3. Sitten tyhjänä "JONO TYHJÄ: Natiiviseppä" PT:lle.
+1. SELVITYS (PT 19.1x, sanatarkasti; KK on katsonut r4-kuvat ja suositellut jatkoa): "Selvitä vain Macilla, JU:n vuorolla, haaroissa, ei junaan: 1) mistä nähtävyyksien ja siltojen kallistuminen ja puiden katoaminen johtuvat origon kanssa (Mac-12), 2) pohjoiskäännön puuttuminen, 3) koko kartan kattavan origon hinta: mitä järjestelmiä koskee, reunat, riskit. Ei iPad-ajoja eikä toteutusta. Tärinä rakennusten kohdalla jää todentamatta; ehdota sille yksi ajo, älä aja sitä. Tulos yhtenä raporttina PT:lle ja KK:lle; syyt nimetään vain mitattuina."
+   Raamattu 10.5: jokainen Mac-ajo ratkaisee yhden kysymyksen, pyynnössä JU:lle rivi "mitä tämä ratkaisee" ja pienin kuvalista (noin 5 kuvaa). Vuoro JU:lta. Aloita koodin lukemisesta; aja vasta, kun koodi ei riitä. Lähtötiedot: O/mac12-tulos.md, O/4b-ruudut.png, O/origokoe-tulos.md. Koekomento käyttää SetOriginLongitudeLatitudeHeight + KorkeusKerroin.Aseta, samat kutsut kuin CesiumKaupunki.SiirraOrigo.
+2. C1 ja D2 ODOTTAVAT (PT 19.1x): ne vaativat palikka-ajoja iPadilla, ja mittaus uusitaan, kun Pariisi on valmis ja muistia on kevennetty (omistaja 17.05). Älä kysy niitä uudelleen. C1: GameObject + LOD Group (ei koodattu) + DOTS-tuki varjostimeen + Keep All + static batching pois + peittokarsinta pois; Forward-kopio pois listalta, RD vaatii Forward+:n. D2: B2 + forceMeshLod vs erilliset verkot. Tutkimus 20261106-rakennuspalikat-tutkimus.md, osa E.
+3. Origokoe pysyy suljettuna: ei uusia origo-ajoja iPadilla. Toteutusehdotusta ei tehdä; selvitys kertoo hinnan ja riskit, ei toteutusta.
+4. Sitten tyhjänä "JONO TYHJÄ: Natiiviseppä" PT:lle.
 
 ## Mitattu, pysyvä
 - Tärinä: iPad 4 A0, 0 palaa, thermal 0: GPU 13 → 29 ms noin 3 min:n kohdalla, huippu 37, 10 min:n tauon jälkeen 11,6; kolmiot ennallaan; seisova kamera kuvaero 0,000. Syy auki. Muistipiikki t 20 s: 3660 (0 palaa) | 4039 (3b); iPad 3b VIKA 4106 ≥ 4080, huippu 4220. Skriptit P/selvitys-muisti-3b/.
