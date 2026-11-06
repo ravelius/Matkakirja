@@ -13,7 +13,8 @@ D = /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/ohjelmakohteet.
 3. Uutta rakennusta ei ole määrätty: odota KK:n tai PT:n sanaa. Hyväksyntä on omistajan.
 
 ## AJO
-`D/sk-maa5.txt` 9 kuvaa, JU kuittasi; EN muuttanut sitä. JU:lle lähetetty 07.2x uudet shat ja `D/sk-maa5-pompidou.txt` (1 kuva, po-la, suunta 85 oma arvio): JU lisää vain, jos ajo ei ole alkanut, muuten seuraavaan yhteiseen ajoon. JU:n vastausta ei ollut tätä kirjoitettaessa. Ei omaa ajoa.
+`D/sk-maa5.txt` 9 kuvaa, JU kuittasi; EN muuttanut sitä. JU:lle lähetetty 07.2x uudet shat ja `D/sk-maa5-pompidou.txt` (1 kuva, po-la, suunta 85 oma arvio): JU lisää vain, jos ajo ei ole alkanut, muuten seuraavaan yhteiseen ajoon. JU 07.3x: Pompidou lisätty, sk-maa5:ssä nyt 10 kuvaa; shat jonossa, yhdistyvät 579ea327c:hen ilman ristiriitaa (kuivakoe, ei käännetty). Ajo lähtee KS:n yhdistyksellä tai PT:n sanalla, ei vielä pyydetty. Ei omaa ajoa.
+NUI 07.3x kysyi nimiesteitä: vastattu haara ja 4e751932b. NUI ei ollut vielä kuitannut.
 
 ## PT:N LISÄYKSET (Postivahdin aloitusviesti)
 (a) nimet ja (b) maan arvot olivat jo hoidettu -0716 LISÄYS 07.2x:n mukaan. PT:lle kerrottu. Tasauksen yhtälö on vain luettu koodista, ei ajettu.
