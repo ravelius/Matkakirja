@@ -1,8 +1,17 @@
-# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 19.45 (KK kyllä, Mac-15 JU:lla, iPad-ajo tilaamatta)
+# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 19.55 (Mac-15 kelpasi, iPad-ajo tilattu JU:lta, ei vielä ajettu)
 
 KORVAA KAIKKI VANHEMMAT LUOVUTUKSET, viittausketjua ei ole. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. Session id osoitekirjasta; PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7.
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, haara natiiviseppa/origo-koe d907286cb, peili natiivi-backup. P:n skriptit ja tulokset ovat haaran ulkopuolella.
+
+## Tila 19.55, korvaa alla olevat Mac-15- ja iPad-kohdat
+- MAC-15 VALMIS JA KELPAA. iPad-AJO TILATTU JU:n jonon loppuun 19.54: H/ajopyynto-ipad-rakennustarina.md, lokit L/natiiviseppa-rakennustarina-ipad-d907286cb, jäljet t5-a1, t5-b, t5-a2. Ajoa ei ole vielä ajettu. Seuraava työ on kohta 1 d, kun JU palauttaa.
+- ESINERUUDUT lukittu H/rakennustarina-ehdot.md:hen: vain (704,384), siinä Pont Neuf, EI rakennusta. Lisäluvut (128,384) Louvre ja (416,384), eivät ratkaise. Rajatut kuvat H/mac15-kuvat/k-*.png.
+- Nappula oli (704,384):ssä vain A:ssa, joten tilauksessa on "nappula pois" A1:ssä. Ei ajettu: katso iPadin kuvista ensin. Nappula tai kyltti ruudussa vain yhdessä jaksossa = EI TULOSTA.
+- KORJATTU VIRHE: mittaruudut ovat KESKIRAJAUS täydellä tarkkuudella, eivät pienennös. Alla oleva "kerroin 2,6875" ja Sainte-Chapellen kyltti ruudun lähellä olivat väärin. Mac-kuvassa x_mac = 1376 + (x-512)*2752/2732, y_mac = 1032 + (y-384)*2752/2732.
+- KORJATTU VIRHE: hyppy2-skriptien f lasketaan rajatun kuvan korkeudesta (823 px), oikea 2196 px. Uusi analyysi: f = (2048/2)/tan(fov/2), kokeiltu kopio scratchpadissa katoaa, tee rivin 90 muutos uudelleen. Jäännös tarkka ei juuri muutu (iPad 5 r4-a1 1,152 -> 1,163, r4-b 0,240 -> 0,239); iPad 5:n float-tarkka ja kerroin eivät päde. Kerrottu PT:lle.
+- Mac-15: B on pysäytetyissä kuvissa siistimpi kuin A (A:ssa Pont Neufin lyhdyt ja kaide repaleisia, täpliä Louvren ikkunoiden ympärillä). Syy auki, vain Mac, ei tulos.
+- Cron luotu tässä sessiossa ("4 9 * * *"); uusi sessio luo sen uudelleen.
 
 ## Tila 19.45
 - MAC-15 PYYDETTY JU:LTA 19.41 (H/ajopyynto-mac-15.md, H/sk-mac-15.txt, lokit L/natiiviseppa-rakennustarina-mac15-d907286cb, 8 kuvaa t15-*). Kuvia ei vielä tullut. iPad-ajoa EI ole tilattu. Työpuuhun ei tehty muutoksia.
