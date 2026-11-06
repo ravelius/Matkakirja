@@ -33,3 +33,8 @@ Ei PT:n kortteja. KK: Notre-Dame #2175, usvakoe, taivaan pelikuva.
 - Älä väitä kartan pohjan tai katon eroa pienennöksestä: Mac-14:n "pohjan ero" ja #2175:n "katto ruskea" olivat virheitäni, jotka jouduin perumaan. Väite vasta täysikoosta.
 - Vastaus nollautuvalle roolille voi pudota: tarkista seuraajan luovutus ja lähetä sana uudelleen (LAV -1930).
 - Mittari voi vastata eri kysymykseen kuin kysyttiin: NS:n tärinämittari oli silta, KK vaihtoi kolmeen ruutuun ennen ajoa. Tarkista ruudun kohde tilauksesta.
+
+## LISÄYS 20.3x (ennen nollausta)
+- Kyltit: ajon 30 tallenne ei riittänyt (3 vaihtoa, oikeaa nopeutta ei nähty). Ajoon 31 NUI:n lista /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/lisa-kyltti-valke-31.txt (Galerie, Luxembourg, 24 lentoa) kaikkien kuvien jälkeen ja 166378891 (natiivi-ui/tallenne-ui-kello, Editor-kansio, jää pois junasta). Todennus: häivytys noin 9 kuvaa. Luxembourgin 0,16 s:n paluu on mahdollinen vika, kunnes nähty. Ei kuittausta eikä junaa ennen 30 vaihtoa.
+- LAV levyt6 oli ajossa 20.23 (noin 21 min, TYHJÄKÄYNTI-rivi on väärä hälytys). Jos riviä ei tule, tarkista list_eventsillä.
+- KS nollattu 516fb5e68: varmista, että sillä on ajon 31 sisältö.
