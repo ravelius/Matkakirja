@@ -429,3 +429,12 @@ KK pyysi: kohdassa luki yhä 'jäävät leikattuina kuvina (2.11. klo 08.31 pysy
 ## RAAMATTU 11.8: MONTPARNASSE, POMPIDOU JA TALOKERROS POIKKEUKSINA; JUOKSUPELIN OVET (OMISTAJA 6.11.2026 KLO 06.55) (6.11.2026 klo 06.56)
 
 OMISTAJAN KORTIT KK:n välityksellä, sanatarkasti: 'Tehdäänkö Tour Montparnasse poikkeuksena kuten Louvren pyramidi?' = 'Tehdään (Suositus)'. 'Tehdäänkö Pompidou-keskus poikkeuksena?' = 'Tehdään' (KK suositti: Ei tehdä). 'Poistetaanko tunnetusti suojatut talot Pariisin talokerroksesta?' = 'Jätetään laatikoina' (KK suositti: Poistetaan). 'Aukeavatko juoksupelin ovet sisäänpäin?' = 'Sisäänpäin (Suositus)'. KK kertoi riskin ennen korttia: voi joutua pois ennen App Storea, joten kaikki kolme tarkistuslistalle ja 11.8:n poikkeuksiin. Kuudesta poistetusta sillasta KK kysyy erikseen; ei palautusta ennen vastausta. PT tiivisti tilan vuoksi 11.8:n kaksi lausetta (kaupunkilista lyhennetty), oikaisi 11.10:n Pompidou-esimerkin ja poisti 2.215:stä lauseen 'Pieni iPad päivitetään, kun nämä ovat kasassa (2.214)', koska se on ristiriidassa saman kohdan uudemman omistajan linjauksen 5.11. klo 19.26 kanssa ('pienelle iPadille ei asenneta').
+
+## OMISTAJA 6.11.2026 KLO 06.58: SILLAT, TASAINEN KARTTA, HAIVYTYS, OVET ULOSPAIN (6.11.2026 klo 06.59)
+
+OMISTAJAN KORTIT KK:n välityksellä, sanatarkasti: 'Palautetaanko kuusi suojattuna poistettua siltaa Pariisiin poikkeuksena?' = 'Palautetaan (Suositus)'. 'Tasoitetaanko Pariisin kartta keskustassa?' =
+'Tasoitetaan (Suositus)'. 'Kelpaako kartan uusi häivytys horisontissa?' = 'Kelpaa (Suositus)'. 'Tuodaanko Pariisin talot lähemmäs nähtävyyksiä?' = 'En osaa sano' (EI PÄÄTÖSTÄ; talojen raja ennallaan,
+KK ehdottaa yhtä koekuvaa Notre-Damen rajalta, päätös kuvasta). OVET, KUMOAA 06.55:n SISÄÄNPÄIN: 'Anteeksi ulospäin aukeava ovi olisi parempi'. KK:n tavoite: ovet ulospäin ilman lehden reunan tummia
+piikkejä, ja kamera katsotaan, koska lehti vie pysähdyksessä ison osan ruudusta. Sillat: VS palauttaa poistot, 11.8:n poikkeuksiin ja App Store -listalle. Tasainen kartta oletukseksi vasta, kun talot,
+nimet ja merkit on sovitettu samaan maahan ja Sacré-Cœurin mäki ja pohja tarkistettu. TILAN VUOKSI PT siirsi Raamatusta tänne: 11.8:n sitaatti 13.10.2026 klo 06.57 'Ei tämä ole kaupallista kuvaamista'
+ja 11.17:n 'Ideat hautumaan: pelinappula-avatarit (pöllö, kotka, hevonen), kauppa ja tuunatut linssit; Vanhin maailmankuva -linssi (1500-luvun projektio pallon päällä).'
