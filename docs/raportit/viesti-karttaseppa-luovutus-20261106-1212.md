@@ -23,7 +23,7 @@ Y = bb683b202 + VS 9fea47165 (Pompidoun muodot) + VS a93ed64b0 (usvan väri = ta
 - Parit lähetetty 12.1x. Kun KK ei kumoa: **koepaletti-komento pois W:stä** (Nahtavyysalue.KoePaletti, Komennot.cs:803), seuraavaan yhdistykseen. Tiedoksi PT on lähetetty paletista ja Forumista.
 
 ## MUUTA
-- Kuusi uutta kansiota palat-v10 korvaa v9:n; talot kansio v10 on ajoissa 11 ja 12.
+- palat-v10 korvaa v9:n; talot kansio v10 on ajoissa 11 ja 12.
 - W:ssä ei ole TaloAlue-koodia: kartan muutokset, jotka koskevat sitä, tee Y:n pohjalta omaan haaraan. Kevyt worktree poistettu, haara jää.
 - POIKKEUS 1 kpl joka ajossa `ui sulje` -komennolla (ArgumentOutOfRangeException), JU tietää; ei pysäytä ajoa.
 
