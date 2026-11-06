@@ -28,7 +28,7 @@ Lue suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukana
 Forumin litteä ruskea alue = Canopée way/630511331 (building=roof) puuttuu NS:n paloista; kartan building-taso peittää 99 % sen muodosta (mvt14-pala 5.11., ei ajon oma). Kartan muutosta ei tarvita, jos katto tulee paloihin. NS suosittelee v10:een vain kattoa; perui 6 palan poiston, koska ne ovat myös kartan rakennuksia ja jättäisivät litteän jäljen. KK päättää, NS tuo sha:n. **Pidä palat-v9 ajoissa siihen asti.** 48 muuta isoa building=roof-kohdetta: tarkistamatta.
 
 ## ODOTTAA VASTAUSTA
-KK: rantarivin puut, Palais-Royal'n aukio, Tuileries'n nurmiraita, kattokortti v4/v6, Forum. NS: sha. VS: palettireitin sha. Concorden vedestä VS kuittasi "ei korjattavaa"; co-yla:n Louvren puuttuminen on W f743d99ad:n todistettavana seuraavassa ajossa.
+KK 10.5x, ajo 7 näytetty omistajalle viat kerrottuina: rantarivin 11 puuta jäävät; Palais-Royal'n aukio ja 2 puuta jäävät, ellei omistaja sano muuta (isompi puu peittää keskioven, kerrottu); **Tuileries'n itäpään nurmiraita on KS:n korjattava** (Louvren pohjakuvan reuna, ei aloitettu); f743d99ad seuraavaan ajoon. **Omistaja 10.47: mallit ja puut samaan pikseleittäiseen usvaan: kysy PT:ltä tekijä ennen kuin kosket usvaan lisää** (f743d99ad on jo tehty ja KK:n mukaan ajoon). Auki KK:lla: kattokortti v4/v6, Forum. NS: sha. VS: palettireitin sha. Concorden vedestä VS kuittasi "ei korjattavaa"; co-yla:n Louvren puuttuminen on W f743d99ad:n todistettavana seuraavassa ajossa.
 
 ## Oppi
 Mittaa ensin, onko ongelmaa: suunnitelma oletti monen kohteen ylittävän rajan, mutta ruudulla selvä ylitys oli yksi kohde. json.dump tyylikirjaan muotoilee koko tiedoston uudelleen: vaihda vain lohko tekstinä ja katso git diff --stat.
