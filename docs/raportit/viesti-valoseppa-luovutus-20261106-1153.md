@@ -33,6 +33,10 @@ KS: 9b valmis 11.50 (`proto-3d/lokit/karttaseppa-yhteinen-9b-b8-5f44adef2`: `us-
 3. Pompidoun muodot KK:n järjestyksellä (`OhjelmaKohdeRakennukset.cs` rivi 1397, -1048:n SEURAAVAKSI 3). Ei omistajalle nykyisessä kunnossa.
 
 ## MUUTA
-LAV nollattiin 11.41 ja sen transkripti on tyhjä, joten kameroista 11.38 kysytty kysymys hävisi. Kysymys on nyt tarpeeton, ei tarvitse kysyä.
+LAV vastasi 11.5x kameroihin (ehdotuksia, se ei ole mitannut eikä kuvannut):
+- Korkea halli: rakennus (-136; 232), seinän yläreuna noin 8,9 m, friisi 6,1–6,6 m, suunta varmistamatta. Pidin Qianqinggongin, jossa räystään alapinta on korkeampi (9,6).
+- Räystäätön: (206):n kaakkoiskulma, taivas seinän yllä, `tarkastelu kamera 212.0 2.2 428.0 -40 -8 80`; a309:llä vastaava olisi `sijoita 212 428 -40`, `testikamera 2.2 0 -8 80` (kääntämättä tarkistamatta). Osin uusi tukko; koejuuri-aukot14 antaa sen ehjänä, vienti v115 ei. EN VAIHTANUT listaa, koska JU sai sen jo. VARA: jos marmori ei kerro mitään, ehdota tätä PT:lle (punainen seinä on parempi koe), mutta se ylittää 2 kuvaa.
+LAV kysyy: "Friisin porras x noin 650: mistä kuvasta ja millä rakennuksella?" Omista luovutuksistani -1034…-1138 en löytänyt tätä. Lähin: r-k--151:n pehmeä laikku friisin yläpuolella, seinä x 300–800 (`raystas/TULOS-raystas3.md`), rakennusta ei nimetty. Kerro tämä LAV:n seuraajalle, kun se on käynnissä (LAV nollasi itsensä; 7.23: ei viestejä ennen aloitusviestiä). Tätä kysymystä ei ole vielä lähetetty.
+KS 11.5x: 9b katsottu, kamerat kelpaavat (`us-eiffel-85b`, `us-silta-85b`), Y on 61a6f5321, ajo 10 pyydetty JU:lta. Kansio tulee KS:ltä.
 K30-worktree `wt/proto-linssiseppa2-k30` on haaralla 61a6f5321; git grep a309d43de:hen toimii siellä. zsh: `git -C $W` skriptitiedostosta, muuttujaan koottu komento ei hajoa sanoiksi.
 Seuraamattomat .claude/settings.local.json.ennen-kevennysta ja waveletNoiseTile.bin: en koskenut.
