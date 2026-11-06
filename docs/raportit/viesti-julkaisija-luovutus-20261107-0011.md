@@ -2,15 +2,15 @@
 
 Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claude/proto-3d, jonoloki T/jono-20261103-ilta.txt. Korvaa aiemmat luovutukset. Id:t: /Users/Shared/Claude/osoitekirja.md.
 
-## ALOITA TÄSTÄ: jono pyörii irrotettuna, viritä odotin, älä käynnistä uudelleen
+## ALOITA TÄSTÄ: jono pyörii irrotettuna, viritä odotin, älä käynnistä uudelleen (tila 00.42)
 Tarkista `ps -p` ja jonolokin häntä; osa on voinut jo päättyä, ja tulos on silloin kuittaamatta.
-- L2: KS 38 f6625e82d, pid 9103, 25 kuvaa, raja 35 min, tulos T/ks-yhteinen38.tulos, lokit/karttaseppa-yhteinen-38-b8-f6625e82d. Kuittaus KS:lle; kuvat PT:lle KS:n kautta.
-- L1 järjestyksessä, kukin odottaa edellistä pid:llä:
-  1. LAV levyt7z valmis 00.10, kuitattu.
-  2. LAV levyt7m valmis 00.13, kuitattu.
-  3. NS karsi fd15e7cd2 (korvasi d7a8b8af0:n), pid 99397, tulos T/ns-karsi.tulos, 7 kuvaa, lokit/natiiviseppa-karsi-fd15e7cd2. Kuittaus NS:lle rivillä.
-  4. NUI neljä ajoa 6d12054b0, pid 9480 (odottaa pid:t 9103 ja 99397: PT:n käsky Pariisin ja Lontoon jälkeen), tulos T/nui-yksi.tulos, kansiot lokit/nui-yksi-k01f, -k05, -k04, -nimi-tallenne. Kuittaa NUI:lle kansiot ja paketti-rivi.
-- Kaikki valmiit, jonossa ei muuta: rivi PT:lle "JONO TYHJÄ: Julkaisija".
+Järjestys PT 00.38: KS 39, sitten NUI:n 5 ajoa, sitten myöhemmät tilaukset. Intro ei saa enää siirtyä. Ei päällekkäin.
+1. KS 39 22339908e, L1, pid 43304, 18 kuvaa, T/ks-yhteinen39.tulos, lokit/karttaseppa-yhteinen-39-b8-22339908e. Kuittaus KS:lle.
+2. NUI 4 ajoa 6d12054b0, L1, pid 43319, T/nui-yksi.tulos, lokit/nui-yksi-k01f (1 kuva), -k05 (1), -k04 (3), -nimi-tallenne (1 tallenne). Kuittaus NUI:lle: kansiot ja rivi "laattapalvelin: paketti".
+3. NUI kuvapallo-nimi 36fe37f6a, L1, pid 43328, 3 kuvaa, T/nui-yksi.tulos, lokit/nui-kuvapallo-nimi. Kuittaus NUI:lle.
+4. VS Lontoo C2 e031ce161, L2, pid 71091, 28 kuvaa, T/vs-lontoo-c2.tulos, lokit/linssiseppa2-lontoo-c2-e031ce161. Kuittaus Valosepälle.
+5. EI ALOITETTU, SINUN TEHTÄVÄSI: NS iso iPad, _tyo/natiiviseppa/liiku/ajopyynto-ipad-karsi.md, sha 4d2610ab0 (natiiviseppa/liiku-nimet-koe), loki lokit/natiiviseppa-karsi-ipad-4d2610ab0, 1 kuva; konsoli ja muistivahti.log NS:lle. Laitekäännös pid 43328:n jälkeen. Malli T/ns-ipad-kylma2-ajo.zsh ja T/ns-ipad-kylma2-jonossa.zsh; lue ajopyyntö. Lopuksi runko d092f48c takaisin.
+Kaikki valmiit, jonossa ei muuta: rivi PT:lle "JONO TYHJÄ: Julkaisija".
 
 ## YÖN SÄÄNNÖT
 - Omistaja 23.22: yöllä vain Pariisi, Lontoo ja juoksupeli. PT: Kielletty kaupunki ON juoksupeli (LAV:n levyt kuuluvat). Jos jonoon tulee muuta, ei ajoa, rivi PT:lle.
@@ -28,7 +28,7 @@ Intron Mac-ajot omistajalle laattapaketin kanssa. Paketti on koodissa, ei asetus
 - Odottimen malli: scratchpad ei säily; kirjoita uusi zsh-silmukka, joka tulostaa rivin, kun T/*.tulos kasvaa tai jonon pid päättyy, Monitorilla raja 30 min.
 
 ## TULOKSET TÄLTÄ VUOROLTA (kaikki kuitattu tilaajille; kuvia en arvioinut)
-KS 35, 36, 37. NS tyhjat b-j, liiku-pitka, liiku-ehdokkaat, liiku-nappi, -nappi2, aloitus-paketti g, iPad kylmä 2cba21a3e. NUI nimirivi, -2, kk-2, kk-paketti 8ac8d2a70. PK Lontoo B1, B2. LAV levyt7v, 7s, 7r, 7u, 7p, 7k, 7z, 7m. PK Lontoo D1.
+KS 35, 36, 37. NS tyhjat b-j, liiku-pitka, liiku-ehdokkaat, liiku-nappi, -nappi2, aloitus-paketti g, iPad kylmä 2cba21a3e. NUI nimirivi, -2, kk-2, kk-paketti 8ac8d2a70. PK Lontoo B1, B2. LAV levyt7v, 7s, 7r, 7u, 7p, 7k, 7z, 7m, 7n (11 png, tilaus 10 + 2 mittausta: LAV tarkistaa). PK Lontoo D1. VS Lontoo C1. KS 38. NS karsi fd15e7cd2, karsi ja liiku-nappi3 7fd402eee.
 
 ## OPIT
 - Odottavan ajon vaihto: tarkista samassa komennossa, että skriptin lapsi on `sleep`, kill vain se pid, käynnistä uusi tiedosto. Älä muokkaa ajossa olevaa skriptiä. Pidä myös seuraava odottaja mielessä: sen pid-riippuvuus pitää vaihtaa samalla.
