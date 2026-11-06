@@ -15,9 +15,12 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 - **Riemukaari #2172 "Kelpaa":** oletus `lod3-20261106/riemukaari` ja normaali, sävy 1.010 0.926 0.643. Kuitattu Codexille 741e22033.
 - **Notre-Dame:** oletuspohja `pohja-ranta-vesi1` (raita, PT kuittasi 18.1x). Malli #2171 "Ei vielä": nykyinen pysyy, kuitattu c69dc6088; vahti ilmoittaa seuraavan toimituksen.
 - **Kuvat:** silta-iena-kaista (kamera kuin ajon 26 silta-iena), raita-yla-oletus (kuin ajon 27 raita-yla), riemukaari-lod3 (kuin ajon 28 kv-riemukaari), kyltti-liike-5-halles (NUI).
+## KK:N SANA 18.33 (TEE ENSIN, nykyiset päätökset eivät muutu)
+- **Pont d'Iéna, seuraavaan yhteiseen ajoon, kuva KK:lle:** sama leveys kuin Pont d'Austerlitzilla ja ilman pyöreää päätä pohjoisrannalla. Kaista on nyt `Tiet["primary"]`; tarkista Austerlitzin luokka aineistosta (`tasot-paikka.py`), älä oleta. Palojen muutos vaatii uuden päätteen `-pariisi3`. Ajo vasta PT:n sanalla (tilinvaihto).
+- **Riemukaari, Codexille omistajan 18.09 päätöksen vikalistaan:** sivukaaren vaalea täyte ja räystään katkoviiva (kuva `parit-yhteinen-29/kk/riemukaari-lahi.jpg`). EI lähetetty vielä: kirjoita posti postilaatikko-haaraan.
 ## AJON 29 TULOS (parit `parit-yhteinen-29/kk/`, tehty `parit-yhteinen-28/tee-parit-29.py`)
 - **Pont d'Iéna:** yksi kaista, viivat poissa (silta-iena, silta-iena-lahi). Lähetetty KK:lle, odottaa.
-- **Riemukaari lod3:** toimii oletuksena, terävämpi kuin nykyinen (riemukaari, riemukaari-lahi). KK:lle huomiot, ei korjausta ilman sanaa: sivukaari näyttää vaalealta täytteeltä, reunalistassa katkoviivamainen juova oikealla.
+- **Riemukaari lod3:** toimii oletuksena, terävämpi kuin nykyinen (riemukaari, riemukaari-lahi). Huomiot kuten KK:n sanassa 18.33.
 - **Notre-Dame vesi1:** raitaa ei näy oletuksena (raita-yla), sama kuin ajon 27 vesi1; eroa tuovat VS:n kovat varjot. PT:lle kerrottu.
 - **NUI:** kyltti-liike-5-halles välitetty, en arvioinut.
 ## RAITA (`laikka-vesi-20261106/syy.md`)
