@@ -22,7 +22,7 @@ Jos rivi yhä leijuu: EI neljättä kaavaa ilman KK:n sanaa (PT 07.4x).
 ## Avoinna ja odottaa muita
 - KS: ottaa palat-v3:n ja sc-80:n seuraavaan yhteiseen ajoon. Viesti 07.4x.
 - NUI: sai kaavan; huomautettu, että Sacré-Cœurille kaava antaa 252 m ja kartan kirkko on 258 m:ssä. Merkin korkeus PT:llä/NUI:lla, ei minun.
-- KK: omistajan päätös nd-rajasta; tasaisen oletus odottaa yhteistä ajoa (omistaja 06.58, KS), ei tätä kaavaa.
+- KK: omistajan päätös nd-rajasta. KK 07.42 (KS, PT): tasainen oletukseksi vasta, kun leijuminen on korjattu, joten tämä kaava on sen edellytys. Tulos KK:lle ja PT:lle, kuvat täysikoossa.
 
 ## Omistajan päätökset 6.11. (PT:n välittäminä)
 - 06.55 suojatut talot "Jätetään laatikoina": ei suodatusta talokerrokseen. Ei koske ohjelmakohteiden omia OSM-laatikoita (PT 07.3x). Riski App Storea ennen tarkistuslistalla (11.8).
