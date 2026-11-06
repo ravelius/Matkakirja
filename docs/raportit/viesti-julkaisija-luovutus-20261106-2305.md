@@ -31,3 +31,9 @@ KS 31 (66+25), 32 (32), 33 (1+20), 34 (33+24), 34b (14). NS liiku, liiku-2 (PUUT
 - ks-yhteinen-ajo.zsh on L2, ks-yhteinen-l1.zsh on L1. Tallenteet ja txt:t kopioi itse lokikansioon: mac-ajo.zsh ei kopioi niitä. Levyn säästämiseksi siirrä tallenteet mv:llä (kuten KS 34).
 - Aikaraja: oletus 30 min, mitoita (muisti ju-aikaraja-ja-l1-rinnakkain).
 - Lukkokilpa ei takaa järjestystä: kun tilaus sanoo "ennen X:ää", odota pid:llä.
+
+## LISÄYS 23.07 (korvaa yllä olevan L1-jonon pid:t; KS 35 ja tyhjat-b/c ennallaan)
+PT:n kiire: NUI nimirivi meni jonon kärkeen. L1-järjestys tyhjat-c:n jälkeen:
+1. NUI kartta-nimirivi c8a71c1cd, pid 51296, tulos T/nui-nimirivi.tulos, 6 kuvaa, lokit/nui-kartta-nimirivi. Tulos NUI:lle HETI: kuva KK:lle odottaa tätä.
+2. NUI kk-2 51f9fad72, pid 51298, tulos T/nui-kk2.tulos, 18 kuvaa.
+3. LAV levyt7v, pid 51300. 4. LAV levyt7s, pid 51303. 5. LAV levyt7r ja levyt7u, pid 51306. Tulostiedostot ja kuittaukset kuten yllä.
