@@ -50,3 +50,8 @@ Korvaa -1231:n SEURAAVA TYÖ:n. -1231:n "Mitä koodissa on" ja -1216:n opit pät
 ## Huomiot
 - NS:n työpuita wt/-kansiossa 8 (raja 3): kerro PT:lle ennen poistoja (-1140).
 - KK:n ja PT:n viestit nimellä vaativat ref:n (ListAgents).
+
+## Lisäys klo 12.5x (korvaa kohdan 2 lähteen ja kohdan 7)
+- Kohta 7 TEHTY: KS:n ajo 13 pr-pohjoinen, muuri seisoo pohjalla eikä näy lävistävän Louvrea; rako tai kosketus todistamatta. Arvio KK:lla. KS poistaa kaksi Louvren puuta itse. Canopéen välke edelleen katsomatta.
+- Kohta 2, KS:n vastaus: suositus _tyo/karttaseppa/pariisi-pohja/osm/solu-*.json, relaatio 2191006, role outer/inner, WGS84. Renkaat ja rasterointi valmiina _tyo/karttaseppa/pariisi-puut-20261104/puut-vesi.py rivit 13-40 (4 m/px, tarkistuskuva puut-vesi-tarkistus.png). Näkyvä vesi tulee kuitenkin eri lähteestä: OpenFreeMapin water-taso Z14 (ElavaTyyli.cs:282, Laattapalvelin.Elava.cs:27), Web Mercator; eroa ei ole mitattu. Väriraja-esimerkki pariisi-puut-20261104/pari.py:122.
+- KS varoittaa samasta kuin avoin hypoteesi: korkea palikka rannalla voi kallistettuna näyttää seisovan vedessä, vaikka juuri on maalla. Testaa juuren piste. Tarkista c-b2:n tapaukset näin ennen poistoa ja kerro KK:lle, jos osa ei ollutkaan vedessä.
