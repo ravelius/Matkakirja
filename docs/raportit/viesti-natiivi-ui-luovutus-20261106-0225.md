@@ -3,7 +3,7 @@
 Täydentää -0146:aa (haara natiivi-ui/luovutus-20261106-0146, vesinimet ja kipsipäät) ja sen kautta -2248:aa ja -2002:ta.
 
 ## Jono
-Ensin KK:n sana korkeustaulukosta, kyltin häivytys (alla) sen rinnalla. Ei omaa ajoa käynnissä. Odottaa: seuraava JU-ajo, jossa proto natiivi-ui/merkki-pinta-219 9e2d0edba on mukana (kerrottu JU:lle ja PT:lle) (pyydetty PT:ltä 02.2x; sisältää vesinimet 0a5232aec). Ajosta kuva ja rivi PT:lle ja KK:lle.
+Ensin alla oleva työjärjestys. Ei omaa ajoa käynnissä. Odottaa: seuraava JU-ajo, jossa proto natiivi-ui/merkki-pinta-219 9e2d0edba on mukana (kerrottu JU:lle ja PT:lle) (pyydetty PT:ltä 02.2x; sisältää vesinimet 0a5232aec). Ajosta kuva ja rivi PT:lle ja KK:lle.
 
 ## Merkit ja nimet maanpinnalle (PT 02.2x, KK sallii kokeen; ei omaa ajoa, ei junaan)
 Haara natiivi-ui/merkki-pinta-219, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-vesinimi (vaihdettu tälle haaralle, vesinimi-100-219 ennallaan), peili natiivi-backup peili/proto/natiivi-ui/merkki-pinta-219. Kartta-testit 624/624. EI KÄÄNNETTY UNITYSSÄ: C#-virhe voi yhä tulla JU:n käännöksessä.
@@ -33,7 +33,11 @@ Tarkistettu ilman ajoa, kerrottu KK:lle:
 - Nimet: jono 2995, talot 2994, ZTest Always: nimi talojen päällä. Mallit 3080 nimien päällä, väistö ennallaan.
 - Les Halles: peli käyttää kartanPiste 48.8622, 2.3447 (sijainnit-json), en lat/lon-arvoa: m4:ssä 0 m (1600, 711), kyltti (1602, 798). x täsmää; y:ssä 45 px yli Sacré-Cœurin 42 px:n, syy auki, ei korkeudesta. Grand Châtelet kartanPiste 0 m (1898, 1112), leikkeen keskikohta (1897, 1111).
 
-## ENSIN: ODOTA KK:N SANAA KORKEUSTAULUKOSTA (KK ja PT 03.0x; ei korjausta ennen sanaa, ei omaa ajoa, ei junaan)
+## TYÖJÄRJESTYS (KK, kyllä korkeustaulukolle; korvaa alla olevan odotuksen ja etujonon)
+KK:n sanat: "kyllä, valmis korkeustaulukko kokeena samaan haaraan, ei omaa ajoa, ei junaan. Seuraava vuoro tekee sen ensimmäisenä, ja Cesium-kyselyt jäävät pois. Ehdot: kartan alueen ulkopuolella ei 0 m:ä eikä näkyvää hyppyä rajalla (laajenna tai käytä reunan arvoa); mäen laki tarkistetaan kuvasta. Sen jälkeen leikatut kuvat, nimet nurmen ja sillan alla sekä kyltin häipyminen. Kuva yhteisen ajon mukana."
+1) Korkeustaulukko. 2) Leikatut kuvat (KK:n vastaus 21.07 vs 2.215 tarkistettava viesteistä). 3) Nimet nurmen ja sillan alla (selvitys KK:lle ennen korjausta). 4) Kyltin häipyminen.
+
+## TAUSTA: KORKEUSTAULUKKO (KK ja PT 03.0x; ei korjausta ennen sanaa, ei omaa ajoa, ei junaan)
 KK:n sanat: "merkit ja nimet ovat paikallaan heti saapuessa, ilman odotusta ja ilman lisälatauksia". Viety KK:lle ja PT:lle: suositus korkeustaulukko samasta lähteestä kuin talojen palat. Tämä KORVAA alla olevan viiveen korjauksen (etujono), jos KK sanoo kyllä.
 Mittaus: 41 438 näytettä, kaikki onnistuivat; jaksot 14 682 / 23,6 s, 7 490 / 22,3 s, 7 878 / 13,4 s, 8 873 / 9,8 s; erä 35–95 ms; tyhjällä jonolla 0,2 s.
 Tekotapa: skripti lukee _tyo/natiiviseppa/pariisi-talot/tee-palat.py:n IGN-datan (T['maa'] = altitude_minimale_sol) ja tekee noin 150 m:n ruudukon (MaanPintaRuudukko, 6 417 kulmaa, int16 noin 13 kt), täyttö naapureista; Resources-tiedosto. MaanPinta lukee sen synkronisesti: 2 × (maa + 15) kuten TaloKerros (64820ec1a), Cesium-kyselyt pois, jono ja "ei näy ennen korkeutta" pois. Alue lat 48.8141..48.9081, lon 2.2412..2.4280; ulkopuolella 0 m tai laajennus. Sijaintitaulukon 38 kohdetta sisällä. Tasainen kartta: kaava samaan lukijaan, jos omistaja valitsee. Tarkista kuvasta mäen laki.
