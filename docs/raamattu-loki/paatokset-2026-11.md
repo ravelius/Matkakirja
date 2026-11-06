@@ -721,3 +721,7 @@ KK 6.11.2026 klo 23.26 omistajan valtuutuksella: ryhmä 2 v13 ja 25 m:n raja kel
 ## INVALIDIEN VARJO ENNALLEEN, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.37)
 
 KK 6.11.2026 klo 23.36 omistajan valtuutuksella: Invalidien varjo jää ennalleen, kokeena, ei junaan (VS:n suositus). Täydentää 23.27:n kohtaa "VS arvioi", ei korvaa omistajan päätöstä. Peruste: ajot 28 ja 35 rinnakkain lähes samat, ja omistajalle kerrottiin "varjo näkyy heikosti" ennen hänen sanaansa "Kelpaavat". Kuva ja selitys aamun koontiin.
+
+## NIMETYT RAKENNUKSET PALAAVAT, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.49)
+
+KK 6.11.2026 klo 23.47 omistajan valtuutuksella: Jeu de Paume ja Orangerie palaavat 3D-taloina Louvren maskista, kokeena, ei junaan; korvaa oletuksen "ennallaan". Nimet tarkistettu OSM:stä (Q656296, Q726781). Sama sääntö muille: nimetty oikea rakennus, joka ei kuulu malliin ja on yli 25 m mallista, palaa seuraavaan palaversioon ilman omaa ajoa; alle 25 m:n jää pois, ja KS antaa listan aamuun. Ei koske omistajan omia päätöksiä (Eiffel ja Montparnasse 22.20, Monoprix, Seinen laivat, saari). Lista scratchpad/keskustelukanava/nimetyt-poistot-v16.txt; mallien omat erotetaan.
