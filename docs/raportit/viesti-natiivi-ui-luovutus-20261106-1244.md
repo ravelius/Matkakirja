@@ -5,7 +5,8 @@ Korvaa -1231:n työlistan. Avoimet asiat -1150:stä ja -1140:stä ovat voimassa.
 ## Tila
 Worktree /Users/Shared/Claude/wt/proto-natiivi-ui-vesinimi, haara natiivi-ui/ui-sarja-219, kärki 93bfd4379 (peilissä natiivi-backup), ei muutoksia. KÄÄNTÄMÄTTÄ ja ajamatta: mitään kohtaa ei ole todistettu ajosta.
 Ajo pyydetty JU:lta 12.4x (viesti jonossa, JU:n kuittausta ei vielä ole; tarkista list_eventsillä): 5 varausta, kansio lokit/nui-ui-93bfd4379, iphone-pysty pallo keskitys x3, iphone-vaaka pallo keskitys x1, iphone-vaaka pallo x1 kuvilla (pallon kierros, pallo vapaa lento, pallo keskeytetty, oppaan aika, aarretehtävä aikajana, aarretehtävä katso).
-PT:ltä kysytty 12.4x (kohta E): riittävätkö testitilojen kuvat KK:lle, vai oma simuvaraus? Suositus oli testitilat. Vastaus puuttuu.
+PT 12.4x, kohta E (sellaisenaan): "kelpaa, ei omaa varausta nyt. Kerro KK:lle viestissä suoraan, että kuvat ovat testilipulla eikä oikeasta kierroksesta. Jos KK vie vivun siirron omistajalle, oikea tila ajetaan ensin omalla varauksella, koska omistajan hyväksymää paikkaa ei muuteta testitilan perusteella."
+JU 12.4x: ajo jonossa L1:llä, loki T/nui-ui-93bfd.log; seuraava JU lähettää polut.
 
 ## PT:n sana 12.3x (sellaisenaan)
 "F kyllä: korjaa Rakenne.NaytaHeti juuresta ja ota nostokortti ja selain testiin. A, C ja D kyllä, samoin bd998aa59:n peruslinjan ja ✓-muunnoksen kumous, koska ne eivät auttaneet.
