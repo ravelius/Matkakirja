@@ -709,3 +709,7 @@ Omistaja 6.11.2026 klo 23.07 (KK:n välittämä): "Jos tulee ongelma ja se ei me
 ## LONTOO A: 15 KOHDETTA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.12)
 
 KK 6.11.2026 klo 23.11 omistajan valtuutuksella: Lontoo A kelpaa (_tyo/pelikoodari/lontoo/a/kohdelista.md): 15 kohdetta, Greenwichin planetaario pois. Suojatut modernit talot jäävät 11.8:n mukaan yhtenä suorana laatikkona, ei kerrospaloja; korvaa PK:n ehdotuksen jättää ne pois. PK jatkaa B:hen.
+
+## YÖLLÄ VAIN PARIISI, LONTOO JA JUOKSUPELI (6.11.2026 klo 23.24)
+
+Omistaja 6.11.2026 klo 23.22 (KK:n välittämä): "Sinun pitää myös valvoa että sessiot eivät alla tehdä jotain muuta kuin  Pariisi, Lontoo tai juoksu peli". KK:n tulkinta: vain nämä kolme; tukityö (käännökset, levy, valvonta, taulu) jatkuu, kun se palvelee niitä. Muu seis yöksi, ei uutta. KK ja PT valvovat.
