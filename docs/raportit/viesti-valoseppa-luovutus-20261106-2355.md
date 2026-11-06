@@ -52,3 +52,6 @@ TEKEMÄTTÄ, ENSIN: pc-etela, pc-pohjoinen (Palais Bourbon) ja pv-concorde, pv-r
 SendMessage on tästä sessiosta keskeytetty 10 viestin rajalla: varakanava `mcp__ccd_session_mgmt__send_message` (CLAUDE.md, Raamattu 12.20).
 
 ## LISÄYS 7.11.: SILLAN VALO arvioitu (`sillan-paa-ajo34/ARVIO.md`, pari `sillan-paa-ajo37/parit.png`), tulos PT:llä; ei tehdä uudelleen. Ajosta 37 tekemättä enää vain Palais Bourbon pc-etela ja pc-pohjoinen, sitten Lontoo C.
+
+## PT 7.11. 00.2x, VIIMEISIN JÄRJESTYS (korvaa edelliset)
+Sillan valo ja usva kuitattu kokeena; kärjen eroa ei jatketa yöllä. ENSIMMÄINEN TYÖ: LONTOO C:N KOODI. Palais Bourbonin piha ei saa viivyttää: katso se kerran seuraavan ajon yhteydessä tai jätä KS:n ajoon 38.
