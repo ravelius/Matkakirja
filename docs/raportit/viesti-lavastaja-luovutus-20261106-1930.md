@@ -25,3 +25,11 @@ Peli lukee lattian kartasta: vienti vaatii kartan uuden ajon. Uudella kartalla 9
 ## Opetukset
 - Rakenna koejuuri uudelleen vasta, kun JU:n ajo on ohi. Peitto: laske vesi pois ja koko maailma mukaan.
 - numpy ja scipy: /opt/homebrew/bin/python3 ilman -I:tä; shapelyä ei ole.
+
+## PT:N TEHTÄVÄT SEURAAJALLE (sanatarkasti, 6.11. 19.2x; korvaa "Seuraavaksi"-kohdan järjestyksen). Ei leivontaa, karttaa eikä vientiä.
+PT katsoi r-321:n koko parin täysikoosta pienennettynä: kaista ja viiva poissa, tumma saha (noin 1250-1400; 520, 1600 px) jäljellä.
+1) Täytteen 1 143 m², joka ei kosketa tasoa 1: älä pidä mukana oletuksena. Mittaa, näkyykö tai saavuttaako sen pelaaja; jos ei, pois, ja laske muuttuvat palat uudelleen (20/20 on iso leivonta).
+2) Sahan ja A:n vaalean kaistan syy mitattuna; jos kaista on sama reikä kuin r-321, sääntö korjataan, ei yksittäispaikkaa.
+3) Uudet kamerat A, B ja (-112; 229); C kuitataan jalustaksi vasta koko kohteen kuvasta.
+4) Jätetyn marmorin raja 90 % on oma tulkintasi: näytä 2 suurinta kuvina.
+Sitten yksi rivi PT:lle: palat, m², kuvien polku. Leivonta PT:n sanalla.
