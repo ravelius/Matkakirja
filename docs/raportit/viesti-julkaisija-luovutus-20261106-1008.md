@@ -36,3 +36,17 @@ LAV aukot7 (5), 7l (1), 7v (5), 8 (5), 8l (15), 8r (6, palautettu 14:stä), 9 (3
 - SendMessage-raja (10 viestiä) pysäytti viestit: varakanava mcp__ccd_session_mgmt__send_message (CLAUDE.md, VIESTIRAJA). Kirjasin rajan ohitukset vain tähän.
 - esikatselu-2:ssa seurannan ulkopuolinen tiedosto nimeltä `\v`: alkuperä tuntematon, en koskenut.
 - zsh: echo === kaatuu (== not found).
+
+## LISÄYS 10.19: KÄYNNISSÄ JA JONOSSA (korvaa ALOITA-kohdat 1, 3 ja 6)
+Tarkista ensin ps ja lukot. Ketjut ovat taustalla ja saattavat katketa nollauksessa: ajamatta jääneet käynnistä itse. Ketju on valmis, kun sen lokissa on loppurivi. Ilmoita jokaisen tulos pyytäjälle; varakanava mcp__ccd_session_mgmt__send_message, jos SendMessage on rajalla.
+
+L1 = b7-ajot, L2 = b8-ajot (esikatselu-2:n Library vaihtuu b8:aan yhteinen-7:n alussa, b7 sivuun P/esikatselu-2-Library-b7).
+- L1: T/lav-aukot10u.log (LAV, kuvat-u, 5). Rivit LAV:lle: AJETTU + 404.
+- L1: T/lav-aukot11.log (LAV, kuvat-va ja kuvat-vb, 5 + 5). Rivit LAV:lle.
+- L1: T/vs-raystas4.log (VS, 9b9ff0036, raystas/kuvat4, 6). Rivi VS:lle.
+- L2: T/b8-koko-testit: UI-ajo kesken, tulos T:n jonolokissa "AJO NS b8 addae63f2 UI-asettelutesti" ja lokit/natiiviseppa-unity-b8-addae63f2/testit-UI.txt. Pallo ja linna jäivät aikarajaan.
+- L2: T/ks-yhteinen7-b8.zsh odottaa UI-ajon loppua (T/ks-yhteinen7-b8.log), kansio lokit/karttaseppa-yhteinen-7-b8-9f5e3e105, 9 kuvaa, 0.465. Polku KS:lle. Tarkista kansio palat-v9-louvre-halles lokista.
+- L2: PK sk-u c9db47578, kansio lokit/pelikoodari-sk-u-c9db47578, odottaa loki-rivin YHTEINEN7 VALMIS. Polku PK:lle.
+
+PT 10.0x, sitova järjestys näiden väliin: UI-uusinta L1:llä sisäisessä kopiossa. Aikarajan toistuessa sama UI-ajo b7:llä vertailuksi ennen kuin syytä pidetään b8:na. Sitten 152 metaa. Tulos PT:lle enintään 3 riviä. Komento b8: `zsh /Users/Shared/Claude/wt/julkaisija-ns-gc/tyokalut/ui-asettelutesti.sh addae63f2` (tarkista puun HEAD; L1 tuo Libraryn b8:aan Matkakirja-proto-kaannos-kopiossa, ei esikatselukopioissa). b7-vertailu: sama 7bbf04e09:llä.
+Palautettu: VS raystas4 16 → 6 kuvaa, LAV aukot8r 14 → 6.
