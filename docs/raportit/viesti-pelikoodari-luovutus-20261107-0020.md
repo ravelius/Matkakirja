@@ -55,3 +55,8 @@ KK katsoi kaikki 7 kuvaa: näyttää Lontoolta, ei lelumainen, koodipuut käyvä
 - Generaattoria ei voinut ajaa sellaisenaan: koko ajo muutti 859 paikkaa (myös Pariisi: Pasteur 1862 siirtyy, 8 uutta, Tuileriain rauniot pois). PT:n ehto oli Pariisi ennallaan, joska rajattu Lontooseen ja kerrottu PT:lle.
 - Kaikkien kaupunkien korjaus ja juna: PT vie KK:lle aamulla, vastuu NUI:lla.
 - Jatka kohdista 3 ja 7 (puistot, itäreuna, aloitus Lontoosta).
+
+## 10. Lisäys: Valosepän pyyntö (C, a8d971917, haara linssiseppa2/lontoo-c, pohja 200433217; ajo sk-c1.txt palat-d2:lla JU:lla)
+- **Ensimmäinen työ, 1 min:** lisää `a/siisti-d.json`:iin St Paul'sin `way/369161987`, tarkista Tower Bridgen torneilta muut talot (`a/etsi-talot.py osm/osm.json 51.5055175 -0.0753695 170`; OSM-laiturit way/367652787 ja way/367652791 eivät ole taloja), aja uuteen kansioon `palat-d3` ja kerro kansio Valosepälle (local_fa464945-e15d-4f98-aaad-00877a60f63a).
+- Paikat: St Paul's 51.51378 -0.098322 akseli 6,9, x -85,4…71, z ±46,6; Tower Bridge 51.5055175 -0.0753695 akseli 67,3, SiirtoZ -0,7, x -157…163, z ±28,5. Big Ben SiirtoX -1,2, SiirtoZ -1,45, pyyhittävä alue ei muutu.
+- Yhdistä `pelikoodari/lontoo-b` (2fcf9008d, Lontoon paikat) ja Valosepän haara ennen seuraavaa ajoa: kumpikin on haarautunut 200433217:stä tai sen jälkeen.
