@@ -751,3 +751,7 @@ KK klo 00.45 omistajan valtuutuksella, kokeena, ei junaan: Big Ben oikeassa koos
 ## KK:N PAATOS VALTUUTUKSELLA: PALAT V18 KELPAAVAT KOKEENA (7.11.2026 klo 00.59)
 
 KK klo 00.58 omistajan valtuutuksella, kokeena, ei junaan: palat v18 kelpaavat (ajo 39; kojut poissa Invalideilta ja Opéralta, Grand Palais v13 | v17 katsottu).
+
+## KK:N PAATOS VALTUUTUKSELLA: KUVAPALLOJEN NIMIKYLTIT KOKEENA (7.11.2026 klo 01.03)
+
+KK klo 01.02 omistajan valtuutuksella, kokeena, ei junaan: kuvapallojen nimikyltit kelpaavat (NUI 36fe37f6a). NUI vaihtaa nimet kuvan aiheen mukaan ja tekee väistön PT:n kohtien jälkeen.
