@@ -532,3 +532,11 @@ Omistaja 6.11.2026 klo 15.58 (KK): kortti "Kelpaavatko peukalorenkaat?" (PK 7684
 ## PEUKALORENKAAT LUONNOKSEN SUUNTAAN (omistaja 16.05) (6.11.2026 klo 16.05)
 
 Omistajan kortti KK:n kautta klo 16.05: "Tehdäänkö peukalorenkaat tämän luonnoksen suuntaan?" = "Tähän suuntaan (Suositus)". Kumoaa 15.58:n "ei vielä". Toteuttaa Pelikoodari; luonnos KK:n kansiossa scratchpad/keskustelukanava/kuvat/renkaat-luonnos-20261106/.
+
+## ETÄYHTEYS VAIN KESKUSTELUKANAVALLA (omistaja 16.08) (6.11.2026 klo 16.11)
+
+Omistaja 6.11.2026 klo 16.08 (KK): kortti "Missä etäyhteys on päällä?" = "Vain tässä keskustelussa (Suositus)". Korvaa Raamatun 7.9:n "kaikissa sessioissa". PT korjasi 7.9, 7.30, 7.37, 12.9, NOLLAUS.md, tilinvaihto.md ja PT:n aloitusviestin, ja kytki etäyhteyden pois KS:ltä, PK:lta, VS:ltä, LAV:lta ja Asemataululta.
+
+## POMPIDOUN SIKSAK RIITTÄÄ (omistaja 16.08) (6.11.2026 klo 16.11)
+
+Omistaja 6.11.2026 klo 16.08 (KK): kortti "Riittääkö Pompidoun siksak tällaisena?" = "Riittää (Suositus)" (pari yhteinen19-e5cd281f1). VS:lle kerrottu.
