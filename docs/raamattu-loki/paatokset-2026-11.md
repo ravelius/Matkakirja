@@ -540,3 +540,7 @@ Omistaja 6.11.2026 klo 16.08 (KK): kortti "Missä etäyhteys on päällä?" = "V
 ## POMPIDOUN SIKSAK RIITTÄÄ (omistaja 16.08) (6.11.2026 klo 16.11)
 
 Omistaja 6.11.2026 klo 16.08 (KK): kortti "Riittääkö Pompidoun siksak tällaisena?" = "Riittää (Suositus)" (pari yhteinen19-e5cd281f1). VS:lle kerrottu.
+
+## PEUKALORENKAAT KELPAAVAT (omistaja 16.20) (6.11.2026 klo 16.21)
+
+Omistaja 6.11.2026 klo 16.20 (KK): kortti "Kelpaavatko peukalorenkaat näin?" (PK 8dfc13aaf, kuvat esikatselu-20261106-160909 ja -161433) = "Kelpaavat (Suositus)". Avoimeen junaan, kun iPhonen 10 pt:n turva-aluesiirto on tehty; PK:lle kerrottu. Näkemättä, omistajalle kerrottu: häivytys liikkeessä, oikea laite.
