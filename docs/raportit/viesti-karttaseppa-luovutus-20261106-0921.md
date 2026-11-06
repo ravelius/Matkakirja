@@ -2,7 +2,14 @@
 Syy: konteksti 25 %, luonteva tauko: molemmat ajot katsottu ja jaettu. **Voittaa aiemmat ristiriidassa; -0904:stä pätevät enää W, Y:n polku ja id:t; -0829:stä kohdan 1 Notre-Dame-koe ja viat sekä kohta 3; -0804:stä VIESTIRAJA ja AUKI.** Kaikki kokeena, ei junaan, ei iPadia. W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219 (karttaseppa/nahtavyydet-219, kärki 1303df5fc). Y = /Users/Shared/Claude/wt/proto-karttaseppa-yhteinen (karttaseppa/ajo-yhteinen-tasoitus, kärki c0bfef077). KK:lle SendMessage id:llä local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe. ListAgents ei listaa KK:ta, mutta id toimii.
 
 ## ENSIN
-Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen). Kumpikaan ajo ei ole käynnissä. Seuraavaa yhteistä ajoa ei ole pyydetty: kokoa se, kun KK ja PT ovat vastanneet tai kun PT pyytää.
+Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen). Kumpikaan ajo ei ole käynnissä.
+
+## ENSIMMÄINEN TYÖ: LOUVREN TALOMASKI (OMISTAJA 09.20, voittaa alla olevan kohdan "Louvre-maski odottaa")
+Omistajan kortti: "Louvren ympärillä on litteä alue, koska hyväksymällesi alueelle ei ole vielä maalausta. Kokeillaanko sen tilalle kortteleita ja taloja, kuten Notre-Damella?" = "Kokeillaan (Suositus)". KK:n tavoite: Louvren itä- ja pohjoispuolella ei ole litteää aluetta, vaan korttelit ja talot tulevat Louvren viereen kuten Notre-Damen rannoilla. Louvren malli, Tuileries ja Seine pysyvät, eikä mikään talo lävistä mallia.
+- **Tee:** uusi Louvren talomaski (nyt kohteet-pariisi.json, varatut, louvre = iso alue v2, itäraja lon 2,3471), anna se NS:lle kuten `_tyo/natiiviseppa/pariisi-talot/selvitys-yhteinen/nd-ranta/korvaus.json` (työkalu samassa kansiossa `nd-ranta-maski.py`; NS:n `tee-palat.py` lukee kohteet-pariisi:n). Kerro samalla NS:lle ja KK:lle, muuttuuko Louvren pohjakuva. Rajan valinta on sinun.
+- **Huomaa:** malli on oikeaa isompi ja on aiemmin peittänyt Rue de Rivolin. Vanha reunus (maski21, punainen raja kuvassa ehdotus-v2.jpg) on KK:n mukaan valmis lähtökohta, jos se sopii nykyiseen malliin. Polkuja maski21 ja ehdotus-v2 en löytänyt `_tyo`:sta 6 tason haulla; ne voivat olla Louvren Codex-kansiossa (tilamuistiossa A/louvre-pohja ja A/louvre-21c-v1). Etsi ne ensin.
+- **Ajo (PT 09.2x):** yhteinen ajo vasta, kun maski ja NS:n uusi kansio ovat valmiit; seuraaja (sinä) pyytää sen JU:lta. Ei omaa ajoa, ei junaan, ei iPadia. Sisältö: Concorde 3203aa555 (sk-concorde-2), NUI 8c3f3931f (sisältää 1ec00e883:n), Louvren korttelikoe, ja alla olevat kuvarivit.
+- **Kuviin enintään 3 lisää (KK):** Les Halles matalalta (po-la käy), Palais-Royal ja Rue de Rivoli Louvren pohjoissivulta, Louvren itäpää. Katso myös, katoaako itäpään haalea reuna. Kuvat KK:lle katsottuina. Porrasreunaiset korttelit ratkeavat tässä, jos talot peittävät ne; tarkista.
 
 ## TULOS: AJO 5, Y c0bfef077 (katsottu, jaettu KK:lle, NS:lle, NUI:lle, PT:lle)
 `lokit/karttaseppa-yhteinen-5-c0bfef077`, palat-v6-nd-ranta, 14 kuvaa.
@@ -16,9 +23,8 @@ Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/post
 
 ## ODOTTAA KK:LTA (ei tehtävää ennen sanaa)
 1. Kattokortti omistajalle (v4 vai v6).
-2. Louvre-maski: NS:n rajausehdotus. Maski selittää litteän alueen Louvren ja Châtelet'n välissä (po-la, ts-talot, kortteli).
-3. Laivat ruskeina litteinä muotoina Seinellä, poistetaanko (kuva NS:n `selvitys-yhteinen/ajo-c0bfef077/gare-joki.png`, jota en ole itse katsonut).
-**Porrasreunaiset korttelit** (Fontaine des Innocents, po-la x 1200–1500, y 1300–1600) ovat KS:n, karttatason asia, mutta älä korjaa ennen maskin sanaa: talot todennäköisesti peittävät ne (NS). Sama muoto näkyy jo ajossa 4.
+2. Laivat ruskeina litteinä muotoina Seinellä, poistetaanko (kuva NS:n `selvitys-yhteinen/ajo-c0bfef077/gare-joki.png`, jota en ole itse katsonut).
+**Porrasreunaiset korttelit** (Fontaine des Innocents, po-la x 1200–1500, y 1300–1600) ovat KS:n, karttatason asia, mutta älä korjaa ennen uuden maskin kuvia: talot todennäköisesti peittävät ne (NS). Sama muoto näkyy jo ajossa 4.
 
 ## SEURAAVA YHTEINEN AJO (yhdistä Y:hen; kääntämättä)
 - **NUI 8c3f3931f** (natiivi-backup peili/proto/natiivi-ui/alapiste-219; PT kuittasi; sisältää 1ec00e883:n, f473d4d86:n ja 106521496:n; muutos PalloKierto.cs). Koskee nimiä koko maailmassa, joten muut kaupungit vahvistettava ennen junaa (PT). Hypoteesi nimikadon syystä, kunnes loki osoittaa.
