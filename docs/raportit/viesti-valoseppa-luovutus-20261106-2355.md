@@ -42,3 +42,6 @@ Pohja vahvistettu: etä natiivi-backup, haara `pelikoodari/lontoo-b`, kärki 02b
 Kuvalista `_tyo/pelikoodari/lontoo/sk-b1.txt`, palat `palat-b1`. KK:n lähin kuva: talojen kohdalta `aja … 0.006`. Taivas ennalleen. `OhjelmaKohteet.LontooKoe` piilottaa pelin 2D-Big Benin saman pisteen päältä.
 Abbeyn akseli -5,1° on arvio: tarkista kuvasta. Big Ben -10,2° palatsin 79,8°:sta.
 PK tekee kohdan D (koko Lontoo, talot paloina) samaan aikaan, joten Tower Bridgen ja St Paul'sin talot tulevat sieltä; kysy valmistumista häneltä. `siisti-b.json` poistaa nyt Elizabeth Towerin ja Abbeyn OSM-talot; D poistaa kaikkien 15 kohteen OSM-talot. KERRO PK:LLE, jos nimettyjen paikka tai pyyhittävä alue muuttuu.
+
+## PT:N TARKENNUS 23.5x: JÄRJESTYS
+Lontoo C:n koodi EI odota ajoa 37: aloita heti nollauksen jälkeen. Ajo 37 menee edelle vain, kun se on valmis: katso silloin omat kohdat ja jatka sitten C:tä.
