@@ -40,3 +40,7 @@ Odottaa JU:lta (L1, Pariisin ja Lontoon jälkeen): nui-kuvapallo-nimi (36fe37f6a
 - Kohta 3: VALMIS: v-k12, v-k13 terävät, ladattu 1536×1024 (lähdekuvan koko); pehmeys oli Macin 640 px:n ominaisuus. Ei korjausta peliin.
 - Kohta 4: ajamatta, kuten yllä.
 - POIKKEUS ArgumentOutOfRangeException odota-tila-rivillä on myös kk-sarjassa; ajot jatkuvat; syy selvittämättä, ei kuulu näihin.
+
+## PÄIVITYS 2, 7.11. 01.0x: VOITTAA YLLÄ OLEVAT
+Kohta 4 VALMIS kokeena: nui-kuvapallo-nimi katsottu, tulos KK:lla, sha PT:llä; viat (ei väistöä, tupla, pieni kaukaa, "Cité") kerrottu; odottaa KK:n sanaa, ei toista yritystä ilman sitä.
+Jäljellä JU:lta vain nui-nimi-tallenne-2 ja nui-yksi-k01f-2 (1596d5e32, L1 NS:n laitekäännöksen jälkeen).
