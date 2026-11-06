@@ -11,6 +11,11 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe. Python numpyllä
 - Skenaariota muutettiin pyynnön jälkeen (s2-kamera, hv3-kuvat), JU:lle kerrottu. Tarkista lokista, että hv3 on mukana. Viestin perillemeno on varmistettu, lukemista ei.
 - Iso iPad on vapaa viimeisen tiedon mukaan (-1339); tarkista ennen iPad 3:a.
 
+## LISÄYS 13.5x, KK:n viesti luovutuksen jälkeen (menee kohtien 2–3 edelle)
+- TOLPAT VEDESSÄ: KK: omistajalle on sanottu, että ne korjataan. Selvitä syy paikkatiedosta ILMAN omaa ajoa. Jos paikka on väärä, korjaa. Mac-9:ään se ei enää ehdi: kärki 46578a534 on JU:lla ja JU kielsi muuttamasta sk-mac-9.txt:ää, joten korjaus menee seuraavaan ajoon. Kerro KK:lle, kuinka monta tolppaa vika koskee koko Pariisissa.
+- Alku, ei tulos: tee-palikat.py:455–457 pudottaa alle 5 m:n päässä OSM-vedestä (relaatio 2191006) olevat tolpat, mutta pitää ne, jotka pk_sillalla (rivi 442) laskee sillan kaistalle; v4:n lokissa "sillalla jäi 241". Epäilys, ei todistettu: osa näistä on vedessä ilman oikeaa siltaa kohdalla. Toinen mahdollisuus: näkyvä vesi (OpenFreeMap Z14) eroaa OSM-vedestä, jolloin suodatin ei näe tolppaa vedessä (ero mittaamatta, -1247/-1301; OFM:ää ei haeta, PT). Tolpat P/palikat-osm.json valot, data P/PalikkaData-v5.bytes, kuva P/selvitys-mac8/rajaus-c-b2-ranta.png. Korjaus kuten poista-omat-sillat.py: v5:stä uusi versio, muu aineisto tavulleen ennallaan.
+- KK: näyttää puut omistajalle vasta Mac-9:n parista, jossa on siltakorjaus ja Hôtel de Villen ranta. Jos hv3 ei osu, kerro se KK:lle; EI omaa ajoa sitä varten.
+
 ## SEURAAVA TYÖ, järjestyksessä
 1. MAC-9-TULOS, kuvat täysikokoisina. Katso:
    - Pont Neuf: Mac-7:n r4-loppu-b2 | uusi r4-loppu-b2, sama rajaus kuin P/selvitys-mac7/rajaus-silta.png (P/parit-mac7.py). Laatan pitää olla poissa.
