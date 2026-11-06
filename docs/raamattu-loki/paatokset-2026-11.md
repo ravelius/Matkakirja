@@ -504,3 +504,7 @@ OMISTAJAN KORTTI KK:ssa, sanatarkasti: 'Kelpaavatko nimikylttien koko ja näkymi
 ## TRIPO-PUUT HILLITYMMIN, KAPEITA TUMMIA VÄHEMMÄN (OMISTAJA 6.11.2026 KLO 13.41) (6.11.2026 klo 13.42)
 
 OMISTAJAN KORTIT KK:n välityksellä, sanatarkasti (kuvat/puut-tripo-mac6): 'Mikä väri Tripo-puille tulee?' = 'Hillitymmin (Suositus)' (tummimmat puut hieman vaaleammiksi ja lämpimämmiksi); 'Vähennetäänkö kapeita tummia puita?' = 'Vähennetään (Suositus)' (enemmän pyöreitä puita). Kokemus (KK): puut asettuvat kartan väreihin, mutta pysyvät eläväisempinä kuin korttipuut. Rajaus: kokeena, ei junaan, ei uusia Tripo-ottoja. NS tekee; uusi pari KK:lle ajosta, jossa on myös Hôtel de Villen ranta; iPad 3 mittaa hinnan tällä värillä ja puusuhteella, jos se mahtuu vuoroon.
+
+## TRIPO-PUIDEN VÄRI JA SUHDE KELPAAVAT (OMISTAJA 6.11.2026 KLO 14.28) (6.11.2026 klo 14.3x)
+
+OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti (kuvat/puut-tripo-mac9): 'Kelpaavatko puiden väri ja suhde nyt?' = 'Kelpaavat (Suositus)'. Väri ja puiden suhde jäävät Mac-8:n ja Mac-9:n tasolle; koe, ei junaan. Kerrottu samalla: laatta, puut ja tolpat vedessä, Pont Neufin tolpat ja vaalea raita, tolppien katkoviiva; NS korjaa v6:een ennen iPad 3:a. iPad-hinta ja lähin puutaso mittaamatta.
