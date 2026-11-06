@@ -421,3 +421,7 @@ OMISTAJAN PÄÄTÖS klo 22.09 (kortti, pyynnöstä 22.04): "Tehdäänkö ohjelma
 ## RAAMATTU 11.8: TARKISTUS ENNEN TYOTA (KK 6.11.2026 klo 01.20) (6.11.2026 klo 01.21)
 
 KK: Pompidou ja Tour Montparnasse olivat KK:n suunnitelmissa, vaikka ovat Ranskassa suojattuja, eikä omistajalle ollut kerrottu. Pompidou pois, Montparnasse seis aamun korttiin asti, VS tarkistaa 18 siltaa. KK:n pyyntö: jokaisesta ohjelma- ja sarjakohteesta 11.8-tarkistus ennen työtä; vuonna 1956 tai myöhemmin suunniteltu on aina suojattu. PT kirjasi rajan muotoon 'enintään 70 vuotta sitten', jotta vuosiluku ei vanhene; sääntö koskee maita, joissa rakennusten kuvausvapautta ei ole. Tilan takia 11.8:sta poistettu esimerkit: 'esim. Christon käärity Pont Neuf ja Epsteinin Wilden hautamuistomerkki'. Ei omistajan sana.
+
+## RAAMATTU 2.215: KADONNEET AARTEET PYOREINA KUVINA (KK 6.11.2026) (6.11.2026 klo 02.42)
+
+KK pyysi: kohdassa luki yhä 'jäävät leikattuina kuvina (2.11. klo 08.31 pysyy)', vaikka omistajan kortti 5.11. klo 21.07 on 'Pyöreä kuva' (7551a76cc). KK ja NUI luulivat pyöreää kuvaa vian takia. Korjattu uudempaan: 'jäävät pyöreinä kuvina (21.07)'. Faktakorjaus, ei uusi sääntö.
