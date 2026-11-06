@@ -42,7 +42,7 @@ Friisi 7 seinään -rivi on siis pois listalta.
 - Baohedian: ovet ehjät, ylälehdessä tumma pystykaista (x noin 2060 täysikoossa).
 - Ikkunat: kolmiomaiset alat v--100p2-itapaa, v-204-luode; mittari 0 vinoa. Kerrottu PT:lle.
 - 404: kala-allas-ehja puuttui ovi1:n lokista mutta on saumat1:ssä. Syytä ei selvitetty.
-- Vanhat, ennallaan: (163) luode sokkelin kiila, (204) koillinen evä, sokkelin yläreunan tumma läiskä, (204) W ja S jalka 2 cm sokkelin edessä. Räystäsliuku: junaan 84872eaa9 (korvaa a309d43de:n; ei korjaa seinien porrasaloja, VS). Friisin porras x noin 650: VS ei tunnista omista luovutuksistaan; lähin hänellä r-k--151:n laikku friisin yläpuolella, seinä x 300-800, ei todistettu samaksi. Rivi tuli PT:ltä (-1141), kuva ja paikka kysytty PT:ltä 6.11. 12.4x.
+- Vanhat, ennallaan: (163) luode sokkelin kiila, (204) koillinen evä, sokkelin yläreunan tumma läiskä, (204) W ja S jalka 2 cm sokkelin edessä. Räystäsliuku: junaan 84872eaa9 (korvaa a309d43de:n; ei korjaa seinien porrasaloja, VS). Friisin porras x noin 650: VS ei tunnista omista luovutuksistaan; lähin hänellä r-k--151:n laikku friisin yläpuolella, seinä x 300-800, ei todistettu samaksi. PT 12.4x: kuva kuvat5/r-k--151 (x noin 650, y 425-505), juuri aukot8. Sama kohta kuin (-151,5; 289,4), ks. KORJAUS.md 09.4x. Jos näkyy uusimmassa juuressa (A/kuvat-friisi1/f--151), korjataan friisien saumojen kanssa ja on viennin ehto; jos ei, rivi suljetaan.
 
 ## Opetukset
 - tarkastelu kamera: pitch negatiivinen katsoo YLÖS. -18 vei Taihedianin kuvan kattoon, vaikka tähtäsin alas.
