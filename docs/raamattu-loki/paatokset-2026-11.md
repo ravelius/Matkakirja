@@ -725,3 +725,7 @@ KK 6.11.2026 klo 23.36 omistajan valtuutuksella: Invalidien varjo jää ennallee
 ## NIMETYT RAKENNUKSET PALAAVAT, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.49)
 
 KK 6.11.2026 klo 23.47 omistajan valtuutuksella: Jeu de Paume ja Orangerie palaavat 3D-taloina Louvren maskista, kokeena, ei junaan; korvaa oletuksen "ennallaan". Nimet tarkistettu OSM:stä (Q656296, Q726781). Sama sääntö muille: nimetty oikea rakennus, joka ei kuulu malliin ja on yli 25 m mallista, palaa seuraavaan palaversioon ilman omaa ajoa; alle 25 m:n jää pois, ja KS antaa listan aamuun. Ei koske omistajan omia päätöksiä (Eiffel ja Montparnasse 22.20, Monoprix, Seinen laivat, saari). Lista scratchpad/keskustelukanava/nimetyt-poistot-v16.txt; mallien omat erotetaan.
+
+## ALOITUSLENNON AUKKO: EI KORJAUSTA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.50)
+
+KK 6.11.2026 klo 23.50 omistajan valtuutuksella: aloituslennon aukkoon ei korjausta, verho-ehdotus pois. Peruste: iPad kylmällä välimuistilla (2cba21a3e, 2 ajoa) verho lähti 3,7 s, peitto 100 % koko lennon lokissa; kuvaa pallosta ei ole. Macin 4,3 s:n aukon syy (esikatselusta puuttuu laattapaketti) on päätelmä; NS ajaa vuorollaan yhden Mac-ajon paketin kanssa, jotta se mitataan ja introlle saadaan kuva.
