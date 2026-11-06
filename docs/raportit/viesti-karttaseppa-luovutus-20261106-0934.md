@@ -14,8 +14,8 @@ Kansio `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/louvre-talomaski/`: tee-m
 - NS:lle 09.30 (korvaus.json) ja KK:lle kerrottu, myös jäävä litteä: Palais-Royal'n eteläosan läikkä noin 100 × 75 m, Saint-Germain l'Auxerrois, Oratoire, Hôtel du Louvre, kaista mallin ja Seinen välissä. KK:n vastausta tähän ei vielä ole.
 
 ## SEURAAVA TYÖ: YHTEINEN AJO, KUN NS:N KANSIO ON TULLUT
-NS:n viesti voi tulla nollauksen aikana. Jos sitä ei näy, tarkista `ls /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot | grep palat` ja kysy NS:ltä kerran. Sitten:
-1. Yhdistä Y:hen vasta, kun JU ei aja Y:tä: W 939741d43, NUI 8c3f3931f, VS 3203aa555 (etäpää natiivi-backup; haarat -0921:ssä). Vaihda talokansio NS:n uuteen.
+**NS 09.3x: kansio on valmis:** `/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/palat-v7-louvre` (kansion sha 871505b8fb51ce5b, tee-palat.py bf7204d495d41be8, korvaus = KS:n korvaus.json). Korvaa v6:n; 175 taloa pois, talot 127 660, 12 palaa muuttui, eheys 0 virhettä. NS pyytää ajoon kuvat Louvren itä- ja pohjoispuolelta matalalta: yhdistä ne KK:n kolmeen, älä lisää erikseen. Talokansio valitaan skenaariossa (`palat-v6` ei ole Y:n koodissa; malli sk-pariisi-yhteinen-5.txt). Sitten:
+1. Yhdistä Y:hen: W 939741d43, NUI 8c3f3931f, VS 3203aa555 (molemmat commitit löytyvät Y:stä; c0bfef077 ei vielä sisällä NUI:ta). Y on puhdas. Mac-esikatselu oli käynnissä 09.33 (lokit/esikatselu-20261106-093308); kysy JU:lta, ajaako se Y:tä, ennen kuin yhdistät.
 2. Skenaario -0921:n listasta, kuvia vähän. KK 09.3x lisäsi: yksi kuva Octroin kohdalta (sk-seuraavaan-ajoon-hdv-etelaan.txt:ssä) ja VS:n Concorde. Enintään 3 Louvren kuvaa KK:lle: Les Halles matalalta (po-la), Palais-Royal ja Rivoli pohjoissivulta, itäpää. Rivi `komento concordemaa` pois.
 3. Pyydä ajo JU:lta, ei omaa ajoa. Katso kuvat itse täysikoossa ennen KK:lle viemistä; koko kuva, ei vain kohta.
 4. Tarkista kuvista: katoaako itäpään haalea reuna, peittävätkö talot porrasreunaiset korttelit (po-la x 1200–1500, y 1300–1600). Jos eivät, korjaus on KS:n.
