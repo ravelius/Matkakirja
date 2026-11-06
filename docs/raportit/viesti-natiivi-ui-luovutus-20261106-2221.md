@@ -50,3 +50,9 @@ Kylmä kartan levyvälimuisti. Oikea laite. Välke 30 vaihdossa. Invalidien pist
 
 ## Muuta
 Etäyhteys vain KK:lla (ja PT:lla): älä kytke. Hookin työlistarivit (Nimet häipyvät, Vaaleat kyltit, Palatsin sisätilat) eivät tunnistu omikseni, en päivittänyt.
+
+## PÄIVITYS: c ja d luettu, korvaa kohdan 1 "Auki" ja "Odottaa" rivin 1
+c (sama testireitti kuin 356eb0101): 5/5, 233 ms, kartta täynnä. Testireitti ei ole syy; importit samat (592), joten kylmä puu ei selitä. d (Ohita, kuvat verkosta, tyhjä levyvälimuisti): 5/5, 1137 ms, kaikki vuorollaan, "kartta terävä 3117 ms".
+SYY MITATTU: ajossa 356eb0101 kaksi kartan pientä kuvaa (pantheon ja notre-dame @54x54) varasivat kuvajonon molemmat paikat 9,16 s:ksi, ja Eiffel ja Riemukaari odottivat niiden takana 8,43 s. c:ssä yksikään lataus ei kestänyt yli 2 s (paitsi alun tripoli). Miksi lataus jumitti 9,16 s, ei mitattu. Vika 1 ajossa 6:sta. Tyhjän pohjan syytä ajossa 356eb0101 ei mitattu.
+PT:lle kerrottu, ehdotus odottaa sanaa: trailerin kuville oma paikka kuvajonossa (Kuvat.Vuoro), ettei pieni kuva tuki niitä. Korjaus vain PT:n sanalla, kokeena; todennus vaatii keinotekoisen jumin, koska vika ei toistu itsestään. Havainnekuva-korjaus (kohta 2) tehdään samalla.
+Laskeutuessa ja perille tullessa d z3:ssa näkyy tasoraja sumean ja tarkemman välillä oikealla alhaalla; kuuluu kartan puolelle, kerrottu PT:lle.
