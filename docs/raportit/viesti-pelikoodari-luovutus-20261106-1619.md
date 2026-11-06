@@ -24,6 +24,11 @@ Lukulista: luku 2 kohdat 2.0, 2.1–2.27, 2.59–2.71 ja 2.177:n alku, luku 4 ko
 - **Seuraavaksi:** vuoropyyntö JU:lla, ei aloitusta ennen "ESIKATSELU NYT"; `aja-w-molemmat.zsh` on valmiina. Katso kärki kolminkertaisena (iPhone-kuvassa ylänuolen keskikohta noin x 2226, y 684 kuvapistettä). Kuvat KK:lle (ei vielä lähetetty), SHA PT:lle vasta KK:n sanan jälkeen.
 - **Poiminta nyt seitsemän committia:** `81d3e839c`, `76840f429`, `8dfc13aaf`, `71bca39a7`, `225e80473`, `d15242d6c`, `36aa43ed3`; yhdistä yhdeksi ja kokeile uudelleen. Kohdan 0b läpimeno kattaa vain viisi ensimmäistä.
 
+## 0d. Lisäys 17.1x, korvaa kohdan 0c "Seuraavaksi"
+- **Nähty pelistä `36aa43ed3`:** iPad `lokit/esikatselu-20261106-170615`, iPhone `-170959`. X poissa kaikissa neljässä nuolessa, ulkoreuna iPhonella 62 pt, peitto 0,55 kuten KK:n suunta 17.07 (korvaa KK:n 70 %:n). Vaalealla kontrasti 1,25–1,62. Poikkeus on QuickSearch.
+- **Kuvat KK:lla 17.1x.** KK näyttää omistajalle; **tämä ei ole hyväksyntä. SHA PT:lle vasta omistajan sanan jälkeen.** Sitten poiminta seitsemästä commitista yhdeksi (kohta 0c), `unity-tarkistus`, pohjavahti ja kohta 2.4 (webin OHJAINOPETUS-rivit).
+- L2 vapautettu JU:lle, ei ajoa käynnissä.
+
 ## 1. Tehty
 - **OMISTAJAN PÄÄTÖS 16.05 (KK), `8dfc13aaf`:** ulkorengas (leveys 140 pt, viiva 7, keskilinja 133), varjo 11 pt, sisällä nykyinen 64 pt:n rengas. Vasemmalla piste 14 pt (varjo 18), oikealla neljä kulmanuolta luonnoksen mitoin (`Peukalokohta.Merkki`, `Nuolet`). Kaikki ryhmässä `mk-peukalokohta__ohjain`, joka näkyy vain normaalitilassa. Rimpuilu ennallaan. `unity-tarkistus` 0 virhettä, pohjavahti ok. `Peli-testit` ajettu `292afcef2`:ssa 867/867; renkaan jälkeen ei uudelleen, muutos on vain UI:ssa, jota testit eivät käännä.
 - **KK 16.09:** vasen pysyy pisteenä, ei nuolia (spurtti toimii vain viitan kanssa). Omistajalle kerrotaan, etteivät renkaat näytä kaikkea ohjausta.
