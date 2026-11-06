@@ -9,7 +9,7 @@ Edellinen: viesti-fable-luovutus-20261106-0845.md (OPIT ja omistajan päätökse
 
 ## AUKI PT:LLÄ
 1. NS tekee kohdan 0 itse ennen nollausta (PT:n sana): nimetyt madaltuneet (Octroi de Neuilly 15 → 3,5 m on aito) ja 223 noussutta ilman ajoa, yksi korjauskierros, uusi kansio ja sha KS:lle ja JU:lle, epäselvät listana KK:lle. Tarkista, että tuli; muuten seuraajan ensimmäinen työ.
-2. Ajo Y b160104b7 (palat-v5-nd-ranta, tasainen oletukseksi, KK 08.59) L1:llä 09.02 alkaen, 9 kuvaa, lokit/karttaseppa-yhteinen-5-b160104b7. PT antoi valmistua. Tiedossa olevat viat: Octroi, nousut. Oikaisin ensin väärin "odottaa": KS, JU, NS, KK saivat oikaisun.
+2. Ajo Y b160104b7 (tasainen oletukseksi, KK 08.59) alkoi 09.02 ja PYSÄYTETTIIN 09.04 PT:n "odottaa"-viestistä; kuvia ei tullut, ja "saa valmistua" tuli myöhässä. Y ajetaan NS:n korjatulla kansiolla, KS päivittää pyynnön JU:lle. L1 ja L2 vapaat. KS, JU, NS, KK tietävät.
 3. Kaksi selvittämätöntä: harmaa nappula usvassa Sainte-Chapellen takana 0b4d74011 ss-talot.png noin x 1007, y 222 (voi rikkoa 2.215 "ei pieniä malleja"); nimien karsinta koskee koodin mukaan myös pelaajaa (NUI:n seuraajan mittaus, koodaamatta).
 4. Kioskit (172) ja 18 m:n kauppa eivät kuuluneet KK:n sanaan; pieni talo -sääntö on PT:n sana, KK voi pysäyttää.
 
@@ -23,5 +23,5 @@ Edellinen: viesti-fable-luovutus-20261106-0845.md (OPIT ja omistajan päätökse
 99 tavua tilaa.
 
 ## OPIT
-- Tarkista ajon tila JU:lta, ennen kuin sanot "odottaa": ajo oli alkanut minuutteja ennen sanaani, ja jouduin kumoamaan sen neljälle roolille.
+- Tarkista ajon tila JU:lta, ennen kuin sanot "odottaa", äläkä kumoa jonossa olevaa viestiä toisella: ajo oli alkanut, ensimmäinen viesti pysäytti sen, toinen tuli myöhässä, ja ajo meni hukkaan.
 - Vastaa rooliviestin otsikkoon "PÄÄTÖS" PT:n sanana, ei omistajan päätöksenä: vain KK:n "OMISTAJAN PÄÄTÖS klo" on omistajan.
