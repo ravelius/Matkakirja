@@ -24,3 +24,6 @@ Tulokset PT:lle 3 rivillä. Kuvat vain PT:lle.
 
 ## Yhä avoinna (-0915, -1002, -1140)
 iPadin karsinnan kesto ja uudelleenpyynnöt laitemittauksessa ennen seuraavaa TF:ää (kestoloki vain batch/editor). Katujärjestys: ei korjausta ilman omistajan havaintoa. Tuileries'n kuva Louvren kulmassa; kyltti RANSKA-otsikon ja Liiku-napin alla; aaripisteet 38 × kärkimäärä; Metroasema haalea sc-80:ssä; mittarin viat ei nyt; yksinäisten pyöreiden kuvien kohteita ei tarkistettu datasta.
+
+## LISÄYS 11.5x: JU palautti pyynnön (10.5), ajo pienennetty
+Ei 15 varauksen ajoa nyt. JU:lle pyydetty kolme varausta, 3 kuvaa, L1 pystytoiston ja aukot14:n jälkeen: pallo iphone-vaaka (kuvat), pallo keskitys iphone-pysty, pallo keskitys iphone-vaaka. Ajo ei todista varausten mahtumista 6 minuuttiin eikä Mac-kokoja; ne todentaa seuraava täysi UI-sarja. Täysi ajo ei saa kuvamuuttujaa: 3 näkymää × 7 kokoa = 21 kuvaa.
