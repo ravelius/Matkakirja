@@ -39,3 +39,10 @@ KK:n "pari oikea silta | peli" voidaan tehdä vasta ajosta. Kuvat: Pont Royal-0 
 
 ## MUUTA
 Seuraamattomat .claude/settings.local.json.ennen-kevennysta ja waveletNoiseTile.bin: en koskenut. Työlistahookin rivit eivät ole Valosepän.
+
+## LISÄYS 07.2x
+- KS 07.1x: Pariisin keskusta tasoitetaan 90 m:iin 10 km:n säteellä, reuna 14 km:iin, Montmartre reiäksi (oletukseksi vasta sovituksen jälkeen). Tämä on PT:n kysymä maan arvo. KS:lle vastattu "ei koske": `AsetaPaikka` lukee samat globaalit ja laskee saman kaavan kuin `KorkeusKerroin.TasaOsuus`; luettu koodista, ei ajettu. Tasaisella kartalla sillan pinta seuraa kerrointa 0.
+- NIMET (NUI, PT): TEHTY haaraan `linssiseppa2/ohjelmakohteet-nimet` (14763c0c9 = c67e51922 + yksi commit, natiivi-backup): `Kohde.NimiEste`, kuusi rakennusta, `LisaaNimiEste`-kutsu. Pompidoulle sama kenttä, kun se tehdään. Nimien tiedot NUI:lle on näin hoidettu, muuta ei tarvita.
+- EI POIMITTU 04d3835a8 + e7e8d7b5b: poiminta menee ristiriitaan, koska ne vaativat NUI:n kuusi aiempaa committia. Haara ei siis käänny yksin, vaan vasta yhdessä haaran `natiivi-ui/merkki-pinta-219` kanssa. Siksi oma haara: `linssiseppa2/ohjelmakohteet` kääntyy yhä yksin. Jatka töitä haarassa `linssiseppa2/ohjelmakohteet`.
+- Yhdistys 14763c0c9 + e7e8d7b5b: ristiriita tiedostossa Assets/Matkakirja/UI/MalliKyltit.cs. Kerrottu NUI:lle ja JU:lle.
+- JU palautti 16 kuvan listan (raja noin 5, omistaja 17.58). `D/sk-maa5.txt` karsittu 9 kuvaan, perustelu ja "mitä tämä ratkaisee" 1. rivillä; p-lp, se-la, ss-et, pohj, pb-piha, m-sivu, tsj-pohj pois. Korvaa kohdan AJO kuvaluettelon. Odottaa JU:n kuittausta. Jos JU vaatii viiteen, ensin pois hdv-110, tsj-et, m-etu, p-pn-oik.
