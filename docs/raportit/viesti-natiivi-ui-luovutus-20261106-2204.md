@@ -60,3 +60,9 @@ Aloituslento tällä pohjalla. f4ad1b95b ajossa. Lista -33:n reitit. Välke 30 v
 
 ## Muuta
 Etäyhteys vain KK:lla: älä kytke. Hookin työlistarivit (Nimet häipyvät, Vaaleat kyltit, Palatsin sisätilat) eivät tunnistu omikseni, en päivittänyt.
+
+## Päivitys 22.1x: korvaa kohdan 1 odotukset ja kohdan "Odottaa" rivit 1-2
+Aloituslennon ajo 356eb0101 on katsottu (tulos-nui.md, viimeinen luku), NS:lle lähetetty. Sacré-Cœur, Notre-Dame ja Louvre nousevat oikein. Louvre ja Riemukaari avautuvat täysikokoisina. EIFFEL JA RIEMUKAARI EIVÄT NÄKYNEET vuorollaan: Eiffelin rivi lokissa (4411) on kuvan 2 vuoron jälkeen, eli latautui vasta oman vuoronsa jälkeen; esilataus 0/5 katossa 1498 ms. Skenaario aloitti aloitusnäkymän kuvajonon ollessa kesken (kesken 21), joten syy on PÄÄTTELY. Oikean lennon jälkeistä tilannetta ei mitattu.
+Uusinta pyydetty JU:lta: sama haara, _tyo/natiivi-ui/sk-aloituslento-kuvat-2.txt (45 s odotus ensin), tulos lokit/nui-aloituslento-kuvat-2. Odotus: viisi kuvaa kuvissa 1-5. Jos Eiffel ja Riemukaari puuttuvat yhä, se on vika: myöhässä latautuva kuva menettää vuoronsa; kerro PT:lle, korjaus vain PT:n sanalla. Tulos PT:lle 3 rivinä.
+Merkintä Havainnekuva on kuvan alla mutta hyvin haalea kartan päällä: kerrottu PT:lle.
+KS: ajo 33 tilattu JU:lta (Y 5ec6922a5, f4ad1b95b poimittu, lista -33 lopussa, kuva mc-eiffel-85-kyltti-invalidit). Lokikansio karttaseppa-yhteinen-33-b8-5ec6922a5 tulee KS:ltä.
