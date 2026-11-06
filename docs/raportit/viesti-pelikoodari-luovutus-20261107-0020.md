@@ -32,3 +32,9 @@ Rajat (PT): ei Tripoa, ei Codexia, ei junaa eikä TF:ää, ei ostoja, ei poistoj
 - Pelin Big Ben -2D-merkki (`KaupunkiPallot.LinssiMallit`, `pienoismalli-lontoo`) näkyy kääntymättömänä kaikista suunnista: tunnistus billboardiksi. Pois `OhjelmaKohteet.LontooKoe`:lla.
 - LiDARin mediaani tekee ei-talosta korkean laatikon, jos OSM sanoo `building=yes` (London Eye): katso kuvista kapeat tornit jokirannoilta. Hyde Parkin kapea torni on oikea (Knightsbridgen kasarmi).
 - Valmis-kuittauksen sisältö "11 Exception-riviä" on sama kaikissa ajoissa: Cesium ja Unityn haku.
+
+## 6. Lisäys PT 00.2x
+- D1 kuitattu kokeena (PT katsoi kaukaa- ja westminster-kuvat).
+- **Tarkista "Abbey Roadin suojatie" -pallon koordinaatit:** kuvissa se on Trafalgarin pohjoispuolella, ei Regent's Parkin takana, missä oikea suojatie on (PT:n hypoteesi kuvasta). Sama tarkistus muille kohteille, jos syy on yhteinen.
+- Jatka nimettyjen pyyhintää nollauksen jälkeen; koordinoi C:n paikat Valosepän kanssa.
+- 275 Mt kirjataan muistimittaukseen kohdassa F.
