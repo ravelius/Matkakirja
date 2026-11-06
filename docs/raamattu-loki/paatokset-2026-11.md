@@ -694,6 +694,10 @@ Omistaja 6.11.2026 klo 22.20, kortit: korjattu Notre-Dame #2184 "Kyllä, kivi 85
 
 Omistaja 6.11.2026 klo 22.54, kortti "Otetaanko oikean yläkulman usva Pariisin kokeeseen?" = "Oikea ylä kokeeseen (Suositus)" (a: usvakauas 1,5 km / 12 km; kokeena, ei junaan). Kuvat kuvat/usva-ajo34b/. Tavoite: usva tulee kauempaa ja hitaammin, ei näytä sumulta. Omistajalle kerrottu 65°:n vyö, raidoitus, La Défense, maan viivan syy selvittämättä ja muisti mittaamatta. Välitti KK.
 
+## LONTOO ALKAA NYT, KK PÄÄTTÄÄ YÖN (6.11.2026 klo 22.59)
+
+Omistaja 6.11.2026 klo 22.58, sanatarkasti: "Pidä huoli että sessiot etenevät eikä tule  turhia hidastuksia ja tehkää Lontoo. Menen nukkumaan ja saat päättää kaikesta puolestani". KK:n kapea tulkinta: korvaa suunnitelman "Lontoo vasta TF:n jälkeen" ja 17.40 "kolmatta ei"; Lontoo alkaa nyt Pariisin listan rinnalla, suunnitelma suunnitelmat/20261106-lontoo-ilman-tripoa.md, aika lokiin kohdasta A alkaen. Omistajalle menevät pysähdykset (lista, kohta B, kolme nimettyä) ja yön kysymykset päättää KK ilman kortteja ja odotusta aamuun. EI VALTUUTUKSEEN: TF ja julkaisu ("Pariisi valmis" -kortti jää aamuun, lista etenee valmiiksi), junaan vienti ilman sanaa, ostot, Tripo Lontoolle, poistot, tilit ja avaimet, 11.8-rikkeet. PT jakoi kohdat A ja B Pelikoodarille 22.59.
+
 ## OLEELLISET NIMET, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.02)
 
 KK 6.11.2026 klo 23.00 omistajan valtuutuksella (22.58 "saat päättää kaikesta puolestani"): nimet oletuksena pois: kadut, kaupunginosat (suburb, quarter, neighbourhood) ja pienet vedet; kylät ja hamletit jäävät; kokeena, ei junaan. Korvaa NS:n suosituksen "vain kadut". Kartta-välilehden rivi NUI:lle. Suunnitelma suunnitelmat/20261106-kartan-oleelliset-nimet.md.
