@@ -458,3 +458,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Kelpaako Concorden aukio ko
 ## LOUVREN YMPÄRILLE KORTTELIT JA TALOT KOKEENA (OMISTAJA 6.11.2026 KLO 09.20) (6.11.2026 klo 09.2x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Louvren ympärillä on litteä alue, koska hyväksymällesi alueelle ei ole vielä maalausta. Kokeillaanko sen tilalle kortteleita ja taloja, kuten Notre-Damella?' = 'Kokeillaan (Suositus)'. Kokeena, ei junaan, seuraavaan yhteiseen ajoon. Kumoaa 5.11. klo 08.11:n ison alueen v2:n vain kokeen ajaksi; Codexin pohjaa ei tilata sen aikana. KS tekee maskin, NS uuden kansion. Omistajalle kerrottu: tunnetut voivat näkyä tavallisina taloina, talot voivat osua malliin pohjoissivulla, enintään 942 taloa lisää.
+
+## PARIISIN TALOJEN UUDET KATOT KOKEENA (OMISTAJA 6.11.2026 KLO 09.30) (6.11.2026 klo 09.3x)
+
+OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Kelpaavatko Pariisin talojen uudet katot kokeena, vaikka noin 17 700 taloa saa tasakaton, myös osa kirkoista?' = 'Kelpaa kokeena (Suositus)'. Palat-v6 jää, ei junaan. Omistajalle kerrottu myös pienten talojen sääntö PT:n sanana; hän ei pysäyttänyt sitä, mutta ei erikseen hyväksynytkään. Kuvat scratchpad/keskustelukanava/kuvat/yhteinen-5-c0bfef077/.
