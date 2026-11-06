@@ -704,4 +704,8 @@ KK 6.11.2026 klo 23.00 omistajan valtuutuksella (22.58 "saat päättää kaikest
 
 ## YÖN SÄÄNTÖ: JUMI EI PYSÄYTÄ (6.11.2026 klo 23.08)
 
-Omistaja 6.11.2026 klo 23.07 (KK:n välittämä): "Jos tulee ongelma ja se ei meinaa ratketa niin ei kannata jäädä korjaamaan liian pitkään vaan jatkaa eteenpäin ja kysyä aamulla minulta mitä tehdään." KK:n tavoite: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa, kokeen osa pois tai edellinen toimiva tilalle, rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön. KK kokoaa kysymykset aamuun. PT välitti roolit 23.08.
+Omistaja 6.11.2026 klo 23.07 (KK:n välittämä): "Jos tulee ongelma ja se ei meinaa ratketa niin ei kannata jäädä korjaamaan liian pitkään vaan jatkaa eteenpäin ja kysyä aamulla minulta mitä tehdään." KK:n tavoite: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa, kokeen osa pois tai edellinen toimiva tilalle, rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön. KK kokoaa kysymykset aamuun. PT välitti rooleille 23.08.
+
+## LONTOO A: 15 KOHDETTA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.12)
+
+KK 6.11.2026 klo 23.11 omistajan valtuutuksella: Lontoo A kelpaa (_tyo/pelikoodari/lontoo/a/kohdelista.md): 15 kohdetta, Greenwichin planetaario pois. Suojatut modernit talot jäävät 11.8:n mukaan yhtenä suorana laatikkona, ei kerrospaloja; korvaa PK:n ehdotuksen jättää ne pois. PK jatkaa B:hen.
