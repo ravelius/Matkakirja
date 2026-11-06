@@ -33,6 +33,10 @@ Tarkistettu ilman ajoa, kerrottu KK:lle:
 - Nimet: jono 2995, talot 2994, ZTest Always: nimi talojen päällä. Mallit 3080 nimien päällä, väistö ennallaan.
 - Les Halles: peli käyttää kartanPiste 48.8622, 2.3447 (sijainnit-json), en lat/lon-arvoa: m4:ssä 0 m (1600, 711), kyltti (1602, 798). x täsmää; y:ssä 45 px yli Sacré-Cœurin 42 px:n, syy auki, ei korkeudesta. Grand Châtelet kartanPiste 0 m (1898, 1112), leikkeen keskikohta (1897, 1111).
 
+## PT 02.5x (KK): kuvat lokit/valoseppa-maa2-0d317ab6f (ei korkeuskorjausta), ei omaa ajoa, ei junaan
+1) p-lp: viety KK:lle, odottaa KK:n sanaa: suositus kyltti häipyy, kun osuu otsikkoon tai Liiku-riviin, ei siirry (2.215). Kalusteruudut ohittavat kohteet: NostotKartalla.cs:1319. Pallon kyltti ei korjaudu korkeudella. Pallo Pompidou-nimen päällä: pallo jää ulos (KK 19.59), ei muuteta.
+2) tsj-lahi-pohj: Les Hallesin kyltti Saint-Eustachen mallin päällä: katso vasta ajosta lokit/karttaseppa-pariisi-sc4-4c63d8662 (sisältää 9e2d0edba; kansiota ei vielä ollut). Tulos rivinä KK:lle. Sama ajo antaa viiveen ja kuvaparin, jos kamerat m4 ja m3 ovat mukana.
+
 ## LOPPUTESTIT (oma lista, ei tehdä nyt; siirrä jokaiseen uuteen luovutukseen; mainissa ei ole yhteistä listaa)
 - iPadin muisti, kun Pariisi on valmis (2.209): MaanPinnan lisäkyselyt lataavat laattoja (raja 4080 Mt).
 
