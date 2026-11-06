@@ -72,7 +72,7 @@
     "kerma": "#faf4d6"
   },
   "karttapaletti": {
-    "_selite": "KARTAN KOHTEET KARTTAPALETILLA (omistaja 15.10.2026 klo 18.31: \"Kyllä sekä muillekin samanlaisille kohteille\"; Raamattu). Kartalla olevien 3D-kohteiden (natiivi UI/Resources/KaupunkiPallo: kuumailmapallo, ISS-raketti, Olavinlinnan torni, Rijksmuseum) palettilaattojen värit pallon paperista ja akvarellipienoismallien laveerauksista, ei kirkkaita UI-värejä (accent, mark, kulta). Uusi karttamalli valitsee näistä ja kartan paper/map-ink-sävyistä. Ei generoi CSS- eikä USS-muuttujia (värit ovat mallien palettikuvissa); vaihtotyökalu proto-3d/_tyo/karttaseppa/karttapaletti-20261015/karttapaletti.py (Karttaseppä).",
+    "_selite": "KARTTAPALETTI v2 (omistaja 6.11.2026 klo 10.32, kortti \"Näytteen tapaan\"; v1 15.10.2026): kaikki kartalla näkyvät kohteet pysyvät tämän sisällä, ja uuden kaupungin kohde asettuu asteikolle säännöllä ilman käsityötä. Yksi lähde: muut viittaavat tähän. Nimetyt v1-värit (kerma ... seepia-tumma) ovat pienten kohteiden palettilaatoissa (KaupunkiPallo, karttapaletti-20261015/karttapaletti.py). Ei generoi CSS- eikä USS-muuttujia.",
     "kerma": "#e6d8ba",
     "kerma-varjo": "#d6c6a8",
     "tiili": "#9e5c48",
@@ -81,7 +81,127 @@
     "liuske": "#929a98",
     "alusta": "#96866c",
     "seepia": "#46331f",
-    "seepia-tumma": "#34281c"
+    "seepia-tumma": "#34281c",
+    "versio": 2,
+    "perus": {
+      "_selite": "Kartan omat värit: ElavaTyyli.cs (S*-värit, e23), puu ja muste isoisa-2029-paletista.",
+      "paperi": "#f0deb4",
+      "katu": "#f1d5a9",
+      "katto": "#a88c74",
+      "julkinen": "#b09270",
+      "vesi": "#a9aa93",
+      "nurmi": "#c2af73",
+      "puu": "#8f7743",
+      "muste": "#6a5033"
+    },
+    "tunnistus": {
+      "_selite": "Nähtävyyden tunnistusvärit voimakkuusrajalla (OMISTAJAN KORTTI 6.11.2026 \"Näytteen tapaan\"). Sini on Louvren pyramidin lasi (omistaja 4.11. 21.24).",
+      "murrettu-tiili": "#9e5c48",
+      "haalistunut-sini": "#739dc0",
+      "kuparinvihrea": "#6f9a93",
+      "vanha-kulta": "#c6a35e"
+    },
+    "saanto": {
+      "_selite": "OKLCH, raja koskee väriä näytöllä. Työkalu tyokalut/karttapaletti.py (natiivi). Savykartta: [sävy sisään, sävy ulos, polvi, raja]; väliarvot lineaarisesti, joten naapurisävyt eivät hyppää. Polven alla voimakkuus säilyy, sen yli se puristuu rajaa kohti. Vaaleus säilyy, paitsi tummin ja vaalein. Ulkopuolella: käyttöliittymä, Pulu ja kohdemaan lippu (Raamattu 4.18).",
+      "savykartta": [
+        [
+          40,
+          40,
+          0.088,
+          0.1
+        ],
+        [
+          112,
+          112,
+          0.088,
+          0.1
+        ],
+        [
+          125,
+          119.15,
+          0.055,
+          0.072
+        ],
+        [
+          175,
+          165,
+          0.05,
+          0.066
+        ],
+        [
+          200,
+          191,
+          0.04,
+          0.058
+        ],
+        [
+          225,
+          222,
+          0.043,
+          0.064
+        ],
+        [
+          240,
+          240,
+          0.045,
+          0.068
+        ],
+        [
+          300,
+          264,
+          0.047,
+          0.07
+        ],
+        [
+          345,
+          379.45,
+          0.07,
+          0.095
+        ],
+        [
+          398,
+          398,
+          0.07,
+          0.095
+        ],
+        [
+          400,
+          400,
+          0.088,
+          0.1
+        ]
+      ],
+      "harmaa": 0.012,
+      "tyhja": 0.03,
+      "tummin": 0.26,
+      "tummin_alkaa": 0.45,
+      "vaalein": 0.96,
+      "vaalein_alkaa": 0.93,
+      "varaus": 0.006,
+      "sallittu_osuus": 0.002,
+      "valo": {
+        "_selite": "Auringon puoli, ValoKohteet.cs Nahtavyys*: raja katsotaan kirkkaimmalta sivulta.",
+        "aurinko": [
+          1.0,
+          0.95,
+          0.82
+        ],
+        "aurinko_voima": 2.9,
+        "taivas": [
+          1.0,
+          0.9216,
+          0.8228
+        ],
+        "maa": [
+          0.2623,
+          0.1878,
+          0.1274
+        ],
+        "puolipallo_voima": 2.6,
+        "puolipallo_t": 0.75,
+        "nl": 0.7
+      }
+    }
   },
   "teemat": {
     "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus). HARMAA = ohjausnappien neutraali harmaa valokuvan, 3D:n ja avaruuden päällä (omistaja 16.9.2026, .satelliitti-sulku; OHJAUSNAPPI 2.10.2026). TUMMA = kuvan päällä, videopeleissä ja muissa pimeissä näkymissä (yö); hyväksytty pohja tai variantti käy vastaaviin tilanteisiin kysymättä (omistaja 9.10.2026, Raamattu #4243).",
