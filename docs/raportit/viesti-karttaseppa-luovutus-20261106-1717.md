@@ -17,9 +17,14 @@ Lähetetty KK:lle ja PT:lle 17.1x, kuvat `_tyo/karttaseppa/parit-yhteinen-24/kk/
   - Ristiriita: Palakoe (tasainen pohja, ei `alkuperainen`-parametria) piirtää kohtaan pelkän veden. Pelin palaa ei ole nähty.
   - Tutkimatta: Cesiumin rasteripino (KarttaKerrokset) ja muut pallon overlayt. Lista lokista puuttuu.
 
-## AJON 25 JÄLKEEN
-Katso koko kuvat ensin.
-1. **Pelin palat** (polku /private/tmp/mke.*/Matkakirja/*/laatat/elava/e24-vene2/): 13/4149/2818, 14/8299/5636, 15/16598/11273, 16/33196/22547, 17/66393/45094 (.jpg). Huom. Kaanna(): kuva voi olla käännetty pystysuunnassa. **Raita palassa = syy on piirrossa, Palakoe on väärä:** aja Palakoe oikealla pohjalla ja `alkuperainen`-parametrilla. **Raita ei palassa = kerros palan päällä:** listaa overlayt lokiin. Jos JU ei saanut kopiota, tee lokitulostus tai kirjoitus lokikansioon ajoa varten.
+## AJO 25 TEHTY 17.19 (JU: 5/5 kuvaa, 0 virhettä); parit KK:lla `_tyo/karttaseppa/parit-yhteinen-25/kk/`
+Asuntolaiva ja Bourdonnais'n laivat poissa. Raita ennallaan (laikka-1 ajo 24 | 25: raita-alueella 0 pikseliä yli eron 12). **Palat 0/5:** tilaukseni polku oli todennäköisesti väärä: ElavaKuva lisää pääteketjun, ja `talot 1` lisää -talot1 (myös -forum1 ja -sillat1 mahdollisia), joten kansio voi olla esim. e24-talot1-sillat1-vene2. Tätä ei ole todennettu ajosta. Havainnot KK:lle kerrottu: Pont d'Iéna ei näy Bourdonnais'n rajatussa pelikuvassa, tarkistamatta; Eiffelin kiveyksen reuna vinossa kulmassa.
+
+## AJO 26 (seuraavaksi, PT jakaa vuoron)
+Y:hen ajon 25 jälkeen: e23 + Pariisin katetun veden pääte (PT:n sana), NUI:n f0384fdbe ja lisa-kyltit-nui-2.txt. Tilaa JU:lta palat hakemalla `laatat/elava/e2*/{z}/{x}/{y}.jpg` (kaikki versiokansiot, myös `laatat-kylma-*`), ei tarkalla kansion nimellä. Laske kuvat rivit skenaariosta.
+
+## PALOJEN TULKINTA
+1. **Pelin palat:** 13/4149/2818, 14/8299/5636, 15/16598/11273, 16/33196/22547, 17/66393/45094 (.jpg). Huom. Kaanna(): kuva voi olla käännetty pystysuunnassa. **Raita palassa = syy on piirrossa, Palakoe on väärä:** aja Palakoe oikealla pohjalla ja `alkuperainen`-parametrilla. **Raita ei palassa = kerros palan päällä:** listaa overlayt lokiin. Jos JU ei saanut kopiota, tee lokitulostus tai kirjoitus lokikansioon ajoa varten.
 2. **Pari KK:lle ilman selitekaistaa:** iso-austerlitz ja iso-bourdonnais, rajaus kuten `laikka-vesi-20261106/parit-24.py` (SKAALA 0,68 m/px arvio; keskipiste = aja-kohde; pohjoinen ylhäällä). Bourdonnais'n ilmakuvaa ei ole; `hae-orto.py` hakee (robots tarkistaa itse), lisää KOHTEET-riville.
 3. Rivi PT:lle ja KK:lle, päivitä syy.md.
 
