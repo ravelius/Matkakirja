@@ -13,9 +13,10 @@ Tilanne ajon c1 jälkeen (a8d971917, palat-d2; kuvat `lokit/linssiseppa2-lontoo-
 - ARVIOIMATTA: St Paul'sin maan taso. `StPaulMaa` = 23 (seinien matalin kohta, pinta 22,5; mediaani noin 35), kuten Saint-Eustache, koska helma näkyy pelissä (`OhjelmaKohteet.TeeVerkko`; tämä korvaa luovutuksen 20261106-2355 ohjeen "seinät alas"). Keskellä malli on noin 16 m pinnan alla. Katso, istuuko se taloihin nähden.
 - Big Ben (KK c): 75 px lähimmältä, 1,1 px/m. PT:lle annettu suositus: oikea koko, ei liioittelua. Liioittelu olisi linjamuutos, ei ilman KK:ta.
 - Abbeyn akseli tarkistettu OSM:stä: -5,5°, koodissa -5,1°; ei muutettu.
-- Exception-rivejä 11: JU ei lukenut, en minäkään; JU:n mukaan sama määrä kuin illan muissa ajoissa.
+- Exception-rivit luettu (11 riviä, 4 erilaista viestiä, loput pinoa): Cesium ion app data ja sen jatko AppDomainin latauksessa sekä ArgumentOutOfRange pinossa `UnityEditor.Search.SearchInit.IndexationOnStartup`. Kaikki editorin omia, ja samat viestit ovat ajossa 37. Eivät tule Lontoon koodista. Lue c2:n rivit samalla tavalla.
 
 SEURAAVA: kun palat-d3 tulee, vaihda `talot kansio` tiedostossa sk-c1.txt, pyydä JU:lta ajo c2 kärjestä (PK yhdistää kärkensä 2fcf9008d päälle; käytä yhdistettyä, jos valmis), arvioi täysikokoisina rajauksina, tee parit ja lähetä PT:lle. PT vie KK:lle. Parit ovat 45° pelikuva vs. valokuva; KK:n (d) pyysi samaa kulmaa, joten lisää kuvalistaan matala kulma (`kallista`, tarkista raja lokista) ja vertaa suuntiin: St Paul's 0, Tower Bridge 110, Big Ben 45. Rajausten keskipisteet ovat täysikoon kuvassa noin Big Ben (1417,1034), St Paul's (1355,1030), Tower Bridge (1326,1030) lähin-kuvissa, ja `esi/`-mittakaava vaatii suurennoksen.
+PT 00.4x: c1:n paikat ja Tower Bridge kelpaavat kokeena; ei KK:lle ennen c2:ta. PT vie Big Benin suosituksen KK:lle ja tilasi palat-d3:n PK:lta. c2 kärjestä, jossa ovat 626c5709f ja e031ce161. LISÄÄ c2:EEN ABBEYN PARI (viite: katso `viite/LAHTEET.md`, Abbeyn kuvaa ei ehkä ole: hae Commonsista luvan mukaan tai kerro PT:lle). Jos kansiota ei ole kohtuullisessa ajassa, älä odota: tee muuta Lontoota ja rivi PT:lle.
 Sääntö ajosta: lähimmältä 1,1 px/m, joten alle metrin korkean kontrastin yksityiskohdat hajoavat pisteiksi.
 
 ## 2. PALAIS BOURBONIN PIHA
