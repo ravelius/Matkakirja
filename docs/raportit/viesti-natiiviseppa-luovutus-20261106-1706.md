@@ -4,6 +4,11 @@ Korvaa -1636:n Tilan, LISÄYKSEN ja SEURAAVA TYÖ:n. -1636:n Opit ja -1611:n Lin
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Remote Controliin ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, haara natiiviseppa/origo-koe, peili natiivi-backup.
 
+## LISÄYS 17.1x (PT, KK 17.08): KORVAA KOHDAN 1 JA "ODOTA PT:N SANAA"
+- Origokokeen iPad 5 saa ajaa KERRAN LAV:n leivonnan jälkeen, 0 palaa ja vahti päällä. PT on kertonut JU:lle, JU kuittasi perumisen (ajo ei alkanut). NS EI anna toista lupaa eikä uutta lupaa: odota vain tulosta tälle session-id:lle.
+- KK: 17.05 koskee vain korvauksen mittausta. Tulos KK:lle myös, jos se on "ei tulosta"; omistajalle on luvattu kertoa se. Koe suljetaan tähän ajoon.
+- C1 ja D2: tulkintani (kohta 4) on tehty ennen tätä tarkennusta. Kysy PT:ltä, kun koe on suljettu, ei aloiteta omin päin.
+
 ## Linjaukset
 - OMISTAJAN PÄÄTÖS 17.05 (KK, PT:n kautta): palikoiden iPad-mittaus odottaa, kunnes Pariisi on valmis ja muistia on kevennetty. Ei uusia palikka-ajoja iPadilla eikä kevennystä nyt. Nykyiset talot ja vahti pysyvät, Macin kuvat jatkuvat.
 - PT 17.0x: origokoe ei mittaa korvausta. PT:n tulkinta: iPad 5 vain 0 palalla ja vahti päällä, ellei KK kiellä; vahdin keskeytys = "ei tulosta", ei uusintaa. ODOTA PT:N SANAA KK:N KANNASTA ennen iPad 5:n lupaa.
