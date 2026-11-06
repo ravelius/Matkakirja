@@ -516,3 +516,7 @@ Omistaja: "codexilta tulee riemukaari ja notredame jotka voi vielä peliin ja ko
 ## OMISTAJAN VALTUUS KK:LLE KUVAUKSEN AJAKSI (omistaja 6.11. 14.29) (6.11.2026 klo 15.13)
 
 Omistaja KK:lle: "saat hyväksyä puolestani kaiken, olen kuvaamassa". Rajat KK:n kirjaamana kuten yövaltuudessa: vain omistajan aiempia sanoja vasten; ei TF-julkaisua, junan lukitusta, ostoja, asetuksia, avaimia, CLAUDE.md-muutoksia, poistoja eikä suuria ääniajoja; nollaus vain omistajan sanalla. Voimassa, kunnes omistaja palaa keskusteluun tai sanoo toisin. Kirjaukset scratchpad/keskustelukanava/paiva-hyvaksynnat-20261106.md.
+
+## VALTUUS KK:LLE PÄÄTTYI (6.11.2026 klo 15.51)
+
+Omistaja 6.11.2026 klo 15.51 (KK): kortti "Jatkuuko valtuus hyväksyä puolestasi?" = "Päättyy nyt (Suositus)". Klo 14.29:n valtuus päättyi; roolien kuvat ja mallit taas omistajan korteilla KK:n kautta. Valtuudella tehdyt hyväksynnät: scratchpad/keskustelukanava/paiva-hyvaksynnat-20261106.md.
