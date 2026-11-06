@@ -13,13 +13,13 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - PT 16.3x: KYLLÄ yksi origokoe omassa koehaarassa, JU:n vuorolla 3c:n jälkeen. EI junaan eikä oletukseksi. KK:lle yksi rivi kokeesta vasta sen jälkeen.
 - Haara natiiviseppa/origo-koe 0f152ced2 (peilissä), komento palikat origo <lat> <lon> <h> | pois. Tyyppitarkistus 0 virhettä; ei käännetty eikä ajettu. Haara palikka-koe 2bfb126b0 ennallaan.
 - JU:lla, kuitattu toimitus 16.3x, tulos tälle session-id:lle:
-  1. IPAD 3C 190448df6 (P/ajopyynto-ipad-3c.md, lokit L/natiiviseppa-palikka-ipad3c-190448df6).
+  1. IPAD 3C: ajettu, ks. SEURAAVA TYÖ 1. Laitteen indeksi on 16 palan indeksi, iPad 5 palauttaa tyhjän.
   2. MAC-12 0f152ced2 (O/ajopyynto-mac-12.md, sk-mac-12.txt, lokit L/natiiviseppa-origo-mac12-0f152ced2).
   3. IPAD 5 0f152ced2 (O/ajopyynto-ipad-5.md, lokit L/natiiviseppa-origo-ipad5-0f152ced2): VAIN NS:N LUVALLA Mac-12:n jälkeen. Palauttaa tyhjän indeksin 3c:n päälle.
 - NUI:lle lähetetty kyltit tiedoksi (PT:n pyyntö, ei korjausta nyt). Kehysaikapiikit auki erikseen (PT), ei tämän kokeen asia.
 
 ## SEURAAVA TYÖ, järjestyksessä
-1. IPAD 3C -TULOS: -1611:n kohta 2 sellaisenaan. Ei sekoiteta origokokeeseen.
+1. IPAD 3C: TEHTY 16.37. VIKA radan alussa ilman korvausta, hintaa ei mitattu. Lukuerot P/selvitys-3c/tulos.md, PT:llä. Ei uusintaa, ei rajausta, ei toimia ennen PT:n tai KK:n sanaa.
 2. MAC-12 -TULOS: rivi "palikat: origo CartographicOrigin", |p| B-jäljessä alle 8 km ja float-askel alle 1 mm, kuvat m-a1, m-b, m-veto-b, m-a2 täysikoossa: ei sinistä pohjapalloa, ei reikiä, kolmiot ja kutsut. Mac ei todista iPadia. Kelpaa: lupa iPad 5:lle JU:lle viestillä. Ei kelpaa: rivi PT:lle, ei iPadia.
 3. IPAD 5 -TULOS: läpimeno on LUKITTU ennen ajoa, D/origokoe-ehdot.md; älä muuta ehtoja jälkikäteen. Aja V/jalki2.py = P/valmis-jalki2/jalki2.py kaikille 7 jäljelle ja D/hyppy2.py:
    hyppy2.py <kansio> r4-a1 r4-a1-t; hyppy2.py <kansio> r4-b r4-b-t --origo 48.8585 2.3586 0; hyppy2.py <kansio> r4-a2 r4-a2-t; eteen-a/eteen-a-t; eteen-b/eteen-b-t --origo …; sivu-*: lisää --alku 20.
