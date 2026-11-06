@@ -39,5 +39,6 @@ Oletusarvot ennallaan (voima 1, alku 0,5, pituus 3,5, ulos 0,45). Numerot 0,5 ja
 3. Sillat ja Pompidou -0903:n kohtien 2 ja 3 mukaan (järjestys sillat ennen Pompidouta KK:lta). PT: räystäsliuku Concorden jälkeen ja ennen juoksupelin vientiä; siltojen paikkaa räystäsliu'un suhteen PT ei sanonut, oletin räystäsliu'un ensin.
 
 ## MUUTA
+LISÄYS (NS 09.5x): junarunko on Unity b8:ssa (julkaisija/runko-219-muisti addae63f2, JU 09.47). Yhdistä runko, kun jatkat työtä; b7-haara kääntyy b7:llä siihen asti. Älä vertaa b7- ja b8-kuvia ilman merkintää. Raystas2 (35140432d:n päällä) lienee b7:ää, kuten LAV:n aukot8r ja kuvat1; EI tarkistettu.
 Seuraamattomat .claude/settings.local.json.ennen-kevennysta ja waveletNoiseTile.bin: en koskenut. Worktree proto-linssiseppa2-k17 on nyt haarassa raystas-pehmea (oli pariisi-tyyli, joka on tallella).
 zsh: `$B:A` osuu muuttujan muuntimeen; kirjoita `${B}:Assets/...`.
