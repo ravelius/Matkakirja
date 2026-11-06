@@ -25,7 +25,7 @@ Kylttikorjaus b3cdf8d6b (natiivi-ui/kyltti-lepo) kulkee Y:n (karttaseppa/ajo-yht
 
 ## 3. Näkymätön Liiku kyltin esteenä: 99b556890 (natiivi-ui/kyltti-nakymaton-liiku)
 PT kuittasi: poiminta Y:hyn ajoon 31 KS:n kautta, ei junaan. Ajon 28 kuvan 1 puuttuva Liiku ei ollut vika: nappi on piilossa kerronnan ajan. Käännöstarkistus 0 virhettä, ajamatta.
-Todennus ajosta 31: KS lisäsi (pyysin) kuvan kyltti-kerronta. Odotus: kuva ennen riviä "ui liiku: esiin", Bastilji näkyy Liikun kohdalla, esteissä ei Liikua, Bastilji piiloon vasta esiin-rivin jälkeen. Kuva esiin-rivin jälkeen = ajo ei todista.
+Todennus ajosta 31: pyysin KS:ltä kuvan kyltti-kerronta, lisäystä ei ole vahvistettu. Odotus: kuva ennen riviä "ui liiku: esiin", Bastilji näkyy Liikun kohdalla, esteissä ei Liikua, Bastilji piiloon vasta esiin-rivin jälkeen. Kuva esiin-rivin jälkeen = ajo ei todista.
 
 ## Odottaa, aloittamatta
 Tappien lasku vaakapuhelimelle: vasta, kun UI-sarja on yhdistetty.
