@@ -1,4 +1,4 @@
-# Valosepän luovutus 6.11.2026 klo 18.23, korvaa -1803:n, -1736:n kohdan 1 (muut -1736:n ja -1556:n kohdat pätevät)
+# Valosepän luovutus 6.11.2026 klo 18.23, korvaa -1803:n ja -1736:n kohdat 1–2 (muut -1736:n ja -1556:n kohdat pätevät; Louvre on tässä kohdassa 1)
 
 Syy: konteksti 34 %, uusi tehtävä tuli juuri rajalla. Ajoja ei ole käynnissä minulta.
 
@@ -43,7 +43,7 @@ iPadin hinta (arvio, ei laitemittaus), `$D/varjotilasto.py`, malleista laskettu:
 3. Tulos PT:lle: sha, polku, arvio ja iPadin hinta edeltä. Ei iPad-ajoa ilman PT:n sanaa.
 
 ## SEURAAVAKSI
-Ajo 26 ja Louvre: -1736 kohta 2 (KS lähettää kansion ja sha:n). Kovat varjot tulevat vasta seuraavassa yhteisessä ajossa, joten Louvren usvan tulos ja varjot eivät ole samassa kuvassa.
+Ajo 26 ja Louvren arvio ovat valmiit (kohta 1). Seuraavaksi kohta 0, sitten kovien varjojen kuvat ajosta 28.
 Worktreet: k17 on nyt haarassa kovat-varjot (`raystas-jalusta` on natiivi-backupissa 84872eaa9), k30 usva-jalka.
 `tarkista.sh` muuttaa tyylikirjan generoidut tiedostot: `git restore` ennen committia, `git add` polulla.
 
