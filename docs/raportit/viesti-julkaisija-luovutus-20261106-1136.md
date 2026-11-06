@@ -39,3 +39,11 @@ Syy: konteksti 30 %, jono on kunnossa.
 - Sessioiden nimet vaihtuvat nollauksessa: SendMessage nimi + [ref] voi hylätä; käytä `mcp__ccd_session_mgmt__send_message` id:llä.
 - `print - ...` zsh:ssa kaatuu (print -r -- ...). tyylikirja.mjs ajaa pääohjelman vain todellisella polulla (/private/tmp).
 - ui-asettelutesti palauttaa vian exit 1:llä: Unityn exit 138 näkyy vain lokirivillä "tulosta ei syntynyt (exit 138".
+
+## LISÄYS 11.5x (korvaa ALOITA-kohdat 3, 4 ja 5, kun ristiriita)
+- Puhdas käännös fcce6131f VALMIS: 526 s, 0 error CS, 0 Shader, 0 uutta metaa; PT tietää. Museokylttien näkyvyyttä ei todennettu.
+- L1 T/ui-pysty-toisto.zsh ajossa: b8 1 rc 1, 201 s, 8 VIKAA. Tulos T/ui-pysty-toisto.log. PT:lle exit-koodit; PT 11.4x: jos 138 toistuu, kunkin ajon kaatumisrivi lokista tulokseen (NUI: kaatui Burstiin). Lokit P/lokit/ui-pysty-toisto-20261106/ ja lokit/kaannospalvelu.
+- L1 jonossa T/lav-aukot14.zsh (T/lav-aukot14.log, kuvat-ya, kuvat-yb): kuittaus LAV:lle (exit, 404).
+- L2 ajossa T/ks-yhteinen9b-b8.zsh, kansio lokit/karttaseppa-yhteinen-9b-b8-5f44adef2 (2 kuvaa). Ilmoita KS:lle local_ddd980b0 heti valmistuttua; KS yhdistää sitten 61a6f5321:n ja pyytää ajon 10 (sk-pariisi-yhteinen-10.txt, 6 kuvaa).
+- NS palikkakoe mac-1 VALMIS, rivi NS:lle lähetetty.
+- PT:n esikatselu-2-Library-b7:n poiston sana tulee vasta pystytulosten jälkeen.
