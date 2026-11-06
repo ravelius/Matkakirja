@@ -16,8 +16,9 @@ Syy: konteksti 31 %, luonteva tauko: ajo 18 katsottu ja jaettu, mikään ajo ei 
 Shader error 0, error CS 0, 24 kuvaa, 712 s. Ortokuvat codex-lod-20261106/ortho-nd.jpg ja ortho-rk.jpg.
 - **+13-vaaleus ratkesi:** po2-la ja po2-ita (UI päällä) −13/−12/−9 RGB ajon 17 samoilta kameroilta (ui pois). ui pois vaalentaa koko kuvan; pelin tavallisen kuvan päällä on tummentava kerros, syy selvittämättä. VS:lle ja PT:lle kerrottu. Ajojen 15-17 ui pois -kuvat eivät kelpaa väreihin.
 - **Pompidou ja Louvren pääty:** kuvat VS:llä, en katsonut.
-- **Pont Neufin raita:** kartan oma tie, todennettu (rajaus-pont-neuf). PT:lle kerrottu, asia loppu.
-- **Richard-Lenoirin vesi (rl-vesi):** OpenFreeMapin vesitaso; ElavaTyyli.cs:282 (water) ja :412 (waterway) eivät suodata tunneleita, :431 suodattaa vain liikenneväylät. Kumpi taso piirtää, ei todennettu (palaa ei haettu: robots.txt 403). Korjaus koodista katsoen pieni, ei tehty, ei korjauspyyntöä. PT:lle kerrottu.
+- **Pont Neufin raita:** kartan oma tie, todennettu (rajaus-pont-neuf). PT kuittasi, pois jonosta.
+- **Richard-Lenoirin vesi (rl-vesi), SEURAAVAAN AJOON (PT 15.3x):** tee tunnelisuodatus seuraavaan yhteiseen ajoon. OpenFreeMapin vesitaso; ElavaTyyli.cs:282 (water) ja :412 (waterway) eivät suodata tunneleita, :431 suodattaa vain liikenneväylät. Kumpi taso piirtää, ei todennettu (palaa ei haettu: robots.txt 403). Lisää `brunnel == "tunnel"` -ohitus ja katso sama kamera (komento aja 48.8600 2.3700 0.003 2, kallista 45, suunta 0). Piirtyvät laatat ovat välimuistissa, tarkista versio (Laattapalvelin.Elava.cs) ennen kuin päättelet tuloksen kuvasta.
+- **Riemukaaren katon ääriviiva (PT 15.3x, mitattu ilman ajoa; katon-aariviiva.py, tasot.py, aariviiva-rk-ero.jpg):** uusi on ylhäältä kohtisuorassa suora suorakaide ±94 × ±50,5; nykyinen sama ilman kulmia, ero 159 yks² eli 0,8 % ja vain kulmissa. Korkeustasot samat 0,2 yks. sisällä (katto ±84 × ±40,5, attikan jalka ±88 × ±44,6, räystäs ±94 × ±50,55). Pelikuvan porras ei ole mallin ääriviivassa, vaan se näkyy tasojen perspektiivistä, kun katto sulautuu samanväriseen kiveykseen; päätelty mitoista, ei omaa kuvaa. Mallin ääriviivaan ei korjattavaa.
 
 ## AUKI -1410:stä edelleen
 Koepaletti-komento pois W:stä, kun KK ei kumoa. Eiffel 85b VS:llä. Kärkilaskenta iPadilla mittaamatta (nyt kevyillä malleilla pienempi, VS).
