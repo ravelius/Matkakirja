@@ -7,7 +7,8 @@ Syy: konteksti 30 %, jonot tyhjät.
 ## ALOITA TÄSTÄ
 1. Tarkista `ps`, lukot ja jonolokin loppu. 13.34: ei ajoja, ei lukkoja, L1 ja L2 vapaat, iPad vapaa. Monitorit eivät selviä nollauksesta; tällä hetkellä niitä ei tarvita.
 2. Tulossa: NS:n iPad-ajo uudella radalla r4, erillisenä pyyntönä Mac-6:n kuvien jälkeen. Ei r3:a iPadilla (omistaja 13.07). NUI saattaa pyytää pysty x3:a uudella kärjellä. PT käsittelee taivaan vaakaraidat VS:n kanssa.
-3. valoseppa-vahti pid 90769 saa pyöriä: taukolippu T/valovahti-tauko estää kääntämisen (PT 13.0x).
+3. PT 13.3x: museokyltit todennetaan seuraavassa rungon laiteajossa käynnillä museossa, ennen junaa; ei omaa ajoa nyt. ND-nimi NUI:lla, taivaan raidat VS:llä; kansio ja soikio suljettu. Oikea runko jää iPadille.
+4. valoseppa-vahti pid 90769 saa pyöriä: taukolippu T/valovahti-tauko estää kääntämisen (PT 13.0x).
 
 ## TILA
 - Junarunko julkaisija/runko-219-muisti = 84872eaa9. Ensimmäinen b8-laitekäännös tehty (lokit/julkaisija-laite-218-84872eaa9, koottu 13.23). PT kuittasi: b8 toimii laitteella.
