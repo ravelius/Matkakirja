@@ -10,10 +10,14 @@ Korvaa -1616:n kohdat "Tila", "Ajo JU:lla", "Kun JU on ajanut" ja -1612:n "Täht
 Worktree /Users/Shared/Claude/wt/proto-natiivi-ui-vesinimi, haara natiivi-ui/ui-sarja-219, kärki 13dab1aac (Unity b8, fcce6131f:n päällä, EI d092f48cc:n), ei muutoksia, peilissä. Ajettu 16.17-17.03, käännösvirheitä 0, rivit julkaisija-tyokalut/nui-13dab.log. Ei omia ajoja jonossa JU:lla.
 Runko JU:n mukaan 17.03 yhä d092f48cc.
 
-## Odottaa PT:n vastausta (lähetetty 17.0x)
-Ehdotin toistoajoa JU:n vuorolla samalla kärjellä: iphone pallo x3 ja iphone-pysty keskitys x3, jotta yli 10 s:n vika saa reittirivin. Vaihtoehto: E jää mittariksi, ja liitos sallitaan. En tee kumpaakaan ennen PT:n sanaa.
-- Jos PT sanoo toisto: pyydä JU:lta, tulos lokit/nui-ui-13dab1aac-toisto/. Lue reitti ja tavut, jos 10 s ylittyy. Korjaus vain PT:n sanalla.
-- Jos PT sallii liitoksen: runko JU:lta, kuiva yhdistys uusimmalla kärjellä, git diff --stat PT:lle, JU yhdistää omana haarana.
+## Toistoajo JU:lla, päätössääntö kirjattu ennen ajoa
+PT 17.0x, sellaisenaan: "kyllä: toistoajo JU:n vuorolla samalla kärjellä, iphone pallo x3 ja iphone-pysty keskitys x3, ei uutta koodia. Kirjaa päätössääntö luovutukseen ennen ajoa: jos yli 10 s toistuu, reitti luetaan ja E pysyy auki. Jos ei toistu näissä kuudessa, E siirtyy seurantaan (mittari jää päälle, riski kirjataan tulokseen) ja liitos saa edetä, kun vain D on jäljellä. Ei kolmatta toistosarjaa."
+Pyydetty JU:lta 17.0x: 13dab1aac sellaisenaan, ei kuvia, tulos lokit/nui-ui-13dab1aac-toisto/, rivit julkaisija-tyokalut/nui-13dab-toisto.log. JU lähettää rivin tälle sessiolle. Jos ei ole ottanut jonoon, tarkista list_eventsillä ja kysy yhdellä rivillä.
+Kun ajo on valmis:
+1. "kuva hidas" ja intron odotukset ovat tiedostoissa `<varauksen loki>.unity.log` ja `.log`. Lue kaikki kuusi. Lisää tulos tulos-nui.md:hen kansioon nui-ui-13dab1aac-toisto.
+2. Yli 10 s toistuu (rivi "kuva ei näy 10 s:n rajassa"): lue reitti ja tavut, E pysyy auki, ei liitosta, tulos ja syyehdotus PT:lle. Korjaus vain PT:n sanalla. Ei kolmatta toistosarjaa.
+3. Ei toistu kuudessa: E siirtyy seurantaan, mittari jää päälle. Kirjaa riski tulokseen: yli 10 s:n vian syy on tuntematon, se tuli aiemmin ainakin kahdesti (14.41 pysty, 61cbc0856 vaaka), ja se näkyy pelaajalle esityksen ohituksena. Hajonta rajan alla ei enää estä liitosta.
+4. Kohdan 3 jälkeen, kun vain D on jäljellä: runko JU:lta (17.03 d092f48cc), kuiva yhdistys uusimmalla kärjellä, git diff --stat PT:lle, JU yhdistää omana haarana. D:n hyväksytty kolme riviä: neljäs = uusi vika.
 
 ## Tähtikyltit: odottaa KS:n ajoa
 PT 16.4x: "kyllä: diagnostiikkacommit vain `ui kohdenostot kyltti` -riville KS:n ajohaaran päälle, ei käytösmuutosta. Lukema ajetaan KS:n seuraavassa yhteisessä ajossa samasta kamerasta: ensin ensimmäisellä ajolla, sitten laikka-2:n kautta; ei omaa ajoa. Sovi lisä suoraan KS:n kanssa. Korjaus vasta tuloksen jälkeen." "NS:n 2 px:n kylttiportaat ovat eri asia, eikä niitä korjata nyt."
