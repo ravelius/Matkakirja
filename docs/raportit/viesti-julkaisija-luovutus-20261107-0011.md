@@ -8,8 +8,8 @@ Tarkista `ps -p` ja jonolokin häntä; osa on voinut jo päättyä, ja tulos on 
 - L1 järjestyksessä, kukin odottaa edellistä pid:llä:
   1. LAV levyt7z valmis 00.10, kuitattu.
   2. LAV levyt7m, pid 83727, tulos T/lav-levyt7m.tulos, 6 kuvaa, kuvat-levyt7m. Kuittaukset LAV:lle: kuvat, 404-määrä (nyt 4, samat kuin levyt7v), virheet.
-  3. NS karsi d7a8b8af0, pid 87519, tulos T/ns-karsi.tulos, 7 kuvaa, lokit/natiiviseppa-karsi-d7a8b8af0. Kuittaus NS:lle rivillä.
-  4. NUI neljä ajoa 6d12054b0, pid 95425 (odottaa pid:t 41366, 87519, 93288: PT:n käsky Pariisin ja Lontoon jälkeen), tulos T/nui-yksi.tulos, kansiot lokit/nui-yksi-k01f, -k05, -k04, -nimi-tallenne. Kuittaa NUI:lle kansiot ja paketti-rivi.
+  3. NS karsi fd15e7cd2 (korvasi d7a8b8af0:n), pid 99397, tulos T/ns-karsi.tulos, 7 kuvaa, lokit/natiiviseppa-karsi-fd15e7cd2. Kuittaus NS:lle rivillä.
+  4. NUI neljä ajoa 6d12054b0, pid 99400 (odottaa pid:t 41366, 99397, 93288: PT:n käsky Pariisin ja Lontoon jälkeen), tulos T/nui-yksi.tulos, kansiot lokit/nui-yksi-k01f, -k05, -k04, -nimi-tallenne. Kuittaa NUI:lle kansiot ja paketti-rivi.
 - Kaikki valmiit, jonossa ei muuta: rivi PT:lle "JONO TYHJÄ: Julkaisija".
 
 ## YÖN SÄÄNNÖT
