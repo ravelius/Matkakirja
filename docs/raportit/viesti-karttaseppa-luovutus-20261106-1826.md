@@ -3,23 +3,23 @@ Syy: tilinvaihto (PT 18.23, tilille vvi@vvi.fi). Korvaa kaikki aiemmat, ei viitt
 Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttaseppa-yhteinen (haara karttaseppa/ajo-yhteinen-tasoitus, kärki 92ea0a945, varmuuskopio natiivi-backup karttaseppa/ajo-yhteinen-29). W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219. Remote natiivi-backup, ei origin. L = /Users/Shared/Claude/wt/proto-karttaseppa-lod (poista, kun kevyiden mallien kohtalo on päätetty).
 ## ENSIN
 1. Vahti Monitorilla: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
-2. **Ajo 29 KÄYNNISSÄ tai valmis:** JU ilmoitti: alkoi 18.25 L2:lla irrotettuna (pid 34939, 4 kuvaa), vaikka PT sanoi 18.2x ajon jäävän vaihdon jälkeen; PT:lle kerrottu. Tulos JU:n tiedostossa `ks-yhteinen29.tulos` (JU:n T-kansio) ja `lokit/karttaseppa-yhteinen-29-b8-92ea0a945`; kuittaus voi jäädä tulematta, jos JU vaihtuu. Katso ensin kansio. Jos kuvia ei ole eikä ajo ole käynnissä, tilaa uudelleen: UNITY b8, Y kärki 92ea0a945, `sk-pariisi-yhteinen-29.txt`. Älä yhdistä Y:hen ajon aikana.
+2. **Ajo 29 valmis 18.29** (92ea0a945, L2, 197 s, 4/4 kuvaa, Shader error 0, error CS 0; `lokit/karttaseppa-yhteinen-29-b8-92ea0a945`). Parit ja viestit tehty, ks. AJON 29 TULOS. Uusia ajoja ei ennen PT:n sanaa (tilinvaihto). Seuraava numero 30.
 3. Etäyhteys vain KK:lla. Hookin työlistarivit ovat PT:n työkalulla, en päivitä. Session id:t osoitekirjasta, ne voivat vaihtua tilinvaihdossa.
 ## AJO 28 (33ea85e3b, lokit/karttaseppa-yhteinen-28-b8-33ea85e3b, L2, 872 s, 31 kuvaa)
 - **Eiffel haiv2:** katsottu suurennettuna: vino reuna rannassa poissa, koillisreunan läpi ei kuulta taloja. Parit `parit-yhteinen-28/kk/eiffel-alue.jpg` ja `eiffel-reuna.jpg` lähetetty KK:lle 18.2x; odottaa KK:n kuvakatsomusta ja omistajaa, ei junaan ennen sitä.
 - **VS:** kansio, sha ja maavarjorivi välitetty; 23 kuvaa kv-*, minä en arvioinut. KovaVarjo-haku lokista: vain tuontirivi. Maavarjorivillä yksi tyhjä nimi (=11834), kerrottu VS:lle.
 - **NUI:** kyltti-liike-1..4 välitetty, en arvioinut.
 - Yksi `ArgumentOutOfRangeException` katsottu: Unityn SearchDatabase (haun indeksointi), ei pelikoodi; samanniminen myös ajossa 27 (pinoa ei tarkistettu). JU:n 11 unity.login poikkeusriviä ei käyty kaikkia läpi.
-## AJON 29 SISÄLTÖ (kärki 92ea0a945, kuvat katsomatta, kaikki kokeena)
+## AJON 29 SISÄLTÖ (kärki 92ea0a945, kaikki kokeena)
 - **Pont d'Iéna "Vaalea kaista" (OMISTAJAN PÄÄTÖS 18.09):** viidestä siltaviivasta vain keskilinja (`bicycle=no`) piirtyy primary-tien levyisenä kaistana, muut neljä pois. `TaloAlue.IenanSilta` (35 m keskipisteestä 48.85982, 2.29208), `ElavaTyyli.cs` siltahaara. Palojen pääte `-pariisi2`. Palakoe oikeasta datasta z14–17 näytti yhden kaistan joen yli (`parit-yhteinen-28/palakoe-iena/koonti.jpg`); pelissä katsomatta.
 - **Riemukaari #2172 "Kelpaa":** oletus `lod3-20261106/riemukaari` ja normaali, sävy 1.010 0.926 0.643. Kuitattu Codexille 741e22033.
 - **Notre-Dame:** oletuspohja `pohja-ranta-vesi1` (raita, PT kuittasi 18.1x). Malli #2171 "Ei vielä": nykyinen pysyy, kuitattu c69dc6088; vahti ilmoittaa seuraavan toimituksen.
 - **Kuvat:** silta-iena-kaista (kamera kuin ajon 26 silta-iena), raita-yla-oletus (kuin ajon 27 raita-yla), riemukaari-lod3 (kuin ajon 28 kv-riemukaari), kyltti-liike-5-halles (NUI).
-## AJON 29 JÄLKEEN
-- silta-iena-kaista KK:lle rinnan ajon 26 kuvan kanssa, sama rajaus (`parit-yhteinen-26/tee-sillat-kk.py`: 876,582–1876,1482). Viivat eivät saa jäädä kaistan rinnalle.
-- kyltti-liike-5-halles ja lokin polku NUI:lle. Käännösvirhe NUI:lle.
-- raita-yla-oletus: raita poissa, vertaa ajon 27 raita-yla-vesi1:een; riemukaari-lod3 vertaa ajon 28 kv-riemukaari:in (sama kamera, vanha malli). Riemukaaresta kuva KK:lle.
-- Rivi PT:lle; päivitä `laikka-vesi-20261106/syy.md`, jos raidasta tulee uutta. Seuraava ajonumero 30.
+## AJON 29 TULOS (parit `parit-yhteinen-29/kk/`, tehty `parit-yhteinen-28/tee-parit-29.py`)
+- **Pont d'Iéna:** yksi kaista, viivat poissa (silta-iena, silta-iena-lahi). Lähetetty KK:lle, odottaa.
+- **Riemukaari lod3:** toimii oletuksena, terävämpi kuin nykyinen (riemukaari, riemukaari-lahi). KK:lle huomiot, ei korjausta ilman sanaa: sivukaari näyttää vaalealta täytteeltä, reunalistassa katkoviivamainen juova oikealla.
+- **Notre-Dame vesi1:** raitaa ei näy oletuksena (raita-yla), sama kuin ajon 27 vesi1; eroa tuovat VS:n kovat varjot. PT:lle kerrottu.
+- **NUI:** kyltti-liike-5-halles välitetty, en arvioinut.
 ## RAITA (`laikka-vesi-20261106/syy.md`)
 Syy todennettu ajossa 27: Notre-Damen pohjakuvan `pohja-ranta.png` punertavat pikselit; vesi1 (162912f91) poistaa ne. Heikko veden sävyn vaihto siniharmaasta oliiviin jää, ei korjattu.
 ## ODOTTAA KK:LTA (kuvat `parit-yhteinen-26/kk/`, ellei toisin mainita)
