@@ -5,13 +5,13 @@ ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Cla
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, haara natiiviseppa/origo-koe d907286cb, peili natiivi-backup. P:n skriptit ja tulokset ovat haaran ulkopuolella.
 
 ## Tila 19.26
-- Ei omia ajoja käynnissä. Työpuuhun ei tehty muutoksia.
+- Mac-14 pyydetty JU:lta, ei vielä ajossa. Ei muita ajoja. Työpuuhun ei tehty muutoksia.
 - MAC-SELVITYS VALMIS ILMAN AJOJA, kerrottu PT:lle ja KK:lle 19.25. Raportti H/selvitys-tulos.md, kuva H/m-b-ennuste-vanha-asento.png, työkalut H/projisoi-kallistus.py ja H/kartoita.py, kartoitus H/kartoitus.txt.
 - Kallistus: OhjelmaKohteet saa paikan uudelleen (PaivitaMaa), asento jää vanhaksi (LuoSeuraava), 41,1° itään. Mitattu projisoimalla, silmämääräinen päällekkäisyys, ei pikselilukuja.
 - Katoaminen: Nahtavyysalue (ankkuri, perus kerran LuoOsat) jää noin 6 400 km pois. Todisteet koodi ja kuvat, ei ajonaikaista lukemaa. Korjaus: Mac-12:ssa Louvre ja Notre-Dame puuttuvat, eivät kallistu.
 - Pohjoiskäännös EI ole origo: veto → KartanLiike pienentää kortin → elävä "hiljaa ... soi" → saapuminen FRA → PalautaPohjoinen; veto katkaisee ajon, kääntö jatkuu. iPad 5 konsoli 1967-1990, Mac-12 unity.log 2947 ja 3043. Este poistui.
 - Hinta: 317 kutsua, 88 tiedostoa, 12 kuuntelee changed. Ratkaisee, siirtyykö origo esineiden ollessa ladattuina. Siirtoikkunan kehys enintään 83 ms ja 51 ms iPadilla, yläraja. Järjestelmien luokittelu osin vain metodinimestä (M raportissa).
-- Tärinä rakennusten kohdalla todentamatta. Ehdotus raportissa: esineet 0 → origo → esineet 1, koodimuutosta ei tarvita, ei kokeiltu. Ensin Mac 3 kuvaa, sitten iPad. EI AJETA ilman PT:n sanaa.
+- Tärinä rakennusten kohdalla todentamatta. Ehdotus raportissa: esineet 0 → origo → esineet 1, koodimuutosta ei tarvita, ei kokeiltu. Ensin Mac 3 kuvaa, sitten iPad. iPadia EI ajeta ilman sanaa; Mac-tarkistuksen PT antoi (seuraava työ 1).
 
 ## Toteutuksen esteet, ei korjattu
 - OhjelmaKohteet ja Nahtavyysalue sekä H/selvitys-tulos.md:n taulukon muut järjestelmät eivät seuraa origon siirtoa ajon aikana.
@@ -24,10 +24,10 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - KK 12.42: katot EI NYT. Puiden väri ja suhde kelpaavat (omistaja 14.28). 43 palikkasiltaa jää. v6 ee847e1a0e1788df kokeena, ei junaan.
 
 ## SEURAAVA TYÖ, järjestyksessä
-1. PT:n vastaus selvitykseen voi tulla viestinä; toimi sen mukaan. Toteutusta ei tehdä ilman sanaa, eikä tärinäajoa.
+1. MAC-14 JONOSSA JU:LLA (PT 19.2x: "Kyllä: yksi Mac-tarkistus (a1, b, a2, seisovat rakennukset) JU:n vuorolla, ei koodimuutosta, pari koko kohteena"). Pyydetty 19.27: H/ajopyynto-mac-14.md, H/sk-mac-14.txt, lokit L/natiiviseppa-origo-mac14-d907286cb, kuvat o14-a1, o14-b, o14-a2. Katso kuvat täysikoossa: ovatko Louvre, Notre-Dame, sillat ja puut pystyssä ja samoilla paikoilla kaikissa kolmessa. Rivi tuloksesta PT:lle ja KK:lle. iPad-ajoa EI: origokoe sulkeutui 17.08 sanan mukaan, PT kysyy KK:lta vasta Mac-tuloksen jälkeen. Ei toteutusta.
 2. C1 ja D2 ODOTTAVAT (PT 19.1x): ne vaativat palikka-ajoja iPadilla, ja mittaus uusitaan, kun Pariisi on valmis ja muistia on kevennetty (omistaja 17.05). Älä kysy niitä uudelleen. C1: GameObject + LOD Group (ei koodattu) + DOTS-tuki varjostimeen + Keep All + static batching pois + peittokarsinta pois; Forward-kopio pois listalta, RD vaatii Forward+:n. D2: B2 + forceMeshLod vs erilliset verkot. Tutkimus 20261106-rakennuspalikat-tutkimus.md, osa E.
 3. Origokoe pysyy suljettuna: ei uusia origo-ajoja iPadilla.
-4. Jono on tyhjä: "JONO TYHJÄ: Natiiviseppä" lähetetty PT:lle 19.2x; lähetä uudelleen vain, jos tuli uutta työtä ja se valmistui.
+4. Mac-14:n jälkeen "JONO TYHJÄ: Natiiviseppä" PT:lle.
 
 ## Mitattu, pysyvä
 - Tärinä: iPad 4 A0, 0 palaa, thermal 0: GPU 13 → 29 ms noin 3 min:n kohdalla, huippu 37, 10 min:n tauon jälkeen 11,6; kolmiot ennallaan; seisova kamera kuvaero 0,000. Syy auki. Muistipiikki t 20 s: 3660 (0 palaa) | 4039 (3b); iPad 3b VIKA 4106 ≥ 4080, huippu 4220. Skriptit P/selvitys-muisti-3b/.
@@ -36,6 +36,7 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 - Näkyvä vesi: Z14 + ND:n pohjakuva; maski P/selvitys-tolpat/nakyva-vesi-alueet-2m.png, poisto poista-vedesta.py. Jos KS muuttaa kanavaa tai ND:n pohjaa: nakyva-vesi.py, alue-vesi.py ja poisto uudelleen. tee-palikat.zsh:n jälkeen poista-omat-sillat.py.
 
 ## Kerrottu, ei NS:n työtä
+- LÖYDÖS (PT 19.2x: kirjataan, ei selvitystä nyt): jos pelaaja on kääntänyt karttaa, veto kortin sulkeutuessa voi kääntää kartan pohjoiseen vedon aikana (elävän saapumisen PalautaPohjoinen jatkuu, vaikka veto katkaisee ajon). iPad 5 sivu-a; pelaajan kulkuna koestamatta.
 - Pont Neufin vaalea raita KS:n jonoon (KK). Richard-Lenoirin vesi KK:n sanaa odottamassa (P/selvitys-mac10/rajaus-a-arsenal.png). Canopéen välke liikkeessä katsomatta. Kehysaikapiikit auki erikseen.
 - NS:n työpuita wt/-kansiossa yli rajan (8/3): kerro PT:lle ennen poistoja.
 
