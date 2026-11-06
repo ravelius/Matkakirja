@@ -25,6 +25,9 @@ Y:n kärki a6a4e806a (+ NUI 245373730, Montmartren taulukko NS:n kaavalla; merge
 - Mahdollinen tasainen oletuksena ja ND:n rajaus, jos KK sanoo.
 - Yli 5 kuvasta perustelu ajopyyntöön. Älä yhdistä Y:hen ajon aikana: JU ottaa kärjen ajon alkaessa.
 
+## SEURAAVAN KS:N ENSIMMÄINEN TYÖ (PT 08.0x, voittaa alemman kohdan "Tee")
+PT: ND:n malli ss-la:ssa: "Selvitä syy ilman ajoa, tulos KK:lle ja PT:lle; korjaus seuraavaan yhteiseen ajoon." PT katsoi kuvan 2000 px:nä, ei täysikoossa: kyltti näkyy, mallia ei juuri erota, Panthéon samalla syvyydellä selvä; NUI näki saman. PT:n epäily: usva tai ND:n oma varjostin, ei todistettu. **Ei omaa ajoa:** lue koodi ja mittaa olemassa olevista kuvista. Haalea hahmo Sainte-Chapellen takana voi olla malli, ei mitattu. PT 08.0x lisäksi: varmista KK:lta ennen tasaisen oletuksen vaihtoa (kysytty, kohta 2).
+
 ## UUSI, EI TUTKITTU: ND:N MALLI HAAMUNA (NUI 08.0x)
 `lokit/karttaseppa-yhteinen-2-127346f24/ss-la.png` (rajaus x 800-1700, y 100-600): Notre-Damen malli ja puut lähes näkymättömät, Sainte-Chapelle vieressä täysin näkyvä, kyltti paikallaan. Kuva on otettu ennen `karttatasa 1`:tä, joten tasaus ei selitä tätä.
 Molemmat ovat samalla alueella (`notre-dame`), joten alueen `nakyvyys` on sama. Ero tulee mallikohtaisesta usvasta: **epäily, todistamatta**, `Nahtavyysalue.cs:712` `KohdeUsvaPeitto`. Vertaa: 00.20 "SC häipyy, ND ei"; KK 00.4x: ei häivytyksen aikaistusta. **Tee:** `usvamitta` tällä kameralla (`aja 48.8510098 2.3349286 0.0025 2`, suunta 80, kallista 45) seuraavassa yhteisessä ajossa. Jos usva ei selitä, asia menee Lavastajalle. Kerro tulos NUI:lle.
