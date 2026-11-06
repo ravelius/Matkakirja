@@ -604,3 +604,7 @@ Omistajan siirtoprompti 6.11. Uusi tili vvi@vvi.fi (org b408744a, koodaustili, v
 ## OHJEIDEN KOE 6.11.: 12.17:n vanha simulaattorirajaus pois (6.11.2026 klo 18.48)
 
 Kokeen vastaus 9 nojasi 12.17:n vanhaan lauseeseen (omistaja 5.10.: simulaattoria vain vian toistoon), jonka 9.11 SIMU HARVOIN (omistaja 20.10.) korvasi. Vanha lause poistettu ja 12.17 viittaa kohtaan 9.11 (Raamattu 7.45, 14.2).
+
+## OMISTAJAN PÄÄTÖKSET 6.11. 18.49 (KK) (6.11.2026 klo 18.50)
+
+Tili vvi@vvi.fi: raja 99 % (Suositus): rivi 99 %:ssa, ei keventämistä eikä pysäytystä; Raamattu 12.21. Eiffelin reuna (ajo 28) Kelpaa (Suositus): saa avoimeen junaan; KK:n viestin sha 33ea85e3b on ajon 28 kärki eli mittausrivi 'ei junaan', ei itse korjaus; junaan vain Eiffelin reunan korjaus. Maalattu taivas #2178 Kokeillaan (Suositus): väliversio pelikokeeseen PT:n kautta; KK sopii muodon Valosepän kanssa ja tilaa Codexilta koko kierroksen.
