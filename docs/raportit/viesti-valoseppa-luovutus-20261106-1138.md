@@ -15,7 +15,9 @@ PT 11.3x: 35f849838 kelpaa arvolla 0,25, hallia ei ajeta arvolla 0,45. Pikseliku
 b8 yhdistetty: `linssiseppa2/raystas-pehmea-b8` 8ca0f78fc (natiivi-backup) = 35f849838 + runko-219-muisti fcce6131f. Unityssä kääntämättä, kuvat `raystas/kuvat5` b7:ää. Yhdistetty `merge-tree`llä ilman työpuuta; ainoa ristiriita JuoksuV4Maailma.cs (otin rungon rivin, ei lokia). Sha PT:llä ja LAV:lla. Tulokset `raystas/TULOS-raystas3.md` lopussa.
 LISÄYS 11.4x, PT: 8ca0f78fc vain koekäyttöön (72 tiedostoa ja 11 239 riviä juoksupeliä), ei junaan. Tee räystäs-työt `linssiseppa2/raystas-runko` a309d43de:n varaan (natiivi-backup; fcce6131f + 1c83110f0, 12d947396, a309d43de; vain JuoksuValo.hlsl ja ValoKohteet.cs, tavulleen kuten 35f849838:ssa). Ristiriidoitta, Unityssä kääntämättä, ei ajettu. Sha ja tiedostot PT:llä ja LAV:lla. Juoksupelin vienti ratkaistaan erikseen PK:n ja LAV:n kanssa, ei VS:n työ.
 Pystyraja r-k--151 alhaalla ei tule liu'usta (myös pois-kuvassa), PT sulki sen.
-AVOIN TYÖ: PT:n käsky "räystäätön seinä ja korkea halli: enintään 2 kuvaa seuraavassa yhteisessä ajossa, ei omaa ajoa". Kameroita ei ole. Kysyin LAV:lta, viesti jonossa 11.38. Jos LAV ei tiedä, hae itse (`kartta-151.txt` ja MUUTA -1034:ssä). Kamera 16,4 2,4 492,3 näyttää matalalta näyttävän hallin, en tiedä onko se korkea halli. Anna rivit KS:lle; ajon koodiin a309d43de Y:hyn, sovi KS:n kanssa.
+PT 11.4x: "a309d43de tarkistettu ... Kuittaan junaan vasta, kun 2 kuvaa on ajettu tältä haaralta ja katsottu täysikoossa. Pyydä ajo JU:lta seuraavaan yhteiseen, ja lähetä sama sha LAV:lle." LAV:lle lähetetty. JU:lle EI vielä, koska kameroita ei ole: ENSIMMÄINEN TYÖ. Tee `raystas/sk-raystas6.txt` (malli sk-raystas5.txt) ja pyydä JU:lta a309d43de + lista.
+Concorden testi: PT:lle kerrottu 11.4x, 2aa245334:ssa on c0dba45aa mutta ei 61e6bdcfe:n testikorjausta (koodista luettu, ei ajettu).
+AVOIN TYÖ: PT:n käsky "räystäätön seinä ja korkea halli: enintään 2 kuvaa seuraavassa yhteisessä ajossa, ei omaa ajoa". Kameroita ei ole. Kysyin LAV:lta, viesti jonossa 11.38. Jos LAV ei tiedä, hae itse (`kartta-151.txt` ja MUUTA -1034:ssä). Kamera 16,4 2,4 492,3 näyttää matalalta näyttävän hallin, en tiedä onko se korkea halli. Anna rivit KS:lle; pyyntö JU:lle (PT:n sana), koodi a309d43de.
 
 ## USVA: TILA
 KS:n ajo 9 (nykyinen, Y 5f44adef2, b8) valmis: `proto-3d/lokit/karttaseppa-yhteinen-9-b8-5f44adef2`. En ole katsonut näitä. KS:n havainnot: `us-eiffel-85` ja `us-silta-85` kamerat eivät kelpaa; `us-eiffel-75`:ssä Eiffel pisteytettynä haamuna taivasta vasten (täysikoossa x 1300–1700, y 100–800), usvan loppu 3685 m; `pb-lahi` sama kuin `pb-etu`.
@@ -27,7 +29,7 @@ Molemmat laskettu KS:n 1,8 km:n arviosta, ei ajettu. `us-eiffel-75`, `us-nd-85`,
 ## SEURAAVAKSI
 1. Kun KS ilmoittaa 9b ja 10: usvaparit täysikoossa, -1123:n USVA kohdat 1–7, parit KK:lle ja kopio PT:lle.
 2. `pb-etu` ajosta 9: katso lippu, pari KK:lle (PT: hän voi kumota). Kuvaa en ole avannut.
-3. Räystäskuvien kaksi kameraa KS:lle (yllä).
+3. Räystäskuvien kaksi kameraa ja ajo JU:lta (yllä, tee ensin, ei odota usvaa).
 4. Pompidoun muodot KK:n järjestyksellä (`OhjelmaKohdeRakennukset.cs` rivi 1397, -1048:n SEURAAVAKSI 3). Ei omistajalle nykyisessä kunnossa.
 
 ## MUUTA
