@@ -38,3 +38,12 @@ Lisäksi kaksi aarretehtävän VIKAA odottavat 20 s kumpikin (AsetteluTesti.cs: 
 
 ## Yhä avoinna (-0915, -1002)
 Tuileries'n kuva Louvren kulmassa; kyltti RANSKA-otsikon ja Liiku-napin alla; aaripisteet 38 × kärkimäärä; Metroasema haalea sc-80:ssä; mittarin viat ei nyt; yksinäisten pyöreiden kuvien kohteita ei tarkistettu datasta.
+
+## LISÄYS 11.4x: JU ja PT:n sana (korvaa SEURAAVAKSI-kohdan)
+JU: junarunko on fcce6131f (pikakelaus); JU ei ajanut testejä; tyylikirja-ero on JU:lla. Junarivi Valmiina.
+PT kuittasi selvityksen:
+- Raja pysyy 6 minuutissa, varaukset jaetaan.
+- Selite: poistetun odotuksen testi pois, viittaus omistajan päätökseen 16.10. ja 18.10.
+- Keskitys 3 kpl ja Kysy 46 %: korjaa koodi, jos se on pieni. Jos ero on näkymätön, perustele toleranssi rivillä; ei yleistä väljennystä.
+- Metrolinja ja tappi sekä aarretehtävä aikajana ja katso: kuva ja lokirivi samassa UI-ajossa kuin korjaukset. Ei erillistä ajoa.
+- Kaikki omaan haaraan fcce6131f:n päälle. Ajo JU:n vuorolla pystytoiston jälkeen.
