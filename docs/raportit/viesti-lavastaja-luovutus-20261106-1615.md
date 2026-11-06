@@ -28,3 +28,6 @@ zsh A/leivo_levyt3.zsh (ei argumentteja = 20 palaa, 3 kuja-/aukiopalaa ovat syml
 
 ## PT:n sana (saatu luovutuksen jälkeen)
 Leivonta 20 palaa JU:lla, ei vientiä. JU:n seuraaja varmistaa järjestyksen iPad-mittausten kanssa. Kun leivonta on katsottu, pyydä kävely- ja törmäystarkistus suoraan PK:lta (renkaat ensin): kerro lattian lasku 0,3-0,7 m ja tarkat palat (kaikki 20: kk-tausta-0-0...3-4; kolmiot tiedostossa A/jaanteet.json ja säännössä A/tee_levyt3.py). Vienti vasta, kun tummat kolmiot, ohut viiva r--265:ssä ja kävely on katsottu.
+
+## Lisäys 17.5x: pala 1-2
+JU:n leivonta kaatui palaan kk-tausta-1-2 (kaksi verkkoa, katto-longzongmen). 7/20 valmis, loput 12 ajossa, 1-2 ohi. Korjaus A/leivo_levyt3_1-2.zsh (muuri/yleinen/katto_takaisin.py, lista A/katto-longzongmen-levyt3.json). Takaisin + erota testattu kopiolla 1041/1041, leivonta ei. JU ajaa sen 12 palan jälkeen ja vasta sitten aja-levyt3c. Yleissääntö: 1-2:n leivonnassa katto ensin takaisin.
