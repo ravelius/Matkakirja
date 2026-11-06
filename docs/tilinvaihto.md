@@ -67,7 +67,7 @@ Kaava (15.10.2026 alkaen ensisijainen): `start_session` (initiation user_asked, 
 jos osascript ei saa ohjata appia, omistaja sallii Järjestelmäasetukset › Tietosuoja ja suojaus › Käyttöapu (Claude/Pääte).
 Osascriptissä valikkojen nimet suomeksi (`click menu item "Uusi istunto" of menu "Tiedosto"`); malli valitaan luonnoksessa ennen
 ensimmäistä viestiä. Järjestys per sessio: luonti → `set_session_model` (jos väärä) → `set_session_effort` → `set_session_title`
-"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti (etäyhteys vain KK:lle, Raamattu 7.9).
+"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti (etäyhteys KK:lle ja PT:lle, Raamattu 7.9).
 Lupatila: ohitustila (bypassPermissions) kaikille paitsi Äänittäjä auto (sessiotiedostot 14.10.). Roolien aloitusviestin
 lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 
