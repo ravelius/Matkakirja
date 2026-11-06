@@ -148,7 +148,11 @@ jobs:
         if: env.PALAUTA == ''
         run: |
           set -euo pipefail
-          python3 -c 'import PIL' 2>/dev/null || sudo apt-get install -y -qq python3-pil >/dev/null
+          # Pakettilista ensin: ajokoneen kuvan vanhentunut lista antoi 404:n (PK 6.11.2026, 9 kaatunutta ajoa).
+          python3 -c 'import PIL' 2>/dev/null || {
+            sudo apt-get update -qq >/dev/null
+            sudo apt-get install -y -qq python3-pil >/dev/null
+          }
           node tools/vienti/vie-sisalto.mjs > /dev/null
           mkdir -p dist/pienet/pieni
           vie_pienet() {
