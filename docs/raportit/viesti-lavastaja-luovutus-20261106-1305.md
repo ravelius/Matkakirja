@@ -18,9 +18,12 @@ Pohja: -1251:n ja -1233:n Opetukset ja Työkalut pätevät (samassa haarassa). T
 7. Reikien lajittelu (reiat-lajittelu2.txt, reiat-lajiteltu.json, kenttä katosi, karjet, muut): v125:n lattiakolmio, keskipiste, aukot15:n vaakapinta +-1 m, kulkukartta v19. Yht 812 / 6 265 m2. Kuljettavia 276 / 2 217 m2: taso1 190, kulje 34, kulje eri korkeudella 52. Katosi levyt 269, rungolle 4, kk2r 3. Kärjet palassa: 3 kärkeä 113, muut 163. Muut paketit eivät peitä yhtään. lataa_pelin ei sisällä pohjaa: kuvan vaalea alue reiässä on siis jokin muu kuin sen ryhmät, ei selvitetty.
 8. Yksi rajoite: testi katsoo vain keskipisteen ja kartta v19 on tehty julkaistulla taustalla. Osittaisia reikiä se ei löydä. Ei väitettä nollasta.
 
+## LISÄYS 13.0x: pari3 ajettu (korvaa kohdan 1 pari3-osan)
+kuvat-pari3 valmis, 404: 4 tuttua, "tarkastelu: alku" lokissa. Oikea seinä on kuvassa, joten pari1:n puuttuva seinä ei toistu. Katsottu vain 800 px:n koossa: tummaa porrasta ei erotu kummassakaan, ei täysikoossa arvioitu, ei väitettä. Kansio kerrottu VS:lle; tulos tulee VS:ltä LAV:lle ja PT:lle.
+
 ## Seuraajan järjestys
 1. Lue Raamattu 7.47.
-2. PARI3 AJETTU: tarkista 404 ja seinä (puuttuiko kuten pari1:ssä), kerro kansio VS:lle.
+2. Odota VS:n tulosta parista 3 (PT:n ehto kohdassa 2).
 3. PISTEET1 AJETTU: tarkista 404. Katso r--109-227, r--380-517, r--265--248 täysikoossa: näkyykö reikä? Kuvissa kamera 3,5 m pinnan yläpuolella, katse alas (pitch 50), ei tarkistettu, että kamera on avoimessa. Katso p--95p2-345p5: korjaus. Katso muut 8 kuvaa KK:n pisteistä (ehto -1233).
 4. Jos reikä näkyy: korjaa levyt-askeleen säännöstä (yleinen/levyt/v115_korjaa.py), ei kolmio kerrallaan. Sen rivi 1: vanha pinta pois solusta, jos sitä ei ole uudessa; rivi 2: uusi lisätään vain, jos solusta poistettiin vähintään puolet eikä samalla korkeudella ole pintaa; rivi 66 jättää solun, ettei tule reikää. Selvitä, miksi 269 jäi silti tyhjäksi. Tarkista, ettei palautus nosta tarkoituksella poistettuja. Lisätyillä kolmioilla UV1 = 0 tuossa askeleessa: pala on leivottava (2,5 min/pala, JU:n vuorolla), tai käytä olemassa olevia kärkiä, jos niitä on.
    Jos reikä EI näy: "tahaton" kumoutuu, kerro PT:lle ennen korjausta.
