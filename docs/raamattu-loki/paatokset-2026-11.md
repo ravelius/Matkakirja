@@ -733,3 +733,9 @@ KK 6.11.2026 klo 23.50 omistajan valtuutuksella: aloituslennon aukkoon ei korjau
 ## LONTOO B KELPAA, JATKETAAN C:HEN, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.52)
 
 KK 6.11.2026 klo 23.51 omistajan valtuutuksella: Lontoo B kelpaa, jatketaan C:hen (Big Ben, Tower Bridge, St Paul's), kokeena, ei junaan. Aika B: 22.59–23.46 (02bae0746). Lisäksi lähimmän etäisyyden kuva, Abbeyn väri, Big Benin näkyvyys ja parit oikean rakennuksen kanssa. PT jakaa C:n tekijän.
+
+## INVALIDIT V16 KELPAA, KK:N PÄÄTÖS VALTUUTUKSELLA (7.11.2026 klo 00.22)
+
+KK 7.11.2026 klo 00.22 omistajan valtuutuksella, kokeena, ei junaan: Invalidit v16 kelpaa. Ero v13|v16 mallin ympärillä on vain koju, joka vaihtoi puolta (64954996 pois, 64955038 tuli nimen viereen). Seuraavaan palaversioon, ajoa 38 viivästyttämättä: Invalidien 68568749, 103202696, 103202709, 1272602675 ja 64955038 pois sekä Opéran aukion lounaiskulman pieni koju, jos nimetön. Opéran kauppa 69226766 jää. Grand Palais v13 -kuvat ajoon 38 parina aamuun, jos eivät viivästytä. NUI: Champs-Élysées-n kuvapallo on ilman nimikylttiä (ajot 35 ja 37).
+
+Lontoon kohdan D1 aika 22.59–00.14 (PK 200433217, 275 Mt).
