@@ -500,3 +500,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Otetaanko pienennetty Tripo
 ## NIMIKYLTTIEN KOKO JA NÄKYMISEN ETÄISYYS KELPAAVAT (OMISTAJA 5.11.2026 KLO 20.08; KIRJATTU JÄLKIKÄTEEN) (6.11.2026 klo 12.56)
 
 OMISTAJAN KORTTI KK:ssa, sanatarkasti: 'Kelpaavatko nimikylttien koko ja näkymisen etäisyys?' = 'Kelpaa (Suositus)'. Pyyntö, johon kortti vastasi (klo 19.23): 'nimikyltit pitää olla pienemmällä, näkyvät vasta kun mennään lähemmäs rakennusta'. Lähde: keskustelut/Keskustelukanava-2026-11-05-klo-1944-2044.md rivit 82–86 (PT tarkisti). Kuvat: kuvat/kyltit-013655981/. Rajaus: kortti koskee kuvia, ei pelin liikettä. Nimien katoaminen ja kulku rakennusten yli jatkuu erikseen Natiivi-UI:lla, työlistarivi 'Pariisin nimet: katoaminen ja rakennusten yli kulku'.
+
+## TRIPO-PUUT HILLITYMMIN, KAPEITA TUMMIA VÄHEMMÄN (OMISTAJA 6.11.2026 KLO 13.41) (6.11.2026 klo 13.42)
+
+OMISTAJAN KORTIT KK:n välityksellä, sanatarkasti (kuvat/puut-tripo-mac6): 'Mikä väri Tripo-puille tulee?' = 'Hillitymmin (Suositus)' (tummimmat puut hieman vaaleammiksi ja lämpimämmiksi); 'Vähennetäänkö kapeita tummia puita?' = 'Vähennetään (Suositus)' (enemmän pyöreitä puita). Kokemus (KK): puut asettuvat kartan väreihin, mutta pysyvät eläväisempinä kuin korttipuut. Rajaus: kokeena, ei junaan, ei uusia Tripo-ottoja. NS tekee; uusi pari KK:lle ajosta, jossa on myös Hôtel de Villen ranta; iPad 3 mittaa hinnan tällä värillä ja puusuhteella, jos se mahtuu vuoroon.
