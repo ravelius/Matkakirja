@@ -3,7 +3,7 @@
 Täydentää -0146:aa (haara natiivi-ui/luovutus-20261106-0146, vesinimet ja kipsipäät) ja sen kautta -2248:aa ja -2002:ta.
 
 ## Jono
-Ensin alla oleva KK:n kyltin häivytys. Ei omaa ajoa käynnissä. Odottaa: seuraava JU-ajo, jossa proto natiivi-ui/merkki-pinta-219 9e2d0edba on mukana (kerrottu JU:lle ja PT:lle) (pyydetty PT:ltä 02.2x; sisältää vesinimet 0a5232aec). Ajosta kuva ja rivi PT:lle ja KK:lle.
+Ensin viiveen korjaus, sitten KK:n kyltin häivytys (alla). Ei omaa ajoa käynnissä. Odottaa: seuraava JU-ajo, jossa proto natiivi-ui/merkki-pinta-219 9e2d0edba on mukana (kerrottu JU:lle ja PT:lle) (pyydetty PT:ltä 02.2x; sisältää vesinimet 0a5232aec). Ajosta kuva ja rivi PT:lle ja KK:lle.
 
 ## Merkit ja nimet maanpinnalle (PT 02.2x, KK sallii kokeen; ei omaa ajoa, ei junaan)
 Haara natiivi-ui/merkki-pinta-219, worktree /Users/Shared/Claude/wt/proto-natiivi-ui-vesinimi (vaihdettu tälle haaralle, vesinimi-100-219 ennallaan), peili natiivi-backup peili/proto/natiivi-ui/merkki-pinta-219. Kartta-testit 624/624. EI KÄÄNNETTY UNITYSSÄ: C#-virhe voi yhä tulla JU:n käännöksessä.
@@ -33,7 +33,14 @@ Tarkistettu ilman ajoa, kerrottu KK:lle:
 - Nimet: jono 2995, talot 2994, ZTest Always: nimi talojen päällä. Mallit 3080 nimien päällä, väistö ennallaan.
 - Les Halles: peli käyttää kartanPiste 48.8622, 2.3447 (sijainnit-json), en lat/lon-arvoa: m4:ssä 0 m (1600, 711), kyltti (1602, 798). x täsmää; y:ssä 45 px yli Sacré-Cœurin 42 px:n, syy auki, ei korkeudesta. Grand Châtelet kartanPiste 0 m (1898, 1112), leikkeen keskikohta (1897, 1111).
 
-## ENSIMMÄINEN TYÖ: kyltti häipyy UI:n alla (KK, aloittamatta, siirretty kontekstirajan takia)
+## AJON TULOS (lokit/karttaseppa-pariisi-sc4-4c63d8662, kuvat nui-m4 ja nui-m3; sis. 9e2d0edba; kääntyi, 0 virhettä; kerrottu KK:lle ja PT:lle)
+- Viive Macilla: merkki mediaani 18,3 s, enintään 34,3 s; rajan ylityksiä 0. Ensimmäinen jakso 22,3 s, 7 490 näytettä: Nimikerros.HaePaikka pyytää korkeuden jokaiselle ladontaan tulevalle elävälle nimelle ennen näkyvyystestejä (rivi noin 625), ja merkit jonottavat niiden takana.
+- ENSIMMÄINEN KORJAUS samaan haaraan: merkeille oma etujono (Nosto ennen Hae) ja nimille pyyntö vain lähialueelta, esim. siirrä HaePaikka-kutsun korkeuspyyntö etäisyystestin taakse tai rajaa kameran katseen säteeseen. Tavoite: merkki näkyy kuvan latautuessa, ei sekunteja myöhässä. Kysy tavoiteaika KK:lta vain, jos se ei selviä; kerro uusi viive lokista.
+- Tuileries: EI siirtynyt, merkki ja kyltti Louvren seinällä (piste mallin alalla, korkeus ei ratkaise). KK tietää; ei korjausta ilman sanaa.
+- Sacré-Cœur m3: kyltti 3D-mallin juurella. "Place Saint-…"-nimi leikkautuu mallin nurmeen: selvitä väistö (Nahtavyysalue.Peittaa), kun malli on ajossa.
+- Les Halles / Saint-Eustache: ajossa ei kameraa tsj-lahi-pohj (aja 48.8579974 2.3489140 0.0004 2); katso seuraavasta ajosta, jossa se on. KK:n vanha-uusi-kuvaparia en koonnut: KS vie kuvat KK:lle (JU).
+
+## TOINEN TYÖ: kyltti häipyy UI:n alla (KK, aloittamatta, siirretty kontekstirajan takia)
 KK:n sanat: "sopii kokeena, samaan haaraan, ei omaa ajoa, ei junaan. Kyltti häipyy pehmeästi, kun osuu RANSKA-otsikkoon tai Liiku-riviin; ei siirry, ei vilku kameran liikkuessa, ja napautus ei mene piilossa olevalle kyltille. Pallo nimen päällä saa jäädä. Omistajan sanaa ei ole puolesta eikä vastaan; kerron aamulla. Kuva yhteisen ajon mukana."
 Haara natiivi-ui/merkki-pinta-219 (kärki 9e2d0edba), worktree wt/proto-natiivi-ui-vesinimi. Koskee kolmea kylttiä; omistajan kortin mukaan ei muuta kokoa, näkymisen etäisyyttä eikä sivua (2.215).
 Luettu koodista, tarkista:
