@@ -560,3 +560,7 @@ Omistaja 6.11.2026 klo 17.05 (KK): kortti "Rakennuspalikoiden iPad-mittaus pysä
 ## OFF PARIS SEINE LÄHTEE (omistaja 17.08) (6.11.2026 klo 17.08)
 
 Omistaja 6.11.2026 klo 17.08 (KK): kortti "Lähteekö Seinen kelluva hotelli Off Paris Seine kartalta muiden litteiden muotojen mukana?" = "Lähtee (Suositus)". Tarkentaa päätöstä 16.46 (SEINEN LITTEÄT MUODOT POIS); KS:llä (6a037d9bc, ajo 24).
+
+## PEUKALORENKAAT LÄPIKUULTAVINA JUNAAN (omistaja 17.16) (6.11.2026 klo 17.17)
+
+Omistaja 6.11.2026 klo 17.16 (KK): kortti "Kelpaavatko juoksupelin ohjausrenkaat näin läpikuultavina?" = "Kelpaavat (Suositus)": renkaat menevät avoimeen junaan tällä läpikuultavuudella. PK 36aa43ed3, kuvat scratchpad/keskustelukanava/kuvat/renkaat-36aa43ed3/; junan SHA tulee PK:lta. Omistajalle kerrottu: vaalealla pohjalla heikoin, punaisella punertava vivahde, iPhonella koko ennallaan, häivytys liikkeessä ja oikea laite näkemättä.
