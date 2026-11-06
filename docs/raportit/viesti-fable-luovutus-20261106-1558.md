@@ -2,8 +2,14 @@
 
 Edellinen: viesti-fable-luovutus-20261106-1533.md (kohdat 3–9 voimassa, ellei alla toisin) ja -1458.md (JUNARUNKO, OPIT). Tallenne /Users/Shared/Claude/keskustelut/Paatoimittaja-2026-11-06-klo-1535-1557.md.
 
+## LISÄYS 16.0x (korvaa alemmat, jos ristiriita)
+- OMISTAJA 15.58 (KK): peukalorenkaat "Ei vielä", syy kysytty; PK ei tee mitään ennen hänen sanojaan (loki samassa PR:ssä).
+- Pont Neufin raita poissa ajossa 22 (33e641016; KS katsoi, PT ei; KK:lla). KS:n uusi havainto: punertava laikka vedessä rannan vieressä (pn-matala-1, -2), tutkimatta, KS:n luovutuksessa. KS nollautuu (e4cc5f3ba tai uudempi).
+- Codex 87426eb64 toimitti lähdetiedot (SOURCE-INVENTORY.json, myös kahdeksan muuta kohdetta), kuitattu postiin; PT ei lukenut inventaarioita. ENNEN JULKAISUA -LISTALLE: Tripon "Sharing Only" ND:n ja Riemukaaren lähdeajoissa, Montparnassen rakennuskysymys, vuoden 2029 tyyliviitteen oikeusketju. Codexin korjaustyö ajon 18 vioista kesken, ei uusia malleja vielä.
+- Postivahti nollautui ja sai KS:n ja PT:n rivit ennen aloitusviestiään; PT lähetti aloituksen 16.00: tarkista, että kierros pyörii ja että VS:n ja LAV:n tila selvisi.
+
 ## ENSIMMÄISENÄ
-- Viritä vahdit (7.41): odottajat-vahti.py ja codex-posti-vahti.sh. Tämän session monitorit b3s7415a1 ja b225xa5su päättyvät nollaukseen. Posti uusin 314a2bb6b.
+- Viritä vahdit (7.41): odottajat-vahti.py ja codex-posti-vahti.sh. Tämän session monitorit b3s7415a1 ja b225xa5su päättyvät nollaukseen. Posti uusin: katso haarasta.
 - Lue 7.47:n mukaan. Tilinvaihdon ohjeesta luin vain otsikot.
 - Etäyhteys: PT:llä pois. Raamattu 7.9 ja Postivahti sanovat päälle, mutta työkalu on vain omistajan pyynnöstä. Kysytty KK:lta 15.4x, vastausta ei tullut. Älä kytke ilman omistajan sanaa.
 

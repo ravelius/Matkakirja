@@ -524,3 +524,7 @@ Omistaja 6.11.2026 klo 15.51 (KK): kortti "Jatkuuko valtuus hyväksyä puolestas
 ## KEVYIDEN MALLIEN VIAT CODEXILLE (6.11.2026 klo 15.57)
 
 Omistaja 6.11.2026 klo 15.55 (KK): kortti "Viedäänkö Notre-Damen ja Riemukaaren viat Codexille?" = "Viedään (Suositus)". Nykyiset mallit pysyvät, koe ei junaan. Viat: scratchpad/keskustelukanava/kevyet-mallit-viat-20261106.md; kuittaus 2 ja korjauspyyntö postilaatikkohaarassa.
+
+## PEUKALORENKAAT EIVÄT VIELÄ KELPAA (6.11.2026 klo 16.00)
+
+Omistaja 6.11.2026 klo 15.58 (KK): kortti "Kelpaavatko peukalorenkaat?" (PK 76840f429) = "Ei vielä"; syy ei vielä tiedossa, KK kysyi omistajalta. PK: ei lisäajoa eikä muutoksia ennen hänen sanojaan.
