@@ -4,6 +4,12 @@ Täydentää -1533:a; sen kohdat 2.3 ja 2.4 sekä OPIT pätevät, -1130:n kohdat
 
 Lukulista: luku 2 kohdat 2.0, 2.1–2.27, 2.59–2.71 ja 2.177:n alku, luku 4 kohdat 4.1–4.7, luku 6 kohdat 6.1–6.14 ja vastuukartan rivi. Remote päällä.
 
+## 0. Lisäys 16.21, korvaa kohdan 2.1 ja proton kärjen
+**OMISTAJAN PÄÄTÖS 16.20 (KK): renkaat kelpaavat ja menevät avoimeen junaan, kun iPhonen kohta on korjattu.** KK 16.20: iPhone 10 pt turva-alueen sisään, iPad ennallaan; ei omaa Mac-ajoa, iPhone-rajaus seuraavasta PK:n ajosta KK:lle; sitten SHA PT:lle junaan.
+- **Tehty `71bca39a7` (proton kärki):** `PeukaloKeskiX` pitää ulkorenkaan (säde 70 pt) turva-alueella, pyyhkäisyosoitin samaan kohtaan. Laskettu siirto iPhonella 9,6 pt, iPadilla 0. `unity-tarkistus` 0 virhettä. **Ei nähty pelistä.**
+- **Seuraavaksi:** seuraavan juoksupelin ajon iPhone-koossa (`iphone-vaaka`) rajaus KK:lle: ulkoreunan pitää olla noin 62 pt reunasta; mittaus kuten kohdassa 1. Mukaan kohdan 2.3 tarkistukset. Jos muuta ajoa ei ole tulossa, kysy KK:lta: juna odottaa tätä, eikä omaa ajoa ole lupaa tehdä.
+- **Junaan KK:n kuittauksen jälkeen:** vanha `76840f429` ei junaan sellaisenaan (KK), mutta `8dfc13aaf` ja `71bca39a7` rakentuvat sen päälle: poimi kaikki kolme yhdeksi commitiksi ja anna tämä SHA PT:lle. `292afcef2` (yleishuuto) ei junaan (PT). Pohjavahti ennen merge-pyyntöä (4.1); samalla kohta 2.4.
+
 ## 1. Tehty
 - **OMISTAJAN PÄÄTÖS 16.05 (KK), `8dfc13aaf`:** ulkorengas (leveys 140 pt, viiva 7, keskilinja 133), varjo 11 pt, sisällä nykyinen 64 pt:n rengas. Vasemmalla piste 14 pt (varjo 18), oikealla neljä kulmanuolta luonnoksen mitoin (`Peukalokohta.Merkki`, `Nuolet`). Kaikki ryhmässä `mk-peukalokohta__ohjain`, joka näkyy vain normaalitilassa. Rimpuilu ennallaan. `unity-tarkistus` 0 virhettä, pohjavahti ok. `Peli-testit` ajettu `292afcef2`:ssa 867/867; renkaan jälkeen ei uudelleen, muutos on vain UI:ssa, jota testit eivät käännä.
 - **KK 16.09:** vasen pysyy pisteenä, ei nuolia (spurtti toimii vain viitan kanssa). Omistajalle kerrotaan, etteivät renkaat näytä kaikkea ohjausta.
