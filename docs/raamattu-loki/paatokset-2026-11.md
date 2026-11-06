@@ -450,3 +450,7 @@ OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Kokeillaanko pallon omaa Co
 ## RAAMATTU 2.215: NOTRE-DAMEN RANTAKOE KÄYTTÖÖN (OMISTAJA 6.11.2026 KLO 08.40) (6.11.2026 klo 08.4x)
 
 OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Otetaanko Notre-Damen rantakoe käyttöön?' = 'Otetaan käyttöön (Suositus)'. KK:n tavoite: Notre-Damen ympärillä korttelit ja talot jatkuvat Seinen rantaan, sumea alue on poissa, saari, aukio ja kirkko ennallaan. Rantojen tunnetut rakennukset jäävät laatikoiksi (06.55); omistaja tietää tämän. Kuvat scratchpad/keskustelukanava/kuvat/yhteinen-3-382618036/. Kumoaa 08.13:n 'raja oletuksena ennallaan' tältä osin. TILAN VUOKSI PT siirsi 2.215:stä tänne: sitaatit alustoista 13.51 "riemukaaresta koko aukio" ja 13.54 "sininen mielestäni liian pieni koska ympäristö hyvä muokata myös" sekä lause "Panthéonin ja Riemukaaren pohjakorjaus fd711e501 on pikakorjaus, ei lopputulos."
+
+## CONCORDEN AUKIO KOKEENA ILMAN MALLIN OMAA MAATA (OMISTAJA 6.11.2026 KLO 09.07) (6.11.2026 klo 09.0x)
+
+OMISTAJAN KORTTI KK:n välityksellä, sanatarkasti: 'Kelpaako Concorden aukio kokeena ilman mallin omaa maata?' = 'Kelpaa kokeena (Suositus)'. KK:n tavoite: obeliski, suihkulähteet ja pylväät kartan päällä ilman harmaata maata; ei junaan; muisti mittaamatta; Lähteet-rivi, jos jää peliin. Kuvat scratchpad/keskustelukanava/kuvat/yhteinen-4-0b4d74011/. PT välitti Valosepälle seuraavaan yhteiseen ajoon.
