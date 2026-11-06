@@ -36,3 +36,7 @@ Taulukko antaa Sacré-Cœurille Sovita 274 m. Ajossa maa2-64820ec1a kartan kirkk
 - Tämä kärki ei muuta kylttien kokoa, näkymisen etäisyyttä eikä sivua (2.215).
 - LOPPUTESTIT siirtyy: iPadin muisti, kun Pariisi valmis (2.209).
 - Viestit kulkivat send_messagella; VS:n viesti jonossa, ei varmasti luettu.
+
+## LISÄYS 07.2x: VS:n kutsu tuli
+VS: 14763c0c9 (natiivi-backup linssiseppa2/ohjelmakohteet-nimet), Kohde.NimiEste kuudelle rakennukselle, sillat pois. Kääntyy vain yhdessä merkki-pinta-219:n kanssa. Ei enää odoteta VS:ää; KS:lle kerrottu, että tämäkin haara yhteiseen ajoon.
+Kokeiltu yhdistys 14763c0c9 + 31b1e5a7a (merge-tree, ei kääntäen): ainoa ristiriita MalliKyltit.cs:n Portti/RuutuPiste-kohta; ratkaisu KS:lle (Portti(kierto)-lohko ja Piirretty minun, RuutuPiste-kutsu horisonttiargumentteineen KS:n). KS:n oma maa-haara ei ollut tässä kokeessa.
