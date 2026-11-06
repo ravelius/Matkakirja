@@ -60,3 +60,7 @@ Kaikki JU:n ajot valmiit ja katsottu, tulokset KK:lla ja PT:llä. Ei ajoja jonos
 ## SEURAAVA TYÖ: k04, iso PARIISI, 2. ja viimeinen yritys
 1. yritys 1596d5e32 EI AUTTANUT: tummien pikselien käyrä lähes sama (nui-nimi-tallenne vs -2, kuvat 70–124; mittaus scratchpadin nimi2.py: tummat < 125 ja x-laajuus, rivit 90...h-140). Nimi ei siis ole r.suurkaupunki-rivi Nimikerroksessa, eikä sääntö "kokonaan ruudulla" koske sitä. Poista 1596d5e32:n rivi (Nimikerros.cs) 2. yrityksessä.
 Selvitä ensin kerros: se piirtää versaalin PARIISI puoliläpinäkyvänä, koko kasvaa kameran laskiessa ja katoaa noin kuvaan 109 (tallenne, 50 fps). Ehdokkaat: Nimikerroksen muu luokka (rivin syy: Nimikerros.cs rivi 872 tuloste, komento `nimet`), KaupunkiMerkit, Merkittavat.cs:61, PiirrosKerros tai UiNakymat.cs:476 OtsikkoVaistaa (otsikko saapuessa, d31fc8676). Jos se on tarkoituksellinen otsikko, älä poista: rajoita niin, ettei ylitä ruutua, tai kysy KK:lta. Käytä `git log -S` ja haku "versaali/Otsikko". Korjaus haaraan 7ffd6ab5f:n päälle, JU:n vuorolla sk-nimi-tallenne.txt, kansio lokit/nui-nimi-tallenne-3; rivi "laattapalvelin: paketti". Jumi: rivi KK:lle ja JONO TYHJÄ PT:lle.
+
+## PÄIVITYS 5, 7.11. 01.2x (PT): VOITTAA YLLÄ OLEVAT
+Meren tumma suorakaide EI ole työsi: PT vie kuvan KK:n aamun koontiin, meri seis yöllä. Avoin kysymys PT:lle on suljettu.
+k04:n 2. yritys on VIIMEINEN (yön sääntö). Jos se ei auta: rivi KK:lle (vika, kokeiltu, suositus), ei kolmatta yritystä.
