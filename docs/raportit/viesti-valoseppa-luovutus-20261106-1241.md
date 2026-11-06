@@ -31,3 +31,9 @@ Jos hahmo jää liian selväksi, ehdotus -1208:sta: mallin usva nousee korkeuden
 Lippu (-1153) KK:lla, sana odottaa. LAV:n friisikysymykseen vastattu 12.41.
 Worktreet: k17 haaralla `linssiseppa2/raystas-jalusta`, k30 haaralla `linssiseppa2/usva` 79ac7cefb. Kansio `raystas/` on /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/.
 Seuraamattomat .claude/settings.local.json.ennen-kevennysta ja waveletNoiseTile.bin: en koskenut.
+
+## LISÄYS 12.4x (tuli luovutuksen jälkeen)
+- Räystäs: JU:n junarunko `julkaisija/runko-219-muisti` = 84872eaa9, natiivi-backupissa. Ei käännetty rungon nimissä, laitteella ei ajettu. Commit-viesteissä lukee yhä "ei junaan" (JU huomautti).
+- Usva: 79ac7cefb on KS:n Y:ssä 1739323ae, ajo 13 JU:lla (po-ita, us-eiffel-75, NS:n pr-pohjoinen). KS mittaa y 400 ja y 600 ajon 12 lukuja vasten ja ilmoittaa.
+- LAV:n pari: `muuri/aukot/aja-pari1.zsh`, koodi 84872eaa9, juuri koejuuri-ovi1, kuvat `muuri/aukot/kuvat-pari1` (s--275p8-on, -pois), JU:n jonossa, LAV ilmoittaa. Kamera on `valo sijoita -269.4 -126.8 -95` + `testikamera 2.2 0 -8 80`, ei tarkastelu-komentoa, joten ei täysin sama kuva kuin kuvat-saumat1. 84872eaa9:ssä g-jalusta on jo pois, joten pari mittaa muun kuin jalustan osuuden.
+- Friisin porras: LAV kysyy kuvan PT:ltä, minulta ei tarvita muuta.
