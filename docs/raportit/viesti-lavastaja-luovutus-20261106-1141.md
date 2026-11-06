@@ -43,3 +43,6 @@ Räystäsliuku 35f849838 (linssiseppa2/raystas-pehmea, runko b7) odottaa PT:n sa
 
 ## Työkalut (A/), uudet
 mittaa13.py (friisi ja punainen seitsemän seinän ympärillä). kirjoita_tee13.py ja kirjoita_tee14.py kirjoittavat tee_aukot13/14.py:n edellisestä; rakenna9.py = rakenna8 + jalan valo, rakenna10.py = rakenna9 + kielekkeen ja kannen korjaus; suunnitelma13.json, suunnitelma14.json.
+
+## Lisäys 11.4x, Valoseppä
+PT kuittasi räystäsliu'un arvolla 0,25: "Valosepän rivi 11.2x" -varaus poistuu. Käytä b8-haaraa 8ca0f78fc (natiivi-backup linssiseppa2/raystas-pehmea-b8; kääntämättä). Friisin porras x noin 650 on PT:n mukaan listallasi; kuvaa tai paikkaa ei kerrottu, kysy VS:ltä. Vastasin VS:lle kameraehdotuksen korkeasta hallista ja räystäättömästä seinästä, mittaamatta räystäiden puuttumista.
