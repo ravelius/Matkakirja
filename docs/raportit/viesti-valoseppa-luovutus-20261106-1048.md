@@ -28,7 +28,7 @@ Määrä: 29 ohjelmakohdeverkkoa (18 siltaa + 11, lokista ja listasta) + 21 reki
 
 ## ODOTTAA
 1. KS: 838527412 ja `sk-sillat-sauma.txt` (3 kuvaa: p-roy, p-roy-2, p-car) seuraavaan yhteiseen ajoon, viesti jonossa 10.47. KS ilmoittaa kansion.
-2. JU: raystas5 (-1034). Kuvat5-kansiota ei ollut vielä 10.48.
+2. JU: raystas5 35f849838 VALMIS, JU:n viesti 10.5x: exit 0, 236 s, 5 kuvaa `_tyo/linssiseppa2/raystas/kuvat5`, b7, linja 2 (esikatselu-2, b7-Library; ei L1:llä). JU ei katsonut kuvia, en minäkään. Katso ennen usvaa (-1034:n SEURAAVAKSI 1).
 
 ## SEURAAVAKSI
 1. Kuvat5, kun JU ilmoittaa (-1034:n kohta 1).
