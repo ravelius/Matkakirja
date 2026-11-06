@@ -5,6 +5,9 @@ ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Cla
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä. Työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-palikka, haara natiiviseppa/origo-koe d907286cb, peili natiivi-backup. P:n skriptit ja tulokset ovat haaran ulkopuolella.
 Viestiraja: SendMessage on tässä sessiossa pysähtynyt ("Paused"); varakanava mcp__ccd_session_mgmt__send_message (CLAUDE.md).
 
+## YÖN SÄÄNTÖ (OMISTAJA 23.07, PT:n välittämänä)
+Kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa pois tai edellinen toimiva tilalle. Sitten rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön. KK kokoaa kysymykset aamuun. Koskee myös alla olevia töitä.
+
 ## ENSIMMÄINEN TYÖ: aloituslennon beiget suorakaiteet (PT ennen Liikua; syy ja kuva PT:lle, korjaus kokeena vasta sen jälkeen)
 PT:n pyyntö: mitkä palat ovat tyhjiä ja miksi (lataus kesken, väärä pohja vai nimikerroksen tai pallokerroksen tila), kauanko ne näkyvät, onko sama kuin NUI:n tyhjä pohja ja vino reuna. Pohja NUI:n 1224de027. Älä oleta samaa syytä ennen mittausta.
 Haara natiiviseppa/aloitus-tyhjat ccb2dbc2f (natiivi-backup), työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto. Mittari: `pallo laatat tila|vahti` (PallonLaattaMittari.cs), ei muuta piirtoa. Skenaariot /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aloitus-tyhjat/.
