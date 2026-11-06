@@ -1,4 +1,13 @@
-# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 21.02 (rakennustärinä: ajo 1 EI TULOSTA, uusintaan este, KK:n sana auki)
+# Natiivisepän luovutus 6.11.2026 klo 19.26, päivitetty 21.31 (rakennustärinä PERUTTU, omistaja 21.30; seuraava työ PT:ltä)
+
+## Tila 21.31, KORVAA KAIKKI ALLA OLEVAT RAKENNUSTÄRINÄN TILAT JA SEURAAVAT TYÖT
+- OMISTAJAN PÄÄTÖS 21.30 (KK): tärinäajo "Perutaan (Suositus)". Korvaa 20.58:n "Yksi uusi ajo" ja KK:n 21.08:n sanan. Omistajan sanat: "Siihen ei kannata liikaa käyttää aikaa koska en usko että se näkyy jos kartta on korkeammalla." Lisäksi 21.2x: "Tärinä ei voi liittyä muistiin tai suoritus kykyyn. Se on joku muu syy."
+- Mac-16 ja iPad-ajo peruttu, JU:lle kerrottu (KK). Mac-16 ei ehtinyt alkaa (lokikansiota ei ole 21.30). Ehtoja EI lukita, ajoja EI tilata, isoa origokorjausta EI tehdä.
+- Talteen jäävät: haara natiiviseppa/origo-koe d907286cb (peili natiivi-backup) ja raportit P:ssä ja H:ssa. H/ajopyynto-mac-16.md merkitty perutuksi.
+- Tärinästä ei tulosta: ajo 1 EI TULOSTA, tärinä rakennusten kohdalla todentamatta. Syy auki; muistia tai suorituskykyä ei kirjata syyksi.
+- Alla olevat C1 ja D2 pysyvät odottamassa omistajan 17.05:n mukaisesti. Ei kysytä uudelleen.
+- SEURAAVA TYÖ: PT:ltä. Jono tyhjä, PT:lle kerrottu 21.3x.
+- Cron luotu tässä sessiossa ("4 9 * * *"); uusi sessio luo sen uudelleen.
 
 KORVAA KAIKKI VANHEMMAT LUOVUTUKSET, viittausketjua ei ole. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. Session id osoitekirjasta; PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7.
 ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
