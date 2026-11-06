@@ -4,12 +4,12 @@ Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claud
 
 ## ALOITA TÄSTÄ: jono pyörii irrotettuna, viritä odotin, älä käynnistä uudelleen
 Tarkista `ps -p` ja jonolokin häntä; osa on voinut jo päättyä, ja tulos on silloin kuittaamatta.
-- L2: PK Lontoo D1 200433217, pid 93288, tulos T/pk-lontoo-d1.tulos, 7 kuvaa, lokit/pelikoodari-lontoo-d1-200433217. Kuittaus Pelikoodarille.
+- L2: KS 38 f6625e82d, pid 9103, 25 kuvaa, raja 35 min, tulos T/ks-yhteinen38.tulos, lokit/karttaseppa-yhteinen-38-b8-f6625e82d. Kuittaus KS:lle; kuvat PT:lle KS:n kautta.
 - L1 järjestyksessä, kukin odottaa edellistä pid:llä:
   1. LAV levyt7z valmis 00.10, kuitattu.
-  2. LAV levyt7m, pid 83727, tulos T/lav-levyt7m.tulos, 6 kuvaa, kuvat-levyt7m. Kuittaukset LAV:lle: kuvat, 404-määrä (nyt 4, samat kuin levyt7v), virheet.
+  2. LAV levyt7m valmis 00.13, kuitattu.
   3. NS karsi fd15e7cd2 (korvasi d7a8b8af0:n), pid 99397, tulos T/ns-karsi.tulos, 7 kuvaa, lokit/natiiviseppa-karsi-fd15e7cd2. Kuittaus NS:lle rivillä.
-  4. NUI neljä ajoa 6d12054b0, pid 99400 (odottaa pid:t 41366, 99397, 93288: PT:n käsky Pariisin ja Lontoon jälkeen), tulos T/nui-yksi.tulos, kansiot lokit/nui-yksi-k01f, -k05, -k04, -nimi-tallenne. Kuittaa NUI:lle kansiot ja paketti-rivi.
+  4. NUI neljä ajoa 6d12054b0, pid 9480 (odottaa pid:t 9103 ja 99397: PT:n käsky Pariisin ja Lontoon jälkeen), tulos T/nui-yksi.tulos, kansiot lokit/nui-yksi-k01f, -k05, -k04, -nimi-tallenne. Kuittaa NUI:lle kansiot ja paketti-rivi.
 - Kaikki valmiit, jonossa ei muuta: rivi PT:lle "JONO TYHJÄ: Julkaisija".
 
 ## YÖN SÄÄNNÖT
@@ -28,7 +28,7 @@ Intron Mac-ajot omistajalle laattapaketin kanssa. Paketti on koodissa, ei asetus
 - Odottimen malli: scratchpad ei säily; kirjoita uusi zsh-silmukka, joka tulostaa rivin, kun T/*.tulos kasvaa tai jonon pid päättyy, Monitorilla raja 30 min.
 
 ## TULOKSET TÄLTÄ VUOROLTA (kaikki kuitattu tilaajille; kuvia en arvioinut)
-KS 35, 36, 37. NS tyhjat b-j, liiku-pitka, liiku-ehdokkaat, liiku-nappi, -nappi2, aloitus-paketti g, iPad kylmä 2cba21a3e. NUI nimirivi, -2, kk-2, kk-paketti 8ac8d2a70. PK Lontoo B1, B2. LAV levyt7v, 7s, 7r, 7u, 7p, 7k, 7z.
+KS 35, 36, 37. NS tyhjat b-j, liiku-pitka, liiku-ehdokkaat, liiku-nappi, -nappi2, aloitus-paketti g, iPad kylmä 2cba21a3e. NUI nimirivi, -2, kk-2, kk-paketti 8ac8d2a70. PK Lontoo B1, B2. LAV levyt7v, 7s, 7r, 7u, 7p, 7k, 7z, 7m. PK Lontoo D1.
 
 ## OPIT
 - Odottavan ajon vaihto: tarkista samassa komennossa, että skriptin lapsi on `sleep`, kill vain se pid, käynnistä uusi tiedosto. Älä muokkaa ajossa olevaa skriptiä. Pidä myös seuraava odottaja mielessä: sen pid-riippuvuus pitää vaihtaa samalla.
