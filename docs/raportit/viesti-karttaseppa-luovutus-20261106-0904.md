@@ -18,6 +18,9 @@ Y b160104b7, skenaario `_tyo/karttaseppa/sk-pariisi-yhteinen-5.txt`, 9 kuvaa, ES
 
 **Riski, jota vain tämä ajo näyttää:** globaalit kirjoitetaan nyt `KorkeusKerroin.Aseta`ssa KarttaKerrokset.Awakessa. KarttaKerrokset.cs:n kommentti epäilee, onko georeferenssi alustettu Awakessa. Jos ensimmäisen tila-rivin keski on väärä tai kuvissa tasaus puuttuu, tasaus pitää kirjoittaa uudelleen myöhemmin (Start tai ensimmäinen kartan kehys), ei palata komentoon.
 
+## LISÄYS 09.07, UUSIN: AJO PYYDETTY UUDELLEEN
+JU:lta pyydetty 09.07: **Y c0bfef077** (b160104b7 + NUI 106521496), sama skenaario sk-pariisi-yhteinen-5.txt päivitettynä, 14 kuvaa, talot **palat-v6-nd-ranta** (NS, sha bf7204d495d41be8; ero v5:een kolmessa palassa, Octroi korjattu), tulos `lokit/karttaseppa-yhteinen-5-c0bfef077`. Skenaario ja NUI on tehty, joten seuraavan kohdan "seuraava askel" on hoidettu. Jakotaulukkoon lisäksi: gare-de-lyon, kortteli → NS (kuopat, tasakatot); ss-talot, co-45, co-ob → NUI (Opéran kyltti täysi tai poissa). Kuvia ei ole vielä, älä yhdistä Y:hen ajon aikana.
+
 ## LISÄYS 09.05: VIESTIT NOLLAUKSEN ALLA (voittaa ristiriidassa yllä olevan; kuittaamatta lähettäjille)
 - **AJO 5 EI VALMISTUNUT (JU):** b160104b7 pysäytetty 09.04 PT:n sanalla, ei kuvia; "AJO JU:LLA" ja "katso kuvat" yllä ovat vanhentuneet, ja jakotaulukko pätee seuraavaan ajoon. PT vahvisti tämän itse: "saa valmistua" ei toteutunut, ja KS päivittää pyynnön JU:lle. **Seuraava askel: kun NS:n seuraaja kertoo korjatun kansion, vaihda skenaarion `talot kansio` -rivi ja lisää alla olevat kuvat, yhdistä NUI 106521496 Y:hen ja lähetä JU:lle päivitetty pyyntö uudella Y:n SHA:lla.**
 - **PT:** tarkista kuvista tasainen ja nousseet talot. **Octroi de Neuillyn madaltuminen on tiedossa oleva v5:n vika: kerro se, jos v5:n kuva menee KK:lle.**
