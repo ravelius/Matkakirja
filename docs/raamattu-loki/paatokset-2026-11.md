@@ -548,3 +548,7 @@ Omistaja 6.11.2026 klo 16.20 (KK): kortti "Kelpaavatko peukalorenkaat näin?" (P
 ## SEINEN LITTEÄT MUODOT POIS (omistaja 16.46) (6.11.2026 klo 16.47)
 
 Omistaja 6.11.2026 klo 16.46 (KK): kortti "Saavatko Seinen litteät punertavat muodot lähteä kartalta, myös Bercyn suurempi, sijainnista päätellen uimala?" = "Kaikki pois (Suositus)". Selite: laivat, uimala ja muut isot litteät muodot lähtevät joesta; Karttaseppä katsoo isot kuvista ensin, ettei oikea rakennus lähde. Tavoite: Seine näyttää vain vedeltä. Kuva KK:lle ja omistajalle ennen junaa. Kumoaa 09.3x:n "litteät muodot jäävät". Auki ja omistajalle kerrottu: haalea raita (syy auki), koko jokea ei kuvattu, 15/63 palaa laskematta, koko maailman uudelleenpiirto selvitetään paikalliseksi kuten -sillat1.
+
+## KEVYET MALLIT EI VIELÄ (omistaja 16.53) (6.11.2026 klo 16.54)
+
+Omistaja 6.11.2026 klo 16.53 (KK): kortti "Kelpaako Codexin korjattu Notre-Dame nykyisen tilalle kokeena?" = "Ei vielä (Suositus)": nykyinen pysyy; katon hahmo ylhäältä, irralliset tuet ja tornien vaaleat tikkaat viedään Codexille (#2168). Kortti "Kelpaako Codexin korjattu Riemukaari nykyisen tilalle kokeena?" = omat sanat "riemukaaren sisäosa ei näytä oikealle"; KK:n tulkinta, hänelle kerrottu: ei vielä, nykyinen pysyy, sisäosa Codexille (#2169). Seuraava versio: KS:n pari, KK, omistaja.
