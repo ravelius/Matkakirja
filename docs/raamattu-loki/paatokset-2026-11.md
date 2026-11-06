@@ -755,3 +755,7 @@ KK klo 00.58 omistajan valtuutuksella, kokeena, ei junaan: palat v18 kelpaavat (
 ## KK:N PAATOS VALTUUTUKSELLA: KUVAPALLOJEN NIMIKYLTIT KOKEENA (7.11.2026 klo 01.03)
 
 KK klo 01.02 omistajan valtuutuksella, kokeena, ei junaan: kuvapallojen nimikyltit kelpaavat (NUI 36fe37f6a). NUI vaihtaa nimet kuvan aiheen mukaan ja tekee väistön PT:n kohtien jälkeen.
+
+## KK:N PAATOS VALTUUTUKSELLA: LONTOO C KELPAA KOKEENA (7.11.2026 klo 01.20)
+
+KK klo 01.19 omistajan valtuutuksella, kokeena, ei junaan: Lontoo C kelpaa. VS jatkaa loput sarjana, Abbeyn muoto kahdella yrityksellä, joen katkos PK:lla.
