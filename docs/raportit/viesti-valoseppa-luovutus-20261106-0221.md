@@ -13,6 +13,12 @@ JU:N VASTAUS 02.2x: ajo 0d317ab6f saa valmistua (oli jo käynnissä, jono tyhjä
 Ajohaara `linssiseppa2/ajo-maa2` 0d317ab6f (paikallinen, ei viedä). Lista `D/sk-maa2.txt`, 9 kuvaa: p-roy, p-lp, p-cha, p-con, se-et, se-ka, se-la, tsj-lahi-pohj, tsj-lahi-et. Kun kuvat tulevat: katso täysikoossa, viat nimettyinä KK:lle, rivi PT:lle. `suunta`-arvot se-kuvissa ovat päätelty Tour Saint-Jacquesin kuvanimistä; tarkista, että kuva näyttää sen, mitä nimi väittää. `lahinleveys 5` -varaukset: -0157.
 Tarkista KK:n id tilin mukaan: CLAUDE.md ja osoitekirja antavat eri id:n; tämä sessio on tilillä sami.reivinen@vvi.fi.
 
+TULOS 02.25, katsottu ja KK:lle lähetetty 02.2x (kopio PT:lle); KK:lle kerrottu, ettei KK hyväksynyt ajoa etukäteen ja että PT hyväksyi sen jälkikäteen JU:n välittämänä. Kääntyi, 0 virhettä (JU). Lokin POIKKEUS 02:21:07 on Unityn editorin hakuindeksi (`SearchInit.IndexationOnStartup`), ei pelin koodia. Rajaukset `D/maa2-rajaukset`.
+- Sillat: EIVÄT vielä kivisiltoja. Kaarimäärät täsmäävät (Royal, Concorde 5; Louis-Philippe 3), mutta pilarit pitkät ja ohuet, päät vinoja umpikiiloja, musta pystyviiva rannan puoleisessa kaaressa. Syytä ei mitattu.
+- Saint-Eustache seisoo, suunnat oikein. Länsipäädyn alaosa tyhjä laatta, ovet sen yläpuolella (päätelty: helma näkyy, ei mitattu). Ei hyväksyntää.
+- TSJ-pari: kamera ei tullut lähemmäs (noin 1,7–1,9 px/m, silmämääräinen arvio); `lahinleveys 5` kirjasi 1,7 km. Toista keinoa ei haeta pyytämättä.
+- Sivussa: tsj-lahi-pohj Cité-saaren puut haaleina (syy tuntematon). Odottaa KK:n vastausta suositukseen: pilarit ja laatta mitataan ja korjataan yhteiseen Pariisin ajoon, sitten Saint-Sulpice.
+
 ## TEHTY: SAINT-EUSTACHE
 Lähteet: OSM way 53762963 ja Lenoirin mittapiirustukset noin 1850 (Paris Musées, Commons, CC0): `D/a/viite/Saint-Eustache-plan, -midi, -ouest, -coupe-poikki, -coupe-pitka`. Valokuvat -0, -1, -2, -7 katsottu (vertailuun, CC0 ja CC BY-SA); -3 on patsaan yksityiskohta, -4 katsomatta.
 MITATTU
@@ -28,7 +34,7 @@ Offline-kuvat `D/a/oma/se/saint-eustache-k45.png` ja `-k12.png`: katsottu, äär
 Suoja (11.8): kirkko 1532–1633 fr.wp:stä; länsijulkisivun 1700-luku muistista, tarkistamatta, mutta 70 v täynnä joka tapauksessa. Nykyteoksia ei mallinnettu.
 
 ## SEURAAVAKSI
-1. Ajon kuvat (ylempi luku).
+1. Ajon kuvat tehty (ylempi luku). Pilarit ja länsipäädyn laatta: mittaa ja korjaa, sha JU:lle yhteiseen Pariisin ajoon, ei omaa ajoa.
 2. Saint-Sulpice (way 16077204, 122×57; porttikäytävä 32 m leveä), vuodet 1646–1870 tarkistettu. Hae ensin mittapiirustukset Commonsista hakusanoilla "Saint-Sulpice plan coupe façade", malli `D/a/se-piirrokset.py`, tarkista lisenssi; sovita `D/a/se-sovita.py`:llä. Piirustukset ratkaisivat Saint-Eustachessa enemmän kuin valokuvat. Tarkista mittakaava palkista täysikoossa, älä näyttökuvasta: arvioni 14,2 ja 14,8 px/m olivat väärin ja näyttivät ristiriidalta piirustusten välillä.
 3. Rakentaminen: lisää kohde `maa/kohteet.py`:n listaan, aja `aja-geometria.sh` ensin, sitten `python3 kohteet.py` kansiossa maa/ (ilman -I). Malli: Se-apurit OhjelmaKohdeRakennukset.cs:ssä.
 
