@@ -568,3 +568,7 @@ Omistaja 6.11.2026 klo 17.16 (KK): kortti "Kelpaavatko juoksupelin ohjausrenkaat
 ## SEINEN KÄVELY- JA METROSILLAT OHUINA VIIVOINA (omistaja 17.24) (6.11.2026 klo 17.24)
 
 Omistaja 6.11.2026 klo 17.24 (KK): kortti "Piirretäänkö Seinen yli kulkevat kävely- ja metrosillat Pariisin kartalle ohuina viivoina?" = "Piirretään (Suositus)". Selite: vain veden yllä olevat sillat tulevat ohuina viivoina, pienet kadut pysyvät poissa, ja kuva näytetään ennen junaa. Syy: kartan linjaus k52 (Passerelle Simone de Beauvoir, Austerlitzin ratasilta; muita ei laskettu). Kokeena, KS:llä; ei junaan ennen kuvaa KK:lle ja omistajalle. Pienet kadut (kortti 4.11. 06.51) pysyvät muuten poissa.
+
+## PÄÄTILIN RAJA 92 % VAHVISTETTU (omistaja 17.30) (6.11.2026 klo 17.32)
+
+Omistaja 6.11.2026 klo 17.30 (KK): "tämän tilin voi käyttää 92% asti". Vahvistaa Raamatun 12.21, ei sääntömuutosta. KK antaa 85 %:n TOIMI-listan; vaihto tilille vvi@vvi.fi, siirtoviesti KK:n kautta 90 %:n luovutusten jälkeen.
