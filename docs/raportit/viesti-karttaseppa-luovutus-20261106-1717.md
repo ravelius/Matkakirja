@@ -24,7 +24,7 @@ Katso koko kuvat ensin.
 3. Rivi PT:lle ja KK:lle, päivitä syy.md.
 
 ## ODOTTAA
-- **KK 17.07:** e24:n koko maailman uudelleenpiirto ei kuulu päätökseen 16.46; paikallinen tapa tarjotaan PT:lle erikseen (tarjottu 17.2x, odottaa PT:n sanaa).
+- **TEE AJON 25 JÄLKEEN (PT:n sana, KK 17.07 pyysi):** ElavaTyyliVersio takaisin e23:ksi ja katettu vesi (520f58ad8) vain Pariisin paloille päätteellä, kuten -vene2; ei koko maailman uudelleenpiirtoa (omistajalle luvattu rajaus 16.46). Koe, ei junaan ennen omistajalle luvattua kuvaa. Pääte tulee myös pelin palojen polkuun: ajon 25 kansio on vielä e24-vene2. Muiden kaupunkien katettu vesi jää vanhoihin paloihin, määrä on laskematta; lasku vasta, jos joku kaupunki piirretään uudelleen (PT).
 - **KK:** ajon 24 parit; havainto Bercyn alakulman sillasta (ilmeisesti Simone-de-Beauvoir, nimi päätelty) ja Austerlitzin ratasillasta, jotka näkyvät ilmakuvassa mutta eivät rajatussa pelikuvassa. Kysyin, tutkinko; älä tutki ilman sanaa.
 - **Codex, korjatut mallit:** ennallaan -1657:stä. Omistajan viat on viety kuittauksilla ac1ce57a0 ja 542155d12 (PT); seuraava versio tuontiporttiin, pari KK:lle.
 - **PT:** koti-haaran tiedostot, ajo 25:n vuoro.
