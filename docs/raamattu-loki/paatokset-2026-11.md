@@ -701,3 +701,19 @@ Omistaja 6.11.2026 klo 22.58, sanatarkasti: "Pidä huoli että sessiot etenevät
 ## OLEELLISET NIMET, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.02)
 
 KK 6.11.2026 klo 23.00 omistajan valtuutuksella (22.58 "saat päättää kaikesta puolestani"): nimet oletuksena pois: kadut, kaupunginosat (suburb, quarter, neighbourhood) ja pienet vedet; kylät ja hamletit jäävät; kokeena, ei junaan. Korvaa NS:n suosituksen "vain kadut". Kartta-välilehden rivi NUI:lle. Suunnitelma suunnitelmat/20261106-kartan-oleelliset-nimet.md.
+
+## YÖN SÄÄNTÖ: JUMI EI PYSÄYTÄ (6.11.2026 klo 23.08)
+
+Omistaja 6.11.2026 klo 23.07 (KK:n välittämä): "Jos tulee ongelma ja se ei meinaa ratketa niin ei kannata jäädä korjaamaan liian pitkään vaan jatkaa eteenpäin ja kysyä aamulla minulta mitä tehdään." KK:n tavoite: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa, kokeen osa pois tai edellinen toimiva tilalle, rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön. KK kokoaa kysymykset aamuun. PT välitti rooleille 23.08.
+
+## LONTOO A: 15 KOHDETTA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.12)
+
+KK 6.11.2026 klo 23.11 omistajan valtuutuksella: Lontoo A kelpaa (_tyo/pelikoodari/lontoo/a/kohdelista.md): 15 kohdetta, Greenwichin planetaario pois. Suojatut modernit talot jäävät 11.8:n mukaan yhtenä suorana laatikkona, ei kerrospaloja; korvaa PK:n ehdotuksen jättää ne pois. PK jatkaa B:hen.
+
+## YÖLLÄ VAIN PARIISI, LONTOO JA JUOKSUPELI (6.11.2026 klo 23.24)
+
+Omistaja 6.11.2026 klo 23.22 (KK:n välittämä): "Sinun pitää myös valvoa että sessiot eivät alla tehdä jotain muuta kuin  Pariisi, Lontoo tai juoksu peli". KK:n tulkinta: vain nämä kolme; tukityö (käännökset, levy, valvonta, taulu) jatkuu, kun se palvelee niitä. Muu seis yöksi, ei uutta. KK ja PT valvovat.
+
+## RYHMÄ 2 KOKEENA, KK:N PÄÄTÖS VALTUUTUKSELLA (6.11.2026 klo 23.27)
+
+KK 6.11.2026 klo 23.26 omistajan valtuutuksella: ryhmä 2 v13 ja 25 m:n raja kelpaavat kokeena, irtotalot pois. Opéran pari omistajalle aamulla, koska raja koettelee 5.11. klo 08.52:n sanaa. Ajon 35 varjot: peili poissa; Sacré-Cœurin varjo istuu, Invalidien varjoa ei juuri näy, VS arvioi.
