@@ -9,8 +9,11 @@ Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, etäpää natiivi-bac
 3. Kartan elämä 3, 488a0de09, sk-kartan-elama-3.txt, lokit/natiivi-ui-kartan-elama-3-488a0de09. Kohta 5 ja KS:n aineisto.
 Skenaariot kansiossa proto-3d/_tyo/natiivi-ui. Kolmatta pyydettiin ennen kuin toisen tai ensimmäisen tuloksia oli: jos ajo 2 paljastaa vian, sen korjaus kuuluu ennen ajoa 3.
 
-## Junan mittarit: valmis, PT antaa vuoron
-051fc0e01, haara natiivi-ui/kyltti-mittarit-pois (cb4834e16 + 5a8f6f31d + tämä). Käännös 0 virhettä, pohjavahti ok, peliä ei ajettu. PT:lle kerrottu, mitä jäi: Saapumistrailerin iskulauserivi (skenaariot odottavat sitä), "kylkivaihdot vedossa" (löydös 106), KylttiMuistiVersio-laskuri ilman lukijaa. Muiden haarojen haku kattoi 60 tuoreinta etähaaraa.
+## Junan mittarit: valmis ja junassa
+051fc0e01 on junassa (f86137fb4:n historiassa, PT 7.11.). Käännös 0 virhettä, pohjavahti ok. Junaan jäi tarkoituksella: Saapumistrailerin iskulauserivi (skenaariot odottavat sitä), "kylkivaihdot vedossa" (löydös 106), KylttiMuistiVersio-laskuri ilman lukijaa.
+
+## Kadonneiden aarteiden oma kyltti: rivi PT:lle lähetetty
+Junassa 220, viimeinen muutos d75e66a12 (omistajan pyöreä kuva 21.07, tumma tähtikyltti 7551a76cc, Peilisalin torni b4cf1f86d). Viimeinen commit on merkitty "ajamatta", napautusta ei tarkistettu; valmis-rivi vasta junan kuvista.
 
 ## Kartan elämä (omistaja 11.52, koe, ei junaan ilman korttia)
 Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261107-pallon-elama-kartalle.md. Raportti ajosta 1: proto-3d/_tyo/natiivi-ui/raportti-kartan-elama-1-20261107.md. VS tekee kohdat 1–3, älä koske Filmipinoon.
@@ -20,7 +23,7 @@ Ajo 1 (fc153914a) katsottu: liput toimivat. UNESCOn 205 tankoa teki kamman ja s�
 Koot arvauksia: vene enintään 50 m (joki noin 120 m), auto koko enintään 3, raitio 2, lintu 1,6 × koko; vana jonossa 3076 (ei testattu). Ei ääniä, ei muita palloja, ei vanan omaa vesipintaa, ei autojen varjoa.
 Katso ajosta 3: kulkevatko veneet vedessä, sopivatko koot, liikkuvatko autot kaduilla, peittävätkö linnut nimiä, lepo ja `ui kartanelama tila`. KS:n varoitukset: savu voi leijua (piippua ei piirretä), vene voi kulkea Notre-Damen mallin läpi, 25 kattolippua voi jäädä irti, Montmartre ilman puita. 90 m on päätelty koodista. Lue KS:n ARVIO: proto-3d/_tyo/karttaseppa/pallon-aineisto-20261107/ARVIO.md.
 KS: älä muunna koordinaatteja 111132:lla (5 m 8 km:ssä); keskipisteen valinnassa se ei haittaa.
-Kohta 6, puut: ei aloitettu. Aineisto puut-pariisi-kartta.bytes samassa kansiossa (261 519 puuta), KaupunkiPuut.Maa kaavasta. KS:n viestin mukaan PT nimesi NUI:n vastaanottajaksi osille 4–6; ennen aloitusta tarkista järjestys PT:ltä, ajo 3 ensin.
+Kohta 6, puut: ei aloitettu. Aineisto puut-pariisi-kartta.bytes samassa kansiossa (261 519 puuta), KaupunkiPuut.Maa kaavasta. PT 7.11.: aloita vasta, kun ajon 3 kuvat on katsottu; ei junaan ilman korttia.
 Kuvat KK:lle vasta, kun ne on katsottu (ajo 3 tai 2); sha ja rivi PT:lle. KERROTTAVA kuvien kanssa: 5.11. 14.51 ja 14.55 laiva Seinellä pois, "mitään pieniä malleja ei saa jäädä"; 11.52 on uudempi ja kortissa oli veneet, mutta sano se ennen päätöstä. Sama koskee lippuja. Lisäksi: harmaat ja UNESCOn liput jäävät pois. Lisenssit Lähteet-näkymään ennen julkaisua (OSM ODbL, WorldCover ja Meta/WRI CC BY 4.0).
 
 ## Kyltit, PT:n selvitys
