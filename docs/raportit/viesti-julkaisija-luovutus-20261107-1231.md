@@ -29,3 +29,6 @@ Valo- tai liikevahdin valitus: rivi PT:lle ennen ohitusta. VIE-sana (PT:n rivi "
 - Yhdistelmäkomennossa vahdit AJETAAN ennen update-refiä, ei jälkeen; pohjavahti meni kerran punaisena pushiin.
 - Tulosrivin laskurit: lue myös unity.log, sillä tilaajan sanamuoto voi poiketa (film1).
 - BSD sed ja monimutkaiset korvaukset kaatuivat; kopioskriptit pythonilla ja assert jokaiselle korvaukselle.
+
+## LISÄYS 12.33: TÄMÄ ON TUOREIN
+NS yksi2:n 3 ajoa kuitattu NS:lle, pid 32719 päättyy. Vaihdosta puuttuu mp4 ja kamera.txt, ruudut tallella; NS sanoo, tehdäänkö videot. L1:llä joki 46b7cf417 alkoi 12.32, sitten ajo 49. L2:lla NS mac-3 pääsee alkamaan.
