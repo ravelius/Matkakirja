@@ -919,3 +919,7 @@ Omistaja 7.11. klo 15.15 (KK välitti) kortilla "Kelpaako kuumailmapallon paikka
 ## KARTAN ELÄMÄ: AJON 3 KORTIT (omistaja 15.20) (7.11.2026 klo 15.21)
 
 Koe, ei junaan ilman korttia (ajo 3, 488a0de09). "Jäävätkö veneet Seinelle kokeeseen?" → "Jäävät (Suositus)". "Miten autot näkyvät kartalla?" → "Vain lähellä (Suositus)", selite "Kaukaa ei mustia pisteitä.". "Jäävätkö linnut kokeeseen?" → "Jäävät", selite "Kuten kuvissa nyt."; KK suositteli poistoa, omistaja ei ottanut sitä. "Jäävätkö liput kokeeseen?" → "Jäävät (Suositus)". Omistajalle kerrottu ennen korttia 5.11. "mitään pieniä malleja ei saa jäädä" ja koodin merkintä laivasta. KK:n tavoite Natiivi-UI:lle: autot vain lähellä, elämä ei peitä nimiä, raitiovaunuista lähikuva KK:lle, linnut ennallaan ilman omistajan sanaa.
+
+## TALOT KAUEMMAS JUNAAN 220 (omistaja 15.21) (7.11.2026 klo 15.22)
+
+Kortti "Viedäänkö talot kauemmas junaan, vaikka vaikutus iPhonella näkyy vasta sinun ajostasi?" → "Viedään (Suositus)", selite "Juna ei enää odota tätä työtä." Koskee 702f8b48d:tä. Kerrottu ennen korttia: isolla iPadilla ei näkyvää muutosta; 80° yli rajan jo nykyisillä taloilla, ei korjaannu tällä; ei ajettu 80°, liike, pieni iPad, iPhone; marginaali kapea, kasvu voi joskus alkaa; jos iPhone ei näytä muutosta, seuraava keino on kevennys, ei rajan nosto. Muut ehdot voimassa. KK kysyy iPhone-tuloksen omistajalta, kun juna 220 on asennettavissa.
