@@ -19,7 +19,10 @@ Lisätty: hintarivi Nostokortti.Toimintorivi + nostokortti.uss (mk-nosto__hinta)
 
 **Odottaa JU:lta:**
 1. Oikea iPad: laitekäännös cbae3153f L1, sitten _tyo/natiivi-ui/sk-lahtokysymys-4-maksu-ipad.txt ja -5-raketti-ipad.txt PK:n i4:n jälkeen. JU ilmoittaa kansiot.
-2. Napautusreitti iPad-simulla: _tyo/natiivi-ui/sk-lahtokysymys-6-napautus.txt (todistusajo --laite ipad): Pelaa, pallo, Ei nyt, Lähde, saldo. Valovahti pysäytti (rivit TF 219 -pohjasta). PT antoi poikkeuksen VAIN tälle koeajolle ja sanan JU:lle. Simukäännös = master + cbae3153f: kirjaa JU:n ilmoittama todellinen sha. Oikean iPadin kosketustyökalua ei ole, joten oikean iPadin kosketus jää todistamatta.
+2. Simuajo sk-lahtokysymys-6 on PERUTTU (PT 11.1x: Valovahdin jälkeen Liikevahti pysäytti TF 219 -pohjan tiedostoista, ei lisää ohituksia; aiempi poikkeus ei ole voimassa). Älä tilaa sitä.
+3. iPad-5 sisältää nyt Ei nyt- ja Lähde-painallukset `ui napautaklik 762 583` ja `841 583` (sovelluksen sisäinen napautus, ei sormi; koordinaatit arvioitu Mac-kuvasta, kokeilematta), varaverkkona perässä `ui lahtokysymys`. Rivi "lähtökysymys: ei auki" = napautus osui. iPad-4 alkoi alkuperäisellä versiolla. JU:lle tieto meni jonoon: tarkista lokista, kummalla versiolla iPad-5 ajettiin.
+
+**Junavuoropyyntöön kirjoitetaan selvästi "napautus todistamatta" (oikea sormi); se tarkistetaan junan käännöksestä (PT). Oikean iPadin kosketustyökalua ei ole.**
 
 **Kun tulokset tulevat:** katso kuvat ja lokit (oleta-rivit, saldot, UI-kerroksia > 0). Raportti PT:lle 3 riviä: mitä todistettu, mitä ei, kuvien polut. Junavuoro vain PT:ltä. Junaan vietäessä vanhat skenaariot, jotka käyttävät `tap-teksti kaupunkipallo-*`, jäävät korttiin; testikomennot ja LahtoSuoraan voivat jäädä.
 Todistamatta muuten: Louvre mallista ja kyltistä (kolme reittiä samaan funktioon), raketin ilmainen toinen lento kortilla.
@@ -29,6 +32,9 @@ Kansio /Users/Shared/Claude/proto-3d/_tyo/juoksupeli-huudot-kala-allas-ruukku-20
 Kavya bA58y3FqVI6b6gTNh0oT, eleven_v4_turbo, style 0, speed 1.2, fi, pcm_44100; 106 krediittiä (0,012 %), ilmoitettu KK:lle.
 Uusinta vain KK:n sanalla, hyväksyntä vain KK:n rivillä "OMISTAJAN PÄÄTÖS klo …". Tee.py ei aja olemassa olevaa tiedostoa uudelleen: uusinta uudella tiedostolla ja vain siitä otosta.
 Hyväksynnän ja PT:n sanan jälkeen: tasoitus PCM:nä (otot 2,7–4,6 s; true peak enintään −1 dBTP, Raamattu 5.10), mp3 kerran, ääniportti (proto-3d/tyokalut/aaniportti.py, 5.11), polut PK:lle. Avain juoksupeli.rikkoutuva.kala-allas.huuto.1–4 ja kukkaruukku.huuto.1–4 (numerot 1–4 ja 5–8 kortilla). Ei vientiä ennen sitä. Ei jälkisäätöjä puheeseen (5.7). Malli: PuyiHuudot.cs.
+
+## Peruttu
+Tuloskortin rikottujen rivi: omistaja 11.11 EI tehdä, nykyinen ruudukko riittää, ei muunnelmaa pohjiin. Ei työtä NUI:lle.
 
 ## Avoinna aiemmasta
 Lupaus: jos omistaja päättää PK:n Taso läpi -kortin muunnelmasta (JuoksuLoppukortti.AsetaNosto, pelikoodari/tarkastelu-219, 4aa9ec365), NUI lisää sen pohjiin ja tyylikirjaan (Raamattu 4.1).
