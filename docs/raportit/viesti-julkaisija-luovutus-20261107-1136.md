@@ -33,3 +33,6 @@ PK i4, k1, i5 (viesti). NUI iPad 4 (SEIS muisti 4082 Mt, 4/5). NS yksi-taso, var
 - Odottavan iPad-ajon saa siirtää vain kaatamalla sen trapin edellä, muokkaamalla odotuspidin ja käynnistämällä; ketjun seuraavan odotuspid vaihdetaan samalla.
 - Skenaarion tallenne-ajo: mac-ajo kopioi vain png:t, tallenne siirretään erikseen (malli T/ks-jousi-jonossa.zsh).
 - Jonorivi kirjoitetaan vasta, kun skripti on varmasti käynnissä (yhdistelmäkomennossa rivi ehti ennen epäonnistunutta käynnistystä; korjattu heti).
+
+## LISÄYS: PT:n tilaus ennen VIE-sanaa
+Kun KS:n 41022d9db on junassa 220 (odottaa jousen kuvaa, PT antaa junavuoron), aja yöportti uudelleen rungolla: gh workflow run natiivi-yoportti.yml, lue kaikki vaiheet. Kultaiset eivät ole menneet läpi ainakin 19.10. jälkeen, joten niiden tulos on tieto junasta. Jos vain kultainen on punainen, rivi PT:lle ennen VIE-sanaa. PK:n vartijakopiot näkyvät samassa ajossa.
