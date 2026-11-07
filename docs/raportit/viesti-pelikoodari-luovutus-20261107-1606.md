@@ -21,5 +21,5 @@ Työpuu `/Users/Shared/Claude/wt/proto-pelikoodari-kortti` on haarassa `lontoo-k
 - Laatikot lokissa ovat 640×480-ruudussa, kuvat 2752×2064: muunna ennen kuin väität nimen olevan tai puuttuvan.
 - Ladonta ei päivity liikkeen aikana (omistaja 09.54): `nimet etsi` liikkeessä antaa alkutilan. Mittaa pysähdyksissä.
 - Pelkkä `nimet etsi` ei riitä: Pariisi 5–6 loki sanoi "ladottu", kuvassa ei nimeä. Katso aina kuva.
-- `odota` ei ole kohdan 1 Pariisin ele: 16 kuvan koostetta ei mahdu yhteen 1200 px:n pohjaan. Laske koko ensin.
+- Koostekuva: laske pohjan koko ensin; 16 kuvaa ei mahtunut 1200 px:n pohjaan, ja neljä paria jäi pois.
 - zsh: `echo == x` kaatuu (`= not found`).
