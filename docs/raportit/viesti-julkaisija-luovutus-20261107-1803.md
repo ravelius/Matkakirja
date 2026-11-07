@@ -33,3 +33,9 @@ LISÄYS junan iPhone-tarkistukseen (PT 17.30): kallista hitaasti 85° → 45° P
 
 ## LISÄYS: NS talotyylit koe2 901e4004b pid 28517, vapaa linja, 8 kuvaa t2-*, aikaraja 20 min, lokit/natiiviseppa-talotyylit-koe2. Kuittaus NS:lle: palat > 0 ja 0 rivi talot 0:n jälkeen. Ei junaan.
 PERUTTU 18.08 NS:n sanalla ennen alkua: koe2 ei ajossa; odottaa NS:n päivitettyä ajopyyntöä (T/ns-talotyylit2.zsh pohjana, sk ja aineisto voivat muuttua).
+
+## LISÄYS 18.13 (TUOREIN)
+- NS talotyylit koe2 901e4004b JONOSSA pid 34662: aineisto palat-v21-koe2, 10 kuvaa t2-*, aikaraja 20, lokit/natiiviseppa-talotyylit-koe2. Älä lisää toista. Kuittaus NS:n samaan id:hen (palat > 0, palat 0 rivi talot 0:n jälkeen).
+- KS pihapuut ebec14c89 JONOSSA pid 43054: 4 kuvaa pp-*, aikaraja 15, lokit/karttaseppa-pihapuut-b8-ebec14c89. Kuittaus KS:lle, ei arviota.
+- Elämä 10 käännetään kiinteästä 7fc20c516:sta (NUI: ei haaran kärjestä ebec14c89).
+- LEVY: app-jako siirretty T7 proto-arkisto/ ja linkki lisätty (2,5 Gt). Library-b7: 1. kopio "ei täsmää", mutta nyt 48858 tiedostoa ja koot samat; taustalla rsync -c + korvaus linkillä (ei tulosta seuraajalle: katso ls -ld P/esikatselu-2-Library-b7; linkki = valmis 6,2 Gt, kansio = tee rsync -rnc itse, 0 eroa → rm + ln -s, proto-arkisto/esikatselu-2-Library-b7). Sitten RIVI PT:LLE levyosion mukaan. Levy 206 Gi 18.10.
