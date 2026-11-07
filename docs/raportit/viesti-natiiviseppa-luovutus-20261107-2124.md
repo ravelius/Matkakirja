@@ -29,7 +29,7 @@ JONO: ei muuta. Cron "4 9 * * *" luotava uudelleen. Lukulista 7.47: lue silti.
 - Näkyvä vesi: Z14 + ND:n pohjakuva; maski P/selvitys-tolpat/nakyva-vesi-alueet-2m.png, poisto poista-vedesta.py. Jos KS muuttaa kanavaa tai ND:n pohjaa: nakyva-vesi.py, alue-vesi.py ja poisto uudelleen. tee-palikat.zsh:n jälkeen poista-omat-sillat.py.
 
 ## Opit
-- KOORDINAATTI ENNEN KOETTA: kaksi rengasta, joiden pitää kulkea rinnan (r ja avain), voi käännös siirtää yhdellä. Tulosta reunan pituus ja naapurin avain rinnakkain, kun naapurilogiikka näyttää oudolta: 12 kokeen "syyt" olivat tämän seurauksia. Koe8:n "seinillä ei samoja solmuja, 31 km" oli sama vika (todellinen 435 m).
+- KOORDINAATTI ENNEN KOETTA: kaksi rengasta, joiden pitää kulkea rinnan (r ja avain), voi käännös siirtää yhdellä. Tulosta reunan pituus ja naapurin avain rinnakkain, kun naapurilogiikka näyttää oudolta: osa koe4-11:n syistä (raot, V-urat, puuttuvat mansardit) oli tämän seurausta; värisyyt eivät. Koe8:n "seinillä ei samoja solmuja, 31 km" oli sama vika (todellinen 435 m).
 - LAASTARIN POISTO VAATII MALLIN ENSIN: kiila ja sulku paikkasivat myös aitoja korkeuseroja, joten poisto olisi avannut 15,5 km rakoja. Laske portaat ennen ajoa.
 - KÄÄNNÖS EI LUE KOHTAUSTA: proto-kaanna.sh ajaa LuoPallon, joka tallentaa Pallo.unity:n koodista. Kohtauksen arvot tarkistetaan käännetystä Data/level0:sta; asetus kuuluu Rakennus.cs:ään. Mac-esikatselu taas avaa kohtauksen gitistä.
 - VAHTI POIS = VANHA TULOSTIEDOSTO: laitteelta haettu muistivahti-tulos voi olla edellisen ajon; katso aika.
