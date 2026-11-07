@@ -895,3 +895,7 @@ Kortti: Kelpaako pallon tummempi valikko? Vastaus: Kelpaa (Suositus). Kortin sel
 ## OMISTAJAN PAATOS: KAIKKI KORJAUKSET ENNEN JUNAA (7.11.2026 klo 12.51)
 
 Omistaja 7.11. klo 12.50 kortilla "Saako sisäinen koeversio lähteä, vaikka Lontoon kumpu on vielä korjaamatta?" (Saa / Korjataan ensin), omin sanoin: "Tehdään kaikki korjaukset ennen junaa". KK:n kapea tulkinta (KK kertoo omistajalle): juna 220 ei lähde ennen Lontoon kumpua, Towerin kylttiä, palloa ja Lontoo-nimen hyppimistä sekä muuriaukkoa ja jalkoja. Kokemus: Lontoon keskustasta ei nouse vuoria, oikeat mäet jäävät. Ei Mapterhornia (robots); muu kuin pysyvän luvan lisenssi kortille. Kivet: KK:n 12.13 ehto täyttyi, koska muuriaukko näkyy myös ilman kiviä (a8b873e5d); omistajan 12.09 Menevät on voimassa.
+
+## OMISTAJAN PAATOS: JULKISIVUPALA YHDESSÄ KORTTELISSA (7.11.2026 klo 13.35)
+
+Omistaja 7.11. klo 13.34 kortilla "Kokeillaanko tätä julkisivupalaa yhdessä Pariisin korttelissa?": "Kokeillaan (Suositus)". Selite: pala kytketään yhteen kortteliin, ja hän saa kuvat pelistä ennen sarjaa. #2195 hyväksytty tähän kokeeseen, ei sarjaan; ei junaan ilman korttia. Kytkijä Natiiviseppä (PT). Kuvat KK:lle: parit lähin taso, 45°, 70°, 85°, ja ruutusarja liikkeestä.
