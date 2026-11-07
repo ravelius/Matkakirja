@@ -4,8 +4,8 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (32 %). Vanhat työkalut: `git 
 
 ## 1. Seuraava työ (PT 18.21): kulkukartan seinäkorjaus (v15) loppuun
 Juurimalli ei ole lukittu: saanto2 on ehdokas, uusinta kuvat JU:lla. Tee korjaus niin, että kartta rakennetaan uudelleen yhdellä ajolla, kun juuri lukittuu. Älä rakenna lopullista vielä. Älä aja palkki5:llä (PT 16.26).
-Jos seinäkorjaus ei etene ilman juurta: jatka Lontoon rakentamista kokeena, TF vain kortilta. Rivi PT:lle, kumpaa teet: ensimmäinen rivi PT:lle sanoi, että tämä alkaa nollauksen jälkeen.
-Ei vielä selvitetty: etenee Karko ilman juurta. Aineisto `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kulkukartta/`: v15 paikallaan, v4–v7 ja osasarja-v8 ja -v13 ovat linkkejä T7:lle (siirretty 7.11., käännösajoista T7 ei näy). `vertaa_levyt.py` samassa kansiossa.
+Jos seinäkorjaus ei etene ilman juurta: jatka Lontoon rakentamista kokeena, TF vain kortilta. PT sai rivin, että työ alkaa nollauksen jälkeen. Kun tiedät, kumpaa teet, lähetä PT:lle uusi rivi.
+Ei vielä selvitetty: eteneekö korjaus ilman juurta. Aineisto `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kulkukartta/`: v15 paikallaan, v4–v7 ja osasarja-v8 ja -v13 ovat linkkejä T7:lle (siirretty 7.11., käännösajoista T7 ei näy). `vertaa_levyt.py` samassa kansiossa.
 Huomaa ristiriita vanhaan ohjeeseen: 1532 sanoi "lisää kerros olemassa olevaan tiedostoon, älä vie uudelleen" (49 ruutua eroaa, 颐和轩:n portaat, ks. 1303 kohta 4). PT:n yhden ajon vaatimus edellyttää, että tuo ero selvitetään tai se on osa ajoa. Keisarin jalat `a45afc9af` ja `tyokalut/kulkukartta_pinta.py` lisäävät neljännen kerroksen: uudelleenrakennuksen pitää säilyttää se.
 LAV tiedoksi: juuren sääntö täyttää poistettujen reunusten kohdat, 2 833 m² koko palatsissa, tasainen lattia lähilattian korkeudella +2 mm, ei lisää seiniä, reunakivet ja kivireunukset poistuvat. Vaikutus kulkukarttaan on mittaamatta: mittaa, kun juuri tulee.
 
