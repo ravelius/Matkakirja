@@ -26,3 +26,6 @@ Vahtien ajo puusta: archive Assets/Matkakirja tyokalut tyylikirja scratchpadiin,
 - Lukon haku 0,2 s välein menee 10 s:n pollaajien edelle; siksi seinä3/4 ohittavat muisti80:n.
 - Laitteen listaus: devicectl device info files --json-output antaa relativePath ja size; taulukko ei sovi tarkistukseen. copy to yhdistää oletuksena (remove-existing-content false); yksittäistä poistoa ei ole, nollaa 0-tavuisella.
 - Sha-vaihto ennen alkua: tarkista ALKOI-rivi lokista, tapa oma pid + sen sleep, muuta skripti vasta sitten (zsh lukee ajossa).
+
+## LISÄYS 13.18: TÄMÄ ON TUOREIN (korvaa KS kumpu -pidin)
+KS kumpu: pid 33642. Lopun offline-tapa muutettu KS:n sanalla: tyhjä kopio vain, kun Documents/offline on tasan listan 30; listaus perään; jos jäävät tai ei täsmää, 0-tavuinen päälle. Kuittaukseen kumpi tehtiin ja listauksen tulos (jonorivi "KS kumpu offline:").
