@@ -839,3 +839,7 @@ Omistajan pyyntö 09.02 (KK): "tee huudot ja kuplat esineille joilla sitä ei vi
 ## JUOKSUPELI: MUURIN KIVET KELPAAVAT KUVIEN MUKAAN (7.11.2026 klo 09.31)
 
 Kortti 09.31 "Kelpaavatko muurin kivet näin kuvien mukaan?": "Kelpaavat (Suositus)" (VS kuvat-kivisivu5, parit paaty ja pelia; kortissa: saa jatkaa kohti junaa, jäljelle jääneet viat erikseen). Korvaa aiemmat kiviparit. Ei vientiä ilman PT:tä; iPad ja liike katsomatta. Avoimena kerrottu: lattian tumma kolmio (leivonta), irrallinen vaalea laatta reunakiven vieressä, punaisen seinän alla ohut vaalea raita (selvittämättä).
+
+## JUOKSUPELI: KALA-ALTAAN JA GRANAATTIOMENAPUUN KUVAT (7.11.2026 klo 09.41)
+
+Kortti 09.40 "Kelpaavatko kala-altaan ja granaattiomenapuun neljä kuvaa peliin?": "Kelpaavat (Suositus)". Codexin posti a2cdf8fc9 (#2189–2192). Kerrottu: altaan jalusta on muistokuvassa harmaampi ja esinekuvien pinta pelkistetty. Peliin tekstien kanssa; äänet odottavat omistajan kommenttia videosta.
