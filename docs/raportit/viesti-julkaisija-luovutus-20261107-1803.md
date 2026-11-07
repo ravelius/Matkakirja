@@ -32,3 +32,4 @@ LISÄYS junan iPhone-tarkistukseen (PT 17.30): kallista hitaasti 85° → 45° P
 - Pysäytetyn laite-sha:n lukko voi jäädä: tarkista pid ja kuka, sitten vasta pois.
 
 ## LISÄYS: NS talotyylit koe2 901e4004b pid 28517, vapaa linja, 8 kuvaa t2-*, aikaraja 20 min, lokit/natiiviseppa-talotyylit-koe2. Kuittaus NS:lle: palat > 0 ja 0 rivi talot 0:n jälkeen. Ei junaan.
+PERUTTU 18.08 NS:n sanalla ennen alkua: koe2 ei ajossa; odottaa NS:n päivitettyä ajopyyntöä (T/ns-talotyylit2.zsh pohjana, sk ja aineisto voivat muuttua).
