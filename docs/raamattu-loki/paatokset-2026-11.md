@@ -939,3 +939,7 @@ Kortti "Viedäänkö talot kauemmas junaan, vaikka vaikutus iPhonella näkyy vas
 ## Muurin juuren viat yleisellä säännöllä, testikuvat ennen julkaisua (7.11.2026 klo 16.26)
 
 Omistaja kortilla (KK:n välitys, palkki5, kuva r5-lisa7-0: kivilaikku puulattialla, tumma aukkokaista): 2. kuvassa on vielä jotain outoa; korjataan yleisillä säännöillä, koska samoja on todennäköisesti muuallakin, ei vain yhtä paikkaa; ennen julkaisua testikuvat eri paikoista hänelle. KK:n tulkinta: koskee muurin juuren vikoja; palkki5 ei näin junaan; kahden yrityksen raja korvautuu; juna 220 odottaa kuvia ja hänen sanaansa. Turkoosi katto ja harmaa taso: ei työtä ilman sanaa.
+
+## Pallon osat: filmi, terävöinti ja pilvien varjot jäävät, raitiovaunut pois (7.11.2026 klo 16.44)
+
+Omistaja kortilla klo 16.43 (KK:n välitys; film7 ja ajo 5; koe, ei junaan): filmi Jää, terävöinti Jää, pilvien varjot Jäävät, raitiovaunut Pois. Ehdot: Valoseppä tarkistaa terävöinnin liikkeessä ja korjaa 70°:n kaukaisen tumman läiskän; muisti lopuksi; iPhone-tason pehmeneminen auki; laiteajo tarkistaa kartan puuttumisen levossa. Linnut nimien edessä kerrottu, ei työtä ilman sanaa.
