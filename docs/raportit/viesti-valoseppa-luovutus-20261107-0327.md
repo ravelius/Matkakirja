@@ -1,0 +1,20 @@
+# Valosepän luovutus 7.11.2026 klo 03.27. Itsenäinen: vanhoja ei tarvitse lukea
+
+Syy: konteksti 34 %. Tili vvi@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Kuvat vain JU:n vuorolla (`local_06f8c680-4618-42bd-a730-9b6a3e17e0b7`), ei omaa ajoa. Mikään ei mene junaan. Ei skriptattuja hakuja OpenFreeMapista (2.183).
+
+## PT:N PARIISI VALMIS -LISTA 02.3x: KÄYTY
+Koodi: haara `linssiseppa2/pariisi-valo`, kärki ac508f55e, Y:n ccc12f9e5:n päällä, työpuu `/Users/Shared/Claude/wt/proto-linssiseppa2-k17`. EI Y:ssä: KS:n yhteinen ajo ei sisällä tätä. Kuvat ja parit `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/pariisi-valmis/`. Ajot `lokit/linssiseppa2-pariisi-valo2-7738b63c1` ja `lokit/linssiseppa2-valomuoto-ac508f55e`. Ajo `linssiseppa2-pariisi-valo-97c06af37` on arvoton: alkuvalikko, koska listasta puuttui pelin aloitus. Listan alku: kopioi KS:n uusimmasta `_tyo/karttaseppa/sk-pariisi-yhteinen-*.txt` riville `odota 120` asti.
+1. Palais Bourbonin piha: kelpaa ajosta 37, #9c927e → #c9b99b, parit PT:llä. 8fd583037 on Y:ssä.
+2. Valo ja varjo: KK 03.05 kiinteä valo kelpaa kokeena, pari omistajalle aamulla. Mallien ja talojen valo varjon vastasuunnasta (`KovaVarjo.Valo`, komento `valokiintea 0|1`). Lisäksi KK:n yksi yritys: täytevalo vastasuunnasta 0,40 ja reunan tummennus 0,72 vain `NotreDameKirkko`-varjostimessa (komento `valomuoto 0|1`, oletus päällä). Sacré-Cœur paranee selvästi, Louvressa ero pieni. Reuna riippuu katselukulmasta, valon suunta ei. OhjelmaKohde ja talot ilman valomuotoa. Parit `vm-sc-uusi-nyt-vanha.png` (uusi, nyt, vanha), `vm-louvre-rajaus.png`, `valo-sc-*.png`, `valo-louvre-295-koko.png`.
+   Mäen tumma kaari: ei näy, kun mäen oma varjo on pois (`VarjoKerroin = 0f`). SYY TODISTAMATTA: palat vaihtuivat samalla, ja mäen ääriviiva pistää esiin koillisesta ja idästä, kaari oli lounaassa. Älä väitä syytä ratkaistuksi. Oma ensimmäinen päätelmä oli väärä peilipiirroksesta (GlbLukija z → −z).
+3. Saumat: ei ratkennut. SSE 5, 2,5 ja 1,5 antoi täysin samat kuvat, koska `LiikeLaatatPaatos.MaxKerroin` 4 on katossa. KK 03.06: oletus ja metsä ennallaan, rajaa ei siirretä yöllä. Reunan pehmennys ei ole pieni muutos (pala ei tiedä naapurin tasoa; loppu vaatii MatkakirjaTileset.shadergraphin ja kuvion pehmeän version); KK:lle kerrottu, menee aamun kysymykseen. Ei jatkoa ilman sanaa. OIKAISU KK: omistajan 19.57 ei kiellä iPad-mittauksia; iPadin muistimittaus kerran lopussa Pariisin listalta (22.41, 2.209).
+4. 65°:n vyö, La Défense, maan viiva: usvan loppu 12 km: vyö; 20 ja 30 km: 75°:n viiva terävöityy; 16 km paras. KYSYTTY KK:LTA 03.2x, vastaus puuttuu; oletus 12 km on omistajan 22.54, ei muuteta ilman sanaa. Viivan syy (kartan reuna vai maaston horisontti) selvittämättä. La Défensen tornit umpinaisia 12 km:n kuvassa, irtopikseleitä, syy tutkimatta.
+
+## AVOIN
+KK:n vastaus usvaan. PT:n sana, viedäänkö pariisi-valo Y:hyn KS:n ajoon (ei tehty). Valon vaikutus talojen ilmeeseen vastavalossa (kaupunki tasaisempi) on parissa, omistaja näkee aamulla.
+
+## SEURAAVA JONOSSA (PT 02.3x)
+Rosoisuus. Ääriviivojen iPad-mittaus ennen junaa (PT; muistimittaus lopussa, ks. kohta 3). Lontoo: sarja kelpaa (e973cef98, `linssiseppa2/lontoo-c`, k32), heikot KK:lla; PK korvaa kolme palaa.
+
+## TEKNIIKKA
+Python + PIL `/opt/homebrew/bin/python3`; numpy, cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`. `sh ./unity-tarkistus.sh` kansiosta `Linssit-testit/` (ei tarkista varjostimia; Shader error JU:n ajosta). Worktreet k17, k31, k32 (enintään 3). JU kuittaa ajot, mutta kuvia ei arvioi: varmista aina, että kuvat ovat kartalta. Seuraamattomat `.claude/settings.local.json.ennen-kevennysta` ja `waveletNoiseTile.bin`: ei koskettu. Kotihaara on jäljessä: luovutus plumbingilla (GIT_INDEX_FILE, read-tree origin/main, hash-object, update-index, write-tree, commit-tree, push). Viestit varakanavalla `mcp__ccd_session_mgmt__send_message`.
