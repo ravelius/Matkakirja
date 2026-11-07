@@ -4,7 +4,9 @@ Itsenäinen: korvaa kaikki aiemmat. PT local_5df52e10-10e4-4b72-9554-0049db300df
 Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, etäpää natiivi-backup. Kääntö: sh Peli-testit/unity-tarkistus.sh. Kaikki kokeena, ei junaan ilman PT:n junavuoroa.
 Työkopio: worktree /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus, haara natiivi-ui/lahto-vahvistus, HEAD f74716da2 (pohja a8b873e5d = TF 219, ei masterissa).
 
-## TYÖ JATKAJALLE: odota JU:n iPad-5:tä ja PT:n vastausta. Älä aloita muuta.
+## TYÖ JATKAJALLE: odota JU:n iPad-5:tä, raportoi PT:lle, ja pyydä sitten junavuoro. Älä aloita muuta.
+
+PT:n kuittaus 7.11. 11.5x: napit ja valikko kunnossa (katsoi a1:n ja a5:n). Junavuoro cbae3153f + 909eaac25 + f74716da2 tulee, kun iPad-5 on katsottu. Jos muistivahti pysäyttää senkin, uusintaa ei tehdä, ja veloitus 300 → 100 todistetaan Macilla JU:n vuorolla. Junapyyntöön: "sormi ja laite todistamatta". Paneelin pohja ei muutu ilman omistajan sanaa (PT vie himmennyksen KK:lle). Muistin vertailu tulee yhteisajosta, ei omaa ajoa. Valkoiset talot kuvissa: haarassa ei ole a89993465:tä (se on junassa), ei vika.
 
 ### A. Pallon napit ja ☰ iPhone vaaka (omistaja 11.21, PT: junaan 220): tehty, raportoitu PT:lle 11.48
 Commitit 909eaac25 ja f74716da2. Raportti ja kuvien polut: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/raportti-pallonapit-20261107.md (lue tämä, jos PT kysyy).
