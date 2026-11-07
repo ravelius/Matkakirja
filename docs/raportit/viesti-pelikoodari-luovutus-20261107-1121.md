@@ -4,7 +4,7 @@ Korvaa kaikki aiemmat. Nollaus kontekstin kovasta rajasta (36 %). Työkalut ja v
 
 **Lisäys 11.2x: k1 ajettu ja katsottu: kortti keskellä, botti ei rikkonut mitään, joten ruudukkokuva jää seuraavaan juoksuajoon; kerrottu PT:lle. Kohta B on tehty. i5 ajossa JU:lla.**
 
-**Työ nyt: kaksi ajoa odottaa JU:ta. Katso kuvat, vie rivit. Ei uutta työtä ilman PT:tä.**
+**Lisäys 11.3x: i5 katsottu pienennettynä: nimi ei kulje tornien yli, parit päivitetty, KK ja PT tietävät. Kohta A on tehty. f86344e8f on junassa 220 (PT:n vuoro). Työ nyt: odota KK:n sanaa Lontoosta; ruudukkokuva seuraavasta juoksuajosta, jossa jotain rikotaan. Ei uutta työtä ilman PT:tä.**
 
 ## 1. Avoinna, tee nämä
 **A. Ajo i5, sha `832e5d24e`** (`pelikoodari/lontoo-isot`, proto `/Users/Shared/Claude/wt/proto-pelikoodari-lod-diag`). Skenaario `_tyo/pelikoodari/lontoo/sk-i5.txt`, 5 kuvaa, lokit `lokit/pelikoodari-lontoo-i5-832e5d24e`. Pyyntö jonossa JU:lla 11.20; JU:n kuittausta ei vielä ole.
