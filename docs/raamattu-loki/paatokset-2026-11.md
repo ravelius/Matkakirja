@@ -771,3 +771,7 @@ KK klo 01.21 omistajan valtuutuksella, kokeena, ei junaan: Pelikoodarin järjest
 ## LONTOON SARJA KELPAA KOKEENA, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 02.30)
 
 KK 7.11.2026 klo 02.28 omistajan valtuutuksella, kokeena, ei junaan: Lontoon sarja kelpaa (VS e973cef98, linssiseppa2/lontoo-c); heikkoihin kohteisiin ei enempää yöllä. Seuraavaksi PK: E, Pariisi | Lontoo samoilta etäisyyksiltä hintoineen, ja iPad-tarkistus mallien kanssa. Sumea lento jää aamun kysymykseksi; NS seuraavaksi Eiffelin läpi lentävä kamera.
+
+## SEINE AJO 40: ISSY JA BIR-HAKEIM, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 02.44)
+
+KK 7.11.2026 klo 02.43 omistajan valtuutuksella, kokeena, ei junaan: Bir-Hakeimin kaksi tummaa viivaa ja Issyn L-talo (way/122634056) pois seuraavaan palaversioon, ei omaa ajoa. Austerlitzin eteläpuolen litteä rengas: KS kaksi yritystä, muuten aamun kysymys. Pariisi valmis -kohta 7 ei ole vielä valmis.
