@@ -975,3 +975,7 @@ KK:n kortti: "Otetaanko pihojen ja tonttien puut mukaan?" -> "Ei oteta (Suositus
 ## MUURIN JUURI JA PUULATTIA (omistaja 7.11.2026 klo 18.49) (7.11.2026 klo 18.50)
 
 KK:n kortit: "Viedäänkö uusi muurin juuri koeversioon, kun oja, laatta ja rako on korjattu?" = "Viedään (Suositus)": korjaukset yleisellä säännöllä, uudet kuvat hänelle ennen junaa. "Korjataanko kuvan 5 puulta näyttävä lattia kiveksi?" = "Korjataan (Suositus)": LAV selvittää syyn (parit-saanto2/lisa7). Vienti vain tällä ehdolla. Laatta: parit-s2b/t-IK-tumma.
+
+## TALOTYYLIT KOE3: JATKETAAN (omistaja 7.11.2026 klo 18.59) (7.11.2026 klo 19.00)
+
+KK:n kortti: "Jatketaanko näillä viidellä talotyylillä?" = "Jatketaan (Suositus)"; ei junaan; kuvat kk/kuvat/talotyylit-koe3/. Omistajalle kerrottu: lohenpunainen ja tumma tasataan seuraavassa vaiheessa; isojen talojen seinät vaalenevat (Palais-Royal, Forumin itäpuoli, rajaus-kauka-70.jpg), syy auki, tasataan samalla. Linnut: myös uudessa kauka-70:ssa, kaikissa skenaarioissa komento elavakartta; ei kokeen osa, parvi-selitys NS:n päätelmä. PT: seuraavaksi tasaus ja kattomuodot samalla alueella, NS.
