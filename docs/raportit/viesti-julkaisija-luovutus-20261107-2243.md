@@ -4,15 +4,13 @@ Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claud
 
 ## ALOITA: Monitor jonolokiin (tail -n 0 -F, grep 'AJO |VIKA|runko takaisin|ALKOI|SEIS|JONOSSA|PERUTTU|KORJAUS|vahtikytkin|skripti loppui|sarja loppui', 30 min), sitten ps pideistä ja tail jonolokista: mitä jäi kuittaamatta. Kaikki on nohupilla.
 
-## 1. TF 220 (OMISTAJA PYYSI JULKAISUA 22.23, PT): KESKEN
-Sisäinen koeversio, ei korvaa korttia Pariisi valmis. julkaisija/juna-220 = 34f96f97b (2f64c2eee + d9207ccc2 + 10e9b6c4a), natiivi-backup; vahdit ok, Kartta 710/710, Peli 870/870. Muutosloki #6492 2fd5e6337 mainissa.
-Run 42411165815, proto3d-testflight.yml, proto_ref 34f96f97b4dab2860badf800f2c4f57526dc29ba, build 220, sisainen_ryhma=true (tapa kuten 219; ei tf-kaynnista.sh:ta, ei ulkoista). Lähti 22.27.
-TEE: gh run view 42411165815 --json status,conclusion (odotus: Bash taustalla until completed). Success ja sisäinen → rivi jonolokiin "TF 220 VALMIS", python3 -I tools/asemataulu/juna.py tf --juna 220 --aika "<aika>", asennettavissa-rivi PT:lle (PT kertoo KK:lle; 10.2 sanoo myös KK:lle, PT 22.23 sanoi minulle). Failure → este heti PT:lle.
-Asemataulu: juna.py lukitse --juna 220 HYLÄTTY: "Työn alla ei ole tyhjä (177 kohtaa)". Kerro PT:lle valmis-rivillä; en siirtänyt kohtia.
-iPhone-tarkistus junalla (85° → 45° Pariisin yllä, hyppy kamerassa; rivi PT:lle ja NS:lle) ennallaan.
+## 1. TF 220 (OMISTAJA PYYSI JULKAISUA 22.23, PT): VALMIS 22.45
+1.1 (220), juna-220 = 34f96f97b, run 42411165815 success, sisäinen ryhmä, kerrottu PT:lle (kertoo KK:lle). Muutosloki #6492 2fd5e6337.
+AVOIN: Asemataulu hylkää juna.py lukitse ja tf: "Työn alla ei ole tyhjä" (177 kohtaa); PT:lle kerrottu. Kun PT sanoo: python3 -I tools/asemataulu/juna.py tf --juna 220 --aika "22.45".
+iPhone-tarkistus junalla (85° → 45° Pariisin yllä, hyppy kamerassa; rivi PT:lle ja NS:lle) tekemättä.
 
 ## 2. iPad-jono: T/yo-jono2-20261107.zsh pid 72046
-latausraja2 (pid 67717, 63e5260e1, ajossa 22.38, vahti pois skriptissä, vp1 kp1, loki T/ns-yksi-latausraja2/ajo.log) → jarru-taso1 (754644c26, T/ns-yksi-taso1/ajo.log, lokit/natiiviseppa-muisti-v-taso1, vahti päällä) → vaihe12 (10604363c, yksi kierros v1 y1 a1 b1, aikaraja 9000 s, T/ns-yksi-vaihe12/ajo.log; rivi VAHTI LAUENNUT = tulos; jos "PUUTE hae muistivahti-tulos.txt" toistuu, kerro NS:lle) → ASTC (581b9ad07, v1 a1 kv ka, T/ns-yksi-ASTC/ajo.log; vahti pois tarkoituksella) → "YO-JONO sarja loppui".
+latausraja2 kuitattu; jarru-taso1 ajossa 22.43, AJETTU-rivi NS:lle (754644c26, T/ns-yksi-taso1/ajo.log, lokit/natiiviseppa-muisti-v-taso1, vahti päällä) → vaihe12 (10604363c, yksi kierros v1 y1 a1 b1, aikaraja 9000 s, T/ns-yksi-vaihe12/ajo.log; rivi VAHTI LAUENNUT = tulos; jos "PUUTE hae muistivahti-tulos.txt" toistuu, kerro NS:lle) → ASTC (581b9ad07, v1 a1 kv ka, T/ns-yksi-ASTC/ajo.log; vahti pois tarkoituksella) → "YO-JONO sarja loppui".
 Kuittaus NS:lle joka ajosta erikseen: AJETTU- ja VALMIS-rivit, grep lokista, ei arviota. Lisäkierros tai -pari vain NS:n pyynnöstä (argumentti 2 tai 3). Lämpö: NS lukee itse lokeista, ei tarkisteta erikseen.
 T/ns-yksi-ajo.zsh <nimi> <sha> <skripti> <aikaraja s>: lukko, kytkimet ja runko lopuksi. Valmis pohja lisäajoille.
 Lisäys kesken jonon: T/*.zsh, jonka jono kutsuu, voi vaihtaa os.replacella (ajossa oleva pitää vanhan inoden). Pääjonon vaihto: kill -9 pääjono ja odottava vuoro, ajossa oleva lapsi jää; uusi pääjono odottaa lapsen pid:tä; muista Mac-odottajat (alla).
