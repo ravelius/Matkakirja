@@ -28,3 +28,6 @@ Mac: lav-kolmio1-jonossa.zsh, vs-kivisivu4-jonossa.zsh, ks47-jonossa.zsh, ns-lon
 - aja-*.zsh:n cp *.mp4 voi keskeyttää koko kopion zsh nomatchilla; kuvaton skenaario antaa VIKA, vaikka ajo onnistui. Katso esikatselukansio. Video: zsh wt/proto-pelikoodari-tarkastelu/tyokalut/tallenne-video.sh <E> <nimi> <mp4>.
 - Vertaa kuvat md5:llä, jos koot ovat samat (NS lontoo-jaa: 3 samaa kuvaa, kerrottu).
 - Background-Bash voi kuolla nollauksessa: käytä nohup ... &! ajoissa, jotka ylittävät nollauksen.
+
+## LISÄYS 10.0x
+L2-jono irrotettuna: NUI, NS lontoo-jaa2 8d8842ce6 (T/ns-lontoo-jaa2-jonossa.zsh, kuittaus NS:lle), VS kivisivu9 dc4b1c69c (T/vs-kivisivu9-jonossa.zsh, kuittaus VS:lle, 2 kuvaa, kuvat-kivisivu9). VS haluaa vertailuajon MUISTI-rivin.
