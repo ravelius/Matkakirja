@@ -1,0 +1,33 @@
+# Natiivi-UI: luovutus 7.11.2026 klo 03.16 (konteksti 30 %, pehmeä raja)
+
+Itsenäinen: korvaa kaikki aiemmat. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Viestit send_messagella id:llä, PT:lle enintään 3 riviä.
+Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, etäpää natiivi-backup (ei origin). Worktree /Users/Shared/Claude/wt/proto-natiivi-ui-kyltit-219, haara natiivi-ui/kyltit-liike, kärki b8ec2ccfd. Lokit /Users/Shared/Claude/proto-3d/lokit/, skenaariot _tyo/natiivi-ui/. Kaikki kokeena, ei junaan. Kääntö: sh Peli-testit/unity-tarkistus.sh (noin 1 min). Ajot JU:lta.
+
+## TILA: JONO TYHJÄ (PT:lle sanottu 03.15). Seuraava työ PT:ltä.
+Pariisi kohta 8 tehty, tulos KK:lla (koonti lokit/nui-kyltit-koonti-0700/). Kohta 10: viisi aloituslennon kuvaa jo kytketty 356eb0101, ei työtä.
+
+## Tulokset ja KK:n päätökset (omistajan valtuutuksella 02.20, 02.58)
+- Vika 3 kylkivaihdot: kelpaa. Nostokyltit 0 vaihtoa; aiemmat 35 riviä olivat mittarin virhettä (m.Kylki väliaikainen "oikea" ennen kiinteän kyltin kylkeä). MalliKyltit: Rivi.Lukko, sivu pysyy liikkeessä.
+- Vika 4 pallo: kelpaa. KaupunkiPallot väistää NostoKylttiVaraus-laatikoita levossa; näkyvä siirto liukuu (VaistoLiuku 8/s, ajo -6: 75 px yhden kuvan hyppy → noin 25 kuvaa, enintään 13 px/kuva). Liikkeessä pallo voi olla kyltin päällä (omistaja 3.11.: pallot pysyvät paikallaan).
+- Vika 6 85°: yritys 1 (2b0b360bc, m.KylttiUsva, KylttiNakyvyys) JÄÄ. Yritys 2 (9486ee940) peruttu 4f80574cf: Temple-torni haalea tavallisessa kallistuksessa. Kolmatta ei tehdä yöllä. Suositus aamuun KK:lla: yrityksen 2 aikaisempi häivytys vain hyvin matalaan kallistukseen. Ruudun 980 tyhjä näkymä kelpaa (KK).
+- Grand Châtelet ND:n kyltin alla: ei toimia yöllä, KK kertoo aamulla.
+- Les Halles: korjattu (d580119ec): törmäys kuoren 85 %:n ytimeen (Nahtavyysalue.OsuuMallinYtimeen, YdinOsuus), koska rajauslaatikon kuori on rakennusta isompi.
+- Tuileries: EI korjattu, AAMUN KYSYMYS KK:lla kuvan kanssa (tuileries-kulma-1760.jpg): kyltti on tässä kulmassa aidosti Louvren länsipaviljongin päällä, katoaa levossa noin kuva 1772 eikä palaa. Suositus: saa olla kulman päällä. Toinen yritys käyttämättä, koska korjaus vaatii ensin päätöksen.
+
+## Junaan vietäessä pois
+Mittarit: kylkivaihto-rivi, `kyltit usva/peitto`, `kyltti: … pois/esiin`, mallikyltti-rivin liikkeessä/levossa ei haittaa; lisäksi `ui kuvajumi`, mittausrivit, ae497b124 ja paketin rivit.
+Skenaarion sk-kyltit-liike.txt loppuun lisätty 6 s lepoa: kuvanumerot säilyvät, ajo pitenee (2083 kuvaa).
+
+## Ajot ja videot (lokit/)
+nui-kyltit-liike-4/liike.mp4 (yritys 1), -6/liike.mp4 (kärki), -85-2/liike85.mp4 (yritys 1, 85°), -85-3/liike85.mp4 ja -5/liike.mp4 (peruttu yritys 2).
+
+## Työkalut (kirjoita uudelleen, jos scratchpad on poissa; vain Pillow)
+Arkki: joka n:s kuva numeroituna. Pallon paikka: punaisten pikselien painopiste (r>120, g<75, b<70) 688 px:n koossa, siirto kuvien välillä. Video: zsh tyokalut/tallenne-video.sh <lokikansio> <nimi> <ulos.mp4> worktreestä.
+
+## Opit
+- TALLENNE: peli askeltaa pysäytettynä 0,02 s/kuva, unscaledDeltaTime kulkee sen mukana, UI Toolkitin siirtymä oikeassa ajassa: kyltin häivytystä ei voi arvioida tallenteesta. Päätelty kuvista.
+- Törmäysmuodot (Nahtavyysalue.KeraaRuudut) päivittyvät Nimikerroksen ladonnassa, eivät joka kuvassa; loki `kyltti: … pois (malli)` näkyy myös liikkeessä, joten aivan vanhentuneita ne eivät ole.
+- Kallistus 85°: `komento kallista 85` asettaa heti; eleellä kulma jää 60–70°:een.
+
+## Avoinna, ei minun ilman PT:n sanaa
+POIKKEUS ArgumentOutOfRangeException odota-tila-rivillä (kaikissa ajoissa, syy selvittämättä). Tyhjä pohja ja vino reuna 356eb0101; jumin 9,16 s; kylmä levyvälimuisti; Invalidit `ui kohdenostot kyltti`; tappien lasku vaakapuhelimelle. Havaintoja: 85°-ajossa etualalla sahalaitainen tumma alue vasemmassa alakulmassa; Livian ohjeteksti sumean kartan päällä; suurennuslasin haalea neliö. Eiffelin läpi lentävä kamera: PT jakaa, ei minun.
