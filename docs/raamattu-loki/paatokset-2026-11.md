@@ -923,3 +923,7 @@ Koe, ei junaan ilman korttia (ajo 3, 488a0de09). "Jäävätkö veneet Seinelle k
 ## TALOT KAUEMMAS JUNAAN 220 (omistaja 15.21) (7.11.2026 klo 15.22)
 
 Kortti "Viedäänkö talot kauemmas junaan, vaikka vaikutus iPhonella näkyy vasta sinun ajostasi?" → "Viedään (Suositus)", selite "Juna ei enää odota tätä työtä." Koskee 702f8b48d:tä. Kerrottu ennen korttia: isolla iPadilla ei näkyvää muutosta; 80° yli rajan jo nykyisillä taloilla, ei korjaannu tällä; ei ajettu 80°, liike, pieni iPad, iPhone; marginaali kapea, kasvu voi joskus alkaa; jos iPhone ei näytä muutosta, seuraava keino on kevennys, ei rajan nosto. Muut ehdot voimassa. KK kysyy iPhone-tuloksen omistajalta, kun juna 220 on asennettavissa.
+
+## PALATSIN REUNAKIVET JA JÄÄNTEET (omistaja 15.46) (7.11.2026 klo 15.47)
+
+"Saako koko reunakivisarja lähteä palatsista kuvan 1 mukaan?" → "Saa (Suositus)", selite "252 reunakiven osaa pois, lattia muuriin asti." "Poistetaanko myös kuvan 3 ruskeat reunat ja matalat kappaleet?" → "Poistetaan (Suositus)", selite "Enintään kaksi yritystä, sitten uudet kuvat." Kerrottu: Mac, iPad ajamatta; tumma laikku on täyttövirhe, korjaus ajamatta; boordi ehjä, laatan lähde mittaamatta; juna odottaa tätä 12.50:n mukaan. Omistaja näki palkki-parin, boordi-parin ja arkki-lisan (kuvat/palkki2/). Kolmannen yrityksen tarve: uudet kuvat KK:lle, ei jatkoa ilman omistajaa.
