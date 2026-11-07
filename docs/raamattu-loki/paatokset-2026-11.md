@@ -991,3 +991,7 @@ Omistaja 7.11. klo 19.31 (KK:n kortti): Applen Xcode-liitännäinen, josta hän 
 ## PARIISIN MUISTIN KEVENNYS KOKEESEEN (7.11.2026 klo 19.43)
 
 Omistaja 7.11. klo 19.43 (KK:n kortti, Kokeillaan, suositus): napakalotit pois muistista Pariisissa, toisen apumuistin tarve selvitetään; junaan vasta mittauksen jälkeen. KK kertoi samalla omistajalle: filmi ja terävöinti eivät junaan vielä (KK:n suositus, ei korttia), uusi kysymys muistin laskettua; MSAA, SSAO ja palojen yläraja vain tiedoksi, ei työtä. Tekijä: Natiiviseppä (PT).
+
+## MUISTIN KOKONAISSUUNNITELMA (7.11.2026 klo 19.51)
+
+Omistaja 7.11. klo 19.51 (KK:n välittämä): tehdään kokonaisvaltainen muistin käytön suunnitelma: mitä ladataan missäkin vaiheessa ja mitä jätetään pois. Striimikartan lataus katsotaan läpi, suurin osa nimitiedoista jätetään lataamatta, jos ne vievät paljon, maapallon karttaa kevennetään tarvittaessa isommaltakin alalta, ja tarkistetaan, lataako Unity turhaa. Mittauksesta halutaan pelkän Pariisin ja kaiken muun osuus sekä karsittavissa oleva määrä. KK suunnittelee koodista ja lokeista; NS mittaa; KK:n tulkinta: suunnitelma ensin, ei pidätä junaa 220.
