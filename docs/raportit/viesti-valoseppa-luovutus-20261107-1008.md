@@ -1,0 +1,26 @@
+# Valosepän luovutus 7.11.2026 klo 10.08. Itsenäinen: vanhoja ei tarvitse lukea
+
+Syy: konteksti yli 25 %, luonteva tauko (ajot JU:n jonossa). Tili vvi@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`, worktree k31 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k31`. Kuvat vain JU:n vuorolla (`local_06f8c680-4618-42bd-a730-9b6a3e17e0b7`). Kansio `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/kivisivu/`, luvut `MITTAUS.md`.
+
+## 1. TYÖ NYT: odota JU:n kahta ajoa, katso kuvat, raportoi PT:lle
+**A. iPad-kuva-ajo kivisivu10 (PT 10.0x, JU:n jonossa KS:n talot-sateen jälkeen, ei alkanut 10.06).** Käännös 5b5da152c, LAV:n `koejuuri-v115pala` Documentsissa, skenaario `sk-kivisivu10-ipad.txt`, 13 kuvaa, vahti pois vain tässä ajossa (`muistivahti.txt` = pois, takaisin ajon jälkeen). JU itse nollautuu pian: jos tieto ei kulje, tarkista JU:n jono (`/Users/Shared/Claude/julkaisija-tyokalut/jono-20261103-ilta.txt`) ja tilaa uudelleen.
+PT haluaa: kivet, liike, palan 0-1 raja, jos botti osuu sinne (raja-z ja raja-x ovat tarkastelukameralla, eivät botista); huippu ja kaatuminen. Vahti pois: huippu `muisti-tarkka.log`ista, ei MUISTI-rivistä.
+Siivous ajon jälkeen (PT:n käsky): koejuuri-kivisivu2 ja koejuuri-v115pala pois Documentsista, oikea runko takaisin, vahti päälle. devicectl ei poista tiedostoja. JU ei poista sovellusta, jos siellä on muiden aineistoa (NS:n talopalat-lontoo-d7 tarvitaan), vaan antaa listauksen; silloin kysy PT:ltä tapa. Muistin poistotapa: NS:n kehityskomento PT:n rivillä (kartta-osat 4.11.), koodista ei tarkistettu, onko 5b5da152c:ssä.
+**B. Mac-ajo kivisivu9 (pyydetty JU:lta 10.0x, ei kuittausta eikä kansiota kuvat-kivisivu9 klo 10.06).** `zsh aja-kivisivu9.zsh <linja> dc4b1c69c`, 2 kuvaa. Selvittää videossa `kuvat-kivisivu7/kivet-juoksu.mp4` alussa näkyvät: vasemman kiven yläpinta lähes musta ja sivu vaalea, oikealla lattialla tumma suorakaide. Kuvat kerroin 0,5 ja QA kujakivireuna 1 samasta kohdasta. Kamera arvattu (`125.94 2.54 -803 0 15 60 abs`), abs-tilaa ei ole koestettu. Jos kohta on taas väärä, ei enää ajoa tästä: rivi PT:lle avoimena. Havaintoa ei ole vielä kerrottu PT:lle omana asianaan, viimeisessä viestissä mainittu "jonossa". Kivisivu8-kuvat eivät kelpaa (väärä paikka).
+
+## 2. KIVET (omistaja 09.31: kelpaavat; PT kuittasi dc4b1c69c:n)
+Junakelpoinen `dc4b1c69c`, haara `linssiseppa2/kivet-juna`, pohja 3ba5bb57e. Yksi commit (sisältö e1b8a1091 ilman koe-sanoja, ei lokirivejä, QA kujakivireuna säilyy). `5b5da152c` sen päällä: `palatsi mallit dokumentit/<kansio>`, vain iPad-ajoa varten. Unity-tarkistus 0 virhettä; merge-tree ei ristiriitaa tf-219-talot eikä rappaus-laikut (dc4b1c69c). EI junaan eikä vientiin ennen PT:n sanaa. Kerro PT:lle, että iPad-ajo on eri sha kuin kuitattu; muutos on vain tämä kehityskomento.
+Suljetut: rako0 (PT: yläpinnat ennallaan). Raita seinän alla: KK:lla/LAV:lla, ei minulle, ellei LAV totea varjostimen asiaksi.
+Mitattu: rako0 kerroin 0,5 / 1 samassa ajossa: laventeli ja ruskea 0,45, sininen, harmaa, lattia 1,000; ruskea ja laventeli siis reunakivi.
+
+## 3. MUISTI (ei minulle korjattavaksi, PT: eri työ)
+iPad-vertailu 5b5da152c, 1 ajo kummastakin, vahti pysäytti latauksessa, kuvia 0/8: koejuuri-kivisivu2 VIKA 4094 Mt, huippu 4460; nykyiset paketit ämpäristä VIKA 4149 Mt, huippu 4602. Raja 4080. Ei kaatumista. Kansiot `proto-3d/lokit/linssiseppa2-kivet-ipad-5b5da152c` ja `-perus-5b5da152c`. PT tietää. Raja ei nouse oletuksena.
+
+## 4. LIIKE MACILLA
+kivisivu7 (dc4b1c69c + koejuuri-kivisivu2) 27,6 s botti kujilla. Katsottu 9 kuvaa ja alkukuva, ei ruutu ruudulta; väreilystä ei väitettä (mittari ei erota kameran liikettä, ei vertailua). kivisivu6:n video oli avauslentoa, ei kelpaa. Lopetuksessa kivisivu6 exit 139, pino Cesiumin säikeessä, kivisivu7 exit 0.
+
+## 5. MUUT AVOIMET (ennallaan)
+Tumma kolmio lattialla (LAV: valo-UV, leivonta). Rappaus 2e1d2b87d PT:llä. Sacré-Cœurin kaista ja Panthéonin aukio vaativat talojen palautusta (KS). iPad-mittaus ääriviivoista ennen junaa, ei yöllä. PT:n sana, viedäänkö pariisi-valo Y:hyn. Lontoo: sarja kelpaa (e973cef98, k32), heikot KK:lla.
+
+## TEKNIIKKA
+Numpy, cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`; PIL `/opt/homebrew/bin/python3`. Mallien luku: `sys.path` + `_tyo/linnanrakentaja/kielletty-rakennukset/tyokalut`, `from avoimet_glb import G`. `sh ./unity-tarkistus.sh` kansiosta `Linssit-testit/`. iPad-ajuri `julkaisija-tyokalut/ipad-skenaario-f1.zsh`: vain alku, peli, linssi, ui, komento, odota, oleta; kuvat `komento kuva X`; ei tallennetta; odotus komentojen väliin. `tallenne-alku nimi fps leveys`: toinen luku on fps, ei kesto; noin 11 kuvaa/s, 50 kuvaa/peli-s. `avaus nyt` ja oletus aloittavat avauslennon: liikeajoon `avaus 0` ennen `v4`, botti 1 latauksen jälkeen. `tarkastelu kamera` on palatsin koordinaateissa, videon kamera maailman; 9. sana `abs`. `palatsi mallit` korvaa koko juuren, puuttuva paketti ei palaudu ämpäriin. Seuraamattomat `.claude/settings.local.json.ennen-kevennysta` ja `waveletNoiseTile.bin`: ei koskettu. Kotihaara jäljessä: luovutus plumbingilla origin/main-pohjalta.
