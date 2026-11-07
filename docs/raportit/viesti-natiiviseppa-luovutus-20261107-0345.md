@@ -10,9 +10,9 @@ Viestit: mcp__ccd_session_mgmt__send_message session-id:llä.
 - 23.07: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa pois tai edellinen toimiva tilalle. Sitten rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön.
 - 23.22: yöllä vain Pariisi, Lontoo ja juoksupeli; tukityö vain, kun se palvelee niitä. Muu seis, ei uutta. Jos muuta on auki, rivi PT:lle. PT: Liiku kuuluu Pariisiin.
 
-## TYÖ NYT (PT 03.5x, kohta 10; kokeena, ei junaan; ei uutta ajoa ilman löydöstä; kaksi yritystä tai 30 min)
-1) MEREN SÄVYPALA. Löydös ja syy A/tulos.md, ylin kohta. Notkahdus 19-64 km ei näy, ei työtä. Yritys 1: VS:n meri-korjaus (kuusi-seitsemän committia, listattu tulos.md:ssä) koehaaralle 7b6caba3a:n päälle, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto (nyt natiiviseppa/lento-z10), haara esim. natiiviseppa/meri-koe. Tarkista ensin grep VS:n haaroista ja VS:n tila, miksi korjaus jäi yhdistämättä; ElavaTyyliVersio muuttuu, joten laattavälimuisti vaihtuu. Sitten yksi Mac-ajo JU:lta: sk-aloitus-tyhjat-j (sama kuva kuin j:n t09) ja vertailu samalta hetkeltä. Ei ratkea tai ristiriita: rivi KK:lle (vika, kokeiltu, suositus) ja lopetus. Tulos KK:lle, rivi PT:lle. Meri oli aiemmin "VS PT:n kautta"; PT antoi nyt NS:lle, kerro VS:lle rivi ennen yhdistämistä.
-2) AJON 43 KUVAT (KS:n ajo, lokit/karttaseppa-yhteinen-43-*, ei vielä olemassa 03.43): kamera ja horisontti toisena silmänä, täysikoossa. Vikarivit KS:lle (local_740947d7-aa79-4b1e-948e-1b7dfc734364) ja PT:lle. Älä odota sitä kohdan 1 kustannuksella.
+## TYÖ NYT (PT:N OIKAISU 03.5x, VOITTAA KAIKEN MUUN TÄSSÄ)
+VAIN AJON 43 KUVAT, kun ajo on valmis (KS:n ajo, lokit/karttaseppa-yhteinen-43-*, ei ollut vielä olemassa 03.43): kamera ja horisontti toisena silmänä, täysikoossa. Vikarivit KS:lle (local_740947d7-aa79-4b1e-948e-1b7dfc734364) ja PT:lle. Sen jälkeen "JONO TYHJÄ: Natiiviseppä" PT:lle.
+MEREN SÄVYPALAA EI KOKEILLA YÖLLÄ. PT antoi sen lukematta "meri seis" -linjaa ja perui. Meri on aamun koonnissa, koko maailman korjaus VS:lle. Ei haaraa, ei ajoa, ei rivejä VS:lle. Löydös A/tulos.md ylin kohta; KK:lle kerrottu aamun koontiin (tasoraja, VS:n 4.11. korjaus ei rungossa). Notkahdus 19-64 km ei näy, ei työtä.
 
 ## TÄNÄ YÖNÄ VALMIS, EI TOISTETA
 - ALOITUSLENTO PAKETILLA 03.35: 4,3 s:n aukko poistuu, KK ja PT tietävät, A/tulos.md.
