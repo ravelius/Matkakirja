@@ -947,3 +947,7 @@ Omistaja kortilla klo 16.43 (KK:n välitys; film7 ja ajo 5; koe, ei junaan): fil
 ## Lontoon kumpu ja St Paul's kelpaavat junaan (7.11.2026 klo 16.47)
 
 Omistaja kortilla klo 16.47 (KK:n välitys, k3-paavali-matala): Kelpaako St Paul's näin madalletussa Lontoon keskustassa? Kelpaa. Kumpu ja mallit etenevät junaan 220; 045844251 vientiin kansioon 2026-11-07-lontoo ja junavuoroon PT:ltä. Kerrottu: keskiosan juuri peittyy, Abbey, museo ja Big Ben ilman arviota, Thamesin soikiot vanhoja (ei työtä), St Paul's haalea (syy auki), iPhone ja saapumislento ajamatta.
+
+## iPhone vaakatasossa ei laskeudu kattojen tasolle (7.11.2026 klo 17.13)
+
+Omistaja kortilla klo 17.12 (KK:n välitys, iphone-85-pois): Saako iPhone vaakatasossa laskeutua matalassa kallistuksessa kattojen tasolle? Ei laskeudu. Kamera pysähtyy kattojen yläpuolelle; loivemmissa kulmissa pääsee yhä lähelle. Koskee junaa 220. Horisontin sinertävä suorakaide kerrottu, ei työtä ilman sanaa. Julkisivukortti: en ymmärrä kysymystä, KK kysyy uudelleen; ei sarjaa eikä junaa ennen vastausta.
