@@ -2,7 +2,7 @@
 
  KAIKKI VANHEMMAT LUOVUTUKSET, viittausketjua ei ole. Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_37f7c945-e1a0-4638-90b8-93c389a36fbe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364.
 Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b.
-ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
+ENSIN lukulista 7.47, ja cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py. Etäyhteyteen ei kosketa.
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit, A = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aloitus-tyhjat, T = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/lontoo-kamera. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä.
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
@@ -34,7 +34,6 @@ KOE12 (palat-v21-koe12-katot, kuvat/koe12/): mansardin jatkuvuus v20:tä parempi
 KOE13 EI AJETTU PT:n ehdolla: ilman sulkua vähintään 0,5 m:n avoin porras 15,5 km:llä (54 % yhteisistä seinistä), ilman kiilaa kansi yli 0,5 m reunasta 9,3 km:llä. Koe13:n muutos: pariisi-talot/tee-palat-koe13-ei-ajettu.py, talotyylit/paivita-koe13.py. pariisi-talot/tee-palat.py = koe12 (kopio talotyylit/tee-palat-koe12.py).
 R85:N KAKSI RAKOA EI SELVINNYT KOHDALTA (kerrottu PT:lle): sijaintinaapuri ja alle 3,5 m:n vapaat välit poissuljettu. Kamera r85: suunta 315, 343 m taakse, silmä 80, f 1966 (kuva 2752), horisontti y 860; perspektiivi-skripti oli scratchpadissa, ei säily.
 Mahdollinen jatko vain PT:n tai omistajan sanalla: uusi tapa (korttelin yhteinen kattokorkeus tai vino sulku).
-Cron "4 9 * * *" luodaan aloituksessa. Lukulista 7.47: lue silti.
 
 ## AUKI, ODOTTAA MUITA (ei toisteta, ei tehdä ilman sanaa)
 - Yksi taso: koe jää haaraan, 80°:n kevennys auki. Julkisivu: PT/KK:n sana, ei junaan. Palikkakirjasto: odottaa omistajan korttia (Pariisi valmis + muisti). Kameraeste ea5823b4f: ei junaan. Sumea alue: aamun kysymys KK:lla, ei yrityksiä. Meri: VS:lle PT:n kautta.
