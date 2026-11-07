@@ -795,3 +795,7 @@ KK 7.11.2026 omistajan valtuutuksella, kokeena, ei junaan. Klo 02.58: Natiivi-UI
 ## LÄHIYMPÄRISTÖT R8 JA R9, KK:N PÄÄTÖS VALTUUTUKSELLA (7.11.2026 klo 04.29)
 
 KK 7.11.2026 klo 04.28 omistajan valtuutuksella, kokeena, ei junaan (VS cded7d322, ajo lahi-1): Sacré-Cœur r8, Panthéon r8, Opéra r9, Invalidit r9 (oliiviraidat lähtevät, kartan oma Rodinin puutarha näkyy), Notre-Dame ei muutosta. Litteiden ruskeiden palojen syy jää aamuun; yhteisessä ajossa yksi Panthéonin kuva varjot pois, jos tilaa on, ei omaa ajoa eikä kolmatta yritystä. Kaista ja aukiot ovat KS:n palatyötä. Kiinniotossa eunukki ei ole vika (omistaja 27.10. 18.12, KK oikaisi 04.14); PK tekee vain Taso läpi -kortin ja lisäajon.
+
+## PANTHEON R8 PYSYY JA LONTOO E4, KK:N PAATOKSET VALTUUTUKSELLA (7.11.2026 klo 06.26)
+
+KK 7.11.2026 omistajan valtuutuksella, kokeena, ei junaan. Klo 05.09: Panthéon r8 pysyy, vaikka heikko reunus jää; r9 paljastaisi 45°:ssa rosoisen ruskean palan. Reunus kerrotaan omistajalle aamulla. Klo 06.11: Lontoo E4 (fdbf8a0ef) kelpaa. Viimeinen Lontoo-työ yöllä PK:lle: Pariisin kyltti- ja karttatoteutus KS:n yhteisajon kärjestä, oma kainalopoikkeus pois NUI:n korjauksella, yksi pallo per kohde, jos pieni muutos riittää; kaksi yritystä, ei Tripoa, palat vain poistot-d8:lla, yksi ajo E-parien kuvakulmilla.
