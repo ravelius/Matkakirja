@@ -17,3 +17,6 @@ Taivaan hyppy 73c744f37 ja nappulan jono 72e257a0b junassa. Pallon osat `linssis
 
 ## TEKNIIKKA
 Numpy, cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`; PIL `/opt/homebrew/bin/python3 -I` (ei numpya). `sh`, ei zsh. Tarkistus `sh Linssit-testit/unity-tarkistus.sh` k31:ssä. `aja`-komento: kaari alle lähimmän ei liikuta kameraa (muisti esikatselu-aja-alle-lahimman-ei-liiku). iPad: `odota 3` komentojen väliin, kuvat `komento kuva X`. Tapot vain omilla PID:illä. Seuraamattomat `.claude/settings.local.json.ennen-kevennysta` ja `waveletNoiseTile.bin`: ei koskettu. Kotihaara jäljessä: luovutus plumbingilla origin/main-pohjalta.
+
+## LISÄYS 23.10 (PT; OMISTAJAN PÄÄTÖS 23.06, kortti "Kyllä, nyt")
+Kamerakorjaus ensin (pieni), sitten **parempi vesi Pariisin karttaan kokeena** muistityön rinnalla: suunnitelma `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261107-pallon-elama-kartalle.md` kohta 7 (KaupunkiVesi, `vesi/pariisi-6m.json`, korkeus 86 vs 90 m, _Ilm-arvot, mustetyylinen joki; joki näkyy kokonaan, Raamattu 2.204). Omalle haaralle. Kuvaparit läheltä ja kaukaa samasta rajauksesta PT:lle, joka vie ne KK:lle. Ei junaan ilman korttia. Lisätieto loitonnuksesta: näkyi iPhonella ja pienellä iPadilla (kuvasuhde voi vaikuttaa; aja Mac-ajo myös iPhone-koolla, jos esikatselu sen tukee).
