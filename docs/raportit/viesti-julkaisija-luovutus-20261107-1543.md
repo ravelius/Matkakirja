@@ -29,4 +29,4 @@ Ei lähtösanaa. Ei käännöstä viennille ennen PT:n VIE-sanaa. Odottaa ainaki
 - vapaa + ALKOI-rivin odotus voi valita juuri varatun linjan, koska ALKOI tulee ennen lukkoa: lisää sleep 30 (kuten film5) tai odota pid.
 - zsh: $N:r on muunnin (työntö meni rikki); käytä täysiä refejä tai ${N}.
 - Turvatarkistus esti 15.01 monimutkaisen zsh-komennon (${(j:,:)...}) tulkintakelvottomana, vaikka poistoa ei ollut. Ei kierretty; pidä kill-skriptit tiedostossa ja yksinkertaisina.
-- Film3: 39 kuvaa + 583 s odotuksia vei 655 s; kuvat 8 s/kuva (film2 samaa luokkaa), Ultra ei hidastanut merkittävästi.
+- Film3 Ultrana: 39 kuvaa + 583 s odotuksia vei 655 s (film2: 35 kuvaa + 517 s, noin 10 min), joten Ultra ei näyttänyt hidastavan.
