@@ -12,6 +12,7 @@ Lähtösana on PT:n rivi "VIE 220 KOEVERSIONA" (ei lukitusta). Yhden tarkkuuden 
 ## 1. KARTTA YHDELLÄ TARKKUUDELLA: KOHTA 1 VALMIS, SEIS PT:N SANAAN (ENSISIJAINEN)
 b221a28a1 (natiiviseppa/yksi-taso, natiivi-backup, pohja a8b873e5d, työpuu proto-natiiviseppa-kierto-koe). Kartta/YksiTaso.cs: pallon valinta piirtämättömällä kameralla K = 8 kauempaa, pääkamera pois valinnasta, kerroin 0,79, korkeus ≤ 1000 km, kallistus ≤ 3° (paluu 2°). Komento maasto yksitaso <kerroin>|pois|tila [korkeus_px]. Testit 10/10, sh unity-tarkistus 0 virhettä.
 Tulos _tyo/natiiviseppa/yksi-taso/tulos.md, parit samassa kansiossa pari-{z12,z13,z14,kauko,kauko2}.jpg. PT:lle lähetetty 11.3x. Rajat poissa 0°:ssa, katsottu täysikoossa; palapyynnöt yhtä tasoa. Hinta näkyy: z14 korttelit pois, z12 tiet pehmeät, puistot ja kiitotiet pois, Seine osin haalea.
+PT 11.3x: katsoi z12, z13, kauko: lohko poissa, hinta kuten kirjoitettu; parit KK:lla. PYSY SEIS KARTASSA, kunnes PT antaa sanan KK:n vastauksen jälkeen. Kirjaa tulos.md:hen Pariisi-nimen paikanvaihto kaukokuvassa (4,2), kun syy selviää.
 SEURAAVAT VASTA PT:N SANALLA: 2) vaihtohetki ruutusarjana (ei videoita omistajalle), 3) kallistus 45, 70, 85 (nyt yli 3°:ssa pääkamera, eli saumat jäävät; sääntö on suunniteltava), 4) iso iPad JU:n vuorolla, "iPad, ei iPhone". Muisti ei mitattu; TasainenLaatta-merkintä (+146 Mt, 45° ei vaikutusta) tarkistamatta kuvista: sano se tuloksessa. Jos ei ratkea kahdella yrityksellä, rivi, ei jatkoa.
 
 ## 2. LÄHIZOOMI (JUNAAN ODOTETAAN): dd3a2e10f (natiiviseppa/iphone-lahizoomi, sisältää 8d8842ce6:n)
