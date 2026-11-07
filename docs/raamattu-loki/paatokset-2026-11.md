@@ -927,3 +927,7 @@ Kortti "Viedäänkö talot kauemmas junaan, vaikka vaikutus iPhonella näkyy vas
 ## PALATSIN REUNAKIVET JA JÄÄNTEET (omistaja 15.46) (7.11.2026 klo 15.47)
 
 "Saako koko reunakivisarja lähteä palatsista kuvan 1 mukaan?" → "Saa (Suositus)", selite "252 reunakiven osaa pois, lattia muuriin asti." "Poistetaanko myös kuvan 3 ruskeat reunat ja matalat kappaleet?" → "Poistetaan (Suositus)", selite "Enintään kaksi yritystä, sitten uudet kuvat." Kerrottu: Mac, iPad ajamatta; tumma laikku on täyttövirhe, korjaus ajamatta; boordi ehjä, laatan lähde mittaamatta; juna odottaa tätä 12.50:n mukaan. Omistaja näki palkki-parin, boordi-parin ja arkki-lisan (kuvat/palkki2/). Kolmannen yrityksen tarve: uudet kuvat KK:lle, ei jatkoa ilman omistajaa.
+
+## LONTOON KESKUSTAN MADALLUS (omistaja 15.59) (7.11.2026 klo 15.59)
+
+"Kelpaako Lontoon keskusta näin madallettuna?" → "Kelpaa (Suositus)", selite "Keskusta matalaksi, Hampstead ja Stratford ennallaan." Omistaja näki holborn-parin, iso iPad. Kerrottu: Stratford on PT:n ratkaisu ja omistaja voi muuttaa; kytkentä, mallien korkeudet ja matala kuva auki, ei junassa; iPhone ajamatta. Kortti koskee vain kuvan madallusta, ei leijumista. Matala kuva St Paul`sista KK:lle ennen junaa.
