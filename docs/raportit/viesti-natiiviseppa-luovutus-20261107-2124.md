@@ -6,16 +6,28 @@ ENSIN: cron "4 9 * * *" (session-only, Raamattu 7.41), skripti /Users/Shared/Cla
 P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-tarina-4b, O = P/valmis-origo, V = P/valmis-jalki2, H = P/selvitys-origo-hinta, L = /Users/Shared/Claude/proto-3d/lokit, A = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/aloitus-tyhjat, T = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/lontoo-kamera. Python numpyllä ja PIL:llä: /opt/homebrew/opt/python@3.14/bin/python3 ilman -I:tä.
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
-## PARIISIN MUISTI: VALMIS, EI TOIMIA (raportoitu PT:lle 21.00; EI UUSIA MUISTITÖITÄ ennen KK:n kortteja, PT 20.2x)
+## TYÖ NYT: MUISTITYÖ (PT 21.2x, sanatarkasti). SEURAAVA ERÄ: KOHTA 1, NAPAKALOTTIEN PUHDAS COMMIT
+"PT: OMISTAJAN PÄÄTÖS 21.19: muistityö alkaa järjestyksessä 0, V, 1, 2; suunnitelma /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261107-muistisuunnitelma.md. Koe13 tauolle, jos se ei ole jo ajossa; jatkuu tämän jälkeen. Nimien karsinta jää pois. Näkyvä muutos vain omistajan kortilla kuvaparista.
+Sinulle järjestyksessä:
+1. Napakalotit junaan 220 (omistaja: viedään): puhdas commit 72e257a0b:n päälle, vain kalotit, ei MuistiKuvaa eikä koekomentoja, diff tarkistettuna. Sha minulle; junavuoro sanallani.
+2. Vaihe 0: mittarit, ja erillisenä ajona latausrajakoe "maasto lataus 64 40 40" sumeasta alueesta (sanani annettu). Ei Rakennus.cs-korjausta; tulos minulle.
+3. Vaihe V: palojen lataus seis, kun vapaa muisti loppuu.
+4. Vaihe 1:n DC3 ja pilvet, 2a ja 2b. Kokoa vaihe 1 yhteen koehaaraan: NUI tekee oppaan, aloitusvihjeet ja linssit, PK juoksupelin kuvat, ja he antavat sinulle shan.
+5. Vaihe 3 kokeena: ASTC iPadilla, kuvaparit; junaan vasta omistajan päätöksen jälkeen. Huomioi 3.11. käännösvika.
+Mittaustapa: jokainen omana ajonaan, sama käynnistys kytkimellä tai vähintään 3 ajoa, määrät pelin lokista, verrokki ei käy kytkimen läpi. Tulokset minulle."
+Lähtökohta kohdalle 1: työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, haara natiiviseppa/pariisi-muisti; f1c6111a8 sisältää kalotit, muistikuva-komennon ja syvyysvahdin sekaisin, a04bdb753 verrokin kytkimen napat-pois.txt. Junaan vain kalottien poisto, ei kumpaakaan muuta. Tausta: _tyo/natiiviseppa/pariisi-muisti/tulos.md.
+PT 21.2x: 630 Mt on muistikuvan aukko, ei kadonnutta muistia; "nähtävyyskuvat 108" ja "talot 43" ovat alarajoja. Katto: PT kuittasi koe13:n päättyneen oikein; v20 jää, päätös KK:n kautta omistajalle.
+
+## PARIISIN MUISTI: ENSIMMÄINEN AJO (tausta; raportoitu PT:lle 21.00)
 Tulos _tyo/natiiviseppa/pariisi-muisti/tulos.md (loppu "TULOS, ajo 0b"), parit pariisi-muisti/parit/, purku kuva1/kuva2 + csv samassa kansiossa. Kokonaissuunnitelman tekee KK. MuistiKuva ja kytkimet eivät mene junaan. Odottaa PT:n tai KK:n sanaa: latausrajat (LuoPallo ylikirjoittaa kohtauksen, 40/64 ei ole koskaan päätynyt käännökseen; EI KORJAUSTA ilman sanaa); napakalottien kevennys. muistikuva/pura.zsh on nyt U = b8. ajo.zsh hakee vanhan muistivahti-tuloksen, kun vahti on pois: korjaa ennen uusintaa.
-## KATOT: KOE12 KATSOTTU, KOE13 EI AJETTU; ODOTTAA PT:N PÄÄTÖSTÄ (raportoitu PT:lle 21.23; EI UUSIA KOKEITA)
+## KATOT: KOE13 PÄÄTTYI, V20 JÄÄ (PT kuitannut; EI UUSIA KOKEITA)
 LUE _tyo/natiiviseppa/talotyylit/tulos.md LOPPU. PT 21.1x: koe13 oli VIIMEINEN koe; jos mittari ei täyty, v20 jää ja päätös menee omistajalle PT:n kautta. Ei koko Pariisia, ei Lontoota, ei junaan.
 JUURISYY (PT hyväksynyt): tee-palat.py lisaa(): `if ala(r)<0:r.reverse();ulko=ulko[::-1]` antaa avain[i]=r[i-1]: naapuritieto yhden reunan väärässä kohdassa. 18 488 / 127 983 taloa (14,4 %), 604 km naapurireunaa; koealueella 1 375 / 1 460. Mukana v20:ssä ja saman rivin kautta tee-palat-lontoo.py:ssä. EI korjattu kummassakaan.
 KOE12 (palat-v21-koe12-katot, kuvat/koe12/): mansardin jatkuvuus v20:tä parempi; hampaat (piikit väliseinien päissä, sulun pystykulma; koodista ja kuvasta, ei ajolla todistettu) ja raot (r85:ssä 2) huonommat. Kaukaa 45°: dL -2,24, L-hajonta 7,3/6,6.
 KOE13 EI AJETTU PT:n ehdolla: ilman sulkua vähintään 0,5 m:n avoin porras 15,5 km:llä (54 % yhteisistä seinistä), ilman kiilaa kansi yli 0,5 m reunasta 9,3 km:llä. Koe13:n muutos: pariisi-talot/tee-palat-koe13-ei-ajettu.py, talotyylit/paivita-koe13.py. pariisi-talot/tee-palat.py = koe12 (kopio talotyylit/tee-palat-koe12.py).
 R85:N KAKSI RAKOA EI SELVINNYT KOHDALTA (kerrottu PT:lle): sijaintinaapuri ja alle 3,5 m:n vapaat välit poissuljettu. Kamera r85: suunta 315, 343 m taakse, silmä 80, f 1966 (kuva 2752), horisontti y 860; perspektiivi-skripti oli scratchpadissa, ei säily.
-Mahdollinen jatko vain PT:n tai omistajan sanalla: uusi tapa (korttelin yhteinen kattokorkeus tai vino sulku). Odottaa myös PT:n sanaa muistista (ei muistitöitä eikä koetta "maasto lataus 64 40 40" ennen sanaa; PT 21.1x; muistituloksen 630 Mt on muistikuvan aukko, ei kadonnutta muistia; suunnitelma suunnitelmat/20261107-muistisuunnitelma.md). Muistityö menee edelle, jos sana tulee.
-JONO: ei muuta. Cron "4 9 * * *" luotava uudelleen. Lukulista 7.47: lue silti.
+Mahdollinen jatko vain PT:n tai omistajan sanalla: uusi tapa (korttelin yhteinen kattokorkeus tai vino sulku).
+Cron "4 9 * * *" luotava uudelleen. Lukulista 7.47: lue silti.
 
 ## AUKI, ODOTTAA MUITA (ei toisteta, ei tehdä ilman sanaa)
 - Yksi taso: koe jää haaraan, 80°:n kevennys auki. Julkisivu: PT/KK:n sana, ei junaan. Palikkakirjasto: odottaa omistajan korttia (Pariisi valmis + muisti). Kameraeste ea5823b4f: ei junaan. Sumea alue: aamun kysymys KK:lla, ei yrityksiä. Meri: VS:lle PT:n kautta.
