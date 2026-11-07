@@ -2,6 +2,11 @@
 
 Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opit: `git show 283a7eb52:docs/raportit/viesti-pelikoodari-luovutus-20261107-2125.md` kohta 3.
 
+## 00. TILA 23.2x (PT 23.17 + kohta 0)
+- PT 23.17 (omistaja 23.10): "Keisarin pitää juosta karkuun automaattisesti pelin alussa. Myös alun drone lennossa on teksti liian iso ja korkealla." TEHTY `1888141a9` (`pelikoodari/keisari-lahtee-itse`, 72e257a0b:n päällä, työpuu `wt/proto-pelikoodari-tarkastelu`): ohjauksen siirtyessä taso 1 keisari kääntyy itse oikealle vastaseinältä (JuoksupeliNakyma `itseLahto`); JuoksuOtsikkoPaikka 20 % korkeus / 55 % leveys, alareuna 31 %.
+- Kohta 0 TEHTY `003ab5b9f` (`pelikoodari/muisti-latauskuvat`): VaakaOtsikko 1260 → 900 px, keskiY 143 → 190 px; lasketut kuvat `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/latauskuva-otsikko-{ennen,jalkeen}-laskettu.png`.
+- Esikatselua varten yhdistelmä `e26c3ad16` (`pelikoodari/esikatselu-otsikot-lahto`). Skenaario `_tyo/pelikoodari/keisari-lahtee/sk.txt`. JU:lta pyydetty vuoro 23.2x: 4 ajoa (ipad, iphone-vaaka × e26c3ad16 ja 72e257a0b). Kuvat PT:lle, PT → KK. Ei junaan ilman kuittausta.
+
 ## 0. ENSIN (PT 23.10, omistajan havainto 23.06), ennen kohtaa 1
 "Viimeinen keisari teksti lataus kuvassa on liian isolla ja liian ylhäällä." Tavoite: otsikko pienempi ja alempana. Tee latauskuvahaaraan `pelikoodari/muisti-latauskuvat` (190d6c094:n päälle, työpuu `wt/proto-pelikoodari-muisti`). Kuva iPadin ja iPhonen kokoisena PT:lle → KK ennen junaa. Otsikon paikka lokissa: "latauspalkki paikka (448, 925) pt, otsikko (136, 33, 1093×182), isäntä 1366×1024" (iPad, TF 219), koodi `UI/Pelit/JuoksupeliNakyma.cs` noin rivit 290-360. Ei aloitettu.
 Lisätieto PT:ltä: latauksen hitaus näkyi iPhonella ja pienellä iPadilla.
