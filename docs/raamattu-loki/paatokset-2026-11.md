@@ -931,3 +931,7 @@ Kortti "Viedäänkö talot kauemmas junaan, vaikka vaikutus iPhonella näkyy vas
 ## LONTOON KESKUSTAN MADALLUS (omistaja 15.59) (7.11.2026 klo 15.59)
 
 "Kelpaako Lontoon keskusta näin madallettuna?" → "Kelpaa (Suositus)", selite "Keskusta matalaksi, Hampstead ja Stratford ennallaan." Omistaja näki holborn-parin, iso iPad. Kerrottu: Stratford on PT:n ratkaisu ja omistaja voi muuttaa; kytkentä, mallien korkeudet ja matala kuva auki, ei junassa; iPhone ajamatta. Kortti koskee vain kuvan madallusta, ei leijumista. Matala kuva St Paul`sista KK:lle ennen junaa.
+
+## LONTOO-NIMI HÄIPYY (omistaja 16.09) (7.11.2026 klo 16.09)
+
+"Kelpaako, että Lontoo-nimi häipyy pyyhkäistessä eikä hyppää?" → "Kelpaa (Suositus)", selite "Korjaus menee junaan." Koskee 5bd4aa484:ää. Kerrottu: vain Mac; tason vaihtumisen kautta nimi on yhä Regent`s Parkin puolella; Pariisissa nimi puuttuu kahdessa pysähdyksessä ilman korjaustakin; Wellington ja Mornington auki. Omistaja ei pyytänyt näihin työtä.
