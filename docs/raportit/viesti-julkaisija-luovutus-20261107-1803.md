@@ -30,3 +30,5 @@ LISÄYS junan iPhone-tarkistukseen (PT 17.30): kallista hitaasti 85° → 45° P
 - Tallenne-ajo jättää kuvat kansioihin ja fps.txt:n (kuvat, video). Mp4 ffmpegillä, malli T/vs-hyppy-runko2.zsh.
 - zsh: "$X:refs" tulkitaan :r-muunnokseksi; refspec lainausmerkkeihin ilman muuttujaa tai ${X}.
 - Pysäytetyn laite-sha:n lukko voi jäädä: tarkista pid ja kuka, sitten vasta pois.
+
+## LISÄYS: NS talotyylit koe2 901e4004b pid 28517, vapaa linja, 8 kuvaa t2-*, aikaraja 20 min, lokit/natiiviseppa-talotyylit-koe2. Kuittaus NS:lle: palat > 0 ja 0 rivi talot 0:n jälkeen. Ei junaan.
