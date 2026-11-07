@@ -7,11 +7,11 @@ KK 02.28 omistajan valtuutuksella, kokeena, ei junaan: sarja kelpaa. Heikkoihin 
 Haara `linssiseppa2/lontoo-c`, kärki e973cef98, työpuu `/Users/Shared/Claude/wt/proto-linssiseppa2-k32`. Palat `pelikoodari/lontoo/palat-d7`. Ajot `lokit/linssiseppa2-lontoo-f1-39951594b` ja `-f2-e973cef98`. Parit `_tyo/linssiseppa2/lontoo-e/parit/`, tekijä `tee-parit.py`. NHM:n tornit 58 m (22680f8c6, Historic England).
 Tower Bridge ja St Paul's on ajettu viimeksi c2:ssa, ei nykyisillä paloilla.
 
-## 2. AVOIN PT:LLÄ: Z14-PALAT
-PK haki kolme palaa (`pelikoodari/lontoo/a/mvt-lisa/14/{8183/5448,8191/5449,8191/5450}.pbf`) "samalta palvelimelta kuin peli"; robots.txt antoi 403. Isäntä on päätelmä, todennäköisesti kolmannen osapuolen `tiles.openfreemap.org` (`Laattapalvelin.Elava.cs:27`); tarkka polku vain PK:lta. Palat vaikuttavat todennäköisesti e973cef98:n poistoihin. PT 02.2x: jos isäntä on kolmannen osapuolen, palat eivät mene aineistoon ennen selvitystä. Vastasin PT:lle, en muuttanut mitään. Jos PT käskee poistaa, se on PK:n aineistoa.
+## 2. Z14-PALAT: PT RATKAISI 02.3x (Raamattu 2.183)
+OpenFreeMapin ehdot kieltävät automaattisen datan keruun. EI skriptattuja hakuja sieltä, myös k22:n, k52:n ja k54:n hae-työkalut. Parit KK:lla pysyvät kokeena. PK korvaa kolme palaa (`pelikoodari/lontoo/a/mvt-lisa/14/`) planeettaotteesta; se on PK:n työ, ei sinun.
 
-## 3. SEURAAVA: PT:LTÄ
-Tarjosin PT:lle Palais Bourbonin pihaa, ellei se määrää muuta (ei kuittausta luovutushetkellä). `sk-pb-piha.txt` pc-etela, pc-pohjoinen ajossa 37 (`lokit/karttaseppa-yhteinen-37-b8-eec08f293`) on katsomatta; KS:n ajo 38. PT: ei saa viivyttää Lontoota.
+## 3. SEURAAVA: PALAIS BOURBONIN PIHA (PT 02.3x)
+`sk-pb-piha.txt` pc-etela, pc-pohjoinen ajossa 37 (`lokit/karttaseppa-yhteinen-37-b8-eec08f293`) on katsomatta; KS:n ajo 38. Katso kuvat ensin täysikokoisina rajauksina.
 
 ## 4. JONOSSA
 Rosoisuus; mallin valo kääntyy kameran mukana, varjo ei; 65°:n yläreunan vyö, La Défensen läpikuultavat tornit, maan viiva 75°; `git show origin/linssiseppa2/luovutus-20261106-1826:docs/raportit/viesti-valoseppa-luovutus-20261106-1826.md` kohta 6. Ääriviivojen iPad-mittaus ennen junaa (PT).
