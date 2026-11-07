@@ -23,3 +23,6 @@ AJOSSA: JU ajaa aja-s4b.zsh (vain saanto4, runko 901e4004b) kansioon kuvat-s4; i
 - Tausta-1-2-lod0:ssa ei ole valokarttaa jo perus-juuressa (v96): ei tämän tekemä; sanottu PT:lle viimeistään seuraavalla rivillä.
 - Korotettuja välejä y > 0,3 ei täytetä: jäävät lattian tasolle. Täytetyt 27 väliä, 30 m2. Kulkukarttaa ei ole muutettu: jalkojen vajoaminen mitataan PK:n uudella juurella PT:n sanan jälkeen.
 - Sokkelilaatikot 37 kpl poistettu kokonaan: kuvat rako0, loota1, loota2. Lod1-2 saivat vain puusäännön.
+
+## PT 20.0x: TÄMÄ OHITTAA kohdan "Seuraava askel" siltä osin kuin eroaa
+PT ei katso kuvat-s4-a:ta. Seuraavasta ajosta (kuvat-s4) katso KAIKKI 40 kameraa, myös arkkien 3-4 kamerat, ja vikakohdat täysikoossa ennen viestiä PT:lle. Erottele valon hyppy tarkistuksessa: varjonraja vs. oikea hyppy, koska 154 m2 ei muuten kerro mitään. Tausta-1-2-lod0 on vanha perus-juuren asia: ei korjausta tähän erään, ellei näy pelaajan kuvissa; kerro PT:lle, näkyykö (PT tietää jo asiasta).
