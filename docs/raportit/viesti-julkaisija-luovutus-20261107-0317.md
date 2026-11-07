@@ -8,6 +8,7 @@ Tarkista `ps -p` ja jonolokin häntä. Osa voi olla jo päättynyt, ja tulos on 
 2. PK E3 9005a46ab, L2, alkoi 03.17, pid 29716, 11 kuvaa, T/pk-e1.tulos, lokit/pelikoodari-lontoo-e3-9005a46ab. Kuittaus PK:lle.
 3. VS valomuoto ac508f55e, L1 yli5:n jälkeen, pid 56483, 11 kuvaa, T/vs-valomuoto.tulos, lokit/linssiseppa2-valomuoto-ac508f55e. Kuittaus VS:lle: lokikansio, Shader error (varjostin muuttui), Exception-rivit. Exception 11 on ollut editorin omia (Cesium ion, UnityEditor.Search). Katso yksi kuva ennen valmista: on kartalta, ei alkuvalikosta.
 4. KS 42 5b1a5491c, L1 valomuodon jälkeen, pid 69942, 10 kuvaa, T/ks-yhteinen42.tulos, lokit/karttaseppa-yhteinen-42-b8-5b1a5491c. Kuittaus Karttasepälle (seuraava Karttaseppä, sama id).
+5. NUI -7 ffe233d50, L2 E3:n jälkeen, pid 78357, T/nui-kyltit.tulos, lokit/nui-kyltit-liike-7. Kuittaus NUI:lle, myös rivi "laattapalvelin: paketti".
 Kaikki valmiit, jonossa ei muuta: rivi PT:lle "JONO TYHJÄ: Julkaisija". iPadilla on runko d092f48c, iPad-jono tyhjä.
 
 ## KESKEN OLEVAT KUITTAUKSET
