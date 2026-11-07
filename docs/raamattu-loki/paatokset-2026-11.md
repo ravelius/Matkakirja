@@ -799,3 +799,7 @@ KK 7.11.2026 klo 04.28 omistajan valtuutuksella, kokeena, ei junaan (VS cded7d32
 ## PANTHEON R8 PYSYY JA LONTOO E4, KK:N PAATOKSET VALTUUTUKSELLA (7.11.2026 klo 06.26)
 
 KK 7.11.2026 omistajan valtuutuksella, kokeena, ei junaan. Klo 05.09: Panthéon r8 pysyy, vaikka heikko reunus jää; r9 paljastaisi 45°:ssa rosoisen ruskean palan. Reunus kerrotaan omistajalle aamulla. Klo 06.11: Lontoo E4 (fdbf8a0ef) kelpaa. Viimeinen Lontoo-työ yöllä PK:lle: Pariisin kyltti- ja karttatoteutus KS:n yhteisajon kärjestä, oma kainalopoikkeus pois NUI:n korjauksella, yksi pallo per kohde, jos pieni muutos riittää; kaksi yritystä, ei Tripoa, palat vain poistot-d8:lla, yksi ajo E-parien kuvakulmilla.
+
+## PARIISI JA LONTOO, YON RATKAISUT (KK 06.40 ja PT, kaikki kokeena, ei junaan) (7.11.2026 klo 06.53)
+
+KK 7.11. klo 06.40: Lontoo G e48424a75 kelpaa kokeena; Big Benin ja palatsin kyltit, St Paul'sin tuplanimi ja 'Kuumailmapallo £200' jäävät aamun koontiin. PT:n ratkaisut: naarmukorjaus a80a81323 kokeen oletukseksi; kyltit 3d92da39e kokeena; 292afcef2 (ruukun z1-isku) ja Taso läpi -muunnelma 4aa9ec365 jäävät omistajan päätettäviksi aamulla; rappaus 2e1d2b87d aamuun. Pariisin kortin pohja a4269054a (ajo 46, 82/82).
