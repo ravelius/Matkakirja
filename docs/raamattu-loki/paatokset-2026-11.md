@@ -791,3 +791,7 @@ KK 7.11.2026 klo 03.29 omistajan valtuutuksella, kokeena, ei junaan: valomuoto a
 ## NUI:N KYLTIT, ALOITUSLENNON TEKSTIT JA KAINALO, KK:N PAATOKSET VALTUUTUKSELLA (7.11.2026 klo 03.56)
 
 KK 7.11.2026 omistajan valtuutuksella, kokeena, ei junaan. Klo 02.58: Natiivi-UI tekee ensin pallon väistön tarkistuksen ja kylttien selvityksen (Les Halles ja Tuileries), sen jälkeen aloituslennon viisi kuvaa. Klo 03.44: Pariisin listan kohta 10, aloituslennon päällekkäiset tekstit (Bastilji ja Place des Vosges): yksi viimeinen yritys. Klo 03.53: kainalotarkistus (NUI e5619a1c1) kelpaa kokeena; sijainnit ja kortti jäävät aamuun.
+
+## LÄHIYMPÄRISTÖT R8 JA R9, KK:N PÄÄTÖS VALTUUTUKSELLA (7.11.2026 klo 04.29)
+
+KK 7.11.2026 klo 04.28 omistajan valtuutuksella, kokeena, ei junaan (VS cded7d322, ajo lahi-1): Sacré-Cœur r8, Panthéon r8, Opéra r9, Invalidit r9 (oliiviraidat lähtevät, kartan oma Rodinin puutarha näkyy), Notre-Dame ei muutosta. Litteiden ruskeiden palojen syy jää aamuun; yhteisessä ajossa yksi Panthéonin kuva varjot pois, jos tilaa on, ei omaa ajoa eikä kolmatta yritystä. Kaista ja aukiot ovat KS:n palatyötä. Kiinniotossa eunukki ei ole vika (omistaja 27.10. 18.12, KK oikaisi 04.14); PK tekee vain Taso läpi -kortin ja lisäajon.
