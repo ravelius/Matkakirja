@@ -907,3 +907,7 @@ Omistaja 7.11. klo 13.41 (KK välitti) kortilla "Kokeillaanko samassa kortteliss
 ## OMISTAJAN PAATOS: JUNA 220 ON KOKO PARIISIN SISAINEN KOEVERSIO (7.11.2026 klo 14.46) (7.11.2026 klo 14.46)
 
 Omistaja 7.11. klo 14.46 (KK välitti) kortilla "Saako juna 220 olla koko Pariisin sisäinen koeversio?": "Saa (Suositus)". Selite: "Pariisin kokeet mukana, vain sisäiselle ryhmälle." Hänelle kerrottu ennen korttia: sisältö koodiluentana, ei ajettu; ei lukitse, ei korvaa Pariisi valmis -korttia; talojen aineiston lisenssi on ulkoisen julkaisun ehto. Kattaa aiemmat "ei junaan" -sanat sisäisessä versiossa (maalattu taivas 6.11. 22.15, Louvren korttelit 6.11. 10.04). Voimassa: 11.51 "Odottaa" ja 12.50 "Tehdään kaikki korjaukset ennen junaa"; juna odottaa talot kauemmas -korttia, palkkia ja boordia. Lähtösana PT:ltä, kun ehdot täyttyvät.
+
+## OIKAISU: KLO 14.46 KIRJAUKSEEN (7.11.2026) (7.11.2026 klo 14.48)
+
+Kirjauksessa "JUNA 220 ON KOKO PARIISIN SISAINEN KOEVERSIO" mainitut "ei junaan" -sanat (maalattu taivas 6.11. 22.15, Louvren korttelit 6.11. 10.04) eivät olleet omistajan sanoja: KK:n tarkistuksen mukaan Louvren kortin vastaus oli "Jätetään", ja "eivät tule junaan" oli KK:n oma lause, kuten taivaassa. KK:n tulkinta: 14.46 "Saa" kattaa ne Pariisin kokeena, ja omistaja voi kieltää; uutta korttia ei tule, ellei hän sano.
