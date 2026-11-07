@@ -1,4 +1,4 @@
-# Karttaseppä: luovutus 7.11.2026 klo 02.30 (KS)
+# Karttaseppä: luovutus 7.11.2026 klo 02.3x (KS)
 Syy: konteksti yli 30 %, pehmeä raja 25 %, kova 35 %; PT:n täysikokoinen läpikäynti ei mahdu tähän sessioon. Korvaa 7be4cf865:n ja kaikki aiemmat. Pohja `_tyo/karttaseppa/luovutus-koonti.md`: enintään 60 riviä.
 Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttaseppa-yhteinen (haara karttaseppa/ajo-yhteinen-tasoitus, kärki ccc12f9e5, remote natiivi-backup, ei origin). W = /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219 (karttaseppa/nahtavyydet-219, eb4fa95d2). L = wt/proto-karttaseppa-lod (poista, kun kevyiden mallien kohtalo on päätetty). Täydet polut `T=/Users/Shared/Claude/proto-3d/_tyo/karttaseppa`.
 ## ENSIN
@@ -15,7 +15,8 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 7. **Kaukaiset erot ja Sacré-Cœur: kuitattu** (`$T/parit-yhteinen-39/ARVIO.md`). Palan maan mediaani selittää v16 | v17:n lohkot; 0,2–1 m pyöristys ei vaadi korjausta (PT). Sacré-Cœurin kaistan rivi PT:llä KK:lle. Tumma kaari on VS:llä. Panthéonin luoteen ala, Montparnassen ruskea alue ja 25 m:n raja odottavat aamua.
 8. **KK 23.47 (valtuutuksella):** nimetty oikea rakennus, ei mallia, yli 25 m mallista → palaa; alle 25 m jää pois, lista aamuun `lahialue-20261106/nimetyt/nimetyt-luokiteltu.txt`. Ei koske omistajan päätöksiä (Eiffel ja Montparnasse 22.20, Monoprix, Seinen laivat, Notre-Damen saari). Louvren verkon Saint-Germain-l'Auxerrois: KK:n kysymys.
 9. v14 ja v15 käyttämättä levyllä: ei poistoja ilman sanaa. Jäävät: Hôtel Biron, Galerie des Marbres, Aérogare. VS: kadun katkos 2,2907°. Etäyhteys vain KK:lla. Hookin työlistarivit ovat PT:n työkalulla, en päivitä. Omistaja 22.15: maalattu taivas kokeena vain Pariisissa. ND #2184 s85 oletus Y 6eefdbbb1.
-10. Kun lista on tyhjä: rivi PT:lle "JONO TYHJÄ: Karttaseppä". Seuraava ajo vasta, kun v19:ään tulee muuta tai PT sanoo.
+10. **PT 02.3x (Raamattu 2.183): OpenFreeMapin ehdot kieltävät automaattisen datan keruun; robots 403. Ei skriptattuja hakuja sieltä.** tee-poistot.py ja `laikka-vesi-20261106/`-työkalut lukevat vain pelin omaa mvt-välimuistia, eivät hae verkosta; tee-palat.py ei käytä OpenFreeMapia. Riippuvuus PT:llä.
+11. Kun lista on tyhjä: rivi PT:lle "JONO TYHJÄ: Karttaseppä". Seuraava ajo vasta, kun v19:ään tulee muuta tai PT sanoo.
 ## AJO 32 (arvio `parit-yhteinen-32/ARVIO.md`, parit `parit-yhteinen-32/kk/`)
 - Ryhmä 1 oikein: `talot 0`, odota, `talot kansio v11`, `talot 1` (pelkkä kansio ei vapauta ladattuja paloja, ajon 31 r1 kelvoton, `parit-yhteinen-31/kk/ei-kelpaa-v10-molemmilla`). Eiffel: jalka vapaa. Montparnasse: juuri näkyy; **puiden alla ruskea tasainen alue, syy tutkimatta** (kartan rakennuspinta?).
 - ND #2184: Y `NotreDameKoe/lod5-20261106` (092fee5bb, `codex-lod-20261106/tee-lod-v5.py`). Leveneminen 1,247, nykyinen 1,174, tilaus 1,25; fleche vihreä. Kivi julkisivulla Y: nykyinen 0,416; 100 % 0,473; 85 % 0,425; 72 % 0,382. Piirrosjälki ja isot vaaleat tasanteet omistajan nähtäviksi. Kuittaus Codexille ad9c139e5: SHA, päätös erikseen. Nykyinen pysyy, kunnes omistaja on nähnyt.
