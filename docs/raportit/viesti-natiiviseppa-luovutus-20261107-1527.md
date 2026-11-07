@@ -7,6 +7,14 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 17.20 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+TYÖ NYT: IPHONE-KATTO (omistaja 17.12, PT: ennen muistin jatkoa). 901e4004b natiiviseppa/iphone-katto (natiivi-backup, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, pohja 045844251): PariisiKallistus.RakoVahintaanM 30 → 60 m, testit 710/710. PT:lle kerrottu raja ja korkeudet, ÄLÄ TOISTA.
+TILATTU JU:lta 17.2x, ÄLÄ TILAA UUDELLEEN: _tyo/natiiviseppa/iphone-katto/ajopyynto-mac.md, loki lokit/natiiviseppa-iphone-katto-901e4004b, kuvat ik-85, ik-80, ik-70, ik-45 (lahizoomi 4.89, suunta 315, sama kohta kuin julkisivu4).
+KUN JU KUITTAA: tarkista "talot tila: palat" > 0 ja "lähin korkeus 343 m". Katso täysikoossa ik-85 verrokkia lokit/natiiviseppa-julkisivu4/jq-iphone-85-pois.png vasten: kamera kattojen yllä, ei seinien välissä; ik-70 ja ik-45 lähellä kuten ennen. Mac, ei iPhone: 4:3 ja tarkempi kuva, sano se. Kuva PT:lle (raakakuva täysikoossa), sitten junavuoro PT:ltä. Ei iPadia. Jos kamera ei nouse riittävästi tai näkymä hyppää: yksi korjaus, muuten PT:lle syy.
+Nosto on tehty LaskeAsennon olemassa olevalla Pariisin nostolla: katsepiste ja silmä nousevat yhdessä, etäisyys pysyy. Koskee Pariisia ja Lontoon koetta; muualla VahimmaisRako on jo 150 m. Lontoosta ei kuvaa eikä Mac-ajoa.
+MUISTI: PT 17.1x: EI A/B-AJOA, omistajan linja on muisti lopuksi, yhteisajo mittaa junan. Havainto kirjattu muisti-7-b8/tulos.md kohta 8. NUI:n numerot ajosta 8 ovat siellä, ei vastausta tarvita. Älä tee alemman 17.2x-lisäyksen "odotetaan sanaa ajoon" -kohtaa.
+Levy: luovutus-worktreet 1912 ja 2052 poistettu (3 Gi), Postivahti tietää.
+
 ## LISÄYS 17.2x (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 MUISTI 7 VS B8 TEHTY JA KERROTTU PT:LLE (2 riviä, ml. ajo 9), EI TOISTETA: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/muisti-7-b8/tulos.md (skriptit samassa kansiossa). Ei koodivikaa näkyvissä: +110 = b8 on 13 Pariisi-ajon matalin, +89 = VIKAn jälkeistä; juna 220 Pariisissa mittaamatta. Lepo 3845 + nousu 240 = raja, ajo 9 (elämä) VIKA 4088, ajo 8 ei.
 ODOTETAAN PT:N SANAA yhdestä ajosta (tulos.md kohta 5; A/B esilataus, kuvan hinta, juna 045844251). Ei tilattu. EI iPADIA ITSE. Skenaario pitää tehdä, jos sana tulee: tarkista oleta-uusi-muoto mallista _tyo/natiivi-ui/sk-kartan-elama-8-ipad-pois.txt.
