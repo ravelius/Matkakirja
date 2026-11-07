@@ -815,3 +815,7 @@ Kortti: Tehdäänkö muut kaupungit ohjelmalla ilman Tripoa? Vastaus: Ei vielä 
 ## OPENFREEMAP: EI KYSYTA; POISTOTAULU AVOIMESTA AINEISTOSTA (omistaja 7.11.2026 klo 07.49, kortit KK) (7.11.2026 klo 07.49)
 
 Kortti: Kysytäänkö OpenFreeMapilta lupa pelin koko käytölle ennen ulkoista julkaisua? Vastaus: Ei kysytä (Käyttö pysyy ennallaan, ja epäselvä osa jää auki). Kortti: Haetaanko poistettavat talot jatkossa avoimesta aineistosta ja poistetaan vanhat haetut palat? Vastaus: Kyllä (Suositus) (Tehdään, kun Pariisin kartta on lukittu. Peli käyttää elävää karttaa yhä palvelusta). KK: viestiä ei lähde; skriptattujen hakujen kielto pysyy; poisto oma työnsä lukituksen jälkeen, ei koeversioon. Raamattu 2.204.
+
+## SISAINEN KOEVERSIO 219: PARIISI, LONTOO JA JUOKSU (omistaja 7.11.2026 klo 07.41-07.53, kortit KK) (7.11.2026 klo 07.54)
+
+07.41 Julkaise juna niin kokeilen pelissä. 07.43 Mitä kokeiltavaan versioon tulee? = Yön Pariisi ja Lontoo (sisäinen koeversio, kokonaisuutta ei ole ajettu iPadilla). 07.52 Otetaanko juoksupelin tason 1 korjaukset samaan koeversioon? = Kyllä. 07.53 Saako sisäinen koeversio lähteä, vaikka verkon palautus, iPad-testit ja lippu ovat auki? = Saa lähteä (vain sisäisille; kolme asiaa pysyvät ulkoisen julkaisun ehtoina). Runko c390b057f + e48424a75 + 3ed82d1fb. Ei ulkoisille, ei lukitusta. PT 07.48: talot sovelluksen mukaan (+660 Mt, palat vain Macissa, PK 6b688b3d1), yksi iPad-ajo ennen vientiä; kaatuessa takaisin KK:lle, ei omaa uutta yritystä. ODbL ei estä sisäistä, tarkistetaan ennen ulkoisia.
