@@ -1,10 +1,11 @@
 """Vanhat T7:n lokit NAS:lle (PT 7.11.2026). Oletus on kuiva-ajo: ei kirjoita mitään. Oikea siirto vain --aja:lla, ja se vaatii PT:n sanan.
 Käyttö: python3 -I siirra_lokit_nas.py [--aja] [--raja-vrk 7] [--enintaan N] [--vain nimi ...]
 
-Yhdelle kansiolle: kopio piilonimelle -> täsmäys (tiedostot, kansiot, linkit, koot, suurimman tiedoston sha256) -> nimi oikeaksi -> lokit-kansion linkki NAS:lle -> T7-kopion poisto.
-Linkki vaihdetaan ennen poistoa, joten polku ei katkea missään vaiheessa. Tila luetaan levyltä: uusi ajo jatkaa siitä, mihin edellinen jäi, ja lukko estää kaksi yhtäaikaista ajoa.
-Ei koske: alle rajan muokattuihin, auki oleviin, appikopioihin, kansioihin ilman täsmälleen T7:lle osoittavaa linkkiä. NAS lisää tiedostoille ._-kylkitiedostot; ne eivät kuulu täsmäykseen."""
-import argparse, fcntl, hashlib, os, shutil, subprocess, sys, time
+Yhdelle kansiolle: kopio piilonimelle -> täsmäys (tiedostot, kansiot, linkit, koot, suurimman tiedoston sha256) -> nimi oikeaksi -> vanha lokit-kansion linkki pois -> T7-kopion poisto.
+NAS:lle ei tule uutta linkkiä (Raamattu 12.19, PT 7.11. 18.5x), joten siirretyn lokin vanha polku lakkaa toimimasta; arkistopolku on Matkakirja-arkisto/lokit/<nimi>. Olemassa oleviin NAS-linkkeihin ei kosketa.
+Tila luetaan levyltä: uusi ajo jatkaa siitä, mihin edellinen jäi, ja lukko estää kaksi yhtäaikaista ajoa. Aja vain Julkaisijan vuorolla: T7:n kuorma hidastaa esikatselua.
+Ei koske: alle rajan muokattuihin, auki oleviin, appikopioihin, kansioihin ilman täsmälleen T7:lle osoittavaa linkkiä, eikä kansioihin, joihin docs/raportit tai tools viittaa (listataan). NAS lisää tiedostoille ._-kylkitiedostot; ne eivät kuulu täsmäykseen."""
+import argparse, fcntl, hashlib, os, re, shutil, subprocess, sys, time
 
 APP_MERKIT = ('-app', 'app-', 'juna-', '-mac-tf-', '.app')
 KESKEN, POISTOON = '.kesken-', '.poistettava-'
@@ -67,9 +68,16 @@ def auki_olevat(juuri):
     return {r[1 + pit:].split('/')[0] for r in p.stdout.splitlines() if r.startswith('n' + juuri + '/')}
 
 
-def linkki_vaihto(polku, kohde):
-    uusi = f'{polku}.siirto-{os.getpid()}'
-    os.symlink(kohde, uusi); os.replace(uusi, polku)
+def viittaukset(repo, ref, nimet):
+    """{nimi: ensimmäinen viittaava tiedosto} docs/raportit- ja tools-kansioista. Nimi pitää olla kokonainen sana polkumerkkien välissä. None, jos haku ei onnistu."""
+    osa = re.compile(r'[A-Za-z0-9._+-]+')
+    if any(not osa.fullmatch(n) for n in nimet): return None
+    p = subprocess.Popen(['git', '-C', repo, 'grep', '-I', '-o', '-E', '[A-Za-z0-9._+-]+', ref, '--', 'docs/raportit', 'tools'], stdout=subprocess.PIPE, env={**os.environ, 'LC_ALL': 'C'})
+    tulos = {}; etsi = set(nimet)
+    for r in p.stdout:
+        _, tiedosto, sana = r.decode('utf-8', 'replace').rstrip('\n').split(':', 2)
+        if sana in etsi and sana not in tulos: tulos[sana] = tiedosto
+    return tulos if p.wait() in (0, 1) else None
 
 
 def poista_t7(a, juuri):
@@ -78,13 +86,15 @@ def poista_t7(a, juuri):
     shutil.rmtree(a)
 
 
-def syy_ohittaa(n, a, lk, t7, raja, auki):
+def syy_ohittaa(n, a, lk, valmis_nas, raja, auki):
     if n.startswith(('.', '_')) or '/' in n: return 'piilo tai polku'
     if os.path.islink(a): return 'linkki'
     if not os.path.isdir(a): return 'ei kansio'
     if any(m in n for m in APP_MERKIT): return 'appikopio'
-    if not os.path.islink(lk): return 'ei linkkiä lokit-kansiossa' if not os.path.lexists(lk) else 'lokit-kansiossa oikea kansio'
-    if os.readlink(lk) != a: return 'linkki osoittaa muualle'
+    if not os.path.lexists(lk):
+        if not valmis_nas: return 'ei linkkiä lokit-kansiossa'
+    elif not os.path.islink(lk): return 'lokit-kansiossa oikea kansio'
+    elif os.readlink(lk) != a: return 'linkki osoittaa muualle'
     if auki is None: return 'auki-tieto puuttuu'
     if n in auki: return 'auki'
     if uusin(a) >= raja: return 'muokattu rajan sisällä'
@@ -96,6 +106,7 @@ def main():
     o.add_argument('--aja', action='store_true'); o.add_argument('--raja-vrk', type=float, default=7.0); o.add_argument('--enintaan', type=int); o.add_argument('--vain', nargs='*')
     o.add_argument('--t7', default='/Volumes/T7 4TB/koodaus/proto-lokit-arkisto'); o.add_argument('--nas', default='/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/lokit')
     o.add_argument('--lokit', default='/Users/Shared/Claude/proto-3d/lokit'); o.add_argument('--lukko', default='/Users/Shared/Claude/_levy/siirra_lokit_nas.lukko')
+    o.add_argument('--repo', default=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))); o.add_argument('--ref', default='origin/main')
     a = o.parse_args()
     for p in (a.t7, a.nas, a.lokit):
         if not os.path.isdir(p): sys.exit(f'puuttuu: {p}')
@@ -110,9 +121,12 @@ def main():
     for n in sorted(os.listdir(a.t7)):
         if not n.startswith(POISTOON): continue
         nimi = n[len(POISTOON):]; b = os.path.join(a.nas, nimi); lk = os.path.join(a.lokit, nimi)
-        if not (os.path.isdir(b) and os.path.islink(lk) and os.readlink(lk) == b): print('JUMI', n, 'NAS-kopio tai linkki puuttuu; ei poisteta'); continue
+        if not os.path.isdir(b) or os.path.lexists(lk): print('JUMI', n, 'NAS-kopio puuttuu tai linkki yhä paikallaan; ei poisteta'); continue
         print(('JATKAN POISTOA ' if a.aja else 'JATKAISI POISTOA ') + nimi, flush=True)
         if a.aja: poista_t7(os.path.join(a.t7, n), a.t7)
+    nimet = [n for n in os.listdir(a.t7) if not n.startswith(('.', '_')) and os.path.isdir(os.path.join(a.t7, n))]
+    viitatut = viittaukset(a.repo, a.ref, nimet)
+    if viitatut is None: sys.exit('viittaushaku epäonnistui: ei ajeta')
     aika = time.time(); auki = auki_olevat(a.t7)
     tehty = virheita = 0; tavut = 0; ohi = {}; t0 = time.time()
     for n in sorted(a.vain if a.vain else os.listdir(a.t7)):
@@ -120,8 +134,9 @@ def main():
         if a.enintaan is not None and tehty >= a.enintaan: break
         if not os.path.lexists(s): ohi['ei T7:lla'] = ohi.get('ei T7:lla', 0) + 1; continue
         if a.aja and time.time() - aika > LSOF_VALI: aika = time.time(); auki = auki_olevat(a.t7)
-        syy = syy_ohittaa(n, s, lk, a.t7, raja, auki)
+        syy = syy_ohittaa(n, s, lk, os.path.isdir(b), raja, auki)
         if syy: ohi[syy] = ohi.get(syy, 0) + 1; continue
+        if n in viitatut: print('VIITATTU', n, viitatut[n]); ohi['viitattu'] = ohi.get('viitattu', 0) + 1; continue
         z = koko(s)
         if not a.aja:
             print('SIIRTYISI', n, f'{z / 2**30:.2f} Gi' + (', NAS-kopio jo olemassa' if os.path.lexists(b) else '')); tehty += 1; tavut += z; continue
@@ -136,7 +151,7 @@ def main():
             else:
                 ero = tasmaa(s, b)
                 if ero: raise RuntimeError('NAS-kopio ei täsmää: ' + ero)
-            linkki_vaihto(lk, b)
+            if os.path.islink(lk): os.unlink(lk)
             t = os.path.join(a.t7, POISTOON + n); os.rename(s, t); poista_t7(t, a.t7)
             tehty += 1; tavut += z
             print('SIIRRETTY', n, f'{z / 2**30:.2f} Gi', flush=True)
