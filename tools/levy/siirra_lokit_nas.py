@@ -156,8 +156,8 @@ def main():
             tehty += 1; tavut += z
             print('SIIRRETTY', n, f'{z / 2**30:.2f} Gi', flush=True)
         except (OSError, RuntimeError) as e:
-            virheita += 1; print('VIRHE', n, e, flush=True)
-            if virheita >= 3: print('kolme virhettä: lopetan'); break
+            virheita += 1; print('VIRHE', n, e, flush=True); print('pysähdyn ensimmäiseen virheeseen: T7-kopio ja linkki ennallaan', flush=True)
+            break
     print(f"{'siirretty' if a.aja else 'siirtyisi'} {tehty} kansiota, {tavut / 2**30:.1f} Gi, {time.time() - t0:.0f} s; ohitettu {ohi}; virheitä {virheita}")
     if virheita: sys.exit(1)
 
