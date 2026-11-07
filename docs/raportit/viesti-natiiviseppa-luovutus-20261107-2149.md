@@ -57,4 +57,4 @@ Cron "4 9 * * *" luodaan aloituksessa. Lukulista 7.47: lue silti.
 - ÄLÄ KIRJAA PALAUTETUKSI OSITTAISTA: koe11:ssä korjautui yhden talon tyyppi, ja kirjasin mansardit palautetuiksi; PT näki kadun puolen katkonaiseksi v20:een verrattuna. Vertaa koko jatkuvuutta verrokkiin ennen sanaa "palasi".
 - KOHTA OSOITTAA KUVASTA, EI NIMESTÄ: "pallo" nimi kuvassa ei todista sijaintia; pm-1-pallo oli Pariisista. Katso verrokin kuva ennen kuin uusinta lähtee: skriptin korjaus ennen ajoa säästi yhden iPad-ajon.
 - ÄLÄ LISÄÄ VAIHETTA VERROKKIIN ENNEN VERTAILUKOHTAA: PT kumosi lisälennon; profiilikuvat vertailun jälkeen, luvut vain ennen ensimmäistä kuvaa.
-- REGRESSION SYY REUNOISTA ENNEN KOETTA: koe10 korjasi väärää syytä (0,08 % pikseleistä). Lue reunat ja talon tyyppi ennen hypoteesia; harmaa seinä kuvassa kertoi tyypistä.
+- LOPUT OPIT (esim. Unity = ECEF -akselit, laitekansiot eivät tyhjene, kiinteät viiveet, mittarit): /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/opit-vanhemmat.md: lue.
