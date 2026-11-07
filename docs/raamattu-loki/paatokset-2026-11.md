@@ -987,3 +987,7 @@ KK:n kortti: "Viedäänkö kartan elämä junaan 220?" = "Ei junaan (Suositus)";
 ## XCODE-LIITÄNNÄINEN EI NYT (7.11.2026 klo 19.32)
 
 Omistaja 7.11. klo 19.31 (KK:n kortti): Applen Xcode-liitännäinen, josta hän kysyi X-julkaisun perusteella, ja sen kosketuskoe iPadilla: Ei nyt. Ei työtä eikä asennusta.
+
+## PARIISIN MUISTIN KEVENNYS KOKEESEEN (7.11.2026 klo 19.43)
+
+Omistaja 7.11. klo 19.43 (KK:n kortti, Kokeillaan, suositus): napakalotit pois muistista Pariisissa, toisen apumuistin tarve selvitetään; junaan vasta mittauksen jälkeen. KK kertoi samalla omistajalle: filmi ja terävöinti eivät junaan vielä (KK:n suositus, ei korttia), uusi kysymys muistin laskettua; MSAA, SSAO ja palojen yläraja vain tiedoksi, ei työtä. Tekijä: Natiiviseppä (PT).
