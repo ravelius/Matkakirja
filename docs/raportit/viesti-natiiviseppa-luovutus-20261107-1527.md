@@ -7,6 +7,10 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 16.42 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+JULKISIVU3 KATSOTTU JA KERROTTU PT:LLE 16.42, EI TOISTETA: _tyo/natiiviseppa/julkisivu/tulos.md, parit kuvat/pt-*.png. Lähimmällä zoomilla ei erota; lähikuvaa korttelista ei saatu, ulkoasu ja väreily todistamatta. Suositus: ei junaan eikä iPadille; yksi Mac-ajo lähempää vain uudella sanalla. Ei ajoja jonossa. Älä tee alla olevia julkisivun katso- ja iPad-kohtia ilman PT:n sanaa. PT:n vastausta odotetaan; jonossa ei muuta: jos PT ei anna uutta, "JONO TYHJÄ: Natiiviseppä".
+Cron luotava silti.
+
 ## LISÄYS 15.27 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 Cron "4 9 * * *" luotava uudelleen (session-only). Viestit PT:lle ja JU:lle olivat 15.26 jonossa, eivät ehkä perillä: tarkista list_events tai odota kuittausta.
 YKSI TASO SEIS, PT KUITTASI 14.2x: ei junaan, ei uusintaa, koe jää haaraan, suositus KK:lla. vaihto2 ja muisti80 katsottu, tulos yksi-taso/tulos.md loppu. Älä tee alla olevaa kohtaa 1 eikä "iPad-muisti"-osaa. Mitattu lyhyesti: 80° kaatoi 29 s:ssa (signal 9, 5120 Mt, Pallo 1676 vs KS 858), 40°/60° ei kevennystä, näkymä hyppää eleessä. 80°:n kevennys yhä auki, ei NS:n jonossa.
