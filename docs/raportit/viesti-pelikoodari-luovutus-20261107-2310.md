@@ -9,6 +9,7 @@ Lisätieto PT:ltä: latauksen hitaus näkyi iPhonella ja pienellä iPadilla.
 ## 1. TYÖ NYT: juoksupelin lataus nopeammaksi (PT 23.07, omistajan pyyntö 23.05)
 PT:n sana: "Saako juoksupelin latausta nopeutettua? Se kestää todella kauan." Tavoite: juoksupeli alkaa selvästi nopeammin. 1) Mittaa nykyinen latausaika laitteelta (iPad JU:n vuorolla muistijonon jälkeen, junan 220 sha 72e257a0b) ja osita syyt lokiriveistä. 2) Korjaa isoimmat omalle haaralle, sama mittaus uudelleen. Ei junaan ilman PT:n kuittausta. Ositus ja luvut enintään 3 riviä PT:lle; KK:lle PT välittää.
 TILA: JU:lta EI VIELÄ pyydetty laiteajoa. Koodia ei muutettu.
+PT 23.1x (sanatarkasti): "Ositus kuitattu. Molemmat ehdokkaat (esihaku taustasäikeessä, LOD2-kierros pois) saa tehdä omalle haaralle; 220-mittaus ennen ja jälkeen samalla laitteella. Ei junaan ilman kuittausta." Hitaus näkyi iPhonella ja pienellä iPadilla: mittaa samalla laitteella ennen ja jälkeen (PT:n ehto).
 
 ### Ositus vanhoista iPad-lokeista (MITATTU, mutta ei junan 220 shasta)
 Lähde: `lokit/pelikoodari-tf219-a8b873e5d-juoksu2/muisti-tarkka.log` (L-rivit ms-aikaleimoin) ja `lokit/linnanrakentaja-seina5-ipad/`. "avataan" → "latauskuva pois": 43,6 s (TF 219) ja 37,0 s. Latauskuva näkyy 0,1-0,2 s:ssa, ongelma on sen jälkeen.
