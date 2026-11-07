@@ -851,3 +851,7 @@ Omistajan kysymys 09.49 (KK): "Voiko Lontoon nähtävyyksiä liioitella vaikka t
 ## LÄHTÖKYSYMYS KELPAA, LAUTAPELEIHIN HINTARIVI (7.11.2026 klo 10.49)
 
 Kortit 10.49 (KK): lähtökysymyksen kortti "Kelpaa (Suositus)"; kortissa ulkoasu ja sanat, junaan vasta, kun maksu, raketin laukaisu ja iPad on kokeiltu. Lautapelien rivi "Hinta: ilmainen": "Lisätään (Suositus)", Pelaa-nappi säilyy. Havainto 10.49: koeversion 1.1 pallolennossa iPhonella rakennukset "Eivät näy valkoisina" (laite ja versio eri kuin Macin kuvassa; Macin kuvan syy testiajon varadata). Aamun odottavat kortit "Otetaan (Suositus)": KK vie usvan, saumat, Pariisi valmis, leivonnan ja Taso läpi yksi kerrallaan.
+
+## PARIISIN USVA 16 KM KOKEENA (7.11.2026 klo 10.51)
+
+Kortti 10.50 (KK): "Oikea (Suositus)" (kuvat/usva-12-16/usva-12-vasen-16-oikea-1000.jpg, vasen 12 km, oikea 16 km). Usvan loppu 16 km, korvaa 12 km:n 22.54 kokeessa. Kokeena, ei junaan.
