@@ -32,3 +32,10 @@ Valo- tai liikevahdin valitus: rivi PT:lle ennen ohitusta. VIE-sana (PT:n rivi "
 
 ## LISÄYS 12.33: TÄMÄ ON TUOREIN
 NS yksi2:n 3 ajoa kuitattu NS:lle, pid 32719 päättyy. Vaihdosta puuttuu mp4 ja kamera.txt, ruudut tallella; NS sanoo, tehdäänkö videot. L1:llä joki 46b7cf417 alkoi 12.32, sitten ajo 49. L2:lla NS mac-3 pääsee alkamaan.
+
+## LISÄYS 12.38: TÄMÄ ON TUOREIN (korvaa JONO-kohdan pidit)
+Kuitattu: KS muisti4 (3/3), NS joki, NS yksi2. NS: vaihdon videoita ei tarvita, ei vajetta.
+iPad: LAV seinä2 ajossa 12.36 (pid 17259, tulos PT:lle ja LAV:lle) → NS kertoja2 48966.
+L1: KS ajo 49 ajossa 12.36 (pid 81292, rivi KS:lle).
+L2: NS mac-3 ajossa (5560, kuittaus NS:lle) → PK jalat 9447 (rivi PK:lle) → NUI elämä 19600 (NUI:lle kansio) → PK i8 2c1d8187d T/pk-i8-jonossa.zsh 36305 (rivi PK:lle) → VS film2 a2c2049be T/vs-film2-jonossa.zsh 37050 (kuittaus VS:lle: rae ja karttapilvet pitää olla 0) → NS vaihto2 d2ba2f540, 4 ajoa, T/ns-vaihto2-jonossa.zsh 39796 (kuittaus NS:lle, ruudut riittävät).
+Monitor pitää käynnistää uudelleen aloituksessa.
