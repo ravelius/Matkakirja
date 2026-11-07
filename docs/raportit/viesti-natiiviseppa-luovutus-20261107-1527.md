@@ -7,6 +7,10 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 16.44 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+PT HYLKÄSI JULKISIVUN SUOSITUKSEN: iPhonen lähizoomi on junassa. PT:n sana yhteen Mac-ajoon, TILATTU JU:lta 16.44, ÄLÄ TILAA UUDELLEEN: sk4-mac.txt, lokit/natiiviseppa-julkisivu4, kuvat jq-iphone-{45,70}-{pois,maalattu,koodi} (343 m, lahizoomi 4,89 = iPhone vaaka) ja jq-lahi-{45,70}-* (250 m, lahizoomi 6,72; kortteli kokonaan). Tarkista "talot tila: palat" > 0 ja kello.
+KATSO täysikoossa, sitten PT:lle kolmikot samalla rajauksella, kuvat menevät PT:n kautta KK:lle (omistaja haluaa maalatun ja koodin rinnakkain). Ei junaan, ei iPadia, ei suositusta "ei hyötyä" ilman iPhonen tarkkuuden varausta: Macin kuva 4:3 ja iPhonea tarkempi. Lz3-85:n piikit kerrottu, eivät johdu julkisivusta. iPhone vaaka 85° silmä noin 30 m (laskettu) kerrottu PT:lle.
+
 ## LISÄYS 16.42 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 JULKISIVU3 KATSOTTU JA KERROTTU PT:LLE 16.42, EI TOISTETA: _tyo/natiiviseppa/julkisivu/tulos.md, parit kuvat/pt-*.png. Lähimmällä zoomilla ei erota; lähikuvaa korttelista ei saatu, ulkoasu ja väreily todistamatta. Suositus: ei junaan eikä iPadille; yksi Mac-ajo lähempää vain uudella sanalla. Ei ajoja jonossa. Älä tee alla olevia julkisivun katso- ja iPad-kohtia ilman PT:n sanaa. PT:n vastausta odotetaan; jonossa ei muuta: jos PT ei anna uutta, "JONO TYHJÄ: Natiiviseppä".
 Cron luotava silti.
