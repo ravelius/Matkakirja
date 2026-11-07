@@ -7,6 +7,13 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 17.2x (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+MUISTI 7 VS B8 TEHTY JA KERROTTU PT:LLE (2 riviä, ml. ajo 9), EI TOISTETA: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/muisti-7-b8/tulos.md (skriptit samassa kansiossa). Ei koodivikaa näkyvissä: +110 = b8 on 13 Pariisi-ajon matalin, +89 = VIKAn jälkeistä; juna 220 Pariisissa mittaamatta. Lepo 3845 + nousu 240 = raja, ajo 9 (elämä) VIKA 4088, ajo 8 ei.
+ODOTETAAN PT:N SANAA yhdestä ajosta (tulos.md kohta 5; A/B esilataus, kuvan hinta, juna 045844251). Ei tilattu. EI iPADIA ITSE. Skenaario pitää tehdä, jos sana tulee: tarkista oleta-uusi-muoto mallista _tyo/natiivi-ui/sk-kartan-elama-8-ipad-pois.txt.
+Julkisivu ennallaan: odotetaan sanaa. Jos ei uutta: "JONO TYHJÄ: Natiiviseppä".
+Aloituksessa myös Raamattu 7.47:n lukulista (jäi edellisellä kerralla lukematta). Cron luotava uudelleen.
+Opit: VIKAN JÄLKEISTÄ HUIPPUA EI VERRATA (vahti, iOS:n varoitus ja T-rivi nostavat fp:tä), vertaa VIKA-hetkeä. Lepotason kaksi ajoa ei kerro koodieroa: katso koko päivän ajot (lepo2.py). fp ei näytä elämän hintaa levossa, jos keko laskee samalla: katso gfx.
+
 ## LISÄYS 16.58 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 JULKISIVU4 KATSOTTU JA KERROTTU PT:LLE 16.58, EI TOISTETA: _tyo/natiiviseppa/julkisivu/tulos.md loppu, kuvat kuvat/pt-*-rinnakkain.png ja iphone-85-pois.png. 343 m:ssä näkyy, kortteli kokonaan vain pt-iphone-45:ssä; 250 m:n kuvissa ei kokonaan. Vaaka 85°: piikit lähiseinillä, ei korjausta. PT vie KK:lle; odotetaan PT:n/KK:n sanaa. EI JUNAAN, EI iPADIA, ei ajoja jonossa. Jos ei uutta sanaa: "JONO TYHJÄ: Natiiviseppä".
 Cron luotava silti.
