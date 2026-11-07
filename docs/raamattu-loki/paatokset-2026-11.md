@@ -847,3 +847,7 @@ Kortti 09.40 "Kelpaavatko kala-altaan ja granaattiomenapuun neljä kuvaa peliin?
 ## LONTOO: PÄÄNÄHTÄVYYDET ISOMPINA KOKEENA (7.11.2026 klo 09.52)
 
 Omistajan kysymys 09.49 (KK): "Voiko Lontoon nähtävyyksiä liioitella vaikka tehty koodilla?" Kortti 09.52 "Kokeillaanko Lontoon päänähtävyyksiä isompina?": "Kokeillaan (Suositus)". Hänelle luvattu: parit samasta kohdasta ennen päätöstä, jääkö koko peliin. Kokeena St Paul's, Tower Bridge, Big Ben ja Westminster; Tower Bridgelle omat pituus ja korkeus. Tavoite: erottuvat kaukaa kuten Pariisin nähtävyydet eivätkä peitä naapurikortteleita rumasti. Muisti mitattuna. Ei junaan ilman korttia "Pariisi valmis".
+
+## LÄHTÖKYSYMYS KELPAA, LAUTAPELEIHIN HINTARIVI (7.11.2026 klo 10.49)
+
+Kortit 10.49 (KK): lähtökysymyksen kortti "Kelpaa (Suositus)"; kortissa ulkoasu ja sanat, junaan vasta, kun maksu, raketin laukaisu ja iPad on kokeiltu. Lautapelien rivi "Hinta: ilmainen": "Lisätään (Suositus)", Pelaa-nappi säilyy. Havainto 10.49: koeversion 1.1 pallolennossa iPhonella rakennukset "Eivät näy valkoisina" (laite ja versio eri kuin Macin kuvassa; Macin kuvan syy testiajon varadata). Aamun odottavat kortit "Otetaan (Suositus)": KK vie usvan, saumat, Pariisi valmis, leivonnan ja Taso läpi yksi kerrallaan.
