@@ -19,3 +19,6 @@ PT:n tilaama ehdokkaan 3 (koejuuri-v115pala) valmistelu on tehty ja raportoitu P
 
 ## Seuraava
 PT:n sana. Mahdollinen jatko vaatii uuden kartan ajon (PK). Ilman sanaa: "JONO TYHJÄ: Lavastaja".
+
+## PT 10.4x (korvaa "Seuraava")
+v115pala ei mene vientiin. Ei uutta ketjua eikä karttaa ilman omistajan sanaa. Raja-5:n raita: ei selvitystä nyt. Kannen ja sirun syy (julkaistu malli) on tiedossa, korjausta ei ole tilattu. Jono tyhjä; seuraava työ PT:ltä.
