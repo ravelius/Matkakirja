@@ -835,3 +835,7 @@ Kortti: Tummennetaanko muurien juuren pitkät vaaleat reunakivet samaan tapaan k
 ## JUOKSUPELI: KALA-ALTAAN JA GRANAATTIOMENAPUUN HUUDOT JA KUPLAT (7.11.2026 klo 09.30)
 
 Omistajan pyyntö 09.02 (KK): "tee huudot ja kuplat esineille joilla sitä ei vielä ole." Kortti 09.27 "Kelpaavatko kala-altaan ja granaattiomenapuun huudot, kuplat ja historiatekstit?": "Kelpaavat (Suositus)". Rajaus kerrottu omistajalle: vain nämä kaksi (koodista tarkistettu); 16 luettelon esinettä ja 7 yhden huudon esinettä eivät kuulu tähän ilman hänen sanaansa. Ensimmäinen rikkominen antaa oman huudon ja kuplan, ja esineet näkyvät loppuyhteenvedossa. Kuvat Codexilta, KK katsoo, omistaja näkee ennen peliä; kahdeksan huutoa Äänittäjältä; avaimet ja testit Pelikoodarilta. Junaan normaalisti, ei omaa vientiä. Suunnitelma: KK:n 20261107-huudot-kala-allas-granaattiomenapuu.md.
+
+## JUOKSUPELI: MUURIN KIVET KELPAAVAT KUVIEN MUKAAN (7.11.2026 klo 09.31)
+
+Kortti 09.31 "Kelpaavatko muurin kivet näin kuvien mukaan?": "Kelpaavat (Suositus)" (VS kuvat-kivisivu5, parit paaty ja pelia; kortissa: saa jatkaa kohti junaa, jäljelle jääneet viat erikseen). Korvaa aiemmat kiviparit. Ei vientiä ilman PT:tä; iPad ja liike katsomatta. Avoimena kerrottu: lattian tumma kolmio (leivonta), irrallinen vaalea laatta reunakiven vieressä, punaisen seinän alla ohut vaalea raita (selvittämättä).
