@@ -803,3 +803,7 @@ KK 7.11.2026 omistajan valtuutuksella, kokeena, ei junaan. Klo 05.09: Panthéon 
 ## PARIISI JA LONTOO, YON RATKAISUT (KK 06.40 ja PT, kaikki kokeena, ei junaan) (7.11.2026 klo 06.53)
 
 KK 7.11. klo 06.40: Lontoo G e48424a75 kelpaa kokeena; Big Benin ja palatsin kyltit, St Paul'sin tuplanimi ja 'Kuumailmapallo £200' jäävät aamun koontiin. PT:n ratkaisut: naarmukorjaus a80a81323 kokeen oletukseksi; kyltit 3d92da39e kokeena; 292afcef2 (ruukun z1-isku) ja Taso läpi -muunnelma 4aa9ec365 jäävät omistajan päätettäviksi aamulla; rappaus 2e1d2b87d aamuun. Pariisin kortin pohja a4269054a (ajo 46, 82/82).
+
+## PARIISI, YON LOPPU (KK 06.54, 07.04, 07.19; kokeena, ei junaan) (7.11.2026 klo 07.19)
+
+Louvren oma kyltti korjattu: NUI c390b057f (haara natiivi-ui/louvre-kyltti, a4269054a:n päällä), yritys 2, kelpaa kokeena (KK 07.19); kärki ei ole a4269054a:ssa, joten c390b057f on muistettava, kun kokeet kootaan junaan. Ei uutta yhteisajoa ennen korttia; pari kortille erikseen. iPadilla kolmiotestin kulutus ja muisti mittaamatta. Pallo isolla iPadilla kelpaa korttiin (PK, a4269054a; KK 07.04); kolme havaintoa kortille, syitä ei selvitetty: Pohjanmeren ruudukkoläikkä, Ranskan lippu Elsassissa, pohjoisnavan laikku. KK:n korjaus 06.54: Kuumailmapallo £200 on pallon oma kyltti (KaupunkiPallot.cs, KyltinTeksti), ei Lontoon vika. Kohta 6: kevyt Notre-Dame #2184 ja Riemukaari #2172 ovat pelikokeessa omistajan päätöksillä.
