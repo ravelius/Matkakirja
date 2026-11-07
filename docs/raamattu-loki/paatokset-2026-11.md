@@ -819,3 +819,7 @@ Kortti: Kysytäänkö OpenFreeMapilta lupa pelin koko käytölle ennen ulkoista 
 ## SISAINEN KOEVERSIO 219: PARIISI, LONTOO JA JUOKSU (omistaja 7.11.2026 klo 07.41-07.53, kortit KK) (7.11.2026 klo 07.54)
 
 07.41 Julkaise juna niin kokeilen pelissä. 07.43 Mitä kokeiltavaan versioon tulee? = Yön Pariisi ja Lontoo (sisäinen koeversio, kokonaisuutta ei ole ajettu iPadilla). 07.52 Otetaanko juoksupelin tason 1 korjaukset samaan koeversioon? = Kyllä. 07.53 Saako sisäinen koeversio lähteä, vaikka verkon palautus, iPad-testit ja lippu ovat auki? = Saa lähteä (vain sisäisille; kolme asiaa pysyvät ulkoisen julkaisun ehtoina). Runko c390b057f + e48424a75 + 3ed82d1fb. Ei ulkoisille, ei lukitusta. PT 07.48: talot sovelluksen mukaan (+660 Mt, palat vain Macissa, PK 6b688b3d1), yksi iPad-ajo ennen vientiä; kaatuessa takaisin KK:lle, ei omaa uutta yritystä. ODbL ei estä sisäistä, tarkistetaan ennen ulkoisia.
+
+## LIPUN PAIKKA ELSASSISSA EI OLE VIKA (omistaja 7.11.2026 klo 07.55, KK) (7.11.2026 klo 07.55)
+
+Omistaja: Lippu ei kuulukaan olla Pariisissa. Pois vikalistalta ja koeversion ehdoista. Lipun asento (4.42) ja ulkoisen julkaisun ehto pysyvät; sanat koskevat vain paikkaa.
