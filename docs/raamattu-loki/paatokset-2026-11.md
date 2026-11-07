@@ -855,3 +855,7 @@ Kortit 10.49 (KK): lähtökysymyksen kortti "Kelpaa (Suositus)"; kortissa ulkoas
 ## PARIISIN USVA 16 KM KOKEENA (7.11.2026 klo 10.51)
 
 Kortti 10.50 (KK): "Oikea (Suositus)" (kuvat/usva-12-16/usva-12-vasen-16-oikea-1000.jpg, vasen 12 km, oikea 16 km). Usvan loppu 16 km, korvaa 12 km:n 22.54 kokeessa. Kokeena, ei junaan.
+
+## PARIISIN SAUMAT JÄÄVÄT NÄIN (7.11.2026 klo 10.53)
+
+Kortti 10.52 (KK): "Jää näin" (KK:n suositus oli pehmennys). Kortissa: suora raja jää, eikä sitä lasketa Pariisi valmis -listan esteeksi; kuva kuvat/saumat-20261107/. Saumoista ei uutta työtä.
