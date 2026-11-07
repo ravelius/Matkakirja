@@ -811,3 +811,7 @@ Louvren oma kyltti korjattu: NUI c390b057f (haara natiivi-ui/louvre-kyltti, a426
 ## MUUT KAUPUNGIT OHJELMALLA ILMAN TRIPOA: EI VIELA (omistaja 7.11.2026 klo 07.40, kortti KK) (7.11.2026 klo 07.41)
 
 Kortti: Tehdäänkö muut kaupungit ohjelmalla ilman Tripoa? Vastaus: Ei vielä (kuvaus: Lontoo jää kokeeksi, ja päätös odottaa). Lontoon koe pysyy haaralla (G e48424a75); kokokysymystä ei esitetty.
+
+## OPENFREEMAP: EI KYSYTA; POISTOTAULU AVOIMESTA AINEISTOSTA (omistaja 7.11.2026 klo 07.49, kortit KK) (7.11.2026 klo 07.49)
+
+Kortti: Kysytäänkö OpenFreeMapilta lupa pelin koko käytölle ennen ulkoista julkaisua? Vastaus: Ei kysytä (Käyttö pysyy ennallaan, ja epäselvä osa jää auki). Kortti: Haetaanko poistettavat talot jatkossa avoimesta aineistosta ja poistetaan vanhat haetut palat? Vastaus: Kyllä (Suositus) (Tehdään, kun Pariisin kartta on lukittu. Peli käyttää elävää karttaa yhä palvelusta). KK: viestiä ei lähde; skriptattujen hakujen kielto pysyy; poisto oma työnsä lukituksen jälkeen, ei koeversioon. Raamattu 2.204.
