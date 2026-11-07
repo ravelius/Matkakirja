@@ -983,3 +983,7 @@ KK:n kortti: "Jatketaanko näillä viidellä talotyylillä?" = "Jatketaan (Suosi
 ## KARTAN ELÄMÄ EI JUNAAN 220 (omistaja 7.11.2026 klo 19.02) (7.11.2026 klo 19.02)
 
 KK:n kortti: "Viedäänkö kartan elämä junaan 220?" = "Ei junaan (Suositus)"; jää kokeeksi; kuvat kk/kuvat/kartan-elama-10-ipad/. Omistajalle kerrottu: filmin +288 Mt ja elämän huippu 4273 Mt (raja 4080), kierron +260 Mt syy auki, iPhone mittaamatta; pensaat, litteät puut, kadun keskellä lippu ja puita (rajaus-lippu-kadulla.jpg, KK:n havainto; ei työtä ilman sanaa).
+
+## XCODE-LIITÄNNÄINEN EI NYT (7.11.2026 klo 19.32)
+
+Omistaja 7.11. klo 19.31 (KK:n kortti): Applen Xcode-liitännäinen, josta hän kysyi X-julkaisun perusteella, ja sen kosketuskoe iPadilla: Ei nyt. Ei työtä eikä asennusta.
