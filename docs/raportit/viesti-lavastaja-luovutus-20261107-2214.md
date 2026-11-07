@@ -12,7 +12,7 @@ Ajot, raportti A/raportti-s4e-ipad.md: s4e-ipad vahti pois huippu 4755 Mt, vapaa
 ## Seuraava: odota JU:n rivi s4e-ipad3
 JU jonossa viimeisenä, vuoro yöllä, ei edelle. Kansio lokit/linnanrakentaja-s4e-ipad3, skenaario A/sk-s4e-ipad2.txt (A/sk_s4e_ipad2.py), 10e9b6c4a, vahti pois, 23 kuvaa: v40a-d, tayt-oja2, tayt-raja3, tayt-lisa3 (-a, -b botti; -c keisari ja kamera paikalla), pelia, raja-x.
 Kun JU kuittaa:
-1. Katso kuvat. Lokin aika ja md5 (ei vanhoja). Pelia ja raja-x parina A/kuvat ... edellisen kanssa lokit/linnanrakentaja-s4e-ipad.
+1. Katso kuvat. Lokin aika ja md5 (ei vanhoja). Pelia ja raja-x parina saman nimisten kanssa kansiosta lokit/linnanrakentaja-s4e-ipad.
 2. Paikka-rivit: grep "juoksupeli: paikka" muisti-tarkka.logista. Palauttaa Puyi pohja (x; z), s, aika. Vertaa kohteisiin rivillä 3; kerro, kävikö botti alueella. "maali" ja "loppukortti" lokissa = juoksu päättyi, ei jumi.
 3. Kohteet pohjan kehyksessä: v40a -79,4 352,0; v40b -58,9 352,3; v40c -74,8 247,3; v40d 47,7 360,0; täytöt -176,3 243,7; 336,3 57,6; -329,9 170,2. Muunnos estosta (verkon kehys) laskettu, kierto -2,167° A:n ympäri, EI varmistettu pelissä. "palatsi alku" + "uudestaan" iPadilla kokeilematta; lähtö on lähin solmu. Jos ei osu, ne jäävät avoimiksi (PT).
 4. Kehykset yli 1000 ms, 11,3 s merkitään AUKI. Kulkukuvat vain, kun peli käynnissä.
