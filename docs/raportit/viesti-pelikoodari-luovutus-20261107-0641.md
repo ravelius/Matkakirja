@@ -1,6 +1,6 @@
 # Pelikoodari: luovutus 07.11.2026 klo 06.41
 
-Korvaa kaikki aiemmat. Juoksupelin taso 1 ja opit: `git show 1b2a61007:docs/raportit/viesti-pelikoodari-luovutus-20261107-0519.md`. Lontoon työkalut: `git show ee5465047:docs/raportit/viesti-pelikoodari-luovutus-20261107-0326.md` kohta 5. **Työ nyt: ei avointa; jono tyhjä, odota PT:n tehtävää.**
+Korvaa kaikki aiemmat. Juoksupelin taso 1 ja opit: `git show 1b2a61007:docs/raportit/viesti-pelikoodari-luovutus-20261107-0519.md`. Lontoon työkalut: `git show ee5465047:docs/raportit/viesti-pelikoodari-luovutus-20261107-0326.md` kohta 5. **Työ nyt: JU:n iPad-ajo pallosta käynnissä tai jonossa, ks. kohta 6. Sen jälkeen jono tyhjä.**
 
 ## 1. Lontoo G: KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA 06.40
 "Lontoo G e48424a75 kelpaa kokeena, ei junaan." KK kysyy aamulla omistajalta kohdat 2.1 ja 2.2. **Ei lisäyrityksiä yöllä.**
@@ -28,3 +28,8 @@ Korvaa kaikki aiemmat. Juoksupelin taso 1 ja opit: `git show 1b2a61007:docs/rapo
 Mac-ajo `a4269054a`, skenaario `proto-3d/_tyo/pelikoodari/vapaa-1/sk-kohta10.txt`, kuvat `proto-3d/lokit/pelikoodari-kohta10-a4269054a`. Paketti käytössä, NullReference 0. Viety PT:lle.
 - Tunnuslause näkyy. Bastilji ja Place des Vosges erillään levossa (korkeudet 0,02 ja 0,006; 0,003:n rivi sama kuin 0,006:n, kamera ei mennyt lähemmäs). Liikkeessä ei testattu. Liiku avautuu.
 - **Pallo ei selvinnyt:** Mac ei todista laitteen kuvaa, ja `aja`-kuvat jäivät Pariisin seudulle (kaari 0,4 ja 1,2), joten kokonaista palloa ei ole kuvassa. Laitekysymys vaatii iPad-ajon; PT:n sana odottaa. Katsottu 4 täysikokoisena, 6 pieninä, 2 avaamatta (`k10-bastilji-02`, `k10-bastilji-003`).
+
+## 6. AUKI: pallon iPad-ajo (PT 06.51, yksi yritys, ei korjausta, ei junaan)
+PT: "tavoite kokonainen pallo kuvassa ja sen kuva oikein laitteella". Pyydetty JU:lta 06.5x: sha `a4269054a`, iso iPad lukolla, `proto-3d/_tyo/pelikoodari/vapaa-1/sk-pallo-ipad.txt`, kuvat `proto-3d/lokit/pelikoodari-pallo-ipad-a4269054a` (`pallo-ranska`, `pallo-eurooppa`, `pallo-koko`). JU kuittaa tähän sessioon; jos kuittausta ei tule, tarkista kansio ja kysy JU:lta.
+**Kun kuvat tulevat:** katso kolmas ja kaksi muuta, vie `pallo-koko` KK:lle ja tulos rivinä seuraavalle PT:lle (edellinen nollautui; id osoitekirjassa). Jos ajo epäonnistui: ilmoita PT:lle ja KK:lle, ei uutta yritystä, jää aamuun.
+Oppi: `komento aja lat lon kaari`: kaari on asteina (`KorkeusKaarelle`), siksi 0,4 ja 1,2 jäivät lähelle Pariisia. Koko pallo 150.
