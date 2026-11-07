@@ -24,3 +24,15 @@ Avoinna: materiaali 184 ei ratkaistu loppuun; rako0 outo; lisa7:n pieni viiva; l
 
 ## Lisäys 18.40 (korvaa kohdan "ODOTTAA PT:N SANAA")
 PT 18.4x: näytetään nyt viat mukana, PT vie KK:lle. Ei ajoa, vientiä eikä juurta PK:lle ennen PT:n sanaa. Oja ja rako0 mitattu: KORJAUS.md, kohta 18.40; ehdotus lähetetty PT:lle. Seuraava: PT:n ja omistajan sana.
+
+## Lisäys 18.49: TÄMÄ OHITTAA EDELLISET "SEURAAVA"-KOHDAT
+PT 18.4x käskyt, kaikki voimassa: koe koejuuri-saanto3 = saanto2 + yleisellä säännöllä (1) oja: täyttö <= 1,3 m:n väliin korotetun pinnan korkeudelle, (2) jäävät korotetut laatat (t-IK-tumma, t-LK-materiaali), (3) rako0. Ei paikkakorjausta, ei vientiä, ei iPadia, ei juurta PK:lle. Mittaa ensin, kuinka monta samaa tyyppiä ja mikä erottaa ne tarkoituksellisesta reunuksesta. Käy kaikki t-parit täysikoossa ja nimeä jäävät korotetut pinnat.
+Mac-ajo JU:lla, sha 61afeb7f2, latausrajat 900 (mallina tee_sk_saanto2b.py, aja-s2b.zsh; kamerat tee_sk_saanto2.py:n kamera()): t-IK-aukko, v-LP-materiaali, vähintään 8 muuta eri ruutua ojatyypin listalta (myös rajatapaus 1,2-1,4 m), t-IK-tumma, rako0 samasta kulmasta, verrokit pelia, lisa3, lisa7; perus | saanto3. Mittari: aukko, materiaali, jäljellä olevat ojat, uudet kerrokset. Tarkista, ettei täyttö peitä ovea eikä sulje kulkuväylää. Kuvat katsottuna PT:lle. JU tietää, että ajopyyntö tulee; PK:n siirto saa mennä edelle.
+
+TILA:
+- A/tee_saanto3.py tehty ja ajettu, koejuuri-saanto3 olemassa, mutta vain OJA, EI ajettu pelissä. 100 väliä, 54 m2, 4 148 kolmiota, 15 tiedostoa; pois: 27 kulun katkaisevaa (vain väli >= 0,8 m), 28 alle 2 ruudun; oven takia 0 (oven tunnistus materiaalin nimestä: tarkista toimiiko). Lista A/saanto3-valit.json (kompit, katkaisisi, raja). t-IK ja v-LP-mat täytössä. Esto: täytöstä 1 278 ruutua kuljettavalla, 80 estetyllä; kulkukartta ei muutu, joten jalat voivat vajota täyttöön: kerro PT:lle.
+- Laattamittaus A/mittaa_jaanteet.py, A/jaanteet.json: jäävät V4_kivireunus-kappaleet 1 649 kpl, 19 190 m2, 1 507 alle 0,8 m seinästä; koon mukaan pit <= 3 m: 806 kpl, 88 m2. Säde: t-IK-tumman ja t-LK-materiaalin laatat ovat V4_kivireunus y 0,08 (pisteet 250,56 5,75 ja -290,9 106,6); kappaletta ei tunnistettu keskipisteellä, hae kolmion osumalla. Erotussääntöä EI vielä ole.
+- Rako0: vanha sokkelilaatikko V4_kujakivi_sokkeli x -317,5 z 2,35-3,19 y 0-1,3, valo A 5 (KORJAUS.md).
+- Kuvaparien läpikäynti: ali-agentti (Opus) kirjoittaa A/korotetut-kuvista.json. Jos tiedostoa ei ole tai se ei läpäise json.loads:ia, nollaus keskeytti sen: tee uudelleen ali-agentilla (vain Opus tai Sonnet): 21 t-paria + v-LP-materiaali, v-LP-tumma, palat täysikoossa; perus kuvat-s2b-perus, jälkeen kuvat-saanto2 ja v-kuvat kuvat-s2b.
+SEURAAVA: 1) lue korotetut-kuvista.json, kolmio-osumat pisteille sade3.py:llä, 2) erotussääntö (rivi PT:lle: montako, mikä erottaa), 3) lisää laatat ja rako0 tee_saanto3.py:hen, 4) kamerat, ajopyyntö JU:lle, 5) kuvat katsottuna PT:lle.
+Huom: t-kuvien pari on parit-s2b/. Tee commitit tämän haaran kautta worktreellä: checkout on koti-haarassa, jossa tätä tiedostoa ei ole.
