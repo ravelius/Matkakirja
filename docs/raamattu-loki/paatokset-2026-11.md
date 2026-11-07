@@ -899,3 +899,7 @@ Omistaja 7.11. klo 12.50 kortilla "Saako sisäinen koeversio lähteä, vaikka Lo
 ## OMISTAJAN PAATOS: JULKISIVUPALA YHDESSÄ KORTTELISSA (7.11.2026 klo 13.35)
 
 Omistaja 7.11. klo 13.34 kortilla "Kokeillaanko tätä julkisivupalaa yhdessä Pariisin korttelissa?": "Kokeillaan (Suositus)". Selite: pala kytketään yhteen kortteliin, ja hän saa kuvat pelistä ennen sarjaa. #2195 hyväksytty tähän kokeeseen, ei sarjaan; ei junaan ilman korttia. Kytkijä Natiiviseppä (PT). Kuvat KK:lle: parit lähin taso, 45°, 70°, 85°, ja ruutusarja liikkeestä.
+
+## OMISTAJAN PAATOS: KOODILLA PIIRRETTY JULKISIVU MAALAUKSEN RINNALLE (7.11.2026 klo 13.41) (7.11.2026 klo 13.42)
+
+Omistaja 7.11. klo 13.41 (KK välitti) kortilla "Kokeillaanko samassa korttelissa myös koodilla piirrettyä julkisivua?": "Kokeillaan (Suositus)". Selite: parit maalatusta ja koodilla piirretystä samasta kohdasta; koe ei mene junaan. Hänen kysymyksensä ennen korttia: "miten julkisivut oli toteutettu niissä low poly esimerkki kaupungeissa?" 13.34 maalattu koe pysyy; tämä tulee rinnalle samaan kortteliin. Kokemus: lähellä pariisilainen, kaukana rauhallinen; ei tekstuuria eikä uutta mallia. Tekijä Natiiviseppä (PT), junan korjaukset ensin. Suunnitelma: scratchpad/keskustelukanava/suunnitelmat/20261107-talojen-julkisivut.md, osio Koodilla piirretty.
