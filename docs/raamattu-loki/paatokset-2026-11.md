@@ -943,3 +943,7 @@ Omistaja kortilla (KK:n välitys, palkki5, kuva r5-lisa7-0: kivilaikku puulattia
 ## Pallon osat: filmi, terävöinti ja pilvien varjot jäävät, raitiovaunut pois (7.11.2026 klo 16.44)
 
 Omistaja kortilla klo 16.43 (KK:n välitys; film7 ja ajo 5; koe, ei junaan): filmi Jää, terävöinti Jää, pilvien varjot Jäävät, raitiovaunut Pois. Ehdot: Valoseppä tarkistaa terävöinnin liikkeessä ja korjaa 70°:n kaukaisen tumman läiskän; muisti lopuksi; iPhone-tason pehmeneminen auki; laiteajo tarkistaa kartan puuttumisen levossa. Linnut nimien edessä kerrottu, ei työtä ilman sanaa.
+
+## Lontoon kumpu ja St Paul's kelpaavat junaan (7.11.2026 klo 16.47)
+
+Omistaja kortilla klo 16.47 (KK:n välitys, k3-paavali-matala): Kelpaako St Paul's näin madalletussa Lontoon keskustassa? Kelpaa. Kumpu ja mallit etenevät junaan 220; 045844251 vientiin kansioon 2026-11-07-lontoo ja junavuoroon PT:ltä. Kerrottu: keskiosan juuri peittyy, Abbey, museo ja Big Ben ilman arviota, Thamesin soikiot vanhoja (ei työtä), St Paul's haalea (syy auki), iPhone ja saapumislento ajamatta.
