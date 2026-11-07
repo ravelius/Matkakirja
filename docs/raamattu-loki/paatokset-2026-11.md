@@ -915,3 +915,7 @@ Kirjauksessa "JUNA 220 ON KOKO PARIISIN SISAINEN KOEVERSIO" mainitut "ei junaan"
 ## OMISTAJAN PAATOS: LONTOON PALLON PAIKKA (7.11.2026 klo 15.15) (7.11.2026 klo 15.17)
 
 Omistaja 7.11. klo 15.15 (KK välitti) kortilla "Kelpaako kuumailmapallon paikka Lambethissa, palatsin vastarannalla?": "Kelpaa (Suositus)". Koskee paikkaa 30c33d5b9 (51.4950, -0.1125), Macin kuvat. Kerrottu: The Cenotaph -nimi jää osin pallon alle yhdessä kuvakulmassa, hintakyltti tarkistamatta, iPad ja iPhone ajamatta. Lontoo-nimen hyppiminen on yhä auki ja kuuluu 12.50:n korjauksiin ennen junaa.
+
+## KARTAN ELÄMÄ: AJON 3 KORTIT (omistaja 15.20) (7.11.2026 klo 15.21)
+
+Koe, ei junaan ilman korttia (ajo 3, 488a0de09). "Jäävätkö veneet Seinelle kokeeseen?" → "Jäävät (Suositus)". "Miten autot näkyvät kartalla?" → "Vain lähellä (Suositus)", selite "Kaukaa ei mustia pisteitä.". "Jäävätkö linnut kokeeseen?" → "Jäävät", selite "Kuten kuvissa nyt."; KK suositteli poistoa, omistaja ei ottanut sitä. "Jäävätkö liput kokeeseen?" → "Jäävät (Suositus)". Omistajalle kerrottu ennen korttia 5.11. "mitään pieniä malleja ei saa jäädä" ja koodin merkintä laivasta. KK:n tavoite Natiivi-UI:lle: autot vain lähellä, elämä ei peitä nimiä, raitiovaunuista lähikuva KK:lle, linnut ennallaan ilman omistajan sanaa.
