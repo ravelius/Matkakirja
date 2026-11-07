@@ -41,3 +41,8 @@ L1: PK juoksu-k1 f86344e8f (T/pk-k1-jonossa.zsh pid 27103, skenaariossa nyt 2 ku
 iPad järjestyksessä: PK i4 (käynnissä), NUI 4 ja 5 (84586), NS lz1-2 ja lz3-2 (88232), VS kivisivu14 (6894), KS talot-muisti2 5488bdd8b (T/ks-muisti2-ipad.zsh pid 15829; jos vahti pysäyttää, kerro KS:lle viimeinen ehtinyt komento merkit.txt:stä; ei uusintaa).
 NUI lahtokysymys-6 PERUTTU (PT 11.1x): valovahdin kertapoikkeus käytetty ja palautettu (koe-commit 676376696, ref poistettu), liikevahtiin ei poikkeusta. Vahdit kaatuvat jo a8b873e5d-pohjalla; PT:lle kerrottu. Älä ohita vahteja.
 Yksi-taso tuli ajoon L2:lla, koska L1 oli käännöksessä: ensisijainen ajo menee kumman tahansa linjan ensimmäiseen vapaaseen vuoroon.
+
+## LISÄYS 11.16: PT:n tilaus, JONON JÄLKEEN, ei iPad-ajojen edelle
+1. Yöportti (natiivi-yoportti.yml) epäonnistui 3., 5., 6. ja 7.11. (4.11. peruttu). 7.11. ajo 42358212596: Peli-testit/kaanna.sh kuoli 0,5 s:ssa, exit 1 ilman virheriviä; PT arvelee ympäristöä, ei todistettu. Selvitä syy ja korjaa, jos se on työkalussa.
+2. Yksi rivi PT:lle: kulkeeko junan 220 reitti tarkista.sh:n kautta. Vahteja TF-reitille ei lisätä ilman PT:n sanaa.
+NUI: vaihetta 3 ei ajeta; iPad-5 käyttää päivitettyä skenaariota (sama polku, luetaan ajon alussa). Jos iPad-5 ajettiin vanhalla, kerro NUI:lle. Kuittaukseen kansiot, lokit, sha.
