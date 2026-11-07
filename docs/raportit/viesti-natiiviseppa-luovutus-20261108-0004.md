@@ -17,6 +17,10 @@ Mac-OPPI: kuvan otto pysäyttää esikatselun kellon, mutta lento jatkuu reaalia
 ei odota-peli-ajoista. Ensimmäinen kuva ennen kameran liikettä on 640x480-valinnalla ("liikevalinta: paa (alku)"): ota kuva vasta kun lokissa "liikevalinta: varjo". Skenaariot sk-striimi-karkea(-2).txt.
 Beetaseurannan cron "4 9 * * *" luotu 7.11. 23.4x (session-only, uusittava nollauksen jälkeen).
 
+## JU KUITTASI ASTC 00.2x (TULLUT LUOVUTUKSEN JÄLKEEN, EI VIELÄ LUETTU): ALOITA TÄSTÄ
+JU sanatarkasti: "ASTC 581b9ad07 VALMIS 00.19 (AJETTU 4, VIKA 0, SEIS 0): v1 23.40 kytkin pois, a1 23.48 päällä, kv 00.04 pois 22/22 kuvaa, ka 00.19 päällä 22/22. Kansio /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-muisti-3-astc/{v1,a1,kv,ka}; loki T/ns-yksi-ASTC/ajo.log. Runko takaisin, vahtikytkin päällä. Vaihe12-lisä 10604363c alkoi iPadilla 00.19."
+=> Lue ASTC kohdan "KUN JU KUITTAA ASTC" mukaan; vaihe12-uusinta (v2 b2) käynnissä, odota sen kuittausta.
+
 ## TYÖ NYT: MUISTITYÖ. KAIKKI KOODATTU; ODOTTAA JU:N iPAD-AJOJA. EI UUTTA TYÖTÄ ENNEN NIITÄ.
 JU:n jono (23.33): ASTC käynnissä (alkoi noin 23.32), sitten vaihe12-uusinta v2 b2 (T/ns-yksi-vaihe12lisa/ajo.log). JU kuittaa suoraan NS:lle.
 1. TEHTY: napakalotit junassa 2f64c2eee. Vaihe 0 mittari luettu ja raportoitu.
