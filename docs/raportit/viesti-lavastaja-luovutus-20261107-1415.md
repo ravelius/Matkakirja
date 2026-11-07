@@ -20,3 +20,6 @@ PT:n pyynnöstä: 42 vanhaa koejuurta siirretty T7:lle (proto-arkisto/linnanrake
 
 ## Opittua
 Lokirivin avain oli aluksi liian karkea ja Camera.main on juoksupelissä null, joten kartiotesti on sillä arvoton. zsh ei pilko muuttujia: skriptit tiedostoon ja sh:lla.
+
+## Lisäys 07.11. 14.17
+PT kuittasi 0c3232522:n JU:lle junaan. Punainen laatta: oli jo ennen variantteja (sama väri kivisivu10, seina4, seina5). Lähde auki, ks. KORJAUS.md loppu; PT:n rivi lähetetty, korjaus vasta PT:n sanalla.
