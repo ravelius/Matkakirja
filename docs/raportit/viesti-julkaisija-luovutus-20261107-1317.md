@@ -29,3 +29,7 @@ Vahtien ajo puusta: archive Assets/Matkakirja tyokalut tyylikirja scratchpadiin,
 
 ## LISÄYS 13.18: TÄMÄ ON TUOREIN (korvaa KS kumpu -pidin)
 KS kumpu: pid 33642. Lopun offline-tapa muutettu KS:n sanalla: tyhjä kopio vain, kun Documents/offline on tasan listan 30; listaus perään; jos jäävät tai ei täsmää, 0-tavuinen päälle. Kuittaukseen kumpi tehtiin ja listauksen tulos (jonorivi "KS kumpu offline:").
+
+## LISÄYS 13.21: TÄMÄ ON TUOREIN
+L2:n loppuun: VS film3 37a2f9a0f, T/vs-film3-jonossa.zsh pid 37275, ESIKATSELU_LAATU=Ultra (esikatselu.sh rivi 123 ylikirjoittaa MATKAKIRJA_LAATUTASO:n). Kuittaus VS:lle: tulosrivillä laatutaso-Ultra-pakotettu pitää olla yli 0, muuten kerro. EI junaan.
+KS kumpu: skenaarioissa nyt 6. kuva (stratford); skripti lukee ne ajon alussa, ei muutosta.
