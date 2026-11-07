@@ -1,0 +1,42 @@
+{
+  "taskNumber": 2195,
+  "generationCalls": 1,
+  "deliveredTiles": 1,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "nativeSHA256": "1a6faebaeefaf2f96705d71d20fcf42025a674e5b3fc260cc83a1d98ef7486c5",
+  "finalSize": [
+    1024,
+    1024
+  ],
+  "grayscaleMode": "L",
+  "seamTreatment": {
+    "sourceAuthorization": "LUE.md requirement 8 explicitly requests post-painting edge equalization",
+    "method": "Symmetric 64px strips, cosine weight from 1 at edge to 0 at 63px; paired pixels move toward their common average; X then Y; rounded 8-bit values",
+    "bandWidthPixels": 64,
+    "center896x896Unchanged": true,
+    "maxPixelChange255": 25,
+    "meanPixelChange255": 0.4590177536010742
+  },
+  "exactSeamless": true,
+  "leftRightMaxError255": 0,
+  "topBottomMaxError255": 0,
+  "allSixSeamsIn4x4Verified": true,
+  "technicalPass": true,
+  "visualReview": {
+    "singleTallNarrowWindow": true,
+    "glassDarkestMajorArea": true,
+    "noFourPaneCross": true,
+    "slenderFrameAndStoreyBand": true,
+    "simpleFrenchBalcony": true,
+    "broadPaintedStonePatches": true,
+    "frontView": true,
+    "styleAcceptance": "pending KK",
+    "possibleException": "Kerroslistan alapuolella on ohut tumma maalattu reuna, joka voi näyttää kevyeltä varjolta. Nostettu KK:n arvioitavaksi."
+  },
+  "KKReview": "pending",
+  "gameIntegrated": false,
+  "published": false
+}

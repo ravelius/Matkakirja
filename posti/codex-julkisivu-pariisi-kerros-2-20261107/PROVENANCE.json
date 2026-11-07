@@ -1,0 +1,17 @@
+{
+  "task": 2195,
+  "revises": 2194,
+  "tool": "OpenAI built-in image_gen",
+  "generationCalls": 1,
+  "nativeSHA256": "1a6faebaeefaf2f96705d71d20fcf42025a674e5b3fc260cc83a1d98ef7486c5",
+  "sourceCommit": "e3684073bd5e4813d1e5cdafe5a6678bab6986a5",
+  "sourceBlob": "518ba6e81d6fb34d84a08c87e7e620cb5f93bf96",
+  "prompt": "prompt.txt",
+  "postprocessing": "Pillow grayscale L, Lanczos resize, explicitly requested symmetric 64px cosine border equalization",
+  "exactSeamless": true,
+  "technicalPass": true,
+  "possibleException": "Kerroslistan alapuolella on ohut tumma maalattu reuna, joka voi näyttää kevyeltä varjolta. Nostettu KK:n arvioitavaksi.",
+  "KKReview": "pending",
+  "gameIntegrated": false,
+  "published": false
+}
