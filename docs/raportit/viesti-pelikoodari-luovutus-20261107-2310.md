@@ -2,6 +2,10 @@
 
 Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opit: `git show 283a7eb52:docs/raportit/viesti-pelikoodari-luovutus-20261107-2125.md` kohta 3.
 
+## 0. ENSIN (PT 23.10, omistajan havainto 23.06), ennen kohtaa 1
+"Viimeinen keisari teksti lataus kuvassa on liian isolla ja liian ylhäällä." Tavoite: otsikko pienempi ja alempana. Tee latauskuvahaaraan `pelikoodari/muisti-latauskuvat` (190d6c094:n päälle, työpuu `wt/proto-pelikoodari-muisti`). Kuva iPadin ja iPhonen kokoisena PT:lle → KK ennen junaa. Otsikon paikka lokissa: "latauspalkki paikka (448, 925) pt, otsikko (136, 33, 1093×182), isäntä 1366×1024" (iPad, TF 219), koodi `UI/Pelit/JuoksupeliNakyma.cs` noin rivit 290-360. Ei aloitettu.
+Lisätieto PT:ltä: latauksen hitaus näkyi iPhonella ja pienellä iPadilla.
+
 ## 1. TYÖ NYT: juoksupelin lataus nopeammaksi (PT 23.07, omistajan pyyntö 23.05)
 PT:n sana: "Saako juoksupelin latausta nopeutettua? Se kestää todella kauan." Tavoite: juoksupeli alkaa selvästi nopeammin. 1) Mittaa nykyinen latausaika laitteelta (iPad JU:n vuorolla muistijonon jälkeen, junan 220 sha 72e257a0b) ja osita syyt lokiriveistä. 2) Korjaa isoimmat omalle haaralle, sama mittaus uudelleen. Ei junaan ilman PT:n kuittausta. Ositus ja luvut enintään 3 riviä PT:lle; KK:lle PT välittää.
 TILA: JU:lta EI VIELÄ pyydetty laiteajoa. Koodia ei muutettu.
