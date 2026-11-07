@@ -767,3 +767,7 @@ KK klo 01.34 omistajan valtuutuksella, kumoaa KK:n 01.13 sanan k01f ei korjausta
 ## KK:N PAATOKSET VALTUUTUKSELLA: PELIKOODARIN JARJESTYS JA KAMERA NAHTAVYYDEN LAPI (7.11.2026 klo 02.24)
 
 KK klo 01.21 omistajan valtuutuksella, kokeena, ei junaan: Pelikoodarin järjestys on Abbey Road + avauskortti + joki, sitten F, sitten E. KK klo 02.20 samoin: kamera ei saa mennä nähtävyyden läpi; Natiiviseppä saa kaksi yritystä (lokit/nui-kyltit-liike-85/liike85.mp4; ensin pelaajan reitit, korjaus kameratasolla, Raamatun 2.215 rajat voimassa), Z10:n yritys 2:n jälkeen.
+
+## LONTOON SARJA KELPAA KOKEENA, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 02.30)
+
+KK 7.11.2026 klo 02.28 omistajan valtuutuksella, kokeena, ei junaan: Lontoon sarja kelpaa (VS e973cef98, linssiseppa2/lontoo-c); heikkoihin kohteisiin ei enempää yöllä. Seuraavaksi PK: E, Pariisi | Lontoo samoilta etäisyyksiltä hintoineen, ja iPad-tarkistus mallien kanssa. Sumea lento jää aamun kysymykseksi; NS seuraavaksi Eiffelin läpi lentävä kamera.
