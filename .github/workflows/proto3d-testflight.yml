@@ -339,6 +339,18 @@ jobs:
           set -euo pipefail
           test -f "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj/project.pbxproj"
           test -f "Build/$VIENTI_KANSIO/Info.plist"
+          # Talopalat ja ulkoesineet (Rakennus.KopioiTalopalat): PostProcessBuildin poikkeus menee vain Unityn lokiin, ja TF 220
+          # lähti ilman Lontoon taloja (lähde T7-linkin takana, PT 7.11. 23.25). Merkki <kaupunki>.valmis = kopioitujen määrä.
+          TP="Build/$VIENTI_KANSIO/Data/Raw/talopalat"
+          for k in pariisi lontoo; do
+            test -f "$TP/$k.valmis" || { echo "::error::talopalat/$k puuttuu käännöksestä"; exit 1; }
+            odotettu=$(cat "$TP/$k.valmis"); n=$(ls "$TP/$k" | wc -l | tr -d ' ')
+            [ "$n" -gt 0 ] && [ "$n" = "$odotettu" ] || { echo "::error::talopalat/$k: $n tiedostoa, odotettu $odotettu"; exit 1; }
+            test -f "$TP/$k/indeksi.txt" || { echo "::error::talopalat/$k/indeksi.txt puuttuu"; exit 1; }
+            echo "talopalat/$k: $n tiedostoa"
+          done
+          n=$(ls Build/$VIENTI_KANSIO/Data/Raw/ulkoesineet-v1b/*.glb 2>/dev/null | wc -l | tr -d ' ')
+          [ "$n" = 4 ] || { echo "::error::ulkoesineet-v1b: $n/4 mallia"; exit 1; }
           /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMERO" "Build/$VIENTI_KANSIO/Info.plist"
           /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSIO" "Build/$VIENTI_KANSIO/Info.plist"
           # ITMS-90208 (Apple hylkäsi TF 175:n 10.10.2026): Unity 6.7:n UnityRuntime.framework on Embed Frameworks -vaiheessa,
