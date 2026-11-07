@@ -875,3 +875,11 @@ Omistaja 11.21 (KK, sanatarkasti): "jatka kaikkia töitä ja julkaise juna kun k
 ## LONTOON ISOT NAHTAVYYDET SISAISEEN KOEVERSIOON, KUN KYLTIT KORJATTU (OMISTAJA 7.11.2026 KLO 11.42, KK:N KORTTI) (7.11.2026 klo 11.43)
 
 Kortti: Otetaanko Lontoon isot nähtävyydet seuraavaan koeversioon? Vastaus: Otetaan (Suositus). Kortin selite: Isot koot sisäiseen koeversioon, kun kyltit on korjattu. Koskee PK:n koetta cbfb96542 (pelikoodari/lontoo-isot), vain sisäistä koeversiota, ei ulkoista julkaisua. Abbeyn 140 m:n siirto ja Tower Bridgen heikkous kaukaa kerrottu omistajalle. KK katsoi parit ja tarkisti lokista huipun 3 844 Mt. Korjattava ennen koeversiota: Newgaten vankila St Paul'sin päällä, Vanha Westminsterin palatsi palatsin päällä, Exchange Alley St Paul'sin julkisivulla matalalta, Lontoon kaupungintalon nimi Tower Bridgen yli, pallon hintakyltti palatsin edessä. Kuva KK:lle korjatusta. Muisti mitataan yhteisajossa muiden korjausten kanssa, koska iPhonesta ei ole lukua.
+
+## JUNA 220 ODOTTAA TALOT KAUEMMAS (OMISTAJA 7.11.2026 KLO 11.52, KK:N KORTTI) (7.11.2026 klo 11.53)
+
+Kortti: Jos talot kauemmas ei onnistu ajoissa, lähteekö juna ilman sitä? Vastaus: Odottaa. Juna odottaa, kunnes talot kauemmas on mukana.
+
+## PALLON ELAMA PARIISIN KARTALLA KOKEENA ENNEN JUNAA (OMISTAJA 7.11.2026 KLO 11.52, KK:N KORTTI) (7.11.2026 klo 11.53)
+
+Kortti: Kokeillaanko junan jälkeen pallon elämää Pariisin kartalla? Vastaus: kokeillaan heti ennen junaa, ja tehdään siihen kaikki mahdollinen mikä ei julkisenakaan edellytä cesium kuukausitilausta ja testataan muisti vasta lopuksi. Heti perään: tosin eri säätiloja ja vuorokaudenaikoja ei oteta vielä mukaan, eli pidetään ns. puolipilvinen ja päivä vuorokauden aikana, mutta kaikki sitä tukevat jutut mukaan. KK:n tulkinta (ei omistajan sanaa): pallon omat osat kartalle kokeena; sade, lumi, salamat ja yö pois; junaan vasta omistajan kortilla kuvista; pallon lento omilla taloilla ei kuulu tähän ilman omistajan sanaa. Suunnitelma KK:lta: suunnitelmat/20261107-pallon-elama-kartalle.md; ei jakoa ennen sitä.
