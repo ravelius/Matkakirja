@@ -13,13 +13,14 @@ Viestit: mcp__ccd_session_mgmt__send_message session-id:llä.
 ## TYÖ NYT (PT 03.2x, kohdat 10 ja 8; kumpikin kokeena, ei junaan, yksi ajo ja kaksi yritystä; tulos KK:lle, rivi PT:lle; älä jää odottamaan)
 1) Aloituslennon yksi Mac-ajo laattapaketin kanssa (KK 23.50, sha sisältää 7b6caba3a): mittaa 4,3 s:n aukko ja tuota kuva introlle, jos sitä ei ole vielä tehty. Tarkista ensin A/tulos.md ja muisti "Intro: laattapaketti" (lokirivi ennen kuittausta). Ajo JU:n vuorolla.
 2) Canopéen välke liikkeessä, katsomatta tähän asti. Ajo JU:n vuorolla.
-Kameraeste: PT kuittasi raportin perusteella kokeena, kuvia katsomatta; taivaan välke on KK:lla, ei jatketa ilman sanaa. Sumea alue on aamun kysymys KK:lla. Ei kysytä uudelleen.
+Kameraeste ja sumea alue ovat aamun kysymyksiä KK:lla. Ei kysytä uudelleen eikä jatketa ilman sanaa.
 
 ## SUMEA ALUE PARIISIN EDESSÄ: KAKSI YRITYSTÄ TÄYNNÄ, EI RATKENNUT, AAMUN KYSYMYS KK:LLA
 Tulos A/z10-tulos.md, kuva L/natiiviseppa-z10-ipad2/kolmikko.png (pois, Z10, latausrajat; kello 08.27, 08.26, 08.26). Z10 b00d2a1f5 ei junaan: sama suorakaide, laattoja 251 → 406. Latausrajat (maasto lataus 200 40 40): huonompi, ei teitä; komento rakentaa pallon uudelleen, joten syy ei erotu. Päätelmä, ei mitattu: Cesium ei vaihda tasoa ajoissa, sillä sumea tulee myös lähes valmiista välimuistista (nelio-2). Kestoa pelaajalle ei ole mitattu; suositus KK:lle: se ensin. Ei yrityksiä ilman uutta sanaa. Neliö iPadilla ei mitattu; meri seis yöllä.
 Lontoo d8-sp (PT): Z10 ei kata, ajo on Mac-esikatselu ilman aloituslentoa; kerrottu, ei omaa työtä.
 
-## KAMERAESTE (PT 02.2x, KK 02.20): KOE VALMIS, YKSI VIKA AUKI, EI JUNAAN
+## KAMERAESTE (PT 02.2x, KK 02.20): EI KUITATTU, JÄÄ OMALLE HAARALLEEN, AAMUN KYSYMYS
+KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA 03.13: ea5823b4f ei yhteiseen kokeeseen eikä junaan. KK katsoi kuusi ruutua muut85:stä (3,6–6,8 s): läpimeno on poissa, mutta noussut näkymä näyttää huonommalta kuin läpimeno: hyppy 147 → 966 m, korkealta isoja beigejä aukkoja ja raidallisia reunoja, iPadilla katsomatta. Välkettä ei selvitetä yöllä. PT oikaisi 03.2x:n kuittauksensa: koetta ei ole kuitattu.
 Tulos _tyo/natiiviseppa/liiku/kameraeste-tulos.md. Haara natiiviseppa/kamera-este ea5823b4f (natiivi-backup, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto-koe, pohja natiivi-ui/kyltit-liike 29bea235c). Kartta/Kameraesteet.cs + PalloKierto.LaskeAsento: silmä nousee mallin yli, katsepiste pysyy; komento kameraeste 0|1; loki "kameraeste: nousu". Testit sh Kartta-testit/kaanna.sh Kameraesteet 10/10.
 Mitattu Macilla: ajo ja veto matalin 965 m rajan sisällä (ennen 180 m); kierto ja zoomi ajossa 84d1b67da 966 m, rungolla ea5823b4f ei todennettu. Seisova 85° tornin juureen ei muutu. Sk _tyo/natiiviseppa/liiku/sk-kameraeste-85.txt. Mittaus: kamera.txt:n sarakkeet ruutu, aika, X, Z, Y (ECEF), Eiffelin keskus 48.858258, 2.294467, raja 292 m.
 AUKI: taivas välkkyy noston aikana vedossa (muut85 ruudut 222-261, kirkkaus 217 ↔ 189 ilman korkeuden muutosta). Syy auki; hypoteesi: Aurinko.cs:n sumu lukee kierto.korkeus-arvoa. Ei jatketa ilman sanaa (30 min täynnä). Koskee vain Nähtävyysalueen malleja. iPadilla ei ajettu.
