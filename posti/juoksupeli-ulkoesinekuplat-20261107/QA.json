@@ -1,0 +1,96 @@
+{
+  "tasks": [
+    2189,
+    2190,
+    2191,
+    2192
+  ],
+  "technicalPass": true,
+  "visualReview": "PASS for KK and owner review",
+  "actualImagegenCalls": 2,
+  "renderer": "Blender Cycles Metal, existing intact GLB assets",
+  "selectedModelVersions": {
+    "kala-allas": "mallit-v1",
+    "kukkaruukku": "mallit-v1b"
+  },
+  "assets": [
+    {
+      "id": "kala-allas",
+      "A": {
+        "size": [
+          768,
+          1024
+        ],
+        "format": "JPEG",
+        "fullRectangle": true,
+        "naturalPhotographicSurface": true,
+        "handsReviewed": true,
+        "objectReferenceReviewed": true
+      },
+      "B": {
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "alphaRange": [
+          0,
+          255
+        ],
+        "bbox": [
+          144,
+          101,
+          880,
+          923
+        ],
+        "occupancyMaxDimension": 0.802734375,
+        "cameraElevationDegrees": 20,
+        "projection": "orthographic",
+        "modelSHA256": "d9549a0f927a97f1c1cf1add3666a7e09f992ab3e2a59e48e02c88ac1309a2d2",
+        "renderOnlyGeometryPreserved": true,
+        "note": "Mallin alkuperäinen vähäpolygoninen pinta näkyy renderöinnissä."
+      }
+    },
+    {
+      "id": "kukkaruukku",
+      "A": {
+        "size": [
+          768,
+          1024
+        ],
+        "format": "JPEG",
+        "fullRectangle": true,
+        "naturalPhotographicSurface": true,
+        "handsReviewed": true,
+        "objectReferenceReviewed": true
+      },
+      "B": {
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "alphaRange": [
+          0,
+          255
+        ],
+        "bbox": [
+          321,
+          101,
+          704,
+          923
+        ],
+        "occupancyMaxDimension": 0.802734375,
+        "cameraElevationDegrees": 20,
+        "projection": "orthographic",
+        "modelSHA256": "4d357c8b28bca4aa5e2c8ce9d2ccc27b1e01d1164e4ad74bffd52bbf6d9ca96c",
+        "renderOnlyGeometryPreserved": true,
+        "note": "Mallin alkuperäinen vähäpolygoninen pinta näkyy renderöinnissä."
+      }
+    }
+  ],
+  "KKReview": "pending",
+  "ownerReview": "pending",
+  "gameIntegrated": false,
+  "published": false
+}
