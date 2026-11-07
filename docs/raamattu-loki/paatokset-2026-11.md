@@ -862,4 +862,8 @@ Kortti 10.52 (KK): "Jää näin" (KK:n suositus oli pehmennys). Kortissa: suora 
 
 ## PARIISI VALMIS -KORTTI ODOTTAA YHDEN TARKKUUDEN KUVIA (7.11.2026 klo 11.04)
 
-Kortti 11.00 (KK): "Odottaa (Suositus)": omistaja näkee ensin yhden tarkkuuden kartan kokeen kuvat; kortti ja TF vasta sen jälkeen. Kerrottu riskit: vaihtohetki ja kallistus.
+Kortti 11.03 (KK): "Odottaa (Suositus)": omistaja näkee ensin yhden tarkkuuden kartan kokeen kuvat; kortti ja TF vasta sen jälkeen. Kerrottu riskit: vaihtohetki ja kallistus.
+
+## TASO LÄPI -KORTTI KESKELLE (7.11.2026 klo 11.09)
+
+Kortti 11.08 (KK): "Keskelle": noudattaa pohjaa, vaikka peittää keisarin pään ja hartiat; KK:n suositus oli sivussa. Kumoaa 4aa9ec365:n, joka on TF 219:ssä. PK palauttaa keskelle seuraavaan junaan, ei muunnelmaa pohjiin. KORJAUS edelliseen kirjaukseen: Pariisi valmis -kortin "Odottaa" oli klo 11.03, ei 11.00 (KK).
