@@ -21,3 +21,6 @@ Pallon osat (omistaja 16.43; koe, ei junaan; junaan vain kortilla): `linssiseppa
 
 ## TEKNIIKKA
 Numpy, cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`; PIL `/opt/homebrew/bin/python3 -I`. `sh`, ei zsh. Tarkistus `sh Linssit-testit/unity-tarkistus.sh` k31:ssä. iPad: `odota 3` komentojen väliin, kuvat `komento kuva X`. Kuvat 2752×2064: pienennä, rae ja saumat täysikoossa. Tapot vain omilla PID:illä. Seuraamattomat `.claude/settings.local.json.ennen-kevennysta` ja `waveletNoiseTile.bin`: ei koskettu. Kotihaara jäljessä, ei ylikirjoiteta: luovutus plumbingilla origin/main-pohjalta.
+
+## LISÄYS 19.42 (TÄMÄ KUMOAA YLEMMÄN, JOS RISTIRIITA)
+JU 19.41: korjaus 6/6 ja verrokki 1/2 kaatuu `--console`-käynnistykseen, ilman konsolia sovellus nousee; .app kunnossa, syy auki. **Sanoin JU:lle: molemmat uudelleen ilman konsolia**, ettei konsoli vääristä ruutuaikaa: korjaus `lokit/linssiseppa2-vyo-73c744f37-eikons`, verrokki `lokit/linssiseppa2-vyo-verrokki-901e4004b-eikons`. Vertaa VAIN näitä keskenään, ei 19.29:n konsoliajoa. Konsolilokia ei tule; `taivas`- ja vahtitieto `muistivahti.log`:sta. Tarkista lokien ajat. Sitten kaksi riviä PT:lle.
