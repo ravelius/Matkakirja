@@ -36,3 +36,10 @@ PK i4, k1, i5 (viesti). NUI iPad 4 (SEIS muisti 4082 Mt, 4/5). NS yksi-taso, var
 
 ## LISÄYS: PT:n tilaus ennen VIE-sanaa
 Kun KS:n 41022d9db on junassa 220 (odottaa jousen kuvaa, PT antaa junavuoron), aja yöportti uudelleen rungolla: gh workflow run natiivi-yoportti.yml, lue kaikki vaiheet. Kultaiset eivät ole menneet läpi ainakin 19.10. jälkeen, joten niiden tulos on tieto junasta. Jos vain kultainen on punainen, rivi PT:lle ennen VIE-sanaa. PK:n vartijakopiot näkyvät samassa ajossa.
+
+## LISÄYS 11.50: TÄMÄ ON TUOREIN
+Juna 220: julkaisija/juna-220 = 61c171795 (+ 497782741 kultaisten kopiot, 41022d9db vahtierä). Junarivit kirjattu. 15c97cc56 (PK j1) vain PT:n junavuorolla, kun PK on katsonut kuvat. KS:n 1c7215bc3 ei junaan. VIE-sana ei ole tullut: PT odottaa NUI:n, PK:n ja Lontoon kylttien kohtia.
+Yöportti tehty: 42361120638 rungolla 61c171795 kaanna 868/868 ja tarkista vihreä, punainen vain aanijalki.json ajurilla (paikallisesti läpi), syy auki, ei junasta. PT siirsi selvityksen PK:lle: JU ei jatka. Rivi junarivillä. Kopiot täsmäävät junaan 13/13 paikallisesti.
+Kuitattu lisäksi: NS kertoja (9/9, 4 erilaista md5), PK j1 (4/4), KS jousi (vaistokoe 0) ja este (vaistokoe 164). NUI ajoi itse pallonapit, L1 ja L2 vapaat.
+iPad jäljellä: VS kivisivu14 ajossa (pid 68958; sen jälkeen kivet-juuri T7:lle), KS muisti2 (68981), NUI 5-raketti (75290).
+Oppi: zsh:ssa `$B:Peli-testit` tulkitaan muuntimeksi :P; käytä `${B}:polku`. Suodatin 'talot: aineisto puuttuu' poisti tulosrivin kopiosta ns-kertoja-ipad.zsh: tarkista kopioskriptin rivi-kutsu.
