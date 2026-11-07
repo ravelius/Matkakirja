@@ -15,12 +15,12 @@ Tulos _tyo/natiiviseppa/yksi-taso/tulos.md, parit samassa kansiossa pari-{z12,z1
 PT 11.3x: katsoi z12, z13, kauko: lohko poissa, hinta kuten kirjoitettu; parit KK:lla. PYSY SEIS KARTASSA, kunnes PT antaa sanan KK:n vastauksen jälkeen. Kirjaa tulos.md:hen Pariisi-nimen paikanvaihto kaukokuvassa (4,2), kun syy selviää.
 SEURAAVAT VASTA PT:N SANALLA: 2) vaihtohetki ruutusarjana (ei videoita omistajalle), 3) kallistus 45, 70, 85 (nyt yli 3°:ssa pääkamera, eli saumat jäävät; sääntö on suunniteltava), 4) iso iPad JU:n vuorolla, "iPad, ei iPhone". Muisti ei mitattu; TasainenLaatta-merkintä (+146 Mt, 45° ei vaikutusta) tarkistamatta kuvista: sano se tuloksessa. Jos ei ratkea kahdella yrityksellä, rivi, ei jatkoa.
 
-## 2. LÄHIZOOMI (JUNAAN ODOTETAAN): dd3a2e10f (natiiviseppa/iphone-lahizoomi, sisältää 8d8842ce6:n)
-JU: lz1-2 valmis 5/5, huippu 3710 Mt, KUVIA EN OLE KATSONUT. lz3-2 ajossa 11.3x. Lokit /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-lahizoomi-ipad/lz1-2 ja lz3-2. Kun valmis: konsolista jokainen komento perillä, talot tila palat > 0; kuvat täysikoossa lz1/lz3, muisti muistivahti.log:sta, merkintä "iPad, ei iPhone", iPhonen muistia ei väitetä. Tulos PT:lle, kuvat KS:lle. Mac-tason lz1/lz3 PT kuittasi. Aiempi ajo ilman taloja: T/tulos.md. KS hoitaa talojen säteen. iPhone "unavailable".
+## 2. LÄHIZOOMI: KATSOTTU, KERROTTU PT:LLE JA KS:LLE 7.11. 11.38, EI TOISTETA
+dd3a2e10f (natiiviseppa/iphone-lahizoomi, sisältää 8d8842ce6:n). iPad, ei iPhone: komennot 19/19, palat 69 ja 40, huippu 3710 ja 3744 Mt, VIKA 0, thermal 0. Tulos T/tulos.md, parit ja rajaukset /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-lahizoomi-ipad/rajaukset/. Hinta lz3:lla: ranta porrastuu ja on sumea, tiet pehmeät, kaukomaa kulmikkaina raitoina (päätelmä kuvista). Pikselipisteet myös lz1:ssä ja Macissa, syy auki. iPhone mittaamatta; kytkentä PT/KK. PT:n vastausta ei ole vielä tullut. KS hoitaa talojen säteen.
 
 ## 3. LONTOON KAMERA (JUNAAN ODOTETAAN): 8d8842ce6 (natiiviseppa/lontoo-kamera-jaa)
 PT korjasi 11.3x: "esittely kuvineen" oli PT:n sana; Lontoolla ei ole kuvaesitystä (KaupunkiIntro.OnIntro vain Pariisi). Omistajan havainto: "zoomautuu ulos koko kartalle esittelyn jälkeen".
-AJO JU:lla heti lz3-2:n jälkeen samasta käännöksestä: T/sk-ipad-lontoo-kertoja.txt, lokit/natiiviseppa-lontoo-kertoja-ipad, aikaraja 1000 s, 9 kuvaa (lk-030...lk-loppu, lk-p060, lk-p180, lk-p300). KERTOJA PÄÄLLÄ (ui tekstitys 1 1, ui pelaaja 1).
+AJO JU:lla käynnissä 11.38 (JU: seuraavaksi): T/sk-ipad-lontoo-kertoja.txt, lokit/natiiviseppa-lontoo-kertoja-ipad, aikaraja 1000 s, 9 kuvaa (lk-030...lk-loppu, lk-p060, lk-p180, lk-p300). KERTOJA PÄÄLLÄ (ui tekstitys 1 1, ui pelaaja 1).
 Kun valmis, todista PT:lle KUVASTA JA LOKISTA: kertojan loppuhetki konsolista; vähintään 60 s sen jälkeen kamera yhä kaupungissa; ei riviä "hiljaa ...: soi" eikä uutta "saapuminen: GBR" kertojan jälkeen; lk-p060 ja lk-p300 samat paitsi pulu. Jos kertoja ei soinut (rivit puuttuvat), kerro, älä väitä. Aiempi ajo oli kertoja pois: T/tulos.md. Muiden kaupunkien kamera ennallaan ilman omistajan sanaa.
 
 ## 4. VALKOISET: VALMIS JA KERROTTU PT:LLE 11.3x, EI TOISTETA
