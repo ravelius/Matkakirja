@@ -23,3 +23,10 @@ Juuri koejuuri-saanto4 (tee_saanto4.py, tee_saanto4b.py, tee_saanto4c.py, noin 3
 4. Oja2-sääntö: kapea (<= 0,7 m) V4_kivireunus-kappale yläpinta y < 0,35, >= 50 % seinän vieressä, + pieni irrallinen sokkelipääty y < 0,35. Tulosta määrä ja lista ensin (--kuiva): voi osua oikeisiin askelmiin; katso kuvista.
 5. Tarkistus: RAKO 1 cm:n rasterilla 10 m:n paloissa, jalanjälki = poistetut kolmiot, pois seinät; AUKKO ei näe alle 0,2 m:n rakoja.
 Sitten sade3 samoihin pisteisiin, aja-s4b.zsh-tyyppinen ajo vain JU:n vuorolla, rungolla 901e4004b (perus kuvat-s4-perus käy), ÄLÄ muuta juurta ajon aikana. Valmista vasta katsotuilla kuvilla. laatta2 tumma vyö ja laatta1 V4_red y 0,07: katso uudelleen, ei ratkaistu.
+
+## PT luovutuksen jälkeen: TÄMÄ OHITTAA kohdan "Seuraava askel" siltä osin kuin eroaa
+Kolmiokorjaus etenee (PT katsoi r-s4-viat.png:n: ei kelpaa). RAJAUS: muutetaan vain omistajan ehdot (oja, laatta, rako, puulattia) ja niiden suorat seuraukset; kaikki muu tavulleen perus-juuresta. Tarkista siksi jokainen tee_saanto4d.py:n kohta tätä vasten: esim. kohta 4 (kapeat y < 0,35) vain, jos se on ojan suora seuraus.
+Kauko-lod2:n leijuva puurivi mitataan ja korjataan TÄSSÄ erässä: uusi ja näkyy pelaajalle.
+PT:n mukaan listaamatta tai kuitattu väärin, vertaa kukin samaan perus-kuvaan ja merkitse UUSI tai VANHA: oja3 (2 kuvaa) rako ja läpinäkyvä alue reunakiven alla, vaikka kiila poissa; ovi sininen rako ja katkoviiva punaisessa alaosassa (kirjasin ensin "ei vikaa"); pelia valoläikät (PT:n viestissä "petla"; r-s4-viat.png:n viimeinen ruutu); laatta1 kolmiomainen vaalea alue muurilla ja tumma lattia, jossa pilkkuja; valo3 vaalea suorakaide seinässä.
+Tarkistukseen ohuet raot kolmioista (rasteri ei näe niitä).
+JOS SEURAAVAKIN AJO TUO UUDENLAISEN VIAN: ei kuudetta kierrosta; ensin PT:lle, mitkä ehdot täyttyvät ja mikä jää.
