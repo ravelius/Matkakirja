@@ -20,8 +20,10 @@ Arvaukset, jotka kuvat ratkaisevat: koko, jonot, valon värit (Laki, Horisontti)
 ### Kohta 5, veneet, lokit, kyyhkyt, autot, raitiovaunut: EI aloitettu
 Aloita vasta, kun kohdan 4 kuvat on katsottu, koska käyttää samaa ankkuria ja liioittelua. ElavaKaupunki.Avaa on sidottu CesiumKaupunki.Avattuun ja k.Georef, k.Vesi, k.TaivasAla; maa OpasSovitin.OmaMaa (NaN ilman opasta). Korvaa MaanPinnalla. Veden korkeus 84–89 m vs kartta 90 m. Muut pallot EI (28.10. 09.18). Lue suunnitelma.
 
-### Odottaa PT:n sanaa
-Kysyin 12.3x: junassa 220 on yhä mittaririvit "MATKAKIRJA kyltti malli:" ja "kyltti reuna:" (MalliKyltit.cs, 2 kpl), merge-ohje aa2567df7:ssä käskee poistaa. Tee PT:n sanalla omana committina JU:lle. PT:lle kerrottu myös tähtikylttien tila: uusin ajo nui-kyltti-malli-4-3d92da39e, koodi junassa; 3d92da39e:n kuvia ei katsottu tällä sessiolla, omistajan korttia en löytänyt; Sacré-Cœurin kyltti vilahtaa lennossa, Sainte-Chapellen puuttuu 85°:ssa, ei selvitetty.
+### Muut työt PT:n sanalla (PT 12.4x)
+1. TEE ENSIN, pieni: poista junasta mittaririvit "MATKAKIRJA kyltti malli:" ja "MATKAKIRJA kyltti reuna:" sekä kenttä ReunaMittari (MalliKyltit.cs, juna 220; 2 riviä), MERGE-OHJE aa2567df7:ssä. Oma haara junan 220 päältä, unity-tarkistus ja pohjavahti, sha PT:lle ENNEN junavuoroa. Tarkista samalla ohjeen muut mittarit (9a1e39ee5 ei ole junassa).
+2. Selvitettäväksi, laiteajoon JU:n vuorolla: Sacré-Cœurin kyltti vilahtaa lennossa kahdesti noin 0,6 s ja kerran lopussa; Sainte-Chapellen kyltti puuttuu 85°:ssa (jo ajossa 45). Ajot nui-kyltti-malli-4-3d92da39e ja nui-louvre-kyltti-2-c390b057f; koodi junassa.
+Tieto: työlistan mukaan omistaja hyväksyi tumman tähtikyltin 5.11. 15.59 (rivi "Pariisin kyltit"; PT). 3d92da39e:n kuvia ei katsottu tällä sessiolla.
 
 ## Valmista
 - Pallon napit, Poistun näkyvyys ja lähtökysymys: junassa 220 kuutena committina + 95c540690 (84deb0978). Omistaja 12.22 tumma valikko "Kelpaa"; työlista kirjattu, PT:lle kerrottu. Oikea sormi, oikea iPhone ja laukaisun nousu todistamatta; napautus tarkistetaan junan käännöksestä (PT: ei uusintaa y 561:llä). Raportti: proto-3d/_tyo/natiivi-ui/raportti-lahtokysymys-ipad5-20261107.md, muut raportti-pallonapit-20261107.md. Jos KK tuo omistajan huomion lasista, korjaa sen mukaan.
