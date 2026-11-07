@@ -807,3 +807,7 @@ KK 7.11. klo 06.40: Lontoo G e48424a75 kelpaa kokeena; Big Benin ja palatsin kyl
 ## PARIISI, YON LOPPU (KK 06.54, 07.04, 07.19; kokeena, ei junaan) (7.11.2026 klo 07.19)
 
 Louvren oma kyltti korjattu: NUI c390b057f (haara natiivi-ui/louvre-kyltti, a4269054a:n päällä), yritys 2, kelpaa kokeena (KK 07.19); kärki ei ole a4269054a:ssa, joten c390b057f on muistettava, kun kokeet kootaan junaan. Ei uutta yhteisajoa ennen korttia; pari kortille erikseen. iPadilla kolmiotestin kulutus ja muisti mittaamatta. Pallo isolla iPadilla kelpaa korttiin (PK, a4269054a; KK 07.04); kolme havaintoa kortille, syitä ei selvitetty: Pohjanmeren ruudukkoläikkä, Ranskan lippu Elsassissa, pohjoisnavan laikku. KK:n korjaus 06.54: Kuumailmapallo £200 on pallon oma kyltti (KaupunkiPallot.cs, KyltinTeksti), ei Lontoon vika. Kohta 6: kevyt Notre-Dame #2184 ja Riemukaari #2172 ovat pelikokeessa omistajan päätöksillä.
+
+## MUUT KAUPUNGIT OHJELMALLA ILMAN TRIPOA: EI VIELA (omistaja 7.11.2026 klo 07.40, kortti KK) (7.11.2026 klo 07.41)
+
+Kortti: Tehdäänkö muut kaupungit ohjelmalla ilman Tripoa? Vastaus: Ei vielä (kuvaus: Lontoo jää kokeeksi, ja päätös odottaa). Lontoon koe pysyy haaralla (G e48424a75); kokokysymystä ei esitetty.
