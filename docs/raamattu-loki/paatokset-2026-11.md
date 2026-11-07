@@ -963,3 +963,7 @@ Omistaja klo 17.31 (KK:n välitys): "levyä pitää tyhjentää , mikä sen on t
 ## Kaukainen varjo ja iPhonen kameran korkeus kelpaavat (7.11.2026 klo 18.00)
 
 Omistaja kortilla klo 18.00 (KK:n välitys): Kelpaako kaukainen varjo 70°:ssa nyt? Kelpaa (02a6cc1dd, koe, ei junaan; jatkuu iPadin muistiin). Kelpaako iPhonen kameran uusi korkeus? Kelpaa (901e4004b, juna 220; hyppy kallistaessa katsotaan junan käännöksestä). Madeleinen katto horisontissa ja terävöinnin luvut kerrottu, ei uutta työtä.
+
+## Pihojen ja tonttien puut kokeeseen (7.11.2026 klo 18.06)
+
+Omistaja kortilla klo 18.06 (KK:n välitys): Kokeillaanko pihojen ja tonttien puita koealueella kuvaparina? Kokeillaan. 140 puuta vain koealueen kokeeseen, päätös kuvien jälkeen, ei junaan; 2.204 voimassa siihen asti.
