@@ -871,3 +871,7 @@ Kortti 11.08 (KK): "Keskelle": noudattaa pohjaa, vaikka peittää keisarin pää
 ## JULKAISUPYYNTÖ JUNA 220 (7.11.2026 klo 11.22)
 
 Omistaja 11.21 (KK, sanatarkasti): "jatka kaikkia töitä ja julkaise juna kun kaikki korjaukset valmiit." KK:n tulkinta, omistajalle kerrottu: sisäinen koeversio kuten 07.41 ja TF 219; ei ulkoisille, ei lukitusta, ei korvaa korttia Pariisi valmis. Kaikki korjaukset = iPhone-palautteen 09.49 korjaukset, Taso läpi keskelle sekä 11.21:n alanapit ja valikko. Yhden tarkkuuden kartta, Lontoon isot nähtävyydet ja muurin kivet mukaan vain omistajan kortilla. Lähtö PT:n rivillä VIE 220 KOEVERSIONA, kun ehto täyttyy.
+
+## LONTOON ISOT NAHTAVYYDET SISAISEEN KOEVERSIOON, KUN KYLTIT KORJATTU (OMISTAJA 7.11.2026 KLO 11.42, KK:N KORTTI) (7.11.2026 klo 11.43)
+
+Kortti: Otetaanko Lontoon isot nähtävyydet seuraavaan koeversioon? Vastaus: Otetaan (Suositus). Kortin selite: Isot koot sisäiseen koeversioon, kun kyltit on korjattu. Koskee PK:n koetta cbfb96542 (pelikoodari/lontoo-isot), vain sisäistä koeversiota, ei ulkoista julkaisua. Abbeyn 140 m:n siirto ja Tower Bridgen heikkous kaukaa kerrottu omistajalle. KK katsoi parit ja tarkisti lokista huipun 3 844 Mt. Korjattava ennen koeversiota: Newgaten vankila St Paul'sin päällä, Vanha Westminsterin palatsi palatsin päällä, Exchange Alley St Paul'sin julkisivulla matalalta, Lontoon kaupungintalon nimi Tower Bridgen yli, pallon hintakyltti palatsin edessä. Kuva KK:lle korjatusta. Muisti mitataan yhteisajossa muiden korjausten kanssa, koska iPhonesta ei ole lukua.
