@@ -887,3 +887,7 @@ Kortti: Kokeillaanko junan jälkeen pallon elämää Pariisin kartalla? Vastaus:
 ## MUURIN KIVET KOODINA JUNAAN, USVA 16 KM KOEVERSIOON, MAALATUT JULKISIVUT KOKEESEEN (OMISTAJA 7.11.2026 KLO 12.09, KK:N KORTIT) (7.11.2026 klo 12.10)
 
 Kortti: Kokeillaanko omiin taloihin maalattuja julkisivuja? Vastaus: joo, mutta miten ne kannattaa maalata? Kortti: Menevätkö muurin kivet näin junaan koodina? Vastaus: Menevät (Suositus); selite: tummemmat sivut julkaistulla mallilla, ei uutta päätyä; puuttuvat seinät selvitetään erikseen. Koskee dc4b1c69c:tä; LAV:n paketti ja v115pala eivät mene. Kortti: Otetaanko usva 16 km tähän koeversioon? Vastaus: Otetaan (Suositus); selite: kun se on kuvattu ennen junaa. Kuvat koko Pariisin kuvakulmista KK:lle. Suunnitelmat KK:lta: suunnitelmat/20261107-pallon-elama-kartalle.md ja 20261107-talojen-julkisivut.md.
+
+## TUMMA VALIKKO KELPAA (OMISTAJA 7.11.2026 KLO 12.22, KK:N KORTTI) (7.11.2026 klo 12.24)
+
+Kortti: Kelpaako pallon tummempi valikko? Vastaus: Kelpaa (Suositus). Kortin selite: tumma valikko ja reunukset jäävät, ja korjaus menee junaan 220. Kerrottu: oikea iPhone todistamatta, yläreunan ohut viiva tarkistamatta koodista.
