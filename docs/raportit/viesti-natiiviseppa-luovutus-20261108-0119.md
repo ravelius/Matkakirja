@@ -79,3 +79,6 @@ Mahdollinen jatko vain PT:n tai omistajan sanalla: uusi tapa (korttelin yhteinen
 - LOPUT OPIT (esim. Unity = ECEF -akselit, laitekansiot eivät tyhjene, kiinteät viiveet, mittarit): /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/opit-vanhemmat.md: lue.
 - KYTKIMEN PAIKKA RATKAISEE, NÄKYYKÖ KOE: taso 1 ei purkanut, koska reitillä ei ollut sitä, mitä taso 1 poistaa. Lue koodista, mitä kytkin koskee, ja valitse reitti sen mukaan ennen ajopyyntöä.
 - zsh-FUNKTION SILMUKKAMUUTTUJA ON GLOBAALI: for i kaynnista()-funktiossa nimesi seuraavan ajon kp2:ksi. local i aina funktioon.
+
+## LISÄYS 01.5x: KOHTA 4 TEHTY
+NUI-ajo luettu ja raportoitu PT:lle (M/tulos.md "Vaihe 1:n NUI-tarkistukset"). Opas ja raketti toimivat; VALITSIN EI TODENNETTU (testinapautus ei avannut, aineistoa ei pyydetty): NUI:n tarkistettava koodista. Älä aja uudelleen ilman PT:n sanaa.
