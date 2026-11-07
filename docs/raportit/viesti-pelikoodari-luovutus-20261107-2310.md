@@ -7,6 +7,9 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opi
 - Kohta 0 TEHTY `003ab5b9f` (`pelikoodari/muisti-latauskuvat`): VaakaOtsikko 1260 → 900 px, keskiY 143 → 190 px; lasketut kuvat `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/latauskuva-otsikko-{ennen,jalkeen}-laskettu.png`.
 - Esikatselua varten yhdistelmä `e26c3ad16` (`pelikoodari/esikatselu-otsikot-lahto`). Skenaario `_tyo/pelikoodari/keisari-lahtee/sk.txt`. JU:lta pyydetty vuoro 23.2x: 4 ajoa (ipad, iphone-vaaka × e26c3ad16 ja 72e257a0b). Kuvat PT:lle, PT → KK. Ei junaan ilman kuittausta.
 
+## 00000. TILA 23.5x (UUSIN)
+- Nollattu 23.40, luovutus luettu. PT 23.5x: kuvaparit 1–7 + 3b PT:n kuittaamat, KK:n kortti omistajalle odottaa. TF 221 "Ei vielä" (omistaja 23.37): odottaa illan korjauksia, myös latausaikaa. Lepo latausmittaukseen asti (JU, kansiot `lokit/pelikoodari-lataus-{ennen,jalkeen}-1`).
+
 ## 0000. TILA 23.37 (UUSIN)
 - Kuva-ajot VALMIIT ja raportoitu PT:lle: parit `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/parit/` (1–7, 3b). Keisarin itselähtö toimii (loki "keisari lähtee itse vastaseinältä (oikealle)", kuvat). Linja 1 vapautettu JU:lle. Odottaa PT:n/KK:n kuittausta; junaan vain kuittauksella (koodihaarat `pelikoodari/keisari-lahtee-itse` 1888141a9 ja `pelikoodari/muisti-latauskuvat` 003ab5b9f; 221:n päällä poiminnat `pelikoodari/esikatselu-221` 22dc4c06b).
 - Huomio: jälkeen-kuvassa c näkyy opetusohje "käänny oikealle" keisarin jo juostessa (ohje seuraavaan risteykseen?) — tarkista, jos PT/KK huomauttaa.
