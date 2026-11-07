@@ -859,3 +859,7 @@ Kortti 10.50 (KK): "Oikea (Suositus)" (kuvat/usva-12-16/usva-12-vasen-16-oikea-1
 ## PARIISIN SAUMAT JÄÄVÄT NÄIN (7.11.2026 klo 10.53)
 
 Kortti 10.52 (KK): "Jää näin" (KK:n suositus oli pehmennys). Kortissa: suora raja jää, eikä sitä lasketa Pariisi valmis -listan esteeksi; kuva kuvat/saumat-20261107/. Saumoista ei uutta työtä.
+
+## PARIISI VALMIS -KORTTI ODOTTAA YHDEN TARKKUUDEN KUVIA (7.11.2026 klo 11.04)
+
+Kortti 11.00 (KK): "Odottaa (Suositus)": omistaja näkee ensin yhden tarkkuuden kartan kokeen kuvat; kortti ja TF vasta sen jälkeen. Kerrottu riskit: vaihtohetki ja kallistus.
