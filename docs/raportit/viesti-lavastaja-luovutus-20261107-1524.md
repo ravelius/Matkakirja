@@ -23,3 +23,6 @@ Kulkukartan seinäkorjausta ei tarkistettu 03.5x:n jälkeen; PT:lle kerrottu.
 
 ## Edellisestä voimassa
 0c3232522 kuitattu junaan (julkaisija/juna-220, 2410473bb). Lokihaarat lavastaja/seina4-loki ja seina5-instanssi eivät junaan. v127 ja v115pala eivät vientiin ilman PT:n sanaa. Natiivi worktree /Users/Shared/Claude/wt/proto-lavastaja-esto-kivisivu. Python numpyllä: /opt/homebrew/bin/python3.
+
+## Lisäys 07.11. 15.32
+PT: kun palkki2 on katsottu ja päätetty, juuren nimi Pelikoodarille (local_91a1bc27-6870-46aa-9886-66fd33b68880): kulkukartan seinäkorjaus odottaa sitä; 03.54:n luovutuksen tieto ei saapunut. JuoksuKulku.bytes muuttunut 6.11. illan jälkeen vain jaloissa, joten kartta voi olla väärä junan muurille.
