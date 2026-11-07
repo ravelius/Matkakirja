@@ -6,7 +6,8 @@ Työkopio: worktree /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus, ha
 
 ## TYÖ JATKAJALLE: odota JU:n iPad-5:tä, raportoi PT:lle, ja pyydä sitten junavuoro. Älä aloita muuta.
 
-PT:n kuittaus 7.11. 11.5x: napit ja valikko kunnossa (katsoi a1:n ja a5:n). Junavuoro cbae3153f + 909eaac25 + f74716da2 tulee, kun iPad-5 on katsottu. Jos muistivahti pysäyttää senkin, uusintaa ei tehdä, ja veloitus 300 → 100 todistetaan Macilla JU:n vuorolla. Junapyyntöön: "sormi ja laite todistamatta". Paneelin pohja ei muutu ilman omistajan sanaa (PT vie himmennyksen KK:lle). Muistin vertailu tulee yhteisajosta, ei omaa ajoa. Valkoiset talot kuvissa: haarassa ei ole a89993465:tä (se on junassa), ei vika.
+PT:n kuittaus 7.11. 11.5x: napit ja valikko kunnossa (katsoi a1:n ja a5:n). Junavuoro cbae3153f + 909eaac25 + f74716da2 tulee, kun iPad-5 on katsottu. Jos muistivahti pysäyttää senkin, uusintaa ei tehdä, ja veloitus 300 → 100 todistetaan Macilla JU:n vuorolla. Junapyyntöön: "sormi ja laite todistamatta". Paneelin pohja ei muutu ilman omistajan sanaa (PT vie himmennyksen KK:lle). Muistin vertailu tulee yhteisajosta, ei omaa ajoa. Valkoiset talot kuvissa: PT:n korjaus, todennäköisesti testiajon varadataa; ei toimia NUI:lta.
+Veloitus 300 → 100 on jo todistettu Macilla: lokit/natiivi-ui-lahtokysymys-4-maksu-cbae3153f/loki.txt rivi 68 (pelaajana, Lähteen jälkeen). PT:lle kerrottu; uutta Mac-ajoa ei tilata ilman PT:n sanaa.
 
 ### A. Pallon napit ja ☰ iPhone vaaka (omistaja 11.21, PT: junaan 220): tehty, raportoitu PT:lle 11.48
 Commitit 909eaac25 ja f74716da2. Raportti ja kuvien polut: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/raportti-pallonapit-20261107.md (lue tämä, jos PT kysyy).
