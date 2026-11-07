@@ -775,3 +775,7 @@ KK 7.11.2026 klo 02.28 omistajan valtuutuksella, kokeena, ei junaan: Lontoon sar
 ## SEINE AJO 40: ISSY JA BIR-HAKEIM, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 02.44)
 
 KK 7.11.2026 klo 02.43 omistajan valtuutuksella, kokeena, ei junaan: Bir-Hakeimin kaksi tummaa viivaa ja Issyn L-talo (way/122634056) pois seuraavaan palaversioon, ei omaa ajoa. Austerlitzin eteläpuolen litteä rengas: KS kaksi yritystä, muuten aamun kysymys. Pariisi valmis -kohta 7 ei ole vielä valmis.
+
+## KIINTEA VALO KELPAA KOKEENA, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 03.05)
+
+KK 7.11.2026 klo 03.05 omistajan valtuutuksella, kokeena, ei junaan: kiinteä valo (VS 7738b63c1) kelpaa; pari omistajalle aamulla. VS saa yhden yrityksen muiden kohtien kanssa samassa ajossa: Sacré-Cœurin ja Louvren muodot erottuvat kaikista suunnista lähes kuten vanhassa, valo ei käänny kameran mukana; jos ei parane, nykyinen jää. KK 02.58: Pariisi kohta 8, NUI 4f80574cf, viat 3 ja 4 kelpaavat kokeena, vika 6 aamuun. KK 02.53: Lontoo E1 kelpaa välivaiheena; PK tekee päivitetyt parit, F3:n ja lyhyen lisäajon, jossa samat konemallit isompina, ei Tripoa.
