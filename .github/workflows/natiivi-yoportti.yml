@@ -62,8 +62,9 @@ jobs:
           sparse-checkout: |
             /*
 
+      # node@22 ensin: Homebrewin oletusnode (26) muuttaa kerroin-lukujen viimeistä desimaalia, ja kultainen tiiviste vaihtuu.
       - name: Homebrew polkuun
-        run: echo "PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
+        run: echo "PATH=/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
 
       - name: Avoin juna väliaikaiskansioon
         run: |
@@ -94,6 +95,7 @@ jobs:
       - name: Kultaisten jälkien vartija ja kopioiden täsmäys
         run: |
           set -euo pipefail
+          echo "node $(node --version)"
           node --test tests/natiivi-kultaiset.test.mjs
           ero=0
           for f in "$PROTO"/Peli-testit/Kultaiset/tee-*.mjs; do
