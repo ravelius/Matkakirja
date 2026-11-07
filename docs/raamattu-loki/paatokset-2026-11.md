@@ -870,4 +870,4 @@ Kortti 11.08 (KK): "Keskelle": noudattaa pohjaa, vaikka peittää keisarin pää
 
 ## JULKAISUPYYNTÖ JUNA 220 (7.11.2026 klo 11.22)
 
-Omistaja 11.21 (KK, sanatarkasti): "jatka kaikkia töitä ja julkaise juna kun kaikki korjaukset valmiit." KK:n tulkinta, omistajalle kerrottu: sisäinen koeversio kuten 07.41 ja TF 219; ei ulkoisille, ei lukitusta ulkoisille, ei korvaa korttia Pariisi valmis. Kaikki korjaukset = iPhone-palautteen 09.49 korjaukset, Taso läpi keskelle sekä 11.21:n alanapit ja valikko. Yhden tarkkuuden kartta, Lontoon isot nähtävyydet ja muurin kivet mukaan vain omistajan kortilla. Lukitus PT:n rivillä LUKITSE 220, kun ehto täyttyy.
+Omistaja 11.21 (KK, sanatarkasti): "jatka kaikkia töitä ja julkaise juna kun kaikki korjaukset valmiit." KK:n tulkinta, omistajalle kerrottu: sisäinen koeversio kuten 07.41 ja TF 219; ei ulkoisille, ei lukitusta, ei korvaa korttia Pariisi valmis. Kaikki korjaukset = iPhone-palautteen 09.49 korjaukset, Taso läpi keskelle sekä 11.21:n alanapit ja valikko. Yhden tarkkuuden kartta, Lontoon isot nähtävyydet ja muurin kivet mukaan vain omistajan kortilla. Lähtö PT:n rivillä VIE 220 KOEVERSIONA, kun ehto täyttyy.
