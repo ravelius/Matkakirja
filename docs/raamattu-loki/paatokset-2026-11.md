@@ -995,3 +995,7 @@ Omistaja 7.11. klo 19.43 (KK:n kortti, Kokeillaan, suositus): napakalotit pois m
 ## MUISTIN KOKONAISSUUNNITELMA (7.11.2026 klo 19.51)
 
 Omistaja 7.11. klo 19.51 (KK:n välittämä): tehdään kokonaisvaltainen muistin käytön suunnitelma: mitä ladataan missäkin vaiheessa ja mitä jätetään pois. Striimikartan lataus katsotaan läpi, suurin osa nimitiedoista jätetään lataamatta, jos ne vievät paljon, maapallon karttaa kevennetään tarvittaessa isommaltakin alalta, ja tarkistetaan, lataako Unity turhaa. Mittauksesta halutaan pelkän Pariisin ja kaiken muun osuus sekä karsittavissa oleva määrä. KK suunnittelee koodista ja lokeista; NS mittaa; KK:n tulkinta: suunnitelma ensin, ei pidätä junaa 220.
+
+## JUNA 220 VASTA OMISTAJAN PYYNNÖSTÄ (7.11.2026 klo 19.53)
+
+Omistaja 7.11. klo 19.52 (KK:n välittämä): julkaistaan juna vasta sitten kun pyydän. Korvaa klo 11.21:n sanan julkaise juna kun kaikki korjaukset valmiit ja PT:n lähtörivin. KK:n tulkinta, kerrottu omistajalle: TestFlightiin ei viedä junaa 220 ennen hänen pyyntöään; korjaukset ja testiajot jatkuvat; muistisuunnitelma ei sido tähän.
