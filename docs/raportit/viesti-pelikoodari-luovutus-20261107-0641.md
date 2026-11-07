@@ -1,0 +1,25 @@
+# Pelikoodari: luovutus 07.11.2026 klo 06.41
+
+Korvaa kaikki aiemmat. Juoksupelin taso 1 ja opit: `git show 1b2a61007:docs/raportit/viesti-pelikoodari-luovutus-20261107-0519.md`. Lontoon työkalut: `git show ee5465047:docs/raportit/viesti-pelikoodari-luovutus-20261107-0326.md` kohta 5. **Työ nyt: ei avointa; jono tyhjä, odota PT:n tehtävää.**
+
+## 1. Lontoo G: KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA 06.40
+"Lontoo G e48424a75 kelpaa kokeena, ei junaan." KK kysyy aamulla omistajalta kohdat 2.1 ja 2.2. **Ei lisäyrityksiä yöllä.**
+- **Proto:** `/Users/Shared/Claude/wt/proto-pelikoodari-lod-diag`, haara `pelikoodari/lontoo-kyltit`, kärki `e48424a75`, työnnetty `natiivi-backup`iin. Vanha `pelikoodari/lontoo-b` (`fdbf8a0ef`) jää ennalleen.
+- **Pohja:** KS:n ajon 46 kärki `a4269054a` (`a80a81323` + NUI `3d92da39e`). Oma kainalopoikkeus pois, NUI:n `KartanPiste` tilalle.
+- **Muutos:** `NostotKartalla.PariisiKylteilla` myös ehdolla `OhjelmaKohteet.LontooKoe`, uusi `OnKylttialueella`; St Paul'sin kyltti korvaa noston qidilla Q399961 (`LontooKyltit`). `Kylttikohde.MallinRuutu` ja `Peittaa` toimivat ilman `Maaritys`-mallia.
+- **Ajot:** g1 `f57966d05` (Lontoossa NRE lähes joka ruudussa, Pariisi kunnossa), g2 `e48424a75` (NullReference 0, Exception 11, sama taso kuin ennen). Lokit `proto-3d/lokit/pelikoodari-lontoo-g2-e48424a75` ja `pelikoodari-pariisi-g1-f57966d05`. **Parit:** `proto-3d/lokit/pelikoodari-g2-parit/`.
+- **Skenaariot:** `proto-3d/_tyo/pelikoodari/lontoo/gen-g2.py <sha>` tekee `sk-g2-lontoo.txt`:n ja `sk-g2-pariisi.txt`:n. Pariisin puolella palat v20 ja KS:n koepohjat.
+
+## 2. Auki, aamulla KK:lta
+1. **Kyltit väistyvät:** Big Ben ja Westminsterin palatsi ilman kylttiä joki-kuvissa. Loki `kyltti malli: Big Ben pois Westminsterin palatsi`, sama Westminster Bridgellä, Victoria Memorialilla, Royal Observatoryllä ja Queen's Housella. Syy: Lontoon malleilla `Peittaa` käyttää koko rajalaatikkoa, ei Pariisin korkeuskerroksia (`malli.Profiili`). Korjaus olisi profiili `lontooMallit`-riville tai oma väistösääntö; ei kokeiltu.
+2. **St Paul's:** kartan nimi "St Paulin katedraali" kyltin vieressä `kirkko-keski`-kuvassa. Tarkistamatta, miksi qid ei korvaa sitä.
+3. **Ei vika (KK):** "Kuumailmapallo £200" on pallon hintalappu, omistajan päätös 11.10. Miksi se näkyy ajokuvissa: selvittämättä, KK: ei aikaa siihen.
+
+## 3. Ennallaan
+- **Kartta (juoksupeli):** odottaa LAV:n lopullista juuren nimeä, `git show b19785a95:docs/raportit/viesti-pelikoodari-luovutus-20261107-0418.md` kohta 4.
+- **Juoksupeli:** proto `pelikoodari/tarkastelu-219`, `3ed82d1fb`, ei junaan. `292afcef2`:n pari KK:n aamun koontiin. Kortin muunnelma junaan vain omistajan päätöksellä.
+
+## 4. Opit
+- Yhdistettäessä tarkista uudet kentän käytöt: NUI:n koodi luki `malli`-kenttää, joka on Lontoon `Kylttikohde`lla tyhjä. Kääntäjä ja 701 testiä eivät nähneet sitä, ajo näki. JU huomasi lokista, kuvassa näkyi vain kylttien puute.
+- Hintalappu ja eunukki: tarkista päätökset ennen kuin nostat näkymän avoimeksi (`node tools/loki-hae.mjs`, koodin kommentit).
+- Parikuvat kokosin `/opt/homebrew/opt/python@3.14/bin/python3`:lla; koosteskripti oli scratchpadissa eikä säily: 8 riviä PIL:ää, Pariisi vasemmalle, 8 px väli, Lontoo oikealle.
