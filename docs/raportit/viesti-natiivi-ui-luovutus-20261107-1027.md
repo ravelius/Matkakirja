@@ -29,3 +29,6 @@ Louvren oma kyltti c390b057f on TF 219:n pohjassa; merge-ohje: edellinen luovutu
 - Koko: anna `ipad`, ei `koko`. `koko` ei ole laitenimi: kuva on 640×480 ilman käyttöliittymää, ajo silti "VALMIS". Katso kuva-rivi: UI-kerroksia pitää olla yli 0.
 - Museo: LinssiRekisteri.Valitse palaa hiljaa, jos lukittu; `ui pelaaja 1` näyttää sen. Kuva paljasti, loki "taidemuseo, maa ranska" ei.
 - Zsh: `echo =====` kaataa komennon, koska = laajenee.
+
+## PT 10.2x (lähtökysymys)
+c672cd616 kuitattu, ei junaan. Valkoiset rakennukset selvittää NS: älä tutki. Odota omistajan vastausta KK:lta. Maksu, raketin laukaisu, Rahat eivät riitä ja iPad ajetaan vasta, jos kysymys kelpaa, JU:n vuorolla. Lautapelien "ilmainen" jää omistajalle: älä muuta.
