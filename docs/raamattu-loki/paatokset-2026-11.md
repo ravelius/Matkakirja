@@ -783,3 +783,7 @@ KK 7.11.2026 klo 03.05 omistajan valtuutuksella, kokeena, ei junaan: kiinteä va
 ## LONTOO E2, E3 JA F3 KELPAAVAT, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 03.25)
 
 KK 7.11.2026 klo 03.25 omistajan valtuutuksella, kokeena, ei junaan: Lontoo E2, E3 ja F3 kelpaavat (F3 muistihuippu 3 695 Mt, raja 4 080 Mt, PK:n luku). Aamun kortin suositus: muut kaupungit koneella ilman Tripoa, päänähtävyydet isompina. PK jatkaa yhdellä lyhyellä ajolla: sienimuoto, Shardin möhkäle, Tower Bridgen mitat VS:n kanssa ja St Paul'sin väri. KK 02.43:n sillat: ohut viiva lähtee, jos ajosilta on alle 20 m:n päässä; omat kävely- ja metrosillat jäävät. KK 03.13: kameraeste ea5823b4f jää omalle haaralleen, aamun kysymys.
+
+## VALOMUOTO YHTEISEEN AJOON, USVA 12 KM PYSYY, KK:N PAATOS VALTUUTUKSELLA (7.11.2026 klo 03.28)
+
+KK 7.11.2026 klo 03.29 omistajan valtuutuksella, kokeena, ei junaan: valomuoto ac508f55e kelpaa ja menee yhteiseen ajoon. Usva pysyy 12 km:ssä, koska omistaja valitsi sen itse; 16 km menee aamun korttiin. Saumat ovat aamun kysymys.
