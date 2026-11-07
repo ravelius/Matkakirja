@@ -7,6 +7,14 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 12.53 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+Cron "4 9 * * *" luotava silti uudelleen.
+BEIGE TAIVAASSA TEHTY, PT tietää: d2ba2f540 Macilla korjasi (z13-70 4,41 → 0,26 %, z15-70 1,21 → 0,44 %), usva ennallaan, z13-70:n syy ei täysin selity, iPad ei ajettu. yksi-taso/tulos.md loppu; parit yksi-taso/kallistus/pohja-pari-*. Kohdan 1 kallistus-pohja on siis valmis.
+UUSI TYÖ (PT 12.4x): YKSI TASO, iPAD-MUISTI 80°. JU:lla jonossa (pid 60565): 83d48ba80, haara natiiviseppa/yksi-taso-muisti (natiivi-backup, työpuu proto-natiiviseppa-kierto-koe; d2ba2f540 + KS:n 5488bdd8b), käännös vaihto2:n jälkeen, 2 ajoa isolla iPadilla kertoja2:n jälkeen. ÄLÄ TILAA UUDELLEEN. Ajopyyntö yksi-taso/ajopyynto-ipad-muisti80.md, skenaariot sk-muisti80-{yksi,nyky}.txt, lokit lokit/natiiviseppa-yksi-muisti80-{yksi,nyky}, kuvat ym-yksi-80-*, ym-nyky-80-* (26km ja 4km). Tuloksessa kallistus 80:n jälkeen 4 km ja palautus 40°:een.
+VAHTI POIS VAIN NÄISSÄ KAHDESSA (PT:n sana, JU:lla, palautus JU:n kuittaukseen). PT: mittaus kertoo vain suunnan; raja 4080 Mt ja VIKA-tulkinta eivät muutu, joten raportoi ylitys rajan ylityksenä, vaikka ajo jatkuu.
+VERRATAAN KS:n mittaukseen (_tyo/karttaseppa/talot-sade/SELVITYS.md loppu; lokit karttaseppa-talot-muisti3-b8-5488bdd8b): askel 60 → 80 +211 palaa (Pallo 647 → 858), gfx +156 Mt, huippu 4208–4267 ja VIKA jo 2,6 km:llä, lepo 4027–4036. Tarve huipusta −130…−190 Mt (2,6 km), −190…−285 Mt (4 km). Ajojen välinen vaihtelu noin 100 Mt: sen alle jäävä ero ei ole todiste. Verrokissa yksi taso on päällä noin ensimmäisen minuutin, joten verrokin huipun pitää osua KS:n väliin. Luvut: muisti-tarkka.log, muistivahti.log, konsolin T-rivit, maasto yksitaso tila, talot tila; katso kuvat täysikoossa.
+TULOS RIVIKSI PT:lle: huippu, lepo, palat, kuva, ja kertooko tämä kevennyksen suunnan. Ei junaan tällä sanalla. Yksi suositus (kohta 1) vasta, kun vaihto2, kertoja2 ja muisti80 on katsottu.
+
 ## OMISTAJA 11.21 (PT): "jatka kaikkia töitä ja julkaise juna kun kaikki korjaukset valmiit"
 Lähtösana on PT:n rivi "VIE 220 KOEVERSIONA" (ei lukitusta). Yhden tarkkuuden kartta EI junaan ilman omistajan korttia.
 Pallon elämän kohdat 4–5 siirretty NUI:lle (PT 12.2x): eivät NS:n työtä.
