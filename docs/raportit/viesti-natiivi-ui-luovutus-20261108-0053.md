@@ -1,4 +1,4 @@
-# Natiivi-UI: luovutus 8.11.2026 klo 00.53 (puut koko 2,5 odottaa PT:n sanaa)
+# Natiivi-UI: luovutus 8.11.2026 klo 00.53 (puut 2,5 kuitattu, iPad-muistiajo JU:lla)
 
 Korvaa luovutuksen -2352 (c047a8785). Muistin vaihe 1, kartan elämä, varjostinselvitys, kyltit, huudot, opit: ennallaan luovutuksessa -2208 (git show aab93be4f:docs/raportit/viesti-natiivi-ui-luovutus-20261107-2208.md).
 PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Viestit send_messagella id:llä, PT:lle enintään 3 riviä.
@@ -20,7 +20,8 @@ Haara natiivi-ui/kartan-puut 55540336f (pushattu): juna 221 (6e7981306) + kartan
 - KartanElama.VainPuut (oletus 1): vain origo paketista, ei savua/lippuja/veneitä/lintuja/autoja; `ui kartanelama vainpuut 0|1`. Kartan elämä itse yhä oletus pois (`ui kartanelama 1`).
 - Puun tyvi kartan piirretystä pinnasta (PuunMaa: TasaKorkeusM, Montmartre IGN-taulukosta, muualla kaava). Ajossa: tasainen 261 382, Montmartre 63, kaava 74.
 Ajot: lokit/nui-kartan-puut-1-55540336f (p1 = p2: kaari 0,0126 leikkautuu lähimpään 1,68 km, skenaarion virhe) ja lokit/nui-kartan-puut-2-55540336f (koot 1/2,5/4). Arkit _tyo/natiivi-ui/kartan-puut-1-katsottu/ ja kartan-puut-2-katsottu/arkki-koot.jpg.
-Havainto: koko 1,0 = pisteitä Louvren palikkapuiden vieressä. SUOSITUS 2,5 (PT:lle 00.53 parien kanssa). Seuraavaksi PT:n sanalla: PuuKoko-oletus 2,5 koodiin (KartanElama.Puut.cs), sitten iPad-muistiero JU:n vuorolla (vain puut päällä vs pois). Isot kyyhkyt p1-päällä-kuvassa eivät ole puukoetta (lähde selvittämättä).
+Havainto: koko 1,0 = pisteitä Louvren palikkapuiden vieressä. PT KUITTASI 2,5 klo 01.1x (arkki katsottu): 2f9479036 PuuKoko = 2,5 (pushattu, kääntyy).
+iPad-muistiajo JU:lle annettu 01.1x: sk-kartan-puut-3-ipad-pois.txt + -paalla.txt (sama .app, ero vain kartanelama 0|1, pohja sk-kartan-elama-8), tulos lokit/nui-kartan-puut-3-ipad-pois|paalla-2f9479036. SEURAAVAKSI: lue tulokset (fp levossa Pariisissa, lento, kierto, vahdin VIKA-rivit; raja 4080 Mt), vertaa ajoon 8 (raportti-kartan-elama-8-ipad-20261107.md), raportti PT:lle. Junaan vain kortilla. Isot kyyhkyt p1-päällä-kuvassa eivät ole puukoetta (lähde selvittämättä).
 
 ## Opit (uudet)
 - Esikatselun `aja` Pariisissa: kaari alle noin 0,014 = lähin (1,68 km); 0,04 = 4,8 km.
