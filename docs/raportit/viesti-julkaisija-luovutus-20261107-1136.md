@@ -43,3 +43,12 @@ Yöportti tehty: 42361120638 rungolla 61c171795 kaanna 868/868 ja tarkista vihre
 Kuitattu lisäksi: NS kertoja (9/9, 4 erilaista md5), PK j1 (4/4), KS jousi (vaistokoe 0) ja este (vaistokoe 164). NUI ajoi itse pallonapit, L1 ja L2 vapaat.
 iPad jäljellä: VS kivisivu14 ajossa (pid 68958; sen jälkeen kivet-juuri T7:lle), KS muisti2 (68981), NUI 5-raketti (75290).
 Oppi: zsh:ssa `$B:Peli-testit` tulkitaan muuntimeksi :P; käytä `${B}:polku`. Suodatin 'talot: aineisto puuttuu' poisti tulosrivin kopiosta ns-kertoja-ipad.zsh: tarkista kopioskriptin rivi-kutsu.
+
+## LISÄYS 12.06: TÄMÄ ON TUOREIN (korvaa 11.50:n jonon)
+Juna 220: julkaisija/juna-220 = 881fcd30d (+ 15c97cc56 jousi, 2190c6870 testi), junarivit kirjattu. EHTO: omistaja 11.52, juna odottaa, kunnes talot kauemmas on mukana; VIE-sanaa ei tule ennen sitä. Pallon elämä kartalla kokeena ennen junaa: KK:n suunnitelma tulossa, ei ajoja vielä. Jos runko muuttuu ennen VIE-sanaa, yöportti ajetaan lopullisella rungolla (nyt vihreä 42361851841 rungolla 881fcd30d, node v22).
+AVOIN PR: https://github.com/ravelius/Matkakirja/pull/6457 (node@22 yöporttiin). PT: JU yhdistää itse, kun "testit" on läpi; muut tarkistukset olivat vihreitä, testit kesken 12.06. Ei auto-mergeä.
+ALOITA: Monitor jonolokiin kuten ALOITA-kohdassa. Kaikki on nohupilla, nollaus ei kaada niitä.
+L1: T/ns-yksi2-jonossa.zsh pid 32719 (kallistus-ennen 11/11 valmis; kallistus-jalkeen ja vaihto jäljellä; sitten rivi "3 ajoa loppu"), sitten T/ns-joki-jonossa.zsh pid 42086 (46b7cf417). Kuittaus NS:lle molemmista, kuvien ja mp4:n määrä jonolokista; mp4-laskuri voi näyttää 0, jos videot ovat alikansiossa: tarkista lokit/natiiviseppa-yksi-vaihto.
+L2: NS kertoja2 laitekäännös 59abbd78a ajossa (T/ns-kertoja2-ipad.zsh pid 48966), sen jälkeen PK i7 T/pk-i7-jonossa.zsh pid 52979 (f9106079e, 9 kuvaa, korvaa i6:n). Kuittaus PK:lle.
+iPad järjestyksessä: NUI 5-raketti pid 75290 (alkoi 12.03; kuittaus NUI:lle) → KS muisti3 T/ks-muisti3-ipad.zsh pid 56669 (5488bdd8b, VIKA on tulos, ei uusintaa; rivi KS:lle) → NS kertoja2 pid 48966, ÄÄNI KUULUU iPadista, ajo odottaa, jos HIDIdleTime alle 60 s tai /tmp/matkakirja-kevyt; kuittaus NS:lle.
+Kuitattu: muisti2 (vahti VIKA 11.55.49, ennen kuvia, 0/3) PT:lle ja KS:lle, PK i6, VS kivisivu14, NUI poistu-lasi valmis. kivet-juuri oli jo T7:llä. Levy 25 Gi.
