@@ -7,6 +7,9 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opi
 - Kohta 0 TEHTY `003ab5b9f` (`pelikoodari/muisti-latauskuvat`): VaakaOtsikko 1260 → 900 px, keskiY 143 → 190 px; lasketut kuvat `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/latauskuva-otsikko-{ennen,jalkeen}-laskettu.png`.
 - Esikatselua varten yhdistelmä `e26c3ad16` (`pelikoodari/esikatselu-otsikot-lahto`). Skenaario `_tyo/pelikoodari/keisari-lahtee/sk.txt`. JU:lta pyydetty vuoro 23.2x: 4 ajoa (ipad, iphone-vaaka × e26c3ad16 ja 72e257a0b). Kuvat PT:lle, PT → KK. Ei junaan ilman kuittausta.
 
+## 000000. TILA 01.0x (UUSIN)
+- Latausmittaus TEHTY (JU:n pari 1): 44,1 s -> 27,3 s (-38 %), 61f63adb9 vs 3bfd18d9a; tiedot `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-lataus/TULOS-1.txt`. Raportoitu PT:lle; kysytty, pyydetäänkö JU:lta pari -2 + kuvatarkistus ennen junaa. Odottaa PT:n vastausta. Ei junaan ilman kuittausta.
+
 ## 00000. TILA 23.5x (UUSIN)
 - Nollattu 23.40, luovutus luettu. PT 23.5x: kuvaparit 1–7 + 3b PT:n kuittaamat, KK:n kortti omistajalle odottaa. TF 221 "Ei vielä" (omistaja 23.37): odottaa illan korjauksia, myös latausaikaa. Lepo latausmittaukseen asti (JU, kansiot `lokit/pelikoodari-lataus-{ennen,jalkeen}-1`).
 
