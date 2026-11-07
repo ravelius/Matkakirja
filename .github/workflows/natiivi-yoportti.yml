@@ -10,10 +10,14 @@
 #      paluukoodi 1, jos yksikin error CS). Pakettien assemblyt luetaan proton Library-kansiosta.
 #   3. Kultaisten jälkien vartija verkkopelin mainia vasten: tests/natiivi-kultaiset.test.mjs
 #      (tools/natiivi-kultaiset/tee-*.mjs, tiivisteet.json) ja se, että vartijan kopiot
-#      skripteistä ovat samat kuin proton masterin Peli-testit/Kultaiset/tee-*.mjs.
+#      skripteistä ovat samat kuin tarkistettavan rungon Peli-testit/Kultaiset/tee-*.mjs.
 #
-# Proto kopioidaan `git archive master` -komennolla väliaikaiskansioon, joten ajo ei koske
-# proton työkopioon eikä sen .git-kansioon (ei worktreetä, ei Library-kirjoitusta).
+# Tarkistettava runko on avoin juna (uusin julkaisija/juna-*), ei master: master jäi TF 209:ään ja Unity b5:een
+# 21.10., ja se on tuhansia committeja rungon jäljessä (JU 7.11.2026).
+#
+# Proto kopioidaan `git archive` -komennolla väliaikaiskansioon, joten ajo ei koske
+# proton työkopioon eikä sen .git-kansioon (ei worktreetä, ei Library-kirjoitusta). Kopioon tehdään
+# tyhjä git init, koska kaanna.sh ja unity-tarkistus.sh hakevat juuren git rev-parse -komennolla.
 #
 # Ei PR-laukaisua: repo on julkinen, eikä vieras koodi saa päästä Macille (vrt. savukkeet.yml).
 # Sama Mac ajaa savukkeet, poltot ja Unity-viennin: yhteinen jonoryhmä, yksi raskas ajo kerrallaan.
@@ -42,7 +46,7 @@ defaults:
 
 jobs:
   natiivi:
-    name: Proton master — testit, käännös ja kultaiset jäljet
+    name: Avoin juna — testit, käännös ja kultaiset jäljet
     if: github.event_name == 'schedule' || github.actor == github.repository_owner
     runs-on: [self-hosted, macOS, ARM64, savukkeet]
     timeout-minutes: 30
@@ -61,27 +65,29 @@ jobs:
       - name: Homebrew polkuun
         run: echo "PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
 
-      - name: Proton master väliaikaiskansioon
+      - name: Avoin juna väliaikaiskansioon
         run: |
           set -euo pipefail
           PROTO="$RUNNER_TEMP/proto-master"
           rm -rf "$PROTO" && mkdir -p "$PROTO"
-          git -C "$PROJEKTI" archive master | tar -x -C "$PROTO"
+          REF=$(git -C "$PROJEKTI" for-each-ref --sort=-v:refname --count=1 --format='%(refname:short)' 'refs/heads/julkaisija/juna-*')
+          [ -n "$REF" ] || { echo "::error::julkaisija/juna-* puuttuu protosta"; exit 1; }
+          git -C "$PROJEKTI" archive "$REF" | tar -x -C "$PROTO"
+          git -C "$PROTO" init -q
           echo "PROTO=$PROTO" >> "$GITHUB_ENV"
-          echo "Proton master: $(git -C "$PROJEKTI" log -1 --format='%h %ci %s' master)"
+          echo "Avoin juna $REF: $(git -C "$PROJEKTI" log -1 --format='%h %ci %s' "$REF")"
 
       - name: Pelilogiikan testit (Peli-testit/kaanna.sh)
         run: |
           set -euo pipefail
           cd "$PROTO/Peli-testit"
-          ./kaanna.sh > "$RUNNER_TEMP/kaanna.txt" 2>&1 || { grep -E "FAIL|error" "$RUNNER_TEMP/kaanna.txt" | head -40; tail -3 "$RUNNER_TEMP/kaanna.txt"; exit 1; }
+          ./kaanna.sh > "$RUNNER_TEMP/kaanna.txt" 2>&1 || { grep -E "FAIL|error" "$RUNNER_TEMP/kaanna.txt" | head -40 || true; tail -3 "$RUNNER_TEMP/kaanna.txt"; exit 1; }
           tail -1 "$RUNNER_TEMP/kaanna.txt"
 
       - name: Unity-käännöstarkistus (tyokalut/tarkista.sh)
         run: |
           set -euo pipefail
-          # Pakettien assemblyt (Cesium, UGUI, Input System …) proton omasta Librarystä.
-          export MATKAKIRJA_KIRJASTOT="$PROJEKTI/Library/ScriptAssemblies"
+          # Pakettien assemblyt: unity-tarkistus.sh valitsee saman Unity-version kirjastot (unity-polku.sh --kirjastot).
           cd "$PROTO"
           zsh tyokalut/tarkista.sh
 
@@ -93,13 +99,13 @@ jobs:
           for f in "$PROTO"/Peli-testit/Kultaiset/tee-*.mjs; do
             b=$(basename "$f")
             if [ ! -f "tools/natiivi-kultaiset/$b" ]; then echo "::error::$b puuttuu vartijasta (tools/natiivi-kultaiset/)"; ero=1
-            elif ! cmp -s "$f" "tools/natiivi-kultaiset/$b"; then echo "::error::$b eroaa proton masterista"; ero=1; fi
+            elif ! cmp -s "$f" "tools/natiivi-kultaiset/$b"; then echo "::error::$b eroaa avoimesta junasta"; ero=1; fi
           done
           for f in tools/natiivi-kultaiset/tee-*.mjs; do
             b=$(basename "$f")
-            [ -f "$PROTO/Peli-testit/Kultaiset/$b" ] || { echo "::error::$b on vartijassa mutta ei proton masterissa"; ero=1; }
+            [ -f "$PROTO/Peli-testit/Kultaiset/$b" ] || { echo "::error::$b on vartijassa mutta ei avoimessa junassa"; ero=1; }
           done
-          [ "$ero" = 0 ] && echo "Vartijan skriptit täsmäävät proton masteriin."
+          [ "$ero" = 0 ] && echo "Vartijan skriptit täsmäävät avoimeen junaan."
           exit "$ero"
 
       - name: Siivous
