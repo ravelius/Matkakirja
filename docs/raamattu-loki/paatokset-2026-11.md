@@ -911,3 +911,7 @@ Omistaja 7.11. klo 14.46 (KK välitti) kortilla "Saako juna 220 olla koko Pariis
 ## OIKAISU: KLO 14.46 KIRJAUKSEEN (7.11.2026) (7.11.2026 klo 14.48)
 
 Kirjauksessa "JUNA 220 ON KOKO PARIISIN SISAINEN KOEVERSIO" mainitut "ei junaan" -sanat (maalattu taivas 6.11. 22.15, Louvren korttelit 6.11. 10.04) eivät olleet omistajan sanoja: KK:n tarkistuksen mukaan Louvren kortin vastaus oli "Jätetään", ja "eivät tule junaan" oli KK:n oma lause, kuten taivaassa. KK:n tulkinta: 14.46 "Saa" kattaa ne Pariisin kokeena, ja omistaja voi kieltää; uutta korttia ei tule, ellei hän sano.
+
+## OMISTAJAN PAATOS: LONTOON PALLON PAIKKA (7.11.2026 klo 15.15) (7.11.2026 klo 15.17)
+
+Omistaja 7.11. klo 15.15 (KK välitti) kortilla "Kelpaako kuumailmapallon paikka Lambethissa, palatsin vastarannalla?": "Kelpaa (Suositus)". Koskee paikkaa 30c33d5b9 (51.4950, -0.1125), Macin kuvat. Kerrottu: The Cenotaph -nimi jää osin pallon alle yhdessä kuvakulmassa, hintakyltti tarkistamatta, iPad ja iPhone ajamatta. Lontoo-nimen hyppiminen on yhä auki ja kuuluu 12.50:n korjauksiin ennen junaa.
