@@ -7,6 +7,14 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 17.34 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+IPHONE-KATTO VALMIS JA KERROTTU: PT katsoi 17.30, 901e4004b ilmoitettu JU:lle junaan 220 (fast-forward 045844251:n päälle), PT tietää. Älä tee alemman 17.20-lisäyksen IPHONE-KATTO-kohtaa. JU katsoo hypyn iPhonella junan käännöksestä; jos näkyy, korjaus NS:lle. Piikit kuuluvat kattovaiheeseen 2. Cron "4 9 * * *" luotava uudelleen. Tämä sessio luki 7.47:n lukulistan; lue se silti uudelleen.
+TYÖ NYT: KATTOVÄRI JA TALOTYYLIT, VAIHE 1 (omistaja 17.24 ja 17.27 "Viisi", PT 17.2x; koe, EI JUNAAN 220). KAIKKI TIEDOT JA SEURAAVAT KOMENNOT: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/talotyylit/tulos.md, LUE SE ENSIN. Suunnitelma ja sanat /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261107-talojen-katot-ja-vaihtelu.md (osa 1, lopun Päätökset). Kattomuodot, koko Pariisi, Lontoo ja puut eivät kuulu tähän (puut KS).
+ODOTETAAN: KS:n rivi, kun _tyo/karttaseppa/talokatot/koe-1/katot.json on valmis (sovittu, "katot" mitattu sRGB, "lahde_talo", "materiaali"; paletille vienti minulla, koodi valmis). Alue 48.8630-48.87199, 2.3330-2.34668. Jos KS ei ole kuitannut, tarkista list_events tai kysy KS:ltä local_740947d7-aa79-4b1e-948e-1b7dfc734364.
+MITATTU: testirakennus väliaikaisella alueella: 215 palaa tavulleen v20, 4 eri, koot samat. PT:LLE EI VIELÄ RIVIÄ AINEISTOSTA: rivi vasta koe1:n jälkeen. Kerro samalla varaus: seinäkoodien merkitys Fichiers foncierista, BD TOPO:n oma kuvaus ei auennut.
+PT:LLE KAKSI RIVIÄ: aineisto rakennettu, ja kuvat katsottu (parit nykyinen | uusi, 45° ja 70°, iPhonen vaakakorkeus ja lähin). Mac-ajot JU:n vuorolla, ajopyynnössä "mitä tämä ratkaisee" ja enintään noin 5 kuvaa (10.5).
+Opit: BD TOPO:n nombre_d_etages voi olla 1 ja korkeus 25 m (tavaratalot): korkeus ensin. Tyyppikartta paljasti tämän ennen pelikuvia. zsh: echo ===== kaatuu.
+
 ## LISÄYS 17.20 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 TYÖ NYT: IPHONE-KATTO (omistaja 17.12, PT: ennen muistin jatkoa). 901e4004b natiiviseppa/iphone-katto (natiivi-backup, työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, pohja 045844251): PariisiKallistus.RakoVahintaanM 30 → 60 m, testit 710/710. PT:lle kerrottu raja ja korkeudet, ÄLÄ TOISTA.
 TILATTU JU:lta 17.2x, ÄLÄ TILAA UUDELLEEN: _tyo/natiiviseppa/iphone-katto/ajopyynto-mac.md, loki lokit/natiiviseppa-iphone-katto-901e4004b, kuvat ik-85, ik-80, ik-70, ik-45 (lahizoomi 4.89, suunta 315, sama kohta kuin julkisivu4).
