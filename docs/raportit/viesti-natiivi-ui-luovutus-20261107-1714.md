@@ -1,10 +1,14 @@
-# Natiivi-UI: luovutus 7.11.2026 (konteksti yli rajan, ei ajoja jonossa)
+# Natiivi-UI: luovutus 7.11.2026 (konteksti yli rajan, yksi kuva-ajo tilaamatta)
 
 Itsenäinen: korvaa kaikki aiemmat. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, NS local_99130238-aa54-4a29-bcc9-7a023584944b, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Viestit send_messagella id:llä, PT:lle enintään 3 riviä.
 Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, etäpää natiivi-backup. Työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus, haara natiivi-ui/kartan-elama, kärki 7fc20c516. Kääntö: sh Peli-testit/unity-tarkistus.sh (ei tarkista varjostimia); pohjavahti: python3 -I tyokalut/pohjavahti.py. Ajoja ei tehdä itse: vuoro JU:lta. Skenaariot ja raportit: /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui. Lokit: /Users/Shared/Claude/proto-3d/lokit.
 
-## Heti: ei ajoja, odottaa muistipäätöstä
-PT 17.1x: "Ei enempää ajoja tästä: tulos KK:lle minun kauttani, jatko on muistipäätös." Älä tilaa iPad-ajoa kartan elämälle ilman PT:n uutta sanaa. Jono tyhjä: rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
+## Heti: yksi kuva-ajo iPadilla, PT:n sana 17.2x
+PT: "yksi ajo, sana on tässä: iso iPad, 7fc20c516, vahti pois vain tässä kuva-ajossa (huippu kirjataan, sama elämä päällä), lepokuvat, sujuvuus, lento ilman kuvaa, ei raitiovaunua. Tarkoitus on nähdä kerros iPadilla, ei muistiratkaisu. JU:n vuorolla, kuvat minulle. Junaan ei mitään ilman korttia."
+Skenaario valmiina: sk-kartan-elama-10-ipad-kuvat.txt, 6 kuvaa (lepo-auto, lepo-taysi, seine-lahi, tuileries70, champs45, bois70), noin 8 min + alku. Lentoja ja kierron aikana ei kuvia. Loki: lokit/natiivi-ui-kartan-elama-10-ipad-kuvat-7fc20c516.
+Pyydä vuoro JU:lta (id ylhäällä). Kerro: .app julkaisija-laite-218-7fc20c516 voi olla jo poistettu, jolloin laitekäännös samasta sha:sta; kopiointi ilman --remove-existing-content.
+Vahti pois: ennen käynnistystä Documents/muistivahti.txt = "pois" (MuistiVahti.cs rivi 87–88; vahti palaa heti, joten muistivahti.log ei synny, huippu muisti-tarkka.logista, ja muisti-tarkka pitää kytkeä päälle kuten ennenkin). Heti ajon jälkeen "paalla" takaisin ja listaus, koska kytkin jää laitteelle ja koskee muitakin. Pyydä JU:ta vahvistamaan tämä rivillä.
+Katso: kerros levossa ja kuvissa, ovatko puut oliivit ja rivit puina, nimet vapaina, Seinen ohenevat rivit täysikoossa, ei raitiovaunua, kehysajat liikkeessä ja levossa (vertailu ajon 8 pois-osuuteen vain siirrosta, muuten vain tämä ajo), fp-huippu ja hetki merkeistä. Kuvat ja rivi PT:lle, PT vie KK:lle. Tämän jälkeen ei enempää ajoja ilman PT:n sanaa; muistipäätös on erikseen.
 
 ## Kartan elämä, tila (koe, ei junaan ilman korttia)
 Koodi 7fc20c516: puut oletuksena B (e6b1fb570, PT: koko 1,0, väri 0,26 0,27 0,10; katurivit erottuvat puina). Raitiovaunut pois (omistaja 16.43), kokeena `ui kartanelama raitiot 1`; ei ajettu laitteella päällä eikä kuvattu. Veneet, liput, autot 1 %, linnut ennallaan; linnut peittävät nimiä, omistajalle kerrottu, ei työtä ilman hänen sanaansa. Puut eivät peitä nimiä (ajo 6, Mac).
