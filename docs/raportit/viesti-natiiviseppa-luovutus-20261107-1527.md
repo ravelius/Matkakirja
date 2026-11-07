@@ -7,6 +7,12 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 17.56 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+JU KUITTASI MAC-AJON 17.55: lokit/natiiviseppa-talotyylit-koe1, 8/8 kuvaa tt-{nyt,uusi}-{iphone,lahi}-{45,70}. "talot tila: palat 0" ennen kansion vaihtoa OK, sitten 219 palaa, palat 56. Virheitä 0. KUVIA EI OLE VIELÄ KATSOTTU (konteksti täyttyi). PT:LLE EI VIELÄ KUVARIVIÄ. ÄLÄ TILAA UUTTA AJOA ENNEN KATSOMISTA.
+POIKKEAMA: tt-uusi-iphone-45 ja tt-uusi-lahi-45 ovat tavulleen samat. Hypoteesi, ei todistettu: lahizoomi 4.89 vain nostaa rajaa, eikä nosta jo lähempänä olevaa kameraa, joten uusi-iphone-kuvat otettiin lähin-korkeudelta (skenaario kävi uusi-osan käänteisessä järjestyksessä). Tarkista: onko tt-uusi-iphone-70 samalta korkeudelta kuin tt-nyt-iphone-70 (vertaa kohdetta rinnakkain). Kelvolliset parit vaikuttavat olevan lahi-45 ja lahi-70; iPhone-parit eivät ehkä. Jos iPhone-parit eivät kelpaa: yksi lyhyt uusintajo vain tt-uusi-iphone-{45,70}:lle (lahizoomi 4.89 ENNEN kuin zoomataan lähelle, kuten nyt-osassa), verrokkina nyt-kuvat.
+TEE: katso tyyppikartta-koe1b.png ja kuvat täysikoossa omistajan sanoja vasten, parit samalla rajauksella PT:lle (Mac, ei iPhone: 4:3 ja tarkempi), rivi PT:lle. Palat käyttävät koe1b:tä; koe1c (yksi talo korjattu) mukaan vasta seuraavassa rakennuksessa.
+LEVYSIIVOUS TEHTY JA KERROTTU PT:LLE, EI TOISTETA: vanhat palat-versiot T7:llä linkillä, worktreet kierto-koe, marais ja palikka poistettu (haarat etärepossa).
+
 ## LISÄYS 17.42 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 KS:N KATOT TULIVAT, KOE1 RAKENNETTU, PT:LLE RIVI LÄHETETTY 17.42, EI TOISTETA. Mac-ajo TILATTU JU:lta 17.42, ÄLÄ TILAA UUDELLEEN: talotyylit/ajopyynto-mac.md, loki lokit/natiiviseppa-talotyylit-koe1, kuvat tt-{nyt,uusi}-{iphone,lahi}-{45,70}.
 KUN JU KUITTAA: tarkista lokista, että "talot tila: palat" on 0 ennen kansion vaihtoa; muuten uudet kuvat eivät kelpaa (vanhat palat jäivät) ja ajo tehdään kahtena. Tarkista myös, että nyt- ja uusi-kuvat eroavat. Katso täysikoossa omistajan sanoja vasten: vierekkäiset talot eroavat, kaukaa rauhallinen, ei valokuvaa eikä leluisuutta. Parit samasta kohdasta PT:lle (Mac, ei iPhone: 4:3 ja tarkempi), rivi PT:lle. Yksi korjaus väreihin tai tyyppeihin, jos kuva vaatii. tyyppikartta-koe1b.png katsomatta: katso se ensin.
