@@ -23,8 +23,8 @@ PT korjasi 11.3x: "esittely kuvineen" oli PT:n sana; Lontoolla ei ole kuvaesitys
 AJO JU:lla heti lz3-2:n jälkeen samasta käännöksestä: T/sk-ipad-lontoo-kertoja.txt, lokit/natiiviseppa-lontoo-kertoja-ipad, aikaraja 1000 s, 9 kuvaa (lk-030...lk-loppu, lk-p060, lk-p180, lk-p300). KERTOJA PÄÄLLÄ (ui tekstitys 1 1, ui pelaaja 1).
 Kun valmis, todista PT:lle KUVASTA JA LOKISTA: kertojan loppuhetki konsolista; vähintään 60 s sen jälkeen kamera yhä kaupungissa; ei riviä "hiljaa ...: soi" eikä uutta "saapuminen: GBR" kertojan jälkeen; lk-p060 ja lk-p300 samat paitsi pulu. Jos kertoja ei soinut (rivit puuttuvat), kerro, älä väitä. Aiempi ajo oli kertoja pois: T/tulos.md. Muiden kaupunkien kamera ennallaan ilman omistajan sanaa.
 
-## 4. VALKOISET (JUNAAN ODOTETAAN): a89993465 (natiiviseppa/varatalot)
-Verrokki: valkoiset talot näkyvät; estetty: ei massoja, maasto ja ilmakuva, "data Ion", rajaus täysikoossa katsottu (lokit/natiiviseppa-vara-{verrokki,estetty}). Kytkin 1. ajo ei koestanut (oma virhe: 60 s:ssa "ei palloa pariisi"). USIINTA JU:lla ajossa: T/sk-mac-vara-kytkin2.txt, lokit/natiiviseppa-vara-kytkin2. Kun valmis: lokista "ui kaupunkipallot napauta pariisi → napautettu", kuva täysikoossa ilman taloja; sitten sha ja Mac-todiste PT:lle (kaikki kolme tapausta). Kytkin ei koske pelaajaa.
+## 4. VALKOISET: VALMIS JA KERROTTU PT:LLE 11.3x, EI TOISTETA
+a89993465 (natiiviseppa/varatalot): verrokki talot, estetty ja kytkin2 ei massoja, katsottu täysikoossa; lokit/natiiviseppa-vara-{verrokki,estetty,kytkin2}. Mac, ei iPadia. Kytkin ei koske pelaajaa.
 
 ## PT:LLE KERROTTU 11.2x (Liiku ja nimet, ei uutta ajoa)
 Liiku TF 219:ssä, auki sormikoe ja iPad-pari. Karsi 7fd402eee TF 219:ssä. Nimet rakennusten yli 04d3835a8 TF 219:ssä, ei ajoa eikä katsottua kuvaa: AUKI. a739dc0a1 ja 4d2610ab0 eivät TF 219:ssä; poiminta-lokirivi jää, ei vaikuta peliin (koodista).
