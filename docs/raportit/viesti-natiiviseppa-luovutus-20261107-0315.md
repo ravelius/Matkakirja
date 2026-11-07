@@ -10,8 +10,10 @@ Viestit: mcp__ccd_session_mgmt__send_message session-id:llä.
 - 23.07: kun vika ei ratkea kahdella yrityksellä tai noin 30 minuutissa: kokeen osa pois tai edellinen toimiva tilalle. Sitten rivi KK:lle (vika, mitä kokeiltu, suositus) ja seuraavaan työhön.
 - 23.22: yöllä vain Pariisi, Lontoo ja juoksupeli; tukityö vain, kun se palvelee niitä. Muu seis, ei uutta. Jos muuta on auki, rivi PT:lle. PT: Liiku kuuluu Pariisiin.
 
-## TILA NYT: JONO TYHJÄ, EI AJOJA KESKEN, ÄLÄ TILAA MITÄÄN. SEURAAVA TYÖ PT:LTÄ TAI KK:LTA.
-KK ja PT saivat kummastakin rivin; odotetaan vastausta, ei kysytä uudelleen.
+## TYÖ NYT (PT 03.2x, kohdat 10 ja 8; kumpikin kokeena, ei junaan, yksi ajo ja kaksi yritystä; tulos KK:lle, rivi PT:lle; älä jää odottamaan)
+1) Aloituslennon yksi Mac-ajo laattapaketin kanssa (KK 23.50, sha sisältää 7b6caba3a): mittaa 4,3 s:n aukko ja tuota kuva introlle, jos sitä ei ole vielä tehty. Tarkista ensin A/tulos.md ja muisti "Intro: laattapaketti" (lokirivi ennen kuittausta). Ajo JU:n vuorolla.
+2) Canopéen välke liikkeessä, katsomatta tähän asti. Ajo JU:n vuorolla.
+Kameraeste: PT kuittasi raportin perusteella kokeena, kuvia katsomatta; taivaan välke on KK:lla, ei jatketa ilman sanaa. Sumea alue on aamun kysymys KK:lla. Ei kysytä uudelleen.
 
 ## SUMEA ALUE PARIISIN EDESSÄ: KAKSI YRITYSTÄ TÄYNNÄ, EI RATKENNUT, AAMUN KYSYMYS KK:LLA
 Tulos A/z10-tulos.md, kuva L/natiiviseppa-z10-ipad2/kolmikko.png (pois, Z10, latausrajat; kello 08.27, 08.26, 08.26). Z10 b00d2a1f5 ei junaan: sama suorakaide, laattoja 251 → 406. Latausrajat (maasto lataus 200 40 40): huonompi, ei teitä; komento rakentaa pallon uudelleen, joten syy ei erotu. Päätelmä, ei mitattu: Cesium ei vaihda tasoa ajoissa, sillä sumea tulee myös lähes valmiista välimuistista (nelio-2). Kestoa pelaajalle ei ole mitattu; suositus KK:lle: se ensin. Ei yrityksiä ilman uutta sanaa. Neliö iPadilla ei mitattu; meri seis yöllä.
