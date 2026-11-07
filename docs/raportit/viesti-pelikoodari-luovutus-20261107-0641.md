@@ -23,3 +23,8 @@ Korvaa kaikki aiemmat. Juoksupelin taso 1 ja opit: `git show 1b2a61007:docs/rapo
 - Yhdistettäessä tarkista uudet kentän käytöt: NUI:n koodi luki `malli`-kenttää, joka on Lontoon `Kylttikohde`lla tyhjä. Kääntäjä ja 701 testiä eivät nähneet sitä, ajo näki. JU huomasi lokista, kuvassa näkyi vain kylttien puute.
 - Hintalappu ja eunukki: tarkista päätökset ennen kuin nostat näkymän avoimeksi (`node tools/loki-hae.mjs`, koodin kommentit).
 - Parikuvat kokosin `/opt/homebrew/opt/python@3.14/bin/python3`:lla; koosteskripti oli scratchpadissa eikä säily: 8 riviä PIL:ää, Pariisi vasemmalle, 8 px väli, Lontoo oikealle.
+
+## 5. Lisäys 06.52: Pariisin lista kohta 10 (PT 06.4x, vain todennus, ei korjausta, ei junaan)
+Mac-ajo `a4269054a`, skenaario `proto-3d/_tyo/pelikoodari/vapaa-1/sk-kohta10.txt`, kuvat `proto-3d/lokit/pelikoodari-kohta10-a4269054a`. Paketti käytössä, NullReference 0. Viety PT:lle.
+- Tunnuslause näkyy. Bastilji ja Place des Vosges erillään levossa (korkeudet 0,02 ja 0,006; 0,003:n rivi sama kuin 0,006:n, kamera ei mennyt lähemmäs). Liikkeessä ei testattu. Liiku avautuu.
+- **Pallo ei selvinnyt:** Mac ei todista laitteen kuvaa, ja `aja`-kuvat jäivät Pariisin seudulle (kaari 0,4 ja 1,2), joten kokonaista palloa ei ole kuvassa. Laitekysymys vaatii iPad-ajon; PT:n sana odottaa. Katsottu 4 täysikokoisena, 6 pieninä, 2 avaamatta (`k10-bastilji-02`, `k10-bastilji-003`).
