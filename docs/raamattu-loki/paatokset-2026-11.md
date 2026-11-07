@@ -967,3 +967,7 @@ Omistaja kortilla klo 18.00 (KK:n välitys): Kelpaako kaukainen varjo 70°:ssa n
 ## Pihojen ja tonttien puut kokeeseen (7.11.2026 klo 18.06)
 
 Omistaja kortilla klo 18.06 (KK:n välitys): Kokeillaanko pihojen ja tonttien puita koealueella kuvaparina? Kokeillaan. 140 puuta vain koealueen kokeeseen, päätös kuvien jälkeen, ei junaan; 2.204 voimassa siihen asti.
+
+## PIHAPUUT EI OTETA (omistaja 7.11.2026 klo 18.39) (7.11.2026 klo 18.40)
+
+KK:n kortti: "Otetaanko pihojen ja tonttien puut mukaan?" -> "Ei oteta (Suositus)". Linja 2.204 pysyy: puut vain puistoissa ja puuriveissä. Omistaja näki parit (kk/kuvat/pihapuut/), määrät 131 vs. 140 ja rajauksen. Joen kohteiden ero: liikkuvat veneet; paviljongin ero kerrottu ilman syytä.
