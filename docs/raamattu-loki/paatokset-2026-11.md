@@ -823,3 +823,7 @@ Kortti: Kysytäänkö OpenFreeMapilta lupa pelin koko käytölle ennen ulkoista 
 ## LIPUN PAIKKA ELSASSISSA EI OLE VIKA (omistaja 7.11.2026 klo 07.55, KK) (7.11.2026 klo 07.55)
 
 Omistaja: Lippu ei kuulukaan olla Pariisissa. Pois vikalistalta ja koeversion ehdoista. Lipun asento (4.42) ja ulkoisen julkaisun ehto pysyvät; sanat koskevat vain paikkaa.
+
+## MUURIN KIVIEN SIVUT TUMMEMMIKSI (omistaja 7.11.2026 klo 07.54-08.30, kortit KK) (7.11.2026 klo 08.30)
+
+07.54 Omistaja: Miksi tuo sivu on vieläkin noin vaalea kivestä? (kuva docs/raportit/kaappaukset/omistaja-20261107/muuri-kiven-sivu-vaalea.png). 07.56 Kokeillaan tummempaa. LAV mittasi: pääosin leivottu valo, sivu/lattia 6x, ilman leivontaa 1,1-1,2x (KK vahvisti). 08.30 Näin (pari kuvat-kivisivu1/pari-perus-tumma-050.png): sivut tummenevat puoleen; saumat, viivat ja sävy korjataan tämän jälkeen. Tavoite: kivi asettuu lattiaan, kuvio näkyy, ei vaaleita saumoja eikä viivoja. Ei vientiä eikä junaa ilman PT:tä; ei koeversioon 219.
