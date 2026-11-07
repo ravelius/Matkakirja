@@ -2,10 +2,10 @@
 
 Syy: konteksti yli 30 %. Tili vvi@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Kuvat vain JU:n vuorolla (`local_06f8c680-4618-42bd-a730-9b6a3e17e0b7`), ei omaa ajoa. Mikään ei mene junaan. Ei skriptattuja hakuja OpenFreeMapista (2.183).
 
-## 1. ODOTTAA PT:N SANAA (ei omaa työtä jonossa)
-Juoksupelin rappauksen laikut (PT 04.3x, taso 1, koe, ei vientiä). Yritysraja 2 täynnä. Haara `linssiseppa2/rappaus-laikut` 710cc220e, pohja 36aa43ed3, worktree k31. Vakiot `JuoksuK11Rappaus` 0/0/0, rae-laikku 0, sävy 1,62 0,47 0,545; lisäksi QA `valo savy k11rappaus l v h 1`.
-Tulos: laikut poissa silmin ja mitattuna (A 5,9 → 4,7 %, B 4,1 → 2,2 %). Keskisävy EI pysynyt: punainen pysyy, vihreä +12 %, sininen +21 % lineaarisesti koko punaisella seinällä, seinä hieman vaaleampi ja vähemmän kylläinen.
-Kysytty PT:ltä: kolmas yritys kertoimella 1,58 0,39 0,35 (ei ajettu). Sanalla: muuta `JuoksuK11RappausSavy`, päivitä MITTAUS.md, ajo kuten `_tyo/linssiseppa2/rappaus/sk-rappaus-2.txt` (6 kuvaa, kamerat A, B, 0-2), mittaus `mittaa-2.py` (polku kuvakansioon vaihdettava). Ilman sanaa ei tehdä mitään.
+## 1. TYÖ NYT, PT 04.4x (ALOITTAMATTA)
+Juoksupelin rappauksen laikut, KOLMAS JA VIIMEINEN yritys, vain kerroin. PT:n sanat: "kolmas ja viimeinen yritys, vain kerroin 1,58 0,39 0,35, muuta ei." Jatkaja ajaa JU:lta, parit A ja B samasta rajauksesta, kerro keskisävy nyt-kuvaan verrattuna. "Jos ero jää, 710cc220e tai uusin jää kokeeksi KK:n aamun koontiin; ei neljättä. Seinän ristiviiva ei kuulu tähän."
+Tee: haara `linssiseppa2/rappaus-laikut` (710cc220e, pohja 36aa43ed3, worktree k31): muuta `ValoKohteet.JuoksuK11RappausSavy` arvoon (1.58, 0.39, 0.35) ja kommentti, commit ja push `natiivi-backup`. Kopioi `_tyo/linssiseppa2/rappaus/sk-rappaus-2.txt` nimelle sk-rappaus-3 (vaihda sha 1. riville ja kuvien y2 -> y3; nyt-vaihe saa jäädä). Ajo JU:lta, 6 kuvaa, noin 4 min, sama tapa, kansio `lokit/linssiseppa2-rappaus-3-<sha>`. Mittaus: kopioi `mittaa-2.py`, vaihda kansio ja y2 -> y3; se tekee luvut ja parit (kamerat A ja B, sama rajaus). Katso parit, kirjaa MITTAUS.md:hen, raportoi PT:lle keskisävy koko punaisella seinällä nyt-kuvaan verrattuna.
+Nykytila 710cc220e: vakiot `JuoksuK11Rappaus` 0/0/0, rae-laikku 0, sävy 1,62 0,47 0,545; lisäksi QA `valo savy k11rappaus l v h 1`. Laikut poissa silmin ja mitattuna (A 5,9 -> 4,7 %, B 4,1 -> 2,2 %). Keskisävy ei pysynyt: punainen pysyy, vihreä +12 %, sininen +21 % lineaarisesti koko punaisella seinällä.
 Luvut ja johto: `_tyo/linssiseppa2/rappaus/MITTAUS.md`; parit `rappaus/parit/pari-A-nyt-y2.jpg`, `pari-B-nyt-y2.jpg`; ajot `lokit/linssiseppa2-rappaus-1-5a025fc69`, `-2-710cc220e`. Laikku on 6 m:n kohinaa, joten yhden kameran rajaus ei ole seinän keskiarvo (A haalea, B tumma): vertaa koko punaiseen seinään. Ei katsottu liikkeessä eikä iPadilla. Seinän B:n ristiviiva ja A:n reunakivi eivät kuulu tähän (LAV).
 
 ## 2. TEHTY
