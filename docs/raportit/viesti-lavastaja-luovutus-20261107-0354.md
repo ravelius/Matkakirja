@@ -12,8 +12,8 @@ A = /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/aukot. Loki: muuri/
   2. peli-B (noin 450-575; 645-700): irrallinen vihreä laatikko seinän päässä, tai peli-A:n ja B:n laikukas punainen seinä; havainnossa tasainen hieno rappaus. Laikut voivat olla valokarttaa (VS:n alue, ei tämän työn asia): mittaa ensin.
 - Materiaalit: V4_red ja V4_teal ovat tasavärejä ilman tekstuuria (mittaa76.py). Kuvat ja 3D kuuluvat Codexille: uusi tekstuuri tai malli tilataan, ei tehdä itse.
 
-## Odottaa PT:tä
-- Rivi PT:lle lähetetty: kartan sana PK:lle on annettu, EI VIELÄ, koska lopullista leivottua juurta ei ole. PT päättää, mitkä kokeet (7n, 7p, 7w) menevät leivontaan; sitten annat PK:lle juuren nimen.
+## Kartta ja leivonta (PT 03.5x)
+- Päätös ei tule yöllä: leivonta ja sävyraja 7n/7o ovat KK:n aamun koonnissa. PT:n suositus sinne: 7n + 7p; 7w ei, koska se tuo uuden laikukkaan pinnan. Kartta odottaa PK:lla siihen asti (PK:lle sanottu EI VIELÄ, hyväksytty). Päätöksen jälkeen annat PK:lle juuren nimen.
 
 ## Valmista
 - Leijuvat jalustat: yli5 ja jalusta1-2 katsottu, 7w jää kokeeksi eikä mene yhteen (PT 03.5x). Lod1/2: KK päätti, ei jalkaa; kaukokuva valmiista kartasta pelikameralta. Rivi KK:lle jalustoista lähetetty (jonossa 03.5x); vastausta ei vielä ollut. Koko muuria EI saa sanoa korjatuksi.
