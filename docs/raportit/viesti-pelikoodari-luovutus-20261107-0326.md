@@ -40,3 +40,16 @@ Hain 7.11. 02.15 kolme z14-palaa skriptillä, vaikka robots antoi samassa komenn
 - Kirjoita vuoropyyntö yhdellä ehdolla: E3-pyynnössä oli ristiriita, joka vaati tarkennuksen.
 - Kopioi ajopyyntö edellisestä ajosta, ei sitä edellisestä: F3:een tuli vahingossa xctrace F1:stä.
 - Älä kirjoita "katsoin kuvat", ellei kaikkia ole katsottu; kerro määrä.
+
+## 7. KORVAA KOHDAN 4.1: KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA 03.25 (kokeena, ei junaan, ei Tripoa), EI ALOITETTU
+"E2, E3 ja F3 kelpaavat, ja suosituksesi menee aamun korttiin. Katsoin kolme E3-kuvaa pienennettyinä: St Paul's ja Tower Bridge kestävät suurennoksen selvästi. Oikea koko pysyy oletuksena, kunnes omistaja päättää.
+Jatko, jotta aamun kuvat ovat parhaat:
+1) Selvitä St Paul'sin edessä oleva sienimäinen muoto ja Shardin nimen kohdan möhkäle, kaksi yritystä per vika. Jos möhkäle on oikea rakennus, se saa jäädä, mutta kerro mikä se on.
+2) Sovi VS:n kanssa Tower Bridgen pituus ja korkeus erikseen, jotta päät eivät mene rantojen talojen päälle.
+3) St Paul'sin seinät lämpimämmiksi, jotta malli asettuu karttaan kuten Big Benin värimuutos; kupoli saa jäädä.
+Kohdat 2 ja 3 yhdessä lyhyessä ajossa, samat kuvat kuin E3. Älä tee 4×-ajoa. Tulos minulle. Kun nämä on tehty, seuraava työ PT:ltä."
+
+Lähtökohdat, ei varmistettu:
+- Mallit: `Assets/Matkakirja/Kartta/OhjelmaKohdeGeometria.cs` (St Paul's) ja `OhjelmaKohdeLontoo*.cs`. VS: local_fa464945-e15d-4f98-aaad-00877a60f63a. Sieni: rajaus `lokit/pelikoodari-e3-parit/rajaus-iso-sp-tb.png`, näkyy mallin edessä, joten aloita mallin omista osista (Queen Annen patsas tai etupiha?).
+- Möhkäle: `lokit/pelikoodari-lontoo-f3-42a038800/f3-tb-matala-25.png`; etsi rengas `osm/osm.json`:sta paikasta noin 51.504, -0.086.
+- Pituus ja korkeus: `ohjelmakohteet koko` on yksi luku (`OhjelmaKohteet.Koot`, `Paivita`); erilliset akselit vaativat kolmannen arvon. Pohja `sk-e3.txt`, uusi sha, kansio `lokit/pelikoodari-lontoo-e4-<sha>`.
