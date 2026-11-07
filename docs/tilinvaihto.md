@@ -32,6 +32,12 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
 3. Kirjaa tili: päätili (omistajan muukin käyttö) = raja 92 % (omistaja 5.11.2026 klo 17.06); koodaustili = vain rivi 99 %:ssa. Kirjaus lokiin
    (`node tools/raamattu-kirjaa.mjs "TILINVAIHTO …"`) ja F/asemataulu/osoitteet.md:n taulukkoon; Postivahdille, kun se on luotu.
 
+## 0.5 Yösiivouksen ajastus ensin (omistaja 7.11.2026 klo 17.48, PT 17.54)
+Ennen roolisessioita uudella tilillä: `mcp__scheduled-tasks__list_scheduled_tasks`. Jos `matkakirja-simu-yosiivous` puuttuu, luo se
+heti (`create_scheduled_task`, cron `0 4 * * *`, kehote `tools/levy/simu-yosiivous-ajastus.md`). Ilman sitä iPad-välimuisti ja
+simulaattorien poster-välimuisti jäävät tyhjentämättä: lokit puuttuivat öiltä 4.–6.11., ajastus oli vain koodaustilillä (päätelty lokeista).
+Kohdan 5 kielto koskee cron-silmukoiden korvaamista, ei tätä ajastusta.
+
 ## 1. Kaikki sessiot nollataan heti aluksi (omistaja 30.10.2026 klo 19.22; Raamattu 7.37)
 SIIRTOPROMPTI (omistaja 3.11.2026 klo 16.31, pysyvä): "kirjautumisohjeita ei tarvitse, riittää pelkkä siirtoprompti. tärkeää että seuraava tili tyhjentää clear komennolla sessiot ja käyttää niitä samoja mikäli mahdollista tai jos luo uudet niin sitten arkistoi ne vanhat automaattisesti. puhdista itse alussa aina päätoimittajan mille välitän siirtopromptin" – omistajalle ei anneta kirjautumisohjeita; PT tyhjentää itsensä KK:n pyynnöstä ennen siirtopromptin antamista (sovellus ei salli KK:n tyhjentää PT:tä: clear_session vain oma tai itse käynnistetty; PT: RC pois → clear_session self, KK tarkistaa list_events = 0; KK 3.11.), ja uuden tilin PT tyhjentää ensin kaikki sessiot ja käyttää samoja id:itä, tai luo uudet ja arkistoi vanhat kysymättä. TOTEUTUS (PT 3.11.2026 16.4x): toisen tilin sessiot eivät näy uudella tilillä, mutta uuden tilin omat aiemmat roolisessiot näkyvät; ne tyhjenevät send_messagella "lataa clear_session ja kutsu self" (list_events = 0), ja niiden id:t viedään osoitekirjaan paivita-idt.mjs:llä; arkistoitavaa ei jää.
 Omistaja: "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". Tämä on vaihdon ENSIMMÄINEN ASKEL heti tilin jälkeen
