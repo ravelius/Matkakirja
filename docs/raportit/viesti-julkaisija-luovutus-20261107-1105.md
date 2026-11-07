@@ -7,7 +7,7 @@ Kaikki alla on irrotettu nohupilla, joten ne selviävät nollauksesta; tarkista 
 
 ## KÄYNNISSÄ JA JONOSSA (kuittaus tilaajalle jokaisesta; tarkista kuvat ja md5, älä arvioi)
 L2-jono:
-- NUI lahtokysymys 4 ajettu 11.02, 5 käynnissä: T/nui-lahto45-jonossa.zsh, lokit natiivi-ui-lahtokysymys-{4-maksu,5-raketti}-cbae3153f. EI VIELÄ KUITATTU NUI:lle: kansiot, loki.txt-polut, sha.
+- NUI lahtokysymys 4 ajettu 11.02, 5 ajettu 11.05 (NRE 1): T/nui-lahto45-jonossa.zsh, lokit natiivi-ui-lahtokysymys-{4-maksu,5-raketti}-cbae3153f. Kuitattu NUI:lle 11.06.
 - NUI lahtokysymys 6: T/nui-lahto6-jonossa.zsh pid 79750: simukäännös master + cbae3153f L2, sitten iPad-simu (todistusajo --laite ipad). Kerro NUI:lle todellinen sha ja että ajo oli simu, koska oikean iPadin kosketustyökalua ei ole.
 - NS vara a89993465: T/ns-vara-jonossa.zsh pid 91199, 3 Mac-ajoa, lokit natiiviseppa-vara-{verrokki,estetty,kytkin}. Kuittaus NS:lle.
 L1:
