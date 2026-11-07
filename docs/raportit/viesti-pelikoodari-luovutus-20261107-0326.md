@@ -53,3 +53,7 @@ Lähtökohdat, ei varmistettu:
 - Mallit: `Assets/Matkakirja/Kartta/OhjelmaKohdeGeometria.cs` (St Paul's) ja `OhjelmaKohdeLontoo*.cs`. VS: local_fa464945-e15d-4f98-aaad-00877a60f63a. Sieni: rajaus `lokit/pelikoodari-e3-parit/rajaus-iso-sp-tb.png`, näkyy mallin edessä, joten aloita mallin omista osista (Queen Annen patsas tai etupiha?).
 - Möhkäle: `lokit/pelikoodari-lontoo-f3-42a038800/f3-tb-matala-25.png`; etsi rengas `osm/osm.json`:sta paikasta noin 51.504, -0.086.
 - Pituus ja korkeus: `ohjelmakohteet koko` on yksi luku (`OhjelmaKohteet.Koot`, `Paivita`); erilliset akselit vaativat kolmannen arvon. Pohja `sk-e3.txt`, uusi sha, kansio `lokit/pelikoodari-lontoo-e4-<sha>`.
+
+## 8. SEURAAVA TYÖ KOHDAN 7 JÄLKEEN (PT 03.3x, Ei junaan)
+"KK:n lyhyen ajon jälkeen (sienimuoto, Shardin möhkäle, Tower Bridge VS:n kanssa, St Paul'sin väri) sinulle tulee juoksupeli, taso 1: avoin ovilehti peittää keisarin, kynnysviesti, esineen rikkoutuminen ja kiinniotto katsomatta (työlista 5.11. 16.38), sekä katsomatta jääneet oikea käännös ja Taso läpi (sk-f). Yhdellä ajolla. Kartta odottaa ennallaan LAV:n sanaa, joten sitä ei tarvita tähän. Ei junaan. Kuvat täysikoossa, rivit KK:lle ja PT:lle."
+Juoksupelin proto ja ajotyökalut: `git show dd4c12680:docs/raportit/viesti-pelikoodari-luovutus-20261106-2208.md` kohdat 1, 3 ja 5.
