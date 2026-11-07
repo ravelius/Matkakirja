@@ -2,6 +2,8 @@
 
 Korvaa kaikki aiemmat. Nollaus kontekstin kovasta rajasta (36 %). Työkalut ja vanhat opit: `git show 13d0ce6c9:docs/raportit/viesti-pelikoodari-luovutus-20261107-0956.md` kohdat 2, 4, 5. Lontoon poistotyökalut: `git show ee5465047:docs/raportit/viesti-pelikoodari-luovutus-20261107-0326.md` kohta 5.
 
+**Lisäys 11.2x: k1 ajettu ja katsottu: kortti keskellä, botti ei rikkonut mitään, joten ruudukkokuva jää seuraavaan juoksuajoon; kerrottu PT:lle. Kohta B on tehty. i5 ajossa JU:lla.**
+
 **Työ nyt: kaksi ajoa odottaa JU:ta. Katso kuvat, vie rivit. Ei uutta työtä ilman PT:tä.**
 
 ## 1. Avoinna, tee nämä
