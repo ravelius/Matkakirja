@@ -31,3 +31,8 @@ Mac: lav-kolmio1-jonossa.zsh, vs-kivisivu4-jonossa.zsh, ks47-jonossa.zsh, ns-lon
 
 ## LISÄYS 10.0x
 L2-jono irrotettuna: NUI, NS lontoo-jaa2 8d8842ce6 (T/ns-lontoo-jaa2-jonossa.zsh, kuittaus NS:lle), VS kivisivu9 dc4b1c69c (T/vs-kivisivu9-jonossa.zsh, kuittaus VS:lle, 2 kuvaa, kuvat-kivisivu9). VS haluaa vertailuajon MUISTI-rivin.
+
+## LISÄYS 10.1x: VS kivisivu10 iPad (PT:n sana), EI ALOITETTU
+Käännös lokit/julkaisija-laite-218-5b5da152c valmiina. Ennen käynnistystä Documents/muistivahti.txt = pois, ajon jälkeen paalla ja tarkistus (malli T/pk-tf219d-ajo.zsh, T/ks-sade-ipad.zsh). Juuri: LAV:n koejuuri-v115pala (etsi find P/_tyo -maxdepth 5 -name koejuuri-v115pala) rsync -aL ilman kielletty-rakennukset-v126 ja kielletty-c2-v40, Documents/koejuuri-v115pala (malli T/vs-kivet-ipad.zsh). Skenaario P/_tyo/linssiseppa2/kivisivu/sk-kivisivu10-ipad.txt, 13 kuvaa, raja 1100 s. Lue skenaario: ajurin tuntemat sanat. Raportti VS:lle: huippu muisti-tarkka.logista, kaatuminen kyllä/ei ja kohta merkit.txt:stä, kuvien määrä. Järjestys iPadilla: KS talot-sade, sitten VS kivisivu10 ja NS lähizoomi PT:n ohjeen mukaan.
+SIIVOUS VS:n pyynnöstä: koejuuri-kivisivu2 ja koejuuri-v115pala pois Documentsista. devicectl ei poista. Listaa Documents ensin. Sovelluksen poisto vain, jos siellä on pelkästään nämä ja lokeja; jos on muiden aineistoa (kartta-osat, talopalat-lontoo-d7: NS:n lähizoomi tarvitsee, NS kielsi poiston), ÄLÄ poista, vaan listaus VS:lle.
+L2: VS kivisivu9 valmistuessa kuittaus VS:lle ja "ESIKATSELU NYT" L2 NUI:lle (lahtokysymys-2 4aa62f018, ajaa itse).
