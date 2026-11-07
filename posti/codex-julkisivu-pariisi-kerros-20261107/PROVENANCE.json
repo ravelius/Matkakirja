@@ -1,0 +1,22 @@
+{
+  "task": 2194,
+  "tool": "OpenAI built-in image_gen",
+  "generationCalls": 2,
+  "selectedAttempt": 2,
+  "prompt": "prompt.txt",
+  "nativeSHA256": "5f10dd11ce7c61b073283b35472f137d68213b3ebcad69485b097db24fbe72a1",
+  "styleSHA256": "692ff29f2c330a77d56dd6dd2f6bd50c4822d404ff128365b57cdd51b8fa2bde",
+  "exportOperations": [
+    "Convert PNG to grayscale L mode to meet color specification",
+    "Resize square 1254 to 1024 with Lanczos",
+    "Build exact 4x4 repetition and 128px reduction"
+  ],
+  "sourceCommit": "19778b11502a938edd0052762442f3af33a6dce1",
+  "sourceOrderBlob": "a8bfb7a643d385b7e4e1c48f339d472285cff0a0",
+  "KKReview": "pending",
+  "qualityPass": false,
+  "exceptions": [
+    "Opposite edge pixels are not exactly equal. Exact seamless requirement is not met.",
+    "Minor broad tonal variation remains in generated paint."
+  ]
+}

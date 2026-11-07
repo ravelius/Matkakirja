@@ -1,0 +1,62 @@
+{
+  "taskNumber": 2194,
+  "selectedAttempt": 2,
+  "generationCalls": 2,
+  "deliveredTiles": 1,
+  "nativeImage": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6867a267-14a4-4eff-a7e4-5ff1929a6ac9.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "5f10dd11ce7c61b073283b35472f137d68213b3ebcad69485b097db24fbe72a1"
+  },
+  "exportOperations": [
+    "Convert PNG to grayscale L mode to meet color specification",
+    "Resize square 1254 to 1024 with Lanczos",
+    "Build exact 4x4 repetition and 128px reduction"
+  ],
+  "finalImage": {
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "L",
+    "isGrayscale": true,
+    "opaque": true
+  },
+  "seams": {
+    "leftRight": {
+      "exactMatch": false,
+      "meanAbsoluteDifference255": 1.1376953125,
+      "maxAbsoluteDifference255": 7,
+      "nonmatchingPixels": 804,
+      "testedPixels": 1024
+    },
+    "topBottom": {
+      "exactMatch": false,
+      "meanAbsoluteDifference255": 0.5693359375,
+      "maxAbsoluteDifference255": 3,
+      "nonmatchingPixels": 540,
+      "testedPixels": 1024
+    }
+  },
+  "exactSeamless": false,
+  "visual": {
+    "oneBayOneFloor": true,
+    "frontOrthographic": true,
+    "simpleWindowJambsAndFloorBand": true,
+    "lowContrast": true,
+    "noSmallDetails": true,
+    "noVisibleDirectionalCastShadow": true,
+    "styleMatch": "Simplified flat painted shapes derived from G reference; subjective KK review pending"
+  },
+  "exceptions": [
+    "Opposite edge pixels are not exactly equal. Exact seamless requirement is not met.",
+    "Minor broad tonal variation remains in generated paint."
+  ],
+  "qualityPass": false,
+  "reviewStatus": "awaiting-KK-review-with-declared-seam-exception",
+  "gameIntegrated": false,
+  "published": false
+}
