@@ -951,3 +951,15 @@ Omistaja kortilla klo 16.47 (KK:n välitys, k3-paavali-matala): Kelpaako St Paul
 ## iPhone vaakatasossa ei laskeudu kattojen tasolle (7.11.2026 klo 17.13)
 
 Omistaja kortilla klo 17.12 (KK:n välitys, iphone-85-pois): Saako iPhone vaakatasossa laskeutua matalassa kallistuksessa kattojen tasolle? Ei laskeudu. Kamera pysähtyy kattojen yläpuolelle; loivemmissa kulmissa pääsee yhä lähelle. Koskee junaa 220. Horisontin sinertävä suorakaide kerrottu, ei työtä ilman sanaa. Julkisivukortti: en ymmärrä kysymystä, KK kysyy uudelleen; ei sarjaa eikä junaa ennen vastausta.
+
+## Talojen kattovärit ja vaihtelu ilmakuvasta, viisi tyyliä, puut (7.11.2026 klo 17.24 ja 17.27)
+
+Omistaja kortilla (KK:n välitys, suunnitelma 20261107-talojen-katot-ja-vaihtelu.md): ilmakuva Saa; aloitus: "suosituksen mukaan mutta voidaanko noiden kuvien perusteella tehdä jotain muutakin? ja miten aiot tämän toteuttaa? tehdäänkö kuinka monta erilaista rakennusta?" Klo 17.27 talotyylit Viisi ja puut ilmakuvasta Otetaan (paikat, latvat, värit). Vaihe 1: 1 km² Louvren pohjoispuolelta, koe, ei junaan 220; ilmakuva vain koealueelta. KS aineisto, NS generaattori. Avoin: 140 puuta puistojen ja puurivien ulkopuolella, kortti KK:lla; oletus ei mukaan.
+
+## Levy tyhjäksi ja iPad-välimuistin yötyhjennys (7.11.2026 klo 17.31 ja 17.48)
+
+Omistaja klo 17.31 (KK:n välitys): "levyä pitää tyhjentää , mikä sen on täyttänyt? laita se työn alle ja nollaa sen jälkeen. vastauksen voit antaa uudessa sessiossa". Klo 17.4x PT:n ikkunassa: Shared/Claude lähes 300 Gt ja proto-3d 140 Gt, turha pois tai T7:lle ja NAS:lle. Omistaja poisti iPad-asennusten välimuistin (75 Gt). Klo 17.48 kortilla: kone saa tyhjentää vain tämän välimuistin yöllä, kun asennuksia ei ole käynnissä (JU, PR 6478, ensimmäinen ajo 8.11. klo 4). Vapaana 183 Gi klo 17.54 (oli 32).
+
+## Kaukainen varjo ja iPhonen kameran korkeus kelpaavat (7.11.2026 klo 18.00)
+
+Omistaja kortilla klo 18.00 (KK:n välitys): Kelpaako kaukainen varjo 70°:ssa nyt? Kelpaa (02a6cc1dd, koe, ei junaan; jatkuu iPadin muistiin). Kelpaako iPhonen kameran uusi korkeus? Kelpaa (901e4004b, juna 220; hyppy kallistaessa katsotaan junan käännöksestä). Madeleinen katto horisontissa ja terävöinnin luvut kerrottu, ei uutta työtä.
