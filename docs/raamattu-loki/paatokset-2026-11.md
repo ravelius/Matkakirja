@@ -831,3 +831,7 @@ Omistaja: Lippu ei kuulukaan olla Pariisissa. Pois vikalistalta ja koeversion eh
 ## MUURIN PITKAT REUNAKIVET TUMMENNETAAN (omistaja 7.11.2026 klo 08.54, kortti KK) (7.11.2026 klo 08.54)
 
 Kortti: Tummennetaanko muurien juuren pitkät vaaleat reunakivet samaan tapaan kuin muut kivet? Vastaus: Tummennetaan (Suositus). Tavoite: kaikki reunakivet näyttävät samalta kiveltä. Koe, ei vientiä.
+
+## JUOKSUPELI: KALA-ALTAAN JA GRANAATTIOMENAPUUN HUUDOT JA KUPLAT (7.11.2026 klo 09.30)
+
+Omistajan pyyntö 09.02 (KK): "tee huudot ja kuplat esineille joilla sitä ei vielä ole." Kortti 09.27 "Kelpaavatko kala-altaan ja granaattiomenapuun huudot, kuplat ja historiatekstit?": "Kelpaavat (Suositus)". Rajaus kerrottu omistajalle: vain nämä kaksi (koodista tarkistettu); 16 luettelon esinettä ja 7 yhden huudon esinettä eivät kuulu tähän ilman hänen sanaansa. Ensimmäinen rikkominen antaa oman huudon ja kuplan, ja esineet näkyvät loppuyhteenvedossa. Kuvat Codexilta, KK katsoo, omistaja näkee ennen peliä; kahdeksan huutoa Äänittäjältä; avaimet ja testit Pelikoodarilta. Junaan normaalisti, ei omaa vientiä. Suunnitelma: KK:n 20261107-huudot-kala-allas-granaattiomenapuu.md.
