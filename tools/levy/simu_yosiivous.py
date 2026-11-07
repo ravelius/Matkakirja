@@ -2,6 +2,9 @@
 data/Library/Application Support/PRBPosterExtensionDataStore -kansion sisältö (iOS:n lukitusnäytön poster-välimuisti, iOS luo
 uudelleen). Appeihin, pelin dataan ja muuhun laitteen dataan ei kosketa; käynnissä olevat laitteet ohitetaan.
 
+Lisäksi (omistaja 7.11.2026 klo 17.48) iPad-asennuksen välimuisti: vain AppInstallationBinaryDeltas/fi.matkakirja.peli.kehitys
+tyhjennetään. Ohitetaan, jos devicectl on käynnissä tai iPad-lukko on olemassa. Ei riipu T7:stä; --udid ohittaa tämän osan.
+
   python3 -I tools/levy/simu_yosiivous.py               kuiva-ajo: koot, ei poistoja
   python3 -I tools/levy/simu_yosiivous.py --aja         tyhjennys (launchd-yöajo fi.matkakirja.simu-yosiivous)
   python3 -I tools/levy/simu_yosiivous.py --udid <UDID> vain yksi laite (kokeilu)
@@ -10,6 +13,9 @@ Loki: /Users/Shared/Claude/_levy/simu-yosiivous-<vvvvkkpp>.log (lisäys).
 import json, os, shutil, subprocess, sys, time
 
 SARJA = '/Volumes/T7 4TB/Simulaattorit/Sarja'
+IPAD_VALIMUISTI = os.path.expanduser('~/Library/Containers/com.apple.CoreDevice.CoreDeviceService/Data/Library/Caches/'
+                                     'AppInstallationBinaryDeltas/fi.matkakirja.peli.kehitys')
+IPAD_LUKKO = '/tmp/matkakirja-ipad.lukko'
 ALI = os.path.join('data', 'Library', 'Application Support', 'PRBPosterExtensionDataStore')
 LOKIT = '/Users/Shared/Claude/_levy'
 aja = '--aja' in sys.argv
@@ -39,12 +45,46 @@ def koko(p):
     return int(t.stdout.split()[0]) if t.returncode == 0 and t.stdout else 0
 
 
+def devicectl_kaynnissa():
+    # Pelkkä xcrun-kääre tai CoreDeviceService ei ole ajo; pgrep -x täsmää vain devicectl-prosessiin.
+    return subprocess.run(['pgrep', '-x', 'devicectl'], capture_output=True).returncode == 0
+
+
+def tyhjenna(kansio):
+    for n in os.listdir(kansio):
+        p = os.path.join(kansio, n)
+        if os.path.isdir(p) and not os.path.islink(p):
+            shutil.rmtree(p, ignore_errors=True)
+        else:
+            os.unlink(p)
+
+
+def ipad_valimuisti():
+    k = IPAD_VALIMUISTI
+    if not os.path.isdir(k) or os.path.islink(k):
+        kirjaa('iPad-välimuisti: ei kansiota, 0.0 Gt')
+        return 0
+    kt = koko(k)
+    if os.path.exists(IPAD_LUKKO) or devicectl_kaynnissa():
+        kirjaa(f'iPad-välimuisti OHITETTU (iPad-lukko tai devicectl käynnissä) {kt / 2**20:.1f} Gt')
+        return 0
+    if not aja:
+        kirjaa(f'iPad-välimuisti TYHJENNETTÄISIIN {kt / 2**20:.1f} Gt')
+        return kt
+    tyhjenna(k)
+    jaljella = koko(k)
+    kirjaa(f'iPad-välimuisti TYHJENNETTY {kt / 2**20:.1f} Gt → {jaljella / 2**20:.2f} Gt')
+    return kt - jaljella
+
+
+ipad_kt = 0 if vain else ipad_valimuisti()
 if not os.path.isdir(SARJA):
     kirjaa(f'T7-sarjaa ei löydy ({SARJA}) → ei siivousta')
     sys.exit(2)
 kirjaa(f'alku {"TYHJENNYS" if aja else "kuiva-ajo"}{" vain " + vain if vain else ""}')
 juuri = os.path.realpath(SARJA) + os.sep
-yht = ohitettu = 0
+yht = ipad_kt
+ohitettu = 0
 for udid, tila in sorted(tilat().items()):
     if vain and udid != vain:
         continue
@@ -62,12 +102,7 @@ for udid, tila in sorted(tilat().items()):
             kirjaa(f'OHITETTU {udid} (käynnistyi kesken)')
             ohitettu += 1
             continue
-        for n in os.listdir(kansio):
-            p = os.path.join(kansio, n)
-            if os.path.isdir(p) and not os.path.islink(p):
-                shutil.rmtree(p, ignore_errors=True)
-            else:
-                os.unlink(p)
+        tyhjenna(kansio)
         jaljella = koko(kansio)
         kirjaa(f'TYHJENNETTY {udid} {kt / 2**20:.1f} Gt → {jaljella / 2**20:.2f} Gt')
         yht += kt - jaljella
