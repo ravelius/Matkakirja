@@ -18,6 +18,8 @@ Mittaustapa: jokainen omana ajonaan, sama käynnistys kytkimellä tai vähintä�
 Lähtökohta kohdalle 1: työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, haara natiiviseppa/pariisi-muisti; f1c6111a8 sisältää kalotit, muistikuva-komennon ja syvyysvahdin sekaisin, a04bdb753 verrokin kytkimen napat-pois.txt. Junaan vain kalottien poisto, ei kumpaakaan muuta. Tausta: _tyo/natiiviseppa/pariisi-muisti/tulos.md.
 PT 21.2x: 630 Mt on muistikuvan aukko, ei kadonnutta muistia; "nähtävyyskuvat 108" ja "talot 43" ovat alarajoja. Katto: PT kuittasi koe13:n päättyneen oikein; v20 jää, päätös KK:n kautta omistajalle.
 
+Vaihe 1:n osat koehaaraan: PK 190d6c094 (natiivi-backup pelikoodari/muisti-latauskuvat, pohja 72e257a0b): juoksupelin latauskuvat vain levylle kaupungissa, yksi rivi JuoksupeliNakyma.cs, unity-tarkistus 0 virhettä. PK:N PYYNTÖ: jos ajo avaa juoksupelin komennolla ilman pelilistaa, kerro PK:lle (local_91a1bc27-6870-46aa-9886-66fd33b68880) lokin rivi "latauskuva näkyy ... odotus X s" (kylmän purun yläraja; verrokki iPad 0,09-0,16 s) ja muistiero. NUI:n sha vielä tulematta.
+
 ## PARIISIN MUISTI: ENSIMMÄINEN AJO (tausta; raportoitu PT:lle 21.00)
 Tulos _tyo/natiiviseppa/pariisi-muisti/tulos.md (loppu "TULOS, ajo 0b"), parit pariisi-muisti/parit/, purku kuva1/kuva2 + csv samassa kansiossa. Kokonaissuunnitelman tekee KK. MuistiKuva ja kytkimet eivät mene junaan. Odottaa PT:n tai KK:n sanaa: latausrajat (LuoPallo ylikirjoittaa kohtauksen, 40/64 ei ole koskaan päätynyt käännökseen; EI KORJAUSTA ilman sanaa); napakalottien kevennys. muistikuva/pura.zsh on nyt U = b8. ajo.zsh hakee vanhan muistivahti-tuloksen, kun vahti on pois: korjaa ennen uusintaa.
 ## KATOT: KOE13 PÄÄTTYI, V20 JÄÄ (PT kuitannut; EI UUSIA KOKEITA)
