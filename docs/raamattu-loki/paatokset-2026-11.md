@@ -843,3 +843,7 @@ Kortti 09.31 "Kelpaavatko muurin kivet näin kuvien mukaan?": "Kelpaavat (Suosit
 ## JUOKSUPELI: KALA-ALTAAN JA GRANAATTIOMENAPUUN KUVAT (7.11.2026 klo 09.41)
 
 Kortti 09.40 "Kelpaavatko kala-altaan ja granaattiomenapuun neljä kuvaa peliin?": "Kelpaavat (Suositus)". Codexin posti a2cdf8fc9 (#2189–2192). Kerrottu: altaan jalusta on muistokuvassa harmaampi ja esinekuvien pinta pelkistetty. Peliin tekstien kanssa; äänet odottavat omistajan kommenttia videosta.
+
+## LONTOO: PÄÄNÄHTÄVYYDET ISOMPINA KOKEENA (7.11.2026 klo 09.52)
+
+Omistajan kysymys 09.49 (KK): "Voiko Lontoon nähtävyyksiä liioitella vaikka tehty koodilla?" Kortti 09.52 "Kokeillaanko Lontoon päänähtävyyksiä isompina?": "Kokeillaan (Suositus)". Hänelle luvattu: parit samasta kohdasta ennen päätöstä, jääkö koko peliin. Kokeena St Paul's, Tower Bridge, Big Ben ja Westminster; Tower Bridgelle omat pituus ja korkeus. Tavoite: erottuvat kaukaa kuten Pariisin nähtävyydet eivätkä peitä naapurikortteleita rumasti. Muisti mitattuna. Ei junaan ilman korttia "Pariisi valmis".
