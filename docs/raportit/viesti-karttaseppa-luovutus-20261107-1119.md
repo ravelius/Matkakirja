@@ -15,8 +15,7 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
    - **Neuilly:** sillalla kaksi viivaa, aineistossa metroa ilman tunnelia; ei todistettu, että viivat ovat metroa. **Nimetyt 9:** keskirajaukset `parit-yhteinen-44/kk/nimetyt-9-keskirajaukset.png` KK:lle aamuun PT:n listan kanssa.
    - **Viadukti:** KK 04.07 kelpaa, etelärannan lyhyt pää jää, aseman länsipuolen viiva on sama metrolinja. Batignollesin nosturi = oikea rakennus way/64800237 (ilmakuva `rajaus/batignolles-ilmakuva.jpg`). Pallosääntöä ei muuteta yöllä (KK 04.17); haalea Kuumailmapallo-kyltti aamun koonnissa.
    - **Panthéonin nurmet (ajo 48, kokeena):** kartan grass pehmennettynä; 13 rengasta pois vain Panthéonin alueelta (`TaloAlue.PantheonNurmet`, 995ef2d88). Saint-Étienne-du-Mont ja Invalidit eivät vielä (PT). Montparnassen way/79621758 kyltin ja puiden alla: ei voi sanoa, rivi KK:lle. Koepohja pantheon r9 ei ole Y:ssä. Junaan: laattaversiot (-poisto1) nostettava, koska lista muuttui. **Ehdokas, ei tarkistettu:** Montparnassen ruskea alue voi olla way/400154236 (building=roof, 48.83996,2.31921); kaista ja aukiot lähiympäristöissä ovat palatyötäni, 25 m ja Montparnasse KK:lla.
-5. **Mittakaava:** `aja` 0.006 → 1,46 px/m; 0.0015 → noin 1,9 px/m, ei lähikuvaa. Rajaa täysikuvasta.
-6. **Palat v19 (`natiiviseppa/pariisi-talot/palat-v19-ryhma4`, 127 984 taloa, syöte `palat-v19-syote`):** v18 − Pont Alexandren pylväät way/230227015, way/64959941. TaloPoistot Y ccc12f9e5. **v19 on nyt uusin.**
+5. **Mittakaava:** `aja` 0.006 → 1,46 px/m; 0.0015 → noin 1,9 px/m, ei lähikuvaa. Rajaa täysikuvasta. Palat: uusin v20 (`natiiviseppa/pariisi-talot/palat-v20-ryhma4`, syöte `palat-v20-syote`), käytössä ajoissa 46–48 ja TF 219; TaloPoistot Y ccc12f9e5.
 8. **KK 23.47 (valtuutuksella):** nimetty oikea rakennus, ei mallia, yli 25 m mallista → palaa; alle 25 m jää pois, lista aamuun `lahialue-20261106/nimetyt/nimetyt-luokiteltu.txt`. Ei koske omistajan päätöksiä (Eiffel ja Montparnasse 22.20, Monoprix, Seinen laivat, Notre-Damen saari). Louvren verkon Saint-Germain-l'Auxerrois: KK:n kysymys.
 9. v14 ja v15 käyttämättä levyllä: ei poistoja ilman sanaa. Jäävät: Hôtel Biron, Galerie des Marbres, Aérogare. VS: kadun katkos 2,2907°. Etäyhteys vain KK:lla. Hookin työlistarivit ovat PT:n työkalulla, en päivitä. Omistaja 22.15: maalattu taivas kokeena vain Pariisissa. ND #2184 s85 oletus Y 6eefdbbb1.
 10. **PT 02.3x (Raamattu 2.183): OpenFreeMapin ehdot kieltävät automaattisen datan keruun; robots 403. Ei skriptattuja hakuja sieltä.** tee-poistot.py ja `laikka-vesi-20261106/`-työkalut lukevat vain pelin omaa mvt-välimuistia, eivät hae verkosta; tee-palat.py ei käytä OpenFreeMapia. Riippuvuus PT:llä.
@@ -35,9 +34,8 @@ Kaikki kokeena, ei junaan, ei iPadia. Y = /Users/Shared/Claude/wt/proto-karttase
 ## ODOTTAA KK:LTA (kuvat `parit-yhteinen-26/kk/`, ellei toisin mainita)
 - **Sillat:** -austerlitz, -beauvoir, -national, sillat-lista.txt (48/63 palaa). **Katettu vesi:** katettu-vesi.jpg. **Laivat:** `parit-yhteinen-25/kk/`, jos KK pyytää. **ND vesi1:** `parit-yhteinen-29/kk/raita-yla.jpg`.
 ## MUUT ODOTTAVAT
-- VS: parit ja arvio ajoista 26, 28, 30.
 - PT: koti-haaran tiedostot. Seuraamattomat omat luovutukset + `.claude/settings.local.json.ennen-kevennysta` (ei committiin, ei poisteta). Ei poistoja ennen sanaa.
-- h=40 (48.83891,2.37506) jää joesta tunnistamatta. Raita (`laikka-vesi-20261106/syy.md`) jää. Posti #2174/#2178: KK, VS, Codex.
+- VS: parit ja arvio ajoista 26, 28, 30. h=40 (48.83891,2.37506) jää joesta tunnistamatta. Raita (`laikka-vesi-20261106/syy.md`) jää. Posti #2174/#2178: KK, VS, Codex.
 ## AUKI, MUIDEN KÄSISSÄ TAI EI KIIREELLINEN
 Louvren haamu PT ja VS. Eiffel 85b VS. NUI:n kylttisyy NUI. Kärkilaskenta iPadilla mittaamatta. Tuileries'n ruskeat pisteet (pn-matala-2, noin 590,1437 ja 920,1432) tutkimatta. Pohjakirja: rannan kadun mukaan rajattu Eiffelin reuna vain KK:n sanalla.
 ## TYÖTAVAT
