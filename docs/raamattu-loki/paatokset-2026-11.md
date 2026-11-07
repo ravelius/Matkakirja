@@ -867,3 +867,7 @@ Kortti 11.03 (KK): "Odottaa (Suositus)": omistaja näkee ensin yhden tarkkuuden 
 ## TASO LÄPI -KORTTI KESKELLE (7.11.2026 klo 11.09)
 
 Kortti 11.08 (KK): "Keskelle": noudattaa pohjaa, vaikka peittää keisarin pään ja hartiat; KK:n suositus oli sivussa. Kumoaa 4aa9ec365:n, joka on TF 219:ssä. PK palauttaa keskelle seuraavaan junaan, ei muunnelmaa pohjiin. KORJAUS edelliseen kirjaukseen: Pariisi valmis -kortin "Odottaa" oli klo 11.03, ei 11.00 (KK).
+
+## JULKAISUPYYNTÖ JUNA 220 (7.11.2026 klo 11.22)
+
+Omistaja 11.21 (KK, sanatarkasti): "jatka kaikkia töitä ja julkaise juna kun kaikki korjaukset valmiit." KK:n tulkinta, omistajalle kerrottu: sisäinen koeversio kuten 07.41 ja TF 219; ei ulkoisille, ei lukitusta ulkoisille, ei korvaa korttia Pariisi valmis. Kaikki korjaukset = iPhone-palautteen 09.49 korjaukset, Taso läpi keskelle sekä 11.21:n alanapit ja valikko. Yhden tarkkuuden kartta, Lontoon isot nähtävyydet ja muurin kivet mukaan vain omistajan kortilla. Lukitus PT:n rivillä LUKITSE 220, kun ehto täyttyy.
