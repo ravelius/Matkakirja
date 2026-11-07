@@ -7,6 +7,10 @@ P = /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/palikkakoe, D = P/selvitys-t
 Viestit: mcp__ccd_session_mgmt__send_message session-id:llä. Vahdit: find, ei zsh-globia (ei osumaa kaataa vahdin). Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; työpuu /Users/Shared/Claude/wt/proto-natiiviseppa-kierto, etä natiivi-backup.
 
 
+## LISÄYS 16.58 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
+JULKISIVU4 KATSOTTU JA KERROTTU PT:LLE 16.58, EI TOISTETA: _tyo/natiiviseppa/julkisivu/tulos.md loppu, kuvat kuvat/pt-*-rinnakkain.png ja iphone-85-pois.png. 343 m:ssä näkyy, kortteli kokonaan vain pt-iphone-45:ssä; 250 m:n kuvissa ei kokonaan. Vaaka 85°: piikit lähiseinillä, ei korjausta. PT vie KK:lle; odotetaan PT:n/KK:n sanaa. EI JUNAAN, EI iPADIA, ei ajoja jonossa. Jos ei uutta sanaa: "JONO TYHJÄ: Natiiviseppä".
+Cron luotava silti.
+
 ## LISÄYS 16.44 (KORVAA ALEMMAN, MISSÄ RISTIRIITA)
 PT HYLKÄSI JULKISIVUN SUOSITUKSEN: iPhonen lähizoomi on junassa. PT:n sana yhteen Mac-ajoon, TILATTU JU:lta 16.44, ÄLÄ TILAA UUDELLEEN: sk4-mac.txt, lokit/natiiviseppa-julkisivu4, kuvat jq-iphone-{45,70}-{pois,maalattu,koodi} (343 m, lahizoomi 4,89 = iPhone vaaka) ja jq-lahi-{45,70}-* (250 m, lahizoomi 6,72; kortteli kokonaan). Tarkista "talot tila: palat" > 0 ja kello.
 KATSO täysikoossa, sitten PT:lle kolmikot samalla rajauksella, kuvat menevät PT:n kautta KK:lle (omistaja haluaa maalatun ja koodin rinnakkain). Ei junaan, ei iPadia, ei suositusta "ei hyötyä" ilman iPhonen tarkkuuden varausta: Macin kuva 4:3 ja iPhonea tarkempi. Lz3-85:n piikit kerrottu, eivät johdu julkisivusta. iPhone vaaka 85° silmä noin 30 m (laskettu) kerrottu PT:lle.
