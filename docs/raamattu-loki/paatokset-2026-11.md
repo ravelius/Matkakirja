@@ -935,3 +935,7 @@ Kortti "Viedäänkö talot kauemmas junaan, vaikka vaikutus iPhonella näkyy vas
 ## LONTOO-NIMI HÄIPYY (omistaja 16.09) (7.11.2026 klo 16.09)
 
 "Kelpaako, että Lontoo-nimi häipyy pyyhkäistessä eikä hyppää?" → "Kelpaa (Suositus)", selite "Korjaus menee junaan." Koskee 5bd4aa484:ää. Kerrottu: vain Mac; tason vaihtumisen kautta nimi on yhä Regent`s Parkin puolella; Pariisissa nimi puuttuu kahdessa pysähdyksessä ilman korjaustakin; Wellington ja Mornington auki. Omistaja ei pyytänyt näihin työtä.
+
+## Muurin juuren viat yleisellä säännöllä, testikuvat ennen julkaisua (7.11.2026 klo 16.26)
+
+Omistaja kortilla (KK:n välitys, palkki5, kuva r5-lisa7-0: kivilaikku puulattialla, tumma aukkokaista): 2. kuvassa on vielä jotain outoa; korjataan yleisillä säännöillä, koska samoja on todennäköisesti muuallakin, ei vain yhtä paikkaa; ennen julkaisua testikuvat eri paikoista hänelle. KK:n tulkinta: koskee muurin juuren vikoja; palkki5 ei näin junaan; kahden yrityksen raja korvautuu; juna 220 odottaa kuvia ja hänen sanaansa. Turkoosi katto ja harmaa taso: ei työtä ilman sanaa.
