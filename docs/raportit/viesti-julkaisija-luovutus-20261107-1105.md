@@ -34,3 +34,10 @@ PT:n päätös: koejuuri-kivisivu2 ja koejuuri-v115pala jäävät iPadille seura
 - Kuvattoman skenaarion jonorivi "VIKA" (kivisivu11) ei ole vika: tee video T/../tallenne-video.sh:lla. "videoita 37" oli laskuvirhe, käytä find.
 - proto-kaanna.sh yhdistää masteriin: simukäännöksen sha on eri kuin tilattu, kerro tilaajalle.
 - Turvatarkistus esti rmdir-rivin yhdistelmäkomennossa. Tyhjä kansio lokit/karttaseppa-talot-muisti-b8-876f7fd14 jäi paikalleen, harmiton; ei uutta yritystä.
+
+## LISÄYS 11.16: TÄMÄ KORVAA "KÄYNNISSÄ JA JONOSSA" -KOHDAN; jonolokin JONOSSA-rivit ovat tuoreimmat
+L2: NS yksi-taso b221a28a1 käynnissä (T/ns-yksitaso-jonossa.zsh pid 38104; PT:n ensisijainen, omistaja odottaa kuvia, lokit natiiviseppa-yksi-taso-ennen ja -jalkeen; tarkista "pistekerroin 0.47"; kuittaus NS:lle), sitten NS vara-kytkin2 (T/ns-vara-kytkin2.zsh; kuittaus NS:lle).
+L1: PK juoksu-k1 f86344e8f (T/pk-k1-jonossa.zsh pid 27103, skenaariossa nyt 2 kuvaa, jonorivin "/1" on vanha; kuva talteen myös VIKA:ssa; kuittaus PK:lle). PK k2 peruttu lopullisesti.
+iPad järjestyksessä: PK i4 (käynnissä), NUI 4 ja 5 (84586), NS lz1-2 ja lz3-2 (88232), VS kivisivu14 (6894), KS talot-muisti2 5488bdd8b (T/ks-muisti2-ipad.zsh pid 15829; jos vahti pysäyttää, kerro KS:lle viimeinen ehtinyt komento merkit.txt:stä; ei uusintaa).
+NUI lahtokysymys-6 PERUTTU (PT 11.1x): valovahdin kertapoikkeus käytetty ja palautettu (koe-commit 676376696, ref poistettu), liikevahtiin ei poikkeusta. Vahdit kaatuvat jo a8b873e5d-pohjalla; PT:lle kerrottu. Älä ohita vahteja.
+Yksi-taso tuli ajoon L2:lla, koska L1 oli käännöksessä: ensisijainen ajo menee kumman tahansa linjan ensimmäiseen vapaaseen vuoroon.
