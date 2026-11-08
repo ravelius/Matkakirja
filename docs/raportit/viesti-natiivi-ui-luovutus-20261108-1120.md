@@ -69,3 +69,5 @@ Pohja: sk-puut-panorointi-1/-2 (kuvat kesken liikkeen, `ui kartanelama tila`); a
   (48e5654ae saa valmistua, kertoo kyltin). JATKA AINA 756f4962d:n päältä.
 - 11.5x 48e5654ae Mac-video (lokit/nui-topoesittely-1-48e5654ae/mac, 23,6 s): unity.log `esittelyt tila` → kyltti "ALPIT · Mont Blanc 4 806 m" Visible 24,964 194×25,
   opasiteetti 1 → kyltti piirtyy nyt (UiKerros.Valikot). Videon ruutuja EI vielä katsottu. JU ajaa 756f4962d (Mac + iPad) → katso se ja lähetä video KK:lle PT:n kautta.
+- 11.48 LIPPU iPad 1f26c51b4 (lokit/nui-lippu-442-1-1f26c51b4, 8/8) KATSOTTU: KELVOTON – `aja … 0.212` = 23 km kaari, lippu ei missään kuvassa.
+  Skenaario korjattu kaareen 14 (Ranska); uusinta JU:lla → lokit/nui-lippu-442-2-1f26c51b4. Katso, että lippu on keskellä/alhaalla/reunoilla.
