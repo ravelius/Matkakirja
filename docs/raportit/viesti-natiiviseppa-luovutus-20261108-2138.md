@@ -85,3 +85,10 @@ Huom. omistajalle/PT:lle myöhemmin: jättiläisdronen silmä 80–120 km → ho
 ## LISÄYS 22.1x (7): PT (KK 22.09) – MERENPOHJAN PALLON REUNAPIIKIT, FPV:N JÄLKEEN
 Merenpohjan pallo näytetty omistajalle. Pallon reunan pienet piikit korjattavaksi erikseen (ei estä): (1) Perun–Chilen hauta, (2) etelän reuna
 (Etelä-Atlantti, alareuna oikealla). Tehdään FPV:n jälkeen; Mac iPad-koossa, pari (ennen/jälkeen, sama rajaus) PT:lle ≤ 3 riviä.
+
+## LISÄYS 22.1x (8): PT – UUSI TEHTÄVÄ: MERENPOHJAN PALLO JUNAKELPOISEKSI (FPV osa 4:n jälkeen, ENNEN reunapiikkejä)
+JU: 84a91d530..f7cf0bd7c = 12 committia (lista /Users/Shared/Claude/julkaisija-tyokalut/juna223-pohjapallo-f7cf0bd7c-loki.txt; c54d3ba0d ja 7ea8d6ebc
+tekevät kohokartan merenpohjamaaston OLETUKSEKSI; VS 97b4f29a9 f94e54682 4cf1f1eb0 a3422848d; 51b0d3588 20045ae66 6ab673093; NUI f1f21b764 0a7fbb6cb).
+Tavoite: oma haara junan kärjestä 84a91d530; merenpohja 3D + pohjapallo VAIN kytkimen takana (Linssit › Keskeneräiset), peruskartan oletus ennallaan;
+muut "KOE"-kytkimet pois. Mac iPad-koossa: kytkin pois = TF 223 identtinen, kytkin päällä = pallo kuten f7cf0bd7c → pari PT:lle.
+Aloitettu 22.1x JU:n osa 4b -ajon odotellessa (wt /Users/Shared/Claude/wt/proto-natiiviseppa-pohjapallo, haara natiiviseppa/pohjapallo-juna).
