@@ -45,3 +45,12 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
 - KORJAUS 6c27282e1 (natiivi-ui/topoesittelyt-221): kyltti vasta kun kamera perillä (paikka 5 % kaaresta, korkeus 10 %), varmistus 3 × lento. 2266/2266, unity 0.
 - Skenaario sk-topoesittely-1-mac.txt päivitetty (aloitus Alppien yllä `aja 47 8 30`, odota-peli valikoille). Uusinta JU:lla → lokit/nui-topoesittely-1-6c27282e1/mac;
   iPad-ajo samalla SHA:lla. SEURAAVAKSI: katso uusi video (valikko, ruudukko, kyltti perillä, tauko ▷) → KK:lle PT:n kautta.
+
+## PÄIVITYS 11.4x (viimeinen ennen nollausta)
+- Esittelyn KYLTTI ei piirtynyt Mac-videossa (ruudut 6/s 4,5–8,5 s, vasen alakulma tyhjä, vaikka loki "näkyy"; PT huomasi). 48e5654ae: kyltti
+  UiKerros.Valikot-turvaan (NYT-rivin kerros) + `ui linssi esittelyt tila` kertoo worldBoundin, opasiteetin ja visibilityn → katso lokista, jos yhä puuttuu.
+  Ruudukko näkyy videolla 3,5–4,8 s (ALPIT, HIMALAJA tummina ilman kuvia). ☰ näkyy himmeänä (KehysNapit 0,2), se on oikein.
+- AUKI: ☰-VALIKKO (LinssiValikko, `ui linssi karttavalikko auki`) EI NÄY: ei Mac-videossa (0,8–2,3 s) eikä iPadin k90-valikko.png:ssä (md5 = k90-alpit-90).
+  Loki sanoo "auki True". Epäilyt: Ponnahdus-animaatio / TarkistaOhiNapautus sulkee / ruutukaappaus. Selvitä ennen KK-pareja (kytkin ☰:n sisällä on omistajan pyyntö).
+- JU: kohokartta-90-1 iPad VALMIS 11.25 lokit/nui-kohokartta-90-1-b4e624cfe (8/8, huippu 3181 Mt) → KATSO kuvat ja tee pari. iPhone-simu tulossa.
+  iPad 10002 oli ohimenevä; panorointi-2 ja lippu-442-1 uusintoina JU:lla. Topoesittely-1 nyt SHA 48e5654ae → lokit/nui-topoesittely-1-48e5654ae.
