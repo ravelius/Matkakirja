@@ -43,3 +43,4 @@ komento `maasto ajoennakko kohokartta|kaikki|pois|tila`. unity sh 0. JU:lle Mac-
 → lokit/natiiviseppa-ajoennakko-pois|-paalla/. Seuraava: katso s. 12,6–13,5 molemmista, pari PT:lle (ei junaan, koe).
 23.51: Mac-pari katsottu: päällä poistaa s. 12,9 karkean kaistan ja sauman; JU:n "raidat" = Atlantin selänne, myös pois-ajossa. Pari + MITTAUS
 _tyo/natiiviseppa/ajoennakko/kuittaus/ → PT:lle kysymyksellä. Seuraava: PT:n vastaus (koe; junaan vain PT:n kuittauksella → JU:lle fd8193758).
+23.52: PT kuittasi fd8193758; JU: koehaara julkaisija/koe-lentoraja-ajoennakko (ei junaan). Lovi s. 13,1 poistuu myös (pari-s13_1-lovi). Jono tyhjä tämän jälkeen.
