@@ -37,3 +37,11 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
 - MERENPOHJA (PT 11.2x): KS:n koko maailman poltto viedään kansioon julisteet/maasto/2026-11-08-kohokartta-merenpohja/ (ei -koe). Kun JU:n vienti
   valmis (tarkista https://media.matkakirja.app/julisteet/maasto/2026-11-08-kohokartta-merenpohja/layer.json = 200), vaihda KohokarttaMaastoOletus
   7ea8d6ebc:ssä (natiivi-ui/merenpohja-koe) tähän osoitteeseen ENNEN pareja 1–5. Jono: lippu → kohokartta → merenpohja.
+
+## PÄIVITYS 11.3x: esittelyn 1. video katsottu, korjaus 6c27282e1
+- JU:n Mac-video lokit/nui-topoesittely-1-581f7f85a/mac/topoesittely.mp4 (16 s): lento ja kohokartta hyviä (Alpit 55°, Himalaja), ⏸/▷ ☰:n vieressä.
+  EI KK:lle: linssin kello (Time.realtimeSinceStartup) karkasi tallenteen pakatussa ajassa → "Valmis" ennen saapumista; alku 6 s Pariisin katupiirrosta.
+  "komento kuva" ei tuottanut PNG:tä tallenteen aikana (JU:n työkalu).
+- KORJAUS 6c27282e1 (natiivi-ui/topoesittelyt-221): kyltti vasta kun kamera perillä (paikka 5 % kaaresta, korkeus 10 %), varmistus 3 × lento. 2266/2266, unity 0.
+- Skenaario sk-topoesittely-1-mac.txt päivitetty (aloitus Alppien yllä `aja 47 8 30`, odota-peli valikoille). Uusinta JU:lla → lokit/nui-topoesittely-1-6c27282e1/mac;
+  iPad-ajo samalla SHA:lla. SEURAAVAKSI: katso uusi video (valikko, ruudukko, kyltti perillä, tauko ▷) → KK:lle PT:n kautta.
