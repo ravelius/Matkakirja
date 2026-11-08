@@ -34,3 +34,10 @@ FPV (koe): kameran kulma 15–20° leijunnassa = PT/kortti, ei itse (osa 4b: maa
 ## LISÄYS 23.2x: PT KUITTASI REUNAPIIKIT b2761f67b, JU:LLE "junaan 223" LÄHETETTY (VOITTAA jonon kohdan 1)
 Jono tyhjä → seuraava NS: rivi PT:lle "JONO TYHJÄ: Natiiviseppä" (luo cron ensin).
 JU 23.25: b2761f67b on junan 223 kärki (natiivi-backup julkaisija/juna-223); unity sh 0, Kartta 727/727, Linssit 2269/2269. Ei toimia NS:lle.
+
+## TYÖN ALLA 8.11. 23.3x (uusi NS, Postivahdin aloitusviesti + PT:n lisäys)
+Cron 9.04 luotu (750b3202). PT: lentoraja-6 7bbea110d s. ~12,9 karkea esivanhempi + pystysauma (NUI; kehys proto-3d/lokit/nui-lentoraja-6-7bbea110d/lentoraja5/k-000645.jpg).
+Syy: kamera katsoo pohjoiseen ja kulkee etelään → uusi maa tulee alareunasta pyytämättä. Korjaus fd8193758 (natiivi-backup natiiviseppa/cesium-esilataus,
+wt /Users/Shared/Claude/wt/proto-natiiviseppa-esilataus): AjoEnnakko, piirtämättömät kamerat radalla 0,3/0,7 s edellä + ajon loppu, vain kohokarttalento;
+komento `maasto ajoennakko kohokartta|kaikki|pois|tila`. unity sh 0. JU:lle Mac-pari pyydetty: _tyo/natiiviseppa/ajoennakko/sk-ajoennakko-pois|paalla.txt
+→ lokit/natiiviseppa-ajoennakko-pois|-paalla/. Seuraava: katso s. 12,6–13,5 molemmista, pari PT:lle (ei junaan, koe).
