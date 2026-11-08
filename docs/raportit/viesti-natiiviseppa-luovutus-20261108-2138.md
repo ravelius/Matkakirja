@@ -104,3 +104,11 @@ lokit/natiiviseppa-pohjapallo-juna/ ja -84a/. KUN VALMIS: pj-*-pois md5 = 84a:n 
 lokit (mp-pallo-3d, mp-pallo-tyyni-3d; NS:n merenpohja-pohjapallo-ajo); pj-atlantti-pois2/peruskartta-pois2 = alku. Pari PT:lle ≤ 3 riviä, sitten
 JU:lle "junakelpoinen 3413b4565" PT:n kuittauksella. Sen jälkeen reunapiikit (lisäys 7).
 JONO (järjestys): (1) osa 4b -kuvat (lisäys 6), (2) pohjapallo-juna-kuvat (tämä), (3) reunapiikit (lisäys 7).
+
+## LISÄYS 22.3x (10): OSA 4b KATSOTTU (JU 22.25, lokit/natiiviseppa-fpv-osa4b/, 10/10, shader-virheitä 0) – VOITTAA lisäyksen 6 "ODOTTAA"
+FPV-TAIVAS TOIMII: l-leijuu = liuku horisontista ylös (sininen taivas, kerma vain horisontissa) vs l-leijuu-vanha = kerma puolessa ruudussa;
+l-manu-kallistus = raja kallistuu horisontin mukana. Konsoli: horisontti −11,1°, jänne 35°. Törmäys 1 (49.045 8.133) aito-oloinen, ei tutkittu.
+RUSKEA KIVI = FPVLAHI (vahvistettu): l-28km-lahi1 lähirinne ruskea kivitekstuuri, l-28km-lahi0 sama rinne sileä oranssi kuten kaukana.
+SEURAAVA (NS, ennen pohjapallo-kuvia jos ne eivät ole valmiit): korjaa fpvlahi:n väri kohokartan paletille (värjäys tileset-varjostimessa,
+5a8933619, KorkeusKerroin.FpvLahi; pidä kivipinnan varjostus/normaalit, poista ruskea sävy) tai ehdota PT:lle "fpvlahi pois" → uusi pari lahi1 vs lahi0.
+Leijunnan kuvissa maa vain alareunan viivana (30° ylös + horisontti −11°): kameran kulma 15–20° leijunnassa = PT/kortti.
