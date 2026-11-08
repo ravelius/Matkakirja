@@ -87,3 +87,6 @@ Mahdollinen jatko vain PT:n tai omistajan sanalla: uusi tapa (korttelin yhteinen
 
 ## LISÄYS 01.5x: KOHTA 4 TEHTY
 NUI-ajo luettu ja raportoitu PT:lle (M/tulos.md "Vaihe 1:n NUI-tarkistukset"). Opas ja raketti toimivat; VALITSIN EI TODENNETTU (testinapautus ei avannut, aineistoa ei pyydetty): NUI:n tarkistettava koodista. Älä aja uudelleen ilman PT:n sanaa.
+
+## LISÄYS 02.26: KOHDAT 2 JA 3 TEHTY
+n4 (kauempaa): valitsin auki, näkymä Linssit, 10 linssiä + Keskeneräiset, ei tyhjä eikä musta (L/natiiviseppa-muisti-nui/n4/valitsin.png katsottu). Vaihe 1 808b502b4 annettu JU:lle junaan 221 02.26 (kärki ab113e0ac ennallaan), PT:lle raportoitu. Jäljellä vain kohta 4 (striimi-ajo JU:lla).
