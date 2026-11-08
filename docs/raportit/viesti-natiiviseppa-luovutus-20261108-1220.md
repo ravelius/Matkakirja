@@ -28,6 +28,8 @@ Cron "4 9 * * *" luotu 12.1x (40a951dd, session-only): LUO UUDELLEEN. Lukulista 
    11.55:n TILA kohta 1 (konsolin napakalotti-rivit, verrokki verrokki/tav-*.png, tarkistuslista).
 2. JONO navojen jälkeen: ESITTELYLIIKE (11.55:n lisäys 12.0x ja 11.5x: NahtavyysEsittely.Kamera/Hiivuta + TopoEsittely.Kamera,
    lähtökohta KohdeKierto b1d5c652f, pohja 756f4962d; ensin tallenteen kellovika 11.55:n TILA kohta 2) → KORKEUSKOE.
+1b. LISÄYS 12.2x (JU luovutuksen jälkeen): YHDISTETTY. tav2-kääre (ffc355105) pysäytetty ennen iPadia; 86916cbd7 käännös (T/ns-navat-koho2.zsh pid 49846),
+   sitten samalla asennuksella tav2 → lokit/natiiviseppa-navat-koho/tav2/ ja koho2 → .../koho2/; napakalotti-rivit jonolokiin, kuittaus NS:lle.
 3. Aloituslento j4 VALMIS (JU 11.58, lokit/natiiviseppa-striimi-aloituslento-4): LUKEMATTA, lukuohje 11.15:n TILA kohta 2.
 
 
