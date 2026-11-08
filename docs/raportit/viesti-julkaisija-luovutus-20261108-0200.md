@@ -8,7 +8,8 @@ Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claud
 juna 221 = 330a43515 (natiivi-backup julkaisija/juna-221; worktree /Users/Shared/Claude/wt/julkaisija-juna-221), unity-tarkistus sh 0 virhettä, taululla:
 - 0ac8cd436: NUI kohta 8 = ffec8fdc4 + 2c12b920a (PT 00.4x; PT nimesi vain 2c12b920a, ajettu tila sisälsi molemmat).
 - 330a43515: NS pallon välimuisti 256 Mt + muistijarru V raja (PT 01.2x), fast-forward.
-ODOTTAA PT:N SANAA edelleen: PK 22dc4c06b, PK 61f63adb9 (ks. -0003).
+PT 02.05 (OMISTAJAN PÄÄTÖS 02.0x, KK): PK 22dc4c06b junaan 221, KUN PK on varmistanut kääntymisohjeen ehdon ja antaa sha:n (voi olla eri kuin 22dc4c06b) → liitä se sha (cherry-pick -x worktreessa, unity-tarkistus sh, push, juna.py lisaa, rivi PT:lle). Ei TF:ää ilman omistajan pyyntöä.
+ODOTTAA PT:N SANAA edelleen: PK 61f63adb9 (ks. -0003).
 
 ## 2. KÄYNNISSÄ
 - KS kohokartta v5 ÄMPÄRIVIENTI (PT 00.5x) pid 21125 (T/ks-kohokartta-v5-vienti.zsh): paketti P/_valmiit/kohokartta-v5-vienti-20261108, 87381 jpg → linssit/topografia/kohokartta/v5-20261108/{z}/{x}/{y}.jpg, 8 osaa rinnakkain (T/ks-kohokartta-v5-osa0..7.log; 02.00: 50968/87381). LAHTEET.md korjattu KS:n sanalla (GLO-90 maininta + ETOPO1, PD).
