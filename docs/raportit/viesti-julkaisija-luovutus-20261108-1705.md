@@ -14,6 +14,7 @@ Muutosloki 1.1 (223) MERGED (PR 6502). TF 223 VAIN omistajan sanalla KK:n kautta
 ODOTTAA: tarkistusajo j6 (alla) → kuittaus NUI:lle + PT:lle (kuvat L/nui-nahtavyysnapautus-6-617d6ca2b/), sitten juna valmis TF-korttiin.
 EI junaan: b4e624cfe (kohokartta oletuksena), topoesittelyt (581f7f85a, 6c27282e1, 48e5654ae, b1d5c652f) – PT 16.5x.
 
+PT 17.3x: syy CoreDevice-välimuisti 78 Gt → omistajan TOIMI-kortti KK:n kautta. ODOTA PT:n sanaa "levy ≥ 30 Gt", sitten sama run. EI uusia käännöksiä ennen sitä.
 ## 1b. TF 223 EI LÄHTENYT 17.30 (levy 8 Gt < 30 Gt, askel "Yöajon ohitusehdot"; PT:lle ilmoitettu) – AJA UUDELLEEN kun levyllä ≥ 30 Gt:
 gh workflow run proto3d-testflight.yml --repo ravelius/Matkakirja -f vie_unitysta=true -f proto_ref=617d6ca2b5f6cf5a0a399691aa4aa5875eef1c26 -f ordinaali=223 -f build_numero=223
 (vanha otsikko: TF 223 KÄYNNISSÄ (OMISTAJAN PÄÄTÖS 17.20 "Julkaise", PT kuittasi napautus-6:n)
