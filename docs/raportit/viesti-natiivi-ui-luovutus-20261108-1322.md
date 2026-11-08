@@ -82,3 +82,9 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
 - ladottu koko aineistosta: 0° 5304, 5° 5299, 10° 5291 → portaan vaihtuessa muutama nimi vaihtuu (koko maailmasta).
 - SEURAAVAKSI: katso kl3-s2 vs kl3-s3 ja kl3-s7 vs kl3-s12 (kuva kiertyy → silmällä samoista kohdista): montako nimeä Pariisin näkymässä
   sammuu/syttyy portaalla. Jos 0–2 ja pieniä: kerro PT:lle "5° riittää"; jos häiritsevä: ehdota 15° tai ladonta kaikkien suuntien yli.
+
+## PÄIVITYS 13.41: PT — FPV-DRONE OSA 3 JONOON (OMISTAJAN PÄÄTÖKSET 13.37, aluksi puhelinohjaus)
+Jono nyt: nähtävyydet ensin → merenpohjan osoite + parit → napautus-2-korjaus → FPV-drone (+ topo-video 3 ja kartta-lukittu-3 kuvat väliin, kun valmiit).
+- Kosketustikut OpasTapit-pohjalta: vasen = kaasu (EI palaa keskelle) + yaw; oikea = roll/pitch (palaa keskelle). "FPV-lento" Topografialinssin ☰:hen.
+- PK tekee lentomallin (syöte −1…1, neljä akselia) → sovi rajapinta PK:n kanssa.
+- Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md (lue ensin).
