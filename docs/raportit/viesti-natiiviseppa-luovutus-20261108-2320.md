@@ -41,3 +41,5 @@ Syy: kamera katsoo pohjoiseen ja kulkee etelään → uusi maa tulee alareunasta
 wt /Users/Shared/Claude/wt/proto-natiiviseppa-esilataus): AjoEnnakko, piirtämättömät kamerat radalla 0,3/0,7 s edellä + ajon loppu, vain kohokarttalento;
 komento `maasto ajoennakko kohokartta|kaikki|pois|tila`. unity sh 0. JU:lle Mac-pari pyydetty: _tyo/natiiviseppa/ajoennakko/sk-ajoennakko-pois|paalla.txt
 → lokit/natiiviseppa-ajoennakko-pois|-paalla/. Seuraava: katso s. 12,6–13,5 molemmista, pari PT:lle (ei junaan, koe).
+23.51: Mac-pari katsottu: päällä poistaa s. 12,9 karkean kaistan ja sauman; JU:n "raidat" = Atlantin selänne, myös pois-ajossa. Pari + MITTAUS
+_tyo/natiiviseppa/ajoennakko/kuittaus/ → PT:lle kysymyksellä. Seuraava: PT:n vastaus (koe; junaan vain PT:n kuittauksella → JU:lle fd8193758).
