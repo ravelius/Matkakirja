@@ -23,6 +23,10 @@ b) [TEHTY 18.4x: katsottu, PT:lle raportoitu; proto-3d/_tyo/natiivi-ui/lentoraja
    -4 81a9b12b3 (sama rako Pariisin nostossa). Testit -5: Kartta 716/716, Linssit 2267/2267, unity (sh) 0.
    TEHTÄVÄ: katso video (ffmpeg-arkki 10,2–12,7 s, kehysloki), tarkista mustat alku/loppuruudut (signalstats YAVG; -4:ssä ei mustia, vain
    linssin avauksen 0,45 s himmennys 1,3–1,8 s) → YKSI video PT:lle 3 rivillä + TULOS.md (kuten lentoraja-4/TULOS.md).
+b2) LENTORAJA-5 JATKO (PT 18.4x: EI vielä KK:lle; tee RAJAUKSEN (a) JÄLKEEN): (1) s. 12,33 Bretagnen laattojen reunoilla venyneet pystyraidat
+   + siniset neliöt (laatta/reunahelma latautumatta?), PT:n kehys /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-fable/a3d5ff02-2c36-47df-8563-c0641b22c81c/scratchpad/lr5-1233.jpg
+   ja lentoraja-5/s12.33-sininen-nelio.jpg; (2) s. ~18 koko ruutu tasaista beigeä (kamera maassa vai laatta puuttuu?). Vihje: skenaariossa
+   "linssi linssi pois" ~8 s aja-komennon jälkeen (kohokartta → tavallinen kartta Puerto Ricossa) – tarkista ajoitus lokista ensin.
 c) Merenpohja-3: PT:n vastaus (KK:lle? musta alku/loppu). Maininnat Seine-kaista ja Montmartre ×15.
 d) FPV: NS:n A/B-tulos, avoimet PT:lle.
 
