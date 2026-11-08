@@ -151,6 +151,63 @@ export const HAIVE_AST = 1.5;
  * mukana.
  */
 export const PAPERI_MITTA = 1;
+/*
+ * ======== STRIIMIN MEREN PAPERIKUVIO (PT 8.11.2026 klo 15.3x) =========
+ *
+ * KK mittasi beige-kalotin (9e98f55e5) etelästä: meren paperikuvio
+ * (kuitu, rae, laikka) kalotilla 0,2–0,4, laatoissa 1,0–1,6, ja kiekon
+ * reuna erottuu pehmeänä rajana. Mitattu syy (8.11.2026 klo 15.4x):
+ *
+ *  1. REUNAKAISTA 60–64° S oli kuvioton. Kaista liukuu laattojen z5-sävyyn,
+ *     ja pohjasarjan juliste päättyy 61,47° S:ään: laatan kuvio hiipuu jo
+ *     60,3→61,3° S, ja sen takana kohde on silotettu rajarivi. Kaistalla
+ *     kuvion voimakkuus oli 0,0 (10 km) koko kehän ympäri.
+ *  2. SISÄOSAN KUVIO OLI LIIAN HIENO. Paperi on kalotin pikseleissä
+ *     (1,63 km etelässä), laatoissa z5:n pikseleissä (2,45 km 60° S:ssa,
+ *     julisteen pienennöksenä). Pallonäkymässä ruudun pikseli on noin 3 km,
+ *     joten kalotin rae ja kuitu suodattuivat pois (ruudulla 0,4 vs 1,0).
+ *
+ * KORJAUS: meren paperi piirretään MERI_PAPERI_MITTA kertaa isompana ja
+ * MERI_PAPERI_VOIMA kertaa voimakkaampana (luvut sovitettu laattojen
+ * z5-riveihin 56–60° S samassa km-mittakaavassa: 10 km 1,43–1,67 vs 1,40,
+ * 30 km 1,71–1,93 vs 1,74), kuidut itä–länteen (meriPaperiKalotilla), ja reunakaistalla vain
+ * pohjasävy liukuu laattaan: meren paperi lisätään kohteen päälle, joten
+ * kuvio jatkuu kehälle asti. Maa ja jää ennallaan.
+ */
+export const MERI_PAPERI_MITTA = 1.5;
+export const MERI_PAPERI_VOIMA = 1.7;
+/**
+ * Puolet, joilla korjaus on päällä. Pohjoinen toimii PT:n mukaan (8.11.2026
+ * klo 15.3x), ja siellä kalotin pikseli (1,09 km) on laattojen z5-pikseliä
+ * (0,85 km 80° N:ssa) isompi, joten etelän luvut eivät sovi sinne sellaisenaan.
+ */
+export const MERI_PAPERI_PUOLET = Object.freeze(['etela']);
+/** Meren paperikohina (sama kaava kuin julisteen PAPERI-vaihe), skalaari ennen kanavakertoimia. */
+export function meriPaperi(gx, gy, mitta = MERI_PAPERI_MITTA, voima = MERI_PAPERI_VOIMA) {
+  const kuitu = fbm(KOHINA, gx / (52 * mitta), gy / (7 * mitta), 3) - 0.5;
+  const rae = KOHINA2(gx / (1.7 * mitta), gy / (1.7 * mitta)) - 0.5;
+  const laikka = fbm(KOHINA2, gx / (260 * mitta), gy / (260 * mitta), 3) - 0.5;
+  return (kuitu * 9 + rae * 11 + laikka * 16) * voima;
+}
+/**
+ * Meren paperi kalotin kuvapisteessä (gx, gy lopullisen kuvan pikseleinä,
+ * kuvan sivu `koko`). KUIDUT KULKEVAT ITÄ–LÄNTEEN kuten laatoissa:
+ * kohina luetaan napakoordinaateista (kaari leveyspiiriä pitkin, säde),
+ * ei kuvan akseleista, joissa kuitu olisi kehän sivuilla pystyssä ja
+ * vinossa. Kaaren sauma (θ = ±180°) häivytetään toiseen kenttään, jonka
+ * sauma on θ = 0; painot normitetaan, jotta voimakkuus ei notkahda.
+ */
+export function meriPaperiKalotilla(gx, gy, koko, mitta = MERI_PAPERI_MITTA, voima = MERI_PAPERI_VOIMA) {
+  const dx = gx - koko / 2; const dy = gy - koko / 2;
+  const sade = Math.hypot(dx, dy);
+  const th = Math.atan2(dx, -dy);
+  const n1 = meriPaperi(th * sade, sade, mitta, voima);
+  const n2 = th >= 0 ? n1 : meriPaperi((th + 2 * Math.PI) * sade, sade, mitta, voima);
+  const w1 = (1 + Math.cos(th)) / 2; const w2 = 1 - w1;
+  return (w1 * n1 + w2 * n2) / Math.hypot(w1, w2);
+}
+/** Paperin kanavakertoimet (piirto.js PAPERI: r 1,05, g 1, b 0,82). */
+const PAPERI_KANAVAT = [1.05, 1, 0.82];
 
 /*
  * ======== LIITOSSÄVY: KALOTIN MERI SOVITETAAN LAATTOIHIN ============
@@ -687,8 +744,11 @@ export function piirraJana(peitto, N, x0, y0, x1, y1, leveys) {
 export function piirraKalotti({
   puoli, korkeus, indeksi, rannikot, koko = KOKO_OLETUS, ylinaytto = YLINAYTTO_OLETUS,
   jaatayte = false, liitossavy = null, tyyli = 'paperi', reunaSavy = null,
+  meriMitta = MERI_PAPERI_MITTA, meriVoima = MERI_PAPERI_VOIMA,
 }) {
   const striimi = tyyli === 'striimi';
+  // Meren paperikorjaus vain etelässä: pohjoinen toimii (PT 15.3x), ja sen mittakaava on eri (ks. MERI_PAPERI_MITTA).
+  const meriKorjaus = striimi && MERI_PAPERI_PUOLET.includes(puoli);
   const k = NAPAKALOTTI[puoli];
   const napa = k.merkki * 90;
   const span = Math.abs(napa - k.reuna);
@@ -745,6 +805,13 @@ export function piirraKalotti({
       if (striimi && jaatayte && vesi && Number.isFinite(m) && m > 0) vesi = false;
       if (vesi) {
         if (!Number.isFinite(m)) m = -900;
+        if (meriKorjaus) {
+          // STRIIMIN MEREN PAPERIKUVIO: isompi ja laattoihin sovitettu (ks. MERI_PAPERI_MITTA).
+          const vm = meriPaperiKalotilla(gx, gy, koko, meriMitta, meriVoima);
+          r = pohja[0] + vm * PAPERI_KANAVAT[0];
+          g = pohja[1] + vm * PAPERI_KANAVAT[1];
+          b = pohja[2] + vm * PAPERI_KANAVAT[2];
+        }
         const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
         const s = lerpSyvyys(m + n * Math.min(150, Math.max(12, -m * 1.25)));
         const o = 0.5;
@@ -885,9 +952,11 @@ export function piirraKalotti({
         const t = Math.min(1, (a.r - rIn) / (rTay - rIn));
         const w = t * t * (3 - 2 * t);
         const o = (iy * N + ix) * 4;
-        data[o] = data[o] * (1 - w) + kohde[0] * w;
-        data[o + 1] = data[o + 1] * (1 - w) + kohde[1] * w;
-        data[o + 2] = data[o + 2] * (1 - w) + kohde[2] * w;
+        // Meressä vain pohjasävy liukuu laattaan: paperi (puolet meren sekoituksessa) jää päälle.
+        const vm = meriKorjaus && meripikseli[iy * N + ix] ? meriPaperiKalotilla(ix / ylinaytto, iy / ylinaytto, koko, meriMitta, meriVoima) * 0.5 : 0;
+        data[o] = data[o] * (1 - w) + (kohde[0] + vm * PAPERI_KANAVAT[0]) * w;
+        data[o + 1] = data[o + 1] * (1 - w) + (kohde[1] + vm * PAPERI_KANAVAT[1]) * w;
+        data[o + 2] = data[o + 2] * (1 - w) + (kohde[2] + vm * PAPERI_KANAVAT[2]) * w;
       }
     }
   }
@@ -1038,6 +1107,8 @@ async function paa() {
       liitossavy,
       tyyli,
       reunaSavy,
+      meriMitta: Number(lippu('--meri-mitta') ?? MERI_PAPERI_MITTA),
+      meriVoima: Number(lippu('--meri-voima') ?? MERI_PAPERI_VOIMA),
     });
     const polku = join(ulos, `${puoli}.webp`);
     /*

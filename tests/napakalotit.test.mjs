@@ -674,3 +674,16 @@ test('striimi: reunakaista liukuu laattojen paikalliseen sävyyn (omistaja 8.11.
   assert.match(tyokalu, /let kohde = reunaSavy\(a\.lat, a\.lon\);/);
   assert.match(tyokalu, /reunanLaattasavy\(\{ puoli, sharp \}\)/);
 });
+
+test('striimi: meren paperikuvio jatkuu reunakaistalle ja on laattojen mittakaavassa (PT 8.11.2026 klo 15.3x)', async () => {
+  const { MERI_PAPERI_MITTA, MERI_PAPERI_VOIMA, meriPaperi } = await import('../tools/tee-napakalotit.mjs');
+  // Kuvio on kalotin pikseleitä isompi (laattojen z5-pikseli 60° S:ssa on 1,5 kalotin pikseliä).
+  assert.ok(MERI_PAPERI_MITTA >= 1.5, `mitta ${MERI_PAPERI_MITTA}`);
+  assert.ok(MERI_PAPERI_VOIMA >= 1, `voima ${MERI_PAPERI_VOIMA}`);
+  // Mitta skaalaa koordinaatit ja voima arvon.
+  assert.equal(meriPaperi(30, 40, 2, 1), meriPaperi(15, 20, 1, 1));
+  assert.ok(Math.abs(meriPaperi(7, 9, 1.5, 2) - 2 * meriPaperi(7, 9, 1.5, 1)) < 1e-9);
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  // Reunakaistalla meren paperi lisätään laattojen sävyn päälle, ei hävitetä.
+  assert.match(tyokalu, /\(kohde\[0\] \+ vm \* PAPERI_KANAVAT\[0\]\) \* w/);
+});
