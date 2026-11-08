@@ -36,3 +36,12 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
 - ui.fi.json-luvuissa sitova välilyönti (U+00A0): sed ei osu → muokkaa Pythonilla.
 - Kallistetun kameran pieni panorointi: pikseliero ei kelpaa (perspektiivi), vertaa samaa karttarajausta silmällä (pari-pieni-panorointi).
 - md5-ero samassa paikassa voi tulla lentävästä linnusta ja puiden pisteistä: ero.py:n ruudut kertovat.
+
+## PÄIVITYS 13.26: NAPAUTUS-2 c33b2ebd1 (lokit/nui-nahtavyysnapautus-2-c33b2ebd1, 8/8) — EI OSUNUT, KUVIA EI KATSOTTU
+- ui-loki 456/474: "napauta (575.5, 382.8): ei osumaa UI:ssa → pallolle | merkki: Concorden aukio: näyttö Flex, peitto 1,00, portti True,
+  kyltti True, kylki oikea, näkyy True, törmää False …" → merkki ja nimiö näkyvät ja ovat napautettavissa, silti Pick ei osu.
+- EPÄILY: UiKomennot.Napauta käy vain UiKerros.Hae().Juuret läpi; NostotKartalla-merkit (juuri/panel) eivät ehkä ole niissä → testinapautus ei
+  voi koskaan osua merkkiin. Tarkista: onko NostotKartalla.juuri jonkin UiKerros-juuren alla (grep "Juuret" / mihin juuri lisätään).
+- KORJAUS (pieni): `ui kohdenostot napauta` → NostotKartalla.NapautaKohde(nimi): hae merkki kuten KohdePiste ja kutsu Napautus(m) (sama kuin
+  ClickEvent-käsittelijä), TAI Pick myös nostojen paneelista. Sitten uusinta JU:lla (sk-nahtavyysnapautus-2.txt uudella SHA:lla).
+  Huom: oikea sormi menee eri reittiä (UI Toolkitin oma poiminta), joten tämä on testityökalun vika, ei pelaajan.
