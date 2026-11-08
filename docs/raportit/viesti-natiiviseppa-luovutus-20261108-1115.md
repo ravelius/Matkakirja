@@ -163,3 +163,8 @@ Mahdollinen jatko vain PT:n tai omistajan sanalla: uusi tapa (korttelin yhteinen
 - KYTKIMEN PAIKKA RATKAISEE, NÄKYYKÖ KOE: taso 1 ei purkanut, koska reitillä ei ollut sitä, mitä taso 1 poistaa. Lue koodista, mitä kytkin koskee, ja valitse reitti sen mukaan ennen ajopyyntöä.
 - zsh-FUNKTION SILMUKKAMUUTTUJA ON GLOBAALI: for i kaynnista()-funktiossa nimesi seuraavan ajon kp2:ksi. local i aina funktioon.
 
+
+## LISÄYS (PT luovutuksen jälkeen): TOPOPILOTIN KOUKKU VALMIS
+PT: NUI:n topoesittelyjen pilotti 581f7f85a (haara natiivi-ui/topoesittelyt-221) antaa koukun TopoEsittely.Kamera (suunta + kierto).
+Kytke siihen hyväksytty ~90° kierto kohteen ympäri (TILA 11.15 kohta 1 a–e), kun navat ovat odotuksella. Rakenna NUI:n haaran päälle
+(lue ensin TopoEsittely.cs: mitä koukku antaa ja milloin kutsuu), älä tee omaa ILinssiYmparisto-rajapintaa, jos koukku riittää.
