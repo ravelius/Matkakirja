@@ -31,3 +31,14 @@ Juna 221 iPadilla Pariisissa huippu 3312–3322 Mt (varaa ~770 Mt 4080:een). Koh
 - Rinnakkaiset yhdistykset: nimeä yksi yhdistäjä heti ja kerro muille, muuten syntyy 2–3 kilpailevaa haaraa (merenpohja).
 - tyolista.py --juna kirjoittaa junariville; älä käytä, junarivi vain juna.py lisaa/valmis.
 - Varjostimen "pois = ennallaan" vaatii avainsanan (multi_compile), ei float-ehtoa.
+
+## Lisäys 11.04 (10.15 jälkeen jaetut; kaikki myös työlistassa)
+- OMISTAJAN PÄÄTÖS 10.32: lippu striimikartalla takaisin 4.42:n mukaiseksi → NUI jonon kärki (NUI:n luovutus 2fabbbc7c, Postivahdin aloitusviesti). Pari KK:lle keski/ala/reuna/käännetty.
+- OMISTAJAN PÄÄTÖS 10.34: napa-alueet molemmat navat (meri sininen napaan, Etelämanner kartan tyyliin, ei sumeaa vyötä). NS korjasi kohokartan ca92af647 (natiiviseppa/navat-koho); tavallinen kartta NS-seuraajan kärjessä (9cbfbf9b6). iPhone-pari JU:lla → KK.
+- OMISTAJAN PYYNTÖ 10.36 + PÄÄTÖS 10.38 (kohokartta topolinssin oletukseksi): VS sinertävä ilma (b799339cf) ja rae; NUI kallistus 90°, oletus koho, kytkin ☰:n sisään, Topografialinssissä yläpalkki piiloon ja ☰ oikeaan yläkulmaan. NUI-järjestys: lippu → kohokartta → merenpohja. Pari KK:lle Borneo 60/90, Alpit, kytkin; iPhone + iPad.
+- 10.39 topokohteiden esittelyt: odottaa KK:n suunnitelmaa ja korttia, ÄLÄ jaa.
+- Merenpohja 3D: KS osa 1 b300a8b68, KK hyväksyi kentän → koko maailma poltossa helmakorjauksella (--naytetaso 9, 0 rakoa), JU vie UUTEEN kansioon. Ämpärin 2026-11-08-kohokartta-merenpohja-koe on vanhaa polttoa: NUI:n koeoletus 7ea8d6ebc (natiivi-ui/merenpohja-koe) vaihdetaan uuteen osoitteeseen ennen pareja 1–5. VS: syvyyden korostus varjostimessa vain kohokartan lipulla (mahd. puristus varjostimessa, ei datassa). NS: PalloReiat 11 km oli jo 51b0d3588. Parit 1–5 KK:lle, kun VS/NS/NUI valmiit.
+- NUI puuvika 50200fb68 (natiivi-ui/puut-nimet-221): puut nimien alle, pari JU:lla → KK.
+- NS aloituslento 46d34ca4f, uusinta 3 (j3) JU:lla; ei junaan ennen kuin a:n etuala terävä.
+- KS kohokartta v6 kuitattu; Etelämantereen täplät: ei toimia (KK).
+- JU uusi luovutus 3fe1cc6ce (-1045).
