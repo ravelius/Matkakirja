@@ -2,7 +2,12 @@
 
 Syy: konteksti 25 % (pehmeä raja). Tili vvi@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Omat worktreet: k31 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k31` (haara `linssiseppa2/vesikerros`, puhdas, pushattu), k32 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k32` (haara `linssiseppa2/meripainuu`, puhdas, pushattu). Kuvat ja iPad vain JU:n vuorolla (`local_06f8c680-4618-42bd-a730-9b6a3e17e0b7`). PT `local_5df52e10-10e4-4b72-9554-0049db300dfe` ≤ 3 riviä; KK `local_37f7c945-e1a0-4638-90b8-93c389a36fbe`; NS `local_99130238-aa54-4a29-bcc9-7a023584944b`; NUI `local_43962c89-fc14-4098-9dd7-6153133ffcea`. Kumpikin työ on koe: EI JUNAAN ennen kuittausta. Ilmaperspektiivi 52e73d18b on junassa 221 (JU kuittasi 08.4x).
 
-## ENSIN (PT 09.0x TARKENNUS, korvaa alla olevan 465243714:n): MERENPOHJA KOHOKARTTAKETJUUN
+## ENSIN (09.3x, KORVAA a3422848d:n): MERENPOHJA AVAINSANALLA 97b4f29a9
+- Vanha pari 52e73d18b/bea96cfe8 todennettu PT:lle 09.1x. PT 09.2x: Alankomaiden 1 sävyaskel pois-tilassa = varjostimen liukulukuehto (pohja vs pohja 0, haara 2653 px). PT hyväksyi korjauksen: **97b4f29a9** (merenpohja-221, natiivi-backup) = 20045ae66 + NS 6ab673093 + globaali Boolean-avainsana `_MERI_PAINUU` multi_compile_vertex (#else = 20045ae66:n koodi); float/syöte 10 poistettu; KorkeusKerroin.AsetaMeriPainuu kytkee avainsanan. unity-tarkistus 0. Sha PT:lle, NS:lle ja NUI:lle.
+- JU:lla: meripainuu2 pohja 20045ae66, pohja-b (`-pohja-20045ae66-b`), haara `lokit/linssiseppa2-meripainuu2-97b4f29a9`; sitten iPad `sk-meripainuu-ipad.txt` → `lokit/linssiseppa2-meripainuu-ipad-97b4f29a9`.
+- Tee: pois-kuvat 97b4f29a9 vs pohja tavulleen samat pohja-b:n tarkkuudella (skripti scratchpad vrt.py/alk.py: maaston 1-askeleen px pohja vs pohja-b vs haara); Shader-error 0; on: Kuollutmeri painuu; iPad: on-kuvassa painuu (variantti ei karsittu). Tulos PT:lle ≤ 3 riviä.
+
+## VANHENTUNUT (09.3x): ENSIN (PT 09.0x TARKENNUS, korvaa alla olevan 465243714:n): MERENPOHJA KOHOKARTTAKETJUUN
 - **a3422848d** haara linssiseppa2/merenpohja-221 (k32, natiivi-backup) = NUI 20045ae66 (natiivi-ui/kohokartta-221, sisältää NS 0a7fbb6cb:n ja koko kohokarttaketjun; NUI asettaa AsetaMeriPainuu(true) kertoimen 15 kanssa peitteen alla) + f94e54682 (4cf1f1eb0: shadergraph NUI:n versio + meripainuu-sg.py-paikkaus, min(k, 2.0) säilyy) + NS 6ab673093 (maaston aikaraja 15 s). unity-tarkistus 0. Sha NUI:lle ja PT:lle lähetetty.
 - JU:lla (korvaa 465243714-pyynnön): sk-meripainuu2.txt, pohja 20045ae66 → lokit/linssiseppa2-meripainuu2-pohja-20045ae66; haara → lokit/linssiseppa2-meripainuu2-a3422848d. Todenna -pois pikselilleen samat, Shader-error 0, -on Kuollutmeri painuu → PT:lle ja NUI:lle 1 rivi. Ensimmäinen erä ennen vettä.
 
