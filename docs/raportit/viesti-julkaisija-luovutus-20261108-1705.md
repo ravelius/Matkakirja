@@ -18,7 +18,7 @@ EI junaan: b4e624cfe (kohokartta oletuksena), topoesittelyt (581f7f85a, 6c27282e
 run https://github.com/ravelius/Matkakirja/actions/runs/42494434201 (proto_ref 617d6ca2b, vie_unitysta, ordinaali 223).
 Valmis → jonolokiin "TF 223 VALMIS" + rivi PT:lle (local_5df52e10). Epäonnistui → rivi PT:lle, ei uutta ajoa ilman PT:tä.
 j6b VALMIS 17.20 4/4 (PT katsoi). NUI merenpohja-2 Mac VALMIS (kuitattu, video PT:lle). FPV ab4 17.24 failed to launch (NS:lle kuitattu).
-Jäljellä iPad: T/ns-mp-pohjapallo3.zsh (72794) → kohokalotit (46723). Mac: T/nui-merenpohja-3-mac.zsh (71070, L1) → NUI + video PT:lle.
+Jäljellä iPad: T/ns-mp-pohjapallo3.zsh (72794) → kohokalotit (46723). Mac: T/nui-merenpohja-3-mac.zsh (71070, L1) ja T/nui-lentoraja-1-mac.zsh (85474, L2; lokissa "reitin maastoraja ladattu"/"ajossa enintään") → NUI + video VAIN PT:lle.
 
 ## 2. Jono käynnissä (iPad-järjestys tässä)
 - T/j6/juna222-napautus.zsh (32059, iPadilla 17.05; vanha sk-5-ajo 12644 keskeytetty): käännös valmis; ajaa NUI:n
