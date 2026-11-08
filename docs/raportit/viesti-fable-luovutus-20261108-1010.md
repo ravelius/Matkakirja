@@ -45,3 +45,6 @@ Juna 221 iPadilla Pariisissa huippu 3312–3322 Mt (varaa ~770 Mt 4080:een). Koh
 
 ## Lisäys 11.10 (korvaa yllä olevan "ÄLÄ jaa")
 - OMISTAJAN PÄÄTÖS 11.04: esittelyjen kertoja William, 12 kohteen lista ok. Pilotti Alpit + Himalaja JAETTU: KS kohdelista ja ruudut (merenpohjan jälkeen), NS suunta + osittainen kierto (vahvistaa 2.69 vs 4.24), NUI ☰ › Esittelyt (lipun ja 10.36/10.38:n jälkeen), VS valo. SK-tekstit ja Äänittäjän William-otot: ei käynnissä olevaa sessiota, kysytty KK:lta saako käynnistää. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261108-topokohteiden-esittelyt.md. M-kohteet merenpohjan jälkeen.
+
+## Lisäys 11.15: SK ja Äänittäjä käynnistämättä
+KK 11.05: käynnistä SK (pilotin tekstit Alpit + Himalaja, 280–350 mrk, faktat ensin R 2.76, nimikyltit, 12 kohteen luvut) ja Äänittäjä (William-otot pysyvällä luvalla vasta tarkistetuista teksteistä, omistajalle videona R 7.27). start_session estyi (omistaja Remote Controlissa) → KK:lle pyyntö: omistaja käynnistää työpöytäsovelluksesta kansioihin /Users/Shared/Claude/Matkakirja-sisaltokirjuri ja Matkakirja-aanittaja. Seuraaja: käynnistä, jos omistaja palaa työpöydälle.
