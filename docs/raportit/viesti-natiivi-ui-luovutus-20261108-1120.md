@@ -71,3 +71,18 @@ Pohja: sk-puut-panorointi-1/-2 (kuvat kesken liikkeen, `ui kartanelama tila`); a
   opasiteetti 1 → kyltti piirtyy nyt (UiKerros.Valikot). Videon ruutuja EI vielä katsottu. JU ajaa 756f4962d (Mac + iPad) → katso se ja lähetä video KK:lle PT:n kautta.
 - 11.48 LIPPU iPad 1f26c51b4 (lokit/nui-lippu-442-1-1f26c51b4, 8/8) KATSOTTU: KELVOTON – `aja … 0.212` = 23 km kaari, lippu ei missään kuvassa.
   Skenaario korjattu kaareen 14 (Ranska); uusinta JU:lla → lokit/nui-lippu-442-2-1f26c51b4. Katso, että lippu on keskellä/alhaalla/reunoilla.
+
+## PÄIVITYS 12.1x: 2.216-selvitys ajossa, NÄHTÄVYYDEN NAPAUTUS osa 2 tehty (PT 11.56, OMISTAJAN PYYNTÖ 11.47 + PÄÄTÖS 11.55 "Lähestyy")
+- 2.216: koodiselvitys proto-3d/_tyo/natiivi-ui/kartta-lukittu-selvitys-koodi.md (10 paikkaliikettä; pääepäilty Kohdenostot.cs:103–106 +
+  PiirrosKerros.cs:827–832 kuvapisteliuku, sitten nimiön kylki Sovita, kaupunkipallon heilahdus, Nimikerroksen väistö ja vaakaan kääntö).
+  iPad-ajo sk-kartta-lukittu-1.txt (Pariisi, Rooma, pallo; lepo A/B-parit + kuvat kesken liikkeen) JU:lla 756f4962d:llä →
+  lokit/nui-kartta-lukittu-1-756f4962d. SEURAAVAKSI: katso kuvat ja `ui kohdenostot`-rivit (siirtymät px lepo A vs kesken), tee pari
+  (sama rajaus, lepo/kesken) PT:lle → KK. Ei muutoksia ilman korttia.
+- NAPAUTUS: ae84dd1dd natiivi-ui/nahtavyyden-napautus-222 (= 756f4962d + napautus, natiivi-backup), unity 0. UI/NahtavyysEsittely.cs:
+  merkin napautus (kohdenosto-juttu, kadonnut ihme, kohde:-valo; ei 3D-kylttiä) → palkki + kertoja (Nostokortti.AvaaPalkkina,
+  Nahtavyysarkki.AvaaKohdePalkkina: palkista arkki auki, luenta jatkuu, Sulje lopettaa) + lento (lähestyy kaari 0.012, ei loitonna)
+  ja kierto ≤ 90° kohti pohjoista, kesto luettavasta 14 merkkiä/s (20–60 s), hiipuu kun kertoja lopettaa; piirroskartalla vain keskitys.
+  NS:n koukut Kamera(lat,lon,h,s)/Hiivuta (nyt oletus: Aja 0,05 s + PalloKierron 0,8 s liuku = NS:n osa 1 pehmentää). Ääni = William (ok).
+  `ui nahtavyysesittely 0|1|tila|kierto <ast> <s>|kaari <a>`. iPad-ajo sk-nahtavyysnapautus-1.txt JU:lla → lokit/nui-nahtavyysnapautus-1-ae84dd1dd.
+  SEURAAVAKSI: katso 8 kuvaa (ennen, lento, keskitetty, kierto puoliväli, palkki, palkista auki, suljettu, sormi) → kuvasarja PT:lle → KK.
+  Ei koeversioon ilman omistajan sanaa. Osa 3 (nimet lukittuna kierron aikana) 2.216-tuloksen jälkeen; jono sitten ☰-valikko.
