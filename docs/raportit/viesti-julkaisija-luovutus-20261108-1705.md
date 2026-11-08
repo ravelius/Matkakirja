@@ -16,7 +16,7 @@ EI junaan: b4e624cfe (kohokartta oletuksena), topoesittelyt (581f7f85a, 6c27282e
 
 ## 2. Jono käynnissä (iPad-järjestys tässä)
 - T/j6/juna222-napautus.zsh (14636): käännös 617d6ca2b L2; tappaa vanhan 12644:n (sk-5) käännöksen jälkeen; ajaa NUI:n
-  sk-nahtavyysnapautus-6-222 (4 kuvaa) → L/nui-nahtavyysnapautus-6-617d6ca2b → NUI + PT (PT: VAIN tämä yksi ajo).
+  sk-nahtavyysnapautus-6-222 (4 kuvaa) → L/nui-nahtavyysnapautus-6-617d6ca2b → kuvat SUORAAN PT:lle (PT 17.0x: NUI nollautuu; VAIN tämä yksi ajo).
 - T/ns-mp-pohjapallo2.zsh (23794): NS pohjapallo f7cf0bd7c UUSINTA pp2 (pp1 failed to launch), käännös valmis,
   → L/natiiviseppa-merenpohja-pohjapallo/ (4 kuvaa) → NS.
 - T/ns-fpv-ab4.zsh (12674): NS FPV A/B 2fa367316 UUSINTA, käännös L1 16.58, sk-fpv-ab 15 kuvaa → L/natiiviseppa-fpv-b/;
