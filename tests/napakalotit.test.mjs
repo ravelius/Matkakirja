@@ -622,8 +622,11 @@ test('striimi: varitaPikseli on pelin ElavaTyyli.Varita (oletusmeri → SVesi, o
   const { STRIIMI, varitaPikseli, vedenOsuus } = await import('../tools/tee-napakalotit.mjs');
   assert.deepEqual(varitaPikseli(...STRIIMI.meriOletus), [...STRIIMI.vesi]);
   assert.deepEqual(varitaPikseli(...STRIIMI.maaOletus), [...STRIIMI.maa]);
-  // Napojen syvä meri laatoissa (mitattu 8.11.2026, z5): Varita ei pidä sitä vetenä.
-  assert.ok(vedenOsuus(179, 174, 156) < 0.1, 'Varitan vesikynnys on muuttunut: mittaa kalottien liitos uudelleen');
+  // Napojen syvä meri laatoissa (mitattu 8.11.2026, z5) on vettä NS:n rajalla (ffc355105),
+  // oletusmaa ja varjoinen maa eivät.
+  assert.ok(vedenOsuus(179, 174, 156) > 0.9, 'napojen meri ei ole Varitalle vettä');
+  assert.ok(vedenOsuus(...STRIIMI.maaOletus) < 0.1);
+  assert.ok(vedenOsuus(170, 160, 135) < 0.1, 'varjoinen maa (R−B 35) luettaisiin vedeksi');
 });
 
 test('striimi: kalotin meri ankkuroidaan vesikaavalla ja maa saa maakaavan', async () => {

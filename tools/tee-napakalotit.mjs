@@ -277,7 +277,10 @@ const sile = (a, b, x) => {
  */
 export function vedenOsuus(r0, g0, b0) {
   const m = (r0 + g0 + b0) / 3; const rb = r0 - b0;
-  return (1 - sile(26, 34, rb)) * sile(180, 190, m) * (1 - sile(222, 230, m));
+  // NS ffc355105 (8.11.2026): alaraja 140–150 ja maan sävysuhde (R−B)/(m+1) ≥ 0,155–0,175, jotta napojen
+  // syvä meri on vettä mutta varjoinen maa ei (Natiivisepän mittaus z4 koko maailma).
+  return (1 - sile(26, 34, rb)) * (1 - sile(0.155, 0.175, rb / (m + 1)))
+    * sile(140, 150, m) * (1 - sile(222, 230, m));
 }
 
 export function varitaPikseli(r0, g0, b0) {
@@ -297,7 +300,8 @@ export function varitaPikseli(r0, g0, b0) {
  * Varitan VESIKAAVA ilman Varitan arvausta: SVesi + (väri − MeriOletus).
  *
  * MITATTU 8.11.2026 (pohjalaatat z5, vektorin meripisteet): pelin Varita
- * pitää vetenä vain pikselit, joiden keskiarvo on 180–222. Napojen
+ * piti vetenä vain pikselit, joiden keskiarvo on 180–222 (Natiiviseppä
+ * laski rajan 140–150:een, ffc355105; vesikaava ennallaan). Napojen
  * syvä meri on laatoissa tummempaa (58–70° S noin 179/174/156, 84° N
  * 182/175/156), joten Varita maalaa sen MAAN ruskeaksi (186/171/143):
  * 58–65° S:ssa vain 1–10 meripistettä 360:stä on Varitalle vettä, 83° N
