@@ -9,6 +9,7 @@ juna 221 = 330a43515 (natiivi-backup julkaisija/juna-221; worktree /Users/Shared
 - 0ac8cd436: NUI kohta 8 = ffec8fdc4 + 2c12b920a (PT 00.4x; PT nimesi vain 2c12b920a, ajettu tila sisälsi molemmat).
 - 330a43515: NS pallon välimuisti 256 Mt + muistijarru V raja (PT 01.2x), fast-forward.
 PT 02.05 (OMISTAJAN PÄÄTÖS 02.0x, KK): PK 22dc4c06b junaan 221, KUN PK on varmistanut kääntymisohjeen ehdon ja antaa sha:n (voi olla eri kuin 22dc4c06b) → liitä se sha (cherry-pick -x worktreessa, unity-tarkistus sh, push, juna.py lisaa, rivi PT:lle). Ei TF:ää ilman omistajan pyyntöä.
+PT 02.2x (OMISTAJAN PÄÄTÖKSET 02.07, KK): NS:n ASTC ja muistin kevennys vaihe 1 junaan 221; NS antaa junaversioiden sha:t (ASTC ensin; vaihe 1 n1-valitsinajon jälkeen) → liitä kukin sha samoin (cherry-pick -x / ff, unity-tarkistus sh, push, juna.py lisaa, rivi PT:lle). Ei TF:ää.
 ODOTTAA PT:N SANAA edelleen: PK 61f63adb9 (ks. -0003).
 
 ## 2. KÄYNNISSÄ
