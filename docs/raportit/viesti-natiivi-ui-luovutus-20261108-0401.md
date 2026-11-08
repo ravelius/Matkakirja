@@ -1,0 +1,21 @@
+# Natiivi-UI: luovutus 8.11.2026 klo 04.01 (puiden junaversio PT:llä, kohokartta v5 kaatui muistiin, PT:n vastaus odottaa)
+
+Korvaa luovutuksen -0208 (db8a583cd). Kohta 4 (valitsin) ja opit ennallaan siellä; vanhemmat luovutuksessa -2208 (aab93be4f).
+PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Viestit send_messagella id:llä, PT:lle enintään 3 riviä.
+Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, etäpää natiivi-backup. Työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas, haaralla natiivi-ui/kohokartta-v5-221koe). Kääntö sh Peli-testit/unity-tarkistus.sh, linssitestit sh Linssit-testit/kaanna.sh, pohjavahti python3 -I tyokalut/pohjavahti.py. Ajoja ei tehdä itse: vuoro JU:lta. Vaiheskripti muistilokeille: kopio alla (Opit).
+
+## 1. Puut Pariisin kartalle: junaversio odottaa PT:n sanaa
+- puut4 (3971e6540) ajettu ja katsottu: päällä 11/11, huippu 4029 Mt; vs puut3-päällä lepo −142, kierto-1 −245 Mt (gc 496 → 421 = pois-taso). Pois-ajo (puukoodi ei käytössä) VIKA 4109 kylmällä käynnistyksellä = pohjan vaihtelu. Raportti /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/raportti-kartan-puut-4-ipad-20261108.md, arkki _tyo/natiivi-ui/kartan-puut-4-katsottu/arkki-paalla.jpg. PT luki 02.4x: tavoite täyttyy.
+- PT 02.4x: junaversio 221:n kärkeen, EI JU:lle ennen PT:n sanaa (PT varmistaa KK:lta, että omistaja on nähnyt puuparit). Tehty 54b7c832c natiivi-ui/kartan-puut-221 (natiivi-backup, suoraan c92dafe1f:n päällä): vain puut + NativeArray, oletus päällä, origo vakiona (630 kt:n elämäpaketti ei lataudu), vain `ui kartanelama 1|0|tila`; testi KartanPuutJunassaIlmanKoekytkimia. 2252/2252, unity 0, pohjavahti ok. Laitteella ajamatta (ero 3971e6540:een vain JSONin pois jättö). SEURAAVAKSI: PT:n sana → JU:lle junaan.
+
+## 2. Kohokartta v5: iPad-ajo kaatui muistiin, PT:n vastaus odottaa
+- JU 03.29: v5 ämpärissä https://media.matkakirja.app/linssit/topografia/kohokartta/v5-20261108/{z}/{x}/{y}.jpg. Oletukseksi cba00b360 natiivi-ui/kohokartta-sulku (ketju b276782bd → b7e283c23 → e9045150d → cba00b360; `linssi topografia koho pois|oletus|<url>`), 2256/2256.
+- PT 03.4x "aja nyt JU:lla, ei junaan ennen KK:n/omistajan kuittausta". Koehaara natiivi-ui/kohokartta-v5-221koe 06a554d79 (juna 221 + cba00b360), skenaario _tyo/natiivi-ui/sk-kohokartta-v5-1.txt (JU muunsi iPad-muotoon julkaisija-tyokalut/sk-kohokartta-v5-1-ipad.txt).
+- Tulos (lokit/nui-kohokartta-v5-1-06a554d79, 03.54–03.58): VIKA 4080 Mt 14 s kohokytkimen jälkeen, 1/9 kuvaa (kv1-topo-alpit ok, katsottu). Syy: Topografia.AsetaKohokartta lisää kohorasterin ja poistaa topon vasta, kun koho on Valmis ("ei välähdystä", PT 7.11. 23.5x) → kaksi sarjaa pallolla: U-rivin Pallo "ov" (overlay-tekstuurit) 645 → 2106 Mt, fp 3166 → 4080 ennen valmistumista. Lisäksi skenaariossa oli Macin maasto-rivit (sse 20, siirtymä 5 0 30, kallistus 90; oma virhe), jotka nostivat fp:n 4043:een jo ennen linssiä.
+- Kysytty PT:ltä 04.0x: vanha rasteri pois heti ja uusi odotuspeitteen alla (kuten avattaessa) → yksi sarja muistissa; uusinta JU:lla. Valmiina sk-kohokartta-v5-2.txt (maasto-rivit pois, `komento kuva` -muoto). SEURAAVAKSI PT:n sanalla: AsetaKohokartta: Poista(nakyva) heti, LisaaRasteri(kohde), nakyva = kohde, Kerroin heti, peite.Nosta(); Paivita: koho Luovutti → takaisin topoon; TopografiaTestit (välähdystestit) päivitettävä. Sitten cba00b360:n päälle uusi commit, koehaara uudelleen juna 221:n kanssa, JU:lle v5-2.
+
+## Opit (uudet)
+- iPad-ajuri vaatii `komento kuva X` (esikatselumuoto `kuva X` ei käy); Macin maasto-rivit eivät kuulu iPad-skenaarioon.
+- "failed to launch" (CoreDeviceError 10002 / POSIX 22) 3/3 tuli kahdesti (02.27, 03.51); JU:n käsiasennus + käynnistys auttoi molemmilla kerroilla.
+- MuistiTarkka U-rivin `| Pallo n ... ov X` = pallon laattojen overlay-tekstuurit (Mt), päivittyy 2 s välein: rasterisarjojen muisti näkyy siitä suoraan.
+- Vaiheskripti (fp mediaani/huippu, gc, res, anon/alueita merkkien välein): /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-natiivi-ui/e0dea7d3-223b-4086-8acb-d3d22e5ba57d/scratchpad/vaiheet.py (kopio _tyo/natiivi-ui/vaiheet.py).
