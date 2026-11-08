@@ -33,3 +33,13 @@ KUN VALMIS: katso kuvat ja konsoli. Tarkista: (a) kamera dronen paikassa eikä m
 Mahdolliset viat ensin: kvaternion käsisyys (roll väärään suuntaan → tarkista Kulmanopeus-merkit), Vaakaan-nokka, lähitaso (silmä vs kierto),
 SampleHeightMostDetailed hidas (tarve > 0 pitkään).
 SEURAAVAKSI (PT:n sanalla): NUI:n kosketustikut (osa 3) → FpvLento.Syote; Topografian ☰-valinta käynnistää FpvLento.Aloita + FpvNakyma.Aseta(true).
+
+## LISÄYS 21.4x: PT (KK) – KAKSI UUTTA (VOITTAA "SEURAAVAKSI" yllä; osa 4:n ajon tarkistus ensin)
+1. Omistajalla kortti auki: jättiläisdrone (Skaala ≈ 9 300, suositus) vai pienempi drone + vuorten loivennus dronen ympärillä → Skaala ja
+   korkeuskerroin pysyvät osa 4:ssä PARAMETREINA, ei lukitusta. Nyt jo: "fpv d m" → Skaala = D/3 seuraavassa "fpv lento 1"; Korostus luetaan
+   KorkeusKerroin.Arvo:sta joka kehys. Jos loivennus valitaan, ruudukon korkeus (FpvLento.MaastoK → KorkeusKerroin.Sovita) seuraa samaa kaavaa.
+2. KK:n havainto 28 km:n kuvasta (lokit/natiiviseppa-fpv-d/d-28km.png ja fpv-kerma/k-28km.png): lähin kallio ruskeaa kivipintaa, kauempana huiput
+   sileän oransseja. Omistaja 14.25 "vuoristo täsmälleen sama" → lähipinta samaa tyyliä kuin kauempana. SELVITÄ SYY: FPV B:n keksitty
+   lähiyksityiskohta (fpvlahi, 5a8933619: värjäys/kalliopinta tileset-varjostimessa, KorkeusKerroin.FpvLahi) vai tarkempi laattataso.
+   Koe: sama drone-kuva "fpvlahi 0" vs oletus → jos ruskea katoaa, korjaa fpvlahi:n väri kohokartan paletille (tai pois). Pari PT:lle ≤ 3 riviä.
+   Tehdään osa 4:n rinnalla.
