@@ -33,6 +33,11 @@ Toistui 15.45, 16.12, 16.41, 16.58 eri käännöksillä (FPV, nn5, pohjapallo). 
 Sama nn5-.app käynnistyi JU:n käsikokeessa 16.45 (install + launch ilman --console) ja uusinnassa 16.46. → iPadin hetkellinen
 tila, ei käännösvika. Toimi: uusinta heti; jos toistuu, epäile lukittua näyttöä (ei avata ilman omistajaa) → rivi PT:lle.
 
+PT 17.1x: sama vika nähty ennen (muisti fyysinen-ipad-devicectl-testi.md): jäänyt --console-yhteys tai vanha dev-prosessi →
+ennen launchia `devicectl device info processes` + terminate vanha Matkakirja3D; console suljetaan kill pid:llä ajon lopussa.
+JU 17.15: iPadilla EI Matkakirja3D-prosessia eikä Macilla console-prosesseja, lockState passcodeRequired false – syy yhä auki.
+Järjestys PT: ensin j6b, sitten pohjapallo (pp3 tarvitaan), FPV ab4, kohokalotit.
+
 ## 4. Levy ja siivous
 Levy ajoittain alle 12 Gi (käännösraja); PT/NS siivosivat. Poistin: wt/julkaisija-ns-gc ja wt/julkaisija-yhdistelma-218
 (esikatselu-rungolla.zsh luo L1-puun nyt tarvittaessa uudelleen pk-218:sta), laite-218-{ef81c021d, 9e98f55e5, 86916cbd7,
