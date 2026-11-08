@@ -49,3 +49,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 23.5x: NS ajoennakko pois/päällä VALMIS ja kuitattu PT + NS (ketju N LOPPU).
 - 23.5x: koehaara natiivi-backup julkaisija/koe-lentoraja-ajoennakko = fd8193758 (PT: ajoennakko kokeena lentoraja-6:n rinnalle, ei junaan; raidat = Atlantin selänne). PT + NS kerrottu.
 - 23.5x: Q peruttu → Q2 (pid 21710): NUI kuvateksti-3 836ded6c6 iphone + ipad, sk-kuvateksti-3.txt, pk 0.465, L:n jälkeen → L/nui-kuvateksti-3-{iphone,ipad}-836ded6c6. L:n kuvateksti-2 b2a7046da ajetaan silti (tarpeeton, ei kuittausta tarvita). pariisipallo-2-iphone valmis 5/5, kuittaa ipadin kanssa.
+- 23.5x: pariisipallo-2 x2 kuitattu NUI + PT. Ketju R: NUI pariisipallo-3 a41325c95 iphone pk 0.465 (sk-pariisipallo-3.txt) heti vapaalle linjalle → L/nui-pariisipallo-3-iphone-a41325c95.
