@@ -57,3 +57,9 @@ Nahtavyysalue.KiinteatEsteet (mallit + ohjelmakohteet), NostotKartalla.AsetaKuva
 - TOPOESITTELY 756f4962d iPad VALMIS: lokit/nui-topoesittely-1-756f4962d (7/7, eri md5, huippu 2236 Mt, NRE 0) + Mac-video /mac. EI VIELÄ KATSOTTU.
   Jono 1b (napautuksen rinnalla): katso video (kyltti perillä, NS:n kierto 9,6 s, tauko ▷, ruudukko) ja kuvat → video KK:lle PT:n kautta (luovutus -1120 PÄIVITYS 11.5x).
 - JU:n järjestys: nähtävyysnapautus ae84dd1dd (käännös valmis) → lippu-442-2 → (jonoon) kartta-lukittu-2 9f4b590b5.
+- 12.4x NÄHTÄVYYSNAPAUTUS ae84dd1dd iPad VALMIS (JU 12.31): lokit/nui-nahtavyysnapautus-1-ae84dd1dd, 8/8, huippu 2846 Mt. KELVOTON TODENNÄKÖISESTI:
+  ui-loki 385/403 "kohdenostot napauta Notre-Dame: napauta (847.3, 638.3): ei osumaa UI:ssa → pallolle" → merkkiä ei osuttu, esittely ei lauennut
+  (0 riviä "ui lukija: aloita pala"). Epäily: tasolla 15,2 kohdenostot ovat "PIILO … ei napautusta" (pickingMode, ks. 2.216-ajon rivit) →
+  skenaarion pitää lähentää kyltit auki -tasolle (kaari ≤ 0,012) ennen napautusta, TAI NahtavyysEsittely ei kuuntele pallon osumaa.
+  Myös `ui nahtavyysesittely tila` palautti vain "ok" (tila ei tulostu ui-lokiin: tarkista Kirjaa-kutsu). Kuvia ei katsottu. Korjaa, uusinta JU:lla.
+- JU: kartta-lukittu-2 9f4b590b5 jonossa (pid 47301, käännös L1 12.35) → lokit/nui-kartta-lukittu-2-9f4b590b5.
