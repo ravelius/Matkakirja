@@ -33,3 +33,4 @@ FPV (koe): kameran kulma 15–20° leijunnassa = PT/kortti, ei itse (osa 4b: maa
 
 ## LISÄYS 23.2x: PT KUITTASI REUNAPIIKIT b2761f67b, JU:LLE "junaan 223" LÄHETETTY (VOITTAA jonon kohdan 1)
 Jono tyhjä → seuraava NS: rivi PT:lle "JONO TYHJÄ: Natiiviseppä" (luo cron ensin).
+JU 23.25: b2761f67b on junan 223 kärki (natiivi-backup julkaisija/juna-223); unity sh 0, Kartta 727/727, Linssit 2269/2269. Ei toimia NS:lle.
