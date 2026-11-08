@@ -91,3 +91,6 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
   välilyönti luvuissa). 2) sk-topoesittely-1-mac.txt: tallenne-alku siirretty ruudukon kohdalle. 3) Himalajan suunta etelästä (muurina) = NS:n osa, PT välittää.
   Video KK:lle vasta, kun KS:n ruutukuvat + NS:n suunta ovat mukana → yhdistä NS:n SHA topoesittelyt-221:een, Mac-video JU:lla.
 - JU 12.51: kartta-lukittu-2 17addbe2d iPadilla ensin, sitten nahtavyysnapautus-2 c33b2ebd1.
+- LIPPU 4.42 iPad 1f26c51b4 (lokit/nui-lippu-442-2-1f26c51b4, 8/8) KATSOTTU: tanko säteittäin ulos kaikissa, kangas ei painu karttaan käännetyllä,
+  varjo näkyy. Kuvat _tyo/natiivi-ui/lippu-442-2/ lähetetty PT:lle (KK:lle); junaan PT:n sanalla.
+- JU 12.54: iPad-järjestys PK g+f → kartta-lukittu-2 17addbe2d → napautus-2 c33b2ebd1.
