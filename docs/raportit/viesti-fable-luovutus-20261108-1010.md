@@ -42,3 +42,6 @@ Juna 221 iPadilla Pariisissa huippu 3312–3322 Mt (varaa ~770 Mt 4080:een). Koh
 - NS aloituslento 46d34ca4f, uusinta 3 (j3) JU:lla; ei junaan ennen kuin a:n etuala terävä.
 - KS kohokartta v6 kuitattu; Etelämantereen täplät: ei toimia (KK).
 - JU uusi luovutus 3fe1cc6ce (-1045).
+
+## Lisäys 11.10 (korvaa yllä olevan "ÄLÄ jaa")
+- OMISTAJAN PÄÄTÖS 11.04: esittelyjen kertoja William, 12 kohteen lista ok. Pilotti Alpit + Himalaja JAETTU: KS kohdelista ja ruudut (merenpohjan jälkeen), NS suunta + osittainen kierto (vahvistaa 2.69 vs 4.24), NUI ☰ › Esittelyt (lipun ja 10.36/10.38:n jälkeen), VS valo. SK-tekstit ja Äänittäjän William-otot: ei käynnissä olevaa sessiota, kysytty KK:lta saako käynnistää. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261108-topokohteiden-esittelyt.md. M-kohteet merenpohjan jälkeen.
