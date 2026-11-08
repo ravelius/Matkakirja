@@ -33,3 +33,12 @@ Numpy/PIL/scipy: /opt/homebrew/bin/python3.14 -P skripti.py. wt/proto-natiivisep
   FPV-kamera, origon siirto, korkeusruudukko, NUI:n tikut; suunnitelma Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md).
 - UUSI PYSYVÄ SÄÄNTÖ (omistaja 19.08, Raamattu 12.26): uudet kokeet ENSIN MACILLA iPad-koossa; iPadille vain muisti, nopeus, kosketus
   ja koeversion tarkistus. → kohokalottien v5-ajo ja FPV osa 4 Mac-esikatselulla (JU:n vuoro, koko ipad; muistit esikatselu-*).
+
+## LISÄYS 19.1x (2) PT KORJAA FPV-JÄRJESTYKSEN (VOITTAA "FPV OSA 4: JATKA" yllä)
+Omistaja 14.47 "Korostus pysyy": KorkeusKerroin ×15 EI muutu dronen ympärillä ilman omistajan korttia; korkeuskoe vain vaihtoehdoksi
+kuvien kanssa KK:lle PT:n kautta.
+1) ENSIN VIAT POIS (2fa367316:n kuvat, _tyo/natiiviseppa/fpv-b/parit-2fa367316/): sininen aukko kuvan alaosassa (pohjapallon
+   reliefisininen 38,78,145 – kokeile myös f7cf0bd7c:n pohjapallo 168 km alempana, ja selvitä, puuttuvatko lähilaatat vai näkyykö maaston alta)
+   ja terävä vaakasuora usvaraja yläkolmanneksessa (horisonttiusvan raja, ks. DroneKuva/usva).
+2) Lähin siisti D uudelleen MACILLA iPad-koossa (Raamattu 12.26; JU:n esikatseluvuoro) → pari PT:lle → KK. Codex-kuvat odottavat D:tä.
+3) Vasta sitten FPV osa 4 (lentomalli, Skaala = D/3, EI kertoimen muutosta).
