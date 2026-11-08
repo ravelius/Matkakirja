@@ -5,6 +5,16 @@ natiivi-ui/fpv-nakyma d1c8a074f/7ddc42970 ja FPV-avoimet (luovutukset -1518/-155
 PT local_5df52e10-…, JU local_06f8c680-…, NS local_99130238-…, KK local_37f7c945-…, Postivahti local_afae44f0-….
 Työkansio /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/. Kaikki koe, EI JUNAAN ilman PT:n/KK:n sanaa.
 
+## LISÄYS 20.1x – OMISTAJAN PYYNTÖ 20.15 (PT) KORVAA alla olevan a1:n ("palkin viereen" -koe PERUTTU; a2 kolmiot ennallaan)
+Omistaja 20.15: "tuo noston kuva voisi näkyä vain ihan pienenä iphonella kun esittely on käynnissä (voi ensin näkyä hetken nykyisen
+kokoisena mutta sitten pienentyä)". PT: VAIN PUHELIMELLA (ei UiKerros.Tabletti) esittelyn aikana nostokuva alussa hetken nykyisen kokoisena,
+sitten pehmeästi ihan pieneksi; nähtävyys rajataan kokonaan palkin + PIENEN kuvan alle mahdollisimman isona, pysty JA vaaka. iPad ennallaan.
+Toteutusvihje: oma haara natiivi-backup natiivi-ui/esittely-pieni-kuva 65f0277be:n päälle (worktree wt/proto-natiivi-ui-napautus-puhdas).
+Pinnaus.SijoitaKuva: kuvan leveys = palkin leveys → esittelyn ajaksi pienennöskerroin (esim. kerroin → ~0,3 palkin leveydestä, oikeaan reunaan,
+siirtymä Tyylikirja.Kesto) muutaman sekunnin jälkeen; NahtavyysEsittely: Pinnaus.Varaus(…) pienen kuvan koolla (SeuraaPalkkia päivittää dy:n
+jo nyt; vapaa alue kasvaa → laske myös etäisyys uudelleen kerran pienenemisen jälkeen, muuten nähtävyys ei kasva). Pienennys pois, kun
+esittely/palkki päättyy. Mac iPhone-koossa `iphone` + `iphone-vaaka` (Eiffel, ND; kuva ENNEN ja JÄLKEEN pienenemisen) → PT. Ei junaan ennen KK:ta.
+
 ## LISÄYS 19.5x – PT:N VASTAUS (tee ENSIN, ennen kohtaa a:n odotusta)
 PT 19.5x: "rajaus-2 65f0277be katsottu – iPhone pysty (Eiffel) ja iPad (ND) OK, vien KK:lle nyt." Sitten:
 a1) PALKIN VIEREEN (koe, poikkeaa omistajan 18.36 sanasta "alapuolella"; ÄLÄ junaan): oma haara natiivi-backup natiivi-ui/esittely-rajaus-vieressa
