@@ -9,7 +9,7 @@ PT:n ehdot: mittaa vaiheittain ensin, suurin hyöty ensin; iPad-mittaus JU:n jon
   - `208264a65` mittari: `JuoksuLatausMittari` (JuoksuRuutumerkinnat.cs), rivi "juoksupeli: latauksen ositus" latauskuvan poiston jälkeen (pääsäie: varjojen läpikäynti, rakenna, verkkojen keruu, kuvien purku/pakkaus/mipit, CPU-kopiot, peittokartan keruu + ruudut). LOD-kierrosriveillä "pääsäie rakenna X ms (keruu, kuvat), varjojen läpikäynti, ruutu". QA `valo latauskappaleet 0` = varjojen läpikäynti vasta Valmiina (oletus 1 = ennallaan).
   - `bccc02fed` QA `palatsi kopiot-rinnalla 1`: CPU-kopioiden vapautus kaukopuiden jälkeen loppuvaiheiden rinnalla (oletus 0 = ennallaan).
   - unity-tarkistus (sh) 0 virhettä molemmissa.
-- JU:lle pyydetty 08.3x/08.41 (send_message, 2. viesti jonossa): 3 iPad-ajoa, skenaariot `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-lataus/sk-ipad-ositus-{a,b,c}.txt` → `lokit/pelikoodari-lataus-ositus-{a,b,c}` (a perus, b latauskappaleet 0, c kopiot-rinnalla 1). EI vielä kuittausta.
+- JU:lle pyydetty 08.3x/08.41 (send_message, 2. viesti jonossa): 3 iPad-ajoa, skenaariot `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-lataus/sk-ipad-ositus-{a,b,c}.txt` → `lokit/pelikoodari-lataus-ositus-{a,b,c}` (a perus, b latauskappaleet 0, c kopiot-rinnalla 1). JU 08.4x: kaikki kolme bccc02fed:llä, jonossa (pid 59322; laitekäännös NS:n jälkeen, sitten iPad); JU kuittaa rivillä.
 - Kun lokit tulevat: `python3 -I vaiheet.py|vali.py|aikajana.py <loki>/muisti-tarkka.log` (samassa kansiossa) + grep "latauksen ositus" ja "kierros". Vertaa tahti4-1:een (24,2 s). Muistihuippu: suurin fp N-riveiltä latauksen aikana (c:ssä tärkeä: ei saa nousta).
 
 ## 1. Ositus iPadilla (tahti4-1, ennen mittaria, lokiriveistä)
