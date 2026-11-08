@@ -50,3 +50,10 @@ vienti JU:lla, KS ilmoittaa CDN:n). NS: 95f5af086 (natiivi-backup natiiviseppa/n
 (12.26) CDN:n jälkeen → lokit/natiiviseppa-navat-koho/kohokalotit-v5/ (ajopyynto-kohokalotit-v5.md).
 KUN KUITTAA: parit koho2 | kohokalotit (v6) | kohokalotit-v5, saumarajaus 84–85° täysikoossa (sauma näkyy?), konsolista "versio
 2026-11-08-kohokartta-v5" → PT ≤ 3 riviä. Sitten FPV-järjestys (lisäys 2).
+
+## LISÄYS 19.3x (4): KOHOKALOTIT v5 KUITATTU PT:lle (VOITTAA lisäyksen 3 "KUN KUITTAA")
+JU:n Mac-esikatselu iPad-koossa 19.24 (95f5af086, 4/4, "kohokalotti … versio 2026-11-08-kohokartta-v5"): napa samaa tyyliä kuin laatat, ei
+läikkää, ei näkyvää saumaa. Saumakamerat (aja ±86 … 6) eivät vieläkään osu 84–85°:een (etelä = sisämaa, pohjoinen = Grönlannin pohjoisranta);
+tummat alueet = laattojen korkeusvyöt (samat v6-ajossa). Kolmikot _tyo/natiiviseppa/navat-koho/kohokalotit-parit/*-3vaihetta.png.
+Junaan vasta PT:n sanalla (laattapakettiin OfflinePolut erikseen). MAC-SKENAARIOISSA "kuva X", EI "komento kuva X" (JU 19.2x).
+SEURAAVA: FPV-järjestys (lisäys 2).
