@@ -199,6 +199,8 @@ export const PAPERI_MITTA = 1;
  * ei vastaa, käytetään 11.9.2026 mitattuja varalukuja (LIITOS_VARA) ja
  * sanotaan se ääneen ajon lokissa.
  */
+/** Striimin reunakaista: kalotti liukuu laattojen paikalliseen sävyyn näin monta astetta kehältä (ks. REUNAKAISTA). */
+export const REUNAKAISTA_AST = 4;
 /** Liitoskaista: näin monta astetta kalotin kehältä napaan päin. */
 export const LIITOS_KAISTA = 3;
 /** Laattataso, jolta kohdesävy luetaan (z6 = koko maailma 64 × 64 laattaa). */
@@ -312,6 +314,57 @@ export function varitaPikseli(r0, g0, b0) {
  */
 export const STRIIMI_VESISIIRTO = Object.freeze(STRIIMI.vesi.map((v, c) => v - STRIIMI.meriOletus[c]));
 export const vesiVarita = (r, g, b) => [r, g, b].map((v, c) => Math.min(255, Math.max(0, v + STRIIMI_VESISIIRTO[c])));
+
+/**
+ * Pohjasarjan laatat Varitan jälkeen pisteittäin (bilineaarinen, Varita
+ * jokaiselle neljälle naapurille), kalotin kehän kaistalle esiladattuna.
+ * Palauttaa synkronisen näytteenottimen (lat, lon) → [r, g, b] | null.
+ */
+export async function reunanLaattasavy({
+  puoli, sharp, hae = fetch, juuri = POHJA_LAATAT, taso = STRIIMI_LAATTATASO, kaista = REUNAKAISTA_AST + 0.5,
+}) {
+  const k = NAPAKALOTTI[puoli];
+  const latA = k.reuna; const latB = k.reuna + k.merkki * kaista;
+  const yA = laattaKoordinaatit(latA, 0, taso).y; const yB = laattaKoordinaatit(latB, 0, taso).y;
+  const n = 2 ** taso;
+  const rivit = [];
+  for (let y = Math.max(0, Math.floor(Math.min(yA, yB)) - 1); y <= Math.min(n - 1, Math.floor(Math.max(yA, yB)) + 1); y += 1) rivit.push(y);
+  const laatat = new Map();
+  await Promise.all(rivit.flatMap((ty) => Array.from({ length: n }, (_, tx) => (async () => {
+    const v = await hae(`${juuri}${taso}/${tx}/${ty}.jpg`).catch(() => null);
+    if (!v?.ok) return;
+    const { data, info } = await sharp(Buffer.from(await v.arrayBuffer())).raw().toBuffer({ resolveWithObject: true });
+    const W = info.width; const H = info.height; const C = info.channels;
+    const vari = new Float32Array(W * H * 3);
+    for (let i = 0; i < W * H; i += 1) {
+      const q = varitaPikseli(data[i * C], data[i * C + 1], data[i * C + 2]);
+      vari[i * 3] = q[0]; vari[i * 3 + 1] = q[1]; vari[i * 3 + 2] = q[2];
+    }
+    laatat.set(`${tx}/${ty}`, { vari, W, H });
+  })())));
+  const pikseli = (gx, gy) => {
+    // gx, gy: koko tason pikselikoordinaatit (laatta × koko); x kiertää.
+    const L0 = laatat.values().next().value; if (!L0) return null;
+    const W = L0.W; const H = L0.H;
+    const X = ((gx % (n * W)) + n * W) % (n * W);
+    const Y = Math.min(n * H - 1, Math.max(0, gy));
+    const L = laatat.get(`${Math.floor(X / W)}/${Math.floor(Y / H)}`);
+    if (!L) return null;
+    const o = ((Y % H) * L.W + (X % W)) * 3;
+    return [L.vari[o], L.vari[o + 1], L.vari[o + 2]];
+  };
+  if (!laatat.size) return null;
+  const { W, H } = laatat.values().next().value;
+  return (lat, lon) => {
+    const t = laattaKoordinaatit(lat, lon, taso);
+    const fx = t.x * W - 0.5; const fy = t.y * H - 0.5;
+    const x0 = Math.floor(fx); const y0 = Math.floor(fy); const ax = fx - x0; const ay = fy - y0;
+    const p00 = pikseli(x0, y0); const p10 = pikseli(x0 + 1, y0);
+    const p01 = pikseli(x0, y0 + 1); const p11 = pikseli(x0 + 1, y0 + 1);
+    if (!p00 || !p10 || !p01 || !p11) return null;
+    return [0, 1, 2].map((c) => (p00[c] * (1 - ax) + p10[c] * ax) * (1 - ay) + (p01[c] * (1 - ax) + p11[c] * ax) * ay);
+  };
+}
 
 /** Varitan maakaava: vakiosiirto, jonka kalotin maa ja jää saavat striimityylissä. */
 export const STRIIMI_MAASIIRTO = Object.freeze(STRIIMI.maa.map((v, c) => v - STRIIMI.maaOletus[c]));
@@ -625,7 +678,7 @@ export function piirraJana(peitto, N, x0, y0, x1, y1, leveys) {
  */
 export function piirraKalotti({
   puoli, korkeus, indeksi, rannikot, koko = KOKO_OLETUS, ylinaytto = YLINAYTTO_OLETUS,
-  jaatayte = false, liitossavy = null, tyyli = 'paperi',
+  jaatayte = false, liitossavy = null, tyyli = 'paperi', reunaSavy = null,
 }) {
   const striimi = tyyli === 'striimi';
   const k = NAPAKALOTTI[puoli];
@@ -744,6 +797,42 @@ export function piirraKalotti({
       data[o] += liitossiirto[0];
       data[o + 1] += liitossiirto[1];
       data[o + 2] += liitossiirto[2];
+    }
+  }
+
+  /*
+   * REUNAKAISTA (striimi, omistajan havainto 8.11.2026 klo 12.50: "tumma
+   * pyöreä kehä" etelänavan ympärillä). Yksi liitossiirto sovittaa vain
+   * KESKIARVON: kalotin oma batymetria ja laattojen paikallinen sävy
+   * eroavat pituusasteittain (laatoissa 60° S:ssa keskiarvo 118–150), ja
+   * ero näkyi kehänä. Kaistalla REUNAKAISTA_AST kehältä sisäänpäin kuva
+   * liukuu JOKA PIKSELISSÄ siihen sävyyn, joka laatassa on samassa
+   * pisteessä Varitan jälkeen, ja on alfahäiveen alussa (HAIVE_AST)
+   * tasan laatan sävy. Sisäosa (oma batymetria, syvän meren väri) ennallaan.
+   */
+  if (reunaSavy) {
+    const rIn = 1 - REUNAKAISTA_AST / span;
+    const rTay = 1 - HAIVE_AST / span;
+    for (let iy = 0; iy < N; iy += 1) {
+      for (let ix = 0; ix < N; ix += 1) {
+        const a = kalotinAsteet(puoli, (ix + 0.5) / N, (iy + 0.5) / N);
+        if (a.r <= rIn || a.r >= 1.03) continue;
+        const kohde = reunaSavy(a.lat, a.lon);
+        if (!kohde) continue;
+        if (a.r >= 1) {
+          // Läpinäkyvän kehän ulkopuolen väri laatan sävyksi (alfa pysyy 0): muuten
+          // pienennys ja webp vuotavat mustaa häiveeseen (mitattu −1,5 tasoa 1° kehältä).
+          const o = (iy * N + ix) * 4;
+          data[o] = kohde[0]; data[o + 1] = kohde[1]; data[o + 2] = kohde[2];
+          continue;
+        }
+        const t = Math.min(1, (a.r - rIn) / (rTay - rIn));
+        const w = t * t * (3 - 2 * t);
+        const o = (iy * N + ix) * 4;
+        data[o] = data[o] * (1 - w) + kohde[0] * w;
+        data[o + 1] = data[o + 1] * (1 - w) + kohde[1] * w;
+        data[o + 2] = data[o + 2] * (1 - w) + kohde[2] * w;
+      }
     }
   }
 
@@ -878,6 +967,8 @@ async function paa() {
         meressa: (lat, lon) => merenAlalla(leveyspiirinLeikkaukset(aineisto.indeksi, lat), lon),
       }
       : { puoli, sharp }).catch(() => null);
+    const reunaSavy = tyyli === 'striimi' ? await reunanLaattasavy({ puoli, sharp }).catch(() => null) : null;
+    if (tyyli === 'striimi') console.log(`  ${puoli}: reunakaista ${REUNAKAISTA_AST}° ${reunaSavy ? 'laattojen sävyyn' : 'EI LAATTOJA'}`);
     const liitossavy = kohde ?? (tyyli === 'striimi' ? LIITOS_VARA_STRIIMI : LIITOS_VARA)[puoli].slice();
     const { data, N, liitossiirto } = piirraKalotti({
       puoli,
@@ -889,6 +980,7 @@ async function paa() {
       jaatayte: puoli === 'etela',
       liitossavy,
       tyyli,
+      reunaSavy,
     });
     const polku = join(ulos, `${puoli}.webp`);
     /*
@@ -896,10 +988,23 @@ async function paa() {
      * juuri se liuku on liitos laattoihin: alphaQuality 100 pitää sen
      * häviöttömänä, vaikka väri pakataan. Ks. tiedoston alku.
      */
-    const tulos = await sharp(Buffer.from(data.buffer, data.byteOffset, data.byteLength), {
-      raw: { width: N, height: N, channels: 4 },
-    })
-      .resize(koko, koko, { kernel: 'lanczos3' })
+    const raaka = Buffer.from(data.buffer, data.byteOffset, data.byteLength);
+    const raw = { width: N, height: N, channels: 4 };
+    /*
+     * STRIIMI: VÄRI JA ALFA PIENENNETÄÄN ERIKSEEN. sharpin RGBA-pienennys
+     * tummentaa häiveen väriä 1–2 tasoa (mitattu 8.11.2026: tasainen
+     * 143/137/104 → 141/135/102), ja se näkyi kehänä. Kuvan ulkopuoli on
+     * striimissä laatan värinen (REUNAKAISTA), joten erikseen pienennetty
+     * väri ei vuoda mustaa.
+     */
+    const kuva = reunaSavy
+      ? sharp(await sharp(raaka, { raw }).removeAlpha().resize(koko, koko, { kernel: 'lanczos3' }).raw().toBuffer(), {
+        raw: { width: koko, height: koko, channels: 3 },
+      }).joinChannel(await sharp(raaka, { raw }).extractChannel(3).resize(koko, koko, { kernel: 'lanczos3' }).raw().toBuffer(), {
+        raw: { width: koko, height: koko, channels: 1 },
+      })
+      : sharp(raaka, { raw }).resize(koko, koko, { kernel: 'lanczos3' });
+    const tulos = await kuva
       .webp({ quality: laatu, alphaQuality: 100, effort: 6 })
       .toFile(polku);
     const s = Math.round((Date.now() - alkoi) / 1000);
@@ -917,6 +1022,7 @@ async function paa() {
       liitossavy: liitossavy.map((v) => +v.toFixed(1)),
       liitossavyMitattu: Boolean(kohde),
       liitossiirto: liitossiirto ? liitossiirto.map((v) => +v.toFixed(2)) : null,
+      reunakaistaAst: reunaSavy ? REUNAKAISTA_AST : null,
     });
   }
   writeFileSync(join(ulos, 'kalotit.json'), `${JSON.stringify({

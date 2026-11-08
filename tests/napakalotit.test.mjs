@@ -646,3 +646,11 @@ test('työnkulku välittää tyylin työkalulle', () => {
   assert.match(tyonkulku, /tyyli:/);
   assert.match(tyonkulku, /--tyyli=\$\{\{ inputs\.tyyli \}\}/);
 });
+
+test('striimi: reunakaista liukuu laattojen paikalliseen sävyyn (omistaja 8.11.2026 klo 12.50, kehä)', async () => {
+  const { REUNAKAISTA_AST } = await import('../tools/tee-napakalotit.mjs');
+  assert.ok(REUNAKAISTA_AST > HAIVE_AST, 'kaistan on alettava ennen alfahäivettä');
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  assert.match(tyokalu, /const kohde = reunaSavy\(a\.lat, a\.lon\);/);
+  assert.match(tyokalu, /reunanLaattasavy\(\{ puoli, sharp \}\)/);
+});
