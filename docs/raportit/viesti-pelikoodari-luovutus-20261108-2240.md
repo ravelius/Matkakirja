@@ -41,3 +41,16 @@ Keisari c92dafe1f ja lataus ab113e0ac junassa 221; c (e59541a34) junassa 222. Lo
 ## LISÄYS 22.4x – OMISTAJAN PÄÄTÖS klo 22.38 (KK): "Odottaa pyyhkäisyä"
 2.11. linja pysyy: ei automaattisia käännöksiä, keisari odottaa seinällä pyyhkäisyä. **1g: ei korjausta.** 1f: lähtö pysyy linjan mukaisena
 (seinä → huuto → kierto → 3-2-1 → pyyhkäisy); korjaa vain, jos juoksu ei lähde pyyhkäisyn jälkeen. 1c (valmis 9f2e57b71, kuvat puuttuvat), 1d ja 1e jatkuvat.
+
+## LISÄYS 22.5x – ENSIMMÄISENÄ: 1g UUDELLEEN VIKANA (OMISTAJA 22.40, KK)
+"Keisarin olisi pitänyt pystyä juoksemaan seinän viertä eteenpäin kiinniottopaikassa mutta keisari ei liikkunut eteenpäin."
+Tiedot: Matkakirja-fable docs/raportit/kaappaukset/omistaja-20261108/2240-pyynnot.md + kuva 2223-1. 22.38 päätös pysyy (seinä EDESSÄ → odottaa),
+mutta SIVUSEINÄ ei saa pysäyttää. Selvitä syy, korjaa, toista Macilla (JU:n vuoro) → kuvat KK:lle (local_37f7c945), rivi PT:lle.
+Hypoteesi (koodista, ei todennettu): JuoksuV4.Vapaa.cs SuoraTila/Mahtuu tarkistavat keholeveyden (KehoM) molemmin puolin suoralla linjalla;
+palatsin seinät ovat 2,3° vinossa (SeinaVara-kommentti), joten seinän viertä juostessa suora linja lähestyy sivuseinää ja kappale katkeaa
+"seinän eteen", vaikka kiveys jatkuu. Korjausajatus: kun edessä on vain sivuseinä (suora tila jatkuu sivuttain siirretyllä linjalla),
+jatka kappaletta siirtämällä jalkalinjaa seinästä poispäin (tai kallista suuntaa ≤ 3°) pysähtymättä; pysähdys vain, kun seinä on
+kohtisuoraan edessä. Testi oikealla kartalla (JuoksuKulkuKarttaTestit, JuoksuKulku.bytes): juoksu vinon seinän vierustaa ei pysähdy.
+Koetin: tason 1 vapaa reitti LuoVapaaTaso + SokkeloPalatsi (MK_JUURI=/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-kk-pohja-v1d-pk8-vienti-20261031/juoksupeli/maailma-v4,
+kk-pohja-v1d-pk8/pohja.json) – HUOM: koettimessani ensimmäisellä seinällä kaikki sivut näkyivät suljettuina, eli testiympäristöstä puuttui
+jokin pelin asettama tieto (tarkista JuoksuV4Maailma, miten kartta ja palatsi kytketään ennen kuin luotat koettimeen).
