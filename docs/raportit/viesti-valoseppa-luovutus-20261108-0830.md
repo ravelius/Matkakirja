@@ -2,11 +2,11 @@
 
 Syy: konteksti 25 % (pehmeä raja) ja uusi iso erä (vesi selvemmäksi) tuli. ENSIMMÄINEN TYÖ: AUKI 2. Tili vvi@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Omat worktreet: k31 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k31` (haara `linssiseppa2/vesikerros`, puhdas, pushattu), k32 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k32` (haara `linssiseppa2/ilmaperspektiivi`, puhdas, pushattu). Kuvat ja iPad vain JU:n vuorolla (`local_06f8c680-4618-42bd-a730-9b6a3e17e0b7`). PT `local_5df52e10-10e4-4b72-9554-0049db300dfe` ≤ 3 riviä; KK `local_37f7c945-e1a0-4638-90b8-93c389a36fbe` (tällä tilillä). Kumpikin on koe: EI JUNAAN ennen KK:n/omistajan kuittausta. Järjestys oma, rinnakkain sallittu (PT 08.2x), iPad-ajot JU:n jonossa.
 
-## AUKI 1: ILMAPERSPEKTIIVI KEVYEMPI – VALMIS, ODOTTAA KK:N/OMISTAJAN SANAA (päivitetty 08.40)
+## VALMIS: ILMAPERSPEKTIIVI KEVYEMPI JUNASSA 221 (päivitetty 08.45)
 - Omistajan päätös 08.23: kevyempi (paperinsävy lähellä ja keskellä, sinertyminen vasta kaukana, ei merimäistä raitaa, taivas ei kylmänsininen).
 - Haara `linssiseppa2/ilmaperspektiivi` **b799339cf** (k32): `Aurinko.cs` IlmaAlku 0,6 (osuus ruudun alareunan syvyydestä vanhan usvan alkuun), IlmaVari (0,90; 0,92; 0,93), `Karttataivas.shader` taivaan alareunan sävytys pow(alas, 3). Komento `ilmaperspektiivi on|pois|tila|vari r g b|alku k|taivas k`.
 - Ajettu JU 08.30 (`lokit/linssiseppa2-ilma-paikat-b799339cf`, `-ilma-lento-on-b799339cf`), VS katsonut: p45 alaosa ja keskiosa pikseliero 0, sinertyminen vain ylimmässä neljänneksessä; l85 taivaanranta 215,220,222 vs taivas 219,222,217 (ei raitaa). Parit `_tyo/linssiseppa2/ilmaperspektiivi/parit-b799339cf/` lähetetty KK:lle ja PT:lle 08.4x.
-- Seuraava: vain KK:n/omistajan vastaus (jatko tai junaan PT:n kautta). Ei junaan ilman kuittausta.
+- **JUNAAN 221 (OMISTAJAN PÄÄTÖS 08.38):** junaversio 52e73d18b (haara `linssiseppa2/ilmaperspektiivi-221`, yksi commit 221:n kärjen ede32cd57 päällä, ilman komentoa ilmaperspektiivi; unity-tarkistus 0) JU:lle 08.4x, PT kuitattu. Seuraava vain, jos JU kysyy. k32 on haarassa ilmaperspektiivi-221.
 
 ## AUKI 2: VESIKERROS SELVEMMÄKSI (OMISTAJAN PÄÄTÖS 08.24 KK:n/PT:n kautta; aloittamatta)
 - Päätös: "vesikerros b258d6242 jatkuu SELVEMMÄKSI: kimallukset ja hohde kuten kuumailmapallossa, erottuu myös 45°:sta; kerrosmalli (vain vesi päivittyy) säilyy. Kauko-Seinen beige (2.204) korjataan samalla. Uusi pari (koko keskusta 45°, Pont Neuf lähi, kauko) KK:lle ennen junaa."
