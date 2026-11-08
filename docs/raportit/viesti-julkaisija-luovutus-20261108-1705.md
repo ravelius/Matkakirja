@@ -20,7 +20,7 @@ gh workflow run proto3d-testflight.yml --repo ravelius/Matkakirja -f vie_unityst
 run https://github.com/ravelius/Matkakirja/actions/runs/42494434201 (proto_ref 617d6ca2b, vie_unitysta, ordinaali 223).
 Valmis → jonolokiin "TF 223 VALMIS" + rivi PT:lle (local_5df52e10). Epäonnistui → rivi PT:lle, ei uutta ajoa ilman PT:tä.
 j6b VALMIS 17.20 4/4 (PT katsoi). NUI merenpohja-2 Mac VALMIS (kuitattu, video PT:lle). FPV ab4 17.24 failed to launch (NS:lle kuitattu).
-Jäljellä iPad: T/ns-mp-pohjapallo3.zsh (72794) → kohokalotit (46723). Mac merenpohja-3 ja lentoraja-1 VALMIIT ja kuitattu (NUI + video PT:lle). pohjapallo pp3 failed to launch (NS kuitattu).
+iPad-jono TYHJÄ 17.32; kohokalotit 300e9923f ja pohjapallo f7cf0bd7c ja FPV 2fa367316 kaikki failed to launch → UUSINNAT f1c-korjauksen jälkeen (käännökset levyllä). Mac merenpohja-3 ja lentoraja-1 VALMIIT ja kuitattu (NUI + video PT:lle). pohjapallo pp3 failed to launch (NS kuitattu).
 
 ## 2. Jono käynnissä (iPad-järjestys tässä)
 - T/j6/juna222-napautus.zsh (32059, iPadilla 17.05; vanha sk-5-ajo 12644 keskeytetty): käännös valmis; ajaa NUI:n
