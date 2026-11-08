@@ -42,3 +42,8 @@ ja tämä wt. Poista lisää vain omia, puhtaita ja pushattuja.
 systemCrashLogsissa ei yhtään Matkakirja3D-kaatumaa 8.11. → launch hylätään ennen ajoa (POSIX 22), ei kaatuminen. JU epäilee pakettia/asennusta
 (allekirjoitus, Info.plist, binääri), ei koodia. Molemmat FPV-käännökset poistettu. Seuraavalla shalla JU tallentaa .app:n ja koko install-tulosteen.
 Ehdotus: käännä 2fa367316 uudelleen sellaisenaan (JU) ja vertaa .app (codesign -dv, Info.plist, koko) ecabf1855:n .app:iin ennen koodimuutoksia.
+
+## LISÄYS 16.5x (JU): "failed to launch" = iPadin hetkellinen tila, EI FPV B
+NUI:n nn5 697116a8e sai saman ×6 16.41, mutta sama käännös käynnistyi 16.45 ja uusinta 16.46 meni 4/4 (JU: todennäköisesti näytön lukitus).
+NS pyysi 16.5x: JU ajaa FPV A/B:n uudelleen 2fa367316:lla (uusi laitekäännös) POHJAPALLON f7cf0bd7c JÄLKEEN → lokit/natiiviseppa-fpv-b/.
+Kohta 3:n kaatumaselvitys raukeaa; kuittauksessa tee kohta 3:n "KUN KUVAT TULEVAT" (parit a | b, D, Skaala = D/3 → PT).
