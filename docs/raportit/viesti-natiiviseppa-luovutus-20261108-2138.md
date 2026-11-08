@@ -59,3 +59,8 @@ TOIMET: (1) varmista lokista silmän korkeus ennen törmäystä (fpv-tilarivit) 
 korkeammalta (h 100 km) tai pohjoiseen päin pois massiivista, kuvat KESKEN liikkeen (odota 1, ei 4) ja ennen törmäystä; harkitse kameraa 15–20°
 leijunnassa (kortti/PT, ei itse); (3) 946 ms ruutu: tarkista, onko alussa (ruudukon 1. haku / FpvLento.Aloita) vai lennon aikana – GC 8×:
 FpvMaasto.Hae varaa GetRange + double3[] joka haku, PyydaRuudukko enintään 300 pistettä/kehys → listat uudelleenkäyttöön, jos lennon aikana.
+
+## LISÄYS 21.5x (3): PT – MATALA PRIORITEETTI FPV:N JÄLKEEN (Linssiseppä levossa)
+NRE pelin sulussa: MuseoSovitin.Sulje:797 → MuseoTekstuurit.Vapauta:504 (NUI:n Louvre-ajo 2f7df0ced, lokit/nui-louvre-valinta-1-*).
+Korjaus: null-tarkistus Vapauta:504:ään (tai kutsupaikkaan), ei muuta. Haara 2f7df0ced:n päältä tai junan runko (tarkista ensin muiden haarat:
+git log --all -S "Vapauta" -- '*MuseoTekstuurit.cs'). unity-tarkistus sh:lla, vihreä PR kaavan mukaan.
