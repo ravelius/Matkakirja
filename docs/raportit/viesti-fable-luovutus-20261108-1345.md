@@ -43,3 +43,9 @@ NS ei nollaudu (2 käskyä); PT käski 13.45 nollaamaan itsensä kehä- ja FPV-r
 - Navan kehä ohitettiin, koska pari katsottiin kokonaisena pienennöksenä: reunat ja saumat rajattuina täysikoossa ennen "ei häivevyötä".
 - Suunta-/lippukuvat omistajalle koko ruutuna keskiristillä (KK 13.17; muisti suuntakuvat-koko-ruutu-keskikohta).
 - Kertojan tekstiin ei lukuja, jotka ovat yhä omistajan kortilla (×15).
+
+## Lisäys 13.55
+- KEHÄ RATKAISTU: NS A = 11b66adc5 junaan 222 (PT katsoi parit3/etela-reuna-verrokki-vasen-A-oikea.png täysikoossa), JU yhdistää → TF:n este poistuu, kun JU kuittaa.
+- UUSI: sisältöpaketti v1019 → v1020 (12.32–13.27) toi ruutukohinan kalotin merelle, Pohjois-Grönlannin vaalean vyön ja puuttuvia nimiä/rantaviivoja (myös verrokissa) → JU selvittää kuka/mitä; ei TF:ää ennen selvitystä.
+- OMISTAJAN PYYNTÖ 13.44 "Droneen kannattaa etsiä jokin valmis koodi": PK hakee MIT/Apache/BSD (ei GPL, Betaflight GPL-3.0) ja vertaa omaan lentomalliinsa 61fc67ce4 (natiivi-backup pelikoodari/fpv-lentomalli, 13/13 testiä) → valinta PT → KK ennen sovitusta. NS:lle rajapinta kerrottu (osa 4).
+- KK 13.47: topovideo omistajalle vasta iPad-ajona Williamin äänen ja ruutukuvien kanssa. KK nollautuu.
