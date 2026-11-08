@@ -49,3 +49,4 @@ NS ei nollaudu (2 käskyä); PT käski 13.45 nollaamaan itsensä kehä- ja FPV-r
 - UUSI: sisältöpaketti v1019 → v1020 (12.32–13.27) toi ruutukohinan kalotin merelle, Pohjois-Grönlannin vaalean vyön ja puuttuvia nimiä/rantaviivoja (myös verrokissa) → JU selvittää kuka/mitä; ei TF:ää ennen selvitystä.
 - OMISTAJAN PYYNTÖ 13.44 "Droneen kannattaa etsiä jokin valmis koodi": PK hakee MIT/Apache/BSD (ei GPL, Betaflight GPL-3.0) ja vertaa omaan lentomalliinsa 61fc67ce4 (natiivi-backup pelikoodari/fpv-lentomalli, 13/13 testiä) → valinta PT → KK ennen sovitusta. NS:lle rajapinta kerrottu (osa 4).
 - KK 13.47: topovideo omistajalle vasta iPad-ajona Williamin äänen ja ruutukuvien kanssa. KK nollautuu.
+- 13.46 JU: juna 222 kärki f9ab126ce (kehä A mukana, unity 0). Jäljellä ennen TF:ää: v1019→v1020-selvitys (JU).
