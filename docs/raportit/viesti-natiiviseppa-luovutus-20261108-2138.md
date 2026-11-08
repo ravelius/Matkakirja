@@ -47,3 +47,15 @@ SEURAAVAKSI (PT:n sanalla): NUI:n kosketustikut (osa 3) → FpvLento.Syote; Topo
 ## LISÄYS 21.5x: OMISTAJAN PÄÄTÖS 21.54 (PT:n kautta) "Jättiläisdrone (Suositus)" (VOITTAA lisäyksen 21.4x kohdan 1)
 FPV osa 4: Skaala = D/3 ≈ 9 333 (D 28 000 m), korostus ×15, EI loivennusta. Koko säädettävä myöhemmin lennon jälkeen (parametrit jäävät:
 fpv d). Codex tekee dronekuvat (≈ 190 m). Osa 4:n oletukset (FpvLento.D = 28000, Pienoismalli) ovat jo näin – ei koodimuutosta.
+
+## LISÄYS 21.5x (2): JU:N MAC-AJO 92125fce1 VALMIS 21.42 (VOITTAA "ODOTTAA" yllä) – lokit/natiiviseppa-fpv-osa4/
+rc 0, 7/7, shader 0, NRE 0, SIGSEGV 0; korkeushakuja 98, virheitä 0, ruudukko 1899 ruutua. Lento alkoi 46.30 6.865 (60 km maaston yllä, raja 28 km, ×15).
+Tikku eteen → 330 626 km/h ja heti 2 törmäystä (45.851 6.865, maasto × 15 = 56,8 km; 45.854, 54,7 km) → alkuun. Pitkä ruutu 946 ms (GC 8×).
+o-leijuu, o-eteen, o-lasku md5-identtiset (taivas, maasto alareunassa); o-kaantyi tasainen horisontti; o-manu-kallistus vino; o-fov120 piikkivuoret lähellä; o-pois OK.
+NS:N ALUSTAVA TULKINTA (tarkista lokista ennen korjausta): törmäys on luultavasti OIKEA – silmä = alun maasto × 15 + 60 km (~70–75 km), ja etelässä
+Mont Blancin massiivi × 15 + D = 56,8 + 28 ≈ 85 km > silmä. "maan yllä 56,4 km" oli alkupisteen rivi. Identtiset kuvat = drone palasi törmäyksestä
+alkuun ennen kuvaa (eteen ja lasku), joten kuva = alkunäkymä leijuessa; kamera 30° ylös vaakalennossa → enimmäkseen taivasta (oikea FPV näyttää samoin).
+TOIMET: (1) varmista lokista silmän korkeus ennen törmäystä (fpv-tilarivit) → jos silmä < maasto×15 + D, ei vikaa; (2) uusi skenaario: alku
+korkeammalta (h 100 km) tai pohjoiseen päin pois massiivista, kuvat KESKEN liikkeen (odota 1, ei 4) ja ennen törmäystä; harkitse kameraa 15–20°
+leijunnassa (kortti/PT, ei itse); (3) 946 ms ruutu: tarkista, onko alussa (ruudukon 1. haku / FpvLento.Aloita) vai lennon aikana – GC 8×:
+FpvMaasto.Hae varaa GetRange + double3[] joka haku, PyydaRuudukko enintään 300 pistettä/kehys → listat uudelleenkäyttöön, jos lennon aikana.
