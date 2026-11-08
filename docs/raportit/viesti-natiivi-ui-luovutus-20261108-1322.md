@@ -52,3 +52,10 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
 - Todiste: uusi pari SAMALLA rajauksella kuin _tyo/natiivi-ui/kartta-lukittu-2/lahi-invalides-vanha-vasen-kiintea-oikea.jpg
   (crop täysresoluutiosta (150,500,1000,1150), P = aja 48.856 2.335 0.03, kallista 45, suunta 0) + koko Pariisin näkymä → PT → KK.
   Ei junaan ennen KK:n/omistajan sanaa.
+
+## PÄIVITYS 13.28: PT — MERENPOHJA (jono: nähtävyydet ensin → MERENPOHJA → napautus-2-korjaus → kartta-lukittu-3)
+- Koko maailma ämpärissä + CDN tarkistettu (KS: julisteet/maasto/2026-11-08-kohokartta-merenpohja/, 699 051/699 051, 0 vikaa).
+- Tee: vaihda KohokarttaMaastoOletus 7ea8d6ebc:ssä (natiivi-ui/merenpohja-koe) osoitteeseen
+  https://media.matkakirja.app/julisteet/maasto/2026-11-08-kohokartta-merenpohja/ (layer.json), unity 0, push natiivi-backup.
+- Sitten merenpohjan parit 1–5 (Himalaja, Kuollutmeri, Alankomaat, Kaspia + tallenne) JU:lla → katso → PT.
+  Skenaariot ja parien kuvaus: luovutus -1025 (`git show 171cbc6fb:docs/raportit/viesti-natiivi-ui-luovutus-20261108-1025.md`, kohta 3 merenpohja).
