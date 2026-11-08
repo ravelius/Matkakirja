@@ -43,3 +43,7 @@ SEURAAVAKSI (PT:n sanalla): NUI:n kosketustikut (osa 3) → FpvLento.Syote; Topo
    lähiyksityiskohta (fpvlahi, 5a8933619: värjäys/kalliopinta tileset-varjostimessa, KorkeusKerroin.FpvLahi) vai tarkempi laattataso.
    Koe: sama drone-kuva "fpvlahi 0" vs oletus → jos ruskea katoaa, korjaa fpvlahi:n väri kohokartan paletille (tai pois). Pari PT:lle ≤ 3 riviä.
    Tehdään osa 4:n rinnalla.
+
+## LISÄYS 21.5x: OMISTAJAN PÄÄTÖS 21.54 (PT:n kautta) "Jättiläisdrone (Suositus)" (VOITTAA lisäyksen 21.4x kohdan 1)
+FPV osa 4: Skaala = D/3 ≈ 9 333 (D 28 000 m), korostus ×15, EI loivennusta. Koko säädettävä myöhemmin lennon jälkeen (parametrit jäävät:
+fpv d). Codex tekee dronekuvat (≈ 190 m). Osa 4:n oletukset (FpvLento.D = 28000, Pienoismalli) ovat jo näin – ei koodimuutosta.
