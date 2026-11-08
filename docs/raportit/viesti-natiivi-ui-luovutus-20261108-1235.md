@@ -94,3 +94,5 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
 - LIPPU 4.42 iPad 1f26c51b4 (lokit/nui-lippu-442-2-1f26c51b4, 8/8) KATSOTTU: tanko säteittäin ulos kaikissa, kangas ei painu karttaan käännetyllä,
   varjo näkyy. Kuvat _tyo/natiivi-ui/lippu-442-2/ lähetetty PT:lle (KK:lle); junaan PT:n sanalla.
 - JU 12.54: iPad-järjestys PK g+f → kartta-lukittu-2 17addbe2d → napautus-2 c33b2ebd1.
+- 13.17 NS:n Himalajan suunta 877f5d72d (etelästä muuriin, 28,5/84,5) fast-forward → natiivi-ui/topoesittelyt-221 = 877f5d72d (natiivi-backup).
+  Uusi Mac-video JU:lta vasta, kun KS:n ruutukuvat ovat mukana JA NS on korjannut tallenteen kellovian (NS ilmoittaa). Skenaario sk-topoesittely-1-mac.txt.
