@@ -207,3 +207,7 @@ ruskea 186/171/143 (myös verrokin tav-etela.png ulkokehä); 58–65° S vain 1�
 140–150 ja R−B < 26 erottaa meren. Jos kaava muuttuu toisin, kerro KS:lle (uusi kalottiversio puolessa minuutissa).
 Taulukko ja kuvat: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa-napakalotit-20261108/TULOS.md (+ esikatselu-*.png).
 Sitten iPad-pari JU:lla (tav-etela, tav-pohjoinen; sk-navat-ipad.txt) → PT; sitten korkeuskoe (yllä).
+
+## LISÄYS 11.5x: TOPO-POHJA VAIHTUI (NUI)
+NUI yhdisti 756f4962d (natiivi-ui/topoesittelyt-221) = b1d5c652f + 6c27282e1 (kyltti vasta kun kamera perillä: Perilla(), koukun kanssa vain
+lat/lon 5 % kaaresta, varmistus 3 × LentoS) + 48e5654ae (kyltin kerros); 2268/2268. JATKA TOPOA 756f4962d:N PÄÄLTÄ (ei b1d5c652f:stä).
