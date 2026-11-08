@@ -8,6 +8,13 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
 - Tanko radiaalisesti poispäin ruudun keskeltä: ruudun alaosassa alaspäin, keskellä lähes näkymätön. Pohjaksi 6834a6711:tä EDELTÄVÄ toteutus; 6834a6711 + 311eacd76 (lippu pystyyn) rikkovat 4.42:n (palautetaan/kumotaan ne lipun osalta).
 - Pari KK:lle (PT:n kautta): keski, ala, reuna ja kartta käännettynä; ajo JU:n vuorolla. Ennen merenpohjaa. Muisti: lippu Elsassissa ei vika (paikka), asento 4.42 ehtona.
 
+## 0b. LIPUN JÄLKEEN, ENNEN MERENPOHJAN PAREJA (OMISTAJAN PYYNTÖ klo 10.36 KK:n kautta, PT): kohokartta
+1) Kohokartassa kallistus 90°:een asti (muu peli ennallaan). 2) Topografialinssi avautuu OLETUKSENA kohokarttana; topokartta valikosta, valinta muistetaan
+(PlayerPrefs linssi.topografia.kohokartta: oletus 1, kun avainta ei ole; Topografia.MuistettuKohokartta/LinssiOhjain, 9c5116526). 3) Vaihtokytkin ☰-valikon SISÄÄN
+(omistajan sana ohittaa Raamatun 2.73:n sijoituksen; nyt LinssiUi kohoKytkin ☰:n vieressä). VS tekee sinertävän ilman ja rakeen.
+Omistajan kuva Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/kohokartta-borneo-iphone.png. Yhteinen pari KK:lle: Borneo 60° ja 90°, Alpit, kytkin valikossa.
+Pohja: juna 221 (kohokartta 5d6967444 siellä); merenpohjan haarat (97b4f29a9 / 7ea8d6ebc) yhdistetään myöhemmin.
+
 ## 1. KIIRE: puuvika (omistaja 09.49 TF 221 "Puut yms liikkuvat tai sammuvat panoroidessa"), korjaus tehty, pari JU:lla
 - Omistajan kuvat (Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/puut-panorointi-1/-2.png) olivat sama tila ~90 px siirrolla: täysikokoisena nurmet ja puut samat (PT luki pienennöksestä beigeksi). Rajaus _tyo/natiivi-ui/omistaja-puut-petit-palais-rajaus.png.
 - Diagnoosi lokit/nui-puut-panorointi-1-5d6967444 (iso iPad, sk-puut-panorointi-1.txt): `ui kartanelama tila` nimiltä 5 300–16 100 puuta pois, vaihtelee liikkeessä nimien mukana; puut pois -kuva: puistojen vihreä ON puita, piirroslaatan nurmi alla beige. Arkki _tyo/natiivi-ui/puut-panorointi-1-katsottu/arkki.jpg.
