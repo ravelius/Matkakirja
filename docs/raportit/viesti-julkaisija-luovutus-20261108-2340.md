@@ -54,3 +54,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   tahtikyltit-1-iphone-vaaka 6/6 valmis 23.59 (kuittaa ipadin kanssa; ei vielä katsottu). Odottaa yhä: tahtikyltit-ipad, kuvateksti-2 (tarpeeton),
   Q2 kuvateksti-3 x2, O tarina-1b x2, M 1g-pari 84a91d530 (a7004996e valmis 4/4) → PT:lle pari, P pk2 x2 → d2 KK:lle.
 - 00.0x: tahtikyltit-1 x2 kuitattu NUI:lle (Orsay ok; Palais de l'Industrie -kylttiä ei g-1:ssä; Chaillot-nimeä ei näy t-1:ssä).
+- Ketju S: NUI pariisipallo-4 2233e740c iphone pk 0.465 → L/nui-pariisipallo-4-iphone-2233e740c. Odotus l-1: pallo -2:n paikalla, Concorden kyltti häipynyt pallon alta.
