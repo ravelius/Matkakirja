@@ -45,3 +45,14 @@ unity-tarkistus 0 virhettä, kielivahti ja pohjavahti ok.
 ## Käsitelty tässä istunnossa
 - Postivahdin aloitusviesti (osoitti -2215:een; uudempi -2230 luettu ja noudatettu).
 - 1c–1g ovat PK:n (1f päätetty kortilla 22.4x, ei NUI:n).
+
+## Lisäys 22.5x (viestit luovutuksen jälkeen)
+- JU 22.4x: kameratappi-1 kaikki 3 kokoa ajettu, tappi piilossa kaikissa = sama syy kuin yllä; korjaus 73498d875 ja -2-ajot jo pyydetty. Ei uutta.
+- PT 22.4x: vahvisti 22.32-pyynnöt 1a/1b/2/3 (= kohta 3 yllä, tehty 10845cd24); kuitattu PT:lle.
+- UUSI JONOON (PT, omistajan pyynnöt 22.40, iPad TF 223; 22.32-erän jälkeen): Pariisin kartta A pyöreät kuvamerkit syttyvät vasta kaupungin
+  tasolla (ei seudun), B kuumailmapallo + hintakyltti lukittu samaan karttapisteeseen kaikilla lähennyksillä (Raamattu 2.216), C pallo näkyy
+  myös lähimmällä tasolla. Tiedot ja kuvat: /Users/Shared/Claude/Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/2240-pyynnot.md.
+  Oma haara junan kärjestä, Mac-kuvat iPhone + iPad PT:lle ennen junaa. Ei aloitettu. (A: kuvamerkit = SaapumisKuvat pienet / NostotKartalla
+  .AsetaKuva, portti Kohdenostot.Lahella → vertaa NostoSaannot.KaupunkiPortti, taso ≥ 12.)
+- KS 22.4x tiedoksi: LinssiPeite.cs junaversiossa karttaseppa/topo-sulku-juna 7de518cde: häivytys koodilla (experimental.animation 250 ms,
+  display None OnCompleted), luokkaa .mk-linssipeite--haipyy ei enää lisätä – USS-säännön voi poistaa myöhemmin (NUI:n tiedosto). Ei kiire.
