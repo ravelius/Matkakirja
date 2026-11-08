@@ -56,3 +56,8 @@ unity-tarkistus 0 virhettä, kielivahti ja pohjavahti ok.
   .AsetaKuva, portti Kohdenostot.Lahella → vertaa NostoSaannot.KaupunkiPortti, taso ≥ 12.)
 - KS 22.4x tiedoksi: LinssiPeite.cs junaversiossa karttaseppa/topo-sulku-juna 7de518cde: häivytys koodilla (experimental.animation 250 ms,
   display None OnCompleted), luokkaa .mk-linssipeite--haipyy ei enää lisätä – USS-säännön voi poistaa myöhemmin (NUI:n tiedosto). Ei kiire.
+- iPad 70 % -2 (79351459b) AJETTU JA KATSOTTU 22.5x: Notre-Dame ~55 % → ~62 % ruudun korkeudesta (lokissa "täyttö 0.93, zoomi 1.24"),
+  Eiffel zoomi 1,01 (ennallaan), zoomi palaa 1,0. 70 % ei täysin. Parit PT:lle: lokit/nui-ipad70-2-ipad-79351459b/pari-*.jpg. Odottaa PT/KK:n
+  sanaa; jos halutaan lähemmäs 70 %:a: täyttö mittaa mallin laatikkoa (huippu 710 m), näkyvä torni jää matalammaksi → nosta täyttöä tai mittaa
+  näkyvä korkeus ruudulla.
+- JU:n ketju A käytti vielä bb0509e46:ta nostokuville; korjauspyyntö 10845cd24 + tarina lähetetty 22.5x – tarkista lokikansioiden sha.
