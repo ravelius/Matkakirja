@@ -64,3 +64,7 @@ FpvMaasto.Hae varaa GetRange + double3[] joka haku, PyydaRuudukko enintään 300
 NRE pelin sulussa: MuseoSovitin.Sulje:797 → MuseoTekstuurit.Vapauta:504 (NUI:n Louvre-ajo 2f7df0ced, lokit/nui-louvre-valinta-1-*).
 Korjaus: null-tarkistus Vapauta:504:ään (tai kutsupaikkaan), ei muuta. Haara 2f7df0ced:n päältä tai junan runko (tarkista ensin muiden haarat:
 git log --all -S "Vapauta" -- '*MuseoTekstuurit.cs'). unity-tarkistus sh:lla, vihreä PR kaavan mukaan.
+
+## LISÄYS 22.05 (5): PT – LISÄYKSEN 3 NRE PERUTTU
+MuseoSovitin.Sulje:797 → MuseoTekstuurit.Vapauta:504 -NRE poistuu listalta: JU:n mukaan vanha (21.10. alkaen) ja syntyy vain editorin
+sulkeutuessa museossa, ei pelaajalle. EI TEHDÄ.
