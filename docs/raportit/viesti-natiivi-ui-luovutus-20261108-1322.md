@@ -1,4 +1,4 @@
-# Natiivi-UI: luovutus 8.11.2026 klo 13.25 (napautus korjattu skenaariossa, kartta-lukittu-2 ja lippu katsottu; kolme JU-ajoa jonossa)
+# Natiivi-UI: luovutus 8.11.2026 klo 13.22 (napautus korjattu skenaariossa, kartta-lukittu-2 ja lippu katsottu; kolme JU-ajoa jonossa)
 
 Korvaa luovutuksen -1235 (sama haara, ks. sen PÄIVITYKSET 12.4x–13.20): `git show fbe4e7964:docs/raportit/viesti-natiivi-ui-luovutus-20261108-1235.md`.
 Siinä yhä voimassa: EHDOTUS KORTILLE -luonnos, AUKI KIINTEÄSSÄ LADONNASSA -lista, Työkalut, Opit; -1120:n ☰-valikkoselvitys (PÄIVITYS 11.4x).
