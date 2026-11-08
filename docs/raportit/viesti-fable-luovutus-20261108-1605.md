@@ -35,3 +35,6 @@ NS, KS (2×), NUI (2×), JU, PK, Postivahti (2×). KK nollautui 16.0x omistajan 
 - Kuva katsotaan täysikoossa reunasta: PT ohitti kuviottoman kiekon pienennöksessä, NS mittasi kalotin sisältä. Mittaus sisä vs ulko.
 - Kuvakokeen johtopäätös vasta, kun syy tunnetaan: drone-kuvien "seinät" olivat osin usvaa.
 - Skenaario tarkistetaan ennen iPad-ajoa (NUI 4 ajoa hukkaan).
+
+## Lisäys 16.1x
+- Juna 222 kärki a774658a9 (= f9ab126ce + NUI ef81c021d, unity 0). KiinteaLadonta.Paalla oletus false → NUI kääntää päälle (PT 16.1x) → sha JU:lle junaan.
