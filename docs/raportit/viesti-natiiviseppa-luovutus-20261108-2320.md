@@ -30,3 +30,6 @@ Varjostimen regenerointi: python3 -I Assets/Matkakirja/Shaders/Cesium/Lahde~/tee
 2. Muuten jono tyhjä → rivi PT:lle "JONO TYHJÄ: Natiiviseppä".
 Huom. JU:n ajot: skenaarioihin `komento maasto siirtyma 5 0 30` ennen ensimmäistä ajaa, kun laattataso ratkaisee (muisti mac-batch-tarkkuus).
 FPV (koe): kameran kulma 15–20° leijunnassa = PT/kortti, ei itse (osa 4b: maa vain alareunassa 30° ylös + horisontti −11°).
+
+## LISÄYS 23.2x: PT KUITTASI REUNAPIIKIT b2761f67b, JU:LLE "junaan 223" LÄHETETTY (VOITTAA jonon kohdan 1)
+Jono tyhjä → seuraava NS: rivi PT:lle "JONO TYHJÄ: Natiiviseppä" (luo cron ensin).
