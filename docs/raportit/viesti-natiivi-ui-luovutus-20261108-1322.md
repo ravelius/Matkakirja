@@ -59,3 +59,12 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
   https://media.matkakirja.app/julisteet/maasto/2026-11-08-kohokartta-merenpohja/ (layer.json), unity 0, push natiivi-backup.
 - Sitten merenpohjan parit 1–5 (Himalaja, Kuollutmeri, Alankomaat, Kaspia + tallenne) JU:lla → katso → PT.
   Skenaariot ja parien kuvaus: luovutus -1025 (`git show 171cbc6fb:docs/raportit/viesti-natiivi-ui-luovutus-20261108-1025.md`, kohta 3 merenpohja).
+
+## PÄIVITYS 13.30: TOPOESITTELYT — NS 79f8a637b yhdistetty, VIDEO JU:lla
+- natiivi-ui/topoesittelyt-221 = 79f8a637b (ff; NS: Himalaja etelästä 877f5d72d, kierto hiipuu KohdeKiertoHiivu, tallenteen kello = kameran kello).
+- sk-topoesittely-1-mac.txt: lopussa odota-peli 14 (Himalajan kierto loppuun). JU pyydetty → lokit/nui-topoesittely-2-79f8a637b/mac.
+  KATSO video: kyltit SK:n mukaan, Himalaja muurina etelästä, kierrot loppuun ilman pysähdystä/hyppyä (NS: kerro jos Alppien kierto pysähtyy
+  kesken tai Himalajan jatko hyppää; unity.log topokierto-rivit: kellot linssi/peli/unscaled/seinä). Sitten video PT:lle → KK
+  (KS:n ruutukuvat puuttuvat yhä, mainitse).
+- NS:n vihje napautushaaraan (natiivi-ui/nahtavyyden-napautus-222): NahtavyysEsittely.Hiivuta = k => k.KohdeKiertoHiivu() (vaatii NS:n
+  PalloKierto-muutoksen 79f8a637b → yhdistä ensin); oletuksen k.Aja(...0.05) pysäytys on liian jyrkkä.
