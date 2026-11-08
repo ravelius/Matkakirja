@@ -31,3 +31,9 @@ Jos viiva jää: tarkista konsolista "taivas kartta: maaston takana True", sitte
 SITTEN: FPV osa 4 (PT:n sanalla; lentomalli PK 61fc67ce4, Skaala = D/3, EI kertoimen muutosta; suunnitelma
 Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md).
 Kaikki koe, ei junaan.
+
+## LISÄYS 20.5x: D-AJO fe37c4ae2 KUITATTU PT:lle (VOITTAA "ODOTTAA" ja "KUN KUITTAA" yllä)
+JU:n Mac-ajo 8/8, ei kaatumista: sininen aukko ja vaakaviiva poissa. D = 28 000 m → Skaala ≈ 9 333 (20 km puoliksi, 15 km lähes kokonaan ×15-seinää).
+UUSI AVOIN (PT): usvaan häipynyt kaukomaasto näkyy kermana sinistä taivasta vasten (sahalaitainen kaista yläreunassa).
+Kuittaus: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/fpv-viat/kuittaus/ (MITTAUS.txt, pari 40 km, sarjat).
+SEURAAVA: PT:n vastaus (kermakaista / FPV osa 4).
