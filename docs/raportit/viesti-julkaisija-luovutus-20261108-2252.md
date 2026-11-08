@@ -68,3 +68,6 @@ Ketju C (13187) pysäytetty 23.0x (NUI: ipad70-3 nostokuvien edelle). Uudet nohu
   NS:lle: shader-virheet/NRE/SIGSEGV + rp-b-atlantti-pois md5 1 vs 2.
 Kuittaamatta myös: NUI kameratappi-2 x3 (4/4 kaikki), nostokuvat kuvateksti-iphone 6/6; NS reunapiikit-a 5/5 (md5-eri 4).
 Tilaajille kerrottu jonotus (NUI, KS, NS). Valmis-rivi kustakin kun kuvat katsottu.
+- I (pid 41594, 23.2x): PK juoksu-223 ac4bff77a (1c+1g+1f) iphone + ipad H:n jälkeen, sk /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-223/sk-1f-1g-ju.txt
+  (JU kirjoitti: avaus loppuun + ohjaamaton juoksu, tallenne "juoksu") → L/pk-juoksu-223-{iphone,ipad}-ac4bff77a. TARKISTUS: "avaus: OhjausPelaajalle",
+  "alkukaanto", ei "seinan edessa" ennen ohjausta. Kuvat + video KK:lle (local_37f7c945) ilman leikkauksia, rivi PT:lle ja PK:lle (local_91a1bc27-6870-46aa-9886-66fd33b68880).
