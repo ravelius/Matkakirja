@@ -51,6 +51,20 @@ Luovutushaara natiiviseppa-luovutus-20261108-1445. Cron "4 9 * * *" (unity-julka
 - PT kysyi oliivista: vastattu. Laattojen meri muuttuu junassa 222 (ffc355105 ElavaTyyli.Varita vesiraja: syvä meri vedeksi KOKO maailmassa z ≤ 10,
   TF beige 193–209 → oliivi 146–160). Omistajan 10.34 päätös koski napoja; maailmanlaajuinen muutos ei ole erikseen hyväksytty → PT:n/KK:n päätös. Jos PT pyytää: maailmapari TF | 222.
 
+## LISÄYS 15.1x (VOITTAA kohdan 2 järjestyksen)
+JONO: savy/ (641fd439e) ja MAAILMAN MERIPARI ensin, sitten FPV A/B.
+A) MAAILMAN MERIPARI (PT 15.1x → KK → omistaja; maailmanlaajuista meren sävyn muutosta EI hyväksytty): ffc355105 vesiraja muuttaa syvän meren
+   beigestä oliiviksi koko maailmassa z ≤ 10. Atlantti valmis vanhoista ajoista: _tyo/natiiviseppa/navat-koho/meripari/atlantti-TF-vasen-222-oikea.png
+   (PT:lle lähetetty; huom. oikealla "Atlantin valtameri" -nimi lähes näkymätön oliivilla). JU:lta pyydetty 15.1x: sk-meripari.txt (Atlantti, Tyyni
+   0 -160 80, Eurooppa 50 10 25) TF 5d6967444 → lokit/natiiviseppa-meripari/tf/ ja 222 (641fd439e) → .../222/ (ajopyynto-meripari.md).
+   KUN KUITTAA: parit täysikoossa (vasen TF | oikea 222) PT:lle ≤ 3 riviä.
+B) FPV-KUVAKOE TARKENTUI (OMISTAJAN PÄÄTÖS 14.47 "Korostus pysyy", ×15 jää; omistaja haluaa KERTOIMEN pienemmäksi; KK:n tulkinta, PT 15.1x):
+   D pienenee, kun ×15-kartta tarkentuu lähellä: värit ja varjot reaaliajassa WorldDEM-30-verkosta (~19 m) samalla paletilla ja valolla kuin
+   kohokartassa; 430 m/px -rasteria ei dronen lähellä. KUVAKOE: sama kohta useammalta etäisyydeltä KAHDELLA tavalla, A nykyinen (= JU:n
+   pienoismalliajo b45bbe356, sk-fpv-pienoismalli-nui) ja B tarkka lähellä (EI TEHTY: vaatii varjostimen, joka laskee värin korkeudesta ja varjon
+   verkon normaalista kohokartan paletilla ja valolla; selvitä Topografia.cs:n paletti ja kohokartan valo, toteuta proto-haaraan 2efebff6e/b45bbe356:n
+   päälle, sama skenaario). Kummastakin D metreinä ja Skaala = D/3. Nimet, minipallo ja tietorivi mukaan, jos NUI:n osat valmiit.
+
 ## ---- 14.15:n luovutus sellaisenaan ----
 # Natiivisepän luovutus 8.11.2026 klo 14.15
 
