@@ -36,3 +36,8 @@ Peruttu: NUI pariisipallo-1-ipad (tilalle -2); pariisipallo-1-iphone ajettu mutt
 
 ## Nollaus: tämä luovutus + "LUOVUTUS VALMIS <sha>" Postivahdille (local_afae44f0-722b-4541-a3b8-30ca4f76543b).
 Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
+
+## LISÄYS 23.4x (TUOREIN)
+- Ketju P (PK): M:n jälkeen sk-1f-1g-pk2.txt 0cc5ac36c iphone (pysty) + ipad → L/pk-juoksu-223-pk2-{iphone,ipad}-0cc5ac36c. Lokissa EI saa olla PUUTE-rivejä.
+  Valitse d2a/d2b/d2c:stä se, jossa eunukin kasvot näkyvät ovilehden reunalla → KK:lle (ilman leikkausta), polku + aika PK:lle.
+  Vanhoja ac4bff77a- ja M:n ipad-0cc5ac36c-kuvia EI KK:lle (vanha sk). Syy (PK): avauksen kello kulkee tallenteessa reaaliajassa.
