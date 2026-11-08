@@ -257,3 +257,6 @@ ca92af647 uusinta VALMIS 11.56: 4/4 kuvaa (etela, pohjoinen, tav-etela, tav-pohj
 
 ## LISÄYS 11.58: ALOITUSLENTO j4 AJETTU (JU)
 j4 491bec23b VALMIS 11.58: rc 0, KYLMA ok, kuvia 2/2, pyyntörivejä 5311, kansio lokit/natiiviseppa-striimi-aloituslento-4 (pyynnot.tsv siellä; HUOM polku ilman /j4?: tarkista). Lukuohje TILA 11.15 kohta 2.
+
+## LISÄYS 12.0x: ESITTELYLIIKKEEN KOUKUT (PT)
+NUI teki napautuksen osan 2 ae84dd1dd (haara natiivi-ui/nahtavyyden-napautus-222): palkki + kertoja + väliaikainen lento/kierto ≤ 90°. NS:n koukut: NahtavyysEsittely.Kamera ja NahtavyysEsittely.Hiivuta (pehmeä pysähdys luennan lopussa) sekä topopilotin TopoEsittely.Kamera (581f7f85a; nyk. 756f4962d). Rakenna yhteinen esittelyliike PalloKiertoon näihin koukkuihin (lähtökohta: oma KohdeKierto/KohdeKiertoOhje b1d5c652f:ssa). Jono: navat (ffc355105 JU:lla) → tämä → korkeuskoe.
