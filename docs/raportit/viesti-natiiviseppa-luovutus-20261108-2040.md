@@ -37,3 +37,10 @@ JU:n Mac-ajo 8/8, ei kaatumista: sininen aukko ja vaakaviiva poissa. D = 28 000 
 UUSI AVOIN (PT): usvaan häipynyt kaukomaasto näkyy kermana sinistä taivasta vasten (sahalaitainen kaista yläreunassa).
 Kuittaus: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/fpv-viat/kuittaus/ (MITTAUS.txt, pari 40 km, sarjat).
 SEURAAVA: PT:n vastaus (kermakaista / FPV osa 4).
+
+## LISÄYS 21.0x: PT:N PÄÄTÖS (VOITTAA "SEURAAVA" yllä)
+PT kuittasi fe37c4ae2:n, D = 28 000 m HYVÄKSYTTY. KERMAKAISTA KORJATAAN ENNEN OSAA 4 (näkyvä vika: litteä sahalaitainen seinä sinistä taivasta
+vasten 40–120 km). PT:n halvin toimiva: usvan väri horisontin lähellä = taivaan liukuvärin sävy samalla ruudun korkeudella (tai kaukomaasto
+häivytetään taivaan väriin). Vihje: Karttataivas.shader laskee liu'un ruudun y:stä (_Raja, _Voima, _Kaari, _Vari); drone/FPV-tilassa
+(Karttataivas.MaastonTakana) sama käyrä tileset-varjostimen sumuun tai sumun väri RenderSettings.fogColor → liu'un sävy rajan yllä.
+Mac iPad-koossa sama sarja sk-fpv-d.txt (JU) → pari PT:lle → KK. Sitten FPV osa 4.
