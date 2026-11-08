@@ -40,6 +40,11 @@ Numpy/PIL: /opt/homebrew/bin/python3.14 -P skripti.py (EI -I: user site puuttuu 
 5. JONO: KS:n beige-poltto (kun tulee) → topoesittelyn kuvat → FPV A/B (sk-fpv-ab) → kohokartan napakalotit (14.45 kohta 3) → FPV osa 4.
    Asemataulu: PT kirjaa junat; työlistan muiden rivit (Lontoo, iPhone, Muuri) eivät ole NS:n.
 
+## LISÄYS 15.5x (luovutuksen jälkeen; VOITTAA kohdan 4)
+- TOPOESITTELY fdd642058 KUITATTU PT:lle (JU Mac 8/8, Shader-error 0; lokit/natiiviseppa-topoesittely/kamera/es-*.png): perillä + kierto
+  loppui 2×, kallistus pysyy, osittainen kierto. Seuraava: NUI kytkee valikkoon; esilataus ennen laskua avoin. Ei NS:n jonossa.
+- JU 15.4x: FPV B sk-fpv-ab-ajo T/ns-fpv-ab.zsh (pid 68399) topoesittelyn jälkeen → lokit/natiiviseppa-fpv-b/.
+
 ## ---- 15.22:n TILA sellaisenaan ----
 ## TILA 8.11. 15.22 (VOITTAA kaikki alla olevat; alla olevan 14.45:n kohdat 1, LISÄYS 15.1x A ja 15.2x ovat VANHENTUNEET)
 1. BEIGE NAVAT = JUNAN 222 TF:N ESTE, JONON KÄRKI. OMISTAJAN PÄÄTÖS 14.51 "Ei, beige säilyy" (korvasi 14.50:n "Kelpaa"; PT 15.3x/15.4x):
