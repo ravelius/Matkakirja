@@ -86,3 +86,10 @@ Pohja: sk-puut-panorointi-1/-2 (kuvat kesken liikkeen, `ui kartanelama tila`); a
   `ui nahtavyysesittely 0|1|tila|kierto <ast> <s>|kaari <a>`. iPad-ajo sk-nahtavyysnapautus-1.txt JU:lla → lokit/nui-nahtavyysnapautus-1-ae84dd1dd.
   SEURAAVAKSI: katso 8 kuvaa (ennen, lento, keskitetty, kierto puoliväli, palkki, palkista auki, suljettu, sormi) → kuvasarja PT:lle → KK.
   Ei koeversioon ilman omistajan sanaa. Osa 3 (nimet lukittuna kierron aikana) 2.216-tuloksen jälkeen; jono sitten ☰-valikko.
+
+## PÄIVITYS 12.2x: 2.216-MITTAUS KATSOTTU (lokit/nui-kartta-lukittu-1-756f4962d, 24/24)
+- Tulos proto-3d/_tyo/natiivi-ui/kartta-lukittu/tulos-kartta-lukittu-1.md + 3 paria samassa kansiossa (lähetetty PT:lle).
+- PÄÄLÖYDÖS: kartan nimet asettuvat SAMASSA kamerassa eri kohtiin kuljetun reitin mukaan (Pariisi lepo A/B: Palais Bourbon ylhäältä alas,
+  Kunnialegioonan museo katosi; pallolla Marseille). Syy lepoladonnan muisti: NimiLadonta.cs:645–646 (edellinen väistöpaikka) + 667–668
+  (Ehdokas.Edellinen). Puut seuraavat nimiä. Merkit EIVÄT liu'u (Kohdenostot-epäily ei näy); lähitasolla kuvat hyppäävät kyljeltä toiselle
+  (Concorde 145 pt); nimet vaakassa kierrossa. Rooma A = B pikselilleen. Ei muutoksia ilman korttia; ehdotus: ladonta pelkästä kamerasta.
