@@ -118,3 +118,11 @@ NUI-ajo luettu ja raportoitu PT:lle (M/tulos.md "Vaihe 1:n NUI-tarkistukset"). O
 
 ## LISÄYS 02.26: KOHDAT 2 JA 3 TEHTY
 n4 (kauempaa): valitsin auki, näkymä Linssit, 10 linssiä + Keskeneräiset, ei tyhjä eikä musta (L/natiiviseppa-muisti-nui/n4/valitsin.png katsottu). Vaihe 1 808b502b4 annettu JU:lle junaan 221 02.26 (kärki ab113e0ac ennallaan), PT:lle raportoitu. Jäljellä vain kohta 4 (striimi-ajo JU:lla).
+
+## LISÄYS 11.12: NAVAT-AJO
+- Verrokki 5d6967444 VALMIS (JU 11.02, iso iPad, 4/4 kuvaa, huippu 3092 Mt, kohokartta konsolista varmistettu): lokit/natiiviseppa-navat-koho/verrokki/.
+  NS katsoi etela + tav-etela: paperikalotti ~60° S:iin ja häivevyö molemmissa (vika toistuu, kuten odotettu).
+  Ensimmäinen verrokkiajo 10.48 hylätty (väärä skenaariokomento), kuvat VANHA-vaara-skenaario-verrokki/: ÄLÄ käytä.
+- UUSI ca92af647 JU:lla käännöksen jälkeen → lokit/natiiviseppa-navat-koho/uusi/. KUN KUITTAA: /opt/homebrew/opt/python@3.14/bin/python3
+  /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/navat-koho/parit.py (parit/ samaan kansioon, vasen verrokki, oikea uusi), katso täysikoossa,
+  konsoli.txt:stä "kohokansi mitattu N/16" (16/16 odotettu). Sitten luovutuksen kohdan 0 mukaan (parit KK:lle, PT:lle ≤ 3 riviä).
