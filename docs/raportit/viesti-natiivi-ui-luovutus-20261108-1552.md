@@ -39,3 +39,13 @@ a) JU: merenpohja-1b c54d3ba0d → napautus-4 491fdf026 → topoesittely-4 d48ce
      Jos yhä "ei mitään": syy oikean sormen kannalta → PT. AVOIN: 3D-mallin kyltti ei esittele (kysymys PT:lle kuvien kanssa).
    - topoesittely-4: loki "topoesittely <id>: AjaEsittelyyn", "perillä"; video → vain PT.
 b) FPV: NS:n A/B-tulos (maasto) ja pm-kuvat; avoimet (tikut 64 pt, vuoret peittävät nimet) PT:lle kuvien kanssa.
+
+## LISÄYS 16.1x (luovutuksen jälkeen tehty – ÄLÄ TOISTA)
+- topoesittely-4 d48ce3917 katsottu (Mac-video, vain PT:lle): Alpit 0→330 24 s, Himalaja tauko+jatko nykyisestä suuntimasta ✓.
+  _tyo/natiivi-ui/topoesittely-4/arkki.jpg. PT:lle kerrottu.
+- merenpohja-1b katsottu: parit kelpaavat (9/9 eri; JU:n lähetysvirhe ei haitannut). Viety KK:lle PT:n pyynnöstä 16.1x
+  (Mariaanien piikit ×15-rinteitä, pallonäkymässä ero pieni). _tyo/natiivi-ui/merenpohja-1b/. Seuraava: tallenne sk-merenpohja-2 (TARKISTUS!).
+- JUNA 222: kiinteä ladonta oletuksena päällä b3914b64b (natiivi-backup natiivi-ui/kiintea-oletus-222 = JU:n a774658a9 + 1;
+  OMISTAJAN PÄÄTÖS 16.0x "Kelpaa"). Kartta-testit 720/720, unity 0. Sha annettu JU:lle ja PT:lle.
+- Proto-työkopio nyt haaralla natiivi-ui/kiintea-oletus-222 (puhdas).
+- JU:n jonossa enää napautus-4.
