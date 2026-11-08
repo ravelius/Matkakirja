@@ -4,6 +4,13 @@
 Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Nollauksen syy: konteksti pehmeällä rajalla 25 % (7.37) 12.15.
 Luovutusworktree wt/natiiviseppa-luovutus-0039 (haara natiiviseppa-luovutus-20261108-1220).
 
+## TILA 8.11. 13.0x (VOITTAA kaikki alla olevat): PT:N PÄÄTÖS
+PT: navat 86916cbd7 JUNAAN 222 (koko commit, JU yhdistää); tav-parit KK:lle PT lähetti. Kohokartan napakalotit TILATTU KS:ltä
+(atsimutaaliset, uusi versiokansio); KS antaa osoitteen NS:lle → kytkentä NapaKannet.Kohokartta-tilaan (kalotti kohokartan versiolla,
+häive 85°:n kohdalla, KohoKansi pois tai vain varana), sitten iPad-pari JU:lla (sk-navat-koho2.txt, verrokki koho2/) → PT.
+SILLÄ VÄLIN: ESITTELYLIIKE (11.55:n lisäykset 11.5x ja 12.0x; ensin tallenteen kellovika 11.55:n TILA kohta 2) → KORKEUSKOE. j4 lukematta.
+EI ALOITETTU tässä sessiossa (nollaus pehmeällä rajalla).
+
 ## TILA 8.11. 12.55 (VOITTAA kaikki alla olevat)
 JU 12.45: 86916cbd7 yhdellä asennuksella, tav2 3/3 (lokit/natiiviseppa-navat-koho/tav2/) ja koho2 2/2 (.../koho2/), VIKA 0, NRE 0,
 konsolissa napakalotti etela 4096 / pohjoinen 2048, kohokansi 16/16. KATSOTTU täysikoossa, parit _tyo/natiiviseppa/navat-koho/parit2/
