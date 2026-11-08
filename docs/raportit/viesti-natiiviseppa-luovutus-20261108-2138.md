@@ -69,14 +69,14 @@ git log --all -S "Vapauta" -- '*MuseoTekstuurit.cs'). unity-tarkistus sh:lla, vi
 MuseoSovitin.Sulje:797 → MuseoTekstuurit.Vapauta:504 -NRE poistuu listalta: JU:n mukaan vanha (21.10. alkaen) ja syntyy vain editorin
 sulkeutuessa museossa, ei pelaajalle. EI TEHDÄ.
 
-## LISÄYS 22.3x (6): NS – OSA 4 -LOKI TARKISTETTU, FPV-TAIVAS KORJATTU e152a9959, OSA 4b JU:LLA (VOITTAA lisäyksen 2 TOIMET)
+## LISÄYS 22.1x (6): NS – OSA 4 -LOKI TARKISTETTU, FPV-TAIVAS KORJATTU e152a9959, OSA 4b JU:LLA (VOITTAA lisäyksen 2 TOIMET)
 Cron "4 9 * * *" luotu uudelleen (2712a233). Lokin tulos: törmäykset 1–10 AITOJA (silmä ≈ alun maasto × 15 + 60 km ≈ 82 km < Mont Blanc 56,8 km + D 28 km;
 lasku -1 vie 32 km ≈ 3,4 m oikeaa alle sekunnissa) → ei vikaa. 750–950 ms ruudut (6 kpl, GC 8×, "ulkona") = kuvakaappaukset, ei lennon aikana → ei korjausta.
 VIKA kuvista: Karttataivaan liuku ruudun rivissä kiertoradan kallistuksesta (katse 5–89° alas), FPV-kamera 30° ylös → kerma täytti puoli taivasta
 (raja 0,44, horisontti 0,95) ja raja pysyi vaakana rollissa (o-manu-kallistus). Korjaus e152a9959 (natiiviseppa/fpv-viat, natiivi-backup):
 FPV:ssä t = (säteen korkeuskulma − horisontin painuma) / jänne 35°, kerrokset koko ruudulle; FpvLento kirjoittaa Karttataivas.FpvRajaRad/FpvYlos.
 Komento "taivas kartta fpv 0|1|jänne". unity-tarkistus sh 0 virhettä (varjostinta ei käännetty).
-ODOTTAA: JU:n Mac-ajo osa 4b (pyydetty 22.3x): _tyo/natiiviseppa/fpv-osa4b/sk-fpv-osa4b.txt → lokit/natiiviseppa-fpv-osa4b/ (11 kuvaa).
+ODOTTAA: JU:n Mac-ajo osa 4b (pyydetty 22.1x): _tyo/natiiviseppa/fpv-osa4b/sk-fpv-osa4b.txt → lokit/natiiviseppa-fpv-osa4b/ (11 kuvaa).
 Tarkista: l-28km-lahi1 vs lahi0 (ruskea kivi = fpvlahi? → korjaa fpvlahi:n väri kohokartan paletille tai pois; pari PT:lle); l-leijuu vs
 l-leijuu-vanha (raja horisontissa); l-manu-kallistus (liuku kallistuu); kesken-kuvat liikkeessä, ei törmäystä; shader-virheet 0.
 Huom. omistajalle/PT:lle myöhemmin: jättiläisdronen silmä 80–120 km → horisontti painuu 9–11°, joten 30° ylös leijuessa maa ruudun alareunassa
