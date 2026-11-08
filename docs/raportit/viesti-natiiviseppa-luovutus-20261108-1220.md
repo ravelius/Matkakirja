@@ -4,6 +4,17 @@
 Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Nollauksen syy: konteksti pehmeällä rajalla 25 % (7.37) 12.15.
 Luovutusworktree wt/natiiviseppa-luovutus-0039 (haara natiiviseppa-luovutus-20261108-1220).
 
+## TILA 8.11. 12.55 (VOITTAA kaikki alla olevat)
+JU 12.45: 86916cbd7 yhdellä asennuksella, tav2 3/3 (lokit/natiiviseppa-navat-koho/tav2/) ja koho2 2/2 (.../koho2/), VIKA 0, NRE 0,
+konsolissa napakalotti etela 4096 / pohjoinen 2048, kohokansi 16/16. KATSOTTU täysikoossa, parit _tyo/natiiviseppa/navat-koho/parit2/
+(pari2.py koho-rajaukset uusi|koho2, pari3.py tav verrokki|tav2).
+- TAVALLINEN KARTTA OK: meri veden värinen napaan asti, ei häivevyötä, Etelämanner samaa tyyliä, maapallolla maa ei vedeksi.
+- KOHOKARTTA EI VIELÄ: viuhka pois, mutta 85°→napa yhä tasainen sumea kiekko (etelä tummanruskea, pohjoinen tumma sininen).
+  Syy perustava: Web Mercator loppuu 85,05°:een, synteettinen täyttö näkyy kiekkona. SUOSITUS PT:lle 12.5x: KS polttaa
+  kohokartan napakalotit (atsimutaaliset, kuten striimikalotit 2026-11-08-striimi), NS kytkee NapaKannet.Kohokartta-tilaan
+  (kalotti kohokartan versiolla häiveellä 85°:n kohdalla). PT:N VASTAUS ODOTTAA (viesti jonossa 12.5x). Parit KK:lle vain PT:n sanalla.
+- Seuraavaksi PT:n vastauksen mukaan; muuten jono: esittelyliike → korkeuskoe; j4 lukematta.
+
 ## TILA 8.11. 12.20 (VOITTAA kaikki alla olevat)
 Cron "4 9 * * *" luotu 12.1x (40a951dd, session-only): LUO UUDELLEEN. Lukulista 7.47 luettu tässä sessiossa (ei muutoksia NS:n työhön).
 
