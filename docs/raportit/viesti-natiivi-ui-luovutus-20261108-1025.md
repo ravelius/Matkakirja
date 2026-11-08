@@ -4,6 +4,13 @@ Korvaa luovutuksen -0430 (b24dcac9f); sen Opit ja kohta 4 (valitsin, -0401) enna
 PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, NS local_99130238-aa54-4a29-bcc9-7a023584944b, VS local_fa464945-e15d-4f98-aaad-00877a60f63a, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Viestit send_messagella id:llä, PT:lle ≤ 3 riviä.
 Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas, haaralla natiivi-ui/puut-nimet-221), etäpää natiivi-backup. Ajot vain JU:n vuorolla.
 
+## PÄIVITYS 11.05: kohdat 0 ja 0b TEHTY, ajot JU:lla (pyynnöt 10.5x ja 11.0x)
+- Lippu 4.42: 1f26c51b4 natiivi-ui/lippu-442-221 (juna 221 5d6967444 + 6834a6711/311eacd76 kumottu; Lipputanko.cs = 6834a6711~1). unity 0, 2261/710/871.
+  Skenaario proto-3d/_tyo/natiivi-ui/sk-lippu-442-1.txt (keski, ala, ylä, reunat, käännetty 135/270; lipun jalka ~48,3 N 4,47 E, kaari 0.212), kansio proto-3d/lokit/nui-lippu-442-1-1f26c51b4.
+- Kohokartta: b4e624cfe natiivi-ui/kohokartta-90-221 (juna 221 + PalloKierto.VapaaKallistus 90° kohokartassa, PlayerPrefs-oletus 1, kytkin ☰:n sisällä ylimpänä,
+  Topografiassa yläpalkki + taikalasit piiloon, ☰ oikeaan yläkulmaan 12/12). 2262/710/871. Skenaario sk-kohokartta-90-1.txt (iPad + iPhone), kansio nui-kohokartta-90-1-b4e624cfe.
+- SEURAAVAKSI: katso molemmat kuvasarjat → parit PT:lle (KK:lle), junaan PT:n sanalla; sitten puupari p2, merenpohjan parit (uusi osoite KS/JU:lta).
+
 ## 0. JONON KÄRKI (OMISTAJAN PÄÄTÖS klo 10.32 KK:n kortilla, PT:n kautta): lippu striimikartalla takaisin Raamattu 4.42:n mukaiseksi
 - Tanko radiaalisesti poispäin ruudun keskeltä: ruudun alaosassa alaspäin, keskellä lähes näkymätön. Pohjaksi 6834a6711:tä EDELTÄVÄ toteutus; 6834a6711 + 311eacd76 (lippu pystyyn) rikkovat 4.42:n (palautetaan/kumotaan ne lipun osalta).
 - Pari KK:lle (PT:n kautta): keski, ala, reuna ja kartta käännettynä; ajo JU:n vuorolla. Ennen merenpohjaa. Muisti: lippu Elsassissa ei vika (paikka), asento 4.42 ehtona.
