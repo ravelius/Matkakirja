@@ -63,3 +63,14 @@ Nahtavyysalue.KiinteatEsteet (mallit + ohjelmakohteet), NostotKartalla.AsetaKuva
   skenaarion pitää lähentää kyltit auki -tasolle (kaari ≤ 0,012) ennen napautusta, TAI NahtavyysEsittely ei kuuntele pallon osumaa.
   Myös `ui nahtavyysesittely tila` palautti vain "ok" (tila ei tulostu ui-lokiin: tarkista Kirjaa-kutsu). Kuvia ei katsottu. Korjaa, uusinta JU:lla.
 - JU: kartta-lukittu-2 9f4b590b5 jonossa (pid 47301, käännös L1 12.35) → lokit/nui-kartta-lukittu-2-9f4b590b5.
+
+## PÄIVITYS 12.5x: OMISTAJAN PÄÄTÖS 12.40 (PT) — KORVAA KORTIN, TEE TYÖ (Raamattu 2.216 päivitetty)
+"Jos nimet menee päällekkäin, niin siinä tapauksessa toinen nimi voi hävitä." + 11.43 = ei korttia: nimellä yksi kiinteä paikka ja kylki (ei väistöä),
+päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä tasojen yli (Concorde).
+- TEHTY 17addbe2d natiivi-ui/kartta-lukittu-222 (natiivi-backup): LadoKiintea Vaistaa = false. unity 0, KiinteaLadonta 4/4.
+- JU: todiste sk-kartta-lukittu-2 SHA:lla 17addbe2d → lokit/nui-kartta-lukittu-2-17addbe2d (9f4b590b5 voi valmistua ensin, ei käytetä parina).
+- SEURAAVAKSI: katso md5:t ja kuvat (kohta JONO 2 yllä) → iPad-pari PT:lle → KK ENNEN koeversiota. Sitten AUKI-lista (esteiksi kyltit/pyöreät kuvat/kaupunkimerkit).
+- 5°-PORTAAT (PT pyysi tarkistamaan): kerrottu PT:lle 12.5x: nimet eivät siirry; pysähtyessä uudessa portaassa voittaja lasketaan uudelleen →
+  yksittäinen nimi voi sammua/syttyä kiertäessä; kierron aikana vaakanimet voivat hetken limittyä. MITTAA: lisää skenaarioon kierto 0→3→7→12° levossa
+  (kuvat + `ui kiintealadonta tila`), vertaa nimien joukkoa. Jos hyppii häiritsevästi: ehdota PT:lle porras 15° tai ladonnan teko kaikkien
+  suuntien yli (pariton nimi pois, jos osuu jossain suunnassa) — jälkimmäinen on täysin lukittu, mutta harventaa.
