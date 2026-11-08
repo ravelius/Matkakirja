@@ -41,3 +41,7 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - Ketju P (PK): M:n jälkeen sk-1f-1g-pk2.txt 0cc5ac36c iphone (pysty) + ipad → L/pk-juoksu-223-pk2-{iphone,ipad}-0cc5ac36c. Lokissa EI saa olla PUUTE-rivejä.
   Valitse d2a/d2b/d2c:stä se, jossa eunukin kasvot näkyvät ovilehden reunalla → KK:lle (ilman leikkausta), polku + aika PK:lle.
   Vanhoja ac4bff77a- ja M:n ipad-0cc5ac36c-kuvia EI KK:lle (vanha sk). Syy (PK): avauksen kello kulkee tallenteessa reaaliajassa.
+- 23.45: JUNA 223 = 2f2e13352 = d1a4419e8 + merge NUI kameratappi bee8b407b (PT 23.4x; vain tappi, 3 commitia, 9 tiedostoa). unity sh 0,
+  Kartta 727/727, Linssit 2276/2276, Peli 874/874 (T/juna223-tappi-*.txt). PT + NUI kerrottu.
+- Kuitattu: NUI ipad70-4 a7866450f → PT + NUI (mitattu 0,63–0,71, Eiffel ~70 %, ND ~75 %). M:n vanha iPad 0cc5ac36c valmis (PUUTE 5, ei KK:lle).
+- Ketju L jatkaa: pariisipallo-2 → tahtikyltit-1 → kuvateksti-2. M: 1g-pari. Sitten O (tarina-1b), N (ajoennakko), P (pk2).
