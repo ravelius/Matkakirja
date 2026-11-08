@@ -81,3 +81,7 @@ Tarkista: l-28km-lahi1 vs lahi0 (ruskea kivi = fpvlahi? → korjaa fpvlahi:n vä
 l-leijuu-vanha (raja horisontissa); l-manu-kallistus (liuku kallistuu); kesken-kuvat liikkeessä, ei törmäystä; shader-virheet 0.
 Huom. omistajalle/PT:lle myöhemmin: jättiläisdronen silmä 80–120 km → horisontti painuu 9–11°, joten 30° ylös leijuessa maa ruudun alareunassa
 (kamera 15–20° leijunnassa = kortti/PT, ei itse).
+
+## LISÄYS 22.1x (7): PT (KK 22.09) – MERENPOHJAN PALLON REUNAPIIKIT, FPV:N JÄLKEEN
+Merenpohjan pallo näytetty omistajalle. Pallon reunan pienet piikit korjattavaksi erikseen (ei estä): (1) Perun–Chilen hauta, (2) etelän reuna
+(Etelä-Atlantti, alareuna oikealla). Tehdään FPV:n jälkeen; Mac iPad-koossa, pari (ennen/jälkeen, sama rajaus) PT:lle ≤ 3 riviä.
