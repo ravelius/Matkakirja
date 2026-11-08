@@ -999,3 +999,7 @@ Omistaja 7.11. klo 19.51 (KK:n välittämä): tehdään kokonaisvaltainen muisti
 ## JUNA 220 VASTA OMISTAJAN PYYNNÖSTÄ (7.11.2026 klo 19.53)
 
 Omistaja 7.11. klo 19.52 (KK:n välittämä): julkaistaan juna vasta sitten kun pyydän. Korvaa klo 11.21:n sanan julkaise juna kun kaikki korjaukset valmiit ja PT:n lähtörivin. KK:n tulkinta, kerrottu omistajalle: TestFlightiin ei viedä junaa 220 ennen hänen pyyntöään; korjaukset ja testiajot jatkuvat; muistisuunnitelma ei sido tähän.
+
+## iPAD-ASENNUSTEN VÄLIMUISTI MYÖS PÄIVÄLLÄ (8.11.2026 klo 17.47)
+
+Omistaja 8.11. klo 17.4x (KK:n kortit): "Tyhjennetäänkö iPad-asennusten välimuisti (78 Gt) nyt?" = "Tyhjennä sinä (Suositus)" (KK poisti 17.45, levy 8 → 79 Gi, TF 223 -vienti jatkui); "Saako kone jatkossa tyhjentää välimuistin myös päivällä, kun levytila käy vähiin?" = "Saa (Suositus)". KK:n tulkinta: vain kun asennusta ei ole käynnissä, raja alle 30 Gi. Toteutus: simu_yosiivous.py --paiva --aja (vain iPad-välimuisti, tarkistaa rajan, devicectlin ja iPad-lukon), Postivahti ajaa mittauskierroksella. Muutti Raamatun 12.19.

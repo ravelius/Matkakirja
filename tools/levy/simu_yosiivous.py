@@ -8,6 +8,8 @@ tyhjennetään. Ohitetaan, jos devicectl on käynnissä tai iPad-lukko on olemas
   python3 -I tools/levy/simu_yosiivous.py               kuiva-ajo: koot, ei poistoja
   python3 -I tools/levy/simu_yosiivous.py --aja         tyhjennys (launchd-yöajo fi.matkakirja.simu-yosiivous)
   python3 -I tools/levy/simu_yosiivous.py --udid <UDID> vain yksi laite (kokeilu)
+  python3 -I tools/levy/simu_yosiivous.py --paiva --aja  PÄIVÄSIIVOUS (omistaja 8.11.2026 klo 17.4x): vain iPad-välimuisti
+      ja vain, kun levyllä on alle 30 Gi vapaana; simuihin ei kosketa (Postivahti mittauskierroksella, Raamattu 12.19).
 Loki: /Users/Shared/Claude/_levy/simu-yosiivous-<vvvvkkpp>.log (lisäys).
 """
 import json, os, shutil, subprocess, sys, time
@@ -20,6 +22,8 @@ ALI = os.path.join('data', 'Library', 'Application Support', 'PRBPosterExtension
 LOKIT = '/Users/Shared/Claude/_levy'
 aja = '--aja' in sys.argv
 vain = sys.argv[sys.argv.index('--udid') + 1].upper() if '--udid' in sys.argv else None
+paiva = '--paiva' in sys.argv
+PAIVA_RAJA_GI = 30
 
 os.makedirs(LOKIT, exist_ok=True)
 loki = open(os.path.join(LOKIT, time.strftime('simu-yosiivous-%Y%m%d.log')), 'a')
@@ -76,6 +80,16 @@ def ipad_valimuisti():
     kirjaa(f'iPad-välimuisti TYHJENNETTY {kt / 2**20:.1f} Gt → {jaljella / 2**20:.2f} Gt')
     return kt - jaljella
 
+
+if paiva:
+    vapaa_gi = shutil.disk_usage('/Users/Shared').free / 2**30
+    if vapaa_gi >= PAIVA_RAJA_GI:
+        kirjaa(f'päiväsiivous: levyllä {vapaa_gi:.0f} Gi ≥ {PAIVA_RAJA_GI} Gi → ei tyhjennystä')
+        sys.exit(0)
+    kirjaa(f'päiväsiivous: levyllä {vapaa_gi:.0f} Gi < {PAIVA_RAJA_GI} Gi')
+    vapautettu = ipad_valimuisti()
+    kirjaa(f'loppu: {"vapautettu" if aja else "vapautuisi"} {vapautettu / 2**20:.1f} Gt (päiväsiivous, vain iPad-välimuisti)')
+    sys.exit(0)
 
 ipad_kt = 0 if vain else ipad_valimuisti()
 if not os.path.isdir(SARJA):
