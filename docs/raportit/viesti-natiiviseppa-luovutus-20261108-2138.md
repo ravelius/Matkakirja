@@ -112,3 +112,9 @@ RUSKEA KIVI = FPVLAHI (vahvistettu): l-28km-lahi1 lähirinne ruskea kivitekstuur
 SEURAAVA (NS, ennen pohjapallo-kuvia jos ne eivät ole valmiit): korjaa fpvlahi:n väri kohokartan paletille (värjäys tileset-varjostimessa,
 5a8933619, KorkeusKerroin.FpvLahi; pidä kivipinnan varjostus/normaalit, poista ruskea sävy) tai ehdota PT:lle "fpvlahi pois" → uusi pari lahi1 vs lahi0.
 Leijunnan kuvissa maa vain alareunan viivana (30° ylös + horisontti −11°): kameran kulma 15–20° leijunnassa = PT/kortti.
+
+## LOPPU 22.3x (PT: nollaa itsesi nyt) – JONO SEURAAVALLE NS:LLE
+1. Pohjapallo-juna 3413b4565: odottaa JU:n Mac-ajon kuvia (lisäys 9) + PT:n sanaa ennen "junakelpoinen".
+2. Ruskea kivi -korjaus: fpvlahi:n väri kohokartan paletille (lisäys 10).
+3. Merenpohjan pallon reunapiikit: Perun–Chilen hauta + Etelä-Atlantin reuna (lisäys 7).
+Cron "4 9 * * *" luotava uudelleen (alku).
