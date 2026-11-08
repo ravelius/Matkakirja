@@ -68,3 +68,10 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
   (KS:n ruutukuvat puuttuvat yhä, mainitse).
 - NS:n vihje napautushaaraan (natiivi-ui/nahtavyyden-napautus-222): NahtavyysEsittely.Hiivuta = k => k.KohdeKiertoHiivu() (vaatii NS:n
   PalloKierto-muutoksen 79f8a637b → yhdistä ensin); oletuksen k.Aja(...0.05) pysäytys on liian jyrkkä.
+
+## PÄIVITYS 13.37: TOPO-VIDEO 79f8a637b KATSOTTU (lokit/nui-topoesittely-2-79f8a637b/mac, 30,8 s)
+- Himalaja OK: etelästä muurina, kyltti näkyy, kierto asettuu loppuun ilman hyppyä (tauon jälkeinen jatko: lento 2,7 s, ok).
+- VIKA (skenaario): Alppien kyltti ei näy, Himalaja valittiin ennen Alppien kierron loppua. sk-topoesittely-1-mac.txt korjattu (odota-peli 12 ennen
+  esittelyt 2). Uusinta JU:lla → lokit/nui-topoesittely-3-79f8a637b/mac. KATSO: Alppien kyltti "ALPIT · Mont Blanc · noin 4 800 m" ja kierto
+  loppuun, sitten video PT:lle → KK (mainitse: KS:n ruutukuvat puuttuvat). PT:lle kerrottu 13.37.
+- JU: iPadilla kartta-lukittu-3 alkoi 13.34 → lokit/nui-kartta-lukittu-3-17addbe2d.
