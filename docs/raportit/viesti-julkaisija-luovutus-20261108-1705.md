@@ -14,11 +14,13 @@ Muutosloki 1.1 (223) MERGED (PR 6502). TF 223 VAIN omistajan sanalla KK:n kautta
 ODOTTAA: tarkistusajo j6 (alla) → kuittaus NUI:lle + PT:lle (kuvat L/nui-nahtavyysnapautus-6-617d6ca2b/), sitten juna valmis TF-korttiin.
 EI junaan: b4e624cfe (kohokartta oletuksena), topoesittelyt (581f7f85a, 6c27282e1, 48e5654ae, b1d5c652f) – PT 16.5x.
 
-## 1b. TF 223 KÄYNNISSÄ (OMISTAJAN PÄÄTÖS 17.20 "Julkaise", PT kuittasi napautus-6:n)
+## 1b. TF 223 EI LÄHTENYT 17.30 (levy 8 Gt < 30 Gt, askel "Yöajon ohitusehdot"; PT:lle ilmoitettu) – AJA UUDELLEEN kun levyllä ≥ 30 Gt:
+gh workflow run proto3d-testflight.yml --repo ravelius/Matkakirja -f vie_unitysta=true -f proto_ref=617d6ca2b5f6cf5a0a399691aa4aa5875eef1c26 -f ordinaali=223 -f build_numero=223
+(vanha otsikko: TF 223 KÄYNNISSÄ (OMISTAJAN PÄÄTÖS 17.20 "Julkaise", PT kuittasi napautus-6:n)
 run https://github.com/ravelius/Matkakirja/actions/runs/42494434201 (proto_ref 617d6ca2b, vie_unitysta, ordinaali 223).
 Valmis → jonolokiin "TF 223 VALMIS" + rivi PT:lle (local_5df52e10). Epäonnistui → rivi PT:lle, ei uutta ajoa ilman PT:tä.
 j6b VALMIS 17.20 4/4 (PT katsoi). NUI merenpohja-2 Mac VALMIS (kuitattu, video PT:lle). FPV ab4 17.24 failed to launch (NS:lle kuitattu).
-Jäljellä iPad: T/ns-mp-pohjapallo3.zsh (72794) → kohokalotit (46723). Mac: T/nui-merenpohja-3-mac.zsh (71070, L1) ja T/nui-lentoraja-1-mac.zsh (85474, L2; lokissa "reitin maastoraja ladattu"/"ajossa enintään") → NUI + video VAIN PT:lle.
+Jäljellä iPad: T/ns-mp-pohjapallo3.zsh (72794) → kohokalotit (46723). Mac merenpohja-3 ja lentoraja-1 VALMIIT ja kuitattu (NUI + video PT:lle). pohjapallo pp3 failed to launch (NS kuitattu).
 
 ## 2. Jono käynnissä (iPad-järjestys tässä)
 - T/j6/juna222-napautus.zsh (32059, iPadilla 17.05; vanha sk-5-ajo 12644 keskeytetty): käännös valmis; ajaa NUI:n
