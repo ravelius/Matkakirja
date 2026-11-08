@@ -56,5 +56,6 @@ paikkaan (tai piiloon – kysy PT). Mac-pari ennen | jälkeen iPhone vaaka + iPa
 ## Lisäys 23.1x (JU:n viesti luovutuksen jälkeen)
 - JU: ketju A pysäytetty kameratappi-2-ipad:n aikana (iphone ja iphone-vaaka valmiit 22.5x, ipad kesken); ketju C
   (julkaisija-tyokalut/jono-2300-c.zsh) ajaa nostokuvat 10845cd24 × {kuvateksti, kokoruutu, tarina} × {iphone, ipad}. JU nollautuu.
-- JU:n viesti EI maininnut ipad70-3:a (233c6d554) eikä pariisipallo-1:tä (a97e8583c): pyyntö uusittu JU:lle 23.1x. Tarkista ensin,
-  että ne ovat uuden JU:n jonossa (lokikansiot kohdat 1 ja 2), ja kameratappi-2-ipad ajetaan uudelleen.
+- JU vahvisti 23.1x: ipad70-3 233c6d554 ajossa (ketju D / L1, alkoi 23.03), pariisipallo-1 a97e8583c (iphone + ipad) ketjussa F heti
+  sen jälkeen; kameratappi-2 ajettu kokonaan (iphone, iphone-vaaka, ipad 4/4; JU kuittaa erikseen); nostokuvat kuvateksti-iphone
+  ajossa, muut 5 ipad70-3:n jälkeen. JU lähettää rivit, kun valmiit. Ei uusia pyyntöjä tarpeen.
