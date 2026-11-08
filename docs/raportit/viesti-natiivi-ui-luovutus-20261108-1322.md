@@ -7,6 +7,12 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus, nyt ha
 Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py (aja zsh:ssä yksi pari per komento, ei "set --").
 
 ## JONO (JU:n iPad-järjestys: napautus-2 → kartta-lukittu-3)
+0. ENSIN (PT 13.2x, suositus KK:lle odottaa vastausta): KIINTEÄ LADONTA, NÄHTÄVYYDET ENSIN. Valmistele samaan haaraan
+   natiivi-ui/kartta-lukittu-222 (17addbe2d:n päälle): nähtävyydet ja 3D-kohteet (Musée de l'Armée, Palais Bourbon, Petit Palais, Musée Rodin,
+   Saint-Étienne-du-Mont) tärkeysjärjestyksessä ensin, pudotus vain pienemmiltä. Mallin oma nimi ei saa törmätä omaan malliinsa
+   (Nahtavyysalue.KiinteatEsteet → ohita nimen oma malli tai nimetyt mallit nimiesteinä; KiinteaLadonta.Vertaa: Porras/Arvo → merkittävä
+   nähtävyys ensin). Testit Kartta-testit/Testit/KiinteaLadontaTestit.cs + unity 0, todisteajo (sk-kartta-lukittu-2 uudella SHA:lla)
+   → pari vanha/uusi PT:lle. EI JUNAAN ennen KK:n/omistajan sanaa. 5°-portaiden mittaus = jono 2 (kartta-lukittu-3 jo JU:lla).
 1. NÄHTÄVYYSNAPAUTUS-2 c33b2ebd1 (natiivi-ui/nahtavyyden-napautus-222): sk-nahtavyysnapautus-2.txt (Concorden aukio 1,8 km, kyltit auki)
    → lokit/nui-nahtavyysnapautus-2-c33b2ebd1. Ajo 1 kelvoton: 4 km:stä kyltit kiinni (aukeavat kaari ≤ 0,02) → pallolle.
    KATSO 8 kuvaa (ennen, lento, keskitetty, kierto puoliväli, kierto myöhemmin, palkista auki, suljettu, sormi) + ui-loki
