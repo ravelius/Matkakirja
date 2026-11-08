@@ -1,0 +1,39 @@
+# Julkaisija: luovutus 8.11.2026 klo 22.52 (korvaa -2045:n; sen ja aiempien OPIT voimassa)
+
+Edellinen: git show d850313b6:docs/raportit/viesti-julkaisija-luovutus-20261108-2045.md
+T = /Users/Shared/Claude/julkaisija-tyokalut, L = /Users/Shared/Claude/proto-3d/lokit, jonoloki T/jono-20261103-ilta.txt.
+
+## ALOITA: kaksi nohup-ketjua ajossa (Mac, L1/L2), jokainen ajo kirjoittaa jonolokiin "AJO <tunnus> … rc … kuvia x/y".
+Kun rivi tulee: katso kuvat (tai mp4-ruudut arkiksi), tarkista pyydetyt lokirivit, lähetä valmis-rivi tilaajalle (id osoitekirjasta).
+- Ketju A T/jono-2240-a.zsh (NUI local_43962c89-fc14-4098-9dd7-6153133ffcea), PISTEKERROIN 0.465:
+  1. kameratappi-2 73498d875: iphone, iphone-vaaka (sk-kameratappi-2-iphone.txt), ipad (sk-…-ipad.txt) → L/nui-kameratappi-2-<koko>-73498d875.
+     TARKISTUS: "ui kameratappi tila" → "näkyy" (ei "piilossa"), kallistus kasvaa t-1:n jälkeen, suuntima t-2:n jälkeen.
+  2. nostokuvat-1 bb0509e46: kuvateksti iphone/ipad, kokoruutu iphone/ipad → L/nui-nostokuvat-1-{kuvateksti,kokoruutu}-<koko>-bb0509e46.
+     TARKISTUS: 1) "ui kuvateksti: traileri kuva 1" … "teksti"; 2) "pinnaus: kuva 0 koko näytölle".
+- Ketju B T/jono-2240-b.zsh:
+  1. (valmis, kuitattu NS:lle) NS fpv-ruskea c7df37d49.
+  2. KS topo-sulku-juna-a 84a91d530 ja -b 7de518cde (video toposulku…, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364) →
+     L/ks-topo-sulku-juna-{a-84a91d530,b-7de518cde}. KS haluaa ARKIT s. 18,6–20,6 (0,1 s välein, k = s × 50; skripti kuten
+     L/ks-topo-sulku-2-f2ad1a19d/ju-arkki-*.jpg). Ratkaisee: toistuuko beige junassa (A), poistuuko + peite häivyttää 250 ms (B).
+  3. NS reunapiikit-a 3413b4565 → L/natiiviseppa-reunapiikit-a/ (ohje _tyo/natiiviseppa/reunapiikit/ajopyynto-a.md), NS local_99130238-aa54-4a29-bcc9-7a023584944b.
+- Uusi yleisskripti T/mac-yleis.zsh <tunnus> <sha> <skenaario> <koko> <kansio> [pistekerroin] (kuvat + tallenteet, ODOTA_PID).
+
+## JUNA 223 (natiivi-backup julkaisija/juna-223, worktree wt/julkaisija-juna-221)
+Kärki 84a91d530 = 30f7090d8 + kierto 135° (524bab612, a6cf36e11) + Louvre-valinta (84a91d530); unity sh 0, Kartta 725/725
+(T/juna223-kierto-louvre-*.txt). Ei käännetty laitteelle.
+Ehdokas EI POIMITTU (PT päättää): NS pohjapallo-juna 3413b4565 (= 84a91d530 + merge f7cf0bd7c + kytkin). Mac-vertailu tehty:
+kytkin pois = 84a91d530 pikselilleen (atlantti/tyyni), peruskartta 0,01–0,02 % kohinaa; listat T/juna223-pohjapallo-3413b4565-*.txt, PT:lle 22.4x.
+NUI ipad70 (cf657f1d0 → 79351459b) "junaan PT:n/KK:n sanalla" – ei sanaa vielä.
+
+## Ajettu ja kuitattu tällä vuorolla (kuvat katsottu)
+NUI: kierto-1 cb801202c, louvre-valinta-1 2f7df0ced (NRE MuseoTekstuurit.Vapauta sulussa = vanha), lentoraja-6 7bbea110d,
+ipad70-1 cf657f1d0, ipad70-2 79351459b, kameratappi-1 2d69ff27e (tappi piilossa, NUI perui).
+NS: fpv-osa4 92125fce1 (2 törmäystä 56 km:ssä), fpv-osa4b e152a9959, pohjapallo-juna a/b, fpv-ruskea c7df37d49.
+KS: topo-sulku-1 aebf0648e (beige näkyy), topo-sulku-2 f2ad1a19d (peite päällä mutta läpikuultava).
+
+## OPIT
+1. VIESTIRAJA: SendMessage pysähtyi 10 viestin jälkeen ("Paused") → mcp__ccd_session_mgmt__send_message session-id:llä toimii (CLAUDE.md).
+2. Video-arkki: tallenteen kehykset L/<kansio>/<tallenne>/k-NNNNNN.jpg, fps.txt "50 30" → kehys = s × 50.
+3. Pyynnöt tulevat nopeammin kuin ajot: kokoa ketjuksi mac-yleis.zsh:lla, kaksi ketjua (vapaa+portti jakaa L1/L2).
+
+## Nollaus: tämä luovutus + "LUOVUTUS VALMIS <sha>" Postivahdille (local_afae44f0-722b-4541-a3b8-30ca4f76543b).
