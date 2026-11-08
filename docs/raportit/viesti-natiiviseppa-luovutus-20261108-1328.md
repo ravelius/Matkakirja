@@ -5,6 +5,18 @@ Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Nollauksen syy: konteksti
 Luovutusworktree wt/natiiviseppa-luovutus-0039 (haara natiiviseppa-luovutus-20261108-1328).
 Cron "4 9 * * *" (unity-julkaisut.py, Raamattu 7.41) luotu 13.1x (1f7f2f4f, session-only): LUO UUDELLEEN.
 
+## TILA 8.11. 13.4x – KÄRKI, ESTÄÄ JUNAN 222 TF:N (VOITTAA kaikki alla olevat)
+KEHÄN YHDISTELMÄ VALITAAN MITTAAMALLA (PT 13.4x: ei kaksinkertaista korjausta; kerro PT:lle kumpi ja miksi):
+- A = 11b66adc5 (varjostimen valon tasaus) + alkuperäinen striimi. JU AJAA TÄMÄN NYT (T/ns-navat-keha.zsh pid 31929, iPadille NUI:n
+  napautus-2:n jälkeen) → lokit/natiiviseppa-navat-koho/keha/ (tav-etela, tav-pohjoinen, tav-maapallo).
+- B = A + striimi-b (KS 53b307fd3: reunan 4° pikselittäin z5-laattojen lähdesävyyn, keskiarvo sama 143/138/104, poistaa vain
+  pituusasteittaisen vaihtelun; KS: ei tummenna, ei tuplakorjaus). Valmiina VARALLA cbc27f896 haara natiiviseppa/navat-koho-b (11b66adc5 + versio).
+- PÄÄTÖS: mittaa A:n kuvista sävyero reunan molemmin puolin kehän ympäri (laatat vs kalotti, avomeri; vrt tav2 samat rivit y 700/1100/1500).
+  HYVÄKSYNTÄ (PT): kehää ei näy täysikoossa, avomerellä ≤ 2 tasoa, saaret ja häive eivät muodosta rengasta. A täyttää → A junaan
+  (11b66adc5), ei B:tä. A:ssa tasainen kehä pois mutta pituusasteittain > 2 tasoa → B iPadilla JU:lla (sama skenaario, kansio keha-b/),
+  sitten B junaan (cbc27f896). Kehä yhä tasaisesti tumma A:ssa → syy muualla (alfahäive rgb/a, SampleSH); ei B:tä ennen syytä.
+  Pari PT:lle (rajattu napa täysikoossa, molemmat navat) → KK.
+
 ## TILA 8.11. 13.28 (VOITTAA kaikki alla olevat)
 1. NAVAN KEHÄ, KIIREELLINEN (omistajan havainto 12.50, PT 13.2x; navat junassa 222 → ennen TF:ää). Kuva
    Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/omistaja-1250-napa-etela-kehä.png: tavallisen kartan etelänavalla
