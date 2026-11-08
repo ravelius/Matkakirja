@@ -92,3 +92,15 @@ tekevät kohokartan merenpohjamaaston OLETUKSEKSI; VS 97b4f29a9 f94e54682 4cf1f1
 Tavoite: oma haara junan kärjestä 84a91d530; merenpohja 3D + pohjapallo VAIN kytkimen takana (Linssit › Keskeneräiset), peruskartan oletus ennallaan;
 muut "KOE"-kytkimet pois. Mac iPad-koossa: kytkin pois = TF 223 identtinen, kytkin päällä = pallo kuten f7cf0bd7c → pari PT:lle.
 Aloitettu 22.1x JU:n osa 4b -ajon odotellessa (wt /Users/Shared/Claude/wt/proto-natiiviseppa-pohjapallo, haara natiiviseppa/pohjapallo-juna).
+
+## LISÄYS 22.2x (9): MERENPOHJAN PALLO KYTKIMEN TAKANA 3413b4565, MAC-AJO JU:LLA (VOITTAA lisäyksen 8 "Aloitettu")
+Haara natiiviseppa/pohjapallo-juna (natiivi-backup), wt /Users/Shared/Claude/wt/proto-natiiviseppa-pohjapallo: 84a91d530 + merge f7cf0bd7c (puhdas, ei
+ristiriitoja) + 3413b4565: Topografia.KohokarttaMaasto oletus null (MeriPainuu ja _MERI_PAINUU eivät koskaan päälle ilman kytkintä; muut 12 commitin
+muutokset ovat MeriPainuu/maastoVaihdettu-ehtojen takana), Topografia.AsetaMerenpohja (auki olevalla kohokartalla heti), Linssit › KESKENERÄISET
+kokeilurivi "Merenpohja 3D: pois|päällä" (Linssivalitsin.Kokeilut, kehittäjä, ei App Storessa), komento "linssi topografia maasto oletus|pois" samaan.
+unity-tarkistus sh 0 virhettä, Linssit 2269/2269, Kartta 727/727.
+ODOTTAA: JU:n Mac-ajo (pyydetty 22.2x, osa 4b:n jälkeen): _tyo/natiiviseppa/pohjapallo-juna/sk-pohjapallo-juna.txt 3413b4565:llä ja 84a91d530:llä →
+lokit/natiiviseppa-pohjapallo-juna/ ja -84a/. KUN VALMIS: pj-*-pois md5 = 84a:n (kytkin pois = TF 223); pj-*-paalla vs f7cf0bd7c:n
+lokit (mp-pallo-3d, mp-pallo-tyyni-3d; NS:n merenpohja-pohjapallo-ajo); pj-atlantti-pois2/peruskartta-pois2 = alku. Pari PT:lle ≤ 3 riviä, sitten
+JU:lle "junakelpoinen 3413b4565" PT:n kuittauksella. Sen jälkeen reunapiikit (lisäys 7).
+JONO (järjestys): (1) osa 4b -kuvat (lisäys 6), (2) pohjapallo-juna-kuvat (tämä), (3) reunapiikit (lisäys 7).
