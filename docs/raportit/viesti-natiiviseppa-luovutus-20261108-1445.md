@@ -74,6 +74,10 @@ vanhat maailman laatat eivät jää välimuistiin. Sama sävyn tasaus kalotin re
 Uusi haara navat-koho:n (641fd439e) päälle; ajo JU:lla savy-ajon jälkeen (sk-navat-tav2 + sk-meripari), pari Atlantti ja napa → PT.
 JUNAAN VASTA OMISTAJAN VALINNAN JÄLKEEN (maailma oliivi vs rajattu).
 
+## LISÄYS 15.2x (NUI): pienoismallin käännös d1c8a074f (natiivi-ui/fpv-nakyma = b45bbe356 + PK 5a7b64bba + tietorivi "● FPV · m · km/h" + Automaatti|Manuaali);
+JU:lle sanottu vaihtaa, jos iPad-ajo ei alkanut. Koukut FpvNakyma.Lentomalli (osa 4), .Tila, .TilaVaihtui; `ui fpvnakyma lentotila auto|manu`, `ui fpvnakyma tila`.
+PT:lle 15.2x rajatusta vesirajasta EI vielä vastattu: kerro, että se on luovutuksessa ja tehdään seuraavaksi savyn jälkeen.
+
 ## ---- 14.15:n luovutus sellaisenaan ----
 # Natiivisepän luovutus 8.11.2026 klo 14.15
 
