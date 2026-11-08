@@ -73,3 +73,6 @@ Tilaajille kerrottu jonotus (NUI, KS, NS). Valmis-rivi kustakin kun kuvat katsot
   "alkukaanto", ei "seinan edessa" ennen ohjausta. Kuvat + video KK:lle (local_37f7c945) ilman leikkauksia, rivi PT:lle ja PK:lle (local_91a1bc27-6870-46aa-9886-66fd33b68880).
 - 23.2x KUITATTU (kuvat katsottu): NUI ipad70-3 → PT (JU-tarkistus.txt kansiossa; KK vain PT:n sanalla) + NUI; NUI kameratappi-2 x3; KS topo-sulku-juna-c;
   NS reunapiikit-a (sse1-kuva sumea = laatat kesken). Kuittaamatta yhä: nostokuvat-1 10845cd24 (kuittaa kaikki 6 kerralla ketjun D lopussa).
+- 23.3x: I:n skenaario päivitetty PK:n pyynnöstä (d2 eunukki ovella KK:lle, e OhjausPelaajalle, 4 × "kaanna -1 seina"). Ketju J (pid 46712) I:n jälkeen:
+  PK 1g-pari a7004996e vs 84a91d530 iphone-vaaka, sk _tyo/pelikoodari/juoksu-223/sk-1g-sivuseina.txt → L/pk-1g-sivuseina-{a7004996e,84a91d530};
+  PT:lle pari a–d + "paikka"-rivien S + "seinan edessa" -rivit. NS reunapiikit-b b2761f67b valmis 23.14 (4/4), kuittaa yhdessä -b-3413:n kanssa.
