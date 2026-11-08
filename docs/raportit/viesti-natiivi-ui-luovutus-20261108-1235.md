@@ -52,3 +52,8 @@ Nahtavyysalue.KiinteatEsteet (mallit + ohjelmakohteet), NostotKartalla.AsetaKuva
 - `komento aja` takaisin samaan paikkaan ei aina osu samaan kameraan (lepo A vs C: 1–3 pt) → pikselivertailu vain paluu ilman zoomia välissä.
 - Cesiumin suuntamuunnos: käytä pisteparia (TransformUnityPositionToEarthCenteredEarthFixed p ja p + d), suunnan API:a ei ole varmistettu.
 - Object.GetInstanceID on Unity 6.7:ssä virhe (CS0619): käytä GetHashCode tai GetEntityId.
+
+## PÄIVITYS 12.4x (JU 12.23)
+- TOPOESITTELY 756f4962d iPad VALMIS: lokit/nui-topoesittely-1-756f4962d (7/7, eri md5, huippu 2236 Mt, NRE 0) + Mac-video /mac. EI VIELÄ KATSOTTU.
+  Jono 1b (napautuksen rinnalla): katso video (kyltti perillä, NS:n kierto 9,6 s, tauko ▷, ruudukko) ja kuvat → video KK:lle PT:n kautta (luovutus -1120 PÄIVITYS 11.5x).
+- JU:n järjestys: nähtävyysnapautus ae84dd1dd (käännös valmis) → lippu-442-2 → (jonoon) kartta-lukittu-2 9f4b590b5.
