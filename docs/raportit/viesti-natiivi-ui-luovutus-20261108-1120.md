@@ -54,3 +54,5 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
   Loki sanoo "auki True". Epäilyt: Ponnahdus-animaatio / TarkistaOhiNapautus sulkee / ruutukaappaus. Selvitä ennen KK-pareja (kytkin ☰:n sisällä on omistajan pyyntö).
 - JU: kohokartta-90-1 iPad VALMIS 11.25 lokit/nui-kohokartta-90-1-b4e624cfe (8/8, huippu 3181 Mt) → KATSO kuvat ja tee pari. iPhone-simu tulossa.
   iPad 10002 oli ohimenevä; panorointi-2 ja lippu-442-1 uusintoina JU:lla. Topoesittely-1 nyt SHA 48e5654ae → lokit/nui-topoesittely-1-48e5654ae.
+- 11.4x PUUPARI p2 KATSOTTU (50200fb68, iPad 11.35, 12/12): nimiltä 0 koko ajon, puut 37–43 k näkymän mukaan; Tuileries/Champs-Élysées/bulevardit täynnä
+  puita (p1 tyhjä nimien kohdalta). Pari _tyo/natiivi-ui/puupari-p1-p2/pari-lepo-louvre-p1-vasen-p2-oikea.jpg lähetetty PT:lle (KK:lle); junaan PT:n sanalla.
