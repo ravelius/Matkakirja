@@ -15,7 +15,7 @@ ODOTTAA: tarkistusajo j6 (alla) → kuittaus NUI:lle + PT:lle (kuvat L/nui-nahta
 EI junaan: b4e624cfe (kohokartta oletuksena), topoesittelyt (581f7f85a, 6c27282e1, 48e5654ae, b1d5c652f) – PT 16.5x.
 
 ## 2. Jono käynnissä (iPad-järjestys tässä)
-- T/j6/juna222-napautus.zsh (14636): käännös 617d6ca2b L2; tappaa vanhan 12644:n (sk-5) käännöksen jälkeen; ajaa NUI:n
+- T/j6/juna222-napautus.zsh (32059, iPadilla 17.05; vanha sk-5-ajo 12644 keskeytetty): käännös valmis; ajaa NUI:n
   sk-nahtavyysnapautus-6-222 (4 kuvaa) → L/nui-nahtavyysnapautus-6-617d6ca2b → kuvat SUORAAN PT:lle (PT 17.0x: NUI nollautuu; VAIN tämä yksi ajo).
 - T/ns-mp-pohjapallo2.zsh (23794): NS pohjapallo f7cf0bd7c UUSINTA pp2 (pp1 failed to launch), käännös valmis,
   → L/natiiviseppa-merenpohja-pohjapallo/ (4 kuvaa) → NS.
