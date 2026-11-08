@@ -31,6 +31,7 @@ Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claud
   Skenaario P/_tyo/natiiviseppa/navat-koho/sk-navat-ipad.txt korjattu: "linssi linssi topografia" + "linssi topografia kohokartta 1" (EI "komento linssi topografia koho oletus" = tuntematon).
 - NUI puut-panorointi-2 50200fb68: 11.01 failed to launch (kansio VIKA-kaynnistys-…-1101), uusinta pid 55125 (f1c) → lokit/nui-puut-panorointi-2-50200fb68. KIIRE.
 - NUI lippu-442-1 1f26c51b4 (OMISTAJAN PÄÄTÖS 10.32, sk-lippu-442-1.txt, 8 kuvaa): T/nui-lippu-vaihto.zsh odottaa laite-iso 83335:ttä → nui-lippu-442-1.zsh (f1c) → lokit/nui-lippu-442-1-1f26c51b4; rivi NUI:lle.
+- NUI kohokartta-90-1 b4e624cfe (OMISTAJAN PÄÄTÖS 10.38, sk-kohokartta-90-1.txt, 9 kuvaa) pid 74466 (T/nui-kohokartta-90-1.zsh, f1c, pollaa 4 s → lipun jälkeen) → lokit/nui-kohokartta-90-1-b4e624cfe; rivi NUI:lle. iPhone-pari pyydetty, iPhone unavailable → kun kytketty.
 - PK g+f e59541a34 (pid 29768) laitekäännös jonossa; KS v6 vienti (pid 53921) menossa.
 
 ## 4. Kuitattu tällä vuorolla
