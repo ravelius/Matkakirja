@@ -243,3 +243,6 @@ Sitten iPad-pari JU:lla (tav-etela, tav-pohjoinen; sk-navat-ipad.txt) → PT; si
 ## LISÄYS 11.5x: TOPO-POHJA VAIHTUI (NUI)
 NUI yhdisti 756f4962d (natiivi-ui/topoesittelyt-221) = b1d5c652f + 6c27282e1 (kyltti vasta kun kamera perillä: Perilla(), koukun kanssa vain
 lat/lon 5 % kaaresta, varmistus 3 × LentoS) + 48e5654ae (kyltin kerros); 2268/2268. JATKA TOPOA 756f4962d:N PÄÄLTÄ (ei b1d5c652f:stä).
+
+## LISÄYS 11.5x (JU luovutuksen jälkeen)
+Kohokartan UUSI-ajo ca92af647 11.47: 0/4 kuvaa, iPad "failed to launch 10002" 6/6 (ohimenevä, kuten NUI:n aamulla). Uusinta JU:lla (pid 97997) → lokit/natiiviseppa-navat-koho/uusi; sen jälkeen aloituslento j4 (käännös 491bec23b valmis); tav2-ajo (ffc355105) niiden jälkeen JU:n vuorolla.
