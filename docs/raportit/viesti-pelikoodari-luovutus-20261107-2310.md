@@ -7,6 +7,13 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opi
 - Kohta 0 TEHTY `003ab5b9f` (`pelikoodari/muisti-latauskuvat`): VaakaOtsikko 1260 → 900 px, keskiY 143 → 190 px; lasketut kuvat `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/latauskuva-otsikko-{ennen,jalkeen}-laskettu.png`.
 - Esikatselua varten yhdistelmä `e26c3ad16` (`pelikoodari/esikatselu-otsikot-lahto`). Skenaario `_tyo/pelikoodari/keisari-lahtee/sk.txt`. JU:lta pyydetty vuoro 23.2x: 4 ajoa (ipad, iphone-vaaka × e26c3ad16 ja 72e257a0b). Kuvat PT:lle, PT → KK. Ei junaan ilman kuittausta.
 
+## 00000000. TILA 02.3x (UUSIN)
+- PT 02.05: OMISTAJAN PÄÄTÖS 02.0x (KK) "Kyllä" = 22dc4c06b junaan 221. EHTO: kääntymisohje "Pyyhkäise oikealla peukalolla…" näkyy ensimmäisessä risteyksessä, jossa pelaaja kääntää itse (27.10.). Varmista ehto, kuvapari KK:lle, sitten sha JU:lle junaan 221 (tarkista 221:n kärki). "Otsikot vain vähän alemmas (latauskuvassa ei hattuun)." TF ei lähde.
+- Ehto EI täyttynyt 22dc4c06b:ssä (koneen käännös sytytti ja kuittasi ohjeen). KORJATTU `69f80037c`: haara `pelikoodari/keisari-221` (natiivi-backup, työpuu wt/proto-pelikoodari-tarkastelu) = juna-221 330a43515 + bb973922c + 22dc4c06b poimittuina + korjaus (JuoksuOpetus.KoneKaantaa). Testit Juoksu 208/208 (MK_JUURI = scratchpadin juuri: k06w-linkit + osamallit791-v6 mediasta `maailma-v4/`), unity-tarkistus 0.
+- Kysytty PT:ltä 02.1x: otsikkolause muutospyyntö (latauskuvan keskiY 190 → ~170 px) vai kuvaus? Ei vastausta vielä.
+- Esikatselu pyydetty JU:lta 02.3x: `_tyo/pelikoodari/keisari-lahtee/aja-ohje.sh` (sk-ohje.txt, 69f80037c ja 22dc4c06b ipad) → ajot-ohje.txt. Sitten parit KK:lle (PT:n kautta), sitten sha JU:lle.
+- Latausmittaus: pari -2 + tahti4-1 JU:n iPad-jonossa; kuvatarkistus LOD tehty (parit-lod/, raportoitu PT:lle).
+
 ## 0000000. TILA 01.2x (UUSIN)
 - PT 01.1x: "pyydä JU:lta toistopari -2 + kuvatarkistus (alun rakennukset ilman LOD-poksahdusta, iPad ja iPhone). CPU-kopioiden tahditus: saa kokeilla samaan haaraan, mutta mittaa muistihuippu latauksen aikana (raja 4080); jos huippu nousee selvästi, jätä pois. Junaan 221 vasta kuittauksellani toistoparin ja kuvien jälkeen."
 - Pyydetty JU:lta 01.2x: iPad ennen-2/jalkeen-2 (sk-ipad-lataus.txt) + tahti4-1 (61f63adb9 + QA `ui juoksupeli palatsi kopiotahti 4000000`, sk-ipad-tahti4.txt, ei koodimuutosta) → `lokit/pelikoodari-lataus-*`; esikatselu `_tyo/pelikoodari/juoksu-lataus/aja-kuvat.sh` (sk-kuvat.txt, 4 ajoa) → ajot-kuvat.txt. Kun valmis: vertaa ajat + tarkka-huippu latauksen aikana; kuvaparit a–f PT:lle. Jos 4 M ok → oletus koodiin samaan haaraan ja uusi mittaus.
