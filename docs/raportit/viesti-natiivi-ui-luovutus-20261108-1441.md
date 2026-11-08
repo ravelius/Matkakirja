@@ -44,3 +44,14 @@ c) kartta-lukittu-3 kuvat (luovutus -1322 kohta 2 / PÄIVITYS 13.40).
 2) LENTOTILAN VAIHTONAPPI MANUAALI / AUTOMAATTI pohjien tyyliin (ei uutta tyyliä); peli alkaa AUTOMAATISSA. Tila PK:n rajapinnassa.
 Molemmat haaraan natiivi-ui/fpv-nakyma (b45bbe356 päälle) → NS:n pienoismallin kuvapariin (kerro NS:lle uusi sha).
 JU 14.4x: kartta-lukittu-4 jonossa isolla iPadilla NS:n kerma-ajon jälkeen.
+
+## PÄIVITYS 14.5x (2): RAJAPINTA JA AJOT
+- PK 5a7b64bba (natiivi-backup pelikoodari/fpv-lentomalli, Assets/Matkakirja/Peli/Fpv/FpvLentomalli.cs, Matkakirja.Peli.Fpv) — KÄYTÄ TÄTÄ, ei e1d7c09c4:
+  FpvLentomalli.Tila = FpvTila.Manuaali / FpvTila.Automaatti (oletus Automaatti). Automaatissa kaasutikku keskellä (±8 % kuollut alue) = korkeuden pito
+  → kosketuksen kaasutikku PALAA keskelle automaatissa; Manuaalissa kaasu suora (−1 = ala-asento, ei palaa). Luvut: d.NopeusMaanYllaKmh (km/h),
+  d.KorkeusMerenpinnasta (m, korostus pois; NaN kunnes NS:n osa 4 asettaa d.KorkeusMaailmassa ja d.Korostus → näytä "–" NaN:lla).
+  PT: tietorivi + tilanappi kohdan b) kosketustikkujen kanssa samaan FPV-kokonaisuuteen (haara natiivi-ui/fpv-nakyma).
+- NS: JU ajaa b45bbe356:n skenaariolla _tyo/natiiviseppa/fpv-kuvakoe/sk-fpv-pienoismalli-nui.txt (ui fpvnakyma 1 pm-ylan jälkeen, tila-rivi ennen
+  jokaista dronekuvaa) → lokit/natiiviseppa-fpv-pienoismalli/. Katso nimet + pallo sieltä.
+- JU-jono isolla iPadilla (NS:n kerma-ajon jälkeen): kartta-lukittu-4 → merenpohja-1 (pid 10385; 18 kuvaa, ei 20: sk:ssa 18 kuva-riviä, ok) →
+  napautus-3 (pid 17085). JU kuittaa kaikki kolme.
