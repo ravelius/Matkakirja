@@ -91,3 +91,13 @@ Jono nyt: nähtävyydet ensin → merenpohjan osoite + parit → napautus-2-korj
 
 ## PÄIVITYS 13.44: TOPO-VIDEO 3 (lokit/nui-topoesittely-3-79f8a637b/mac, 44,9 s) KATSOTTU JA LÄHETETTY PT:lle (KK:lle)
 - Alpit kyltti + kierto loppuun, Himalaja ok. Puute: KS:n ruutukuvat. Topoesittelyissä ei muuta auki NUI:lle ennen KS:n kuvia.
+
+## PÄIVITYS 14.28: PT 14.36 (OMISTAJAN PYYNTÖ 14.28) — FPV-DRONEN NÄKYMÄ, kärjen (nähtävyydet ensin) JÄLKEEN
+Omistajan päätös 14.25: ×15-kohokartta = pienoismalli, jonka yllä pieni drone lentää nopeasti. NS:n FPV-komento `drone` 2efebff6e (natiiviseppä).
+Molemmat olemassa olevista osista, ei uutta tyyliä:
+1) NIMET MAASSA kuten Cupolassa (Linssit/Unity/KupoliNimet.cs): kaupungit, vuoret, meret pisteenä + nimenä, aina pystyssä, vakiokoko,
+   tärkeät isompina; horisontin takana pois; väistö.
+2) PIENI MAAPALLO kulmaan kuten ISS-kuvanäkymässä (UI/Linssit/Sijaintipallo.cs): meripihkan piste dronen kohdalla, pallo kääntyy lennon mukana.
+Kun valmis: kerro NS:lle (local_99130238-aa54-4a29-bcc9-7a023584944b) haara + koukut → NS:n pienoismallin kuvapariin (PT → KK).
+Kosketustikut (PÄIVITYS 13.41) samaan FPV-kokonaisuuteen. Suunnitelma: Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md.
+JONO NYT: nähtävyydet ensin → FPV-näkymä (nimet + pallo) → merenpohja → napautus-2-korjaus → kosketustikut; kartta-lukittu-3 kuvat kun ehtii.
