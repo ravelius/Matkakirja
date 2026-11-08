@@ -37,3 +37,8 @@ ja tämä wt. Poista lisää vain omia, puhtaita ja pushattuja.
    KUN KUVAT TULEVAT: parit a | b etäisyyksittäin, lähin siisti D metreinä kummastakin, Skaala = D/3 → PT; KK tilaa superdronen kuvan.
 4. TOPOESITTELY fdd642058 KUITATTU PT:lle 15.4x (perillä + kierto loppui, kallistus pysyy): _tyo/natiiviseppa/topoesittely/kuittaus/. Avoin: NUI valikkoon.
 5. JONO: pohjapallon kuittaus → FPV B:n kaatumaselvitys → kohokartan napakalotit (14.45:n kohta 3) → FPV osa 4. PT kirjaa junat/asemataulun.
+
+## LISÄYS 16.4x (JU): FPV B:llä EI kaatumalokia
+systemCrashLogsissa ei yhtään Matkakirja3D-kaatumaa 8.11. → launch hylätään ennen ajoa (POSIX 22), ei kaatuminen. JU epäilee pakettia/asennusta
+(allekirjoitus, Info.plist, binääri), ei koodia. Molemmat FPV-käännökset poistettu. Seuraavalla shalla JU tallentaa .app:n ja koko install-tulosteen.
+Ehdotus: käännä 2fa367316 uudelleen sellaisenaan (JU) ja vertaa .app (codesign -dv, Info.plist, koko) ecabf1855:n .app:iin ennen koodimuutoksia.
