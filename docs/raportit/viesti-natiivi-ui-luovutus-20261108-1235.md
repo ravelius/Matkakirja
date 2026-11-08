@@ -74,3 +74,4 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
   yksittäinen nimi voi sammua/syttyä kiertäessä; kierron aikana vaakanimet voivat hetken limittyä. MITTAA: lisää skenaarioon kierto 0→3→7→12° levossa
   (kuvat + `ui kiintealadonta tila`), vertaa nimien joukkoa. Jos hyppii häiritsevästi: ehdota PT:lle porras 15° tai ladonnan teko kaikkien
   suuntien yli (pariton nimi pois, jos osuu jossain suunnassa) — jälkimmäinen on täysin lukittu, mutta harventaa.
+- 12.4x JU: 9f4b590b5 peruttu (ei iPadille); 17addbe2d käännös L1 12.43 (pid 42833) → lokit/nui-kartta-lukittu-2-17addbe2d, md5:t JU:n raportissa.
