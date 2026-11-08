@@ -38,3 +38,11 @@ Keisari c92dafe1f ja lataus ab113e0ac junassa 221; c (e59541a34) junassa 222. Lo
 - KK 23.11: omistajan 27.10. 08.27 "eunukki kurkistaa heti, kasvot tutuiksi" pysyy ehtona. Vastasin: kasvot todennäköisesti pienet (kamera ~9 m keisarin
   takana, ovi 5–6 m kamerasta oikealla); ehdotus: kamera viipyy 0,5–0,8 s oven puolella ennen taakse tuloa. ODOTTAA KK:n päätöstä kuvan d2 jälkeen;
   toteutus JuoksuAvaus.LuoSeinaAvaimet (avain huudon kohdalle sivulle) + PorttiAikajana (paikalla myöhemmäksi), testi Taso1OveltaHetiKujalle (Kesto − seina ≤ 2,5).
+
+## LISÄYS 23.2x (d2 tehty; korvaa yllä olevan "ODOTTAA KK:n päätöstä")
+- KK 23.21 valitsi ensisijaisen ratkaisun: kurkistus heti, kun keisari on tullut ovesta. Toteutettu 0cc5ac36c (juoksu-223, pushattu natiivi-backup):
+  JuoksuAvaus.KurkistusOvestaM = 1,0 → EunukkiKurkistaa 29,03 s (ennen huuto + 0,3 = 30,3 s). Kasvot kuvassa: iPhone pysty 0,64 s (ovi oikeassa
+  reunassa), iPad vaaka 1,56 s (ennen 0 / ~0,3 s). Huuto ennallaan 32,8 s. Testi Taso1OveltaHetiKujalle mittaa (KameraKatse eriytetty). 874/874, unity 0.
+- Viipymää (0,5–0,8 s oven puolella) EI tehty; se on KK:n vara, jos kuva d2 näyttää kasvot liian lyhyesti pystyssä.
+- JU:lle 23.26 (jonossa): Mac-toisto kärjellä 0cc5ac36c + kuva d2-eunukki-ovella (iPhone pysty + iPad) → KK. KK:lle kerrottu 23.26.
+- PUUTTUU: katso d2-kuva, kun JU raportoi (kasvot ovilehden reunalla näkyvissä ~0,3–0,6 s "eunukki kurkistaa" -lokirivin jälkeen).
