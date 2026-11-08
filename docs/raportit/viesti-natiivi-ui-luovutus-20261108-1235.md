@@ -96,3 +96,7 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
 - JU 12.54: iPad-järjestys PK g+f → kartta-lukittu-2 17addbe2d → napautus-2 c33b2ebd1.
 - 13.17 NS:n Himalajan suunta 877f5d72d (etelästä muuriin, 28,5/84,5) fast-forward → natiivi-ui/topoesittelyt-221 = 877f5d72d (natiivi-backup).
   Uusi Mac-video JU:lta vasta, kun KS:n ruutukuvat ovat mukana JA NS on korjannut tallenteen kellovian (NS ilmoittaa). Skenaario sk-topoesittely-1-mac.txt.
+- 13.20 KARTTA-LUKITTU-2 17addbe2d iPad (9/9) KATSOTTU → proto-3d/_tyo/natiivi-ui/kartta-lukittu-2/tulos-kartta-lukittu-2.md + 4 paria, lähetetty PT:lle (KK:lle).
+  Lukitus toimii; huomio: ilman väistöä harvempi (Musée de l'Armée putoaa oman mallinsa takia, Palais Bourbon, Petit Palais, Musée Rodin...).
+  Mahdollinen korjaus PT:n/KK:n sanalla: mallin oma nimi ei törmää omaan malliinsa (vanhassa OnKyltti/omaMalli-poikkeus) → ei junaan ennen.
+  5°-portaiden mittaus (kierto 0→3→7→12°) yhä tekemättä.
