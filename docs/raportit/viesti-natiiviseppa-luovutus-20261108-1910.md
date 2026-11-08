@@ -42,3 +42,11 @@ kuvien kanssa KK:lle PT:n kautta.
    ja terävä vaakasuora usvaraja yläkolmanneksessa (horisonttiusvan raja, ks. DroneKuva/usva).
 2) Lähin siisti D uudelleen MACILLA iPad-koossa (Raamattu 12.26; JU:n esikatseluvuoro) → pari PT:lle → KK. Codex-kuvat odottavat D:tä.
 3) Vasta sitten FPV osa 4 (lentomalli, Skaala = D/3, EI kertoimen muutosta).
+
+## LISÄYS 19.2x (3): KOHOKALOTIT v5 KYTKETTY
+KS 19.2x: 2026-11-08-kohokartta-v5 (KS 58253267f, reuna 84°, häive 84,4–85,0, paketti _valmiit/kohokartta-napakalotit-v5-vienti-20261108,
+vienti JU:lla, KS ilmoittaa CDN:n). NS: 95f5af086 (natiivi-backup natiiviseppa/navat-kohokalotit) = 300e9923f + KalottiVersioKoho
+"2026-11-08-kohokartta-v5"; unity 0. Skenaario sk-navat-kohokalotit.txt: saumakamerat aja ±86 … 6. JU:lle pyydetty 19.2x MAC-esikatselu
+(12.26) CDN:n jälkeen → lokit/natiiviseppa-navat-koho/kohokalotit-v5/ (ajopyynto-kohokalotit-v5.md).
+KUN KUITTAA: parit koho2 | kohokalotit (v6) | kohokalotit-v5, saumarajaus 84–85° täysikoossa (sauma näkyy?), konsolista "versio
+2026-11-08-kohokartta-v5" → PT ≤ 3 riviä. Sitten FPV-järjestys (lisäys 2).
