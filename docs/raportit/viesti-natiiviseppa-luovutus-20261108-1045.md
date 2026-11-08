@@ -26,6 +26,8 @@ Cron "4 9 * * *" luotu 10.1x (session-only): luo uudelleen.
      kuvat lokit/natiiviseppa-navat-koho/. Parit itse katsottuna KK:lle (local_37f7c945-e1a0-4638-90b8-93c389a36fbe), tulos PT:lle ≤ 3 riviä;
      sha JU:lle junaan VAIN PT:n sanalla.
 
+0b. NAVAT-AJO (JU 10.45): iPhone ei kytketty → iso iPad (sk-navat-ipad.txt), verrokki 5d6967444 ja uusi ca92af647, myös tavallisen kartan kuvat tav-etela/tav-pohjoinen (NS pyysi). Kuvat lokit/natiiviseppa-navat-koho/{verrokki,uusi}/. KK:n iPhone-pari myöhemmin, kun puhelin kytketty.
+j3: odotus 1,50 s liukumalla, käytävä 68 %.
 A0. J3 AJETTU (JU 10.41, tuli luovutuksen jälkeen): KYLMÄ ok, kuvia 3/3, käännös 46d34ca4; koosteita 799 (99 899 ms: haku 77 069, purku 16 932), levyltä 358, ETUKÄTEEN 219. Kansio lokit/natiiviseppa-striimi-aloituslento-3/j3. LUKEMATTA: tee parit n2|j3 ja katso a:n etuala (ohje alla).
 A. ALOITUSLENTO (striimi-karkea junaan 221): uusinta 2 LUETTU (tulos SK/tulos.md "UUSINTA 2", parit SK/parit/laite-2/): koosteet 0,93 → 0,11 s/kpl,
    j2 käytävä 100 %, b terävä, s1 ok, a:n ETUALA YHÄ SUMEA. PT kuittasi; ei junaan ennen kuin a terävä.
