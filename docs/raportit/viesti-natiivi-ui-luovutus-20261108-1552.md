@@ -49,3 +49,11 @@ b) FPV: NS:n A/B-tulos (maasto) ja pm-kuvat; avoimet (tikut 64 pt, vuoret peitt�
   OMISTAJAN PÄÄTÖS 16.0x "Kelpaa"). Kartta-testit 720/720, unity 0. Sha annettu JU:lle ja PT:lle.
 - Proto-työkopio nyt haaralla natiivi-ui/kiintea-oletus-222 (puhdas).
 - JU:n jonossa enää napautus-4.
+
+## LISÄYS 16.2x – JONON KÄRKI SEURAAJALLE
+- napautus-4 katsottu ✓ (Pick nostoissa: merkki; _tyo/natiivi-ui/nahtavyysnapautus-4/), PT välitti KK:lle. JU:n jono tyhjä.
+- PT 16.2x: "Jatka Notre-Damen 3D-mallin kyltti → esittely; sha + parit PT:lle." Haara natiivi-ui/nahtavyyden-napautus-222 (491fdf026).
+  Ajo 1 (ae84dd1dd): Notre-Damella 3D-malli, sen kyltti ei esittele. NS:n vihje: NahtavyysEsittely.Hiivuta = k => k.KohdeKiertoHiivu()
+  vaatii 79f8a637b:n PalloKierto-muutoksen (on natiivi-ui/topoesittelyt-221:ssä). Selvitä ensin, kulkeeko mallin kyltin napautus
+  NostotKartalla.Napautus → AvaaNosto → NahtavyysEsittely.Napautus (vai mallin oma kyltti/Kohdenostot.On eri id). Todennus iPadilla
+  `ui kohdenostot napauta Notre-Dame` + kuvat (TARKISTUS-rivi; ei ui lentopiiloa).
