@@ -17,6 +17,8 @@ ODOTTAA PT:N SANAA edelleen: PK 61f63adb9 (ks. -0003).
 - KS kohokartta-5 decf8bef4 pid 75992 (T/ks-kohokartta5.zsh) odottaa lippua T/ks-v5-cdn-ok, sitten Mac vapaa linja, 8 kuvaa, lokit/karttaseppa-kohokartta-5-b8-decf8bef4 → kuittaus KS:lle (md5, Shader-error, PUUTE). Koe, ei junaan. (kohokartta-4 pid 76973 PYSÄYTETTY ennen alkua, PT halusi ämpäriosoitteen.)
 - PK iPad-sarja pid 15261 (T/pk-lataus-pari2.zsh): ennen-2 VALMIS 01.51 (huippu 4679 Mt, ELOSSA), jalkeen-2 61f63adb9 ALKOI 01.52, sitten tahti4-1 61f63adb9 (sk-ipad-tahti4). → kuittaus PK:lle (local_91a1bc27-6870-46aa-9886-66fd33b68880): kansiot lokit/pelikoodari-lataus-{ennen-2,jalkeen-2,tahti4-1}, huiput, ELOSSA. Huom pari 1:ssä "avataan 0 latauskuva-pois 0" ja kehysajat vanha (kerrottu PK:lle).
 
+- NUI puut4-ipad 3971e6540 pid 21494 (T/nui-puut4-ipad.zsh, kopio puut3:sta): laitekäännös vapaalla linjalla, sitten iPad-lukolla pois → päällä, vahti päällä, kansiot lokit/nui-kartan-puut-4-ipad-{pois,paalla}-3971e6540 → rivi NUI:lle kuten puut3 (pois/päällä: kuvat, md5-eri, vahti-VIKA, tarkka-huippu; vertaa puut3: 4039 / SEIS 4080, huippu 4104). Ei junaan.
+
 ## 3. Kuitattu tällä vuorolla
 KS lähialue-1; VS vesikerros Mac + iPad (GPU p50 15.05 → 8.33 ms), ilmaperspektiivi de7e323a6 (a, b) ja 98ee4c01e (5 skenaariota); NUI nimet-reuna, kohokartta-kytkin-1, kartan-puut-1 (p1-pois = p2-pois, NUI: skenaariovirhe), -2, puut3 iPad (pois 4039 Mt OK; päällä SEIS vahti 4080 Mt, 6/11; raportti P/lokit/nui-kartan-puut-3-ipad-RAPORTTI-2f9479036.txt PT:llä ja NUI:lla); NS vaihe12-uusinta (v2 vahti 4090, b2 OK), ASTC2 821e5ba74 (a2+ka2 6/6, mallit teksturoituja), nui-ajo 10604363c (n1 3 kuvaa, n2 1); PK latauspari 1, esikatselu aja-kuvat.sh 4/4.
 
