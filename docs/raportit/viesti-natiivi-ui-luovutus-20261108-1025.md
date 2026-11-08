@@ -4,6 +4,10 @@ Korvaa luovutuksen -0430 (b24dcac9f); sen Opit ja kohta 4 (valitsin, -0401) enna
 PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, NS local_99130238-aa54-4a29-bcc9-7a023584944b, VS local_fa464945-e15d-4f98-aaad-00877a60f63a, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b. Viestit send_messagella id:llä, PT:lle ≤ 3 riviä.
 Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas, haaralla natiivi-ui/puut-nimet-221), etäpää natiivi-backup. Ajot vain JU:n vuorolla.
 
+## 0. JONON KÄRKI (OMISTAJAN PÄÄTÖS klo 10.32 KK:n kortilla, PT:n kautta): lippu striimikartalla takaisin Raamattu 4.42:n mukaiseksi
+- Tanko radiaalisesti poispäin ruudun keskeltä: ruudun alaosassa alaspäin, keskellä lähes näkymätön. Pohjaksi 6834a6711:tä EDELTÄVÄ toteutus; 6834a6711 + 311eacd76 (lippu pystyyn) rikkovat 4.42:n (palautetaan/kumotaan ne lipun osalta).
+- Pari KK:lle (PT:n kautta): keski, ala, reuna ja kartta käännettynä; ajo JU:n vuorolla. Ennen merenpohjaa. Muisti: lippu Elsassissa ei vika (paikka), asento 4.42 ehtona.
+
 ## 1. KIIRE: puuvika (omistaja 09.49 TF 221 "Puut yms liikkuvat tai sammuvat panoroidessa"), korjaus tehty, pari JU:lla
 - Omistajan kuvat (Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/puut-panorointi-1/-2.png) olivat sama tila ~90 px siirrolla: täysikokoisena nurmet ja puut samat (PT luki pienennöksestä beigeksi). Rajaus _tyo/natiivi-ui/omistaja-puut-petit-palais-rajaus.png.
 - Diagnoosi lokit/nui-puut-panorointi-1-5d6967444 (iso iPad, sk-puut-panorointi-1.txt): `ui kartanelama tila` nimiltä 5 300–16 100 puuta pois, vaihtelee liikkeessä nimien mukana; puut pois -kuva: puistojen vihreä ON puita, piirroslaatan nurmi alla beige. Arkki _tyo/natiivi-ui/puut-panorointi-1-katsottu/arkki.jpg.
