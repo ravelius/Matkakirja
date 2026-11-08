@@ -44,6 +44,10 @@ ennen launchia `devicectl device info processes` + terminate vanha Matkakirja3D;
 JU 17.15: iPadilla EI Matkakirja3D-prosessia eikä Macilla console-prosesseja, lockState passcodeRequired false – syy yhä auki.
 Järjestys PT: ensin j6b, sitten pohjapallo (pp3 tarvitaan), FPV ab4, kohokalotit.
 
+NS 17.2x VIHJE: pohjapallo 17.00: sovellus OLI käynnissä (muistivahti fp 313→2089 Mt) kun f1c:n --console-launch sai error 22 → vain
+--console hylätään (esikäynnistetty prosessi elossa?). SEURAAVA JU: korjaa T/ipad-skenaario-f1c.zsh (esim. terminate esikäynnistetty pid ennen
+--console-launchia tai ohita esikäynnistys) ja testaa yhdellä ajolla ennen jonoa.
+
 ## 4. Levy ja siivous
 Levy ajoittain alle 12 Gi (käännösraja); PT/NS siivosivat. Poistin: wt/julkaisija-ns-gc ja wt/julkaisija-yhdistelma-218
 (esikatselu-rungolla.zsh luo L1-puun nyt tarvittaessa uudelleen pk-218:sta), laite-218-{ef81c021d, 9e98f55e5, 86916cbd7,
