@@ -76,7 +76,7 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
   suuntien yli (pariton nimi pois, jos osuu jossain suunnassa) — jälkimmäinen on täysin lukittu, mutta harventaa.
 - 12.4x JU: 9f4b590b5 peruttu (ei iPadille); 17addbe2d käännös L1 12.43 (pid 42833) → lokit/nui-kartta-lukittu-2-17addbe2d, md5:t JU:n raportissa.
 
-## PÄIVITYS 13.0x (nollauksen jälkeen, session local_43962c89)
+## PÄIVITYS 12.50 (nollauksen jälkeen, session local_43962c89)
 - NAPAUTUSAJO 1 ae84dd1dd SYY: skenaario ajoi kaarelle 0,035 (4 km); kyltit aukeavat vasta kaarella ≤ 0,02 (KaupunkiPalloMitat.KylttiAukiKaari),
   joten kaikki 15 merkkiä "PIILO ei napautusta" → napautus pallolle. Notre-Damella lisäksi 3D-malli, jonka kyltti ei esittele (AvaaNostoKortti).
   Koodi kunnossa; `ui nahtavyysesittely tila` kirjautuu kyllä (rivi ennen "→ ok").
@@ -85,5 +85,5 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
   JU:lle pyydetty → lokit/nui-nahtavyysnapautus-2-c33b2ebd1. SEURAAVAKSI: katso 8 kuvaa → kuvasarja PT:lle → KK.
 - AVOIN KYSYMYS (PT:lle kuvien kanssa): 3D-mallin kyltti (Notre-Dame, Louvre ym.) ei käynnistä esittelyä (oma suunnitelma 11.53);
   Pariisin isoimmat nähtävyydet ovat malleja → kannattaako mallin kyltin napautus viedä myös esittelyyn?
-- TOPOESITTELY 756f4962d KATSOTTU: video mac/topoesittely.mp4 + iPad 7/7 kunnossa (ruudut vielä ilman kuvia, KS). Lähetetty PT:lle 12.5x (video KK:lle).
+- TOPOESITTELY 756f4962d KATSOTTU: video mac/topoesittely.mp4 + iPad 7/7 kunnossa (ruudut vielä ilman kuvia, KS). Lähetetty PT:lle 12.49 (video KK:lle).
 - Kartta-lukittu-2 17addbe2d: odottaa JU:n ajoa (jono 2 ennallaan).
