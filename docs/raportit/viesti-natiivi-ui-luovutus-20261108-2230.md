@@ -29,3 +29,11 @@ paitsi iPad 70 % alla. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_0
   paikallaan → pari PT:lle → KK. Avoin riski: oikea kosketus (osoitin) testattu vain koodista; Tappi-luokka sama kuin oppaassa.
 
 ## 3) Sitten ★-kyltit (-2200:n SEURAAVA TEHTÄVÄ).
+
+## Lisäys 22.3x (PT: lopeta jono ja nollaa)
+- iPad 70 % = kapeampi kuvakulma esittelyn ajaksi (PT 22.2x) – toteutettu 79351459b (kohta 1).
+- Kameratappi 2d69ff27e: Mac-ajot JU:lla → katso kuvat itse → PT:lle (kohta 2).
+- ★-kyltit (kohta 3).
+- LENTORAJA-6 KEHYSVIAT (PT): Mac-video lokit/nui-lentoraja-6-7bbea110d (haara natiivi-ui/merenpohja-pohjapallo-lentoraja 7bbea110d,
+  worktree wt/proto-natiivi-ui-lentoraja) – katso kehysloki -2200:n kohdan 3 mukaan ja kysy PT:ltä viat, jos ne eivät ole viestissä.
+- KS:n LinssiUi-ehto (f2ad1a19d, Peite.Aseta(false) vain kun Sulkeutuva == null): ok, kuitattu PT:lle ja KS:lle 22.3x; ei toimia.
