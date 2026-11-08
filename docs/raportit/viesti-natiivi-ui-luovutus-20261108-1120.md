@@ -59,3 +59,5 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
 - 11.5x NS:n topokoukku (b1d5c652f natiiviseppa/topo-esittelyt: kierto 9,6 s lennon jälkeen, esilataus, KiertoSuunta, Kaynnissa kierron loppuun)
   YHDISTETTY 756f4962d natiivi-ui/topoesittelyt-221 (+ kyltti perillä, koukun kanssa Perilla vain lat/lon). 2268/2268, unity 0. JU:lle: ajot 756f4962d:llä
   (48e5654ae saa valmistua, kertoo kyltin). JATKA AINA 756f4962d:n päältä.
+- 11.5x 48e5654ae Mac-video (lokit/nui-topoesittely-1-48e5654ae/mac, 23,6 s): unity.log `esittelyt tila` → kyltti "ALPIT · Mont Blanc 4 806 m" Visible 24,964 194×25,
+  opasiteetti 1 → kyltti piirtyy nyt (UiKerros.Valikot). Videon ruutuja EI vielä katsottu. JU ajaa 756f4962d (Mac + iPad) → katso se ja lähetä video KK:lle PT:n kautta.
