@@ -197,3 +197,13 @@ PT: koe peruskartan KorkeusKerroin (nyt Oletus 2, build 10) suuremmaksi, esim. 4
 siirtymä pehmeä). Oma haara, ei junaan ilman korttia. Pari 2 | 4 JU:lla: lento Alppien yli + lento maapallolta → PT:n kautta KK:lle.
 Lähtökohta: Matkakirja.KorkeusKerroin (Aseta(k, georeferenssi), Arvo; Topografia.AsetaKerroin käyttää samaa) – lue ensin, miten Pariisin
 tasoitus ja kohokartan kerroin sitä käyttävät, ja tee lennon kerroin liukuvaksi (lennon alku/loppu).
+
+## LISÄYS 11.4x: NAVAT b) VOI ALKAA (KS ja PT, ENNEN korkeuskoetta)
+KS (local_740947d7-aa79-4b1e-948e-1b7dfc734364): napakalotit striimiväreissä ämpärissä julisteet/pallo/napakalotit/2026-11-08-striimi/ (pohjoinen.webp 2048,
+etela.webp 4096, kalotit.json; CDN 200; KS:n koodi PR ravelius/Matkakirja#6496, PT: c8cf3c783). Kytke KalottiVersio = "2026-11-08-striimi" kun
+ElavaTyyli.Striimi (pääte webp, reunat 80° N / 60° S ennallaan, kuvan oma alfahäive 1,5°), muuten vanha versio; häive kapeaksi.
+KS:N LÖYDÖS (PT: korjaa): Varita pitää vetenä vain keskiarvon 180–222; napojen syvä meri laatoissa 179/174/156 (58–70° S, 84° N) → pelissä maan
+ruskea 186/171/143 (myös verrokin tav-etela.png ulkokehä); 58–65° S vain 1–10/360 meripistettä vedeksi. Ehdotus: Varitan vesikynnyksen alaraja
+140–150 ja R−B < 26 erottaa meren. Jos kaava muuttuu toisin, kerro KS:lle (uusi kalottiversio puolessa minuutissa).
+Taulukko ja kuvat: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa-napakalotit-20261108/TULOS.md (+ esikatselu-*.png).
+Sitten iPad-pari JU:lla (tav-etela, tav-pohjoinen; sk-navat-ipad.txt) → PT; sitten korkeuskoe (yllä).
