@@ -37,3 +37,7 @@ Keisari c92dafe1f ja lataus ab113e0ac junassa 221; c (e59541a34) junassa 222. Lo
 - 1f: KK muistuttaa omistajan 2.11. 13.38 (a) "ovi ja huuto → nopea kierto taakse → 3-2-1". Vastasin KK:lle: TF 223 odottaa koodin mukaan
   linjan mukaisesti (seinä → huuto → kierto → 3-2-1 → ohjaus → pyyhkäisy), ei vika; laitteella ei todennettu. 1f tehdään 1g-päätöksen mukaan
   (itsekäännöksellä lähtö noin 1 s 3-2-1:n jälkeen). Jos juoksu ei lähde lainkaan pyyhkäisyn jälkeenkään → korjaa vikana. Ennen muuta muutosta kerro KK:lle.
+
+## LISÄYS 22.4x – OMISTAJAN PÄÄTÖS klo 22.38 (KK): "Odottaa pyyhkäisyä"
+2.11. linja pysyy: ei automaattisia käännöksiä, keisari odottaa seinällä pyyhkäisyä. **1g: ei korjausta.** 1f: lähtö pysyy linjan mukaisena
+(seinä → huuto → kierto → 3-2-1 → pyyhkäisy); korjaa vain, jos juoksu ei lähde pyyhkäisyn jälkeen. 1c (valmis 9f2e57b71, kuvat puuttuvat), 1d ja 1e jatkuvat.
