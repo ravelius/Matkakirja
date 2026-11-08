@@ -45,3 +45,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   Kartta 727/727, Linssit 2276/2276, Peli 874/874 (T/juna223-tappi-*.txt). PT + NUI kerrottu.
 - Kuitattu: NUI ipad70-4 a7866450f → PT + NUI (mitattu 0,63–0,71, Eiffel ~70 %, ND ~75 %). M:n vanha iPad 0cc5ac36c valmis (PUUTE 5, ei KK:lle).
 - Ketju L jatkaa: pariisipallo-2 → tahtikyltit-1 → kuvateksti-2. M: 1g-pari. Sitten O (tarina-1b), N (ajoennakko), P (pk2).
+- Ketju Q (NUI): kuvateksti-3 cd99695f8 ipad pk 0.465 L:n jälkeen → L/nui-kuvateksti-3-ipad-cd99695f8 (kuvateksti-2 iphone pysyy L:ssä). PK 1g a7004996e valmis 4/4 PUUTE 0, odottaa paria 84a91d530.
