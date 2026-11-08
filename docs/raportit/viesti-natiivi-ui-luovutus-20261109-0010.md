@@ -28,3 +28,10 @@ Parit: python3 -I scratchpad-skripti (PIL, kuvat vierekkäin 3600 px, otsikkokai
 
 ## Sitten
 - LENTORAJA-6 vain PT:n sanalla (ks. -2325).
+
+## LISÄYS 9.11. 01.5x: UUSI ISO TYÖ PT:ltä (omistaja 8.11. 23.14 + kortti 9.11. 01.47) – kaupungin nostovalikko
+Suunnitelma (sanat, kapea tulkinta, NUI:n osat 1–5, riskit): /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-kaupungin-nostovalikko.md
+- M-kirjaimeksi pienenee matkapäiväkirjan kortti "Pariisi, lokakuussa 18…", EI yläpalkin logo.
+- Seuraavaan avoimeen junaan (EI 223): haara junan 223 kärjestä 2f2e13352 tai uudemmasta.
+- JÄRJESTYS: ensin avoimet 223-ehdokkaat (pariisipallo-4, kuvateksti-3 yllä), sitten nostovalikko osa kerrallaan; Mac-kuvat iphone + ipad → PT → KK.
+- Aloittamatta (edellinen istunto kontekstirajalla).
