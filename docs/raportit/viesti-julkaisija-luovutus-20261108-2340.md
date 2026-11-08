@@ -47,3 +47,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - Ketju L jatkaa: pariisipallo-2 → tahtikyltit-1 → kuvateksti-2. M: 1g-pari. Sitten O (tarina-1b), N (ajoennakko), P (pk2).
 - Ketju Q (NUI): kuvateksti-3 cd99695f8 ipad pk 0.465 L:n jälkeen → L/nui-kuvateksti-3-ipad-cd99695f8 (kuvateksti-2 iphone pysyy L:ssä). PK 1g a7004996e valmis 4/4 PUUTE 0, odottaa paria 84a91d530.
 - 23.5x: NS ajoennakko pois/päällä VALMIS ja kuitattu PT + NS (ketju N LOPPU).
+- 23.5x: koehaara natiivi-backup julkaisija/koe-lentoraja-ajoennakko = fd8193758 (PT: ajoennakko kokeena lentoraja-6:n rinnalle, ei junaan; raidat = Atlantin selänne). PT + NS kerrottu.
