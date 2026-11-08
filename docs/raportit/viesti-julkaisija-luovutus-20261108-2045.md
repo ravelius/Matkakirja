@@ -33,3 +33,18 @@ iPad-pyyntö ilman Mac-ajon viitettä → takaisin tilaajalle. Ajo seis heti kaa
 Laitekäännökset f7cf0bd7c ja 300e9923f ajettu → voi poistaa (L/julkaisija-laite-218-*), 2fa367316 vasta kun NS on vertaillut.
 
 ## Nollaus: tämä luovutus + "LUOVUTUS VALMIS <sha>" Postivahdille (local_afae44f0-722b-4541-a3b8-30ca4f76543b).
+
+## LISÄYS 21.4x (PT pyysi nollauksen)
+- JUNA 223 AUKI: kärki 30f7090d8 (natiivi-backup julkaisija/juna-223) = TF 223:n 617d6ca2b + 4 esittely-committia
+  (bdd0f7a83, 65f0277be rajaus; 539234f7f pieni nostokuva puhelimella; 30f7090d8 `ui kamerasuhde laite` -testikomento). Omistaja 21.15 "Saa".
+  unity sh 0 virhettä (T/juna223-pienikuva-unity-tarkistus.txt), Kartta-testit 725/725 (T/juna223-pienikuva-kartta-testit.txt), worktree wt/julkaisija-juna-221 on nyt 30f7090d8:ssa.
+  Asemataulu: juna 223:n kaksi riviä siirretty Valmiina-kohtaan (juna.py valmis).
+- Kuvavahti on T/ipad-skenaario-f1c.zsh:ssä (pois: KUVAVAHTI=0). Raamattu 12.26 voimassa.
+- NUI-ajot (kuitattu NUI:lle, kuvat katsottu): pienikuva-1 539234f7f PERUTTU; pienikuva-2 30f7090d8 iphone + iphone-vaaka 6/6;
+  pienikuva-3 30f7090d8 iphone (lahizoomi 3) 6/6. Skriptit T/nui-pienikuva-{1,2,3}-mac.zsh.
+- NS fpv-kerma f69c5c04c 10/10 Shader-error 0, kuitattu NS:lle (T/ns-fpv-kerma-mac.zsh).
+- KESKEN: NS FPV osa 4 92125fce1 (T/ns-fpv-osa4-mac.zsh, nohup, L1, 7 kuvaa) → lokit/natiiviseppa-fpv-osa4/. Kun jonolokiin tulee
+  "AJO NS fpv-osa4-mac": katso kuvat ja konsolista "MATKAKIRJA fpv:" -rivit, törmäykset, korkeushaun virheet, SIGSEGV/NRE (ajopyynto.md:
+  _tyo/natiiviseppa/fpv-osa4/). Valmis-rivi PT:lle JA uudelle NS:lle (NS nollautui; id osoitekirjasta).
+- OPPI: pysäytetty esikatselu jättää /tmp/matkakirja-kaannospalvelu{,-2}.lukko (+ /tmp/ju-portti.lukko, /tmp/ju-tyokalupuu-N.lukko);
+  ju-vapaa odottaa ikuisesti. Pysäytyksen jälkeen: tarkista kuka/pid ja poista vain omat kuolleet.
