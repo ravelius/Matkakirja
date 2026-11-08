@@ -50,10 +50,9 @@ b) FPV: NS:n A/B-tulos (maasto) ja pm-kuvat; avoimet (tikut 64 pt, vuoret peitt�
 - Proto-työkopio nyt haaralla natiivi-ui/kiintea-oletus-222 (puhdas).
 - JU:n jonossa enää napautus-4.
 
-## LISÄYS 16.2x – JONON KÄRKI SEURAAJALLE
-- napautus-4 katsottu ✓ (Pick nostoissa: merkki; _tyo/natiivi-ui/nahtavyysnapautus-4/), PT välitti KK:lle. JU:n jono tyhjä.
-- PT 16.2x: "Jatka Notre-Damen 3D-mallin kyltti → esittely; sha + parit PT:lle." Haara natiivi-ui/nahtavyyden-napautus-222 (491fdf026).
-  Ajo 1 (ae84dd1dd): Notre-Damella 3D-malli, sen kyltti ei esittele. NS:n vihje: NahtavyysEsittely.Hiivuta = k => k.KohdeKiertoHiivu()
-  vaatii 79f8a637b:n PalloKierto-muutoksen (on natiivi-ui/topoesittelyt-221:ssä). Selvitä ensin, kulkeeko mallin kyltin napautus
-  NostotKartalla.Napautus → AvaaNosto → NahtavyysEsittely.Napautus (vai mallin oma kyltti/Kohdenostot.On eri id). Todennus iPadilla
-  `ui kohdenostot napauta Notre-Dame` + kuvat (TARKISTUS-rivi; ei ui lentopiiloa).
+## LISÄYS 17.0x – TILA SEURAAJALLE (korvaa 16.2x:n kärjen)
+- 697116a8e: Notre-Damen 3D-mallin kyltti esittelee kuten merkki (napautus-5 lokissa "mallin kyltti Notre-Dame napautettu", lento + kierto).
+- JUNA 222: 617d6ca2b on kärki (natiivi-ui/napautus-222-ilman-topo = 4406f963f + napautuksen 4 committia + b1d5c652f:stä vain
+  KohdeKierto/AjaKiertaen; ei topoesittelyä eikä b4e624cfe:tä). unity sh 0, PalloLiike 17/17, Kartta 720/720 (JU).
+- napautus-6 (sk-nahtavyysnapautus-6-222, Concorde + ND) JU:lla; JU tuo kuvan suoraan PT:lle (PT 17.0x). Ei NUI:n toimia.
+- Proto-worktree wt/proto-natiivi-ui-napautus-puhdas (haara yllä, puhdas).
