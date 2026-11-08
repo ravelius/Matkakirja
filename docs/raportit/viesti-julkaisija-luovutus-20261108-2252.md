@@ -54,3 +54,17 @@ KS: topo-sulku-1 aebf0648e (beige näkyy), topo-sulku-2 f2ad1a19d (peite pääll
   SKENAARIOTA EI OLE: PK:n luovutus f0b94809a (haara pelikoodari-luovutus-20261108-2255) sanoo vain "juokse avauksesta pohjoiseen ja
   seinien viertä"; _tyo/pelikoodari/juoksu-223/ sisältää vain 1g-selvitys.md. Pyydä skenaario uudelta PK:lta tai kirjoita juoksu-
   lataus-kansion sk-*-mallista (_tyo/pelikoodari/juoksu-lataus/), sitten mac-yleis.zsh kahdesti.
+
+## LISÄYS 23.10 (TUOREIN, nollaus PT:n käskystä 23.10)
+Ketju C (13187) pysäytetty 23.0x (NUI: ipad70-3 nostokuvien edelle). Uudet nohup-ketjut T/jono-2305-d … -2325-h (lokit T/jono-*.log):
+- D (pid 20411): NUI ipad70-3 233c6d554 ipad, pk 0.465, sk _tyo/natiivi-ui/sk-ipad70-3-mac.txt → L/nui-ipad70-3-ipad-233c6d554, AJOSSA L1
+  23.03 (pid 20414). KOE, ei junaan; kuvat ENSIN PT:lle → KK. TARKISTUS: lokissa "muoto näkyvä (… kerrosta …), ruudusta 0.6x–0.7x",
+  kierron lopussa "zoomi palaa 1,0"; ND ja Eiffel ~70 % ruudun korkeudesta. Sitten D ajaa nostokuvat-1 10845cd24 loput 5
+  (kuvateksti-ipad ajossa, kokoruutu x2, tarina x2; tarkistus yllä).
+- E: KS topo-sulku-juna-c 75ee33983 VALMIS 23.09 (mp4 1, 0 virhettä), L/ks-topo-sulku-juna-c-75ee33983; KS:lle kuittaamatta (KS ei tarvitse arkkeja).
+- F (pid 27523): NUI pariisipallo-1 a97e8583c iphone+ipad pk 0.465 (sk-pariisipallo-1.txt) ipad70-3:n jälkeen → L/nui-pariisipallo-1-{iphone,ipad}-a97e8583c.
+- G (pid 27756): KS topo-sulku-juna-d 21f33d4fc ipad (sk-topo-sulku-juna-d-mac.txt), JUNAAN MENEVÄ versio (KK 22.59) → L/ks-topo-sulku-juna-d-21f33d4fc.
+- H (pid 31739): NS reunapiikit-b b2761f67b (AJOSSA L2 23.09) ja -b-3413 3413b4565, ipad (ajopyynto-b.md) → L/natiiviseppa-reunapiikit-b{,-3413};
+  NS:lle: shader-virheet/NRE/SIGSEGV + rp-b-atlantti-pois md5 1 vs 2.
+Kuittaamatta myös: NUI kameratappi-2 x3 (4/4 kaikki), nostokuvat kuvateksti-iphone 6/6; NS reunapiikit-a 5/5 (md5-eri 4).
+Tilaajille kerrottu jonotus (NUI, KS, NS). Valmis-rivi kustakin kun kuvat katsottu.
