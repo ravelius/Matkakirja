@@ -1,0 +1,19 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "origin": "AI-generated fictional giant-drone visualizations; not documentary photographs",
+  "sourceCommit": "3242242fcb8a3f8028dbdcbb0f40b9b9e9f7d873",
+  "sourceBlob": "e2b8defcc720b2023bdd9c86e18dd5ccbad4fff2",
+  "sourceSHA256": "771ddc9d30deb6419a4f6e4f2650ac72ee01a05cda15a427be36417239de00b0",
+  "attachmentSHA256": "bbad2247a1f69a89e849eb358ccf669035b2e781e74f9d7c09a862ac69d0ddbc",
+  "generationCalls": 8,
+  "selectedAttempts": {
+    "2197": 4,
+    "2198": 2,
+    "2199": 2
+  },
+  "references": "Mont Blanc selected candidate used only as drone identity reference for entirely new Matterhorn/Eiger scenes. Eiger real photograph inspected by operator for geography, not passed to generation tool or copied into output.",
+  "geographyCheckURL": "https://commons.wikimedia.org/wiki/File:Eiger-Nordwand_IMG_9984.jpg",
+  "sourceImagesAlteredAfterGeneration": false,
+  "contactSheet": "Only resized copies placed side by side with Pillow; originals unchanged.",
+  "reviewLimitations": "Pixel comparisons are approximate and conditional; no exact spatial dimensions or mountain georeferencing proven."
+}

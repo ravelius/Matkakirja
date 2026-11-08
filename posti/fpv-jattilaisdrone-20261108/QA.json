@@ -1,0 +1,151 @@
+{
+  "reviewedAt": "2026-11-08T20:13:39.287381+00:00",
+  "taskNumbers": [
+    2197,
+    2198,
+    2199
+  ],
+  "reviewStatus": "producer-visually-reviewed-ready-for-KK-and-owner-review",
+  "ownerAccepted": false,
+  "KKAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "method": "Whole-frame and native-resolution visual inspection; manually estimated pixel spans; physical sizes are conditional on source width190m and approximately common camera distance. Not3D calibration or photogrammetric evidence. Rotor blur and perspective limit precision.",
+  "images": [
+    {
+      "file": "1-mont-blanc-chamonix.png",
+      "sha256": "f2598084e16cb5bbf6f2972f1140c3e3af3aa5b4761355399d585b2c824e07b0",
+      "bytes": 3151702,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "format": "PNG",
+      "widthAtLeast1536": true,
+      "landscape": true,
+      "opaque": true,
+      "visualChecks": {
+        "photographicAppearance": true,
+        "fourMotorsVisible": true,
+        "rotationalMotionBlur": true,
+        "threeBladeIntentVisibleThroughBlur": "Three-lobed traces visible; exact blade geometry obscured by intentional motion blur.",
+        "topBatteryAndStrap": true,
+        "frontFPVCamera": true,
+        "rearAntennas": true,
+        "shadowOnForest": true,
+        "noReadableTextOrLogosObserved": true,
+        "commonDroneIdentity": true
+      },
+      "pixelScaleReview": {
+        "droneSpanPxApprox": 1240,
+        "referenceTreesPxApprox": [
+          190,
+          200
+        ],
+        "ratioRangeApprox": [
+          6.2,
+          6.53
+        ],
+        "treeHeightMAt190mSpanApprox": [
+          29,
+          31
+        ],
+        "hoverGapPxApprox": 220,
+        "hoverHeightMApprox": 34,
+        "hoverEvidence": "Lowest motor aroundy580; directly underlying forest crowns aroundy800. Same-depth assumption; visual estimate.",
+        "notes": "Mont Blanc/Bossons scene; valley-floor/upward view. Frame+battery height about250–270px(~38–41m), perspective and blur affect endpoints."
+      }
+    },
+    {
+      "file": "2-matterhorn.png",
+      "sha256": "d9879873378b1736f98c8157c403a2fe5cac435c07186ab7dacbc8e7b3de1519",
+      "bytes": 2762543,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "format": "PNG",
+      "widthAtLeast1536": true,
+      "landscape": true,
+      "opaque": true,
+      "visualChecks": {
+        "photographicAppearance": true,
+        "fourMotorsVisible": true,
+        "rotationalMotionBlur": true,
+        "threeBladeIntentVisibleThroughBlur": "Three-lobed traces visible; exact blade geometry obscured by intentional motion blur.",
+        "topBatteryAndStrap": true,
+        "frontFPVCamera": true,
+        "rearAntennas": true,
+        "shadowOnForest": true,
+        "noReadableTextOrLogosObserved": true,
+        "commonDroneIdentity": true
+      },
+      "pixelScaleReview": {
+        "droneSpanPxApprox": 1400,
+        "referenceTreesPxApprox": [
+          180,
+          195
+        ],
+        "ratioRangeApprox": [
+          7.18,
+          7.78
+        ],
+        "treeHeightMAt190mSpanApprox": [
+          24,
+          26.5
+        ],
+        "hoverGapPxApprox": [
+          160,
+          175
+        ],
+        "hoverHeightMApprox": [
+          22,
+          24
+        ],
+        "hoverEvidence": "Lowest motor aroundy665; tallest directly underlying crowns aroundy825–840.",
+        "notes": "Matterhorn/Zermatt larch scene, more lateral three-quarter view and mild bank. Trees are at lower end of target25–35m; edge/blur uncertainty means not an exact dimensional pass. Frame+battery approx300px(~41m)."
+      }
+    },
+    {
+      "file": "3-eiger.png",
+      "sha256": "7356a45024715cff2b4b4b4a26f8b9eec7ed248247e1b279e91f8a7b649d4da7",
+      "bytes": 3256375,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "format": "PNG",
+      "widthAtLeast1536": true,
+      "landscape": true,
+      "opaque": true,
+      "visualChecks": {
+        "photographicAppearance": true,
+        "fourMotorsVisible": true,
+        "rotationalMotionBlur": true,
+        "threeBladeIntentVisibleThroughBlur": "Three-lobed traces visible; exact blade geometry obscured by intentional motion blur.",
+        "topBatteryAndStrap": true,
+        "frontFPVCamera": true,
+        "rearAntennas": true,
+        "shadowOnForest": true,
+        "noReadableTextOrLogosObserved": true,
+        "commonDroneIdentity": true
+      },
+      "pixelScaleReview": {
+        "droneSpanPxApprox": 1110,
+        "referenceTreesPxApprox": [
+          165,
+          185
+        ],
+        "ratioRangeApprox": [
+          6.0,
+          6.73
+        ],
+        "treeHeightMAt190mSpanApprox": [
+          28,
+          32
+        ],
+        "hoverGapPxApprox": null,
+        "hoverHeightMApprox": null,
+        "hoverEvidence": "High viewpoint causes projected overlap; ground-shadow displacement and apparent clear hover reviewed qualitatively.20–40m clearance was requested but cannot be independently verified from this2D view.",
+        "notes": "Eiger north-face silhouette checked against a real photograph as a visual geography check, not pixel matched or georeferenced. Elevated grassy hillside looking down at drone and forest. Projected tree heights shortened by viewing angle. Frame+battery approx240px(~41m)."
+      }
+    }
+  ]
+}
