@@ -87,3 +87,7 @@ päällekkäisistä vähemmän tärkeä pois aina samoin; kuvien kylki kiinteä 
   Pariisin isoimmat nähtävyydet ovat malleja → kannattaako mallin kyltin napautus viedä myös esittelyyn?
 - TOPOESITTELY 756f4962d KATSOTTU: video mac/topoesittely.mp4 + iPad 7/7 kunnossa (ruudut vielä ilman kuvia, KS). Lähetetty PT:lle 12.49 (video KK:lle).
 - Kartta-lukittu-2 17addbe2d: odottaa JU:n ajoa (jono 2 ennallaan).
+- 12.5x PT topoesittelystä (ei vielä KK:lle): 1) kyltit SK:n PR 6497 mukaan TEHTY dc3e11279 natiivi-ui/topoesittelyt-221 (natiivi-backup; ui.fi.json, sitova
+  välilyönti luvuissa). 2) sk-topoesittely-1-mac.txt: tallenne-alku siirretty ruudukon kohdalle. 3) Himalajan suunta etelästä (muurina) = NS:n osa, PT välittää.
+  Video KK:lle vasta, kun KS:n ruutukuvat + NS:n suunta ovat mukana → yhdistä NS:n SHA topoesittelyt-221:een, Mac-video JU:lla.
+- JU 12.51: kartta-lukittu-2 17addbe2d iPadilla ensin, sitten nahtavyysnapautus-2 c33b2ebd1.
