@@ -615,3 +615,42 @@ test('työnkulku vie kalotit webp:nä ja tarkistaa alfan', () => {
   assert.match(tyonkulku, /koko_etela:/);
   assert.match(tyonkulku, /m\.format!=='webp'/);
 });
+
+/* ===================== striimityyli (omistajan päätös 8.11.2026 klo 10.34) */
+
+test('striimi: varitaPikseli on pelin ElavaTyyli.Varita (oletusmeri → SVesi, oletusmaa → SMaa)', async () => {
+  const { STRIIMI, varitaPikseli, vedenOsuus } = await import('../tools/tee-napakalotit.mjs');
+  assert.deepEqual(varitaPikseli(...STRIIMI.meriOletus), [...STRIIMI.vesi]);
+  assert.deepEqual(varitaPikseli(...STRIIMI.maaOletus), [...STRIIMI.maa]);
+  // Napojen syvä meri laatoissa (mitattu 8.11.2026, z5) on vettä NS:n rajalla (ffc355105),
+  // oletusmaa ja varjoinen maa eivät.
+  assert.ok(vedenOsuus(179, 174, 156) > 0.9, 'napojen meri ei ole Varitalle vettä');
+  assert.ok(vedenOsuus(...STRIIMI.maaOletus) < 0.1);
+  assert.ok(vedenOsuus(170, 160, 135) < 0.1, 'varjoinen maa (R−B 35) luettaisiin vedeksi');
+});
+
+test('striimi: kalotin meri ankkuroidaan vesikaavalla ja maa saa maakaavan', async () => {
+  const { STRIIMI, STRIIMI_MAASIIRTO, STRIIMI_VESISIIRTO, vesiVarita } = await import('../tools/tee-napakalotit.mjs');
+  assert.deepEqual([...STRIIMI_MAASIIRTO], [8, -2, -12]);
+  assert.deepEqual([...STRIIMI_VESISIIRTO], [-36, -36, -51]);
+  assert.deepEqual(vesiVarita(...STRIIMI.meriOletus), [...STRIIMI.vesi]);
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  // Liitos vain vektorin merestä (80–83° N:ssä on Grönlantia ja saaria).
+  assert.match(tyokalu, /meressa: \(lat, lon\) => merenAlalla/);
+  // Jäähyllyt jäänä, ei merenä Etelämantereen sisällä.
+  assert.match(tyokalu, /striimi && jaatayte && vesi && Number\.isFinite\(m\) && m > 0\) vesi = false/);
+});
+
+test('työnkulku välittää tyylin työkalulle', () => {
+  const tyonkulku = lue('../.github/workflows/tee-napakalotit.yml');
+  assert.match(tyonkulku, /tyyli:/);
+  assert.match(tyonkulku, /--tyyli=\$\{\{ inputs\.tyyli \}\}/);
+});
+
+test('striimi: reunakaista liukuu laattojen paikalliseen sävyyn (omistaja 8.11.2026 klo 12.50, kehä)', async () => {
+  const { REUNAKAISTA_AST } = await import('../tools/tee-napakalotit.mjs');
+  assert.ok(REUNAKAISTA_AST > HAIVE_AST, 'kaistan on alettava ennen alfahäivettä');
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  assert.match(tyokalu, /const kohde = reunaSavy\(a\.lat, a\.lon\);/);
+  assert.match(tyokalu, /reunanLaattasavy\(\{ puoli, sharp \}\)/);
+});
