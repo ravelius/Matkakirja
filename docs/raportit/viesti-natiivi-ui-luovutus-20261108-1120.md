@@ -5,6 +5,14 @@ Korvaa luovutuksen -1025 (171cbc6fb); sen kohdat 1 (puupari p2), 2 (kohokartta j
 PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, Postivahti local_afae44f0-722b-4541-a3b8-30ca4f76543b.
 Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas, haaralla natiivi-ui/topoesittelyt-221), etäpää natiivi-backup.
 
+## JONON KÄRKI (PT 11.4x, OMISTAJAN PYYNTÖ 11.43 KK:n välitys; koskee junaa 222): KARTTA LUKITTU, Raamattu 2.216
+"Nimikyltit ja kaikki muutkin asiat kartalla pitää olla lukittuja eli eivät saa liikkua": kartta kuin painettu; nimet, kyltit, kuvakkeet, puut ja kohteet
+kiinni pinnassa; panoroidessa ja zoomatessa mikään ei väistele, hyppää (ehdokaskehä, nostojen sovittelu) eikä liu'u. Ei limitystä pysyy (paikoilla,
+ei liikkeellä). Poikkeus: lipun suunta (4.42).
+TEHTÄVÄ: SELVITYS ensin iPad-panorointiajosta (Pariisi + yksi muu kaupunki + pallo): mikä liikkuu kartan suhteen ja miksi (koodikohta). Nimien
+syttyminen/sammuminen liikkeessä: vain mittaus, ei muutosta ilman korttia. Tulos + pari (sama rajaus, ennen/jälkeen-kehys) PT:lle → KK.
+Pohja: sk-puut-panorointi-1/-2 (kuvat kesken liikkeen, `ui kartanelama tila`); ajo JU:n vuorolla. Tämä ENNEN esittelyjen ☰-valikkoselvitystä.
+
 ## JONO (järjestys)
 1. LIPPU 4.42 (OMISTAJAN PÄÄTÖS 10.32): TEHTY 1f26c51b4 natiivi-ui/lippu-442-221 = juna 221 5d6967444 + 6834a6711/311eacd76 kumottu
    (Lipputanko.cs = 6834a6711~1: tanko radiaalisesti, kangas itään, varjo pohjoiseen). unity 0, 2261/710/871.
