@@ -251,3 +251,6 @@ JU 11.5x: tav2-ajo jonossa (T/ns-navat-tav2.zsh pid 34071), laitekäännös nyt,
 ## LISÄYS 11.5x: PT:N UUSI TYÖ JONOON (navat → TÄMÄ → korkeuskoe)
 PT: OMISTAJAN PYYNTÖ 11.47 + PÄÄTÖS 11.55 "Lähestyy" (kamera lentää hyvälle katseluetäisyydelle, jos kauempana; lähempää ei loitonneta). Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-nahtavyyden-napautus.md (LUE).
 NS-osa 1: PalloKiertoon YHTEINEN esittelyliike (keskitys Aja/Panoroi-pohjalta → hidas kierto Kuvaa-pohjalta, ~90° kuten topopilotissa, jotta nimet eivät käänny ylösalaisin), hidastuu pois kun luenta päättyy, kosketus pysäyttää heti; laattatarkkuuden lukitus kuten 08.19 B. Sama liike topopilotin TopoEsittely.Kamera-koukkuun (korvaa/yhdistää KohdeKierron). NUI kutsuu sitä nähtävyysnoston napautuksesta. Raportti PT:lle. Huomioi TILA 11.55 kohta 2 (tallenteen kellovika) ennen videoita.
+
+## LISÄYS 11.5x: KOHOKARTAN UUSI-AJO VALMIS (JU)
+ca92af647 uusinta VALMIS 11.56: 4/4 kuvaa (etela, pohjoinen, tav-etela, tav-pohjoinen), eri md5, "kohokansi mitattu (16/16)", huippu 3194 Mt, NRE 0, kansio lokit/natiiviseppa-navat-koho/uusi. 1 VIKA-lähetys "kuva tav-etela", kuva silti syntyi: tarkista aika ja md5. SEURAAVAKSI ENSIN: TILA 11.15 kohta 0 a (parit.py, täysikoossa) → KK ja PT. Sitten j4 ja tav2 JU:lta.
