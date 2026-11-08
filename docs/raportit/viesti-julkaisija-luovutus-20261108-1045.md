@@ -1,4 +1,4 @@
-# Julkaisija: luovutus 8.11.2026 klo 10.45 (korvaa -0910:n; -0910:n, -0425:n ja -0003:n OPIT voimassa: git show 5d9738c87:docs/raportit/viesti-julkaisija-luovutus-20261108-0910.md)
+# Julkaisija: luovutus 8.11.2026 klo 10.45, PÄIVITETTY 11.05 (korvaa -0910:n; -0910:n, -0425:n ja -0003:n OPIT voimassa: git show 5d9738c87:docs/raportit/viesti-julkaisija-luovutus-20261108-0910.md)
 
 Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claude/proto-3d, jonoloki T/jono-20261103-ilta.txt.
 
@@ -23,6 +23,15 @@ Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claud
   (AJO-rivin "kansio"-teksti väärin, oikea tämä). Kuvapolut + napakannet-rivi (uudessa 16/16 odotettu) NS:lle (local_99130238-aa54-4a29-bcc9-7a023584944b). NS tekee parit KK:lle.
 - NUI puut-panorointi-2 50200fb68 pid 81668 (laitekäännös L1 käynnissä) → iPad, kansio P/lokit/nui-puut-panorointi-2-50200fb68. KIIRE (omistajan puuvika). Kuittaus NUI:lle (local_43962c89-fc14-4098-9dd7-6153133ffcea).
 - PK ositus g+f e59541a34 pid 29768 (T/pk-ositus4.zsh): laitekäännös odottaa kopiolukkoa → g, sitten f → lokit/pelikoodari-lataus-ositus-{g,f}. Kuittaus rivillä PK:lle (local_91a1bc27-6870-46aa-9886-66fd33b68880).
+
+## 11.05 PÄIVITYS (korvaa kohdan 3 tilat)
+- iPad --console "failed to launch" 10002 toistuu (10.49, 10.52, 11.01; tuoreen asennuksen jälkeen). Toimii: T/ipad-skenaario-f1b.zsh (ei sulkemista) onnistui 10.55.
+  Nyt käytössä T/ipad-skenaario-f1c.zsh (f1b + 6 yritystä) ja aja8:ssa "sleep 30" esikäynnistyksen jälkeen ilman kiinni. Uudet kääreet: kopioi nui-puut-panorointi-2.zsh.
+- NS navat-koho verrokki VALMIS 11.00 (4/4, kohokartta varmistettu, kalotti+häivevyö näkyy) → kuitattu NS:lle. Uusi ca92af647: T/ns-navat-uusi-vaihto.zsh (pid 79836) odottaa laite-iso 63129:ää, tappaa vanhan 63078:n ja ajaa ns-navat-uusi.zsh (f1c) → lokit/natiiviseppa-navat-koho/uusi; rivi NS:lle (local_99130238-aa54-4a29-bcc9-7a023584944b, on Natiiviseppä).
+  Skenaario P/_tyo/natiiviseppa/navat-koho/sk-navat-ipad.txt korjattu: "linssi linssi topografia" + "linssi topografia kohokartta 1" (EI "komento linssi topografia koho oletus" = tuntematon).
+- NUI puut-panorointi-2 50200fb68: 11.01 failed to launch (kansio VIKA-kaynnistys-…-1101), uusinta pid 55125 (f1c) → lokit/nui-puut-panorointi-2-50200fb68. KIIRE.
+- NUI lippu-442-1 1f26c51b4 (OMISTAJAN PÄÄTÖS 10.32, sk-lippu-442-1.txt, 8 kuvaa): T/nui-lippu-vaihto.zsh odottaa laite-iso 83335:ttä → nui-lippu-442-1.zsh (f1c) → lokit/nui-lippu-442-1-1f26c51b4; rivi NUI:lle.
+- PK g+f e59541a34 (pid 29768) laitekäännös jonossa; KS v6 vienti (pid 53921) menossa.
 
 ## 4. Kuitattu tällä vuorolla
 NUI panorointi-1 (12/12, huippu 3069); PK ositus a/b/c/e/d (kaikki ELOSSA, huiput 4345–4484 Mt); VS meripainuu-ipad (4/4, meri painuu True) + Mac meripainuu2-pohja/meripainuu2/vesikerros2; NS aloituslento-3 j3 (KYLMA ok 3/3, etukäteen 219).
