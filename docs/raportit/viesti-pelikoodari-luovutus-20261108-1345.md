@@ -23,3 +23,7 @@ Hae valmis avoin FPV-acro-lentomalli tai Unity-dronesäädin, lisenssi MIT, Apac
 Vertaa omaan 61fc67ce4:ään: tuntuma (acro, rates, moottoriviive, vastus), testattavuus (puhdas C#, Peli-testit), skaala (Skaala-kerroin), pallon ylös-vektori.
 Suositus yhdellä valinnalla: valmis koodi / valmis + omat lisät / oma. Valinta perusteluineen PT:lle (≤ 3 riviä + tiedosto) → PT vie KK:lle ennen sovitusta.
 Lisenssiteksti talteen (esim. _tyo/pelikoodari/fpv/LISENSSI-<projekti>.txt). Haku robots.txt-sääntöjen mukaan; Sonnet-agentti käy hakuun.
+
+## LISÄYS 14.3x – OMISTAJAN PÄÄTÖS klo 14.25 (PT 14.30) FPV-dronesta: "Pienoismallina"
+×15-kohokartta on iso pienoismalli, jonka yllä pieni drone lentää nopeasti. Drone pidetään etäisyydellä, jolla kartta on vielä siisti (NS ehdottaa rajan metreinä kuvaparista).
+Vertailuun (valmis koodi vs 61fc67ce4): lentomalli ja vauhti pienoismallin mittakaavassa (dronen oma mittakaava, ei maailman ×15 -skaalausta sellaisenaan: tarkista, sopiiko Skaala-parametri vai tarvitaanko erillinen pienoismallikerroin), ja **alin sallittu etäisyys maastosta parametrina** (FpvParametrit-kenttä; törmäys/raja itse NS:n osassa 4). Valinta PT → KK ennen sovitusta.
