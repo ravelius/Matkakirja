@@ -76,3 +76,8 @@ Tilaajille kerrottu jonotus (NUI, KS, NS). Valmis-rivi kustakin kun kuvat katsot
 - 23.3x: I:n skenaario päivitetty PK:n pyynnöstä (d2 eunukki ovella KK:lle, e OhjausPelaajalle, 4 × "kaanna -1 seina"). Ketju J (pid 46712) I:n jälkeen:
   PK 1g-pari a7004996e vs 84a91d530 iphone-vaaka, sk _tyo/pelikoodari/juoksu-223/sk-1g-sivuseina.txt → L/pk-1g-sivuseina-{a7004996e,84a91d530};
   PT:lle pari a–d + "paikka"-rivien S + "seinan edessa" -rivit. NS reunapiikit-b b2761f67b valmis 23.14 (4/4), kuittaa yhdessä -b-3413:n kanssa.
+- 23.2x JUNA 223 = b2761f67b (NS reunapiikit, PT hyväksyi; ff 3413b4565:stä, natiivi-backup julkaisija/juna-223). unity sh 0, Kartta 727/727,
+  Linssit 2269/2269 (T/juna223-reunapiikit-*.txt). PT + NS kuitattu. NS reunapiikit-b/-b-3413 kuitattu (atlantti-pois PSNR 100,5 dB).
+- KS topo-sulku-juna-d 21f33d4fc valmis 23.22, katsottu: peite 19,1–20,3 s täysi, ei beigeä → PT + KS; poiminta vain PT:n sanalla (kärki nyt b2761f67b).
+- Ketju K (pid 54367): NUI tahtikyltit-1 0f62c5656 iphone-vaaka + ipad pk 0.465 D:n ja F:n jälkeen → L/nui-tahtikyltit-1-<koko>-0f62c5656; rivi NUI:lle.
+- I:n skenaario = PK:n sk-1f-1g-pk.txt (kopioitu -ju:n päälle, 30 fps). "alkukaanto" ei näy lokissa (PK): tarkista vain "seinan edessa" ei ennen ohjausta.
