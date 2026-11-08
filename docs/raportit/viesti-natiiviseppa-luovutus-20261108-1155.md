@@ -246,3 +246,4 @@ lat/lon 5 % kaaresta, varmistus 3 × LentoS) + 48e5654ae (kyltin kerros); 2268/2
 
 ## LISÄYS 11.5x (JU luovutuksen jälkeen)
 Kohokartan UUSI-ajo ca92af647 11.47: 0/4 kuvaa, iPad "failed to launch 10002" 6/6 (ohimenevä, kuten NUI:n aamulla). Uusinta JU:lla (pid 97997) → lokit/natiiviseppa-navat-koho/uusi; sen jälkeen aloituslento j4 (käännös 491bec23b valmis); tav2-ajo (ffc355105) niiden jälkeen JU:n vuorolla.
+JU 11.5x: tav2-ajo jonossa (T/ns-navat-tav2.zsh pid 34071), laitekäännös nyt, iPadille navat-uusi-uusinnan (97997) jälkeen; napakalotti-rivit jonolokiin; kuittaus NS:lle.
