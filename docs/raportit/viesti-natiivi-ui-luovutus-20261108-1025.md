@@ -13,6 +13,8 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
 (PlayerPrefs linssi.topografia.kohokartta: oletus 1, kun avainta ei ole; Topografia.MuistettuKohokartta/LinssiOhjain, 9c5116526). 3) Vaihtokytkin ☰-valikon SISÄÄN
 (omistajan sana ohittaa Raamatun 2.73:n sijoituksen; nyt LinssiUi kohoKytkin ☰:n vieressä). VS tekee sinertävän ilman ja rakeen.
 Omistajan kuva Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/kohokartta-borneo-iphone.png. Yhteinen pari KK:lle: Borneo 60° ja 90°, Alpit, kytkin valikossa.
+4) OMISTAJAN PÄÄTÖS klo 10.38 (KK:n kortti): Topografialinssissä yläpalkki (logo, päivä, rahat) piiloon, kohokartta koko ruudulle, ☰ oikeaan yläkulmaan
+(vaihtokytkin ☰:n sisällä). Muu peli ennallaan. Kuva Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261108/kohokartta-ylapalkki-iphone.png. Pari KK:lle iPhonella ja iPadilla.
 Pohja: juna 221 (kohokartta 5d6967444 siellä); merenpohjan haarat (97b4f29a9 / 7ea8d6ebc) yhdistetään myöhemmin.
 
 ## 1. KIIRE: puuvika (omistaja 09.49 TF 221 "Puut yms liikkuvat tai sammuvat panoroidessa"), korjaus tehty, pari JU:lla
