@@ -17,3 +17,9 @@ Huom: pelikoodarin checkout oli vaihdettu haaraan koti/Matkakirja-pelikoodari (e
 
 ## 2. Muut (ennallaan)
 Keisari c92dafe1f ja lataus ab113e0ac junassa 221. Lontoon maanpinta a7ad5fc24 kokeena haarassa. Latauskuvat 190d6c094 NS:llä.
+
+## LISÄYS 13.5x – ENSIMMÄISENÄ (PT: OMISTAJAN PYYNTÖ 13.44 "Droneen kannattaa etsiä jokin valmis koodi")
+Hae valmis avoin FPV-acro-lentomalli tai Unity-dronesäädin, lisenssi MIT, Apache tai BSD; EI GPL (Betaflight GPL-3.0 → sen rate-kaavat vain omana koodina, kuten 61fc67ce4:ssä).
+Vertaa omaan 61fc67ce4:ään: tuntuma (acro, rates, moottoriviive, vastus), testattavuus (puhdas C#, Peli-testit), skaala (Skaala-kerroin), pallon ylös-vektori.
+Suositus yhdellä valinnalla: valmis koodi / valmis + omat lisät / oma. Valinta perusteluineen PT:lle (≤ 3 riviä + tiedosto) → PT vie KK:lle ennen sovitusta.
+Lisenssiteksti talteen (esim. _tyo/pelikoodari/fpv/LISENSSI-<projekti>.txt). Haku robots.txt-sääntöjen mukaan; Sonnet-agentti käy hakuun.
