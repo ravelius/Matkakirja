@@ -622,11 +622,11 @@ test('striimi: varitaPikseli on pelin ElavaTyyli.Varita (oletusmeri → SVesi, o
   const { STRIIMI, varitaPikseli, vedenOsuus } = await import('../tools/tee-napakalotit.mjs');
   assert.deepEqual(varitaPikseli(...STRIIMI.meriOletus), [...STRIIMI.vesi]);
   assert.deepEqual(varitaPikseli(...STRIIMI.maaOletus), [...STRIIMI.maa]);
-  // Napojen syvä meri laatoissa (mitattu 8.11.2026, z5) on vettä NS:n rajalla (ffc355105),
-  // oletusmaa ja varjoinen maa eivät.
-  assert.ok(vedenOsuus(179, 174, 156) > 0.9, 'napojen meri ei ole Varitalle vettä');
+  // OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei, beige säilyy": vesiraja kuten TF 5d6967444 ja natiivi
+  // bffbbb29a (180–190). Napojen avomeri laatoissa (mitattu z5, 179/174/156) on Varitalle maata eli beige.
+  assert.ok(vedenOsuus(179, 174, 156) < 0.1, 'avomeri olisi oliivi: Varitan vesiraja ei ole TF:n (180–190)');
+  assert.ok(vedenOsuus(200, 200, 190) > 0.9, 'matala rannikko (m 190–222) on vettä eli oliivi');
   assert.ok(vedenOsuus(...STRIIMI.maaOletus) < 0.1);
-  assert.ok(vedenOsuus(170, 160, 135) < 0.1, 'varjoinen maa (R−B 35) luettaisiin vedeksi');
 });
 
 test('striimi: kalotin meri ankkuroidaan vesikaavalla ja maa saa maakaavan', async () => {
@@ -641,6 +641,26 @@ test('striimi: kalotin meri ankkuroidaan vesikaavalla ja maa saa maakaavan', asy
   assert.match(tyokalu, /striimi && jaatayte && vesi && Number\.isFinite\(m\) && m > 0\) vesi = false/);
 });
 
+test('striimi: kalotin meri ajetaan Varitan läpi kuten laatat (beige, omistaja 8.11.2026 klo 14.51)', async () => {
+  const { varitaPikseli } = await import('../tools/tee-napakalotit.mjs');
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  // Liitos mitataan paperina (ennen Varitaa) ja meripikselit ajetaan sitten koko Varitan läpi.
+  assert.match(tyokalu, /varita: null,/);
+  assert.match(tyokalu, /if \(!meripikseli\[p\]\) continue;\n\s*const o = p \* 4;\n\s*const q = varitaPikseli\(/);
+  // Avomeri beige (maakaava), ei oliivi.
+  const [r, , b] = varitaPikseli(179, 174, 156);
+  assert.ok(r - b > 35, `avomeri ei ole beige: ${varitaPikseli(179, 174, 156)}`);
+});
+
+test('striimi: reunakaista ei liu\'u laattojen tietorajan takaisiin raitoihin (61,47° S)', async () => {
+  const { TIETORAJA, TIETORAJA_SILOTUS_AST, REUNAKAISTA_AST } = await import('../tools/tee-napakalotit.mjs');
+  assert.equal(TIETORAJA.etela, -61.47);
+  assert.ok(TIETORAJA_SILOTUS_AST >= 2);
+  // Etelässä raja on reunakaistan sisällä, pohjoisessa ei.
+  assert.ok(Math.abs(TIETORAJA.etela) < Math.abs(NAPAKALOTTI.etela.reuna) + REUNAKAISTA_AST);
+  assert.ok(Math.abs(TIETORAJA.pohjoinen) >= Math.abs(NAPAKALOTTI.pohjoinen.reuna) + REUNAKAISTA_AST);
+});
+
 test('työnkulku välittää tyylin työkalulle', () => {
   const tyonkulku = lue('../.github/workflows/tee-napakalotit.yml');
   assert.match(tyonkulku, /tyyli:/);
@@ -651,6 +671,6 @@ test('striimi: reunakaista liukuu laattojen paikalliseen sävyyn (omistaja 8.11.
   const { REUNAKAISTA_AST } = await import('../tools/tee-napakalotit.mjs');
   assert.ok(REUNAKAISTA_AST > HAIVE_AST, 'kaistan on alettava ennen alfahäivettä');
   const tyokalu = lue('../tools/tee-napakalotit.mjs');
-  assert.match(tyokalu, /const kohde = reunaSavy\(a\.lat, a\.lon\);/);
+  assert.match(tyokalu, /let kohde = reunaSavy\(a\.lat, a\.lon\);/);
   assert.match(tyokalu, /reunanLaattasavy\(\{ puoli, sharp \}\)/);
 });

@@ -201,6 +201,10 @@ export const PAPERI_MITTA = 1;
  */
 /** Striimin reunakaista: kalotti liukuu laattojen paikalliseen sävyyn näin monta astetta kehältä (ks. REUNAKAISTA). */
 export const REUNAKAISTA_AST = 4;
+/** Pohjasarjan (julisteen) viimeinen leveysaste, jolla laatoissa on tietoa (ks. REUNAKAISTA). */
+export const TIETORAJA = Object.freeze({ pohjoinen: 84.0, etela: -61.47 });
+/** Rajarivin silotus pituussuunnassa (± astetta) tietorajan takana. */
+export const TIETORAJA_SILOTUS_AST = 4;
 /** Liitoskaista: näin monta astetta kalotin kehältä napaan päin. */
 export const LIITOS_KAISTA = 3;
 /** Laattataso, jolta kohdesävy luetaan (z6 = koko maailma 64 × 64 laattaa). */
@@ -238,10 +242,14 @@ export const LIITOS_VARA = Object.freeze({
  *   MAA (myös Etelämantereen jää): Varitan maakaava sellaisenaan,
  *     SMaa + (väri − MaaOletus). Jää pysyy vaaleana, koska sen
  *     asteikko on paperia vaaleampi.
- *   MERI: Varitan vesikaava on vakiosiirto (SVesi − MeriOletus), joten
- *     se on sama asia kuin LIITOSSÄVY-siirto: kalotin meri ankkuroidaan
- *     liitoskaistalla pohjalaattojen mereen VESIKAAVAN läpi
- *     (STRIIMI_VESISIIRTO), ja batymetrian sisäiset erot säilyvät.
+ *   MERI (OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei, beige säilyy"):
+ *     kalotin paperimeri ankkuroidaan liitoskaistalla pohjalaattojen
+ *     paperimereen (ennen Varitaa), ja sitten JOKA meripikseli ajetaan
+ *     Varitan läpi kuten laattojen pikselit pelissä: avomeri (m < 180)
+ *     on Varitalle maata eli beige, matala rannikko (m 190–222) oliivi.
+ *     Näin kalotin meri on sama kuin laatoissa eikä navoille jää
+ *     oliivikiekkoa. (Versio 2026-11-08-striimi värjäsi koko meren
+ *     vesikaavalla oliiviksi; se oli NS:n ffc355105:n peili, peruttu.)
  *
  * Paperityyli (vanha, js/pallo.js:n verkkopeli) on ennallaan: --tyyli
  * puuttuu tai on "paperi".
@@ -260,12 +268,13 @@ export const STRIIMI_LAATTATASO = 5;
 /** Striimin näytteet pituusasteittain: vain meripisteet lasketaan, joten tiheämpi kuin paperilla. */
 export const STRIIMI_PITUUKSIA = 360;
 /**
- * Striimin varasävyt (Varitan läpi ajetut pohjalaatat z5, liitoskaista,
- * mitattu 8.11.2026). Työnkulku ei vie kuvia varasävyllä.
+ * Striimin varasävyt (pohjalaatat z5 paperina ennen Varitaa, vektorin
+ * meripisteet liitoskaistalla, mitattu 8.11.2026 klo 15). Työnkulku ei
+ * vie kuvia varasävyllä.
  */
 export const LIITOS_VARA_STRIIMI = Object.freeze({
-  pohjoinen: Object.freeze([157.5, 151.4, 117.4]),
-  etela: Object.freeze([143.2, 137.7, 104.8]),
+  pohjoinen: Object.freeze([193.5, 187.4, 168.4]),
+  etela: Object.freeze([179.2, 173.7, 155.8]),
 });
 
 const sile = (a, b, x) => {
@@ -279,10 +288,9 @@ const sile = (a, b, x) => {
  */
 export function vedenOsuus(r0, g0, b0) {
   const m = (r0 + g0 + b0) / 3; const rb = r0 - b0;
-  // NS ffc355105 (8.11.2026): alaraja 140–150 ja maan sävysuhde (R−B)/(m+1) ≥ 0,155–0,175, jotta napojen
-  // syvä meri on vettä mutta varjoinen maa ei (Natiivisepän mittaus z4 koko maailma).
-  return (1 - sile(26, 34, rb)) * (1 - sile(0.155, 0.175, rb / (m + 1)))
-    * sile(140, 150, m) * (1 - sile(222, 230, m));
+  // Kuten TF 5d6967444 ja natiivi bffbbb29a (OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei, beige säilyy"):
+  // alaraja 180–190, joten avomeri (m < 180) on Varitalle maata eli beige. NS:n ffc355105 (140–150) peruttu.
+  return (1 - sile(26, 34, rb)) * sile(180, 190, m) * (1 - sile(222, 230, m));
 }
 
 export function varitaPikseli(r0, g0, b0) {
@@ -302,15 +310,15 @@ export function varitaPikseli(r0, g0, b0) {
  * Varitan VESIKAAVA ilman Varitan arvausta: SVesi + (väri − MeriOletus).
  *
  * MITATTU 8.11.2026 (pohjalaatat z5, vektorin meripisteet): pelin Varita
- * piti vetenä vain pikselit, joiden keskiarvo on 180–222 (Natiiviseppä
- * laski rajan 140–150:een, ffc355105; vesikaava ennallaan). Napojen
+ * pitää vetenä vain pikselit, joiden keskiarvo on 180–222 (NS:n 140–150,
+ * ffc355105, peruttu omistajan päätöksellä 14.51: beige säilyy). Napojen
  * syvä meri on laatoissa tummempaa (58–70° S noin 179/174/156, 84° N
  * 182/175/156), joten Varita maalaa sen MAAN ruskeaksi (186/171/143):
  * 58–65° S:ssa vain 1–10 meripistettä 360:stä on Varitalle vettä, 83° N
- * 44/335. Siksi napojen ympärillä meri näkyy pelissä ruskeana.
- * Kalotti tietää meren vektorista, joten se saa oikean vesivärin, ja
- * liitos ankkuroidaan siihen, miltä laatan meri näyttää, KUN Varita
- * luokittelee sen vedeksi (Natiivisepän korjaus samaan aikaan).
+ * 44/335. Siksi napojen ympärillä meri näkyy pelissä beigenä, ja se on
+ * omistajan päätöksellä oikein (14.51). Kalotin meri ajetaan nyt koko
+ * Varitan läpi (varitaPikseli), ei pelkän vesikaavan; vesiVarita jää
+ * vain vertailuun.
  */
 export const STRIIMI_VESISIIRTO = Object.freeze(STRIIMI.vesi.map((v, c) => v - STRIIMI.meriOletus[c]));
 export const vesiVarita = (r, g, b) => [r, g, b].map((v, c) => Math.min(255, Math.max(0, v + STRIIMI_VESISIIRTO[c])));
@@ -801,6 +809,21 @@ export function piirraKalotti({
   }
 
   /*
+   * STRIIMIN MERI VARITAN LÄPI (OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei,
+   * beige säilyy"). Ankkuroitu paperimeri saa saman värin kuin laattojen
+   * meri pelissä: avomeri beige, matala rannikko oliivi. Uint8Clamped-
+   * taulu on jo rajannut arvot 0–255 kuten laatan jpg.
+   */
+  if (striimi) {
+    for (let p = 0; p < N * N; p += 1) {
+      if (!meripikseli[p]) continue;
+      const o = p * 4;
+      const q = varitaPikseli(data[o], data[o + 1], data[o + 2]);
+      data[o] = q[0]; data[o + 1] = q[1]; data[o + 2] = q[2];
+    }
+  }
+
+  /*
    * REUNAKAISTA (striimi, omistajan havainto 8.11.2026 klo 12.50: "tumma
    * pyöreä kehä" etelänavan ympärillä). Yksi liitossiirto sovittaa vain
    * KESKIARVON: kalotin oma batymetria ja laattojen paikallinen sävy
@@ -813,12 +836,45 @@ export function piirraKalotti({
   if (reunaSavy) {
     const rIn = 1 - REUNAKAISTA_AST / span;
     const rTay = 1 - HAIVE_AST / span;
+    /*
+     * LAATTOJEN TIETORAJA (beige-poltto 8.11.2026 klo 15): pohjasarjan
+     * juliste päättyy 61,47° S:ään, ja sen takana laatta toistaa viimeistä
+     * riviään (pystyraidat). Reunakaista 60–64° S liukui niihin, ja beigen
+     * ja oliivin rajalla (Scotian kaari) ne näkyivät säteittäisinä raitoina.
+     * Rajan takana kohde on rajarivin sävy pituussuunnassa silotettuna
+     * (±TIETORAJA_SILOTUS_AST). Liuku tarkasta silotettuun alkaa 0,2° ennen
+     * rajaa ja on täysi 0,2° sen takana (laatan viimeiset rivit ovat jo venytettyjä).
+     */
+    const raja = TIETORAJA[puoli];
+    let silotettu = null;
+    if (Math.abs(k.reuna) < Math.abs(raja) && Math.abs(raja) < Math.abs(k.reuna) + REUNAKAISTA_AST) {
+      const askel = 0.05; const M = Math.round(360 / askel);
+      const rivi = Array.from({ length: M }, (_, j) => reunaSavy(raja, -180 + j * askel));
+      const L = Math.round(TIETORAJA_SILOTUS_AST / askel);
+      silotettu = Array.from({ length: M }, (_, j) => {
+        let R = 0; let G = 0; let B = 0; let n = 0;
+        for (let d = -L; d <= L; d += 1) {
+          const q = rivi[(((j + d) % M) + M) % M];
+          if (q) { R += q[0]; G += q[1]; B += q[2]; n += 1; }
+        }
+        return n ? [R / n, G / n, B / n] : null;
+      });
+    }
     for (let iy = 0; iy < N; iy += 1) {
       for (let ix = 0; ix < N; ix += 1) {
         const a = kalotinAsteet(puoli, (ix + 0.5) / N, (iy + 0.5) / N);
         if (a.r <= rIn || a.r >= 1.03) continue;
-        const kohde = reunaSavy(a.lat, a.lon);
+        let kohde = reunaSavy(a.lat, a.lon);
         if (!kohde) continue;
+        const yli = Math.abs(a.lat) - Math.abs(raja) + 0.2;
+        if (silotettu && yli > 0) {
+          const j = Math.round((((a.lon + 180) % 360) + 360) % 360 / 0.05) % silotettu.length;
+          const s = silotettu[j];
+          if (s) {
+            const u = Math.min(1, yli / 0.4);
+            kohde = [0, 1, 2].map((c) => kohde[c] * (1 - u) + s[c] * u);
+          }
+        }
         if (a.r >= 1) {
           // Läpinäkyvän kehän ulkopuolen väri laatan sävyksi (alfa pysyy 0): muuten
           // pienennys ja webp vuotavat mustaa häiveeseen (mitattu −1,5 tasoa 1° kehältä).
@@ -962,7 +1018,8 @@ async function paa() {
         sharp,
         juuri: POHJA_LAATAT,
         taso: STRIIMI_LAATTATASO,
-        varita: vesiVarita,
+        // Paperisävy ennen Varitaa: kalotin meri ankkuroidaan paperina ja ajetaan sitten Varitan läpi (beige, 14.51).
+        varita: null,
         pituuksia: STRIIMI_PITUUKSIA,
         meressa: (lat, lon) => merenAlalla(leveyspiirinLeikkaukset(aineisto.indeksi, lat), lon),
       }
