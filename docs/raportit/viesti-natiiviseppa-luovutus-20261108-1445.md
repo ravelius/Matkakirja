@@ -65,6 +65,15 @@ B) FPV-KUVAKOE TARKENTUI (OMISTAJAN PÄÄTÖS 14.47 "Korostus pysyy", ×15 jää
    verkon normaalista kohokartan paletilla ja valolla; selvitä Topografia.cs:n paletti ja kohokartan valo, toteuta proto-haaraan 2efebff6e/b45bbe356:n
    päälle, sama skenaario). Kummastakin D metreinä ja Skaala = D/3. Nimet, minipallo ja tietorivi mukaan, jos NUI:n osat valmiit.
 
+## LISÄYS 15.2x (PT): RAJATTU VESIRAJA RINNALLE (EI ALOITETTU)
+PT suosittaa omistajalle: beige säilyy maailmalla, meren väri vain napa-alueelle. Valmistele ffc355105:stä rajattu versio: ElavaTyyli.Varita-
+vesirajan uusi kaava (ve: R−B/m < 0,155–0,175, m 140–150 alaraja) vain kalotin alueella, muualla vanha (alaraja 180–190), sauma laattoihin
+pehmeänä leveysastevyönä (laatan pikselin leveys lasketaan z/x/y:stä; ehdotus: etelä 58→60° S ja pohjoinen 78→80° N, eli juuri kalotin reunan
+ulkopuolella, jotta kalotti 60° S / 80° N saumautuu meren väriseen laattaan). "-meri1"-välimuistipääte → uusi pääte (esim. "-meri2"), jotta
+vanhat maailman laatat eivät jää välimuistiin. Sama sävyn tasaus kalotin reunalla kuin 641fd439e (StriimiSavyKerroin; mittaa uudelleen).
+Uusi haara navat-koho:n (641fd439e) päälle; ajo JU:lla savy-ajon jälkeen (sk-navat-tav2 + sk-meripari), pari Atlantti ja napa → PT.
+JUNAAN VASTA OMISTAJAN VALINNAN JÄLKEEN (maailma oliivi vs rajattu).
+
 ## ---- 14.15:n luovutus sellaisenaan ----
 # Natiivisepän luovutus 8.11.2026 klo 14.15
 
