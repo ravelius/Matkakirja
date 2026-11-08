@@ -42,3 +42,8 @@ topoesittely Mac-videot: 581f7f85a, 48e5654ae (23,6 s), 756f4962d (24,6 s) L/nui
 - Peruttaessa kesken laitekäännöksen: tapa vain kääre (ennen iPad-lukkoa trap ei tee mitään), anna laite-iso valmistua → ei orpoa kopiolukkoa.
 
 ## Nollaus: tämä luovutus + "LUOVUTUS VALMIS <sha>" Postivahdille (local_afae44f0-722b-4541-a3b8-30ca4f76543b).
+
+## LISÄYS 12.10
+- NUI kartta-lukittu-1 756f4962d (2.216, OMISTAJAN PYYNTÖ 11.43, PT:n jonon kärki) pid 60855 iPadilla 12.06 (24 kuvaa, raja 25 min) → L/nui-kartta-lukittu-1-756f4962d.
+- NUI nähtävyysnapautus ae84dd1dd (OMISTAJAN PYYNTÖ 11.47) pid 42714 (T/nui-nahtavyysnapautus-1.zsh): käännös L2 12.09, iPadille 60855:n jälkeen → L/nui-nahtavyysnapautus-1-ae84dd1dd.
+- Valmiit: NS j4 491bec23b 2/2 KYLMA ok pyynnöt 5311 (kuitattu); NUI topoesittely 48e5654ae iPad 7/7 (kuitattu). NS tav2 ffc355105 käännös valmis 12.06, odottaa iPadia.
