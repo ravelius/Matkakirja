@@ -206,15 +206,19 @@ export function puraLaatta(b) {
  * olevan harjanteen laatat jäivät korostamattomina näkökentän alapuolelle ja karsittiin. Tämä kirjoittaa
  * otsakkeen maxHeightiksi K × max(h) (kun max(h) > 0) ja kvantisoi korkeudet uudelle välille; muu laatta (u, v,
  * kolmiot, reunat, laajennukset) säilyy tavulleen. Tarkkuus: (K·max − min) / 32767, esim. 3 000 m → 0,09 m.
+ * MERENPOHJA (Karttaseppä 8.11.2026, kohokartan 3D-merenpohja): `alas` = true painaa myös minHeightin K × min(h):ksi,
+ * kun min(h) < 0, koska kohokartan varjostin liioittelee silloin myös h < 0 (Mariaanit −11 km × 15).
  * @param {Buffer} raaka purettu (ei gzip) laatta
  * @param {number} K korostusvara (≥ 1)
+ * @param {{alas?: boolean}} [asetukset]
  * @returns {Buffer} uusi laatta (sama pituus)
  */
-export function korostusvara(raaka, K) {
+export function korostusvara(raaka, K, { alas = false } = {}) {
   const b = Buffer.from(raaka);
   const hMin = b.readFloatLE(24); const hMax = b.readFloatLE(28);
   const uusi = hMax > 0 ? Math.max(hMax, K * hMax) : hMax;
-  if (!(uusi > hMax)) return b;
+  const uusiMin = alas && hMin < 0 ? Math.min(hMin, K * hMin) : hMin;
+  if (!(uusi > hMax) && !(uusiMin < hMin)) return b;
   const n = b.readUInt32LE(88);
   const alku = 92 + 4 * n;
   let q = 0; let ed = 0;
@@ -222,10 +226,11 @@ export function korostusvara(raaka, K) {
     const z = b.readUInt16LE(alku + 2 * i);
     q += (z >> 1) ^ (-(z & 1));
     const h = hMin + (q / 32767) * (hMax - hMin);
-    const q2 = Math.max(0, Math.min(32767, Math.round(((h - hMin) / (uusi - hMin)) * 32767)));
+    const q2 = Math.max(0, Math.min(32767, Math.round(((h - uusiMin) / (uusi - uusiMin)) * 32767)));
     b.writeUInt16LE(zigzag(q2 - ed), alku + 2 * i);
     ed = q2;
   }
+  b.writeFloatLE(uusiMin, 24);
   b.writeFloatLE(uusi, 28);
   return b;
 }

@@ -8,7 +8,12 @@
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
  *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>] [--laatat <lista>]
- *        [--naytetaso 15] [--dem-normaalit] [--jatka]
+ *        [--naytetaso 15] [--dem-normaalit] [--jatka] [--raaka <hila.json>] [--korostus K] [--korostus-alas]
+ *
+ * KOHOKARTAN 3D-MERENPOHJA (Karttaseppä 8.11.2026, PT:n erä): `--raaka <hila.json>` lukee koko maailman säännöllisen
+ * korkeushilan (raakahila.mjs; maa GLO-90, meri ETOPO 2022 15″ v6:n säännöllä) GeoTIFF-ruutujen sijaan; jokainen
+ * ruutu on dataa, joten myös merilaatat tehdään. `--korostus K` kirjoittaa laatan otsakkeeseen korostusvaran
+ * (quantized-mesh.mjs korostusvara) jo poltossa, `--korostus-alas` myös minHeightiin (h < 0 liioitellaan).
  *
  * TASAN NÄYTTEET (Karttaseppä 12.10.2026, LS2:n vuoristopilotti 3): `--naytetaso Z` näytteistää
  * jokaisen tason z < Z samalla välillä kuin taso Z (ruudukko (n−1)·2^(Z−z)+1, esim. z13 257, z14 129,
@@ -75,7 +80,8 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 
 import { avaaGeotiff } from './geotiff.mjs';
 import { rtinVerkko, rtinVirheet } from './rtin.mjs';
-import { koodaaLaatta } from './quantized-mesh.mjs';
+import { koodaaLaatta, korostusvara } from './quantized-mesh.mjs';
+import { raakaHila, RAAKA_MAININTA } from './raakahila.mjs';
 import { mapterhornLahde, MAPTERHORN_MAININTA } from './mapterhorn.mjs';
 
 export const CESIUM_TASO0_VIRHE = (6378137 * 2 * Math.PI * 0.25) / (65 * 2);
@@ -294,7 +300,7 @@ export function ruudukonNormaalit(dem, a, n, vali, h, pisteet = null) {
   return out;
 }
 
-export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5, { demNormaalit = false } = {}) {
+export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5, { demNormaalit = false, korostus = 0, korostusAlas = false } = {}) {
   const a = laatanAlue(z, x, y);
   const vali = (a.east - a.west) / (n - 1);
   const h = new Float32Array(n * n);
@@ -314,7 +320,8 @@ export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5, { demNormaal
     return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax) >= 0 ? [p, q, r] : [p, r, q];
   });
   const G = demNormaalit ? ruudukonNormaalit(dem, a, n, vali, h, pisteet) : null;
-  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T, pisteNormaalit: G });
+  let raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T, pisteNormaalit: G });
+  if (korostus > 1) raaka = korostusvara(raaka, korostus, { alas: korostusAlas });
   return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: h.reduce((m, v) => (v > m ? v : m), -Infinity) };
 }
 
@@ -516,6 +523,9 @@ export function lueAsetukset(argv) {
     virhekerroin: Number(arvo('virhekerroin', 0.5)),
     naytetaso: arvo('naytetaso') === undefined ? null : Number(arvo('naytetaso')),
     demNormaalit: argv.includes('--dem-normaalit'),
+    raaka: arvo('raaka'),
+    korostus: Number(arvo('korostus', 0)),
+    korostusAlas: argv.includes('--korostus-alas'),
     vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
@@ -527,7 +537,8 @@ export function lueAsetukset(argv) {
  * DEM-lähde asetuksista. Ilman --dem90:tä pelkkä GLO-30-hakemisto kuten
  * Ranska-ajossa (sama koodipolku, tavu tavulta sama tulos).
  */
-export function avaaLahteet({ demKansio, dem90Kansio, kynnys, mapterhornKansio }) {
+export function avaaLahteet({ demKansio, dem90Kansio, kynnys, mapterhornKansio, raaka = null }) {
+  if (raaka) return { dem: raakaHila(raaka), maininta: `${LAHDEMAININTA_90} ${RAAKA_MAININTA}` };
   const glo30 = demKansio ? demHakemisto(demKansio, avaaGeotiff, { tunnus: '10' }) : null;
   let tulos;
   if (!dem90Kansio) tulos = { dem: glo30, maininta: LAHDEMAININTA };
@@ -557,8 +568,8 @@ export function avaaLahteet({ demKansio, dem90Kansio, kynnys, mapterhornKansio }
 export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
-  if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--naytetaso 15] [--dem-normaalit] [--luettelo | --lista]');
+  if ((!a.demKansio && !a.dem90Kansio && !a.raaka) || (!a.ulos && !a.lista)) {
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--naytetaso 15] [--dem-normaalit] [--raaka <hila.json>] [--korostus K] [--korostus-alas] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
   const lista = a.laatat ? lueLaattalista(readFileSync(a.laatat, 'utf8')) : null;
@@ -580,7 +591,7 @@ export async function aja(argv, loki = console.log) {
       }
       const suorakulmioita = tasonSaatavuus(s, dem.onRuutu).length;
       maarat[s.z] = tasolla; yht += tasolla;
-      const lahde = !a.dem90Kansio ? 'GLO-30' : s.lahteet[0] === 'glo30' && a.demKansio ? 'GLO-30 (varalla GLO-90)' : 'GLO-90';
+      const lahde = a.raaka ? 'raakahila' : !a.dem90Kansio ? 'GLO-30' : s.lahteet[0] === 'glo30' && a.demKansio ? 'GLO-30 (varalla GLO-90)' : 'GLO-90';
       loki(`  z${s.z}: ${tasolla} laattaa, ${suorakulmioita} suorakulmiota, alue ${s.alue.join(',')}${s.vainMaa ? ', vain maa' : ''}, ${lahde}`);
     }
     const teksti = kerrosTekstiksi(kerroksenKuvaus({ tasot: [0, tasot[1]], alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta }));
@@ -610,7 +621,7 @@ export async function aja(argv, loki = console.log) {
       const polku = join(a.ulos, String(s.z), String(x), `${y}.terrain`);
       // --jatka: keskeytyneen ajon ehjät laatat (gzip purkautuu) jätetään; vajaa tai puuttuva lasketaan uudelleen.
       if (a.jatka && existsSync(polku)) { try { gunzipSync(readFileSync(polku)); laattoja += 1; tasolla += 1; continue; } catch { /* lasketaan uudelleen */ } }
-      const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin, { demNormaalit: a.demNormaalit });
+      const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin, { demNormaalit: a.demNormaalit, korostus: a.korostus, korostusAlas: a.korostusAlas });
       writeFileSync(polku, l.tavut);
       laattoja += 1; tasolla += 1; tavuja += l.tavut.length; kolmioita += l.kolmioita;
     }
