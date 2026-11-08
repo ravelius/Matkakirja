@@ -7,6 +7,10 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opi
 - Kohta 0 TEHTY `003ab5b9f` (`pelikoodari/muisti-latauskuvat`): VaakaOtsikko 1260 → 900 px, keskiY 143 → 190 px; lasketut kuvat `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/latauskuva-otsikko-{ennen,jalkeen}-laskettu.png`.
 - Esikatselua varten yhdistelmä `e26c3ad16` (`pelikoodari/esikatselu-otsikot-lahto`). Skenaario `_tyo/pelikoodari/keisari-lahtee/sk.txt`. JU:lta pyydetty vuoro 23.2x: 4 ajoa (ipad, iphone-vaaka × e26c3ad16 ja 72e257a0b). Kuvat PT:lle, PT → KK. Ei junaan ilman kuittausta.
 
+## 00000000000. TILA 02.4x (UUSIN)
+- Ohjeen kuvat valmiit (lokit esikatselu-20261108-0215/0219/0223); KK-pari `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/parit-ohje/kk/` (3 kuvaa) PT:lle 02.4x → KK. Huom: d/e-kuvissa keisari kiinni, koska ajossa ei pelaajaa (ei vika).
+- Keisarin sha valmiina juna-221 808b502b4:n päällä: `c92dafe1f` (pelikoodari/keisari-221c, natiivi-backup; testit 871/871, unity 0). Annetaan JU:lle vasta PT:n luvalla (pari KK:lla). Jos 221:n kärki taas liikkuu: poimi e574840fa c28e5cb58 d67941031 uudelleen.
+
 ## 0000000000. TILA 02.3x (UUSIN)
 - PT 02.2x KUITTASI latauksen junaan 221. Annettu JU:lle `ab113e0ac` (pelikoodari/lataus-221 = juna-221 c8a70ad5e + esihaku + tahti 4 M; Peli-testit 870/870, unity-tarkistus 0). VALMIS.
 - Keisarin lähtö: haara pelikoodari/keisari-221 (69f80037c) on 330a43515:n päällä → ennen JU:lle annettavaa poimi 3 committia (bb973922c-vastine 54541f5fa, 35fa6cf29, 69f80037c) 221:n silloiseen kärkeen, testit uudelleen. Vasta KK-parin jälkeen (PT).
