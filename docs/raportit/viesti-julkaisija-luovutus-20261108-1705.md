@@ -59,3 +59,13 @@ Jäljellä säilytettävät: 10e9b6c4a, 50200fb68, 5d6967444, e59541a34 + rungot
 jälkeen: f7cf0bd7c, 617d6ca2b (kun TF ajettu tai PT sanoo), 2fa367316 vasta kun NS on vertaillut.
 
 ## Nollaus: tämä luovutus + "LUOVUTUS VALMIS <sha>" Postivahdille (local_afae44f0-722b-4541-a3b8-30ca4f76543b).
+
+## LISÄYS 18.04 (JU, PT 18.0x käski nollautua)
+TF 223 VALMIS 18.01 (run 42496402361, completed/success); PT kuittasi ja kertoi KK:lle.
+f1c --console-korjaus TEHTY 18.02: T/ipad-skenaario-f1c.zsh sulkee nyt Matkakirja3D:n pid:llä (kiinni(), odottaa katoamista)
+ennen JOKAISTA konsolikäynnistystä; konsoliton uusintakäynnistys poistettu (se jätti prosessin elossa → error 22 6/6, pp2 17.25–17.28).
+Vanha versio: scratchpad f1c-ennen.zsh (ei säilyvä) – palautus: lisätty rivit "kiinni()" + "kiinni; sleep 2" ja kommentoitu rivi 22.
+TESTI KÄYNNISSÄ: T/ns-mp-pohjapallo3.zsh (pid 42412, ALOITUS 18.02.52) = pohjapallo f7cf0bd7c pp3, loki T/ns-mp-pohjapallo3.log,
+kansio L/natiiviseppa-mp-pohjapallo-f7cf0bd7c-kaannos (skenaario.txt: "yritys N epaonnistui" vai ALKU/LOPPU). SEURAAVA JU: tarkista tulos;
+jos käynnistyi → kuittaus NS:lle, sitten FPV 2fa367316 (ns-fpv-ab4.zsh → kopio ab5) ja kohokalotit 300e9923f (ns-navat-kohokalotit.zsh)
+yksi kerrallaan. Jos taas 6/6 failed to launch → rivi PT:lle, ei jonoa.
