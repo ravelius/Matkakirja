@@ -37,3 +37,15 @@ KS: topo-sulku-1 aebf0648e (beige näkyy), topo-sulku-2 f2ad1a19d (peite pääll
 3. Pyynnöt tulevat nopeammin kuin ajot: kokoa ketjuksi mac-yleis.zsh:lla, kaksi ketjua (vapaa+portti jakaa L1/L2).
 
 ## Nollaus: tämä luovutus + "LUOVUTUS VALMIS <sha>" Postivahdille (local_afae44f0-722b-4541-a3b8-30ca4f76543b).
+
+## LISÄYS 23.0x (TUOREIN)
+- JUNA 223 = 3413b4565 (PT hyväksyi pohjapallon; fast-forward 84a91d530:sta, natiivi-backup julkaisija/juna-223). unity sh 0,
+  Kartta 727/727, Linssit 2269/2269 (T/juna223-pohjapallo-*.txt). PT:lle kerrottu. Asemataulu: PT kirjaa.
+- KS topo-sulku-juna B 7de518cde EI mene 3413b4565:n päälle (ristiriidat LinssiOhjain.cs 1, Topografia.cs 2, TopografiaTestit.cs 3).
+  KS:ltä pyydetty uusi B 3413b4565:n päälle → sitten Mac-pari (A = junan kärki, B = uusi sha) arkkeineen 18,6–20,6 s, ja poiminta
+  vasta konfliktit + testit läpi. Ensimmäiset A/B-ajot (84a91d530 / 7de518cde) valmiit L/ks-topo-sulku-juna-*, EI vielä katsottu/arkitettu.
+- Ketju A pysäytetty (82088) kameratappi-2-ipad:n (pid 11108) aikana. kameratappi-2 iphone + iphone-vaaka valmiit, ipad ajossa;
+  NUI:lle kuittaamatta kaikki kolme (tarkistus yllä).
+- Ketju C T/jono-2300-c.zsh (pid 13187): NUI nostokuvat-1 10845cd24 kuvateksti/kokoruutu/tarina × iphone/ipad (korvaa bb0509e46).
+  TARKISTUS lisäksi: tarina → "lehden taitto tarina:viimeinen-keisari".
+- Ketju B jatkaa: NS reunapiikit-a 3413b4565.
