@@ -31,6 +31,7 @@ Pohja: juna 221 (kohokartta 5d6967444 siellä); merenpohjan haarat (97b4f29a9 / 
 - Junahaara = VS 97b4f29a9 linssiseppa2/merenpohja-221 (sis. 20045ae66, NS 6ab673093, VS:n _MERI_PAINUU-avainsana); vahvistettu PT:lle. Oma e03b83c61 on sisällöltään sama, käyttämättä.
 - PT 10.2x uusi: kohokartta koelaattoihin `julisteet/maasto/2026-11-08-kohokartta-merenpohja-koe/` (KS b300a8b68, RAPORTTI _tyo/karttaseppa/merenpohja-3d/RAPORTTI.md; vientipaketti _valmiit/kohokartta-merenpohja-koe-vienti-20261108). 10.24: https://media.matkakirja.app/julisteet/maasto/2026-11-08-kohokartta-merenpohja-koe/layer.json = 404 (JU ei vielä vienyt).
 - 10.3x PÄIVITYS: osoite vastaa (JU 10.27, 200, 32 754 laattaa). KOEHAARA TEHTY 7ea8d6ebc natiivi-ui/merenpohja-koe (natiivi-backup) = VS 97b4f29a9 + KohokarttaMaastoOletus = koe-osoite, `linssi topografia maasto <url>|pois|oletus`; 2267/2267, unity 0. Seuraavaksi vain skenaario + JU-ajo + parit 1–5.
+- PT 10.4x: koe-kansio on vanhaa polttoa (helmaraot). KS polttaa koko maailman korjattuna, JU vie UUTEEN kansioon: vaihda KohokarttaMaastoOletus (7ea8d6ebc) uuteen osoitteeseen (KS/JU kertoo) ENNEN pareja.
 - (vanha) SEURAAVAKSI: kun osoite vastaa: koehaara 97b4f29a9 (+ KS b300a8b68, jos siinä C#-muutoksia) + Topografia.KohokarttaMaastoOletus = koe-osoite (tai skenaarioon `linssi topografia maasto <url>`), Mac-esikatselu/iPad JU:lla: avaus kohokartaksi, vaihto topoon, sulku (peite kestää, ei hyppyä; `topografia peite` lokiin). Parit 1–5 KK:lle PT:n kautta, kun VS, NS ja NUI valmiit.
 
 ## Opit (uudet)
