@@ -88,3 +88,6 @@ Jono nyt: nähtävyydet ensin → merenpohjan osoite + parit → napautus-2-korj
 - Kosketustikut OpasTapit-pohjalta: vasen = kaasu (EI palaa keskelle) + yaw; oikea = roll/pitch (palaa keskelle). "FPV-lento" Topografialinssin ☰:hen.
 - PK tekee lentomallin (syöte −1…1, neljä akselia) → sovi rajapinta PK:n kanssa.
 - Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md (lue ensin).
+
+## PÄIVITYS 13.44: TOPO-VIDEO 3 (lokit/nui-topoesittely-3-79f8a637b/mac, 44,9 s) KATSOTTU JA LÄHETETTY PT:lle (KK:lle)
+- Alpit kyltti + kierto loppuun, Himalaja ok. Puute: KS:n ruutukuvat. Topoesittelyissä ei muuta auki NUI:lle ennen KS:n kuvia.
