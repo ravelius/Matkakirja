@@ -81,3 +81,14 @@ Tilaajille kerrottu jonotus (NUI, KS, NS). Valmis-rivi kustakin kun kuvat katsot
 - KS topo-sulku-juna-d 21f33d4fc valmis 23.22, katsottu: peite 19,1–20,3 s täysi, ei beigeä → PT + KS; poiminta vain PT:n sanalla (kärki nyt b2761f67b).
 - Ketju K (pid 54367): NUI tahtikyltit-1 0f62c5656 iphone-vaaka + ipad pk 0.465 D:n ja F:n jälkeen → L/nui-tahtikyltit-1-<koko>-0f62c5656; rivi NUI:lle.
 - I:n skenaario = PK:n sk-1f-1g-pk.txt (kopioitu -ju:n päälle, 30 fps). "alkukaanto" ei näy lokissa (PK): tarkista vain "seinan edessa" ei ennen ohjausta.
+
+## LISÄYS 23.35 (TUOREIN)
+- JUNA 223 = d1a4419e8 = b2761f67b + merge KS topo-sulku 21f33d4fc (PT:n sana 23.2x). unity sh 0, Kartta 727/727, Linssit 2276/2276
+  (T/juna223-topo-*.txt; UI-testit-kansiossa ei ajuria). PT + KS kuitattu. Ei käännetty laitteelle.
+- JONO UUSIKSI 23.3x: F (pariisipallo-1-ipad), K, I, J tapettu (omat pid:t). Ketju D LOPPU 23.32.
+  * Ketju L (pid 75340, NUI, PT:n järjestys): kameratappi-3 bee8b407b iphone + iphone-vaaka (KIIRE, omistaja 23.20) → ipad70-4 a7866450f ipad →
+    pariisipallo-2 5fa61ed04 iphone + ipad → tahtikyltit-1 0f62c5656 iphone-vaaka + ipad → nostokuvat-2-kuvateksti b2a7046da iphone. pk 0.465, sk:t _tyo/natiivi-ui/.
+  * Ketju M (pid 75341, PK): orpo ac4bff77a-iphone-ajo (esikatselu 56006 L2, emo tapettu) → M kerää sen lokit/pk-juoksu-223-iphone-ac4bff77a,
+    sitten pk-juoksu-223-ipad-0cc5ac36c (PK:n uusi kärki), 1g-pari a7004996e / 84a91d530 iphone-vaaka.
+    PK/KK: d2-eunukki-ovella → tarkista eunukin kasvot ovilehden reunalla (kurkistus ~29,0–29,6 s). Kuvat KK:lle, polku + aika PK:lle; 1g-pari PT:lle.
+- Kuitattu: NUI nostokuvat-1 kaikki 6 (tarina j-1…j-4 näyttävät samalta → NUI:lle).
