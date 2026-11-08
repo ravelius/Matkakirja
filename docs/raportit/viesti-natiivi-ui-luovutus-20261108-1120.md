@@ -29,3 +29,11 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
 ## Opit (uudet)
 - zsh: `echo ===` kaatuu (=-laajennus); älä käytä ==-alkuisia sanoja komentoriveillä.
 - Kohokartan 90°: PalloKierto.KallistusRaja + LaskeAsento-katto (KallistusKatto) + `kallista`-komennon katto, kaikki kolme.
+
+## PÄIVITYS 11.2x
+- Iso iPad: "failed to launch 10002 / POSIX 22" KAIKILLE tuoreille käännöksille (50200fb68, 1f26c51b4: 0 kuvaa); 5d6967444 toimi 10.55. Koodissa ei syytä
+  (50200fb68 = vain puiden piirtojärjestys). JU selvittää: laitekäännöksen uusinta + tavallinen käynnistys. Parit KK:lle EIVÄT ole menneet (PT tietää).
+- Esittelyn VIDEO vain Mac-esikatselusta (tallenne-alku/-loppu): sk-topoesittely-1-mac.txt → lokit/nui-topoesittely-1-581f7f85a/mac; iPad kuvina.
+- MERENPOHJA (PT 11.2x): KS:n koko maailman poltto viedään kansioon julisteet/maasto/2026-11-08-kohokartta-merenpohja/ (ei -koe). Kun JU:n vienti
+  valmis (tarkista https://media.matkakirja.app/julisteet/maasto/2026-11-08-kohokartta-merenpohja/layer.json = 200), vaihda KohokarttaMaastoOletus
+  7ea8d6ebc:ssä (natiivi-ui/merenpohja-koe) tähän osoitteeseen ENNEN pareja 1–5. Jono: lippu → kohokartta → merenpohja.
