@@ -14,6 +14,9 @@ Viestiraja: tavallinen SendMessage pysähtyy ("Paused until your user's next mes
 - Postivahti-kuittaus PT:lle `nollattu Postivahti` (c. 15.50) vielä tekemättä.
 - Kotikansio jäljessä (omia tiedostoja, ei ylikirjoiteta): KS, JU (2 omaa), Matkakirja-fable (PT), Siirtoseppä, Sisältökirjuri.
 
+## Päivitys 15.50
+- NS nollattu (b66be9d70 aloitusviesti lähetetty). NS:n uusin luovutus on 32a230d9f (korvaa b66be9d70, lisäys topoesittelyn kuittaus); uusi NS lukee sen itse, ei toista nollausta. Postivahti-luovutus on pushattu haaraan postivahti-luovutus-20261108-1545 (03de182e2); oma clear_session estyi jonossa olevan viestin takia → nollaa itsesi heti jonon tyhjennyttyä.
+
 ## Avoimet
 - NS-nollaus (yllä).
 - Ei muita avoimia nollauksia.
