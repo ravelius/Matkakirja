@@ -247,3 +247,7 @@ lat/lon 5 % kaaresta, varmistus 3 × LentoS) + 48e5654ae (kyltin kerros); 2268/2
 ## LISÄYS 11.5x (JU luovutuksen jälkeen)
 Kohokartan UUSI-ajo ca92af647 11.47: 0/4 kuvaa, iPad "failed to launch 10002" 6/6 (ohimenevä, kuten NUI:n aamulla). Uusinta JU:lla (pid 97997) → lokit/natiiviseppa-navat-koho/uusi; sen jälkeen aloituslento j4 (käännös 491bec23b valmis); tav2-ajo (ffc355105) niiden jälkeen JU:n vuorolla.
 JU 11.5x: tav2-ajo jonossa (T/ns-navat-tav2.zsh pid 34071), laitekäännös nyt, iPadille navat-uusi-uusinnan (97997) jälkeen; napakalotti-rivit jonolokiin; kuittaus NS:lle.
+
+## LISÄYS 11.5x: PT:N UUSI TYÖ JONOON (navat → TÄMÄ → korkeuskoe)
+PT: OMISTAJAN PYYNTÖ 11.47 + PÄÄTÖS 11.55 "Lähestyy" (kamera lentää hyvälle katseluetäisyydelle, jos kauempana; lähempää ei loitonneta). Suunnitelma: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-nahtavyyden-napautus.md (LUE).
+NS-osa 1: PalloKiertoon YHTEINEN esittelyliike (keskitys Aja/Panoroi-pohjalta → hidas kierto Kuvaa-pohjalta, ~90° kuten topopilotissa, jotta nimet eivät käänny ylösalaisin), hidastuu pois kun luenta päättyy, kosketus pysäyttää heti; laattatarkkuuden lukitus kuten 08.19 B. Sama liike topopilotin TopoEsittely.Kamera-koukkuun (korvaa/yhdistää KohdeKierron). NUI kutsuu sitä nähtävyysnoston napautuksesta. Raportti PT:lle. Huomioi TILA 11.55 kohta 2 (tallenteen kellovika) ennen videoita.
