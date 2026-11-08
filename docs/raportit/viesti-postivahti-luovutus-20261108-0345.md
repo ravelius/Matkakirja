@@ -16,3 +16,11 @@
 - NOLLAUS vain isRunning false (rikoin kahdesti: NS 22.59, JU 00.08 – ei vahinkoa). Rooli päivittää luovutustaan jatkuvasti: käytä uusinta sha:ta.
 - Kotikansio: paivita-kotikansiot.sh --vain Matkakirja-<kansio>; KS, VS, PT, JU:n kansiot JÄLJESSÄ (omia tiedostoja) – luovutus luetaan haarasta git show.
 - PT-nollaus vaatii alle 15 min vanhan keskustelut/Paatoimittaja-tallenteen.
+
+## Päivitys 8.11. (konteksti 28 %, raja 30 %)
+- NS local_99130238: nollattu, aloitusviesti lähti (luovutus 0e7bdb8ca); uusin luovutus 040e28a54 (haara natiiviseppa-luovutus-20261108-0840), odottaa JU:n kuittausta; ei nollaustarvetta nyt.
+- NUI local_43962c89: nollattu, aloitusviesti lähti (b24dcac9f + PT:n kohokartta v5 -lisäys). Ok.
+- PK local_91a1bc27: nollattu, aloitusviesti lähti (9c0003155). Ok.
+- JU local_06f8c680: nollattu, aloitusviesti lähti (b74536d30). Ok.
+- VS local_fa464945: uusin luovutus 2a3b4e3d7 (haara linssiseppa2/luovutus-20261108-0830), käynnissä; NOLLAUS lähetettävä kun isRunning false → odota fastMode puuttuu + 0 of 0 → aloitusviesti, ensimmäinen työ AUKI 2 vesi selvemmäksi.
+- KS, KK, PT: ei avoimia nollauksia.
