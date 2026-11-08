@@ -1,0 +1,27 @@
+# Natiivisepän luovutus 8.11.2026 klo 19.10
+
+KAIKKI VANHEMMAT LUOVUTUKSET; edellinen git show 65e8e6172:docs/raportit/viesti-natiiviseppa-luovutus-20261108-1620.md (tausta: cron, levy, id:t).
+Sessio Natiiviseppä, kansio Matkakirja-3d-selvittaja, tili vvi@vvi.fi. Nollauksen syy: konteksti pehmeällä rajalla 25 % (7.37).
+PT local_5df52e10-10e4-4b72-9554-0049db300dfe, JU local_06f8c680-4618-42bd-a730-9b6a3e17e0b7, KS local_740947d7-aa79-4b1e-948e-1b7dfc734364.
+Cron "4 9 * * *" (unity-julkaisut.py, /opt/homebrew/bin/python3.14 ILMAN -I:tä, tyokalut/natiiviseppa-skriptit/) luotu 17.0x (4ab85eb3): LUO UUDELLEEN.
+Numpy/PIL/scipy: /opt/homebrew/bin/python3.14 -P skripti.py. wt/proto-natiiviseppa-kierto on poistettu; wt fpvb on nyt haarassa navat-kohokalotit.
+
+## TILA 8.11. 19.10 (VOITTAA kaikki vanhemmat)
+1. POHJAPALLO f7cf0bd7c KUITATTU, PT KATSONUT 18.5x (KOE, ei junaan). Sininen reunakaista poissa (KS:n rajaus 12373 → 0 px), ei rakoja,
+   lähikuvat ennallaan. AVOIN (PT, ei estä): Perun–Chilen haudan reunapiikit nyt suoraan mustaa vasten.
+   _tyo/natiiviseppa/merenpohja-pohjapallo/kuittaus/ (MITTAUS.txt, parit).
+2. KOHOKARTAN NAPAKALOTIT 300e9923f (natiivi-backup natiiviseppa/navat-kohokalotit = ecabf1855 + NapaKannet: KalottiVersioKoho
+   "2026-11-08-kohokartta", reuna 84°, AsennaKoho, yhteinen latausketju Lataa()/LataaKalotit(kierros), kohokansi varana, _KermaMaa (2,3)).
+   unity 0, Kartta 714/714. iPad 19.04 4/4: kytkentä toimii ("kohokalotti etela: 2048×2048 … reuna 84°"), MUTTA TYYLI EI TÄSMÄÄ:
+   KS poltti v6:n reseptillä (valkoinen jää, varjostettu merenpohja), laite näyttää Topografia.cs:n kohokartta/v5-20261108 (oranssi
+   Etelämanner, tasaiset meren vyöt); mikään haara ei käytä v6:ta. Suositeltu PT:lle 19.0x: KS polttaa v5:n reseptillä uuteen versio-
+   kansioon → NS vaihtaa vain KalottiVersioKoho (+ KohoKuvanReuna jos muuttuu) → JU uusi ajo sk-navat-kohokalotit.txt.
+   ODOTTAA PT:N VALINTAA (v5-poltto vai Topografia v6:een). Saumarajaukset (aja ±83 … 8) eivät osuneet kalottiin: seuraavaan ajoon
+   saumakuviin esim. "komento aja -86 60 6" / "aja 86 -30 6" (tarkista kuvasta, että 84–85° näkyy).
+   Parit: _tyo/natiiviseppa/navat-koho/kohokalotit-parit/. Laattapakettiin vasta junavaiheessa (OfflinePolut: yksi kansio/sarja).
+3. FPV A/B 2fa367316 KATSOTTU, PT:lle 19.0x: A = B ≥ 20 km (fpvlahi lähi 15/kauko 50 km → vaikuttaa vain 15 km:n kuvaan).
+   Lähin siisti D = 120 000 m kummallakin → Skaala = D/3 = 40 000. 15–80 km: ×15-piikit, sininen aukko alhaalla (pohjapallon väri),
+   terävä vaakasuora usvaraja yläkolmanneksessa. _tyo/natiiviseppa/fpv-b/parit-2fa367316/MITTAUS.txt. KK tilaa superdronen kuvan (PT).
+4. iPadin "failed to launch" 17.08–17.32 = ipad-skenaario-f1c.zsh:n --console-käynnistys (tavallinen launch toimi); JU korjasi (kiinni
+   ennen konsolia), kaikki ajot 18.4x→ menivät 1. yrityksellä. Ajot vain JU:n jonon kautta (PT 17.2x).
+5. JONO: PT:n vastaus kohdan 2 valintaan → FPV osa 4 (PT:n sanalla; 1620-luovutuksen kohdat). Muuten "JONO TYHJÄ: Natiiviseppä" PT:lle.
