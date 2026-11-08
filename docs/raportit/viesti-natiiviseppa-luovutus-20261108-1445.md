@@ -45,6 +45,12 @@ Luovutushaara natiiviseppa-luovutus-20261108-1445. Cron "4 9 * * *" (unity-julka
 4. JONO: savy/ → pienoismallin pari → kohokalotit → FPV osa 4 (PT:n sanalla; PK:n lentomalli, origon siirto, AlinEtaisyys = D).
    Avoimet 14.15:n kohdat (esittelyliikkeen video NUI:lla, korkeuskoe, j4 lukematta) ennallaan alla.
 
+## LISÄYS 15.0x (luovutuksen jälkeen)
+- JU 14.45: savy 641fd439e käännös alkoi, iPad PK glb-2c:n jälkeen, ENNEN pienoismallia → lokit/natiiviseppa-navat-koho/savy/.
+- PT 15.0x: savy-PARIIN myös REUNASTA RAJAUS täysikoossa, jossa kalotti ja laatta vierekkäin (esim. y 260–420 x 1250–1480 tai vaaka y 1050–1150 x 100–400).
+- PT kysyi oliivista: vastattu. Laattojen meri muuttuu junassa 222 (ffc355105 ElavaTyyli.Varita vesiraja: syvä meri vedeksi KOKO maailmassa z ≤ 10,
+  TF beige 193–209 → oliivi 146–160). Omistajan 10.34 päätös koski napoja; maailmanlaajuinen muutos ei ole erikseen hyväksytty → PT:n/KK:n päätös. Jos PT pyytää: maailmapari TF | 222.
+
 ## ---- 14.15:n luovutus sellaisenaan ----
 # Natiivisepän luovutus 8.11.2026 klo 14.15
 
