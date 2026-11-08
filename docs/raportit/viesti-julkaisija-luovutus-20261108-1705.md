@@ -21,6 +21,8 @@ EI junaan: b4e624cfe (kohokartta oletuksena), topoesittelyt (581f7f85a, 6c27282e
   → L/natiiviseppa-merenpohja-pohjapallo/ (4 kuvaa) → NS.
 - T/ns-fpv-ab4.zsh (12674): NS FPV A/B 2fa367316 UUSINTA, käännös L1 16.58, sk-fpv-ab 15 kuvaa → L/natiiviseppa-fpv-b/;
   install-tuloste L/natiiviseppa-fpv-b-2fa367316-kaannos/install.log; .app SÄILYTÄ vertailuun → NS.
+- T/j6b/juna222-napautus.zsh (46140): j222 UUSINTA (j6 17.06 failed to launch); kuvat suoraan PT:lle.
+- T/ns-navat-kohokalotit.zsh (46723): NS kohokalotit 300e9923f (koe) FPV:n jälkeen → L/natiiviseppa-navat-koho/kohokalotit/ → NS.
 - Mac: T/nui-merenpohja-2-mac.zsh (42843, L2 17.08): NUI merenpohja-2 c54d3ba0d video + 5 kuvaa → L/nui-merenpohja-2-c54d3ba0d;
   tarkista lokissa "kohokartta tila" 4× → kuittaus NUI:lle, video VAIN PT:lle.
 Kuitattu tällä vuorolla: NS topoesittely-kamera, paperinavat; NUI kl5, mp1b (VIKA lähetys linssi topografia), nn4, topoesittely-4
