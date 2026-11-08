@@ -7,6 +7,11 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (30 %). Vanhat työkalut ja opi
 - Kohta 0 TEHTY `003ab5b9f` (`pelikoodari/muisti-latauskuvat`): VaakaOtsikko 1260 → 900 px, keskiY 143 → 190 px; lasketut kuvat `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/keisari-lahtee/latauskuva-otsikko-{ennen,jalkeen}-laskettu.png`.
 - Esikatselua varten yhdistelmä `e26c3ad16` (`pelikoodari/esikatselu-otsikot-lahto`). Skenaario `_tyo/pelikoodari/keisari-lahtee/sk.txt`. JU:lta pyydetty vuoro 23.2x: 4 ajoa (ipad, iphone-vaaka × e26c3ad16 ja 72e257a0b). Kuvat PT:lle, PT → KK. Ei junaan ilman kuittausta.
 
+## 000000000. TILA 02.4x (UUSIN)
+- PT 02.1x: otsikko 190 px PIDETÄÄN (kuvaus, ei muutos); iPhonen latauskuva mukaan KK-pariin; ohjeen korjaus ok → pari KK:lle → sha JU:lle (pelikoodari/keisari-221 kärki 69f80037c; tarkista 221:n kärki ensin, poimi tarvittaessa uudelleen).
+- aja-ohje.sh: 3 ajoa (69f80037c ipad + iphone-vaaka, 22dc4c06b ipad), JU:n jonossa → ajot-ohje.txt. Parit: 0-latauskuva iphone (tupsu), c/c2 lähtö (ei ohjetta), d/e ohje seuraavassa risteyksessä vs ennen.
+- Lataus: pari 2 + tahti4 tehty, `juoksu-lataus/TULOS-2.txt`; 4 M oletukseksi `6935e22c0` (pelikoodari/lataus-esihaku). Kysytty PT:ltä kuittausta junaan 221. Ei junaan ilman sitä.
+
 ## 00000000. TILA 02.3x (UUSIN)
 - PT 02.05: OMISTAJAN PÄÄTÖS 02.0x (KK) "Kyllä" = 22dc4c06b junaan 221. EHTO: kääntymisohje "Pyyhkäise oikealla peukalolla…" näkyy ensimmäisessä risteyksessä, jossa pelaaja kääntää itse (27.10.). Varmista ehto, kuvapari KK:lle, sitten sha JU:lle junaan 221 (tarkista 221:n kärki). "Otsikot vain vähän alemmas (latauskuvassa ei hattuun)." TF ei lähde.
 - Ehto EI täyttynyt 22dc4c06b:ssä (koneen käännös sytytti ja kuittasi ohjeen). KORJATTU `69f80037c`: haara `pelikoodari/keisari-221` (natiivi-backup, työpuu wt/proto-pelikoodari-tarkastelu) = juna-221 330a43515 + bb973922c + 22dc4c06b poimittuina + korjaus (JuoksuOpetus.KoneKaantaa). Testit Juoksu 208/208 (MK_JUURI = scratchpadin juuri: k06w-linkit + osamallit791-v6 mediasta `maailma-v4/`), unity-tarkistus 0.
