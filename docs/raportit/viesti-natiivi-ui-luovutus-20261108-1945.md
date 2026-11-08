@@ -5,6 +5,18 @@ natiivi-ui/fpv-nakyma d1c8a074f/7ddc42970 ja FPV-avoimet (luovutukset -1518/-155
 PT local_5df52e10-…, JU local_06f8c680-…, NS local_99130238-…, KK local_37f7c945-…, Postivahti local_afae44f0-….
 Työkansio /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/. Kaikki koe, EI JUNAAN ilman PT:n/KK:n sanaa.
 
+## LISÄYS 19.5x – PT:N VASTAUS (tee ENSIN, ennen kohtaa a:n odotusta)
+PT 19.5x: "rajaus-2 65f0277be katsottu – iPhone pysty (Eiffel) ja iPad (ND) OK, vien KK:lle nyt." Sitten:
+a1) PALKIN VIEREEN (koe, poikkeaa omistajan 18.36 sanasta "alapuolella"; ÄLÄ junaan): oma haara natiivi-backup natiivi-ui/esittely-rajaus-vieressa
+   65f0277be:n päälle. Vaakaruudussa (leveys > korkeus) vapaa alue = palkin+kuvan vasen puoli koko korkeudelta (turva-alue), jos se on isompi
+   kuin alapuoli; nähtävyys sen keskelle Linssisiirron dx:llä (NahtavyysRajaus: lisää vaakaraja ja Dx samaan tapaan kuin Dy; Mahtuu-vaakaehto
+   vapaan alueen leveydellä; testit Kartta-testeihin). Pinnaus.Varaus antaa palkin vasemman reunan (palkki.layout.xMin + isa.worldBound.xMin).
+   Mac-ajo JU:lta: sk-nahtavyysrajaus-2-mac.txt koolla `iphone-vaaka` molemmista (65f0277be = nykyinen, uusi = vieressä) → vaakapari
+   "nykyinen | vieressä" (e-1 ja nd-1, sama rajaus) PT:lle; PT vie KK:lle vaihtoehtona.
+a2) SELVITÄ beiget terävät kolmiot taivaalla vasemmalla ja oikealla (y ~150–350) kuvassa
+   proto-3d/lokit/nui-nahtavyysrajaus-2-iphone-vaaka-65f0277be/e-1-rajattu.png (laattareuna? usva? Mac-batchin vaakakoko?): vika vai ei.
+   Vertaa samaan hetkeen ilman rajausta (`ui nahtavyysesittely rajaus 0`) ja e-0-ennen.png:hen; vastaus PT:lle 3 rivillä.
+
 ## JONO NYT (järjestyksessä)
 a) NÄHTÄVYYSESITTELYN RAJAUS (OMISTAJAN PÄÄTÖS 18.36) – TEHTY, PT:LLÄ 19.42: haara natiivi-backup natiivi-ui/esittely-rajaus, kärki 65f0277be
    (617d6ca2b + bdd0f7a83 + 65f0277be), worktree /Users/Shared/Claude/wt/proto-natiivi-ui-napautus-puhdas (haara vaihdettu). Tulos ja tekotapa:
