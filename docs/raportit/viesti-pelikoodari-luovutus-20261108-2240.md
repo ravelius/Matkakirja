@@ -31,3 +31,9 @@ Haara pelikoodari/juoksu-223 (84a91d530:stä), työpuu /Users/Shared/Claude/wt/p
 
 ## 2. Muut (ennallaan)
 Keisari c92dafe1f ja lataus ab113e0ac junassa 221; c (e59541a34) junassa 222. Lontoon maanpinta a7ad5fc24 kokeena. g-ajon kuolema (13:02:13) selvittämättä.
+
+## LISÄYS 22.4x (KK)
+- KK vie 1g:n kortille omistajalle (suositus: keisari kääntyy itse ~1 s:n jälkeen); PÄÄTÖS TULEE SUORAAN PELIKOODARILLE.
+- 1f: KK muistuttaa omistajan 2.11. 13.38 (a) "ovi ja huuto → nopea kierto taakse → 3-2-1". Vastasin KK:lle: TF 223 odottaa koodin mukaan
+  linjan mukaisesti (seinä → huuto → kierto → 3-2-1 → ohjaus → pyyhkäisy), ei vika; laitteella ei todennettu. 1f tehdään 1g-päätöksen mukaan
+  (itsekäännöksellä lähtö noin 1 s 3-2-1:n jälkeen). Jos juoksu ei lähde lainkaan pyyhkäisyn jälkeenkään → korjaa vikana. Ennen muuta muutosta kerro KK:lle.
