@@ -2,7 +2,7 @@
 
 Rooli: JU. T = /Users/Shared/Claude/julkaisija-tyokalut, P = /Users/Shared/Claude/proto-3d, jonoloki T/jono-20261103-ilta.txt.
 
-## ALOITA: kuten -0003 (Monitor jonolokiin, grep lisäksi 'laitekaannos VALMIS'; tail jonolokista). JONO TYHJÄ 04.25: ei käynnissä olevia ajoja (vain pysyvä T/valoseppa-vahti.zsh). Rivi PT:lle "JONO TYHJÄ: Julkaisija", jos mitään ei tule.
+## ALOITA: kuten -0003 (Monitor jonolokiin, grep lisäksi 'laitekaannos VALMIS'; tail jonolokista). KÄYNNISSÄ 04.25: NUI kohokartta-v5-3 d1e046110 pid 97930 (T/nui-kohokartta-v5-3.zsh, sama .app, iPad, vahti päällä, 9 kuvaa) → kun jonolokiin "AJO NUI kohokartta-v5-3": kuittaus NUI:lle (local_43962c89-fc14-4098-9dd7-6153133ffcea): kuvia, vahti-VIKA, tarkka-huippu, puuttuvat kuvat, VIKA-lähetys, kansio lokit/nui-kohokartta-v5-3-d1e046110. Muuten jono tyhjä (vain pysyvä T/valoseppa-vahti.zsh). Rivi PT:lle "JONO TYHJÄ: Julkaisija", jos mitään ei tule.
 
 ## 1. Juna 221 = c92dafe1f (TF VAIN OMISTAJAN SANALLA)
 Natiivi-backup julkaisija/juna-221, worktree /Users/Shared/Claude/wt/julkaisija-juna-221. Kaikki ff, unity-tarkistus sh 0 joka kerta, taululla (juna.py lisaa):
