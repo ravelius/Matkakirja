@@ -25,3 +25,11 @@ Numpy/PIL/scipy: /opt/homebrew/bin/python3.14 -P skripti.py. wt/proto-natiivisep
 4. iPadin "failed to launch" 17.08–17.32 = ipad-skenaario-f1c.zsh:n --console-käynnistys (tavallinen launch toimi); JU korjasi (kiinni
    ennen konsolia), kaikki ajot 18.4x→ menivät 1. yrityksellä. Ajot vain JU:n jonon kautta (PT 17.2x).
 5. JONO: PT:n vastaus kohdan 2 valintaan → FPV osa 4 (PT:n sanalla; 1620-luovutuksen kohdat). Muuten "JONO TYHJÄ: Natiiviseppä" PT:lle.
+
+## LISÄYS 19.1x (PT, VOITTAA kohdan 2 ja 5)
+- KOHOKALOTIT = v5: KS polttaa v5:n reseptillä ja antaa NS:lle polun → vaihda 300e9923f:n päälle vain KalottiVersioKoho (+ KohoKuvanReuna,
+  jos reuna muuttuu; tarkista KS:n kalotit.json), uudet saumakamerat (aja ±86 … 6) → ajo. EI vielä polkua KS:ltä 19.1x.
+- FPV OSA 4: JATKA (PT 19.1x; B ei ratkaise, este ×15-kerroin). Sisältö 14.45-luovutuksen kohta 4 (PK:n lentomalli 61fc67ce4,
+  FPV-kamera, origon siirto, korkeusruudukko, NUI:n tikut; suunnitelma Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md).
+- UUSI PYSYVÄ SÄÄNTÖ (omistaja 19.08, Raamattu 12.26): uudet kokeet ENSIN MACILLA iPad-koossa; iPadille vain muisti, nopeus, kosketus
+  ja koeversion tarkistus. → kohokalottien v5-ajo ja FPV osa 4 Mac-esikatselulla (JU:n vuoro, koko ipad; muistit esikatselu-*).
