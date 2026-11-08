@@ -254,3 +254,6 @@ NS-osa 1: PalloKiertoon YHTEINEN esittelyliike (keskitys Aja/Panoroi-pohjalta �
 
 ## LISÄYS 11.5x: KOHOKARTAN UUSI-AJO VALMIS (JU)
 ca92af647 uusinta VALMIS 11.56: 4/4 kuvaa (etela, pohjoinen, tav-etela, tav-pohjoinen), eri md5, "kohokansi mitattu (16/16)", huippu 3194 Mt, NRE 0, kansio lokit/natiiviseppa-navat-koho/uusi. 1 VIKA-lähetys "kuva tav-etela", kuva silti syntyi: tarkista aika ja md5. SEURAAVAKSI ENSIN: TILA 11.15 kohta 0 a (parit.py, täysikoossa) → KK ja PT. Sitten j4 ja tav2 JU:lta.
+
+## LISÄYS 11.58: ALOITUSLENTO j4 AJETTU (JU)
+j4 491bec23b VALMIS 11.58: rc 0, KYLMA ok, kuvia 2/2, pyyntörivejä 5311, kansio lokit/natiiviseppa-striimi-aloituslento-4 (pyynnot.tsv siellä; HUOM polku ilman /j4?: tarkista). Lukuohje TILA 11.15 kohta 2.
