@@ -56,3 +56,6 @@ Proto-työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-lahto-vahvistus (puhdas
   iPad 10002 oli ohimenevä; panorointi-2 ja lippu-442-1 uusintoina JU:lla. Topoesittely-1 nyt SHA 48e5654ae → lokit/nui-topoesittely-1-48e5654ae.
 - 11.4x PUUPARI p2 KATSOTTU (50200fb68, iPad 11.35, 12/12): nimiltä 0 koko ajon, puut 37–43 k näkymän mukaan; Tuileries/Champs-Élysées/bulevardit täynnä
   puita (p1 tyhjä nimien kohdalta). Pari _tyo/natiivi-ui/puupari-p1-p2/pari-lepo-louvre-p1-vasen-p2-oikea.jpg lähetetty PT:lle (KK:lle); junaan PT:n sanalla.
+- 11.5x NS:n topokoukku (b1d5c652f natiiviseppa/topo-esittelyt: kierto 9,6 s lennon jälkeen, esilataus, KiertoSuunta, Kaynnissa kierron loppuun)
+  YHDISTETTY 756f4962d natiivi-ui/topoesittelyt-221 (+ kyltti perillä, koukun kanssa Perilla vain lat/lon). 2268/2268, unity 0. JU:lle: ajot 756f4962d:llä
+  (48e5654ae saa valmistua, kertoo kyltin). JATKA AINA 756f4962d:n päältä.
