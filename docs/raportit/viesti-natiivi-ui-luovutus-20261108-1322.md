@@ -75,3 +75,10 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
   esittelyt 2). Uusinta JU:lla → lokit/nui-topoesittely-3-79f8a637b/mac. KATSO: Alppien kyltti "ALPIT · Mont Blanc · noin 4 800 m" ja kierto
   loppuun, sitten video PT:lle → KK (mainitse: KS:n ruutukuvat puuttuvat). PT:lle kerrottu 13.37.
 - JU: iPadilla kartta-lukittu-3 alkoi 13.34 → lokit/nui-kartta-lukittu-3-17addbe2d.
+
+## PÄIVITYS 13.40: KARTTA-LUKITTU-3 17addbe2d (5°-portaat, lokit/nui-kartta-lukittu-3-17addbe2d, 6/6) — LOKI KATSOTTU, KUVAT EI
+- ladontoja: s0 4 → s2 4 (sama porras) → s3 5 (uusi) → s7 5 (sama) → s12 6 (uusi) → s0-paluu 7 (avain = s0:n, ladottu 5304 = s0).
+  Portaat toimivat kuten suunniteltu. s0 vs s0-paluu: siirto 0, ero 0,077 % (lintu) → sama kartta.
+- ladottu koko aineistosta: 0° 5304, 5° 5299, 10° 5291 → portaan vaihtuessa muutama nimi vaihtuu (koko maailmasta).
+- SEURAAVAKSI: katso kl3-s2 vs kl3-s3 ja kl3-s7 vs kl3-s12 (kuva kiertyy → silmällä samoista kohdista): montako nimeä Pariisin näkymässä
+  sammuu/syttyy portaalla. Jos 0–2 ja pieniä: kerro PT:lle "5° riittää"; jos häiritsevä: ehdota 15° tai ladonta kaikkien suuntien yli.
