@@ -49,3 +49,8 @@ KS: topo-sulku-1 aebf0648e (beige näkyy), topo-sulku-2 f2ad1a19d (peite pääll
 - Ketju C T/jono-2300-c.zsh (pid 13187): NUI nostokuvat-1 10845cd24 kuvateksti/kokoruutu/tarina × iphone/ipad (korvaa bb0509e46).
   TARKISTUS lisäksi: tarina → "lehden taitto tarina:viimeinen-keisari".
 - Ketju B jatkaa: NS reunapiikit-a 3413b4565.
+- 23.1x PT: jonoon Mac-pari juoksupeli 1g a7004996e (pelikoodari/juoksu-223) vs 84a91d530, iPad-koko, pari PT:lle (+ kuvat KK:lle
+  local_37f7c945 PK:n luovutuksen mukaan). Kiinniottopaikan sivuseinä: keisari juoksee seinän viertä eteenpäin pysähtymättä.
+  SKENAARIOTA EI OLE: PK:n luovutus f0b94809a (haara pelikoodari-luovutus-20261108-2255) sanoo vain "juokse avauksesta pohjoiseen ja
+  seinien viertä"; _tyo/pelikoodari/juoksu-223/ sisältää vain 1g-selvitys.md. Pyydä skenaario uudelta PK:lta tai kirjoita juoksu-
+  lataus-kansion sk-*-mallista (_tyo/pelikoodari/juoksu-lataus/), sitten mac-yleis.zsh kahdesti.
