@@ -190,3 +190,10 @@ PT: NUI:n topoesittelyjen pilotti 581f7f85a (haara natiivi-ui/topoesittelyt-221)
 Kytke siihen hyväksytty ~90° kierto kohteen ympäri (TILA 11.15 kohta 1 a–e), kun navat ovat odotuksella. Rakenna NUI:n haaran päälle
 (lue ensin TopoEsittely.cs: mitä koukku antaa ja milloin kutsuu), älä tee omaa ILinssiYmparisto-rajapintaa, jos koukku riittää.
 TEHTY 11.3x: b1d5c652f haara natiiviseppa/topo-esittelyt (TILA 11.35 kohta 1); koukku riitti, ILinssiYmparistoa ei muutettu.
+
+## LISÄYS 11.4x: PT:N JONO (OMISTAJAN PYYNTÖ 11.19, KK:n välitys, NAPOJEN JÄLKEEN)
+Omistaja: "Voisi miettiä pientä liioittelua korkeudesta jopa perus karttaan jos sitä on helppo kokeilla. Varsinkin lentokohtauksessa vuoret näyttäisi upealta."
+PT: koe peruskartan KorkeusKerroin (nyt Oletus 2, build 10) suuremmaksi, esim. 4, VAIN LENTOJEN AJAKSI (Pariisin tasoitus 6.11. ennallaan,
+siirtymä pehmeä). Oma haara, ei junaan ilman korttia. Pari 2 | 4 JU:lla: lento Alppien yli + lento maapallolta → PT:n kautta KK:lle.
+Lähtökohta: Matkakirja.KorkeusKerroin (Aseta(k, georeferenssi), Arvo; Topografia.AsetaKerroin käyttää samaa) – lue ensin, miten Pariisin
+tasoitus ja kohokartan kerroin sitä käyttävät, ja tee lennon kerroin liukuvaksi (lennon alku/loppu).
