@@ -13,7 +13,7 @@ a) ETUSIJA – NÄHTÄVYYSESITTELYN RAJAUS (PT 18.4x: OMISTAJAN PÄÄTÖS 18.36 
    Ei junaan ilman paria KK:lle: iPhone pysty (Eiffel, Notre-Dame) + iPad → kuvat ENSIN PT:lle.
    Lähtökohdat 617d6ca2b:ssä (ei vielä luettu): Assets/Matkakirja/UI/NahtavyysEsittely.cs, Kartta/Valintarajaus.cs, Kartta/Saapumisrajaus.cs,
    Linssit/Unity/TehtavaKohdeNapautus.cs. Muisti: skenaario-lentopiilo-piilottaa-nostot.md (ui lentopiilo ei napautusskenaarioihin).
-b) LENTORAJA-5 (PT 18.3x PÄÄTÖS, koe): c1cde1148 natiivi-backup natiivi-ui/merenpohja-pohjapallo-lentoraja (sama c54d3ba0d-pohjalla 81a4639a8
+b) [TEHTY 18.4x: katsottu, PT:lle raportoitu; proto-3d/_tyo/natiivi-ui/lentoraja-5/TULOS.md – pystylähtö toimii, ei kermaa, ei mustia; odota PT:n jatko] LENTORAJA-5 (PT 18.3x PÄÄTÖS, koe): c1cde1148 natiivi-backup natiivi-ui/merenpohja-pohjapallo-lentoraja (sama c54d3ba0d-pohjalla 81a4639a8
    natiivi-ui/kohokartta-lentoraja; worktreet wt/proto-natiivi-ui-lentoraja ja wt/proto-natiivi-ui-kohokartta-lentoraja). JU:n Mac-ajo pyydetty 18.4x
    (sk-lentoraja-5-mac, lokit proto-3d/lokit/nui-lentoraja-5-c1cde1148); JU ilmoittaa valmiin tähän sessioon.
    Sisältö: (1) kohokarttalento pystyyn: PalloAjo pystyOsuus 0,15 (alku/loppu 15 % pelkkää nousua/laskua; AjoPystyyn/kohtiPistetta ei auttanut,
