@@ -22,8 +22,10 @@ Tila: faktat tarkistettu, ÄÄNTÄ EI TEHTY (Äänittäjä generoi PT:n hyväksy
 **Alpit (349 merkkiä)** — nimikyltit "Mont Blanc · noin 4 800 m", "Matterhorn · 4 478 m"
 Mont Blanc ei pysy samankorkuisena, koska huipun lumi vaihtelee vuodesta toiseen; nyt se on noin neljätuhatta kahdeksansataa metriä. Matterhorn on neljätuhatta neljäsataaseitsemänkymmentäkahdeksan metriä, ja sen huipulle päästiin lähes kahdeksankymmentä vuotta Mont Blancin jälkeen. Matterhornin ensinousussa ylös nousi seitsemän, alas palasi kolme.
 
-**Himalaja (340 merkkiä)** — nimikyltti "Everest · 8 849 m"
-Intia törmäsi Aasiaan yli neljäkymmentä miljoonaa vuotta sitten, ja siitä syntyi Himalaja. Kartta venyttää korkeudet viisitoistakertaisiksi, mutta oikeasti Everest on lähes kahdeksantuhatta kahdeksansataaneljäkymmentäyhdeksän metriä. Ensimmäiset varmasti todetut huipulla olleet olivat Edmund Hillary ja Tenzing Norgay, ja vuori nousee yhä.
+**Himalaja (PT-korjattu 8.11., luku ×15 ei ääneen; merkit alla)** — nimikyltti "Everest · 8 849 m"
+Intia törmäsi Aasiaan yli neljäkymmentä miljoonaa vuotta sitten, ja siitä syntyi Himalaja. Kartta korostaa korkeuksia, mutta oikeasti Everest on kahdeksantuhatta kahdeksansataaneljäkymmentäyhdeksän metriä. Ensimmäiset varmasti todetut huipulla olleet olivat Edmund Hillary ja Tenzing Norgay, ja vuori nousee yhä.
 
 Tarkistuksen korjaus: "ensimmäisinä varmasti" → "ensimmäiset varmasti todetut" (Mallory 1924). Mont Blancin lukua ei tarkennettu (korkeus vaihtelee 4 805–4 808 m, teksti sanoo sen itse). Matterhorn tarkemmin 4 477,54 m (satelliittimittaus), 4 478 m pyöristys. Pelaajan ×15-väite on pelin oma, ei tarkistettu.
 Lähteet (tarkistaja, kaksi per väite): euronews 2026/10/14 ja linfodurable.fr (Mont Blanc); britannica.com, zermatt.swiss, swissinfo.ch (Matterhorn); explorersweb.com, environmentandsociety.org (1786); zermatt.ch, gornergrat.ch, outdooractive.com (1865, seitsemän nousijaa); pubs.usgs.gov/gip/dynamic/himalaya.html, geolsoc.org.uk, whoi.edu (törmäys, nousu); aljazeera.com, chinadaily.com.cn, cnn.com (Everest 8 848,86 m, 2020); countrylife.co.uk, alanarnette.com (Mallory).
+
+PT:n korjaukset 8.11.: (1) ei lukua ×15 ääneen (kerroin auki omistajan kortilla); (2) ilman "lähes" (8 848,86 m → 8 849 m, kyltti 8 849 m).
