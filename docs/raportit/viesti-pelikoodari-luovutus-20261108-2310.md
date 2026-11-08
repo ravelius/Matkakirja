@@ -30,3 +30,11 @@ OMISTAJAN PÄÄTÖS 22.4x "Heti ovelta (Suositus)". Toteutus:
 
 ## 2. Muut (ennallaan)
 Keisari c92dafe1f ja lataus ab113e0ac junassa 221; c (e59541a34) junassa 222. Lontoon maanpinta a7ad5fc24 kokeena. g-ajon kuolema (13:02:13) selvittämättä.
+
+## LISÄYS 23.3x
+- PT (Postivahdin kautta): 1g-skenaario JU:lle valmis: proto-3d/_tyo/pelikoodari/juoksu-223/sk-1g-sivuseina.txt (pari a7004996e vs 84a91d530;
+  kujan päässä S 22,8 "kaanna -1 seina" → reitti seinän viertä länteen: korjauksella sivuaskel 20° + 30 m, ennen todennäköisesti pysähdys). Lähetetty JU:lle.
+  JU:n oma sk-1f-1g-ju.txt (ac4bff77a) ei sisällä pyyhkäisyä → 1g ei toteudu siinä; JU:lle ohje lisätä "kaanna -1 seina" ja kuva d2-eunukki-ovella.
+- KK 23.11: omistajan 27.10. 08.27 "eunukki kurkistaa heti, kasvot tutuiksi" pysyy ehtona. Vastasin: kasvot todennäköisesti pienet (kamera ~9 m keisarin
+  takana, ovi 5–6 m kamerasta oikealla); ehdotus: kamera viipyy 0,5–0,8 s oven puolella ennen taakse tuloa. ODOTTAA KK:n päätöstä kuvan d2 jälkeen;
+  toteutus JuoksuAvaus.LuoSeinaAvaimet (avain huudon kohdalle sivulle) + PorttiAikajana (paikalla myöhemmäksi), testi Taso1OveltaHetiKujalle (Kesto − seina ≤ 2,5).
