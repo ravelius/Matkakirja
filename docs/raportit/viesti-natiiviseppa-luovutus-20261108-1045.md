@@ -126,3 +126,12 @@ n4 (kauempaa): valitsin auki, näkymä Linssit, 10 linssiä + Keskeneräiset, ei
 - UUSI ca92af647 JU:lla käännöksen jälkeen → lokit/natiiviseppa-navat-koho/uusi/. KUN KUITTAA: /opt/homebrew/opt/python@3.14/bin/python3
   /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/navat-koho/parit.py (parit/ samaan kansioon, vasen verrokki, oikea uusi), katso täysikoossa,
   konsoli.txt:stä "kohokansi mitattu N/16" (16/16 odotettu). Sitten luovutuksen kohdan 0 mukaan (parit KK:lle, PT:lle ≤ 3 riviä).
+
+## LISÄYS 11.13 (nollauksen jälkeinen sessio): cron luotu uudelleen (388fa2f9)
+- TAVALLINEN KARTTA SELVITETTY (_tyo/natiiviseppa/navat-koho/tavallinen/TULOS.md): kalotin Varita-väritys EI TOIMI (laikut; paletti eri),
+  pohjalaatoissa EI Etelämannerta (tasainen täyte −67°:sta, Varita → meri), joten "kansi vain 84°:sta" ei käy. Ehdotus PT:lle 11.09:
+  KS polttaa kalotin striimiväreissä (tee-napakalotit.mjs, vektorimaski, uusi versiokansio), NS kytkee (KalottiVersio kun Striimi) ja
+  kaventaa häiveen. ODOTTAA PT:N SANAA.
+- J3 LUETTU (SK/tulos.md "UUSINTA 3", parit SK/parit/laite-3/): odotus 1,50 s liukumalla (sama lähtö kuin n2), etuala yhä sumea.
+  j4 = 491bec23b (46d34ca4f + pyyntölokin lippu kertakäyttöiseksi), ajo-4.zsh, ajopyynto-aloituslento-4.md, JU:lla navat-ajon jälkeen.
+  KUN KUITTAA: pyynnot.tsv kuvan a hetkeltä (lento v3 odotus + 9,5 s): mitkä etualan palat (z, lähde, ms) kesken tai hitaat.
