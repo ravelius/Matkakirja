@@ -45,3 +45,10 @@ Vertailutyökalut: proto-3d/_tyo/natiivi-ui/kartta-lukittu/{siirto,ero,pari}.py 
 - KORJAUS (pieni): `ui kohdenostot napauta` → NostotKartalla.NapautaKohde(nimi): hae merkki kuten KohdePiste ja kutsu Napautus(m) (sama kuin
   ClickEvent-käsittelijä), TAI Pick myös nostojen paneelista. Sitten uusinta JU:lla (sk-nahtavyysnapautus-2.txt uudella SHA:lla).
   Huom: oikea sormi menee eri reittiä (UI Toolkitin oma poiminta), joten tämä on testityökalun vika, ei pelaajan.
+
+## PÄIVITYS 13.27: KK 13.25 (PT:n välitys) — JONO 0 "NÄHTÄVYYDET ENSIN" TEHDÄÄN ILMAN KORTTIA
+- Lisäehto: 3D-mallin oma nimi EI SAA kadota oman mallinsa alle; sen kiinteä paikka on mallin vieressä (Musée de l'Armée / Invalides).
+  → oma malli ei ole oman nimen este, ja nimen paikka (kylki) valitaan mallin ääriviivan ulkopuolelta (kiinteästi, ei väistönä ruudulla).
+- Todiste: uusi pari SAMALLA rajauksella kuin _tyo/natiivi-ui/kartta-lukittu-2/lahi-invalides-vanha-vasen-kiintea-oikea.jpg
+  (crop täysresoluutiosta (150,500,1000,1150), P = aja 48.856 2.335 0.03, kallista 45, suunta 0) + koko Pariisin näkymä → PT → KK.
+  Ei junaan ennen KK:n/omistajan sanaa.
