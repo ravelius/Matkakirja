@@ -36,3 +36,11 @@ b) Kosketustikut (PT 13.41): OpasTapit-pohjalta, vasen kaasu (ei palaa keskelle)
    rajapinta PK:n lentomalliin natiivi-backup pelikoodari/fpv-lentomalli e1d7c09c4 (syöte −1…1, neljä akselia) → sovi PK:n kanssa.
    Pohjaksi natiivi-ui/fpv-nakyma (b45bbe356), samaan FPV-kokonaisuuteen.
 c) kartta-lukittu-3 kuvat (luovutus -1322 kohta 2 / PÄIVITYS 13.40).
+
+## PÄIVITYS 14.5x: PT — FPV-NÄKYMÄÄN LISÄYS (OMISTAJAN PYYNTÖ 14.37), samaan erään nimien ja pallon kanssa, ennen kosketustikkuja
+1) TIETORIVI vasempaan yläkulmaan ISS:n tietorivin tyyliin (IssKyytiNakyma: "● LIVE · ISS · 418 km · 27 580 km/h"): nopeus km/h maan yllä +
+   korkeus merenpinnasta OIKEINA metreinä (ei ×15). Luvut PK:n lentomallista (PK ilmoittaa rajapinnan; siihen asti FpvNakyma voi laskea kameran
+   liikkeestä ja jakaa korkeuden KorkeusKerroin.Arvo:lla, merkitse väliaikaiseksi).
+2) LENTOTILAN VAIHTONAPPI MANUAALI / AUTOMAATTI pohjien tyyliin (ei uutta tyyliä); peli alkaa AUTOMAATISSA. Tila PK:n rajapinnassa.
+Molemmat haaraan natiivi-ui/fpv-nakyma (b45bbe356 päälle) → NS:n pienoismallin kuvapariin (kerro NS:lle uusi sha).
+JU 14.4x: kartta-lukittu-4 jonossa isolla iPadilla NS:n kerma-ajon jälkeen.
