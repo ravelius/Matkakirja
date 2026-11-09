@@ -37,3 +37,4 @@ KESKEN: katso kuvat (fn-2: ei yläpalkkia, yksi ☰, pallo ei peitä mitään; f
   ("pelaaja liikutti", kartalla maata ja nimiä) → arkit PT:lle.
 - PT 11.0x: kohta 1 annettu NS:lle (ennakko paluulennossa), kohta 3 ei nimeä (suunnitelman mukaan). Odottaa vain uutta ajoa.
 - JU ketju BE: paikkapalkki-1 x3 → lokit/nui-paikkapalkki-1-<koko>-91d517091-3 (vaaka-2 vanhalla vedolla: ei raportoida), sitten fpv-napit-1 x2.
+- 11.1x: NS ccbdaef0a (paluulennon ennakko ilman huippua) yhdistetty → paikkapalkki 818e32b61 (0 virhettä), sk:n sha päivitetty; JU:lta pyydetty BE-ketju tällä sha:lla (kansiot -818e32b61).
