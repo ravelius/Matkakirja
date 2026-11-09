@@ -42,3 +42,10 @@ ruudun vaihto 12 fps (juuri.schedule Every 83 ms). Tähdet ovat KS:n (paketti pa
 ## 5. PK (8cdb4549c, natiivi-backup pelikoodari/vasen-tikku): liiketappi PalloKierto.Etene()ssä
 Jos muutat Etene():tä: säilytä ajoLiikeKerroin/ajoLiikeSiirto-nollaus (johtaja == null -lohko) ja AjonLiikeSiirto()-kutsu heti
 `korkeus = a.KorkeusM` -rivin jälkeen, tai kerro PK:lle. PK odottaa NUI:n liikerajapintaa (nimi + sha), jos sellainen tehdään.
+
+## 6. UUSI PT-RIVI (Postivahdin kautta 16.4x): OMISTAJA 16.14 – NIPISTYSZOOMAUS EI PYSÄYTÄ ORBIT-KIERTOA – EI ALOITETTU
+Kierto jatkuu uudelta etäisyydeltä kohde keskellä, ei lisänappia; 2. napautus / yhden sormen veto pysäyttää kuten ennen. Samaan haaraan
+natiivi-ui/temple-orbit. Kuvat (zoom ulos kesken kierron, 2 kuvaa) pieni iPad → PT. Koordinoi PK:n kanssa (kohta 5: PK:n 8cdb4549c
+Etene()-rivit; vasen peukalotikku on PK:lla). Lähtökohta: PalloKierto sormi keskeyttää ajon (kohdekierto, napautusPitaaKierron ~1458,
+PaivitaKiertoLiuku) – kahden sormen ele erikseen: säilytä ajo.kohdeKierto ja vaihda vain etäisyys (korkeus).
+Postivahdin rivi (2) aa46f41db katsottu PT:llä → JU vie junaan (ei NUI-työtä). Rivi (3) palkki = kohta 1 (606e08631).
