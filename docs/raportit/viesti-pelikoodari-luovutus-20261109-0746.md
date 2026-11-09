@@ -39,3 +39,15 @@ Työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, haara pelikoodari/juok
   (kuvasuhde laite): kuvien d2a–d2c jälkeen heti "ui juoksupeli mika 0.85 0.25" + muutama piste kaistaleen varrelta → JU:lle ajo.
 - Päätös PT:ltä: malli/LOD → PT antaa Lavastajalle; karsinta/häivytys (JuoksuSokkeloMaailma, JUOKSU_SEINA, lähimallit) → PK korjaa itse.
   Syy PT:lle rivinä.
+
+## LISÄYS 08.4x – UUSI ENSIMMÄINEN TYÖ (korvaa järjestyksen; kattokaistale rinnalla tai ensin, jos nopeampi)
+OMISTAJAN PÄÄTÖS 08.32 (PT välitti sanatarkasti): "Se aiempi versio, missä keisari lähti juoksemaan kohti kameraa, eli kääntyi vasemmalle
+sen jälkeen, kun tuli ulos ovesta, oli minun mielestä jouhevampi suunta, koska silloin kamera näkee vielä eunukin ja keisari juoksee kohti
+kameraa ja kamera voi sen jälkeen kääntyä keisarin perään, jonka jälkeen tulee numerot 3, 2, 1 ja ohjaus siirtyy sitten pelaajalle."
+PT:n tehtävä: palauta TF 223:n suunta ja järjestys: ovesta → käännös vasemmalle → juoksee kohti kameraa, eunukki näkyy ovella → kamera
+keisarin taakse → 3-2-1 → ohjaus pelaajalle. d2:n kurkistus (omistaja 08.30 "Kelpaa") ja 1g sivuseinä SÄILYVÄT. 1f ac4bff77a ja d2 EIVÄT mene
+junaan 223 (JU palauttaa junan). Tee korjaus JUNAN KÄRJEN päälle (tarkista kärki JU:lta / asemataulusta, ei juoksu-223 281093d9c suoraan).
+Mac-kuvat ensin PT:lle, sitten KK:lle.
+- Lähtökohdat: TF 223:n versio = ennen ac4bff77a (1f "heti ovelta" ja Raamattu 2.177 #6505 "ei 3-2-1" kumoutuvat tältä osin → PT päivittää Raamatun).
+  d2-kurkistus: 0cc5ac36c (KurkistusOvestaM 1,0) + 451519f87/4c1d100a2/281093d9c ovikuva; tarkista, sopiiko "kohti kameraa" -suuntaan (kamera näkee
+  oven ilmankin → ovikuvasääntö tarve 0 voi riittää). 1g: a7004996e. Mac-ajoissa aina `ui juoksupeli kuvasuhde laite` (281093d9c, poimi mukaan).
