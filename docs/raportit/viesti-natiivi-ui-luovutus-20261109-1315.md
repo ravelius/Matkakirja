@@ -84,3 +84,10 @@ Kärki b57df8ec6 (wt/proto-natiivi-ui-fpv-napit, puhdas). Tiedostot: UI/Linssit/
   Jos tämä sessio nollautuu ennen tulosta: tarkista `git -C /Users/Shared/Claude/wt/proto-natiivi-ui-fpv-napit log --oneline -3` ja
   status; kesken jäänyt työ näkyy muutoksina. Tarkista diff, tarkistus 0, push natiivi-backup natiivi-ui/fpv-napit, JU-ajo
   sk-fpv-koe-1 iphone, iphone-vaaka, ipad → PT.
+
+## Lisäys 13.5x: sk-2 ipad / iphone-vaaka / ipad-pysty 74e72a4a4 (JU valmis 13.53) – UUSI VIKA LEVEILLÄ
+- a-3: lokissa "alla True", mutta NOSTOKORTTIA EI NÄY lainkaan ipadilla, iphone-vaakana eikä ipad-pystyssä (iPhone pystyssä näkyy).
+  Ei-kapea polku: Nostokortti.PalkinAlle(palkinAla, kapea=false) asettaa kerros.paddingTop + maxHeight; Pohja.NostokortinPaikka
+  (sivukortti oikeaan reunaan) ilmeisesti sijoittaa kortin absoluuttisesti → kortti ruudun ulkopuolella tai korkeus 0. Tutki ensin
+  sk-2-ipad a-2 (lokit/nui-palkki-aina-2-ipad-74e72a4a4) + `ui nosto tila` -tyyppinen komento, korjaa 61c8858c2:n päälle ja aja
+  sk-palkki-aina-3 myös iphone-vaaka + ipad-pysty. Pikkuarkki: <tämän session scratchpad>/k3.jpg (ei tallessa; tee uusi a-2/a-3:sta).
