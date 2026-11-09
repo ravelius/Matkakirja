@@ -1003,3 +1003,7 @@ Omistaja 7.11. klo 19.52 (KK:n välittämä): julkaistaan juna vasta sitten kun 
 ## iPAD-ASENNUSTEN VÄLIMUISTI MYÖS PÄIVÄLLÄ (8.11.2026 klo 17.47)
 
 Omistaja 8.11. klo 17.4x (KK:n kortit): "Tyhjennetäänkö iPad-asennusten välimuisti (78 Gt) nyt?" = "Tyhjennä sinä (Suositus)" (KK poisti 17.45, levy 8 → 79 Gi, TF 223 -vienti jatkui); "Saako kone jatkossa tyhjentää välimuistin myös päivällä, kun levytila käy vähiin?" = "Saa (Suositus)". KK:n tulkinta: vain kun asennusta ei ole käynnissä, raja alle 30 Gi. Toteutus: simu_yosiivous.py --paiva --aja (vain iPad-välimuisti, tarkistaa rajan, devicectlin ja iPad-lukon), Postivahti ajaa mittauskierroksella. Muutti Raamatun 12.19.
+
+## JUOKSUPELI: LÄHTÖ HETI OVELTA JA SIVUSEINÄ (Raamattu 2.177) (9.11.2026 klo 02.03)
+
+Omistajan kortti 8.11.2026 klo 22.41 "Lähteekö keisari juoksuun heti ovelta vai vasta 3-2-1-laskennan jälkeen?": "Heti ovelta (Suositus)"; korvaa 2.11.2026 järjestyksen. Dronelennon jälkeen keisari tulee ovesta, kääntyy suoraan avoimelle kujalle ja juoksee pakoon heti; huuto ja kameran kierto keisarin taakse tapahtuvat juostessa, eikä 3-2-1-laskentaa odoteta. Seinän edessä ja umpikujassa keisari odottaa yhä pelaajan pyyhkäisyä (omistaja 8.11.2026 klo 22.38), mutta sivuseinän vierustaa keisari juoksee eteenpäin pysähtymättä (omistaja 8.11.2026 klo 22.40: pysähtyminen sivuseinään on vika). Raamattuun tiivistetty 2.177:n ALKULENTO- ja EI AUTOMAATTISIA KÄÄNNÖKSIÄ -kohtiin (450 kt:n raja).
