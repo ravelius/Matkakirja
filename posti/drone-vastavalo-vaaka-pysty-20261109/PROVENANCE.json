@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-09",
+  "source": "Direct owner request in Matkakirjan kuvat conversation",
+  "ownerInstruction": "tee tuosta sinun tekemästä versiosta myös pystykuva ja toimita sitten kumpikin tekemäsi claudelle",
+  "generator": "built-in image_gen",
+  "landscapeSelectedByOwner": true,
+  "deliveryAuthorizedForBoth": true,
+  "portraitCreatedAfterDeliveryAuthorization": true,
+  "portraitSeparateOwnerReviewObserved": false,
+  "images": [
+    {
+      "file": "drone-vastavalo-vaaka.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-dji-flycart-20261109/drone-vastavalo-lumipilvi-v4.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "e669c45f10dcc732bcca13a9b54d24ff132e46e273c64186bce59d72b492a4ad",
+      "prompt": "prompt-vaaka.txt"
+    },
+    {
+      "file": "drone-vastavalo-pysty.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-dji-flycart-20261109/drone-vastavalo-pysty-v5.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "d7641c8b915a84cec22d247ebcbe62d8258264141070f497ca33af3388b0ea7a",
+      "prompt": "prompt-pysty.txt"
+    }
+  ],
+  "separateSessionAlternativeIncluded": false,
+  "receiverAcknowledged": false,
+  "gameIntegrated": false,
+  "published": false
+}

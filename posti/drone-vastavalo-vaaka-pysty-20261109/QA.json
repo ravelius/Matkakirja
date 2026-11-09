@@ -1,0 +1,18 @@
+{
+  "reviewedAt": "2026-11-09T08:09:52.797908+00:00",
+  "method": "Human-visible assistant review of both complete native images plus file decoding and SHA256 checks",
+  "result": "pass_for_authorized_delivery",
+  "checks": {
+    "wholeDroneWithinFrame": true,
+    "noVisiblePeople": true,
+    "blackAircraftAndSmallGlassGondola": true,
+    "strongBacklightAndDeepShadow": true,
+    "abundantBlowingSnow": true,
+    "snowyMountainLandscape": true,
+    "portraitAndLandscapeContinuity": true
+  },
+  "limits": [
+    "Fictional generated aircraft: no real flight, dimensions or material composition verified.",
+    "Sunset and snow appearance are artistic; image metadata is not a documentary location claim."
+  ]
+}
