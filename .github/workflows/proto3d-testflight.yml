@@ -339,11 +339,18 @@ jobs:
           set -euo pipefail
           test -f "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj/project.pbxproj"
           test -f "Build/$VIENTI_KANSIO/Info.plist"
-          # Talopalat ja ulkoesineet (Rakennus.KopioiTalopalat): PostProcessBuildin poikkeus menee vain Unityn lokiin, ja TF 220
-          # lähti ilman Lontoon taloja (lähde T7-linkin takana, PT 7.11. 23.25). Merkki <kaupunki>.valmis = kopioitujen määrä.
+          # Talot: joko hakemistot (pelin koko osa 2, KS 9.11.2026: palat ämpärissä julisteet/talot/, buildissa Data/Raw/talot/<kaupunki>.json)
+          # tai vanha kopio (Rakennus.KopioiTalopalat, TF 219 – juna 224; TF 220 lähti ilman Lontoon taloja, PT 7.11. 23.25: merkki <kaupunki>.valmis).
+          TH="Build/$VIENTI_KANSIO/Data/Raw/talot"
           TP="Build/$VIENTI_KANSIO/Data/Raw/talopalat"
           for k in pariisi lontoo; do
-            test -f "$TP/$k.valmis" || { echo "::error::talopalat/$k puuttuu käännöksestä"; exit 1; }
+            if [ -f "$TH/$k.json" ]; then
+              n=$(grep -o '"sha256"' "$TH/$k.json" | wc -l | tr -d ' ')
+              [ "$n" -gt 0 ] || { echo "::error::talot/$k.json: ei paloja"; exit 1; }
+              echo "talot/$k.json: $n palaa (ämpäristä)"
+              continue
+            fi
+            test -f "$TP/$k.valmis" || { echo "::error::talot/$k.json ja talopalat/$k puuttuvat käännöksestä"; exit 1; }
             odotettu=$(cat "$TP/$k.valmis"); n=$(ls "$TP/$k" | wc -l | tr -d ' ')
             [ "$n" -gt 0 ] && [ "$n" = "$odotettu" ] || { echo "::error::talopalat/$k: $n tiedostoa, odotettu $odotettu"; exit 1; }
             test -f "$TP/$k/indeksi.txt" || { echo "::error::talopalat/$k/indeksi.txt puuttuu"; exit 1; }
