@@ -23,3 +23,7 @@ HUOM: tämän session viesteissä ja commit-viesteissä aikaleimat "17.4x/17.5x"
 5. **ks-lontoo-kyltit-8b906d293** (viennin d8dcdc43a jälkeen) → Westminster, Cutty Sark, Kensington: kyltin napautus → esittely → kuvapari PT:lle ennen junaa.
 Kun kaikki katsottu ja PT kuittaa: natiivi karttaseppa/tietonapautus junaan PT:n kautta (ei omaa mergeä).
 Vahdit (viritä uudelleen): postilaatikko `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (Monitor 30 min); ajovahti: kopioi tämän session scratchpadista ei säily → tee uusi (glob lokit/ks-*-<sha>/, valmis kun loki.txt:ssä "valmis").
+
+## LISÄYS 17.3x (JU)
+- Mallinostot-3: JU vahvisti 8/8 kuvaa ilman harmaita. Kulman kuvakortti = edellisen kohteen pinnattu luenta (tarkoitus), JU:lle selitetty.
+- grandpalais-tahti ajossa **dbe105f0f**:llä (riittää, ei uusintaa). Nimet ja Lontoo vaihdettu **ab57114e5**:een → lokit ks-pariisi-nimet-ab57114e5/, ks-lontoo-kyltit-ab57114e5/.
