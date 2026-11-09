@@ -193,3 +193,7 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 15.1x: DU valmis + VS:lle kerrottu. Ketju DY (jono-dy.zsh) VS vuoret1 d9aefd7a5 ipad film13:n jälkeen (varjostin regeneroitu: Shader-error!) → lokit/linssiseppa2-vuoret1-ipad-d9aefd7a5 → polku VS:lle.
 - 15.09: VS film13 VIKA: iso iPad LUKITTU (CoreDeviceError 10003 'device was still locked'), ei ajoa, runko-asennus rc 1. Laitekäännös valmis lokit/julkaisija-laite-218-22e601e76 → uusinta vs-film13-ipad.zsh (ei käännä uudelleen), kun iPad auki; VS + PT kerrottu. DY alkaa nyt.
 - 15.1x: VS pyysi film13:aa pienelle iPadille, jos auki/vapaa → EI ilman PT:n sanaa (omistajan pelilaite junaversiolla); VS:lle kerrottu. Jos PT sallii: kopio vs-film13-ipad.zsh, U=00008142-0019686E02F3801C, runko 6a2f044b7, lokiin laitteen nimi + Laatutaso.
+- 15.2x: iso iPad avattu (KK 15.14) → film13 uusinta 15.17: muistivahti SEIS 4081 Mt (kuvia 0/3, tarkka-huippu 4157) → VS kerrottu; runko 6a2f044b7 palautuu EXIT-trapissa (tarkista jonolokista "film13 runko takaisin" > 15.17).
+  DO valmis → NS. DY vuoret1 valmis → VS. UUDET ketjut: EA VS vuoret2 7ebd3e7c0 ipad (varjostin regeneroitu; VS nollautuu → raportti VS:n seuraajalle),
+  EB NS fpv-latauskuva-3 e0e61df24 ipad (kuva vain PT:lle → polku NS:lle), DZ NS fpv-vuoret-2 c8963e7eb ipad DW:n jälkeen (KOE, kuvat vain PT:lle),
+  EC PK 1d-alkuvarjo1 d58806806 iphone DS:n jälkeen → PK. PT:n GO nollaukselle: kun DV/DO/DW raportoitu.
