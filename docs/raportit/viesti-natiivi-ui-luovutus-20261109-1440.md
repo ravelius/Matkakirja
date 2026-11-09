@@ -44,3 +44,12 @@ ulos.jpg sarakkeet otsikko kuva1 nimi1 … (kopio myös 1bc73057-…/scratchpad/
 - 14.43: palkki-aina-3 iphone-vaaka ed65f5b34 valmis (ei vielä katsottu); ipad-pysty ja ipad ed65f5b34 tulossa.
 - 14.5x: FPV-KOE VALMIS: 5efe9e346 vaaka + iPad katsottu (pallo ei peitä AUTOa), arkit PT:lle; PT vie koko FPV-kokeen KK:lle. Ei muuta tehtävää.
   Jäljellä vain palkki aina ed65f5b34 (vaaka valmis, ipad-pysty + ipad tulossa) → yksi arkki neljästä koosta PT:lle.
+
+## JONO (PT 15.0x, sitova järjestys)
+1) sk-palkki-aina-3 neljällä koolla → YKSI arkki PT:lle (nostokorjaukset KK:lle odottavat tätä): iphone e516f3fe1 (katsottu, arkki valmis)
+   + iphone-vaaka / ipad-pysty / ipad ed65f5b34 (lokit/nui-palkki-aina-3-<koko>-ed65f5b34; vaaka valmis 14.43, muut JU:lla). Katso a-3, a-5,
+   a-6 (MuCEM palkin alla oikeassa reunassa leveillä), a-6b.
+2) OMISTAJA 14.59 (KOE, 5efe9e346:n päälle, wt/proto-natiivi-ui-fpv-napit): FPV-pallolle VIHREÄT PISTEET suositelluista paikoista, joissa on
+   opastettu esittely; nimi pallon alla kuten ISS:ssä (Cupolan minipallo, AstronautinNakyma); lukittuu lähietäisyydeltä helpommin (muihin
+   pisteisiin voi yhä lentää). Piikit tekee NS (Kartta/FpvLento.cs Korostus) → sovi NS:n kanssa (local_0f7f169f-2ceb-43d2-8fb4-223dda2c0870),
+   mistä tiedostosta suositellut paikat luetaan (yksi lähde molemmille). Älä koske FpvLento.cs:ään. Kuvat sk-fpv-koe-2 → PT.
