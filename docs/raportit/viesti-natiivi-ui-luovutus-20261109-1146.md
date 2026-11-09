@@ -36,3 +36,8 @@ Odotusvahti (Monitor, 30 min): bash <sama scratchpad>/vahti.sh – ilmoittaa lok
 
 ## Muuta
 - Vanhat worktreet poistettavissa: wt/proto-natiivi-ui-nostovalikko-juna223, wt/proto-natiivi-ui-nostovalikko.
+
+## Lisäys 11.5x (NS)
+- NS: p-5a beige = näkymä levenee (8 → 86 km 0,9 s:ssa) nopeammin kuin laatat; ei usva eikä sumennus. Korjausyritys 75c0c0c47 (ennakot 0,6/1,2 s),
+  koehaara d79031961 = 5f8860254 + korjaus; JU ajaa sk-paikkapalkki-1 iphone → lokit/natiiviseppa-ennakko-paikkapalkki-iphone. NS kertoo tuloksen;
+  jos p-5a kunnossa: yhdistä d79031961 paikkapalkkiin ja pyydä JU:lta 3 kokoa.
