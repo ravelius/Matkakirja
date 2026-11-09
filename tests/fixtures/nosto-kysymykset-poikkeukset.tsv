@@ -1,0 +1,585 @@
+# Nostot (karttavalot), joilta kortin kirjoitetut kysymykset puuttuivat (< 2), kun testi tehtiin 9.11.2026 (Karttaseppä; Raamattu 2.218, omistaja 13.18).
+# Sama joukko kuin natiivin Peli-testit/Kultaiset/nosto-kysymykset-poikkeukset.tsv:n "kirjoitetut"-rivit (sisältöpaketti v1026). id, nimi.
+# Lista VAIN LYHENEE: rivi poistetaan, kun nostolle on kirjoitettu kysymykset (tests/nosto-kysymykset.test.mjs kaatuu vanhentuneeseen riviin).
+# Uutta nostoa EI lisätä tänne: sen kirjoittaja kirjoittaa sille kysymykset samassa haarassa.
+elaintaky:AFG	lumileopardi
+elaintaky:AGO	jättiläisseeprantilooppi
+elaintaky:ARE	arabiantahri
+elaintaky:ARG	magellaninpingviini
+elaintaky:AUS	koala
+elaintaky:AUT	murmeli
+elaintaky:BGR	pelastuskarhu
+elaintaky:BIH	tornjak
+elaintaky:BOL	boliviandelfiini
+elaintaky:BRA	kultatamariini
+elaintaky:CAN	jääkarhunpentu
+elaintaky:CHE	bernhardilainen
+elaintaky:CHL	guanako
+elaintaky:CHN	jättiläispanda
+elaintaky:CMR	goliattisammakko
+elaintaky:COD	bonobo
+elaintaky:COL	kultamyrkkysammakko
+elaintaky:CUB	mehiläiskolibri
+elaintaky:CYP	kyproksenpöllönen
+elaintaky:CZE	siiseli
+elaintaky:DEU	siili
+elaintaky:DNK	joutsenpoikue
+elaintaky:DZA	fennekki
+elaintaky:ECU	andienkarhu
+elaintaky:EGY	egyptinmangusti
+elaintaky:ESP	iberianilves
+elaintaky:EST	ilves
+elaintaky:ETH	gelada
+elaintaky:FIN	saimaannorppa
+elaintaky:FJI	nauhaleguaani
+elaintaky:FRA	camarguenvarsa
+elaintaky:GBR	kettu
+elaintaky:GHA	valkokaulakalliovaris
+elaintaky:GRC	kilpikonnanpoikaset
+elaintaky:GRL	gronlanninkoira
+elaintaky:GTM	ketsaali
+elaintaky:HRV	dalmatianpentu
+elaintaky:HUN	mangalitsa
+elaintaky:IDN	babirusa
+elaintaky:IND	tiikerinpentu
+elaintaky:IRL	rusakko
+elaintaky:IRN	persianonageri
+elaintaky:IRQ	basranruokokerttunen
+elaintaky:ISL	lunni
+elaintaky:ITA	sudenpennut
+elaintaky:JOR	nubiantorvikauris
+elaintaky:JPN	lumiapina
+elaintaky:KAZ	saiga
+elaintaky:KEN	kirahvinvasa
+elaintaky:KOR	korean vesihirvi
+elaintaky:KWT	hietakissa
+elaintaky:LBR	kääpiövirtahepo
+elaintaky:LBY	saharangaselli
+elaintaky:LKA	sri lankan leopardi
+elaintaky:LTU	haikaranpesä
+elaintaky:LVA	majava
+elaintaky:MAR	berberiapina
+elaintaky:MDG	sifaka
+elaintaky:MEX	aksolotl
+elaintaky:MLI	gourmannorsu
+elaintaky:MMR	surkkunenäapina
+elaintaky:MNG	przewalskinhevonen
+elaintaky:MOZ	dugongi
+elaintaky:NAM	erämaanorsu
+elaintaky:NGA	drilli
+elaintaky:NIC	guardabarranco
+elaintaky:NLD	hyljekuutti
+elaintaky:NOR	myskihärkä
+elaintaky:NPL	punapanda
+elaintaky:NZL	kiivi
+elaintaky:OMN	arabianleopardi
+elaintaky:PAK	markhor
+elaintaky:PAN	panamankultasammakko
+elaintaky:PER	vikunja
+elaintaky:PHL	tarsieri
+elaintaky:PNG	paratiisilintu
+elaintaky:POL	visentinvasa
+elaintaky:PRT	vesikoiranpentu
+elaintaky:PRY	chacopekari
+elaintaky:ROU	karhunpennut
+elaintaky:RUS	eremitaasinkissa
+elaintaky:SAU	arabianoryksi
+elaintaky:SDN	arruikatsa
+elaintaky:SDS	kenkänokka
+elaintaky:SEN	afrikanmanaatti
+elaintaky:SHN	tikkuri
+elaintaky:SLB	ducorpsinkakadu
+elaintaky:SLE	länsiafrikansimpanssi
+elaintaky:SOM	beira
+elaintaky:SWE	hirvenvasa
+elaintaky:SYR	kaljuiibis
+elaintaky:TCD	sapelisarvioryksi
+elaintaky:THA	kimalaislepakko
+elaintaky:TLS	timorinpeippo
+elaintaky:TUN	dorkasgaselli
+elaintaky:TUR	angoravuohi
+elaintaky:TWN	formosanmustakarhu
+elaintaky:TZA	norsunvasa
+elaintaky:UGA	gorillanpoikanen
+elaintaky:UKR	hamsteri
+elaintaky:URY	kapybara
+elaintaky:USA	biisoninvasa
+elaintaky:UZB	bukharanhirvi
+elaintaky:VEN	jättimuurahaiskarhu
+elaintaky:VNM	saola
+elaintaky:VUT	kookoskrapu
+elaintaky:YEM	jemeninkameleontti
+elaintaky:ZAF	afrikanpingviini
+elaintaky:ZWE	musta sarvikuono
+hetki:afsluitdijkin-viimeinen-aukko-1932	Vlieter 1932
+hetki:arkadin-luostarin-rajahdys-1866	Arkadi 1866
+hetki:beethoven-yhdeksas-1824	Yhdeksäs 1824
+hetki:belgradin-piiritys-1456	Piiritys 1456
+hetki:berezinan-ylitys-1812	Berezina 1812
+hetki:berliinin-muuri-1961	Muuri 1961
+hetki:bessarabian-liittyminen-1918	Chișinău 1918
+hetki:britannian-lippu-nikosiassa-1878	Nikosia 1878
+hetki:brooklyn-bridge-1883	Brooklyn 1883
+hetki:brunel-thames-tunnel-1827	Tunneli 1827
+hetki:christiansborgin-palo-1884	Linnanpalo 1884
+hetki:cook-endeavour-plymouth-1768	Endeavour 1768
+hetki:edison-lamppu-1879	Edison 1879
+hetki:eiffel-torni-1888	Torni 1888
+hetki:einstein-patenttitoimisto-1905	Bern 1905
+hetki:ensimmainen-juna-rovaniemi-1909	Ensijuna 1909
+hetki:faraday-luento-1831	Faraday 1831
+hetki:fleming-malja-1928	Fleming 1928
+hetki:franklin-leija-1752	Franklin 1752
+hetki:franz-ferdinandin-salamurha-1914	Latin-silta 1914
+hetki:galilei-kaukoputki-1610	Padova 1610
+hetki:gotthardin-lapimurto-1880	Läpimurto 1880
+hetki:gutenberg-paino-1454	Gutenberg 1454
+hetki:jenner-rokotus-1796	Jenner 1796
+hetki:kolumbus-palos-1492	Palos 1492
+hetki:kolumbus-portugali-1484	Lissabon 1484
+hetki:kolumbus-santa-fe-1492	Santa Fé 1492
+hetki:konstantinopoli-1453	Konstantinopoli
+hetki:krusevon-tasavalta-1903	Kruševo 1903
+hetki:lavoisier-laboratorio-1780	Lavoisier 1780
+hetki:lontoon-palo-1666	Palo 1666
+hetki:lumiere-elokuva-1895	Lumière 1895
+hetki:luther-wittenberg-1517	Luther 1517
+hetki:machu-picchu-1911	Machu Picchu 1911
+hetki:magalhaes-sanlucar-1519	Sanlúcar 1519
+hetki:marie-curie-hangaari-1898	Curie 1898
+hetki:mendelejev-kortit-1869	Mendelejev 1869
+hetki:michelangelo-sikstus-1510	Sikstus 1510
+hetki:mozart-wien-1786	Figaro 1786
+hetki:nansen-fram-1893	Fram 1893
+hetki:newton-prisma-1666	Newton 1666
+hetki:obodin-kirjapaino-1494	Obod 1494
+hetki:olympia-ateena-1896	Louis 1896
+hetki:pasteur-pullot-1862	Pasteur 1862
+hetki:pietari-perustus-1703	Jänissaari 1703
+hetki:pyhan-elmon-linnake-1565	Fort St Elmo 1565
+hetki:ranskan-vallankumous-bastilji-1789	Bastilji 1789
+hetki:roger-ii-cefalu-lupaus-1131	Cefalùn lupaus
+hetki:rontgen-kasi-1895	Würzburg 1895
+hetki:rosettan-kivi-1799	Rosetta 1799
+hetki:schliemann-troija-1873	Troija 1873
+hetki:shakespeare-globe-1599	Globe 1599
+hetki:sibelius-finlandia-1899	Suomi herää 1899
+hetki:siegfried-ostaa-bockin-963	Bockin kauppa 963
+hetki:suezin-kanava-avajaiset-1869	Suez 1869
+hetki:suuri-piiritys-paattyy-1565	Apu saapuu 1565
+hetki:titanic-southampton-1912	Titanic 1912
+hetki:trafalgar-victory-1805	Trafalgar 1805
+hetki:tutankhamon-carter-1922	Luxor 1922
+hetki:vasco-da-gama-restelo-1497	Restelo 1497
+hetki:vesuvius-pompeji-79	Pompeji 79
+hetki:viikinkilaiva-roskilde-1040	Roskilde 1040
+hetki:vloren-itsenaisyys-1912	Vlorë 1912
+hetki:wienin-porssikrahi-1873	Wienin krahi 1873
+hetki:wright-kitty-hawk-1903	Kitty Hawk 1903
+kohde:comaneci	Nadia Comăneci
+kohde:dolmabahce	Dolmabahçen palatsi
+kohde:moskeijat	Sofian moskeijat
+kohde:nakyva-kaupunki-bordeaux	Bordeaux
+kohde:nakyva-kaupunki-lille	Lille
+kohde:nakyva-kaupunki-lyon	Lyon
+kohde:nakyva-kaupunki-nantes	Nantes
+kohde:nakyva-kaupunki-nizza	Nizza
+kohde:nakyva-kaupunki-strasbourg	Strasbourg
+kohde:nakyva-kaupunki-toulouse	Toulouse
+kohde:pikkupollo	Pikkupöllö
+kohde:reunuskilpikonna	Reunuskilpikonna
+kohde:yaren	Eskikaraağaç
+nosto:dracula	Draculan alaviite
+nosto:kissat	Caesarin kissat
+nosto:maalehti-bouquinistit	Bouquinistes
+nosto:maalehti-braille	Braillen pisteet
+nosto:maalehti-camarguen-hevoset	Camarguen hevoset
+nosto:maalehti-chaine-des-puys	Chaîne des Puys
+nosto:maalehti-chandeleur	Chandeleur
+nosto:maalehti-cinematographe	Cinématographe
+nosto:maalehti-couesnonin-vuorovesi	Vuorovesi 2015
+nosto:maalehti-dune-du-pilat	Dune du Pilat
+nosto:maalehti-le-mans	Le Mans 24 h
+nosto:maalehti-marseillen-saippua	Marseillen saippua
+nosto:maalehti-michelin-opas	Michelinin opas
+nosto:maalehti-montgolfier	Montgolfier
+nosto:maalehti-pasteur-meister	Joseph Meister
+nosto:maalehti-peilisali	Peilisali
+nosto:maalehti-petanque	Pétanque
+nosto:maalehti-roland-garros	Roland Garros
+nosto:maalehti-roquefort	Roquefort
+nosto:maalehti-tour-de-france-1903	Tour 1903
+nosto:pyramidi	Pyramidihuijaus
+nosto:sofia-korut	Mykene
+skandaali:agadirin-kriisi	Panther Agadirissa
+skandaali:alberti-skandaali	Alberti
+skandaali:aline-sitoe-diatta	Kabrousse
+skandaali:alves-dos-reis-setelihuijaus	Alves dos Reis
+skandaali:anglon-lihauute	Anglo 1863
+skandaali:anna-goldin-tapaus	Anna Göldi
+skandaali:annualin-katastrofi	Annual
+skandaali:aralin-kalasatama	Aralin satama
+skandaali:azraqin-kosteikko	Azraqin keidas
+skandaali:bagdadin-patteri	Bagdadin patteri
+skandaali:baixa-do-cassange-1961	Cassange 1961
+skandaali:baktrian-kulta	Baktrian kulta
+skandaali:balangigan-kellot	Balangiga
+skandaali:baldomera-larra-pyramidi	Baldomera
+skandaali:banaanilakko-1928	Ciénaga 1928
+skandaali:banaanisopimus-1904	Banaanisopimus
+skandaali:banca-romana-1893	Banca Romana
+skandaali:barbora-salainen-avioliitto	Salattu avioliitto
+skandaali:bardon-sopimus	Bardon sopimus
+skandaali:baringsin-romahdus	Barings
+skandaali:baskivainot-1615	Baskivainot 1615
+skandaali:batavian-haaksirikko	Batavia 1629
+skandaali:battenbergin-ruhtinaskaappaus	Ruhtinaskaappaus
+skandaali:belokas-maratonhuijaus-1896	Maratonhuijaus
+skandaali:beninin-retkikunta	Benin 1897
+skandaali:berberan-sopimukset	Berbera 1884
+skandaali:beringerin-valhekivet	Valhekivet
+skandaali:boheemikirjan-takavarikko	Boheemikirja
+skandaali:boratynka-kuparikohu	Boratynka
+skandaali:bosnian-kriisi-1908	Liittämiskriisi
+skandaali:bre-x	Bre-X 1997
+skandaali:bre-x-busang	Bre-X 1997
+skandaali:brumadinhon-pato	Brumadinho 2019
+skandaali:bukhara-1842	Bukhara 1842
+skandaali:cagliostro-san-leo	Cagliostro
+skandaali:cakobaun-lasku	Cakobaun lasku
+skandaali:cananea-1906	Cananea 1906
+skandaali:caprivin-kaistale	Caprivi 1890
+skandaali:caravaggion-karkotus-1608	Caravaggion pako
+skandaali:carrianin-romahdus	Carrian
+skandaali:casementin-raportti-1904	Casement 1904
+skandaali:cerro-de-los-santos-vaarennokset	Iberipatsaat
+skandaali:cesnolan-kokoelma	Cesnola
+skandaali:chinchan-saaret	Chincha 1864
+skandaali:christyn-raportti	Christyn raportti
+skandaali:cochabamban-vesisota	Vesisota 2000
+skandaali:colonia-dignidad	Colonia Dignidad
+skandaali:coolidgen-uppoaminen	Coolidge 1942
+skandaali:credit-mobilier	Crédit Mobilier
+skandaali:darienin-hanke	Darien 1698
+skandaali:de-raysin-uusi-ranska	Uusi Ranska 1880
+skandaali:deadwoodin-leiri	Deadwood
+skandaali:delagoan-rata	Delagoa 1889
+skandaali:denderan-horoskooppi	Denderan katto
+skandaali:dhammazedin-kello	Dhammazedin kello
+skandaali:dohan-ryosto	Dohan ryöstö
+skandaali:duala-manga-bell-1914	Manga Bell 1914
+skandaali:dubai-world	Dubai World
+skandaali:dura-europoksen-juoksuhauta	Dura-Europos
+skandaali:elginin-marmorit	Elginin marmorit
+skandaali:elizan-musketit	Elizan musketit
+skandaali:elmyr-de-hory-vaarentaja	Elmyr de Hory
+skandaali:erromangon-santelipuu	Erromango
+skandaali:etela-afrikan-tahti	Hopetown 1869
+skandaali:etelameren-kupla	Etelämeren kupla
+skandaali:farinet-alppien-vaararahanpainaja	Farinet
+skandaali:fashoda-1898	Fashoda 1898
+skandaali:firestonen-sopimus	Harbel
+skandaali:fojnican-vaakunakirja	Vaakunakirja
+skandaali:gandamak-1842	Gandamak 1842
+skandaali:gazan-keisari	Gaza 1895
+skandaali:gerboise-bleue-1960	Gerboise Bleue
+skandaali:gjest-baardsen-mestarivaras	Gjest Baardsen
+skandaali:glenrowanin-piiritys	Glenrowan 1880
+skandaali:godberin-pako	Godber
+skandaali:golden-key	Golden Key
+skandaali:graf-spee-1939	Graf Spee 1939
+skandaali:hanoin-rottapalkkiot	Rottapalkkiot
+skandaali:happy-valley	Happy Valley
+skandaali:harappan-tiilet	Harappan tiilet
+skandaali:helmisukelluksen-loppu	Helmien loppu
+skandaali:hitlerin-paivakirjat	Väärät päiväkirjat
+skandaali:hoi-anin-hylky	Hội Anin hylky
+skandaali:humaitan-piiritys	Humaitá 1868
+skandaali:huudon-varkaus	Huudon varkaus
+skandaali:iivanan-kadonnut-kirjasto	Kadonnut kirjasto
+skandaali:illigin-sopimus	Illig 1905
+skandaali:ita-qingin-haudat	Qing-haudat 1928
+skandaali:jaja-opobo	Jaja
+skandaali:kabakan-karkotus	Kabakan karkotus
+skandaali:kadonneet-kreivikunnat	Kadonneet maat
+skandaali:kanavakonsessio	Kanava 2013
+skandaali:kansallisteatterin-vihellyskohu	Vihellyskonsertti
+skandaali:kariban-allas	Kariba 1958
+skandaali:karpasviuhka-1827	Kärpäsviuhka
+skandaali:karun-aarre	Karun-aarre
+skandaali:kasikci-elmasi-legenda	Kaşıkçı-timantti
+skandaali:kaulanauhajuttu-1785	Kaulanauhajuttu
+skandaali:kelley-alkemistihuijari	Edward Kelley
+skandaali:khartumin-piiritys	Khartum 1885
+skandaali:khumjungin-paanahka	Jetin päänahka
+skandaali:kieltolaki-ja-pirtukuningas	Pirtukuningas
+skandaali:kiinapuun-kuori	Kiinapuu 1860
+skandaali:klimtin-tiedekuntamaalaukset	Klimtin maalaukset
+skandaali:kohinoor-1849	Kohinoor 1849
+skandaali:koidun-kaivossopimus	Koidu
+skandaali:koirapaivien-kuningas	Koirapäiväkuningas
+skandaali:kokaiinivallankaappaus-1980	Kokaiinikaappaus
+skandaali:kopenickin-kapteeni	Valekapteeni
+skandaali:kreugerin-romahdus	Kreuger
+skandaali:kuannersuit	Kuannersuit
+skandaali:kultainen-kirje	Kultainen kirje
+skandaali:kultajakkaran-sota	Kultajakkara
+skandaali:kultakanan-ryosto-1875	Kultakana
+skandaali:kuninkaanhovin-kasikirjoitukset	Dvůr Králové
+skandaali:kypros-myydaan	Rikhard
+skandaali:lago-agrio	Lago Agrio 1993
+skandaali:lanyun-ydinjate	Lanyu
+skandaali:lasnamaen-valkea-laiva	Valkea laiva
+skandaali:lat-dior-ja-rautatie	Dékheulé
+skandaali:lava-jato	Lava Jato
+skandaali:lifaun-pako	Lifaun pako
+skandaali:lituanican-viimeinen-lento	Lituanica
+skandaali:lombokon-linnake	Lomboko
+skandaali:longwoodin-vanki	Longwood House
+skandaali:maapahkinahanke	Maapähkinät
+skandaali:magdalan-ryosto	Magdala
+skandaali:maji-maji	Maji Maji
+skandaali:malaitan-verenvuodatus	Kwaio 1927
+skandaali:manufahin-kapina	Manufahi
+skandaali:mapungubwen-sarvikuono	Mapungubwe 1933
+skandaali:marie-adelaiden-luopuminen-1919	Luopuminen 1919
+skandaali:matalen-kapina	Matalen kapina
+skandaali:max-havelaar	Max Havelaar
+skandaali:maximilianin-keisarikunta	Querétaro 1867
+skandaali:merirosvorannikko	Merirosvorannikko
+skandaali:meshan-steela	Meshan steela
+skandaali:minamatan-tauti	Minamata
+skandaali:modiglianin-paat-1984	Modiglianin päät
+skandaali:mokan-kahvipensaat	Mokka
+skandaali:mona-lisan-varkaus-1911	Mona Lisan varkaus
+skandaali:naamiaisten-laukaus	Naamiaislaukaus
+skandaali:namamugi	Namamugi
+skandaali:nankingin-sopimus	Nanking 1842
+skandaali:napoleonin-kirkkohopean-ryosto-1798	Kirkkohopea 1798
+skandaali:natwarlal	Natwarlal
+skandaali:naundorff-delftin-valekuningas	Naundorff
+skandaali:nevinsonin-orjatie	Orjatie 1905
+skandaali:nosy-been-sokeri	Nosy Be 1849
+skandaali:nueva-cadiz	Nueva Cádiz
+skandaali:nueva-germania	Nueva Germania
+skandaali:nurmen-amatoorikohu	Nurmen kohu
+skandaali:nyosjarvi-1986	Nyos 1986
+skandaali:oegyujanggak	Oegyujanggak
+skandaali:oera-linda-kasikirjoitus	Oera Linda
+skandaali:office-du-niger	Office du Niger
+skandaali:ok-tedin-jate	Ok Tedi
+skandaali:ongiin-luostari	Ongi
+skandaali:oryksin-suojelualue	Oryksin alue
+skandaali:osmanien-vararikko-1875	Vararikko 1875
+skandaali:ouzel-galleyn-mysteeri	Ouzel Galley
+skandaali:pacific-skandaali	Pacific 1873
+skandaali:pacta-conventa-vaarennosepaily	Pacta conventa
+skandaali:palmstruchin-setelipankki	Setelipankki
+skandaali:pan-electric	Pan-Electric
+skandaali:parihakan-valtaus	Parihaka 1881
+skandaali:parnellin-lankeemus	Parnell
+skandaali:perimin-majakka	Perim
+skandaali:phaulkonin-nousu	Phaulkon
+skandaali:pigottin-vaarennetyt-kirjeet	Pigottin kirjeet
+skandaali:piltdownin-ihminen	Piltdownin ihminen
+skandaali:pirtukauppa-suomenlahdella	Pirtulaivat
+skandaali:port-hamilton	Port Hamilton
+skandaali:portugalilaisen-nunnan-kirjeet	Nunnan kirjeet
+skandaali:potemkinin-kulissikylat	Kulissikylät
+skandaali:poyaisin-huijaus	Poyais
+skandaali:priebke-bariloche	Bariloche 1994
+skandaali:prinsessa-tarakanova	Tarakanova
+skandaali:prokoszin-kronikka	Prokoszin kronikka
+skandaali:pyhan-kruunun-varkaus-1440	Kruunuvarkaus 1440
+skandaali:rabihin-kallo	Rabih
+skandaali:radio-luxembourg-1933	Radio Luxembourg
+skandaali:rainbow-warriorin-upotus	Rainbow Warrior
+skandaali:rassam-vastaan-budge	Rassamin juttu
+skandaali:riian-kalenterikahakat	Kalenterikahakat
+skandaali:rijecka-krpica-1868	Rijekan lappu
+skandaali:rosario-1978	Rosario 1978
+skandaali:rover-haaksirikko	Rover
+skandaali:ruddin-myonnytys	Rudd 1888
+skandaali:rummu-jyri-mestarikarkuri	Rummu Jüri
+skandaali:sacromonten-lyijykirjat	Lyijykirjat
+skandaali:saharan-meri	Saharan meri
+skandaali:saitafernesin-tiaara	Tiaarahuijaus
+skandaali:salagan-orjatori	Salaga
+skandaali:salieran-varkaus	Saliera
+skandaali:san-blasin-kapina	San Blas 1925
+skandaali:san-josen-galleoni	San Josén aarre
+skandaali:santa-maria-1902	Santa María 1902
+skandaali:santiagon-taistelu-1962	Santiago 1962
+skandaali:savon-yotaistelu	Savo 1942
+skandaali:seitseman-veljesta-kirjasota	Kirjasota
+skandaali:semipalatinskin-koealue	Polygon
+skandaali:seuso-aarteen-kiista	Seuson hopeat
+skandaali:shakkiturkkilainen	Shakkiturkkilainen
+skandaali:shinkolobwe	Shinkolobwe
+skandaali:siivettoman-ruokin-loppu	Eldey 1844
+skandaali:sikojenlahti	Playa Girón 1961
+skandaali:simonides-kasikirjoitusvaarentaja	Simonides
+skandaali:sininen-timantti	Sininen timantti
+skandaali:soluch-1931	Soluch 1931
+skandaali:sonja-kultakasi	Sonja Kultakäsi
+skandaali:souk-al-manakh	Souk Al-Manakh
+skandaali:strousbergin-rautatieskandaali	Strousberg
+skandaali:struensee-kuninkaan-laakari	Struensee
+skandaali:suezin-osakekauppa	Suezin osakkeet
+skandaali:susan-kaivausmonopoli	Susan monopoli
+skandaali:szczerbiec-odysseia	Szczerbiec
+skandaali:tamataven-sopimus	Tamatave 1885
+skandaali:tanskan-valtionvararikko-1813	Vararikko 1813
+skandaali:tarbosaurus-huutokauppa	Tarbosaurus
+skandaali:tayman-kivi	Tayman kivi
+skandaali:teapot-dome	Teapot Dome 1922
+skandaali:telgin-leimapaperit	Telgin leimat
+skandaali:tell-halafin-veistokset	Tell Halaf
+skandaali:thiess-ihmissusi	Jumalan koira
+skandaali:timbuktun-kasikirjoitukset	Ahmed Baba
+skandaali:tobruk-1911	Tobruk 1911
+skandaali:toumain-reisiluu	Toumaï
+skandaali:tsavon-ihmissyojat	Tsavo
+skandaali:tupakkakapina	Tupakkakapina
+skandaali:tycho-brahen-kuolinmysteeri	Tychon mysteeri
+skandaali:ubarin-loyto	Ubarin löytö
+skandaali:uss-maine	Maine 1898
+skandaali:vaaleanpunainen-kartta-1890	Ultimaatum 1890
+skandaali:van-meegerenin-vermeerit	Van Meegeren
+skandaali:veda-slovena	Veda Slovena
+skandaali:vedenpaisumuksen-todistaja	Homo diluvii
+skandaali:velesin-kirja	Velesin kirja
+skandaali:venezuelan-saarto	Saarto 1902
+skandaali:vihrea-maa	Vihreä maa 985
+skandaali:vozrozdenija	Vozroždenije
+skandaali:vrain-lucas-kirjevaarennokset	Vrain-Lucas
+skandaali:wadi-halfa	Wadi Halfa
+skandaali:walbrzychin-kultajuna	Kultajuna
+skandaali:wallinin-valeasu	Wallinin valeasu
+skandaali:waterbergin-kasky	Waterberg 1904
+skandaali:william-walker	Walker 1856
+skandaali:wuchalen-artikla	Wuchale
+skandaali:yale-kiista	Yale-kiista
+skandaali:yamashitan-kulta	Yamashitan kulta
+skandaali:yrjo-v-metsastysretki	Yrjö V:n jahti
+skandaali:zrinski-frankopan-salaliitto	Zrinski-Frankopan
+skandaali:zubarahin-havitys	Zubarahin loppu
+skandaali:zubayrin-zaribat	Zubayr 1873
+syvennys:amsterdam-haikarat	Harmaahaikarat
+syvennys:amsterdam-timantit	Timanttihiomo
+syvennys:amsterdam-voc-hylky	Amsterdam-laiva
+syvennys:ateena-diogenes	Diogeneen astia
+syvennys:ateena-nike	Niken temppeli
+syvennys:ateena-schliemann	Iliou Melathron
+syvennys:barcelona-filloksera	Sant Sadurní
+syvennys:barcelona-kilpailu	Roviran aukio
+syvennys:barcelona-rambla	Font de Canaletes
+syvennys:bergen-myskiharka	Dovrefjell
+syvennys:bergen-sauvakirkko	Borgundin kirkko
+syvennys:bergen-vuono	Geirangervuono
+syvennys:berliini-karhu	Berliinin karhu
+syvennys:berliini-kultaliisa	Kulta-Liisa
+syvennys:berliini-viemarit	Hobrechtin putket
+syvennys:budapest-aquincum	Aquincum
+syvennys:budapest-kisfoldalatti	Maanalainen
+syvennys:budapest-luolat	Budan luolat
+syvennys:bukarest-coltea	Colțean torni
+syvennys:bukarest-karhut	Karhusanktuaari
+syvennys:bukarest-szathmari	Szathmárin studio
+syvennys:dublin-kellsinkirja	Kellsin kirja
+syvennys:dublin-leijona	Dublinin leijona
+syvennys:dublin-vuokrakirja	St James’s Gate
+syvennys:dubrovnik-lokrum	Lokrum
+syvennys:dubrovnik-sponza	Sponzan palatsi
+syvennys:dubrovnik-tornit	Muurin tornit
+syvennys:edinburgh-arkut	Pikkuarkut
+syvennys:edinburgh-bobby	Greyfriars Bobby
+syvennys:edinburgh-scott-monumentti	Scott-monumentti
+syvennys:firenze-paakaupunki	Poggin terassi
+syvennys:firenze-porcellino	Porcellino
+syvennys:firenze-toscanelli	Duomon gnomoni
+syvennys:granada-alcaiceria	Alcaicería
+syvennys:granada-irving	Irvingin huoneet
+syvennys:granada-kupoli	Leijonain piha
+syvennys:helsinki-finlandia	Finlandia
+syvennys:helsinki-kantele	Kantele
+syvennys:helsinki-sauna	Löyly ja avanto
+syvennys:istanbul-camondo	Camondon portaat
+syvennys:istanbul-kaarmepylvas	Käärmepylväs
+syvennys:istanbul-kissat	Istanbulin kissat
+syvennys:kiova-mehilaiset	Prokopovytš
+syvennys:kiova-mustamulta	Mustamulta
+syvennys:kiova-tsumakit	Kontraktova
+syvennys:kobenhavn-jelling	Jellingin kivet
+syvennys:kobenhavn-lego	Legon syntysija
+syvennys:kobenhavn-tivoli	Tivolin portti
+syvennys:krakova-hejnal	Mariankirkon torni
+syvennys:krakova-sukiennice	Sukiennice
+syvennys:krakova-wawel	Wawel
+syvennys:lissabon-calcada	Calçada
+syvennys:lissabon-kirjasto	Ajudan palatsi
+syvennys:lissabon-severa	Largo da Severa
+syvennys:lontoo-cheapside	Cheapsiden kätkö
+syvennys:lontoo-hirvet	Richmond Park
+syvennys:lontoo-vuorovesi	Thamesin vuorovesi
+syvennys:madrid-casadefieras	Casa de Fieras
+syvennys:madrid-felipe	Filipin patsas
+syvennys:madrid-tasavalta	Tasavallan vuosi
+syvennys:marseille-cosquer	Cosquerin luola
+syvennys:marseille-exvotot	La Bonne Mère
+syvennys:marseille-roquefavour	Roquefavour
+syvennys:moskova-elaintarha	Eläintarha 1864
+syvennys:moskova-karavaanitee	Perlovin teetalo
+syvennys:moskova-nayttely1872	Näyttely 1872
+syvennys:odessa-kuyalnyk	Kuyalnyk
+syvennys:odessa-ooppera	Odessan ooppera
+syvennys:odessa-portaat	Potjomkin-portaat
+syvennys:oslo-lohi	Sykkylvsfjorden
+syvennys:oslo-sadut	St. Hanshaugen
+syvennys:oslo-unionilippu	Akershus
+syvennys:pariisi-impressionistit	Impressionistit
+syvennys:pariisi-kyyhkyposti	Kyyhkyposti
+syvennys:pariisi-tuileriat	Tuileries
+syvennys:pietari-faberge	Fabergé-museo
+syvennys:pietari-pulkova	Pulkova
+syvennys:pietari-ukkoskivi	Ukkoskivi
+syvennys:praha-klementinum	Klementinum
+syvennys:praha-przewalski	Prahan hevoset
+syvennys:praha-tycho	Tycho Brahe
+syvennys:riika-balsami	Musta balsami
+syvennys:riika-jugend	Alberta iela
+syvennys:riika-laulujuhlat	Laulujuhlat 1873
+syvennys:rooma-avaimenreika	Avaimenreikä
+syvennys:rooma-kissat	Torre Argentina
+syvennys:rooma-vatikaani	Vatikaanin palatsi
+syvennys:sarajevo-haggada	Haggada
+syvennys:sarajevo-inat-kuca	Inat kuća
+syvennys:sarajevo-villihevoset	Livnon lauma
+syvennys:sevilla-donana	Doñana
+syvennys:sevilla-feria	Feria
+syvennys:sevilla-victoria	Victorian laituri
+syvennys:sofia-areena	Serdican areena
+syvennys:sofia-elaintarha	Sofian eläintarha
+syvennys:sofia-levski	Levski
+syvennys:sofia-pollopatsas	Sofia-patsas
+syvennys:tallinna-e-valtio	E-valtio
+syvennys:tallinna-kaksi-kaupunkia	Lyhyen jalan torni
+syvennys:tallinna-kama	Kama
+syvennys:tampere-finlayson	Finlayson
+syvennys:tampere-kaarme	Tuomiokirkko
+syvennys:tampere-koski	Tammerkoski
+syvennys:tukholma-aurinkotaulu	Vädersolstavlan
+syvennys:tukholma-hopeakatko	Spillingsin kätkö
+syvennys:tukholma-lohi	Norrström
+syvennys:varsova-canaletto	Canaletton sali
+syvennys:varsova-raideleveys	Wienin asema
+syvennys:varsova-tur	Jaktorów
+syvennys:venetsia-aldus	Aldon paino
+syvennys:venetsia-hevoset	Markuksen hevoset
+syvennys:venetsia-plebiskiitti	Dogen palatsi
+syvennys:vilna-barokki	Pietari ja Paavali
+syvennys:vilna-knygnesiai	Kirjankantajat
+syvennys:vilna-meripihka	Palangan museo
+syvennys:wien-kauriit	Keskushautausmaa
+syvennys:wien-sahko	Konehalli
+syvennys:wien-vesijohto	Vuoristovesijohto
