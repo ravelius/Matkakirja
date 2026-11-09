@@ -35,3 +35,4 @@ Unity-työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu (remote natiivi-b
 
 ## LISÄYS 15.4x
 - JU hylkäsi pulu-v2-vienti-20261109 (Lisenssi-rivi puuttui; kansio lukossa) → **/Users/Shared/Claude/proto-3d/_valmiit/pulu-v2-2-vienti-20261109** (vie-paketti.sh --kuiva ok, 44 uutta). JU vie sen ja ajaa sitten 8c5328689 iphone. Vahvistettu JU:lle: korjaukset vain 108 uuteen kohtaan, v1:n 1584 kohtaa ennallaan.
+- 15.4x JU: v2-2 VIETY 15.37 (pulu/vastaukset/v2/, 44, julkinen maat.json 200). Ajo EH (8c5328689 iphone sk-pulu-v2) jonossa EC:n (1d-alkuvarjo1 d58806806) perään.
