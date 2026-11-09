@@ -1,9 +1,12 @@
 # Karttaseppä: luovutus 9.11.2026 klo 16.43 (KS)
 Syy: konteksti yli 25 % (hook), pehmeä raja. Korvaa -1408:n; sen sisältö alla ennallaan paitsi kohdat, jotka tämä ENSIN-osa päivittää.
 Kaikki tämän osan tiedostot: `T=/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/nostot-korostetut-20261109/`.
+## OMISTAJAN PÄÄTÖS 16.46 (KK:n kortti, PT:n välittämä) — JÄRJESTYS: kuvatekstit (16.26, kohta 3) → TietoNapautus-korjaus (alla) → Lontoo 14
+1. **Lontoon 14 kylttiä:** Westminster Abbey, Westminsterin palatsi, Westminster Bridge, Cutty Sark, Lontoon Tower, British Museum, Natural History Museum, Victoria Memorial, Royal Albert Hall, Albert Memorial, Kensingtonin palatsi, Royal Observatory, Old Royal Naval College, Queen's House → nähtävyysteksti 2–3 kpl (isoisän "kadonnut maailma" -sävy), ~2 Pulun kysymystä kullekin (PK:n putki), kuvat Commonsista (`node tools/oppaan-kuvat.mjs taulu`/`tiedosto`), Codexin havainnekuva vain jos kuvaa ei löydy. **Sama kaava kuin Pariisin 4 (#6517):** maakartat.js lontoo.kohteet + kohdesijainnit.mjs lontoo + nahtavyysjutut.js + natiivi kuvapisteet/sijainnit + QID:t kylteille (LontooKyltit). **Tekstit PT:lle ENNEN PR:ää.**
+2. **Pariisin 94 muuta nimeä:** lyhyet esittelyt Lontoon jälkeen; ensin tarkka määrä ja 2–3 mallitekstiä PT:lle → KK. **EI kirjoitusta ennen sitä.**
+
 ## LISÄYS 16.4x (PT, inventaario kuitattu)
 - **Samassa vuorossa kuvatekstien (kohta 3) jälkeen:** NostotKartalla.TietoNapautus (~2236) nimihaara: ensin Kohdenostot.Kohde kuten kylteillä, sitten vasta Tietokortit; + QID-aliakset 7 valmiille Pariisin nimelle (`$T/INVENTAARIO-PARIISI-KLIKATTAVAT.md`, tarkista otoksella); + Lontoon kylteille QID-taulu (OhjelmaKohteet.LontooKyltit, nyt QID null paitsi St Paul's) ja St Paul's Q399961 (kohdekartta) vs Q173882 (oppaan-kuvat) tarkistus Wikidatasta. Testit valmiina, laiteajo JU:n vuorolla. Natiivihaara junan kärjen päälle.
-- **Lontoon 14 tekstiä KK:lla omistajan päätöksessä: ÄLÄ kirjoita ennen sitä.**
 
 ## ENSIN (uudet 14.10–16.3x)
 1. **PARIISIN 4 MALLINOSTOA (omistaja 16.17; OMISTAJAN PÄÄTÖS 16.23 KK-kortti "Kyllä ja hae lisäksi myös kuvia…, havainnekuvia ei tarvita").** Invalidit, Sainte-Chapelle, Grand Palais, Tour Montparnasse: 3D-mallin kyltti (MalliKyltit ← Nahtavyysalue.Alueet) avasi striimatun Tietokortit-kortin, koska kohdekartalla ei ollut samaa QID:tä (Kohdenostot.Kohde, NostotKartalla.TietoNapautus). Inventaario `$T/INVENTAARIO.md`.
