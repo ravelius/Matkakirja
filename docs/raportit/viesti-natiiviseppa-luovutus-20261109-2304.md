@@ -35,3 +35,8 @@ ILMAN -I:tä; UUSI-rivit → PT "UNITY UUSI: …").
 
 ## SIVUHAVAINTO (ei NS:n)
 - Revontulet.PaivitaNakyvyys:207 MissingReference (Renderer tuhottu) astronauttilinssin sulkemisessa (iso-1-ajo) → linssipuolen tekijälle (VS/LS), ei raportoitu vielä erikseen.
+
+## LISÄYS 23.1x: OSA 4 MITTAUS TULI (JU, julkaisija-tyokalut/koodikoko-tulokset.txt)
+fw / ladattava / asennettu (Mt): perus 249/643/1373; Low 242/641/1358; Medium 226/635/1346; Medium+KOODIKOKO 155/618/1276
+(−94 fw, −25 lataus, −97 asennettu). Vain Medium+KOODIKOKO selvä → SEURAAVAKSI: JU:n seuraajalta käynnistys- ja nopeusajo sille
+(app lokit/julkaisija-koodikoko-7a8f024ed-Medium-koko; testit + käynnistysaika + karsinnan puuttuvat tyypit lokista), sitten PT:lle rivi.
