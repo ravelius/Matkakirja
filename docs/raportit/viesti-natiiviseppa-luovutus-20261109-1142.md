@@ -20,5 +20,10 @@ Cron "4 9 * * *" unity-julkaisut.py: LUO UUDELLEEN (prompt: git show 9d77cf4dd:d
 ## 2. ODOTTAA: FPV-LATAUSKUVA PUHELIMELLE (ennallaan, ks. edellinen luovutus kohta 2)
 - Codexin kuvia ei vielä postilaatikossa (origin/claude/postilaatikko: vain tilaus posti/paatoimittaja-codex-kuvat-drone-vastavalo-puhelinmuodot-20261109.md).
 
+## LISÄYS 11.5x: PT KUITTASI
+PT: "ennakko aikaisemmaksi … yhdellä Mac-ajolla, seuraaja tekee; tavoite: paluulento terävä koko matkan (ei sumeaa vaihetta)".
+(PT:n viestissä luki "(0,3/0,7 s)" = nykyarvo; ehdotus oli 0,6/1,2 s.) Tee: AjoEnnakko.Ennakot matkalennolle 0,6/1,2 s →
+tarkistus → JU Mac-ajo iphone sk-matkalento-paluu-2 + kuva t ~2 s (ja NUI:n polku, jos yhdistetty) → katso täysikokoisena → PT + NUI.
+
 ## JONO
-1. PT:n vastaus ennakon aikaistukseen (yllä 1, AVOIN). 2. FPV-puhelinkuvat.
+1. Ennakon aikaistus (yllä LISÄYS). 2. FPV-puhelinkuvat.
