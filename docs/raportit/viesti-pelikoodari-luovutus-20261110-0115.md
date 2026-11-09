@@ -41,6 +41,12 @@ Suunnitelma ja ehdot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leiv
   lisätty myös 1-puolen skenaarioihin. AVOIN: leivotun muistihuippu ~4,1 Gt, ei 2,7 Gt (TULOS-ipad-ab.md:n "huippu" luettiin 1a/1b:n vanhasta
   muisti-tarkka.logista?) → tarkista huippu kylma-/pari-ajojen muistivahti-riveistä ja korjaa TULOS-ipad-ab.md; rivi PT:lle (pienen iPadin marginaali).
 
+- 02.3x PT LISÄEHTO ennen junaa: leivotun muistihuippu SELITETTY ja kaikissa skenaarioissa selvästi alle 4080 Mt (iso iPad; pienen iPadin
+  raja 5100 Mt mitoituksena). Mitataan ccd8531d2:lla (= c378cd773 keisarikorjaus + vain VIKA-ohitus; PT sanoi c378cd773, sama koodi). Huippu:
+  konsolin "muistivahti"-rivit ja muisti-tarkka.log (tarkista tiedoston aika). Jos yli: selvitä mikä (Kartta/Pariisi muistissa juoksun aikana?
+  kartan muisti vapautettu -rivi; kuvat ASTC 519 Mt; verkkojen CPU-kopiot) ja korjaa. Tulos rivinä PT:lle ja KK:lle (local_d5f31591-…).
+  NS poimi ohituksen koodikoko-224:ään (e2c3be586).
+
 ## JONO
 1. KUVAPARI (ennen leivotun kuittausta): JU ajaa sk-ipad-pari-0/-1 cf4d34ee4:llä (jonossa "IK") → lokit/pelikoodari-pari-0 / -1, 4 kuvaa (a alku,
    b kujan pää, c tarkastelukamera kujalla, d sisäpiha). Kokoa parit (vasen 0, oikea 1, sama rajaus, täysikokoiset) PT:lle. Katso samalla
