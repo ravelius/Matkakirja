@@ -201,3 +201,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 15.2x: ED (NUI KIIRE orbit-napautus-1 d4ae2c4a3 iphone+ipad, sitten DX:n fpv-koe-2 ipad) etuajolla: DS (12130) + EB (83498) kill -STOP, etuajo-ed.zsh CONTaa kun orbit ipad ALKOI (tarkista!). DX iphone valmis 15.27, vaaka ajossa. DQ x3, DV, EA, film14 (3/3, huippu 3960 Mt) raportoitu. DW ajossa.
 - EE (jono-ee.zsh) NS huippunimet-3 1f89f4f0d ipad ED:n jälkeen → polku NS:lle.
 - 15.3x: ED → ED2 (pid 6979): orbit x2, sitten fpv-koe-2 d6fe26743 iphone + ipad (NUI; d2d4d3227 ipad peruttu, vaaka d2d4d3227 ajettu). etuajo-ed2.zsh (6981) CONTaa DS 12130 + EB 83498; EE → jono-ee2.zsh (6983) ED2:n jälkeen.
+- 15.30: DW valmis + NS:lle kerrottu → PT:n nollausehto täyttyi (DV, DO, DW raportoitu). Jonossa: ED2 (NUI kiire), DS + EB (STOP → CONT etuajo-ed2), DZ, EC, EE; DX vaaka d2d4d3227 ajossa (orpo mac-yleis 3285, kerää itse) → NUI.
