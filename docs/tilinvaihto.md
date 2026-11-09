@@ -125,7 +125,7 @@ Taulukon viimeinen sarake. Cronit ovat session-only (CronCreate): ne kuolevat se
 aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tunnin sisällä.
 
 ## 6. Sallinnat, Remote Control, hookit
-- `set_remote_control self true` vain KK:lle; muille ei (omistaja 6.11.2026 klo 16.08, Raamattu 7.9). Sovellus kytkee etäyhteyden itse nollatun session käynnistyessä (todettu 6.11.2026): aloitusviestien jälkeen PT lukee `list_sessions` ja kytkee sen pois roolilta (`set_remote_control <id> false`), KK:lle se jää.
+- `set_remote_control self true` KK:lle ja PT:lle (molemmat itse heti tilinvaihdon, nollauksen ja aloituksen ensimmäisenä askeleena; omistaja 6.11.2026 klo 21.32 ja 9.11.2026 klo 10.45 "laita myös päätoimittajan remote päälle", Raamattu 7.9); muille ei. Sovellus kytkee etäyhteyden itse nollatun session käynnistyessä (todettu 6.11.2026): aloitusviestien jälkeen PT lukee `list_sessions` ja kytkee sen pois roolilta (`set_remote_control <id> false`), KK:lle ja PT:lle se jää.
 - Sallinnat: projektin .claude/settings.json (gitissä) + PT:n .claude/settings.local.json. Gitissä oleva settings.local.json on vanha
   (vain aws/source/python3 -); Macin versiossa lisäksi Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*),
   mcp__ccd_session_mgmt__set_session_effort sekä PostToolUse- ja UserPromptSubmit-hookit pt-taulu-muistutus.py:lle. Älä checkouttaa
@@ -190,3 +190,4 @@ VIIMEINEN VAIHE (omistaja 15.10.2026 klo 14.39): PT luovuttaa ja nollautuu heti,
 | PT:n haara | checkout S/Matkakirja-fable haarassa claude/bold-ride-vow4ki (sovelluksen nimi); PT:n muutokset worktreissa S/wt/fable-<aihe> omina PR:inä; nimenvaihto vasta, kun sovellus luo PT:n uudelle tilille uuden haaran | – |
 | KK:n aloitusviesti | elävä F/keskustelukanava/aloitus.md (Tila-osio, peili tools/tyotavat/keskustelukanava-aloitus.md); pysyvä osa docs/aloitusviestit/keskustelukanava.md | – |
 | KK:n nollaus | vain omistajan kortin Kyllä-vastauksella; heti sen jälkeen set_remote_control self true ja Artifact open Asemataulu (omistaja 14.10. klo 20.48) | Postivahdin nollaus |
+| PT:n nollaus | Postivahti nollaa; uusi PT ensimmäisenä set_remote_control self true (omistaja 9.11.2026 klo 10.45), sitten Asemataulu | RC vain KK:lle |

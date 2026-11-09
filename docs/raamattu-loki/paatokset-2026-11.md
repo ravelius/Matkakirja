@@ -1015,3 +1015,15 @@ Omistaja 9.11.2026 klo 08.32 (KK:n välittämä, sanatarkasti): "Se aiempi versi
 ## TILINVAIHTO 9.11.2026 klo 09.5x (9.11.2026 klo 10.01)
 
 PT local_8d8ebf72: tili sami.reivinen@vvi.fi (org ddaee6a2, Ultra), viikko 0 %; raja 99 % (omistaja 09.58 kortti). Tämän tilin 10 roolisessiota tyhjennetty (clear, list_events 0) ja aloitettu; id:t osoitekirjaan; taulu R6VQFTUNq629zSzah719Uy (Asemataulu v19). Ohjeiden koe: kysymys 6 (yksittäinen kuva omistajalle) puuttui lukulistalta → 7.47 KAIKILLE + 4.48.
+
+## FPV-DRONEN ALOITUSKUVA (omistaja 9.11.2026 klo 10.16) (9.11.2026 klo 10.17)
+
+KK:n kortti 'Mihin uudet dronekuvat tulevat?' → 'Lennon aloituskuvaksi (Suositus)': Codexin musta vastavalodrone (postilaatikko 1e31a7f0e) Topografialinssin FPV-lennon latauskuvaksi, vaaka iPadille ja puhelimen vaakaan, pysty puhelimen pystyyn, ei rajausta; korvaa 8.11. jättiläisdronen kuvatilauksen (#2197–2199 hylätty 09.15). Ei junaan ennen omistajan kokeilua. PT antoi NS:lle; kuittaus Codexille fd5bbc8cc.
+
+## OPPI: LATAUSKUVAN RAJAUS KAIKILLA RUUDUILLA (PT 9.11.2026) (9.11.2026 klo 10.41)
+
+PT kuittasi FPV-latauskuvan a88e3648b, vaikka puhelimen pystyruudussa dronen potkurit leikkautuivat (2:3-kuva 9:19,5-ruudulla); KK huomasi 10.39. Periaate 2 rikkoutui: kuva tarkistettiin yleisvaikutelmana eikä toimittajan lupausta ('lentolaite potkureineen mahtuu') vasten jokaisella ruudulla. Jatkossa koko ruudun täyttävä kuva tarkistetaan iPadilla, puhelin pysty ja puhelin vaaka erikseen, ja kohteen reunat merkitään ok/vika. Codexilta tilattu puhelinmuodot (postilaatikko 85c59f2ee).
+
+## PT:N ETÄYHTEYS PÄÄLLE (omistaja 9.11.2026 klo 10.45) (9.11.2026 klo 10.46)
+
+Omistaja KK:lle: 'laita myös päätoimittajan remote päälle'; KK kytki PT:n RC:n 10.45. Raamattu 7.9 ja PT:n aloitusviesti vaativat jo PT:n RC:n (omistaja 6.11. 21.32), mutta docs/tilinvaihto.md kohta 6 sanoi 'vain KK:lle' ja PT:n luovutus 10.05 'RC vain KK' – faktavirhe korjattu tilinvaihto.md:hen (kohta 6 ja nollaustaulukko).
