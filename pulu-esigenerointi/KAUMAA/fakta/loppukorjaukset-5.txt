@@ -1,0 +1,33 @@
+### v1-181
+VANHA: Pulla ei tähän sovi, mutta leipä kyllä, ja sitä minä olen aina seurannut.
+UUSI: Pulla ei tähän sovi, mutta leipä kyllä, ja sitä kyyhky aina kelpuuttaa.
+SYY: "sitä olen seurannut" ei ole järkevä
+### v1-183
+VANHA: Ylhäältä katsottuna se on lähes yhtä kullattu kuin minä haluaisin olla.
+UUSI: Ylhäältä katsottuna kullattu patsas kimaltaa kauas.
+SYY: epälooginen vertaus
+### v1-185
+VANHA: Näin ainakin kartta sanoo, ja sitä minä pidän luotettavana.
+UUSI: Ylhäältä katsottuna rajoja ei näy, mutta nimet kyllä muistaa.
+SYY: epäselvä viittaus karttaan
+### v1-188
+VANHA: Hurja ketju ihmisten arjessa, ja minä katselin sitä katolta.
+UUSI: Hurja muutos ihmisten arjessa.
+SYY: kyyhky ei voinut katsella 1700-luvulla
+### v1-195
+VANHA: Täältä on hyvä näkymä kaupungin yli.
+UUSI: Sieltä on hyvä näkymä kaupungin yli.
+SYY: väärä paikan taivutus
+### v1-204
+VANHA: Siinä [[kauppalaivasto]] kasvoi, ja kyyhky vain lensi.
+UUSI: Niin [[kauppalaivasto]] kasvoi, ja kyyhky vain katseli laivoja.
+SYY: epäselvä loppulause
+### v1-217
+VANHA: maa.\n\nFritulen pitäisi olla lämpimiä. Minä en edes osaa sanoa, montako mahtuu kyyhkyn nokkaan.
+UUSI: maa. Lämpiminä ne ovat parhaita, ja kyyhky söisi mielellään monta.
+SYY: irrallinen ja merkityksetön loppu
+### v1-224
+VANHA: Toivottavasti kukaan ei lahjoita kirjekyyhkyn lintua.
+UUSI: Kyyhky pysyy mieluummin parinsa luona.
+SYY: merkityksetön loppulause
+LOPPU: tarkistettu 45 vastausta (v1-180…v1-224), korjauksia 8

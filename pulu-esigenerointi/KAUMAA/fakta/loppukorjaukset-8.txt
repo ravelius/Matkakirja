@@ -1,0 +1,21 @@
+### v1-320
+VANHA: Ylhäältä näkee vain katot, mutta ne naamiot minä olen tarkistanut.
+UUSI: Naamiot näkee parhaiten matalalta lentäen.
+SYY: ristiriitainen ja epäselvä loppulause
+
+### v1-342
+VANHA: Kaupunki on kestänyt, ja se on hyvä asia.
+UUSI: Kyyhky ei järistyksiä pelkää, taivaalla ei tärise.
+SYY: sisällötön loppulause
+
+### v1-352
+VANHA: Eikä kukaan edes yrittänyt ajaa minua pois tiskin viereltä.
+UUSI: Tiskien välissä kyyhky viihtyy, kun muruja putoaa.
+SYY: irrallinen, viittaa tapahtumaan jota ei ole
+
+### v1-354
+VANHA: Ei huono saavutus ihmiselle, joka ei lentänyt kertaakaan omin siivin.
+UUSI: Pitkä matka Skopjesta Intiaan, vaikka ilman siipiä.
+SYY: epäselvä ja kömpelö loppulause
+
+LOPPU: tarkistettu 45 vastausta (v1-315…v1-359), korjauksia 4

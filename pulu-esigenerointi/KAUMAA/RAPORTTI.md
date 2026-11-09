@@ -33,3 +33,9 @@ Omistajan kortti 13.51 "Kyllä (Suositus)": pelin kaupungit + maat × 5 kysymyst
 - tarkista-valmis: samat 5 tunnettua väärää osumaa (Perućica, Intian arkisto) kuin ennen, 42 varoitusta (maininnat).
 - Paketit koottu uudelleen (yhdista-kaumaa.mjs, pohja ämpärin maat.json ennallaan): vanhat kohdat tavulleen ennallaan, 108 uutta kohtaa.
   Kopio /Users/Shared/Claude/proto-3d/_valmiit/pulu-kaupungit-maat-vienti-20261109-2 (SHA256SUMS 44 tiedostoa). Uusi pistokoe 30 → PT.
+
+## Pistokoe 2 ja loppulauseet (9.11.2026)
+- PT:n pistokoe 2 (7/30, 1 vakava): 7 + 4 epäilyttävää korjattu (`fakta/korjaukset-pistokoe2.txt`; [[torshin]] → [[turšijan]], V2-linkki).
+- Loppulausekierros kaikille 540 kysymysvastaukselle (12 Sonnet-agenttia, `fakta/LOPPUOHJE.md`): 113 irrallista/merkityksetöntä
+  loppu- tai epävarmuuslausetta poistettu tai kirjoitettu järkeväksi; hylättyjä 0. tarkista-valmis ennallaan (5 tunnettua väärää osumaa).
+- Paketti /Users/Shared/Claude/proto-3d/_valmiit/pulu-kaupungit-maat-vienti-20261109-3 (SHA256SUMS, vanhat kohdat ennallaan) → JU vientiin (PT: ilman uutta pistokoetta).

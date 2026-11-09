@@ -1,0 +1,51 @@
+### v1-450
+VANHA: Ja tän kaiken minä kannoin päässäni.
+UUSI: Nimi vaihtui moneen kertaan, mutta kyyhky tunnisti kaupungin aina.
+SYY: merkityksetön loppulause
+
+### v1-451
+VANHA: Pitkä käytävä, mutta ei pidempi kuin minun lentoni Pariisiin.
+UUSI: Kyyhkynä en mahtuisi sisään, mutta ikkunasta olen kurkistanut.
+SYY: epälooginen, käytävää ei mainittu
+
+### v1-452
+VANHA: Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+UUSI: Minä tyytyisin kyllä leivänmuruihin.
+SYY: irrallinen, pullaa ei kysytty
+
+### v1-455
+VANHA:  Kyllä sen kestää kuulla.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-456
+VANHA: Pitkä lista, mutta minä muistin sen kauniisti.
+UUSI: Ylhäältä luostarit näyttävät rauhallisilta.
+SYY: merkityksetön loppulause
+
+### v1-467
+VANHA:  Oma leivonnaisensa täällä varmasti on, en vaan tiedä sen nimee.
+UUSI:
+SYY: irrallinen, leivonnaista ei kysytty
+
+### v1-468
+VANHA: Hyvin pitkä kiipeämisen arvoinen vastaus.
+UUSI: Tatrojen yli lentäminen on kyyhkyllekin haaste.
+SYY: merkityksetön loppulause
+
+### v1-481
+VANHA: legendaarinen, joten tällä kertaa en valita.
+UUSI: legendaarinen.
+SYY: epäselvä loppu
+
+### v1-482
+VANHA:  Hyvä, että kyyhky muistaa mausteet.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-484
+VANHA:  Kyyhky ei halunnut matkustaa sinne silloin.
+UUSI:
+SYY: irrallinen, perusteeton loppulause
+
+LOPPU: tarkistettu 45 vastausta (v1-450…v1-494), korjauksia 10

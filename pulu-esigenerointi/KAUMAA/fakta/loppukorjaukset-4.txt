@@ -1,0 +1,26 @@
+### v1-139
+VANHA: Aamiainen piti sitä käynnissä, kuten isoisä kirjoitti.
+UUSI: Sikarin savu ei kyllä kyyhkyn keuhkoille sovi.
+SYY: merkityksetön, epäselvä loppulause
+
+### v1-149
+VANHA: Maistelen mielelläni, kunhan kukaan ei kysy mistä tiedän.
+UUSI: Maistelen mielelläni, jos joku jättää palan penkille.
+SYY: epäselvä loppulause
+
+### v1-153
+VANHA: Kätevä järjestelmä, sanoisin, vaikka pihalla ei meikäläinen tunnu niistä tarvitsevan lupaa.
+UUSI: Kätevä järjestelmä, sanoisin. Kyyhky lentää toki ilman lupaa.
+SYY: kieliopiltaan rikki ja epäselvä
+
+### v1-154
+VANHA: Hyvä muisti kyyhkyllä, ei muuta sanottavaa.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-173
+VANHA: Näin ainakin sukuni kertoo, ja tämä on vähän sellaista, mitä ei tarvitse lentää.
+UUSI: Näin ainakin sukuni kertoo.
+SYY: epäloogisen lauseen osa pois
+
+LOPPU: tarkistettu 45 vastausta (v1-135…v1-179), korjauksia 5

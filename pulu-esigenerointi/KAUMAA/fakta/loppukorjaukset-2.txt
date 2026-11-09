@@ -1,0 +1,100 @@
+### v1-46
+VANHA: sosialistisessa maassa, vaikka tämän tarkkuudesta en ole aivan varma.
+UUSI: sosialistisessa maassa.
+SYY: irrallinen epävarmuuslause
+
+### v1-48
+VANHA: Itäisen ja läntisen välisen rajan tallaa yhdellä askeleella.
+UUSI: Rajan yli pääsee yhdellä askeleella.
+SYY: kieliopiltaan rikki
+
+### v1-50
+VANHA: Tämänhetkisestä yksilömäärästä en ole varma, joten tarkka luku kannattaa tarkistaa erikseen. Metsä
+UUSI: Metsä
+SYY: epävarmuus asiasta, jota ei kysytty
+
+### v1-51
+VANHA: Pullaa en tästä maasta osaa nimetä, täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+UUSI: Kyyhkynä minä tyytyisin perunankuoriin.
+SYY: irrallinen ja merkityksetön loppulause
+
+### v1-52
+VANHA: Tarkat vuosiluvut ja rajat vaihtelivat vuosisatojen aikana, joten niitä en ala luetella. Perimätiedon
+UUSI: Perimätiedon
+SYY: turha epävarmuuslause
+
+### v1-54
+VANHA: Kyllä siinä sai kyyhkykin kaksi kieltä päähänsä mahtumaan.
+UUSI: Kaksi kieltä on kyyhkylle jo melkoinen määrä.
+SYY: epäselvä loppulause
+
+### v1-56
+VANHA: paljon. Siinä se.
+UUSI: paljon.
+SYY: merkityksetön loppulause
+
+### v1-57
+VANHA: Tämä on juuri sitä, mitä meikäläiset viestinviejät arvostavat: junat veivät kirjeet nopeammin kuin kyyhky. Mutta kyllä minä siitä silti puolustan.
+UUSI: Junat veivät kirjeet nopeammin kuin kyyhky, vaikka en sitä ihan mielelläni myönnä.
+SYY: kieliopiltaan rikki ja epäselvä
+
+### v1-58
+VANHA: Suuren kaupungin ilme on muuttunut paljon viimeisen sadan vuoden aikana, mutta yksityiskohdista en ole varma. Ylhäältä
+UUSI: Ylhäältä
+SYY: irrallinen epävarmuuslause
+
+### v1-63
+VANHA: Pullaan en löydä tähän yhtä selvää nimeä, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto
+UUSI: Juusto
+SYY: irrallinen pullalause
+
+### v1-65
+VANHA: Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.
+UUSI: Moni luulee Berniä pääkaupungiksi, minä mukaan lukien.
+SYY: epäselvä viittaus isoisään
+
+### v1-69
+VANHA: Pelkän katon katsominen ei tähän riitä, mutta sen verran minä ylhäältä näen.
+UUSI: Ylhäältä sen mäkiniemen muodon erottaa hyvin.
+SYY: epäselvä loppulause
+
+### v1-73
+VANHA: Onpas siit onneksi pitkä aika, ja silti jääkin on lähtenyt liikkeelle.
+UUSI: Jäätiköt ovat liikkeessä, ja se näkyy ylhäältäkin.
+SYY: epäloogista
+
+### v1-75
+VANHA: Tarkkoja lukuja en ole varma antamaan. Siellä
+UUSI: Siellä
+SYY: irrallinen epävarmuuslause
+
+### v1-76
+VANHA: Tarkkoja lajimääriä en ole varma antamaan, joten tiedot kannattaa tarkistaa erikseen. [[Troodos]]in
+UUSI: [[Troodos]]in
+SYY: epävarmuus asiasta, jota ei kysytty
+
+### v1-78
+VANHA: Leivonnaisista ei kyproslaisia nimiä tähän sopivasti heti tule mieleen, ja täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto
+UUSI: Juusto
+SYY: irrallinen pullalause
+
+### v1-79
+VANHA: Tarkkoja puhujamääriä en ole varma antamaan. Arkielämässä
+UUSI: Arkielämässä
+SYY: epävarmuus asiasta, jota ei kysytty
+### v1-79
+VANHA: No olipas siin pitkä lista.
+UUSI: Kaksi kieltä ja vähän englantia, sillä kyyhky pärjäisi.
+SYY: loppulause ei sovi lyhyeen listaan
+
+### v1-82
+VANHA: Vyöhyke on nähnyt jo monta vuosikymmentä, ja onneksi yhteyksiä on kehitetty.
+UUSI: Siivillä raja ei haittaa, mutta ihmisille se on todellinen.
+SYY: kieliopiltaan rikki
+
+### v1-87
+VANHA: Leivonnaisten puolella täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Ruokaperinteet vaihtelevat alueittain. Hyvä paikka haaveilla pullasta.
+UUSI: Ruokaperinteet vaihtelevat alueittain. Olut ja knedlíky kelpaisivat kyyhkyllekin.
+SYY: irrallinen pullalause
+
+LOPPU: tarkistettu 45 vastausta (v1-45…v1-89), korjauksia 20

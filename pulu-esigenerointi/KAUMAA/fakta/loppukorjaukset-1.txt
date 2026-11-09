@@ -1,0 +1,71 @@
+### v1-0
+VANHA: Ei paha kyyhkyltä.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-2
+VANHA: Minun pääni liikkuu muutenkin koko ajan, ja siitä ei kukaan ole koskaan ymmärtänyt mitään.
+UUSI: Kyyhky nyökkii kävellessäänkin, mutta se on vain kävelytapa.
+SYY: epälooginen loppulause
+
+### v1-3
+VANHA: Minä lennän sinne mieluummin ennen kuin pullataukoa tarjotaan.
+UUSI: Ylhäältä lahdet näyttävät turkoosilta helmiketjulta.
+SYY: merkityksetön loppulause
+
+### v1-7
+VANHA: Tämän minä lensin yhden illan aikana.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-9
+VANHA: Pitkä sankaritarina, ja minä kannoin sen yhdellä hengenvedolla.
+UUSI: Patsaan olkapäällä kyyhkyn on hyvä istua.
+SYY: merkityksetön loppulause
+
+### v1-14
+VANHA: Tämän kaiken minä muistin ilman muistiinpanoja.
+UUSI:
+SYY: turha loppulause
+
+### v1-20
+VANHA: Silti kaikki ymmärtävät pullan hajun.
+UUSI: Kyyhky tulee toimeen millä kielellä tahansa.
+SYY: epälooginen "silti" ja merkityksetön lause
+
+### v1-24
+VANHA: Tämä kertomus oli lyhyempi kuin Tintin seikkailu, mikä ei ole vaikeaa.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-26
+VANHA: Kauan se on kyyhkyn silmiin loistanut kaukaa.
+UUSI: Kyyhky erottaa sen jo kaukaa.
+SYY: kieliopiltaan rikki
+
+### v1-30
+VANHA: päiväksi. Tarkat vuosiluvut vaihtelevat lähteittäin, joten ajoitus on suuntaa-antava, ja siitä en ole aivan varma. Vaikea aihe, mutta selvisin.
+UUSI: päiväksi.
+SYY: tarpeeton epävarmuus ja merkityksetön loppulause
+
+### v1-31
+VANHA: Kyyhky nostaa siivenkärkeään.
+UUSI: Jogurtti kelpaisi kyyhkyllekin.
+SYY: epäselvä loppulause
+
+### v1-35
+VANHA: , vaikka tarkkaa sijoitusta en uskalla vannoa
+UUSI:
+SYY: tarpeeton epävarmuus
+
+### v1-42
+VANHA: Tarkkoja lukuja puiden iästä en mainitse, koska lähteet vaihtelevat.
+UUSI:
+SYY: irrallinen epävarmuus
+
+### v1-42
+VANHA: Kaunis ja hiljainen paikka, enkä uskalla luvata, että löydän sieltä kunnon pullaa.
+UUSI: Kaunis ja hiljainen paikka, jossa kyyhky voisi levätä.
+SYY: merkityksetön loppulause
+
+LOPPU: tarkistettu 45 vastausta (v1-0…v1-44), korjauksia 14

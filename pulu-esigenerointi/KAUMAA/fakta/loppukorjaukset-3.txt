@@ -1,0 +1,66 @@
+### v1-91
+VANHA: Tarkkaa valmistumisvuotta en ole varma antamaan.
+UUSI:
+SYY: asiaton epävarmuuslause, valmistumisvuotta ei kysytty
+
+### v1-92
+VANHA: Tarkkaa rabbia tai ullakkoa en ole varma nimeämään.
+UUSI:
+SYY: irrallinen epävarmuuslause
+
+### v1-97
+VANHA: Pillipiiparin tarina on tuttu myös kyyhkysen sukulaisille, sillä siinä vilisee lintuja pienempiä eläimiä.
+UUSI:
+SYY: merkityksetön ja epälooginen loppulause
+
+### v1-98
+VANHA: Pullaa Saksassa on varmasti myös, vaikka nimeä en löydä. Leipä menee
+UUSI: Leipä menee
+SYY: irrallinen, merkityksetön lause
+
+### v1-99
+VANHA: Joki kiemurtelee kaunista maisemaa, ja siltä katsottuna linnat näyttävät hienoilta.
+UUSI: Joki kiemurtelee kauniissa maisemassa, ja ylhäältä katsottuna linnat näyttävät hienoilta.
+SYY: kieliopiltaan rikki
+
+### v1-101
+VANHA: mutta viisi on lähteissä yleisin
+UUSI: mutta viisi on yleisin luku
+SYY: metalause (lähteissä)
+
+### v1-102
+VANHA: joka lähteiden mukaan kehitti
+UUSI: joka kehitti
+SYY: metalause (lähteiden mukaan)
+
+### v1-102
+VANHA: Ei paha kyyhkyltä, vaikka itse söisin mieluummin pullaa.
+UUSI: Itse söisin kyllä mieluummin pullaa.
+SYY: merkityksetön ja epälooginen loppulause
+
+### v1-117
+VANHA: Vaeltajien määrästä en ole varma.
+UUSI:
+SYY: irrallinen epävarmuuslause, määrää ei kysytty
+
+### v1-118
+VANHA: Kielten puhujamääriä en ole varma.
+UUSI:
+SYY: irrallinen epävarmuuslause, määriä ei kysytty
+
+### v1-121
+VANHA: Ei paha kyyhkyltä.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-124
+VANHA: Aika monta kertaa pallo on pyörinyt.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-128
+VANHA: keskeinen tapahtumapaikka.\n\nMinä muistan ranta-alueet ennen uudistusta vain suvun kertomana, mutta sellaisia ne olivat.
+UUSI: keskeinen tapahtumapaikka. Ylhäältä katsottuna uusi ranta näyttää kyllä hienolta.
+SYY: epäselvä loppulause ("sellaisia ne olivat")
+
+LOPPU: tarkistettu 45 vastausta (v1-90…v1-134), korjauksia 13

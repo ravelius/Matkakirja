@@ -1,0 +1,46 @@
+### v1-406
+VANHA: tämän vuoksi. Eipä ollut pitkä, mutta paljon mahtui.
+UUSI: tämän vuoksi.
+SYY: merkityksetön loppulause
+
+### v1-411
+VANHA: ja lähteiden mukaan apuna käytettiin
+UUSI: ja apuna käytettiin
+SYY: metalause
+
+### v1-418
+VANHA: mutta 1490-luku on lähteissä yleinen.
+UUSI: mutta 1490-luku on yleisin arvio.
+SYY: metalause
+
+### v1-419
+VANHA: myydään katuruokaa, mutta tarkempia ruokalistoja en muista.
+UUSI: myydään katuruokaa.
+SYY: irrallinen epävarmuus
+
+### v1-422
+VANHA: Tarkat vuosiluvut vaihtelevat lähteittäin, joten en lupaa niitä.
+UUSI: Tarkkoja vuosilukuja en lupaa.
+SYY: metalause
+
+### v1-423
+VANHA: Epäilin ensin kuulleeni väärin, ja sitten luin uudelleen.
+UUSI: Kyyhky ei hiihdä, mutta lumisten vuorten yllä lentäisi mielellään.
+SYY: epälooginen loppulause
+
+### v1-429
+VANHA: Tarkat päivämäärät olen tarkistanut kahdesti, ja kyl ne täsmää.
+UUSI: Neilikat aseiden piipuissa ovat kyyhkynkin mielestä kaunis kuva.
+SYY: epäselvä loppulause
+
+### v1-430
+VANHA: Olen sentään sukua roomalaisille.
+UUSI: Latinaa en osaa, mutta kyyhkyjä riittää Rooman kaduilla.
+SYY: merkityksetön loppulause
+
+### v1-441
+VANHA: Tarkkoja pituuslukuja lähteet antavat hieman eri tavoin.
+UUSI: Tarkka pituus vaihtelee mittaustavan mukaan.
+SYY: metalause
+
+LOPPU: tarkistettu 45 vastausta (v1-405…v1-449), korjauksia 9

@@ -1,0 +1,26 @@
+### v1-497
+VANHA: Semla, niin, minä tietysti muistan sen.
+UUSI: Semla näyttää kyyhkyn silmin aika herkulliselta.
+SYY: epäselvä, päälle liimattu loppulause
+
+### v1-502
+VANHA: Ylätasanko on nähnyt paljon, vaikka se on sijaintina vähän kuivakka.
+UUSI: Ylätasanko on nähnyt paljon.
+SYY: epälooginen lisäys
+
+### v1-513
+VANHA: Boyoz kuulostaa minusta juuri sellaiselta, jota ikkunalaudalta ei jaksaisi jättää.
+UUSI: Boyozin murut kelpaisivat kyllä ikkunalaudalla.
+SYY: epäselvä lause
+
+### v1-522
+VANHA: Mmm— Kappadokian ilma
+UUSI: No niin, Kappadokian ilma
+SYY: outo avaus
+
+### v1-539
+VANHA: Mmm— Odessan oopperatalo
+UUSI: No niin, Odessan oopperatalo
+SYY: outo avaus
+
+LOPPU: tarkistettu 45 vastausta (v1-495…v1-539), korjauksia 5
