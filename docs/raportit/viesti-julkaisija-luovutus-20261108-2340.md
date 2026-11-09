@@ -115,3 +115,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   sitten NUI fpv-napit-1 8a9c891fc ipad + iphone → lokit/nui-fpv-napit-1-<koko>-8a9c891fc (fn-2: ei pelin yläpalkkia, yksi ☰, pallo nappien alla) → NUI + PT.
 - OPPI 7: ketjun vaihto ennen alkua: tapa jono-*.zsh JA sen mac-yleis-lapsi vain kun lapsella on pelkkä `sleep 5` (vapaa-silmukka), ei esikatselua; lukkoon ei koske.
 - 10.5x: BD katkaistu (vaaka-2 vanhalla sk:lla ajetaan loppuun, EI raportoida). Tilalle BE (jono-be.zsh, PT 10.5x): paikkapalkki-1 91d517091 x3 uusi veto → lokit/nui-paikkapalkki-1-<koko>-91d517091-3 → NUI + PT; sitten fpv-napit-1 x2 (BE kirjoittaa myös vanhan "BD LOPPU" -rivin, ohita). VS kohorae valmis + ilmoitettu.
+- 10.5x: BF (jono-bf.zsh) NS matkalento-paluu ccbdaef0a iphone → lokit/natiiviseppa-matkalento-paluu → rivi NS:lle (NS tarkistaa itse, vain PT:lle).
