@@ -51,3 +51,11 @@ JÄLJELLÄ: iPad lokit/nui-palkki-nahtavyys-1-ipad-aa46f41db → yhteisarkki iPh
 
 ## 5. Vahti
 Taustavahti pysäytetty. Käynnistä oma: odota lokit/nui-fpv-nimi-1-*-14f9398b8 ja nui-palkki-nahtavyys-1-ipad-aa46f41db (rivi "valmis N s").
+
+## Lisäys 16.2x (PT): KOLMAS SAMAAN JUNAERÄÄN (orbit, sama koodi kuin kohta 1)
+OMISTAJA 16.14: "Orbit-kierros voisi jatkua, vaikka pelaajat zoomaisi kauemmas kartalla. Tai silloin voisi tulla pieni teksti, että
+jatka kiertämistä, jolloin kone poimisi uuden etäisyyden ja keskittäisi tornin ja jatkaisi kiertämistä."
+PT: tee ensimmäinen (KK:n suositus): NIPISTYSZOOMAUS EI PYSÄYTÄ KIERTOA; kierto jatkuu uudelta etäisyydeltä kohde keskellä, ei lisänappia.
+2. napautus / yhden sormen veto pysäyttää kuten ennen (0bf9cd57d: PalloKierto.KiertoJatkuuNapautuksessa + ajo.napautusKaytetty; nyt
+nipistys/toinen sormi pysäyttää → muuta nipistys säätämään etäisyyttä). Skenaario: zoom ulos kesken kierron → 2 kuvaa (kierto jatkuu,
+kohde keskellä) pieni iPad → PT. Samaan haaraan natiivi-ui/temple-orbit.
