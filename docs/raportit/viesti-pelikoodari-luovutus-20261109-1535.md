@@ -36,3 +36,9 @@ Unity-työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu (remote natiivi-b
 ## LISÄYS 15.4x
 - JU hylkäsi pulu-v2-vienti-20261109 (Lisenssi-rivi puuttui; kansio lukossa) → **/Users/Shared/Claude/proto-3d/_valmiit/pulu-v2-2-vienti-20261109** (vie-paketti.sh --kuiva ok, 44 uutta). JU vie sen ja ajaa sitten 8c5328689 iphone. Vahvistettu JU:lle: korjaukset vain 108 uuteen kohtaan, v1:n 1584 kohtaa ennallaan.
 - 15.4x JU: v2-2 VIETY 15.37 (pulu/vastaukset/v2/, 44, julkinen maat.json 200). Ajo EH (8c5328689 iphone sk-pulu-v2) jonossa EC:n (1d-alkuvarjo1 d58806806) perään.
+- 15.4x pk-pulu-lahteet-iphone-8841fd32f VALMIS (kuvat p-1…p-5 katsomatta, vain unity.log): keskikohteen HAKU toimii nyt (p-3 "lähin
+  kohdekartta:pariisi:Eiffel-torni 1 px, toinen Galerie des Machines 15 px, raja 58, kohdenostot 4"), MUTTA lähde = "generoidut kaupunki
+  Pariisi" eikä lähde 2 → luovutuksen riski toteutui: kohdekartta-noston Kohta null / ei kohde:<id>-avainta (tai "toinen" 15 px raja-alueella
+  hylkää). TEE: PuluChat.Lahteet lähde 2 kohdenostolle → kohde:<id> (Kohdenostot.Linkitetty/Qid) tai generoi kohteen nimellä; tarkista
+  myös toisen kohteen etäisyysehto. Uusi JU-ajo sk-pulu-lahteet. Huom: tämä haara lukee v1:tä (FRA 59 kohtaa) → rebase/merge pelikoodari/pulu-v2
+  8c5328689 ennen ajoa, jotta p-4/p-5 saavat kaupunki:pariisi/maa:FRA-valmiit. p-1/p-2 ok (valmiit 5 → lisää 2).
