@@ -24,3 +24,9 @@ Työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, haara pelikoodari/juok
   ja keisari kuvassa koko kurkistuksen, kenttä 74,9° vakio pystyssä). Kuvat KK:lle ja 3 riviä PT:lle 08.1x.
 - ODOTTAA: KK:n hyväksyntä → PT vie junaan 223 (451519f87 + 4c1d100a2 + 281093d9c, haara pelikoodari/juoksu-223). Hylkäys → KK:n syyn mukaan.
 - Huom: laitteella kuvasuhde on oikea ilman komentoa; Mac-ajoissa juoksupelille aina `ui juoksupeli kuvasuhde laite` (muistiin kirjattu).
+
+## LISÄYS 08.2x
+- KK 08.15: d2 (281093d9c) HYVÄKSYTTY junaan 223, KK välitti PT:lle. Ei PK:n toimia ennen PT:n junaviestiä.
+- KK:n havainto: iPhone pystyssä taivaalla leijuva kattotiilikaistale (d2a–d2c oikea yläkulma). Sama jo 451519f87:ssä ja vaaka/iPad c-ovi-yläreunassa
+  → ei d2:n vika. Arvio: kaukaisen hallin harja/räystäspala, runko karsittu (lähi/kaukomalli tai seinähäivytys). PT:lle 08.2x; odottaa PT:n
+  päätöstä tekijästä. Jos PK: Mac-ajo, jossa kappaleen nimi lokiin (esim. säde kuvan pisteestä), sk-d2-ovikuva.txt pohjaksi (kuvasuhde laite).
