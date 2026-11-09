@@ -12741,6 +12741,188 @@
    "eroKartanPisteesta_m": 75
   },
   {
+   "id": "lontoo:Westminster Abbey",
+   "nimi": "Westminster Abbey",
+   "qid": "Q5933",
+   "lat": 51.4994,
+   "lon": -0.12737,
+   "lahde": "wikidata Q5933 P625 (fi.wikipedia: Westminster Abbey)",
+   "kartanPiste": {
+    "lat": 51.499406,
+    "lon": -0.127429
+   },
+   "eroKartanPisteesta_m": 4
+  },
+  {
+   "id": "lontoo:Westminsterin palatsi",
+   "nimi": "Westminsterin palatsi",
+   "qid": "Q62408",
+   "lat": 51.4995,
+   "lon": -0.1248,
+   "lahde": "kartan piste (käsin: Wikidata Q62408 P625 (51.49944,-0.12417) on sama piste kuin lontoo:Vanha Westminsterin palatsi, jolloin natiivi pudottaisi kaksosen (alle 25 m); piste = natiivin palatsimallin keskipiste (OhjelmaKohdeGeometria.PalatsiLat/Lon), 44 m länteen.)",
+   "kartanPiste": {
+    "lat": 51.4995,
+    "lon": -0.1248
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Westminster Bridge",
+   "nimi": "Westminster Bridge",
+   "qid": "Q456960",
+   "lat": 51.50076,
+   "lon": -0.1199,
+   "lahde": "kartan piste (käsin: Wikidata Q456960 P625 (51.50083,-0.12194) on 19 m lontoo:Canaletto Lontoossa -noston pisteestä, jolloin natiivi pudottaisi kaksosen (alle 25 m); piste sillan itäosassa, 140 m Canalettosta.)",
+   "kartanPiste": {
+    "lat": 51.50076,
+    "lon": -0.1199
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Cutty Sark",
+   "nimi": "Cutty Sark",
+   "qid": "Q171255",
+   "lat": 51.48278,
+   "lon": -0.00972,
+   "lahde": "wikidata Q171255 P625 (fi.wikipedia: Cutty Sark)",
+   "kartanPiste": {
+    "lat": 51.482834,
+    "lon": -0.009572
+   },
+   "eroKartanPisteesta_m": 12
+  },
+  {
+   "id": "lontoo:Lontoon Tower",
+   "nimi": "Lontoon Tower",
+   "qid": "Q62378",
+   "lat": 51.5082,
+   "lon": -0.0762,
+   "lahde": "wikidata Q62378 P625 (fi.wikipedia: Lontoon Tower)",
+   "kartanPiste": {
+    "lat": 51.5081,
+    "lon": -0.0762
+   },
+   "eroKartanPisteesta_m": 11
+  },
+  {
+   "id": "lontoo:British Museum",
+   "nimi": "British Museum",
+   "qid": "Q6373",
+   "lat": 51.51944,
+   "lon": -0.12694,
+   "lahde": "wikidata Q6373 P625 (fi.wikipedia: British Museum)",
+   "kartanPiste": {
+    "lat": 51.5194,
+    "lon": -0.127
+   },
+   "eroKartanPisteesta_m": 6
+  },
+  {
+   "id": "lontoo:Natural History Museum",
+   "nimi": "Natural History Museum",
+   "qid": "Q309388",
+   "lat": 51.49611,
+   "lon": -0.17611,
+   "lahde": "wikidata Q309388 P625 (fi.wikipedia: Natural History Museum)",
+   "kartanPiste": {
+    "lat": 51.4965,
+    "lon": -0.1758
+   },
+   "eroKartanPisteesta_m": 48
+  },
+  {
+   "id": "lontoo:Victoria Memorial",
+   "nimi": "Victoria Memorial",
+   "qid": "Q1333411",
+   "lat": 51.50183,
+   "lon": -0.14064,
+   "lahde": "wikidata Q1333411 P625 (fi.wikipedia: Victoria Memorial (Lontoo))",
+   "kartanPiste": {
+    "lat": 51.50184,
+    "lon": -0.14059
+   },
+   "eroKartanPisteesta_m": 4
+  },
+  {
+   "id": "lontoo:Royal Albert Hall",
+   "nimi": "Royal Albert Hall",
+   "qid": "Q193639",
+   "lat": 51.50105,
+   "lon": -0.17748,
+   "lahde": "wikidata Q193639 P625 (fi.wikipedia: Royal Albert Hall)",
+   "kartanPiste": {
+    "lat": 51.501021,
+    "lon": -0.177405
+   },
+   "eroKartanPisteesta_m": 6
+  },
+  {
+   "id": "lontoo:Albert Memorial",
+   "nimi": "Albert Memorial",
+   "qid": "Q281465",
+   "lat": 51.50241,
+   "lon": -0.17774,
+   "lahde": "wikidata Q281465 P625 (fi.wikipedia: Albert Memorial)",
+   "kartanPiste": {
+    "lat": 51.502418,
+    "lon": -0.17769
+   },
+   "eroKartanPisteesta_m": 4
+  },
+  {
+   "id": "lontoo:Kensingtonin palatsi",
+   "nimi": "Kensingtonin palatsi",
+   "qid": "Q207385",
+   "lat": 51.50528,
+   "lon": -0.18833,
+   "lahde": "wikidata Q207385 P625 (fi.wikipedia: Kensingtonin palatsi)",
+   "kartanPiste": {
+    "lat": 51.505158,
+    "lon": -0.188124
+   },
+   "eroKartanPisteesta_m": 20
+  },
+  {
+   "id": "lontoo:Royal Observatory",
+   "nimi": "Royal Observatory",
+   "qid": "Q192988",
+   "lat": 51.47783,
+   "lon": -0.00139,
+   "lahde": "wikidata Q192988 P625 (fi.wikipedia: Greenwichin kuninkaallinen observatorio)",
+   "kartanPiste": {
+    "lat": 51.4787,
+    "lon": -0.0019
+   },
+   "eroKartanPisteesta_m": 103
+  },
+  {
+   "id": "lontoo:Old Royal Naval College",
+   "nimi": "Old Royal Naval College",
+   "qid": "Q1753590",
+   "lat": 51.48367,
+   "lon": -0.00594,
+   "lahde": "wikidata Q1753590 P625 (en.wikipedia: Old Royal Naval College)",
+   "kartanPiste": {
+    "lat": 51.483172,
+    "lon": -0.005494
+   },
+   "eroKartanPisteesta_m": 63
+  },
+  {
+   "id": "lontoo:Queen's House",
+   "nimi": "Queen's House",
+   "qid": "Q564981",
+   "lat": 51.4812,
+   "lon": -0.00378,
+   "lahde": "wikidata Q564981 P625 (fi.wikipedia: Queen’s House)",
+   "kartanPiste": {
+    "lat": 51.481192,
+    "lon": -0.00375
+   },
+   "eroKartanPisteesta_m": 2
+  },
+  {
    "id": "lontoo:Buckinghamin palatsi",
    "nimi": "Buckinghamin palatsi",
    "qid": "Q42182",
@@ -12795,15 +12977,15 @@
   {
    "id": "lontoo:Pyhän Paavalin katedraali",
    "nimi": "Pyhän Paavalin katedraali",
-   "qid": "Q399961",
-   "lat": 51.5138,
-   "lon": -0.0984,
-   "lahde": "kartan piste (Wikidatassa ei koordinaattia / artikkelia ei löytynyt)",
+   "qid": "Q173882",
+   "lat": 51.51378,
+   "lon": -0.09831,
+   "lahde": "wikidata Q173882 P625 (fi.wikipedia: St Paulin katedraali)",
    "kartanPiste": {
     "lat": 51.5138,
     "lon": -0.0984
    },
-   "eroKartanPisteesta_m": 0
+   "eroKartanPisteesta_m": 7
   },
   {
    "id": "lontoo:Tower Bridge",
