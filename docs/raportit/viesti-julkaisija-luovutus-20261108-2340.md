@@ -12,3 +12,6 @@
 - VIENTI: luennat-v9-vienti viety 18.25 (SHA256SUMS:sta LAHTEET.md-rivi pois, alkup. T/luennat-v9-SHA256SUMS.alkup).
 - RAPORTOITU kaikki 17.5x–18.40 ajot (NUI tähti-2 75e5b3f22, KS temple-vaisto/mallinostot-7/nimet-3/lontoo 9be5c8e2e, PK GA/GE/GH/FZ, VS vuoret10, NS huippunimet-6).
 - JONO: vain GI (pid 70153). Pieni iPad -nipistys odottaa omistajaa. Asennuspalvelin pid 87396.
+- 18.5x LISÄ: JUNA 224 = f89d62d0e PUSHATTU (+ KS 9be5c8e2e d0e2239bf + pelitila 774e61032; PT kuittasi molemmat), testit T/juna224-e-*: unity 0, 729, 2279, 889.
+  LUKITUS ODOTTAA: GJ (pid 83679) KS nimet-4 + lontoo-kensington 9be5c8e2e → lokit/ks-pariisi-nimet-4-9be5c8e2e, ks-lontoo-kensington-9be5c8e2e → KS + PT (nimet-4: 2 pistettä ND:n laatikon sisällä EIVÄT saa avata ND:tä).
+  GI (pid 70153) PK 6a27206b2 → PK + PT; poiminta vasta PT:n kuittauksella.
