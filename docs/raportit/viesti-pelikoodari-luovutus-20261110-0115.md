@@ -26,6 +26,9 @@ Suunnitelma ja ehdot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leiv
   Piikki vain 1:ssä → leivonnan vika, korjaa ennen kuittausta (vertaa glb lähde vs paketti: verkko/accessorit). Molemmissa → vanha: kirjaa ja
   kerro PT:lle kenen (LAV mallit / PK peli). Tarkista myös keisari kuvioituna piikki1-a:ssa.
 
+- 01.5x: pari-0 (JU 01.17) KUVIA 0: komennot eivät menneet laitteelle latauksen jälkeen (CoreDeviceError 7000 komento.txt). Pari-skenaarioihin
+  odota 15 ohjauksen siirron jälkeen (oli 1; kulussa 30); JU uusii pari-0 (ja pari-1, jos tyhjä). Toistuva 7000 = laitekopion vika, ei skenaarion.
+
 ## JONO
 1. KUVAPARI (ennen leivotun kuittausta): JU ajaa sk-ipad-pari-0/-1 cf4d34ee4:llä (jonossa "IK") → lokit/pelikoodari-pari-0 / -1, 4 kuvaa (a alku,
    b kujan pää, c tarkastelukamera kujalla, d sisäpiha). Kokoa parit (vasen 0, oikea 1, sama rajaus, täysikokoiset) PT:lle. Katso samalla
