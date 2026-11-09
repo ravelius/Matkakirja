@@ -202,3 +202,17 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - EE (jono-ee.zsh) NS huippunimet-3 1f89f4f0d ipad ED:n jälkeen → polku NS:lle.
 - 15.3x: ED → ED2 (pid 6979): orbit x2, sitten fpv-koe-2 d6fe26743 iphone + ipad (NUI; d2d4d3227 ipad peruttu, vaaka d2d4d3227 ajettu). etuajo-ed2.zsh (6981) CONTaa DS 12130 + EB 83498; EE → jono-ee2.zsh (6983) ED2:n jälkeen.
 - 15.30: DW valmis + NS:lle kerrottu → PT:n nollausehto täyttyi (DV, DO, DW raportoitu). Jonossa: ED2 (NUI kiire), DS + EB (STOP → CONT etuajo-ed2), DZ, EC, EE; DX vaaka d2d4d3227 ajossa (orpo mac-yleis 3285, kerää itse) → NUI.
+
+## LISÄYS 9.11. 16.4x (TUOREIN; konteksti 26 % → nollaus)
+- JUNA 223 = 85d3bab39 PUSHATTU 16.41 (natiivi-backup julkaisija/juna-223) = 6a2f044b7 + nostokorjaukset 0bf9cd57d (d273729e2; sis. NS paikkapalkki fb77e12b1, maisemakaari 7a560e725, NUI osa 4 6854466d2 – PT hyväksyi)
+  + NUI palkkinav aa46f41db (b8109622e) + PK Pulu cb19b7556 (tappi-kierto 8841fd32f + lähteet + Pulu v2 8c5328689) + PK 1d-varjot d58806806. Testit vihreät (T/juna223-pulu1d-*.txt: unity 0, Kartta 729, Linssit 2279, Peli 885).
+  PIENI iPAD: d273729e2 16.01, b8109622e 16.41 (PT kerrottu). 85d3bab39 käännös ALKOI 16.41 → kun "AJO JU pieni iPad juna 85d3bab39 asennus rc 0": rivi PT:lle (aika + selkokielinen: Pulun valmiit kysymykset v2 + lähteet + Lisää-nappi, kameratappi kiertää keskikohdetta, juoksun alkulennon varjot kauempaa).
+  OPPI 10: ff epäonnistuu junan merge-commitin takia → aina git merge --no-ff; testit vasta yhdistämisen jälkeen (ajoin kerran vanhalla kärjellä).
+- ÄMPÄRI: pulu-v2-2-vienti-20261109 → pulu/vastaukset/v2/ (15.37, 44); pulu-v3-mallinostot-vienti-20261109 → pulu/vastaukset/v3/ (16.43, 44). v1 koskematon (Raamattu 11.26: ylikirjoitus vain omistajan käsiajo; PT valitsi uuden polun).
+- AVOIN PR ravelius/Matkakirja#6517 (KS Pariisin 4 mallinostoa, PT: yhdistä kun checks pass; testit pending 16.44) → yhdistä → vie-sisalto (kohdekartan 4 uutta kohdetta) →
+  a) KS Mac-ajo koko ipad c1e3b07bf, sk /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/nostot-korostetut-20261109/sk-pariisi-mallinostot-mac.txt (8 kuvaa), lokit ks-pariisi-mallinostot-c1e3b07bf → valmis-rivi KS:lle (local_7b57e35a-…), kuvat PT:lle → junaan PT:n sanalla.
+  b) PK pulu-mallinostot 4c49da614 iphone, sk /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/pulu-mallinostot/sk-pulu-mallinostot.txt → lokit/pk-pulu-mallinostot-iphone-4c49da614; lokista "keskikohde kohdekartta:pariisi:Invalidit (valmiit 2)" + "valmis vastaus kyllä"; kuvat PK:lle.
+- AJOSSA / JONOSSA (nohup, T/jono-<x>.zsh): EQ PK liiketappi1 8cdb4549c iphone + ipad-pieni (AJO_KOKO-merkkijono 2420,1668,0,40,2420,1580,2,1) + lahteet3 e31921ac7 iphone → PK.
+  ES VS vuoret5k2 9d6db3904 ipad (korvasi ER:n) → polku VS:lle. ET NUI temple-palkki-1 606e08631 ipad → NUI. EU NS huippunimet-5 49f7825ca ipad (sk-huippunimet-3) → NS (kuvat vain PT:lle).
+- Raportoitu: DZ, EE, EF, EG, EH, EI, EJ, EK, EL, EM, EN, EO2, EP (kaikki rc 0). EO c143a7064 ja ER 46fcddd34 peruttu ennen alkua (korvattu).
+- Viestiraja: SendMessage pysähtyi → mcp__ccd_session_mgmt__send_message toimii.
