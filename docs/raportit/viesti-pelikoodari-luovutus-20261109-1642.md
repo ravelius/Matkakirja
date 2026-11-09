@@ -53,3 +53,4 @@ Raporttiin merkkimäärät/krediitit.
 
 ## LISÄYS 16.4x (PT)
 - cb19b7556 menee junaan jo nyt; 4c49da614 tulee myöhemmin sen PÄÄLLE, kun Invalides-kuva katsottu. Äänityö: testi 6 nimellä ensin → PT.
+- JU 16.4x: EQ ajossa: liiketappi1 8cdb4549c iphone + pieni iPad → lokit/pk-liiketappi1-{iphone,ipad-pieni}-8cdb4549c, sitten lahteet3 e31921ac7 → lokit/pk-pulu-lahteet3-iphone-e31921ac7. cb19b7556 + d58806806 junassa 223 (85d3bab39).
