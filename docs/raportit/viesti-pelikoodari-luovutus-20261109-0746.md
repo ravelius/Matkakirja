@@ -30,3 +30,12 @@ Työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, haara pelikoodari/juok
 - KK:n havainto: iPhone pystyssä taivaalla leijuva kattotiilikaistale (d2a–d2c oikea yläkulma). Sama jo 451519f87:ssä ja vaaka/iPad c-ovi-yläreunassa
   → ei d2:n vika. Arvio: kaukaisen hallin harja/räystäspala, runko karsittu (lähi/kaukomalli tai seinähäivytys). PT:lle 08.2x; odottaa PT:n
   päätöstä tekijästä. Jos PK: Mac-ajo, jossa kappaleen nimi lokiin (esim. säde kuvan pisteestä), sk-d2-ovikuva.txt pohjaksi (kuvasuhde laite).
+
+## LISÄYS 08.3x – ENSIMMÄINEN TYÖ NOLLAUKSEN JÄLKEEN (PT 08.3x): kattokaistaleen tunnistus (estää TF:n, ei junaa)
+- PT:n kuva: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/kuvat/juoksupeli-d2-ovikuva-281093d9c/iphone-d2b-leijuva-kattokaistale.jpg;
+  tallenteen ruudut ~1395–1460 (lokit/pk-d2-ovikuva-iphone-281093d9c/juoksu/), rajaus d2a 500–1206 × 300–1100.
+- Työkalu valmiina: `ui juoksupeli mika x y` (0–1, y ylhäältä; JuoksuV4Maailma.Mika = Renderer-osumat kuvan pisteessä). Kaistale d2a:ssa
+  ~x 0,75–1,0, y ≈ 0,25 (pikseli ~904–1206, 646 / 1206×2622); d2c:ssä ylempänä (y ~0,05–0,1). Tee sk sk-d2-ovikuva.txt:n pohjalta
+  (kuvasuhde laite): kuvien d2a–d2c jälkeen heti "ui juoksupeli mika 0.85 0.25" + muutama piste kaistaleen varrelta → JU:lle ajo.
+- Päätös PT:ltä: malli/LOD → PT antaa Lavastajalle; karsinta/häivytys (JuoksuSokkeloMaailma, JUOKSU_SEINA, lähimallit) → PK korjaa itse.
+  Syy PT:lle rivinä.
