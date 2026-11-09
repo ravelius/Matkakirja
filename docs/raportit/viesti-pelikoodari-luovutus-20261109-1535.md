@@ -32,3 +32,6 @@ Unity-työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu (remote natiivi-b
 - Kun yllä olevat kuitattu ja jono tyhjä: rivi PT:lle "JONO TYHJÄ: Pelikoodari".
 - Tyylikirjan generointi (tyokalut/tarkista.sh päivittää Tyylikirja.*): palautettu joka kerta git checkoutilla, ei committiin.
 - valovahti hylkää myös junan kärjessä 6a2f044b7 (Aurinko.cs, NapaKannet.cs, KartanElama.cs, KaupunkiPuu.shader; ei Pelikoodarin).
+
+## LISÄYS 15.4x
+- JU hylkäsi pulu-v2-vienti-20261109 (Lisenssi-rivi puuttui; kansio lukossa) → **/Users/Shared/Claude/proto-3d/_valmiit/pulu-v2-2-vienti-20261109** (vie-paketti.sh --kuiva ok, 44 uutta). JU vie sen ja ajaa sitten 8c5328689 iphone. Vahvistettu JU:lle: korjaukset vain 108 uuteen kohtaan, v1:n 1584 kohtaa ennallaan.
