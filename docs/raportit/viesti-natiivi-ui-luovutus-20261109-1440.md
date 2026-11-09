@@ -34,3 +34,8 @@ ulos.jpg sarakkeet otsikko kuva1 nimi1 … (kopio myös 1bc73057-…/scratchpad/
 ## 4. Vahti
 - Taustavahti (Monitor) pysäytetty luovutuksessa; käynnistä oma: odota kansioita lokit/nui-palkki-aina-3-*-ed65f5b34 ja
   lokit/nui-fpv-koe-1-*-efba65386 (loki.txt valmiina). Esimerkki: scratchpadin vahti.sh (bash, nullglob).
+
+## Lisäys 14.5x: PT vahvisti E = etelä (ei muutosta). FPV-kärki 5efe9e346
+- 5efe9e346 (efba65386 + iso kulmapallo rajataan AUTO/MANUAL-napin yläpuolelle: FpvNakyma.IsoKerroin, FpvTikut.NappiRajat; tila-lokissa
+  todellinen kerroin). JU:lle: alkamattomat efba65386-koot 5efe9e346:llä + iphone-vaaka → lokit/nui-fpv-koe-1-<koko>-5efe9e346.
+  KATSO vaaka k-3: pallo ei peitä AUTOa; iPhone k-1 ☰ ja läpikuultava pallo → arkki PT:lle.
