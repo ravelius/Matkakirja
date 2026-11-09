@@ -70,3 +70,7 @@ Järjestys PT:ltä: otot → v8 + kytkentä → vasta sitten pöllö-workerin ko
   nostot-korostetut-20261109/LONTOO-14-TEKSTIT.md (rivit "Pulu:"). Jutut päärepon haarassa karttaseppa/lontoo-kyltit ef42a5c08; PR vasta PT:n
   vastauksen jälkeen ja 4 Kensingtonin kohdetta voi pudota → odota PR/lopullinen lista ennen vastausten generointia (uusi PULU_VERSIO v4).
   Järjestys: v8 + nimikytkentä, pöllö-worker, sitten tämä.
+
+## LISÄYS 17.3x (PT)
+- Otot viety KK:lle videoina (kaksi alkujen ottoa ilmoitettu omistajalle). MANIFESTI v8 JA NIMIKYTKENTÄ VASTA OMISTAJAN "KELPAA"-SANAN
+  JÄLKEEN (tulee PT:n kautta). Sillä välin: pöllö-worker (kohta LISÄYS 17.0x).
