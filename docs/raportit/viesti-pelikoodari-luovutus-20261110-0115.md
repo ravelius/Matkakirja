@@ -29,6 +29,10 @@ Suunnitelma ja ehdot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leiv
 - 01.5x: pari-0 (JU 01.17) KUVIA 0: komennot eivät menneet laitteelle latauksen jälkeen (CoreDeviceError 7000 komento.txt). Pari-skenaarioihin
   odota 15 ohjauksen siirron jälkeen (oli 1; kulussa 30); JU uusii pari-0 (ja pari-1, jos tyhjä). Toistuva 7000 = laitekopion vika, ei skenaarion.
 
+- 02.0x: 7000-SYY = MUISTIVAHTI: pari-0 konsoli r. 2589 "VIKA muisti 4199 ≥ 4080 Mt" → MuistiVahti.PysaytaKomennot poistaa komentotiedostot
+  lukematta. Leivottu POIS -lataus huippu ~4,2–4,3 Gt, päällä ~2,7 Gt. 0-puolen ajot (pari-0, piikki-0) eivät saa kuvia iPadilla; kylma-0:n
+  latausrivit ehtivät. PT:lle päätös: (a) VIKA-rajan QA-ohitus vertailuajoihin (suositus) tai (b) 0-puoli Macin esikatselusta. Odota PT:n vastausta.
+
 ## JONO
 1. KUVAPARI (ennen leivotun kuittausta): JU ajaa sk-ipad-pari-0/-1 cf4d34ee4:llä (jonossa "IK") → lokit/pelikoodari-pari-0 / -1, 4 kuvaa (a alku,
    b kujan pää, c tarkastelukamera kujalla, d sisäpiha). Kokoa parit (vasen 0, oikea 1, sama rajaus, täysikokoiset) PT:lle. Katso samalla
