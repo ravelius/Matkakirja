@@ -88,3 +88,6 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   Juna 223 virallisesti yhä 835f617a6.
 - 08.2x: AF2-vaaka 474011364 kuoli kesken (lukko poistettu); ketju AG 092345d80 osa2-1 vaaka + nostovalikko-7 ipad valmis 08.25, katsottu → NUI + PT. JONO TYHJÄ.
 - 08.3x: KK:n sana 08.31 → JUNA 223 = 38e803198 pushattu (natiivi-backup julkaisija/juna-223), kerrottu PT:lle. NUI nv7-ipad 315a07d47 (ketju AH) katsottu → NUI. JONO TYHJÄ.
+- 08.5x: OMISTAJAN PÄÄTÖS 08.32 (PT) perui 1f:n, d2:n ja kuvasuhteen → JUNA 223 = c111c4adf (38e803198 + 5 revertiä; puu = 835f617a6 + 1c + 1g), testit vihreät
+  (T/juna223-1c1g-*.txt), kerrottu PT:lle. NUI ketjut AI (a7869ef66) ja AJ (d396cbcbf) x3 valmiit 08.55, katsottu → NUI + PT.
+  ODOTTAA PT:n sanaa: poimi natiivi-ui/nostovalikko-juna223 = 4e972eeed (rebasattu c111c4adf:n päälle, 11 commitia) junaan 223 → testit → kärki PT:lle.
