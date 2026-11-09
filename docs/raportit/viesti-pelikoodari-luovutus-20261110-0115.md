@@ -37,6 +37,10 @@ Suunnitelma ja ehdot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leiv
   käynnistyksessä). 0-puolen skenaarioihin (pari-0, piikki-0, kylma-0) ohitus lisätty. JU ajaa KAIKKI ccd8531d2:lla: kylma-0/-1, piikki-0/-1,
   pari-0/-1 (pari-1 uudelleen: cf4d34ee4:ssä keisari valkoinen). NS:lle cherry-pick-ohje (karsinta-3). Kuvaparien kokoaminen PT:lle odottaa ajoja.
 
+- 02.2x pari-1 (leivottu PÄÄLLÄ, cf4d34ee4) myös VIKA 4090 ≥ 4080 Mt (konsoli r. 2506, ENNEN latauskuva pois → latauksen aikana) → ohitus
+  lisätty myös 1-puolen skenaarioihin. AVOIN: leivotun muistihuippu ~4,1 Gt, ei 2,7 Gt (TULOS-ipad-ab.md:n "huippu" luettiin 1a/1b:n vanhasta
+  muisti-tarkka.logista?) → tarkista huippu kylma-/pari-ajojen muistivahti-riveistä ja korjaa TULOS-ipad-ab.md; rivi PT:lle (pienen iPadin marginaali).
+
 ## JONO
 1. KUVAPARI (ennen leivotun kuittausta): JU ajaa sk-ipad-pari-0/-1 cf4d34ee4:llä (jonossa "IK") → lokit/pelikoodari-pari-0 / -1, 4 kuvaa (a alku,
    b kujan pää, c tarkastelukamera kujalla, d sisäpiha). Kokoa parit (vasen 0, oikea 1, sama rajaus, täysikokoiset) PT:lle. Katso samalla
