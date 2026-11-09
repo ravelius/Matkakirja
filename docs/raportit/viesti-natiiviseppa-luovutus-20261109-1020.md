@@ -51,3 +51,6 @@ SELVITETTY (ei koodattu):
 
 ## JONO
 1. JU:n matkalento-ennakko-tulos → PT:lle valmis-rivi (yllä). 2. FPV-latauskuva (yllä). 3. Muuten tyhjä.
+
+## LISÄYS 10.2x: PT:N TARKENNUS (KK 10.17) – VOITTAA kohdan "EI KUVAN RAJAUSTA"
+"ei rajausta" = pystykuvaa ei leikata vaakakuvasta, vaan pystyyn käytetään omaa pystykuvaa; ruudun täyttö kuten muissa latauskuvissa (pohjan mukaan). → Peittävä täyttö LatausLiike.Peita:lla kuten raketissa; potkurien kärkiä ei tarvitse raportoida erikseen.
