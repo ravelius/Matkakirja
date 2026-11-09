@@ -20,6 +20,17 @@ Syy: konteksti yli 25 % (hook), pehmeä raja. Korvaa -0010:n. Vanhemmat luovutuk
    kuvat 10 + 5, nimiääniä 43) `docs/raportit/karttaseppa-b3-lontoo-nostot-20261110.md`, taulukko `_tyo/karttaseppa/b3-lontoo/matriisi.json`.
    Commons-kuvien haku 8 jutulle odottaa PT:n sanaa (selitteet = tekstiä).
 
+## PT 01.0x (KK tarkisti omistajan päätöksiä vasten) — LUE ENSIN `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/b3-lontoo-nostot-tarkistus-20261110.md`
+- **Commons-kuvat 8 juttuun (PT 00.5x: hae nyt, aineistoksi)**: Sonnet-agentti haki 01.0x (Wikimedia API sallittu, omistaja 5.11. 17.59,
+  Raamattu 2.183) → `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/b3-lontoo/commons-kuvat/` (kuvat, LAHTEET.md, selitteet-luonnos.md).
+  Tarkista kansio: jos tyhjä tai kesken, tee haku itse (ensin robots.txt erikseen, sitten API peräkkäin). Ei peliin ennen omistajaa.
+- **EI Codexin kuvia Lontooseen** (omistaja 6.11. 20.41): saapumisen esittelykuvat ensin PELISTÄ (piirroskaupungin / kaupunkinäkymän
+  kuvakulmat Mac-ajolla JU:n vuorolla); jos heikkoja, pari PT:lle. Generoitavat 10 + 5 pois listalta.
+- **Nimiäänet Lontoolle Pariisin oton perässä**: nimilista (43) tekstinä valmiiksi ennen ottoa (sijainnit.json lontoo:*).
+- **Tekstit kirjoitetaan ilman lupaa**: kysymykset (2 kirjoitettua / nosto, 2.218) ja kuvaselitteet luonnoksina NUMEROITUNA LISTANA
+  KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a tai osoitekirjan mukainen tili), **Pariisi ensin** (11 nostoa 0+0, kadonneet 7,
+  nostottomat jutut 11; ks. matriisi.json), sitten Lontoo (8 + 5 + 5). Raamatun tekstisäännöt: tekstit viestinä listana, ei korttiin.
+
 ## TYÖN ALLA / JONO (järjestyksessä)
 a. **Koe3-kuvat JU:lta** → vertaa koe2:een samoilla rajauksilla (lähikuvat: viillot poissa?); parit PT:lle (≤ 1000 px) + 3 riviä.
    Jos viiltoja jää: ne ovat 6 %:n palautetuissa taloissa tai eivät ole T-liitoksia (vaihtoehto: alle 1 cm:n leikkausjäämät tai
