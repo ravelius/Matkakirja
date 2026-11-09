@@ -13,7 +13,8 @@ Kotikansiot: jäljessä olevissa (JU, KS, VS, posti, aanittaja, laitetestaaja, s
 ## JUNA 223 AUKI (ei julkaisua ennen omistajan pyyntöä), kärki 4e972eeed
 Ennen TF:ää:
 - PK suunta 84521ba9b: JU ajoi x3 (09.34–09.46), PT katsoi (ok omistajan sanoja vasten), viety KK:lle 10.0x omistajalle.
-  Omistajan Kelpaa → JU poimii junaan.
+  OMISTAJA 10.03 Kelpaa (Suositus); ennen junaa PK korjaa: iPhone pystyn kierrossa pää ~1,1 s ruudun ulkopuolella, vaakaohjeen
+  loppu ohjausympyrän alla, kattokaistale → Mac-ajo JU x3 → PT → JU poimii (viesti PK:lle 10.0x).
 - Leijuva kattotiilikaistale (näkyy myös suuntakuvissa): PK e4a5b8af7 luotain, JU:lta sk-kattokaistale2 → lokit/pk-kaistale2-iphone-e4a5b8af7;
   tekijä (LAV mallivika / PK karsinta) PK:n tuloksesta.
 - 1c kallistus omistajalle (KK).
