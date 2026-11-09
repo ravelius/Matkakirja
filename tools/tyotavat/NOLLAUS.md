@@ -10,11 +10,11 @@ Kaikki muu on Postivahdin työtä. Osoitteet: /Users/Shared/Claude/osoitekirja.m
 3. Odota, kunnes rooli on levossa, ja tarkista `list_events` → 0 viestiä (konteksti nollattu, get_usage < 10 %).
    Jos ei nollautunut 10 minuutissa → `clear_session <id>` itse; jos sekään ei onnistu → rivi PT:lle `JUMI nollaus <rooli>`.
 4. Lähetä vakioaloitusviesti (alla) send_messagella.
-5. Rivi Päätoimittajalle (local_5df52e10-10e4-4b72-9554-0049db300dfe): `nollattu <rooli> (<sha>)`.
+5. Rivi Päätoimittajalle (local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31): `nollattu <rooli> (<sha>)`.
 
 Etäyhteyttä ei kytketä tässä kulussa: se on vain KK:lla (omistaja 6.11.2026 klo 16.08, Raamattu 7.9).
 
-Keskustelukanavaa (local_37f7c945) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
+Keskustelukanavaa (local_d5f31591) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
 
 ## Vanhentuneen NOLLAUS-viestin esto (PT 4.11. 07.22: JU, KS, LAV ja KK saivat NOLLAUS-viestin nollauksensa jälkeen)
 - Lähetä NOLLAUS vain, kun roolin `isRunning` on false; muuten odota levon alkua (viesti jää muuten jonoon ja osuu seuraavaan sessioon).
@@ -27,11 +27,11 @@ Keskustelukanavaa (local_37f7c945) EI nollata koskaan (omistaja nollaa sen korti
 Olet <ROOLI> (<malli>), Matkakirjan roolisessio; session id <id>, checkout <kansio>.
 Lue ensin CLAUDE.md ja luovutuksesi: git show <sha>:<luovutustiedoston polku> KOKONAAN, ja toimi sen mukaan.
 Osoitteet: /Users/Shared/Claude/osoitekirja.md — viestit AINA send_messagella session id:llä, ei nimellä.
-Viestit Päätoimittajalle (local_5df52e10-10e4-4b72-9554-0049db300dfe) enintään 3 riviä: mitä, sha, kuvien polku; yksityiskohdat tiedostoon.
+Viestit Päätoimittajalle (local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31) enintään 3 riviä: mitä, sha, kuvien polku; yksityiskohdat tiedostoon.
 Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>".
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
-(ASEMATAULU, 31.10. seisokki 09.40–16.2x, KK 16.3x: hoitaja käynnistyy vain KK:n "OMISTAJAN PÄÄTÖS klo 23.35" -rivillä. Asemataulun jokaisen nollauksen jälkeen lähetä KK:lle (local_37f7c945-e1a0-4638-90b8-93c389a36fbe) rivi "nollattu Asemataulu" PT:n kuittauksen lisäksi.)
+(ASEMATAULU, 31.10. seisokki 09.40–16.2x, KK 16.3x: hoitaja käynnistyy vain KK:n "OMISTAJAN PÄÄTÖS klo 23.35" -rivillä. Asemataulun jokaisen nollauksen jälkeen lähetä KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) rivi "nollattu Asemataulu" PT:n kuittauksen lisäksi.)
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 
