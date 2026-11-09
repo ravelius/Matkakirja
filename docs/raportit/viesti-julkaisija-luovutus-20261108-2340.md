@@ -134,3 +134,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   BX NUI fpv-hud-1 4e12207ed iphone + ipad (KOE) → kuvat PT:lle + rivi NUI:lle; tarkista fh-3 ≠ fh-2 (kallistus) ja ☰/pallo.
   BU:n ebd3d3569-iphone ajetaan loppuun, EI raportoida.
 - Monitor-suodin: " AJO [A-Z+]+ |LOPPU|VIKA" (PK+LAV-tunnus jäi aiemmin pois).
+  BY NS ennakko-paluu-koe d79031961 iphone: paikkapalkki-1 → lokit/natiiviseppa-ennakko-paikkapalkki-iphone (p-5a) + paluu-2 → lokit/natiiviseppa-matkalento-paluu-3 → polut NS:lle (local_0f7f169f-…).
