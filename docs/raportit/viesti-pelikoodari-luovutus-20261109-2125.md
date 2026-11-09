@@ -25,8 +25,8 @@ VIESTIRAJA: SendMessage pysähtyi 21.1x ("Paused") → käytä mcp__ccd_session_
 
 ## JONO
 1. Odota PT:n vastausta drone 7227a9788:aan: junaan 224 ja asennuslinkki. Jos omistaja antaa palautetta laitteelta, se korjataan samaan haaraan.
-2. AVOIN PT:lle (kerrottu 21.2x): 324 metrissä piirroskartta on hyvin karkea (aukio vihreä läiskä, talot litteitä). Jos PT/omistaja
-   haluaa syvyyden pienemmäksi, vaihda PalloKierto.DroneSyvyys (nyt 5).
+2. PT 21.2x (KK): "karkea/litteä" EI todistettu – drone-ajot olivat Mac-esikatselussa ILMAN talot-kansiota (3D-talot puuttuivat).
+   Lähikuviin aina talot-kansio mukaan (muisti mac-esikatselu-talot-kansio). Kuittaus pysyy, uutta ajoa ei nyt. Syvyys: PalloKierto.DroneSyvyys (5).
 3. Jos ei muuta: "JONO TYHJÄ: Pelikoodari" PT:lle.
 
 Testit: `sh Peli-testit/unity-tarkistus.sh` (työpuussa, sh ei zsh); web: `node --test tests/<…>.test.mjs`.
