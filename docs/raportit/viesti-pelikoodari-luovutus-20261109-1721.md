@@ -45,3 +45,6 @@ Unity-työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu (remote natiivi-b
 4. Kun kaikki kuitattu: "JONO TYHJÄ: Pelikoodari" PT:lle.
 
 Testit: `cd Peli-testit && sh kaanna.sh <osa>`, `sh Peli-testit/unity-tarkistus.sh`; pöllö: `node --test tests/pollo*.test.mjs` (224/224).
+
+## LISÄYS 17.3x
+- JU:n ääniportti hylkäsi molemmat vientipaketit (kieli.json puuttui) → lisätty kirjoita_kieli_json:lla + SHA256SUMS, shasum OK; JU:lle viesti "vie ja aja bda9945bf". Nimissä 85 true peak -varoitusta (eivät estä).
