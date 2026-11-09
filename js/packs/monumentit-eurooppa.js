@@ -179,16 +179,18 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'en-Wikipedia "Tour du Temple", johdanto ja osiot "Origins", "Royal imprisonment" ja '
         + '"Demolition"; fr-Wikipedia "Tour du Temple", osiot "Histoire" ja "Prison" (tarkistettu '
         + '31.10.2026).',
-      kuva: 'ihme-temple-torni-loistoaika.jpg',
-      lyhyt: 'Temppeliritari ylittää linnoituksen pihan jättitornin varjossa, ja neljä kulmatornia kohoavat '
-        + 'taivasta vasten; yli viisisataa vuotta myöhemmin tornista tulee kuningasperheen vankila.',
-      selite: 'Noin vuonna 1260 temppeliritari ylittää Templen pihan, jonka yläpuolella kohoaa noin 50 metrin '
-        + 'torni, jonka kulmissa on neljä pienempää tornia. Neljän metrin paksuiset muurit tekevät siitä '
-        + 'varman paikan ritarikunnan päämajalle. Hänen kannuksensa kilahtavat kivipihaa vasten. Vuonna '
-        + '1792 kuningasperhe viedään Templeen vangiksi, ja Napoleon käskee 1808 purkaa tornin, jottei '
-        + 'siitä tule kuninkaanmuiston pyhiinvaelluskohdetta.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1260). Faktat: en- ja '
-        + 'fr-Wikipedia "Tour du Temple", tarkistettu 31.10.2026.',
+      // Vaatetorikuva -v2 (omistaja 9.11. 19.06 "teksti kuvan mukaiseksi", PT B): vanhalla nimellä CDN tarjosi
+      // 31.10. 14.02 torikuvaa ja alkuperä ritarikuvaa; uusi nimi ohittaa välimuistin, vanha nimi jää ämpäriin.
+      kuva: 'ihme-temple-torni-loistoaika-v2.jpg',
+      lyhyt: 'Vaatekauppiaat tinkivät kankaista Templen muurin juurella, ja vanha ritaritorni kohoaa torin yllä; '
+        + 'kolmenkymmenen vuoden päästä sitä ei enää ole.',
+      selite: 'Noin vuonna 1780 vaatekauppiaat ovat levittäneet pöydilleen takkeja, liinavaatteita ja '
+        + 'kangaspakkoja Templen muurien juurella, ja ostajat hieraisevat villaa sormiensa välissä. '
+        + 'Temppeliritarit ovat olleet poissa jo puolituhatta vuotta, mutta heidän tornistaan on tullut torin '
+        + 'maamerkki neljine kulmatorneineen. Vuonna 1792 tornista tulee kuningasperheen vankila, ja Napoleon '
+        + 'käskee 1808 purkaa sen. Tornista ei jäänyt kiveäkään; sen paikalla on nyt Square du Temple -puisto.',
+      ihmeLahde: 'Matkakirjan havainnekuva: Templen alue vaatetorina 1700-luvun lopulla (n. 1780). Faktat: en- ja '
+        + 'fr-Wikipedia "Tour du Temple" ja fr-Wikipedia "Carreau du Temple", tarkistettu 9.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Tour_du_Temple',
     }),
     ihmeKohde({
