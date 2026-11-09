@@ -48,3 +48,10 @@ Odotusvahti: bash <sama scratchpad>/vahti.sh (Monitor 30 min; ohittaa valmiit). 
 - Suunnitelma /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261109-palkki-aina-nakyvissa.md osat 1–4
   NUI:lle; osa 1 = ‹ Ranska ▾ › -vika (KORVAA yllä kohdan 1.2). Edellinen "EI töitä ennen korttia" -rajaus purkautui tällä kortilla.
 - JÄRJESTYS: versiorivin kuva (1.1) → osat 1–4. Mac-kuvat iPad + iPhone → PT → KK ennen junaa.
+
+## Lisäys 12.5x: paikkapalkki p-5a
+- JU: iphone ja iphone-vaaka 027326c38 7/7, p-5a sumea molemmissa. NS korjasi: bce316fdd (esilataus korkeusportain ×2, ≤ 160 km).
+- Yhdistetty → natiivi-backup natiivi-ui/paikkapalkki (ja -paluu) ef151b8fa (tarkistus 0, pohjavahti ok).
+- JU:lle lyhyt ajo sk proto-3d/_tyo/natiivi-ui/sk-paikkapalkki-p5a.txt (p-4 + p-5a) iphone → lokit/nui-paikkapalkki-p5a-iphone-ef151b8fa.
+  SEURAAVAKSI: katso p-5a (terävä ~15 km Lagorce?), lokista "paluun esilataus: osuudet 6 (…)" ja "paluu alkoi … muistihuippu" (NS odottaa
+  +100–150 Mt) → NS + PT. Jos terävä: koko sk-paikkapalkki-1 kolmella koolla ef151b8fa:lla (päivitä sk:n otsikon sha) → PT → KK.
