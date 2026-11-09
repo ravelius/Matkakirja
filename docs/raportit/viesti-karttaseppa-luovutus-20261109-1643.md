@@ -1,6 +1,10 @@
 # Karttaseppä: luovutus 9.11.2026 klo 16.43 (KS)
 Syy: konteksti yli 25 % (hook), pehmeä raja. Korvaa -1408:n; sen sisältö alla ennallaan paitsi kohdat, jotka tämä ENSIN-osa päivittää.
 Kaikki tämän osan tiedostot: `T=/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/nostot-korostetut-20261109/`.
+## LISÄYS 16.4x (PT, inventaario kuitattu)
+- **Samassa vuorossa kuvatekstien (kohta 3) jälkeen:** NostotKartalla.TietoNapautus (~2236) nimihaara: ensin Kohdenostot.Kohde kuten kylteillä, sitten vasta Tietokortit; + QID-aliakset 7 valmiille Pariisin nimelle (`$T/INVENTAARIO-PARIISI-KLIKATTAVAT.md`, tarkista otoksella); + Lontoon kylteille QID-taulu (OhjelmaKohteet.LontooKyltit, nyt QID null paitsi St Paul's) ja St Paul's Q399961 (kohdekartta) vs Q173882 (oppaan-kuvat) tarkistus Wikidatasta. Testit valmiina, laiteajo JU:n vuorolla. Natiivihaara junan kärjen päälle.
+- **Lontoon 14 tekstiä KK:lla omistajan päätöksessä: ÄLÄ kirjoita ennen sitä.**
+
 ## ENSIN (uudet 14.10–16.3x)
 1. **PARIISIN 4 MALLINOSTOA (omistaja 16.17; OMISTAJAN PÄÄTÖS 16.23 KK-kortti "Kyllä ja hae lisäksi myös kuvia…, havainnekuvia ei tarvita").** Invalidit, Sainte-Chapelle, Grand Palais, Tour Montparnasse: 3D-mallin kyltti (MalliKyltit ← Nahtavyysalue.Alueet) avasi striimatun Tietokortit-kortin, koska kohdekartalla ei ollut samaa QID:tä (Kohdenostot.Kohde, NostotKartalla.TietoNapautus). Inventaario `$T/INVENTAARIO.md`.
    - **PR ravelius/Matkakirja#6517** (haara karttaseppa/pariisi-mallinostot, kärki c0db1055d, worktree /Users/Shared/Claude/wt/karttaseppa-pariisi-mallinostot): maakartat.js 4 kohdetta, kohdekartat-sijainnit.json (kohdesijainnit.mjs pariisi, vain 4 riviä), nahtavyysjutut.js 4 juttua (3 kpl + 2 Commons-kuvaa kukin; Montparnassen ruutu 8 PT kuittasi), raportit rungot + Pulun kysymysluonnokset. Testit 5704/5723, 0 fail. **Jos CI vihreä: yhdistä squashilla, rivi PT:lle.**
