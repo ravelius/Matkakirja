@@ -47,3 +47,11 @@ nyt haaralla pelikoodari/pulu-lahteet. Kuvat ≤ 1000 px (sips -Z 1000 / PIL-kop
   iPad-ajo e51b66a98 jonossa (vanha sha; voi pyytää uudelleen 35b47ea3e:llä).
 - 1d alkuvarjo1 valmis 13.50 → vertaa pari (lokit/pk-1d-alkuvarjo{0,1}-5ed43b793), katsomatta.
 - Startup-ArgumentOutOfRangeException esikatselussa ennen omaa koodia (sama kuin KS:n ajoissa), ei tutkittu.
+
+## LISÄYS 13.55: GENEROINTILUPA (ENSIMMÄINEN TYÖ SEURAAVALLE)
+- PT 13.5x välitti: OMISTAJA 13.51 kortti "Teetetäänkö Pululle valmiit kysymykset myös kaupungeille ja maille (viisi kullekin)?" = "Kyllä (Suositus)",
+  selite "Kysymykset tulevat heti kaikkialla. Siihen asti kuten nyt." → pelin kaupungit + ~45 maata × 5 kysymystä nykyisellä
+  pulu-esigenerointiputkella (selvityksen vaihtoehto a). MÄÄRÄ TARKALLEEN TÄMÄ; ei uusintaottoja ilman uutta korttia.
+- Avaimet pakettiin: kaupunki:<KaupunkiNakyma.KaupunkiId-avain> ja maa:<ISO3> maan pulu/vastaukset/v1/<ISO3>.json -paketissa (PuluChat.Lahteet.cs
+  lukee ne jo; 35b47ea3e). Väliaikana live-worker (nykyinen). Tulos PT:lle: kpl, polku, 3 esimerkkiä.
+- Putki: etsi pulu-esigeneroinnin työkalu pelirepon tools/-kansiosta (Sonnet-Explore), selvitys Matkakirja-fable/scratchpad/pelikoodari/20261109-osa4-pulun-lahteet-selvitys.md.
