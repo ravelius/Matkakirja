@@ -31,3 +31,10 @@ Katso fh-1 (☰ rivit), fh-2 (HUD ei peitä tikkuja/palloa), fh-3 (kallistus: `f
 
 ## Muuta
 - Vanhat worktreet poistettavissa: wt/proto-natiivi-ui-nostovalikko-juna223, wt/proto-natiivi-ui-nostovalikko.
+
+## Lisäys 11.4x (PT kuittasi arkin)
+- PT samaa mieltä: p-5a → NS, p-6 sk-veto pois mereltä. UUSI: p-4 perillä lähes tyhjä vaalea (Cosquer) – tarkista, onko oikein.
+  Havainto: iPadin p-4 näyttää calanque-niemen ja oliivin meren 1,68 km:stä (kallistus 50°), iPhonen p-4 lähes tyhjä kerma ohuin viivoin
+  (kapea ruutu, keskellä punainen piste). Vertaa nostokuvan rajaukseen (nähtävyysesittely "rajaus vapaa 0.300–0.943") ja laattojen tasoon
+  Mac-esikatselussa; jos sisämaan nosto näyttää kartan, kyse on rannikon kohdasta, ei viasta → rivi PT:lle.
+- HUD 579fbbeec: kuvat PT:lle JU:n ajon jälkeen.
