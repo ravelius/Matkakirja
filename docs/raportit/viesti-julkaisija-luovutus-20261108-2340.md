@@ -8,6 +8,7 @@
   IF (jono-if-tavli.zsh): käännös 2ad9b89bc + Tavli-pari iPad (3580eb0f2 | 2ad9b89bc) ID:n jälkeen → lokit/natiiviseppa-tavli-astc-ipad-* (T1–T3) + kokorivi ennen/jälkeen (T/kokorivit.txt; 2ad9 ei tee kokolistaa) → NS.
   IK (jono-ik-pk-pari.zsh): PK pari-0/pari-1 cf4d34ee4 IF:n jälkeen → lokit/pelikoodari-pari-{0,1} (4 kuvaa kpl) → valmis-rivi PK:lle (local_d3bb1f78…).
   IH (jono-ih-kulku.zsh): PK kulku-uusinta cf4d34ee4 IF:n jälkeen → lokit/pelikoodari-kulku-ipad-cf4d34ee4 (+ kulku-tuloskortti.png) → PK. (00.11-ajo: 36 lähetystä hävisi, kansio -lahetysvika.)
+  IL (irrallinen, jono-il-pk-lohkot.zsh): PK lohkoajat fa45864cc: käännös L2 → sk-ipad-leivottu-1 parin jälkeen → lokit/pelikoodari-lohkot-1 → PK. IF/IK/IH/IJ/IL ajossa nohupilla (selviävät nollauksesta).
   IE: LAV lattia1 L1 (aja-lattia1.zsh 1 b804a87d6) → "LATTIA1 AJETTU" + polku LAV:lle (local_f12c9179…). IJ: LAV ovi224 UUSINTA IE:n jälkeen (23.51 jälkeen-ajo jäi Unityn käynnistykseen) → kuvat-ovi224-ennen/-jalkeen, polku+aika LAV:lle. Koodi v127 junaan vasta PT:n parikuittauksella.
   Mac: NS iso-tulivuoret-1 2d0d2b82d → lokit/natiiviseppa-iso-tulivuoret-1-mac-2d0d2b82d → NS (d1f0e92f4 peruttu NS:n pyynnöstä). NUI tulivuori-ilmaisin-1 f4e7ccd61 ipad → lokit/nui-tulivuori-ilmaisin-1-ipad-f4e7ccd61 → NUI (local_4b84cd90…).
 - AUKI (ei aloitettu): (f) LAV v127 -vienti odottaa LAV:n LAHTEET.md-korjausta. Laitekäännös pois raportin jälkeen: cf4d34ee4 (PK pari+kulku jälkeen), 313e146eb/3580eb0f2/2ad9b89bc (NS:n jälkeen), Medium-koko 7a8f024ed (peruttu) → NAS (T/siirto-laite-nas-2.zsh mallina).
