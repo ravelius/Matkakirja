@@ -4,7 +4,7 @@
 // ja Pulun vastaus saman kuvan kontekstissa. Vika toistetaan ensin: sama kuva → toinen mallikutsu, kuva ei kehotteessa.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import worker from '../tools/pollo/worker.js';
+import worker, { EHDOTUSTEN_LOPPUOHJE } from '../tools/pollo/worker.js';
 import { siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain } from '../tools/pollo/kuvasirut.js';
 
 const KUVA = {
@@ -88,6 +88,16 @@ test('ehdotukset ilman kuvaa toimivat kuten ennen (ei välimuistia)', async () =
   const a = await kutsu(env, { tehtava: 'ehdotukset', konteksti: 'Kööpenhamina' });
   const b = await kutsu(env, { tehtava: 'ehdotukset', konteksti: 'Kööpenhamina' });
   assert.equal(a.pyynnot.length + b.pyynnot.length, 2);
+});
+
+test('ehdotukset ilman kuvaa: loppuohje tilanteen perässä käyttäjäviestissä, järjestelmäkehote ennallaan (9.11.)', async () => {
+  const { env } = ymparisto();
+  const konteksti = 'Isoisän matkakirjamerkintä: pitkä teksti.\nPelaaja katsoo kartalla (kysymykset tästä): nähtävyys Eiffel-torni (Pariisi)';
+  const v = await kutsu(env, { tehtava: 'ehdotukset', konteksti });
+  const viesti = v.pyynnot[0].messages.at(-1).content;
+  assert.ok(viesti.endsWith(EHDOTUSTEN_LOPPUOHJE), 'ohje viimeisenä');
+  assert.ok(viesti.indexOf('Eiffel-torni') < viesti.indexOf(EHDOTUSTEN_LOPPUOHJE));
+  assert.ok(!JSON.stringify(v.pyynnot[0].system).includes(EHDOTUSTEN_LOPPUOHJE), 'välimuistietuliite ei muutu');
 });
 
 test('vastaus kuvan kontekstissa: kuvan tiedot kulkevat kehotteeseen', async () => {
