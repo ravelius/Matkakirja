@@ -8,7 +8,8 @@ Syy: konteksti 25 %, pehmeä raja. Korvaa -2326:n; sen sisältö alla ennallaan 
 2. topo-sulku 21f33d4fc junassa 223 (JU 23.33: kärki d1a4419e8, testit vihreät). Ei odotettavaa.
 3. Vahti: postilaatikko Monitorilla (30 min), viritä uudelleen: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (käsitelty 3b0467424, ei uutta 23.3x–09.2x).
 4. **LEVYN SIIVOUS 09.3x–09.4x (PT; KK 09.32):** poistettu sisäiseltä levyltä yhteensä noin 24 Gt: `_tyo/karttaseppa-kohokartta-laatat` (v1–v6), `_tyo/karttaseppa-merenpohja-laatat`, `_valmiit/kohokartta-v5/v6/merenpohja(-koe)-vienti-20261108` (kaikki CDN:ssä, näyte tarkistettu), työpuut wt/karttaseppa-napakalotit, wt/karttaseppa-merenpohja, wt/proto-karttaseppa-afrikka, wt/proto-karttaseppa-topo-sulku (puhtaat, haarat palvelimella). Raakakansiosta (`$R`) pois z7 ja z7-v6, *_z8_v1/v2, maailma_z5_v1/v2, m3/m15, aluekokeiden *-15s.f32. **$R:ssä jäljellä vain nykyisen polton aineisto (37 Gt): maailma-glo15.f32, maailma-etopo15.f32, meri3.npy, maailma-3d15*. Ne säilyvät (PT); z7 syntyy uudelleen poltossa.** Alla olevat viittaukset poistettuihin kansioihin ovat vanhoja. KK:lle ja PT:lle raportoitu.
-## JONO: PR #6507:n yhdistäminen CI:n jälkeen; muuten tyhjä → rivi PT:lle "JONO TYHJÄ: KS".
+5. **OMISTAJAN PÄÄTÖS 09.36 (PT): EI POISTOJA; ei-aktiivinen siirretään NAS:lle** (`/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/<alikansio>`, Raamattu 12.19; rsync, vertaa määrä ja koko, poista vasta sitten). Afrikan pallokokeen laatat (271ae4e62) ovat nyt NAS:lla `Matkakirja-arkisto/karttaseppa-afrikka-laatat/` (10 178 tiedostoa, 1 096 256 902 t, rsync -c ei eroja), sisäiseltä poistettu. PR #6507 yhdistetty (PT), sen työpuu poistettu. **Lepo (PT); nostotalot vasta KK:n suunnitelman jälkeen.**
+## JONO: tyhjä (lepo) → rivi PT:lle "JONO TYHJÄ: KS".
 
 ---- ALLA -2326:N LUOVUTUS ENNALLAAN ----
 # Karttaseppä: luovutus 8.11.2026 klo 23.26 (KS)
