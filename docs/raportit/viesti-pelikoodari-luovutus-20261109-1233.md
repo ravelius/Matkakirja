@@ -34,3 +34,9 @@ KÄYNNISSÄ: JU:n 1d-ajot (pyydetty 12.2x) – Postivahti: älä nollaa ennen ku
 ## 4. Seuraavaksi
 - 1e alkulennon värinä (ei aloitettu): tallenne + kehysajat Mac-esikatselussa JU:n vuorolla, syy (valo siirto, _JuoksuKuvaBias, räystäs), tulos KK:lle.
 - Työlista: "Juoksupeli: keisari odottaa seinällä pyyhkäisyä" (1c valmis, 1d/1e auki) – päivitä tilanne kun 1d kuitattu.
+
+## LISÄYS 12.4x – NUI vastasi (kohta 3)
+- Otot wav-muodossa (ElevenLabs v4 turbo, speed 1.2): /Users/Shared/Claude/proto-3d/_tyo/juoksupeli-huudot-kala-allas-ruukku-20261107/ulos/
+  01-kala-allas-1 … 04-kala-allas-4, 05-kukkaruukku-1 … 08-kukkaruukku-4 (tekstit tee_lista.py samassa kansiossa = tekstit.fi.json:n huudot).
+- TEE: muunna mp3:ksi kuten aiemmat (vrt. puyi-rikkoutuminen-v4/huudot/), kansio esim. juoksupeli/puyi-ulkoesineet-v1/huudot/, mittaa kestot
+  (ffprobe), lisää 8 riviä PuyiHuudot.Kaikki-taulukkoon; ämpäriin vienti JU:n kautta (kysy JU:lta tapa, kuten aiemmat huudot).
