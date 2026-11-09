@@ -42,3 +42,5 @@ ulos.jpg sarakkeet otsikko kuva1 nimi1 … (kopio myös 1bc73057-…/scratchpad/
 - 14.4x: FPV iPhone efba65386 KATSOTTU ja arkki PT:lle (lokit/nui-fpv-koe-1-iphone-efba65386/arkki-fpv-koe-1-iphone.jpg): ☰, pallo, tietorivi ok.
   Jäljellä: JU:n ketju DT 5efe9e346 ipad + iphone-vaaka → katso k-3 (pallo ei peitä AUTOa) → arkki PT:lle.
 - 14.43: palkki-aina-3 iphone-vaaka ed65f5b34 valmis (ei vielä katsottu); ipad-pysty ja ipad ed65f5b34 tulossa.
+- 14.5x: FPV-KOE VALMIS: 5efe9e346 vaaka + iPad katsottu (pallo ei peitä AUTOa), arkit PT:lle; PT vie koko FPV-kokeen KK:lle. Ei muuta tehtävää.
+  Jäljellä vain palkki aina ed65f5b34 (vaaka valmis, ipad-pysty + ipad tulossa) → yksi arkki neljästä koosta PT:lle.
