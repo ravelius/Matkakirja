@@ -20,3 +20,7 @@ Pariisin 94 nimen tekstit JÄISSÄ: ei määrää, ei mallitekstejä, ei kirjoit
 ## JONO
 1. JU:n Mac-ajo (nimet) → kuvat PT:lle. 2. PT:n sana Lontoon teksteistä → PR. 3. Edellisen luovutuksen JU-ajo (Pariisin 4 mallinostoa c1e3b07bf) → kuvat PT:lle. Odottaa: Pariisin elämän kuittaus → Lontoon kytkentä.
 Vahti: postilaatikko Monitorilla (30 min), viritä uudelleen: `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh`.
+
+## LISÄYS 17.2x (PT:n vastaus Kensingtonin neljästä)
+- PT: poikkeus testiin, kapea. TEHTY: `kyltti3d: true` 14 kohteelle, tests/karttareunus.test.mjs sallii reunuksen vain kyltti3d-kohteelle julisteen sisällä ilman miniatyyriä/numeroympyrää (verkon lehti ei piirrä niitä; tarkistettu js/nahtavyydet.js ~640). Punastus kokeiltu. Testit 5704/5723, 0 fail.
+- **PR ravelius/Matkakirja#6519** (haara karttaseppa/lontoo-kyltit, kärki 07e349e00), sidottu sessioon. **SEURAAVA: CI vihreä → squash (vihreä PR ilman korttia), rivi PT:lle; sitten sisältövienti (JU/PT) + natiivi d5312c20d Mac-ajo JU:lta (Lontoon kylttien napautus → esittely, esim. Westminsterin palatsi, Cutty Sark, Kensingtonin palatsi) → kuvapari PT:lle ennen junaa.**
