@@ -1027,3 +1027,27 @@ PT kuittasi FPV-latauskuvan a88e3648b, vaikka puhelimen pystyruudussa dronen pot
 ## PT:N ETÄYHTEYS PÄÄLLE (omistaja 9.11.2026 klo 10.45) (9.11.2026 klo 10.46)
 
 Omistaja KK:lle: 'laita myös päätoimittajan remote päälle'; KK kytki PT:n RC:n 10.45. Raamattu 7.9 ja PT:n aloitusviesti vaativat jo PT:n RC:n (omistaja 6.11. 21.32), mutta docs/tilinvaihto.md kohta 6 sanoi 'vain KK:lle' ja PT:n luovutus 10.05 'RC vain KK' – faktavirhe korjattu tilinvaihto.md:hen (kohta 6 ja nollaustaulukko).
+
+## JUOKSUPELIN MUURIN JUURI SISÄISEEN KOEVERSIOON (omistaja 7.11.2026 klo 20.55; kirjattu jälkikäteen) (9.11.2026 klo 12.20)
+
+Kortti 7.11. 20.54 (KK): "Viedäänkö muurin juuren korjaus tällaisena sisäiseen koeversioon?" (Viedään (Suositus) / Uusi yhtenäinen lattia) → OMISTAJA 20.55 "Viedään (Suositus)". KK 20.58: yhtenäinen lattia korjaisi juurisyyn, mutta sitä ei aloiteta ilman omistajan sanaa. Lähde: keskustelut/Keskustelukanava-2026-11-07-klo-2025-2059.md r. 45–49, 86. Toteutus LAV:n paketit (JU 7.11. 21.09) + PK 10e9b6c4a, junissa 220 ja 223.
+
+## KOHOKARTAN ILMA, VALO JA RAE KELPAA (omistaja 9.11.2026 klo 10.54) (9.11.2026 klo 12.20)
+
+Kortti "Kelpaako kohokartan uusi ilma ja rae?" → "Kelpaa (Suositus)": VS ilma b2f1407d6, valo 2f675d74b (aurinko aina luoteessa), rae 90711141e. Junassa 223 (4d105f9e7).
+
+## TOPOKARTAN AURINKO JA AVARUUDEN RAJA (omistaja 9.11.2026 klo 10.56) (9.11.2026 klo 12.20)
+
+Omistaja: "onko taivaalla mahdollista näkyä myös aurinko ja sillä kevyet flarekuviot topokuvissa? dronella voisi lentää niin ylös että taivas mustenee ja maapallon sininen kaari tulee näkyviin. onko mahdollista toteuttaa?" Suunnitelma KK scratchpad/keskustelukanava/suunnitelmat/20261109-topo-aurinko-ja-avaruus.md: VS koe (vain anamorfinen heijastus, omistaja 16.10.); avaruuskaari FPV-suunnitelman osa 7 perus-lennon jälkeen. Ei junaan ilman korttia.
+
+## DRONELENNON NÄYTTÖ: KAIKKI ☰:ÄÄN JA HÄVITTÄJÄN NÄYTTÖ (omistaja 9.11.2026 klo 10.5x ja 11.00) (9.11.2026 klo 12.20)
+
+Omistaja 10.5x: "kaikki toiminnot voi siirtää hampurilaiseen ja poistaa erillisen kytkimen. pitäisikö kokeilla tehdä hävittäjälentokone tyylinen tähtäin / kallistusnäkymä ruudulle, mitä olet mieltä? ja oliko tähän tulossa myös se minimaapallo sekä lukemat? lukemat voi olla yksinkertaisesti vain ruudulla ilman erillisiä mittareita". Kortti 11.00 "Millainen tähtäin dronelentoon?" → "Hävittäjän näyttö": keskimerkki, kallistuva horisonttiviiva, kallistusasteikko, suuntanauha, kehykset. NUI tekee; PT: kamera automaatissa ~3°, manuaalissa 30° (NS).
+
+## PIENI IPAD SAA UUDET VERSIOT (omistaja 9.11.2026 klo 11.05 ja 12.0x) (9.11.2026 klo 12.20)
+
+Omistaja 11.05: "olen taas töissä, niin pienelle iPadille voi sitten päivittää uusia versioita." 12.0x: "pienelle ipadille voisi siirtää uuden version heti kun uusi nostopalkki on valmis". JU asentaa uusimman vihreän junan kärjen (734ed685d asennettu 11.34).
+
+## LONTOON NÄHTÄVYYDET OIKEAAN KOKOON KOKEENA (omistaja 9.11.2026 klo 12.0x) (9.11.2026 klo 12.20)
+
+Omistaja: "ajattelin jopa että voisi kokeilla jos lontoon nähtävyydet palauttaisi kokeeksi oikeaan kokoon. minulla on vielä mietinnässä että miten kaikki euroopan kaupungit kannattaa tehdä." KS tekee kokeen omaan haaraan (ei junaan); muiden kaupunkien tapa omistajan mietinnässä, ei töitä.
