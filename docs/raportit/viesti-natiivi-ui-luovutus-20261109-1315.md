@@ -52,3 +52,15 @@ Kärki b57df8ec6 (wt/proto-natiivi-ui-fpv-napit, puhdas). Tiedostot: UI/Linssit/
 - Kuvat: sk uusi (pohja sk-fpv-hud-1, proto-3d/_tyo/natiivi-ui/) iPhone pysty + vaaka + iPad, myös MANUAL ja pallo iso → PT.
 
 ## 5. FPV-HUD b57df8ec6 ja huudot: ennallaan (-1245:n kohdat 3 ja 5); odota PT/KK.
+
+## Lisäys 13.2x: sk-2 iphone 74e72a4a4 katsottu (arkki lokit/nui-palkki-aina-2-iphone-74e72a4a4/arkki-palkki-aina-2-iphone.jpg)
+- KORJAUS TOIMII: a-2 kortti palkin alla; a-3 `napauta-seuraava` osuma mk-pinpalkki__askel → nosto vaihtui (cosquer → tuileriat,
+  alla True); a-4 valikko palkin alle; a-5 valinta toimi (MuCEM).
+- UUDET LÖYDÖKSET (seuraava sessio korjaa, kun ipad/vaaka/pysty katsottu):
+  1) Valikosta valittu NÄHTÄVYYS (nahtavyys:marseille:2:MuCEM) ei ole palkki aina -kohde: palkki pieni (181×40), ja a-6 palkin
+     napautus avasi nähtävyyskortin vanhaan tapaan → palkki katosi ("palkki 0×0", napauta-nimi "ei palkkia"). AinaNakyvissa vain
+     Nostokortissa; nähtävyyskortin Pinnaus.Vaihda (git grep "Pinnaus.Vaihda") tarvitsee saman (+ PalkinAlle-paikka) – kysy PT:ltä,
+     kuuluuko KK:n suunnitelman osiin.
+  2) a-5: valinnan jälkeen edellinen nostokortti (Tuileriain rauniot) jäi auki vanhaan paikkaan vasempaan alakulmaan ✕:n kanssa
+     (pinnaus siirtyi MuCEMiin → PinNakyvissa false → Pystypaikka pohjan paikalle). Valinnan pitäisi sulkea palkin alla ollut kortti.
+  3) Sivuhuomio: › Marseillessa vaihtoi Pariisin Tuileriain raunioihin (selaimen naapurilista ei rajaudu kaupunkiin).
