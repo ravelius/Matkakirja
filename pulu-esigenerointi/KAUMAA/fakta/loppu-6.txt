@@ -1,0 +1,225 @@
+### v1-225
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kuinka pitkä Dubrovnikin muuri on ja saako sillä kävellä?
+VASTAUS: Joo, tän minä tiedän. Sieltä näkee kauas. Muuri kiertää vanhankaupungin ympäri noin kahden kilometrin matkan, ja sen päällä saa kävellä koko kierroksen. Se on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea, ja linnoitustorneista tunnetuin on [[Minčetan]] torni. Meren puolella kohoaa [[Lovrijenacin]] linnake, joka vartioi kaupunkia vuosisatojen ajan. Kävelyyn kannattaa varata aikaa, ja kierroksella käy vuodessa noin 1,2 miljoonaa ihmistä. Kaikki kävelevät, minä lensin.
+
+### v1-226
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Mitä Libertas tarkoitti Dubrovnikin historiassa?
+VASTAUS: Ai tota. Se on latinaa, siis suvun kieltä. Libertas tarkoittaa vapautta, ja se oli [[Ragusan tasavallan]] tunnuslause ja lipun teksti. [[Lovrijenacin]] linnakkeen portin yläpuolella on latinankielinen kirjoitus, jonka mukaan vapautta ei myydä koko maailman kullalla. Tasavalta pysyi itsenäisenä vuosisatojen ajan neuvottelemalla ja maksamalla veroa naapureilleen, kunnes [[Napoleonin]] ajan Ranska lakkautti sen vuonna 1808.\n\nLatina on meidän sukumme kieltä, joten tuo kirjoitus kolahtaa kyyhkyyn erityisen lujaa. Vapaus kannattaa pitää, vaikka kulta kimaltelisi.
+
+### v1-227
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Mitä Dubrovnikin vanhasta apteekista tiedetään?
+VASTAUS: Mmm— hyvä kysymys. Ragusan tasavalta oli edelläkävijä kansanterveydessä. [[Fransiskaaniluostarin]] apteekki avattiin vuonna 1317, ja lähteiden mukaan se toimii yhä, mikä tekisi siitä Euroopan vanhimpiin kuuluvan. Munkit valmistivat siellä rohtoja yrteistä, ja nykyään myydään yhä perinteisiä voiteita. Samassa hengessä tasavalta määräsi jo vuonna 1377, että kulkutautialueilta saapuvien oli odotettava erillään, ennen kuin pääsivät kaupunkiin; niin syntyi [[karanteenin]] varhainen muoto. Tuntuu, että kaupunki oli ajastaan edellä.
+
+### v1-228
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Mitä on rozata, Dubrovnikin jälkiruoka?
+VASTAUS: Selvä juttu. Tästä pidän. Rozata on dubrovnikilaisen keittiön jälkiruoka, joka muistuttaa kreemikaramellia: se tehdään kananmunasta, maidosta ja sokerista, ja päällä on karamellikastike. Erikoisuutena on ruusulikööri [[rozulin]], jolla vanukas maustetaan. Se tarjoillaan kylmänä, ja se on tunnettu [[Dalmatian]] herkku. Muistan, että pullaa täällä on omana versionaan, mutta nimeä en tiedä.
+
+### v1-229
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Miten turismi on muuttanut Dubrovnikin vanhaakaupunkia?
+VASTAUS: Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on pieni, ja kunnassa asuu noin 42 000 ihmistä, mutta pelkästään muureilla kävelee vuodessa noin 1,2 miljoonaa. [[Risteilyalusten]] päiväkävijät täyttävät pääkadun [[Stradunin]] ruuhkaksi, ja viranomaiset ovat rajoittaneet kävijämääriä ja laivojen saapumista. Alue kuuluu [[Unescon]] maailmanperintökohteisiin. Monet paikalliset ovat muuttaneet vanhastakaupungista pois, koska asuntoja on muutettu majoitukseksi.
+
+### v1-230
+KOHDE: maa:HUN
+KYSYMYS: Miksi Unkarissa on niin paljon kylpylöitä?
+VASTAUS: Katotaas. Vastaus on maan alla. Unkari sijaitsee [[Karpaattien altaan]] pohjalla, jossa maankuori on ohut ja kuuma vesi nousee helposti pintaan; lämpimiä lähteitä on yli tuhat. Kylpeminen on vanhaa perua: roomalaiset käyttivät lähteitä, ja [[ottomaanien]] hallinnon aikana rakennettiin kupolikattoisia kylpylöitä. Nykyään kylpylät ovat osa arkea, ja niissä istutaan pakkasellakin. Tunnettu on esimerkiksi [[Hévíz]]-järvi Balatonin lähellä. Kyyhky pitäisi lämpimästä lähteestä.
+
+### v1-231
+KOHDE: maa:HUN
+KYSYMYS: Mitä eroa on unkarilaisella gulyásilla ja pörköltillä?
+VASTAUS: Odotas vähän. Tämä on kuuluisa väärinkäsitys. Unkarissa gulyás on keitto, jossa on lientä, naudanlihaa, perunaa ja [[paprikaa]], ja se syödään lusikalla. Muualla Euroopassa gulassiksi kutsuttu paksu pata on Unkarissa pörkölt. Sana gulyás tarkoittaa karjapaimenta, sillä keitto keitettiin alun perin padassa laitumella. Paprika tuli maahan [[ottomaanien]] mukana 1500-luvulla. Eli kaikki kauppahallista.
+
+### v1-232
+KOHDE: maa:HUN
+KYSYMYS: Mitkä sanat ovat yhteisiä suomessa ja unkarissa?
+VASTAUS: No niin. Tämä on kielellinen aarre. Unkari kuuluu [[uralilaisiin kieliin]] samoin kuin suomi, viro ja [[saame]], mutta sukulaisuus on kaukainen: tuhansia vuosia sitten erkaantuneet kielet eivät ole ymmärrettäviä toisilleen. Silti vanhimmat sanat vastaavat: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Kyyhky ymmärtää molempia aika huonosti.
+
+### v1-233
+KOHDE: maa:HUN
+KYSYMYS: Mikä on Hortobágy ja mitä siellä näkee?
+VASTAUS: Hyvä kysymys tuo. Hortobágy on Itä-Unkarin laaja ruohotasanko eli [[puszta]], jossa horisontti näyttää loputtomalta. Alue on kansallispuisto ja kuuluu Unescon maailmanperintökohteisiin. Perinteisesti siellä on laidunnettu harmaita pitkäsarvisia nautoja ja villakarvaisia lampaita, ja hevospaimenia kutsutaan nimellä [[csikós]]. Lisäksi siellä on lintuja, sillä alueella pysähtyy muuttolintuja. Tasaisuus on kyyhkylle ihanne, ei haittaa.
+
+### v1-234
+KOHDE: maa:HUN
+KYSYMYS: Miten Rubikin kuutio liittyy Unkariin?
+VASTAUS: Ai se. Tämä on sinänsä pieni mutta tunnettu keksintö. Unkarilainen [[Ernő Rubik]], Budapestissa asunut arkkitehtuurin opettaja, keksi kuution vuonna 1974 opetusvälineeksi kolmiulotteisen ajattelun harjoitteluun. Aluksi sitä kutsuttiin taikakuutioksi, ja kansainvälisesti se alkoi myydä vuosikymmenen lopulla. Tänään sitä on myyty kymmeniä miljoonia kappaleita, ehkä satoja miljoonia, [[Budapestin]] kaupungista maailmalle. Itse en ole saanut yhtäkään sivua yhteen.
+
+### v1-235
+KOHDE: kaupunki:budapest
+KYSYMYS: Kuka rakennutti Budapestin Ketjusillan?
+VASTAUS: Tuota niin. Se on kaupungin tunnetuin silta. Aloite tuli kreivi [[István Széchenyiltä]], ja sillan suunnitteli englantilainen insinööri [[William Tierney Clark]]. Silta avattiin vuonna 1849, ja se oli ensimmäinen pysyvä yhteys Budan ja Pestin välillä [[Tonavan]] yli. Toisessa maailmansodassa kaikki Tonavan sillat tuhoutuivat, ja Ketjusilta rakennettiin uudelleen sodan jälkeen. Isoisäsi ylitti sen vielä maksua vastaan.
+
+### v1-236
+KOHDE: kaupunki:budapest
+KYSYMYS: Mikä on Széchenyin kylpylä Budapestissa?
+VASTAUS: Kas vaan. Siellä istutaan vedessä pelaamassa shakkia. Széchenyin kylpylä on suuri kylpylä Pestin puolella [[Városligetin]] puistossa, keltaisessa uusbarokkirakennuksessa, joka valmistui 1900-luvun alussa. Siinä on sisä- ja ulkoaltaita, ja ulkoaltaissa kylvetään pakkasellakin. Budapestin kylpyläperinne on peräisin [[ottomaanien]] ajoilta, ja kaupungissa on yli sata lämmintä lähdettä. Kyyhky ei kyllä mahtuisi shakkipöytään.
+
+### v1-237
+KOHDE: kaupunki:budapest
+KYSYMYS: Miksi Budapestin vanha metro on erikoinen?
+VASTAUS: No jopas. Tämä on liikennehistoriaa. Budapestin ensimmäinen metrolinja avattiin vuonna 1896 Unkarin tuhatvuotisjuhlien kunniaksi, ja se oli Manner-Euroopan ensimmäinen sähköllä kulkeva metro. Linja kulkee kadun alla [[Andrássy-kadun]] suuntaisesti, ja pienet asemat ovat matalia, kaakeloituja ja lähellä katutasoa. Katu kuuluu osana [[Unescon]] maailmanperintökohteisiin. Tämä vaunu kulkee yhä, ja se on tosi suloinen.
+
+### v1-238
+KOHDE: kaupunki:budapest
+KYSYMYS: Mitä ovat Budapestin raunakapakat?
+VASTAUS: Hetkinen ny. Tämä on nykykaupungin erikoisuus. Raunakapakat ovat baareja, jotka alkoivat 2000-luvun alussa avautua ränsistyneisiin taloihin ja sisäpihoille Pestin vanhassa [[juutalaiskorttelissa]]. Sisustus on kerätty eri paikoista, kuten vanhoja huonekaluja ja kierrätettyjä esineitä, ja tunnetuin on [[Szimpla]]. Niistä on tullut osa kaupungin yöelämää ja matkailua. Iltaisin ne ovat hyvin täynnä.
+
+### v1-239
+KOHDE: kaupunki:budapest
+KYSYMYS: Millainen rakennus Unkarin parlamenttitalo on?
+VASTAUS: Annas ku mietin. Se on kaunis. Parlamenttitalo on uusgoottilainen jättiläinen Tonavan Pestin puoleisella rannalla, ja sen suunnitteli arkkitehti [[Imre Steindl]]. Rakentaminen kesti lähes kaksikymmentä vuotta, ja talo valmistui 1900-luvun alussa. Sen kupolihallissa säilytetään [[Pyhän Tapanin kruunu]], Unkarin perinteistä kruunua. Rakennus näkyy hyvin joen toiselta puolelta, ja siipikarjakin sen huomaa.
+
+### v1-240
+KOHDE: maa:IRL
+KYSYMYS: Mikä on Newgrange ja kuinka vanha se on?
+VASTAUS: Kas vaan. Tämä on iäkäs paikka. Newgrange on [[Boynen]] mutkassa sijaitseva ruohoinen kumpu, joka on kivikautinen käytävähauta noin vuodelta 3200 eaa. Se on siis yli viisituhatta vuotta vanha ja vanhempi kuin Egyptin pyramidit. Sisäänkäynnin yläpuolella on aukko, jonka kautta [[talvipäivänseisauksen]] aamuaurinko valaisee hautakammion muutaman minuutin ajan. Alue kuuluu Unescon maailmanperintökohteisiin. Vanhin tuntemani asuinpaikka, jossa ei ole yhtään ikkunaa.
+
+### v1-241
+KOHDE: maa:IRL
+KYSYMYS: Miksi harppu on Irlannin valtiontunnus?
+VASTAUS: Tost minä osaan kertoo. Harppu on ollut Irlannin tunnus keskiajalta asti, ja Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva säilytetään [[Trinity Collegen]] kirjastossa: 1300- tai 1400-luvulla tehty harppu, jota sanotaan [[Brian Borun]] harpuksi, vaikka kuningas Brian kuoli vuonna 1014, satoja vuosia ennen kuin soitin veistettiin. Kolikoiden harppu on tyylitelty versio esikuvasta.
+
+### v1-242
+KOHDE: maa:IRL
+KYSYMYS: Puhutaanko Irlannissa vielä iirin kieltä?
+VASTAUS: Selvä juttu. Kyllä puhutaan, mutta erilaisessa roolissa. Iiri on Irlannin perustuslaissa ensimmäinen virallinen kieli, ja sitä opetetaan kouluissa, mutta arjen pääkieli on englanti. Iirin kielen tiiviit puhuma-alueet eli [[Gaeltacht]]-alueet ovat enimmäkseen länsirannikolla, esimerkiksi [[Connemarassa]]. Kyltit ovat yleensä kaksikielisiä, ja television ja radion ohjelmia tehdään iiriksi. Kuulin sen vasta ylhäältä.
+
+### v1-243
+KOHDE: maa:IRL
+KYSYMYS: Kuinka korkeat ovat Moherin kalliot?
+VASTAUS: Hyvä kysymys tuo. Moherin kalliot nousevat suoraan Atlantista Clairen länsirannikolla, ja ne ovat korkeimmillaan noin kaksisataa metriä. Kallioseinä on noin 14 kilometriä pitkä. Kallioilla pesii lintuja, esimerkiksi [[lunneja]], ja [[Claren]] kreivikunnan maisema on suosittu matkailukohde. Kalliot kuuluvat tärkeimpiin retkikohteisiin Irlannissa, ja tuuli on voimakas. Kyyhky pitää tuulesta, mutta ei tuosta.
+
+### v1-244
+KOHDE: maa:IRL
+KYSYMYS: Miksi Irlannissa juhlitaan Pyhän Patrickin päivää?
+VASTAUS: Just niin, tämä on vihreä juhla. Päivää vietetään 17. maaliskuuta Irlannin suojeluspyhimyksen kunniaksi. Perinteen mukaan Patrick toi kristinuskon saarelle 400-luvulla, ja hänen kerrotaan käyttäneen [[apilan]] lehteä apuna opettaessaan kolminaisuutta. Armagh on perinteinen Irlannin kirkon keskus, joten [[Armaghin]] kaupunki liittyy vahvasti Patrickin muistoon. Päivänä pidetään paraateja Irlannissa ja ulkomailla, ja kaikki pukeutuvat vihreään. Minä jään harmaaksi.
+
+### v1-245
+KOHDE: kaupunki:dublin
+KYSYMYS: Mikä on Kellsin kirja ja miksi se on kuuluisa?
+VASTAUS: Mmm— tämä on aarre. Kellsin kirja on noin vuodelta 800 peräisin oleva kuvitettu käsikirjoitus, jossa on latinankieliset evankeliumit. Sitä on koristeltu monimutkaisilla kuvioilla, eläinhahmoilla ja väreillä, ja sen tekemiseen meni luultavasti vuosia. Kirja säilytetään [[Trinity Collegen]] kirjastossa, jonka kuuluisa [[Long Room]] -sali on myös nähtävyys. Sivuja käännetään ajoittain, jotta kirja säilyisi. Kyyhky ei kyllä uskaltaisi koskea.
+
+### v1-246
+KOHDE: kaupunki:dublin
+KYSYMYS: Mikä on Bloomsday?
+VASTAUS: Ai se. Se on kirjailijan juhla. Bloomsday on Dublinissa vuosittain 16. kesäkuuta vietettävä päivä, jolloin muistetaan [[James Joycen]] romaania Ulysses. Kirja kertoo yhden päivän, 16. kesäkuuta 1904, tapahtumista, ja sen päähenkilö on [[Leopold Bloom]]. Ihmiset pukeutuvat 1900-luvun alun tyyliin, lukevat otteita ja kulkevat kirjan reittejä pitkin kaupunkia. Kyyhky ei ole lukenut kuin sivun tai kaksi.
+
+### v1-247
+KOHDE: kaupunki:dublin
+KYSYMYS: Miten Guinness liittyy Dubliniin?
+VASTAUS: No niin, tämä on tuoksuva aihe. [[Arthur Guinness]] vuokrasi St. James's Gaten panimon vuonna 1759 yhdeksäksituhanneksi vuodeksi, ja siitä on tullut yksi kaupungin tunnetuimmista yrityksistä. Panimo tekee tummaa olutta, jonka maku perustuu paahdettuun ohraan. Alueella on vierailukeskus Guinness Storehouse, jossa kerrotaan oluen valmistuksesta. Panimo sijaitsee [[St. James's Gate]] -alueella, ja Guinness on osa dublinilaisen pubin arkea.
+
+### v1-248
+KOHDE: kaupunki:dublin
+KYSYMYS: Mitä viuhkaikkuna on ja miksi se kuuluu Dubliniin?
+VASTAUS: Tuota niin. Se on pieni yksityiskohta. Viuhkaikkuna on oven yläpuolella oleva puolipyöreä ikkuna, joka päästää valoa sisään. Dublinin 1700-luvun [[georgiaaniset]] talot ovat tiiliriviä, joiden julkisivut ovat tasaisia ja ovet usein kirkkaanvärisiä, ja ikkunat ovat tämän tyylin tunnusmerkki. Hyviä esimerkkejä on [[Merrion Squaren]] ympärillä. Ovien värien syistä kerrotaan tarinoita, mutta en ole varma, mikä niistä pitää paikkansa.
+
+### v1-249
+KOHDE: kaupunki:dublin
+KYSYMYS: Mitä viikingit saivat aikaan Dublinissa?
+VASTAUS: Katotaas. Se on pitkä tarina. Viikingit perustivat Liffey-joen rantaan kauppasataman 800-luvulla, ja siitä kehittyi [[Dyflinn]], norjalais-gaelilainen kaupunki, jossa käytiin kauppaa laajasti. Jokiranta oli viikinkien laivojen paikka, ja kaupunginnimi tulee tummasta vuorovesialtaasta. Lähellä käytiin vuonna 1014 [[Clontarfin]] taistelu, jossa Brian Boru kuoli. Vanhin kerros on sitä, mitä arkeologit löytävät.
+
+### v1-250
+KOHDE: maa:ISL
+KYSYMYS: Miksi Islannissa on niin paljon tulivuoria?
+VASTAUS: Annas ku mietin. Islanti sijaitsee [[Keski-Atlantin harjanteella]], jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan. Laattojen väliin nousee kuumaa kiveä, minkä vuoksi saarella on toistasataa tulivuorta ja [[kuumia lähteitä]]. Maanalainen lämpö on myös arjen voimavara, sillä se lämmittää yhä lähes kaikki talot. Kyl minä katolta ton höyryn tunnistan.
+
+### v1-251
+KOHDE: maa:ISL
+KYSYMYS: Miten islantilaiset kaatoivat hallituksensa vuonna 2009?
+VASTAUS: Hetkinen ny. Lokakuussa 2008 Islannin kolme suurta [[pankkia]] kaatui muutamassa päivässä, ja koko maan talous romahti. Ihmiset alkoivat kokoontua joka lauantai [[Alþingin]] eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: mukana oli kattiloita, pannuja ja kauhoja, joita hakattiin niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai nimen [[kattilakumous]], ja hallitus erosi parin viikon sisällä. Myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan. Ei ihme, että parlamentin kyyhkyset lähtivät lentoon.
+
+### v1-252
+KOHDE: maa:ISL
+KYSYMYS: Miksi Islanti ja Britannia riitelivät kalastusrajoista?
+VASTAUS: Kas vaan, tää on hyvä tarina. Kun Islanti laajensi kalastusrajaansa vuosina 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian [[troolarit]] eivät suostuneet väistymään, eikä Britannian laivasto liioin. Kolmessa niin sanotussa [[turskasodassa]] Islannin [[rannikkovartioston]] pienet alukset ajoivat troolareiden perässä ja leikkasivat verkkoketjut irti erityisillä leikkureilla. Yhteenotot jäivät pääosin ilman tulitusta, mutta aluksia vaurioitui kymmeniä, ja vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan. Verkonleikkuri, kyyhkyn silmin ihan outo ase.
+
+### v1-253
+KOHDE: maa:ISL
+KYSYMYS: Miksi Islannin sisämaassa ei ole kyliä?
+VASTAUS: Nyt muistan: Islannin keskusta on korkeaa, ruskeaa [[ylänköä]], jossa ei ole kyliä lainkaan, ja sen päällä on [[jäätiköitä]]. Suurin niistä on kaakon [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä. Asutus on siksi keskittynyt kapealle kehälle rantojen tuntumaan, jossa korkokartallakin näkyy vihreää. Ylhäältä katsottuna se on kyl aika valkoinen maa.
+
+### v1-254
+KOHDE: maa:ISL
+KYSYMYS: Mitä Þingvellirissä tapahtui vuonna 930?
+VASTAUS: Ai se. Þingvellirin rotkossa kokoontui vuonna 930 [[Alþingi]], islantilaisten yhteinen kansankokous, jonka perinne elää nykyisessä parlamentissa. Kokouspaikka sijaitsee alueella, jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan, joten rotko on syntynyt maankuoren liikkeistä. Nykyään parlamentti istuu [[Reykjavikissa]]. Parlamentti rotkossa, minusta ihan järkevä paikka.
+
+### v1-255
+KOHDE: kaupunki:islanti
+KYSYMYS: Onko islannin kieli oikeasti muuttumaton tuhat vuotta?
+VASTAUS: Joo, tän minä tiedän. Islannin kieli on muuttunut poikkeuksellisen vähän: lähteiden mukaan se ei ole muuttunut tuhanteen vuoteen, ja nykyislantilaiset pystyvät lukemaan keskiaikaisia [[saagoja]] verraten vaivattomasti. Siihen on vaikuttanut saaren eristyneisyys sekä aktiivinen [[kielenhuolto]], jossa uusille asioille luodaan sanat mieluummin vanhoista aineksista kuin lainataan vieraita. Täysin muuttumattomasta kielestä ei silti voi puhua, sillä esimerkiksi ääntäminen on vaihtunut. Tuhat vuotta ja yhä samat sanat, siinä on kyl kyyhkyllekin opittavaa.
+
+### v1-256
+KOHDE: kaupunki:islanti
+KYSYMYS: Miksi Islannissa julkaistaan niin paljon kirjoja?
+VASTAUS: Kato, kirjat on tässä maassa vakava asia. Lähteiden mukaan Islannissa julkaistaan kirjoja enemmän asukasta kohti kuin missään muualla, ja taustalla on vahva kertomaperinne, jonka juuret ovat keskiaikaisissa [[saagoissa]]. Tunnettu tapa on [[Jólabókaflóð]], jouluinen kirjatulva, jossa kirjoja annetaan lahjaksi jouluna ja uutuudet ilmestyvät syksyllä. En ole varma kaikista tavan yksityiskohdista. Kukaan ei tosin koskaan lahjoita minulle pullaa, vaan aina vain kirjoja.
+
+### v1-257
+KOHDE: kaupunki:islanti
+KYSYMYS: Miten Islannissa lämmitetään talot?
+VASTAUS: Mmm— Islannissa suurin osa taloista lämmitetään [[geotermisellä energialla]] eli maanalaisella lämmöllä, ja kuumaa vettä johdetaan putkia pitkin suoraan taloihin. Taustalla on se, että saarella on toistasataa tulivuorta ja kuumia lähteitä, koska se sijaitsee mannerlaattojen rajalla. Osa sähköstäkin tuotetaan samalla [[maanalaisella lämmöllä]], ja perinteisesti kuumissa lähteissä on pesty myös pyykkiä. Lämmin talo, lämmin kyyhky, siinä on kyl tavoite.
+
+### v1-258
+KOHDE: kaupunki:islanti
+KYSYMYS: Mitä Islannissa syödään perinteisesti?
+VASTAUS: Selvä juttu. Islannin perinteiseen ruokaan kuuluvat kala ja [[lammas]], ja tunnettuja erikoisuuksia ovat [[skyr]], paksu hapanmaitotuote, sekä [[hákarl]], hapatettu ja kuivattu hai. Hákarl on makuasia, ja monet vierailijat pitävät sitä haastavana. En ole varma kaikista alueellisista eroista. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+
+### v1-259
+KOHDE: kaupunki:islanti
+KYSYMYS: Miksi Islantia kutsutaan tulen ja jään maaksi?
+VASTAUS: Odotas vähän. Nimitys johtuu siitä, että samalla saarella on sekä [[tulivuoria]] että [[jäätiköitä]]. Saarella on toistasataa tulivuorta ja kuumaa lähdettä, koska se istuu mannerlaattojen rajalla, ja kaakossa kohoaa [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta. Tuli ja jää asuvat siis lähes vierekkäin. Tuli ja jää, ja minä siinä välissä ilman villapaitaa.
+
+### v1-260
+KOHDE: maa:ITA
+KYSYMYS: Milloin Italia yhdistyi yhdeksi valtioksi?
+VASTAUS: No niin, tämä on lyhyt vastaus. Yhtenäinen Italia syntyi vuonna 1861, kun maa yhdistyi kuningaskunnaksi. Sitä ennen niemimaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja [[kaupunkivaltioita]]. Yhdistymisessä keskeinen hahmo oli punapaitainen sissipäällikkö [[Giuseppe Garibaldi]], joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen kuninkaalle. Alle kaksi sataa vuotta on kyl lyhyt aika Rooman rinnalla.
+
+### v1-261
+KOHDE: maa:ITA
+KYSYMYS: Miksi Italiassa puhutaan niin monia murteita?
+VASTAUS: Tuota niin. Vuosisatoja maa oli itsenäisten [[kaupunkivaltioiden]] ja pienten valtioiden joukko, ja jokaisella seudulla kehittyi oma puhetapansa. Kun yhtenäinen Italia syntyi vuonna 1861, vain harva osasi yhteistä italiaa, ja kieli opittiin vasta koulusta, radiosta ja televisiosta. Edelleen [[murteet]], ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Kyyhky kuulee ne kaikki, mutta ymmärtää vain osan.
+
+### v1-262
+KOHDE: maa:ITA
+KYSYMYS: Miltä Italian pohjoisosa näyttää verrattuna etelään?
+VASTAUS: No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot ja suuri osa tehtaista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja etelässä ja Sisiliassa [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.
+
+### v1-263
+KOHDE: maa:ITA
+KYSYMYS: Mitä Italian ruoasta kannattaa tietää?
+VASTAUS: Hyvä kysymys tuo. Italiassa ruoka vaihtelee alueittain, sillä maa oli vuosisatoja pienten valtioiden tilkkutäkki, ja jokaisella seudulla on omat erikoisuutensa. Pohjoisessa suositaan esimerkiksi [[risottoa]], ja pizzan kotikaupunkina pidetään [[Napolia]]. Leivonnaisten puolella tunnetaan jouluna syötävä [[panettone]] sekä Roomassa suosittu maritozzo. Pullaksi sanon vain, että maritozzo on minun suosikkini.
+
+### v1-264
+KOHDE: maa:ITA
+KYSYMYS: Mitkä valtiot ovat Italian rajojen sisällä?
+VASTAUS: Sepä sattui: Italian rajojen sisäpuolella on kaksi omaa valtiota, [[Vatikaani]] ja [[San Marino]]. Vatikaani sijaitsee Rooman keskellä, ja San Marino sijaitsee Apenniinien rinteillä. Italiassa on lisäksi enemmän [[Unescon]] maailmanperintökohteita kuin missään muussa maassa. Kaksi valtiota yhden sisällä, ja minä lennän niiden yli kysymättä lupaa.
+
+### v1-265
+KOHDE: kaupunki:venetsia
+KYSYMYS: Miten Venetsia on rakennettu veden päälle?
+VASTAUS: Ai tota. Venetsia on rakennettu yli sadalle saarelle matalaan [[laguuniin]], ja talot seisovat pohjamutaan lyötyjen [[puupaalujen]] varassa. Saaria yhdistää yli 400 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin. Paalujen kestävyys selitetään yleensä sillä, että ne ovat vedessä, jossa happea on vähän, mutta en ole varma kaikista yksityiskohdista. Minä en kyl nostaisi taloa veteen, mutta ei minulta kysytty.
+
+### v1-266
+KOHDE: kaupunki:venetsia
+KYSYMYS: Millainen valtio Venetsian tasavalta oli?
+VASTAUS: Just niin, tästä riittää kerrottavaa. Venetsia oli keskiajalta vuoteen 1797 itsenäisen tasavallan pääkaupunki, siis lähes vuosituhannen, ja siitä käytettiin nimeä [[La Serenissima]]. Sen laivat hallitsivat idänkauppaa, ja vauraus näkyy yhä Pyhän Markuksen torilla basilikan kultamosaiikeissa ja [[dogen palatsin]] kaaririvistössä. Itsenäisyys päättyi [[Napoleoniin]], ja vuonna 1866 Venetsiasta tuli osa Italiaa. Tuhat vuotta tasavaltaa, siinä on kyl kyyhkyllekin sulateltavaa.
+
+### v1-267
+KOHDE: kaupunki:venetsia
+KYSYMYS: Mitä Venetsiassa tapahtuu nousuveden aikaan?
+VASTAUS: Katotaas. Syksyisin nousuvesi tulvii Venetsian toreille, ja ilmiötä kutsutaan italiaksi nimellä [[acqua alta]]. Pyhän Markuksen tori on yksi kaupungin matalimmista kohdista, ja tulvan aikana kaduille asennetaan korotettuja kävelyteitä. Tulvilta suojaamaan on rakennettu [[MOSE]]-niminen tulvaporttijärjestelmä, mutta en ole varma sen nykyisestä toiminnasta. Minä lennän vedenpinnan yli, siinä on se etu.
+
+### v1-268
+KOHDE: kaupunki:venetsia
+KYSYMYS: Miksi Venetsiassa ei ole autoja?
+VASTAUS: Tost minä osaan kertoo. Venetsiassa kaikki liikkuminen tapahtuu jalan tai vettä pitkin, sillä kaupunki koostuu saarista, joita yhdistävät sillat ja kanavat. Pääväylä on [[Canal Grande]], ja liikenne hoidetaan vesibusseilla eli [[vaporetoilla]] sekä veneillä. Perinteinen [[gondoli]] on nykyään pääosin matkailijoiden kulkuneuvo. Autoton kaupunki, jossa kyyhkyt hallitsevat toreja.
+
+### v1-269
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kuinka paljon ihmisiä Venetsiassa asuu?
+VASTAUS: Annas ku mietin. Venetsian kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000, ja suurin osa väestä asuu mantereen puolella, esimerkiksi [[Mestressä]]. Asukasmäärä on pienentynyt vuosikymmenten mittaan, ja syinä mainitaan usein asumisen kalleus sekä [[matkailun]] vaikutus; en ole varma tarkoista luvuista. Torilla on kyl aina enemmän turisteja kuin kyyhkyjä.
+

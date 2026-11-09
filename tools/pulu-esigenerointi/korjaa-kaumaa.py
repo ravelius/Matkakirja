@@ -33,12 +33,16 @@ for k in lohkot(open(polku, encoding='utf-8').read()):
         v, i = k['id'].split('-'); i = int(i)
         x = data[v][i]
         t = x['vastaus']
-        if k.get('SYY', '').startswith('LINKKI'):
+        if k.get('SYY', '').startswith('LINKKI:'):
             print(f"LINKKI (käsin) {k['id']}: {k['SYY']}"); continue
         if 'VANHA' not in k or 'UUSI' not in k: raise ValueError('VANHA tai UUSI puuttuu')
         if t.count(k['VANHA']) != 1: raise ValueError(f"katkelma löytyy {t.count(k['VANHA'])} kertaa")
         u = t.replace(k['VANHA'], k['UUSI'])
-        if set(LINKKI.findall(t)) != set(LINKKI.findall(u)): raise ValueError('linkit muuttuisivat')
+        u = re.sub(r'(?<=\S) {2,}(?=\S)', ' ', u).replace(' .', '.').replace(' ,', ',').strip()   # poiston jäljet
+        if k.get('SYY', '').startswith('LINKKIMUUTOS'):   # linkin nimi korjataan tarkoituksella (vain V2; V1:n linkeillä lisaa-avain)
+            if v != 'v2': raise ValueError('LINKKIMUUTOS vain V2:lle')
+            x['linkit'] = list(dict.fromkeys(LINKKI.findall(u)))
+        elif set(LINKKI.findall(t)) != set(LINKKI.findall(u)): raise ValueError('linkit muuttuisivat')
         x['vastaus'] = u; ok += 1
     except Exception as e:
         virhe += 1; print(f"HYLÄTTY {k.get('id')}: {e}")

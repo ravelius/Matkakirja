@@ -8096,7 +8096,7 @@
   "kohde": "kaupunki:zagreb",
   "kasite": "Olinka Vištica",
   "kysymys": "Kerro lisää: Olinka Vištica",
-  "vastaus": "Olinka Vištica on kroatialainen elokuvatuottaja ja taiteilija. Hän perusti yhdessä kuvanveistäjä [[Dražen Grubišić]]in kanssa Särkyneiden suhteiden museon, jonka idea syntyi tarinan mukaan, kun kaksikon oma suhde päättyi vuonna 2003 ja heidän piti jakaa yhteiset tavarat. He keräsivät aluksi lahjoituksia vain pienenä näyttelynä, joka kiersi eri paikoissa, ja pysyvä museo avattiin Zagrebin [[Yläkaupungissa]] vuonna 2010. Hänen urastaan muuten en tiedä paljoa.",
+  "vastaus": "Olinka Vištica on kroatialainen elokuvatuottaja ja taiteilija. Hän perusti yhdessä kuvanveistäjä [[Dražen Grubišić]]in kanssa Särkyneiden suhteiden museon, jonka idea syntyi tarinan mukaan, kun kaksikon oma suhde päättyi vuonna 2003 ja heidän piti jakaa yhteiset tavarat. He keräsivät aluksi lahjoituksia vain pienenä näyttelynä, joka kiersi eri paikoissa, ja pysyvä museo avattiin Zagrebin [[Yläkaupungissa]] vuonna 2010.",
   "linkit": [
    "Dražen Grubišić",
    "Yläkaupungissa"
@@ -12910,10 +12910,10 @@
   "kohde": "kaupunki:skopje",
   "kasite": "tavče gravče",
   "kysymys": "Kerro lisää: tavče gravče",
-  "vastaus": "Tavče gravče tarkoittaa suunnilleen papuja pannulla, ja sitä pidetään Pohjois-Makedonian kansallisruokana. Pääraaka-aineena ovat isot voipavut, jotka liotetaan yön yli kylmässä vedessä, ja vesi vaihdetaan keiton aikana useaan kertaan. Pavut keitetään kahdesti ennen paistamista, ja sipulia kuullotetaan erikseen jauhojen ja punaisen paprikajauheen kanssa. Seos yhdistetään papuihin, ja ruoka paistetaan lasittamattomassa savipadassa 220 asteessa. Se tarjotaan kuumana suoraan padasta, usein [[kofta]]-lihapullien ja marinoitujen kasvisten eli [[torshin]] kanssa.",
+  "vastaus": "Tavče gravče tarkoittaa suunnilleen papuja pannulla, ja sitä pidetään Pohjois-Makedonian kansallisruokana. Pääraaka-aineena ovat isot voipavut, jotka liotetaan yön yli kylmässä vedessä, ja vesi vaihdetaan keiton aikana useaan kertaan. Pavut keitetään kahdesti ennen paistamista, ja sipulia kuullotetaan erikseen jauhojen ja punaisen paprikajauheen kanssa. Seos yhdistetään papuihin, ja ruoka paistetaan savipadassa 220 asteessa. Se tarjotaan kuumana suoraan padasta, usein [[kofta]]-lihapullien ja marinoitujen kasvisten eli [[turšijan]] kanssa.",
   "linkit": [
    "kofta",
-   "torshin"
+   "turšijan"
   ],
   "jatkot": [
    "Mitä torshi on?",
@@ -19406,7 +19406,7 @@
   "kohde": "maa:UKR",
   "kasite": "Kiova",
   "kysymys": "Kerro lisää: Kiova",
-  "vastaus": "Kiova on Ukrainan pääkaupunki ja suurin kaupunki, noin kolmen miljoonan asukkaan kaupunki Dneprin jyrkällä länsirannalla. Maasto jakoi kaupungin kahteen kerrokseen: ylhäällä on kirkkojen ja porttien yläkaupunki ja alhaalla joen rannassa [[Podil]]. Keskiajalla Kiova johti [[Kiovan Rusia]], ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin ja [[Pyhän Sofian katedraalin]], joka valmistui ilmeisesti vuonna 1037, ja Dneprin rinteessä sijaitsee [[Luolaluostari]]. Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella, mikä kertoo rantatörmän jyrkkyydestä.",
+  "vastaus": "Kiova on Ukrainan pääkaupunki ja suurin kaupunki, noin kolmen miljoonan asukkaan kaupunki Dneprin jyrkällä länsirannalla. Maasto jakoi kaupungin kahteen kerrokseen: ylhäällä on kirkkojen ja porttien yläkaupunki ja alhaalla joen rannassa [[Podil]]. Keskiajalla Kiova johti [[Kiovan Rusia]], ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin ja [[Pyhän Sofian katedraalin]], jonka rakentaminen aloitettiin perimätiedon mukaan vuonna 1037, ja Dneprin rinteessä sijaitsee [[Luolaluostari]]. Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella, mikä kertoo rantatörmän jyrkkyydestä.",
   "linkit": [
    "Podil",
    "Kiovan Rusia",

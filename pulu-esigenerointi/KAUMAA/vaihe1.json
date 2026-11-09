@@ -165,7 +165,7 @@
   "kohde": "maa:AUT",
   "kysymys": "Millainen on oikea Wiener Schnitzel?",
   "uusi": true,
-  "vastaus": "Ai se. Oikea wieninleike eli [[Wiener Schnitzel]] valmistetaan [[Itävallassa]] vasikanlihasta, joka vasaroidaan ohueksi, leivitetään ja paistetaan runsaassa rasvassa kullanruskeaksi. Nimeä käytetään Itävallassa lain mukaan vain vasikanlihasta tehdystä leikkeestä, ja possusta tehty versio on nimeltään yleensä Schnitzel Wiener Art. Leikkeen kanssa tarjotaan usein sitruunaa, perunasalaattia tai persiljaperunoita. Paistettaessa leivitys nousee kuplille ja irtoaa hieman lihan pinnasta, ja se kuuluu asiaan.\n\nPidän itse enemmän itävaltalaisista [[Buchteln]]-pulleista, jotka tarjotaan vaniljakastikkeen kanssa, vaikka kaikki muut kehuvat leikettä. Siinä on minulle selvä ero ruokalajien välillä.",
+  "vastaus": "Ai se. Oikea wieninleike eli [[Wiener Schnitzel]] valmistetaan [[Itävallassa]] vasikanlihasta, joka vasaroidaan ohueksi, leivitetään ja paistetaan runsaassa rasvassa kullanruskeaksi. Nimeä käytetään Itävallassa lain mukaan vain vasikanlihasta tehdystä leikkeestä, ja possusta tehty versio on nimeltään yleensä Schnitzel Wiener Art. Leikkeen kanssa tarjotaan usein sitruunaa, perunasalaattia tai persiljaperunoita. Paistettaessa leivitys nousee kuplille ja irtoaa hieman lihan pinnasta, ja se kuuluu asiaan. Kyyhkynä pidän silti enemmän [[Buchteln]]-pulleista vaniljakastikkeen kanssa: leike on Itävallan ylpeys, pulla minun.",
   "linkit": [
    "Wiener Schnitzel",
    "Itävallassa",
@@ -967,7 +967,7 @@
   "kohde": "kaupunki:bern",
   "kysymys": "Onko Bern Sveitsin pääkaupunki?",
   "uusi": true,
-  "vastaus": "No niin, tähän pitää vastata tarkasti. Sveitsin perustuslaki ei nimeä virallista pääkaupunkia, vaan [[Bern]] on liittokaupunki eli hallituksen ja parlamentin kotipaikka. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28. marraskuuta 1848. Kaupungissa asuu noin 147 000 ihmistä, ja hallitus sekä [[parlamentti]] istuvat samassa rakennuksessa, [[liittopalatsi]]ssa. Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.",
+  "vastaus": "No niin, tähän pitää vastata tarkasti. Sveitsin perustuslaki ei nimeä virallista pääkaupunkia, vaan [[Bern]] on liittokaupunki eli hallituksen ja parlamentin kotipaikka. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28. marraskuuta 1848. Kaupungissa asuu noin 140 000 ihmistä, ja hallitus sekä [[parlamentti]] istuvat samassa rakennuksessa, [[liittopalatsi]]ssa. Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.",
   "linkit": [
    "Bern",
    "parlamentti",
@@ -1930,7 +1930,7 @@
   "kohde": "kaupunki:granada",
   "kysymys": "Mikä on Sacromonte ja zambra?",
   "uusi": true,
-  "vastaus": "Ai tota. Sacromonte on Granadan kaupunginosa Albaicínin takana olevalla rinteellä, jossa luolat toimivat asuntoina. Luolissa kehittyi zambra, oma flamencon muoto, jota on perinteisesti esitetty luolatiloissa. [[Zambra]] on sidottu paikkaan ja yhteisöön, ja luola-asunnot ovat edelleen osa alueen ilmettä. Sacromonte on kaupungin romaniyhteisön perinteinen asuinalue, ja alueen kulttuurista on tullut kiinnostava matkailijoille. [[Sacromonte]] on siis sekä asuinalue että kulttuuriperinnön paikka. [[Albaicín]] on sen vieressä sijaitseva vanha maurilainen kaupunginosa. Tarkkoja tietoja asukasmääristä en ole varma.",
+  "vastaus": "Ai tota. Sacromonte on Granadan kaupunginosa Albaicínin takana olevalla rinteellä, jossa luolat toimivat asuntoina. Luolissa kehittyi zambra, oma flamencon muoto, jota on perinteisesti esitetty luolatiloissa. [[Zambra]] on sidottu paikkaan ja yhteisöön, ja luola-asunnot ovat edelleen osa alueen ilmettä. Sacromonte on kaupungin romaniyhteisön perinteinen asuinalue, ja alueen kulttuurista on tullut kiinnostava matkailijoille. [[Sacromonte]] on siis sekä asuinalue että kulttuuriperinnön paikka. [[Albaicín]] on sen vieressä sijaitseva vanha maurilainen kaupunginosa. Rinteen valkeat luolaovet näkyvät kyyhkylle kauas.",
   "linkit": [
    "Zambra",
    "Sacromonte",
@@ -2101,7 +2101,7 @@
   "kohde": "maa:EST",
   "kysymys": "Kuinka läheisiä viro ja suomi ovat toisilleen?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Viro ja suomi ovat sukukieliä, ja ne kuuluvat samaan itämerensuomalaiseen kieliryhmään. Monet perussanat ovat samankaltaisia, mutta kielet ovat eronneet toisistaan vuosisatojen aikana, joten ne eivät ole vastavuoroisesti ymmärrettäviä ilman opiskelua. [[Viron kieli]] on suomen lisäksi sukua esimerkiksi [[karjalalle]]. Virossa on murteita, joista eteläisimmät poikkeavat erityisen paljon. Suomalainen ymmärtää virosta alkuun yllättävän paljon, mutta kieliopissa on eroja. Naapuruus on tehnyt kielistä tutut mutta ei identtisiä.",
+  "vastaus": "Hyvä kysymys tuo. Viro ja suomi ovat sukukieliä, ja ne kuuluvat samaan itämerensuomalaiseen kieliryhmään. Monet perussanat ovat samankaltaisia, mutta kielet ovat eronneet toisistaan vuosituhansien aikana, joten ne eivät ole vastavuoroisesti ymmärrettäviä ilman opiskelua. [[Viron kieli]] on suomen lisäksi sukua esimerkiksi [[karjalalle]]. Virossa on murteita, joista eteläisimmät poikkeavat erityisen paljon. Suomalainen ymmärtää virosta alkuun yllättävän paljon, mutta kieliopissa on eroja. Naapuruus on tehnyt kielistä tutut mutta ei identtisiä. Kyyhkyt kyllä kujertavat samalla tavalla lahden kummallakin puolella.",
   "linkit": [
    "Viron kieli",
    "karjalalle"
@@ -2403,7 +2403,7 @@
   "kohde": "kaupunki:lappi",
   "kysymys": "Miksi Rovaniemi jouduttiin rakentamaan uudelleen?",
   "uusi": true,
-  "vastaus": "Hmm, tää on vakava asia. Rovaniemi tuhoutui lokakuussa 1944 Lapin sodan lopussa, kun vetäytyvät saksalaisjoukot polttivat kaupungin, ja rakennuksista noin yhdeksänkymmentä prosenttia oli tuhoutunut. Tapahtumasta on nyt yli kahdeksankymmentä vuotta, ja Suomi oli tuolloin jo irtautunut jatkosodasta Neuvostoliiton kanssa solmitun välirauhan myötä. Jälleenrakennuskaavan laati vuonna 1946 arkkitehti [[Alvar Aalto]]: pääkadut muodostavat kartalla [[poronsarvet]], ja uusi kaupunki nousi vanhan paikalle. Onpas siitä onneksi pitkä aika.",
+  "vastaus": "Hmm, tää on vakava asia. Rovaniemi tuhoutui lokakuussa 1944 Lapin sodan lopussa, kun vetäytyvät saksalaisjoukot polttivat kaupungin, ja rakennuksista noin yhdeksänkymmentä prosenttia oli tuhoutunut. Tapahtumasta on nyt yli kahdeksankymmentä vuotta, ja Suomi oli tuolloin jo irtautunut jatkosodasta Neuvostoliiton kanssa solmitun välirauhan myötä. Jälleenrakennuskaavan laati vuosina 1945–1946 arkkitehti [[Alvar Aalto]]: pääkadut muodostavat kartalla [[poronsarvet]], ja uusi kaupunki nousi vanhan paikalle. Onpas siitä onneksi pitkä aika.",
   "linkit": [
    "Alvar Aalto",
    "poronsarvet"
@@ -6056,7 +6056,7 @@
   "kohde": "kaupunki:krakova",
   "kysymys": "Mikä on Wawelin lohikäärmeen tarina?",
   "uusi": true,
-  "vastaus": "Ai tota, sepä sattui, pidä kiinni. Legendan mukaan Wawelin kukkulan alla asui lohikäärme eli [[Smok Wawelski]], joka pelotti kaupunkilaisia, kunnes suutarin kisälli keksi keinon: hän täytti lampaan ja antoi sen pedolle. Lohikäärme joi niin paljon vettä [[Veikselistä]], että se halkesi. Joen rannassa on nykyään lohikäärmeen patsas, joka puhaltaa oikeaa tulta tietyin väliajoin. Tarina on kansantarua, ei historiaa, ja siitä on olemassa useita versioita. Pulla oli ehkä kuitenkin lampaasta unohtunut.",
+  "vastaus": "Ai tota, tää on hyvä tarina. Legendan mukaan Wawelin kukkulan alla asui lohikäärme eli [[Smok Wawelski]], joka pelotti kaupunkilaisia, kunnes suutarin kisälli keksi keinon: hän täytti lampaan ja antoi sen pedolle. Lohikäärme joi niin paljon vettä [[Veikselistä]], että se halkesi. Joen rannassa on nykyään lohikäärmeen patsas, joka puhaltaa oikeaa tulta tietyin väliajoin. Tarina on kansantarua, ei historiaa, ja siitä on olemassa useita versioita. Kyyhky ei olisi moiseen lampaaseen nokkaansa koskenut.",
   "linkit": [
    "Smok Wawelski",
    "Veikselistä"
@@ -7398,7 +7398,7 @@
   "kohde": "kaupunki:istanbul",
   "kysymys": "Miten Galatan jyrkkä mäki on voitettu junalla?",
   "uusi": true,
-  "vastaus": "Katotaas. Karaköyn ja Galatan mäen välillä kulkee lyhyt maanalainen köysirata, jota sanotaan nimellä [[Tünel]]. Se avattiin vuonna 1875, ja sen tarkoitus oli helpottaa nousua rannasta mäen päälle, jossa [[Galata]] ja Beyoğlu sijaitsevat. Rata kulkee vain alle kilometrin matkan, mutta säästää monta nousua. Isoisäsi kantajan olisi pitänyt odottaa pari vuotta.",
+  "vastaus": "Katotaas. Karaköyn ja Galatan mäen välillä kulkee lyhyt maanalainen köysirata, jota sanotaan nimellä [[Tünel]]. Se avattiin vuonna 1875, ja sen tarkoitus oli helpottaa nousua rannasta mäen päälle, jossa [[Galata]] ja Beyoğlu sijaitsevat. Rata kulkee vain alle kilometrin matkan, mutta säästää monta nousua. Siivillä sitä mäkeä ei edes huomaa.",
   "linkit": [
    "Tünel",
    "Galata"
@@ -7803,7 +7803,7 @@
   "kohde": "kaupunki:odessa",
   "kysymys": "Kenen mukaan Odessan pääkatu on nimetty?",
   "uusi": true,
-  "vastaus": "Ai tota. Pääkatu on [[Deribasivska]], ja se on nimetty amiraali [[José de Ribasin]] mukaan. De Ribas syntyi Napolissa ja palveli Venäjän keisarikunnan laivastossa; hän oli mukana Odessan perustamisen aikaan vanhan linnoituksen valtaamisessa. Satamakaupungin perustamiskäskyn antoi vuonna 1794 keisarinna [[Katariina]]. Katu on nykyään kävelykatu, jonka varrella on kahviloita ja puistoja. Pitkä nimi lyhyelle kadulle.",
+  "vastaus": "Ai tota. Pääkatu on [[Deribasivska]], ja se on nimetty amiraali [[José de Ribasin]] mukaan. De Ribas syntyi Napolissa ja palveli Venäjän keisarikunnan laivastossa; hän valtasi vuonna 1789 Hadžibeyn linnoituksen, jonka paikalle Odessa perustettiin viisi vuotta myöhemmin. Satamakaupungin perustamiskäskyn antoi vuonna 1794 keisarinna [[Katariina]]. Katu on nykyään kävelykatu, jonka varrella on kahviloita ja puistoja. Pitkä nimi lyhyelle kadulle.",
   "linkit": [
    "Deribasivska",
    "José de Ribasin",

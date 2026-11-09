@@ -1,0 +1,56 @@
+### v1-537
+VANHA: hän oli mukana Odessan perustamisen aikaan vanhan linnoituksen valtaamisessa.
+UUSI: hän valtasi vuonna 1789 Hadžibeyn linnoituksen, jonka paikalle Odessa perustettiin viisi vuotta myöhemmin.
+SYY: PT:n pistokoe 2 #8: linnoitus 1789, perustaminen 1794
+### v1-144
+VANHA: eronneet toisistaan vuosisatojen aikana
+UUSI: eronneet toisistaan vuosituhansien aikana
+SYY: PT:n pistokoe 2 #9
+### v1-144
+VANHA: Naapuruus on tehnyt kielistä tutut mutta ei identtisiä.
+UUSI: Naapuruus on tehnyt kielistä tutut mutta ei identtisiä. Kyyhkyt kyllä kujertavat samalla tavalla lahden kummallakin puolella.
+SYY: PT:n pistokoe 2 #9: Pulun ääni
+### v1-417
+VANHA: Ai tota, sepä sattui, pidä kiinni.
+UUSI: Ai tota, tää on hyvä tarina.
+SYY: PT:n pistokoe 2 #10: outo aloitus
+### v1-417
+VANHA: Pulla oli ehkä kuitenkin lampaasta unohtunut.
+UUSI: Kyyhky ei olisi moiseen lampaaseen nokkaansa koskenut.
+SYY: PT:n pistokoe 2 #10: merkityksetön loppulause
+### v1-132
+VANHA: Tarkkoja tietoja asukasmääristä en ole varma.
+UUSI: Rinteen valkeat luolaovet näkyvät kyyhkylle kauas.
+SYY: PT:n pistokoe 2 #12: irrallinen loppulause
+### v1-11
+VANHA: asiaan.\n\nPidän itse enemmän itävaltalaisista [[Buchteln]]-pulleista, jotka tarjotaan vaniljakastikkeen kanssa, vaikka kaikki muut kehuvat leikettä. Siinä on minulle selvä ero ruokalajien välillä.
+UUSI: asiaan. Kyyhkynä pidän silti enemmän [[Buchteln]]-pulleista vaniljakastikkeen kanssa: leike on Itävallan ylpeys, pulla minun.
+SYY: PT:n pistokoe 2 #15: epäselvä loppu ja kappalejako
+### v2-1300
+VANHA: joka valmistui ilmeisesti vuonna 1037
+UUSI: jonka rakentaminen aloitettiin perimätiedon mukaan vuonna 1037
+SYY: PT:n pistokoe 2 #25 VAKAVA: 1037 aloitus, ei valmistuminen
+### v2-864
+VANHA: lasittamattomassa savipadassa
+UUSI: savipadassa
+SYY: PT:n pistokoe 2 #26: epävarma
+### v2-864
+VANHA: eli [[torshin]] kanssa
+UUSI: eli [[turšijan]] kanssa
+SYY: LINKKIMUUTOS: PT:n pistokoe 2 #26 (makedoniaksi turšija)
+### v1-509
+VANHA: Isoisäsi kantajan olisi pitänyt odottaa pari vuotta.
+UUSI: Siivillä sitä mäkeä ei edes huomaa.
+SYY: PT:n pistokoe 2 #3: epäselvä loppulause
+### v1-65
+VANHA: noin 147 000 ihmistä
+UUSI: noin 140 000 ihmistä
+SYY: PT:n pistokoe 2 #6
+### v1-165
+VANHA: Jälleenrakennuskaavan laati vuonna 1946 arkkitehti
+UUSI: Jälleenrakennuskaavan laati vuosina 1945–1946 arkkitehti
+SYY: PT:n pistokoe 2 #7
+### v2-541
+VANHA:  Hänen urastaan muuten en tiedä paljoa.
+UUSI:
+SYY: PT:n pistokoe 2 #22: sopimaton loppulause
