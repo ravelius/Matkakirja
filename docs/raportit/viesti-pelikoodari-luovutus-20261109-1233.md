@@ -40,3 +40,7 @@ KÄYNNISSÄ: JU:n 1d-ajot (pyydetty 12.2x) – Postivahti: älä nollaa ennen ku
   01-kala-allas-1 … 04-kala-allas-4, 05-kukkaruukku-1 … 08-kukkaruukku-4 (tekstit tee_lista.py samassa kansiossa = tekstit.fi.json:n huudot).
 - TEE: muunna mp3:ksi kuten aiemmat (vrt. puyi-rikkoutuminen-v4/huudot/), kansio esim. juoksupeli/puyi-ulkoesineet-v1/huudot/, mittaa kestot
   (ffprobe), lisää 8 riviä PuyiHuudot.Kaikki-taulukkoon; ämpäriin vienti JU:n kautta (kysy JU:lta tapa, kuten aiemmat huudot).
+
+## LISÄYS 12.5x – kohta 3 VALMIS
+- 82c26c097 natiivi-backup pelikoodari/juoksu-huudot-ulkoesineet (734ed685d + 1): PuyiHuudot erä 4 (V5 = puyi-ulkoesineet-v1/huudot/, NUI:n
+  kestot), testi Era4UlkoesineidenHuudot, 51 huutoa; 879/879. PT:lle ilmoitettu. Ämpärivienti NUI → JU (JU ilmoittaa PK:lle) → sitten junaan.
