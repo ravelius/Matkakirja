@@ -33,6 +33,10 @@ Suunnitelma ja ehdot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leiv
   lukematta. Leivottu POIS -lataus huippu ~4,2–4,3 Gt, päällä ~2,7 Gt. 0-puolen ajot (pari-0, piikki-0) eivät saa kuvia iPadilla; kylma-0:n
   latausrivit ehtivät. PT:lle päätös: (a) VIKA-rajan QA-ohitus vertailuajoihin (suositus) tai (b) 0-puoli Macin esikatselusta. Odota PT:n vastausta.
 
+- 02.1x PT valitsi (a): VIKA-ohitus ccd8531d2 = haaran kärki ("ui muistivahti ohita", Peli/MuistiVahtiOhitus.cs + testit, vain QA, nollautuu
+  käynnistyksessä). 0-puolen skenaarioihin (pari-0, piikki-0, kylma-0) ohitus lisätty. JU ajaa KAIKKI ccd8531d2:lla: kylma-0/-1, piikki-0/-1,
+  pari-0/-1 (pari-1 uudelleen: cf4d34ee4:ssä keisari valkoinen). NS:lle cherry-pick-ohje (karsinta-3). Kuvaparien kokoaminen PT:lle odottaa ajoja.
+
 ## JONO
 1. KUVAPARI (ennen leivotun kuittausta): JU ajaa sk-ipad-pari-0/-1 cf4d34ee4:llä (jonossa "IK") → lokit/pelikoodari-pari-0 / -1, 4 kuvaa (a alku,
    b kujan pää, c tarkastelukamera kujalla, d sisäpiha). Kokoa parit (vasen 0, oikea 1, sama rajaus, täysikokoiset) PT:lle. Katso samalla
