@@ -1,0 +1,445 @@
+### v2-979
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: arktisen pyynnin
+VASTAUS: Arktinen pyynti tarkoitti Jäämerellä tehtyä hylkeen- ja valaanpyyntiä, ja siitä Tromssa sai 1800-luvun puolivälissä vaurautensa. Laivat purjehtivat Huippuvuorille ja Novaja Zemljalle, ja jo vuoden 1850 tienoilla Tromssa ohitti tärkeydessä aiemman keskuksen [[Hammerfestin]]. Pyynnin historiasta kertoo [[Polaarimuseo]], joka toimii vuonna 1837 rakennetussa laiturimakasiinissa, jonne varastoitiin aikoinaan turkiksia ja muita tavaroita. Museo muistaa erityisesti retkeilijät [[Fridtjof Nansenin]] ja [[Roald Amundsenin]], joiden polaarimatkoihin Tromssa liittyi.
+
+### v2-980
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: Huippuvuorille
+VASTAUS: Huippuvuoret on Jäämerellä Norjan pohjoispuolella sijaitseva saaristo, ja sen suurin saari on [[Spitsbergen]]. Saaristo kuuluu Norjalle vuonna 1920 tehdyn [[Huippuvuorten sopimuksen]] perusteella; sopimus tuli voimaan vuonna 1925. Suurin asutus on [[Longyearbyen]]. Alueella elää [[jääkarhuja]], ja saaristossa on pyydetty hylkeitä, valaita ja mursuja, joten sinne purjehtivat 1800-luvulla myös Tromssan pyyntialukset.
+
+### v2-981
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: puutalot
+VASTAUS: Tromssan keskustan puutalot ovat vuosilta 1789–1904, joten ne ovat peräisin ajalta, jolloin kaupunki kasvoi arktisen pyynnin keskukseksi. Kaupunki sai [[kaupunkioikeudet]] vuonna 1794, ja sen lempinimeksi vakiintui [[Pohjolan Pariisi]], kun merimiehet ihmettelivät katulyhtyjä ja kauppoja näin kaukana pohjoisessa. Samaa materiaalia on myös kaupungin [[tuomiokirkko]], joka valmistui vuonna 1861 kokonaan puusta. Puurakennukset ovat pohjoisessa tavallisia, koska puu oli käytännöllinen ja helposti saatavilla oleva rakennusaine.
+
+### v2-982
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: revontuliobservatorio
+VASTAUS: Tromssan revontuliobservatorio perustettiin kaupunkiin jo vuonna 1928, ja sen mittaussarja on maailman pisimpiä. Paikka valittiin siksi, että Tromssa on revontulivyöhykkeellä, jossa ilmiötä näkee tavallista useammin. Observatorion työ liittyy [[Tromssan yliopiston]] tutkimukseen; yliopisto perustettiin vuonna 1968 ja aloitti opetuksen vuonna 1972, ja se on maailman pohjoisin yliopisto. Sen erikoisaloja ovat revontulet, merentutkimus, arktinen lääketiede ja [[saamen kieli]]. Kaupungin lähistöllä toimii myös kansainvälinen [[EISCAT]]-tutkaverkosto, jota käytetään ylemmän ilmakehän tutkimukseen.
+
+### v2-983
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: kaamos
+VASTAUS: Kaamos eli napayö tarkoittaa aikaa, jolloin aurinko ei nouse horisontin yläpuolelle lainkaan. Tromssassa se kestää noin kaksi kuukautta talvella, mutta täysi pimeys ei silti ole vuorokauden ympäri, sillä keskipäivällä taivas voi hohtaa vaaleana. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat [[siniseksi hetkeksi]]. Kesällä sama ilmiö toimii toisin päin: [[keskiyön aurinko]] pysyy taivaalla yölläkin. Pimeässä Tromssassa nähdään myös [[revontulia]], sillä ne näkyvät parhaiten pimeinä ja pilvettöminä öinä.
+
+### v2-984
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: Tromssan tuomiokirkko
+VASTAUS: Tromssan tuomiokirkko valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan [[uusgoottilaiseen]] tyyliin, mutta poikkeuksellisesti kokonaan puusta kiven sijaan. Se on Norjan ainoa puinen luterilainen tuomiokirkko, ja sinne mahtuu yli 600 kirkkovierasta. Puurakenne oli käytännöllinen valinta pohjoisessa, jossa kiven kuljetus olisi ollut kallista, mutta se on vaatinut jatkuvaa kunnostusta ankarassa ilmastossa. Kellotorni valmistui vuotta myöhemmin, vuonna 1862. Kirkko on yhä Tromssan [[hiippakunnan]] pääkirkko ja suosittu konserttipaikka kesäisin, kun aurinko ei laske ollenkaan. Sitä ei pidä sekoittaa salmen toisella puolella olevaan [[Jäämeren katedraaliin]], joka on moderni kirkko.
+
+### v2-985
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: Christian Heinrich Groschin
+VASTAUS: Christian Heinrich Grosch oli tanskalaissyntyinen norjalainen arkkitehti, joka eli vuosina 1801–1865 ja toimi pääosin [[Christianiassa]], nykyisessä Oslossa. Lähteiden mukaan hän suunnitteli muun muassa [[Oslon yliopiston]] vanhoja rakennuksia, ja hänen tyyliään pidetään pääosin klassismina. Tromssan tuomiokirkko valmistui vuonna 1861 hänen piirustustensa mukaan [[uusgoottilaiseen]] tyyliin kokonaan puusta. Kaupungin nimi Christiania oli käytössä vuodesta 1624 vuoteen 1925, jolloin vanha nimi Oslo palautettiin.
+
+### v2-986
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: Håkon IV
+VASTAUS: Håkon IV Håkonsson hallitsi Norjaa vuosina 1217–1263, ja hänen aikaansa pidetään norjalaisen keskiajan huippukautena. Hänet kruunattiin vuonna 1247 paavin lähettilään johdolla, mikä vahvisti kuninkuuden asemaa. Hänen valtansa alle liitettiin [[Islanti]] ja Grönlanti, ja hän kuoli [[Orkneysaarilla]] paluumatkalla sotaretkeltä vuonna 1263. Bergenissä hänen aikanaan rakennettiin kivisali [[Håkonshallen]], ja hän rakennutti Tromssan seudulle kappelin vuonna 1252; sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä tuomiokirkkoa.
+
+### v2-987
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: turska
+VASTAUS: Turska on Norjan tärkeimpiä kalalajeja. [[Skrei]]-turska ui joka talvi Barentsinmereltä Norjan rannikolle kutemaan, ja osa saaliista syödään heti tuoreena [[mølje]]-ateriana, jossa on kalaa, mätiä, maksaa ja perunaa. Osa ripustetaan telineille kuivumaan helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä, ja sen jälkeen se säilyy vuosia. Turskaa myös suolataan, jolloin siitä tulee [[klippfisk]], ja kalastuksella on pitkä historia esimerkiksi [[Lofooteilla]].
+
+### v2-988
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: kuivattu kala
+VASTAUS: Kuivattu kala tarkoittaa Norjassa ennen kaikkea ilmassa ja viileässä kuivattua turskaa eli kuivakalaa, joka ripustetaan telineille helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä, ja sen jälkeen se säilyy vuosia. Tavallinen kuivakala kuivataan ilman suolaa, kun taas [[klippfisk]] on suolattua ja sitten kuivattua kalaa. Norjan kuivakalaa on viety vuosisatoja Etelä-Eurooppaan, ja [[Italiassa]] siitä on tullut osa paikallista ruokaperinnettä; tarinan mukaan venetsialainen [[Pietro Querini]] toi kalan maineen Italiaan haaksirikon jälkeen 1400-luvulla.
+
+### v2-989
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: Jäämeren
+VASTAUS: Jäämeri eli Pohjoinen jäämeri on maapallon pienin ja matalin valtameri, ja se ympäröi pohjoisnapaa. Suuri osa sen pinnasta on talvella jään peitossa. Norjan rannikolla Jäämerestä puhutaan usein väljemmin, ja siihen luetaan myös [[Barentsinmeri]], jolta [[skrei]]-turska ui talvisin rannikolle kutemaan. Norjan rannikkovedet pysyvät kuitenkin tavallista lämpimämpinä, koska [[Golfvirran]] haara lämmittää niitä, ja siksi Tromssan salmi jäätyy harvoin. Jäämeri oli 1800-luvulla Tromssan vaurauden lähde, kun kaupungin laivat pyysivät sillä hylkeitä ja valaita.
+
+### v2-990
+KOHDE: kaupunki:tromssa
+KYSYMYS: Kerro lisää: keskiyön aurinko
+VASTAUS: Keskiyön aurinko tarkoittaa ilmiötä, jossa aurinko ei laske horisontin alapuolelle yöllä. Tromssassa aurinko ei käy horisontin alapuolella lainkaan toukokuun 20. päivästä heinäkuun 22. päivään. Se kiertää taivasta ympäri ja on yölläkin ylhäällä, joten kello ei kerro mitään valosta. Ihmiset tekevät töitä puutarhassa keskiyöllä, ja monessa ikkunassa on pimennysverho. Kaupungissa järjestetään keskiyön aurinkoon ajoitettuja konsertteja ja maratonjuoksu, joka lähtee vasta puoli yhdeltätoista illalla. Ilmiö johtuu [[Maan akselin kallistuksesta]], ja [[napapiirin]] pohjoispuolella sama asia toimii talvella toisin päin [[kaamoksena]].
+
+### v2-991
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Rysy
+VASTAUS: Rysy on Puolan korkein huippu. Sen luoteinen huippu kohoaa Puolan puolella 2 499 metriin, ja vuoren varsinainen korkein kohta, noin 2 503 metriä, on rajan toisella puolella [[Slovakian]] alueella. Vuori sijaitsee Tatroilla, ja Puolan puoli kuuluu [[Tatrojen kansallispuistoon]]. Puolan puolelta nousureitti lähtee tyypillisesti [[Morskie Okon]] vuorijärven rannalta, ja nousu vaatii vuoristokokemusta ja sopivaa varustusta, etenkin kun kelit vaihtuvat nopeasti.
+
+### v2-992
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Tatravuorilla
+VASTAUS: Tatrat ovat Karpaattien korkein vuoristo, ja ne ulottuvat Puolan ja Slovakian rajalle. Puolan korkein huippu [[Rysy]] kohoaa niiden Puolan puolella 2 499 metriin, ja alueen korkein huippu on Slovakian puolella oleva [[Gerlachovský štít]], noin 2 650 metriä. Puolan puolen suosituin vuoristokaupunki on [[Zakopane]]. Alueella valmistetaan [[oscypek]]-juustoa, savustettua lampaanmaitojuustoa, jota perinteisesti tekee bacaksi kutsuttu mestaripaimen; juuston muoto ja valmistusalue on suojattu Euroopan unionin alkuperänimityksellä, ja sitä syödään usein paistettuna puolukkahillon kanssa.
+
+### v2-993
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Karpaattien
+VASTAUS: Karpaatit ovat Keski- ja Itä-Euroopan laaja kaarimainen vuoristo, joka ulottuu Slovakian ja Puolan eteläosista Ukrainan ja Romanian kautta. Sen korkeimpia osia ovat [[Tatrat]], joilla Puolan korkein huippu Rysy kohoaa 2 499 metriin. Puolan eteläreunassa vuoristo nousee selvästi tasankoa korkeammaksi: maa kohoaa ensin Sudeettien ja sitten Karpaattien harjanteille. Alueella on vuoristolaisten omia perinteitä, kuten [[oscypek]]-juusto, jota tehdään Tatra-vuorten alueella lampaanmaidosta. Karpaattien metsissä elää myös [[karhuja]].
+
+### v2-994
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Puolan jaoissa
+VASTAUS: Puolan jaot tarkoittavat kolmea vaihetta vuosina 1772, 1793 ja 1795, joiden aikana [[Preussi]], Venäjä ja Itävalta jakoivat Puolan–Liettuan valtakunnan keskenään. Kolmannen jaon jälkeen vuonna 1795 itsenäinen Puolan valtio lakkasi olemasta, ja se palasi kartalle vasta vuonna 1918. Tasankomaassa ei ollut luonnollisia rajoja suojana, ja valtio oli myös sisäisesti heikentynyt. Vuonna 1791 hyväksyttiin uudistava [[perustuslaki]], ja vuonna 1794 [[Kościuszkon kansannousu]] yritti pelastaa maan, mutta turhaan. Puolalaiset säilyttivät kielensä ja kulttuurinsa jakojen aikana.
+
+### v2-995
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Oderin
+VASTAUS: Oder eli puolaksi Odra virtaa Tšekin Sudeeteilta Puolan halki Itämerelle, ja se on Veikselin jälkeen Puolan toiseksi pisin joki. Joen varrella sijaitsevat suuret kaupungit [[Wrocław]] ja [[Szczecin]]. Alajuoksulla Oder muodostaa osan Puolan ja Saksan rajasta: toisen maailmansodan jälkeen raja siirrettiin lännemmäs Oderin ja sen sivujoen [[Lausitzin Neissen]] linjalle, ja sen vahvistivat lopullisesti sopimukset vuonna 1990.
+
+### v2-996
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Malborkin tiililinna
+VASTAUS: Malborkin tiililinna on Saksalaisen ritarikunnan rakennuttama linna, jonka rakentaminen alkoi 1200-luvun lopulla. Lähteiden mukaan vuonna 1309 siitä tuli ritarikunnan korkeimman johtajan asuinpaikka, ja linnasta kehittyi [[Saksalaisen ritarikunnan]] valtion keskus. Linna on rakennettu tiilestä [[Nogat]]-joen rannalle, joka on Veikselin sivuhaara, ja sitä pidetään pinta-alaltaan maailman suurimpana linnana. Se vaurioitui pahoin toisessa maailmansodassa, mutta sitä on kunnostettu pitkään. Linna kuuluu [[UNESCOn]] maailmanperintökohteisiin.
+
+### v2-997
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+VASTAUS: Saksalainen ritarikunta oli keskiaikainen sotilaallinen ja hengellinen ritarikunta, joka perustettiin [[ristiretkien]] aikana 1100-luvun lopulla. Sen toiminta siirtyi 1200-luvulla Itämeren rannikolle, jossa se valtasi alueita ja perusti oman ritarikuntavaltionsa. Sen keskus oli [[Malborkin tiililinna]]. Ritarikunnan valta heikkeni ratkaisevasti [[Grunwaldin taistelussa]] vuonna 1410, jossa Puolan ja Liettuan joukot voittivat sen. Myöhemmin ritarikunnan Preussin alue maallistettiin vuonna 1525.
+
+### v2-998
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: UNESCOn
+VASTAUS: UNESCO eli Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö perustettiin vuonna 1945, ja sen päätoimipaikka on Pariisissa. Järjestön maailmanperintösopimus hyväksyttiin vuonna 1972, ja sen perusteella kulttuuri- ja luonnonkohteita merkitään maailmanperintöluetteloon. Puolasta luetteloon kuuluvat esimerkiksi [[Krakovan vanhakaupunki]], [[Wieliczkan suolakaivos]], [[Białowieżan metsä]] ja Malborkin linna, joka hyväksyttiin luetteloon vuonna 1997.
+
+### v2-999
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: pierogit
+VASTAUS: Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai [[smetanan]] kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne, erityisesti [[joulunaattona]].
+
+### v2-1000
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: bigos
+VASTAUS: Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä [[hapankaalin]] ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, [[sieniä]], luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi laajalle koko [[Puolan–Liettuan unionin]] alueelle.
+
+### v2-1001
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: żurek
+VASTAUS: Żurek on hapanta ruisjuurta sisältävä keitto, jonka happamuus syntyy fermentoidusta ruisjauhoseoksesta. Siihen keitetään yleensä [[makkaraa]], ja keitto tarjotaan usein kovaksi keitetyn munan kanssa. Żurek yhdistetään vahvasti [[pääsiäiseen]], mutta sitä syödään muulloinkin, ja joskus se tarjoillaan leipäkulhossa. Reseptit vaihtelevat alueittain ja perheittäin, ja kaikista variaatioista en ole varma. Pohjana oleva [[ruisjuuri]] on sama asia, jota käytetään myös leivonnassa.
+
+### v2-1002
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: Białowieżan metsässä
+VASTAUS: Białowieżan metsä sijaitsee Puolan itärajalla Valko-Venäjän vastaisella rajaseudulla, ja se on Euroopan alkuperäisten metsäbiisonien eli [[visenttien]] viimeinen laaja elinalue. Visentti oli 1920-luvulla katoamassa: lähteiden mukaan koko maailmassa oli enää 54 yksilöä, ja kaksi niistä eli ruotsalaisella [[Skansenilla]] Tukholmassa. Vuonna 1929 Skansenilta lähetettiin hiehoja Białowieżaan, ja laji päästettiin takaisin metsään vuonna 1952. Metsän biisoninheinää käytetään [[Żubrówka]]-vodkan maustamiseen: jokaiseen pulloon lisätään yksi käsin kerätty heinänkorsi.
+
+### v2-1003
+KOHDE: maa:POL
+KYSYMYS: Kerro lisää: visentti
+VASTAUS: Visentti eli euroopanbiisoni on Euroopan raskaimpia maaeläimiä. Laji oli 1920-luvulla lähes kadonnut: lähteiden mukaan koko maailmassa oli enää 54 visenttiä, ja kaksi niistä eli ruotsalaisella [[Skansenilla]] Tukholmassa. Vuonna 1929 Skansenilta lähetettiin hiehoja Puolan Białowieżaan, ja laji päästettiin takaisin [[Białowieżan metsään]] vuonna 1952. Sukupuuton partaalta pelastettua kantaa on sittemmin kasvatettu ja levitetty useisiin Euroopan metsiin. Puolassa on myös julkaistu kirja, jossa on jokainen maailman visentti, ja se kertoo, kuinka tarkasti [[sukupuuton]] uhkaamaa lajia seurataan.
+
+### v2-1004
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Sigismund III
+VASTAUS: Sigismund III Vaasa oli Puolan kuningas vuosina 1587–1632 ja Ruotsin kuningas vuosina 1592–1599. Hän oli ruotsalaisen kuninkaan [[Juhana III:n]] poika ja kuului [[Vaasa-sukuun]]; Ruotsissa hänet syrjäytettiin, ja kruunun otti hänen setänsä, mikä johti pitkään kiistaan kruunusta. Puolassa hän siirsi hovinsa Krakovasta Varsovaan vuonna 1596, ja [[Varsovan linna]] rakennettiin hänen aikanaan komeaksi barokkilinnaksi, jota kruunaa 60 metriä korkea Sigismundin torni. Varsovan keskustassa on hänen mukaansa nimetty [[Zygmuntin pylväs]], joka pystytettiin hänen poikansa aikana.
+
+### v2-1005
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Krakovasta
+VASTAUS: Krakova on Etelä-Puolan vanha pääkaupunki Veikselin rannalla, kalkkikivikukkulan juurella. Kukkula on [[Wawel]], ja sen katedraalissa kruunattiin ja haudattiin Puolan kuninkaat yli viidensadan vuoden ajan. Pääkaupunkina Krakova väistyi Varsovan tieltä vuonna 1596, mutta kruunajaiset jäivät tänne. [[Mongolien]] hyökkäys poltti kaupungin vuonna 1241, ja se rakennettiin uudelleen vuonna 1257 suorakulmaisella ruudukkokaavalla, jonka keskellä on noin 200 metriä sivultaan oleva tori. Puolan vanhin yliopisto perustettiin täällä vuonna 1364, ja sen oppilaita oli muun muassa [[Nikolaus Kopernikus]]. Sota ei tuhonnut Krakovaa, joten vanhankaupungin kadut ovat aitoja keskiaikaisia katuja.
+
+### v2-1006
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Bernardo Bellotton
+VASTAUS: Bernardo Bellotto syntyi Venetsiassa vuonna 1722 ja kuoli Varsovassa vuonna 1780. Hän käytti setänsä [[Canaletton]] tavaramerkkinimeä, ja vuonna 1767 hänestä tuli Puolan kuninkaan hovimaalari. Hän maalasi lähes kolmekymmentä näkymää Varsovasta niin tarkasti, että ikkunat, koristelistat ja talojen mittasuhteet erottuvat yksitellen. Taulut olivat sodan aikana muualla kuin Varsovassa ja säilyivät ehjinä. Jälleenrakennuksessa arkkitehdit käyttivät niitä pohjapiirustuksina: talo toisensa jälkeen rakennettiin takaisin sellaisena kuin Bellotto oli sen kaksisataa vuotta aiemmin maalannut. Hänen maalauksiaan on [[Varsovan linnan]] kuninkaallisissa asunnoissa, ja ne ovat tärkeä syy siihen, että [[vanhakaupunki]] on voitu palauttaa entiselleen.
+
+### v2-1007
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: UNESCOn
+VASTAUS: UNESCO lisäsi Varsovan vanhankaupungin [[maailmanperintöluetteloonsa]] vuonna 1980. Valinta oli poikkeuksellinen, sillä se tehtiin juuri jälleenrakennuksen ansiosta eikä alkuperäisyyden perusteella. Jälleenrakennus alkoi heti sodan jälkeen ja jatkui aina 1960-luvun puoliväliin asti; vanhankaupungin keskeisimmät osat saatiin valmiiksi noin kymmenessä vuodessa. Ulkoasu rakennettiin [[Bellotton]] maalausten ja säilyneiden valokuvien mukaan, mutta sisätilat suunniteltiin nykyaikaisiksi, jotta ihmiset houkuteltaisiin muuttamaan takaisin autioituneeseen kaupunginosaan. UNESCO eli Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö perustettiin vuonna 1945.
+
+### v2-1008
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: polonium
+VASTAUS: Polonium on radioaktiivinen alkuaine, jonka järjestysluku on 84. [[Marie Curie]] ja Pierre Curie ilmoittivat sen löytämisestä heinäkuussa 1898, ja Marie nimesi alkuaineen Puolan mukaan, vaikka maata ei tuolloin ollut Euroopan kartalla. Alkuaine löytyi [[uraanipikivälkkeestä]], ja sen yleisimmän isotoopin Po-210 puoliintumisaika on noin 138 päivää, joten se hupenee nopeasti. Curiet ilmoittivat samana vuonna myös [[radiumin]] löytämisestä, ja heidän työnsä radioaktiivisuuden parissa palkittiin fysiikan Nobelilla vuonna 1903.
+
+### v2-1009
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: radium
+VASTAUS: Radium on radioaktiivinen alkuaine, jonka Marie ja [[Pierre Curie]] ilmoittivat löytäneensä 26. joulukuuta 1898, muutamaa kuukautta poloniumin jälkeen. Pelkkä ilmoitus ei riittänyt kemisteille, vaan uusi alkuaine oli saatava käteen puhtaana. Se tarkoitti tonneittain kaivosten [[pikivälkejätettä]], joka keitettiin, suodatettiin ja kiteytettiin yhä uudelleen, ja työ vei vuoteen 1902, jolloin tonnista malmia oli eristetty kymmenesosagramma [[radiumkloridia]]. Työ tehtiin vuotavassa vajassa, joka oli ennen lääketieteellisen koulun ruumiinavaussali. Radiumia käytettiin aikanaan hohtavissa maaleissa ja lääketieteessä, kunnes sen haitat opittiin tuntemaan.
+
+### v2-1010
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Chopinin
+VASTAUS: Fryderyk Chopin oli puolalainen säveltäjä ja pianisti, joka kasvoi Varsovassa ja lähti kaupungista 20-vuotiaana marraskuussa 1830. Hän ei nähnyt sitä enää koskaan. Chopin kuoli Pariisissa 17. lokakuuta 1849 vain 39-vuotiaana, ja hänen toiveensa mukaan sydän tuotiin Puolaan: hänen sisarensa Ludwika kuljetti sen Varsovaan, ja vuonna 1882 se muurattiin [[Pyhän Ristin kirkon]] pilariin. Muu ruumis on haudattu [[Père-Lachaisen]] hautausmaalle Pariisiin. Chopinin nimeä kantava [[pianokilpailu]] järjestettiin ensimmäisen kerran vuonna 1927, ja vuodesta 1955 se on pidetty Varsovassa viiden vuoden välein.
+
+### v2-1011
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Père-Lachaisen
+VASTAUS: Père-Lachaise on Pariisin suurimpia ja tunnetuimpia hautausmaita, ja se avattiin vuonna 1804. Nimi tulee kuningas Ludvig XIV:n rippi-isästä, isä La Chaisesta. Hautausmaalle on haudattu monia kuuluisuuksia, muun muassa [[Chopin]], näytelmäkirjailija [[Molière]], kirjailija [[Oscar Wilde]] ja laulaja [[Édith Piaf]]. Chopinin ruumis haudattiin sinne vuonna 1849, mutta hänen sydämensä lepää Varsovassa Pyhän Ristin kirkon pilarissa. Hautausmaa on myös suosittu kävelypaikka vehreän ympäristönsä vuoksi.
+
+### v2-1012
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Kulttuuri- ja tiedepalatsi
+VASTAUS: Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Rakentamisesta sovittiin huhtikuussa 1952, ja jättiläismäinen [[pilvenpiirtäjä]] valmistui heinäkuussa 1955; työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on 3 288 huonetta 42 kerroksessa: teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä yli kuusi metriä leveää kellotaulua, ja hetken aikaa se oli maailman suurin [[kellotorni]]. Rakennus jakaa yhä mielipiteitä [[neuvostomenneisyyden]] vuoksi.
+
+### v2-1013
+KOHDE: kaupunki:varsova
+KYSYMYS: Kerro lisää: Neuvostoliiton
+VASTAUS: Neuvostoliitto oli valtio, joka perustettiin vuonna 1922 ja lakkasi olemasta vuonna 1991. Puolalle sen merkitys oli suuri: toisen maailmansodan jälkeen Puola kuului Neuvostoliiton vaikutuspiiriin ja oli kommunistinen valtio vuoteen 1989 asti. Kulttuuri- ja tiedepalatsi lahjoitettiin Puolalle 1950-luvun alussa ja se valmistui vuonna 1955, samana vuonna, jolloin itäblokin [[Varsovan liitto]] solmittiin Varsovassa. Rakennus jakaa edelleen mielipiteitä: osa varsovalaisista pitää sitä muistutuksena vieraasta vallasta, osa kaupungin tuntomerkkinä. Vuonna 1989 Puolassa pidettiin osittain vapaat vaalit, jotka avasivat tien [[kommunistisen hallinnon]] päättymiselle.
+
+### v2-1014
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Sukiennice
+VASTAUS: Sukiennice eli kangashalli on seissyt Krakovan torin keskellä keskiajalta asti, ja sen holvikäytävässä myydään yhä tavaraa. Krakova oli [[Hansan]] ja idän karavaanireittien risteyskohta: halliin tuotiin mausteita, silkkiä ja nahkaa, ja täältä lähti kangasta, lyijyä ja suolaa. Yläkerta on nykyään [[taidemuseo]], jossa on Puolan 1800-luvun maalauksia. Hallin vieressä kohoaa [[Mariakirkko]], ja toria pidetään yhtenä Euroopan suurimmista keskiaikaisista kaupunkiaukioista.
+
+### v2-1015
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Mariakirkko
+VASTAUS: Krakovan Mariakirkko on torin laidalla kohoava goottilainen tiilikirkko. Sen kaksi tornia ovat eri korkuiset, ja korkeammasta tornista soitetaan joka tunti torvella [[hejnał]], joka katkeaa aina kesken sävelen. Perimätiedon mukaan nuoli osui torvensoittajaan juuri kun tämä varoitti kaupunkia hyökkäyksestä. Kirkon tunnetuin aarre on keskiajan lopulla tehty suuri puinen alttarikaappi, jonka loi kuvanveistäjä [[Veit Stoss]]; sitä pidetään suurimpana goottilaisena alttarina Euroopassa. Kirkko seisoo [[Krakovan torin]] laidalla.
+
+### v2-1016
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Mariakirkon
+VASTAUS: Mariakirkko on Krakovan torin laidalla kohoava goottilainen kaupunginkirkko, ja sen korkeammasta tornista soitetaan joka tunti torvella [[hejnał]], joka katkeaa kesken sävelen. Katkos toistetaan uskollisesti tunnin välein neljään ilmansuuntaan, ja keskipäivän soitto kuullaan radiossa koko Puolassa. Tornissa päivystetään ympäri vuorokauden, joten soitto ei jää väliin yhtenäkään yönä. Perimätiedon mukaan nuoli osui torvensoittajaan juuri kun tämä varoitti kaupunkia hyökkäyksestä. Kirkon sisällä on [[Veit Stossin]] tekemä suuri puinen alttarikaappi, ja kirkko kuuluu [[Krakovan torin]] tunnetuimpiin nähtävyyksiin.
+
+### v2-1017
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: hejnał
+VASTAUS: Hejnał on Krakovan Mariakirkon korkeammasta tornista joka tunti soitettava lyhyt torvisoitto, joka katkeaa kesken sävelen. Perimätiedon mukaan nuoli osui torvensoittajaan juuri kun tämä varoitti kaupunkia hyökkäyksestä; legendassa hyökkääjinä mainitaan usein [[mongolit]] ja vuosi 1241, jolloin kaupunki poltettiin. Katkos toistetaan uskollisesti tunnin välein neljään ilmansuuntaan, ja keskipäivän soitto kuullaan [[radiossa]] koko Puolassa. Tornissa päivystetään ympäri vuorokauden, joten soitto ei jää väliin yhtenäkään yönä. Sana hejnał tulee unkarin sanasta, joka tarkoittaa aamunkoittoa, ja soittopaikkana on [[Mariakirkon]] torni.
+
+### v2-1018
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Smok Wawelski
+VASTAUS: Smok Wawelski on Krakovan kuuluisin tarulohikäärme, jonka kerrotaan asuneen [[Wawelin]] kukkulan luolassa. Tarinan mukaan pedon kaatoi suutarinoppipoika, joka jätti luolan eteen rikillä täytetyn lampaan. Lohikäärme ahmi syötin, sai kauhean janon ja joi [[Veiksel]]-jokea niin kauan, että halkesi. Kuningas antoi pojalle palkinnoksi tyttärensä. Vanhemmassa versiossa lohikäärmeen surmaa kaupungin perustajana pidetty [[Krakus]]. Luolan suulla on nykyään pronssinen lohikäärmepatsas, joka puhaltaa oikeaa tulta muutaman minuutin välein. Tarina on kansantarua, ei historiaa.
+
+### v2-1019
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Veikselistä
+VASTAUS: Veiksel on Puolan pisin joki, noin 1 050 kilometriä, ja se virtaa etelän vuorilta pohjoiseen Itämerelle. Joen varrella ovat muun muassa [[Krakova]], [[Varsova]] ja [[Gdańsk]]. Varsovan halki Veiksel kulkee patoamattomana, ja itäranta on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. Ranta kuuluu EU:n [[Natura 2000]] -suojeluverkostoon, koska joen hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla näkyy lasitorneja.
+
+### v2-1020
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: tähtitieteeseen
+VASTAUS: Tähtitiede on tiede, joka tutkii taivaankappaleita ja maailmankaikkeutta. Krakovan yliopistossa sillä oli keskiajalla vahva asema osana opetusta, ja Kopernikus opiskeli siellä 1490-luvulla, mutta tarkkoja opintovuosia en ole varma. Myöhemmin hän esitti [[aurinkokeskeisen]] maailmankuvan, jonka mukaan Maa ja muut planeetat kiertävät Aurinkoa. Hänen pääteoksensa [[De revolutionibus]] julkaistiin vuonna 1543, ja sen ajatus muutti tapaa ymmärtää [[maailmankaikkeutta]].
+
+### v2-1021
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: aurinkokeskeisen
+VASTAUS: Aurinkokeskeinen maailmankuva tarkoittaa käsitystä, jonka mukaan Maa ja muut planeetat kiertävät Aurinkoa eivätkä Aurinko Maata. Jo antiikin kreikkalainen [[Aristarkhos]] on tiettävästi esittänyt samansuuntaisen ajatuksen, mutta Kopernikus kehitti sen laajaksi matemaattiseksi malliksi, joka julkaistiin vuonna 1543. Myöhemmin [[Galileo Galilei]] sai kaukoputkihavainnoistaan tukea ajatukselle, ja [[Johannes Kepler]] osoitti, että planeettojen radat ovat ellipsejä. Ajatuksen hyväksyminen vei aikaa, ja se herätti vastustusta etenkin 1600-luvulla.
+
+### v2-1022
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Vanhan synagogan
+VASTAUS: Vanha synagoga on Krakovan [[Kazimierzin]] kaupunginosassa sijaitseva rakennus, jota pidetään Puolan vanhimpana säilyneenä synagogana. Sen vanhimmat osat ovat peräisin 1400-luvulta, ja rakennus on alkujaan [[goottilainen]]. Synagogaa on korjattu useita kertoja, muun muassa 1500-luvun palon jälkeen, jolloin siihen lisättiin renessanssityylinen kattokoriste. Toisen maailmansodan aikana rakennusta käytettiin väärin ja sen sisätilat vaurioituivat pahoin, mutta se on sittemmin kunnostettu. Nykyään siinä toimii museo, joka kertoo [[Krakovan juutalaisten]] historiasta.
+
+### v2-1023
+KOHDE: kaupunki:krakova
+KYSYMYS: Kerro lisää: Plac Nowyn
+VASTAUS: Plac Nowy on Kazimierzin kaupunginosan keskeinen tori, jonka keskellä on pyöreä rakennus, joka tunnetaan nimellä [[Okrąglak]] eli rotunda. Rakennus valmistui noin vuonna 1900 alun perin kauppahalliksi, ja sen ympärillä on pitkään pidetty toria. Nykyään rotundan ikkunoista myydään suosittua katuruokaa, esimerkiksi [[zapiekanka]]-patonkeja, joissa on sieniä, juustoa ja muuta täytettä. Torin ympäristössä on paljon baareja ja kahviloita, ja [[Kazimierz]] elää etenkin iltaisin. Tarkkoja aukioloaikoja en tiedä.
+
+### v2-1024
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Alcañicesin sopimus
+VASTAUS: Alcañicesin sopimus allekirjoitettiin vuonna 1297 Portugalin kuninkaan [[Dinisin]] ja [[Kastilian]] kuninkaan Ferdinand IV:n välillä, ja se vahvisti suurelta osin Portugalin ja Espanjan välisen rajan, joka on sen jälkeen muuttunut hyvin vähän. Sopimus on saanut nimensä Espanjan puolella sijaitsevasta Alcañicesin kaupungista. Raja on noin 1 200 kilometriä pitkä ja kulkee vuoristoissa ja jokilaaksoissa. Sitä pidetään yhtenä Euroopan vanhimmista vakaista rajoista, mikä on harvinaista mantereella, jossa rajat ovat vaihdelleet paljon.
+
+### v2-1025
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Douro
+VASTAUS: Douro on Iberian niemimaan suuria jokia, noin 900 kilometriä pitkä, ja se saa alkunsa Espanjasta, jossa sitä kutsutaan nimellä Duero. Joki kulkee Espanjan puolelta Portugaliin ja kaivautuu länteen kohti Atlanttia. Sen suulla on [[Porto]]. Joen laaksossa kasvatetaan viiniä terassoiduilla rinteillä, ja Douron viinialue kuuluu [[UNESCOn]] maailmanperintöön. Laaksossa tehdään [[portviiniä]], jonka nimi tulee Portosta, ja perinteisesti viinitynnyrit kuljetettiin alas joelle matalilla purjeveneillä.
+
+### v2-1026
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Tordesillasin
+VASTAUS: Tordesillasin sopimus solmittiin vuonna 1494 Tordesillasin kaupungissa [[Kastiliassa]], ja sillä Portugali ja Espanja jakoivat löytämänsä maailman. Rajaviiva vedettiin Atlantin poikki noin 370 liigan päähän Kap Verden saarten länsipuolelle: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle, joten siellä puhutaan yhä portugalia. Sopimusta edelsi [[paavin]] määräys, ja Tyynenmeren puolella rajaa tarkennettiin myöhemmin [[Saragossan sopimuksella]] vuonna 1529.
+
+### v2-1027
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Espanjalle
+VASTAUS: Espanja on Iberian niemimaan suurin valtio ja Portugalin ainoa maaraja-naapuri. Tordesillasin sopimuksessa vuonna 1494 sille kuului rajaviivan länsipuoli, minkä vuoksi suuri osa Etelä- ja Väli-Amerikasta joutui myöhemmin Espanjan vaikutuspiiriin ja siellä puhutaan nykyään espanjaa. Portugalin ja Espanjan välinen raja vedettiin [[Alcañicesin sopimuksella]] vuonna 1297, ja se on yksi Euroopan vanhimmista. Maiden pääkaupungit ovat [[Madrid]] ja [[Lissabon]], ja Tordesillasin sopimus on edelleen tunnettu esimerkki siitä, miten maailma jaettiin viivalla kartalla.
+
+### v2-1028
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Jerónimosin luostarissa
+VASTAUS: Jerónimosin luostari on Lissabonin Belémin kaupunginosassa sijaitseva luostari, jonka rakennutti kuningas Manuel I; rakentaminen alkoi lähteiden mukaan vuonna 1501. Rakennus edustaa [[manuelilaista]] tyyliä, jossa kivi on koristeltu merellisillä aiheilla ja köysillä. Luostariin on haudattu muun muassa löytöretkeilijä [[Vasco da Gama]] ja runoilija [[Luís de Camões]]. Luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin vuonna 1834, resepti päätyi viereiselle sokerikaupalle, ja [[Pastéis de Belém]] on myynyt leivoksia vuodesta 1837.
+
+### v2-1029
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Pastéis de Belémin
+VASTAUS: Pastéis de Belém on Lissabonin Belémissä toimiva leipomo ja kahvila, joka on myynyt leivoksia vuodesta 1837. Sen resepti on peräisin viereisestä [[Jerónimosin luostarista]]: kun luostarit suljettiin vuonna 1834, resepti päätyi luostarin lähellä sijaitsevalle sokerikaupalle. Kahvila kertoo paistavansa leivoksia yli 20 000 päivässä. Vain sieltä leivokset saa nimittää nimellä pastéis de belém, muualla ne ovat [[pastel de nata]]. Reseptin kerrotaan olevan yhä salainen, ja leivokset tarjoillaan usein [[kanelin]] ja tomusokerin kera.
+
+### v2-1030
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Mondego-joki
+VASTAUS: Mondego on Portugalin pisin kokonaan maan sisällä virtaava joki, noin 250 kilometriä pitkä. Se saa alkunsa [[Serra da Estrelan]] vuoristosta ja virtaa länteen Atlantille. Joen varrella sijaitsee yliopistokaupunki [[Coimbra]], jossa toimii yksi Euroopan vanhimmista yliopistoista, ja joki laskee mereen [[Figueira da Fozin]] kohdalla. Muut Portugalin suuret joet, kuten Douro ja Tejo, tulevat Espanjan puolelta.
+
+### v2-1031
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Serra da Estrelan juustoa
+VASTAUS: Serra da Estrelan juusto on Portugalin tunnetuimpia juustoja, ja se valmistetaan Serra da Estrelan vuoriston seudulla lampaanmaidosta. Perinteisesti maito juoksutetaan [[ohdakkeen]] kukilla eikä eläinperäisellä juoksutteella, mikä antaa juustolle sen tunnusomaisen maun. Nuori juusto on pehmeää ja voimaista, ja sen voi syödä lusikalla pehmeän kuoren päältä; vanhempi juusto on kovempaa. Nimi on suojattu Euroopan unionin [[alkuperänimityksellä]], eli aito juusto tehdään vain määritellyllä alueella. Maidon tuottaa paikallinen [[Bordaleira]]-lammasrotu.
+
+### v2-1032
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: Amália Rodrigues
+VASTAUS: Amália Rodrigues oli portugalilainen [[fadon]] laulaja, joka syntyi vuonna 1920 ja kuoli vuonna 1999. Hän lauloi fadoa yli viisikymmentä vuotta, ja häntä kutsutaan usein fadon kuningattareksi. Kun hän kuoli, Portugalissa vietettiin kolme päivää kansallista surua. Amália toi fadon kansainväliseen tietoisuuteen esiintymällä ulkomailla, ja hänet on haudattu Lissabonin [[Panteão Nacionaliin]], jonne maan merkkihenkilöitä on haudattu. Hänen lauluissaan toistuu usein [[saudade]], kaipaus jotakin kohti, mitä ei enää ole.
+
+### v2-1033
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: saudade
+VASTAUS: Saudade on portugalilainen sana, jota on vaikea kääntää suoraan. Se tarkoittaa kaipausta jotakin kohti, mitä ei enää ole: ihmistä, paikkaa tai aikaa, ja siihen sekoittuu usein sekä suru että hellyys. Saudade on [[fadon]] tavallisin aihe, ja laulut kertovat sen kautta kotiseudulta pois jääneistä, menetetyistä rakkauksista ja kauas lähteneistä; tunnetuimpia esittäjiä on [[Amália Rodrigues]]. Sanan syntyä selitetään usein [[merenkulun]] ajalla, jolloin kotiin jääneet odottivat purjehtijoita palaavaksi, mutta tämä on pikemminkin selitys kuin varma tosiasia.
+
+### v2-1034
+KOHDE: maa:PRT
+KYSYMYS: Kerro lisää: UNESCO
+VASTAUS: UNESCO eli Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö perustettiin vuonna 1945, ja sen päätoimipaikka on Pariisissa. Järjestö ylläpitää maailmanperintöluetteloa, mutta myös aineettoman kulttuuriperinnön luetteloa, johon kuuluvat esimerkiksi elävät perinteet, musiikki ja käsityötaidot. [[Fado]] otettiin aineettoman kulttuuriperinnön luetteloon vuonna 2011. Portugalista luetteloon on hyväksytty myös [[Alentejon]] moniääninen laulu cante vuonna 2014. Maailmanperintökohteita Portugalissa ovat muun muassa [[Jerónimosin luostari]] ja Belémin torni Lissabonissa sekä Porton historiallinen keskusta.
+
+### v2-1035
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Baixa
+VASTAUS: Baixa on Lissabonin alakaupunki, joka sijaitsee Tejo-joen rannan ja kukkuloiden välissä. Vuoden 1755 jälkeen sen kadut vedettiin viivoittimella ruudukkoon, yhdeksi Euroopan ensimmäisistä, ja talot rakennettiin puisella häkkirungolla, joka joustaa järistyksessä murtumatta. Katujen nimet viittaavat usein käsityöammatteihin, esimerkiksi Rua do Ouro eli Kultakatu ja Rua da Prata eli Hopeakatu. Joen rannassa on suuri aukio [[Praça do Comércio]], ja kaupunginosan reunalla kohoaa vuonna 1902 avattu [[Santa Justan hissi]], joka yhdistää Baixan ylempänä olevaan [[Carmon kirkon]] raunioiden alueeseen.
+
+### v2-1036
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: gaiola
+VASTAUS: Gaiola eli portugaliksi häkki viittaa puiseen kehikkoon, jonka Lissabonin [[Baixan]] jälleenrakennuksessa piilotettiin talojen seinien sisään vuoden 1755 maanjäristyksen jälkeen. Rakenne, josta käytetään nimeä gaiola pombalina, on ristikkomainen puurunko, joka joustaa järistyksessä murtumatta. Sen kestävyys testattiin muun muassa marssittamalla sotilasjoukkoja rakennusten ja pienoismallien ympärillä täristystä jäljittelemään. Rakentaminen aloitettiin vuonna 1758 kuningas [[José I:n]] pääministerin, [[Pombalin markiisin]], johdolla. Ajatusta pidetään yhtenä varhaisimmista maanjäristyksen kestävistä rakennustavoista Euroopassa.
+
+### v2-1037
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Pombalin markiisiksi
+VASTAUS: Pombalin markiisi eli Sebastião José de Carvalho e Melo (1699–1782) oli Portugalin kuninkaan [[José I:n]] vaikutusvaltainen pääministeri. Vuoden 1755 maanjäristyksen jälkeen hän otti Lissabonin jälleenrakennuksen johtoonsa ja teetti Baixan keskustaan täysin uuden, suoraviivaisen ruutukaavan, yhden Euroopan ensimmäisistä. Hän uudisti myös koulutusta ja taloutta ja ajoi vuonna 1759 [[jesuiitat]] pois Portugalista. Kuninkaan kuoltua vuonna 1777 hän menetti asemansa. Hänen mukaansa on nimetty Lissabonin aukio [[Marquês de Pombal]].
+
+### v2-1038
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Vasco da Gama
+VASTAUS: Vasco da Gama oli portugalilainen löytöretkeilijä, joka lähti [[Lissabonista]] vuonna 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Matkallaan hän pysähtyi saarella maaliskuussa 1498; se oli Portugalin ensimmäinen kosketus koko Itä-Afrikan rannikkoon. Saarta hallitsi tuolloin swahilikauppiaiden sulttaani, jonka nimi tunnettiin muodossa Musa Mbiki, ja portugalilaiset vääntivät nimen ajan mittaan muotoon Moçambique, josta tuli lopulta koko nykyisen valtion nimi. Da Gaman hautamonumentti on Lissabonin [[Jerónimosin luostarissa]]. Meritie toi Portugalille [[mausteiden kaupan]], mikä rakensi kaupungin vaurautta.
+
+### v2-1039
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Tejo-joen
+VASTAUS: Tejo eli Tagus on Iberian niemimaan pisin joki, noin tuhat kilometriä, ja se saa alkunsa Espanjasta, kulkee muun muassa [[Toledon]] kautta ja virtaa Portugalin halki Atlantille. Lissabonin kohdalla joki levenee lähes merenlahdeksi, mutta avomerelle on vain viitisentoista kilometriä, joten satama oli suojaisa ja kaupunki syntyi juuri tähän. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa. Joen ylittävät muun muassa [[Ponte 25 de Abril]] ja noin 17 kilometriä pitkä [[Vasco da Gama -silta]]. Joen suistossa on laaja luonnonsuojelualue, jossa levähtää paljon lintuja.
+
+### v2-1040
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: kuningas Manuel I
+VASTAUS: Manuel I hallitsi Portugalia vuosina 1495–1521, ja hänen aikanaan maa nousi merentakaisen kaupan suurvallaksi. Kuninkaan määräyksestä [[Vasco da Gama]] purjehti Intiaan vuonna 1497, ja uuden meritien tuomat tulot rahoittivat mittavia rakennushankkeita Lissabonissa. Tunnetuin niistä on [[Belémin torni]], ja aikakauden koristeellinen rakennustyyli on saanut hänen mukaansa nimen [[manuelilainen tyyli]]. Häntä kutsuttiin lempinimellä Onnekas, koska kruunu periytyi hänelle useiden sukulaisten kuoltua ja koska merireitit toivat valtakunnalle vaurautta.
+
+### v2-1041
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Albrecht Dürerin
+VASTAUS: Albrecht Dürer (1471–1528) oli [[Nürnbergissä]] toiminut saksalainen taidemaalari ja graafikko, jota pidetään [[pohjoisen renessanssin]] merkittävimpänä taiteilijana. Sarvikuonon hän kuvasi vuonna 1515 toisen käden kuvauksen ja luonnoksen perusteella, ja siitä valmistettiin puupiirros, jossa eläin on panssarimaisten levyjen peittämä. Kuvaa painettiin lukemattomina vedoksina, ja se vaikutti eurooppalaisten käsitykseen sarvikuonosta vuosisatojen ajan. Dürer teki myös tunnetun [[Ilmestyskirjan]] aiheisen puupiirrossarjan sekä useita omakuvia.
+
+### v2-1042
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Alfamassa
+VASTAUS: Alfama on Lissabonin vanhin kaupunginosa, joka levittäytyy Tejo-joen ja [[Castelo de São Jorge]] -linnan väliselle rinteelle. Nimi periytyy arabian kielestä, ja kaupunginosan juuret ulottuvat maurien aikaan. Alfama selvisi vuoden 1755 maanjäristyksestä muuta keskustaa paremmin, joten sen mutkittelevat kujat ja portaat ovat säilyttäneet keskiaikaisen luonteensa. Alueen pienissä ravintoloissa kuulee yhä [[fadoa]], portugalilaista laulutyyliä, jonka kotikaupunginosiin Alfama kuuluu. Lähistöllä on myös [[Lissabonin tuomiokirkko]], yksi kaupungin vanhimmista kirkoista.
+
+### v2-1043
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: linja 28
+VASTAUS: Linja 28 on Lissabonin tunnetuin raitiolinja. Se kulkee Martim Monizin ja Campo de Ourique -kaupunginosan välillä keskustan läpi, ja reitti sivuaa muun muassa [[Graçan]], Alfaman ja Baixan kaupunginosia, [[Lissabonin tuomiokirkkoa]] sekä [[Estrelan basilikaa]]. Linjalla ajetaan pääosin pienillä, keltaisilla vanhoilla vaunuilla, jotka kolisevat kapeissa kaduissa lähes talojen seinien vierestä. Linja on matkailijoiden suosikki, ja siksi vaunut ovat usein ruuhkaisia.
+
+### v2-1044
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: neilikkavallankumoukseksi
+VASTAUS: Neilikkavallankumous alkoi 25. huhtikuuta 1974, kun nuorista upseereista koostunut [[asevoimien liike]] kaappasi vallan ja kaatoi Portugalia vuosikymmeniä hallinneen [[Estado Novo]] -järjestelmän. Merkkinä toiminnan alkamisesta radiossa soitettiin laulu [[Grândola, Vila Morena]]. Vallankaappaus onnistui lähes ilman väkivaltaa, ja kadulle tulleet ihmiset ojensivat sotilaille neilikoita, joita näille pantiin aseiden piippuihin. Taustalla oli osaksi kyllästyminen Afrikan siirtomaasotiin. Vallankumouksen jälkeen Portugali siirtyi demokratiaan, ja siirtomaat Angola ja Mosambik itsenäistyivät vuonna 1975.
+
+### v2-1045
+KOHDE: kaupunki:lissabon
+KYSYMYS: Kerro lisää: Cristo Rei
+VASTAUS: Cristo Rei on Kristus-patsas, joka seisoo Tejo-joen eteläpuolella [[Almadan]] kaupungin kukkulalla Lissabonia vastapäätä. Se vihittiin käyttöön vuonna 1959, ja esikuvana oli Rio de Janeiron Kristus-patsas. Patsas jalustoineen kohoaa noin sadan metrin korkeuteen, ja huipulla olevalta näköalatasanteelta näkee yli [[Tejo-joen]] Lissaboniin. Hankkeen taustalla oli portugalilaisten piispojen lupaus rakentaa patsas, jos maa säästyisi toisen maailmansodan hirmuilta.
+
+### v2-1046
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Trajanuksen
+VASTAUS: Trajanus oli Rooman keisari vuosina 98–117, ja häntä pidetään yhtenä valtakunnan menestyksekkäimmistä hallitsijoista. Hän johti kaksi sotaretkeä Dacian kuningasta [[Decebalusta]] vastaan vuosina 101–102 ja 105–106, ja jälkimmäisen jälkeen alue liitettiin Rooman valtakuntaan maakunnaksi. Sotia kuvaa Roomassa seisova [[Trajanuksen sarake]], jonka spiraalimainen reliefi on tärkeä historiallinen lähde. Dacian kulta ja muut rikkaudet rahoittivat mittavia rakennushankkeita, kuten [[Trajanuksen forumin]] Roomassa. Hänen kaudellaan Rooman valtakunta oli laajimmillaan.
+
+### v2-1047
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Dacia
+VASTAUS: Dacia oli nykyisen Romanian alueella asuneiden dakialaisten kotimaa. Dakialaiset luetaan yleensä [[trakialaisiin]] kuuluvaksi kansaksi, ja heidän viimeinen kuninkaansa [[Decebalus]] taisteli Trajanusta vastaan. Heidän keskuksensa oli Orăștie-vuorilla sijainnut [[Sarmizegetusa Regia]]. Roomalaiset valloittivat alueen vuonna 106 ja muodostivat siitä maakunnan, josta vetäydyttiin noin vuonna 271 keisari [[Aurelianuksen]] päätöksellä. Sen jälkeen alueelle jäänyt väestö puhui latinasta kehittynyttä kieltä.
+
+### v2-1048
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Mustameri
+VASTAUS: Mustameri on Euroopan ja Vähän-Aasian välissä oleva sisämeri, joka yhtyy [[Bosporinsalmen]] kautta Marmaranmereen ja sieltä edelleen Välimereen. Meren suolapitoisuus on valtamerta pienempi, koska siihen laskee suuria jokia, muun muassa [[Tonava]]. Sen syvissä osissa ei ole happea, joten elämä on keskittynyt ylimpiin vesikerroksiin. Romanian tärkein satama on [[Konstanca]]. Mustaa merta ympäröivät Romanian lisäksi Bulgaria, Turkki, Georgia, Venäjä ja Ukraina.
+
+### v2-1049
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: pelikaaneja
+VASTAUS: [[Tonavan suistossa]] pesii kaksi pelikaanilajia: [[kyhmypelikaani]] ja [[kiharapelikaani]]. Ne rakentavat pesänsä ruovikon saarille suurina yhdyskuntina, ja suisto on yksi Euroopan tärkeimmistä pelikaanien pesimäalueista. Pelikaanit pyydystävät kalaa matalista vesistä kurkkupussillaan, ja suiston runsas kalakanta ruokkii niitä. Kiharapelikaani on kahdesta lajista harvinaisempi ja uhanalaisempi. Lisäksi alueella pesii ja levähtää monia muita kosteikkolintuja.
+
+### v2-1050
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: UNESCOn
+VASTAUS: UNESCO on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on [[Pariisissa]]. Se vaalii kulttuuria ja luontoa muun muassa [[maailmanperintöluettelon]] kautta, joka perustuu vuonna 1972 hyväksyttyyn yleissopimukseen. Luetteloon hyväksytään kohteita, joilla katsotaan olevan poikkeuksellinen arvo koko ihmiskunnalle. Tonavan suisto merkittiin luetteloon vuonna 1991 luontokohteena. Romaniasta luettelossa on myös esimerkiksi [[Transilvanian]] linnoituskirkkokyliä.
+
+### v2-1051
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Luumut
+VASTAUS: Luumu on Itä-Euroopassa ja Balkanilla yksi tärkeimmistä hedelmäpuista, ja Romania on yksi maailman suurimmista luumujen tuottajista. Hedelmät syödään tuoreina, kuivataan tai keitetään hilloksi: perinteinen luumuhillo on nimeltään [[magiun]]. Suurin osa sadosta käytetään kuitenkin [[țuican]] valmistukseen, ja monella maaseututilalla on omia luumupuita. Luumupuut kukkivat keväällä, ja sato kypsyy loppukesällä ja syksyllä.
+
+### v2-1052
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: häissä
+VASTAUS: Romanialaiset häät ovat perinteisesti suuri yhteisöjuhla, johon osallistuu koko suku ja usein koko kylä, ja juhlat voivat kestää useita päiviä. Tärkeässä osassa ovat [[nași]], pariskunnan kummit, joilla on juhlissa erityinen kunniatehtävä. Juhlissa tanssitaan [[horaa]], piiritanssia, jonka tahdin antavat usein [[lăutari]]-muusikot. Pöytään kannetaan runsaasti ruokaa, ja vieraille tarjotaan țuicaa. Tavat vaihtelevat alueittain, ja maaseudulla perinteet ovat yleensä vahvempia kuin kaupungeissa.
+
+### v2-1053
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: sarmale
+VASTAUS: Sarmale ovat kaalikääryleitä, joiden täytteenä on jauhelihaa, riisiä ja sipulia. Ruokalaji tuli Romaniaan [[Osmanien valtakunnan]] kautta: turkin sana sarmak tarkoittaa käärimistä. Lähi-idässä kääryleet tehdään usein viininlehtiin, mutta Romaniassa käytettiin [[hapankaalin]] lehtiä, koska ne säilyivät talven yli suolavedessä. Kääryleet haudutetaan tuntikausia tomaattikastikkeessa ja tarjoillaan [[mämäligän]] ja smetanan kanssa. Ruokaa syödään erityisesti juhlapyhinä, kuten joulun ja pääsiäisen aikaan.
+
+### v2-1054
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Grigoraș Dinicu
+VASTAUS: Grigoraș Dinicu (1889–1949) oli romanialainen viulisti ja säveltäjä, joka syntyi [[lăutari]]-muusikoiden suvussa Bukarestissa. Hänen isoisänsä [[Angheluș Dinicu]] oli tunnettu soittaja, ja Grigoraș jatkoi perinnettä sekä konservatoriossa että orkestereissa ja kahviloissa. Tunnetuimmaksi hänen sävellyksensä tuli vuoden 1906 Hora staccato, jonka viulisti [[Jascha Heifetz]] sovitti ja teki maailmalla kuuluisaksi. Dinicua pidetään yhtenä romanialaisen viulunsoiton mestareista.
+
+### v2-1055
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Bukarestin konservatoriossa
+VASTAUS: Bukarestin konservatorio on Romanian vanhimpia musiikkioppilaitoksia, ja lähteiden mukaan se perustettiin 1860-luvulla säveltäjä [[Alexandru Flechtenmacherin]] johdolla. Nykyisin sen jatkaja on Bukarestin kansallinen musiikkiyliopisto. Koulussa on koulutettu sekä klassisen musiikin että kansanmusiikin ammattilaisia, ja siellä opiskeli myös viulisti [[Grigoraș Dinicu]]. En ole varma kaikista perustamisen yksityiskohdista.
+
+### v2-1056
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Karpaattien
+VASTAUS: Karpaatit ovat vuoristokaari, joka kulkee usean maan halki Slovakiasta ja Puolasta Ukrainan kautta Romaniaan ja Serbiaan, yhteensä noin 1 500 kilometrin matkan. Romanian osuudella ne muodostavat maan selkärangan. Korkein huippu [[Moldoveanu]] kohoaa 2 544 metriin Etelä-Karpaateilla, joita kutsutaan myös Transilvanian Alpeiksi. Vuoret ovat laajojen metsien peitossa, ja siellä elää Euroopan suurimpiin kuuluva [[ruskeakarhujen]] kanta sekä susia ja ilveksiä. Vuorten yli kulkee myös korkealla oleva [[Transfăgărășan]]-maantie.
+
+### v2-1057
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: transilvaniansaksalaisia
+VASTAUS: Transilvaniansaksalaiset ovat saksankielinen vähemmistö, jonka esi-isät asettuivat Transilvaniaan 1100-luvulta alkaen Unkarin kuninkaan kutsumina. Heidän perustamansa linnoitetut kaupungit ja kylät antoivat alueelle saksankielisen nimen Siebenbürgen, ja tunnetuimpia kaupunkeja ovat [[Sibiu]], [[Brașov]] ja [[Sighișoara]]. Kylissä on säilynyt linnoituskirkkoja, jotka rakennettiin suojaamaan asukkaita hyökkäyksiltä. Suuri osa saksalaisväestöstä muutti Saksaan 1900-luvun lopulla, mutta yhteisö on yhä läsnä: Romanian entinen presidentti [[Klaus Iohannis]] kuuluu siihen.
+
+### v2-1058
+KOHDE: maa:ROU
+KYSYMYS: Kerro lisää: Brașov
+VASTAUS: Brașov on Etelä-Transilvaniassa Karpaattien kaaren sisäpuolella sijaitseva kaupunki, jonka vanhan keskustan yllä kohoaa [[Tâmpa-vuori]]. Kaupunki kehittyi 1200-luvulta alkaen saksalaisten uudisasukkaiden kauppakaupungiksi, ja sen saksankielinen nimi on Kronstadt. Tunnetuin nähtävyys on goottilainen [[Mustakirkko]], joka on yksi alueen suurimmista kirkoista. Kaupunki on suosittu lähtöpaikka vuoristoretkille, ja läheisyydessä on talviurheilukeskus Poiana Brașov sekä [[Branin linna]].
+
+### v2-1059
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: Romanian ateneum
+VASTAUS: Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin keskustassa. Hankkeen idea syntyi vuonna 1865 kulttuuriseuran perustamisen yhteydessä, ja rakennus vihittiin käyttöön vuonna 1888. Rahaa kerättiin tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Konserttisalissa on 794 paikkaa, ja katon alla kiertää 75 metriä pitkä freskomaalaus, jonka teki [[Costin Petrescu]] ja joka kuvaa Romanian historiaa roomalaisista aina 1900-luvun alkuun. Rakennuksessa toimii [[George Enescun]] filharmoninen orkesteri.
+
+### v2-1060
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: Cișmigiun
+VASTAUS: Cișmigiun puutarha on Bukarestin vanhin ja suurin keskustan puisto. Se avattiin yleisölle syyskuussa 1847 paikalla, jossa oli aiemmin ollut kalastuslampi. Puiston suunnitteli saksalainen puutarhasuunnittelija [[Carl Meyer]], joka toi sinne puita ympäri Eurooppaa ja rakensi järven ympärille mutkittelevia polkuja ja pieniä kanavia. Puistoon saatiin sähkövalot jo vuonna 1882, mikä oli tuohon aikaan harvinaista. Pinta-alaa on lähes 15 hehtaaria, ja järvellä ui yhä mustia joutsenia. Puistossa on myös [[Kirjailijoiden rotunda]], jonka ympärillä on kaksitoista kivistä rintakuvaa romanialaisista kirjailijoista.
+
+### v2-1061
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: Nicolae Ceaușescu
+VASTAUS: Nicolae Ceaușescu (1918–1989) johti Romaniaa kommunistisen puolueen pääsihteerinä vuodesta 1965 kuolemaansa asti. Alkuvuosina hän sai kiitosta siitä, että Romania pyrki omaan linjaansa suhteessa Moskovaan, mutta 1980-luvulla maa ajautui ankaraan niukkuuteen, kun ulkomaanvelkaa maksettiin pois ruokaa ja sähköä säännöstelemällä. Valtaa pitivät yllä henkilökultti ja salainen poliisi [[Securitate]]. Hänen hallintonsa kaatui joulukuun [[vuoden 1989 vallankumouksessa]], ja hänet teloitettiin vaimonsa kanssa joulupäivänä. Tapahtumista on yli kolmekymmentäviisi vuotta, ja ne ovat edelleen tärkeä osa romanialaista muistia.
+
+### v2-1062
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: Vrancean maanjäristys
+VASTAUS: Maaliskuun 4. päivänä 1977 Romanian kaakkoisosassa [[Karpaattien]] kaaren mutkassa sattui voimakas maanjäristys, jonka keskus oli [[Vrancean]] vuoristoalueella. Järistys tuntui laajalla alueella, ja pahiten kärsi Bukarest, jossa romahti noin 33 suurta kerrostaloa ja kuoli yli tuhat ihmistä. Vrancean alue on Euroopan seismisesti aktiivisimpia, ja sieltä syntyy syvällä maankuoressa voimakkaita järistyksiä. Katastrofi vaikutti myös kaupungin muotoon, sillä [[Nicolae Ceaușescun]] hallinto käytti sitä perusteena laajoille purkutöille keskustassa. Tapahtumasta on yli neljäkymmentä vuotta, ja alueella on sittemmin tiukennettu rakennusmääräyksiä.
+
+### v2-1063
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: Mihai Vodăn luostari
+VASTAUS: Mihai Vodăn luostari on Bukarestin vanha ortodoksinen luostarikompleksi, joka sai nimensä ruhtinas [[Mihai Viteazulin]] mukaan, joka rakennutti sen 1500-luvun lopulla. Kompleksin kirkko kuului niihin rakennuksiin, jotka 1980-luvulla pelastettiin purkamiselta siirtämällä ne kiskoja pitkin uuteen paikkaan, kun alue tarvittiin Ceaușescun rakennushankkeille. Lähteiden mukaan kirkko liikkui muutamia satoja metrejä, mutta en ole varma tarkasta matkasta. Nykyisin luostarin rakennuksissa toimii [[Romanian kansallisarkisto]], ja siksi vanha pyhä paikka on osa kaupungin kirjallista muistia.
+
+### v2-1064
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: Ceaușescun
+VASTAUS: Ceaușescu halusi Bukarestin keskustaan uuden hallintokeskuksen, jonka keskipisteeksi nousi [[Parlamenttipalatsi]]. Rakennustyöt alkoivat vuonna 1984, ja pääarkkitehtina oli [[Anca Petrescu]], jonka kanssa piirsi noin 700 muuta arkkitehtia. Lattiapinta-alaa on 365 000 neliömetriä, ja painoa on noin 4,1 miljoonaa tonnia, joten rakennus on painavin koko maailmassa. Sen tieltä purettiin kokonainen vanha kaupunginosa, ja kymmenettuhannet asukkaat muuttivat muualle. Nykyisin talossa kokoontuu Romanian parlamentti, mutta noin 70 prosenttia huoneista on yhä tyhjillään. Diktaattorin kaatumisesta [[vuoden 1989 vallankumouksessa]] on yli kolmekymmentäviisi vuotta.
+
+### v2-1065
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: George Enescun
+VASTAUS: George Enescu (1881–1955) oli romanialainen säveltäjä, viulisti, pianisti ja kapellimestari, jota pidetään maansa merkittävimpänä muusikkona. Hän opiskeli Wienissä ja Pariisissa ja vietti suuren osan elämästään Pariisissa, jossa hän myös kuoli. Tunnetuimpia teoksia ovat [[Romanialaiset rapsodiat]], jotka perustuvat kansanmusiikkiin, sekä ooppera [[Oidipus]]. Enescu oli myös arvostettu opettaja, jonka oppilaisiin kuului viulisti Yehudi Menuhin. Hänen nimeään kantavat Bukarestin filharmoninen orkesteri ja [[George Enescu -festivaali]].
+
+### v2-1066
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: filharmoninen orkesteri
+VASTAUS: Bukarestin filharmoninen orkesteri kantaa George Enescun nimeä, ja sen kotipaikka on [[Romanian ateneum]]. Orkesterin juuret ulottuvat lähteiden mukaan 1800-luvun loppupuolelle, kun Bukarestissa perustettiin filharmoninen seura, mutta en ole varma tarkasta vuodesta. Nimi annettiin säveltäjän muistolle hänen kuolemansa jälkeen. Orkesteri esiintyy ateneumissa säännöllisesti ja vierailee myös ulkomailla. Se on keskeinen osa kaupungin musiikkielämää ja esiintyy myös [[George Enescu -festivaalilla]].
+
+### v2-1067
+KOHDE: kaupunki:bukarest
+KYSYMYS: Kerro lisää: sarmale
+VASTAUS: Sarmale ovat kaalikääryleitä, joiden täytteenä on jauhelihaa, riisiä ja sipulia. Niiden nimi tulee turkin sanasta sarmak, joka tarkoittaa käärimistä, ja ruoka tuli Romaniaan [[Osmanien valtakunnan]] mukana. Samantapaisia täytettyjä kääryleitä syötiin osmanikeittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viininlehteen, mutta Romaniassa käytettiin [[hapankaalin]] lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Kääryleet haudutetaan tuntikausia tomaattikastikkeessa ja tarjoillaan [[mämäligän]] ja smetanan kanssa. Ruoka on tänään niin tiiviisti osa romanialaista keittiötä, että sitä pidetään kansallisena.
+

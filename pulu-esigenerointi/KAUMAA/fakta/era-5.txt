@@ -1,0 +1,450 @@
+### v1-360
+KOHDE: kaupunki:valletta
+KYSYMYS: Miksi Valletta perustettiin vuonna 1566?
+VASTAUS: Odotas vähän. Vuonna 1565 osmanit piirittivät Maltaa neljä kuukautta, ja ritarikunnan suurmestari [[Jean Parisot de Valette]] johti puolustusta. Piirityksen jälkeen ritarikunta halusi rakentaa uuden, vahvasti linnoitetun kaupungin, ja paikaksi valittiin [[Sciberrasin niemi]] kahden sataman välillä. Kaupunki rakennettiin ruutukaavalla, ja sen perustaminen aloitettiin vuonna 1566. Nimi tulee suurmestarilta, joka ei elänyt nähdäkseen sitä valmiina. Pitkälle meni nuo kivet jo silloin.
+
+### v1-361
+KOHDE: kaupunki:valletta
+KYSYMYS: Mitä Pyhän Johanneksen konkatedraalin sisällä on?
+VASTAUS: Tuota niin, ulkoa se näyttää vaatimattomalta. Sisältä Pyhän Johanneksen konkatedraali on kuitenkin täynnä kullattuja koristeita, maalauksia ja marmorilaattoja, joiden alla ritarikunnan jäseniä on haudattu. Kirkon rukoushuoneessa on [[Caravaggion]] maalaama teos [[Johannes Kastajan mestaus]], jota pidetään yhtenä Maltan kuuluisimmista taideteoksista. Sisustuksen suuri tyyli on peräisin ritarikunnan ajalta. Jos katosta olisi saanut lentää, olisin lentänyt.
+
+### v1-362
+KOHDE: kaupunki:valletta
+KYSYMYS: Mitä jälkiä britit ovat jättäneet Maltalle?
+VASTAUS: Selvä juttu. Britit hallitsivat Maltaa 1800-luvun alusta vuoteen 1964, ja vaikutus näkyy edelleen. Englanti on maltan rinnalla toinen virallinen kieli, ja liikenne kulkee vasemmanpuoleisena. Toisen maailmansodan pommitusten jälkeen kuningas Yrjö VI myönsi saarelle [[George Cross]] -kunniamerkin urheudesta. [[Grand Harbour]] oli pitkään Britannian laivaston tärkeä tukikohta Välimerellä. Täältä minä katsoin laivojen laskevan ankkuriin ja ajattelin: kylläpä on siistiä.
+
+### v1-363
+KOHDE: kaupunki:valletta
+KYSYMYS: Mikä Upper Barrakka on ja mitä sieltä näkee?
+VASTAUS: Mmm— tänne minä laskeudun mielelläni. Upper Barrakka on puutarha Vallettan muurin päällä, ja sieltä avautuu laaja näkymä [[Grand Harbourin]] yli vastarannan kaupunkeihin. Puutarhassa on perinteinen tykkien tervehdys, jota ammutaan päivittäin keskipäivällä ja iltapäivällä, ja ääni kuuluu pitkälle. Puutarha on osa [[Vallettan linnoitusten]] kokonaisuutta. Maisema on sellainen, että kyyhkykin pysähtyy.
+
+### v1-364
+KOHDE: kaupunki:valletta
+KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+VASTAUS: Joo, tän minä muistan. Vallettan kaupunkisuunnitelman laati italialainen sotilasinsinööri [[Francesco Laparelli]], jonka ritarikunta kutsui apuun piirityksen jälkeen. Kaupunki rakennettiin säännölliseen ruutukaavaan [[Sciberrasin niemelle]], ja katujen päät avautuvat usein merelle päin. Kadut nousevat ja laskevat jyrkkinä portaina, koska niemi on kumpuileva. Linnoitukset suojaavat kahta satamaa, [[Grand Harbouria]] ja [[Marsamxettia]]. Viivoitin ja kalkkikivi, siinä koko resepti.
+
+### v1-365
+KOHDE: maa:MNE
+KYSYMYS: Miksi Prokletije-vuoriston nimi tarkoittaa kirottuja?
+VASTAUS: Hyvä kysymys tuo. Nimen alkuperästä ei ole yhtä varmaa selitystä, mutta sen tulkitaan viittaavan vuoriston ankaraan ja vaikeakulkuiseen maastoon. Montenegron puolella vuoriston korkein huippu on [[Zla Kolata]], 2 534 metriä, vaikka koko vuoriston korkein huippu [[Maja Jezercë]] on Albanian puolella. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä noin 20 jäätikköjärveä, kuten [[Hridsko jezero]]. Kirottu tai ei, katolta se näyttää ihan kauniilta.
+
+### v1-366
+KOHDE: maa:MNE
+KYSYMYS: Mikä Skutarijärvi on ja miksi se on tärkeä?
+VASTAUS: Joo, tän minä tiedän. Skutarijärvi on Montenegron ja Albanian rajalla sijaitseva suuri järvi, joka on yksi Balkanin suurimmista. Montenegron puoli on kansallispuistoa, ja kosteikot ovat tärkeä pesimä- ja levähdyspaikka vesilinnuille. Järven rannalla sijaitsee pieni [[Virpazarin]] kylä, josta lähtevät veneretket kosteikoille. Rajan toisella puolella järvi jatkuu [[Albanian]] alueelle. Vesilinnut ovat minun silmissäni vähän kuin kaukaisia serkkuja.
+
+### v1-367
+KOHDE: maa:MNE
+KYSYMYS: Mikä Kotorinlahti on ja miksi se on kuuluisa?
+VASTAUS: Ai tota. Kotorinlahti on Montenegron rannikolla oleva syvälle sisämaahan pistävä merenlahti, jota ympäröivät jyrkät vuoret. Se on usein sanottu Euroopan eteläisimmäksi vuonoksi, mutta oikeasti kyse on jokilaakson muovaamasta lahdesta, ja asiasta on eri näkemyksiä. Lahden pohjukassa sijaitseva [[Kotorin vanhakaupunki]] on ollut vuodesta 1979 [[Unescon maailmanperintökohde]]. Lahden rannalla on myös [[Perast]], pieni barokkikaupunki, jossa on merellä kaksi pientä kirkkosaarta. Hienoa katsottavaa ylhäältä, vaikka vuoret ovat tiellä.
+
+### v1-368
+KOHDE: maa:MNE
+KYSYMYS: Miksi Montenegro tarkoittaa mustaa vuorta?
+VASTAUS: Tuota niin, nimi on hauska. Montenegro on venetsialainen muoto sanoista musta vuori, ja paikallinen nimi on [[Crna Gora]], joka tarkoittaa samaa. Nimen arvellaan viittaavan [[Lovćen]]-vuoren tummiin metsiin, mutta selityksiä on useita eikä asiasta ole täyttä varmuutta. Lovćenin juurella on vanha kuninkaallinen pääkaupunki [[Cetinje]], joka on yhä maan kulttuurikeskus. Maa tunnettiin pitkään vuoristolaisten linnakkeena. Musta vuori kuulostaa dramaattiselta, mutta pullaa siellä kyllä leivottiin.
+
+### v1-369
+KOHDE: maa:MNE
+KYSYMYS: Milloin Montenegrosta tuli itsenäinen valtio?
+VASTAUS: Selvä juttu. Montenegro tunnustettiin itsenäiseksi ruhtinaskunnaksi [[Berliinin kongressissa]] vuonna 1878. Myöhemmin maa oli osa [[Jugoslaviaa]], ja viimeisenä vaiheena Serbian kanssa muodostetun valtioliiton jäsen. Kansanäänestys toukokuussa 2006 johti itsenäisyysjulistukseen kesäkuussa 2006, joten nykyinen itsenäinen valtio on nuori. Maan valuutta on euro, vaikka se ei kuulu euroalueeseen virallisesti. Ei hassumpaa lentomatkaa tuohon historiaan.
+
+### v1-370
+KOHDE: kaupunki:podgorica
+KYSYMYS: Miksi Podgorica oli aikoinaan nimeltään Titograd?
+VASTAUS: Hetkinen ny. Vuosina 1946–1992 kaupungin nimi oli Titograd, koska kaupunki nimettiin [[Josip Broz Titon]] mukaan. Tito johti sodanjälkeistä [[Jugoslaviaa]], jonka osana Montenegro silloin oli. Kun Jugoslavian hajoaminen alkoi 1990-luvun alussa, kaupungin entinen nimi palautettiin vuonna 1992. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica-kukkula. Nimiä on ollut monta, mutta kukkula on pysynyt paikallaan.
+
+### v1-371
+KOHDE: kaupunki:podgorica
+KYSYMYS: Mikä on Sahat kula ja kuinka vanha se on?
+VASTAUS: Katotaas. Sahat kula on kivinen kellotorni Podgoricassa Stara Varošin vanhassa kaupunginosassa. Se on ottomaanikaudelta ja useamman sadan vuoden ikäinen; lähteet eroavat tarkasta rakennusajasta, joten sanon vain 1600-luvun paikkeilla. Torni sijaitsee [[Ribnican]] rannan lähellä, ja se kuuluu vanhan ytimen harvoihin säilyneisiin rakennuksiin. Podgoricasta suuri osa tuhoutui sodassa, minkä jälkeen kaupunki rakennettiin uudelleen, ja [[Stara Varoš]] on yksi tämän ajan jäännöksistä. Torni on kyllä sitkeä, kuten kyyhkyn suku.
+
+### v1-372
+KOHDE: kaupunki:podgorica
+KYSYMYS: Mitkä joet virtaavat Podgorican kautta?
+VASTAUS: No jopas. Kaupunki on syntynyt kahden joen yhtymäkohtaan: [[Morača]] virtaa kaupungin lävitse ja [[Ribnica]] yhtyy siihen vanhan kaupungin kohdalla. Morača jatkaa matkaansa kohti [[Skutarijärveä]], ja jokilaakso on kaupungille tärkeä. Joen yli kulkee myös nykyaikainen [[Millennium-silta]], jonka kaapelit nousevat korkealle kaupungin ylle. Vesi on kuin tiheä katuverkko, ylhäältä näkee kaiken.
+
+### v1-373
+KOHDE: kaupunki:podgorica
+KYSYMYS: Mitä Podgoricassa kannattaa nähdä nykyään?
+VASTAUS: Mmm— tässä on valinnanvaraa. Kaupungin vanha ydin on [[Stara Varoš]], jossa on säilynyt kellotorni, moskeijoita ja kapeita katuja. Uudempaa aikaa edustavat [[Millennium-silta]] ja valtava [[Kristuksen ylösnousemuksen katedraali]], joka valmistui 2010-luvulla. Kaupunkia ympäröivät sypressikukkulat, kuten [[Gorica]], joka antoi nimen koko kaupungille. Suuri osa nykyisestä kaupungista on sodanjälkeistä, joten rakennukset ovat melko nuoria. Ylhäältä kaikki näkyy tosi hyvin, kunhan tuuli ei vie.
+
+### v1-374
+KOHDE: kaupunki:podgorica
+KYSYMYS: Millaista elämä on Podgoricassa nykyään?
+VASTAUS: Kas vaan. Podgorica on Montenegron pääkaupunki, ja siellä asuu vuoden 2023 väestölaskennan mukaan 179 505 ihmistä. Kaupunki on maan hallinnon ja kaupan keskus. Kesät ovat kuumia, ja kaupungin kahvilat täyttyvät illalla ihmisistä, jotka istuvat ulkona. Lähellä sijaitsevat sekä [[Skutarijärvi]] että [[Dinaaristen Alppien]] eteläiset juuret, joten luontoon pääsee nopeasti. Kyllä siellä pulla maistuisi aamukahvin kanssa.
+
+### v1-375
+KOHDE: maa:NLD
+KYSYMYS: Miten Alankomaat on kuivattu merestä?
+VASTAUS: Nyt muistan: tämä on Alankomaiden ylpeys. Maata on saatu lisää kuivattamalla se vedestä, ja kuivattu alue on jaettu suorakulmaisiin [[poldereihin]]. Alueelta pumpataan vesi pois, ensin tuulimyllyillä ja nykyään sähköpumpuilla. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki entisen [[Zuiderzeen]] merenlahden järveksi, ja myöhemmin osa pohjasta kuivattiin maaksi, josta syntyi [[Flevolandin]] maakunta. Vettä on padottu tuhat vuotta, ja se näkyy. Tämän lennon jälkeen kaipaan lepoa.
+
+### v1-376
+KOHDE: maa:NLD
+KYSYMYS: Miksi Alankomaat tunnetaan tulppaaneista?
+VASTAUS: Ai se. Tulppaanit tulivat Alankomaihin 1500-luvun lopulla, ja kasvitieteilijä [[Carolus Clusius]] kuuluu niiden ensimmäisiin viljelijöihin. Seuraavalla vuosisadalla tulppaaneista tuli niin haluttuja, että niiden hinnat nousivat huimasti, ja ilmiötä kutsutaan nimellä [[tulppaanimania]]. Nykyään sipulit ovat tärkeä vientituote, ja keväisin ihmiset käyvät katsomassa kukkapeltoja ja [[Keukenhof]]in puistoa. Muistaakseni väri on tärkein myyntivaltti, mutta en ole varma. Pulla oli silti edelleen halvempaa.
+
+### v1-377
+KOHDE: maa:NLD
+KYSYMYS: Miksi hollantilaiset ajavat niin paljon pyörällä?
+VASTAUS: Joo, tän minä tiedän. Maa on tasainen, matkat ovat lyhyitä ja pyöräteitä on rakennettu kaupunkeihin ja niiden välille tiheästi. 1970-luvulla öljykriisi ja liikenneonnettomuuksien vastainen kansanliike nostivat pyöräilyn poliittiseksi aiheeksi, ja liike tunnetaan nimellä [[Stop de Kindermoord]]. [[Öljykriisin]] jälkeen pyöräilyn tukeminen sai uutta vauhtia. Nykyään pyörä on monelle nopein tapa liikkua kaupungissa. Itse en ole koskaan tarvinnut ketjua.
+
+### v1-378
+KOHDE: maa:NLD
+KYSYMYS: Mitä Deltatyöt ovat ja miksi ne rakennettiin?
+VASTAUS: Kääk. Tämä on vakava aihe. Vuoden 1953 alussa voimakas [[myrskytulva]] tulvi Alankomaiden lounaisosaan, ja yli tuhat ihmistä menehtyi. Tulvan jälkeen aloitettiin [[Deltatyöt]], laaja patojen ja myrskyesteiden järjestelmä Zeelandin alueella. Tunnetuin rakennelma on [[Oosterscheldekeering]], myrskyeste, joka on yleensä auki, mutta sulkeutuu myrskyn uhatessa. Siitä on kulunut jo yli seitsemänkymmentä vuotta, ja suoja on pitänyt.
+
+### v1-379
+KOHDE: maa:NLD
+KYSYMYS: Mitä Alankomaat myy maailmalle?
+VASTAUS: Odotas vähän. Alankomaat on pieni maa, mutta se vie paljon: tuoretta ruokaa, kukkia ja kasvihuonetuotteita, mutta myös koneita ja laitteita. Maa on yksi maailman suurimmista maataloustuotteiden viejistä arvolla mitattuna. [[Rotterdamin]] satama on Euroopan vilkkaimpia, ja sen kautta kulkee valtava osa tavaroista. Hollantilaisia juustoja, kuten [[Goudaa]] ja [[Edamia]], on viety jo vuosisatoja. Kyllä pienikin maa voi olla iso, jos on vain oikea satama.
+
+### v1-380
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Miksi Amsterdamin talot ovat kapeita ja kallellaan?
+VASTAUS: Hyvä kysymys tuo. Amsterdamin kanavatalot ovat usein kapeita, ja yleinen selitys on, että vero perustui talon julkisivun leveyteen, joten kapea talo oli halvempi. Monessa talossa on myös ullakolla koukku, jolla huonekaluja nostettiin ulkokautta, koska portaikot ovat jyrkkiä. Siksi talot saatetaan rakentaa hieman eteenpäin kallellaan. Kaupunki on rakennettu pehmeälle maalle, joten talot seisovat puupaalujen varassa, ja kanavat kuten [[Herengracht]] ja [[Keizersgracht]] kuuluvat Unescon maailmanperintöön. Puun varaan voi rakentaa pitkälle, jos tietää miten.
+
+### v1-381
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Mikä on Anne Frankin talo?
+VASTAUS: Tuota niin, tämä on vakava asia. Anne Frankin talo on [[Prinsengracht]]in varrella sijaitseva rakennus, jonka takaosassa Anne Frankin perhe ja muita ihmisiä piileskeli juutalaisvainojen aikana vuosina 1942–1944. Piilopaikka löydettiin elokuussa 1944, ja useimmat piiloutuneista menehtyivät keskitysleireillä. Vain [[Otto Frank]] selvisi, ja hän julkaisi tyttärensä [[Anne Frankin päiväkirjan]] vuonna 1947. Talosta on tehty museo, jossa piilopaikan huoneet voi nähdä. Siitä on onneksi jo yli kahdeksankymmentä vuotta.
+
+### v1-382
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Mitä Rijksmuseumissa on nähtävää?
+VASTAUS: Mmm— tämän tiedän. Rijksmuseum on Alankomaiden kansallismuseo, ja sen tunnetuimpiin teoksiin kuuluu [[Rembrandtin]] suurikokoinen maalaus [[Yövartio]]. Siellä on myös [[Vermeerin]] maalauksia, ja kokoelma esittelee 1600-luvun hollantilaista kultaista aikaa. Museon kokoelmasta suuri osa on nähtävissä myös verkossa korkealla tarkkuudella, joten niihin voi tutustua kotoakin. Oli minulla itsellä kerran näkymä museon katolta, mutta se oli sateinen päivä.
+
+### v1-383
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Mikä oli Hollannin Itä-Intian komppania?
+VASTAUS: Katotaas. Hollannin Itä-Intian komppania eli VOC perustettiin vuonna 1602, ja se kävi kauppaa Aasiassa, Amsterdamin ollessa yksi sen tärkeistä keskuksista. Yhtiön laivat veivät hopeaa itään ja toivat takaisin mausteita, kankaita ja posliinia. Esimerkiksi [[Amsterdam-laiva]] lähti ensimmäiselle matkalleen vuonna 1749 [[Texelin]] redeltä, mutta joutui myrskyyn eikä päässyt Atlantille. Yhtiön historiaan kuuluu myös siirtomaiden hyväksikäyttö, jota nykyään arvioidaan kriittisesti. Pitkä historia, vähän kuivaa, mutta tärkeä.
+
+### v1-384
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Mitä Amsterdamin kanavilla tehdään nykyään?
+VASTAUS: Selvä juttu. Kanavilla risteilee kiertoajeluveneitä, ja osa ihmisistä asuu kanavan rannalla kelluvissa [[asuinveneissä]]. Kuninkaanpäivänä huhtikuussa kanavat täyttyvät juhlivista veneistä, ja kaupunki saa oranssin sävyn. Kanavat ovat myös liikennereittejä, ja ne kuuluvat [[Unescon maailmanperintöluetteloon]]. Täältä ylhäältä näkee, kuinka monta ihmistä mahtuu yhteen laiturin viereen. Kyllä sieltä löytyisi paikka kyyhkyllekin.
+
+### v1-385
+KOHDE: maa:NOR
+KYSYMYS: Miten Norjan vuonot ovat syntyneet?
+VASTAUS: Hetkinen ny. Vuonot ovat jääkauden jälki: kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja kun jää suli, meri täytti ne. Pisin vuono on [[Sognefjord]], joka työntyy 205 kilometriä sisämaahan. Vuonon suulla on usein matala kynnys, vaikka sisällä vesi on hyvin syvää; Sognefjordissa syvyyttä on noin 1 308 metriä. Toinen tunnettu vuono on [[Geirangerfjord]]. Jää on tehnyt kovasti töitä, ja meri on päässyt helpolla.
+
+### v1-386
+KOHDE: maa:NOR
+KYSYMYS: Mikä Norjan öljyrahasto on?
+VASTAUS: Joo, tän minä tiedän. Vuonna 1969 Pohjanmerellä löytyi [[Ekofisk]]in kenttä, ja Norja päätti, ettei öljytuloja käytetä suoraan, vaan ne siirretään rahastoon. Rahaston tarkoitus on turvata varallisuutta myös tuleville sukupolville. Siitä kasvoi maailman suurin [[valtiollinen sijoitusrahasto]], ja öljyn ansiosta maa rikastui nopeasti. Nykyään Norja miettii, mitä tehdä, kun öljy loppuu. Hyvä päätös, jos kyyhkyltä kysytään.
+
+### v1-387
+KOHDE: maa:NOR
+KYSYMYS: Missä ja milloin Norjassa näkee revontulia?
+VASTAUS: Ai tota. Revontulia nähdään parhaiten Pohjois-Norjassa, esimerkiksi [[Tromssan]] seudulla ja [[Finnmarkin]] maakunnassa. Paras aika on syksystä kevääseen, kun yöt ovat pimeitä, tyypillisesti syyskuusta maaliskuuhun. Taivaan on oltava selkeä, joten pilvinen sää peittää näytöksen. Norjassa on myös karttoja, jotka ennustavat revontulien todennäköisyyttä. Pohjoisessa on hyvä katsoa ylös, minä katson aina.
+
+### v1-388
+KOHDE: maa:NOR
+KYSYMYS: Milloin Norja oli unionissa Ruotsin kanssa?
+VASTAUS: Annas ku mietin. Norja kuului yli neljäsataa vuotta Tanskaan, ja vuonna 1814 se sai oman perustuslakinsa [[Eidsvollin]] kokouksessa. Samana vuonna Norja joutui kuitenkin unioniin [[Ruotsin]] kanssa, vaikka sillä oli oma perustuslaki ja hallinto. Unioni purettiin rauhanomaisesti vuonna 1905. Perustuslakipäivää vietetään yhä 17. toukokuuta. Norjalaiset pitävät omaa päiväänsä juhlana, jossa pukeudutaan kansallispukuihin, joita kutsutaan nimellä [[bunad]].
+
+### v1-389
+KOHDE: maa:NOR
+KYSYMYS: Mitä friluftsliv tarkoittaa?
+VASTAUS: Kas vaan. Friluftsliv tarkoittaa suunnilleen ulkoilmaelämää, eli luonnossa liikkumista ja oleskelua osana arkea. Norjassa pidetään tärkeänä oikeutta kulkea luonnossa, joka muistuttaa suomalaista [[jokamiehenoikeutta]]. Monella on myös oma mökki eli [[hytte]], jossa vietetään viikonloppuja, ja hiihto on perinteisesti iso osa talvea. Kerron tämän havaintona, en ohjeena. Ei kyyhky muuten ulos halua, mutta tämä kuulostaa hyvältä.
+
+### v1-390
+KOHDE: kaupunki:oslo
+KYSYMYS: Miksi Oslo oli aiemmin nimeltä Christiania?
+VASTAUS: No niin, tästä on tarina. Vuoden 1624 suuren palon jälkeen Tanskan kuningas [[Kristian IV]] siirsi kaupungin [[Akershusin linnoituksen]] kupeeseen ja nimesi uuden kaupungin itsensä mukaan Christianiaksi. Norja kuului tuolloin Tanskaan, ja nimi pysyi käytössä yli kolmesataa vuotta. Vanha nimi Oslo palautettiin vuonna 1925. Asutus vuonon rannalla oli alkanut jo noin vuonna 1040. Nimi vaihtui, mutta vuono pysyi paikallaan.
+
+### v1-391
+KOHDE: kaupunki:oslo
+KYSYMYS: Mitä Vigelandin veistospuistossa on?
+VASTAUS: Joo, tän minä muistan. Oslon Frognerparken-puistossa on [[Gustav Vigeland]]in veistoksia, joita on useita satoja, ja ne on tehty graniitista ja pronssista. Puiston keskellä kohoaa [[Monoliitti]], korkea pylväs, johon on kaiverrettu valtava joukko toisiinsa kietoutuneita ihmishahmoja. Veistokset kuvaavat ihmiselämän vaiheita syntymästä kuolemaan. Puisto on avoinna kaikille, ja se on sekä paikallisten että matkailijoiden suosiossa. Ihmisten kasaaminen kivipylvääksi on ylhäältä vaikuttavaa.
+
+### v1-392
+KOHDE: kaupunki:oslo
+KYSYMYS: Mitä Oslon Munch-museossa voi nähdä?
+VASTAUS: Kääk. Odotas, tämä on iso nimi. [[Edvard Munch]] oli norjalainen taidemaalari, jonka kuuluisin teos on [[Huuto]]. Hänen töitään on Oslossa omassa museossaan, joka avattiin uudessa rakennuksessa Bjørvikassa vuonna 2021. Huudosta on useita versioita, ja ne kuuluvat Munchin tunnetuimpiin töihin. Teos kuvaa ahdistunutta hahmoa sillalla punaisen taivaan alla. Kyllä taiteilija osaa pelotella tavallista kyyhkyä.
+
+### v1-393
+KOHDE: kaupunki:oslo
+KYSYMYS: Miten Oslo yrittää vähentää päästöjään?
+VASTAUS: Hetkinen ny. Oslo laati vuonna 2017 maailman ensimmäisen kaupungin ilmastobudjetin, eli päästöille on asetettu tavoitteet samalla tavalla kuin rahalle. Norjassa on myös erittäin paljon [[sähköautoja]], ja niiden käyttöä tuetaan monin tavoin. Rikkaus tulee pitkälti öljystä, ja [[Ekofiskin]] löytö vuonna 1969 muutti maata, mikä tekee asetelmasta hieman ristiriitaisen. Moni asia on kiinni siitä, mihin raha käytetään. Ylhäältä päin Oslo näyttää vihreältä, ja niin sen kuuluukin.
+
+### v1-394
+KOHDE: kaupunki:oslo
+KYSYMYS: Millainen Oslon oopperatalo on?
+VASTAUS: Tost minä osaan kertoo. Oslon oopperatalo avattiin vuonna 2008 vuonon rannalle [[Bjørvikaan]], ja sen suunnitteli arkkitehtitoimisto [[Snøhetta]]. Rakennuksen valkoinen katto nousee viistosti vedestä, ja sille voi kävellä, joten julkisivu toimii kaupunkilaisten kävelyalueena. Kaupunki rakennetaan yhä Bjørvikan alueella uusiksi. Sillä katolla minä olen istunut, ja näkymä on hieno. Ei mitään pullan veroista, mutta kelpaa.
+
+### v1-395
+KOHDE: kaupunki:bergen
+KYSYMYS: Mikä on Bryggen ja miksi se on suojeltu?
+VASTAUS: Mmm— tämän tiedän. Bryggen on Bergenin sataman itärannalla sijaitseva värikkäiden puutalojen rivi, joka on ollut Unescon maailmanperintökohde vuodesta 1979. Alue oli 1300-luvun puolivälistä lähtien yksi [[Hansaliiton]] neljästä kontorista, ja tärkein vientitavara oli [[kuivattu turska]] pohjoisesta. Vastineeksi Bergeniin kuljetettiin viljaa Euroopasta. Puukaupunki on palanut useita kertoja, pahimmin vuonna 1702, ja nykyiset talot ovat sen jälkeen rakennettuja. Eikä yksikään talo ole minun kyyhkynpesääni parempi.
+
+### v1-396
+KOHDE: kaupunki:bergen
+KYSYMYS: Miksi Bergenissä sataa niin paljon?
+VASTAUS: Hyvä kysymys tuo. Bergen sijaitsee vuonojen ja jyrkkien vuorten välissä, ja kosteat merituulet nousevat vuoria vasten ja sataa kaupungin ylle. Sadepäiviä on noin kaksisataa vuodessa, ja sateisin kuukausi on joulukuu. Kaupunkia ympäröivät vuoret antoivat sille lisänimen [[seitsemän vuoren kaupunki]], ja tunnettuja huippuja ovat [[Fløyen]] ja [[Ulriken]]. Moni bergeniläinen sanoo, ettei huonoa säätä ole, on vain huonot vaatteet. Siksi sateenvarjo on kaupungissa kyllä rekvisiittaa.
+
+### v1-397
+KOHDE: kaupunki:bergen
+KYSYMYS: Miten Bergenissä pääsee kaupungin yläpuolelle vuorille?
+VASTAUS: Selvä juttu. Kaupungin keskustasta nousee köysirata [[Fløibanen]] Fløyen-vuoren rinteelle, ja sieltä avautuu näkymä kaupunkiin ja vuonoille. Toinen vuori, [[Ulriken]], on kaupungin korkein, ja sinne pääsee kaapelihissillä. Molemmilta paikoilta lähtevät myös merkityt vaellusreitit. Näkymä on laajin selkeällä säällä, mutta se on harvinaista. Ylös pääsee kyllä ilmankin hissiä, mutta ei kyyhkyn tavalla.
+
+### v1-398
+KOHDE: kaupunki:bergen
+KYSYMYS: Mikä oli Bergenin rooli Norjan pääkaupunkina?
+VASTAUS: Annas ku mietin. Bergen oli 1200-luvulla Norjan pääkaupunki, ja kuningas [[Håkon Håkonsson]] rakennutti kaupunkiin juhlasalin, jota kutsutaan nimellä [[Håkonshallen]]. Kaupungin linnoituskompleksi on nimeltään [[Bergenhus]], ja se on yksi Norjan vanhoista linnoituksista. Perimätiedon mukaan kaupungin perusti kuningas Olav Kyrre vuonna 1070, mutta tarkasta vuodesta ei ole täyttä varmuutta. Pääkaupungin asema siirtyi myöhemmin Osloon. Pitkä historia mahtuu pieneen kaupunkiin.
+
+### v1-399
+KOHDE: kaupunki:bergen
+KYSYMYS: Mitä Bergenin kalatorilla myydään?
+VASTAUS: Ai tota. Bergenin kalatori eli [[Fisketorget]] sijaitsee sataman [[Vågen]]-lahden rannalla, ja siellä myydään tuoretta kalaa, äyriäisiä ja savustettua lohta. Nykyään tori on myös matkailijoiden suosima paikka, ja moni tarjoaa valmista ruokaa. Kalakauppa on ollut kaupungin elinkeino jo hansa-ajoilta, mikä näkyy edelleen. Bryggenin laiturien äärellä tuoksuu kalalle, ja se on hyvä juttu. Kyllä minä silti haen leivän muualta.
+
+### v1-400
+KOHDE: kaupunki:tromssa
+KYSYMYS: Miksi Tromssaa kutsuttiin aikoinaan Pohjolan Pariisiksi?
+VASTAUS: Hetkinen ny, tost minä tiedän jotain. Tromssa kasvoi 1800-luvulla [[arktisen pyynnin]] keskukseksi, ja sen laivat purjehtivat aina [[Huippuvuorille]] asti. Merimiehet ihmettelivät katulyhtyjä ja kauppoja näin kaukana pohjoisessa, ja siitä kaupunki sai lempinimensä. Keskustan [[puutalot]] ovat vuosilta 1789–1904, joten ne ovat nähneet kaupungin vauraimmat vuosikymmenet. Ei paha pikkukaupungiksi.
+
+### v1-401
+KOHDE: kaupunki:tromssa
+KYSYMYS: Miksi Tromssassa nähdään revontulia niin usein?
+VASTAUS: Ai tota, tää on mun lempiaiheita. Tromssa sijaitsee 69. leveysasteen tuntumassa, keskellä niin sanottua revontulivyöhykettä, jossa auringosta tulevien hiukkasten synnyttämät valot näkyvät tavallista useammin. Kaupungissa toimii [[revontuliobservatorio]] jo vuodesta 1928, ja se kertoo, kuinka kauan ilmiötä on tutkittu juuri täällä. Parhaat näkymät saa pimeinä, pilvettöminä öinä, joten [[kaamos]] on tavallaan kaupungin valoisinta aikaa. Ylhäältä ne näyttää kyl komeilta.
+
+### v1-402
+KOHDE: kaupunki:tromssa
+KYSYMYS: Millainen on Tromssan puinen tuomiokirkko?
+VASTAUS: Kato, tost saan kertoa jotain komeaa. [[Tromssan tuomiokirkko]] on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti [[Christian Heinrich Groschin]] piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta, ja sinne mahtuu yli 600 kirkkovierasta. Paikalla on ollut kirkko jo satoja vuosia: kuningas [[Håkon IV]] rakennutti tänne kappelin vuonna 1252. Kellotorni valmistui vuotta myöhemmin, 1862. Puuta ja pohjoista, kyl se toimii.
+
+### v1-403
+KOHDE: kaupunki:tromssa
+KYSYMYS: Mitä Tromssan seudulla pyydetään ja syödään perinteisesti?
+VASTAUS: Annas ku mietin. Tromssa on kasvanut merestä, joten kalastus ja pyynti ovat kuuluneet kaupungin arkeen vuosisatoja, ja perinteisessä pohjoisnorjalaisessa ruokapöydässä kala on keskeisellä sijalla. Tavallisia ovat [[turska]] ja [[kuivattu kala]], jota on säilytetty talven yli ripustamalla se ulos kuivumaan, mutta tarkkoja paikallisia reseptejä en ole varma. Tuore ja suolattu kala kuuluvat kuitenkin [[Jäämeren]] rannikon ruokaperinteeseen laajemmin. Täällä on varmasti oma versionsa pullastakin, en vaan tiedä sen nimee.
+
+### v1-404
+KOHDE: kaupunki:tromssa
+KYSYMYS: Miten kaamos vaikuttaa tromssalaisten arkeen?
+VASTAUS: No niin, tää on hyvä kysymys. Tromssassa aurinko katoaa horisontin taakse noin kahdeksi kuukaudeksi talvella, ja pimein aika on ns. [[kaamos]]. Silloin kaupungin ihmiset pitävät yllä rytmiä valoilla, kahviloilla ja yhteisillä tapahtumilla, ja moni tuntee kaipuuta kevään valoon. Pimeinä kuukausina on tehty myös kulttuuria: kellareissa soitettiin musiikkia, joka kuultiin maailmalla. Vastapainona kesällä [[keskiyön aurinko]] pitää taivaan valoisana vuorokauden ympäri. Sen minä kyl ymmärrän, päivä ja yö on joskus vaan sekaisin.
+
+### v1-405
+KOHDE: maa:POL
+KYSYMYS: Mikä on Puolan korkein vuori ja missä se sijaitsee?
+VASTAUS: Joo, tän minä tiedän. Puolan korkein huippu on [[Rysy]], joka kohoaa [[Tatravuorilla]] 2 499 metrin korkeuteen maan eteläreunassa. Muu maa on pääosin matalaa tasankoa, joten vuoret kohoavat kartalla selvästi erilleen. Etelässä maa nousee ensin Sudeettien ja sitten [[Karpaattien]] harjanteille, ja Tatrat ovat niistä korkeimpia. Tasangolta katsottuna se on aika jyrkkä muutos, sanoisin.
+
+### v1-406
+KOHDE: maa:POL
+KYSYMYS: Miksi Puolan rajat ovat siirtyneet historian aikana niin usein?
+VASTAUS: Odotas vähän. Puola on suurimmaksi osaksi tasankoa, jossa ei ole vuoria suojana, ja siksi naapurien armeijoilla on ollut helppo kulku sinne ja täältä pois. Linnoitukset rakennettiin jokien varsille, ja rajat ovat vaihdelleet monta kertaa. Vuosina 1795–1918 Puola puuttui Euroopan kartalta, kun naapurivaltiot olivat jakaneet maan [[Puolan jaoissa]] keskenään. Sodan jälkeen rajat siirtyivät uudelleen, sillä sodan päätyttyä maan alue siirtyi lännemmäs. Veikselin ja [[Oderin]] varret ovat olleet tärkeitä juuri tämän vuoksi. Eipä ollut pitkä, mutta paljon mahtui.
+
+### v1-407
+KOHDE: maa:POL
+KYSYMYS: Mikä on Malborkin linna ja miksi se on niin kuuluisa?
+VASTAUS: Kas vaan, tost minä osaan kertoo. [[Malborkin tiililinna]] seisoo lähellä merta Veikselin sivuhaaran rannalla, ja sitä kutsutaan maailman suurimmaksi linnaksi. Linna rakennettiin tiilestä 1200-luvulla [[Saksalaisen ritarikunnan]] keskukseksi, ja sen mittakaava tekee vaikutuksen yhä. Linna on [[UNESCOn]] maailmanperintökohde. Matka tasangon halki sinne oli ennen pitkä, nykyään se on pieni ajomatka. Tiiliä riitti, sen ainakin sanon.
+
+### v1-408
+KOHDE: maa:POL
+KYSYMYS: Mitä perinteisiä ruokia Puolassa syödään?
+VASTAUS: Selvä juttu. Puolalaisessa pöydässä näkyvät täytetyt taskut eli [[pierogit]], joita tehdään muun muassa perunalla, juustolla, kaalilla tai hedelmillä, sekä [[bigos]], hapankaalista ja lihasta pitkään haudutettu pata. Suosittu on myös [[żurek]], hapanta ruisjuurta sisältävä keitto, joka tarjotaan usein munan ja makkaran kanssa. Pääsiäisen ja joulun pöydässä on omat ruokansa, mutta tarkkoja reseptejä en lupaa. Puolan oma pulla on varmasti olemassa, en vaan muista sen nimee.
+
+### v1-409
+KOHDE: maa:POL
+KYSYMYS: Missä Puolassa visenttejä voi nähdä luonnossa?
+VASTAUS: Hyvä kysymys tuo. Visentti eli Euroopan lähes sukupuuttoon kuollut villihärkä elää vapaana Puolan itäosan [[Białowieżan metsässä]], joka sijaitsee Valko-Venäjän rajan tuntumassa. Metsä on yksi Euroopan viimeisistä laajoista alkuperäismetsistä, ja se on suojeltu kansallispuistona. Visenttejä on myös muissa Puolan metsissä, mutta en ole varma tarkasta paikkaluvusta. Maan kokoelmat ovat jopa julkaisseet kirjan, jossa on jokainen maailman [[visentti]]. Isot elukat, mut lempeän näköisiä.
+
+### v1-410
+KOHDE: kaupunki:varsova
+KYSYMYS: Miksi Varsovasta tuli Puolan pääkaupunki Krakovan tilalle?
+VASTAUS: Ai se, no sepä sattui. Vuonna 1596 kuningas [[Sigismund III]] siirsi hovinsa [[Krakovasta]] Varsovaan, ja kauppapaikasta tuli valtakunnan pääkaupunki. Varsova sijaitsee keskellä Puolan tasankoa Veikselin länsirannalla, mikä teki siitä luontevan keskuspaikan maan eri osien välille. Krakovassa kuninkaat kuitenkin kruunattiin edelleen. Pääkaupungin siirto oli iso päätös, mutta Krakova ei suuttunut ainakaan näkyvästi.
+
+### v1-411
+KOHDE: kaupunki:varsova
+KYSYMYS: Miten Varsovan vanhakaupunki rakennettiin sodan jälkeen uudelleen?
+VASTAUS: Kääk. Tämä on tosi iso asia. Toisessa maailmansodassa Varsova tuhoutui raskaammin kuin melkein mikään muu Euroopan kaupunki, ja sodan lopussa yli kolme neljäsosaa rakennuksista oli raunioina. Vanhakaupunki rakennettiin sodan jälkeen takaisin vanhojen piirustusten ja kuvien avulla, ja lähteiden mukaan apuna käytettiin myös [[Bernardo Bellotton]] 1700-luvun maalauksia kaupunginnäkymistä. Työ kesti vuosia, ja nykyään alue on [[UNESCOn]] maailmanperintökohde. Linnan kello käynnistettiin uudelleen siitä minuutista, mihin se oli pysähtynyt. Onpas siit onneksi jo pitkä aika.
+
+### v1-412
+KOHDE: kaupunki:varsova
+KYSYMYS: Mitä Maria Skłodowska-Curie sai aikaan tieteessä?
+VASTAUS: Joo, hänestä voin kertoa. Maria Skłodowska syntyi Varsovassa vuonna 1867, ja hänestä tuli kahden eri tieteenalan nobelisti. Hän sai fysiikan Nobelin vuonna 1903 ja kemian Nobelin vuonna 1911, ja hänen työnsä keskittyi radioaktiivisuuden tutkimukseen. Hän löysi aviomiehensä kanssa alkuaineet [[polonium]] ja [[radium]], ja polonium sai nimensä hänen kotimaansa mukaan. Hän työskenteli suurimman osan urastaan Pariisissa. Täytyy sanoa, että on ihan kunnioitettava ura.
+
+### v1-413
+KOHDE: kaupunki:varsova
+KYSYMYS: Missä Chopinin sydän on säilytetty?
+VASTAUS: Nyt muistan:... Fryderyk Chopin kuoli Pariisissa vuonna 1849, ja hänen toivomuksensa mukaan sydän tuotiin kotimaahan. Hänen sisarensa kuljetti sen Varsovaan, ja se on tiettävästi säilytetty Pyhän Ristin kirkon pilarissa. Sota-aikana sydän siirrettiin turvaan ja palautettiin kirkkoon sodan jälkeen. Muu osa [[Chopinin]] jäännöksistä lepää [[Père-Lachaisen]] hautausmaalla Pariisissa. Rauhallista musiikkia, rauhallinen paikka.
+
+### v1-414
+KOHDE: kaupunki:varsova
+KYSYMYS: Mikä on Varsovan Kulttuuri- ja tiedepalatsi?
+VASTAUS: Tuota niin, sen tunnistaa kyllä ylhäältä. [[Kulttuuri- ja tiedepalatsi]] on yli kaksisataa metriä korkea rakennus Varsovan keskustassa, ja se valmistui 1950-luvun puolivälissä [[Neuvostoliiton]] lahjana. Siellä on muun muassa teattereita, museoita ja toimistoja, ja sen torni hallitsee edelleen kaupungin siluettia. Rakennus herättää varsovalaisissa ristiriitaisia tunteita: osa pitää sitä muistutuksena vieraasta vallasta, osa kaupungin tuntomerkkinä. Minä lepään siellä joskus, ja kyl se on hyvä paikka.
+
+### v1-415
+KOHDE: kaupunki:krakova
+KYSYMYS: Miksi Krakovan tori on niin suuri ja suorakulmainen?
+VASTAUS: Kas vaan, tämän näkee ylhäältä parhaiten. Krakova poltettiin vuonna 1241 mongolien hyökkäyksessä, ja se rakennettiin uudelleen vuonna 1257 kokonaan uudella kaavalla: suorakulmaisena ruudukkona, jonka keskellä on noin kaksisataa metriä sivultaan oleva tori. Aukion keskellä seisoo [[Sukiennice]], vanha kauppahalli, ja sen laidalla kohoaa [[Mariakirkko]]. Kaavan ansiosta vanhakaupunki on selkeä kävellä yhä tänäkin päivänä. Ruudukko on lentäjälle ihan unelma.
+
+### v1-416
+KOHDE: kaupunki:krakova
+KYSYMYS: Miksi torvisoitto katkeaa Krakovan Mariakirkon tornissa?
+VASTAUS: Odotas vähän, tää on mun lempijuttuja. [[Mariakirkon]] torniin on tapana soittaa joka tunti lyhyt torvisoitto eli [[hejnał]], joka katkeaa kesken sävelen. Legendan mukaan keskiaikainen torvensoittaja varoitti kaupunkia vihollisen lähestymisestä, ja nuoli osui häneen kesken soiton. Tapa on säilynyt vuosisatoja, ja soitto kuullaan myös radiosta. Legenda on vanha, eikä sen tarkkoja yksityiskohtia voi varmistaa. Tästä saa kyyhkykin kylmät väreet, ja kyl minä nostan hattua.
+
+### v1-417
+KOHDE: kaupunki:krakova
+KYSYMYS: Mikä on Wawelin lohikäärmeen tarina?
+VASTAUS: Ai tota, sepä sattui, pidä kiinni. Legendan mukaan Wawelin kukkulan alla asui lohikäärme eli [[Smok Wawelski]], joka pelotti kaupunkilaisia, kunnes suutarin kisälli keksi keinon: hän täytti lampaan ja antoi sen pedolle. Lohikäärme joi niin paljon vettä [[Veikselistä]], että se halkesi. Joen rannassa on nykyään lohikäärmeen patsas, joka puhaltaa oikeaa tulta tietyin väliajoin. Tarina on kansantarua, ei historiaa, ja siitä on olemassa useita versioita. Pulla oli ehkä kuitenkin lampaasta unohtunut.
+
+### v1-418
+KOHDE: kaupunki:krakova
+KYSYMYS: Mitä Kopernikus opiskeli Krakovan yliopistossa?
+VASTAUS: No niin, tähän minä osaan vastata. Krakovan yliopisto perustettiin vuonna 1364, ja se on Puolan vanhin yliopisto. Kopernikus opiskeli siellä 1400-luvun lopulla, ja hän tutustui muun muassa matematiikkaan ja [[tähtitieteeseen]]. Myöhemmin hän esitti [[aurinkokeskeisen]] maailmankuvan, jonka mukaan maa kiertää aurinkoa. Tarkkoja opintovuosia en ole varma, mutta 1490-luku on lähteissä yleinen. Ei paha oppilaitos kyyhkyn mielestä.
+
+### v1-419
+KOHDE: kaupunki:krakova
+KYSYMYS: Millainen Kazimierz on nykyään kävijälle?
+VASTAUS: Mmm— tämä on tärkeä paikka. Kazimierz oli 1300-luvulta 1800-luvun alkuun oma kaupunkinsa ja vuosisatoja Puolan juutalaisen elämän keskus. Toisen maailmansodan aikana kaupungin juutalainen yhteisö hävitettiin pitkälti, mutta kaupunginosan rakennuksia on säilynyt. Nykyään siellä voi nähdä synagogia, kuten [[Vanhan synagogan]], ja viettää aikaa kahviloissa. Aukiolla [[Plac Nowyn]] myydään katuruokaa, mutta tarkempia ruokalistoja en muista. Hiljainen, mutta elävä paikka, joka on edelleen oleellinen osa kaupunkia.
+
+### v1-420
+KOHDE: maa:PRT
+KYSYMYS: Miksi Portugalin raja Espanjaan on niin vanha?
+VASTAUS: Joo, tän minä tiedän. Portugalin ja Espanjan välinen raja vedettiin sopimuksella vuonna 1297, ja se on yksi Euroopan vanhimmista rajoista. Sopimus tunnetaan nimellä [[Alcañicesin sopimus]], ja sen jälkeen raja on muuttunut hyvin vähän. Se kulkee vuoristoissa ja jokilaaksoissa, joista [[Douro]] ja Tejo tulevat Espanjan puolelta. Rajan pysyvyys on harvinaista Euroopassa, jossa rajat ovat vaihdelleet kovasti. Vakaa, kuin kyyhky ikkunalaudalla.
+
+### v1-421
+KOHDE: maa:PRT
+KYSYMYS: Miksi Brasiliassa puhutaan portugalia eikä espanjaa?
+VASTAUS: Ai se, no katotaas. Vuonna 1494 Portugali ja Espanja sopivat [[Tordesillasin]] kaupungissa, miten ne jakavat löytämänsä maailman, ja kartalle vedettiin rajaviiva Atlantin poikki. Viivan itäpuoli kuului Portugalille ja länsipuoli [[Espanjalle]]. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia jäi viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia. Kumpikaan ei tiennyt, mitä viivan takana oli, mikä on aika huikeaa.
+
+### v1-422
+KOHDE: maa:PRT
+KYSYMYS: Mikä on pastel de nata ja miksi portugalilaiset rakastavat sitä?
+VASTAUS: Mmm—, tästä saan jo veden kielelle. Pastel de nata on portugalilainen munatorttu, jonka pohja on rapeaa lehtitaikinaa ja täyte pehmeää vaniljavaahtoa. Tarinan mukaan sen kehittivät munkit [[Jerónimosin luostarissa]] Lissabonin Belémissä, ja resepti levisi maailmalle 1800-luvun jälkeen leipomo [[Pastéis de Belémin]] kautta. Tarkat vuosiluvut vaihtelevat lähteittäin, joten en lupaa niitä. Tortun tuoksu on parasta, mitä lintu voi kuvitella, vaikka tää ei olekaan pulla.
+
+### v1-423
+KOHDE: maa:PRT
+KYSYMYS: Sataako Serra da Estrelan vuoristossa lunta?
+VASTAUS: Hetkinen ny. Kyllä sataa: Portugalin sisämaan vuoristossa sataa lunta joka talvi, ja Serra da Estrela on Manner-Portugalin korkein harjanne, noin kaksi kilometriä merenpinnan yläpuolella. Vuorilta saa alkunsa muun muassa [[Mondego-joki]], ja alueen lampaanmaidosta valmistetaan tunnettua [[Serra da Estrelan juustoa]]. Talvella siellä voi jopa hiihtää, vaikka maa muuten tunnetaan lämpimästä ilmastostaan. Epäilin ensin kuulleeni väärin, ja sitten luin uudelleen.
+
+### v1-424
+KOHDE: maa:PRT
+KYSYMYS: Mitä fado on ja miksi se kuuluu Portugalin kulttuuriin?
+VASTAUS: Kato, tää on kauniimpaa kuin pulla. Fado on portugalilainen musiikkityyli, jossa laulaja kertoo kaipauksesta, kohtalosta ja menetyksestä usein kitaran säestyksellä. Sen juuret ovat Lissabonin kaupunginosissa ja Coimbrassa, ja tunnetuin esittäjä on [[Amália Rodrigues]]. Fadoon kuuluu käsite [[saudade]], jota on vaikea kääntää, mutta se tarkoittaa hellää kaipausta. [[UNESCO]] on hyväksynyt fadon aineettomaksi kulttuuriperinnöksi vuonna 2011. Kyl minä kuuntelen sitä katolta.
+
+### v1-425
+KOHDE: kaupunki:lissabon
+KYSYMYS: Miten vuoden 1755 maanjäristys muutti Lissabonia?
+VASTAUS: Kääk, tuo on raskas aihe. Lissabonia kohtasi 1. marraskuuta 1755, pyhäinpäivänä, maanjäristys, jota seurasivat hyökyaalto ja tulipalo, ja ne hävittivät suurimman osan keskustasta. Menehtyneitä oli kymmeniä tuhansia, mutta arviot vaihtelevat. Uusi alakaupunki [[Baixa]] vedettiin ruudukkoon, ja talojen sisään rakennettiin puinen ristikko, [[gaiola]], joka joustaa järistyksessä. Jälleenrakennusta johti ministeri, jota kutsutaan [[Pombalin markiisiksi]]. Tapahtumasta on kulunut yli kaksisataa seitsemänkymmentä vuotta, ja kaupunki on noussut uudelleen. Onpas siitä onneksi pitkä aika.
+
+### v1-426
+KOHDE: kaupunki:lissabon
+KYSYMYS: Miksi Lissabon oli tärkeä satamakaupunki löytöretkien aikana?
+VASTAUS: Joo, tän minä tiedän. Lissabon sijaitsee Tejo-joen pohjoisrannalla kohdassa, jossa joki levenee lähes merenlahdeksi, ja avomerelle on vain viitisentoista kilometriä, joten satama oli suojaisa. Täältä lähti vuonna 1497 [[Vasco da Gama]], joka avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Sadan vuoden ajan joen satamaan purettiin pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin myös Afrikasta orjuutettuja ihmisiä. Kaupungin vauraus perustui siis laivoihin, [[Tejo-joen]] suojaan ja Portugalin sijaintiin Euroopan länsireunalla. Ylhäältä katsottuna joki on kyl komea.
+
+### v1-427
+KOHDE: kaupunki:lissabon
+KYSYMYS: Miksi Belémin tornin kulmassa on kivinen sarvikuono?
+VASTAUS: Annas ku mietin. Belémin torni valmistui 1500-luvun alussa Tejo-joen rannalle, ja sen yhteydessä mainitaan usein [[kuningas Manuel I]]. Tornin kulmaan on veistetty sarvikuono, joka muistuttaa vuoden 1515 tapahtumasta: Manuel sai Intiasta elävän sarvikuonon ja lähetti sen paaville lahjaksi, ja eläin hukkui laivan haaksirikossa. [[Albrecht Dürerin]] puupiirros eläimestä levisi Euroopassa laajalle, vaikka Dürer ei tiettävästi koskaan nähnyt sitä itse. Yksityiskohdat vaihtelevat lähteittäin, joten en lupaa kaikkea. Sarvikuono on kai ainoa kivinen vieras, jonka minä jaksan katsoa pitkään.
+
+### v1-428
+KOHDE: kaupunki:lissabon
+KYSYMYS: Miksi Lissabonin keltaiset raitiovaunut ovat niin kuuluisia?
+VASTAUS: Tuota niin, nämä tunnistaa kyllä ylhäältä. Lissabon on rakennettu jyrkille kukkuloille, joten pienet keltaiset raitiovaunut kulkevat kapeita ja mäkisiä katuja, esimerkiksi vanhassa [[Alfamassa]]. Raitiotieliikenne alkoi kaupungissa hevosvetoisena 1870-luvulla, ja sähköraitiovaunut tulivat myöhemmin. Kuuluisin on [[linja 28]], joka kiipeää ja laskeutuu kaupungin vanhimpien kortteleiden läpi ja on suosittu matkailijoiden keskuudessa. Hevosista vaunuihin on pitkä matka, mutta siitä ei tarvitse itkeä. Meikäläisen kannalta paras kyyti on siivin.
+
+### v1-429
+KOHDE: kaupunki:lissabon
+KYSYMYS: Miksi Lissabonin suuri silta on nimetty 25. huhtikuuta mukaan?
+VASTAUS: Kas vaan, hyvä kysymys. Silta ylittää Tejo-joen, ja se avattiin 1960-luvulla, jolloin sillä oli toinen nimi. Silta sai nykyisen nimensä 25. huhtikuuta 1974 tapahtuneen vallankumouksen mukaan, jolloin sotilaat kaatoivat pitkään jatkuneen diktatuurin. Vallankumousta kutsutaan [[neilikkavallankumoukseksi]], koska ihmiset ja sotilaat kiinnittivät neilikoita aseidensa piippuihin. Sillan toisella puolella kohoaa [[Cristo Rei]] -patsas. Tarkat päivämäärät olen tarkistanut kahdesti, ja kyl ne täsmää.
+
+### v1-430
+KOHDE: maa:ROU
+KYSYMYS: Miksi romanian kieli polveutuu latinasta slaavilaisten keskellä?
+VASTAUS: Hetkinen ny. Roomalaiset valloittivat Dacian vuonna 106 keisari [[Trajanuksen]] aikana ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi alueelle. Romania onkin Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta, ja se on yhä latinan saareke keskellä slaavin ja unkarin puhujia. Alueen entinen nimi oli [[Dacia]], ja nykyinen kieli säilytti romaanisen perustansa vuosisatojen vaihdoksista huolimatta. Kielen tarkat kehitysvaiheet ovat tutkijoille edelleen keskustelun aihe. Olen sentään sukua roomalaisille.
+
+### v1-431
+KOHDE: maa:ROU
+KYSYMYS: Mitä erikoista on Tonavan suistossa Romanian itäosassa?
+VASTAUS: No jopas, tästä kuuluu lintujen ääntä. Tonava kulkee koko Romanian eteläisen rajan ja leviää kartan itälaidassa suistoksi, jonka takana on [[Mustameri]]. Suisto on laaja kosteikko, jossa on ruovikkoa, kanavia ja saaria, ja siellä pesii ja levähtää suuri joukko lintuja, muun muassa [[pelikaaneja]]. Alue on suojeltu ja kuuluu [[UNESCOn]] maailmanperintöön. Tarkkoja lajimääriä en muista, mutta lintujen määrä on valtava. Sinne minä lentäisin kyl mielelläni.
+
+### v1-432
+KOHDE: maa:ROU
+KYSYMYS: Mitä on țuică ja milloin sitä poltetaan?
+VASTAUS: Selvä juttu. Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. [[Luumut]] korjataan syksyllä, mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja pieni lasi tarjotaan vieraalle heti kynnyksellä, [[häissä]] ja pääsiäisenä. Pöydässä on yleensä myös [[sarmale]], kaalikääryleitä. Kyl se on vieraanvaraisuuden merkki.
+
+### v1-433
+KOHDE: maa:ROU
+KYSYMYS: Kuka sävelsi Hora staccaton ja miksi se on niin kuuluisa?
+VASTAUS: Odotas vähän, tästä pidän. Hora staccaton sävelsi vuonna 1906 [[Grigoraș Dinicu]], joka oli syntynyt Bukarestissa vuonna 1889. Hän kirjoitti sen päättötyökseen [[Bukarestin konservatoriossa]]. Kappale on parin minuutin mittainen, ja siinä jousi napsuu kieltä niin tiheästi, että sävelet putoavat kuin rakeet, joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Wienin konservatorion stipendi jäi hänellä käyttämättä, koska romania ei päästetty lähtemään. Nopeasti soitettu, nopeasti kuultu.
+
+### v1-434
+KOHDE: maa:ROU
+KYSYMYS: Mikä Transilvania on ja miksi sitä pidetään erityisenä?
+VASTAUS: Joo, tän minä osaan. Transilvania on [[Karpaattien]] kaaren sisään jäävä ylätasanko Romanian keskiosassa, ja nimi tulee latinasta, suunnilleen "metsän takana". Alueella on asunut romanialaisten lisäksi unkarilaisia ja [[transilvaniansaksalaisia]], ja se näkyy kaupungeissa, kielissä ja rakennuksissa. Tunnettuja kaupunkeja ovat esimerkiksi [[Brașov]] ja Sibiu. Alueen maisemat ovat vuoristoisia ja metsäisiä. Linnaromantiikka on ihan oma lukunsa, mutta siihen en syvenny.
+
+### v1-435
+KOHDE: kaupunki:bukarest
+KYSYMYS: Miksi Bukarestia sanottiin aikoinaan Pikku-Pariisiksi?
+VASTAUS: Ai tota, hauska kysymys. Bukarestia rakennettiin 1800-luvun lopulla Pariisin malliin, ja kaupunkiin tuli leveitä bulevardeja, puistoja ja ranskalaisia arkkitehteja. Siltä ajalta on [[Romanian ateneum]], konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella "anna yksi leu Ateneumille". Vanhin puisto, [[Cișmigiun]] puutarha, avattiin jo vuonna 1847. Nimitys Pikku-Pariisi on vakiintunut puhetapa, ei virallinen titteli. Ainakin kahvilat kyl pärjäsivät.
+
+### v1-436
+KOHDE: kaupunki:bukarest
+KYSYMYS: Mikä on Parlamentin palatsi ja miksi se on niin valtava?
+VASTAUS: Odotas vähän, tuo on iso juttu. Parlamentin palatsi on Bukarestin keskustaan rakennettu valtava rakennus, jonka rakennuttamisesta vastasi maan silloinen johtaja [[Nicolae Ceaușescu]]. Maaliskuussa 1977 kaupunkia ravisteli [[Vrancean maanjäristys]], jonka jälkeen hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja suuren palatsin. Rakennus on yksi maailman suurimmista hallintorakennuksista, ja sitä kutsutaan joskus maailman painavimmaksi taloksi. Vanhan keskustan menetys on edelleen romanialaisille herkkä asia. Onpas siitä jo aikaa.
+
+### v1-437
+KOHDE: kaupunki:bukarest
+KYSYMYS: Miten kokonaisia kirkkoja siirrettiin Bukarestissa kiskoilla?
+VASTAUS: Katotaas. Bukarestin vanhan keskustan purkamisen aikana 1980-luvulla osa kirkoista pelastettiin siirtämällä ne kokonaisina uuteen paikkaan, kiskoille rakennetun alustan päällä. Yksi esimerkki on [[Mihai Vodăn luostari]], jonka kirkko siirrettiin tuolloin, mutta tarkkoja mittoja en muista. Siirtotyö oli tekninen saavutus, ja monet seurakunnat pitivät sitä parempana kuin purkua. Samaan aikaan [[Ceaușescun]] hallinto purki laajoja alueita kaupungin keskustasta. Kiskoilla kulkenut kirkko on aika kuva ajan oudoista ratkaisuista.
+
+### v1-438
+KOHDE: kaupunki:bukarest
+KYSYMYS: Mikä on Romanian ateneum ja miten se rahoitettiin?
+VASTAUS: No niin. Romanian ateneum on Bukarestin tunnettu konserttitalo, joka rakennettiin 1800-luvun lopulla Pariisin mallin mukaan ja johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Rakennus on edelleen konserttikäytössä, ja siellä esiintyy [[George Enescun]] mukaan nimetty [[filharmoninen orkesteri]]. Ateneumin sisätilat ovat tunnettuja koristeellisuudestaan, vaikka tarkkoja yksityiskohtia en muista. Rahankeruu on harvinaisen kaunis esimerkki yhteisestä hankkeesta. Pienestä kolikosta tuli paljon musiikkia.
+
+### v1-439
+KOHDE: kaupunki:bukarest
+KYSYMYS: Mitä on mici ja muita perinteisiä ruokia Bukarestissa?
+VASTAUS: Hyvä kysymys tuo. Mici on grillattuja jauhelihamakkaroita, joita syödään usein sinapin ja leivän kanssa, ja ne ovat suosittuja grilleillä ja festivaaleilla. Romanialaiseen pöytään kuuluvat myös [[sarmale]], kaalikääryleet, sekä [[mămăligaa]], maissipuuroa, jota tarjotaan lisukkeena. Täsmälliset reseptit vaihtelevat alueittain ja perheittäin, joten en ala vannomaan yksityiskohdista. Bukarestin tarjonta on monipuolinen, ja kaupungin kahviloissa tarjotaan myös leivonnaisia. Kyl pulla kiinnostaisi, mutta nimeä en tiedä.
+
+### v1-440
+KOHDE: maa:RUS
+KYSYMYS: Miksi Venäjällä on yksitoista aikavyöhykettä?
+VASTAUS: Ai tota, tää on helppo. Venäjä on pinta-alaltaan maailman suurin maa, ja se ulottuu Itämereltä Tyynellemerelle, vaikkapa [[Kaliningradin]] alueelta aina Kamtšatkalle asti. Koska maa on niin pitkä itä-länsisuunnassa, aikavyöhykkeitä tarvitaan yksitoista, ja kun Moskovassa istutaan aamiaisella, Kamtšatkalla on jo ilta. Kolme neljästä asukkaasta asuu kuitenkin [[Uralvuorten]] länsipuolella. Ylhäältä katsottuna se on aika pitkä lento, mikä on sanottava.
+
+### v1-441
+KOHDE: maa:RUS
+KYSYMYS: Miksi Volga on Venäjälle niin tärkeä joki?
+VASTAUS: Selvä juttu. Volga on Euroopan pisin joki, noin 3 500 kilometriä, ja se kaartuu Venäjän halki Kaspianmerelle, joka ei laske mihinkään. Jokivarren isoja kaupunkeja ovat muun muassa [[Nižni Novgorod]], [[Kazan]] ja [[Volgograd]], ja patoaltaat näkyvät kartalla leveinä sinisinä järvinä. Joki on vuosisatojen ajan ollut tärkeä kulkureitti kauppatavaroille, ja se kuljettaa edelleen laivaliikennettä. Tarkkoja pituuslukuja lähteet antavat hieman eri tavoin. Ylhäältä se näyttää hopealangalta.
+
+### v1-442
+KOHDE: maa:RUS
+KYSYMYS: Millainen maa Venäjän keisarikunta oli 1800-luvulla?
+VASTAUS: No niin, tää on vähän pitkä juttu. Venäjän keisarikunta oli 1800-luvulla valtava monikansallinen maa, jonka pääkaupunki oli [[Pietari]]. Vuoden 1873 tienoilla keisarina oli [[Aleksanteri II]], joka lakkautti maaorjuuden vuonna 1861. Myös Suomi kuului keisarikuntaan autonomisena [[suuriruhtinaskuntana]]. Maa oli suuri mutta yhteiskunta eli suurten muutosten aikaa: rautatiet yleistyivät ja kaupungit kasvoivat. Isoisän matkakirjan aikaan tämä kaikki oli siis täyttä totta, kyl minä sen muistan.
+
+### v1-443
+KOHDE: maa:RUS
+KYSYMYS: Mitä venäläiset syövät ja juovat arkena ja juhlassa?
+VASTAUS: Joo, tän minä osaan. Venäläisessä pöydässä on perinteisesti [[borssi]], punajuurella ja kaalilla valmistettu keitto, jota syödään myös Ukrainassa, sekä [[pelmenit]], lihalla täytetyt taikinataskut. Juhlissa tarjotaan [[blinejä]] eli ohukaisia, erityisesti ennen paastoa vietettävän laskiaisviikon aikaan. Teetä juodaan paljon, ja perinteisesti sitä keitetään [[samovaarissa]]. Piirakat kuuluvat sekä arkeen että juhlaan, mutta tarkkoja reseptejä en lupaa. Pöytä on varmasti täynnä, ja lintu on aina valmis maistamaan.
+
+### v1-444
+KOHDE: maa:RUS
+KYSYMYS: Miksi venäjää kirjoitetaan kyrillisillä aakkosilla?
+VASTAUS: Hetkinen ny, hyvä kysymys. Kyrilliset aakkoset on nimetty veljesten [[Kyrilloksen ja Methodiuksen]] mukaan, jotka työskentelivät 800-luvulla slaavien parissa Bysantin lähettiläinä. Aakkoset muotoutuivat varsinaisesti slaavilaisessa maailmassa sen jälkeen, muun muassa [[Bulgariassa]], ja levisivät sieltä muille slaavikansoille, myös venäläisille. Tarkat yksityiskohdat, kuten kuka muotoili minkäkin kirjaimen, ovat tutkijoiden kiistelemiä. Nykyisin kyrilliset aakkoset ovat käytössä Venäjän lisäksi monessa muussa maassa. Minä pysyn latinassa, kiitos.
+
+### v1-445
+KOHDE: kaupunki:moskova
+KYSYMYS: Miksi Moskovan Kremlin suuri kello ei ole koskaan soinut?
+VASTAUS: Odotas vähän, tämän minä tiedän. Kremlin suuri kello tunnetaan nimellä [[Tsaarinkello]], ja se valettiin 1700-luvulla, mutta tulipalon aikana siihen osui vettä ja siihen tuli halkeama. Kellosta irtosi iso pala, ja kello jäi soimatta. Se on maailman suurin kello, painoltaan noin kaksisataa tonnia, ja nykyään se seisoo Kremlin pihalla. Vieressä on [[Tsaaritykki]], jota ei ole koskaan ammuttu. Suuri mutta äänetön, pienet kellot pärjäävät paremmin.
+
+### v1-446
+KOHDE: kaupunki:moskova
+KYSYMYS: Millainen on Pyhän Vasilin katedraali ja kuka sen rakennutti?
+VASTAUS: Kas vaan, tää on komea. Pyhän Vasilin katedraali valmistui [[Punaiselle torille]] vuonna 1561, ja sen rakennutti tsaari [[Iivana IV]]. Kirkossa on yhdeksän värikästä kupolia, joista jokaisella on oma muotonsa ja värityksensä. Rakennus on Venäjän tunnetuimpia nähtävyyksiä, ja se kohoaa kreml-muurin vieressä. Sen tarkkoja rakennustarinoita on useita, ja osa on pelkkiä legendoja. Värit ovat kuin leivonnaisia, ja nälkä iskee heti.
+
+### v1-447
+KOHDE: kaupunki:moskova
+KYSYMYS: Miksi Moskovan metroasemat ovat kuin palatseja?
+VASTAUS: Mmm—, tämän näkee vain alhaalta. Moskovan metron asemia on koristeltu kattokruunuin, mosaiikein ja marmorein, ja ne on tarkoituksella tehty komeiksi, jotta metro tuntuisi kansan palatsilta. Metro avattiin 1930-luvulla Stalinin aikana, ja syvimmät asemat sijaitsevat kymmenien metrien syvyydessä. [[Komsomolskajan]] ja [[Majakovskajan]] asemat ovat erityisen kuuluisia. Asemien koristelu valittiin näyttämään ajan ihanteita. Kyyhkynä kyllä pidän ylhäällä pysymisestä.
+
+### v1-448
+KOHDE: kaupunki:moskova
+KYSYMYS: Mitä Moskovassa tapahtui vuonna 1812, kun Napoleon saapui?
+VASTAUS: Kääk, nyt mennään raskaampaan. Syyskuussa 1812 Napoleonin armeija saapui Moskovaan [[Borodinon]] taistelun jälkeen, ja kaupungissa syttyi suuri tulipalo, joka tuhosi suuren osan puurakennuksista. Napoleon odotti rauhanneuvotteluja, mutta niitä ei tullut, ja hänen oli lähdettävä vetäytymään talven lähestyessä. Kenraali [[Kutuzov]] johti Venäjän armeijaa. Tulipalon syttymissyystä historiantutkijat ovat esittäneet eri näkemyksiä. Tapahtumasta on kulunut yli kaksisataa vuotta, ja Moskova on kasvanut moninkertaiseksi. Onpas siitä onneksi pitkä aika.
+
+### v1-449
+KOHDE: kaupunki:moskova
+KYSYMYS: Miten moskovalaiset pukeutuvat talvipakkasilla?
+VASTAUS: Annas ku mietin. Moskovan talvi on pitkä ja kylmä, ja kaupunkilaiset pukeutuvat kerroksittain: paksu takki, villakaulaliina ja lämmin lakki. Perinteinen päähine on [[ushanka]], korvaläpillinen turkislakki, ja maaseudulla ja vanhemmilla sukupolvilla yleinen jalkine on [[valenki]], huopasaapas. Sisätiloissa ja metrossa on lämmintä, joten ihmiset riisuvat kerroksia kulkiessaan. Kerron havaintona, en ohjeena, sillä pukeutuminen vaihtelee. Pää pysyy lämpimänä, kyl se on tärkeintä.
+

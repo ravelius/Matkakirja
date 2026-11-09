@@ -1,0 +1,445 @@
+### v2-712
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Landesmuseum
+VASTAUS: Liechtensteinin kansallismuseo toimii vanhassa rakennuksessa, joka ajoitetaan vuoteen 1438. Talo oli aikoinaan ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1800-luvun lopulla kuvernööri [[Friedrich Stellwag von Carionin]] aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Museossa on neljä osaa: päärakennus, [[postimuseo]], [[aarrekammio]] ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta.
+
+### v2-713
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Šiauliain
+VASTAUS: Šiauliai on Liettuan pohjoisosan kaupunki, joka kuuluu maan suurimpiin. Nimi liittyy liettuan sanaan saulė, aurinko, ja kaupunkia kutsutaan aurinkokaupungiksi. Lähistöllä käytiin vuonna 1236 [[Saulen taistelu]], jossa liettualaiset voittivat Liivinmaan ritarikunnan joukot. Kaupungin läheisyydessä sijaitsee tunnettu [[Ristien mäki]], jolle on tuotu satoja tuhansia ristejä. Šiauliain lentotukikohta palvelee myös [[Baltian ilmavalvontaa]].
+
+### v2-714
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Ristien mäelle
+VASTAUS: Ristien mäki sijaitsee Šiauliain lähellä, ja sinne alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. [[Neuvostoliiton]] aikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: vuosina 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nykyään niitä on yli satatuhatta, ja uusia tuodaan koko ajan lisää. Paikan paikallinen nimi on [[Kryžių kalnas]], ja siellä vieraili myös [[Johannes Paavali II]] vuonna 1993.
+
+### v2-715
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Johannes Paavali II
+VASTAUS: Johannes Paavali II oli puolalaissyntyinen paavi, joka johti katolista kirkkoa vuosina 1978–2005. Hänen syntymänimensä oli [[Karol Wojtyła]], ja hän oli ensimmäinen ei-italialainen paavi yli 450 vuoteen. Hän oli [[Puolasta]] kotoisin, ja hänen valintansa vahvisti toivoa monissa Itä-Euroopan maissa. Vuonna 1993 hän vieraili [[Baltian maissa]] ja kävi myös Ristien mäellä Liettuassa. Hänet julistettiin pyhimykseksi vuonna 2014.
+
+### v2-716
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Mustallemerelle
+VASTAUS: Mustallemerelle ulottuminen kertoo siitä, kuinka laaja Liettuan suuriruhtinaskunta oli 1300- ja 1400-luvuilla. Valtaa laajensi etenkin suuriruhtinas [[Vytautas Suuri]], joka hallitsi 1300-luvun lopulta vuoteen 1430. Etelässä valtakunta ulottui nykyisen Ukrainan alueelle, ja lähteiden mukaan se sai ajoittain haltuunsa osia Mustanmeren rannikosta, mutta tarkasta ajoituksesta en ole varma. Tunnettu taistelu on [[Sinisten vetten taistelu]], jossa liettualaiset voittivat tataarit. Laajasta alueesta suurin osa on nykyään [[Ukrainaa]] ja Valko-Venäjää.
+
+### v2-717
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: kristinusko
+VASTAUS: Liettua kääntyi kristinuskoon myöhään, kun suuriruhtinas [[Jogaila]] kastettiin vuonna 1386 ja Liettuan viralliseksi kristillistymiseksi mainitaan vuosi 1387. Vuonna 1385 solmittu [[Krewon unioni]] liitti Liettuan Puolaan, ja Jogaila nousi Puolan kuninkaaksi. Kristinusko eteni hitaasti, ja esimerkiksi [[Samogitia]] kastettiin vasta 1400-luvun alussa. Liettuan vastustaja pitkään oli [[Saksalainen ritarikunta]], joka perusti sotansa osin kristityksi kääntämisen varaan.
+
+### v2-718
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: suuriruhtinaskunnan
+VASTAUS: Liettuan suuriruhtinaskunta syntyi 1200-luvulla, kun ruhtinas [[Mindaugas]] yhdisti liettualaisia heimoja ja kruunattiin kuninkaaksi vuonna 1253. Pääkaupungiksi vakiintui Vilna [[Gediminasin]] aikaan 1300-luvun alussa. Vuonna 1410 liettualaiset ja puolalaiset voittivat yhdessä [[Grunwaldin taistelussa]] Saksalaisen ritarikunnan. Vuonna 1569 [[Lublinin unioni]] yhdisti Liettuan ja Puolan yhteiseksi valtioksi.
+
+### v2-719
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Kuurinkynnäs
+VASTAUS: Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa [[Kuurinlahden]] Itämerestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa, ja dyynit hautasivat kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Liettuan puolen kylistä tunnetuin on [[Nida]], jossa kirjailija [[Thomas Mann]] vietti kesiä 1930-luvun alussa. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+
+### v2-720
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Kuurinlahden
+VASTAUS: Kuurinlahti on matala ja laaja murtovesilahti, jonka erottaa Itämerestä pitkä hiekkaniemi, [[Kuurinkynnäs]]. Lahti on jaettu Liettuan ja Venäjän kesken: pohjoisosa kuuluu Liettualle, eteläosa [[Kaliningradin]] alueelle. Lahteen laskee Liettuan suurin joki, [[Nemunas]], ja siksi vesi on suolaisuudeltaan hyvin laimeaa. Lahti on rauhallinen ja tuulinen vesialue, jolla on ollut kalastusta ja purjehdusta vuosisatojen ajan. En ole varma lahden tarkasta pinta-alasta tai keskisyvyydestä.
+
+### v2-721
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Nida
+VASTAUS: Nida on Kuurinkynnäksen Liettuan puoleisen osan suurin kylä, ja se sijaitsee Kuurinlahden rannalla lähellä Venäjän rajaa. Se oli aiemmin kalastajakylä, ja nykyisin siitä on tullut suosittu lomakohde, jonka puutalot ja kapeat kadut kiinnostavat kävijöitä. Kirjailija [[Thomas Mann]] rakennutti kylään kesähuvilan 1930-luvun alussa, ja huvila on nykyään museona. Kylän lähellä kohoavat korkeat dyynit, ja koko ympäristö kuuluu [[Kuurinkynnäksen kansallispuistoon]].
+
+### v2-722
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: indoeurooppalaisista kielistä
+VASTAUS: Indoeurooppalaiset kielet ovat laaja kieliperhe, johon kuuluu valtaosa Euroopan kielistä sekä monia kieliä Euroopan ulkopuolella. Perheen tärkeimpiä haaroja Euroopassa ovat [[germaaniset kielet]], [[romaaniset kielet]] ja [[slaavilaiset kielet]], ja niiden lisäksi siihen kuuluvat baltit, kelttiläiset kielet sekä esimerkiksi kreikka ja albania. Kielet polveutuvat yhteisestä kantakielestä, jota kukaan ei ole kuullut, vaan se on päätelty kielten yhtäläisyyksistä. Suomi, viro ja unkari eivät kuulu tähän perheeseen, vaan ne ovat uralilaisia kieliä. Liettua on kielitieteelle tärkeä, koska se on säilyttänyt vanhoja piirteitä.
+
+### v2-723
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: latvia
+VASTAUS: Latvia on Liettuan pohjoinen naapuri ja yksi kolmesta Baltian maasta. Sen pääkaupunki on [[Riika]], jonka keskustassa kohoaa vuonna 1935 pystytetty, 42 metriä korkea [[Vapaudenpatsas]]. Latvian kieli on liettuan lähin elävä sukukieli, mutta kielet eroavat toisistaan niin paljon, etteivät puhujat ymmärrä toisiaan ilman opiskelua. Latviassa on pitkät laulujuhlaperinteet, ja ensimmäiset [[laulujuhlat]] pidettiin vuonna 1873.
+
+### v2-724
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: baltin kieliin
+VASTAUS: Baltin kielet muodostavat indoeurooppalaisen kieliperheen oman haaran, jonka elävät kielet ovat liettua ja latvia. Aiemmin haaraan kuuluivat myös esimerkiksi [[vanhapreussi]] ja kuurin kieli, mutta ne ovat kuolleet sukupuuttoon jo vuosisatoja sitten. Baltin kielten lähimpinä sukulaisina pidetään [[slaavilaisia kieliä]], ja tutkijat puhuvat usein balttilais-slaavilaisesta kantakielestä, vaikka tämän tulkinnan kaikista yksityiskohdista kiistellään. Liettua on baltin kielistä konservatiivisempi, ja siksi se kiinnostaa kielentutkijoita erityisesti.
+
+### v2-725
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Trakain
+VASTAUS: Trakai on Vilnan lähellä, noin 30 kilometrin päässä, sijaitseva pieni kaupunki, joka oli keskiajalla Liettuan suuriruhtinaskunnan tärkeä keskus. Siellä hallitsi muun muassa Gediminaksen poika [[Kęstutis]], ja järvien keskelle rakennettu linna oli osa kaupungin puolustusta. Nykyinen linna on osittain 1900-luvulla entistetty. Kaupunki tunnetaan myös [[karaiiteista]], joiden perimätiedon mukaan suuriruhtinas toi alueelle keskiajalla, sekä heidän piiraistaan, [[kibinaista]].
+
+### v2-726
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Galvė-järven
+VASTAUS: Galvė on [[Trakain]] luona sijaitseva järvi, jonka saarella seisoo kuuluisa punatiilinen saarilinna. Järvi kuuluu [[Trakain historialliseen kansallispuistoon]], jonka alueella on runsaasti muitakin järviä ja saaria. Linnaan pääsee kävelysiltaa pitkin, ja talvella jäätynyttä järveä käytetään kävelyyn. En ole varma järven tarkasta syvyydestä tai pinta-alasta. Galvė on yksi Liettuan tunnetuimmista järvistä juuri linnan ansiosta.
+
+### v2-727
+KOHDE: maa:LTU
+KYSYMYS: Kerro lisää: Vilnan
+VASTAUS: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Kaupunki sijaitsee Nerisin ja Vilnian jokien yhtymäkohdassa, ja se mainitaan ensimmäisen kerran vuonna 1323 suuriruhtinas [[Gediminaksen]] kirjeissä. [[Vilnan vanhakaupunki]] on yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista, ja siellä on toistasataa kirkkoa. Kaupungin [[Vilnan yliopisto]] perustettiin vuonna 1579, ja valkoinen [[Vilnan tuomiokirkko]] sai nykyisen asunsa vuonna 1783.
+
+### v2-728
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Itä-Preussissa
+VASTAUS: Itä-Preussi oli Saksan historiallinen maakunta Itämeren rannalla, ja sen pääkaupunki oli [[Königsberg]], nykyinen Kaliningrad. Maakunnan pohjoisosassa asui liettuankielistä väestöä, ja aluetta kutsuttiin [[Pieni-Liettuaksi]]. Preussin puolella liettuankielisten kirjojen painaminen ei ollut kiellettyä, ja siksi sinne syntyi kirjapainoja, joista kirjoja kuljetettiin rajan yli Venäjän keisarikunnan puolelle. Toisen maailmansodan jälkeen Itä-Preussi jaettiin Neuvostoliiton ja Puolan kesken, ja pohjoisosa muuttui nykyiseksi Kaliningradin alueeksi.
+
+### v2-729
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: kirjansalakuljettajiksi
+VASTAUS: Kirjansalakuljettajat, liettuaksi knygnešiai, kuljettivat painettuja liettuankielisiä kirjoja salaa rajan yli aikana, jolloin latinalaisin kirjaimin painaminen oli kielletty. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt saattoi saada sakkoja, vankilatuomion tai karkotuksen Siperiaan. Kirjoja painettiin rajan takana Itä-Preussissa ja jopa Yhdysvalloissa. Yksi tunnetuimmista salakuljettajista oli [[Jurgis Bielinis]], ja ilmiö tunnetaan Liettuassa nimellä [[knygnešiai]]. Kielto kumottiin vuonna 1904, ja kirjoja oli kannettu noin neljäkymmentä vuotta.
+
+### v2-730
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+VASTAUS: Venäjän keisarikunta oli Pietarista hallittu suurvalta, joka kattoi valtavia alueita Itä-Euroopassa ja sen ulkopuolella. Liettua liitettiin siihen Puola-Liettuan jaossa vuonna 1795, ja se pysyi osana keisarikuntaa ensimmäiseen maailmansotaan asti. Vuonna 1864 keisarikunta kielsi liettuan painamisen latinalaisin kirjaimin, ja kielto kesti vuoteen 1904. Myös Suomi kuului keisarikuntaan vuosina 1809–1917 [[Suomen suuriruhtinaskuntana]]. Jaot lopettivat [[Puola-Liettuan]] itsenäisen valtion olemassaolon.
+
+### v2-731
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Vilnia-joen
+VASTAUS: Vilnia on joki, jonka mukaan Vilnan kaupunki on saanut nimensä. Se on Neris-jokea pienempi, ja se yhtyy siihen kaupungin keskustassa, jossa [[Gediminaksen]] linnan torni kohoaa jokien välisellä kukkulalla. Vilnian toisella puolella sijaitsee taiteilijakortteli [[Užupis]], jonka nimi tarkoittaa suunnilleen joen takana olevaa. Joen ja sen vierustan kautta pääsee kävelemään vanhankaupungin ja Užupiksen välillä.
+
+### v2-732
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: enkelipatsas
+VASTAUS: [[Užupiksen]] enkelipatsas on pronssinen, trumpettia soittava enkeli, joka pystytettiin korttelin keskusaukiolle vuonna 2002. Enkeli seisoo korkean pylvään huipulla, ja siitä on tullut korttelin tunnetuin symboli. Patsas liittyy kortteliin, joka julistautui [[itsenäiseksi tasavallaksi]] huhtikuun ensimmäisenä päivänä 1997. Korttelin [[Užupiksen perustuslaki]] on kiinnitetty kadun seinälle metallilaatoille usealla kielellä, ja sen pykäliä on 41. Tulkinnan mukaan enkeli symboloi kortteliin kuuluvaa vapautta ja uudistumista.
+
+### v2-733
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Vilnan vanhankaupungin
+VASTAUS: Vilnan vanhakaupunki on yksi Pohjois-Euroopan laajimmista keskiaikaisista kaupunkikeskustoista: se kattaa yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Se on [[Unescon maailmanperintöluettelossa]]. Vanhankaupungin tärkeimpiä kohteita ovat valkoinen [[Vilnan tuomiokirkko]] pylväineen ja [[Vilnan yliopisto]], joka perustettiin vuonna 1579. Yliopiston pihapiirissä on tähtitorni, joka rakennettiin vuonna 1753. Kuljettaessa vanhankaupungin halki voi nähdä eri tyylisuuntia gotiikasta barokkiin.
+
+### v2-734
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: cepelinai
+VASTAUS: Cepelinai on Liettuan tunnetuin ruokalaji: raastetusta ja keitetystä perunataikinasta muotoillut soikeat pallot, jotka täytetään jauhelihalla, raejuustolla tai sienillä. Ne tarjoillaan yleensä silavakastikkeen tai smetanakastikkeen kanssa. Ruokalaji tunnettiin jo 1800-luvulla nimellä [[didžkukuliai]], mutta nykyinen nimi ja soikea muoto vakiintuivat 1920- ja 1930-luvuilla, kun kreivi [[Ferdinand von Zeppelinin]] ilmalaivat olivat lehtiotsikoissa. Ruokalajista tuli tuoreen [[itsenäisen Liettuan]] ruokakulttuurin symboli.
+
+### v2-735
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: šaltibarščiai
+VASTAUS: Šaltibarščiai on kylmä, kirkkaanpinkki keitto, joka valmistetaan keitetystä [[punajuuresta]] ja hapanmaitotuotteesta, useimmiten [[kefiiristä]] tai piimästä. Sitä tarjoillaan kesällä kylmänä, ja lisukkeina ovat usein keitetty muna, tilli ja lämpimät perunat. Keiton juuret ulottuvat [[Liettuan suuriruhtinaskunnan]] aikaan, jolloin ylimystön pöydässä kylmiin keittoihin lisättiin ylellisiä aineksia kuten rapua tai riistaa. Ajan myötä yksinkertaisempi versio levisi tavallisiin koteihin, ja siitä tuli koko maan rakastama kesäruoka.
+
+### v2-736
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: kibinai
+VASTAUS: Kibinai ovat Trakain alueen perinteisiä piiraita, joissa on lihatäyte, yleensä sipulin kanssa. Ne ovat peräisin [[karaiiteilta]], pieneltä yhteisöltä, jonka perimätiedon mukaan suuriruhtinas Vytautas toi Trakain seudulle keskiajalla. Piiraat leivotaan uunissa, ja ne ovat tulleet koko [[Trakain]] tunnetuksi ruokaperinteeksi. Täyte vaihtelee, mutta perinteisesti käytetään lampaanlihaa; en ole varma kaikista paikallisista muunnelmista. Nykyisin kibinaita myydään kahviloissa ja ravintoloissa ympäri Liettuaa.
+
+### v2-737
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Vilnan Gaon
+VASTAUS: Vilnan Gaon oli 1700-luvun juutalainen oppinut, rabbi Elijah ben Solomon Zalman, joka eli Vilnassa vuosina 1720–1797. Gaon on heprean kielen kunnianimi, joka tarkoittaa suurta oppinutta. Hänet tunnettiin erityisesti [[Talmudin]] ja muun juutalaisen perinteen tutkijana, ja hänen opetuksensa vaikuttivat Itä-Euroopan juutalaiseen oppineisuuteen laajalti. Hän vastusti [[hasidismia]] ja johti sen vastustajien eli mitnagdimien liikettä. Vilnan juutalainen yhteisö nojasi pitkään hänen perintöönsä.
+
+### v2-738
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: YIVO
+VASTAUS: YIVO on jiddišin kielen ja Itä-Euroopan juutalaisten kulttuurin tutkimuslaitos, joka perustettiin Vilnassa vuonna 1925. Sen perustajiin kuului kielentutkija [[Max Weinreich]], ja laitos keräsi jiddišin kieltä, kansanperinnettä ja historiaa käsittelevää aineistoa. Laitos tunnettiin alun perin nimellä Jiddišin tieteellinen instituutti. Saksan miehityksen aikana laitoksen aineistoa tuhoutui, mutta osa saatiin pelastettua. Nykyisin laitoksen toiminta jatkuu Yhdysvalloissa, ja siellä säilytetään suurta [[jiddišin]] kirjallisuuden kokoelmaa.
+
+### v2-739
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: jiddišin
+VASTAUS: Jiddiš on Itä-Euroopan askenasijuutalaisten perinteinen kieli, joka on kehittynyt keskiajalla [[saksan kielen]] murteista. Siihen on sekoittunut aineksia [[heprean]] kielestä ja slaavilaisista kielistä, ja se kirjoitetaan heprealaisin kirjaimin. Jiddiš oli ennen toista maailmansotaa miljoonien ihmisten äidinkieli, ja Vilna oli sen kirjallisuuden ja tutkimuksen keskus. Nykyään jiddišiä puhuu äidinkielenään vain pieni joukko, mutta sitä opiskellaan ja käytetään yhä, ja kielen perintöä vaalitaan. Sana jiddiš tarkoittaa kirjaimellisesti juutalaista.
+
+### v2-740
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Neris-joen
+VASTAUS: Neris on Liettuan toiseksi suurin joki ja Vilnan tärkein joki. Se virtaa Vilnan läpi ja yhtyy kaupungin keskustassa pienempään Vilnia-jokeen, jonka mukaan kaupunki on saanut nimensä. Jokien välisellä kukkulalla kohoaa linnan torni, josta kaupunki 1300-luvulla alkoi. Neris jatkaa matkaansa [[Kaunasiin]], jossa se laskee Liettuan suurimpaan jokeen, [[Nemunasiin]]. En ole varma joen tarkasta pituudesta.
+
+### v2-741
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: rautaisen suden
+VASTAUS: Rautasusi on Vilnan perustamislegendan eläin. Tarinan mukaan suuriruhtinas [[Gediminas]] nukahti metsästysretken jälkeen Nerisin ja Vilnian jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi [[Lizdeika]] tulkitsi unen niin, että kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Perinteisesti kaupungin perustamisvuotena pidetään 1323. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+
+### v2-742
+KOHDE: kaupunki:vilna
+KYSYMYS: Kerro lisää: Gediminaksen
+VASTAUS: Gediminas oli Liettuan suuriruhtinas, joka hallitsi 1300-luvun alkupuoliskolla ja jonka sukua hallitsi Liettuaa vielä pitkään hänen jälkeensä. Hänen kirjeensä vuodelta 1323 mainitsevat Vilnan ensimmäistä kertaa: niissä hän kutsui kauppiaita ja käsityöläisiä asettumaan kaupunkiin ja lupasi jokaiselle oikeuden omaan uskontoonsa. Hänen pojanpoikansa [[Jogaila]] nousi myöhemmin Puolan kuninkaaksi. Hänen nimeään kantaa [[Gediminaksen torni]], jonka kukkulalle suurruhtinas Vytautas rakennutti vuonna 1409 punatiilisen linnan.
+
+### v2-743
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Lontoon sopimus
+VASTAUS: Lontoon sopimus allekirjoitettiin 11. toukokuuta 1867, ja se päätti niin sanotun Luxemburgin kriisin. Ranskan keisari [[Napoleon III]] oli yrittänyt ostaa maan Alankomaiden kuninkaalta, mutta [[Preussi]] vastusti hanketta. Suurvallat sopivat, että Luxemburg on ikuisesti puolueeton ja että Preussin varuskunta poistuu kaupungista. Kaupungin linnoitukset piti purkaa eikä rakentaa koskaan uudelleen. Työ kesti kuusitoista vuotta, maksoi 1,5 miljoonaa kultafrangia, ja sen aikana hävisi yli 24 kilometriä maanalaisia käytäviä.
+
+### v2-744
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Bockin kasemaatit
+VASTAUS: Bockin kasemaatit ovat Luxemburgin kaupungin vanhan linnoituksen maanalaisia käytäviä, jotka on louhittu Bock-kallion sisään. Kalliolla kreivi [[Siegfried Ardennelainen]] sai haltuunsa kallion vuonna 963 ja rakennutti kallion päälle linnan, josta kaupunki myöhemmin kasvoi. Vuosisatojen kuluessa kallion sisään louhittiin kilometrikaupalla käytäviä, joiden tarkoituksena oli suojata puolustajia ja varastoja. Osa käytävistä säilyi linnoitusten purkamisen jälkeen, ja niihin voi nykyään tutustua. Kallio kohoaa [[Alzette-joen]] mutkan yläpuolella.
+
+### v2-745
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+VASTAUS: Unescon maailmanperintöluettelo on luettelo kohteista, joita pidetään niin merkittävinä, että niiden suojelu kuuluu koko ihmiskunnalle. Luxemburgin kaupungin [[vanhakaupunki ja linnoituksen jäänteet]] kirjattiin luetteloon vuonna 1994. Peruste on se, että kaupunki on säilyttänyt kerroksia vuosisatojen linnoitusrakentamisesta, vaikka suuri osa linnoituksesta purettiin 1800-luvulla. Luetteloon kuuluvat sekä kulttuuri- että luontokohteet, ja luettelon ylläpidosta vastaa [[Unesco]].
+
+### v2-746
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: luxemburgin kieli
+VASTAUS: Luxemburgin kieli eli luxemburgi on länsigermaaninen kieli, jota puhuu noin 400 000 ihmistä. Se on Luxemburgin kansallinen kieli ja arkipuheen kieli, ja siitä tuli virallinen kieli kielilailla vuonna 1984. Sen vanhin tunnettu teksti on 1300-luvun alun [[Codex Mariendalensis]]. Maan tunnuslause on kielellä kirjoitettu lause [[Mir wölle bleiwe wat mer sin]], suomeksi haluamme pysyä sellaisina kuin olemme. Lause on peräisin Michel Lentzin runosta vuodelta 1859.
+
+### v2-747
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Moselin
+VASTAUS: Mosel on joki, joka virtaa Ranskasta Luxemburgin kautta Saksaan ja laskee Reiniin. Luxemburgin ja Saksan raja kulkee sen rannalla 42 kilometrin matkan. Rinteillä on viljelty viiniä jo roomalaisten ajoista, ja yleisin lajike on [[Rivaner]]; sitä oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä [[Crémant]]. Vuodesta 1935 pullon takana on ollut [[Marque Nationale]] -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+
+### v2-748
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: minette-malmia
+VASTAUS: Minette on Luxemburgin ja Lorrainen alueen punertava, matalapitoinen rautamalmi. Sen louhinta vauhditti Luxemburgin teollistumista, ja teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin vuonna 1913. Malmin hyödyntämistä helpotti 1800-luvun lopulla kehitetty [[Thomas-menetelmä]], jolla fosforipitoinen rauta voitiin jalostaa teräkseksi. Terästehtaat yhdistyivät vuonna 1911 yhtiöksi [[ARBED]]. Louhinta ja tehtaat muovasivat maan eteläosaa, jota kutsutaan punaisten maiden alueeksi.
+
+### v2-749
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Esch-sur-Alzetten
+VASTAUS: Esch-sur-Alzette on Luxemburgin toiseksi suurin kaupunki, ja se sijaitsee maan eteläosassa teollisuusalueen keskellä. Kaupunki kasvoi terästeollisuuden ja kaivosten myötä, ja sen kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat kaupungin vaakunaa. Päädyssä lukee maan tunnuslause, joka on peräisin [[Michel Lentzin]] runosta De Feierwon. Lentz kirjoitti runon vuonna 1859 kaupungin rautatien vihkiäisiin. Teollisuusalueen vanhoista masuuneista on tullut [[Belvalin]] kampus.
+
+### v2-750
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Belvalin
+VASTAUS: Belval on Esch-sur-Alzetten kaupunkiin kuuluva entinen terästehdasalue Luxemburgin etelässä. Masuunit A ja B sytytettiin vuosina 1965 ja 1970, ja viimeinen masuuni sammui heinäkuussa 1997. Huhtikuun 30. päivänä 1953 [[Jean Monnet]] käynnisti alueella ensimmäisen eurooppalaisen teräsvalun. Vapautuneelle 120 hehtaarille on noussut [[Luxemburgin yliopisto]], arkistoja ja konserttisali Rockhal. Vanhat masuunit on säilytetty alueen maamerkkeinä.
+
+### v2-751
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Benelux-maat
+VASTAUS: Benelux-maat ovat [[Belgia]], Alankomaat ja Luxemburg, jotka tekivät keskinäisen tulliliiton jo toisen maailmansodan aikana ja syventivät yhteistyötään sodan jälkeen. Niiden nimi tulee maiden nimien alkukirjaimista. Yhteistyö toimi esikuvana laajemmalle eurooppalaiselle yhdentymiselle, ja kaikki kolme maata kuuluvat [[Euroopan unioniin]]. Schengenin sopimuksen ensimmäisinä allekirjoittajina olivat Belgia, Alankomaat ja Luxemburg sekä Ranska ja Länsi-Saksa.
+
+### v2-752
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Schengen-alueeksi
+VASTAUS: Schengen-alue on Euroopan maiden alue, jonka sisärajoilla ei yleensä tehdä passintarkastuksia. Aloite sai alkunsa 14. kesäkuuta 1985, kun Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen jokilaivalla [[Princesse Marie-Astrid]] [[Moselilla]] [[Schengenin]] kylän kohdalla. Nykyisin alueeseen kuuluu 29 Euroopan maata, ja mukana on myös maita, jotka eivät ole Euroopan unionin jäseniä. Laiva myytiin vuonna 1992 Saksaan, mutta se palasi, ja kesästä 2025 se on museolaivana Schengenin rannassa. Alueen laajentuminen on tapahtunut vaiheittain vuosikymmenten kuluessa.
+
+### v2-753
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: hiekkakivi
+VASTAUS: Hiekkakivi on sedimenttikivi, joka syntyy hiekanjyvien sementoituessa kiinteäksi kiveksi. Luxemburgin Müllerthalin kalliot ovat hiekkakiveä, ja tuuli, vesi ja routa ovat muovanneet niihin rotkoja, luolia ja kapeita käytäviä. Samaa kiveä on Luxemburgin kaupungin linnoituskallio. Alueen kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi vuonna 1880 [[Hohllay]]n kallioseinään kiitoksen hallitukselle, joka avasi rotkot yleisölle. Alueen ainoa keskikokoinen asutus on [[Echternach]].
+
+### v2-754
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Mullerthal Trail
+VASTAUS: Mullerthal Trail on [[Müllerthalin]] eli Luxemburgin [[Pikku-Sveitsin]] merkitty vaellusreitti, joka kulkee hiekkakivikallioiden, rotkojen ja metsien halki. Müllerthal kattaa vain seitsemän prosenttia maasta, mutta siellä on luolia, kapeita rotkoja ja lukemattomia pieniä puroja. Alueen korkein kohta on 414 metrissä. En ole varma reitin tarkasta pituudesta tai osuuksien määrästä. Reitin tunnetuin lähtö- ja päätepiste on [[Echternach]], Luxemburgin vanhin säilynyt kaupunki.
+
+### v2-755
+KOHDE: maa:LUX
+KYSYMYS: Kerro lisää: Echternachin hyppelykulkue
+VASTAUS: Echternachin hyppelykulkue on perinteinen uskonnollinen kulkue, joka järjestetään vuosittain Echternachin kaupungissa Luxemburgin itäosassa helluntain jälkeisenä tiistaina. Osanottajat etenevät kaupungin läpi tanssimaisin hyppelyaskelin, ja kulkue kunnioittaa [[Pyhän Willibrordin]] muistoa. Willibrord oli anglosaksilainen lähetyssaarnaaja, joka perusti kaupunkiin luostarin. Kulkue on kirjattu Unescon aineettoman kulttuuriperinnön luetteloon. En ole varma kaikista perinteen alkuvaiheista, mutta se on vanha ja jatkuva, ja se on yhteydessä [[Echternachin luostariin]].
+
+### v2-756
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: kreivi Siegfried
+VASTAUS: Kreivi Siegfried Ardennelainen oli aatelismies, joka hankki vuonna 963 jyrkän hiekkakivikallion Alzette-joen mutkan yllä vaihtamalla Trierin luostarin kanssa maita ja muuta omaisuutta. Kalliolla oli vain munkkien pieni rakennus, ja hän rakennutti sille linnan, jota hän nimitti nimellä [[Lucilinburhuc]], pieni linna. Kallio oli luonnostaan lähes valloittamaton: kolmelta sivulta jyrkänne ja yhdeltä sivulta kapea kannas. Linnasta kasvoi vuosisatojen kuluessa Luxemburgin kaupunki. Kauppa liittyy [[Trierin luostariin]] ja [[Bock-kallion]] historiaan.
+
+### v2-757
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Lontoon sopimus
+VASTAUS: Lontoon sopimus vuodelta 1867 vahvisti Luxemburgin puolueettomuuden, mutta tämä ei suojellut maata koko ajan: Saksa miehitti Luxemburgin sekä ensimmäisessä että toisessa maailmansodassa. Sodan jälkeen maa luopui puolueettomuudestaan ja liittyi vuonna 1949 [[Pohjois-Atlantin liittoon]]. Sopimuksen jälkeen myös suurherttuakunnan henkilöunioni Alankomaiden kanssa päättyi vuonna 1890, kun Nassau-Weilburgin suku nousi valtaan. Linnoitusten purkaminen muutti Luxemburgin kaupunkia pysyvästi. Sopimuksen kautta [[Preussi]] vetäytyi kaupungista.
+
+### v2-758
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Alzette-joki
+VASTAUS: Alzette on joki, joka virtaa Ranskasta Luxemburgin läpi. Se kulkee muun muassa [[Esch-sur-Alzetten]] ja Luxemburgin kaupungin kautta ja laskee Sûre-jokeen. Luxemburgin kaupungissa Alzette ja sen sivujoki [[Pétrusse]] ovat kaivaneet syvät rotkot kalliolinnakkeen ympärille, ja siksi kaupunki oli niin vahva linnoitus, että sitä kutsuttiin Pohjoisen Gibraltariksi. Kreivi Siegfriedin linna rakennettiin joen mutkan yläpuolelle. En ole varma joen tarkasta pituudesta.
+
+### v2-759
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Pétrussen
+VASTAUS: Pétrusse on pieni joki, joka virtaa Luxemburgin kaupungin läpi ja laskee kaupungin keskustassa Alzette-jokeen. Yhdessä Alzetten kanssa se on kaivanut kaupungin ympärille syvän rotkon, joka teki kalliolinnakkeesta vaikeasti valloitettavan. Rotkon yli kulkee [[Adolphe-silta]], joka valmistui vuonna 1903. Rotkon seinämissä on myös osia vanhoista linnoituksista, kuten [[Pétrussen kasemaatit]]. Laakso on nykyään pitkälti puistoa ja kävelyaluetta.
+
+### v2-760
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: suurherttua Adolphen
+VASTAUS: Adolphe oli Luxemburgin suurherttua vuosina 1890–1905. Hän oli Nassaun ruhtinassukua, ja hänestä tuli Luxemburgin hallitsija, kun Alankomaiden kuningas Vilhelm III kuoli ja henkilöunioni Alankomaiden kanssa päättyi. Nassau-Weilburgin suku nousi tuolloin valtaan Luxemburgissa. Hänen aikanaan suurherttuan palatsiin lisättiin uusi siipi, ja hänen mukaansa on nimetty [[Adolphe-silta]] kaupungin keskustassa. Nykyisen suurherttuan perheen suku polveutuu [[Nassaun]] suvusta.
+
+### v2-761
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Judd mat Gaardebounen
+VASTAUS: Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen [[Moselin]] viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti [[Gostingenin]] kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+
+### v2-762
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Bouneschlupp
+VASTAUS: Bouneschlupp on vihreistä pavuista, perunoista, pekonista ja sipulista keitetty sakea keitto, jota pidetään luxemburgilaisena kansallisruokana. Keiton mukana tarjotaan joskus makkaraviipaleita ja porkkanaa. Sama keitto tunnetaan myös muualla rajaseudulla: sitä syödään [[Saarlandissa]], Belgian [[Gaumessa]] ja [[Lorrainessa]]. Resepti ei siis pysähtynyt rajalle, ja Luxemburgin keittiö onkin rajaseudun sekoitus, jossa arkiruoat ovat talonpoikaisia kuten Saksassa mutta ranskalainen vaikutus näkyy ravintoloiden listoilla.
+
+### v2-763
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Quetschentaart
+VASTAUS: Quetschentaart on luxemburgilainen luumupiirakka, joka kuuluu maan perinteisiin leivonnaisiin. Nimi tulee luxemburgin kielen luumua tarkoittavasta sanasta, ja piirakka tarjotaan jälkiruokana tai kahvin kanssa. En ole varma tarkasta alkuperästä enkä siitä, mihin vuodenaikaan sitä perinteisesti leivotaan. Luxemburgin arkiruoka on muuten talonpoikaista: listalta löytyvät esimerkiksi mausteiset perunaletut [[Gromperekichelcher]], joiden kanssa tarjotaan omenasosetta, sekä pehmeä juustolevite [[Kachkéis]].
+
+### v2-764
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Euroopan unionin tuomioistuin
+VASTAUS: Euroopan unionin tuomioistuin sai alkunsa hiili- ja teräsyhteisön tuomioistuimena, ja se piti ensimmäisen istuntonsa Luxemburgissa 28. marraskuuta 1954 taidekokoelmille hankitussa [[Villa Vaubanissa]]. Talo jäi pian ahtaaksi: tuomioistuin muutti vuonna 1959 toiseen rakennukseen ja vuonna 1972 omaan palatsiinsa [[Kirchbergiin]]. Tuomarit neuvottelevat yhä ranskaksi, ja tuomio kirjoitetaan ensin sillä kielellä, olipa asian kieli mikä tahansa. Tuomioistuin valvoo, että unionin oikeutta tulkitaan ja sovelletaan samalla tavalla kaikissa jäsenmaissa.
+
+### v2-765
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Euroopan investointipankki
+VASTAUS: Euroopan investointipankki on Euroopan unionin rahoituslaitos, jonka omistavat unionin jäsenmaat ja joka myöntää lainoja eurooppalaisille hankkeille. Sen toimipaikka on Luxemburgin [[Kirchbergin]] kaupunginosassa, jonne on keskittynyt useita unionin toimielimiä. Kirchbergin ylänköön pääsee kaupungin vanhasta osasta [[punaisen sillan]] kautta, sillä välissä on 75 metriä syvä Pfaffenthalin laakso. Sillan avaamisesta liikenteelle on aikaa pian kuusikymmentä vuotta.
+
+### v2-766
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Neumünsterin luostari
+VASTAUS: Neumünsterin luostari on Grundin kaupunginosassa Alzette-joen rannalla seisova entinen benediktiiniluostari. Se perustettiin 1600-luvun alussa, ja myöhemmin rakennus on palvellut muunkin käytössä, muun muassa vankilana; en ole varma kaikista vaiheista. Nykyisin siinä toimii kulttuurikeskus, jossa järjestetään näyttelyitä, konsertteja ja tapahtumia. [[Grundin]] kaupunginosa sijaitsee rotkon pohjalla, ja luostarin kulttuurikeskus on yksi sen tunnetuimmista paikoista. Rakennus kuuluu [[benediktiinimunkkien]] perinteeseen ja Luxemburgin vanhaan kaupunkiin.
+
+### v2-767
+KOHDE: kaupunki:luxemburg
+KYSYMYS: Kerro lisää: Pfaffenthalin
+VASTAUS: Pfaffenthal on Luxemburgin kaupungin kaupunginosa rotkon pohjalla Alzette-joen varrella. Se sijaitsee vanhan kaupungin ja Kirchbergin ylängön välissä, ja sen yli kulkee [[punainen silta]], joka avattiin liikenteelle 24. lokakuuta 1966. Silta ylittää 75 metriä syvän Pfaffenthalin laakson. Sillan suunnittelukilpailuun tuli 69 ehdotusta, ja voittaja oli saksalainen Egon Jux. Silta liittää vanhan kaupungin [[Kirchbergin]] uusiin toimielinten kortteleihin.
+
+### v2-768
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Ventas rumba
+VASTAUS: Ventas rumba on Venta-joen putous Kuldīgassa, Latvian länsiosassa. Se on noin 250 metriä leveä mutta vain parin metrin korkuinen, ja lähteiden mukaan se on Euroopan leveimpiä putouksia. Keväisin putouksen ylittäviä kaloja, erityisesti [[vimbaa]], voi nähdä hyppäämässä kynnyksen yli. Putous sijaitsee [[Kuldīgan]] vanhan kaupungin vieressä, ja kaupungin kuuluisa tiilisilta ylittää joen sen läheltä. En ole varma kaikista tarkoista luvuista, mutta leveys on putouksen erikoisuus.
+
+### v2-769
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+VASTAUS: Unescon maailmanperintöluettelo on luettelo kohteista, joita pidetään niin merkittävinä, että niiden suojelu kuuluu koko ihmiskunnalle. Latviassa luetteloon kuuluvat [[Riian historiallinen keskusta]] ja [[Struven kaariketju]], jonka mittauspisteitä on useassa maassa myös Suomessa. Kuldīgan vanha kaupunki kirjattiin luetteloon vuonna 2023, koska se on säilyttänyt esimerkillisesti maaseutukaupungin historiallisen rakenteen. [[Kuldīgan]] vanhassa kaupungissa on matalia puutaloja ja kapeita katuja. En ole varma, onko luetteloon tullut Latviasta muita kohteita.
+
+### v2-770
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Mežaparksin
+VASTAUS: Mežaparks on Riian pohjoisosassa sijaitseva puistomainen kaupunginosa, jonka nimi tarkoittaa metsäpuistoa. Siellä on laaja puistoalue sekä kaupungin eläintarha, ja siellä on Latvian laulujuhlien päänäyttämö, [[Mežaparksin suuri lava]], jonne mahtuu esiintymään jopa kolmekymmentätuhatta laulajaa ja tanssijaa samaan aikaan. Se on yksi maailman suurimmista pysyvistä esiintymislavoista. Yleisöä kokoontuu moninkertainen määrä ympäri Latviaa ja ulkomaita. Eläintarha sijaitsee samassa kaupunginosassa, ja [[Riian eläintarhaan]] tutustuvat monet perheet.
+
+### v2-771
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: laulavassa vallankumouksessa
+VASTAUS: Laulava vallankumous oli Baltian maiden rauhanomainen vapautusliike, jossa ihmiset lauloivat yhdessä kiellettyjä isänmaallisia lauluja Neuvostoliiton vallan aikana. Virossa kymmenettuhannet lauloivat yhdessä vuosina 1988–1991, ja liike levisi myös Latviaan ja Liettuaan. Tunnetuin yhteinen teko oli 23. elokuuta 1989 muodostettu [[Baltian ketju]], jossa ihmiset muodostivat käsi kädessä ketjun Tallinnasta Riian kautta Vilnaan. Liike johti lopulta maiden itsenäistymiseen, ja se liittyy läheisesti [[laulujuhlien]] perinteeseen.
+
+### v2-772
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Unescon aineettomaan kulttuuriperintöön
+VASTAUS: Unescon aineeton kulttuuriperintö kattaa perinteitä, taitoja ja esittämisen tapoja, joita yhteisöt siirtävät sukupolvelta toiselle. Viron, Latvian ja Liettuan laulu- ja tanssijuhlien perinne on kirjattu sen luetteloon, ja Baltian [[laulujuhlat]] ovat yksi tunnetuimmista esimerkeistä. Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja [[Johann Voldemar Jannsenin]] aloitteesta, ja lavalla lauloi lähes 900 miestä. Latviassa ensimmäiset laulujuhlat järjestettiin vuonna 1873.
+
+### v2-773
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Latgalen
+VASTAUS: Latgale on Latvian kaakkoinen ja itäinen maakunta, jonka suurin kaupunki on [[Daugavpils]] ja jonka toinen tärkeä keskus on [[Rēzekne]]. Alueella on lukuisia järviä, ja sitä kutsutaan joskus sinisten järvien maaksi. Latgalessa on vahva katolilainen perinne, ja alueen asukkaat puhuvat usein latvian lisäksi latgalia. Alue tunnetaan myös käsitöistä, esimerkiksi keramiikasta. En ole varma kaikista alueen rajoista, mutta Latgale on Latvian neljästä historiallisesta maakunnasta itäisin.
+
+### v2-774
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: balttilaiset kielet
+VASTAUS: Balttilaiset kielet muodostavat indoeurooppalaisen kieliperheen oman haaran, jonka ainoat elävät kielet ovat latvia ja liettua; latgalia pidetään joko latvian muotona tai omana kielenään. Aiemmin haaraan kuuluivat myös esimerkiksi [[vanhapreussi]] ja semgallin sekä kuurin kielet, jotka ovat kuolleet sukupuuttoon. Balttilaiset kielet eivät ole sukua suomelle, mutta suomen lähisukulaisiin kuuluva [[liivin kieli]] on elänyt balttilaisten kielten naapurina Latviassa. Liettua on säilyttänyt vanhoja piirteitä, minkä vuoksi se kiinnostaa kielentutkijoita.
+
+### v2-775
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Daugavpils
+VASTAUS: Daugavpils on Latvian toiseksi suurin kaupunki, ja se sijaitsee kaakkoisessa Latgalessa [[Väinäjoen]] rannalla lähellä Liettuan ja Valko-Venäjän rajaa. Kaupunki tunnettiin aiemmin nimillä Dünaburg ja Dvinsk. Sen tunnetuin nähtävyys on 1800-luvulla rakennettu [[Daugavpilsin linnoitus]], joka on yksi Euroopan harvoista säilyneistä tämän ajan linnoituskomplekseista. Taidemaalari Mark Rothko syntyi kaupungissa. En ole varma kaupungin tarkasta asukasluvusta.
+
+### v2-776
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: mustahaikara
+VASTAUS: Mustahaikara on salamyhkäinen metsälintu, joka pesii vanhoissa ja rauhallisissa metsissä, usein soiden ja purojen lähellä. Se on tummaa höyhenpukua kantava, [[valkohaikaraa]] varovaisempi laji, joka karttaa ihmisiä. Mustahaikara on [[muuttolintu]], joka talvehtii kaukana etelässä. Latvian laajat metsät tarjoavat sille hyvän pesimäympäristön. En ole varma lajin tarkasta kannasta Latviassa, mutta se on maan lintuharrastajille tärkeä laji.
+
+### v2-777
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Gaujan kansallispuisto
+VASTAUS: Gaujan kansallispuisto perustettiin vuonna 1973, ja se on Latvian suurin. Puiston ydin on Gaujan joen laakso, jossa joki on kuluttanut rantaan punertavia jyrkänteitä. Ne ovat devonikautista hiekkakiveä, niin pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät kohoavat parikymmentä metriä, ja niiden juurella on luolia. Tunnetuimman luolan, Gūtmaņalan, seinissä on nimikirjaimia jo 1600-luvulta. Puiston keskuksia ovat [[Sigulda]] ja [[Turaidan linna]].
+
+### v2-778
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Līgo-lauluja
+VASTAUS: Līgo-laulut ovat Latvian kesäpäivänseisauksen eli Jāņin juhlan perinteisiä lauluja. Niiden kertosäe sisältää sanan līgo, ja laulut kuuluvat laajempaan latvialaiseen kansanlauluperinteeseen, jota kutsutaan [[dainoiksi]]. Lauluja lauletaan kokkojen äärellä, seppeleitä tehdessä ja juhlan ruokapöydässä. Juhlaa vietetään [[Jāņin]] aikaan kesäkuun lopussa. En ole varma yksittäisten laulujen iästä, mutta tavat ovat peräisin esikristillisiltä ajoilta.
+
+### v2-779
+KOHDE: maa:LVA
+KYSYMYS: Kerro lisää: Jāņu siers
+VASTAUS: Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan Jāņin eli kesäpäivänseisauksen juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja [[kuminan]] kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 juusto sai [[Euroopan unionin]] aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse isoäidin ohjeella.
+
+### v2-780
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Mihails Eizenšteins
+VASTAUS: Mihails Eizenšteins oli Riian tunnetuin jugendarkkitehti, joka suunnitteli kaupunkiin lukuisia vuokrataloja 1900-luvun alussa. Hänen julkisivunsa tunnistaa runsaista koristeista: kasvoista, naamioista ja veistoksista. Hän oli ohjaaja [[Sergei Eisensteinin]] isä. Hänen työnsä liittyvät Riian [[jugendtyyliin]], jota on säilynyt yli seitsemänsataa taloa. En ole varma hänen suunnittelemiensa talojen tarkasta määrästä.
+
+### v2-781
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Alberta ielalla
+VASTAUS: Alberta iela eli Albertinkatu on Riian keskustan jugendkatu, ja sen nimi viittaa piispa Albertiin, joka perusti Riian vuonna 1201. Katu on tunnettu arkkitehti Mihails Eizenšteinsin suunnittelemista taloista, joiden julkisivuja koristavat naamiot, veistokset ja runsaat kasvi- ja eläinaiheet. Kadulla kävely on lähes esittelykierros [[Riian jugendtalojen]] tyyliin, ja katu kuuluu Riian [[historialliseen keskustaan]]. Alberta ielan talot on rakennettu 1900-luvun alussa, kun Riika kasvoi nopeasti.
+
+### v2-782
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Mustapäiden veljeskunta
+VASTAUS: Mustapäiden veljeskunta oli Riian naimattomien kauppiaiden, laivanomistajien ja ulkomaalaisten kilta. Se piti 1400-luvun puolivälistä lähtien juhliaan ja kokouksiaan [[Mustapäiden talossa]], joka oli rakennettu jo vuonna 1334 kauppiaiden varastoksi ja kokoontumispaikaksi. Tiettävästi talon edustalle pystytettiin vuonna 1510 koristeltu [[joulukuusi]], ja Riika kertoo tarinaa mielellään. Toisen maailmansodan pommitus tuhosi talon vuonna 1941, ja uusi talo muurattiin vanhojen piirustusten ja valokuvien mukaan 1990-luvulla. En ole varma veljeskunnan nimen tarkasta alkuperästä.
+
+### v2-783
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Hansaliiton
+VASTAUS: Hansaliitto oli Pohjois-Euroopan kauppakaupunkien keskiaikainen yhteenliittymä, jonka tärkeimpiä jäseniä oli [[Lyypekki]]. Liiton kaupungit kävivät kauppaa Itämeren ja Pohjanmeren rannoilla viljalla, pellavalla, hirsillä, turkiksilla ja kalalla. Riika liittyi Hansaliittoon vuonna 1282, ja kaupunki rikastui viljasta, pellavasta ja hirsistä. Myös [[Tallinna]] oli liiton jäsen. Riian vanhassakaupungissa kauppiastalot rakennettiin kapeiksi ja syviksi, koska veroa maksettiin kadunpuoleisen julkisivun leveyden mukaan. Liiton viimeinen yhteinen kokous pidettiin vuonna 1669.
+
+### v2-784
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Raatihuoneentorin
+VASTAUS: Raatihuoneentori on Riian vanhankaupungin keskeinen aukio, jonka laidalla seisoo [[Mustapäiden talo]]. Aukiolla on myös [[Rolandin patsas]]: Roland-patsaat ovat monissa Pohjois-Euroopan kauppakaupungeissa kaupunkioikeuksien ja vapauden symboli. Aukion rakennukset tuhoutuivat toisen maailmansodan aikana, ja suuri osa on rakennettu sittemmin uudelleen. Riian raatihuone on aukion toisella laidalla. En ole varma kaikista rakennusten uudelleenrakennusvuosista.
+
+### v2-785
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: ilmalaivahalleja
+VASTAUS: Ilmalaivahallit olivat suuria hankia, joissa ensimmäisen maailmansodan aikana säilytettiin saksalaisia ilmalaivoja eli [[zeppeliineja]]. Halleista osa tuotiin Riikaan, ja niistä rakennettiin Keskustorin viisi tilavaa torihallia, jotka avattiin noin vuonna 1930. Ne ovat nykyään osa [[Riian historiallista keskustaa]], jonka Unesco on kirjannut maailmanperintöluetteloonsa. Keskustori on yksi Euroopan suurimmista toreista, mutta en ole varma sen tarkasta sijoituksesta. Halleissa myydään kalaa, lihaa, maitotuotteita, leipää ja vihanneksia.
+
+### v2-786
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: savustettu kala
+VASTAUS: Savustettu kala on Riian Keskustorin perinteinen tuote. Itämeren rannalla savustetaan lohta, silakkaa, makrillia ja ankeriasta, ja torilla myydään kalaa suoraan savustajilta. Riian tunnettu erikoisuus on [[šprotit]], savustetut pikkukalat, joita viedään myös purkitettuina. Kalan savustus on vanha tapa säilyttää saalis, ja se sopii hyvin tuoreen [[ruisleivän]] kanssa. En ole varma kaikista paikallisista savustustavoista.
+
+### v2-787
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: ruisleipä
+VASTAUS: Ruisleipä on Latviassa arkipäiväinen ja tärkeä leipä: perinteinen tumma ruisleipä on nimeltään rupjmaize. Se leivotaan täysjyvärukiista [[hapanjuurella]], ja taikinan annetaan kohota pitkään, joten leipä on tiivis, tumma ja hieman hapan. Samanlaista mustaa ruisleipää syödään myös Virossa lähes jokaisella aterialla. Vanhasta leivästä tehdään Latviassa perinteinen jälkiruoka, jossa leipämurut, kermavaahto ja marjahillo kerrostetaan, ja sitä kutsutaan nimellä [[rupjmaizes kārtojums]].
+
+### v2-788
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Latvian vapaussotaan
+VASTAUS: Latvian vapaussota käytiin vuosina 1918–1920, ja se seurasi Latvian itsenäisyysjulistusta 18. marraskuuta 1918. Latvia taisteli sodassa sekä Neuvosto-Venäjän punaista armeijaa vastaan että saksalaisjoukkoja ja niiden liittolaisia vastaan, ja sille saapui apua myös naapurimaista. Sota päättyi rauhaan Neuvosto-Venäjän kanssa elokuussa 1920, ja sen sopimus tunnetaan nimellä [[Riian rauha]]. Sodassa kaatuneiden muistoksi pystytettiin vuonna 1935 Riian Vapaudenpatsas. Latviassa muistetaan sodan sankareita [[Lāčplēsis-päivänä]] marraskuun 11. päivänä.
+
+### v2-789
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Milda
+VASTAUS: Milda on latvialaisten hellä lempinimi Riian Vapaudenpatsaan huipulla seisovalle naishahmolle. Patsas paljastettiin vuonna 1935, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Sen suunnitteli kuvanveistäjä [[Kārlis Zāle]]. Milda kohottaa käsissään kolmea kultaista tähteä, jotka kuvaavat Latvian kolmea historiallista aluetta: Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua. Patsas tunnetaan muodollisesti [[Vapaudenmuistomerkkinä]].
+
+### v2-790
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Vanhankaupungin
+VASTAUS: Riian vanhakaupunki on kaupungin historiallinen ydin, jossa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. Alueen tunnetuimpia kohteita on [[Riian tuomiokirkko]], jonka rakentaminen aloitettiin vuonna 1211 ja josta kasvoi Baltian suurin keskiaikainen kirkkorakennus. Mazā Pils -kadulla seisoo vierekkäin kolme eri vuosisatojen taloa, joita kutsutaan [[kolmeksi veljekseksi]]. Vanhakaupunki on osa Riian [[historiallista keskustaa]], jonka Unesco on kirjannut maailmanperintöluetteloonsa.
+
+### v2-791
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Abraham Kunze
+VASTAUS: Abraham Kunze oli riikalainen apteekkari, jonka kerrotaan sekoittaneen vuonna 1752 Riian Mustan Palsamin ensimmäisen reseptin. Hän yhdisti noin parikymmentä yrttiä, juurta ja maustetta korkeaprosenttiseen alkoholiin. Palsamia myytiin aluksi lääkkeenä vatsavaivoihin. Tunnetun tarinan mukaan juoma paransi Venäjän keisarinnan [[Katariina Suuren]] hänen vieraillessaan Riiassa, mutta tämä on legenda. En tiedä Kunzesta juuri muuta. [[Riianmustabalsami]] pullotetaan yhä perinteisesti tummaan, kivimäiseen pulloon.
+
+### v2-792
+KOHDE: kaupunki:riika
+KYSYMYS: Kerro lisää: Katariina Suuren
+VASTAUS: Katariina Suuri oli Venäjän keisarinna vuosina 1762–1796. Hän oli syntyjään saksalaisruhtinaan tytär, ja hänen aikanaan Venäjä laajeni merkittävästi länteen ja etelään. Hänen hallintonsa aikana Kuurinmaan ruhtinaskunta liitettiin vuonna 1795 Venäjään, mikä tarkoitti, että myös osa nykyisestä Latviasta joutui [[Venäjän keisarikunnan]] alaisuuteen. Tarinan mukaan hän sairastui Riian-vierailullaan ja parantui Riian Mustan Palsamin avulla; legendan paikkansapitävyydestä en ole varma. Hänen hovinsa tunnettiin yhteyksistä eurooppalaisiin valistusajattelijoihin. Hallinnon keskus oli [[Pietari]].
+
+### v2-793
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Port Hercule
+VASTAUS: Port Hercule on Monacon syvänmeren satama, jonka pinta-ala on noin 16 hehtaaria. Nimi liittyy Herkuleeseen: kreikkalaiset siirtokuntalaiset perustivat paikalle [[Monoikoksen]] siirtokunnan 500-luvulla eaa. Plinius vanhempi ja Tacitus mainitsevat sataman. Nykyinen satama valmistui vasta vuonna 1926, ja isoisän matkavuonna 1873 satama oli nykyistä vanhempi. Sitä uudistettiin 1970-luvulla, ja suomalainen [[Marinetek]] toimitti kolme uutta ponttonia vuoteen 2011 mennessä. Satamassa voi ankkuroida jopa 700 alusta, ja vesi on ulkolaitureilla jopa 40 metriä syvää.
+
+### v2-794
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Monte Carlon kasinon
+VASTAUS: Monte Carlon kasino on Place du Casino -aukion laidalla sijaitseva pelikasino ja Monacon tunnetuimpia rakennuksia. Sitä alettiin rakentaa nykyiselle paikalle Spélugues-alueelle vuonna 1858, ja se valmistui vuonna 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. [[François Blanc]] sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin samana vuonna. Kasinoa laajennettiin vuosina 1878–1881 arkkitehti [[Charles Garnierin]] johdolla. Kasinon mukaan on nimetty myös [[Monte Carlo -menetelmä]], satunnaisotantaan perustuva laskentatapa, jonka nimen valitsi Nicholas Metropolis.
+
+### v2-795
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Formula 1 -sarjaan
+VASTAUS: Formula 1 on kansainvälinen kilpa-autosarja, jonka ensimmäinen maailmanmestaruuskausi ajettiin vuonna 1950. [[Monacon Grand Prix]] kuuluu sarjan tunnetuimpiin kilpailuihin, koska se ajetaan ruhtinaskunnan katuverkossa. Sarjan historiaan kuuluu myös itävaltalainen [[Niki Lauda]], joka voitti mestaruuden vuonna 1975. Elokuussa 1976 hänen autonsa syttyi tuleen Nürburgringin radalla, ja hän sai pahoja palovammoja. Hän palasi radalle kuudessa viikossa Monzan kilpailuun ja tuli neljänneksi. Mestaruuksia hänelle kertyi kolme, ja Laudan tarina on yksi lajin tunnetuimmista.
+
+### v2-796
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: François Grimaldi
+VASTAUS: François Grimaldi oli genovalainen mies, joka tunnettiin lempinimellä Malizia, ovela. Hän otti 8. tammikuuta 1297 haltuunsa genovalaisten linnoituksen Monacon kalliolla pukeutuneena fransiskaanimunkiksi. Tapahtuma näkyy yhä Monacon vaakunassa, jossa kaksi [[fransiskaania]] pitelee miekkoja. Hänen otteensa ei kuitenkaan kestänyt: genovalaiset karkottivat hänet muutaman vuoden kuluttua, ja kiista jatkui vielä noin vuosisadan. Grimaldit ostivat Monacon Aragonian kruunulta vuonna 1419, ja [[Honoré II]] alkoi käyttää ruhtinaan arvonimeä vuonna 1612.
+
+### v2-797
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: vaakunan munkit
+VASTAUS: Monacon vaakunassa kilpeä pitelee kaksi fransiskaanimunkkia, jotka pitävät käsissään miekkoja. Kuva viittaa vuoteen 1297, jolloin François Grimaldi otti tarinan mukaan linnoituksen haltuunsa pukeutuneena fransiskaanimunkiksi. Vaakunan kilpi on koristettu punavalkoisilla vinoneliöillä, ja vaakunan tunnuslause on latinaksi [[Deo juvante]], suomeksi Jumalan avulla. Ruhtinassuku Grimaldi on hallinnut kalliota siitä lähtien lyhyin keskeytyksin. Vaakunan kuva liittyy [[fransiskaanien]] ritarikuntaan, vaikka kuvan miekat ovat tarinan oma lisä.
+
+### v2-798
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Genova
+VASTAUS: Genova on Italian Ligurian alueen satamakaupunki ja ollut keskiajalla merkittävä merivalta, jonka [[Genovan tasavalta]] kävi laajaa kauppaa Välimerellä. Monacon kalliolle nousi vuonna 1215 genovalaisten linnoitus, ja Genova pysyi kalliolla vahvana vaikuttajana pitkään; Grimaldit olivat itse genovalaista sukua. Tasavalta säilyi itsenäisenä aina 1700-luvun lopulle. Genovasta on kotoisin myös tunnettu kastike [[pesto]], ja sen satama on yksi Välimeren vilkkaimpia. En ole varma kaikista tasavallan vaiheista.
+
+### v2-799
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Albert I
+VASTAUS: Albert I oli Monacon ruhtinas vuosina 1889–1922 ja tunnettu merentutkija. Hän teki tutkimusretkiä omilla aluksillaan ja kokosi merentutkimuksen aineistoa, jonka pohjalta hän perusti Monacoon kalliolle meren yläpuolelle [[Valtamerimuseon]], joka avattiin vuonna 1910. Museon johtajana toimi myöhemmin vuosina 1957–1988 ranskalainen merentutkija [[Jacques Cousteau]]. En ole varma kaikista Albert I:n tutkimusretkistä, mutta hänen työnsä teki Monacosta merentutkimuksen keskuksen.
+
+### v2-800
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Välimeren
+VASTAUS: Välimeri on sisämeri, jota ympäröivät Eurooppa, Afrikka ja Aasia, ja sen pinta-ala on noin 2,5 miljoonaa neliökilometriä. Atlantin valtamereen se yhtyy kapean [[Gibraltarinsalmen]] kautta, ja [[Mustanmeren]] kanssa sen yhdistävät Dardanellit ja Bosporinsalmi. Meressä on vain pieni vuorovesi, ja haihdunta on suurempaa kuin jokien tuoma vesi, joten vesi on suolaisempaa kuin Atlantilla. Monacon rannikko kuuluu Välimeren pohjoisosaan, jota kutsutaan [[Ligurianmereksi]].
+

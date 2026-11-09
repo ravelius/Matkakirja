@@ -1,0 +1,445 @@
+### v2-623
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Giuseppe Garibaldi
+VASTAUS: Giuseppe Garibaldi syntyi vuonna 1807 Nizzassa, joka kuului silloin Sardinian kuningaskuntaan, ja kuoli vuonna 1882 Caprera-saarella. Hän oli sotilas ja vapaaehtoisjoukkojen johtaja, jonka tunnuksena olivat punaiset paidat. Vuonna 1860 hän johti [[Tuhannen retken]] Sisiliaan ja Etelä-Italiaan ja kaatoi Kahden Sisilian kuningaskunnan vallan. Voitettuaan hän luovutti valloitetut alueet kuningas [[Vittorio Emanuele II:n]] haltuun, ja siitä syntyi vuonna 1861 Italian kuningaskunta. Diplomaatti [[Camillo Cavour]] oli yhdistymisen toinen keskeinen hahmo.
+
+### v2-624
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: kaupunkivaltioiden
+VASTAUS: Kaupunkivaltio on kaupunki ja sen ympäristö, joka hallitsee itseään itsenäisenä valtiona. Italiassa ne kehittyivät 1000- ja 1100-luvuilla, kun pohjoisen kaupungit saivat itsehallinnon kommuuneina. Kaupungit liittoutuivat toisinaan yhteistä vihollista vastaan: [[Lombardian liitto]] voitti keisari Fredrik Barbarossan [[Legnanon taistelussa]] vuonna 1176. Hallintomuodot vaihtelivat: [[Venetsiaa]] hallitsi valittu doge, kun taas Firenzessä valta siirtyi lopulta pankkiirisuvuille. Kilpailu kaupunkien välillä oli kovaa ja sotia käytiin usein, mikä selittää osaltaan sitä, miksi murteet ja tavat ovat säilyneet niin erilaisina.
+
+### v2-625
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: murteet
+VASTAUS: Italiassa puhutaan standardi-italian lisäksi lukuisia alueellisia kieliä ja murteita, joita italiaksi sanotaan nimellä dialetti. Nykyisen standardi-italian pohjana on [[toscanan murre]], erityisesti firenzeläinen kieli. [[Dante Alighieri]] kirjoitti 1300-luvun alussa teoksensa Jumalainen näytelmä tällä kielellä, ja se vakiintui kirjakieleksi. Monet murteet eroavat toisistaan niin paljon, että kielitieteilijät pitävät esimerkiksi [[napolin kieltä]] ja [[sisilian kieltä]] omina kielinään. Nuoremmat puhuvat usein standardi-italiaa, mutta murteet elävät yhä perheissä ja paikallisessa kulttuurissa.
+
+### v2-626
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Alpeilta
+VASTAUS: Alpit ovat Euroopan korkein vuoristo, ja ne kaartuvat Italian pohjoisrajalle Ranskan, Sveitsin, Itävallan ja Slovenian vierelle. Italian ja Ranskan rajalla kohoaa [[Mont Blanc]], Alppien korkein huippu, noin 4 800 metriä. Italian puolella ovat myös [[Dolomiitit]], vaaleat kalkkikivihuiput, jotka kuuluvat Unescon maailmanperintöön. Gran Paradison alueella elää [[alppikauris]], joka oli 1800-luvun puolivälissä katoamisen partaalla: jäljellä oli alle sata yksilöä. Alueesta tuli vuonna 1922 Italian ensimmäinen kansallispuisto, [[Gran Paradison kansallispuisto]]. Nykyään Alpeilla elää taas yli 50 000 kaurista.
+
+### v2-627
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Po-joen
+VASTAUS: Po on Italian pisin joki, noin 650 kilometriä pitkä. Se saa alkunsa Alpeilla [[Monviso]]-vuoren juurelta, virtaa itään halki Pohjois-Italian laakson ja päätyy [[Adrianmereen]] laajalla suistolla. Joen laakso on Italian tärkein maatalousalue, jossa viljellään muun muassa riisiä ja viljaa. Joen varrella ovat esimerkiksi [[Torino]] ja Cremona. Tulvat ovat toistuva ongelma, ja suisto sijaitsee Venetsian eteläpuolella.
+
+### v2-628
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Apenniinien
+VASTAUS: Apenniinit ovat Italian niemimaan selkäranka, noin 1 200 kilometriä pitkä vuoristo, joka alkaa Pohjois-Italiassa Ligurian rannikolta ja jatkuu etelään Calabriaan ja edelleen Sisiliaan. Korkein huippu on Abruzzossa sijaitseva [[Gran Sasso]], noin 2 900 metriä. Vuoriston kivi on suurelta osin kalkkikiveä. [[Abruzzon kansallispuistossa]] elää harvinainen Apenniinien ruskeakarhu, ja vuoristossa on tärkeitä elinalueita sudelle. San Marino rakentuu Apenniinien kalliolle, [[Monte Titanon]] rinteille, ja vuoren huippuja koristavat kolme tornia.
+
+### v2-629
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: tulivuoret
+VASTAUS: Italiassa on Euroopan aktiivisimpia tulivuoria, sillä Afrikan ja Euraasian mannerlaatat painautuvat maan alla toisiaan vasten. Napolin lähellä kohoaa [[Vesuvius]], jonka purkaus vuonna 79 hautasi alleen [[Pompejin]] kaupungin; tapahtumasta on lähes kaksituhatta vuotta. Sisiliassa on [[Etna]], Euroopan korkein aktiivinen tulivuori, ja Liparisaarilla [[Stromboli]], joka purkautuu lähes jatkuvasti pienin purkauksin. Napolin länsipuolella on [[Campi Flegrei]], laaja tulivuorialue, jota seurataan tarkasti.
+
+### v2-630
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: risottoa
+VASTAUS: Risotto on pohjoisitalialainen riisiruoka, joka valmistetaan paistamalla pyöreää riisiä voissa ja sipulissa ja lisäämällä liemi vähitellen hämmentäen, kunnes riisi on kermaista mutta jää al dente. Riisiä viljellään Po-joen laaksossa, ja tavallisia lajikkeita ovat [[arborio]] ja carnaroli. Tunnetuin versio on Milanon [[risotto alla milanese]], jonka saffraani värjää keltaiseksi. Riisinviljelyn keskus on [[Vercellin]] seutu. Roomassa riisi päätyy toisenlaiseen muotoon: [[supplì]] on paistettu riisikroketti, jonka keskellä on mozzarellaa.
+
+### v2-631
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Napolia
+VASTAUS: Napoli on Etelä-Italian suurin kaupunki, Campanian alueen pääkaupunki ja pizzan kotikaupunki. Napolilainen pizza on vaalea, pehmeä ja reunoilta korkea, ja sen valmistustaito kuuluu Unescon aineettoman kulttuuriperinnön luetteloon vuodelta 2017. Tarinan mukaan [[Margherita-pizza]] sai nimensä kuningatar Margheritan mukaan vuonna 1889, ja sen värit vastaavat Italian lippua: tomaatti, mozzarella ja basilika. Kaupungin yllä kohoaa [[Vesuvius]], ja se oli pitkään [[Kahden Sisilian kuningaskunnan]] pääkaupunki, kunnes Garibaldi valloitti sen vuonna 1860.
+
+### v2-632
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: panettone
+VASTAUS: Panettone on Milanosta kotoisin oleva joululeivonnainen, korkea ja kupolinmuotoinen hiivataikinaleipä, jossa on rusinoita ja sukaattia. Taikina kohoaa hitaasti ja useassa vaiheessa, joten valmistus kestää parhaimmillaan päiviä. Panettone syödään Italiassa jouluna ja uudenvuoden aikaan, usein viinin tai kahvin kanssa. Alkuperästä kerrotaan useita legendoja, mutta niiden todenperäisyydestä ei ole varmuutta. [[Veronassa]] puolestaan tunnetaan joululeivonnainen [[pandoro]], joka on tähdenmuotoinen ja ilman hedelmiä. Panettonen kotikaupunki on [[Milano]].
+
+### v2-633
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Vatikaani
+VASTAUS: Vatikaani eli Vatikaanivaltio on maailman pienin itsenäinen valtio, pinta-alaltaan alle puoli neliökilometriä. Se sijaitsee Rooman sisällä ja on katolisen kirkon keskus. Nykyinen asema perustuu vuonna 1929 allekirjoitettuun [[Lateraanisopimukseen]]. Sitä ennen paavi ei ollut hyväksynyt uutta tilannetta: Italian armeija valtasi Rooman 20. syyskuuta 1870, ja Pius IX kieltäytyi hänelle tarjotusta asemasta, joten hän ja hänen seuraajansa pysyttelivät Vatikaanin alueella. Valtion tunnetuimpia nähtävyyksiä ovat [[Pietarinkirkko]] ja [[Sikstuksen kappeli]], jonka holvin Michelangelo maalasi 1500-luvun alussa. Paavin henkivartiokaartina palvelee [[Sveitsin kaarti]].
+
+### v2-634
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: San Marino
+VASTAUS: San Marino on pieni tasavalta Italian sisällä, Apenniinien Monte Titano -vuoren rinteillä. Perimätiedon mukaan se perustettiin vuonna 301, kun kivenhakkaaja [[Marinus]] perusti yhteisön vuorelle. Maata johtaa kaksi valtionpäämiestä eli [[kapteeni-regenttiä]], jotka valitaan puoleksi vuodeksi kerrallaan. Kaupungin kolme tornia, [[Guaita]], Cesta ja Montale, kruunaavat vuoren kolmea huippua. Historiallinen keskusta ja Monte Titano kuuluvat Unescon maailmanperintöön.
+
+### v2-635
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco on YK:n koulutus-, tiede- ja kulttuurijärjestö, jonka päämaja on Pariisissa. Sen maailmanperintöluetteloon valitaan kohteita, joilla on poikkeuksellinen kulttuurinen tai luonnonarvo. Italiassa kohteita on yli viisikymmentä, enemmän kuin useimmissa maissa. Niitä ovat esimerkiksi [[Venetsia ja sen laguuni]], [[Pompeji]], [[Amalfin rannikko]] ja Rooman historiallinen keskusta. Unesco ylläpitää myös aineettoman kulttuuriperinnön luetteloa, johon kuuluu esimerkiksi napolilaisen pizzantekijän taito.
+
+### v2-636
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: laguuniin
+VASTAUS: Venetsian laguuni on Adrianmeren pohjukassa sijaitseva matala, noin 550 neliökilometrin vesialue, jota merestä erottavat kapeat hiekkasaarekkeet eli lidot. Laguuniin pääsee meri kolmen aukon kautta, ja vuorovesi nostaa ja laskee veden pintaa. Venetsian lisäksi laguunissa on lukuisia saaria: [[Murano]] tunnetaan lasista, [[Burano]] värikkäistä taloistaan ja pitsistään ja [[Torcello]] on yksi alueen vanhimmista asutuspaikoista. Tulvia, joita sanotaan nimellä acqua alta, vastaan on rakennettu [[MOSE]]-niminen liikuteltava tulvaeste, joka otettiin käyttöön vuonna 2020.
+
+### v2-637
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: puupaalujen
+VASTAUS: Venetsian talojen alla on puupaaluja, jotka on lyöty laguunin pehmeän pohjan läpi kovaan savikerrokseen. Paalut ovat usein leppää, tammea ja lehtikuusta, ja niiden päälle on laskettu vettä läpäisemätön kerros [[Istrian kiveä]]. Puu kestää, koska se on vedessä, jossa on vähän happea, joten lahottajat eivät pääse työhön. Esimerkiksi [[Santa Maria della Salute]] -kirkko seisoo lähteiden mukaan yli miljoonan paalun varassa. Samaa tekniikkaa on käytetty muuallakin: [[Amsterdamissa]] Dam-aukion palatsi lepää 13 659 paalun päällä.
+
+### v2-638
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: La Serenissima
+VASTAUS: La Serenissima eli Venetsian tasavallan arvonimi tarkoittaa rauhallisinta tasavaltaa. Valtiota johti elinikäinen doge, mutta todellinen valta oli kauppiassukujen jäsenten [[Suuressa neuvostossa]]. Tasavalta hallitsi Välimeren idänkauppaa ja laajeni merentakaisille alueille. Sen laivasto oli mukana [[Lepanton meritaistelussa]] vuonna 1571, jossa kristittyjen liittouma voitti Ottomaanien laivaston. Tasavallan tunnus oli [[Markuksen leijona]], ja valtio päättyi vuonna 1797, kun Napoleon valtasi kaupungin ja [[Campo Formion rauha]] antoi alueen Itävallalle.
+
+### v2-639
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: dogen palatsin
+VASTAUS: Dogen palatsi eli Palazzo Ducale on goottilainen palatsi [[Pyhän Markuksen aukion]] vieressä, ja se oli Venetsian tasavallan hallintokeskus ja dogen asuinpaikka. Nykyinen rakennus on pääosin 1300- ja 1400-lukujen työtä, ja sen julkisivua koristavat kaaririvistöt. Sisällä on valtava neuvostosali, jossa on [[Tintoretton]] suuri öljymaalaus Paratiisi. Palatsia yhdistää vankilaan kuuluisa [[Huokausten silta]], joka valmistui 1600-luvun alussa. Palatsilla oli osansa myös vuonna 1866: Venetsia oli ollut Itävallan keisarikunnan osa vuodesta 1815, ja kun se liitettiin Italiaan, äänet laskettiin palatsin laskuhuoneessa ja tulos luettiin ensin salissa ja sitten parvekkeelta.
+
+### v2-640
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: Napoleoniin
+VASTAUS: Ranskan sotapäällikkö Napoleon Bonaparte valloitti Pohjois-Italiaa 1790-luvun lopulla, ja vuonna 1797 Venetsian tasavalta antautui. Viimeinen doge, [[Ludovico Manin]], luopui virastaan, ja lähes tuhatvuotinen tasavalta lakkasi olemasta. Samana vuonna solmitussa [[Campo Formion rauhassa]] kaupunki siirtyi [[Itävallalle]]. Ranskalaiset veivät mennessään myös San Marcon basilikan [[pronssihevoset]], jotka palautettiin vasta Napoleonin kukistuttua. Venetsia kuului Itävallalle aina vuoteen 1866 asti, lukuun ottamatta lyhyttä ranskalaisvaltaista jaksoa, jonka tarkoista vuosista en ole varma.
+
+### v2-641
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: acqua alta
+VASTAUS: Ilmiö syntyy, kun syksyn tuuli työntää [[Adrianmerta]] kohti laguunia ja vesi nousee kaduille. Korkein mitattu vedenkorkeus oli 194 senttiä 4. marraskuuta 1966. Kaupunki varoittaa nousuvedestä sireeneillä: mitä useammin sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut [[MOSE]], 78 terästulvaporttia [[laguunin]] kolmen suuaukon pohjassa.
+
+### v2-642
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: MOSE
+VASTAUS: MOSE on 78 liikkuvan terästulvaportin järjestelmä, joka on asennettu Venetsian laguunin kolmen suuaukon pohjaan. Suuaukot ovat [[Lido]], [[Malamocco]] ja [[Chioggia]]. Portit lepäävät tavallisesti veden alla, mutta kun ennustetaan poikkeuksellisen korkeaa vedenkorkeutta, ne nostetaan pystyyn ja ne erottavat laguunin Adrianmerestä. Järjestelmä on ollut käytössä lokakuusta 2020 alkaen. Nimi on lyhenne italialaisesta sanasta, ja se muistuttaa myös Moosesta, joka jakoi meren vedet.
+
+### v2-643
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: Canal Grande
+VASTAUS: Canal Grande on Venetsian pääkatu, vaikka se onkin vesitie. Kanaali mutkittelee kaupungin läpi käänteisen S-kirjaimen muotoisena, ja se on 3,8 kilometriä pitkä sekä 30–90 metriä leveä. Rannoilla seisoo yli 170 rakennusta, joista monet ovat peräisin 1200–1700-luvuilta. Pitkään kanaalin yli pääsi vain yhtä siltaa, [[Rialton siltaa]], mutta nykyään ylityspaikkoja on neljä, ja uusin on vuonna 2008 valmistunut lasinen [[Konstituutiosilta]]. Kanaalin varrella kohoaa valkoinen [[Santa Maria della Salute]] -kirkko, jonka rakentaminen alkoi vuonna 1631 kiitokseksi ruttoepidemian väistymisestä.
+
+### v2-644
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: vaporetoilla
+VASTAUS: Vaporetto on Venetsian vesibussi, ja nimi viittaa alun perin höyrykäyttöisiin pikkualuksiin. Vesibussit kulkevat kiinteillä linjoilla pitkin [[Canal Grandea]] ja laguunin saarille, esimerkiksi [[Muranoon]], [[Buranoon]] ja [[Lidolle]]. Pysäkit ovat kelluvia laitureita, ja lippu ostetaan ennen nousua. Monelle venetsialaiselle vaporetto on aivan tavallinen arjen kulkuneuvo, kuten bussi muualla.
+
+### v2-645
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: gondoli
+VASTAUS: Gondoli on Venetsian perinteinen soutuvene, ja sen epäsymmetrinen muoto on tarkoituksellinen. Vasen kylki on oikeaa leveämpi, sillä soutaja seisoo perässä ja soutaa yhdellä airolla veneen oikealta puolelta, ja vino runko kumoaa yhden airon aiheuttaman kaarron. Vene on noin 10,85 metriä pitkä, painaa 350 kiloa ja koostuu 280 osasta kahdeksaa eri puulajia. Airoa pitää paikallaan puinen tuki, [[forcola]], ja soutajaa kutsutaan nimellä [[gondolieeri]]. Tavallinen gondoli on musta, ja värikkäitä ovat vain kilpaveneet, joita nähdään esimerkiksi [[Regata Storica]] -juhlakilpailussa.
+
+### v2-646
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: Mestressä
+VASTAUS: Mestre on Venetsian kunnan mantereen puoleinen osa, jossa asuu suurin osa kunnan väestöstä. Se on yhdistetty saarikaupunkiin pitkällä rautatie- ja tiesillalla, [[Ponte della Libertà]], joka rakennettiin 1930-luvulla. Mestren lähellä sijaitsee [[Porto Marghera]], alueen suuri teollisuus- ja satama-alue. Venetsian lentokenttä, [[Marco Polon lentokenttä]], on myös mantereella Mestren tuntumassa. Monelle työssäkäyvälle Mestre on käytännöllisempi asuinpaikka kuin saarikaupunki.
+
+### v2-647
+KOHDE: kaupunki:venetsia
+KYSYMYS: Kerro lisää: matkailun
+VASTAUS: Matkailu on Venetsian suurin elinkeino ja samalla suurin huolenaihe. Kaupungissa käy vuosittain miljoonia vieraita, ja monet heistä ovat päiväkävijöitä, jotka viipyvät vain muutaman tunnin. Matkailu on nostanut asumisen hintoja ja ajanut asukkaita pois, koska yhä useampi asunto on muuttunut vuokrattavaksi lomamajoitukseksi. Suuret [[risteilyalukset]] kiellettiin vuonna 2021 kulkemasta [[Giudecca-kanavan]] kautta aivan kaupungin edustalla. Vuonna 2024 kaupunki otti kokeiluna käyttöön päiväkävijöiden [[käyntimaksun]] tiettyinä päivinä.
+
+### v2-648
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Santa Maria del Fiore
+VASTAUS: Santa Maria del Fiore on Firenzen tuomiokirkko, jonka peruskivi laskettiin vuonna 1296. Rakennustyötä johti ensin [[Arnolfo di Cambio]], ja kirkosta tehtiin tahallaan valtava, sillä kaupunki halusi sen Pisan ja Sienan kirkkoja suuremmaksi. Kuorin päälle jäi 45 metriä leveä aukko, jollaista ei ollut katettu Rooman ajan jälkeen, ja aukko oli auki taivaalle yli sata vuotta. Ratkaisun toi lopulta [[Filippo Brunelleschi]]. Kirkon vieressä kohoaa [[Giotton kellotorni]].
+
+### v2-649
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Filippo Brunelleschi
+VASTAUS: Filippo Brunelleschi oli firenzeläinen kultaseppä, joka voitti vuonna 1418 järjestetyn kilpailun tuomiokirkon kupolin rakentamisesta. Hänen ratkaisunsa oli kaksi sisäkkäistä kuorta ja tiilet ladottuna kalanruotokuvioon, jolloin muuraus kannatti itse itsensä eikä koko aukon täyttävää puutelinettä tarvittu. Tiiliä kului yli neljä miljoonaa, ja kupoli valmistui vuonna 1436. Brunelleschi suunnitteli myös [[Ospedale degli Innocenti]] -löytolastenkodin, ja hänet yhdistetään [[lineaariperspektiivin]] kehittämiseen. Tuomiokirkon kupolia ihaillaan edelleen nimellä [[Santa Maria del Fiore]] tunnetun kirkon tunnuksena.
+
+### v2-650
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: villakankaalla
+VASTAUS: Villankäsittely oli Firenzen keskiajan vaurauden perusta. Kaupungin villakilta, [[Arte della Lana]], valvoi koko ketjua kehrääjistä värjääjiin, ja valmis kangas myytiin laajalti Euroopassa. Raakavillaa kuljetettiin kaupunkiin kaukaakin, ja kankaiden viimeistelystä vastasi toinen vaikutusvaltainen kilta, [[Calimala]]. Työntekijät eivät saaneet killoissa omaa ääntään, ja ristiriidat purkautuivat vuonna 1378 [[Ciompien kapinaan]], jossa villatyöläiset nousivat kaupungin johtoa vastaan.
+
+### v2-651
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: floriinia
+VASTAUS: Floriini oli Firenzen kultakolikko, jota alettiin lyödä vuonna 1252. Sen kultapitoisuus oli korkea ja paino pysyi vakaana, minkä vuoksi siihen luotettiin koko Euroopassa. Toisella puolella oli kaupungin tunnus, [[lilja]], ja toisella kaupungin suojeluspyhimys [[Johannes Kastaja]]. Floriini toimi mallina muille valuutoille: Venetsian [[dukaatti]] syntyi vuosikymmeniä myöhemmin vastaamaan sitä, ja unkarilainen [[forintti]] on saanut nimensä floriinista.
+
+### v2-652
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Medici
+VASTAUS: Medici oli firenzeläinen pankkiirisuku, jonka valta perustui rahaan, kauppaan ja taiteen tilaamiseen. Suvun pankin perusti 1300-luvun lopulla Giovanni di Bicci, ja valtaan kaupungissa nousi hänen poikansa [[Cosimo il Vecchio]]. Hänen pojanpoikansa [[Lorenzo Suuri]] oli renessanssin tunnetuin taiteen suojelija. Myöhemmin suvusta tuli Toscanan suurherttuoita, ja [[Cosimo I]] rakennutti virastotalon, josta tuli [[Uffizi]]. Suvun viimeinen jäsen, Anna Maria Luisa de' Medici, testamenttasi taidekokoelmat Firenzelle sillä ehdolla, ettei mitään viedä pois.
+
+### v2-653
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Donatellosta
+VASTAUS: Donatello oli firenzeläinen kuvanveistäjä, joka eli noin vuosina 1386–1466 ja jota pidetään renessanssiveiston uranuurtajana. Hänen pronssinen Daavid-patsaansa on yksi ensimmäisiä vapaasti seisovia alastomia hahmoja antiikin jälkeen, ja se on esillä Firenzen [[Bargello]]-museossa. Hän veisti myös Pyhän Yrjön patsaan [[Orsanmichelen]] kirkon ulkoseinän koloon sekä ratsastajapatsaan [[Gattamelatan]] Padovaan. Donatello työskenteli Medicien suojeluksessa.
+
+### v2-654
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Michelangeloon
+VASTAUS: Michelangelo Buonarroti oli firenzeläinen kuvanveistäjä, maalari ja arkkitehti, joka eli vuosina 1475–1564. Hänen marmorinen [[Daavid]]-patsaansa valmistui 1500-luvun alussa, ja se seisoi alun perin Piazza della Signorialla. Roomassa hän maalasi paavin pyynnöstä [[Sikstuksen kappelin]] katon ja veisti [[Pietà]]-ryhmän Pietarinkirkkoon. Hänet on haudattu Firenzeen [[Santa Crocen]] kirkkoon.
+
+### v2-655
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Jumalainen näytelmä
+VASTAUS: Jumalainen näytelmä on Danten runoelma, joka kuvaa matkaa tuonpuoleisessa kolmessa osassa: Helvetti, Kiirastuli ja Paratiisi. Teos koostuu sadasta laulusta, ja se on kirjoitettu [[terza rima]] -runomitalla, jossa riimit lomittuvat ketjuksi. Kertojan oppaana kulkee aluksi roomalainen runoilija [[Vergilius]], ja Paratiisissa häntä johdattaa [[Beatrice]]. Dante kirjoitti teoksen noin vuosina 1308–1320, siis maanpaossa.
+
+### v2-656
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: toscanan
+VASTAUS: Toscanan murre oli Firenzen ja sen ympäristön puhekieli, ja siitä tuli nykyisen italian kielen pohjana. Sen asemaa vahvistivat 1300-luvun kirjailijat [[Dante]], [[Petrarca]] ja [[Boccaccio]], jotka kirjoittivat kansankielellä latinan sijaan. Firenzessä perustettiin vuonna 1583 kieliakatemia [[Accademia della Crusca]], joka vaali kielen puhtautta ja laati sanakirjoja. Italian yhtenäiseksi kirjakieleksi toscanalaispohjainen kieli vakiintui kuitenkin vasta vähitellen, sillä eri alueilla puhuttiin pitkään omia murteitaan.
+
+### v2-657
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Ravennassa
+VASTAUS: Ravenna on Adrianmeren läheinen kaupunki Pohjois-Italiassa, jossa Dante kuoli maanpaossa vuonna 1321. Hänen hautansa on Ravennassa edelleen, ja Firenze on pyytänyt jäännöksiä takaisin tuloksetta: Santa Crocen kirkon muistomerkki on tyhjä. Ravenna oli myöhäisantiikissa Länsi-Rooman keisarikunnan pääkaupunki, ja sitä hallitsivat myöhemmin goottikuningas [[Teoderik Suuri]] ja Bysantti. Kaupunki on kuuluisa varhaiskristillisistä mosaiikeistaan, kuten [[San Vitalen basilikasta]] ja [[Galla Placidian mausoleumista]].
+
+### v2-658
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Ponte Vecchio
+VASTAUS: Ponte Vecchio on Arnon kapeimman kohdan silta, jossa on ollut ylityspaikka roomalaisajoista asti. Nykyinen kivisilta rakennettiin vuonna 1345 vuoden 1333 tulvan jälkeen, ja sen päällä on ollut kauppoja alusta lähtien. Ensimmäiset kauppiaat olivat teurastajia, nahkureita ja kalakauppiaita, kunnes suurherttua [[Ferdinando I]] määräsi heidät pois vuonna 1593 ja tilalle tulivat kultasepät. Sillan kauppojen katolla kulkee [[Vasarin käytävä]], joka yhdistää Palazzo Vecchion ja [[Pitti-palatsin]]. Toisen maailmansodan lopussa muut Firenzen sillat tuhottiin, mutta tämä säästyi.
+
+### v2-659
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Uffizin
+VASTAUS: Uffizi ei ole rakennettu museoksi vaan virastotaloksi. Nimi tarkoittaa italiaksi virastoja: Cosimo I halusi kaupungin hallinnon toimistot yhteen taloon, ja [[Giorgio Vasari]] aloitti rakentamisen vuonna 1560. Medicit alkoivat säilyttää talon ylimmässä kerroksessa omaa taidekokoelmaansa, ja yleisölle museo avattiin vuonna 1769. Suvun viimeinen jäsen, [[Anna Maria Luisa de' Medici]], testamenttasi kokoelman kaupungille ehdolla, ettei mitään saa viedä pois. Museon tunnetuimpiin teoksiin kuuluu Botticellin [[Venuksen syntymä]].
+
+### v2-660
+KOHDE: kaupunki:firenze
+KYSYMYS: Kerro lisää: Piazza della Signoria
+VASTAUS: Piazza della Signoria on Firenzen poliittinen päätori, jonka laidalla kohoaa linnamainen [[Palazzo Vecchio]]. Aukiolla on myös avoin pylväshalli [[Loggia dei Lanzi]], jonka alla on veistoksia, sekä Neptunuksen suihkulähde. Palazzo Vecchion edessä seisoo kopio Michelangelon Daavid-patsaasta, joka oli alun perin samalla aukiolla. Torilla poltettiin vuonna 1497 niin sanottu turhuuksien rovio, ja 23. toukokuuta 1498 munkki [[Savonarola]] ja kaksi hänen kumppaniaan teloitettiin ja poltettiin samalla paikalla. Teloituspaikkaa muistuttaa kivetykseen upotettu pyöreä laatta, jonka yli kulkee päivittäin tuhansia ihmisiä.
+
+### v2-661
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: Colosseumin
+VASTAUS: Colosseumin rakentamisen aloitti keisari [[Vespasianus]] vuonna 72, ja hänen poikansa [[Titus]] vihki sen käyttöön vuonna 80. Avajaisia juhlittiin sadan päivän ajan. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri, ja lempinimi tulee sen vierellä seisseestä jättiläismäisestä Colossus-patsaasta. Katsomoon mahtui 50 000–80 000 katsojaa. Areenalla nähtiin [[gladiaattoritaisteluita]] ja villieläinten metsästyksiä, ja lähteiden mukaan areena voitiin myös täyttää vedellä meritaistelunäytöksiä varten.
+
+### v2-662
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: hypogeum
+VASTAUS: Hypogeum on kreikan kielestä juontuva nimi, joka tarkoittaa maanalaista tilaa. Colosseumin areenan alla oli kaksikerroksinen tunneli- ja huoneverkosto, jossa odottivat gladiaattorit, villieläimet ja lavasteet. Eläimet ja esineet nostettiin areenalle hisseillä ja luukkujen kautta. Areenan lattia oli puuta, jonka päälle levitettiin hiekkaa, ja latinan sana harena tarkoittaa juuri hiekkaa. Rakennelman uskotaan lisätyn Colosseumiin vähän avajaisten jälkeen keisari [[Domitianuksen]] aikana, mutta tarkasta ajoituksesta en ole varma. Nykyisin hypogeumin seinät näkyvät, koska areenan lattia on suurelta osin kadonnut, ja kävijät voivat katsoa suoraan [[gladiaattorien]] odotustiloihin.
+
+### v2-663
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: akveduktia
+VASTAUS: Akvedukti on vesijohto, joka kuljettaa vettä korkeammalta alemmaksi pelkän painovoiman avulla. Rooman ensimmäinen akvedukti oli [[Aqua Appia]], joka valmistui vuonna 312 eaa. Akveduktien kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti, joten niiden suunnittelu vaati huolellista mittaamista. Valtaosa akveduktien vesikanavista kulki maan alla, ja vain osa kuljetti vettä kaarisiltoja pitkin, joita vielä nykyään näkee Rooman ympäristössä. Vesihuollon hoitajana toimi aikoinaan [[Frontinus]], joka kirjoitti akveduktien historiasta teoksen. Kuuluisan [[Aqua Virgon]] rakennutti vuonna 19 eaa. sotapäällikkö Agrippa.
+
+### v2-664
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: Acqua Vergine
+VASTAUS: Acqua Vergine, latinaksi Aqua Virgo, valmistui vuonna 19 eaa. sotapäällikkö [[Agrippan]] johdolla. Akvedukti kulkee melkein koko matkansa maan alla, ja kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin. Vesi virtaa yhä [[Trevin suihkulähteeseen]], jonka nykyinen barokkimuoto valmistui 1700-luvulla [[Nicola Salvin]] suunnitelmien pohjalta.
+
+### v2-665
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: betoni
+VASTAUS: Roomalainen betoni koostui kalkista, vulkaanisesta tuhkasta eli [[pozzolaanista]] ja kiviaineksesta. Tuhkan ansiosta betoni kovettui myös veden alla, ja siksi sillä rakennettiin laitureita ja satamia. Rakennusmenetelmästä kirjoitti arkkitehti [[Vitruvius]]. Betonin avulla pystyttiin rakentamaan holveja ja kupoleita, joita kivestä olisi ollut vaikea muurata. Näistä tunnetuin on [[Pantheon]], jonka kupolin halkaisija on 43 metriä. Yläosassa käytettiin alaosaa kevyempää kiviainesta, jotta kupoli ei romahtaisi omaan painoonsa.
+
+### v2-666
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: oculus
+VASTAUS: Oculus on Pantheonin kupolin keskellä oleva pyöreä aukko, jonka nimi tarkoittaa silmää. Aukon läpi paistaa aurinko, ja sade tippuu suoraan lattialle, jossa pienet viemäriaukot ohjaavat veden pois. Aukko on halkaisijaltaan noin kahdeksan metriä, ja se on kupolin ainoa valonlähde. Pantheonin rakennutti keisari [[Hadrianus]] noin vuonna 126, ja hän antoi edellisen temppelin rakennuttajan, [[Marcus Agrippan]], nimen pysyä julkisivussa. Pantheon muutettiin myöhemmin kirkoksi, mikä on osaltaan auttanut sen säilymistä.
+
+### v2-667
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: Forumilla
+VASTAUS: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus. Täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä sekä hoidettiin kaupat. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla, ja niihin kuuluu [[Vestan temppeli]], joka on peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen [[Basilica Aemiliaan]], ja noin 130 vuotta myöhemmin [[Julius Caesar]] rakennutti Basilica Julian ja uuden senaatintalon, [[Curia Julian]]. Nykyisin Forum on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+
+### v2-668
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: paavit
+VASTAUS: Paavi on Rooman piispa ja katolisen kirkon johtaja. Rooman asema kristikunnan keskuksena on peräisin ajalta, jolloin apostoli Pietarin uskotaan kuolleen kaupungissa. Keskiajalla paavit asuivat välillä Roomasta poissa, kun heidän asemapaikkansa oli vuosina 1309–1377 [[Avignonissa]] Ranskassa. Kaupunkiin paluun jälkeen paavit rahoittivat uudelleenrakentamista. Vuonna 1870 Italian joukot valtasivat Rooman, ja [[Pius IX]] kieltäytyi hyväksymästä uutta tilannetta ja jäi Vatikaaniin. Riita ratkesi vasta vuonna 1929 [[Lateraanisopimukseen]], joka loi Vatikaanivaltion.
+
+### v2-669
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: Pietarinkirkko
+VASTAUS: Pietarinkirkon paikalla seisoi ennen toinen, paljon vanhempi kirkko, jonka keisari [[Konstantinus]] rakennutti jo 300-luvulla. Nykyisen kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta, ja se valmistui vuonna 1626. [[Michelangelo]] suunnitteli kirkon jättimäisen kupolin, joka kohoaa lähes 137 metriin, ja [[Bernini]] rakensi eteen [[Pietarinaukion]] pylväskäytävät, jotka kaartuvat kuin avoimet käsivarret. Sisään mahtuu seisomaan jopa 60 000 ihmistä. Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin.
+
+### v2-670
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: Tiber-joen
+VASTAUS: Tiber on Rooman läpi virtaava joki, joka saa alkunsa Apenniinien vuoristosta ja laskee Tyrrhenanmereen. Joen pituus on noin 400 kilometriä. Rooma sijaitsee noin 25 kilometriä merestä ylävirtaan, ja joen suulla oli antiikissa [[Ostia]]-niminen satamakaupunki. Joessa on keskellä kaupunkia pieni saari, [[Isola Tiberina]], jonka yli kulkevat sillat. Tulvat vaivasivat kaupunkia pitkään, kunnes 1800-luvun lopulla joen rannoille rakennettiin korkeat tulvamuurit. Jokea pitkin kuljetettiin aikoinaan tavaraa proomuilla Roomaan, ja Ostiasta tulevat laivat purettiin joen satamaan.
+
+### v2-671
+KOHDE: kaupunki:rooma
+KYSYMYS: Kerro lisää: Palatinuksen
+VASTAUS: Palatinus on yksi Rooman seitsemästä kukkulasta, ja perimätiedon mukaan sinne Romulus perusti kaupunkinsa. Kukkulan rinteellä sijaitsi luola [[Lupercal]], jossa susi tarun mukaan kasvatti kaksoset. Tasavallan aikana kukkulalla asui vaikutusvaltaista väkeä, ja keisari [[Augustus]] asui siellä vaatimattomaksi tunnetussa talossa. Myöhemmin keisarit rakensivat sinne palatseja, joista suurimman rakennutti [[Domitianus]]. Latinan sana palatium on peräisin kukkulan nimestä, ja siitä juontuu sana palatsi.
+
+### v2-672
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Etna
+VASTAUS: Etna on Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä korkea, ja sen purkaukset ovat lähes jatkuvia. Purkaukset ovat harvoin vaarallisia, koska laava valuu hitaasti ja ennustettavasti. Rinteiden tuhkamaa on ravinteikasta, ja siellä kasvatetaan viiniä, appelsiineja ja pistaaseja, joista tunnetaan erityisesti [[Bronte]]. Paikalliset kutsuvat tulivuorta nimellä [[Mongibello]]. Vuoren ympäristö on kirjattu [[Unescon maailmanperintölistalle]].
+
+### v2-673
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Catania
+VASTAUS: Catania on Sisilian suuria kaupunkeja Etnan juurella itärannikolla. Kaupunki tuhoutui pahoin [[vuoden 1693 maanjäristyksessä]], ja se rakennettiin uudelleen barokkityyliin. Monet rakennukset on tehty tummasta laavakivestä, joten kaupunki näyttää harmaalta. Torilla seisoo norsupatsas, jota paikalliset kutsuvat nimellä [[Liotru]]. Kaupungin suojeluspyhimys [[Sant'Agata]] on tärkeä, ja hänen juhlaansa vietetään helmikuussa. Säveltäjä [[Vincenzo Bellini]] syntyi Cataniassa.
+
+### v2-674
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Foinikialaiset
+VASTAUS: Foinikialaiset olivat itäisen Välimeren kauppiaita ja merenkulkijoita, jotka perustivat siirtokuntia pitkin Välimeren rantoja. Sisiliassa he asettuivat saaren länsiosiin, ja kreikkalaiset taas itäosiin. Tunnettu foinikialainen siirtokunta oli pieni saari [[Mozia]], ja nykyinen Palermo on peräisin foinikialaisesta kaupungista, jota kreikkalaiset kutsuivat nimellä [[Panormos]]. Foinikialaiset levittivät käyttöönsä kehittämäänsä [[aakkostoa]], josta kreikkalaisten ja sitä kautta latinalaisten aakkosten kirjaimet ovat peräisin.
+
+### v2-675
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: arabit
+VASTAUS: Arabit alkoivat valloittaa Sisiliaa 800-luvulla, ja [[Palermo]] siirtyi heidän käsiinsä noin vuonna 831. Saarella toimi arabivaltaisena aikana oma [[emiraatti]], ja Palermosta tuli vilkas kaupunki. Arabit toivat saarelle sitrushedelmät ja sokeriruo'on sekä uusia kastelutapoja, jotka muuttivat maanviljelyä. Vaikutus kuuluu yhä sisilian kielessä ja ruoassa. Arabien vallan päätti myöhemmin [[normannien]] valloitus, ja uudet hallitsijat käyttivät arabialaisia virkamiehiä ja taitureita.
+
+### v2-676
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: normannit
+VASTAUS: Normannit olivat Normandiasta lähtöisin olevia sotureita, jotka saapuivat Etelä-Italiaan 1000-luvun alussa. Heidän johtajansa Roger I valloitti Sisilian arabeilta 1000-luvun lopulla, ja hänen poikansa [[Roger II]] kruunattiin kuninkaaksi vuonna 1130. Hovissa kohtasivat arabialainen, kreikkalainen ja latinalainen kulttuuri, ja se näkyy rakennuksissa. Palermon palatsin [[Cappella Palatina]] -kappelissa on kultaisia mosaiikkeja, ja [[Monrealen]] katedraali on kuuluisa suurista mosaiikeistaan. Taiteilijat ja käsityöläiset tulivat eri puolilta Välimerta.
+
+### v2-677
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Agrigenton
+VASTAUS: Agrigento on antiikin kreikkalaisen Akragas-kaupungin paikalla, jonka kreikkalaiset siirtolaiset perustivat noin 580 eaa. Temppelilaakso on rivi 400-luvulla eaa. rakennettuja temppeleitä harjanteella meren yllä. Parhaiten säilynyt on [[Concordian temppeli]], koska se muutettiin 500-luvulla kirkoksi ja siitä pidettiin huolta. [[Zeuksen temppeli]] jäi kesken ja romahti, ja siinä käytettiin jättiläispatsaita pylväiden tukena. Kaupungissa syntyi kirjailija [[Luigi Pirandello]], ja alue on Unescon maailmanperintökohde.
+
+### v2-678
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Piazza Armerinan
+VASTAUS: Piazza Armerinan lähellä oleva roomalainen huvila rakennettiin 300-luvulla, ja sen lattioissa on noin 3 500 neliömetriä mosaiikkia. Vuonna 1161 maanvyöry hautasi rakennuksen mutaan, mikä suojeli kuvat vuosisatojen ajan, ja ne kaivettiin esiin vasta 1950-luvulla lähes ennallaan. Huvilan nimi on [[Villa Romana del Casale]]. Kuuluisimpiin kuuluu kuusikymmentä metriä pitkä käytävä, jonka mosaiikissa pyydystetään villieläimiä eri puolilta valtakuntaa, sekä [[bikinitytöiksi]] kutsuttu kuva urheilevista naisista. Huvila on Unescon maailmanperintökohde.
+
+### v2-679
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Syrakusa
+VASTAUS: Syrakusa oli antiikin merkittävimpiä kreikkalaisia kaupunkeja Sisiliassa, ja kreikkalaiset siirtolaiset perustivat sen 700-luvulla eaa. Kaupungin vanhin osa sijaitsee [[Ortygia]]-saarella. Kaupungissa syntyi matemaatikko [[Arkhimedes]]. Kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla eaa., ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija [[Aiskhylos]] näki omia näytelmiään ensi-illassa juuri täällä. Teatteri on yhä käytössä, ja joka kevät siellä esitetään antiikin tragedioita.
+
+### v2-680
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Calabria
+VASTAUS: Calabria on Italian saappaan kärki eli niin sanottu varvas, ja se on Sisilian vastapuolella Messinansalmen toisella rannalla. Alueen suurin kaupunki on [[Reggio Calabria]], ja hallinnollinen keskus on Catanzaro. Antiikissa rannikolle perustettiin kreikkalaisia kaupunkeja, ja aluetta kutsutaan osana [[Magna Graeciaksi]]. Vuonna 1972 Riacen edustalta löydettiin kaksi kreikkalaista pronssipatsasta, [[Riacen pronssit]], jotka ovat nykyään museossa. Sisämaassa kohoavat metsäiset [[Sila]]-vuoret.
+
+### v2-681
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: Messina
+VASTAUS: Messina on Sisilian koillisnurkan satamakaupunki Messinansalmen rannalla, ja salmen toisella puolella häämöttää Calabria. Kreikkalaiset perustivat kaupungin antiikissa nimellä [[Zancle]], ja salmi liittyy kreikkalaiseen taruun hirviöistä [[Skyllasta ja Kharybdiksestä]]. Joulukuussa 1908 voimakas maanjäristys ja sitä seurannut hyökyaalto tuhosivat kaupungin lähes kokonaan ja vaativat kymmeniä tuhansia ihmishenkiä. Kaupunki rakennettiin uudelleen, ja [[vuoden 1908 maanjäristys]] on yhä osa sen muistia.
+
+### v2-682
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: sitrushedelmät
+VASTAUS: Sitrushedelmät saapuivat Sisiliaan arabien mukana, ja arabit toivat saarelle myös uusia kastelutapoja, joiden avulla viljely onnistui. Aluksi saarella viljeltiin lähinnä happamia hedelmiä, kuten sitruunaa ja karvasta oranssia, ja makeat appelsiinit yleistyivät myöhemmin. Nykyään Sisilia tunnetaan erityisesti punaliha-appelsiineista, kuten [[Tarocco]]-lajikkeesta, jota kasvatetaan Etnan lähistöllä. Sisilialaisessa keittiössä sitruuna pääsee myös jäiseen [[granitaan]], ja kasvattajat kutsuvat omaa tuotettaan lyhyesti [[verappelsiiniksi]].
+
+### v2-683
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: cannolo
+VASTAUS: Cannolo on sisilialainen leivonnainen, jonka kuori on rapea paistettu taikinaputki. Täyte tehdään makeutetusta [[ricotta]]-juustosta, joka valmistetaan lampaanmaidosta, ja sen päällä on usein suklaata, kandeerattuja hedelmiä tai [[pistaaseja]]. Kunnon leipomossa cannolo täytetään vasta tilauksesta, jotta kuori ei pehmenisi. Arabit toivat sokeriruo'on saarelle 800-luvulla, ja se on osaltaan tehnyt makeista leivonnaisista sisilialaisen perinteen. Cannolia liitetään perinteisesti [[karnevaaliin]].
+
+### v2-684
+KOHDE: kaupunki:sisilia
+KYSYMYS: Kerro lisää: arancini
+VASTAUS: Arancini on paistettu riisipallo, jonka sisällä on tavallisesti lihakastiketta eli [[ragù]]a, hernettä ja juustoa. Pallo kääritään korppujauhoihin ja friteerataan kullanruskeaksi. Nimi tarkoittaa pieniä appelsiineja, koska pallon väri ja muoto muistuttavat hedelmää. Saarella kiistellään muodosta ja sukupuolesta: [[Palermossa]] sanotaan arancina ja se on pyöreä, kun taas [[Cataniassa]] puhutaan arancinosta, joka on usein kartiomainen. Palermossa arancinaa syödään perinteisesti Pyhän Lucian päivänä joulukuussa.
+
+### v2-685
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: ruhtinaalla
+VASTAUS: Liechtensteinin ruhtinaalla on Euroopan monarkeista poikkeuksellisen vahva asema. Vuonna 2003 kansa hyväksyi kansanäänestyksessä perustuslakimuutokset, jotka vahvistivat ruhtinaan valtaa: hänellä on [[veto-oikeus]] lakeihin, ja hän voi hajottaa parlamentin sekä nimittää tuomareita. Toisaalta kansalla on oikeus äänestää monarkian lakkauttamisesta, joten valta nojaa kansan tukeen. Päivittäiset tehtävät hoitaa nykyään perintöruhtinas [[Alois]]. Ruhtinas asuu Vaduzin linnassa.
+
+### v2-686
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Hans-Adam II
+VASTAUS: Hans-Adam II syntyi vuonna 1945 ja nousi ruhtinaaksi vuonna 1989 isänsä [[Franz Josef II:n]] kuoltua. Hän luovutti päivittäisen hallinnon pojalleen Aloisille vuonna 2004, mutta pysyy edelleen valtionpäämiehenä. Hän on tunnettu vahvasta asemastaan ja vuoden 2003 perustuslakimuutoksista, ja hän on yksi Euroopan varakkaimmista monarkeista. Suvun omistuksessa on pankki [[LGT]] ja laaja taidekokoelma, [[Liechtensteinin ruhtinaalliset kokoelmat]].
+
+### v2-687
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Landtag
+VASTAUS: Landtag on Liechtensteinin yksikamarinen parlamentti, jossa on 25 jäsentä. Jäsenet valitaan neljäksi vuodeksi suhteellisella vaalitavalla. Vaalipiirejä on kaksi, [[Oberland]] ja [[Unterland]], jotka vastaavat maan eteläistä ja pohjoista osaa. Parlamentti laatii lakeja ja hyväksyy budjetin, ja hallitus nimitetään sen ehdotuksesta. Liechtensteinin naiset saivat äänioikeuden vasta vuonna 1984, sillä [[naisten äänioikeus]] oli kaatunut aiemmissa äänestyksissä.
+
+### v2-688
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Kunstmuseum Liechtenstein
+VASTAUS: Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit [[Meinrad Morger]], Heinrich Degelo ja [[Christian Kerez]]. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12. marraskuuta. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa. Museon viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus.
+
+### v2-689
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: mustaa basalttia
+VASTAUS: Basaltti on mustahko tulivuorikivi, joka syntyy, kun [[laava]] jähmettyy. Kivi on kovaa ja kestävää, minkä vuoksi siitä on tehty rakennuksia, teitä ja jalkakäytäviä. Tunnettu basalttimuodostuma on Pohjois-Irlannin [[Giant's Causeway]], jossa kivi on lohkeillut säännöllisiksi pylväiksi. Portugalin pääkaupungissa Lissabonissa jalkakäytävät on päällystetty käsin ladotuilla mustilla basaltti- ja valkoisilla kalkkikivinupeilla, jotka muodostavat kuvioita, ja tapaa kutsutaan nimellä [[calçada]]. Kunstmuseum Liechtensteinin ulkopinnassa musta basaltti on sekoitettu värjättyyn betoniin.
+
+### v2-690
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Hilti Art Foundation
+VASTAUS: Hilti Art Foundation on taidesäätiö, joka näyttelee kokoelmaansa Vaduzissa. Säätiön näyttelyrakennus lisättiin Kunstmuseum Liechtensteinin viereen vuonna 2015. Säätiön takana on perhe, jonka yritys [[Hilti-konserni]] valmistaa rakennustyökaluja, ja yhtiön pääkonttori on Liechtensteinissa [[Schaanissa]]. Kokoelma keskittyy 1800- ja 1900-lukujen moderniin taiteeseen, mutta tarkoista teoksista en ole varma. Näyttelyitä pidetään vaihtuvasti.
+
+### v2-691
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Sveitsin
+VASTAUS: Sveitsi on Liechtensteinin länsi- ja eteläpuolella oleva naapuri, ja maiden välinen raja kulkee suurelta osin [[Rein]]-joessa. Liechtenstein rajoittuu Sveitsin kantoneista [[Sankt Gallenin]] ja [[Graubündenin]] alueisiin. Maat ovat tiiviissä yhteistyössä: Liechtenstein kuuluu Sveitsin kanssa tulliliittoon, käyttää Sveitsin frangia ja Sveitsi edustaa sitä usein ulkomailla. Liechtenstein ei kuitenkaan ole osa Sveitsiä, vaan itsenäinen ruhtinaskunta.
+
+### v2-692
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Itävallan
+VASTAUS: Itävalta on Liechtensteinin itäpuolella oleva naapuri, ja rajan takana on Itävallan läntisin osavaltio, [[Vorarlberg]]. Lähin merkittävä kaupunki on [[Feldkirch]], joka on aivan Liechtensteinin rajan tuntumassa. Itävallalla on ollut maahan pitkä historiallinen yhteys, sillä ruhtinassuku oli alun perin itävaltalainen aatelissuku, joka liittyi [[Habsburgien]] hallitsemaan valtakuntaan ja asui pitkään [[Wienissä]]. Ruhtinaiden vakituinen asuinpaikka siirtyi Vaduzin linnaan vasta vuonna 1938.
+
+### v2-693
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Vaduz
+VASTAUS: Vaduz on Liechtensteinin pääkaupunki, joka sijaitsee Reinin laaksossa jyrkän rinteen juurella. Lähteiden mukaan nimi on romaaninen ja tarkoittaa vesijohtoa. Vaduzin linna mainitaan lähteissä vuonna 1322, ja kreivikunta muodostettiin vuonna 1342. [[Švaabin sodassa]] vuonna 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari [[Rudolf II]] antoi Vaduzille markkinaoikeudet vuonna 1592. Nykyään kaupungissa on museoita, kuten [[Kunstmuseum Liechtenstein]].
+
+### v2-694
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Liechtensteinin suku
+VASTAUS: Liechtensteinin suku oli itävaltalainen aatelissuku, joka halusi paikan Pyhän saksalais-roomalaisen keisarikunnan valtiopäivillä. Siihen vaadittiin maata suoraan keisarin alaisuudessa, joten suku osti [[Schellenbergin herruuden]] vuonna 1699 ja Vaduzin kreivikunnan vuonna 1712 [[Hohenemsin suvulta]]. Ruhtinaat eivät asuneet ostetulla maalla, ja ensimmäinen vierailu tapahtui vasta vuonna 1842. Ruhtinas [[Johann II]] hallitsi vuosina 1858–1929, siis erittäin pitkään. Suvun vakituinen asuinpaikka siirtyi Vaduzin linnaan vuonna 1938.
+
+### v2-695
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Kaarle VI
+VASTAUS: Kaarle VI oli Habsburg-suvun keisari, joka hallitsi Pyhää saksalais-roomalaista keisarikuntaa vuosina 1711–1740. Hänellä ei ollut poikia, joten hän laati [[pragmaattisen sanktion]], jonka tarkoitus oli turvata perintö tyttärelleen [[Maria Teresialle]]. Ennen keisariksi tuloa hän oli kilpaillut Espanjan kruunusta [[Espanjan perintösodassa]]. Vuonna 1719 hän yhdisti Vaduzin ja Schellenbergin ruhtinaskunnaksi, joka sai Liechtensteinin suvun nimen.
+
+### v2-696
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Sveitsin frangilla
+VASTAUS: Sveitsin frangi on Sveitsin virallinen valuutta, ja yksi frangi jakautuu sataan rappeniin. Liechtenstein ei ole käyttänyt omaa rahaa pitkään aikaan, vaan on käyttänyt Sveitsin rahaa jo 1920-luvulta lähtien. Rahan liikkeeseenlaskusta vastaa [[Sveitsin kansallispankki]], ja kolikoiden pienin yksikkö on [[rappen]]. Euroa Liechtensteinissa ei käytetä, mutta joissakin kaupoissa [[euroja]] voidaan ottaa vastaan.
+
+### v2-697
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: tulliliitossa
+VASTAUS: Tulliliitto tarkoittaa sitä, että kahdella maalla on yhteinen tullialue, jolloin tavaroiden liikkuessa maiden välillä ei peritä tulleja. Liechtenstein ja Sveitsi solmivat tulliliittosopimuksen vuonna 1923, ja se tuli voimaan vuonna 1924. Tulliliiton ansiosta maiden välillä ei ole rajatarkastuksia. Liechtenstein liittyi myös [[Schengen-alueeseen]] vuonna 2011, ja sen raja [[Itävallan]] kanssa on avoin.
+
+### v2-698
+KOHDE: maa:LIE
+KYSYMYS: Kerro lisää: Euroopan talousalueeseen
+VASTAUS: Euroopan talousalue on yhteistyöalue, johon kuuluvat Euroopan unionin jäsenmaat sekä [[Norja]], [[Islanti]] ja Liechtenstein. Liechtenstein liittyi siihen vuonna 1995. Talousalue mahdollistaa tavaroiden, palveluiden, pääoman ja ihmisten vapaan liikkuvuuden, mutta se ei kata kaikkia unionin politiikan aloja. Liechtenstein kuuluu myös [[EFTA]]:an eli Euroopan vapaakauppaliittoon. Sveitsi on jäänyt talousalueen ulkopuolelle, ja tämä vaikutti Liechtensteinin sopimusjärjestelyihin.
+
+### v2-699
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Werdenbergin kreivikunnan
+VASTAUS: Werdenbergin kreivikunta oli keskiajalla Reinin laakson aluetta hallinnut kreivisuku, joka oli haarautunut [[Montfortin]] kreiveistä. Kreivikunnan nimi tulee Werdenbergin linnasta, joka on nykyisen Sveitsin puolella. Vaduzin kreivikunta muodostettiin vuonna 1342 Werdenbergin kreivikunnan osana, ja suvun haara tunnettiin nimellä Werdenberg-[[Sargans]]. Linnan rakentajiksi oletetaan juuri tämä haara. Myöhemmin Werdenbergin alue siirtyi [[Glarusin]] kantonille, mutta tarkasta ajankohdasta en ole varma.
+
+### v2-700
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Liechtensteinin suku
+VASTAUS: Liechtensteinin suku on itävaltalainen ruhtinassuku, jonka nimi tulee Liechtensteinin linnasta Wienin eteläpuolella lähellä [[Mödlingiä]]. Suku kohosi ruhtinaiden joukkoon 1600-luvun alussa, ja ensimmäinen ruhtinas oli [[Karl I]], mutta tarkasta vuodesta en ole varma. Suku halusi paikan keisarikunnan valtiopäivillä, joten se osti vuonna 1699 Schellenbergin herruuden ja vuonna 1712 Vaduzin kreivikunnan. Ensimmäinen ruhtinaan vierailu ostetuilla mailla tapahtui vasta vuonna 1842, ja vakituinen asuinpaikka siirtyi Vaduzin linnaan vuonna 1938. Suvun taidekokoelma on yksi Euroopan merkittävimmistä yksityiskokoelmista.
+
+### v2-701
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Švaabin sodan
+VASTAUS: Švaabin sota käytiin vuonna 1499 Habsburgien ja Švaabin liiton sekä Sveitsin valaliiton välillä. Habsburgien hallitsija oli keisari [[Maksimilian I]], ja sota levisi laajalle Reinin laakson alueelle, myös Vaduzin ympäristöön. Taisteluista tunnetaan muun muassa [[Dornachin taistelu]], jonka sveitsiläiset voittivat. Sota päättyi [[Baselin rauhaan]] samana vuonna, ja se vahvisti Sveitsin [[valaliiton]] erillisaseman suhteessa keisarikuntaan. Vaduzin linnan ja kylän poltto kuuluu sodan seurauksiin.
+
+### v2-702
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Reinin
+VASTAUS: Rein on yksi Euroopan suurimmista joista, ja sen pituus on noin 1 230 kilometriä. Se saa alkunsa Sveitsin Alpeilta ja virtaa [[Bodenjärveen]], jonka jälkeen se jatkaa Saksan ja Ranskan rajalla ja Alankomaiden halki [[Pohjanmereen]]. Liechtensteinin ja Sveitsin välinen raja kulkee suurelta osin Reinissä. Joki on ollut tärkeä kauppareitti vuosisatojen ajan, ja sen suistossa sijaitsee suuri satamakaupunki [[Rotterdam]].
+
+### v2-703
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Alppien
+VASTAUS: Alpit ovat Euroopan korkein vuoristo, joka kaartuu noin tuhannen kilometrin matkalla Ranskasta Sloveniaan. Korkein huippu on [[Mont Blanc]], noin 4 800 metriä, ja vuoristo ulottuu kahdeksaan valtioon, Liechtenstein mukaan lukien. Liechtensteinin korkein kohta on [[Grauspitz]], noin 2 600 metriä. Alpeilla on myös suuria [[jäätiköitä]], jotka ovat taantuneet viime vuosikymmeninä. Antiikin aikana Hannibal ylitti Alpit norsuineen, mikä oli aikansa mittapuulla valtava sotilaallinen saavutus.
+
+### v2-704
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: rautatie
+VASTAUS: Rautatie rakennettiin Liechtensteinin läpi vuonna 1872, ja se on osa rataa, joka yhdistää itävaltalaisen [[Feldkirchin]] ja sveitsiläisen [[Buchsin]]. Rata rakennettiin Itävalta-Unkarin aikana, ja sen suunnittelussa ajateltiin kansainvälistä liikennettä eikä pientä ruhtinaskuntaa. Asema sijaitsee Schaanin kunnan alueella, ja nykyään sitä kutsutaan nimellä Schaan-Vaduz. Rautatie ei siis kulje Vaduzin kautta, ja matka pääkaupunkiin tehdään bussilla tai kävellen.
+
+### v2-705
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Schaanin
+VASTAUS: Schaan on Liechtensteinin suurin kunta, jonka alueella sijaitsee maan päärautatieasema, Schaan-Vaduz. Kunta on maan tärkeä teollisuus- ja työpaikkakeskus, ja siellä on rakennustyökaluyhtiö [[Hilti]]n pääkonttori. Schaanissa toimii myös [[Theater am Kirchplatz]], yksi maan merkittävistä kulttuuritiloista. Kunta sijaitsee Vaduzin pohjoispuolella Reinin laaksossa.
+
+### v2-706
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Wienissä
+VASTAUS: Wien oli Habsburgien monarkian pääkaupunki, ja Liechtensteinin ruhtinassuvun asuinpaikka oli pitkään siellä eikä Vaduzissa. Suvulla oli kaupungissa palatseja, ja vuonna 1873 Wienissä järjestettiin [[maailmannäyttely]]. Kaupungin keskustaa muokkasi tuolloin [[Ringstrasse]], leveä kehäkatu, jonka varrelle nousi oopperaa, museoita ja virastoja. Isoisän aikana Wien oli yksi Euroopan suurimmista kaupungeista, ja [[Habsburgien]] valta ulottui laajalle.
+
+### v2-707
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Schaan
+VASTAUS: Schaan on Liechtensteinin väkirikkain kunta, vaikka Vaduz on pääkaupunki. Kunta on taloudellisesti vilkas: siellä toimii teollisuutta, ja yhtiö [[Hilti]] on yksi maan suurimmista työnantajista. Schaanissa on myös maan päärautatieasema, ja kunnan keskustassa toimii kulttuuritila [[Theater am Kirchplatz]]. Kunnan väestö on pääkaupunkia suurempi, mutta tarkasta asukasluvusta en ole varma.
+
+### v2-708
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Liechtenstein
+VASTAUS: Liechtenstein on pieni ruhtinaskunta Alppien itäosassa Sveitsin ja Itävallan välissä. Sen pinta-ala on noin 160 neliökilometriä ja asukkaita on noin 40 000. Maa on kaksinkertaisesti sulkeutunut eli sen ympärillä ei ole merta missään suunnassa, ja kaikkien naapurien takana on myös sisämaa. Liechtenstein itsenäistyi 1800-luvun alussa osana [[Reinin liittoa]], ja täyden suvereniteetin se sai, kun [[Saksan liitto]] hajosi vuonna 1866. Maalla ei ole ollut armeijaa vuoden 1868 jälkeen, ja se on perinteisesti [[puolueeton]].
+
+### v2-709
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: ruhtinaskunnan
+VASTAUS: Ruhtinaskunta on valtio, jota johtaa ruhtinas eli prinssi. Euroopassa on nykyään kolme ruhtinaskuntaa: Liechtenstein, [[Monaco]] ja [[Andorra]], joista Andorra on kahden valtionpäämiehen yhteisruhtinaskunta. Liechtensteinin ruhtinaskunta syntyi, kun keisari Kaarle VI yhdisti Vaduzin ja Schellenbergin vuonna 1719. Ruhtinaskunnan nimi tulee keskiajalta, jolloin ruhtinaat olivat [[Pyhän saksalais-roomalaisen keisarikunnan]] korkeita aatelisia.
+
+### v2-710
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Kunstmuseum Liechtenstein
+VASTAUS: Kunstmuseum Liechtenstein sijaitsee Vaduzin keskustassa, ja sen musta ulkoasu erottuu selvästi muusta rakennuskannasta. Rakennuksen on suunnitellut muun muassa sveitsiläinen arkkitehti [[Christian Kerez]], ja ulkopintaan on upotettu jokikiviä. Sisällä kaksi vastakkaista porrasta tekevät tilasta vinottain avautuvan. Museo avasi ovensa 12. marraskuuta 2000, ja sen viereen lisättiin myöhemmin [[Hilti Art Foundation]] -säätiön näyttelyrakennus.
+
+### v2-711
+KOHDE: kaupunki:vaduz
+KYSYMYS: Kerro lisää: Hilti Art Foundation
+VASTAUS: Hilti Art Foundation on yksityinen taidesäätiö, jonka kokoelma on esillä omassa rakennuksessaan Kunstmuseum Liechtensteinin vieressä Vaduzissa. Säätiön takana on Hilti-perhe, jonka yritys perustettiin Schaanissa vuonna 1941 [[Martin Hiltin]] ja hänen veljensä toimesta. Rakennus valmistui vuonna 2015, ja se täydentää [[Kunstmuseum Liechtensteinin]] valtion kokoelmaa. Kokoelman tarkasta sisällöstä en ole varma, mutta se painottuu moderniin taiteeseen.
+

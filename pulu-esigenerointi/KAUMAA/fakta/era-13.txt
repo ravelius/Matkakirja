@@ -1,0 +1,445 @@
+### v2-534
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Hermann Bollén
+VASTAUS: Hermann Bollé oli kölniläissyntyinen arkkitehti, joka syntyi vuonna 1845 ja kuoli Zagrebissa vuonna 1926. Hän muutti Zagrebiin 1870-luvun puolivälissä ja johti Zagrebin tuomiokirkon uusgoottilaista kunnostusta vuoden 1880 maanjäristyksen jälkeen; kirkon tornit nousivat noin 105–108 metrin korkeuteen. Hänen työtään on myös [[Pyhän Markuksen kirkko]]n uusgoottilainen ilme sekä [[Mirogoj]]n hautausmaan arkadit. Bollé muokkasi Zagrebin ilmettä enemmän kuin useimmat yksittäiset arkkitehdit, ja hänen kotikaupunkinsa [[Köln]] tunnetaan itse goottilaisesta tuomiokirkostaan.
+
+### v2-535
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Alakaupungin
+VASTAUS: Alakaupunki on Zagrebin keskustan alempi osa, joka rakennettiin pääosin 1800-luvun lopulla ja 1900-luvun alussa säännölliseksi korttelirakenteeksi. Sen sydän on aukioiden ketju, jota sanotaan [[Lenucin vihreäksi hevosenkengäksi]]. Yksi aukioista on [[Zrinjevac]], 12 540 neliömetrin puisto, jonka paikalla oli aiemmin karjamarkkina. Sen ympärillä ovat arkeologinen museo, [[Kroatian tiedeakatemia]] ja Strossmayerin vanhojen mestarien galleria. Puiston musiikkipaviljonki on vuodelta 1891.
+
+### v2-536
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Yläkaupungin
+VASTAUS: Yläkaupunki eli Gradec on Zagrebin vanha kukkulakaupunki, joka sai vapaan kuninkaallisen kaupungin aseman vuonna 1242 ja oli pitkään naapurikukkulan [[Kaptol]]in kilpailija. Alueen vanhoista porteista on säilynyt vain [[Kivinen portti]], jonka 1200-luvulle ajoitettu holvi on yhä paikallaan; muut portit olivat Mesnička, Opatička ja Dverce. Vuonna 1731 tulipalo tuhosi suuren osan Yläkaupunkia, mutta Neitsyt Marian maalaus säilyi vahingoittumattomana, ja holviin on sen vuoksi rakennettu pieni rukouspaikka. Alueen tunnetuimpia kohteita on myös [[Pyhän Markuksen kirkko]], jonka katto on koristettu värikkäillä laatoilla.
+
+### v2-537
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Lotrščak-torni
+VASTAUS: [[Lotrščakin torni]] rakennettiin 1200-luvulla osana [[Gradecin]] muureja, jotka valmistuivat 1260-luvulla, puolustamaan eteläistä [[Dverce-porttia]]. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello, ja kello soi merkiksi porttien sulkemisesta. Dverce-portti purettiin 1812, mutta torni jäi. Vuonna 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta ja puinen palotähystys. Tykki hankittiin myöhemmin 1800-luvulla, ja ensimmäinen laukaus ammuttiin 1. tammikuuta 1877. Se ammutaan neljännen kerroksen eteläikkunasta joka päivä puolenpäivän aikaan, ja se toimi aikanaan merkkinä kirkonkellojen soittajille.
+
+### v2-538
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Zagorjen
+VASTAUS: Zagorje eli Hrvatsko zagorje on kumpuileva alue Zagrebin pohjoispuolella Slovenian rajan tuntumassa. Se tunnetaan linnoistaan, kuten [[Trakošćan]]ista ja [[Veliki Tabor]]ista, sekä viinitarhoistaan. Alueella sijaitsee myös [[Krapina]], jonka läheltä on löytynyt yli sata tuhatta vuotta vanhoja neandertalinihmisen jäännöksiä. Paikallisessa keittiössä on keskeisellä sijalla štrukli, ja alueen murre eroaa tavallisesta kroatiasta.
+
+### v2-539
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: tuorejuusto
+VASTAUS: Tuorejuusto tarkoittaa juustoa, jota ei kypsytetä: maito happamoitetaan, kasvanut juustomassa valutetaan, ja jäljelle jää pehmeä, mieto ja usein hieman hapan massa. Kroatiassa sitä käytetään monissa ruoissa, esimerkiksi štruklin täytteenä. Suomessa tuttuja vastineita ovat [[rahka]] ja [[raejuusto]]. Slovenian juhlaleivonnainen [[potica]] voidaan täyttää pähkinöiden lisäksi myös tuorejuustolla, ja rakuunalla tai rusinoilla.
+
+### v2-540
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Jelačićin aukion
+VASTAUS: Jelačićin aukio on Zagrebin keskusaukio, joka on nimetty kenraali ja ban Josip Jelačićin mukaan. Aukion keskellä seisoo ratsastajapatsas, joka pystytettiin vuonna 1866. Kommunistiset viranomaiset poistivat patsaan vuonna 1947, ja se palautettiin paikalleen vuonna 1990. Aukio on rakennettu [[Medveščak]]-puron yläpuolelle, joka erotti aikoinaan Gradecin ja Kaptolin. Se on Zagrebin liikenteen solmukohta, ja kaupunkilaiset tapaavat usein aukiolla olevan [[Manduševac]]-lähteen luona.
+
+### v2-541
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Olinka Vištica
+VASTAUS: Olinka Vištica on kroatialainen elokuvatuottaja ja taiteilija. Hän perusti yhdessä kuvanveistäjä [[Dražen Grubišić]]in kanssa Särkyneiden suhteiden museon, jonka idea syntyi tarinan mukaan, kun kaksikon oma suhde päättyi vuonna 2003 ja heidän piti jakaa yhteiset tavarat. He keräsivät aluksi lahjoituksia vain pienenä näyttelynä, joka kiersi eri paikoissa, ja pysyvä museo avattiin Zagrebin [[Yläkaupungissa]] vuonna 2010. Hänen urastaan muuten en tiedä paljoa.
+
+### v2-542
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Dražen Grubišić
+VASTAUS: Dražen Grubišić on kroatialainen kuvanveistäjä ja taiteilija. Hän perusti yhdessä [[Olinka Vištica]]n kanssa [[Särkyneiden suhteiden museon]], jonka idea syntyi kaksikon oman eron jälkeen. Museon kokoelma koostuu ihmisten lahjoittamista esineistä ja niihin liittyvistä lyhyistä tarinoista, ja se on kiertänyt näyttelynä ennen pysyvän paikan saamista [[Zagrebissa]]. Hänen muusta urastaan en tiedä paljoa.
+
+### v2-543
+KOHDE: kaupunki:zagreb
+KYSYMYS: Kerro lisää: Yläkaupungissa
+VASTAUS: Yläkaupunki eli Gradec on Zagrebin vanha kukkulakaupunki, jossa on kapeita kivikatuja ja jossa katulamppuja sytytetään yhä käsin kaasulla. Siellä seisoo [[Pyhän Markuksen kirkko]], jonka vieressä sijaitsevat Kroatian parlamentti ja hallitus, sekä [[Kivinen portti]] ja [[Lotrščakin torni]]. Alueella on myös Kroatialaisen naivistisen taiteen museo, joka toimii 1700-luvun Raffayn palatsissa ja jonka kokoelmassa on yli 1 500 teosta. Yläkaupungissa sijaitsee myös Särkyneiden suhteiden museo.
+
+### v2-544
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Minčetan
+VASTAUS: Minčetan torni on Dubrovnikin muurien tunnetuin torni, ja se kohoaa kaupungin korkeimmalla kohdalla. Samalla paikalla seisoi vuonna 1319 vaatimaton nelikulmainen linnoitus, joka sai nimensä maat omistaneelta Menčetićin suvulta. Kun ottomaanit alkoivat uhata kaupunkia 1400-luvulla, paavi [[Pius II]] lähetti italialaisia insinöörejä, ja työtä johti firenzeläinen arkkitehti [[Michelozzo]]. Pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä [[Giorgio da Sebenico]], ja torni valmistui vuonna 1464. Sen muurit ovat paikoin jopa kuusi metriä paksut.
+
+### v2-545
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Lovrijenacin
+VASTAUS: Lovrijenacin linnake kohoaa 37 metrin korkeudessa meren yllä Dubrovnikin länsipuolella, ja sen pohjapiirros on kolmion muotoinen. Tarinan mukaan asukkaat rakensivat sen kolmessa kuukaudessa, kun he kuulivat [[Venetsian]] aikovan pystyttää oman linnoituksensa samalle kalliolle; ensimmäinen kirjallinen maininta on vuodelta 1301. Merta kohti osoittavat muurit ovat lähes 12 metriä paksut, mutta kaupunkiin päin katsovat seinät vain noin 60 senttimetriä, jotta linnake olisi helppo ottaa takaisin, jos vihollinen valtaisi sen. Kesäisin linnakkeen pihalla esitetään näytelmiä [[Dubrovnikin kesäjuhlat]]-festivaalin aikana.
+
+### v2-546
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Ragusan tasavallan
+VASTAUS: Ragusan tasavalta oli Dubrovnikin ympärille syntynyt kaupunkivaltio, joka itsenäistyi Venetsian vallasta 1300-luvun puolivälissä ja pysyi itsenäisenä vuoteen 1808. Valtaa käytti [[Suuri neuvosto]], ja valtionpäämiehenä toimi [[rehtori]], joka valittiin vain kuukaudeksi kerrallaan, jotta valta ei keskittyisi yhdelle miehelle. Tasavalta kävi laajaa meri- ja suolakauppaa, maksoi veroa naapureilleen ja kielsi orjakaupan vuonna 1416. Ranskalaiset joukot miehittivät kaupungin, ja marsalkka [[Marmont]] lakkautti tasavallan vuonna 1808.
+
+### v2-547
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Napoleonin
+VASTAUS: Napoleon Bonaparte syntyi Korsikalla vuonna 1769 ja kohosi sotapäälliköstä Ranskan keisariksi vuonna 1804. Hänen sotansa muuttivat Euroopan karttaa, ja ne ulottuivat myös Adrianmeren rannikolle: Dubrovnik joutui ranskalaisten haltuun, ja tasavalta lakkautettiin 1808. Alue kuului sittemmin lyhyen aikaa [[Illyrian provinssit]]-nimiseen Ranskan hallintoalueeseen. Napoleon kukistui [[Waterloo]]ssa vuonna 1815 ja kuoli Pyhän Helenan saarella vuonna 1821.
+
+### v2-548
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Fransiskaaniluostarin
+VASTAUS: Fransiskaaniluostari sijaitsee Dubrovnikin päämuurien sisäpuolella lähellä [[Pile-portti]]a, [[Stradun]]-pääkadun päässä. Luostarin ristikäytävä on rakennettu 1300-luvulla, ja se on yksi kaupungin tunnetuimpia rauhallisia paikkoja. Luostarin apteekki avattiin vuonna 1317, ja se palvelee yhä asiakkaita: se on Euroopan vanhin yhtäjaksoisesti toiminut apteekki. Munkit valmistivat voiteita yrteistä, ja osa resepteistä on yhä käytössä.
+
+### v2-549
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: karanteenin
+VASTAUS: Karanteeni tarkoittaa sairaudelle mahdollisesti altistuneiden ihmisten tai tavaroiden eristämistä tartunnan leviämisen estämiseksi. Sana tulee italian sanoista, jotka tarkoittavat neljääkymmentä päivää. Dubrovnik määräsi vuonna 1377, että kulkutautialueilta saapuvien oli odotettava erillään ennen kaupunkiin pääsyä; ajatus syntyi [[mustan surman]] jälkeen, joka oli vuosisadan puolivälissä tappanut suuren osan Euroopan väestöstä. Myöhemmin kaupunki rakensi [[Lazareti]]-nimiset karanteenirakennukset kaupungin itäpuolelle.
+
+### v2-550
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: rozulin
+VASTAUS: Rozulin on ruusulikööri, jolla dubrovnikilainen rozata-vanukas perinteisesti maustetaan. Se valmistetaan ruusun terälehdistä, sokerista ja alkoholista, ja samaa tyyppiä tunnetaan Italiassa nimellä [[rosolio]]. Likööri antaa vanukkaalle hienon kukkaisen tuoksun. Dalmatiassa tunnetaan myös toinen kuuluisa makea juoma, [[maraschino]], joka on kirsikasta valmistettu likööri ja jota tehdään Zadarin seudulla. Tarkka resepti vaihtelee talosta toiseen, joten sen yksityiskohdista en ole varma.
+
+### v2-551
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Dalmatian
+VASTAUS: Dalmatia on Kroatian rannikon pitkä kaistale Adrianmeren rannalla, ja sen pohjoisosassa kohoaa [[Velebit]]-vuoristo. Sen eteläisillä rinteillä sijaitsee [[Paklenica]]n kansallispuisto, jossa vesi on syövyttänyt kalkkikiveen kaksi jyrkkäseinäistä kanjonia, Velika ja Mala Paklenica; paikka houkuttelee kalliokiipeilijöitä ympäri Eurooppaa. Dalmatialaiseen ruokaan kuuluvat kala, oliiviöljy ja [[pašticada]], hitaasti haudutettu naudanliha. Alueella on myös [[Pag]]in saari, joka tunnetaan juustostaan ja pitseistään.
+
+### v2-552
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Risteilyalusten
+VASTAUS: Risteilyalukset tuovat Dubrovnikiin suuren osan sen matkailijoista, ja ne laskeutuvat yleensä [[Gruž]]in satamaan, josta päiväkävijät siirtyvät vanhaankaupunkiin. Kaupunki on pieni, joten ruuhkaa syntyy helposti, ja asukkaat ovat valittaneet siitä. Viranomaiset ovat rajoittaneet laivojen määrää ja kävijöitä, ja kampanjalla [[Respect the City]] on pyritty ohjaamaan matkailijoiden käytöstä. Matkailua on lisännyt myös [[Game of Thrones]] -televisiosarja, jossa kaupunki esiintyi. Tarkkoja nykyisiä rajoituksia en tiedä.
+
+### v2-553
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Stradunin
+VASTAUS: Stradun, joka on myös nimellä Placa tunnettu, on Dubrovnikin vanhankaupungin pääkatu. Se kulkee [[Pile-portti]]a ja Luža-aukiota yhdistäen noin kolmensadan metrin matkan, ja kalkkikivi on kulunut niin sileäksi, että se kiiltää. Katu syntyi, kun kaupungin kaksi osaa yhdistettiin täyttämällä niiden välinen kanava. Vuoden 1667 maanjäristyksen jälkeen talot rakennettiin siihen yhtenäisellä ilmeellä uudelleen. Luža-aukiolla on myös [[Onofrion kaivo]], jonka kerrotaan valmistuneen 1400-luvulla.
+
+### v2-554
+KOHDE: kaupunki:dubrovnik
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco on Yhdistyneiden kansakuntien koulutus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945. Dubrovnikin vanhakaupunki otettiin sen [[maailmanperintöluettelo]]on vuonna 1979. Kaupunkia ammuttiin vuosina 1991–1992, ja tuolloin se lisättiin tilapäisesti [[vaarantuneiden kohteiden luettelo]]on. Tapahtumasta on nyt yli kolmekymmentä vuotta, ja vaurioita on korjattu laajasti. Nykyään suurin uhka on matkailun paine, ja järjestö on kehottanut hillitsemään kävijämääriä.
+
+### v2-555
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: Karpaattien altaan
+VASTAUS: Karpaattien allas on Keski-Euroopan laaja alanko, jota ympäröivät Karpaatit, Alpit ja Dinaarien Alpit. Se kattaa suurimman osan Unkaria sekä osia naapurimaista, muun muassa [[Transilvania]]n ja Vojvodinan. Alueen läpi virtaa [[Tonava]], ja pohjalla on aikoinaan ollut [[Pannonian meri]]. Unkarilaisten esi-isät, seitsemän heimoa, ylittivät Karpaattien solat noin vuonna 895 ja asettuivat tasangolle [[Árpád]]in johdolla; tarkkaa vuotta ei tiedetä. Maankuori on altaan alla ohut, mistä johtuu runsas lämmin pohjavesi.
+
+### v2-556
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: ottomaanien
+VASTAUS: Ottomaanien valtakunta valloitti suuren osan Unkarista 1500-luvulla: ratkaiseva oli [[Mohácsin taistelu]] vuonna 1526, ja Budan kaupunki joutui ottomaanien haltuun 1541. Valta kesti noin 150 vuotta, kunnes Unkari siirtyi 1600-luvun lopulla Habsburgien hallintaan. Ottomaanit jättivät jälkeensä kylpylöitä, kuten [[Rudas]]-kylpylän Budapestissa, ja mausteita: [[paprika]] saapui maahan heidän aikanaan 1500-luvulla. Muistoja näkyy yhä arkkitehtuurissa ja ruokakulttuurissa.
+
+### v2-557
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: Hévíz
+VASTAUS: Hévíz on lämpimän veden järvi Länsi-Unkarissa, lähellä [[Keszthely]]n kaupunkia ja [[Balaton]]-järveä. Se on lähteiden syöttämä luonnonjärvi, jonka vesi pysyy lämpimänä myös talvella, ja sen sanotaan olevan Euroopan suurimpia lämpimiä luonnonjärviä. Veden lämpötila vaihtelee kesällä ja talvella, ja vesi uusiutuu jatkuvasti. Järvellä kylpee ihmisiä ympäri vuoden, ja sen rannalla on lääkinnällisiä hoitoja tarjoavia kylpylöitä. Tarkkoja lukuja en uskalla ulkomuistista sanoa.
+
+### v2-558
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: paprikaa
+VASTAUS: Paprika on Amerikasta peräisin oleva mausteena ja vihanneksena käytetty kasvi, joka tuli Unkariin ottomaanien mukana 1500-luvulla. Jauhettu paprika on unkarilaisen keittiön tärkein mauste, ja sitä myydään makeana sekä tulisena. Tunnettuja viljelyalueita ovat [[Szeged]] ja [[Kalocsa]]. Szegedissä työskennellyt [[Albert Szent-Györgyi]] eristi paprikasta [[C-vitamiini]]n 1930-luvulla ja sai siitä Nobelin palkinnon. Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, paprikaa myydään makeasta tuliseen.
+
+### v2-559
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: uralilaisiin kieliin
+VASTAUS: Uralilaiset kielet ovat kieliperhe, johon kuuluvat [[suomalais-ugrilaiset kielet]] ja samojedikielet. Suomalais-ugrilaisia kieliä ovat esimerkiksi suomi, viro, [[unkarin kieli]], saame sekä pienempiä kieliä Venäjällä. Niiden yhteiset alkuperäiset sanat, kuten käsi, vesi ja kala, viittaavat yhteiseen kantakieleen, joka puhuttiin tuhansia vuosia sitten Uralin seudulla. Suurin osa Euroopan kielistä kuuluu sen sijaan [[indoeurooppalaiseen]] kieliperheeseen. Unkari on suurin uralilaisten kielten puhujaryhmä.
+
+### v2-560
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: saame
+VASTAUS: Saamelaiset ovat Pohjois-Euroopan alkuperäiskansa, jonka perinteinen asuinalue ulottuu Norjan, Ruotsin ja Suomen pohjoisosiin sekä Kuolan niemimaalle Venäjällä. Saamea ei puhuta yhtenä kielenä vaan useana toisistaan eroavana kielenä, joista [[pohjoissaame]] on puhujamäärältään suurin. Perinteisiä elinkeinoja ovat [[poronhoito]], kalastus ja metsästys, ja tunnettu kulttuurin muoto on [[joiku]], henkilöä, eläintä tai paikkaa kuvaava laulutapa. Suomessa saamelaisten itsehallintoa edustaa [[Saamelaiskäräjät]]. Saamelaisten kotiseutualuetta kutsutaan nimellä Sápmi.
+
+### v2-561
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: puszta
+VASTAUS: Sana puszta tarkoittaa unkarissa tyhjää tai autiota, ja se kuvaa Unkarin suuren alangon ruohoaroja. Hortobágyn puszta on osa Alföldiä, ja sen suojelemiseksi perustettu [[Hortobágyn kansallispuisto]] on Unkarin ensimmäinen kansallispuisto. Maisemassa näkyvät pitkät [[kaivonvivut]], joilla vettä on nostettu karjan juomapaikoille, sekä kivinen [[Yhdeksänkaarinen silta]], jota sanotaan Unkarin pisimmäksi kivisillaksi. Aro ei ole täysin luonnontilainen, sillä vuosisatojen laidunnus on pitänyt sen avoimena.
+
+### v2-562
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: csikós
+VASTAUS: Csikós on unkarilainen hevospaimen, joka vartioi puoliksi villinä laiduntavia hevosia aroilla. Nimi tulee sanasta csikó, joka tarkoittaa varsaa. Perinteiseen asuun kuuluvat leveälierinen hattu, leveät pellavahousut eli [[gatya]] ja pitkä ruoska, jota sanotaan nimellä [[karikás]] ja jonka läimäytys kuuluu kauas. Csikósit ovat tunnettuja ratsastustaidostaan, ja heidän näytöksiään esitetään [[Hortobágyn kansallispuistossa]]. Paimenten perinne elää yhä, vaikka työn luonne on vuosikymmenten kuluessa muuttunut.
+
+### v2-563
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: Ernő Rubik
+VASTAUS: Ernő Rubik syntyi Budapestissa vuonna 1944 ja opetti arkkitehtuuria [[Budapestin taideteollisessa korkeakoulussa]]. Hän rakensi vuonna 1974 oppilailleen havaintovälineen, jossa 26 pientä palikkaa pyörii piilossa olevan keskiosan ympäri hajoamatta. Kun hän värjäsi sivut ja sekoitti ne, hän huomasi tehneensä pulman, ja sen ratkaiseminen vei häneltä kokonaisen kuukauden. Unkarissa lelu myytiin nimellä [[bűvös kocka]], taikakuutio, ja maailmalle se levisi nimellä [[Rubikin kuutio]]. Asentoja on yli 43 triljoonaa, mutta jokaisesta pääsee maaliin enintään 20 kierrolla.
+
+### v2-564
+KOHDE: maa:HUN
+KYSYMYS: Kerro lisää: Budapestin
+VASTAUS: Budapest on Unkarin pääkaupunki ja maan suurin kaupunki. Nykyinen kaupunki syntyi vuonna 1873, kun [[Buda]], Óbuda ja [[Pest]] yhdistettiin yhdeksi, ja [[Tonava]] jakaa sen yhä kahtia. Kaupungin arki näkyy [[Suuressa kauppahallissa]], joka avattiin vuonna 1897 ja jossa myydään paprikaa makeasta tuliseen. Ruoan puolelta tunnetaan myös [[dobostorta]], viisikerroksinen kakku, jonka sokerileipuri Dobos C. József kehitti vuonna 1884.
+
+### v2-565
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: István Széchenyiltä
+VASTAUS: István Széchenyi oli unkarilainen kreivi ja valtiomies, jota pidetään yhtenä maan suurimmista uudistajista. Hän syntyi vuonna 1791, ja [[Lajos Kossuth]] kutsui häntä suurimmaksi unkarilaiseksi. Hän lahjoitti vuonna 1825 yhden vuoden tulonsa [[Unkarin tiedeakatemian]] perustamiseen, ja hän ajoi myös Tonavan säännöstelyä ja höyrylaivaliikennettä. Hänen tunnetuin hankkeensa oli [[Ketjusilta]], joka yhdisti Budan ja Pestin pysyvästi. Vuoden 1848 vallankumouksen hallituksessa hän toimi liikenneministerinä.
+
+### v2-566
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: William Tierney Clark
+VASTAUS: William Tierney Clark oli englantilainen insinööri, joka syntyi vuonna 1783 ja kuoli vuonna 1852. Hänen tunnetuimpiin töihinsä kuuluu Lontoon [[Hammersmithin silta]], joka avattiin vuonna 1827 ensimmäisenä [[riippusiltana]] Thames-joen yli. Budapestin Ketjusillan hän suunnitteli kreivi Széchenyin tilauksesta, ja silta valmistui vuonna 1849 375 metrin pituisena. Rakennustyötä Unkarissa johti skotlantilainen insinööri [[Adam Clark]], joka ei ollut hänen sukulaisensa ja joka asettui lopulta asumaan Budapestiin.
+
+### v2-567
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Tonavan
+VASTAUS: Tonava on Euroopan toiseksi pisin joki Volgan jälkeen, noin 2 800 kilometriä pitkä. Se saa alkunsa Saksan [[Schwarzwaldin]] vuoristosta ja virtaa kymmenen valtion kautta Mustallemerelle, jossa se muodostaa laajan [[Tonavan suiston]]. Joen varrella ovat pääkaupungit Wien, Bratislava, Budapest ja Belgrad. Roomalaisaikana Tonava oli Rooman valtakunnan pohjoisraja, ja sen rannalla oli sotilastukikohtia. Esimerkiksi [[Carnuntum]] Itävallassa oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja siellä meripihkatie ylitti joen.
+
+### v2-568
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Városligetin
+VASTAUS: Városliget eli Kaupunginpuisto on Pestin puolella sijaitseva suuri puisto Sankarien aukion takana. Puisto sai nykyisen ilmeensä vuoden 1896 tuhatvuotisjuhlien yhteydessä, ja silloin rakennettiin [[Vajdahunyadin linna]], jossa yhdistyvät Unkarin rakennustaiteen eri aikakausien tyylit. Puistossa ovat myös [[Budapestin eläintarha]] ja [[Széchenyin kylpylä]]. Puistoon johtaa [[Andrássy-katu]], jonka alla kulkee vanha metro.
+
+### v2-569
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: ottomaanien
+VASTAUS: Ottomaanit olivat Osmanin suvun johtama valtakunta, joka laajeni Balkanille ja Keski-Eurooppaan. Unkarissa ottomaanien valtakausi alkoi Mohácsin tappion jälkeen: sulttaani [[Suleiman Suuri]] johti joukot [[Mohácsin taisteluun]] vuonna 1526, ja Buda joutui ottomaanien haltuun vuonna 1541. Kaupunki vapautettiin vuonna 1686, joten hallinto kesti noin puolitoista vuosisataa. Kauden perintöä ovat kylpylät, joista esimerkiksi [[Rudas]] on yhä käytössä, sekä [[paprika]], joka saapui maahan ottomaanien mukana 1500-luvulla.
+
+### v2-570
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Andrássy-kadun
+VASTAUS: Andrássy-katu on Pestin pääkatu, joka johtaa Erzsébet-aukiolta Sankarien aukiolle ja Kaupunginpuistoon. Se avattiin 1800-luvun jälkipuoliskolla ja nimettiin valtiomies [[Gyula Andrássyn]] mukaan. Kadun varrella on [[Unkarin valtionoopperan]] uusrenessanssityylinen talo, ja päässä sijaitsee [[Sankarien aukio]], jonka muistomerkki vihittiin vuonna 1906. Kadun alla kulkee Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata, joka avattiin vuonna 1896. Katu aukioineen ja metroineen kuuluu Unescon maailmanperintöön.
+
+### v2-571
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco on [[Yhdistyneiden kansakuntien]] koulutus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on Pariisissa. Se tunnetaan erityisesti [[maailmanperintöluettelosta]], jonka perustana on vuoden 1972 yleissopimus. Luetteloon otetaan kulttuuri- ja luontokohteita, joilla on poikkeuksellinen yleismaailmallinen arvo. Unkarin kohteita ovat muun muassa Budapestin Tonavan rannat ja Budan linnavuori, [[Andrássy-katu]] sekä [[Hortobágyn kansallispuisto]].
+
+### v2-572
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: juutalaiskorttelissa
+VASTAUS: Pestin juutalaiskortteli sijaitsee kaupungin seitsemännessä kaupunginosassa, [[Erzsébetvárosissa]], vanhan Pestin keskustan ja Andrássy-kadun välissä. Alue kehittyi 1800-luvulla juutalaisväestön keskukseksi, ja sen tunnetuin rakennus on vuonna 1859 valmistunut [[Dohány-kadun synagoga]], jota pidetään Euroopan suurimpana synagogana. Toisen maailmansodan lopulla, vuonna 1944, alueelle perustettiin [[Budapestin getto]], ja kortteli kärsi tuona aikana vakavasti. Sodan jälkeen alue rapistui, ja 2000-luvulla tyhjät rakennukset täyttyivät uudelleen ravintoloilla, kahviloilla ja raunakapakoilla.
+
+### v2-573
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Szimpla
+VASTAUS: Szimpla Kert on Budapestin tunnetuin raunakapakka. Se perustettiin 2000-luvun alussa, ja nykyinen paikka on [[Kazinczy-kadulla]] Pestin juutalaiskorttelissa vanhassa rakennuksessa, jonka sisäpiha on täynnä erilaisia baareja ja istuinryhmiä. Kalusteet on koottu kirpputoreilta ja romuliikkeistä: mukana on vanhoja kylpyammeita, polkupyöriä ja jopa [[Trabant]]-auton osia. Lähellä sijaitsee myös [[Dohány-kadun synagoga]].
+
+### v2-574
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Imre Steindl
+VASTAUS: Imre Steindl oli unkarilainen arkkitehti, joka eli vuosina 1839–1902 ja jonka tunnetuin työ on Budapestin parlamenttitalo. Hän voitti suunnittelukilpailun ja otti mallia Lontoon [[Westminsterin palatsista]]. Rakennus on 96 metriä korkea, ja luku viittaa vuoteen 896, jolloin unkarilaiset asettuivat Karpaattien altaaseen. Rakentamiseen käytettiin noin 40 miljoonaa tiiltä ja lähes 40 kiloa kultaa, ja työt kestivät vuodesta 1885 vuoteen 1904. Steindl sokeutui ja kuoli juuri ennen valmistumista. Rakennuksen keskeisessä kuusitoistakulmaisessa salissa säilytetään [[Pyhän Tapanin kruunua]].
+
+### v2-575
+KOHDE: kaupunki:budapest
+KYSYMYS: Kerro lisää: Pyhän Tapanin kruunu
+VASTAUS: Pyhän Tapanin kruunu on Unkarin kuninkaallinen kruunu, joka on nimetty [[kuningas Tapanin]] mukaan. Tapani kruunattiin kuninkaaksi noin vuoden 1000 vaiheilla, mutta tutkijoiden mukaan nykyinen kruunu on koottu useammasta osasta myöhemmin, ja sen tarkasta ajoituksesta kiistellään. Kruunun päällä oleva [[vino risti]] on myöhempää perua. Kruunua käytettiin kuninkaiden kruunajaisissa pitkään, ja sitä pidetään yhä valtion jatkuvuuden symbolina. Toisen maailmansodan lopussa kruunu vietiin länteen ja se päätyi Yhdysvaltoihin. Se palautettiin Unkariin vuonna 1978, ja nykyään sitä säilytetään [[Unkarin parlamenttitalon]] kupolisalissa.
+
+### v2-576
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Boynen
+VASTAUS: Boyne on joki Itä-Irlannissa, ja sen mutkan sisäpuolella oleva laakso tunnetaan nimellä Brú na Bóinne. Alue on Unescon maailmanperintökohde, ja siellä on kolme suurta kivikautista hautakumpua: [[Newgrange]], [[Knowth]] ja [[Dowth]]. Newgrangen käytävä on yli 18 metriä pitkä, ja talvipäivänseisauksen aamuna aurinko valaisee kammion noin seitsemäntoista minuuttia. Joki on myös historian näyttämö: vuonna 1690 sen rannalla käytiin [[Boynen taistelu]], jossa kuningas Vilhelm III voitti kuningas Jaakko II:n.
+
+### v2-577
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: talvipäivänseisauksen
+VASTAUS: Talvipäivänseisaus on vuoden lyhyin päivä pohjoisella pallonpuoliskolla, ja se osuu joulukuun 21. päivän tienoille. Silloin aurinko nousee ja laskee taivaalla matalimmalta pisteeltä, ja päivä on pimeimmillään. Monet muinaiset kulttuurit rakensivat hautojaan ja pyhiä paikkojaan niin, että ne osoittavat tähän ajankohtaan: [[Newgrangen]] käytävä päästää aamuauringon sisään vain näinä päivinä, ja [[Stonehengessä]] seurataan sekä talvi- että kesäpäivänseisausta. Vastakohta on [[kesäpäivänseisaus]], jolloin päivä on vuoden pisin. Päivänseisauksen jälkeen valo alkaa lisääntyä, minkä vuoksi monissa kulttuureissa talven juhlat liittyvät valon paluuseen.
+
+### v2-578
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Trinity Collegen
+VASTAUS: Trinity College on Irlannin vanhin yliopisto. Kuningatar [[Elisabet I]] perusti sen vuonna 1592 Dublinin keskustaan entisen luostarin paikalle, ja nimi on otettu Cambridgen Trinity Collegesta. Kirjaston suurin aarre on [[Kellsin kirja]], joka on ollut Trinityssä vuodesta 1661 ja jota säilytetään kuuluisan [[Long Room]] -salin yhteydessä. Entisiä opiskelijoita ovat kirjailijat Jonathan Swift, [[Oscar Wilde]] ja Samuel Beckett. Fyysikko [[Erwin Schrödinger]] piti kollegiossa helmikuussa 1943 kolme yleisöluentoa otsikolla Mitä elämä on, ja kuulijoita tuli niin paljon, että luennot pidettiin kahteen kertaan. Naiset pääsivät opiskelemaan Trinityyn vuonna 1904.
+
+### v2-579
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Brian Borun
+VASTAUS: Brian Boru syntyi noin vuonna 941 ja kuoli vuonna 1014. Hän oli [[Munsterin]] kuningas ja tuli vuonna 1002 koko Irlannin ylikuninkaaksi, mikä oli harvinaista, koska ylikuninkuus oli perinteisesti ollut pohjoisen Uí Néill -suvun hallussa. Hänet tunnetaan voitostaan [[viikingeistä]] ja heidän liittolaisistaan [[Clontarfin taistelussa]] vuonna 1014, jossa hän itse kaatui. Hänen mukaansa on nimensä saanut [[O'Brien-suku]], ja kolikoiden harppu on yhdistetty häneen, vaikka soitin on peräisin vasta myöhemmältä ajalta.
+
+### v2-580
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Gaeltacht
+VASTAUS: Gaeltacht tarkoittaa alueita, joilla iiri on yhä yhteisön arkikieli. Ne ovat enimmäkseen pieniä alueita Irlannin länsi- ja lounaisrannikolla, esimerkiksi [[Donegalissa]], Galwayssa, Mayossa ja [[Kerryssä]]. Alueilla on lakisääteinen asema, ja valtio tukee niiden kielellistä ja taloudellista kehitystä. Iirinkielisiä ohjelmia tekevät televisiokanava [[TG4]] ja radiokanava [[Raidió na Gaeltachta]]. Moni irlantilainen lähettää lapsensa Gaeltachtiin kesäksi opiskelemaan kieltä.
+
+### v2-581
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Connemarassa
+VASTAUS: Connemara on Länsi-Irlannin Galwayn kreivikunnassa sijaitseva alue Atlantin rannikolla. Maisemaa hallitsevat järvet, suot, kallioiset rannat ja [[Twelve Bens]] -vuoristo. Alue on suurelta osin iirinkielistä Gaeltachtia, ja siellä on säilynyt vahva perinnemusiikki ja kalastajakylien elämä. [[Connemaran kansallispuisto]] suojelee osaa alueesta. Paikallisen hevosrodun nimi on [[Connemara-poni]], ja alueen tunnetuimpia nähtävyyksiä on 1800-luvulla rakennettu [[Kylemore Abbey]], joka toimii nykyään luostarina.
+
+### v2-582
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: lunneja
+VASTAUS: Lunni eli Atlantin lunni on pieni merilintu, jolla on kesäisin näyttävän värikäs, kolmiomainen nokka. Linnut viettävät talven avomerellä [[Atlantilla]] ja palaavat keväällä pesimään rannikon kallioille, joissa ne kaivavat tai ottavat käyttöön koloja nurmikolla. Irlannissa lunneja pesii länsirannikon kallioilla ja saarilla, esimerkiksi [[Skellig Michaelilla]] ja [[Moherin kallioilla]]. Lähistöllä sijaitsee myös [[Burren]], kalkkikivinen karstialue, jossa kasvaa harvinaisia kasveja.
+
+### v2-583
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Claren
+VASTAUS: Clare on Irlannin länsiosassa Munsterin maakunnassa sijaitseva kreivikunta, jonka länsirajana on Atlantti ja eteläpuolella [[Shannon-joen]] suisto. Pääkaupunki on [[Ennis]]. Kreivikunta tunnetaan Moherin kallioista ja [[Burrenin]] kalkkikivisestä karstimaisemasta, jossa kasvaa harvinaisia kasveja. Clare on myös irlantilaisen perinnemusiikin keskus: kylissä kuten [[Doolinissa]] soitetaan iltaisin pubeissa.
+
+### v2-584
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: apilan
+VASTAUS: Apila on Irlannissa kansallinen symboli. Kolmilehtinen apila, jota sanotaan iiriksi nimellä seamróg, liitetään [[Pyhään Patrickiin]], jonka perimätiedon mukaan käytti sitä esimerkkinä [[Pyhästä kolminaisuudesta]]: yksi kasvi, kolme lehteä. Tarinan alkuperää ei voida varmentaa. Apilaa käytetään monissa yritysten, järjestöjen ja urheilujoukkueiden tunnuksissa. Neljälehtinen [[neliapila]] on harvinaisempi, ja sen uskotaan tuovan onnea.
+
+### v2-585
+KOHDE: maa:IRL
+KYSYMYS: Kerro lisää: Armaghin
+VASTAUS: Armagh on kaupunki Pohjois-Irlannissa, ja sitä pidetään koko Irlannin kirkollisena pääkaupunkina. Perimätiedon mukaan Pyhä Patrick perusti sinne kirkon 400-luvulla, ja nykyään kaupungissa on kaksi Pyhän Patrickin katedraalia, katolinen ja Irlannin kirkon. Lähellä on muinainen kuninkaallinen keskus [[Navan Fort]], ja kaupungissa toimii tähtitorni [[Armagh Observatory]], joka perustettiin 1700-luvun lopulla. Armagh kuuluu [[Pohjois-Irlantiin]], joka on osa Yhdistynyttä kuningaskuntaa, vaikka kirkollisesti kaupunki liittyy koko saareen.
+
+### v2-586
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Trinity Collegen
+VASTAUS: Trinity College sijaitsee Dublinin keskustassa, ja sen perusti kuningatar [[Elisabet I]] vuonna 1592. Se on Irlannin vanhin yliopisto, ja kampus on säilyttänyt historiallisen ilmeensä: keskeisiä ovat kivirakennukset ja niiden väliset sisäpihat. Yliopiston kirjastossa säilytetään [[Kellsin kirja]], joka on ollut siellä vuodesta 1661. Trinityssä opiskelivat kirjailijat [[Oscar Wilde]], Jonathan Swift ja Samuel Beckett. Yliopisto on ollut myös tieteen paikka: [[Erwin Schrödinger]] piti siellä kuuluisat luentonsa vuonna 1943.
+
+### v2-587
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Long Room
+VASTAUS: Long Room on Trinity Collegen vanhan kirjaston pääsali, ja sen pituus on noin 65 metriä. Salin hyllyillä on noin 200 000 yliopiston vanhinta kirjaa. Sali valmistui 1700-luvun alkupuolella, ja sen alun perin tasainen katto korotettiin 1800-luvulla [[tynnyriholviksi]], jolloin lisää kirjahyllyjä mahtui sisään. Salissa on rivi marmorisia rintakuvia kirjailijoista ja ajattelijoista, ja siellä on esillä [[Brian Borun harppu]], jonka mukaan Irlannin valtiontunnus on mallinnettu. Salin vieressä sijaitsee [[Kellsin kirjan]] näyttely, ja vierailijoita on yli 900 000 vuodessa.
+
+### v2-588
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: James Joycen
+VASTAUS: James Joyce syntyi Dublinissa vuonna 1882 ja kuoli Zürichissä vuonna 1941. Hän lähti Irlannista nuorena ja asui suurimman osan elämästään ulkomailla, muun muassa Triestessä, Zürichissä ja Pariisissa, mutta kirjoitti lähes yksinomaan Dublinista. Hänen tuotantoonsa kuuluvat novellikokoelma [[Dublinilaiset]], romaani Odysseus, jonka tapahtumat sijoittuvat yhteen päivään, ja viimeinen teos [[Finnegans Wake]]. Päivämäärä 16. kesäkuuta 1904 on valittu, koska silloin Joyce oli ensi kerran kävelyllä tulevan vaimonsa [[Nora Barnaclen]] kanssa.
+
+### v2-589
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Leopold Bloom
+VASTAUS: Leopold Bloom on James Joycen romaanin Odysseus päähenkilö, kuvitteellinen dublinilainen mainosmyyjä, jonka päivää seurataan 16. kesäkuuta 1904. Hän on juutalaistaustainen ja kokee olevansa kaupungissa osin ulkopuolinen. Bloom kulkee aamusta yöhön Dublinin halki, ja kirjan jaksot vastaavat löyhästi [[Homeroksen]] eepoksen [[Odysseian]] vaiheita, mistä nimi tulee. Hänen vaimonsa on [[Molly Bloom]], ja päivän aikana hän tapaa myös nuoren opettajan ja kirjailijan [[Stephen Dedaluksen]].
+
+### v2-590
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Arthur Guinness
+VASTAUS: Arthur Guinness syntyi Irlannissa vuonna 1725 ja kuoli vuonna 1803. Uudenvuodenaattona 1759 hän allekirjoitti vuokrasopimuksen St. James's Gaten panimosta: vuokra oli 45 puntaa vuodessa, tontti neljä eekkeriä ja sopimuskausi yhdeksän tuhatta vuotta. Aluksi panimo valmisti aleolutta, mutta Guinness siirtyi myöhemmin tummaan [[portteriin]], josta kehittyi yhtiön tuote. Yhtiö kasvoi sukupolvien kuluessa: kun [[Benjamin Lee Guinness]] kuoli vuonna 1868, tontti oli kasvanut yli 64 eekkerin kokoiseksi. Nykyinen vierailukeskus [[Guinness Storehouse]] avautui vuonna 2000.
+
+### v2-591
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: St. James's Gate
+VASTAUS: St. James's Gate on Dublinin länsiosassa Liffey-joen eteläpuolella sijaitseva alue ja panimon nimi. Uudenvuodenaattona 1759 Arthur Guinness vuokrasi alueen käyttämättömän panimon yhdeksäksi tuhanneksi vuodeksi 45 punnan vuosivuokralla. Kun [[Benjamin Lee Guinness]] kuoli vuonna 1868, tontti oli kasvanut yli 64 eekkerin kokoiseksi ja yhtiön arvo ylitti miljoona puntaa. Panimo myi vuonna 1868 noin 350 000 tynnyriä ja vuonna 1876 jo noin 779 000 tynnyriä. Yhtiö osti tontin myöhemmin omakseen, joten pitkä vuokrasopimus raukesi. Panimon vieressä toimii [[Guinness Storehouse]] -vierailukeskus, ja panimoalue sijaitsee lähellä [[Liffey-joen]] etelärantaa.
+
+### v2-592
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: georgiaaniset
+VASTAUS: Georgiaaninen tyyli on nimetty Britannian kuninkaiden Yrjö I:n–Yrjö IV:n mukaan, ja se vallitsi noin vuosina 1714–1830. Tunnusmerkkejä ovat symmetria, tasainen julkisivu, punatiili, suorakaiteen muotoiset ikkunat ja koristeelliset ovenpielet, kuten viuhkaikkunat. Dublinissa tyylistä tuli kaupungin ilme 1700-luvulla, kun varakkaat rakennuttivat tiiliriveistä uusia katuja ja aukioita. Kaupunkikuvaa ohjasi [[Wide Streets Commission]], joka perustettiin 1700-luvun puolivälissä ja joka leveytti ja suoristi katuja. Tunnettuja georgiaanisia aukioita ovat [[St Stephen's Green]] ja [[Fitzwilliam Square]].
+
+### v2-593
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Merrion Squaren
+VASTAUS: Merrion Square on yksi Dublinin tunnetuimmista georgiaanisista aukioista, ja sen rakentaminen alkoi 1700-luvun jälkipuoliskolla. Aukion ympärillä on tasalaatuisia tiilirivitaloja, ja keskellä on puisto. Siellä ovat asuneet monet merkkihenkilöt: [[Oscar Wilde]] vietti lapsuutensa aukion varrella numerossa 1, runoilija [[William Butler Yeats]] asui myöhemmin numerossa 82 ja poliitikko [[Daniel O'Connell]] numerossa 58. Aukion läheisyydessä on myös [[Irlannin kansallisgalleria]]. Puistossa on Oscar Wilden muistomerkki.
+
+### v2-594
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Dyflinn
+VASTAUS: Dyflinn on Dublinin vanha norjalaisgaelilainen nimi, ja se on peräisin iirin sanasta Duibhlinn, musta lampi. Viikingit perustivat Liffey-joen rannalle linnoitetun satamaleirin 800-luvulla, ja siitä kasvoi vuosisatojen kuluessa kuningaskunta, joka oli yksi Irlannin merkittävimmistä kauppakeskuksista. Dyflinnin tärkeitä hallitsijoita oli [[Sigtrygg Silkkiparta]], jonka aikana kaupungissa lyötiin 990-luvulla ensimmäiset irlantilaiset kolikot. Hänen kerrotaan perustaneen myös [[Christ Churchin katedraalin]]. Viikinkiaikaa esittelee museo [[Dublinia]].
+
+### v2-595
+KOHDE: kaupunki:dublin
+KYSYMYS: Kerro lisää: Clontarfin
+VASTAUS: Clontarfin taistelu käytiin 23. huhtikuuta 1014 Dublinin pohjoispuolella, nykyisen Clontarfin kaupunginosan tienoilla. Vastakkain olivat Irlannin ylikuningas [[Brian Boru]] sekä Leinsterin ja Dublinin viikinkien liittouma, jonka tukena oli joukkoja myös [[Orkneysaarten]] jaarli Sigurdilta. Brian Boru kaatui taistelussa, mutta hänen joukkonsa voittivat. Taistelu on jäänyt irlantilaiseen muistiin ratkaisevana, vaikka viikinkien vaikutus ei sen jälkeen heti päättynyt: Dublin pysyi kauppakaupunkina. Tapahtumasta on yli tuhat vuotta, ja nykytutkimus pitää sitä usein kilpailevien sukujen välisenä mittelönä eikä koko saaren kansojen sotana.
+
+### v2-596
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: Keski-Atlantin harjanteella
+VASTAUS: Keski-Atlantin harjanne on vedenalainen vuorijono, joka kulkee Atlantin valtameren keskellä pohjoisesta etelään. Harjanteen kohdalla merenpohja halkeaa ja uutta kuorta syntyy kuuman kiven noustessa pintaan, ja Atlantin kaksi puolta erkanevat toisistaan muutaman senttimetrin vuosivauhtia. Islanti on harvoja paikkoja, jossa harjanne nousee merenpinnan yläpuolelle. Halkeaman näkee [[Þingvellirin]] rotkossa, ja harjanteen vaikutuksesta syntyi vuosina 1963–1967 tulivuorisaari [[Surtsey]]. Myös [[Azorit]] sijaitsevat harjanteen läheisyydessä.
+
+### v2-597
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: mannerlaatat
+VASTAUS: Mannerlaatat ovat maankuoren ja ylävaipan jäykkiä osia, jotka liikkuvat hitaasti kuuman, pehmeän vaipan päällä. Liike on yleensä muutaman senttimetrin vuodessa, joten kuvio muuttuu vasta miljoonien vuosien kuluessa. Laattojen rajoilla syntyy vuoria, maanjäristyksiä ja tulivuoria. Mantereiden liikkumisen ajatuksen esitti vuonna 1912 saksalainen [[Alfred Wegener]], mutta [[laattatektoniikka]] vakiintui tieteen yleiseksi teoriaksi vasta 1960-luvulla. Islannissa Pohjois-Amerikan ja Euraasian laatat erkanevat toisistaan, ja ilmiön näkee [[Þingvellirin]] rotkossa, joka levenee noin pari senttiä vuodessa.
+
+### v2-598
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: kuumia lähteitä
+VASTAUS: Islannissa kuumia lähteitä syntyy, kun sade- ja pohjavesi lämpiävät maan alla tulivuoriaktiivisuuden kuumentamassa kalliossa ja nousevat takaisin pintaan. Tunnetuin kuuma lähde on [[Geysir]], jonka mukaan kaikki muut geysirit on nimetty; lähistöllä oleva [[Strokkur]] purkautuu säännöllisesti muutaman minuutin välein. Lämmin vesi on myös arjen osa: lähes joka kylässä on ympärivuotinen uimala, ja sen vieressä on pieniä kuumia altaita, joissa istutaan ja jutellaan. Tunnetuin matkailukohde on [[Sininen laguuni]], jonka vesi tulee geotermisen voimalaitoksen käyttämästä vedestä.
+
+### v2-599
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: pankkia
+VASTAUS: Islannin kolme suurta pankkia, [[Glitnir]], [[Landsbanki]] ja [[Kaupthing]], kaatuivat lokakuussa 2008 muutamassa päivässä. Pankkien taseet olivat kasvaneet moninkertaisiksi maan talouteen nähden, ja kun kansainvälinen rahoitus ehtyi, ne eivät voineet jatkaa. Valtio otti pankkien kotimaan toiminnot hoitoonsa, ja kruunun arvo romahti. Lähteiden mukaan kyse oli suhteessa väkilukuun suurimmasta pankkikriisistä minkään maan historiassa. Maa haki apua Kansainväliseltä valuuttarahastolta. Landsbankin ulkomaiset talletustilit, [[Icesave]], aiheuttivat kiistan Britannian ja Alankomaiden kanssa.
+
+### v2-600
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: Alþingin
+VASTAUS: Alþingi on Islannin parlamentti, ja sen alkuna pidetään vuonna 930 [[Þingvellirin]] tasangolle kokoontunutta kansankokousta. Kokous pidettiin joka kesä kahden viikon ajan, ja lakimies julisti maan lait ääneen [[Lögbergiltä]], lakikalliolta, koska niitä ei aluksi kirjoitettu ylös. Alþingiä pidetään maailman vanhimpana yhä toimivana parlamenttina, vaikka se lakkautettiin väliaikaisesti vuosina 1800–1844 Tanskan vallan aikana ja perustettiin uudelleen vuonna 1845. Nykyään se toimii [[Reykjavíkissä]] [[Austurvöllur]]-aukion laidalla olevassa 1800-luvun talossa.
+
+### v2-601
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: kattilakumous
+VASTAUS: Kattilakumous, islanniksi Búsáhaldabylting, oli Islannin pankkikriisin jälkeinen kansalaisliike vuosina 2008–2009. Mielenosoittajat kokoontuivat Reykjavíkissä [[Austurvöllur]]-aukiolle Alþingin eteen, ja tammikuussa 2009 mukana oli kattiloita, pannuja ja kauhoja, joita hakattiin niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Hallitus, jota johti pääministeri [[Geir Haarde]], erosi tammikuun lopussa 2009. Huhtikuun vaaleissa valtaan nousi [[Jóhanna Sigurðardóttir]], josta tuli maan ensimmäinen naispääministeri.
+
+### v2-602
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: troolarit
+VASTAUS: Troolari on kalastusalus, joka vetää perässään suurta suppilomaista verkkoa eli trooliä. Pohjatrooli raahaa verkkoa merenpohjaa pitkin, ja pelagisella troolilla kalastetaan vapaassa vedessä. Troolarit ovat tehokkaita, ja siksi niiden vaikutus kalakantoihin on ollut suuri. Turskasodissa Islannin vesillä kalastivat erityisesti Britannian troolarit, joiden kotisatamia olivat [[Hull]] ja [[Grimsby]]. Islantilaiset vastasivat leikkaamalla verkkoja erityisillä leikkureilla. Nykyaikaiset suuret troolarit ovat tehdasaluksia, jotka käsittelevät ja pakastavat saaliin merellä, ja kalastusta ohjataan [[kalastuskiintiöillä]].
+
+### v2-603
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: turskasodassa
+VASTAUS: Turskasodat olivat kolme Islannin ja Britannian välistä kalastusriitaa vuosina 1958–1961, 1972–1973 ja 1975–1976. Islanti laajensi kalastusrajaansa 12 meripeninkulmaan, sitten 50:een ja lopulta 200:aan, koska maan talous oli riippuvainen kalastuksesta. Rannikkovartioston alukset leikkasivat brittitroolarien verkkoja, ja brittien laivaston aluksia lähetettiin suojaamaan troolareita, jolloin kolarointeja sattui. Vuonna 1976 Islanti katkaisi hetkeksi diplomaattisuhteet Britanniaan, ja lopulta osapuolet sopivat 200 meripeninkulman rajasta. Raja vakiintui maailmalla [[talousvyöhykkeeksi]], jonka YK:n [[merioikeusyleissopimus]] vahvisti vuonna 1982. Islanti oli [[NATOn]] jäsen, joten riita koetteli myös liittokunnan sisäisiä suhteita.
+
+### v2-604
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: rannikkovartioston
+VASTAUS: Islannin rannikkovartiosto, islanniksi Landhelgisgæslan, perustettiin vuonna 1926. Sen tehtäviin kuuluvat kalastusvalvonta, meripelastus, merenkulun turvallisuus ja alueellinen valvonta. Koska Islannilla ei ole omaa armeijaa, rannikkovartiosto hoitaa myös osan turvallisuustehtävistä. Alukset ja helikopterit ovat tärkeitä saaren pitkän rannikon ja ankarien merenkulkuolosuhteiden vuoksi. [[Turskasotien]] aikana alukset, kuten [[Óðinn]], tulivat tunnetuiksi troolarien verkkojen leikkaamisesta.
+
+### v2-605
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: ylänköä
+VASTAUS: Islannin sisäosia kutsutaan nimellä Hálendið eli ylänkö. Se on asumatonta, karua aluetta, jossa on laavakenttiä, hiekka- ja tuhka-aavikoita sekä jäätiköitä, eikä kasvillisuutta juuri ole. Ylängön halki kulkevat tiet, kuten Kjölurin ja [[Sprengisandurin]] reitit, ovat avoinna vain kesäisin ja vaativat usein nelivetoauton. Alueella on myös värikkäitä paikkoja: [[Landmannalaugar]] tunnetaan ryoliittivuorista ja lämpimistä lähteistä, ja [[Askja]] on suuri tulivuoren kaldera, jossa on kraatterijärvi.
+
+### v2-606
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: jäätiköitä
+VASTAUS: Islannin jäätiköt peittävät lähteiden mukaan noin kymmenesosan maan pinta-alasta. Suurimman, [[Vatnajökullin]], rinnalla ovat Langjökull, Hofsjökull ja [[Mýrdalsjökull]]. Jäätiköiden alla on tulivuoria, ja purkaukset voivat sulattaa jäätä niin nopeasti, että syntyy jäätikköjuoksu eli [[jökulhlaup]], äkillinen tulva. Jäätiköt ovat vetäytyneet ilmaston lämpenemisen myötä: [[Okjökull]] menetti jäätikön aseman vuonna 2014, ja sen muistoksi pystytettiin laatta vuonna 2019.
+
+### v2-607
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: Vatnajökull
+VASTAUS: Vatnajökull on Islannin suurin jäätikkö ja yksi Euroopan suurimmista, pinta-alaltaan yli seitsemän tuhatta neliökilometriä ja paksuimmillaan lähes tuhat metriä. Sen alla ja ympärillä on aktiivisia tulivuoria. Jäätikön lounaisreunalla kohoaa [[Hvannadalshnúkur]], Islannin korkein huippu, noin 2 100 metriä korkea. Reunajäätiköistä sulamisvesi virtaa [[Jökulsárlón]]-jäälaguuniin, jonka jäävuoret ajelehtivat merelle. Alue kuuluu [[Vatnajökullin kansallispuistoon]], joka on Euroopan suurimpia kansallispuistoja.
+
+### v2-608
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: Alþingi
+VASTAUS: Alþingi on Islannin kansalliskokous, joka perustettiin vuonna 930 Þingvellirin tasangolle. Kokous pidettiin kesäisin kahden viikon ajan, ja lakimies julisti lait ääneen [[Lögbergiltä]], koska niitä ei aluksi kirjoitettu ylös. Noin vuonna 1000 Alþingi päätti ottaa kristinuskon käyttöön, ja asian ratkaisi lakimies [[Þorgeir Ljósvetningagoði]]. Vuonna 1262 islantilaiset hyväksyivät sopimuksen, [[Gamli sáttmáli]], jolla Islanti liittyi Norjan kruunun alaisuuteen. Nykyinen tasavalta julistettiin Þingvellirissä 17. kesäkuuta 1944.
+
+### v2-609
+KOHDE: maa:ISL
+KYSYMYS: Kerro lisää: Reykjavikissa
+VASTAUS: Reykjavík on Islannin pääkaupunki ja maailman pohjoisin itsenäisen valtion pääkaupunki. Kaupungin nimi tarkoittaa savulahtea, ja se viittaa lähteiden höyryyn. Perimätiedon mukaan seudulle asettui noin vuonna 874 norjalainen [[Ingólfur Arnarson]]. Pääkaupunkiseudulla asuu suurin osa islantilaisista. Kaupungin tunnetuimpia rakennuksia ovat betonilla muotoiltu [[Hallgrímskirkja]] ja lasipintainen konserttitalo [[Harpa]]. Vuonna 1986 pidettiin kaupungin [[Höfði]]-talossa Yhdysvaltain ja Neuvostoliiton johtajien huippukokous.
+
+### v2-610
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: saagoja
+VASTAUS: Islantilaissaagat ovat keskiajalla, pääosin 1200- ja 1300-luvuilla kirjoitettuja proosakertomuksia. Suurin ryhmä, sukusaagat, kertoo islantilaisista suvuista asutuksen jälkeisinä vuosisatoina eli noin vuosina 870–1030, ja aiheina ovat kunnia, riidat ja koston kierre. Tunnetuimpia ovat [[Njálan saaga]] ja Egilin saaga. Kuninkaansaagoista kuuluisin on [[Snorri Sturlusonin]] kokoama [[Heimskringla]]. Käsikirjoituksia säilytetään Reykjavíkissä, ja Tanskaan joutuneita käsikirjoituksia on palautettu Islantiin vuodesta 1971 alkaen.
+
+### v2-611
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: kielenhuolto
+VASTAUS: Islannin kielenhuolto on tietoista työtä kielen säilyttämiseksi ja kehittämiseksi. Uusille asioille luodaan islantilaisia sanoja vieraiden lainasanojen sijaan: tietokone on tölva, lukujen ennustaja, ja puhelin sími, joka tarkoitti alun perin lankaa. Sanastotyötä tekee muun muassa kielilautakunta [[Íslensk málnefnd]]. Perinne ulottuu 1800-luvulle asti: runoilija [[Jónas Hallgrímsson]] muodosti paljon uusia sanoja, ja hänen syntymäpäivänsä 16. marraskuuta on [[Islannin kielen päivä]].
+
+### v2-612
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: saagoissa
+VASTAUS: Saagoissa kerrotaan islantilaisten esi-isien teoista, kunniasta ja riidoista, usein kuivan lakonisella tyylillä. Ne on kirjoitettu 1200- ja 1300-luvuilla, mutta tapahtumat sijoittuvat enimmäkseen asutuskauden ja sitä seuranneiden vuosisatojen aikaan. Eri lajeja ovat [[sukusaagat]], jotka seuraavat suvun kohtaloita, ja kuninkaansaagat, jotka kertovat Norjan hallitsijoista. Kuuluisin kuninkaansaagojen kokoelma on [[Heimskringla]], jonka kokoajaksi mainitaan [[Snorri Sturluson]]. Muinaispohjoismainen kirjallisuus on antanut vaikutteita myös myöhemmille kirjailijoille, esimerkiksi [[J. R. R. Tolkienille]].
+
+### v2-613
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: Jólabókaflóð
+VASTAUS: Jólabókaflóð tarkoittaa joulun kirjatulvaa. Islannissa suurin osa vuoden uusista kirjoista julkaistaan syksyllä, ja marraskuussa kaikkiin koteihin jaetaan luettelo [[Bókatíðindi]], jossa ne kaikki esitellään. Kirja on tavallisin joululahja, ja se avataan jouluaattona, jolloin monet jäävät lukemaan sängyssä suklaan kanssa. Yleisen selityksen mukaan tapa vakiintui toisen maailmansodan aikana, kun tuonti oli rajoitettua ja paperi sallittua. Asukasta kohti Islannissa julkaistaan enemmän kirjoja kuin missään muussa maassa; maasta on tullut myös Nobelin kirjallisuuspalkinnon vuonna 1955 saanut [[Halldór Laxness]], ja Reykjavík on [[Unescon]] kirjallisuuden kaupunki.
+
+### v2-614
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: geotermisellä energialla
+VASTAUS: Geoterminen energia on maan sisäosien lämmöstä saatavaa energiaa. Islannissa kuumaa vettä porataan maan alta ja johdetaan putkia pitkin koteihin ja liikerakennuksiin, ja suurin osa rakennuksista lämmitetään tällä tavalla. Reykjavíkin [[kaukolämpö]] perustuu geotermiseen veteen, ja kaupungin ympäristön voimalaitokset, kuten [[Nesjavellir]] ja [[Hellisheiði]], tuottavat sekä sähköä että lämpöä. Maan alta saatavaa lämpöä käytetään myös muuhun, esimerkiksi kasvihuoneiden, kalankasvatuksen ja katujen sulanapidon lämmittämiseen.
+
+### v2-615
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: maanalaisella lämmöllä
+VASTAUS: Maanalainen lämpö syntyy siitä, että Islanti sijaitsee mannerlaattojen rajalla ja kuuma kallio on lähellä pintaa. Alueet jaetaan kahteen ryhmään: korkean lämpötilan alueisiin tulivuorten tuntumassa, kuten [[Krafla]] ja [[Reykjanesin]] niemimaa, joiden höyrystä tuotetaan sähköä, sekä matalan lämpötilan alueisiin, joiden vettä käytetään lämmitykseen. Lämmin vesi lämmittää myös kasvihuoneita, esimerkiksi [[Hveragerðin]] kaupungissa, jossa viljellään tomaatteja ja jopa banaaneja. Porauksen on todettu joskus aiheuttavan pieniä maanjäristyksiä.
+
+### v2-616
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: lammas
+VASTAUS: Islanninlammas on pienikokoinen alkuperäisrotu, jonka viikingit toivat saarelle asutuskaudella 800- ja 900-luvuilla. Lähteiden mukaan rotu on säilynyt lähes puhtaana lähes tuhat vuotta, koska elävien eläinten tuonti on ollut tiukasti rajoitettua. Lampaat laiduntavat kesällä vapaasti ylängöillä, ja syksyllä ne kootaan yhteisellä keräysretkellä, jota sanotaan nimellä [[réttir]]. Villasta kudotaan perinteinen [[lopapeysa]], kuvioitu villapaita, ja lihaa käytetään ruokaan, esimerkiksi savustettuna jouluna nimellä [[hangikjöt]].
+
+### v2-617
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: skyr
+VASTAUS: Skyr on islantilainen hapanmaitotuote, joka muistuttaa tiivistä [[jogurttia]]. Sitä valmistetaan hapattamalla maitoa ja siivilöimällä neste pois, jolloin jäljelle jää paksu, proteiinipitoinen massa. Tuote tuli saarelle [[viikinkien]] mukana asutuskaudella, ja sitä on valmistettu Islannissa vuosisatoja. Perinteisesti sitä syödään kylmänä kermaan tai maitoon sekoitettuna, sokerin ja marjojen kanssa. Nykyään skyriä myydään myös muualla maailmassa, ja sitä on saatavissa kaupoissa Suomessakin.
+
+### v2-618
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: hákarl
+VASTAUS: Hákarl on islantilainen erikoisuus, grönlanninhaista valmistettu hapatettu ja kuivattu kala. Tuore [[grönlanninhai]] on myrkyllistä, koska sen lihassa on runsaasti ureaa ja muita yhdisteitä, joten liha on käsiteltävä. Perinteisesti lihaa pidetään viikkoja sorakerroksen alla, jossa neste valuu pois, ja sen jälkeen paloja kuivataan ilmassa kuukausien ajan. Lopputulos on voimakkaan hajuinen ja ammoniakkimainen. Sitä syödään pieninä paloina, usein kuminalla maustetun [[brennivín]]-viinan kera, ja se kuuluu perinteisesti [[þorrablót]]-talvijuhlaan tammi–helmikuussa.
+
+### v2-619
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: tulivuoria
+VASTAUS: Islannissa on noin kolmekymmentä aktiivista tulivuorijärjestelmää, ja purkauksia tapahtuu lähteiden mukaan keskimäärin muutaman vuoden välein. Tunnetuimpia ovat [[Hekla]], jota keskiajalla pidettiin helvetin porttina, ja [[Eyjafjallajökull]], jonka purkaus keväällä 2010 keskeytti lentoliikenteen suuressa osassa Eurooppaa. Vuonna 1973 purkaus [[Heimaeyn]] saarella pakotti Vestmannaeyjarin asukkaat evakuoitumaan, mutta kaupunki säilyi. Viime vuosina Reykjanesin niemimaalla on purkautunut useita kertoja.
+
+### v2-620
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: jäätiköitä
+VASTAUS: Jäätikkö on pysyvä, hitaasti liikkuva jäämassa, joka syntyy, kun lumi kerääntyy vuodesta toiseen ja puristuu jääksi. Islannin jäätiköt ovat vesivarasto ja voimanlähde, sillä niiden sulamisvedet täyttävät jokia ja pyörittävät vesivoimaloita. Jäätikköjoet ovat usein harmaita, koska ne kuljettavat mukanaan hienoa kiviainesta, ja ne ovat muokanneet laajoja tulvatasankoja eli [[sandureita]]. Talvisin [[Vatnajökullin]] reunalle muodostuu sinisiä [[jäätikköluolia]], joihin tehdään opastettuja retkiä. Jäätiköt ovat pienentyneet ilmaston lämpenemisen myötä, ja tutkijat seuraavat niiden muutosta tarkasti.
+
+### v2-621
+KOHDE: kaupunki:islanti
+KYSYMYS: Kerro lisää: Vatnajökull
+VASTAUS: Vatnajökull on Islannin suurin jäätikkö, ja sen alla on useita aktiivisia tulivuoria. Yksi niistä on [[Grímsvötn]], joka purkautuu toistuvasti ja kerää jäätikön alle sulamisvettä, joka voi purkautua äkillisenä tulvana. Toinen on [[Bárðarbunga]], jonka purkaus vuosina 2014–2015 tuotti suuren laavakentän Holuhraunin alueelle. Jäätikön reunalla on [[Skaftafellin]] alue, jossa on kuuluisa [[Svartifoss]], basalttipylväiden reunustama vesiputous.
+
+### v2-622
+KOHDE: maa:ITA
+KYSYMYS: Kerro lisää: kaupunkivaltioita
+VASTAUS: Italian kaupunkivaltio oli kaupunki ja sitä ympäröivä maaseutu, jolla oli oma hallinto, omat lait ja usein oma sotavoima. Ne syntyivät keskiajalla, kun pohjoisen ja keskisen Italian kaupungit vaurastuivat kaupasta ja rahoituksesta ja pyrkivät irti keisarin ja paavin vallasta. Tunnetuimpia olivat [[Firenze]], jota hallitsi pankkiirisuku [[Medicit]], merikaupunki [[Genova]] ja Venetsian tasavalta. Kaupunkien kilpailu synnytti kulttuurin kukoistuksen, ja renessanssi sai alkunsa juuri Firenzestä. Niemimaa pysyi poliittisesti hajanaisena, kunnes yhtenäinen Italia syntyi vuonna 1861.
+

@@ -1,0 +1,450 @@
+### v1-450
+KOHDE: kaupunki:pietari
+KYSYMYS: Mitä nimiä Pietari on kantanut vuosien varrella?
+VASTAUS: Joo, tän minä tiedän. Nimiä on ollu useampi. Kaupunki perustettiin nimellä Sankt Pieterburg, ja vuonna 1914, ensimmäisen maailmansodan alettua, saksalaiselta kuulostanut nimi muutettiin muotoon [[Petrograd]]. Vuonna 1924 kaupunki nimettiin [[Leningradiksi]] Leninin kuoleman jälkeen, ja vuonna 1991 kansanäänestys palautti vanhan nimen, kun Neuvostoliitto oli hajoamassa. Isoisän matkavuonna 1873 se oli vielä [[Venäjän keisarikunnan]] pääkaupunki. Ja tän kaiken minä kannoin päässäni.
+
+### v1-451
+KOHDE: kaupunki:pietari
+KYSYMYS: Mitä Eremitaašin museossa on esillä?
+VASTAUS: Odotas vähän, tää on iso aihe. Eremitaaši toimii [[Talvipalatsissa]] ja sen viereisissä rakennuksissa, ja kokoelma sai alkunsa, kun [[Katariina Suuri]] alkoi vuonna 1764 ostaa taidetta Euroopasta. Nykyään museossa on useita miljoonia esineitä, kuten maalauksia, veistoksia, antiikin esineitä ja koruja, eikä niitä ehdi nähdä yhdellä käynnillä. Rakennuksen komeat juhlasalit ovat nähtävyys jo sinänsä. Pitkä käytävä, mutta ei pidempi kuin minun lentoni Pariisiin.
+
+### v1-452
+KOHDE: kaupunki:pietari
+KYSYMYS: Mitä pietarilaiset syövät ja juovat arkena?
+VASTAUS: No niin, ruokapöytään. Venäläiseen arkiruokaan kuuluvat esimerkiksi punajuurikeitto [[borssi]], taikinataskut eli [[pelmenit]] sekä ohuet [[blinit]], joita tarjotaan smetanan kanssa. Teetä juodaan paljon, perinteisesti [[samovaarista]], ja leipä on useimmiten tummaa ruisleipää. Pietarissa on myös pitkä kahvilaperinne, ja kahvilat ovat ahkerassa käytössä pitkän talven aikana. Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+
+### v1-453
+KOHDE: kaupunki:pietari
+KYSYMYS: Mitä ovat valkeat yöt ja milloin ne koetaan?
+VASTAUS: Hyvä kysymys tuo, tost minä osaan kertoo. Pietari on noin 60. leveysasteella, joten kesä-heinäkuun vaihteessa aurinko laskee vain hetkeksi ja taivas pysyy yölläkin vaaleana. Ilmiö alkaa touko-kesäkuussa ja kestää heinäkuulle, ja ihmiset kävelevät öisin pitkin [[Nevan]] rantoja. Yöllä laivojen päästämiseksi joen kautta avataan nostosiltoja, joista tunnetuin on [[Palatsisilta]]. Ylhäältä katsottuna se on kaunista, mutta minä nukun silti huonosti.
+
+### v1-454
+KOHDE: kaupunki:pietari
+KYSYMYS: Miksi Pietarin metro on niin syvällä?
+VASTAUS: Annas ku mietin. Pietari seisoo Nevan suiston pehmeällä ja märällä maalla, joten tunnelit on rakennettu syvälle kiinteämpiin maakerroksiin. [[Pietarin metro]] avattiin vuonna 1955 silloisessa [[Leningradissa]], ja sen syvimmät asemat, kuten [[Admiraltejskaja]], ovat yli 80 metrin syvyydessä. Liukuportaat ovat siksi pitkiä, ja matka pinnalle kestää useita minuutteja. Minä pysyn mieluummin katolla.
+
+### v1-455
+KOHDE: maa:SRB
+KYSYMYS: Milloin Serbia irtautui Ottomaanien vallasta?
+VASTAUS: Ai tota, hyvä kysymys. Serbia sai ottomaanien alaisuudessa autonomian 1800-luvun alkupuolella, ja kansannousun johtajana tunnetaan [[Karađorđe]], joka aloitti kapinan vuonna 1804. Kansainvälisesti tunnustettu täysi itsenäisyys vahvistettiin vasta [[Berliinin kongressissa]] vuonna 1878. Siihen asti maa oli nimellisesti [[Ottomaanien valtakunnan]] vasallivaltio, kuten isoisän matkavuoden 1873 Belgradissa. En ole varma kaikista välivaiheista, mutta nämä ovat tärkeimmät. Kyllä sen kestää kuulla.
+
+### v1-456
+KOHDE: maa:SRB
+KYSYMYS: Millaisia luostareita Serbiassa on nähtävänä?
+VASTAUS: Selvä juttu, tämä on mieluisa aihe. Serbian ortodoksiluostarit ovat maan tärkeimpiä nähtävyyksiä. [[Studenica]] perustettiin 1100-luvun lopulla [[Stefan Nemanjan]] toimesta, ja se kuuluu UNESCOn maailmanperintökohteisiin. Pohjoisessa [[Fruška Goran]] vuoristossa on lukuisia pieniä luostareita, joista monet ovat peräisin keskiajalta tai sen jälkeiseltä ajalta. Seinämaalaukset ovat tunnettuja väreistään. Pitkä lista, mutta minä muistin sen kauniisti.
+
+### v1-457
+KOHDE: maa:SRB
+KYSYMYS: Mitä serbialaiseen ruokapöytään kuuluu?
+VASTAUS: Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.
+
+### v1-458
+KOHDE: maa:SRB
+KYSYMYS: Millaisia luonnonnähtävyyksiä Serbiassa on?
+VASTAUS: Kas vaan, tähän on vastaus. Pohjoisessa Vojvodinan tasangoilla virtaa [[Tonava]], joka kaivautuu idässä Romanian rajalla kapeaan [[Rautaporttien]] rotkoon, jota pidetään yhtenä Euroopan vaikuttavimmista jokirotkoista. Länsiosassa [[Taran]] kansallispuiston vuoristometsät ovat tunnettuja karhuistaan ja syvistä kanjoneistaan. Etelässä vuoret nousevat yli kahden kilometrin korkeuteen. Näkymät ovat parhaita ylhäältä, minä tiedän.
+
+### v1-459
+KOHDE: maa:SRB
+KYSYMYS: Mikä Exit-festivaali on ja missä se järjestetään?
+VASTAUS: Hetkinen ny, tämän tiedän. [[Exit]] on musiikkifestivaali, joka järjestetään [[Novi Sadissa]] [[Petrovaradinin linnoituksessa]] Tonavan rannalla. Lähteiden mukaan se alkoi vuonna 2000 opiskelijoiden mielenosoituksena ja kasvoi sittemmin kansainvälisesti tunnetuksi tapahtumaksi. Festivaali vetää kesäisin ylläpitäjien mukaan satoja tuhansia kävijöitä, mutta tarkkaa lukua en ole varma. Linnoitus on hieno paikka, vaikka nuo äänet eivät ole kyyhkyn makuun.
+
+### v1-460
+KOHDE: kaupunki:belgrad
+KYSYMYS: Mitä Belgradin piirityksessä vuonna 1456 tapahtui?
+VASTAUS: Kääk, nyt muistan. Heinäkuussa 1456 sulttaani [[Mehmed II]] piiritti Belgradia suurella armeijalla. Unkarilainen sotapäällikkö [[János Hunyadi]] puolusti linnoitusta, ja fransiskaanimunkki [[Giovanni da Capistrano]] kokosi tuhansia aseistamattomia ristiretkeläisiä. Kun osa heistä hyökkäsi omin päin vihollisleiriin, taistelu kääntyi, ja piiritys murtui. Tapahtuma oli tärkeä, koska se pysäytti ottomaanien etenemisen Unkariin vuosikymmeniksi. Onpa siitä jo pitkä aika.
+
+### v1-461
+KOHDE: kaupunki:belgrad
+KYSYMYS: Mitä Belgradin linnoituksella voi nähdä?
+VASTAUS: Tuota niin, tämä on hyvä paikka. Linnoitus ja sen ympärillä oleva Kalemegdanin puisto sijaitsevat kalliolla Savan ja Tonavan yhtymäkohdassa. Paikalla oli antiikin aikana roomalainen linnoitus [[Singidunum]], ja sen päälle ovat rakentaneet monet vallanpitäjät, mm. bysanttilaiset, unkarilaiset, ottomaanit ja serbit. Puistossa kohoaa vuonna 1928 pystytetty [[Pobednik]]-patsas, ja näköala yli jokien on maan kauneimpia. Minä näin sen lentäessäni, ja se kannatti.
+
+### v1-462
+KOHDE: kaupunki:belgrad
+KYSYMYS: Mitä kafanassa Belgradissa syödään ja juodaan?
+VASTAUS: Ai se, tost minä tiedän. Kafana on perinteinen balkanilainen ravintolakahvila, jossa tarjotaan ruokaa, kahvia ja juomia ja usein soitetaan elävää musiikkia. Menu on yleensä liharuokapainotteinen: grillattua lihaa, [[ćevapčićeja]] ja keittoja, ja juomana on usein hedelmätisle [[rakija]]. Tunnettu kafanojen kortteli on bohemiaikoihin juurtuva [[Skadarlija]] vanhassa kaupungissa. Minä en mahdu pöytään, mutta kuulin paljon kadulta.
+
+### v1-463
+KOHDE: kaupunki:belgrad
+KYSYMYS: Mitä Belgradin joenrannoilla voi tehdä?
+VASTAUS: Hyvä kysymys tuo. Belgradissa kaksi jokea, Sava ja Tonava, kohtaavat, ja niiden rannat ovat kaupunkilaisten kesäpaikkoja. Savan keskellä oleva [[Ada Ciganlija]] on saareksi muodostettu virkistysalue, jossa on uimarantoja, ja paikalliset kutsuvat sitä leikillisesti Belgradin mereksi. Yhtymäkohdassa on myös suojeltu [[Veliko ratno ostrvo]], jossa on lintuja ja tulvametsää. Ylhäältä katsottuna kaupunki näyttää vesikaupungilta.
+
+### v1-464
+KOHDE: kaupunki:belgrad
+KYSYMYS: Millainen on Belgradin yöelämä?
+VASTAUS: No jopas, kysyt minulta yöstä. Belgrad tunnetaan vilkkaasta yöelämästään, johon kuuluvat ravintolat, baarit ja kellumaan rakennetut [[splavit]], joita on [[Savan]] ja [[Tonavan]] rannoilla. Ne ovat lautoille tehtyjä klubeja, joissa soitetaan musiikkia ja tanssitaan kesäisin pitkälle aamuun. Vanhassa kaupungissa kuulee usein myös elävää musiikkia. Minä nukun aikaisin, koska kyyhkyn aamut alkavat varhain.
+
+### v1-465
+KOHDE: maa:SVK
+KYSYMYS: Miten Slovakia ja Tšekki erosivat toisistaan?
+VASTAUS: Joo, tän minä tiedän. Slovakia ja Tšekki kuuluivat vuoteen 1992 yhteiseen valtioon, [[Tšekkoslovakiaan]], joka syntyi ensimmäisen maailmansodan jälkeen vuonna 1918. Kommunistinen hallinto päättyi [[samettivallankumouksessa]] vuonna 1989, ja valtio jakautui rauhanomaisesti kahtia 1. tammikuuta 1993. Eroa kutsutaan usein [[samettieroksi]], koska siihen ei liittynyt väkivaltaa. Slovakia liittyi Euroopan unioniin vuonna 2004. Pidempi tarina kuin luulin.
+
+### v1-466
+KOHDE: maa:SVK
+KYSYMYS: Mitkä Slovakian linnat kannattaa nähdä?
+VASTAUS: Odotas vähän, linnoja riittää. Slovakiassa on satoja linnoja ja linnanraunioita, ja moni niistä seisoo jyrkällä kalliolla. [[Spišin linna]] idässä on yksi Keski-Euroopan laajimmista linnakokonaisuuksista ja kuuluu UNESCOn maailmanperintöön. [[Oravan linna]] kohoaa joen yläpuolella, ja sitä on käytetty kuvauspaikkana vuoden 1922 elokuvassa [[Nosferatu]]. Minä katselin niitä monta kertaa ylhäältä, ja ne näyttävät sieltä pieniltä leluilta.
+
+### v1-467
+KOHDE: maa:SVK
+KYSYMYS: Mikä on Slovakian kansallisruoka?
+VASTAUS: Nyt muistan: ruokaa. Slovakian kansallisruokana pidetään ruokaa nimeltä [[bryndzové halušky]], jossa perunataikinasta tehdyt pienet nyytit tarjoillaan lampaanjuustolla [[bryndzalla]] ja paistetulla pekonilla. Kaakossa Slovakian puolella ulottuu myös [[Tokajin]] viinialue, joka on tunnettu makeista viineistään. Ruoka on runsasta ja ravitsevaa vuoristoilmastoon. Oma leivonnaisensa täällä varmasti on, en vaan tiedä sen nimee.
+
+### v1-468
+KOHDE: maa:SVK
+KYSYMYS: Millaisia vuoria Slovakiassa on?
+VASTAUS: Katotaas. Slovakian pohjoisosaa hallitsevat [[Karpaatit]], joiden korkein osa on [[Korkeat Tatrat]] Puolan rajalla. Korkein huippu on [[Gerlachovský štít]], noin 2 650 metriä korkea, ja sitä pidetään Karpaattien korkeimpana huippuna. Tatrat ovat kapea mutta jyrkkä alppityylinen vuoristo, jossa on ylhäällä lumipeitteisiä rinteitä ja vuoristojärviä. Alla kasvaa havumetsää, jossa elää myös karhuja. Hyvin pitkä kiipeämisen arvoinen vastaus.
+
+### v1-469
+KOHDE: maa:SVK
+KYSYMYS: Mitä Slovakiassa valmistetaan ja viedään?
+VASTAUS: Ai tota. Slovakia on tunnettu autoteollisuudestaan: lähteiden mukaan se valmistaa asukasta kohden enemmän autoja kuin yksikään muu maa, mutta tarkasta luvusta en ole varma. Tehtaita on esimerkiksi [[Volkswagenin]] tehdas Bratislavan seudulla, Kian tehdas [[Žilinassa]] ja autotehdas [[Trnavassa]]. Autot ja niiden osat ovat maan tärkein vientituote. Sama ammatti kuin minulla: kuljetusta, vähän nopeammin.
+
+### v1-470
+KOHDE: kaupunki:bratislava
+KYSYMYS: Miksi Bratislavassa kruunattiin Unkarin kuninkaita?
+VASTAUS: Kato, hyvä kysymys. Kun ottomaanit valtasivat [[Budan]] vuonna 1541, Unkarin hallinto siirtyi pohjoiseen. Bratislava, silloin Pozsony, toimi Unkarin pääkaupunkina 1500-luvulta 1700-luvun loppuun, ja kuninkaita kruunattiin [[Pyhän Martinin tuomiokirkossa]] vuosina 1563–1830. Yksi kruunatuista oli [[Maria Teresia]], joka kruunattiin Unkarin kuningattareksi vuonna 1741. Kirkon tornin kultainen kruunu muistuttaa tästä ajasta. Tästä kuulin jo isoisän matkakirjan ajoilta.
+
+### v1-471
+KOHDE: kaupunki:bratislava
+KYSYMYS: Mitä Bratislavan linnasta tiedetään?
+VASTAUS: Tuota niin, linnasta. Linna kohoaa kukkulalla Tonavan yläpuolella, ja se paloi raunioksi vuonna 1811. Se rakennettiin uudelleen 1950- ja 1960-luvuilla, ja nykyään se toimii museona ja valtiollisena edustuspaikkana. Vanhassa kaupungissa kannattaa nähdä myös [[Mikaelin portti]], ainoa säilynyt keskiaikainen kaupunginportti. Linnan juurella kulkee [[Tonava]], ja sinne näköala on laaja. Ylhäältä kaikki näyttää paremmalta kuin lähempää.
+
+### v1-472
+KOHDE: kaupunki:bratislava
+KYSYMYS: Mikä on bratislavalainen rožky-leivonnainen?
+VASTAUS: Mmm— pullaa vihdoin. Bratislavalainen rožok on kuunsirpin muotoinen hiivataikinaleivonnainen, joka täytetään tavallisesti pähkinä- tai unikonsiementäytteellä. Sen taustalla on saksankielinen [[Pressburger Beugel]], ja vastaavia sirppimäisiä leivonnaisia tunnetaan myös [[Unkarissa]]. Lähteiden mukaan tuote on vanha paikallinen erikoisuus, mutta tarkkaa ikää en ole varma. Sain tästä kerran muruja ikkunalaudalta ja muistan sen edelleen.
+
+### v1-473
+KOHDE: kaupunki:bratislava
+KYSYMYS: Mitä luontoa Bratislavan lähellä on?
+VASTAUS: Selvä juttu. Bratislavan pohjoispuolella kohoavat [[Pienet Karpaatit]], joiden rinteillä on viinitarhoja ja metsiä, ja kaupungista pääsee jalan lähes suoraan luontoon. Luoteessa, [[Morava]]-joen ja Tonavan yhtymäkohdassa, seisoo [[Devínin linna]] kalliolla. Tonavan varrella on myös rantametsää ja pyöräreittejä. Kaupunki on pieni, mutta luonto on lähellä.
+
+### v1-474
+KOHDE: kaupunki:bratislava
+KYSYMYS: Miten Bratislavasta pääsee Wieniin?
+VASTAUS: Ai se, hyvä kysymys. Bratislavan ja [[Wienin]] välinen matka on lyhyt, noin 50–60 kilometriä, ja junalla matka-aika on noin tunti. Joen kautta kulkee myös laiva, jonka lähteiden mukaan tunnetaan nimellä [[Twin City Liner]], ja matka kestää alle kaksi tuntia. Slovakia liittyi Schengen-alueeseen joulukuussa 2007, joten rajatarkastuksia ei enää ole. Siivin matka on vielä lyhyempi, mutta junaa täällä suositaan.
+
+### v1-475
+KOHDE: kaupunki:kosice
+KYSYMYS: Miksi Košicen pääkatu on niin leveä?
+VASTAUS: Joo, tän minä tiedän. Pääkatu on leveä, koska se toimi keskiajalla kaupungin torina, jolla käytiin kauppaa ja pidettiin markkinoita. Kadun keskellä kohoaa [[Pyhän Elisabetin tuomiokirkko]], ja sen lähellä seisoo kultainen [[Immaculata]]-pylväs, joka on pystytetty muistoksi ruttoepidemiasta. Nykyään katu on pääosin kävelykatu, ja sen varrella on kahviloita ja puistoa. Pitkä katu, mutta lyhyt vastaus.
+
+### v1-476
+KOHDE: kaupunki:kosice
+KYSYMYS: Mikä on Košicen laulava suihkulähde?
+VASTAUS: Odotas vähän, tähän on hauska vastaus. Suihkulähde sijaitsee pääkadun keskellä [[Košicen valtionteatterin]] edessä, ja se rakennettiin vuonna 1986. Vesi tanssii musiikin tahdissa, ja kun valot syttyvät illalla, aukio täyttyy katselijoista. Kadun varrella on lisäksi muita nähtävyyksiä, kuten [[Hlavná-katu]]. Ylhäältä se näyttää pieneltä kuplivalta lätäköltä, mutta alhaalta se on vaikuttava.
+
+### v1-477
+KOHDE: kaupunki:kosice
+KYSYMYS: Mitä Košicessa kannattaa maistaa?
+VASTAUS: Annas ku mietin. Itä-Slovakian keittiöön ovat vaikuttaneet unkarilaiset ja slovakialaiset perinteet, joten pöydässä näkyvät esimerkiksi [[guláš]] eli paprikalla maustettu lihapata ja paistettu leipä [[lángos]]. Kaakkoisessa naapurissa tuotetaan [[Tokajin]] viinejä, joita tarjotaan myös Košicen ravintoloissa. Tarkkoja annoksia en ole varma kaikista, mutta nämä ovat tavallisia. Maistaisin itse mieluummin murun.
+
+### v1-478
+KOHDE: kaupunki:kosice
+KYSYMYS: Mitä luontokohteita Košicen lähellä on?
+VASTAUS: No niin, retkelle. Košicen lähistöllä on [[Slovenský kras]] eli Slovakian karstialue, jossa on tippukiviluolia, ja alue kuuluu UNESCOn maailmanperintöön. Hieman pohjoisempana on [[Slovenský raj]] -kansallispuisto rotkoineen ja vesiputouksineen, jossa kuljetaan tikkaiden ja siltojen avulla. Läpi kaupungin virtaa [[Hornád]], joka kaivautuu puiston läpi. Matkat ovat noin tunnin tai parin ajomatkan päässä.
+
+### v1-479
+KOHDE: kaupunki:kosice
+KYSYMYS: Mikä Košicen maraton on ja miksi se on tunnettu?
+VASTAUS: Kas vaan, juoksusta. Košicessa järjestetään [[rauhanmaraton]], joka lähteiden mukaan on Euroopan vanhin edelleen järjestettävä maraton. Ensimmäinen juoksu pidettiin vuonna 1924. Kaupunki oli myös vuonna 2013 [[Euroopan kulttuuripääkaupunki]]. Juoksijat kiertävät kaupungin vanhaa ydintä, ja yleisö kannustaa katujen varsilla. Kyyhky lentää mieluummin kuin juoksee.
+
+### v1-480
+KOHDE: maa:SVN
+KYSYMYS: Miksi Sloveniassa louhittiin elohopeaa?
+VASTAUS: Joo, tän minä tiedän. Elohopeaa louhittiin [[Idrijassa]], jonka kaivos oli tarinan mukaan jo 1490-luvulla käytössä. Elohopeaa tarvittiin esimerkiksi hopean ja kullan erottamiseen malmista, joten se oli arvokasta. Kaivosta ylläpitivät [[Habsburgit]], ja nykyään Idrija on yhdessä espanjalaisen [[Almadénin]] kanssa UNESCOn maailmanperintökohde. Tarkkoja vuosilukuja en ole varma. Pitkä sepustus, kun ajattelee, että kyse oli yhdestä metallista.
+
+### v1-481
+KOHDE: maa:SVN
+KYSYMYS: Mikä Bledin järvi ja sen saari ovat?
+VASTAUS: Hetkinen ny, tämä on kaunis paikka. Bledin järvi sijaitsee [[Julian Alppien]] juurella, ja sen keskellä on pieni saari, jolla seisoo Neitsyt Marian taivaaseenottamisen kirkko. Saarelle pääsee perinteisellä [[pletna]]-veneellä, ja kirkon portaita on 99. Taustalla kohoaa maan korkein huippu [[Triglav]], noin 2 860 metriä korkea. Paikan kermaleivonnainen kremšnita on kuulemma legendaarinen, joten tällä kertaa en valita.
+
+### v1-482
+KOHDE: maa:SVN
+KYSYMYS: Mikä on sloveenien kuuluisin makkara?
+VASTAUS: Ai tota, hyvä kysymys. Kuuluisin on [[Kranjska klobasa]] eli Krainin makkara, joka on nimetty entisen [[Krainin]] herttuakunnan mukaan. Se on esikeitetty ja kuumasavustettu makkara, jossa on vähintään 75–80 prosenttia sianlihaa ja enintään 20 prosenttia pekonia, ja mausteina käytetään vain merisuolaa, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla. Slovenia sai sille tammikuussa 2015 EU:n [[suojatun maantieteellisen merkinnän]]. Hyvä, että kyyhky muistaa mausteet.
+
+### v1-483
+KOHDE: maa:SVN
+KYSYMYS: Miksi sloveenit rakastavat mehiläisiä?
+VASTAUS: No jopas, mehiläisiä. Sloveniassa mehiläistenhoito on vanha perinne, ja maan oma alalaji on [[Carniolan mehiläinen]], joka on lempeä ja pärjää hyvin asutuksen lähellä. [[Anton Janša]], 1700-luvun mehiläistenhoitaja, tunnetaan alan uranuurtajana, ja hänen syntymäpäivänsä 20. toukokuuta on Yhdistyneiden kansakuntien [[Maailman mehiläispäivä]]. Pesien päätyihin maalataan perinteisesti värikkäitä kuvia. Pienet tekijät, suuri maine.
+
+### v1-484
+KOHDE: maa:SVN
+KYSYMYS: Milloin Slovenia itsenäistyi ja liittyi EU:hun?
+VASTAUS: Selvä juttu, kronologiaa. Slovenia julistautui itsenäiseksi [[Jugoslaviasta]] kesäkuussa 1991, ja lyhyt kymmenen päivän selkkaus päättyi saman vuoden heinäkuussa. Maa liittyi [[Euroopan unioniin]] vuonna 2004 ja otti euron käyttöön vuoden 2007 alussa. Ajan kulku on tehnyt asiasta rauhallisen. Kyyhky ei halunnut matkustaa sinne silloin.
+
+### v1-485
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Mikä on Ljubljanan lohikäärmeen tarina?
+VASTAUS: Tuota niin, lohikäärme. Kaupungin tunnus, lohikäärme, periytyy [[Pyhän Yrjön]] legendasta, mutta paikallisen tarinan mukaan kreikkalainen [[Jason]] tappoi lohikäärmeen kaupungin suolla. Lohikäärme koristaa linnan tornia ja kaupungin vaakunaa, ja jokea ylittävän [[Lohikäärmesillan]] päissä on lohikäärmepatsaat. Silta valmistui noin vuonna 1901, mutta tarkkaa vuotta en ole varma. Tarina on vanhempi kuin silta, vaikka silta on komeampi.
+
+### v1-486
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kuka oli arkkitehti Jože Plečnik?
+VASTAUS: Nyt muistan: juuri tämä mies. Jože Plečnik syntyi vuonna 1872 ja kuoli 1957, ja hän muokkasi Ljubljanan kasvot 1900-luvun alkupuolella. Hänen töitään ovat esimerkiksi [[Kolmoissilta]] ja [[Kansallis- ja yliopistokirjasto]], ja hän työskenteli myös Prahassa. Osa hänen töistään on kirjattu UNESCOn maailmanperintöluetteloon, lähteiden mukaan vuonna 2021. Jälki kaupungissa on yhä selvästi näkyvissä. Hänen siltansa kestävät, minun siipeni vähemmän.
+
+### v1-487
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Mitä ljubljanalaiset syövät torilla ja kahviloissa?
+VASTAUS: Mmm— tori, nyt tuoksuu. Ljubljanan kesäinen ruokatapahtuma [[Odprta kuhna]] eli avoin keittiö kokoaa perjantaisin ravintolat tarjoamaan ruokaa torille, vaikka tarkat aikataulut vaihtelevat. Perinteinen leivonnainen on pähkinärulla [[potica]], joka tehdään hiivataikinasta ja täytetään esimerkiksi saksanpähkinöillä. Kahvilat ovat tärkeä osa kaupungin arkea. Potican tuoksu on yksi parhaista, jotka tiedän.
+
+### v1-488
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Mitä luontoa Ljubljanan keskustan lähellä on?
+VASTAUS: Katotaas. Keskustan tuntumassa on iso [[Tivoli]]-puisto, jonka metsäiset polut johtavat [[Rožnik]]-kukkulalle. Etelään avautuu [[Ljubljanan suo]], jolta on löytynyt esihistoriallisia paalutaloasutuksen jäänteitä, ja ne ovat osa UNESCOn maailmanperintökohdetta. Ljubljanica virtaa kaupungin läpi hitaasti, ja sen rannoilla on puita. Kaupunki on pieni, ja metsä on lähellä.
+
+### v1-489
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Miksi Ljubljanan keskusta on autoton?
+VASTAUS: Hyvä kysymys tuo. Vanhakaupunki on suljettu autoliikenteeltä, ja se on tehnyt keskustasta kävelijöiden ja pyöräilijöiden alueen, jossa [[Ljubljanica]]-joen rannat ovat kahviloiden käytössä. Kaupunki sai vuonna 2016 arvonimen [[Euroopan vihreä pääkaupunki]], mikä liittyy tähän työhön. Keskustan aukiona toimii [[Prešernin aukio]]. Ylhäältä liikenne näyttää kaupungissa mukavan hiljaiselta.
+
+### v1-490
+KOHDE: maa:SWE
+KYSYMYS: Miksi Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen?
+VASTAUS: No niin, vakava aihe. Ruotsin viimeinen sota päättyi vuonna 1814 [[Norjaa]] vastaan, ja siitä lähtien maa on pysynyt sotimatta, pidempään kuin lähes mikään muu valtio. Edellä Ruotsi oli menettänyt [[Suomen sodassa]] 1808–1809 itäisen osansa, ja sen jälkeen ulkopolitiikka kääntyi liittoutumattomuuteen ja [[puolueettomuuteen]]. Ruotsi liittyi [[NATOon]] vasta vuonna 2024. Onpa siitä jo pitkä aika.
+
+### v1-491
+KOHDE: maa:SWE
+KYSYMYS: Miksi Vasa-laiva on niin kuuluisa?
+VASTAUS: Odotas vähän, tästä on tarina. Sotalaiva [[Vasa]] upposi Tukholman satamassa neitsytmatkallaan vuonna 1628, vain lyhyen purjehduksen jälkeen. Se nostettiin pohjasta vuonna 1961, ja nykyään se on esillä [[Djurgårdenin]] saarella omassa museossaan. Alus teetettiin kuningas [[Kustaa II Aadolfin]] käskystä, ja se on säilynyt poikkeuksellisen hyvin, koska Itämeren vähäsuolainen vesi ei syönyt puuta samalla tavalla. Muistan tämän kuin eilisen.
+
+### v1-492
+KOHDE: maa:SWE
+KYSYMYS: Mitä on ruotsalainen fika?
+VASTAUS: Joo, tän minä tiedän. Fika tarkoittaa kahvi- tai teetaukoa, jolla syödään jotain makeaa ja juodaan sekä seurustellaan. Tyypillinen leivonnainen on [[kanelbulle]] eli korvapuusti, ja sille on oma juhlapäivänsä, [[Kanelbullens dag]], joka vietetään lokakuun alussa. Lihapullat eli [[köttbullar]] kuuluvat taas arkiruokaan. Pulla, kyllä, vihdoin aihe, jota ymmärrän.
+
+### v1-493
+KOHDE: maa:SWE
+KYSYMYS: Mikä on jokamiehenoikeus Ruotsissa?
+VASTAUS: Hyvä kysymys tuo. Ruotsalainen [[allemansrätten]] tarkoittaa, että kaikilla on oikeus liikkua luonnossa, poimia marjoja ja sieniä sekä yöpyä telttailemalla, kunhan ei häiritse eikä vahingoita. Tunnettu patikointireitti on pohjoisen vuoriston läpi kulkeva [[Kungsleden]], noin 440 kilometrin mittainen. Luonto on kaikkien, mutta roskat eivät. Kyyhky kunnioittaa tätä.
+
+### v1-494
+KOHDE: maa:SWE
+KYSYMYS: Miten Melodifestivalen vaikuttaa ruotsalaisten kevääseen?
+VASTAUS: Ai se, kevään suurtapahtuma. Joka kevät kilpailu valitsee maan [[euroviisujen]] edustajan, ja finaali on vuoden katsotuin televisiolähetys. Kilpailu kiertää viikkokausia eri kaupungeissa. Tätä kautta [[ABBA]] lähti vuonna 1974 voittamaan euroviisut, ja Ruotsi on voittanut kisan seitsemän kertaa, yhtä monta kertaa kuin [[Irlanti]]. Hyvä biisi jää päähän ja pyörii siellä.
+
+### v1-495
+KOHDE: kaupunki:tukholma
+KYSYMYS: Miten Tukholma sai alkunsa 1200-luvulla?
+VASTAUS: Joo, katotaas. Tukholman perustamisvuotena pidetään 1252. Perinteisesti perustajana mainitaan [[Birger Jarl]], vaikka lähteet eivät ole täysin yksiselitteisiä. Paikka valittiin, koska [[Mälaren]]-järven purkautumiskohta oli helppo sulkea: salmeen lyödyt paalut pysäyttivät vieraat laivat. Pian kaupunki kasvoi kauppapaikaksi, ja saksalaiset kauppiaat [[Hansaliitosta]] vaikuttivat siihen. Siis vanha kaupunki, mutta minun suku on vanhempi.
+
+### v1-496
+KOHDE: kaupunki:tukholma
+KYSYMYS: Mitä Gamla stanissa kannattaa nähdä?
+VASTAUS: Kas vaan, vanhaa kaupunkia. Gamla stanin kapeilla kujilla kannattaa nähdä [[Tukholman kuninkaanlinna]], tuomiokirkko [[Storkyrkan]] ja aukio [[Stortorget]]. Kapein kuja, [[Mårten Trotzigs gränd]], on leveydeltään noin metrin. Nimi Gamla stan tarkoittaa vanhaa kaupunkia, ja vuoteen 1980 asti virallinen nimi oli Staden mellan broarna. Ylhäältä se näyttää sokkelolta.
+
+### v1-497
+KOHDE: kaupunki:tukholma
+KYSYMYS: Mitä tukholmalaiset syövät lounaaksi?
+VASTAUS: Hmm, tuota niin. Arkilounas on usein päivän ateria, jossa on pääruoka, salaatti ja juoma. Tunnettuja ruokia ovat lihapullat eli [[köttbullar]] puolukkahillolla ja katkarapuvoileipä [[räksmörgås]]. Ruokatorilla [[Östermalms Saluhall]] on tarjolla tuoretta kalaa ja lihaa. Fettisdagen eli laskiaistiistaina syödään vielä semla-pullia. Semla, niin, minä tietysti muistan sen.
+
+### v1-498
+KOHDE: kaupunki:tukholma
+KYSYMYS: Mitä Tukholman saaristossa voi tehdä?
+VASTAUS: Selvä juttu, merelle. Saaristossa on yli 24 000 saarta ja luotoa, ja sinne pääsee höyrylaivalla tai lautalla. [[Vaxholm]] on lähin pieni kaupunki, ja [[Sandhamn]] on tunnettu purjehduspaikka. Tukholman itäpuolella liikennöi laivoja, joita ylläpitää muun muassa [[Waxholmsbolaget]]. Vähäsuolaisessa vedessä voi uida, ja kesällä rannat täyttyvät. Merellä en laskeudu, jalkojen alla pitää olla jotain.
+
+### v1-499
+KOHDE: kaupunki:tukholma
+KYSYMYS: Miksi Nobel-palkinnot jaetaan Tukholmassa?
+VASTAUS: Odotas vähän, tämä on hyvä. Palkinnot perustuvat ruotsalaisen kemistin [[Alfred Nobelin]] testamenttiin, jonka hän laati vuonna 1895. Hän kuoli 10. joulukuuta 1896, ja siksi juhlallisuudet pidetään joka vuosi samana päivänä. Palkinnot jaetaan [[Tukholman konserttitalossa]], mutta rauhanpalkinto luovutetaan [[Oslossa]]. Hieno juhla, jota en pääse katsomaan sisältä.
+
+### v1-500
+KOHDE: maa:TUR
+KYSYMYS: Keitä ovat Nemrut-vuoren päättömät jättiläispatsaat?
+VASTAUS: Joo, tän minä tiedän. Patsaat esittävät jumalia ja kuningasta itseään, ja ne pystytti vuoren huipulle Kommagenen kuningas [[Antiokhos I]] ensimmäisellä vuosisadalla eaa. Hän yhdisti kreikkalaisia ja persialaisia jumalia, esimerkiksi [[Zeuksen]] ja Oromasdeen, ja rakennutti itselleen myös suuren hautakumpuhaudan. Päät ovat pudonneet maahan luultavasti maanjäristysten ja ajan vaikutuksesta, ja paikka on [[Unescon]] maailmanperintökohde. Ei oo helppoa olla jumala ilman päätä.
+
+### v1-501
+KOHDE: maa:TUR
+KYSYMYS: Miksi Vanjärvessä elää vain yksi kalalaji?
+VASTAUS: No niin, tää on hauska juttu. Syy on veden kemiassa: Vanjärven vesi on hyvin emäksistä, ja siinä viihtyy vain yksi kalalaji, [[helmisärki]]. Se nousee keväisin järveen laskeviin jokiin kutemaan, koska makea vesi sopii sille kutupaikaksi. Järvi on Turkin suurin, ja sen rannoilla elää myös ainutlaatuinen [[Van-kissa]], joka ui mielellään ja jolla on usein eriväriset silmät. Siinä menee kalaopas lyhyeen.
+
+### v1-502
+KOHDE: maa:TUR
+KYSYMYS: Mikä on Anatolia ja miksi se on niin vanha asuinseutu?
+VASTAUS: Annas ku mietin. Anatolia on Turkin Aasian puoleinen suuralue, joka kattaa lähes koko maan, ja ihmiset ovat asuneet siellä jo yli kymmenentuhatta vuotta. Kaakkoisessa Anatoliassa sijaitseva [[Göbekli Tepe]] on yksi vanhimmista tunnetuista monumenttikohteista, ja [[Çatalhöyükin]] asuinkylä on kasvanut jo uuden kivikauden aikana. Myöhemmin alueella hallitsivat esimerkiksi [[hetiitit]], ja sama maaperä on kantanut kreikkalaisia, roomalaisia, bysanttilaisia ja ottomaaneja. Ylätasanko on nähnyt paljon, vaikka se on sijaintina vähän kuivakka.
+
+### v1-503
+KOHDE: maa:TUR
+KYSYMYS: Miten ihmiset ylittävät Bosporinsalmen joka päivä?
+VASTAUS: Hetkinen ny. Salmen yli kulkee kolme siltaa, ja lisäksi sen alitse kulkee [[Marmaray]]-rautatietunneli, joka avattiin vuonna 2013. Autot, bussit, junat ja paljon matkustajia kulkee päivittäin näitä reittejä, ja lisäksi vanhan ajan tapaan käytetään [[lauttoja]], jotka kuljettavat ihmisiä Euroopan ja Aasian välillä muutamassa kymmenessä minuutissa. Salmen ylittäminen on monelle istanbulilaiselle työmatkaa. Minä ylitän sen tyylikkäästi siivillä.
+
+### v1-504
+KOHDE: maa:TUR
+KYSYMYS: Miksi teetä juodaan Turkissa joka paikassa?
+VASTAUS: Selvä juttu. Tee on turkkilaisen arjen perusjuoma: sitä tarjotaan kotona, kaupassa, toreilla ja neuvotteluissa pienistä tulppaanin muotoisista laseista. Teetä viljellään Mustanmeren rannikon kosteilla rinteillä, ja tunnetuin teealue on [[Rize]]. Kahvilla on turkkilaisessa kulttuurissa oma arvonsa, ja [[turkkilainen kahvi]] on kuulunut Unescon aineettoman perinnön luetteloon, mutta teetä juodaan päivän mittaan huomattavasti enemmän. Lasillinen on pieni, joten niitä tulee monta.
+
+### v1-505
+KOHDE: kaupunki:istanbul
+KYSYMYS: Miten Hagia Sofia on muuttunut vuosisatojen aikana?
+VASTAUS: Odotas vähän. Keisari [[Justinianus]] rakennutti Hagia Sofian valmiiksi vuonna 537, ja se oli ensin kristillinen kirkko. Kun [[Mehmet II]] valtasi kaupungin vuonna 1453, rakennus muutettiin moskeijaksi, ja ulkopuolelle lisättiin minareetit. Vuonna 1934 se muutettiin museoksi, ja vuonna 2020 siitä tehtiin jälleen moskeija. Kupolin loisto on silti pysynyt, ja [[Hagia Sofia]] on yksi Istanbulin tunnetuimmista rakennuksista. Neljä muutosta yhdelle talolle on aika paljon.
+
+### v1-506
+KOHDE: kaupunki:istanbul
+KYSYMYS: Mikä on Kultainen sarvi?
+VASTAUS: Hyvä kysymys tuo. Kultainen sarvi on Bosporinsalmen kapea lahti Istanbulin Euroopan puolella, ja sen suojainen vesi teki siitä jo antiikissa luonnonsataman. Kaupungin historiallinen niemi on lahden eteläpuolella ja [[Galata]] pohjoispuolella, ja niitä yhdistää muun muassa [[Galatan silta]]. [[Byzantionin]] perustajat valitsivat paikan juuri tämän sataman ja niemen vuoksi. Ylhäältä katsottuna se on kyllä hieno vesikäytävä.
+
+### v1-507
+KOHDE: kaupunki:istanbul
+KYSYMYS: Miksi Istanbulissa on niin paljon katukissoja?
+VASTAUS: Ai tota. Istanbulin kissat ovat osa kaupunkikuvaa: niille jätetään ruokaa ja vettä oviin ja kulmiin, ja monet asukkaat pitävät huolta tutuista yksilöistä. Perinteeseen kuuluu usein kunnioitus eläimiä kohtaan, jonka juuret ulottuvat [[ottomaanien]] aikaan, ja ilmiöstä on tehty dokumenttielokuva [[Kedi]] vuodelta 2016. Kissat nukkuvat kaupoissa, kahviloissa ja moskeijoiden pihoilla. Ne vievät kyllä parhaat paikat auringossa.
+
+### v1-508
+KOHDE: kaupunki:istanbul
+KYSYMYS: Mikä on pylväiden kannattama vesisäiliö Istanbulin alla?
+VASTAUS: Kato, tost minä osaan kertoo. Kyseessä on [[Basilikasäiliö]], jonka Justinianuksen aikaan rakennettu holvikellari säilytti vettä kaupungille. Pylväitä on kolmesataakolmekymmentäkuusi, ja ne kannattavat tiilistä holvikattoa. Kahden pylvään jalustana on [[Medusan]] pää, ja syy tähän on edelleen jossain määrin epäselvä, sillä päät otettiin todennäköisesti uudelleenkäyttöön vanhemmista rakennuksista. Rakennus on avoinna matkailijoille, ja viileydestä pääsee nauttimaan kesäkuumallakin. Ylhäältä sitä ei näe, mikä on vähän harmi.
+
+### v1-509
+KOHDE: kaupunki:istanbul
+KYSYMYS: Miten Galatan jyrkkä mäki on voitettu junalla?
+VASTAUS: Katotaas. Istanbulin vanhan kaupungin ja Galatan mäen välillä kulkee lyhyt maanalainen köysirata, jota sanotaan nimellä [[Tünel]]. Se avattiin vuonna 1875, ja sen tarkoitus oli helpottaa nousua rannasta mäen päälle, jossa [[Galata]] ja Beyoğlu sijaitsevat. Rata kulkee vain alle kilometrin matkan, mutta säästää monta nousua. Isoisäsi kantajan olisi pitänyt odottaa pari vuotta.
+
+### v1-510
+KOHDE: kaupunki:izmir
+KYSYMYS: Miksi İzmirin viikunat ovat niin kuuluisia?
+VASTAUS: Sepä sattui. Viikuna on İzmirin alueen tunnusmerkki, sillä Egeanmeren ilmasto ja [[Aydınin]] tasangon maa sopivat sille erinomaisesti. Hedelmät kuljetettiin satamaan rautatietä pitkin, jonka ensimmäinen osuus avattiin vuonna 1858. Kaupungin vanha nimi [[Smyrna]] elää viikunalajikkeiden nimissä, ja Turkki on yksi maailman suurimmista viikunantuottajista. Kyllä pullakin kelpaisi, mutta viikuna on sentään terveellisempää.
+
+### v1-511
+KOHDE: kaupunki:izmir
+KYSYMYS: Mitä Pagos-vuoren linna kertoo kaupungin historiasta?
+VASTAUS: Tuota niin. Linnan nimi on [[Kadifekale]], ja se rakennettiin antiikin Smyrnan siirtämisen yhteydessä Pagos-vuoren rinteelle. Tarinan mukaan [[Aleksanteri Suuri]] uneksi paikasta ennen kuolemaansa, ja hänen seuraajansa siirsivät kaupungin nykyiselle paikalleen. Linnasta on tarjolla laaja näkymä lahdelle, ja se muistuttaa, miten kauan sama laakso on kelvannut asuinpaikaksi. Ylös pääsee vähän hikoilematta vain siivin.
+
+### v1-512
+KOHDE: kaupunki:izmir
+KYSYMYS: Miten İzmirissä liikutaan lahden yli?
+VASTAUS: Joo, tän minä tiedän. Lahden poikki kulkee lauttoja, jotka yhdistävät kaupungin eri rantoja, esimerkiksi [[Konakin]] ja [[Karşıyakan]] alueen. Lautat ovat tavallisten asukkaiden päivittäinen kulkuneuvo, ja matka on edullinen. Rinteiden vuoksi kaupungissa on myös [[Asansör]], tunnettu hissitorni, joka nostaa jalankulkijoita jyrkän rinteen päälle. Kyyti merellä on parempi kuin ruuhkassa.
+
+### v1-513
+KOHDE: kaupunki:izmir
+KYSYMYS: Millainen leivonnainen on tyypillinen izmirilainen aamiainen?
+VASTAUS: Nyt muistan: tämä on minun heikko kohtani. İzmirin tunnettu leivonnainen on [[boyoz]], kerroksinen ja öljyinen pulla, jonka perinteen kerrotaan tulleen kaupunkiin [[sefardijuutalaisilta]]. Sitä syödään usein keitetyn munan ja teen kanssa. Lisäksi alueella on suosittu seesamirinkeli, joka on lähellä tavallista [[simitiä]] mutta kovempi ja rapeampi. Boyoz kuulostaa minusta juuri sellaiselta, jota ikkunalaudalta ei jaksaisi jättää.
+
+### v1-514
+KOHDE: kaupunki:izmir
+KYSYMYS: Mitä antiikin kohteita İzmirin lähellä on?
+VASTAUS: Hmm, annas ku mietin. Lähistöllä on useita antiikin kohteita, ja tunnetuin on [[Efesos]], jonka rauniot kuuluvat Unescon maailmanperintöön. Pohjoisessa sijaitsee [[Pergamon]], joka oli hellenistisen ajan kuninkaiden pääkaupunki; sen kuuluisa alttari on nykyään Berliinissä, ei Turkissa. Alueella on myös muita pienempiä kreikkalaisia ja roomalaisia kaupunkeja. Kannattaa varata niille päivä, tai kaksi.
+
+### v1-515
+KOHDE: kaupunki:ankara
+KYSYMYS: Miksi Ankara tehtiin pääkaupungiksi Istanbulin sijaan?
+VASTAUS: No niin, tästä on kiistelty. Ankara oli [[Atatürkin]] johtaman kansallisen vastarintaliikkeen keskus Turkin vapaussodan aikaan, ja sinne kokoontui vuonna 1920 uusi [[kansalliskokous]]. Se sijaitsee keskellä Anatoliaa, kaukana rannikon uhista, ja sinne oli rautatieyhteys. Kun tasavalta julistettiin, Ankara nimettiin pääkaupungiksi 13. lokakuuta 1923, ja Istanbul jäi maan suurimmaksi kaupungiksi. Kyllä Istanbulin näkymät olisivat olleet hienommat.
+
+### v1-516
+KOHDE: kaupunki:ankara
+KYSYMYS: Mistä angoravuohi ja angorakani ovat saaneet nimensä?
+VASTAUS: Joo, tän minä tiedän. Nimi tulee kaupungin vanhasta nimestä [[Angora]], jota käytettiin vuosisatojen ajan ennen kuin Ankara vakiintui. Alueen vuohien pitkästä, pehmeästä karvasta kehrätään [[mohairia]], ja kaupungin mukaan on nimetty myös [[angorakani]] ja angorakissa. Villa saa kuitenkin eri nimen riippuen eläimestä: vuohen karvasta tulee mohairia ja kanin karvasta angoraa. Kyllä minäkin pitäisin lämpimästä kaulaliinasta.
+
+### v1-517
+KOHDE: kaupunki:ankara
+KYSYMYS: Mitä roomalaisaikaa Ankarassa on yhä nähtävissä?
+VASTAUS: Selvä juttu. Ulusin vanhassa kaupunginosassa seisoo [[Augustuksen ja Rooman temppeli]], jonka seiniin on kaiverrettu keisarin elämäntyötä kuvaava teksti, [[Res Gestae]], sekä latinaksi että kreikaksi. Kaupungissa on myös roomalaisia kylpylän raunioita ja roomalainen pylväs. Lisäksi linnavuoren juurella on bysanttilaisia ja ottomaanisia rakennuksia, joten kerrokset ovat päällekkäin. Hienoa, että joku jaksoi kaivertaa koko tekstin.
+
+### v1-518
+KOHDE: kaupunki:ankara
+KYSYMYS: Millainen paikka Atatürkin mausoleumi on?
+VASTAUS: Ai se. Mausoleumi, [[Anıtkabir]], rakennettiin kaupungin kukkulalle, ja se valmistui vuonna 1953. Sinne on haudattu Turkin tasavallan perustaja Mustafa Kemal [[Atatürk]]. Rakennukselle johtaa pitkä [[leijonatie]], jonka reunoilla on leijonapatsaita hetiittiläisen taiteen tyyliin, ja sisällä on museo. Paikka on turkkilaisille tärkeä kunnioituksen kohde, ja siellä käy paljon kävijöitä. Hiljaisuus sopii paikkaan, vaikka kyyhky ei sitä aina osaa.
+
+### v1-519
+KOHDE: kaupunki:ankara
+KYSYMYS: Millainen ilmasto Ankarassa on ja miksi talvet ovat kylmiä?
+VASTAUS: Hetkinen ny. Ankara sijaitsee Anatolian ylätasangolla noin yhdeksänsadan metrin korkeudessa, kaukana merestä, joten ilmasto on mannerilmasto. Tammikuun keskilämpötila on noin yksi aste ja elokuun 24,6, joten talvi on kylmä ja kesä kuuma. Kaupungin eteläpuolella on suuri suolajärvi [[Tuz-järvi]], ja kuiva maasto muodostaa avaran [[Anatolian ylätasangon]] maiseman. Kyllä siellä lämmin takki kelpaa.
+
+### v1-520
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Miten Kappadokian maanalaiset kaupungit rakennettiin ja miksi?
+VASTAUS: Odotas vähän. Maanalaiset kaupungit louhittiin pehmeään [[tuffiin]], jota pystyy kaivamaan yksinkertaisin työkaluin. [[Derinkuyu]] ulottuu noin 85 metrin syvyyteen ja siinä on viisi kerrosta, ja sen käytävät voitiin sulkea suurilla kivilaatoilla, jotka aukesivat vain sisältä. Kaupungit toimivat suojapaikkoina vaaran uhatessa, ja niissä oli tiloja asumiseen, ruoan säilytykseen ja ilmanvaihtoon. Alla on kyllä enemmän tilaa kuin pinnalla.
+
+### v1-521
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Mitä kallioon louhituista kirkoista Göremessä tiedetään?
+VASTAUS: Ai tota. Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa, ja ne on koristeltu [[freskoilla]], joissa on kuvattu Raamatun tapahtumia. Tunnettu on esimerkiksi [[Karanlık kilise]], jonka maalaukset ovat säilyneet hyvin, koska sinne pääsee vain vähän valoa. Alue kuuluu [[Unescon]] maailmanperintöluetteloon. Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus. Sisältä ne ovat yllättävän värikkäitä.
+
+### v1-522
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Miksi Kappadokiassa lennetään ilmapalloilla?
+VASTAUS: Mmm— Kappadokian ilma on aamuisin yleensä tyyni, ja avoin maisema mahdollistaa lennot auringonnousun aikaan. Ylhäältä näkyvät [[keijupiiput]], laaksot ja kalliokylät, ja kauimpana siintää [[Erciyes]]-tulivuori. Ilmapallolennot ovat tuoneet alueelle paljon matkailijoita, ja sadat pallot värittävät taivasta aamuisin. Minä katson ne mieluummin omilla siivilläni.
+
+### v1-523
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Miksi kyyhkyslakkoja on louhittu kallioon?
+VASTAUS: No jopas, tästä aiheesta minä pidän. Kyyhkysten lanta oli arvokasta lannoitetta, jota käytettiin Kappadokian pelloilla ja viinitarhoissa, joten lakkoja louhittiin kallioon runsaasti. Esimerkiksi [[Uçhisarin]] ja [[Kyyhkyslaakson]] seudulla näkee kallioseinissä satoja pieniä reikiä. Lakat koristeltiin joskus punaisin ja valkoisin kuvioin, ja ne ovat tuffiin kaiverrettuja. Sukulaiseni ovat siis tehneet töitä tämänkin maiseman eteen.
+
+### v1-524
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Mitä ruokaa ja käsitöitä Kappadokiassa tunnetaan?
+VASTAUS: Tost minä osaan kertoo. Alueen tunnetuimpia ruokia on [[testikebab]], joka kypsytetään savikannussa ja avataan murtamalla kannu pöydässä. Punaisen [[Kızılırmak]]-joen rannalla sijaitseva [[Avanos]] tunnetaan keramiikasta, jota tehdään joen savesta. Kappadokiassa viljellään myös viiniä, ja viininvalmistus on vanhaa perinnettä. Kannu on kaunis, mutta paras osa on sisältö.
+
+### v1-525
+KOHDE: maa:UKR
+KYSYMYS: Miksi Ukrainan musta multa on niin hedelmällistä?
+VASTAUS: Joo, tän minä tiedän. Ukrainan peltojen alla on [[tšernozjomia]], mustaa multaa, jossa on paksu humuskerros, paikoin jopa metrin verran. Se syntyi aroruohojen vuosisatojen aikana lahonneista juurista, ja siksi maa pidättää hyvin vettä ja ravinteita. Maassa viljellään paljon [[vehnää]] ja [[auringonkukkaa]], ja neljännes maailman mustasta mullasta on Ukrainassa. Ei oo huono multa, eikä pulla sillä kasva.
+
+### v1-526
+KOHDE: maa:UKR
+KYSYMYS: Millainen vuoristo Karpaatit ovat Ukrainassa?
+VASTAUS: Hyvä kysymys tuo. Ukrainan osuus vuoristosta on maan lounaisosassa, ja sen korkein huippu on [[Hoverla]], 2 061 metriä. Vuoristossa asuu perinteisesti [[huculit]], jotka tunnetaan omista puvuistaan, karjanhoidostaan ja kansanmusiikistaan. Alueella on metsiä, laidunniittyjä ja matkailukeskuksia, ja osa vuoriston vanhoista [[pyökkimetsistä]] kuuluu Unescon maailmanperintöön. Tasangon jälkeen vuoret ovat varmasti kiva vaihtelu.
+
+### v1-527
+KOHDE: maa:UKR
+KYSYMYS: Mitä Ukrainan suuri joki on merkinnyt maan historialle?
+VASTAUS: Katotaas. [[Dnepr]] on virrannut Ukrainan läpi pohjoisesta etelään, ja sen varrella on sijainnut monia keskeisiä kaupunkeja, kuten [[Kiova]]. Keskiajalla jokea pitkin kulki kauppareitti pohjoisen ja etelän välillä. Koskien takana asuivat myöhemmin [[kasakat]], jotka tunnettiin Zaporižžjan alueen kasakkoina. Joen varrelle rakennettiin 1900-luvulla voimalaitoksia, joiden patoaltaat näkyvät kartalla leveinä järvinä. Joki kantaa edelleen paljon historiaa.
+
+### v1-528
+KOHDE: maa:UKR
+KYSYMYS: Miten ukrainalaiset koristelevat pääsiäismunia?
+VASTAUS: Tuota niin. Perinteinen tapa on [[pysankat]], jotka koristellaan vahalla ja värjäyksellä: kuvio piirretään vahalla munan pintaan, muna kastetaan väriin, ja vaha sulatetaan lopuksi pois. Työkaluna käytetään pientä [[kistka]]-vahakynää. Kuvioilla on perinteisiä merkityksiä, ja ne vaihtelevat alueittain. Länsi-Ukrainassa [[Kolomyjassa]] on pääsiäismunan muotoinen pysankamuseo. Hieno taito, ja varmasti kärsivällisyyttä vaativa.
+
+### v1-529
+KOHDE: maa:UKR
+KYSYMYS: Mikä keitto kuuluu Ukrainan ruokakulttuurin ytimeen?
+VASTAUS: No niin. Se on [[borssi]], keitto, jonka pohjana on tavallisesti punajuuri ja johon lisätään kaalia, perunaa ja usein lihaa; reseptit vaihtelevat alueittain ja perheittäin. Keiton kanssa syödään usein valkosipulilla maustettuja [[pampuškeja]]. Vuonna 2022 [[Unesco]] kirjasi ukrainalaisen borssinkeiton kulttuurin kiireellisesti suojeltavaan luetteloon. Pampuški on kyllä juuri sellainen pulla, josta minä haaveilen.
+
+### v1-530
+KOHDE: kaupunki:kiova
+KYSYMYS: Mitä Pyhän Sofian katedraalissa on nähtävää?
+VASTAUS: Kas vaan. Katedraali valmistui ilmeisesti vuonna 1037, kun [[Jaroslav Viisas]] oli Kiovan ruhtinas. Sen seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma, esimerkiksi apsiksessa [[Oranta]]-neitsyen kuva. Seinillä on myös yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta, ja kohde kuuluu [[Unescon]] maailmanperintöön vuodesta 1990. Seinät ovat siis vanhaa ruhtinaiden ja pyhiinvaeltajien kirjoituskirjaa.
+
+### v1-531
+KOHDE: kaupunki:kiova
+KYSYMYS: Miksi Kiovan metroasema on yli sata metriä maan alla?
+VASTAUS: Joo, tän minä tiedän. [[Arsenalna]] on Kiovan metron asema, jota pidetään yleisesti maailman syvimpänä, noin 105 metrin syvyydessä. Kaupunki seisoo Dneprin korkealla rannalla, ja asema sijaitsee kukkulan alla, joten syvyys liittyy osin maastoon; en ole varma kaikista syistä. [[Kiovan metro]] avattiin vuonna 1960, ja yksi ainoa pitkä liukuportaikko vie matkustajat alas. Minä menen mieluummin ylhäältä.
+
+### v1-532
+KOHDE: kaupunki:kiova
+KYSYMYS: Millainen luostari Dneprin rinteessä on?
+VASTAUS: Annas ku mietin. Kyse on [[Luolaluostarista]], joka sai alkunsa 1000-luvun puolivälissä, kun munkit alkoivat kaivaa luolia Dneprin rinteeseen. Luostari kasvoi vuosisatojen mittaan suureksi kirkkojen ja rakennusten kokonaisuudeksi, ja se on yksi kristinuskon tärkeimmistä kohteista Itä-Euroopassa. Se kuuluu [[Unescon]] maailmanperintöön yhdessä Pyhän Sofian katedraalin kanssa. Alueella on kirkkoja, kellotorni ja maanalaisia käytäviä. [[Kiovan Rusin]] aikana se oli kulttuurin ja oppineisuuden keskus.
+
+### v1-533
+KOHDE: kaupunki:kiova
+KYSYMYS: Onko Kiovan muurin portti alkuperäinen vai jälleenrakennus?
+VASTAUS: Hetkinen ny. [[Kultainen portti]] rakennettiin vuosina 1017–1024 Jaroslav Viisaan aikana, ja nimi ja malli tulivat [[Konstantinopolin]] Kultaisesta portista. Vuonna 1240 mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin, ja seuraavina vuosisatoina se rapistui lähes raunioksi. Nykyinen rakennus on jälleenrakennus 1900-luvulta; muistaakseni se valmistui vuonna 1982, ja sen tarkkuudesta on keskusteltu. Vanha portti oli siis tarinoiden mukaan upeampi.
+
+### v1-534
+KOHDE: kaupunki:kiova
+KYSYMYS: Miten ylä- ja alakaupunki on yhdistetty toisiinsa Kiovassa?
+VASTAUS: Selvä juttu. Kaupungin jyrkkää rinnettä pitkin kulkee [[funikulaari]], joka yhdistää ylä- ja alakaupungin ja avattiin vuonna 1905. Alakaupunki on [[Podil]], joka sijaitsee joen rannalla, ja sinne laskeutuvat myös jyrkät rinnekadut. Ylätasanteelta näkee kauas Dneprille, ja sieltä alas pääsee muutamassa minuutissa. Minä pidän tästä enemmän kuin portaista.
+
+### v1-535
+KOHDE: kaupunki:odessa
+KYSYMYS: Millaiset portaat johtavat Odessan satamaan?
+VASTAUS: Joo, tän minä tiedän. Portaat rakennettiin vuosina 1837–1841, ja niissä on 192 askelmaa. Ne tunnetaan optisesta harhasta: ylhäältä katsottuna näkyvät vain tasanteet, alhaalta vain portaat. Portaat tulivat maailmankuuluiksi [[Sergei Eisenstein]]in elokuvasta [[Panssarilaiva Potemkin]] vuodelta 1925. Ne ovat nykyisin yksi kaupungin tunnetuimmista paikoista. Hyvä, ettei minun tarvitse kävellä.
+
+### v1-536
+KOHDE: kaupunki:odessa
+KYSYMYS: Mitä Odessan kaupungin alla piilee?
+VASTAUS: No niin. Odessan alla on laaja käytäväverkosto, jonka synnytti kaupungin talojen rakennusmateriaalin louhinta. Talot muurattiin [[simpukkakalkkikivestä]], jota otettiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä. Näitä käytäviä kutsutaan [[katakombeiksi]], vaikka ne eivät ole hautoja vaan louhoskäytäviä. Osia käytetään nykyään opastettuihin kierroksiin. Sinne ei minun siipeni sovi.
+
+### v1-537
+KOHDE: kaupunki:odessa
+KYSYMYS: Kenen mukaan Odessan pääkatu on nimetty?
+VASTAUS: Ai tota. Pääkatu on [[Deribasivska]], ja se on nimetty amiraali [[José de Ribasin]] mukaan. De Ribas syntyi Napolissa ja palveli Venäjän keisarikunnan laivastossa; hän oli mukana Odessan perustamisen aikaan vanhan linnoituksen valtaamisessa. Satamakaupungin perustamiskäskyn antoi vuonna 1794 keisarinna [[Katariina]]. Katu on nykyään kävelykatu, jonka varrella on kahviloita ja puistoja. Pitkä nimi lyhyelle kadulle.
+
+### v1-538
+KOHDE: kaupunki:odessa
+KYSYMYS: Mitä Odessassa tehdään aprillipäivänä?
+VASTAUS: Nyt muistan: täällä pidetään [[Humorina]]-festivaali. Aprillipäivänä 1. huhtikuuta kadut täyttyvät naamiaisasuisista ihmisistä, kulkueesta ja esiintyjistä; perinne alkoi vuonna 1973. Odessan huumori syntyi kaupungin monikulttuurisesta väestöstä, ja sen ympärillä on oma puhetapansa. Kaupungista on lähtöisin tunnettuja huumoristeja, esimerkiksi satiirikko [[Mihail Žvanetski]]. Aika hyvä päivä pelleillä.
+
+### v1-539
+KOHDE: kaupunki:odessa
+KYSYMYS: Millainen on Odessan oopperatalo?
+VASTAUS: Mmm— Odessan oopperatalo valmistui vuonna 1887, ja sen suunnitteli wieniläinen arkkitehtitoimisto [[Fellner ja Helmer]], joka suunnitteli teattereita ympäri Euroopan. Edeltäjä, kaupungin ensimmäinen teatteri, tuhoutui tulipalossa muistaakseni vuonna 1873, joten uusi rakennus syntyi sen jälkeen. Tyyli on barokin ja rokokoon sävyttämä, ja sali on koristeellinen. Teatteri on tärkeä osa [[Wienin]] ja Odessan yhteistä kulttuuriperintöä. Aika näyttävä paikka kyyhkyn silmin.
+

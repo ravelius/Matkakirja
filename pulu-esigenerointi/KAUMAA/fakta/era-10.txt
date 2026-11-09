@@ -1,0 +1,445 @@
+### v2-267
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Hygge
+VASTAUS: Hygge on tanskalaisen arkikulttuurin käsite, joka kuvaa lämmintä ja rentoa tunnelmaa. Siihen kuuluu usein [[kynttilöitä]], pehmeää valoa, kuuma juoma tai kotoinen ruoka ja hyvä seura. Kyse ei ole ostettavasta esineestä vaan tunnelmasta, jonka voi luoda yhdessä. Sanasta on johdettu myös adjektiivi [[hyggelig]], joka tarkoittaa viihtyisää tai mukavaa. Ilmiö tuli maailmalla laajasti tunnetuksi 2010-luvulla kirjojen ja lehtijuttujen kautta.
+
+### v2-268
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: pitkiin pimeisiin talviin
+VASTAUS: Tanskassa talvet ovat pitkiä ja pimeitä, koska maa on kaukana pohjoisessa. [[Talvipäivänseisauksen]] aikaan päivä on Kööpenhaminassa noin seitsemän tuntia pitkä, kun taas kesällä valoisaa on yli kuudentoista tunnin ajan. Pimeää aikaa valaistaan kynttilöillä ja ikkunoihin sijoitetuilla valoilla, ja jouluun valmistaudutaan perinteillä, kuten adventtikynttilällä. Kesän valoa juhlitaan puolestaan [[Sankthans]]-iltana, jolloin kokoonnutaan kokkojen ääreen.
+
+### v2-269
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: tasa-arvoa
+VASTAUS: Tanskalaisessa yhteiskunnassa tasa-arvoa pidetään tärkeänä arvona. Tanskassa naiset saivat äänioikeuden vuonna 1915, ja nykyisin maassa on laaja [[hyvinvointivaltio]], jossa koulutus ja sairaanhoito ovat pääosin julkisesti rahoitettuja. Tasa-arvoon liitetään usein myös ajattelutapa, jota kuvaa [[Jante-laki]]: kukaan ei ole muita parempi. Käsite on peräisin kirjailija [[Aksel Sandemosen]] romaanista, ja se kuvaa pohjoismaista ajattelua yleisesti, ei vain Tanskaa.
+
+### v2-270
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Tanskan kuningaskuntaan
+VASTAUS: Tanskan kuningaskunta eli Rigsfællesskabet koostuu kolmesta osasta: Tanskasta, Färsaarista ja Grönlannista. Valtionpäämies on kuningas [[Frederik X]], joka nousi valtaan tammikuussa 2024 äitinsä Margareeta II:n luovuttua. Färsaarilla ja Grönlannilla on omat parlamenttinsa ja hallituksensa, mutta kummallakin on myös kaksi edustajaa Tanskan parlamentissa [[Folketingissa]]. Ulko- ja puolustuspolitiikka kuuluu pääosin Tanskalle. [[Färsaaret]] ovat itsehallinnollisia vuodesta 1948.
+
+### v2-271
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Färsaaret
+VASTAUS: Färsaaret ovat kahdeksantoista saaren ryhmä Pohjois-Atlantilla Skotlannin ja Islannin välissä. Asukkaita on noin 54 000, ja pääkaupunki on [[Tórshavn]]. Saarilla puhutaan omaa kieltä, [[färsaarten kieltä]], ja kalastus ja lampaanhoito ovat perinteisiä elinkeinoja. Saarilla on oma lippu [[Merkið]], ja ne ovat olleet itsehallinnollisia vuodesta 1948. Färsaaret eivät ole Euroopan unionin jäsen.
+
+### v2-272
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Skotlannin
+VASTAUS: Skotlanti on Ison-Britannian pohjoisosa ja osa Yhdistynyttä kuningaskuntaa. Pääkaupunki on Edinburgh, jonka [[Edinburghin linna]] seisoo sammuneen tulivuoren kalliolla. Maan korkein vuori on [[Ben Nevis]], noin 1 345 metriä. Skotlannin pohjoispuolella ovat [[Orkneysaaret]], jotka joutuivat 1400-luvulla Skotlannille osana Tanskan prinsessan myötäjäisiä. Skotlannilla on oma parlamentti, joka sijaitsee Edinburghissa.
+
+### v2-273
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: H. C. Andersen
+VASTAUS: Hans Christian Andersen syntyi Odensessa vuonna 1805 suutarin perheeseen. Neljätoistavuotiaana hän lähti yksin Kööpenhaminaan ja halusi kuninkaalliseen teatteriin laulajaksi, mutta ääni murtui. Virkamies [[Jonas Collin]] järjesti hänelle koulupaikan. Ensimmäinen ohut satuvihko ilmestyi vuonna 1835, ja sadut on käännetty yli sadalle kielelle. Andersen asui eri osoitteissa [[Nyhavnin]] varrella yhteensä 18 vuotta, ja hänen kerrotaan saaneen Satakieli-sadun aiheen [[Tivolin]] kiinalaistyylisistä rakennuksista. Hän kuoli Kööpenhaminassa vuonna 1875.
+
+### v2-274
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Kööpenhaminassa
+VASTAUS: Kööpenhamina on Tanskan pääkaupunki, joka sijaitsee Sjællandin saarella aivan Ruotsin rannikon tuntumassa. Kaupungin keskustassa on kanavia ja entisestä vallihaudasta syntyneitä järviä. Satamakanava [[Nyhavn]] rakennettiin vuosina 1670–1675, ja huvipuisto [[Tivoli]] avattiin vuonna 1843. Pyöräily on arkipäivää, ja vuonna 2014 avattu [[Cykelslangen]] on silta, jolle autot eivät pääse. Satamassa Langelinien rannalla on pronssinen [[Pieni merenneito]] -patsas.
+
+### v2-275
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Odense
+VASTAUS: Odense on Fynin saarella sijaitseva kaupunki ja yksi Tanskan suurimpia. H. C. Andersen syntyi siellä vuonna 1805, ja hänen lapsuudenkotinsa on museo. Kaupungin nimen uskotaan viittaavan norjalaiseen jumalaan Odiniin. Odensessa syntyi lähiseudulla myös säveltäjä [[Carl Nielsen]], jonka elämää esitellään museossa. Kaupunki sijaitsee [[Fynin]] saarella, ja siellä toimii [[H. C. Andersenin museo]].
+
+### v2-276
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Billundin
+VASTAUS: Billund on pieni kaupunki Jyllannissa, joka tunnetaan Legon kotikaupunkina. Puuseppä [[Ole Kirk Christiansen]] aloitti puisten lelujen valmistuksen siellä 1930-luvun pulavuosina, ja muoviset palikat patentoitiin vuonna 1958. Kaupungissa on myös [[Legoland]], joka avattiin vuonna 1968 ja oli ensimmäinen laatuaan. Billundissa on lisäksi lentoasema, joka palvelee Jyllannin keskiosaa.
+
+### v2-277
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: LEGO
+VASTAUS: Lego on tanskalainen palikkalelu, jonka nimi tulee sanoista leg godt eli leiki hyvin. Nykyinen muovipalikka patentoitiin vuonna 1958. Sen salaisuus on palikan sisällä olevat putket, jotka pitävät osat kiinni juuri sopivalla voimalla. Mitat ovat pysyneet samoina, joten vuonna 1958 tehty palikka sopii tänään ostettuun. Kuudesta samanlaisesta kahdeksan nystyn palikasta voi koota yli 900 miljoonaa erilaista yhdistelmää. Yhtiön perusti puuseppä [[Ole Kirk Christiansen]], ja se toimii yhä [[Billundissa]].
+
+### v2-278
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Pyöräily
+VASTAUS: Kööpenhaminassa on noin 385 kilometriä autoliikenteestä erotettuja pyöräteitä, ja noin puolet työ- ja koulumatkoista kuljetaan pyörällä. Pyöräkaistat ovat leveitä ja korotettuja, ja vuonna 2014 avattu [[Cykelslangen]] eli pyöräkäärme on silta, jolle autot eivät pääse lainkaan. Naapurikuntiin johtaa pyöräteitä, joita kutsutaan nimellä [[supercykelstier]], pyörien moottoritiet. Kaupunki on matala, ja se tekee pyöräilystä helppoa.
+
+### v2-279
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: pyöräsilloistaan
+VASTAUS: Kööpenhaminan satamaa ja kanavia ylittävät sillat palvelevat usein pyöräilijöitä ja jalankulkijoita. [[Cykelslangen]] eli pyöräkäärme avattiin vuonna 2014, ja se kaartaa sataman yli neljän metrin korkeudessa. Satamassa on myös [[Cirkelbroen]], pyöreä jalankulkusilta Christianshavnin kanavalla, jonka on suunnitellut taiteilija [[Olafur Eliasson]]. [[Inderhavnsbroen]] yhdistää Nyhavnin puolen ja Christianshavnin.
+
+### v2-280
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: H. C. Andersenin
+VASTAUS: H. C. Andersen asui Kööpenhaminassa suuren osan elämästään, ja hän vietti siellä yhteensä 18 vuotta eri osoitteissa [[Nyhavnin]] varrella. Hän kävi huvipuisto [[Tivolissa]] jo sen ensimmäisenä kesänä vuonna 1843, ja puiston kiinalaistyylisten rakennusten kerrotaan antaneen hänelle ajatuksen Satakieli-satuun. Satamassa Langelinien rannalla on pronssinen [[Pieni merenneito]] -patsas, joka perustuu hänen satuunsa. Andersen kuoli Kööpenhaminassa vuonna 1875 ja on haudattu kaupungin Assistens-hautausmaalle.
+
+### v2-281
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Pikku merenneito
+VASTAUS: Pieni merenneito -patsas syntyi, kun Carlsberg-panimon perustajan poika [[Carl Jacobsen]] näki baletin H. C. Andersenin sadusta ja tilasi vuonna 1909 kuvanveistäjä [[Edvard Eriksenin]] tekemään patsaan lahjaksi Kööpenhaminan kaupungille. Patsas paljastettiin Langelinien rantapromenadilla vuonna 1913. Se on vain runsaan metrin korkuinen, yllättävän pieni siihen nähden, kuinka kuuluisa se on. Patsas on joutunut ilkivallan kohteeksi useita kertoja, ja sen pää on sahattu irti ainakin kerran. Kaupungissa tunnetaan myös [[Carlsberg]]-panimon historia.
+
+### v2-282
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Christiania
+VASTAUS: Christiania on Kööpenhaminan [[Christianshavnin]] kaupunginosassa sijaitseva alue, joka syntyi vuonna 1971, kun asukkaat valtasivat vanhan sotilasalueen. Alueella on oma yhteisönsä, omintakeista rakentamista ja paljon taidetta. Christianiassa valmistetaan tunnettuja [[Christiania-pyöriä]], joiden etuosassa on kuljetuslaatikko. Alueen asemasta on neuvoteltu valtion kanssa vuosikymmenien ajan, ja lähteiden mukaan asukkaat saivat 2010-luvulla ostaa suuren osan alueesta säätiön kautta. Alueen asema on kuitenkin ollut poliittisesti kiistelty, enkä ole varma kaikista oikeudellisista yksityiskohdista.
+
+### v2-283
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Christianshavn
+VASTAUS: Christianshavn on Kööpenhaminan keskustan lähellä oleva kaupunginosa, jonka kuningas Christian IV perusti 1600-luvun alussa kauppa- ja linnoituskaupungiksi. Alue on kanavien ympäröimä, ja sen vanhat kapeat kanavat tuovat mieleen hollantilaisia kaupunkeja. Alueen tunnetuimpia rakennuksia on [[Vor Frelsers Kirke]], jonka torniin kiertää ulkopuolinen portaikko. Kaupunginosassa sijaitsee myös [[Christiania]], vuonna 1971 syntynyt vapaamielinen asuinalue. Kanavilla kulkee veneitä, ja rannoilla on kahviloita ja asuinveneitä.
+
+### v2-284
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Tivoli
+VASTAUS: Tivoli avattiin Kööpenhaminan keskustassa 15. elokuuta 1843, ja se on maailman toiseksi vanhin yhä toimiva huvipuisto. Vanhempi on vain toinen tanskalainen puisto, [[Dyrehavsbakken]]. Puiston perusti [[Georg Carstensen]], joka otti mallia Pariisin Tivoli-puutarhasta ja Lontoon [[Vauxhall Gardensista]]. Puinen vuoristorata [[Rutschebanen]] on rakennettu vuonna 1914 ja pyörii yhä, ja sen junassa istuu jarrumies. Toisen maailmansodan aikana osa Tivolista tuhoutui vuonna 1943, mutta puisto avattiin uudelleen jo muutaman viikon kuluttua.
+
+### v2-285
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Georg Carstensen
+VASTAUS: Georg Carstensen perusti Tivolin vuonna 1843. Kuningas [[Christian VIII]] antoi luvan puistoon viideksi vuodeksi kerrallaan, ja Carstensen perusteli asiaa suoraan: kun kansa huvittelee, se ei ajattele politiikkaa. Puisto rakennettiin kaupungin linnoitusvallin ulkopuolelle noin 61 000 neliömetrin alueelle, ja vuokraa maksettiin vuosittain. Aluksi [[Tivoliin]] mentiin Vesterportin eli länsiportin kautta. Puiston järvi on jäänne entisestä vallihaudasta. Carstensenin myöhemmistä vaiheista en ole varma.
+
+### v2-286
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Smørrebrød
+VASTAUS: Smørrebrød on tanskalainen avoin voileipä, jonka pohjana on tumma [[ruisleipä]]. Päälle kasataan esimerkiksi [[silli]]ä, paistettua [[kampelaa]], lihaa, kananmunaa tai juustoa. Sitä syödään veitsellä ja haarukalla, ja järjestyskin on tarkka: ensin kala, sitten liha ja viimeisenä juusto, eikä päällisiä sekoiteta keskenään. Vanhoissa lounasravintoloissa listalla voi olla yli kaksikymmentä eri leipää, ja jokaisella on oma nimensä ja vakiintunut kuormansa. Smørrebrød on perinteisesti lounasruokaa.
+
+### v2-287
+KOHDE: kaupunki:kobenhavn
+KYSYMYS: Kerro lisää: Ruisleipä
+VASTAUS: Tanskalainen ruisleipä, rugbrød, on tumma ja tiivis leipä, jota tehdään täysjyväruisjauhoista ja usein siemenillä maustettuna. Taikinan nostatukseen käytetään tavallisesti [[hapanjuurta]], joka antaa leivälle hapokkaan maun. Leipä viipaloidaan ohuiksi siivuiksi, ja siitä tehdään [[smørrebrød]]-voileipiä sekä arkisia eväsleipiä. Tanskalaiset pitävät ruisleipää perinteisenä ruokana, ja sen leipominen on säilynyt kotona ja leipomoissa. Tarkkaa kulutusmäärää en ole varma kertomaan.
+
+### v2-288
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: Flamenco
+VASTAUS: Flamenco syntyi Andalusiassa romanien, andalusialaisten ja Pohjois-Afrikan perinteiden sekoituksesta. Sen ydin ei ole melodia vaan [[compás]], tahtikuvio, jonka tavallisin muoto on kahdentoista iskun kierto, jossa painot osuvat epätasaisiin kohtiin. Siksi käsientaputus eli [[palmas]] on oma taitonsa eikä pelkkää säestystä. Flamencoon kuuluvat laulu, kitara, tanssi ja huudahdukset. [[Paco de Lucía]] toi flamencokitaraan jazzin harmoniat ja cajón-rummun 1970-luvulla, mikä suututti perinteen vartijoita mutta synnytti uuden perinteen.
+
+### v2-289
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: cante
+VASTAUS: Cante tarkoittaa flamencossa laulua, ja laulajaa kutsutaan nimellä cantaor tai cantaora. Laulu on flamencon vanhin osa, ja kitara ja tanssi ovat kehittyneet sen rinnalle. Vakavimpia ja raskaimpia lauluja kutsutaan nimellä [[cante jondo]] eli syvä laulu. Eri lauluryhmät, joita kutsutaan nimellä palo, ovat esimerkiksi [[soleá]] ja [[seguiriya]]. Jokaisella on oma rytmikuvionsa ja tunnelmansa, ja lauluun liittyy usein huudahduksia, joilla kuulijat kannustavat esiintyjää.
+
+### v2-290
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: tapaksilla
+VASTAUS: Tapa tarkoittaa espanjaksi kantta. Kerrotun tarinan mukaan juomalasin päälle asetettiin viipale kinkkua tai leipää, jotta kärpäset eivät päässeet sisään, ja kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään [[tapeo]], ja se on yhtä paljon kävelyä kuin syömistä. Madridissa vuonna 1916 valmistunut valurautainen [[San Miguelin halli]] on kierroksen tunnetuimpia pysäkkejä. Joissakin kaupungeissa, esimerkiksi [[Granadassa]], tapas tulee kuulemma ilmaiseksi juoman mukana.
+
+### v2-291
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: illallinen
+VASTAUS: Espanjalainen illallinen alkaa yhdeksän jälkeen, koska koko päivän rytmi on siirtynyt myöhäisemmäksi: lounas syödään kahden ja kolmen välillä, ja väliin jäävät tunnit täytetään tapaksilla. Usein mainitaan, että Espanja siirtyi vuonna 1940 [[Keski-Euroopan aikaan]], vaikka maan sijainti vastaisi läntisempää aikaa, joten aurinko laskee kellon mukaan myöhään. Illallinen on rento sosiaalinen tapahtuma, ja ruokailun jälkeen jäädään usein juttelemaan, mitä kutsutaan nimellä [[sobremesa]]. Toinen tunnettu tapa on [[siesta]], vaikka kaikki eivät nykyään nuku päivällä.
+
+### v2-292
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: Camino Francés
+VASTAUS: Camino Francés on tunnetuin Camino de Santiago -reiteistä. Se alkaa tavallisesti Ranskan puolelta Saint-Jean-Pied-de-Portista ja ylittää Pyreneet [[Roncesvallesin]] kautta. Reitti kulkee Espanjassa esimerkiksi [[Pamplonan]], [[Burgosin]] ja [[Leónin]] kautta Santiago de Compostelaan. Matka on noin 800 kilometriä, ja sen kävelemiseen menee tavallisesti noin neljä–viisi viikkoa. Reitin varrella on yöpymispaikkoja, joita kutsutaan nimellä albergue.
+
+### v2-293
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: Santiago de Compostelan
+VASTAUS: Santiago de Compostela on Galician pääkaupunki Luoteis-Espanjassa, ja sen katedraalissa on perimätiedon mukaan apostoli Jaakobin hauta. Kaupunkiin on kävelty tuhat vuotta, ja Camino de Santiago on pyhiinvaellustie, jota kulkee yhä satojatuhansia ihmisiä vuodessa. Katedraalissa odottaa [[botafumeiro]], 53-kiloinen hopeoitu suitsutusastia, jota kahdeksan miestä heiluttaa köysillä poikki ristilaivan. Se kiihtyy lähes 70 kilometrin tuntinopeuteen ja nousee 21 metrin korkeuteen. Alkuperäinen syy oli arkinen: pitkän matkan kulkeneet pyhiinvaeltajat haisivat. Katedraali sijaitsee [[Obradoiro]]-aukion laidalla, ja kaupunki kuuluu [[Galician]] maakuntaan.
+
+### v2-294
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: katalaania
+VASTAUS: Katalaani on romaaninen kieli, jota puhutaan [[Katalonian]] lisäksi Valencian alueella, jossa sitä kutsutaan valencian kieleksi, sekä Baleaareilla. Se on myös pienen [[Andorran]] ainoa virallinen kieli. Kielen puhujia on vähintään useita miljoonia, mutta tarkkaa lukua en ole varma. Katalaani kuuluu romaanisten kielten joukkoon, ja siinä on yhtäläisyyksiä sekä espanjaan että ranskaan. Kaupungeissa kuten [[Barcelonassa]] kieli näkyy kylteissä ja kouluissa.
+
+### v2-295
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: galegoa
+VASTAUS: Galego eli galicia on romaaninen kieli, jota puhutaan Espanjan luoteisosassa [[Galiciassa]]. Se on läheistä sukua [[portugalin kielelle]], sillä molemmat kehittyivät keskiajalla samasta galicialais-portugalilaisesta kielestä. Galician kirjallisuus heräsi uudelleen 1800-luvulla, ja sen tärkeimpiä kirjailijoita on [[Rosalía de Castro]]. Galiciassa vietetään vuosittain Galician kirjallisuuden päivää toukokuussa. Kieltä käytetään kouluissa ja hallinnossa espanjan rinnalla.
+
+### v2-296
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: baskia
+VASTAUS: Baski eli euskara on kieli, jolla ei tunneta sukulaisia, ja sitä pidetään Euroopan vanhimpana elävänä kielenä. Sitä puhutaan Baskimaassa ja Navarran pohjoisosassa Espanjassa sekä pienellä alueella Ranskan puolella. Kielestä on kehitetty yhteinen kirjakieli, [[Euskara Batua]], 1900-luvun jälkipuoliskolla. Tärkeitä baskialueen kaupunkeja ovat [[Bilbao]] ja [[San Sebastián]]. Alueella on oma kulttuurinsa, ja kielen asemaa on tuettu kouluissa. Puhujamäärää en ole varma.
+
+### v2-297
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: Teide
+VASTAUS: Teide on Teneriffan tulivuori, jonka korkeus on 3 715 metriä. Merenpohjasta mitattuna se on yli seitsemän kilometriä korkea, eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon [[Marsia]], että [[Euroopan avaruusjärjestö]] on koekäyttänyt siellä mönkijöitään. Saarella on purkautunut viimeksi vuonna 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, noin sata kilometriä Marokon rannikolta, mutta ne kuuluvat Espanjaan.
+
+### v2-298
+KOHDE: maa:ESP
+KYSYMYS: Kerro lisää: Sierra Nevadassa
+VASTAUS: Sierra Nevada on Etelä-Espanjan Andalusiassa sijaitseva vuoristo, joka kohoaa [[Granadan]] eteläpuolella. Sen korkein huippu [[Mulhacén]] on noin 3 480 metriä, ja se on koko Iberian niemimaan korkein vuori. Granadan [[Alhambrasta]] ja Albaicínin näköalapaikalta lumihuippuinen vuoristo näkyy kaupungin taustalla. Alueella on myös kansallispuisto ja hiihtokeskus, joten vuorilla voi viettää aikaa sekä talvella että kesällä.
+
+### v2-299
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Velázquezin
+VASTAUS: Diego Velázquez syntyi Sevillassa vuonna 1599 ja toimi Espanjan kuninkaan [[Filip IV:n]] hovimaalarina. Hänen tunnetuin teoksensa on [[Las Meninas]], joka valmistui vuonna 1656 ja on nykyään Pradon museossa Madridissa. Maalauksessa Velázquezin rinnassa näkyy [[Santiagon ritarikunnan]] risti, mutta hän sai jäsenyyden vasta vuonna 1659, kolme vuotta teoksen valmistumisen jälkeen. Perimätiedon mukaan ristin lisäsi maalaukseen joko kuningas tai Velázquez itse, mutta kumpaakaan ei ole varmuudella todistettu. Velázquez kuoli vuonna 1660.
+
+### v2-300
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Goyan
+VASTAUS: Francisco de Goya syntyi vuonna 1746 Aragoniassa ja nousi Espanjan kuninkaan hovimaalariksi. Ennen sitä hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: hän suunnitteli malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Hän katseli, mitä madridilaiset tekivät vapaapäivinään, ja siitä syntyi tarkka kuva 1700-luvun Madridista. Myöhemmin hän maalasi muun muassa sotaa kuvaavan teoksen [[Toukokuun kolmas päivä 1808]] sekä synkät [[mustat maalaukset]], jotka ovat nykyään Pradossa. Goya kuoli vuonna 1828 [[Bordeaux'ssa]] Ranskassa.
+
+### v2-301
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Prado
+VASTAUS: Prado-museon rakennuksen suunnitteli arkkitehti [[Juan de Villanueva]] vuonna 1785 kuningas Kaarle III:n tilauksesta luonnontieteiden museoksi. Suunnitelmat viivästyivät sotien takia, ja lopulta kuningas [[Ferdinand VII]] päätti tehdä rakennuksesta taidemuseon. Prado avasi ovensa marraskuussa 1819. Museossa ovat esimerkiksi Velázquezin Las Meninas, [[Hieronymus Boschin]] Maallisten ilojen puutarha ja Goyan mustat maalaukset, ja Goya on museon eniten esillä oleva taiteilija. Kokoelmiin kuuluu nykyään noin 7 600 maalausta, ja vuonna 2023 museossa kävi yli 3,3 miljoonaa kävijää.
+
+### v2-302
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Filip II
+VASTAUS: Filip II oli Espanjan kuningas, joka hallitsi vuodesta 1556 vuoteen 1598. Hän oli keisari [[Kaarle V:n]] poika, ja hän siirsi hovinsa Toledosta Madridiin vuonna 1561. Hänen aikanaan rakennettiin Madridin lähelle [[El Escorial]], luostarin ja palatsin yhdistävä rakennus. Filipin hallituskaudella tapahtui myös [[Espanjan armadan]] epäonnistunut hyökkäys Englantiin vuonna 1588. Vuonna 1580 hän sai lisäksi Portugalin kruunun, joten hänen valtakuntansa oli hyvin laaja.
+
+### v2-303
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Plaza Mayor
+VASTAUS: Plaza Mayor valmistui vuonna 1619 arkkitehti [[Juan Gómez de Moran]] suunnitelmien mukaan. Aukio on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukio paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas [[Filip III]], joka valettiin vuonna 1616 mutta nostettiin paikalleen vasta vuonna 1848. Aukiolla nähtiin myös synkkiä hetkiä, sillä siellä pidettiin vuonna 1680 inkvisition julkinen tuomiotilaisuus, ajan oikeudenkäytön mukaisesti. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+
+### v2-304
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Karhu ja mansikkapuu
+VASTAUS: Karhu ja mansikkapuu -patsas seisoo Puerta del Solin aukiolla, ja se on koko Madridin tunnus. Patsas esittää karhua, joka kurkottaa [[mansikkapuuhun]] eli madroñoon. Sama kuva on [[Madridin vaakunassa]], jossa karhun yläpuolella on myös tähtiä. Patsaan juurella kaupunkilaiset ja matkailijat sopivat usein tapaamisia. Mansikkapuun marjat ovat punaisia ja pyöreitä, ja puu kasvaa Välimeren alueella. Madridin vaakunan tarkasta historiasta en ole varma.
+
+### v2-305
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Puerta del Solin
+VASTAUS: Puerta del Sol eli Auringon portti oli aikoinaan Madridin muurin portti 1400-luvulla. Nimi tulee portin koristeesta, nousevasta auringosta, koska portti oli käännetty itään. Aukion kiveyksessä on messinkilaatta, joka merkitsee Espanjan [[kilometri nolla]] -pistettä: vuodesta 1857 lähtien siitä on mitattu kaikki maan päätiet, ja kuusi valtatietä lähtee sieltä eri suuntiin kuin kellotaulun viisarit. Aukion [[kellotalosta]] soi joka uudenvuodenyönä kaksitoista lyöntiä, ja espanjalaiset syövät jokaisella lyönnillä viinirypäleen. Perinnettä on lähetetty televisiosta vuodesta 1962.
+
+### v2-306
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Cocido madrileño
+VASTAUS: Cocido madrileño hautuu tuntikausia yhdessä padassa, mutta se syödään erissä. Ensin tulee liemi ohuine nuudeleineen, sitten [[kikherneet]] ja vihannekset ja viimeisenä lihat: naudanrintaa, kanaa, [[chorizoa]] ja verimakkaraa. Eriä sanotaan nimellä [[vuelco]], kaato, ja perinteisin tapa on kaataa pata lautaselle kolmeen kertaan. Ruoka on talvista ja raskasta, ja Madridin vanhat ravintolat tarjoavat sitä vain tiettyinä viikonpäivinä.
+
+### v2-307
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: madridilaista
+VASTAUS: Madridilaiset tunnetaan siitä, että he valvovat myöhempään kuin kukaan muu. Illallinen syödään yhdeksän jälkeen, ja väliaika täytetään tapaksilla. Kaupunkia on kutsuttu Euroopan unionin korkeimmalla sijaitsevaksi pääkaupungiksi, sillä se on noin 650 metrin korkeudessa. Madridilaisia kutsutaan leikillisesti nimellä [[gatos]] eli kissat. Tyypillisiä madridilaisia herkkuja ovat [[bocadillo de calamares]] eli kalmarileipä ja [[churrot]] suklaakastikkeessa. Talvella pöytään nousee cocido madrileño.
+
+### v2-308
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Real Madrid
+VASTAUS: Real Madrid on Madridin jalkapalloseura, joka perustettiin vuonna 1902. Nimen Real eli kuninkaallinen seura sai kuningas [[Alfonso XIII:n]] suosiollisella luvalla vuonna 1920. Seuran kotistadion [[Santiago Bernabéu]] avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen stadionin nurmikenttä on leikattu kuudeksi kaukaloksi, jotka voidaan laskea hydraulisella hissillä maan alle, ja koko kentän piilottaminen kestää noin kuusi tuntia. Kun seura voittaa mestaruuden, juhlitaan [[Cibeleen suihkulähteellä]]: joukkueen kapteeni ripustaa lipun patsaan kaulaan.
+
+### v2-309
+KOHDE: kaupunki:madrid
+KYSYMYS: Kerro lisää: Atlético Madrid
+VASTAUS: Atlético Madrid on Madridin toinen suuri jalkapalloseura. Se perustettiin vuonna 1903 [[Athletic Bilbaon]] nuorisoseuraksi Madridissa, ja siitä tuli myöhemmin itsenäinen seura. Seuran pelaajia kutsutaan lempinimellä [[Colchoneros]], patjantekijät, koska puna-valkoiset raidat muistuttavat vanhoja patjakankaita. Kotistadion on [[Metropolitano]], ja ennen sitä seura pelasi Manzanares-joen varrella [[Vicente Calderónissa]]. Atléticon kannattajat olivat ensimmäisiä, jotka kiipesivät Cibeleen suihkulähteen päälle juhlimaan, koska seuran toimisto oli naapurikadulla.
+
+### v2-310
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Ildefons Cerdà
+VASTAUS: Ildefons Cerdà oli katalonialainen insinööri ja kaupunkisuunnittelija, joka sai helmikuussa 1859 Madridin hallitukselta tehtäväkseen laatia Barcelonan laajennuksen. Hän suunnitteli [[Eixamplen]] ruudukon, jossa korttelin sivu on 113 metriä ja jokaisesta kulmasta on leikattu 20 metrin viiste. Näin jokaisesta risteyksestä tuli kahdeksankulmainen aukio, jossa vaunuilla oli tilaa kääntyä. Barcelonan kaupunki oli suosinut toista suunnitelmaa, jonka oli tehnyt [[Antoni Rovira i Trias]], mutta Cerdàn suunnitelma valittiin. Cerdà kuoli vuonna 1876.
+
+### v2-311
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Eixample
+VASTAUS: Eixample tarkoittaa katalaaniksi laajennusta. Alue syntyi 1850-luvun jälkeen, kun Barcelonan muurit purettiin ja insinööri Cerdà piirsi niiden ulkopuolelle ruudukon, jonka korttelit ovat 113 metriä sivultaan. Jokaisesta kulmasta on leikattu viiste, joten risteykset ovat kahdeksankulmaisia aukioita. Alueen tunnetuin katu on [[Passeig de Gràcia]], jonka varrella ovat [[Casa Batlló]] ja [[Casa Milà]]. Eixamplessa on myös Antoni Gaudín suunnittelema Sagrada Família.
+
+### v2-312
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: castellereiksi
+VASTAUS: Castellerit ovat katalonialaisen ihmistornin rakentajia. Joukkueen pohjalla on [[pinya]], satojen ihmisten tiivis kasa, jonka päälle kerrokset nousevat harteilta harteille. Korkeimmissa torneissa on kymmenen kerrosta. Huipulle kiipeää lapsi, [[enxaneta]], joka nostaa kätensä ja näyttää neljää sormea, yhtä montaa kuin Katalonian lipussa on raitaa. Torni lasketaan onnistuneeksi vasta, kun se on purettu kaatumatta. Perinne juontaa 1700-luvun lopun [[Vallsiin]], lähelle Tarragonaa, ja se levisi koko Kataloniaan.
+
+### v2-313
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Unescon aineettomaan kulttuuriperintöön
+VASTAUS: Unescon aineeton kulttuuriperintö tarkoittaa perinteitä, taitoja ja tapoja, jotka siirtyvät ihmisiltä toisille, kuten musiikkia, juhlia ja käsityötaitoja. Luettelo perustuu Unescon vuonna 2003 hyväksymään yleissopimukseen. Katalonian ihmistornit eli castellit lisättiin luetteloon vuonna 2010. Espanjalaisia kohteita ovat myös [[flamenco]], [[Välimeren ruokavalio]] ja Valencian [[Fallas]]-juhla. Kohteet eivät ole rakennuksia vaan elävää perinnettä, jonka siirtäminen seuraavalle sukupolvelle on tärkeää.
+
+### v2-314
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Antoni Gaudí
+VASTAUS: Antoni Gaudí oli katalonialainen arkkitehti, joka syntyi vuonna 1852 ja kuoli Barcelonassa vuonna 1926. Hän edusti katalonialaista jugendia eli modernismoa, jossa muodot ovat lainattuja luonnosta. Hänen tunnetuimpia töitään on [[Sagrada Família]], jonka johtoon hän otti vuonna 1883 ja johon hän omisti elämänsä loppuvuodet. Hän muutti vuosina 1904–1906 vanhan talon [[Casa Batllóksi]], jonka julkisivu on kuin lasista ja keramiikasta tehty mosaiikki. Muita tunnettuja töitä ovat [[Casa Milà]] ja [[Park Güell]].
+
+### v2-315
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Sagrada Família
+VASTAUS: Sagrada Família on Barcelonan valtava, yhä keskeneräinen kirkko. Rakennustyöt käynnistyivät vuonna 1882, ja Antoni Gaudí otti hankkeen johtoonsa seuraavana vuonna. Kun hän kuoli vuonna 1926, valmiina oli vasta pieni osa. Kirkkoon on suunniteltu 18 tornia, ja korkein niistä kohoaa yli 172 metriin, mikä tekisi siitä maailman korkeimman kirkkorakennuksen. Sisällä kivipilarit haarautuvat katossa kuin puiden oksat. [[Syntymäjulkisivu]] kertoo Jeesuksen elämästä riemukkaasti ja koristeellisesti, kun taas [[kärsimysjulkisivu]] on karu ja ankara. Kirkko rakennetaan lahjoitusvaroin, ja valmistumisen aikataulusta en ole varma.
+
+### v2-316
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Olympialaiset
+VASTAUS: Barcelonan kesäolympialaiset pidettiin vuonna 1992. Pääurheilupaikka oli [[Montjuïc]]-kukkula, jonne oli rakennettu stadion jo vuoden 1929 maailmannäyttelyä varten ja jota uudistettiin olympialaisia varten. Kaupunkiin rakennettiin [[olympiakylä]] rannan tuntumaan, ja rantoja ja satama-alueita uudistettiin. Kansainvälisen olympiakomitean silloinen puheenjohtaja [[Juan Antonio Samaranch]] oli kotoisin Barcelonasta. Ensimmäiset nykyaikaiset olympialaiset pidettiin Ateenassa vuonna 1896, jossa käytettiin marmorista [[Kallimarmaron]] stadionia.
+
+### v2-317
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Montjuïc
+VASTAUS: Montjuïc on Barcelonan eteläpuolella Välimeren rannalla kohoava kukkula. Siellä pidettiin vuoden 1929 maailmannäyttely, jota varten rakennettiin muun muassa [[Palau Nacional]], jossa on nykyään Katalonian taiteen museo. Kukkulalla on myös vuoden 1992 olympialaisten päästadion sekä vanha [[Montjuïcin linna]]. Taiteilija [[Joan Miró]] on saanut kukkulalle oman museonsa. Kukkulalta avautuvat näkymät yli kaupungin ja sataman.
+
+### v2-318
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Pa amb tomàquet
+VASTAUS: Pa amb tomàquet on Katalonian arkiruokaa: leipäviipale, jota hierotaan halkaistulla kypsällä tomaatilla, ja päälle laitetaan oliiviöljyä ja suolaa. Hierominen lopetetaan, kun leipä on vaaleanpunainen. Ravintolassa leipä tuodaan usein pöytään paljaana ja tomaatinpuolikas viereen, jolloin jokainen hieroo omansa. Katalaanit kasvattavat tähän omaa tomaattilajiketta, [[tomàquet de penjar]], joka sidotaan letiksi roikkumaan ja säilyy talven yli. Päälle laitetaan usein [[jamón]] eli kuivattua kinkkua tai juustoa. Oliiviöljy on olennainen osa makua, ja siksi [[oliiviöljyn]] laadulla on väliä.
+
+### v2-319
+KOHDE: kaupunki:barcelona
+KYSYMYS: Kerro lisää: Katalonian
+VASTAUS: Katalonia on Espanjan koillisosassa sijaitseva itsehallintoalue, jonka pääkaupunki on Barcelona. Alueella on neljä maakuntaa, ja sen hallituksesta käytetään nimeä [[Generalitat]]. Katalaani on alueen virallinen kieli espanjan rinnalla, ja Aranin laaksossa myös aranin kieli on virallinen. Katalonian lippu, [[senyera]], on keltainen, ja siinä on neljä punaista raitaa. Alueen tunnettuja paikkoja on [[Montserrat]]-vuori luostareineen. Katalonian itsenäisyydestä on käyty poliittista keskustelua: osa kannattaa itsenäistymistä ja osa pysymistä Espanjan osana.
+
+### v2-320
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Alhambraa
+VASTAUS: Alhambra on punertavalle kukkulalle Granadan laitaan rakennettu linnoituskaupunki, jonka rakentaminen alkoi vuonna 1238. Arabiankielinen nimi tarkoittaa suunnilleen punaista, ja se juontuu paikallisesta savesta, jossa on paljon rautaa, joten muurit hehkuvat punertavina auringonlaskussa. Rakentamisen aloitti [[Nasridien]] suvun perustaja [[Muhammad I]], ja 1300-luvulla hallitsijat Yusuf I ja Muhammad V laajensivat linnoituksen kokonaiseksi pikkukaupungiksi, jossa oli moskeijoita, kylpylöitä, työpajoja ja oma vesijohtoverkosto. Alue on valtava, sillä siihen mahtuisi lähes kaksikymmentä jalkapallokenttää, ja sen sisällä on ainakin kuusi palatsia. Kuuluisin niistä on [[Leijonien palatsi]]. Seinillä toistuu hallitsijasuvun tunnuslause, joka kuuluu ”ei ole voittajaa paitsi Jumala”.
+
+### v2-321
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Leijonien piha
+VASTAUS: Leijonien piha on Alhambran Leijonien palatsin sisäpiha, jonka keskellä on suihkulähde. Altaan kantaa kaksitoista kivistä leijonaa, ja pihaa ympäröi kapeiden pylväiden kannattama pylväikkö. Palatsi on yksi [[Alhambran]] kuuluisimmista osista, ja se rakennettiin pääosin 1300-luvulla [[Muhammad V:n]] aikana, vaikka en ole varma tarkoista vuosista. Piha on suunniteltu tuomaan sisälle vettä, varjoa ja viileyttä, mikä oli kuumassa ilmastossa tärkeää. Seinien ja holvien koristeina ovat pitsimäiset kipsikaiverrukset ja kaakelit, jotka kuuluvat [[Nasridien]] taiteen tunnusmerkkeihin.
+
+### v2-322
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Tapas
+VASTAUS: Tapas on pieni annos ruokaa, joka tarjoillaan juoman kanssa. [[Granadan]] baareissa tapas tulee juoman mukana ilman eri maksua, eikä asiakas valitse annosta itse, vaan sen valitsee baari. Annos vaihtuu jokaisella kierroksella, ja monessa paikassa annokset kasvavat sitä suuremmiksi, mitä pidempään istuu. Muualla [[Espanjassa]] ilmainen tapas on jo harvinaisuus, ja granadalaiset puolustavat omaansa kiivaasti. Ruokalistaa ei siksi kannata pyytää, vaan illan syö helpoiten kulkemalla baarista toiseen ja katsomalla, mitä eteen tuodaan. Tapas kuuluu läheisesti [[Andalusian]] baarikulttuuriin.
+
+### v2-323
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Granadassa
+VASTAUS: Granada sijaitsee Etelä-Espanjassa [[Sierra Nevadan]] juurella noin 740 metrin korkeudessa, noin viidenkymmenen kilometrin päässä merestä. Kaupunki syntyi kohtaan, jossa vuorilta tuleva Darro yhtyy Geniliin, ja vuorten sulamisvesi johdettiin kanavia pitkin pelloille ja puutarhoihin. Granada oli Iberian niemimaan viimeinen muslimivaltio: [[Nasridien]] emiirikunta säilyi vuoteen 1492, ja sen hallitsijat rakensivat Alhambran. Vastapäisellä kukkulalla on vanha maurilainen kaupunginosa [[Albaicín]]. Nykyisin Granada on ennen kaikkea opiskelijakaupunki, jonka yliopisto perustettiin vuonna 1531.
+
+### v2-324
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Zambra
+VASTAUS: Zambra on Granadan oma flamencon muoto, joka syntyi Sacromonten rinteen luola-asunnoissa. Alun perin se kuului hääpäivään eikä esitykseen. Vanhassa zambrassa on kolme osaa, ja ensimmäinen niistä, [[alboreá]], on morsiamen laulu: perinteen mukaan sitä ei lauleta muualla kuin häissä. Helmikuun 1963 rankkasateet romahduttivat luolia ja ajoivat suuren osan asukkaista pois, mutta osassa luolia tanssitaan yhä. Zambra on [[flamencon]] sukua, mutta se on sidottu [[Sacromonten]] paikkaan ja yhteisöön, jonka perinteen kantajia ovat olleet [[romanit]].
+
+### v2-325
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Sacromonte
+VASTAUS: Sacromonte on Granadan itälaidalla kohoava kukkula, jonka rinteisiin on kaiverrettu satoja luolakoteja jo 1500-luvulta lähtien. Ensin luoliin piiloutuivat kaupungista karkotetut ihmiset, mutta pian niistä tuli koti romanikansalle eli [[gitaneille]], jotka asettuivat Granadaan sen jälkeen, kun kaupunki oli vuonna 1492 vallattu takaisin kristityille. Jokainen luola on erimuotoinen, koska se on louhittu suoraan kukkulan kallioon, ja ovena toimii usein pyöreä, valkoiseksi kalkittu kaariaukko. Alueella kehittyi [[zambra]], Granadan oma flamencon muoto. Lähellä olevasta rotkosta, jota kutsutaan Mustien rotkoksi, kerrotaan tarina vapautetuista orjista, jotka etsivät sotien jälkeen kätkettyä arabikultaa oliivilehdosta. Kukkulan vieressä on vanha kaupunginosa [[Albaicínin]] rinne.
+
+### v2-326
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Albaicín
+VASTAUS: Albaicín on Granadan vanha kaupunginosa, joka kohoaa Alhambraa vastapäätä joen toisella puolella. Sen mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti, mutta alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla siellä seisoi [[Zawi ben Zirin]] rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee näköalapaikka [[Mirador de San Nicolás]], josta avautuu Granadan kuuluisin maisema: koko [[Alhambra]] levittäytyy katsojan eteen laakson toisella puolella ja lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä maanalaisia vesisäiliöitä, joista osa on satoja vuosia vanhoja.
+
+### v2-327
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Mulhacén
+VASTAUS: Mulhacén on Sierra Nevadan korkein huippu ja koko Iberian niemimaan korkein vuori, 3 479 metriä merenpinnan yläpuolella. Se kohoaa [[Granadan]] eteläpuolella, ja samalla vuoristolla sijaitsee Euroopan eteläisin hiihtokeskus, jonne on keskustasta vajaat kolmekymmentä kilometriä. Hissit nousevat yli kolmen kilometrin korkeuteen. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää alueella vuonna 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat. [[Sierra Nevadalta]] ehtii saman päivän aikana myös [[Välimeren]] rannalle, sillä rantaan on noin seitsemänkymmentä kilometriä. Korkein huippu kohoaa [[Iberian niemimaan]] eteläosassa.
+
+### v2-328
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Sierra Nevada
+VASTAUS: Sierra Nevada on Granadan eteläpuolella kohoava vuoristo, jonka nimi tarkoittaa lumista vuorijonoa. Huipuilla on lunta vielä toukokuussa, ja vuoret ovat Granadan vesisäiliö: sulamisvesi on johdettu vuosisatojen ajan kanavia pitkin pelloille ja puutarhoihin. Korkein huippu on [[Mulhacén]], 3 479 metriä. Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä kilometriä Välimeren rannalle. Lumi ei ole taattu, mikä näkyi vuonna 1995, kun alppihiihdon MM-kisat siirrettiin vuodella paljaiden rinteiden vuoksi. Vuoristo näkyy [[Albaicínin]] näköalapaikoilta [[Alhambran]] taustalla.
+
+### v2-329
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Boabdil
+VASTAUS: Boabdil oli Granadan viimeinen hallitsija, ja hänen oikea nimensä oli Muhammad XII. Hän kuului [[Nasridien]] hallitsijasukuun ja luovutti kaupungin avaimet 2. tammikuuta 1492 [[Kastilian]] ja [[Aragonian]] hallitsijoille. Sopimuksessa luvattiin, että asukkaat saavat pitää uskontonsa ja kielensä, mutta lupaus rikottiin alle kymmenessä vuodessa. Etelään johtavalla tiellä on yhä paikka nimeltä Suspiro del Moro eli maurin huokaus: tarinan mukaan Boabdil katsoi siitä taakseen ja itki, ja hänen äitinsä sanoi, ettei kannata itkeä kuin nainen sitä, mitä ei osannut puolustaa kuin mies.
+
+### v2-330
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Isabelle ja Ferdinandille
+VASTAUS: Kastilian kuningatar Isabella I ja Aragonian kuningas Ferdinand II tunnetaan yhdessä nimellä katoliset kuninkaat. He menivät naimisiin vuonna 1469, ja avioliitto yhdisti [[Kastilian]] ja [[Aragonian]] kruunut, vaikka kumpikin valtakunta säilytti omat lakinsa ja hallintonsa. Heidän aikanaan Granada valloitettiin, kun [[Boabdil]] luovutti kaupungin vuonna 1492, ja sillä päättyi Iberian niemimaan viimeisen muslimivaltion historia. Samana vuonna he rahoittivat [[Kristoffer Kolumbuksen]] matkan, ja samana vuonna annettiin määräys, jolla juutalaiset karkotettiin Espanjasta.
+
+### v2-331
+KOHDE: kaupunki:granada
+KYSYMYS: Kerro lisää: Granadan
+VASTAUS: Granada on Etelä-Espanjan kaupunki [[Sierra Nevadan]] juurella, ja se oli Iberian niemimaan viimeisen muslimivaltion keskus. [[Nasridien]] emiirikunta säilyi vuoteen 1492, jolloin viimeinen hallitsija luovutti kaupungin Kastilian ja Aragonian hallitsijoille. Kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa katedraalia: perustustyöt aloitti arkkitehti [[Enrique Egas]] vuonna 1518, varsinainen rakentaminen pääsi vauhtiin 1523, ja viimeiset kivet muurattiin paikoilleen jouluaattona 1704. Vuonna 1529 työt otti vastuulleen [[Diego de Siloé]], joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin.
+
+### v2-332
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: traje de gitana
+VASTAUS: Traje de gitana on naisten perinteinen juhlapuku, jota käytetään erityisesti [[Sevillan]] huhtikuun juhlassa [[Feria de Abril]]. Se on Espanjassa ainoa kansanpuku, jonka muoti muuttuu joka vuosi. Pukua kuvataan yleensä vartalonmukaiseksi ja röyhelöiseksi, ja siihen kuuluvat usein huivi ja kukat hiuksissa, mutta en ole varma kaikista tyylisäännöistä. Juhlassa tanssitaan [[sevillanoja]], jotka ovat kansantanssia eivätkä flamencoa: ero on sama kuin oopperan ja yhteislaulun välillä.
+
+### v2-333
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Feria de Abril
+VASTAUS: Feria de Abril on Sevillan huhtikuun juhla, joka kestää viikon. Kaupungin laitaan pystytetään sitä varten tuhat juhlatelttaa, joilla on omat katunsa ja lyhtynsä. Siellä tanssitaan [[sevillanoja]], joissa on neljä lyhyttä osaa kiinteine askelineen, joten kuka tahansa espanjalainen osaa tanssia ne kenen tahansa kanssa. Sevillanat eivät ole flamencoa vaan kansantanssia. Naiset pukeutuvat [[traje de gitana]] -asuun, jonka muoti muuttuu joka vuosi. Juhla kuuluu [[Andalusian]] pääkaupungin tunnetuimpiin perinteisiin.
+
+### v2-334
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Giraldillo
+VASTAUS: Giraldillo on Sevillan katedraalin kellotornin huipulla oleva pyörivä pronssiveistos, joka nostettiin paikalleen vuonna 1568. Se toimii tuuliviirinä ja kääntyy tuulen mukana. Veistoksen mukaan torni sai nykyisen nimensä [[Giralda]], sillä espanjan verbi girar tarkoittaa kääntymistä. Torni oli alun perin [[almohadien]] suurmoskeijan minareetti, ja moskeijan paikalle rakennettiin [[Sevillan katedraali]]. Veistoksen tekijästä ja esittämästä hahmosta olen epävarma, joten jätän ne mainitsematta.
+
+### v2-335
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Giralda
+VASTAUS: Giralda on Sevillan katedraalin kellotorni, joka oli alun perin [[almohadien]] suurmoskeijan minareetti. Kun kaupungin kristityt valloittajat purkivat moskeijan, he säästivät minareetin, ja se toimii nykyään katedraalin kellotornina. Nimensä torni sai huipulle nostetusta pyörivästä pronssiveistoksesta [[Giraldillosta]] vuonna 1568. Katedraali, joka seisoo moskeijan paikalla, on pinta-alaltaan maailman suurin goottilainen kirkko, yli 11 500 neliömetriä, ja se rakennettiin vuosina 1402–1517. Rakentajien tarina kertoo, että he halusivat kirkon, josta jälkipolvet luulisivat heitä hulluiksi. Kokonaisuus kuuluu [[Alcázarin]] ja Intian arkiston kanssa [[Unescon maailmanperintökohteeseen]].
+
+### v2-336
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Sevillan katedraali
+VASTAUS: Sevillan katedraali on pinta-alaltaan maailman suurin goottilainen kirkko: sen ala on yli 11 500 neliömetriä, ja se rakennettiin vuosina 1402–1517. Katedraali seisoo entisen [[almohadien]] moskeijan paikalla. Kaupungin kristityt valloittajat purkivat moskeijan mutta säästivät sen minareetin, joka tunnetaan nykyään [[Giraldana]] ja toimii katedraalin kellotornina. Rakentajien tarina kertoo, että he halusivat kirkon, josta jälkipolvet luulisivat heitä hulluiksi. Katedraali muodostaa yhdessä Alcázarin ja [[Intian arkiston]] kanssa yhden Unescon maailmanperintökohteen.
+
+### v2-337
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Intian arkisto
+VASTAUS: Intian arkisto perustettiin vuonna 1785, kun [[Kaarle III]] käski koota Espanjan Amerikan-siirtomaita koskevat asiakirjat vanhaan kauppakillan taloon Sevillassa. Asiakirjat olivat tuolloin hajallaan Simancasissa, Cádizissa ja Sevillassa. Sevilla oli aiemmin ollut siirtomaakaupan keskus, sillä vain Sevillasta lähtenyt ja sinne palannut purjelaiva sai käydä kauppaa siirtomaiden kanssa. Guadalquivirin mataloituminen siirsi kaupan vähitellen alavirtaan: laivastot siirtyivät [[Cádiziin]] 1680 ja Amerikan-kaupan virasto [[Casa de Contratación]] 1717. Nykyään arkistossa on yhdeksän kilometriä hyllyä, 43 000 nidettä ja noin 80 miljoonaa sivua. Se kuuluu katedraalin ja [[Alcázarin]] kanssa Unescon maailmanperintökohteeseen.
+
+### v2-338
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Alcázarin
+VASTAUS: Sevillan Alcázar on kuninkaallinen palatsikompleksi, jossa Kastilian kuningas [[Pedro I]] rakennutti 1360-luvulla uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366, jotka ovat todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä Sultan Don Bidru. Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen [[Muhammad V]], Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua [[Alhambraa]]. Alcázar kuuluu katedraalin ja Intian arkiston kanssa Unescon maailmanperintökohteeseen.
+
+### v2-339
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Kitkerät appelsiinit
+VASTAUS: Kitkerät appelsiinit eli sevillanappelsiinit ovat hedelmiä, joita kasvaa Sevillassa katujen ja pihojen varrella. Hedelmät ovat sellaisenaan liian happamia ja kitkeriä syötäviksi, mutta niistä valmistetaan [[marmeladia]], ja sato kerätään talvella. Osa sadosta on perinteisesti viety marmeladin valmistukseen [[Britanniaan]], mutta nykyisistä määristä en ole varma. Puiden kukat tuoksuvat keväällä voimakkaasti, ja espanjaksi kukkaa kutsutaan nimellä [[azahar]].
+
+### v2-340
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Appelsiininkukat
+VASTAUS: Appelsiininkukat ovat appelsiinipuiden pieniä valkoisia kukkia, jotka tuoksuvat voimakkaasti ja makeasti. [[Sevillassa]] kitkerät appelsiinipuut kukkivat keväällä, ja tuoksu leviää kaduille ja pihoille. Kukista valmistetaan [[appelsiininkukkavettä]], jota käytetään leivonnaisissa ja makeisissa, ja niistä tislataan myös hajusteissa käytettävää [[neroliöljyä]]. Espanjaksi kukkaa kutsutaan nimellä azahar. Tuoksu on niin tunnusomainen, että monelle se on Sevillan kevään merkki.
+
+### v2-341
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Tupakkatehdas
+VASTAUS: Sevillan kuninkaallinen tupakkatehdas, Real Fábrica de Tabacos, rakennettiin 1700-luvulla, ja rakennustyö kesti vuosikymmeniä. Se oli aikansa suurimpia teollisuusrakennuksia Euroopassa ja muistuttaa ulkoasultaan pikemmin palatsia kuin tehdasta. Tehtaassa valmistettiin tupakkaa ja sikareita, ja työntekijöistä suuri osa oli naisia, niin sanottuja [[cigarreras]]-sikarintekijöitä. Nykyään rakennuksessa toimii [[Sevillan yliopisto]]. Tehdas liittyy myös Georges Bizet'n oopperaan [[Carmen]], jonka nimihenkilö työskentelee tehtaassa sikarintekijänä.
+
+### v2-342
+KOHDE: kaupunki:sevilla
+KYSYMYS: Kerro lisää: Carmen
+VASTAUS: Carmen on Georges Bizet'n ooppera, jonka kantaesitys nähtiin Pariisissa vuonna 1875. Sen nimihenkilö on sikarintekijä Sevillan kuninkaallisessa tupakkatehtaassa, ja ensimmäinen näytös alkaa tehtaan portilta. Ooppera perustuu [[Prosper Mériméen]] novelliin. Bizet kuoli muutaman kuukauden kuluttua ensi-illasta, eikä hän ehtinyt nähdä teoksen nousevan yhdeksi tunnetuimmista oopperoista. Sevillaan on sijoitettu vuoden 2012 asiantuntijaselvityksen mukaan 153 oopperaa, enemmän kuin mihinkään muuhun Euroopan kaupunkiin, ja listalla ovat muun muassa Beethovenin [[Fidelio]], Mozartin [[Figaron häät]] ja Rossinin [[Sevillan parturi]].
+
+### v2-343
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Kaalin kraatteri
+VASTAUS: Kaalin kraatteri on Saarenmaalla sijaitseva meteoriittikraatteri, jonka halkaisija on noin sata metriä. Pohjalla on pieni lampi. Kraatterin teki taivaalta pudonnut [[rautameteoriitti]], ja sen ympärillä on useita pienempiä kuoppia, joten kokonaisuutta kutsutaan [[kraatterikentäksi]]. Syntyajankohdasta esitetään vaihtelevia arvioita, jotka ovat joitakin tuhansia vuosia vanhoja, mutta tarkkaa vuotta en tiedä. Paikka sijaitsee metsän keskellä [[Saarenmaan]] saarella, ja se on suosittu retkikohde.
+
+### v2-344
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Saarenmaa
+VASTAUS: Saarenmaa on Viron suurin saari, ja se kuuluu Viron länsiosan saaristoon, jossa on luotoineen runsaat 2 000 saarta. Toiseksi suurin saari on [[Hiidenmaa]]. Saarenmaan pääkaupunki on [[Kuressaare]], jonka keskiaikainen piispanlinna on yksi saaren tunnetuimmista nähtävyyksistä. Saarella on myös [[Kaalin kraatteri]], metsän keskellä oleva täysin pyöreä meteoriittikraatteri. Saarelle pääsee lautalla mantereelta.
+
+### v2-345
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Skypeä
+VASTAUS: Skype oli verkkopuhelupalvelu, jonka ohjelmiston kehittivät virolaiset ohjelmoijat, muun muassa Ahti Heinla, Priit Kasesalu ja [[Jaan Tallinn]]. Palvelun perustajat olivat ruotsalainen [[Niklas Zennström]] ja tanskalainen [[Janus Friis]], ja se julkaistiin vuonna 2003. Verkkohuutokauppayhtiö eBay osti Skypen vuonna 2005, ja Microsoft osti sen vuonna 2011. Microsoft ilmoitti lopettavansa palvelun toukokuussa 2025, mikäli muistan oikein. Skype vahvisti Viron mainetta teknologiamaana.
+
+### v2-346
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Sähköinen äänestys
+VASTAUS: Sähköinen äänestys tarkoittaa sitä, että äänen voi antaa internetin kautta. Viro oli vuonna 2005 maailman ensimmäinen maa, jossa vaaleissa sai äänestää verkossa. Äänestäjä tunnistautuu sirullisella henkilökortilla, joka on pakollinen jokaiselle virolaiselle viidestätoista ikävuodesta alkaen. Vuoden 2023 parlamenttivaaleissa yli puolet äänistä annettiin verkossa. Sama kortti ei ole vain äänestyskortti: sillä haetaan resepti apteekista, allekirjoitetaan sopimus ja perustetaan yritys. Joulukuun ensimmäisenä päivänä 2014 alkoi lisäksi [[e-residenttiohjelma]], joka antaa saman sirukortin myös ulkomaalaiselle, joka ei asu maassa lainkaan. Järjestelmä on osa laajempaa [[e-valtiota]].
+
+### v2-347
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Laulujuhla
+VASTAUS: Viron laulujuhla on suuri kuorolaulun juhla. Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja [[Johann Voldemar Jannsenin]] aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla. Vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Tallinnan [[laulukaaren]] lavalle mahtuu noin 15 000 laulajaa ja kentälle jopa 100 000 kuulijaa. Neuvostoaikana juhlat muuttuivat hiljaiseksi vastarinnaksi, ja ne olivat osa [[laulavaa vallankumousta]], joka johti lopulta itsenäisyyteen. [[Unesco]] lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+
+### v2-348
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: laulava vallankumous
+VASTAUS: Laulava vallankumous oli Viron itsenäistymiseen johtanut rauhanomainen kansanliike, joka sai nimensä siitä, että ihmiset lauloivat yhdessä kiellettyjä isänmaallisia lauluja. Syyskuussa 1988 Tallinnan laulukentälle kokoontui arviolta 300 000 ihmistä laulamaan lauluja, joita ei silloin saanut laulaa julkisesti. Vuosina 1988–1991 kymmenettuhannet lauloivat yhdessä, ja liike johti lopulta itsenäisyyteen. Taustalla oli [[laulujuhlien]] perinne, joka oli jo Neuvostoaikana muuttunut hiljaiseksi vastarinnaksi. Elokuussa 1989 arviolta noin kaksi miljoonaa ihmistä muodosti [[Baltian ketjun]], ihmisketjun Tallinnasta [[Vilnaan]].
+
+### v2-349
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Soomaa
+VASTAUS: Soomaa on Lounais-Viron kansallispuisto, jonka nimi tarkoittaa suomaata. Alue on tunnettu soistaan, metsistään ja tulvistaan: kun jokien vedet nousevat metsien ja niittyjen ylle, sanotaan alkavan [[viides vuodenaika]], jolloin liikutaan veneellä tai kanootilla. Perinteinen kulkuväline on [[haabja]], yhdestä haavanrungosta koverrettu soutuvene. Tulvat ovat tavallisimmin kevään ilmiö, mutta niiden ajankohta ja laajuus vaihtelevat vuosittain. Alue sijaitsee [[Pärnun]] seudulla.
+
+### v2-350
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: tulvista
+VASTAUS: Soomaan tulvat syntyvät, kun kevään lumen sulamis- ja sadevedet nousevat alueen jokiin, eivätkä tasaisen suomaan uomat pysty johtamaan vettä pois riittävän nopeasti. Joet voivat nousta usealla metrillä, ja vesi leviää metsiin ja niityille. Tulvat ovat ennen kaikkea kevään ilmiö, mutta niitä voi tulla myös syksyllä tai talvella, ja ajankohta ja laajuus vaihtelevat vuosittain. Tulvan aikaan tiet ja polut ovat veden alla, ja alueella liikutaan veneillä ja [[kanooteilla]]. Paikalliset ovat sopeutuneet tulviin vuosisatojen ajan, ja nykyisin tulva-aikaa sanotaan [[viidentenä vuodenaikana]].
+
+### v2-351
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: Viron kieli
+VASTAUS: Viron kieli on suomen sukukieli, ja molemmat kuuluvat itämerensuomalaisiin kieliin. Sitä puhuu äidinkielenään noin miljoona ihmistä, joista valtaosa asuu Virossa. Kirjakieli perustuu pohjoisviron murteisiin, mutta etelässä puhutaan muun muassa [[võron kieltä]], joka poikkeaa selvästi pohjoisesta. Kielessä on kirjaimia kuten õ, ä, ö ja ü, ja siinä on, kuten suomessakin, runsaasti sijamuotoja. Kirjakielen kehittymiseen vaikutti 1800-luvun kansallinen herääminen, jonka suuria teoksia oli kansalliseepos [[Kalevipoeg]]. Sen julkaisi vuosina 1857–1861 [[Friedrich Reinhold Kreutzwald]].
+
+### v2-352
+KOHDE: maa:EST
+KYSYMYS: Kerro lisää: karjalalle
+VASTAUS: Karjalan kieli on itämerensuomalainen kieli, joka on läheistä sukua suomelle ja virolle. Sitä puhutaan Venäjän puolella Karjalassa ja Tverin alueella, ja Suomessa karjalan kieltä puhuu pieni vähemmistö. Karjalan päämurteita ovat varsinaiskarjala, [[aunuksenkarjala]] eli livvi ja lyydi, ja jotkut tutkijat pitävät niitä erillisinä kielinä. Kielen puhujia on vähän, ja kieltä pidetään uhanalaisena. Karjalan kansanrunous oli tärkeä aines suomalaiselle kirjallisuudelle, sillä [[Elias Lönnrot]] kokosi sen pohjalta [[Kalevalan]].
+
+### v2-353
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Vana Toomas
+VASTAUS: Vana Toomas eli Vanha Toomas on Tallinnan raatihuoneen tornin huipulla seisova, sotilaaksi puettu tuuliviiri, joka on ollut kaupungin tunnuskuva vuodesta 1530. Kaupungin tilikirjassa on merkintä samalta vuodelta: maalari Joachim sai palkkion raadin tuuliviirin kultaamisesta. Siitä asti hahmo on kääntynyt tuulen mukana 64 metrin korkeudessa. Vuoden 1944 pommituksessa se vaurioitui, ja tornissa on nyt vaskiseppä [[Vello Rooveerin]] vuonna 1996 takoma kopio, kun taas alkuperäinen on esillä museossa. Raatihuone seisoo [[Raatihuoneentorin]] laidalla ja on koko [[Itämeren]] alueen ja Pohjoismaiden vanhin säilynyt raatihuone.
+
+### v2-354
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: raatihuoneen
+VASTAUS: Tallinnan raatihuone on Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402–1404, keskiaikaisen [[Raatihuoneentorin]] laidalle, vaikka rakennuksesta on mainintoja jo 1300-luvulta. Hansakaupunkina Tallinnan kaupunginhallitus piti siellä kokouksiaan ja päätti kaupan, oikeuden ja arjen asioista. Rakennuksen 36,8 metriä pitkässä salissa on yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa 115 porrasaskelmaa, ja huipulla pyörii tuuliviiri [[Vana Toomas]]. Rakennus edustaa [[goottilaista tyyliä]].
+
+### v2-355
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: hansakaupunki
+VASTAUS: Hansakaupunki oli kaupunki, joka kuului Hansaan, pohjoiseurooppalaisten kauppakaupunkien ja kauppiaiden liittoon. Tallinna eli Reval oli vuonna 1285 jo hansakaupunki, ja sen kauppiaat välittivät suolaa, silliä ja vahaa lännen ja [[Novgorodin]] välillä. Muistini mukaan kaupunki sai [[Lyypekin]] kaupunkioikeuden vuonna 1248, ja Lyypekki oli hansakaupunkien johtava kaupunki. Hansakaupungit hallinnoivat itseään raatien kautta, ja Tallinnassa raati kokoontui Raatihuoneentorin laidalla sijaitsevassa [[raatihuoneessa]]. Hansa-aika on yhä nähtävissä Vanhankaupungin kaduilla, torneissa ja kauppiastaloissa.
+
