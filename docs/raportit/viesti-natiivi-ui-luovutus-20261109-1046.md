@@ -39,3 +39,4 @@ KESKEN: katso kuvat (fn-2: ei yläpalkkia, yksi ☰, pallo ei peitä mitään; f
 - JU ketju BE: paikkapalkki-1 x3 → lokit/nui-paikkapalkki-1-<koko>-91d517091-3 (vaaka-2 vanhalla vedolla: ei raportoida), sitten fpv-napit-1 x2.
 - 11.1x: NS ccbdaef0a (paluulennon ennakko ilman huippua) yhdistetty → paikkapalkki 818e32b61 (0 virhettä), sk:n sha päivitetty; JU:lta pyydetty BE-ketju tällä sha:lla (kansiot -818e32b61).
 - PT 11.0x: tarkista p-5/p-6:sta, peittääkö RANSKA-kartuscha (vasen alakulma) kartan paikannimen (NS:n mp-3: Rocamadour). Kartuscha on junan 223 osa, nimikerros ei väistä sitä; jos peittää, ehdota PT:lle nimien väistöä kartuschan alueelta (Nimikerros, vrt. FpvNakyma.LisaVaraus).
+- JU 11.1x: ketju BH = paikkapalkki-1 818e32b61 iphone + vaaka + ipad (pyydetty), sitten fpv-napit-1 x2. Kansiot -818e32b61; 91d517091-3-ajoja ei raportoida.
