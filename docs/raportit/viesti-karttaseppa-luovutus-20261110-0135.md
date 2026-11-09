@@ -21,15 +21,25 @@ Syy: konteksti 26 % (hook), pehmeä raja. Korvaa -0100:n. Vanhemmat luovutukset 
    `$B/commons-kuvat-pariisi/selitteet-luonnos.md`). KK:n tarkistus: Matkakirja-fable/scratchpad/keskustelukanava/b3-pariisi-tekstit-tarkistus-20261110.md.
 
 ## TYÖN ALLA / JONO (järjestyksessä)
-a. **KK:n pyyntö (01.5x)**: korjattu Pariisin lista + kaksi pelikuvaa (nostokortti kysymyksineen; juttu kuvan ja selitteen kanssa,
-   01-a 448 px ja 03-a 608 px tarkkuus pelin koossa) PT:n kautta KK:lle. Opus-agentti teki pelinäkymää (verkkopeli, väliaikaiset
-   muokkaukset js:iin + assets/_luonnos/, palautus git checkoutilla) → tulokset `$B/pelinakyma/havainnot.md` (+ kuvat). TARKISTA
-   ENSIN: `git status --short js assets` tyhjä (jos ei: `git checkout -- <js>`, assets/_luonnos → mv scratchpadiin). Lähetä sitten
-   PT:lle 3 riviä + korjattu lista (numeroitu, ks. kohta 4) ja kuvat; PT välittää KK:lle.
-b. **Koe5 Mac-kuvat JU:lta** (ajot 9–10, `$K/ajopyynto-mac.md` LISÄYS 01.2x; skenaariot `$K/sk-*-koe5.txt`) → parit koe3 | koe5
-   `python3 -I $K/skriptit/parit-koe.py koe3 koe5` (1000 px PT:lle; KK:lle/omistajalle täysikoko, tekstit kuvan ulkopuolelle, PT 4.48).
-   Tarkista erityisesti reunuskaistat (sininen ylhäältä-kuvassa) ja seinäkaistat räystäällä lähikuvista.
-c. Lontoon tekstit: KK:n tarkistus odottaa (sama kaava kuin Pariisi).
+a. **KK:n pyyntö (01.5x) – pelikuvat TEHTY 02.2x, PT:lle lähetetty**: `$B/pelinakyma/` (havainnot.md + 7 kaappausta, mobiili 375 px; KS katsonut
+   nostokortin ja Curien). Työpuu palautettu (`git status --short js assets` tyhjä).
+   - **LÖYDÖS: hetket (hetki-*-18xx, Lumière, Torni, Curie, Pasteur, Lavoisier, Bastilji 1789) EIVÄT ole nostokortteja**: kartan piste avaa
+     nähtävyysjutun, joka ei lue `kysymykset`-kenttää → 22 Pariisin ja 16 Lontoon kysymystä näkyvät vain, jos juttukorttiin tulee
+     "Kysy pululta:" -osio tai hetket siirtyvät nostopooliin = koodimuutos (PT/Pelikoodari päättää). Kaappaus näyttää kysymykset
+     lustig-eiffel-nostokortissa (ulkoasu OK, kaksi riviä/kysymys).
+   - Kuvatarkkuus: Curie 608 px riittää puhelimessa (301 CSS px), pehmenee iPadilla; Vrain-Lucas 448 px pehmeä puhelimessa →
+     hae ≥ 600 px (Curie ≥ 1200 px, jos iPad). Lontoon 02-a (leveä-matala) ja 07-b (488 px) vielä katsomatta pelissä.
+   - Seuraavaksi: KK:n korjattu lista (Pariisi, sitten Lontoo) PT:n kautta KK:lle, kun PT on linjannut kysymysten paikan.
+a2. **PT 01.5x, faktavirheet olemassa olevissa jutuissa (korjaa kysymättä, PR, valmis-rivi PT:lle sha:lla)**:
+   1) Mona Lisan varkaus: "palasi Louvreen samana vuonna" → taulu palasi Louvreen 4.1.1914 (tarkista teksti, `git grep -n "Mona Lisa" js/packs`);
+   2) Tuileries'n palatsi ja Impressionistit: sama juttu puhuttelee sekä isoisää ("sinä kävelit") että pelaajaa ("isoisäsi näki")
+      → yhtenäistä, ellei tarkoituksellinen (katso muiden juttujen linja ensin). Lisätiedot KK:n tiedoston lopussa
+      (Matkakirja-fable/scratchpad/keskustelukanava/b3-pariisi-tekstit-tarkistus-20261110.md, "Havainnot olemassa olevista jutuista").
+   EI tehty, koska pelinäkymäagentti muokkasi samoja js-tiedostoja väliaikaisesti.
+   Kohta 31 (Edelfelt) on vaihdettu KK:n sanamuotoon; 29 (Marie-Anne Lavoisier) jää ennalleen, kunnes tekijä vahvistuu.
+c. Lontoon tekstit: KK tarkisti 02.1x; kysymykset 1–16 sellaisinaan, selitteiden 7 korjausta TEHTY (`$B/commons-kuvat/selitteet-luonnos.md`;
+   KK:n tiedosto Matkakirja-fable/scratchpad/keskustelukanava/b3-lontoo-tekstit-tarkistus-20261110.md). Pelinäkymässä tarkistettava
+   02-a (hyvin leveä ja matala) ja 07-b (488 px). Korjattu lista ja pelikuvat PT:n kautta KK:lle, Pariisi ensin.
 d. Sisäkulmien rypyt (13 %, "muu" rypyt-syy.py:ssä) jäivät; katso vasta koe5-kuvien jälkeen, tarvitaanko.
 e. Nimiäänet Lontoolle vasta Pariisin oton jälkeen (KK 01.0x); nimilista 43 (sijainnit.json lontoo:*) tekstinä valmiiksi silloin.
 
