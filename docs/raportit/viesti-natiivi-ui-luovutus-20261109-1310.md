@@ -42,3 +42,25 @@ Esikatselun koot: iphone, iphone-vaaka, ipad, ipad-pysty (tyokalut/esikatselu.sh
 
 ## Muuta
 - Vanhat worktreet poistettavissa: wt/proto-natiivi-ui-nostovalikko-juna223, wt/proto-natiivi-ui-nostovalikko, wt/natiivi-ui-luovutus-1221.
+
+## Lisäys 13.1x (luovutuksen jälkeen tulleet viestit)
+- P-5A: NS korjasi (7a560e725 maisemakaari Mont Blanc/Cosquer 0,2°/65° + 7f3d35cd6 esilataus koko paluun yli ≤ 9 osuutta + fb77e12b1
+  testikomento `ui nahtavyysesittely kohde`). YHDISTETTY: natiivi-backup natiivi-ui/paikkapalkki = fb77e12b1 (ff); palkki-aina = 29e6baae5
+  (merge, tarkistus 0). JU:lle pyydetty sk-paikkapalkki-p5a iphone → lokit/nui-paikkapalkki-p5a-iphone-fb77e12b1. SEURAAVAKSI: katso p-5a
+  terävä? + lokin "osuudet 9" ja "muistihuippu" → NS + PT; jos terävä: sk-paikkapalkki-1 kolmella koolla fb77e12b1 → PT → KK.
+  NS: maisemakaari yhdistetään lopullisesti vasta PT:n kuvakuittauksen jälkeen (NS:n Mont Blanc -ajo JU:lla).
+- JU-ajo palkki-aina on f5aca4541:llä (ilman NS:n korjausta) – kelpaa palkkikuviin.
+- FPV-KOE (OMISTAJA 12.57 + 13.00, PT; KOE, ei junaan), TEE PALKKI-TYÖN JÄLKEEN kärkeen b57df8ec6 (wt/proto-natiivi-ui-fpv-napit):
+  a) iPadin tikut ylemmäs ja sisemmäs peukaloiden lepokohtaan (pieni + iso iPad);
+  b) maapallo pieni ja läpikuultava; napautus → hieman nykyistä isompi, täysin näkyvä, paikan vaihto kuten ISS:ssä, valinnan jälkeen pienenee;
+     manuaalissa pallon napautus vaihtaa ensin AUTOon (drone leijuu paikanvaihdon ajan);
+  c) iPhonen ☰ Dynamic Islandin oikealle puolelle samalle korkeudelle;
+  d) vauhti + korkeus: iPhone pysty ylhäällä keskellä heti Islandin alla, vaaka yläreunan keskellä, iPad kuten vaaka; tietorivin vihreä
+     teksti selvemmäksi vaalealla taivaalla;
+  e) AUTO/MANUAL-nappi oikean tikun yläpuolella kaikilla kooilla: napissa nykyinen tila, lento alkaa AUTO, napautus vaihtaa; ☰:n
+     Manuaaliohjaus-rivi pois. Nopeus "oikean maan mukaan" → ei muuteta.
+  Omistajan sanat (12.57): "ipadilla pitää miettiä paremmat kohdat peukaloille, nyt varmaan liian reunassa. maapallo pitää olla pienempi ja
+  läpinäkyvä (klikkaamalla sitä pallo suurenee hieman nykyistä näytettäsi isommaksi, läpinäkyvyys häviää ja pelaaja voi vaihtaa paikkaa
+  samalla lailla kuin ISS:llä). iphonella hampurilainen dynamic islandin oik yläkulmaan. vauhti ja korkeus voisi näkyä ylhäällä keskellä heti
+  islandin alapuolella tai vaaka-asennossa … ne voivat olla yläreunassa." Kuvat iPhone pysty + vaaka + iPad (myös MANUAL ja pallo auki) → PT.
+- ÄLÄ KOSKE: KameraTappi.cs ja ohjausnappi.uss (PK muokkaa, OMISTAJA 12.58); jos tarvitset, rivi PT:lle.
