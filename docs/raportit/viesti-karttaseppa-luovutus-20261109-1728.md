@@ -27,3 +27,4 @@ Vahdit (viritä uudelleen): postilaatikko `/bin/zsh /Users/Shared/Claude/proto-3
 ## LISÄYS 17.3x (JU)
 - Mallinostot-3: JU vahvisti 8/8 kuvaa ilman harmaita. Kulman kuvakortti = edellisen kohteen pinnattu luenta (tarkoitus), JU:lle selitetty.
 - grandpalais-tahti ajossa **dbe105f0f**:llä (riittää, ei uusintaa). Nimet ja Lontoo vaihdettu **ab57114e5**:een → lokit ks-pariisi-nimet-ab57114e5/, ks-lontoo-kyltit-ab57114e5/.
+- **PT 17.3x:** mallinostot-3 hyvät (Invalidit, GP, ✦-laput erillään). SEURAAVA: SC (mallinostot-4) + Temple-kierto (temple-vaisto) kuvat PT:lle → sitten **koko ketju d5aea75b7 → ab57114e5 junaan 224 yhtenä** (PT). Kulman kortti selitetty PT:lle (merkki-kuvissa edellisen kohteen pinnattu luenta).
