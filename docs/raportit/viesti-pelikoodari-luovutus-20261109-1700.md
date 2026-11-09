@@ -42,3 +42,9 @@ Natiivin päähaaraa ei ole natiivi-backup/main-nimellä; Pariisin data HEADissa
 
 ## 5. MUUT
 - Kun kaikki kuitattu: rivi PT:lle "JONO TYHJÄ: Pelikoodari". Testit `cd Peli-testit && sh kaanna.sh <osa>`, `sh Peli-testit/unity-tarkistus.sh`.
+
+## LISÄYS 17.0x (PT)
+- Liiketappi 678376fbb kuitattu PT:llä: junaan JU:n kuvien jälkeen (kartussin väistö näyttävä kuvassa).
+- PÖLLÖ-WORKER ON PK:N OMA: lähde haaroissa origin/pelikoodari-pollo-* (kv, valimuisti, natiivi, natiivi-chat, pallot-worker); hae
+  `git log --all -- '*worker*'` / wrangler-tiedosto. KORJAA ehdotukset-tehtävä nähtävyyskontekstille ("Pelaaja katsoo kartalla (kysymykset
+  tästä): nähtävyys Eiffel-torni (Pariisi)" → nyt 200 + tyhjä lista). Julkaisu PK:n kaavaa (ei korttia); rivi PT:lle, kun vastaa ei-tyhjänä.
