@@ -3104,6 +3104,466 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
+     * ennen striimatun tietokortin. Isoisän "kadonnut maailma" -sävy. Kuvat Wikimedia Commonsista (pysyvä lupa).
+     */
+    'Westminster Abbey': {
+      aika: '1245–1745',
+      teksti: 'Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard '
+          + 'Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa '
+          + '1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm '
+          + 'Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki '
+          + 'Englannin hallitsijat on kruunattu täällä.'
+        + '\n\n'
+        + 'Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki '
+          + 'Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, '
+          + 'kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta '
+          + '1745.'
+        + '\n\n'
+        + 'Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista '
+          + 'ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. '
+          + 'Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. '
+          + 'Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.',
+      kuvat: [
+        {
+          tiedosto: 'Westminster Abbey west front March 2015.jpg',
+          lyhyt: 'Westminster Abbeyn länsitornit valmistuivat vasta 1745.',
+          selite: 'Westminster Abbeyn länsijulkisivu ja Nicholas Hawksmoorin tornit, jotka '
+            + 'valmistuivat 1745.',
+          lahde: 'Prioryman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Thomas Medland - Westminster Abbey - B1977.14.16401 - Yale Center for British Art.jpg',
+          lyhyt: 'Westminster Abbey pohjoisesta 1790-luvulla.',
+          selite: 'Thomas Medlandin kaiverrus Westminster Abbeysta pohjoisen puolelta '
+            + '1790-luvulla, kun kirkon edustalla oli vielä vanha kaupunginosa.',
+          lahde: 'Thomas Medland, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Westminsterin palatsi': {
+      aika: '1840–1870',
+      teksti: 'Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja '
+          + 'palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui '
+          + 'vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen '
+          + 'kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.'
+        + '\n\n'
+        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, '
+          + 'joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat '
+          + 'liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat '
+          + 'tuhannet ihmiset, myös taidemaalari William Turner.'
+        + '\n\n'
+        + 'Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja '
+          + 'sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät '
+          + 'noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää '
+          + 'alakerran krypta.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of Westminster seen from the north bank of the Thames, London.jpg',
+          lyhyt: 'Westminsterin palatsi rakennettiin uudelleen vuoden 1834 palon jälkeen.',
+          selite: 'Westminsterin palatsi Thamesin pohjoisrannalta; nykyinen palatsi '
+            + 'rakennettiin vuoden 1834 palon jälkeen.',
+          lahde: 'Christian David, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Print of Houses of Parliament before 1834 Fire.jpg',
+          lyhyt: 'Vanha parlamenttitalo ennen vuoden 1834 paloa.',
+          selite: 'Vanhan Westminsterin palatsin parlamenttirakennukset ennen lokakuun 1834 '
+            + 'tulipaloa.',
+          lahde: 'J. Shury & Son, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Westminster Bridge': {
+      aika: '1862',
+      teksti: 'Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja '
+          + 'Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja '
+          + 'he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge '
+          + 'avattiin silti 1750.'
+        + '\n\n'
+        + 'Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti '
+          + 'sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin '
+          + 'aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset '
+          + 'pettivät joen pohjassa.'
+        + '\n\n'
+        + 'Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi '
+          + 'kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin '
+          + 'toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.',
+      kuvat: [
+        {
+          tiedosto: 'At London 2025 569 - Westminster Bridge with Palace of Westminster.jpg',
+          lyhyt: 'Nykyinen Westminster Bridge avattiin 1862.',
+          selite: 'Westminster Bridge ja Westminsterin palatsi; nykyinen valurautainen silta '
+            + 'avattiin 1862.',
+          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
+          lyhyt: 'Canaletto maalasi ensimmäisen Westminster Bridgen 1747.',
+          selite: 'Canaletton maalaus 1747: Lontoon pormestarin juhlakulkue veneillä Thamesilla '
+            + 'uuden kivisillan luona.',
+          lahde: 'Canaletto, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cutty Sark': {
+      aika: '1869',
+      teksti: 'Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi '
+          + 'teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon '
+          + 'ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. '
+          + 'Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä '
+          + 'paidassa, skotiksi cutty sark.'
+        + '\n\n'
+        + 'Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan '
+          + 'kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet '
+          + 'eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty '
+          + 'Sark kuljetti sen jälkeen villaa Australiasta.'
+        + '\n\n'
+        + 'Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella '
+          + 'nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin '
+          + 'kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa '
+          + 'syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.',
+      kuvat: [
+        {
+          tiedosto: 'Cutty Sark (16719233476).jpg',
+          lyhyt: 'Cutty Sark on ollut Greenwichin kuivatelakalla vuodesta 1954.',
+          selite: 'Teeklipperi Cutty Sark kuivatelakalla Greenwichissä.',
+          lahde: 'Krzysztof Belczyński, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Cutty Sark (ship, 1869) - SLV H91.250-164.jpg',
+          lyhyt: 'Cutty Sark täysissä purjeissa.',
+          selite: 'Cutty Sark täysissä purjeissa merellä aikana, jolloin se purjehti vielä '
+            + 'rahtilaivana.',
+          lahde: 'Allan C. Green, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lontoon Tower': {
+      aika: '1078',
+      teksti: 'Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri '
+          + 'valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, '
+          + 'asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä.'
+        + '\n\n'
+        + 'Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III '
+          + 'sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun '
+          + 'kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin '
+          + 'Lontoon eläintarhaan 1830-luvulla.'
+        + '\n\n'
+        + 'Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn '
+          + '1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään '
+          + 'kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit '
+          + 'lähtevät.',
+      kuvat: [
+        {
+          tiedosto: 'Tower of London viewed from the River Thames.jpg',
+          lyhyt: 'Valkoinen torni on seissyt Thamesin rannalla 1000-luvulta.',
+          selite: 'Lontoon Tower ja Valkoinen torni Thamesilta katsottuna.',
+          lahde: 'Bob Collowan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'William Woolnoth - The Tower of London - B1977.14.18641 - Yale Center for British Art.jpg',
+          lyhyt: 'Tower 1800-luvun alussa, ennen vallihaudan kuivattamista.',
+          selite: 'William Woolnothin kaiverrus Lontoon Towerista 1800-luvun alussa.',
+          lahde: 'William Woolnoth, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'British Museum': {
+      aika: '1753',
+      teksti: 'Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja '
+          + 'kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin '
+          + 'British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se '
+          + 'avattiin 1759 vanhassa Montagu Housen kartanossa.'
+        + '\n\n'
+        + 'Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus '
+          + 'viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert '
+          + 'Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun '
+          + '1823–1852.'
+        + '\n\n'
+        + 'Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx '
+          + 'kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan '
+          + 'taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.',
+      kuvat: [
+        {
+          tiedosto: 'British Museum from NE 2 (cropped).JPG',
+          lyhyt: 'Robert Smirken pylväsjulkisivu valmistui 1852.',
+          selite: 'British Museumin kreikkalaistyylinen julkisivu, jonka suunnitteli Robert '
+            + 'Smirke.',
+          lahde: 'Ham, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Percy Carpenter (1820-1895) - Montagu House, South-East Corner and Gateway - Painting.59 - British Museum.jpg',
+          lyhyt: 'Montagu House, museon ensimmäinen koti, ennen purkamista.',
+          selite: 'Percy Carpenterin maalaus Montagu Housen kaakkoiskulmasta ja portista; '
+            + 'kartano purettiin uuden museorakennuksen tieltä.',
+          lahde: 'Percy Carpenter, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Natural History Museum': {
+      aika: '1873–1881',
+      teksti: 'Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila '
+          + 'loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon '
+          + 'katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881.'
+        + '\n\n'
+        + 'Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. '
+          + 'Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, '
+          + 'itäsiivessä sukupuuttoon kuolleet.'
+        + '\n\n'
+        + 'Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota '
+          + 'kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin '
+          + '2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.',
+      kuvat: [
+        {
+          tiedosto: 'Natural History Museum London front facade 2025 dllu.jpg',
+          lyhyt: 'Alfred Waterhousen terrakottajulkisivu.',
+          selite: 'Natural History Museumin terrakottajulkisivu, jonka suunnitteli Alfred '
+            + 'Waterhouse.',
+          lahde: 'Daniel Lu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Construction of the 1862 International Exhibition Building at South Kensington (Scaffolding at Main Entrance), RP-F-2009-100.jpg',
+          lyhyt: 'Vuoden 1862 maailmannäyttelyn halli rakenteilla museon paikalla.',
+          selite: 'Vuoden 1862 maailmannäyttelyn rakennus rakenteilla South Kensingtonissa. '
+            + 'Halli purettiin 1864, ja sen paikalle nousi luonnontieteellinen museo.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Memorial': {
+      aika: '1901–1924',
+      teksti: 'Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen '
+          + 'muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta '
+          + 'marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen '
+          + 'veisti Thomas Brock.'
+        + '\n\n'
+        + 'Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän '
+          + 'luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin '
+          + 'leveä juhlakulkutie Admiralty Archista palatsille.'
+        + '\n\n'
+        + 'Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni '
+          + 'Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, '
+          + 'jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan '
+          + '1924.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Memorial and Buckingham Palace.jpg',
+          lyhyt: 'Victoria Memorial ja Buckinghamin palatsin vuoden 1913 julkisivu.',
+          selite: 'Victoria Memorial Buckinghamin palatsin edessä; palatsin julkisivu '
+            + 'muurattiin uudelleen 1913.',
+          lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Buckingham Palace (BM 1880,1113.2415).jpg',
+          lyhyt: 'Buckinghamin palatsi 1850-luvulla, ennen muistomerkkiä.',
+          selite: 'Buckinghamin palatsi The Mallilta 1850-luvulla: vanha julkisivu ennen '
+            + 'Victoria Memorialia ja vuoden 1913 uutta pintaa.',
+          lahde: 'Edmund Walker, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Royal Albert Hall': {
+      aika: '1867–1871',
+      teksti: 'Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä '
+          + 'ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja '
+          + 'oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja '
+          + 'konserttisali nimettiin hänen mukaansa.'
+        + '\n\n'
+        + 'Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei '
+          + 'pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa '
+          + 'kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa '
+          + 'kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla '
+          + 'levyillä.'
+        + '\n\n'
+        + 'Promenadikonsertit soitettiin ennen Queen\'s Hallissa, kunnes pommi tuhosi '
+          + 'salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä '
+          + 'yhä joka kesä.',
+      kuvat: [
+        {
+          tiedosto: 'Royal Albert Hall, London - Nov 2012.jpg',
+          lyhyt: 'Royal Albert Hall avattiin 1871.',
+          selite: 'Royal Albert Hall iltahämärässä.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'RAH Grand Opening by Queen Victoria 29 March 1871 The Graphic.jpg',
+          lyhyt: 'Kuningatar Viktoria avasi salin 29. maaliskuuta 1871.',
+          selite: 'The Graphic -lehden kuva Royal Albert Hallin avajaisista 29. maaliskuuta '
+            + '1871.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Albert Memorial': {
+      aika: '1864–1876',
+      teksti: 'Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui '
+          + 'suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert '
+          + 'Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu '
+          + 'katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa.'
+        + '\n\n'
+        + 'Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin '
+          + 'ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. '
+          + 'Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin '
+          + 'veistos.'
+        + '\n\n'
+        + 'Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja '
+          + 'kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin '
+          + 'vasta korjauksessa, joka valmistui 1998.',
+      kuvat: [
+        {
+          tiedosto: 'Albert Memorial, Londres, Inglaterra, 2022-11-25, DD 93-95 HDR.jpg',
+          lyhyt: 'Kullattu Albert istuu goottilaisen katoksen alla.',
+          selite: 'Albert Memorial Kensington Gardensissa iltahämärässä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Crystal Palace from the northeast from Dickinson\'s Comprehensive Pictures of the Great Exhibition of 1851. 1854.jpg',
+          lyhyt: 'Kristallipalatsi Hyde Parkissa 1851.',
+          selite: 'Vuoden 1851 maailmannäyttelyn Kristallipalatsi Hyde Parkissa. Näyttely oli '
+            + 'prinssi Albertin aloite.',
+          lahde: 'Dickinson Brothers, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kensingtonin palatsi': {
+      aika: '1689',
+      teksti: 'Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin '
+          + 'kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja '
+          + 'Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi '
+          + '1698, eikä sitä rakennettu uudelleen.'
+        + '\n\n'
+        + 'Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä '
+          + 'tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin '
+          + 'kertomalla, että hänestä oli tullut kuningatar.'
+        + '\n\n'
+        + 'Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana '
+          + 'asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen '
+          + 'asuntona.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Kensington, Londres, Inglaterra, 2022-11-25, DD 30.jpg',
+          lyhyt: 'Kensingtonin palatsi, kuningatar Viktorian syntymäkoti.',
+          selite: 'Kensingtonin palatsin punatiilinen julkisivu.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nathaniel Parr - A Front View of the Royal Palace of Kensington - B1977.14.17293 - Yale Center for British Art.jpg',
+          lyhyt: 'Kensingtonin palatsi 1700-luvulla.',
+          selite: 'Nathaniel Parrin kaiverrus Kensingtonin palatsin etujulkisivusta '
+            + '1700-luvulla.',
+          lahde: 'Nathaniel Parr, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Royal Observatory': {
+      aika: '1675',
+      teksti: 'Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta '
+          + 'pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti '
+          + '1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja '
+          + 'Christopher Wren suunnitteli sen.'
+        + '\n\n'
+        + 'Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. '
+          + 'Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka '
+          + 'päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa.'
+        + '\n\n'
+        + 'Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman '
+          + 'pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja '
+          + 'tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi '
+          + 'seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.',
+      kuvat: [
+        {
+          tiedosto: 'View of the Royal Observatory Greenwich from One Tree Hill in Greenwich Park, London, 20260719 0940 4508.jpg',
+          lyhyt: 'Observatorio Greenwichin puiston kukkulalla.',
+          selite: 'Greenwichin kuninkaallinen observatorio puiston kukkulalla.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Jan Griffier I (c.1652-1718) - View from One Tree Hill, The Queen\'s House and the Royal Observatory, Greenwich - BHC1817 - Royal Museums Greenwich.jpg',
+          lyhyt: 'Observatorio ja Queen\'s House 1700-luvun alussa.',
+          selite: 'Jan Griffierin maalaus Greenwichistä 1700-luvun alussa: observatorio, '
+            + 'Queen\'s House ja Thamesin laivat.',
+          lahde: 'Jan Griffier I, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Old Royal Naval College': {
+      aika: '1696–1751',
+      teksti: 'Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja '
+          + 'Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. '
+          + 'Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja '
+          + 'haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen.'
+        + '\n\n'
+        + 'Wren jakoi rakennukset kahtia, jotta Queen\'s Housesta näkyisi edelleen '
+          + 'joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. '
+          + 'Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä '
+          + 'tammikuussa 1806.'
+        + '\n\n'
+        + 'Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen '
+          + 'rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.',
+      kuvat: [
+        {
+          tiedosto: 'Royal Naval College Greenwich view from the Thames.jpg',
+          lyhyt: 'Wrenin kaksi kupolia joelta katsottuna.',
+          selite: 'Old Royal Naval College Thamesilta; rakennukset jaettiin kahtia, jotta '
+            + 'Queen\'s Housesta näkyisi joelle.',
+          lahde: 'Dmitry Tonkonog, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Greenwich Hospital from the North Bank of the Thames.jpg',
+          lyhyt: 'Greenwichin merimiessairaala Canaletton maalaamana.',
+          selite: 'Canaletton maalaus Greenwichin merimiessairaalasta Thamesin pohjoisrannalta '
+            + '1700-luvulla.',
+          lahde: 'Canaletto, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Queen\'s House': {
+      aika: '1616–1635',
+      teksti: 'Inigo Jones suunnitteli Queen\'s Housen 1616 kuningas Jaakko I:n puolisolle '
+          + 'Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus '
+          + 'Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä '
+          + 'Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken.'
+        + '\n\n'
+        + 'Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta '
+          + 'Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. '
+          + 'Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle.'
+        + '\n\n'
+        + 'Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat '
+          + 'kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa '
+          + 'on taidegalleria.',
+      kuvat: [
+        {
+          tiedosto: 'Queen\'s House. Greenwich, UK.jpg',
+          lyhyt: 'Inigo Jonesin Queen\'s House valmistui 1635.',
+          selite: 'Queen\'s House Greenwichissä, Englannin ensimmäinen puhtaan klassinen '
+            + 'rakennus.',
+          lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'A View of Greenwich and the Queen\'s House from the South-East by Hendrick Danckerts.jpg',
+          lyhyt: 'Maantie kulki vielä Queen\'s Housen läpi.',
+          selite: 'Hendrick Danckertsin maalaus Greenwichistä noin 1675: vanha maantie kulkee '
+            + 'Queen\'s Housen kahden puoliskon välistä.',
+          lahde: 'Hendrick Danckerts, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):

@@ -4470,6 +4470,18 @@
   "etaisyys_m": 1,
   "pvm": "2.11.2026"
  },
+ "lontoo:Westminster Bridge": {
+  "kartta": true,
+  "tapa": "käsin",
+  "huom": "Wikidata Q456960 P625 (51.50083,-0.12194) on 19 m lontoo:Canaletto Lontoossa -noston pisteestä, jolloin natiivi pudottaisi kaksosen (alle 25 m); piste sillan itäosassa, 140 m Canalettosta.",
+  "pvm": "9.11.2026"
+ },
+ "lontoo:Westminsterin palatsi": {
+  "kartta": true,
+  "tapa": "käsin",
+  "huom": "Wikidata Q62408 P625 (51.49944,-0.12417) on sama piste kuin lontoo:Vanha Westminsterin palatsi, jolloin natiivi pudottaisi kaksosen (alle 25 m); piste = natiivin palatsimallin keskipiste (OhjelmaKohdeGeometria.PalatsiLat/Lon), 44 m länteen.",
+  "pvm": "9.11.2026"
+ },
  "losangeles:Angels Flight": {
   "qid": "Q1069719",
   "tapa": "nimi+säde",

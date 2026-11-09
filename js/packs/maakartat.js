@@ -6059,6 +6059,26 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, wiki: 'Palace of Whitehall', nosto: 'hahmotelma-whitehall' },
+      /*
+       * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
+       * striimatun tietokortin. Nimi = kyltin nimi (natiivi OhjelmaKohteet), piste = mallin keskipiste. Westminsterin palatsin
+       * piste on lukittu (data/kohdetunnisteet.json), koska Wikidatan piste on sama kuin Vanhan Westminsterin palatsin;
+       * samoin Westminster Bridge sillan itäosaan, koska Wikidatan piste on Canaletto-noston kohdalla.
+       */
+      { nimi: 'Westminster Abbey', lat: 51.499406, lon: -0.127429, wiki: 'Westminster Abbey' },
+      { nimi: 'Westminsterin palatsi', lat: 51.4995, lon: -0.1248, wiki: 'Westminsterin palatsi' },
+      { nimi: 'Westminster Bridge', lat: 51.50076, lon: -0.1199, wiki: 'Westminsterin silta' },
+      { nimi: 'Cutty Sark', lat: 51.482834, lon: -0.009572, wiki: 'Cutty Sark' },
+      { nimi: 'Lontoon Tower', lat: 51.5081, lon: -0.0762, wiki: 'Lontoon Tower' },
+      { nimi: 'British Museum', lat: 51.5194, lon: -0.127, wiki: 'British Museum' },
+      { nimi: 'Natural History Museum', lat: 51.4965, lon: -0.1758, wiki: 'Natural History Museum' },
+      { nimi: 'Victoria Memorial', lat: 51.50184, lon: -0.14059, wiki: 'Victoria Memorial (Lontoo)' },
+      { nimi: 'Royal Albert Hall', lat: 51.501021, lon: -0.177405, wiki: 'Royal Albert Hall' },
+      { nimi: 'Albert Memorial', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial' },
+      { nimi: 'Kensingtonin palatsi', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi' },
+      { nimi: 'Royal Observatory', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio' },
+      { nimi: 'Old Royal Naval College', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College' },
+      { nimi: 'Queen\'s House', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House' },
       {
         nimi: 'Buckinghamin palatsi',
         lat: 51.5014,
@@ -6099,7 +6119,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Pyhän Paavalin katedraali',
         lat: 51.5138,
         lon: -0.0984,
-        wiki: 'Pyhän Paavalin katedraali',
+        wiki: 'St Paulin katedraali',   // fi 'Pyhän Paavalin katedraali' on täsmennyssivu (Q399961), KS 9.11.2026
         nosto: 'st-paulin-katedraali',
       },
       {
