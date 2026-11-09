@@ -1011,3 +1011,7 @@ Omistajan kortti 8.11.2026 klo 22.41 "Lähteekö keisari juoksuun heti ovelta va
 ## JUOKSUPELI: LÄHTÖ OVESTA VASEMMALLE KOHTI KAMERAA (Raamattu 2.177) (9.11.2026 klo 08.33)
 
 Omistaja 9.11.2026 klo 08.32 (KK:n välittämä, sanatarkasti): "Se aiempi versio, missä keisari lähti juoksemaan kohti kameraa, eli kääntyi vasemmalle sen jälkeen, kun tuli ulos ovesta, oli minun mielestä jouhevampi suunta, koska silloin kamera näkee vielä eunukin ja keisari juoksee kohti kameraa ja kamera voi sen jälkeen kääntyä keisarin perään, jonka jälkeen tulee numerot 3, 2, 1 ja ohjaus siirtyy sitten pelaajalle." Kumoaa kortin 8.11.2026 klo 22.41 "Heti ovelta". Sivuseinäsääntö (22.38/22.40) ja eunukin kurkistus ovella (kortti 9.11. klo 08.30 Kelpaa) säilyvät.
+
+## TILINVAIHTO 9.11.2026 klo 09.5x (9.11.2026 klo 10.01)
+
+PT local_8d8ebf72: tili sami.reivinen@vvi.fi (org ddaee6a2, Ultra), viikko 0 %; raja 99 % (omistaja 09.58 kortti). Tämän tilin 10 roolisessiota tyhjennetty (clear, list_events 0) ja aloitettu; id:t osoitekirjaan; taulu R6VQFTUNq629zSzah719Uy (Asemataulu v19). Ohjeiden koe: kysymys 6 (yksittäinen kuva omistajalle) puuttui lukulistalta → 7.47 KAIKILLE + 4.48.
