@@ -35,3 +35,7 @@ Cron "4 9 * * *" unity-julkaisut.py: LUO UUDELLEEN (kuten edellisessä luovutuks
    Jos yhä katoaa: unity.log "nimet hylatyt" -rivi, `tr ';' '\n' | grep elava-huippu | awk -F'|' '{print $3}' | sort | uniq -c`.
    → PT 3 riviä.
 - Ei muuta jonossa. Kuvat ≤ 1000 px (sips -Z 1000 kopio scratchpadiin).
+
+## LISÄYS 15.59
+- KOHTA 1 TEHTY: fpv-vuoret-3 katsottu (sama paikka, HUD 4 900 m kaikissa; liuku 1,52) → PT: suositus k2 ilman liukua, kolmikko lokit/natiiviseppa-fpv-vuoret-3-ipad-e6a9ae35d/kolmikko-s15-s2-liuku.png.
+  Jos PT/KK hyväksyy: LiukuLahi = 0f oletukseksi (haara natiiviseppa/fpv-vuoret). Jäljellä vain kohta 2 (huippunimet-4, JU ajaa 15.57 alkaen).
