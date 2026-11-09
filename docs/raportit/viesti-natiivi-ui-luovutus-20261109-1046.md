@@ -28,3 +28,10 @@ KESKEN: katso kuvat (fn-2: ei yläpalkkia, yksi ☰, pallo ei peitä mitään; f
 ## Muuta
 - Vanhat worktreet poistettavissa, kun ei tarvita: wt/proto-natiivi-ui-nostovalikko-juna223, wt/proto-natiivi-ui-nostovalikko.
 - Unityn "ArgumentOutOfRangeException … SearchDatabase" esikatselun alussa on editorin oma, ei meidän (myös vanhoissa ajoissa).
+
+## Lisäys 10.5x (PT ei kuitannut iPhone-arkkia)
+- PT:n kohdat: 1) p-5a sumea → vastattu: 6ad986961 on mukana, huippu 0 oikein, p-5a kesken nousua (NS:n ennakko, jos pitää terästää).
+  2) p-6 tyhjä vihreä = veto vei merelle → sk:ssa nyt `ui mac veto 0 -250 64 300` (kamera pohjoiseen maalle). 3) RANSKA-teksti
+  pikkukartassa ei kuulu pohjaan; tarjottu lisättäväksi, jos PT haluaa (odottaa PT:n vastausta).
+- JU ajaa paikkapalkki-1 x3 uudelleen 91d517091:llä (korvaa vaaka-pyynnön), sitten sk-fpv-napit-1. Seuraaja: katso kaikki p-6
+  ("pelaaja liikutti", kartalla maata ja nimiä) → arkit PT:lle.
