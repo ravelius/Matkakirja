@@ -34,3 +34,6 @@ Cron "4 9 * * *" unity-julkaisut.py: LUO UUDELLEEN (prompt: git show 9d77cf4dd:d
    (todennäköisesti tileset-varjostin/KorkeusKerroin = yhteinen; FpvLento.cs = NS). KOE, parit → PT. Ei aloitettu.
    Idea: kerroin kameran etäisyyden mukaan varjostimessa (vrt. fpvlahi-paino KorkeusKerroin.FpvLahi*, lähi/kauko m) tai FpvLento: LentoKerroin(maan yllä).
 6. NUI kysyi FPV:n suositeltujen paikkojen listaa (vihreät pisteet): vastattu, ettei NS:llä ole; lähde NUI:n oma tiedosto (esim. FpvPaikat.cs), NS ei koske.
+7. VS:n kanssa SOVITTU tiedostojako (15.1x): NS = tee_tileset.py KORKEUS_RUNKO (~r. 331–373) + KorkeusKerroin.cs + FpvLento/FpvMaasto;
+   VS = HAMARA_RUNKOn fpvLahi-lohko → oma MAALAUS_RUNKO. .shadergraph generoidaan uudelleen yhdistäessä (ei käsin). VS lukee fhT = fhD/fkk ja fs (fng):
+   fkk pidettävä "tässä kärjessä käytetty kerroin", fng:n merkitys ennallaan – muutoksesta rivi VS:lle. Pohja 5efe9e346 (tai oma natiiviseppa/fpv-vuoret).
