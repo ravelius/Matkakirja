@@ -26,3 +26,10 @@ d. Valmis-rivi KK:lle + PT:lle: ladattava, asennettu, talokorjauksen päivitysko
 ## Vahdit (viritä uudelleen)
 - Postilaatikko: Monitor `/bin/zsh $T/postilaatikko-vahti.sh` (30 min; käsitelty e123c0b10).
 - Ajovahti: ei ajoja jonossa.
+
+## LISÄYS 21.5x (luovutuksen jälkeen)
+- **NS kuittasi RAJAPINTA.md:n** (KS:n muoto voittaa). NS:n poikkeamat hyväksytty: laitekansio persistentDataPath/talot + SetNoBackupFlag; siivous käynnistyksessä buildin hakemistojen mukaan.
+- **UUSI HAARA (käytä tätä): karttaseppa/talot-palvelimelle-ns e5f6fcf72** = NS:n lukija natiiviseppa/talolataus 5a04c09f4 + KS:n kaksi committia (c0fb9da69, e5f6fcf72), natiivi-backupissa, unity-tarkistus sh 0. JU yhdistää yhtenä NS:n kanssa. Vanha karttaseppa/talot-palvelimelle 94b11251a korvattu.
+- NUI (local_4b84cd90-…) tekee Offline-karttoihin talot: vastattu (lista buildin StreamingAssets/talot/<k>.json, pariisi=FRA lontoo=GBR, kutsu NS:n lataajaa, alueen poisto poistaa kaupungin palat NS:n funktiolla).
+- **JU:n poistolista (osa 1) VAHVISTAMATTA:** /Users/Shared/Claude/julkaisija-tyokalut/pelin-koko-osa1-poistolista.md (A/H/I/J siirto pois Resourcesista, C–G pois vain laitekäännöksistä; kysymys: sacre-coeur-portaat astc-verkko 4 kt). Tarkistusagentti jäi kesken nollauksessa → tee uudelleen (Sonnet-Explore: Nahtavyysalue.cs 159–254 ja 1434, koepohja/koemalli-komennot, testit) ja vastaa JU:lle (local_2a7d6c96-…) "OK" tai korjaukset.
+- **Jakosivu** /Users/Shared/Claude/proto-3d/jako/index.html (JU kirjoittaa käsin joka käännökseen): EI ODbL-tunnustusta → JU:lle pyydetty pysyvä rivi (ks. viesti 21.5x); tarkista, että se on sivulla ennen talojen vientiä.
