@@ -23,6 +23,7 @@ import assert from 'node:assert/strict';
 import {
   KAUPUNKIKARTAT, karttapiste, mittakaava, ydinAla, karttaKuvasuhde,
 } from '../js/packs/maakartat.js';
+import { MINIATYYRIT } from '../js/packs/miniatyyrit.js';
 
 const laajennetut = Object.entries(KAUPUNKIKARTAT).filter(([, k]) => k.piirtoRajat);
 const laajentamattomat = Object.entries(KAUPUNKIKARTAT).filter(([, k]) => !k.piirtoRajat);
@@ -84,8 +85,21 @@ test('kohdepisteet ovat lepotilassa samassa kohdassa kuin ennen', () => {
         + `≠ ${ennenX.toFixed(2)},${ennenY.toFixed(2)}`);
       // Ja kaikkien on yhä oltava lepotilan näkymässä: reunus on
       // lisää karttaa, ei uusi paikka kohteille.
-      assert.ok(x > 0 && x < 100 && y > 0 && y < 100,
-        `${avain}/${kohde.nimi} ei ole lepotilan näkymässä`);
+      // POIKKEUS (omistaja 9.11. 16.46, Lontoon 3D-kyltit): pelin 3D-mallin
+      // kyltin nosto (kyltti3d) saa olla reunuksessa, koska malli on
+      // pelissä siellä. Lehti ei piirrä sitä: ei miniatyyriä eikä
+      // numeroympyrää, joten piste ei katkea rajauksen reunalle.
+      const nakyvissa = x > 0 && x < 100 && y > 0 && y < 100;
+      if (!nakyvissa && kohde.kyltti3d) {
+        assert.ok(!MINIATYYRIT[avain]?.[kohde.nimi] && !kartta.numeroympyrat,
+          `${avain}/${kohde.nimi}: reunuksen 3D-kyltti piirtyisi lehteen`);
+        const pr = kartta.piirtoRajat;
+        assert.ok(kohde.lat <= pr.pohjoinen && kohde.lat >= pr.etela
+          && kohde.lon >= pr.lansi && kohde.lon <= pr.ita,
+        `${avain}/${kohde.nimi}: 3D-kyltti julisteen ulkopuolella`);
+        continue;
+      }
+      assert.ok(nakyvissa, `${avain}/${kohde.nimi} ei ole lepotilan näkymässä`);
     }
   }
 });
