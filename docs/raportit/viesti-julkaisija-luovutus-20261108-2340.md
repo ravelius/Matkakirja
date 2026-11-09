@@ -14,6 +14,7 @@
 - TULIVUORET: PT 00.4x: nähtävyydet 380bd41cc kuitattu 23.3x → JUNA 224 = f2d51ae43 (merge 2d0d2b82d) yhdistetty paikallisesti; IM (irrallinen, jono-im-juna-o.zsh) ajaa testit T/juna224-o-* ja pushaa VAIN jos kaikki läpi → katso jonolokin rivi "JUNA 224 = f2d51ae43" ja ilmoita PT:lle. PUUTE 2 = skenaarion ehto (NS korjasi). Tulivuoret v1 VIETY ämpäriin 00.38 (33, virheitä 0) ✓ PT. Ilmaisin f4e7ccd61 ei junaan. LAV lattia1 ✓ raportoitu 00.35.
 - LAV 00.4x: Blender-vuoro annettu (leivo-lattia2.zsh, ~47 min, LAV ajaa itse) → kun LAV ilmoittaa, Mac-ajo: zsh /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/muuri/lattia-uusi/aja-lattia2.zsh 1 b804a87d6 (vain uusi, 40 kuvaa) IJ:n (ovi224) jälkeen → "LATTIA2 AJETTU" + polku LAV:lle.
 - IN (irrallinen): NUI tulivuori-ilmaisin-2 dc0c548c2 Mac ipad → lokit/nui-tulivuori-ilmaisin-2-ipad-dc0c548c2 → tulosrivi NUI:lle (local_4b84cd90…; -1-ajo raportoitu 00.42). NUI:n ilmaisin EI junaan ilman PT:tä.
+- IO (irrallinen): NS karsinta-ipad-2 313e146eb (-1:ssä "ui juoksupeli pois" -lähetys hävisi) IF:n jälkeen → lokit/natiiviseppa-karsinta-ipad-2-313e146eb → NS.
 - AUKI (ei aloitettu): (f) LAV v127 -vienti odottaa LAV:n LAHTEET.md-korjausta. Laitekäännös pois raportin jälkeen: cf4d34ee4 (PK pari+kulku jälkeen), 313e146eb/3580eb0f2/2ad9b89bc (NS:n jälkeen), Medium-koko 7a8f024ed (peruttu) → NAS (T/siirto-laite-nas-2.zsh mallina).
 
 ## LISÄYS 9.11. 22.5x (TUOREIN; korvaa 21.5x:n; konteksti 28 % → nollaus)
