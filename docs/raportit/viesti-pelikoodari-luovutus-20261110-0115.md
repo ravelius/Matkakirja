@@ -18,6 +18,14 @@ Suunnitelma ja ehdot: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leiv
 - Kulkuajo iPad cf4d34ee4 (JU 01.12): tarkista_kulku TULOS OK, Taso läpi 1696 m 4:00 2196 p; rikotut-rivi todistamatta (rikottuja 0).
   PT:lle rivi (jonossa). Työlistan tilanteet päivitetty (tason 1 kulkualue; lataus nopeammaksi).
 
+## LISÄYS 01.4x (PT 01.3x: tuloskortin viat ENSIN ennen vaihetta 2)
+- Valkoinen keisari = leivonnan vika: JuoksuHahmot.Materiaali luki kuvan LoadImagella (ei lue ASTC:tä). Korjattu c378cd773 (JuoksuLeivottu.Pura)
+  + korttipuiden atlasvalinta (Lahipuut.KirjaaKorttiKuva vertasi MKAV-viitteiden pituuksia → JuoksuLeivottu.KuvaKoko). Haaran kärki nyt c378cd773.
+- Piikki (oikealla venynyt kolmio) auki: JU kääntää c378cd773 ja ajaa järjestyksessä sk-ipad-kylma-0, -kylma-1, -piikki-0, -piikki-1
+  → lokit/pelikoodari-kylma-0/-1, lokit/pelikoodari-piikki-0/-1 (kuvat piikki{0,1}-a-pelikamera, -b-laaja). Kokoa pari PT:lle (vasen 0, oikea 1).
+  Piikki vain 1:ssä → leivonnan vika, korjaa ennen kuittausta (vertaa glb lähde vs paketti: verkko/accessorit). Molemmissa → vanha: kirjaa ja
+  kerro PT:lle kenen (LAV mallit / PK peli). Tarkista myös keisari kuvioituna piikki1-a:ssa.
+
 ## JONO
 1. KUVAPARI (ennen leivotun kuittausta): JU ajaa sk-ipad-pari-0/-1 cf4d34ee4:llä (jonossa "IK") → lokit/pelikoodari-pari-0 / -1, 4 kuvaa (a alku,
    b kujan pää, c tarkastelukamera kujalla, d sisäpiha). Kokoa parit (vasen 0, oikea 1, sama rajaus, täysikokoiset) PT:lle. Katso samalla
