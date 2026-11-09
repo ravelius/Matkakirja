@@ -231,3 +231,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - Juna 224: 678376fbb, NUI 755a52fab/b75419ad3, KS d5aea75b7, c1e3b07bf (mallinostojen karttapisteet).
 - 17.2x: FJ KS lontoo-kyltit d5312c20d (odottaa vientiä d8dcdc43a success, PR 6519) → valmis-rivi KS, pari PT:lle. Vienti lähti automaattisesti pushista ennen PK:n viittausvahvistusta (PT:lle kerrottu).
 - 17.2x PT: JUNA 224 poimittavaksi NUI 075015709 (Temple-piste, sis. 755a52fab; PT katsonut). 8ef2b3561/066244413 vasta kuvien jälkeen. Juna 224 avataan TF 224:n jälkeen (pohja 85d3bab39, git merge --no-ff).
+- 17.3x: 075015709 sisältää 755a52fab:n JA b75419ad3:n (3D-tähti, kuvat EX:ssä ajamatta) → PT:ltä kysytty, poimitaanko ennen EX:n kuvia.
