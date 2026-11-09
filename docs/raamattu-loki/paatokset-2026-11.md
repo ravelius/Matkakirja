@@ -1087,3 +1087,16 @@ Kortti "Pysyykö noston palkki aina ylhäällä niin, että avattu nosto ja Rans
   mukaiseksi: syy oli CDN:n vanha torikuva; PT valitsi torikuvan -v2-nimellä ja uuden vaatetoritekstin (PR 6521, sisältö v1032).
 - 19.46 FPV-vuorten maalauksesta luovutaan (kumoaa 17.25): "Ei, oranssi myös lentoon", vain vuorten muotoa parannetaan. Maalaus talteen
   natiivi-backup linssiseppa2/fpv-vuoret-maalaus-it12; oranssi + valokuvio (it. 13 0809231b9) KK:lla omistajalle.
+
+## KOLME KÄRKEÄ KERRALLAAN (9.11.2026 klo 22.53)
+
+Omistaja 9.11.2026 klo 22.45 kysyi: "Miten parantaisit nykyisiä eri sessioiden työtapoja ja tätä kokonaisuutta miten peliä rakennetaan?" KK:n kortti 22.47 (143 asiaa työn alla; rajataanko kolmeen kärkeen, uudet ideat kirjataan heti, työ alkaa kun kärki valmistuu tai "ohi jonon") = "Kyllä, kolme kärkeä (Suositus)". Kortti 22.50 = "Kaupungit, Tekninen kunto, Juoksupeli"; valitsematta Drone-lento ja kohokartta. KK:n kapea tulkinta: junassa 224 olevat jäävät; kärkien ulkopuoliset kesken olevat pysähtyvät luontevaan kohtaan, odottavat vuoroaan, ei poistoja. Raamattu 7.49 (PT). Samalla Raamatusta karsittu historiatietoja 7.37:stä ja 7.44:stä kokorajan vuoksi.
+
+## PÄÄTÖKSET 9.11. ILTA (PT:n luovutuksesta ja KK:n välityksistä) (9.11.2026 klo 22.53)
+
+20.05 FPV-vuoret it. 13 0809231b9 kelpaa, jää kokeeseen. 20.44 iPhonelle versio kahdella tapilla; 21.03 vasemmalla tapilla lähemmäs; 21.11 tähtäin viipyy ja kierto tähtäimen ympäri (PK 7227a9788,
+junassa 224). 21.14 pelin koko: Kyllä, suunnittele (osat 1–2 junassa 224 = 3580eb0f2). 22.04 Xcode-tili lisätty: lisämuisti kehitysversioon (b804a87d6 asennuslinkissä). 22.09 KK Fable 5.2 -mallilla
+(omistaja vaihtoi; agenttisääntö ennallaan). 22.18 kierron tärinä läheltä ja aarteen tähden alta punainen piste pois (191f3fa5e junassa 224). 22.22 tärinäkorjaus kokeena: nollapiste lähelle (lähiorigo
+PK dc2605d31, NS cad1fe5b1), kehitysversio omistajalle, junaan vasta Kelpaa-kortilla; korvaa 6.11. 21.30 'isoa korjausta ei nyt tehdä' kokeen osalta. 22.24 juoksupelin lataus nopeaksi (palatsi
+leivotaan valmiiksi, PK). 22.42 kaupungit koodilla: yksi talokone, tyyppimallit merkkirakennuksille, ei uusia Tripo-malleja (Pariisin tehdyt jäävät); ensin osa A katot 1 km² Pariisi (Louvren
+pohjoispuoli) ja Lontoo (Westminster–Covent Garden), koe, ei junaan; korvaa 7.11. kattokokeiden tauon ja vastaa 9.11. 16.50 '3d mallinnus auki'.
