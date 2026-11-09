@@ -44,7 +44,7 @@ SUUNNITELMA (ei koodattu):
 ## LISÄYS 09.1x: PT:N PÄÄTÖS MITOITUKSESTA (VOITTAA yllä olevan kestolaskun)
 Automaattinen matkalento SAA YLITTÄÄ KarttaRajat-zoomin nopeusrajan; huippukorkeus pidetään (koko reitti jo ladatuilla maan tason laatoilla).
 Tavoite: 600 km ≈ 4,5 s, 100 km ≈ 3 s, alku ja loppu pehmeinä. Pelaajan oma zoomaus noudattaa rajaa ennallaan.
-→ Mitoita: kesto ≈ 3 + 1,5 × log2(matka/100 km)·(1/log2 6)… eli interpoloi log-matkassa 100 km → 3 s, 600 km → 4,5 s (rajaa esim. 2,5–6 s);
+→ Mitoita: kesto = 3 + 1,5 × ln(matka / 100 km) / ln 6 (100 km → 3 s, 600 km → 4,5 s, 1 200 km → 5,0 s), rajaus esim. 2,5–6 s;
   testiin oma KarttaRajat matkalennolle (zoom-raja korotettu, kiihtyvyydet ja päiden lepo ennallaan).
 LEVY 09.12: siivottu 7,2 Gi (worktreet esilataus, fpv, fpvb, pohjapallo pois; unity67 Library-välimuistit pois, PackageCache jäi).
 Vapaata 44 Gi; Mac-ajoja vain, kun vapaata > 30 Gi (PT).
