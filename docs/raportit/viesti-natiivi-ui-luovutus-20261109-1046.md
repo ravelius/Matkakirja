@@ -40,3 +40,12 @@ KESKEN: katso kuvat (fn-2: ei yläpalkkia, yksi ☰, pallo ei peitä mitään; f
 - 11.1x: NS ccbdaef0a (paluulennon ennakko ilman huippua) yhdistetty → paikkapalkki 818e32b61 (0 virhettä), sk:n sha päivitetty; JU:lta pyydetty BE-ketju tällä sha:lla (kansiot -818e32b61).
 - PT 11.0x: tarkista p-5/p-6:sta, peittääkö RANSKA-kartuscha (vasen alakulma) kartan paikannimen (NS:n mp-3: Rocamadour). Kartuscha on junan 223 osa, nimikerros ei väistä sitä; jos peittää, ehdota PT:lle nimien väistöä kartuschan alueelta (Nimikerros, vrt. FpvNakyma.LisaVaraus).
 - JU 11.1x: ketju BH = paikkapalkki-1 818e32b61 iphone + vaaka + ipad (pyydetty), sitten fpv-napit-1 x2. Kansiot -818e32b61; 91d517091-3-ajoja ei raportoida.
+
+## UUSI TYÖ SEURAAJALLE (PT 11.2x; OMISTAJA 10.58 + päätös 11.00) – aloita tästä, kun paikkapalkin kuvat on viety PT:lle
+Sanat ja tavoite: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261108-fpv-drone-topo.md (lue kokonaan).
+Pohja: natiivi-ui/fpv-napit 8a9c891fc (worktree /Users/Shared/Claude/wt/proto-natiivi-ui-fpv-napit; sen oma Mac-ajo sk-fpv-napit-1 JU:n BH-ketjussa).
+1) Topolinssin ja FPV:n kaikki toiminnot yhteen ☰:ään; keltainen erillinen kytkin (kohoKytkin ⛰, LinssiUi.PaivitaKohoKytkin) pois → ☰:n rivi.
+2) Lukemat tekstinä ISS-tietorivin tapaan (FpvNakyma.RakennaRivi, mk-isskyyti__tieto), ei mittareita; minipallo ennallaan.
+3) Hävittäjän näyttö (HUD): keskimerkki, kallistuva horisonttiviiva, kallistusasteikko, suuntanauha, kehykset – ohuet valkoiset viivat
+   (painter2D kuten Lentokartta.PiirraViiva), ei peitä tikkuja (FpvTikut) iPhone pystyssä. Kallistus/suunta FpvLento.Malli / kamerasta.
+SHA JU:lle (iPhone pysty + iPad) → kuvat PT:lle.
