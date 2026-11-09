@@ -26,3 +26,11 @@ Cron "4 9 * * *" unity-julkaisut.py: LUO UUDELLEEN (prompt: git show 9d77cf4dd:d
 3. natiiviseppa-fpv-vuoret-1-ipad-9edbc14a9: valitse luonnollisin (oletus 3; jos 2/5 parempi, vaihda LentoKerroin) → pari v-15|valittu → PT, yksi suositus.
 4. iPhone bf4017da8 -ajo (JU ajoi loppuun) ei raportoida.
 - unity-tarkistus: `sh Peli-testit/unity-tarkistus.sh` (EI zsh).
+
+## LISÄYS 15.0x (luovutuksen jälkeen tulleet)
+5. PT: FPV-vuorierän LAAJENNUS (OMISTAJA 15.03 "voiko vuoria muutenkin tuunata suht helposti että näyttäisivät lähietäisyydeltä paremmilta?"):
+   NS:lle KK:n keino 1 = korotus liukuu pois matalalla (lähellä maata todelliset korkeudet, kauempana/ylempänä kerroin), samaan kokeeseen kuin piikit
+   (haara natiiviseppa/fpv-vuoret). Keino 2 (lumi/kallio/kasvillisuus korkeuden ja jyrkkyyden mukaan) tekee VS → sovi tiedostot VS:n kanssa
+   (todennäköisesti tileset-varjostin/KorkeusKerroin = yhteinen; FpvLento.cs = NS). KOE, parit → PT. Ei aloitettu.
+   Idea: kerroin kameran etäisyyden mukaan varjostimessa (vrt. fpvlahi-paino KorkeusKerroin.FpvLahi*, lähi/kauko m) tai FpvLento: LentoKerroin(maan yllä).
+6. NUI kysyi FPV:n suositeltujen paikkojen listaa (vihreät pisteet): vastattu, ettei NS:llä ole; lähde NUI:n oma tiedosto (esim. FpvPaikat.cs), NS ei koske.
