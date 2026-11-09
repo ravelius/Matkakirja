@@ -34,3 +34,16 @@ nyt haaralla pelikoodari/pulu-lahteet. Kuvat ≤ 1000 px (sips -Z 1000 / PIL-kop
 - napit-kuulto 620425fb7 x3 (CY) → lokit/pk-napit-kuulto-{iphone,iphone-vaaka,ipad}-620425fb7.
 - 1d alkuvarjo: 0 valmis (lokit/pk-1d-alkuvarjo0-5ed43b793), 1 jonossa → vertaa pari (ks. edellinen luovutus kohta 3).
 - NS tiedotti 13.4x: natiiviseppa/lento-korkeuskoe 1e55e642a muuttaa PalloKierto.cs:ää (koe, ei junaan); ei ristiriitaa pulu-lahteiden kanssa.
+
+## LISÄYS 13.5x
+- Tower c0d5fda05 iPad katsottu, kelpaa (kyltti linnan vasemmalla etelästä ja matalasta); PT kuittasi c0d5fda05:n junaan 223 (JU 13.46). VALMIS.
+- Pulun lähteet iPhone e51b66a98 katsottu (lokit/pk-pulu-lahteet-iphone-e51b66a98; arkki /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-pelikoodari/1e760f96-c3a0-489a-8a79-15a31328748f/scratchpad/pulu-p1-4.png):
+  p-1 lähde 1 kohde:tuileries valmiit 5 + Lisää ✓; p-2 Lisää → Kerro lisää: kommunardien / kolmas tasavalta ✓.
+  p-3 VIKA SKENAARIOSSA: aja 48.6361 -1.5115 0.05 näyttää rannikon ilman nostoja → ei keskikohdetta; korjaa skenaario (zoom/kohde, jossa nosto
+  näkyy keskellä, esim. Pariisin tasolla kohde:tuileries ilman korttia, ja tarkista `ui kameratappi tila` -tyyppisesti).
+  p-4 VIKA KOODISSA, KORJATTU 35b47ea3e: ilman valmiita generoitiin maasta, ei palkin kaupungista (FirstOrDefault); Lisää-nappi heti generoitaessa.
+  p-3/p-4/p-5: workerin ehdotussiruja EI näkynyt 10 s:ssa Mac-esikatselussa → selvitä (Ehdotukset-korutiini hylkää virheen hiljaa; tarkista
+  verkko/worker esikatselussa, vertaa vanhaan Pulu-napautukseen). Uusi ajo 35b47ea3e:llä korjatulla skenaariolla, sitten PT:lle.
+  iPad-ajo e51b66a98 jonossa (vanha sha; voi pyytää uudelleen 35b47ea3e:llä).
+- 1d alkuvarjo1 valmis 13.50 → vertaa pari (lokit/pk-1d-alkuvarjo{0,1}-5ed43b793), katsomatta.
+- Startup-ArgumentOutOfRangeException esikatselussa ennen omaa koodia (sama kuin KS:n ajoissa), ei tutkittu.
