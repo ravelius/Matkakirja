@@ -1,0 +1,26 @@
+# Valosepän luovutus 9.11.2026 klo 17.42. Itsenäinen: vanhoja ei tarvitse lukea (korvaa 20261109-1517:n)
+
+Syy: konteksti 25 % (pehmeä raja), luonteva tauko (vuoret9 JU:n jonossa). Tili sami.reivinen@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Worktree k32 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k32`, nyt haarassa `linssiseppa2/fpv-vuoret-k2` 37bbbc3bc (puhdas, pushattu). k31 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k31` (`linssiseppa2/kartta-filmi-kevyt` 22e601e76). Kuvat vain JU:n vuorolla. Id:t: PT `local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31` ≤ 3 riviä; JU `local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd`; NS `local_0f7f169f-2ceb-43d2-8fb4-223dda2c0870`; KK `local_d5f31591-21fa-4cb0-bab3-bcd3435d075a`.
+
+## ERÄ 1: KARTAN FILMI KEVYENÄ (22e601e76) – EI TOIMIA
+PT 9.11. 16.0x: ei junaan nyt, odottaa omistajan Pariisi-korttia. film14 mitattu ja raportoitu (lepo +26…37 Mt, ei piikkiä). Älä toista.
+
+## ERÄ 2: FPV-VUORET MAALATTUINA (OMISTAJA 15.03; KOE, EI JUNAAN) – OMISTAJA 17.25 "Kyllä, jatketaan"
+- Haara `linssiseppa2/fpv-vuoret-k2` (natiivi-backup) = oma maalaus + NS:n natiiviseppa/fpv-vuoret yhdistettynä (71f01f72c k2-lento, 6b65fd42b D = 28 000 × k/15, f148f46d6 korkeusvaihtelu, da6a62eba NUI 14f9398b8 valkoinen tietorivi, a1515df04 vaihtelu 400 m). Vanha haara `linssiseppa2/fpv-vuoret` (46fcddd34, ×15) on ohitettu.
+- TYÖNJAKO (PT 17.3x hyväksynyt): VS = MAALAUS_RUNKO (tee_tileset.py) + FpvMaalaus.cs; NS = KORKEUS_RUNKO/_fpvKorkeus + KorkeusKerroin/FpvLento. HAMARA_RUNKOn FPV B -lohkoon (fpvLahi) ei kosketa. Yhdistäessä .shadergraph generoidaan uudelleen: `python3 -I "Assets/Matkakirja/Shaders/Cesium/Lahde~/tee_tileset.py" /Users/Shared/Claude/proto-3d/Matkakirja-proto-mac/Library/PackageCache/com.cesium.unity@D454711FBE38/Source/Runtime/Resources Assets/Matkakirja/Shaders/Cesium` ja `git checkout -- Assets/Matkakirja/Shaders/Cesium/MatkakirjaRasteri.shadersubgraph`. Varjostin kääntyy vasta ajossa → JU:lta Shader-error-määrä.
+- Iteraatiot (kaikki kommentoitu tee_tileset.py:n MAALAUS_RUNKOn yläpuolelle): 3 oma häivytys D:n mukaan (maailma metreinä, drone aina ≥ D maastosta); 4–5 jyrkkyys tan/k^e (`fpvmaalaus jyrk e`, oletus 0,9, w:n desimaaliosana); 6 jyrkkyys sileästä verteksinormaalista (uusi syöte 34 nrmWS; ddx(pos) teki kolmiolaikut + rakeen); 7 lumiraja puuraja + 600 m (PT: −400) ja auringon varjopuoli sileästä normaalista (315°/19°) → OMISTAJALLE arkki, Kyllä 17.25; 8 a7f57e8c1 pintakuvio väriin (4 oktaavia 256…32 m, rinteen suuntaiset juovat, häipyy alle 3 px) + häivytys lennossa ≥ 200…500 km (kauko-oranssi ei rajana); 9 37bbbc3bc kumpareet/uurteet/kivikko valoon (kohinan analyyttinen gradientti kallistaa normaalia; kallio 1,8×, lumi 0,5×). Komennot: `fpvmaalaus 0|1|tila|paino x|puu m|lumi m|haiv m|jyrk e|debug 0|1|aina 0|1`.
+- AVOIN: JU ajaa vuoret9 (ketju FV): `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/fpv-vuoret/sk-vuoret9.txt` → `lokit/linssiseppa2-vuoret9-ipad-37bbbc3bc` (8 kuvaa, a–d ennen|jälkeen samasta lennosta, k2). vuoret8 peruttu. Polku tulee viestinä.
+  Katso: Shader-error 0? näkyykö pintakuvio lähellä (lumi/kallio ei muovia; kumpareet ja kivikko valossa), ei välkettä/raetta, ei kolmiolaikkuja; kaukaiset vuoret maalattuja ilman rajaa oranssiin. Mittaukseen skriptit scratchpadista kopioituna: luokat7.py-tyyli (muuttuneet pikselit, lumi/harmaa/vihreä %, kirkkauden hajonta) – edelliset luvut vuoret7: a 16/48/29 %, b 23/49/20 %, c 2/70/26 %, d 14/68/1 %. Täysikoinen rajaus (esim. b[1450:2064, 1700:2700]) ennen arviota.
+  Hyvä → PT:lle 3 riviä (sha, ajo, kuvien polku) ja YKSI yhdistetty kuva (PT 17.4x) → PT kuittaa → KK:lle yksi arkki a–d (ennen | jälkeen, ≤ 1000 px, ilman selitekaistaa; selite viestissä: koe, ei junassa). Edellinen arkki: `parit-vuoret7/arkki-kk-vuoret7-a-d.png` (2 saraketta × 4 riviä, 329×247 + 4 px valkoiset raot).
+  Jos kumpareet liian voimakkaat: kerroin 0.12 (fgr) tai fkum; jos välkettä: fow2-raja 3 → 4 px.
+- Työlista: rivi "FPV-vuoret maalattuina (koe)" (tilanne 17.26). Päivitä: `python3 -I tools/asemataulu/tyolista.py --kansio /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo tilanne "FPV-vuoret maalattuina (koe)" "…"`.
+- Kuvakansiot: `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/fpv-vuoret/parit-vuoret{3,4,5k2,6,7}/` (LUEMINUT.md 6:ssa ja 7:ssä).
+
+## MUUT AVOIMET (ennallaan)
+- Merenpohjan syvyyden puristus 97b4f29a9 KS:n koelaatoilla, kun JU on vienyt ne. KS:lle avoin: kohokartan poltetun varjostuksen suunta 315°?
+- Kohokartan aurinko (cd74573cd junassa 223): syvyyskuva varmistettava laiteajossa.
+- Valovahti: Aurinko.cs vari 4 > 3, KartanElama.cs, KaupunkiPuu.shader ylittävät jo ennestään.
+- Remote Control: Postivahdin pyyntö set_remote_control jätetty tekemättä (vain omistajan pyynnöstä).
+
+## TEKNIIKKA
+Numpy/cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`; PIL `/opt/homebrew/bin/python3 -I`. `sh ./unity-tarkistus.sh` kansiosta `Linssit-testit/` (~2 min). Muokkaukset python-skriptillä (.tmp + os.replace + copymode). FPV-lento skenaariossa: `linssi linssi topografia`, `linssi topografia kohokartta 1`, `komento fpv kerroin 2`, `ui fpvnakyma lento lat lon suunta h`, `ui fpvnakyma 0`. Luovutus plumbingilla origin/mainin päälle omaan haaraan.
