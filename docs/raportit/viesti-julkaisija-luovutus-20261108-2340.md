@@ -82,3 +82,8 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   Ketju AF (NUI nostovalikko-osa2-1 474011364, ipad → iphone → vaaka, 5 kuvaa, KOE EI JUNAAN, T/jono-0800-af.zsh) alkoi 08.04 L2;
   lokit L/nui-nostovalikko-osa2-1-<koko>-474011364 → seuraava JU tarkistaa jonolokin AJO-rivit ja ilmoittaa NUI:lle (local_43962c89-…).
   a3588fe08:aa EI ajettu (NUI vaihtoi sha:n). AD (PK) ajossa L1.
+- 08.2x: PT 08.15 (KK:n sana d2:lle) → 3 commitin poiminta ristiriidassa; PT valitsi A = koko 7 commitin ketju (9f2e57b71 a7004996e ac4bff77a
+  0cc5ac36c 451519f87 4c1d100a2 281093d9c), mutta odottaa KK:n sanaa 1c:stä ja 1f:stä. Valmiina PAIKALLISESTI juna-worktreessa 38e803198 (EI pushattu),
+  testit vihreät (T/juna223-d2-*.txt: Kartta 729, Linssit 2276, Peli 877, unity 0). Sanan tultua: push natiivi-backup julkaisija/juna-223 → kärki PT:lle.
+  Juna 223 virallisesti yhä 835f617a6.
+- 08.2x: AF2-vaaka 474011364 kuoli kesken (lukko poistettu); ketju AG 092345d80 osa2-1 vaaka + nostovalikko-7 ipad valmis 08.25, katsottu → NUI + PT. JONO TYHJÄ.
