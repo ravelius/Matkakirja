@@ -59,3 +59,6 @@ PT: tee ensimmäinen (KK:n suositus): NIPISTYSZOOMAUS EI PYSÄYTÄ KIERTOA; kier
 2. napautus / yhden sormen veto pysäyttää kuten ennen (0bf9cd57d: PalloKierto.KiertoJatkuuNapautuksessa + ajo.napautusKaytetty; nyt
 nipistys/toinen sormi pysäyttää → muuta nipistys säätämään etäisyyttä). Skenaario: zoom ulos kesken kierron → 2 kuvaa (kierto jatkuu,
 kohde keskellä) pieni iPad → PT. Samaan haaraan natiivi-ui/temple-orbit.
+- PK (local_d3bb1f78-e2ea-4089-8bae-d106bb1f9ff7, OMISTAJA 16.16 vasen tikku kartalle, haara pelikoodari/vasen-tikku) odottaa orbitin
+  rajapintaa: tee PalloKiertoon julkinen kutsu (etäisyys ± ja keskuksen sivusiirto kiertoa katkaisematta; sama reitti kuin nipistys
+  orbitin aikana) ja lähetä PK:lle nimi + sha. PK ei koske PalloKierron kierto-/ajologiikkaan.
