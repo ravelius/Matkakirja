@@ -37,3 +37,4 @@ Käännöstarkistus `sh Linssit-testit/unity-tarkistus.sh` (sh), pohjavahti `pyt
 
 ## Lisäys 12.2x
 - FPV-HUD 9d32d7d84 katsottu (fh-2 viiva maiseman horisontissa kamera 3°:lla, fh-3 31,5°) ja PT:lle lähetetty "valmis KK:lle". Kohta 1 TEHTY; odota PT:n/KK:n palautetta.
+- PT 12.22: HUD 9d32d7d84 kuitattu ja viety KK:lle. JONO: 1) iPadilla FPV-tietorivin teksti hyvin pieni (fh-3) → sama koko kuin ISS-tietorivillä iPadilla (FpvNakyma tietorivi vs ISS-kyydin lukemakilpi; fpv-napit-haaraan, ajo sk-fpv-hud-1 ipad → PT). 2) sitten opas-M (kohta 3).
