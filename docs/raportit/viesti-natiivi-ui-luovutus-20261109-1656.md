@@ -35,4 +35,8 @@ PK:lle kerrottu (jonossa): KierronZoom + ajo.zoomKerroin 755a52fab:ssä; PK:n 8c
 `git merge-tree --write-tree 755a52fab 8cdb4549c`: PalloKierto.cs puhdas, ristiriita vain KameraTappi.cs (PK:n pohja). Odota PK:n vastausta.
 
 ## 5. Jono tämän jälkeen
-Kohdat 2 (kuvat → PT) ja 3 (Temple-piste kiinni maahan, PT:n ainoa avoin rivi). Muuten jono tyhjä.
+Kohdat 2 (kuvat → PT) ja 3 (Temple-piste kiinni maahan), sitten 6.
+
+## 6. UUSI PT 17.0x (OMISTAJA 16.26): pyöreän kuvan otsikko + kuvateksti kaikissa kaupungeissa – Temple-pisteen JÄLKEEN
+KS:n selvitys /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/nostot-korostetut-20261109/KUVATEKSTIT-PYOREAT.md: SaapumisKuvat.SuurennaNosto
+ei välitä noston tekstiä, otsikko puuttuu (~30 riviä). Data valmis (Pariisi 27, Lontoo 16). Kuvat PT:lle.
