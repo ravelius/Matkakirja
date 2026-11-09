@@ -39,3 +39,6 @@ ulos.jpg sarakkeet otsikko kuva1 nimi1 … (kopio myös 1bc73057-…/scratchpad/
 - 5efe9e346 (efba65386 + iso kulmapallo rajataan AUTO/MANUAL-napin yläpuolelle: FpvNakyma.IsoKerroin, FpvTikut.NappiRajat; tila-lokissa
   todellinen kerroin). JU:lle: alkamattomat efba65386-koot 5efe9e346:llä + iphone-vaaka → lokit/nui-fpv-koe-1-<koko>-5efe9e346.
   KATSO vaaka k-3: pallo ei peitä AUTOa; iPhone k-1 ☰ ja läpikuultava pallo → arkki PT:lle.
+- 14.4x: FPV iPhone efba65386 KATSOTTU ja arkki PT:lle (lokit/nui-fpv-koe-1-iphone-efba65386/arkki-fpv-koe-1-iphone.jpg): ☰, pallo, tietorivi ok.
+  Jäljellä: JU:n ketju DT 5efe9e346 ipad + iphone-vaaka → katso k-3 (pallo ei peitä AUTOa) → arkki PT:lle.
+- 14.43: palkki-aina-3 iphone-vaaka ed65f5b34 valmis (ei vielä katsottu); ipad-pysty ja ipad ed65f5b34 tulossa.
