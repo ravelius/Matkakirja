@@ -25,7 +25,9 @@ ILMAN -I:tä; UUSI-rivit → PT "UNITY UUSI: …").
 - 1d (21.27, talot 219 palaa) KATSOTTU: kuvio lähes näkymätön kaikilla etäisyyksillä (lähi = kaari 0,004): rivit 0,9 m / saumat 1,8 m alle pikselin →
   fwidth-häivytys poistaa ne (ei väreilyä), vain heikko patina. Lokit/natiiviseppa-kattokuvio-1d-mac-59f2443f3: rajaus-talot-lahi.png, pari-*-1000.png, NS-arvio.txt.
   PT:lle raportoitu 21.3x, ei KK:lle. SUOSITUS PT:lle: liioiteltu mittakaava (rivit 2–3 m, saumat 4–6 m, Tiny Prague) + vahvempi patina; vaihtoehto lähempi kamera.
-- SEURAAVA: odota PT:n päätös → muuta vain KattoKerroin-vakioita (RiviM, SaumaM, LevyM, voimakkuudet 0,24/0,14/0,07/0,14, patina 0,14), uusi commit,
+- PT:N PÄÄTÖS 21.3x: LIIOITELTU MITTAKAAVA (rivit 2–3 m, saumat vastaavasti) + VAHVEMPI PATINA. Kuviin uusi lähietäisyys: PK:n drone vie ~320 m:iin
+  (pelikoodari/drone-lahelle 7227a9788): kuvio luettava siellä, häipyy kauempana (LahiM/KaukoM sen mukaan). Mac-ajossa talot kansio mukana. Parit 0|1 PT:lle ennen KK:ta.
+- SEURAAVA (päätös tehty) → muuta vain KattoKerroin-vakioita (RiviM, SaumaM, LevyM, voimakkuudet 0,24/0,14/0,07/0,14, patina 0,14), uusi commit,
   Mac-ajo JU:lla sk-kattokuvio-1.txt:llä (sisältää talot kansio palat-v22-lahi ja lopun odota 2), täysikokoinen talorajaus (ei Louvren mallia) ennen arviota.
 - OPPI: skenaariot kirjoitetaan bashilla tai kokonaan käsin (zsh:n `set -- $v` ei pilko); Mac-talokuviin aina "talot kansio" (muisti mac-esikatselu-talot-kansio).
 Jos jono tyhjä: PT "JONO TYHJÄ: Natiiviseppä".
