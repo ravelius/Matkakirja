@@ -49,3 +49,18 @@ natiivi-ui/temple-orbit. Kuvat (zoom ulos kesken kierron, 2 kuvaa) pieni iPad �
 Etene()-rivit; vasen peukalotikku on PK:lla). Lähtökohta: PalloKierto sormi keskeyttää ajon (kohdekierto, napautusPitaaKierron ~1458,
 PaivitaKiertoLiuku) – kahden sormen ele erikseen: säilytä ajo.kohdeKierto ja vaihda vain etäisyys (korkeus).
 Postivahdin rivi (2) aa46f41db katsottu PT:llä → JU vie junaan (ei NUI-työtä). Rivi (3) palkki = kohta 1 (606e08631).
+
+## 7. PT 16.4x (vastaukset ja uudet rivit, samaan palkkierään ja Mac-ajoon kuin kohta 1, jos ehdit ennen ajoa)
+- Kartuscha EI muutu (pelaajan maa tarkoituksella; PT kertoo KK:lle). Kohdan 4 kysymys suljettu.
+- TARKISTA: korjaako 606e08631:n "toisen kaupungin palkki suljetaan" myös Pariisin kartalla näkyneen "‹ Marseille ›" -nimen
+  (Pinnaus.PaivitaSelaus nimi = KaupunkiNakyma.Nimi: palkin noston ja kameran kaupunki eri → nyt palkki suljetaan levossa).
+- POISTA noston kortin pin-kuvake (Nostokortti pinNappi, mk-nosto__pin + TrickleDown-osuma ~304–313; testikomento nappi "pin" ~569):
+  nostot aina kiinnitettyinä (OMISTAJA 16.25); kortti suljetaan palkin ✕:llä tai Sulje-napilla.
+- OMISTAJA 16.27: "Jos on kyse unohdetusta aarteesta, niin sen pikkukuvassakin pitäisi olla jo se pieni punainen kulmaus, jossa lukee
+  unohdettu aarre." Kuva Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261109/1627-greenwich-aarrekulma.png (Greenwichin palatsi (1/2)).
+  Tee: palkin alle pienennetyn noston pikkukuvaan (Pinnaus.NaytaKuva / mk-pinpalkki__kuva) sama punainen "Unohdettu aarre" -kulma kuin
+  isossa kortissa (grep kortin aarrekulman luokka/teksti Nostokortti/Nahtavyysarkki).
+- Kaikki kuvat pieni iPad → PT.
+
+## 8. JU 16.3x: fpv-nimi-1 14f9398b8 valmis (iphone + ipad, 4/4) → lokit/nui-fpv-nimi-1-{iphone,ipad}-14f9398b8: katso (-1616 kohta 3) ja
+arkki PT:lle. aa46f41db (palkin selaus) on junassa 223 (b8109622e) → -1616 kohta 4 tehty.
