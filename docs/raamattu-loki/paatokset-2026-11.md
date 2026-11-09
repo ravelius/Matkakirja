@@ -1071,3 +1071,19 @@ Kortti "Pysyykö noston palkki aina ylhäällä niin, että avattu nosto ja Rans
 ## SAUVA, NAPIT JA PULUN KYSYMYKSET (omistaja 9.11.2026 klo 12.58 ja 13.18) (9.11.2026 klo 13.20)
 
 12.58 pyyntö (KK suunnitelmat/20261109-ohjainsauva-napit-pulu.md). Kortit 13.18: kierto keskikohteen ympäri "Kyllä, kaikki suunnat (Suositus)"; M-nappi "Kirjan kuvake (Suositus)"; Pulun lähteet omin sanoin "kyllä ja siinä voisi olla nappi kysymysten alla "lisää kysymyksiä" … oletuksena käytetään kuitenkin valmiiksi generoituja kysymyksiä. jokaisesta uudesta nostosta kun se kirjoitetaan täytyy tarkistaa että sille on kirjoitettu kysymyksiä." → Raamattu 2.218. PK osat 1–4, KS osa 5 (testi).
+
+## ILTAPÄIVÄN JA ILLAN PÄÄTÖKSET (omistaja 9.11.2026 klo 14.07–19.46) (9.11.2026 klo 20.06)
+
+- 14.07 Lontoon bussit ja taksit kelpaavat (kortti, KK).
+- 14.12 kohokartan aurinko kelpaa → juna 223 (cd74573cd).
+- 14.34 vuoret lennoilla: "Ei, kuten nyt" (koe pois). 15.23 kierto jatkuu nostosta kartalle napautettaessa.
+- 16.4x alakulman maanimi pelaajan maasta: ei muutosta (kehittäjän harha).
+- 16.46 Lontoon 14 kylttiä tekstein + Pulu + Commons-kuvat kelpaavat; Pariisin 94 nimeä myöhemmin, mallit ensin.
+- 16.49 Pariisin 94 nimen tekstit jäihin; kaikista kaupungeista Pariisin kaltaisia. 16.50 paitsi 3D-mallinnus (auki).
+- 17.01 nimiotto (~130) + 26 luennon alkua uudelleen; kysymykset jatkossa kortteina. 17.12 otot kelpaavat → juna 224.
+- 17.02 juna 223 TF:ään (omistaja poissa studiolta). 17.03 kokeena asennuslinkki verkon yli; 17.31 toimi iPhonessa.
+- 17.31 pelitila + lisämuisti kehitysversioon. Pelitila junassa 224; lisämuisti vaatii Apple-tilin Macin Xcodeen (omistajan toimi, 19.1x "Ei nyt").
+- 19.06 Temple-tähti kuvamerkin yllä ja pyöreän kuvan nimi + kuvateksti + lähde kelpaavat → juna 224. Templen kuvateksti korjataan kuvan
+  mukaiseksi: syy oli CDN:n vanha torikuva; PT valitsi torikuvan -v2-nimellä ja uuden vaatetoritekstin (PR 6521, sisältö v1032).
+- 19.46 FPV-vuorten maalauksesta luovutaan (kumoaa 17.25): "Ei, oranssi myös lentoon", vain vuorten muotoa parannetaan. Maalaus talteen
+  natiivi-backup linssiseppa2/fpv-vuoret-maalaus-it12; oranssi + valokuvio (it. 13 0809231b9) KK:lla omistajalle.
