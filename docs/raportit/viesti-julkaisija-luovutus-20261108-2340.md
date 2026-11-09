@@ -100,3 +100,17 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   → katsottuna NUI:lle + PT:lle (KOE, kuvat ensin PT:lle). AN (81b70a14b) peruttu ennen alkua.
   AO (jono-ao.zsh, PK kattokaistale 84521ba9b iphone → L/pk-kaistale-iphone-84521ba9b) → PK:lle.
   Seuranta: grep -E "AJO|LOPPU" jonoloki. NUI/PT: Ranskan tasolla pilleri radiokaistan päällä = hyväksytty asettelu (NUI), ei vika.
+
+## LISÄYS 9.11. 10.4x (TUOREIN; tilinvaihto 09.5x sami.reivinen@vvi.fi, konteksti 25 % → nollaus)
+- UUDET SESSIO-ID:t: NUI local_4b84cd90-123f-46c5-bc07-75760ed4c80b, PK local_d3bb1f78-e2ea-4089-8bae-d106bb1f9ff7, NS local_0f7f169f-2ceb-43d2-8fb4-223dda2c0870,
+  VS local_5ebb0658-96f6-434d-8a38-b122eb53032f, PT local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31. JUNA 223 = 4e972eeed (ei muutosta). PR 6511 (PT docs) yhdistetty 1c300453a.
+- Valmiit + raportoidut: PK suunta 84521ba9b x3 → PT; NUI paikkapalkki-1 d87530c60 x3 ja 91d517091 x3 → NUI + PT (huomiot: iPhone pysty pelin yläpalkki lennossa,
+  RANSKA-teksti puuttuu pikkukartasta, "huippu 0.0 km"); VS AP (vesikerros2 92f93a82f, kohoilmavalo pohja/ilma/valo) → VS; PK kaistale2 e4a5b8af7, kaistale3 764e5c329,
+  kaistale4 764e5c329, suunta-iphone f6824ffc2 (PUUTE 1 aikaraja), suunta-vaaka 06d003a24 (PUUTE 4, kuvat EIVÄT kelpaa → PK teki oleta-seur) → PK;
+  NS matkalento-ennakko 6ad986961, fpv-latauskuva a88e3648b x2 → NS; NS:n fpv-drone-latauskuva-vienti-20261109 viety ämpäriin 10.25 (2/2) → NS.
+- AJOSSA / JONOSSA (nohup, omia): AX (jono-ax.zsh) VS kohorae 90711141e L1 → lokit/linssiseppa2-kohorae-90711141e → rivi VS:lle;
+  BC (jono-bc.zsh) VS vesikerros2 edc2820a3 AX:n jälkeen → rivi VS:lle, Shader-error erikseen (varjostin muuttui);
+  AY (jono-ay.zsh) PK suunta 1ceb5e35e iphone-vaaka (L2 10.45) → ipad → lokit/pk-suunta-<koko>-1ceb5e35e; tarkista "ohjekaista"-lokirivi ja PUUTE 0 → PK + kuvat PT:lle;
+  BD (jono-bd.zsh) NUI paikkapalkki-1 vaaka uusinta 91d517091 → lokit/nui-paikkapalkki-1-iphone-vaaka-91d517091-2 (p-6: "pelaaja liikutti … ei paluuta") → NUI;
+  sitten NUI fpv-napit-1 8a9c891fc ipad + iphone → lokit/nui-fpv-napit-1-<koko>-8a9c891fc (fn-2: ei pelin yläpalkkia, yksi ☰, pallo nappien alla) → NUI + PT.
+- OPPI 7: ketjun vaihto ennen alkua: tapa jono-*.zsh JA sen mac-yleis-lapsi vain kun lapsella on pelkkä `sleep 5` (vapaa-silmukka), ei esikatselua; lukkoon ei koske.
