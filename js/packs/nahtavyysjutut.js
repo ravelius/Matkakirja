@@ -5272,7 +5272,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Impressionistit': {
       nosto: 'syvennys-pariisi-impressionistit',
-      teksti: 'Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä '
+      teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä '
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
         + 'näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. '
         + 'Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, '
@@ -5325,7 +5325,7 @@ export const NAHTAVYYSJUTUT = {
     // Kohdekartan nimi fokuskohteen mukaan (omistaja 31.10. 08.22, PT): kadonnut ihme, teksti syvennystarinan oma.
     'Tuileries\'n palatsi': {
       nosto: 'syvennys-pariisi-tuileriat',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli '
+      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
         + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
         + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '

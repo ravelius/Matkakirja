@@ -2162,7 +2162,7 @@ export const SKANDAALIT = {
         + 'Giovanni Poggi tunnisti teoksen, ja poliisi haki miehen hotellista '
         + 'joulukuussa 1913. Tuomioksi tuli vuosi ja viisitoista päivää, '
         + 'valituksen jälkeen seitsemän kuukautta. Taulu kiersi ensin näyttelyissä '
-        + 'Italiassa ja palasi Louvreen samana vuonna.',
+        + 'Italiassa ja palasi Louvreen 4. tammikuuta 1914.',
       lahde: 'en-Wikipedia "Vincenzo Peruggia". Tarkistettu 2.9.2026.',
       kuvat: [
         {

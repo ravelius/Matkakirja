@@ -293,7 +293,7 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'tuileriat',
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
       otsikko: 'Tuileriain rauniot',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu '
+      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu '
         + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
         + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
         + 'kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
@@ -447,7 +447,7 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'impressionistit',
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
       otsikko: 'Nimi, joka oli alun perin pilkkaa',
-      teksti: 'Kun sinä kävelit Pariisissa, ranskalaista taide-elämää '
+      teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
         + '1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta '
