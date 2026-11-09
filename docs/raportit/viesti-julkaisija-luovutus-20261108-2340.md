@@ -216,3 +216,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   ES VS vuoret5k2 9d6db3904 ipad (korvasi ER:n) → polku VS:lle. ET NUI temple-palkki-1 606e08631 ipad → NUI. EU NS huippunimet-5 49f7825ca ipad (sk-huippunimet-3) → NS (kuvat vain PT:lle).
 - Raportoitu: DZ, EE, EF, EG, EH, EI, EJ, EK, EL, EM, EN, EO2, EP (kaikki rc 0). EO c143a7064 ja ER 46fcddd34 peruttu ennen alkua (korvattu).
 - Viestiraja: SendMessage pysähtyi → mcp__ccd_session_mgmt__send_message toimii.
+- 16.45: ET (606e08631) peruttu ennen alkua NUI:n pyynnöstä → ET2 NUI temple-palkki-2 9fd044500 ipad (T/jono-et2.zsh, pid 69326), lokit nui-temple-palkki-2-ipad-9fd044500 → polku NUI:lle.
