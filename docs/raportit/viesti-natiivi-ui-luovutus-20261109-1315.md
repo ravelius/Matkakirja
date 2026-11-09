@@ -91,3 +91,10 @@ Kärki b57df8ec6 (wt/proto-natiivi-ui-fpv-napit, puhdas). Tiedostot: UI/Linssit/
   (sivukortti oikeaan reunaan) ilmeisesti sijoittaa kortin absoluuttisesti → kortti ruudun ulkopuolella tai korkeus 0. Tutki ensin
   sk-2-ipad a-2 (lokit/nui-palkki-aina-2-ipad-74e72a4a4) + `ui nosto tila` -tyyppinen komento, korjaa 61c8858c2:n päälle ja aja
   sk-palkki-aina-3 myös iphone-vaaka + ipad-pysty. Pikkuarkki: <tämän session scratchpad>/k3.jpg (ei tallessa; tee uusi a-2/a-3:sta).
+
+## Lisäys 14.0x: FPV-KOE a–e TEHTY 4a635aeee (natiivi-backup natiivi-ui/fpv-napit; tarkistus 0, pohjavahti ok)
+- Agentin toteutus kohdan 4 mukaan (FpvTikut, FpvNakyma, FpvHud, LinssiUi, Linssit.uss .mk-fpv__tieto, ui.fi.json ui.fpv.auto/manual).
+  Lisäksi: pallon pyöritys vaihtaa Manuaalista AUTOon; HUD käyttää tikkujen ja napin todellista paikkaa. Epävarmaa: iso pallo ~180 pt
+  mutta nimien/HUD:n väistö varaa 150 pt (HUD-kehyksen kulma voi osua); Islandin mitat oletus (ei laitemittaus, tunnistus r.y ≥ 44).
+- JU:lle sk-fpv-koe-1 iphone, iphone-vaaka, ipad → lokit/nui-fpv-koe-1-<koko>-4a635aeee. KATSO k-1…k-4 (pallo pieni/iso, MANUAL,
+  ☰ Islandin vieressä, tietorivi keskellä, tikut iPadilla) → arkki PT:lle (KOE).
