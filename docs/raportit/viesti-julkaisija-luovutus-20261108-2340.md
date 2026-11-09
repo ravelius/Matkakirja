@@ -72,3 +72,8 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   ketju AB (nohup, jono-0725-ab.zsh) NUI nostovalikko-5 97067848d iphone → vaaka → ipad, sk-nostovalikko-5.txt → kuvat katsottuna NUI:lle (odotukset sk:n alussa).
 - 07.2x: ketju AB peruttu ennen alkua; tilalle ketju AC (nohup, jono-0725-ac.zsh) NUI nostovalikko-6 76aa7c1c6 iphone → vaaka → ipad, sk-nostovalikko-6.txt
   (omistaja 07.21: pilleri 🔍:n vasemmalle) → kuvat katsottuna NUI:lle. Ketju Z valmis (nostovalikko-4 x2; NUI nähnyt). Ajossa vain AA ja AC (nohup).
+- 07.5x (ennen omaa nollausta, PT 07.4x; juna 223 = 835f617a6): ketju AA (4c1d100a2) LOPPU 07.29 – iphone 5/5, vaaka ja ipad 0/5
+  (PK muutti sk:ta kesken, uusi rivi `ui juoksupeli kuvasuhde laite`). Tilalle ketju AD (nohup, jono-0731-ad.zsh) PK d2-ovikuva 281093d9c
+  (haara natiivi-backup/pelikoodari/juoksu-223) iphone → vaaka → ipad, kansiot L/pk-d2-ovikuva-<koko>-281093d9c → polut + aika PK:lle.
+  Ketju AC: nostovalikko-6 iphone 5/5 ja vaaka 5/5 valmiit (07.26/07.29), ipad alkoi 07.48 L1 → kaikki kolme katsottuna NUI:lle.
+  Oppi: /tmp/ju-portti.lukko jäi 07.28–07.48, kun tapoin mac-yleis-kopion (= portin `sleep 60; rmdir` -aliprosessi). Älä tapa sitä; jumissa: rmdir oma lukko.
