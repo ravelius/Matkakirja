@@ -1100,3 +1100,7 @@ junassa 224). 21.14 pelin koko: Kyllä, suunnittele (osat 1–2 junassa 224 = 35
 PK dc2605d31, NS cad1fe5b1), kehitysversio omistajalle, junaan vasta Kelpaa-kortilla; korvaa 6.11. 21.30 'isoa korjausta ei nyt tehdä' kokeen osalta. 22.24 juoksupelin lataus nopeaksi (palatsi
 leivotaan valmiiksi, PK). 22.42 kaupungit koodilla: yksi talokone, tyyppimallit merkkirakennuksille, ei uusia Tripo-malleja (Pariisin tehdyt jäävät); ensin osa A katot 1 km² Pariisi (Louvren
 pohjoispuoli) ja Lontoo (Westminster–Covent Garden), koe, ei junaan; korvaa 7.11. kattokokeiden tauon ja vastaa 9.11. 16.50 '3d mallinnus auki'.
+
+## ASEMATAULU JÄÄDYTETTY (9.11.2026 klo 23.09)
+
+Omistaja 9.11.2026 klo 22.59: "En seuraa asemataulua enää kovin paljoa. Kuluttaako se resurssja? Mitä sille kannattaisi tehdä?" KK:n kortti 23.08 "Jäädytetäänkö Asemataulun ylläpito? Työlista ja junatiedot säilyvät sessioiden käytössä, mutta taulua ei enää päivitetä eikä avata; tilannekuvan saat minulta kysymällä." = "Kyllä, jäädytetään (Suositus)" (selite: ei päivityksiä, ei kehitystä, ei avata aloituksessa; mitään ei poisteta; saa takaisin päälle sanomalla). Raamattu 7.39 korvattu jäädytyksellä; 7.37:stä taulun avaus pois PT:n ja KK:n aloituksesta. Samana iltana 22.59 omistaja: "Ja järjestä vain ne kaupungin rivit" → Kaupungit-kärjen 80 riviä paketteihin A–D (24 suljettu, B1–B7, C, D).
