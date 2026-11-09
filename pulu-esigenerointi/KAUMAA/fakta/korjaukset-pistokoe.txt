@@ -1,0 +1,44 @@
+### v1-83
+VANHA: täällä ovat kaikkien pankkien pääkonttorit ja viisi yliopistoa.
+UUSI: täällä ovat monien pankkien pääkonttorit ja useita yliopistoja.
+SYY: PT:n pistokoe 1 (liioittelu, epävarma luku)
+### v1-22
+VANHA: Belgiassa on kuusi trappistioluttaluostaria, kuten [[Westmalle]], [[Chimay]], [[Orval]], [[Rochefort]], [[Westvleteren]] ja Achel, ja ne valmistavat
+UUSI: Belgiassa on viisi trappistiluostaria, joissa tehdään olutta: [[Westmalle]], [[Chimay]], [[Orval]], [[Rochefort]] ja [[Westvleteren]] (kuudes, Achel, menetti trappistimerkinnän 2021), ja ne valmistavat
+SYY: PT:n pistokoe 2 (yhdyssana); Achel ei ole ollut trappistipanimo vuoden 2021 jälkeen
+### v1-233
+VANHA: ja paimenia kutsutaan nimellä [[csikós]].
+UUSI: ja hevospaimenia kutsutaan nimellä [[csikós]].
+SYY: PT:n pistokoe 7 VAKAVA: csikós on hevospaimen (nautapaimen gulyás)
+### v1-460
+VANHA: Heinäkuun lopulla 1456
+UUSI: Heinäkuussa 1456
+SYY: PT:n pistokoe 12: piiritys 4.–22.7.1456
+### v1-293
+VANHA: Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta
+UUSI: Vaduzin kunnassa asuu vajaat 6 000 ihmistä, mutta
+SYY: PT:n pistokoe 15: luku epävarma
+### v1-293
+VANHA: Vaduz on yhden [[ruhtinaskunnan]] hallinnon ja museoiden koti.
+UUSI: Vaduz on [[ruhtinaskunnan]] hallinnon ja museoiden koti.
+SYY: PT:n pistokoe 15: kömpelö ilmaus
+### v1-101
+VANHA: viisi on lähteissä yleisin.\n\nKuninkaat
+UUSI: viisi on lähteissä yleisin. Kuninkaat
+SYY: PT:n pistokoe 19: rivinvaihto
+### v2-268
+VANHA: jolloin kokoontuu nuotioiden ääreen.
+UUSI: jolloin kokoonnutaan kokkojen ääreen.
+SYY: PT:n pistokoe 22: subjekti puuttui
+### v2-34
+VANHA: löysi tuhansia hautoja.
+UUSI: kaivoi esiin lähes tuhat hautaa.
+SYY: PT:n pistokoe 24 VAKAVA: noin 980–1 000 hautaa
+### v2-318
+VANHA: on Katalonian arkisin ruoka:
+UUSI: on Katalonian arkiruokaa:
+SYY: PT:n pistokoe 26: kieli
+### v2-111
+VANHA: kaupungin synagoga avattiin vuonna 1909 ja on Kaakkois-Euroopan suurin, ja sen kattokruunu painaa 1,7 tonnia. Sofian eläintarha on alueen vanhin ja suurin: kuninkaallinen asetus perusti sen 1. toukokuuta 1888, ja koko kokoelma oli aluksi yksi Bulgariasta pyydystetty musta korppikotka. Eläintarha sijaitsee runsaan neljän kilometrin päässä keskustasta etelään.
+UUSI: kaupungin synagoga avattiin vuonna 1909, ja sitä pidetään Kaakkois-Euroopan suurimpana. Sofian eläintarha perustettiin ruhtinas Ferdinandin asetuksella vuonna 1888, jolloin Bulgaria oli vielä ruhtinaskunta.
+SYY: PT:n pistokoe 30 VAKAVA: 1888 ruhtinaskunta, ei kuningas; epävarmat yksityiskohdat (kruunun paino, ensimmäinen eläin, sijainti) pois
