@@ -1,8 +1,8 @@
 # Siirtoprompti tilinvaihtoon (PÄÄTOIMITTAJA 9.11.2026 klo 09.4x; KK 09.35: viikko 98 %)
 
-Vanha tili: vvi@vvi.fi (org b408744a, koodaustili), viikko 98 % klo 09.35, raja 99 %. UUSI TILI (suositus, omistaja valitsee):
-päätili (org f04011ee; viikko nollautui ma 9.11. klo 09.00; raja 92 %, kysytään kortilla). Taulu: scratchpad/asemataulu/osoitteet.md
-(päätili Rq5ajPU4SraE2XKd7BYAix: read + publish samaan osoitteeseen). Käytännön lista: docs/tilinvaihto.md 0.0–8; VOIMASSA OLEVA ARVO voittaa.
+Vanha tili: vvi@vvi.fi (org b408744a, koodaustili), viikko 98 % klo 09.35, raja 99 %. UUSI TILI (OMISTAJAN PÄÄTÖS klo 09.41):
+sami.reivinen@vvi.fi (org ddaee6a2; raja kysytään kortilla). KK:n id tällä tilillä local_d5f31591-21fa-4cb0-bab3-bcd3435d075a (~/.claude/CLAUDE.md).
+Taulu R6VQFTUNq629zSzah719Uy (scratchpad/asemataulu/osoitteet.md: read + publish samaan osoitteeseen). Käytännön lista: docs/tilinvaihto.md 0.0–8; VOIMASSA OLEVA ARVO voittaa.
 
 ## 0. Omistajalle
 Omistaja vaihtaa tilin ja avaa uuden istunnon kansiossa /Users/Shared/Claude/Matkakirja-fable ja liittää siihen kohdan 1 viestin.
@@ -10,7 +10,7 @@ Kirjautumisohjeita ei tarvita (omistaja 3.11. 16.31).
 
 ## 1. Viesti uuteen sessioon
 
-> Olet PÄÄTOIMITTAJA (Opus, medium), Matkakirjan päätoimittaja; tili vaihtui juuri. Nimeä sessio "PÄÄTOIMITTAJA (Opus, medium)". Checkout /Users/Shared/Claude/Matkakirja-fable. Aja git fetch origin. ENNEN MUUTA lue tuotannonohjauksen osio 0 (git show origin/main:docs/tuotanto/tuotannonohjaus.md), oma rivisi `node tools/raamattu-luku.mjs 7.47`, tämä tiedosto (git show origin/main:docs/raportit/viesti-fable-siirtoprompti-20261109.md) KOKONAAN, PT:n uusin luovutus (git show 8b2abc6e5:docs/raportit/viesti-fable-luovutus-20261109-0925.md) KOKONAAN ja docs/tilinvaihto.md (0.0–8). Sitten get_usage: viikkolukema ja tili KK:lle heti. Etäyhteys vain KK:lle.
+> Olet PÄÄTOIMITTAJA (Opus, medium), Matkakirjan päätoimittaja; tili vaihtui juuri tilille sami.reivinen@vvi.fi. Nimeä sessio "PÄÄTOIMITTAJA (Opus, medium)". Checkout /Users/Shared/Claude/Matkakirja-fable. Aja git fetch origin. ENNEN MUUTA lue tuotannonohjauksen osio 0 (git show origin/main:docs/tuotanto/tuotannonohjaus.md), oma rivisi `node tools/raamattu-luku.mjs 7.47`, tämä tiedosto (git show origin/main:docs/raportit/viesti-fable-siirtoprompti-20261109.md) KOKONAAN, PT:n uusin luovutus (git show 8b2abc6e5:docs/raportit/viesti-fable-luovutus-20261109-0925.md) KOKONAAN ja docs/tilinvaihto.md (0.0–8). Sitten get_usage: viikkolukema ja tili KK:lle heti. Etäyhteys vain KK:lle.
 > SESSIOT ENSIN (omistaja 3.11. 16.31): tyhjennä tämän tilin roolisessiot send_messagella "lataa clear_session ja kutsu self" (list_events = 0): KESKUSTELUKANAVA ensin, sitten Postivahti, Asemataulu, Julkaisija, Natiiviseppä, Natiivi-UI, Pelikoodari, Valoseppä, Karttaseppä, Lavastaja. Puuttuvat luodaan (tilinvaihto.md kohta 2), vanhat arkistoidaan kysymättä; id:t osoitekirjaan `node tools/tyotavat/paivita-idt.mjs … --kirjoita`. ~/.claude/CLAUDE.md tuntee KK:n id:t; jos KK:n id vaihtuu, omistaja lisää sen omalla viestillään.
 > Kotikansiot (1.5) ennen aloitusviestejä. KK:n aloitusviesti: "Olet KESKUSTELUKANAVA (Opus, max). Lue ensin `node tools/raamattu-luku.mjs 7.47` ja /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aloitus.md ja toimi sen TILINVAIHTO-kohdan mukaan." Roolit kohdan 2 mukaan, vahdit, tämän tilin Asemataulu. EI jonokierros-cronia. Lopuksi OHJEIDEN KOE (7.47) ja `node tools/tyotavat/tilinvaihto-valmis.mjs` ennen riviä KK:lle.
 
