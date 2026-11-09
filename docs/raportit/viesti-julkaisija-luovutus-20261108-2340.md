@@ -8,6 +8,11 @@
   (c) laite-iso.zsh 2aeb73d18 (ASENNA=0) → kokorivi osa1+osa2 yhteiskoko → rivi PT + KK (valmis-rivi pelin koko: ladattava/asennettu ennen 834/2024).
   (d) HR PK leivontalista 3d0f62ae8 Mac (T/jono-hr.zsh) → lokit/pk-leivontalista-mac-3d0f62ae8 + juoksu-leivontalista.txt kopioituna → rivi PK:lle (local_d3bb1f78…). SEURAAVA PK:lta: paketti valmis → iPad-käännös 3d0f62ae8 + sk-ipad-leivottu-0/1 vuorotellen 0,1,0,1 → lokit/pelikoodari-leivottu-{0a,1a,0b,1b}; mittari "latauksen ositus", "leivottu lataus", huippu. Ei junaan.
 - RAPORTOITU: NS talolataus-2, iso-1, iso-2, kierto-tarina (NS+PK); NUI offline-talot-1/-2, aarre (parit lokit/nui-aarre-vain-tahti-1-parit); pelin koko osa 1 KK+PT (parit lokit/ju-pelinkoko-osa1-parit). NAS-siirto 13 laitekäännöstä ✓ (siirto-laite-nas.zsh, diff -x "._*").
+- 23.0x LISÄ (seuraajalle, ei aloitettu):
+  (e) PT KUITTAUS pelin koko osa 3: NS natiiviseppa/iso-sisalto d88f290b0 (iso-3 ✓ raportoitu NS:lle) → ISS-ämpäripaketti versioituun polkuun (NS:n iso_paketti.py; Mac-ajojen koe-ämpäri /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/iso/ampari-koe-2) _valmiit/*-vienti-* + vie-paketti.sh, sitten merge junaan 224 (3580eb0f2:n päälle), testit, push, rivi PT:lle.
+  (f) PT: LAV rakennukset-v127 (ovien UV-korjaus, kuitattu) vienti + Mac-pari.
+  (g) HU KS luurankokatot osa A (T/jono-hu.zsh, 4 Mac-ajoa b804a87d6 → lokit/karttaseppa-katot-a-{pariisi,lontoo}-{nyt,uusi}, 6 kuvaa kpl) → kuittaus KS:lle (local_7b57e35a…), ei arviota. koe12/koe8-asetustiedostoa ei löytynyt: ajettu ipad + pistekerroin 0.465.
+  Raportoitu lisäksi: iso-3 (NS), leivontalista fef369ae9 (PK; 534 riviä). Koodikoko: perus 643/fw 249, Low 641/242, Medium 635/226 Mt; Medium+koko ajossa.
 - Työkalut: T/parit.py (PIL ennen|jälkeen + pikseliero), T/sk-talot-ampari-224.txt.
 
 ## LISÄYS 9.11. 21.5x (TUOREIN; korvaa 18.43:n ja 18.5x:t; konteksti 27 % → nollaus)
