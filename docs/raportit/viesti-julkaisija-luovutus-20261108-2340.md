@@ -78,3 +78,7 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   Ketju AC: nostovalikko-6 iphone 5/5 ja vaaka 5/5 valmiit (07.26/07.29), ipad alkoi 07.48 L1 → kaikki kolme katsottuna NUI:lle.
   Oppi: /tmp/ju-portti.lukko jäi 07.28–07.48, kun tapoin mac-yleis-kopion (= portin `sleep 60; rmdir` -aliprosessi). Älä tapa sitä; jumissa: rmdir oma lukko.
 - 07.51: ketju AC LOPPU, nostovalikko-6 ipad 5/5 (kaikki kolme 5/5, PUUTE 0) → seuraava JU katsoo ja vie NUI:lle. Ajossa vain AD.
+- 08.12: ketju AE (NUI nostovalikko-7 c6d66b491, T/jono-0756-ae.zsh) LOPPU 08.04, kaikki 3 kokoa 5/5, virheitä 0 → ilmoitettu NUI:lle 08.0x.
+  Ketju AF (NUI nostovalikko-osa2-1 474011364, ipad → iphone → vaaka, 5 kuvaa, KOE EI JUNAAN, T/jono-0800-af.zsh) alkoi 08.04 L2;
+  lokit L/nui-nostovalikko-osa2-1-<koko>-474011364 → seuraava JU tarkistaa jonolokin AJO-rivit ja ilmoittaa NUI:lle (local_43962c89-…).
+  a3588fe08:aa EI ajettu (NUI vaihtoi sha:n). AD (PK) ajossa L1.
