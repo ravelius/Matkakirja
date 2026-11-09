@@ -116,3 +116,21 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - OPPI 7: ketjun vaihto ennen alkua: tapa jono-*.zsh JA sen mac-yleis-lapsi vain kun lapsella on pelkkä `sleep 5` (vapaa-silmukka), ei esikatselua; lukkoon ei koske.
 - 10.5x: BD katkaistu (vaaka-2 vanhalla sk:lla ajetaan loppuun, EI raportoida). Tilalle BE (jono-be.zsh, PT 10.5x): paikkapalkki-1 91d517091 x3 uusi veto → lokit/nui-paikkapalkki-1-<koko>-91d517091-3 → NUI + PT; sitten fpv-napit-1 x2 (BE kirjoittaa myös vanhan "BD LOPPU" -rivin, ohita). VS kohorae valmis + ilmoitettu.
 - 10.5x: BF (jono-bf.zsh) NS matkalento-paluu ccbdaef0a iphone → lokit/natiiviseppa-matkalento-paluu → rivi NS:lle (NS tarkistaa itse, vain PT:lle).
+
+## LISÄYS 9.11. 11.5x (TUOREIN; konteksti 25 % → nollaus)
+- JUNA 223 = 734ed685d (natiivi-backup julkaisija/juna-223, worktree /Users/Shared/Claude/wt/julkaisija-juna-221): 4e972eeed + VS ilma/valo/rae
+  (b2f1407d6, 2f675d74b, 90711141e; omistaja 10.54 "Kelpaa"; vesi EI) = 4d105f9e7 + merge PK juoksu-223-suunta 4511dc743 (8 commitia, PT 11.5x).
+  Testit vihreät (T/juna223-suunta-*.txt: unity 0, Kartta 729, Linssit 2276, Peli 878). PT + PK kerrottu. Paikkapalkki EI junassa.
+- PIENI iPAD (omistaja 11.05, PT 11.4x): aina uusin vihreä junan kärki: zsh T/pieni-juna.zsh <sha> (laitekäännös vapaalla linjalla, iPad-lukko, ei poistolippua)
+  + rivi KK:lle (local_d5f31591-…) ja PT:lle: versio + mitä uutta SELKOKIELELLÄ, vain junassa olevat (tarkista merge-base --is-ancestor). Nyt 734ed685d asennettu 11.34.
+- Ämpäri: LAV tausta-v129 viety 10.57 (100/100). Laitekäännökset 4d105f9e7 ja 734ed685d lokit/julkaisija-laite-218-*: 4d105f9e7 voi poistaa.
+- Raportoitu ja kuitattu: PK suunta 1ceb5e35e x2 (iPad e-ohjaus ilman ohjekaistaa → PK), BG kaistale4 v129 (PT kuittasi), BI kaistale6 = LAV sk-v129
+  (lokit/lavastaja-v129-kaistale), NS paluu-2 (BO), VS vesikerros2/vesidiag/vesikerros3/4, kohoaurinko, NUI paikkapalkki 818e32b61 x3 ja 5f8860254 iphone+ipad
+  (p-5a beige yhä; usvan voima 0 → ei usvasta), fpv-hud 579fbbeec x2 (fh-3 = fh-2 tavulleen, pallo ☰:n päällä) → PT + NUI.
+- AJOSSA / JONOSSA (nohup, omat, T/jono-<x>.zsh):
+  BS NUI paikkapalkki-1 5f8860254 iphone-vaaka (KOE) → NUI (p-5a ja p-6 katsottuna).
+  BR VS kohoaurinko2 406cf9fdb → BT VS vesikerros5 ea7e995b1 → BV VS vesipallo-viite ea7e995b1 (Google-laatat) → kustakin rivi VS:lle (local_5ebb0658-…).
+  BW PK lontoo-m2 734ed685d iphone + ipad 0.465 (ei junaan) → valmis-rivi PK:lle (local_d3bb1f78-…), PK tarkistaa ja vie PT:lle.
+  BX NUI fpv-hud-1 4e12207ed iphone + ipad (KOE) → kuvat PT:lle + rivi NUI:lle; tarkista fh-3 ≠ fh-2 (kallistus) ja ☰/pallo.
+  BU:n ebd3d3569-iphone ajetaan loppuun, EI raportoida.
+- Monitor-suodin: " AJO [A-Z+]+ |LOPPU|VIKA" (PK+LAV-tunnus jäi aiemmin pois).
