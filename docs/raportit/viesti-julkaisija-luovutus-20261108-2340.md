@@ -87,3 +87,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   testit vihreät (T/juna223-d2-*.txt: Kartta 729, Linssit 2276, Peli 877, unity 0). Sanan tultua: push natiivi-backup julkaisija/juna-223 → kärki PT:lle.
   Juna 223 virallisesti yhä 835f617a6.
 - 08.2x: AF2-vaaka 474011364 kuoli kesken (lukko poistettu); ketju AG 092345d80 osa2-1 vaaka + nostovalikko-7 ipad valmis 08.25, katsottu → NUI + PT. JONO TYHJÄ.
+- 08.3x: KK:n sana 08.31 → JUNA 223 = 38e803198 pushattu (natiivi-backup julkaisija/juna-223), kerrottu PT:lle. NUI nv7-ipad 315a07d47 (ketju AH) katsottu → NUI. JONO TYHJÄ.
