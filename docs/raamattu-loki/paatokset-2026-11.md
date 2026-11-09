@@ -1055,3 +1055,19 @@ Omistaja: "ajattelin jopa että voisi kokeilla jos lontoon nähtävyydet palautt
 ## HUUDOT KALA-ALTAALLE JA GRANAATTIOMENAPUULLE KELPAAVAT (omistaja 9.11.2026 klo 12.32) (9.11.2026 klo 12.38)
 
 Omistaja KK:lle: "äänet hyvät" = kaikki 8 ottoa (kala-allas + granaattiomenapuu; promptit KK scratchpad/keskustelukanava/suunnitelmat/20261107-huudot-kala-allas-granaattiomenapuu.md). PK tekee avaimet, testit ja loppuyhteenvedon, NUI antaa ottojen polut; haara PT:lle → junaan 223. Lähde: scratchpad/keskustelukanava/aloitus.md kohta j.
+
+## PALKKI AINA YLHÄÄLLÄ (omistaja 9.11.2026 klo 12.45) (9.11.2026 klo 13.20)
+
+Kortti "Pysyykö noston palkki aina ylhäällä niin, että avattu nosto ja Ranskan valikko tulevat sen alle?" → "Kyllä (Suositus)" ("Palkki ei katoa koskaan. Nosto ja valikko avautuvat sen alle, ja kaikkea ohjataan palkista."). KK suunnitelmat/20261109-palkki-aina-nakyvissa.md, NUI. PT 13.1x: koskee myös valikosta valittua nähtävyyttä.
+
+## FPV-NÄYTTÖ JA NOPEUS (omistaja 9.11.2026 klo 12.57 ja 13.00) (9.11.2026 klo 13.20)
+
+12.57 näyttö omin sanoin: iPadin tikut paremmille peukalokohdille, maapallo pieni ja läpinäkyvä (napautus suurentaa, paikanvaihto kuten ISS), iPhonen ☰ Dynamic Islandin oikealle, vauhti ja korkeus ylös keskelle. Nopeus "Oikean maan mukaan (Suositus)". 13.00: AUTO/MANUAL-nappi oikean peukalon yläpuolelle, pallon napautus manuaalissa → AUTO. NUI koe, ei junaan ilman korttia.
+
+## PIENI IPAD SAA JOKAISEN KOKONAISUUDEN (omistaja 9.11.2026 klo 13.03) (9.11.2026 klo 13.20)
+
+"uuden version voi ladata pikku ipadille kun nostokorjaus valmistuu ja sitä mukaa myös muita päivityksiä aina kun jokin kokonaisuus valmistuu. laita vain viestiä kun päivitetty" → Raamattu 2.217.
+
+## SAUVA, NAPIT JA PULUN KYSYMYKSET (omistaja 9.11.2026 klo 12.58 ja 13.18) (9.11.2026 klo 13.20)
+
+12.58 pyyntö (KK suunnitelmat/20261109-ohjainsauva-napit-pulu.md). Kortit 13.18: kierto keskikohteen ympäri "Kyllä, kaikki suunnat (Suositus)"; M-nappi "Kirjan kuvake (Suositus)"; Pulun lähteet omin sanoin "kyllä ja siinä voisi olla nappi kysymysten alla "lisää kysymyksiä" … oletuksena käytetään kuitenkin valmiiksi generoituja kysymyksiä. jokaisesta uudesta nostosta kun se kirjoitetaan täytyy tarkistaa että sille on kirjoitettu kysymyksiä." → Raamattu 2.218. PK osat 1–4, KS osa 5 (testi).
