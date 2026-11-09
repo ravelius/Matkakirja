@@ -21,6 +21,9 @@ Kartuscha (alakulman maa) = pelaajan maa, EI muutosta (omistaja 16.4x). FPV-nimi
 - PYYDETTY: sk-orbit-nipistys-1 (755a52fab tai b75419ad3), sk-kadonnut-tahti-1 (b75419ad3); lokit nui-orbit-nipistys-1-ipad-<sha>,
   nui-kadonnut-tahti-1-ipad-<sha>. Nipistys myös pienellä iPadilla (PT). Vahti: scratchpadin vahti.sh-malli (sh, ei zsh-globia).
 
+- JU EX (17.0x): kaikki kolme b75419ad3:lla Mac koko ipad → lokit/nui-{temple-palkki-2,orbit-nipistys-1,kadonnut-tahti-1}-ipad-b75419ad3;
+  pieni iPad: sk-orbit-nipistys-1-laite.txt (laiteversio) → lokit/nui-orbit-nipistys-1-pieni-b75419ad3 (JU:n nimi voi poiketa).
+
 ## 3. TEMPLE-PISTE LIUKUU (OMISTAJA 16.12, PT 16.5x: "kiinni maahan") – SYY LÖYTYI OSIN, EI KORJATTU
 temple-palkki-2 t-1…t-4: kierron keskus = Templen lat/lon (katse 0 m). Diagnoosirivin muotoilu on VINO (NostotKartalla.KohdeSijainti
 string.Format: indeksit siirtyneet; "pinta {7} {8}" näyttää NakyvaLat/ok, "nosto {9}" = MaanPinta.Hae = 90, "kohdenosto {10}" = Nosto = 90)
