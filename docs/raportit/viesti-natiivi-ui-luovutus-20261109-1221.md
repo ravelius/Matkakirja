@@ -34,3 +34,6 @@ Käännöstarkistus `sh Linssit-testit/unity-tarkistus.sh` (sh), pohjavahti `pyt
 ## Muuta
 - Vanhat worktreet poistettavissa: wt/proto-natiivi-ui-nostovalikko-juna223, wt/proto-natiivi-ui-nostovalikko (ei poistettu).
 - FPV: lokissa "maan yllä 56 km" = pienoismallin mitta (D 28 km), ei vika.
+
+## Lisäys 12.2x
+- FPV-HUD 9d32d7d84 katsottu (fh-2 viiva maiseman horisontissa kamera 3°:lla, fh-3 31,5°) ja PT:lle lähetetty "valmis KK:lle". Kohta 1 TEHTY; odota PT:n/KK:n palautetta.
