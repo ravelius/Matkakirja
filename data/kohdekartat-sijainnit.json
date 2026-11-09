@@ -17921,6 +17921,58 @@
    "eroKartanPisteesta_m": 5
   },
   {
+   "id": "pariisi:Invalidit",
+   "nimi": "Invalidit",
+   "qid": "Q188977",
+   "lat": 48.855,
+   "lon": 2.3125,
+   "lahde": "wikidata Q188977 P625 (fi.wikipedia: Hôtel des Invalides)",
+   "kartanPiste": {
+    "lat": 48.855,
+    "lon": 2.3125
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "pariisi:Sainte-Chapelle",
+   "nimi": "Sainte-Chapelle",
+   "qid": "Q193193",
+   "lat": 48.85537,
+   "lon": 2.34503,
+   "lahde": "wikidata Q193193 P625 (fi.wikipedia: Sainte-Chapelle)",
+   "kartanPiste": {
+    "lat": 48.8554,
+    "lon": 2.345
+   },
+   "eroKartanPisteesta_m": 4
+  },
+  {
+   "id": "pariisi:Grand Palais",
+   "nimi": "Grand Palais",
+   "qid": "Q457318",
+   "lat": 48.86611,
+   "lon": 2.3125,
+   "lahde": "wikidata Q457318 P625 (fi.wikipedia: Grand Palais)",
+   "kartanPiste": {
+    "lat": 48.8661,
+    "lon": 2.3125
+   },
+   "eroKartanPisteesta_m": 1
+  },
+  {
+   "id": "pariisi:Tour Montparnasse",
+   "nimi": "Tour Montparnasse",
+   "qid": "Q323767",
+   "lat": 48.84211,
+   "lon": 2.32198,
+   "lahde": "wikidata Q323767 P625 (fi.wikipedia: Tour Montparnasse)",
+   "kartanPiste": {
+    "lat": 48.8421,
+    "lon": 2.322
+   },
+   "eroKartanPisteesta_m": 2
+  },
+  {
    "id": "pariisi:Carmenin ensi-ilta",
    "nimi": "Carmenin ensi-ilta",
    "qid": null,

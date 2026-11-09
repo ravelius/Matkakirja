@@ -5378,6 +5378,15 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
       { nimi: 'Place des Vosges', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
+       * PIIRROSKARTAN 3D-MALLIT VALMIIKSI NOSTOIKSI (omistaja 9.11.2026 klo 16.17: "Kaikki tällaiset paikat
+       * pitäisi hakea valmiiksi jo nostoiksi"; PT, KS): mallin kyltti hakee nyt tiedot Tietokortit-striimistä,
+       * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
+       */
+      { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
+      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
+      { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
+      { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
+      /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
        * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
