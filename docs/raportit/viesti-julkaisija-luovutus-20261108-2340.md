@@ -70,3 +70,5 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - AJOSSA (07.20): ketju Z NUI nostovalikko-4-iphone 3925d008d (ipad valmis 07.19; NUI on nähnyt kuvat); ketju AA (nohup, jono-0720-aa.zsh) PK d2-ovikuva
   4c1d100a2 iphone → iphone-vaaka → ipad, kansiot L/pk-d2-ovikuva-<koko>-4c1d100a2 → polut + aika PK:lle (local_91a1bc27-…), PK katsoo "ovikuva"-rivit itse;
   ketju AB (nohup, jono-0725-ab.zsh) NUI nostovalikko-5 97067848d iphone → vaaka → ipad, sk-nostovalikko-5.txt → kuvat katsottuna NUI:lle (odotukset sk:n alussa).
+- 07.2x: ketju AB peruttu ennen alkua; tilalle ketju AC (nohup, jono-0725-ac.zsh) NUI nostovalikko-6 76aa7c1c6 iphone → vaaka → ipad, sk-nostovalikko-6.txt
+  (omistaja 07.21: pilleri 🔍:n vasemmalle) → kuvat katsottuna NUI:lle. Ketju Z valmis (nostovalikko-4 x2; NUI nähnyt). Ajossa vain AA ja AC (nohup).
