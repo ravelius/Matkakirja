@@ -58,3 +58,15 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 01.5x (nollauksen jälkeen): kaikki ketjut L–S LOPPU 00.37, ei ajoja. Kuitattu: PK pk2 iPad PUUTE 0 → d2a KK:lle + PK; iPhone PUUTE 1 (OviAukeaa).
   1g-pari EI vertailukelpoinen (84a91 "seinan edessa" PUUTE, käännös s 9,5 etelään) → PT + PK. NUI pallo-4, tarina-1b x2, kuvateksti-3 x2 → NUI + PT
   (kuvateksti-3 iPad koko 0,87×, odotus ≥ 0,9). JONO TYHJÄ PT:lle.
+
+## LISÄYS 9.11. 07.2x (TUOREIN; konteksti 26 % → nollaus)
+- JUNA 223 = 835f617a6 (natiivi-backup julkaisija/juna-223), PT kuitannut asti 83e635e63; 835f617a6 kerrottu PT:lle (testit vihreät, T/juna223-kt5-*.txt).
+  Ketju: 2f2e13352 + NUI a7866450f, 5fa61ed04, 0f62c5656 (f844a2d82) + 2233e740c, 10845cd24, 836ded6c6 (cc17d1aae) − revert 836ded6c6/cd99695f8/b2a7046da
+  (OMISTAJAN PÄÄTÖS 06.43: ei kuvatekstiä kertojan kuviin → 83e635e63) + ff 835f617a6 (kuvateksti vain avattuun, KK 06.54). Worktree /Users/Shared/Claude/wt/julkaisija-juna-221.
+- OPPI 6: kill -9 ajoketjulle jättää /tmp/matkakirja-kaannospalvelu[-2].lukko (+ /tmp/ju-portti.lukko) → seuraavat ketjut odottavat ikuisesti
+  (V ja W jumissa 02.0x–06.44). Tapon jälkeen: tarkista lukon pid (cat lukko/pid), jos kuollut ja oma → rm kuka pid + rmdir. Käynnistä ketjut nohupilla.
+- Kuitattu tällä jaksolla: PK 1g-ennen 84a91d530 (PT+PK), PK d2-ovikuva 451519f87 x3 (pysty EI, vaaka+iPad ok → PK), NUI nostovalikko-1 iphone,
+  -2 x3, -3 x2 (Tanger seututasolla isona: NUI tarkistaa), -4 (NUI näki itse), kuvateksti-4 (NUI+PT).
+- AJOSSA (07.20): ketju Z NUI nostovalikko-4-iphone 3925d008d (ipad valmis 07.19; NUI on nähnyt kuvat); ketju AA (nohup, jono-0720-aa.zsh) PK d2-ovikuva
+  4c1d100a2 iphone → iphone-vaaka → ipad, kansiot L/pk-d2-ovikuva-<koko>-4c1d100a2 → polut + aika PK:lle (local_91a1bc27-…), PK katsoo "ovikuva"-rivit itse;
+  ketju AB (nohup, jono-0725-ab.zsh) NUI nostovalikko-5 97067848d iphone → vaaka → ipad, sk-nostovalikko-5.txt → kuvat katsottuna NUI:lle (odotukset sk:n alussa).
