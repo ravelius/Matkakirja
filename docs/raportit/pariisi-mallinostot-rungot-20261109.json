@@ -1,0 +1,93 @@
+{
+ "_kuvaus": "Nostorungot ilman tekstiä (KS 9.11.2026; omistaja 16.17, PT). Tekstit (aika, teksti, kuvan lyhyt/selite Montparnasselle) ja kysymykset vasta KK-kortin Kyllä-vastauksella. Kohde+sijainti: haara karttaseppa/pariisi-mallinostot (main). Kuvapiste: piirros-pariisi.json + sijainnit.json protossa kytkennässä.",
+ "kohteet": {
+  "pariisi:Invalidit": {
+   "qid": "Q188977",
+   "kuvapiste": [
+    48.855,
+    2.3125,
+    "piste"
+   ],
+   "nahtavyysjuttu": {
+    "aika": null,
+    "teksti": null,
+    "kuvat": [
+     {
+      "tiedosto": "Hôtel des Invalides, North View, Paris 7e 140402 1.jpg",
+      "lyhyt": null,
+      "selite": "Les Invalides rakennettiin alun perin sotaveteraanien kodiksi, ja nykyään siellä on sotamuseo.",
+      "lahde": "DXR, Wikimedia Commons (CC BY-SA 3.0)"
+     }
+    ],
+    "lahde": "Wikipedia"
+   },
+   "kysymykset": null
+  },
+  "pariisi:Sainte-Chapelle": {
+   "qid": "Q193193",
+   "kuvapiste": [
+    48.85537,
+    2.34503,
+    "piste"
+   ],
+   "nahtavyysjuttu": {
+    "aika": null,
+    "teksti": null,
+    "kuvat": [
+     {
+      "tiedosto": "Paris Sainte Chapelle East View 02.JPG",
+      "lyhyt": null,
+      "selite": "Sainte-Chapelle on keskiajan goottilainen palatsikappeli Île de la Citén oikeuspalatsin sisäpihalla.",
+      "lahde": "Uoaei1, Wikimedia Commons (CC BY-SA 4.0)"
+     }
+    ],
+    "lahde": "Wikipedia"
+   },
+   "kysymykset": null
+  },
+  "pariisi:Grand Palais": {
+   "qid": "Q457318",
+   "kuvapiste": [
+    48.86611,
+    2.3125,
+    "piste"
+   ],
+   "nahtavyysjuttu": {
+    "aika": null,
+    "teksti": null,
+    "kuvat": [
+     {
+      "tiedosto": "Grand Palais @ Paris (34729073762).jpg",
+      "lyhyt": null,
+      "selite": "Grand Palais on lasi- ja teräskattoinen näyttelypalatsi, joka rakennettiin vuoden 1900 maailmannäyttelyyn.",
+      "lahde": "Guilhem Vellut, Wikimedia Commons (CC BY 2.0)"
+     }
+    ],
+    "lahde": "Wikipedia"
+   },
+   "kysymykset": null
+  },
+  "pariisi:Tour Montparnasse": {
+   "qid": "Q323767",
+   "kuvapiste": [
+    48.84211,
+    2.32198,
+    "piste"
+   ],
+   "nahtavyysjuttu": {
+    "aika": null,
+    "teksti": null,
+    "kuvat": [
+     {
+      "tiedosto": "Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg",
+      "lyhyt": null,
+      "selite": null,
+      "lahde": "Russell Yarwood, Wikimedia Commons (CC BY-SA 2.0)"
+     }
+    ],
+    "lahde": "Wikipedia"
+   },
+   "kysymykset": null
+  }
+ }
+}
