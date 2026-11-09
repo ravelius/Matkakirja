@@ -1114,3 +1114,7 @@ Siirretty Raamatusta sanatarkasti (7.39 ja 7.47 lyhennetty samalla): omistaja 20
 ## YÖTILA JA YÖN KEHITYSVERSIO (9.11.2026 klo 23.17–23.18)
 
 23.17 omistaja: "Menen kohta nukkumaan. Saat silloin nollata itsesi kysymättä ja edetä muutenkin itsenäisesti. Kysy vielä tarvittaessa" → yötila; KK:n tulkinta: yöllä KK päättää työjärjestyksen, katsoo kuvat ja palauttaa keskeneräiset; aamuun odottavat omistajan omat päätökset (Kelpaa-kortit ennen junaa: tärinäkoe, kattokokeen jatko, uusi lattia; TestFlight, uudet Tripo-mallit, ostot, poistot, kärkien vaihto, luvut 7 ja 12). 23.18 kortti "Saako asennuslinkkiin laittaa yön aikana uuden kehitysversion (pienempi peli, punainen piste pois, ja tärinäkoe, jos se valmistuu), jotta voit kokeilla aamulla?" = "Saa (Suositus)" → JU vie junan 224 kärjen asennuslinkkiin, tärinäkoe kytkimellä. 23.18 kortti "Kun zoomasit kehitysversiossa lähelle Pariisissa, näkyivätkö tavalliset talot kolmiulotteisina?" = "Kyllä, kolmiulotteisina" (iPhone, b804a87d6).
+
+## KK:N PYSYVÄ MALLI FABLE 5.2 (9.11.2026 klo 23.27)
+
+Omistaja 23.26: "Miten sen saa muutettua että jatkossa olet aina fable?" → KK:n kortti "Asettaako Päätoimittaja Fablen tämän keskustelun pysyväksi malliksi nyt?" = "Kyllä, nyt (Suositus)". PT asetti set_session_model local_d5f31591 → claude-fable-5-2 (tulos: "will use claude-fable-5-2 from its next turn on"). Koskee vain KK:ta; agenttisääntö (1.1) ennallaan. Samana iltana: pelin koko osa 3 / nähtävyydet NS 380bd41cc kuitattu junaan 224; tärinäkorjaus 3580eb0f2:n päälle ⚙-kytkimellä yön kehitysversioon (koe, ei junaan).
