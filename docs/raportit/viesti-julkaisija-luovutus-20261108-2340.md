@@ -174,3 +174,19 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   DD lentokorkeus-1 + CZ tappi-kierto + CX palkki-aina-2 VALMIIT ja raportoitu.
   CW peruttu (ipad), CT katkaistu (tilalle CX).
 - Monitor: tail -n 0 -f jonoloki | grep -E " AJO [A-Z+0-9]+ |LOPPU|VIKA|pieni iPad".
+
+## LISÄYS 9.11. 15.0x (TUOREIN; konteksti 25 % → nollaus)
+- JUNA 223 = 6a2f044b7 (natiivi-backup julkaisija/juna-223) = c11314ade + VS kohokartan aurinko cd74573cd (108246c2f, OMISTAJA 14.12) + PK napit-kuulto
+  620425fb7 (sis. 1e88eda16 tappi ei syki kamera-ajossa). Testit vihreät (T/juna223-kuulto-*.txt: unity 0, Kartta 729, Linssit 2276, Peli 882). PT kerrottu.
+  PIENI iPAD = 6a2f044b7 asennettu 14.57, PT:lle selkokielinen rivi lähetetty. Pulu-lähteet EI junaan vielä (PT). ☰-kuva yhä tekemättä (ei kesken omistajan pelin).
+- Ämpäri 14.36: fpv-drone-merikallio-vienti-20261109 (2/2) → NS kerrottu.
+- Raportoitu: CM, CY, CZ, DD, DF (paikkapalkki fb77e12b1 → NUI+NS, NS kuittasi p-5a), DG (→ NS), DH + DR(iphone efba65386) + DT (fpv-koe-1 → NUI+PT; "E" = etelä, ei vika),
+  DI + DK (pulu-lähteet → PK; syy löytyi), DL (makikaari → VS; sk:ssa ei ollut talot-riviä → kopio T/sk-makikaari-ju.txt), DN (film12 → VS),
+  DJ iphone+ipad e516f3fe1 (ei katsottu, korvautui). DM ennen/jälkeen-ipad + iphone valmiit; NS hylkäsi bf4017da8 itse → DV.
+- AJOSSA / JONOSSA (nohup, omat, T/jono-<x>.zsh; Monitor-suodin ennallaan):
+  DQ NUI palkki-aina-3 ed65f5b34: vaaka valmis 14.43; ipad-pysty + ipad odottavat (nälkiintyminen? OPPI 9 etuajo) → kaikki katsottuna NUI:lle.
+  DX NUI fpv-koe-2 d2d4d3227 iphone/vaaka/ipad DQ:n jälkeen (varjostin muuttui: Shader-error!) → NUI.
+  DS PK 8841fd32f pulu-lahteet iphone+ipad + tappi-kierto iphone → PK (katsoo itse; polut).
+  DU VS film12b 22e601e76 ipad → polku VS:lle. vs-film13-ipad.zsh (pid 36157): VS film13 22e601e76 laitekäännös → ISO iPad, vahti päällä, muisti-tarkka,
+  runko lopuksi 6a2f044b7 → polku lokit/linssiseppa2-film13-ipad-22e601e76 VS:lle (muisti-tarkka.log, tarkka-huippu jonolokissa).
+  DO NS fpv-latauskuva-2 a425b8868 ipad/iphone/vaaka → DV NS huippunimet-2 31b609027 ipad → DW NS fpv-vuoret-1 9edbc14a9 ipad → polut NS:lle.
