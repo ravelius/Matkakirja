@@ -51,3 +51,10 @@ Rivi PT:lle mittauksista.
   jälkeen): neljä Release-laitekäännöstä (ei / Low / Medium / Medium+KOODIKOKO), UnityFramework + .ipa; nopeusajo vain selvästi pienentäville.
 
 ## TAUOLLA: KATTOKUVIO (ennallaan, ks. edellinen luovutus)
+
+## LISÄYS 23.1x (PT): PK:N EHDOKAS TÄRINÄÄN – ARVIOI ENNEN OMAA TOTEUTUSTA
+PK teki ennen pysäytystä vaihtoehdon: LÄHIORIGO (georeferenssi kameran alle, kun siirtymä < 1,2 km) + kamera doublena, natiivi-backup
+pelikoodari/drone-lahelle dc2605d31; laskelmat /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kierto-tarina/LUE.md; Mac A/B JU:lla.
+PT: NS OMISTAA KOKEEN. Arvioi PK:n ehdokas (pysyvätkö esineet, talot ja nostot paikallaan origon siirrossa? vrt. selvitys-origo-hinta:
+OhjelmaKohteet kallistuu, Nahtavyysalue jää 6 400 km pois) omaa kaupunkikohtaista nollapistettä (A2) vastaan ja VALITSE YKSI.
+Ei kahta rinnakkaista toteutusta kehitysversioon. Lue ensin LUE.md ja PK:n Mac A/B -tulos (JU), vasta sitten oma koodi.
