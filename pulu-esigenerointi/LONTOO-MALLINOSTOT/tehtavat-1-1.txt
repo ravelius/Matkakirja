@@ -1,0 +1,391 @@
+================ KOHTA 1 (kohdekartta:lontoo:Westminster Abbey) ================
+
+### 1.1
+KYSYMYS: Kuka kruunattiin Westminster Abbeyssa joulupäivänä 1066?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Westminster Abbey] Vilhelm Valloittaja, joka oli voittanut Englannin Hastingsin taistelussa lokakuussa 1066. Edvard Tunnustajan kivikirkko oli vihitty vain vuotta aiemmin, ja Vilhelmistä lähtien lähes kaikki Englannin hallitsijat on kruunattu samassa kirkossa.
+
+### 1.2
+KYSYMYS: Mikä oli kruunajaistuolin alla vuoteen 1996 asti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Westminster Abbey] Skotlannin kruunajaiskivi eli Sconen kivi, jolla Skotlannin kuninkaat oli kruunattu. Englannin kuningas Edvard I vei sen Skotlannista noin 1300, ja tuoli tehtiin sitä varten. Kivi palautettiin Skotlantiin 1996, ja se tuodaan Westminsteriin vain kruunajaisiin.
+
+================ KOHTA 2 (kohdekartta:lontoo:Westminsterin palatsi) ================
+
+### 2.1
+KYSYMYS: Mikä sytytti Westminsterin palatsin palon 1834?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Westminsterin palatsi] Palatsin uuneissa poltettiin lokakuussa 1834 vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, tuli levisi ja lähes koko vanha palatsi paloi.
+
+### 2.2
+KYSYMYS: Mikä palatsin osa säilyi palosta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Westminsterin palatsi] Westminster Hall, palatsin vanhin osa, joka oli valmistunut 1097. Myös Pyhän Stefanuksen kappelin alakerran krypta säilyi. Muu palatsi rakennettiin uudelleen Charles Barryn ja Augustus Puginin suunnitelmilla noin kolmenkymmenen vuoden aikana.
+
+================ KOHTA 3 (kohdekartta:lontoo:Westminster Bridge) ================
+
+### 3.1
+KYSYMYS: Keitä Westminster Bridgen avaaminen 1750 vei elannon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Westminster Bridge] Venemiehiä, jotka soutivat ihmisiä joen yli. Ennen siltaa Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä satoja venemiehiä eli kyydityksestä. He vastustivat uutta siltaa kiivaasti, mutta se avattiin silti 1750.
+
+### 3.2
+KYSYMYS: Miksi Westminster Bridge on vihreä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Westminster Bridge] Silta on parlamenttitalon alahuoneen päässä, ja se on maalattu vihreäksi kuten alahuoneen penkit. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit. Nykyinen valurautainen silta avattiin 1862.
+
+================ KOHTA 4 (kohdekartta:lontoo:Cutty Sark) ================
+
+### 4.1
+KYSYMYS: Mikä lopetti teeklippereiden aikakauden?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Cutty Sark] Suezin kanava, joka avattiin 1869, samana vuonna kuin Cutty Sark valmistui. Höyrylaivat pääsivät kanavan kautta Kiinaan paljon lyhyempää reittiä, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa.
+
+### 4.2
+KYSYMYS: Mitä nimi Cutty Sark tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Cutty Sark] Se on skotiksi lyhyt paita. Nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa. Laivan keulakuvana on sama noita.
+
+================ KOHTA 5 (kohdekartta:lontoo:Lontoon Tower) ================
+
+### 5.1
+KYSYMYS: Mikä eläin kalasti Thamesissa ketjuun kytkettynä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Lontoon Tower] Jääkarhu, jonka kuningas Henrik III sai lahjaksi 1250-luvulla. Se pidettiin Towerin kuninkaallisessa eläintarhassa ja päästettiin ketjussa kalastamaan Thamesiin. Eläintarha toimi Towerissa yli 600 vuotta, kunnes viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla.
+
+### 5.2
+KYSYMYS: Mitä tapahtuu uskomuksen mukaan, jos korpit lähtevät Towerista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Lontoon Tower] Vanhan uskomuksen mukaan valtakunta kaatuu. Siksi linnassa pidetään aina vähintään kuutta korppia, ja niistä huolehtii oma korppimestari.
+
+================ KOHTA 6 (kohdekartta:lontoo:British Museum) ================
+
+### 6.1
+KYSYMYS: Kenen kokoelmasta British Museum sai alkunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: British Museum] Lääkäri Hans Sloanen, joka keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä ja testamenttasi ne kansakunnalle. Museo perustettiin 1753 ja avattiin 1759 vanhassa Montagu Housen kartanossa.
+
+### 6.2
+KYSYMYS: Kuka kirjoitti Pääomaa museon lukusalissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: British Museum] Karl Marx. Hän työskenteli vuosia museon pyöreässä lukusalissa, joka rakennettiin sisäpihalle kupolin alle 1857. Samassa salissa luki myöhemmin myös Lenin väärällä nimellä.
+
+================ KOHTA 7 (kohdekartta:lontoo:Natural History Museum) ================
+
+### 7.1
+KYSYMYS: Miksi Natural History Museumin julkisivu on terrakottaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Natural History Museum] Terrakotta kesti Lontoon nokea paremmin kuin kivi. Alfred Waterhouse muotoili seiniin satoja eläimiä ja kasveja: länsisiivessä eläviä lajeja ja itäsiivessä sukupuuttoon kuolleita.
+
+### 7.2
+KYSYMYS: Kuka oli Dippy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Natural History Museum] Diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi. Se oli museossa yli sata vuotta, ja päähalliin se siirrettiin 1979. Vuonna 2017 sen tilalle päähallin kattoon ripustettiin sinivalaan luuranko.
+
+================ KOHTA 8 (kohdekartta:lontoo:Victoria Memorial) ================
+
+### 8.1
+KYSYMYS: Mikä on Victoria Memorialin huipulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Victoria Memorial] Kullattu Voiton jumalatar. Muistomerkin veisti Thomas Brock valkoisesta marmorista kuningatar Viktorian kunniaksi Buckinghamin palatsin eteen.
+
+### 8.2
+KYSYMYS: Mitä kuningas teki kuvanveistäjälle paljastuspäivänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Victoria Memorial] Kuningas Yrjö V kutsui Thomas Brockin luokseen ja löi hänet ritariksi paikan päällä, kun muistomerkki paljastettiin 1911. Muistomerkki valmistui kokonaan vasta 1924.
+
+================ KOHTA 9 (kohdekartta:lontoo:Royal Albert Hall) ================
+
+### 9.1
+KYSYMYS: Millä rahoilla Albertopoliksen maa ostettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Royal Albert Hall] Vuoden 1851 maailmannäyttelyn voitolla. Näyttely Hyde Parkissa tuotti voittoa, ja prinssi Albertin aloitteesta sillä ostettiin Kensingtonista maata museoille ja oppilaitoksille. Alueesta tuli Albertopolis.
+
+### 9.2
+KYSYMYS: Mikä tuhosi Queen's Hallin 1941?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Royal Albert Hall] Saksalaisten pommi toukokuussa 1941. Queen's Hallissa oli soitettu promenadikonsertit, ja tuhon jälkeen Promsit muuttivat Royal Albert Halliin, jossa ne soivat yhä joka kesä.
+
+================ KOHTA 10 (kohdekartta:lontoo:Albert Memorial) ================
+
+### 10.1
+KYSYMYS: Mitä Albert pitää sylissään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Albert Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa. Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin veistos. Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Albert Memorial] Vuoden 1851 maailmannäyttelyn luetteloa. Prinssi Albert oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu George Gilbert Scottin suunnitteleman goottilaisen katoksen alla.
+
+### 10.2
+KYSYMYS: Mitä Kristallipalatsille tapahtui 1936?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Albert Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa. Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin veistos. Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Albert Memorial] Se paloi. Maailmannäyttelyn Kristallipalatsi seisoi 1851 Hyde Parkissa, mutta se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä tulipalo tuhosi sen 1936.
+
+================ KOHTA 11 (kohdekartta:lontoo:Kensingtonin palatsi) ================
+
+### 11.1
+KYSYMYS: Miksi Vilhelm III muutti Kensingtoniin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Kensingtonin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi 1698, eikä sitä rakennettu uudelleen. Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen asuntona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Kensingtonin palatsi] Hänellä oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, jonka Christopher Wren laajensi palatsiksi.
+
+### 11.2
+KYSYMYS: Kuka syntyi Kensingtonin palatsissa 1819?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Kensingtonin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi 1698, eikä sitä rakennettu uudelleen. Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen asuntona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Kensingtonin palatsi] Prinsessa Viktoria, tuleva kuningatar. Hän kasvoi palatsissa tiukan valvonnan alla, ja kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar.
+
+================ KOHTA 12 (kohdekartta:lontoo:Royal Observatory) ================
+
+### 12.1
+KYSYMYS: Mitä Greenwichin observatorion piti alun perin ratkaista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Royal Observatory] Pituusasteen määrittäminen merellä. Leveysasteen laiva sai auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, mutta lopulta sen ratkaisi John Harrison tarkoilla merikelloillaan.
+
+### 12.2
+KYSYMYS: Miksi observatorion aikapallo pudotetaan kello 13?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Royal Observatory] Jotta Thamesin laivat voivat asettaa kellonsa tarkasti. Punainen pallo on pudotettu observatorion katolla joka päivä vuodesta 1833.
+
+================ KOHTA 13 (kohdekartta:lontoo:Old Royal Naval College) ================
+
+### 13.1
+KYSYMYS: Kenen syntymäpalatsin paikalla Old Royal Naval College on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Old Royal Naval College] Henrik VIII:n ja Elisabet I:n. Paikalla seisoi Greenwichin palatsi, joka rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti tilalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille.
+
+### 13.2
+KYSYMYS: Miksi Wren jakoi rakennukset kahtia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Old Royal Naval College] Jotta Queen's Housesta näkyisi edelleen joelle. Christopher Wren jätti rakennusryhmän keskelle avoimen näkymän, ja sen kummallakin puolella on symmetrisesti oma kupolinsa.
+
+================ KOHTA 14 (kohdekartta:lontoo:Queen's House) ================
+
+### 14.1
+KYSYMYS: Mikä kulki alun perin Queen's Housen läpi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Queen's House] Lontoosta Doveriin vievä maantie. Talo rakennettiin kahden puoliskon varaan, ja niitä yhdisti silta, jonka alta vaunut ajoivat. Maantie siirrettiin myöhemmin talon ohi.
+
+### 14.2
+KYSYMYS: Kenelle Queen's House alun perin rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Queen's House] Kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Inigo Jones suunnitteli talon 1616, mutta Anna kuoli 1619 ja talo jäi kesken. Se valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle.

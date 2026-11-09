@@ -1,0 +1,421 @@
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Jääkarhujen pääkaupunki] Lokakuun puolivälistä marraskuun puoliväliin Churchillin rannikolle kerääntyy keskimäärin noin 600 jääkarhua odottamaan Hudsoninlahden jäätymistä. Karhut ovat viettäneet kesän maalla paastoten, sillä kesäisin lahdella ei ole jäätä, jolla metsästää hylkeitä. Juuri Churchillin kohdalla jää muodostuu myöhemmin kuin monin muin paikoin arktisella alueella, joten karhut viipyvät täällä pidempään ja kokoontuvat tiheämmin kuin lähes missään muualla maailmassa. Ilmiö on tehnyt pikkukaupungista ”jääkarhujen pääkaupungin”, ja matkailijat saapuvat joka syksy erikoisrakenteisilla tundrabusseilla katsomaan karhuja turvallisen välimatkan päästä.
+- [Churchill — kaupunkilehti / Jääkarhujen pääkaupunki] Joka syksy satoja jääkarhuja kerääntyy Churchillin edustalle odottamaan Hudsoninlahden jäätymistä, sillä juuri täällä jää muodostuu myöhemmin kuin muualla arktisella alueella — siksi kaupunkia kutsutaan jääkarhujen pääkaupungiksi.
+- [Iqaluit — kohdekartta / Kohdekartta: Sylvia Grinnellin puisto] 1861 Puisto alkaa kilometrin päässä kaupungista länteen, ja keskustasta sinne kävelee puolessa tunnissa. Inuktitutiksi se on Iqaluit Kuunga eli Iqaluitin joki. Maisema syntyi jäätiköitymisessä noin 7 100 vuotta sitten, ja joki laskee Sylvia Grinnellin järvestä Peterhead Inletiin. Putousten yläpuolella on näköalatasanne 55 metrin korkeudessa. Nimi on tuontitavaraa. Amerikkalainen Charles Francis Hall nimesi seudun paikkoja rahoittajiensa mukaan, ja järvi ja joki saivat nimen hänen ystävänsä ja tukijansa Henry Grinnellin tyttären Sylvian mukaan. Joesta nostettu nieriä on se kala, josta koko kaupungin nimi kertoo; kaupallinen nieriänkalastus joessa kiellettiin 1965, ja muu kuin inuiitti tarvit…
+AIEMPI KYSYMYS: Mikä eläin kalasti Thamesissa ketjuun kytkettynä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ketjussa kalasti [[jääkarhu]], jonka kuningas [[Henrik III]] sai lahjaksi 1250-luvulla. Se pidettiin Towerin kuninkaallisessa eläintarhassa ja päästettiin ketjussa kalastamaan Thamesiin. Eläintarha toimi Towerissa yli 600 vuotta, kunnes viimeiset eläimet siirrettiin [[Lontoon eläintarhaan]] 1830-luvulla. Ylhäältä se on varmaan näyttänyt hassulta.
+KYSYMYS: Kerro lisää: jääkarhu
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista] 21.9.1599 — Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on en…
+- [Lontoo — kohdekartta / Kohdekartta: Globe 1599] Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen va…
+AIEMPI KYSYMYS: Mikä eläin kalasti Thamesissa ketjuun kytkettynä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ketjussa kalasti [[jääkarhu]], jonka kuningas [[Henrik III]] sai lahjaksi 1250-luvulla. Se pidettiin Towerin kuninkaallisessa eläintarhassa ja päästettiin ketjussa kalastamaan Thamesiin. Eläintarha toimi Towerissa yli 600 vuotta, kunnes viimeiset eläimet siirrettiin [[Lontoon eläintarhaan]] 1830-luvulla. Ylhäältä se on varmaan näyttänyt hassulta.
+KYSYMYS: Kerro lisää: Henrik III
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Lontoon silmä] 2000 Pyörä on 135 metriä korkea, mutta oudointa siinä on tuki: se roikkuu vain toiselta puolelta, kuten polkupyörän eturenkaan pinnat yhdellä haarukalla. Toista yhtä korkeaa näin tuettua maisemapyörää ei maailmassa ole. Pyörää ei nostettu paikalleen valmiina. Koko kehä koottiin makuulleen Thamesin päälle rakennetuille lautoille, ja sitten sitä nostettiin pystyyn hitaasti, pari astetta tunnissa. Kapseleita on 32, numeroitu 1–33, koska numeroa 13 ei ole lainkaan. Pyörä pyörii hitaammin kuin ihminen kävelee eikä pysähdy koskaan — kyytiin astutaan sen liikkuessa.
+AIEMPI KYSYMYS: Mikä eläin kalasti Thamesissa ketjuun kytkettynä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ketjussa kalasti [[jääkarhu]], jonka kuningas [[Henrik III]] sai lahjaksi 1250-luvulla. Se pidettiin Towerin kuninkaallisessa eläintarhassa ja päästettiin ketjussa kalastamaan Thamesiin. Eläintarha toimi Towerissa yli 600 vuotta, kunnes viimeiset eläimet siirrettiin [[Lontoon eläintarhaan]] 1830-luvulla. Ylhäältä se on varmaan näyttänyt hassulta.
+KYSYMYS: Kerro lisää: Lontoon eläintarhaan
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bratislava — kaupunkilehti / Bratislava: Kruunu, jota varjeltiin kuin vankia] Pyhän Martinin tuomiokirkosta tuli Unkarin kuninkaiden kruunajaiskirkko vuonna 1563, kun osmanit olivat vallanneet vanhan kruunajaiskaupungin Székesfehérvárin. Ensimmäisenä kruunattiin Maximilian II, jonka päähän Pyhän Tapanin kruunu asetettiin 1563. Lähteen mukaan kruunu oli Pressburgin linnassa noin vuodesta 1552 1780-luvulle, ja sitä vartioivat kruunuvartijat ja jalkaväkimiehet. Habsburg-kuninkaat eivät saaneet pitää kruunua itse, vaan he pääsivät sen luo vain kruunajaisissa. Nykyään tornin huipulla on kullattu jäljennös, joka asetettiin paikalleen 1840-luvun lopulla.
+- [Uganda — maalehti / Luonto: Kruunu, joka nousi lippuun] Ugandan kansallislintu on harmaakruunukurki, ja se seisoo maan lipussa toinen jalka koholla. Höyhenpuku on harmaa, posket valkoiset, kurkussa punainen läiskä ja päälaella jäykkä kultainen kruunu. Itäafrikkalaisella alalajilla on kasvoissa laajempi paljas punainen alue kuin eteläafrikkalaisella. Lintu on kaikkiruokainen: siemeniä, hyönteisiä, sammakoita, matoja ja pieniä kaloja. Se viihtyy kuivalla savannilla mutta pesii kosteammassa, soilla ja jokien varsilla. Kansainvälinen luonnonsuojeluliitto luokittelee sen erittäin uhanalaiseksi.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mitä tapahtuu uskomuksen mukaan, jos korpit lähtevät Towerista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kuuluisa. Vanhan uskomuksen mukaan valtakunta kaatuu. Siksi linnassa, jossa säilytetään yhä [[kruununjalokiviä]], pidetään aina vähintään kuutta korppia, ja niistä huolehtii oma [[korppimestari]]. Linnan [[Valkoista tornia]] alkoi rakentaa [[Vilhelm Valloittaja]] noin 1078. Linnuille on kyl ollut kysyntää kautta aikojen.
+KYSYMYS: Kerro lisää: kruununjalokiviä
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Kamtšatka: Korppi teki liikaa vuoria] Itelmeenien oma nimitys tarkoittaa suunnilleen olevaa tai elävää; venäläiset kutsuivat heitä kamtšadaaleiksi. Kalastus oli tärkein elinkeino, ja lohi halkaistiin ja kuivattiin telineillä jukolaksi, jota söivät sekä ihmiset että vetokoirat. Luojahahmo oli korppi Kutkh, ja Krašeninnikov pani merkille, että itelmeenit moittivat tätä liiasta ahkeruudesta: vuoria, jyrkänteitä, kareja ja koskisia jokia oli tehty enemmän kuin kukaan tarvitsi. Jasakkikirjoista on arvioitu, että itelmeenejä oli 1697 noin 12 680 ja 1738 enää 8 448.
+AIEMPI KYSYMYS: Mitä tapahtuu uskomuksen mukaan, jos korpit lähtevät Towerista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kuuluisa. Vanhan uskomuksen mukaan valtakunta kaatuu. Siksi linnassa, jossa säilytetään yhä [[kruununjalokiviä]], pidetään aina vähintään kuutta korppia, ja niistä huolehtii oma [[korppimestari]]. Linnan [[Valkoista tornia]] alkoi rakentaa [[Vilhelm Valloittaja]] noin 1078. Linnuille on kyl ollut kysyntää kautta aikojen.
+KYSYMYS: Kerro lisää: korppimestari
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Kuvataide: Kuninkaan haudan päälle ladottiin valkoista ja mustaa] n. 2500–1500 eaa. — Kerman kuninkaiden haudat ovat pyöreitä kuoppia, joiden päälle on kasattu kolmen metrin korkuinen kumpu valkoisia ja mustia autiomaan kiviä kuvioksi. Suurimman kummun halkaisija on yhdeksän metriä, ja niitä ympäröi rivistö pienempiä hautoja. Kummun sisällä kulkee savimuurien tukema käytävä holvattuun kammioon, jossa kuningas makasi kivijalkaisella vuoteella. Kerman itäisen deffufan seinät on maalattu eläinaiheilla punaisella, sinisellä, keltaisella ja mustalla, ja rakennuksen ympärillä on 30 000 hautaa.
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mitä tapahtuu uskomuksen mukaan, jos korpit lähtevät Towerista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kuuluisa. Vanhan uskomuksen mukaan valtakunta kaatuu. Siksi linnassa, jossa säilytetään yhä [[kruununjalokiviä]], pidetään aina vähintään kuutta korppia, ja niistä huolehtii oma [[korppimestari]]. Linnan [[Valkoista tornia]] alkoi rakentaa [[Vilhelm Valloittaja]] noin 1078. Linnuille on kyl ollut kysyntää kautta aikojen.
+KYSYMYS: Kerro lisää: Valkoista tornia
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Lontoon Tower (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä. Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin Lontoon eläintarhaan 1830-luvulla. Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit lähtevät.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Guatemala — kohdekartta / Kohdekartta: Cerrito del Carmen] 1620 Kukkulan laella oleva erakkomaja on vähintään sata vuotta vanhempi kuin kaupunki sen ympärillä. Laaksoa kutsuttiin Vacas-laaksoksi eli lehmien laaksoksi, koska valloittaja Héctor de la Barreda toi sinne Kuubasta karjaa, joka lisääntyi rehevillä laitumilla nopeasti. Genovalaisesta Toiranosta kotoisin ollut maallikkoveli Juan Corz saapui laaksoon noin 35-vuotiaana ja asettui kahteen luolaan: toiseen hän sijoitti Neitsyt Marian kuvan, toisessa asui itse. Luolasta hän lähti vain kaksi kertaa vuodessa kerjäämään. Kun naapurit löysivät kuvan, he alkoivat käydä sen luona, ja lopulta kukkulalle rakennettiin kappeli — Corz oli nähnyt Pyhällä maalla Karmelin vuoren ja piti kukkulaa sen kaltaisen…
+AIEMPI KYSYMYS: Mitä tapahtuu uskomuksen mukaan, jos korpit lähtevät Towerista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kuuluisa. Vanhan uskomuksen mukaan valtakunta kaatuu. Siksi linnassa, jossa säilytetään yhä [[kruununjalokiviä]], pidetään aina vähintään kuutta korppia, ja niistä huolehtii oma [[korppimestari]]. Linnan [[Valkoista tornia]] alkoi rakentaa [[Vilhelm Valloittaja]] noin 1078. Linnuille on kyl ollut kysyntää kautta aikojen.
+KYSYMYS: Kerro lisää: Vilhelm Valloittaja
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Kenen kokoelmasta British Museum sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Mmm— tän minä tiedän. British Museum sai alkunsa lääkäri [[Hans Sloanen]] kokoelmasta. Hän keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä ja testamenttasi ne kansakunnalle. Museo perustettiin 1753 ja avattiin 1759 vanhassa [[Montagu Housen]] kartanossa. Nykyisen pylväsjulkisivun rakensi [[Robert Smirke]] vuosina 1823–1852. Siinä on kyl ollut yhdellä ihmisellä kerättävää.
+KYSYMYS: Kerro lisää: Hans Sloanen
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Hull House] 1889 Kiinteistömies Charles Jerald Hull rakennutti 1856 italialaistyylisen huvilan osoitteeseen 800 South Halsted Street. Kortteli oli silloin hienostoaluetta, mutta vuoteen 1889 mennessä se oli köyhtynyt, kun siirtolaisia oli muuttanut Near West Sidelle enemmän kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa kokeilulleen. Hull oli antanut talon serkulleen Helen Culverille, ja Culver luovutti sen Addamsille kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella. Addams ja Ellen Gates Starr perustivat Hull Housen 18. syyskuuta 1889 esikuvanaan Lontoon East Endin Toynbee Hall. Ajatus oli, että sivistyneet naiset muuttavat asumaan köyhään kaupunginosaan ja pitävät siellä samat kerhons…
+AIEMPI KYSYMYS: Kenen kokoelmasta British Museum sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Mmm— tän minä tiedän. British Museum sai alkunsa lääkäri [[Hans Sloanen]] kokoelmasta. Hän keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä ja testamenttasi ne kansakunnalle. Museo perustettiin 1753 ja avattiin 1759 vanhassa [[Montagu Housen]] kartanossa. Nykyisen pylväsjulkisivun rakensi [[Robert Smirke]] vuosina 1823–1852. Siinä on kyl ollut yhdellä ihmisellä kerättävää.
+KYSYMYS: Kerro lisää: Montagu Housen
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Kenen kokoelmasta British Museum sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Mmm— tän minä tiedän. British Museum sai alkunsa lääkäri [[Hans Sloanen]] kokoelmasta. Hän keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä ja testamenttasi ne kansakunnalle. Museo perustettiin 1753 ja avattiin 1759 vanhassa [[Montagu Housen]] kartanossa. Nykyisen pylväsjulkisivun rakensi [[Robert Smirke]] vuosina 1823–1852. Siinä on kyl ollut yhdellä ihmisellä kerättävää.
+KYSYMYS: Kerro lisää: Robert Smirke
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Arki ja tavat: Kilometrin pituinen kotitalo] 1930 — Vuoden 1917 asuntolaskennassa 92 prosentissa Wienin asunnoista ei ollut omaa vessaa eikä 95 prosentissa vesijohtoa. Kaupunki ryhtyi silloin itse rakennuttajaksi. Karl-Marx-Hof avattiin 12. lokakuuta 1930: se on noin 1 050 metriä pitkä ja siihen tehtiin 1 382 asuntoa noin viidelletuhannelle asukkaalle. Tontista rakennettiin vain 23 prosenttia — kaikki muu jätettiin pihaksi ja leikkikentäksi.
+AIEMPI KYSYMYS: Kuka kirjoitti Pääomaa museon lukusalissa?
+AIEMPI VASTAUS (Livia):
+Ai se, joo. Pääomaa kirjoitti [[Karl Marx]], joka työskenteli vuosia museon pyöreässä lukusalissa. Sali rakennettiin sisäpihalle kupolin alle 1857, ja samassa salissa luki myöhemmin myös [[Lenin]] väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen [[Great Court]]. Lukusalissa on ilmeisesti luettu vähän kaikenlaista.
+KYSYMYS: Kerro lisää: Karl Marx
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Leninin valtakatu 18] kaupungin pääkatu Leninin valtakatu on Magadanin selkäranka, ja se nousee lahden suunnasta koilliseen kohti kannaksen harjaa. Numero 18 on osa yhtenäistä talorivistöä, jonka muodostavat numerot 14, 16, 18 ja 20; ne on rakennettu samaan aikaan ja samalla tavalla, ja ne seuraavat kadun kaltevuutta porrastuen. Katutasossa on liiketiloja, ylemmissä kerroksissa asuntoja, ja parvekkeet ovat monessa talossa lasitettu umpeen. Rivistö on Magadanin tapa ratkaista rinne. Kaupunki nousee merestä vaaran juurelle, eikä sen ruutukaava ole tasainen missään; talot on siksi porrastettu niin, että jokainen seuraava seisoo hieman edellistä ylempänä ja katonreunat muodostavat portaikon. Kaupunkia ympäröivät vuo…
+- [Sofia — kohdekartta / Kohdekartta: Sofia-patsas] Sallitko, että esittelen erään tuttavan. Nezavisimost-aukiolla, samalla jalustalla jolla ennen seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen naishahmo kuudentoista metrin korkuisella pylväällä. Kuvanveistäjä antoi hänelle vallan tunnuksen, kruunun, ja maineen tunnuksen, seppeleen. Kolmanneksi hän tarvitsi viisauden tunnuksen ja valitsi pöllön. Patsas pystytettiin joulukuun lopulla vuonna 2000, ja se on nimetty kaupungin mukaan — kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi tarkoittaa kreikaksi Pyhää Viisautta. Minulla ei ole tähän mitään lisättävää.
+AIEMPI KYSYMYS: Kuka kirjoitti Pääomaa museon lukusalissa?
+AIEMPI VASTAUS (Livia):
+Ai se, joo. Pääomaa kirjoitti [[Karl Marx]], joka työskenteli vuosia museon pyöreässä lukusalissa. Sali rakennettiin sisäpihalle kupolin alle 1857, ja samassa salissa luki myöhemmin myös [[Lenin]] väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen [[Great Court]]. Lukusalissa on ilmeisesti luettu vähän kaikenlaista.
+KYSYMYS: Kerro lisää: Lenin
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: British Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se avattiin 1759 vanhassa Montagu Housen kartanossa. Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852. Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kohdekartta / Kohdekartta: Great Northern Hotel] 1900—1901 Hotelli rakennettiin sen varaan, että rautatieasema siirtyisi. Kun osavaltion hallitus ilmoitti 1900 uudesta päätepysäkistä Blackwood Streetin varteen Ross Creekin viereen, saman risteyksen kahdelle kulmalle jätettiin heti kesäkuussa hakemukset ensiluokkaisesta hotellista. Perustelu oli molemmissa sama: 1880-luvun buumihotellit eivät enää vastanneet vuosisadan vaihteen matkustajan vaatimuksia. Vain toinen hanke toteutui. Great Northern nousi townsvilleläisen puutavarafirman Wilson Hart & Companyn tontille arkkitehtiveljesten Tunbridge ja Tunbridge piirustusten mukaan: kaksikerroksinen tiili- ja puurakennus, 36 makuuhuonetta, hinta-arvio 8 000—9 000 puntaa. Nimi tuli Great Northern…
+AIEMPI KYSYMYS: Kuka kirjoitti Pääomaa museon lukusalissa?
+AIEMPI VASTAUS (Livia):
+Ai se, joo. Pääomaa kirjoitti [[Karl Marx]], joka työskenteli vuosia museon pyöreässä lukusalissa. Sali rakennettiin sisäpihalle kupolin alle 1857, ja samassa salissa luki myöhemmin myös [[Lenin]] väärällä nimellä. Kirjasto muutti omaan taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen [[Great Court]]. Lukusalissa on ilmeisesti luettu vähän kaikenlaista.
+KYSYMYS: Kerro lisää: Great Court
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+- [Adelaide — kohdekartta / Kohdekartta: Etelä-Australian museo] 1856 Museo perustettiin 1856 osana laajempaa hanketta. Siirtokunnassa oli yritetty perustaa käsityöläisten sivistysseuroja, mutta ne eivät löytäneet taloa, johon olisi mahtunut sekä kirjasto että luentosali. Kesäkuussa 1856 lakiasäätävä neuvosto sääti lain, joka perusti Etelä-Australian instituutin — kirjaston ja museon samaan laitokseen. Instituutti aloitti 1861 vuokratiloissa King William Streetillä ja muutti sitten omaan taloonsa North Terracen ja Kintore Avenuen kulmaan. Frederick George Waterhouse tarjoutui kesäkuussa 1859 hoitamaan museon kokoelmia palkatta, ja kun talo valmistui, hänet nimitettiin ensimmäiseksi intendentiksi; virassa hän oli helmikuuhun 1882. Seuraaja Wilhelm Haacke …
+AIEMPI KYSYMYS: Miksi Natural History Museumin julkisivu on terrakottaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. [[Alfred Waterhouse]] muotoili seiniin satoja eläimiä ja kasveja: länsisiivessä eläviä lajeja ja itäsiivessä sukupuuttoon kuolleita. Luonnontieteelliset kokoelmat kuuluivat ensin [[British Museumille]], ja [[Richard Owen]] halusi niille oman luonnon katedraalin. Noki on kyl tuttua meille kaupunkilinnuille.
+KYSYMYS: Kerro lisää: Alfred Waterhouse
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Puolet Parthenonin veistoksista lähti laivalla] Thomas Bruce, seitsemäs Elginin jaarli, oli Britannian suurlähettiläänä Konstantinopolissa vuodesta 1799. Hänen miehensä irrottivat vuosina 1801–1812 noin puolet Parthenonin säilyneistä veistoksista sekä paloja Propylaiasta ja Erekhtheionista. Lupa perustui osmanihallinnon kirjeeseen, jonka alkuperäistä ei ole löytynyt: jäljellä on vain italiankielinen käännös, ja juuri siitä kiistellään yhä. Yksi kuljetuslaivoista upposi Kytheran edustalla 1802, ja laatikot nostettiin merestä kahden vuoden työllä. Elginin varat loppuivat, ja parlamentti osti kokoelman 1816 British Museumille 35 000 punnalla. Akropoliin museo avattiin 2009, ja siinä on sali valmiina veistosten paluuta varten.
+AIEMPI KYSYMYS: Miksi Natural History Museumin julkisivu on terrakottaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. [[Alfred Waterhouse]] muotoili seiniin satoja eläimiä ja kasveja: länsisiivessä eläviä lajeja ja itäsiivessä sukupuuttoon kuolleita. Luonnontieteelliset kokoelmat kuuluivat ensin [[British Museumille]], ja [[Richard Owen]] halusi niille oman luonnon katedraalin. Noki on kyl tuttua meille kaupunkilinnuille.
+KYSYMYS: Kerro lisää: British Museumille
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kohdekartta / Kohdekartta: Victoria Memorial] 1906–1921 Rakennuksen on suunnitellut William Emerson, ja tyyli on indosaraseeninen: brittiläistä ja mogulilaista rakennustapaa yhdistellään venetsialaisiin, egyptiläisiin ja dekkanilaisiin aiheisiin. Mitat ovat 103 kertaa 69 metriä ja korkeus 56 metriä, ja materiaali on valkoinen Makrana-marmori. Muoto kaikuukin Tajia: kupoli, neljä pienempää kupolia, kahdeksankulmaiset kattopaviljongit, korkeat porttiaukot ja kulmatornit. Puutarhat suunnittelivat lordi Redesdale ja David Prain. Kupolin huipulla seisoo viiden metrin korkuinen voiton enkeli, jonka valoi H. H. Martyn & Co. Cheltenhamissa ja joka on Emersonin apulaisen Vincent Eschin käsialaa. Kupolia ympäröivät vertauskuvalliset veistokset T…
+- [Papua-Uusi-Guinea — maalehti / Historia: Polku, jolla kannettiin toisia selässä] 1942 — Kokodan polku nousee Owen Stanleyn vuoriston yli, korkeimmillaan 2 190 metriin, ja koko matkalla noustaan ja lasketaan yhteensä noin viisituhatta metriä. Vuonna 1942 sitä pitkin käytiin taisteluja, mutta huolto lepäsi papualaisten kantajien harteilla: heidät määrättiin työhön kesäkuun 15. päivänä 1942 annetulla asetuksella. Yksi kantaja pystyi kantamaan kolmentoista päivän muona-annokset — mutta kahden miehen syöminä ne loppuivat kuudessa ja puolessa päivässä. Paluumatkalla kantajat toivat haavoittuneet paareilla ja hoitivat heitä öisin, ja siitä syntyi nimitys Fuzzy Wuzzy Angels.
+AIEMPI KYSYMYS: Miksi Natural History Museumin julkisivu on terrakottaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. [[Alfred Waterhouse]] muotoili seiniin satoja eläimiä ja kasveja: länsisiivessä eläviä lajeja ja itäsiivessä sukupuuttoon kuolleita. Luonnontieteelliset kokoelmat kuuluivat ensin [[British Museumille]], ja [[Richard Owen]] halusi niille oman luonnon katedraalin. Noki on kyl tuttua meille kaupunkilinnuille.
+KYSYMYS: Kerro lisää: Richard Owen
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Kuka oli Dippy?
+AIEMPI VASTAUS (Livia):
+Joo, Dippy, se oli kyl tuttu. Dippy oli [[diplodokuksen]] luurangon kipsivalos, jota kävijät kutsuivat Dippyksi. Se oli [[Natural History Museumissa]] yli sata vuotta, ja päähalliin se siirrettiin 1979. Vuonna 2017 sen tilalle päähallin kattoon ripustettiin [[sinivalaan]] luuranko. Ylhäältä katsottuna valas on kyl vaikuttavampi.
+KYSYMYS: Kerro lisää: diplodokuksen
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+AIEMPI KYSYMYS: Kuka oli Dippy?
+AIEMPI VASTAUS (Livia):
+Joo, Dippy, se oli kyl tuttu. Dippy oli [[diplodokuksen]] luurangon kipsivalos, jota kävijät kutsuivat Dippyksi. Se oli [[Natural History Museumissa]] yli sata vuotta, ja päähalliin se siirrettiin 1979. Vuonna 2017 sen tilalle päähallin kattoon ripustettiin [[sinivalaan]] luuranko. Ylhäältä katsottuna valas on kyl vaikuttavampi.
+KYSYMYS: Kerro lisää: Natural History Museumissa
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Natural History Museum (Lontoo) (nähtävyys)
+Tietoruudun teksti: Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881. Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, itäsiivessä sukupuuttoon kuolleet. Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin 2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Tiede: Sinivalas maksoi 250 puntaa] Maaliskuussa 1891 valaanpyytäjien haavoittama nuori naarassinivalas ajautui hiekkasärkälle Wexfordin edustalle Irlannissa, ja Lontoon luonnontieteellinen museo osti sen luurangon 250 punnalla. Luut makasivat varastossa yli neljäkymmentä vuotta, ja vasta vuonna 1934 valmistunut valassali antoi niille tilaa. Vuonna 2017 luuranko — 25,2 metriä pitkä, 221 luuta, 4,5 tonnia — nostettiin pääsalin kattoon syöksysukelluksen asentoon suu auki: se on maailman ainoa näin ripustettu sinivalaan luuranko.
+AIEMPI KYSYMYS: Kuka oli Dippy?
+AIEMPI VASTAUS (Livia):
+Joo, Dippy, se oli kyl tuttu. Dippy oli [[diplodokuksen]] luurangon kipsivalos, jota kävijät kutsuivat Dippyksi. Se oli [[Natural History Museumissa]] yli sata vuotta, ja päähalliin se siirrettiin 1979. Vuonna 2017 sen tilalle päähallin kattoon ripustettiin [[sinivalaan]] luuranko. Ylhäältä katsottuna valas on kyl vaikuttavampi.
+KYSYMYS: Kerro lisää: sinivalaan
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Voiton Neitsyt tuomiokirkossa] Tuomiokirkon rakentaminen alkoi jo 1619, ja se vihittiin käyttöön 1622 – siis vain muutama vuosi sen jälkeen, kun portugalilaiset olivat karkottaneet ranskalaiset saarelta. Kirkko sai nimen Nossa Senhora da Vitória, Voiton Neitsyt, Guaxenduban taistelun kunniaksi: portugalilaisten vuonna 1615 käymä voitto kiihdytti ranskalaisten lopullista häätöä Maranhãosta. Nykyinen vaalean keltainen julkisivu kellotorneineen syntyi myöhemmin, kun kirkkoa laajennettiin 1700-luvun lopulla klassismin hengessä – lopputulos on portugalilaisen siirtomaabarokin ja uusklassismin yhdistelmä keskellä Praça Dom Pedro II:ta.
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Pele, tulivuorten jumalatar] Havaijilaisen tarinaperinteen mukaan tulivuoria hallitsee Pele, tulen ja salamoiden jumalatar, joka matkasi saarelta toiselle kaivaen joka paikkaan asuinkuoppansa, kunnes löysi lopulta pysyvän kotinsa Kilauean huippukalderan Halemaʻumaʻu-kraatterista. Perimätiedon mukaan Pelellä on äkkipikainen luonne, ja hänen suosionsa säilyttämiseksi kraatterin reunalle jätetään yhä nykyäänkin kukkia, ruokaa ja giniä uhrilahjoina. Kraatterin pohjalla kiehunut laavajärvi hehkuu pimeällä niin kirkkaana, että sen loiste heijastuu pilviin – juuri tuollaisen näyn 1800-luvun matkailijat kuvasivat nähneensä yöllä vaeltaessaan kraatterin reunalla.
+AIEMPI KYSYMYS: Mikä on Victoria Memorialin huipulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kiiltävä juttu. Muistomerkin huipulla on kullattu [[Voiton jumalatar]]. Muistomerkin veisti [[Thomas Brock]] valkoisesta marmorista kuningatar [[Viktorian]] kunniaksi [[Buckinghamin palatsin]] eteen. Kiiltää se ylhäältäkin ihan kivasti.
+KYSYMYS: Kerro lisää: Voiton jumalatar
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä on Victoria Memorialin huipulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kiiltävä juttu. Muistomerkin huipulla on kullattu [[Voiton jumalatar]]. Muistomerkin veisti [[Thomas Brock]] valkoisesta marmorista kuningatar [[Viktorian]] kunniaksi [[Buckinghamin palatsin]] eteen. Kiiltää se ylhäältäkin ihan kivasti.
+KYSYMYS: Kerro lisää: Thomas Brock
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Big Ben] 1859 Big Ben ei ole torni, vaan kello, joka roikkuu tornin huipulla ja painaa 13,7 tonnia. Ensimmäinen kello halkesi jo koekäytössä, ja uusikin halkesi syyskuussa 1859, koska lyömävasara painoi liikaa. Halkeamaa ei koskaan korjattu, ja juuri se antaa Big Benille sen tunnetun soinnun. Kello käy silti sekunnin tarkkuudella: sitä säädetään lisäämällä tai poistamalla vanhoja pennejä heilurin päältä. Torni on 96 metriä korkea ja nojaa hieman luoteeseen. Kellotaulujen alareunaan on kaiverrettu latinankielinen rukous kuningatar Viktorian ajalta. "DOMINE SALVAM FAC REGINAM NOSTRAM VICTORIAM PRIMAM — Herra, varjele kuningattaremme Viktoria ensimmäistä." — Kaikkien neljän kellotaulun alareunaan kaive…
+AIEMPI KYSYMYS: Mikä on Victoria Memorialin huipulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kiiltävä juttu. Muistomerkin huipulla on kullattu [[Voiton jumalatar]]. Muistomerkin veisti [[Thomas Brock]] valkoisesta marmorista kuningatar [[Viktorian]] kunniaksi [[Buckinghamin palatsin]] eteen. Kiiltää se ylhäältäkin ihan kivasti.
+KYSYMYS: Kerro lisää: Viktorian
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Buckinghamin palatsi] 1837 Palatsi ei ollut alun perin palatsi vaan tavallinen kaupunkitalo, jonka herttua rakensi 1703. Kuningas Yrjö III osti sen 1761 vaimolleen, ja ensimmäinen hallitsija, joka todella muutti sisään, oli kuningatar Viktoria vasta 1837. Sisään pääsi silti kuka tahansa sitkeä: nelitoistavuotias Edward Jones murtautui palatsiin kolme kertaa 1838–1841, kerran häntä etsittiin sohvan alta. Nykyään huoneita on 775, ja katolla liehuva lippu kertoo, onko hallitsija kotona. "Olen iloinen, että meitä pommitettiin. Nyt voin katsoa East Endiä silmiin." — Kuningatar Elisabet syyskuussa 1940, kun pommi oli osunut palatsiin
+AIEMPI KYSYMYS: Mikä on Victoria Memorialin huipulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kiiltävä juttu. Muistomerkin huipulla on kullattu [[Voiton jumalatar]]. Muistomerkin veisti [[Thomas Brock]] valkoisesta marmorista kuningatar [[Viktorian]] kunniaksi [[Buckinghamin palatsin]] eteen. Kiiltää se ylhäältäkin ihan kivasti.
+KYSYMYS: Kerro lisää: Buckinghamin palatsin
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Buckinghamin palatsi] 1837 Palatsi ei ollut alun perin palatsi vaan tavallinen kaupunkitalo, jonka herttua rakensi 1703. Kuningas Yrjö III osti sen 1761 vaimolleen, ja ensimmäinen hallitsija, joka todella muutti sisään, oli kuningatar Viktoria vasta 1837. Sisään pääsi silti kuka tahansa sitkeä: nelitoistavuotias Edward Jones murtautui palatsiin kolme kertaa 1838–1841, kerran häntä etsittiin sohvan alta. Nykyään huoneita on 775, ja katolla liehuva lippu kertoo, onko hallitsija kotona. "Olen iloinen, että meitä pommitettiin. Nyt voin katsoa East Endiä silmiin." — Kuningatar Elisabet syyskuussa 1940, kun pommi oli osunut palatsiin
+- [Iso-Britannia — maalehti / Musiikki: Orkesteri soitti proomulla kuninkaalle] Saksassa syntynyt Georg Friedrich Händel muutti Lontooseen ja jäi loppuiäkseen. Vuonna 1717 kuningas Yrjö I halusi juhlat Thamesille: viisikymmentä muusikkoa sijoitettiin proomulle, joka seurasi kuninkaan venettä pitkin jokea. Händelin Vesimusiikki soi niin, että kuningas pyysi toistamaan koko teoksen kolmesti — soittajat pelasivat sen läpi useaan kertaan matkalla Whitehallista Chelseaan ja takaisin. Händel sävelsi myös Messias-oratorion, jonka Halleluja-kuoron aikana yleisö nousee yhä seisomaan.
+- [stgeorges — kaupunkilehti / St. George's: Kaupungilla ja linnakkeella on eri Yrjöt] St. George’s ja Fort George kuulostavat saman nimen kahdelta versiolta, mutta nimet viittaavat eri hahmoihin. Kaupunki sai brittihallinnon aikana nimensä Englannin suojeluspyhimykseltä, pyhältä Yrjöltä. Sataman yläpuolella oleva linnake nimettiin puolestaan kuningas Yrjö III:n mukaan. Ranskalaisaikana kaupungin nimessä esiintyi Fort Royal, ja myös linnake tunnettiin kuninkaallisena linnoituksena.
+AIEMPI KYSYMYS: Mitä kuningas teki kuvanveistäjälle paljastuspäivänä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Kuningas [[Yrjö V]] kutsui kuvanveistäjä [[Thomas Brockin]] luokseen ja löi hänet ritariksi paikan päällä, kun muistomerkki paljastettiin 1911. Muistomerkki valmistui kokonaan vasta 1924, ja se seisoo [[Buckinghamin palatsin]] edessä. Ritariksi saman tien, ei paha päivä.
+KYSYMYS: Kerro lisää: Yrjö V
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Victoria Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen veisti Thomas Brock. Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille. Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan 1924.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä kuningas teki kuvanveistäjälle paljastuspäivänä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Kuningas [[Yrjö V]] kutsui kuvanveistäjä [[Thomas Brockin]] luokseen ja löi hänet ritariksi paikan päällä, kun muistomerkki paljastettiin 1911. Muistomerkki valmistui kokonaan vasta 1924, ja se seisoo [[Buckinghamin palatsin]] edessä. Ritariksi saman tien, ei paha päivä.
+KYSYMYS: Kerro lisää: Thomas Brockin

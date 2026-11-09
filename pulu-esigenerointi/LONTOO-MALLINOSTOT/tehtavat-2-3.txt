@@ -1,0 +1,430 @@
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Millä rahoilla Albertopoliksen maa ostettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Maa ostettiin vuoden 1851 [[maailmannäyttelyn]] voitolla. Näyttely [[Hyde Parkissa]] tuotti voittoa, ja prinssi [[Albertin]] aloitteesta sillä ostettiin Kensingtonista maata museoille ja oppilaitoksille. Alueesta tuli [[Albertopolis]]. Siinä vasta voitto, joka kannatti.
+KYSYMYS: Kerro lisää: maailmannäyttelyn
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Luonto: Papukaijat oppivat kämmenelle] 1969 — Lontoon puistoissa lentää kirkkaanvihreitä kauluskaijoja, joiden kotiseutu on Intiassa ja trooppisessa Afrikassa. Villiintynyt kanta alkoi lisääntyä pysyvästi vuonna 1969 Croydonissa, ja nyt lintuja on kymmeniätuhansia: vuoden 2012 yöpymispuiden laskennassa niitä kertyi Lontoossa noin 32 000. Talvi ei niitä kaada, sillä laji elää luonnossa myös Himalajan lumisilla alarinteillä parintuhannen metrin korkeudessa. Hyde Parkissa ja Kensington Gardensissa ne ovat oppineet lentämään suoraan avoimelle kämmenelle, jos siinä on siemeniä.
+AIEMPI KYSYMYS: Millä rahoilla Albertopoliksen maa ostettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Maa ostettiin vuoden 1851 [[maailmannäyttelyn]] voitolla. Näyttely [[Hyde Parkissa]] tuotti voittoa, ja prinssi [[Albertin]] aloitteesta sillä ostettiin Kensingtonista maata museoille ja oppilaitoksille. Alueesta tuli [[Albertopolis]]. Siinä vasta voitto, joka kannatti.
+KYSYMYS: Kerro lisää: Hyde Parkissa
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [null — kohdekartta / Kohdekartta: Albertin tori] 1800-luvun puoliväli Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tori muodostuu tiheästä kojujen ja käytävien verkosta. Torin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista. Albertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori.
+- [banjul — kaupunkilehti / Banjul: Albertin nimi, paikallinen arki] Albertin torin nimi kuljettaa Banjuliin palan Britannian kuninkaallista historiaa: Royal Albert Market nimettiin kuningatar Victorian puolison, prinssi Albertin mukaan. Torin alku ajoittuu 1800-luvun puoliväliin, joten kauppapaikka oli olemassa jo isoisän matkavuonna 1873. Liberation Avenuen torissa on tiheä kojujen ja käytävien verkosto. Käytäviltä hankitaan elintarvikkeita ja arjen tavaroita saarikaupungin asukkaille.
+- [banjul — kaupunkilehti / Banjul: Saarikaupunki ja mantereen Kanifing] Banjulin sijainnin ymmärtää paremmin, kun erottaa toisistaan saarikaupungin ja sitä ympäröivän Suur-Banjulin. Varsinainen pääkaupunki on St Mary's -saarella Gambia-joen suulla. Laajempaan kaupunkialueeseen kuuluu myös Kanifingin kunta mantereella, ja monet matkailijoiden majoitusalueet sijaitsevat sillä puolella. Albertin tori ja pääkaupungin vanha ydin kuuluvat pieneen saarikaupunkiin.
+AIEMPI KYSYMYS: Millä rahoilla Albertopoliksen maa ostettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Maa ostettiin vuoden 1851 [[maailmannäyttelyn]] voitolla. Näyttely [[Hyde Parkissa]] tuotti voittoa, ja prinssi [[Albertin]] aloitteesta sillä ostettiin Kensingtonista maata museoille ja oppilaitoksille. Alueesta tuli [[Albertopolis]]. Siinä vasta voitto, joka kannatti.
+KYSYMYS: Kerro lisää: Albertin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Albert Park] 1870–1880-luku Puiston paikalla oli maorien kāinga eli kylä nimeltä Rangipuke, ja sen luoteiskulmassa seisoi Te Horotiun pā. Alueella oli myös Waiohuan kylä Mangahekea, jonka Ngāti Whātua valtasi 1740-luvulla. Maaperä on hiekkakiveä, mutta luoteessa on oma tulivuorensa: Albert Parkin kuonakartio purkautui noin 145 000 vuotta sitten ja peitti suuren osan nykyisestä puistosta tuhkaan. Suurin osa puiston alasta oli 1800-luvun puolivälissä Albert Barracksia, kaupungin varhaisinta eurooppalaista varuskuntaa. 1850- ja 1860-luvuilla siellä majaili sotilaita, muun muassa 58. rykmentti, ja puu- ja kivirakennuksia ympäröi paikallisesta tulivuorikivestä muurattu valli. Pala muuria seisoo yhä yliopisto…
+AIEMPI KYSYMYS: Millä rahoilla Albertopoliksen maa ostettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Maa ostettiin vuoden 1851 [[maailmannäyttelyn]] voitolla. Näyttely [[Hyde Parkissa]] tuotti voittoa, ja prinssi [[Albertin]] aloitteesta sillä ostettiin Kensingtonista maata museoille ja oppilaitoksille. Alueesta tuli [[Albertopolis]]. Siinä vasta voitto, joka kannatti.
+KYSYMYS: Kerro lisää: Albertopolis
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mikä tuhosi Queen's Hallin 1941?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tän minä muistan. Queen's Hallin tuhosi saksalaisten pommi toukokuussa 1941. Siellä oli soitettu [[promenadikonsertit]], ja tuhon jälkeen [[Promsit]] muuttivat [[Royal Albert Halliin]], jossa ne soivat yhä joka kesä. Onpas siitä onneksi aikaa.
+KYSYMYS: Kerro lisää: promenadikonsertit
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Musiikki: Proms — konsertti, jossa seistään] Proms on kahdeksan viikon konserttisarja, joka on soinut joka kesä vuodesta 1895. Royal Albert Halliin mahtuu 5 272 istujaa, mutta halvimmat liput ovat lattialle: prommaajat seisovat orkesterin edessä koko illan. Jokainen konsertti lähetetään radiossa, joten sen kuulee ilmaiseksi missä tahansa.
+AIEMPI KYSYMYS: Mikä tuhosi Queen's Hallin 1941?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tän minä muistan. Queen's Hallin tuhosi saksalaisten pommi toukokuussa 1941. Siellä oli soitettu [[promenadikonsertit]], ja tuhon jälkeen [[Promsit]] muuttivat [[Royal Albert Halliin]], jossa ne soivat yhä joka kesä. Onpas siitä onneksi aikaa.
+KYSYMYS: Kerro lisää: Promsit
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Albert Hall (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja konserttisali nimettiin hänen mukaansa. Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla levyillä. Promenadikonsertit soitettiin ennen Queen's Hallissa, kunnes pommi tuhosi salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä yhä joka kesä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Royal Institution 1831 — muutos synnyttää sähköä] 29.8.1831 — Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt pariston toiseen käämiin ja odottaa, että toisessa käämissä, rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei synny. Galvanometrin neula värähtää vain sillä hetkellä, kun virta kytketään, ja uudelleen kun se katkaistaan; siinä välissä se lepää nollassa. Royal Institutionin kellarilaboratoriossa on 29. elokuuta 1831, ja 39-vuotias entinen kirjansitojan oppipoika on juuri nähnyt, että muutos — ei magneetti sinänsä — synnyttää sähköä. Kymmenen vuotta aiemmin hän oli pannut virtajohtimen kiertämään magneettia, ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli syytetty tulosten varastamisesta ja työnnet…
+- [Iso-Britannia — maalehti / Musiikki: Proms — konsertti, jossa seistään] Proms on kahdeksan viikon konserttisarja, joka on soinut joka kesä vuodesta 1895. Royal Albert Halliin mahtuu 5 272 istujaa, mutta halvimmat liput ovat lattialle: prommaajat seisovat orkesterin edessä koko illan. Jokainen konsertti lähetetään radiossa, joten sen kuulee ilmaiseksi missä tahansa.
+AIEMPI KYSYMYS: Mikä tuhosi Queen's Hallin 1941?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tän minä muistan. Queen's Hallin tuhosi saksalaisten pommi toukokuussa 1941. Siellä oli soitettu [[promenadikonsertit]], ja tuhon jälkeen [[Promsit]] muuttivat [[Royal Albert Halliin]], jossa ne soivat yhä joka kesä. Onpas siitä onneksi aikaa.
+KYSYMYS: Kerro lisää: Royal Albert Halliin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Albert Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa. Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin veistos. Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä Albert pitää sylissään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Albert pitää sylissään vuoden 1851 [[maailmannäyttelyn]] luetteloa. Prinssi oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla [[Hyde Parkissa]]. Kirja sylissä, kuten minulla kirje siivessä.
+KYSYMYS: Kerro lisää: maailmannäyttelyn
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Albert Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa. Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin veistos. Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Anglikaaninen katedraali] 1847–1905 Anglikaaninen seurakunta perustettiin 1699 vetoomuksella Lontoon piispalle Henry Comptonille. Vetoomuksessa pyydettiin apua myös kirkon jälleenrakentamiseen: ranskalaiset olivat tuhonneet sen ja koko kaupungin 1696. Paikalla tai sen lähellä on ollut ainakin kuusi puukirkkoa, ja jokainen niistä tuhoutui sotatoimissa. Ensimmäinen kivikirkko aloitettiin 1843, mutta se paloi vuoden 1846 suurpalossa ennen kuin siitä ehti tulla muuta kuin peruskivi ja alkua. Nykyisen katedraalin aloitti 1847 piispa Edward Feild, ja piirustukset tilattiin uusgotiikan johtavalta arkkitehdilta George Gilbert Scottilta. Kirkkosali rakennettiin 1847–1850, ja se sai toimia yksinään koko katedraalina 35 vuotta…
+- [Mumbai — kohdekartta / Kohdekartta: St. Thomasin katedraali] peruskivi 1676, vihitty 1718 Kaupungin vanhin kirkko sai alkunsa kuvernööri Gerald Aungierin aikana. Hän rakennutti Bombay Greenin laidalle sairaalan, oikeussalin ja kirkon, ja kirkon peruskivi laskettiin 1676 — mutta rakentaminen keskeytyi yli neljäksikymmeneksi vuodeksi. Pappi Richard Cobbe sai työn valmiiksi vuosina 1715–1718, ja kirkko avattiin jumalanpalvelukseen jouluna 1718. Pyhälle Tuomaalle se omistettiin 1816 ja katedraaliksi vihittiin heinäkuussa 1837; torni ja kello lisättiin 1838, ja kuoria laajennettiin vuoteen 1865 mennessä. Linnoituksen portti, joka johti kirkolle, sai nimen Churchgate. Portti ja muurit purettiin 1860-luvulla, ja portin paikalle nousi Flora Fountain — mutta …
+AIEMPI KYSYMYS: Mitä Albert pitää sylissään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Albert pitää sylissään vuoden 1851 [[maailmannäyttelyn]] luetteloa. Prinssi oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla [[Hyde Parkissa]]. Kirja sylissä, kuten minulla kirje siivessä.
+KYSYMYS: Kerro lisää: George Gilbert Scottin
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Albert Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa. Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin veistos. Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Luonto: Papukaijat oppivat kämmenelle] 1969 — Lontoon puistoissa lentää kirkkaanvihreitä kauluskaijoja, joiden kotiseutu on Intiassa ja trooppisessa Afrikassa. Villiintynyt kanta alkoi lisääntyä pysyvästi vuonna 1969 Croydonissa, ja nyt lintuja on kymmeniätuhansia: vuoden 2012 yöpymispuiden laskennassa niitä kertyi Lontoossa noin 32 000. Talvi ei niitä kaada, sillä laji elää luonnossa myös Himalajan lumisilla alarinteillä parintuhannen metrin korkeudessa. Hyde Parkissa ja Kensington Gardensissa ne ovat oppineet lentämään suoraan avoimelle kämmenelle, jos siinä on siemeniä.
+AIEMPI KYSYMYS: Mitä Albert pitää sylissään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Albert pitää sylissään vuoden 1851 [[maailmannäyttelyn]] luetteloa. Prinssi oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla [[Hyde Parkissa]]. Kirja sylissä, kuten minulla kirje siivessä.
+KYSYMYS: Kerro lisää: Hyde Parkissa
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Albert Memorial (Lontoo) (nähtävyys)
+Tietoruudun teksti: Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa. Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin veistos. Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä Kristallipalatsille tapahtui 1936?
+AIEMPI VASTAUS (Livia):
+Ai se. Kristallipalatsi paloi. Maailmannäyttelyn rakennus seisoi 1851 [[Hyde Parkissa]], mutta se purettiin ja koottiin uudelleen [[Sydenhamiin]] Etelä-Lontooseen, missä tulipalo tuhosi sen 1936. Harmi, se olisi näyttänyt hienolta ylhäältä.
+KYSYMYS: Kerro lisää: Sydenhamiin
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Kensingtonin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi 1698, eikä sitä rakennettu uudelleen. Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen asuntona.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Miksi Vilhelm III muutti Kensingtoniin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kuninkaalla oli astma, eikä hän sietänyt [[Whitehallin palatsin]] kosteaa jokiilmaa. Hän osti vuonna 1689 Kensingtonin kylästä maalaistalon, jonka [[Christopher Wren]] laajensi palatsiksi. Jokiilmaa kyllä riittää katollakin.
+KYSYMYS: Kerro lisää: Whitehallin palatsin
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Kensingtonin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi 1698, eikä sitä rakennettu uudelleen. Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen asuntona.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Pyhän Paavalin katedraali] 1675–1710 Nykyinen kirkko on jo viides samalla kukkulalla — edellinen tuhoutui suurpalossa 1666. Uuden suunnitteli Christopher Wren, koulutukseltaan tähtitieteilijä, jolle rakennusten piirtämisestä tuli sivutyö loppuelämäksi. Kupoli näyttää yksinkertaiselta, mutta niitä on kolme sisäkkäin. Kupolin sisäreunaa kiertää Kuiskausgalleria, jossa seinää vasten kuiskattu sana kuuluu selvästi yli kolmenkymmenen metrin päähän. Pommitusten aikana kirkosta tuli koko maan symboli: joulukuun 1940 yönä otettu valokuva savun keskellä seisovasta kupolista kiersi maailman. Wren on haudattu oman kirkkonsa kryptaan. "Lukija, jos etsit hänen muistomerkkiään — katso ympärillesi." — Christopher Wrenin hautakiven …
+- [Iso-Britannia — maalehti / Historia: Kirkko, josta tuli puutarha] Vuoden 1666 suurpalo tuhosi Cityssä 87 seurakuntakirkkoa. St Dunstan-in-the-East selvisi vaurioituneena, se paikattiin, ja Christopher Wren lisäsi siihen tornin, jonka neulanterävä huippu lepää neljän kaaren varassa. Kirkkosali rakennettiin vielä kertaalleen uudelleen 1817–1821, mutta Wrenin torni jäi paikalleen. Vuoden 1941 pommituksissa kirkkoon osui täysosuma: pystyyn jäivät torni sekä pohjois- ja eteläseinä. Uutta kirkkoa ei rakennettu, vaan kaupunki päätti 1967 jättää rauniot paikalleen ja istuttaa niiden sisään puutarhan, joka avattiin 1971. Nyt ikkuna-aukoista työntyy puita ja köynnöksiä, ja entisen keskilaivan kohdalla lorisee matala suihkulähde.
+AIEMPI KYSYMYS: Miksi Vilhelm III muutti Kensingtoniin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kuninkaalla oli astma, eikä hän sietänyt [[Whitehallin palatsin]] kosteaa jokiilmaa. Hän osti vuonna 1689 Kensingtonin kylästä maalaistalon, jonka [[Christopher Wren]] laajensi palatsiksi. Jokiilmaa kyllä riittää katollakin.
+KYSYMYS: Kerro lisää: Christopher Wren
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Kensingtonin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi 1698, eikä sitä rakennettu uudelleen. Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen asuntona.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Big Ben] 1859 Big Ben ei ole torni, vaan kello, joka roikkuu tornin huipulla ja painaa 13,7 tonnia. Ensimmäinen kello halkesi jo koekäytössä, ja uusikin halkesi syyskuussa 1859, koska lyömävasara painoi liikaa. Halkeamaa ei koskaan korjattu, ja juuri se antaa Big Benille sen tunnetun soinnun. Kello käy silti sekunnin tarkkuudella: sitä säädetään lisäämällä tai poistamalla vanhoja pennejä heilurin päältä. Torni on 96 metriä korkea ja nojaa hieman luoteeseen. Kellotaulujen alareunaan on kaiverrettu latinankielinen rukous kuningatar Viktorian ajalta. "DOMINE SALVAM FAC REGINAM NOSTRAM VICTORIAM PRIMAM — Herra, varjele kuningattaremme Viktoria ensimmäistä." — Kaikkien neljän kellotaulun alareunaan kaive…
+- [Viktoria Nyanza — kaupunkilehti / Viktoria Nyanza] Viktorianjärvi on Afrikan suurin ja maailman toiseksi suurin makeavesijärvi, jonka rannoilla asuu nykyään yli 45 miljoonaa ihmistä kolmessa maassa. Sen löytöhistoria kesti lähes 20 vuotta ja synnytti Lontoossa kiivaan tiedekiistan.
+AIEMPI KYSYMYS: Kuka syntyi Kensingtonin palatsissa 1819?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Palatsissa syntyi prinsessa [[Viktoria]], tuleva kuningatar. Hän kasvoi siellä tiukan valvonnan alla, ja kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään [[Kensington Gardens]] -puisto. Herätys kuningattareksi, ei huono aamu.
+KYSYMYS: Kerro lisää: Viktoria
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Kensingtonin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi 1698, eikä sitä rakennettu uudelleen. Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen asuntona.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Luonto: Papukaijat oppivat kämmenelle] 1969 — Lontoon puistoissa lentää kirkkaanvihreitä kauluskaijoja, joiden kotiseutu on Intiassa ja trooppisessa Afrikassa. Villiintynyt kanta alkoi lisääntyä pysyvästi vuonna 1969 Croydonissa, ja nyt lintuja on kymmeniätuhansia: vuoden 2012 yöpymispuiden laskennassa niitä kertyi Lontoossa noin 32 000. Talvi ei niitä kaada, sillä laji elää luonnossa myös Himalajan lumisilla alarinteillä parintuhannen metrin korkeudessa. Hyde Parkissa ja Kensington Gardensissa ne ovat oppineet lentämään suoraan avoimelle kämmenelle, jos siinä on siemeniä.
+- [Iso-Britannia — maalehti / Kirjallisuus: Patsas, joka ilmestyi yön aikana] J. M. Barrie tilasi Peter Pan -patsaan omalla rahallaan ja antoi pystyttää sen Kensington Gardensiin 30. huhtikuuta 1912 salaa, ilman lupaa ja ilman juhlaa, jotta lapset luulisivat keijujen tuoneen sen yöllä. Seuraavana aamuna hän ilmoitti Times-lehdessä, että Serpentinen rannalle on ilmestynyt vappulahja: Peter Pan puhaltamassa pilliään puunkannon päällä. Kuvanveistäjä George Frampton ei kuitenkaan käyttänyt mallina Michael Llewelyn Daviesia, jonka valokuvat Barrie oli hänelle antanut, ja kirjailija jäi pettyneeksi: hänen mielestään patsaasta puuttui Peterin pirullinen puoli.
+AIEMPI KYSYMYS: Kuka syntyi Kensingtonin palatsissa 1819?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Palatsissa syntyi prinsessa [[Viktoria]], tuleva kuningatar. Hän kasvoi siellä tiukan valvonnan alla, ja kesäkuun 20. päivän aamuna 1837 hänet herätettiin kertomalla, että hänestä oli tullut kuningatar. Palatsin puutarhat ovat nykyään [[Kensington Gardens]] -puisto. Herätys kuningattareksi, ei huono aamu.
+KYSYMYS: Kerro lisää: Kensington Gardens
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mitä Greenwichin observatorion piti alun perin ratkaista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Observatorion piti ratkaista pituusasteen määrittäminen merellä. Leveysasteen laiva sai auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, mutta lopulta sen ratkaisi [[John Harrison]] tarkoilla [[merikelloillaan]]. Kyyhky löytää kotiin ilman kelloa.
+KYSYMYS: Kerro lisää: Kaarle II
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kohdekartta / Kohdekartta: Kristuksen katedraali] 1867–1946 Marinan varrella oleva anglikaaninen katedraali on Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali perustettiin 1869 — neljä vuotta ennen isoisän matkaa. Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi piispaksi. Nykyinen rakennus on paljon nuorempi. Työ alkoi arkkitehti Bagan Benjaminin piirustusten mukaan 1. marraskuuta 1924, peruskiven laski Walesin prinssi — myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja kirkko valmistui 1946. Katedraali on ollut vuorollaan Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko Nigerian arkkipiispan ja nykyään Lagosin piispa…
+- [Dunedin — kohdekartta / Kohdekartta: Knoxin kirkko] 1872–1876 Knoxin seurakunta syntyi 1860, kun First Churchista lähtenyt kolmannes ja kaupungin itsenäinen seurakunta yhdistyivät. Ensimmäinen kirkko avattiin 6. toukokuuta 1861 Great Kingin ja Frederick Streetin kulmassa, ja se oli siirtokunnan toinen presbyteerikirkko. Tontin lahjoitti John Hyde Harris, joka ehdotti myös nimeä. Talo oli puinen, ja ensimmäinen pappi oli Englannista tammikuussa 1861 saapunut D. M. Stuart. Kultaryntäys kasvatti väkimäärää niin nopeasti, että 1871 päätettiin rakentaa uusi kirkko tuhannelle hengelle. Tontti ostettiin Georgen ja Pittin kadun kulmasta 569 punnalla, ja suunnittelukilpailuun tuli 17 ehdotusta. Voittaja oli Robert Lawson, mutta hänen suunnitelmansa y…
+AIEMPI KYSYMYS: Mitä Greenwichin observatorion piti alun perin ratkaista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Observatorion piti ratkaista pituusasteen määrittäminen merellä. Leveysasteen laiva sai auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, mutta lopulta sen ratkaisi [[John Harrison]] tarkoilla [[merikelloillaan]]. Kyyhky löytää kotiin ilman kelloa.
+KYSYMYS: Kerro lisää: John Harrison
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä Greenwichin observatorion piti alun perin ratkaista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Observatorion piti ratkaista pituusasteen määrittäminen merellä. Leveysasteen laiva sai auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, mutta lopulta sen ratkaisi [[John Harrison]] tarkoilla [[merikelloillaan]]. Kyyhky löytää kotiin ilman kelloa.
+KYSYMYS: Kerro lisää: merikelloillaan
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Joki ja puisto: Thamesin laskuvesiranta] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Miksi observatorion aikapallo pudotetaan kello 13?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Aikapallo pudotetaan, jotta [[Thamesin]] laivat voivat asettaa kellonsa tarkasti. Punainen pallo on pudotettu observatorion katolla joka päivä vuodesta 1833. Vuonna 1884 [[Greenwichin nollameridiaani]] hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Joka päivä kello yksi, eikä kyyhky myöhästy.
+KYSYMYS: Kerro lisää: Thamesin
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Royal Observatory (Lontoo) (nähtävyys)
+Tietoruudun teksti: Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti 1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja Christopher Wren suunnitteli sen. Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa. Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Tiede: Punainen pallo putoaa kello yksi] Greenwichin observatorion katolla seisoo mastossa punainen pallo, joka nousee puoliväliin kello 12.55, huipulle 12.58 ja putoaa tasan kello 13; näin on tehty vuodesta 1833. Thamesilla ja Lontoon satama-altaissa olleet laivat tähystivät palloa kaukoputkella ja säätivät sen mukaan merikellonsa, ja aika luetaan siitä hetkestä, jolloin pallo lähtee liikkeelle, ei siitä kun se pysähtyy. Merkki annetaan yhdeltä eikä keskipäivällä siksi, että tähtitieteilijät olivat puolenpäivän aikaan itse kiinni auringon mittauksissa.
+AIEMPI KYSYMYS: Miksi observatorion aikapallo pudotetaan kello 13?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Aikapallo pudotetaan, jotta [[Thamesin]] laivat voivat asettaa kellonsa tarkasti. Punainen pallo on pudotettu observatorion katolla joka päivä vuodesta 1833. Vuonna 1884 [[Greenwichin nollameridiaani]] hyväksyttiin koko maailman pituusasteiden lähtöviivaksi. Joka päivä kello yksi, eikä kyyhky myöhästy.
+KYSYMYS: Kerro lisää: Greenwichin nollameridiaani
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Tiede: Punainen pallo putoaa kello yksi] Greenwichin observatorion katolla seisoo mastossa punainen pallo, joka nousee puoliväliin kello 12.55, huipulle 12.58 ja putoaa tasan kello 13; näin on tehty vuodesta 1833. Thamesilla ja Lontoon satama-altaissa olleet laivat tähystivät palloa kaukoputkella ja säätivät sen mukaan merikellonsa, ja aika luetaan siitä hetkestä, jolloin pallo lähtee liikkeelle, ei siitä kun se pysähtyy. Merkki annetaan yhdeltä eikä keskipäivällä siksi, että tähtitieteilijät olivat puolenpäivän aikaan itse kiinni auringon mittauksissa.
+AIEMPI KYSYMYS: Kenen syntymäpalatsin paikalla Old Royal Naval College on?
+AIEMPI VASTAUS (Livia):
+No jopas, kuninkaallisia syntymiä. Paikalla seisoi ennen [[Greenwichin palatsi]], jossa syntyivät [[Henrik VIII]] ja [[Elisabet I]]. Palatsi rapistui sisällissodan aikana ja purettiin, ja kuningatar [[Maria II]] perusti tilalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille. Paljon on tuo paikka nähnyt.
+KYSYMYS: Kerro lisää: Greenwichin palatsi
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista] 21.9.1599 — Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on en…
+- [Lontoo — kohdekartta / Kohdekartta: Globe 1599] Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen va…
+AIEMPI KYSYMYS: Kenen syntymäpalatsin paikalla Old Royal Naval College on?
+AIEMPI VASTAUS (Livia):
+No jopas, kuninkaallisia syntymiä. Paikalla seisoi ennen [[Greenwichin palatsi]], jossa syntyivät [[Henrik VIII]] ja [[Elisabet I]]. Palatsi rapistui sisällissodan aikana ja purettiin, ja kuningatar [[Maria II]] perusti tilalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille. Paljon on tuo paikka nähnyt.
+KYSYMYS: Kerro lisää: Henrik VIII
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Buckinghamin palatsi] 1837 Palatsi ei ollut alun perin palatsi vaan tavallinen kaupunkitalo, jonka herttua rakensi 1703. Kuningas Yrjö III osti sen 1761 vaimolleen, ja ensimmäinen hallitsija, joka todella muutti sisään, oli kuningatar Viktoria vasta 1837. Sisään pääsi silti kuka tahansa sitkeä: nelitoistavuotias Edward Jones murtautui palatsiin kolme kertaa 1838–1841, kerran häntä etsittiin sohvan alta. Nykyään huoneita on 775, ja katolla liehuva lippu kertoo, onko hallitsija kotona. "Olen iloinen, että meitä pommitettiin. Nyt voin katsoa East Endiä silmiin." — Kuningatar Elisabet syyskuussa 1940, kun pommi oli osunut palatsiin
+AIEMPI KYSYMYS: Kenen syntymäpalatsin paikalla Old Royal Naval College on?
+AIEMPI VASTAUS (Livia):
+No jopas, kuninkaallisia syntymiä. Paikalla seisoi ennen [[Greenwichin palatsi]], jossa syntyivät [[Henrik VIII]] ja [[Elisabet I]]. Palatsi rapistui sisällissodan aikana ja purettiin, ja kuningatar [[Maria II]] perusti tilalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille. Paljon on tuo paikka nähnyt.
+KYSYMYS: Kerro lisää: Elisabet I
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Maria Severa lauloi ensimmäisenä fadon maineeseen] Fado on Lissabonin oma laulu, eikä se ole syntynyt juhlasalissa. Kokoonpano on yhä sama kuin alussa: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Ensimmäinen, joka nousi tällä laululla koko kaupungin puheenaiheeksi, oli Maria Severa Onofriana. Hän syntyi Madragoassa 26. heinäkuuta 1820 äitinsä kapakan lapsena ja lauloi Mourarian kujilla säestäen itseään. Hän kuoli tuberkuloosiin 26-vuotiaana 30. marraskuuta 1846, ja hänet haudattiin yhteishautaan ilman arkkua. Vuonna 1931 hänen tarinastaan tehtiin Portugalin ensimmäinen äänielokuva.
+- [null — kohdekartta / Kohdekartta: Maria Pian majakka] 1800-luvun loppu Maria Pian majakka on Ponta Temerosa -niemellä, missä se kuuluu Praian lahden sisääntulon merenkulun maamerkkeihin. Niemi on osa Santiagon eteläistä rannikkoa. Muurattu torni on valkoinen ja kahdeksankulmainen; siihen liittyy majakanvartijan matalampi rakennus sekä valohuoneen ja parvekkeen rakenteita. Majakka rakennettiin 1800-luvun loppupuolella ja nimettiin Portugalin kuningattaren Maria Pian mukaan. Majakkaa ei vielä ollut vuonna 1873.
+- [praia — kaupunkilehti / Sataman eri vuosisadat: Luoto varastoi ja eristi] Santa Maria on pieni tuliperäinen luoto Praian lahden suulla, Gamboan rantaa vastapäätä. Luoto tunnetaan myös vanhalla englanninkielisellä nimellä Quail Island. Luodolle rakennettiin 1800-luvun puolivälissä tavaroiden tullikäsittelyyn tarkoitettu talo ja varastoja, joita käytettiin myös karanteeniin. Karanteenitoiminta siirtyi myöhemmin Ponta Temerosa -niemen lazarettoon.
+AIEMPI KYSYMYS: Kenen syntymäpalatsin paikalla Old Royal Naval College on?
+AIEMPI VASTAUS (Livia):
+No jopas, kuninkaallisia syntymiä. Paikalla seisoi ennen [[Greenwichin palatsi]], jossa syntyivät [[Henrik VIII]] ja [[Elisabet I]]. Palatsi rapistui sisällissodan aikana ja purettiin, ja kuningatar [[Maria II]] perusti tilalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille. Paljon on tuo paikka nähnyt.
+KYSYMYS: Kerro lisää: Maria II
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Old Royal Naval College (Lontoo) (nähtävyys)
+Tietoruudun teksti: Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen. Wren jakoi rakennukset kahtia, jotta Queen's Housesta näkyisi edelleen joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä tammikuussa 1806. Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Hull House] 1889 Kiinteistömies Charles Jerald Hull rakennutti 1856 italialaistyylisen huvilan osoitteeseen 800 South Halsted Street. Kortteli oli silloin hienostoaluetta, mutta vuoteen 1889 mennessä se oli köyhtynyt, kun siirtolaisia oli muuttanut Near West Sidelle enemmän kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa kokeilulleen. Hull oli antanut talon serkulleen Helen Culverille, ja Culver luovutti sen Addamsille kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella. Addams ja Ellen Gates Starr perustivat Hull Housen 18. syyskuuta 1889 esikuvanaan Lontoon East Endin Toynbee Hall. Ajatus oli, että sivistyneet naiset muuttavat asumaan köyhään kaupunginosaan ja pitävät siellä samat kerhons…
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Longwood House – vankila puutarhan keskellä] Longwood House oli alun perin Itä-Intian kauppakomppanian maatila, joka muutettiin kiireesti Napoleonin asunnoksi. Rakennus oli kostea, tuulinen ja täynnä rottia, ja keisari valitti siitä usein brittiläiselle vartiostolleen. Siellä hän saneli muistelmansa ja eli tarkkaan vartioituna kuolemaansa 5. toukokuuta 1821 asti. Ranskan valtio osti Longwoodin ympäristöineen vuonna 1858 seitsemästä tuhannesta sadasta punnasta, ja rakennus toimii yhä Ranskan omistamana museona – yksi harvoista Ranskan alueista keskellä eteläistä Atlanttia.
+AIEMPI KYSYMYS: Miksi Wren jakoi rakennukset kahtia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Wren jakoi rakennukset, jotta [[Queen's Housesta]] näkyisi edelleen joelle. Hän jätti rakennusryhmän keskelle avoimen näkymän, ja sen kummallakin puolella on symmetrisesti oma kupolinsa. Kuningatar [[Maria II]] perusti paikalle sairaalan vanhoille ja haavoittuneille merimiehille. Näkymä joelle, sitä minä arvostan ylhäältä.
+KYSYMYS: Kerro lisää: Queen's Housesta

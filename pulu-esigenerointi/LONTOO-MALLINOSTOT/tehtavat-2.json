@@ -1,0 +1,488 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohdekartta:lontoo:Westminster Abbey",
+  "kasite": "Vilhelm Valloittaja",
+  "kysymys": "Kerro lisää: Vilhelm Valloittaja"
+ },
+ {
+  "n": 2,
+  "kohta": "kohdekartta:lontoo:Westminster Abbey",
+  "kasite": "Hastingsin taistelussa",
+  "kysymys": "Kerro lisää: Hastingsin taistelussa"
+ },
+ {
+  "n": 3,
+  "kohta": "kohdekartta:lontoo:Westminster Abbey",
+  "kasite": "Edvard Tunnustajan",
+  "kysymys": "Kerro lisää: Edvard Tunnustajan"
+ },
+ {
+  "n": 4,
+  "kohta": "kohdekartta:lontoo:Westminster Abbey",
+  "kasite": "Sconen kivi",
+  "kysymys": "Kerro lisää: Sconen kivi"
+ },
+ {
+  "n": 5,
+  "kohta": "kohdekartta:lontoo:Westminster Abbey",
+  "kasite": "Edvard I",
+  "kysymys": "Kerro lisää: Edvard I"
+ },
+ {
+  "n": 6,
+  "kohta": "kohdekartta:lontoo:Westminster Abbey",
+  "kasite": "Skotlantiin",
+  "kysymys": "Kerro lisää: Skotlantiin"
+ },
+ {
+  "n": 7,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "veropuikot",
+  "kysymys": "Kerro lisää: veropuikot"
+ },
+ {
+  "n": 8,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "William Turner",
+  "kysymys": "Kerro lisää: William Turner"
+ },
+ {
+  "n": 9,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "Charles Barry",
+  "kysymys": "Kerro lisää: Charles Barry"
+ },
+ {
+  "n": 10,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "Augustus Pugin",
+  "kysymys": "Kerro lisää: Augustus Pugin"
+ },
+ {
+  "n": 11,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "Westminster Hall",
+  "kysymys": "Kerro lisää: Westminster Hall"
+ },
+ {
+  "n": 12,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "Pyhän Stefanuksen kappelin",
+  "kysymys": "Kerro lisää: Pyhän Stefanuksen kappelin"
+ },
+ {
+  "n": 13,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "Charles Barryn",
+  "kysymys": "Kerro lisää: Charles Barryn"
+ },
+ {
+  "n": 14,
+  "kohta": "kohdekartta:lontoo:Westminsterin palatsi",
+  "kasite": "Augustus Puginin",
+  "kysymys": "Kerro lisää: Augustus Puginin"
+ },
+ {
+  "n": 15,
+  "kohta": "kohdekartta:lontoo:Westminster Bridge",
+  "kasite": "venemiehet",
+  "kysymys": "Kerro lisää: venemiehet"
+ },
+ {
+  "n": 16,
+  "kohta": "kohdekartta:lontoo:Westminster Bridge",
+  "kasite": "London Bridge",
+  "kysymys": "Kerro lisää: London Bridge"
+ },
+ {
+  "n": 17,
+  "kohta": "kohdekartta:lontoo:Westminster Bridge",
+  "kasite": "alahuoneen",
+  "kysymys": "Kerro lisää: alahuoneen"
+ },
+ {
+  "n": 18,
+  "kohta": "kohdekartta:lontoo:Westminster Bridge",
+  "kasite": "Lambeth Bridge",
+  "kysymys": "Kerro lisää: Lambeth Bridge"
+ },
+ {
+  "n": 19,
+  "kohta": "kohdekartta:lontoo:Westminster Bridge",
+  "kasite": "ylähuoneen",
+  "kysymys": "Kerro lisää: ylähuoneen"
+ },
+ {
+  "n": 20,
+  "kohta": "kohdekartta:lontoo:Cutty Sark",
+  "kasite": "Cutty Sark",
+  "kysymys": "Kerro lisää: Cutty Sark"
+ },
+ {
+  "n": 21,
+  "kohta": "kohdekartta:lontoo:Cutty Sark",
+  "kasite": "Höyrylaivat",
+  "kysymys": "Kerro lisää: Höyrylaivat"
+ },
+ {
+  "n": 22,
+  "kohta": "kohdekartta:lontoo:Cutty Sark",
+  "kasite": "purjelaivat",
+  "kysymys": "Kerro lisää: purjelaivat"
+ },
+ {
+  "n": 23,
+  "kohta": "kohdekartta:lontoo:Cutty Sark",
+  "kasite": "Robert Burnsin",
+  "kysymys": "Kerro lisää: Robert Burnsin"
+ },
+ {
+  "n": 24,
+  "kohta": "kohdekartta:lontoo:Cutty Sark",
+  "kasite": "noita",
+  "kysymys": "Kerro lisää: noita"
+ },
+ {
+  "n": 25,
+  "kohta": "kohdekartta:lontoo:Cutty Sark",
+  "kasite": "Dumbartonissa",
+  "kysymys": "Kerro lisää: Dumbartonissa"
+ },
+ {
+  "n": 26,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "jääkarhu",
+  "kysymys": "Kerro lisää: jääkarhu"
+ },
+ {
+  "n": 27,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "Henrik III",
+  "kysymys": "Kerro lisää: Henrik III"
+ },
+ {
+  "n": 28,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "Lontoon eläintarhaan",
+  "kysymys": "Kerro lisää: Lontoon eläintarhaan"
+ },
+ {
+  "n": 29,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "kruununjalokiviä",
+  "kysymys": "Kerro lisää: kruununjalokiviä"
+ },
+ {
+  "n": 30,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "korppimestari",
+  "kysymys": "Kerro lisää: korppimestari"
+ },
+ {
+  "n": 31,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "Valkoista tornia",
+  "kysymys": "Kerro lisää: Valkoista tornia"
+ },
+ {
+  "n": 32,
+  "kohta": "kohdekartta:lontoo:Lontoon Tower",
+  "kasite": "Vilhelm Valloittaja",
+  "kysymys": "Kerro lisää: Vilhelm Valloittaja"
+ },
+ {
+  "n": 33,
+  "kohta": "kohdekartta:lontoo:British Museum",
+  "kasite": "Hans Sloanen",
+  "kysymys": "Kerro lisää: Hans Sloanen"
+ },
+ {
+  "n": 34,
+  "kohta": "kohdekartta:lontoo:British Museum",
+  "kasite": "Montagu Housen",
+  "kysymys": "Kerro lisää: Montagu Housen"
+ },
+ {
+  "n": 35,
+  "kohta": "kohdekartta:lontoo:British Museum",
+  "kasite": "Robert Smirke",
+  "kysymys": "Kerro lisää: Robert Smirke"
+ },
+ {
+  "n": 36,
+  "kohta": "kohdekartta:lontoo:British Museum",
+  "kasite": "Karl Marx",
+  "kysymys": "Kerro lisää: Karl Marx"
+ },
+ {
+  "n": 37,
+  "kohta": "kohdekartta:lontoo:British Museum",
+  "kasite": "Lenin",
+  "kysymys": "Kerro lisää: Lenin"
+ },
+ {
+  "n": 38,
+  "kohta": "kohdekartta:lontoo:British Museum",
+  "kasite": "Great Court",
+  "kysymys": "Kerro lisää: Great Court"
+ },
+ {
+  "n": 39,
+  "kohta": "kohdekartta:lontoo:Natural History Museum",
+  "kasite": "Alfred Waterhouse",
+  "kysymys": "Kerro lisää: Alfred Waterhouse"
+ },
+ {
+  "n": 40,
+  "kohta": "kohdekartta:lontoo:Natural History Museum",
+  "kasite": "British Museumille",
+  "kysymys": "Kerro lisää: British Museumille"
+ },
+ {
+  "n": 41,
+  "kohta": "kohdekartta:lontoo:Natural History Museum",
+  "kasite": "Richard Owen",
+  "kysymys": "Kerro lisää: Richard Owen"
+ },
+ {
+  "n": 42,
+  "kohta": "kohdekartta:lontoo:Natural History Museum",
+  "kasite": "diplodokuksen",
+  "kysymys": "Kerro lisää: diplodokuksen"
+ },
+ {
+  "n": 43,
+  "kohta": "kohdekartta:lontoo:Natural History Museum",
+  "kasite": "Natural History Museumissa",
+  "kysymys": "Kerro lisää: Natural History Museumissa"
+ },
+ {
+  "n": 44,
+  "kohta": "kohdekartta:lontoo:Natural History Museum",
+  "kasite": "sinivalaan",
+  "kysymys": "Kerro lisää: sinivalaan"
+ },
+ {
+  "n": 45,
+  "kohta": "kohdekartta:lontoo:Victoria Memorial",
+  "kasite": "Voiton jumalatar",
+  "kysymys": "Kerro lisää: Voiton jumalatar"
+ },
+ {
+  "n": 46,
+  "kohta": "kohdekartta:lontoo:Victoria Memorial",
+  "kasite": "Thomas Brock",
+  "kysymys": "Kerro lisää: Thomas Brock"
+ },
+ {
+  "n": 47,
+  "kohta": "kohdekartta:lontoo:Victoria Memorial",
+  "kasite": "Viktorian",
+  "kysymys": "Kerro lisää: Viktorian"
+ },
+ {
+  "n": 48,
+  "kohta": "kohdekartta:lontoo:Victoria Memorial",
+  "kasite": "Buckinghamin palatsin",
+  "kysymys": "Kerro lisää: Buckinghamin palatsin"
+ },
+ {
+  "n": 49,
+  "kohta": "kohdekartta:lontoo:Victoria Memorial",
+  "kasite": "Yrjö V",
+  "kysymys": "Kerro lisää: Yrjö V"
+ },
+ {
+  "n": 50,
+  "kohta": "kohdekartta:lontoo:Victoria Memorial",
+  "kasite": "Thomas Brockin",
+  "kysymys": "Kerro lisää: Thomas Brockin"
+ },
+ {
+  "n": 51,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "maailmannäyttelyn",
+  "kysymys": "Kerro lisää: maailmannäyttelyn"
+ },
+ {
+  "n": 52,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "Hyde Parkissa",
+  "kysymys": "Kerro lisää: Hyde Parkissa"
+ },
+ {
+  "n": 53,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "Albertin",
+  "kysymys": "Kerro lisää: Albertin"
+ },
+ {
+  "n": 54,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "Albertopolis",
+  "kysymys": "Kerro lisää: Albertopolis"
+ },
+ {
+  "n": 55,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "promenadikonsertit",
+  "kysymys": "Kerro lisää: promenadikonsertit"
+ },
+ {
+  "n": 56,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "Promsit",
+  "kysymys": "Kerro lisää: Promsit"
+ },
+ {
+  "n": 57,
+  "kohta": "kohdekartta:lontoo:Royal Albert Hall",
+  "kasite": "Royal Albert Halliin",
+  "kysymys": "Kerro lisää: Royal Albert Halliin"
+ },
+ {
+  "n": 58,
+  "kohta": "kohdekartta:lontoo:Albert Memorial",
+  "kasite": "maailmannäyttelyn",
+  "kysymys": "Kerro lisää: maailmannäyttelyn"
+ },
+ {
+  "n": 59,
+  "kohta": "kohdekartta:lontoo:Albert Memorial",
+  "kasite": "George Gilbert Scottin",
+  "kysymys": "Kerro lisää: George Gilbert Scottin"
+ },
+ {
+  "n": 60,
+  "kohta": "kohdekartta:lontoo:Albert Memorial",
+  "kasite": "Hyde Parkissa",
+  "kysymys": "Kerro lisää: Hyde Parkissa"
+ },
+ {
+  "n": 61,
+  "kohta": "kohdekartta:lontoo:Albert Memorial",
+  "kasite": "Sydenhamiin",
+  "kysymys": "Kerro lisää: Sydenhamiin"
+ },
+ {
+  "n": 62,
+  "kohta": "kohdekartta:lontoo:Kensingtonin palatsi",
+  "kasite": "Whitehallin palatsin",
+  "kysymys": "Kerro lisää: Whitehallin palatsin"
+ },
+ {
+  "n": 63,
+  "kohta": "kohdekartta:lontoo:Kensingtonin palatsi",
+  "kasite": "Christopher Wren",
+  "kysymys": "Kerro lisää: Christopher Wren"
+ },
+ {
+  "n": 64,
+  "kohta": "kohdekartta:lontoo:Kensingtonin palatsi",
+  "kasite": "Viktoria",
+  "kysymys": "Kerro lisää: Viktoria"
+ },
+ {
+  "n": 65,
+  "kohta": "kohdekartta:lontoo:Kensingtonin palatsi",
+  "kasite": "Kensington Gardens",
+  "kysymys": "Kerro lisää: Kensington Gardens"
+ },
+ {
+  "n": 66,
+  "kohta": "kohdekartta:lontoo:Royal Observatory",
+  "kasite": "Kaarle II",
+  "kysymys": "Kerro lisää: Kaarle II"
+ },
+ {
+  "n": 67,
+  "kohta": "kohdekartta:lontoo:Royal Observatory",
+  "kasite": "John Harrison",
+  "kysymys": "Kerro lisää: John Harrison"
+ },
+ {
+  "n": 68,
+  "kohta": "kohdekartta:lontoo:Royal Observatory",
+  "kasite": "merikelloillaan",
+  "kysymys": "Kerro lisää: merikelloillaan"
+ },
+ {
+  "n": 69,
+  "kohta": "kohdekartta:lontoo:Royal Observatory",
+  "kasite": "Thamesin",
+  "kysymys": "Kerro lisää: Thamesin"
+ },
+ {
+  "n": 70,
+  "kohta": "kohdekartta:lontoo:Royal Observatory",
+  "kasite": "Greenwichin nollameridiaani",
+  "kysymys": "Kerro lisää: Greenwichin nollameridiaani"
+ },
+ {
+  "n": 71,
+  "kohta": "kohdekartta:lontoo:Old Royal Naval College",
+  "kasite": "Greenwichin palatsi",
+  "kysymys": "Kerro lisää: Greenwichin palatsi"
+ },
+ {
+  "n": 72,
+  "kohta": "kohdekartta:lontoo:Old Royal Naval College",
+  "kasite": "Henrik VIII",
+  "kysymys": "Kerro lisää: Henrik VIII"
+ },
+ {
+  "n": 73,
+  "kohta": "kohdekartta:lontoo:Old Royal Naval College",
+  "kasite": "Elisabet I",
+  "kysymys": "Kerro lisää: Elisabet I"
+ },
+ {
+  "n": 74,
+  "kohta": "kohdekartta:lontoo:Old Royal Naval College",
+  "kasite": "Maria II",
+  "kysymys": "Kerro lisää: Maria II"
+ },
+ {
+  "n": 75,
+  "kohta": "kohdekartta:lontoo:Old Royal Naval College",
+  "kasite": "Queen's Housesta",
+  "kysymys": "Kerro lisää: Queen's Housesta"
+ },
+ {
+  "n": 76,
+  "kohta": "kohdekartta:lontoo:Queen's House",
+  "kasite": "Doveriin",
+  "kysymys": "Kerro lisää: Doveriin"
+ },
+ {
+  "n": 77,
+  "kohta": "kohdekartta:lontoo:Queen's House",
+  "kasite": "Inigo Jones",
+  "kysymys": "Kerro lisää: Inigo Jones"
+ },
+ {
+  "n": 78,
+  "kohta": "kohdekartta:lontoo:Queen's House",
+  "kasite": "Jaakko I:n",
+  "kysymys": "Kerro lisää: Jaakko I:n"
+ },
+ {
+  "n": 79,
+  "kohta": "kohdekartta:lontoo:Queen's House",
+  "kasite": "Anna Tanskalaiselle",
+  "kysymys": "Kerro lisää: Anna Tanskalaiselle"
+ },
+ {
+  "n": 80,
+  "kohta": "kohdekartta:lontoo:Queen's House",
+  "kasite": "Kaarle I:n",
+  "kysymys": "Kerro lisää: Kaarle I:n"
+ },
+ {
+  "n": 81,
+  "kohta": "kohdekartta:lontoo:Queen's House",
+  "kasite": "Henrietta Marialle",
+  "kysymys": "Kerro lisää: Henrietta Marialle"
+ }
+]

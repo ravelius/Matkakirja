@@ -11,7 +11,7 @@ import { pathToFileURL } from 'node:url';
 
 const [, , luonnosPolku, jututPolku, kaupunki, maa, ulos] = process.argv;
 if (!ulos) { console.error('käyttö: node valmistele-mallinostot.mjs <luonnos.json> <nahtavyysjutut.mjs> <kaupunki> <ISO3> <ulos>'); process.exit(2); }
-const KAUPUNKI = { pariisi: 'Pariisi' }, MAA = { FRA: 'Ranska' };
+const KAUPUNKI = { pariisi: 'Pariisi', lontoo: 'Lontoo' }, MAA = { FRA: 'Ranska', GBR: 'Iso-Britannia' };
 const luonnos = JSON.parse(fs.readFileSync(luonnosPolku, 'utf8'));
 const { NAHTAVYYSJUTUT } = await import(pathToFileURL(path.resolve(jututPolku)).href);
 const jutut = NAHTAVYYSJUTUT[kaupunki] ?? {};

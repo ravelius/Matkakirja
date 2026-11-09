@@ -1,0 +1,94 @@
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä kulki alun perin Queen's Housen läpi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Talon läpi kulki Lontoosta [[Doveriin]] vievä maantie. Talo rakennettiin kahden puoliskon varaan, ja niitä yhdisti silta, jonka alta vaunut ajoivat. Maantie siirrettiin myöhemmin talon ohi, ja talon suunnitteli [[Inigo Jones]] 1616. Vaunut talon alta, sen olisi halunnut nähdä.
+KYSYMYS: Kerro lisää: Doveriin
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä kulki alun perin Queen's Housen läpi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Talon läpi kulki Lontoosta [[Doveriin]] vievä maantie. Talo rakennettiin kahden puoliskon varaan, ja niitä yhdisti silta, jonka alta vaunut ajoivat. Maantie siirrettiin myöhemmin talon ohi, ja talon suunnitteli [[Inigo Jones]] 1616. Vaunut talon alta, sen olisi halunnut nähdä.
+KYSYMYS: Kerro lisää: Inigo Jones
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Calton Hill] 1807–1831 Calton Hill on 103 metrin korkuinen kukkula aivan Edinburghin keskustan kupeessa, ja se kuuluu kaupungin Unescon maailmanperintökohteeseen. Jo vuonna 1456 kuningas Jaakko II antoi kukkulan kaupunkilaisten käyttöön urheilua ja turnajaisia varten. Kukkulan huipulla seisoo outo joukko pylväikköjä. Kuuluisin on Kansallismonumentti, joka aloitettiin vuonna 1826 antiikin Parthenonin mallin mukaan mutta jäi rahapulan takia kesken vain 12 pylvään kohdalla — edinburghilaiset ristivät sen pilkkanimellä ”Edinburghin häpeä”. Vieressä kohoaa amiraali Nelsonin muistoksi rakennettu torni. Huhtikuun viimeisenä iltana kukkulalla juhlitaan kelttiläistä Beltane-tulijuhlaa, johon kokoontuu yli 12 000…
+- [null — kohdekartta / Kohdekartta: Fort James] 1700-luku Fort James sijaitsee niemellä Saint John’sin sataman suulla. Britit rakensivat sen 1700-luvulla vartioimaan satamaa, ja rakennushanketta vauhditti pelko Ranskan hyökkäyksestä. Nimi viittaa Englannin kuningas Jaakko II:een. Paikalla on säilynyt ruutivarasto, tykkejä ja muurien perustuksia, ja niemeltä näkyy ympäröivä satama. Vastakkaisella puolella satamansuuta on Fort Barrington. Sen tykeillä oli 1800-luvulla myös merkinantotehtäviä: vierailevia sotalaivoja tervehdittiin laukauksilla, ja tykillä annettiin merkkejä auringonnousun sekä auringonlaskun aikaan.
+- [saintjohns — kaupunkilehti / Saint John's: Tykki kertoi päivän vaihtumisesta] Fort James sijaitsee Saint John’sin satamansuun niemellä. Britit rakensivat sen 1700-luvulla puolustamaan satamaa, ja nimen linnake sai Englannin kuningas Jaakko II:lta. Paikalla on yhä ruutivarasto, tykkejä ja muurien perustuksia. 1800-luvulla tykillä ammuttiin tervehdyksiä vieraileville sotalaivoille sekä merkkejä auringonnousun ja auringonlaskun aikaan.
+AIEMPI KYSYMYS: Kenelle Queen's House alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+Just niin, kuninkaallinen lahja. Talo rakennettiin kuningas [[Jaakko I:n]] puolisolle [[Anna Tanskalaiselle]]. [[Inigo Jones]] suunnitteli sen 1616, mutta Anna kuoli 1619 ja talo jäi kesken. Se valmistui 1635 [[Kaarle I:n]] puolisolle [[Henrietta Marialle]]. Aikaa meni, mutta valmista tuli.
+KYSYMYS: Kerro lisää: Jaakko I:n
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Kenelle Queen's House alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+Just niin, kuninkaallinen lahja. Talo rakennettiin kuningas [[Jaakko I:n]] puolisolle [[Anna Tanskalaiselle]]. [[Inigo Jones]] suunnitteli sen 1616, mutta Anna kuoli 1619 ja talo jäi kesken. Se valmistui 1635 [[Kaarle I:n]] puolisolle [[Henrietta Marialle]]. Aikaa meni, mutta valmista tuli.
+KYSYMYS: Kerro lisää: Anna Tanskalaiselle
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kenelle Queen's House alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+Just niin, kuninkaallinen lahja. Talo rakennettiin kuningas [[Jaakko I:n]] puolisolle [[Anna Tanskalaiselle]]. [[Inigo Jones]] suunnitteli sen 1616, mutta Anna kuoli 1619 ja talo jäi kesken. Se valmistui 1635 [[Kaarle I:n]] puolisolle [[Henrietta Marialle]]. Aikaa meni, mutta valmista tuli.
+KYSYMYS: Kerro lisää: Kaarle I:n
+
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Queen's House (Lontoo) (nähtävyys)
+Tietoruudun teksti: Inigo Jones suunnitteli Queen's Housen 1616 kuningas Jaakko I:n puolisolle Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken. Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle. Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa on taidegalleria.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Kenelle Queen's House alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+Just niin, kuninkaallinen lahja. Talo rakennettiin kuningas [[Jaakko I:n]] puolisolle [[Anna Tanskalaiselle]]. [[Inigo Jones]] suunnitteli sen 1616, mutta Anna kuoli 1619 ja talo jäi kesken. Se valmistui 1635 [[Kaarle I:n]] puolisolle [[Henrietta Marialle]]. Aikaa meni, mutta valmista tuli.
+KYSYMYS: Kerro lisää: Henrietta Marialle
