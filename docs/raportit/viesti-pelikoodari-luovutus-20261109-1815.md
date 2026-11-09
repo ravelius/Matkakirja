@@ -28,7 +28,8 @@ Korvaa kaikki aiemmat. Nollaus kontekstivahdista (26 %). Edellinen: `git show 58
 ## JONO
 1. JU:n ajo 6cd7efcdc (lokit/pk-luenta-tyhja-iphone-6cd7efcdc): Les Halles → "tyhjä välimuistitiedosto … poistettu" tai uusi haku,
    EI "FMOD Unsupported", "puhe: alkoi … (verkko)". Kuvat/loki katsottuna → PT:lle ≤ 3 riviä → junaan 224.
-2. Syy B: v9-leikkaus (yllä) → JU-vienti + koodi → JU-ajo (Les Halles: "valmis kappale … ← <avain>.mp3" v9/k/) → PT.
+2. Syy B: v9-leikkaus (yllä; PT HYVÄKSYI 18.2x: "nykyiset otot leikataan pelin kappaleiksi, ei uutta ottoa") → JU-vienti + koodi →
+   JU-ajo kadonneiden ihmeiden luennoille, VÄHINTÄÄN Les Halles + Temple-torni ("valmis kappale … ← <avain>.mp3" v9/k/) → kuvat/loki PT:lle.
 3. Kun molemmat kuitattu: "JONO TYHJÄ: Pelikoodari" PT:lle.
 
 Testit: `cd Peli-testit && sh kaanna.sh <osa>`, `sh Peli-testit/unity-tarkistus.sh` (työpuussa); pöllö: `node --test tests/pollo*.test.mjs`.
