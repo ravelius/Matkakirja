@@ -73,3 +73,14 @@ Kärki b57df8ec6 (wt/proto-natiivi-ui-fpv-napit, puhdas). Tiedostot: UI/Linssit/
 - nui-paikkapalkki-p5a-iphone-fb77e12b1 katsottu: terävä lähellä, kaukana tavallinen usva (osuudet 6, muistihuippu 2695 Mt); arkki
   arkki-p5a-fb77e12b1.jpg (ennen/jälkeen) → PT + NS. JU:lle pyydetty sk-paikkapalkki-1 fb77e12b1 iphone, iphone-vaaka, ipad →
   lokit/nui-paikkapalkki-1-<koko>-fb77e12b1 (palkki-aina-2:n jälkeen). SEURAAVAKSI: katso → arkki PT:lle → KK.
+
+## Lisäys 13.4x: NÄHTÄVYYS PALKIN ALLE TEHTY 61c8858c2; FPV-koe Opus-agentilla
+- 61c8858c2 (natiivi-backup natiivi-ui/palkki-aina; tarkistus 0, pohjavahti ok): Nahtavyysarkki AinaNakyvissa, arkki PalkinAla + Vali.S,
+  palkin alla ei himmennystä/syötelukkoa (.mk-nahtavyys__peite--palkki, Lehti.uss), Sulje → Pinnaus.Pienenna; Nostokortti.PaivitaPin
+  sulkee palkin alla olleen kortin, kun pinnaus siirtyy toiseen ikkunaan. JU:lle sk-palkki-aina-3 (a-6 nähtävyys palkin alla, a-6b
+  palkiksi) iphone + ipad → lokit/nui-palkki-aina-3-<koko>-61c8858c2. KATSO: a-5 Tuileriat kiinni, a-6 MuCEM palkin alla + palkki
+  näkyy, a-6b palkiksi; sk-2:n ipad/vaaka/pysty (74e72a4a4) samalla.
+- FPV-KOE a–e: Opus-agentti toteuttaa 13.4x kohdan 4 suunnitelman wt/proto-natiivi-ui-fpv-napit:iin (commit, ei push) + sk-fpv-koe-1.txt.
+  Jos tämä sessio nollautuu ennen tulosta: tarkista `git -C /Users/Shared/Claude/wt/proto-natiivi-ui-fpv-napit log --oneline -3` ja
+  status; kesken jäänyt työ näkyy muutoksina. Tarkista diff, tarkistus 0, push natiivi-backup natiivi-ui/fpv-napit, JU-ajo
+  sk-fpv-koe-1 iphone, iphone-vaaka, ipad → PT.
