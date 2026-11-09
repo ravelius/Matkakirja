@@ -92,3 +92,11 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   (T/juna223-1c1g-*.txt), kerrottu PT:lle. NUI ketjut AI (a7869ef66) ja AJ (d396cbcbf) x3 valmiit 08.55, katsottu → NUI + PT.
   ODOTTAA PT:n sanaa: poimi natiivi-ui/nostovalikko-juna223 = 4e972eeed (rebasattu c111c4adf:n päälle, 11 commitia) junaan 223 → testit → kärki PT:lle.
 - 09.0x: PT:n sana → JUNA 223 = 4e972eeed (ff c111c4adf + NUI nostovalikko 11 commitia, ilman osaa 4), testit vihreät (T/juna223-nv-*.txt), PT + NUI kerrottu. JONO TYHJÄ.
+- 09.5x LISÄYS (TUOREIN; konteksti 25 % → nollaus). JUNA 223 = 4e972eeed (ei muutosta). Levy siivottu 14 → 45 Gi (6 laitekäännöstä + ns-muisti-*/puu pois).
+  Valmiit ja raportoidut: NUI paikkapalkki-1 f9f93385f x3 (p-3–p-6 EI toiminut → NUI korjasi), PK suunta-vasemmalle 84521ba9b x3 → PK (iPhone PUUTE 1 aikaraja, kuvat ok).
+  AJOSSA (nohup, kaikki omia): AM (jono-am.zsh, NS matkalento 5ca18c629 ipad → L/natiiviseppa-matkalento; ml-0…ml-6 + tallenne; rivi NS:lle
+  local_99130238-…, NS katsoo ennen PT:tä; odotus lokissa "matkalento: … kesto ~4,6 s, huippu ~810 km", ¼/½/¾ ruutu täynnä karttaa).
+  AN2 (jono-an2.zsh, NUI paikkapalkki-1 d87530c60 ipad → iphone → vaaka, sk päivitetty (p-5a-paluulento), lokissa "nosto … avattu kartan reitillä")
+  → katsottuna NUI:lle + PT:lle (KOE, kuvat ensin PT:lle). AN (81b70a14b) peruttu ennen alkua.
+  AO (jono-ao.zsh, PK kattokaistale 84521ba9b iphone → L/pk-kaistale-iphone-84521ba9b) → PK:lle.
+  Seuranta: grep -E "AJO|LOPPU" jonoloki. NUI/PT: Ranskan tasolla pilleri radiokaistan päällä = hyväksytty asettelu (NUI), ei vika.
