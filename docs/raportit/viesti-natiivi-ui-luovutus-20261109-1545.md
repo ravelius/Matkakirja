@@ -35,3 +35,9 @@ zsh-huomio: monisanaiset silmukat bash-skriptitiedostoon (set -- ei pilko zsh:ss
 ## 4. Vahti
 - Taustavahdit pysäytetään luovutuksessa; käynnistä oma: odota lokit/nui-orbit-napautus-1-ipad-0bf9cd57d ja
   lokit/nui-fpv-koe-2-{iphone,ipad}-d6fe26743 (loki.txt rivi "valmis N s").
+
+## Lisäys 15.5x: KOHDAT 1 (iPad) JA 3 VALMIIT – älä toista
+- Orbit iPad 0bf9cd57d katsottu ok, arkki PT:lle (lokit/nui-orbit-napautus-1-ipad-0bf9cd57d/arkki-orbit-napautus-ipad.jpg); 0bf9cd57d on junassa 223.
+- FPV-koe 2 d6fe26743 iPhone + iPad katsottu ok (suositellut 6, Bryssel → Pariisi, Madrid valittavissa, lento alkaa), arkki PT:lle
+  (lokit/nui-fpv-koe-2-ipad-d6fe26743/arkki-fpv-koe-2.jpg). Odottaa PT:n/KK:n palautetta.
+- Jono nyt: kohta 2 (palkin selaus ja kaupunkinimi nähtävyyden aikana).
