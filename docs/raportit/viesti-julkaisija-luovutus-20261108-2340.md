@@ -15,3 +15,4 @@
 - 18.5x LISÄ: JUNA 224 = f89d62d0e PUSHATTU (+ KS 9be5c8e2e d0e2239bf + pelitila 774e61032; PT kuittasi molemmat), testit T/juna224-e-*: unity 0, 729, 2279, 889.
   LUKITUS ODOTTAA: GJ (pid 83679) KS nimet-4 + lontoo-kensington 9be5c8e2e → lokit/ks-pariisi-nimet-4-9be5c8e2e, ks-lontoo-kensington-9be5c8e2e → KS + PT (nimet-4: 2 pistettä ND:n laatikon sisällä EIVÄT saa avata ND:tä).
   GI (pid 70153) PK 6a27206b2 → PK + PT; poiminta vasta PT:n kuittauksella.
+- 18.5x LISÄ 2: JUNA 224 = 72b4e4477 PUSHATTU (+ PK 6a27206b2, PT kuittasi), testit T/juna224-f-*: unity 0, 729, 2279, 889. KS nimet-4 ✓ (PT) ja Kensington ✓ raportoitu → LUKITUSEHDOT TÄYNNÄ, odottaa PT:n lukituskäskyä. Jono tyhjä.
