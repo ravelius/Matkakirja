@@ -48,3 +48,18 @@ Natiivin päähaaraa ei ole natiivi-backup/main-nimellä; Pariisin data HEADissa
 - PÖLLÖ-WORKER ON PK:N OMA: lähde haaroissa origin/pelikoodari-pollo-* (kv, valimuisti, natiivi, natiivi-chat, pallot-worker); hae
   `git log --all -- '*worker*'` / wrangler-tiedosto. KORJAA ehdotukset-tehtävä nähtävyyskontekstille ("Pelaaja katsoo kartalla (kysymykset
   tästä): nähtävyys Eiffel-torni (Pariisi)" → nyt 200 + tyhjä lista). Julkaisu PK:n kaavaa (ei korttia); rivi PT:lle, kun vastaa ei-tyhjänä.
+
+## LISÄYS 17.2x: OMISTAJAN PÄÄTÖS 17.01 "Kyllä kumpaankin" – OTOT TEHTY (kohdat 1 ja 2 yllä päivittyvät)
+Järjestys PT:ltä: otot → v8 + kytkentä → vasta sitten pöllö-workerin korjaus.
+- NIMIOTTO TEHTY: koko/ (130 nimeä, 2 845 mrk, 690 kr, raaka aanet/opas/raaka/pariisi-nimet-4038ff50e7145d71a06d/otto1.json), pilkottu
+  koko/mp3/n001…n130.mp3 (lista.json: id n###, nimi = kartan nimi, teksti = sanottu; vuosiluvut sanoina), video koko/pariisi-nimet-koko-20261109.mp4 → PT.
+- ALUT TEHTY KAHTENA OTTONA (ElevenLabs max 10 000 mrk/pyyntö): alut1/ (17 palaa, 8 488 mrk, 2 058 kr, raaka …/pariisi-nimet-db9e5f20a4dbbebd180a/)
+  ja alut2/ (9, 7 458, 1 808, …/pariisi-nimet-787dcaf424b323331f3e/); pilko ALIMIT=0.79 (luentojen ääniportti). Yhdistetyt alut/mp3/a01…a26.mp3 +
+  alut/pilkonta.json; lista.json:issa nimi + loppuTagi (20 × "[pause]", 6 × ""). Videot alut/pariisi-luentojen-alut-{12s,kokonaan}-20261109.mp4 → PT.
+- TEE 1: MANIFESTI v8: v7 (https://media.matkakirja.app/aanet/luennat/v7/manifest.json, u = TÄYDET osoitteet, esim. …/luennat/v1/k/<avain>.mp3)
+  + 26 avainta (v1|eleven_v4_turbo|oae6GCCzwoEbfc5FHdEu|1.15|<loppuTagi>|<teksti NFC>, sha256[:32]; ks. esigeneroi-luennat.py avain()) →
+  uusi polku aanet/luennat/v8/ (k/<avain>.mp3 + manifest.json, kesto "s"), vientipaketti _valmiit/:iin SHA256SUMS + LAHTEET.md → JU.
+  Natiivi: Valmisluennat.ManifestiOletus v7 → v8 (Peli/Valmisluennat.cs:23), tai asetus osoitteet.luennat-manifesti. Tarkista ensin 15 v7-osumaa
+  korvautuvat, 11 uutta lisätään (tekstit tarkistettava pakettia v1028 vasten: jos natiivin teksti eroaa, avain ei osu).
+- TEE 2: NIMIEN VIENTI uuteen polkuun (esim. aanet/opas/pariisi-nimet-v1/: mp3 + nimet.json avain "pariisi:<nimi>" → {teksti,url,kesto_s}) →
+  JU; KYTKENTÄ natiiviin (kohta 1 KYTKENTÄ) – omistaja hyväksyi. Kuvat/ajo JU:lta, PT:lle katsottuna.
