@@ -197,3 +197,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   DO valmis → NS. DY vuoret1 valmis → VS. UUDET ketjut: EA VS vuoret2 7ebd3e7c0 ipad (varjostin regeneroitu; VS nollautuu → raportti VS:n seuraajalle),
   EB NS fpv-latauskuva-3 e0e61df24 ipad (kuva vain PT:lle → polku NS:lle), DZ NS fpv-vuoret-2 c8963e7eb ipad DW:n jälkeen (KOE, kuvat vain PT:lle),
   EC PK 1d-alkuvarjo1 d58806806 iphone DS:n jälkeen → PK. PT:n GO nollaukselle: kun DV/DO/DW raportoitu.
+- 15.2x: film13 runko takaisin 15.18 ✓. VS film14 (vs-film14-ipad.zsh, pid 87235, sk-film14-ipad.txt, sama käännös 22e601e76, vahti 4080) iso iPad → lokit/linssiseppa2-film14-ipad-22e601e76 → tulos VS:n SEURAAJALLE (VS nollautuu).
