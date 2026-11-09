@@ -200,3 +200,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 15.2x: film13 runko takaisin 15.18 ✓. VS film14 (vs-film14-ipad.zsh, pid 87235, sk-film14-ipad.txt, sama käännös 22e601e76, vahti 4080) iso iPad → lokit/linssiseppa2-film14-ipad-22e601e76 → tulos VS:n SEURAAJALLE (VS nollautuu).
 - 15.2x: ED (NUI KIIRE orbit-napautus-1 d4ae2c4a3 iphone+ipad, sitten DX:n fpv-koe-2 ipad) etuajolla: DS (12130) + EB (83498) kill -STOP, etuajo-ed.zsh CONTaa kun orbit ipad ALKOI (tarkista!). DX iphone valmis 15.27, vaaka ajossa. DQ x3, DV, EA, film14 (3/3, huippu 3960 Mt) raportoitu. DW ajossa.
 - EE (jono-ee.zsh) NS huippunimet-3 1f89f4f0d ipad ED:n jälkeen → polku NS:lle.
+- 15.3x: ED → ED2 (pid 6979): orbit x2, sitten fpv-koe-2 d6fe26743 iphone + ipad (NUI; d2d4d3227 ipad peruttu, vaaka d2d4d3227 ajettu). etuajo-ed2.zsh (6981) CONTaa DS 12130 + EB 83498; EE → jono-ee2.zsh (6983) ED2:n jälkeen.
