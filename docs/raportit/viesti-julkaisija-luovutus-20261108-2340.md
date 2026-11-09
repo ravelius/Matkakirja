@@ -91,3 +91,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 08.5x: OMISTAJAN PÄÄTÖS 08.32 (PT) perui 1f:n, d2:n ja kuvasuhteen → JUNA 223 = c111c4adf (38e803198 + 5 revertiä; puu = 835f617a6 + 1c + 1g), testit vihreät
   (T/juna223-1c1g-*.txt), kerrottu PT:lle. NUI ketjut AI (a7869ef66) ja AJ (d396cbcbf) x3 valmiit 08.55, katsottu → NUI + PT.
   ODOTTAA PT:n sanaa: poimi natiivi-ui/nostovalikko-juna223 = 4e972eeed (rebasattu c111c4adf:n päälle, 11 commitia) junaan 223 → testit → kärki PT:lle.
+- 09.0x: PT:n sana → JUNA 223 = 4e972eeed (ff c111c4adf + NUI nostovalikko 11 commitia, ilman osaa 4), testit vihreät (T/juna223-nv-*.txt), PT + NUI kerrottu. JONO TYHJÄ.
