@@ -4670,7 +4670,8 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen '
           + 'valmistumisen jälkeen keskustan uusien rakennusten korkeus '
-          + 'rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan '
+          + 'rajattiin 25 metriin ja reuna-alueilla 31–37 metriin, eikä '
+          + 'vastaavaa nostettu enää vanhaan '
           + 'Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein '
           + 'näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.',
       kuvat: [
