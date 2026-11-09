@@ -77,3 +77,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   (haara natiivi-backup/pelikoodari/juoksu-223) iphone → vaaka → ipad, kansiot L/pk-d2-ovikuva-<koko>-281093d9c → polut + aika PK:lle.
   Ketju AC: nostovalikko-6 iphone 5/5 ja vaaka 5/5 valmiit (07.26/07.29), ipad alkoi 07.48 L1 → kaikki kolme katsottuna NUI:lle.
   Oppi: /tmp/ju-portti.lukko jäi 07.28–07.48, kun tapoin mac-yleis-kopion (= portin `sleep 60; rmdir` -aliprosessi). Älä tapa sitä; jumissa: rmdir oma lukko.
+- 07.51: ketju AC LOPPU, nostovalikko-6 ipad 5/5 (kaikki kolme 5/5, PUUTE 0) → seuraava JU katsoo ja vie NUI:lle. Ajossa vain AD.
