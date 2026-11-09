@@ -5,7 +5,7 @@ Omistajan kortti 13.51 "Kyllä (Suositus)": pelin kaupungit + maat × 5 kysymyst
 - Kohdat: 43 maata (Euroopan maat + TUR, CYP; LIE ja MCO uusina paketteina) `maa:<ISO3>` ja 65 kaupunkia `kaupunki:<id>`
   (kaupungit-kokoelman manner europe + TUR/CYP; Siperia ja merentakaiset pois). Avaimet = PuluChat.Lahteet.cs:66–69.
 - Vaihe 1: 108 kohtaa × 5 = 540 kysymysvastausta (kaikki kysymykset uusia). Vaihe 2: 1 330 linkkivastausta ("Kerro lisää: X").
-- Sonnet-agentit effort low (PILVIOHJE 9.10.), 11 + 17 agenttia + 3 korjausagenttia, noin 1 h 50 min (14.05–15.55).
+- Sonnet-agentit effort low (PILVIOHJE 9.10.), 11 + 17 agenttia + 3 korjausagenttia, noin 1 h 10 min (14.00–15.10).
 - Tarkistukset: tarkista-era vaihe1 0 / vaihe2 0 virhettä; tarkista-valmis 5 "Euroopan ulkopuolinen linkki" = vääriä osumia
   (Perućica = Bosnian aarniometsä, "Peru"; Intian arkisto = Archivo de Indias Sevillassa, "Intia"); 42 varoitusta (maininnat tekstissä).
   Ensimmäisissä erissä 62 vastausta jäi 0–1 linkkiin → korjattu sulkeilla olemassa olevaan tekstiin.
