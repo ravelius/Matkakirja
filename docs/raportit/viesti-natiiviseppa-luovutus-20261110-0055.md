@@ -30,3 +30,9 @@ IssPaneeli 15,7 + Raketti 14,2. iso-kuvat-astc.py sopii kuvien siirtoon palvelim
 
 ## SIVUHAVAINTO (ei NS:n)
 - Revontulet.PaivitaNakyvyys:207 MissingReference astronauttilinssin sulkemisessa (iso-1-ajo 9.11.) → VS/LS, ei vielä raportoitu erikseen.
+
+## LISÄYS 01.0x (luovutuksen jälkeen tehty)
+- NUI:n ilmaisin dc0c548c2 (f4e7ccd61 + palkki tummalla teemalla) YHDISTETTY natiiviseppa/iso-tulivuoret-haaraan (ff), iPad-ajo lokit/nui-tulivuori-ilmaisin-2-ipad-dc0c548c2
+  katsottu: ilmaisin näkyy 0,6 s jälkeen ja poistuu, kuva i-1 ok; ainoa poikkeus UnityEditor.Search (editorin, ei pelin). JU:lle ja PT:lle ilmoitettu.
+- TAVLI 2ad9b89bc: PT KUITTASI junaan 224 (01.0x); JU:lle lähetetty yhdistettäväksi. PT:n ohje: kuvaparin puolet jatkossa SAMASSA TILASSA (sama opastus/otsikko).
+- Revontulet.cs:207 NRE näkyi myös NUI:n ajossa → yhä VS:lle raportoimatta (VS lepää).
