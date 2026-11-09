@@ -135,3 +135,18 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   BU:n ebd3d3569-iphone ajetaan loppuun, EI raportoida.
 - Monitor-suodin: " AJO [A-Z+]+ |LOPPU|VIKA" (PK+LAV-tunnus jäi aiemmin pois).
   BY NS ennakko-paluu-koe d79031961 iphone: paikkapalkki-1 → lokit/natiiviseppa-ennakko-paikkapalkki-iphone (p-5a) + paluu-2 → lokit/natiiviseppa-matkalento-paluu-3 → polut NS:lle (local_0f7f169f-…).
+
+## LISÄYS 9.11. 12.4x (TUOREIN; konteksti 25 % → nollaus)
+- JUNA 223 = 82c26c097 (ff 734ed685d + PK huudot, PT 12.4x; natiivi-backup julkaisija/juna-223), testit vihreät (T/juna223-huudot-*.txt: unity 0, Kartta 729, Linssit 2276, Peli 879). PT + PK kerrottu.
+- ÄMPÄRI 12.38: juoksupeli-huudot-kala-allas-ruukku-vienti-20261109 → juoksupeli/puyi-ulkoesineet-v1/huudot/ (9 viety, kieli.json oli jo). NUI + PK kerrottu.
+  OPPI 8: ElevenLabs-paketti: ääniportti vaatii juureen kieli.json JA vie-paketti vaatii sen SHA256SUMS:iin (juuren kieli.json on jo ämpärissä → "oli jo"); LAHTEET.md EI SHA256SUMS:iin.
+- PT 12.1x / OMISTAJA 12.0x: kun NUI:n paikkapalkki on PT:n + KK:n kuittaama JA junassa → heti zsh T/pieni-juna.zsh <kärki> + rivi KK:lle (local_d5f31591-…) ja PT:lle.
+- Valmiit ja raportoidut: BS, BX (4e12207ed kallistus ei näy), BY, BZ, BR, BT, BV, BW (PK), CB, CC, CE, CK (NS esilataus: p-5a TERÄVÄ), CO (hover: korkeus pysyy 4 900 m), CD (fb9385191), CG (9d32d7d84), CN (593ea3639 ipad).
+  fpv-hud: tietorivin nopeus järjetön (~191 000 km/h) – NUI + PT tietävät. CA (ffddb36fd) vanhentunut, ei raportoitu.
+- AJOSSA / JONOSSA (nohup, omat, T/jono-<x>.zsh):
+  CP NUI paikkapalkki-1 027326c38 iphone + vaaka VALMIIT (raportoitu NUI:lle: p-5a yhä sumea, NS: osumakohta 15 km, korjaus bce316fdd), ipad ajossa 12.45 → katso + rivi NUI:lle (NUI vie PT:lle). NUI pyytää pian uuden ajon (p-4 + p-5a) paikkapalkki + bce316fdd.
+  CF VS vesikerros6 d37f173af ipad → CM VS kohoaurinko4 cd74573cd iphone → kustakin rivi VS:lle (local_5ebb0658-…).
+  CH KS lontoo-nyt 734ed685d (iphone valmis 12.29) + CI lontoo-oikea 46b4525f3 (iphone valmis 12.43); iPadit ajossa → kun kaikki 4 valmiit: valmis-rivi KS:lle (local_7b57e35a-3a8e-4943-aba1-c960b9eb4671).
+  CJ NUI opas-m 6ce1efd49 iphone + ipad (sk-m2) → NUI katsoo m2-saapui; rivi NUI:lle.
+  CL PK 1d-alkuvarjo0/1 5ed43b793 iphone → lokit/pk-1d-alkuvarjo{0,1}-5ed43b793 → kuvat + kehysajat (jos lokissa) PK:lle.
+- Monitor: tail -n 0 -f jonoloki | grep -E " AJO [A-Z+]+ |LOPPU|VIKA" – käynnistä HETI aloituksessa ja tarkista jonolokista luovutuksen jälkeen valmistuneet (BS jäi minulta 11.48 väliin).
