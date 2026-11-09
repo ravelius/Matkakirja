@@ -28,7 +28,7 @@ Lokit: /Users/Shared/Claude/proto-3d/lokit/. Skenaariot: /Users/Shared/Claude/pr
   ajoLiikeKerroin/AjonLiikeSiirto PalloKierrosta. Kuvat PT:lle katsottuina (tuntumaksi), junaan vasta NUI:n rajapinnalla.
 ## 2. VALMIIT TÄLLÄ VUOROLLA
 - 1d alkuvarjo d58806806 katsottu (a-4s pihan läiskät poissa) → PT:lle 16.2x junarivi 5ed43b793 + d58806806; pari
-  _tyo/pelikoodari/juoksu-223/pari-a4s-piha-5ed43b793-vs-d58806806.png. Odottaa PT:n kuittausta.
+  _tyo/pelikoodari/juoksu-223/pari-a4s-piha-5ed43b793-vs-d58806806.png. PT kuittasi 16.3x → JU vie junaan 223 (hoidettu).
 - Tappi-kierto 8841fd32f katsottu ja PT kuittasi 16.1x → JU vie junaan 223 (arkki _tyo/pelikoodari/pulu-lahteet/arkki-tappi-kierto-iphone-8841fd32f.png).
 - Pulun lähteet: merge pulu-v2 → pulu-lahteet (3012382d2), lähde 2 kaupunkinäkymän nähtävyydestä + korttilähde ensin 2f646e622,
   QA siru cb19b7556, diagnoosi e31921ac7.
