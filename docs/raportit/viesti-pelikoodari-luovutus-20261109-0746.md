@@ -18,3 +18,9 @@ Työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, haara pelikoodari/juok
   Kelpaa kaikissa → kuvat KK:lle (local_37f7c945-e1a0-4638-90b8-93c389a36fbe, edellinen PK raportoi KK:lle suoraan) + 3 riviä PT:lle;
   KK hyväksyy → junaan 223 PT:n kautta. Ei kelpaa → lokin ovikuva-riveistä syy (tarve/kenttä/keisari rajattu).
 - Muista: ÄLÄ muuta sk-tiedostoa JU:n ketjun aikana.
+
+## LISÄYS 08.1x (korvaa kohdan 1 "TEE")
+- JU ketju AD 281093d9c VALMIS: iPhone pysty, iPhone vaaka ja iPad – kasvot + keisari d2a–d2c kaikissa, PUUTE 0; video katsottu (pysty: eunukki
+  ja keisari kuvassa koko kurkistuksen, kenttä 74,9° vakio pystyssä). Kuvat KK:lle ja 3 riviä PT:lle 08.1x.
+- ODOTTAA: KK:n hyväksyntä → PT vie junaan 223 (451519f87 + 4c1d100a2 + 281093d9c, haara pelikoodari/juoksu-223). Hylkäys → KK:n syyn mukaan.
+- Huom: laitteella kuvasuhde on oikea ilman komentoa; Mac-ajoissa juoksupelille aina `ui juoksupeli kuvasuhde laite` (muistiin kirjattu).
