@@ -30,9 +30,9 @@ eri maan kohdan päällä = liukuu (65°:ssa ~190 m kehä). Piste ei ole NostotK
 ehdokkaat nähtävyysesittelyn/kierron kohdepiste, AarrepisteRengas, NostoKerros-maailmamerkki, Lautapelinostot; korjaus: korkeudeksi
 MaanPinta.Nosto(lat, lon) kuten merkeillä. Testi: sk-temple-palkki-2 t-1…t-4 ja `ui kohdenostot sijainti Temple-torni`.
 
-## 4. PK:N LIIKETAPPI (OMISTAJA 16.16, PT: sovi PK:n kanssa)
+## 4. PK:N LIIKETAPPI – SULJETTU (PT 17.0x: PK teki liiketapin 781261be7 olemassa olevalla rajapinnalla; ei NUI-työtä)
 PK:lle kerrottu (jonossa): KierronZoom + ajo.zoomKerroin 755a52fab:ssä; PK:n 8cdb4549c ajoLiikeKerroin/AjonLiikeSiirto-rivit koskematta.
 `git merge-tree --write-tree 755a52fab 8cdb4549c`: PalloKierto.cs puhdas, ristiriita vain KameraTappi.cs (PK:n pohja). Odota PK:n vastausta.
 
 ## 5. Jono tämän jälkeen
-Kohdat 2 (kuvat → PT), 3 (Temple-piste), 4 (PK). Muuten jono tyhjä.
+Kohdat 2 (kuvat → PT) ja 3 (Temple-piste kiinni maahan, PT:n ainoa avoin rivi). Muuten jono tyhjä.
