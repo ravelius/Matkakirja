@@ -1051,3 +1051,7 @@ Omistaja 11.05: "olen taas töissä, niin pienelle iPadille voi sitten päivitt�
 ## LONTOON NÄHTÄVYYDET OIKEAAN KOKOON KOKEENA (omistaja 9.11.2026 klo 12.0x) (9.11.2026 klo 12.20)
 
 Omistaja: "ajattelin jopa että voisi kokeilla jos lontoon nähtävyydet palauttaisi kokeeksi oikeaan kokoon. minulla on vielä mietinnässä että miten kaikki euroopan kaupungit kannattaa tehdä." KS tekee kokeen omaan haaraan (ei junaan); muiden kaupunkien tapa omistajan mietinnässä, ei töitä.
+
+## HUUDOT KALA-ALTAALLE JA GRANAATTIOMENAPUULLE KELPAAVAT (omistaja 9.11.2026 klo 12.32) (9.11.2026 klo 12.38)
+
+Omistaja KK:lle: "äänet hyvät" = kaikki 8 ottoa (kala-allas + granaattiomenapuu; promptit KK scratchpad/keskustelukanava/suunnitelmat/20261107-huudot-kala-allas-granaattiomenapuu.md). PK tekee avaimet, testit ja loppuyhteenvedon, NUI antaa ottojen polut; haara PT:lle → junaan 223. Lähde: scratchpad/keskustelukanava/aloitus.md kohta j.
