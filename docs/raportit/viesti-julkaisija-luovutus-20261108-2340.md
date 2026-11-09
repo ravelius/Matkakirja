@@ -152,9 +152,11 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - Monitor: tail -n 0 -f jonoloki | grep -E " AJO [A-Z+]+ |LOPPU|VIKA" – käynnistä HETI aloituksessa ja tarkista jonolokista luovutuksen jälkeen valmistuneet (BS jäi minulta 11.48 väliin).
 
 ## LISÄYS 9.11. 13.5x (TUOREIN; konteksti 25 % → nollaus)
-- JUNA 223 = c11314ade PAIKALLISESTI (b0c6957c2 + VS vesi ff; PT kuittasi, OMISTAJA 13.51 "Kelpaa"); testit AJOSSA (T/juna223-vesi-*.txt, sh T/juna223-vesi-testit.sh).
-  Vihreänä: git -C /Users/Shared/Claude/wt/julkaisija-juna-221 push natiivi-backup HEAD:julkaisija/juna-223 → nohup zsh T/pieni-juna.zsh c11314ade → rivi PT:lle (build + mitä muuttui selkokielellä).
-  Pushattu kärki nyt b0c6957c2 = 82c26c097 + NUI versiorivi 4ab1852b2 + NUI opas-m 6ce1efd49 + KS nostot-kysymykset 2c44703fe + PK sauva aina ff0318ba2 + Lontoo oikea koko c0d5fda05.
+- JUNA 223 = c11314ade PUSHATTU 14.0x (natiivi-backup julkaisija/juna-223) = 82c26c097 + NUI versiorivi 4ab1852b2 + NUI opas-m 6ce1efd49 + KS nostot-kysymykset 2c44703fe
+  + PK sauva aina ff0318ba2 + Lontoo oikea koko c0d5fda05 + VS vesi c11314ade. Testit vihreät (T/juna223-vesi-*.txt: unity 0, Kartta 729, Linssit 2276, Peli 882). PT kerrottu.
+  PIENI iPAD c11314ade (nohup T/pieni-juna.zsh, loki T/pieni-juna-c11314ade.txt) AJOSSA → kun jonolokissa "AJO JU pieni iPad juna c11314ade asennus rc 0":
+  rivi PT:lle: "PIENI iPAD = c11314ade" + uutta c0260c5eb:hen nähden selkokielellä: nostojen kysymystesti (ei näy), kameran sauva aina näkyvissä ja sykähtää,
+  Lontoon nähtävyydet oikeassa koossa + Tower/Tower Bridge -kyltit rannalla, Seine syvemmän sininen elävä vesi kiiltoineen.
 - PIENI iPAD (OMISTAJA 13.03, PT): pysyvä linja – jokainen PT:n kuittaama kokonaisuus → heti pieni iPad + rivi VAIN PT:lle (PT kertoo KK:lle). Asennettu nyt c0260c5eb (13.23).
   Uudempi kärki → tapa odottava pieni-juna (vain jos lapsi pelkkä sleep) ja aja uusin. ☰-kuva (versiorivi) PT:lle SEURAAVAN asennuksen yhteydessä, ei kesken omistajan pelin
   (PT 13.2x: "ei nyt"); vaatii ipad-skenaario.zsh-tyyppisen ajon pienellä iPadilla (U=00008142-0019686E02F3801C), ei poistolippua.
@@ -167,7 +169,8 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - AJOSSA / JONOSSA (nohup, omat, T/jono-<x>.zsh):
   CX NUI palkki-aina-2 74e72a4a4: iphone/ipad/vaaka valmiit (iphone ilmoitettu NUI:lle), ipad-pysty odottaa → kaikki 4 katsottuna NUI:lle.
   DF (korvasi DB:n) CX:n jälkeen: NUI palkki-aina-3 61c8858c2 iphone+ipad, sitten paikkapalkki-1 fb77e12b1 iphone/vaaka/ipad → NUI. CM VS kohoaurinko4 cd74573cd iphone → VS.
+  DG NS lentokorkeus-2 b998fa447 iphone + ipad → täysikokoisena katsottuna NS:lle (pari samasta pysähtyneestä kamerasta, k2 vs k4).
   CY PK napit-kuulto 620425fb7 x3, CZ PK tappi-kierto e0f57e42c x2, DE PK pulu-lahteet e51b66a98 ipad → PK.
-  DD NS lentokorkeus-1 1e55e642a: iphone valmis 13.43, ipad jonossa → molemmat täysikokoisena katsottuna NS:lle (kerroin 4 vs 2, vuoret lennolla).
+  DD lentokorkeus-1 + CZ tappi-kierto + CX palkki-aina-2 VALMIIT ja raportoitu.
   CW peruttu (ipad), CT katkaistu (tilalle CX).
 - Monitor: tail -n 0 -f jonoloki | grep -E " AJO [A-Z+0-9]+ |LOPPU|VIKA|pieni iPad".
