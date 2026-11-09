@@ -49,3 +49,7 @@ pohjaväri. Odota PT:n jakoa; omalla puolella voi pidentää kaupunkien välisen
 Mac-kuvat suunnitelman kohdan 4 mukaan (iPad vaaka, iPhone pysty ja vaaka): Ranska → zoom Pariisi; Ranskan kartalta toisen kaupungin
 nosto → lento → nimi + nosto auki; sulku → paluu (ennen/jälkeen samasta kohdasta); pelaaja liikuttaa → ei paluuta. Uusi skenaario
 sk-paikkapalkki-1.txt (pohjaksi sk-nostovalikko-4.txt: lentokartan ajo ja `ui lentokartta`). → PT → KK → omistaja kortilla.
+
+## Lisäys 09.2x (PT)
+- Lentokäyrä (korkeus ja kesto matkan mukaan, myös paluu) on annettu NS:lle; NS antaa NUI:lle rajapinnan. ÄLÄ pidennä kestoa
+  omalla puolella. Jatka osia 1–3 (osa 1 fb4c270ef valmis, ajamatta).
