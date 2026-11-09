@@ -227,7 +227,7 @@
   "kohde": "kaupunki:wien",
   "kysymys": "Miksi wieniläiset ovat niin ylpeitä kahvilakulttuuristaan?",
   "uusi": true,
-  "vastaus": "No niin, kahvilat. [[Wienin]] kahvilakulttuuri on tunnustettu Unescon aineettoman kulttuuriperinnön listalla, ja sen ydin on se, että kahvilassa saa istua pitkään yhden kupin ääressä lukemassa lehteä, keskustelemassa tai kirjoittamassa. Tarjoilija tuo kahvin yleensä lasillisen vesihanavettä kanssa, ja tunnettuja kahvityyppejä ovat esimerkiksi [[melange]], joka on maitokahvin kaltainen juoma. Perinteisiin kahviloihin kuuluvat marmoripöydät, kaarevat tuolit ja sanomalehtitelineet, ja monet niistä ovat toimineet yli sata vuotta. Kahvilat ovat olleet myös taiteilijoiden ja kirjailijoiden kohtaamispaikkoja, esimerkiksi [[Café Central]] tunnetaan tästä. Kiirettä kahvilaan ei tuoda.\n\nMinä en juo kahvia, mutta pullanmurut kyllä kelpaavat kahvilan ikkunalaudalta, ja Wienissä niitä tuntuu riittävän.",
+  "vastaus": "No niin, kahvilat. [[Wienin]] kahvilakulttuuri on tunnustettu Unescon aineettoman kulttuuriperinnön listalla, ja sen ydin on se, että kahvilassa saa istua pitkään yhden kupin ääressä lukemassa lehteä, keskustelemassa tai kirjoittamassa. Kahvin mukana tarjoilija tuo yleensä lasillisen hanavettä, ja tunnettuja kahvityyppejä ovat esimerkiksi [[melange]], joka on maitokahvin kaltainen juoma. Perinteisiin kahviloihin kuuluvat marmoripöydät, kaarevat tuolit ja sanomalehtitelineet, ja monet niistä ovat toimineet yli sata vuotta. Kahvilat ovat olleet myös taiteilijoiden ja kirjailijoiden kohtaamispaikkoja, esimerkiksi [[Café Central]] tunnetaan tästä. Kiirettä kahvilaan ei tuoda.\n\nMinä en juo kahvia, mutta pullanmurut kyllä kelpaavat kahvilan ikkunalaudalta, ja Wienissä niitä tuntuu riittävän.",
   "linkit": [
    "Wienin",
    "melange",
@@ -543,7 +543,7 @@
   "kohde": "kaupunki:sofia",
   "kysymys": "Mitä Vitosha-vuorella voi tehdä?",
   "uusi": true,
-  "vastaus": "Ai tota. [[Vitosha]] kohoaa Sofian eteläpuolella, ja se on suosittu retkikohde, jonne pääsee kaupungin laidalta bussilla ja gondolihissillä. Kesällä alueella vaelletaan, ja talvella laskettelurinteet houkuttelevat. Korkein huippu [[Cherni Vrăh]] yltää 2 292 metriin, ja ylängöllä on laajoja niittyjä, kallioita ja kivimeriä. Vuoren luonnonpuisto perustettiin vuonna 1934. Tunnettu kohde on [[Boyanan kirkko]] vuoren juurella, joka on Unescon maailmanperintökohde. Sofian asukkaat ovat vuoren ansiosta lähempänä luontoa kuin monen muun pääkaupungin asukkaat. Kaupunki on tuolla ylhäältä pieni.",
+  "vastaus": "Ai tota. [[Vitosha]] kohoaa Sofian eteläpuolella, ja se on suosittu retkikohde, jonne pääsee kaupungin laidalta bussilla ja gondolihissillä. Kesällä alueella vaelletaan, ja talvella laskettelurinteet houkuttelevat. Korkein huippu [[Cherni Vrăh]] yltää noin 2 290 metriin, ja ylängöllä on laajoja niittyjä, kallioita ja kivimeriä. Vuoren luonnonpuisto perustettiin vuonna 1934. Tunnettu kohde on [[Boyanan kirkko]] vuoren juurella, joka on Unescon maailmanperintökohde. Sofian asukkaat ovat vuoren ansiosta lähempänä luontoa kuin monen muun pääkaupungin asukkaat. Kaupunki on tuolla ylhäältä pieni.",
   "linkit": [
    "Vitosha",
    "Cherni Vrăh",
@@ -839,7 +839,7 @@
   "kohde": "kaupunki:minsk",
   "kysymys": "Mikä on Minskin Yläkaupunki?",
   "uusi": true,
-  "vastaus": "Selvä juttu. [[Yläkaupunki]] on Minskin vanha ydinalue, jonka rakennukset syntyivät 1800-luvulla, kun kaupunki kasvoi kuvernementin keskuksena ja nousi uudeksi rautatieliikenteen solmukohdaksi. Siellä rakennettiin kaksi- ja kolmikerroksisia tiili- ja kivitaloja, ja alue muistuttaa edelleen kaupungin vanhemmasta ilmeestä. Tarkkoja katuja ja rakennuksia en ole varma luettelemaan, mutta alue sijaitsee [[Svislač]]-joen lähellä ja on nykyään suosittu kävelyalue. Perimätiedon mukaan sen kaduilla on kuljettu jo isoisän aikaan, ja rakennukset ovat ehtineet nähdä paljon. Siinä se.",
+  "vastaus": "Selvä juttu. [[Yläkaupunki]] on Minskin vanha ydinalue, jonka historia ulottuu keskiajalle. Siellä rakennettiin kaksi- ja kolmikerroksisia tiili- ja kivitaloja, ja alue muistuttaa edelleen kaupungin vanhemmasta ilmeestä. Tarkkoja katuja ja rakennuksia en ole varma luettelemaan, mutta alue sijaitsee [[Svislač]]-joen lähellä ja on nykyään suosittu kävelyalue. Perimätiedon mukaan sen kaduilla on kuljettu jo isoisän aikaan, ja rakennukset ovat ehtineet nähdä paljon. Siinä se.",
   "linkit": [
    "Yläkaupunki",
    "Svislač"
@@ -881,7 +881,7 @@
   "kohde": "kaupunki:minsk",
   "kysymys": "Millaisessa ympäristössä Minsk sijaitsee?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Minsk sijaitsee Itä-Euroopan matalalla tasangolla noin 220 metrin korkeudessa, ja kaupungin läpi virtaa [[Svislač]]. [[Valko-Venäjä]] on enimmäkseen matalaa tasankoa, jossa metsää on noin 43 prosenttia maa-alasta ja järviä noin 4 000. Ilmasto on hemiboreaalinen eli viileä, ja tammikuun keskilämpötila on noin −6 astetta. Kaupungin lähellä ei ole vuoria, ja maisemaa hallitsevat metsät, joet ja peltoaukeat. Talvella ylhäältä katsoessa on aika valkoista.",
+  "vastaus": "Hyvä kysymys tuo. Minsk sijaitsee Itä-Euroopan matalalla tasangolla noin 220 metrin korkeudessa, ja kaupungin läpi virtaa [[Svislač]]. [[Valko-Venäjä]] on enimmäkseen matalaa tasankoa, jossa metsää on noin 43 prosenttia maa-alasta ja järviä noin 11 000. Ilmasto on hemiboreaalinen eli viileä, ja tammikuun keskilämpötila on muutaman asteen pakkasella. Kaupungin lähellä ei ole vuoria, ja maisemaa hallitsevat metsät, joet ja peltoaukeat. Talvella ylhäältä katsoessa on aika valkoista.",
   "linkit": [
    "Svislač",
    "Valko-Venäjä"
@@ -1197,7 +1197,7 @@
   "kohde": "kaupunki:nikosia",
   "kysymys": "Mitä Nikosiassa tapahtui vuonna 1878?",
   "uusi": true,
-  "vastaus": "Mmm— tämä on historiaa. Heinäkuun 12. päivänä 1878 saaren hallinto siirtyi Britannialle, ja [[Union Jack]] nostettiin Nikosiassa vara-amiraali Lord John Hayn läsnä ollessa. Britannia ja [[Osmanien valtakunta]] olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyi muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtui. Ensimmäinen korkea komissaari [[Garnet Wolseley]] saapui Nikosiaan 31. heinäkuuta ja ryhtyi kokoamaan hallintoa. Kaupustelijat tuskin ehtivät huomata, että heidän maansa hallitsija oli vaihtunut.",
+  "vastaus": "Mmm— tämä on historiaa. Heinäkuun 12. päivänä 1878 saaren hallinto siirtyi Britannialle, ja [[Union Jack]] nostettiin Nikosiassa vara-amiraali Lord John Hayn läsnä ollessa. Britannia ja [[Osmanien valtakunta]] olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyi muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtui. Ensimmäinen korkea komissaari [[Garnet Wolseley]] saapui pian Nikosiaan ja ryhtyi kokoamaan hallintoa. Kaupustelijat tuskin ehtivät huomata, että heidän maansa hallitsija oli vaihtunut.",
   "linkit": [
    "Union Jack",
    "Osmanien valtakunta",
@@ -1257,7 +1257,7 @@
   "kohde": "maa:CZE",
   "kysymys": "Mikä on Pravčická brána?",
   "uusi": true,
-  "vastaus": "Tuota niin. [[Pravčická brána]] on Tšekin luoteiskulman hiekkakivialueella sijaitseva luonnonkiviportti, ja sitä pidetään Euroopan suurimpana luonnon kiviporttina. Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Portti sijaitsee [[Böömin]] kansallispuiston alueella, ja se on suosittu retkikohde. Tarkkoja mittoja en ole varma antamaan, joten ne kannattaa tarkistaa erikseen. Tuuli ja vesi ovat tehneet kaiken ilman yhtään siipeä.",
+  "vastaus": "Tuota niin. [[Pravčická brána]] on Tšekin pohjoisosan hiekkakivialueella sijaitseva luonnonkiviportti, ja sitä pidetään Euroopan suurimpana luonnon kiviporttina. Seutu ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Portti sijaitsee [[Böömin]] Sveitsin kansallispuiston alueella, ja se on suosittu retkikohde. Tarkkoja mittoja en ole varma antamaan, joten ne kannattaa tarkistaa erikseen. Tuuli ja vesi ovat tehneet kaiken ilman yhtään siipeä.",
   "linkit": [
    "Pravčická brána",
    "Böömin"
@@ -1403,7 +1403,7 @@
   "kohde": "maa:DEU",
   "kysymys": "Miksi Berliinin muuri avautui 9. marraskuuta 1989?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Itä-Saksa aikoi helpottaa matkustussääntöjä vasta seuraavana päivänä, mutta tiedottaja Günter Schabowski sai käteensä keskeneräisen paperin. Kun toimittaja kysyi suorassa lähetyksessä, milloin uudet säännöt tulevat voimaan, Schabowski vastasi: ”Tietääkseni heti.” Kymmenettuhannet itäberliiniläiset lähtivät samana iltana [[Berliinin muuri]]lle, rajavartijat avasivat puomit, ja 28 vuotta kaupungin halkaissut muuri alkoi murtua vielä samana yönä. Tapahtuma johti [[Saksan yhdistymiseen]] seuraavana vuonna. Onpas siit onneksi pitkä aika, ja se päättyi hyvin.",
+  "vastaus": "Hetkinen ny. Itä-Saksa aikoi helpottaa matkustussääntöjä vasta seuraavana päivänä, mutta tiedottaja Günter Schabowski sai käteensä keskeneräisen paperin. Kun toimittaja kysyi suorassa lähetyksessä, milloin uudet säännöt tulevat voimaan, Schabowski vastasi: ”Tietääkseni heti.” Kymmenet tuhannet itäberliiniläiset lähtivät samana iltana [[Berliinin muuri]]lle, rajavartijat avasivat puomit, ja 28 vuotta kaupungin halkaissut muuri alkoi murtua vielä samana yönä. Tapahtuma johti [[Saksan yhdistymiseen]] seuraavana vuonna. Onpas siit onneksi pitkä aika, ja se päättyi hyvin.",
   "linkit": [
    "Berliinin muuri",
    "Saksan yhdistymiseen"
@@ -1417,7 +1417,7 @@
   "kohde": "maa:DEU",
   "kysymys": "Kuka oli Clara Wieck?",
   "uusi": true,
-  "vastaus": "Ai se. Clara Wieck oli saksalainen pianisti ja säveltäjä, joka soitti ensimmäisen julkisen konserttinsa [[Leipzigissa]] yhdeksänvuotiaana ja kiersi teini-ikäisenä Euroopan konserttisaleja. Wienissä hänen kunniakseen leivottiin kakkuja. Hän soitti ulkomuistista aikana, jolloin se oli ennenkuulumatonta, sävelsi itse ja jatkoi esiintymistä kuusikymmentä vuotta samalla kun kasvatti kahdeksan lasta. Saksa painoi hänen kuvansa sadan markan seteliin vuonna 1989. Hän oli naimisissa säveltäjä [[Robert Schumann]]in kanssa, ja häntä kutsutaan usein nimellä [[Clara Schumann]]. Harva pianisti on päätynyt rahaan, ja kyyhky ei ainakaan.",
+  "vastaus": "Ai se. Clara Wieck oli saksalainen pianisti ja säveltäjä, joka soitti ensimmäisen julkisen konserttinsa [[Leipzigissa]] yhdeksänvuotiaana ja kiersi teini-ikäisenä Euroopan konserttisaleja. Hän soitti ulkomuistista aikana, jolloin se oli ennenkuulumatonta, sävelsi itse ja jatkoi esiintymistä kuusikymmentä vuotta samalla kun kasvatti kahdeksan lasta. Saksa painoi hänen kuvansa sadan markan seteliin vuonna 1989. Hän oli naimisissa säveltäjä [[Robert Schumann]]in kanssa, ja häntä kutsutaan usein nimellä [[Clara Schumann]]. Harva pianisti on päätynyt rahaan, ja kyyhky ei ainakaan.",
   "linkit": [
    "Leipzigissa",
    "Robert Schumann",
@@ -1447,7 +1447,7 @@
   "kohde": "maa:DEU",
   "kysymys": "Miksi Saksassa on niin monta leipälajia?",
   "uusi": true,
-  "vastaus": "Nyt muistan:  [[Saksassa]] leivotaan noin kolmeatuhatta eri [[leipälajia]], ja leipä on iso osa ruokakulttuuria. Leipälajit vaihtelevat alueittain: pohjoisessa suositaan usein tummaa ja tiivistä [[ruisleipää]], etelässä vaaleampia ja pehmeämpiä lajeja. Tarkkaa selitystä leipälajien määrälle en ole varma antamaan, mutta eri alueiden viljat, perinteet ja pienleipomot ovat osaltaan muokanneet valikoimaa. Leipä on arjen ydin, ja sitä syödään aamupalalla, lounaalla ja illalla. Pullaa Saksassa on varmasti myös, vaikka nimeä en löydä. Leipä menee kyllä minullekin.",
+  "vastaus": "Nyt muistan: [[Saksassa]] leivotaan noin kolmeatuhatta eri [[leipälajia]], ja leipä on iso osa ruokakulttuuria. Leipälajit vaihtelevat alueittain: pohjoisessa suositaan usein tummaa ja tiivistä [[ruisleipää]], etelässä vaaleampia ja pehmeämpiä lajeja. Tarkkaa selitystä leipälajien määrälle en ole varma antamaan, mutta eri alueiden viljat, perinteet ja pienleipomot ovat osaltaan muokanneet valikoimaa. Leipä on arjen ydin, ja sitä syödään aamupalalla, lounaalla ja illalla. Pullaa Saksassa on varmasti myös, vaikka nimeä en löydä. Leipä menee kyllä minullekin.",
   "linkit": [
    "Saksassa",
    "leipälajia",
@@ -1476,7 +1476,7 @@
   "kohde": "kaupunki:berliini",
   "kysymys": "Miksi Berliinin muuri rakennettiin?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Tämä on vakava asia. Berliinin [[muuri]] rakennettiin vuonna 1961, koska Itä-Saksasta oli lähtenyt kaupungin kautta länteen valtava määrä ihmisiä, ja itäinen valtio halusi pysäyttää muuton. Rajalla oli kaupungin sisällä erotettu toisistaan Itä-Berliini ja Länsi-Berliini, ja kadut sekä metrolinjat katkesivat kesken. Muuri oli pystyssä 28 vuotta, ja se avattiin 9. marraskuuta 1989, jonka jälkeen [[Saksan yhdistyminen]] oli enää ajan kysymys. Onpas siitä onneksi jo pitkä aika.",
+  "vastaus": "Hetkinen ny. Tämä on vakava asia. Berliinin [[muuri]] rakennettiin vuonna 1961, koska Itä-Saksasta oli lähtenyt kaupungin kautta länteen valtava määrä ihmisiä, ja itäinen valtio halusi pysäyttää muuton. Raja erotti kaupungin sisällä toisistaan Itä-Berliinin ja Länsi-Berliinin, ja kadut sekä metrolinjat katkesivat kesken. Muuri oli pystyssä 28 vuotta, ja se avattiin 9. marraskuuta 1989, jonka jälkeen [[Saksan yhdistyminen]] oli enää ajan kysymys. Onpas siitä onneksi jo pitkä aika.",
   "linkit": [
    "muuri",
    "Saksan yhdistyminen"
@@ -1832,7 +1832,7 @@
   "kohde": "kaupunki:barcelona",
   "kysymys": "Miksi Barcelonan korttelien kulmat on viistetty?",
   "uusi": true,
-  "vastaus": "Kato, hyvä havainto. Barcelonan Eixample-alueen korttelit suunnitteli insinööri [[Ildefons Cerdà]] 1850-luvun jälkeen, kun kaupungin muurit oli purettu. Korttelin sivu on 113 metriä, ja jokainen kulma on viistetty, jotta risteyksiin jää tilaa valolle, ilmalle ja kääntyville vaunuille. Ruudukko on säännöllinen ja avara, ja se erottuu selvästi vanhankaupungin kapeista kaduista. [[Eixample]] on kaupungin laajin asuinalue, ja sen ilme on yhä Cerdàn käsialaa. Viistetyt kulmat näkyvät ylhäältä kuin leikattuina, ja minä pidän siitä.",
+  "vastaus": "Kato, hyvä havainto. Barcelonan Eixample-alueen korttelit suunnitteli insinööri [[Ildefons Cerdà]] 1850-luvun jälkeen, kun kaupungin muurit oli purettu. Korttelin sivu on 113 metriä, ja jokainen kulma on viistetty, jotta risteyksiin jää tilaa valolle, ilmalle ja kääntyville vaunuille. Ruudukko on säännöllinen ja avara, ja se erottuu selvästi vanhankaupungin kapeista kaduista. [[Eixample]] on kaupungin laaja ruutukaava-alue, ja sen ilme on yhä Cerdàn käsialaa. Viistetyt kulmat näkyvät ylhäältä kuin leikattuina, ja minä pidän siitä.",
   "linkit": [
    "Ildefons Cerdà",
    "Eixample"
@@ -1846,7 +1846,7 @@
   "kohde": "kaupunki:barcelona",
   "kysymys": "Mitä ovat Katalonian ihmistornit?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Ihmistornit eli castells ovat katalonialainen perinne, jossa ihmiset kiipeävät toistensa harteille korkeiksi torneiksi. Alimmassa kerroksessa on vahva joukko, ja ylimpänä on lapsi, joka nostaa lopuksi kätensä. Tornin rakentajia sanotaan [[castellereiksi]], ja perinne kuuluu [[Unescon aineettomaan kulttuuriperintöön]]. Tornit rakennetaan juhlissa ja kilpailuissa, ja yhteistyö on tärkeämpää kuin yksittäinen voima. Tarkkoja korkeusennätyksiä en ole varma. Pojan kädennosto huipulla on kuulemma se hetki, jonka vuoksi yleisö hiljenee.\n\nMinä pysyn mieluummin siivillä, kiitos.",
+  "vastaus": "Tost minä osaan kertoo. Ihmistornit eli castells ovat katalonialainen perinne, jossa ihmiset kiipeävät toistensa harteille korkeiksi torneiksi. Alimmassa kerroksessa on vahva joukko, ja ylimpänä on lapsi, joka nostaa lopuksi kätensä. Tornin rakentajia sanotaan [[castellereiksi]], ja perinne kuuluu [[Unescon aineettomaan kulttuuriperintöön]]. Tornit rakennetaan juhlissa ja kilpailuissa, ja yhteistyö on tärkeämpää kuin yksittäinen voima. Tarkkoja korkeusennätyksiä en ole varma. Lapsen kädennosto huipulla on kuulemma se hetki, jonka vuoksi yleisö hiljenee.\n\nMinä pysyn mieluummin siivillä, kiitos.",
   "linkit": [
    "castellereiksi",
    "Unescon aineettomaan kulttuuriperintöön"
@@ -1930,7 +1930,7 @@
   "kohde": "kaupunki:granada",
   "kysymys": "Mikä on Sacromonte ja zambra?",
   "uusi": true,
-  "vastaus": "Ai tota. Sacromonte on Granadan kaupunginosa Albaicínin takana olevalla rinteellä, jossa luolat toimivat asuntoina. Luolissa kehittyi zambra, oma flamencon muoto, jota on perinteisesti esitetty luolatiloissa. [[Zambra]] on sidottu paikkaan ja yhteisöön, ja luola-asunnot ovat edelleen osa alueen ilmettä. Sacromonte on kaupungin romaaniyhteisön perinteinen asuinalue, ja alueen kulttuurista on tullut kiinnostava matkailijoille. [[Sacromonte]] on siis sekä asuinalue että kulttuuriperinnön paikka. [[Albaicín]] on sen vieressä sijaitseva vanha maurilainen kaupunginosa. Tarkkoja tietoja asukasmääristä en ole varma.",
+  "vastaus": "Ai tota. Sacromonte on Granadan kaupunginosa Albaicínin takana olevalla rinteellä, jossa luolat toimivat asuntoina. Luolissa kehittyi zambra, oma flamencon muoto, jota on perinteisesti esitetty luolatiloissa. [[Zambra]] on sidottu paikkaan ja yhteisöön, ja luola-asunnot ovat edelleen osa alueen ilmettä. Sacromonte on kaupungin romaniyhteisön perinteinen asuinalue, ja alueen kulttuurista on tullut kiinnostava matkailijoille. [[Sacromonte]] on siis sekä asuinalue että kulttuuriperinnön paikka. [[Albaicín]] on sen vieressä sijaitseva vanha maurilainen kaupunginosa. Tarkkoja tietoja asukasmääristä en ole varma.",
   "linkit": [
    "Zambra",
    "Sacromonte",
@@ -2045,7 +2045,7 @@
   "kohde": "maa:EST",
   "kysymys": "Mikä on Viron Kaalin kraatteri?",
   "uusi": true,
-  "vastaus": "Kääk— ei, ei, odotas, se on vain kuoppa. Kaalin kraatteri on Saarenmaalla sijaitseva täysin pyöreä kuoppa metsän keskellä, ja sen teki taivaalta pudonnut rautameteoriitti. Kraatteri on halkaisijaltaan noin sata metriä, ja pohjalla on pieni lampi. [[Kaalin kraatteri]] syntyi tuhansia vuosia sitten, mutta ajankohdasta lähteet esittävät vaihtelevia arvioita, enkä ole varma tarkasta vuodesta. Kraatteri on Euroopan harvinaisimpia meteoriittikraattereita, mutta superlatiivin jätän tästä pois. [[Saarenmaa]] on Viron suurin saari, ja sinne pääsee lautalla.",
+  "vastaus": "Kääk— ei, ei, odotas, se on vain kuoppa. Kaalin kraatteri on Saarenmaalla sijaitseva täysin pyöreä kuoppa metsän keskellä, ja sen teki taivaalta pudonnut rautameteoriitti. Kraatteri on halkaisijaltaan noin sata metriä, ja pohjalla on pieni lampi. [[Kaalin kraatteri]] syntyi tuhansia vuosia sitten, mutta ajankohdasta lähteet esittävät vaihtelevia arvioita, enkä ole varma tarkasta vuodesta. Kraatteri on harvinainen näky. [[Saarenmaa]] on Viron suurin saari, ja sinne pääsee lautalla.",
   "linkit": [
    "Kaalin kraatteri",
    "Saarenmaa"
@@ -2316,7 +2316,7 @@
   "kohde": "kaupunki:helsinki",
   "kysymys": "Millaista Helsingin meri on talvella?",
   "uusi": true,
-  "vastaus": "Odotas vähän, tää on mielenkiintoinen. [[Suomenlahti]] jäätyy Helsingin edustalla useimpina talvina, ja [[jäänmurtajat]] pitävät kaupungin satamaan johtavat väylät auki. Ihmiset kävelevät, hiihtävät ja potkukelkkailevat jäällä, ja joillakin on tapana kiertää saaria jäätä pitkin. Monet käyvät myös [[avantouintia]] harrastamassa rannoilla, jossa kuuma sauna ja kylmä vesi vuorottelevat. Jäänmurtajat ovat tärkeitä, koska kaupungin tavara kulkee yhä paljolti meritse. Itse pysyn mieluummin siivillä, jäällä on liukasta.",
+  "vastaus": "Odotas vähän, tää on mielenkiintoinen. [[Suomenlahti]] jäätyy Helsingin edustalla useimpina talvina, ja [[jäänmurtajat]] pitävät kaupungin satamaan johtavat väylät auki. Ihmiset kävelevät, hiihtävät ja potkukelkkailevat jäällä, ja joillakin on tapana kiertää saaria jäätä pitkin. Monet käyvät myös [[avantouintia]] harrastamassa rannoilla, joissa kuuma sauna ja kylmä vesi vuorottelevat. Jäänmurtajat ovat tärkeitä, koska kaupungin tavara kulkee yhä paljolti meritse. Itse pysyn mieluummin siivillä, jäällä on liukasta.",
   "linkit": [
    "Suomenlahti",
    "jäänmurtajat",
@@ -2793,7 +2793,7 @@
   "kohde": "kaupunki:lontoo",
   "kysymys": "Miksi Lontoossa on kaksi keskustaa?",
   "uusi": true,
-  "vastaus": "Odotas vähän, tää on mielenkiintoinen. Lontoon keskustassa on tosiaan kaksi eri kaupunkia. Rahaa tekevä City of London on vain 2,9 neliökilometrin kokoinen alue, jolla on omat säännöt ja oma hallintonsa, ja siellä sijaitsevat muun muassa [[Englannin pankki]] ja suuri osa rahoitusalan yrityksistä. Sen vieressä on [[Westminster]], jossa ovat parlamentti, hallinto ja kuninkaalliset seremoniat. Parlamenttitalon kellotorni tunnetaan nimellä [[Big Ben]] viitaten sen suureen kelloon. Kaksi eri maailmaa vierekkäin, ja minä lensin välillä niiden yli ilman viisumia.",
+  "vastaus": "Odotas vähän, tää on mielenkiintoinen. Lontoon keskustassa on tosiaan kaksi eri kaupunkia. Rahaa tekevä City of London on vain 2,9 neliökilometrin kokoinen alue, jolla on omat säännöt ja oma hallintonsa, ja siellä sijaitsevat muun muassa [[Englannin pankki]] ja suuri osa rahoitusalan yrityksistä. Sen vieressä on [[Westminster]], jossa ovat parlamentti, hallinto ja kuninkaalliset seremoniat. Parlamenttitalon kellotornin suurta kelloa kutsutaan nimellä [[Big Ben]]. Kaksi eri maailmaa vierekkäin, ja minä lensin välillä niiden yli ilman viisumia.",
   "linkit": [
    "Englannin pankki",
    "Westminster",
@@ -2808,7 +2808,7 @@
   "kohde": "kaupunki:lontoo",
   "kysymys": "Miksi lontoolaisten taksikuskien pitää opetella koko kaupunki?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Lontoon perinteisten mustien [[mustien taksien]] kuljettajien täytyy suorittaa vaativa koe nimeltä [[the Knowledge]], jossa opitaan ulkoa noin 25 000 katua ja tärkeät paikat Charing Crossin ympäriltä. Opiskelu kestää usein vuosia, eikä apuna saa käyttää karttaa. Koe on tehty varmistamaan, että kuljettaja löytää perille kaupungin mutkaisilla ja vanhoilla kaduilla ilman navigaattoria. Nykyään navigaattorit ovat tavallisia, mutta mustien taksien kuljettajat pitävät tästä perinteestä kiinni. Minulla ei ole koskaan ollut karttaa, vaan nenä ja oikea suunta.",
+  "vastaus": "Joo, tän minä tiedän. Lontoon perinteisten [[mustien taksien]] kuljettajien täytyy suorittaa vaativa koe nimeltä [[the Knowledge]], jossa opitaan ulkoa noin 25 000 katua ja tärkeät paikat Charing Crossin ympäriltä. Opiskelu kestää usein vuosia, eikä apuna saa käyttää karttaa. Koe on tehty varmistamaan, että kuljettaja löytää perille kaupungin mutkaisilla ja vanhoilla kaduilla ilman navigaattoria. Nykyään navigaattorit ovat tavallisia, mutta mustien taksien kuljettajat pitävät tästä perinteestä kiinni. Minulla ei ole koskaan ollut karttaa, vaan nenä ja oikea suunta.",
   "linkit": [
    "mustien taksien",
    "the Knowledge"
@@ -2938,7 +2938,7 @@
   "kohde": "maa:GRC",
   "kysymys": "Miten Kreikan itsenäisyyssota ottomaaneja vastaan alkoi?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Se on kuitenkin raskaampi tarina. Kreikkalaisten kansannousu ottomaanien valtaa vastaan alkoi vuonna 1821, kun kapina syttyi sekä [[Peloponnesoksella]] että Tonavan ruhtinaskunnissa. Taistelut jatkuivat vuosia, ja ratkaisevaa oli suurvaltojen väliintulo: Britannia, Ranska ja Venäjä tukivat kreikkalaisia, ja vuonna 1827 ottomaanien ja egyptiläinen laivasto tuhoutui [[Navarinon]] meritaistelussa. Itsenäinen Kreikka tunnustettiin vaiheittain, ja sen ensimmäiseksi kuninkaaksi tuli baijerilainen [[Otto]]. Onpa siitä onneksi pitkä aika.",
+  "vastaus": "Joo, tän minä tiedän. Se on kuitenkin raskaampi tarina. Kreikkalaisten kansannousu ottomaanien valtaa vastaan alkoi vuonna 1821, kun kapina syttyi sekä [[Peloponnesoksella]] että Tonavan ruhtinaskunnissa. Taistelut jatkuivat vuosia, ja ratkaisevaa oli suurvaltojen väliintulo: Britannia, Ranska ja Venäjä tukivat kreikkalaisia, ja vuonna 1827 ottomaanien ja Egyptin yhteinen laivasto tuhoutui [[Navarinon]] meritaistelussa. Itsenäinen Kreikka tunnustettiin vaiheittain, ja sen ensimmäiseksi kuninkaaksi tuli baijerilainen [[Otto]]. Onpa siitä onneksi pitkä aika.",
   "linkit": [
    "Peloponnesoksella",
    "Navarinon",
@@ -2995,7 +2995,7 @@
   "kohde": "kaupunki:ateena",
   "kysymys": "Miten demokratia toimi antiikin Ateenassa?",
   "uusi": true,
-  "vastaus": "Tuota niin. Tästä on kirjoitettu enemmän kuin yhdestäkään toisesta kaupungista. Ateenan demokratia kehittyi 500-luvulla eaa., ja sen uudistajana pidetään [[Kleisthenesta]]. Päätökset teki [[kansankokous]], joka kokoontui usein Pnyx-kukkulalla, ja moniin virkoihin valittiin kansalaisia arvalla. Äänioikeus oli kuitenkin vain aikuisilla miespuolisilla kansalaisilla, eivät naisilla, orjilla tai ulkomaalaisilla. Pidemmälle kuin toisella vuosisadalla tuo järjestelmä ei sellaisenaan kestänyt. Lopulta se jäi muistiin, vaikka kokoukset olivat varmasti pitkiä.",
+  "vastaus": "Tuota niin. Tästä on kirjoitettu enemmän kuin yhdestäkään toisesta kaupungista. Ateenan demokratia kehittyi 500-luvulla eaa., ja sen uudistajana pidetään [[Kleisthenesta]]. Päätökset teki [[kansankokous]], joka kokoontui usein Pnyx-kukkulalla, ja moniin virkoihin valittiin kansalaisia arvalla. Äänioikeus oli kuitenkin vain aikuisilla miespuolisilla kansalaisilla, ei naisilla, orjilla tai ulkomaalaisilla. Makedonian valta lopetti järjestelmän sellaisenaan 300-luvun lopulla eaa. Lopulta se jäi muistiin, vaikka kokoukset olivat varmasti pitkiä.",
   "linkit": [
    "Kleisthenesta",
    "kansankokous"
@@ -3053,7 +3053,7 @@
   "kohde": "kaupunki:kreeta",
   "kysymys": "Mitä Knossoksen palatsista tiedetään?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Tästä riittäisi juttua pitkäksi aikaa. Knossoksen palatsi oli minolaisen kulttuurin keskus noin neljätuhatta vuotta sitten, ja siinä oli satoja huoneita, valokuiluja ja viemäreitä. Brittiläinen arkeologi [[Arthur Evans]] kaivoi paikkaa 1900-luvun alusta lähtien ja rekonstruoi osia siitä, mikä on aiheuttanut myös kiistaa. Hallinnon savitauluissa on [[lineaari A]] -kirjoitusta, jota ei ole vieläkään pystytty lukemaan. Palatsin sokkeloisuudesta on kerrottu myös myyttiä [[Minotauroksesta]]. Eksyisin siellä heti.",
+  "vastaus": "Selvä juttu. Tästä riittäisi juttua pitkäksi aikaa. Knossoksen palatsi oli minolaisen kulttuurin keskus noin neljätuhatta vuotta sitten, ja siinä oli satoja huoneita, valokuiluja ja viemäreitä. Brittiläinen arkeologi [[Arthur Evans]] kaivoi paikkaa 1900-luvun alusta lähtien ja rekonstruoi osia siitä, mikä on aiheuttanut myös kiistaa. Hallinnon savitauluissa on muun muassa [[lineaari A]] -kirjoitusta, jota ei ole vieläkään pystytty lukemaan. Palatsin sokkeloisuudesta on kerrottu myös myyttiä [[Minotauroksesta]]. Eksyisin siellä heti.",
   "linkit": [
    "Arthur Evans",
    "lineaari A",
@@ -3197,7 +3197,7 @@
   "kohde": "kaupunki:zagreb",
   "kysymys": "Miksi vuoden 1880 maanjäristys muutti Zagrebin ilmeen?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Tämä oli raskas hetki kaupungille. Zagrebin maanjäristys marraskuussa 1880 vaurioitti tuomiokirkkoa ja monia muita rakennuksia, ja sen jälkeen kaupunkia kunnostettiin laajasti. Kirkon kaksoistornit valmistuivat vasta 1889–1899 uusgoottilaisessa asussa arkkitehti [[Hermann Bollén]] suunnitelmien mukaan, ja uusi rakentaminen muokkasi myös [[Alakaupungin]] ilmettä. Siitä on onneksi pitkä aika.",
+  "vastaus": "Hetkinen ny. Tämä oli raskas hetki kaupungille. Zagrebin maanjäristys marraskuussa 1880 vaurioitti tuomiokirkkoa ja monia muita rakennuksia, ja sen jälkeen kaupunkia kunnostettiin laajasti. Kirkon kaksoistornit valmistuivat vasta myöhemmin uusgoottilaisessa asussa arkkitehti [[Hermann Bollén]] suunnitelmien mukaan, ja uusi rakentaminen muokkasi myös [[Alakaupungin]] ilmettä. Siitä on onneksi pitkä aika.",
   "linkit": [
    "Hermann Bollén",
    "Alakaupungin"
@@ -3211,7 +3211,7 @@
   "kohde": "kaupunki:zagreb",
   "kysymys": "Mikä on Zagrebin funikulaari?",
   "uusi": true,
-  "vastaus": "Kas vaan. Lyhyt reitti, mutta tärkeä. Funikulaari on köysirata, joka yhdistää Alakaupungin ja [[Yläkaupungin]], ja se avattiin vuonna 1890. Matka kestää alle minuutin, ja rata on yksi maailman lyhimmistä julkisista kulkuneuvoista. Yläkaupungissa sijaitsee [[Lotrščak-torni]], jonka tykki laukaistaan joka päivä puolenpäivän aikaan. Minä menen mieluummin siivillä.",
+  "vastaus": "Kas vaan. Lyhyt reitti, mutta tärkeä. Funikulaari on köysirata, joka yhdistää Alakaupungin ja [[Yläkaupungin]], ja se avattiin vuonna 1893. Matka kestää alle minuutin, ja rata on yksi maailman lyhimmistä julkisista kulkuneuvoista. Yläkaupungissa sijaitsee [[Lotrščak-torni]], jonka tykki laukaistaan joka päivä puolenpäivän aikaan. Minä menen mieluummin siivillä.",
   "linkit": [
    "Yläkaupungin",
    "Lotrščak-torni"
@@ -3225,7 +3225,7 @@
   "kohde": "kaupunki:zagreb",
   "kysymys": "Mitä on štrukli?",
   "uusi": true,
-  "vastaus": "Tuota niin. Se on makea tai suolainen, ja tuoksuu hyvältä. Štrukli on [[Zagorjen]] alueen perinteinen ruoka, jossa ohut taikina täytetään tuorejuustolla ja kermalla ja sitten joko keitetään tai uunitetaan. Zagrebin kahviloissa ja ravintoloissa se on suosittu ruoka. Tuorejuuston ansiosta täyte on pehmeä, ja päälle tulee rapea kuori. Pulla se ei ole, mutta [[tuorejuusto]] tekee siitä silti perso-kelpoisen.",
+  "vastaus": "Tuota niin. Se on makea tai suolainen, ja tuoksuu hyvältä. Štrukli on [[Zagorjen]] alueen perinteinen ruoka, jossa ohut taikina täytetään tuorejuustolla ja kermalla ja sitten joko keitetään tai uunitetaan. Zagrebin kahviloissa ja ravintoloissa se on suosittu ruoka. Tuorejuuston ansiosta täyte on pehmeä, ja päälle tulee rapea kuori. Pulla se ei ole, mutta [[tuorejuusto]] tekee siitä silti herkullisen.",
   "linkit": [
    "Zagorjen",
    "tuorejuusto"
@@ -3325,7 +3325,7 @@
   "kohde": "kaupunki:dubrovnik",
   "kysymys": "Miten turismi on muuttanut Dubrovnikin vanhaakaupunkia?",
   "uusi": true,
-  "vastaus": "Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on noin 500 metriä pitkä, ja kunnassa asuu noin 42 000 ihmistä, mutta pelkästään muureilla kävelee vuodessa noin 1,2 miljoonaa. [[Risteilyalusten]] päiväkävijät täyttävät pääkadun [[Stradunin]] ruuhkaksi, ja viranomaiset ovat rajoittaneet kävijämääriä ja laivojen saapumista. Alue kuuluu [[Unescon]] maailmanperintökohteisiin. Monet paikalliset ovat muuttaneet vanhastakaupungista pois, koska asuntoja on muutettu majoitukseksi.",
+  "vastaus": "Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on pieni, ja kunnassa asuu noin 42 000 ihmistä, mutta pelkästään muureilla kävelee vuodessa noin 1,2 miljoonaa. [[Risteilyalusten]] päiväkävijät täyttävät pääkadun [[Stradunin]] ruuhkaksi, ja viranomaiset ovat rajoittaneet kävijämääriä ja laivojen saapumista. Alue kuuluu [[Unescon]] maailmanperintökohteisiin. Monet paikalliset ovat muuttaneet vanhastakaupungista pois, koska asuntoja on muutettu majoitukseksi.",
   "linkit": [
    "Risteilyalusten",
    "Stradunin",
@@ -3468,7 +3468,7 @@
   "kohde": "kaupunki:budapest",
   "kysymys": "Millainen rakennus Unkarin parlamenttitalo on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Se on kaunis. Parlamenttitalo on uusgoottilainen jättiläinen Tonavan Pestin puoleisella rannalla, ja sen suunnitteli arkkitehti [[Imre Steindl]]. Rakentaminen kesti kymmeniä vuosia, ja talo valmistui 1900-luvun alussa. Sen kupolihallissa säilytetään [[Pyhän Tapanin kruunu]], Unkarin perinteistä kruunua. Rakennus näkyy hyvin joen toiselta puolelta, ja siipikarjakin sen huomaa.",
+  "vastaus": "Annas ku mietin. Se on kaunis. Parlamenttitalo on uusgoottilainen jättiläinen Tonavan Pestin puoleisella rannalla, ja sen suunnitteli arkkitehti [[Imre Steindl]]. Rakentaminen kesti lähes kaksikymmentä vuotta, ja talo valmistui 1900-luvun alussa. Sen kupolihallissa säilytetään [[Pyhän Tapanin kruunu]], Unkarin perinteistä kruunua. Rakennus näkyy hyvin joen toiselta puolelta, ja siipikarjakin sen huomaa.",
   "linkit": [
    "Imre Steindl",
    "Pyhän Tapanin kruunu"
@@ -3496,7 +3496,7 @@
   "kohde": "maa:IRL",
   "kysymys": "Miksi harppu on Irlannin valtiontunnus?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Harppu on ollut Irlannin tunnus keskiajalta asti, ja Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva säilytetään [[Trinity Collegen]] kirjastossa: 1300- tai 1400-luvulla tehty harppu, jota sanotaan [[Brian Borun]] harpuksi, vaikka kuningas Brian kuoli vuonna 1014, satoja vuosia ennen kuin soitin veistettiin. Kolikoiden harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on leveämpi.",
+  "vastaus": "Tost minä osaan kertoo. Harppu on ollut Irlannin tunnus keskiajalta asti, ja Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva säilytetään [[Trinity Collegen]] kirjastossa: 1300- tai 1400-luvulla tehty harppu, jota sanotaan [[Brian Borun]] harpuksi, vaikka kuningas Brian kuoli vuonna 1014, satoja vuosia ennen kuin soitin veistettiin. Kolikoiden harppu on tyylitelty versio esikuvasta.",
   "linkit": [
    "Trinity Collegen",
    "Brian Borun"
@@ -3652,7 +3652,7 @@
   "kohde": "maa:ISL",
   "kysymys": "Miksi Islanti ja Britannia riitelivät kalastusrajoista?",
   "uusi": true,
-  "vastaus": "Kas vaan, tää on hyvä tarina. Kun Islanti laajensi kalastusrajaansa vuosina 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian [[troolarit]] eivät suostuneet väistymään, eikä Britannian laivasto liioin. Kolmessa niin sanotussa [[turskasodassa]] Islannin [[rannikkovartioston]] pienet alukset ajoivat troolareiden perässä ja leikkasivat verkkoketjut irti erityisillä leikkureilla. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä, ja vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan. Verkonleikkuri, kyyhkyn silmin ihan outo ase.",
+  "vastaus": "Kas vaan, tää on hyvä tarina. Kun Islanti laajensi kalastusrajaansa vuosina 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian [[troolarit]] eivät suostuneet väistymään, eikä Britannian laivasto liioin. Kolmessa niin sanotussa [[turskasodassa]] Islannin [[rannikkovartioston]] pienet alukset ajoivat troolareiden perässä ja leikkasivat verkkoketjut irti erityisillä leikkureilla. Yhteenotot jäivät pääosin ilman tulitusta, mutta aluksia vaurioitui kymmeniä, ja vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan. Verkonleikkuri, kyyhkyn silmin ihan outo ase.",
   "linkit": [
    "troolarit",
    "turskasodassa",
@@ -3797,7 +3797,7 @@
   "kohde": "maa:ITA",
   "kysymys": "Miltä Italian pohjoisosa näyttää verrattuna etelään?",
   "uusi": true,
-  "vastaus": "No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot, tehtaat ja suurin osa sateista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja saappaan kärjessä [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.",
+  "vastaus": "No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot ja suuri osa tehtaista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja etelässä ja Sisiliassa [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.",
   "linkit": [
    "Alpeilta",
    "Po-joen",
@@ -3843,7 +3843,7 @@
   "kohde": "kaupunki:venetsia",
   "kysymys": "Miten Venetsia on rakennettu veden päälle?",
   "uusi": true,
-  "vastaus": "Ai tota. Venetsia on rakennettu 126 saarelle matalaan [[laguuniin]], ja talot seisovat pohjamutaan lyötyjen [[puupaalujen]] varassa. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin. Paalujen kestävyys selitetään yleensä sillä, että ne ovat vedessä, jossa happea on vähän, mutta en ole varma kaikista yksityiskohdista. Minä en kyl nostaisi taloa veteen, mutta ei minulta kysytty.",
+  "vastaus": "Ai tota. Venetsia on rakennettu yli sadalle saarelle matalaan [[laguuniin]], ja talot seisovat pohjamutaan lyötyjen [[puupaalujen]] varassa. Saaria yhdistää yli 400 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin. Paalujen kestävyys selitetään yleensä sillä, että ne ovat vedessä, jossa happea on vähän, mutta en ole varma kaikista yksityiskohdista. Minä en kyl nostaisi taloa veteen, mutta ei minulta kysytty.",
   "linkit": [
    "laguuniin",
    "puupaalujen"
@@ -3857,7 +3857,7 @@
   "kohde": "kaupunki:venetsia",
   "kysymys": "Millainen valtio Venetsian tasavalta oli?",
   "uusi": true,
-  "vastaus": "Just niin, tästä riittää kerrottavaa. Venetsia oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, siis lähes vuosituhannen, ja siitä käytettiin nimeä [[La Serenissima]]. Sen laivat hallitsivat idänkauppaa, ja vauraus näkyy yhä Pyhän Markuksen torilla basilikan kultamosaiikeissa ja [[dogen palatsin]] kaaririvistössä. Itsenäisyys päättyi [[Napoleoniin]], ja vuonna 1866 Venetsiasta tuli osa Italiaa. Tuhat vuotta tasavaltaa, siinä on kyl kyyhkyllekin sulateltavaa.",
+  "vastaus": "Just niin, tästä riittää kerrottavaa. Venetsia oli keskiajalta vuoteen 1797 itsenäisen tasavallan pääkaupunki, siis lähes vuosituhannen, ja siitä käytettiin nimeä [[La Serenissima]]. Sen laivat hallitsivat idänkauppaa, ja vauraus näkyy yhä Pyhän Markuksen torilla basilikan kultamosaiikeissa ja [[dogen palatsin]] kaaririvistössä. Itsenäisyys päättyi [[Napoleoniin]], ja vuonna 1866 Venetsiasta tuli osa Italiaa. Tuhat vuotta tasavaltaa, siinä on kyl kyyhkyllekin sulateltavaa.",
   "linkit": [
    "La Serenissima",
    "dogen palatsin",
@@ -4104,7 +4104,7 @@
   "kohde": "kaupunki:sisilia",
   "kysymys": "Miksi Messinansalmen yli ei ole siltaa?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Salmi on kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole, ja junat ajetaan yhä vaunuittain lautan kannelle. Silta on ollut suunnitelmissa vuosikymmeniä, ja syistä keskustellaan muun muassa kustannuksia ja maanjäristysalttiutta; en ole varma hankkeen nykytilasta. Mantereen puolella on [[Calabria]], ja saaren puolella [[Messina]]. Kolme kilometriä, ja minulta se sujuu kyl nopeasti.",
+  "vastaus": "Odotas vähän. Salmi on kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole, ja junat ajetaan yhä vaunuittain lautan kannelle. Silta on ollut suunnitelmissa vuosikymmeniä, ja siitä on keskusteltu muun muassa kustannusten ja maanjäristysalttiuden vuoksi; en ole varma hankkeen nykytilasta. Mantereen puolella on [[Calabria]], ja saaren puolella [[Messina]]. Kolme kilometriä, ja minulta se sujuu kyl nopeasti.",
   "linkit": [
    "Calabria",
    "Messina"
@@ -4148,7 +4148,7 @@
   "kohde": "maa:LIE",
   "kysymys": "Millainen on Liechtensteinin taidemuseo?",
   "uusi": true,
-  "vastaus": "Kas vaan. [[Kunstmuseum Liechtenstein]] on valtion taidemuseo ja maan kansallinen taidekokoelma, ja se esittelee kansainvälistä modernia ja nykytaidetta. Kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus valmistui marraskuussa 2000 arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin suunnittelemana, ja ulkopinta on värjättyä betonia ja [[mustaa basalttia]], johon on upotettu jokikiviä. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus. Musta laatikko, jossa on kuusi näyttelytilaa, ja minä lennän sinne kyl tutkimaan.",
+  "vastaus": "Kas vaan. [[Kunstmuseum Liechtenstein]] on valtion taidemuseo ja maan kansallinen taidekokoelma, ja se esittelee kansainvälistä modernia ja nykytaidetta. Kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus valmistui marraskuussa 2000 arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin suunnittelemana, ja ulkopinta on värjättyä betonia ja [[mustaa basalttia]], johon on upotettu jokikiviä. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus. Musta laatikko, ja minä lennän sinne kyl tutkimaan.",
   "linkit": [
    "Kunstmuseum Liechtenstein",
    "mustaa basalttia",
@@ -4236,7 +4236,7 @@
   "kohde": "kaupunki:vaduz",
   "kysymys": "Millainen Vaduz oli 1800-luvun lopulla?",
   "uusi": true,
-  "vastaus": "Nyt muistan: 1870-luvulla Vaduz oli kylä ja alueen hallintokeskus. Maan armeija oli lakkautettu vuonna 1868, ja [[rautatie]] oli rakennettu maan halki vuonna 1872, mutta asema on [[Schaanin]] kunnan puolella. Suvun postiperimätiedon mukaan ruhtinas asui tuolloin [[Wienissä]], vaikka linna katsoi kylää rinteeltä. Rautatie ohi, mutta kyyhky tulee aina perille.",
+  "vastaus": "Nyt muistan: 1870-luvulla Vaduz oli kylä ja alueen hallintokeskus. Maan armeija oli lakkautettu vuonna 1868, ja [[rautatie]] oli rakennettu maan halki vuonna 1872, mutta asema on [[Schaanin]] kunnan puolella. Ruhtinas asui tuolloin [[Wienissä]], vaikka linna katsoi kylää rinteeltä. Rautatie ohi, mutta kyyhky tulee aina perille.",
   "linkit": [
    "rautatie",
    "Schaanin",
@@ -4266,7 +4266,7 @@
   "kohde": "kaupunki:vaduz",
   "kysymys": "Mitä museoita Vaduzissa on?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Tunnetuin on [[Kunstmuseum Liechtenstein]], joka valmistui marraskuussa 2000 ja jonka ulkopinta on mustaa basalttia ja värjättyä betonia. Sen kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus, ja tietojeni mukaan kaupungissa on myös maan kansallismuseo [[Landesmuseum]]. Museoita pienessä kaupungissa, ja kaikki mahtuvat yhteen kävelylenkkiin.",
+  "vastaus": "Tost minä osaan kertoo. Tunnetuin on [[Kunstmuseum Liechtenstein]], joka valmistui marraskuussa 2000 ja jonka ulkopinta on mustaa basalttia ja värjättyä betonia. Sen kokoelman perusta luotiin lähteiden mukaan vuonna 1967. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus, ja tietojeni mukaan kaupungissa on myös maan kansallismuseo [[Landesmuseum]]. Museoita pienessä kaupungissa, ja kaikki mahtuvat yhteen kävelylenkkiin.",
   "linkit": [
    "Kunstmuseum Liechtenstein",
    "Hilti Art Foundation",
@@ -4621,7 +4621,7 @@
   "kohde": "maa:LVA",
   "kysymys": "Millaisia eläimiä Latvian metsissä elää?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Metsä peittää suunnilleen puolet Latvian pinta-alasta, ja siellä elää hirviä, susia ja ilveksiä. Lintulajeista tärkeitä ovat [[mustahaikara]] ja monet petolinnut, ja Latvia on tunnettu runsaista linnuistaan. Latvian vanhin suojelualue [[Gaujan kansallispuisto]] on yksi suosituimpia luontokohteita, ja siellä on hiekkakivirinteitä ja jokimaisemia. Metsässä minä lennän mieluummin kaupungin puolelle, siellä on enemmän leivänmuruja.",
+  "vastaus": "Selvä juttu. Metsä peittää suunnilleen puolet Latvian pinta-alasta, ja siellä elää hirviä, susia ja ilveksiä. Lintulajeista tärkeitä ovat [[mustahaikara]] ja monet petolinnut, ja Latvia on tunnettu runsaista linnuistaan. Latvian vanhin kansallispuisto [[Gaujan kansallispuisto]] on yksi suosituimpia luontokohteita, ja siellä on hiekkakivirinteitä ja jokimaisemia. Metsässä minä lennän mieluummin kaupungin puolelle, siellä on enemmän leivänmuruja.",
   "linkit": [
    "mustahaikara",
    "Gaujan kansallispuisto"
@@ -4811,7 +4811,7 @@
   "kohde": "kaupunki:monaco",
   "kysymys": "Mitä Monacon katedraalissa on erityistä?",
   "uusi": true,
-  "vastaus": "No niin, kerron. Pyhän Nikolauksen katedraali on valkoinen, romaaniseen tyyliin rakennettu kirkko Monacon vanhankaupungin kalliolla, ja nykyinen rakennus valmistui 1800-luvun lopulla. Sinne on haudattu ruhtinas [[Rainier III]] ja hänen puolisonsa, näyttelijä Grace Kelly. Katedraalissa on myös [[Louis Bréan]] 1500-luvun alun alttaritaulu, ja kirkko on ruhtinassuvun seremonioiden paikka. Kirkko seisoo [[Monacon kallion]] kupeessa, lähellä palatsia. Täällä on hiljaista, kuten kyyhkyn mielestä kuuluukin.",
+  "vastaus": "No niin, kerron. Pyhän Nikolauksen katedraali on valkoinen, romaaniseen tyyliin rakennettu kirkko Monacon vanhankaupungin kalliolla, ja nykyinen rakennus rakennettiin 1800-luvun lopulla ja 1900-luvun vaihteessa. Sinne on haudattu ruhtinas [[Rainier III]] ja hänen puolisonsa, näyttelijä Grace Kelly. Katedraalissa on myös [[Louis Bréan]] 1500-luvun alun alttaritaulu, ja kirkko on ruhtinassuvun seremonioiden paikka. Kirkko seisoo [[Monacon kallion]] kupeessa, lähellä palatsia. Täällä on hiljaista, kuten kyyhkyn mielestä kuuluukin.",
   "linkit": [
    "Rainier III",
    "Louis Bréan",
@@ -5305,7 +5305,7 @@
   "kohde": "maa:MNE",
   "kysymys": "Miksi Prokletije-vuoriston nimi tarkoittaa kirottuja?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Nimen alkuperästä ei ole yhtä varmaa selitystä, mutta sen tulkitaan viittaavan vuoriston ankaraan ja vaikeakulkuiseen maastoon. Montenegron puolella vuoriston korkein huippu on [[Zla Kolata]], 2 534 metriä, vaikka koko vuoriston korkein huippu [[Maja Jezercë]] on Albanian puolella. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä noin 20 jäätikköjärveä, kuten [[Hridsko jezero]]. Kirottu tai ei, katolta se näyttää ihan kauniilta.",
+  "vastaus": "Hyvä kysymys tuo. Nimen alkuperästä ei ole yhtä varmaa selitystä, mutta sen tulkitaan viittaavan vuoriston ankaraan ja vaikeakulkuiseen maastoon. Montenegron puolella vuoriston korkein huippu on [[Zla Kolata]], 2 534 metriä, vaikka koko vuoriston korkein huippu [[Maja Jezercë]] on Albanian puolella. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä useita jäätikköjärviä, kuten [[Hridsko jezero]]. Kirottu tai ei, katolta se näyttää ihan kauniilta.",
   "linkit": [
    "Zla Kolata",
    "Maja Jezercë",
@@ -5334,7 +5334,7 @@
   "kohde": "maa:MNE",
   "kysymys": "Mikä Kotorinlahti on ja miksi se on kuuluisa?",
   "uusi": true,
-  "vastaus": "Ai tota. Kotorinlahti on Montenegron rannikolla oleva syvälle sisämaahan pistävä merenlahti, jota ympäröivät jyrkät vuoret. Se on usein sanottu Euroopan eteläisimmäksi vuonoksi, mutta oikeasti kyse on jokilaakson muovaamasta lahdesta, ja asiasta on eri näkemyksiä. Lahden pohjukassa sijaitseva [[Kotorin vanhakaupunki]] on ollut vuodesta 1979 [[Unescon maailmanperintökohde]]. Lahden rannalla on myös [[Perast]], pieni barokkikaupunki, jossa on merellä kaksi pientä kirkkosaarta. Hienoa katsottavaa ylhäältä, vaikka vuoret ovat tiellä.",
+  "vastaus": "Ai tota. Kotorinlahti on Montenegron rannikolla oleva syvälle sisämaahan pistävä merenlahti, jota ympäröivät jyrkät vuoret. Sitä on usein sanottu Euroopan eteläisimmäksi vuonoksi, mutta oikeasti kyse on jokilaakson muovaamasta lahdesta, ja asiasta on eri näkemyksiä. Lahden pohjukassa sijaitseva [[Kotorin vanhakaupunki]] on ollut vuodesta 1979 [[Unescon maailmanperintökohde]]. Lahden rannalla on myös [[Perast]], pieni barokkikaupunki, jossa on merellä kaksi pientä kirkkosaarta. Hienoa katsottavaa ylhäältä, vaikka vuoret ovat tiellä.",
   "linkit": [
    "Kotorin vanhakaupunki",
    "Unescon maailmanperintökohde",
@@ -5754,7 +5754,7 @@
   "kohde": "kaupunki:bergen",
   "kysymys": "Miksi Bergenissä sataa niin paljon?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Bergen sijaitsee vuonojen ja jyrkkien vuorten välissä, ja kosteat merituulet nousevat vuoria vasten ja sataa kaupungin ylle. Sadepäiviä on noin kaksisataa vuodessa, ja sateisin kuukausi on joulukuu. Kaupunkia ympäröivät vuoret antoivat sille lisänimen [[seitsemän vuoren kaupunki]], ja tunnettuja huippuja ovat [[Fløyen]] ja [[Ulriken]]. Moni bergeniläinen sanoo, ettei huonoa säätä ole, on vain huonot vaatteet. Siksi sateenvarjo on kaupungissa kyllä rekvisiittaa.",
+  "vastaus": "Hyvä kysymys tuo. Bergen sijaitsee vuonojen ja jyrkkien vuorten välissä, ja kosteat merituulet nousevat vuoria vasten ja sataa kaupungin ylle. Sadepäiviä on noin kaksisataa vuodessa, ja sateisinta on syksyllä ja alkutalvella. Kaupunkia ympäröivät vuoret antoivat sille lisänimen [[seitsemän vuoren kaupunki]], ja tunnettuja huippuja ovat [[Fløyen]] ja [[Ulriken]]. Moni bergeniläinen sanoo, ettei huonoa säätä ole, on vain huonot vaatteet. Siksi sateenvarjo on kaupungissa kyllä rekvisiittaa.",
   "linkit": [
    "seitsemän vuoren kaupunki",
    "Fløyen",
@@ -5944,7 +5944,7 @@
   "kohde": "maa:POL",
   "kysymys": "Missä Puolassa visenttejä voi nähdä luonnossa?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Visentti eli Euroopan lähes sukupuuttoon kuollut villihärkä elää vapaana Puolan itäosan [[Białowieżan metsässä]], joka sijaitsee Valko-Venäjän rajan tuntumassa. Metsä on yksi Euroopan viimeisistä laajoista alkuperäismetsistä, ja se on suojeltu kansallispuistona. Visenttejä on myös muissa Puolan metsissä, mutta en ole varma tarkasta paikkaluvusta. Maan kokoelmat ovat jopa julkaisseet kirjan, jossa on jokainen maailman [[visentti]]. Isot elukat, mut lempeän näköisiä.",
+  "vastaus": "Hyvä kysymys tuo. Visentti eli Euroopan lähes sukupuuttoon kuollut villihärkä elää vapaana Puolan itäosan [[Białowieżan metsässä]], joka sijaitsee Valko-Venäjän rajan tuntumassa. Metsä on yksi Euroopan viimeisistä laajoista alkuperäismetsistä, ja se on suojeltu kansallispuistona. Visenttejä on myös muissa Puolan metsissä, mutta en ole varma tarkasta paikkaluvusta. Puolassa pidetään myös sukukirjaa [[visentti]]en sukulinjoista. Isot elukat, mut lempeän näköisiä.",
   "linkit": [
    "Białowieżan metsässä",
    "visentti"
@@ -5972,7 +5972,7 @@
   "kohde": "kaupunki:varsova",
   "kysymys": "Miten Varsovan vanhakaupunki rakennettiin sodan jälkeen uudelleen?",
   "uusi": true,
-  "vastaus": "Kääk. Tämä on tosi iso asia. Toisessa maailmansodassa Varsova tuhoutui raskaammin kuin melkein mikään muu Euroopan kaupunki, ja sodan lopussa yli kolme neljäsosaa rakennuksista oli raunioina. Vanhakaupunki rakennettiin sodan jälkeen takaisin vanhojen piirustusten ja kuvien avulla, ja lähteiden mukaan apuna käytettiin myös [[Bernardo Bellotton]] 1700-luvun maalauksia kaupunginnäkymistä. Työ kesti vuosia, ja nykyään alue on [[UNESCOn]] maailmanperintökohde. Linnan kello käynnistettiin uudelleen siitä minuutista, mihin se oli pysähtynyt. Onpas siit onneksi jo pitkä aika.",
+  "vastaus": "Kääk. Tämä on tosi iso asia. Toisessa maailmansodassa Varsova tuhoutui raskaammin kuin melkein mikään muu Euroopan kaupunki, ja sodan lopussa yli kolme neljäsosaa rakennuksista oli raunioina. Vanhakaupunki rakennettiin sodan jälkeen takaisin vanhojen piirustusten ja kuvien avulla, ja lähteiden mukaan apuna käytettiin myös [[Bernardo Bellotton]] 1700-luvun maalauksia kaupunginnäkymistä. Työ kesti vuosia, ja nykyään alue on [[UNESCOn]] maailmanperintökohde. Linnan kellon kerrotaan käynnistetyn uudelleen siitä minuutista, mihin se oli pysähtynyt. Onpas siit onneksi jo pitkä aika.",
   "linkit": [
    "Bernardo Bellotton",
    "UNESCOn"
@@ -6240,7 +6240,7 @@
   "kohde": "maa:ROU",
   "kysymys": "Miksi romanian kieli polveutuu latinasta slaavilaisten keskellä?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Roomalaiset valloittivat Dacian vuonna 106 keisari [[Trajanuksen]] aikana ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi alueelle. Romania onkin Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta, ja se on yhä latinan saareke keskellä slaavin ja unkarin puhujia. Alueen entinen nimi oli [[Dacia]], ja nykyinen kieli säilytti romaanisen perustansa vuosisatojen vaihdoksista huolimatta. Kielen tarkat kehitysvaiheet ovat tutkijoille edelleen keskustelun aihe. Olen sentään sukua roomalaisille.",
+  "vastaus": "Hetkinen ny. Roomalaiset valloittivat Dacian vuonna 106 keisari [[Trajanuksen]] aikana ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi alueelle. Romania onkin Kaakkois-Euroopassa poikkeus, sillä sen kieli polveutuu latinasta, ja se on yhä latinan saareke keskellä slaavin ja unkarin puhujia. Alueen entinen nimi oli [[Dacia]], ja nykyinen kieli säilytti romaanisen perustansa vuosisatojen vaihdoksista huolimatta. Kielen tarkat kehitysvaiheet ovat tutkijoille edelleen keskustelun aihe. Olen sentään sukua roomalaisille.",
   "linkit": [
    "Trajanuksen",
    "Dacia"
@@ -6269,7 +6269,7 @@
   "kohde": "maa:ROU",
   "kysymys": "Mitä on țuică ja milloin sitä poltetaan?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. [[Luumut]] korjataan syksyllä, mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja pieni lasi tarjotaan vieraalle heti kynnyksellä, [[häissä]] ja pääsiäisenä. Pöydässä on yleensä myös [[sarmale]], kaalikääryleitä. Kyl se on vieraanvaraisuuden merkki.",
+  "vastaus": "Selvä juttu. Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. [[Luumut]] korjataan syksyllä, mäski käy useita viikkoja suurissa tynnyreissä, ja tislaus tehdään syksyllä ja alkutalvella. Romania on yksi maailman suurimmista luumuntuottajista, ja merkittävä osa sadosta päätyy țuicaan. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja pieni lasi tarjotaan vieraalle heti kynnyksellä, [[häissä]] ja pääsiäisenä. Pöydässä on yleensä myös [[sarmale]], kaalikääryleitä. Kyl se on vieraanvaraisuuden merkki.",
   "linkit": [
    "Luumut",
    "häissä",
@@ -6284,7 +6284,7 @@
   "kohde": "maa:ROU",
   "kysymys": "Kuka sävelsi Hora staccaton ja miksi se on niin kuuluisa?",
   "uusi": true,
-  "vastaus": "Odotas vähän, tästä pidän. Hora staccaton sävelsi vuonna 1906 [[Grigoraș Dinicu]], joka oli syntynyt Bukarestissa vuonna 1889. Hän kirjoitti sen päättötyökseen [[Bukarestin konservatoriossa]]. Kappale on parin minuutin mittainen, ja siinä jousi napsuu kieltä niin tiheästi, että sävelet putoavat kuin rakeet, joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Wienin konservatorion stipendi jäi hänellä käyttämättä, koska romania ei päästetty lähtemään. Nopeasti soitettu, nopeasti kuultu.",
+  "vastaus": "Odotas vähän, tästä pidän. Hora staccaton sävelsi vuonna 1906 [[Grigoraș Dinicu]], joka oli syntynyt Bukarestissa vuonna 1889. Sen kerrotaan syntyneen hänen opiskeluaikanaan [[Bukarestin konservatoriossa]]. Kappale on parin minuutin mittainen, ja siinä jousi napsuu kieltä niin tiheästi, että sävelet putoavat kuin rakeet, joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Nopeasti soitettu, nopeasti kuultu.",
   "linkit": [
    "Grigoraș Dinicu",
    "Bukarestin konservatoriossa"
@@ -6313,7 +6313,7 @@
   "kohde": "kaupunki:bukarest",
   "kysymys": "Miksi Bukarestia sanottiin aikoinaan Pikku-Pariisiksi?",
   "uusi": true,
-  "vastaus": "Ai tota, hauska kysymys. Bukarestia rakennettiin 1800-luvun lopulla Pariisin malliin, ja kaupunkiin tuli leveitä bulevardeja, puistoja ja ranskalaisia arkkitehteja. Siltä ajalta on [[Romanian ateneum]], konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella \"anna yksi leu Ateneumille\". Vanhin puisto, [[Cișmigiun]] puutarha, avattiin jo vuonna 1847. Nimitys Pikku-Pariisi on vakiintunut puhetapa, ei virallinen titteli. Ainakin kahvilat kyl pärjäsivät.",
+  "vastaus": "Ai tota, hauska kysymys. Bukarestia rakennettiin 1800-luvun lopulla Pariisin malliin, ja kaupunkiin tuli leveitä bulevardeja, puistoja ja ranskalaisia arkkitehteja. Siltä ajalta on [[Romanian ateneum]], konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella \"anna yksi leu Ateneumille\". Vanhin puisto, [[Cișmigiun]] puutarha, perustettiin jo 1800-luvun puolivälissä. Nimitys Pikku-Pariisi on vakiintunut puhetapa, ei virallinen titteli. Ainakin kahvilat kyl pärjäsivät.",
   "linkit": [
    "Romanian ateneum",
    "Cișmigiun"
@@ -6471,7 +6471,7 @@
   "kohde": "kaupunki:moskova",
   "kysymys": "Millainen on Pyhän Vasilin katedraali ja kuka sen rakennutti?",
   "uusi": true,
-  "vastaus": "Kas vaan, tää on komea. Pyhän Vasilin katedraali valmistui [[Punaiselle torille]] vuonna 1561, ja sen rakennutti tsaari [[Iivana IV]]. Kirkossa on yhdeksän värikästä kupolia, joista jokaisella on oma muotonsa ja värityksensä. Rakennus on Venäjän tunnetuimpia nähtävyyksiä, ja se kohoaa kreml-muurin vieressä. Sen tarkkoja rakennustarinoita on useita, ja osa on pelkkiä legendoja. Värit ovat kuin leivonnaisia, ja nälkä iskee heti.",
+  "vastaus": "Kas vaan, tää on komea. Pyhän Vasilin katedraali valmistui [[Punaiselle torille]] vuonna 1561, ja sen rakennutti tsaari [[Iivana IV]]. Kirkossa on useita värikkäitä kupoleja, joista jokaisella on oma muotonsa ja värityksensä. Rakennus on Venäjän tunnetuimpia nähtävyyksiä, ja se kohoaa Kremlin muurin vieressä. Sen tarkkoja rakennustarinoita on useita, ja osa on pelkkiä legendoja. Värit ovat kuin leivonnaisia, ja nälkä iskee heti.",
   "linkit": [
    "Punaiselle torille",
    "Iivana IV"
@@ -6631,7 +6631,7 @@
   "kohde": "maa:SRB",
   "kysymys": "Mitä serbialaiseen ruokapöytään kuuluu?",
   "uusi": true,
-  "vastaus": "Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.",
+  "vastaus": "Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja jauhelihamakkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.",
   "linkit": [
    "ćevapi",
    "pljeskavica",
@@ -6722,7 +6722,7 @@
   "kohde": "kaupunki:belgrad",
   "kysymys": "Mitä Belgradin joenrannoilla voi tehdä?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Belgradissa kaksi jokea, Sava ja Tonava, kohtaavat, ja niiden rannat ovat kaupunkilaisten kesäpaikkoja. Savan keskellä oleva [[Ada Ciganlija]] on saareksi muodostettu virkistysalue, jossa on uimarantoja, ja paikalliset kutsuvat sitä leikillisesti Belgradin mereksi. Yhtymäkohdassa on myös suojeltu [[Veliko ratno ostrvo]], jossa on lintuja ja tulvametsää. Ylhäältä katsottuna kaupunki näyttää vesikaupungilta.",
+  "vastaus": "Hyvä kysymys tuo. Belgradissa kaksi jokea, Sava ja Tonava, kohtaavat, ja niiden rannat ovat kaupunkilaisten kesäpaikkoja. Savan keskellä oleva [[Ada Ciganlija]] on entinen saari ja nykyään virkistysalue, jossa on uimarantoja, ja paikalliset kutsuvat sitä leikillisesti Belgradin mereksi. Yhtymäkohdassa on myös suojeltu [[Veliko ratno ostrvo]], jossa on lintuja ja tulvametsää. Ylhäältä katsottuna kaupunki näyttää vesikaupungilta.",
   "linkit": [
    "Ada Ciganlija",
    "Veliko ratno ostrvo"
@@ -7177,7 +7177,7 @@
   "kohde": "maa:SWE",
   "kysymys": "Miten Melodifestivalen vaikuttaa ruotsalaisten kevääseen?",
   "uusi": true,
-  "vastaus": "Ai se, kevään suurtapahtuma. Joka kevät kilpailu valitsee maan [[euroviisujen]] edustajan, ja finaali on vuoden katsotuin televisiolähetys. Kilpailu kiertää viikkokausia eri kaupungeissa. Tätä kautta [[ABBA]] lähti vuonna 1974 voittamaan euroviisut, ja Ruotsi on voittanut kisan seitsemän kertaa, yhtä monta kertaa kuin [[Irlanti]]. Hyvä biisi jää päähän ja pyörii siellä.",
+  "vastaus": "Ai se, kevään suurtapahtuma. Joka kevät kilpailu valitsee maan [[euroviisujen]] edustajan, ja finaali on yksi vuoden katsotuimmista televisiolähetyksistä. Kilpailu kiertää viikkokausia eri kaupungeissa. Tätä kautta [[ABBA]] lähti vuonna 1974 voittamaan euroviisut, ja Ruotsi on voittanut kisan seitsemän kertaa, yhtä monta kertaa kuin [[Irlanti]]. Hyvä biisi jää päähän ja pyörii siellä.",
   "linkit": [
    "euroviisujen",
    "ABBA",
@@ -7340,7 +7340,7 @@
   "kohde": "kaupunki:istanbul",
   "kysymys": "Miten Hagia Sofia on muuttunut vuosisatojen aikana?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Keisari [[Justinianus]] rakennutti Hagia Sofian valmiiksi vuonna 537, ja se oli ensin kristillinen kirkko. Kun [[Mehmet II]] valtasi kaupungin vuonna 1453, rakennus muutettiin moskeijaksi, ja ulkopuolelle lisättiin minareetit. Vuonna 1934 se muutettiin museoksi, ja vuonna 2020 siitä tehtiin jälleen moskeija. Kupolin loisto on silti pysynyt, ja [[Hagia Sofia]] on yksi Istanbulin tunnetuimmista rakennuksista. Neljä muutosta yhdelle talolle on aika paljon.",
+  "vastaus": "Odotas vähän. Keisari [[Justinianus]] rakennutti Hagia Sofian valmiiksi vuonna 537, ja se oli ensin kristillinen kirkko. Kun [[Mehmet II]] valtasi kaupungin vuonna 1453, rakennus muutettiin moskeijaksi, ja ulkopuolelle lisättiin minareetit. Vuonna 1934 se muutettiin museoksi, ja vuonna 2020 siitä tehtiin jälleen moskeija. Kupolin loisto on silti pysynyt, ja [[Hagia Sofia]] on yksi Istanbulin tunnetuimmista rakennuksista. Kolme muutosta yhdelle talolle on aika paljon.",
   "linkit": [
    "Justinianus",
    "Mehmet II",
@@ -7398,7 +7398,7 @@
   "kohde": "kaupunki:istanbul",
   "kysymys": "Miten Galatan jyrkkä mäki on voitettu junalla?",
   "uusi": true,
-  "vastaus": "Katotaas. Istanbulin vanhan kaupungin ja Galatan mäen välillä kulkee lyhyt maanalainen köysirata, jota sanotaan nimellä [[Tünel]]. Se avattiin vuonna 1875, ja sen tarkoitus oli helpottaa nousua rannasta mäen päälle, jossa [[Galata]] ja Beyoğlu sijaitsevat. Rata kulkee vain alle kilometrin matkan, mutta säästää monta nousua. Isoisäsi kantajan olisi pitänyt odottaa pari vuotta.",
+  "vastaus": "Katotaas. Karaköyn ja Galatan mäen välillä kulkee lyhyt maanalainen köysirata, jota sanotaan nimellä [[Tünel]]. Se avattiin vuonna 1875, ja sen tarkoitus oli helpottaa nousua rannasta mäen päälle, jossa [[Galata]] ja Beyoğlu sijaitsevat. Rata kulkee vain alle kilometrin matkan, mutta säästää monta nousua. Isoisäsi kantajan olisi pitänyt odottaa pari vuotta.",
   "linkit": [
    "Tünel",
    "Galata"
@@ -7412,7 +7412,7 @@
   "kohde": "kaupunki:izmir",
   "kysymys": "Miksi İzmirin viikunat ovat niin kuuluisia?",
   "uusi": true,
-  "vastaus": "Sepä sattui. Viikuna on İzmirin alueen tunnusmerkki, sillä Egeanmeren ilmasto ja [[Aydınin]] tasangon maa sopivat sille erinomaisesti. Hedelmät kuljetettiin satamaan rautatietä pitkin, jonka ensimmäinen osuus avattiin vuonna 1858. Kaupungin vanha nimi [[Smyrna]] elää viikunalajikkeiden nimissä, ja Turkki on yksi maailman suurimmista viikunantuottajista. Kyllä pullakin kelpaisi, mutta viikuna on sentään terveellisempää.",
+  "vastaus": "Sepä sattui. Viikuna on İzmirin alueen tunnusmerkki, sillä Egeanmeren ilmasto ja [[Aydınin]] tasangon maa sopivat sille erinomaisesti. Hedelmät kuljetettiin satamaan rautatietä pitkin, joka rakennettiin 1800-luvulla. Kaupungin vanha nimi [[Smyrna]] elää viikunalajikkeiden nimissä, ja Turkki on yksi maailman suurimmista viikunantuottajista. Kyllä pullakin kelpaisi, mutta viikuna on sentään terveellisempää.",
   "linkit": [
    "Aydınin",
    "Smyrna"
@@ -7556,7 +7556,7 @@
   "kohde": "kaupunki:kapadokia",
   "kysymys": "Miten Kappadokian maanalaiset kaupungit rakennettiin ja miksi?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Maanalaiset kaupungit louhittiin pehmeään [[tuffiin]], jota pystyy kaivamaan yksinkertaisin työkaluin. [[Derinkuyu]] ulottuu noin 85 metrin syvyyteen ja siinä on viisi kerrosta, ja sen käytävät voitiin sulkea suurilla kivilaatoilla, jotka aukesivat vain sisältä. Kaupungit toimivat suojapaikkoina vaaran uhatessa, ja niissä oli tiloja asumiseen, ruoan säilytykseen ja ilmanvaihtoon. Alla on kyllä enemmän tilaa kuin pinnalla.",
+  "vastaus": "Odotas vähän. Maanalaiset kaupungit louhittiin pehmeään [[tuffiin]], jota pystyy kaivamaan yksinkertaisin työkaluin. [[Derinkuyu]] ulottuu noin 85 metrin syvyyteen ja siinä on useita kerroksia, ja sen käytävät voitiin sulkea suurilla kivilaatoilla, jotka aukesivat vain sisältä. Kaupungit toimivat suojapaikkoina vaaran uhatessa, ja niissä oli tiloja asumiseen, ruoan säilytykseen ja ilmanvaihtoon. Alla on kyllä enemmän tilaa kuin pinnalla.",
   "linkit": [
    "tuffiin",
    "Derinkuyu"
@@ -7570,7 +7570,7 @@
   "kohde": "kaupunki:kapadokia",
   "kysymys": "Mitä kallioon louhituista kirkoista Göremessä tiedetään?",
   "uusi": true,
-  "vastaus": "Ai tota. Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa, ja ne on koristeltu [[freskoilla]], joissa on kuvattu Raamatun tapahtumia. Tunnettu on esimerkiksi [[Karanlık kilise]], jonka maalaukset ovat säilyneet hyvin, koska sinne pääsee vain vähän valoa. Alue kuuluu [[Unescon]] maailmanperintöluetteloon. Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus. Sisältä ne ovat yllättävän värikkäitä.",
+  "vastaus": "Ai tota. Göremen ympäristössä on satoja kallioon louhittuja kirkkoja, ja ne on koristeltu [[freskoilla]], joissa on kuvattu Raamatun tapahtumia. Tunnettu on esimerkiksi [[Karanlık kilise]], jonka maalaukset ovat säilyneet hyvin, koska sinne pääsee vain vähän valoa. Alue kuuluu [[Unescon]] maailmanperintöluetteloon. Kirkkoja louhittiin pitkään bysanttilaisella ajalla, kun alue oli kristinuskon keskus. Sisältä ne ovat yllättävän värikkäitä.",
   "linkit": [
    "freskoilla",
    "Karanlık kilise",
@@ -7703,7 +7703,7 @@
   "kohde": "kaupunki:kiova",
   "kysymys": "Mitä Pyhän Sofian katedraalissa on nähtävää?",
   "uusi": true,
-  "vastaus": "Kas vaan. Katedraali valmistui ilmeisesti vuonna 1037, kun [[Jaroslav Viisas]] oli Kiovan ruhtinas. Sen seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma, esimerkiksi apsiksessa [[Oranta]]-neitsyen kuva. Seinillä on myös yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta, ja kohde kuuluu [[Unescon]] maailmanperintöön vuodesta 1990. Seinät ovat siis vanhaa ruhtinaiden ja pyhiinvaeltajien kirjoituskirjaa.",
+  "vastaus": "Kas vaan. Katedraalin rakentaminen aloitettiin ilmeisesti vuonna 1037, kun [[Jaroslav Viisas]] oli Kiovan ruhtinas. Sen seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma, esimerkiksi apsiksessa [[Oranta]]-neitsyen kuva. Seinillä on myös yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta, ja kohde kuuluu [[Unescon]] maailmanperintöön vuodesta 1990. Seinät ovat siis vanhaa ruhtinaiden ja pyhiinvaeltajien kirjoituskirjaa.",
   "linkit": [
    "Jaroslav Viisas",
    "Oranta",

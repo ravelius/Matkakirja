@@ -1,0 +1,25 @@
+### v2-362
+VANHA: maalattiin vuonna 1586
+UUSI: maalattiin 1580-luvulla
+SYY: teos maalattiin vuosina 1586-1588
+### v2-370
+VANHA: joten saunoja on enemmän kuin autoja
+UUSI: joten saunoja on noin yksi kahta asukasta kohti
+SYY: väärä päätelmä, autoja on suunnilleen yhtä paljon
+### v2-381
+VANHA: Helsinki sai vuonna 1743 kuninkaalliselta päätökseltä oikeuden kahteen vuosimarkkinaan, ja niitä on pidetty siitä lähtien. Vuonna 1891 markkinoista lakkautettiin kaikki muu paitsi suolatun kalan kauppa, ja siksi jäljelle jäivät silakkamarkkinat.
+UUSI: Silakkamarkkinoita on lähteiden mukaan pidetty Helsingissä jo 1700-luvulta lähtien.
+SYY: epävarmat ja tarkistamattomat yksityiskohdat (1891 lakkautus, kuninkaallinen päätös)
+### v2-393
+VANHA: Tornia pidettiin Suomen korkeimpana rakennuksena yli viisikymmentä vuotta, ja näkötornina se on maan korkein yhä.
+UUSI: Näkötornina se on Suomen korkein.
+SYY: epävarma väite korkeimmasta rakennuksesta
+### v2-393
+VANHA: Kokonaiskorkeus on 168 metriä, josta itse torniosaa on 134,5 metriä ja loppu on huipun antennimasto.
+UUSI: Korkeutta on noin 168 metriä.
+SYY: epävarma tarkka jaottelu
+### v2-402
+VANHA: poronsarven muotoisen kuvion, jonka sarvien väliin jää urheilukenttä.
+UUSI: poronsarven muotoisen kuvion.
+SYY: epävarma yksityiskohta
+LOPPU: tarkistettu 50 vastausta, korjauksia 6

@@ -23,3 +23,13 @@ Omistajan kortti 13.51 "Kyllä (Suositus)": pelin kaupungit + maat × 5 kysymyst
    [[Elias Lönnrot]], joka kiersi [[Karjalassa]] ja Kainuussa …"
 3. kaupunki:lontoo – "Miksi Lontoossa on kaksi keskustaa?" → "Odotas vähän, tää on mielenkiintoinen. … City of London on vain 2,9
    neliökilometrin kokoinen alue … [[Englannin pankki]] …"
+
+## Faktatarkistus PT:n pistokokeen jälkeen (9.11.2026)
+- PT:n pistokoe (10/30 virheellisiä, 3 vakavaa) → listatut 10 korjattu paikallaan (`fakta/korjaukset-pistokoe.txt`).
+- Kaikki 540 + 1 330 vastausta tarkistettu 21 Sonnet-agentilla (`fakta/FAKTAOHJE.md`, `fakta/era-N.txt` → `fakta/korjaukset-N*.txt`):
+  198 korjausta + 1 tuplaväli, joista agenttien mukaan noin 70 väärää faktaa, loput epävarmojen lukujen pehmennyksiä, liioittelua ja
+  kielivirheitä. Ei uusia ottoja; korjaus vain lauseen osaan (`tools/pulu-esigenerointi/korjaa-kaumaa.py`: katkelma täsmälleen kerran,
+  [[linkit]] ennallaan; hylättyjä 0). Yksi agentin "linkkivirhe" (Michele Besson) on oikea genetiivi, ei muutettu.
+- tarkista-valmis: samat 5 tunnettua väärää osumaa (Perućica, Intian arkisto) kuin ennen, 42 varoitusta (maininnat).
+- Paketit koottu uudelleen (yhdista-kaumaa.mjs, pohja ämpärin maat.json ennallaan): vanhat kohdat tavulleen ennallaan, 108 uutta kohtaa.
+  Kopio /Users/Shared/Claude/proto-3d/_valmiit/pulu-kaupungit-maat-vienti-20261109-2 (SHA256SUMS 44 tiedostoa). Uusi pistokoe 30 → PT.

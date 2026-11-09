@@ -1,0 +1,56 @@
+### v2-1072
+VANHA: Moskovan ruhtinas [[Ivan Julma]]
+UUSI: Venäjän tsaari [[Ivan Julma]]
+SYY: anakronismi, Ivan IV oli vuonna 1552 jo tsaari
+
+### v2-1074
+VANHA: Pietari kutsui sitä itse ikkunaksi Eurooppaan
+UUSI: sitä on kutsuttu Venäjän ikkunaksi Eurooppaan
+SYY: väärä attribuutio (ilmaisu ei ole Pietari Suuren) ja epäselvä subjekti
+
+### v2-1095
+VANHA: hallitsi viimeiset kolme vuosisataa [[Romanovien]] suku
+UUSI: hallitsi [[Romanovien]] suku
+SYY: väärä luku, keisarikunta kesti vain noin 200 vuotta
+
+### v2-1102
+VANHA: Kaupunkia on uhannut tulvat, ja siksi Suomenlahdelle on rakennettu tulvasuojelupato.
+UUSI: Kaupunkia ovat uhanneet tulvat, ja siksi Suomenlahdelle on rakennettu tulvapato.
+SYY: kielivirhe (predikaatti ja subjekti) ja kömpelö yhdyssana
+
+### v2-1110
+VANHA: jonka Stefan Nemanja aloitti rakentaa 1180-luvulla
+UUSI: jonka rakentamisen Stefan Nemanja aloitti 1180-luvulla
+SYY: kielivirhe
+
+### v2-1116
+VANHA: on aiemmin pidetty maalaismarkkinoita
+UUSI: on lähteiden mukaan aiemmin pidetty maalaismarkkinoita
+SYY: epävarma yksityiskohta
+
+### v2-1128
+VANHA: ja se kuuluu vuonna 2021 yhdistettyyn 14,07 hehtaarin luonnonmuistomerkkiin
+UUSI: ja alue on suojeltu luonnonmuistomerkkinä
+SYY: epävarma tarkka luku ja vuosi
+
+### v2-1130
+VANHA: , mutta vuodesta en ole varma
+UUSI:  vuonna 2022
+SYY: Unesco kirjasi šljivovican perinteet vuonna 2022
+
+### v2-1132
+VANHA: nykyisin se on lähteen mukaan noin kuuden kilometrin pituinen niemi
+UUSI: nykyisin se on pitkä niemi
+SYY: epävarma mitta
+
+### v2-1132
+VANHA: Niemen pinta-ala on noin kolme neliökilometriä ja leveimmillään se on noin 700 metriä.
+UUSI: Niemen pinta-ala on noin kolme neliökilometriä.
+SYY: epävarma mitta
+
+### v2-1148
+VANHA: vaihdettiin aina vallanpitäjän mukaan
+UUSI: vaihdettiin usein vallanpitäjän mukaan
+SYY: liioittelu
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 11

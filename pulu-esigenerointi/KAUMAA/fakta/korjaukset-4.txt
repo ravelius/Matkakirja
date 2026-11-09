@@ -1,0 +1,31 @@
+### v1-283
+VANHA: ja syistä keskustellaan muun muassa kustannuksia ja maanjäristysalttiutta;
+UUSI: ja siitä on keskusteltu muun muassa kustannusten ja maanjäristysalttiuden vuoksi;
+SYY: kielivirhe (väärä sijamuoto)
+
+### v1-286
+VANHA: Musta laatikko, jossa on kuusi näyttelytilaa, ja minä
+UUSI: Musta laatikko, ja minä
+SYY: epävarma yksityiskohta (näyttelytilojen määrä)
+
+### v1-292
+VANHA: Suvun postiperimätiedon mukaan ruhtinas asui tuolloin
+UUSI: Ruhtinas asui tuolloin
+SYY: kömpelö keksitty yhdyssana
+
+### v1-294
+VANHA: Sen kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa.
+UUSI: Sen kokoelman perusta luotiin lähteiden mukaan vuonna 1967.
+SYY: epävarma yksityiskohta (kymmenen maalausta)
+
+### v1-318
+VANHA: Latvian vanhin suojelualue [[Gaujan kansallispuisto]]
+UUSI: Latvian vanhin kansallispuisto [[Gaujan kansallispuisto]]
+SYY: väärä fakta (Gaujan puisto on vanhin kansallispuisto, ei vanhin suojelualue)
+
+### v1-331
+VANHA: nykyinen rakennus valmistui 1800-luvun lopulla
+UUSI: nykyinen rakennus rakennettiin 1800-luvun lopulla ja 1900-luvun vaihteessa
+SYY: väärä fakta (rakennettiin 1875–1903)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 6

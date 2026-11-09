@@ -1,0 +1,26 @@
+### v2-639
+VANHA: äänet laskettiin palatsin laskuhuoneessa ja tulos luettiin ensin salissa ja sitten parvekkeelta
+UUSI: asiasta järjestettiin kansanäänestys
+SYY: epävarma yksityiskohta
+
+### v2-667
+VANHA: jolla käy vuosittain yli 4,5 miljoonaa kävijää
+UUSI: jolla käy vuosittain miljoonia kävijöitä
+SYY: epävarma luku
+
+### v2-669
+VANHA: kesti yli 120 vuotta
+UUSI: kesti noin 120 vuotta
+SYY: väärä luku (1506-1626 on 120 vuotta)
+
+### v2-669
+VANHA: Vuonna 1950 kirkon alta kaivettiin
+UUSI: 1940-luvulla kirkon alta kaivettiin
+SYY: väärä ajoitus (kaivaukset 1939-1949)
+
+### v2-695
+VANHA: Hänellä ei ollut poikia
+UUSI: Hänellä ei ollut eloon jääneitä poikia
+SYY: väärä fakta (poika kuoli lapsena)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 5

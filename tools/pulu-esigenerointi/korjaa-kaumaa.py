@@ -33,6 +33,8 @@ for k in lohkot(open(polku, encoding='utf-8').read()):
         v, i = k['id'].split('-'); i = int(i)
         x = data[v][i]
         t = x['vastaus']
+        if k.get('SYY', '').startswith('LINKKI'):
+            print(f"LINKKI (käsin) {k['id']}: {k['SYY']}"); continue
         if 'VANHA' not in k or 'UUSI' not in k: raise ValueError('VANHA tai UUSI puuttuu')
         if t.count(k['VANHA']) != 1: raise ValueError(f"katkelma löytyy {t.count(k['VANHA'])} kertaa")
         u = t.replace(k['VANHA'], k['UUSI'])

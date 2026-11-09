@@ -1,0 +1,46 @@
+### v1-15
+VANHA: Tarjoilija tuo kahvin yleensä lasillisen vesihanavettä kanssa
+UUSI: Kahvin mukana tarjoilija tuo yleensä lasillisen hanavettä
+SYY: kielivirhe
+
+### v1-36
+VANHA: yltää 2 292 metriin
+UUSI: yltää noin 2 290 metriin
+SYY: epävarma tarkka luku
+
+### v1-56
+VANHA: jonka rakennukset syntyivät 1800-luvulla, kun kaupunki kasvoi kuvernementin keskuksena ja nousi uudeksi rautatieliikenteen solmukohdaksi
+UUSI: jonka historia ulottuu keskiajalle
+SYY: väärä fakta (Yläkaupunki on keskiaikainen ydin, ei 1800-luvun rautatiekauden alue)
+
+### v1-59
+VANHA: järviä noin 4 000
+UUSI: järviä noin 11 000
+SYY: väärä fakta (Valko-Venäjällä on yli 10 000 järveä)
+
+### v1-59
+VANHA: tammikuun keskilämpötila on noin −6 astetta
+UUSI: tammikuun keskilämpötila on muutaman asteen pakkasella
+SYY: epävarma tarkka luku
+
+### v1-81
+VANHA: saapui Nikosiaan 31. heinäkuuta ja ryhtyi
+UUSI: saapui pian Nikosiaan ja ryhtyi
+SYY: epävarma päivämäärä
+
+### v1-85
+VANHA: Tšekin luoteiskulman hiekkakivialueella
+UUSI: Tšekin pohjoisosan hiekkakivialueella
+SYY: epätarkka sijainti
+
+### v1-85
+VANHA: Vuorikehän luoteiskulma ei ole tavallista kalliota
+UUSI: Seutu ei ole tavallista kalliota
+SYY: kielivirhe / epäselvä viittaus
+
+### v1-85
+VANHA: Portti sijaitsee [[Böömin]] kansallispuiston alueella
+UUSI: Portti sijaitsee [[Böömin]] Sveitsin kansallispuiston alueella
+SYY: väärä fakta (puiston nimi on Böömin Sveitsin kansallispuisto)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 8

@@ -1,0 +1,11 @@
+### v2-596
+VANHA: Islanti on harvoja paikkoja, jossa harjanne
+UUSI: Islanti on harvoja paikkoja, joissa harjanne
+SYY: kielivirhe (sijamuoto)
+
+### v2-601
+VANHA: Huhtikuun vaaleissa valtaan nousi [[Jóhanna Sigurðardóttir]]
+UUSI: Pääministeriksi nousi helmikuussa 2009 [[Jóhanna Sigurðardóttir]]
+SYY: väärä ajoitus (hän nousi pääministeriksi ennen huhtikuun vaaleja)
+
+LOPPU: tarkistettu yhteensä 89 vastausta, korjauksia tässä tiedostossa 2

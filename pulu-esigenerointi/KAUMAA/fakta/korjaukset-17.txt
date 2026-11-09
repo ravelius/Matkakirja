@@ -1,0 +1,51 @@
+### v2-892
+VANHA: piti pintansa lähes kuukauden
+UUSI: piti pintansa runsaan kuukauden
+SYY: 18.5.–23.6. on yli kuukausi
+
+### v2-904
+VANHA: Hänet haudattiin sinne pieneen kappeliin vuonna 1851.
+UUSI: Hänet siirrettiin sinne pieneen kappeliin vuonna 1855.
+SYY: väärä vuosi (Njegoš kuoli 1851, siirrettiin Lovćenille 1855)
+
+### v2-905
+VANHA: oli hankkinut Venetsiasta vain vuosi aiemmin, ja paperikin tuotiin samaa reittiä, koska lähialueella ei ollut yhtään paperimyllyä
+UUSI: oli hankkinut ulkomailta, ja paperikin tuotiin ulkomailta
+SYY: epävarma yksityiskohta
+
+### v2-912
+VANHA: Ribnican yli.JATKOT:
+UUSI: Ribnican yli.
+SYY: kielivirhe (jäännöstunniste)
+
+### v2-925
+VANHA: yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon
+UUSI: yksittäisistä sipuleista maksettiin useita tuhansia guldeneita, ja samalla rahalla sai kanavatalon
+SYY: epävarma luku
+
+### v2-927
+VANHA: kuoli 3 267 ihmistä
+UUSI: kuoli noin 3 300 ihmistä
+SYY: epävarma tarkka luku
+
+### v2-942
+VANHA: jonka hän maalasi noin vuonna 1660
+UUSI: jonka hän maalasi noin vuonna 1658
+SYY: väärä vuosi (Maitotyttö noin 1657–1658)
+
+### v2-955
+VANHA: Nykymuotoinen bunad-perinne on 1900-luvun alun peräisiä
+UUSI: Nykymuotoinen bunad-perinne on peräisin 1900-luvun alusta
+SYY: kielivirhe
+
+### v2-963
+VANHA: varastettu kahdesti, vuonna 1994 ja vuonna 2004 [[Munch-museosta]]
+UUSI: varastettu kahdesti, vuonna 1994 Kansallisgalleriasta ja vuonna 2004 [[Munch-museosta]]
+SYY: väärä fakta (vuonna 1994 varkaus oli Kansallisgalleriasta)
+
+### v2-971
+VANHA: , ja alue liitettiin Bergeniin vuonna 1876
+UUSI:
+SYY: epävarma yksityiskohta
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 10

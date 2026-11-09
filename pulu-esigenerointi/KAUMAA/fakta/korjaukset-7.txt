@@ -1,0 +1,21 @@
+### v2-3
+VANHA: asukkaista noin 96 prosenttia on etnisiä albaaneja
+UUSI: asukkaista valtaosa on etnisiä albaaneja
+SYY: epävarma luku (etnisten albaanien osuus on tuoreissa laskennoissa selvästi pienempi kuin 96 prosenttia)
+
+### v2-37
+VANHA: Näin syntyi ensimmäinen teollisesti käyttökelpoinen sähkömoottori.
+UUSI: Tarinan mukaan sähkömoottori päätyi käytännön käyttöön juuri näin.
+SYY: liioittelu (sähkömoottoreita oli ennen vuotta 1873, "ensimmäinen" ei pidä)
+
+### v2-42
+VANHA: ruunatilalla
+UUSI: hevostilalla
+SYY: väärä fakta (Piber on kasvatus- eli siitostila, ei ruunatila)
+
+### v2-83
+VANHA: Aukion vastakkaisella puolella kaupungintalon vieressä on
+UUSI: Kaupungintalon vastapäätä aukion toisella laidalla on
+SYY: ristiriitainen ilmaus (vastakkaisella puolella ja vieressä)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 4

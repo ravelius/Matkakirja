@@ -1,0 +1,51 @@
+### v1-457
+VANHA: ovat pieniä grillattuja lihaleipiä tai makkaroita
+UUSI: ovat pieniä grillattuja jauhelihamakkaroita
+SYY: väärä fakta (ćevapi ei ole leipä)
+
+### v1-463
+VANHA: on saareksi muodostettu virkistysalue
+UUSI: on entinen saari ja nykyään virkistysalue
+SYY: väärä fakta (Ada Ciganlija on yhdistetty mantereeseen, ei saareksi muodostettu)
+
+### v1-494
+VANHA: finaali on vuoden katsotuin televisiolähetys
+UUSI: finaali on yksi vuoden katsotuimmista televisiolähetyksistä
+SYY: liioittelu
+
+### v1-505
+VANHA: Neljä muutosta yhdelle talolle
+UUSI: Kolme muutosta yhdelle talolle
+SYY: väärä fakta (kirkko, moskeija, museo, moskeija = kolme muutosta)
+
+### v1-509
+VANHA: Istanbulin vanhan kaupungin ja Galatan mäen välillä
+UUSI: Karaköyn ja Galatan mäen välillä
+SYY: väärä fakta (Tünel yhdistää Karaköyn ja Beyoğlun, ei vanhaa kaupunkia)
+
+### v1-510
+VANHA: jonka ensimmäinen osuus avattiin vuonna 1858
+UUSI: joka rakennettiin 1800-luvulla
+SYY: epävarma vuosiluku
+
+### v1-520
+VANHA: ja siinä on viisi kerrosta
+UUSI: ja siinä on useita kerroksia
+SYY: väärä fakta (Derinkuyussa on kahdeksan avointa ja jopa 18 kerrosta)
+
+### v1-521
+VANHA: noin neljäsataa kallioon louhittua kirkkoa
+UUSI: satoja kallioon louhittuja kirkkoja
+SYY: epävarma luku
+
+### v1-521
+VANHA: Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus.
+UUSI: Kirkkoja louhittiin pitkään bysanttilaisella ajalla, kun alue oli kristinuskon keskus.
+SYY: väärä ajoitus (maalaukset pääosin 900–1200-luvuilta)
+
+### v1-530
+VANHA: Katedraali valmistui ilmeisesti vuonna 1037
+UUSI: Katedraalin rakentaminen aloitettiin ilmeisesti vuonna 1037
+SYY: väärä fakta (1037 on perustamisvuosi, ei valmistumisvuosi)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 10

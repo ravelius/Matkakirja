@@ -1,0 +1,65 @@
+### v2-274
+VANHA: vuosina 1670–1675
+UUSI: 1670-luvulla
+SYY: epävarma tarkka vuosiluku
+### v2-275
+VANHA: Odensessa syntyi lähiseudulla myös säveltäjä
+UUSI: Odensen lähistöllä syntyi myös säveltäjä
+SYY: kielivirhe
+### v2-279
+VANHA: se kaartaa sataman yli neljän metrin korkeudessa
+UUSI: se kaartaa sataman yli
+SYY: epävarma luku
+### v2-284
+VANHA: tuhoutui vuonna 1943
+UUSI: tuhoutui vuonna 1944
+SYY: väärä vuosi (Tivolin tuho oli 1944)
+### v2-285
+VANHA: ulkopuolelle noin 61 000 neliömetrin alueelle,
+UUSI: ulkopuolelle,
+SYY: epävarma luku
+### v2-300
+VANHA: kymmenen vuotta töitä
+UUSI: vuosia töitä
+SYY: epävarma kesto
+### v2-301
+VANHA: , ja Goya on museon eniten esillä oleva taiteilija
+UUSI:
+SYY: perustelematon väite
+### v2-301
+VANHA: noin 7 600 maalausta
+UUSI: useita tuhansia maalauksia
+SYY: epävarma luku
+### v2-301
+VANHA: yli 3,3 miljoonaa kävijää
+UUSI: yli kolme miljoonaa kävijää
+SYY: epävarma luku
+### v2-305
+VANHA: vuodesta 1857 lähtien siitä on mitattu kaikki maan päätiet
+UUSI: siitä mitataan kaikki maan päätiet
+SYY: epävarma vuosiluku
+### v2-306
+VANHA: Madridin vanhat ravintolat tarjoavat sitä vain
+UUSI: Monet Madridin vanhat ravintolat tarjoavat sitä vain
+SYY: liioittelu
+### v2-307
+VANHA: kuin kukaan muu
+UUSI: kuin useimmat muut eurooppalaiset
+SYY: liioittelu
+### v2-309
+VANHA: Atléticon kannattajat olivat ensimmäisiä, jotka kiipesivät Cibeleen suihkulähteen päälle juhlimaan, koska seuran toimisto oli naapurikadulla.
+UUSI: Atléticon kannattajat juhlivat mestaruuksia perinteisesti Neptunuksen suihkulähteellä.
+SYY: väärä fakta (Atlético juhlii Neptunuksella, Cibeles on Realin juhlapaikka)
+### v2-310
+VANHA: sai helmikuussa 1859 Madridin hallitukselta tehtäväkseen laatia Barcelonan laajennuksen
+UUSI: laati Madridin hallituksen toimeksiannosta Barcelonan laajennuksen
+SYY: väärä tai epävarma ajoitus (toimeksianto oli aiemmin, suunnitelma vahvistettiin 1859)
+### v2-323
+VANHA: noin viidenkymmenen kilometrin päässä merestä
+UUSI: melko lähellä Välimeren rannikkoa
+SYY: ristiriita muiden vastausten (noin 70 km) kanssa
+### v2-331
+VANHA: 1523, ja viimeiset kivet muurattiin paikoilleen jouluaattona 1704
+UUSI: 1523
+SYY: epävarma yksityiskohta
+LOPPU: tarkistettu 89 vastausta, korjauksia 17

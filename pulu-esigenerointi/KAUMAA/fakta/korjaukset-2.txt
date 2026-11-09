@@ -1,0 +1,41 @@
+### v1-95
+VANHA: Kymmenettuhannet itäberliiniläiset
+UUSI: Kymmenet tuhannet itäberliiniläiset
+SYY: kielivirhe (väärä yhdyssana)
+
+### v1-96
+VANHA: kiersi teini-ikäisenä Euroopan konserttisaleja. Wienissä hänen kunniakseen leivottiin kakkuja.
+UUSI: kiersi teini-ikäisenä Euroopan konserttisaleja.
+SYY: vahvistamaton yksityiskohta
+
+### v1-100
+VANHA: Rajalla oli kaupungin sisällä erotettu toisistaan Itä-Berliini ja Länsi-Berliini
+UUSI: Raja erotti kaupungin sisällä toisistaan Itä-Berliinin ja Länsi-Berliinin
+SYY: kielivirhe (kömpelö lause)
+
+### v1-125
+VANHA: on kaupungin laajin asuinalue
+UUSI: on kaupungin laaja ruutukaava-alue
+SYY: liioittelu
+
+### v1-126
+VANHA: Pojan kädennosto huipulla
+UUSI: Lapsen kädennosto huipulla
+SYY: väärä fakta (huipulla oleva lapsi voi olla tyttö tai poika)
+
+### v1-132
+VANHA: romaaniyhteisön
+UUSI: romaniyhteisön
+SYY: kielivirhe (romaani vs. romani)
+
+### v1-140
+VANHA: Kraatteri on Euroopan harvinaisimpia meteoriittikraattereita, mutta superlatiivin jätän tästä pois.
+UUSI: Kraatteri on harvinainen näky.
+SYY: liioittelu ja ristiriitainen lause
+
+### v1-159
+VANHA: rannoilla, jossa
+UUSI: rannoilla, joissa
+SYY: kielivirhe (sijamuoto)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 8

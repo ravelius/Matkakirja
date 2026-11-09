@@ -1,0 +1,5 @@
+### v2-253
+VANHA: Alpit ovat Euroopan korkein vuoristo, joka kaartuu noin tuhannen kilometrin pituisena
+UUSI: Alpit ovat Länsi-Euroopan korkein vuoristo, joka kaartuu noin 1 200 kilometrin pituisena
+SYY: liioittelu (Kaukasus on korkeampi) ja pituus noin 1 200 km
+LOPPU: tarkistettu yhteensä 89 vastausta, korjauksia tässä tiedostossa 1

@@ -1,0 +1,971 @@
+### v1-15
+VANHA: Tarjoilija tuo kahvin yleensä lasillisen vesihanavettä kanssa
+UUSI: Kahvin mukana tarjoilija tuo yleensä lasillisen hanavettä
+SYY: kielivirhe
+
+### v1-36
+VANHA: yltää 2 292 metriin
+UUSI: yltää noin 2 290 metriin
+SYY: epävarma tarkka luku
+
+### v1-56
+VANHA: jonka rakennukset syntyivät 1800-luvulla, kun kaupunki kasvoi kuvernementin keskuksena ja nousi uudeksi rautatieliikenteen solmukohdaksi
+UUSI: jonka historia ulottuu keskiajalle
+SYY: väärä fakta (Yläkaupunki on keskiaikainen ydin, ei 1800-luvun rautatiekauden alue)
+
+### v1-59
+VANHA: järviä noin 4 000
+UUSI: järviä noin 11 000
+SYY: väärä fakta (Valko-Venäjällä on yli 10 000 järveä)
+
+### v1-59
+VANHA: tammikuun keskilämpötila on noin −6 astetta
+UUSI: tammikuun keskilämpötila on muutaman asteen pakkasella
+SYY: epävarma tarkka luku
+
+### v1-81
+VANHA: saapui Nikosiaan 31. heinäkuuta ja ryhtyi
+UUSI: saapui pian Nikosiaan ja ryhtyi
+SYY: epävarma päivämäärä
+
+### v1-85
+VANHA: Tšekin luoteiskulman hiekkakivialueella
+UUSI: Tšekin pohjoisosan hiekkakivialueella
+SYY: epätarkka sijainti
+
+### v1-85
+VANHA: Vuorikehän luoteiskulma ei ole tavallista kalliota
+UUSI: Seutu ei ole tavallista kalliota
+SYY: kielivirhe / epäselvä viittaus
+
+### v1-85
+VANHA: Portti sijaitsee [[Böömin]] kansallispuiston alueella
+UUSI: Portti sijaitsee [[Böömin]] Sveitsin kansallispuiston alueella
+SYY: väärä fakta (puiston nimi on Böömin Sveitsin kansallispuisto)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 8
+### v1-95
+VANHA: Kymmenettuhannet itäberliiniläiset
+UUSI: Kymmenet tuhannet itäberliiniläiset
+SYY: kielivirhe (väärä yhdyssana)
+
+### v1-96
+VANHA: kiersi teini-ikäisenä Euroopan konserttisaleja. Wienissä hänen kunniakseen leivottiin kakkuja.
+UUSI: kiersi teini-ikäisenä Euroopan konserttisaleja.
+SYY: vahvistamaton yksityiskohta
+
+### v1-100
+VANHA: Rajalla oli kaupungin sisällä erotettu toisistaan Itä-Berliini ja Länsi-Berliini
+UUSI: Raja erotti kaupungin sisällä toisistaan Itä-Berliinin ja Länsi-Berliinin
+SYY: kielivirhe (kömpelö lause)
+
+### v1-125
+VANHA: on kaupungin laajin asuinalue
+UUSI: on kaupungin laaja ruutukaava-alue
+SYY: liioittelu
+
+### v1-126
+VANHA: Pojan kädennosto huipulla
+UUSI: Lapsen kädennosto huipulla
+SYY: väärä fakta (huipulla oleva lapsi voi olla tyttö tai poika)
+
+### v1-132
+VANHA: romaaniyhteisön
+UUSI: romaniyhteisön
+SYY: kielivirhe (romaani vs. romani)
+
+### v1-140
+VANHA: Kraatteri on Euroopan harvinaisimpia meteoriittikraattereita, mutta superlatiivin jätän tästä pois.
+UUSI: Kraatteri on harvinainen näky.
+SYY: liioittelu ja ristiriitainen lause
+
+### v1-159
+VANHA: rannoilla, jossa
+UUSI: rannoilla, joissa
+SYY: kielivirhe (sijamuoto)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 8
+### v1-192
+VANHA: Parlamenttitalon kellotorni tunnetaan nimellä [[Big Ben]] viitaten sen suureen kelloon.
+UUSI: Parlamenttitalon kellotornin suurta kelloa kutsutaan nimellä [[Big Ben]].
+SYY: väärä fakta (Big Ben on kello, ei torni)
+
+### v1-193
+VANHA: perinteisten mustien [[mustien taksien]]
+UUSI: perinteisten [[mustien taksien]]
+SYY: kielivirhe (toisto)
+
+### v1-202
+VANHA: ottomaanien ja egyptiläinen laivasto tuhoutui
+UUSI: ottomaanien ja Egyptin yhteinen laivasto tuhoutui
+SYY: kielivirhe
+
+### v1-206
+VANHA: kansalaisilla, eivät naisilla
+UUSI: kansalaisilla, ei naisilla
+SYY: kielivirhe
+
+### v1-206
+VANHA: Pidemmälle kuin toisella vuosisadalla tuo järjestelmä ei sellaisenaan kestänyt.
+UUSI: Makedonian valta lopetti järjestelmän sellaisenaan 300-luvun lopulla eaa.
+SYY: väärä fakta (ajoitus)
+
+### v1-210
+VANHA: Hallinnon savitauluissa on [[lineaari A]] -kirjoitusta
+UUSI: Hallinnon savitauluissa on muun muassa [[lineaari A]] -kirjoitusta
+SYY: epävarma yksityiskohta (Knossoksen taulut pääosin lineaari B)
+
+### v1-220
+VANHA: valmistuivat vasta 1889–1899 uusgoottilaisessa asussa
+UUSI: valmistuivat vasta myöhemmin uusgoottilaisessa asussa
+SYY: epävarma vuosiluku
+
+### v1-221
+VANHA: se avattiin vuonna 1890
+UUSI: se avattiin vuonna 1893
+SYY: väärä fakta
+
+### v1-222
+VANHA: perso-kelpoisen
+UUSI: herkullisen
+SYY: kielivirhe (kömpelö keksitty sana)
+
+### v1-229
+VANHA: Vanhakaupunki on noin 500 metriä pitkä, ja kunnassa
+UUSI: Vanhakaupunki on pieni, ja kunnassa
+SYY: epävarma luku
+
+### v1-239
+VANHA: Rakentaminen kesti kymmeniä vuosia
+UUSI: Rakentaminen kesti lähes kaksikymmentä vuotta
+SYY: väärä luku
+
+### v1-241
+VANHA: Kolikoiden harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on leveämpi.
+UUSI: Kolikoiden harppu on tyylitelty versio esikuvasta.
+SYY: epävarma väite
+
+### v1-252
+VANHA: Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta
+UUSI: Yhteenotot jäivät pääosin ilman tulitusta, mutta
+SYY: virheellinen väite (varoituslaukauksia ammuttiin)
+
+### v1-262
+VANHA: pellot, tehtaat ja suurin osa sateista
+UUSI: pellot ja suuri osa tehtaista
+SYY: väärä fakta
+
+### v1-262
+VANHA: saappaan kärjessä [[tulivuoret]] ovat yhä hereillä
+UUSI: etelässä ja Sisiliassa [[tulivuoret]] ovat yhä hereillä
+SYY: väärä sijainti
+
+### v1-265
+VANHA: 126 saarelle
+UUSI: yli sadalle saarelle
+SYY: epävarma luku
+
+### v1-265
+VANHA: 472 siltaa
+UUSI: yli 400 siltaa
+SYY: epävarma luku
+
+### v1-266
+VANHA: vuodesta 810 vuoteen 1797
+UUSI: keskiajalta vuoteen 1797
+SYY: epävarma vuosiluku
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 18
+### v1-283
+VANHA: ja syistä keskustellaan muun muassa kustannuksia ja maanjäristysalttiutta;
+UUSI: ja siitä on keskusteltu muun muassa kustannusten ja maanjäristysalttiuden vuoksi;
+SYY: kielivirhe (väärä sijamuoto)
+
+### v1-286
+VANHA: Musta laatikko, jossa on kuusi näyttelytilaa, ja minä
+UUSI: Musta laatikko, ja minä
+SYY: epävarma yksityiskohta (näyttelytilojen määrä)
+
+### v1-292
+VANHA: Suvun postiperimätiedon mukaan ruhtinas asui tuolloin
+UUSI: Ruhtinas asui tuolloin
+SYY: kömpelö keksitty yhdyssana
+
+### v1-294
+VANHA: Sen kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa.
+UUSI: Sen kokoelman perusta luotiin lähteiden mukaan vuonna 1967.
+SYY: epävarma yksityiskohta (kymmenen maalausta)
+
+### v1-318
+VANHA: Latvian vanhin suojelualue [[Gaujan kansallispuisto]]
+UUSI: Latvian vanhin kansallispuisto [[Gaujan kansallispuisto]]
+SYY: väärä fakta (Gaujan puisto on vanhin kansallispuisto, ei vanhin suojelualue)
+
+### v1-331
+VANHA: nykyinen rakennus valmistui 1800-luvun lopulla
+UUSI: nykyinen rakennus rakennettiin 1800-luvun lopulla ja 1900-luvun vaihteessa
+SYY: väärä fakta (rakennettiin 1875–1903)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 6
+### v1-365
+VANHA: vuoristossa on yhä noin 20 jäätikköjärveä
+UUSI: vuoristossa on yhä useita jäätikköjärviä
+SYY: epävarma luku
+### v1-367
+VANHA: Se on usein sanottu Euroopan eteläisimmäksi vuonoksi
+UUSI: Sitä on usein sanottu Euroopan eteläisimmäksi vuonoksi
+SYY: kielivirhe
+### v1-396
+VANHA: ja sateisin kuukausi on joulukuu
+UUSI: ja sateisinta on syksyllä ja alkutalvella
+SYY: epävarma tai väärä yksityiskohta (sateisin kuukausi yleensä syys-lokakuu)
+### v1-409
+VANHA: Maan kokoelmat ovat jopa julkaisseet kirjan, jossa on jokainen maailman [[visentti]].
+UUSI: Puolassa pidetään myös sukukirjaa [[visentti]]en sukulinjoista.
+SYY: liioittelu ja epäselvä väite
+### v1-411
+VANHA: Linnan kello käynnistettiin uudelleen siitä minuutista, mihin se oli pysähtynyt.
+UUSI: Linnan kellon kerrotaan käynnistetyn uudelleen siitä minuutista, mihin se oli pysähtynyt.
+SYY: epävarma yksityiskohta
+### v1-430
+VANHA: Romania onkin Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta
+UUSI: Romania onkin Kaakkois-Euroopassa poikkeus, sillä sen kieli polveutuu latinasta
+SYY: liioittelu (myös Moldovassa puhutaan romaniaa)
+### v1-432
+VANHA: Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan.
+UUSI: Romania on yksi maailman suurimmista luumuntuottajista, ja merkittävä osa sadosta päätyy țuicaan.
+SYY: epävarma sijoitus ja luku
+### v1-432
+VANHA: mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa
+UUSI: mäski käy useita viikkoja suurissa tynnyreissä, ja tislaus tehdään syksyllä ja alkutalvella
+SYY: epävarma yksityiskohta
+### v1-433
+VANHA: Hän kirjoitti sen päättötyökseen [[Bukarestin konservatoriossa]].
+UUSI: Sen kerrotaan syntyneen hänen opiskeluaikanaan [[Bukarestin konservatoriossa]].
+SYY: epävarma yksityiskohta
+### v1-433
+VANHA: joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Wienin konservatorion stipendi jäi hänellä käyttämättä, koska romania ei päästetty lähtemään.
+UUSI: joten siitä tuli viulistien näytösnumero kaikkialla maailmassa.
+SYY: vahvistamaton yksityiskohta
+### v1-435
+VANHA: avattiin jo vuonna 1847
+UUSI: perustettiin jo 1800-luvun puolivälissä
+SYY: epävarma vuosiluku
+### v1-446
+VANHA: Kirkossa on yhdeksän värikästä kupolia
+UUSI: Kirkossa on useita värikkäitä kupoleja
+SYY: epävarma luku
+### v1-446
+VANHA: kreml-muurin vieressä
+UUSI: Kremlin muurin vieressä
+SYY: kielivirhe
+LOPPU: tarkistettu 90 vastausta, korjauksia 14
+### v1-457
+VANHA: ovat pieniä grillattuja lihaleipiä tai makkaroita
+UUSI: ovat pieniä grillattuja jauhelihamakkaroita
+SYY: väärä fakta (ćevapi ei ole leipä)
+
+### v1-463
+VANHA: on saareksi muodostettu virkistysalue
+UUSI: on entinen saari ja nykyään virkistysalue
+SYY: väärä fakta (Ada Ciganlija on yhdistetty mantereeseen, ei saareksi muodostettu)
+
+### v1-494
+VANHA: finaali on vuoden katsotuin televisiolähetys
+UUSI: finaali on yksi vuoden katsotuimmista televisiolähetyksistä
+SYY: liioittelu
+
+### v1-505
+VANHA: Neljä muutosta yhdelle talolle
+UUSI: Kolme muutosta yhdelle talolle
+SYY: väärä fakta (kirkko, moskeija, museo, moskeija = kolme muutosta)
+
+### v1-509
+VANHA: Istanbulin vanhan kaupungin ja Galatan mäen välillä
+UUSI: Karaköyn ja Galatan mäen välillä
+SYY: väärä fakta (Tünel yhdistää Karaköyn ja Beyoğlun, ei vanhaa kaupunkia)
+
+### v1-510
+VANHA: jonka ensimmäinen osuus avattiin vuonna 1858
+UUSI: joka rakennettiin 1800-luvulla
+SYY: epävarma vuosiluku
+
+### v1-520
+VANHA: ja siinä on viisi kerrosta
+UUSI: ja siinä on useita kerroksia
+SYY: väärä fakta (Derinkuyussa on kahdeksan avointa ja jopa 18 kerrosta)
+
+### v1-521
+VANHA: noin neljäsataa kallioon louhittua kirkkoa
+UUSI: satoja kallioon louhittuja kirkkoja
+SYY: epävarma luku
+
+### v1-521
+VANHA: Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus.
+UUSI: Kirkkoja louhittiin pitkään bysanttilaisella ajalla, kun alue oli kristinuskon keskus.
+SYY: väärä ajoitus (maalaukset pääosin 900–1200-luvuilta)
+
+### v1-530
+VANHA: Katedraali valmistui ilmeisesti vuonna 1037
+UUSI: Katedraalin rakentaminen aloitettiin ilmeisesti vuonna 1037
+SYY: väärä fakta (1037 on perustamisvuosi, ei valmistumisvuosi)
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 10
+### v2-3
+VANHA: asukkaista noin 96 prosenttia on etnisiä albaaneja
+UUSI: asukkaista valtaosa on etnisiä albaaneja
+SYY: epävarma luku (etnisten albaanien osuus on tuoreissa laskennoissa selvästi pienempi kuin 96 prosenttia)
+
+### v2-37
+VANHA: Näin syntyi ensimmäinen teollisesti käyttökelpoinen sähkömoottori.
+UUSI: Tarinan mukaan sähkömoottori päätyi käytännön käyttöön juuri näin.
+SYY: liioittelu (sähkömoottoreita oli ennen vuotta 1873, "ensimmäinen" ei pidä)
+
+### v2-42
+VANHA: ruunatilalla
+UUSI: hevostilalla
+SYY: väärä fakta (Piber on kasvatus- eli siitostila, ei ruunatila)
+
+### v2-83
+VANHA: Aukion vastakkaisella puolella kaupungintalon vieressä on
+UUSI: Kaupungintalon vastapäätä aukion toisella laidalla on
+SYY: ristiriitainen ilmaus (vastakkaisella puolella ja vieressä)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 4
+### v2-92
+VANHA: liitettiin Unescon maailmanperintöluetteloon vuonna 1979
+UUSI: liitettiin Unescon maailmanperintöluetteloon vuosina 1979–1980
+SYY: Ohridin luonto liitettiin luetteloon 1979 ja kulttuuriperintö 1980
+
+### v2-98
+VANHA: ja teki Bulgariasta jälleen itsenäisen
+UUSI: ja johti Bulgarian valtion uudelleen syntymiseen
+SYY: anakronismi, Bulgaria oli 1878 vasallina ruhtinaskunta, täysi itsenäisyys 1908
+
+### v2-103
+VANHA: Se rakennettiin kolmessa vaiheessa noin 300 vuoden aikana.
+UUSI: Se rakennettiin kolmessa vaiheessa 900-luvulta 1800-luvulle.
+SYY: väärä fakta, vaiheet 900/1000-luvulla, 1259 ja 1800-luvulla
+
+### v2-150
+VANHA: Lublinin unionin jälkeen vuonna 1569 virallinen kieli oli puola
+UUSI: Lublinin unionin jälkeen vuonna 1569 puolan asema vahvistui, ja se korvasi ruteenin virallisena kielenä 1600-luvun lopulla
+SYY: väärä fakta, ruteeni säilyi virallisena kielenä vuoteen 1697
+
+### v2-154
+VANHA: järviä noin 4 000
+UUSI: järviä noin 11 000
+SYY: väärä luku, Valko-Venäjällä on noin 11 000 järveä
+
+### v2-158
+VANHA: noin 10 miljoonaa nimekettä
+UUSI: miljoonia nimikkeitä
+SYY: kielivirhe (nimeke) ja epävarma luku
+
+### v2-161
+VANHA: Louhinta kesti seitsemäntoista vuotta
+UUSI: Rakentaminen kesti seitsemäntoista vuotta
+SYY: väärä fakta, louhinta kesti noin 11 vuotta, koko rakentaminen 1999–2016
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 7
+### v2-178
+VANHA: -
+UUSI: -
+SYY: LINKKI: [[Michele Besson]] on väärin kirjoitettu, oikea nimi on Michele Besso
+### v2-187
+VANHA: Vuoristossa on aina eletty karjan ehdoilla
+UUSI: Vuoristossa on vuosisatojen ajan eletty karjan ehdoilla
+SYY: liioittelu
+### v2-204
+VANHA: saaren kaikkien pankkien pääkonttorit ovat täällä
+UUSI: monien pankkien pääkonttorit ovat täällä
+SYY: liioittelu
+### v2-204
+VANHA: yksitoista viisikulmaista [[bastioni]]a
+UUSI: yksitoista [[bastioni]]a
+SYY: epävarma yksityiskohta (Nikosian bastionien muoto)
+### v2-205
+VANHA: vanhallekaupungille
+UUSI: vanhalle kaupungille
+SYY: kielivirhe (virheellinen yhdyssana)
+### v2-211
+VANHA: mitattiin 4. syyskuuta 2020 koko saaren korkein lämpötila, 46,2 astetta
+UUSI: on mitattu noin 46 asteen lämpötila, joka kuuluu saaren korkeimpiin
+SYY: epävarma päivämäärä ja ennätysväite
+LOPPU: tarkistettu 50 vastausta, korjauksia 6
+### v2-253
+VANHA: Alpit ovat Euroopan korkein vuoristo, joka kaartuu noin tuhannen kilometrin pituisena
+UUSI: Alpit ovat Länsi-Euroopan korkein vuoristo, joka kaartuu noin 1 200 kilometrin pituisena
+SYY: liioittelu (Kaukasus on korkeampi) ja pituus noin 1 200 km
+LOPPU: tarkistettu yhteensä 89 vastausta, korjauksia tässä tiedostossa 1
+### v2-274
+VANHA: vuosina 1670–1675
+UUSI: 1670-luvulla
+SYY: epävarma tarkka vuosiluku
+### v2-275
+VANHA: Odensessa syntyi lähiseudulla myös säveltäjä
+UUSI: Odensen lähistöllä syntyi myös säveltäjä
+SYY: kielivirhe
+### v2-279
+VANHA: se kaartaa sataman yli neljän metrin korkeudessa
+UUSI: se kaartaa sataman yli
+SYY: epävarma luku
+### v2-284
+VANHA: tuhoutui vuonna 1943
+UUSI: tuhoutui vuonna 1944
+SYY: väärä vuosi (Tivolin tuho oli 1944)
+### v2-285
+VANHA: ulkopuolelle noin 61 000 neliömetrin alueelle,
+UUSI: ulkopuolelle,
+SYY: epävarma luku
+### v2-300
+VANHA: kymmenen vuotta töitä
+UUSI: vuosia töitä
+SYY: epävarma kesto
+### v2-301
+VANHA: , ja Goya on museon eniten esillä oleva taiteilija
+UUSI:
+SYY: perustelematon väite
+### v2-301
+VANHA: noin 7 600 maalausta
+UUSI: useita tuhansia maalauksia
+SYY: epävarma luku
+### v2-301
+VANHA: yli 3,3 miljoonaa kävijää
+UUSI: yli kolme miljoonaa kävijää
+SYY: epävarma luku
+### v2-305
+VANHA: vuodesta 1857 lähtien siitä on mitattu kaikki maan päätiet
+UUSI: siitä mitataan kaikki maan päätiet
+SYY: epävarma vuosiluku
+### v2-306
+VANHA: Madridin vanhat ravintolat tarjoavat sitä vain
+UUSI: Monet Madridin vanhat ravintolat tarjoavat sitä vain
+SYY: liioittelu
+### v2-307
+VANHA: kuin kukaan muu
+UUSI: kuin useimmat muut eurooppalaiset
+SYY: liioittelu
+### v2-309
+VANHA: Atléticon kannattajat olivat ensimmäisiä, jotka kiipesivät Cibeleen suihkulähteen päälle juhlimaan, koska seuran toimisto oli naapurikadulla.
+UUSI: Atléticon kannattajat juhlivat mestaruuksia perinteisesti Neptunuksen suihkulähteellä.
+SYY: väärä fakta (Atlético juhlii Neptunuksella, Cibeles on Realin juhlapaikka)
+### v2-310
+VANHA: sai helmikuussa 1859 Madridin hallitukselta tehtäväkseen laatia Barcelonan laajennuksen
+UUSI: laati Madridin hallituksen toimeksiannosta Barcelonan laajennuksen
+SYY: väärä tai epävarma ajoitus (toimeksianto oli aiemmin, suunnitelma vahvistettiin 1859)
+### v2-323
+VANHA: noin viidenkymmenen kilometrin päässä merestä
+UUSI: melko lähellä Välimeren rannikkoa
+SYY: ristiriita muiden vastausten (noin 70 km) kanssa
+### v2-331
+VANHA: 1523, ja viimeiset kivet muurattiin paikoilleen jouluaattona 1704
+UUSI: 1523
+SYY: epävarma yksityiskohta
+LOPPU: tarkistettu 89 vastausta, korjauksia 17
+### v2-362
+VANHA: maalattiin vuonna 1586
+UUSI: maalattiin 1580-luvulla
+SYY: teos maalattiin vuosina 1586-1588
+### v2-370
+VANHA: joten saunoja on enemmän kuin autoja
+UUSI: joten saunoja on noin yksi kahta asukasta kohti
+SYY: väärä päätelmä, autoja on suunnilleen yhtä paljon
+### v2-381
+VANHA: Helsinki sai vuonna 1743 kuninkaalliselta päätökseltä oikeuden kahteen vuosimarkkinaan, ja niitä on pidetty siitä lähtien. Vuonna 1891 markkinoista lakkautettiin kaikki muu paitsi suolatun kalan kauppa, ja siksi jäljelle jäivät silakkamarkkinat.
+UUSI: Silakkamarkkinoita on lähteiden mukaan pidetty Helsingissä jo 1700-luvulta lähtien.
+SYY: epävarmat ja tarkistamattomat yksityiskohdat (1891 lakkautus, kuninkaallinen päätös)
+### v2-393
+VANHA: Tornia pidettiin Suomen korkeimpana rakennuksena yli viisikymmentä vuotta, ja näkötornina se on maan korkein yhä.
+UUSI: Näkötornina se on Suomen korkein.
+SYY: epävarma väite korkeimmasta rakennuksesta
+### v2-393
+VANHA: Kokonaiskorkeus on 168 metriä, josta itse torniosaa on 134,5 metriä ja loppu on huipun antennimasto.
+UUSI: Korkeutta on noin 168 metriä.
+SYY: epävarma tarkka jaottelu
+### v2-402
+VANHA: poronsarven muotoisen kuvion, jonka sarvien väliin jää urheilukenttä.
+UUSI: poronsarven muotoisen kuvion.
+SYY: epävarma yksityiskohta
+LOPPU: tarkistettu 50 vastausta, korjauksia 6
+### v2-407
+VANHA: ohueksi leikatusta [[poronlihaa]] käyttäen
+UUSI: ohueksi leikattua [[poronlihaa]] käyttäen
+SYY: kielivirhe (sijamuoto)
+### v2-418
+VANHA: Alpit ovat Euroopan suurin vuoristo
+UUSI: Alpit ovat Länsi-Euroopan suurin vuoristo
+SYY: liioittelu
+### v2-421
+VANHA: Paita vaihtaa omistajaa jokaisen etapin jälkeen
+UUSI: Paita vaihtaa omistajaa, kun kokonaiskilpailun johtaja vaihtuu
+SYY: väärä fakta
+### v2-422
+VANHA: jonka omistuksessa Tour de France on yhä
+UUSI: jonka kustantajakonserniin Tourin järjestäjä kuuluu yhä
+SYY: Tourin omistaja on järjestäjä ASO, ei L'Équipe
+### v2-437
+VANHA: ja se luonnonsatama, johon
+UUSI: ja luonnonsatama, johon
+SYY: kielivirhe
+### v2-441
+VANHA: ja suurin osa tulee Andalusian [[Jaénissa]]
+UUSI: ja merkittävä osa tulee Andalusian [[Jaénissa]]
+SYY: liioittelu, Jaén ei tuota suurinta osaa
+LOPPU: tarkistettu yhteensä 89 vastausta (tässä osassa 39), korjauksia tässä osassa 6
+### v2-449
+VANHA: konepajan Tampereelle
+UUSI: puuvillatehtaan Tampereelle
+SYY: Finlaysonin perustama yritys oli puuvillatehdas, ei konepaja
+
+### v2-464
+VANHA: joka on jo viides samalla paikalla
+UUSI: jonka paikalla on seissyt useita aiempia katedraaleja
+SYY: epävarma luku (neljäs vai viides)
+
+### v2-470
+VANHA: tyypillisesti musta kaksiosainen ajoneuvo
+UUSI: tyypillisesti musta ajoneuvo
+SYY: kielivirhe, merkityksetön "kaksiosainen"
+
+### v2-476
+VANHA: Vuonna 2025 mukana oli 3 893 esitystä 301 paikassa.
+UUSI: Viime vuosina mukana on ollut lähes neljä tuhatta esitystä noin kolmellasadalla paikalla.
+SYY: epävarma tarkka luku
+
+### v2-486
+VANHA: Lähin kaupunki on [[Litochoron]], noin 18 kilometrin päässä huipusta.
+UUSI: Lähin kaupunki on [[Litochoron]].
+SYY: etäisyys väärä (tieetäisyys ei ole linnuntie huipulle)
+
+### v2-499
+VANHA: kallio kohoaa noin 90 metriä ympäröivän tasangon yläpuolelle
+UUSI: kallio kohoaa jyrkästi ympäröivän kaupungin yläpuolelle
+SYY: korkeusluku virheellinen/epävarma
+
+### v2-504
+VANHA: Avajaisissa oli paikalla noin 60 000 katsojaa.
+UUSI: Avajaisissa oli paikalla kymmeniätuhansia katsojia.
+SYY: epävarma luku
+
+### v2-517
+VANHA: lyran tai laoutoin säestyksellä
+UUSI: lyran tai laouton säestyksellä
+SYY: kielivirhe, väärä sijamuoto
+
+### v2-523
+VANHA: kroatiaksi Dinara-vuoristo
+UUSI: kroatiaksi Dinaridi
+SYY: Dinara on yksittäinen vuori, vuoriston kroatiankielinen nimi on Dinaridi
+
+LOPPU: tarkistettu 50 vastausta, korjauksia 9
+### v2-539
+VANHA: kasvanut juustomassa valutetaan
+UUSI: hyytynyt juustomassa valutetaan
+SYY: kielivirhe (kömpelö sanavalinta)
+
+### v2-539
+VANHA: tuorejuustolla, ja rakuunalla tai rusinoilla
+UUSI: tuorejuustolla, rakuunalla tai rusinoilla
+SYY: kielivirhe (turha pilkku ja ja-sana)
+
+### v2-543
+VANHA: yli 1 500 teosta
+UUSI: yli tuhat teosta
+SYY: epävarma luku, pehmennetty
+
+### v2-548
+VANHA: se on Euroopan vanhin yhtäjaksoisesti toiminut apteekki
+UUSI: se on yksi Euroopan vanhimmista yhtäjaksoisesti toimineista apteekeista
+SYY: liioittelu (vanhin-väite)
+
+LOPPU: tarkistettu 50 vastausta, korjauksia 4
+### v2-596
+VANHA: Islanti on harvoja paikkoja, jossa harjanne
+UUSI: Islanti on harvoja paikkoja, joissa harjanne
+SYY: kielivirhe (sijamuoto)
+
+### v2-601
+VANHA: Huhtikuun vaaleissa valtaan nousi [[Jóhanna Sigurðardóttir]]
+UUSI: Pääministeriksi nousi helmikuussa 2009 [[Jóhanna Sigurðardóttir]]
+SYY: väärä ajoitus (hän nousi pääministeriksi ennen huhtikuun vaaleja)
+
+LOPPU: tarkistettu yhteensä 89 vastausta, korjauksia tässä tiedostossa 2
+### v2-639
+VANHA: äänet laskettiin palatsin laskuhuoneessa ja tulos luettiin ensin salissa ja sitten parvekkeelta
+UUSI: asiasta järjestettiin kansanäänestys
+SYY: epävarma yksityiskohta
+
+### v2-667
+VANHA: jolla käy vuosittain yli 4,5 miljoonaa kävijää
+UUSI: jolla käy vuosittain miljoonia kävijöitä
+SYY: epävarma luku
+
+### v2-669
+VANHA: kesti yli 120 vuotta
+UUSI: kesti noin 120 vuotta
+SYY: väärä luku (1506-1626 on 120 vuotta)
+
+### v2-669
+VANHA: Vuonna 1950 kirkon alta kaivettiin
+UUSI: 1940-luvulla kirkon alta kaivettiin
+SYY: väärä ajoitus (kaivaukset 1939-1949)
+
+### v2-695
+VANHA: Hänellä ei ollut poikia
+UUSI: Hänellä ei ollut eloon jääneitä poikia
+SYY: väärä fakta (poika kuoli lapsena)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 5
+### v2-712
+VANHA: Museo perustettiin 1800-luvun lopulla kuvernööri [[Friedrich Stellwag von Carionin]] aloitteesta
+UUSI: Museon perustamiseen vaikutti kuvernööri [[Friedrich Stellwag von Carionin]] aloite
+SYY: epävarma ajoitus (perustaminen 1800-luvun lopulla ei pidä)
+
+### v2-722
+VANHA: niiden lisäksi siihen kuuluvat baltit,
+UUSI: niiden lisäksi siihen kuuluvat balttilaiset kielet,
+SYY: kielivirhe (baltit = kansa, ei kieliryhmä)
+
+### v2-727
+VANHA: siellä on toistasataa kirkkoa
+UUSI: siellä on kymmeniä kirkkoja
+SYY: väärä luku (vanhassakaupungissa kirkkoja on kymmeniä, ei yli sataa)
+
+### v2-727
+VANHA: sai nykyisen asunsa vuonna 1783
+UUSI: sai nykyisen asunsa 1700-luvun lopulla
+SYY: uudistus alkoi 1783 mutta valmistui vasta 1800-luvun alussa
+
+### v2-733
+VANHA: toistasataa kirkkoa
+UUSI: kymmeniä kirkkoja
+SYY: väärä luku
+
+### v2-742
+VANHA: suurruhtinas Vytautas
+UUSI: suuriruhtinas Vytautas
+SYY: kirjoitusvirhe
+
+### v2-744
+VANHA: Kalliolla kreivi [[Siegfried Ardennelainen]] sai
+UUSI: Kreivi [[Siegfried Ardennelainen]] sai
+SYY: kömpelö lause
+
+### v2-748
+VANHA: ja teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin vuonna 1913
+UUSI: ja teräksentuotanto kasvoi nopeasti 1900-luvun alussa
+SYY: epävarmat tuotantoluvut
+
+### v2-764
+VANHA: Luxemburgissa 28. marraskuuta 1954
+UUSI: Luxemburgissa 1950-luvun alussa
+SYY: väärä päivämäärä (tuomioistuin aloitti Luxemburgissa 1952)
+
+### v2-779
+VANHA: Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 juusto sai
+UUSI: Perinnettä on vaalittu pitkään, ja juusto sai
+SYY: epävarma ikä ja vuosiluku
+
+### v2-785
+VANHA: Ilmalaivahallit olivat suuria hankia, joissa
+UUSI: Ilmalaivahallit olivat suuria hangaareja, joissa
+SYY: kielivirhe (hanki = lumikinos)
+
+### v2-789
+VANHA: Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat
+UUSI: Jalustan reliefeissä on hahmoryhmiä, jotka kuvaavat
+SYY: epävarma luku
+
+### v2-793
+VANHA: Nykyinen satama valmistui vasta vuonna 1926, ja isoisän matkavuonna 1873 satama oli nykyistä vanhempi.
+UUSI: Satamaa on laajennettu ja uudistettu useassa vaiheessa.
+SYY: epävarma vuosiluku ja metalause
+
+### v2-797
+VANHA: [[fransiskaanien]] ritarikuntaan
+UUSI: [[fransiskaanien]] veljeskuntaan
+SYY: fransiskaanit eivät ole ritarikunta
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 14
+### v2-845
+VANHA: ja nykyinen kirkko on uudistettu 1500-luvulla
+UUSI: ja nykyinen kirkko on myöhempi uudistus
+SYY: epävarma vuosiluku (nykyinen kirkko on lähteiden mukaan 1800-luvun alusta)
+
+### v2-846
+VANHA: Se virtaa maan halki 388 kilometrin matkan
+UUSI: Sen koko pituus on 388 kilometriä, josta noin 300 kilometriä virtaa maan halki
+SYY: väärä fakta (388 km on joen kokonaispituus, ei matka Pohjois-Makedonian läpi)
+
+### v2-861
+VANHA: oli noin 12 000 pientä puotia ja verstasta
+UUSI: oli suuri määrä pieniä puoteja ja verstaita
+SYY: epävarma luku
+
+### v2-880
+VANHA: Täytteen tunnistaa taitteesta, sillä ricottapiiraat taitetaan keskeltä ja hernepiiraat sivulta.
+UUSI: Täytteen voi usein tunnistaa piiraan muodosta.
+SYY: epävarma yksityiskohta
+
+### v2-885
+VANHA: pakeni [[Roomasta]] vuonna 1607
+UUSI: pakeni [[Roomasta]] vuonna 1606
+SYY: väärä fakta (surmatyö ja pako 1606, Maltalle hän saapui 1607)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 5
+### v2-892
+VANHA: piti pintansa lähes kuukauden
+UUSI: piti pintansa runsaan kuukauden
+SYY: 18.5.–23.6. on yli kuukausi
+
+### v2-904
+VANHA: Hänet haudattiin sinne pieneen kappeliin vuonna 1851.
+UUSI: Hänet siirrettiin sinne pieneen kappeliin vuonna 1855.
+SYY: väärä vuosi (Njegoš kuoli 1851, siirrettiin Lovćenille 1855)
+
+### v2-905
+VANHA: oli hankkinut Venetsiasta vain vuosi aiemmin, ja paperikin tuotiin samaa reittiä, koska lähialueella ei ollut yhtään paperimyllyä
+UUSI: oli hankkinut ulkomailta, ja paperikin tuotiin ulkomailta
+SYY: epävarma yksityiskohta
+
+### v2-912
+VANHA: Ribnican yli.JATKOT:
+UUSI: Ribnican yli.
+SYY: kielivirhe (jäännöstunniste)
+
+### v2-925
+VANHA: yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon
+UUSI: yksittäisistä sipuleista maksettiin useita tuhansia guldeneita, ja samalla rahalla sai kanavatalon
+SYY: epävarma luku
+
+### v2-927
+VANHA: kuoli 3 267 ihmistä
+UUSI: kuoli noin 3 300 ihmistä
+SYY: epävarma tarkka luku
+
+### v2-942
+VANHA: jonka hän maalasi noin vuonna 1660
+UUSI: jonka hän maalasi noin vuonna 1658
+SYY: väärä vuosi (Maitotyttö noin 1657–1658)
+
+### v2-955
+VANHA: Nykymuotoinen bunad-perinne on 1900-luvun alun peräisiä
+UUSI: Nykymuotoinen bunad-perinne on peräisin 1900-luvun alusta
+SYY: kielivirhe
+
+### v2-963
+VANHA: varastettu kahdesti, vuonna 1994 ja vuonna 2004 [[Munch-museosta]]
+UUSI: varastettu kahdesti, vuonna 1994 Kansallisgalleriasta ja vuonna 2004 [[Munch-museosta]]
+SYY: väärä fakta (vuonna 1994 varkaus oli Kansallisgalleriasta)
+
+### v2-971
+VANHA: , ja alue liitettiin Bergeniin vuonna 1876
+UUSI:
+SYY: epävarma yksityiskohta
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 10
+### v2-982
+VANHA: ja se on maailman pohjoisin yliopisto
+UUSI: ja se on yksi maailman pohjoisimmista yliopistoista
+SYY: liioittelu
+
+### v2-984
+VANHA: Kellotorni valmistui vuotta myöhemmin, vuonna 1862.
+UUSI: Kellotorni valmistui hieman myöhemmin.
+SYY: epävarma vuosiluku
+
+### v2-990
+VANHA: joka lähtee vasta puoli yhdeltätoista illalla
+UUSI: joka lähtee vasta illalla
+SYY: epävarma kellonaika
+
+### v2-1005
+VANHA: yli viidensadan vuoden ajan
+UUSI: yli neljänsadan vuoden ajan
+SYY: väärä luku (kruunajaiset Wawelissa 1320-1734)
+
+### v2-1010
+VANHA: ja vuonna 1882 se muurattiin
+UUSI: ja se muurattiin
+SYY: epävarma vuosiluku
+
+### v2-1012
+VANHA: ja hetken aikaa se oli maailman suurin [[kellotorni]]
+UUSI: ja siitä tuli myös [[kellotorni]]
+SYY: liioittelu
+
+### v2-1051
+VANHA: Suurin osa sadosta käytetään kuitenkin
+UUSI: Merkittävä osa sadosta käytetään kuitenkin
+SYY: epävarma väite
+
+### v2-1060
+VANHA: Pinta-alaa on lähes 15 hehtaaria
+UUSI: Pinta-alaa on noin 15 hehtaaria
+SYY: epävarma luku
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 8
+### v2-1072
+VANHA: Moskovan ruhtinas [[Ivan Julma]]
+UUSI: Venäjän tsaari [[Ivan Julma]]
+SYY: anakronismi, Ivan IV oli vuonna 1552 jo tsaari
+
+### v2-1074
+VANHA: Pietari kutsui sitä itse ikkunaksi Eurooppaan
+UUSI: sitä on kutsuttu Venäjän ikkunaksi Eurooppaan
+SYY: väärä attribuutio (ilmaisu ei ole Pietari Suuren) ja epäselvä subjekti
+
+### v2-1095
+VANHA: hallitsi viimeiset kolme vuosisataa [[Romanovien]] suku
+UUSI: hallitsi [[Romanovien]] suku
+SYY: väärä luku, keisarikunta kesti vain noin 200 vuotta
+
+### v2-1102
+VANHA: Kaupunkia on uhannut tulvat, ja siksi Suomenlahdelle on rakennettu tulvasuojelupato.
+UUSI: Kaupunkia ovat uhanneet tulvat, ja siksi Suomenlahdelle on rakennettu tulvapato.
+SYY: kielivirhe (predikaatti ja subjekti) ja kömpelö yhdyssana
+
+### v2-1110
+VANHA: jonka Stefan Nemanja aloitti rakentaa 1180-luvulla
+UUSI: jonka rakentamisen Stefan Nemanja aloitti 1180-luvulla
+SYY: kielivirhe
+
+### v2-1116
+VANHA: on aiemmin pidetty maalaismarkkinoita
+UUSI: on lähteiden mukaan aiemmin pidetty maalaismarkkinoita
+SYY: epävarma yksityiskohta
+
+### v2-1128
+VANHA: ja se kuuluu vuonna 2021 yhdistettyyn 14,07 hehtaarin luonnonmuistomerkkiin
+UUSI: ja alue on suojeltu luonnonmuistomerkkinä
+SYY: epävarma tarkka luku ja vuosi
+
+### v2-1130
+VANHA: , mutta vuodesta en ole varma
+UUSI:  vuonna 2022
+SYY: Unesco kirjasi šljivovican perinteet vuonna 2022
+
+### v2-1132
+VANHA: nykyisin se on lähteen mukaan noin kuuden kilometrin pituinen niemi
+UUSI: nykyisin se on pitkä niemi
+SYY: epävarma mitta
+
+### v2-1132
+VANHA: Niemen pinta-ala on noin kolme neliökilometriä ja leveimmillään se on noin 700 metriä.
+UUSI: Niemen pinta-ala on noin kolme neliökilometriä.
+SYY: epävarma mitta
+
+### v2-1148
+VANHA: vaihdettiin aina vallanpitäjän mukaan
+UUSI: vaihdettiin usein vallanpitäjän mukaan
+SYY: liioittelu
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 11
+### v2-1170
+VANHA: Alueen kellarit ovat suurimmaksi osaksi peräisin ajalta, jolloin seutu oli turkkilaisten vallan alla.
+UUSI: Alueella on vuosisatoja vanhoja kalliokellareita.
+SYY: väärä fakta (Tokaj ei ollut ottomaanien vallassa)
+
+### v2-1172
+VANHA: kun seura syntyi Popradissa vuonna 1873
+UUSI: kun seura syntyi Spišin seudulla vuonna 1873
+SYY: epävarma yksityiskohta (perustamispaikka)
+
+### v2-1186
+VANHA: lähti lukutaidottomana opiskelemaan maalariksi
+UUSI: lähti opiskelemaan maalariksi
+SYY: väärä fakta (lukutaidottomuus ei pidä paikkaansa)
+
+### v2-1188
+VANHA: Serbia, Montenegro ja Pohjois-Makedonia
+UUSI: Serbia, Montenegro ja Makedonia
+SYY: anakronismi (nimi Pohjois-Makedonia vasta 2019)
+
+### v2-1207
+VANHA: Museossa on käynyt yli 45 miljoonaa kävijää.
+UUSI: Museossa on käynyt miljoonia kävijöitä.
+SYY: epävarma luku
+
+### v2-1210
+VANHA: jolla juodaan kahvia tai teetä
+UUSI: jonka aikana juodaan kahvia tai teetä
+SYY: kielivirhe
+
+### v2-1238
+VANHA: Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955.
+UUSI: Kaksi brittiläistä naista toi rodun Eurooppaan vuonna 1955.
+SYY: väärä fakta (eivät olleet tutkijoita)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 7
+### v2-1250
+VANHA: 280 metrin yhtenäisen jännevälin, joka
+UUSI: hyvin pitkän yhtenäisen jännevälin, joka
+SYY: epävarma luku (lähteissä eri mittoja)
+
+### v2-1250
+VANHA: , ja kolmen ensimmäisen päivän jälkeen ylitys oli maksullinen
+UUSI:
+SYY: epävarma yksityiskohta
+
+### v2-1258
+VANHA: 300-luvulla eaa.; siitä on säilynyt muun muassa läntisen pylväshallin korinttilaisia pylväitä
+UUSI: 300-luvulla eaa.; nykyiset rauniot ovat pääosin roomalaisajalta, ja niistä erottuu muun muassa läntisen pylväshallin korinttilaisia pylväitä
+SYY: anakronismi, säilyneet rakenteet ovat roomalaisaikaisia
+
+### v2-1274
+VANHA: , ja kuuden pylvään paikat erottuvat yhä
+UUSI:
+SYY: epävarma yksityiskohta
+
+### v2-1280
+VANHA: ylängön itäosassa sijaitsee [[Kappadokia]]
+UUSI: ylängön keskiosassa sijaitsee [[Kappadokia]]
+SYY: sijainti
+
+### v2-1282
+VANHA: kerrosmäärästä esitetään eri lukuja, yleensä viisi.
+UUSI: kerrosmäärästä esitetään eri lukuja.
+SYY: epävarma luku
+
+### v2-1292
+VANHA: kertoo kaupungin olleen silloin nimeltään [[Venessa]] ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki
+UUSI: kertoo kaupungin olleen silloin nimeltään [[Venessa]]
+SYY: epävarma väite
+
+### v2-1293
+VANHA: Neljäsosa maailman mustasta mullasta on Ukrainassa
+UUSI: Lähteiden mukaan noin neljäsosa maailman mustasta mullasta on Ukrainassa
+SYY: epävarma luku
+
+### v2-1303
+VANHA: Kistkalla tehdään kaikki [[pysankojen]] vahakuviot.
+UUSI: Kistkalla tehdään perinteisesti [[pysankojen]] vahakuviot.
+SYY: liioittelu
+
+### v2-1311
+VANHA: Se oli maailman syvin metroasema vuoteen 2022 asti, jolloin Kiinassa Chongqingiin avattiin 116 metrin syvyyteen ulottuva asema.
+UUSI: Se on yksi maailman syvimmistä metroasemista.
+SYY: vahvistamaton väite (Chongqingin asema)
+
+### v2-1315
+VANHA: toimi lähes viisisataa vuotta sekä
+UUSI: toimi vuosisatoja sekä
+SYY: epävarma luku
+
+### v2-1315
+VANHA: oli noin 12 metriä korkea ja 6 metriä leveä
+UUSI: oli noin 12 metriä korkea
+SYY: epävarma luku
+
+### v2-1322
+VANHA: ulottuu syvimmillään noin 60 metriä merenpinnan alapuolelle
+UUSI: ulottuu syvimmillään noin 60 metrin syvyyteen
+SYY: väärä vertailutaso
+
+### v2-1326
+VANHA: mutta 1990-luvulla se palasi
+UUSI: mutta myöhemmin se palasi
+SYY: epävarma vuosiluku
+
+LOPPU: tarkistettu 84 vastausta, korjauksia 14
