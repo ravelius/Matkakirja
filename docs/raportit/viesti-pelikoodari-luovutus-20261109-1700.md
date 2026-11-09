@@ -63,3 +63,10 @@ Järjestys PT:ltä: otot → v8 + kytkentä → vasta sitten pöllö-workerin ko
   korvautuvat, 11 uutta lisätään (tekstit tarkistettava pakettia v1028 vasten: jos natiivin teksti eroaa, avain ei osu).
 - TEE 2: NIMIEN VIENTI uuteen polkuun (esim. aanet/opas/pariisi-nimet-v1/: mp3 + nimet.json avain "pariisi:<nimi>" → {teksti,url,kesto_s}) →
   JU; KYTKENTÄ natiiviin (kohta 1 KYTKENTÄ) – omistaja hyväksyi. Kuvat/ajo JU:lta, PT:lle katsottuna.
+
+## LISÄYS 17.3x (KS, PT:n välityksellä)
+- LONTOON 14 UUDEN NOSTON PULUN KYSYMYKSET (2/kohde, kohdat kohdekartta:lontoo:<nimi> FRA-paketin tapaan, ks. Pulu v3 -putki
+  pulu-esigenerointi/MALLINOSTOT, valmistele-/yhdista-mallinostot.mjs): luonnokset /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/
+  nostot-korostetut-20261109/LONTOO-14-TEKSTIT.md (rivit "Pulu:"). Jutut päärepon haarassa karttaseppa/lontoo-kyltit ef42a5c08; PR vasta PT:n
+  vastauksen jälkeen ja 4 Kensingtonin kohdetta voi pudota → odota PR/lopullinen lista ennen vastausten generointia (uusi PULU_VERSIO v4).
+  Järjestys: v8 + nimikytkentä, pöllö-worker, sitten tämä.
