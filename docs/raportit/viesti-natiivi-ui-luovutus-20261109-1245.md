@@ -42,3 +42,9 @@ Odotusvahti: bash <sama scratchpad>/vahti.sh (Monitor 30 min; ohittaa valmiit). 
 
 ## Muuta
 - Vanhat worktreet poistettavissa: wt/proto-natiivi-ui-nostovalikko-juna223, wt/proto-natiivi-ui-nostovalikko (ei poistettu).
+
+## Lisäys 12.4x (PT): OMISTAJA 12.45 kortti "Pysyykö noston palkki aina ylhäällä …" = "Kyllä (Suositus)"
+- "Palkki ei katoa koskaan. Nosto ja valikko avautuvat sen alle, ja kaikkea ohjataan palkista."
+- Suunnitelma /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261109-palkki-aina-nakyvissa.md osat 1–4
+  NUI:lle; osa 1 = ‹ Ranska ▾ › -vika (KORVAA yllä kohdan 1.2). Edellinen "EI töitä ennen korttia" -rajaus purkautui tällä kortilla.
+- JÄRJESTYS: versiorivin kuva (1.1) → osat 1–4. Mac-kuvat iPad + iPhone → PT → KK ennen junaa.
