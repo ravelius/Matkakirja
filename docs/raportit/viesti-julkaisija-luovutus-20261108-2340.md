@@ -233,3 +233,21 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - 17.2x PT: JUNA 224 poimittavaksi NUI 075015709 (Temple-piste, sis. 755a52fab; PT katsonut). 8ef2b3561/066244413 vasta kuvien jälkeen. Juna 224 avataan TF 224:n jälkeen (pohja 85d3bab39, git merge --no-ff).
 - 17.3x: 075015709 sisältää 755a52fab:n JA b75419ad3:n (3D-tähti, kuvat EX:ssä ajamatta) → PT:ltä kysytty, poimitaanko ennen EX:n kuvia.
 - 17.3x: PT: 075015709 junaan 224 vasta EX:n tähtikuvien (PT katsoo) jälkeen. EY (nimet) odottaa nyt EX:n loppua. FK NS huippunimet-6 d3a989913 ipad FA:n jälkeen → NS (kuvat NS/PT). Asennuspalvelin pid 87396 irti (ppid 1, oma pgid); uudelleen tarvittaessa: nohup python3 -I -m http.server 8743 --bind 127.0.0.1 --directory /Users/Shared/Claude/proto-3d/jako &
+
+## LISÄYS 9.11. 17.5x (TUOREIN; konteksti 25 % → nollaus)
+- TF 224 VALMIS 17.33 (run 42641968012 success, build 224 käsitelty, sisäinen ryhmä) = juna 223 85d3bab39 → KK + PT kerrottu (PT kirjaa tauluun).
+- JUNA 224 = db1dbdc9f PUSHATTU (natiivi-backup julkaisija/juna-224, worktree /Users/Shared/Claude/wt/julkaisija-juna-221) = 85d3bab39 + PK liiketappi 678376fbb + PK Pulu v3 4c49da614 (--no-ff).
+  Testit vihreät (T/juna224-a-*.txt: unity 0, Kartta 729, Linssit 2279, Peli 887). PT KUITTASI (mukana tulleet NUI 755a52fab/606e08631/9fd044500/a73c5c202 pysyvät).
+  SEURAAVAT junaan PT:n sanalla kuvien jälkeen: NUI tähtikorjaus fd1a7da87 (= b75419ad3 + korjaus; kuvat d2596ef17:llä), KS karttaseppa/tietonapautus (uusin fd079ee0e), PK nimiäänet bda9945bf (EI vielä todistettu).
+- ÄMPÄRI: luennat-v8-vienti (17.24), pariisi-nimet-v1-vienti (17.26; molemmat ensin hylätty: kieli.json puuttui → PK lisäsi), pulu-v4-lontoo-mallinostot-vienti (17.36). Vienti d8dcdc43a (KS) valmis 17.45.
+- KK kohta 12 koottu ja lähetetty (LAV + PK: kaikki PK:n kohdat "ei tiedossa").
+- OMISTAJAN PÄÄTÖS 17.31 (KK): kehitysversio oma App ID + INCREASED_MEMORY_LIMIT + eksplisiittinen profiili; pelitila Info.plist → työlistalla "Kehitysversio: lisämuisti + pelitila"; VUOROT PT:LTÄ (ei aloitettu). Asennuslinkki toimi (omistajan iPhone 17.18). Palvelin pid 87396.
+- RAPORTOITU (kuvat katsottu): PK liiketappi2 x2, pulu-mallinostot, VS vuoret6/7/9, KS mallinostot-2/3/4/5, grandpalais-tahti dbe105f0f, temple-vaisto ab57114e5, NS fpv-vuoret-7, NUI temple-palkki-2 b75419ad3, NUI temple-tahti-1 d2596ef17 (tähdet näkyvät ✓, NUI:lle; PT:lle EI vielä – lähetä yhdessä kadonnut-tahti-1:n kanssa).
+  PK nimiäänet bda9945bf JA v2 eb4318b15: tietokortti "nimeä ei näy kartalla" kaikissa → ei todistettu, PK:lle. PK Lontoo-Pulu 08f48ac73: välimuistin sisältö v1030 → uusinta FZ.
+- AJOSSA / JONOSSA (nohup, T/jono-<x>.zsh; jonoloki Monitor):
+  FL2 (68471): NUI kadonnut-tahti-1 d2596ef17 ETUAJOLLA → orbit-nipistys-1 b75419ad3 → EY KS pariisi-nimet fd079ee0e. Tähtikuvat (temple-tahti-1 + kadonnut-tahti-1) → NUI + PT (PT:n junakuittaus odottaa).
+  vahti-portti-cont.zsh (75031): CONTaa portin (sleep 60; rmdir)-aliprosessit (ppid 1) FL2:n ajan. OPPI 11: etuajon STOP ei saa osua &!-aliprosessiin (lukko jumissa 17.46–17.49).
+  FI (87372) NUI kuvaotsikko-1 066244413 ipad + iphone → NUI. FK NS huippunimet-6 d3a989913 → NS (kuvat NS/PT). FU KS temple-vaisto fd079ee0e, FX KS mallinostot-6 fd079ee0e, FJ KS lontoo-kyltit fd079ee0e → KS (valmis-rivit).
+  FY VS vuoret10 8f14c3463 (KOE) → VS + Shader-error. FZ PK pulu-lontoo-mallinostot 08f48ac73 -v2 iphone → PK (tarkista lokista sisältö v1031 + keskikohde kohdekartta:lontoo:*).
+- PERUTTU: EX kadonnut-tahti b75419ad3 (NUI), FQ VS vuoret8 a7f57e8c1 (VS), FW bda9945bf (→ eb4318b15), ks-temple-vaisto-ee7086b18 (→ fd079ee0e).
+- PK:n osoite nyt local_d3bb1f78-e2ea-4089-8bae-d106bb1f9ff7 (osoitekirja).
