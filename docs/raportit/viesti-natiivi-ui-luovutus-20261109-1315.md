@@ -68,3 +68,8 @@ Kärki b57df8ec6 (wt/proto-natiivi-ui-fpv-napit, puhdas). Tiedostot: UI/Linssit/
   valikko avautuvat sen alle, ja kaikkea ohjataan palkista." → valikosta valittu nähtävyys (MuCEM) avautuu palkin alle kuten nosto
   (AinaNakyvissa + PalkinAlle-paikka nähtävyyskortille), palkki jää, ja edellinen (palkin alla ollut) kortti suljetaan valinnassa.
   Tee löydökset 1 ja 2 tällä linjalla samaan palkki-aina-haaraan (74e72a4a4:n päälle) → sk-palkki-aina-3 (a-5/a-6 nähtävyydellä) → PT.
+
+## Lisäys 13.3x: P-5A fb77e12b1 KELPAA
+- nui-paikkapalkki-p5a-iphone-fb77e12b1 katsottu: terävä lähellä, kaukana tavallinen usva (osuudet 6, muistihuippu 2695 Mt); arkki
+  arkki-p5a-fb77e12b1.jpg (ennen/jälkeen) → PT + NS. JU:lle pyydetty sk-paikkapalkki-1 fb77e12b1 iphone, iphone-vaaka, ipad →
+  lokit/nui-paikkapalkki-1-<koko>-fb77e12b1 (palkki-aina-2:n jälkeen). SEURAAVAKSI: katso → arkki PT:lle → KK.
