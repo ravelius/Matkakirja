@@ -35,3 +35,4 @@ KESKEN: katso kuvat (fn-2: ei yläpalkkia, yksi ☰, pallo ei peitä mitään; f
   pikkukartassa ei kuulu pohjaan; tarjottu lisättäväksi, jos PT haluaa (odottaa PT:n vastausta).
 - JU ajaa paikkapalkki-1 x3 uudelleen 91d517091:llä (korvaa vaaka-pyynnön), sitten sk-fpv-napit-1. Seuraaja: katso kaikki p-6
   ("pelaaja liikutti", kartalla maata ja nimiä) → arkit PT:lle.
+- PT 11.0x: kohta 1 annettu NS:lle (ennakko paluulennossa), kohta 3 ei nimeä (suunnitelman mukaan). Odottaa vain uutta ajoa.
