@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "validation": "independent GLB byte readback, geometry bounds, triangle counts, symmetry, normals, material/texture contract",
+  "files": [
+    {
+      "file": "bussi-1-routemaster.glb",
+      "status": "PASS",
+      "triangles": 332,
+      "triangleLimit": 400,
+      "dimensionsMetres": {
+        "lengthZ": 11.199999809265137,
+        "widthX": 2.549999952316284,
+        "heightY": 4.400000095367432
+      },
+      "boundsMin": [
+        -1.274999976158142,
+        0.0,
+        -5.599999904632568
+      ],
+      "boundsMax": [
+        1.274999976158142,
+        4.400000095367432,
+        5.599999904632568
+      ],
+      "groundOrigin": true,
+      "upAxis": "+Y",
+      "forwardAxis": "+Z",
+      "leftRightSymmetry": true,
+      "oneMeshOneMaterialOnePrimitive": true,
+      "vertexColors": "COLOR_0 float32 linear RGBA",
+      "textureCount": 0,
+      "zeroAreaTriangles": 0,
+      "normalsMatchWinding": true,
+      "fileBytes": 40988,
+      "sha256": "a80a6614b0fca1bb69c9fcf43b305c5b75c701f5e209cd15f3dcb43936d62fbc"
+    },
+    {
+      "file": "bussi-2-tavallinen.glb",
+      "status": "PASS",
+      "triangles": 260,
+      "triangleLimit": 400,
+      "dimensionsMetres": {
+        "lengthZ": 10.5,
+        "widthX": 2.549999952316284,
+        "heightY": 4.300000190734863
+      },
+      "boundsMin": [
+        -1.274999976158142,
+        0.0,
+        -5.25
+      ],
+      "boundsMax": [
+        1.274999976158142,
+        4.300000190734863,
+        5.25
+      ],
+      "groundOrigin": true,
+      "upAxis": "+Y",
+      "forwardAxis": "+Z",
+      "leftRightSymmetry": true,
+      "oneMeshOneMaterialOnePrimitive": true,
+      "vertexColors": "COLOR_0 float32 linear RGBA",
+      "textureCount": 0,
+      "zeroAreaTriangles": 0,
+      "normalsMatchWinding": true,
+      "fileBytes": 32348,
+      "sha256": "6dff480d7f42ceb24f4cf8fc5bd656319244997863d5e446d0d0b0b02850c25f"
+    },
+    {
+      "file": "taksi-1-uusi.glb",
+      "status": "PASS",
+      "triangles": 196,
+      "triangleLimit": 200,
+      "dimensionsMetres": {
+        "lengthZ": 4.849999904632568,
+        "widthX": 1.940000057220459,
+        "heightY": 1.8799999952316284
+      },
+      "boundsMin": [
+        -0.9700000286102295,
+        0.0,
+        -2.424999952316284
+      ],
+      "boundsMax": [
+        0.9700000286102295,
+        1.8799999952316284,
+        2.424999952316284
+      ],
+      "groundOrigin": true,
+      "upAxis": "+Y",
+      "forwardAxis": "+Z",
+      "leftRightSymmetry": true,
+      "oneMeshOneMaterialOnePrimitive": true,
+      "vertexColors": "COLOR_0 float32 linear RGBA",
+      "textureCount": 0,
+      "zeroAreaTriangles": 0,
+      "normalsMatchWinding": true,
+      "fileBytes": 24656,
+      "sha256": "d2674e65c52b1fc7d53403305f46ac4a0eee8be3def823e267fe9358e05f0729"
+    },
+    {
+      "file": "taksi-2-vanha.glb",
+      "status": "PASS",
+      "triangles": 200,
+      "triangleLimit": 200,
+      "dimensionsMetres": {
+        "lengthZ": 4.579999923706055,
+        "widthX": 2.0,
+        "heightY": 1.8300000429153442
+      },
+      "boundsMin": [
+        -1.0,
+        0.0,
+        -2.2899999618530273
+      ],
+      "boundsMax": [
+        1.0,
+        1.8300000429153442,
+        2.2899999618530273
+      ],
+      "groundOrigin": true,
+      "upAxis": "+Y",
+      "forwardAxis": "+Z",
+      "leftRightSymmetry": true,
+      "oneMeshOneMaterialOnePrimitive": true,
+      "vertexColors": "COLOR_0 float32 linear RGBA",
+      "textureCount": 0,
+      "zeroAreaTriangles": 0,
+      "normalsMatchWinding": true,
+      "fileBytes": 25132,
+      "sha256": "60390106803f7f279bc31f6722f5710be9478822bc489950628aa0111bc50174"
+    }
+  ],
+  "renderEvidence": {
+    "renderer": "Blender 5.2.1 LTS",
+    "source": "exact exported GLB files",
+    "individualView": {
+      "azimuthFromFrontDegrees": 30,
+      "elevationDegrees": 45,
+      "size": [
+        1024,
+        1024
+      ],
+      "ground": "neutral gray",
+      "light": "soft area daylight"
+    },
+    "comparison": {
+      "allSameScale": true,
+      "referenceBoxMetres": [
+        1.8,
+        1.5,
+        4.5
+      ],
+      "size": [
+        2048,
+        1024
+      ]
+    },
+    "notAnImageGeneration": true
+  },
+  "visualReview": {
+    "result": "PASS for delivery to reviewer",
+    "individualsAndFrontRearComparisonInspected": true,
+    "allVehiclesFullyWithinFrame": true,
+    "twoWindowDecksOnBuses": true,
+    "modernBusSlopedFrontRearBelts": true,
+    "taxiYellowBlankRoofBoxes": true,
+    "noTextLogosPlatesPassengers": true,
+    "gameCameraTrial": "not performed; recipient gate remains open"
+  },
+  "sourceCommit": "6cb23554b13ac4e3371d07e4f281b173b4961a4c",
+  "sourceBlobSha": "2bb70660c869b47200752c754a6d431b11665eee",
+  "receiverApproval": "pending",
+  "gameIntegrated": false,
+  "published": false
+}
