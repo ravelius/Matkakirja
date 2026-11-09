@@ -50,3 +50,6 @@ Raporttiin merkkimäärät/krediitit.
   ajoLiikeKerroin/AjonLiikeSiirto PalloKierrosta. Kuvat PT:lle katsottuina (tuntumaksi), junaan vasta NUI:n rajapinnalla.
 - Kun kaikki kuitattu: rivi PT:lle "JONO TYHJÄ: Pelikoodari". Tyylikirjan generointi palautetaan git checkoutilla; unity-tarkistus
   `sh Peli-testit/unity-tarkistus.sh`, testit `cd Peli-testit && sh kaanna.sh <osa>`.
+
+## LISÄYS 16.4x (PT)
+- cb19b7556 menee junaan jo nyt; 4c49da614 tulee myöhemmin sen PÄÄLLE, kun Invalides-kuva katsottu. Äänityö: testi 6 nimellä ensin → PT.
