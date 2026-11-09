@@ -30,6 +30,10 @@ a. **KK:n pyyntö (01.5x) – pelikuvat TEHTY 02.2x, PT:lle lähetetty**: `$B/pe
    - Kuvatarkkuus: Curie 608 px riittää puhelimessa (301 CSS px), pehmenee iPadilla; Vrain-Lucas 448 px pehmeä puhelimessa →
      hae ≥ 600 px (Curie ≥ 1200 px, jos iPad). Lontoon 02-a (leveä-matala) ja 07-b (488 px) vielä katsomatta pelissä.
    - Seuraavaksi: KK:n korjattu lista (Pariisi, sitten Lontoo) PT:n kautta KK:lle, kun PT on linjannut kysymysten paikan.
+b. **Koe5 Mac-kuvat VALMIIT** (JU 02.2x: pariisi 01.32, lontoo 01.39, rc 0, 6/6, ei virheitä; lokit/karttaseppa-katot-a-{pariisi,lontoo}-koe5;
+   ajot 9–10, `$K/ajopyynto-mac.md`, skenaariot `$K/sk-*-koe5.txt`) → vertaa nyt: `python3 -I $K/skriptit/parit-koe.py koe3 koe5`
+   (1000 px PT:lle; KK:lle/omistajalle täysikoko, tekstit kuvan ulkopuolelle, PT 4.48). Tarkista lähikuvista reunuskaistat
+   (sininen `$K/kuvat/a/pt/rypyt-pari-koe3-koe5.png`:ssä) ja räystään seinäkaistat; parit + 3 riviä PT:lle.
 a2. **PT 01.5x, faktavirheet olemassa olevissa jutuissa (korjaa kysymättä, PR, valmis-rivi PT:lle sha:lla)**:
    1) Mona Lisan varkaus: "palasi Louvreen samana vuonna" → taulu palasi Louvreen 4.1.1914 (tarkista teksti, `git grep -n "Mona Lisa" js/packs`);
    2) Tuileries'n palatsi ja Impressionistit: sama juttu puhuttelee sekä isoisää ("sinä kävelit") että pelaajaa ("isoisäsi näki")
