@@ -218,3 +218,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
 - Viestiraja: SendMessage pysähtyi → mcp__ccd_session_mgmt__send_message toimii.
 - 16.45: ET (606e08631) peruttu ennen alkua NUI:n pyynnöstä → ET2 NUI temple-palkki-2 9fd044500 ipad (T/jono-et2.zsh, pid 69326), lokit nui-temple-palkki-2-ipad-9fd044500 → polku NUI:lle.
 - 16.46: EV NS fpv-vuoret-5-ipad f148f46d6 (KOE, varjostin muuttunut → shader-virhe NS:lle; kuvat vain PT:lle), T/jono-ev.zsh.
+- 16.58: PR 6517 yhdistetty 9f7bbce49 (vie-sisalto ajossa). EW (KS mallinostot c1e3b07bf → PK pulu-mallinostot 4c49da614) alkoi 16.57 ennen viennin loppua → tarkista 4 kohdetta. Raportoitu: ET2, EQ, EV, pieni iPad 85d3bab39 PT:lle. EX NUI b75419ad3 x3 (temple-palkki-2, orbit-nipistys-1, kadonnut-tahti-1), EY KS pariisi-nimet d5aea75b7. Pieni iPad nipistys b75419ad3: odottaa NUI:n laiteskenaariota.
