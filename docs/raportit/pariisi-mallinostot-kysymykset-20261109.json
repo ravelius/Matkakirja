@@ -1,0 +1,19 @@
+{
+ "_kuvaus": "KS 9.11.2026 (OMISTAJAN PÄÄTÖS 16.23): 2 kysymystä/kohde Pariisin 3D-mallien nostoihin. Vastaukset neutraalina faktana; Pulun murre ja muoto Pulun v2-putken omistajalta. HUOM: PuluValmiitLataus.Kohta tuntee vain karttavalot (kohde:/nosto:), kohdekartan nostoille (kohdekartta:pariisi:<nimi>) ei ole paikkaa.",
+ "kohdekartta:pariisi:Invalidit": [
+  {"kysymys": "Miksi Napoleon on haudattu juuri Invalideihin?", "vastaus": "Napoleon toivoi testamentissaan lepäävänsä Seinen rannalla Ranskan kansan keskellä. Kun Britannia luovutti jäännökset 1840, hallitus valitsi sotilaiden kodin kupolikirkon, koska se oli jo armeijan kunniapaikka; sarkofagi valmistui 1861."},
+  {"kysymys": "Asuuko Invalideissa vielä sotilaita?", "vastaus": "Kyllä, pieni määrä: Institution nationale des Invalides hoitaa yhä vakavasti vammautuneita sotaveteraaneja. Suurin osa rakennuksesta on kuitenkin armeijamuseota."}
+ ],
+ "kohdekartta:pariisi:Sainte-Chapelle": [
+  {"kysymys": "Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?", "vastaus": "Orjantappurakruunu oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki Pariisista kristikunnan keskuksen ja Ludvig IX:stä sen suojelijan. Kappeli oli kallis, mutta yli kolme kertaa halvempi kuin itse jäännös."},
+  {"kysymys": "Miten lasit selvisivät vallankumouksesta?", "vastaus": "Osa ikkunoista purettiin, kun kappelia käytettiin arkistona, ja asiakirjakaapit peittivät alaosia. 1800-luvun restauroinnissa ikkunat korjattiin ja puuttuvat osat tehtiin uudelleen; noin kaksi kolmasosaa laseista on silti 1200-luvulta."}
+ ],
+ "kohdekartta:pariisi:Grand Palais": [
+  {"kysymys": "Mitä Grand Palais'n paikalla oli ennen?", "vastaus": "Vuoden 1855 maailmannäyttelyn Palais de l'Industrie, suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä."},
+  {"kysymys": "Miksi halli suljettiin 1990-luvulla?", "vastaus": "Lasikatto oli ruostunut ja vuotanut vuosikymmeniä, ja kun katosta putosi niitti 1993, halli suljettiin turvallisuussyistä. Se avattiin uudelleen korjausten jälkeen 2000-luvulla."}
+ ],
+ "kohdekartta:pariisi:Tour Montparnasse": [
+  {"kysymys": "Mitä tornin paikalla oli ennen?", "vastaus": "Vanha Montparnassen rautatieasema, josta veturi syöksyi seinän läpi kadulle vuonna 1895. Asema purettiin 1960-luvulla ja uusi rakennettiin etelämmäs."},
+  {"kysymys": "Miksi Pariisiin ei rakennettu lisää pilvenpiirtäjiä?", "vastaus": "Tornin herättämän vastustuksen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin 1970-luvulla. Korkeat rakennukset sijoitettiin La Défenseen kaupungin rajan ulkopuolelle."}
+ ]
+}

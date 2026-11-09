@@ -4533,6 +4533,166 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     /*
+     * PIIRROSKARTAN 3D-MALLIEN JUTUT (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.23, KK-kortti "Kyllä"; KS): mallin kyltti
+     * avasi ennen striimatun tietokortin. Kuvat Wikimedia Commonsista (pysyvä lupa).
+     */
+    Invalidit: {
+      aika: '1671–1706',
+      teksti: 'Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita '
+          + 'ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin '
+          + 'kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille '
+          + 'kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat '
+          + 'ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin '
+          + '4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat '
+          + 'tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä '
+          + 'oli oma sairaala ja kirkko.'
+        + '\n\n'
+        + 'Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin '
+          + 'Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. '
+          + 'Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui '
+          + 'Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia '
+          + 'ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista.'
+        + '\n\n'
+        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, '
+          + 'ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin '
+          + 'punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta '
+          + 'Karjalasta; keisari siirrettiin siihen 1861. Tuhansien '
+          + 'veteraanien kodista on jäljellä enää pieni hoitolaitos, ja '
+          + 'käytävillä kulkevat nyt armeijamuseon kävijät.',
+      kuvat: [
+        {
+          tiedosto: 'Hôtel des Invalides, North View, Paris 7e 140402 1.jpg',
+          lyhyt: 'Les Invalides rakennettiin Ludvig XIV:n sotaveteraanien kodiksi; kupolin alla lepää Napoleon.',
+          selite: 'Les Invalides rakennettiin alun perin sotaveteraanien kodiksi, '
+            + 'ja nykyään siellä on sotamuseo.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Tomb of Napoleon by Auguste Gérardin 1896.jpg',
+          lyhyt: 'Tsaari Nikolai II Napoleonin haudalla 1896.',
+          selite: 'Venäjän tsaari Nikolai II vieraili Napoleonin haudalla '
+            + 'Pariisin-matkallaan 1896. Auguste Gérardinin piirros julkaistiin '
+            + 'Le Monde illustré -lehdessä.',
+          lahde: 'Auguste Gérardin 1896, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sainte-Chapelle': {
+      aika: '1242–1248',
+      teksti: 'Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta '
+          + 'Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen '
+          + 'orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen '
+          + 'siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin '
+          + 'maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle '
+          + 'muutamassa vuodessa ja vihittiin huhtikuussa 1248.'
+        + '\n\n'
+        + 'Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja '
+          + 'hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää '
+          + 'lasia: viidessätoista ikkunassa on yli tuhat raamatullista '
+          + 'kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä '
+          + '1200-luvulta.'
+        + '\n\n'
+        + 'Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli '
+          + 'tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja '
+          + 'asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla '
+          + 'kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista '
+          + 'ei ole jäljellä juuri muuta kuin tämä kappeli ja Conciergerien '
+          + 'salit; ympärillä on nyt oikeuspalatsi, ja orjantappurakruunu '
+          + 'säilytetään Notre-Damessa.',
+      kuvat: [
+        {
+          tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
+          lyhyt: 'Yläkappelin viidessätoista ikkunassa on yli tuhat raamatullista kohtausta.',
+          selite: 'Yläkappelin seinät ovat lähes pelkkää lasimaalausta; noin '
+            + 'kaksi kolmasosaa laseista on 1200-luvulta.',
+          lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Paris Sainte Chapelle East View 02.JPG',
+          lyhyt: 'Kappelin ohut torni nousee oikeuspalatsin rakennusten yli.',
+          selite: 'Sainte-Chapelle on keskiajan goottilainen palatsikappeli '
+            + 'Île de la Citén oikeuspalatsin sisäpihalla.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grand Palais': {
+      aika: '1897–1900',
+      teksti: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen '
+          + 'tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. '
+          + 'Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, '
+          + 'jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn '
+          + 'valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan '
+          + 'palatsin eteen.'
+        + '\n\n'
+        + 'Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta '
+          + '1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita '
+          + 'ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen '
+          + 'maailmansodan aikana palatsi oli sotilassairaala.'
+        + '\n\n'
+        + 'Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi '
+          + 'niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi '
+          + 'vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden '
+          + '2024 olympialaisissa lasikaton alla miekkailtiin.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Palais @ Paris (34729073762).jpg',
+          lyhyt: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn.',
+          selite: 'Grand Palais on lasi- ja teräskattoinen näyttelypalatsi, '
+            + 'joka rakennettiin vuoden 1900 maailmannäyttelyyn.',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Grand Palais - PA00088877 - Bonhams 2013 - Vue d\'ensemble - 007.jpg',
+          lyhyt: 'Lasikaton alla on esitelty autoja vuodesta 1901.',
+          selite: 'Lasikaton alla on esitelty autoja vuodesta 1901; kuvassa '
+            + 'vanhojen autojen huutokauppa vuonna 2013.',
+          lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tour Montparnasse': {
+      aika: '1969–1973',
+      teksti: 'Tornin paikalla seisoi vanha Montparnassen rautatieasema. '
+          + 'Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: '
+          + 'veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi '
+          + 'roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta '
+          + 'kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi '
+          + 'rakennettiin hieman etelämmäs.'
+        + '\n\n'
+        + 'Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja '
+          + '59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. '
+          + 'Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä '
+          + 'tyyliä, jossa koristeet karsittiin pois.'
+        + '\n\n'
+        + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen '
+          + 'valmistumisen jälkeen keskustan uusien rakennusten korkeus '
+          + 'rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan '
+          + 'Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein '
+          + 'näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.',
+      kuvat: [
+        {
+          tiedosto: 'Train wreck at Montparnasse 1895.jpg',
+          lyhyt: 'Veturi aseman seinän läpi 22. lokakuuta 1895, tornin nykyisellä paikalla.',
+          selite: 'Granvillen juna ei pysähtynyt vanhan Montparnassen aseman '
+            + 'päätepysäkille 22. lokakuuta 1895, vaan veturi putosi seinän läpi '
+            + 'kadulle. Asema seisoi nykyisen tornin paikalla.',
+          lahde: 'Levy & fils 1895, Wikimedia Commons (public domain)',
+        },
+        {
+          tiedosto: 'Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg',
+          lyhyt: 'Tour Montparnasse näkyy Luxembourgin puiston puiden yli.',
+          selite: 'Tour Montparnasse on vanhan Pariisin ainoa pilvenpiirtäjä; '
+            + 'se näkyy kauas, kuten tässä Luxembourgin puistosta.',
+          lahde: 'Russell Yarwood, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
      * KARSITTUJEN KARTTANOSTOJEN JUTUT (omistajan sääntö 2.9.2026, ks.
      * js/packs/maakartat.js kaupungin pariisi kohteet).
      *
