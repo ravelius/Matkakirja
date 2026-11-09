@@ -166,7 +166,7 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   DC → PK, CF → VS, CL → PK (kehysajat vain peitto 20 ms), pulu-lahteet-iphone → PK (ipad jonossa).
 - AJOSSA / JONOSSA (nohup, omat, T/jono-<x>.zsh):
   CX NUI palkki-aina-2 74e72a4a4: iphone/ipad/vaaka valmiit (iphone ilmoitettu NUI:lle), ipad-pysty odottaa → kaikki 4 katsottuna NUI:lle.
-  DB NUI paikkapalkki-1 fb77e12b1 iphone/vaaka/ipad CX:n jälkeen → NUI. CM VS kohoaurinko4 cd74573cd iphone → VS.
+  DF (korvasi DB:n) CX:n jälkeen: NUI palkki-aina-3 61c8858c2 iphone+ipad, sitten paikkapalkki-1 fb77e12b1 iphone/vaaka/ipad → NUI. CM VS kohoaurinko4 cd74573cd iphone → VS.
   CY PK napit-kuulto 620425fb7 x3, CZ PK tappi-kierto e0f57e42c x2, DE PK pulu-lahteet e51b66a98 ipad → PK.
   DD NS lentokorkeus-1 1e55e642a: iphone valmis 13.43, ipad jonossa → molemmat täysikokoisena katsottuna NS:lle (kerroin 4 vs 2, vuoret lennolla).
   CW peruttu (ipad), CT katkaistu (tilalle CX).
