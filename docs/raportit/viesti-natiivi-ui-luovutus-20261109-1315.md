@@ -64,3 +64,7 @@ Kärki b57df8ec6 (wt/proto-natiivi-ui-fpv-napit, puhdas). Tiedostot: UI/Linssit/
   2) a-5: valinnan jälkeen edellinen nostokortti (Tuileriain rauniot) jäi auki vanhaan paikkaan vasempaan alakulmaan ✕:n kanssa
      (pinnaus siirtyi MuCEMiin → PinNakyvissa false → Pystypaikka pohjan paikalle). Valinnan pitäisi sulkea palkin alla ollut kortti.
   3) Sivuhuomio: › Marseillessa vaihtoi Pariisin Tuileriain raunioihin (selaimen naapurilista ei rajaudu kaupunkiin).
+- PT:N TULKINTA 13.2x (sitova seuraavalle): nähtävyys KUULUU palkki aina -työhön. OMISTAJA 12.45: "Palkki ei katoa koskaan. Nosto ja
+  valikko avautuvat sen alle, ja kaikkea ohjataan palkista." → valikosta valittu nähtävyys (MuCEM) avautuu palkin alle kuten nosto
+  (AinaNakyvissa + PalkinAlle-paikka nähtävyyskortille), palkki jää, ja edellinen (palkin alla ollut) kortti suljetaan valinnassa.
+  Tee löydökset 1 ja 2 tällä linjalla samaan palkki-aina-haaraan (74e72a4a4:n päälle) → sk-palkki-aina-3 (a-5/a-6 nähtävyydellä) → PT.
