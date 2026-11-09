@@ -38,3 +38,6 @@ Sauva = Assets/Matkakirja/UI/KameraTappi.cs (NUI:n 8.11. tiedosto, PT antoi PK:l
 ## 4. Seuraavaksi
 - 1e alkulennon värinä (ei aloitettu): ks. edellinen luovutus kohta 4.
 - Työlista: "Juoksupeli: keisari odottaa seinällä pyyhkäisyä" päivitetty 12.4x.
+
+## LISÄYS 13.3x (JU)
+- kameratappi-aina iPhone valmis 13.10: lokit/pk-kameratappi-aina-iphone-ff0318ba2 (7/7, PUUTE 0) – KATSO kuvat (k-1…k-7). iPad peruttu: tappi-kierto e0f57e42c iphone+ipad (CZ) kattaa osan 1. Jonossa myös napit-kuulto x3 (CY) ja 1d (CL, etuajolla).
