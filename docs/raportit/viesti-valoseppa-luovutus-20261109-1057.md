@@ -26,3 +26,7 @@ Syy: konteksti 25 % (pehmeä raja). Tili sami.reivinen@vvi.fi (vaihtui 9.11. 09.
 
 ## TEKNIIKKA
 Numpy, cv2 `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`; PIL `/opt/homebrew/bin/python3 -I`. `sh`, ei zsh. Tarkistus `sh Linssit-testit/unity-tarkistus.sh` worktreessä (varjostimet kääntyvät vasta ajossa). Muokkaukset python-skriptillä (.tmp + os.replace + copymode) tai Edit. Valo, sävy ja volyymit vain Valopohjan kautta (tyokalut/valovahti.py; KartanElama.cs ja KaupunkiPuu.shader ylittävät lähtötason jo ennestään, eivät VS:n). Kuvat 2752×2064. Skenaariot `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/pallon-osat/` (uusi sk-kohokartta-rae.txt). Luovutus plumbingilla edellisen luovutushaaran päälle.
+
+## LISÄYS 11.0x: VESI edc2820a3 AJETTU (JU 10.57, Shader-error 0), EI KORJANNUT
+- 2× rajaus Pont Neuf (92f93a82f | edc2820a3): `/Users/Shared/Claude/proto-3d/lokit/linssiseppa2-vesikerros2-edc2820a3/vrt-92f93a82f-vs-edc2820a3-pn-2x.png`. Vaakaraidat ja tiheät pisteet lähes ennallaan, vaikka hohde on nyt sileästä normaalista ja tod ~10× pienempi → lähde EI ole hohde eikä keilan tod.
+- Epäillyt: (a) silmukan kimallus (kc-solut S·2, step 0,993) tai kaiverrusviivat `viiva` (rannan suuntaiset, joki tässä vaakasuora → vaakaraidat), (b) ElavaKerroksen kaappaus/kerroinsekoitus. Tee ensin diagnoosiajo: väliaikainen komento tai globaali, joka nollaa yhden termin kerrallaan (viiva, kimallus, valke, hohde) samasta kulmasta → yksi Mac-ajo, sitten korjaus. Ei arvailua useilla ajoilla.
