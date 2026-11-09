@@ -190,3 +190,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   DU VS film12b 22e601e76 ipad → polku VS:lle. vs-film13-ipad.zsh (pid 36157): VS film13 22e601e76 laitekäännös → ISO iPad, vahti päällä, muisti-tarkka,
   runko lopuksi 6a2f044b7 → polku lokit/linssiseppa2-film13-ipad-22e601e76 VS:lle (muisti-tarkka.log, tarkka-huippu jonolokissa).
   DO NS fpv-latauskuva-2 a425b8868 ipad/iphone/vaaka → DV NS huippunimet-2 31b609027 ipad → DW NS fpv-vuoret-1 9edbc14a9 ipad → polut NS:lle.
+- 15.1x: DU valmis + VS:lle kerrottu. Ketju DY (jono-dy.zsh) VS vuoret1 d9aefd7a5 ipad film13:n jälkeen (varjostin regeneroitu: Shader-error!) → lokit/linssiseppa2-vuoret1-ipad-d9aefd7a5 → polku VS:lle.
