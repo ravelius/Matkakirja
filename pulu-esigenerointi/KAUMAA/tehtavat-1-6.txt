@@ -1,0 +1,185 @@
+================ KOHTA 26 (kaupunki:barcelona) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Barcelona
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Barcelona (kaupunki)
+Tietoruudun teksti: Barcelona on Katalonian pääkaupunki ja Espanjan toiseksi suurin kaupunki: asukkaita on noin 1,7 miljoonaa. Se on rakennettu kapealle tasangolle Välimeren ja Collserolan metsäisen harjanteen väliin. Kaupungissa on kaksi virallista kieltä, katalaani ja espanja; katalaani on oma romaaninen kielensä eikä espanjan murre, ja se on nykyään koulujen opetuskieli.
+
+Roomalaiset perustivat Barcinon pienelle kummulle, jonka päällä seisoo nyt katedraali, ja kaupunki pysyi muurien sisässä 1850-luvulle asti. Kun muurit purettiin, insinööri Ildefons Cerdà piirsi niiden ulkopuolelle Eixamplen: ruudukon, jossa korttelin sivu on 113 metriä ja jokainen kulma on viistetty, jotta valoa ja kääntyviä vaunuja varten jäisi risteykseen tilaa.
+
+Sagrada Famílian rakentaminen alkoi vuonna 1882, ja Antoni Gaudí teki työtä siinä kuolemaansa asti; kirkko rakennetaan yhä lahjoitusvaroin. Kaupungin ilmeen muutti vuosi 199…
+Isoisän matkakirjamerkintä: Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kaupunkilehti / Barcelona] Kaupunki, jossa jokaisesta korttelin kulmasta on leikattu pala pois, ihmiset kiipeävät toistensa harteille torniksi ja talon katolla nukkuu lohikäärme.
+
+### 26.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kaupunki:granada) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Granada
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Granada (kaupunki)
+Tietoruudun teksti: Granada on Etelä-Espanjassa Sierra Nevadan juurella noin 740 metrin korkeudessa, viidenkymmenen kilometrin päässä merestä. Kaupunki syntyi kohtaan, jossa vuorilta tuleva Darro yhtyy Geniliin, ja vuoret ovat sen vesisäiliö: huipuilla on lunta vielä toukokuussa, ja sulamisvesi johdettiin kanavia pitkin pelloille ja puutarhoihin.
+
+Granada oli Iberian niemimaan viimeinen muslimivaltio. Nasridien emiirikunta säilyi vuoteen 1492, lähes 250 vuotta muita pidempään, ja sen hallitsijat rakensivat 1200- ja 1300-luvuilla Alhambran. Kun kaupunki luovutettiin Kastilian ja Aragonian hallitsijoille, palatsia ei purettu vaan siihen muutettiin. Vastapäisellä kukkulalla on Albaicín, vanha maurilainen kaupunginosa, ja sen takana Sacromonten rinne, jonka luola-asunnoissa kehittyi zambra, oma flamencon muoto.
+
+Nykyinen Granada on ennen kaikkea opiskelijakaupunki: yliopisto perustettiin 1531, ja opiskelijoita…
+Isoisän matkakirjamerkintä: Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kaupunkilehti / Granada] Kaupunki lumihuippujen alla: täällä seisoo palatsi, jota voittajat eivät purkaneet, ja baarissa juoman mukana tulee yhä ruokaa ilman eri maksua.
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+
+### 27.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kaupunki:sevilla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sevilla
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sevilla (kaupunki)
+Tietoruudun teksti: Sevilla on Andalusian pääkaupunki ja Espanjan viidenneksi suurin kaupunki: kunnassa asuu vajaat 687 000 ihmistä. Se on Guadalquivirin laaksossa keskimäärin seitsemän metriä merenpinnan yläpuolella, ja sen satama on Espanjan ainoa jokisatama: merelle on jokea 80 kilometriä.
+
+Roomalaiset perustivat paikalle Hispaliksen, ja vuoden 711 jälkeen kaupunki tunnettiin nimellä Ishbiliya. Almohadien jäljiltä ovat kaupunginmuurit, Torre del Oro ja suurmoskeijan minareetti; Kastilia valtasi kaupungin 1248 viidentoista kuukauden piirityksen jälkeen. Löytöretkien jälkeen siirtomaakauppa kulki tämän jokisataman kautta, ja Sevillasta kasvoi 1500-luvulla yksi Länsi-Euroopan suurimmista.
+
+Vanhankaupungin ytimessä katedraali, Alcázar ja Intian arkisto muodostavat yhden Unescon maailmanperintökohteen. Katedraalin tornin huipulle nostettiin 1568 pyörivä pronssiveistos Giraldillo, josta torni sai nykyisen nim…
+Isoisän matkakirjamerkintä: Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Viikko, jolloin Sevilla pukeutuu] Sevillan huhtikuun feria on viikon mittainen juhla, jota varten kaupungin laitaan pystytetään tuhat juhlatelttaa omine katuineen ja lyhtyineen. Siellä tanssitaan sevillanoja: neljä lyhyttä osaa, joilla on kiinteät askeleet, joten kuka tahansa espanjalainen osaa tanssia ne kenen tahansa kanssa. Sevillanat eivät ole flamencoa vaan kansantanssia — ero on sama kuin oopperan ja yhteislaulun. Naisten traje de gitana on ainoa espanjalainen kansanpuku, jonka muoti muuttuu joka vuosi.
+- [Sevilla — kaupunkilehti / Sevilla] Guadalquivirin itärannalla, kahdeksankymmentä kilometriä Atlantilta ylävirtaan. Roomalaisten Hispalis, almohadien Ishbiliya ja Amerikan-laivaston kotisatama seurasivat toisiaan saman jokimutkan äärellä.
+
+### 28.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (maa:EST) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Viro (maa)
+Tietoruudun teksti: Viro on Suomenlahden eteläpuolinen naapurimme, kahden tunnin laivamatkan päässä Helsingistä. Maa on tasainen — korkein kohta Suur Munamägi jää 318 metriin — ja yli puolet siitä on metsää.
+
+Sen näkee kartasta: vihreä pysyy samanlaisena laidasta laitaan, ja ruskeaa on vain kaakkoiskulmassa, missä Munamägi kohoaa. Lännessä maa hajoaa saariksi, joita on luotoineen runsaat 2 000; suurimmat ovat Saarenmaa ja Hiidenmaa. Idässä rajana on Peipsijärvi, jonka takana alkaa Venäjä.
+
+Yhdellä saarella on kohta, joka on kartalle liian pieni mutta silti etsimisen arvoinen: metsän keskellä on täysin pyöreä kuoppa. Sen teki taivaalta pudonnut rautamöhkäle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Arki ja tavat: Valtio mahtuu muovikorttiin] 2005 — Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai äänestää vaaleissa internetissä. Äänestäjä tunnistautuu sirullisella henkilökortilla. Vuoden 2023 parlamenttivaaleissa yli puolet äänistä annettiin verkossa, ja samalla kortilla haetaan resepti, allekirjoitetaan sopimus ja perustetaan yritys. Kortti on pakollinen jokaiselle virolaiselle 15 ikävuodesta alkaen.
+- [Viro — maalehti / Menovinkit] Viro vei arkistonsa verkkoon ennen useimpia muita: kirkonkirjat 1700-luvulta, 92 134 kansanlaulua, viiden taidemuseon kokoelmat ja kotkanpesä suorana — lähes kaikki ilman kirjautumista.
+
+### 29.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kaupunki:tallinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tallinna (kaupunki)
+Tietoruudun teksti: Tallinna on Viron pääkaupunki Suomenlahden etelärannalla, noin kahdeksankymmenen kilometrin päässä Helsingistä. Se syntyi suojaisan lahden ja Toompean kalkkikivikallion väliin: kalliolle nousi linna ja sen juurelle kauppiaiden kaupunki. Tanskan kuningas valtasi mäen 1219, ja nimi tulee luultavasti sanoista Taani linn, tanskalaisten kaupunki.
+
+Vuonna 1285 Reval oli jo hansakaupunki, jonka kauppiaat välittivät suolaa, silliä ja vahaa lännen ja Novgorodin välillä. Vanhakaupunki on Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia keskustoja, ja muuria on siitä jäljellä lähes kaksi kilometriä. Raatihuoneen tornin huipulla kääntyy Vana Toomas, sotilaaksi puettu tuuliviiri, josta on merkintä jo vuoden 1530 tilikirjassa.
+
+Kaupunki oli vuosisatoja kaksi kaupunkia — ylhäällä Toompean herrat, alhaalla kauppiaiden raati — ja osat yhdistettiin vasta 1878. Viro itsenäistyi 1918, oli miehitettynä v…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kaupunkilehti / Tallinna] Kaupunki, jonka apteekissa myytiin poltettuja siilejä ja jonka tornin huipulla sama sotilas on kääntynyt tuulen mukana vuodesta 1530.
+
+### 30.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

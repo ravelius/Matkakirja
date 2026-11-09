@@ -1,0 +1,183 @@
+================ KOHTA 6 (kaupunki:bryssel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bryssel
+Maa, jossa pelaaja on: Belgia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bryssel (kaupunki)
+Tietoruudun teksti: Bryssel on Belgian pääkaupunki Sennejoen varrella, ja siellä asuu vuonna 1873 noin 180 000 ihmistä — esikaupunkeineen huomattavasti enemmän. Kaupunki on kaksikielinen: kadulla kuulee sekä ranskaa että flaamia. Belgia itsenäistyi Alankomaista vuonna 1830, ja sitä hallitsee nyt kuningas Leopold II, joka nousi valtaistuimelle 1865.
+
+Keskustan sydän on Grand-Place, keskiaikaisten kiltatalojen reunustama tori. Ranskan tykistö ampui torin raunioiksi vuonna 1695, ja porvarikillat rakensivat sen uudelleen muutamassa vuodessa nykyiseen, kullattuun asuunsa. Torin lähellä seisoo kaupungin toinen tunnusmerkki, pieni pronssinen Manneken Pis -suihkulähde, joka on huvittanut matkalaisia jo vuosisatoja.
+
+Kaupunki on juuri uudistanut itseään: likainen Sennejoki katettiin keskustan kohdalta vuosina 1867–1871 ja sen päälle rakennettiin leveät bulevardit. Kauppiaat kulkevat lasikattoisen Galeries Royales S…
+Isoisän matkakirjamerkintä: Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut jokensa: Senne katettiin kivellä, ja päälle vedettiin bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan haissutkaan. Grand-Placen kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas. Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Bryssel] Kuninkaanlinna, puutarhaportaat ja pieni pronssipoika, jolla on noin tuhat asua: Brysselissä kukkulan yläkaupunki ja alakaupunki liittyvät toisiinsa portaiden ja puistojen kautta.
+
+### 6.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (maa:BGR) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Bulgaria
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bulgaria (maa)
+Tietoruudun teksti: Bulgaria on Balkanin niemimaalla Mustanmeren rannalla. Maa on vuoristoinen: Balkanvuoret kulkevat sen halki idästä länteen ja antavat nimensä koko niemimaalle.
+
+Kartta jakautuu vyöhykkeisiin, jotka kulkevat lännestä itään. Pohjoisin on Tonavan tasanko, loiva ja vihreä, ja sen reunaa Tonava virtaa koko matkan maan rajana. Sen alapuolella kulkee Balkanvuorten harjanne lähes yhtenäisenä meren rantaan asti, ja harjanteen eteläpuolella avautuu Ylä-Traakian tasanko. Tummin ruskea on lounaisnurkassa Rilan ja Pirinin vuoristoissa, joissa Musala nousee 2 925 metriin — koko Balkanin niemimaan korkein huippu — ja siitä ruskea jatkuu itään leveänä Rodopien massiivina.
+
+Pääkaupunki ei ole keskellä maata vaan aivan lännessä vuorten ympäröimässä altaassa. Idässä rannikko on melko suora, ja siihen tekevät loven vain Varnan ja Burgasin lahdet. Koillisessa, tasangon ja vuorten välissä, kohoaa yksinäinen …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+
+### 7.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kaupunki:sofia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sofia
+Maa, jossa pelaaja on: Bulgaria
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sofia (kaupunki)
+Tietoruudun teksti: Sofia on Bulgarian pääkaupunki ja yksi Euroopan vanhimmista kaupungeista: paikalla on asuttu yli 7 000 vuotta. Se on laaksossa noin 550 metrin korkeudessa, ja etelässä kohoaa Vitosha-vuori 2 292 metriin; sen rinteet rauhoitettiin luonnonpuistoksi jo 1934, ensimmäisenä Balkanilla. Kaupunki syntyi veden takia: maan alla on 49 kivennäis- ja lämpölähdettä, ja roomalaiset rakensivat niiden ympärille Serdican, josta keisari Konstantinus Suuren kerrotaan sanoneen, että se on hänen Roomansa.
+
+Metroa kaivettaessa 2010-luvun alussa maasta paljastui kokonainen roomalainen kortteli, eikä löytöjä peitetty takaisin. Kaupungin vanhin rakennus on Pyhän Yrjön punatiilinen rotunda 300-luvulta, ja muutaman sadan metrin säteellä seisovat ortodoksikirkko, katolinen katedraali, moskeija ja Kaakkois-Euroopan suurin synagoga.
+
+Osmanien vallan alla Sofia oli lähes viisi vuosisataa, ja pääkaupungiksi se valittii…
+Isoisän matkakirjamerkintä: Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Sofia-patsas] Sallitko, että esittelen erään tuttavan. Nezavisimost-aukiolla, samalla jalustalla jolla ennen seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen naishahmo kuudentoista metrin korkuisella pylväällä. Kuvanveistäjä antoi hänelle vallan tunnuksen, kruunun, ja maineen tunnuksen, seppeleen. Kolmanneksi hän tarvitsi viisauden tunnuksen ja valitsi pöllön. Patsas pystytettiin joulukuun lopulla vuonna 2000, ja se on nimetty kaupungin mukaan — kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi tarkoittaa kreikaksi Pyhää Viisautta. Minulla ei ole tähän mitään lisättävää.
+- [Sofia — kaupunkilehti / Sofia: Kaupungin kaimalla on pöllö kruunussa] Nezavisimost-aukiolla, samalla jalustalla jolla ennen seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen naishahmo kuudentoista metrin korkuisella pylväällä. Kuvanveistäjä antoi hänelle vallan tunnuksen, kruunun, ja maineen tunnuksen, seppeleen. Kolmanneksi hän tarvitsi viisauden tunnuksen ja valitsi pöllön. Patsas pystytettiin joulukuun lopulla vuonna 2000 ja nimettiin kaupungin mukaan — ja kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi tarkoittaa kreikaksi Pyhää Viisautta.
+- [Sofia — kaupunkilehti / Sofia] Kaupungin vaakunassa lukee: kasvaa, mutta ei vanhene. Metroa kaivettaessa löytyi kokonainen roomalainen kortteli, ja etelässä vuori alkaa viimeisen bussipysäkin takaa.
+
+### 8.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (maa:BIH) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Bosnia ja Hertsegovina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bosnia ja Hertsegovina (maa)
+Tietoruudun teksti: Bosnia ja Hertsegovina on vuoristoinen maa Balkanin niemimaalla. Se on kooltaan noin kuudesosa Suomesta, ja väkeä on runsaat kolme miljoonaa.
+
+Kartta on lähes kokonaan poimuinen. Dinaarien Alpit täyttävät keskiosan ja etelän tiheänä harjanteiden ja kapeiden laaksojen ristikkona, joka kulkee luoteesta kaakkoon; korkein kohta on Maglić 2 386 metrissä aivan kaakkoiskulmassa. Pohjoisreuna erottuu selvästi vihreänä ja tasaisena kaistaleena — se on Pannonian tasangon eteläkulma, ja sen rajana kulkee Sava-joki.
+
+Etelässä maasto avautuu Neretvan laaksoon, joka johtaa Mostarin kautta kohti merta. Kartalta näkee, että maa koskettaa Adriaa vain yhdestä pikkuruisesta kohdasta ja että kaikki edustan saaret kuuluvat Kroatialle. Kaakon vuoriin sen sijaan ei ole koskaan menty kirveen kanssa: siellä on yksi Euroopan viimeisistä aarniometsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+
+### 9.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kaupunki:sarajevo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sarajevo
+Maa, jossa pelaaja on: Bosnia ja Hertsegovina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sarajevo (kaupunki)
+Tietoruudun teksti: Sarajevo on Bosnia ja Hertsegovinan pääkaupunki kapeassa jokilaaksossa 518 metrin korkeudessa: pohjalla virtaa Miljacka, ympärillä kohoaa viisi vuorta. Osmanien käskynhaltija Isa-beg Ishaković rakennutti tänne 1460-luvulla basaarin, sillan ja majatalon, ja kaupungin nimi tulee turkin sanasta saray.
+
+Baščaršijan basaarissa oli parhaimmillaan tuhansia puoteja, ja jokaisella kujalla tehtiin omaa käsityötä. Sen laidalla seisovat Gazi Husrev-begin moskeija vuodelta 1531 ja Sahat-kulan kellotorni, jonka kello asetetaan yhä niin, että auringonlasku on kaksitoista. Vuonna 1878 alue siirtyi Itävalta-Unkarille, joka rakensi länsipuolen uuteen tyyliin; Ferhadija-kadun jalkakäytävään on merkitty kohta, jossa kaksi kaupunkia kohtaa.
+
+Latinalaissillan pohjoispäässä ammuttiin 28. kesäkuuta 1914 arkkiherttua Frans Ferdinand, ja siitä alkoi ketju kohti ensimmäistä maailmansotaa. Vuonna 1984 kaupunki isä…
+Isoisän matkakirjamerkintä: Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Sarajevo] Kapea jokilaakso, jossa yksi askel vie ottomaanien basaarista wieniläisen näköiseen kortteliin — ja jossa tornikello näyttää kahtatoista vasta auringon laskiessa.
+
+### 10.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

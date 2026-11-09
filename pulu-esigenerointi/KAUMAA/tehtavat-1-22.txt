@@ -1,0 +1,109 @@
+================ KOHTA 106 (maa:UKR) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kohdekartta / Kohdekartta: Ristin ylentämisen kirkko] 1747–1758 Tämä on Siperian barokin omaperäisin rakennus. Nimitys syntyi vasta 1924, kun irkutskilainen kotiseuduntutkija D. A. Boldyrev-Kazarin otti sen käyttöön; tyylillä tarkoitetaan 1700-luvun Siperian kivikirkkoja, joita laskettiin vuonna 1803 kaikkiaan 115. Ne ovat venäläisen barokin maakunnallinen muunnos, johon tuli vaikutteita ukrainalaisesta barokista ja paikoin myös lamalaisesta kuvastosta. Parhaiten tyyli on säilynyt Irkutskissa, Tobolskissa ja Tomskissa. Ristin ylentämisen kirkko rakennettiin vuosina 1747–1758, ja sitä on kutsuttu tyylin parhaaksi esimerkiksi. Sen buddhalaisvaikutteiset koristeaiheet kiinnostivat tutkijoita jo ennen vallankumousta. Boldyrev-Kazarin arveli burjaa…
+
+### 106.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 106 YHTEINEN KONTEKSTI
+
+### 106.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 106 YHTEINEN KONTEKSTI
+
+### 106.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 106 YHTEINEN KONTEKSTI
+
+### 106.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 106 YHTEINEN KONTEKSTI
+
+### 106.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 106 YHTEINEN KONTEKSTI
+
+================ KOHTA 107 (kaupunki:kiova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova] Kaupunki, jonka kirkonseiniin kirjoitettiin tuhat vuotta sitten ja jonka metroon lasketaan yli sata metriä maan alle.
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+
+### 107.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 107 YHTEINEN KONTEKSTI
+
+### 107.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 107 YHTEINEN KONTEKSTI
+
+### 107.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 107 YHTEINEN KONTEKSTI
+
+### 107.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 107 YHTEINEN KONTEKSTI
+
+### 107.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 107 YHTEINEN KONTEKSTI
+
+================ KOHTA 108 (kaupunki:odessa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa] Kaupunki on louhittu omasta alustaan, sen pääkatu on nimetty Napolissa syntyneen amiraalin mukaan, ja aprillipäivänä kadut täyttyvät naamiaisväestä.
+
+### 108.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 108 YHTEINEN KONTEKSTI
+
+### 108.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 108 YHTEINEN KONTEKSTI
+
+### 108.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 108 YHTEINEN KONTEKSTI
+
+### 108.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 108 YHTEINEN KONTEKSTI
+
+### 108.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 108 YHTEINEN KONTEKSTI

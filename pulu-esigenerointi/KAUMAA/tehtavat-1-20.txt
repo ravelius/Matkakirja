@@ -1,0 +1,179 @@
+================ KOHTA 96 (kaupunki:kosice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Košice
+Maa, jossa pelaaja on: Slovakia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Košice (kaupunki)
+Tietoruudun teksti: Košice, unkariksi Kassa ja saksaksi Kaschau, on Ylä-Unkarin suurin kaupunki Hornád-joen varrella. Se kuuluu Unkarin kuningaskuntaan ja on siellä vapaa kuninkaallinen kaupunki. Vielä vuonna 1891 asukkaita on vasta noin 29 000, mutta kaupungin asema on ollut suuri jo keskiajalta.
+
+Kaupungin sydän on pitkä, linssinmuotoinen Hlavná-katu, jonka varrella kohoaa Pyhän Elisabetin tuomiokirkko. Se on rakennettu 1300-luvun lopulta alkaen ja oli aikanaan Unkarin kuningaskunnan suurin kirkko.
+
+Höyryjuna on tuonut kaupungin lähemmäs maailmaa: rautatie Miskolciin valmistui vuonna 1860, ja vuonna 1873 kaupungista on jo yhteys Prešoviin, Žilinaan ja Chopiin. Vanhat kaupunginmuurit on purettu vaiheittain 1800-luvun alusta vuoteen 1856.
+Isoisän matkakirjamerkintä: Kassa (Košice), lokakuussa 1873. Juna toi minut Krakovasta vuorten läpi, ja Karpaatit jäivät taakse kuin kynnys. Pyhän Elisabetin tuomiokirkko on niin suuri, että kaupunki tuntuu rakennetun sen ympärille; kivi on kulunut, mutta tornit seisovat. Pääkatu on leveä kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, jonka kaupunki selätti. Kapakassa juodaan tokajia ja puhutaan kolmea kieltä samassa lauseessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Košice] Hornád-joen varrella lepäävän kaupungin pääkatu on pitkä, kivetty ja lähes autoton aukio. Sen keskellä laulaa suihkulähde, ja kaupungissa juostaan Euroopan vanhinta maratonia.
+
+### 96.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 96 YHTEINEN KONTEKSTI
+
+### 96.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 96 YHTEINEN KONTEKSTI
+
+### 96.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 96 YHTEINEN KONTEKSTI
+
+### 96.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 96 YHTEINEN KONTEKSTI
+
+### 96.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 96 YHTEINEN KONTEKSTI
+
+================ KOHTA 97 (maa:SVN) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Slovenia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Slovenia (maa)
+Tietoruudun teksti: Slovenian menneisyys on kaivettu maasta ja kirjoitettu linnoihin: täällä on louhittu elohopeaa maailmalle, kasvatettu valkoisia ratsuja hoveille ja häädetty talvea lampaantaljoilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+- [Slovenia — maalehti / Ruoka: Harmaa mehiläinen Krainista] nykyään — Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen italianmehiläisen jälkeen. EU:n suojaamiin ruokatuotteisiin kuuluu myös slovenialainen hunaja.
+
+### 97.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 97 YHTEINEN KONTEKSTI
+
+### 97.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 97 YHTEINEN KONTEKSTI
+
+### 97.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 97 YHTEINEN KONTEKSTI
+
+### 97.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 97 YHTEINEN KONTEKSTI
+
+### 97.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 97 YHTEINEN KONTEKSTI
+
+================ KOHTA 98 (kaupunki:ljubljana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ljubljana
+Maa, jossa pelaaja on: Slovenia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ljubljana (kaupunki)
+Tietoruudun teksti: Ljubljana on Krainin herttuakunnan pääkaupunki Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan Laibachiksi. Kaupunki kuuluu Itävallan keisarikuntaan, ja se on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. Slovenit ja saksalaiset asuvat samoilla kaduilla.
+
+Kaupungin yllä kohoaa Ljubljanan linna Linnavuoren huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus on lohikäärme, joka koristaa linnan tornia ja vaakunaa; se periytyy Pyhän Yrjön legendasta.
+
+Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit ja saksalaiset kilpailevat keskenään yhdistyksissä ja urheiluseuroissa.
+Isoisän matkakirjamerkintä: Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana] Maanjäristyksen jälkeen Ljubljanan kadut täyttyivät secession-palatseista, ja arkkitehti Jože Plečnik antoi kaupungille sillat, kirjaston ja kesäteatterin.
+- [Ljubljana — kaupunkilehti / Ljubljana] Kaupunki Ljubljanica-joen varrella linnavuoren juurella, jossa lohikäärme vartioi siltaa ja koristaa vaakunaa. Vanhakaupunki on autoton, ja punakattoiset talot, joen rannat ja iso puisto ovat lähellä toisiaan.
+
+### 98.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 98 YHTEINEN KONTEKSTI
+
+### 98.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 98 YHTEINEN KONTEKSTI
+
+### 98.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 98 YHTEINEN KONTEKSTI
+
+### 98.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 98 YHTEINEN KONTEKSTI
+
+### 98.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 98 YHTEINEN KONTEKSTI
+
+================ KOHTA 99 (maa:SWE) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Musiikki: Koko kansan laulukilpailu] Joka kevät Ruotsi pysähtyy television ääreen, kun Melodifestivalen valitsee maan euroviisukappaleen. Kilpailu kiertää viikkokausia kaupungista toiseen kuin sirkus, ja finaali on vuoden katsotuin tv-lähetys — moni oppii kappaleet ulkoa ennen kuin euroviisuista on kuultu sanaakaan. Tulokset näkyvät: juuri tätä kautta ABBA lähti Waterloineen maailmalle 1974, ja Ruotsi on voittanut euroviisut seitsemän kertaa — yhtä moneen voittoon on yltänyt vain Irlanti.
+- [Ruotsi — maalehti / Menovinkit] Ruotsi on avannut kokoelmansa poikkeuksellisen laajasti: klassikot ensipainoksina, 1500 vuotta vanha hopearaamattu sivu kerrallaan, koko maan muinaisjäännökset kartalla ja luontohavainnot tältä aamulta.
+
+### 99.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 99 YHTEINEN KONTEKSTI
+
+### 99.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 99 YHTEINEN KONTEKSTI
+
+### 99.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 99 YHTEINEN KONTEKSTI
+
+### 99.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 99 YHTEINEN KONTEKSTI
+
+### 99.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 99 YHTEINEN KONTEKSTI
+
+================ KOHTA 100 (kaupunki:tukholma) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma] Neljäntoista saaren pääkaupunki, jossa vesi on katua ja kaupungin laidalta lähtee höyrylaiva kolmenkymmenentuhannen saaren saaristoon.
+
+### 100.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 100 YHTEINEN KONTEKSTI
+
+### 100.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 100 YHTEINEN KONTEKSTI
+
+### 100.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 100 YHTEINEN KONTEKSTI
+
+### 100.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 100 YHTEINEN KONTEKSTI
+
+### 100.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 100 YHTEINEN KONTEKSTI

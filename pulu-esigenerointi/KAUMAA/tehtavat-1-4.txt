@@ -1,0 +1,177 @@
+================ KOHTA 16 (maa:CYP) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto] Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saarella on myös vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä.
+
+### 16.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kaupunki:nikosia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Nikosia] Nikosia on Kyproksen hallinnon ja rahan kaupunki: saaren kaikkien pankkien pääkonttorit ovat täällä, samoin viisi yliopistoa ja saaren vanhin ja suurin arkeologinen museo.
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+
+### 17.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (maa:CZE) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Menovinkit] Tšekki on siirtänyt menneisyytensä ruudulle: 1300-luvun kuvaraamattu aukeaa sivu kerrallaan, Prahan tähtikelloa saa itse kelata, kolmesataatuhatta museoesinettä on yhdessä haussa ja norsuihin näkee suorana.
+
+### 18.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kaupunki:praha) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha] Sata tornia, kello joka näyttää auringon paikan taivaalla — ja savesta tehty jättiläinen ullakolla.
+
+### 19.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (maa:DEU) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Pelaaja katsoo kartalla: Saksa (maa)
+Tietoruudun teksti: Saksa on Euroopan unionin väkirikkain maa: 83 miljoonaa asukasta kuudessatoista osavaltiossa, joilla on omat parlamenttinsa ja omat koulunsa. Yhtenäinen valtio se on ollut vasta vuodesta 1871 — ja siitä ajasta 41 vuotta kahtia jaettuna.
+
+Maisema laskee Alppien huipuilta Reinin laakson ja suurten metsien halki kahden meren rannoille. Maailmalle Saksasta ovat lähteneet kirjapaino, röntgensäteet ja ensimmäinen tietokone — ja Bachin, Beethovenin ja Brahmsin sävelet.
+
+Autot, junat ja jalkapallo otetaan täällä vakavasti, mutta niin otetaan myös leipä, jota leivotaan kolmeatuhatta lajia. Pääkaupunki Berliini on kaupungeista suurin, mutta valta on levällään: suurin satama on Hampurissa, pankit Frankfurtissa ja moni tehdas etelän pikkukaupungeissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Muuri avautui paperilapun takia] 1989 — Itä-Saksa aikoi 9. marraskuuta 1989 helpottaa matkustussääntöjä vasta seuraavana päivänä, mutta tiedottaja Günter Schabowski sai käteensä keskeneräisen paperin. Kun toimittaja kysyi suorassa lähetyksessä, milloin uudet säännöt tulevat voimaan, Schabowski selasi lappujaan ja vastasi: ”Tietääkseni heti.” Kymmenettuhannet itäberliiniläiset lähtivät samana iltana muurille, rajavartijat avasivat puomit — ja 28 vuotta kaupungin halkaissut muuri alkoi murtua vielä samana yönä.
+- [Saksa — maalehti / Musiikki: Pianotähti kiersi Eurooppaa jo lapsena] Clara Wieck soitti ensimmäisen julkisen konserttinsa Leipzigissa yhdeksänvuotiaana ja kiersi teini-ikäisenä Euroopan konserttisaleja kuin tähti ainakin — Wienissä hänen kunniakseen leivottiin kakkuja. Hän sävelsi itse, soitti ulkomuistista aikana jolloin se oli ennenkuulumatonta, ja jatkoi esiintymistä kuusikymmentä vuotta samalla kun kasvatti kahdeksan lasta. Saksa painoi hänen kuvansa sadan markan seteliin 1989 — harva pianisti on päätynyt rahaan.
+- [Saksa — maalehti / Sadut ja tarinat] Saksa on satujen maa: Grimmin veljekset keräsivät kansansadut kirjaksi, ja moni tarina — pillipiiparista Jörö-Jukkaan — lähti täältä koko maailman omaksi.
+- [Saksa — maalehti / Historia] Saksa oli vuosisatoja pienten valtioiden tilkkutäkki — ja sitten maa, joka jaettiin kahtia ja kasvoi jälleen yhteen.
+
+### 20.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

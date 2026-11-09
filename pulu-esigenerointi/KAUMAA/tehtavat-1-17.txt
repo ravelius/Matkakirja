@@ -1,0 +1,182 @@
+================ KOHTA 81 (kaupunki:tromssa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tromssa
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tromssa (kaupunki)
+Tietoruudun teksti: Tromssa on Pohjoismaiden suurin napapiirin pohjoispuolinen kaupunki: noin 78 000 asukasta 69. leveysasteen tuntumassa. Keskusta on Tromsøyan saarella kapean salmen varrella, ja mantereelle pääsee vuoden 1960 siltaa pitkin. Salmi on syvä ja jäätyy harvoin, koska Golfvirran haara lämmittää rannikkoa — täältä pääsi merelle silloinkin, kun Itämeri oli umpijäässä.
+
+Kaupunkioikeudet Tromssa sai 1794, ja kasvu tuli Jäämerestä: 1800-luvun puoliväliin mennessä se oli arktisen pyynnin keskus, jonka laivat purjehtivat Huippuvuorille ja Novaja Zemljalle. Kaupunkia sanottiin Pohjolan Pariisiksi: merimiehet ihmettelivät katulyhtyjä ja kauppoja näin kaukana pohjoisessa. Keskustan puutalot ovat vuosilta 1789–1904.
+
+Nykyään Tromssa on arktisen tutkimuksen kaupunki: sen 1968 perustettu yliopisto on maailman pohjoisin, ja revontuliobservatorio on toiminut vuodesta 1928. Valo tulee ja menee vuodenajoittain…
+Isoisän matkakirjamerkintä: Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki vatsan ja uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Tromssa] Kaupunki napapiirin pohjoispuolella: aurinko katoaa kahdeksi kuukaudeksi, ja pimeimpään aikaan tehtiin kellareissa musiikkia, joka kuultiin maailmalla.
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+
+### 81.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 81 YHTEINEN KONTEKSTI
+
+### 81.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 81 YHTEINEN KONTEKSTI
+
+### 81.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 81 YHTEINEN KONTEKSTI
+
+### 81.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 81 YHTEINEN KONTEKSTI
+
+### 81.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 81 YHTEINEN KONTEKSTI
+
+================ KOHTA 82 (maa:POL) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Pelaaja katsoo kartalla: Puola (maa)
+Tietoruudun teksti: Puola on Itämeren ja Karpaattien välinen tasankomaa Keski-Euroopassa. Se on väkiluvultaan EU:n viidenneksi suurin, ja sen talous on kasvanut nopeasti 1990-luvulta lähtien.
+
+Maan nimi tarkoittaa kenttien maata, ja kartta selittää sen: valtaosa Puolasta on matalaa tasankoa, jonka halki virtaavat Veiksel ja Oder — molemmat etelästä Itämerelle. Pohjoisessa rannikko on hiekkaa ja järviä, etelässä maa nousee ensin Sudeettien ja sitten Karpaattien harjanteille, joilla Rysy kohoaa Tatravuorilla 2 499 metriin.
+
+Tasangolla ei ole vuoria suojana, ja se näkyy maan historiassa: rajat ovat siirtyneet ja linnoitukset rakennettiin jokien varsille. Suurin niistä seisoo yhä lähellä merta Veikselin sivuhaaran rannalla — Malborkin tiililinna, maailman suurin linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Menovinkit] Puola on avannut kokoelmansa verkkoon isolla kädellä: kansalliskirjaston käsikirjoituksia, Chopinin omaa käsialaa, suolakaivos katunäkymänä, museoesineitä 3D:nä ja kirja, jossa on jokainen maailman visentti.
+
+### 82.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 82 YHTEINEN KONTEKSTI
+
+### 82.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 82 YHTEINEN KONTEKSTI
+
+### 82.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 82 YHTEINEN KONTEKSTI
+
+### 82.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 82 YHTEINEN KONTEKSTI
+
+### 82.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 82 YHTEINEN KONTEKSTI
+
+================ KOHTA 83 (kaupunki:varsova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Pelaaja katsoo kartalla: Varsova (kaupunki)
+Tietoruudun teksti: Varsova on Puolan pääkaupunki ja maan suurin kaupunki: asukkaita on lähes kaksi miljoonaa. Se sijaitsee keskellä Puolan tasankoa Veikselin länsirannalla, jossa jyrkältä törmältä näki kauas ja törmän alla oli hyvä lastauspaikka viljalautoille.
+
+Vuonna 1596 kuningas Sigismund III siirsi hovinsa Krakovasta tänne, ja kauppapaikasta tuli valtakunnan pääkaupunki. Puola katosi Euroopan kartalta vuosiksi 1795–1918, ja Varsova oli enimmäkseen Venäjän keisarikunnan kaupunki, mutta se kasvoi ja teollistui silti. Täällä varttui Fryderyk Chopin ja syntyi vuonna 1867 Maria Skłodowska, josta tuli kahden eri tieteenalan nobelisti.
+
+Toinen maailmansota kohteli Varsovaa raskaammin kuin melkein mitään muuta Euroopan kaupunkia: sodan lopussa rakennuksista oli raunioina yli kolme neljäsosaa, ja kaupungin suuri juutalaisyhteisö oli tuhottu. Kaupunki rakennettiin takaisin, ja vanhankaupungin talot pystytettii…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kaupunkilehti / Varsova] Kaupunki, joka ammuttiin sodassa raunioiksi ja koottiin takaisin — linnan kello käynnistettiin uudelleen juuri siitä minuutista, mihin se oli pysähtynyt.
+
+### 83.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 83 YHTEINEN KONTEKSTI
+
+### 83.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 83 YHTEINEN KONTEKSTI
+
+### 83.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 83 YHTEINEN KONTEKSTI
+
+### 83.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 83 YHTEINEN KONTEKSTI
+
+### 83.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 83 YHTEINEN KONTEKSTI
+
+================ KOHTA 84 (kaupunki:krakova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Krakova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Pelaaja katsoo kartalla: Krakova (kaupunki)
+Tietoruudun teksti: Krakova on Etelä-Puolan vanha pääkaupunki Veikselin rannalla, kalkkikivikukkulan juurella. Kukkula on Wawel, ja sen katedraalissa kruunattiin ja haudattiin Puolan kuninkaat yli viidensadan vuoden ajan. Pääkaupunkina Krakova väistyi Varsovan tieltä vuonna 1596, mutta kruunajaiset jäivät tänne.
+
+Mongolien hyökkäys poltti kaupungin vuonna 1241, ja se rakennettiin 1257 uudelleen kokonaan uudella kaavalla: suorakulmainen ruudukko, jonka keskellä on noin kaksisataa metriä sivultaan oleva tori. Kaupunginmuurit purettiin 1820-luvulla, ja tilalle istutettiin puistokehä Planty, joka kiertää vanhaakaupunkia yhä. Puolan vanhin yliopisto perustettiin täällä vuonna 1364, ja sen oppilaita oli muun muassa Nikolaus Kopernikus.
+
+Sota ei tuhonnut Krakovaa, joten vanhankaupungin kadut ovat aitoja keskiaikaisia katuja. Kazimierz, 1300-luvulta 1800-luvun alkuun oma kaupunkinsa, oli vuosisatoja Puolan juutala…
+Isoisän matkakirjamerkintä: Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kaupunkilehti / Krakova] Kaupunki, jossa torvisoitto katkeaa joka tunti kesken sävelen ja lohikäärme puhaltaa joen rannassa oikeaa tulta.
+
+### 84.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 84 YHTEINEN KONTEKSTI
+
+### 84.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 84 YHTEINEN KONTEKSTI
+
+### 84.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 84 YHTEINEN KONTEKSTI
+
+### 84.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 84 YHTEINEN KONTEKSTI
+
+### 84.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 84 YHTEINEN KONTEKSTI
+
+================ KOHTA 85 (maa:PRT) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Portugali (maa)
+Tietoruudun teksti: Portugali on Manner-Euroopan läntisin maa: Atlantti alkaa sen rannasta ja jatkuu Amerikkaan asti. Raja Espanjaan on Euroopan vanhin — se vedettiin sopimuksella vuonna 1297 eikä ole juuri muuttunut.
+
+Kartta jakautuu kahtia. Pohjoinen puoli on vuorta ja syviä jokilaaksoja: Douro ja Tejo tulevat Espanjan puolelta ja kaivautuvat länteen mereen, ja niiden välissä kohoaa Serra da Estrela, mantereen korkein harjanne. Tejon eteläpuolella maa laskeutuu Alentejon loiviksi lakeuksiksi, ja lounaiskulmassa rannikko kääntyy itään Algarven rantaviivaksi.
+
+Kartan reunan ulkopuolella on vielä kaksi palaa Portugalia: Azorit keskellä Atlanttia ja Madeira Afrikan edustalla, molemmat tulivuorisaaria. Mantereella väki on pakkautunut rannikolle, ja sisämaan vuoristo tyhjenee — siellä sataa myös lunta joka talvi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Ruoka: Portugali jäi ruokapöytään] Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja chorizoa — on sama pata kuin muissakin entisissä Portugalin siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, koska niistä tuotiin sotilaita Timorille.
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+
+### 85.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 85 YHTEINEN KONTEKSTI
+
+### 85.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 85 YHTEINEN KONTEKSTI
+
+### 85.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 85 YHTEINEN KONTEKSTI
+
+### 85.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 85 YHTEINEN KONTEKSTI
+
+### 85.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 85 YHTEINEN KONTEKSTI

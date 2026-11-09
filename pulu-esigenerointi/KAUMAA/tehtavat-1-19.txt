@@ -1,0 +1,168 @@
+================ KOHTA 91 (kaupunki:pietari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+
+### 91.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 91 YHTEINEN KONTEKSTI
+
+### 91.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 91 YHTEINEN KONTEKSTI
+
+### 91.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 91 YHTEINEN KONTEKSTI
+
+### 91.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 91 YHTEINEN KONTEKSTI
+
+### 91.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 91 YHTEINEN KONTEKSTI
+
+================ KOHTA 92 (maa:SRB) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+### 92.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 92 YHTEINEN KONTEKSTI
+
+### 92.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 92 YHTEINEN KONTEKSTI
+
+### 92.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 92 YHTEINEN KONTEKSTI
+
+### 92.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 92 YHTEINEN KONTEKSTI
+
+### 92.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 92 YHTEINEN KONTEKSTI
+
+================ KOHTA 93 (kaupunki:belgrad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Belgrad
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Belgrad (kaupunki)
+Tietoruudun teksti: Belgrad on Serbian pääkaupunki ja maan suurin kaupunki, joka sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbiankielinen nimi Beograd tarkoittaa valkoista kaupunkia. Lähteen mukaan se on yksi Euroopan vanhimmista yhtäjaksoisesti asutuista kaupungeista, ja jo antiikissa paikalla oli linnoitus nimeltä Singidunum.
+
+Historiallinen ydin on Kalemegdanin harjanteella, jonka päässä seisoo Belgradin linnoitus. Vuoden 2022 väestölaskennan mukaan Belgradin kaupungin hallinnollisella alueella (Grad Beograd) asui 1 681 405 ihmistä. Isoisän matkavuonna 1873 kaupunki oli Serbian ruhtinaskunnan pääkaupunki, joka oli autonominen mutta ei vielä täysin itsenäinen. Ottomaanien varuskunta oli lähtenyt linnoituksesta vuonna 1867, ja mutkaisten katujen tilalle suunniteltiin Wienin mallin mukaista ruutukaavaa ja bulevardeja.
+
+Knez Mihailovan kadun rakennustyöt olivat alkaneet keväällä 1869, mutta Pyhän Savan te…
+Isoisän matkakirjamerkintä: Belgrad, syyskuussa 1873. Sulttaanin varuskunta lähti linnoituksesta kuusi vuotta sitten, ja siitä asti kaupunki on repinyt itseään uudeksi: Stambolin portti on purettu, sen paikalle on noussut teatteri, ja insinööri vetää mutkaisten turkkilaiskujien tilalle suoria katuja. Serbialaiset vartioivat nyt muureja, vaikka Wien ei tunnusta heitä omistajiksi. Kahvilan vanhat miehet sanovat sitä edistykseksi, hieman epäillen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+- [Belgrad — kaupunkilehti / Belgrad] Belgrad on Savan ja Tonavan kulmauksessa kohoavan kalliorinteen ”valkoinen kaupunki”. Isoisän matkavuonna 1873 se oli Serbian ruhtinaskunnan pääkaupunki, jonka vanha ottomaaniasu oli väistymässä Wienin mallisten katujen tieltä.
+
+### 93.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 93 YHTEINEN KONTEKSTI
+
+### 93.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 93 YHTEINEN KONTEKSTI
+
+### 93.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 93 YHTEINEN KONTEKSTI
+
+### 93.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 93 YHTEINEN KONTEKSTI
+
+### 93.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 93 YHTEINEN KONTEKSTI
+
+================ KOHTA 94 (maa:SVK) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Slovakia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Slovakia (maa)
+Tietoruudun teksti: Slovakian historia on kirjoitettu kiveen: linnoja on rakennettu jyrkille kallioille, kruunuja vartioitu torneissa ja hopeaa kaivettu maasta vuosisatojen ajan.
+
+### 94.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 94 YHTEINEN KONTEKSTI
+
+### 94.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 94 YHTEINEN KONTEKSTI
+
+### 94.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 94 YHTEINEN KONTEKSTI
+
+### 94.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 94 YHTEINEN KONTEKSTI
+
+### 94.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 94 YHTEINEN KONTEKSTI
+
+================ KOHTA 95 (kaupunki:bratislava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bratislava
+Maa, jossa pelaaja on: Slovakia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bratislava (kaupunki)
+Tietoruudun teksti: Bratislava on Slovakian pääkaupunki, ja se seisoo Tonavan rannalla lounaisessa Slovakiassa Pienten Karpaattien juurella. Lähteen mukaan se on ainoa pääkaupunki, joka rajoittuu kahteen valtioon, Itävaltaan ja Unkariin, ja Wieniin on matkaa noin 50–60 kilometriä. Bratislavan kaupungissa (piirit I-V) asui 31.12.2025 yhteensä 480 902 ihmistä.
+
+Isoisän matkavuonna 1873 kaupunki oli Pozsony eli Pressburg, Unkarin kuningaskunnan kaupunki Itävalta-Unkarissa, ja nimi Bratislava tuli viralliseksi vasta maaliskuussa 1919. Unkarin pääkaupunki se oli 1500-luvulta 1700-luvun lopulle, valtiopäivät kokoontuivat siellä 1848 asti, ja Pyhän Martinin tuomiokirkossa kruunattiin kuninkaita vuosina 1563–1830. Linna kaupungin yläpuolella oli palanut raunioksi 1811.
+
+Nykyään vanha kaupunki on pieni kävelykaupunki, jossa linna, tuomiokirkko ja Mikaelin portti kertovat kruunajaisten ajasta. Kaupungin musiikkiperi…
+Isoisän matkakirjamerkintä: Pozsony, syyskuussa 1873. Saksalaiset sanovat Pressburg, unkarilaiset Pozsony. Linna on ollut raunio vuodesta 1811, mutta Pyhän Martinin kirkon tornissa kiiltää kultainen kruunu, sillä täällä kruunattiin Unkarin kuninkaita vuoteen 1830. Tonavan yli kuljetaan yhä laivojen varaan rakennettua siltaa, koska kiinteää siltaa ei ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bratislava — kaupunkilehti / Bratislava] Bratislava oli isoisän matkavuonna 1873 Pozsony eli Pressburg, Unkarin vanha kruunajaiskaupunki Tonavan rannalla, ja sen yläpuolella kohonnut linna oli palanut raunioksi. Nykyään se on Slovakian pääkaupunki, ja Wieniin on sieltä junalla noin tunti.
+
+### 95.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 95 YHTEINEN KONTEKSTI
+
+### 95.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 95 YHTEINEN KONTEKSTI
+
+### 95.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 95 YHTEINEN KONTEKSTI
+
+### 95.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 95 YHTEINEN KONTEKSTI
+
+### 95.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 95 YHTEINEN KONTEKSTI

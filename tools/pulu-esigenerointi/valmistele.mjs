@@ -36,13 +36,13 @@ const TYYPIT = { kaupunki: 'KAUPUNGIT', historia: 'HISTORIA', luonto: 'LUONTO', 
   saari: 'LUONTO · SAARI' };
 
 // PuluChat.EsigenerointiKonteksti + KontekstinLoppu sanatarkasti.
-function konteksti(aihe, kaupunki, aineisto) {
+function konteksti(aihe, kaupunki, aineisto, maaId = null) {
   let t = 'Lauta: Maailmankartta';
   const k = kaupunki ? kaupungit[kaupunki] : null;
   if (k) {
     t += '\nKaupunki, jossa pelaaja on: ' + kNimi(kaupunki);
     if (maat[k.maa]) t += '\nMaa, jossa pelaaja on: ' + mNimi(k.maa);
-  }
+  } else if (maaId && maat[maaId]) t += '\nMaa, jossa pelaaja on: ' + mNimi(maaId);
   t += '\nNäkymä: kartta';
   t += '\n' + aihe.otsake + ': ' + aihe.nimi.trim();
   if (aihe.tyyppi) t += ' (' + aihe.tyyppi + ')';
@@ -63,9 +63,49 @@ function konteksti(aihe, kaupunki, aineisto) {
   }
   return t.length > KONTEKSTI_KATTO ? t.slice(0, KONTEKSTI_KATTO) : t;
 }
-const katkelmat = (q, kaupunki) => haeKatkelmat(indeksi, q, { nimet, sijainti: { kaupunki, maa } }).katkelmat;
+const katkelmat = (q, kaupunki, maaId = maa) => haeKatkelmat(indeksi, q, { nimet, sijainti: { kaupunki, maa: maaId } }).katkelmat;
 
-if (vaihe === 'vaihe1') {
+// vaihe1k (PK 9.11.2026, omistajan kortti 13.51 "Kyllä"): Pulun valmiit kysymykset KAUPUNGEILLE ja MAILLE, 5 kullekin, kaikki uusia.
+//   node valmistele.mjs vaihe1k <data> KM <ulosKansio> <kohtiaPerErä>
+// Kohdat: maa:<ISO3> Euroopan maille (kaupunkien manner europe) + TUR, CYP ja kaupunki:<id> näiden maiden kaupungeille (manner europe tai maa TUR/CYP;
+// Siperia ja merentakaiset pois, Vain Eurooppa). Avaimet = PuluChat.Lahteet.cs (KaupunkiNakyma.KaupunkiId, NostoKerros.NykyinenMaa).
+// Konteksti samassa muodossa kuin muut kohdat; aihe "Pelaaja katsoo kartalla" (= live-lähteiden 3–4 konteksti).
+if (vaihe === 'vaihe1k') {
+  const puhdas = (x) => (x ? String(x).replace(/\*\*/g, '').trim() : null);
+  const MUUT = new Set(['TUR', 'CYP']);   // Pulun paketit jo olemassa; Euroopan maat = kaupunkien manner europe
+  const maaIdt = [...new Set([...Object.values(kaupungit).filter((k) => k.manner === 'europe').map((k) => k.maa), ...MUUT])]
+    .filter((m) => maat[m]).sort();
+  const kohdat = [];
+  for (const m of maaIdt) {
+    const d = maat[m];
+    const lehti = alkiot('maalehdet').find((a) => (a.maa ?? a.id) === m);
+    const teksti = puhdas(typeof d.intro === 'string' ? d.intro : d.intro?.teksti) ?? puhdas(lehti?.data?.[0]?.johdanto)
+      ?? (d.perustiedot?.virallinenNimi ? d.perustiedot.virallinenNimi + (d.perustiedot.valtiomuoto ? ', ' + d.perustiedot.valtiomuoto : '') : null);
+    kohdat.push({ kohta: 'maa:' + m, kaupunki: null, maa: m, aihe: { otsake: 'Pelaaja katsoo kartalla', nimi: mNimi(m), tyyppi: 'maa', teksti } });
+    for (const k of Object.values(kaupungit).filter((k) => k.maa === m && (k.manner === 'europe' || MUUT.has(m)))) {
+      const t = puhdas(typeof k.intro === 'string' ? k.intro : k.intro?.teksti) ?? puhdas(kulttuuri[k.id]?.[0]?.johdanto);
+      kohdat.push({ kohta: 'kaupunki:' + k.id, kaupunki: k.id, maa: m, aihe: { otsake: 'Pelaaja katsoo kartalla', nimi: kNimi(k.id), tyyppi: 'kaupunki', teksti: t } });
+    }
+  }
+  for (const k of kohdat) {
+    k.kysymykset = [];
+    k.yhteinen = konteksti(k.aihe, k.kaupunki, katkelmat(k.aihe.nimi, k.kaupunki, k.maa).slice(0, 4), k.maa);
+  }
+  fs.writeFileSync(path.join(ulos, 'syote.json'), JSON.stringify(kohdat, null, 1));
+  const koko = Number(eraKoko) || 5;
+  let e = 0;
+  for (let i = 0; i < kohdat.length; i += koko) {
+    e += 1;
+    const lohkot = [];
+    kohdat.slice(i, i + koko).forEach((k, j) => {
+      const n = i + j + 1;
+      lohkot.push(`================ KOHTA ${n} (${k.kohta}) ================\nYHTEINEN KONTEKSTI (uusille kysymyksille):\n${k.yhteinen}\n`);
+      for (let qi = 0; qi < 5; qi += 1) lohkot.push(`### ${n}.${qi + 1}\nKYSYMYS: (uusi — keksi itse)\nKONTEKSTI: kohdan ${n} YHTEINEN KONTEKSTI\n`);
+    });
+    fs.writeFileSync(path.join(ulos, `tehtavat-1-${e}.txt`), lohkot.join('\n'));
+  }
+  console.log(`KM: ${kohdat.filter((k) => k.kaupunki == null).length} maata, ${kohdat.filter((k) => k.kaupunki).length} kaupunkia, ${e} erää`);
+} else if (vaihe === 'vaihe1') {
   const iso = maa.toLowerCase();
   const moduulit = {};
   for (const [tiedosto, vienti] of [['fokuskohteet', 'FOKUSKOHTEET'], ['maastokohteet', 'MAASTOKOHTEET'], ['hahmotelma', 'HAHMOTELMA']]) {
@@ -133,7 +173,7 @@ if (vaihe === 'vaihe1') {
         nahdyt.add(avain);
         const q = 'Kerro lisää: ' + kasite.trim();
         tehtavat.push({ kohta: k.kohta, kasite: kasite.trim(), kysymys: q, historiaQ: x.kysymys, historiaA: x.vastaus,
-          konteksti: konteksti(k.aihe, k.kaupunki, katkelmat(q, k.kaupunki)) });
+          konteksti: konteksti(k.aihe, k.kaupunki, katkelmat(q, k.kaupunki, k.maa ?? maa), k.maa ?? null) });
       }
     }
   }

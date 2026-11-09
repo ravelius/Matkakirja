@@ -1,0 +1,179 @@
+================ KOHTA 86 (kaupunki:lissabon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Historian hetki: Lissabon 1484 — kartta, jota kukaan ei osta] 1484 — Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja pudistavat päätään — taas kerran. Loukkaus on tuttu eikä siksi yhtään helpompi. Epäilijät osuvat siihen, mikä on olennaista: Kolumbus on laskenut maapallon liian pieneksi ja Aasian aivan liian lähelle, ja purjehdus, jonka hän lupaa, olisi todellisuudessa moninkertainen. Juhana II:n hovi ei silti hylkää suunnitelmaa vain laskuvirheen takia. Portugalin laivat etenevät jo Afrikan rannikkoa etelään, ja se tie Intiaan näyttää varmalta — miksi maksaa arvauksesta? Lissabonista lähtee mies, jolla ei ole …
+- [Lissabon — kaupunkilehti / Lissabon] Kaupunki, joka kaatui pyhäinpäivänä 1755 ja rakennettiin uudelleen puuhäkkien varaan — ja jonka kuuluisimman tornin kulmassa nököttää kivinen sarvikuono.
+
+### 86.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 86 YHTEINEN KONTEKSTI
+
+### 86.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 86 YHTEINEN KONTEKSTI
+
+### 86.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 86 YHTEINEN KONTEKSTI
+
+### 86.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 86 YHTEINEN KONTEKSTI
+
+### 86.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 86 YHTEINEN KONTEKSTI
+
+================ KOHTA 87 (maa:ROU) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Viina, joka poltetaan syksyisin] Loka–joulukuu — Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. Perinne ulottuu keskiajalle asti, ja poltto ajoittuu yhä samaan aikaan kuin ennen: luumut korjataan syksyllä, ja mäski käy 6–8 viikkoa suurissa tynnyreissä ennen tislausta loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy juuri țuican valmistukseen. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja juomaa tarjotaan vieraille heti kynnyksellä, häissä, kasteissa ja pääsiäisenä — pieni lasi kirkasta juomaa on Romaniassa vieraanvaraisuuden merkki.
+- [Romania — maalehti / Musiikki: Hora staccato oli koulutyö] 1906 — Angheluș Dinicun tyttärenpoika Grigoraș syntyi Bukarestissa vuonna 1889 — samana vuonna, jona isoisä soitti Pariisissa. Hän opiskeli kaupungin konservatoriossa ja kirjoitti vuonna 1906 päättötyökseen Hora staccaton: parin minuutin kappaleen, jossa jousi napsuttaa kieltä niin tiheästi, että sävelet putoavat kuin rakeet. Wienin konservatorion stipendi jäi käyttämättä, koska romania ei päästetty lähtemään. Kappaleesta tuli viulistien näytösnumero kaikkialla maailmassa.
+
+### 87.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 87 YHTEINEN KONTEKSTI
+
+### 87.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 87 YHTEINEN KONTEKSTI
+
+### 87.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 87 YHTEINEN KONTEKSTI
+
+### 87.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 87 YHTEINEN KONTEKSTI
+
+### 87.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 87 YHTEINEN KONTEKSTI
+
+================ KOHTA 88 (kaupunki:bukarest) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest] Kaupunki, jossa maailman painavin talo nousi vanhan keskustan tilalle — ja jossa kokonaisia kirkkoja työnnettiin kiskoilla pois sen tieltä.
+
+### 88.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 88 YHTEINEN KONTEKSTI
+
+### 88.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 88 YHTEINEN KONTEKSTI
+
+### 88.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 88 YHTEINEN KONTEKSTI
+
+### 88.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 88 YHTEINEN KONTEKSTI
+
+### 88.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 88 YHTEINEN KONTEKSTI
+
+================ KOHTA 89 (maa:RUS) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+### 89.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 89 YHTEINEN KONTEKSTI
+
+### 89.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 89 YHTEINEN KONTEKSTI
+
+### 89.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 89 YHTEINEN KONTEKSTI
+
+### 89.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 89 YHTEINEN KONTEKSTI
+
+### 89.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 89 YHTEINEN KONTEKSTI
+
+================ KOHTA 90 (kaupunki:moskova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kaupunkilehti / Moskova] Maailman suurin kello ei ole soinut kertaakaan, ja kaupungin komeimmat salit ovat kolmenkymmenen metrin syvyydessä maan alla.
+
+### 90.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 90 YHTEINEN KONTEKSTI
+
+### 90.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 90 YHTEINEN KONTEKSTI
+
+### 90.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 90 YHTEINEN KONTEKSTI
+
+### 90.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 90 YHTEINEN KONTEKSTI
+
+### 90.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 90 YHTEINEN KONTEKSTI

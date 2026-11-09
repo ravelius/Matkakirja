@@ -1,0 +1,172 @@
+================ KOHTA 71 (kaupunki:skopje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje] Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, kivisiltojen ja basaarien kaupunki, jonka asemarata oli juuri valmistunut. Kaupungin juuret ulottuvat roomalaiseen Scupiin, ja Vardarin laaksossa on koettu monta maanjäristystä: 518, 1555 ja 1963.
+
+### 71.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+### 71.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+### 71.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+### 71.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+### 71.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+================ KOHTA 72 (maa:MLT) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+
+### 72.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+### 72.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+### 72.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+### 72.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+### 72.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+================ KOHTA 73 (kaupunki:valletta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+- [Valletta — kaupunkilehti / Valletta] Kalkkikivestä veistetty linnoituskaupunki kahden sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka ritarikunta piirsi suoraksi jo vuonna 1566.
+
+### 73.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+### 73.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+### 73.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+### 73.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+### 73.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+================ KOHTA 74 (maa:MNE) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+
+### 74.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+### 74.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+### 74.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+### 74.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+### 74.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+================ KOHTA 75 (kaupunki:podgorica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kaupunkilehti / Podgorica] Podgorica kasvoi kukkulan juurelle kahden joen yhtymäkohtaan, ja isoisän matkavuonna 1873 se oli vielä ottomaanien kaupunki Ribnican rannalla. Vanhasta kaupungista on jäljellä Stara Varoš kellotorneineen, moskeijoineen ja kapeine katuineen, sillä suuri osa kaupungista tuhoutui sodassa ja rakennettiin uudelleen.
+
+### 75.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI
+
+### 75.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI
+
+### 75.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI
+
+### 75.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI
+
+### 75.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI

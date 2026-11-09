@@ -1,0 +1,180 @@
+================ KOHTA 41 (maa:GRC) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Juusto, josta käytiin oikeutta] 2002 — Feta tehdään lampaanmaidosta tai seoksesta, jossa on lampaanmaidon lisäksi enintään 30 prosenttia vuohenmaitoa. Juusto kypsyy isoina lohkoina suolavedessä, ja siitä tulee murea ja rakeinen. Kreikka pyysi EU:lta nimisuojaa fetalle vuonna 1994. Tanska, Ranska ja Saksa, joissa valmistettiin omaa fetaa, veivät asian EU:n tuomioistuimeen ja saivat ensimmäisen päätöksen kumotuksi. Vuonna 2002 nimi suojattiin lopullisesti: fetaksi saa kutsua vain Manner-Kreikassa ja Lesboksella perinteiseen tapaan tehtyä juustoa.
+
+### 41.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kaupunki:ateena) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena] Kaupunki, jossa marmoritorni mittasi aikaa vedellä ja jossa vesikantaja voitti maailman ensimmäisen olympiamaratonin.
+
+### 42.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kaupunki:kreeta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Kreeta] Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän kuin ihmisiä.
+
+### 43.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (maa:HRV) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Menovinkit] Kroatia on pieni maa, mutta sen museot ja kirjastot ovat vieneet verkkoon yllättävän paljon: 4500 vuotta vanhoja saviesineitä 3D-malleina, glagoliittisia käsikirjoituksia ja virtuaalikävelyn vesiputouksille.
+
+### 44.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kaupunki:zagreb) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kaupunkilehti / Zagreb] Zagreb on Kroatian pääkaupunki, joka kasvoi kahdesta kukkulasta ja jonka nykyinen ilme syntyi vuoden 1880 maanjäristyksen jälkeen. Isoisän matkavuonna 1873 kaupunki oli vielä entisellään: raitiotietä ja tuomiokirkon kaksoistorneja ei ollut, mutta rautatie ja Ban Jelačićin patsas jo olivat.
+
+### 45.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

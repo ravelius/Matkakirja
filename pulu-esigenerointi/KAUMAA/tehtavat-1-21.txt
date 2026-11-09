@@ -1,0 +1,174 @@
+================ KOHTA 101 (maa:TUR) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Kissa, joka menee veteen] 1955 — Vanjärven seudulla Itä-Turkissa elää kissarotu, joka poikkeaa useimmista kissoista yhdessä asiassa: se ui mielellään. Van-kissan turkki on lähes kokonaan valkoinen, ja väriä on vain päässä ja hännässä. Monella yksilöllä silmät ovat eriväriset, toinen sininen ja toinen kullanruskea. Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on niin emäksistä, että siinä elää vain yksi kalalaji, helmisärki, joka nousee keväisin jokiin kutemaan.
+
+### 101.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 101 YHTEINEN KONTEKSTI
+
+### 101.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 101 YHTEINEN KONTEKSTI
+
+### 101.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 101 YHTEINEN KONTEKSTI
+
+### 101.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 101 YHTEINEN KONTEKSTI
+
+### 101.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 101 YHTEINEN KONTEKSTI
+
+================ KOHTA 102 (kaupunki:istanbul) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul] Kaupunki kahdella mantereella, jonka alla on pylväiden kannattama vesisäiliö, keskellä faaraon obeliski ja joka kadunkulmassa oma kissa.
+
+### 102.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 102 YHTEINEN KONTEKSTI
+
+### 102.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 102 YHTEINEN KONTEKSTI
+
+### 102.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 102 YHTEINEN KONTEKSTI
+
+### 102.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 102 YHTEINEN KONTEKSTI
+
+### 102.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 102 YHTEINEN KONTEKSTI
+
+================ KOHTA 103 (kaupunki:izmir) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+### 103.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 103 YHTEINEN KONTEKSTI
+
+### 103.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 103 YHTEINEN KONTEKSTI
+
+### 103.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 103 YHTEINEN KONTEKSTI
+
+### 103.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 103 YHTEINEN KONTEKSTI
+
+### 103.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 103 YHTEINEN KONTEKSTI
+
+================ KOHTA 104 (kaupunki:ankara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kaupunkilehti / Ankara] Ankarassa on viheralaa 72 neliömetriä asukasta kohti, vaikka keskustaajamassa asuu yli 5,3 miljoonaa ihmistä.
+
+### 104.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 104 YHTEINEN KONTEKSTI
+
+### 104.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 104 YHTEINEN KONTEKSTI
+
+### 104.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 104 YHTEINEN KONTEKSTI
+
+### 104.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 104 YHTEINEN KONTEKSTI
+
+### 104.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 104 YHTEINEN KONTEKSTI
+
+================ KOHTA 105 (kaupunki:kapadokia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia] Tuhkasta tuli kiveä ja kivestä taloja. Tuuli ja vesi ovat veistäneet Keski-Anatolian tuffista satoja piikkejä, ja niiden sisään on kaivettu kirkkoja, kyyhkyslakkoja ja kokonaisia maanalaisia kaupunkeja.
+
+### 105.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 105 YHTEINEN KONTEKSTI
+
+### 105.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 105 YHTEINEN KONTEKSTI
+
+### 105.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 105 YHTEINEN KONTEKSTI
+
+### 105.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 105 YHTEINEN KONTEKSTI
+
+### 105.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 105 YHTEINEN KONTEKSTI

@@ -1,0 +1,182 @@
+================ KOHTA 76 (maa:NLD) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen ”de Vlieterin” kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Menovinkit] Alankomaat on skannannut itsensä verkkoon: maalaukset pikselintarkkoina, salainen takahuoneisto kolmiulotteisena, sanomalehdet vuodesta 1618 ja museo, jossa tyrannosaurus odottaa ilman pääsylippua.
+
+### 76.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+### 76.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+### 76.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+### 76.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+### 76.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+================ KOHTA 77 (kaupunki:amsterdam) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+
+### 77.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+### 77.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+### 77.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+### 77.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+### 77.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+================ KOHTA 78 (maa:NOR) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+- [Norja — maalehti / Menovinkit] Norja on avannut verkkoon sen, mihin ei muuten pääse: Huudon siveltimenjäljet, viikinkilaivan jonka museo on kiinni, koko kansan nimet vuodesta 1769 ja kartan, joka kertoo missä revontulet juuri nyt palavat.
+
+### 78.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+### 78.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+### 78.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+### 78.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+### 78.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+================ KOHTA 79 (kaupunki:oslo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Oslo (kaupunki)
+Tietoruudun teksti: Oslo on Norjan pääkaupunki ja suurin kaupunki; sen viidessätoista kaupunginosassa asuu runsaat 717 000 ihmistä. Kaupunki on Oslovuonon pohjukassa, siinä missä vuono loppuu ja metsäiset kukkulat alkavat. Rajojen sisällä on 301 neliökilometriä metsää, 343 järveä ja 40 saarta, ja metsäalueella asuu vain 1 610 ihmistä — metsä ja vesi ovat kaupunkia, eivät sen ulkopuolta.
+
+Asutus alkoi vuonon rannalla noin vuonna 1040. Vuoden 1624 palon jälkeen Tanskan kuningas Kristian IV siirsi kaupungin linnoituksen kupeeseen ja nimesi sen itsensä mukaan Christianiaksi; vanha nimi palautettiin vasta 1925. Norja kuului Tanskaan yli neljäsataa vuotta ja sen jälkeen unioniin Ruotsin kanssa, joka purettiin rauhanomaisesti 1905.
+
+Öljy muutti maan: Ekofiskin kentältä löytyi öljyä 1969, ja tuotot päätettiin siirtää rahastoon. Pääkaupunki laati 2017 maailman ensimmäisen kaupungin ilmastobudjetin, ja kunnassa reki…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Oslo] Norjan pääkaupunki on rakennettu vuonon perukkaan metsäisten kukkuloiden syliin. Merelle päin avautuu satama, jonka laitureilta on lähdetty kauas.
+
+### 79.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 79 YHTEINEN KONTEKSTI
+
+### 79.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 79 YHTEINEN KONTEKSTI
+
+### 79.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 79 YHTEINEN KONTEKSTI
+
+### 79.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 79 YHTEINEN KONTEKSTI
+
+### 79.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 79 YHTEINEN KONTEKSTI
+
+================ KOHTA 80 (kaupunki:bergen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bergen
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bergen (kaupunki)
+Tietoruudun teksti: Bergen on Norjan toiseksi suurin kaupunki ja Vestlandin hallintokeskus, ja se on rakennettu niemimaalle vuonojen ja vuorten väliin. Vuoret ympäröivät keskustaa joka suunnalta, ja siitä tulee lisänimi seitsemän vuoren kaupunki. Sadepäiviä kertyy noin kaksisataa vuodessa, sateisimpana joulukuu.
+
+Perimätiedon mukaan kaupungin perusti kuningas Olav Kyrre vuonna 1070, ja Bergen oli Norjan pääkaupunki 1200-luvulla. Sataman itärannalla toimi 1300-luvun puolivälistä lähtien yksi Hansaliiton neljästä kontorista, ja tärkein vientitavara oli kuivattu turska pohjoisesta; vastineeksi sinne kulki viljaa Euroopasta. Kauppiaiden vanha laituri Bryggen on ollut Unescon maailmanperintökohde vuodesta 1979.
+
+Puinen kaupunki paloi lukuisia kertoja, pahimmin 1702. Isoisän matkan aikoihin Bergen ylitti vanhat rajansa: vuoden 1855 palon jäljille nousivat säännölliset korttelit, ja 1876 kaupunkiin liitettiin Nyg…
+Isoisän matkakirjamerkintä: Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Bergen] Puinen satamakaupunki kasvoi vuonon pohjukkaan vuorten väliin ja eli vuosisatoja kalasta ja hansakaupasta. Isoisän matkan aikoihin se ylitti ensi kertaa vanhat rajansa ja levisi etelään uusiin kortteleihin.
+
+### 80.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 80 YHTEINEN KONTEKSTI
+
+### 80.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 80 YHTEINEN KONTEKSTI
+
+### 80.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 80 YHTEINEN KONTEKSTI
+
+### 80.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 80 YHTEINEN KONTEKSTI
+
+### 80.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 80 YHTEINEN KONTEKSTI

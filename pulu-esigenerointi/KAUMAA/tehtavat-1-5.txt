@@ -1,0 +1,183 @@
+================ KOHTA 21 (kaupunki:berliini) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Pelaaja katsoo kartalla: Berliini (kaupunki)
+Tietoruudun teksti: Berliini on Saksan pääkaupunki ja maan suurin kaupunki, jossa asuu lähes neljä miljoonaa ihmistä. Se on rakennettu tasaiselle hiekkamaalle Spree-joen varrelle, ja noin kolmannes pinta-alasta on puistoa, metsää tai vettä. Berliini oli ensin Preussin ja vuodesta 1871 koko Saksan keisarikunnan pääkaupunki, ja vuonna 1920 seudulla asui jo yli kolme miljoonaa ihmistä.
+
+Vuonna 1933 valtaan noussut natsihallinto teki Berliinistä keskuksensa, ja täältä johdettiin sota ja juutalaisten joukkotuho. Sodan lopussa kaupunki oli raunioina, ja raivaustyön tekivät suureksi osaksi naiset eli Trümmerfrauen. Voittajavallat jakoivat Berliinin neljään sektoriin, ja vuonna 1961 Itä-Saksa rakensi Länsi-Berliinin ympärille 155 kilometrin muurin, joka katkaisi kadut ja metrolinjat 28 vuodeksi; raja aukesi 9. marraskuuta 1989.
+
+Yhdistyneen Saksan pääkaupunki Berliinistä tuli 1990. Muurin linja on merkitty keskust…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+
+### 21.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (maa:DNK) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tanska (maa)
+Tietoruudun teksti: Tanska on matala ja pirstoutunut: saaria on yli 400, joista noin 70 on asuttuja, ja korkein luonnonkohta Møllehøj kohoaa 170,86 metriin. Mistään maan kohdasta ei ole merelle enempää kuin noin 50 kilometriä.
+
+Korkokartalla sen näkee heti: koko maa on samaa vaaleaa vihreää, eikä ruskeaa ole missään. Vasemmalla on Jyllannin niemimaa, joka kiinnittyy Saksaan, ja sen itäpuolella ovat saaret — Fyn, Sjælland ja aivan oikeassa laidassa Bornholm. Kartan yläkulmassa maasto muuttuu tummemmaksi ja korkeammaksi: se on jo Ruotsia, ja Kööpenhaminasta sinne on vain salmen verran matkaa.
+
+Pohjoisessa Jyllanti ei lopu rantaan vaan kapenee ohueksi hiekkakieleksi keskelle merta. Vettä on joka puolella, joten maa on kurottu yhteen silloilla: Ison-Beltin silta valmistui 1998 ja Juutinrauman silta-tunneli Malmöhön vuonna 2000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+- [Tanska — maalehti / Menovinkit] Tanska on siirtänyt itsensä ruudulle: kansallisgallerian teokset saa ladata koneelle, koko maa näkyy ilmasta vuodesta 1890, kirkkojen holvimaalauksia selataan aiheittain ja merikotkanpesään näkee suorana.
+
+### 22.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kaupunki:kobenhavn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kööpenhamina (kaupunki)
+Tietoruudun teksti: Kööpenhamina on Tanskan pääkaupunki Sjællandin saarella, aivan Ruotsin rannikon tuntumassa; nimi tarkoittaa kauppasatamaa. Seudulla asuu noin 1,4 miljoonaa ihmistä, ja kaupunki on maan hallinnon ja kaupan keskus. Alku oli kalastajakylä, jonka viereen piispa Absalon rakennutti 1100-luvulla linnoituksen keskelle salmea — tästä on lyhin matka Skånen puolelle, ja kaikki Itämerelle menevä laivaliikenne kulkee ohi.
+
+Kaupunki on matala ja rakennettu veden ehdoilla: kanavia kaivettiin sinne missä niitä tarvittiin, ja vanhat vallihaudat ovat nyt järviä keskellä kaupunkia. Tivoli avattiin vallihaudan ulkopuolelle vuonna 1843 ja toimii yhä. Isoisän matkan aikaan asukkaita oli jo yli satatuhatta, ja ympäriltä oli juuri purettu muurit, jotka olivat estäneet kasvun.
+
+Nykyisen ilmeen antaa polkupyörä: autoliikenteestä erotettuja pyöräteitä on noin 385 kilometriä, ja niitä pitkin tehdään noin puolet ty…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Kööpenhamina] Tanskan pääkaupunki on rakennettu kahden saaren kupeeseen salmen rannalle. Se on matala kaupunki, jossa liikutaan pyörällä ja jossa vesi on aina lähellä.
+
+### 23.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (maa:ESP) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Espanja (maa)
+Tietoruudun teksti: Espanja täyttää suurimman osan Iberian niemimaasta ja on Länsi-Euroopan toiseksi suurin maa. Se on myös Euroopan toiseksi vuoristoisin: keskellä kohoaa Meseta, kuiva ylätasanko, jonka reunoilla ilmasto vaihtuu vihreästä pohjoisrannikosta lähes aavikkoiseen kaakkoon. Kanariansaaret kuuluvat Espanjaan mutta sijaitsevat Afrikan edustalla, ja siellä on myös maan korkein vuori.
+
+Maa on monikielinen — espanjan lisäksi katalaani, galego ja baski ovat virallisia omilla alueillaan — ja hallinto on jaettu seitsemääntoista itsehallintoalueeseen, joilla on omat parlamenttinsa ja koulukielensä.
+
+Arki poikkeaa muusta Euroopasta: lounas syödään kahden ja kolmen välillä, illallinen yhdeksän jälkeen, ja väliaika täytetään tapaksilla baaritiskillä seisten. Espanja on maailman suurin oliiviöljyn tuottaja ja toiseksi suosituin matkailumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia: Britit valtasivat Havannan – ja Espanja osti sen takaisin] Seitsenvuotinen sota tuli Karibialle kesällä 1762. Kesäkuun 6. päivän aamunkoitteessa yli 50 aluksen ja yli 11 000 miehen brittijoukko nousi maihin Havannan itäpuolelle, ja piiritys päättyi kaupungin antautumiseen elokuussa. Miehityksen aikana britit avasivat Havannan kaupalle Pohjois-Amerikan ja Karibian siirtokuntiensa kanssa, mikä muutti Kuuban taloutta nopeasti. Alle vuosi valtauksesta solmittu Pariisin rauha palautti Havannan Espanjalle – vastineeksi Espanja luovutti Floridan briteille.
+- [portofspain — kaupunkilehti / Kaupunki liikkui maalla ja vedessä: Espanja jäi nimeen] Port of Spainin englanninkielinen nimi tarkoittaa Espanjan satamaa. Taustalla on espanjalainen Puerto España, mutta eurooppalainen nimi ei ole seudun historian alku: lähellä oli alkuperäisväestön Cumucurapon kalastajakylä. Siirtomaahallinnon keskus siirtyi sisämaan San José de Oruñasta rannikolle 1700-luvulla. Trinidad siirtyi sittemmin Britannian hallintaan, eikä kaupungin espanjalainen nimi silti kadonnut.
+
+### 24.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kaupunki:madrid) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Madrid (kaupunki)
+Tietoruudun teksti: Madrid on Espanjan pääkaupunki ja maan suurin kaupunki: asukkaita on noin 3,4 miljoonaa ja koko maakunnassa lähes seitsemän miljoonaa. Se on keskellä Iberian niemimaata Kastilian ylätasangolla noin 650 metrin korkeudessa, korkeammalla kuin yksikään toinen Euroopan unionin pääkaupunki. Merelle on neljäsataa kilometriä, joten kesä on kuuma ja kuiva ja talviyöt kylmiä.
+
+Kaupunki alkoi 800-luvulla maurien linnoituksena nimeltä Mayrit, ja pitkään se oli pikkukaupunki muiden joukossa. Pääkaupungiksi se nousi vuonna 1561, kun kuningas Filip II siirsi hovinsa Toledosta lähes tasan valtakunnan keskelle. Hovin ympärille rakennettiin Plaza Mayor, aukio, joka suljettiin talorivillä kaikilta neljältä sivulta, ja keskustan sydämeksi jäi Puerta del Sol: sen kiveyksessä on laatta, josta Espanjan päätiet mitataan.
+
+Nykyään Madrid tunnetaan museoistaan. Prado esittelee Velázquezin ja Goyan tärkeimmät työ…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid] Euroopan unionin korkeimmalla sijaitseva pääkaupunki, jonka kuninkaat perustivat keskelle tyhjää ylätasankoa ja jonka asukkaat päättivät valvoa myöhempään kuin kukaan muu.
+
+### 25.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
