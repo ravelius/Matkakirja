@@ -191,3 +191,4 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   runko lopuksi 6a2f044b7 → polku lokit/linssiseppa2-film13-ipad-22e601e76 VS:lle (muisti-tarkka.log, tarkka-huippu jonolokissa).
   DO NS fpv-latauskuva-2 a425b8868 ipad/iphone/vaaka → DV NS huippunimet-2 31b609027 ipad → DW NS fpv-vuoret-1 9edbc14a9 ipad → polut NS:lle.
 - 15.1x: DU valmis + VS:lle kerrottu. Ketju DY (jono-dy.zsh) VS vuoret1 d9aefd7a5 ipad film13:n jälkeen (varjostin regeneroitu: Shader-error!) → lokit/linssiseppa2-vuoret1-ipad-d9aefd7a5 → polku VS:lle.
+- 15.09: VS film13 VIKA: iso iPad LUKITTU (CoreDeviceError 10003 'device was still locked'), ei ajoa, runko-asennus rc 1. Laitekäännös valmis lokit/julkaisija-laite-218-22e601e76 → uusinta vs-film13-ipad.zsh (ei käännä uudelleen), kun iPad auki; VS + PT kerrottu. DY alkaa nyt.
